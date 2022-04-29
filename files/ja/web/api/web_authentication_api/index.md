@@ -1,145 +1,133 @@
 ---
-title: Web Authentication API
+title: ウェブ認証 API
 slug: Web/API/Web_Authentication_API
 tags:
   - 2FA
   - API
+  - 認証
   - Landing
   - Reference
-  - Web Authentication API
+  - ウェブ認証 API
   - WebAuthn
-  - 認証
 translation_of: Web/API/Web_Authentication_API
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
-<p class="summary">Web Authentication API は公開鍵暗号を用いて強力な認証を可能にする <a href="/ja/docs/Web/API/Credential_Management_API">Credential Management API</a> の拡張機能で、パスワードレス認証や、 SMS テキストを用いない二要素認証を実現します。</p>
+ウェブ認証 API は、公開鍵暗号を用いて強力な認証を可能にする[資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) の拡張機能で、パスワードレス認証や、 SMS テキストを用いない安全な二要素認証を実現します。
 
-<h2 id="Web_authentication_の概念と使い方">Web authentication の概念と使い方</h2>
+## ウェブ認証の概念と使い方
 
-<p>Web Authentication API (別名 WebAuthn) は、ウェブサイトで登録、認証、{{interwiki("wikipedia", "多要素認証", "二要素認証")}}を行うためにパスワードや SMS のテキストを使用するのではなく、{{interwiki("wikipedia", "公開鍵暗号")}}を使用します。これは{{interwiki("wikipedia", "フィッシング_(詐欺)","フィッシング")}}や{{interwiki("wikipedia", "情報漏洩")}}、 SMS や他の二要素認証に対する攻撃といった厄介なセキュリティ問題を解決し、同時にユーザーの利便性を向上させます (ユーザーが多くのパスワードを管理する必要がなくなるため)。</p>
+ウェブ認証 API (別名 WebAuthn) は、ウェブサイトで登録、認証、{{interwiki("wikipedia", "多要素認証", "二要素認証")}}を行うためにパスワードや SMS のテキストを使用するのではなく、{{interwiki("wikipedia", "公開鍵暗号")}}を使用します。これにはいくつかの利点があります。
 
-<p>多くのウェブサイトが既にアカウントの登録や作成したアカウントにログインするウェブページを提供しています。 WebAuthn はそれらの既存のウェブページの代替または補足として機能します。 <a href="/ja/docs/Web/API/Credential_Management_API">Credential Management API</a> の他の形式と同様に、 Web Authentication API は登録とログインの2つの基本的な機能を持っています。</p>
+- **フィッシングからの保護:** 偽のログインサイトを作成した攻撃者は、サイトの[オリジン](/ja/docs/Glossary/Origin)で署名が変わるため、ユーザーとしてログインすることができません。
+- **情報漏洩の影響を軽減:** 開発者は公開鍵をハッシュ化する必要がなく、攻撃者が認証に使用した公開鍵にアクセスしても、秘密鍵が必要なため認証ができません。
+- **パスワード攻撃に対して無防備：** ユーザーによってはパスワードを再利用する可能性があり、攻撃者は別のウェブサイト用にユーザーのパスワードを（例えばデータ漏洩を介して）取得する可能性があります。また、テキストのパスワードは、デジタル署名よりもはるかに容易に総当たりすることができます。
 
-<ul>
- <li>{{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} - publicKey オプションと併用すると、新しいアカウントの登録または既存のアカウントへの新しい非対称鍵ペアの関連付けを行うために新しい認証情報を作成します。</li>
- <li>{{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - publicKey オプションと併用すると、サービスに対する認証のために、ログインまたは二要素認証として既存の認証情報セットを使用します。</li>
-</ul>
+多くのウェブサイトが既にアカウントの登録や作成したアカウントにログインするウェブページを提供しています。ウェブ認証 API はそれらの既存のウェブページの代替または補足として機能します。 [資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) の他の形式と同様に、 ウェブ認証 API は登録とログインの 2 つの基本的な機能を持っています。
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> create() と get() は両方とも<a href="/ja/docs/Web/Security/Secure_Contexts">セキュアコンテキスト</a> (例：サーバに https で接続されているか、或いは接続先のサーバがローカルホストの場合)であることを必要とし、ブラウザーがセキュアコンテキストで動作していない場合は利用できません。</p>
-</div>
+- {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} - publicKey オプションと併用すると、新しいアカウントの登録または既存のアカウントへの新しい非対称鍵ペアの関連付けを行うために新しい認証情報を作成します。
+- {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - publicKey オプションと併用すると、サービスに対する認証のために、ログインまたは二要素認証として既存の認証情報セットを使用します。
 
-<p>最も基本的な形式では、 create() と get() は challenge と呼ばれる非常に大きな乱数をサーバーから受け取り、challenge を秘密鍵で署名してサーバーへ送り返します。この方法で秘密にすべき情報をネットワーク上に流すことなく、認証に必要な秘密鍵をユーザが所持していることをサーバに対して証明します。</p>
+> **Note:** `create()` と `get()` は両方とも[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが安全なコンテキストで動作していない場合は利用できません。
 
-<p>create() と get() メソッドがより大局的な見地においてどのように組み込まれているかを理解するためには、それらがブラウザー外の2つのコンポーネント間にあることを理解することが重要です。</p>
+最も基本的な形式としては、`create()` と `get()` の両方が「チャレンジ」と呼ばれる非常に大きな乱数をサーバーから受け取り、秘密鍵によって署名されたチャレンジをサーバーに返します。これにより、ネットワーク上で秘密を明かすことなく、ユーザーが認証に必要な秘密鍵を持っていることをサーバー－に証明することができます。
 
-<ol>
- <li><strong>サーバー</strong> - WebAuthn API はサーバー (単に"サービス"としたり、"<a href="https://en.wikipedia.org/wiki/Relying_party">relying party</a>"(RP)と呼ぶこともある) に認証情報を登録し、以後ユーザー認証には同じサーバーに同じ認証情報を使うことを意図しています。</li>
- <li><strong>認証器(Authenticator)</strong>- 作成された認証情報は認証器と呼ばれるデバイス内に格納されます。<br>
-  これは認証における新しいコンセプトです：<br>
-  ・パスワード認証ではパスワードはユーザーの頭の中に格納され、他のデバイスは必要ありません。<br>
-  ・WebAuthn 認証ではパスワードは認証器の中に格納された鍵ペアに置き換えられています。<br>
-  認証器は Windows Hello などのように OS に組み込まれていても良いですし、 USB や Bluetooth セキュリティキーなどの物理的なトークンデバイスであっても良いです。</li>
-</ol>
+create() と get() メソッドが全体像の中でどのように位置づけられるかを理解するためには、ブラウザーの外側にある 2 つのコンポーネントの間に位置づけられることを理解することが重要です。
 
-<h3 id="Registration" name="Registration">登録</h3>
+1. **サーバー** - ウェブ認証 API は、サーバー（サービスまたは[署名検証者](https://en.wikipedia.org/wiki/Relying_party) (署名検証者) とも呼ばれる）に新しい資格情報を登録し、後でその同じサーバーで同じ資格情報を使用してユーザーを認証することを意図しています。
+2. **認証器 (Authenticator)** - 作成された認証情報は認証器と呼ばれる機器内に格納されます。これは認証における新しい概念です。パスワード認証ではパスワードはユーザーの頭の中に保管され、他の機器は必要ありません。ウェブ認証を用いた認証では、そのパスワードが認証器の中に保管された鍵ペアに置き換えられます。認証器は Windows Hello などのように OS に組み込むこともできますし、 USB や Bluetooth セキュリティキーなどの物理的なトークン機器とすることもできます。
 
-<p>典型的な登録過程は図1に示す6つの手順を踏みます。この図は概要説明のみを目的として、登録過程に必要なデータだけに単純化してあります。必須フィールドと任意フィールド、そして登録リクエスト作成におけるそれらのフィールドの意味は {{domxref("PublicKeyCredentialCreationOptions")}} に全て記載されています。同様に、応答フィールドは {{domxref("PublicKeyCredential")}} インタフェースに全て記載されています。 (ただし {{domxref("PublicKeyCredential.response")}} は {{domxref("AuthenticatorAttestationResponse")}} インターフェースに記載があります。)<br>
- アプリケーションを作っているほとんどの JavaScript プログラマーが唯一本当に気をつけなければならないのは、 create() が呼び出され、返り値が手に入る手順1と5のみです。しかしながら、ブラウザーと認証器の中で行われる処理やその結果のデータの意味を理解するためには手順2,3,4を理解することが不可欠です。</p>
+### 登録
 
-<p><img alt="WebAuthn registration component and dataflow diagram" src="https://mdn.mozillademos.org/files/16189/WebAuthn_Registration_r4.png" style="height: 547px; width: 1134px;"></p>
+通常の登録過程は、図 1 に示す 6 つの手順を踏みます。この図は、概要を説明するために登録プロセスに必要なデータを簡略化しています。登録リクエストを作成するための必須フィールド、オプションフィールド、およびそれらの意味はすべて {{domxref("PublicKeyCredentialCreationOptions")}} 辞書に記載されます。同様に、レスポンスフィールドはすべて {{domxref("PublicKeyCredential")}} インターフェイスに記載されます（ただし {{domxref("PublicKeyCredential.response")}} は {{domxref("AuthenticatorAttestationResponse")}} インターフェイスに記載されます）。なお、アプリケーションを作っているほとんどの JavaScript プログラマーが本当に気をつけなければならないのは、 create() が呼び出され、返値が手に入る手順 1 と 5 のみです。しかしながら、ブラウザーと認証器の中で行われる処理やその結果のデータの意味を理解するためには手順 2、3、4 を理解することが不可欠です。
 
-<p><em>図1 - WebAuthn による登録手順と各アクションに関連する重要なデータの流れを示している</em></p>
+![ウェブ認証 API のコンポーネントの登録とデータフロー図](webauthn_registration_r4.png)
 
-<p>登録手順:</p>
+_図 1 - ウェブ認証による登録手順と各アクションに関連する重要なデータの流れを示す図_
 
-<ol start="0">
- <li><strong>アプリケーションが登録要求を行う</strong> - アプリケーションは最初の登録リクエストを作成します。このリクエストのプロトコルとフォーマットは WebAuthn による規定の対象範囲外です。</li>
- <li><strong>サーバーが challenge・ユーザー情報・ Relying Party 情報を送信</strong> - サーバーは challenge・ユーザ情報・ Relying party 情報を JavaScript プログラムに送信します。このときのプロトコルも特に指定はなく、 WebAuthn による規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って {{Glossary("REST")}} で接続します(恐らく{{domxref("XMLHttpRequest")}} や {{domxref("Fetch_API", "Fetch")}}を用いるでしょう)が、安全なプロトコルでありさえすれば {{Glossary("SOAP")}} や <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> 、その他ほぼどのようなプロトコルを使用しても構いません。サーバーから受け取ったパラメーターは {{domxref("CredentialsContainer.create()", "create()")}} の呼び出し(call)に渡され、通常ほとんど或いは全く改変せずに <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> を返します。これは、 {{domxref("AuthenticatorAttestationResponse")}} を含んだ {{domxref("PublicKeyCredential")}} を解決するためのものです。<br>
-  <strong>次の事項は極めて重要です。<br>
-  ・challenge はランダム情報のバッファー(少なくとも16バイト以上)であること<br>
-  ・challenge は登録過程のセキュリティを確保するために必ずサーバー上で生成すること<br>
-  (<a href="https://www.w3.org/TR/webauthn/#credential-id">Cryptographic Challenges</a>)</strong></li>
- <li><strong>ブラウザーが認証器の authenticatorMakeCredential() を呼び出す</strong> - 内部的にブラウザーはパラメーターを検証し、デフォルト値を入れ、 {{domxref("AuthenticatorResponse.clientDataJSON")}} となる。最も重要なパラメーターの一つは origin であり、後でサーバーがこの origin を検証できるように clientData に保存されています。 create() の呼び出しのパラメーターは clientDataJSON の SHA-256 ハッシュ値と共に認証器に渡されます。(認証器への接続が低帯域幅の NFC または Bluetooth である可能性があり、認証器は単にハッシュに署名して改ざんされていないことを保証することが目的のため、ハッシュのみを送信します)</li>
- <li><strong>認証器が新しい鍵ペアと <a href="https://www.w3.org/TR/webauthn/#attestation">Attestation</a> を作成</strong> - まず第一に、通常認証器は何らかの形でユーザーが存在し、登録に同意していることを確認します。この方法としては PIN の入力や指紋・虹彩認証などがあります。ユーザ確認後、認証器は非対称鍵ペアを作成し、後に使用する秘密鍵を安全に保存します。<br>
-  もう片方の公開鍵は、ある秘密鍵で署名された attestation の一部になっています。その秘密鍵とは認証器の製造過程で焼き付けられたものであり、認証局にさかのぼって検証可能な証明書チェーンをもっています。</li>
- <li><strong>認証器がブラウザーにデータを返す</strong> - 新しい公開鍵と世界中で重複の無い一意の認証ID、そして他の attestation 情報がブラウザーに返され、そこで attestationObject になります。</li>
- <li><strong>ブラウザーが最終的に送信するデータを作成し、アプリケーションがその戻り値をサーバに送信</strong> - create()  Promise が {{domxref("PublicKeyCredential")}}を解決しようとします。{{domxref("PublicKeyCredential")}}は一意の認証IDである {{domxref("PublicKeyCredential.rawId")}} 持っており、 {{domxref("AuthenticatorResponse.clientDataJSON")}} を含む {{domxref("AuthenticatorAttestationResponse")}} や {{domxref("AuthenticatorAttestationResponse.attestationObject")}} といったレスポンスと一緒にあります。この {{domxref("PublicKeyCredential")}} は、何らかの望ましいフォーマットやプロトコルでサーバーに送信されます。 (注意として、 ArrayBuffer プロパティは base64 か似たようなものでエンコードされている必要があります。)</li>
- <li><strong>サーバーが登録を検証・完了させる</strong> - 最終的に、サーバーが一連のチェックを行い、登録が完了して改ざんされていないことを保証することが要求されています。<br>
-  この保証には次の点を含む：
-  <ol>
-   <li>challenge が送信時と同じものであるかの確認</li>
-   <li>origin が期待された origin となっていることの保証</li>
-   <li>clientDataHash の署名と特定モデルの認証器用の証明書チェーンを使った attestation の検証</li>
-  </ol>
-  検証ステップの完全な一覧は <a href="https://w3c.github.io/webauthn/#registering-a-new-credential">WebAuthn の仕様書の中にあります</a>。 チェックが上手くいくと、サーバはユーザーアカウントに紐づいたその新しい公開鍵を保存し、将来の利用に備えます。つまりは、ユーザーが認証のためにその公開鍵を使いたい時は何時でも使えるようにするということです。</li>
-</ol>
+まず（図中のステップ 0）、アプリケーションは最初の登録要求を行います。このリクエストのプロトコルとフォーマットは、ウェブ認証 API の範囲外です。
 
-<h3 id="認証">認証</h3>
+この後での登録手順は次の通りです。
 
-<p>WebAuthnに登録した後、続いてユーザはサービスに認証(いわゆるログイン、サインイン)を行います。認証フローは登録フローと似ています。図2で示している認証フローは図1で示している登録フローと似ているとわかるでしょう。登録と認証の主な違いは、1) 認証ではユーザやRelying Patryの情報を必要としません。2) 登録では認証器が製造過程で焼き付けられた鍵ペアでAttestationを作成するのに対し、認証では登録時に生成された鍵ペアでAssertionを作成します。ここでも再び、以下で示す認証は概要を示すものであり、WebAuthnのすべてのオプションや機能を示すものではないことに注意してください。認証における特定のオプションについては {{domxref("PublicKeyCredentialRequestOptions")}} に記載があり, 認証結果のデータにおける記載は {{domxref("PublicKeyCredential")}} インターフェースにあります (ただし {{domxref("PublicKeyCredential.response")}} は{{domxref("AuthenticatorAssertionResponse")}} インターフェースに記載があります) .</p>
+1. **サーバーがチャレンジ・ユーザー情報・署名検証者情報を送信** - サーバーはチャレンジ・ユーザー情報・署名検証者情報を JavaScript プログラムに送信します。このときのプロトコルも特に指定はなく、ウェブ検証 API の範囲外です。通常、サーバーは HTTPS 通信を使って [REST](/ja/docs/Glossary/REST) で接続します（恐らく [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) や [Fetch](/ja/docs/Web/API/Fetch_API) を用いるでしょう）が、安全なプロトコルでありさえすれば [SOAP](/ja/docs/Glossary/SOAP) や [RFC 2549](https://datatracker.ietf.org/html/rfc2549) 、その他ほぼどのようなプロトコルを使用しても構いません。サーバーから受け取った引数は [create()](/ja/docs/Web/API/CredentialsContainer/create) の呼び出しに渡され、通常ほとんどあるいは全く改変せずに [Promise](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。これは、 {{domxref("AuthenticatorAttestationResponse")}} を含んだ {{domxref("PublicKeyCredential")}} を解決するためのものです。 **なお、チャレンジは（16 バイト以上の）ランダムな情報のバッファーであることと、登録過程のセキュリティを確保するために必ずサーバー上で生成することが極めて重要です。**
+2. **ブラウザーが認証器に対して authenticatorMakeCredential() を呼び出す** - 内部的に、ブラウザーは引数を検証し、既定値を整備し、それを {{domxref("AuthenticatorResponse.clientDataJSON")}} とします。最も重要な引数の一つは origin であり、これが clientData に保存されるため、後でサーバーが検証することができます。 create() の呼び出しの引数は clientDataJSON の SHA-256 ハッシュ値と共に認証器に渡されます（認証器への接続が低帯域幅の NFC または Bluetooth である可能性があり、認証器は単にハッシュに署名して改ざんされていないことを保証することが目的であるため、ハッシュのみを送信します）。
+3. **認証器が新しい鍵ペアとアサーションを作成** - 何かをする前に、認証器は通常、何らかの形でユーザー認証を求めます。これは、 PIN の入力、指紋の使用、虹彩スキャンなどであり、ユーザーが存在し、登録に同意していることを証明します。ユーザー認証の後、認証器は新しい非対称鍵ペアを作成し、将来の参照用に秘密鍵を安全に保管します。公開鍵はアサーションの一部となり、認証器は製造工程で組み込まれた秘密鍵で署名し、信頼の根源まで遡って検証できる証明書チェーンを持っています。
+4. **認証器がブラウザーにデータを返す** - 新しい公開鍵、グローバルに一意な認証 ID、およびその他の認証データがブラウザーに返され、そこで attestationObject となります。
+5. **ブラウザーが最終的に送信するデータを作成し、アプリケーションがその返値をサーバーに送信** - create() のプロミスが {{domxref("PublicKeyCredential")}} に解決します。 {{domxref("PublicKeyCredential")}} は一意の認証 ID である {{domxref("PublicKeyCredential.rawId")}} 持っており、 {{domxref("AuthenticatorResponse.clientDataJSON")}} を含む {{domxref("AuthenticatorAttestationResponse")}} や {{domxref("AuthenticatorAttestationResponse.attestationObject")}} といったレスポンスと一緒にあります。この {{domxref("PublicKeyCredential")}} は、何らかの望ましいフォーマットやプロトコルでサーバーに送信されます。（注意として、 ArrayBuffer プロパティは base64 か似たようなものでエンコードされている必要があります。）
+6. **サーバーが登録を検証・完了させる** - 最終的に、サーバーが一連のチェックを行い、登録が完了して改ざんされていないことを保証することが要求されています。この保証には次の点を含みます。
 
-<p><img alt="WebAuthn authentication component and dataflow diagram" src="https://mdn.mozillademos.org/files/15802/MDN%20Webauthn%20Authentication%20(r1).png" style="height: 527px; width: 1067px;"></p>
+    1. challenge が送信時と同じものであるかの確認
+    2. origin が期待通りのオリジンとなっていることの保証
+    3. clientDataHash の署名と特定モデルの認証器用の証明書チェーンを使った attestation の検証
 
-<p><em>図 2 - 図 1同様、WebAuthn による認証手順と各アクションに関連する重要なデータの流れを示している</em></p>
+    検証ステップの完全な一覧は [ウェブ認証 API 仕様書の中にあります](https://w3c.github.io/webauthn/#registering-a-new-credential)。 チェックが上手くいくと、サーバーはユーザーアカウントに紐づいたその新しい公開鍵を保存し、将来の利用に備えます。つまりは、ユーザーが認証のためにその公開鍵を使いたい時は何時でも使えるようにするということです。
 
-<ol start="0">
- <li><strong>アプリケーションが認証要求を行う</strong> - アプリケーションが最初の認証要求を行います。この要求のプロトコルとフォーマットはWebAuthnによる規定の対象範囲外です。</li>
- <li><strong>サーバからのチャレンジ送信</strong> - サーバがJavaScriptプログラムに対してチャレンジを送ります。サーバとのコミュニケーションに用いられるプロトコルに指定はなく、WebAuthnによる規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って {{Glossary("REST")}} で接続します(恐らく{{domxref("XMLHttpRequest")}} や {{domxref("Fetch_API", "Fetch")}}を用いるでしょう)が、安全なプロトコルでありさえすれば {{Glossary("SOAP")}} や <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> 、その他ほぼどのようなプロトコルを使用しても構いません。サーバから受信したパラメータはほとんどの場合少しもしくは全く改変されずに  <a href="/ja/docs/Web/API/CredentialsContainer/get">get()</a> の呼び出しに渡されます。<br>
-  <strong>次の事項は極めて重要です。</strong><br>
-  <strong>・challenge はランダム情報のバッファー(少なくとも16バイト以上)であること</strong><br>
-  <strong>・challenge は登録過程のセキュリティを確保するために必ずサーバー上で生成すること</strong></li>
- <li><strong>ブラウザによる認証器のauthenticatorGetCredential()の呼び出し</strong> - 内部的にブラウザはパラメータを検証し、デフォルト値を埋めて {{domxref("AuthenticatorResponse.clientDataJSON")}}を作成します。最も重要なパラメータの一つがoriginであり、これはclientDataの一部として記録され、後ほどサーバによって検証されます。get()呼び出し時のパラメータは、clientDataJSONのSHA-256ハッシュと一緒に認証器に渡されます。(認証器への接続が低帯域幅の NFC または Bluetooth である可能性があり、認証器は単にハッシュに署名して改ざんされていないことを保証することが目的のため、ハッシュのみを送信します)</li>
- <li><strong>認証器によるAssertionの生成</strong> - 認証器がこのサービスの認証情報がRelying Party IDと一致することを確認し、ユーザに認証の同意を促します。この二つのステップが成功した場合、認証器は登録時に生成された秘密鍵を用いてclientDataHashとauthenticatorDataに署名を行うことで新しいAssertionを生成します。</li>
- <li><strong>認証器がブラウザにデータを返す</strong> - 認証器がauthenticatorDataとassertionの署名をブラウザに返します。</li>
- <li><strong>ブラウザが最終的なデータを生成し、アプリケーションがサーバにレスポンスを送信する</strong> - ブラウザが{{domxref("AuthenticatorAssertionResponse")}}を含む{{domxref("PublicKeyCredential.response")}}と一緒に<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>を {{domxref("PublicKeyCredential")}}に解決しようとします。サーバに対してどのようなプロトコル、フォーマットでこのデータを戻すのかについてはJavaScriptアプリケーションに委ねられています。</li>
- <li><strong>サーバによる検証と認証の完了</strong> - 認証要求の結果を受け取り次第、サーバはレスポンスの検証を行います。この検証は以下のようなものです。
-  <ol>
-   <li>Relying Party IDがこのサービスで想定しているものか</li>
-   <li>認証器によって署名されたチャレンジ、サーバによって生成されたものと一致しているか</li>
-   <li>登録要求の際に保管した公開鍵を用いた認証器による署名の検証</li>
-  </ol>
-  これらは<a href="https://w3c.github.io/webauthn/#verifying-assertion">WebAuthnの仕様で規定されているAssertionの検証手順</a>のすべてです。検証が成功した場合、ユーザは認証済であると記録します。WebAuthnによる規定の対象範囲外ですが、ひとつの選択肢として新しいCookieをユーザのセッションに対して発行することが考えられます。</li>
-</ol>
+## 認証
 
-<h2 id="インターフェース">インターフェース</h2>
+ユーザーは、ウェブ認証で登録した後、サービスに対して認証（ログインまたはサインイン）を行うことができます。認証フローは登録フローと似ており、図 2 のアクションの図は、図 1 の登録アクションの図と似ていると思われるかもしれません。登録と認証の主な違いは、次の通りです。1) 認証は、ユーザーまたは署名検証者情報を必要としない。 2) 認証は、製造時に認証器に組み込まれたキーペアを使用して認証を作成するのではなく、サービス用に事前に生成されたキーペアを使用してアサーションを作成する。繰り返しますが、以下の認証に関する説明は、ウェブ認証 API のすべてのオプションや機能に踏み込むのではなく、大まかな概要を説明するものです。認証のための具体的なオプションは {{domxref("PublicKeyCredentialRequestOptions")}} 辞書で、結果のデータは {{domxref("PublicKeyCredential")}} インターフェイス ({{domxref("PublicKeyCredential.response")}} は {{domxref("AuthenticatorAssertionResponse")}} インターフェイス) で見ることができます。
 
-<dl>
- <dt>{{domxref("Credential")}} {{experimental_inline}}</dt>
- <dd>信頼を決定づける前提条件としてのエンティティに関する情報を提供します。</dd>
- <dt>{{domxref("CredentialsContainer")}}</dt>
- <dd>サインイン・サインアウト発動のようなイベントの際、クレデンシャル要求やユーザエージェント通知のためのメソッドをエクスポートします。このインターフェースは{{domxref('Navigator.credentials')}}からアクセス可能です。WebAuthnの仕様では、<code>publicKey</code> メンバーを{{domxref('CredentialsContainer.create','create()')}} と {{domxref('CredentialsContainer.get','get()')}} メソッドに追加し、それらのメソッドではそれぞれ、新たな鍵ペアの生成、鍵ペアについての認証取得を行います。</dd>
- <dt>{{domxref("PublicKeyCredential")}}</dt>
- <dd>公開鍵 / 秘密鍵ペアについての情報を提供し、それはサービスへのログインのためのクレデンシャルであり、パスワードの代わりに、フィッシング耐性かつデータ漏洩体制のある非対称鍵ペアを用いています。</dd>
- <dt>{{domxref("AuthenticatorResponse")}}</dt>
- <dd>{{domxref("AuthenticatorAttestationResponse")}}  と {{domxref("AuthenticatorAssertionResponse")}}に関するベースのインターフェースであり、鍵ペアについての信頼の暗号的根幹を提供します。{{domxref('CredentialsContainer.create()')}} と {{domxref('CredentialsContainer.get()')}}によって返され、それぞれ、その子インターフェースはチャレンジ、オリジンのようなブラウザからの情報を含んでいます。{{domxref("PublicKeyCredential.response")}}から返されるでしょう。</dd>
- <dt>{{domxref("AuthenticatorAttestationResponse")}}</dt>
- <dd>{{domxref('PublicKeyCredential')}}が渡された時 {{domxref('CredentialsContainer.create()')}}によって返され、生成された新たな鍵ペアの信頼の暗号的根幹を提供します。</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse")}}</dt>
- <dd>{{domxref('PublicKeyCredential')}}が渡された時 {{domxref('CredentialsContainer.get()')}} によって返され、鍵ペアを所持しており認証要求が有効かつ承認済みであるという証拠をサービスへ提供します。</dd>
-</dl>
+![WebAuthn 認証コンポーネントとデータフロー図](<mdn_webauthn_authentication_(r1).png>)
 
-<h2 id="オプション">オプション</h2>
+_図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクションに関連する重要なデータの流れを示している。_
 
-<dl>
- <dt>{{domxref("PublicKeyCredentialCreationOptions")}}</dt>
- <dd>{{domxref('CredentialsContainer.create()')}} へ渡すオプション.</dd>
- <dt>{{domxref("PublicKeyCredentialRequestOptions")}}</dt>
- <dd>{{domxref('CredentialsContainer.get()')}} へ渡すオプション.</dd>
- <dd></dd>
-</dl>
+まず（図中のステップ 0）、アプリケーションは最初の登録リクエストを行います。このリクエストのプロトコルとフォーマットは、ウェブ認証 API の範囲外です。
 
-<h2 id="Examples" name="Examples">例</h2>
+この後、登録のステップになります。
 
-<div class="blockIndicator warning">
-<p>セキュリティの観点から、WebAuthn の呼び出し(例：create() や get())が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。</p>
-</div>
+1. **サーバーからのチャレンジ送信** - サーバーが JavaScript プログラムに対してチャレンジを送ります。サーバーとのコミュニケーションに用いられるプロトコルに指定はなく、ウェブ認証 API の規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って [REST](/ja/docs/Glossary/REST) で接続します（恐らく [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) や [Fetch](/ja/docs/Web/API/Fetch_API)) を用いるでしょう）が、安全なプロトコルでありさえすれば [SOAP](/ja/docs/Glossary/SOAP) や [RFC 2549](https://tools.ietf.org/html/rfc2549)、その他ほぼどのようなプロトコルを使用しても構いません。サーバーから受信した引数はほとんどの場合少しもしくは全く改変されずに  [get()](/ja/docs/Web/API/CredentialsContainer/get) の呼び出しに渡されます。**なお、チャレンジは、ランダムな情報のバッファ（少なくとも 16 バイト）であることが絶対に必要であり、認証プロセスのセキュリティを確保するために、サーバー上で生成されなければなりません。**
+2. **ブラウザーによる認証器の authenticatorGetCredential() の呼び出し** - 内部的にブラウザーは引数を検証し、既定値を埋めて {{domxref("AuthenticatorResponse.clientDataJSON")}}を作成します。最も重要な引数の一つが origin であり、これはclientDataの一部として記録され、後ほどサーバーによって検証されます。 get() 呼び出し時の引数は、 clientDataJSON の SHA-256 ハッシュと一緒に認証器に渡されます（認証器への接続が低帯域幅の NFC または Bluetooth である可能性があり、認証器は単にハッシュに署名して改ざんされていないことを保証することが目的のため、ハッシュのみを送信します）
+3. **認証器によるアサーションの生成** - 認証器がこのサービスの認証情報が署名検証者 ID と一致することを確認し、ユーザーに認証の同意を促します。この二つのステップが成功した場合、認証器は登録時に生成された秘密鍵を用いて clientDataHash と authenticatorData に署名を行うことで新しいアサーションを生成します。
+4. **認証器がブラウザーにデータを返す** - 認証器が authenticatorData とアサーションの署名をブラウザーに返します。
+5. **ブラウザーが最終的なデータを生成し、アプリケーションがサーバーにレスポンスを送信する** - ブラウザーが {{domxref("AuthenticatorAssertionResponse")}} を含む {{domxref("PublicKeyCredential.response")}} と一緒に [Promise](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を {{domxref("PublicKeyCredential")}} に解決しようとします。サーバーに対してどのようなプロトコル、フォーマットでこのデータを戻すのかについては JavaScript アプリケーションに委ねられています。
+6. **サーバーによる検証と認証の完了** - 認証要求の結果を受け取り次第、サーバーはレスポンスの検証を行います。この検証は以下のようなものです。
 
-<pre class="brush: js notranslate">// 登録のサンプル引数
+    1. 登録リクエスト時に保存された公開鍵を用いて、認証器による署名を検証する。
+    2. 認証器が署名したチャレンジが、サーバーが生成したチャレンジと一致することを確認すること。
+    3. 署名検証者 IDがこのサービスに期待されるものであることを確認する。
+
+  これらは[ウェブ認証 API の仕様で規定されているアサーションの検証手順](https://w3c.github.io/webauthn/#verifying-assertion)のすべてです。検証が成功した場合、ユーザーは認証済であると記録します。ウェブ認証による規定の対象範囲外ですが、ひとつの選択肢として新しい Cookie をユーザーのセッションに対して発行することが考えられます。
+
+## インターフェイス
+
+- {{domxref("Credential")}} {{experimental_inline}}
+  - : 信頼を決定づける前提条件としてのエンティティに関する情報を提供します。
+- {{domxref("CredentialsContainer")}}
+  - : ログイン・ログアウトが発生したようなイベントの際、資格情報の要求やユーザーエージェント通知のためのメソッドをエクスポートします。このインターフェイスは {{domxref('Navigator.credentials')}} からアクセス可能です。ウェブ認証の仕様では、 `publicKey` メンバーを{{domxref('CredentialsContainer.create','create()')}} と {{domxref('CredentialsContainer.get','get()')}} メソッドに追加し、それらのメソッドではそれぞれ、新たな鍵ペアの生成、鍵ペアについての認証取得を行います。
+- {{domxref("PublicKeyCredential")}}
+  - : 公開鍵 / 秘密鍵ペアについての情報を提供し、それはサービスへのログインのための資格情報であり、パスワードの代わりに、フィッシング耐性かつデータ漏洩体制のある非対称鍵ペアを用いています。
+- {{domxref("AuthenticatorResponse")}}
+  - : {{domxref("AuthenticatorAttestationResponse")}}  と {{domxref("AuthenticatorAssertionResponse")}}に関するベースのインターフェイスであり、鍵ペアについての信頼の暗号的根幹を提供します。{{domxref('CredentialsContainer.create()')}} と {{domxref('CredentialsContainer.get()')}}によって返され、それぞれ、その子インターフェイスはチャレンジ、オリジンのようなブラウザーからの情報を含んでいます。{{domxref("PublicKeyCredential.response")}}から返されるでしょう。
+- {{domxref("AuthenticatorAttestationResponse")}}
+  - : {{domxref('PublicKeyCredential')}} が渡された時 {{domxref('CredentialsContainer.create()')}} によって返され、生成された新たな鍵ペアの信頼の暗号的根幹を提供します。
+- {{domxref("AuthenticatorAssertionResponse")}}
+  - : {{domxref('PublicKeyCredential')}} が渡された時 {{domxref('CredentialsContainer.get()')}} によって返され、鍵ペアを所持しており認証要求が有効かつ承認済みであるという証拠をサービスへ提供します。
+
+## オプション
+
+- {{domxref("PublicKeyCredentialCreationOptions")}}
+  - : {{domxref('CredentialsContainer.create()')}} へ渡すオプションです。
+- {{domxref("PublicKeyCredentialRequestOptions")}}
+  - : {{domxref('CredentialsContainer.get()')}} へ渡すオプションです。
+
+## 例
+
+### デモサイト
+
+- [Mozilla Demo](https://webauthn.bin.coffee/) ウェブサイトとその[ソースコード](https://github.com/jcjones/webauthn.bin.coffee)。
+- [Google Demo](https://try-webauthn.appspot.com/) ウェブサイトとその[ソースコード](https://github.com/google/webauthndemo)。
+- [https://webauthn.io/ Demo](https://github.com/duo-labs/webauthn.io) ウェブサイトとその[ソースコード](https://github.com/duo-labs/webauthn.io)。
+- [github.com/webauthn-open-source](https://github.com/webauthn-open-source) とその[クライアントソースコード](https://github.com/webauthn-open-source/webauthn-simple-app)と[サーバーソースコード](https://github.com/webauthn-open-source/fido2-lib)
+- [OWASP Single Sign-On](https://owasp.org/www-project-sso/)
+
+### 使用法の例
+
+> **Warning:** セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
+
+```js
+// 登録のサンプル引数
 var createCredentialDefaultArgs = {
     publicKey: {
-        // Relying Party (a.k.a. - Service):
+        // 署名検証者 (a.k.a. - Service):
         rp: {
             name: "Acme"
         },
@@ -181,7 +169,7 @@ var getCredentialDefaultArgs = {
 
 // 新しい認証情報の作成/登録
 navigator.credentials.create(createCredentialDefaultArgs)
-    .then((cred) =&gt; {
+    .then((cred) => {
         console.log("NEW CREDENTIAL", cred);
 
         // 通常はサーバーから利用可能なアカウントの認証情報が送られてきますが
@@ -194,75 +182,50 @@ navigator.credentials.create(createCredentialDefaultArgs)
         getCredentialDefaultArgs.publicKey.allowCredentials = idList;
         return navigator.credentials.get(getCredentialDefaultArgs);
     })
-    .then((assertion) =&gt; {
+    .then((assertion) => {
         console.log("ASSERTION", assertion);
     })
-    .catch((err) =&gt; {
+    .catch((err) => {
         console.log("ERROR", err);
     });
-</pre>
+```
 
-<ul>
- <li><a class="external" href="https://webauthn.bin.coffee/">Mozilla Demo</a> website and its <a href="https://github.com/jcjones/webauthn.bin.coffee">source code</a>.</li>
- <li><a class="external" href="http://webauthndemo.appspot.com/">Google Demo</a> website and its <a href="https://github.com/google/webauthndemo">source code</a>.</li>
- <li><a href="https://webauthn.org">webauthn.org</a> and its <a href="https://github.com/apowers313/webauthn-simple-app">client source code</a> and <a href="https://github.com/apowers313/fido2-lib">server source code</a></li>
-</ul>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+| 仕様書                                                                                      |
+| -------------------------------------------------------------------------------------------------- |
+| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの互換性</h2>
+### Credential
 
-<div>
-<h3 id="Credential">Credential</h3>
+{{Compat("api.Credential")}}
 
-<p>{{Compat("api.Credential")}}</p>
+### CredentialsContainer
 
-<h3 id="CredentialsContainer">CredentialsContainer</h3>
+{{Compat("api.CredentialsContainer")}}
 
-<p>{{Compat("api.CredentialsContainer")}}</p>
+### PublicKeyCredential
 
-<h3 id="PublicKeyCredential">PublicKeyCredential</h3>
+{{Compat("api.PublicKeyCredential")}}
 
-<p>{{Compat("api.PublicKeyCredential")}}</p>
+### AuthenticatorResponse
 
-<h3 id="AuthenticatorResponse">AuthenticatorResponse</h3>
+{{Compat("api.AuthenticatorResponse")}}
 
-<p>{{Compat("api.AuthenticatorResponse")}}</p>
+### AuthenticatorAttestationResponse
 
-<h3 id="AuthenticatorAttestationResponse">AuthenticatorAttestationResponse</h3>
+{{Compat("api.AuthenticatorAttestationResponse")}}
 
-<p>{{Compat("api.AuthenticatorAttestationResponse")}}</p>
+### AuthenticatorAssertionResponse
 
-<h3 id="AuthenticatorAssertionResponse">AuthenticatorAssertionResponse</h3>
+{{Compat("api.AuthenticatorAssertionResponse")}}
 
-<p>{{Compat("api.AuthenticatorAssertionResponse")}}</p>
+### PublicKeyCredentialCreationOptions
 
-<h3 id="PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions</h3>
+{{Compat("api.PublicKeyCredentialCreationOptions")}}
 
-<p>{{Compat("api.PublicKeyCredentialCreationOptions")}}</p>
+### PublicKeyCredentialRequestOptions
 
-<h3 id="PublicKeyCredentialRequestOptions">PublicKeyCredentialRequestOptions</h3>
-
-<p>{{Compat("api.PublicKeyCredentialRequestOptions")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="https://www.youtube.com/watch?v=UNI_Ad-9gX8">WebAuthentication and WebPayment demo</a> on an Android device</li>
-</ul>
+{{Compat("api.PublicKeyCredentialRequestOptions")}}
