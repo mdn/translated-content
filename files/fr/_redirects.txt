@@ -3819,7 +3819,7 @@
 /fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorOnLine/Évènements_online_et_offline	/fr/docs/Web/API/Navigator/onLine
-/fr/docs/Web/API/NavigatorStorage	/fr/docs/orphaned/Web/API/NavigatorStorage
+/fr/docs/Web/API/NavigatorStorage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorStorage/storage	/fr/docs/Web/API/Navigator/storage
 /fr/docs/Web/API/Node.contains	/fr/docs/Web/API/Node/contains
 /fr/docs/Web/API/Node/baseURIObject	/fr/docs/conflicting/Web/API/Node
@@ -6065,6 +6065,7 @@
 /fr/docs/orphaned/Web/API/NavigatorOnLine	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/orphaned/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
+/fr/docs/orphaned/Web/API/NavigatorStorage	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorStorage/storage	/fr/docs/Web/API/Navigator/storage
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
