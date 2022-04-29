@@ -43007,19 +43007,6 @@
       "Mgjbot"
     ]
   },
-  "orphaned/Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-10-15T21:16:47.165Z",
-    "contributors": [
-      "tomderudder",
-      "thibaultboursier",
-      "nicodel",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "orphaned/Web/API/NavigatorStorage": {
     "modified": "2020-10-15T22:17:55.760Z"
   },

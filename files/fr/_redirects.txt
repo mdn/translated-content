@@ -1022,7 +1022,7 @@
 /fr/docs/DOM/window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/DOM/window.navigator.battery	/fr/docs/Web/API/Navigator/battery
 /fr/docs/DOM/window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
-/fr/docs/DOM/window.navigator.onLine	/fr/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/fr/docs/DOM/window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM/window.onbeforeunload	/fr/docs/conflicting/Web/API/Window/beforeunload_event
 /fr/docs/DOM/window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
@@ -1171,7 +1171,7 @@
 /fr/docs/DOM:window.location	/fr/docs/Web/API/window/location
 /fr/docs/DOM:window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
-/fr/docs/DOM:window.navigator.onLine	/fr/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/fr/docs/DOM:window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM:window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM:window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
 /fr/docs/DOM:window.open	/fr/docs/Web/API/Window/open
@@ -3810,14 +3810,14 @@
 /fr/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/fr/docs/Web/API/MediaDevices/getUserMedia
 /fr/docs/Web/API/Navigator.getGamepads	/fr/docs/Web/API/Navigator/getGamepads
 /fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
-/fr/docs/Web/API/Navigator.onLine	/fr/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/fr/docs/Web/API/Navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/Navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
 /fr/docs/Web/API/NavigatorOnLine	/fr/docs/orphaned/Web/API/NavigatorOnLine
 /fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
-/fr/docs/Web/API/NavigatorOnLine/onLine	/fr/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/fr/docs/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorOnLine/Évènements_online_et_offline	/fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /fr/docs/Web/API/NavigatorStorage	/fr/docs/orphaned/Web/API/NavigatorStorage
 /fr/docs/Web/API/NavigatorStorage/storage	/fr/docs/orphaned/Web/API/NavigatorStorage/storage
@@ -6062,6 +6062,7 @@
 /fr/docs/orphaned/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/orphaned/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
+/fr/docs/orphaned/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
