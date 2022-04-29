@@ -3834,7 +3834,7 @@
 /fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
 /fr/docs/Web/API/NodeFilter/acceptNode	/fr/docs/conflicting/Web/API/Document/createNodeIterator
 /fr/docs/Web/API/Notation	/fr/docs/orphaned/Web/API/Notation
-/fr/docs/Web/API/ParentNode	/fr/docs/orphaned/Web/API/ParentNode
+/fr/docs/Web/API/ParentNode	/fr/docs/Web/API/Element
 /fr/docs/Web/API/ParentNode/append	/fr/docs/Web/API/Element/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
 /fr/docs/Web/API/ParentNode/children	/fr/docs/Web/API/Element/children
@@ -6059,6 +6059,7 @@
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
+/fr/docs/orphaned/Web/API/ParentNode	/fr/docs/Web/API/Element
 /fr/docs/orphaned/Web/API/ParentNode/append	/fr/docs/Web/API/Element/append
 /fr/docs/orphaned/Web/API/ParentNode/children	/fr/docs/Web/API/Element/children
 /fr/docs/orphaned/Web/API/ParentNode/lastElementChild	/fr/docs/Web/API/Element/lastElementChild

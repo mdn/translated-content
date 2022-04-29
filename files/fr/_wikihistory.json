@@ -43065,14 +43065,6 @@
       "loella16"
     ]
   },
-  "orphaned/Web/API/ParentNode": {
-    "modified": "2020-10-15T21:33:02.872Z",
-    "contributors": [
-      "abvll",
-      "loella16",
-      "fscholz"
-    ]
-  },
   "orphaned/Web/API/SVGStylable": {
     "modified": "2020-10-15T21:34:30.185Z",
     "contributors": [
