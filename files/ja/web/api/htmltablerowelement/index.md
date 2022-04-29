@@ -3,89 +3,61 @@ title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
 tags:
   - API
+  - HTML DOM
+  - インターフェイス
+  - リファレンス
+browser-compat: api.HTMLTableRowElement
 translation_of: Web/API/HTMLTableRowElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLTableRowElement</code></strong> interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.</p>
+**`HTMLTableRowElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて） HTML の表の行のレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
 
-<h2 id="Properties" name="Properties">Properties</h2>
+{{InheritanceDiagram}}
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+## プロパティ
 
-<dl>
- <dt>{{domxref("HTMLTableRowElement.align")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "tr")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, and <code>"center"</code>.</dd>
- <dt>{{domxref("HTMLTableRowElement.bgColor")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "tr")}} attribute.</dd>
- <dt>{{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}</dt>
- <dd>Returns a live {{domxref("HTMLCollection")}} containing the cells in the row. The <code>HTMLCollection</code> is live and is automatically updated when cells are added or removed.</dd>
- <dt>{{domxref("HTMLTableRowElement.ch")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "tr")}} and default to the decimal points associated with the language, e.g. <code>'.'</code> for English, or <code>','</code> for French. This property was optional and was not very well supported.</dd>
- <dt>{{domxref("HTMLTableRowElement.chOff")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by <code>HTMLTableRowElement.ch</code>. This property was optional and was not very well supported.</dd>
- <dt>{{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>long</code> value which gives the logical position of the row within the entire table. If the row is not part of a table, returns <code>-1</code>.</dd>
- <dt>{{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>long</code> value which gives the logical position of the row within the table section it belongs to. If the row is not part of a section, returns <code>-1</code>.</dd>
- <dt>{{domxref("HTMLTableRowElement.vAlign")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "tr")}} attribute and can have one of the following values: <code>"top"</code>, <code>"middle"</code>, <code>"bottom"</code>, or <code>"baseline"</code>.</dd>
-</dl>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<h2 id="Methods" name="Methods">Methods</h2>
+- {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
+  - : 行のセルを表す生きた {{domxref("HTMLCollection")}} を返します。 `HTMLCollection` は生きており、セルが追加・削除された際に自動的に更新されます。
+- {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
+  - : 表全体におけるこの行の論理的な位置を表す `long` 値を返します。この行が表の中になかった場合は、 `-1` を返します。
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
+  - : 所属する表の区間におけるこの行の論理的な位置を表す `long` 値を返します。この行が区間の中になかった場合は、 `-1` を返します。
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}</em>.</p>
+## メソッド
 
-<dl>
- <dt>{{domxref("HTMLTableRowElement.deleteCell()")}}</dt>
- <dd>Removes the cell at the given position in the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>0</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value.</dd>
- <dt>{{domxref("HTMLTableRowElement.insertCell()")}}</dt>
- <dd>Inserts a new cell just before the given position in the row. If the given position is not given or is <code>-1</code>, it appends the cell to the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>-1</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value. Returns a reference to a <a href="/ja/docs/Web/API/HTMLTableCellElement">HTMLTableCellElement [en-US]</a>.</dd>
-</dl>
+_親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("HTMLTableRowElement.deleteCell()", "deleteCell(index)")}}
+  - : `index` の位置に対応するセルを取り除きます。 `index` が `-1` であった場合、末尾のセルを取り除きます。 `index` が `-1` より小さいか、このコレクションにあるセルの数より大きい場合、 {{DOMxRef("DOMException")}} が `IndexSizeError` の値で発生します。
+- {{domxref("HTMLTableRowElement.insertCell()", "insertCell(index)")}}
+  - : {{DOMxRef("HTMLTableCellElement")}} でこの行の新しいセルを表します。セルはこのセルのコレクションの中で、行の中の `index` の位置の直前に挿入されます。 `index` が `-1` の場合、新しいセルはコレクションの末尾に追加されます。 `index` が `-1` より小さいか、このコレクションにあるセルの数より大きい場合、 {{DOMxRef("DOMException")}} が `IndexSizeError` の値で発生します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "tabular-data.html#the-tr-element", "HTMLTableRowElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "tabular-data.html#the-tr-element", "HTMLTableRowElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The parameter of <code>insertCell</code> is now optional and default to <code>-1</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-6986576', 'HTMLTableRowElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The <code>cells</code>, <code>rowIndex</code>, and <code>selectionRowIndex</code> properties are now read-only.<br>
-    The methods <code>insertCell</code> and <code>deleteCell</code> can raise exceptions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-6986576', 'HTMLTableRowElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## 非推奨のプロパティ
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+> **Warning:** これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
 
-<p>{{Compat("api.HTMLTableRowElement")}}</p>
+- {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
+  - : {{domxref("DOMString")}} で、 {{htmlattrxref("align", "tr")}} 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。
+- {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
+  - : {{domxref("DOMString")}} で、セルの背景色です。これは、廃止された {{htmlattrxref("bgColor", "tr")}} 属性を反映したものです。
+- {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
+  - : {{domxref("DOMString")}} で、 1 つの文字を含みます。この文字は、列の全てのセルを揃えるための文字です。これは {{htmlattrxref("char", "tr")}} を反映し、既定では言語に関連付けられた小数点の値、例えば英語なら `'.'`、フランス語なら `','` となります。このプロパティはオプションであり、あまり対応されていませんでした。
+- {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
+  - : {{domxref("DOMString")}} で、 `HTMLTableRowElement.ch` で定義された文字の右側（左書きの場合。右書きの場合は左側）に何文字残さなければならないかを示す整数です。このプロパティはオプションであり、あまり対応されていませんでした。
+- {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
+  - : {{domxref("DOMString")}} で、セルの内容がどのように垂直方向に配置されるかを示す列挙値です。これは {{htmlattrxref("valign", "tr")}} 属性を反映しており、 `"top"`, `"middle"`, `"bottom"`, `"baseline"` のいずれかになります。
 
-<h2 id="See_also">See also</h2>
+## 仕様書
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("tr")}}.</li>
-</ul>
+{{Specifications}}
 
-<dl>
- <dt> </dt>
-</dl>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("tr")}}
