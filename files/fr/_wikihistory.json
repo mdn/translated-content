@@ -43073,12 +43073,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-03-18T21:39:15.409Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "orphaned/Web/API/ParentNode/prepend": {
     "modified": "2020-10-15T22:02:32.998Z",
     "contributors": [
