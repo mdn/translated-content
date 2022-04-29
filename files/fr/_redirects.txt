@@ -3812,7 +3812,7 @@
 /fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
 /fr/docs/Web/API/Navigator.onLine	/fr/docs/orphaned/Web/API/NavigatorOnLine/onLine
 /fr/docs/Web/API/Navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
-/fr/docs/Web/API/NavigatorLanguage	/fr/docs/orphaned/Web/API/NavigatorLanguage
+/fr/docs/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
 /fr/docs/Web/API/NavigatorOnLine	/fr/docs/orphaned/Web/API/NavigatorOnLine
@@ -6059,6 +6059,7 @@
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
+/fr/docs/orphaned/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/orphaned/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
