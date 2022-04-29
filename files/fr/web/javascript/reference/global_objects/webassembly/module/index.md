@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.WebAssembly.Module
 ---
 {{JSRef}}
 
-Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des _web workers_](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises.
+Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des <i lang="en">web workers</i>](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises.
 
 ## Constructeur
 
@@ -27,7 +27,7 @@ Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qu
 
 ### Envoyer un module compilé à un <i lang="en">worker</i>
 
-Dans l'exemple qui suit (voir le fichier source [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub, et [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le byte code chargé `simple.wasm` en utilisant la méthode [`WebAssembly.compileStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming) puis en envoyant l'instance de `Module` résultante à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+Dans l'exemple qui suit (voir le fichier source [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub, et [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le byte code chargé `simple.wasm` en utilisant la méthode [`WebAssembly.compileStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming) puis en envoyant l'instance de `Module` résultante à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 
 ```js
 let worker = new Worker("wasm_worker.js");
