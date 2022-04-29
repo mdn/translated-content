@@ -43073,13 +43073,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T22:02:32.472Z",
-    "contributors": [
-      "abvll",
-      "loella16"
-    ]
-  },
   "orphaned/Web/API/SVGStylable": {
     "modified": "2020-10-15T21:34:30.185Z",
     "contributors": [
