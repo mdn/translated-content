@@ -43073,14 +43073,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/ParentNode/append": {
-    "modified": "2020-10-15T21:59:23.058Z",
-    "contributors": [
-      "Yukulele.",
-      "Watilin",
-      "ayshiff"
-    ]
-  },
   "orphaned/Web/API/ParentNode/children": {
     "modified": "2020-10-15T21:43:07.206Z",
     "contributors": [
