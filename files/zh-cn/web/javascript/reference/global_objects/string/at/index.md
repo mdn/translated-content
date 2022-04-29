@@ -14,30 +14,30 @@ browser-compat: javascript.builtins.String.at
 ---
 {{JSRef}}
 
-The **`at()`** method takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
+ **`at()`** 方法接受一个整数值，并返回一个新的 {{jsxref('String')}}，该字符串由位于指定偏移量处的单个 UTF-16 码元组成。该方法允许正整数和负整数。负整数从字符串中的最后一个字符开始倒数。
 
 {{EmbedInteractiveExample("pages/js/string-at.html")}}
 
-## Syntax
+## 语法
 
 ```js
 at(index)
 ```
 
-### Parameters
+### 参数
 
 - `index`
-  - : The index (position) of the string character to be returned. Supports relative indexing from the end of the string when passed a negative index; i.e. if a negative number is used, the character returned will be found by counting back from the end of the string.
+  - : 要返回的字符串字符的索引（位置）。当传递负数时，支持从字符串末端开始的相对索引；也就是说，如果使用负数，返回的字符将从字符串的末端开始倒数。
 
-### Return value
+### 返回值
 
-A {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref('undefined')}} if the given index can not be found.
+由位于指定位置的单个 UTF-16 码元组成的 {{jsxref('String')}}。如果找不到指定的索引，则返回 {{jsxref('undefined')}} 。
 
-## Examples
+## 示例
 
-### Return the last character of a string
+### 返回字符串的最后一个字符
 
-The following example provides a function which returns the last character found in a specified string.
+以下示例提供了一个函数，该函数返回指定字符串中的最后一个字符。
 
 ```js
 // A function which returns the last character of a given string
@@ -56,9 +56,9 @@ console.log( returnLast(invoiceRef) );
 // Logs: '2'
 ```
 
-### Comparing methods
+### 方法对比
 
-Here we compare different ways to select the penultimate (last but one) character of a {{jsxref('String')}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
+在这里，我们通过比较不同的方法来实现选择 {{jsxref('String')}} 的倒数第二个字符。尽管以下所有方法都是有效的，但它突出了 `at()` 方法的简洁性和可读性。
 
 ```js
 const myString = 'Every green bus drives fast.';
@@ -76,18 +76,18 @@ const atWay = myString.at(-2);
 console.log(atWay); // Logs: 't'
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 查看更多
 
-- [Polyfill of `String.prototype.at` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
+- [`core-js` 中的 `String.prototype.at` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [at() 方法的 polyfill](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}
