@@ -42998,15 +42998,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:02.447Z",
-    "contributors": [
-      "Suriteka",
-      "chrisdavidmills",
-      "BenoitL",
-      "Mgjbot"
-    ]
-  },
   "orphaned/Web/API/NavigatorStorage": {
     "modified": "2020-10-15T22:17:55.760Z"
   },

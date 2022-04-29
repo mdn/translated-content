@@ -53,7 +53,3 @@ window.addEventListener('online', function(e) { console.log('connecté'); });
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Notes
-
-Voir [les évènements `online` et `offline`](/fr/docs/Web/API/Navigator/Online_and_offline_events) pour plus de détails sur cette propriété.

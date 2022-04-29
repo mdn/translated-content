@@ -3816,9 +3816,9 @@
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
 /fr/docs/Web/API/NavigatorOnLine	/fr/docs/orphaned/Web/API/NavigatorOnLine
-/fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
-/fr/docs/Web/API/NavigatorOnLine/Évènements_online_et_offline	/fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/fr/docs/Web/API/NavigatorOnLine/Évènements_online_et_offline	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorStorage	/fr/docs/orphaned/Web/API/NavigatorStorage
 /fr/docs/Web/API/NavigatorStorage/storage	/fr/docs/orphaned/Web/API/NavigatorStorage/storage
 /fr/docs/Web/API/Node.contains	/fr/docs/Web/API/Node/contains
@@ -6062,6 +6062,7 @@
 /fr/docs/orphaned/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/orphaned/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
+/fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/orphaned/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
@@ -6073,4 +6074,4 @@
 /fr/docs/zineb_chengab_bonjour_bonsoir_merci	/fr/docs/Web
 /fr/docs/À_propos_de_JavaScript	/fr/docs/Web/JavaScript/About_JavaScript
 /fr/docs/À_propos_du_Document_Object_Model	/fr/docs/conflicting/Web/API/Document_Object_Model
-/fr/docs/Évènements_online_et_offline	/fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/fr/docs/Évènements_online_et_offline	/fr/docs/Web/API/Navigator/onLine
