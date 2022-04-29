@@ -2,56 +2,62 @@
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 tags:
-  - rowIndex
-  - table
-  - tr
+  - API
+  - HTML DOM
+  - NeedsSpecTable
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLTableRowElement.rowIndex
 translation_of: Web/API/HTMLTableRowElement/rowIndex
 ---
-<h2 id="Summary" name="Summary">概要</h2>
+{{ APIRef("HTML DOM") }}
 
-<p>このプロパティは、テーブル全体に関連して <a href="/ja/docs/DOM/HTMLTableRowElement" title="DOM/HTMLTableRowElement">行 (row)</a> の 位置 (index) を {{htmlelement("thead")}} 、{{htmlelement("tbody")}} 、{{htmlelement("tfoot")}} の順序で取得します。</p>
+**`HTMLTableRowElement.rowIndex`** は読み取り専用プロパティで、表 ({{HtmlElement("table")}}) 全体に対する行の相対的な位置を表します。
 
-<p>※Opera は前述の順序ではなく、 HTML 中の記述順で rowIndex を取得します。</p>
+{{HtmlElement("thead")}}、{{HtmlElement("tbody")}}、{{HtmlElement("tfoot")}} の各要素が HTML の中で順不同であっても、ブラウザーは表を正しい順序で描画します。従って行のカウントは `<thead>` から `<tbody>` へ、 `<tbody>` から `<tfoot>` へと進みます。
 
-<h2 id="Example" name="Example">例</h2>
+## 値
 
-<pre class="brush: html">&lt;table&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;品目&lt;/th&gt;
-			&lt;th&gt;価格&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;td&gt;抹茶プリン&lt;/td&gt;
-			&lt;td&gt;250 円&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;カスタードプリン&lt;/td&gt;
-			&lt;td&gt;200 円&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;牛乳プリン&lt;/td&gt;
-			&lt;td&gt;150 円&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-	&lt;tfoot&gt;
-		&lt;tr&gt;
-			&lt;td&gt;小計&lt;/td&gt;
-			&lt;td&gt;600 円&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tfoot&gt;
-&lt;/table&gt;</pre>
+行の位置を返します。行が表に所属していない場合は `-1` です。
 
-<p>rowIndex の値を表示する例を以下に示します。</p>
+## 例
 
-<pre class="brush: javascript">var rows = document.getElementsByTagName('tr');
+この例は、 JavaScript を使用して表のすべての行に行番号を振ります。
 
-for(var x = 0, xLength = rows.length; x &lt; xLength; x++) {
-  alert('rowIndex=' + rows[x].rowIndex);
-}</pre>
+### HTML
 
-<h2 id="Compatibility" name="Compatibility">互換性</h2>
+```html
+<table>
+  <thead>
+    <tr><th>品目</th>        <th>価格</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>バナナ</td>     <td>$2</td></tr>
+    <tr><td>オレンジ</td>     <td>$8</td></tr>
+    <tr><td>トップサーロイン</td> <td>$20</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>合計</td>       <td>$30</td></tr>
+  </tfoot>
+</table>
+```
 
-<p>Quirksmode.org の <a href="http://www.quirksmode.org/dom/w3c_html.html#t317">rowIndex browser compatibility</a> を参照して下さい。</p>
+### JavaScript
+
+```js
+let rows = document.querySelectorAll('tr');
+
+rows.forEach((row) => {
+  let z = document.createElement("td");
+  z.textContent = `(#${row.rowIndex} 行目)`;
+  row.appendChild(z);
+});
+```
+
+### 結果
+
+{{EmbedLiveSample("Example")}}
+
+## ブラウザーの互換性
+
+{{Compat}}
