@@ -3831,7 +3831,6 @@
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
 /fr/docs/Web/API/NodeFilter/acceptNode	/fr/docs/conflicting/Web/API/Document/createNodeIterator
-/fr/docs/Web/API/Notation	/fr/docs/orphaned/Web/API/Notation
 /fr/docs/Web/API/ParentNode	/fr/docs/orphaned/Web/API/ParentNode
 /fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
