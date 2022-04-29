@@ -3863,7 +3863,7 @@
 /fr/docs/Web/API/Référence_du_DOM_Gecko/document	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Référence_du_DOM_Gecko/element	/fr/docs/Web/API/Element
 /fr/docs/Web/API/Référence_du_DOM_Gecko/window	/fr/docs/Web/API/Window
-/fr/docs/Web/API/SVGStylable	/fr/docs/orphaned/Web/API/SVGStylable
+/fr/docs/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
@@ -6059,6 +6059,7 @@
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
+/fr/docs/orphaned/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/orphaned/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
