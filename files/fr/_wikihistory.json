@@ -43073,14 +43073,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:02:32.998Z",
-    "contributors": [
-      "Yukulele.",
-      "Seblor",
-      "loella16"
-    ]
-  },
   "orphaned/Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:30:52.578Z",
     "contributors": [
