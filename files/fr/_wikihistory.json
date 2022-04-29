@@ -43073,16 +43073,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/ParentNode/children": {
-    "modified": "2020-10-15T21:43:07.206Z",
-    "contributors": [
-      "Arzak656",
-      "jMoulis",
-      "loella16",
-      "NemoNobobyPersonne",
-      "xavierartot"
-    ]
-  },
   "orphaned/Web/API/ParentNode/lastElementChild": {
     "modified": "2019-03-18T21:39:15.409Z",
     "contributors": [
