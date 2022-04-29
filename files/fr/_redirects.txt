@@ -3815,7 +3815,7 @@
 /fr/docs/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
-/fr/docs/Web/API/NavigatorOnLine	/fr/docs/orphaned/Web/API/NavigatorOnLine
+/fr/docs/Web/API/NavigatorOnLine	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/NavigatorOnLine/Évènements_online_et_offline	/fr/docs/Web/API/Navigator/onLine
@@ -6062,6 +6062,7 @@
 /fr/docs/orphaned/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/orphaned/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
+/fr/docs/orphaned/Web/API/NavigatorOnLine	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/orphaned/Web/API/NavigatorOnLine/onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
