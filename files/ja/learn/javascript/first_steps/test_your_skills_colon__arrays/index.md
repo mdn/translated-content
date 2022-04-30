@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Arrays'
+title: 'あなたのスキルをテストしよう: 配列'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 tags:
   - Arrays
@@ -10,86 +10,86 @@ tags:
 ---
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays) article.
+このスキルテストの目的は、[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の記事を理解しているかどうかを評価することです。
 
-> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** 下記のインタラクティブエディターで回答を試すことができますが、コードをダウンロードし、 [CodePen](https://codepen.io/)、 [jsFiddle](https://jsfiddle.net/)、 [Glitch](https://glitch.com/) などのオンラインツールを利用すると、タスクに取り組むのに役立つかもしれません。
 >
-> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+> 行き詰まったなら、私たちに助けを求めてください。 — このページの下部の [評価またはさらなる支援](#評価またはさらなる支援) セクションを参照
 
-> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
+> **Note:** 下記の作成では、あなたのコードにエラーがあれば、このページの結果パネル（または、ダウンロード可能なバージョンでは、ブラウザーの JavaScript コンソール）に出力され、答えにたどり着くための助けとなります。
 
-## Arrays 1
+## 配列 1
 
-Let's start off with some basic array practice. In this task we'd like you to create an array of three items, stored inside a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
+まずは配列の基礎から始めましょう。このタスクでは、3つの要素を含む配列を作成し、`myArray`という変数に格納します。要素は何でも構いません。好きな食べ物やバンドにしてはいかがでしょうか？
 
-Next, modify the first two items in the array using simple bracket notation and assignment. Then add a new item to the beginning of the array.
+次に、単純な括弧の記法による代入で、最初の2つの要素を変更してください。そのあと、配列の先頭に新しい要素を追加します。
 
-Try updating the live code below to recreate the finished example:
+完成例を再現するために、以下のライブコードを更新してみてください:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays1.html", '100%', 400)}}
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) to work in your own editor or in an online editor.
+> [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
-## Arrays 2
+## 配列 2
 
-Now let's move on to another task. Here you are provided with a string to work with. We'd like you to:
+さて、別のタスクに移りましょう。ここでは、あなたが取り組むべき文字列が与えられています。あなたにやってもらいたいことは:
 
-1. Convert the string into an array, removing the `+` characters in the process. Save the result in a variable called `myArray`.
-2. Store the length of the array in a variable called `arrayLength`.
-3. Store the last item in the array in a variable called `lastItem`.
+1. 文字列を配列に変換してください。その過程で、`+`という文字を取り除きます。結果を`myArray`という変数に格納します。
+2. 配列の要素数を、`arrayLength`という変数に格納します。
+3. 配列の末尾の要素を、`lastItem`という変数に格納します。
 
-Try updating the live code below to recreate the finished example:
+完成例を再現するために、以下のライブコードを更新してみてください:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays2.html", '100%', 400)}}
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) to work in your own editor or in an online editor.
+> [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
-## Arrays 3
+## 配列 3
 
-For this array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
+このタスクでは、我々が用意した配列を出発点として、やや逆行する作業を行います。具体的には:
 
-1. Remove the last item in the array.
-2. Add two new names to the end of the array.
-3. Go over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
-4. Finally, join the array items together in a single string called `myString`, with a separator of "` - `".
+1. 配列の末尾の要素を削除します。
+2. 配列の末尾に新たに2つの名前を追加します。
+3. 配列の各要素を調べて、要素のインデックス番号を丸括弧で囲み、名前の後ろに追記します。例:`Ryu (0)`。 なお、このやり方は配列の記事では教えていませんので、自分で調べる必要があるでしょう。
+4. 最後に、配列の各要素を"` - `"で区切って1つの文字列に結合し、`myString`という変数に格納します。
 
-Try updating the live code below to recreate the finished example:
+完成例を再現するために、以下のライブコードを更新してみてください:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays3.html", '100%', 400)}}
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) to work in your own editor or in an online editor.
+> [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
-## Arrays 4
+## 配列 4
 
-For this array task, we provide you with a starting array listing the names of some birds.
+このタスクでは、出発点として鳥の名前を列挙した配列が与えられています。
 
-- Find the index of the `"Eagles"` item, and use that to remove the `"Eagles"` item.
-- Make a new array from this one, called `eBirds`, that contains only birds from the original array whose names begin with the letter "E". Note that {{jsxref("String.prototype.startsWith()", "startsWith()")}} is a great way to check whether a string starts with a given character.
+- `"Eagles"` 要素のインデックスを特定し、そのインデックスを用いて`"Eagles"` 要素を削除してください。
+- この配列から、名前が"E"で始まる鳥だけを含む`eBirds`という名前の新しい配列を作成してください。ちなみに、 {{jsxref("String.prototype.startsWith()", "startsWith()")}} は文字列が特定の文字で始まるかどうかを調べるのにとても役立ちます。.
 
-If it works, you should see `"Emus,Egrets"` appear in the page.
+`"Emus,Egrets"`が表示されたら成功です。
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays4.html", '100%', 400)}}
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays4-download.html) to work in your own editor or in an online editor.
+> [このタスクのための準備済みファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays4-download.html) して、自身のエディターまたはオンラインエディターで動かせるようにしましょう。
 
-## Assessment or further help
+## 評価またはさらなる支援
 
-You can practice these examples in the Interactive Editors above.
+上記のインタラクティブエディターで、これらの例を練習することができます。
 
-If you would like your work assessed, or are stuck and want to ask for help:
+あなたの制作物を評価してもらいたい、または行き詰まって助けを求めたい場合:
 
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
+1. あなたの制作物を、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), または [Glitch](https://glitch.com/). のような共有可能なオンラインエディターに置いてください。いちから自身でコードを記述することもできますし、上記のセクションでリンク付けされている準備済みファイルを利用するのもよいでしょう。
+2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) で評価を希望したり、助けを求める投稿をしてください。投稿には以下を含みましょう:
 
-    - A descriptive title such as "Assessment wanted for Variables 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+    - "Assessment wanted for Variables 1 skill test"のような説明的なタイトル
+    - あなたがこれまで試したことの詳細、そしてあなたが私たちに何をしてほしいか。例えば、行き詰まって助けが必要だとか、評価をしてほしいなど。
+    - 評価してほしかったり、助けが必要な制作物へのリンク。共有可能なオンラインエディター（上記ステップ 1 で述べたもの）を使って。これは分かりやすくするためのよい手法です — コードが見れない状態で、コーディングの問題を抱えている人を助けることはとても難しいですよね。
+    - 実際のタスクまたは評価ページのリンク。そうすれば、あなたがどの質問に助けが必要かがわかります。
