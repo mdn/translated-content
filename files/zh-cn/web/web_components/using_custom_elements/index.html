@@ -207,15 +207,13 @@ shadow.appendChild(div);</pre>
 
 <pre class="brush: js notranslate">function updateStyle(elem) {
   var shadow = elem.shadowRoot;
-  var childNodes = shadow.childNodes;
-  for(var i = 0; i &lt; childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
-      childNodes[i].textContent = 'div {' +
-                          ' width: ' + elem.getAttribute('l') + 'px;' +
-                          ' height: ' + elem.getAttribute('l') + 'px;' +
-                          ' background-color: ' + elem.getAttribute('c');
+  shadow.querySelector("style").textContent = `
+    div {
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
-  }
+  `;
 }</pre>
 
 <p>实际的更新操作是在生命周期的回调函数中处理的，我们在构造函数中设定类这些回调函数。当元素插入到DOM中时，<code>connectedCallback()</code>函数将会执行 — 在该函数中，我们执行<code>updateStyle()</code> 函数来确保方块按照定义来显示；</p>
