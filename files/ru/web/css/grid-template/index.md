@@ -23,7 +23,7 @@ browser-compat: css.properties.grid-template
 - [`grid-template-columns`](/ru/docs/Web/CSS/grid-template-columns)
 - [`grid-template-rows`](/ru/docs/Web/CSS/grid-template-rows)
 
-## Syntax
+## Синтаксис
 
 ```css
 /* Ключевые слова в качестве значения */
