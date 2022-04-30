@@ -5,9 +5,9 @@ tags:
   - EXIF
   - Image
 ---
-The **Exchangeable Image File Format (EXIF)** is a standard that specifies how metadata about a multimedia file can be embedded within the file. For example, an image might contain EXIF data describing the: pixel width, height, and density, shutter speed, aperture, ISO settings, capture date, etc.
+**Exchangeable Image File Format (EXIF)** は、マルチメディアファイルのメタデータをファイル内に埋め込む方法を定めた規格です。例えば画像の場合、次のような情報を記述したEXIFデータを含んでいることがあります。ピクセル単位の幅や高さ、解像度、シャッタースピード、絞り、ISO設定、撮影日など。
 
-## See also
+## 関連情報
 
-- [EXIF](https://en.wikipedia.org/wiki/Exif) (Wikipedia)
-- [CIPA Standards, including "CIPA DC-008-Translation-2019 Exchangeable image file format for digital still cameras : Exif Version 2.32"](https://www.cipa.jp/std/std-sec_e.html)
+- [EXIF](https://ja.wikipedia.org/wiki/Exchangeable_image_file_format) (Wikipedia)
+- [CIPA規格類, including "CIPA DC-008-2019 デジタルスチルカメラ用画像ファイルフォーマット規格 Exif 2.32"](https://www.cipa.jp/j/std/std-sec.html)
