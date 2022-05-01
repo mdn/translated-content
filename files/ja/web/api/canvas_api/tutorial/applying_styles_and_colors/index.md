@@ -1,726 +1,794 @@
 ---
-title: スタイルと色を適用する
+title: スタイルと色の適用
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+tags:
+  - キャンバス
+  - グラフィック
+  - HTML
+  - HTML5
+  - 中級者
+  - チュートリアル
 translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-<div class="summary">
-<p>「<a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">canvas に図形を描く</a>」の章ではデフォルトの線と塗りのスタイルのみを使いました。ここではより魅力的に描くために使うことのできるcanvasのオプションについて見ていきます。具体的には、色、線のスタイル、グラデーション、パターンや影を追加する方法について学びます。</p>
-</div>
+[図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)についての章では、既定の線と塗りつぶしのスタイルのみを使用しました。ここでは、私たちの絵を少しでも魅力的にするために、自由に使えるキャンバスのオプションについて探っていきます。色、線のスタイル、グラデーション、パターン、影を追加する方法を学びます。
 
-<h2 id="Colors" name="Colors">色</h2>
+## 色
 
-<p>これまでは<strong>描画コンテキスト</strong>の方法についてのみ見てきました。色を図形に適用するために、"<code>fillStyle"と<font face="Open Sans, Arial, sans-serif">"</font></code><code>strokeStyle"という</code>2つの重要なプロパティを利用することができます。</p>
+今までは、描画コンテキストのメソッドだけを見てきました。もし、図形に色をつけたいのであれば、 2 つの重要なプロパティを使用することができます。 `fillStyle` と `strokeStyle` です。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
- <dd>図形の塗りつぶしのスタイルを記述する</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}</dt>
- <dd>図形のアウトラインのスタイルを記述する。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}
+  - : 図形を塗りつぶす際に使用するスタイルを設定します。
+- {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}
+  - : 図形の輪郭のスタイルを設定します。
 
-<p><code>color</code>の部分にはCSSでの{{cssxref("&lt;color&gt;")}}表現やグラデーションオブジェクトまたはパターンオブジェクトが入ります。グラデーションオブジェクトとパターンオブジェクトについては後ほど学ぶことにします。 デフォルトでは、輪郭線・塗りつぶしの色は黒に設定されています。 (CSS色では<code>#000000</code>)</p>
+`color` は文字列で、 CSS の {{cssxref("&lt;color&gt;")}} やグラデーションオブジェクト、パターンオブジェクトを表します。グラデーションオブジェクトとパターンオブジェクトについては後で見ます。既定では、輪郭線と塗りつぶしの色は黒に設定されています（CSS 色では`#000000`）。
 
-<div class="note">
-<p><strong>注記:</strong> <code>strokeStyle</code>および<code>fillStyle</code>プロパティを設定すると、その設定した値がデフォルトとなって、それ以降に描かれる図形の線や塗りはその色で行なわれるようになります。それぞれの図形をそれぞれ別の色で描きたい場合は、シェイプを描くごとに<code>strokeStyle</code>および<code>fillStyle</code>プロパティを設定する必要があります。</p>
-</div>
+> **Note:** `strokeStyle` および `fillStyle` プロパティを設定すると、その設定した値が既定となって、それ以降に描かれる図形の線や塗りつぶしはその色で行なわれるようになります。それぞれの図形をそれぞれ別の色で描きたい場合は、図形を描くごとに `fillStyle` や `strokeStyle` プロパティを設定する必要があります。
 
-<p>入力できる有効な文字列は、CSS {{cssxref("&lt;color&gt;")}}表現の値である必要があります。 下記の例では同じ色について説明しています。</p>
+入力できる有効な文字列は、 CSS の {{cssxref("&lt;color&gt;")}} 値である必要があります。 下記の例では同じ色について説明しています。
 
-<pre class="brush: js notranslate">// これらは全てfillStyleにオレンジ色を代入します
+```js
+// これらは全て fillStyle にオレンジ色を設定します
 
-ctx.fillStyle = "orange";
-ctx.fillStyle = "#FFA500";
-ctx.fillStyle = "rgb(255,165,0)";
-ctx.fillStyle = "rgba(255,165,0,1)";
-</pre>
+ctx.fillStyle = 'orange';
+ctx.fillStyle = '#FFA500';
+ctx.fillStyle = 'rgb(255, 165, 0)';
+ctx.fillStyle = 'rgba(255, 165, 0, 1)';
+```
 
-<h3 id="A_fillStyle_example" name="A_fillStyle_example">プロパティ <code>fillStyle</code> の例</h3>
+### `fillStyle` の例
 
-<p>この例では二重のforループを使って正方形からなるグリッドを作ってみたい。そしてその正方形の一つひとつは違った色になるようにしたい。結果は下のスクリーンショットのようになるだろう。かなり面白い画像ができているだろう。それぞれのブロックで別々な色を表現するために、２つの変数<code>i</code>,<code>j</code>を用いている。変数<code>i</code>は赤成分を、変数<code>j</code>は緑成分を変化させている。青成分は固定されている。By modifying the channels, you can generate all kinds of palettes. By increasing the steps, you can achieve something that looks like the color palettes Photoshop uses.</p>
+この例では、再び 2 つの `for` ループを使って、それぞれ異なる色の矩形を格子状に描画しています。出来上がった画像はスクリーンショットのようなものになるはずです。ここでは、あまり派手なことはしていません。 2 つの変数 `i` と `j` を使ってそれぞれの正方形に固有の RGB カラーを生成し、赤と緑の値だけを変更します。青チャンネルは固定値です。チャンネルを変更することで、あらゆる種類のパレットを生成することができます。ステップを増やせば、 Photoshop が使っているカラーパレットに近いものを実現することも可能です。
 
-<pre class="brush: js;highlight[5,6] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &lt; 6; i++) {
-    for (var j = 0; j &lt; 6; j++) {
-      ctx.fillStyle = `rgb(${Math.floor(255-42.5*i)}, ${Math.floor(255-42.5*j)}, 0)`;
-      ctx.fillRect(j*25, i*25, 25, 25);
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+                       Math.floor(255 - 42.5 * j) + ', 0)';
+      ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>結果は以下のようになる:</p>
+結果は次のようになります。
 
-<p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
 
-<h3 id="A_strokeStyle_example" name="A_strokeStyle_example">プロパティ <code>strokeStyle</code> の例</h3>
+### `strokeStyle` の例
 
-<p>This example is similar to the one above, but uses the <code>strokeStyle</code> property to change the colors of the shapes' outlines. We use the <code>arc()</code> method to draw circles instead of squares.</p>
+この例は上の例と似ていますが、 `strokeStyle` プロパティを使って、図形の輪郭の色を変えています。また、 `arc()` メソッドを使って、四角形の代わりに円を描いています。
 
-<pre class="brush: js;highlight[5,6] notranslate">  function draw() {
+```js
+  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i=0;i&lt;6;i++){
-      for (var j=0;j&lt;6;j++){
-        ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
-                         Math.floor(255-42.5*j) + ')';
+    for (var i = 0; i < 6; i++) {
+      for (var j = 0; j < 6; j++) {
+        ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
+                         Math.floor(255 - 42.5 * j) + ')';
         ctx.beginPath();
-        ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
+        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
         ctx.stroke();
       }
     }
   }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>The result looks like this:</p>
+結果は次のようになります。
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
-<h2 id="Transparency" name="Transparency">透明度のコントロール</h2>
+## 透明度
 
-<p>canvasに不透明な形状を描画するだけでなく、半透明の形状を描画することもできます。 これは、<code>globalAlpha</code>プロパティを設定するか、輪郭線や塗りつぶしのスタイルに半透明の色を割り当てることによって行われます。</p>
+キャンバスには不透明な図形を描くだけではなく、半透明の図形を描くこともできます。これは、 `globalAlpha` プロパティを設定するか、輪郭や塗りつぶしのスタイルに半透明の色を割り当てることで実現します。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}</dt>
- <dd>代入された透明度の値を、代入後にcanvasに描画されるすべての図形に適用します。値は0.0（完全に透明）から1.0（完全に不透明）の間でなければなりません。デフォルトでは1.0（完全に不透明）が設定されています。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
+  - : 代入された透明度の値を、代入後にキャンバスに描画されるすべての図形に適用します。値は 0.0 （完全に透明）から 1.0 （完全に不透明）の間でなければなりません。既定では 1.0 （完全に不透明）が設定されています。
 
-<p><code>globalAlpha</code>プロパティは、同様の透明度でcanvasにいくつもの図形を描画する場合に役に立ちますが、それ以外の場合は、色を設定するときにそれぞれの図形に透明度を設定する方が一般的に便利です。</p>
+`globalAlpha` プロパティは、同様の透明度でキャンバスにいくつもの図形を描画する場合に役に立ちますが、それ以外の場合は、色を設定するときにそれぞれの図形に透明度を設定する方が一般的に便利です。
 
-<p><code>strokeStyle</code>プロパティと<code>fillStyle</code>プロパティはCSSのrgba表現を利用できるため、次のような表記を使用して透明な色を割り当てることもできます。</p>
+`strokeStyle` プロパティと `fillStyle` プロパティは CSS の rgba 表現を利用できるため、次のような表記を使用して透明な色を割り当てることもできます。
 
-<pre class="brush: js notranslate">// 輪郭線と塗りつぶしの色に透明色を割り当てる
+```js
+// 輪郭線と塗りつぶしの色に透明色を割り当てる
 
-ctx.strokeStyle = "rgba(255,0,0,0.5)";
-ctx.fillStyle = "rgba(255,0,0,0.5)";
-</pre>
+ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+```
 
-<p><code>rgba()</code>関数は<code>rgb()</code>関数によく似ていますが、1つ引数が増加します。最後の引数には、この色の透明度の値を設定します。有効な値の範囲は、0.0（完全に透明）から1.0（完全に不透明）です。</p>
+`rgba()` 関数は `rgb()` 関数によく似ていますが、 1 つ引数が増えます。最後の引数には、この色の透明度の値を設定します。有効な値の範囲は、 0.0 （完全に透明）から 1.0 （完全に不透明）です。
 
-<h3 id="A_globalAlpha_example" name="A_globalAlpha_example">プロパティ <code>globalAlpha</code> の例</h3>
+### `globalAlpha` の例
 
-<p>In this example, we'll draw a background of four different colored squares. On top of these, we'll draw a set of semi-transparent circles. The <code>globalAlpha</code> property is set at <code>0.2</code> which will be used for all shapes from that point on. Every step in the <code>for</code> loop draws a set of circles with an increasing radius. The final result is a radial gradient. By overlaying ever more circles on top of each other, we effectively reduce the transparency of the circles that have already been drawn. By increasing the step count and in effect drawing more circles, the background would completely disappear from the center of the image.</p>
+この例では、 4 つの異なる色の正方形で背景を描きます。その上に、一連の半透明の円を描きます。このとき、 `globalAlpha` プロパティは `0.2` に設定され、これ以降すべての図形に使用されます。 `for` ループのそれぞれのステップでは、半径の大きな円を描画します。最終的な結果は放射状のグラデーションになります。より多くの円を重ねることで、すでに描かれている円の透明度を効果的に下げています。ステップ数を増やし、より多くの円を描くと、画像の中心から背景が完全に消えます。
 
-<pre class="brush: js;highlight[15] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // draw background
   ctx.fillStyle = '#FD0';
-  ctx.fillRect(0,0,75,75);
+  ctx.fillRect(0, 0, 75, 75);
   ctx.fillStyle = '#6C0';
-  ctx.fillRect(75,0,75,75);
+  ctx.fillRect(75, 0, 75, 75);
   ctx.fillStyle = '#09F';
-  ctx.fillRect(0,75,75,75);
+  ctx.fillRect(0, 75, 75, 75);
   ctx.fillStyle = '#F30';
-  ctx.fillRect(75,75,75,75);
+  ctx.fillRect(75, 75, 75, 75);
   ctx.fillStyle = '#FFF';
 
   // set transparency value
   ctx.globalAlpha = 0.2;
 
   // Draw semi transparent circles
-  for (i=0;i&lt;7;i++){
+  for (var i = 0; i < 7; i++) {
     ctx.beginPath();
-    ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
+    ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
     ctx.fill();
   }
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
-<h3 id="An_example_using_rgba" name="An_example_using_rgba()">An example using <code>rgba()</code></h3>
+### `rgba()` の使用例
 
-<p>In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using <code>rgba()</code> gives you a little more control and flexibility because we can set the fill and stroke style individually.</p>
+この 2 つ目の例では、上の例と似たようなことをしていますが、円を重ねて描くのではなく、小さな長方形を不透明度を上げながら描いています。 `rgba()` を使うと、塗りつぶしと輪郭線のスタイルを個別に設定できるので、もう少し制御と柔軟性が増します。
 
-<pre class="brush: js;highlight[16] notranslate">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-
-  // Draw background
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
-
-  // Draw semi transparent rectangles
-  for (var i=0;i&lt;10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&lt;4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5);
-    }
-  }
-}</pre>
-
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-
-<pre class="brush: js notranslate">draw();</pre>
-</div>
-
-<p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}</p>
-
-<h2 id="Line_styles" name="Line_styles">Line styles</h2>
-
-<p>There are several properties which allow us to style lines.</p>
-
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth = value")}}</dt>
- <dd>Sets the width of lines drawn in the future.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}</dt>
- <dd>Sets the appearance of the ends of lines.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}</dt>
- <dd>Sets the appearance of the "corners" where lines meet.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}</dt>
- <dd>Establishes a limit on the miter when two lines join at a sharp angle, to let you control how thick the junction becomes.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}</dt>
- <dd>Returns the current line dash pattern array containing an even number of non-negative numbers.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}</dt>
- <dd>Sets the current line dash pattern.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</dt>
- <dd>Specifies where to start a dash array on a line.</dd>
-</dl>
-
-<p>You'll get a better understanding of what these do by looking at the examples below.</p>
-
-<h3 id="A_lineWidth_example" name="A_lineWidth_example">A <code>lineWidth</code> example</h3>
-
-<p>This property sets the current line thickness. Values must be positive numbers. By default this value is set to 1.0 units.</p>
-
-<p>The line width is the thickness of the stroke centered on the given path. In other words, the area that's drawn extends to half the line width on either side of the path. Because canvas coordinates do not directly reference pixels, special care must be taken to obtain crisp horizontal and vertical lines.</p>
-
-<p>In the example below, 10 straight lines are drawn with increasing line widths. The line on the far left is 1.0 units wide. However, the leftmost and all other odd-integer-width thickness lines do not appear crisp, because of the path's positioning.</p>
-
-<pre class="brush: js;highlight[4] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &lt; 10; i++){
-    ctx.lineWidth = 1+i;
+
+  // Draw background
+  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillRect(0, 112.5, 150, 37.5);
+
+  // Draw semi transparent rectangles
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+    }
+  }
+}
+```
+
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
+
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("An_example_using_rgba", "180", "180", "canvas_rgba.png")}}
+
+## 線のスタイル
+
+線のスタイル付けを可能にするプロパティがいくつかあります。
+
+- {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth = value")}}
+  - : これから描かれる線の幅を設定します。
+- {{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}
+  - : 線の末端の外観を設定します。
+- {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}
+  - : 線と線が交わる「角」の外観を設定します。
+- {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}
+  - : 2 本の線が鋭角に接合する際のマイターを制限し、接合部の太さを制御することができます。
+- {{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}
+  - : 非負の偶数個を含む現在の線ダッシュのパターンの配列を返します。
+- {{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}
+  - : 現在の線ダッシュパターンを設定します。
+- {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}
+  - : ダッシュ配列の行頭位置を指定します。
+
+以下の例をご覧いただくと、これらが何をするものなのか、より理解していただけると思います。
+
+### `lineWidth` の例
+
+このプロパティは、現在の線の太さを設定します。値は正の数でなければなりません。既定では、この値は 1.0 単位に設定されています。
+
+線の幅は、与えられたパスを中心としたストロークの太さです。言い換えれば、描画される領域はパスの両側で線幅の半分まで広がります。キャンバスの座標はピクセルを直接参照するわけではないので、水平・垂直方向の線が鮮明になるように特別な注意を払う必要があります。
+
+下の例では、 10 本の直線を線幅を大きくして描いています。一番左の線の幅は 1.0 単位です。しかし、一番左の線とその他の奇数幅の太い線は、パスの位置の関係で鮮明に表示されません。
+
+```js
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+  for (var i = 0; i < 10; i++) {
+    ctx.lineWidth = 1 + i;
     ctx.beginPath();
-    ctx.moveTo(5+i*14,5);
-    ctx.lineTo(5+i*14,140);
+    ctx.moveTo(5 + i * 14, 5);
+    ctx.lineTo(5 + i * 14, 140);
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}</p>
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
 
-<p>Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.</p>
+鮮明な線を得るには、パスがどのように描かれるかを理解する必要があります。下の画像で、グリッドはキャンバスの座標グリッドを表しています。グリッド線とグリッド線の間の矩形は、画面上の実際のピクセルです。下の最初のグリッド画像では、 (2,1) から (5,5) までの矩形が塗りつぶされています。その間の領域（薄赤色）はすべてピクセルの境界線に当たるので、塗りつぶされた矩形は鮮明なエッジを持つことになります。
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
+![](canvas-grid.png)
 
-<p>If you consider a path from (3,1) to (3,5) with a line thickness of <code>1.0</code>, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the <code>1.0</code> width line in the previous example code.</p>
+(3,1) から (3,5) までのパスを線の太さを `1.0` にして考えてみると、 2 番目の画像のような状況になります。実際に塗りつぶされる領域（濃い青色）は、パスの両側のピクセルの半分までしか届きません。この近似値をレンダリングしなければならないので、これらのピクセルは部分的にしかシェーディングされず、その結果、領域全体（水色と濃紺）が実際のストローク色の半分の濃さでしか塗りつぶされないことになります。これは、前の例のコードで `1.0` の幅の行で起こることです。
 
-<p>To fix this, you have to be very precise in your path creation. Knowing that a <code>1.0</code> width line will extend half a unit to either side of the path, creating the path from (3.5,1) to (3.5,5) results in the situation in the third image—the <code>1.0</code> line width ends up completely and precisely filling a single pixel vertical line.</p>
+これを解決するには、パスの作成を非常に正確に行う必要があります。 `1.0` の幅の線はパスの両側へ半単位伸びることを知っていて、パスを (3.5,1) から (3.5,5) まで作成すると、 3 番目の画像のような状況になります。 `1.0` の線幅は完全に、正確に 1 ピクセルの縦線を埋めることになります。
 
-<div class="note">
-<p><strong>Note:</strong> Be aware that in our vertical line example, the Y position still referenced an integer gridline position—if it hadn't, we would see pixels with half coverage at the endpoints (but note also that this behavior depends on the current <code>lineCap</code> style whose default value is <code>butt</code>; you may want to compute consistent strokes with half-pixel coordinates for odd-width lines, by setting the <code>lineCap</code> style to <code>square</code>, so that the outer border of the stroke around the endpoint will be automatically extended to cover the whole pixel exactly).</p>
+> **Note:** 縦線の例では、 Y 位置はまだ整数のグリッド線位置を参照していることに注意してください。もしそうでなければ、端点で半分しかカバーしていないピクセルが見えるでしょう（ただし、この動作は、既定値が `butt` である現在の `lineCap` スタイルに依存していることにも注意してください。奇数幅の線に対して半ピクセル座標で一貫したストロークを計算するには、 `lineCap` スタイルを `square` にして、端点周りのストロークの外枠が自動的にピクセル全体を正確に覆うまで拡張します）。
+>
+> また、パスの始点と終点のみが影響を受けることに注意してください。パスが `closePath()` で閉じられると、始点と終点がなくなります。その代わりに、パスのすべての端点は、現在の `lineJoin` スタイルの設定（既定値は `miter`）を使用して、接続された区間の外側の境界線をそれらの交点まで自動的に拡張する効果があり、レンダリングストロークは、接続された区間が水平または垂直である場合にそれぞれの端点を中心としたピクセル全体を正確に覆うようになります。これらの追加ラインスタイルのデモについては、次の 2 つのセクションを参照してください。
 
-<p>Note also that only start and final endpoints of a path are affected: if a path is closed with <code>closePath()</code>, there's no start and final endpoint; instead, all endpoints in the path are connected to their attached previous and next segment using the current setting of the <code>lineJoin</code> style, whose default value is <code>miter</code>, with the effect of automatically extending the outer borders of the connected segments to their intersection point, so that the rendered stroke will exactly cover full pixels centered at each endpoint if those connected segments are horizontal and/or vertical). See the next two sections for demonstrations of these additional line styles.</p>
-</div>
+偶数幅の線は、それぞれの半分が整数のピクセルになるので、ピクセルの真ん中ではなく、ピクセルとピクセルの間（つまり (3,1) から (3,5)）にパスを設定する必要があります。
 
-<p>For even-width lines, each half ends up being an integer amount of pixels, so you want a path that is between pixels (that is, (3,1) to (3,5)), instead of down the middle of pixels.</p>
+拡大縮小可能な二次元グラフィックを扱う最初のうちは少し面倒ですが、ピクセルグリッドとパスの位置に注意することで、拡大状況やその他の座標変換に関係なく、描画を正しく表示することができます。正しい位置に描かれた幅 1.0 の縦線は、 2 倍に拡大すると 2 ピクセルの鮮明な線となり、正しい位置に表示されます。
 
-<p>While slightly painful when initially working with scalable 2D graphics, paying attention to the pixel grid and the position of paths ensures that your drawings will look correct regardless of scaling or any other transformations involved. A 1.0-width vertical line drawn at the correct position will become a crisp 2-pixel line when scaled up by 2, and will appear at the correct position.</p>
+### `lineCap` の例
 
-<h3 id="A_lineCap_example" name="A_lineCap_example">A <code>lineCap</code> example</h3>
+`lineCap` プロパティは、すべての線の端点がどのように描かれるかを決定します。このプロパティには3つの値があり、それらは `butt`, `round`, `quare` です。既定では、このプロパティは `butt` に設定されています。
 
-<p>The <code>lineCap</code> property determines how the end points of every line are drawn. There are three possible values for this property and those are: <code>butt</code>, <code>round</code> and <code>square</code>. By default this property is set to <code>butt</code>.</p>
+- `butt`
+  - : 線の両端は、末尾の点で四角く切り落とされます。
+- `round`
+  - : 線の両端は丸められます。
+- `square`
+  - : 線の両端は、線の太さと同じ幅と半分の高さのボックスを追加して四角くされます。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/236/Canvas_linecap.png" style="float: right; height: 190px; width: 190px;"></p>
+この例では、 3 本の線を描きます。それぞれの線は `lineCap` プロパティの値が異なっています。また、 3 つの正確な違いを見るために、 2 つのガイドを追加しました。それぞれの線は、これらのガイドの上で正確に始まり、終わります。
 
-<dl>
- <dt><code>butt</code></dt>
- <dd>The ends of lines are squared off at the endpoints.</dd>
- <dt><code>round</code></dt>
- <dd>The ends of lines are rounded.</dd>
- <dt><code>square</code></dt>
- <dd>The ends of lines are squared off by adding a box with an equal width and half the height of the line's thickness.</dd>
-</dl>
+左側の線は、既定の `butt` オプションを使用しています。ガイドと完全に同じ高さに描かれているのがわかると思います。 2 番目の線は `round` オプションを使うように設定されています。これは線の幅の半分の半径を持つ半円を端に追加します。右の線は `square` オプションを使用しています。これは線の太さと同じ幅と半分の高さのボックスを追加します。
 
-<p>In this example, we'll draw three lines, each with a different value for the <code>lineCap</code> property. I also added two guides to see the exact differences between the three. Each of these lines starts and ends exactly on these guides.</p>
-
-<p>The line on the left uses the default <code>butt</code> option. You'll notice that it's drawn completely flush with the guides. The second is set to use the <code>round</code> option. This adds a semicircle to the end that has a radius half the width of the line. The line on the right uses the <code>square</code> option. This adds a box with an equal width and half the height of the line thickness.</p>
-
-<pre class="brush: js;highlight[18] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt','round','square'];
+  var lineCap = ['butt', 'round', 'square'];
 
-  // Draw guides
+  // ガイドを描画
   ctx.strokeStyle = '#09f';
   ctx.beginPath();
-  ctx.moveTo(10,10);
-  ctx.lineTo(140,10);
-  ctx.moveTo(10,140);
-  ctx.lineTo(140,140);
+  ctx.moveTo(10, 10);
+  ctx.lineTo(140, 10);
+  ctx.moveTo(10, 140);
+  ctx.lineTo(140, 140);
   ctx.stroke();
 
-  // Draw lines
+  // 線を描画
   ctx.strokeStyle = 'black';
-  for (var i=0;i&lt;lineCap.length;i++){
+  for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
-    ctx.moveTo(25+i*50,10);
-    ctx.lineTo(25+i*50,140);
+    ctx.moveTo(25 + i * 50, 10);
+    ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "Canvas_linecap.png")}}
 
-<h3 id="A_lineJoin_example" name="A_lineJoin_example">A <code>lineJoin</code> example</h3>
+### `lineJoin` の例
 
-<p>The <code>lineJoin</code> property determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together (degenerate segments with zero lengths, whose specified endpoints and control points are exactly at the same position, are skipped).</p>
+`lineJoin` プロパティは、形状内の長さがゼロでない 2 つの接続された区間（直線、円弧、曲線）をどのように結合するかを決定します（長さがゼロで、指定した端点と制御点が正確に同じ位置にある区間はスキップされます）。
 
-<p>There are three possible values for this property: <code>round</code>, <code>bevel</code> and <code>miter</code>. By default this property is set to <code>miter</code>. Note that the <code>lineJoin</code> setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case.</p>
+このプロパティには、 3 つの値があります。このプロパティには、 `round`, `bevel`, `miter` の 3 つの値があります。既定では、このプロパティは `miter` に設定されています。なお、`lineJoin` の設定は、接続された 2 つの区間の方向が同じである場合には、接合領域が追加されないため、何の効果もありません。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
+- `round`
+  - : 接続された区間の共通の端点を中心とする円盤の追加セクターを埋めることによって、形状の角を丸くします。この丸められた角の半径は、線幅の半分に等しくなります。
+- `bevel`
+  - : 接続された区間の共通の端点と、各区間にある個別の外側の長方形の角との間の三角形の領域を追加で埋めます。
+- `miter`
+  - : 接続された区間は、外側のエッジを延長して 1 点で接続され、追加のロゼンジ形状の領域を埋める効果があります。この設定は、以下に説明する `miterLimit` プロパティによって影響されます。
 
-<dl>
- <dt><code>round</code></dt>
- <dd>Rounds off the corners of a shape by filling an additional sector of disc centered at the common endpoint of connected segments. The radius for these rounded corners is equal to half the line width.</dd>
- <dt><code>bevel</code></dt>
- <dd>Fills an additional triangular area between the common endpoint of connected segments, and the separate outside rectangular corners of each segment.</dd>
- <dt><code>miter</code></dt>
- <dd>Connected segments are joined by extending their outside edges to connect at a single point, with the effect of filling an additional lozenge-shaped area. This setting is effected by the <code>miterLimit</code> property which is explained below.</dd>
-</dl>
+以下の例では、これら3つの `lineJoin` プロパティ設定をそれぞれ実演しながら、 3 つの異なるパスを描画しています。
 
-<p>The example below draws three different paths, demonstrating each of these three <code>lineJoin</code> property settings; the output is shown above.</p>
-
-<pre class="brush: js;highlight[6] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round','bevel','miter'];
+  var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
-  for (var i=0;i&lt;lineJoin.length;i++){
+  for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
     ctx.beginPath();
-    ctx.moveTo(-5,5+i*40);
-    ctx.lineTo(35,45+i*40);
-    ctx.lineTo(75,5+i*40);
-    ctx.lineTo(115,45+i*40);
-    ctx.lineTo(155,5+i*40);
+    ctx.moveTo(-5, 5 + i * 40);
+    ctx.lineTo(35, 45 + i * 40);
+    ctx.lineTo(75, 5 + i * 40);
+    ctx.lineTo(115, 45 + i * 40);
+    ctx.lineTo(155, 5 + i * 40);
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "Canvas_linejoin.png")}}
 
-<h3 id="A_demo_of_the_miterLimit_property" name="A_demo_of_the_miterLimit_property">A demo of the <code>miterLimit</code> property</h3>
+### `miterLimit` プロパティのデモ
 
-<p>As you've seen in the previous example, when joining two lines with the <code>miter</code> option, the outside edges of the two joining lines are extended up to the point where they meet. For lines which are at large angles with each other, this point is not far from the inside connection point. However, as the angles between each line decreases, the distance (miter length) between these points increases exponentially.</p>
+前の例で見たように、 `miter` オプションを使って 2 本の線をつなぐと、2 本の線の外側の端は、それらが出会う点まで延長されます。互いに大きな角度を持つ線の場合、この点は内側の接続点からそう遠くないところにあります。しかし、各ライン間の角度が小さくなるにつれて、これらのポイント間の距離（マイター長）は指数関数的に増加します。
 
-<p>The <code>miterLimit</code> property determines how far the outside connection point can be placed from the inside connection point. If two lines exceed this value, a bevel join gets drawn instead. Note that the maximum miter length is the product of the line width measured in the current coordinate system, by the value of this <code>miterLimit</code> property (whose default value is 10.0 in the HTML {{HTMLElement("canvas")}}), so the <code>miterLimit</code> can be set independently from the current display scale or any affine transforms of paths: it only influences the effectively rendered shape of line edges.</p>
+`miterLimit` プロパティは、内側の接続点から外側の接続点をどれだけ遠くに配置できるかを決定します。もし、 2 本の線がこの値を超えた場合、代わりにベベルジョイントが描かれます。最大マイター長は、現在の座標系で測定された線の幅と、この `miterLimit` プロパティの値（既定値は HTML の {{HTMLElement("canvas") }} の 10.0）の積であることに注意してください。したがって `miterLimit` は現在の表示スケールやパスのアフィン変換とは独立して設定できます。それは、線の端の効果的なレンダリングの形状にのみ影響するものです。
 
-<p>More exactly, the miter limit is the maximum allowed ratio of the extension length (in the HTML canvas, it is measured between the outside corner of the joined edges of the line and the common endpoint of connecting segments specified in the path) to half the line width. It can equivalently be defined as the maximum allowed ratio of the distance between the inside and outside points of jonction of edges, to the total line width. It is then equal to the cosecant of half the minimum inner angle of connecting segments below which no miter join will be rendered, but only a bevel join:</p>
+より正確には、マイター制限とは、線幅の半分に対する延長長さ（HTML キャンバスでは、線の接続端の外側の角と、パスで指定した接続セグメントの共通の端点の間で測ります）の最大許容比率のことです。これは同様に、線幅全体に対する、辺の接合部の内側と外側の点間の距離の最大許容比率と定義することもできます。これは、接続セグメントの最小内角の半分の正接に等しく、それ以下ではマイター結合は描画されず、ベベル結合のみが描画されます。
 
-<ul>
- <li><code>miterLimit</code> = <strong>max</strong> <code>miterLength</code> / <code>lineWidth</code> = 1 / <strong>sin</strong> ( <strong>min</strong> <em>θ</em> / 2 )</li>
- <li>The default miter limit of 10.0 will strip all miters for sharp angles below about 11 degrees.</li>
- <li>A miter limit equal to √2 ≈ 1.4142136 (rounded up) will strip miters for all acute angles, keeping miter joins only for obtuse or right angles.</li>
- <li>A miter limit equal to 1.0 is valid but will disable all miters.</li>
- <li>Values below 1.0 are invalid for the miter limit.</li>
-</ul>
+- `miterLimit` = **max** `miterLength` / `lineWidth` = 1 / **sin** ( **min** _θ_ / 2 )
+- 既定のマイター制限 10.0 は、約 11 度以下の鋭角のマイターをすべて解除します。
+- マイター制限を √2 ≈ 1.4142136（切り上げ）とすると、すべての鋭角に対してマイターを剥がし、鈍角または直角に対してのみマイター結合を維持することができます。
+- マイター制限を 1.0 に設定すると有効ですが、すべてのマイターが無効になります。
+- 1.0 以下の値はマイター制限では無効です。
 
-<p>Here's a little demo in which you can set <code>miterLimit</code> dynamically and see how this effects the shapes on the canvas. The blue lines show where the start and endpoints for each of the lines in the zig-zag pattern are.</p>
+ここでは、 `miterLimit` を動的に設定し、それがキャンバス上の図形にどのように影響するかを見るための小さなデモを紹介します。青い線は、ジグザグ模様の各線の始点と終点を示しています。
 
-<p>If you specify a <code>miterLimit</code> value below 4.2 in this demo, none of the visible corners will join with a miter extension, but only with a small bevel near the blue lines; with a <code>miterLimit</code> above 10, most corners in this demo should join with a miter far away from the blue lines, and whose height is decreasing between corners from left to right because they connect with growing angles; with intermediate values, the corners on the left side will only join with a bevel near the blue lines, and the corners on the right side with a miter extension (also with a decreasing height).</p>
+もし `miterLimit` の値を 4 以下で指定した場合。 10 以上の `miterLimit` を指定すると、このデモのほとんどのコーナーは青い線から遠く離れたところでマイターで結合し、左から右へ角度を大きくして接続するため、コーナーの高さが減少するはずです。中間の値では、左側のコーナーは青い線の近くでベベルで結合し、右側のコーナーはマイターを延長（これも高さが減少する）するだけです。
 
-<pre class="brush: js;highlight[18] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Clear canvas
-  ctx.clearRect(0,0,150,150);
+  // キャンバスを消去
+  ctx.clearRect(0, 0, 150, 150);
 
-  // Draw guides
+  // ガイドを描画
   ctx.strokeStyle = '#09f';
   ctx.lineWidth   = 2;
-  ctx.strokeRect(-5,50,160,50);
+  ctx.strokeRect(-5, 50, 160, 50);
 
-  // Set line styles
+  // 線のスタイルを設定
   ctx.strokeStyle = '#000';
   ctx.lineWidth = 10;
 
-  // check input
+  // 入力をチェック
   if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
     ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
   } else {
     alert('Value must be a positive number');
   }
 
-  // Draw lines
+  // 線を描画
   ctx.beginPath();
-  ctx.moveTo(0,100);
-  for (i=0;i&lt;24;i++){
-    var dy = i%2==0 ? 25 : -25 ;
-    ctx.lineTo(Math.pow(i,1.5)*2,75+dy);
+  ctx.moveTo(0, 100);
+  for (i = 0; i < 24 ; i++) {
+    var dy = i % 2 == 0 ? 25 : -25;
+    ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
   return false;
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;&lt;/td&gt;
-    &lt;td&gt;Change the &lt;code&gt;miterLimit&lt;/code&gt; by entering a new value below and clicking the redraw button.&lt;br&gt;&lt;br&gt;
-      &lt;form onsubmit="return draw();"&gt;
-        &lt;label&gt;Miter limit&lt;/label&gt;
-        &lt;input type="text" size="3" id="miterLimit"/&gt;
-        &lt;input type="submit" value="Redraw"/&gt;
-      &lt;/form&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html hidden
+<table>
+  <tr>
+    <td><canvas id="canvas" width="150" height="150"></canvas></td>
+    <td><code>miterLimit</code> を変更するには、下に新しい値を入力し、再描画ボタンをクリックしてください。<br><br>
+      <form onsubmit="return draw();">
+        <label>マイター制限</label>
+        <input type="number" size="3" id="miterLimit"/>
+        <input type="submit" value="Redraw"/>
+      </form>
+    </td>
+  </tr>
+</table>
+```
 
-<pre class="brush: js notranslate">document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
-draw();</pre>
-</div>
+```js hidden
+document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+draw();
+```
 
-<p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
 
-<h3 id="Using_line_dashes">Using line dashes</h3>
+### 線ダッシュの使用
 
-<p>The <code>setLineDash</code> method and the <code>lineDashOffset</code> property specify the dash pattern for lines. The <code>setLineDash</code> method accepts a list of numbers that specifies distances to alternately draw a line and a gap and the <code>lineDashOffset</code> property sets an offset where to start the pattern.</p>
+`setLineDash` メソッドと `lineDashOffset` プロパティは直線のダッシュパターンを指定します。`setLineDash` メソッドは、線と隙間を交互に描く距離を指定する数値のリストを受け取り、`lineDashOffset` プロパティはパターンを開始するオフセットを設定します。
 
-<p>In this example we are creating a marching ants effect. It is an animation technique often found in <span class="new">selection</span> tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border. In a later part of this tutorial, you can learn how to do this and other <a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations">basic animations</a>.</p>
+この例では、蟻の行進のような効果を作成しています。これは、コンピュータグラフィックスプログラムの選択ツールでよく見られるアニメーション技術です。境界線をアニメーション化することで、ユーザーが画像の背景と選択範囲の境界線を区別するのに役立ちます。このチュートリアルの後半では、この方法とその他の[基本的なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations)を行う方法を学習することができます。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="110" height="110"></canvas>
+```
 
-<pre class="brush: js;highlight[6] notranslate">var ctx = document.getElementById('canvas').getContext('2d');
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10,10, 100, 100);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset &gt; 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
-march();</pre>
+march();
+```
 
-<p>{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}</p>
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
 
-<h2 id="Gradients" name="Gradients">Gradients</h2>
+## グラデーション
 
-<p>Just like any normal drawing program, we can fill and stroke shapes using linear and radial gradients. We create a {{domxref("CanvasGradient")}} object by using one of the following methods. We can then assign this object to the <code>fillStyle</code> or <code>strokeStyle</code> properties.</p>
+通常の描画プログラムと同様に、線形、放射、扇形グラデーションを用いて図形を塗りつぶしたり描画したりすることができます。以下のメソッドのいずれかを使用して {{domxref("CanvasGradient")}} オブジェクトを作成します。そして、このオブジェクトを `fillStyle` または `strokeStyle` プロパティに代入することができます。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}</dt>
- <dd>Creates a linear gradient object with a starting point of (<code>x1</code>, <code>y1</code>) and an end point of (<code>x2</code>, <code>y2</code>).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}</dt>
- <dd>Creates a radial gradient. The parameters represent two circles, one with its center at (<code>x1</code>, <code>y1</code>) and a radius of <code>r1</code>, and the other with its center at (<code>x2</code>, <code>y2</code>) with a radius of <code>r2</code>.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}
+  - : 線形グラデーションオブジェクトを、 (`x1`, `y1`) の点から始まり (`x2`, `y2`) の点から終える位置に生成します。
+- {{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}
+  - : 放射グラデーションを生成します。引数は 2 つの円を表します。一つは (`x1`, `y1`) が中心で `r1` が半径、もう一つは (`x2`, `y2`) が中心で `r2` が半径です。
+- {{domxref("CanvasRenderingContext2D.createConicGradient", "createConicGradient(angle, x, y)")}}
+  - : 扇形グラデーションオブジェクトを、ラジアンの開始角 `angle`、位置を (`x`, `y`) で生成します。
 
-<p>For example:</p>
+例を示します。
 
-<pre class="brush: js notranslate">var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
+```js
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
 var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
-</pre>
+```
 
-<p>Once we've created a <code>CanvasGradient</code> object we can assign colors to it by using the <code>addColorStop()</code> method.</p>
+`CanvasGradient` オブジェクトを作成したら、 `addColorStop()` メソッドを使って色を割り当てることができます。
 
-<dl>
- <dt>{{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}</dt>
- <dd>Creates a new color stop on the <code>gradient</code> object. The <code>position</code> is a number between 0.0 and 1.0 and defines the relative position of the color in the gradient, and the <code>color</code> argument must be a string representing a CSS {{cssxref("&lt;color&gt;")}}, indicating the color the gradient should reach at that offset into the transition.</dd>
-</dl>
+- {{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}
+  - : `gradient` オブジェクトに新しい色経由点を作成します。また、 `color` 引数は CSS の {{cssxref("&lt;color&gt;")}} を表す文字列である必要があり、グラデーションがそのオフセットで到達すべき色を表します。
 
-<p>You can add as many color stops to a gradient as you need. Below is a very simple linear gradient from white to black.</p>
+グラデーションには、必要なだけ色経由点を追加することができます。以下は、白から黒へ非常にシンプルな線形グラデーションです。
 
-<pre class="brush: js notranslate">var lineargradient = ctx.createLinearGradient(0,0,150,150);
+```js
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
 lineargradient.addColorStop(0, 'white');
 lineargradient.addColorStop(1, 'black');
-</pre>
+```
 
-<h3 id="A_createLinearGradient_example" name="A_createLinearGradient_example">A <code>createLinearGradient</code> example</h3>
+### `createLinearGradient` の例
 
-<p>In this example, we'll create two different gradients. As you can see here, both the <code>strokeStyle</code> and <code>fillStyle</code> properties can accept a <code>canvasGradient</code> object as valid input.</p>
+この例では、 2 つの異なるグラデーションを作成します。ここでわかるように、 `strokeStyle` と `fillStyle` の両プロパティは `canvasGradient` オブジェクトを有効な入力として受け入れることができます。
 
-<pre class="brush: js;highlight[5,11] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Create gradients
-  var lingrad = ctx.createLinearGradient(0,0,0,150);
+  // グラデーションを生成
+  var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
   lingrad.addColorStop(0, '#00ABEB');
   lingrad.addColorStop(0.5, '#fff');
   lingrad.addColorStop(0.5, '#26C000');
   lingrad.addColorStop(1, '#fff');
 
-  var lingrad2 = ctx.createLinearGradient(0,50,0,95);
+  var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
   lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
+  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
-  // assign gradients to fill and stroke styles
+  // グラデーションに塗りつぶしと輪郭のスタイルを割り当てる
   ctx.fillStyle = lingrad;
   ctx.strokeStyle = lingrad2;
 
-  // draw shapes
-  ctx.fillRect(10,10,130,130);
-  ctx.strokeRect(50,50,50,50);
+  // 図形を描画
+  ctx.fillRect(10, 10, 130, 130);
+  ctx.strokeRect(50, 50, 50, 50);
 
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>The first is a background gradient. As you can see, we assigned two colors at the same position. You do this to make very sharp color transitions—in this case from white to green. Normally, it doesn't matter in what order you define the color stops, but in this special case, it does significantly. If you keep the assignments in the order you want them to appear, this won't be a problem.</p>
+1 つ目は、背景のグラデーションです。ご覧のように、同じ位置に 2 つの色を割り当てています。これは、非常にシャープな色の遷移を行うためで、この場合は白から緑への遷移です。通常は、色経由点をどのような順番で定義しても問題ありませんが、この特殊なケースでは、それが大きな意味を持ちます。表示させたい順番に割り当てておけば、問題にはなりません。
 
-<p>In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.</p>
+2 つ目のグラデーションでは、開始色（位置 0.0）を割り当てませんでした。なぜなら、次の色経由点の色を自動的に仮定するため、厳密には必要ないからです。したがって、位置 0.5 に黒を割り当てると、グラデーションの開始からこの停止位置までが自動的に黒になります。
 
-<p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}</p>
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
 
-<h3 id="A_createRadialGradient_example" name="A_createRadialGradient_example">A <code>createRadialGradient</code> example</h3>
+### `createRadialGradient` の例
 
-<p>In this example, we'll define four different radial gradients. Because we have control over the start and closing points of the gradient, we can achieve more complex effects than we would normally have in the "classic" radial gradients we see in, for instance, Photoshop (that is, a gradient with a single center point where the gradient expands outward in a circular shape).</p>
+この例では、 4 つの異なる放射状グラデーションを定義します。グラデーションの開始点と終了点を制御できるので、 Photoshop などで見られる「古典的な」放射グラデーション（つまり、グラデーションが円形に広がる 1 つの中心点を持つグラデーション）よりも複雑な効果を得ることができます。
 
-<pre class="brush: js;highlight[5,10,15,20] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Create gradients
-  var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+  // グラデーションを作成
+  var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
   radgrad.addColorStop(0, '#A7D30C');
   radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+  radgrad.addColorStop(1, 'rgba(1, 159, 98, 0)');
 
-  var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
+  var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
   radgrad2.addColorStop(0, '#FF5F98');
   radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+  radgrad2.addColorStop(1, 'rgba(255, 1, 136, 0)');
 
-  var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
+  var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
   radgrad3.addColorStop(0, '#00C9FF');
   radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+  radgrad3.addColorStop(1, 'rgba(0, 201, 255, 0)');
 
-  var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
+  var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
   radgrad4.addColorStop(0, '#F4F201');
   radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+  radgrad4.addColorStop(1, 'rgba(228, 199, 0, 0)');
 
-  // draw shapes
+  // 図形を描画
   ctx.fillStyle = radgrad4;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad3;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad2;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>In this case, we've offset the starting point slightly from the end point to achieve a spherical 3D effect. It's best to try to avoid letting the inside and outside circles overlap because this results in strange effects which are hard to predict.</p>
+この場合、始点と終点を少しずらして、球状の三次元効果を出しています。内円と外円が重ならないようにすると、予測しにくい不思議な効果が得られます。
 
-<p>The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient <code>#019F62 = rgba(1,159,98,1)</code>.</p>
+4 つのグラデーションの最後の色経由点は、完全に透明な色を使っています。この色から前の色への移行を美しくしたい場合は、両方の色を同じにする必要があります。このコードでは、 2 つの異なる CSS カラーメソッドをデモンストレーションとして使用しているので、これはあまり明らかではありませんが、最初のグラデーションでは `#019F62 = rgba(1,159,98,1)` です。
 
-<p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
-<h2 id="Patterns" name="Patterns">Patterns</h2>
+<!-- ------------------------ -->
 
-<p>In one of the examples on the previous page, we used a series of loops to create a pattern of images. There is, however, a much simpler method: the <code>createPattern()</code> method.</p>
+### `createConicGradient` 例
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}</dt>
- <dd>Creates and returns a new canvas pattern object. <code>image</code> is a {{domxref("CanvasImageSource")}} (that is, an {{domxref("HTMLImageElement")}}, another canvas, a {{HTMLElement("video")}} element, or the like. <code>type</code> is a string indicating how to use the image.</dd>
-</dl>
+この例では、 2 つの異なる扇形グラデーションを定義します。扇形グラデーションは放射グラデーションとは異なり、円を描くのではなく、点の周りを一周します。
 
-<p>The type specifies how to use the image in order to create the pattern, and must be one of the following string values:</p>
-
-<dl>
- <dt><code>repeat</code></dt>
- <dd>Tiles the image in both vertical and horizontal directions.</dd>
- <dt><code>repeat-x</code></dt>
- <dd>Tiles the image horizontally but not vertically.</dd>
- <dt><code>repeat-y</code></dt>
- <dd>Tiles the image vertically but not horizontally.</dd>
- <dt><code>no-repeat</code></dt>
- <dd>Doesn't tile the image. It's used only once.</dd>
-</dl>
-
-<p>We use this method to create a {{domxref("CanvasPattern")}} object which is very similar to the gradient methods we've seen above. Once we've created a pattern, we can assign it to the <code>fillStyle</code> or <code>strokeStyle</code> properties. For example:</p>
-
-<pre class="brush: js notranslate">var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img,'repeat');
-</pre>
-
-<div class="note">
-<p><strong>Note:</strong> Like with the <code>drawImage()</code> method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.</p>
-</div>
-
-<h3 id="A_createPattern_example" name="A_createPattern_example">A <code>createPattern</code> example</h3>
-
-<p>In this last example, we'll create a pattern to assign to the <code>fillStyle</code> property. The only thing worth noting is the use of the image's <code>onload</code> handler. This is to make sure the image is loaded before it is assigned to the pattern.</p>
-
-<pre class="brush: js;highlight[10] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  // create new image object to use as pattern
-  var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-  img.onload = function(){
+  // グラデーションの作成
+  var conicGrad1 = ctx.createConicGradient(2, 62, 75);
+  conicGrad1.addColorStop(0, '#A7D30C');
+  conicGrad1.addColorStop(1, '#fff');
 
-    // create pattern
-    var ptrn = ctx.createPattern(img,'repeat');
+  var conicGrad2 = ctx.createConicGradient(0, 187, 75);
+  // we multiple our values by Math.PI/180 to convert degrees to radians
+  conicGrad2.addColorStop(0, 'black');
+  conicGrad2.addColorStop(0.25, 'black');
+  conicGrad2.addColorStop(0.25, 'white');
+  conicGrad2.addColorStop(0.5, 'white');
+  conicGrad2.addColorStop(0.5, 'black');
+  conicGrad2.addColorStop(0.75, 'black');
+  conicGrad2.addColorStop(0.75, 'white');
+  conicGrad2.addColorStop(1, 'white');
+
+  // 図形を描画
+  ctx.fillStyle = conicGrad1;
+  ctx.fillRect(12, 25, 100, 100);
+  ctx.fillStyle = conicGrad2;
+  ctx.fillRect(137, 25, 100, 100);
+}
+```
+
+```html hidden
+<canvas id="canvas" width="250" height="150"></canvas>
+```
+
+```js hidden
+draw();
+```
+
+最初のグラデーションは、最初の矩形の中央に配置され、開始時に緑の色経由点を移動し、終了時に白の色経由点を移動します。角度は 2 ラジアンから始まり、始まりと終わりの線が南東を指しているため、顕著に現れています。
+
+2 つ目のグラデーションも、 2 つ目の矩形の中心に配置されています。こちらは複数の色経由点があり、回転の 1/4 ごとに黒から白に交互に変化します。これにより、市松模様のような効果が得られます。
+
+{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
+
+## パターン
+
+前ページの例では、一連のループを使って画像のパターンを作成しました。しかし、もっと簡単な方法があります。 `createPattern()` メソッドです。
+
+- {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
+  - : 新しいキャンバスパターンオブジェクトを作成し、返します。 `image` は {{domxref("CanvasImageSource")}} です（つまり、{{domxref("HTMLImageElement")}}、他のキャンバス、 {{HTMLElement("video")}} 要素などです）。`type` は、画像の利用方法を示す文字列です。
+
+type は、パターンを作成するための画像の使用方法を指定し、以下の文字列値のいずれかでなければなりません。
+
+- `repeat`
+  - : 垂直・水平方向に画像を並べます。
+- `repeat-x`
+  - : 画像を水平方向に並べますが、垂直方向には並べません。
+- `repeat-y`
+  - : 画像を垂直方向に並べますが、水平方向には並べません。
+- `no-repeat`
+  - : 画像をタイル配置しません。一度だけ使用されます。
+
+このメソッドを使って {{domxref("CanvasPattern")}} オブジェクトを作成します。これは上で見たグラデーションのメソッドと非常によく似ています。パターンを作成したら、それを `fillStyle` または `strokeStyle` プロパティに代入します。例えば次のようにします。
+
+```js
+var img = new Image();
+img.src = 'someimage.png';
+var ptrn = ctx.createPattern(img, 'repeat');
+```
+
+> **Note:** `drawImage()` メソッドと同様に、このメソッドを呼び出す前に使用する画像が読み込まれていることを確認する必要があります。そうしないと、パターンが正しく描画されない可能性があります。
+
+### `createPattern` の例
+
+この最後の例では、 `fillStyle` プロパティに割り当てるパターンを作成します。唯一の注目すべき点は、画像の `onload` ハンドラーを使用していることです。これは、パターンに割り当てる前に画像が読み込まていれることを保証するためです。
+
+```js
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  // 新しい画像オブジェクトを生成して、パターンとして使用する
+  var img = new Image();
+  img.src = 'canvas_createpattern.png';
+  img.onload = function() {
+
+    // パターンを作成
+    var ptrn = ctx.createPattern(img, 'repeat');
     ctx.fillStyle = ptrn;
-    ctx.fillRect(0,0,150,150);
+    ctx.fillRect(0, 0, 150, 150);
 
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>The result looks like this:</p>
-</div>
+{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
 
-<p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
+## 影
 
-<h2 id="Shadows">Shadows</h2>
+影を使うには、ちょうど 4 つのプロパティが必要です。
 
-<p>Using shadows involves just four properties:</p>
+- {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}
+  - : 影がオブジェクトから伸びるべき水平距離を示します。この値は、変換行列の影響を受けません。既定値は 0 です。
+- {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}
+  - : 影がオブジェクトから伸びるべき垂直距離を示します。この値は、変換行列の影響を受けません。既定値は 0 です。
+- {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}
+  - : ぼかし効果の大きさを示します。この値はピクセル数には対応せず、現在の変換行列の影響を受けません。既定値は 0 です。
+- {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}
+  - : 影の効果の色を示す CSS 標準の色の値です。は、既定では完全透過の黒です。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}</dt>
- <dd>Indicates the horizontal distance the shadow should extend from the object. This value isn't affected by the transformation matrix. The default is 0.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}</dt>
- <dd>Indicates the vertical distance the shadow should extend from the object. This value isn't affected by the transformation matrix. The default is 0.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
- <dd>Indicates the size of the blurring effect; this value doesn't correspond to a number of pixels and is not affected by the current transformation matrix. The default value is 0.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
- <dd>A standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.</dd>
-</dl>
+プロパティ `shadowOffsetX` と `shadowOffsetY` は、影がオブジェクトから X と Y 方向にどれだけ伸びるかを示します。これらの値は、現在の変換行列には影響されません。影を上または左に伸ばすには負の値を使用し、影を下または右に伸ばすには正の値を使用します。既定値はどちらも 0 です。
 
-<p>The properties <code>shadowOffsetX</code> and <code>shadowOffsetY</code> indicate how far the shadow should extend from the object in the X and Y directions; these values aren't affected by the current transformation matrix. Use negative values to cause the shadow to extend up or to the left, and positive values to cause the shadow to extend down or to the right. These are both 0 by default.</p>
+`shadowBlur` プロパティはぼかし効果の大きさを示します。この値はピクセル数には対応せず、現在の変換行列の影響を受けません。既定値は 0 です。
 
-<p>The <code>shadowBlur</code> property indicates the size of the blurring effect; this value doesn't correspond to a number of pixels and is not affected by the current transformation matrix. The default value is 0.</p>
+`shadowColor` プロパティは影の効果の色を示す CSS 標準の色の値です。は、既定では完全透過の黒です。
 
-<p>The <code>shadowColor</code> property is a standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.</p>
+> **Note:** 影は `source-over` [合成操作](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing)でのみ描画されます。
 
-<div class="note">
-<p><strong>Note:</strong> Shadows are only drawn for <code>source-over</code> <a href="/ja/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Web/Guide/HTML/Canvas_tutorial/Compositing">compositing operations</a>.</p>
-</div>
+### 影付きテキストの例
 
-<h3 id="A_shadowed_text_example">A shadowed text example</h3>
+この例では、文字列を影付きで描画しています。
 
-<p>This example draws a text string with a shadowing effect.</p>
-
-<pre class="brush: js;highlight[4,5,6,7] notranslate">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
 
-  ctx.font = "20px Times New Roman";
-  ctx.fillStyle = "Black";
-  ctx.fillText("Sample String", 5, 30);
+  ctx.font = '20px Times New Roman';
+  ctx.fillStyle = 'Black';
+  ctx.fillText('Sample String', 5, 30);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="80"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="80"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
-<p>We will look at the <code>font</code> property and <code>fillText</code> method in the next chapter about <a href="/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text">drawing text</a>.</p>
+font` プロパティと `fillText` メソッドについては、次の章の [テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)で見ていくことにしましょう。
 
-<h2 id="Canvas_fill_rules">Canvas fill rules</h2>
+## キャンバスの塗りつぶしルール
 
-<p>When using <code>fill</code> (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}}) you can optionally provide a fill rule algorithm by which to determine if a point is inside or outside a path and thus if it gets filled or not. This is useful when a path intersects itself or is nested.<br>
- <br>
- Two values are possible:</p>
+`fill` （または {{domxref("CanvasRenderingContext2D.clip", "clip")}} と {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointInPath")}}）を使う場合、オプションとして、ある点がパスの内側か外側か、したがってそれが埋められたかどうかを判断する充填規則のアルゴリズムを指定することが出来ます。これは、パスがそれ自身と交差していたり、入れ子になっていたりする場合に便利です。
 
-<ul>
- <li><code><strong>"nonzero</strong></code>": The <a class="external external-icon" href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>, which is the default rule.</li>
- <li><code><strong>"evenodd"</strong></code>: The <a class="external external-icon" href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a>.</li>
-</ul>
+2 つの値が可能です。
 
-<p>In this example we are using the <code>evenodd</code> rule.</p>
+- **`"nonzero"`**: [非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)です。こちらが既定のルールです。
+- **`"evenodd"`**: [偶奇ワインディングルール](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)です。
 
-<pre class="brush: js;highlight[6] notranslate">function draw() {
+この例では `evenodd` ルールを使用しています。
+
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI*2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI*2, true);
-  ctx.fill("evenodd");
-}</pre>
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
+  ctx.fill('evenodd');
+}
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="100" height="100"></canvas>
+```
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}</p>
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
