@@ -1,153 +1,155 @@
 ---
-title: Basic usage of canvas
+title: キャンバスの基本的な使い方
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
+tags:
+  - キャンバス
+  - グラフィック
+  - HTML
+  - 中級者
+  - チュートリアル
 translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
-<div class="summary">
-<p>まずチュートリアルの最初として {{HTMLElement("canvas")}} {{Glossary("HTML")}} 要素を説明します。このページを読めば、canvas 要素に 2D の画像を描けるようになります。</p>
-</div>
+このチュートリアルを、 {{HTMLElement("canvas")}} という {{Glossary("HTML")}} の要素を見てみることから始めましょう。このページの最後では、ブラウザーでキャンバス 2D コンテキストの設定し、最初の例を描画する方法を学びます。
 
-<h2 id="&lt;canvas>_要素"><code>&lt;canvas&gt;</code> 要素</h2>
+## `<canvas>` 要素
 
-<pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="tutorial" width="150" height="150"></canvas>
+```
 
-<p>{{HTMLElement("canvas")}} は {{HTMLElement("img")}} と似ています。<code>src</code> 属性と <code>alt</code> 属性がない点が明確に異なりますが、{{htmlattrxref("width", "canvas")}} と {{htmlattrxref("height", "canvas")}} の属性がある点などは共通しています。 これらの属性は必ず指定しなければならないものではありません。このほかに様々な {{Glossary("DOM")}} <a href="/ja/docs/Web/API/HTMLCanvasElement">属性</a>を利用できます。 <code>width</code> と <code>height</code> 属性が指定されなかった場合、canvas は幅 <strong>300 ピクセル</strong>、高さ <strong>150 ピクセル</strong>の要素として初期化されます。画面上の大きさは {{Glossary("CSS")}} によって変更できますが、その場合 canvas に描画される画像は CSS の指定に合わせて拡大 / 縮小されます。この際、元の画像のアスペクト比は考慮されないため、指定の仕方によっては画像が歪んで表示されます。</p>
+一見すると、 {{HTMLElement("canvas")}} は {{HTMLElement("img")}} 要素と似ていますが、 `src` 属性と `alt` 属性がない点が明確に異なります。一方、 `<canvas>` には {{htmlattrxref("width", "canvas")}} と {{htmlattrxref("height", "canvas")}} の 2 つの属性のみがあります。これらはどちらもオプションで、 {{Glossary("DOM")}} [プロパティ](/ja/docs/Web/API/HTMLCanvasElement)を用いて設定することもできます。を利用できます。 `width` 属性と `height` 属性が指定されていない場合、キャンバスは幅 **300 ピクセル**、高さ **150 ピクセル**で初期化されます。要素の大きさは {{Glossary("CSS")}} で変更できますが、画像を描画される際にはそのレイアウト上の大きさに合わせて拡縮されます。 CSS での大きさは初期のキャンバスの比率を考慮しないため、歪んで表示されることになります。
 
-<div class="note">
-<p><strong>付記:</strong> 画像が歪んでいると感じた時は、<code>&lt;canvas&gt; </code>の <code>width</code> と <code>height</code> 属性の値を設定して、CSS によるサイズの変更をしないようにしましょう。</p>
-</div>
+> **Note:** 画像が歪んでいると感じた時は、 CSS を使用するのではなく、 `width` および `height` 属性を `<canvas>` の属性に明示的に指定してください。
 
-<p><a href="/ja/docs/Web/HTML/Global_attributes/id"><code>id</code></a> 属性は <a href="/ja/docs/Web/HTML/Global_attributes">全ての要素が持つ属性</a> で <code>&lt;canvas&gt;</code> に固有なものではありません。これを利用することで、ユニークな ID を要素に持たせられます。ID を持たせることで、JavaScript の中から、その要素を探すのが簡単になります。</p>
+[`id`](/ja/docs/Web/HTML/Global_attributes/id) は `<canvas>` 要素に固有の属性ではありませんが、[HTML のグローバル属性](/ja/docs/Web/HTML/Global_attributes)の一つで、（[`class`](/ja/docs/Web/HTML/Global_attributes/class) のように）すべての HTML 要素に適用することができます。常に `id` を設定するようにすると、スクリプトから要素を特定しやすくなります。
 
-<p><code>&lt;canvas&gt;</code> 要素は通常の画像と同じようにレイアウトされます。({{cssxref("margin")}} や {{cssxref("border")}}、 {{cssxref("background")}} といったルールも利用可能ですが、これらは実際に描画される画像には影響を与えません。スタイルが何も設定されていない場合、canvas は最初透明なものとして描画されます。スタイルとレイアウトに関しては<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">専用のページ</a>を設けています。詳細は、そちらをご覧ください。</p>
+`<canvas>` 要素は通常の画像と同じようにスタイル付けすることができます（{{cssxref("margin")}}、{{cssxref("border")}}、{{cssxref("background")}} など）。しかし、これらのルールは、実際にキャンバス上に描画されるものには影響しません。これをどう扱うかについては、このチュートリアルの[専用の章](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)で紹介します。スタイルのルールが何も適用されていない場合、キャンバスは完全に透明なものとして描画されます。
 
-<div id="section_2">
-<h3 id="代替コンテンツ">代替コンテンツ</h3>
+### 代替コンテンツ
 
-<p><code>&lt;canvas&gt;</code> 要素は対応していないブラウザ、例えば Internet Explorer 9 以前、で表示するための代替コンテンツを定義できます。これは {{HTMLElement("img")}} というよりは、むしろ {{HTMLElement("video")}} や {{HTMLElement("audio")}}、{{HTMLElement("picture")}} 要素に似ています。</p>
+`<canvas>` 要素は {{HTMLElement("img")}} タグとは異なり、 {{HTMLElement("video")}}、{{HTMLElement("audio")}}、{{HTMLElement("picture")}} 要素のように、未対応の古いブラウザー（Internet Explorer 9 以前など）やテキストのブラウザーで表示される代替コンテンツを設定するのは簡単です。これらのブラウザーで表示される代替コンテンツを常に設定してください。
 
-<p>代替コンテンツの定義方法はシンプルで<code>、&lt;canvas&gt; </code>要素の内部に代わりに表示するコンテンツを記述します。対応していないブラウザは <code>&lt;canvas&gt; </code>を無視するため、その内部のコンテンツが表示されるというわけです。</p>
+代替コンテンツを提供する方法はとても直観的です。代替コンテンツを `<canvas>` の中に入れるだけです。 `<canvas>` に対応していないブラウザーはこのコンテナーを無視し、内部の代替コンテンツを表示します。 `<canvas>` に対応しているブラウザーは、ふつうコンテナー内のコンテンツを無視し、通常通りキャンバスを描画します。
 
-<p>次の例では JavaScript によって canvas に対して、代替テキストが設定されています：</p>
+例えば、キャンバスの内容を説明するテキストを提供したり、動的に描画されるコンテンツの性的な画像を提供したりすることができます。次のようになります。
 
-<pre class="brush: html">&lt;canvas id="stockGraph" width="150" height="150"&gt;
-  現在の株価: $3.15 +0.15
-&lt;/canvas&gt;
+```html
+<canvas id="stockGraph" width="150" height="150">
+  現在の株価: $3.15 + 0.15
+</canvas>
 
-&lt;canvas id="clock" width="150" height="150"&gt;
-  &lt;img src="images/clock.png" width="150" height="150" alt=""/&gt;
-&lt;/canvas&gt;
-</pre>
+<canvas id="clock" width="150" height="150">
+  <img src="images/clock.png" width="150" height="150" alt=""/>
+</canvas>
+```
 
-<p>使用するブラウザを変更するよう利用者に伝えることは、利用者のために全くなりません。どのような代替テキスト / コンテンツを設定するのが適切かは <a href="/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">make the canvas more accessible</a> をご覧ください。</p>
+キャンバスに対応した別なブラウザーを使用するようにユーザーに指示することは、例えばキャンバスを見ることができないユーザーにとって助けになりません。有用な代替テキストやサブ DOM を提供することは、キャンバスのアクセシビリティを向上させます。
 
-<h3 id="&lt;canvas>：閉じタグが必須です"><code>&lt;/canvas&gt;：</code>閉じタグが必須です</h3>
+### `</canvas>` タグが必要
 
-<p>代替コンテンツを内部に持つ関係上、{{HTMLElement("img")}} 要素と異なって {{HTMLElement("canvas")}} 要素は閉じタグ (<code>&lt;/canvas&gt;</code>) が<strong>必須となっています</strong>。タグを閉じなかった場合は、残りのページ全てが代替コンテンツとして処理され、その結果としてそれらが表示されなくなります。</p>
+代替コンテンツを内部に持つ関係上、 {{HTMLElement("img")}} 要素と異なって {{HTMLElement("canvas")}} 要素は閉じタグ (`</canvas>`) が**必須**です。タグを閉じなかった場合は、残りのページ全てが代替コンテンツと見なされ、結果として表示されなくなります。
 
-<p>代替コンテンツが必要でない場合は、単に <code>&lt;canvas id="foo" ...&gt;&lt;/canvas&gt;</code> と書けば対応するブラウザで動作します。</p>
+代替コンテンツが必要でない場合は、単に `<canvas id="foo" ...></canvas>` とすれば対応するブラウザーですべて利用することができます。
 
-<h2 id="描画コンテキスト">描画コンテキスト</h2>
+## 描画コンテキスト
 
-<p>{{HTMLElement("canvas")}} は固定された大きさの描画可能領域を作成できます。この領域は、1 つ以上の<strong>描画コンテキスト</strong>として表現され、そのコンテキストを通じて描画領域を操作します。このチュートリアルでは、2 次元グラフィックスを描画するためのコンテキストについてのみ解説しますが、これ以外の描画コンテキストも存在します。その典型例が <a href="/ja/docs/">WebGL</a> です。これは<a href="http://www.khronos.org/opengles/"> OpenGL ES</a> に基づいた 3 次元グラフィックスを扱える描画コンテキストです。</p>
+{{HTMLElement("canvas")}} は固定された大きさの描画可能領域を作成できます。この領域は、1 つ以上の**描画コンテキスト**として表現され、そのコンテキストを通じて描画領域を操作します。このチュートリアルでは、二次元グラフィックスを描画するためのコンテキストについてのみ解説しますが、これ以外の描画コンテキストも存在します。例えば [WebGL](/ja/docs/Web/API/WebGL_API) は [OpenGL ES](https://www.khronos.org/opengles/) に基づいて、三次元グラフィックを扱います。
 
-<p>初期状態での canvas には何も描画されていません。ここに描画を行うには、まず JavaScript で描画コンテキストを取得する必要があります。 {{HTMLElement("canvas")}} 要素の {{domxref("HTMLCanvasElement.getContext", "getContext()")}} を呼ぶことで、描画コンテキストは取得できます。呼び出す際の引数によって、取得されるコンテキストの種類が変わります。<code>"2d" </code>を指定することで、2 次元のグラフィックスを扱える描画コンテキストが取得できます。これで取得されたコンテキストの詳細は {{domxref("CanvasRenderingContext2D")}} をご覧ください。</p>
+初期状態ではキャンバスは空です。何かを表示するには、まずスクリプトで描画コンテキストを取得する必要があります。 {{HTMLElement("canvas")}} 要素には {{domxref("HTMLCanvasElement.getContext", "getContext()")}} というメソッドがあり、描画コンテキストを取得したり描画機能を呼び出したりするのに使います。 `getContext()` には 1 つの引数があり、コンテキストの種類を指定します。このチュートリアルで扱っているような二次元のグラフィックでは、 `"2d"` を指定すると {{domxref("CanvasRenderingContext2D")}} を取得することができます。
 
-<pre class="brush: js">var canvas = document.getElementById('tutorial');
+```js
+var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');
-</pre>
+```
 
-<p>最初の行では {{domxref("document.getElementById()")}} メソッドを呼んで、DOM 中から {{HTMLElement("canvas")}} 要素をあらわすノードを探しています。2 行目では見つけた要素の <code>getContext()</code> メソッドを呼んで、描画コンテキストを取得しています。</p>
+スクリプトの最初の行では、 DOM 内から {{HTMLElement("canvas")}} 要素を表すノードを取得するために {{domxref("document.getElementById()")}} メソッドを呼び出しています。要素のノードを取得したら、 `getContext()` メソッドを使用して描画コンテキストにアクセスすることができます。
 
-<div id="section_5">
-<h2 id="対応しているかどうかの確認">対応しているかどうかの確認</h2>
+## 対応しているかどうかの確認
 
-<p>{{HTMLElement("canvas")}} 要素に対応していないブラウザでは、代替コンテンツが表示されます。JavaScript からは <code>getContext()</code> メソッドの有無を調査することで、ブラウザが対応しているかどうかを確認できます。確認するためのコードは以下のようになります：</p>
+{{HTMLElement("canvas")}} 要素に対応していないブラウザーでは、代替コンテンツが表示されます。スクリプトからは、 `getContext()` メソッドの有無を調べることで、ブラウザーが対応しているかどうかを確認することができます。確認するためのコードは以下のようになります。
 
-<pre class="brush: js">var canvas = document.getElementById('tutorial');
+```js
+var canvas = document.getElementById('tutorial');
 
-if (canvas.getContext){
+if (canvas.getContext) {
   var ctx = canvas.getContext('2d');
-  // drawing code here
+  // 描画するコードをここに
 } else {
-  // canvas-unsupported code here
+  // キャンバスに未対応の場合のコードをここに
 }
-</pre>
-</div>
-</div>
+```
 
-<h2 id="サンプルコード">サンプルコード</h2>
+## スケルトンテンプレート
 
-<p>以上の点をまとめたサンプルコードは以下のようになります。このサンプルコードは、後の説明でも利用します。</p>
+ここでは、この後の例で開始点として使用する、最小限のテンプレートを紹介します。
 
-<div class="note">
-<p><strong>付記：</strong>スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために、仕方なく埋め込んでいます。</p>
-</div>
+> **Note:** スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために、仕方なく埋め込んでいます。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"/&gt;
-    &lt;title&gt;Canvas tutorial&lt;/title&gt;
-    &lt;script type="text/javascript"&gt;
-      function draw(){
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas tutorial</title>
+    <script>
+      function draw() {
         var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
+        if (canvas.getContext) {
           var ctx = canvas.getContext('2d');
         }
       }
-    &lt;/script&gt;
-    &lt;style type="text/css"&gt;
+    </script>
+    <style>
       canvas { border: 1px solid black; }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body onload="draw();"&gt;
-    &lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="150" height="150"></canvas>
+  </body>
+</html>
+```
 
-<p>スクリプト中の <code>draw()</code> 関数はページのロード完了時に一度だけ呼び出されます。これは、document の {{event("load")}} イベントを利用しているためです。他の関数同様 {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}} や {{domxref("WindowTimers.setInterval", "window.setInterval()")}}、他のイベントハンドラから呼び出すことができますが、今の所ページがロードされた時にのみ呼び出されます。</p>
+スクリプトには `draw()` という関数が含まれており、ページの読み込みが完了したときに一度実行されます。これは文書で {{domxref("Window/load_event", "load")}} イベントを待ち受けすることで実現できます。この関数、または同様の関数は、{{domxref("setTimeout()")}}、{{domxref("setInterval()")}}、その他のイベントハンドラーを使用した場合でも、ページが最初に読み込まれたときに限り、呼び出すことができます。
 
-<p>このサンプルコードでは何も描画されない領域が表示されます。実際の動作は次で確認できます：</p>
+ここでは、テンプレートが実際にどのように見えるかを説明します。このように、最初は白紙の状態です。
 
-<p>{{EmbedLiveSample("サンプルコード", 160, 160)}}</p>
+{{EmbedLiveSample("A_skeleton_template", 160, 160)}}
 
-<h2 id="単純な描画">単純な描画</h2>
+## 単純な描画
 
-<p>手始めに単純な例を見てみましょう。次の例では重なり合う 2 つの四角形が描画されます。そのうちの 1 つは透明度が設定されており、下の色が透けて見えます。この例がどのように動作しているかは、次のページで解説します。</p>
+まず始めに、交差する 2 つの矩形を描き、そのうちの 1 つにアルファ透過をさせる簡単な例を見てみましょう。これがどのように機能するかは、後の例でさらに詳しく見ていきましょう。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
- &lt;head&gt;
-  &lt;meta charset="utf-8"/&gt;
-  &lt;script type="application/javascript"&gt;
+```html
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
     function draw() {
-      var canvas = document.getElementById("canvas");
+      var canvas = document.getElementById('canvas');
       if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+        var ctx = canvas.getContext('2d');
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 50, 50);
+        ctx.fillStyle = 'rgb(200, 0, 0)';
+        ctx.fillRect(10, 10, 50, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 50, 50);
+        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+        ctx.fillRect(30, 30, 50, 50);
       }
     }
-  &lt;/script&gt;
- &lt;/head&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<p>この例は次のように動作します：</p>
+この例は次のように動作します。
 
-<p>{{EmbedLiveSample("単純な描画", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}</p>
+{{EmbedLiveSample("A_simple_example", 160, 160, "canvas_ex1.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
