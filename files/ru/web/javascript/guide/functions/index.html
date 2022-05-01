@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <p>Примитивные параметры (например, число) передаются функции значением; <strong>значение</strong> передаётся в функцию, но если функция меняет значение параметра,<strong> это изменение не отразится глобально или после вызова функции.</strong></p>
 
-<p>Если вы передадите объект как параметр (не примитив, например, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.">массив</a></code> или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующим примере:</p>
+<p>Если вы передадите объект как параметр (не примитив, например, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.">массив</a></code> или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующем примере:</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject.make = 'Toyota';
@@ -103,7 +103,7 @@ console.log(factorial(3));
 }
 </pre>
 
-<p>В следующим коде наша функция принимает функцию, которая является function definition expression, и выполняет его для каждого элемента принятого массива вторым аргументом.</p>
+<p>В следующем коде наша функция принимает функцию, которая является function definition expression, и выполняет его для каждого элемента принятого массива вторым аргументом.</p>
 
 <pre class="brush: js">function map(f, a) {
   var result = []; // Создаем новый массив
