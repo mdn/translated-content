@@ -1,5 +1,5 @@
 ---
-title: Comment utiliser les promises
+title: Comment utiliser les promesses
 slug: Learn/JavaScript/Asynchronous/Promises
 translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
