@@ -2,58 +2,49 @@
 title: Canvas チュートリアル
 slug: Web/API/Canvas_API/Tutorial
 tags:
-  - Canvas
-  - Graphics
-  - Guide
+  - キャンバス
+  - グラフィック
+  - ガイド
   - HTML
   - HTML5
-  - Intermediate
-  - Web
+  - 中級者
+  - ウェブ
 translation_of: Web/API/Canvas_API/Tutorial
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<div><a href="/ja/docs/Web/API/Canvas_API"><img alt="" src="canvas_tut_examples.jpg" style="float: right; margin-left: 10px; margin-right: 10px;"></a></div>
+このチュートリアルは、 [**`<canvas>`**](/ja/docs/Web/HTML/Element/canvas) 要素を使用して二次元のグラフィックを描画する方法を、基本から説明します。ここでの例は、キャンバスで何ができるかを明確に示すものであり、独自のコンテンツを作成するためのコードスニペットも提供しています。
 
-<div class="summary">
-<p><a href="/ja/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a> 要素は、スクリプト (一般的に <a href="/ja/docs/Glossary/JavaScript">JavaScript</a>) を使って図形を描くために使われる新しい <a href="/ja/docs/Web/HTML">HTML</a> 要素です。例えば、グラフを描く、写真を合成する、または簡単な (または<a href="/ja/docs/Web/API/Canvas_API/A_basic_ray-caster">あまり簡単ではない</a>) アニメーションに使うことができます。このページの画像は後でこのチュートリアルの中でみる <a href="/ja/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a> を実際に使った例です。</p>
-</div>
+`<canvas>` は [HTML](/ja/docs/Web/HTML) の要素であり、スクリプト（ふつうは [JavaScript](/ja/docs/Glossary/JavaScript)）を使ってグラフィックを描くことができます。これは例えば、グラフを描いたり、写真を合成する、または簡単なアニメーションを（[あまり簡単ではない](/ja/docs/Web/API/Canvas_API/A_basic_ray-caster)ものも）作成したりすることができます。このページにある画像は、このチュートリアルで作成する [**`<canvas>`**](/ja/docs/Web/HTML/Element/canvas) の実装の例を示しています。
 
-<p><span class="seoSummary">このチュートリアルでは、2D グラフィックを描画するために <code>&lt;canvas&gt;</code> 要素を使用する方法を、基礎から説明します。提供する例は、 canvas で出来ることの、いくつかの明確なアイデアと、それを自分自身のコンテンツで作成開始できるようなコードスニペットを提供します。</span></p>
+`<canvas>` は Apple が macOS Dashboard のために WebKit に初めて導入した後、ブラウザーに実装されました。現在は、あらゆる主要ブラウザーが対応しています。
 
-<p>Apple が OS X Dashboard のために WebKit に初めて導入した後、 <code>&lt;canvas&gt;</code> はブラウザーに実装されました。現在は、あらゆる主要ブラウザーが対応しています。</p>
+## 始める前に
 
-<h2 id="Before_you_start">始める前に</h2>
+`<canvas>` を使うのはそれほど難しくはありませんが、 [HTML](/ja/docs/Web/HTML) と [JavaScript](/ja/docs/Web/JavaScript) の基本的な理解が必要です。一部の古いブラウザーは `<canvas>` 要素に対応していませんが、最近のバージョンの主要ブラウザーはすべて対応しています。キャンバスの既定の大きさは、 300 ピクセル × 150 ピクセル（幅 × 高さ）です。しかし、 HTML の `height` および `width` プロパティを使用して、独自の大きさを定義することができます。キャンバスにグラフィックを描画するためには、JavaScript のコンテキストオブジェクトを使用します。このオブジェクトは、グラフィックをその場で生成します。
 
-<p><code>&lt;canvas&gt;</code> を使うことはそれほど難しくはありませんが、<a href="/ja/docs/Web/HTML">HTML</a> と <a href="/ja/docs/Web/JavaScript">JavaScript</a> の基本的な理解が必要です。一部の古いブラウザーは <code>&lt;canvas&gt;</code> 要素をサポートしていませんが、最近のバージョンの主要ブラウザーはすべてサポートしています。canvas の既定のサイズは、300 px × 150 px (幅 × 高さ) です。しかし、HTML の <code>height</code> および <code>width</code> プロパティを使用して、独自のサイズを定義することができます。canvas にグラフィックを描画するためには、JavaScript コンテキストオブジェクトを使用します。このオブジェクトは、グラフィックをその場で生成します。</p>
+## チュートリアル
 
-<h2 id="In_this_tutorial">チュートリアル</h2>
+1. [基本的な使い方](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
+2. [図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+3. [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+4. [文字の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+5. [画像の使用](/ja/docs/Web/API/Canvas_API/Tutorial/Using_images)
+6. [座標変換](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations)
+7. [合成とクリッピング](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing)
+8. [基本的なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
+9. [高度なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
+10. [ピクセル操作](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+11. [キャンバスの最適化する](/ja/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
+12. [おわりに](/ja/docs/Web/API/Canvas_API/Tutorial/Finale)
 
-<ul>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage">基本的な使い方</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">図形を描く</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">スタイルと色を適用する</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text">文字の描画</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Using_images">画像を使う</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Transformations">変形</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Compositing">合成とクリッピング</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的なアニメーション</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations">高度なアニメーション</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">ピクセル操作</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">ヒット領域とアクセシビリティ</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas">canvas を最適化する</a></li>
-	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Finale">最後に</a></li>
-</ul>
+## 関連情報
 
-<h2 id="See_also">関連情報</h2>
+- [Canvas トピックのページ](/ja/docs/Web/API/Canvas_API)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
 
-<ul>
-	<li><a href="/ja/docs/Web/API/Canvas_API">Canvas トピックのページ</a></li>
-	<li><a href="https://www.html5canvastutorials.com/">HTML5CanvasTutorials</a></li>
-</ul>
+## 貢献者へのメモ
 
-<h2 id="A_note_to_contributors">貢献者への注記</h2>
+2013 年 6 月 17 日の週に発生した不運な技術的エラーにより、すべての過去の貢献者の属性を含む、このチュートリアルの履歴情報が失われました。この問題についておわびするとともに、この不運な事故を容赦願います。
 
-<p>2013 年 6 月 17 日の週に発生した不運な技術的エラーにより、すべての過去の貢献者の属性を含む、このチュートリアルの履歴情報が失われました。この問題についておわびするとともに、この不運な事故を容赦願います。</p>
-
-<div>{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}</div>
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}
