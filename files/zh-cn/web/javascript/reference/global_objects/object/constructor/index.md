@@ -6,228 +6,216 @@ tags:
   - Object
   - Property
   - Prototype
+browser-compat: javascript.builtins.Object.constructor
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>返回创建实例对象的 {{jsxref("Object")}} 构造函数的引用。注意，此属性的值是对函数本身的引用，而不是一个包含函数名称的字符串。对原始类型来说，如<code>1</code>，<code>true</code>和<code>"test"</code>，该值只可读。</p>
+**`constructor`** 属性返回 {{jsxref("Object")}} 的构造函数（用于创建实例对象）。注意，此属性的值是对函数本身的引用，而不是一个包含函数名称的字符串。
 
-<h2 id="Description">描述</h2>
+原始类型的值是只读的，如：`1`、`true` 和 `"test"`。
 
-<p>所有对象都会从它的原型上继承一个 <code>constructor</code> 属性：</p>
+## 描述
 
-<pre class="brush: js">var o = {};
-o.constructor === Object; // true
+所有对象（使用 `Object.create(null)` 创建的对象除外）都将具有 `constructor` 属性。在没有显式使用构造函数的情况下，创建的对象（例如对象和数组文本）将具有 `constructor` 属性，这个属性指向该对象的基本对象构造函数类型。
 
-var o = new Object;
-o.constructor === Object; // true
+```js
+const o = {}
+o.constructor === Object // true
 
-var a = [];
-a.constructor === Array; // true
+const o = new Object
+o.constructor === Object // true
 
-var a = new Array;
+const a = []
 a.constructor === Array // true
 
-var n = new Number(3);
-n.constructor === Number; // true</pre>
+const a = new Array
+a.constructor === Array // true
 
-<h2 id="Examples">示例</h2>
+const n = new Number(3)
+n.constructor === Number // true
+```
 
-<h3 id="Example_Displaying_the_constructor_of_an_object">打印一个对象的构造函数</h3>
+## 示例
 
-<p>以下示例创建一个原型，<code>Tree</code>，以及该类型的对象，即<code>theTree</code>。 然后打印<code>theTree</code>对象的<code>constructor</code>属性。</p>
+### 打印对象的构造函数
 
-<pre class="brush:js">function Tree(name) {
-   this.name = name;
+下面这个示例创建一个构造函数（`Tree`），以及该类型的对象（`theTree`）。然后打印了 `theTree` 对象的 `constructor` 属性。
+
+```js
+function Tree(name) {
+  this.name = name
 }
 
-var theTree = new Tree("Redwood");
-console.log( "theTree.constructor is " + theTree.constructor );</pre>
+const theTree = new Tree('Redwood')
+console.log('theTree.constructor is ' + theTree.constructor)
+```
 
-<p>打印输出：</p>
+打印输出：
 
-<pre class="brush:js">theTree.constructor is function Tree(name) {
-    this.name = name;
-}</pre>
-
-<h3 id="Example_Changing_the_constructor_of_an_object">改变对象的 constructor</h3>
-
-<p>下面的例子展示了如何修改基本类型对象的 <code>constructor</code> 属性的值。只有 <code>true</code>, <code>1</code> 和 <code>"test"</code> 的不受影响，因为创建他们的是只读的原生构造函数（native constructors）。这个例子也说明了依赖一个对象的 <code>constructor</code> 属性并不安全。</p>
-
-<pre class="brush:js">function Type() { };
-
-var	types = [
-	new Array,
-    [],
-	new Boolean,
-    true,        // remains unchanged
-	new Date,
-	new Error,
-	new Function,
-	function(){},
-	Math,
-	new Number,
-	1,           // remains unchanged
-	new Object,
-	{},
-	new RegExp,
-	/(?:)/,
-	new String,
-	"test"       // remains unchanged
-];
-
-for(var i = 0; i &lt; types.length; i++) {
-	types[i].constructor = Type;
-	types[i] = [ types[i].constructor, types[i] instanceof Type, types[i].toString() ];
-};
-
-console.log( types.join("\n") );
-</pre>
-
-<p>此示例显示以下输出：</p>
-
-<pre class="brush: js">function Type() {},false,
-function Type() {},false,
-function Type() {},false,false
-function Boolean() {
-    [native code]
-},false,true
-function Type() {},false,Mon Sep 01 2014 16:03:49 GMT+0600
-function Type() {},false,Error
-function Type() {},false,function anonymous() {
-
+```js
+theTree.constructor is function Tree(name) {
+  this.name = name
 }
-function Type() {},false,function () {}
-function Type() {},false,[object Math]
-function Type() {},false,0
-function Number() {
-    [native code]
-},false,1
-function Type() {},false,[object Object]
-function Type() {},false,[object Object]
-function Type() {},false,/(?:)/
-function Type() {},false,/(?:)/
-function Type() {},false,
-function String() {
-    [native code]
-},false,test
-</pre>
+```
 
+### 改变对象的 constructor
 
+可以为除了 `null` 和 `undefined`（因为这两者没有相应的构造函数）之外的任何类型指定 `constructor` 属性（如 `String`、`Number`、`Boolean` 等），但基本类型不会保留这些更改（也不会抛出异常）。也是同样的原因，基本类型允许设置任何属性（除了 `null` 和 `undefined`），而不会产生副作用。就是说，每当把这样的基本类型当成对象使用时，其对应的构造函数的实例就会在语句执行后立即被创建和丢弃。
 
-<h3 id="改变函数的_constructor">改变函数的 constructor</h3>
+```js
+let val = null;
+val.constructor = 1; // TypeError: val is null
 
-<p>大多数情况下，此属性用于定义一个构造函数，并使用<strong>new</strong>和继承原型链进一步调用它。</p>
+val = 'abc';
+val.constructor = Number; // val.constructor === String
 
-<pre class="brush: js">function Parent() {}
-Parent.prototype.parentMethod = function parentMethod() {};
+val.foo = 'bar'; // An implicit instance of String('abc') was created and assigned the prop foo
+val.foo === undefined; // true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property
+```
 
-function Child() {}
-Child.prototype = Object.create(Parent.prototype); // re-define child prototype to Parent prototype
+因此，基本上除了上面的提到的基本类型外，任何对象都可以更改 `constructor` 属性的值，**请注意，改变** `constructor` **的属性不会影响** `instanceof` **运算符**：
 
-Child.prototype.constructor = Child; // return original constructor to Child</pre>
+```js
+let a = [];
+a.constructor = String
+a.constructor === String // true
+a instanceof String // false
+a instanceof Array // true
 
-<p>但为什么我们需要在这里执行最后一行？很不幸正确答案是 - 看情况而定。</p>
+a = new Foo();
+a.constructor = 'bar'
+a.constructor === 'bar' // true
+```
 
-<p>让我们来尝试定义在哪些情况下，重新分配原始构造函数会发挥重要作用，以及在什么时候它就是额外的未使用的（无效的）代码行。</p>
+如果对象被密封或冻结，那么更改 constructor 将不会起作用，也不会抛出异常：
 
-<p>试想下一种情况：该对象具有创建自身的<strong>create</strong>方法。</p>
+```js
+let a = Object.seal({});
+a.constructor = Number;
+a.constructor === Object; // true
+```
 
-<pre class="brush: js">function Parent() {};
-function CreatedConstructor() {}
+### 改变函数的 constructor
 
-CreatedConstructor.prototype = Object.create(Parent.prototype);
+大多数情况下，此属性用于定义一个**函数的构造函数（function-constructor）**，并使用 **new** 和原型链继承进一步使用它。
+
+```js
+function Parent() { /* ... */ }
+Parent.prototype.parentMethod = function parentMethod() {}
+
+function Child() {
+  Parent.call(this) // Make sure everything is initialized properly
+}
+Child.prototype = Object.create(Parent.prototype) // re-define child prototype to Parent prototype
+
+Child.prototype.constructor = Child // return original constructor to Child
+```
+
+但什么时候我们需要在这里执行最后一行？需要看具体情况而定。
+
+让我们来尝试定义在哪些情况下，重新分配原始构造函数会发挥重要作用，以及在什么时候它是无效的代码行。
+
+看下面的示例：该对象具有创建自身的 `create()` 方法。
+
+```js
+function Parent() { /* ... */ }
+function CreatedConstructor() {
+  Parent.call(this)
+}
+
+CreatedConstructor.prototype = Object.create(Parent.prototype)
 
 CreatedConstructor.prototype.create = function create() {
-  return new this.constructor();
+  return new this.constructor()
 }
 
-new CreatedConstructor().create().create(); // error undefined is not a function since constructor === Parent
-</pre>
+new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent
+```
 
-<p>在上面的示例中，将显示异常，因为构造函数链接到Parent。</p>
+在上面的示例中，会抛出异常，因为构造函数链接到 `Parent`。
 
-<p>为了避免它，只需分配您将要使用的必要构造函数。</p>
+为了解决这个问题，只需为它分配一个要使用的必要构造函数。
 
-<pre class="brush: js">function Parent() {};
-function CreatedConstructor() {}
+```js
+function Parent() { /* ... */ }
+function CreatedConstructor() { /* ... */ }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype);
-CreatedConstructor.prototype.constructor = CreatedConstructor; // set right constructor for further using
+CreatedConstructor.prototype = Object.create(Parent.prototype)
+CreatedConstructor.prototype.constructor = CreatedConstructor // sets the correct constructor for future use
 
 CreatedConstructor.prototype.create = function create() {
-  return new this.constructor();
+  return new this.constructor()
 }
 
-new CreatedConstructor().create().create(); // it's pretty fine</pre>
+new CreatedConstructor().create().create() // it's pretty fine
+```
 
-<p>好的，现在很清楚为什么更改构造函数会很有用。</p>
+相信你现在应该很清楚为什么改变构造是有用的。
 
-<p>让我们再考虑一个案例。</p>
+接下来，看另外一个示例。
 
-<pre class="brush: js">function ParentWithStatic() {}
+```js
+function ParentWithStatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y:0 };
+ParentWithStatic.startPosition = { x: 0, y: 0 } // Static member property
 ParentWithStatic.getStartPosition = function getStartPosition() {
-  return this.startPosition;
+  return this.startPosition
 }
 
 function Child(x, y) {
   this.position = {
     x: x,
     y: y
-  };
+  }
 }
 
-Child.prototype = Object.create(ParentWithStatic.prototype);
-Child.prototype.constructor = Child;
+Child.prototype = Object.create(ParentWithStatic.prototype)
+Child.prototype.constructor = Child
 
 Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  var position = this.position;
-  var startPosition = this.constructor.getStartPosition(); // error undefined is not a function, since the constructor is Child
+  let position = this.position
+  let startPosition = this.constructor.getStartPosition() // error undefined is not a function, since the constructor is Child
 
   return {
     offsetX: startPosition.x - position.x,
     offsetY: startPosition.y - position.y
   }
-};</pre>
+}
+```
 
-<p>对于此示例，我们需要保持父构造函数继续正常工作。</p>
+如果想要保证示例正常运行，我们需要让 `Parent` 作为构造函数，或给 `Child` 的构造分配静态属性：
 
-<p><strong>总结</strong>：手动设置或更新构造函数可能会导致不同且有时令人困惑的后果。为了防止它，只需在每个特定情况下定义构造函数的角色。在大多数情况下，不使用构造函数，并且不需要重新分配构造函数。</p>
+```js
+...
+Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create(...) a prototype below
+Child.prototype = Object.create(ParentWithStatic.prototype);
+...
+```
 
-<h2 id="规范">规范</h2>
+或者将 `Parent` 的构造函数标识符分配给 `Child` 构造函数上的单独属性，并通过该属性访问它：
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+```js
+...
+Child.parentConstructor = ParentWithStatic
+Child.prototype = Object.create(ParentWithStatic.prototype)
+...
+  let startPosition = this.constructor.parentConstructor.getStartPosition()
+...
+```
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+> **备注：** 设置或更新构造函数可能会导致结果不同且令人困惑的结果。为了防止它，只需在特定情况下定义 `constructor`。多数情况，不使用 `constructor`，并且不需要重新定义。
 
-<p>{{Compat("javascript.builtins.Object.constructor")}}</p>
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{jsxref("statements/class","Class declaration","",1)}}
+- {{jsxref("Classes/constructor","Class constructor","",1)}}
+- Glossary: {{Glossary("constructor", "", 1)}}
