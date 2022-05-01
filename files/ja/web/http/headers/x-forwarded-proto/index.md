@@ -10,11 +10,11 @@ tags:
   - 標準外
 translation_of: Web/HTTP/Headers/X-Forwarded-Proto
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>X-Forwarded-Proto</code></strong> (XFP) ヘッダーは、プロキシまたはロードバランサーへ接続するのに使っていたクライアントのプロトコル (HTTP または HTTPS) を特定するために事実上の標準となっているヘッダーです。サーバーのアクセスログにはサーバーとロードバランサーの間で使われたプロトコルが含まれていますが、クライアントとロードバランサーの間で使用されたプロトコルは含まれていません。クライアントとロードバランサーの間で使用されたプロトコルを特定するには、 <code>X-Forwarded-Proto</code> リクエストヘッダーを使用することができます。</p>
+**X-Forwarded-Proto** (XFP) ヘッダーは、プロキシまたはロードバランサーへ接続するのに使っていたクライアントのプロトコル (HTTP または HTTPS) を特定するために事実上の標準となっているヘッダーです。サーバーのアクセスログにはサーバーとロードバランサーの間で使われたプロトコルが含まれていますが、クライアントとロードバランサーの間で使用されたプロトコルは含まれていません。クライアントとロードバランサーの間で使用されたプロトコルを特定するには、 `X-Forwarded-Proto` リクエストヘッダーを使用することができます。
 
-<p>標準化されたヘッダーは HTTP {{HTTPHeader("Forwarded")}} ヘッダーです。</p>
+標準化されたヘッダーは HTTP {{HTTPHeader("Forwarded")}} ヘッダーです。
 
 <table class="properties">
  <tbody>
@@ -29,44 +29,40 @@ translation_of: Web/HTTP/Headers/X-Forwarded-Proto
  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">X-Forwarded-Proto: &lt;protocol&gt;
-</pre>
+```
+X-Forwarded-Proto: <protocol>
+```
 
-<h2 id="Directives" name="Directives">ディレクティブ</h2>
+## ディレクティブ
 
-<dl>
- <dt>&lt;protocol&gt;</dt>
- <dd>転送されたプロトコル (http または https).</dd>
-</dl>
+- \<protocol>
+  - : 転送されたプロトコル (http または https)
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre>X-Forwarded-Proto: https</pre>
+```
+X-Forwarded-Proto: https
+```
 
-<p>その他の標準外の形式:</p>
+その他の標準外の形式:
 
-<pre># Microsoft
+```
+# Microsoft
 Front-End-Https: on
 
 X-Forwarded-Protocol: https
 X-Forwarded-Ssl: on
 X-Url-Scheme: https
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>現時点で、仕様書の一部ではありません。このヘッダーの標準化版は {{HTTPHeader("Forwarded")}} ヘッダーです。</p>
+現時点で、仕様書の一部ではありません。このヘッダーの標準化版は {{HTTPHeader("Forwarded")}} ヘッダーです。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 関連情報
 
-<p>{{Compat("http.headers.X-Forwarded-Proto")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{HTTPHeader("Forwarded")}}</li>
- <li>{{HTTPHeader("X-Forwarded-For")}}</li>
- <li>{{HTTPHeader("X-Forwarded-Host")}}</li>
-</ul>
+- {{HTTPHeader("Forwarded")}}
+- {{HTTPHeader("X-Forwarded-For")}}
+- {{HTTPHeader("X-Forwarded-Host")}}
