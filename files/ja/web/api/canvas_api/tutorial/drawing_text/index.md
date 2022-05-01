@@ -1,132 +1,110 @@
 ---
-title: 文字を描く
+title: テキストの描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 tags:
-  - Canvas
-  - Graphics
-  - Intermediate
-  - Tutorial
+  - キャンバス
+  - グラフィック
+  - 中級者
+  - チュートリアル
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Drawing_text_using_a_canvas
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
-<div class="summary">
-<p>前の章で<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">スタイルや色を適用する</a>方法を見た後は、canvas にテキストを描画する方法を見ていきます。</p>
-</div>
+前の章で[スタイルや色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)方法を見た後は、キャンバスにテキストを描画する方法を見ていきます。
 
-<h2 id="Drawing_text" name="Drawing_text">テキストを描く</h2>
+## テキストの描画
 
-<p>canvas のレンダリングコンテキストでは、2 種類のテキスト描画方法を提供します:</p>
+キャンバスの描画コンテキストでは、 2 種類のテキスト描画方法を提供しています。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}</dt>
- <dd>(x,y) で指定した位置にテキストを塗りつぶして描画します。任意で最大描画幅を指定できます。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}</dt>
- <dd>(x,y) で指定した位置にテキストの輪郭を描画します。任意で最大描画幅を指定できます。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}
+  - : (x,y) で指定した位置にテキストを塗りつぶして描画します。任意で最大描画幅を指定できます。
+- {{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}
+  - : (x,y) で指定した位置にテキストの輪郭を描画します。任意で最大描画幅を指定できます。
 
-<h3 id="A_fillText_example" name="A_fillText_example"><code>fillText</code> の例</h3>
+### `fillText` の例
 
-<p>現在の <code>fillStyle</code> を使用して、テキストを塗りつぶして描画します。</p>
+現在の `fillStyle` を使用して、テキストを塗りつぶして描画します。
 
-<pre class="brush: js;highlight[4]">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = "48px serif";
-  ctx.fillText("Hello world", 10, 50);
-}</pre>
+  ctx.font = '48px serif';
+  ctx.fillText('Hello world', 10, 50);
+}
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="100"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="300" height="100"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_fillText_example", 310, 110)}}</p>
+{{EmbedLiveSample("A_fillText_example", 310, 110)}}
 
-<h3 id="A_strokeText_example" name="A_strokeText_example"><code>strokeText</code> の例</h3>
+### `strokeText` の例
 
-<p>現在の <code>strokeStyle</code> を使用して、テキストの輪郭を描画します。</p>
+現在の `strokeStyle` を使用して、テキストの輪郭を描画します。
 
-<pre class="brush: js;highlight[4]">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = "48px serif";
-  ctx.strokeText("Hello world", 10, 50);
-}</pre>
+  ctx.font = '48px serif';
+  ctx.strokeText('Hello world', 10, 50);
+}
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="100"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="300" height="100"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+
+## テキストのスタイル付け
+
+上記の例では、テキストを既定のサイズより若干大きくするため、すでに `font` プロパティを使用していました。キャンバスにテキストを表示する形式を調整できるプロパティは、さらにいくつかあります。
+
+- {{domxref("CanvasRenderingContext2D.font", "font = value")}}
+  - : テキストを描画する際に使用するテキストのスタイルです。 [CSS](/ja/docs/Web/CSS) の {{cssxref("font")}} プロパティと同じ構文に則った文字列です。既定のフォントは 10px sans-serif です。
+- {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
+  - : テキストの配置を設定します。使用できる値は `start`、`end`、`left`、`right`、`center` です。既定値は `start` です。
+- {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
+  - : ベースラインの位置ぞろえを設定します。使用できる値は `top`、`hanging`、`middle`、`alphabetic`、`ideographic`、`bottom` です。既定値は `alphabetic` です。
+- {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
+  - : 書字方向を設定します。使用できる値は `ltr`、`rtl`、`inherit` です。既定値は `inherit` です。
+
+以前に CSS を扱ったことがあれば、これらのプロパティも見慣れているでしょう。
+
+以下は [WHATWG](https://whatwg.org/) 提供の、`textBaseline` 属性によってサポートされている様々なベースラインを示した図です。![em 矩形の上端はフォントのグリフの上端にほぼ一致し、 hanging baseline は 906 のようないくつかのグリフが固定されているところ、 middle は em 矩形の上端と下端の中間、alphabetic baseline は Á, ÿ, f, Ω などの文字が固定されているところ、ideographic baseline は私や達などのグリフが固定され、em 矩形の底はフォント中のグリフの底にほぼ一致しているところです。グリフが em 矩形の外まで伸びているため、バウンディングボックスの上端と下端はこれらのベースラインから遠く離れていることがあります。](baselines.png)
+
+### textBaseline の例
+
+以下のコードを編集すると、canvas の変更個所をその場で確認できます。
+
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
-
-<p>{{EmbedLiveSample("A_strokeText_example", 310, 110)}}</p>
-
-<h2 id="Styling_text" name="Styling_text">テキストのスタイルを設定する</h2>
-
-<p>上記の例ではテキストをデフォルトのサイズより若干大きくするため、すでに <code>font</code> プロパティを使用していました。canvas にテキストを表示する形式を調整できるプロパティは、さらにいくつかあります:</p>
-
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.font", "font = value")}}</dt>
- <dd>テキストを描画する際に使用するテキストのスタイルです。<a href="/ja/docs/Web/CSS">CSS</a> の {{cssxref("font")}} プロパティと同じ構文にのっとった文字列です。デフォルトのフォントは 10px sans-serif です。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}</dt>
- <dd>テキストの配置を設定します。使用できる値は <code>start</code>、<code>end</code>、<code>left</code>、<code>right</code>、<code>center</code> です。デフォルト値は <code>start</code> です。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}</dt>
- <dd>ベースラインの位置ぞろえを設定します。使用できる値は <code>top</code>、<code>hanging</code>、<code>middle</code>、<code>alphabetic</code>、<code>ideographic</code>、<code>bottom</code> です。デフォルト値は <code>alphabetic</code> です。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.direction", "direction = value")}}</dt>
- <dd>書字方向を設定します。使用できる値は <code>ltr</code>、<code>rtl</code>、<code>inherit</code> です。デフォルト値は <code>inherit</code> です。</dd>
-</dl>
-
-<p>以前に CSS を扱ったことがあれば、これらのプロパティも見慣れているでしょう。</p>
-
-<p>以下は <a href="http://www.whatwg.org/">WHATWG</a> 提供の、<code>textBaseline</code> 属性によってサポートされている様々なベースラインを示した図です。<img alt="The top of the em square is
-
-roughly at the top of the glyphs in a font, the hanging baseline is
-
-where some glyphs like आ are anchored, the middle is half-way
-
-between the top of the em square and the bottom of the em square,
-
-the alphabetic baseline is where characters like Á, ÿ,
-
-f, and Ω are anchored, the ideographic baseline is
-
-where glyphs like 私 and 達 are anchored, and the bottom
-
-of the em square is roughly at the bottom of the glyphs in a
-
-font. The top and bottom of the bounding box can be far from these
-
-baselines, due to glyphs extending far outside the em square." src="http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png"></p>
-
-<h3 id="A_textBaseline_example" name="A_textBaseline_example">textBaseline の例</h3>
-
-<p>以下のコードを編集すると、canvas の変更個所をその場で確認できます:</p>
-
-<pre class="brush: js;highlight[2]">ctx.font = "48px serif";
-ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);
-</pre>
-
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="編集" /&gt;
-  &lt;input id="reset" type="button" value="リセット" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+<textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeText("Hello world", 0, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
+```js hidden
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var textarea = document.getElementById('code');
+var reset = document.getElementById('reset');
+var edit = document.getElementById('edit');
 var code = textarea.value;
 
 function drawCanvas() {
@@ -134,42 +112,40 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener('click', function() {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener('click', function() {
   textarea.focus();
 })
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+textarea.addEventListener('input', drawCanvas);
+window.addEventListener('load', drawCanvas);
+```
 
-<p>{{EmbedLiveSample('Playable_code', 700, 360)}}</p>
+{{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}
 
-<h2 id="Advanced_text_measurements" name="Advanced_text_measurements">高度なテキスト測定</h2>
+## 高度なテキスト測定
 
-<p>テキストのより詳細な情報を得る必要がある場合は、以下のメソッドでそれを測定できます。</p>
+テキストのより詳細な情報を得る必要がある場合は、以下のメソッドで測定することができます。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.measureText", "measureText()")}}</dt>
- <dd>指定したテキストを現在のテキストスタイルで描画したときの幅をピクセル単位で表した情報を持つ、{{domxref("TextMetrics")}} オブジェクトを返します。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.measureText", "measureText()")}}
+  - : 指定したテキストを現在のテキストスタイルで描画したときの幅をピクセル単位で表した情報を持つ、{{domxref("TextMetrics")}} オブジェクトを返します。
 
-<p>以下のコードスニペットは、テキストを測定して幅を得る方法を示しています。</p>
+以下のコードスニペットは、テキストを測定して幅を得る方法を示しています。
 
-<pre class="brush: js;highlight[3]">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText("foo"); // TextMetrics オブジェクト
+  var text = ctx.measureText('foo'); // TextMetrics object
   text.width; // 16;
 }
-</pre>
+```
 
-<h2 id="Gecko-specific_notes" name="Gecko-specific_notes">Gecko 固有の注意事項</h2>
+## Gecko 固有の注意事項
 
-<p>Gecko (Firefox、Firefox OS および他の Mozilla ベースアプリケーション) では一部の<a href="/ja/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs">接頭辞付き API</a> で、早期バージョンのテキスト描画法を実装しています。これらは非推奨化または削除されており、動作を保証しません。</p>
+Gecko (Firefox、Firefox OS および他の Mozilla ベースアプリケーション) では一部の[接頭辞付き API](/ja/docs/Web/API/CanvasRenderingContext2D#prefixed_apis) で、早期バージョンのテキスト描画法を実装しています。これらは非推奨になり削除されており、動作が保証されていません。
 
-<div>{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
