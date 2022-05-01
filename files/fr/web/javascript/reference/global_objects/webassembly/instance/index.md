@@ -11,7 +11,7 @@ Un objet **`WebAssembly.Instance`** représente un objet exécutable, avec un é
 
 ## Constructeur
 
-- [`WebAssembly.Instance()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
+- [`WebAssembly.Instance()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
   - : Crée un nouvel objet `Instance`.
 
 ## Propriétés des instances
