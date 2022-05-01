@@ -1,26 +1,27 @@
 ---
-title: Compositing example
+title: 合成の例
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 tags:
-  - Canvas
-  - Example
-  - Graphics
+  - キャンバス
+  - 例
+  - グラフィック
   - HTML
   - HTML5
-  - Tutorial
+  - チュートリアル
 translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<p>This sample program demonstrates a number of <a href="/ja/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation" title="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing">compositing operations</a>. The output looks like this:</p>
+このサンプルプログラムは、数々の[合成操作](/ja/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)を紹介するものです。出力結果は次のようになります。
 
-<p>{{EmbedLiveSample("Compositing_example", "100%", 7250)}}</p>
+{{EmbedLiveSample("Compositing_example", "100%", 7250)}}
 
-<h2 id="Compositing_example">Compositing example</h2>
+<h2 id="Compositing_example">合成の例</h2>
 
-<p>This code sets up the global values used by the rest of the program.</p>
+このコードでは、プログラムの残りの部分で使用されるグローバルな値を設定します。
 
-<pre class="brush: js">var canvas1 = document.createElement("canvas");
+```js
+var canvas1 = document.createElement("canvas");
 var canvas2 = document.createElement("canvas");
 var gco = [ 'source-over','source-in','source-out','source-atop',
             'destination-over','destination-in','destination-out','destination-atop',
@@ -29,42 +30,43 @@ var gco = [ 'source-over','source-in','source-out','source-atop',
             'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'
           ].reverse();
 var gcoText = [
-'デフォルトの設定です。新たな図形をすでにあるCanvasの内容の上に描きます。',
-'新たな図形は、その図形と描画先 Canvas の内容が重なり合う部分のみが描かれます。重なり合わない領域は透明になります。',
-'新たな図形は、その図形と描画先 Canvas の内容と重なり合わない部分のみが描画されます。他の領域は透明になります。',
-'新たな図形は、その図形と描画先 Canvas の内容と重なり合う部分のみが描かれます。',
-'新たな図形は、描画先 Canvas の内容の背後に描かれます。',
-'描画先 Canvas の内容は、新たな図形と重なり合う部分だけが残ります。新たな図形も含めて、他の領域は透明になります。',
-'描画先 Canvas の内容は、新たな図形と重なり合わない部分だけが残ります。新たな図形も含めて、他の領域は透明になります。',
-'描画先 Canvas の内容は、新たな図形と重なり合う部分だけが残ります。新たな図形は、その背後に描かれます。',
-'新たな図形と描画先 Canvas の内容が重なる部分は、カラー値が加算されます。',
-'新たな図形だけが描かれて、描画先 Canvas の内容は透明になります。',
-'新たな図形と描画先 Canvas の内容が重なり合う部分は透明になります。他の領域はともに描画されます。',
-'新たな図形のピクセルは、対応する描画先 Canvas のピクセルとカラー値が乗算されます。その結果、各ピクセルのカラーは暗くなります。',
-'新たな図形のピクセルと対応する描画先 Canvas のピクセルとカラー値をそれぞれ一旦反転して、乗算したうえで、改めて反転します。その結果、各ピクセルのカラーは明るくなります (multiply の逆)。',
-'multiply と screen を組み合わせます。新たな図形のピクセルより対応する描画先 Canvas のピクセルが、それぞれ暗いときは暗くし、明るければ明るくします。',
-'新たな図形のピクセルは、対応する描画先 Canvas のピクセルとカラー値を比べて、それぞれ暗い方のピクセルを残します。',
-'新たな図形のピクセルは、対応する描画先 Canvas のピクセルとカラー値を比べて、それぞれ明るい方のピクセルを残します。',
-'描画先 Canvas の内容のピクセルのカラー値を、対応する新たな図形の反転したピクセルのカラー値でそれぞれ除算します。',
-'描画先 Canvas の内容のピクセルの反転したカラー値を、対応する新たな図形のピクセルのカラー値でそれぞれ除算し、改めて各ピクセルのカラー値を反転させます。',
-'multiply と screen を組み合わせます。描画先 Canvas のピクセルより対応する新たな図形のピクセルが、それぞれ暗いときは暗くし、明るければ明るくします (overlay と比較対象が逆)。',
-'hard-light の効果を柔らかくしたカラー合成になります。純粋な黒と白は、真っ黒や真っ白にはなりません。',
-'新たな図形のピクセルと対応する描画先 Canvas のピクセルとカラー値の差の絶対値をそれぞれのピクセルに定めます。',
-'difference よりもコントラストを弱めたカラー合成になります(いわゆる「除外」)。',
-'描画先 Canvas の内容のピクセルの輝度と彩度は保ち、対応する新たな図形のピクセルの色相をそれぞれ与えます。',
-'描画先 Canvas の内容のピクセルの輝度と色相は保ち、対応する新たな図形のピクセルの彩度をそれぞれ与えます。',
-'描画先 Canvas の内容のピクセルの輝度は保ち、対応する新たな図形のピクセルの色相と彩度をそれぞれ与えます。',
-'描画先 Canvas の内容のピクセルの色相と彩度は保ち、対応する新たな図形のピクセルの輝度をそれぞれ与えます。'
+'これが既定の設定です。新たな図形をすでにあるキャンバスの内容の上に描きます。',
+'新たな図形は、その図形と描画先キャンバスの内容が重なり合う部分のみが描かれます。それ以外の部分は透明になります。',
+'新たな図形は、その図形と描画先キャンバスの内容と重なり合わない部分のみが描画されます。',
+'新たな図形は、その図形と描画先キャンバスの内容と重なり合う部分のみが描かれます。',
+'新たな図形は、描画先キャンバスの内容の背後に描かれます。',
+'描画先キャンバスの内容は、新たな図形と重なり合う部分だけが残ります。それ以外の部分は透明になります。',
+'描画先キャンバスの内容は、新たな図形と重なり合わない部分だけが残ります。',
+'描画先キャンバスの内容は、新たな図形と重なり合う部分だけが残ります。新たな図形は、その背後に描かれます。',
+'新たな図形と描画先キャンバスの内容が重なる部分は、カラー値が加算されます。',
+'新たな図形だけが描かれます。',
+'新たな図形と描画先キャンバスの内容が重なり合う部分は透明になり、それ以外は通常通り描画されます。',
+'新たな図形のピクセルは、対応する描画先キャンバスのピクセルとカラー値が乗算されます。その結果、各ピクセルのカラーは暗くなります。',
+'ピクセルを反転し、乗算して、改めて反転します。その結果、各ピクセルのカラーは明るくなります（multiply の逆）。',
+'multiply と screen を組み合わせます。新たな図形のピクセルより対応する描画先キャンバスのピクセルが、それぞれ暗いときは暗くし、明るければ明るくします。',
+'両方のレイヤーの暗い方のピクセルを残します。',
+'両方のレイヤーの明るい方のピクセルを残します。',
+'下層のレイヤーを、上層のレイヤーの反転値で除算します。',
+'下層のレイヤーを上層のレイヤーで除算し、それを反転させたものを結果とします。',
+'multiply と screen を overlay のように組み合わせますが、上層と下層が逆になります。',
+'hard-light を柔らかくします。純粋な黒と白は、真っ黒や真っ白にはなりません。',
+'上層のレイヤーから下層のレイヤーを引くか、またはその逆を行い、常に正の値を取得します。',
+'difference と似ていますが、コントラストを弱めます。',
+'下層の輝度と彩度を保ち、上層の色相に合わせます。',
+'下層の輝度と色相を保ち、上層の彩度に合わせます。',
+'下層の輝度を保ち、上等の色相と彩度に合わせます。',
+'下層の色相と彩度を保ち、上層の輝度に合わせます。'
           ].reverse();
 var width = 320;
 var height = 340;
-</pre>
+```
 
-<h3 id="Main_program">Main program</h3>
+### メインプログラム
 
-<p>When the page loads, this code runs to set up and run the example:</p>
+ページが読み込まれるとき、このコードが実行されてセットアップを行い、例を実行します。
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
     // lum in sRGB
     var lum = {
         r: 0.33,
@@ -81,11 +83,22 @@ var height = 340;
     runComposite();
     return;
 };
-</pre>
+```
 
-<p>And this code, <code>runComposite()</code>, handles the bulk of the work, relying on a number of utility functions to do the hard parts.</p>
+そして、このコード `runComposite()` が仕事の大部分を処理し、難しい部分は多くのユーティリティ関数に頼っています。
 
-<pre class="brush: js">function runComposite() {
+```js
+function createCanvas() {
+    var canvas = document.createElement("canvas");
+    canvas.style.background = "url("+op_8x8.data+")";
+    canvas.style.border = "1px solid #000";
+    canvas.style.margin = "5px";
+    canvas.width = width/2;
+    canvas.height = height/2;
+    return canvas;
+}
+
+function runComposite() {
     var dl = document.createElement("dl");
     document.body.appendChild(dl);
     while(gco.length) {
@@ -97,13 +110,12 @@ var height = 340;
         var p = document.createElement("p");
         p.textContent = gcoText.pop();
         dd.appendChild(p);
-        var canvas = document.createElement("canvas");
-        canvas.style.background = "url("+op_8x8.data+")";
-        canvas.style.border = "1px solid #000";
-        canvas.style.margin = "10px";
-        canvas.width = width/2;
-        canvas.height = height/2;
-        var ctx = canvas.getContext('2d');
+
+        var canvasToDrawOn = createCanvas();
+        var canvasToDrawFrom = createCanvas();
+        var canvasToDrawResult = createCanvas();
+
+        var ctx = canvasToDrawResult.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas1, 0, 0, width/2, height/2);
@@ -116,17 +128,44 @@ var height = 340;
         ctx.font = "14px arial";
         ctx.fillText(pop, 5, height/2 - 5);
         ctx.restore();
-        dd.appendChild(canvas);
+
+        var ctx = canvasToDrawOn.getContext('2d');
+        ctx.clearRect(0, 0, width, height)
+        ctx.save();
+        ctx.drawImage(canvas1, 0, 0, width/2, height/2);
+        ctx.fillStyle = "rgba(0,0,0,0.8)";
+        ctx.fillRect(0, height/2 - 20, width/2, 20);
+        ctx.fillStyle = "#FFF";
+        ctx.font = "14px arial";
+        ctx.fillText('existing content', 5, height/2 - 5);
+        ctx.restore();
+
+        var ctx = canvasToDrawFrom.getContext('2d');
+        ctx.clearRect(0, 0, width, height)
+        ctx.save();
+        ctx.drawImage(canvas2, 0, 0, width/2, height/2);
+        ctx.fillStyle = "rgba(0,0,0,0.8)";
+        ctx.fillRect(0, height/2 - 20, width/2, 20);
+        ctx.fillStyle = "#FFF";
+        ctx.font = "14px arial";
+        ctx.fillText('new content', 5, height/2 - 5);
+        ctx.restore();
+
+        dd.appendChild(canvasToDrawOn);
+        dd.appendChild(canvasToDrawFrom);
+        dd.appendChild(canvasToDrawResult);
+
         dl.appendChild(dd);
     }
 };
-</pre>
+```
 
-<h3 id="Utility_functions">Utility functions</h3>
+### ユーティリティ関数
 
-<p>The program relies on a number of utility functions.</p>
+このプログラムは、多くのユーティリティ関数に依存しています。
 
-<pre class="brush: js">var lightMix = function() {
+```js
+var lightMix = function() {
     var ctx = canvas2.getContext("2d");
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
@@ -148,9 +187,10 @@ var height = 340;
     ctx.fillRect(0,0,30,30)
     ctx.fill();
 };
-</pre>
+```
 
-<pre class="brush: js">var colorSphere = function(element) {
+```js
+var colorSphere = function(element) {
     var ctx = canvas1.getContext("2d");
     var width = 360;
     var halfWidth = width / 2;
@@ -158,7 +198,7 @@ var height = 340;
     var offset = 0; // scrollbar offset
     var oleft = -20;
     var otop = -20;
-    for (var n = 0; n &lt;= 359; n ++) {
+    for (var n = 0; n <= 359; n ++) {
         var gradient = ctx.createLinearGradient(oleft + halfWidth, otop, oleft + halfWidth, otop + halfWidth);
         var color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
         gradient.addColorStop(0, "rgba(0,0,0,0)");
@@ -180,9 +220,10 @@ var height = 340;
     ctx.fill();
     return ctx.canvas;
 };
-</pre>
+```
 
-<pre class="brush: js">// HSV (1978) = H: Hue / S: Saturation / V: Value
+```js
+// HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
 Color.HSV_RGB = function (o) {
     var H = o.H / 360,
@@ -193,7 +234,7 @@ Color.HSV_RGB = function (o) {
     if (S == 0) {
         R = G = B = Math.round(V * 255);
     } else {
-        if (H &gt;= 1) H = 0;
+        if (H >= 1) H = 0;
         H = 6 * H;
         D = H - Math.floor(H);
         A = Math.round(255 * V * (1 - S));
@@ -257,4 +298,5 @@ var createInterlace = function (size, color1, color2) {
     return pattern;
 };
 
-var op_8x8 = createInterlace(8, "#FFF", "#eee");</pre>
+var op_8x8 = createInterlace(8, "#FFF", "#eee");
+```
