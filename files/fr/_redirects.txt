@@ -3046,9 +3046,9 @@
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Contribute/Feedback
 /fr/docs/MDN/Guidelines/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
 /fr/docs/MDN/Kuma	/fr/docs/MDN/Yari
-/fr/docs/MDN/User_guide	/fr/docs/conflicting/MDN/Tools
+/fr/docs/MDN/User_guide	/fr/docs/MDN/Tools
 /fr/docs/MDN_a_dix_ans	/fr/docs/MDN/At_ten
-/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/conflicting/MDN/Contribute
+/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/MDN/Contribute
 /fr/docs/MDN_a_dix_ans/Histoire_MDN	/fr/docs/MDN/At_ten/History_of_MDN
 /fr/docs/Manuel_de_référence_Javascript_1.5_(ECMA-262,_Edition_3)	/fr/docs/Web/JavaScript/Reference
 /fr/docs/MathML	/fr/docs/Web/MathML
@@ -6039,6 +6039,8 @@
 /fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors	/fr/docs/Learn/CSS/Building_blocks/Selectors
 /fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction	/fr/docs/Learn/CSS/CSS_layout/Introduction
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+/fr/docs/conflicting/MDN/Contribute	/fr/docs/MDN/Contribute
+/fr/docs/conflicting/MDN/Tools	/fr/docs/MDN/Tools
 /fr/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
 /fr/docs/conflicting/Tools/Memory/Basic_operations	https://firefox-source-docs.mozilla.org/devtools-user/memory/basic_operations/index.html
