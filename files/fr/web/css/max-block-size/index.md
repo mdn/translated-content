@@ -34,7 +34,6 @@ max-block-size: max-content;
 max-block-size: min-content;
 max-block-size: fit-content(20em);
 
-
 /* Valeurs globales */
 max-block-size: inherit;
 max-block-size: initial;
@@ -57,19 +56,19 @@ La propriété `max-block-size` peut prendre les mêmes valeurs que les proprié
   - : La valeur intrinsèque préférée de `max-block-size`.
 - `min-content`
   - : La valeur intrinsèque minimale de `max-block-size`.
-- `fit-content([`length-percentage`](/fr/docs/Web/CSS/length-percentage))`
+- `fit-content(`[`<length-percentage>`](/fr/docs/Web/CSS/length-percentage)`)`
   - : Utilise la formule `fit-content` où l'espace disponible est remplacé par l'argument (correspond à `min(max-content, max(min-content, argument))`).
 
 ### Relation avec les propriétés physiques
 
-La valeur de `writing-mode` détermine la propriété physique correspondant à `max-block-size` :
+La valeur de `writing-mode` détermine la propriété physique correspondant à `max-block-size`&nbsp;:
 
 | Valeur pour `writing-mode`                                                                                                                                                                            | Propriété physique équivalente à `max-block-size` |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | [`max-height`](/fr/docs/Web/CSS/max-height)                  |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/max-width)                  |
 
-> **Note :** Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification Level 4.
+> **Note :** Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
 
 > **Note :** Les modes d'écriture `lr`, `lr-tb`, `rl`, `rb` et `rb-tl` ne sont plus autorisés pour les contextes [HTML](/fr/docs/Glossary/HTML) et peuvent uniquement être utilisés dans des contextes [SVG](/fr/docs/Glossary/SVG) 1.x.
 
