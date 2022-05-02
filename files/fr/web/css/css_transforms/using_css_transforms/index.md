@@ -37,7 +37,7 @@ Ici, on le tourne de 90 degrés depuis le coin inférieur gauche&nbsp;:
      src="logo.png">
 ```
 
-{{EmbedLiveSample('', 'auto', 240)}}
+{{EmbedLiveSample('', 'auto', 250)}}
 
 ### Distorsion et translation
 
@@ -140,7 +140,7 @@ Le fragment HTML qui suit crée quatre copies de la même boîte, chacune ayant 
 
 ##### CSS
 
-Ce fragmeent de code CSS utilise des classes pour chacune des perspective et d'autres pour la boîte englobante, le cube et chacune de ses faces.
+Ce fragment de code CSS utilise des classes pour chacune des perspectives et d'autres pour la boîte englobante, le cube et chacune de ses faces.
 
 ```css
 /* Classes pour les différentes valeurs de perspective */
@@ -232,7 +232,7 @@ th, p, td {
 
 ##### Résultat
 
-{{EmbedLiveSample('', 660, 700)}}
+{{EmbedLiveSample('', 660, 710)}}
 
 Le deuxième élément qu'il faut configurer est la position de la personne qui observe le contenu. Cela se fait grâce à la propriété [`perspective-origin`](/fr/docs/Web/CSS/perspective-origin). Par défaut, la perspective est centrée sur l'axe d'observation, ce qui n'est pas toujours pertinent.
 
@@ -534,4 +534,4 @@ Une fois que cela est fait, on peut manipuler l'élément dans l'espace en trois
 
 - [Utiliser `deviceorientation` avec les transformations 3D](/fr/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms)
 - [Une introduction aux transformations CSS, un billet de David DeSandro (en anglais)](https://desandro.github.com/3dtransforms/)
-- [CSS Transform playground (outil en ligne qui permet de visualiser des transformations CSS)](https://css-transform.moro.es/)
+- [CSS <i lang="en">Transform playground</i> (outil en ligne qui permet de visualiser des transformations CSS)](https://css-transform.moro.es/)
