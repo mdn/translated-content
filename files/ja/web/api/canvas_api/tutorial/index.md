@@ -35,7 +35,7 @@ translation_of: Web/API/Canvas_API/Tutorial
 8. [基本的なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
 9. [高度なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
 10. [ピクセル操作](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
-11. [キャンバスの最適化する](/ja/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
+11. [キャンバスの最適化](/ja/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
 12. [おわりに](/ja/docs/Web/API/Canvas_API/Tutorial/Finale)
 
 ## 関連情報
