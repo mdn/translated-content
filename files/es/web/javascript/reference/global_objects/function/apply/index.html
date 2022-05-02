@@ -42,7 +42,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 
 <p><code>apply</code> es muy similar a {{jsxref("Function.call", "call()")}}, excepto por el tipo de argumentos que soporta. Puede utilizarse un arreglo de parámetros en lugar de un conjunto de pares nombre-valor. Con <code>apply</code>, puede utilizarse un arreglo literal, por ejemplo, <code><em>fun</em>.apply(this, ['eat', 'bananas'])</code>, o un objeto <code>Array</code>, por ejemplo, <code><em>fun</em>.apply(this, new Array('eat', 'bananas'))</code>.</p>
 
-<p>Puede también utilizarse {{jsxref("Funciones/arguments", "arguments")}} como parámetro <code>argsArray</code>. <code>arguments</code> es una variable local a la función. Puede utilizarse para acceder a todos los argumentos no específicados en la llamada al objeto. Por lo tanto, no se requiere conocer todos los argumentos del objeto invocado cuando se utiliza el método <code>apply</code>. Puede utilizarse <code>arguments</code> para pasar los argumentos al objeto invocado. El objeto invocado es entonces responsable por el manejo de los argumentos.</p>
+<p>Puede también utilizarse {{jsxref("Functions/arguments", "arguments")}} como parámetro <code>argsArray</code>. <code>arguments</code> es una variable local a la función. Puede utilizarse para acceder a todos los argumentos no específicados en la llamada al objeto. Por lo tanto, no se requiere conocer todos los argumentos del objeto invocado cuando se utiliza el método <code>apply</code>. Puede utilizarse <code>arguments</code> para pasar los argumentos al objeto invocado. El objeto invocado es entonces responsable por el manejo de los argumentos.</p>
 
 <p>Desde la 5ta edición de ECMAScript se puede utilizar también cualquier tipo de objeto similar a un arreglo, que en términos prácticos significa que tendrá una propiedad <code>length</code> y propiedades integer en el rango (<code>0...length)</code>. Por ejemplo, ahora puede utilizarse un {{domxref("NodeList")}} o un objeto personalizado como: <code>{'length': 2, '0': 'eat', '1': 'bananas'}</code>.</p>
 
@@ -54,7 +54,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 
 <h3 id="Using_apply_to_chain_constructors" name="Using_apply_to_chain_constructors">Utilizando <strong><code>apply</code></strong> para encadenar constructores</h3>
 
-<p>Puedes utilizar <code>apply</code> para encadenar {{jsxref("Operadores/new", "constructors")}} para un objeto, similar a Java. En el ejemplo siguiente se crea un método global a {{jsxref("Function")}} llamado <code>construct</code>, en cual posibilita el uso de un objeto similar a un arreglo en un constructor en lugar de una lista de argumentos.</p>
+<p>Puedes utilizar <code>apply</code> para encadenar {{jsxref("Operators/new", "constructors")}} para un objeto, similar a Java. En el ejemplo siguiente se crea un método global a {{jsxref("Function")}} llamado <code>construct</code>, en cual posibilita el uso de un objeto similar a un arreglo en un constructor en lugar de una lista de argumentos.</p>
 
 <pre class="brush: js">Function.prototype.construct = function (aArgs) {
     var fConstructor = this, fNewConstr = function () { fConstructor.apply(this, aArgs); };
@@ -172,7 +172,7 @@ someobject.foo = function() {
 <h2 id="See_also" name="See_also">Véase también</h2>
 
 <ul>
- <li>{{jsxref("Funciones/arguments", "arguments")}} objetos</li>
+ <li>{{jsxref("Functions/arguments", "arguments")}} objetos</li>
  <li>{{jsxref("Function.prototype.bind()")}}</li>
  <li>{{jsxref("Function.prototype.call()")}}</li>
 </ul>
