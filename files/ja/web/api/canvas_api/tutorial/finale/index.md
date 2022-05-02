@@ -1,52 +1,44 @@
 ---
-title: 最後に
+title: おわりに
 slug: Web/API/Canvas_API/Tutorial/Finale
 tags:
   - キャンバス
-  - グラウフィックス
+  - グラフィック
   - チュートリアル
 translation_of: Web/API/Canvas_API/Tutorial/Finale
 original_slug: Web/Guide/HTML/Canvas_tutorial/Finale
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
-<div class="summary">
-<p>おめでとう! <a href="/ja/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a>は終了です! ここでのナレッジはWebで2Dグラフィックスを作成する際に役立つでしょう。</p>
-</div>
+おめでとうございます。[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)は終了です。この知識は、ウェブ上で素晴らしい二次元グラフィックを作るのに役立ちます。
 
-<h2 id="他の例とチュートリアル">他の例とチュートリアル</h2>
+## 他の例とチュートリアル
 
-<p>ここでは様々なデモや更なるcanvasについての例を紹介します。</p>
+ここでは様々なデモや、更なるキャンバスについての例を紹介します。
 
-<dl>
- <dt><a href="http://codepen.io/search?q=canvas">Codepen.io</a></dt>
- <dd>ブラウザ上のフロントエンドディベロッパー向けのプレイグラウンドとコードエディターです。</dd>
- <dt><a href="http://www.html5canvastutorials.com/">HTML5 Canvas Tutorials</a></dt>
- <dd>Canvas APIsの例です。</dd>
- <dt><a href="/ja/docs/Games">Game development</a></dt>
- <dd>ゲームは最も人気な活動の一つです。標準に準拠したWebブラウザで実行できる、より良くより強力なゲームを開発するための新しい技術が定期的に登場しています。</dd>
-</dl>
+- [Codepen.io](https://codepen.io/search/pens?q=canvas)
+  - : ブラウザー上のフロントエンド開発者向けのプレイグラウンドとコードエディターです。
+- [HTML5 Canvas Tutorials](https://www.html5canvastutorials.com/)
+  - : キャンバス API の例です。
+- [Game development](/ja/docs/Games)
+  - : ゲームは最も人気な活動の一つです。標準に準拠したウェブブラウザーで実行できる、より良くより強力なゲームを開発するための新しい技術が定期的に登場しています。
 
-<h2 id="他の_Web_APIs">他の Web APIs</h2>
+## その他の Web API
 
-<p>これらのAPIはcanvasとグラフィックスを更に動かす際におそらく使われます</p>
+これらの API は、キャンバスやグラフィックをさらに扱う際に役立つかもしれません。
 
-<dl>
- <dt><a href="/ja/docs/Web/WebGL">WebGL</a></dt>
- <dd>複雑なグラフィックスや3Dを含んだレンダリングのためのアドバンスドなAPIです。</dd>
- <dt><a href="/ja/docs/Web/SVG">SVG</a></dt>
- <dd>スケーラブル・ベクター・グラフィックスを使用すると、スムーズなスケールを行うために描画されるサイズには関係なく、ベクター(ライン)とシェイプのセットとして画像を描画します。</dd>
- <dt><a href="/ja/docs/Web/API/Web_Audio_API">Web Audio</a></dt>
- <dd>WebAudioAPIは、Web上のオーディオを制御したり、ディベロッパーがオーディオのリソースを選択したり、エフェクトをオーディオに追加したり、オーディオ・ビジュアライザーを作成したり、空間的エフェクト(音響のような)を適用したり、他にも様々な処理を行うためのオーディオの多目的なシステムを提供します。</dd>
-</dl>
+- [WebGL](/ja/docs/Web/API/WebGL_API)
+  - : 複雑なグラフィックや三次元を含んだレンダリングのための高度な API です。
+- [SVG](/ja/docs/Web/SVG)
+  - : Scalable Vector Graphics は、画像をベクター（線）と図形の集合で表現することで、描画サイズに関わらず滑らかに拡大縮小できるようにしたものです。
+- [Web Audio](/ja/docs/Web/API/Web_Audio_API)
+  - : Web Audio API は、ウェブ上の音声を制御するための強力で多用途なシステムを提供し、開発者は音声ソースの選択、音声へのエフェクトの追加、音声視覚化の作成、空間効果（パンニングなど）の適用などを行うことができるようになります。
 
-<h2 id="質問">質問</h2>
+## 質問
 
-<dl>
- <dt><a href="http://stackoverflow.com/questions/tagged/canvas">Stackoverflow</a></dt>
- <dd>質問のタグは"canvas"となります。</dd>
- <dt><a href="/ja/docs/MDN">Comments about this tutorial – the MDN documentation community</a></dt>
- <dd>このチュートリアルに対するコメントや感謝の言葉があるなら、是非我々に届けてほしいです。</dd>
-</dl>
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/html5-canvas)
+  - : "html5-canvas" とタグ付けされた質問です。
+- [Comments about this tutorial – the MDN documentation community](/ja/docs/MDN)
+  - : このチュートリアルについて何かコメントや感謝の言葉がありましたら、お気軽にご連絡ください。
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
