@@ -44,15 +44,15 @@ Les résultats indiqués ici sont génériques et, en pratique, peuvent varier e
 
 ### Utiliser `locales`
 
-Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare) varient selon les locales. Afin d'obtenir le bon ordre lexicographique dans votre application, il est nécessaire de spécifier la locale de l'utilisateur (et éventuellement des locales pour des cas de replis) en utilisant l'argument `locales`&nbsp;:
+Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare) varient selon les locales. Afin d'obtenir le bon ordre lexicographique dans votre application, il est nécessaire de spécifier la locale de l'utilisatrice ou l'utilisateur (et éventuellement des locales pour des cas de replis) en utilisant l'argument `locales`&nbsp;:
 
 ```js
 // en allemand, 'ä' est équivalent à 'a' pour le tri
-console.log(new Intl.Collator("de").compare("ä", "z"));
+console.log(new Intl.Collator('de').compare('ä', 'z'));
 // → une valeur négative
 
 // en suédois, 'ä' arrive après 'z'
-console.log(new Intl.Collator("sv").compare("ä", "z"));
+console.log(new Intl.Collator('sv').compare('ä', 'z'));
 // → une valeur positive
 ```
 
@@ -62,11 +62,11 @@ Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScr
 
 ```js
 // en allemand, 'ä' est composé de la lettre de base 'a'
-console.log(new Intl.Collator("de", {sensitivity: "base"}).compare("ä", "a"));
+console.log(new Intl.Collator('de', {sensitivity: 'base'}).compare('ä', 'a'));
 // → 0
 
 // en suédois, 'ä' et 'a' sont distincts en termes de base
-console.log(new Intl.Collator("sv", {sensitivity: "base"}).compare("ä", "a"));
+console.log(new Intl.Collator('sv', {sensitivity: 'base'}).compare('ä', 'a'));
 // → une valeur positive
 ```
 
