@@ -2,49 +2,96 @@
 title: アドレスバーボタン
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 tags:
-  - User Interface
+  - AddressBarButton
+  - ページアクション
+  - ユーザーインターフェイス
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>よく<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">ページアクション</a>として参照され、このユーザーインターフェイスオプションはブラウザーのアドレスバーに追加されるボタンです。ユーザーはボタンをクリックして拡張機能とやりとりします。</p>
+このユーザーインターフェイスオプションは、ブラウザーのアドレスバーに追加されるボタンで、よく[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)と呼ばれます。ユーザーはボタンをクリックして拡張機能を操作します。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12960/page-action.png" style="display: block; height: 262px; margin-left: auto; margin-right: auto; width: 850px;"></p>
+![](address_bar_button.png)
 
-<p>ウェブページに関係する機能のある時だけにこのボタンを使ってください。既定ではアドレスバーのボタンはすべてのタブにて隠されていて、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> と <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> を呼び出すことで、特定のタブ上での表示・非表示を制御します。</p>
+## ページアクションとブラウザーアクション
 
-<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action">ツールバーボタン</a>と比較して、似た振る舞いをしますが、そちらは拡張機能の機能が大抵のウェブページに適用できる状況で使われます。</p>
+アドレスバーボタン（またはページアクション）は、ツールバーボタン（またはブラウザーアクション）と似ています。
 
-<h2 id="Specifying_the_page_action" name="Specifying_the_page_action">ページアクションを指定する</h2>
+違いは次の通りです。
 
-<p>ページアクションのプロパティは manifest.json の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> キーで定義します。</p>
+- **ボタンの位置**
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"page_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"browser_style":</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span>
-<span class="punctuation token">}</span></code></pre>
+  - ページアクションは、ブラウザーのアドレスバーの中に表示されます。
+  - ブラウザーアクションは、ブラウザーのツールバー内で、アドレスバーの外側に表示されます。
 
-<p>唯一不可欠なキーは <code>default_icon</code> です。</p>
+- **ボタンの表示の有無**
 
-<p>ページアクションの指定には2つの方法があります: <a href="/ja/Add-ons/WebExtensions/Popups">ポップアップ</a>がつくのとつかないのです。 ポップアップを指定しないと、ユーザーがボタンをクリックした時に、拡張機能にイベントがディスパッチされ、これを拡張機能が <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>を使ってリッスンします:</p>
+  - ページアクションは既定で非表示であり（この既定値は `show_matches` および `hide_matches` [マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)プロパティで変更できます）、 [`pageAction.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) および [`pageAction.hide()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) を呼び出すことで、特定のタブを表示と非表示を切り替えることができます。
+  - ブラウザーアクションは常に表示されます。
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+ページアクションは、現在のページに関連するアクションのときに使用します。ブラウザーアクションは、ブラウザー全体または複数のページに関連するアクションを実行するときに使用します。たとえば、以下のようになります。
 
-<p>ポップアップを指定すると、クリックイベントはディスパッチされません: その代わりに、ユーザーがボタンをクリックした時にポップアップが表示されます。ユーザーはポップアップとやりとりできて、ユーザーが範囲外をクリックした時に自動的にポップアップが閉じます。ポップアップを作成、管理することの詳細は<a href="/ja/Add-ons/WebExtensions/Popups">ポップアップ</a>の記事を見てください。</p>
+<table class="fullwidth-table standard-table">
+  <thead>
+    <tr>
+      <th scope="row">種別</th>
+      <th scope="col">ブックマークアクション</th>
+      <th scope="col">コンテンツアクション</th>
+      <th scope="col">タブ操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">ページアクション</th>
+      <td>このページをブックマーク</td>
+      <td>再編集の拡張</td>
+      <td>タブの送信</td>
+    </tr>
+    <tr>
+      <th scope="row">ブラウザーアクション</th>
+      <td>すべてのブックマークの表示</td>
+      <td>広告ブロックの有効化</td>
+      <td>すべての開いているタブを同期</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>拡張機能は1つだけのページアクションを持つ必要があります。</p>
+## ページアクションの設定
 
-<p>なお、上に示されている任意のプロパティは<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code> API を使ったコードからも変更できます。</p>
+ページアクションのプロパティは manifest.json の [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) キーで定義します。
 
-<h2 id="Examples" name="Examples">例</h2>
+```json
+"page_action": {
+  "browser_style": true,
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "Whereami?"
+}
+```
 
-<p>GitHub の <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリには、ページアクションを使う拡張機能の例がいくつかあります:</p>
+唯一不可欠なキーは `default_icon` です。
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a> はポップアップなしのページアクションを使います。</li>
-</ul>
+ページアクションの設定には 2 つの方法があります。[ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)があるものと、ないものです。
+
+- **ポップアップがない**場合、ユーザーがボタンをクリックした時に、拡張機能にイベントが配信され、これを拡張機能が [`pageAction.onClicked`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked)を使って待ち受けします。
+
+  ```js
+  browser.pageAction.onClicked.addListener(handleClick);
+  ```
+
+- **ポップアップがある**場合、クリックイベントは配信されません。その代わりに、ユーザーがボタンをクリックした時にポップアップが表示されます。ユーザーはポップアップを操作することができます。ユーザーがポップアップの外をクリックした場合は、自動的に閉じます。ポップアップを作成したり管理したりすることについての詳細は、[ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)の記事を参照してください。
+
+なお、拡張機能が持つことができるページアクションは 1 つだけです。
+
+ページアクションのプロパティはすべて、 [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)` API を使用してプログラムから変更することができます。
+
+## アイコン
+
+For details on how to create icons to use with your page action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+
+## 例
+
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリには、ページアクションを使う拡張機能の例がいくつかあります。 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) はポップアップなしのページアクションを使います。
