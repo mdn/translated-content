@@ -278,24 +278,6 @@
       "Macadam"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T23:07:59.110Z",
-    "contributors": [
-      "loella16",
-      "Jeremie",
-      "Porkepix",
-      "genma"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-23T23:00:23.677Z",
-    "contributors": [
-      "loella16",
-      "Jeremie",
-      "Goofy",
-      "htindon"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2020-02-09T18:25:52.010Z",
     "contributors": [
@@ -43471,6 +43453,24 @@
     "contributors": [
       "vvvaleee",
       "BenoitL"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T23:07:59.110Z",
+    "contributors": [
+      "loella16",
+      "Jeremie",
+      "Porkepix",
+      "genma"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-23T23:00:23.677Z",
+    "contributors": [
+      "loella16",
+      "Jeremie",
+      "Goofy",
+      "htindon"
     ]
   },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {

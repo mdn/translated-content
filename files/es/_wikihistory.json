@@ -295,18 +295,6 @@
       "LauraHilliger"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T22:37:45.365Z",
-    "contributors": [
-      "pekechis"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-23T22:37:47.150Z",
-    "contributors": [
-      "pekechis"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2020-08-03T01:24:29.370Z",
     "contributors": [
@@ -21613,6 +21601,18 @@
     "contributors": [
       "rafamagno",
       "maedca"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T22:37:45.365Z",
+    "contributors": [
+      "pekechis"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-23T22:37:47.150Z",
+    "contributors": [
+      "pekechis"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {

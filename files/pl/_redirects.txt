@@ -1186,6 +1186,7 @@
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Stworz_element_Canvas_i_rysuj_na_nim	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/odbijanie_od_scian	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/posusz_pilka	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+/pl/docs/Glossary/404	/pl/docs/Web/HTTP/Status/404
 /pl/docs/Glossary/AOM	/pl/docs/Glossary/Accessibility_tree
 /pl/docs/Glossary/Abstrakcja	/pl/docs/Glossary/Abstraction
 /pl/docs/Glossary/Hipertekst	/pl/docs/Glossary/Hypertext

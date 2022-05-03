@@ -532,6 +532,8 @@
 /zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/让球动起来	/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 /zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/鼠标控制	/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 /zh-CN/docs/Games/简介	/zh-CN/docs/Games/Introduction
+/zh-CN/docs/Glossary/404	/zh-CN/docs/conflicting/Web/HTTP/Status/404
+/zh-CN/docs/Glossary/502	/zh-CN/docs/conflicting/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address

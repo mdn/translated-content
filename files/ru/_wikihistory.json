@@ -332,19 +332,6 @@
       "teoli"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T22:13:48.343Z",
-    "contributors": [
-      "cotolany",
-      "nudaworks"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-18T21:41:50.347Z",
-    "contributors": [
-      "gadjetron"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2020-10-30T05:21:31.612Z",
     "contributors": [
@@ -24358,6 +24345,19 @@
       "sivashev",
       "Aleksej",
       "Tihoem"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T22:13:48.343Z",
+    "contributors": [
+      "cotolany",
+      "nudaworks"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-18T21:41:50.347Z",
+    "contributors": [
+      "gadjetron"
     ]
   },
   "conflicting/Web/JavaScript/Guide": {

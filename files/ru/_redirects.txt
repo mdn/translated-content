@@ -84,6 +84,8 @@
 /ru/docs/Games/Ввод	/ru/docs/Games/Introduction
 /ru/docs/Games/Инструменты	/ru/docs/Games/Tools
 /ru/docs/Games/Инструменты/asm.js	/ru/docs/Games/Tools/asm.js
+/ru/docs/Glossary/404	/ru/docs/conflicting/Web/HTTP/Status/404
+/ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
@@ -753,8 +755,8 @@
 /ru/docs/Руководство_по_JavaScript_1.5/Функции	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/Руководство_по_JavaScript_1.5:Функции	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/Словарь	/ru/docs/Glossary
-/ru/docs/Словарь/404	/ru/docs/Glossary/404
-/ru/docs/Словарь/502	/ru/docs/Glossary/502
+/ru/docs/Словарь/404	/ru/docs/conflicting/Web/HTTP/Status/404
+/ru/docs/Словарь/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Словарь/AJAX	/ru/docs/Glossary/AJAX
 /ru/docs/Словарь/AOM	/ru/docs/Glossary/Accessibility_tree
 /ru/docs/Словарь/API	/ru/docs/Glossary/API

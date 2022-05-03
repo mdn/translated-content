@@ -308,21 +308,6 @@
       "Taken"
     ]
   },
-  "Glossary/404": {
-    "modified": "2020-07-25T11:09:55.890Z",
-    "contributors": [
-      "pcw",
-      "reodog",
-      "mfuji09",
-      "aokashi"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-18T21:43:46.251Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2019-11-24T05:24:23.556Z",
     "contributors": [
@@ -48516,6 +48501,21 @@
     "contributors": [
       "mfuji09",
       "tamura4278"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2020-07-25T11:09:55.890Z",
+    "contributors": [
+      "pcw",
+      "reodog",
+      "mfuji09",
+      "aokashi"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-18T21:43:46.251Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/MathML": {

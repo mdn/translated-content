@@ -1284,8 +1284,8 @@
 /fr/docs/Glisser_et_déposer	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Glisser_et_déposer/Opérations_de_glissement	/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /fr/docs/Glossaire	/fr/docs/Glossary
-/fr/docs/Glossaire/404	/fr/docs/Glossary/404
-/fr/docs/Glossaire/502	/fr/docs/Glossary/502
+/fr/docs/Glossaire/404	/fr/docs/conflicting/Web/HTTP/Status/404
+/fr/docs/Glossaire/502	/fr/docs/conflicting/Web/HTTP/Status/502
 /fr/docs/Glossaire/AJAX	/fr/docs/Glossary/AJAX
 /fr/docs/Glossaire/ALPN	/fr/docs/Glossary/ALPN
 /fr/docs/Glossaire/API	/fr/docs/Glossary/API
@@ -1742,6 +1742,8 @@
 /fr/docs/Glossaire/Élément	/fr/docs/Glossary/Element
 /fr/docs/Glossaire/Éléments_supports_de_script	/fr/docs/Glossary/Script-supporting_element
 /fr/docs/Glossaire/évènement	/fr/docs/Glossary/event
+/fr/docs/Glossary/404	/fr/docs/conflicting/Web/HTTP/Status/404
+/fr/docs/Glossary/502	/fr/docs/conflicting/Web/HTTP/Status/502
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS

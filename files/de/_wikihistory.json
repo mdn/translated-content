@@ -27,21 +27,6 @@
       "Jeremie"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T22:25:58.962Z",
-    "contributors": [
-      "cob",
-      "SebinNyshkim",
-      "PercyGitarrist"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-23T22:25:51.694Z",
-    "contributors": [
-      "Siphalor",
-      "PercyGitarrist"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2019-09-29T09:22:43.314Z",
     "contributors": [
@@ -8844,6 +8829,13 @@
       "SebinNyshkim"
     ]
   },
+  "Web/HTTP/Status/502": {
+    "modified": "2019-03-23T22:25:51.694Z",
+    "contributors": [
+      "Siphalor",
+      "PercyGitarrist"
+    ]
+  },
   "Web/HTTP/Status/503": {
     "modified": "2020-10-15T22:21:06.347Z",
     "contributors": [
@@ -13668,6 +13660,14 @@
       "teoli",
       "AickeSchulz",
       "jwl"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T22:25:58.962Z",
+    "contributors": [
+      "cob",
+      "SebinNyshkim",
+      "PercyGitarrist"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
