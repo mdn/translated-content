@@ -1,40 +1,43 @@
 ---
-title: 開発ツールパネル
+title: 開発者ツールパネル
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 tags:
-  - Beginner
-  - Guide
-  - User Interface
+  - 初心者
+  - ガイド
+  - ユーザーインターフェイス
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p>この機能は Firefox 54 以降で利用できます。</p>
-</div>
+> **Note:** この機能は Firefox 54 以降で利用できます。
 
-<p>拡張機能が開発者に使われるツールを提供するとき、ブラウザーの開発ツールに、新しいパネルとしてUIを追加できます。</p>
+拡張機能が開発者にとって有用なツールを提供する場合、その UI をブラウザーの開発者ツールに新しいパネルとして追加することが可能です。
 
-<p><img alt='Simple example showing the addition of "My panel" to the Developer Tools tabs.' src="https://mdn.mozillademos.org/files/15746/developer_panel_tab.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+![Simple example showing the addition of "My panel" to the Developer Tools tabs.](developer_panel_tab.png)
 
-<h2 id="Specifying_a_developer_tools_panel" name="Specifying_a_developer_tools_panel">開発ツールパネルを指定する</h2>
+## 開発ツールパネルの設定
 
-<p>開発ツールパネルは <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code> API を使って追加され、特別な開発ツールページから順番に実行されます。</p>
+開発ツールパネルは [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels) API を使って追加され、特別な開発ツールページから順番に実行されます。
 
-<p>開発ツールのページを追加するには、拡張機能の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> に <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></code> キーを入れて、 拡張機能内のそのページの HTML ファイルの場所を与えます:</p>
+開発ツールのページを追加するには、拡張機能の [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に [`devtools_page`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) キーを設定して、 拡張機能内のそのページの HTML ファイルの場所を与えます。
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"devtools_page":</span> <span class="string token">"devtools-page.html"</span></code></pre>
+```json
+"devtools_page": "devtools-page.html"
+```
 
-<p>開発ツールのページから、開発ツールパネルに追加するスクリプトを呼び出します:</p>
+開発ツールのページから、開発ツールパネルに追加するスクリプトを呼び出します。
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;script src="devtools.js"&gt;&lt;/script&gt;
-&lt;/body&gt;</pre>
+```html
+<body>
+  <script src="devtools.js"></script>
+</body>
+```
 
-<p>スクリプトの中では、パネルのタイトル、アイコン、そのコンテンツを与えるHTMLファイルを指定して、開発ツールパネルを作成します:</p>
+スクリプトでは devtools パネルを、パネルのタイトル、アイコン、パネルのコンテンツを提供する HTML ファイルを指定して、作成します。
 
-<pre class="brush: js">function handleShown() {
+```js
+function handleShown() {
   console.log("panel is being shown");
 }
 
@@ -46,21 +49,22 @@ browser.devtools.panels.create(
   "My Panel",           // title
   "icons/star.png",           // icon
   "devtools/panel/panel.html"          // content
-).then((newPanel) =&gt; {
+).then((newPanel) => {
   newPanel.onShown.addListener(handleShown);
   newPanel.onHidden.addListener(handleHidden);
-});</pre>
+});
+```
 
-<p>拡張機能はインスペクターウィンドウの中で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval"><code>devtools</code>.inspectedWindow.eval()</a></code> を使うか、バックグラウンドスクリプトからメッセージを渡してコンテンツスクリプトに挿入することで、コードを実行できます。この方法のより詳しくは <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> を見てください。</p>
+拡張機能はインスペクターウィンドウの中で [`devtools.inspectedWindow.eval()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) を使うか、バックグラウンドスクリプトからメッセージを渡してコンテンツスクリプトに挿入することで、コードを実行することができます。この方法のより詳しくは[開発ツールの拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を参照してください。
 
-<h2 id="Examples" name="Examples">開発パネルのデザイン</h2>
+## 開発パネルのデザイン
 
-<p>開発パネルのウェブページを Firefox のスタイルにマッチさせる方法の詳細は <a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a> の文書を見てください。</p>
+開発パネルのウェブページを Firefox のスタイルに適合させる方法の詳細は [Photon Design System](https://design.firefox.com/photon/index.html) の文書を参照してください。
 
-<h2 id="アイコン">アイコン</h2>
+## アイコン
 
-<p>開発ツールパネルに使うアイコン作成方法の詳細は <a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a> の文書の<a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> を見てください。</p>
+開発ツールパネルに使うアイコン作成方法の詳細は [Iconography](https://design.firefox.com/photon/visuals/iconography.html) を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントで参照してください。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>GitHub の <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリには開発ツールパネルを実装した <a href="https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/">devtools-panels</a> の例があります。</p>
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、開発ツールパネルを実装した [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels/) の例があります。
