@@ -108,18 +108,6 @@
       "gusleindecker"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T22:47:20.165Z",
-    "contributors": [
-      "raduq"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-23T22:47:23.868Z",
-    "contributors": [
-      "raduq"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2020-01-10T00:02:09.757Z",
     "contributors": [
@@ -16497,6 +16485,18 @@
     "modified": "2020-10-15T22:31:37.734Z",
     "contributors": [
       "FernandoKGA"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T22:47:20.165Z",
+    "contributors": [
+      "raduq"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-23T22:47:23.868Z",
+    "contributors": [
+      "raduq"
     ]
   },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {

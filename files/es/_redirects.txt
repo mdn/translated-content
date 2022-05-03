@@ -453,6 +453,8 @@
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /es/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/es/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 /es/docs/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
+/es/docs/Glossary/404	/es/docs/conflicting/Web/HTTP/Status/404
+/es/docs/Glossary/502	/es/docs/conflicting/Web/HTTP/Status/502
 /es/docs/Glossary/AOM	/es/docs/Glossary/Accessibility_tree
 /es/docs/Glossary/Algoritmo	/es/docs/Glossary/Algorithm
 /es/docs/Glossary/Argumento	/es/docs/Glossary/Argument
