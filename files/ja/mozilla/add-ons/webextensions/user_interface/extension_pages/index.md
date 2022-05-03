@@ -1,70 +1,80 @@
 ---
-title: Extension pages
+title: 拡張機能ページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 tags:
-  - Beginner
-  - User Interface
+  - 初心者
+  - ユーザーインターフェイス
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><span class="seoSummary">拡張機能にはフォームやヘルプなど拡張機能が必要とするコンテンツを提供するためのHTMLを含めることができます。</span></p>
+拡張機能には、フォーム、ヘルプ、その他拡張機能が必要とするコンテンツを提供するために、 HTML ページを設置することができます。
 
-<p><img alt="Example of a simple bundled page displayed as a detached panel." src="https://mdn.mozillademos.org/files/15752/bundled_page_as_panel_small.png" style="display: block; height: 216px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+![Example of a simple bundled page displayed as a detached panel.](bundled_page_as_panel_small.png)
 
-<p>拡張機能に含められた HTML ページは拡張機能がバックグラウンドで動作するのと同じ特権を持った JavaScript の API を利用できますが、これらのページはそれぞれのタブ、JavaScriptイベントキュー、グローバル変数を持ちます。</p>
+拡張機能に含められた HTML ページは拡張機能がバックグラウンドで動作するのと同じ特権を持った JavaScript の API を利用できますが、これらのページにはそれぞれのタブ、 JavaScript イベントキュー、グローバル変数があります。
 
-<p>バックグラウンドのページは「隠れた拡張ページ」と考えてください。</p>
+バックグラウンドのページは「隠れた拡張ページ」と考えてください。
 
-<h2 id="拡張ページを指定をする">拡張ページを指定をする</h2>
+## 拡張ページの設置
 
-<p>HTMLファイルと関連づけられた CSS や JavaScript ファイルを拡張機能に含めることができます。これらのファイルはルートに置くこともできますし、サブディレクトリに分けることもできます。</p>
+HTML ファイルと関連づけられた CSS や JavaScript ファイルを拡張機能に含めることができます。これらのファイルはルートに置くこともできますし、サブディレクトリーに分けることもできます。
 
-<pre class="notranslate">/my-extension
+```
+/my-extension
     /manifest.json
     /my-page.html
-    /my-page.js</pre>
+    /my-page.js
+```
 
-<h2 id="拡張ページを表示する">拡張ページを表示する</h2>
+## 拡張ページの表示尾
 
-<p>拡張ページを表示する際に2つの選択肢があります。それは、 {{WebExtAPIRef("windows.create()")}} と {{WebExtAPIRef("tabs.create()")}} です。</p>
+拡張ページを表示する際に 2 つの選択肢があります。それは、 {{WebExtAPIRef("windows.create()")}} と {{WebExtAPIRef("tabs.create()")}} です。
 
-<p><code>windows.create()</code> を使うと、例えば、HTML ファイルを detached panel (アドレスバー、ブックマークバーなどといったブラウザ UI がないウィンドウ) 開くことができ、ダイアログのようなユーザーエクスペリエンスを実現できます:</p>
+`windows.create()` を使うと、例えば、HTML ファイルを分離パネル（アドレスバー、ブックマークバーなどといったブラウザ UI がないウィンドウ）開くことができ、ダイアログのような使い勝手を実現することができます。
 
-<pre class="brush: js notranslate">var createData = {
+```js
+let createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
   height: 100
 };
-var creating = browser.windows.create(createData);</pre>
+let creating = browser.windows.create(createData);
+```
 
-<p>ウィンドウが必要なくなったときは JavaScript で閉じることができます。例えば、以下の例では、ユーザーがボタンをクリックしたときに {{WebExtAPIRef("windows.remove()")}} にウィンドウ の ID を渡しています:</p>
+ウィンドウが必要なくなったときは、プログラムから閉じることができます。
 
-<pre class="brush: js notranslate">document.getElementById("closeme").addEventListener("click", function(){
-  var winId = browser.windows.WINDOW_ID_CURRENT;
-  var removing = browser.windows.remove(winId);
-}); </pre>
+例えば、以下の例では、ユーザーがボタンをクリックしたときに {{WebExtAPIRef("windows.remove()")}} にウィンドウ の ID を渡しています。
 
-<h2 id="拡張ページと履歴">拡張ページと履歴</h2>
+```js
+document.getElementById("closeme").addEventListener("click", function(){
+  let winId = browser.windows.WINDOW_ID_CURRENT;
+  let removing = browser.windows.remove(winId);
+});
+```
 
-<p>デフォルトではこの方法で開かれたページは普通のウェブページを開いたときと同じように履歴に保存されます。履歴に保存したくない場合、 {{WebExtAPIRef("history.deleteUrl()")}} を使ってブラウザから履歴のレコードを削除することができます。</p>
+## 拡張ページと履歴
 
-<pre class="brush: js notranslate" id="ct-4">function onVisited(historyItem) {
+既定では、この方法で開かれたページは普通のウェブページを開いたときと同じように履歴に保存されます。履歴に保存したくない場合は、 {{WebExtAPIRef("history.deleteUrl()")}} を使ってブラウザーから履歴のレコードを削除することができます。
+
+```js
+function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
 }
 
-browser.history.onVisited.addListener(onVisited);</pre>
+browser.history.onVisited.addListener(onVisited);
+```
 
-<p>History API を使には <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> で "history" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a> をリクエストする必要があります。</p>
+履歴 API を使用するには、 "`history`" [権限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルでリクエストする必要があります。
 
-<h2 id="ウェブページのデザイン">ウェブページのデザイン</h2>
+## ウェブページのデザイン
 
-<p>Firefox のスタイルとマッチするようなデザインの方法の詳細は<a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a> と <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser styles</a> をお読みください。</p>
+Firefox のスタイルに適合するようなデザインの方法の詳細は、 [Photon Design System](https://design.firefox.com/photon/index.html) および[ブラウザースタイル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) のドキュメントを参照してください。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>GitHubの <a class="external external-icon" href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリにはウィンドウの作成を実装する例である <a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/window-manipulator">window-manipulator</a> が含まれています。</p>
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、ウィンドウの作成を実装した例である [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) が含まれています。
