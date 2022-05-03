@@ -2,280 +2,289 @@
 title: '<a>: アンカー要素'
 slug: Web/HTML/Element/a
 tags:
-  - Content
-  - Element
+  - コンテンツ
+  - 要素
   - HTML
-  - HTML text-level semantics
-  - 'HTML:Flow content'
-  - 'HTML:Interactive content'
-  - 'HTML:Palpable Content'
-  - 'HTML:Phrasing content'
-  - Inline element
-  - Reference
-  - Web
+  - HTML テキストレベルの意味づけ
+  - HTML:フローコンテンツ
+  - HTML:対話的コンテンツ
+  - HTML:知覚可能コンテンツ
+  - HTML:記述コンテンツ
+  - インライン要素
+  - リファレンス
+  - ウェブ
+browser-compat: html.elements.a
 translation_of: Web/HTML/Element/a
 ---
-<div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;a&gt;</code> 要素</strong> (<em>アンカー</em>要素) は、 <a href="#href"><code>href</code> 属性</a>を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。</span> <code>&lt;a&gt;</code> の内容は、リンク先を示すもの<strong>であるべきです</strong>。</p>
+{{HTMLRef}}
 
-<div>{{EmbedInteractiveExample("pages/tabbed/a.html")}}</div>
+**`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、 [`href` 属性](#attr-href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+`<a>` の内容は、リンク先を示すもの**であるべきです**。 `href` 属性が存在する場合、 `<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+{{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
+## 属性
 
-<dl>
- <dt id="download">{{HTMLAttrDef("download")}}{{HTMLVersionInline(5)}}</dt>
- <dd>リンクされた URL に移動するのではなく、保存するようユーザーに促します。値があってもなくても利用できます。</dd>
- <dd>
- <dl>
-  <dd>値を定義すると、ファイル名として提案します。 <code>/</code> および <code>\</code> はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。</dd>
- </dl>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
- <ul>
-  <li>値がない場合は、ブラウザーは様々なソースから生成されたファイル名/拡張子を提案します。
-   <ul>
-    <li>HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー</li>
-    <li>URL の<a href="/ja/docs/Web/API/URL/pathname">パス</a>の最後の部分</li>
-    <li>{{Glossary("MIME_type", "メディア種別")}} ({{HTTPHeader("Content-Type")}} ヘッダー、 <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URL</a> の先頭、 <a href="/ja/docs/Web/API/URL/createObjectURL"><code>blob:</code> URL</a> の {{domxref("Blob.type")}} から)</li>
-   </ul>
-  </li>
- </ul>
+- {{HTMLAttrDef("download")}}
 
- <div class="note"><strong>注:</strong>
+  - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。値があってもなくても構いません。
 
- <ul>
-  <li><code>download</code> は<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンの URL</a> と、 <code>blob:</code>、 <code>data:</code> の各スキームでのみ動作します。</li>
-  <li>
-   <p><code>Content-Disposition</code> ヘッダーが <code>download</code> とは異なる情報を持っていた場合、動作結果は様々です。</p>
+    - 値がない場合は、ブラウザーは様々なソースから生成されたファイル名/拡張子を提案します。
 
-   <ul>
-    <li>
-     <p>ヘッダーが <code>filename</code> を指定した場合、そちらが <code>download</code> 属性で指定されたファイル名より優先されます。</p>
-    </li>
-    <li>
-     <p>ヘッダーが <code>inline</code> の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。 82 以前のバージョンの Firefox では、ヘッダーが優先され、コンテンツがインラインで表示されます。</p>
-    </li>
-   </ul>
-  </li>
- </ul>
- </div>
- </dd>
- <dt id="href">{{HTMLAttrDef("href")}}</dt>
- <dd>
- <p>ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。</p>
+      - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
+      - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
+      - {{Glossary("MIME_type", "メディア種別")}} ({{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL) の {{domxref("Blob.type")}} から)
 
- <ul>
-  <li>ページの節を示すフラグメント URL</li>
-  <li>メディアファイルの一部を示すメディアフラグメント</li>
-  <li>電話番号を示す <code>tel:</code> URL</li>
-  <li>メールアドレスを示す <code>mailto:</code> URL</li>
-  <li>ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler()")}} を使用することができます。</li>
- </ul>
- </dd>
- <dt id="hreflang">{{HTMLAttrDef("hreflang")}}</dt>
- <dd>リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 <a href="/ja/docs/Web/HTML/Global_attributes/lang"><code>lang</code> グローバル属性</a>と同じです。</dd>
- <dt id="ping">{{HTMLAttrDef("ping")}}</dt>
- <dd>空白で区切られた URL のリストです。リンクをたどるときに、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 <code>PING</code> を本文として送信します。通常、トラッキングに使用されます。</dd>
- <dt id="referrerpolicy">{{HTMLAttrDef("referrerpolicy")}}{{Experimental_Inline}}</dt>
- <dd>リンクをたどるときにどれだけの<a href="/ja/docs/Web/HTTP/Headers/Referer">リファラー</a>を送信するかです。有効な値とその効果については {{HTTPHeader("Referrer-Policy")}} を参照してください。</dd>
- <dt id="rel">{{HTMLAttrDef("rel")}}</dt>
- <dd>リンク先の URL との関係を示す、空白で区切られた<a href="/ja/docs/Web/HTML/Link_types">リンク種別</a>のリストです。</dd>
- <dt id="target">{{HTMLAttrDef("target")}}</dt>
- <dd>リンク先の URL を表示する場所、 <em>閲覧コンテキスト</em> (タブ、ウィンドウ、<code>&lt;iframe&gt;</code>) の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
- <ul>
-  <li><code>_self</code>: 現在の閲覧コンテキストです。 (既定値)</li>
-  <li><code>_blank</code>: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。</li>
-  <li><code>_parent</code>: 現在の親の閲覧コンテキストです。親がない場合は、 <code>_self</code> と同じ振る舞いをします。</li>
-  <li><code>_top</code>: 最上位の閲覧コンテキスト (現在のコンテキストの祖先である "最上位" のコンテキスト) です。親の閲覧コンテキストがない場合は、 <code>_self</code> と同じ動作をします。</li>
- </ul>
+    - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
- <div class="note">
- <p><strong>注:</strong> <code>target</code> を使用する際は、<code>window.opener</code> API の悪用を避けるために <code>rel="noreferrer"</code> を追加してください。</p>
- </div>
+    > **Note:**
+    >
+    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
+    > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
+    > - `Content-Disposition` ヘッダーが `download` とは異なる情報を持っていた場合、動作結果は様々です。
+    >   - ヘッダーが `filename` を指定した場合、そちらが `download` 属性で指定されたファイル名より優先されます。
+    >   - ヘッダーが `inline` の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。Firefox の（82 以前の）古い版では、ヘッダーが優先され、コンテンツがインラインで表示されます。
 
- <div class="note">
- <p><strong>注:</strong> 新しいブラウザー (例えば Firefox 79 以降) では、 <code>target="_blank"</code> を <code>&lt;a&gt;</code> 要素に設定すると、暗黙に <code>rel</code> の動作を <code>rel="noopener"</code> と設定したのと同様になります。</p>
- </div>
- </dd>
- <dt id="type">{{HTMLAttrDef("type")}}</dt>
- <dd>リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。</dd>
-</dl>
+- {{HTMLAttrDef("href")}}
 
-<h3 id="Obsolete_attributes" name="Obsolete_attributes">廃止された属性</h3>
+  - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
 
-<dl>
- <dt>{{HTMLAttrDef("charset")}}{{Obsolete_Inline("HTML5")}}</dt>
- <dd>リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
- <div class="note">
- <p><strong>注:</strong> この属性は廃止されており、<strong>ページ作者が使用すべきではありません</strong>。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。</p>
- </div>
- </dd>
- <dt id="coords">{{HTMLAttrDef("coords")}}{{Obsolete_Inline("HTML5")}}</dt>
- <dd><a href="#shape"><code>shape</code> 属性</a>とともに使用されます。カンマ区切りの座標のリストです。</dd>
- <dt id="name">{{HTMLAttrDef("name")}}{{Obsolete_Inline("HTML5")}}</dt>
- <dd>ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば <code>id</code> 属性と <code>name</code> 属性を <code>&lt;a&gt;</code> 要素内で同時に使用できました。
- <div class="note">
- <p><strong>注:</strong> 代わりにグローバル属性の {{HTMLAttrxRef("id")}} を使用してください。</p>
- </div>
- </dd>
- <dt id="rev">{{HTMLAttrDef("rev")}}{{Obsolete_Inline("HTML5")}}</dt>
- <dd>この属性は、逆方向のリンクを指定します。 <a href="#rel"><code>rel</code> 属性</a>と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。</dd>
- <dt id="shape">{{HTMLAttrDef("shape")}}{{Obsolete_Inline("HTML5")}}</dt>
- <dd>イメージマップ内のハイパーリンクの領域の形状です。
- <div class="note"><strong>注:</strong> イメージマップについては {{HTMLElement("area")}} 要素を使用してください。</div>
- </dd>
-</dl>
+    - ページの節を示すフラグメント URL
+    - メディアファイルの一部を示すメディアフラグメント
+    - 電話番号を示す `tel:` URL
+    - メールアドレスを示す `mailto:` URL
+    - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+- {{HTMLAttrDef("hreflang")}}
+  - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Global_attributes/lang)と同じです。
+- {{HTMLAttrDef("ping")}}
+  - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
+- {{HTMLAttrDef("referrerpolicy")}}
+
+  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)を送信するかです。
+
+    - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
+    - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
+    - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
+    - `origin-when-cross-origin`: 他のオリジンに送信されるリファラーは、スキーム、ホスト名、ポート番号に限定されます。同じオリジン内での移動の場合はパスが含まれます。
+    - `same-origin`: リファラーは{{Glossary("Same-origin policy", "同じオリジン")}}には送られますが、オリジン間リクエストではリファラー情報が含まれません。
+    - `strict-origin`: プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) は、文書のオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信しません。
+    - `strict-origin-when-cross-origin` (default): 同一オリジンへのリクエストを行う際には URL 全体が送信され、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) はオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信されません。
+    - `unsafe-url`: リファラーにはオリジン*および*パスが含まれます（ただし[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含まれません）。**この値は安全ではありません**。オリジンとパスを TLS で保護されたリソースから安全ではないオリジンに漏洩させるからです。
+
+- {{HTMLAttrDef("rel")}}
+  - : リンク先の URL との関係を示す、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストです。
+- {{HTMLAttrDef("target")}}
+
+  - : リンク先の URL を表示する場所、*閲覧コンテキスト*（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
+
+    - `_self`: 現在の閲覧コンテキストです。（既定値）
+    - `_blank`: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。
+    - `_parent`: 現在の親の閲覧コンテキストです。親がない場合は、 `_self` と同じ振る舞いをします。
+    - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
+
+    > **Note:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。対応状況については[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+
+- {{HTMLAttrDef("type")}}
+  - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
+
+### 廃止された属性
+
+- {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
+
+  - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
+
+    > **Note:** この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+
+- {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
+  - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
+- {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
+
+  - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
+
+    > **Note:** 代わりにグローバル属性の {{HTMLAttrxRef("id")}} を使用してください。
+
+- {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
+  - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
+- {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
+
+  - : イメージマップ内のハイパーリンクの領域の形状です。
+
+    > **Note:** イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
+
+## プロパティ
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Interactive_content">対話型コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Transparent_content_model">透過的コンテンツ</a>で、<a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a> (<a href="/ja/docs/Web/HTML/Content_categories#Interactive_content">対話型コンテンツ</a>を除く) または<a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を含むもの</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を受け入れるすべての要素、<a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a> を受け入れるすべての要素。ただし &lt;a&gt; 要素を除く。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td>{{ARIARole("link")}} (<code>href</code> 属性がある場合）。それ以外は <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>
-    <p><code>href</code> 属性がある場合:</p>
-
-    <ul>
-     <li>{{ARIARole("button")}}</li>
-     <li>{{ARIARole("checkbox")}}</li>
-     <li>{{ARIARole("menuitem")}}</li>
-     <li>{{ARIARole("menuitemcheckbox")}}</li>
-     <li>{{ARIARole("menuitemradio")}}</li>
-     <li>{{ARIARole("option")}}</li>
-     <li>{{ARIARole("radio")}}</li>
-     <li>{{ARIARole("switch")}}</li>
-     <li>{{ARIARole("tab")}}</li>
-     <li>{{ARIARole("treeitem")}}</li>
-    </ul>
-
-    <p><code>href</code> 属性がない場合:</p>
-
-    <ul>
-     <li>any</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{DOMxRef("HTMLAnchorElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >記述コンテンツ</a
+        >,
+        <a
+          href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >対話型コンテンツ</a
+        >、知覚可能コンテンツ。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>、ただし子孫に<a href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content">対話型コンテンツ</a> または <a href="/ja/docs/Web/HTML/Element/a">a</a> 要素をがないもの、および <a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> 属性が指定された子孫がないもの。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        {{ARIARole("link")}} （<code>href</code> 属性がある場合）、
+        それ以外は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <p><code>href</code> 属性がある場合</p>
+        <ul>
+          <li>{{ARIARole("button")}}</li>
+          <li>{{ARIARole("checkbox")}}</li>
+          <li>{{ARIARole("menuitem")}}</li>
+          <li>{{ARIARole("menuitemcheckbox")}}</li>
+          <li>{{ARIARole("menuitemradio")}}</li>
+          <li>{{ARIARole("option")}}</li>
+          <li>{{ARIARole("radio")}}</li>
+          <li>{{ARIARole("switch")}}</li>
+          <li>{{ARIARole("tab")}}</li>
+          <li>{{ARIARole("treeitem")}}</li>
+        </ul>
+        <p><code>href</code> 属性がない場合</p>
+        <ul>
+          <li>すべて</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Linking_to_an_absolute_URL" name="Linking_to_an_absolute_URL">絶対 URL へのリンク</h3>
+### 絶対 URL へのリンク
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.com"&gt;
+```html
+<a href="https://www.mozilla.com">
   Mozilla
-&lt;/a&gt;</pre>
+</a>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Linking_to_an_absolute_URL')}}</p>
+{{EmbedLiveSample('Linking_to_an_absolute_URL')}}
 
-<h3 id="Linking_to_relative_URLs" name="Linking_to_relative_URLs">相対 URL へのリンク</h3>
+### 相対 URL へのリンク
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;a href="//example.com"&gt;Scheme-relative URL&lt;/a&gt;
-&lt;a href="/ja/docs/Web/HTML"&gt;Origin-relative URL&lt;/a&gt;
-&lt;a href="./p"&gt;Directory-relative URL&lt;/a&gt;
-</pre>
+```html
+<a href="//example.com">Scheme-relative URL</a>
+<a href="/ja/docs/Web/HTML">Origin-relative URL</a>
+<a href="./p">Directory-relative URL</a>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
+```css hidden
+a { display: block; margin-bottom: 0.5em }
+```
 
-<pre class="brush: css notranslate">a { display: block; margin-bottom: 0.5em }</pre>
-</div>
+#### 結果
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+{{EmbedLiveSample('Linking_to_relative_URLs')}}
 
-<p>{{EmbedLiveSample('Linking_to_relative_URLs')}}</p>
+### 同じページの要素へのリンク
 
-<h3 id="Linking_to_an_element_on_the_same_page" name="Linking_to_an_element_on_the_same_page">同じページの要素へのリンク</h3>
-
-<pre class="brush: html notranslate">&lt;!-- &lt;a&gt; element links to the section below --&gt;
-&lt;p&gt;&lt;a href="#Section_further_down"&gt;
+```html
+<!-- <a> element links to the section below -->
+<p><a href="#Section_further_down">
   Jump to the heading below
-&lt;/a&gt;&lt;/p&gt;
+</a></p>
 
-&lt;!-- Heading to link to --&gt;
-&lt;h2 id="Section_further_down"&gt;Section further down&lt;/h2&gt;
-</pre>
+<!-- Heading to link to -->
+<h2 id="Section_further_down">Section further down</h2>
+```
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code>href="#top"</code> または空のフラグメント (<code>href="#"</code>) を使用すると、現在のページの先頭にリンクすることができると、 <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier">HTML 仕様書で定義されています</a>。</p>
-</div>
+> **Note:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
 
-<h3 id="Linking_to_an_email_address" name="Linking_to_an_email_address">メールアドレスへのリンク</h3>
+### メールアドレスへのリンク
 
-<p>メールプログラムを開いて新しいメッセージを送るようにするリンクを作成するには、 <code>mailto:</code> スキームを使用してください。</p>
+メールプログラムを開いて新しいメッセージを送るようにするリンクを作成するには、 `mailto:` スキームを使用してください。
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;nowhere にメールを送る&lt;/a&gt;</pre>
+```html
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+```
 
-<p>件名、本文、他の定義済みコンテンツを含めるなど、<code>mailto</code> URL スキームの詳細については、<a href="/ja/docs/Web/Guide/HTML/Email_links">電子メールのリンク</a>または {{RFC(6068)}} をご覧ください。</p>
+件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links)または {{RFC(6068)}} をご覧ください。
 
-<h3 id="Linking_to_telephone_numbers" name="Linking_to_telephone_numbers">電話番号へのリンク</h3>
+### 電話番号へのリンク
 
-<pre class="brush: html notranslate">&lt;a href="tel:+49.157.0156"&gt;+49 157 0156&lt;/a&gt;
-&lt;a href="tel:+1(555)5309"&gt;(555) 5309&lt;/a&gt;</pre>
+```html
+<a href="tel:+49.157.0156">+49 157 0156</a>
+<a href="tel:+1(555)5309">(555) 5309</a>
+```
 
-<p><code>tel:</code> リンクは端末の能力によって様々な動作をします。</p>
+`tel:` リンクは端末の能力によって様々な動作をします。
 
-<ul>
- <li>携帯電話ではその番号にオートダイヤルします。</li>
- <li>多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。</li>
- <li>ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって <code>web.skype.com</code> などを用いて電話を掛けることができます。</li>
- <li>他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。</li>
-</ul>
+  - 携帯電話ではその番号に自動ダイヤルします。
+  - 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
+  - ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
+  - 他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。
 
-<p><code>tel</code> URL スキームについての構文、追加機能、その他の詳細について、詳しくは {{RFC(3966)}} をご覧ください。</p>
+`tel` URL スキームについての構文、追加機能、その他の詳細について、詳しくは {{RFC(3966)}} をご覧ください。
 
-<h3 id="Using_the_download_attribute_to_save_a_&lt;canvas>_as_a_PNG" name="Using_the_download_attribute_to_save_a_&lt;canvas>_as_a_PNG">download 属性を使用して &lt;canvas&gt; を PNG として保存する</h3>
+### download 属性を使用して \<canvas> を PNG として保存する
 
-<p>{{HTMLElement("canvas")}} 要素の内容を画像として保存する場合は、 <code>download</code> 属性をもつリンクを作成し、キャンバスのデータを <code>data:</code> URLで示します。</p>
+{{HTMLElement("canvas")}} 要素の内容を画像として保存する場合は、 `download` 属性をもつリンクを作成し、キャンバスのデータを `data:` URLで示します。
 
-<h4 id="Example_painting_app_with_save_link" name="Example_painting_app_with_save_link">例: 保存リンクのついた描画アプリ</h4>
+#### 保存リンクのついた描画アプリ
 
-<h5 id="HTML_3">HTML</h5>
+##### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;マウスボタンを押しっぱなしにして動かすと描画されます。
-  &lt;a href="" download="my_painting.png"&gt;絵をダウンロード&lt;/a&gt;
-&lt;/p&gt;
+```html
+<p>マウスボタンを押しっぱなしにして動かすと描画されます。
+  <a href="" download="my_painting.png">絵をダウンロード</a>
+</p>
 
-&lt;canvas width="300" height="300"&gt;&lt;/canvas&gt;
-</pre>
+<canvas width="300" height="300"></canvas>
+```
 
-<h5 id="CSS_2">CSS</h5>
+##### CSS
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   font-family: sans-serif;
 }
 canvas {
@@ -287,11 +296,13 @@ a {
   background: #69c;
   color: #fff;
   padding: 5px 10px;
-}</pre>
+}
+```
 
-<h5 id="JavaScript">JavaScript</h5>
+##### JavaScript
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('canvas'),
+```js
+var canvas = document.querySelector('canvas'),
     c = canvas.getContext('2d');
 c.fillStyle = 'hotpink';
 
@@ -304,198 +315,170 @@ function draw(x, y) {
   }
 }
 
-canvas.addEventListener('mousemove', event =&gt;
+canvas.addEventListener('mousemove', event =>
   draw(event.offsetX, event.offsetY)
 );
-canvas.addEventListener('mousedown', () =&gt; isDrawing = true);
-canvas.addEventListener('mouseup', () =&gt; isDrawing = false);
+canvas.addEventListener('mousedown', () => isDrawing = true);
+canvas.addEventListener('mouseup', () => isDrawing = false);
 
-document.querySelector('a').addEventListener('click', event =&gt;
+document.querySelector('a').addEventListener('click', event =>
   event.target.href = canvas.toDataURL()
 );
-</pre>
+```
 
-<h5 id="Result_3" name="Result_3">結果</h5>
+##### 結果
 
-<p>{{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}</p>
+{{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
 
-<h2 id="Security_and_privacy" name="Security_and_privacy">セキュリティとプライバシー</h2>
+## セキュリティとプライバシー
 
-<p><code>&lt;a&gt;</code> 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については <a href="/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns">Referer ヘッダー: プライバシーとセキュリティの考慮事項</a>を参照してください。</p>
+`<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
 
-<p><code>target="_blank"</code> を <code>rel="noreferrer"</code> や <code>rel="noopener"</code> なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなります (<a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">vulnerability description</a>) が、新しい版のブラウザー (Firefox 79 以降など) では <code>target="_blank"</code> を設定すると、 <code>rel="noopener"</code> と同じ保護が提供されます。</p>
+`target="_blank"` を [`rel="noreferrer"`](/ja/docs/Web/HTML/Link_types/noreferrer) や [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなります ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)) が、新しい版のブラウザーでは `target="_blank"` を設定すると、 `rel="noopener"` と同じ保護が提供されます。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
-<h2 id="Accessibility" name="Accessibility">アクセシビリティ</h2>
+## アクセシビリティ
 
-<h3 id="Strong_link_text" name="Strong_link_text">強力なリンクテキスト</h3>
+### 強力なリンクテキスト
 
-<p>リンクの内容は、文脈から外れたとしても、<strong>リンクの行き先を示すべきです</strong>。</p>
+リンクの内容は、文脈から外れたとしても、**リンクの行き先を示すべきです**。
 
-<h4 id="Inaccessible_weak_link_text" name="Inaccessible_weak_link_text">アクセシビリティに対応していない貧弱なリンクテキスト</h4>
+#### アクセシビリティに対応していない貧弱なリンクテキスト
 
-<p>よくある残念な間違いは、「ここをクリック」や「こちら」のみにリンクを設定していることです。</p>
+よくある残念な間違いは、「ここをクリック」や「こちら」のみにリンクを設定していることです。
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;
-  私たちの製品については&lt;a href="/products"&gt;こちら&lt;/a&gt;をご覧ください。
-&lt;/p&gt;
-</pre>
+```html example-bad
+<p>
+  私たちの製品については<a href="/products">こちら</a>をご覧ください。
+</p>
+```
 
-<h4 id="Strong_link_text_2" name="Strong_link_text_2">強力なリンクテキスト</h4>
+#### 強力なリンクテキスト
 
-<p>幸いにも、これは簡単に直すことができ、しかもアクセシビリティに対応していないものより短くなります。</p>
+幸いにも、これは簡単に直すことができ、しかもアクセシビリティに対応していないものより短くなります。
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;
-  &lt;a href="/products"&gt;私たちの製品について&lt;/a&gt;詳しくご覧ください。
-&lt;/p&gt;</pre>
+```html example-good
+<p>
+  <a href="/products">私たちの製品について</a>、詳しくご覧ください。
+</p>
+```
 
-<p>支援ソフトウェアには、ページ上のすべてのリンクを一覧表示するショートカットがあります。しかし、強力なリンクテキストはすべてのユーザーに利点があります。「すべてのリンクの一覧」のショートカットは、視力のあるユーザーがページを素早く見渡す方法を模倣しています。</p>
+支援ソフトウェアには、ページ上のすべてのリンクを一覧表示するショートカットがあります。しかし、強力なリンクテキストはすべてのユーザーに利点があります。「すべてのリンクの一覧」のショートカットは、視力のあるユーザーがページを素早く見渡す方法を模倣しています。
 
-<h3 id="onclick_events" name="onclick_events">onclick イベント</h3>
+### onclick イベント
 
-<p>よく見られる誤った使い方として、擬似的なボタンを作成するためにアンカー要素を使用し、 <strong>href</strong> を <code>#</code> または <code>javascript:void(0)</code> に設定してページの再読み込みを防ぎ、 <code>click</code> を待ち受けするようにするというものがあります。</p>
+よく見られる誤った使い方として、擬似的なボタンを作成するためにアンカー要素を使用し、 `href` を `#` または `javascript:void(0)` に設定してページの再読み込みを防ぎ、 `click` を待ち受けするようにするというものがあります。
 
-<p>これらの偽の <code>href</code> 値は、リンクをコピーまたはドラッグしたり、新しいやウィンドウでリンクを開いたり、ブックマークしたり、 JavaScript の読み込み中、エラー状態、無効状態の場合などに予期しない動作を引き起こします。また、読み上げソフトなどの支援技術に対して誤った意味を伝えることもあります。</p>
+これらの偽の `href` 値は、リンクをコピーまたはドラッグしたり、新しいやウィンドウでリンクを開いたり、ブックマークしたり、 JavaScript の読み込み中、エラー状態、無効状態の場合などに予期しない動作を引き起こします。また、読み上げソフトなどの支援技術に対して誤った意味を伝えることもあります。
 
-<p>代わりに {{HTMLElement("button")}} を使用してください。通常、<strong>アンカーは適切な URL を使用して移動するためだけに使用するべきです</strong>。</p>
+代わりに {{HTMLElement("button")}} を使用してください。通常、**アンカーは適切な URL を使用して移動するためだけに使用するべきです**。
 
-<h3 id="External_links_and_linking_to_non-HTML_resources" name="External_links_and_linking_to_non-HTML_resources">外部リンクおよび HTML 以外のリソースへのリンク</h3>
+### 外部リンクおよび HTML 以外のリソースへのリンク
 
-<p>リンクを新しいタブやウィンドウで開くために <code>target="_blank"</code> を使用したり、ダウンロード元を指したりする場合は、リンクを起動したときに何が起こるかを示すようにしてください。</p>
+リンクを新しいタブやウィンドウで開くために `target="_blank"` を使用したり、ダウンロード元を指したりする場合は、リンクを起動したときに何が起こるかを示すようにしてください。
 
-<p>弱視で読み上げ技術の支援の下に操作を行っている人や、認知に問題がある人は、予期せず新しいタブ、ウィンドウ、アプリケーションが開いたときに混乱するかもしれません。古いバージョンの読み上げソフトウェアは、この動作をアナウンスしません。</p>
+弱視で読み上げ技術の支援の下に操作を行っている人や、認知に問題がある人は、予期せず新しいタブ、ウィンドウ、アプリケーションが開いたときに混乱するかもしれません。古いバージョンの読み上げソフトウェアは、この動作をアナウンスしません。
 
-<h4 id="Link_that_opens_a_new_tabwindow" name="Link_that_opens_a_new_tabwindow">新しいタブやウィンドウを開くリンク</h4>
+#### 新しいタブやウィンドウを開くリンク
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="https://www.wikipedia.org"&gt;
+```html
+<a target="_blank" href="https://www.wikipedia.org">
   Wikipedia (新しいウィンドウで開きます)
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<h4 id="Link_to_a_non-HTML_resource" name="Link_to_a_non-HTML_resource">HTML 以外のリソースへのリンク</h4>
+#### HTML 以外のリソースへのリンク
 
-<pre class="brush: html notranslate">&lt;a href="2017-annual-report.ppt"&gt;
+```html
+<a href="2017-annual-report.ppt">
   2017 年次レポート (PowerPoint)
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<p>この種のリンクの動作を表すためにテキストの代わりにアイコンが使われている場合は、 {{HTMLAttrxRef("alt", "img", "alt のテキスト", "true") }}を確実に入れてください。</p>
+リンクの動作を示すためにアイコンを使用する場合は、 {{HTMLAttrxRef("alt", "img", "alt テキスト", "true") }}を確実に入れてください。
 
-<pre class="brush: html notranslate">&lt;a  target="_blank" href="https://www.wikipedia.org"&gt;
+```html
+<a  target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  &lt;img alt="(新しいタブで開く)" src="newtab.svg"&gt;
-&lt;/a&gt;
+  <img alt="(新しいタブで開く)" src="newtab.svg">
+</a>
 
-&lt;a href="2017-annual-report.ppt"&gt;
-  2017 Annual Report
-  &lt;img alt="(PowerPoint ファイル)" src="ppt-icon.svg"&gt;
-&lt;/a&gt;</pre>
+<a href="2017-annual-report.ppt">
+  2017 年次レポート
+  <img alt="(PowerPoint ファイル)" src="ppt-icon.svg">
+</a>
+```
 
-<ul>
- <li><a href="https://webaim.org/techniques/hypertext/hypertext_links">WebAIM: Links and Hypertext - Hypertext Links</a></li>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways">MDN / WCAG を理解する、ガイドライン 3.2"</a></li>
- <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">G200: Opening new windows and tabs from a link only when necessary</a></li>
- <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G201.html">G201: Giving users advanced warning when opening a new window</a></li>
-</ul>
+- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
+- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
-<h3 id="Skip_links" name="Skip_links">スキップリンク</h3>
+### スキップリンク
 
-<p><strong>スキップリンク</strong>は {{HTMLElement("body")}} コンテンツのできるだけ先頭に近い場所に配置されるリンクであり、ページのメインコンテンツの先頭にリンクします。通常、 CSS はスキップリンクがフォーカスを受けるまでは画面外へ隠します。</p>
+**スキップリンク**は {{HTMLElement("body")}} コンテンツのできるだけ先頭に近い場所に配置されるリンクであり、ページのメインコンテンツの先頭にリンクします。通常、 CSS はスキップリンクがフォーカスを受けるまでは画面外へ隠します。
 
-<pre class="notranslate">&lt;body&gt;
-  &lt;a href="#content"&gt;メインコンテンツへスキップ&lt;/a&gt;
+```html
+<body>
+  <a href="#content" class="skip-link">メインコンテンツへスキップ</a>
 
-  &lt;header&gt;
+  <header>
     …
-  &lt;/header&gt;
+  </header>
 
-  &lt;main id="content"&gt; &lt;!-- スキップリンクが辿り着く位置 --&gt;
-</pre>
+  <main id="content"> </main> <!-- スキップリンクが辿り着く位置 -->
 
-<pre class="brush: css notranslate">.skip-link {
+</body>
+```
+
+```css
+.skip-link {
   position: absolute;
   top: -3em;
   background: #fff;
 }
 .skip-link:focus {
   top: 0;
-}</pre>
+}
+```
 
-<p>スキップリンクは、キーボードの利用者がヘッダーナビゲーションのような複数のページを通して繰り返されるコンテンツを回避できるようにするものです。</p>
+スキップリンクは、キーボードの利用者がヘッダーナビゲーションのような複数のページを通して繰り返されるコンテンツを回避できるようにするものです。
 
-<p>スキップリンクは、スイッチ制御、音声コマンド、またはマウススティック/ヘッドワンドなどの補助技術を使用して操作する人にとって、反復的にリンクを移動する操作が煩わしい場合に特に便利です。</p>
+スキップリンクは、スイッチ制御、音声コマンド、またはマウススティック/ヘッドワンドなどの補助技術を使用して操作する人にとって、反復的にリンクを移動する操作が煩わしい場合に特に便利です。
 
-<ul>
- <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
- <li><a href="https://a11yproject.com/posts/2013-05-11-skip-nav-links/">How-to: Use Skip Navigation links</a></li>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN / WCAG を理解する ― ガイドライン 2.4 の解説</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1</a></li>
-</ul>
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+- [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
+- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
-<h3 id="大きさと近接性">大きさと近接性</h3>
+### 大きさと近接性
 
-<h4 id="Size" name="Size">大きさ</h4>
+#### 大きさ
 
-<p>リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。最小の大きさは 44×44 <a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS ピクセル</a>が推奨されます。</p>
+リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)の大きさであることが推奨されています。
 
-<p>散文コンテンツのテキストのみのリンクは免除されますが、それでもハイパーリンクに十分なテキストがあることを確認して、操作しやすくなるようにしておくと良いでしょう。</p>
+散文コンテンツのテキストのみのリンクは免除されますが、それでもハイパーリンクに十分なテキストがあることを確認して、操作しやすくなるようにしておくと良いでしょう。
 
-<ul>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Success Criterion 2.5.5: Target Size</a></li>
- <li><a href="http://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5</a></li>
- <li><a href="https://a11yproject.com/posts/large-touch-targets/">Quick test: Large touch targets</a></li>
-</ul>
+- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/)
 
-<h4 id="Proximity" name="Proximity">近接性</h4>
+#### 近接性
 
-<p>リンクのような対話的要素が互いに視覚的に近接して配置される場合は、それらを隔てる間隔を置いてください。間隔を空けることで、運動制御に問題のある人が誤って間違った対話的コンテンツを操作してしまうことを防ぐことができます。</p>
+リンクのような対話的要素が互いに視覚的に近接して配置される場合は、それらを隔てる間隔を置いてください。間隔を空けることで、運動制御に問題のある人が誤って間違った対話的コンテンツを操作してしまうことを防ぐことができます。
 
-<p>間隔は {{CSSxRef("margin")}} などの CSS プロパティを使用して作成することができます。</p>
+間隔は {{CSSxRef("margin")}} などの CSS プロパティを使用して作成することができます。
 
-<ul>
- <li><a href="https://axesslab.com/hand-tremors/">Hand tremors and the giant-button-problem</a></li>
-</ul>
+  - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Referrer Policy", "#referrer-policy-delivery-referrer-attribute", "referrer attribute")}}</td>
-   <td>{{Spec2("Referrer Policy")}}</td>
-   <td><code>referrerpolicy</code> 属性を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}</td>
-   <td>{{Spec2("HTML4.01")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.a")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("link")}} は <code>&lt;a&gt;</code> と似ていますが、ユーザーには見えないメタデータへのハイパーリンクのためのものです。</li>
- <li>{{CSSxRef(":link")}} は CSS の擬似クラスで、 <code>&lt;a&gt;</code> 要素に有効な valid <code>href</code> 属性がついている場合に一致します。</li>
-</ul>
+- {{HTMLElement("link")}} は `<a>` と似ていますが、ユーザーには見えないメタデータへのハイパーリンクのためのものです。
+- {{CSSxRef(":link")}} は CSS の擬似クラスで、 `<a>` 要素に有効な `href` 属性がついている場合に一致します。
