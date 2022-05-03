@@ -5,46 +5,49 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div>
-<p><span class="seoSummary">通知では、OS の通知サービスを使って、拡張機能やそのコンテンツについての情報を通信することができます:</span></p>
+通知により、基本的なオペレーティングシステムの通知サービスを使用して、拡張機能またはそのコンテンツに関する情報を伝えることができます。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15754/notify-shadowed.png" style="display: block; height: 147px; margin-left: auto; margin-right: auto; width: 390px;"></p>
+![](notify-shadowed.png)
 
-<p>通知にはユーザーへのアクションの呼びかけを入れることができて、アドオンではユーザーによる通知のクリックや通知を閉じるのをリッスンできます。</p>
+通知にはユーザーへのアクションの呼びかけを入れることができて、アドオンではユーザーによる通知のクリックや通知を閉じるのをリッスンできます。
 
-<h2 id="Specifying_notifications" name="Specifying_notifications">通知を指定する</h2>
+## 通知の設定
 
-<p>{{WebExtAPIRef("notifications")}} API を使って通知をプログラム的に管理できます。この API を使うには manifest.json 内で <code>notifications</code> パーミッションを要求する必要があります:</p>
+{{WebExtAPIRef("notifications")}} API を使うと、通知をプログラム的に管理できます。この API を使うには `notifications` 権限を manifest.json の中で要求する必要があります。
 
-<pre class="brush: json"><span class="pl-s"><span class="pl-pds">"</span>permissions<span class="pl-pds">"</span></span>: [<span class="pl-s"><span class="pl-pds">"</span>notifications<span class="pl-pds">"</span></span>]</pre>
+```json
+"permissions": ["notifications"]
+```
 
-<p>次に {{WebExtAPIRef("notifications.create")}} を使って通知を作成します。<a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> の例では次の通り:</p>
+次に {{WebExtAPIRef("notifications.create")}} を使って通知を作成します。 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) の例では次の通りです。
 
-<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);
+```js
+let title = browser.i18n.getMessage("notificationTitle");
+let content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
   "type": "basic",
   "iconUrl": browser.extension.getURL("icons/link-48.png"),
   "title": title,
   "message": content
-});</pre>
+});
+```
 
-<p>このコードはアイコンや、タイトルや、メッセージつきの通知を作成します。</p>
+このコードはアイコンや、タイトルや、メッセージつきの通知を作成します。
 
-<p>通知にアクションの要求が含まれている場合、通知のクリックをリッスンしてアクションハンドラの関数を呼び出せます:</p>
+通知がアクションへの呼び出しを含む場合、ユーザーが通知をクリックするのを待ち受けし、アクションを処理する関数を呼び出すことができます。
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>notifications<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span>
-</code></pre>
+```js
+browser.notifications.onClicked.addListener(handleClick);
+```
 
-<p>通知にてアクションの要求を発行している場合、オプションの通知の <code>id</code> を定義して、どのアクションをユーザーが選択したかがわかるようにすると良いでしょう。</p>
+通知にてアクションの要求を発行している場合、オプションの通知の `id` を定義して、どのアクションをユーザーが選択したかがわかるようにすると良いでしょう。
 
-<h2 id="Icons" name="Icons">アイコン</h2>
+## アイコン
 
-<p>通知に使うアイコン作成方法の詳細は、<a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a>文書内の <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> を見てください。</p>
+通知に使うアイコン作成方法の詳細は、 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) の記事を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメント内で参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>GitHub の <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリには通知を実装した <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> の実例があります。</p>
-</div>
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、通知を実装した [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) の例があります。
