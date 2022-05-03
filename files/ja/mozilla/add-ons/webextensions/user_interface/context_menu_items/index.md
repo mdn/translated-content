@@ -5,50 +5,56 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div>
-<p>このユーザーインターフェイスオプションは、ブラウザーのコンテキストメニューに１つ以上の項目を追加します。これはユーザーがウェブページを右クリックした時に利用できるコンテキストメニューです。タブも <a href="/ja/Add-ons/WebExtensions/API/menus">browser.menus API</a> を通じてコンテキストメニューを持つことができます。</p>
+このユーザーインターフェイスオプションは、ブラウザーのコンテキストメニューに 1 つ以上の項目を追加します。これはユーザーがウェブページを右クリックした時に利用できるコンテキストメニューです。タブも [browser.menus API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) を通じてコンテキストメニューを持つことができます。
 
-<p><img alt="Example of content menu items added by a WebExtension, from the context-menu-demo example" src="https://mdn.mozillademos.org/files/15756/context_menu_example.png" style="display: block; height: 382px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 
-<p>このオプションを、特定のブラウザーやウェブページコンテンツに関連する機能をさらすのに使います。例えば、ユーザーが画像をクリックした時にグラフィックエディターを開いたり、ページの一部分が選択されている時にページコンテンツを保存したりする機能を表示できます。メニューにはプレーンなメニュー項目や、チェックボックスや、ラジオボタングループや、 セパレータを追加できます。コンテキストメニュー項目が {{WebExtAPIRef("contextMenus.create")}} を使って追加されたら、すべてのブラウザータブで表示されますが、{{WebExtAPIRef("contextMenus.remove")}} にて削除することで隠すこともできます。</p>
+このオプションは、特定のブラウザーやウェブページのコンテキストに関連する機能を公開するために使用します。例えば、ユーザーが画像をクリックしたときにグラフィックエディターを開く機能を表示したり、ページの一部が選択されたときに、ページの内容を保存する機能を提供したりすることができます。メニューには、ただのメニュー項目、チェックボックス項目、ラジオボタングループ、セパレーターを追加することができます。 {{WebExtAPIRef("contextMenus.create")}} を使ってコンテキストメニュー項目を追加すると、すべてのブラウザータブに表示されますが、 {{WebExtAPIRef("contextMenus.remove")}} で削除して非表示にすることが可能です。
 
-<h2 id="Specifying_context_menu_items" name="Specifying_context_menu_items">コンテキストメニュー項目を指定する</h2>
+対応しているコンテキストのすべての一覧は {{WebExtAPIRef("menus.ContextType")}} にあり、ブラウザー UI のブックマーク項目など、ウェブページ外のコンテキストも含まれます。例えば、"[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" 拡張機能は、ユーザーがブックマーク URL を新しいコンテナータブで開くことを可能にするメニュー項目を追加します。
 
-<p>コンテキストメニューを、{{WebExtAPIRef("contextMenus")}} API を使ってブログラム的に管理できます。しかし、このAPIの恩恵を受けるには、manifest.json にて <code>contextMenus</code> パーミッションを要求する必要があります。</p>
+![](extension_context_menu.png)
 
-<pre class="brush: json">"permissions": ["contextMenus"]</pre>
+## コンテキストメニュー項目の指定
 
-<p>次に、拡張機能のバックグラウンドスクリプト内にコンテキストメニューを追加 (と更新、削除) することもできます。メニュー項目を作成するには id、タイトル、表示するコンテキストメニューを指定します。</p>
+コンテキストメニューを、 {{WebExtAPIRef("contextMenus")}} API を使ってブログラムから管理できます。しかし、この API の恩恵を受けるには、 manifest.json にて `contextMenus` 権限を要求する必要があります。
 
-<pre class="brush: js">browser.contextMenus.create({
+```json
+"permissions": ["contextMenus"]
+```
+
+次に、拡張機能のバックグラウンドスクリプト内にコンテキストメニューを追加（および更新、削除）することもできます。メニュー項目を作成するには id、タイトル、表示するコンテキストメニューを指定します。
+
+```js
+browser.contextMenus.create({
   id: "log-selection",
   title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
   contexts: ["selection"]
-}, onCreated);</pre>
+}, onCreated);
+```
 
-<p>拡張機能はメニュー項目のクリックをリッスンします。項目がクリックされたことや、どのコンテキストメニューでクリックされたかや、クリックが行われたタブの詳細などの情報が渡されて、適切に拡張機能の機能が実行されるのに使われます。</p>
+そして、拡張機能はメニュー項目がクリックされるのを待ち受けします。クリックされた項目、クリックされたコンテキスト、クリックされたタブの詳細に関する渡された情報は、適切な拡張機能を呼び出すために使用されます。
 
-<pre class="brush: js">browser.contextMenus.onClicked.addListener(function(info, tab) {
+```js
+browser.contextMenus.onClicked.addListener(function(info, tab) {
   switch (info.menuItemId) {
     case "log-selection":
       console.log(info.selectionText);
       break;
     ...
   }
-})</pre>
+})
+```
 
-<h2 id="アイコン">アイコン</h2>
+## アイコン
 
-<p>コンテキストメニューで使うアイコンの作り方の詳細は、<a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a>の文書内の <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> を見てください。</p>
+コンテキストメニューで使用するアイコンの作り方の詳細は、 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントで参照してください。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>GitHub の <a class="external external-icon" href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリには、コンテキストメニュー項目を実装した2つの拡張機能の実例があります:</p>
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、コンテキストメニュー項目を実装した拡張機能の例が 2 つあります。
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/menu-demo">menu-demo</a> ではブラウザーのコンテキストメニューにいくつかの項目を追加しています。</li>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types">context-menu-copy-link-with-types</a> では、リンクの URL を、プレーンテキストとリッチ HTML としてクリップボードにコピーするコンテキストメニュー項目を追加してます。</li>
-</ul>
-</div>
+- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) ではブラウザーのコンテキストメニューにいくつかの項目を追加しています。
+- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) では、リンクの URL を、プレーンテキストとリッチ HTML としてクリップボードにコピーするコンテキストメニュー項目を追加してます。
