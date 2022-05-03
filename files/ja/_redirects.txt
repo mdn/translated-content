@@ -1885,6 +1885,8 @@
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
+/ja/docs/Glossary/404	/ja/docs/conflicting/Web/HTTP/Status/404
+/ja/docs/Glossary/502	/ja/docs/conflicting/Web/HTTP/Status/502
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
 /ja/docs/Glossary/Bézier_curve	/ja/docs/Glossary/Bezier_curve
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints

@@ -50,12 +50,6 @@
       "Jeremie"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-07-15T09:45:26.682Z",
-    "contributors": [
-      "Siudzi"
-    ]
-  },
   "Glossary/API": {
     "modified": "2020-12-01T17:59:12.054Z",
     "contributors": [
@@ -5830,6 +5824,12 @@
     "contributors": [
       "flp.tomczak",
       "drm404"
+    ]
+  },
+  "Web/HTTP/Status/404": {
+    "modified": "2019-07-15T09:45:26.682Z",
+    "contributors": [
+      "Siudzi"
     ]
   },
   "Web/JavaScript": {

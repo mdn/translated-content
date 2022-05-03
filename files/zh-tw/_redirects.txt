@@ -150,6 +150,8 @@
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+/zh-TW/docs/Glossary/404	/zh-TW/docs/conflicting/Web/HTTP/Status/404
+/zh-TW/docs/Glossary/502	/zh-TW/docs/conflicting/Web/HTTP/Status/502
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
 /zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/character_encoding

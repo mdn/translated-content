@@ -223,6 +223,8 @@
 /de/docs/Firefox_1.5_für_Entwickler/Changing_the_priority_of_HTTP_requests	/de/docs/Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
 /de/docs/Firefox_3.5_für_Entwickler	/de/docs/Mozilla/Firefox/Releases/3.5
 /de/docs/Firefox_3_für_Entwickler	/de/docs/Mozilla/Firefox/Releases/3
+/de/docs/Glossary/404	/de/docs/conflicting/Web/HTTP/Status/404
+/de/docs/Glossary/502	/de/docs/Web/HTTP/Status/502
 /de/docs/Glossary/Abstraktion	/de/docs/Glossary/Abstraction
 /de/docs/Glossary/Algorithmus	/de/docs/Glossary/Algorithm
 /de/docs/Glossary/Anweisung	/de/docs/Glossary/Statement
