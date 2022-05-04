@@ -3,76 +3,64 @@ title: HEAD
 slug: Web/HTTP/Methods/HEAD
 tags:
   - HTTP
-  - Reference
-  - Request method
+  - リファレンス
   - リクエストメソッド
+browser-compat: http.methods.HEAD
 translation_of: Web/HTTP/Methods/HEAD
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP の <code>HEAD</code> メソッド</strong>は、指定されたリソースを HTTP {{HTTPMethod("GET")}} メソッドでリクエストした時に返されるヘッダーをリクエストします。そのようなリクエストによって、例えば大きなリソースをダウンロードするかどうかを事前に決定して、帯域幅を節約したりすることができます。</p>
+**HTTP の `HEAD` メソッド**は、この `HEAD` リクエストが HTTP {{HTTPMethod("GET")}} メソッドでリクエストされた場合に返される[ヘッダー](/ja/docs/Web/HTTP/Headers)をリクエストします。例えば、ある URL が大きなファイルをダウンロードする可能性がある場合、 `HEAD` リクエストは {{HTTPHeader("Content-Length")}} ヘッダーを読み込んで、実際にファイルをダウンロードすることなくファイルサイズを確認することができます。
 
-<p><code>HEAD</code> メソッドへのレスポンスには本文が含まれてはいけません。あった場合は無視しなければなりません。ただし、本文のコンテンツを記述する{{glossary("Entity header", "エンティティヘッダー")}}、例えば {{HTTPHeader("Content-Length")}} などがレスポンスに含まれる場合があります。これらは、空であるべき <code>HEAD</code> レスポンスの本文とは関係ありませんが、 {{HTTPMethod("GET")}} メソッドを使用して同様のリクエストを行った時には、その本文がレスポンスとして返されます。</p>
+> **Warning:** `HEAD` メソッドへのレスポンスには本文が含まれては*いけません*。あった場合は無視**しなければなりません**。誤った本文を記述する可能性がある{{glossary("Representation header", "表現ヘッダー")}}は、同様の `GET` リクエストで受け取るであろうレスポンスを記述していると仮定します。
 
-<p><code>HEAD</code> リクエストの結果が、 {{HTTPMethod("GET")}} リクエストの後でキャッシュされたリソースが古くなっていることを示している場合、 <code>GET</code> リクエストが行われなくてもキャッシュが無効化されます。</p>
+`HEAD` リクエストの結果が、 {{HTTPMethod("GET")}} リクエストの後でキャッシュされたリソースが古くなっていることを示している場合、 `GET` リクエストが行われなくてもキャッシュが無効化されます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">リクエストの本文</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">成功時のレスポンスの本文</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe", "安全性")}}</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Forms">HTML フォーム</a>での使用</th>
-   <td>不可</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">リクエストの本文</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">成功時のレスポンスの本文</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent", "べき等性")}}</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Learn/Forms">HTML フォーム</a>での使用
+      </th>
+      <td>不可</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">HEAD /index.html
-</pre>
+```
+HEAD /index.html
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "HEAD", "4.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.methods.HEAD")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPMethod("GET")}}</li>
-</ul>
+- {{HTTPMethod("GET")}}
