@@ -7774,12 +7774,6 @@
       "MashKao"
     ]
   },
-  "conflicting/Learn/Server-side/Django": {
-    "modified": "2019-03-23T23:33:19.493Z",
-    "contributors": [
-      "garylai1990"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-03-23T23:28:55.141Z",
     "contributors": [
@@ -7794,18 +7788,6 @@
     "contributors": [
       "fscholz",
       "sailplaneTW"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-03-23T23:29:56.158Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "conflicting/Web/API/Element": {
-    "modified": "2019-03-23T22:30:38.352Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
@@ -7836,12 +7818,6 @@
       "yachiehwu"
     ]
   },
-  "conflicting/Web/API/HTML_Drag_and_Drop_API": {
-    "modified": "2019-01-16T13:26:51.358Z",
-    "contributors": [
-      "sailplaneTW"
-    ]
-  },
   "conflicting/Web/API/WebSockets_API": {
     "modified": "2019-03-24T00:11:12.133Z",
     "contributors": [
@@ -7849,30 +7825,11 @@
       "Kennyluck"
     ]
   },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:30:45.308Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
-    "modified": "2019-03-18T21:16:54.761Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "conflicting/Web/CSS/@viewport": {
     "modified": "2019-10-22T02:02:49.952Z",
     "contributors": [
       "Zhang-Junzhi",
       "yvonne6344"
-    ]
-  },
-  "conflicting/Web/Guide": {
-    "modified": "2019-01-16T13:10:01.650Z",
-    "contributors": [
-      "teoli",
-      "Sonrisa"
     ]
   },
   "conflicting/Web/Guide_6b4b72e1fc91461bde34734ce07b1c08": {
@@ -8231,13 +8188,6 @@
     "modified": "2020-10-15T22:19:41.845Z",
     "contributors": [
       "chunhh1012"
-    ]
-  },
-  "conflicting/Web/Media/Formats": {
-    "modified": "2019-03-23T23:14:51.174Z",
-    "contributors": [
-      "young3578671",
-      "Keeseonglee"
     ]
   },
   "conflicting/Web/OpenSearch": {

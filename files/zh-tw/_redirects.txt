@@ -126,7 +126,6 @@
 /zh-TW/docs/DOM/window.location	/zh-TW/docs/Web/API/Window/location
 /zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/DOM_觀察器	/zh-TW/docs/orphaned/DOM_觀察器
-/zh-TW/docs/DragDrop	/zh-TW/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/DragDrop/Drag_and_Drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Drawing_text_using_a_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /zh-TW/docs/Firefox_2	/zh-TW/docs/Mozilla/Firefox/Releases/2
@@ -430,10 +429,7 @@
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術	/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /zh-TW/docs/Learn/HTML/Tables/基礎	/zh-TW/docs/Learn/HTML/Tables/Basics
 /zh-TW/docs/Learn/How_to_contribute	/zh-TW/docs/orphaned/Learn/How_to_contribute
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous
 /zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /zh-TW/docs/Learn/JavaScript/Building_blocks/函數	/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions
 /zh-TW/docs/Learn/JavaScript/Building_blocks/回傳值	/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values
 /zh-TW/docs/Learn/JavaScript/Building_blocks/建立自己的功能函數	/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
@@ -497,7 +493,6 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
 /zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
-/zh-TW/docs/Python	/zh-TW/docs/conflicting/Learn/Server-side/Django
 /zh-TW/docs/Quirks_Mode_and_Standards_Mode	/zh-TW/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /zh-TW/docs/SVG	/zh-TW/docs/Web/SVG
 /zh-TW/docs/SVG/Tutorial	/zh-TW/docs/Web/SVG/Tutorial
@@ -589,7 +584,6 @@
 /zh-TW/docs/Web/API/NavigatorOnLine	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine
 /zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /zh-TW/docs/Web/API/Node/innerText	/zh-TW/docs/Web/API/HTMLElement/innerText
-/zh-TW/docs/Web/API/NonDocumentTypeChildNode	/zh-TW/docs/conflicting/Web/API/Element
 /zh-TW/docs/Web/API/ParentNode	/zh-TW/docs/orphaned/Web/API/ParentNode
 /zh-TW/docs/Web/API/ParentNode/children	/zh-TW/docs/orphaned/Web/API/ParentNode/children
 /zh-TW/docs/Web/API/ParentNode/firstElementChild	/zh-TW/docs/orphaned/Web/API/ParentNode/firstElementChild
@@ -610,12 +604,10 @@
 /zh-TW/docs/Web/API/Window.onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
-/zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
 /zh-TW/docs/Web/API/WindowEventHandlers/onbeforeunload	/zh-TW/docs/Web/API/Window/beforeunload_event
 /zh-TW/docs/Web/API/WindowEventHandlers/onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
-/zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-TW/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
@@ -667,7 +659,6 @@
 /zh-TW/docs/Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1	/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 /zh-TW/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-TW/docs/Web/Guide/CSS/使用_多重_背景	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/conflicting/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode	/zh-TW/docs/Web/API/Fullscreen_API
 /zh-TW/docs/Web/Guide/Events	/zh-TW/docs/orphaned/Web/Guide/Events
@@ -702,7 +693,6 @@
 /zh-TW/docs/Web/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-TW/docs/Web/HTML/HTML5_表單	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
-/zh-TW/docs/Web/HTML/Supported_media_formats	/zh-TW/docs/conflicting/Web/Media/Formats
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Web/HTML/Block-level_elements
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
@@ -881,7 +871,6 @@
 /zh-TW/docs/WebSockets/WebSockets_reference/WebSocket	/zh-TW/docs/Web/API/WebSocket
 /zh-TW/docs/WebSockets/Writing_WebSocket_client_applications	/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /zh-TW/docs/Web_Audio_API	/zh-TW/docs/Web/API/Web_Audio_API
-/zh-TW/docs/Web_development	/zh-TW/docs/conflicting/Web/Guide
 /zh-TW/docs/Web_development/Writing_forward-compatible_websites	/zh-TW/docs/Web/Guide/Writing_forward-compatible_websites
 /zh-TW/docs/Web_開發	/zh-TW/docs/conflicting/Web/Guide_6b4b72e1fc91461bde34734ce07b1c08
 /zh-TW/docs/Web_開發/Historical_artifacts_to_avoid	/zh-TW/docs/conflicting/Learn/HTML/Introduction_to_HTML
