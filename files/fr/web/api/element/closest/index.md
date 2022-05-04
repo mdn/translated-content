@@ -25,7 +25,7 @@ L'élément ([`Element`](/fr/docs/Web/API/Element)) qui est l'ancêtre le plus p
 
 ### Exceptions
 
-Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#exception-syntaxerror) est levée si la chaîne de caractères `selecteurs` n'est pas une liste de sélecteurs valide.
+Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#syntaxerror) est levée si la chaîne de caractères `selecteurs` n'est pas une liste de sélecteurs valide.
 
 ## Exemples
 
@@ -46,18 +46,18 @@ Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#exception-syntaxerro
 ```js
 const el = document.getElementById('div-03');
 
-const r1 = el.closest("#div-02");
+const r1 = el.closest('#div-02');
 // Renvoie l'élément avec l'identifiant div-02
 
-const r2 = el.closest("div div");
+const r2 = el.closest('div div');
 // Renvoie le plus proche ancêtre qui est un div dans un div
 // Ici, c'est div-03 lui-même
 
-const r3 = el.closest("article > div");
+const r3 = el.closest('article > div');
 // Renvoie le plus proche ancêtre qui est un div et qui a un
-// parent article, il s'agit ici de div-01
+// article parent, il s'agit ici de div-01
 
-const r4 = el.closest(":not(div)");
+const r4 = el.closest(':not(div)');
 // Renvoie le plus proche ancêtre qui n'est pas un div,
 // c'est l'article englobant
 ```
@@ -86,7 +86,7 @@ if (!Element.prototype.closest) {
 }
 ```
 
-Si la prise en charge d'IE8 est nécessaire, le fragment de code qui suit fera l'affaire (lentement mais sûrement). Toutefois, il ne prend en charge que les sélecteurs CSS 2.1 pour IE8 et entraînera une importance baisse de performance pour les sites web en production.
+Si la prise en charge d'IE8 est nécessaire, le fragment de code qui suit fera l'affaire (lentement mais sûrement). Toutefois, il ne prend en charge que les sélecteurs CSS 2.1 pour IE8 et entraînera une importante baisse de performance pour les sites web en production.
 
 ```js
 if (window.Element && !Element.prototype.closest) {
@@ -121,4 +121,4 @@ if (window.Element && !Element.prototype.closest) {
 - [La syntaxe des sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 - Les autres méthodes qui utilisent des sélecteurs en argument&nbsp;:
   - [`element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
-  - [`element.matches()`](/fr/docs/Web/API/Element/matches).
+  - [`element.matches()`](/fr/docs/Web/API/Element/matches)

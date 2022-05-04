@@ -32,14 +32,14 @@ La valeur de retour correspond au même tableau que celui passé en argument mai
 
 Cette méthode peut lever une exception dans certaines conditions.
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) avec le nom [`QuotaExceededError`](/fr/docs/Web/API/DOMException#exception-quotaexceedederror)
+- [`DOMException`](/fr/docs/Web/API/DOMException) (avec le nom [`QuotaExceededError`](/fr/docs/Web/API/DOMException#quotaexceedederror))
   - : La longueur demandée dépasse 65536 octets.
 
 ## Notes d'utilisation
 
 `getRandomValues()` ne doit pas être utilisée afin de générer des clés de chiffrement. Il faut utiliser la méthode [`generateKey()`](/fr/docs/Web/API/SubtleCrypto/generateKey) à la place. En effet, plusieurs raisons invitent à ce choix et notamment le fait que `getRandomValues()` puisse être exécutée depuis un contexte non sécurisé.
 
-Il n'y a pas de seuil minimal d'entropie imposé par la spécification Web Cryptography. Les agents utilisateurs doivent fournir la meilleure entropie possible lors de la génération de nombres aléatoires en utilisant un générateur de nombres pseudo-aléatoires bien défini et efficace, construit au sein de l'agent utilisateur mais amorcé avec des graines provenant d'une source de nombres pseudo-aléatoires externe, comme une fonction spécifique à la plateforme sous-jacente (par exemple, l'appareil `/dev/urandom` sur Unix) ou une autre source de données aléatoires ou pseudo-aléatoires.
+Il n'y a pas de seuil minimal d'entropie imposé par la spécification pour la cryptographie web. Les agents utilisateurs doivent fournir la meilleure entropie possible lors de la génération de nombres aléatoires en utilisant un générateur de nombres pseudo-aléatoires bien défini et efficace, construit au sein de l'agent utilisateur mais amorcé avec des graines provenant d'une source de nombres pseudo-aléatoires externe, comme une fonction spécifique à la plateforme sous-jacente (par exemple, l'appareil `/dev/urandom` sur Unix) ou une autre source de données aléatoires ou pseudo-aléatoires.
 
 ## Exemples
 
@@ -50,7 +50,7 @@ Il n'y a pas de seuil minimal d'entropie imposé par la spécification Web Crypt
 let array = new Uint32Array(10);
 self.crypto.getRandomValues(array);
 
-console.log("Votre tirage du jour :");
+console.log('Votre tirage du jour :');
 for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
