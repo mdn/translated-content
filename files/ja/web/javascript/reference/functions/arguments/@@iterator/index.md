@@ -1,26 +1,30 @@
 ---
-title: 'arguments[@@iterator]()'
+title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 tags:
-  - Functions
+  - 関数
   - JavaScript
-  - Property
+  - プロパティ
   - arguments
+browser-compat: javascript.functions.arguments.@@iterator
 translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>@@iterator</code></strong> プロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。</p>
+**`@@iterator`** プロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>arguments</var>[Symbol.iterator]()</pre>
+```js
+arguments[Symbol.iterator]()
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Iteration_using_for...of_loop" name="Iteration_using_for...of_loop">for...of ループを用いた反復</h3>
+### for...of ループを用いた反復処理
 
-<pre class="brush: js notranslate">function f() {
+```js
+function f() {
   // your browser must support for..of loop
   // and let-scoped variables in for loops
   for (let letter of arguments) {
@@ -28,34 +32,16 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
   }
 }
 f('w', 'y', 'k', 'o', 'p');
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </tbody>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-createunmappedargumentsobject', 'CreateUnmappedArgumentsObject')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-createmappedargumentsobject', 'CreateMappedArgumentsObject')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.functions.arguments.@@iterator")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}
