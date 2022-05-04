@@ -2,36 +2,37 @@
 title: アロー関数式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 tags:
-- ECMAScript 2015
-- Functions
-- Intermediate
-- JavaScript
-- Language feature
-- Reference
+  - ECMAScript 2015
+  - 関数
+  - 中級者
+  - JavaScript
+  - 言語機能
+  - リファレンス
+browser-compat: javascript.functions.arrow_functions
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong>アロー関数式</strong>は、従来の <a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>の簡潔な代替構文ですが、制限があり、すべての場面で使用することができるわけではできません。</p>
+**アロー関数式**は、従来の [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)の簡潔な代替構文ですが、制限があり、すべての場面で使用することができるわけではできません。
 
-<p><strong>相違点と制限事項:</strong></p>
+*アロー関数*と*従来の関数*には違いがあり、また制限もあります。
 
-<ul>
-  <li><code><a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a></code> や <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/super">super</a></code> への結びつけを持たないので、<code><a href="/ja/docs/Glossary/Method">メソッド</a></code>として使用することはできません。</li>
-  <li><code><a href="/ja/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> や <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code> キーワードがありません。</li>
-  <li><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code>、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> のような、一般に<a href="/ja/docs/Glossary/Scope">スコープ</a>の設定のためのメソッドには適していません。</li>
-<li><a href="/ja/docs/Glossary/Constructor">コンストラクター</a>として使用することはできません。</li>
-<li>本体内で <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> を使用することはできません。</li>
-</ul>
+- アロー関数には、[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this)、[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments)、[`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) への結びつけがないので、[メソッド](/ja/docs/Glossary/Method)として使用することはできません。
+- アロー関数には [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードがありません。
+- アロー関数は、[`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) のような、一般に[スコープ](/ja/docs/Glossary/Scope)を確立することを前提としたメソッドには適していません。
+- アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。
+- アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することはできません。
 
-<div>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
-<h3 id="Comparing_traditional_functions_to_arrow_functions">従来の関数とアロー関数の比較</h3>
+### 従来の関数とアロー関数の比較
 
-<p>「従来の関数」を分解して、最もシンプルな「アロー関数」に段階的に変えていきましょう。<br>
-注: 途中の各ステップは有効な「アロー関数」です。</p>
+「従来の関数」を分解して、最もシンプルな「アロー関数」に段階的に変えていきましょう。
 
-<pre class="brush: js">// 伝統的な関数
+> **Note:** 途中の各ステップは有効な「アロー関数」です。
+
+```js
+// 従来の関数
 function (a){
   return a + 100;
 }
@@ -39,29 +40,29 @@ function (a){
 // アロー関数に分解
 
 // 1. "function" という語を削除し、引数と本体の開始中括弧の間に矢印を配置する
-(a) =&gt; {
+(a) => {
   return a + 100;
 }
 
 // 2. 本体の中括弧を削除と "return" という語を削除 -- return は既に含まれています。
-(a) =&gt; a + 100;
+(a) => a + 100;
 
 // 3. 引数の括弧を削除
-a =&gt; a + 100;</pre>
+a => a + 100;
+```
 
-<div class="notecard note">
-  <p>上記の通り、 { 中括弧 } と ( 括弧 ) と "return" は省略可能ですが、必要になる場合もあります。</p>
-</div>
+{ 中括弧 } と ( 括弧 ) と "return" は必要になる場合もあります。
 
-<p>例えば、<strong>複数の引数</strong>や<strong>引数なし</strong>の場合、引数の周りの括弧を入れなおす必要があります。</p>
+例えば、**複数の引数**や**引数なし**の場合、引数の周りの括弧を入れなおす必要があります。
 
-<pre class="brush: js">// 従来の関数
+```js
+// 従来の関数
 function (a, b){
   return a + b + 100;
 }
 
 // アロー関数
-(a, b) =&gt; a + b + 100;
+(a, b) => a + b + 100;
 
 // 従来の関数 (引数なし)
 let a = 4;
@@ -73,122 +74,144 @@ function (){
 // アロー関数 (引数なし)
 let a = 4;
 let b = 2;
-() =&gt; a + b + 100;</pre>
+() => a + b + 100;
+```
 
-<p>同様に、本文に処理の<strong>追加の行</strong>が必要な場合は、中括弧<strong>に加えて "return"</strong> を入れなおす必要があります (アロー関数は "return" する場所や返値を魔法のように推測できるわけではありません)。</p>
+同様に、本文に処理の**追加の行**が必要な場合は、中括弧**に加えて "return"** を入れなおす必要があります（アロー関数は "return" する場所や返値を魔法のように推測できるわけではありません）。
 
-<pre class="brush: js">// 従来の関数
+```js
+// 従来の関数
 function (a, b){
   let chuck = 42;
   return a + b + chuck;
 }
 
 // アロー関数
-(a, b) =&gt; {
+(a, b) => {
   let chuck = 42;
   return a + b + chuck;
-}</pre>
+}
+```
 
-<p>そして最後に、<strong>名前付き関数</strong>については、変数のようにアロー関数式を扱います。</p>
+そして最後に、**名前付き関数**については、変数のようにアロー関数式を扱います。
 
-<pre class="brush: js">// 従来の関数
+```js
+// 従来の関数
 function bob (a){
   return a + 100;
 }
 
 // アロー関数
-let bob = a =&gt; a + 100;</pre>
+let bob = a => a + 100;
+```
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<h3 id="Basic_syntax">基本的な構文</h3>
+### 基本的な構文
 
-<p class="brush: js">引数が単一の場合。単純な式ならば return は不要です。</p>
+引数が単一の場合。単純な式ならば return は不要です。
 
-<pre class="brush: js">param =&gt; expression</pre>
+```js
+param => expression
+```
 
-<p class="brush: js">引数が複数の場合は括弧が必要です。単純な式ならば return は不要です。</p>
+引数が複数の場合は括弧が必要です。単純な式ならば return は不要です。
 
-<pre class="brush: js">(param1, paramN) =&gt; expression</pre>
+```js
+(param1, paramN) => expression
+```
 
-<p class="brush: js">複数行の文ならば、本体の中括弧と return が必要です。
-</p>
+複数行の文ならば、本体の中括弧と return が必要です。
 
-<pre class="brush: js">param =&gt; {
+```js
+param => {
   let a = 1;
   return a + param;
-}</pre>
+}
+```
 
-<p class="brush: js">引数が複数の場合は括弧が必要です。複数行の文ならば、本体の中括弧と return が必要です。</p>
+引数が複数の場合は括弧が必要です。複数行の文ならば、本体の中括弧と return が必要です。
 
-<pre class="brush: js">(param1, paramN) =&gt; {
+```js
+(param1, paramN) => {
    let a = 1;
    return a + param1 + paramN;
-}</pre>
+}
+```
 
-<h3 id="Advanced_syntax">高度な構文</h3>
+### 高度な構文
 
-<p class="brush: js">オブジェクトリテラル式を返す場合は、式の周りに括弧が必要です。</p>
+オブジェクトリテラル式を返す場合は、式の周りに括弧が必要です。
 
-<pre
-  class="brush: js">params =&gt; ({foo: "a"}) // オブジェクト {foo: "a"} を返す</pre>
+```js
+params => ({foo: "a"}) // オブジェクト {foo: "a"} を返す
+```
 
-<p class="brush: js"><a href="/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters">残余引数</a>に対応しています。</p>
+[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)に対応しています。
 
-<pre class="brush: js">(a, b, ...r) =&gt; expression</pre>
+```js
+(a, b, ...r) => expression
+```
 
-<p class="brush: js"><a href="/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters">デフォルト引数</a>に対応しています。</p>
+[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)に対応しています。
 
-<pre class="brush: js">(a=400, b=20, c) =&gt; expression</pre>
+```js
+(a=400, b=20, c) => expression
+```
 
-<p class="brush: js">引数の<a href="/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">分割代入</a>に対応しています。</p>
+引数の[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)に対応しています。
 
-<pre class="brush: js">([a, b] = [10, 20]) =&gt; a + b;  // result is 30
-({ a, b } = { a: 10, b: 20 }) =&gt; a + b; // result is 30
-</pre>
+```js
+([a, b] = [10, 20]) => a + b;  // result is 30
+({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
+```
 
-<h2 id="Description">解説</h2>
+## 解説
 
-<h3 id="Arrow_functions_used_as_methods">メソッドとして使われるアロー関数</h3>
+### メソッドとして使われるアロー関数
 
-<p>前に述べたように、アロー関数式は非メソッド型の関数に最もよく合っています。これをメソッドとして使った時のことを見てみましょう。</p>
+前に述べたように、アロー関数式は非メソッド型の関数に最もよく合っています。これをメソッドとして使った時のことを見てみましょう。
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 
 var obj = { // 新しいスコープを作成しない
   i: 10,
-  b: () =&gt; console.log(this.i, this),
+  b: () => console.log(this.i, this),
   c: function() {
     console.log(this.i, this);
   }
 }
 
-obj.b(); // prints undefined, Window {...} (or the global object)
-obj.c(); // prints 10, Object {...}</pre>
+obj.b(); // undefined, Window {...} (or the global object) と表示
+obj.c(); // 10, Object {...} と表示
+```
 
-<p>アロー関数は自身の <code>this</code> を持ちません。{{jsxref("Object.defineProperty()")}} を使った他の例です。</p>
+アロー関数は自身の `this` を持ちません。{{jsxref("Object.defineProperty()")}} を使った他の例です。
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 
 var obj = {
   a: 10
 };
 
 Object.defineProperty(obj, 'b', {
-  get: () =&gt; {
+  get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   }
 });
-</pre>
+```
 
-<h3 id="call_apply_and_bind">call、apply、bind</h3>
+### call、apply、bind
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code>、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> の各メソッドは、アロー関数には<strong>ふさわしくありません</strong>。これらは異なるスコープ内でメソッドを実行できるようにするために設計されているものです。<strong>アロー関数は、アロー関数が定義されているスコープに基づいて "this" を確立する</strong>からです。</p>
+[`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) の各メソッドは、アロー関数には**ふさわしくありません**。これらは異なるスコープ内でメソッドを実行できるようにするために設計されているものです。*アロー関数は、そのアロー関数が定義されているスコープに基づいて "this" を確立するからです。*
 
-<p>例えば、 <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code>、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> は、従来の関数ではそれぞれのメソッドにスコープを確立するので、期待通りに動作します。</p>
+[`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) は、従来の関数ではそれぞれのメソッドにスコープを確立するので、期待通りに動作します。
 
-<pre class="brush: js">// ----------------------
+```js
+// ----------------------
 // 従来の関数の例
 // ----------------------
 // 単純化されたオブジェクトで "this" を持つ
@@ -215,11 +238,13 @@ console.log(result) // result 106
 
 // bind
 var result = add.bind(obj) // "obj" としてスコープを確立
-console.log(result(1, 2, 3)) // result 106</pre>
+console.log(result(1, 2, 3)) // result 106
+```
 
-<p>アロー関数では、 <code>add</code> 関数は基本的に <code>window</code> (グローバル) スコープで作成されているので、 <code>this</code> は window だと仮定されます。</p>
+アロー関数では、 `add` 関数は基本的に `window` (グローバル) スコープで作成されているので、 `this` は window だと仮定されます。
 
-<pre class="brush: js">// ----------------------
+```js
+// ----------------------
 // アロー関数の例
 // ----------------------
 
@@ -232,7 +257,7 @@ var obj = {
 window.num = 2020; // yikes!
 
 // アロー関数
-var add = (a, b, c) =&gt; this.num + a + b + c;
+var add = (a, b, c) => this.num + a + b + c;
 
 // call
 console.log(add.call(obj, 1, 2, 3)) // result 2026
@@ -244,14 +269,14 @@ console.log(add.apply(obj, arr)) // result 2026
 // bind
 const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // result 2026
-</pre>
+```
 
-<p>アロー関数を使用する最大の利点は、 DOM レベルのメソッド (setTimeout、setInterval、addEventListener) で、通常、関数が適切なスコープで実行されることを保証するために、クロージャ、call、apply、bind などが必要でした。</p>
+おそらくアロー関数を使う最大の利点は、 DOM レベルのメソッド (`setTimeout`, `setInterval`, `addEventListener`) で、通常は何らかのクロージャ、call、apply、bind を使用して、関数が適切なスコープで実行されることを確認する必要があることです。
 
-<p><strong>従来の関数の例:</strong></p>
+#### 従来の関数の例
 
-<pre
-  class="brush: js">var obj = {
+```js
+var obj = {
     count : 10,
     doSomethingLater : function (){
         setTimeout(function(){ // 関数を window スコープで実行
@@ -261,204 +286,219 @@ console.log(bound(1, 2, 3)) // result 2026
     }
 }
 
-obj.doSomethingLater(); // コンソールに "NaN" と表示。 "count" プロパティは window スコープではないため。</pre>
+obj.doSomethingLater(); // コンソールに "NaN" と表示。 "count" プロパティは window スコープではないため。
+```
 
-<p><strong>アロー関数の例:</strong></p>
+#### アロー関数の例
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
     count : 10,
-    doSomethingLater : function(){ // もちろん、アロー関数はメソッドには向いていない
-        setTimeout( () =&gt; { // アロー関数が "obj" 内で作成されるので、それがオブジェクトの "this" と見なされる
+    doSomethingLater : function(){
+      // 従来の関数は "this" を "obj" コンテキストに結びつける
+        setTimeout( () => {
+            // アロー関数はそれ自身のバインディングを持たず、
+            // setTimeout （関数呼び出しとして）はバインディング
+            // 自体を作成しないので、従来の関数の "obj" コンテキスト
+            // が中で使用されることになります。
             this.count++;
             console.log(this.count);
         }, 300);
     }
 }
 
-obj.doSomethingLater();</pre>
+obj.doSomethingLater();
+```
 
-<h3 id="No_binding_of_arguments"><code>arguments</code> のバインドがない</h3>
+### `arguments` のバインドがない
 
-<p>アロー関数は自身の <a href="/ja/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> オブジェクト</a>を持ちません。そのため、この例では、<code>arguments</code> は囲っているスコープでの同名変数への参照にすぎません。</p>
+アロー関数は自身の [`arguments` オブジェクト](/ja/docs/Web/JavaScript/Reference/Functions/arguments)を持ちません。そのため、この例では、`arguments` は囲っているスコープでの同名変数への参照にすぎません。
 
-<pre class="brush: js">var arguments = [1, 2, 3];
-var arr = () =&gt; arguments[0];
+```js
+var arguments = [1, 2, 3];
+var arr = () => arguments[0];
 
 arr(); // 1
 
 function foo(n) {
-  var f = () =&gt; arguments[0] + n; // foo は arguments をバインドしている。 arguments[0] は n である
+  var f = () => arguments[0] + n; // foo は arguments をバインドしている。 arguments[0] は n である
   return f();
 }
 
-foo(3); // 3 + 3 = 6</pre>
+foo(3); // 3 + 3 = 6
+```
 
-<p>多くの場合、<a href="/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters">残余引数</a>が <code>arguments</code> オブジェクトの代わりに使えます。</p>
+多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
 
-<pre class="brush: js">function foo(n) {
-  var f = (...args) =&gt; args[0] + n;
+```js
+function foo(n) {
+  var f = (...args) => args[0] + n;
   return f(10);
 }
 
-foo(1); // 11</pre>
+foo(1); // 11
+```
 
-<h3 id="Use_of_the_new_operator"><code>new</code> 演算子の使用</h3>
+### `new` 演算子の使用
 
-<p>アロー関数はコンストラクターとして使用できず、<code>new</code> と共に使うとエラーが発生します。</p>
+アロー関数はコンストラクターとして使用できず、`new` と共に使うとエラーが発生します。
 
-<pre class="brush: js">var Foo = () =&gt; {};
-var foo = new Foo(); // TypeError: Foo is not a constructor</pre>
+```js
+var Foo = () => {};
+var foo = new Foo(); // TypeError: Foo is not a constructor
+```
 
-<h3 id="Use_of_prototype_property"><code>prototype</code> プロパティの使用</h3>
+### `prototype` プロパティの使用
 
-<p>アロー関数には <code>prototype</code> プロパティはありません。</p>
+アロー関数には `prototype` プロパティはありません。
 
-<pre class="brush: js">var Foo = () =&gt; {};
+```js
+var Foo = () => {};
 console.log(Foo.prototype); // undefined
-</pre>
+```
 
-<h3 id="Use_of_the_yield_keyword"><code>yield</code> キーワードの使用</h3>
+### `yield` キーワードの使用
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> キーワードはアロー関数内で使用できません (内部で入れ子になった関数が許可されている場合を除く)。結果として、アロー関数はジェネレーターとして使用できません。</p>
+[`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) キーワードはアロー関数内で使用できません（内部で入れ子になった関数が許可されている場合を除く）。結果として、アロー関数はジェネレーターとして使用できません。
 
-<h3 id="Function_body">関数の本体</h3>
+### 関数の本体
 
-<p>アロー関数は、「簡潔文体 (concise body)」か、もしくはより一般的な「ブロック文体 (block body) 」のどちらかを使用することができます。</p>
+アロー関数は、簡潔文体 (concise body)か、もしくはより一般的なブロック文体 (block body) のどちらかを使用することができます。
 
-<p>簡潔文体 (concise body) においては、単一の式しか記述できないので、その式が暗黙的に return される値となります。しかし、ブロック文体においては、自動的に return はされないので、明示的に <code>return</code> 文を使用する必要があります。</p>
+簡潔文体においては、単一の式しか記述できないので、その式が暗黙的に return される値となります。しかし、ブロック文体においては、自動的に return はされないので、明示的に `return` 文を使用する必要があります。
 
-<pre class="brush: js">var func = x =&gt; x * x;
+```js
+var func = x => x * x;
 // 簡潔構文の場合、暗黙の "return" があります
-var func = (x, y) =&gt; { return x + y; };
+
+var func = (x, y) => { return x + y; };
 // ブロック文体では、明示的な "return" が必要です
-</pre>
+```
 
-<h3 id="Returning_object_literals">オブジェクトリテラルを返す</h3>
+### オブジェクトリテラルの返却
 
-<p>簡潔文体 <code>params =&gt; {object:literal}</code> を使ってオブジェクトリテラルを返そうとしても、期待通りに動作しないことに注意しましょう。</p>
+簡潔文体 `params => {object:literal}` を使ってオブジェクトリテラルを返そうとしても、期待通りに動作しないことに注意しましょう。
 
-<pre class="brush: js">var func = () =&gt; { foo: 1 };
+```js
+var func = () => { foo: 1 };
 // 呼び出した func() は undefined を返す！
 
-var func = () =&gt; { foo: function() {} };
+var func = () => { foo: function() {} };
 // SyntaxError: function 文には名前が必要
-</pre>
+```
 
-<p>これは、括弧 ({}) 内のコードが文の列として構文解析されてしまっているからです (つまり、<code>foo</code> はオブジェクトリテラル内のキーでなく、ラベルとして扱われています)。</p>
+これは、括弧 ({}) 内のコードが文の列として構文解析されてしまっているからです（つまり、`foo` はオブジェクトリテラル内のキーでなく、ラベルとして扱われています）。
 
-<p>オブジェクトリテラルは括弧で囲むのを忘れないでください。</p>
+オブジェクトリテラルは括弧で囲むのを忘れないでください。
 
-<pre class="brush: js">var func = () =&gt; ({ foo: 1 });</pre>
+```js
+var func = () => ({ foo: 1 });
+```
 
-<h3 id="Line_breaks">改行</h3>
+### 改行
 
-<p>アロー関数では、括弧とアロー (矢印) の間に改行を入れることができません。</p>
+アロー関数では、括弧とアロー（矢印）の間に改行を入れることができません。
 
-<pre class="brush: js">var func = (a, b, c)
-  =&gt; 1;
-// SyntaxError: expected expression, got '=&gt;'</pre>
+```js
+var func = (a, b, c)
+  => 1;
+// SyntaxError: Unexpected token '=>'
+```
 
-<p>しかし、矢印の後に改行を入れたり、以下のように括弧や中括弧を使用して、コードがきれいで滑らかになるように修正することができます。また、引数同士の間にも改行を入れることができます。</p>
+しかし、矢印の後に改行を入れたり、以下のように括弧や中括弧を使用して、コードがきれいで滑らかになるように修正することができます。また、引数同士の間にも改行を入れることができます。
 
-<pre class="brush: js">var func = (a, b, c) =&gt;
-  1;
+```js
+var func = (a, b, c) =>
+  1;
 
-var func = (a, b, c) =&gt; (
-  1
+var func = (a, b, c) => (
+  1
 );
 
-var func = (a, b, c) =&gt; {
-  return 1
+var func = (a, b, c) => {
+  return 1
 };
 
 var func = (
   a,
   b,
-  c
-) =&gt; 1;
+  c
+) => 1;
 
-// SyntaxError は発生しない</pre>
+// SyntaxError は発生しない
+```
 
-<h2 id="Parsing_order">解釈の順序</h2>
+## 解釈の順序
 
-<p>アロー関数のアロー (矢印) は演算子ではありませんが、アロー関数には特別な解釈ルールがあり、通常の関数とは<a href="/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">演算子の優先順位</a>の扱いが異なります。</p>
+アロー関数のアロー (矢印) は演算子ではありませんが、アロー関数には特別な解釈ルールがあり、通常の関数とは[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)の扱いが異なります。
 
-<pre class="brush: js">let callback;
+```js
+let callback;
 
 callback = callback || function() {}; // ok
 
-callback = callback || () =&gt; {};
+callback = callback || () => {};
 // SyntaxError: invalid arrow-function arguments
 
-callback = callback || (() =&gt; {});    // ok
-</pre>
+callback = callback || (() => {});    // ok
+```
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Basic_usage">基本的な例</h3>
+### 基本的な例
 
-<pre class="brush: js">// 空のアロー関数は undefined を返します
-let empty = () =&gt; {};
+```js
+// 空のアロー関数は undefined を返します
+let empty = () => {};
 
-(() =&gt; 'foobar')();
+(() => 'foobar')();
 // "foobar" を返します
 // (これは、即時起動型の関数式です。)
 
-var simple = a =&gt; a &gt; 15 ? 15 : a;
+var simple = a => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) =&gt; a &gt; b ? a : b;
+let max = (a, b) => a > b ? a : b;
 
 // 簡単な配列のフィルターリング、マッピング等
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
-var sum = arr.reduce((a, b) =&gt; a + b);
+var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v =&gt; v % 2 == 0);
+var even = arr.filter(v => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v =&gt; v * 2);
+var double = arr.map(v => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // さらに簡潔な promise チェーン
-promise.then(a =&gt; {
+promise.then(a => {
   // ...
-}).then(b =&gt; {
+}).then(b => {
   // ...
 });
 
 // 見た目に解析が簡単な引数なしのアロー関数
-setTimeout( () =&gt; {
+setTimeout( () => {
   console.log('I happen sooner');
-  setTimeout( () =&gt; {
+  setTimeout( () => {
     // deeper code
     console.log('I happen later');
   }, 1);
 }, 1);
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">仕様書</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.functions.arrow_functions")}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">hacks.mozilla.org サイトの "ES6 In Depth: Arrow functions"</a></li>
-</ul>
+- ["ES6 In Depth: Arrow functions" (hacks.mozilla.org)](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
