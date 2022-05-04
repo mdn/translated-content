@@ -3,9 +3,9 @@ title: デフォルト引数
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 tags:
   - ECMAScript 2015
-  - Functions
+  - 関数
   - JavaScript
-  - Language feature
+  - 言語機能
   - 言語機能
   - 関数
 browser-compat: javascript.functions.default_parameters
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ## 構文
 
 ```js
-function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
+function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { /* ... */ }
 ```
 
 ## 解説
@@ -84,7 +84,7 @@ test(null)       // 'object' (num は null に設定)
 
 ### 呼び出し時の評価
 
-デフォルト引数は*呼び出し時*に評価されるので、(例えば) Python などと異なり、関数が呼ばれる度に新しいオブジェクトが生成されます。
+デフォルト引数は*呼び出し時*に評価されるので、（例えば） Python とは異なり、関数が呼ばれる度に新しいオブジェクトが生成されます。
 
 ```js
 function append(value, array = []) {
@@ -208,12 +208,27 @@ f(2)  // [2, undefined]
 
 既定値の代入を、{{jsxref("Operators/Destructuring_assignment", "分割代入", "", 1)}}表記で行うことができます。
 
+これを行う一般的な方法は、空のオブジェクト/配列をオブジェクト/配列に分割代入することです。例えば、 `[x = 1, y = 2] = []` とします。
+このようにすることで、空の配列/オブジェクトを関数に渡しても、あらかじめ設定した値を保持することができます。
+
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function preFilledArray([x = 1, y = 2] = []) {
+  return x + y;
 }
 
-f()  // 6
+preFilledArray();       // 3
+preFilledArray([]);     // 3
+preFilledArray([2]);    // 4
+preFilledArray([2, 3]); // 5
+
+// オブジェクトでも同様に動作します。
+function preFilledObject({z = 3} = {}) {
+  return z;
+}
+
+preFilledObject();          // 3
+preFilledObject({});        // 3
+preFilledObject({ z: 2 });  // 2
 ```
 
 ## 仕様書
