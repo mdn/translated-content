@@ -28,8 +28,8 @@ Avec une API fonctionnant avec des promesses, la fonction asynchrone démarre l'
 
 > **Note :** Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
 >
-> 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>
-> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools)
+> 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>.
+> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools).
 > 3. Lorsqu'un exemple est présent dans cet article, copiez le contenu dans la console. Vous devrez recharger la page à chaque exemple pour éviter que la console affiche une erreur sur la redéclaration de `fetchPromise()`.
 
 Dans cet exemple, nous téléchargerons le fichier JSON situé à l'adresse <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, et nous afficherons des informations à son sujet.
@@ -43,7 +43,7 @@ const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/
 
 console.log(fetchPromise);
 
-fetchPromise.then( reponse => {
+fetchPromise.then(reponse => {
   console.log(`Réponse reçue : ${reponse.status}`);
 });
 
@@ -52,7 +52,7 @@ console.log("Requête initiée…");
 
 Voici ce qu'on fait&nbsp;:
 
-1. On appelle l'API `fetch()` et on affecte la valeur de retour à la variable `fetchPromise`
+1. On appelle l'API `fetch()` et on affecte la valeur de retour à la variable `fetchPromise`.
 2. Juste après, on affiche la variable `fetchPromise` dans la console. Cela devrait afficher quelque chose comme&nbsp;: `Promise { <state>: "pending" }`, qui indique qu'on a un objet `Promise` dont l'état est `"pending"` (c'est-à-dire, en cours). Cet état indique que l'opération de récupération du fichier est toujours en cours.
 3. On passe une fonction de gestion à la méthode **`then()`** de la promesse. Lorsque l'opération de récupération a réussi (si elle a réussi), la promesse appellera le gestionnaire en lui passant un objet [`Response`](/fr/docs/Web/API/Response), qui contient la réponse du serveur.
 4. On affiche un message dans la console indiquant que la requête a été lancée.
@@ -78,9 +78,9 @@ Après avoir rechargé la page, copiez ce qui suit dans la console&nbsp;:
 ```js
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
-fetchPromise.then( reponse => {
+fetchPromise.then(reponse => {
   const jsonPromise = reponse.json();
-  jsonPromise.then( json => {
+  jsonPromise.then(json => {
     console.log(json[0].name);
   });
 });
@@ -98,29 +98,29 @@ Bien entendu, il peut y avoir ce risque, mais les promesses disposent d'une cara
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then( reponse => {
+  .then(reponse => {
     return reponse.json();
   })
-  .then( json => {
+  .then(json => {
     console.log(json[0].name);
   });
 ```
 
 Ici, au lieu d'appeler le deuxième `then()` au sein du gestionnaire pour le premier `then()`, on peut *renvoyer* la promesse renvoyée par `json()`, puis appeler le deuxième `then()` sur cette valeur de retour. C'est ce qu'on appelle **le chainage de promesses** et cela signifie qu'on peut éviter d'avoir des niveaux croissants d'imbrication des appels de fonctions asynchrones.
 
-Avant de passer à la prochaine étape, il reste quelque chose à ajouter. Il faut vérifier que le serveur a accepté notre requête et a été en mesure d'y répondre avant de tenter de lire la réponse. Pour cela, nous allons vérifier le code de statut de la réponse et lever une exception si ce n'était pas "OK"&nbsp;:
+Avant de passer à la prochaine étape, il reste quelque chose à ajouter. Il faut vérifier que le serveur a accepté notre requête et a été en mesure d'y répondre avant de tenter de lire la réponse. Pour cela, nous allons vérifier le code de statut de la réponse et lever une exception si ce n'était pas «&nbsp;OK&nbsp;»&nbsp;:
 
 ```js
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then( reponse => {
+  .then(reponse => {
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP : ${reponse.status}`);
     }
     return reponse.json();
   })
-  .then( json => {
+  .then(json => {
     console.log(json[0].name);
   });
 ```
@@ -141,16 +141,16 @@ Rechargez la page et essayez la version qui suit `fetch()`. On a ajouté un gest
 const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then( reponse => {
+  .then(reponse => {
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP : ${reponse.status}`);
     }
     return reponse.json();
   })
-  .then( json => {
+  .then(json => {
     console.log(json[0].name);
   })
-  .catch( error => {
+  .catch(error => {
     console.error(`Impossible de récupérer les produits : ${error}`);
   });
 ```
@@ -170,7 +170,7 @@ Pour commencer, une promesse peut être dans l'un de ces trois états&nbsp;:
 - **Rompue** (ou échouée ou <i lang="en">rejected</i> en anglais)
   - : La fonction asynchrone a échoué. Lorsqu'une promesse est rompue, c'est le gestionnaire passé à sa méthode `catch()` qui est appelé.
 
-On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [404 Not Found](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la  requête.
+On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la  requête.
 
 On utilise parfois le terme **réglée** (<i lang="en">settled</i> en anglais) pour désigner les deux cas de réussite et d'échec (autrement dit, pour dire que l'opération asynchrone n'est plus en cours).
 
@@ -197,19 +197,19 @@ const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis
 const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( reponses => {
+  .then(reponses => {
     for (const reponse of reponses) {
       console.log(`${reponse.url} : ${reponse.status}`);
     }
   })
-  .catch( error => {
+  .catch(error => {
     console.error(`Erreur de récupération : ${error}`)
   });
 ```
 
 Ici, on lance trois requêtes `fetch()` vers trois URL différentes. Si elles réussissent toutes les trois, on affiche le code de statut de chaque. Si l'une d'elles échoue, on affiche l'erreur dans la console.
 
-Avec les URL fournies, toutes les requêtes devraient réussir, même si pour la deuxième, le serveur renvoie `404` (Not Found) et non `200` (OK) (en effet, le fichier demandé n'existe pas sur le serveur). Voici ce qui devrait donc s'afficher dans la console&nbsp;:
+Avec les URL fournies, toutes les requêtes devraient réussir, même si pour la deuxième, le serveur renvoie `404` (<i lang="en">Not Found</i>) et non `200` (OK) (en effet, le fichier demandé n'existe pas sur le serveur). Voici ce qui devrait donc s'afficher dans la console&nbsp;:
 
 ```
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json : 200
@@ -225,12 +225,12 @@ const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis
 const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( reponses => {
+  .then(reponses => {
     for (const reponse of reponses) {
       console.log(`${reponse.url}: ${reponse.status}`);
     }
   })
-  .catch( error => {
+  .catch(error => {
     console.error(`Échec de récupération : ${error}`)
   });
 ```
@@ -249,10 +249,10 @@ const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis
 const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( reponse => {
+  .then(reponse => {
     console.log(`${reponse.url}: ${reponse.status}`);
   })
-  .catch( error => {
+  .catch(error => {
     console.error(`Erreur de récupération : ${error}`)
   });
 ```
@@ -359,7 +359,7 @@ Les promesses fonctionnent pour tous les navigateurs récents. Les seuls environ
 
 Nous n'avons pas couvert toutes les fonctionnalités des promesses dans cet article, nous avons seulement vu les aspects les plus utiles et les plus intéressants. Lorsque vous commencerez à en savoir plus sur les promesses, vous rencontrerez d'autres fonctionnalités et d'autres techniques.
 
-De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/Web/API/WebRTC_API), [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API), [l'API de flux média](/fr/docs/Web/API/Media_Streams_API), et bien d'autres.
+De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/Web/API/WebRTC_API), [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API), [l'API de flux média (<i lang="en">Media Streams API</i>)](/fr/docs/Web/API/Media_Streams_API), et bien d'autres.
 
 ## Voir aussi
 
@@ -373,7 +373,7 @@ De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/
 ## Dans ce module
 
 - [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-- **Comment utiliser les promesses
+- **Comment utiliser les promesses**
 - [Implémenter une API utilisant les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
 - [Introduction aux <i lang="en">workers</i>](/fr/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
 - [Évaluation&nbsp;: ordonnancer des animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
