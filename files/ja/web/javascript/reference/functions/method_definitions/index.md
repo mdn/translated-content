@@ -3,127 +3,132 @@ title: メソッド定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 tags:
   - ECMAScript 2015
-  - ECMAScript6
-  - Functions
+  - 関数
   - JavaScript
-  - Object
-  - Syntax
+  - 言語機能
+  - オブジェクト
+  - 構文
+browser-compat: javascript.functions.method_definitions
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
-<div>{{JsSidebar("Functions")}}</div>
+{{JsSidebar("Functions")}}
 
-<p>ECMAScript 2015 より、オブジェクトイニシャライザのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の省略形です。</p>
+ECMAScript 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。
 
-<div>{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
+## 構文
 
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox">const obj = {
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {},
-  <var>property</var>( <var>parameters…</var> ) {},
-  *<var>generator</var>( <var>parameters…</var> ) {},
-  async <var>property</var>( <var>parameters…</var> ) {},
-  async* <var>generator</var>( <var>parameters…</var> ) {},
+```js
+const obj = {
+  get property() {},
+  set property(value) {},
+  property( parameters… ) {},
+  *generator( parameters… ) {},
+  async property( parameters… ) {},
+  async* generator( parameters… ) {},
 
   // 算出されたキーも使用可能:
-  get [<var>property]</var>() {},
-  set [<var>property]</var>(<var>value</var>) {},
-  [<var>property</var>]( <var>parameters…</var> ) {},
-  *[<var>generator</var>]( <var>parameters…</var> ) {},
-  async [<var>property</var>]( <var>parameters…</var> ) {},
-  async* [<var>generator]</var>( <var>parameters…</var> ) {},
+  get [property]() {},
+  set [property](value) {},
+  [property]( parameters… ) {},
+  *[generator]( parameters… ) {},
+  async [property]( parameters… ) {},
+  async* [generator]( parameters… ) {},
 };
-</pre>
+```
 
-<h2 id="Description" name="Description">説明</h2>
+## 解説
 
-<p>簡略構文は、ECMAScript 第 5 版で導入された <a href="/ja/docs/Web/JavaScript/Reference/Functions/get">getter</a> や <a href="/ja/docs/Web/JavaScript/Reference/Functions/set">setter</a> 構文に似ています。</p>
+簡略構文は、ECMAScript 第 5 版で導入された[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)や[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)構文に似ています。
 
-<p>次のコードを例にすると:</p>
+以下のようなコードがあったとします。
 
-<pre class="brush: js">var obj = {
+```js
+const obj = {
   foo: function() {
-    /* コード */
+    // ...
   },
   bar: function() {
-    /* コード */
+    // ...
   }
-};
-</pre>
+}
+```
 
-<p>これを以下のように短縮することができます:</p>
+これを以下のように短縮することができます。
 
-<pre class="brush: js">var obj = {
+```js
+const obj = {
   foo() {
-    /* コード */
+    // ...
   },
   bar() {
-    /* コード */
+    // ...
   }
-};
+}
+```
 
-</pre>
+### ジェネレーターメソッド
 
-<h3 id="Generator_methods" name="Generator_methods">短縮形ジェネレーターメソッド</h3>
+[ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Statements/function*)も、同様に簡略構文を使用して定義することができます。
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/function*">Generator メソッド</a>は同様に簡略構文を使用して定義することができます。</p>
+次のように行います。
 
-<p>簡略構文では:</p>
+- ジェネレータープロパティ名の前にアスタリスク (*) が必要です。すなわち、 `* g(){}` は動作しますが、 `g *(){}` は動作しません。
+- 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`)と一緒に使ってください。
 
-<ul>
- <li>ジェネレータープロパティ名の前にアスタリスク (*)が 必要です。すなわち、<code>* g(){}</code> は動作しますが、<code>g *(){}</code> は動作しません。</li>
- <li>非ジェネレーターメソッド定義では <code>yield</code> キーワードを入れることはできません。つまり <a href="/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">旧式の ジェネレーター関数</a> は動作せず、{{jsxref("SyntaxError")}}を投げます。<code>yield</code> は常にアスタリスク (<code>*</code>)と一緒に使ってください。</li>
-</ul>
-
-<pre class="brush: js;highlight[12]">// 名前付きプロパティを使用 (ES6 より前)
+```js
+// 名前付きプロパティを使用 (ES6 より前)
 const obj2 = {
-  g: function*() {
+  g: function* () {
     let index = 0
-    while(true)
+    while (true) {
       yield index++
+    }
   }
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj2 = {
   * g() {
-    let index = 0;
-    while(true)
+    let index = 0
+    while (true) {
       yield index++
+    }
   }
 };
 
 const it = obj2.g()
-console.log(it.next().value) // 0
-console.log(it.next().value) // 1</pre>
+console.log(it.next().value)  // 0
+console.log(it.next().value)  // 1
+```
 
-<h3 id="Async_methods" name="Async_methods">Async メソッド</h3>
+### 非同期メソッド
 
-<p>{{jsxref("Statements/async_function", "Async メソッド", "", 1)}}も簡略構文を使用して定義することができます。</p>
+{{jsxref("Statements/async_function", "非同期メソッド", "", 1)}}も簡略構文を使用して定義することができます。
 
-<pre class="brush: js;highlight[12]">// 名前付きプロパティ
+```js
+// 名前付きプロパティ
 const obj3 = {
   f: async function () {
     await some_promise
   }
-};
+}
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj3 = {
   async f() {
     await some_promise
   }
-};
-</pre>
+}
+```
 
-<h3 id="Async_generator_methods" name="Async_generator_methods">Async ジェネレーターメソッド</h3>
+### 非同期ジェネレーターメソッド
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/function*">Generator メソッド</a>も {{jsxref("Statements/async_function", "async", "", 1)}} 関数にすることができます。</p>
+[ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Statements/function*)も{{jsxref("Statements/async_function", "非同期", "", 1)}}関数にすることができます。
 
-<pre class="brush: js">const obj4 = {
+```js
+const obj4 = {
   f: async function* () {
     yield 1
     yield 2
@@ -138,81 +143,71 @@ const obj4 = {
    yield 2
    yield 3
   }
-};</pre>
+}
+```
 
-<h3 id="Method_definitions_are_not_constructable" name="Method_definitions_are_not_constructable">メソッド定義はコンストラクタブルではない</h3>
+### メソッド定義はコンストラクターではない
 
-<p>すべてのメソッド定義がコンストラクターではない(簡略構文のみ！)ため、インスタンス化しようとすると {{jsxref("TypeError")}} が発生します。</p>
+メソッドがコンストラクターになることはできません。インスタンス化しようとすると {{jsxref("TypeError")}} が発生します。
 
-<pre class="brush: js example-bad">const obj = {
-  method() {},
-};
-new obj.method // TypeError: obj.method is not a constructor
+```js example-bad
+const objA = {
+  method() {}
+}
+new objA.method  // TypeError: obj.method is not a constructor
 
-const obj = {
+const objB = {
   * g() {}
-};
-new obj.g; // TypeError: obj.g is not a constructor (ES2016 で変更)
-</pre>
+}
+new objB.g       // TypeError: obj.g is not a constructor (ES2016 で変更)
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Simple_test_case" name="Simple_test_case">簡単なテストケース</h3>
+### 簡単なテストケース
 
-<pre class="brush: js;highlight[3]">const obj = {
+```js
+const obj = {
   a: 'foo',
   b() { return this.a }
 };
-console.log(obj.b()) // "foo"
-</pre>
+console.log(obj.b())  // "foo"
+```
 
-<h3 id="Computed_property_names" name="Computed_property_names">計算されたプロパティ名</h3>
+### 計算されたプロパティ名
 
-<p>簡略構文は計算されたプロパティ名もサポートします。</p>
+簡略構文は計算されたプロパティ名にも対応しています。
 
-<pre class="brush: js;highlight[4]">const bar = {
+```js
+const bar = {
   foo0: function() { return 0 },
-  foo1(){ return 1 },
-  ['foo' + 2](){ return 2 },
-};
+  foo1() { return 1 },
+  ['foo' + 2]() { return 2 }
+}
 
-console.log(bar.foo0()) // 0
-console.log(bar.foo1()) // 1
-console.log(bar.foo2()) // 2
+console.log(bar.foo0())  // 0
+console.log(bar.foo1())  // 1
+console.log(bar.foo2())  // 2
 
 // A global function
 function foo() {
-  return 1
+  return 1
 }
 
 let name = 'foo'
-console.log(window[name]())  // 1</pre>
+console.log(window[name]())  // 1
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("javascript.functions.method_definitions")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Functions/get">get</a></code></li>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar">字句文法</a></li>
-</ul>
+- [`get`](/ja/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set)
+- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)
