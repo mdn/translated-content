@@ -25,7 +25,7 @@ L'élément ([`Element`](/fr/docs/Web/API/Element)) qui est l'ancêtre le plus p
 
 ### Exceptions
 
-Une exception [`SyntaxError`](http://localhost:5042/en-US/docs/Web/API/DOMException#exception-syntaxerror) est levée si la chaîne de caractères `selecteurs` n'est pas une liste de sélecteurs valide.
+Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#exception-syntaxerror) est levée si la chaîne de caractères `selecteurs` n'est pas une liste de sélecteurs valide.
 
 ## Exemples
 
