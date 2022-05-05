@@ -2092,6 +2092,7 @@
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 /es/docs/Web/JavaScript/Reference/Errors/caracter_ilegal	/es/docs/Web/JavaScript/Reference/Errors/Illegal_character
+/es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
@@ -2209,7 +2210,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/lineNumber	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/message	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/name	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/name
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/EvalError	/es/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas	/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction

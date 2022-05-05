@@ -758,6 +758,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos	/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /pt-BR/docs/Web/JavaScript/Reference/Indice_metodos_js	/pt-BR/docs/Web/JavaScript/Reference

@@ -39836,16 +39836,6 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-30T10:49:32.277Z",
-    "contributors": [
-      "mfuji09",
-      "yumetodo",
-      "teoli",
-      "Marsf",
-      "shide55"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-10-15T21:35:37.653Z",
     "contributors": [
@@ -48516,6 +48506,16 @@
     "modified": "2019-03-18T21:43:46.251Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
+    "modified": "2020-10-30T10:49:32.277Z",
+    "contributors": [
+      "mfuji09",
+      "yumetodo",
+      "teoli",
+      "Marsf",
+      "shide55"
     ]
   },
   "conflicting/Web/MathML": {

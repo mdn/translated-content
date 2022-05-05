@@ -2335,7 +2335,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/message	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error
-/fr/docs/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/fr/docs/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/Error/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/EvalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /fr/docs/JavaScript/Reference/Objets_globaux/EvalError/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/EvalError
@@ -4743,6 +4743,7 @@
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
@@ -4970,7 +4971,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/EvalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/EvalError/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/EvalError

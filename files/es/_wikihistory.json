@@ -17565,12 +17565,6 @@
       "Bumxu"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-15T22:33:54.410Z",
-    "contributors": [
-      "Nachec"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-10-15T22:33:57.174Z",
     "contributors": [
@@ -21632,6 +21626,12 @@
     "modified": "2019-03-23T22:31:40.887Z",
     "contributors": [
       "RiazaValverde"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
+    "modified": "2020-10-15T22:33:54.410Z",
+    "contributors": [
+      "Nachec"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Function": {
