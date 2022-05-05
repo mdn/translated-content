@@ -1,62 +1,69 @@
 ---
-title: AudioContext.currentTime
+title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - プロパティ
+  - リファレンス
+  - ウェブ音声 API
+  - currentTime
+browser-compat: api.BaseAudioContext.currentTime
 translation_of: Web/API/BaseAudioContext/currentTime
 original_slug: Web/API/AudioContext/currentTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>currentTime</code>読み取り専用プロパティは、再生、タイムラインの可視化などのスケジューリングで使用できる単純増加するハードウェア時間をdoubleの秒数で返します。0から始まります。</p>
-</div>
+`currentTime` は {{ domxref("BaseAudioContext") }} インターフェイスの読み取り専用プロパティで、再生、タイムラインの可視化などのスケジューリングで使用できる単純増加するハードウェア時間の秒数を倍精度浮動小数点型で返します。 0 から始まります。
 
-<h2 id="構文">構文</h2>
+## 値
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-console.log(audioCtx.currentTime);</pre>
+浮動小数点数です。
 
-<h3 id="値">値</h3>
+## 例
 
-<p>double</p>
-
-<h2 id="例">例</h2>
-
-<div class="note">
-<p><strong>注:</strong> 完全な実装の例は、<a href="https://github.com/mdn/">MDN Github repo</a>の<a href="https://github.com/mdn/panner-node">panner-node</a>などを参照してください。<code>audioCtx.currentTime</code>をあなたのブラウザで使ってみてください。</p>
-</div>
-
-<pre class="brush: js;highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
-// 古いwebkit/blinkブラウザではプレフィックスが必要です
+// 古い webkit/blink ブラウザーでは接頭辞が必要です
 
 ...
 
 console.log(audioCtx.currentTime);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 時刻の精度の縮小
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-currentTime', 'currentTime')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+タイミング攻撃やフィンガープリントに対する保護を提供するために、ブラウザーの設定によっては `audioCtx.currentTime` の値が丸められることがあります。
+Firefox では、環境設定の `privacy.reduceTimerPrecision` が既定で有効になっており、 Firefox 59 では 20us、60 では 2ms になっています。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+```js
+// reduced time precision (2ms) in Firefox 60
+audioCtx.currentTime;
+// 23.404
+// 24.192
+// 25.514
+// ...
 
-<p>{{Compat("api.BaseAudioContext.currentTime")}}</p>
+// reduced time precision with `privacy.resistFingerprinting` enabled
+audioCtx.currentTime;
+// 49.8
+// 50.6
+// 51.7
+// ...
+```
 
-<h2 id="参考">参考</h2>
+Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または  `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
