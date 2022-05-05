@@ -1,39 +1,52 @@
 ---
-title: AudioContext.createAnalyser()
+title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createAnalyser
+browser-compat: api.BaseAudioContext.createAnalyser
 translation_of: Web/API/BaseAudioContext/createAnalyser
 original_slug: Web/API/AudioContext/createAnalyser
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createAnalyser()</code>メソッドは、音声の時間と周波数を解析する{{ domxref("AnalyserNode") }}を生成します。これはデータの可視化などで使えます。</p>
-</div>
+`createAnalyser()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化を行います。
 
-<div class="note">
-<p><strong>注:</strong> このノードの詳しい説明は、{{domxref("AnalyserNode")}}のページを参照してください。</p>
-</div>
+> **Note:** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<h2 id="構文">構文</h2>
+> **Note:** このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();</pre>
+## 構文
 
-<h3 id="Description" name="Description">戻り値</h3>
+```js
+createAnalyser()
+```
 
-<p>{{domxref("AnalyserNode")}}</p>
+### 引数
 
-<h2 id="Examples" name="Examples">例</h2>
+なし。
 
-<p>次のサンプルでは、基本的な<code>AudioContext</code>の<code>AnalyserNode</code>の生成、<code>requestAnimationFrame()</code>による時間データの周期的な収集と「オシロスコープのように」現在の音声を出力する方法を示しています。より完全な例と情報は、<a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>デモ(<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.jsの128–205行目</a>)を参照してください。</p>
+### 返値
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+{{domxref("AnalyserNode")}} です。
+
+## 例
+
+次の例では、 AudioContext を使用して Analyser ノードを作成し、 requestAnimationFrame() を使用してタイムドメインのデータを繰り返し収集し、現在の音声入力の「オシロスコープ形式」の出力を描画する基本的な使用方法を示しています。より完全な応用例や情報については、 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) のデモをご覧ください（関連コードは、 [app.js 128-205 行目](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)をご覧ください）。
+
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
 
 analyser.fftSize = 2048;
-var bufferLength = analyser.fftSize;
+var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
@@ -41,64 +54,50 @@ analyser.getByteTimeDomainData(dataArray);
 
 function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+      drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray);
+      analyser.getByteTimeDomainData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.lineWidth = 2;
+      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-      canvasCtx.beginPath();
+      canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var v = dataArray[i] / 128.0;
+        var y = v * HEIGHT/2;
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+        if(i === 0) {
+          canvasCtx.moveTo(x, y);
+        } else {
+          canvasCtx.lineTo(x, y);
+        }
 
-        x += sliceWidth;
-      }
+        x += sliceWidth;
+      }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
+      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.stroke();
+    };
 
-    draw();</pre>
+    draw();
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createAnalyser-AnalyserNode', 'createAnalyser()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createAnalyser")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
