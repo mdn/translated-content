@@ -70,7 +70,7 @@ Ici, `creerSalutation()` est une **fonction synchrone**, car l'instruction qui l
 
 Et si la fonction synchrone mettait beaucoup de temps à s'exécuter&nbsp;?
 
-Lorsqu'une personne clique sur le bouton « Générer des nombres premiers » dans l'exemple qui suit, le programme génère plusieurs grands nombres premiers, en utilisant un algorithme très inefficace. On peut contrôler la quantité de nombres premiers à générer, ce qui aura bien entendu un impact sur la durée de l'opération.
+Lorsqu'une personne clique sur le bouton «&nbsp;Générer des nombres premiers&nbsp;» dans l'exemple qui suit, le programme génère plusieurs grands nombres premiers, en utilisant un algorithme très inefficace. On peut contrôler la quantité de nombres premiers à générer, ce qui aura bien entendu un impact sur la durée de l'opération.
 
 ```html
 <label for="quota">Quantité de nombres premiers :</label>
@@ -114,7 +114,7 @@ document.querySelector('#generer').addEventListener('click', () => {
 });
 
 document.querySelector('#recharger').addEventListener('click', () => {
-  document.location.reload()
+  document.location.reload();
 });
 ```
 
@@ -140,7 +140,6 @@ Essayez de saisir du texte ici juste après avoir appuyé sur « Générer des n
 </textarea>
 
 <div id="output"></div>
-
 ```
 
 ```css hidden
@@ -187,7 +186,7 @@ document.querySelector('#recharger').addEventListener('click', () => {
 });
 ```
 
-{{EmbedLiveSample("", 600, 200)}}
+{{EmbedLiveSample("", 600, 210)}}
 
 Voici donc le problème qui se pose avec les fonctions synchrones dont l'exécution est longue. On voudrait une méthode pour que notre programme puisse&nbsp;:
 
@@ -235,7 +234,8 @@ document.querySelector('#xhr').addEventListener('click', () => {
 
   xhr.open('GET', 'https://raw.githubusercontent.com/mdn/translated-content/main/files/fr/_wikihistory.json');
   xhr.send();
-  log.textContent = `${log.textContent}Requête XHR initiée\n`;});
+  log.textContent = `${log.textContent}Requête XHR initiée\n`;
+});
 
 document.querySelector('#recharger').addEventListener('click', () => {
   log.textContent = '';
@@ -309,7 +309,7 @@ function faireOperation() {
 faireOperation();
 ```
 
-Comme on doit appeler les fonctions de rappel à l'intérieur des fonctions de rappel, on obtient une fonction `faireOperation()` avec de nombreux niveaux d'imbrication, ce qui la rend moins lisible et moins compréhensible et donc plus difficile à déboguer. C'est ce qu'on appelle parfois un «&nbsp;callback hell&nbsp;» (généralement utilisé en anglais, cela signifie «&nbsp;l'enfer des fonctions de rappel&nbsp;») ou encore «&nbsp;la pyramide du malheur&nbsp;» (du fait de l'indentation qui forme un triangle comme le côté d'une pyramide).
+Comme on doit appeler les fonctions de rappel à l'intérieur des fonctions de rappel, on obtient une fonction `faireOperation()` avec de nombreux niveaux d'imbrication, ce qui la rend moins lisible et moins compréhensible et donc plus difficile à déboguer. C'est ce qu'on appelle parfois un «&nbsp;<i lang="en">callback hell</i>&nbsp;» (généralement utilisé en anglais, cela signifie «&nbsp;l'enfer des fonctions de rappel&nbsp;») ou encore «&nbsp;la pyramide du malheur&nbsp;» (du fait de l'indentation qui forme un triangle comme le côté d'une pyramide).
 
 Lorsqu'on imbrique les fonctions de rappel ainsi, il devient très difficile de gérer les erreurs&nbsp;: il faut souvent les gérer à chaque niveau de la «&nbsp;pyramide&nbsp;» plutôt que d'avoir à gérer uniquement les erreurs au niveau le plus haut.
 
