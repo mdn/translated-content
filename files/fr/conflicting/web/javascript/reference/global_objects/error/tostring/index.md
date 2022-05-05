@@ -1,6 +1,6 @@
 ---
 title: Error.prototype.toSource()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 tags:
   - Error
   - JavaScript
@@ -9,7 +9,7 @@ tags:
   - Prototype
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
 {{JSRef}} {{non-standard_header}}
 

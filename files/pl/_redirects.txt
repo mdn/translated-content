@@ -1844,6 +1844,7 @@
 /pl/docs/Web/JavaScript/Reference/Errors/Brakujący_średnik_po_własności_id	/pl/docs/Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 /pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe	/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /pl/docs/Web/JavaScript/Reference/Functions/Parametry_domyślne	/pl/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Referencje/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Referencje/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -1972,7 +1973,7 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/lineNumber	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/message	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/name	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/name
-/pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toSource	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toString	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje/Obiekty/EvalError	/pl/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Function	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function
