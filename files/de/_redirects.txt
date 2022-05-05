@@ -748,6 +748,7 @@
 /de/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts	/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 /de/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/resolvedOptions	/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 /de/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/supportedLocalesOf	/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
+/de/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/de/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /de/docs/Web/JavaScript/Reference/Global_Objects/Math/math.random	/de/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 /de/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /de/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format	/de/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
