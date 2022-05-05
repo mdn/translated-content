@@ -541,6 +541,6 @@ if ('function' === typeof window.noFunc) {
 - {{jsxref("Functions/Default_parameters", "デフォルト引数")}}
 - {{jsxref("Functions/rest_parameters", "残余引数")}}
 - {{jsxref("Functions/arguments", "arguments オブジェクト")}}
-- {{jsxref("Functions/get", "getter")}}
-- {{jsxref("Functions/set", "setter")}}
+- {{jsxref("Functions/get", "ゲッター")}}
+- {{jsxref("Functions/set", "セッター")}}
 - {{jsxref("Functions/Method_definitions", "メソッド定義")}}
