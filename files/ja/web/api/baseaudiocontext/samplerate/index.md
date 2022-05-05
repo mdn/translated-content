@@ -1,62 +1,48 @@
 ---
-title: AudioContext.sampleRate
+title: BaseAudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - プロパティ
+  - リファレンス
+  - ウェブ音声 API
+  - sampleRate
+browser-compat: api.BaseAudioContext.sampleRate
 translation_of: Web/API/BaseAudioContext/sampleRate
 original_slug: Web/API/AudioContext/sampleRate
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>sampleRate</code>プロパティは、このオーディオコンテキストの全てのノードで使われるサンプルレート(1秒あたりのサンプル数)を浮動小数点で返します。</p>
-</div>
+`sampleRate` は {{domxref("BaseAudioContext") }} インターフェイスのプロパティで、この音声コンテキスト内のすべてのノードが使用するサンプリングレートを、1 秒あたりのサンプル数で表した浮動小数点数を返すものです。この制限は、サンプリングレートコンバーターに対応していないことを意味します。
 
-<h2 id="構文">構文</h2>
+## 値
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var mySampleRate = audioCtx.sampleRate;</pre>
+音声コンテキストのサンプリングレートを、 1 秒当たりのサンプル数で示す浮動小数点数です。
 
-<h3 id="値">値</h3>
+## 例
 
-<p>浮動小数点</p>
+> **Note:** 完全なウェブ音声の実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)のウェブ音声デモの [panner-node](https://github.com/mdn/panner-node) などを参照してください。ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
 
-<h2 id="例">例</h2>
-
-<div class="note">
-<p><strong>注:</strong> 完全な実装の例は、<a class="external external-icon" href="https://github.com/mdn/">MDN Github repo</a>の<a class="external external-icon" href="https://github.com/mdn/panner-node">panner-node</a>などを参照してください。<code>audioCtx.sampleRate</code>をあなたのブラウザで使ってみてください。</p>
-</div>
-
-<pre class="brush: js;highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
-// 古いwebkit/blinkブラウザではプレフィックスが必要です
+// 古い webkit/blink のブラウザーでは接頭辞が必要です
 
 ...
 
 console.log(audioCtx.sampleRate);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-sampleRate', 'sampleRate')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.sampleRate")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
