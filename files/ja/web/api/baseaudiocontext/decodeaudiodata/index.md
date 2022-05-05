@@ -1,64 +1,62 @@
 ---
-title: AudioContext.decodeAudioData()
+title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 tags:
   - API
-  - Audio
+  - 音声
   - AudioContext
   - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
   - decodeAudioData
 translation_of: Web/API/BaseAudioContext/decodeAudioData
 original_slug: Web/API/AudioContext/decodeAudioData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p><code>decodeAudioData()</code> は {{ domxref("BaseAudioContext") }} のメソッドで、 {{domxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、 <code>ArrayBuffer</code> は {{domxref("XMLHttpRequest")}} と {{domxref("FileReader")}} から読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。</p>
+`decodeAudioData()` は {{ domxref("BaseAudioContext") }} のメソッドで、 {{jsxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、 `ArrayBuffer` は {{domxref("XMLHttpRequest")}} と {{domxref("FileReader")}} から読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。
 
-<p>この方法は、オーディオトラックから Web Audio API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。</p>
+この方法は、オーディオトラックからウェブ音声 API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文 
 
-<p>古いコールバック構文:</p>
+```js
+// 古いコールバックの構文:
+decodeAudioData(arrayBuffer, successCallback)
+decodeAudioData(arrayBuffer, successCallback, errorCallback)
 
-<pre class="syntaxbox notranslate">baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+// 新しいプロミスベースの構文:
+decodeAudioData(arrayBuffer)
+```
 
-<p>新しいプロミスベースの構文:</p>
+### 引数
 
-<pre class="syntaxbox notranslate">Promise&lt;decodedData&gt; baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>);</pre>
+- _arrayBuffer_
+  - : デコードする音声データが入った ArrayBuffer です。通常は{{domxref("XMLHttpRequest")}}, {{domxref("fetch()")}}, {{domxref("FileReader")}} から取得します。
+- _successCallback_
+  - : デコードが完了すると呼び出されるコールバック関数です。このコールバックの引数は 1 つで、 {{domxref("AudioBuffer")}} であり _decodedData_ （デコードされた PCM 音声データ）を表します。通常は、デコードされたデータを {{domxref("AudioBufferSourceNode")}} に入れて、そこから再生したり、好きなように操作したりすることができます。
+- _errorCallback_ {{optional_inline}}
+  - : 任意のエラーコールバックで、音声データのデコードでエラーが発生すると呼び出されます。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 返値
 
-<dl>
- <dt><var>ArrayBuffer</var></dt>
- <dd>デコードする音声データが入った ArrayBuffer です。通常は{{domxref("XMLHttpRequest")}}, {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, {{domxref("FileReader")}} から取得します。</dd>
- <dt><var>successCallback</var></dt>
- <dd>デコードが完了すると呼び出されるコールバック関数です。このコールバックの引数は1つで、 <var>decodedData</var> (デコードされた PCM 音声データ) を表す {{domxref("AudioBuffer")}} です。通常は、デコードされたデータを {{domxref("AudioBufferSourceNode")}} に入れて、そこから再生したり、好きなように操作したりすることができます。</dd>
- <dt><var>errorCallback</var></dt>
- <dd>任意のエラーコールバックで、音声データのデコードでエラーが発生すると呼び出されます。</dd>
-</dl>
+なし、または _decodedData_ で履行される {{jsxref("Promise") }} オブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+## 例
 
-<p>なし、または <var>decodedData</var> で満足する {{domxref("Promise") }} オブジェクトで.</p>
+ここでは最初に古いコールバックベースのシステムを、次に新しいプロミスベースの構文を取り上げます。
 
-<h2 id="Example" name="Example">例</h2>
+### 古いコールバックベースの構文
 
-<p>ここでは最初に古いコールバックベースのシステムを、次に新しいプロミスベースの構文を取り上げます。</p>
+この例では、 `getData()` 関数は XHR を使用して音声トラックを読み込み、リクエストの `responseType` を `arraybuffer` に設定して、レスポンスとして配列バッファーを返すようにして、それを `audioData` 変数に格納しています。それからこのバッファーを `decodeAudioData()` 関数に渡します。成功したコールバックは、デコードに成功した PCM データを受け取り、 {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource()")}} で作成した {{ domxref("AudioBufferSourceNode") }} に入れ、ソースを {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} に接続してループするように設定します。
 
-<h3 id="Older_callback_syntax" name="Older_callback_syntax">古いコールバックベースの構文</h3>
+ボタンは単に `getData()` を実行して、それぞれトラックの読み込みと再生、停止を行うだけです。ソースの `stop()` メソッドが呼ばれると、ソースは消滅します。
 
-<p>この例では、 <code>getData()</code> 関数は XHR を使用して音声トラックを読み込み、リクエストの <code>responseType</code> を <code>arraybuffer</code> に設定して、レスポンスとして配列バッファーを返すようにして、それを <code>audioData</code> 変数に格納しています。それからこのバッファーを <code>decodeAudioData()</code> 関数に渡します。成功したコールバックは、デコードに成功した PCM データを受け取り、 {{ domxref("AudioContext.createBufferSource()") }} で作成した {{ domxref("AudioBufferSourceNode") }} に入れ、ソースを {{domxref("AudioContext.destination") }} に接続してループするように設定します。</p>
+> **Note:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
 
-<p>ボタンは単に <code>getData()</code> を実行して、それぞれトラックの読み込みと再生、停止を行うだけです。ソースの <code>stop()</code> メソッドが呼ばれると、ソースは消滅します。</p>
-
-<div class="note">
-<p><strong>注:</strong> <a href="https://mdn.github.io/webaudio-examples/decode-audio-data/">ライブ例の実行</a> (または<a href="https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data">ソースの閲覧</a>) もできます。</p>
-</div>
-
-<pre class="brush: js notranslate">// 変数の定義
+```js
+// 変数の定義
 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
@@ -79,7 +77,6 @@ function getData() {
   request.open('GET', 'viper.ogg', true);
 
   request.responseType = 'arraybuffer';
-
 
   request.onload = function() {
     var audioData = request.response;
@@ -111,44 +108,27 @@ stop.onclick = function() {
   play.removeAttribute('disabled');
 }
 
-
 // pre要素にスクリプトを設定する
 
-pre.innerHTML = myScript.innerHTML;</pre>
+pre.innerHTML = myScript.innerHTML;
+```
 
-<h3 id="New_promise-based_syntax" name="New_promise-based_syntax">新しいプロミスベースの構文</h3>
+### 新しいプロミスベースの構文
 
-<pre class="brush: js notranslate">ctx.decodeAudioData(audioData).then(function(decodedData) {
+```js
+ctx.decodeAudioData(audioData).then(function(decodedData) {
  // デコードしたデータをここで使う
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-decodeaudiodata', 'decodeAudioData()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.BaseAudioContext.decodeAudioData")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API の使用</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
