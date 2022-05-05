@@ -121,9 +121,15 @@ Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{G
 
 ### `readonly`
 
-El atributo `size` es un valor numérico que indica cuántos caracteres de ancho debe tener la entrada. El valor debe ser un número más grande que cero. El valor por defecto es 20. Desde que el ancho de los caracteres varía, esto puede ser o no exacto y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la configuración de la fuente ({{cssxref("font")}} en uso.
+Un atributo Booleano que, si está presente, significa que el campo no puede ser editado por el usuario. Su `value` puede, aun así, ser cambiado directamente con código JavaScript configurando la propiedad [HTMLInputElement](/es/docs/Web/API/HTMLInputElement) `value`.
 
-Esto _no_ establece un límite en cuantos caracteres puede el usuario introducir en la entrada. Solo especifica aproximadamente cuantos pueden ser vistos de una vez. Para esablecer un límite de extensión en el largo de la entrada, usa el atributo [`maxlength`](#maxlength).
+> **Nota:** Porque un campo solo de lectura no puede tener un valor, `required` no tiene ningún efecto sobre las entradas de texto que también tienen el atributo `readonly` especificado.
+
+### `size`
+
+El atributo `size` es una valor número que indica cuántos caracteres de ancho debe tener la entrada. El valor debe ser un número más grande que cero. El valor por defecto es 20. Desde que el ancho de los caracteres varía, esto puede ser o no exacto y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la configuración de la fuente ({{cssxref("font")}} en uso).
+
+Esto _no_ establece un límite en cuántos caracteres puede introducir en la entrada el usuario. Solo especifica aproximadamente cuantos pueden ser vistos de una vez. Para esablecer un límite de extensión en el largo de la entrada, usa el atributo [`maxlength`](#maxlength).
 
 ## Usando la entrada de dirección de correo
 
