@@ -1,52 +1,55 @@
 ---
-title: AudioContext.onstatechange
+title: 'BaseAudioContext: statechange イベント'
 slug: Web/API/BaseAudioContext/statechange_event
+tags:
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - イベントハンドラー
+  - リファレンス
+  - ウェブ音声 API
+  - statechange
+browser-compat: api.BaseAudioContext.statechange_event
 translation_of: Web/API/BaseAudioContext/onstatechange
 original_slug: Web/API/BaseAudioContext/onstatechange
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>onstatechangeプロパティは、</code>{{Event("statechange")}}イベントが発火した(これはオーディオコンテキストの状態が変わったとき発生します)とき呼ばれるイベントハンドラ関数を定義します。</p>
-</div>
+`statechange` イベントは、 {{DOMxRef("BaseAudioContext")}} オブジェクトに対して {{domxref("BaseAudioContext.state", "state")}} メンバーが変化したときに発生します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-audioCtx.onstatechange = function() { ... };</pre>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<h2 id="例">例</h2>
+```js
+addEventListener('statechange', event => { })
 
-<p>次のスニペットは<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states デモ</a>の一部です(<a href="http://mdn.github.io/audiocontext-states/">すぐに実行</a>)。{{domxref("AudioContext.onstatechange")}}ハンドラは、状態が変わるたびにコンソールにログを出力するために使われています。</p>
+onstatechange = event => { }
+```
 
-<pre class="brush: js">audioCtx.onstatechange = function() {
-  console.log(audioCtx.state);
+## イベント型
+
+一般的な {{domxref("Event")}} です。
+
+## 例
+
+次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples)（[ライブ実行を確認](https://mdn.github.io/webaudio-examples/audiocontext-states/)）の一部です。 `onstatechange` ハンドラーは現在の {{domxref("BaseAudioContext.state", "state")}} を、変化するたびにコンソールへログ出力します。
+
+```js
+audioCtx.onstatechange = function() {
+  console.log(audioCtx.state);
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-onstatechange', 'onstatechange')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="互換性">互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.onstatechange")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
