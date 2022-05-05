@@ -3,11 +3,11 @@ title: 関数
 slug: Web/JavaScript/Reference/Functions
 tags:
   - Function
-  - Functions
-  - Guide
+  - 関数
+  - ガイド
   - JavaScript
   - Parameter
-  - parameters
+  - 引数
 browser-compat: javascript.functions
 translation_of: Web/JavaScript/Reference/Functions
 ---
@@ -544,4 +544,3 @@ if ('function' === typeof window.noFunc) {
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
 - {{jsxref("Functions/Method_definitions", "メソッド定義")}}
-- [関数と関数スコープ](/ja/docs/Web/JavaScript/Reference/Functions)
