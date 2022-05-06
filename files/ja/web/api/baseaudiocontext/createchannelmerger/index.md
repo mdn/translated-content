@@ -1,36 +1,46 @@
 ---
-title: AudioContext.createChannelMerger()
+title: BaseAudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
+tags:
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createChannelMerger
+browser-compat: api.BaseAudioContext.createChannelMerger
 translation_of: Web/API/BaseAudioContext/createChannelMerger
 original_slug: Web/API/AudioContext/createChannelMerger
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createChannelMerger()</code>メソッドは、複数のオーディオストリームを1つに混合する{{domxref("ChannelMergerNode")}}を生成します。</p>
-</div>
+`createChannelMerger()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelMergerNode")}} を作成します。これは複数の音声ストリームのチャンネルを一つの音声ストリームに結合します。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var merger = audioCtx.createChannelMerger(numberOfInputs);</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+createChannelMerger(numberOfInputs)
+```
 
-<dl>
- <dt>numberOfInputs</dt>
- <dd>入力オーディオストリームのチャンネルの数。指定がない場合は6になる。</dd>
-</dl>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+- numberOfInputs
+  - : 出力ストリームに含まれる、入力オーディオストリームのチャンネル数です。この引数が指定されていない場合の既定値は 6 です。
 
-<p>{{domxref("ChannelMergerNode")}}</p>
+### 返値
 
-<h2 id="例">例</h2>
+{{domxref("ChannelMergerNode")}} です。
 
-<p>この例ではステレオトラックを分け、左右のチャンネルをそれぞれ別に処理する方法を示しています。これを使うためには、{{domxref("AudioNode.connect(AudioNode)") }}メソッドの2番目と3番目の引数を使い、接続元と接続先のチャンネルの番号を指定する必要があります。</p>
+## 例
 
-<pre class="brush: js;highlight[7,16,17,24]">var ac = new AudioContext();
+次の例では、ステレオトラック（例えば音楽）を分離し、左チャンネルと右チャンネルを別々に処理する方法を示しています。これを使うには、 {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}} メソッドの第 2、第 3 引数を使って、接続元のチャンネルのインデックスと接続先のチャンネルのインデックスの両方を指定することが必要です。
+
+```js
+var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
  var source = ac.createBufferSource();
  source.buffer = data;
@@ -39,45 +49,32 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  var merger = ac.createChannelMerger(2);
 
  // 左チャンネルのボリュームのみ小さくする
- var gain = ac.createGain();
- gain.value = 0.5;
- splitter.connect(gain, 0);
+ var gainNode = ac.createGain();
+ gainNode.gain.setValueAtTime(0.5, ac.currentTime);
+ splitter.connect(gainNode, 0);
 
- // splitterをmergerの2番目の入力にして戻す
- // ここではチャンネルを入れ替えることで、ステレオ音声の左右を逆にしている
- gain.connect(merger, 0, 1);
+ // スプリッターをマージャーの 2 番目の入力に接続すると、チャンネルが効果的に交換され、
+ // ステレオイメージが反転します。
+ gainNode.connect(merger, 0, 1);
  splitter.connect(merger, 1, 0);
 
  var dest = ac.createMediaStreamDestination();
 
- // ChannelMergerNodeを使ったのでステレオのMediaStreamとなった
- // webオーディオグラフのWebRTCやMediaRecorderなどに渡す
+ // ChannelMergerNode を使っているので、ステレオの MediaStream が
+ // できました。これでウェブ音声グラフを WebRTC や MediaRecorder などに
+ // パイプするのに使えます。
  merger.connect(dest);
-});</pre>
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createChannelMerger-ChannelMergerNode-unsigned-long-numberOfInputs', 'createChannelMerger()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createChannelMerger")}}</p>
+{{Compat}}
 
-<h2 id="参照">参照</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
