@@ -5,7 +5,7 @@ translation_of: Web/SVG/Attribute/height
 ---
 {{SVGRef}}
 
-L'attribut **`height`** définit la longueur verticale d'un élément dans le système des coordonnées de l'utilisateur.
+L'attribut **`height`** définit la longueur verticale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
@@ -41,7 +41,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 html,body,svg { height:100% }
 ```
 
-```html
+```svg
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Avec une hauteur de 0 ou inférieure, rien ne sera affiché -->
   <rect y="0" x="0" width="90" height="0"/>
@@ -653,73 +653,73 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `height` définit la longueur vert
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height">Filter Effects Module Level 1  - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height">Filter Effects Module Level 1 — La définition de 'height' dans cette spécification.</a></td>
       <td>Version de travail</td>
       <td>Définition de <code>&lt;filter&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height">Filter Effects Module Level 1 - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height">Filter Effects Module Level 1 — La définition de 'height' dans cette spécification.</a></td>
       <td>Version de travail</td>
       <td>Définition des primitives de filtre</td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height">CSS Masking Module Level&nbsp;1 - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height">CSS Masking Module Level&nbsp;1 — La définition de 'height' dans cette spécification.</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;mask&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 — La définition de 'height' dans cette spécification.</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition en tant que propriété géométrique</td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute">Scalable Vector Graphics (SVG) 2 - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'height' dans cette spécification.</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;pattern&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a>
+      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a>
       </td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;image&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;svg&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;use&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;filter&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale des primitives de filtre</td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;mask&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'height' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;rect&gt;</code></td>
     </tr>
