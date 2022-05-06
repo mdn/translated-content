@@ -5,7 +5,7 @@ translation_of: Web/SVG/Attribute/x
 ---
 {{SVGRef}}
 
-L'attribut **`x`** définit une coordonnée en abscisse dans le système de coordonnées de l'utilisateur.
+L'attribut **`x`** définit une coordonnée en abscisse dans le système de coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
@@ -52,7 +52,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html, body, svg { height: 100%; }
 ```
 
 ```html
@@ -840,7 +840,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `x` définit l'abscisse du coin su
 
 ## `<text>`
 
-Pour [`<text>`](/fr/docs/Web/SVG/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de la position du contenu texte est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor), ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<text>`](/fr/docs/Web/SVG/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de *la position du contenu texte* est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -863,7 +863,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html, body, svg { height: 100%; }
 ```
 
 ```html
@@ -904,7 +904,7 @@ line {
 
 > **Attention :** Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de la position du contenu texte est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor), ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de *la position du contenu texte* est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -928,7 +928,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 
 ## `<tspan>`
 
-Pour [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de la position du contenu texte est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor), ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de *la position du contenu texte* est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -951,7 +951,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html, body, svg { height: 100%; }
 ```
 
 ```html
@@ -1027,123 +1027,123 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `x` définit l'abscisse du coin su
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x">Filter Effects Module Level 1 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
       <td>Brouillon de travail</td>
       <td>Définition de <code>&lt;filter&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x">Filter Effects Module Level 1 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
       <td>Brouillon de travail</td>
       <td>Définition de <code>&lt;feSpotLight&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-x">Filter Effects Module Level 1 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
       <td>Brouillon de travail</td>
       <td>Définition de <code>&lt;fePointLight&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-x">Filter Effects Module Level 1 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
       <td>Brouillon de travail</td>
       <td>Définition des primitives de filtre</td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-x">CSS Masking Module Level&nbsp;1 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-x">CSS Masking Module Level&nbsp;1 — La définition de 'x' dans cette spécification</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;mask&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#X">Scalable Vector Graphics (SVG) 2 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/geometry.html#X">Scalable Vector Graphics (SVG) 2 — La définition de 'x' dans cette spécification</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition comme propriété géométrique</td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementXAttribute">Scalable Vector Graphics (SVG) 2 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementXAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'x' dans cette spécification</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;pattern&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/text.html#TextElementXAttribute">Scalable Vector Graphics (SVG) 2 - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/text.html#TextElementXAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'x' dans cette spécification</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;text&gt;</code> and <code>&lt;tspan&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/interact.html#CursorElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/interact.html#CursorElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;cursor&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;image&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;svg&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;use&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#fePointLightXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#fePointLightXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;fePointLight&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#feSpotLightXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#feSpotLightXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;feSpotLight&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;filter&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale des primitives de filtre</td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;mask&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#AltGlyphElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/text.html#AltGlyphElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;altGlyph&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#GlyphRefElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/text.html#GlyphRefElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;glyphRef&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#TextElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/text.html#TextElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;text&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#TSpanElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/text.html#TSpanElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;tref&gt;</code> et <code>&lt;tspan&gt;</code>
       </td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'x' dans cette spécification</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;rect&gt;</code></td>
     </tr>
