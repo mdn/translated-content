@@ -11,7 +11,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 <p>這是 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第三步 你可以在以下的連結中查看原始碼<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a>.</p>
 </div>
 
-<p><span class="seoSummary">很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</span></p>
+<p>很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</p>
 
 <h2 id="簡單的碰撞偵測">簡單的碰撞偵測</h2>
 
@@ -48,7 +48,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
     dy = -dy;
 }</pre>
 
-<p><span style='background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: "Open Sans",Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;'>如果兩個語句中的一個是真的，則反轉球的運動。</span></p>
+<p>如果兩個語句中的一個是真的，則反轉球的運動。</p>
 
 <h2 id="從左邊和右邊反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><strong style="border: 0px; margin: 0px; padding: 0px;">從左邊和右邊反彈</strong></h2>
 
@@ -62,7 +62,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
     dy = -dy;
 }</pre>
 
-<p><span style='background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: "Open Sans",Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;'>在這一點上你應該插入上面的代碼塊到draw()功能，在關閉括號。</span></p>
+<p>在這一點上你應該插入上面的代碼塊到draw()功能，在關閉括號。</p>
 
 <h2 id="球不斷地消失在牆上！" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>球不斷地消失在牆上！</h2>
 
@@ -83,7 +83,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <h2 id="比較你的程式碼">比較你的程式碼</h2>
 
-<p><span style='background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: "Open Sans",Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;'>讓我們用剛剛所學的再次檢查完成的程式碼，並把玩一下：</span></p>
+<p>讓我們用剛剛所學的再次檢查完成的程式碼，並把玩一下：</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}</p>
 
