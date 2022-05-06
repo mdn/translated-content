@@ -46,13 +46,13 @@ ctx.closePath();
 
 <p>你不会注意到球正在不停地被重新刷，因为它没有移动。让我们改变这种情况。首先，我们不再使用固定位置(50,50)，而是用x和y的变量来定义画布底部的起始点，然后使用这些变量来定义圆被绘制的位置。</p>
 
-<p><font><font>首先，在</font></font><code>draw()</code><font><font>函数</font><font>上方添加以下两行</font><font>，以定义</font></font><code>x</code><font><font>和</font></font><code>y</code><font><font>：</font></font></p>
+<p>首先，在<code>draw()</code>函数上方添加以下两行，以定义<code>x</code>和<code>y</code>：</p>
 
 <pre class="brush: js">var x = canvas.width/2;
 var y = canvas.height-30;
 </pre>
 
-<p><font><font>接下来更新</font></font> <code>draw()</code> <font><font>函数，在 </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" title="Canvas 2D API的CanvasRenderingContext2D.arc（）方法将以弧度为中心的（x，y）位置的弧线添加一个圆弧，半径r从startAngle开始，并以endAngle的顺时针方向（默认为顺时针方向）终止， 。">arc()</a> </code><font><font>方法中使用 <code>x</code> 和 <code>y</code> 变量，如下面高亮行所示：</font></font></p>
+<p>接下来更新 <code>draw()</code> 函数，在 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" title="Canvas 2D API的CanvasRenderingContext2D.arc（）方法将以弧度为中心的（x，y）位置的弧线添加一个圆弧，半径r从startAngle开始，并以endAngle的顺时针方向（默认为顺时针方向）终止， 。">arc()</a> </code>方法中使用 <code>x</code> 和 <code>y</code> 变量，如下面高亮行所示：</p>
 
 <pre class="brush: js; highlight:[3]">function draw() {
     ctx.beginPath();
@@ -136,8 +136,8 @@ function draw() {
 <p>练习：尝试改变移动球的速度，或者移动球的方向。</p>
 </div>
 
-<h2 id="下一步"><font><font>下一步</font></font></h2>
+<h2 id="下一步">下一步</h2>
 
-<p><font><font>我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。</font><font>在第三章中，我们将探讨如何使其 </font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls">从墙壁上反弹</a>.</p>
+<p>我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。在第三章中，我们将探讨如何使其 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls">从墙壁上反弹</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}</p>
