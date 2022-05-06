@@ -1,29 +1,44 @@
 ---
-title: AudioContext.createBiquadFilter()
+title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createBiquadFilter
+browser-compat: api.BaseAudioContext.createBiquadFilter
 translation_of: Web/API/BaseAudioContext/createBiquadFilter
 original_slug: Web/API/AudioContext/createBiquadFilter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createBiquadFilter()</code>メソッドは<code>、</code>いくつかの一般的なフィルタを設定できる二次フィルターを表す{{ domxref("BiquadFilterNode") }}を生成します。</p>
-</div>
+`createBiquadFilter()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("BiquadFilterNode") }} を生成し、いくつかの異なる共通フィルター型として設定可能な 2 次フィルターを表現します。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} コンストラクターが {{domxref("BiquadFilterNode")}} を作成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();</pre>
+## 構文
 
-<h3 id="Description" name="Description">戻り値</h3>
+```js
+createBiquadFilter()
+```
 
-<p>{{domxref("BiquadFilterNode")}}</p>
+### 引数
 
-<h2 id="Example" name="Example">例</h2>
+なし。
 
-<p>次の例はAudioContextのBiquadFilterNodeの使い方を説明しています。完全に動作する例は、<a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a>デモ(<a href="https://github.com/mdn/voice-change-o-matic">ソースコード</a>もあります)を参照してください。</p>
+### 返値
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+{{domxref("BiquadFilterNode")}} です。
+
+## 例
+
+次の例は AudioContext で Biquad フィルターノードを作成する基本的な使い方を示しています。完全に動作する例は、 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) を参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic)も参照してください）。
+
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // このアプリで使う2つのノードを設定する
 var analyser = audioCtx.createAnalyser();
@@ -45,32 +60,18 @@ gainNode.connect(audioCtx.destination);
 // 二次フィルターで操作する
 
 biquadFilter.type = "lowshelf";
-biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;</pre>
+biquadFilter.frequency.setValueAtTime(1000, audioCtx.currentTime);
+biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createBiquadFilter-BiquadFilterNode', 'createBiquadFilter()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createBiquadFilter")}}</p>
+{{Compat}}
 
-<h2 id="参照">参照</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
