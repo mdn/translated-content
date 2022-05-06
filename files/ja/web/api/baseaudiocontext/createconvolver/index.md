@@ -1,36 +1,51 @@
 ---
-title: AudioContext.createConvolver()
+title: BaseAudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createConvolver
+browser-compat: api.BaseAudioContext.createConvolver
 translation_of: Web/API/BaseAudioContext/createConvolver
 original_slug: Web/API/AudioContext/createConvolver
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createConvolver()</code>メソッドは、音声にリバーブ効果などを適用する{{ domxref("ConvolverNode") }}を生成します。詳細は<a href="http://webaudio.github.io/web-audio-api/#background-3">spec definition of Convolution</a>を参照してください。</p>
-</div>
+`createConvolver()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("ConvolverNode") }} を生成します。これは一般に音声にリバーブ効果を適用するために使用されます。詳しくは[畳み込み効果の仕様定義](https://webaudio.github.io/web-audio-api/#background-3) を参照してください。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}} コンストラクターは {{domxref("ConvolverNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();</pre>
+## 構文
 
-<h3 id="Description" name="Description">戻り値</h3>
+```js
+createConvolver()
+```
 
-<p>{{domxref("ConvolverNode")}}</p>
+### 引数
 
-<h2 id="Examples" name="Examples">例</h2>
+なし。
 
-<p>次の例は畳み込みノードを生成する基礎的なAudioContextの使い方を示しています。まず、畳み込み(インパルス応答)が適用される音声が書き込まれた<code>AudioBuffer</code>を生成し、そしてそれに畳み込みを適用します。例ではコンサートホールの群集の短い音声を使っていて、深く音響したリバーブ効果がかかっています。</p>
+### 返値
 
-<p>例と情報の応用は、<a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-maticデモ</a>(<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">ソースコード</a>)をチェックしてください。</p>
+{{domxref("ConvolverNode")}} です。
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+## 例
+
+次の例は、畳み込みノードを作成するための AudioContext の基本的な使用方法を示しています。大前提として、畳み込み効果を形成するアンビエンスとして使用するサウンドサンプル（*インパルスレスポンス*と呼ばれます）を含む AudioBuffer を作成し、それを畳み込みに適用します。下の例では、コンサートホールの観客の短いサンプルを使っているので、適用されるリバーブ効果はとても深く、エコーがかかっているようです。
+
+応用例や情報については、 [Voice-change-O-matic デモ](https://mdn.github.io/voice-change-o-matic/)を参照してください（関連コードは [app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) を参照してください）。
+
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();
 
   ...
 
-// XHRで畳み込みノードのための音声トラックを得る
+// XHR で畳み込みノードのための音声トラックを得る
 
 var soundSource, concertHallBuffer;
 
@@ -39,43 +54,29 @@ ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
 ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+  var audioData = ajaxRequest.response;
+  audioCtx.decodeAudioData(audioData, function(buffer) {
+      concertHallBuffer = buffer;
+      soundSource = audioCtx.createBufferSource();
+      soundSource.buffer = concertHallBuffer;
+    }, function(e){"Error with decoding audio data" + e.err});
 }
 
 ajaxRequest.send();
 
   ...
 
-convolver.buffer = concertHallBuffer;</pre>
+convolver.buffer = concertHallBuffer;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createConvolver-ConvolverNode', 'createConvolver()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createConvolver")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
