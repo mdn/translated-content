@@ -41,7 +41,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 html,body,svg { height:100% }
 ```
 
-```svg
+```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Avec une hauteur de 0 ou inférieure, rien ne sera affiché -->
   <rect y="0" x="0" width="90" height="0"/>
