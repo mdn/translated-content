@@ -1,36 +1,45 @@
 ---
-title: AudioContext.createDelay()
+title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createDelay
+browser-compat: api.BaseAudioContext.createDelay
 translation_of: Web/API/BaseAudioContext/createDelay
 original_slug: Web/API/AudioContext/createDelay
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createDelay()</code>メソッドは、入力音声信号を一定時間遅らせる{{domxref("DelayNode")}}を生成します。</p>
-</div>
+`createDelay()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("DelayNode")}} を生成します。これは、入力される音声信号を一定時間遅らせるために使用します。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("DelayNode.DelayNode", "DelayNode()")}} コンストラクターは {{domxref("DelayNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var synthDelay = audioCtx.createDelay(maxDelayTime);</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+createDelay(maxDelayTime)
+```
 
-<dl>
- <dt>maxDelayTime</dt>
- <dd>音声信号の最大遅れ時間の秒数。デフォルトは0</dd>
-</dl>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+- `maxDelayTime` {{optional_inline}}
+  - : 音声信号を遅延させることができる最大時間（秒）を指定します。 180 秒未満である必要があり、指定しない場合は 1 秒が既定値となります。
 
-<p>{{domxref("DelayNode")}}</p>
+### 返値
 
-<h2 id="例">例</h2>
+{{domxref("DelayNode")}} です。既定の {{domxref("DelayNode.delayTime")}} は 0 秒です。
 
-<p>ループする3つの異なる簡単な例を用意しました。<a href="http://chrisdavidmills.github.io/create-delay/">create-delay</a>を見てください。(<a href="https://github.com/chrisdavidmills/create-delay">ソースコードも閲覧</a>できます。)ただPlayボタンを押すと、ループはすぐ始まります。スライダーを右に動かしPlayボタンを押すと、待ち時間が挿入され、少し時間が過ぎるまで再生が始まりません。</p>
+## 例
 
-<pre class="brush: js;highlight[4,15,16,21,22]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+3 つの異なるサンプルを一定のループで再生する簡単な例を作成しました。 [create-delay](https://chrisdavidmills.github.io/create-delay/) をご覧ください（[ソースコードを閲覧](https://github.com/chrisdavidmills/create-delay)することもできます）。再生ボタンを押しただけでは、ループはすぐに始まります。スライダーを右にスライドさせてから再生ボタンを押すと、遅延が導入され、ループする音は短い時間だけ再生を開始しません。
+
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var synthDelay = audioCtx.createDelay(5.0);
@@ -60,34 +69,19 @@ stopSynth.onclick = function() {
 
 var delay1;
 rangeSynth.oninput = function() {
-delay1 = rangeSynth.value;
-synthDelay.delayTime.value = delay1;
+  delay1 = rangeSynth.value;
+  synthDelay.delayTime.setValueAtTime(delay1, audioCtx.currentTime);
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createDelay-DelayNode-double-maxDelayTime', 'createDelay()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createDelay")}}</p>
+{{Compat}}
 
-<h2 id="参照">参照</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
