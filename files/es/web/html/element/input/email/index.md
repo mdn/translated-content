@@ -279,7 +279,7 @@ Si necesitas restringir la dirección de correo electrónico ingresada más all�
 
 Por ejemplo, supón que estás creando una página para los empleados de "Best Startup Ever, Inc". lo que les permitirá ponerse en contacto con su departamento de TI para obtener ayuda. En nuestro formulario simplificado, el usuario debe ingresar su dirección de correo y un mensaje que describa el problema con el que necesita ayuda. Queremos asegurarnos de que el usuario no solo proporcione una dirección de correo válida, sino que, por motivos de seguridad, requerimos que la dirección sea una dirección de correo electrónico corporativa interna.
 
-Dado que las entradas de tipo `email` se comprueban con la validación de la dirección de correo estándar _y_: el {{HTMLAttrxRef("pattern", "input")}} especificado, se puede implementar así de fácil. Observa cómo:
+Dado que las entradas de tipo `email` se comprueban con la validación de la dirección de correo estándar _y_ el {{HTMLAttrxRef("pattern", "input")}} especificado, se puede implementar así de fácil. Observa cómo:
 
 ```css hidden
 body {
