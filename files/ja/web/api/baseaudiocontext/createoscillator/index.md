@@ -1,61 +1,63 @@
 ---
-title: AudioContext.createOscillator()
+title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createOscillator
+browser-compat: api.BaseAudioContext.createOscillator
 translation_of: Web/API/BaseAudioContext/createOscillator
 original_slug: Web/API/AudioContext/createOscillator
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createOscillator()</code>メソッドは、周期的な波形を発生源である{{ domxref("OscillatorNode") }}を生成します。これは基礎的な音源です。</p>
-</div>
+`createOscillator()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、周期的な波形を表現するソースである {{domxref("OscillatorNode")}} を生成します。基本的には一定の音程を発生させます。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}} コンストラクターは {{domxref("OscillatorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var oscillator = audioCtx.createOscillator();</pre>
+## 構文
 
-<h3 id="Description" name="Description">戻り値</h3>
+```js
+createOscillator()
+```
 
-<p>{{domxref("OscillatorNode")}}</p>
+### 引数
 
-<h2 id="Examples" name="Examples">例</h2>
+なし。
 
-<p>次の例はオシレーターノードを生成する基礎的なAudioContextの使い方を示しています。例と情報の応用は、<a class="external external-icon" href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-maticデモ</a>(<a class="external external-icon" href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">ソースコード</a>)をチェックしてください。また、{{ domxref("OscillatorNode") }}にはより詳細な情報があります。</p>
+### 返値
 
-<pre class="brush: js">// webオーディオAPIコンテキストを生成する
+{{domxref("OscillatorNode")}} です。
+
+## 例
+
+次の例は、 AudioContext を使用してオシレーターノードを作成する基本的な使用方法です。応用例や情報については、 [Violent Theremin のデモ](https://mdn.github.io/violent-theremin/)を（関連するコードの [app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js)も）参照してください。また、より詳しい情報は {{domxref("OscillatorNode")}} ページをご覧ください。
+
+```js
+// ウェブ音声 API コンテキストを生成する
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // オシレーターノードを生成する
 var oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
-oscillator.frequency.value = 3000; // 値はHz(ヘルツ)
-oscillator.start();</pre>
+oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // 値をヘルツで指定
+oscillator.connect(audioCtx.destination);
+oscillator.start();
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createOscillator-OscillatorNode', 'createOscillator')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createOscillator")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
