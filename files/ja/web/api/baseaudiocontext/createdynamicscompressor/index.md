@@ -1,88 +1,88 @@
 ---
-title: AudioContext.createDynamicsCompressor()
+title: BaseAudioContext.createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createDynamicsCompressor
+browser-compat: api.BaseAudioContext.createDynamicsCompressor
 translation_of: Web/API/BaseAudioContext/createDynamicsCompressor
 original_slug: Web/API/AudioContext/createDynamicsCompressor
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createDynamicsCompressor()</code>メソッドは、音声信号にコンプレッサーを適用する{{domxref("DynamicsCompressorNode")}}を生成します。</p>
-</div>
+`createDynamicsCompressor()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{domxref("DynamicsCompressorNode")}} を生成します。これで、音声信号に圧縮をかけることができます。
 
-<p>コンプレッサーは、音声信号の最大部分の音量を小さくし、最小部分の音量を大きくします。一般的に、より大きく、豊かで、高密度な音になります。これはゲームや音楽アプリケーションでたくさんの別々の音を同時に再生する場合に特に重要です。このような場合、全体の音量の操作したり、出力音声のクリッピング(ひずみ)を避けたいはずです。</p>
+圧縮は、信号の最も大きな部分の音量を下げ、最も小さな部分の音量を上げます。全体として、より大きく、より豊かで、充実したサウンドを実現することができます。特に、ゲームや音楽など、多数の音を同時に再生するアプリケーションでは、全体の信号レベルを制御し、音声出力のクリッピング（歪み）を回避するのに役立つので、重要です。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}} コンストラクターは {{domxref("DynamicsCompressorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();</pre>
+## 構文
 
-<h3 id="戻り値">戻り値</h3>
+```js
+createDynamicsCompressor()
+```
 
-<p>{{domxref("DynamicsCompressorNode")}}</p>
+### 引数
 
-<h2 id="例">例</h2>
+なし。
 
-<p>音声トラックにコンプレッサーを追加するために<code>createDynamicsCompressor()</code>を使う簡単なデモコードです。より完全なサンプルは、<a href="http://mdn.github.io/compressor-example/">basic Compressor example</a> (<a href="https://github.com/mdn/compressor-example">ソースコードの閲覧</a>)を参照してください。</p>
+### 返値
 
-<pre class="brush: js;highlight[6,18,19]">// MediaElementAudioSourceNodeを生成する
-// そこにHTMLMediaElementを入れる
+{{domxref("DynamicsCompressorNode")}} です。
+
+## 例
+
+以下のコードは、音声トラックに圧縮を加えるための `createDynamicsCompressor()` の簡単な使用法を示しています。より完全な例としては、[基本的なコンプレッサーの例](https://mdn.github.io/webaudio-examples/compressor-example/)（[ソースコードを閲覧](https://github.com/mdn/webaudio-examples/tree/master/compressor-example)）をご覧ください。
+
+```js
+// MediaElementAudioSourceNode を生成する
+// そこに HTMLMediaElement を入れる
 var source = audioCtx.createMediaElementSource(myAudio);
 
 // コンプレッサーノードを生成する
 var compressor = audioCtx.createDynamicsCompressor();
-compressor.threshold.value = -50;
-compressor.knee.value = 40;
-compressor.ratio.value = 12;
-compressor.reduction.value = -20;
-compressor.attack.value = 0;
-compressor.release.value = 0.25;
+compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
+compressor.knee.setValueAtTime(40, audioCtx.currentTime);
+compressor.ratio.setValueAtTime(12, audioCtx.currentTime);
+compressor.attack.setValueAtTime(0, audioCtx.currentTime);
+compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 
-// AudioBufferSourceNodeを行き先(destination)につなげる
+// AudioBufferSourceNode を出力先につなげる
 source.connect(audioCtx.destination);
 
 button.onclick = function() {
   var active = button.getAttribute('data-active');
   if(active == 'false') {
     button.setAttribute('data-active', 'true');
-    button.innerHTML = 'Remove compression';
+    button.textContent = 'Remove compression';
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
   } else if(active == 'true') {
     button.setAttribute('data-active', 'false');
-    button.innerHTML = 'Add compression';
+    button.textContent = 'Add compression';
 
     source.disconnect(compressor);
     compressor.disconnect(audioCtx.destination);
     source.connect(audioCtx.destination);
   }
-}</pre>
+}
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createDynamicsCompressor-DynamicsCompressorNode', 'createDynamicsCompressor()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createDynamicsCompressor")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
