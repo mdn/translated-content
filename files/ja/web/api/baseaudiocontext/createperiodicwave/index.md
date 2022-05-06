@@ -1,38 +1,58 @@
 ---
-title: AudioContext.createPeriodicWave()
+title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
+tags:
+  - API
+  - 音声
+  - AudioContext
+  - BaseAudioContext
+  - メディア
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createPeriodicWave
+browser-compat: api.BaseAudioContext.createPeriodicWave
 translation_of: Web/API/BaseAudioContext/createPeriodicWave
 original_slug: Web/API/AudioContext/createPeriodicWave
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createPeriodicWave()</code>メソッドは、周期的な波形を定義するために使われる{{domxref("PeriodicWave")}}を生成します。これは{{ domxref("OscillatorNode") }}の出力を決めるために使われます。</p>
-</div>
+`createPeriodicWave()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、周期的な波形を定義するために使われる {{domxref("PeriodicWave")}} を生成します。これは {{ domxref("OscillatorNode") }} の出力を決めるために使われます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var wave = audioCtx.createPeriodicWave(real, imag);</pre>
+```js
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 引数
 
-<p>{{domxref("PeriodicWave")}}</p>
+- `real`
+  - : 余弦項（従来は A 項）の配列。
+- `imag`
+  - : 正弦項（従来は B 項）の配列。
 
-<h3 id="引数">引数</h3>
+配列 `real` と `imag` は同じ長さでなければならず、そうでない場合はエラーが発生します。
 
-<dl>
- <dt>real</dt>
- <dd>余弦項の配列 (伝統的なA項)</dd>
- <dt>imag</dt>
- <dd>正弦項の配列 (伝統的なB項)</dd>
-</dl>
+- `constraints` {{optional_inline}}
 
-<h2 id="例">例</h2>
+  - : 正規化を無効にするかどうか（指定しない場合、正規化は既定で有効）を指定する辞書オブジェクトです。 1 つのプロパティを持ちます。
 
-<p>The following example illustrates simple usage of <code>createPeriodicWave()</code>, to create a {{domxref("PeriodicWave")}} object containing a simple sine wave.</p>
+    - `disableNormalization`: `true` に設定すると、周期的な波の正規化を無効にします。既定値は `false` です。
 
-<pre class="brush: js;highlight[11]">var real = new Float32Array(2);
+> **Note:** 正規化した場合、結果の波は最大絶対ピーク値が 1 になります。
+
+### 返値
+
+{{domxref("PeriodicWave")}} です。
+
+## 例
+
+次の例は、 `createPeriodicWave()` を使用して単純な正弦波を含む {{domxref("PeriodicWave")}} オブジェクトを作成する方法を示しています。
+
+```js
+var real = new Float32Array(2);
 var imag = new Float32Array(2);
 var ac = new AudioContext();
 var osc = ac.createOscillator();
@@ -42,46 +62,63 @@ imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag);
+var wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
 
 osc.setPeriodicWave(wave);
 
 osc.connect(ac.destination);
 
 osc.start();
-osc.stop(2);</pre>
+osc.stop(2);
+```
 
-<p>This works because a sound that contains only a fundamental tone is by definition a sine wave.<br>
- <br>
- Here, we create a <code>PeriodicWave</code> with two values. The first value is the DC offset, which is the value at which the oscillator starts. 0 is good here, because we want to start the curve at the middle of the [-1.0; 1.0] range.</p>
+これは、基本音だけを含む音は、定義上、正弦波であるため、うまくいきます。
 
-<p>The second and subsequent values are sine and cosine components. You can think of it as the result of a Fourier transform, where you get frequency domain values from time domain value. Here, with <code>createPeriodicWave()</code>, you specify the frequencies, and the browser performs a an inverse Fourier transform to get a time domain buffer for the frequency of the oscillator. Here, we only set one component at full volume (1.0) on the fundamental tone, so we get a sine wave.</p>
+ここでは、 2 つの値を持つ `PeriodicWave` を作成します。最初の値は DC オフセットで、これはオシレーターを開始する値です。ここでは、曲線を \[-1.0; 1.0] 範囲の中央で開始したいので、 0 が適しています。
 
-<p>The coefficients of the Fourier transform should be given in <em>ascending</em> order (i.e. <math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i}   </annotation></semantics></math>etc.) and can be positive or negative.  A simple way of manually obtaining such coefficients (though not the best) is to use a graphing calculator.</p>
+2 つ目以降の値は正弦波と余弦波成分です。時間領域の値から周波数領域の値を得る、フーリエ変換の結果と考えることができます。ここでは、`createPeriodicWave()`で、周波数を指定すると、ブラウザーは逆フーリエ変換を行い、発振器の周波数の時間領域のバッファーを取得します。ここでは、基本音にフルボリューム（1.0）の 1 成分のみを設定しているので、正弦波が得られます。
 
-<h2 id="仕様">仕様</h2>
+フーリエ変換の係数は昇順で与えなければならず（すなわち、<math>
+<semantics><mrow><mrow><mo>(</mo>
+<mrow><mi>a</mi>
+<mo>+</mo>
+<mi>b</mi>
+<mi>i</mi>
+</mrow><mo>)</mo>
+</mrow><msup><mi>e</mi>
+<mi>i</mi>
+</msup><mo>,</mo>
+<mrow><mo>(</mo>
+<mrow><mi>c</mi>
+<mo>+</mo>
+<mi>d</mi>
+<mi>i</mi>
+</mrow><mo>)</mo>
+</mrow><msup><mi>e</mi>
+<mrow><mn>2</mn>
+<mi>i</mi>
+</mrow></msup><mo>,</mo>
+<mrow><mo>(</mo>
+<mrow><mi>f</mi>
+<mo>+</mo>
+<mi>g</mi>
+<mi>i</mi>
+</mrow><mo>)</mo>
+</mrow><msup><mi>e</mi>
+<mrow><mn>3</mn>
+<mi>i</mi>
+</mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} ,
+\left(f+gi\right)e^{3i}   </annotation>
+</semantics></math>など）、正でも負でも構いません。このような係数を手動で得る簡単な方法は（ベストではありませんが）、グラフ計算機を使うことです。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createPeriodicWave-PeriodicWave-Float32Array-real-Float32Array-imag', 'createPeriodicWave')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.BaseAudioContext.createPeriodicWave")}}</p>
+## ブラウザーの互換性
 
-<h2 id="参考">参考</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+## 関連情報
+
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
