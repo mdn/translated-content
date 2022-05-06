@@ -29,7 +29,7 @@ X-kuma-revision: 1085259
 x-frame-options: DENY
 ```
 
-## Ver también
+## Véase también
 
 - [Listado de cabeceras HTTP](/es/docs/Web/HTTP/Headers)
 - [Glosario](/es/docs/Glossary)
