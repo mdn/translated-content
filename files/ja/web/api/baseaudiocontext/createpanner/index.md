@@ -1,35 +1,50 @@
 ---
-title: AudioContext.createPanner()
+title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createPanner
+browser-compat: api.BaseAudioContext.createPanner
 translation_of: Web/API/BaseAudioContext/createPanner
 original_slug: Web/API/AudioContext/createPanner
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }} の <code>createPanner()</code> を利用すると、新しい {{domxref("PannerNode")}} を作成できます。これは空間音響を実現するために利用されます。</p>
+`createPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{domxref("PannerNode") }} を作成するために使用されます。これは、入力される音声ストリームを三次元空間で空間化するのに使われます。
 
-<p>作成された PannerNode は、音声の聴取者の位置と向きから空間的な再生を行います。聴取者の位置と向きは、 {{domxref("AudioListener") }} オブジェクトとして表現され、{{domxref("AudioContext.listener") }} で参照できます。</p>
-</div>
+パナーノードは AudioContext の {{domxref("AudioListener") }} （{{domxref("BaseAudioContext/listener", "AudioContext.listener") }} 属性によって定義）に関連して空間化され、音声を聞く人の位置と向きを表現します。
 
-<h2 id="Syntax" name="Syntax">記法</h2>
+> **Note:** {{domxref("PannerNode.PannerNode", "PannerNode()")}} コンストラクターは {{domxref("PannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();</pre>
+## 構文
 
-<h3 id="Returns" name="Returns">返り値</h3>
+```js
+createPanner()
+```
 
-<p>{{domxref("PannerNode")}} を返します。</p>
+### 引数
 
-<h2 id="Example" name="Example">利用例</h2>
+なし。
 
-<p>以下の例では、<code>createPanner()</code> メソッドの利用方法と、 {{domxref("AudioListener")}} と{{domxref("PannerNode")}} による空間音響のコントロール方法について解説します。一般的には、聴取者と音源の 3 次元空間上での位置を決め、アプリケーションの動きに合わせてそれらを更新することになります。これを利用することで、キャラクターが世界の中を動き回るようなゲームで、近づくと聞こえ、遠ざかると聞こえなくなるステレオを実現できます。 以下の例では <code>moveRight()</code> や <code>moveLeft()、</code><code>PositionPanner()</code> などを利用して、位置をコントロールしています。</p>
+### 返値
 
-<p>完全な実装例は <a href="http://mdn.github.io/panner-node/">panner-node example</a> (<a href="https://github.com/mdn/panner-node">ソースコード</a>) を確認してください。このデモでは 2.5 次元上の「メタルの部屋」上で、曲を再生するラジカセの位置を変更させることで変化する音声を体験できます。</p>
+{{domxref("PannerNode")}} です。
 
-<p>付記：以下の例では比較的新しい属性を利用するために、ブラウザの機能を調べています。例えば位置を設定する {{domxref("AudioListener.forwardX")}}) などです。これらが利用できる場合は利用し、そうでない場合は{{domxref("AudioListener.setOrientation()")}}) のような古いメソッドを利用しています。</p>
+## 例
 
-<pre class="brush: js">// set up listener and panner position information
+次の例では、 `createPanner()` メソッドと {{domxref("AudioListener")}} と {{domxref("PannerNode")}} を使って音声の空間化を制御する例を見ることができます。一般に、音声リスナーとパンナー（音源）が最初に占める三次元空間の位置を定義し、アプリケーションが使用されるたびに、これらの一方または両方の位置を更新します。たとえば、ゲームの世界でキャラクターを動かしていて、キャラクターがステレオなどの音楽プレーヤーに近づいたり遠ざかったりすると、音声の配信がリアルに変化するようにしたい場合があります。この例では `moveRight()`, `moveLeft()` などの関数でこれを制御し、 `PositionPanner()` 関数でパンナーの位置に新しい値を設定しているのが分かると思います。
+
+完全な実装を見るには、私たちの [panner-node の例](https://mdn.github.io/webaudio-examples/panner-node/)（[ソースコードを表示](https://github.com/mdn/webaudio-examples/tree/master/panner-node)）をチェックしてください。このデモでは、 2.5 次元の「金属の部屋」に移動し、ラジカセでトラックを再生し、ラジカセの周りを歩いて音の変化を見ることができます。このデモでは、ラジカセの周りを歩いて、音がどのように変化するかを見ることができます。
+
+なお、機能検出の使用方法に注意してください。ブラウザーが位置の設定などを行うために、新しいプロパティ値（例えば {{domxref("AudioListener.forwardX") }}）に対応している場合はそれを利用し、古いメソッドには対応しているが新しいプロパティには対応していない場合には、古いメソッド（例えば {{domxref("AudioListener.setOrientation()")}}）を利用しています。
+
+```js
+// set up listener and panner position information
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -53,9 +68,9 @@ panner.coneOuterAngle = 0;
 panner.coneOuterGain = 0;
 
 if(panner.orientationX) {
-  panner.orientationX.value = 1;
-  panner.orientationY.value = 0;
-  panner.orientationZ.value = 0;
+  panner.orientationX.setValueAtTime(1, audioCtx.currentTime);
+  panner.orientationY.setValueAtTime(0, audioCtx.currentTime);
+  panner.orientationZ.setValueAtTime(0, audioCtx.currentTime);
 } else {
   panner.setOrientation(1,0,0);
 }
@@ -63,12 +78,12 @@ if(panner.orientationX) {
 var listener = audioCtx.listener;
 
 if(listener.forwardX) {
-  listener.forwardX.value = 0;
-  listener.forwardY.value = 0;
-  listener.forwardZ.value = -1;
-  listener.upX.value = 0;
-  listener.upY.value = 1;
-  listener.upZ.value = 0;
+  listener.forwardX.setValueAtTime(0, audioCtx.currentTime);
+  listener.forwardY.setValueAtTime(0, audioCtx.currentTime);
+  listener.forwardZ.setValueAtTime(-1, audioCtx.currentTime);
+  listener.upX.setValueAtTime(0, audioCtx.currentTime);
+  listener.upY.setValueAtTime(1, audioCtx.currentTime);
+  listener.upZ.setValueAtTime(0, audioCtx.currentTime);
 } else {
   listener.setOrientation(0,0,-1,0,1,0);
 }
@@ -91,54 +106,38 @@ xIterator = WIDTH/150;
 // listener will always be in the same place for this demo
 
 if(listener.positionX) {
-  listener.positionX.value = xPos;
-  listener.positionY.value = yPos;
-  listener.positionZ.value = 300;
+  listener.positionX.setValueAtTime(xPos, audioCtx.currentTime);
+  listener.positionY.setValueAtTime(yPos, audioCtx.currentTime);
+  listener.positionZ.setValueAtTime(300, audioCtx.currentTime);
 } else {
   listener.setPosition(xPos,yPos,300);
 }
 
-listenerData.innerHTML = 'Listener data: X ' + xPos + ' Y ' + yPos + ' Z ' + 300;
+listenerData.textContent = `Listener data: X ${xPos} Y ${yPos} Z 300`;
 
 // panner will move as the boombox graphic moves around on the screen
 function positionPanner() {
   if(panner.positionX) {
-    panner.positionX.value = xPos;
-    panner.positionY.value = yPos;
-    panner.positionZ.value = zPos;
+    panner.positionX.setValueAtTime(xPos, audioCtx.currentTime);
+    panner.positionY.setValueAtTime(yPos, audioCtx.currentTime);
+    panner.positionZ.setValueAtTime(zPos, audioCtx.currentTime);
   } else {
     panner.setPosition(xPos,yPos,zPos);
   }
-  pannerData.innerHTML = 'Panner data: X ' + xPos + ' Y ' + yPos + ' Z ' + zPos;
-}</pre>
+  pannerData.textContent = `Panner data: X ${xPos} Y ${yPos} Z ${zPos}`;
+}
+```
 
-<div class="note">
-<p>listener と panner に設定された位置が正しく機能するためには、それらがスクリーン上の位置を正しく反映している必要があります。そのためには少し面倒な計算が必要となりますが、すこしやれば慣れる類のものです。</p>
-</div>
+> **Note:** リスナーやパンナーの位置値をどのように設定すれば、画面上のビジュアルに適したサウンドになるかという点では、少し面倒な計算が必要となりますが、すこしやれば慣れる類のものです。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createPanner-PannerNode', 'createPanner()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createPanner")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
