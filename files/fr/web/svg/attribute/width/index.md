@@ -5,7 +5,7 @@ translation_of: Web/SVG/Attribute/width
 ---
 {{SVGRef}}
 
-L'attribut **`width`** définit la longueur horizontale d'un élément dans le système des coordonnées de l'utilisateur.
+L'attribut **`width`** définit la longueur horizontale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
@@ -38,7 +38,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html, body, svg { height: 100%; }
 ```
 
 ```html
@@ -514,7 +514,7 @@ Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `width` définit la longueur h
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `width` est une propriété *géométrique*, ce qui signifie que cet attribut peut également être utilisée comme propriété CSS pour les images.
+> **Note :** À partir de SVG2, `width` est une propriété *géométrique*, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS pour les images.
 
 ## `<mask>`
 
@@ -653,73 +653,73 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `width` définit la longueur horiz
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width">Filter Effects Module Level 1  - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width">Filter Effects Module Level 1 — La définition de 'width' dans cette spécification.</a></td>
       <td>Version de travail</td>
       <td>Définition de <code>&lt;filter&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width">Filter Effects Module Level 1 - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width">Filter Effects Module Level 1 — La définition de 'width' dans cette spécification.</a></td>
       <td>Version de travail</td>
       <td>Définition des primitives de filtre</td>
     </tr>
     <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width">CSS Masking Module Level&nbsp;1 - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width">CSS Masking Module Level&nbsp;1 — La définition de 'width' dans cette spécification.</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;mask&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 — La définition de 'width' dans cette spécification.</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition en tant que propriété géométrique</td>
     </tr>
     <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 2 - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'width' dans cette spécification.</a></td>
       <td>Candidat au statut de recommandation</td>
       <td>Définition de <code>&lt;pattern&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a>
+      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a>
       </td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;image&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;svg&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;use&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;filter&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale des primitives de filtre</td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;mask&gt;</code></td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) - La définition de 'width' dans cette spécification.</a></td>
+      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
       <td>Recommandation</td>
       <td>Définition initiale de <code>&lt;rect&gt;</code></td>
     </tr>
