@@ -247,7 +247,7 @@ p { color: blue; }
 p { color: var(--text-color); }
 ```
 
-Comme on pourrait s'y attendre, le valeur applique la substitution aec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
+Comme on pourrait s'y attendre, la valeur applique la substitution avec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
 
 1.  Il vérifie si la propriété peut être héritée (ici `color`) : c'est bien le cas mais dans notre exemple `<p>` n'a aucun parent avec une couleur définie, il passe donc à l'étape suivante.
 2.  La valeur utilisée est **la valeur initiale par défaut**, pour `color`, c'est `black`.
