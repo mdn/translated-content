@@ -1,72 +1,59 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
+tags:
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Method
+  - Prototype
+  - set
+browser-compat: javascript.builtins.Set.values
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
-<div>{{JSRef}}</div>
 
-<p><code><strong>values()</strong></code> method는 <code>Set</code> 객체에 요소가 삽입된 순서대로 각 요소의 값을 순환할 수 있는 <code>Iterator</code> 객체를 반환합니다.</p>
+{{JSRef}}
 
-<p>The <strong><code>keys()</code></strong> method is an alias for this method (for similarity with {{jsxref("Map")}} objects); it behaves exactly the same and returns <strong>values</strong> of <code>Set</code> elements.</p>
+**`values()`** method는 `Set` 객체에 요소가 삽입된 순서대로 각 요소의 값을 순환할 수 있는 새로운 [Iterator](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators) 객체를 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+> **참고:** **`keys()`** 메소드는 이 메소드의 별칭입니다({{jsxref("Map")}} 객체와 유사성을 위해).
+> 따라서, `key()` 페이지는 이곳으로 리다이렉트 됩니다.
+> 그것은 정확히 동일하게 작동하며 `Set` 요소의 **값**을 반환합니다.
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
+## 구문
 
+```js
+values();
+```
 
-<h2 id="Syntax">Syntax</h2>
+### 반환 값
 
-<pre class="syntaxbox"><code><em>mySet</em>.values();
-</code></pre>
+주어진 `Set`의 각 요소의 값을 삽입 순서대로 포함하는 새로운 iterator 객체
 
-<h3 id="Return_value">Return value</h3>
+## 예시
 
-<p>A new <code><strong>Iterator</strong></code> object containing the values for each element in the given <code>Set</code>, in insertion order.</p>
+### `values()` 사용하기
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_values()">Using <code>values()</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
-
 var setIter = mySet.values();
-
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## 명세
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 브라우저 호환성
 
+{{Compat}}
 
+## 같이 보기
 
-<p>{{Compat("javascript.builtins.Set.values")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
