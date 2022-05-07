@@ -14,7 +14,7 @@ original_slug: Setting_up_extension_development_environment
 <ul>
  <li><b>javascript.options.showInConsole</b> = <b>true</b>。chrome ファイルでのエラーを <a href="ja/Error_Console">エラーコンソール</a> に出力します。</li>
  <li><b>nglayout.debug.disable_xul_cache</b> = <b>true</b>。XUL キャッシュを無効にして、再起動しなくてもウィンドウとダイアログの変更が反映されるようにします。これは <a href="#using_directories_rather_than_jars">JAR ファイルの代わりにディレクトリを使用</a> している事が前提です。この設定が有効であっても、XUL オーバーレイに対する変更を反映させるにはオーバーレイされているドキュメントを再読み込みする必要があります。</li>
- <li><b>browser.dom.window.dump.enabled</b> = <b>true</b>。標準コンソールへの出力をする為の dump() 文の使用を可能にします。詳しくは {{ Domxref("window.dump") }} を参照してください。特権スクリプトからならば {{ Interface("nsIConsoleService") }} を使用することも出来ます。</li>
+ <li><b>browser.dom.window.dump.enabled</b> = <b>true</b>。標準コンソールへの出力をする為の dump() 文の使用を可能にします。詳しくは {{ Domxref("window.dump") }} を参照してください。特権スクリプトからならば <code>nsIConsoleService</code> を使用することも出来ます。</li>
  <li><b>javascript.options.strict</b> = <b>true</b>。エラーコンソールでの厳密な警告を有効にします。開発の際にこの設定を無効にしている人は多いので、あなた自身の拡張機能の警告に加えて彼らのコードによる警告が大量に表示されるようになるでしょうから注意が必要です。<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1815">Console<sup>2</sup></a> を使えばそれらをフィルタリングできます。</li>
 </ul>
 <h3 id="Development_extensions">開発のための拡張機能</h3>
