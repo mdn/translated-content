@@ -3,43 +3,45 @@ title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
 tags:
   - API
-  - Experimental
   - MediaDevices
-  - Method
+  - メソッド
+  - リファレンス
+  - WebRTC
+browser-compat: api.MediaDevices.enumerateDevices
 translation_of: Web/API/MediaDevices/enumerateDevices
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
-<strong><code>MediaDevices.enumeratedDevices()</code></strong>  メソッドは、システム上で利用できる入出力メディアデバイスの情報を収集します。
+{{domxref("MediaDevices")}} の **`enumerateDevices()`** メソッドは、マイクやカメラ、ヘッドセットなど、利用可能なメディア入出力機器の一覧を要求します。
+返されたプロミス ({{jsxref("Promise")}}) は、機器を記述した {{domxref("MediaDeviceInfo")}} の配列で解決されます。
 
-<h2 id="構文">構文</h2>
+特定の機器へのアクセスは、[権限 API](/ja/docs/Web/API/Permissions_API) によって制限されます。
+返される機器の一覧では、対応する権限が付与されていない機器は省略されます。 `microphone`, `camera`, `speaker-selection` （出力機器の場合）などです。
 
-<pre class="syntaxbox">navigator.mediaDevices.enumerateDevices();</pre>
+## 構文
 
-<h3 id="戻り値">戻り値</h3>
+```js
+enumerateDevices()
+```
 
-列挙が成功した場合、使用できる入出力メディアデバイスの情報を持つ<font face="Courier New">MediaDeviceInfo</font>オブジェクトの配列で満たされた{{ domxref("Promise") }} が返されます。
+### 引数
 
-次の情報が返されます。プライバシーへの配慮のため、コールした時に現在のページにアクティブな{{domxref("MediaStream")}} オブジェクトがあるか、ユーザーがページのオリジンに対して認可に対して許可を出していない限り、<font face="Courier New">label</font>情報は空文字です。
+なし。
 
-<code>MediaDeviceInfoは以下の情報を含みます。</code>
+### 返値
 
-<dl>
- <dt><code>deviceId</code></dt>
- <dd>deviceIdはセッション間で一貫性のあるデバイスを表現するための識別子である{{domxref("DOMString")}} です。これはほかのアプリケーションから推測できず、呼び出されたアプリケーションのオリジンごとにユニークです。ユーザーがcookieをクリアしたときにリセットされます（プライベートブラウジングのためには、セッション間で一貫性のない異なる識別子が使われます）。</dd>
- <dt><code>groupId</code></dt>
- <dd>groupIdはグループ識別子である{{domxref("DOMString")}} です。同じ物理デバイスに所属する場合、2つのデバイスは同じグループ識別子を持ちます。たとえば、組み込みのカメラとマイクの両方があるモニターです。</dd>
- <dt><code>kind</code></dt>
- <dd>kindは "<font face="Courier New">videoinput</font>"、"<font face="Courier New">audioinput</font>" か "<font face="Courier New">audiooutput</font>"のいづれかが列挙された値です。</dd>
- <dt><code>label</code></dt>
- <dd>labelはこのデバイスを表すラベルである {{domxref("DOMString")}} です（たとえば、"External USB Webcam）。MediaStreamがアクティブな間か認可が許可されているときだけ使用できます。</dd>
-</dl>
+{{ jsxref("Promise") }} で、プロミスが履行されると {{domxref("MediaDeviceInfo")}} オブジェクトの配列を受け取ります。
+配列内の各オブジェクトは、利用可能なメディア入出力機器の 1 つを記述します（権限が付与された機器種別のみが "available" となります）。
+順番は重要で、既定のキャプチャ機器が最初にリストアップされます。
 
-<h2 id="例">例</h2>
+列挙に失敗した場合、プロミスは拒否されます。
 
-<code>mediaDevices.enumerateDevices()</code>の使用例を示します。
+## 例
 
-<pre class="brush: js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+これは `enumerateDevices()` の使用例です。[デバイス ID](/ja/docs/Web/API/MediaDeviceInfo/deviceId) の一覧と、もしあればそのラベルが出力されます。
+
+```js
+if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
 }
@@ -56,61 +58,35 @@ navigator.mediaDevices.enumerateDevices()
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<p>実行例：<br>
- <br>
- <code>videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=<br>
- audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=<br>
- audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=</code><br>
- <br>
- つ以上のMediaStreamがアクティブか、認可に対する許可がある場合：</p>
+出力例です。
 
-<p><code>videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=<br>
- audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=<br>
- audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=</code></p>
+```bash
+videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
+audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
 
-<h2 id="認可">認可</h2>
+または 1 つ以上の {{domxref("MediaStream")}} がアクティブな場合、または永続的な権限が付与されている場合は次のようになります。
 
-インストールできるアプリケーション（たとえば、 [<u><font color="#0066cc">Firefox OS app</font></u>](/ja/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）で<font face="Courier New">enumerateDevices()</font> を使用するには、マニフェストファイルに1つまたは両方の次のフィールドを設定する必要があります。
+```bash
+videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
+audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
 
-<pre class="brush: js">"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
-  }
-}</pre>
+## 仕様書
 
-さらなる情報は[permission: audio-capture](/ja/Apps/Developing/App_permissions#audio-capture)と[permission: video-capture](/ja/Apps/Developing/App_permissions#video-capture)を見てください。
+{{Specifications}}
 
-<h2 id="仕様">仕様</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediadevices', 'mediaDevices.enumerateDevices')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## 関連情報
 
-{{Compat("api.MediaDevices.enumerateDevices")}}
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>[navigator.mediaDevices.getUserMedia](/ja/docs/Web/API/MediaDevices/getUserMedia" title="mediaDevices.getUserMedia)</li>
- <li>[WebRTC](/ja/docs/WebRTC" title="WebRTC) - APIの導入ページ</li>
- <li>[MediaStream API](/ja/docs/WebRTC/MediaStream_API" title="WebRTC/MediaStream_API) - media streamオブジェクトの導入ページ</li>
- <li>[Taking webcam photos](/ja/docs/WebRTC/taking_webcam_photos" title="WebRTC/taking_webcam_photos) - videoよりも写真を撮るために<code>getUserMedia()を使用するためのチュートリアル</code></li>
-</ul>
+- {{domxref("MediaDevices.getUserMedia")}}
+- [WebRTC](/ja/docs/Web/API/WebRTC_API) - API の入門ページ
+- [MediaStream API](/ja/docs/Web/API/Media_Streams_API) - メディアストリームオブジェクトの API
+- [Taking webcam photos](/ja/docs/Web/API/WebRTC_API/Taking_still_photos) は、ビデオではなく写真を撮るために `getUserMedia()` を使用するチュートリアルです。
