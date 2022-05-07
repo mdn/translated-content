@@ -2,147 +2,120 @@
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 tags:
+  - Comparison
+  - Condition
+  - Conditional
   - ECMAScript 2015
+  - Equality
   - JavaScript
-  - 判断
-  - 对象
-  - 方法
-  - 相等
+  - Method
+  - Object
+  - Polyfill
+browser-compat: javascript.builtins.Object.is
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.is()</strong></code> 方法判断两个值是否为<a href="/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness">同一个值</a>。</p>
+**`Object.is()`** 方法判断两个值是否为[同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
 
-<p><strong>语法</strong></p>
+## 语法
 
-<p>
- </p><pre class="syntaxbox"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
+```js
+Object.is(value1, value2);
+```
 
+### 参数
 
-<h3 id="参数">参数</h3>
+- `value1`
+  - : 被比较的第一个值。
+- `value2`
+  - : 被比较的第二个值。
 
-<dl>
- <dt><code><var>value1</var></code></dt>
- <dd>被比较的第一个值。</dd>
- <dt><code><var>value2</var></code></dt>
- <dd>被比较的第二个值。</dd>
-</dl>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+一个{{jsxref("Global_Objects/Boolean", "布尔")}}值，表示两个参数是否是同一个值。
 
-<p>一个 {{jsxref("Boolean")}} 类型标示两个参数是否是同一个值。</p>
+## 描述
 
-<h2 id="描述">描述</h2>
+`Object.is()` 方法判断两个值是否为[同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)，如果满足以下任意条件则两个值相等：
 
-<p><code>Object.is()</code> 方法判断两个值是否为<a href="/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness">同一个值</a>。如果满足以下条件则两个值相等:</p>
+- 都是 {{jsxref("undefined")}}
+- 都是 {{jsxref("null")}}
+- 都是 `true` 或都是 `false`
+- 都是相同长度、相同字符、按相同顺序排列的字符串
+- 都是相同对象（意味着都是同一个对象的值引用）
+- 都是数字且
+  - 都是 `+0`
+  - 都是 `-0`
+  - 都是 {{jsxref("NaN")}}
+  - 都是同一个值，非零且都不是 {{jsxref("NaN")}} 
 
-<ul>
- <li>都是 {{jsxref("undefined")}}</li>
- <li>都是 {{jsxref("null")}}</li>
- <li>都是 <code>true</code> 或 <code>false</code></li>
- <li>都是相同长度的字符串且相同字符按相同顺序排列</li>
- <li>都是相同对象（意味着每个对象有同一个引用）</li>
- <li>都是数字且
-  <ul>
-   <li>都是 <code>+0</code></li>
-   <li>都是 <code>-0</code></li>
-   <li>都是 {{jsxref("NaN")}}</li>
-   <li>或都是非零而且非 {{jsxref("NaN")}} 且为同一个值</li>
-  </ul>
- </li>
-</ul>
+`Object.is()` 与 {{jsxref("Operators", "==", "#相等运算符")}} 不同。`==` 运算符在判断相等前对两边的变量（如果它们不是同一类型）进行强制转换（这种行为将 `"" == false` 判断为 `true`），而 `Object.is` 不会强制转换两边的值。
 
-<p>与{{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} 运算<em>不同。</em>  <code>==</code> 运算符在判断相等前对两边的变量(如果它们不是同一类型) 进行强制转换 (这种行为的结果会将 <code>"" == false</code> 判断为 <code>true</code>), 而 <code>Object.is</code>不会强制转换两边的值。</p>
+`Object.is()` 与 {{jsxref("Operators", "===", "#全等运算符")}} 也不相同。差别是它们对待有符号的零和 NaN 不同，例如，`===` 运算符（也包括 `==` 运算符）将数字 `-0` 和 `+0` 视为相等，而将 {{jsxref("Number.NaN")}} 与 {{jsxref("NaN")}} 视为不相等。
 
-<p>与{{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} 运算也不相同。 <code>===</code> 运算符 (也包括 <code>==</code> 运算符) 将数字 <code>-0</code> 和 <code>+0</code> 视为相等 ，而将{{jsxref("Number.NaN")}} 与{{jsxref("NaN")}}视为不相等.</p>
+## 示例
 
-<h2 id="Polyfill">Polyfill</h2>
+### 使用 Object.is
 
-<pre class="brush: js">if (!Object.is) {
-  Object.is = function(x, y) {
-    // SameValue algorithm
-    if (x === y) { // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x &amp;&amp; y !== y;
-    }
-  };
-}
-</pre>
-
-<h2 id="规范">规范</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.is', 'Object.is')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.is', 'Object.is')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="例子">例子</h2>
-
-<h3 id="使用_Object.is">使用 Object.is</h3>
-
-<pre class="brush: js">Object.is('foo', 'foo');     // true
-Object.is(window, window);   // true
-
-Object.is('foo', 'bar');     // false
-Object.is([], []);           // false
-
+```js
+// Case 1: Evaluation result is the same as using ===
+Object.is(25, 25);                // true
+Object.is('foo', 'foo');          // true
+Object.is('foo', 'bar');          // false
+Object.is(null, null);            // true
+Object.is(undefined, undefined);  // true
+Object.is(window, window);        // true
+Object.is([], []);                // false
 var foo = { a: 1 };
 var bar = { a: 1 };
-Object.is(foo, foo);         // true
-Object.is(foo, bar);         // false
+Object.is(foo, foo);              // true
+Object.is(foo, bar);              // false
 
-Object.is(null, null);       // true
+// Case 2: Signed zero
+Object.is(0, -0);                 // false
+Object.is(+0, -0);                // false
+Object.is(-0, -0);                // true
+Object.is(0n, -0n);               // true
 
-// 特例
-Object.is(0, -0);            // false
-Object.is(0, +0);            // true
-Object.is(-0, -0);           // true
-Object.is(NaN, 0/0);         // true
-</pre>
+// Case 3: NaN
+Object.is(NaN, 0/0);              // true
+Object.is(NaN, Number.NaN)        // true
+```
 
-<p><strong>规范</strong></p>
+## Polyfill
 
-<p>
- </p><table>
-  <thead>
-   <tr>
-    <th scope="col">Specification</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td>{{SpecName('ESDraft', '#sec-object.is', 'Object.is')}}<br>
-      </td>
-   </tr>
-  </tbody>
- </table>
+```js
+if (!Object.is) {
+  Object.defineProperty(Object, "is", {
+    value: function (x, y) {
+      // SameValue algorithm
+      if (x === y) {
+        // return true if x and y are not 0, OR
+        // if x and y are both 0 of the same sign.
+        // This checks for cases 1 and 2 above.
+        return x !== 0 || 1 / x === 1 / y;
+      } else {
+        // return true if both x AND y evaluate to NaN.
+        // The only possibility for a variable to not be strictly equal to itself
+        // is when that variable evaluates to NaN (example: Number.NaN, 0/0, NaN).
+        // This checks for case 3.
+        return x !== x && y !== y;
+      }
+    }
+  });
+}
+```
 
+## 规范
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+{{Specifications}}
 
-<p>{{Compat("javascript.builtins.Object.is")}}</p>
+## 浏览器兼容性
 
-<h2 id="参见">参见</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness">JavaScript 中的相等性判断</a> — JavaScript 中的三种相等性判断方法的比较</li>
-</ul>
+## 参见
+
+- [Polyfill of `Object.is` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
