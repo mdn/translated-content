@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 <p><code><strong>every()</strong></code> 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。</p>
 
 <div class="note">
-<p><strong>备注：</strong>：若收到一个空数组，此方法在一切情况下都会返回 <code>true</code>。</p>
+<p><strong>备注：</strong>若收到一个空数组，此方法在任何情况下都会返回 <code>true</code>。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/array-every.html")}}</div>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果回调函数的每一次返回都为 {{Glossary("truthy")}} 值，返回 <code><strong>true</strong></code> ，否则返回 <code><strong>false</strong></code>。</p>
+<p>如果回调函数的每一次返回都为 {{Glossary("truthy")}} 值，返回 <code><strong>true</strong></code>，否则返回 <code><strong>false</strong></code>。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p><code>every</code> 遍历的元素范围在第一次调用 <code>callback</code> 之前就已确定了。在调用 <code>every</code> 之后添加到数组中的元素不会被 <code>callback</code> 访问到。如果数组中存在的元素被更改，则他们传入 <code>callback</code> 的值是 <code>every</code> 访问到他们那一刻的值。那些被删除的元素或从来未被赋值的元素将不会被访问到。</p>
 
-<p><code>every</code> 和数学中的"所有"类似，当所有的元素都符合条件才会返回<code>true</code>。正因如此，若传入一个空数组，无论如何都会返回 <code>true</code>。（这种情况属于<a href="http://en.wikipedia.org/wiki/Vacuous_truth">无条件正确</a>：正因为一个<a href="https://en.wikipedia.org/wiki/Empty_set#Properties">空集合</a>没有元素，所以它其中的所有元素都符合给定的条件。)</p>
+<p><code>every</code> 和数学中的"所有"类似，当所有的元素都符合条件才会返回 <code>true</code>。正因如此，若传入一个空数组，无论如何都会返回 <code>true</code>。（这种情况属于<a href="http://en.wikipedia.org/wiki/Vacuous_truth">无条件正确</a>：正因为一个<a href="https://en.wikipedia.org/wiki/Empty_set#Properties">空集合</a>没有元素，所以它其中的所有元素都符合给定的条件。)</p>
 
 <h2 id="例子">例子</h2>
 
