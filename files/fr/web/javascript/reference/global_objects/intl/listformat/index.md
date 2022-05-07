@@ -55,11 +55,11 @@ Dans l'exemple qui suit, on voit comment créer un formateur de liste, renvoyant
 const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
-// > [ { "type": "element", "value": "Motorcycle" },
-       { "type": "literal", "value": ", " },
-       { "type": "element", "value": "Bus" },
-       { "type": "literal", "value": ", and " },
-       { "type": "element", "value": "Car" } ];
+// [ { "type": "element", "value": "Motorcycle" },
+//   { "type": "literal", "value": ", " },
+//   { "type": "element", "value": "Bus" },
+//   { "type": "literal", "value": ", and " },
+//   { "type": "element", "value": "Car" } ];
 ```
 
 ## Spécifications
