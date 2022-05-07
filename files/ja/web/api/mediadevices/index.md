@@ -20,40 +20,38 @@ tags:
 browser-compat: api.MediaDevices
 translation_of: Web/API/MediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary"><strong><code>MediaDevices</code></strong> インターフェイスは、カメラやマイク、さらに画面共有などの接続されたメディア入力デバイスへのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。</span></p>
+**`MediaDevices`** インターフェイスは、カメラやマイク、さらに画面共有などの接続されたメディア入力機器へのアクセスを提供します。要するに、メディアデータのソースであるハードウェアにアクセスすることができるようになります。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<p><em>親インターフェイスである {{domxref("EventTarget")}} のプロパティを継承しています。</em></p>
+## プロパティ
 
-<h2 id="Handlers" name="Handlers">イベント</h2>
+_親インターフェイスである {{domxref("EventTarget")}} のプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("MediaDevices/devicechange_event", "devicechange")}}</dt>
- <dd>メディアの入力または出力機器がユーザーのコンピューターに接続されたり取り外されたりしたときに発生します。<br>
- {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} プロパティから利用することもできます。</dd>
-</dl>
+## メソッド
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+_親インターフェイスである {{domxref("EventTarget")}} のメソッドを継承しています。_
 
-<p><em>親インターフェイスである {{domxref("EventTarget")}} のメソッドを継承しています。</em></p>
+- {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
+  - : システム上で使用できる入出力メディア機器についての情報を持つ配列を取得します。
+- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
+  - : {{domxref("MediaTrackSupportedConstraints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxref("MediaStreamTrack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、 {{SectionOnPage("/ja/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}を参照してください。
+- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
+  - : 共有または録画の目的で {{domxref("MediaStream")}} としてキャプチャする、画面または画面の一部 (ウィンドウなど) をユーザーに選択させます。 `MediaStream` で解決する Promise を返します。
+- {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
+  - : ユーザーの許可に基づいて、システム上のカメラや画面共有機能、マイクを起動して、入力と共にビデオトラックやオーディオトラックを含む {{domxref("MediaStream")}} を提供します。
 
-<dl>
- <dt>{{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}</dt>
- <dd>システム上で使用できる入出力メディアデバイスについての情報を持つ配列を取得します。</dd>
- <dt>{{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}</dt>
- <dd>{{domxref("MediaTrackSupportedConstraints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxref("MediaStreamTrack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、 {{SectionOnPage("/ja/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}を参照してください。</dd>
- <dt>{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}</dt>
- <dd>共有または録画の目的で {{domxref("MediaStream")}} としてキャプチャする、画面または画面の一部 (ウィンドウなど) をユーザーに選択させます。 <code>MediaStream</code> で解決する Promise を返します。</dd>
- <dt>{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}</dt>
- <dd>ユーザーの許可に基づいて、システム上のカメラや画面共有機能、マイクを起動して、入力と共にビデオトラックやオーディオトラックを含む {{domxref("MediaStream")}} を提供します。</dd>
-</dl>
+## イベント
 
-<h2 id="Example" name="Example">例</h2>
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+  - : メディアの入力または出力機器がユーザーのコンピューターに接続されたり取り外されたりしたときに発生します。
 
-<pre class="brush:js">'use strict';
+## 例
+
+```js
+'use strict';
 
 // Put variables in global scope to make them available to the browser console.
 var video = document.querySelector('video');
@@ -77,7 +75,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 .catch(function(error) {
   if (error.name === 'ConstraintNotSatisfiedError') {
     errorMsg('The resolution ' + constraints.video.width.exact + 'x' +
-        constraints.video.width.exact + ' px is not supported by your device.');
+        constraints.video.height.exact + ' px is not supported by your device.');
   } else if (error.name === 'PermissionDeniedError') {
     errorMsg('Permissions have not been granted to use your camera and ' +
       'microphone, you need to allow the page access to your devices in ' +
@@ -87,44 +85,26 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
+  errorElement.innerHTML += '<p>' + msg + '</p>';
   if (typeof error !== 'undefined') {
     console.error(error);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.MediaDevices")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: このインターフェイスが所属する API。</li>
- <li><a href="/ja/docs/Web/API/Screen_Capture_API">Screen Capture API</a>: {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを定義している API。</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("Navigator.mediaDevices")}}: 機器にアクセスするために使用することができる <code>MediaDevices</code> への参照を返します。</li>
- <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> HTML5 による動画キャプチャおよび再生で、 <code>MediaDevices</code> および MediaStream Recording API を使用しています (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">GitHub 上のソース</a>)</li>
- <li><a href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: HTML5 による動画言語研究ウェブアプリケーションで、 <code>MediaDevices</code> および MediaStream Recording API を録画に使用しています (<a href="https://github.com/chrisjohndigital/OpenLang">GitHub 上のソース</a>)。</li>
-</ul>
+- [Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API): このインターフェイスが所属する API。
+- [Screen Capture API](/ja/docs/Web/API/Screen_Capture_API): {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを定義している API。
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+- {{domxref("Navigator.mediaDevices")}}: 機器にアクセスするために使用することができる `MediaDevices` への参照を返します。
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 による動画キャプチャおよび再生で、 `MediaDevices` および MediaStream Recording API を使用しています ([GitHub 上のソース](https://github.com/chrisjohndigital/CameraCaptureJS))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 による動画言語研究ウェブアプリケーションで、 `MediaDevices` および MediaStream Recording API を録画に使用しています ([GitHub 上のソース](https://github.com/chrisjohndigital/OpenLang))。
