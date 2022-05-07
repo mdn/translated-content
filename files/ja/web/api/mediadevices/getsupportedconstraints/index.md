@@ -1,78 +1,76 @@
 ---
 title: MediaDevices.getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
+tags:
+  - API
+  - メディア
+  - メディアキャプチャとストリーム API
+  - メディアストリーム API
+  - MediaDevices
+  - メソッド
+  - リファレンス
+  - WebRTC
+  - getSupportedConstraints
+browser-compat: api.MediaDevices.getSupportedConstraints
 translation_of: Web/API/MediaDevices/getSupportedConstraints
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaDevices")}} インタフェースの<code><strong>getSupportedConstraints</strong></code><strong><code>()</code></strong> メソッドは、{{domxref("MediaTrackSupportedConstraints")}}ディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、{{Glossary("user agent")}}が扱えるメディア制約に関するプロパティを表しています。</p>
+**`getSupportedConstraints()`** は {{domxref("MediaDevices")}} インターフェイスのメソッドで、 {{domxref("MediaTrackSupportedConstraints")}} 辞書に基づくオブジェクトを返却し、そのそれぞれのメンバーフィールドは、{{Glossary("user agent", "ユーザーエージェント")}}が理解する制約可能なプロパティの 1 つを指定します。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>supportedConstraints</em> = navigator.mediaDevices.getSupportedConstraints();</pre>
+```js
+getSupportedConstraints()
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>{{domxref("MediaTrackSupportedConstraints")}}ディクショナリをベースにした新しいオブジェクトです。このオブジェクトはユーザエージェントが扱えるメディア制約の一覧を含みます。この一覧に含まれているものはユーザエージェントが取り扱えるものだけなので、全てのBoolean型のプロパティは<code>true</code>の値になっています。</p>
+{{domxref("MediaTrackSupportedConstraints")}} 辞書に基づく新しいオブジェクトです。このオブジェクトはユーザーエージェントが扱うことができるメディア制約の一覧を含みます。この一覧に含まれているものは、ユーザーエージェントが取り扱えるものだけなので、全ての論理型のプロパティは `true` の値になっています。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は、実行中のブラウザでサポートされている制約の一覧を出力するものです。</p>
+この例は、実行中のブラウザーで対応している制約の一覧を出力するものです。
 
-<div class="hidden">
-<h3 id="HTML">HTML</h3>
+```html hidden
+<p>あなたのブラウザーは、以下のメディア制約に対応しています。</p>
 
-<pre class="brush: html">&lt;p&gt;あなたのブラウザは、以下のメディア制約をサポートしています。&lt;/p&gt;
+<ul id="constraintList">
+</ul>
+```
 
-&lt;ul id="constraintList"&gt;
-&lt;/ul&gt;</pre>
+```css hidden
+body {
+  font: 15px Arial, sans-serif;
+}
+```
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">body {
-  font: 15px Arial, sans-serif;
-}</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-</div>
-
-<pre class="brush: js">let constraintList = document.getElementById("constraintList");
+```js
+let constraintList = document.getElementById("constraintList");
 let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
 for (let constraint in supportedConstraints) {
   if (supportedConstraints.hasOwnProperty(constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "&lt;code&gt;" + constraint + "&lt;/code&gt;";
+    elem.innerHTML = "<code>" + constraint + "</code>";
     constraintList.appendChild(elem);
   }
-}</pre>
+}
+```
 
-<h3 id="実行結果">実行結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example', 600, 350) }}</p>
+{{ EmbedLiveSample('Examples', 600, 350) }}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#widl-MediaDevices-getSupportedConstraints-MediaTrackSupportedConstraints', 'getSupportedConstraints()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaDevices.getSupportedConstraints")}}</p>
+{{Compat}}
