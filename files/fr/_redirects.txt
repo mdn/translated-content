@@ -831,7 +831,7 @@
 /fr/docs/Canvas_tutoriel	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Canvas_tutoriel/Utilisation_d'images	/fr/docs/Web/API/Canvas_API/Tutorial/Using_images
 /fr/docs/Changements_dans_Gecko_1.9_affectant_les_sites_Web	/fr/docs/Mozilla/Firefox/Releases/3/Site_compatibility
-/fr/docs/Chrome	/fr/docs/conflicting/Glossary/Chrome
+/fr/docs/Chrome	/fr/docs/Glossary/Chrome
 /fr/docs/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /fr/docs/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /fr/docs/Comment_créer_un_arbre_DOM	/fr/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
@@ -1367,7 +1367,7 @@
 /fr/docs/Glossaire/DMZ	/fr/docs/Glossary/DMZ
 /fr/docs/Glossaire/DNS	/fr/docs/Glossary/DNS
 /fr/docs/Glossaire/DOM	/fr/docs/Glossary/DOM
-/fr/docs/Glossaire/DTD	/fr/docs/conflicting/Glossary/Doctype
+/fr/docs/Glossaire/DTD	/fr/docs/Glossary/Doctype
 /fr/docs/Glossaire/DTMF	/fr/docs/Glossary/DTMF
 /fr/docs/Glossaire/Delta	/fr/docs/Glossary/Delta
 /fr/docs/Glossaire/Descripteur_(CSS)	/fr/docs/Glossary/Descriptor_(CSS)
@@ -1474,7 +1474,7 @@
 /fr/docs/Glossaire/Identificateur	/fr/docs/Glossary/Identifier
 /fr/docs/Glossaire/Image_matricielle	/fr/docs/Glossary/Raster_image
 /fr/docs/Glossaire/Immuable	/fr/docs/Glossary/Immutable
-/fr/docs/Glossaire/Index	/fr/docs/conflicting/Glossary
+/fr/docs/Glossaire/Index	/fr/docs/Glossary
 /fr/docs/Glossaire/IndexedDB	/fr/docs/Glossary/IndexedDB
 /fr/docs/Glossaire/Injection_SQL	/fr/docs/Glossary/SQL_Injection
 /fr/docs/Glossaire/Input_method_editor	/fr/docs/Glossary/Input_method_editor
@@ -1651,7 +1651,7 @@
 /fr/docs/Glossaire/Texte_brut	/fr/docs/Glossary/Plaintext
 /fr/docs/Glossaire/Three_js	/fr/docs/Glossary/Three_js
 /fr/docs/Glossaire/Time_to_interactive	/fr/docs/Glossary/Time_to_interactive
-/fr/docs/Glossaire/Transmission_Control_Protocol_(TCP)	/fr/docs/conflicting/Glossary/TCP
+/fr/docs/Glossaire/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
 /fr/docs/Glossaire/Tree_shaking	/fr/docs/Glossary/Tree_shaking
 /fr/docs/Glossaire/Tri_par_cartes	/fr/docs/Glossary/Card_sorting
 /fr/docs/Glossaire/Trident	/fr/docs/Glossary/Trident
@@ -1751,11 +1751,11 @@
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
-/fr/docs/Glossary/Index	/fr/docs/conflicting/Glossary
+/fr/docs/Glossary/Index	/fr/docs/Glossary
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
-/fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/conflicting/Glossary/TCP
+/fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
 /fr/docs/Guide_JavaScript_1.5/Aperçu_de_JavaScript	/fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_break	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_do...while	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -3337,7 +3337,7 @@
 /fr/docs/Précis_CSS_2	/fr/docs/Web/CSS
 /fr/docs/Précis_CSS_2/Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
-/fr/docs/Référence_DOM_Gecko	/fr/docs/conflicting/Glossary/DOM
+/fr/docs/Référence_DOM_Gecko	/fr/docs/Glossary/DOM
 /fr/docs/Référence_de_JavaScript_1.5_Core	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions	/fr/docs/Web/JavaScript/Reference/Functions
@@ -6039,6 +6039,11 @@
 /fr/docs/XSLT_dans_Gecko:Génération_de_HTML	/fr/docs/Web/API/XSLTProcessor/Generating_HTML
 /fr/docs/Zoom_pleine_page	/fr/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /fr/docs/appendChild	/fr/docs/Web/API/Node/appendChild
+/fr/docs/conflicting/Glossary	/fr/docs/Glossary
+/fr/docs/conflicting/Glossary/Chrome	/fr/docs/Glossary/Chrome
+/fr/docs/conflicting/Glossary/DOM	/fr/docs/Glossary/DOM
+/fr/docs/conflicting/Glossary/Doctype	/fr/docs/Glossary/Doctype
+/fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP
 /fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors	/fr/docs/Learn/CSS/Building_blocks/Selectors
 /fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction	/fr/docs/Learn/CSS/CSS_layout/Introduction
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
