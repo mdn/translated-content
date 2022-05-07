@@ -8,9 +8,9 @@ tags:
   - Method
 translation_of: Web/API/MediaDevices/enumerateDevices
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p><strong><code>MediaDevices.enumeratedDevices()</code></strong>  メソッドは、システム上で利用できる入出力メディアデバイスの情報を収集します。</p>
+<strong><code>MediaDevices.enumeratedDevices()</code></strong>  メソッドは、システム上で利用できる入出力メディアデバイスの情報を収集します。
 
 <h2 id="構文">構文</h2>
 
@@ -18,11 +18,11 @@ translation_of: Web/API/MediaDevices/enumerateDevices
 
 <h3 id="戻り値">戻り値</h3>
 
-<p>列挙が成功した場合、使用できる入出力メディアデバイスの情報を持つ<font face="Courier New">MediaDeviceInfo</font>オブジェクトの配列で満たされた{{ domxref("Promise") }} が返されます。</p>
+列挙が成功した場合、使用できる入出力メディアデバイスの情報を持つ<font face="Courier New">MediaDeviceInfo</font>オブジェクトの配列で満たされた{{ domxref("Promise") }} が返されます。
 
-<p>次の情報が返されます。プライバシーへの配慮のため、コールした時に現在のページにアクティブな{{domxref("MediaStream")}} オブジェクトがあるか、ユーザーがページのオリジンに対して認可に対して許可を出していない限り、<font face="Courier New">label</font>情報は空文字です。</p>
+次の情報が返されます。プライバシーへの配慮のため、コールした時に現在のページにアクティブな{{domxref("MediaStream")}} オブジェクトがあるか、ユーザーがページのオリジンに対して認可に対して許可を出していない限り、<font face="Courier New">label</font>情報は空文字です。
 
-<p><code>MediaDeviceInfoは以下の情報を含みます。</code></p>
+<code>MediaDeviceInfoは以下の情報を含みます。</code>
 
 <dl>
  <dt><code>deviceId</code></dt>
@@ -37,7 +37,7 @@ translation_of: Web/API/MediaDevices/enumerateDevices
 
 <h2 id="例">例</h2>
 
-<p><code>mediaDevices.enumerateDevices()</code>の使用例を示します。</p>
+<code>mediaDevices.enumerateDevices()</code>の使用例を示します。
 
 <pre class="brush: js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
@@ -72,7 +72,7 @@ navigator.mediaDevices.enumerateDevices()
 
 <h2 id="認可">認可</h2>
 
-<p>インストールできるアプリケーション（たとえば、 <a href="/ja/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial"><u><font color="#0066cc">Firefox OS app</font></u></a>）で<font face="Courier New">enumerateDevices()</font> を使用するには、マニフェストファイルに1つまたは両方の次のフィールドを設定する必要があります。</p>
+インストールできるアプリケーション（たとえば、 [<u><font color="#0066cc">Firefox OS app</font></u>](/ja/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）で<font face="Courier New">enumerateDevices()</font> を使用するには、マニフェストファイルに1つまたは両方の次のフィールドを設定する必要があります。
 
 <pre class="brush: js">"permissions": {
   "audio-capture": {
@@ -83,7 +83,7 @@ navigator.mediaDevices.enumerateDevices()
   }
 }</pre>
 
-<p>さらなる情報は<a href="/ja/Apps/Developing/App_permissions#audio-capture">permission: audio-capture</a>と<a href="/ja/Apps/Developing/App_permissions#video-capture">permission: video-capture</a>を見てください。</p>
+さらなる情報は[permission: audio-capture](/ja/Apps/Developing/App_permissions#audio-capture)と[permission: video-capture](/ja/Apps/Developing/App_permissions#video-capture)を見てください。
 
 <h2 id="仕様">仕様</h2>
 
@@ -104,13 +104,13 @@ navigator.mediaDevices.enumerateDevices()
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-<p>{{Compat("api.MediaDevices.enumerateDevices")}}</p>
+{{Compat("api.MediaDevices.enumerateDevices")}}
 
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
- <li><a href="/ja/docs/Web/API/MediaDevices/getUserMedia" title="mediaDevices.getUserMedia">navigator.mediaDevices.getUserMedia</a></li>
- <li><a href="/ja/docs/WebRTC" title="WebRTC">WebRTC</a> - APIの導入ページ</li>
- <li><a href="/ja/docs/WebRTC/MediaStream_API" title="WebRTC/MediaStream_API">MediaStream API</a> - media streamオブジェクトの導入ページ</li>
- <li><a href="/ja/docs/WebRTC/taking_webcam_photos" title="WebRTC/taking_webcam_photos">Taking webcam photos</a> - videoよりも写真を撮るために<code>getUserMedia()を使用するためのチュートリアル</code></li>
+ <li>[navigator.mediaDevices.getUserMedia](/ja/docs/Web/API/MediaDevices/getUserMedia" title="mediaDevices.getUserMedia)</li>
+ <li>[WebRTC](/ja/docs/WebRTC" title="WebRTC) - APIの導入ページ</li>
+ <li>[MediaStream API](/ja/docs/WebRTC/MediaStream_API" title="WebRTC/MediaStream_API) - media streamオブジェクトの導入ページ</li>
+ <li>[Taking webcam photos](/ja/docs/WebRTC/taking_webcam_photos" title="WebRTC/taking_webcam_photos) - videoよりも写真を撮るために<code>getUserMedia()を使用するためのチュートリアル</code></li>
 </ul>
