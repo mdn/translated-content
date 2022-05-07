@@ -41491,24 +41491,6 @@
       "Sheppy"
     ]
   },
-  "conflicting/Mozilla/Add-ons/WebExtensions": {
-    "modified": "2019-03-18T21:01:44.832Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext": {
-    "modified": "2019-07-03T07:58:27.877Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
-    "modified": "2020-10-15T22:23:34.113Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-03-24T00:13:05.858Z",
     "contributors": [
