@@ -91,20 +91,20 @@ translation_of: Mozilla/Firefox/Releases/15
 <h3 id="Interface_changes" name="Interface_changes">インタフェースの変更点</h3>
 
 <dl>
- <dt>{{interface("nsIDOMWindowUtils")}}</dt>
+ <dt><code>nsIDOMWindowUtils</code></dt>
  <dd><code>sendMouseEvent()</code>、<code>sendTouchEvent()</code>、<code>sendMouseEventToWindow()</code>、<code>sendMouseScrollEvent()</code> および <code>sendKeyEvent()</code> の <code>aModifiers</code> は <a href="/ja/docs/DOM/KeyboardEvent#getModifierState%28%29" title="https://developer.mozilla.org/ja/docs/DOM/KeyboardEvent#getModifierState%28%29"><code>KeyboardEvent.getModifierState()</code></a> でサポートされている修飾キーのすべてをサポートします。<code>MODIFIER_*</code> という値を利用してください。 また、<code>sendKeyEvent()</code> の第 5 引数が <code>boolean</code> から <code>unsigned long</code> に変更されました。後方互換性のために、呼び出し元がそれに対して <code>true</code> または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。</dd>
- <dt>{{interface("nsIBrowserHistory")}}</dt>
+ <dt><code>nsIBrowserHistory</code></dt>
  <dd><code>hidePage()</code> メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。<a href="/ja/docs/Places" title="Places">Places</a> API のすべてを非同期化する進行中の作業の一部として、<code>addPageWithDetails()</code> メソッドも削除されます。代わりに {{ifmethod("mozIAsyncHistory", "updatePlaces")}} を利用してください。また、<code>count</code> 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリが存在したかどうかを返していました）。代わりに {{ifattribute("nsINavHistoryService", "hasHistoryEntries")}} を利用できます。</dd>
- <dt>{{interface("inIDOMUtils")}}</dt>
+ <dt><code>inIDOMUtils</code></dt>
  <dd>{{ifmethod("inlDOMUtils", "parseStyleSheet")}} メソッドが追加され、CSS の (再) 解析ができるようになりました。</dd>
- <dt>{{interface("nsIINIParserWriter")}}</dt>
+ <dt><code>nsIINIParserWriter</code></dt>
  <dd>{{ifmethod("nsIINIParserWriter", "writeFile")}} メソッドが <code>flags</code> プロパティを受け入れるようになりました。現在は 1 個のオプションのみを与えます: Windows および特定のインストーラーとの互換性のため、ファイルを UTF-8 形式の代わりに UTF-16 形式で書き込むことを知らせることができます。</dd>
 </dl>
 
 <h4 id="New_interfaces" name="New_interfaces">新しいインタフェース</h4>
 
 <dl>
- <dt>{{interface("nsISpeculativeConnect")}}</dt>
+ <dt><code>nsISpeculativeConnect</code></dt>
  <dd>近い将来のいつかに要求される可能性がある、与えられた URI への接続をオープンするネットワーキング層のヒントを与えるための方法を提供します。これによりネットワーク層が時として高レイテンシプロセスで前もっと新しいネットワーク接続を開き始めることを可能にします。</dd>
 </dl>
 
@@ -113,7 +113,7 @@ translation_of: Mozilla/Firefox/Releases/15
 <p>以下のインタフェースが削除されました。</p>
 
 <ul>
- <li>{{interface("nsIGlobalHistory")}}</li>
+ <li><code>nsIGlobalHistory</code></li>
 </ul>
 
 <h2 id="See_also" name="See_also">関連記事</h2>
