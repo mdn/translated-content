@@ -6,20 +6,18 @@ tags:
   - Audio
   - Conference
   - Devices
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
+  - インターフェイス
+  - メディア
+  - メディアキャプチャとストリーム API
+  - メディアストリーム API
   - MediaDevices
-  - Reference
-  - Screen Capture
-  - Screen Capture API
+  - リファレンス
+  - 画面キャプチャ
+  - 画面キャプチャ API
   - Sharing
   - Video
   - WebRTC
-  - インターフェイス
-  - メディアストリーム
-  - 画面キャプチャ
+browser-compat: api.MediaDevices
 translation_of: Web/API/MediaDevices
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
