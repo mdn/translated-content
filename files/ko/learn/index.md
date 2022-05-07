@@ -10,31 +10,15 @@ tags:
   - Landing
   - Learn
   - Web
-  - 웹
-  - 초보자
-  - 학습
 translation_of: Learn
 ---
 {{LearnSidebar}}
 
-MDN 학습지에 오신 것을 환영합니다! 여기는 웹 개발을 처음 접하는 초보자가 웹 사이트 개발을 시작하기 위해 필요한 모든
-것을 제공하는 글을 모아놓은 곳입니다.
+MDN 학습지에 오신 것을 환영합니다! 여기는 웹 개발을 처음 접하는 초보자가 웹 사이트 개발을 시작하기 위해 필요한 모든 것을 제공하는 글을 모아놓은 곳입니다.
 
-MDN 학습지의 목표는 여러분을 "전문가"로 만드는 것이 아니고, 웹 개발에 익숙해지도록 도와드리는 것입니다. 그 후에는
-[MDN의 다른 문서](/ko/)를 포함해서, 각종 사전 지식을 요구하는 중급, 고급 리소스를 찾아 자신만의 길을
-만드세요.
+MDN 학습지의 목표는 여러분을 "전문가"로 만드는 것이 아니고, 웹 개발에 익숙해지도록 도와드리는 것입니다. 그 후에는 [MDN의 다른 문서](/ko/)를 포함해서, 각종 사전 지식을 요구하는 중급, 고급 리소스를 찾아 자신만의 길을 만드세요.
 
-웹 개발이 완전 처음이시라면 시작이 다소 어려우실 수 있습니다. 저희가 이끌어드리면서 주제와 충분히 친숙해지고, 제대로
-익히실 수 있도록 상세하게 알려드리겠습니다. 독학이나 강의로 웹 개발을 배우는 학생, 교육 자료를 찾고 계시는 선생님,
-취미로 웹 개발을 알아보시는 분, 그저 웹 기술의 동작 원리를 알아보고 싶으신 분 모두 편하게 보실 수 있을거예요.
-
-## 새로운 콘텐츠
-
-학습지에는 내용이 계속 추가되고 있습니다. 바뀐 점을 알려드리기 위해
-[학습지 릴리즈 노트](/ko/docs/Learn/Release_notes)를 관리하고 있으니 종종 찾아오세요!
-
-빠진 부분을 찾으셨거나, 추가로 원하는 주제가 있으신가요?
-[Discourse 포럼](https://discourse.mozilla.org/c/mdn)에 남겨주세요.
+웹 개발이 완전 처음이시라면 시작이 다소 어려우실 수 있습니다. 저희가 이끌어드리면서 주제와 충분히 친숙해지고, 제대로 익히실 수 있도록 상세하게 알려드리겠습니다. 독학이나 강의로 웹 개발을 배우는 학생, 교육 자료를 찾고 계시는 선생님, 취미로 웹 개발을 알아보시는 분, 그저 웹 기술의 동작 원리를 알아보고 싶으신 분 모두 편하게 보실 수 있을거예요.
 
 > **알림:**
 >
@@ -142,7 +126,7 @@ GitHub의 마스터 버전에 변경사항이 생겼을 땐 `learning-area` 저�
 ## 연락처
 
 어떤 주제건 저희에게 연락하고 싶으실 때 가장 좋은 방법은
-[Discourse 포럼](https://discourse.mozilla.org/c/mdn)에 글을 남겨주시는 것입니다. 틀린 점, 빠진 부분,
+[Discourse 포럼](https://discourse.mozilla.org/c/mdn/236)에 글을 남겨주시는 것입니다. 틀린 점, 빠진 부분,
 새로운 학습지 주제, 이해가 어려운 부분에 대한 도움 요청, 그 외 기타 질문이나 걱정거리 등 무엇이든 좋아요.
 
 콘텐츠의 추가와 개선에 관심이 있으시면
@@ -156,8 +140,7 @@ GitHub의 마스터 버전에 변경사항이 생겼을 땐 `learning-area` 저�
 - [Mozilla 개발자 뉴스레터](https://www.mozilla.org/en-US/newsletter/developer/)
   - : 웹 개발자를 위한 Mozilla의 뉴스레터입니다. 모둔 수준의 개발자에게 유용합니다.
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : Web 개발자 지망생을 위한 훌륭한 자료  — 짧은 강좌와 대화형 테스트, 자동화된 평가로 지도하는 인터랙티브 환경에서
-    JavaScript를 배웁니다. 처음 40개 강좌는 무료이며, 한번의 작은 금액 지불로 전체코스를 수강할 수 있습니다.
+  - : Web 개발자 지망생을 위한 훌륭한 자료  — 짧은 강좌와 대화형 테스트, 자동화된 평가로 지도하는 인터랙티브 환경에서 JavaScript를 배웁니다. 처음 40개 강좌는 무료이며, 한번의 작은 금액 지불로 전체코스를 수강할 수 있습니다.
 - [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
   - : [Jérémie Patonnier](https://twitter.com/JeremiePat)가 만든 웹 개발을 초보자가 기본을 쌓기에 좋은 강의
 - [Codecademy](https://www.codecademy.com/)
@@ -170,15 +153,11 @@ GitHub의 마스터 버전에 변경사항이 생겼을 땐 `learning-area` 저�
   - : 웹 개발을 배우기 위한 튜토리얼과 프로젝트가 있음
 - [Web Literacy Map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
   - : 초보자가 웹을 활용하고 최신 기술을 배울 수 있는 사이트로 학습 활동을 위한 자료도 제공함
-- [Edabit](https://edabit.com/)
+- [Edabit](https://edabit.com/challenges/javascript)
   - : 다양한 코딩 문제를 접할 수 있음
 
 ### 한국어
 
-- [Code.org](https://code.org/)
-  - : 기초 코딩 이론과 연습. 주로 아이들이나 완전 초보자를 대상으로 함
-- [프로그래머스](https://programmers.co.kr/)
-  - : 프로그래밍의 기초와 실습을 동시에 할 수 있음
 - [생활코딩](https://opentutorials.org/course/1)
   - : 웹에 대한 기초를 쌓기에 유익함
 - [edwith](https://www.edwith.org/)
