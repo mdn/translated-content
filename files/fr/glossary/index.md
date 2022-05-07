@@ -10,8 +10,6 @@ Vous pouvez parcourir les termes du glossaire en utilisant la barre latérale.
 
 > **Note :** Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Contribute/Localize) ou en améliorant les pages existantes.
 
-{{LearnBox({"title":"Apprenez un nouveau mot…"})}}
-
 <section id="Quick_links">
  <ol>
   <li><strong><a href="/fr/docs/Glossary">Glossaire MDN</a></strong>{{ListSubpagesForSidebar("/fr/docs/Glossary", 1)}}</li>
