@@ -42924,59 +42924,6 @@
       "loella16"
     ]
   },
-  "orphaned/Web/API/ParentNode": {
-    "modified": "2020-10-15T21:33:02.872Z",
-    "contributors": [
-      "abvll",
-      "loella16",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/append": {
-    "modified": "2020-10-15T21:59:23.058Z",
-    "contributors": [
-      "Yukulele.",
-      "Watilin",
-      "ayshiff"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/children": {
-    "modified": "2020-10-15T21:43:07.206Z",
-    "contributors": [
-      "Arzak656",
-      "jMoulis",
-      "loella16",
-      "NemoNobobyPersonne",
-      "xavierartot"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-03-18T21:39:15.409Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:02:32.998Z",
-    "contributors": [
-      "Yukulele.",
-      "Seblor",
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/querySelector": {
-    "modified": "2020-10-15T22:30:52.578Z",
-    "contributors": [
-      "NeaVy"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T22:02:32.472Z",
-    "contributors": [
-      "abvll",
-      "loella16"
-    ]
-  },
   "orphaned/Web/API/SVGStylable": {
     "modified": "2020-10-15T21:34:30.185Z",
     "contributors": [
