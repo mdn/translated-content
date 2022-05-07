@@ -1,31 +1,48 @@
 ---
-title: AudioContext.createStereoPanner()
+title: BaseAudioContext.createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
+tags:
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - メディア
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - createStereoPanner
+browser-compat: api.BaseAudioContext.createStereoPanner
 translation_of: Web/API/BaseAudioContext/createStereoPanner
 original_slug: Web/API/AudioContext/createStereoPanner
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}インターフェースの<code>createStereoPanner()</code>メソッドは、音源にステレオパンニングを適用する{{ domxref("StereoPannerNode") }}を生成します。入力されたオーディオストリームは、低コストな<a class="external external-icon" href="http://webaudio.github.io/web-audio-api/#equal-power">equal-power</a>パンニングアルゴリズムで位置が決められます。</p>
-</div>
+`createStereoPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、音源にステレオパンニングを適用する{{ domxref("StereoPannerNode") }}を生成します。
+入力された音声ストリームは、[低コストのパンニングアルゴリズム](https://webaudio.github.io/web-audio-api/#stereopanner-algorithm)で位置が決められます。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}} コンストラクターは {{domxref("StereoPannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var panNode = audioCtx.createStereoPanner();</pre>
+## 構文
 
-<h3 id="Description" name="Description">戻り値</h3>
+```js
+createStereoPanner()
+```
 
-<p>{{domxref("StereoPannerNode")}}</p>
+### 引数
 
-<h2 id="Example" name="Example">例</h2>
+なし。
 
-<p>この<a href="http://mdn.github.io/stereo-panner-node/">StereoPannerNodeサンプル</a>(<a href="https://github.com/mdn/stereo-panner-node">ソースコード</a>)のHTMLには、{{htmlelement("audio")}}要素と、パン値を増減させるスライダー{{domxref("input")}}しかありません。JavaScpriptでは、{{domxref("MediaElementAudioSourceNode")}}と{{domxref("StereoPannerNode")}}を生成し、この2つを<code>connect()</code>メソッドで接続しています。そして、スライダーを動かすと、<code>oninput</code>イベントハンドラで{{domxref("StereoPannerNode.pan")}}パラメータの値を変更し、ディスプレイのパン値を更新しています。</p>
+### 返値
 
-<p>スライダーを左から右に動かすと、音楽のスピーカーからの出力が左から右にパンされます。</p>
+{{domxref("StereoPannerNode")}} を返します。
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+## 例
+
+[StereoPannerNode の例](https://mdn.github.io/webaudio-examples/stereo-panner-node/)（[ソースコードを参照](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)）の HTML では、単純な {{htmlelement("audio")}} 要素と、パン値を増減するスライダー {{HTMLElement("input")}} を用意しています。 JavaScript では、{{domxref("MediaElementAudioSourceNode")}} と {{domxref("StereoPannerNode")}} を作成し、`connect()` メソッドを用いて両者をつなげます。そして、`oninput` イベントハンドラーを使って {{domxref("StereoPannerNode.pan")}} パラメータの値を変更し、スライダーが動いたときにパン値の表示を更新しています。
+
+音楽再生中にスライダーを左右に動かすと、出力の左右のスピーカーにそれぞれ音楽がパンされます。
+
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var myAudio = document.querySelector('audio');
 
 var panControl = document.querySelector('.panning-control');
@@ -33,47 +50,36 @@ var panValue = document.querySelector('.panning-value');
 
 pre.innerHTML = myScript.innerHTML;
 
-// MediaElementAudioSourceNodeを生成し、そこにHTMLMediaElementを入れる
+// MediaElementAudioSourceNode を生成し、
+// そこに HTMLMediaElementを 入れる
 var source = audioCtx.createMediaElementSource(myAudio);
 
 // ステレオパンナーを生成する
 var panNode = audioCtx.createStereoPanner();
 
-// イベントハンドラ関数で、スライダーが動いたとき左右のパンの値を左右する
+// イベントハンドラー関数で、スライダーが動いたとき
+// 左右のパンの値を左右する
 
 panControl.oninput = function() {
-  panNode.pan.value = panControl.value;
+  panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
   panValue.innerHTML = panControl.value;
 }
 
-// AudioBufferSourceNodeをpanNodeに接続し、panNodeを行き先(destination)に接続する
-// これでこのコントロールで音楽をパンを調整することができる
+// MediaElementAudioSourceNode を panNode に、 panNode を
+// 出力先に接続し、音楽を再生してコントロールでパンを調整
+// できるようにします。
 source.connect(panNode);
-panNode.connect(audioCtx.destination);</pre>
+panNode.connect(audioCtx.destination);
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createStereoPanner-StereoPannerNode', 'createStereoPanner()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.BaseAudioContext.createStereoPanner")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
