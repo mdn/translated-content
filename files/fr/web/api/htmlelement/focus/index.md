@@ -116,5 +116,5 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 - [`HTMLElement.blur()`](/fr/docs/Web/API/HTMLElement/blur) qui permet de retirer le focus d'un élément.
 - [`document.activeElement`](/fr/docs/Web/API/Document/activeElement) qui permet de savoir quel élément a actuellement le focus.
-- L'évènement [`focusin`](http://localhost:5042/en-US/docs/Web/API/Element/focusin_event) qui est déclenché lorsqu'un élément est sur le point de recevoir le focus.
-- L'évènement [`focusout`](http://localhost:5042/en-US/docs/Web/API/Element/focusout_event) qui est déclenché lorsqu'un élément est sur le point de perdre le focus.
+- L'évènement [`focusin`](/fr/docs/Web/API/Element/focusin_event) qui est déclenché lorsqu'un élément est sur le point de recevoir le focus.
+- L'évènement [`focusout`](/fr/docs/Web/API/Element/focusout_event) qui est déclenché lorsqu'un élément est sur le point de perdre le focus.
