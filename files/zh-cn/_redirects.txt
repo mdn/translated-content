@@ -532,6 +532,8 @@
 /zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/让球动起来	/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 /zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/鼠标控制	/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 /zh-CN/docs/Games/简介	/zh-CN/docs/Games/Introduction
+/zh-CN/docs/Glossary/404	/zh-CN/docs/conflicting/Web/HTTP/Status/404
+/zh-CN/docs/Glossary/502	/zh-CN/docs/conflicting/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
@@ -2252,6 +2254,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh

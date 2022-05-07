@@ -1,0 +1,57 @@
+---
+title: Error.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+tags:
+  - Error
+  - JavaScript
+  - Method
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p><code><strong>toSource()</strong></code> メソッドは、同じエラーを評価できるコードを返します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate"><var>e</var>.toSource()</pre>
+
+<h3 id="Return_value" name="Return_value">返値</h3>
+
+<p>エラーのソースコードを含む文字列。</p>
+
+<h2 id="Description" name="Description">解説</h2>
+
+<h3 id="Using_toSource">Using toSource</h3>
+
+<p>{{jsxref("Error")}} インスタンス (<em><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types">NativeErrors</a></em> を含む) の <code>toSource</code> メソッドを呼び出すと、エラーのソースコードを含む文字列を返します。この文字列を評価して (ほぼ) 等しいオブジェクトを生成できます。通常、この文字列には、{{jsxref("Error")}} コンストラクターの構造に続けて下記のようにソースが含まれます。</p>
+
+<pre class="brush: js notranslate">(new<em>name</em>(<em>message</em> ,<em>fileName</em>,<em>lineNumber</em>))
+</pre>
+
+<p>これらの属性は、それぞれのエラーインスタンスの各属性に相当します。</p>
+
+<div class="note">
+<p><strong>注:</strong> この文字列の生成で <code>toSource</code> メソッドにより使用されるプロパティは変更可能であり、エラーインスタンスの生成に使用された関数、または実際にエラーが起こった場所のファイル名、行番号を正確に反映しない可能性があることに注意してください。</p>
+</div>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>仕様の一部ではありません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div>
+<p>{{Compat("javascript.builtins.Error.toSource")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Error.prototype.fileName")}}</li>
+ <li>{{jsxref("Error.prototype.lineNumber")}}</li>
+ <li>{{jsxref("Error.prototype.message")}}</li>
+ <li>{{jsxref("Error.prototype.name")}}</li>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

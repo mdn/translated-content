@@ -84,6 +84,8 @@
 /ru/docs/Games/Ввод	/ru/docs/Games/Introduction
 /ru/docs/Games/Инструменты	/ru/docs/Games/Tools
 /ru/docs/Games/Инструменты/asm.js	/ru/docs/Games/Tools/asm.js
+/ru/docs/Glossary/404	/ru/docs/conflicting/Web/HTTP/Status/404
+/ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
@@ -672,6 +674,7 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 /ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/resolvedOptions	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/supportedLocalesOf	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /ru/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
@@ -803,8 +806,8 @@
 /ru/docs/Руководство_по_JavaScript_1.5/Функции	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/Руководство_по_JavaScript_1.5:Функции	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/Словарь	/ru/docs/Glossary
-/ru/docs/Словарь/404	/ru/docs/Glossary/404
-/ru/docs/Словарь/502	/ru/docs/Glossary/502
+/ru/docs/Словарь/404	/ru/docs/conflicting/Web/HTTP/Status/404
+/ru/docs/Словарь/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Словарь/AJAX	/ru/docs/Glossary/AJAX
 /ru/docs/Словарь/AOM	/ru/docs/Glossary/Accessibility_tree
 /ru/docs/Словарь/API	/ru/docs/Glossary/API

@@ -149,7 +149,7 @@ grid-template-rows: unset;
 
 ## Смотрите также
 
-- Related CSS properties: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Video tutorial: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- Связанные CSS-свойства: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
+- Обучающее видео: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
+- [Сабгрид](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
