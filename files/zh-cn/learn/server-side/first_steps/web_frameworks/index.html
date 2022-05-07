@@ -1,6 +1,6 @@
 ---
 title: 服务端web框架
-slug: learn/Server-side/First_steps/Web_frameworks
+slug: Learn/Server-side/First_steps/Web_frameworks
 tags:
   - web框架
   - 介绍
@@ -22,7 +22,7 @@ translation_of: Learn/Server-side/First_steps/Web_frameworks
  <tbody>
   <tr>
    <th scope="row">预先要求:</th>
-   <td>基础电脑素养。对于服务器端代码是如何处理并响应HTTP请求有深刻的理解。（参见<a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a>）</td>
+   <td>基础电脑素养。对于服务器端代码是如何处理并响应HTTP请求有深刻的理解。（参见<a href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a>）</td>
   </tr>
   <tr>
    <th scope="row">目标:</th>
@@ -39,7 +39,7 @@ translation_of: Learn/Server-side/First_steps/Web_frameworks
 
 <p>下一节将详细介绍web框架如何简化web应用程序开发。然后，我将阐述一些选择web框架的标准，并给你列出一些选项。</p>
 
-<h2 id="web框架可以为你做什么？">web框架可以为你做什么？</h2>
+<h2 id="web_框架可以为你做什么？">web 框架可以为你做什么？</h2>
 
 <p>你并不是必须得使用一个服务器端的web框架，但是我们强烈建议你使用框架——框架会使得你的生活更美好。</p>
 
@@ -57,7 +57,7 @@ from django.http import HttpResponse
 def index(request):
     # Get an HttpRequest (request)
     # perform operations using information from the request.
-    # Return HttpResponse
+    # Return HttpResponse
     return HttpResponse('Output string to return')
 </pre>
 
@@ -106,15 +106,15 @@ def hello():
 from django.db import models
 
 class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+    team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11, 'Under 11s'),
-        ...  #list our other teams
-    )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    TEAM_LEVELS = (
+        ('U09', 'Under 09s'),
+        ('U10', 'Under 10s'),
+        ('U11, 'Under 11s'),
+        ...  #list our other teams
+    )
+    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 </pre>
 
 <p>Django模型提供了简单的搜索数据库的查询API。这可以通过使用不同标准来同时匹配一系列的字段（比如精确、不区分大小写、大于等等），并且支持一些复杂的陈述（比如，你可以指定在U11水平的队伍中搜索队伍名字中以“Fr”开头或者“al”结尾的队伍）。</p>
@@ -127,13 +127,10 @@ from django.shortcuts import render
 from .models import Team
 
 def youngest(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
-    context = {'youngest_teams': list_teams}
-    return render(request, 'best/index.html', context)
+    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    context = {'youngest_teams': list_teams}
+    return render(request, 'best/index.html', context)
 </pre>
-
-<dl>
-</dl>
 
 <h3 id="渲染数据">渲染数据</h3>
 
@@ -156,13 +153,13 @@ def youngest(request):
 &lt;body&gt;
 
  {% if youngest_teams %}
-    &lt;ul&gt;
-    {% for team in youngest_teams %}
-        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
-    {% endfor %}
-    &lt;/ul&gt;
+    &lt;ul&gt;
+    {% for team in youngest_teams %}
+        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
 {% else %}
-    &lt;p&gt;No teams are available.&lt;/p&gt;
+    &lt;p&gt;No teams are available.&lt;/p&gt;
 {% endif %}
 
 &lt;/body&gt;
@@ -182,26 +179,26 @@ def youngest(request):
    <li>框架目的/起源：一些框架最初是用来解决某一类特定问题的，并且最好在生成app的时候顾及到这些约束。比如，Django是用来支持新闻网站的，因此非常适合博客或者其他包含发布内容的网站。相反的，Flask是一个相对来说轻量级的框架，因此适合用来生成一些在嵌入式设备上运行的app。</li>
    <li><em>Opinionated vs unopinionated</em>：一个opinionated的框架是说，解决某一个特定问题时，总有一个被推荐的最佳的解决方法。opinionated的框架在你试图解决一些普通问题的时候，更加趋向于产品化，因为它们会将你引入正确的方向，尽管有些时候并不那么灵活。</li>
    <li>一些web框架默认地包含了开发者们能遇到的任何一个问题的工具/库，而一些轻量级的框架希望开发者们自己从分离的库中选择合适的解决方式（Django是其前者的一个实例，而Flask则是轻量级的一个实例）。包含了所有东西的框架通常很容易上手因为你已经有了你所需要的任何东西，并且很可能它已经被整合好了，并且文档也写得很完善。然而一个较小型的框架含有你所需要（或者以后需要）的各种东西，它将只能在受更多限制的环境中运行,并且需要学习更小的、更简单的子集学习。</li>
-   <li>是否选择一个鼓励良好开发实例的框架：比如，一个鼓励 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model-View-Controller</a> 结构来将代码分离到逻辑函数上的框架将会是更加易于维护的代码，想比与那些对开发者没有此期待的框架而言。同样的，框架设计也深刻影响了测试和重复使用代码的难易程度。</li>
+   <li>是否选择一个鼓励良好开发实例的框架：比如，一个鼓励 <a href="/zh-CN/docs/Glossary/MVC">Model-View-Controller</a> 结构来将代码分离到逻辑函数上的框架将会是更加易于维护的代码，想比与那些对开发者没有此期待的框架而言。同样的，框架设计也深刻影响了测试和重复使用代码的难易程度。</li>
   </ul>
  </li>
- <li><strong>框架/编程语言的表现：</strong> 通常来讲，“速度”并不是选择中最重要的因素，甚至，相对而言，运行速度很缓慢的Python对于一个在中等硬盘上跑的中等大小的网站已经足够了。其他语言（C++/Javascript）的明显的速度优势很有可能被学习和维护的代价给抵消了。</li>
+ <li><strong>框架/编程语言的表现：</strong> 通常来讲，“速度”并不是选择中最重要的因素，甚至，相对而言，运行速度很缓慢的Python对于一个在中等硬盘上跑的中等大小的网站已经足够了。其他语言（C++/Javascript）的明显的速度优势很有可能被学习和维护的代价给抵消了。</li>
  <li><strong>缓存支持：</strong>当你的网站之间变得越来越成功之后，你可能会发现它已经无法妥善处理它收到的大量请求了。在这个时候，你可能会开始考虑添加缓存支持。缓存是一种优化，是指你将全部的或者大部分的网站请求保存起来，那么在后继请求中就不需要重新计算了。返回一个缓存请求比重新计算一次要快得多。缓存可以被植入你的代码里面，或者是服务器中（参见<a href="https://en.wikipedia.org/wiki/Reverse_proxy">reverse proxy</a>）。web框架对于定义可缓存内容有着不同程度的支持。</li>
- <li><strong>可扩展性：</strong>一旦你的网站非常成功的时候，你会发现缓存的好处已经所剩无几了，甚至垂直容量到达了极限（将程序运行在更加有力的硬件上面）。在这个时候，你可能需要水平扩展（将你的网站分散到好几个服务器和数据库上来加载）或者“地理上地”扩展， 因为你的一些客户距离你的服务器很远。你所选择的框架将会影响到扩展你的网站的难易程度。</li>
+ <li><strong>可扩展性：</strong>一旦你的网站非常成功的时候，你会发现缓存的好处已经所剩无几了，甚至垂直容量到达了极限（将程序运行在更加有力的硬件上面）。在这个时候，你可能需要水平扩展（将你的网站分散到好几个服务器和数据库上来加载）或者“地理上地”扩展， 因为你的一些客户距离你的服务器很远。你所选择的框架将会影响到扩展你的网站的难易程度。</li>
  <li><strong>网络安全：</strong>一些web框架对于解决常见的网络攻击提供更好的支持。例如，Django消除所有用户从HTML输入的东西。因此从用户端输入的Javascript不会被运行。其他框架也提供相似的功能，但是通常在默认情况下是不直接开启的。</li>
 </ul>
 
 <p>可能还有其他一些原因，包括许可证、框架是否处于动态发展过程中等等。</p>
 
-<p>如果你是一个完全的初学者，那么你可能会基于“易于学习”来选择你的框架。除了语言本身的“易于学习”之外，帮助新手的高质量的文档/教程和一个活跃的社区是你最有价值的资源。在后续课程中，我们选取了Djnago（Python）和Express（Node/Javascript）来编写我们的实例，主要因为它们很容易上手并且有强大的支持。</p>
+<p>如果你是一个完全的初学者，那么你可能会基于“易于学习”来选择你的框架。除了语言本身的“易于学习”之外，帮助新手的高质量的文档/教程和一个活跃的社区是你最有价值的资源。在后续课程中，我们选取了 Django（Python）和 Express（Node/Javascript）来编写我们的实例，主要因为它们很容易上手并且有强大的支持。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 我们可以去 <a href="https://www.djangoproject.com/">Django</a> (Python) 和 <a href="http://expressjs.com/">Express</a> (Node/JavaScript) 的主页上去看看它们的文档和社区。</p>
+<p><strong>注意</strong>: 我们可以去 <a href="https://www.djangoproject.com/">Django</a> (Python) 和 <a href="http://expressjs.com/">Express</a> (Node/JavaScript) 的主页上去看看它们的文档和社区。</p>
 
 <ol>
  <li>导航至主页 (上面已给出链接)
   <ul>
-   <li>点击文档菜单的链接 (通常都叫做 "Documentation（文档）, Guide（指南）, API Reference（API参考）, Getting Started（快速开始）"之类的。）</li>
+   <li>点击文档菜单的链接 (通常都叫做 "Documentation（文档）、Guide（指南）、API Reference（API参考）、Getting Started（快速开始）"之类的。）</li>
    <li>你能看到如何设置URL路由、模板、数据库/数据模型的主题吗？</li>
    <li>文档说得够清楚吗？</li>
   </ul>
@@ -228,53 +225,53 @@ def youngest(request):
 
 <h3 id="Django_Python">Django (Python)</h3>
 
-<p><a href="https://www.djangoproject.com/">Django</a>是一个高水平的python web框架，它鼓励快速的开发和简洁、务实的设计。它由非常有经验的开发者创建的，考虑到了web开发中会遇到的大多数难题，所以你无需重复造轮就能够专心编写你的应用。 </p>
+<p><a href="https://www.djangoproject.com/">Django</a>是一个高水平的python web框架，它鼓励快速的开发和简洁、务实的设计。它由非常有经验的开发者创建的，考虑到了web开发中会遇到的大多数难题，所以你无需重复造轮就能够专心编写你的应用。 </p>
 
 <p>Django遵循“Batteries included”哲学，并且提供了几乎所有大多开发者们想要“开箱即用”的东西。因为它已经包含了所有东西，它作为一个整体一起工作，遵循着一致的设计原则，并且有扩展的、持续更新的文档。它也是非常快、安全和易于扩展的。基于python，Django代码非常容易阅读和维护。</p>
 
-<p>使用Django的主流网站（从Django官网首页看到的）包括： Disqus, Instagram, Knight Foundation, MacArthur Foundation, Mozilla, National Geographic, Open Knowledge Foundation, Pinterest, Open Stack.</p>
+<p>使用Django的主流网站（从Django官网首页看到的）包括： Disqus, Instagram, Knight Foundation, MacArthur Foundation, Mozilla, National Geographic, Open Knowledge Foundation, Pinterest, Open Stack.</p>
 
 <h3 id="Flask_Python">Flask (Python)</h3>
 
 <p><a href="http://flask.pocoo.org/">Flask</a>是python的一个微型框架</p>
 
-<p>虽然体量很小，Flask却可以开箱即用地创造出完备网站。它包含一个开发服务器和调试器，并且包含对于 <a href="https://github.com/pallets/jinja">Jinja2</a> 模板的支持, 安全的cookie, <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>, 和 <a href="http://www.restapitutorial.com/lessons/restfulresourcenaming.html">RESTful</a> request dispatching。它有很好的文档和一个活跃的社区。</p>
+<p>虽然体量很小，Flask却可以开箱即用地创造出完备网站。它包含一个开发服务器和调试器，并且包含对于 <a href="https://github.com/pallets/jinja">Jinja2</a> 模板的支持, 安全的cookie, <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>, 和 <a href="http://www.restapitutorial.com/lessons/restfulresourcenaming.html">RESTful</a> request dispatching。它有很好的文档和一个活跃的社区。</p>
 
 <p>Flask已经非常火爆了，部分因为那些需要在小型的、资源受限的系统中提供web服务的开发者们。(比如，在<a href="https://www.raspberrypi.org/">Raspberry Pi</a>, <a href="http://blogtarkin.com/drone-definitions-learning-the-drone-lingo/">Drone controllers</a>等上面运行服务器)。</p>
 
 <h3 id="Express_Node.jsJavaScript">Express (Node.js/JavaScript)</h3>
 
-<p><a href="http://expressjs.com/">Express</a> 针对 <a href="https://nodejs.org/en/">Node.js</a> 的快速的、unopinioned、灵活的、小型的web框架(node是用来运行Javascript的无浏览器的环境)。它为web和移动应用提供强大的系列功能，并且传输有用的HTTP工具、方法和<a href="/en-US/docs/Glossary/Middleware">middleware</a>.</p>
+<p><a href="http://expressjs.com/">Express</a> 针对 <a href="https://nodejs.org/en/">Node.js</a> 的快速的、unopinioned、灵活的、小型的web框架(node是用来运行Javascript的无浏览器的环境)。它为web和移动应用提供强大的系列功能，并且传输有用的HTTP工具、方法和<a href="/zh-CN/docs/Glossary/Middleware">middleware</a>.</p>
 
 <p>Express非常受欢迎，主要因为它减轻了客户端Javascript程序到服务器端开发的迁移，并且部分因为它是资源节约型（底层的node环境在单线程中使用轻量级多任务处理，而不是为每个web请求提供单独的进程）。</p>
 
-<p>因为Express是一个小型的web框架，它几乎不包含任何你可能想要使用的组件（比如，数据库接口和对用户和会话的支持通过独立的库来完成）。有很多独立的、非常好的组件，但是有时候你可能很难决定对于特定目的而言哪一个是最好的！ </p>
+<p>因为Express是一个小型的web框架，它几乎不包含任何你可能想要使用的组件（比如，数据库接口和对用户和会话的支持通过独立的库来完成）。有很多独立的、非常好的组件，但是有时候你可能很难决定对于特定目的而言哪一个是最好的！</p>
 
-<p> 很多非常受欢迎的服务器端编程和全栈框架（同时包括服务器端和客户端框架），包括 <a href="http://feathersjs.com/">Feathers</a>, <a href="https://www.itemsapi.com/">ItemsAPI</a>, <a href="http://keystonejs.com/">KeystoneJS</a>, <a href="http://krakenjs.com/">Kraken</a>, <a href="http://lean-stack.io/">LEAN-STACK</a>, <a href="http://loopback.io/">LoopBack</a>, <a href="http://mean.io/">MEAN</a>, 和 <a href="http://sailsjs.org/">Sails</a>.</p>
+<p>很多非常受欢迎的服务器端编程和全栈框架（同时包括服务器端和客户端框架），包括 <a href="http://feathersjs.com/">Feathers</a>、<a href="https://www.itemsapi.com/">ItemsAPI</a>、<a href="http://keystonejs.com/">KeystoneJS</a>、<a href="http://krakenjs.com/">Kraken</a>、<a href="http://lean-stack.io/">LEAN-STACK</a>、<a href="http://loopback.io/">LoopBack</a>、<a href="http://mean.io/">MEAN</a> 和 <a href="http://sailsjs.org/">Sails</a>。</p>
 
-<p>大量的profile company使用Express，包括优步、Accenture、IBM等（<a href="http://expressjs.com/en/resources/companies-using-express.html">这里</a>是一张列表）.</p>
+<p>大量的profile company使用Express，包括优步、Accenture、IBM等（<a href="http://expressjs.com/en/resources/companies-using-express.html">这里</a>是一张列表）。</p>
 
 <h3 id="Ruby_on_Rails_Ruby">Ruby on Rails (Ruby)</h3>
 
-<p><a href="http://rubyonrails.org/">Rails</a> （通常被称作"Ruby on Rails"）是一个为Ruby语言编写的web框架。</p>
+<p><a href="http://rubyonrails.org/">Rails</a> （通常被称作"Ruby on Rails"）是一个为Ruby语言编写的web框架。</p>
 
-<p>Rails遵循了和Django非常相似的设计哲学。正如Django一样，它提供了检索URLs的标准机制、从数据库中访问数据、从模板中生成HTML页面、格式化数据{{glossary("JSON")}} 或者 {{glossary("XML")}}。同样的，它也鼓励如 DRY （不要重复你自己）的设计模板——尽可能地只写一次代码、MVC（模板-视图-控制中心）以及很多其他的一些。</p>
+<p>Rails遵循了和Django非常相似的设计哲学。正如Django一样，它提供了检索URLs的标准机制、从数据库中访问数据、从模板中生成HTML页面、格式化数据{{glossary("JSON")}} 或者 {{glossary("XML")}}。同样的，它也鼓励如 DRY （不要重复你自己）的设计模板——尽可能地只写一次代码、MVC（模板-视图-控制中心）以及很多其他的一些。</p>
 
 <p>当然，还有很多由于因为具体设计决定和语言的特性导致的差异。</p>
 
-<p>Rails被用在很多站点中，包括：<strong> </strong><a href="https://basecamp.com/">Basecamp</a>, <a href="https://github.com/">GitHub</a>,<a href="https://shopify.com/">Shopify</a>, <a href="https://airbnb.com/">Airbnb</a>, <a href="https://twitch.tv/">Twitch</a>, <a href="https://soundcloud.com/">SoundCloud</a>,<a href="https://hulu.com/">Hulu</a>, <a href="https://zendesk.com/">Zendesk</a>, <a href="https://square.com/">Square</a>, <a href="https://highrisehq.com/">Hi</a></p>
+<p>Rails被用在很多站点中，包括：<a href="https://basecamp.com/">Basecamp</a>、<a href="https://github.com/">GitHub</a>、<a href="https://shopify.com/">Shopify</a>、<a href="https://airbnb.com/">Airbnb</a>、<a href="https://twitch.tv/">Twitch</a>、<a href="https://soundcloud.com/">SoundCloud</a>、<a href="https://hulu.com/">Hulu</a>、<a href="https://zendesk.com/">Zendesk</a>、<a href="https://square.com/">Square</a>、<a href="https://highrisehq.com/">Hi</a></p>
 
 <h3 id="ASP.NET">ASP.NET</h3>
 
 <p><a href="http://www.asp.net/">ASP.NET</a> 是一个由微软开发的开源Web框架，用于构建现代的Web应用程序和服务。通过ASP.NET你能快速创建基于HTML、CSS、JavaScript的网站，并且能满足大量用户的需求，还可以很容易地添加诸如Web API、数据表单、即时通讯的功能。</p>
 
-<p>ASP.NET的特点之一就是它建立在 <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">Common Language Runtime</a> (CLR公共语言运行时)之上。这使得程序员可以使用任何支持的.NET语言（如C#、Visual Basic)来编写ASP.NET代码。和很多微软的产品一样，它得益于出色的开发工具（通常是免费的）、活跃的开发者社区，以及详尽的文档。 </p>
+<p>ASP.NET的特点之一就是它建立在 <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">Common Language Runtime</a> (CLR公共语言运行时)之上。这使得程序员可以使用任何支持的.NET语言（如C#、Visual Basic)来编写ASP.NET代码。和很多微软的产品一样，它得益于出色的开发工具（通常是免费的）、活跃的开发者社区，以及详尽的文档。</p>
 
 <p>ASP.NET被微软、Xbox、Stack Overflow等采用。</p>
 
 <h3 id="Mojolicious_Perl">Mojolicious (Perl)</h3>
 
-<p><a href="http://mojolicious.org/">Mojolicious</a>是为Perl语言设计的新一代Web框架。 </p>
+<p><a href="http://mojolicious.org/">Mojolicious</a>是为Perl语言设计的新一代Web框架。 </p>
 
 <p>在Web的早期阶段，许多人都为了一个叫做 <a href="https://metacpan.org/module/CGI">CGI</a> 的优秀的Perl库而学过Perl。它简单到即使你不是太懂这门语言也可以开始使用，而且也强大到足以让你可以用下去。Mojolicious通过最新的技术实现了这个想法。</p>
 
@@ -282,7 +279,7 @@ def youngest(request):
 
 <ul>
  <li><strong>实时Web框架</strong>，可轻松将单个文件原型，生成为结构良好的MVC Web应用程序；</li>
- <li>RESTful路由，插件，命令，Perl-ish模板，内容协商，会话管理，表单验证，测试框架，静态文件服务器，CGI /<a href="http://plackperl.org/">PSGI</a> 检测，一流的Unicode支持；</li>
+ <li>RESTful路由，插件，命令，Perl-ish模板，内容协商，会话管理，表单验证，测试框架，静态文件服务器，CGI /<a href="http://plackperl.org/">PSGI</a> 检测，一流的Unicode支持；</li>
  <li>全栈式 HTTP 和 WebSocket 客户机/服务器架構，由以下技术支持与实作－IPv6，TLS，SNI，IDNA，HTTP / SOCKS5 代理，UNIX 域套接字，Comet（长轮询），保持活动，连接池，超时，cookie，multipart，支持 gzip 压缩</li>
  <li>具有CSS选择器支持的 JSON 和 HTML / XML 解析器和生成器；</li>
  <li>非常干净，可移植且面向对象的纯 Perl API，没有任何隐藏的魔法；</li>
