@@ -13,7 +13,7 @@ browser-compat: api.Response.bodyUsed
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable }}</p>
 
-<p><strong><code>bodyUsed</code></strong><code> 是</code>{{domxref("Response")}} mixin中的一个<code>只读属性。用以表示该body是否被使用过。</code></p>
+<p><strong><code>bodyUsed</code></strong> 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该body是否被使用过。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,9 +25,9 @@ browser-compat: api.Response.bodyUsed
 
 <h2 id="示例">示例</h2>
 
-<p>在以下<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch 请求示例</a>（运行 <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>）。通过{{domxref("Request.Request")}}构造器创建了一个fetch请求，来获得一张JPG图片。当fetch成功后，通过{{domxref("Blob")}} 来使用了fetch返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的URL，并作为 {{htmlelement("img")}}元素的src源来显示图片。</p>
+<p>在以下<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch 请求示例</a>（运行 <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>）。通过{{domxref("Request.Request")}}构造器创建了一个fetch请求，来获得一张JPG图片。当fetch成功后，通过{{domxref("Blob")}} 来使用了fetch返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的URL，并作为 {{htmlelement("img")}}元素的src源来显示图片。</p>
 
-<p>注意：<code>在response.blob()被调用前后，</code>输出<code>response.bodyUsed的差异。</code></p>
+<p>注意：在 <code>response.blob()</code> 被调用前后，输出 <code>response.bodyUsed</code> 的差异。</p>
 
 <h3 id="HTML_Content">HTML Content</h3>
 
@@ -41,13 +41,13 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
     console.log(response.bodyUsed);
     var res = response.blob();
     console.log(response.bodyUsed);
-    return res;
+    return res;
 }).then(function(response) {
-    var objectURL = URL.createObjectURL(response);
-    myImage.src = objectURL;
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
 });</pre>
 
-<p>{{ EmbedLiveSample('Example', '100%', '250px') }}</p>
+<p>{{EmbedLiveSample('示例', '100%', '250px')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -61,7 +61,7 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
   <tr>
    <td>{{SpecName('Fetch','#dom-body-bodyused','bodyUsed')}}</td>
    <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

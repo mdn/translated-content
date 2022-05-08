@@ -1186,6 +1186,7 @@
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Stworz_element_Canvas_i_rysuj_na_nim	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/odbijanie_od_scian	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/posusz_pilka	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+/pl/docs/Glossary/404	/pl/docs/Web/HTTP/Status/404
 /pl/docs/Glossary/AOM	/pl/docs/Glossary/Accessibility_tree
 /pl/docs/Glossary/Abstrakcja	/pl/docs/Glossary/Abstraction
 /pl/docs/Glossary/Hipertekst	/pl/docs/Glossary/Hypertext
@@ -1843,6 +1844,7 @@
 /pl/docs/Web/JavaScript/Reference/Errors/Brakujący_średnik_po_własności_id	/pl/docs/Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 /pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe	/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /pl/docs/Web/JavaScript/Reference/Functions/Parametry_domyślne	/pl/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Referencje/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Referencje/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -1971,7 +1973,7 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/lineNumber	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/message	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/name	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/name
-/pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toSource	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toString	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje/Obiekty/EvalError	/pl/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Function	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function

@@ -453,6 +453,8 @@
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /es/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/es/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 /es/docs/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
+/es/docs/Glossary/404	/es/docs/conflicting/Web/HTTP/Status/404
+/es/docs/Glossary/502	/es/docs/conflicting/Web/HTTP/Status/502
 /es/docs/Glossary/AOM	/es/docs/Glossary/Accessibility_tree
 /es/docs/Glossary/Algoritmo	/es/docs/Glossary/Algorithm
 /es/docs/Glossary/Argumento	/es/docs/Glossary/Argument
@@ -2130,6 +2132,7 @@
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 /es/docs/Web/JavaScript/Reference/Errors/caracter_ilegal	/es/docs/Web/JavaScript/Reference/Errors/Illegal_character
+/es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
@@ -2247,7 +2250,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/lineNumber	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/message	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/name	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/name
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Error/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/EvalError	/es/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas	/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
