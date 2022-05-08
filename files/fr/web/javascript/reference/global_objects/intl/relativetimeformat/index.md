@@ -67,8 +67,8 @@ rtf.formatToParts(-1, "day");
 
 rtf.formatToParts(100, "day");
 // > [{ type: "literal", value: "in " },
-      { type: "integer", value: "100", unit: "day" },
-      { type: "literal", value: " days" }]
+// >  { type: "integer", value: "100", unit: "day" },
+// >  { type: "literal", value: " days" }]
 ```
 
 ## Spécifications
