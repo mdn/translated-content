@@ -1,5 +1,5 @@
 ---
-title: animate
+title: <animate>
 slug: Web/SVG/Element/animate
 tags:
   - SVG
@@ -7,91 +7,68 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/animate
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>动画元素放在形状元素的内部，用来定义一个元素的某个属性如何踩着时点改变。在指定持续时间里，属性从开始值变成结束值。</p>
+动画元素放在形状元素的内部，用来定义一个元素的某个属性如何踩着时点改变。在指定持续时间里，属性从开始值变成结束值。
 
-<pre class="brush: css"><code>html,body,svg { height:100%; margin:0; padding:0; }</code></pre>
+## 示例
 
-<pre class="brush: html"><code>&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect width="10" height="10"&gt;
-    &lt;animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" /&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</code></pre>
+```css hidden
+html,body,svg { height:100%; margin:0; padding:0; }
+```
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <rect width="10" height="10">
+    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+  </rect>
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+<p>{{EmbedLiveSample('示例', 150, '100%')}}</p>
 
-<h3 id="全局属性">全局属性</h3>
+## 属性
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing" title="SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core" title="SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationEvent" title="SVG/Attribute#AnimationEvent">动画事件属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#XLink" title="SVG/Attribute#XLink">Xlink属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationAttributeTarget" title="SVG/Attribute#AnimationAttributeTarget">动画属性目标属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationTiming" title="SVG/Attribute#AnimationTiming">动画定时属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationValue" title="SVG/Attribute#AnimationValue">动画值属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationAddition" title="SVG/Attribute#AnimationAddition">动画累加属性</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+### 动画属性
 
-<h3 id="专有属性">专有属性</h3>
+- [动画时间属性](/zh-CN/docs/Web/SVG/Attribute#动画时间属性)
+  - : {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}}、{{SVGAttr("fill")}}
+- [动画取值属性](/zh-CN/docs/Web/SVG/Attribute#动画取值属性)
+  - : {{SVGAttr("calcMode")}}、{{SVGAttr("values")}}、{{SVGAttr("keyTimes")}}、{{SVGAttr("keySplines")}}、{{SVGAttr("from")}}、{{SVGAttr("to")}}、{{SVGAttr("by")}}
+- [其它动画属性](/zh-CN/docs/Web/SVG/Attribute#动画额外属性)
+  - : 最主要的有：{{SVGAttr("attributeName")}}、{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
+- [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#动画事件属性)
+  - : 最主要的有：{{SVGAttr("onbegin")}}、{{SVGAttr("onend")}}、{{SVGAttr("onrepeat")}}
 
-<ul>
- <li>{{SVGAttr("attributeName")}}</li>
- <li>{{SVGAttr("attributeType")}}</li>
- <li>{{SVGAttr("from")}}</li>
- <li>{{SVGAttr("to")}}</li>
- <li>{{SVGAttr("dur")}}</li>
- <li>{{SVGAttr("repeatCount")}}</li>
-</ul>
+### 全局属性
 
-<h2 id="用法">用法</h2>
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
+  - : 最主要的有：{{SVGAttr('id')}}
+- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
+- 事件属性
+  - : [全局事件属性](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<p>该元素实现了 {{domxref("SVGAnimateElement")}} 接口</p>
+## 用法
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGAnimateElement" title="DOM/SVGAElement">SVGAnimateElement</a></code> 接口。</p>
+该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## 无障碍说明
 
-<p>Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.</p>
+对于存在认知问题（如，患有注意缺陷多动障碍 (ADHD)）的人来说，闪烁动画可能会引发一些问题。此外，某些动画可能会引起前庭相关疾病、癫痫、偏头痛和光敏综合征（Scotopic sensitivity）。
 
-<p>Consider providing a mechanism for pausing or disabling animation, as well as using the <a href="/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion">Reduced Motion Media Query</a> to create a complimentary experience for users who have expressed a preference for no animated experiences.</p>
+考虑提供一种暂停或禁用动画的机制，并配合使用[偏好减少动画的媒体查询](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)来为不喜欢动画的用户提供更舒适的体验。
 
-<ul>
- <li><a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article</a></li>
- <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An Introduction to the Reduced Motion Media Query | CSS-Tricks</a></li>
- <li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion | WebKit</a></li>
- <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content">MDN Understanding WCAG, Guideline 2.2 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html">Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
+- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.2\_%e2%80%94\_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-{{Compat("svg.elements.animate")}}
+{{Compat}}
