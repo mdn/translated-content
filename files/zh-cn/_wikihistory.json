@@ -47332,14 +47332,6 @@
       "liminjun"
     ]
   },
-  "conflicting/Web/SVG/Element/animate": {
-    "modified": "2019-03-23T22:46:35.027Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
   "conflicting/Web/Web_Components": {
     "modified": "2020-10-15T21:47:50.577Z",
     "contributors": [
