@@ -42,7 +42,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
     i32.const 42
     call $i))</pre>
  </li>
- <li>在第二行, 你将看到导入有一个两级命名空间 —— 内部函数 <code>$i</code> 是从<font face="consolas, Liberation Mono, courier, monospace"> imports.imported_func 导入的</font>. 编写要导入到wasm模块的对象时，我们需要在JavaScript中反映这个两级命名空间. 创建一个 <code>&lt;script&gt;&lt;/script&gt;</code> 节点在你的HTML 文件中, 并且添加下面的代码:
+ <li>在第二行, 你将看到导入有一个两级命名空间 —— 内部函数 <code>$i</code> 是从 imports.imported_func 导入的. 编写要导入到wasm模块的对象时，我们需要在JavaScript中反映这个两级命名空间. 创建一个 <code>&lt;script&gt;&lt;/script&gt;</code> 节点在你的HTML 文件中, 并且添加下面的代码:
   <pre class="brush: js notranslate">var importObject = {
   imports: {
       imported_func: function(arg) {
@@ -87,7 +87,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <p><strong>注</strong>：我们已经非常详细地解释了这种语法如何工作通过<a href="/zh-CN/docs/WebAssembly/Loading_and_running#使用Fetch">加载和运行WebAssembly代码</a>。如果不确定，请回到那里进行复习。</p>
 </div>
 
-<p>这样做的结果是执行我们导出的 WebAssembly 函数 exported_func，<font face="consolas, Liberation Mono, courier, monospace">这样又调用了另一个我们导入的 JavaScript 函数 imported_func</font>, 它将WebAssembly实例（42）中提供的值记录到控制台. 如果你保存实例代码并且在支持 WebAssembly 的浏览器中运行，你将看到此操作。</p>
+<p>这样做的结果是执行我们导出的 WebAssembly 函数 exported_func，这样又调用了另一个我们导入的 JavaScript 函数 imported_func, 它将WebAssembly实例（42）中提供的值记录到控制台. 如果你保存实例代码并且在支持 WebAssembly 的浏览器中运行，你将看到此操作。</p>
 
 <div class="note">
 <p><strong>注</strong>：WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的(你也可以运行 wasm 代码 在 Firefox 47+ 通过将 <em>about:config</em> 中的 <code>javascript.options.wasm</code> flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 <em>chrome://flags</em> 并且将 <em>Experimental WebAssembly</em> flag 设置为 enabling.)</p>
