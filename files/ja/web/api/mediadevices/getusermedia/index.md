@@ -4,32 +4,34 @@ slug: Web/API/MediaDevices/getUserMedia
 tags:
   - API
   - Audio
-  - Capture
-  - Media Capture and Streams API
-  - Media Streams API
+  - キャプチャ
+  - メディア
+  - メディアキャプチャとストリーム API
+  - メディアストリーム API
   - MediaDevices
-  - Method
-  - Photos
-  - Reference
-  - Video
+  - メソッド
+  - 写真
+  - リファレンス
+  - 動画
   - WebRTC
   - getusermedia
-  - メソッド
+browser-compat: api.MediaDevices.getUserMedia
 translation_of: Web/API/MediaDevices/getUserMedia
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaDevices")}}<code><strong>.getUserMedia()</strong></code> メソッドは、要求された種類のメディアを含むトラックを持つ {{domxref("MediaStream")}} を生成するメディア入力を使用する許可をユーザーに求めます。このストリームには、例えば、動画トラック (カメラ、ビデオ録画機器、スクリーン共有サービスなどのような、ハードウェアまたは仮想ビデオソースによって生み出される)、音声トラック (同様に、マイク、A/D 変換器などの物理的または仮想オーディオソースによって生み出される)、その他の可能な種別を含めることができます。</p>
+{{domxref("MediaDevices")}}**`.getUserMedia()`** メソッドは、要求された種類のメディアを含むトラックを持つ {{domxref("MediaStream")}} を生成するメディア入力を使用する許可をユーザーに求めます。
 
-<p>これは {{domxref("MediaStream")}} オブジェクトに解決する {{jsxref("Promise")}} を返します。ユーザーが拒否した場合や、一致するメディアが利用できない場合、 Promise はそれぞれ <code>NotAllowedError</code> または <code>NotFoundError</code> で拒否されます。</p>
+このストリームには、例えば、動画トラック（カメラ、ビデオ録画機器、画面共有サービスなどのような、ハードウェアまたは仮想ビデオソースによって生み出されるもの）、音声トラック（同様に、マイク、A/D 変換器などの物理的または仮想オーディオソースによって生み出されるもの）、その他の可能な種別を含めることができます。
 
-<div class="note">
-<p><strong>メモ:</strong> ユーザーが選択する必要が全くなく、リクエストを単純に無視できる場合、返却された Promise が解決または拒否の<em>どちらにもならない</em>可能性があります。</p>
-</div>
+これは {{domxref("MediaStream")}} オブジェクトに解決する {{jsxref("Promise")}} を返します。ユーザーが拒否した場合や、一致するメディアが利用できない場合、プロミスはそれぞれ `NotAllowedError` または `NotFoundError` の {{domxref("DOMException")}} で拒否されます。
 
-<p>一般的に、 {{domxref("MediaDevices")}} のシングルトンオブジェクトは以下のように、 {{domxref("navigator.mediaDevices")}} を使用してアクセスします。</p>
+> **Note:** ユーザーが選択する必要が全くなく、リクエストを単純に無視できる場合、返却された Promise が解決または拒否の*どちらにもならない*可能性があります。
 
-<pre class="brush: js notranslate">async function getMedia(constraints) {
+一般的に、 {{domxref("MediaDevices")}} のシングルトンオブジェクトは以下のように、 {{domxref("navigator.mediaDevices")}} を使用してアクセスします。
+
+```js
+async function getMedia(constraints) {
   let stream = null;
 
   try {
@@ -39,202 +41,218 @@ translation_of: Web/API/MediaDevices/getUserMedia
     /* エラーを処理 */
   }
 }
-</pre>
+```
 
-<p>同様に、生の Promise を直接使用すると、コードは次のようになります。</p>
+同様に、生のプロミスを直接使用すると、コードは次のようになります。
 
-<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia(constraints)
+```js
+navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
   /* ストリームを使用 */
 })
 .catch(function(err) {
   /* エラーを処理 */
-});</pre>
+});
+```
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> 現在の文書が安全に読み込まれなかった場合は、 <code>navigator.mediaDevices</code> は <code>undefined</code> になり、 <code>getUserMedia()</code> を使用することはできません。{{anch("Security", "セキュリティ")}}の節に、この件やその他の <code>getUserMedia()</code> の使用に関するセキュリティ問題の詳細があります。</p>
-</div>
+> **Note:** 現在の文書が安全に読み込まれなかった場合は、 `navigator.mediaDevices` は `undefined` になり、 `getUserMedia()` を使用することはできません。[セキュリティ](#セキュリティ)の節に、この件やその他の `getUserMedia()` の使用に関するセキュリティ問題の詳細があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = navigator.mediaDevices.getUserMedia(<var>constraints</var>);
-</pre>
+```js
+getUserMedia(constraints)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>constraints</var></code></dt>
- <dd>
- <p>{{domxref("MediaStreamConstraints")}} オブジェクトで、それぞれの種類のために何らかの要件に沿って要求するメディアの種類を指定します。</p>
+- `constraints`
 
- <p><code><var>constraints</var></code> 引数は <code>MediaStreamConstraints</code> であり、二つのメンバー <code>video</code> および <code>audio</code> を持ち、要求されたメディアの種類を記述します。どちらか、または両方を指定する必要があります。ブラウザーが指定された条件に合う指定されたタイプを持つすべてのメディアトラックを発見できない場合、返却された Promise は <code>NotFoundError</code> で拒否されます。</p>
+  - : オブジェクトで、それぞれの種類のために何らかの要件に沿って要求するメディアの種類を指定します。
 
- <p>次の例は特定の要件なしに audio と video の両方を要求します。</p>
+    `constraints` 引数は 2 つのメンバー `video` および `audio` を持ち、要求されたメディアの種類を記述します。どちらか、または両方を指定する必要があります。ブラウザーが指定された条件に合う指定された種類を持つすべてのメディアトラックを発見できない場合、返却されたプロミスは `NotFoundError` の {{domxref("DOMException")}} で拒否されます。
 
- <pre class="brush: js notranslate">{ audio: true, video: true }</pre>
+    次の例は特定の要件なしに音声と動画の両方を要求します。
 
- <p>メディアの種類に <code>true</code> が指定された場合、結果のストリームはそのタイプのトラックが中にある<em>必要</em>があります。何らかの理由で含めることができない場合、 <code>getUserMedia()</code> の呼び出しはエラーが返ります。</p>
+    ```js
+    { audio: true, video: true }
+    ```
 
- <p>ユーザーのカメラやマイクについての情報は、プライバシー上の理由からアクセスできませんが、アプリケーションは追加の制約を使用することで、カメラやマイクの能力を必要に応じて要求することができます。次の例は、 1280x720 のカメラ解像度の設定を表しています。</p>
+    メディアの種類に `true` が指定された場合、結果のストリームはそのタイプのトラックが中にある<em>必要</em>があります。何らかの理由で含めることができない場合、 `getUserMedia()` の呼び出しはエラーが返ります。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: { width: 1280, height: 720 }
-}</pre>
+    ユーザーのカメラやマイクについての情報は、プライバシー上の理由からアクセスできませんが、アプリケーションは追加の制約を使用することで、カメラやマイクの能力を必要に応じて要求することができます。次の例は、 1280x720 のカメラ解像度の設定を表しています。
 
- <p id="successCallback">ブラウザーはこれに忠実であろうとしますが、正確に一致するものが使用できない場合や、ユーザーがこれをオーバーライドした場合は、異なる解像度を返すことがあります。</p>
+    ```js
+    {
+      audio: true,
+      video: { width: 1280, height: 720 }
+    }
+    ```
 
- <p>機能を<em>必要</em>とするには、 <code>min</code>, <code>max</code>, <code>exact</code> (つまり <code>min == max</code>) の各キーワードが使用してください。次の例は 1280x720 の最小解像度を要求します。</p>
+    ブラウザーはこれに忠実であろうとしますが、正確に一致するものが使用できない場合や、ユーザーがこれをオーバーライドした場合は、異なる解像度を返すことがあります。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: {
-    width: { min: 1280 },
-    height: { min: 720 }
-  }
-}</pre>
+    機能を*必要*とするには、 `min`, `max`, `exact` (つまり `min == max`) の各キーワードが使用してください。次の例は 1280x720 の最小解像度を要求します。
 
- <p>この解像度以上のカメラがない場合、返却された Promise は <code>OverconstrainedError</code> として拒否され、ユーザーには通知されません。</p>
+    ```js
+    {
+      audio: true,
+      video: {
+        width: { min: 1280 },
+        height: { min: 720 }
+      }
+    }
+    ```
 
- <p>動作に違いが発生する理由は、 <code>min</code>, <code>max</code>, <code>exact</code> の各キーワードが本質的に必須であるためです。それに対して <code>ideal</code> と呼ばれるプレーンな値とキーワードはそうではありません。より充実したサンプルを示します。</p>
+    この解像度以上のカメラがない場合、返却されたプロミスは `OverconstrainedError` として拒否され、ユーザーには通知されません。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: {
-    width: { min: 1024, ideal: 1280, max: 1920 },
-    height: { min: 776, ideal: 720, max: 1080 }
-  }
-}</pre>
+    動作に違いが発生する理由は、 `min`, `max`, `exact` の各キーワードが本質的に必須であるためです。それに対して `ideal` と呼ばれるプレーンな値とキーワードはそうではありません。より充実したサンプルを示します。
 
- <p><code>ideal</code> の値は、使用された場合は重みをもち、つまりブラウザーは ideal の値からみた<a href="https://w3c.github.io/mediacapture-main/#dfn-fitness-distance">最適距離</a>が最小になるような設定 (および、複数ある場合はカメラ) を見つけようとすることを意味します。</p>
+    ```js
+    {
+      audio: true,
+      video: {
+        width: { min: 1024, ideal: 1280, max: 1920 },
+        height: { min: 576, ideal: 720, max: 1080 }
+      }
+    }
+    ```
 
- <p>プレインの値は本質的に ideal ですので、これは上記の解像度の例を以下のように書くこともできることを意味します。</p>
+    `ideal` の値は、使用された場合は重みをもち、つまりブラウザーは ideal の値からみた[最適距離](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance)が最小になるような設定 (および、複数ある場合はカメラ) を見つけようとすることを意味します。
 
- <pre class="brush: js notranslate">{
-  audio: true,
-  video: {
-    width: { ideal: 1280 },
-    height: { ideal: 720 }
-  }
-}</pre>
+    プレインの値は本質的に ideal ですので、これは上記の解像度の例を以下のように書くこともできることを意味します。
 
- <p>すべての constraint が数字とは限りません。例えば、次の例はリアカメラよりもフロントカメラを (利用できるなら) を選好します。</p>
+    ```js
+    {
+      audio: true,
+      video: {
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+      }
+    }
+    ```
 
- <pre class="brush: js notranslate">{ audio: true, video: { facingMode: "user" } }</pre>
+    すべての constraint が数字とは限りません。例えば、次の例はリアカメラよりもフロントカメラを (利用できるなら) を選好します。
 
- <p>リアカメラが<em>必要</em>であれば、次のようにします。</p>
+    ```js
+    { audio: true, video: { facingMode: "user" } }
+    ```
 
- <pre class="brush: js notranslate">{ audio: true, video: { facingMode: { exact: "environment" } } }</pre>
+    リアカメラが<em>必要</em>であれば、次のようにします。
 
- <p>他の数値以外の制約として、 <code>deviceId</code> の制約があります。 <code>deviceId</code> が {{domxref("mediaDevices.enumerateDevices()")}} から分かっているのであれば、これを使用して特定の機器を要求することができます。</p>
+    ```js
+    { audio: true, video: { facingMode: { exact: "environment" } } }
+    ```
 
- <pre class="brush: js notranslate">{ video: { deviceId: myPreferredCameraDeviceId } }</pre>
+    他の数値以外の制約として、 `deviceId` の制約があります。 `deviceId` が {{domxref("mediaDevices.enumerateDevices()")}} から分かっているのであれば、これを使用して特定の機器を要求することができます。
 
- <p>上記のものは要求されたカメラを返しますが、特定したカメラが利用できない場合は別なカメラを返します。また、特定のカメラが<em>必要</em>なのであれば、以下のようにすることができます。</p>
+    ```js
+    { video: { deviceId: myPreferredCameraDeviceId } }
+    ```
 
- <pre class="brush: js notranslate">{ video: { deviceId: { exact: myExactCameraOrBustDeviceId } } }</pre>
- </dd>
-</dl>
+    上記のものは要求されたカメラを返しますが、特定したカメラが利用できない場合は別なカメラを返します。また、特定のカメラが<em>必要</em>なのであれば、以下のようにすることができます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    ```js
+    { video: { deviceId: { exact: myExactCameraOrBustDeviceId } } }
+    ```
 
-<p>要求されたメディアが正しく取得できたときに {{domxref("MediaStream")}} を受け取るハンドラーを示す {{jsxref("Promise")}} を返します。</p>
+### 返値
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+要求されたメディアが正しく取得できたときに {{domxref("MediaStream")}} を受け取るハンドラーを示す {{jsxref("Promise")}} を返します。
 
-<p>返却されたpromiseの拒否は {{ domxref("DOMException") }}に構成された{{ domxref("MediaStreamError") }}として生成されます。関連するエラーは以下の通りです。</p>
+### 例外
 
-<dl>
- <dt><code>AbortError</code></dt>
- <dd>デバイスへのアクセスはユーザとOSから許可され、かつ<code>NotReadableError</code>が生じるような問題も起きなかったが、デバイスを利用できない何らかの問題が発生した。</dd>
- <dt><code>NotAllowedError</code></dt>
- <dd>One or more of the requested source devices cannot be used at this time. This will happen if the browsing context is insecure (that is, the page was loaded using HTTP rather than HTTPS). It also happens if the user has specified that the current browsing instance is not permitted access to the device, the user has denied access for the current session, or the user has denied all access to user media devices globally. On browsers that support managing media permissions with <a href="/ja/docs/Web/HTTP/Feature_Policy">Feature Policy</a>, this error is returned if Feature Policy is not configured to allow access to the input source(s).
- <div class="note">Older versions of the specification used <code>SecurityError</code> for this instead; <code>SecurityError</code> has taken on a new meaning.</div>
- </dd>
- <dt><code>NotFoundError</code></dt>
- <dd>constraint で指定された機能を満たすメディアトラックの種類が見つからない。</dd>
- <dt><code>NotReadableError</code></dt>
- <dd>Although the user granted permission to use the matching devices, a hardware error occurred at the operating system, browser, or Web page level which prevented access to the device.</dd>
- <dt><code>OverconstrainedError</code></dt>
- <dd>The specified constraints resulted in no candidate devices which met the criteria requested. The error is an object of type <code>OverconstrainedError</code>, and has a <code>constraint</code> property whose string value is the name of a constraint which was impossible to meet, and a <code>message</code> property containing a human-readable string explaining the problem.
- <div class="note">Because this error can occur even when the user has not yet granted permission to use the underlying device, it can potentially be used as a fingerprinting surface.</div>
- </dd>
- <dt><code>SecurityError</code></dt>
- <dd>User media support is disabled on the {{domxref("Document")}} on which <code>getUserMedia()</code> was called. The mechanism by which user media support is enabled and disabled is left up to the individual user agent.</dd>
- <dt><code>TypeError</code></dt>
- <dd>The list of constraints specified is empty, or has all constraints set to <code>false</code>. This can also happen if you try to call <code>getUserMedia()</code> in an insecure context, since {{domxref("navigator.mediaDevices")}} is <code>undefined</code> in an insecure context.</dd>
-</dl>
+- `AbortError` {{domxref("DOMException")}}
+  - : ユーザーとオペレーティングシステムの両方がハードウェア機器へのアクセスを許可し、`NotReadableError` {{domxref("DOMException")}} を引き起こすようなハードウェアの問題は発生していませんが、機器を使用できない何らかの問題が発生した場合に発生します。
+- `NotAllowedError`  {{domxref("DOMException")}}
+  - : 要求されたソース機器の 1 つ以上が現時点で使用できない場合に発生します。これは、閲覧コンテキストが安全でない場合（つまり、ページが HTTPS ではなく HTTP を使って読み込まれた場合）に発生します。また、ユーザーが現在の閲覧インスタンスに機器へのアクセスを許可しないように指定している場合、ユーザーが現在のセッションへのアクセスを拒否している場合、またはユーザーがユーザーメディア機器へのすべてのアクセスをグローバルに拒否している場合にも発生します。[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)によるメディア権限の管理に対応しているブラウザーでは、機能ポリシーが入力ソースへのアクセスを許可するように設定されていない場合、このエラーが返されます。
 
-<h2 id="Privacy_and_security" name="Privacy_and_security">プライバシーとセキュリティ</h2>
+    > **Note:** 古いバージョンの仕様では、この代わりに `SecurityError` を使っていました。 `SecurityError` は新しい意味を持つようになりました。
+- `NotFoundError`  {{domxref("DOMException")}}
+  - : constraint で指定された機能を満たすメディアトラックの種類が見つからない場合に発生します。
+- `NotReadableError`  {{domxref("DOMException")}}
+  - : ユーザーが一致する機器の使用を許可したにもかかわらず、オペレーティングシステム、ブラウザー、またウェブページレベルでハードウェアエラーが発生し、機器にアクセスできない場合に発生します。
+- `OverconstrainedError`  {{domxref("DOMException")}}
+  - : 指定された制約の結果、要求された条件を満たす機器の候補がない場合に発生します。このエラーは `OverconstrainedError` 型のオブジェクトで、満たすことが不可能だった制約の名前を文字列値として持つ `constraint` プロパティと、問題を説明する人間が読める文字列を含む `message` プロパティを持っています。
 
-<p>As an API that may involve significant privacy concerns, <code>getUserMedia()</code>'s specification lays out a wide array of privacy and security requirements that browsers are obligated to meet.</p>
+    > **Note:** このエラーは、ユーザーが下位機器の使用許可をまだ与えていない場合でも発生するため、フィンガープリントの表面として使用される可能性があります。
+- `SecurityError`  {{domxref("DOMException")}}
+  - : `getUserMedia()`が呼び出された {{domxref("Document")}} において、ユーザーメディアの対応が無効な場合に発生します。ユーザーメディアの対応が有効になったり無効になったりする仕組みは、個々のユーザーエージェントに任されています。
+- {{jsxref("TypeError")}}
+  - : 指定された制約のリストが空であるか、すべての制約が `false` に設定されている場合に発生します。これは、安全でないコンテキストで `getUserMedia()` を呼び出そうとした場合にも発生します。これは、{{domxref("navigator.mediaDevices")}} は安全でないコンテキストでは `undefined` であるからです。
 
-<p><code>getUserMedia()</code> is a powerful feature which can only be used in <a href="/ja/docs/Web/Security/Secure_Contexts">secure contexts</a>; in insecure contexts, <code>navigator.mediaDevices</code> is <code>undefined</code>, preventing access to <code>getUserMedia()</code>. A secure context is, in short, a page loaded using HTTPS or the <code>file:///</code> URL scheme, or a page loaded from <code>localhost</code>.</p>
+## プライバシーとセキュリティ
 
-<p>In addition, user permission is always required to access the user's audio and video inputs. Only a window's top-level document context for a valid origin can even request permission to use <code>getUserMedia()</code>, unless the top-level context expressly grants permission for a given {{HTMLElement("iframe")}} to do so using <a href="/ja/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. Otherwise, the user will never even be asked for permission to use the input devices.</p>
+プライバシーに関わる重要な API として、 `getUserMedia()` の仕様は、ブラウザーが満たすべきプライバシーとセキュリティに関する広範な要件を規定しています。
 
-<p>For additional details on these requirements and rules, how they are reflected in the context in which your code is running, and about how browsers manage user privacy and security issues, read on.</p>
+`getUserMedia()` は強力な機能ですが、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。安全なコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。安全なコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
 
-<h3 id="User_privacy" name="User_privacy">ユーザーのプライバシー</h3>
+さらに、ユーザーの音声と動画の入力にアクセスするためには、常にユーザーの許可が必要です。有効なオリジンにおけるウィンドウの最上位の文書コンテキストのみが、 `getUserMedia()` を用いて権限をリクエストすることができます。ただし、最上位のコンテキストが該当する {{HTMLElement("iframe")}} に[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)を用いてその権限を明示的に許可した場合は例外です。そうでなければ、ユーザーは入力機器を使用する許可を求められることすらありません。
 
-<p>As an API that may involve significant privacy concerns, <code>getUserMedia()</code> is held by the specification to very specific requirements for user notification and permission management. First, <code>getUserMedia()</code> must always get user permission before opening any media gathering input such as a webcam or microphone. Browsers may offer a once-per-domain permission feature, but they must ask at least the first time, and the user must specifically grant ongoing permission if they choose to do so.</p>
+これらの要件や規則、コードが実行されているコンテキストにそれらがどのように反映されるか、そしてブラウザーがユーザーのプライバシーとセキュリティ問題をどのように管理するかについての詳細は、続きをお読みください。
 
-<p>Of equal importance are the rules around notification. Browsers are required to display an indicator that shows that a camera or microphone is in use, above and beyond any hardware indicator that may exist. They must also show an indicator that permission has been granted to use a device for input, even if the device is not actively recording at the moment.</p>
+### ユーザーのプライバシー
 
-<p>For example in Firefox,<strong> </strong>the URL bar displays a pulsing red icon to indicate that recording is underway. The icon is gray if the permission is in place but recording is not currently underway. The device's physical light is used to indicate whether or not recording is currently active. If you've muted your camera (so-called "facemuting"), your camera's activity light goes out to indicate that the camera is not actively recording you, without discarding the permission to resume using the camera once muting is over.</p>
+プライバシーに関わる API として、`getUserMedia()` はユーザーへの通知と許可管理に関するとても具体的な要件に仕様で拘束されています。まず、`getUserMedia()`は、ウェブカメラやマイクのような入力を集めるメディアを開く前に、常にユーザーの許可を得なければなりません。ブラウザーはドメインごとに一度だけ許可機能を提供するかもしれませんが、少なくとも最初の一回は許可を求めなければなりませんし、ユーザが継続的な権限を選択する場合は、具体的に許可しなければなりません。
 
-<h3 id="Security">Security</h3>
+同様に重要なのは、通知に関する規則です。ブラウザーは、カメラやマイクが使用されていることを示すインジケーターを、ハードウェアのインジケーター以上に表示することが義務付けられています。また、入力用機器の使用が許可されていることを示すインジケーターを、たとえその機器が現在アクティブに記録していない場合でも表示しなければなりません。
 
-<p>There are a number of ways security management and controls in a {{Glossary("user agent")}} can cause <code>getUserMedia()</code> to return a security-related error.</p>
+例えば Firefox では、 URL バーに点滅する赤いアイコンが表示され、録画が進行中であることを示しています。権限が設定されているが、現在録画が行われていない場合は、アイコンがグレーになります。機器の物理的なライトは、現在録画がアクティブになっているかどうかを示すために使用されます。カメラをミュートしている場合（いわゆる「フェイスミュート」）、カメラのアクティビティライトが消灯し、ミュート終了後にカメラの使用を再開する許可を破棄せずに、カメラがアクティブに録画していないことを示します。
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> The security model for <code>getUserMedia()</code> is still somewhat in flux. The originally-designed security mechanism is in the process of being replaced with Feature Policy, so various browsers have different levels of security support, using different mechanisms. You should test your code carefully on a variety of devices and browsers to be sure it is as broadly compatible as possible</p>
-</div>
+### セキュリティ
 
-<h4 id="Feature_Policy">Feature Policy</h4>
+{{Glossary("user agent", "ユーザーエージェント")}}のセキュリティ管理と制御が原因で、 `getUserMedia()` がセキュリティ関連のエラーを返す可能性はいくつかあります。
 
-<p>The <a href="/ja/docs/Web/HTTP/Feature_Policy">Feature Policy</a> security management feature of {{Glossary("HTTP")}} is in the process of being introduced into browsers, with support available to some extent in many browsers (though not always enabled by default, as in Firefox). <code>getUserMedia()</code> is one method which will require the use of Feature Policy, and your code needs to be prepared to deal with this. For example, you may need to use the {{htmlattrxref("allow", "iframe")}} attribute on any {{HTMLElement("iframe")}} that uses <code>getUserMedia()</code>, and pages that use <code>getUserMedia()</code> will eventually need to supply the {{HTTPHeader("Feature-Policy")}} header.</p>
+> **Note:** `getUserMedia()` のセキュリティモデルはまだいくらか流動的です。元々設計されていたセキュリティの仕組みは機能ポリシーに置き換えられつつあるため、様々なブラウザが異なる仕組みを用いて、異なるレベルのセキュリティサポートを提供しています。コードができるだけ広い範囲で互換性があることを確認するために、さまざまな機器やブラウザーで慎重にテストする必要があります。
 
-<p>The two permissions that apply to <code>getUserMedia()</code> are <code>camera</code> and <code>microphone</code>.</p>
+#### 機能ポリシー
 
-<p>For example, this line in the HTTP headers will enable use of a camera for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:</p>
+[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)は {{Glossary("HTTP")}} のセキュリティ管理機能で、ブラウザーへの導入が進んでおり、多くのブラウザーがある程度対応しています（Firefox のように、既定で有効のものばかりとは限りませんが）。 `getUserMedia()` は、機能ポリシーの使用を必要とするメソッドの一つであり、コードはこれに対処するために準備される必要があります。
+例えば、`getUserMedia()` を利用する {{HTMLElement("iframe")}} には {{htmlattrxref("allow", "iframe")}} 属性が必要になるかもしれませんし、 `getUserMedia()` を利用するページでは最終的に {{HTTPHeader("Feature-Policy")}} ヘッダーの提供が必要になるはずです。
 
-<pre class="notranslate">Feature-Policy: camera 'self'</pre>
+`getUserMedia()` に適用される権限は `camera` と `microphone` の 2 つです。
 
-<p>This will request access to the microphone for the current origin and the specific origin https://developer.mozilla.org:</p>
+例えば、 HTTP ヘッダーにこの行があると、文書と同じオリジンから読み込まれる埋め込み {{HTMLElement("iframe")}} 要素がカメラを使用できるようになります。
 
-<pre class="notranslate">Feature-Policy: microphone 'self' https://developer.mozilla.org</pre>
+```
+Feature-Policy: camera 'self'
+```
 
-<p>If you're using <code>getUserMedia()</code> within an <code>&lt;iframe&gt;</code>, you can request permission just for that frame, which is clearly more secure than requesting a more general permission. Here, indicate we need the ability to use both camera and microphone:</p>
+これは、現在のオリジンと特定のオリジン https\://developer.mozilla.org のマイクへのアクセスを要求します。
 
-<pre class="brush: html notranslate">&lt;iframe src="https://mycode.example.net/etc" allow="camera;microphone"&gt;
-&lt;/iframe&gt;</pre>
+```
+Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
 
-<p>Read our guide, <a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a>, to learn more about how it works.</p>
+もし `getUserMedia()` を `<iframe>` 内で使っているなら、そのフレームだけの許可を求めることができ、これはより一般的な許可を求めるよりも明らかに安全です。ここでは、カメラとマイクの両方を使用する機能が必要であることを示しています。
 
-<h4 id="Encryption_based_security">Encryption based security</h4>
+```html
+<iframe src="https://mycode.example.net/etc" allow="camera;microphone">
+</iframe>
+```
 
-<p>The <code>getUserMedia()</code> method is only available in <a href="/ja/docs/Web/Security/Secure_Contexts">secure contexts</a>. A secure context is one the browser is reasonably confident contains a document which was loaded securely, using HTTPS/TLS, and has limited exposure to insecure contexts. If a document isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} property is <code>undefined</code>, making access to <code>getUserMedia()</code> impossible.</p>
+仕組みについて学ぶには、[機能ポリシーの使い方](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)のガイドを読んでください。
 
-<p>Attempting to access <code>getUserMedia()</code> in this situation will result in a <code>TypeError</code>.</p>
+#### 暗号化ベースのセキュリティ
 
-<h4 id="Document_source_security">Document source security</h4>
+`getUserMedia()` メソッドは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)においてのみ利用可能です。安全なコンテキストとは、ブラウザーが HTTPS/TLS を使って安全に読み込まれた文書を含んでいると合理的に確信できるもので、安全でないコンテキストにさらされることは限定されています。文書が安全なコンテキストで読み込まれなかった場合、 {{domxref("navigator.mediaDevices")}} プロパティは `undefined` となり、 `getUserMedia()` へのアクセスが不可能になります。
 
-<p>Because of the obvious security concern associated with <code>getUserMedia()</code> if used unexpectedly or without security being carefully managed, it can only be used in secure contexts. There are a number of insecure ways to load a document that might, in turn, attempt to call <code>getUserMedia()</code>. The following are examples of situations in which <code>getUserMedia()</code> is not permitted to be called:</p>
+この状態で `getUserMedia()` にアクセスしようとすると {{jsxref("TypeError")}} が発生します。
 
-<ul>
- <li>A document loaded into a sandboxed {{HTMLElement("iframe")}} element cannot call <code>getUserMedia()</code> unless the <code>&lt;iframe&gt;</code> has its {{htmlattrxref("sandbox", "iframe")}} attribute set to <code>allow-same-origin</code>.</li>
- <li>A document loaded using a <code>data://</code> or <code>blob://</code> URL which has no origin (such as when one of these URLs is typed by the user into the address bar) cannot call <code>getUserMedia()</code>. These kinds of URLs loaded from JavaScript code inherit the script's permissions.</li>
- <li>Any other situation in which there is no origin, such as when the {{htmlattrxref("srcdoc", "iframe")}} attribute is used to specify the contents of a frame.</li>
-</ul>
+#### 文書ソースセキュリティ
 
-<h2 id="Examples" name="Examples">例</h2>
+`getUserMedia()` は、予期せず使用された場合やセキュリティが慎重に管理されていない場合には、明らかにセキュリティ上の問題があるため、安全なコンテキストでのみ使用することができます。次に `getUserMedia()` を呼び出そうとするような、安全でない方法で文書を読み込む方法はいくつもあります。以下は `getUserMedia()` を呼び出すことが許されない状況の例です。
 
-<h3 id="Width_and_height" name="Width_and_height">幅と高さ</h3>
+- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の {{htmlattrxref("sandbox", "iframe")}} 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
+- オリジンを持たない `data://` や `blob://` の URL を使って読み込まれた文書（例えば、これらの URL のいずれかがユーザーによってアドレスバー入力された場合）は、 `getUserMedia()` を呼び出すことができません。 JavaScript のコードから読み込まれたこれらの種類の URL は、スクリプトの権限を継承します。
+- その他、 {{htmlattrxref("srcdoc", "iframe")}} 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
 
-<p>この例ではカメラの解像度の設定を与えて、結果の {{domxref("MediaStream")}} オブジェクトを vide 要素に割り当てます。</p>
+## 例
 
-<pre class="brush: js notranslate">// Prefer camera resolution nearest to 1280x720.
+### 幅と高さ
+
+この例ではカメラの解像度の設定を与えて、結果の {{domxref("MediaStream")}} オブジェクトを video 要素に割り当てます。
+
+```js
+// Prefer camera resolution nearest to 1280x720.
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
 navigator.mediaDevices.getUserMedia(constraints)
@@ -246,13 +264,14 @@ navigator.mediaDevices.getUserMedia(constraints)
   };
 })
 .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
-</pre>
+```
 
-<h3 id="Using_the_new_API_in_older_browsers" name="Using_the_new_API_in_older_browsers">古いブラウザーでの新しい API の使用</h3>
+### 古いブラウザーでの新しい API の使用
 
-<p>Here's an example of using <code>navigator.mediaDevices.getUserMedia()</code>, with a polyfill to cope with older browsers. Note that this polyfill does not correct for legacy differences in constraints syntax, which means constraints won't work well across browsers. It is recommended to use the <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill instead, which does handle constraints.</p>
+古いブラウザーに対処するためのポリフィルで `navigator.mediaDevices.getUserMedia()` を使用する例です。このポリフィルは、制約の構文におけるレガシーの違いを修正しないので、制約がブラウザー間でうまく機能しないことを意味することに注意してください。代わりに、制約を処理する [adapter.js](https://github.com/webrtc/adapter) のポリフィルを使用することをお勧めします。
 
-<pre class="brush: js notranslate">// Older browsers might not implement mediaDevices at all, so we set an empty object first
+```js
+// Older browsers might not implement mediaDevices at all, so we set an empty object first
 if (navigator.mediaDevices === undefined) {
   navigator.mediaDevices = {};
 }
@@ -296,56 +315,41 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<h3 id="Frame_rate" name="Frame_rate">フレームレート</h3>
+### フレームレート
 
-<p>帯域幅に制限のあるWebRTC通信のようなケースでは、低フレームレートが望ましいかもしれません。</p>
+帯域幅に制限のある WebRTC 通信のようなケースでは、低フレームレートが望ましいかもしれません。
 
-<pre class="brush: js notranslate">var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
-</pre>
+```js
+var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+```
 
-<h3 id="Front_and_back_camera" name="Front_and_back_camera">フロントカメラとバックカメラ</h3>
+### フロントカメラとバックカメラ
 
-<p>携帯電話での例。</p>
+携帯電話での例です。
 
-<pre class="brush: js notranslate">var front = false;
+```js
+var front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
 var constraints = { video: { facingMode: (front? "user" : "environment") } };
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaDevices.getUserMedia")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>より古い {{domxref("navigator.getUserMedia()")}} API。</li>
- <li>{{domxref("mediaDevices.enumerateDevices()")}}:利用可能なメディア機器を列挙</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API (メディアストリーム)</a></li>
- <li><a href="/ja/docs/Web/API/Screen_Capture_API">Screen Capture API</a>: 画面の内容を {{domxref("MediaStream")}} としてキャプチャ</li>
- <li>{{domxref("mediaDevices.getDisplayMedia()")}}: スクリーンの内容を含むストリームの取得</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API/Taking_still_photos">ウェブカメラでの写真撮影</a>: <code>getUserMedia()</code> を使用して動画ではなくスチル写真を撮る方法</li>
-</ul>
+- より古い {{domxref("navigator.getUserMedia()")}} API
+- {{domxref("mediaDevices.enumerateDevices()")}}:利用可能なメディア機器を列挙
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+- [メディアキャプチャとストリーム API （メディアストリーム）](/ja/docs/Web/API/Media_Streams_API)
+- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API): 画面の内容を {{domxref("MediaStream")}} としてキャプチャ
+- {{domxref("mediaDevices.getDisplayMedia()")}}: 画面の内容を含むストリームの取得
+- [ウェブカメラでの写真撮影](/ja/docs/Web/API/WebRTC_API/Taking_still_photos): 動画ではなく静止画を撮るために `getUserMedia()` を使用するチュートリアル
