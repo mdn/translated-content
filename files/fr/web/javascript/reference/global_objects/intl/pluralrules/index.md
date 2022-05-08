@@ -32,7 +32,7 @@ L'objet **`Intl.PluralRules`** permet de mettre en forme des chaînes de caract�
 
 ### Utiliser `locales`
 
-Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin de respecter la langue de l'utilisatrice et de l'utilisateur dans votre application, assurez vous d'indiquer cette langue (et éventuellement une langue de secours) grâce à l'argument `locales`&nbsp;:
+Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin de respecter la langue de l'utilisatrice et de l'utilisateur dans votre application, assurez-vous d'indiquer cette langue (et éventuellement une langue de secours) grâce à l'argument `locales`&nbsp;:
 
 ```js
 // L'arabe possède plusieurs règles
