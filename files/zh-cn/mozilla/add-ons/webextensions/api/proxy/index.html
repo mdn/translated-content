@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 
 <p>除了这个api，扩展也能够使用<strong><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig">browserSettings.proxyConfig</a></code></strong>属性来重新编辑你全局的<code>proxy</code>设置</p>
 
-<p>Chrome浏览器提供了一个叫做<code><a href="https://developer.chrome.com/extensions/proxy">'proxy'</a>的</code>api扩展，它的功能跟这个api类似，在chrome的api中也可以用来实现一个<code>拦截策略。</code>然而，Chrome 的API的设计跟这个API设计完全不同。因为这个API跟谷歌的<code>proxy</code>的<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">API完全不同, 这个API只能通过'browser'命名空间访问</span></font></p>
+<p>Chrome浏览器提供了一个叫做<code><a href="https://developer.chrome.com/extensions/proxy">'proxy'</a>的</code>api扩展，它的功能跟这个api类似，在chrome的api中也可以用来实现一个<code>拦截策略。</code>然而，Chrome 的API的设计跟这个API设计完全不同。因为这个API跟谷歌的<code>proxy</code>的<font face="consolas, Liberation Mono, courier, monospace">API完全不同, 这个API只能通过'browser'命名空间访问</font></p>
 
 <p>如果你想用这个API你需要得到'<code>proxy</code>'的<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.并且，如果你想拦截一个请求，你同样也需要当前拦截请求的url的 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permission</a>。</p>
 
