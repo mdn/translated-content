@@ -1428,11 +1428,9 @@
 /fr/docs/Glossaire/GPL	/fr/docs/Glossary/GPL
 /fr/docs/Glossaire/GPU	/fr/docs/Glossary/GPU
 /fr/docs/Glossaire/GZip_compression	/fr/docs/Glossary/GZip_compression
-/fr/docs/Glossaire/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossaire/Gecko	/fr/docs/Glossary/Gecko
 /fr/docs/Glossaire/General_header	/fr/docs/Glossary/General_header
 /fr/docs/Glossaire/Glyphe	/fr/docs/Glossary/Glyph
-/fr/docs/Glossaire/Gonk	/fr/docs/orphaned/Glossary/Gonk
 /fr/docs/Glossaire/Google_Chrome	/fr/docs/Glossary/Google_Chrome
 /fr/docs/Glossaire/Graceful_degradation	/fr/docs/Glossary/Graceful_degradation
 /fr/docs/Glossaire/Grid	/fr/docs/Glossary/Grid
@@ -1702,7 +1700,7 @@
 /fr/docs/Glossaire/XSLT	/fr/docs/Glossary/XSLT
 /fr/docs/Glossaire/Zones_de_grille	/fr/docs/Glossary/Grid_Areas
 /fr/docs/Glossaire/application_context	/fr/docs/Glossary/application_context
-/fr/docs/Glossaire/applications_web_modernes	/fr/docs/orphaned/Glossary/Modern_web_apps
+/fr/docs/Glossaire/applications_web_modernes	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossaire/array	/fr/docs/Glossary/array
 /fr/docs/Glossaire/beacon	/fr/docs/Glossary/beacon
 /fr/docs/Glossaire/brotli_compression	/fr/docs/Glossary/brotli_compression
@@ -1749,10 +1747,8 @@
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
-/fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
-/fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
 /fr/docs/Glossary/Index	/fr/docs/Glossary
-/fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
+/fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
 /fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
@@ -6063,6 +6059,7 @@
 /fr/docs/inset-block-start	/fr/docs/Web/CSS/inset-block-start
 /fr/docs/inset-inline-end	/fr/docs/Web/CSS/inset-inline-end
 /fr/docs/inset-inline-start	/fr/docs/Web/CSS/inset-inline-start
+/fr/docs/orphaned/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
