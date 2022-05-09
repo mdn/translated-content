@@ -86,7 +86,7 @@ var max = Math.max(...arr);
 Sin embargo, tanto la sintaxis extendida (`...`) como `apply` fallarán o retornarán
 un resultado incorrecto si el arreglo tiene demasiados elementos, porque intentan pasar el arreglo
 de elementos como parámetros de función.
-Ver [apply y funciones built-in](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#apply_and_built-in_functions)
+Ver [apply y funciones incorporadas](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#apply_and_built-in_functions)
 para más detalles. La solución con `reduce` no tiene este problema.
 
 ## Especificaciones
