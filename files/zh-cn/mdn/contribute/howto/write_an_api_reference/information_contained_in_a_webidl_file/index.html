@@ -6,27 +6,27 @@ translation_of: >-
   MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
 <div>
-<p><font><font>{{MDNSidebar}}</font></font></p>
+<p>{{MDNSidebar}}</p>
 
-<p><font><font>在编写有关API的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。</font><font>WebIDL文件是一种非常简洁的方式，可以提供很多（但不是全部）有关API的信息。</font><font>本文档提供了有助于理解WebIDL语法的参考。</font></font></p>
+<p>在编写有关API的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL文件是一种非常简洁的方式，可以提供很多（但不是全部）有关API的信息。本文档提供了有助于理解WebIDL语法的参考。</p>
 
-<p><font><font>IDL代表</font></font><em><strong><font><font>接口定义语言</font></font></strong></em><font><font>，它用于描述API。</font><font>在更广泛的计算领域，有几种IDL。</font><font>在浏览器领域，我们使用的IDL称为</font></font><em><font><font>WebIDL</font></font></em><font><font>。</font><font>有两种WebIDL可用：WebIDL规范中给出的一种，以及在浏览器中实现的一种。</font><font>规范是规范引用，浏览器WebIDL描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释和有关非标准元素的信息。</font></font></p>
+<p>IDL代表<em><strong>接口定义语言</strong></em>，它用于描述API。在更广泛的计算领域，有几种IDL。在浏览器领域，我们使用的IDL称为<em>WebIDL</em>。有两种WebIDL可用：WebIDL规范中给出的一种，以及在浏览器中实现的一种。规范是规范引用，浏览器WebIDL描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释和有关非标准元素的信息。</p>
 </div>
 
 <p> </p>
 
-<h2 id="在哪里可以找到WebIDL文件"><font><font>在哪里可以找到WebIDL文件</font></font></h2>
+<h2 id="在哪里可以找到WebIDL文件">在哪里可以找到WebIDL文件</h2>
 
-<p><font><font>WebIDL可以在多个位置找到：</font></font></p>
+<p>WebIDL可以在多个位置找到：</p>
 
 <ul>
- <li><font><font>每个规范在文本中都包含WebIDL：它是一种传达精确定义的非常方便的方法。</font><font>这些描述了API的语法。</font><font>虽然是规范参考，但我们必须记住，它们可能与实际实施不同。</font><font>在MDN上，我们希望实用并记录Web平台的真正含义，而不是理想应该是什么。</font><font>因此，请仔细检查实现中的内容（如果发现错误，请不要犹豫，立即提交）。</font></font></li>
- <li><font><font>三个浏览器引擎使用（修改）WebIDL作为其工具链的一部分：Gecko，Chromium / Blink和WebCore / WebKit。</font><font>Edge在内部使用它，但遗憾的是它们不公开（它会帮助我们很多）。</font></font>
+ <li>每个规范在文本中都包含WebIDL：它是一种传达精确定义的非常方便的方法。这些描述了API的语法。虽然是规范参考，但我们必须记住，它们可能与实际实施不同。在MDN上，我们希望实用并记录Web平台的真正含义，而不是理想应该是什么。因此，请仔细检查实现中的内容（如果发现错误，请不要犹豫，立即提交）。</li>
+ <li>三个浏览器引擎使用（修改）WebIDL作为其工具链的一部分：Gecko，Chromium / Blink和WebCore / WebKit。Edge在内部使用它，但遗憾的是它们不公开（它会帮助我们很多）。
   <ul>
-   <li><font><font>对于Gecko，所有WebIDL文件都分组在一个目录中：</font></font><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">https://dxr.mozilla.org/mozilla-central/source/dom/webidl/</a><font><font> </font></font></li>
-   <li><font><font>他们的延伸是</font></font><code>.webidl</code><font><font>。</font></font><code>*.idl</code><font><font>Gecko源代码树中</font><font>还有其他  </font><font>文件，但它们不是WebIDL，因此您可以忽略它们。</font><font>旧版本的Gecko有一些WebIDL分散在某些地方，甚至可能使用Mozilla的IDL而不是WebIDL来描述一些Web界面，但这在任何最近的Gecko代码中都不会成为问题。</font></font></li>
-   <li><font><font>对于Chromium，它们分散在源代码中，所以你需要多花点功夫：例如</font></font><a href="http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl"><font><font>http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl</font></font></a></li>
-   <li><font><font>同样，WebCore正如预期的那样，因为Chromium是从它分叉出来的，例如</font></font><a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl"><font><font>https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl</font></font></a> </li>
+   <li>对于Gecko，所有WebIDL文件都分组在一个目录中：<a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">https://dxr.mozilla.org/mozilla-central/source/dom/webidl/</a> </li>
+   <li>他们的延伸是<code>.webidl</code>。<code>*.idl</code>Gecko源代码树中还有其他  文件，但它们不是WebIDL，因此您可以忽略它们。旧版本的Gecko有一些WebIDL分散在某些地方，甚至可能使用Mozilla的IDL而不是WebIDL来描述一些Web界面，但这在任何最近的Gecko代码中都不会成为问题。</li>
+   <li>对于Chromium，它们分散在源代码中，所以你需要多花点功夫：例如<a href="http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl">http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl</a></li>
+   <li>同样，WebCore正如预期的那样，因为Chromium是从它分叉出来的，例如<a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl">https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl</a> </li>
   </ul>
  </li>
 </ul>
