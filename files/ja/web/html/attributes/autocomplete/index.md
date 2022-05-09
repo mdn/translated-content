@@ -1,270 +1,250 @@
 ---
-title: HTML の autocomplete 属性
+title: 'HTML 属性: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
 tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
+  - 住所
+  - 属性
+  - メールアドレス
+  - フォーム
   - HTML
   - Input
-  - Phone Numbers
-  - Reference
+  - 電話番号
+  - リファレンス
   - Select
-  - Text
-  - Usernames
+  - テキスト
+  - ユーザー名
   - autocomplete
   - form
-  - passwords
-  - textarea
   - パスワード
-  - メールアドレス
-  - ユーザー名
-  - 住所
-  - 電話番号
+  - textarea
+browser-compat: html.global_attributes.autocomplete
 translation_of: Web/HTML/Attributes/autocomplete
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>HTML の <code>autocomplete</code> 属性は、入力値としてテキストまたは数値を取る {{HTMLElement("input")}} 要素、 {{HTMLElement("textarea")}} 要素、 {{HTMLElement("select")}} 要素、 {{HTMLElement("form")}} 要素で利用できます。 <span class="seoSummary"><code>autocomplete</code> を使用すると、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆するのと同様に、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定します。</span></p>
+{{HTMLSidebar}}
 
-<p>提案値の情報源は、一般にブラウザーに依存します。ふつうは、ユーザーが入力した過去の値からとりますが、あらかじめ構成された値から取得することもあります。例えば、ブラウザーはユーザーに名前、住所、電話番号、メールアドレスを自動補完するために保存させることができます。おそらく、ブラウザーは以降の認証手続で自動補完を行うために、クレジットカード情報を暗号化して保存する機能を提供しているでしょう。</p>
+HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆することができるのに加え、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定することができます。
 
-<p>{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に <code>autocomplete</code> 属性がない場合、ブラウザーはその要素のフォームオーナー、つまりその要素を子孫に持つ {{HTMLElement("form")}} 要素、または <code>&lt;form&gt;</code> 要素で <code>id</code> がその要素の {{htmlattrxref("form", "input")}} 属性で指定されているものの <code>autocomplete</code> 属性の値を使用します。</p>
+入力値としてテキストまたは数値を取る {{HTMLElement("input")}} 要素、 {{HTMLElement("textarea")}} 要素、 {{HTMLElement("select")}} 要素、 {{HTMLElement("form")}} 要素で利用できます。
 
-<p>詳しくは、 {{HTMLElement("form")}} 要素の {{htmlattrxref("autocomplete", "form")}} 属性をご覧ください。</p>
+提案値の情報源は、一般にブラウザーに依存します。ふつうは、ユーザーが入力した過去の値からとりますが、あらかじめ構成された値から取得することもあります。例えば、ブラウザーはユーザーに名前、住所、電話番号、メールアドレスを自動補完するために保存させることができます。おそらく、ブラウザーは以降の認証手続で自動補完を行うために、クレジットカード情報を暗号化して保存する機能を提供しています。
 
-<div class="blockIndicator note">
-<p>自動補完を提供するために、ユーザーエージェントは <code>&lt;input&gt;</code>/<code>&lt;select&gt;</code>/<code>&lt;textarea&gt;</code> 要素に次のことを要求することがあります。</p>
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーはその要素のフォームオーナー、つまりその要素を子孫に持つ {{HTMLElement("form")}} 要素、または `<form>` 要素で `id` がその要素の {{htmlattrxref("form", "input")}} 属性で指定されているものの `autocomplete` 属性の値を使用します。
 
-<ol>
- <li><code>name</code> や <code>id</code> 属性を持つこと</li>
- <li><code>&lt;form&gt;</code> 要素の子孫であること</li>
- <li>フォームが {{HTMLElement("input/submit", "submit")}} ボタンを持つこと</li>
-</ol>
+詳しくは、 {{HTMLElement("form")}} 要素の {{htmlattrxref("autocomplete", "form")}} 属性をご覧ください。
+
+> **Note:** 自動補完を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
+>
+> 1. `name` や `id` 属性を持つこと
+> 2. `<form>` 要素の子孫であること
+> 3. フォームが {{HTMLElement("input/submit", "submit")}} ボタンを持つこと
+
+## 値
+
+- "`off`"
+
+  - : ブラウザーはこのフィールドの値を自動的に入力または選択することが許可されていません。文書やアプリケーションが独自の自動補完機能を提供していたり、セキュリティ上の理由でフィールドの値を自動的に入力しないよう要求していたりする可能性はあります。
+
+    > **Note:** ほとんどの現行ブラウザーでは `autocomplete` 属性を "`off`" に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。 [autocomplete 属性とログインフィールド](/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)をご覧ください。
+
+- "`on`"
+  - : ブラウザーが自動的に入力を補完することが許可されています。フィールドに求められているデータ型としてのガイダンスが提供されていないので、ブラウザーは独自の判断を行うかもしれません。
+- "`name`"
+
+  - : このフィールドは人の氏名の値が期待されています。一般的には、氏名を各部分に分割すると、多様な人の氏名を扱ったり構成したりしにくくなるため、 "`name`" を使用したほうが推奨されます。しかし、氏名をそれぞれの部分に分割する必要があるのであれば、以下の `autocomplete` の値を使用することができます。
+
+    - "`honorific-prefix`"
+      - : 接頭辞や敬称 (例: "Mr.", "Ms.", "Dr.", "Mlle")
+    - "`given-name`"
+      - : 名 (ファーストネーム)
+    - "`additional-name`"
+      - : ミドルネーム
+    - "`family-name`"
+      - : 苗字 (ファミリーネーム、「ラスト」ネーム)
+    - "`honorific-suffix`"
+      - : 接尾辞や敬称 (例: "Jr.", "B.Sc.", "MBASW", "II")
+    - "`nickname`"
+      - : ペンネームやハンドルネーム
+
+- "`email`"
+  - : メールアドレス。
+- "`username`"
+  - : ユーザー名またはアカウント名。
+- "`new-password`"
+  - : 新しいパスワード。新しいアカウントを作成したりパスワードを変更したりした場合は、一般的な「現在のパスワードを入力してください」ではなく、「新しいパスワードを入力してください」または「パスワードの確認」欄で使用してください。これは意図せずに既存のパスワードが意図せずに入力されるのを防いだり、安全なパスワードを生成するための助けになったりします ([autocomplete="new-password" による自動補完の防止](/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#preventing_autofilling_with_autocompletenew-password)も参照してください)。
+- "`current-password`"
+  - : ユーザーの現在のパスワードです。
+- "`one-time-code`"
+  - : ユーザー自身を確認するために使われるワンタイムコードです
+- "`organization-title`"
+  - : 職名や組織内の肩書です (例: "上級技術ライター", "社長", "副部隊長")
+- "`organization`"
+  - : 企業または団体の名前です。 "Acme Widget Company" や "Girl Scouts of America" など。
+- "`street-address`"
+  - : 住所。複数行のテキストが使用でき、第2行政レベル (普通は市町村) の中で完全に住所を識別できるものですが、市町村名、郵便番号、国名は含めるべきではありません。
+- "`address-line1`", "`address-line2`", "`address-line3`"
+  - : 住所のそれぞれの行です。これらは "`street-address`" が存在しない場合のみ置くことができます。
+- "`address-level4`"
+  - : 住所が4段階まである場合のもっとも細かい[行政レベル](#住所における行政レベル)です。
+- "`address-level3`"
+  - : 少なくとも3段階の行政レベルがある住所において、3番目の[行政レベル](#住所における行政レベル)です。
+- "`address-level2`"
+  - : 少なくとも2段階の行政レベルがある住所において、2番目の[行政レベル](#住所における行政レベル)です。2つの行政レベルがある国では、これはふつう市町村や、住所のあるその他の地域を表します。
+- "`address-level1`"
+  - : 住所の一番上[行政レベル](#住所における行政レベル)です。これはふつう、住所がある都道府県です。合衆国では州になります。スイスでは、カートンになります。イギリスでは、ポストタウンになります。
+- "`country`"
+  - : 国コードです。
+- "`country-name`"
+  - : 国名です。
+- "`postal-code`"
+  - : 郵便番号です (アメリカでは ZIP コードです)。
+- "`cc-name`"
+  - : クレジットカードなどの支払手段に表示、または関連付けられた氏名です。一般に、氏名の各部分に分割するよりも氏名のフィールドを使う方が推奨されます。
+- "`cc-given-name`"
+  - : クレジットカードなどの支払手段に指定された下の名前 (ファーストネーム) です。
+- "`cc-additional-name`"
+  - : クレジットカードなどの支払手段に指定された中間名 (ミドルネーム) です。
+- "`cc-family-name`"
+  - : クレジットカードなどの支払手段に指定された姓です。
+- "`cc-number`"
+  - : クレジットカードや番号や、口座番号などの支払手段を識別するその他の番号です。
+- "`cc-exp`"
+  - : 支払手段の有効期限で、ふつうは "MM/YY" または "MM/YYYY" の形です。
+- "`cc-exp-month`"
+  - : 支払手段の有効期限の月です。
+- "`cc-exp-year`"
+  - : 支払手段の有効期限の年です。
+- "`cc-csc`"
+  - : 支払手段のセキュリティコードです。クレジットカードでは、カードの裏に書かれた3桁の認証番号です。
+- "`cc-type`"
+  - : 支払手段の種類です。 (例: "Visa" や "Master Card").
+- "`transaction-currency`"
+  - : この取引で決済が行われる通貨です。
+- "`transaction-amount`"
+  - : 支払を行う金額の "`transaction-currency`" の単位による量です。
+- "`language`"
+  - : 優先言語で、有効な [BCP 47 言語タグ](https://ja.wikipedia.org/wiki/IETF%E8%A8%80%E8%AA%9E%E3%82%BF%E3%82%B0) で指定されたものです。
+- "`bday`"
+  - : 生年月日の全体です。
+- "`bday-day`"
+  - : 生年月日の日の部分です。
+- "`bday-month`"
+  - : 生年月日の月の部分です。
+- "`bday-year`"
+  - : 生年月日の年の部分です。
+- "`sex`"
+  - : 性別で ("Female", "Fa'afafine", "Male" など)、改行のない自由な形式のテキストです。
+- "`tel`"
+  - : 国番号を含む、完全な電話番号です。電話番号を書く部分に分割する必要がある場合は、各フィールドに以下の値を使用することができます。
+
+    - "`tel-country-code`"
+      - : 国コードで、例えば "1" はアメリカ、カナダ、その他の北アメリカとカリブ海の一部です。
+    - "`tel-national`"
+      - : 国番号以外の部分の電話番号全体で、市外局番の接頭辞 (日本では 0) を含みます。 "1-855-555-6502" という電話番号については、このフィールドの値は "855-555-6502" となります。
+    - "`tel-area-code`"
+      - : 市外局番で、必要に応じて市外局番の接頭辞 (日本では 0) を含みます。
+    - "`tel-local`"
+      - : 国番号や市外局番を含まない電話番号です。これはさらに、市内局番と加入者番号の2つに分割することができます。 "555-6502" という電話番号では、 "`tel-local-prefix`" は "555"、 "`tel-local-suffix`" は "6502" となります。
+
+- "`tel-extension`"
+  - : 電話番号の下の内線番号です。ホテルの部屋番号や企業オフィスの内線番号などです。
+- "`impp`"
+  - : インスタントメッセージングプロトコルの端点、たとえば "xmpp:username@example.net" などです。
+- "`url`"
+  - : URL です。このフォームの他のフィールドの文脈から見て適切な、ホームページのや企業ウェブサイトのアドレスです。
+- "`photo`"
+  - : このフォームの他のフィールドの文脈における人物、企業、連絡先情報を表す画像の URL です。
+
+詳しくは [WHATWG 仕様書](https://html.spec.whatwg.org/multipage/forms.html#autofill) をご覧ください。
+
+> **Note:** Firefox は他のブラウザーとは異なり、 `autocomplete` 属性で、ページを再読み込みしても `<input>` を [動的に無効化した状態や (該当する場合は) 動的に変更したチェック状態を維持するか](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) を制御します。この維持機能は、既定で有効です。 `autocomplete` 属性の値に `off` を設定すると、この機能を無効化できます。またこの設定は、`type` 属性が通常 `autocomplete` を適用しない値である `<input>` 要素でも有効です。 {{bug(654072)}} をご覧ください。
+
+## 例
+
+```html
+<div>
+  <label for="cc-number">Enter your credit card number</label>
+  <input name="cc-number" id="cc-number" autocomplete="off">
 </div>
+```
 
-<h2 id="Values" name="Values">値</h2>
+## 住所における行政レベル
 
-<dl>
- <dt>"<code>off</code>"</dt>
- <dd>ブラウザーはこのフィールドの値を自動的に入力または選択することが許可されていません。文書やアプリケーションが独自の自動補完機能を提供していたり、セキュリティ上の理由でフィールドの値を自動的に入力しないよう要求していたりする可能性はあります。
- <div class="note"><strong>メモ:</strong> ほとんどの現行ブラウザーでは <code>autocomplete</code> 属性を "<code>off</code>" に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。 <a href="/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">autocomplete 属性とログインフィールド</a>をご覧ください。</div>
- </dd>
- <dt>"<code>on</code>"</dt>
- <dd>ブラウザーが自動的に入力を補完することが許可されています。フィールドに求められているデータ型としてのガイダンスが提供されていないので、ブラウザーは独自の判断を行うかもしれません。</dd>
- <dt>"<code>name</code>"</dt>
- <dd>このフィールドは人の氏名の値が期待されています。一般的には、氏名を各部分に分割すると、多様な人の氏名を扱ったり構成したりしにくくなるため、 "<code>name</code>" を使用したほうが推奨されます。しかし、氏名をそれぞれの部分に分割する必要があるのであれば、以下の <code>autocomplete</code> の値を使用することができます。
- <dl>
-  <dt>"<code>honorific-prefix</code>"</dt>
-  <dd>接頭辞や敬称 (例: "Mr.", "Ms.", "Dr.", "Mlle")</dd>
-  <dt>"<code>given-name</code>"</dt>
-  <dd>名 (ファーストネーム)</dd>
-  <dt>"<code>additional-name</code>"</dt>
-  <dd>ミドルネーム</dd>
-  <dt>"<code>family-name</code>"</dt>
-  <dd>苗字 (ファミリーネーム、「ラスト」ネーム)</dd>
-  <dt>"<code>honorific-suffix</code>"</dt>
-  <dd>接尾辞や敬称 (例: "Jr.", "B.Sc.", "MBASW", "II")</dd>
-  <dt>"<code>nickname</code>"</dt>
-  <dd>ペンネームやハンドルネーム</dd>
- </dl>
- </dd>
- <dt>"<code>email</code>"</dt>
- <dd>メールアドレス。</dd>
- <dt>"<code>username</code>"</dt>
- <dd>ユーザー名またはアカウント名。</dd>
- <dt>"<code>new-password</code>"</dt>
- <dd>新しいパスワード。新しいアカウントを作成したりパスワードを変更したりした場合は、一般的な「現在のパスワードを入力してください」ではなく、「新しいパスワードを入力してください」または「パスワードの確認」欄で使用してください。これは意図せずに既存のパスワードが意図せずに入力されるのを防いだり、安全なパスワードを生成するための助けになったりします (<a href="/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Preventing_autofilling_with_autocompletenew-password">autocomplete="new-password" による自動補完の防止</a>も参照してください)。</dd>
- <dt>"<code>current-password</code>"</dt>
- <dd>ユーザーの現在のパスワードです。</dd>
- <dt>"<code>one-time-code</code>"</dt>
- <dd>ユーザー自身を確認するために使われるワンタイムコードです</dd>
- <dt>"<code>organization-title</code>"</dt>
- <dd>職名や組織内の肩書です (例: "上級技術ライター", "社長", "副部隊長")</dd>
- <dt>"<code>organization</code>"</dt>
- <dd>企業または団体の名前です。 "Acme Widget Company" や "Girl Scouts of America" など。</dd>
- <dt>"<code>street-address</code>"</dt>
- <dd>住所。複数行のテキストが使用でき、第2行政レベル (普通は市町村) の中で完全に住所を識別できるものですが、市町村名、郵便番号、国名は含めるべきではありません。</dd>
- <dt>"<code>address-line1</code>", "<code>address-line2</code>", "<code>address-line3</code>"</dt>
- <dd>住所のそれぞれの行です。これらは "<code>street-address</code>" が存在しない場合のみ置くことができます。</dd>
- <dt>"<code>address-level4</code>"</dt>
- <dd>住所が4段階まである場合のもっとも細かい<a href="#administrative_levels_in_addresses">行政レベル</a>です。</dd>
- <dt>"<code>address-level3</code>"</dt>
- <dd>少なくとも3段階の行政レベルがある住所において、3番目の<a href="#administrative_levels_in_addresses">行政レベル</a>です。</dd>
- <dt>"<code>address-level2</code>"</dt>
- <dd>少なくとも2段階の行政レベルがある住所において、2番目の<a href="#administrative_levels_in_addresses">行政レベル</a>です。2つの行政レベルがある国では、これはふつう市町村や、住所のあるその他の地域を表します。</dd>
- <dt>"<code>address-level1</code>"</dt>
- <dd>住所の一番上<a href="#administrative_levels_in_addresses">行政レベル</a>です。これはふつう、住所がある都道府県です。合衆国では州になります。スイスでは、カートンになります。イギリスでは、ポストタウンになります。</dd>
- <dt>"<code>country</code>"</dt>
- <dd>国コードです。</dd>
- <dt>"<code>country-name</code>"</dt>
- <dd>国名です。</dd>
- <dt>"<code>postal-code</code>"</dt>
- <dd>郵便番号です (アメリカでは ZIP コードです)。</dd>
- <dt>"<code>cc-name</code>"</dt>
- <dd>クレジットカードなどの支払手段に表示、または関連付けられた氏名です。一般に、氏名の各部分に分割するよりも氏名のフィールドを使う方が推奨されます。</dd>
- <dt>"<code>cc-given-name</code>"</dt>
- <dd>クレジットカードなどの支払手段に指定された下の名前 (ファーストネーム) です。</dd>
- <dt>"<code>cc-additional-name</code>"</dt>
- <dd>クレジットカードなどの支払手段に指定された中間名 (ミドルネーム) です。</dd>
- <dt>"<code>cc-family-name</code>"</dt>
- <dd>クレジットカードなどの支払手段に指定された姓です。</dd>
- <dt>"<code>cc-number</code>"</dt>
- <dd>クレジットカードや番号や、口座番号などの支払手段を識別するその他の番号です。</dd>
- <dt>"<code>cc-exp</code>"</dt>
- <dd>支払手段の有効期限で、ふつうは "MM/YY" または "MM/YYYY" の形です。</dd>
- <dt>"<code>cc-exp-month</code>"</dt>
- <dd>支払手段の有効期限の月です。</dd>
- <dt>"<code>cc-exp-year</code>"</dt>
- <dd>支払手段の有効期限の年です。</dd>
- <dt>"<code>cc-csc</code>"</dt>
- <dd>支払手段のセキュリティコードです。クレジットカードでは、カードの裏に書かれた3桁の認証番号です。</dd>
- <dt>"<code>cc-type</code>"</dt>
- <dd>支払手段の種類です。 (例: "Visa" や "Master Card").</dd>
- <dt>"<code>transaction-currency</code>"</dt>
- <dd>この取引で決済が行われる通貨です。</dd>
- <dt>"<code>transaction-amount</code>"</dt>
- <dd>支払を行う金額の "<code>transaction-currency</code>" の単位による量です。</dd>
- <dt>"<code>language</code>"</dt>
- <dd>優先言語で、有効な <a href="https://ja.wikipedia.org/wiki/IETF%E8%A8%80%E8%AA%9E%E3%82%BF%E3%82%B0">BCP 47 言語タグ</a> で指定されたものです。</dd>
- <dt>"<code>bday</code>"</dt>
- <dd>生年月日の全体です。</dd>
- <dt>"<code>bday-day</code>"</dt>
- <dd>生年月日の日の部分です。</dd>
- <dt>"<code>bday-month</code>"</dt>
- <dd>生年月日の月の部分です。</dd>
- <dt>"<code>bday-year</code>"</dt>
- <dd>生年月日の年の部分です。</dd>
- <dt>"<code>sex</code>"</dt>
- <dd>性別で ("Female", "Fa'afafine", "Male" など)、改行のない自由な形式のテキストです。</dd>
- <dt>"<code>tel</code>"</dt>
- <dd>国番号を含む、完全な電話番号です。電話番号を書く部分に分割する必要がある場合は、各フィールドに以下の値を使用することができます。
- <dl>
-  <dt>"<code>tel-country-code</code>"</dt>
-  <dd>国コードで、例えば "1" はアメリカ、カナダ、その他の北アメリカとカリブ海の一部です。</dd>
-  <dt>"<code>tel-national</code>"</dt>
-  <dd>国番号以外の部分の電話番号全体で、市外局番の接頭辞 (日本では 0) を含みます。 "1-855-555-6502" という電話番号については、このフィールドの値は "855-555-6502" となります。</dd>
-  <dt>"<code>tel-area-code</code>"</dt>
-  <dd>市外局番で、必要に応じて市外局番の接頭辞 (日本では 0) を含みます。</dd>
-  <dt>"<code>tel-local</code>"</dt>
-  <dd>国番号や市外局番を含まない電話番号です。これはさらに、市内局番と加入者番号の2つに分割することができます。 "555-6502" という電話番号では、 "<code>tel-local-prefix</code>" は "555"、 "<code>tel-local-suffix</code>" は "6502" となります。</dd>
- </dl>
- </dd>
- <dt>"<code>tel-extension</code>"</dt>
- <dd>電話番号の下の内線番号です。ホテルの部屋番号や企業オフィスの内線番号などです。</dd>
- <dt>"<code>impp</code>"</dt>
- <dd>インスタントメッセージングプロトコルの端点、たとえば "xmpp:username@example.net" などです。</dd>
- <dt>"<code>url</code>"</dt>
- <dd>URL です。このフォームの他のフィールドの文脈から見て適切な、ホームページのや企業ウェブサイトのアドレスです。</dd>
- <dt>"<code>photo</code>"</dt>
- <dd>このフォームの他のフィールドの文脈における人物、企業、連絡先情報を表す画像の URL です。</dd>
-</dl>
+行政レベルの 4 つの欄 (`address-level1` ～ `address-level4`) は、住所が存在する国の中で、詳細さのレベルを高めるためのものです。行政レベルの体系は国によって異なり、住所を表記する際に様々な順序でレベルを並べ替えられることがあります。
 
-<p>詳しくは <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG 仕様書</a> をご覧ください。</p>
+`address-level1` は常に最も広い行政単位を表します。これは住所のもっとも広い部分であり、国名に近い部分です。
 
-<div class="note">
-<p><strong>注:</strong> Firefox は他のブラウザーとは異なり、 <code>autocomplete</code> 属性で、ページを再読み込みしても <code>&lt;input&gt;</code> を <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">動的に無効化した状態や (該当する場合は) 動的に変更したチェック状態を維持するか</a> を制御します。この維持機能は、既定で有効です。 <code>autocomplete</code> 属性の値に <code>off</code> を設定すると、この機能を無効化できます。またこの設定は、<code>type</code> 属性が通常 <code>autocomplete</code> を適用しない値である <code>&lt;input&gt;</code> 要素でも有効です。 {{bug(654072)}} をご覧ください。</p>
-</div>
+### フォームのレイアウトの自由度
 
-<h2 id="Examples" name="Examples">例</h2>
+国が異なれば住所の書き方も異なり、住所内でそれぞれの欄の位置も異なっており、フィールドの組み合わせや数も完全に異なることを考慮すると、可能であれば、サイトが住所入力フォームを表示する際に、住所がある国の指定に応じて、ユーザーが期待するレイアウトに切り替えることができると便利です。
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;label for="cc-number"&gt;Enter your credit card number&lt;/label&gt;
-  &lt;input name="cc-number" id="cc-number" autocomplete="off"&gt;
-&lt;/div&gt;</pre>
+### 変化形
 
-<h2 id="Administrative_levels_in_addresses" name="Administrative_levels_in_addresses">住所における行政レベル</h2>
+それぞれの行政レベルの使用方法は国によって異なります。以下にいくつかの例を示しますが、これは網羅的なリストではありません。
 
-<p>行政レベルの4つの欄 (<code>address-level1</code> ～ <code>address-level4</code>) は、住所が存在する国の中で、詳細さのレベルを高めるためのものです。行政レベルの体系は国によって異なり、住所を表記する際に様々な順序でレベルを並べ替えられることがあります。</p>
+#### アメリカ
 
-<p><code>address-level1</code> は常に最も広い行政単位を表します。これは住所のもっとも広い部分であり、国名に近い部分です。</p>
+アメリカ国内の一般的な住所は次のようになります。
 
-<h3 id="Form_layout_flexibility" name="Form_layout_flexibility">フォームのレイアウトの自由度</h3>
+432 Anywhere St
+Exampleville CA 95555
 
-<p>国が異なれば住所の書き方も異なり、住所内でそれぞれの欄の位置も異なっており、フィールドの組み合わせや数も完全に異なることを考慮すると、可能であれば、サイトが住所入力フォームを表示する際に、住所がある国の指定に応じて、ユーザーが期待するレイアウトに切り替えることができると便利です。</p>
+アメリカでは、住所の中で最も大きな括りの部分は州であり、この場合は "CA" (米国郵政公社の公式な略号で "California" の意味) となります。したがって `address-level1` は州、この場合は "CA" となります。
 
-<h3 id="Variations" name="Variations">変化形</h3>
+住所で 2 番目に大きな括りの部分は市区町村名なので、 `address-level2` はこの例の住所では "Exampleville" となります。
 
-<p>それぞれの行政レベルの使用方法は国によって異なります。以下にいくつかの例を示しますが、これは網羅的なリストではありません。</p>
+アメリカの住所では、 3 以上の行政単位は使用されません。
 
-<h4 id="United_States" name="United_States">アメリカ</h4>
+#### イギリス
 
-<p>アメリカ国内の一般的な住所は次のようになります。</p>
+イギリスの住所入力フォームでは、住所のレベルは 1 つで、住所に応じて 1 ～ 3 行の住所が含まれることがあります。完全な住所は次のようになります。
 
-<p>432 Anywhere St<br>
- Exampleville CA 95555</p>
+103 Frogmarch Street
+Upper-Wapping
+Winchelsea
+TN99 8ZZ
 
-<p>アメリカでは、住所の中で最も大きな括りの部分は州であり、この場合は "CA" (米国郵政公社の公式な略号で "California" の意味) となります。したがって <code>address-level1</code> は州、この場合は "CA" となります。</p>
+住所レベルは次のようになります。
 
-<p>住所で2番目に大きな括りの部分は市区町村名なので、 <code>address-level2</code> はこの例の住所では "Exampleville" となります。</p>
+- `address-level1`: ポストタウン — この場合は "Winchelsea" です。
+- `address-line2`: 地区 — この場合は "Upper-Wapping" です。
+- `address-line1`: 家屋番号や通りの詳細 — "103 Frogmarch Street"
 
-<p>アメリカの住所では、3以上の行政単位は使用されません。</p>
+郵便番号は別な行です。イギリスで郵便物をうまく配達するためには、実際には郵便番号と `address-line1` だけでよいので、必須項目はこれらのみですが、通常はもっと詳細な情報を提供することが多いので注意してください。
 
-<h4 id="United_Kingdom" name="United_Kingdom">イギリス</h4>
+#### 中国
 
-<p>イギリスの住所入力フォームでは、住所のレベルは1つで、住所に応じて1～3行の住所が含まれることがあります。完全な住所は次のようになります。</p>
+中国では、省、市、区の 3 つの行政レベルを使用することができます。
 
-<p>103 Frogmarch Street<br>
- Upper-Wapping<br>
- Winchelsea<br>
- TN99 8ZZ</p>
+6 桁の郵便番号は必ずしも必要ではありませんが、提供される場合は、わかりやすくするためにラベルと一緒に別置しています。例えば次のようになります。
 
-<p>住所レベルは次のようになります。</p>
+北京市东城区建国门北大街 8 号华润大厦 17 层 1708 单元
+邮编：100005
 
-<ul>
- <li><code>address-level1</code>: ポストタウン — この場合は "Winchelsea" です。</li>
- <li><code>address-line2</code>: 地区 — この場合は"Upper-Wapping" です。</li>
- <li><code>address-line1</code>: 家屋番号や通りの詳細 — "103 Frogmarch Street"</li>
-</ul>
+#### 日本
 
-<p>郵便番号は別な行です。イギリスで郵便物をうまく配達するためには、実際には郵便番号と <code>address-line1</code> だけでよいので、必須項目はこれらのみですが、通常はもっと詳細な情報を提供することが多いので注意してください。</p>
+日本の住所は一般的に **1 行で**、広域的な部分から詳細な部分の順に (**アメリカとは逆順**に) 書かれます。住所には 2 ～ 3 の行政レベルが含まれます。建物名や部屋番号を表すために、もう 1 行が追加されることもあります。例を示します。
 
-<h4 id="China" name="China">中国</h4>
+〒 381-0000
+長野県長野市某町 123
 
-<p>中国では、省、市、区の3つの行政レベルを使用することができます。</p>
+「〒」と続く 7 桁の番号は郵便番号です。
 
-<h4 id="Japan" name="Japan">日本</h4>
+`address-level1` は都道府県に使用されます。この場合は「長野県」です。 `address-level2` は普通、市区町村や郡に使われます。この場合は「長野市」です。「某町123」は `address-line1` で、町名と地番からなります。
 
-<p>日本の住所は一般的に<strong>1行で</strong>、広域的な部分から詳細な部分の順に (<strong>アメリカとは逆順</strong>に) 書かれます。住所には2～3の行政レベルが含まれます。建物名や部屋番号を表すために、もう1行が追加されることもあります。例を示します。</p>
+## 仕様書
 
-<p>〒381-0000<br>
- 長野県長野市某町123</p>
+{{Specifications}}
 
-<p>「〒」と続く7桁の番号は郵便番号です。</p>
+## ブラウザーの互換性
 
-<p><code>address-level1</code> は都道府県に使用されます。この場合は「長野県」です。 <code>address-level2</code> は普通、市区町村や郡に使われます。この場合は「長野市」です。「某町123」は <code>address-line1</code> で、町名と地番からなります。</p>
+{{Compat}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 関連情報
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#autofill")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("html.global_attributes.autocomplete")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{htmlelement("input")}} 要素</li>
- <li>{{htmlelement("select")}} 要素</li>
- <li>{{htmlelement("textarea")}} 要素</li>
- <li>{{htmlelement("form")}} 要素</li>
- <li><a href="/ja/docs/Learn/HTML/Forms">HTML フォーム</a></li>
- <li>すべての<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a></li>
-</ul>
+- {{htmlelement("input")}} 要素
+- {{htmlelement("select")}} 要素
+- {{htmlelement("textarea")}} 要素
+- {{htmlelement("form")}} 要素
+- [HTML フォーム](/ja/docs/Learn/Forms)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
