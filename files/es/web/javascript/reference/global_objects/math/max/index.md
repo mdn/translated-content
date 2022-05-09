@@ -65,7 +65,7 @@ var max = arr.reduce(function(a, b) {
 La siguiente función usa {{jsxref("Function.prototype.apply()")}} para obtener el máximo
 de un arreglo. `getMaxOfArray([1, 2, 3])` es equivalente a
 `Math.max(1, 2, 3)`, pero se puede usar `getMaxOfArray()` en
-arreglos construídos programáticamente. Esto debería ser usado solamente para arreglos con
+arreglos construidos de manera programada. Esto debería ser usado solamente para arreglos con
 relativamente pocos elementos.
 
 ```js
