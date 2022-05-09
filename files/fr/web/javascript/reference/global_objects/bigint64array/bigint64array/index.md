@@ -57,7 +57,7 @@ console.log(y[0]); // 21n
 let buffer = new ArrayBuffer(32);
 let z = new BigInt64Array(buffer, 0, 4);
 
-// À partir d'un iterable
+// À partir d'un itérable
 let iterable = function*(){ yield* [1n, 2n, 3n]; }();
 let bigint64 = new BigInt64Array(iterable);
 // BigInt64Array[1n, 2n, 3n]
