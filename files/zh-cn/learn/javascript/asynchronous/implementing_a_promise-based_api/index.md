@@ -138,6 +138,19 @@ button.addEventListener('click', () => {
 
 自从 `alarm()` 返回了一个 Promise，我们可以对它做任何我们可以对其他任何 promise 做的事情：`Promise.all()`，和 `async` / `await`：
 
+```html
+<div>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" size="4" value="Matilda">
+</div>
+<div>
+  <label for="delay">Delay:</label>
+  <input type="text" id="delay" name="delay" size="4" value="1000">
+</div>
+<button id="set-alarm">Set alarm</button>
+<div id="output"></div>
+```
+
 ```js
 const name = document.querySelector('#name');
 const delay = document.querySelector('#delay');
