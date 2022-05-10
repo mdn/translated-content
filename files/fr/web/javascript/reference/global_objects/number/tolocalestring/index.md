@@ -21,7 +21,7 @@ toLocaleString(locales, options)
 
 ### Paramètres
 
-Les arguments `locales` et `options` permettent à l'application de spécifier les options de formatage selon la langue utilisée. Ces arguments ont un effet sur le comportement de la fonction. Les implémentations passées, qui ignoraient les arguments `locales` et `options` se basaient uniquement sur l'implémentation pour ce qui concernait la locale et le format.
+Les arguments `locales` et `options` permettent à l'application de spécifier les options de formatage selon la langue utilisée. Ces arguments ont un effet sur le comportement de la fonction. Les implémentations passées, qui ignoraient les arguments `locales` et `options`, se basaient uniquement sur l'implémentation pour ce qui concernait la locale et le format.
 
 Voir [la page sur le constructeur `Intl.NumberFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) pour plus de détails sur ces paramètres et leur utilisation.
 
@@ -63,7 +63,7 @@ function testSupporttoLocaleString() {
 
 Avant ES5.1, il n'était pas nécessaire pour les implémentations de provoquer une erreur d'intervalle si `toLocaleString` était appelé avec des arguments.
 
-Afin de vérifier la prise en charge pour tous les environnements, y compris ceux qui supportent ECMA-262 avant la version 5.1, on peut tester les fonctionnalités définies dans ECMA-402, directement sur `Number.prototype.toLocaleString`&nbsp;:
+Afin de vérifier la prise en charge pour tous les environnements, y compris ceux qui prennent en charge ECMA-262 avant la version 5.1, on peut tester les fonctionnalités définies dans ECMA-402 directement sur `Number.prototype.toLocaleString`&nbsp;:
 
 ```js
 function toLocaleStringSupportsOptions() {
@@ -78,7 +78,7 @@ Cela permet de tester la présence d'un objet global `Intl`, de vérifier que ce
 Cet exemple illustre les variations possibles entre les différents formats localisés. Afin que le format de langue utilisé soit celui de la personne qui utilise votre site ou votre application, assurez-vous de fournir la langue utilisée (ainsi que des langues de secours) en utilisant l'argument `locales`&nbsp;:
 
 ```js
-const nombre= 123456.789;
+const nombre = 123456.789;
 
 // Pour la locale allemande, on utilise un point comme séparateur
 // pour les milliers et une virgule comme séparateur décimal
@@ -98,7 +98,7 @@ console.log(nombre.toLocaleString("en-IN"));
 console.log(nombre.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
-// quand on souhaite utiliser un langage qui n'est pas supporté, on peut
+// quand on souhaite utiliser un langage qui n'est pas pris en charge, on peut
 // inclure un langage de secours. Exemple ici avec le balinais et l'indonésien
 console.log(nombre.toLocaleString(["ban", "id"]));
 // → 123.456,789
