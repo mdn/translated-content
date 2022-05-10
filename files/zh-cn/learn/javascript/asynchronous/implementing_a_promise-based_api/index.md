@@ -184,7 +184,7 @@ button.addEventListener('click', async () => {
 ## 参见
 
 - [Promise() 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
-- [使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+- [使用 Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Introducing_workers")}}
 
