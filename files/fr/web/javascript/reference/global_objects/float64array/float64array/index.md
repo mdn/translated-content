@@ -53,11 +53,11 @@ let x = new Float64Array([21, 31]);
 let y = new Float64Array(x);
 console.log(y[0]); // 21
 
-// À partir d'un itérable
+// À partir d'un ArrayBuffer
 let buffer = new ArrayBuffer(32);
 let z = new Float64Array(buffer, 0, 4);
 
-// From an iterable
+// À partir d'un itérable
 let iterable = function*(){ yield* [1,2,3]; }();
 let float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
