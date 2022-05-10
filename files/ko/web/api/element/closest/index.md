@@ -1,28 +1,42 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
+tags:
+  - API
+  - CSS Selector
+  - DOM
+  - Element
+  - Method
+  - Reference
+  - Selector
+browser-compat: api.Element.closest
 translation_of: Web/API/Element/closest
 ---
-{{APIRef('DOM')}}기준 {{domxref("Element")}} 에서부터 **`closest()`** 메소드를 통해 자신부터 부모 요소 단위로 출발하여 각 요소가 지정한 선택자에 만족할 때까지 탐색한다(문서 루트까지 이동). 이 중 가장 가깝게 조건에 만족한 부모 요소가 반환되며, 조건에 만족한 요소가 없으면 `null` 값을 반환한다.
+{{APIRef('DOM')}}
 
-## Syntax
+{{domxref("Element")}}의 **`closest()`** 메서드는 주어진 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)와 일치하는 요소를 찾을 때까지, 자기 자신을 포함해 위쪽(부모 방향, 문서 루트까지)으로 문서 트리를 순회합니다.
 
-    var closestElement = targetElement.closest(selectors);
+## 구문
 
-### Parameters
+```js
+closest(selectors)
+```
 
-- `selectors` CSS 선택자가 들어가는 {{domxref("DOMString")}} 개체 문자열, 예)
-  `"p:hover, .toto + q"`.
+### 매개변수
 
-### Result value
+- `selectors`
+  - : {{domxref("Element")}}와 그 조상 요소들에 테스트할, 유효한 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors) 문자열입니다.
 
-- `closestElement` 기준 요소를 포함하여 부모 요소 단위로 선택자 조건에 가장 가까운 {{domxref("Element")}} 객체를 가져오며, `null` 값이 될 수 있다.
+### 반환 값
 
-### Exceptions
+`selectors`에 일치하는 가장 가까운 조상 {{domxref("Element")}} 또는 자기 자신, 일치하는 요소가 없으면 `null`.
 
-- {{exception("SyntaxError")}} : CSS 선택자 (`selectors`)가 올바른 선택자 식이 아닐 경우.
+### 예외
 
-## Example
+- `SyntaxError` {{domxref("DOMException")}}
+  - : `selectors`가 유효한 CSS 선택자가 아니면 발생합니다.
+
+## 예제
 
 ### HTML
 
@@ -39,29 +53,30 @@ translation_of: Web/API/Element/closest
 ### JavaScript
 
 ```js
-var el = document.getElementById('div-03');
+const el = document.getElementById('div-03');
 
-var r1 = el.closest("#div-02");
-// id=div-02 조건이 만족하므로 속성을 가진 부모 요소가 반환된다.
+// ID가 "div-02"인 가장 가까운 조상
+console.log(el.closest('#div-02')); // <div id="div-02">
 
-var r2 = el.closest("div div");
-// div 요소에 만족한 요소 중 div 자식을 가리키므로, id=div-03 자신이 만족된다.
+// div 안에 놓인 div인 가장 가까운 조상
+console.log(el.closest('div div')); // <div id="div-03">
 
-var r3 = el.closest("article > div");
-// 가장 가까운 article 요소 바로 하위의 div 요소 id=div-01 속성을 가진 요소가 반환된다.
+// div면서 article을 부모로 둔 가장 가까운 조상
+console.log(el.closest("article > div")); // <div id="div-01">
 
-var r4 = el.closest(":not(div)");
-// div 요소가 아닌 가장 가까운 부모 article 요소가 반환된다.
+// div가 아닌 가장 가까운 조상
+console.log(el.closest(":not(div)")); // <article>
 ```
 
-## Polyfill
+## 폴리필
 
-아래 폴리필은 `Element.closest()`, 메소드를 지원하지 않는 브라우저를 위한 방법이지만, `element.matches()` 메소드를 사용하므로 IE 9 이상에서 동작한다.
+`element.closest()`는 지원하지 않지만, `element.matches()`(또는 공급자 접두사를 포함한 동일 메서드, 즉 IE9+)는 지원하는 브라우저를 위한 폴리필입니다.
 
 ```js
 if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                              Element.prototype.webkitMatchesSelector;
+  Element.prototype.matches =
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.webkitMatchesSelector;
 }
 
 if (!Element.prototype.closest) {
@@ -69,7 +84,7 @@ if (!Element.prototype.closest) {
     var el = this;
 
     do {
-      if (el.matches(s)) return el;
+      if (Element.prototype.matches.call(el, s)) return el;
       el = el.parentElement || el.parentNode;
     } while (el !== null && el.nodeType === 1);
     return null;
@@ -77,40 +92,36 @@ if (!Element.prototype.closest) {
 }
 ```
 
-만약 정말 IE 8 지원을 고려해야 한다면, 아래 폴리필을 사용할 수 있다. 그러나 해당 폴리필은 성능이 매우 느리며, IE 8 특성 상 CSS 2.1 사양의 선택자까지밖에 사용할 수 없다. 또한 실제 운영 시 약간의 지연이 발생할 수 있다.
+정말 IE 8을 지원해야 하는 경우, 아래의 폴리필을 사용하면 비록 느리게나마 같은 작업을 할 수 있습니다. 하지만 IE 8에서는 CSS 2.1 선택자만 사용할 수 있고, 이 폴리필을 실제 운영하는 웹 사이트에 적용하면 심각한 지연 시간의 원인이 될 수 있습니다.
 
 ```js
 if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest =
-  function(s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
-    do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {};
-    } while ((i < 0) && (el = el.parentElement));
-    return el;
+  Element.prototype.closest = function(s) {
+    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i,
+        el = this;
+    do {
+      i = matches.length;
+      while (--i >= 0 && matches.item(i) !== el) {};
+    } while ((i < 0) && (el = el.parentElement));
+    return el;
   };
 }
 ```
 
-## 규격
+## 명세
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}} | {{Spec2('DOM WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
-### Compatibility notes
+### 호환성 참고사항
 
-- Edge 15-18 브라우저에서는, `document.createElement(tagName).closest(tagName)` 식이 직접적이던 간접적이던 요소와 연결되지 않았다면 `null` 값을 반환한다. 예를 들면, [`Document`](https://developer.mozilla.org/en-US/docs/Web/API/Document "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.")객체 내에서 생성한 일반 DOM 요소에서 일어난다.
+- Edge 15-18에서는 요소가 컨텍스트 객체(일반 DOM의 경우, {{domxref("Document")}})와 연결되지 않은 경우 `null`을 반환합니다. 따라서 `document.createElement(tagName).closest(tagName)`의 결과는 항상 `null`입니다.
 
 ## 같이보기
 
-- {{domxref("Element")}} 인터페이스.
-- <div class="syntaxbox"><a href="/en-US/docs/Web/Guide/CSS/Getting_started/Selectors">선택자 구문</a></div>
-- <div class="syntaxbox">선택자 구문을 사용하는 다른 메소드: {{domxref("element.querySelector()")}} 및 {{domxref("element.matches()")}}.</div>
+- [CSS 선택자 참고서](/ko/docs/Web/CSS/CSS_Selectors)
+- 선택자를 받는 {{domxref("Element")}} 메서드: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}
