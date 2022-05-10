@@ -105,8 +105,8 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 - La méthode {{ifmethod("imgIContainerObserver", "frameChanged")}} reçoit désormais le premier paramètre d'un objet `imgIRequest` qui identifie la demande correspondante.
 - La méthode {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} a été ajoutée pour permettre de synthétiser les événements tactiles.
 - Vous pouvez désormais faire défiler le contenu spécifié verticalement au centre de la vue en spécifiant `SCROLL_CENTER_VERTICALLY` lors de l'appel de la constante de défilement {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
-- Le nouvel attribut {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} a été ajouté ; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par "explicit" **et** qui sont de type `KIND_NONHEAP`.
-- L'attribut {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} a été ajouté ; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
+- Le nouvel attribut `nsIMemoryMultiReporter.explicitNonHeap` a été ajouté ; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par "explicit" **et** qui sont de type `KIND_NONHEAP`.
+- L'attribut `nsIDOMWindowUtils.paintingSuppressed` a été ajouté ; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
 - Les interfaces `nsIDocCharset` et `nsIDocumentCharsetInfo` ont été intégrées dans `nsIDocShell`. Dans le cadre de ce travail, le vieil attribut `forcedDetector` a été enlevé, il n'a jamais rien fait.
 
 ### SpiderMonkey
