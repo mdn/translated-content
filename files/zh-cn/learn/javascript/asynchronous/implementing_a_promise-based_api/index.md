@@ -159,3 +159,4 @@ button.addEventListener('click', async () => {
 - 实现基于 promise 的 API
 - [workers 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
 - [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+
