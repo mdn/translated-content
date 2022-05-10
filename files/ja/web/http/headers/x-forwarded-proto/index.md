@@ -59,7 +59,7 @@ X-Url-Scheme: https
 
 ## 仕様書
 
-現時点で、仕様書の一部ではありません。このヘッダーの標準化版は {{HTTPHeader("Forwarded")}} ヘッダーです。
+現行のどの仕様書にも含まれていません。このヘッダーの標準化版は {{HTTPHeader("Forwarded")}} ヘッダーです。
 
 ## 関連情報
 
