@@ -24,7 +24,7 @@ getBattery()
 
 Ninguno.
 
-### Valor retornado
+### Valor de retorno
 
 Una {{JSxRef("Promise")}} que, cuando resuelta, llama a su manejador de cumplimiento con un
 solo parámetro: un objeto {{DOMxRef("BatteryManager")}} que puede ser usado para obtener
