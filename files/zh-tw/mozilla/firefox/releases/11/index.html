@@ -76,10 +76,10 @@ translation_of: Mozilla/Firefox/Releases/11
 </dl>
 <h3 id="Interface_changes">Interface changes</h3>
 <ul>
- <li>The <code>mozIAsyncHistory</code> interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.</li>
- <li>A new interface <code>mozIVisitStatusCallback</code> has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.</li>
+ <li>The <code>mozIAsyncHistory</code> interface has a new method <code>mozIAsyncHistory.isURIVisited()</code> to check if a URI has been visited.</li>
+ <li>A new interface <code>mozIVisitStatusCallback</code> has been added to provide callback handling functionality for <code>mozIAsyncHistory.isURIVisited()</code>.</li>
  <li>The <code>nsIMacDockSupport</code> interface now supports adding a text badge to the application's icon in the Dock using its new <code>badgeText</code> attribute.</li>
- <li>In the <code>nsINavHistoryResultObserver</code> interface, you now need to implement {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} instead of the obsolete <code>containerOpened()</code> and <code>containerClosed()</code> methods.</li>
+ <li>In the <code>nsINavHistoryResultObserver</code> interface, you now need to implement <code>nsINavHistoryResultObserver.containerStateChanged()</code> instead of the obsolete <code>containerOpened()</code> and <code>containerClosed()</code> methods.</li>
 </ul>
 <h4 id="Removed_interfaces">Removed interfaces</h4>
 <p>The following interfaces were implementation details that are no longer needed:</p>
