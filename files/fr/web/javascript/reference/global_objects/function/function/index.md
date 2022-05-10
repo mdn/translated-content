@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.Function.Function
 ---
 {{JSRef}}
 
-Le **constructeur `Function()`** permet de créer un nouvel **objet** `Function`. Appeler le constructeur directement permet de créer des fonctions de façon dynamique, mais soufre des mêmes problèmes de sécurité et de performance, néanmoins dans une moindre mesure, que [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, à la différence de `eval()`, le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée locale.
+Le **constructeur `Function()`** permet de créer un nouvel **objet** `Function`. Appeler le constructeur directement permet de créer des fonctions de façon dynamique, mais souffre des mêmes problèmes de sécurité et de performance, néanmoins dans une moindre mesure, que [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, à la différence de `eval()`, le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée locale.
 
 {{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}
 
@@ -24,7 +24,7 @@ new Function(arg1, … argN, corpsFonction)
 
   - : Les noms à utiliser par la fonction comme noms formels d'arguments. Chacun doit être une chaîne de caractères qui correspond à un paramètre JavaScript valide ([un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une décomposition en paramètres](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), éventuellement avec une valeur par défaut), ou une liste de telles chaînes, séparées par des virgules.
 
-    Les paramètres étant analysés de la même façon que les déclarations de fonction, les espaces et les commentaires sont acceptés. Ainsi, on pourra écrire `"x", "laValeur = 42", "[a, b] /* nombres */"` — or `"x, laValeur = 42, [a, b] /* nombres */"` (`"x, laValeur = 42", "[a, b]"` est également correct, mais porte plus à confusion).
+    Les paramètres étant analysés de la même façon que les déclarations de fonction, les espaces et les commentaires sont acceptés. Ainsi, on pourra écrire `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"` (`"x, laValeur = 42", "[a, b]"` est également correct, mais porte plus à confusion.)
 
 - `corpsFonction`
   - : Une chaîne de caractères contenant les instructions JavaScript qui forment la définition de la fonction.
@@ -54,7 +54,7 @@ additionneur(2, 6);
 
 Les arguments `"a"` et `"b"` sont les noms formels des arguments utilisés dans le corps de la fonction&nbsp;: `"return a + b"`.
 
-### Créér un objet `Function` avec une déclaration ou une expression de fonction
+### Créer un objet `Function` avec une déclaration ou une expression de fonction
 
 ```js
 // Le constructeur Function() peut prendre plusieurs instructions séparées par des points-virgules.
