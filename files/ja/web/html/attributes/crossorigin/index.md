@@ -1,100 +1,104 @@
 ---
-title: HTML crossorigin 属性
+title: 'HTML 属性: crossorigin'
 slug: Web/HTML/Attributes/crossorigin
 tags:
-  - Advanced
+  - 上級者
+  - 属性
   - CORS
   - HTML
-  - Reference
-  - Security
+  - NeedsContent
+  - リファレンス
   - セキュリティ
-  - 上級者
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin
 translation_of: Web/HTML/Attributes/crossorigin
 ---
-<div>{{draft}}</div>
+{{HTMLSidebar}}
 
-<p class="seoSummary"><strong><code>crossorigin</code></strong> 属性は、 {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }} の各要素で有効であり、 <a href="/ja/docs/Web/HTTP/CORS">CORS</a> への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。</p>
+**`crossorigin`** 属性は、 {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }} の各要素で有効であり、 [CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
 
-<p>メディア要素の <code>crossorigin</code> コンテンツ属性は CORS 設定属性です。</p>
+メディア要素の `crossorigin` コンテンツ属性は CORS 設定属性です。
 
-<p>これらの属性は列挙型で、以下の値を取ることができます。</p>
+これらの属性は列挙型で、以下の値を取ることができます。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">キーワード</td>
-   <td class="header">説明</td>
-  </tr>
-  <tr>
-   <td><code>anonymous</code></td>
-   <td>この要素のための CORS リクエストで資格情報フラグを 'same-origin' に設定する。</td>
-  </tr>
-  <tr>
-   <td><code>use-credentials</code></td>
-   <td>この要素のための CORS リクエストで資格情報フラグを 'include' に設定する。</td>
-  </tr>
-  <tr>
-   <td><code>""</code></td>
-   <td><code>crossorigin</code> または <code>crossorigin=""</code> のように属性に空の値を設定すると、 <code>anonymous</code> と同じになります。</td>
-  </tr>
- </tbody>
+- `anonymous`
+  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'same-origin'` に設定されます。宛先が同一オリジンでない限り、クッキー、クライアントサイド SSL 証明書、HTTP 認証による**ユーザー資格情報**の交換は行われません。
+- `use-credentials`
+  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'include'` に設定され、**ユーザー資格情報**は常に含まれます。
+- `""`
+  - : `crossorigin` または `crossorigin=""` のように属性に空の値を設定すると、 `anonymous` と同じになります。
+
+不正なキーワードや空文字列を指定すると、 `anonymous` が指定されたものと同じように扱われます。
+
+既定では（つまり、属性が指定されていない場合）、 CORS はまったく使用されません。ユーザーエージェントはそのリソースへの完全アクセス権限を求めず、オリジン間リクエストの場合、その要素の種類に応じて一定の制限が適用されます。
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <td class="header">要素</td>
+      <td class="header">制限</td>
+    </tr>
+    <tr>
+      <td><code>img</code>, <code>audio</code>, <code>video</code></td>
+      <td>
+        そのリソースが {{HTMLElement("canvas")}} 内に配置された場合、要素は<a href="/ja/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases"><em>汚染</em></a>されているとマークされます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>script</code></td>
+      <td>
+        {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} によるエラーログへのアクセスが制限されます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>link</code></td>
+      <td>
+        適切な <code>crossorigin</code> ヘッダーがないリクエストは破棄されることがあります。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>既定では (つまり、属性が指定されていない場合)、 CORS は使用されません。 "anonymous" キーワードが指定された場合は、同じオリジンでない限り、リクエストにはクッキーやクライアント側の SSL 証明書、 HTTP 認証などの <a class="external" href="http://www.w3.org/TR/cors/#user-credentials">CORS 仕様書の用語の節</a>で記述されている<ruby><strong>ユーザー資格情報</strong><rp> (</rp><rt>user credentials</rt><rp>) </rp></ruby>は使用されません。</p>
+> **Note:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
 
-<p>不正なキーワードや空文字列は、 <code>anonymous</code> が指定されたものと同じように扱われます。</p>
+### 例: `<script>` 要素の `crossorigin`
 
-<h3 id="Example_crossorigin_with_the_script_element" name="Example_crossorigin_with_the_script_element">例: script 要素の crossorigin</h3>
+以下の {{HTMLElement("script")}} 要素を使用すると、ユーザー資格情報を送信せずに `https://example.com/example-framework.js` スクリプトを実行します。
 
-<p>以下の {{HTMLElement("script")}} 要素を使用すると、ユーザー資格情報を送信せずに <code>https://example.com/example-framework.js</code> スクリプトを実行します。</p>
+```html
+<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+```
 
-<pre class="brush: html">&lt;script src="https://example.com/example-framework.js" crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+### 例: 資格情報付きのウェブマニフェスト
 
-<h3 id="Example_Webmanifest_with_credentials" name="Example_Webmanifest_with_credentials">例: 資格情報付きの Webmanifest</h3>
+資格情報を必要とするマニフェストを読み取るときは、同じオリジンからのファイル読み取りであっても `use-credentials` の値を使用する必要があります。
 
-<p>資格情報を必要とするマニフェストを読み取るときは、同じオリジンからのファイル読み取りであっても <code>use-credentials</code> の値を使用する必要があります。</p>
+```html
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+```
 
-<pre class="brush: html">&lt;link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials"&gt;</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+### script の crossorigin
 
-<h3 id="&lt;script_crossorigin>">&lt;script crossorigin&gt;</h3>
+{{Compat("html.elements.script.crossorigin")}}
 
-<p>{{Compat("html.elements.script.crossorigin")}}</p>
+### video の crossorigin
 
-<h3 id="&lt;video_crossorigin>">&lt;video crossorigin&gt;</h3>
+{{Compat("html.elements.video.crossorigin")}}
 
-<p>{{Compat("html.elements.video.crossorigin")}}</p>
+### link の crossorigin
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat("html.elements.link.crossorigin")}}
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTML/Attributes/rel">HTML の <code>rel</code> 属性</a></li>
-</ul>
+## 関連情報
 
-<div>{{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}</div>
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTML 属性: `rel`](/ja/docs/Web/HTML/Attributes/rel)
+
+{{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}
