@@ -17,7 +17,7 @@ translation_of: Web/API/Crypto/getRandomValues
 
 충분한 성능을 확보하기 위해, API 구현체들은 진정한 난수 생성기 대신 충분한 엔트로피를 지닌 값을 시드로 적용한 의사 난수 생성기(pseudo-random number generator, PRNG)를 사용합니다. 정확한 의사 난수 생성 알고리즘은 {{glossary("user agent", "사용자 에이전트")}}마다 다를 수 있지만, 암호학적 용도로는 모두 적합할 것입니다.
 
-`getRandomValues()`는 `Crypto` 인터페이스에서 안전하지 않은 연결에서 사용할 수 있는 유일한 멤버입니다.
+`getRandomValues()`는 안전하지 않은 연결에서 사용할 수 있는 유일한 `Crypto` 인터페이스 멤버입니다.
 
 ## 구문
 
