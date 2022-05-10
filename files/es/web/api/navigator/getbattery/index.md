@@ -26,7 +26,7 @@ Ninguno.
 
 ### Valor de retorno
 
-Una {{JSxRef("Promise")}} que, cuando resuelta, llama a su manejador de cumplimiento con un
+Una {{JSxRef("Promise")}} que, cuando finaliza, llama a su manejador de cumplimiento con un
 solo parámetro: un objeto {{DOMxRef("BatteryManager")}} que puede ser usado para obtener
 información acerca del estado de la batería.
 
