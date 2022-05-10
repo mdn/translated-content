@@ -62,7 +62,7 @@ original_slug: Updating_extensions_for_Firefox_3
   </ol>
 </section></div>
 
-<p><span class="comment">英文原文取自于 <a class="external" href="http://developer.mozilla.org/en/docs/Extensions" rel="freelink">http://developer.mozilla.org/en/docs/Extensions</a></span>  这篇文章将对于那些想把他们的扩展在Firefox 3中正常运行的开发者提供一些有用的信息。</p>
+<p>英文原文取自于 <a class="external" href="http://developer.mozilla.org/en/docs/Extensions" rel="freelink">http://developer.mozilla.org/en/docs/Extensions</a>  这篇文章将对于那些想把他们的扩展在Firefox 3中正常运行的开发者提供一些有用的信息。</p>
 
 <p>在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的<code>maxVersion</code>信息，并且你的扩展所在的主机是<a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>，事实上你不需要上传你的新的版本的扩展！只需要在AMO中使用开发者控制面板调整<code>maxVersion</code>。通过这种方式你可以避免你的扩展被再次审核。</p>
 
@@ -72,12 +72,12 @@ original_slug: Updating_extensions_for_Firefox_3
 
 <p>找到声明兼容的最大版本号的那一行（对于Firefox2，如下）：</p>
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;</span>
+<pre class="eval"> &lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>对于Firefox 3，如下:</p>
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;</span>
+<pre class="eval"> &lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>然后重新安装扩展。</p>
@@ -134,7 +134,7 @@ original_slug: Updating_extensions_for_Firefox_3
 
 <h4 id="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29" name="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29">Popups (Menus, Context Menus, Tooltips and Panels)</h4>
 
-<p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/cn/XUL/PopupGuide" title="cn/XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<span id="m-showPopup"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span></code> has been deprecated in favor of new <code>popup.<span id="m-openPopup"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span></code> and <code>popup.<span id="m-openPopupAtScreen"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></span></code>.</p>
+<p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/cn/XUL/PopupGuide" title="cn/XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></code> has been deprecated in favor of new <code>popup.<code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></code> and <code>popup.<code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></code>.</p>
 
 <h4 id="Autocomplete" name="Autocomplete">Autocomplete</h4>
 

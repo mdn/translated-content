@@ -16,19 +16,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>透過在 manifest.json 中使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 鍵來定義工具列按鈕的屬性：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"browser_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"我在哪？"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"browser_action": {
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "我在哪？"
+}</code></pre>
 
 <p>唯一一個強制的鍵只有 <code>default_icon</code>。</p>
 
 <p>指定工具列按鈕的方式有兩種： 有<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>跟沒有<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>。如果你不指定彈出視窗，當用戶點擊按鈕事件會被傳送到套件，而套件透過 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a> 監聽：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
 
 <p>如果你指定彈出視窗，點擊事件不會被傳送，取而代之當用戶點擊按鈕時彈出視窗會被展開。用戶可以跟彈出視窗互動且當用戶點擊了彈出視窗外側它會自動關閉。更多建立與管理彈出視窗的細節請查看<a href="/en-US/Add-ons/WebExtensions/Popups">彈出視窗</a>文章。</p>
 

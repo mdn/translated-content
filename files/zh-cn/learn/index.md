@@ -44,8 +44,6 @@ translation_of: Learn
 
 > **备注：** 可在 [词汇表](/zh-CN/docs/Glossary) 中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在 [常见问题](/zh-CN/docs/Learn/Common_questions) 寻找答案。
 
-{{LearnBox({"title":"随机术语"})}}
-
 ## 涵盖的主题
 
 以下是 MDN 学习区涵盖的所有主题列表：
