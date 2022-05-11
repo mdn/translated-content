@@ -522,7 +522,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 <ul>
  <li class="note">Por padrão, o Firefox 3 limita o número de XMLHttpRequest conexões por servidor a 6 (versões anteriores limitar esta para 2 por servidor). Alguns sites interativos podem manter um XMLHttpRequest conexão aberta, de modo que a abertura de várias sessões para esses sites pode resultar no navegador pendurado de tal forma que a janela já não repaints e controles não respondem. Este valor pode ser alterado através da edição do network.http.max-persistent-connections-per-server preferência no <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
- <li class="note">Do Gecko 7 cabeçalhos estabelecidos pela {{ manch("setRequestHeader") }} asão enviados com o pedido, quando na sequência de um redirecionamento. Anteriormente, estes cabeçalhos não iria ser enviado.</li>
+ <li class="note">Do Gecko 7 cabeçalhos estabelecidos pela <a href="#setrequestheader">setRequestHeader</a> asão enviados com o pedido, quando na sequência de um redirecionamento. Anteriormente, estes cabeçalhos não iria ser enviado.</li>
  <li class="note"><code>XMLHttpRequest é implementado em Gecko usando os</code> <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, e <code>nsIJSXMLHttpRequest</code> interfaces.</li>
 </ul>
 
