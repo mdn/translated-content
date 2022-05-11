@@ -31,7 +31,7 @@ Un nouvel objet `Proxy` révocable est renvoyé par la méthode.
 Un `Proxy` révocable est un objet qui possède les propriétés suivantes&nbsp;: `{proxy: proxy, revoke: revoke}`.
 
 - `proxy`
-  - : Un proxy crée avec un appel à `new Proxy(cible, gestionnaire)`.
+  - : Un proxy créé avec un appel à `new Proxy(cible, gestionnaire)`.
 - `revoke`
   - : Une fonction sans argument qui permet de désactiver le proxy.
 
