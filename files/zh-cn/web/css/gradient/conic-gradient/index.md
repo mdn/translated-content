@@ -12,8 +12,6 @@ tags:
   - Web
   - gradient
 translation_of: Web/CSS/gradient/conic-gradient()
-original_slug: Web/CSS/gradient/conic-gradient()
-browser-compat: css.types.image.gradient.conic-gradient
 ---
 {{CSSRef}}
 
@@ -47,26 +45,26 @@ background: conic-gradient(
 ### 值
 
 - {{CSSxRef("&lt;angle&gt;")}}
-  - : 在`from`关键字之前，以角度作为其值，定义顺时针方向的渐变旋转。
+  - : 在 `from` 关键字之前，以角度作为其值，定义顺时针方向的渐变旋转。
 - `<position>`
-  - : 使用与[background-position](/zh-CN/docs/Web/CSS/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。 如果省略，默认值是`center`, 表示渐变是居中的。
+  - : 使用与[background-position](/zh-CN/docs/Web/CSS/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。 如果省略，默认值是 `center`，表示渐变是居中的。
 - `<angular-color-stop>`
   - : 一个颜色断点的 {{CSSxRef("&lt;color&gt;")}} 值，并且跟随着一个或两个可选的断点位置（一个沿着渐变圆周轴的{{CSSxRef("&lt;angle&gt;")}}）。
 - `<color-hint>`
-  - : 颜色中转点是一个{{Glossary("interpolation")}}提示，它定义了在相邻颜色之间渐变如何进行。长度定义了渐变色应在两个颜色断点之间的哪一点到达颜色过渡的中点。如果省略，颜色转换的中点是两个颜色断点之间的中点。
+  - : 颜色中转点是一个 {{Glossary("interpolation")}} 提示，它定义了在相邻颜色之间渐变如何进行。长度定义了渐变色应在两个颜色断点之间的哪一点到达颜色过渡的中点。如果省略，颜色转换的中点是两个颜色断点之间的中点。
 
 
-> **提示：** 渲染颜色中间点的规则[color stops in CSS gradients](#gradient_with_multiple_color_stops) 与[SVG gradients](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
+> **备注：** 渲染颜色中间点的规则（[color stops in CSS gradients](#gradient_with_multiple_color_stops)）与[SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
 
 ## 描述
 
-和任意渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)；就是说，它没有天然的或首选的尺寸，也没有首选的比例。它的具体大小将与它所应用的元素的大小相匹配，或者如果设置为元素大小以外的值，则与`<image>`的大小相匹配。
+和任意渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)；就是说，它没有天然的或首选的尺寸，也没有首选的比例。它的具体大小将与它所应用的元素的大小相匹配，或者如果设置为元素大小以外的值，则与 `<image>` 的大小相匹配。
 
 要创建重复的锥形渐变来填充360度旋转，应该使用 {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数。
 
-因为 `<gradient>` 属于 `<image>` 数据类型, 它们只能用在能使用 `<image>`的地方。因此，`conic-gradient()`在 {{CSSxRef("background-color")}} 以及其他使用{{CSSxRef("&lt;color&gt;")}}数据类型的属性上不起作用。
+因为 `<gradient>` 属于 `<image>` 数据类型, 它们只能用在能使用 `<image>` 的地方。因此，`conic-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
-> **提示：** 为什么它被称为"锥形"渐变？如果色块的一侧比另一侧亮得多，则从上面看，它可能看起来像一个圆锥体。
+> **备注：** 为什么它被称为“锥形”渐变？如果色块的一侧比另一侧亮得多，则从上面看，它可能看起来像一个圆锥体。
 
 ### 锥形渐变的合成
 
@@ -74,9 +72,9 @@ background: conic-gradient(
 
 ![沿着锥形渐变的圆周和径向渐变的轴的颜色断点](screenshot_2018-11-29_21.09.19.png)
 
-锥形渐变是通过指示旋转角度、渐变中心，然后指定颜色断点列表来指定的。 与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过指定[length](/zh-CN/docs/Web/CSS/length)来放置的，而锥形渐变的颜色断点是通过[angle](/zh-CN/docs/Web/CSS/angle)来指定的。单位包括度的`deg`、梯度的`grad`、弧度的`rad`和圈的`turn`。在一个圆中有360度，400个梯度，2π弧度，1圈。支持锥形渐变的浏览器也接受百分比值，100%等于360度，但这不在规范中。
+锥形渐变是通过指示旋转角度、渐变中心，然后指定颜色断点列表来指定的。 与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过指定 [length](/zh-CN/docs/Web/CSS/length) 来放置的，而锥形渐变的颜色断点是通过 [angle](/zh-CN/docs/Web/CSS/angle) 来指定的。单位包括度的 `deg`、梯度的 `grad`、弧度的 `rad`和圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
 
-与径向渐变类似，锥形渐变语法用于将渐变中心定位在图像内部甚至外部的任何位置。位置的值类似于两个值的background-position语法。
+与径向渐变类似，锥形渐变语法用于将渐变中心定位在图像内部甚至外部的任何位置。位置的值类似于两个值的 background-position 语法。
 
 渐变的弧度是渐变的周长。渐变或弧度的 _start point_ 方向是北，或12:00pm方向。然后通过 _from_ 角度来旋转。渐变的颜色由倾斜的颜色断点、它们的起点、终点，以及介于两者之间的可选的倾斜的颜色断点决定。颜色之间的过渡可以通过相邻颜色的颜色断点之间的颜色提示来改变。
 
@@ -121,16 +119,16 @@ background-size: 25% 25%;
 
 {{csssyntax}}
 
-## 可访问性问题
+## 无障碍说明
 
-浏览器不向辅助技术提供任何关于背景图像的特殊信息。这主要对屏幕阅读器来说很重要，因为屏幕阅读器不会宣布其存在，因此不会向用户传达任何信息。虽然可以创建饼图、棋盘和其他带有圆锥梯度的效果，但CSS图像不提供指定替代文本的原生方式，因此屏幕阅读器用户无法访问由圆锥梯度表示的图像。如果图像包含对理解页面的总体用途至关重要的信息，那么最好在文档中对其进行语义描述。
+浏览器不向辅助技术提供任何关于背景图像的特殊信息。这主要对屏幕阅读器来说很重要，因为屏幕阅读器不会宣布其存在，因此不会向用户传达任何信息。虽然可以创建饼图、棋盘和其他带有圆锥梯度的效果，但 CSS 图像不提供指定替代文本的原生方式，因此屏幕阅读器用户无法访问由圆锥梯度表示的图像。如果图像包含对理解页面的总体用途至关重要的信息，那么最好在文档中对其进行语义描述。
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-## 范例
+## 示例
 
-### 40度渐变
+### 40 度渐变
 
 ```css hidden
 div {
@@ -150,7 +148,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Gradient_at_40-degrees", 120, 120)}}
+{{EmbedLiveSample("40 度渐变", 120, 120)}}
 
 ### 偏移中心的渐变
 
@@ -171,11 +169,11 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Off-centered_gradient", 120, 120)}}
+{{EmbedLiveSample("偏移中心的渐变", 120, 120)}}
 
 ### 渐变饼图
 
-This example uses multi-position color stops, with adjacent colors having the same color stop value, creating a striped effect.
+本示例使用多位置颜色断点，相邻颜色具有相同的颜色断点值，从而创建出条纹效果。
 
 ```css hidden
 div {
@@ -196,7 +194,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Gradient_pie-chart", 120, 120)}}
+{{EmbedLiveSample("渐变饼图", 120, 120)}}
 
 ### 棋盘格
 
@@ -220,11 +218,11 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Checkerboard", 120, 120)}}
+{{EmbedLiveSample("棋盘格", 120, 120)}}
 
 ### 更多锥形渐变的例子
 
-Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+更多示例请参见 [使用CSS渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)。
 
 ## 规范
 
@@ -234,10 +232,10 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradie
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- Other gradient functions: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [使用CSS渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- 其他渐变函数：{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}
