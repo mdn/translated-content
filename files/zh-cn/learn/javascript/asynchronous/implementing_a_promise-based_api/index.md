@@ -9,6 +9,7 @@ tags:
   - catch
 translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 ---
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Introducing_workers")}}
 
