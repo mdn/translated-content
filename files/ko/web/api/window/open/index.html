@@ -20,7 +20,7 @@ translation_of: Web/API/Window/open
  <dd>A {{domxref("DOMString")}} specifying the name of the browsing context (window, {{HTMLElement("iframe")}} or tab) into which to load the specified resource; if the name doesn't indicate an existing context, a new window is created and is given the name specified by <code>windowName</code>. This name can then be used as the target of links and forms by specifying it as the <code>target</code> attribute of {{HTMLElement("a")}} or {{HTMLElement("form")}} elements. The name should not contain whitespace. Keep in mind that this will <em>not</em> be used as the window's displayed title.<br>
  If the string is empty, the browser will create a new window every time (this behaviour doesn't work when the string is replaced with NULL).</dd>
  <dt><code>windowFeatures</code> {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing a comma-separated list of window features given with their corresponding values in the form "name=value". These features include options such as the window's default size and position, whether or not to include scroll bars, and so forth. There must be no whitespace in the string. See {{anch("Window features")}} below for documentation of each of the features that can be specified.</dd>
+ <dd>A {{domxref("DOMString")}} containing a comma-separated list of window features given with their corresponding values in the form "name=value". These features include options such as the window's default size and position, whether or not to include scroll bars, and so forth. There must be no whitespace in the string. See <a href="#window_features">Window features</a> below for documentation of each of the features that can be specified.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

@@ -69,7 +69,7 @@ console.log(Rectangle.name);
 // 出力: "Rectangle2"
 ```
 
-> **Note:** クラス**式**にも{{anch("Class declarations", "クラス宣言")}}で言及したのと同様の巻き上げ問題があります。
+> **Note:** クラス**式**にも[クラス宣言](#class_declarations)で言及したのと同様の巻き上げ問題があります。
 
 ## クラス本体とメソッド定義
 

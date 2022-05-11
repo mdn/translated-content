@@ -63,7 +63,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 <p>例えば、西ヨーロッパや北アメリカに住んでいる場合、多くが Windows と Mac のデスクトップ/ノートPCを使っていて、主なブラウザーはChrome, Firefox, Safari, IE, Edge です。このブラウザーは定期的な更新があるため、おそらく最初の3つの最新版だけをテストしたいでしょう。Edge と IE では、いくつかの最新バージョンをテストしたくなるでしょう; これらはすべて A グレード区分にすべきでしょう.</p>
 
 <div class="note">
-<p><strong>注</strong>: You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See {{anch("Virtual machines")}} later on.</p>
+<p><strong>注</strong>: You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See <a href="#virtual_machines">Virtual machines</a> later on.</p>
 </div>
 
 <p>多くの人が iOS と Android を使っているので、iOS Safari の最新版、古い Android 内蔵ブラウザーの最新版いくつか、iOS と Android 用の Chrome と Firefox もテストしたくなるでしょう。これらをスマフォとタブレットの両方でテストし、レスポンシブデザインの動作が問題ないのを確認するのが理想でしょう。</p>
@@ -186,7 +186,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 <ul>
  <li>They give you a set of steps to follow when you are performing tests.</li>
- <li>They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see {{anch("User testing")}}, below.</li>
+ <li>They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see <a href="#user_testing">User testing</a>, below.</li>
  <li>They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see Using an automation tool to automate browser testing, later in the series).</li>
 </ul>
 
@@ -320,7 +320,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 <p>Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.</p>
 
-<p>Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the {{anch("What are you going to test")}} section above — it is easy to turn the test criteria detailed there into steps to follow. 例えば、the following would work for a sighted user:</p>
+<p>Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the <a href="#what_are_you_going_to_test">What are you going to test</a> section above — it is easy to turn the test criteria detailed there into steps to follow. 例えば、the following would work for a sighted user:</p>
 
 <ul>
  <li>Click the question mark button using the mouse on your desktop computer a few times. Refresh the browser window.</li>
