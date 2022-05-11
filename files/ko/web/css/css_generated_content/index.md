@@ -1,43 +1,36 @@
 ---
-title: CSS Generated Content
+title: CSS 생성 콘텐츠
 slug: Web/CSS/CSS_Generated_Content
 tags:
   - CSS
-  - CSS Generated Content
-  - Overview
-  - Reference
+  - CSS 생성 콘텐츠
+  - 가이드
+  - 개요
+  - 참고서
 translation_of: Web/CSS/CSS_Generated_Content
 ---
-<div>{{CSSRef}}</div>
 
-<p><strong>CSS Generated Content</strong>는 요소에 콘텐츠를 추가하는 법을 정의하는 CSS 모듈입니다.</p>
+{{CSSRef}}
 
-<h2 id="참고서">참고서</h2>
+**CSS 생성 콘텐츠**는 요소에 콘텐츠를 추가하는 방법을 정의하는 CSS 모듈입니다. 생성 콘텐츠는 익명의 대체 요소에 콘텐츠를 추가하거나 매우 제한된 상황에서 DOM 노드의 콘텐츠를 생성된 값으로 대체하는 데 사용될 수 있습니다.
+자세한 내용은 [생성 콘텐츠에 대한 안내 방법](/ko/docs/Learn/CSS/Howto/Generated_content) 을 참조하고 구현 정보는 {{cssxref("content")}} 와 {{cssxref("quotes")}} 속성을 참조하십시오.
 
-<h3 id="속성">속성</h3>
+## 참고서
 
-<div class="index">
-<ul>
- <li>{{cssxref("content")}}</li>
- <li>{{cssxref("quotes")}}</li>
-</ul>
-</div>
+### 속성
 
-<h2 id="명세">명세</h2>
+- {{cssxref("content")}}
+- {{cssxref("quotes")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>초기 정의</td>
-  </tr>
- </tbody>
-</table>
+## 명세서
+
+{{Specifications}}
+
+## 같이 보기
+
+- [CSS 생성 콘텐츠의 사용](/ko/docs/Learn/CSS/Howto/Generated_content)
+- {{cssxref("content")}}
+- {{cssxref("quotes")}}
+- {{cssxref("::before")}}
+- {{cssxref("::after")}}
+- {{cssxref("::marker")}}
