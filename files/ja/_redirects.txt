@@ -3126,9 +3126,12 @@
 /ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
+/ja/docs/Web/API/FileException	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/conflicting/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/conflicting/Web/API/FileReader/error_event
 /ja/docs/Web/API/FileReader/onload	/ja/docs/conflicting/Web/API/FileReader/load_event
+/ja/docs/Web/API/FileSystemEntrySync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
+/ja/docs/Web/API/File_Handle_API	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
@@ -3197,6 +3200,8 @@
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/conflicting/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
+/ja/docs/Web/API/LocalFileSystem	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1
+/ja/docs/Web/API/LocalFileSystemSync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
 /ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event

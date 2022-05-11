@@ -14700,12 +14700,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/API/FileException": {
-    "modified": "2020-10-15T22:11:45.710Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2020-10-15T21:44:07.768Z",
     "contributors": [
@@ -14877,12 +14871,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/FileSystemEntrySync": {
-    "modified": "2020-10-15T22:11:51.898Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Web/API/FileSystemFileEntry": {
     "modified": "2020-10-15T22:11:53.486Z",
     "contributors": [
@@ -14893,13 +14881,6 @@
     "modified": "2020-10-15T22:11:54.292Z",
     "contributors": [
       "silverskyvicto"
-    ]
-  },
-  "Web/API/File_Handle_API": {
-    "modified": "2019-07-23T07:55:55.727Z",
-    "contributors": [
-      "SphinxKnight",
-      "Marsf"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {
@@ -17754,18 +17735,6 @@
     "modified": "2020-10-15T22:09:51.091Z",
     "contributors": [
       "kay8"
-    ]
-  },
-  "Web/API/LocalFileSystem": {
-    "modified": "2020-10-15T22:11:54.611Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "Web/API/LocalFileSystemSync": {
-    "modified": "2020-10-15T22:19:51.434Z",
-    "contributors": [
-      "silverskyvicto"
     ]
   },
   "Web/API/Location": {
@@ -48130,6 +48099,37 @@
     "modified": "2019-03-23T22:37:58.368Z",
     "contributors": [
       "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API": {
+    "modified": "2019-07-23T07:55:55.727Z",
+    "contributors": [
+      "SphinxKnight",
+      "Marsf"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72": {
+    "modified": "2020-10-15T22:11:45.710Z",
+    "contributors": [
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0": {
+    "modified": "2020-10-15T22:11:51.898Z",
+    "contributors": [
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1": {
+    "modified": "2020-10-15T22:11:54.611Z",
+    "contributors": [
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a": {
+    "modified": "2020-10-15T22:19:51.434Z",
+    "contributors": [
+      "silverskyvicto"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {

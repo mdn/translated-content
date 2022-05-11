@@ -15809,12 +15809,6 @@
       "loella16"
     ]
   },
-  "Web/API/FileRequest/lockedFile": {
-    "modified": "2019-03-18T21:38:29.049Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/FileRequest/onprogress": {
     "modified": "2019-03-18T21:38:33.597Z",
     "contributors": [
@@ -17172,6 +17166,12 @@
       "gadgino"
     ]
   },
+  "Web/API/IDBFileRequest/lockedFile": {
+    "modified": "2019-03-18T21:38:29.049Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
   "Web/API/IDBIndex": {
     "modified": "2020-09-12T05:13:55.776Z",
     "contributors": [
@@ -17815,13 +17815,6 @@
     "contributors": [
       "SphinxKnight",
       "HereComesJuju"
-    ]
-  },
-  "Web/API/LocalFileSystem": {
-    "modified": "2020-11-02T04:24:20.566Z",
-    "contributors": [
-      "SphinxKnight",
-      "roxaneprovost"
     ]
   },
   "Web/API/Location": {
@@ -42763,6 +42756,13 @@
     "contributors": [
       "loella16",
       "Copen"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API": {
+    "modified": "2020-11-02T04:24:20.566Z",
+    "contributors": [
+      "SphinxKnight",
+      "roxaneprovost"
     ]
   },
   "conflicting/Web/API/FormData/Using_FormData_Objects": {

@@ -13265,12 +13265,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/FileException": {
-    "modified": "2019-03-23T22:09:01.875Z",
-    "contributors": [
-      "wizardforcel"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2020-10-15T21:07:20.935Z",
     "contributors": [
@@ -13432,13 +13426,6 @@
     "modified": "2019-03-23T22:09:05.117Z",
     "contributors": [
       "wizardforcel"
-    ]
-  },
-  "Web/API/File_Handle_API": {
-    "modified": "2020-08-20T03:55:23.869Z",
-    "contributors": [
-      "Wessonlu",
-      "liuyuan0071"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {
@@ -15897,6 +15884,12 @@
       "023yangbo"
     ]
   },
+  "Web/API/IDBFileHandle": {
+    "modified": "2019-03-23T22:12:20.973Z",
+    "contributors": [
+      "Taoja"
+    ]
+  },
   "Web/API/IDBIndex": {
     "modified": "2020-10-25T12:41:13.535Z",
     "contributors": [
@@ -16401,12 +16394,6 @@
       "qiufeihong2018"
     ]
   },
-  "Web/API/LocalFileSystemSync": {
-    "modified": "2019-03-23T22:09:04.520Z",
-    "contributors": [
-      "wizardforcel"
-    ]
-  },
   "Web/API/Location": {
     "modified": "2019-09-21T03:45:45.370Z",
     "contributors": [
@@ -16476,12 +16463,6 @@
     "modified": "2020-10-19T03:38:36.478Z",
     "contributors": [
       "Sxxxx-x"
-    ]
-  },
-  "Web/API/LockedFile": {
-    "modified": "2019-03-23T22:12:20.973Z",
-    "contributors": [
-      "Taoja"
     ]
   },
   "Web/API/Long_Tasks_API": {
@@ -20161,14 +20142,6 @@
   },
   "Web/API/Text/isElementContentWhitespace": {
     "modified": "2019-03-24T00:16:07.914Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/Text/replaceWholeText": {
-    "modified": "2019-03-23T23:39:45.769Z",
     "contributors": [
       "teoli",
       "khalid32",
@@ -46783,10 +46756,29 @@
       "Cattla"
     ]
   },
+  "conflicting/Web/API/File_and_Directory_Entries_API": {
+    "modified": "2020-08-20T03:55:23.869Z",
+    "contributors": [
+      "Wessonlu",
+      "liuyuan0071"
+    ]
+  },
   "conflicting/Web/API/File_and_Directory_Entries_API/Introduction": {
     "modified": "2019-03-23T23:17:06.579Z",
     "contributors": [
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72": {
+    "modified": "2019-03-23T22:09:01.875Z",
+    "contributors": [
+      "wizardforcel"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a": {
+    "modified": "2019-03-23T22:09:04.520Z",
+    "contributors": [
+      "wizardforcel"
     ]
   },
   "conflicting/Web/API/Geolocation": {
@@ -47001,6 +46993,14 @@
     "modified": "2019-03-18T21:31:04.064Z",
     "contributors": [
       "hhxxhg"
+    ]
+  },
+  "conflicting/Web/API/Text": {
+    "modified": "2019-03-23T23:39:45.769Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/UIEvent/which": {

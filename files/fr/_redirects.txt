@@ -3666,6 +3666,7 @@
 /fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
+/fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IDBFileRequest/lockedFile
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/API/GlobalFetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
@@ -3691,6 +3692,7 @@
 /fr/docs/Web/API/IDBTransaction/oncomplete	/fr/docs/conflicting/Web/API/IDBTransaction/complete_event
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/conflicting/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/Web/API/LocalFileSystem	/fr/docs/conflicting/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload
 /fr/docs/Web/API/Location.replace	/fr/docs/Web/API/Location/replace

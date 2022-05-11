@@ -426,7 +426,7 @@
 /zh-CN/docs/DOM/range	/zh-CN/docs/Web/API/range
 /zh-CN/docs/DOM/stylesheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/DOM/table.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
-/zh-CN/docs/DOM/text.replaceWholeText	/zh-CN/docs/Web/API/Text/replaceWholeText
+/zh-CN/docs/DOM/text.replaceWholeText	/zh-CN/docs/conflicting/Web/API/Text
 /zh-CN/docs/DOM/window	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/DOM/window.URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL
 /zh-CN/docs/DOM/window.URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL
@@ -1359,9 +1359,11 @@
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/conflicting/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e
+/zh-CN/docs/Web/API/FileException	/zh-CN/docs/conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72
 /zh-CN/docs/Web/API/FileReader/onabort	/zh-CN/docs/conflicting/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/conflicting/Web/API/FileReader/load_event
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
+/zh-CN/docs/Web/API/File_Handle_API	/zh-CN/docs/conflicting/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
@@ -1425,7 +1427,9 @@
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/KeyboardEvent/which	/zh-CN/docs/Web/API/UIEvent/which
+/zh-CN/docs/Web/API/LocalFileSystemSync	/zh-CN/docs/conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
+/zh-CN/docs/Web/API/LockedFile	/zh-CN/docs/Web/API/IDBFileHandle
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/conflicting/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event
@@ -1528,8 +1532,9 @@
 /zh-CN/docs/Web/API/Streams_API/使用可读文件流	/zh-CN/docs/Web/API/Streams_API/Using_readable_streams
 /zh-CN/docs/Web/API/Streams_API/概念	/zh-CN/docs/Web/API/Streams_API/Concepts
 /zh-CN/docs/Web/API/Text.isElementContentWhitespace	/zh-CN/docs/Web/API/Text/isElementContentWhitespace
-/zh-CN/docs/Web/API/Text.replaceWholeText	/zh-CN/docs/Web/API/Text/replaceWholeText
+/zh-CN/docs/Web/API/Text.replaceWholeText	/zh-CN/docs/conflicting/Web/API/Text
 /zh-CN/docs/Web/API/Text.splitText	/zh-CN/docs/Web/API/Text/splitText
+/zh-CN/docs/Web/API/Text/replaceWholeText	/zh-CN/docs/conflicting/Web/API/Text
 /zh-CN/docs/Web/API/TextEncoder.TextEncoder	/zh-CN/docs/Web/API/TextEncoder/TextEncoder
 /zh-CN/docs/Web/API/Touch.clientX	/zh-CN/docs/Web/API/Touch/clientX
 /zh-CN/docs/Web/API/Touch.clientY	/zh-CN/docs/Web/API/Touch/clientY

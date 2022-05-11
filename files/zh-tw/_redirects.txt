@@ -554,6 +554,7 @@
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
 /zh-TW/docs/Web/API/EventListener	/zh-TW/docs/Web/API/EventTarget/addEventListener
 /zh-TW/docs/Web/API/File/fileName	/zh-TW/docs/Web/API/File/name
+/zh-TW/docs/Web/API/File_Handle_API	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/HTMLElement/dataset	/zh-TW/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
@@ -839,7 +840,7 @@
 /zh-TW/docs/WebAPI	/zh-TW/docs/conflicting/Web/API
 /zh-TW/docs/WebAPI/Battery_Status	/zh-TW/docs/Web/API/Battery_Status_API
 /zh-TW/docs/WebAPI/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
-/zh-TW/docs/WebAPI/FileHandle	/zh-TW/docs/Web/API/File_Handle_API
+/zh-TW/docs/WebAPI/FileHandle	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/WebAPI/Managing_screen_orientation	/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /zh-TW/docs/WebAPI/Network_Information	/zh-TW/docs/Web/API/Network_Information_API
 /zh-TW/docs/WebAPI/Permissions	/zh-TW/docs/Web/API/Permissions_API
