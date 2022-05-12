@@ -17804,12 +17804,6 @@
       "P45QU10U"
     ]
   },
-  "Web/API/KeyboardEvent/key/Key_Values": {
-    "modified": "2020-04-20T11:30:29.100Z",
-    "contributors": [
-      "tristantheb"
-    ]
-  },
   "Web/API/KeyframeEffect/KeyframeEffect": {
     "modified": "2019-03-23T22:28:20.379Z",
     "contributors": [
@@ -19571,6 +19565,12 @@
       "fscholz",
       "khalid32",
       "Feugy"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_key_values": {
+    "modified": "2020-04-20T11:30:29.100Z",
+    "contributors": [
+      "tristantheb"
     ]
   },
   "Web/API/URL": {

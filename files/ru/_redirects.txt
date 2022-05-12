@@ -358,6 +358,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
+/ru/docs/Web/API/KeyboardEvent/key/Key_Values	/ru/docs/Web/API/UI_Events/Keyboard_event_key_values
 /ru/docs/Web/API/KeyboardEvent/which	/ru/docs/Web/API/UIEvent/which
 /ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event
 /ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which

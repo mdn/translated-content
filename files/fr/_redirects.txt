@@ -3692,6 +3692,7 @@
 /fr/docs/Web/API/IDBTransaction/oncomplete	/fr/docs/conflicting/Web/API/IDBTransaction/complete_event
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/conflicting/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/Web/API/KeyboardEvent/key/Key_Values	/fr/docs/Web/API/UI_Events/Keyboard_event_key_values
 /fr/docs/Web/API/LocalFileSystem	/fr/docs/conflicting/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload

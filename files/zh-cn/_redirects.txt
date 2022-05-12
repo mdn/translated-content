@@ -1426,6 +1426,7 @@
 /zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
+/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values	/zh-CN/docs/Web/API/UI_Events/Keyboard_event_key_values
 /zh-CN/docs/Web/API/KeyboardEvent/which	/zh-CN/docs/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/LocalFileSystemSync	/zh-CN/docs/conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace

@@ -1,7 +1,8 @@
 ---
 title: Key Values
-slug: Web/API/KeyboardEvent/key/Key_Values
+slug: Web/API/UI_Events/Keyboard_event_key_values
 translation_of: Web/API/KeyboardEvent/key/Key_Values
+original_slug: Web/API/KeyboardEvent/key/Key_Values
 ---
 Les tableaux ci-dessous énumèrent les valeurs clés standard dans différentes catégories de clés, avec une explication de l'utilisation habituelle de la clé. Les codes de clés virtuels correspondants pour les plateformes communes sont inclus lorsqu'ils sont disponibles.
 
@@ -1191,7 +1192,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         identify which specific dead key was pressed (in cases where more than
         one exists), you can do so by examining the
         {{domxref("KeyboardEvent")}}'s associated
-        {{event("compositionupdate")}} event's 
+        {{event("compositionupdate")}} event's
         {{domxref("CompositionEvent.data", "data")}} property.
       </td>
       <td></td>
@@ -1301,7 +1302,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         <code>GDK_KEY_Muhenkan</code> (0xFF22)<br /><code
           >Qt::Key_Muhenkan</code
         >
-        (0x01001122)<br /> 
+        (0x01001122)<br />
       </td>
       <td><code>KEYCODE_MUHENKAN</code> (213)</td>
     </tr>

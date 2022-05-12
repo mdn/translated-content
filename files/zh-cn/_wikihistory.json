@@ -16345,14 +16345,6 @@
       "Dcfm"
     ]
   },
-  "Web/API/KeyboardEvent/key/Key_Values": {
-    "modified": "2019-07-18T03:45:00.126Z",
-    "contributors": [
-      "sjpeter",
-      "SphinxKnight",
-      "XHMM"
-    ]
-  },
   "Web/API/KeyboardEvent/keyCode": {
     "modified": "2020-10-15T22:01:35.012Z",
     "contributors": [
@@ -20520,6 +20512,14 @@
     "modified": "2020-10-15T22:35:00.980Z",
     "contributors": [
       "xgqfrms"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_key_values": {
+    "modified": "2019-07-18T03:45:00.126Z",
+    "contributors": [
+      "sjpeter",
+      "SphinxKnight",
+      "XHMM"
     ]
   },
   "Web/API/URL": {

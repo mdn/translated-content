@@ -9140,13 +9140,6 @@
       "VladGavriuk"
     ]
   },
-  "Web/API/KeyboardEvent/key/Key_Values": {
-    "modified": "2020-10-29T10:48:36.046Z",
-    "contributors": [
-      "ksam",
-      "Tvortsa"
-    ]
-  },
   "Web/API/KeyframeEffect/KeyframeEffect": {
     "modified": "2020-10-15T22:29:01.473Z",
     "contributors": [
@@ -10408,6 +10401,13 @@
     "modified": "2020-10-15T22:21:03.336Z",
     "contributors": [
       "Dzvonek"
+    ]
+  },
+  "Web/API/UI_Events/Keyboard_event_key_values": {
+    "modified": "2020-10-29T10:48:36.046Z",
+    "contributors": [
+      "ksam",
+      "Tvortsa"
     ]
   },
   "Web/API/URL": {
