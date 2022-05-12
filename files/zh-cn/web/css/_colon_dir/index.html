@@ -18,7 +18,7 @@ translation_of: 'Web/CSS/:dir'
 
 <p>值得注意的是用CSS伪类 <code>:dir()</code> 并不等于使用 <code>[dir=…]</code> 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， <code>[dir=rtl]</code> 或 <code>[dir=ltr]不会匹配到dir属性的值为auto的元素。而</code> <code>:dir()</code>会匹配经过客户端计算后的属性, 不管是继承的dir值还是dir值为auto的。</p>
 
-<p><span style="font-family: consolas,monaco,andale mono,monospace;">另外，:dir()伪类仅考虑文档（大多数情况是HTML）中定义的文字方向的语义值(semantic value)，并不会考虑格式值(styling value)，如CSS属性</span> {{ cssxref("direction") }} 的值。</p>
+<p>另外，:dir()伪类仅考虑文档（大多数情况是HTML）中定义的文字方向的语义值(semantic value)，并不会考虑格式值(styling value)，如CSS属性 {{ cssxref("direction") }} 的值。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 

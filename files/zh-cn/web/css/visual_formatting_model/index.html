@@ -8,7 +8,7 @@ tags:
 translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
-<p><span style="color: #4d4e53;">{{CSSRef}}</span></p>
+<p>{{CSSRef}}</p>
 
 <p>CSS 视觉格式化模型（<em>visual formatting model）</em>是用来处理和在视觉媒体上显示文档时使用的计算规则。该模型是 CSS 的基础概念之一。</p>
 
@@ -16,7 +16,7 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 <p> </p>
 </div>
 
-<p><span style="line-height: inherit;">视觉格式化模型会根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS盒子模型</a>将文档中的元素转换为一个个盒子，</span><span style="line-height: inherit;">每个盒子的布局由以下因素决定：</span></p>
+<p>视觉格式化模型会根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS盒子模型</a>将文档中的元素转换为一个个盒子，每个盒子的布局由以下因素决定：</p>
 
 <ul>
  <li>盒子的尺寸：精确指定、由约束条件指定或没有指定</li>
@@ -28,10 +28,10 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
  <li>其他的某些外部因素</li>
 </ul>
 
-<p>该模型会根据盒子的包含块（<em>containing block）的</em>边界来渲染盒子。通常，盒子会创建一个包含其后代元素的包含块，但是盒子并不由包含块所限制，<span style="line-height: inherit;">当盒子的布局跑到包含块的外面时称为</span><span style="line-height: inherit;">溢出（</span><em>overflow）</em><span style="line-height: inherit;">。</span></p>
+<p>该模型会根据盒子的包含块（<em>containing block）的</em>边界来渲染盒子。通常，盒子会创建一个包含其后代元素的包含块，但是盒子并不由包含块所限制，当盒子的布局跑到包含块的外面时称为溢出（<em>overflow）</em>。</p>
 
 <div class="note">
-<p><span style="line-height: inherit;">译注：本文有很多相近的术语，阅读时需仔细，否则容易造成误解。为了方便读者，这里我将其整理一下。</span></p>
+<p>译注：本文有很多相近的术语，阅读时需仔细，否则容易造成误解。为了方便读者，这里我将其整理一下。</p>
 
 <p> </p>
 
@@ -59,11 +59,11 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 <h2 id="盒子的生成">盒子的生成</h2>
 
-<p><span style="line-height: inherit;">盒子的生成是 CSS 视觉格式化模型的一部分，用于从文档元素生成盒子。盒子有不同的类型，不同类型的盒子的格式化方法也有所不同。盒子的类型取决于 CSS </span>{{ cssxref("display") }} 属性。</p>
+<p>盒子的生成是 CSS 视觉格式化模型的一部分，用于从文档元素生成盒子。盒子有不同的类型，不同类型的盒子的格式化方法也有所不同。盒子的类型取决于 CSS {{ cssxref("display") }} 属性。</p>
 
 <h3 id="块级元素与块盒子">块级元素与块盒子</h3>
 
-<p><span style="line-height: inherit;">当元素的</span> {{ cssxref("display") }} 为 <code>block</code>、<code>list-item</code> 或 <code>table</code><span style="line-height: inherit;"> 时，该元素将成为块级元素。一个块级元素会被格式化成一个块（例如文章的一个段落），默认按照垂直方向依次排列。</span></p>
+<p>当元素的 {{ cssxref("display") }} 为 <code>block</code>、<code>list-item</code> 或 <code>table</code> 时，该元素将成为块级元素。一个块级元素会被格式化成一个块（例如文章的一个段落），默认按照垂直方向依次排列。</p>
 
 <p>每个块级盒子都会参与<a href="/en-US/docs/CSS/block_formatting_context" title="block formatting context">块格式化上下文（block formatting context）</a>的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（<em>principal block-level</em><em> box）。有</em>一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。 </p>
 
@@ -79,9 +79,9 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 <p>在某些情况下进行视觉格式化时，需要添加一些增补性的盒子，这些盒子不能用CSS选择符选中，因此称为匿名盒子（<em>anonymous boxes）</em>。</p>
 
-<p><span style="line-height: inherit;">CSS选择器不能作用于匿名盒子(</span><em>anonymous boxes</em><span style="line-height: inherit;">)，所以它不能被样式表赋予样式。也就是说，此时所有可继承的 CSS 属性值都为</span> <code>inherit</code> ，而所有不可继承的 CSS 属性值都为 <code>initial</code>。</p>
+<p>CSS选择器不能作用于匿名盒子(<em>anonymous boxes</em>)，所以它不能被样式表赋予样式。也就是说，此时所有可继承的 CSS 属性值都为 <code>inherit</code> ，而所有不可继承的 CSS 属性值都为 <code>initial</code>。</p>
 
-<p>块包含盒子可能只包含行内级盒子，也可能只包含块级盒子，但通常的文档都会同时包含两者，在这种情况下，就会在相邻的行内级盒子外创建<span style="line-height: inherit;">匿名块盒子。</span></p>
+<p>块包含盒子可能只包含行内级盒子，也可能只包含块级盒子，但通常的文档都会同时包含两者，在这种情况下，就会在相邻的行内级盒子外创建匿名块盒子。</p>
 
 <h3 id="示例">示例</h3>
 
@@ -109,7 +109,7 @@ followed by more inline text.
 
 <h3 id="示例_2">示例</h3>
 
-<p>考虑下面的HTML代码，假设 {{ HTMLElement("p") }} 的 <code>display</code> 为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">inline</span></font>，{{ HTMLElement("span") }} 的 <code>display</code> 为 <code>block</code>：</p>
+<p>考虑下面的HTML代码，假设 {{ HTMLElement("p") }} 的 <code>display</code> 为 <font face="consolas, Liberation Mono, courier, monospace">inline</font>，{{ HTMLElement("span") }} 的 <code>display</code> 为 <code>block</code>：</p>
 
 <pre class="brush: html"><code>&lt;p&gt;Some &lt;em&gt;inline&lt;/em&gt; text &lt;span&gt;followed by a paragraph&lt;/span&gt; followed by more inline text.&lt;/p&gt;</code>
 </pre>
