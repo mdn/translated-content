@@ -18,7 +18,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 <p>{{cssxref("flex-wrap")}} 属性的初始值是<code>nowrap</code>。这就意味着如果你有一组的对其容器而言太宽的弹性物件，它们就会溢出。如果你想要一旦它们变得太宽就换行，你必须给 <code>flex-wrap</code> 属性添加<code>wrap</code>值，或者，用<code>row wrap</code> 或 <code>column wrap</code> 值作用于{{cssxref("flex-flow")}}的速写。</p>
 
-<p><span>物件接着就会在容器内换行。在接下来的例子里，我有10个</span><code>160px</code><span>的</span><code>flex-basis</code><span>物</span><span>件，它们都具备伸展</span><span>和收缩能力。一旦第一行达到了没有足够空间放置额外160像素物件的点，一个新的弹性行就会被建立，一直这样直到所有的物件被放置。因为物件可以伸展，它们会扩展大于160像素从而完整地填充一行。如果在最后一行只有1个物件，它就将拉长了充满整行。</span></p>
+<p>物件接着就会在容器内换行。在接下来的例子里，我有10个<code>160px</code>的<code>flex-basis</code>物件，它们都具备伸展和收缩能力。一旦第一行达到了没有足够空间放置额外160像素物件的点，一个新的弹性行就会被建立，一直这样直到所有的物件被放置。因为物件可以伸展，它们会扩展大于160像素从而完整地填充一行。如果在最后一行只有1个物件，它就将拉长了充满整行。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 <h2 id="包装和弹性方向">包装和弹性方向</h2>
 
-<p>当结合 <code>flex-direction</code> 属性，包装就如您所期待的方式工作。如果 <code>flex-direction</code> 被设置成 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">row-reverse</span></font> 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。</p>
+<p>当结合 <code>flex-direction</code> 属性，包装就如您所期待的方式工作。如果 <code>flex-direction</code> 被设置成 <font face="consolas, Liberation Mono, courier, monospace">row-reverse</font> 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}</p>
 

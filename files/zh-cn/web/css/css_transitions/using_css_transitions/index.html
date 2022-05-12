@@ -20,7 +20,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 <p>CSS transitions 可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay），持续多久 (设置 duration) 以及如何动画 (定义<em>timing function</em>，比如匀速地或先快后慢)。</p>
 
-<div class="note"><strong>Note:</strong> transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀<span style="line-height: 1.5em;">。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如Firefox 15 及之前版本, Opera 12 </span><span style="line-height: 1.5;">及之前版本</span><span style="line-height: 1.5em;">)。详情见本页底部的兼容性表格。</span></div>
+<div class="note"><strong>Note:</strong> transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如Firefox 15 及之前版本, Opera 12 及之前版本)。详情见本页底部的兼容性表格。</div>
 
 <h2 id="哪些_CSS_属性可以动画">哪些 CSS 属性可以动画?</h2>
 
@@ -597,7 +597,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </div>
  </dd>
  <dt>{{ cssxref("transition-delay") }}</dt>
- <dd>指定延迟，即<span style="line-height: inherit;">属性开始变化时与过渡</span><span style="line-height: inherit;">开始发生时之间的时长。</span></dd>
+ <dd>指定延迟，即属性开始变化时与过渡开始发生时之间的时长。</dd>
  <dd>
  <div>
  <div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -897,7 +897,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 <h2 id="当属性值列表长度不一致时">当属性值列表长度不一致时</h2>
 
-<p><span style="line-height: inherit;">以 {{ cssxref("transition-property") }} 的值列表长度为标准，</span>如果某个属性值列表长度短于它的，则重复其值以长度一致， 例如:</p>
+<p>以 {{ cssxref("transition-property") }} 的值列表长度为标准，如果某个属性值列表长度短于它的，则重复其值以长度一致， 例如:</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left, top, height;
@@ -919,7 +919,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
   transition-duration: 3s, 5s, 2s, 1s;
 }</pre>
 
-<p><span style="line-height: inherit;">将按下面这样处理</span>:</p>
+<p>将按下面这样处理:</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left;
@@ -1128,6 +1128,6 @@ document.addEventListener('click', function(ev){
 <h2 id="另见">另见</h2>
 
 <ul>
- <li><span class="external"><a href="http://techstream.org/Web-Design/Dock-Menu-with-CSS3" title="CSS3 Dock Menu using CSS transitions">CSS3 Dock Menu</a> using CSS transitions</span></li>
+ <li><a href="http://techstream.org/Web-Design/Dock-Menu-with-CSS3" title="CSS3 Dock Menu using CSS transitions">CSS3 Dock Menu</a> using CSS transitions</li>
  <li>The {{ domxref("TransitionEvent") }} interface and the <a href="/en-US/docs/Mozilla_event_reference/transitionend" title="The 'transitionend' event"><code>transitionend</code></a> event.</li>
 </ul>
