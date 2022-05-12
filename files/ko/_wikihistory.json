@@ -2649,32 +2649,6 @@
       "Netaras"
     ]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:51:24.922Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "zziuni",
-      "frankradio",
-      "galcyurio",
-      "Vi01et",
-      "jswisher"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.835Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:51:25.656Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Silvermist"
-    ]
-  },
   "MDN/Yari": {
     "modified": "2019-09-06T03:29:26.311Z",
     "contributors": [

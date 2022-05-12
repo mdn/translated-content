@@ -354,9 +354,6 @@
 /ko/docs/MDN/Contribute/Structures/Compatibility_tables	/ko/docs/MDN/Structures/Compatibility_tables
 /ko/docs/MDN/Contribute/Structures/Macros	/ko/docs/MDN/Structures/Macros
 /ko/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/ko/docs/MDN/Structures/Macros/Commonly-used_macros
-/ko/docs/MDN/Contribute/Tools	/ko/docs/MDN/Tools
-/ko/docs/MDN/Contribute/Tools/KumaScript	/ko/docs/MDN/Tools/KumaScript
-/ko/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ko/docs/MDN/Tools/KumaScript/Troubleshooting
 /ko/docs/MDN/Getting_started	/ko/docs/MDN/Contribute/Getting_started
 /ko/docs/MDN/Guidelines/Best_practices	/ko/docs/MDN/Guidelines/Conventions_definitions
 /ko/docs/MDN/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Guidelines/Code_guidelines/General
