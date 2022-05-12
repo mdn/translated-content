@@ -12,7 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/formatToParts
 ---
-{{JSRef}}{{Draft}}
+{{JSRef}}
 
 La méthode **`Intl.ListFormat.prototype.formatToParts()`** renvoie un tableau ({{jsxref("Array")}}) d'objets représentants les différentes composantes de la chaine de caractères qui est le résultat du formatage de la liste (selon les options de locale et de style indiquées).
 
