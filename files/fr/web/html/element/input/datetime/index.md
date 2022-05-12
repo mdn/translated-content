@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input/datetime
 ---
-{{HTMLRef}}{{obsolete_header}}
+{{HTMLRef}}{{deprecated_header}}
 
 L'élément HTML `<input type="datetime">` représentait un contrôle permettant de saisir une date, une heure (avec heures, minutes, secondes et fractions de seconde) ainsi qu'un fuseau horaire. **Cette fonctionnalité a été [retirée de la spécification HTML WHATWG](https://github.com/whatwg/html/issues/336)** et n'est plus prise en charge par les navigateurs.
 
