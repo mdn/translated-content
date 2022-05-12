@@ -3,15 +3,15 @@ title: grid-template
 slug: Web/CSS/grid-template
 translation_of: Web/CSS/grid-template
 ---
-<p><font><font>的</font></font><strong><code>grid-template</code></strong><font><font>CSS屬性是一個</font></font><a href="/en-US/docs/Web/CSS/Shorthand_properties"><font><font>速記屬性</font></font></a><font><font>，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。</font></font></p>
+<p>的<strong><code>grid-template</code></strong>CSS屬性是一個<a href="/en-US/docs/Web/CSS/Shorthand_properties">速記屬性</a>，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。</p>
 
-<div><font><font>{{EmbedInteractiveExample("pages / css / grid-template.html")}}</font></font></div>
+<div>{{EmbedInteractiveExample("pages / css / grid-template.html")}}</div>
 
-<p class="hidden"><font><font>該交互式示例的源存儲在GitHub存儲庫中。</font><font>如果您想為交互式示例項目做出貢獻，請克隆</font></font><a href="https://github.com/mdn/interactive-examples"><font><font>https://github.com/mdn/interactive-examples</font></font></a><font><font>並向我們發送請求請求。</font></font></p>
+<p class="hidden">該交互式示例的源存儲在GitHub存儲庫中。如果您想為交互式示例項目做出貢獻，請克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>並向我們發送請求請求。</p>
 
-<p><font><font>作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}},{{cssxref("grid-template-columns")}}和{{cssxref("grid-template-areas ")}}。</font></font></p>
+<p>作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}},{{cssxref("grid-template-columns")}}和{{cssxref("grid-template-areas ")}}。</p>
 
-<h2 id="句法"><font><font>句法</font></font></h2>
+<h2 id="句法">句法</h2>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword value */
 grid-template: none;
@@ -37,13 +37,13 @@ grid-template: initial;
 grid-template: unset;
 </pre>
 
-<h3 id="價值觀"><font><font>價值觀</font></font></h3>
+<h3 id="價值觀">價值觀</h3>
 
 <dl>
  <dt><code>none</code></dt>
- <dd><font><font>是將所有三個長期屬性設置為的關鍵字</font></font><code>none</code><font><font>，表示沒有顯式網格。</font><font>沒有命名的網格區域。</font><font>行和列將隱式生成；</font><font>它們的大小將由{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}屬性確定。</font></font></dd>
+ <dd>是將所有三個長期屬性設置為的關鍵字<code>none</code>，表示沒有顯式網格。沒有命名的網格區域。行和列將隱式生成；它們的大小將由{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}屬性確定。</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
- <dd><font><font>將{{cssxref("grid-template-rows")}}和{{cssxref("grid-template-columns")}}設置為指定值，並設置{{cssxref("grid-template-areas")}}至</font></font><code>none</code><font><font>。</font></font></dd>
+ <dd>將{{cssxref("grid-template-rows")}}和{{cssxref("grid-template-columns")}}設置為指定值，並設置{{cssxref("grid-template-areas")}}至<code>none</code>。</dd>
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
  <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
 
@@ -164,33 +164,33 @@ footer {
   <ol>
    <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
    <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns"><font><font>網格自動列</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow"><font><font>網格自動流</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows"><font><font>網格自動行</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column"><font><font>網格列</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end"><font><font>網格列端</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap"><font><font>網格列間隙</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start"><font><font>網格列開始</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap"><font><font>網格間隙</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row"><font><font>網格行</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end"><font><font>網格行尾</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap"><font><font>網格行間隙</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start"><font><font>網格行開始</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template"><font><font>網格模板</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas"><font><font>網格模板區域</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns"><font><font>網格模板列</font></font></a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows"><font><font>網格模板行</font></font></a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">網格自動列</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">網格自動流</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">網格自動行</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column">網格列</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-end">網格列端</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">網格列間隙</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-start">網格列開始</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-gap">網格間隙</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row">網格行</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-end">網格行尾</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">網格行間隙</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-start">網格行開始</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template">網格模板</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">網格模板區域</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">網格模板列</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">網格模板行</a></li>
   </ol>
  </li>
- <li data-default-state="open"><a href="#"><strong><font><font>詞彙表</font></font></strong></a>
+ <li data-default-state="open"><a href="#"><strong>詞彙表</strong></a>
   <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines"><font><font>網格線</font></font></a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks"><font><font>網格軌道</font></font></a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell"><font><font>網格單元</font></font></a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas"><font><font>網格區域</font></font></a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters"><font><font>天溝</font></font></a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows"><font><font>網格行</font></font></a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column"><font><font>網格列</font></font></a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_lines">網格線</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_tracks">網格軌道</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_cell">網格單元</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_areas">網格區域</a></li>
+   <li><a href="/en-US/docs/Glossary/Gutters">天溝</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_rows">網格行</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_column">網格列</a></li>
   </ol>
  </li>
 </ol>
