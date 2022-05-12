@@ -178,7 +178,7 @@ window.addEventListener("load", setup, false);
 
 <p>먼저, window의 {{domxref("AudioContext")}}에 대한 접근을 얻고, 이 참조를  <code>context</code> 변수에 저장합니다. 그리고 나서 <code>playButton</code>에 재생 버튼에 대한 참조와 <code>volumeControl</code>에 사용자가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.</p>
 
-<p>그리고 나서 재생 버튼의 {{event("click")}} 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (<code>togglePlay()</code> 메서드에 대해 알아보려면 {{anch("오실레이터 켜고 끄기")}}를, 아주 짧은 <code>changeVolume()</code> 메서드를 살펴보려면 {{anch("연결된 오실레이터 제어하기")}}를 참고하세요).</p>
+<p>그리고 나서 재생 버튼의 {{event("click")}} 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (<code>togglePlay()</code> 메서드에 대해 알아보려면 <a href="#오실레이터_켜고_끄기">오실레이터 켜고 끄기</a>를, 아주 짧은 <code>changeVolume()</code> 메서드를 살펴보려면 <a href="#연결된_오실레이터_제어하기">연결된 오실레이터 제어하기</a>를 참고하세요).</p>
 
 <p>다음으로, {{domxref("GainNode")}} <code>gainNode1</code>은 연결되지 않은 오실레이터의 볼륨을 다루기 위해 생성됩니다 (<code>oscNode1</code>). 이 gain은 0.5로 설정합니다. 또한 <code>gainNode2</code>와 <code>gainNode3</code>를 생성하고 이들의 값을 <code>gainNode1</code>의 값과 동일하게 설정합니다. 그 후, 볼륨 슬라이더의 값을 같은 값으로 설정해 이 값이 슬라이더가 제어하는 gain 레벨과 동기화되도록 합니다.</p>
 
@@ -202,9 +202,9 @@ window.addEventListener("load", setup, false);
   }
 }</pre>
 
-<p>만약 <code>playing</code> 변수가 이미 오실레이터가 재생되고 있음을 나타낸다면, <code>playButton</code>의 내용을 유니코드 문자 "오른쪽을 가리키는 삼각형" (▶️)으로 변경하고 오실레이터를 끄기 위해 <code>stopOscillators()</code>를 호출합니다. 이 코드에 대해 아래의 {{anch("오실레이터 멈추기")}}를 참고하세요.</p>
+<p>만약 <code>playing</code> 변수가 이미 오실레이터가 재생되고 있음을 나타낸다면, <code>playButton</code>의 내용을 유니코드 문자 "오른쪽을 가리키는 삼각형" (▶️)으로 변경하고 오실레이터를 끄기 위해 <code>stopOscillators()</code>를 호출합니다. 이 코드에 대해 아래의 <a href="#오실레이터_멈추기">오실레이터 멈추기</a>를 참고하세요.</p>
 
-<p>만약 <code>playing</code>이 현재 멈춰 있음을 나타내는 false라면, 재생 버튼의 내용을 유니코드 문자 "정지 부호" (⏸)로 변경하고 오실레이터가 음을 재생하도록 <code>startOscillators()</code>를 호출합니다. 이 코드는 아래의 {{anch("오실레이터 재생하기")}}에서 다뤄집니다.</p>
+<p>만약 <code>playing</code>이 현재 멈춰 있음을 나타내는 false라면, 재생 버튼의 내용을 유니코드 문자 "정지 부호" (⏸)로 변경하고 오실레이터가 음을 재생하도록 <code>startOscillators()</code>를 호출합니다. 이 코드는 아래의 <a href="#오실레이터_재생하기">오실레이터 재생하기</a>에서 다뤄집니다.</p>
 
 <h4 id="연결된_오실레이터_제어하기">연결된 오실레이터 제어하기</h4>
 

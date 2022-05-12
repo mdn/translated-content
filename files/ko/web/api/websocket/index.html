@@ -66,7 +66,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code>unsigned long</code></td>
-   <td>The number of bytes of data that have been queued using calls to {{manch("send")}} but not yet transmitted to the network. This value does not reset to zero when the connection is closed; if you keep calling {{manch("send")}}, this will continue to climb. <strong>Read only</strong></td>
+   <td>The number of bytes of data that have been queued using calls to <a href="#send">send</a> but not yet transmitted to the network. This value does not reset to zero when the connection is closed; if you keep calling <a href="#send">send</a>, this will continue to climb. <strong>Read only</strong></td>
   </tr>
   <tr>
    <td><code>extensions</code></td>
@@ -101,7 +101,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>readyState</code></td>
    <td><code>unsigned short</code></td>
-   <td>연결의 현재 상태입니다; 값은 {{anch("Ready state constants")}} 중에 하나입니다. <strong>읽기 전용.</strong></td>
+   <td>연결의 현재 상태입니다; 값은 <a href="#ready_state_constants">Ready state constants</a> 중에 하나입니다. <strong>읽기 전용.</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
