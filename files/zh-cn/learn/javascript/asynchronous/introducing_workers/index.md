@@ -12,7 +12,7 @@ translation_of: Learn/JavaScript/Asynchronous/Introducing_workers
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Sequencing_animations")}}
 
-在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使您能够在单独的执行 {{Glossary("Thread")}} 中运行一些任务。
+在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使您能够在单独执行 {{Glossary("Thread", "线程")}} 中运行一些任务。
 
 <table>
   <tbody>
@@ -168,7 +168,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 ```
 
-- 首先，我们使用 {{DOMxRef("worker.Worker()")}} 构造函数创建 worker。我们传递一个指向 worker 脚本的 URL。只要 worker 被创建了，woker 脚本就会执行。
+- 首先，我们使用 {{DOMxRef("worker.Worker()", "Worker()")}} 构造函数创建 worker。我们传递一个指向 worker 脚本的 URL。只要 worker 被创建了，woker 脚本就会执行。
 - 其次，与同步版本一样，我们向 "Generate primes" 按钮添加一个 `click` 事件处理器。但是现在，我们不再调用 `generatePrimes()` 函数，而是使用 {{DOMxRef("worker.postMessage()", "worker.postMessage()")}} 像 worker 发送一条消息。这条消息可以携带一个参数，在本示例中我们传递一个包含两个属性的 JSON 对象：
   - `command`：一个用于标识我们希望 worker 所做事情的字符串（以防我们的 worker 可以做多个事情）。
   - `quota`：要生成的质数的数量。
@@ -229,7 +229,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 不过，还有其他类型的 worker：
 
 - {{DOMxRef("SharedWorker")}} 可以由运行在不同窗口中的多个不同脚本共享。
-- {{DOMxRef("Service_Worker_API", "Service workers")}} 的行为就像代理服务器，缓存资源以便于 web 应用程序可以在用户离线时工作。他们是 {{domxref("Progressive_web_apps", "Progressive Web Apps")}} 的关键组件。
+- {{DOMxRef("Service_Worker_API", "Service workers")}} 的行为就像代理服务器，缓存资源以便于 web 应用程序可以在用户离线时工作。他们是 {{domxref("Progressive_web_apps", "渐进式 Web 应用")}} 的关键组件。
 
 ## 总结
 
