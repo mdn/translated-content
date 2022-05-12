@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/input/number
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("値")}}</strong></td>
+      <td><strong><a href="#値">値</a></strong></td>
       <td>数字を表す {{jsxref("Number")}}、または空欄</td>
     </tr>
     <tr>
@@ -108,9 +108,9 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば `{{anch("min")}}`、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
-文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（`{{anch("min")}}` や `{{anch("max")}}` など、他の制約には制限されます）。
+文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
 > **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
