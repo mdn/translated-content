@@ -1,26 +1,27 @@
 ---
-title: Значения клавиш
-slug: Web/API/KeyboardEvent/key/Key_Values
+title: Key Values
+slug: Web/API/UI_Events/Keyboard_event_key_values
 translation_of: Web/API/KeyboardEvent/key/Key_Values
+original_slug: Web/API/KeyboardEvent/key/Key_Values
 ---
-<p>В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, для чего этот клавиша обычно используется. Соответствующие виртуальные коды клавиш для распространённых платформ включены там, где они доступны.</p>
+<p>下列表格列出了不同范畴的键的标准键值，以及这些键的一般作用。对应的，通用平台上可用的虚拟键码也包含其中。</p>
 
 <div class="pull-aside">
-<div class="moreinfo">Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью <a href="/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key</a></div>
+<div class="moreinfo">Learn how to use these key values in JavaScript using <a href="/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key</a></div>
 </div>
 
 <p><a href="#Special_values">Special Values </a>| <a href="#Modifier_keys">Modifier Keys</a> | <a href="#Whitespace_keys">Whitespace Keys</a> | <a href="#Navigation_keys">Navigation Keys</a> | <a href="#Editing_keys">Editing Keys</a> | <a href="#UI_keys">UI Keys</a> | <a href="#Device_keys">Device Keys</a> | <a href="#IME_and_composition_keys">IME and Composition Keys</a> | <a href="#Function_keys">Function Keys</a> | <a href="#Phone_keys">Phone Keys</a> | <a href="#Multimedia_keys">Multimedia Keys</a> | <a href="#Audio_control_keys">Audio Control Keys</a> | <a href="#TV_control_keys">TV Control Keys</a> | <a href="#Media_controller_keys">Media Controller Keys</a> | <a href="#Speech_recognition_keys">Speech Recognition Keys</a> | <a href="#Document_keys">Document Keys</a> | <a href="#Application_selector_keys">Application Selector Keys</a> | <a href="#Browser_control_keys">Browser Control Keys</a> | <a href="#Numeric_keypad_keys">Numeric Keypad Keys</a></p>
 
-<h2 id="Специальные_значения">Специальные значения</h2>
+<h2 id="Special_values">Special values</h2>
 
-<p>Значения клавиш имеющих особое значение, кроме идентификации определённой клавиши или символа.</p>
+<p>键的值，具有除标识特定键或字符外的特殊含义。</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -32,29 +33,25 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  <tbody>
   <tr>
    <td><code>"Unidentified"</code></td>
-   <td>
-    <p>Пользовательский агент не смог сопоставить виртуальный клавиатурный код события с определённым значением клавиши.</p>
-
-    <p>Это может произойти из-за аппаратных или программных ограничений или из-за ограничений платформы, на которой работает пользовательский агент.</p>
-   </td>
-   <td><em>разное</em></td>
-   <td><em>разное</em></td>
-   <td><em>разное</em></td>
-   <td><em>разное</em></td>
+   <td>用户代理无法将事件的虚拟键码映射到特定键值。 这可能由于硬件或软件限制或由于运行用户代理的平台周围的约束而发生。</td>
+   <td><em>varies</em></td>
+   <td><em>varies</em></td>
+   <td><em>varies</em></td>
+   <td><em>varies</em></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Клавиши-модификаторы">Клавиши-модификаторы</h2>
+<h2 id="Modifier_keys">Modifier keys</h2>
 
-<p>Специальные клавиши-модификаторы, которые используются для генерации специальных символов или вызывают особые действия при использовании в сочетании с другими клавишами. Например:  <kbd>Shift</kbd> и <kbd>Control</kbd> , или lock-клавиши, такие как <kbd>Caps Lock</kbd> и <kbd>NumLock</kbd>.</p>
+<p>修饰符是特殊键，用于生成特殊字符或与其他键组合使用时产生特殊操作。 示例包括<kbd>Shift</kbd>和<kbd>Control</kbd>键，以及<kbd>Lock Lock</kbd>和<kbd>NumLock</kbd>等锁定键。</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -64,7 +61,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Alt"</code> [5]</td>
-   <td><kbd><font face="Arial, x-locale-body, sans-serif"><span style="background-color: rgba(212, 221, 228, 0.25); font-size: 16px; font-weight: 400; white-space: normal;">Клавиша </span></font>Alt</kbd> (Alternative) .</td>
+   <td> <kbd>Alt</kbd> （替代）键。</td>
    <td><code>VK_MENU</code> (0x12)<br>
     <code>VK_LMENU</code> (0xA4)<br>
     <code>VK_RMENU</code> (0xA5)</td>
@@ -78,7 +75,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AltGraph"</code> [5]</td>
-   <td>Клавиша<kbd>AltGr</kbd> или <kbd>AltGraph</kbd> (Альтернативная графика). Enables the ISO Level 3 shift modifier (where <kbd>Shift</kbd> is the level 2 modifier).</td>
+   <td><kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。 启用ISO Level 3移位修改器（其中<kbd>Shift</kbd>是2级修改器）。</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Mode_switch</code> (0xFF7E)<br>
@@ -94,7 +91,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"CapsLock"</code></td>
-   <td>Клавиша <kbd>Caps Lock</kbd> . Включает и выключает блокировку заглавных букв для последующего ввода.</td>
+   <td>大写锁定键。 打开和关闭大写字符锁以进行后续输入。</td>
    <td><code>VK_CAPITAL</code> (0x14)</td>
    <td><code>kVK_CapsLock</code> (0x39)</td>
    <td><code>GDK_KEY_Caps_Lock</code> (0xFFE5)<br>
@@ -103,7 +100,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Control"</code></td>
-   <td>Клавиша <kbd>Control</kbd>, <kbd>Ctrl</kbd>, или <kbd>Ctl</kbd> . Позволяет вводить управляющие символы.</td>
+   <td><kbd>Control</kbd>，<kbd>Ctrl</kbd>或<kbd>Ctrl</kbd>键。 允许输入控制字符。</td>
    <td><code>VK_CONTROL</code> (0x11)<br>
     <code>VK_LCONTROL</code> (0xA2)<br>
     <code>VK_RCONTROL</code> (0xA3)</td>
@@ -117,7 +114,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Fn"</code></td>
-   <td> <kbd>Fn</kbd> (Function modifier) key. Используется для создания функциональной клавиши (<kbd>F1</kbd>–<kbd>F15</kbd>, например) символы на клавиатуре без выделенной области функциональных клавиш.Часто обрабатывается аппаратно, поэтому для этой клавиши не создаются события.</td>
+   <td><kbd>Fn</kbd>（函数修饰符）键。 用于允许在没有专用功能键区域的键盘上生成功能键（例如<kbd>F1</kbd>-<kbd>F15</kbd>）字符。 通常在硬件中处理，以便不为此密钥生成事件。</td>
    <td></td>
    <td><code>kVK_Function</code> (0x3F)</td>
    <td></td>
@@ -125,7 +122,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FnLock"</code></td>
-   <td>Клавиша <kbd>FnLock</kbd> или <kbd>F-Lock</kbd> (Function Lock) .Переключает режим функциональных клавиш, описанный<code>"Fn"</code> вкл. и выкл. Часто обрабатывается аппаратно, поэтому для этой клавиши не создаются события.</td>
+   <td><kbd>FnLock</kbd>或<kbd>F-Lock</kbd>（功能锁定）键。打开和关闭“<kbd>Fn</kbd>”描述的功能键模式。 通常在硬件中处理，以便不为此密钥生成事件。</td>
    <td></td>
    <td></td>
    <td></td>
@@ -133,7 +130,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Hyper"</code> [4]</td>
-   <td>Клавиша <kbd>Hyper</kbd> .</td>
+   <td> <kbd>Hyper</kbd> 键.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Hyper_L</code> (0xFFED)<br>
@@ -144,7 +141,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Meta"</code> [1]</td>
-   <td>Клавиша <kbd>Meta</kbd> . Позволяет вводить специальные команды. Это клавиши с лого <kbd>Windows</kbd> , или<kbd>Command</kbd> или <kbd>⌘</kbd> на клавиатуре Mac .</td>
+   <td><kbd>Meta</kbd>键。 允许发出特殊命令输入。 这是<kbd>Windows</kbd>徽标键，或<kbd>Mac</kbd>键盘上的<kbd>Command</kbd>或⌘键。</td>
    <td><code>VK_LWIN</code> (0x5B)<br>
     <code>VK_RWIN</code> (0x5C)</td>
    <td><code>kVK_Command</code> (0x37)<br>
@@ -157,7 +154,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NumLock"</code></td>
-   <td>Клавиша <kbd>NumLock</kbd> (Number Lock). Переключает цифровую клавиатуру между вводом номера и другим режимом (часто стрелки направления).</td>
+   <td>The <kbd>NumLock</kbd> (Number Lock) key. Toggles the numeric keypad between number entry some other mode (often directional arrows).</td>
    <td><code>VK_NUMLOCK</code> (0x90)</td>
    <td></td>
    <td><code>GDK_KEY_Num_Lock</code> (0xFF7F)<br>
@@ -166,7 +163,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ScrollLock"</code> [2]</td>
-   <td>Клавиша<kbd>Scroll Lock</kbd> Переключает между режимами прокрутки и перемещения курсора.</td>
+   <td>The <kbd>Scroll Lock</kbd> key. Toggles beteen scrolling and cursor movement modes.</td>
    <td><code>VK_SCROLL</code> (0x91)</td>
    <td></td>
    <td><code>GDK_KEY_Scroll_Lock</code> (0xFF14)<br>
@@ -175,7 +172,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Shift"</code></td>
-   <td>Клавиша <kbd>Shift</kbd>. <span class="tlid-translation translation" lang="ru"><span title="">Изменяет нажатия клавиш, чтобы разрешить ввод букв в верхнем (или другом) регистре, а также для поддержки ввода знаков препинания и других специальных символов.</span></span></td>
+   <td>The <kbd>Shift</kbd> key. Modifies keystrokes to allow typing upper (or other) case letters, and to support typing punctuation and other special characters.</td>
    <td><code>VK_SHIFT</code> (0x10)<br>
     <code>VK_LSHIFT</code> (0xA0)<br>
     <code>VK_RSHIFT</code> (0xA1)</td>
@@ -189,7 +186,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Super"</code> [4]</td>
-   <td>Клавиша <kbd>Super</kbd>.</td>
+   <td>The <kbd>Super</kbd> key.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Super_L</code> (0xFFEB)<br>
@@ -200,7 +197,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Symbol"</code></td>
-   <td>Клавиша-модификатор <kbd>Symbol</kbd> <span class="tlid-translation translation" lang="ru"><span title="">(есть на некоторых виртуальных клавиатурах).</span></span></td>
+   <td>The <kbd>Symbol</kbd> modifier key (found on certain virtual keyboards).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -208,7 +205,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"SymbolLock"</code></td>
-   <td>Клавиша <kbd>Symbol Lock</kbd></td>
+   <td>The <kbd>Symbol Lock</kbd> key.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -217,24 +214,24 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] В Internet Explorer (проверено на релизах 9 и 11), а также во всех версиях Firefox, клавиша <kbd>Windows</kbd> сообщается как <code>"OS"</code> а не <code>"Meta"</code>. Это будет изменено в Firefox в {{bug(1232918)}}. Пока это не будет исправлено, эти ключи возвращаются как <code>"OS"</code> в Firefox: <code>VK_LWIN</code> (0x5B) и <code>VK_RWIN</code> (0x5C) в Windows, и <code><code>GDK_KEY_Super_L</code> (0xFFEB)</code>, <code><code>GDK_KEY_Super_R</code> (0xFFEC)</code>, <code><code>GDK_KEY_Hyper_L</code> (0xFFED)</code>, и <code><code>GDK_KEY_Hyper_R</code> (0xFFEE)</code> в Linux.</p>
+<p>[1] In Internet Explorer 9, as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as <code>"OS"</code> instead of as <code>"Meta"</code>. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as <code>"OS"</code> by Firefox: <code>VK_LWIN</code> (0x5B) and <code>VK_RWIN</code> (0x5C) on Windows, and <code><code>GDK_KEY_Super_L</code> (0xFFEB)</code>, <code><code>GDK_KEY_Super_R</code> (0xFFEC)</code>, <code><code>GDK_KEY_Hyper_L</code> (0xFFED)</code>, and <code><code>GDK_KEY_Hyper_R</code> (0xFFEE)</code> on Linux.</p>
 
-<p>[2] Internet Explorer (проверено на релизах 9 и 11) сообщает <code>"Scroll"</code> вместо<code> "ScrollLock"</code> для клавиши <kbd>Scroll Lock</kbd>.</p>
+<p>[2] Internet Explorer 9 reports <code>"Scroll"</code> instead of <code>"ScrollLock"</code> for the <kbd>Scroll Lock</kbd> key.</p>
 
-<p>[3] Firefox не поддерживает клавишу <kbd>Symbol</kbd> до версии Firefox 37.</p>
+<p>[3] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.</p>
 
-<p>[4] <span class="tlid-translation translation" lang="ru"><span title="">Firefox генерирует значение ключа</span></span> <code>"OS</code>" для клавиш <kbd>Super</kbd> и <kbd>Hyper</kbd> вместо <code>"Super"</code> и <code>"Hyper"</code>.</p>
+<p>[4] Firefox generates the key value <code>"OS</code>" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of <code>"Super"</code> and <code>"Hyper"</code>.</p>
 
-<p>[5] Chrome 67 и Firefox 63 <span class="tlid-translation translation" lang="ru"><span title="">теперь правильно интерпретируют правую клавишу</span></span> <kbd>Alt</kbd> <span class="tlid-translation translation" lang="ru"><span title="">для раскладок клавиатуры, которые сопоставляют эту клавишу с</span></span> <kbd>AltGr</kbd>. <span class="tlid-translation translation" lang="ru"><span title="">См. Дополнительные сведения об ошибке</span></span> {{bug(900750)}} и <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=25503">Chrome bug 25503</a> для подробных деталей.</p>
+<p>[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=25503">Chrome bug 25503</a> for further details.</p>
 
-<h2 id="Пробельные_клавиши">Пробельные клавиши</h2>
+<h2 id="Whitespace_keys">Whitespace keys</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -246,7 +243,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  <tbody>
   <tr>
    <td><code>"Enter"</code></td>
-   <td>Клавиша <kbd>Enter</kbd> или<kbd>↵</kbd> (иногда помечается как <kbd>Return</kbd>).</td>
+   <td>The <kbd>Enter</kbd> or <kbd>↵</kbd> key (sometimes labeled <kbd>Return</kbd>).</td>
    <td><code>VK_RETURN</code> (0x0D)</td>
    <td><code>kVK_Return</code> (0x24)<br>
     <code>kVK_ANSI_KeypadEnter</code> (0x4C)<br>
@@ -263,7 +260,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Tab"</code></td>
-   <td>Горизонтальная табуляция, <kbd>Tab</kbd>.</td>
+   <td>The Horizontal Tab key, <kbd>Tab</kbd>.</td>
    <td><code>VK_TAB</code> (0x09)</td>
    <td><code>kVK_Tab</code> (0x30)</td>
    <td><code><code>GDK_KEY_Tab</code> (0xFF09)</code><br>
@@ -274,7 +271,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>" "</code> [1]</td>
-   <td>Пробел, <kbd>Space Bar</kbd>.</td>
+   <td>The space key, <kbd>Space Bar</kbd>.</td>
    <td><code>VK_SPACE</code> (0x20)</td>
    <td><code>kVK_Space</code> (0x31)</td>
    <td>
@@ -287,16 +284,16 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </tbody>
 </table>
 
-<p>[1] Старые браузеры могут вернуть <code>"Spacebar"</code> вместо <code>" "</code> для клавиши <kbd>Space Bar</kbd> . Firefox делал это до версии 37, как в Internet Explorer 9, 10, и 11.</p>
+<p>[1] Older browsers may return "Spacebar" instead of " " for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.</p>
 
-<h2 id="Навигационные_клавиши">Навигационные клавиши</h2>
+<h2 id="Navigation_keys">Navigation keys</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -308,7 +305,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  <tbody>
   <tr>
    <td><code>"ArrowDown"</code> [1]</td>
-   <td>Клавиша со стрелкой "вниз".</td>
+   <td>The down arrow key.</td>
    <td><code>VK_DOWN</code> (0x28)</td>
    <td><code>kVK_DownArrow</code> (0x7D)</td>
    <td><code>GDK_KEY_Down</code> (0xFF54)<br>
@@ -318,7 +315,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ArrowLeft"</code> [1]</td>
-   <td>Клавиша со стрелкой "влево" .</td>
+   <td>The left arrow key.</td>
    <td><code>VK_LEFT</code> (0x25)</td>
    <td><code>kVK_LeftArrow</code> (0x7B)</td>
    <td><code>GDK_KEY_Left</code> (0xFF51)<br>
@@ -328,7 +325,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ArrowRight"</code> [1]</td>
-   <td>Клавиша со стрелкой "вправо".</td>
+   <td>The right arrow key.</td>
    <td><code>VK_RIGHT</code> (0x27)</td>
    <td><code>kVK_RightArrow</code> (0x7C)</td>
    <td><code>GDK_KEY_Right</code> (0xFF53)<br>
@@ -338,7 +335,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ArrowUp"</code> [1]</td>
-   <td>Клавиша со стрелкой "вверх".</td>
+   <td>The up arrow key.</td>
    <td><code>VK_UP</code><code> (0x26)</code></td>
    <td><code>kVK_UpArrow</code> (0x7E)</td>
    <td><code>GDK_KEY_Up</code> (0xFF52)<br>
@@ -348,7 +345,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"End"</code></td>
-   <td>Клавиша <kbd>End</kbd> . Перемещает в конец контента.</td>
+   <td>The <kbd>End</kbd> key. Moves to the end of content.</td>
    <td><code>VK_END</code> (0x23)</td>
    <td><code>kVK_End</code> (0x77)</td>
    <td><code>GDK_KEY_End</code> (0xFF57)<br>
@@ -358,7 +355,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Home"</code></td>
-   <td>Клавиша <kbd>Home</kbd> . В начало контента.</td>
+   <td>The <kbd>Home</kbd> key. Moves to the start of content.</td>
    <td><code>VK_HOME</code> (0x24)</td>
    <td><code>kVK_Home</code> (0x73)</td>
    <td><code>GDK_KEY_Home</code> (0xFF50)<br>
@@ -368,7 +365,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PageDown"</code></td>
-   <td>Клавиша <kbd>Page Down</kbd> (или <kbd>PgDn</kbd>). <span class="tlid-translation translation" lang="ru"><span title="">Прокручивает вниз или отображает следующую страницу содержимого.</span></span></td>
+   <td>The <kbd>Page Down</kbd> (or <kbd>PgDn</kbd>) key. Scrolls down or displays the next page of content.</td>
    <td><code>VK_NEXT</code> (0x22)</td>
    <td><code>kVK_PageDown</code><code> (0x79)</code></td>
    <td><code>GDK_KEY_Page_Down</code> (0xFF56)<br>
@@ -378,7 +375,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PageUp"</code></td>
-   <td>Клавиша <kbd>Page Up</kbd> (или <kbd>PgUp</kbd>). <span class="tlid-translation translation" lang="ru"><span title="">Прокручивает вверх или отображает предыдущую страницу содержимого.</span></span></td>
+   <td>The <kbd>Page Up</kbd> (or <kbd>PgUp</kbd>) key. Scrolls up or displays the previous page of content.</td>
    <td><code>VK_PRIOR</code> (0x21)</td>
    <td><code>kVK_PageUp</code> (0x74)</td>
    <td><code>GDK_KEY_Page_Up</code> (0xFF55)<br>
@@ -389,16 +386,16 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </tbody>
 </table>
 
-<p>[1] Internet Explorer, Edge (16 и ранее), и Firefox (36 и ранее) используют <code>"Left"</code>, <code>"Right"</code>, <code>"Up"</code>, и <code>"Down"</code> вместо <code>"ArrowLeft"</code>, <code>"ArrowRight"</code>, <code>"ArrowUp"</code>, и <code>"ArrowDown"</code>.</p>
+<p>[1] Internet Explorer, Edge (16 and earlier), and Firefox (36 and earlier) use "Left", "Right", "Up", and "Down" instead of "ArrowLeft", "ArrowRight", "ArrowUp", and "ArrowDown".</p>
 
-<h2 id="Клавиши_редактирования">Клавиши редактирования</h2>
+<h2 id="Editing_keys">Editing keys</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -455,7 +452,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Delete"</code> [2]</td>
-   <td>Клавиша Delete, <kbd>Del</kbd>.</td>
+   <td>The Delete key, <kbd>Del</kbd>.</td>
    <td><code>VK_DELETE</code> (0x2E)</td>
    <td><code>kVK_ForwardDelete</code> (0x75) [1]</td>
    <td><code>GDK_KEY_Delete</code> (0xFFFF)<br>
@@ -519,20 +516,22 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
 
 <p>[1] On keyboards without a dedicated <kbd>Del</kbd> key, the Mac generates the <code>"Delete"</code> value when <kbd>Fn</kbd> is pressed in tandem with <kbd>Delete</kbd> (which is <kbd>Backspace</kbd> on other platforms).</p>
 
-<p>[2] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier use <code>"Del"</code> instead of <code>"Delete"</code> for the <kbd>Del</kbd> key.</p>
+<p>[2] Internet Explorer 9 and Firefox 36 and earlier use "Del" instead of "Delete" for the <kbd>Del</kbd> key.</p>
 
-<p>[3] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value <code>"Crsel"</code> instead of <code>"CrSel"</code> when the <kbd>CrSel</kbd> key is pressed.</p>
+<p>[3] Internet Explorer 9 and Firefox 36 and earlier generate the value <code>"Crsel"</code> instead of <code>"CrSel"</code> when the <kbd>CrSel</kbd> key is pressed.</p>
 
-<p>[4] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value <code>"Exsel"</code> instead of <code>"ExSel"</code> when the <kbd>ExSel</kbd> key is pressed.</p>
+<p>[4] Internet Explorer 9 and Firefox 36 and earlier generate the value <code>"Exsel"</code> instead of <code>"ExSel"</code> when the <kbd>ExSel</kbd> key is pressed.</p>
 
-<h2 id="Клавиши_интерфейса_пользователя_UI">Клавиши интерфейса пользователя (UI)</h2>
+<p>[5] Prior to Firefox 37, this key generated the value <code>"Unidentified"</code>.</p>
+
+<h2 id="UI_keys">UI keys</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -544,7 +543,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  <tbody>
   <tr>
    <td><code>"Accept"</code></td>
-   <td>Клавиша или кнопка <kbd>Accept</kbd>, <kbd>Commit</kbd>, или <kbd>OK</kbd>. Accepts the currently selected option or input method sequence conversion.</td>
+   <td>The <kbd>Accept</kbd>, <kbd>Commit</kbd>, or <kbd>OK</kbd> key or button. Accepts the currently selected option or input method sequence conversion.</td>
    <td><code>VK_ACCEPT</code> (0x1E)</td>
    <td></td>
    <td></td>
@@ -552,7 +551,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Again"</code></td>
-   <td>The <kbd>Again</kbd> key. Перевыполняет или повторяет предыдущее действие.</td>
+   <td>The <kbd>Again</kbd> key. Redoes or repeats a previous action.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Redo</code> (0xFF66)</td>
@@ -560,7 +559,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Attn"</code> [4]</td>
-   <td>Клавиша "Внимание" <kbd>Attn</kbd>.</td>
+   <td>The <kbd>Attn</kbd> (Attention) key.</td>
    <td><code>VK_OEM_ATTN</code> (0xF0)</td>
    <td></td>
    <td><code>GDK_KEY_3270_Attn</code> (0xFD0E)</td>
@@ -568,7 +567,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Cancel"</code> [1]</td>
-   <td>Клавиша отмены <kbd>Cancel</kbd>.</td>
+   <td>The <kbd>Cancel</kbd> key.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Cancel</code> (0xFF69)</td>
@@ -576,7 +575,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ContextMenu"</code> [3]</td>
-   <td>Отображает контекстное меню. Обычно находится между клавишами <kbd>Windows</kbd> (или <kbd>OS</kbd>) и <kbd>Control</kbd> на правой стороне клавиатуры.</td>
+   <td>Shows the context menu. Typically found between the <kbd>Windows</kbd> (or <kbd>OS</kbd>) key and the <kbd>Control</kbd> key on the right side of the keyboard.</td>
    <td><code>VK_APPS</code> (0x5D)</td>
    <td><code>kVK_PC_ContextMenu</code> (0x6E)</td>
    <td><code>GDK_KEY_Menu</code> (0xFF67)<br>
@@ -585,7 +584,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Escape"</code> [2]</td>
-   <td>Клавиша отмены <kbd>Esc</kbd>. Обычно используется для выходы, отмены, ил выхода из текущей операции. Исторически Escape-символ использовался для подачи сигнала о начале специальной управляющей последовательности символов, называемой "escape-последовательностью".</td>
+   <td>The <kbd>Esc</kbd> (Escape) key. Typically used as an exit, cancel, or "escape this operation" button. Historically, the Escape character was used to signal the start of a special control sequence of characters called an "escape sequence."</td>
    <td><code>VK_ESCAPE</code> (0x1B)</td>
    <td><code>kVK_Escape</code> (0x35)</td>
    <td><code>GDK_KEY_Escape</code> (0xFF1B)<br>
@@ -594,7 +593,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Execute"</code></td>
-   <td>Клавиша "Выполнить" <kbd>Execute</kbd>.</td>
+   <td>The <kbd>Execute</kbd> key.</td>
    <td><code>VK_EXECUTE</code> (0x2B)</td>
    <td></td>
    <td><code>Qt::Key_Execute</code> (0x01020003)</td>
@@ -602,7 +601,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Find"</code></td>
-   <td>Клавиша "Найти" <kbd>Find</kbd>. Открывает интерфейс (обычно диалоговое окно) для выполнения операции поиска.</td>
+   <td>The <kbd>Find</kbd> key. Opens an interface (typically a dialog box) for performing a find/search operation.</td>
    <td><code>APPCOMMAND_FIND</code></td>
    <td></td>
    <td><code>GDK_KEY_Find</code> (0xFF68)</td>
@@ -610,7 +609,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Finish"</code> [5]</td>
-   <td>Клавиша завершения <kbd>Finish</kbd>.</td>
+   <td>The <kbd>Finish</kbd> key.</td>
    <td><code>VK_OEM_FINISH</code> (0xF1)</td>
    <td></td>
    <td></td>
@@ -618,7 +617,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Help"</code></td>
-   <td>Клавиша помощи <kbd>Help</kbd>. Открывает или переключает отображение справочной информации.</td>
+   <td>The <kbd>Help</kbd> key. Opens or toggles the display of help information.</td>
    <td><code>VK_HELP</code> (0x2F)<br>
     <code>APPCOMMAND_HELP</code></td>
    <td><code>kVK_Help</code> (0x72)</td>
@@ -628,8 +627,8 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Pause"</code></td>
-   <td>Клавиша паузы <kbd>Pause</kbd>. Приостанавливает текущее приложение или состояние, если это применимо.
-    <div class="note"><strong>Примечание:</strong> Не следует путать с клавишей <code>"MediaPause"</code> , которая используется для медиа-контроллеров, а не для управления приложениями и процессами.</div>
+   <td>The <kbd>Pause</kbd> key. Pauses the current application or state, if applicable.
+    <div class="note">This shouldn't be confused with the <code>"MediaPause"</code> key value, which is used for media controllers, rather than to control applications and processes.</div>
    </td>
    <td><code>VK_PAUSE</code> (0x13)</td>
    <td></td>
@@ -640,8 +639,8 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Play"</code></td>
-   <td>Клавиша <kbd>Play</kbd> . Если применимо, возобновляет ранее приостановленное приложение.
-    <div class="note"><strong>Примечание:</strong> Не следует путать с клавишей<code>"MediaPlay"</code> которая используется для медиа-контроллеров, а не для управления приложениями и процессами.</div>
+   <td>The <kbd>Play</kbd> key. Resumes a previously paused application, if applicable.
+    <div class="note">This shouldn't be confused with the <code>"MediaPlay"</code> key value, which is used for media controllers, rather than to control applications and processes.</div>
    </td>
    <td><code>VK_PLAY</code> (0xFA)</td>
    <td></td>
@@ -651,7 +650,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Props"</code></td>
-   <td>Клавиша "Свойства" <kbd>Props</kbd>.</td>
+   <td>The <kbd>Props</kbd> (Properties) key.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -659,7 +658,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Select"</code></td>
-   <td>Клавиша выбора/выделения <kbd>Select</kbd>.</td>
+   <td>The <kbd>Select</kbd> key.</td>
    <td><code>VK_SELECT</code> (0x29)</td>
    <td></td>
    <td><code>GDK_KEY_Select</code> (0xFF60)</td>
@@ -667,7 +666,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ZoomIn"</code> [6]</td>
-   <td>Клавиша увеличения масштаба <kbd>ZoomIn</kbd>.</td>
+   <td>The <kbd>ZoomIn</kbd> key.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_ZoomIn</code> (0x1008FF8B)<br>
@@ -676,7 +675,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ZoomOut"</code> [6]</td>
-   <td>Клавиша уменьшения масштаба <kbd>ZoomOut</kbd>.</td>
+   <td>The <kbd>ZoomOut</kbd> key.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_ZoomOut</code> (0x1008FF8C)<br>
@@ -686,26 +685,26 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </tbody>
 </table>
 
-<p>[1] В Google Chrome 52, клавиша <kbd>Cancel</kbd> ошибочно возвращает значение <code>"Pause"</code>. Исправлено в Chrome 53. (Смотри подробно в <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612749">Chrome bug 612749</a>.)</p>
+<p>[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code <code>"Pause"</code>. This is fixed in Chrome 53. See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612749">Chrome bug 612749</a> for details.</p>
 
-<p>[2] В Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранних, клавиша <kbd>Esc</kbd> возвращает значение <code>"Esc"</code> вместо <code>"Escape"</code>.</p>
+<p>[2] In Internet Explorer 9 and Firefox 36 and earlier, the <kbd>Esc</kbd> key returns <code>"Esc"</code> instead of <code>"Escape"</code>.</p>
 
-<p>[3] Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранних, клавиша контекстного меню возвращает значение <code>"Apps"</code> вместо <code>"ContextMenu"</code>.</p>
+<p>[3] Internet Explorer 9 and Firefox 36 and earlier report <code>"Apps"</code> instead of <code>"ContextMenu"</code> for the context menu key.</p>
 
-<p>[4] Клавиша <kbd>Attn</kbd> генерирует значение <code>"Unidentified"</code> в Internet Explorer (проверено в версиях 9 и 11). В Firefox и Google Chrome происходит то же, если только не действует японская раскладка клавиатуры, то в этом случае она генерирует вместо неё <code>"KanaMode"</code>.</p>
+<p>[4] The <kbd>Attn</kbd> key generates the key code <code>"Unidentified"</code> on Internet Explorer 9. Firefox and Google Chrome report the same, unless the Japanese keyboard layout is in effect, in which case it generates <code>"KanaMode"</code> instead.</p>
 
-<p>[5] Клавиша <kbd>Finish</kbd> генерирует значение <code>"Unidentified"</code> в Internet Explorer (проверено в версиях 9 и 11). В Firefox происходит то же, если только не действует японская раскладка клавиатуры, то в этом случае она генерирует вместо неё <code>"Katakana"</code>.</p>
+<p>[5] The <kbd>Finish</kbd> key gemerates the key code <code>"Unidentified"</code> on Internet Explorer 9. Firefox reports the same, unless the Japanese keyboard layout is in effect, in which case it generates <code>"Katakana"</code> instead.</p>
 
-<p>[6] Firefox не поддерживал клавиши <code>"ZoomIn"</code> и <code>"ZoomOut"</code> до Firefox 37.</p>
+<p>[6] Firefox didn't support the <code>"ZoomIn"</code> and <code>"ZoomOut"</code> keys until Firefox 37.</p>
 
-<h2 id="Клавиши_устройства">Клавиши устройства</h2>
+<h2 id="Device_keys">Device keys</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -717,7 +716,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  <tbody>
   <tr>
    <td><code>"BrightnessDown"</code></td>
-   <td>Клавиша уменьшения яркости. Обычно используется для уменьшения яркости дисплея.</td>
+   <td>The Brightness Down key. Typically used to reduce the brightness of the display.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_MonBrightnessDown</code> (0x1008FF03)<br>
@@ -726,7 +725,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrightnessUp"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Клавиша увеличения яркости.</span> <span title="">Обычно увеличивает яркость дисплея.</span></span></td>
+   <td>The Brightness Up key. Typically increases the brightness of the display.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_MonBrightnessUp</code> (0x1008FF02)<br>
@@ -735,7 +734,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Eject"</code></td>
-   <td>Клавиша извлечения <kbd>Eject</kbd>. Извлекает съёмный носитель (или переключает лоток оптического дисковода, открывая и закрывая его).</td>
+   <td>The <kbd>Eject</kbd> key. Ejects removable media (or toggles an optical storage device tray open and closed).</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Eject</code> (0x1008FF2C)<br>
@@ -744,7 +743,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LogOff"</code> [2]</td>
-   <td>Клавиша выход из системы <kbd>LogOff</kbd>.</td>
+   <td>The <kbd>LogOff</kbd> key.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LogOff</code> (0x1008FF61)<br>
@@ -753,8 +752,8 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Power"</code></td>
-   <td>Кнопка или клавиша питания <kbd>Power</kbd> для включения и выключения питания.
-    <div class="note"><strong>Примечание:</strong> Не все системы передают этот ключ агенту пользователя.</div>
+   <td>The <kbd>Power</kbd> button or key, to toggle power on and off.
+    <div class="note">Not all systems pass this key through to to the user agent.</div>
    </td>
    <td></td>
    <td></td>
@@ -763,7 +762,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PowerOff"</code></td>
-   <td>Кнопка выключения компьютера <kbd>PowerOff</kbd> или <kbd>PowerDown</kbd>.</td>
+   <td>The <kbd>PowerOff</kbd> or <kbd>PowerDown</kbd> key. Shuts off the system.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_PowerDown</code> (0x1008FF21)<br>
@@ -774,7 +773,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PrintScreen"</code></td>
-   <td>Клавиша <kbd>PrintScreen</kbd> или <kbd>PrtScr</kbd>. Иногда <kbd>SnapShot</kbd>. Делает снимок экрана.</td>
+   <td>The <kbd>PrintScreen</kbd> or <kbd>PrtScr</kbd> key. Sometimes <kbd>SnapShot</kbd>. Captures the screen and prints it or saves it to disk.</td>
    <td><code>VK_SNAPSHOT</code> (0x2C)</td>
    <td></td>
    <td><code>GDK_KEY_3270_PrintScreen</code> (0xFD1D)<br>
@@ -786,7 +785,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Hibernate"</code> [2]</td>
-   <td>Клавиша гибернации <kbd>Hibernate</kbd>. Состояние компьютера сохраняется на диске, а затем выключается; компьютер может быть возвращён в предыдущее состояние путём восстановления сохранённой информации о состоянии.</td>
+   <td>The <kbd>Hibernate</kbd> key. This saves the state of the computer to disk and then shuts down; the computer can be returned to its previous state by restoring the saved state information.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Hibernate</code> (0x1008FFA8)<br>
@@ -795,7 +794,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Standby"</code> [1]</td>
-   <td>Клавиша сна <kbd>Standby</kbd>. (Также известна как <kbd>Suspend</kbd> или <kbd>Sleep</kbd>.) Выключает дисплей и переводит компьютер в режим низкого энергопотребления, не выключая его полностью.</td>
+   <td>The <kbd>Standby</kbd> key; also known as <kbd>Suspend</kbd> or <kbd>Sleep</kbd>. This turns off the display and puts the computer in a low power consumption mode, without completely powering off.</td>
    <td><code>VK_SLEEP</code> (0x5F)</td>
    <td></td>
    <td><code>GDK_KEY_Standby</code> (0x1008FF10)<br>
@@ -808,7 +807,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"WakeUp"</code> [2]</td>
-   <td>Клавиша пробуждения <kbd>WakeUp</kbd>. Используется для вывода компьютера из режима гибернации или ожидания.</td>
+   <td>The <kbd>WakeUp</kbd> key; used to wake the computer from the hibernation or standby modes.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_WakeUp</code> (0x1008FF2B)<br>
@@ -818,24 +817,24 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </tbody>
 </table>
 
-<p>[1] Клавиша <kbd>Standby</kbd> не поддерживается Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранних, поэтому возвращала <code>"Unidentified"</code>.</p>
+<p>[1] The <kbd>Standby</kbd> key is not supported by Internet Explorer 9 and Firefox 36 and earlier, so it is reported as <code>"Unidentified"</code>.</p>
 
-<p>[2] До Firefox 37, эта клавиша генерировала значение <code>"Unidentified"</code>.</p>
+<p>[2] Prior to Firefox 37, this key generated the value <code>"Unidentified"</code>.</p>
 
-<h2 id="IME_и_клавиши_композиции">IME и клавиши композиции</h2>
+<h2 id="IME_and_composition_keys">IME and composition keys</h2>
 
-<p>Клавиши, используемые при использовании редактора метода ввода (<a href="https://ru.wikipedia.org/wiki/IME">IME</a>) для ввода текста, который не может быть легко введён с помощью простых нажатий клавиш, например текста на языках, которые имеют больше графем, чем клавиш ввода символов на клавиатуре. Общие примеры включают китайский, японский, корейский и хинди.</p>
+<p>Keys used when using an Input Method Editor (IME) to input text which can't readily be entered by simple keypresses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard; common examples include Chinese, Japanese, Korean, and Hindi.</p>
 
-<p>Некоторые клавиши являются общими для нескольких языков, в то время как другие существуют только на клавиатурах, ориентированных на определённые языки. Кроме того, не все клавиатуры имеют все эти клавиши.</p>
+<p>Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.</p>
 
-<h4 id="Обычные_IME_клавиши">Обычные IME клавиши</h4>
+<h4 id="Common_IME_keys">Common IME keys</h4>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -894,11 +893,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Dead"</code></td>
-   <td>
-    <p>A dead "combining" key; that is, a key which is used in tandem with other keys to generate accented and other modified characters. If pressed by itself, it doesn't generate a character.</p>
-
-    <p>If you wish to identify which specific dead key was pressed (in cases where more than one exists), you can do so by examining the {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.</p>
-   </td>
+   <td>A dead "combining" key; that is, a key which is used in tandem with other keys to generate accented and other modified characters. If pressed by itself, it doesn't generate a character. If you wish to identify which specific dead key was pressed (in cases where more than one exists), you can do so by examining the {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.</td>
    <td></td>
    <td></td>
    <td>See <a href="#dead_keycodes_for_linux">Dead keycodes for Linux</a> below</td>
@@ -968,8 +963,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
    <td><code>VK_NONCONVERT</code> (0x1D)</td>
    <td></td>
    <td><code>GDK_KEY_Muhenkan</code> (0xFF22)<br>
-    <code>Qt::Key_Muhenkan</code> (0x01001122)<br>
-     </td>
+    <code>Qt::Key_Muhenkan</code> (0x01001122)</td>
    <td><code>KEYCODE_MUHENKAN</code> (213)</td>
   </tr>
   <tr>
@@ -1001,26 +995,26 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </tbody>
 </table>
 
-<p>[1] В <em>X Window System</em>, клавиша <kbd>Compose</kbd> называется <kbd>Multi</kbd>.</p>
+<p>[1] On the <em>X Window System</em>, the <kbd>Compose</kbd> key is called the <kbd>Multi</kbd> key.</p>
 
-<p>[2] Клавиша <kbd>NonConvert</kbd> возвращает значение <code>"Nonconvert"</code> вместо корректного<code> "NonConvert"</code> в Internet Explorer (проверено в версиях 9 и 11) и Firefox версии 36 и более ранних.</p>
+<p>[2] The <kbd>NonConvert</kbd> key is reported as <code>"Nonconvert"</code> instead of the correct <code>"NonConvert"</code> by Internet Explorer 9 and Firefox versions 36 and earlier.</p>
 
-<p>[3] Клавиша <kbd>Process</kbd> в настоящее время возвращает <code>"Unidentified"</code> в Firefox и Internet Explorer. Google Chrome возвращает значение клавиши так, как если бы IME не использовался.</p>
+<p>[3] The <kbd>Process</kbd> key currently returns <code>"Unidentified"</code> in Firefox and Internet Explorer. Google Chrome returns the value of the key as if IME were not in use.</p>
 
-<p>[4] До Firefox 37, эта клавиша возвращала <code>"Unidentified"</code>.</p>
+<p>[4] Prior to Firefox 37, these keys were <code>"Unidentified"</code>.</p>
 
-<p>[5] Firefox генерирует значение <code>"AltGraph"</code> вместо <code>"ModeChange"</code>.</p>
+<p>[5] Firefox generates the key value <code>"AltGraph"</code> instead of <code>"ModeChange"</code>.</p>
 
-<h3 id="Только_корейские_клавиатуры">Только корейские клавиатуры</h3>
+<h3 id="Korean_keyboards_only">Korean keyboards only</h3>
 
-<p>Эти клавиши доступны только на корейских клавиатурах. Существуют и другие клавиши, определённые различными платформами для корейских клавиатур, но они являются наиболее распространёнными и идентифицируются спецификацией событий пользовательского интерфейса.</p>
+<p>These keys are only available on Korean keyboards. There are other keys defined by various platforms for Korean keyboards, but these are the most common and are the ones identified by the UI Events specification.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -1058,18 +1052,18 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] <code>VK_HANGUL</code> и <code>VK_KANA</code> <span class="tlid-translation translation" lang="ru"><span title="">используют один и тот же числовой код клавиши</span></span> в Windows, также как <code>VK_HANJA</code> и <code>VK_KANJI</code>.</p>
+<p>[1] <code>VK_HANGUL</code> and <code>VK_KANA</code> share the same numeric key value on Windows, as do <code>VK_HANJA</code> and <code>VK_KANJI</code>.</p>
 
-<h3 id="Только_японские_клавиатуры">Только японские клавиатуры</h3>
+<h3 id="Japanese_keyboards_only">Japanese keyboards only</h3>
 
-<p>Эти клавиши доступны только на японских клавиатурах.</p>
+<p>These keys are only available on Japanese keyboards.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -1128,7 +1122,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   <tr>
    <td><code>"KanjiMode"</code></td>
    <td>The <kbd>Kanji Mode</kbd> key. Enables entering Japanese text using the ideographic characters of Chinese origin.</td>
-   <td><code>VK_KANJI</code>(0x19) [2]</td>
+   <td><code>VK_KANJI</code> [2]</td>
    <td><code>kVK_JIS_Kana</code> (0x68)</td>
    <td><code>GDK_KEY_Kanji</code> (0xFF21)<br>
     <code>Qt::Key_Kanji</code> (0x01001121)</td>
@@ -1175,35 +1169,33 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] До Firefox 37, клавиша <kbd>Eisu</kbd> ошибочно сопоставлялась <code>"RomanCharacters"</code>.</p>
+<p>[1] Prior to Firefox 37, the <kbd>Eisu</kbd> key was mapped to <code>"RomanCharacters"</code> by mistake.</p>
 
-<p>[2] <code>VK_HANGUL</code> и <code>VK_KANA</code> <span class="tlid-translation translation" lang="ru"><span title="">используют один и тот же числовой код клавиши</span></span> в Windows, также как <code>VK_HANJA</code> и <code>VK_KANJI</code>.</p>
+<p>[2] <code>VK_HANGUL</code> and <code>VK_KANA</code> share the same numeric key value on Windows, as do <code>VK_HANJA</code> and <code>VK_KANJI</code>.</p>
 
-<p>[3] До Firefox 37, клавиша <kbd>Hankaku</kbd> (half-width) генерировала значение <code>"HalfWidth"</code> в Firefox. Также, этак клавиша генерировала значение <code>"Unidentified"</code> в Internet Explorer (проверено в версиях 9 и 11).</p>
+<p>[3] Prior to Firefox 37, the <kbd>Hankaku</kbd> (half-width) key generated the key value <code>"HalfWidth"</code> on Firefox. Also, this key generates the value <code>"Unidentified"</code> on Internet Explorer 9.</p>
 
-<p>[4] Internet Explorer (проверено в версиях 9 и 11) возвращал <code>"Unidentified"</code> для клавиши <kbd>Zenkaku</kbd>; Firefox 36 и более ранние определяли эту клавишу как <code>"FullWidth"</code> <span class="tlid-translation translation" lang="ru"><span title="">на японских раскладках клавиатуры</span></span> и <code>"Unidentified"</code> на всех остальных <span class="tlid-translation translation" lang="ru"><span title="">раскладках клавиатуры</span></span>. Firefox 37 и выше, а также все версии Google Chrome, корректно возвращают <code>"Zenkaku"</code>.</p>
+<p>[4] Internet Explorer 9 reports <code>"Unidentified"</code> for the <kbd>Zenkaku</kbd> key; Firefox 36 and earlier identify this key as <code>"FullWidth"</code> on Japanese keyboard layouts and <code>"Unidentified"</code> on all other keyboard layouts. Firefox 37 and later, and all versions of Google Chrome, correctly return <code>"Zenkaku"</code>.</p>
 
-<p>[5] <code>"Unidentified"</code> в Internet Explorer (проверено в версиях 9 и 11). Firefox 36 и более ранние определяли клавишу <kbd>Romaji</kbd> как <code>"RomanCharacters"</code> на японских клавиатурах и <code>"Unidentified"</code> для остальных клавиатур; исправлено на значение  <code>"Romaji"</code> в Firefox 37 и выше.</p>
+<p>[5] <code>"Unidentified"</code> in Internet Explorer 9. Firefox 36 and earlier identify the <kbd>Romaji</kbd> key as <code>"RomanCharacters"</code> on Japanese keyboards and <code>"Unidentified"</code> for other keyboards; this is corrected to return <code>"Romaji"</code> in Firefox 37 and later.</p>
 
-<p>[6] Эта клавиша возвращала <code>"Unidentified"</code> до Firefox 37.</p>
+<p>[6] This key is reported as <code>"Unidentified"</code> prior to Firefox 37.</p>
 
 <h3 id="Dead_keycodes_for_Linux">Dead keycodes for Linux</h3>
 
-<p>Linux generates accented characters using special <strong>dead keys</strong>. <em>Dead keys</em> are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.</p>
+<p>Linux generates accented characters using special <strong>dead keys</strong>; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.</p>
 
-<p>You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.</p>
+<p>You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK</p>
 
-<p>The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:</p>
+<p>The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Значение<code> CompositionEvent.data</code></strong></th>
-   <th scope="col">Символ</th>
-   <th scope="col">Комментарии</th>
-  </tr>
- </thead>
  <tbody>
+  <tr>
+   <td><strong><code>CompositionEvent.data</code></strong> value</td>
+   <td>Symbol</td>
+   <td>Comments</td>
+  </tr>
   <tr>
    <td><code>GDK_KEY_dead_grave</code> (0xFE50)<br>
     <code>Qt::Key_Dead_Grave</code> (0x01001250)</td>
@@ -1230,7 +1222,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_perispomeni</code> (0xFE53)</td>
-   <td> ͂</td>
+   <td>͂</td>
    <td></td>
   </tr>
   <tr>
@@ -1290,7 +1282,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   <tr>
    <td><code>GDK_KEY_dead_iota</code> (0xFE5D)<br>
     <code>Qt::Key_Dead_Iota</code> (0x0100125D)</td>
-   <td> ͅ</td>
+   <td>ͅ</td>
    <td>Iota subscript.</td>
   </tr>
   <tr>
@@ -1314,28 +1306,28 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   <tr>
    <td><code>GDK_KEY_dead_hook</code> (0xFE61)<br>
     <code>Qt::Key_Dead_Hook</code> (0x01001261)</td>
-   <td>  ̡</td>
+   <td>̡</td>
    <td></td>
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_horn</code> (0xFE62)<br>
     <code>Qt::Key_Dead_Horn</code> (0x01001262)</td>
-   <td> ̛</td>
+   <td>̛</td>
    <td></td>
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_stroke</code> (0xFE63)</td>
-   <td> ̶̶</td>
+   <td>̶̶</td>
    <td></td>
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_abovecomma</code> (0xFE64)</td>
-   <td> ̓̓</td>
+   <td>̓̓</td>
    <td></td>
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_psili</code> (0xFE64)</td>
-   <td> ᾿</td>
+   <td>᾿</td>
    <td></td>
   </tr>
   <tr>
@@ -1350,7 +1342,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_doublegrave</code> (0xFE66)</td>
-   <td> ̏</td>
+   <td>̏</td>
    <td></td>
   </tr>
   <tr>
@@ -1360,7 +1352,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_belowmacron</code> (0xFE68)</td>
-   <td> ̱</td>
+   <td>̱</td>
    <td></td>
   </tr>
   <tr>
@@ -1380,7 +1372,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>GDK_KEY_dead_belowdiaeresis</code> (0xFE6C)</td>
-   <td> ̤</td>
+   <td>̤</td>
    <td></td>
   </tr>
   <tr>
@@ -1466,18 +1458,16 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </tbody>
 </table>
 
-<h2 id="Функциональные_клавиши">Функциональные клавиши</h2>
+<h2 id="Function_keys">Function keys</h2>
 
-<p>Хотя разные платформы поддерживают разное количество функциональных клавиш общего назначения, таких как <kbd>F1</kbd>–<kbd>F12</kbd> (or <kbd>F1</kbd>–<kbd>F10</kbd>, or <kbd>F1</kbd>–<kbd>F15</kbd>, etc.), первые несколько конкретно определены следующим образом.</p>
-
-<p>Если доступно больше функциональных клавиш, их имена продолжают представленный шаблон, продолжая увеличивать числовую часть имени каждой клавиши, так что, например, <code>"F24"</code> это валидное значение клавиши.</p>
+<p>While various platforms support different numbers of the general-purpose function keys, such as <kbd>F1</kbd>-<kbd>F12</kbd> (or <kbd>F1</kbd>-<kbd>F10</kbd>, or <kbd>F1</kbd>-<kbd>F15</kbd>, or...), the first few are specifically defined as follows. If more function keys are available, their names continue the pattern here by continuing to increment the numeric portion of each key's name, so that, for example, <code>"F24"</code> is a valid key value.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -1487,7 +1477,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F1"</code></td>
-   <td>Клавиша <kbd>F1</kbd>.</td>
+   <td>The first general-purpose function key, <kbd>F1</kbd>.</td>
    <td><code>VK_F1</code> (0x70)</td>
    <td><code>kVK_F1</code> (0x7A)</td>
    <td><code>GDK_KEY_F1</code> (0xFFBE)<br>
@@ -1497,7 +1487,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F2"</code></td>
-   <td>Клавиша <kbd>F2</kbd>.</td>
+   <td>The <kbd>F2</kbd> key.</td>
    <td><code>VK_F2</code> (0x71)</td>
    <td><code>kVK_F2</code> (0x78)</td>
    <td><code>GDK_KEY_F2</code> (0xFFBF)<br>
@@ -1507,7 +1497,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F3"</code></td>
-   <td>Клавиша <kbd>F3</kbd>.</td>
+   <td>The <kbd>F3</kbd> key.</td>
    <td><code>VK_F3</code> (0x72)</td>
    <td><code>kVK_F3</code> (0x63)</td>
    <td><code>GDK_KEY_F3</code> (0xFFC0)<br>
@@ -1517,7 +1507,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F4"</code></td>
-   <td>Клавиша <kbd>F4</kbd>.</td>
+   <td>The <kbd>F4</kbd> key.</td>
    <td><code>VK_F4</code> (0x73)</td>
    <td><code>kVK_F4</code> (0x76)</td>
    <td><code>GDK_KEY_F4</code> (0xFFC1)<br>
@@ -1527,7 +1517,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F5"</code></td>
-   <td>Клавиша <kbd>F5</kbd>.</td>
+   <td>The <kbd>F5</kbd> key.</td>
    <td><code>VK_F5</code> (0x74)</td>
    <td><code>kVK_F5</code> (0x60)</td>
    <td><code>GDK_KEY_F5</code> (0xFFC2)<br>
@@ -1536,7 +1526,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F6"</code></td>
-   <td>Клавиша <kbd>F6</kbd>.</td>
+   <td>The <kbd>F6</kbd> key.</td>
    <td><code>VK_F6</code> (0x75)</td>
    <td><code>kVK_F6</code> (0x61)</td>
    <td><code>GDK_KEY_F6</code> (0xFFC3)<br>
@@ -1545,7 +1535,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F7"</code></td>
-   <td>Клавиша <kbd>F7</kbd>.</td>
+   <td>The <kbd>F7</kbd> key.</td>
    <td><code>VK_F7</code> (0x76)</td>
    <td><code>kVK_F7</code> (0x62)</td>
    <td><code>GDK_KEY_F7</code> (0xFFC4)<br>
@@ -1554,7 +1544,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F8"</code></td>
-   <td>Клавиша <kbd>F8</kbd>.</td>
+   <td>The <kbd>F8</kbd> key.</td>
    <td><code>VK_F8</code> (0x77)</td>
    <td><code>kVK_F8</code> (0x64)</td>
    <td><code>GDK_KEY_F8</code> (0xFFC5)<br>
@@ -1563,7 +1553,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F9"</code></td>
-   <td>Клавиша <kbd>F9</kbd>.</td>
+   <td>The <kbd>F9</kbd> key.</td>
    <td><code>VK_F9</code> (0x78)</td>
    <td><code>kVK_F9</code> (0x65)</td>
    <td><code>GDK_KEY_F9</code> (0xFFC6)<br>
@@ -1572,7 +1562,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F10"</code></td>
-   <td>Клавиша <kbd>F10</kbd>.</td>
+   <td>The <kbd>F10</kbd> key.</td>
    <td><code>VK_F10</code> (0x79)</td>
    <td><code>kVK_F10</code> (0x6D)</td>
    <td><code>GDK_KEY_F10</code> (0xFFC7)<br>
@@ -1581,7 +1571,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F11"</code></td>
-   <td>Клавиша <kbd>F11</kbd>.</td>
+   <td>The <kbd>F11</kbd> key.</td>
    <td><code>VK_F11</code> (0x7A)</td>
    <td><code>kVK_F11</code> (0x67)</td>
    <td><code>GDK_KEY_F11</code> (0xFFC8)<br>
@@ -1590,7 +1580,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F12"</code></td>
-   <td>Клавиша <kbd>F12</kbd>.</td>
+   <td>The <kbd>F12</kbd> key.</td>
    <td><code>VK_F12</code> (0x7B)</td>
    <td><code>kVK_F12</code> (0x6F)</td>
    <td><code>GDK_KEY_F12</code> (0xFFC9)<br>
@@ -1599,7 +1589,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F13"</code></td>
-   <td>Клавиша <kbd>F13</kbd>.</td>
+   <td>The <kbd>F13</kbd> key.</td>
    <td><code>VK_F13</code> (0x7C)</td>
    <td><code>kVK_F13</code> (0x69)</td>
    <td><code>GDK_KEY_F13</code> (0xFFCA)<br>
@@ -1608,7 +1598,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F14"</code></td>
-   <td>Клавиша <kbd>F14</kbd>.</td>
+   <td>The <kbd>F14</kbd> key.</td>
    <td><code>VK_F14</code> (0x7D)</td>
    <td><code>kVK_F14</code> (0x6B)</td>
    <td><code>GDK_KEY_F14</code> (0xFFCB)<br>
@@ -1617,7 +1607,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F15"</code></td>
-   <td>Клавиша <kbd>F15</kbd>.</td>
+   <td>The <kbd>F15</kbd> key.</td>
    <td><code>VK_F15</code> (0x7E)</td>
    <td><code>kVK_F15</code> (0x71)</td>
    <td><code>GDK_KEY_F15</code> (0xFFCC)<br>
@@ -1626,7 +1616,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F16"</code></td>
-   <td>Клавиша <kbd>F16</kbd>.</td>
+   <td>The <kbd>F16</kbd> key.</td>
    <td><code>VK_F16</code> (0x7F)</td>
    <td><code>kVK_F16</code> (0x6A)</td>
    <td><code>GDK_KEY_F16</code> (0xFFCD)<br>
@@ -1635,7 +1625,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F17"</code></td>
-   <td>Клавиша <kbd>F17</kbd>.</td>
+   <td>The <kbd>F17</kbd> key.</td>
    <td><code>VK_F17</code> (0x80)</td>
    <td><code>kVK_F17</code> (0x40)</td>
    <td><code>GDK_KEY_F17</code> (0xFFCE)<br>
@@ -1644,7 +1634,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F18"</code></td>
-   <td>Клавиша <kbd>F18</kbd>.</td>
+   <td>The <kbd>F18</kbd> key.</td>
    <td><code>VK_F18</code> (0x81)</td>
    <td><code>kVK_F18</code> (0x4F)</td>
    <td><code>GDK_KEY_F18</code> (0xFFCF)<br>
@@ -1653,7 +1643,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F19"</code></td>
-   <td>Клавиша <kbd>F19</kbd>.</td>
+   <td>The <kbd>F19</kbd> key.</td>
    <td><code>VK_F19</code> (0x82)</td>
    <td><code>kVK_F19</code> (0x50)</td>
    <td><code>GDK_KEY_F19</code> (0xFFD0)<br>
@@ -1662,7 +1652,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"F20"</code></td>
-   <td>Клавиша <kbd>F20</kbd>.</td>
+   <td>The <kbd>F20</kbd> key.</td>
    <td><code>VK_F20</code> (0x83)</td>
    <td><code>kVK_F20</code> (0x5A)</td>
    <td><code>GDK_KEY_F20</code> (0xFFD1)<br>
@@ -1671,7 +1661,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Soft1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Первая функциональная клавиша общего назначения.</span></span></td>
+   <td>The first general-purpose virtual function key.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Context1</code> (0x01100000)</td>
@@ -1679,7 +1669,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Soft2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Вторая функциональная клавиша общего назначения.</span></span></td>
+   <td>The second general-purpose virtual function key.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Context2</code> (0x01100001)</td>
@@ -1687,7 +1677,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Soft3"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Третья функциональная клавиша общего назначения.</span></span></td>
+   <td>The third general-purpose virtual function key.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Context3</code> (0x01100002)</td>
@@ -1695,7 +1685,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Soft4"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Четвёртая функциональная клавиша общего назначения.</span></span></td>
+   <td>The fourth general-purpose virtual function key.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Context4</code> (0x01100003)</td>
@@ -1704,16 +1694,16 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<h2 id="Телефонные_клавиши">Телефонные клавиши</h2>
+<h2 id="Phone_keys">Phone keys</h2>
 
-<p>Эти клавиши представляют собой кнопки, которые обычно существуют на современных смартфонах.</p>
+<p>These keys represent buttons which commonly exist on modern smartphones.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -1723,7 +1713,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AppSwitch"</code></td>
-   <td>Представляет список недавно использованных приложений, который позволяет пользователю быстро переключаться между приложениями.</td>
+   <td>Presents a list of recently-used applications which lets the user change apps quickly.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -1731,7 +1721,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Call"</code></td>
-   <td>Кнопка вызова <kbd>Call</kbd>. Набирает номер, который был введён.</td>
+   <td>The <kbd>Call</kbd> key; dials the number which has been entered.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Call</code> (0x01100004)</td>
@@ -1739,7 +1729,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Camera"</code></td>
-   <td>Кнопка камеры <kbd>Camera</kbd>. Включает камеру.</td>
+   <td>The <kbd>Camera</kbd> key; activates the camera.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Camera</code> (0x01100020)</td>
@@ -1747,7 +1737,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"CameraFocus"</code></td>
-   <td>Кнопка фокусировки <kbd>Focus</kbd>. Фокусирует камеру.</td>
+   <td>The <kbd>Focus</kbd> key; focuses the camera.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_CameraFocus</code> (0x01100021)</td>
@@ -1755,7 +1745,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"EndCall"</code></td>
-   <td>Кнопка завершения вызова <kbd>End Call</kbd> или <kbd>Hang Up</kbd>.</td>
+   <td>The <kbd>End Call</kbd> or <kbd>Hang Up</kbd> button.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_Hangup</code> (0x01100005)</td>
@@ -1763,7 +1753,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"GoBack"</code></td>
-   <td>Кнопка "Назад" <kbd>Back</kbd>.</td>
+   <td>The <kbd>Back</kbd> button.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -1771,7 +1761,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"GoHome"</code> [1]</td>
-   <td>Кнопка <kbd>Home</kbd>. <span class="tlid-translation translation" lang="ru"><span title="">Возвращает пользователя на главный экран телефона (обычно это средство запуска приложений).</span></span></td>
+   <td>The <kbd>Home</kbd> button, which takes the user to the phone's main screen (usually an application launcher).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -1779,7 +1769,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"HeadsetHook"</code></td>
-   <td>Клавиша гарнитуры<kbd>Headset Hook</kbd>. Обычно это кнопка на гарнитуре, которая используется для отбоя вызовов и воспроизведения или приостановки мультимедиа.</td>
+   <td>The <kbd>Headset Hook</kbd> key. This is typically actually a button on the headset which is used to hang up calls and play or pause media.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_ToggleCallHangup</code> (0x01100007)</td>
@@ -1787,7 +1777,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LastNumberRedial"</code></td>
-   <td>Клавиша перенабора номера <kbd>Redial</kbd>. Набирает последний набранный номер.</td>
+   <td>The <kbd>Redial</kbd> button, which redials the last-called number.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_LastNumberRedial</code> (0x01100009)</td>
@@ -1795,7 +1785,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Notification"</code></td>
-   <td>Клавиша уведомления<kbd>Notification</kbd>.</td>
+   <td>The <kbd>Notification</kbd> key.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -1803,7 +1793,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MannerMode"</code></td>
-   <td>Кнопка, которая циклически переключается между режимами уведомлений: бесшумный, вибрировать, звонить и так далее.</td>
+   <td>A button which cycles among the notification modes: silent, vibrate, ring, and so forth.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -1811,7 +1801,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"VoiceDial"</code></td>
-   <td>Клавиша<kbd>Voice Dial</kbd>. <span class="tlid-translation translation" lang="ru"><span title="">Запускает голосовой набор.</span></span></td>
+   <td>The <kbd>Voice Dial</kbd> key. Initiates voice dialing.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_VoiceDial</code> (0x01100008)</td>
@@ -1820,18 +1810,18 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] До Firefox 37, кнопка Home генерирует значение <code>"Exit"</code>. Начиная с Firefox 37, генерирует <code>"MozHomeScreen"</code>.</p>
+<p>[1] Prior to Firefox 37, the Home button generated a key code of <code>"Exit"</code>. Starting in Firefox 37, the button generates the key code <code>"MozHomeScreen"</code>.</p>
 
-<h2 id="Мультимедийные_клавиши"><span class="tlid-translation translation" lang="ru"><span title="">Мультимедийные клавиши</span></span></h2>
+<h2 id="Multimedia_keys">Multimedia keys</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Мультимедийные клавиши - это дополнительные кнопки или клавиши для управления мультимедийными устройствами, которые есть на некоторых клавиатурах.</span></span></p>
+<p>The multimedia keys are extra buttons or keys for controlling media devices, found on some keyboards.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -1841,7 +1831,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ChannelDown"</code></td>
-   <td>Переключается на предыдущий канал.</td>
+   <td>Switches to the previous channel.</td>
    <td><code>APPCOMMAND_MEDIA_CHANNEL_DOWN</code></td>
    <td></td>
    <td><code>Qt::Key_ChannelDown</code> (0x01000119)</td>
@@ -1849,7 +1839,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ChannelUp"</code></td>
-   <td>Переключается на следующий канал.</td>
+   <td>Switches to the next channel.</td>
    <td><code>APPCOMMAND_MEDIA_CHANNEL_UP</code></td>
    <td></td>
    <td><code>Qt::Key_ChannelUp</code> (0x01000118)</td>
@@ -1857,7 +1847,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaFastForward"</code> [2]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Запускает, продолжает или увеличивает скорость быстрой перемотки мультимедиа вперёд.</span></span></td>
+   <td>Starts, continues, or increases the speed of fast forwarding the media.</td>
    <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioForward (0x1008FF97)<br>
@@ -1866,13 +1856,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaPause"</code></td>
-   <td>
-    <p>Приостанавливает воспроизведение текущего медиафайла.</p>
-
-    <div class="blockIndicator note">
-    <p><strong>Примечание:</strong> Некоторые старые приложения используют просто "паузу", но это неверно.</p>
-    </div>
-   </td>
+   <td>Pauses the currently playing media. Some older applications use simply "Pause" but this is not correct.</td>
    <td><code>APPCOMMAND_MEDIA_PAUSE</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioPause</code> (0x1008FF31)<br>
@@ -1881,7 +1865,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaPlay"</code></td>
-   <td>Запускает или продолжает воспроизведение мультимедиа с нормальной скоростью, если ещё не делает этого. В противном случае не имеет эффекта.</td>
+   <td>Starts or continues playing media at normal speed, if not already doing so. Has no effect otherwise.</td>
    <td><code>APPCOMMAND_MEDIA_PLAY</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioPlay</code> (0x1008FF14)</td>
@@ -1889,7 +1873,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaPlayPause"</code></td>
-   <td>Переключение между воспроизведением и приостановкой текущего медиафайла.</td>
+   <td>Toggles between playing and pausing the current media.</td>
    <td><code>VK_MEDIA_PLAY_PAUSE</code> (0xB3)<br>
     <code>APPCOMMAND_MEDIA_PLAY_PAUSE</code></td>
    <td></td>
@@ -1898,7 +1882,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaRecord"</code></td>
-   <td>Запуск или возобновление записи медиафайла.</td>
+   <td>Starts or resumes recording media.</td>
    <td><code>APPCOMMAND_MEDIA_RECORD</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioRecord</code> (0x1008FF1C)<br>
@@ -1907,7 +1891,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaRewind"</code></td>
-   <td>Запуск, продолжение или увеличение скорости перемотки медиафайла.</td>
+   <td>Starts, continues, or increases the speed of rewinding the media.</td>
    <td><code>APPCOMMAND_MEDIA_REWIND</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioRewind</code> (0x1008FF3E)<br>
@@ -1916,7 +1900,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaStop"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Останавливает текущую медиа-активность (такую как воспроизведение, запись, пауза, перемотка вперёд или назад).</span> <span title="">Не действует, если медиафайл уже остановлен.</span></span></td>
+   <td>Stops the current media activity (such as playing, recording, pausing, forwarding, or rewinding). Has no effect if the media is currently stopped already.</td>
    <td><code>VK_MEDIA_STOP</code> (0xB2)<br>
     <code>APPCOMMAND_MEDIA_STOP</code></td>
    <td></td>
@@ -1947,20 +1931,20 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] Internet Explorer, Edge, и Firefox (36 и более ранние) используют <code>"MediaNextTrack"</code> и <code>"MediaPreviousTrack"</code> вместо <code>"MediaTrackNext"</code> и <code>"MediaTrackPrevious"</code>.</p>
+<p>[1] Internet Explorer, Edge, and Firefox (36 and earlier) use <code>"MediaNextTrack"</code> and <code>"MediaPreviousTrack"</code> instead of <code>"MediaTrackNext"</code> and <code>"MediaTrackPrevious"</code>.</p>
 
-<p>[2] До Firefox 37, Firefox генерировал значение <code>"FastFwd"</code> <span class="tlid-translation translation" lang="ru"><span title="">на некоторых платформах и</span></span> <code>"Unidentified"</code> на других вместо <code>"MediaFastForward"</code>.</p>
+<p>[2] Prior to Firefox 37, Firefox generated the key code <code>"FastFwd"</code> on some platforms and <code>"Unidentified"</code> on others instead of <code>"MediaFastForward"</code>.</p>
 
-<h2 id="Клавиши_управления_звуком"><span class="tlid-translation translation" lang="ru"><span title="">Клавиши управления звуком</span></span></h2>
+<h2 id="Audio_control_keys">Audio control keys</h2>
 
-<p>Эти мультимедийные клавиши используются специально для управления звуком.</p>
+<p>These media keys are used specifically for controlling audio.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -1970,7 +1954,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBalanceLeft"</code></td>
-   <td>Регулирует баланс звука влево.</td>
+   <td>Adjusts audio balance toward the left.</td>
    <td><code>VK_AUDIO_BALANCE_LEFT</code></td>
    <td></td>
    <td></td>
@@ -1978,7 +1962,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBalanceRight"</code></td>
-   <td>Регулирует баланс звука вправо.</td>
+   <td>Adjusts audio balance twoard the right.</td>
    <td><code>VK_AUDIO_BALANCE_RIGHT</code></td>
    <td></td>
    <td></td>
@@ -1986,7 +1970,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBassDown"</code></td>
-   <td>Уменьшает количество басов.</td>
+   <td>Decreases the amount of bass.</td>
    <td><code>APPCOMMAND_BASS_DOWN</code></td>
    <td></td>
    <td></td>
@@ -1994,7 +1978,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBassBoostDown"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Уменьшает степень усиления басов или циклически перемещается вниз по набору режимов или состояний усиления басов.</span></span></td>
+   <td>Reduces bass boosting or cycles downward through bass boost modes or states.</td>
    <td><code>VK_BASS_BOOST_DOWN</code></td>
    <td></td>
    <td></td>
@@ -2002,7 +1986,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBassBoostToggle"</code></td>
-   <td>Включает и выключает усиление басов.</td>
+   <td>Toggles bass boosting on and off.</td>
    <td><code>APPCOMMAND_BASS_BOOST</code></td>
    <td></td>
    <td></td>
@@ -2010,7 +1994,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBassBoostUp"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Увеличивает степень усиления басов или циклически перемещается вверх по набору режимов или состояний усиления басов.</span></span></td>
+   <td>Increases the amoung of bass boosting, or cycles upward through a set of bass boost modes or states.</td>
    <td><code>VK_BASS_BOOST_UP</code></td>
    <td></td>
    <td></td>
@@ -2018,7 +2002,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioBassUp"</code></td>
-   <td>Увеличивает количество басов.</td>
+   <td>Increases the amount of bass.</td>
    <td><code>APPCOMMAND_BASS_UP</code></td>
    <td></td>
    <td></td>
@@ -2026,7 +2010,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioFaderFront"</code></td>
-   <td>Смещает регулятор уровня сигнала вперёд.</td>
+   <td>Adjusts the audio fader toward the front.</td>
    <td><code>VK_FADER_FRONT</code></td>
    <td></td>
    <td></td>
@@ -2034,7 +2018,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioFaderRear"</code></td>
-   <td>Смещает регулятор уровня сигнала назад.</td>
+   <td>Adjustts the audio fader toward the rear.</td>
    <td><code>VK_FADER_REAR</code></td>
    <td></td>
    <td></td>
@@ -2042,7 +2026,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioSurroundModeNext"</code></td>
-   <td>Выбор следующего доступного режима объёмного звучания.</td>
+   <td>Selects the next available surround sound mode.</td>
    <td><code>VK_SURROUND_MODE_NEXT</code></td>
    <td></td>
    <td></td>
@@ -2050,7 +2034,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioTrebleDown"</code></td>
-   <td>Уменьшает количество высоких частот.</td>
+   <td>Decreases the amount of treble.</td>
    <td><code>APPCOMMAND_TREBLE_DOWN</code></td>
    <td></td>
    <td></td>
@@ -2058,7 +2042,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioTrebleUp"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Отключает звук.</span></span></td>
+   <td>Increases the amount of treble.</td>
    <td><code>APPCOMMAND_TREBLE_UP</code></td>
    <td></td>
    <td></td>
@@ -2066,7 +2050,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioVolumeDown" [1]</code></td>
-   <td>Уменьшает громкость звука.</td>
+   <td>Decreases the audio volume.</td>
    <td><code>VK_VOLUME_DOWN</code> (0xAE)<br>
     <code>APPCOMMAND_VOLUME_DOWN</code></td>
    <td><code>kVK_VolumeDown</code> (0x49)</td>
@@ -2076,7 +2060,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioVolumeMute" [1]</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Отключает звук.</span></span></td>
+   <td>Mutes the audio.</td>
    <td><code>VK_VOLUME_MUTE</code> (0xAD)<br>
     <code>APPCOMMAND_VOLUME_MUTE</code></td>
    <td><code>kVK_Mute</code> (0x4A)</td>
@@ -2086,7 +2070,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AudioVolumeUp" [1]</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Увеличивает громкость звука.</span></span></td>
+   <td>Increases the audio volume.</td>
    <td><code>VK_VOLUME_UP</code> (0xAF)<br>
     <code>APPCOMMAND_VOLUME_UP</code></td>
    <td><code>kVK_VolumeUp</code> (0x48)</td>
@@ -2096,7 +2080,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MicrophoneToggle"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает микрофон.</span></span></td>
+   <td>Toggles the microphone on and off.</td>
    <td><code>APPCOMMAND_MIC_ON_OFF_TOGGLE</code></td>
    <td></td>
    <td></td>
@@ -2104,7 +2088,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MicrophoneVolumeDown"</code></td>
-   <td>Уменьшает громкость входного сигнала микрофона.</td>
+   <td>Decreases the microphone's input volume.</td>
    <td><code>APPCOMMAND_MICROPHONE_VOLUME_DOWN</code></td>
    <td></td>
    <td><code>Qt::Key_MicVolumeDown</code> (0x0100011E)</td>
@@ -2112,7 +2096,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MicrophoneVolumeMute"</code></td>
-   <td>Отключает микрофонный вход.</td>
+   <td>Mutes the microphone input.</td>
    <td><code>APPCOMMAND_MICROPHONE_VOLUME_MUTE</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioMicMute</code> (0x1008FFB2)<br>
@@ -2121,7 +2105,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MicrophoneVolumeUp"</code></td>
-   <td>Увеличивает громкость входного сигнала микрофона.</td>
+   <td>Increases the microphone's input volume.</td>
    <td><code>APPCOMMAND_MICROPHONE_VOLUME_UP</code></td>
    <td></td>
    <td><code>Qt::Key_MicVolumeUp</code> (0x0100011D)</td>
@@ -2130,18 +2114,18 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] Internet Explorer, Edge, и Firefox (48 и более ранние) используют <code>"VolumeUp"</code>, <code>"VolumeDown"</code>, и <code>"VolumeMute"</code> вместо <code>"AudioVolumeUp"</code>, <code>"AudioVolumeDown"</code>, и <code>"AudioVolumeMute"</code>. В Firefox 49 <span class="tlid-translation translation" lang="ru"><span title="">они были обновлены в соответствии с последней спецификацией.</span> <span title="">Старые имена все ещё используются в </span></span><a href="/en-US/docs/Mozilla/B2G_OS">Boot to Gecko</a>.</p>
+<p>[1] Internet Explorer, Edge, and Firefox (48 and earlier) use <code>"VolumeUp"</code>, <code>"VolumeDown"</code>, and <code>"VolumeMute"</code> instead of <code>"AudioVolumeUp"</code>, <code>"AudioVolumeDown"</code>, and <code>"AudioVolumeMute"</code>. In Firefox 49 they were updated to match the latest specification. The old names are still used on <a href="/en-US/docs/Mozilla/B2G_OS">Boot to Gecko</a>.</p>
 
-<h2 id="Клавиши_управления_ТВ"><span class="tlid-translation translation" lang="ru"><span title="">Клавиши управления ТВ</span></span></h2>
+<h2 id="TV_control_keys">TV control keys</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Эти ключевые значения представляют собой кнопки или клавиши на телевизионных устройствах, компьютерах или телефонах с поддержкой телевидения.</span></span></p>
+<p>These key values represent buttons or keys present on television devices, or computers or phones which have TV support.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -2151,7 +2135,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TV"</code> [1]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает в режим просмотра ТВ.</span></span></td>
+   <td>Switches into TV viewing mode.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2159,7 +2143,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TV3DMode"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает режим 3D TV.</span></span></td>
+   <td>Toggles 3D TV mode on and off.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2167,7 +2151,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVAntennaCable"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключение между антенным и кабельным входами.</span></span></td>
+   <td>Toggles between antenna and cable inputs.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2175,7 +2159,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVAudioDescription"</code></td>
-   <td>Включает и выключает режим описания звука.</td>
+   <td>Toggles audio description mode on and off.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2183,7 +2167,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVAudioDescriptionMixDown"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Уменьшает громкость микширования аудиоописаний;</span> <span title="">уменьшает громкость аудиоописаний относительно звука программы.</span></span></td>
+   <td>Decreases trhe audio description's mixing volume; reduces the volume of the audio descriptions relative to the program sound.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2191,7 +2175,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVAudioDescriptionMixUp"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Увеличивает громкость микширования аудиоописаний;</span> <span title="">увеличивает громкость аудиоописаний относительно звука программы.</span></span></td>
+   <td>Increases the audio description's mixing volume; increases the volume of the audio descriptions relative to the program sound.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2199,7 +2183,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVContentsMenu"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Отображает или скрывает мультимедийное содержимое, доступное для воспроизведения (это может быть руководство по каналам, показывающее программы, транслируемые в данный момент, или список мультимедийных файлов для воспроизведения).</span></span></td>
+   <td>Displays or hides the media contents available for playback (this may be a channel guide showing the currently airing programs, or a list of media files to play).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2207,7 +2191,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVDataService"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Отображает или скрывает сервисное меню данных телевизора.</span></span></td>
+   <td>Displays or hides the TV's data service menu.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2215,7 +2199,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInput"</code> [2]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает источник сигнала на внешнем телевизоре.</span></span></td>
+   <td>Cycles the input mode on an external TV.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2223,7 +2207,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputComponent1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход «Компонент 1».</span></span></td>
+   <td>Switches to the input "Component 1."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2231,7 +2215,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputComponent2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход «Компонент</span></span> 2."</td>
+   <td>Switches to the input "Component 2."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2239,7 +2223,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputComposite1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход «Композитный 1».</span></span></td>
+   <td>Switches to the input "Composite 1."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2247,7 +2231,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputComposite2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход «Композитный</span></span> 2."</td>
+   <td>Switches to the input "Composite 2."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2255,7 +2239,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputHDMI1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход «HDMI 1».</span></span></td>
+   <td>Switches to the input "HDMI 1."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2263,7 +2247,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputHDMI2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход</span></span> "HDMI 2."</td>
+   <td>Switches to the input "HDMI 2."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2271,7 +2255,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputHDMI3"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход</span></span> "HDMI 3."</td>
+   <td>Switches to the input "HDMI 3."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2279,7 +2263,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputHDMI4"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход</span></span> "HDMI 4."</td>
+   <td>Switches to the input "HDMI 4."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2287,7 +2271,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVInputVGA1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает на вход</span></span> "VGA 1."</td>
+   <td>Switches to the input "VGA 1."</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2295,7 +2279,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVMediaContext"</code></td>
-   <td>Клавиша контекстного меню мультимедиа.</td>
+   <td>The Media Context menu key.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2303,7 +2287,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVNetwork"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включение и выключение сетевого подключения телевизора.</span></span></td>
+   <td>Toggle the TV's network connection on and off.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2311,7 +2295,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVNumberEntry"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переведите телевизор в режим ввода номера.</span></span></td>
+   <td>Put the TV into number entry mode.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2319,7 +2303,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVPower"</code> [2]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Кнопка питания устройства.</span></span></td>
+   <td>The device's power button.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2327,7 +2311,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVRadioService"</code></td>
-   <td>Кнопка радио</td>
+   <td>Radio button.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2335,7 +2319,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVSatellite"</code></td>
-   <td>Кнопка спутника</td>
+   <td>Satellite button.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2359,7 +2343,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVSatelliteToggle"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключение между доступными спутниками.</span></span></td>
+   <td>Toggles among available satellites.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2367,7 +2351,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVTerrestrialAnalog"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает услугу аналогового наземного телевидения (аналоговый кабельный или антенный приём).</span></span></td>
+   <td>Selects analog terrestrial television service (analog cable or antenna reception).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2375,7 +2359,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVTerrestrialDigital"</code></td>
-   <td>Выбирает услугу цифрового наземного телевидения (цифровой кабельный или антенный приём).</td>
+   <td>Selects digital terrestrial television service (digital cable or antenna receiption).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2383,7 +2367,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"TVTimer"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Кнопка программирования таймера.</span></span></td>
+   <td>Timer programming button.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2392,33 +2376,33 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] В Firefox добавлена надлежащая поддержка для клавиши <code>"TV"</code> в Firefox 37; до этого, эта клавиша генерировала значение <code>"Live"</code>.</p>
+<p>[1] Firefox added proper support for the <code>"TV"</code> key in Firefox 37; before that, this key generated the key code <code>"Live"</code>.</p>
 
-<p>[2] Эти клавиши возвращали <code>"Unidentified"</code> до Firefox 37.</p>
+<p>[2] These keys were <code>"Unidentified"</code> until Firefox 37.</p>
 
-<h2 id="Клавиши_медиа-контроллера"><span class="tlid-translation translation" lang="ru"><span title="">Клавиши медиа-контроллера</span></span></h2>
+<h2 id="Media_controller_keys">Media controller keys</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Поскольку современные пульты дистанционного управления для мультимедийных устройств часто включают кнопки, помимо базовых элементов управления, описанных в другом месте в этом документе, ключевые значения определены для широкого набора этих дополнительных кнопок.</span></span></p>
+<p>Because modern remote controls for media devices often include buttons beyond the basic controls covered elsewhere in this document, key values are defined for a broad array of these additional buttons.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Приведённые ниже значения частично получены из ряда технических характеристик бытовой электроники:</span></span></p>
+<p>The values below are derived in part form a number of consumer electronics technical specifications:</p>
 
 <ul>
- <li><a href="http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/">DTV Application Software Environment</a> (часть спецификации {{interwiki("wikipedia", "ATSC")}})</li>
+ <li><a href="http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/">DTV Application Software Environment</a> (part of the {{interwiki("wikipedia", "ATSC")}} specification)</li>
  <li><a href="http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf">Open Cable Application Platform 1.1.3</a></li>
- <li><a href="http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx">ANSI/CEA-2014-B</a>: Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете</li>
+ <li><a href="http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx">ANSI/CEA-2014-B</a>: Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet</li>
  <li><a href="http://developer.android.com/reference/android/view/KeyEvent.html">Android KeyEvent key code values</a></li>
 </ul>
 
 <div class="note">
-<p><strong>Примечание:</strong> <span class="tlid-translation translation" lang="ru"><span title="">Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например</span></span> <em><span class="tlid-translation translation" lang="ru"><span title="">Мультимедийные клавиши</span></span></em> или <em>Клавиши управления звуком</em>. <span class="tlid-translation translation" lang="ru"><span title="">Значения этих кнопок будут соответствовать тому, что задокументировано в этих таблицах.</span></span></p>
+<p>Remote controls typically include keys whose values are already defined elsewhere, such as under <a href="#multimedia_keys">Multimedia keys</a> or <a href="#audio_control_keys">Audio control keys</a>. Those keys' values will match what's documented in those tables.</p>
 </div>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -2428,7 +2412,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AVRInput"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Изменяет источник сигнала на внешнем аудио / видео ресивере (AVR).</span></span></td>
+   <td>Changes the input mode on an external audio/video receiver (AVR) unit.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2436,7 +2420,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"AVRPower"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает питание внешнего блока AVR.</span></span></td>
+   <td>Toggles the power on an external AVR unit.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2444,7 +2428,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ColorF0Red"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Универсальная функциональная клавиша мультимедиа красного цвета.</span> <span title="">Она имеет индекс 0 среди цветных клавиш.</span></span></td>
+   <td>General-purpose media function key, color-coded red; this has index 0 among the colored keys.</td>
    <td><code>VK_COLORED_KEY_0</code></td>
    <td></td>
    <td></td>
@@ -2452,7 +2436,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ColorF1Green"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Универсальная функциональная клавиша мультимедиа зелёного цвета.</span> <span title="">Она имеет индекс 1 среди цветных клавиш.</span></span></td>
+   <td>General-purpose media funciton key, color-coded green; this has index 1 among the colored keys.</td>
    <td><code>VK_COLORED_KEY_1</code></td>
    <td></td>
    <td></td>
@@ -2460,7 +2444,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ColorF2Yellow"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Универсальная функциональная клавиша мультимедиа жёлтого цвета.</span> <span title="">Она имеет индекс 2 среди цветных клавиш.</span></span></td>
+   <td>General-purpose media funciton key, color-coded yellow; this has index 2 among the colored keys.</td>
    <td><code>VK_COLORED_KEY_2</code></td>
    <td></td>
    <td></td>
@@ -2468,7 +2452,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ColorF3Blue"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Универсальная функциональная клавиша мультимедиа синего цвет.</span> <span title="">Она имеет индекс 3 среди цветных клавиш.</span></span></td>
+   <td>General-purpose media funciton key, color-coded blue; this has index 3 among the colored keys.</td>
    <td><code>VK_COLORED_KEY_3</code></td>
    <td></td>
    <td></td>
@@ -2476,7 +2460,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ColorF4Grey"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Универсальная функциональная клавиша мультимедиа серого цвета.</span> <span title="">Она имеет индекс 4 среди цветных клавиш.</span></span></td>
+   <td>General-purpose media funciton key, color-coded grey; this has index 4 among the colored keys.</td>
    <td><code>VK_COLORED_KEY_4</code></td>
    <td></td>
    <td></td>
@@ -2484,7 +2468,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ColorF5Brown"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Универсальная функциональная клавиша мультимедиа коричневого цвета.</span> <span title="">Она имеет индекс 5 среди цветных клавиш.</span></span></td>
+   <td>General-purpose media funciton key, color-coded brown; this has index 5 among the colored keys.</td>
    <td><code>VK_COLORED_KEY_5</code></td>
    <td></td>
    <td></td>
@@ -2492,7 +2476,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ClosedCaptionToggle"</code></td>
-   <td>Включает и выключает скрытые субтитры.</td>
+   <td>Toggles closed captioning on and off.</td>
    <td><code>VK_CC</code></td>
    <td></td>
    <td></td>
@@ -2500,7 +2484,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Dimmer"</code></td>
-   <td>Регулирует яркость устройства, переключаясь между двумя уровнями яркости или переключаясь между несколькими уровнями яркости.</td>
+   <td>Adjusts the brightness of the device by toggling between two brightness levels <em>or</em> by cycling among multiple brightness levels.</td>
    <td><code>VK_DIMMER</code></td>
    <td></td>
    <td><code>GDK_KEY_BrightnessAdjust</code> (0x1008FF3B)</td>
@@ -2508,7 +2492,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"DisplaySwap"</code></td>
-   <td>Циклически переключает источники видео</td>
+   <td>Cycles among video sources.</td>
    <td><code>VK_DISPLAY_SWAP</code></td>
    <td></td>
    <td></td>
@@ -2516,7 +2500,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"DVR"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает источник входного сигнала на цифровой видеорегистратор (DVR).</span></span></td>
+   <td>Switches the input source to the Digital Video Recorder (DVR).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2524,7 +2508,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Exit"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Кнопка «Выход» для выхода из текущего приложения или меню.</span></span></td>
+   <td>The Exit button, which exits the curreent application or menu.</td>
    <td><code>VK_EXIT</code></td>
    <td></td>
    <td><code>Qt::Key_Exit</code> (0x0102000a)</td>
@@ -2532,7 +2516,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteClear0"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Очищает первый слот списка избранного.</span></span></td>
+   <td>Clears the program or content stored in the first favorites list slot.</td>
    <td><code>VK_CLEAR_FAVORITE_0</code></td>
    <td></td>
    <td></td>
@@ -2540,7 +2524,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteClear1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Очищает второй слот списка избранного.</span></span></td>
+   <td>Clears the program or content stored in the second favorites list slot.</td>
    <td><code>VK_CLEAR_FAVORITE_1</code></td>
    <td></td>
    <td></td>
@@ -2548,7 +2532,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteClear2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Очищает третий слот списка избранного.</span></span></td>
+   <td>Clears the program or content stored in the third favorites list slot.</td>
    <td><code>VK_CLEAR_FAVORITE_2</code></td>
    <td></td>
    <td></td>
@@ -2556,7 +2540,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteClear3"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Очищает четвёртый слот списка избранного.</span></span></td>
+   <td>Clears the program or content stored in the fourth favorites list slot.</td>
    <td><code>VK_CLEAR_FAVORITE_3</code></td>
    <td></td>
    <td></td>
@@ -2564,7 +2548,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteRecall0"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает (вызывает) программу или содержимое, хранящееся в первом слоте списка избранного.</span></span></td>
+   <td>Selects (recalls) the program or content stored in the first favorites list slot.</td>
    <td><code>VK_RECALL_FAVORITE_0</code></td>
    <td></td>
    <td></td>
@@ -2572,7 +2556,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteRecall1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает (вызывает) программу или содержимое, хранящееся во втором слоте списка избранного.</span></span></td>
+   <td>Selects (recalls) the program or content stored in the second favorites list slot.</td>
    <td><code>VK_RECALL_FAVORITE_1</code></td>
    <td></td>
    <td></td>
@@ -2580,7 +2564,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteRecall2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает (вызывает) программу или содержимое, хранящееся в третьем слоте списка избранного.</span></span></td>
+   <td>Selects (recalls) the program or content stored in the third favorites list slot.</td>
    <td><code>VK_RECALL_FAVORITE_2</code></td>
    <td></td>
    <td></td>
@@ -2588,7 +2572,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteRecall3"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Выбирает (вызывает) программу или содержимое, хранящееся в четвёртом слоте списка избранного.</span></span></td>
+   <td>Selects (recalls) the program or content stored in the fourth favorites list slot.</td>
    <td><code>VK_RECALL_FAVORITE_3</code></td>
    <td></td>
    <td></td>
@@ -2596,7 +2580,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteStore0"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Сохраняет текущую программу или контент в первый слот списка избранного.</span></span></td>
+   <td>Stores the current program or content into the first favorites list slot.</td>
    <td><code>VK_STORE_FAVORITE_0</code></td>
    <td></td>
    <td></td>
@@ -2604,7 +2588,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteStore1"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Сохраняет текущую программу или контент во второй слот списка избранного.</span></span></td>
+   <td>Stores the current program or content into the second favorites list slot.</td>
    <td><code>VK_STORE_FAVORITE_1</code></td>
    <td></td>
    <td></td>
@@ -2612,7 +2596,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteStore2"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Сохраняет текущую программу или контент в третий слот списка избранного.</span></span></td>
+   <td>Stores the current program or content into the third favorites list slot.</td>
    <td><code>VK_STORE_FAVORITE_2</code></td>
    <td></td>
    <td></td>
@@ -2620,7 +2604,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"FavoriteStore3"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Сохраняет текущую программу или контент в четвёртый слот списка избранного.</span></span></td>
+   <td>Stores the current program or content into the fourth favorites list slot.</td>
    <td><code>VK_STORE_FAVORITE_3</code></td>
    <td></td>
    <td></td>
@@ -2628,7 +2612,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Guide"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает отображение программы или содержимого, содержащего руководство.</span></span></td>
+   <td>Toggles the display of the program or content guide.</td>
    <td><code>VK_GUIDE</code></td>
    <td></td>
    <td><code>Qt::Key_Guide</code> (0x0100011A)</td>
@@ -2636,7 +2620,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"GuideNextDay"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Если руководство отображается в данный момент, эта кнопка указывает руководству отобразить содержимое на следующий день.</span></span></td>
+   <td>If the guide is currently displayed, this button tells the guide to display the next day's content.</td>
    <td><code>VK_NEXT_DAY</code></td>
    <td></td>
    <td></td>
@@ -2644,7 +2628,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"GuidePreviousDay"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Если руководство отображается в данный момент, эта кнопка указывает руководству отобразить содержимое предыдущего дня.</span></span></td>
+   <td>If the guide is currently displayed, this button tells the guide to display the previous day's content.</td>
    <td><code>VK_PREV_DAY</code></td>
    <td></td>
    <td></td>
@@ -2652,7 +2636,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Info"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает отображение информации о текущем выбранном содержимом, программе или медиа.</span></span></td>
+   <td>Toggles the display of information about the currently selected content, program, or media.</td>
    <td><code>VK_INFO</code></td>
    <td></td>
    <td><code>Qt::Key_Info</code> (0x0100011B)</td>
@@ -2660,7 +2644,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"InstantReplay"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Указывает устройству выполнить мгновенное перевоспроизведение (обычно это некоторая форма возврата на короткий промежуток времени с последующим воспроизведением, возможно, но обычно не в замедленном режиме).</span></span></td>
+   <td>Tellls the device to perform an instant replay (typically some form of jumping back a short amount of time then playing it again, possibly but not usually in slow motion).</td>
    <td><code>VK_INSTANT_REPLAY</code></td>
    <td></td>
    <td></td>
@@ -2668,7 +2652,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Link"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Открывает содержимое, связанное с текущей программой, если это возможно и доступно.</span></span></td>
+   <td>Opens content liniked to the current program, if available and possible.</td>
    <td><code>VK_LINK</code></td>
    <td></td>
    <td></td>
@@ -2676,7 +2660,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ListProgram"</code></td>
-   <td>Список текущей программы.</td>
+   <td>Lists the current program.</td>
    <td><code>VK_LIST</code></td>
    <td></td>
    <td></td>
@@ -2684,7 +2668,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LiveContent"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключает отображение списка доступного в данный момент live-содержимого или программ.</span></span></td>
+   <td>Toggles a display listing currently available live content or programs.</td>
    <td><code>VK_LIVE</code></td>
    <td></td>
    <td></td>
@@ -2692,7 +2676,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Lock"</code></td>
-   <td>Блокирует и разблокирует текущее выбранное содержимое или программу.</td>
+   <td>Locks or unlocks the currently selected content or pgoram.</td>
    <td><code>VK_LOCK</code></td>
    <td></td>
    <td></td>
@@ -2700,7 +2684,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaApps"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Представляет список мультимедийных приложений, таких как программы просмотра фотографий, аудио- и видеоплееры, а также игры.</span></span> [1]</td>
+   <td>Presents a list of media applications, such as photo viewers, audio and video players, and games. [1]</td>
    <td><code>VK_APPS</code></td>
    <td></td>
    <td></td>
@@ -2708,7 +2692,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaAudioTrack"</code></td>
-   <td>Клавиша звуковой дорожки.</td>
+   <td>The Audio Track key.</td>
    <td></td>
    <td></td>
    <td>GDK_KEY_AudioCycleTrack (0x1008FF9B)<br>
@@ -2717,7 +2701,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaLast"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Возврат к последнему просмотренному содержимому, программе или другому медиафайлу.</span></span></td>
+   <td>Jumps back to the last-viewed content, program, or other media.</td>
    <td><code>VK_LAST</code></td>
    <td></td>
    <td><code>Qt::Key_MediaLast</code> (0x0100FFFF)</td>
@@ -2725,7 +2709,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaSkipBackward"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход назад к предыдущему содержимому или программе.</span></span></td>
+   <td>Skips backward to the previous content or program.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2733,7 +2717,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaSkipForward"</code></td>
-   <td>Переход к следующему содержимому или программе.</td>
+   <td>Skips forward to the next content or program.</td>
    <td><code>VK_SKIP</code></td>
    <td></td>
    <td></td>
@@ -2741,7 +2725,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaStepBackward"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход назад к предыдущему содержимому или программе.</span></span></td>
+   <td>Steps backward to the previous content or program.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2749,7 +2733,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaStepForward"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход к следующему содержимому или программе.</span></span></td>
+   <td>Steps forward to the next content or program.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2757,7 +2741,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MediaTopMenu"</code></td>
-   <td>Кнопка верхнего меню. Открывает главное меню носителя (например, для диска DVD или Blu-Ray).</td>
+   <td>Top Menu button; opens the media's main menu, such as on a DVD or Blu-Ray disc.</td>
    <td></td>
    <td></td>
    <td><code>Qt::Key_TopMenu</code> (0x0100010A)</td>
@@ -2765,7 +2749,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NavigateIn"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход в подменю или параметр.</span></span></td>
+   <td>Navigates into a submenu or option.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2773,7 +2757,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NavigateNext"</code></td>
-   <td>Переход к следующему элементу.</td>
+   <td>Navigates to the next item.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2781,7 +2765,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NavigateOut"</code></td>
-   <td>Переход из текущего экрана или меню.</td>
+   <td>Navigates out of the current screen or menu.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2789,7 +2773,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NavigatePrevious"</code></td>
-   <td>Переход к предыдущему элементу.</td>
+   <td>Navigates to the previous item.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2797,7 +2781,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NextFavoriteChannel"</code></td>
-   <td>Циклически переходит на следующий канал в списке избранного.</td>
+   <td>Cycles to the next channel in the favorites list.</td>
    <td><code>VK_NEXT_FAVORITE_CHANNEL</code></td>
    <td></td>
    <td></td>
@@ -2805,7 +2789,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"NextUserProfile"</code></td>
-   <td>Циклически переходит к следующему сохранённому профилю пользователя, если эта функция поддерживается и существует несколько профилей.</td>
+   <td>Cycles to the next saved user profile, if this feature is supported and multiple profiles exist.</td>
    <td><code>VK_USER</code></td>
    <td></td>
    <td></td>
@@ -2813,7 +2797,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"OnDemand"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Открывает пользовательский интерфейс для выбора содержимого или программ по запросу для просмотра.</span></span></td>
+   <td>Opens the user interface for selecting on demand content or programs to watch.</td>
    <td><code>VK_ON_DEMAND</code></td>
    <td></td>
    <td></td>
@@ -2821,7 +2805,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Pairing"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Запускает процесс сопряжения пульта дистанционного управления с управляемым устройством.</span></span></td>
+   <td>Starts the process of pairing the remote with a device to be controlled.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2829,7 +2813,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PinPDown"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Кнопка для перемещения изображения «картинка в картинке» вниз.</span></span></td>
+   <td>A button to move the picture-in-picture view downward.</td>
    <td><code>VK_PINP_DOWN</code></td>
    <td></td>
    <td></td>
@@ -2837,7 +2821,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PinPMove"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Кнопка для управления перемещением изображения «картинка в картинке».</span></span></td>
+   <td>A button to control moving the picture-in-picture view.</td>
    <td><code>VK_PINP_MOVE</code></td>
    <td></td>
    <td></td>
@@ -2845,7 +2829,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PinPToggle"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает отображение изображения в «картинка в картинке».</span></span></td>
+   <td>Toggles display of th epicture-in-picture view on and off.</td>
    <td><code>VK_PINP_TOGGLE</code></td>
    <td></td>
    <td></td>
@@ -2853,7 +2837,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PinPUp"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Кнопка для перемещения изображения «картинка в картинке» вверх.</span></span></td>
+   <td>A button to move the picture-in-picture view upward.</td>
    <td><code>VK_PINP_UP</code></td>
    <td></td>
    <td></td>
@@ -2861,7 +2845,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PlaySpeedDown"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Уменьшает скорость воспроизведения мультимедиа.</span></span></td>
+   <td>Decreases the media playback rate.</td>
    <td><code>VK_PLAY_SPEED_DOWN</code></td>
    <td></td>
    <td></td>
@@ -2869,7 +2853,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PlaySpeedReset"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Возвращает нормальную скорость воспроизведения мультимедиа.</span></span></td>
+   <td>Returns the media playback rate to normal.</td>
    <td><code>VK_PLAY_SPEED_RESET</code></td>
    <td></td>
    <td></td>
@@ -2877,7 +2861,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"PlaySpeedUp"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Увеличивает скорость воспроизведения мультимедиа.</span></span></td>
+   <td>Increases the media playback rate.</td>
    <td><code>VK_PLAY_SPEED_UP</code></td>
    <td></td>
    <td></td>
@@ -2885,7 +2869,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"RandomToggle"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает случайные медиафайлы (также известно как «режим случайного воспроизведения»).</span></span></td>
+   <td>Toggles random media (also known as "shuffle mode") on and off.</td>
    <td><code>VK_RANDOM_TOGGLE</code></td>
    <td></td>
    <td><code>GDK_KEY_AudioRandomPlay</code> (0x1008FF99)</td>
@@ -2893,7 +2877,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"RcLowBattery"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Код, отправляемый при низком заряде батареи пульта ДУ.</span> <span title="">Это вообще не соответствует физической кнопке/клавише.</span></span></td>
+   <td>A code sent when the remote control's battery is low. This doesn't actually correspond to a physical key at all.</td>
    <td><code>VK_RC_LOW_BATTERY</code></td>
    <td></td>
    <td></td>
@@ -2901,7 +2885,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"RecordSpeedNext"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Циклически переключает доступные скорости записи на носитель.</span></span></td>
+   <td>Cycles among the available media recording speeds.</td>
    <td><code>VK_RECORD_SPEED_NEXT</code></td>
    <td></td>
    <td></td>
@@ -2909,7 +2893,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"RfBypass"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает режим пропуска радиочастотного (RF) входа.</span> <span title="">В режиме пропуска РЧ входной сигнал передаётся непосредственно на выход РЧ без какой-либо обработки или фильтрации.</span></span></td>
+   <td>Toggles radio frequency (RF) input bypass mode on and off. RF bypass mode passes RF input directly to the RF output without any processing or filtering.</td>
    <td><code>VK_RF_BYPASS</code></td>
    <td></td>
    <td></td>
@@ -2917,7 +2901,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ScanChannelsToggle"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает режим сканирования каналов.</span> <span title="">Это режим, который автоматически переключает каналы, пока пользователь не остановит сканирование.</span></span></td>
+   <td>Toggles the channel scan mode on and off; this is a mode which flips through channels automatically until the user stops the scan.</td>
    <td><code>VK_SCAN_CHANNELS_TOGGLE</code></td>
    <td></td>
    <td></td>
@@ -2925,7 +2909,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ScreenModeNext"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Циклически переключает доступные режимы отображения экрана.</span></span></td>
+   <td>Cycles through the available screen display modes.</td>
    <td><code>VK_SCREEN_MODE_NEXT</code></td>
    <td></td>
    <td></td>
@@ -2933,7 +2917,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Settings"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает отображение экрана настроек устройства.</span></span></td>
+   <td>Toggles display of the device's settings screen on and off.</td>
    <td><code>VK_SETTINGS</code></td>
    <td></td>
    <td><code>Qt::Key_Settings</code> (0x0100011C)</td>
@@ -2941,7 +2925,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"SplitScreenToggle"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает режим разделения экрана.</span></span></td>
+   <td>Toggles split screen display mode on and off.</td>
    <td><code>VK_SPLIT_SCREEN_TOGGLE</code></td>
    <td></td>
    <td><code>GDK_KEY_SplitScreen (</code>0x1008FF7D)<br>
@@ -2950,7 +2934,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"STBInput"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключение между источниками сигнала на внешней приставке (STB).</span></span></td>
+   <td>Cycles among input modes on an external set-top box (STB).</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2958,7 +2942,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"STBPower"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Включает и выключает внешний STB.</span></span></td>
+   <td>Toggles on and off an external STB.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -2966,7 +2950,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Subtitle"</code></td>
-   <td>Включает и выключает отображение субтитров, если они доступны.</td>
+   <td>Toggles the display of subtitles on and off if they're available.</td>
    <td><code>VK_SUBTITLE</code></td>
    <td></td>
    <td><code>GDK_KEY_Subtitle</code> (0x1008FF9A)</td>
@@ -2974,7 +2958,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Teletext"</code></td>
-   <td>Включает и выключает отображение {{interwiki("wikipedia", "телетекст")}}а,если доступно.</td>
+   <td>Toggles display of {{interwiki("wikipedia", "teletext")}}, if available.</td>
    <td><code>VK_TELETEXT</code></td>
    <td></td>
    <td></td>
@@ -2982,7 +2966,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"VideoModeNext"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Перебирает доступные видеорежимы.</span></span></td>
+   <td>Cycles through the available video modes.</td>
    <td><code>VK_VIDEO_MODE_NEXT</code></td>
    <td></td>
    <td><code>GDK_KEY_Next_VMode</code> (0x1008FE22)</td>
@@ -2990,7 +2974,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Wink"</code></td>
-   <td>Заставляет устройство идентифицировать себя каким-либо образом, например, мигает светом, на короткое время меняет яркость световых индикаторов или издаёт звуковой сигнал.</td>
+   <td>Causes the device to identify itself in some fashion, such as by flashing a light, briefly changing the brightness of indicator lights, or emitting a tone.</td>
    <td><code>VK_WINK</code></td>
    <td></td>
    <td></td>
@@ -2998,7 +2982,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ZoomToggle"</code> [2]</td>
-   <td>Переключает между полноэкранным и масштабированным отображением содержимого или иным образом изменяет уровень увеличения.</td>
+   <td>Toggles between full-screen and scaled content display, or otherwise change the magnification level.</td>
    <td><code>VK_ZOOM</code> (0xFB)</td>
    <td></td>
    <td><code>Qt::Key_Zoom</code> (0x01020006)</td>
@@ -3007,22 +2991,22 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] Не путайте клавишу медиа-контроллера <code>VK_APPS</code> с клавишей Windows <code>VK_APPS</code>, которая также известна как <code>VK_CONTEXT_MENU</code>. Эта клавиша возвращает значение <code>"ContextMenu"</code>.</p>
+<p>[1] Don't confuse the media controller <code>VK_APPS</code> key with the Windows <code>VK_APPS</code> key, which is also known as <code>VK_CONTEXT_MENU</code>. That key is encoded as <code>"ContextMenu"</code>.</p>
 
-<p>[2] Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранние определяли кнопку переключения масштаба как <code>"Zoom"</code>. В Firefox 37 исправлено на <code>"ZoomToggle"</code>.</p>
+<p>[2] Internet Explorer 9 and Firefox 36 and earlier identify the zoom toggle button as <code>"Zoom"</code>. Firefox 37 corrects this to <code>"ZoomToggle"</code>.</p>
 
-<p>[3] Эти клавиши возвращали <code>"Unidentified"</code> до Firefox 37.</p>
+<p>[3] These keys were <code>"Unidentified"</code> until Firefox 37.</p>
 
-<h2 id="Клавиши_распознавания_речи"><span class="tlid-translation translation" lang="ru"><span title="">Клавиши распознавания речи</span></span></h2>
+<h2 id="Speech_recognition_keys">Speech recognition keys</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Эти специальные мультимедийные клавиши используются для управления функциями распознавания речи.</span></span></p>
+<p>These special multimedia keys are used to control speech recognition features.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -3032,7 +3016,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"SpeechCorrectionList"</code> [1]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Представляет список возможных исправлений неверно определённого слова.</span></span></td>
+   <td>Presents a list of possible corrections for a word which was incorrectly identified.</td>
    <td><code>APPCOMMAND_CORRECTION_LIST</code></td>
    <td></td>
    <td></td>
@@ -3040,7 +3024,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"SpeechInputToggle"</code> [2]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переключение между режимом диктовки и режимом команд/управления.</span> <span title="">Это позволяет механизму обработки речи знать, интерпретировать ли произносимые слова как вводимый текст или как команды.</span></span></td>
+   <td>Toggles between dictation mode and command/control mode. This lets the speech engine know whether to interpret spoken words as input text or as commands.</td>
    <td><code>APPCOMMAND_DICTATE_OR_COMMAND_CONTROL_TOGGLE</code></td>
    <td></td>
    <td></td>
@@ -3049,20 +3033,20 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] В Windows команда <code>APPCOMMAND_CORRECTION_LIST</code> генерирует значение <code>"Unidentified"</code> в Firefox.</p>
+<p>[1] The <code>APPCOMMAND_CORRECTION_LIST</code> command on Windows generates <code>"Unidentified"</code> on Firefox.</p>
 
-<p>[2] В Windows команда <code>APPCOMMAND_DICTATE_OR_COMMAND_CONTROL_TOGGLE</code> генерирует значение <code>"Unidentified"</code> в Firefox.</p>
+<p>[2] The <code>APPCOMMAND_DICTATE_OR_COMMAND_CONTROL_TOGGLE</code> command on Windows generates <code>"Unidentified"</code> on Firefox.</p>
 
-<h2 id="Клавиши_документа">Клавиши документа</h2>
+<h2 id="Document_keys">Document keys</h2>
 
-<p>Эти клавиши управляют документами. В спецификации они включены в другие наборы клавиш(например, мультимедийные), но разумнее выделять их в собственную категорию.</p>
+<p>These keys control documents. In the specification, they're included in other sets of keys, such as the media keys, but they make more sense when considered to be their own category.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -3072,7 +3056,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Close"</code> [1]</td>
-   <td>Закрывает текущий документ или сообщение. Не должен выходить из приложения.</td>
+   <td>Closes the current document or message. Must not exit the application.</td>
    <td><code>APPCOMMAND_CLOSE</code></td>
    <td></td>
    <td><code>GDK_KEY_Close</code> (0x1008FF56)<br>
@@ -3081,7 +3065,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"New"</code> [1]</td>
-   <td>Создаёт новый документ или сообщение.</td>
+   <td>Creates a new document or message.</td>
    <td><code>APPCOMMAND_NEW</code></td>
    <td></td>
    <td><code>GDK_KEY_New</code> (0x1008FF68)<br>
@@ -3090,7 +3074,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Open"</code> [1]</td>
-   <td>Открывает существующий документ или сообщение.</td>
+   <td>Opens an existing document or message.</td>
    <td><code>APPCOMMAND_OPEN</code></td>
    <td></td>
    <td><code>GDK_KEY_Open</code> (0x1008FF6B)<br>
@@ -3099,7 +3083,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Print"</code></td>
-   <td>Печатает текущий документ или сообщение.</td>
+   <td>Prints the current document or message.</td>
    <td><code>APPCOMMAND_PRINT</code></td>
    <td></td>
    <td><code>GDK_KEY_Print</code> (0xFF61)<br>
@@ -3108,7 +3092,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Save"</code> [1]</td>
-   <td>Сохраняет текущий документ или сообщение.</td>
+   <td>Saves the current document or message.</td>
    <td><code>APPCOMMAND_SAVE</code></td>
    <td></td>
    <td><code>GDK_KEY_Save</code> (0x1008FF77)<br>
@@ -3117,7 +3101,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"SpellCheck"</code> [1]</td>
-   <td>Запускает проверку орфографии в текущем документе.</td>
+   <td>Starts spell checking the current document.</td>
    <td><code>APPCOMMAND_SPELL_CHECK</code></td>
    <td></td>
    <td><code>GDK_KEY_Spell</code> (0x1008FF7C)<br>
@@ -3126,7 +3110,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MailForward"</code> [1]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Открывает пользовательский интерфейс для пересылки сообщения.</span></span></td>
+   <td>Opens the user interface to forward a message.</td>
    <td><code>APPCOMMAND_FORWARD_MAIL</code></td>
    <td></td>
    <td><code>GDK_KEY_MailForward</code> (0x1008FF90)<br>
@@ -3135,7 +3119,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MailReply"</code> [1]</td>
-   <td>Открывает пользовательский интерфейс для ответа на сообщение.</td>
+   <td>Opens the user interface to reply to a message.</td>
    <td><code>APPCOMMAND_REPLY_TO_MAIL</code></td>
    <td></td>
    <td><code>GDK_KEY_Reply</code> (0x1008FF72)<br>
@@ -3144,7 +3128,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"MailSend"</code> [1]</td>
-   <td>Отправляет текущее сообщение.</td>
+   <td>Sends the current message.</td>
    <td><code>APPCOMMAND_SEND_MAIL</code></td>
    <td></td>
    <td><code>GDK_KEY_Send</code> (0x1008FF7B)<br>
@@ -3154,18 +3138,18 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] До Firefox 37, эта клавиша генерировала значение <code>"Unidentified"</code>.</p>
+<p>[1] Prior to Firefox 37, this key generated the key value <code>"Unidentified"</code>.</p>
 
-<h2 id="Клавиши_приложений">Клавиши приложений</h2>
+<h2 id="Application_selector_keys">Application selector keys</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">На некоторых клавиатурах есть специальные клавиши для запуска определённых распространённых приложений или переключения на них.</span> <span title="">Значения клавиш для них перечислены здесь.</span></span></p>
+<p>Some keyboards offer special keys for launching or switching to certain common applications. Key values for those are listed here.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -3175,7 +3159,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchCalculator"</code> [5]</td>
-   <td>Клавиша запуска калькулятора <kbd>Calculator</kbd>, часто помечается значком. Часто используется в качестве общей клавиши запуска приложений (<code>APPCOMMAND_LAUNCH_APP2</code>).</td>
+   <td>The <kbd>Calculator</kbd> key, often labeled with an icon such as calculator icon. This is often used as a generic application launcher key (<code>APPCOMMAND_LAUNCH_APP2</code>).</td>
    <td><code>APPCOMMAND_LAUNCH_APP2</code></td>
    <td></td>
    <td><code>GDK_KEY_Calculator</code> (0x1008FF1D)<br>
@@ -3184,7 +3168,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchCalendar"</code> [5]</td>
-   <td>Клавиша календаря <kbd>Calendar</kbd>. Часто помечается значком.</td>
+   <td>The <kbd>Calendar</kbd> key, often labeled with an icon like a calendar icon.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Calendar</code> (0x1008FF20)<br>
@@ -3193,7 +3177,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchContacts"</code></td>
-   <td>Клавиша "Контакты" <kbd>Contacts</kbd>.</td>
+   <td>The <kbd>Contacts</kbd> key.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -3201,7 +3185,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchMail"</code></td>
-   <td>Клавиша электронной почты <kbd>Mail</kbd>. Часто помечается значком.</td>
+   <td>The <kbd>Mail</kbd> key. This is often displayed as envelope icon.</td>
    <td><code>VK_LAUNCH_MAIL</code> (0xB4)<br>
     <code>APPCOMMAND_LAUNCH_MAIL</code></td>
    <td></td>
@@ -3211,7 +3195,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchMediaPlayer"</code> [1]</td>
-   <td>Клавиша медиаплеера <kbd>Media Player</kbd>. Часто помечается значком.</td>
+   <td>The <kbd>Media Player</kbd> key.</td>
    <td><code>VK_LAUNCH_MEDIA_SELECT</code> (0xB5)<br>
     <code>APPCOMMAND_LAUNCH_MEDIA_SELECT</code></td>
    <td></td>
@@ -3223,7 +3207,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchMusicPlayer"</code> [5]</td>
-   <td>Клавиша музыкального проигрывателя <kbd>Music Player</kbd>. Часто помечается значком.</td>
+   <td>The <kbd>Music Player</kbd> key, often labeled with an icon such as music icon.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Music</code> (0x1008FF92)<br>
@@ -3232,7 +3216,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchMyComputer"</code> [5]</td>
-   <td>Клавиша "Мой компьютер" <kbd>My Computer</kbd> на клавиатурах Windows. Часто используется в качестве общей клавиши запуска приложений (<code>APPCOMMAND_LAUNCH_APP1</code>).</td>
+   <td>The <kbd>My Computer</kbd> key on Windows keyboards. This is often used as a generic application launcher key (<code>APPCOMMAND_LAUNCH_APP1</code>).</td>
    <td><code>APPCOMMAND_LAUNCH_APP1</code></td>
    <td></td>
    <td><code>GDK_KEY_MyComputer</code> (0x1008FF33)<br>
@@ -3241,7 +3225,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchPhone"</code></td>
-   <td>Клавиша телефонии <kbd>Phone</kbd>. Открывает приложение для набора номера телефона (если таковое имеется).</td>
+   <td>The <kbd>Phone</kbd> key, to open the phone dialer application if one is present.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Phone</code> (0x1008FF6E)<br>
@@ -3250,7 +3234,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchScreenSaver"</code> [5]</td>
-   <td>Клавиша заставки <kbd>Screen Saver</kbd>.</td>
+   <td>The <kbd>Screen Saver</kbd> key.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_ScreenSaver</code> (0x1008FF2D)<br>
@@ -3259,7 +3243,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchSpreadsheet"</code> [4]</td>
-   <td>Клавиша табличного процессора <kbd>Spreadsheet</kbd>. Эта клавиша часто помечается значком.</td>
+   <td>The <kbd>Spreadsheet</kbd> key. This key may be labeled with an icon such as table icon or that of a specific spreadsheet application.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Excel</code> (0x1008FF5C)<br>
@@ -3268,7 +3252,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchWebBrowser"</code> [4]</td>
-   <td>Клавиша веб-браузера <kbd>Web Browser</kbd>. Эта клавиша часто помечается значком.</td>
+   <td>The <kbd>Web Browser</kbd> key. This key is frequently labeled with an icon such as globe icon or the icon of a specific browser, depending on the device manufacturer.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_WWW</code> (0x1008FF2E)<br>
@@ -3277,7 +3261,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchWebCam"</code> [5]</td>
-   <td>Клавиша <kbd>WebCam</kbd>. Открывает приложение веб-камеры.</td>
+   <td>The <kbd>WebCam</kbd> key. Opens the webcam application.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_WebCam</code> (0x1008FF8F)<br>
@@ -3286,7 +3270,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchWordProcessor"</code> [5]</td>
-   <td>Клавиша текстового процессора <kbd>Word Processor</kbd>. Это может быть значок конкретного приложения текстового процессора или общий значок документа.</td>
+   <td>The <kbd>Word Processor</kbd> key. This may be an icon of a specific word processor application, or a generic document icon.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Word</code> (0x1008FF89)<br>
@@ -3295,7 +3279,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication1"</code> [2]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">1-я общая кнопка запуска приложений.</span></span></td>
+   <td>The first generic application launcher button.</td>
    <td><code>VK_LAUNCH_APP1</code> (0xB6)<br>
     <code>APPCOMMAND_LAUNCH_APP1</code></td>
    <td></td>
@@ -3305,7 +3289,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication2"</code> [3]</td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">2-я общая кнопка запуска приложений.</span></span></td>
+   <td>The second generic application launcher button.</td>
    <td><code>VK_LAUNCH_APP2</code> (0xB7)<br>
     <code>APPCOMMAND_LAUNCH_APP2</code></td>
    <td></td>
@@ -3315,7 +3299,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication3"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">3-я общая кнопка запуска приложений.</span></span></td>
+   <td>The third generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch2</code> (0x1008FF42)<br>
@@ -3324,7 +3308,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication4"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">4-я общая кнопка запуска приложений.</span></span></td>
+   <td>The fourth generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch3</code> (0x1008FF43)<br>
@@ -3333,7 +3317,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication5"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">5-я общая кнопка запуска приложений.</span></span></td>
+   <td>The fifth generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch4</code> (0x1008FF44)<br>
@@ -3342,7 +3326,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication6"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">6-я общая кнопка запуска приложений.</span></span></td>
+   <td>The sixth generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch5</code> (0x1008FF45)<br>
@@ -3351,7 +3335,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication7"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">7-я общая кнопка запуска приложений.</span></span></td>
+   <td>The seventh generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch6</code> (0x1008FF46)<br>
@@ -3360,7 +3344,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication8"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">8-я общая кнопка запуска приложений.</span></span></td>
+   <td>The eighth generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch7</code> (0x1008FF47)<br>
@@ -3369,7 +3353,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication9"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">9-я общая кнопка запуска приложений.</span></span></td>
+   <td>The ninth generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch8</code> (0x1008FF48)<br>
@@ -3378,7 +3362,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication10"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">10-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 10th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_Launch9</code> (0x1008FF49)<br>
@@ -3387,7 +3371,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication11"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">11-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 11th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LaunchA</code> (0x1008FF4A)<br>
@@ -3396,7 +3380,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication12"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">12-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 12th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LaunchB</code> (0x1008FF4B)<br>
@@ -3405,7 +3389,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication13"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">13-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 13th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LaunchC</code> (0x1008FF4C)<br>
@@ -3414,7 +3398,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication14"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">14-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 14th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LaunchD</code> (0x1008FF4D)<br>
@@ -3423,7 +3407,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication15"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">15-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 15th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LaunchE</code> (0x1008FF4E)<br>
@@ -3432,7 +3416,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"LaunchApplication16"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">16-я общая кнопка запуска приложений.</span></span></td>
+   <td>The 16th generic application launcher button.</td>
    <td></td>
    <td></td>
    <td><code>GDK_KEY_LaunchF</code> (0x1008FF4F)<br>
@@ -3442,26 +3426,26 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] Internet Explorer, Edge, и Firefox (36 и ранее) используют <code>"SelectMedia"</code> вместо <code>"LaunchMediaPlayer"</code>. Firefox 37 и Firefox 48 используют <code>"MediaSelect"</code>. Firefox 49 <span class="tlid-translation translation" lang="ru"><span title="">был обновлён в соответствии с последней спецификацией и теперь возвращает</span></span> <code>"LaunchMediaPlayer"</code>.</p>
+<p>[1] Internet Explorer, Edge, and Firefox (36 and earlier) use <code>"SelectMedia"</code> instead of <code>"LaunchMediaPlayer"</code>. Firefox 37 through Firefox 48 use <code>"MediaSelect"</code>. Firefox 49 has been updated to match the latest specification, and to return <code>"LaunchMediaPlayer"</code>.</p>
 
-<p>[2] Google Chrome 57 и ранние возвращают <code>"LaunchMyComputer"</code> вместо <code>"LaunchApplication1"</code>. Смотри <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> для дополнительной информации.</p>
+<p>[2] Google Chrome 57 and earlier returned <code>"LaunchMyComputer"</code> instead of <code>"LaunchApplication1"</code>. See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> for more information.</p>
 
-<p>[3] Google Chrome 57 и ранние возвращают <code>"LaunchCalculator"</code> вместо <code>"LaunchApplication2"</code>. Смотри <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> для дополнительной информации.</p>
+<p>[3] Google Chrome 57 and earlier returned <code>"LaunchCalculator"</code> instead of <code>"LaunchApplication2"</code>. See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> for more information.</p>
 
-<p>[4] До Firefox 37, Firefox возвращал the key code <code>"LaunchApplication1"</code> вместо "<code>LaunchWebBrowser"</code>для клавиши Веб-браузера.</p>
+<p>[4] Prior to Firefox 37, Firefox returned the key code <code>"LaunchApplication1"</code> instead of "<code>LaunchWebBrowser"</code> for the Web browser key.</p>
 
-<p>[5] Firefox ввёл поддержку этой клавиши в Firefox 37. До этого, эта клавиша возвращала значение <code>"Unidentified"</code>.</p>
+<p>[5] Firefox introduced support for this key in Firefox 37; prior to that, this key was reported as <code>"Unidentified"</code>.</p>
 
-<h2 id="Клавиши_управления_браузером">Клавиши управления браузером</h2>
+<h2 id="Browser_control_keys">Browser control keys</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">На некоторых клавиатурах есть специальные клавиши для управления веб-браузерами.</span> <span title="">Это следующие клавиши.</span></span></p>
+<p>Some keyboards include special keys for controlling Web browsers. Those keys follow.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -3471,7 +3455,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserBack"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход к предыдущему содержимому или странице в истории текущего веб-представления.</span></span></td>
+   <td>Navigates to the previous content or page in the current Web view's history.</td>
    <td><code>VK_BROWSER_BACK</code> (0xA6)<br>
     <code>APPCOMMAND_BROWSER_BACKWARD</code></td>
    <td></td>
@@ -3481,7 +3465,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserFavorites"</code> [1]</td>
-   <td>Открывает список закладок/избранного пользователя.</td>
+   <td>Opens the user's list of bookmarks/favorites.</td>
    <td><code>VK_BROWSER_FAVORITES</code> (0xAB)<br>
     <code>APPCOMMAND_BROWSER_FAVORITES</code></td>
    <td></td>
@@ -3492,7 +3476,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserForward"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход к следующему содержимому или странице в истории текущего веб-представления.</span></span></td>
+   <td>Navigates to the next content or page in the current Web view's history.</td>
    <td><code>VK_BROWSER_FORWARD</code> (0xA7)<br>
     <code>APPCOMMAND_BROWSER_FORWARD</code></td>
    <td></td>
@@ -3502,7 +3486,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserHome"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Переход к домашней странице, установленной пользователем.</span></span></td>
+   <td>Navigates to the user's preferred home page.</td>
    <td><code>VK_BROWSER_HOME</code> (0xAC)<br>
     <code>APPCOMMAND_BROWSER_HOME</code></td>
    <td></td>
@@ -3512,7 +3496,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserRefresh"</code></td>
-   <td>Обновление текущей страницы или содержимого.</td>
+   <td>Refreshes the current page or contentl.</td>
    <td><code>VK_BROWSER_REFRESH</code> (0xA8)<br>
     <code>APPCOMMAND_BROWSER_REFRESH</code></td>
    <td></td>
@@ -3522,7 +3506,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserSearch"</code></td>
-   <td>Активирует предпочтительную поисковую систему пользователя или интерфейс поиска в его браузере.</td>
+   <td>Activates the user's preferred search engine or the search interface within their browser.</td>
    <td><code>VK_BROWSER_SEARCH</code> (0xAA)<br>
     <code>APPCOMMAND_BROWSER_SEARCH</code></td>
    <td></td>
@@ -3532,7 +3516,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"BrowserStop"</code></td>
-   <td>Останавливает загрузку текущего веб-представления или содержимого.</td>
+   <td>Stops loading the currently displayed Web view or content.</td>
    <td><code>VK_BROWSER_STOP</code> (0xA9)<br>
     <code>APPCOMMAND_BROWSER_STOP</code></td>
    <td></td>
@@ -3543,22 +3527,22 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p>[1] До Firefox 37, эта клавиша возвращала значение <code>"Unidentified"</code>.</p>
+<p>[1] Prior to Firefox 37, this key's value was reported as <code>"Unidentified"</code>.</p>
 
-<h2 id="Клавиши_цифрового_блока">Клавиши цифрового блока</h2>
+<h2 id="Numeric_keypad_keys">Numeric keypad keys</h2>
 
-<p>Эти клавиши находятся на цифровой панели клавиатуры. Однако не все они присутствуют на каждой клавиатуре. Хотя типичные цифровые панели имеют цифровые клавиши от <kbd>0</kbd> до <kbd>9</kbd> (кодируются как <code>"0"</code> - <code>"9"</code>), некоторые мультимедийные клавиатуры включают дополнительные цифровые клавиши для более высоких чисел.</p>
+<p>These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as <code>"0"</code> through <code>"9"</code>), some multimedia keyboards include additional number keys for higher numbers.</p>
 
 <div class="note">
-<p>Клавиша <kbd>10</kbd>, <span class="tlid-translation translation" lang="ru"><span title="">если она присутствует, генерирует события</span></span> <span class="tlid-translation translation" lang="ru"><span title="">со значением ключа</span></span> <code>"0"</code>.</p>
+<p>The <kbd>10</kbd> key, if present, generates events with the <code>key</code> value of <code>"0"</code>.</p>
 </div>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;">Значение <code>KeyboardEvent.key</code></th>
-   <th rowspan="2" scope="col" style="text-align: left;">Описание</th>
-   <th colspan="4" scope="col" style="text-align: center;">Виртуальный код клавиши</th>
+   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
+   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
   </tr>
   <tr>
    <th scope="col" style="text-align: left;">Windows</th>
@@ -3568,20 +3552,15 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Decimal"</code> [1] {{obsolete_inline}}</td>
-   <td>
-    <p><span class="tlid-translation translation" lang="ru"><span title="">Клавиша десятичной точки</span></span> (обычно <kbd>.</kbd> или <kbd>,</kbd> в зависимости от региона).</p>
-
-    <p><span class="tlid-translation translation" lang="ru"><span title="">В новых браузерах это значение должно быть просто символом, сгенерированным клавишей десятичной точки (одним из этих двух символов).</span> <span title="">[1]</span></span></p>
-   </td>
+   <td>The decimal point key (typically <kbd>.</kbd> or <kbd>,</kbd> depending on the region. In newer browsers, this value to simply be the character generated by the decimal key (one of those two characters). [1]</td>
    <td><code>VK_DECIMAL</code> (0x6E)</td>
    <td><code>kVK_ANSI_KeypadDecimal</code> (0x41)</td>
-   <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)<br>
-     </td>
+   <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)</td>
    <td><code>KEYCODE_NUMPAD_DOT</code> (158)</td>
   </tr>
   <tr>
    <td><code>"Key11"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Клавиша</span></span> <kbd>11</kbd> <span class="tlid-translation translation" lang="ru"><span title=""> встречается на некоторых цифровых мультимедиа клавиатурах.</span></span></td>
+   <td>The <kbd>11</kbd> key found on certain media numeric keypads.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -3589,7 +3568,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Key12"</code></td>
-   <td><span class="tlid-translation translation" lang="ru"><span title="">Клавиша</span></span> <kbd>12</kbd> <span class="tlid-translation translation" lang="ru"><span title="">встречается на некоторых цифровых мультимедиа клавиатурах.</span></span>.</td>
+   <td>The <kbd>12</kbd> key found on certain media numeric keypads.</td>
    <td></td>
    <td></td>
    <td></td>
@@ -3597,7 +3576,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Multiply"</code> [1] {{obsolete_inline}}</td>
-   <td>Клавиша умножения на цифровой панели, <kbd>*</kbd>.</td>
+   <td>The numeric keypad's multiplication key, <kbd>*</kbd>.</td>
    <td><code>VK_MULTIPLY</code> (0x6A)</td>
    <td><code>kVK_ANSI_KeypadMultiply</code> (0x43)</td>
    <td><code>GDK_KEY_KP_Multiply</code> (0xFFAA)<br>
@@ -3606,7 +3585,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Add"</code> [1] {{obsolete_inline}}</td>
-   <td>Клавиша сложения на цифровой панели, <kbd>+</kbd>.</td>
+   <td>The numeric keypad's addition key, <kbd>+</kbd>.</td>
    <td><code>VK_ADD</code> (0x6B)</td>
    <td><code>kVK_ANSI_KeypadPlus</code> (0x45)</td>
    <td><code>GDK_KEY_KP_Add</code> (0xFFAB)</td>
@@ -3614,7 +3593,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Clear"</code></td>
-   <td>Клавиша очистки на цифровой панели, <kbd>Clear</kbd>.</td>
+   <td>The numeric keypad's <kbd>Clear</kbd> key.</td>
    <td></td>
    <td><code>kVK_ANSI_KeypadClear</code> (0x47)</td>
    <td><code>GDK_KEY_Clear</code> (0xFF0B)<br>
@@ -3623,7 +3602,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Divide"</code> [1] {{obsolete_inline}}</td>
-   <td>Клавиша деления на цифровой панели, <kbd>/</kbd>.</td>
+   <td>The numeric keypad's division key, /.</td>
    <td><code>VK_DIVIDE</code> (0x6F)</td>
    <td><code>kVK_ANSI_KeypadDivide</code> (0x4B)</td>
    <td><code>GDK_KEY_KP_Divide</code> (0xFFAF)<br>
@@ -3632,7 +3611,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Subtract"</code> [1] {{obsolete_inline}}</td>
-   <td>Клавиша вычитания на цифровой панели, <kbd>-</kbd>.</td>
+   <td>The numeric keypad's subtraction key, -.</td>
    <td><code>VK_SUBTRACT</code> (0x6D)</td>
    <td><code>kVK_ANSI_KeypadMinus</code> (0x4E)</td>
    <td><code>GDK_KEY_KP_Subtract</code> (0xFFAD)</td>
@@ -3640,20 +3619,15 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"Separator"</code> [1]</td>
-   <td>
-    <p><span class="tlid-translation translation" lang="ru"><span title="">Символ разделителя позиций на цифровой клавиатуре.</span></span></p>
-
-    <p><span class="tlid-translation translation" lang="ru"><span title="">(В США это запятая, но в других странах это часто точка.)</span></span></p>
-   </td>
+   <td>The numeric keypad's places separator character (in the United States, this is a comma, but elsewhere it is frequently a period).</td>
    <td><code>VK_SEPARATOR</code> (0x6C)</td>
    <td><code>kVK_JIS_KeypadComma</code> (0x5F)</td>
-   <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)<br>
-     </td>
+   <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)</td>
    <td><code>KEYCODE_NUMPAD_COMMA</code> (159)</td>
   </tr>
   <tr>
-   <td><code>От "0"</code> до <code>"9"</code></td>
-   <td>Фактические цифровые клавиши на цифровой панели.</td>
+   <td>"0" through "9"</td>
+   <td>The actual digit keys on the numeric keypad.</td>
    <td><code>VK_NUMPAD0</code> (0x60) - <code>VK_NUMPAD9</code> (0x69)</td>
    <td><code>kVK_Keypad0</code> (0x52) - <code>kVK_Keypad9</code> (0x5C)</td>
    <td><code>GDK_KEY_KP_0</code> (0xFFB0) - <code>GDK_KEY_KP_9</code> (0xFFB9)</td>
@@ -3662,4 +3636,4 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
  </thead>
 </table>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">[1] В то время как старые браузеры использовали такие слова, как «Добавить», «Десятичное число», «Умножить» и т. д., современные браузеры идентифицируют их по фактическому символу («+», «.», «*» и т. д.).</span></span></p>
+<p>[1] While older browsers used words like <code>"Add"</code>, <code>"Decimal"</code>, <code>"Multiply"</code>, and so forth modern browsers identify these using the actual character (<code>"+"</code>, <code>"."</code>, <code>"*"</code>, and so forth).</p>

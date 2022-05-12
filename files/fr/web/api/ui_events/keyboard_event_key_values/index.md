@@ -1,7 +1,8 @@
 ---
 title: Key Values
-slug: Web/API/KeyboardEvent/key/Key_Values
+slug: Web/API/UI_Events/Keyboard_event_key_values
 translation_of: Web/API/KeyboardEvent/key/Key_Values
+original_slug: Web/API/KeyboardEvent/key/Key_Values
 ---
 Les tableaux ci-dessous énumèrent les valeurs clés standard dans différentes catégories de clés, avec une explication de l'utilisation habituelle de la clé. Les codes de clés virtuels correspondants pour les plateformes communes sont inclus lorsqu'ils sont disponibles.
 
