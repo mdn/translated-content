@@ -4295,7 +4295,6 @@
 /fr/docs/Web/CSS/Média_paginés	/fr/docs/Web/CSS/Paged_Media
 /fr/docs/Web/CSS/Outils	/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244
 /fr/docs/Web/CSS/Outils/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
-/fr/docs/Web/CSS/Outils/Générateur_de_dégradés_linéaires	/fr/docs/Web/CSS/Tools/Linear-gradient_Generator
 /fr/docs/Web/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/Web/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
 /fr/docs/Web/CSS/Redimensionnement_arrière-plans_SVG	/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds
@@ -4332,7 +4331,6 @@
 /fr/docs/Web/CSS/Tools	/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244
 /fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Tools/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
-/fr/docs/Web/CSS/Tools/Générateur_de_dégradés_linéaires	/fr/docs/Web/CSS/Tools/Linear-gradient_Generator
 /fr/docs/Web/CSS/Tools/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /fr/docs/Web/CSS/Type_color	/fr/docs/Web/CSS/color_value
 /fr/docs/Web/CSS/Type_position	/fr/docs/Web/CSS/position_value
