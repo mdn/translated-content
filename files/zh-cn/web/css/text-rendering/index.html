@@ -39,14 +39,14 @@ text-rendering: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>浏览器依照某些根据去推测在绘制文本时，何时该优化速度，易读性或者几何精度。对于该<font face="Consolas, Liberation Mono, Courier, monospace">值</font>在不同浏览器中解释的差异，请看兼容性表。</dd>
+ <dd>浏览器依照某些根据去推测在绘制文本时，何时该优化速度，易读性或者几何精度。对于该值在不同浏览器中解释的差异，请看兼容性表。</dd>
  <dt><code>optimizeSpeed</code></dt>
  <dd>浏览器在绘制文本时将着重考虑渲染速度，而不是易读性和几何精度. 它会使字间距和连字无效。</dd>
  <dt><code>optimizeLegibility</code></dt>
  <dd>浏览器在绘制文本时将着重考虑易读性，而不是渲染速度和几何精度.它会使字间距和连字有效。<strong>该属性值在移动设备上会造成比较明显的性能问题</strong>，详细查看<strong> </strong><a href="https://css-tricks.com/almanac/properties/t/text-rendering/">text-rendering</a>。</dd>
  <dt><code>geometricPrecision</code></dt>
  <dd>
- <p>浏览器在绘制文本时将着重考虑几何精度， 而不是渲染速度和易读性。字体的某些方面—比如字间距—不再线性缩放，所以该<font face="Consolas, Liberation Mono, Courier, monospace">值可以使使用某些字体的文本看起来不错。</font></p>
+ <p>浏览器在绘制文本时将着重考虑几何精度， 而不是渲染速度和易读性。字体的某些方面—比如字间距—不再线性缩放，所以该值可以使使用某些字体的文本看起来不错。</p>
 
  <p>对于 SVG，当文本缩放时，浏览器会计算文本最终大小（取决于特定的字体大小和相应的缩放比例）并且从操作平台的字体系统中请求一个符合该计算值的字体大小。但如果你请求一个字体大小，比如 9 并且 140% 的缩放，这个最终的字体大小为 12.6，字体系统中明显不存在，所以浏览器会向下取整到 12。这导致文本缩放是阶梯式的。</p>
 
