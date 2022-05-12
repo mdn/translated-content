@@ -325,7 +325,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png" style="height: 289px; width: 500px;"></p>
 
-<p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at {{TemplateLink("ListSubpages")}}.</p>
+<p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at <code>\{{ListSubpages}}</code>.</p>
 
 <h2 id="Cookbook">Cookbook</h2>
 
@@ -460,7 +460,7 @@ var s_title = mdn.localString({
 %&gt;
 &lt;span class="title"&gt;&lt;%= s_title %&gt;&lt;/span&gt;</pre>
 
-<p>This is more concise than the switch statement, and may be a better choice where a single string is concerned. However, if many strings need to be translated (e.g., as in {{TemplateLink("CSSRef")}}), a switch statement might help keep all the strings grouped by locale and more easily translated that way.</p>
+<p>This is more concise than the switch statement, and may be a better choice where a single string is concerned. However, if many strings need to be translated (e.g., as in <code>\{{CSSRef}}</code>), a switch statement might help keep all the strings grouped by locale and more easily translated that way.</p>
 
 <p>When the object does not have the appropriate locale, the value of "en-US" is used as the initial value.</p>
 
