@@ -9,41 +9,30 @@ tags:
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Custom_macros
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读<a href="/zh-CN/docs/MDN/Structures/Macros">使用宏</a>这篇文章。</p>
+本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Structures/Macros)这篇文章。
 
-<p>还有一些不常用或只在特定内容中适用，以及一些不赞成使用的宏的信息，参见<a href="/zh-CN/docs/MDN/Structures/Macros/Other">其它宏</a>。对于调整页面样式相关的宏，另见<a href="/zh-CN/docs/MDN/Guidelines/CSS_style_guide">CSS 样式指南</a>。
+还有一些不常用或只在特定内容中适用，以及一些弃用的宏的信息，参见[其它宏](/zh-CN/docs/MDN/Structures/Macros/Other)。
 
-<h2 id="Linking">链接</h2>
+## 链接
 
-<p>为了简化一些常见超链接的创建工作——如指向站内的技术参考页面、术语库以及其他主题的链接，我们提供了丰富的宏来完成这些工作</p>
+为了简化一些常见超链接的创建工作——如指向站内的技术参考页面、术语库以及其他主题的链接，我们提供了丰富的宏来完成这些工作。
 
-<p>我们推荐使用宏来创建这些常见的链接，这样不但简洁，对翻译工作也很友好——使用宏创建的术语库和技术参考链接不需要翻译者再做处理，这些宏可提供正确的链接，使其符合当前页面的语言。</p>
+我们推荐使用宏来创建这些常见的链接，这样不但简洁，而且对翻译工作也很友好——使用宏创建的术语库和技术参考链接不需要翻译者再做处理，这些宏可提供正确的链接，使其符合当前页面的语言。
 
-<h3 id="Glossayr_links">链接到术语库</h3>
+### 链接到术语库
 
-<p>正如{{TemplateLink("Glossary")}}这个宏的名字所示，它可用于创建指向 MDN 中<a
-    href="/zh-CN/docs/Glossary">术语库</a>内一个具体词条的链接。调用这个宏时，有一个必需的参数和一个可选参数。</p>
+[`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs) 这个宏可用于创建指向 MDN 中[术语库](/zh-CN/docs/Glossary)内一个具体词条的链接。调用这个宏时，有一个必需的参数和一个可选参数。
 
-<ol>
-  <li>术语的名字，比如“HTML”。
-    <ul>
-      <li><code>\{{Glossary("HTML")}}</code>会指向{{Glossary("HTML")}}。</li>
-    </ul>
-  </li>
-  <li>可选参数：使用参数中的文本内容，替代术语的名字显示在页面中。</li>
-  <ul>
-    <li><code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code>会指向{{Glossary("CSS", "Cascading Style Sheets")}}。
-    </li>
-  </ul>
-</ol>
+1. 术语的名字（比如“HTML”）：`\{{Glossary("HTML")}}` 会指向 {{Glossary("HTML")}}。
+2. 可选参数：使用参数中的文本内容，替代术语的名字显示在页面中：`\{{Glossary("CSS", "层叠样式表")}}` 会生成 {{Glossary("CSS", "层叠样式表")}}。
 
-<h3 id="Linking_to_pages_in_references">链接到 MDN 的参考文档页面</h3>
+### 链接到 MDN 的参考文档页面
 
-<p>下面列出的宏可链接到 MDN 站内不同技术领域的参考文档，如 Javascript,、CSS、HTML、elements、SVG 等。</p>
+下面列出的宏可链接到 MDN 站内不同技术领域的参考文档，如 Javascript,、CSS、HTML、elements、SVG 等。
 
-<P>这些宏都很容易上手，大多数情况下只需一个参数——所涉及的 Web 组件的名字（如标签、对象、方法、属性等的名字）。在{{anch("Glossayrlinks","术语库")}}中提到的，可修改实际显示的文本的可选参数，也存在于下面大多数宏中。如果你想了解其他参数，表格中最左列的链接中可以查看相关宏的文档。</P>
+这些宏都很容易上手，大多数情况下只需一个参数——所涉及的 Web 组件的名字（如标签、对象、方法、属性等的名字）。在[链接到术语库](#链接到术语库)中提到的，可修改实际显示的文本的可选参数，也存在于下面大多数宏中。如果你想了解其他参数，表格中最左列的链接中可以查看相关宏的文档。
 
 <table class="standard-table">
   <thead>
@@ -55,69 +44,84 @@ original_slug: MDN/Structures/Macros/Custom_macros
   </thead>
   <tbody>
     <tr>
-      <td>{{TemplateLink("CSSxRef")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/Reference">CSS 参考文档</a> (/Web/CSS/Reference)</td>
-      <td><code>\{{CSSxRef("cursor")}}</code>会指向{{CSSxRef("cursor")}}.</td>
+      <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference">CSS 参考文档</a>（/Web/CSS/Reference）</td>
+      <td><code>\{{CSSxRef("cursor")}}</code> 会指向 {{CSSxRef("cursor")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("DOMxRef")}}</td>
-      <td><a href="/zh-CN/docs/Web/API">DOM 参考文档</a> (/Web/API)</td>
-      <td><code>\{{DOMxRef("Document")}}</code>或<code>\{{DOMxRef("document")}}</code>都指向{{DOMxRef("Document")}}。<br>
-        <code>\{{DOMxRef("document.getElementsByName()")}}</code>会指向{{DOMxRef("document.getElementsByName()")}}<br>
-        <code>\{{DOMxRef("Node")}}</code>会指向{{DOMxRef("Node")}}. <br>
-        你可以使用第二个参数控制在页面上实际显示的文本：<code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code>会生成{{DOMxRef("document.getElementsByName()","getElementsByName()")}}
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/API">DOM 参考文档</a>（/Web/API）</td>
+      <td><code>\{{DOMxRef("Document")}}</code> 或 <code>\{{DOMxRef("document")}}</code> 都指向 {{DOMxRef("Document")}}。<br>
+        <code>\{{DOMxRef("document.getElementsByName()")}}</code> 会指向 {{DOMxRef("document.getElementsByName()")}}<br>
+        <code>\{{DOMxRef("Node")}}</code> 会指向 {{DOMxRef("Node")}}。<br>
+        你可以使用第二个参数控制在页面上实际显示的文本：<code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> 会生成 {{DOMxRef("document.getElementsByName()","getElementsByName()")}}。
       </td>
     </tr>
     <tr>
-      <td>{{TemplateLink("HTMLElement")}}</code>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考文档</a> (/Web/HTML/Element)</td>
-      <td><code>\{{HTMLElement("select")}}</code>会指向{{HTMLElement("select")}}</td>
+      <td><a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考文档</a>（/Web/HTML/Element）</td>
+      <td><code>\{{HTMLElement("select")}}</code> 会指向 {{HTMLElement("select")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("HTMLAttrxRef")}}</td>
+      <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs">HTMLAttrxRef</a></td>
       <td>如果只指明了属性的名字，链接会跳转到 <a href="/zh-CN/docs/Web/HTML/Global_attributes">HTML 全局属性</a>页面对应属性的位置。<br/>如果同时指明 HTML 元素和属性名，则会跳转到元素页面下对应属性的位置。</td>
       <td>
-        <code>\{{HTMLAttrxRef("lang")}} </code>会指向{{HTMLAttrxRef("lang")}}.<br /><code>\{{HTMLAttrxRef("type","input")}}</code>生成的链接则会跳转到{{HTMLElement("input")}}元素页面下的{{HTMLAttrxRef("type","input")}}属性。
+        <code>\{{HTMLAttrxRef("lang")}}</code> 会指向 {{HTMLAttrxRef("lang")}}。<br /><code>\{{HTMLAttrxRef("type","input")}}</code> 生成的链接则会跳转到 {{HTMLElement("input")}} 元素页面下的 {{HTMLAttrxRef("type","input")}} 属性。
       </td>
     </tr>
     <tr>
-      <td>{{TemplateLink("JSxRef")}}</td>
-      <td><a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考文档</a>（/Web/JavaScript/Reference）.</td>
-      <td><code>\{{JSxRef("Promise")}}</code>会指向{{JSxRef("Promise")}}</td>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考文档</a>（/Web/JavaScript/Reference）</td>
+      <td><code>\{{JSxRef("Promise")}}</code> 会指向 {{JSxRef("Promise")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("SVGAttr")}}</td>
-      <td><a href="/zh-CN/docs/Web/SVG/Attribute">SVG 属性参考</a> (/Web/SVG/Attribute).</td>
-      <td><code>\{{SVGAttr("d")}}</code>会指向{{SVGAttr("d")}}</td>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/SVG/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
+      <td><code>\{{SVGAttr("d")}}</code> 会指向 {{SVGAttr("d")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("SVGElement")}}</td>
-      <td><a href="/zh-CN/docs/Web/SVG/Element">SVG 元素参考</a> (/Web/SVG/Element).</td>
-      <td><code>\{{SVGElement("view")}}</code>会指向{{SVGElement("view")}}</td>
+      <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a></td>
+      <td><a href="/zh-CN/docs/Web/SVG/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
+      <td><code>\{{SVGElement("view")}}</code> 会指向 {{SVGElement("view")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("HTTPHeader")}}</td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 消息头</a> (/Web/HTTP/Headers).</td>
-      <td><code>\{{HTTPHeader("ACCEPT")}}</code>会指向{{HTTPHeader("ACCEPT")}}</td>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 消息头</a>（/Web/HTTP/Headers）</td>
+      <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会指向 {{HTTPHeader("ACCEPT")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("HTTPMethod")}}</td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Methods">HTTP 请求方法</a> (/Web/HTTP/Methods).</td>
-      <td><code>\{{HTTPMethod("HEAD")}}</code>会指向{{HTTPMethod("HEAD")}}</td>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Methods">HTTP 请求方法</a>（/Web/HTTP/Methods）</td>
+      <td><code>\{{HTTPMethod("HEAD")}}</code> 会指向 {{HTTPMethod("HEAD")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("HTTPStatus")}}</td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应代码</a> (/Web/HTTP/Status)</td>
-      <td><code>\{{HTTPStatus("404")}}</code>会指向{{HTTPStatus("404")}}</td>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应代码</a>（/Web/HTTP/Status）</td>
+      <td><code>\{{HTTPStatus("404")}}</code> 会指向 {{HTTPStatus("404")}}。</td>
     </tr>
     <tr>
-      <td>{{TemplateLink("event")}}</td>
-      <td><a href="/zh-CN/docs/Web/Events">事件参考</a> (/Web/Events)</td>
+      <td>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>
+      </td>
+      <td><a href="/zh-CN/docs/Web/Events">事件参考</a>（/Web/Events）</td>
       <td>
         <div class="notecard note">
-          <h4>注意</h4>
-          <p>因为事件关联在具体的元素下，这个宏不是特别有用。例如想指向 wheel 事件的页面，需要使用
+          <p>
+            <strong>备注：</strong> 因为事件关联在具体的元素下，这个宏不是特别有用。例如想指向 wheel 事件的页面，需要使用
             <code>\{{DOMxRef("Document.wheel_event")}}</code>：{{DOMxRef("Document.wheel_event")}}
           </p>
         </div>
@@ -126,127 +130,111 @@ original_slug: MDN/Structures/Macros/Custom_macros
   </tbody>
 </table>
 
-<h3 id="Linking_to_bugs">关联到某个 Bug</h3>
+### 链接到某个 Bug
 
-<ul>
-  <li>Bugs
-    <ul>
-      <li>通过编号，{{TemplateLink("bug")}}宏可以指向<a href="bugzilla.mozilla.org">bugzilla.mozilla.org</a>站内相应的 bug，<code>\{{Bug(123456)}}</code>会指向{{Bug(123456)}}.</li>
-      <li>类似的，{{TemplateLink("WebkitBug")}}宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，<code>\{{WebkitBug(31277)}}</code>会指向{{WebkitBug(31277)}}.</li>
-    </ul>
-  </li>
-</ul>
+- Bugs
 
-<h3 id="Navigation_aids_for_multi-page_guides">多页面间的导航栏</h3>
+  - 通过编号，[`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) 宏可以指向 bugzilla.mozilla.org 站内相应的 bug，`\{{Bug(123456)}}` 会指向 {{Bug(123456)}}。
+  - 类似的，[`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) 宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，`\{{WebkitBug(31277)}}` 会指向 {{WebkitBug(31277)}}。
 
-<p>{{TemplateLink("Previous")}}、{TemplateLink("Next")}} 和 {{TemplateLink("PreviousNext")}} 这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 {{TemplateLink("PreviousNext")}}，需要的两个参数是相应文章的 Wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。</p>
 
-<h2 id="Code_samples">代码示例</h2>
+### 多页面间的导航栏
 
-<h3 id="Live_samples">动态示例</h3>
+[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 {{TemplateLink("PreviousNext")}}，需要的两个参数是相应文章的 Wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
 
-<ul>
-  <li>{{TemplateLink("EmbedLiveSample")}} 可嵌入一个在<a href="/zh-CN/docs/MDN/Structures/Live_samples">在线示例</a>中描述的代码示例到当前页面上。</li>
-  <li>{{TemplateLink("LiveSampleLink")}} 创建指向包含页面上代码示例输出的页面的链接，如<a href="/zh-CN/docs/MDN/Structures/Live_samples">在线示例</a> 中所述。</li>
-  <li>{{TemplateLink("EmbedGHLiveSample")}} 提供了一种新的动态示例编写和使用方式，你可以在<a href="/zh-CN/docs/MDN/Structures/Code_examples#github_live_samples">Github动态示例</a>中了解更多信息。</li>
-</ul>
+## 代码示例
 
-<h2 id="Sidebar_generation">添加侧边栏组</h2>
+### 运行实例
 
-<p>一些有海量子条目的主题，比如技术参考、指南、教程等，通常需要一个单独的主页面提供导航。对于这些主题中的页面，顶部的面包屑导航就显得比较简陋，下面这些模板，可以在页面的左侧，生成对应主题的侧边导航栏。</p>
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) 可以在当前页面中嵌入一个代码示例的实际展示效果（使用方法参见[运行实例](/zh-CN/docs/MDN/Structures/Live_samples)）。
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Structures/Live_samples)中所述。
+- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) 提供了一种新的运行实例编写和使用方式，你可以在 [Github 运行实例](/zh-CN/docs/MDN/Structures/Code_examples#github_live_samples)中了解更多信息。
 
-<ul>
-  <li>{{TemplateLink("CSSRef")}} 生成 CSS 参考页面的侧边栏。</li>
-  <li>{{TemplateLink("HTMLRef")}} 生成 HTML 参考页面的侧边栏。</li>
-  <li>{{TemplateLink("APIRef")}} 生成 Web API 参考页面的侧边栏。</li>
-</ul>
+## 添加侧边栏
 
-<h2 id="General-purpose_formatting">通用的文章格式化工具</h2>
+一些有海量子条目的主题，比如技术参考、指南、教程等，通常需要一个单独的主页面提供导航。对于这些主题中的页面，顶部的面包屑导航就显得比较简陋，下面这些模板，可以在页面的左侧，生成对应主题的侧边导航栏。
 
-<h3 id="Inline_indicators_for_API_documentation">API 文档的行内指示器</h3>
 
-<p>{{TemplateLink("optional_inline")}} 和 {{TemplateLink("ReadOnlyInline")}} 被用于 API 文档，通常可以用来描述一个对象的属性是只读的或一个函数的参数是可省略的。</p>
+- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) 生成 CSS 参考页面的侧边栏。
+- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) 生成 HTML 参考页面的侧边栏。
+- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) 生成 Web API 参考页面的侧边栏。
 
-<p>用法: <code>\{{optional_inline}}</code> 或 <code>\{{ReadOnlyInline}} 。</code>示例：</p>
+## 通用的文章格式化工具
 
-<dl>
-  <dt><code>isCustomObject</code> {{ReadOnlyInline}}</dt>
-  <dd>如果此项值为 <code>true</code>，表明该对象是一个自定义对象。</dd>
-  <dt>某项参数{{optional_inline}}</dt>
-  <dd>参数描述</dd>
-</dl>
+### API 文档的内联指示器
 
-<h2 id="Status_and_compatibility_indicators">状态和兼容性指示器</h2>
+[`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) 和 [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) 被用于 API 文档，通常可以用来描述一个对象的属性是只读的或一个函数的参数是可省略的。
 
-<h3 id="Inline_indicators_with_no_additional_parameters">无需参数的行内指示器</h3>
+用法: `\{{optional_inline}}` 或 `\{{ReadOnlyInline}}`。示例：
 
-<h4 id="Non-standard">非标准的</h4>
+- `isCustomObject` {{ReadOnlyInline}}
+  - 如果此项值为 `true`，表明该对象是一个自定义对象。
+- `parameterX` {{optional_inline}}
+  - 参数描述
 
-<p>{{TemplateLink("non-standard_inline")}} 插入一个行内标记，表示 API 尚未标准化并且不在标准轨道上。</p>
+## 状态和兼容性指示器
 
-<h5 id="Syntax">语法</h5>
+### 无需参数的行内指示器
 
-<p><code>\{{Non-standard_Inline}}</code></p>
+#### 非标准的
 
-<h5 id="Examples">示例</h5>
+[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) 插入一个内联标记，表示 API 尚未标准化并且不在标准轨道上。
 
-<ul>
-  <li>图标：{{Non-standard_Inline}}</li>
-</ul>
+##### 语法
 
-<h4 id="Experimental">实验性的</h4>
+`\{{Non-standard_Inline}}`
 
-<p>{{TemplateLink("Experimental_Inline")}} 插入一个行内标记，表示当前 API 没有被广泛地实现，并且在以后可能会改变。</p>
+##### 示例
 
-<h5 id="Syntax_2">语法</h5>
+- 图标：{{Non-standard_Inline}}
 
-<p><code>\{{Experimental_Inline}}</code></p>
+#### 实验性的
 
-<h5 id="Examples_2"><code>示例</code></h5>
+[`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) 插入一个内联标记，表示当前 API 没有被广泛地实现，并且在以后可能会改变。
 
-<ul>
-  <li>图标：{{Experimental_Inline}}</li>
-</ul>
+##### 语法
 
-<h3 id="Inline_indicators_that_support_specifying_the_technology">代表明确技术参考的行内指示器</h3>
+`\{{Experimental_Inline}}`
 
-<h4 id="Deprecated">已弃用</h4>
+##### 示例
 
-<p>{{TemplateLink("deprecated_inline")}}会插入一个带有 ({{Deprecated_Inline}}) 的标记以阻止使用官方不推荐使用（或已删除）的 API。</p>
+- 图标：{{Experimental_Inline}}
 
-<h5 id="Syntax_3">语法</h5>
+### 代表明确技术参考的行内指示器
 
-<p><code>\{{Deprecated_Inline}}</code></p>
+#### 已弃用
 
-<h5 id="Examples_3">示例</h5>
+[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) 会插入一个带有（{{Deprecated_Inline}}）的标记以不鼓励使用官方已弃用（或已删除）的 API。
 
-<ul>
-  <li>图标：{{Deprecated_Inline}}</li>
-</ul>
+##### 语法
 
-<h3 id="Page_or_section_header_indicators">页面或章节头部的指示器</h3>
+`\{{Deprecated_Inline}}`
 
-<p>下列指示器的含义，类似于上述的内联指示器。这些组件应直接放置在技术参考页面的标题（或面包屑导航栏）下，也可以用于标记页面上的某个小节。</p>
+##### 示例
 
-<ul>
-  <li>{{TemplateLink("non-standard_header")}}语法：<code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
-  <li>{{TemplateLink("SeeCompatTable")}} 对于一些介绍<a href="/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental">实验性功能</a>的内容，应当在这些内容前放置此指示器。语法：<code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
-  <li>{{TemplateLink("deprecated_header")}}: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
-  <li>{{TemplateLink("secureContext_header")}}: 应该用于界面页面、API 概览页面和 API 入口点（例如 <code>navigator.xyz</code>）等主要页面，但通常不在方法和属性页面等子页面上使用。语法： <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
-</ul>
+- 图标：{{Deprecated_Inline}}
 
-<h3 id="Indicating_that_a_feature_is_available_in_web_workers">表明某个功能在 Web Worker 中可用的指示器</h3>
+### 页面或章节头部的指示器
 
-<p>{{TemplateLink("AvailableInWorkers")}} 宏插入一个本地化的注释框，指示一个功能在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web worker</a> 上下文中可用。它还有一个可选参数，当带有<code>notservice</code>时，表示该功能在 Web Worker 中可用但在 Servcie Worker 中不可用。</p>
+下列指示器的含义，类似于上述的内联指示器。这些组件应直接放置在技术参考页面的标题（或面包屑导航栏）下，也可以用于标记页面上的某个小节。
 
-<h5 id="Syntax_4">语法</h5>
+- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) 语法：`\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) 对于一些介绍[实验性功能](/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental)的内容，应当在这些内容前放置此指示器。语法：`\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs)：应该用于界面页面、API 概览页面和 API 入口点（例如 `navigator.xyz`）等主要页面，但通常不在方法和属性页面等子页面上使用。语法：`\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-<pre>\{{AvailableInWorkers}}
-\{{AvailableInWorkers("notservice")}}</pre>
+### 表明某个功能在 Web Worker 中可用的指示器
 
-<h5 id="Examples_5">Examples</h5>
+[`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 宏插入一个本地化的注释框，表明一个功能在 [Web worker](/zh-CN/docs/Web/API/Web_Workers_API) 上下文中可用。它还有一个可选参数，当带有 `notservice` 时，表示该功能在 Web Worker 中可用但在 Servcie Worker 中不可用。
 
-<div>
+##### 语法
+
+```plain
+\{{AvailableInWorkers}}
+\{{AvailableInWorkers("notservice")}}
+```
+
+##### 示例
+
   {{AvailableInWorkers}}
   {{AvailableInWorkers("notservice")}}
-</div>
