@@ -9,7 +9,7 @@ translation_of: Web/CSS/transform-function
 
 <p>There are several coordinate models used when describing transformation. The most common are the Cartesian coordinate system and homogeneous coordinates.</p>
 
-<h3 id="笛卡兒坐標系"><span class="external">笛卡兒坐標系</span></h3>
+<h3 id="笛卡兒坐標系">笛卡兒坐標系</h3>
 
 <p><a href="/@api/deki/files/5796/=coord_in_R2.png"><img src="/files/3438/coord_in_R2.png" style="float: right; width: 171px;"></a></p>
 
@@ -187,7 +187,7 @@ translation_of: Web/CSS/transform-function
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
   </tr>
   <tr>
-   <td><code>[cos(a) </code><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: consolas,monaco,andale mono,monospace;">sin(</span><em>a</em><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: consolas,monaco,andale mono,monospace;">)</span><code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
+   <td><code>[cos(a) </code>sin(<em>a</em>)<code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
   </tr>
  </tbody>
 </table>
@@ -616,7 +616,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <p>The <code>skewX()</code> CSS function is a horizontal shear mapping distorting each point of an element by a certain angle in the horizontal direction. It is done by increasing the abscissa coordinate by a value proportionate to the specified angle and to the distance to the origin. The more far from the origin, the more away the point is, the greater will be the value added to it.</p>
 
-<h4 class="editable" id="表達式_15"><span>表達式</span></h4>
+<h4 class="editable" id="表達式_15">表達式</h4>
 
 <pre class="syntaxbox">skewX(a)
 </pre>
@@ -870,7 +870,7 @@ translate(tx, ty)
 
 <dl>
  <dt><em>t</em></dt>
- <dd><span style="line-height: 1.5;">Is a {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector. It can't be a {{cssxref("&lt;percentage&gt;")}} value; in that case the property containing the transform is considered invalid.</span></dd>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector. It can't be a {{cssxref("&lt;percentage&gt;")}} value; in that case the property containing the transform is considered invalid.</dd>
 </dl>
 
 <table class="standard-table">
