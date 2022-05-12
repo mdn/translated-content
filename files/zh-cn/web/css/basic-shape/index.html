@@ -15,7 +15,7 @@ translation_of: Web/CSS/basic-shape
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<h2 id="语法"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>语法</strong></font></h2>
+<h2 id="语法"><strong>语法</strong></h2>
 
 <p><strong><code>&lt;basic-shape&gt;</code></strong>数据类型可以由下列函数得到。</p>
 
@@ -84,7 +84,7 @@ translation_of: Web/CSS/basic-shape
 
 <p><code>farthest-side</code> 取图形中心到盒模型最远一条边之间的距离作为值。对于圆形，该值在任意维度都是最远的一条边。对于椭圆形，该值为半径维度最远的一条边。</p>
 
-<h2 id="基础图形的计算值"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>基础图形的计算值</strong></font></h2>
+<h2 id="基础图形的计算值"><strong>基础图形的计算值</strong></h2>
 
 <p>在 <code>&lt;basic-shape&gt;</code> 函数中的值通过指定的方式计算， 但是有下列情况会出现错误：</p>
 
@@ -94,7 +94,7 @@ translation_of: Web/CSS/basic-shape
  <li>一个在 <code>inset()</code>中的 <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> 值，往往被当作一个扩展列表来计算，所有八个 {{cssxref("length")}}值或百分比代表的值都是如此。</li>
 </ul>
 
-<h2 id="基础图形的插值"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>基础图形的插值</strong></font></h2>
+<h2 id="基础图形的插值"><strong>基础图形的插值</strong></h2>
 
 <p> <code>&lt;basic-shape&gt;</code> 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" title="The &lt;length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>、<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/percentage" title="The &lt;percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size.">&lt;percentage&gt;</a></code>、 或 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" title="The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used anywhere a &lt;length>, &lt;frequency>, &lt;angle>, &lt;time>, &lt;number>, or &lt;integer> is allowed."><code>calc()</code></a> 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 <code>nonzero</code> 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。</p>
 
@@ -106,7 +106,7 @@ translation_of: Web/CSS/basic-shape
  <li>其余状况将不会出现插值。</li>
 </ul>
 
-<h2 id="示例"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>示例</strong></font></h2>
+<h2 id="示例"><strong>示例</strong></h2>
 
 <h3 id="动画多边形">动画多边形</h3>
 
@@ -139,7 +139,7 @@ translation_of: Web/CSS/basic-shape
 
 <p>{{EmbedLiveSample('动画多边形','340', '340')}}</p>
 
-<h2 id="规格"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>规格</strong></font></h2>
+<h2 id="规格"><strong>规格</strong></h2>
 
 <table class="standard-table">
  <thead>
@@ -158,7 +158,7 @@ translation_of: Web/CSS/basic-shape
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>浏览器兼容性</strong></font></h2>
+<h2 id="浏览器兼容性"><strong>浏览器兼容性</strong></h2>
 
 <p>{{Compat("css.types.basic-shape")}}</p>
 
