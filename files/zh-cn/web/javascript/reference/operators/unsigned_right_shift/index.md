@@ -1,69 +1,64 @@
 ---
-title: Unsigned right shift (>>>)
+title: 无符号右移运算符（>>>）
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
+tags:
+  - Bitwise operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>unsigned right shift operator (<code>&gt;&gt;&gt;</code>)</strong> (zero-fill right shift) shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from the left. The sign bit becomes <code>0</code>, so the result is always non-negative. Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.</p>
+**无符号右移运算符（>>>）**（零填充右移）将第一个操作数向右移动指定（二进制）位数。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>a</var> &gt;&gt;&gt; <var>b</var></code>
-</pre>
+```js
+a >>> b
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>This operator shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from the left. The sign bit becomes <code>0</code>, so the result is always non-negative. Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.</p>
+该运算符将第一个操作数向右移动指定的位数。右移的多余位将被丢弃。值为零的比特将从左侧移入。其符号位变为 `0`，因此其表示的结果始终为非负数。与其它按位运算符不同，无符号右移返回无符号 32 位整数。
 
-<p>For non-negative numbers, zero-fill right shift and sign-propagating right shift yield the same result. For example, <code>9 &gt;&gt;&gt; 2</code> yields 2, the same as <code>9 &gt;&gt; 2</code>:</p>
+对于非负数，无符号右移与有符号右移的结果相同。例如，`9 >>> 2` 与 `9 >> 2` 的结果都为 2。
 
-<pre class="brush: js">      9 (base 10): 00000000000000000000000000001001 (base 2)
+```js
+      9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
-9 &gt;&gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
-</pre>
+9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
+```
 
-<p>However, this is not the case for negative numbers. For example, <code>-9 &gt;&gt;&gt; 2</code> yields 1073741821, which is different than <code>-9 &gt;&gt; 2</code> (which yields <code>-3</code>):</p>
+而对于负数，两者的结果则不相同。例如，`-9 >>> 2` 的结果为 1073741821，而 `-9 >> 2` 的结果为 `-3`，与前者不同。
 
-<pre class="brush: js">      -9 (base 10): 11111111111111111111111111110111 (base 2)
+```js
+      -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
--9 &gt;&gt;&gt; 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
-</pre>
+-9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
+```
 
-<h2 id="例子">例子</h2>
+## 示例
 
-<h3 id="Using_unsigned_right_shift">Using unsigned right shift</h3>
+### 使用无符号右移
 
-<pre class="brush: js"> 9 &gt;&gt;&gt; 2; // 2
--9 &gt;&gt;&gt; 2; // 1073741821
-</pre>
+```js
+ 9 >>> 2; // 2
+-9 >>> 2; // 1073741821
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators', 'Bitwise Shift Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("javascript.operators.unsigned_right_shift")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment">Unsigned right shift assignment operator</a></li>
-</ul>
+- [JS 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符)
+- [无符号右移赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
