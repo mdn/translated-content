@@ -237,7 +237,7 @@ req.sendAsBinary(aBody);</pre>
 
 <p>Line 5 uses the <code>sendAsBinary()</code> method to initiate the request.</p>
 
-<p>You can also send binary content by passing an instance of the {{ interface("nsIFileInputStream") }} to <a class="internal" href="/en/XMLHttpRequest#send()" title="/En/XMLHttpRequest#send()"><code>send()</code></a>.  In that case, you don't have to set the Content-Length header yourself, as the information is fetched from the stream automatically:</p>
+<p>You can also send binary content by passing an instance of the <code>nsIFileInputStream</code> to <a class="internal" href="/en/XMLHttpRequest#send()" title="/En/XMLHttpRequest#send()"><code>send()</code></a>.  In that case, you don't have to set the Content-Length header yourself, as the information is fetched from the stream automatically:</p>
 
 <pre class="script">// Make a stream from a file.
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
@@ -303,7 +303,7 @@ function transferCanceled(evt) {
 }
 </pre>
 
-<p>Lines 3-6 add event listeners for the various events that are sent while performing a data transfer using <code>XMLHttpRequest</code>.  See {{ interface("nsIDOMProgressEvent") }} and {{ interface("nsIXMLHttpRequestEventTarget") }} for details on these events.</p>
+<p>Lines 3-6 add event listeners for the various events that are sent while performing a data transfer using <code>XMLHttpRequest</code>.  See <code>nsIDOMProgressEvent</code> and <code>nsIXMLHttpRequestEventTarget</code> for details on these events.</p>
 
 <div class="note">Note: You need to add the event listeners before calling <code>open()</code> on the request.  Otherwise the progress events will not fire.</div>
 

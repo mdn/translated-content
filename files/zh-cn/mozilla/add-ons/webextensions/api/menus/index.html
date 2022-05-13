@@ -59,57 +59,57 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 <p>你可以使用以下代码创建一个这样的子菜单：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  id<span class="punctuation token">:</span> <span class="string token">"remove-me"</span><span class="punctuation token">,</span>
-  title<span class="punctuation token">:</span> browser<span class="punctuation token">.</span>i18n<span class="punctuation token">.</span><span class="function token">getMessage</span><span class="punctuation token">(</span><span class="string token">"menuItemRemoveMe"</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-  contexts<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"all"</span><span class="punctuation token">]</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.menus.create({
+  id: "remove-me",
+  title: browser.i18n.getMessage("menuItemRemoveMe"),
+  contexts: ["all"]
+}, onCreated);
 
-browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  id<span class="punctuation token">:</span> <span class="string token">"separator-1"</span><span class="punctuation token">,</span>
-  type<span class="punctuation token">:</span> <span class="string token">"separator"</span><span class="punctuation token">,</span>
-  contexts<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"all"</span><span class="punctuation token">]</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span>
+browser.menus.create({
+  id: "separator-1",
+  type: "separator",
+  contexts: ["all"]
+}, onCreated);
 
-browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  id<span class="punctuation token">:</span> <span class="string token">"greenify"</span><span class="punctuation token">,</span>
-  type<span class="punctuation token">:</span> <span class="string token">"radio"</span><span class="punctuation token">,</span>
-  title<span class="punctuation token">:</span> browser<span class="punctuation token">.</span>i18n<span class="punctuation token">.</span><span class="function token">getMessage</span><span class="punctuation token">(</span><span class="string token">"menuItemGreenify"</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-  contexts<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"all"</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-  checked<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-  icons<span class="punctuation token">:</span> <span class="punctuation token">{</span>
-    <span class="string token">"16"</span><span class="punctuation token">:</span> <span class="string token">"icons/paint-green-16.png"</span><span class="punctuation token">,</span>
-    <span class="string token">"32"</span><span class="punctuation token">:</span> <span class="string token">"icons/paint-green-32.png"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span>
+browser.menus.create({
+  id: "greenify",
+  type: "radio",
+  title: browser.i18n.getMessage("menuItemGreenify"),
+  contexts: ["all"],
+  checked: true,
+  icons: {
+    "16": "icons/paint-green-16.png",
+    "32": "icons/paint-green-32.png"
+  }
+}, onCreated);
 
-browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  id<span class="punctuation token">:</span> <span class="string token">"bluify"</span><span class="punctuation token">,</span>
-  type<span class="punctuation token">:</span> <span class="string token">"radio"</span><span class="punctuation token">,</span>
-  title<span class="punctuation token">:</span> browser<span class="punctuation token">.</span>i18n<span class="punctuation token">.</span><span class="function token">getMessage</span><span class="punctuation token">(</span><span class="string token">"menuItemBluify"</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-  contexts<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"all"</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-  checked<span class="punctuation token">:</span> <span class="keyword token">false</span><span class="punctuation token">,</span>
-  icons<span class="punctuation token">:</span> <span class="punctuation token">{</span>
-    <span class="string token">"16"</span><span class="punctuation token">:</span> <span class="string token">"icons/paint-blue-16.png"</span><span class="punctuation token">,</span>
-    <span class="string token">"32"</span><span class="punctuation token">:</span> <span class="string token">"icons/paint-blue-32.png"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span>
+browser.menus.create({
+  id: "bluify",
+  type: "radio",
+  title: browser.i18n.getMessage("menuItemBluify"),
+  contexts: ["all"],
+  checked: false,
+  icons: {
+    "16": "icons/paint-blue-16.png",
+    "32": "icons/paint-blue-32.png"
+  }
+}, onCreated);
 
-browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  id<span class="punctuation token">:</span> <span class="string token">"separator-2"</span><span class="punctuation token">,</span>
-  type<span class="punctuation token">:</span> <span class="string token">"separator"</span><span class="punctuation token">,</span>
-  contexts<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"all"</span><span class="punctuation token">]</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span>
+browser.menus.create({
+  id: "separator-2",
+  type: "separator",
+  contexts: ["all"]
+}, onCreated);
 
-<span class="keyword token">var</span> checkedState <span class="operator token">=</span> <span class="keyword token">true</span><span class="punctuation token">;</span>
+var checkedState = true;
 
-browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  id<span class="punctuation token">:</span> <span class="string token">"check-uncheck"</span><span class="punctuation token">,</span>
-  type<span class="punctuation token">:</span> <span class="string token">"checkbox"</span><span class="punctuation token">,</span>
-  title<span class="punctuation token">:</span> browser<span class="punctuation token">.</span>i18n<span class="punctuation token">.</span><span class="function token">getMessage</span><span class="punctuation token">(</span><span class="string token">"menuItemUncheckMe"</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-  contexts<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"all"</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-  checked<span class="punctuation token">:</span> checkedState
-<span class="punctuation token">}</span><span class="punctuation token">,</span> onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.menus.create({
+  id: "check-uncheck",
+  type: "checkbox",
+  title: browser.i18n.getMessage("menuItemUncheckMe"),
+  contexts: ["all"],
+  checked: checkedState
+}, onCreated);</code></pre>
 
 <h2 id="类型">类型</h2>
 

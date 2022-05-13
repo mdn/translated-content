@@ -10,7 +10,7 @@ tags:
   - version
 translation_of: Web/API/Document/xmlVersion
 ---
-{{APIRef("DOM")}}{{ obsolete_header("10.0") }}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 Renvoie le numéro de version comme spécifié dans la déclaration XML (par exemple, `<?xml version="1.0"?>`) ou "1.0" si la déclaration est absente.
 

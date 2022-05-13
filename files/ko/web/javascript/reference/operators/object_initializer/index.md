@@ -46,7 +46,7 @@ let o = {
 let a = 'foo', b = 42, c = {};
 let o = {a, b, c}
 
-// 프로퍼티명 약식 (ES2015)
+// 메서드명 약식 (ES2015)
 let o = {
   property(parameters) {}
 }
