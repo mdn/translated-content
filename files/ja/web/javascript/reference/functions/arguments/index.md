@@ -83,7 +83,7 @@ console.log(typeof arguments); // 'object'
 個々の引数の型は、 `arguments` に添字を使用して判断することができます。
 
 ```js
-console.log(typeof arguments[0]); // 最初の引数の型を返す</pre>
+console.log(typeof arguments[0]); // 最初の引数の型を返す
 ```
 
 ## プロパティ
