@@ -11,7 +11,7 @@ La propiedad no estándar de [CSS](/es/docs/Web/CSS) **_`zoom`_** se puede usar 
 ## Sintaxis
 
 ```css
-/* Keyword values */
+/* Valores de palabras clave */
 zoom: normal;
 zoom: reset;
 
