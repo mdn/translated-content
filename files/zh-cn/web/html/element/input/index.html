@@ -292,7 +292,7 @@ translation_of: Web/HTML/Element/input
  </tbody>
 </table>
 
-<h2 id="属性"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.33333rem; letter-spacing: -0.00278rem;'>属性</span></h2>
+<h2 id="属性">属性</h2>
 
 <p><code>&lt;input&gt;</code>元素由于拥有诸多属性而异常强大，其中前文举例说明的{{htmlattrxref("type", "input")}}属性尤其重要。由于所有<code>&lt;input&gt;</code>元素，无论是哪种 <code>type</code> ，都基于{{domxref("HTMLInputElement")}}接口，所以理论上说，它们共享一套相同的属性。但实际上大部分属性只作用于特定一组 <code>type</code>。此外，一些属性作用于<code>&lt;input&gt;</code>的方式取决于<code>&lt;input&gt;</code>的<code>type</code>属性，不同的<code>type</code>有不同的效果。</p>
 
@@ -555,7 +555,7 @@ translation_of: Web/HTML/Element/input
  <p>Introduced in the HTML Media Capture specification and valid for the <code>file</code> input type only, the <code>capture</code> attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with <code>file</code> upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
  <dt>{{ htmlattrdef("checked") }}</dt>
- <dd>如果该元素的<strong>type</strong>属性的值为<span style="font-family: courier new;">radio 或者</span><span style="font-family: courier new;">checkbox</span>,则该布尔属性的存在与否表明了该控件是否是默认选择状态。
+ <dd>如果该元素的<strong>type</strong>属性的值为radio 或者checkbox,则该布尔属性的存在与否表明了该控件是否是默认选择状态。
  <p>If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/zh-CN/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
  <div class="note">
@@ -578,7 +578,7 @@ translation_of: Web/HTML/Element/input
  <p>When the form above is submitted, the input cause both the <code>name</code> / <code>value</code> pair of <code>fruit=cherry</code> and the <code>dirname</code> / direction pair of <code>fruit.dir=ltr</code> to be sent.</p>
  </dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  <span style="font-family: courier new;">hidden</span>，此属性将被忽略。</dd>
+ <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</dd>
 </dl>
 
 <div class="note"><strong>Note:</strong> Although not required by the specification, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</div>
@@ -614,7 +614,7 @@ translation_of: Web/HTML/Element/input
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("height") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image，这个属性定义了按钮图片的高度。</span></dd>
+ <dd>如果<strong>type</strong>属性的值是image，这个属性定义了按钮图片的高度。</dd>
  <dt id="htmlattrdefheight">{{htmlattrdef("id")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See the <a href="#labels">the label element</a> below.</p>
@@ -680,7 +680,7 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("max") }} {{ HTMLVersionInline(5) }} </dt>
  <dd>此项目的最大（数字或日期时间）值，且不得小于其最小值（<strong>min</strong>属性）值。</dd>
  <dt>{{ htmlattrdef("maxlength") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>如果 <strong>type</strong> 的值是  <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">email</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">password</span>, <span style="font-family: courier new;">tel</span>, 或 <span style="font-family: courier new;">url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 </span><strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注:ie10+</dd>
+ <dd>如果 <strong>type</strong> 的值是  text, email, search, password, tel, 或 url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 <strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注:ie10+</dd>
  <dt>{{ htmlattrdef("min") }} {{ HTMLVersionInline(5) }} </dt>
  <dd>此项目的最小（数字或日期时间）值，且不得大于其最大值（最大属性）值。</dd>
  <dt id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</dt>
@@ -694,25 +694,25 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("name") }}</dt>
  <dd>控件的名称，与表单数据一起提交。</dd>
  <dt>{{ htmlattrdef("pattern") }}{{ HTMLVersionInline(5) }}</dt>
- <dd>检查控件值的正则表达式.。pattern 必须匹配整个值，而不仅仅是某些子集.。使用 title 属性来描述帮助用户的模式.。当类型属性的值为<span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> 或 <span style="font-family: courier new;">email</span>时，此属性适用，否则将被忽略。译者注:ie10+</dd>
+ <dd>检查控件值的正则表达式.。pattern 必须匹配整个值，而不仅仅是某些子集.。使用 title 属性来描述帮助用户的模式.。当类型属性的值为text, search, tel, url 或 email时，此属性适用，否则将被忽略。译者注:ie10+</dd>
  <dt>{{ htmlattrdef("placeholder") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅适用于当<strong>type</strong> 属性为<span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> or <span style="font-family: courier new;">email 时</span>; 否则会被忽略。
+ <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅适用于当<strong>type</strong> 属性为text, search, tel, url or email 时; 否则会被忽略。
  <div class="note"><strong>Note:</strong> 请不要用<code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同:  {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而<code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见， 所以当没有它时也需要保证 form 能被理解。</div>
  </dd>
  <dt>{{ htmlattrdef("readonly") }}</dt>
  <dd>这个布尔属性用于指明用户无法修改控件的值。
- <p>{{ HTMLVersionInline(5) }} 如果控件的 <strong>type</strong> 属性为<span style="font-family: courier new;">hidden</span>, <span style="font-family: courier new;">range</span>, <span style="font-family: courier new;">color</span>, <span style="font-family: courier new;">checkbox</span>, <span style="font-family: courier new;">radio</span>, <span style="font-family: courier new;">file 或 </span>type 时，此属性会被忽略。</p>
+ <p>{{ HTMLVersionInline(5) }} 如果控件的 <strong>type</strong> 属性为hidden, range, color, checkbox, radio, file 或 type 时，此属性会被忽略。</p>
  </dd>
  <dt>{{ htmlattrdef("required") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden,image 或者按钮类型 (submit,reset,button) 时不可使用. {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
  <dt>{{ htmlattrdef("selectionDirection") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.</dd>
  <dt>{{ htmlattrdef("size") }}</dt>
- <dd>控件的初始大小。以像素为单位。但当<strong>type</strong>  属性为<span style="font-family: courier new;">text</span> 或 <span style="font-family: courier new;">password 时</span>, 它表示输入的字符的长度。从 HTML5 开始， 此属性仅适用于当 <strong>type</strong> 属性为 <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span>, <span style="font-family: courier new;">email</span>,或 <span style="font-family: courier new;">password；</span>否则会被忽略。 此外，它的值必须大于 0。 如果未指定大小，则使用默认值 20。 HTML5 概述 "用户代理应该确保至少大部分字符是可见的", 但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。 。</dd>
+ <dd>控件的初始大小。以像素为单位。但当<strong>type</strong>  属性为text 或 password 时, 它表示输入的字符的长度。从 HTML5 开始， 此属性仅适用于当 <strong>type</strong> 属性为 text, search, tel, url, email,或 password；否则会被忽略。 此外，它的值必须大于 0。 如果未指定大小，则使用默认值 20。 HTML5 概述 "用户代理应该确保至少大部分字符是可见的", 但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。 。</dd>
  <dt>{{ htmlattrdef("spellcheck") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>将此属性的值设置为<code>true</code>表示元素需要检查其拼写和语法。值<code>default</code> 表示该元素将根据默认行为进行操作，可能基于父元素自己的<code>spellcheck</code>值。值<code>false</code>表示不应该检查元素</dd>
  <dt>{{ htmlattrdef("src") }}</dt>
- <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image</span>, 这个属性指定了按钮图片的路径; 否则它被忽视。</dd>
+ <dd>如果<strong>type</strong>属性的值是image, 这个属性指定了按钮图片的路径; 否则它被忽视。</dd>
  <dt>{{ htmlattrdef("step") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>使用<strong>min</strong>和<strong>max</strong> 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。</dd>
  <dt>{{ htmlattrdef("tabindex") }} element-specific in {{ HTMLVersionInline(4) }}, global in {{ HTMLVersionInline(5) }}</dt>
@@ -726,9 +726,9 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("usemap") }} {{ HTMLVersionInline(4) }} only, {{ obsoleteGeneric("inline", "HTML5") }}</dt>
  <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称。</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值。此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
+ <dd>控件的初始值。此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code>。注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
  <dt>{{ htmlattrdef("width") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image，这个属性定义了按钮图片的宽度。</span></dd>
+ <dd>如果<strong>type</strong>属性的值是image，这个属性定义了按钮图片的宽度。</dd>
  <dt>
  <h3 id="非标准_&lt;input>_属性">非标准 <code>&lt;input&gt;</code> 属性</h3>
  </dt>
@@ -1210,25 +1210,25 @@ nameInput.addEventListener('invalid', () =&gt; {
   <tr>
    <td><a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element" hreflang="en" lang="en" rel="noopener">HTML Living Standard<br>
     <small lang="en-US">The definition of '&lt;input&gt;' in that specification.</small></a></td>
-   <td><span class="spec-Living">Living Standard</span></td>
+   <td>Living Standard</td>
    <td></td>
   </tr>
   <tr>
    <td><a class="external" href="https://w3c.github.io/html-media-capture/#the-capture-attribute" hreflang="en" lang="en" rel="noopener">HTML Media Capture<br>
     <small lang="en-US">The definition of 'capture attribute' in that specification.</small></a></td>
-   <td><span class="spec-REC">Recommendation</span></td>
+   <td>Recommendation</td>
    <td>Adds the <code>capture</code> attribute</td>
   </tr>
   <tr>
    <td><a class="external" href="https://www.w3.org/TR/html52/sec-forms.html#the-input-element" hreflang="en" lang="en" rel="noopener">HTML5<br>
     <small lang="en-US">The definition of '&lt;input&gt;' in that specification.</small></a></td>
-   <td><span class="spec-REC">Recommendation</span></td>
+   <td>Recommendation</td>
    <td></td>
   </tr>
   <tr>
    <td><a class="external" href="https://www.w3.org/TR/html401/interact/forms.html#h-17.4" hreflang="en" lang="en" rel="noopener">HTML 4.01 Specification<br>
     <small lang="en-US">The definition of '&lt;form&gt;' in that specification.</small></a></td>
-   <td><span class="spec-REC">Recommendation</span></td>
+   <td>Recommendation</td>
    <td></td>
   </tr>
  </tbody>
@@ -1267,585 +1267,585 @@ nameInput.addEventListener('invalid', () =&gt; {
  <thead>
   <tr class="bc-platforms">
    <td></td>
-   <th class="bc-platform-desktop" colspan="6"><span>Desktop</span></th>
-   <th class="bc-platform-mobile" colspan="6"><span>Mobile</span></th>
+   <th class="bc-platform-desktop" colspan="6">Desktop</th>
+   <th class="bc-platform-mobile" colspan="6">Mobile</th>
   </tr>
   <tr class="bc-browsers">
    <td></td>
-   <th class="bc-browser-chrome"><span class="bc-head-icon-chrome bc-head-txt-label">Chrome</span></th>
-   <th class="bc-browser-edge"><span class="bc-head-icon-edge bc-head-txt-label">Edge</span></th>
-   <th class="bc-browser-firefox"><span class="bc-head-icon-firefox bc-head-txt-label">Firefox</span></th>
-   <th class="bc-browser-ie"><span class="bc-head-icon-ie bc-head-txt-label">Internet Explorer</span></th>
-   <th class="bc-browser-opera"><span class="bc-head-icon-opera bc-head-txt-label">Opera</span></th>
-   <th class="bc-browser-safari"><span class="bc-head-icon-safari bc-head-txt-label">Safari</span></th>
-   <th class="bc-browser-webview_android"><span class="bc-head-icon-webview_android bc-head-txt-label">Android webview</span></th>
-   <th class="bc-browser-chrome_android"><span class="bc-head-icon-chrome_android bc-head-txt-label">Chrome for Android</span></th>
-   <th class="bc-browser-firefox_android"><span class="bc-head-icon-firefox_android bc-head-txt-label">Firefox for Android</span></th>
-   <th class="bc-browser-opera_android"><span class="bc-head-icon-opera_android bc-head-txt-label">Opera for Android</span></th>
-   <th class="bc-browser-safari_ios"><span class="bc-head-icon-safari_ios bc-head-txt-label">Safari on iOS</span></th>
-   <th class="bc-browser-samsunginternet_android"><span class="bc-head-icon-samsunginternet_android bc-head-txt-label">Samsung Internet</span></th>
+   <th class="bc-browser-chrome">Chrome</th>
+   <th class="bc-browser-edge">Edge</th>
+   <th class="bc-browser-firefox">Firefox</th>
+   <th class="bc-browser-ie">Internet Explorer</th>
+   <th class="bc-browser-opera">Opera</th>
+   <th class="bc-browser-safari">Safari</th>
+   <th class="bc-browser-webview_android">Android webview</th>
+   <th class="bc-browser-chrome_android">Chrome for Android</th>
+   <th class="bc-browser-firefox_android">Firefox for Android</th>
+   <th class="bc-browser-opera_android">Opera for Android</th>
+   <th class="bc-browser-safari_ios">Safari on iOS</th>
+   <th class="bc-browser-samsunginternet_android">Samsung Internet</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <th scope="row"><code>input</code></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/button"><code>type="button"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 18</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1.0</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 18</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1.0</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/checkbox"><code>type="checkbox"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/color"><code>type="color"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 20</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 14</td>
-   <td class="bc-supports-yes bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 29
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 20</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 14</td>
+   <td class="bc-supports-yes bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 29
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect1">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 29
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 29
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Firefox doesn't yet support inputs of type <code>color</code> on Windows Touch.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Firefox doesn't yet support inputs of type <code>color</code> on Windows Touch.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12.1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4.4</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 25</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 27</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12.2</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1.5</td>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12.1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4.4</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 25</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 27</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12.2</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1.5</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/date"><code>type="date"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 20</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 57</td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-no bc-browser-safari bc-has-history"><span class="bc-browser-name">Safari</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 20</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 57</td>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-no bc-browser-safari bc-has-history">Safari<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect2">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> The input type is recognized, but there is no date-specific control. See <a class="external" href="https://webkit.org/b/119175" rel="noopener">bug 119175</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> The input type is recognized, but there is no date-specific control. See <a class="external" href="https://webkit.org/b/119175" rel="noopener">bug 119175</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 57</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 5</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 57</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 5</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/datetime-local"><code>type="datetime-local"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 20</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-no bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 20</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-no bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect3">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> See <a class="external" href="https://bugzil.la/888320" rel="noopener">bug 888320</a> and <a class="external" href="https://wiki.mozilla.org/TPE_DOM/Date_time_input_types" rel="noopener">TPE DOM/Date time input types</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> See <a class="external" href="https://bugzil.la/888320" rel="noopener">bug 888320</a> and <a class="external" href="https://wiki.mozilla.org/TPE_DOM/Date_time_input_types" rel="noopener">TPE DOM/Date time input types</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-no bc-browser-safari bc-has-history"><span class="bc-browser-name">Safari</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-no bc-browser-safari bc-has-history">Safari<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect4">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> The input type is recognized, but there is no date-specific control. See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> The input type is recognized, but there is no date-specific control. See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/email"><code>type="email"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 5</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-unknown bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr title="Compatibility unknown; please update this."> ? </abbr></td>
-   <td class="bc-supports-unknown bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr title="Compatibility unknown; please update this."> ? </abbr></td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios bc-has-history"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 3.1
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 5</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-unknown bc-browser-webview_android">WebView Android<abbr title="Compatibility unknown; please update this."> ? </abbr></td>
+   <td class="bc-supports-unknown bc-browser-chrome_android">Chrome Android<abbr title="Compatibility unknown; please update this."> ? </abbr></td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios bc-has-history">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 3.1
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect5">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 3.1
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 3.1
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Doesn't do validation, but instead offers a custom 'email' keyboard, which is designed to make entering email addresses easier.</dd>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> The custom 'email' keyboard does not provide a comma key, so users cannot enter multiple email addresses.</dd>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Automatically applies a default style of <code>opacity: 0.4</code> to disable textual <code>&lt;input&gt;</code> elements, including those of type 'email'. Other major browsers don't currently share this particular default style.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Doesn't do validation, but instead offers a custom 'email' keyboard, which is designed to make entering email addresses easier.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> The custom 'email' keyboard does not provide a comma key, so users cannot enter multiple email addresses.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Automatically applies a default style of <code>opacity: 0.4</code> to disable textual <code>&lt;input&gt;</code> elements, including those of type 'email'. Other major browsers don't currently share this particular default style.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-unknown bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr title="Compatibility unknown; please update this."> ? </abbr></td>
+   <td class="bc-supports-unknown bc-browser-samsunginternet_android">Samsung Internet Android<abbr title="Compatibility unknown; please update this."> ? </abbr></td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/file"><code>type="file"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect6">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 1
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see <a class="external" href="https://bugzil.la/1384030" rel="noopener">bug 1384030</a>).</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see <a class="external" href="https://bugzil.la/1384030" rel="noopener">bug 1384030</a>).</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/hidden"><code>type="hidden"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 2</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 2</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/image"><code>type="image"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-unknown bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr title="Compatibility unknown; please update this."> ? </abbr></td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-unknown bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr title="Compatibility unknown; please update this."> ? </abbr></td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-unknown bc-browser-chrome_android">Chrome Android<abbr title="Compatibility unknown; please update this."> ? </abbr></td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-unknown bc-browser-samsunginternet_android">Samsung Internet Android<abbr title="Compatibility unknown; please update this."> ? </abbr></td>
   </tr>
   <tr>
    <th scope="row"><code>x-moz-errormessage</code> attribute
-    <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span></abbr><abbr class="only-icon" title="Deprecated. Not for use in new websites."><span>Deprecated</span></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span></abbr></div>
+    <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future.">Experimental</abbr><abbr class="only-icon" title="Deprecated. Not for use in new websites.">Deprecated</abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support.">Non-standard</abbr></div>
    </th>
-   <td class="bc-supports-no bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr>? — 66</td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr>? — 66</td>
-   <td class="bc-supports-no bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-no bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
+   <td class="bc-supports-no bc-browser-chrome">Chrome<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-edge">Edge<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-firefox">Firefox<abbr class="bc-level-no only-icon" title="No support"> No support </abbr>? — 66</td>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-opera">Opera<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-safari">Safari<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-webview_android">WebView Android<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-chrome_android">Chrome Android<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-firefox_android">Firefox Android<abbr class="bc-level-no only-icon" title="No support"> No support </abbr>? — 66</td>
+   <td class="bc-supports-no bc-browser-opera_android">Opera Android<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-safari_ios">Safari iOS<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-no bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/month"><code>type="month"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 20</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-no bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 20</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-no bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect7">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> See <a class="external" href="https://bugzil.la/888320" rel="noopener">bug 888320</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> See <a class="external" href="https://bugzil.la/888320" rel="noopener">bug 888320</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-no bc-browser-safari bc-has-history"><span class="bc-browser-name">Safari</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-no bc-browser-safari bc-has-history">Safari<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect8">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> The input type is recognized, but there is no month-specific control. See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> The input type is recognized, but there is no month-specific control. See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-no bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-no bc-browser-firefox_android">Firefox Android<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/number"><code>type="number"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/password"><code>type="password"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 2</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 2</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-unknown bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr title="Compatibility unknown; please update this."> ? </abbr></td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 2</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 2</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-unknown bc-browser-webview_android">WebView Android<abbr title="Compatibility unknown; please update this."> ? </abbr></td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/radio"><code>type="radio"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/range"><code>type="range"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 23</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 3.1</td>
-   <td class="bc-supports-yes bc-browser-webview_android bc-has-history"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4.4
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 23</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 3.1</td>
+   <td class="bc-supports-yes bc-browser-webview_android bc-has-history">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4.4
     <div class="bc-icons"></div>
 
     <section class="bc-history" id="sect9">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 4.4
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4.4
 
      <div class="bc-icons"></div>
      </dt>
      <dd></dd>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr>2 — 4.4
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr>2 — 4.4
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Pre-Chromium Android WebView recognizes the <code>range</code> type, but doesn't implement a range-specific control.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Pre-Chromium Android WebView recognizes the <code>range</code> type, but doesn't implement a range-specific control.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 57</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 52</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 5.1</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 7.0</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 57</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 52</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 5.1</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 7.0</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/reset"><code>type="reset"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect10">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 1
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android bc-has-history"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android bc-has-history">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect11">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 4
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/search"><code>type="search"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 5</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10.6</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 5</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 5</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10.6</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 5</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/submit"><code>type="submit"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect12">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 1
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android bc-has-history"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android bc-has-history">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect13">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr> 4
+     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Unlike other browsers, Firefox by default <a class="external" href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing" rel="noopener">persists the dynamic disabled state</a> of a <code>&lt;button&gt;</code> across page loads. Use the <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element/button#attr-autocomplete">autocomplete</a></code> attribute to control this feature.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/tel"><code>type="tel"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/text"><code>type="text"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 4</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 4</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/time"><code>type="time"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 20</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 57</td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-no bc-browser-safari bc-has-history"><span class="bc-browser-name">Safari</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 20</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 57</td>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-no bc-browser-safari bc-has-history">Safari<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect14">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 25</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 57</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1.5</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 25</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 57</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1.5</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/url"><code>type="url"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 1</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-yes bc-browser-firefox"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 10</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-yes bc-browser-safari"><span class="bc-browser-name">Safari</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 1</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-yes bc-browser-firefox">Firefox<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-ie">IE<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 10</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-yes bc-browser-safari">Safari<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Element/input/week"><code>type="week"</code></a></th>
-   <td class="bc-supports-yes bc-browser-chrome"><span class="bc-browser-name">Chrome</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 20</td>
-   <td class="bc-supports-yes bc-browser-edge"><span class="bc-browser-name">Edge</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 12</td>
-   <td class="bc-supports-no bc-browser-firefox bc-has-history"><span class="bc-browser-name">Firefox</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-yes bc-browser-chrome">Chrome<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 20</td>
+   <td class="bc-supports-yes bc-browser-edge">Edge<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 12</td>
+   <td class="bc-supports-no bc-browser-firefox bc-has-history">Firefox<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect15">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> See <a class="external" href="https://bugzil.la/888320" rel="noopener">bug 888320</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> See <a class="external" href="https://bugzil.la/888320" rel="noopener">bug 888320</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-no bc-browser-ie"><span class="bc-browser-name">IE</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No</td>
-   <td class="bc-supports-yes bc-browser-opera"><span class="bc-browser-name">Opera</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> 11</td>
-   <td class="bc-supports-no bc-browser-safari bc-has-history"><span class="bc-browser-name">Safari</span><abbr class="bc-level-no only-icon" title="No support"> <span>No support</span> </abbr> No
-    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+   <td class="bc-supports-no bc-browser-ie">IE<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No</td>
+   <td class="bc-supports-yes bc-browser-opera">Opera<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> 11</td>
+   <td class="bc-supports-no bc-browser-safari bc-has-history">Safari<abbr class="bc-level-no only-icon" title="No support"> No support </abbr> No
+    <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
 
     <section class="bc-history" id="sect16">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support"><span>No support</span> </abbr> No
+     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
-     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr></div>
+     <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
-     <dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span></abbr> See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
+     <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> See <a class="external" href="https://webkit.org/b/200416" rel="noopener">bug 200416</a>.</dd>
     </dl>
     </section>
    </td>
-   <td class="bc-supports-yes bc-browser-webview_android"><span class="bc-browser-name">WebView Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-chrome_android"><span class="bc-browser-name">Chrome Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-firefox_android"><span class="bc-browser-name">Firefox Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-opera_android"><span class="bc-browser-name">Opera Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-safari_ios"><span class="bc-browser-name">Safari iOS</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
-   <td class="bc-supports-yes bc-browser-samsunginternet_android"><span class="bc-browser-name">Samsung Internet Android</span><abbr class="bc-level-yes only-icon" title="Full support"> <span>Full support</span> </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-webview_android">WebView Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-chrome_android">Chrome Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-firefox_android">Firefox Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-opera_android">Opera Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-safari_ios">Safari iOS<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
+   <td class="bc-supports-yes bc-browser-samsunginternet_android">Samsung Internet Android<abbr class="bc-level-yes only-icon" title="Full support"> Full support </abbr> Yes</td>
   </tr>
  </tbody>
 </table>
@@ -1854,19 +1854,19 @@ nameInput.addEventListener('invalid', () =&gt; {
 <h3 class="offscreen" id="Legend">Legend</h3>
 
 <dl>
- <dt><span class="bc-supports bc-supports-yes"><abbr class="bc-level bc-level-yes only-icon" title="Full support"><span>Full support</span> </abbr></span></dt>
+ <dt><abbr class="bc-level bc-level-yes only-icon" title="Full support">Full support </abbr></dt>
  <dd>Full support</dd>
- <dt><span class="bc-supports bc-supports-no"><abbr class="bc-level bc-level-no only-icon" title="No support"><span>No support</span> </abbr></span></dt>
+ <dt><abbr class="bc-level bc-level-no only-icon" title="No support">No support </abbr></dt>
  <dd>No support</dd>
- <dt><span class="bc-supports bc-supports-unknown"><abbr class="bc-level bc-level-unknown only-icon" title="Compatibility unknown"><span>Compatibility unknown</span> </abbr></span></dt>
+ <dt><abbr class="bc-level bc-level-unknown only-icon" title="Compatibility unknown">Compatibility unknown </abbr></dt>
  <dd>Compatibility unknown</dd>
- <dt><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental. Expect behavior to change in the future.</span></abbr></dt>
+ <dt><abbr class="only-icon" title="Experimental. Expect behavior to change in the future.">Experimental. Expect behavior to change in the future.</abbr></dt>
  <dd>Experimental. Expect behavior to change in the future.</dd>
- <dt><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard. Expect poor cross-browser support.</span></abbr></dt>
+ <dt><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support.">Non-standard. Expect poor cross-browser support.</abbr></dt>
  <dd>Non-standard. Expect poor cross-browser support.</dd>
- <dt><abbr class="only-icon" title="Deprecated. Not for use in new websites."><span>Deprecated. Not for use in new websites.</span></abbr></dt>
+ <dt><abbr class="only-icon" title="Deprecated. Not for use in new websites.">Deprecated. Not for use in new websites.</abbr></dt>
  <dd>Deprecated. Not for use in new websites.</dd>
- <dt><abbr class="only-icon" title="See implementation notes."><span>See implementation notes.</span></abbr></dt>
+ <dt><abbr class="only-icon" title="See implementation notes.">See implementation notes.</abbr></dt>
  <dd>See implementation notes.</dd>
 </dl>
 </section>

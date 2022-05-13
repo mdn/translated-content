@@ -63,9 +63,9 @@ translation_of: Mozilla/Firefox/Releases/19
 <h3 id="Interface_changes" name="Interface_changes">インタフェースの変更点</h3>
 
 <dl>
- <dt>{{ interface("nsIImgLoadingContent") }}</dt>
- <dd><code>addObserver()</code> メソッドのパラメータ (aObserver) が {{ interface("imgIDecoderObserver") }} から {{ interface("imgINotificationObserver") }} に替わりました。{{ interface("imgINotificationObserver") }} の <code>notify()</code> メソッドはスクリプト可能ではありませんので、{{ interface("imgITools") }} の <code>createScriptedObserver()</code> を使用しなければなりません。</dd>
- <dt>{{ interface("nsIChannel") }}</dt>
+ <dt><code>nsIImgLoadingContent</code></dt>
+ <dd><code>addObserver()</code> メソッドのパラメータ (aObserver) が <code>imgIDecoderObserver</code> から <code>imgINotificationObserver</code> に替わりました。<code>imgINotificationObserver</code> の <code>notify()</code> メソッドはスクリプト可能ではありませんので、<code>imgITools</code> の <code>createScriptedObserver()</code> を使用しなければなりません。</dd>
+ <dt><code>nsIChannel</code></dt>
  <dd><code>contentLength</code> プロパティの型を <code>long</code> から <code>int64_t</code> に変更しました。</dd>
 </dl>
 

@@ -207,15 +207,13 @@ shadow.appendChild(div);</pre>
 
 <pre class="brush: js notranslate">function updateStyle(elem) {
   var shadow = elem.shadowRoot;
-  var childNodes = shadow.childNodes;
-  for(var i = 0; i &lt; childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
-      childNodes[i].textContent = 'div {' +
-                          ' width: ' + elem.getAttribute('l') + 'px;' +
-                          ' height: ' + elem.getAttribute('l') + 'px;' +
-                          ' background-color: ' + elem.getAttribute('c');
+  shadow.querySelector("style").textContent = `
+    div {
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
-  }
+  `;
 }</pre>
 
 <p>实际的更新操作是在生命周期的回调函数中处理的，我们在构造函数中设定类这些回调函数。当元素插入到DOM中时，<code>connectedCallback()</code>函数将会执行 — 在该函数中，我们执行<code>updateStyle()</code> 函数来确保方块按照定义来显示；</p>
@@ -242,7 +240,7 @@ adoptedCallback() {
   updateStyle(this);
 }</pre>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">需要注意的是，如果需要在元素属性变化后，触发 </span></font>attributeChangedCallback()</code>回调函数，你必须监听这个属性。这可以通过定义<code>observedAttributes()</code> get函数来实现，<code>observedAttributes()</code>函数体内包含一个 return语句，返回一个数组，包含了需要监听的属性名称：</p>
+<p>需要注意的是，如果需要在元素属性变化后，触发<code>attributeChangedCallback()</code>回调函数，你必须监听这个属性。这可以通过定义<code>observedAttributes()</code> get函数来实现，<code>observedAttributes()</code>函数体内包含一个 return语句，返回一个数组，包含了需要监听的属性名称：</p>
 
 <pre class="brush: js notranslate">static get observedAttributes() {return ['w', 'l']; }</pre>
 

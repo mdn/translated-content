@@ -13,21 +13,21 @@ translation_of: Glossary/IIFE
 
 <p>Function 轉換為 expression 形式，並且馬上執行，function scope 內的變數在外面是無法存取的。</p>
 
-<pre class="brush: js"><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<pre class="brush: js">(function () {
     var aName = "Barry";
-<span class="p">})();
+})();
 // Variable name is not accessible from the outside scope
-aName </span>// throws "Uncaught ReferenceError: aName is not defined"
+aName // throws "Uncaught ReferenceError: aName is not defined"
 </pre>
 
 <p>把 IIFE 只配給變數會儲存它的結果，而非 function 本身</p>
 
-<pre class="brush: js"><span class="p">var result = (</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<pre class="brush: js">var result = (function () {
     var name = "Barry";
     return name;
-<span class="p">})();
+})();
 // Immediately creates the output:
-result; // "Barry"</span></pre>
+result; // "Barry"</pre>
 
 <h3 id="其它形式">其它形式</h3>
 

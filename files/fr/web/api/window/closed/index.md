@@ -46,7 +46,7 @@ Dans cette exemple, la fonction `refreshPopupWindow()` appelle une fonction dans
     var popupWindow = null;
 
     function refreshPopupWindow() {
-      if (popupWindow &&&nbsp;!popupWindow.closed) {
+      if (popupWindow && !popupWindow.closed) {
         // Le popup a déjà été ouvert et il l'est encore.
         // On peut donc appeler sa fonction doRefresh().
         popupWindow.doRefresh();

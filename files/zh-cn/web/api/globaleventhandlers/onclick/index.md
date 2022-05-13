@@ -57,7 +57,7 @@ document.getElementById('demo').onclick = function changeContent() {
 
 #### 结果
 
-{{EmbedLiveSample("Detecting_clicks")}}
+{{EmbedLiveSample("监听 click 事件")}}
 
 ### 获取点击的坐标
 
@@ -84,7 +84,7 @@ function inputChange(e) {
 
 #### 结果
 
-{{EmbedLiveSample("Getting_the_coordinates_of_clicks")}}
+{{EmbedLiveSample("获取点击的坐标")}}
 
 ## 规范
 
