@@ -3610,9 +3610,7 @@
 /fr/docs/Web/API/Console.table	/fr/docs/Web/API/Console/table
 /fr/docs/Web/API/Console/erreur	/fr/docs/Web/API/Console/error
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
-/fr/docs/Web/API/DOMLocator	/fr/docs/orphaned/Web/API/DOMLocator
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
-/fr/docs/Web/API/DOMUserData	/fr/docs/orphaned/Web/API/DOMUserData
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate
 /fr/docs/Web/API/DeviceRotationRate/alpha	/fr/docs/Web/API/DeviceMotionEventRotationRate/alpha
@@ -3654,11 +3652,10 @@
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
-/fr/docs/Web/API/DocumentTouch	/fr/docs/orphaned/Web/API/DocumentTouch
-/fr/docs/Web/API/Document_Object_Model/Events	/fr/docs/orphaned/Web/API/Document_Object_Model/Events
+/fr/docs/Web/API/Document_Object_Model/Events	/fr/docs/Learn/JavaScript/Building_blocks/Events
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
-/fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/orphaned/Web/API/Document_Object_Model/Events
+/fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/Learn/JavaScript/Building_blocks/Events
 /fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs	/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /fr/docs/Web/API/Document_Object_Model/Préface	/fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3
 /fr/docs/Web/API/Document_Object_Model/document	/fr/docs/Web/API/Document
@@ -6069,6 +6066,7 @@
 /fr/docs/orphaned/Web/API/ChildNode/before	/fr/docs/Web/API/Element/before
 /fr/docs/orphaned/Web/API/ChildNode/remove	/fr/docs/Web/API/Element/remove
 /fr/docs/orphaned/Web/API/ChildNode/replaceWith	/fr/docs/Web/API/Element/replaceWith
+/fr/docs/orphaned/Web/API/Document_Object_Model/Events	/fr/docs/Learn/JavaScript/Building_blocks/Events
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus

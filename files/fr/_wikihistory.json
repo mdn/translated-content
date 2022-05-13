@@ -42714,32 +42714,6 @@
       "Arzak656"
     ]
   },
-  "orphaned/Web/API/DOMLocator": {
-    "modified": "2019-03-18T21:41:56.748Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/DOMUserData": {
-    "modified": "2019-03-18T21:41:11.030Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/DocumentTouch": {
-    "modified": "2019-03-23T22:50:40.193Z",
-    "contributors": [
-      "loella16",
-      "Hell_Carlito",
-      "enayfuos"
-    ]
-  },
-  "orphaned/Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-18T21:39:20.100Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "orphaned/Web/API/Element/currentStyle": {
     "modified": "2019-03-18T21:32:08.768Z",
     "contributors": [
