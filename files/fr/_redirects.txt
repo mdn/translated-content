@@ -2077,9 +2077,9 @@
 /fr/docs/Indentation_homogène_des_listes	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 /fr/docs/IndexedDB	/fr/docs/Web/API/IndexedDB_API
 /fr/docs/IndexedDB-840092-dup	/fr/docs/Web/API/IndexedDB_API
-/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/IndexedDB/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-/fr/docs/IndexedDB/Concepts_basiques_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/IndexedDB/Concepts_basiques_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Introduction_à_SVG_dans_HTML	/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /fr/docs/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
@@ -3573,7 +3573,7 @@
 /fr/docs/Web/API/API_HTML_Drag_and_Drop	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement	/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /fr/docs/Web/API/API_IndexedDB	/fr/docs/Web/API/IndexedDB_API
-/fr/docs/Web/API/API_IndexedDB/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/Web/API/API_IndexedDB/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 /fr/docs/Web/API/API_IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
@@ -3793,7 +3793,7 @@
 /fr/docs/Web/API/IDBTransaction/onabort	/fr/docs/conflicting/Web/API/IDBTransaction/abort_event_0945f0eeba3f0bcb487692fdcd8d6f40
 /fr/docs/Web/API/IDBTransaction/oncomplete	/fr/docs/conflicting/Web/API/IDBTransaction/complete_event
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/conflicting/Web/API/IDBTransaction/error_event
-/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/Web/API/KeyboardEvent/key/Key_Values	/fr/docs/Web/API/UI_Events/Keyboard_event_key_values
 /fr/docs/Web/API/LocalFileSystem	/fr/docs/conflicting/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
@@ -6072,6 +6072,7 @@
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/Web/API/HTMLElement/tabindex
+/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/orphaned/Web/API/ParentNode	/fr/docs/Web/API/Element
 /fr/docs/orphaned/Web/API/ParentNode/append	/fr/docs/Web/API/Element/append
 /fr/docs/orphaned/Web/API/ParentNode/children	/fr/docs/Web/API/Element/children
