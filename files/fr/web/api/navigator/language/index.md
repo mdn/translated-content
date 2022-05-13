@@ -32,5 +32,5 @@ if (/^en\b/.test(navigator.language)) {
 
 ## Voir aussi
 
-- [`navigator.languages`](/fr/docs/Web/API/navigator/languages)
+- [`navigator.languages`](/fr/docs/Web/API/Navigator/languages)
 - [`navigator`](/fr/docs/Web/API/Navigator)
