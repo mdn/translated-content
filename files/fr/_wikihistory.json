@@ -12074,12 +12074,6 @@
       "morganPolitano"
     ]
   },
-  "Web/API/DOMObject": {
-    "modified": "2019-03-18T21:41:56.899Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/DOMParser": {
     "modified": "2019-03-24T00:00:31.565Z",
     "contributors": [
@@ -18451,12 +18445,6 @@
       "loella16"
     ]
   },
-  "Web/API/TreeWalker/expandEntityReferences": {
-    "modified": "2019-03-18T21:40:21.457Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/TreeWalker/filter": {
     "modified": "2019-03-18T21:40:31.482Z",
     "contributors": [
@@ -19641,12 +19629,6 @@
       "Voulto"
     ]
   },
-  "Web/API/Window/directories": {
-    "modified": "2020-08-26T10:46:42.910Z",
-    "contributors": [
-      "Voulto"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2020-10-15T22:33:30.190Z",
     "contributors": [
@@ -19773,12 +19755,6 @@
       "khalid32",
       "Goofy",
       "Jeuxclic"
-    ]
-  },
-  "Web/API/Window/home": {
-    "modified": "2020-10-15T22:33:52.712Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "Web/API/Window/innerHeight": {

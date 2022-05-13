@@ -3,7 +3,7 @@ title: Document.width
 slug: Web/API/Document/width
 translation_of: Web/API/Document/width
 ---
-{{APIRef("DOM")}} {{Obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 > **Note :** À partir de {{Gecko("6.0")}},` document.width `n'est plus pris en charge. Au lieu de cela, utilisez document.body.clientWidth. Voir {{domxref("element.clientWidth")}}.
 

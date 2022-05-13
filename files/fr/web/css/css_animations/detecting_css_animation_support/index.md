@@ -8,9 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 original_slug: Web/CSS/Animations_CSS/Détecter_la_prise_en_charge_des_animations_CSS
 ---
-{{CSSRef}}{{obsolete_header}}
-
-> **Attention :** Les techniques décrites dans cet article sont obsolètes et peuvent être remplacées par l'utilisation de {{cssxref("@supports")}}.
+{{CSSRef}}
 
 Avec les animations CSS, on peut ajouter des animations sur du contenu, uniquement en utilisant CSS. Toutefois, cette fonctionnalité n'est parfois pas disponible et on souhaiterait alors pouvoir gérer ce cas et appliquer un effet similaire avec JavaScript. Cet article, [basé sur ce billet de Christian Heilmann](https://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/), illustre une technique pour détecter la prise en charge des animations CSS.
 
