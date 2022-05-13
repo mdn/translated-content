@@ -10,7 +10,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 <p>使用此 API 以注册内容脚本。“注册内容脚本”意味着浏览器会将给定的内容脚本插入到每个与给定的 URL 模式相匹配的页面中。</p>
 
-<p>此 API 与 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 的  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">"content_scripts"</a></code> 键非常相似，但  <code>"content_scripts"</code> 键所能注册的内容脚本是固定的，自拓展安装后便不可更改。但<span class="seoSummary">通过 <code>contentScripts</code> API，拓展可以在运行时动态地注册或取消注册脚本。</span></p>
+<p>此 API 与 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 的  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">"content_scripts"</a></code> 键非常相似，但  <code>"content_scripts"</code> 键所能注册的内容脚本是固定的，自拓展安装后便不可更改。但通过 <code>contentScripts</code> API，拓展可以在运行时动态地注册或取消注册脚本。</p>
 
 <p>To use the API, call {{WebExtAPIRef("contentScripts.register()")}} passing in an object defining the scripts to register, the URL patterns, and other options. This returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that is resolved with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object.</p>
 

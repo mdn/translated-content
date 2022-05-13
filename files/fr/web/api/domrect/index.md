@@ -9,7 +9,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRect
 ---
-{{draft}}{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
+{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 Un **`DOMRect`** représente un rectangle.
 

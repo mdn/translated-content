@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 {{JSRef}}
 
-**`BigInt`** は組み込みオブジェクトで、そのコンストラクターは `bigint` {{Glossary("Primitive", "プリミティブ")}} — または **BigInt 値** や単に **BigInt** と呼ばれることもありますが — を返します。これは 2^53 - 1 ([`Number.MAX_SAFE_INTEGER`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)、 `number` {{Glossary("Primitive", "プリミティブ")}} または *Number 値*で表すことができる最大の数) よりも大きな数を表すことができます。 BigInt 値は任意に巨大な整数に使用することができます。
+**`BigInt`** は[プリミティブラッパーオブジェクト](/ja/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)で、{{Glossary("Primitive", "プリミティブ")}}の `bigint` 値、すなわち[大きすぎて](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) `number` {{Glossary("Primitive", "プリミティブ")}}で表すことができない数を、表現したり操作したりするために使用します。
 
 ## 解説
 
@@ -57,7 +57,9 @@ typeof Object(1n) === 'object'  // true
 
 以下の演算子は BigInt 値またはオブジェクトでラップした BigInt 値で使用することができます。
 
-    + * - % **
+```
++ * - % **
+```
 
 [ビット操作演算子](/ja/docs/Web/JavaScript/Reference/Operators)は、同様に利用できますが、 `>>>` (論理的右シフト) は BigInt が常に符号付きなので除外されます。
 
@@ -223,23 +225,47 @@ Number 値と BigInt 値との間の型変換は精度が落ちる可能性が�
 - BigInt 値は、値が 2^53 を超えることが合理的に予想される場合にのみ使用する。
 - BigInt 値と Number 値の間で型変換を行わない。
 
-<h3 id="Cryptography" name="Cryptography">暗号処理</h3>
+### 暗号処理
 
 BigInt で対応している演算は、実行時間が一定ではないので、[タイミング攻撃](https://en.wikipedia.org/wiki/Timing_attack)を受ける可能性があります。したがって、 JavaScript の BigInt は暗号処理での使用には向きません。
 
 ### JSON での使用
 
-[`JSON.stringify()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を BigInt 値に対して使用すると `TypeError` が発生します。 BigInt 値は既定で JSON のシリアライズに対応していないため、ただし、必要であれば独自の `toJSON` メソッドを実装することができます。
+[`JSON.stringify()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を BigInt 値に対して使用すると `TypeError` が発生します。 BigInt 値は既定で JSON のシリアライズに対応していないためです。ただし、 [replacer](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) 引数を `JSON.stringify` で使用すると、 BigInt のプロパティをエラーなしでシリアライズすることができます。
 
 ```js
-BigInt.prototype.toJSON = function() { return this.toString()  }
+function replacer(key, value) {
+  if (key === 'big') {
+    return value.toString();
+  }
+  return value;
+}
+
+const data = {
+  number: 1,
+  big: BigInt('18014398509481982'),
+};
+const stringified = JSON.stringify(data, replacer);
+
+console.log(stringified);
+// ↪ '{"number":1,"big":"18014398509481982"}'
 ```
 
-`JSON.stringify` により、例外が発生する代わりに次のように文字列を生成するようになります。
+長整数になる値が含まれると思われる JSON データがある場合は、 [reviver](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) 引数を `JSON.parse` で使用することで取り扱うことができます。
 
 ```js
-JSON.stringify(BigInt(1))
-// '"1"'
+function reviver(key, value) {
+  if (key === 'big') {
+    return BigInt(value);
+  }
+  return value;
+}
+
+const payload = '{"number":1,"big":"18014398509481982"}';
+const parsed = JSON.parse(payload, reviver);
+
+console.log(parsed);
+// ↪ {number: 1, big: 18014398509481982n}
 ```
 
 ## 例

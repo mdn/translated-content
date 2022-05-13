@@ -14,13 +14,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>通过manifest.json里的关键字<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 来定义浏览器动作的属性：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"browser_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"browser_action": {
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "Whereami?"
+}</code></pre>
 
 <p>必须定义的键是 <code>default_icon</code>.</p>
 
@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>如果不指定弹出框，当用户点击按钮时，点击事件将被发送至扩展，而扩展可用以下函数来捕获 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
 
 <p>如果指定了弹出框，当用户点击按钮时，点击事件将不会被发送，而是显示出弹出框。用户能够通过弹出框进行互动，并且点击框外区域时弹出框会自动关闭。请参看文章 <a href="/en-US/Add-ons/WebExtensions/Popups">Popup </a>来了解更多关于创建和管理弹出框的细节。</p>
 

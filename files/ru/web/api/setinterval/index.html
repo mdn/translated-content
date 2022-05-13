@@ -305,7 +305,7 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
-<p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
+<h3>Inactive tabs</h3>
 
 <p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.</p>
 

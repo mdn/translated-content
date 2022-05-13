@@ -10,7 +10,7 @@ tags:
   - 高级
 translation_of: Web/HTML/CORS_enabled_image
 ---
-<p><span class="seoSummary">HTML 规范中图片有一个 <code>{{ htmlattrxref("crossorigin", "img") }}</code> 属性，结合合适的 <code>{{Glossary("CORS")}}</code> 响应头，就可以实现在画布中使用跨域 <code>{{ HTMLElement("img") }}</code> 元素的图像，就像在原生 <code>{{ HTMLElement("canvas") }}</code> 中使用一样。</span></p>
+<p>HTML 规范中图片有一个 <code>{{ htmlattrxref("crossorigin", "img") }}</code> 属性，结合合适的 <code>{{Glossary("CORS")}}</code> 响应头，就可以实现在画布中使用跨域 <code>{{ HTMLElement("img") }}</code> 元素的图像，就像在原生 <code>{{ HTMLElement("canvas") }}</code> 中使用一样。</p>
 
 <p>查看 <a href="/zh-CN/docs/Web/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS settings attributes</a> 来了解更多 <code>crossorigin</code> 属性的用法。</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/HTML/CORS_enabled_image
 
 <pre class="brush:xml">&lt;IfModule mod_setenvif.c&gt;
     &lt;IfModule mod_headers.c&gt;
-        <span class="nt">&lt;FilesMatch</span> <span class="s">"\.(cur|gif|ico|jpe?g|png|svgz?|webp)$"</span><span class="nt">&gt;</span>
+        &lt;FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$"&gt;
             SetEnvIf Origin ":" IS_CORS
             Header set Access-Control-Allow-Origin "*" env=IS_CORS
         &lt;/FilesMatch&gt;
