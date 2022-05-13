@@ -39,7 +39,7 @@ X-Frame-Options: allow-from https://example.com/
  <dt><code>deny</code></dt>
  <dd>Die Seite kann nicht in einem Frame eingebettet werden, egal welches die aufrufende Webseite ist.</dd>
  <dt><code>sameorigin</code></dt>
- <dd>Die Seite kann nur als Frame eingebettet werden, wenn beide von der gleichen Quellseite (same origin) stammen. Die Spezifikation lässt es Browserherstellern offen, auf welcher Ebene dieser Wert greift: auf höchster Ebene, der nächsthöheren oder der gesamten Kette. Es wird jedoch festgestellt, dass die Option wenig nützlich ist, sofern nicht alle Eltern-Webseiten von der gleichen Quelle stammen (siehe {{bug(725490)}}).  Siehe weiterhin {{anch("Browser compatibility")}} zur Browserunterstützung.</dd>
+ <dd>Die Seite kann nur als Frame eingebettet werden, wenn beide von der gleichen Quellseite (same origin) stammen. Die Spezifikation lässt es Browserherstellern offen, auf welcher Ebene dieser Wert greift: auf höchster Ebene, der nächsthöheren oder der gesamten Kette. Es wird jedoch festgestellt, dass die Option wenig nützlich ist, sofern nicht alle Eltern-Webseiten von der gleichen Quelle stammen (siehe {{bug(725490)}}).  Siehe weiterhin <a href="#browser_compatibility">Browser compatibility</a> zur Browserunterstützung.</dd>
  <dt><code>allow-from <em>uri</em></code></dt>
  <dd>Die Seite lässt sich ausschließlich dann einbetten, wenn die einbettende Seite aus der Quelle <em><code>uri</code></em> stammt. Hinweis: In Firefox besteht hier das gleiche Problem wie bei <code>sameorigin</code> -  die Eltern-Frames werden nicht darauf hin geprüft, ob sie aus der gleichen Quelle stammen.</dd>
 </dl>

@@ -10,7 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLFrameSetElement
 ---
-{{APIRef("HTML DOM")}}{{Obsolete_header}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.
 

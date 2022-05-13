@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <p>此存储系统API基于 <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, 并有少许不同。</p>
 
-<p>为了使用该API，您需要在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>文件包含"storage"<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。每一个浏览器扩展有自己的储存<font face="Consolas, Liberation Mono, Courier, monospace">区域</font>，每一个储存<font face="Consolas, Liberation Mono, Courier, monospace">区域</font>又分为几种不同的存储类型。</p>
+<p>为了使用该API，您需要在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>文件包含"storage"<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。</p>
 
 <p>虽然此API类似于{{domxref("Window.localStorage")}}，但仍建议您不要在插件中使用<code>Window.localStorage。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用</code> localStorage API存储的数据一并清除。而使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a>API存储的数据将会恰当保留。</code></p>
 
@@ -23,14 +23,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <dl>
  <dt>{{WebExtAPIRef("storage.StorageArea")}}</dt>
- <dd>代表存储<font face="Consolas, Liberation Mono, Courier, monospace">区域</font>的对象</dd>
+ <dd>代表存储区域的对象</dd>
  <dt>{{WebExtAPIRef("storage.StorageChange")}}</dt>
- <dd>代表改变一个储存<font face="Consolas, Liberation Mono, Courier, monospace">区域</font>的对象</dd>
+ <dd>代表改变一个储存区域的对象</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">storage有3个属性，每一个代表不同的存储区域。</font></p>
+<p>storage有3个属性，每一个代表不同的存储区域。</p>
 
 <dl>
  <dt>{{WebExtAPIRef("storage.sync")}}</dt>

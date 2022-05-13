@@ -173,10 +173,10 @@ translation_of: Mozilla/Firefox/Releases/10
 <h3 id="インタフェースの変更">インタフェースの変更</h3>
 
 <ul>
- <li>{{ interface("mozISpellCheckingEngine") }} インタフェースおよび {{ interface("nsIEditorSpellCheck") }} インタフェースは、再起動の不要なアドオンがスペルチェッカに辞書を追加できるように更新されました。<strong>注: これを行う方法に関して <a href="/ja/docs/Using_an_External_Spell-checker" title="Using_an_External_Spell-checker">ドキュメントの更新</a> が必要。</strong></li>
+ <li><code>mozISpellCheckingEngine</code> インタフェースおよび <code>nsIEditorSpellCheck</code> インタフェースは、再起動の不要なアドオンがスペルチェッカに辞書を追加できるように更新されました。<strong>注: これを行う方法に関して <a href="/ja/docs/Using_an_External_Spell-checker" title="Using_an_External_Spell-checker">ドキュメントの更新</a> が必要。</strong></li>
  <li>{{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} 属性は削除されました。</li>
- <li><code>nsIDocumentViewer</code> インタフェースは {{ interface("nsIContentViewer") }} に統合されました。</li>
- <li>{{ interface("nsIURIFixup") }} インタフェースに、コンバートする際にプラットフォームの文字コードではなく UTF-8 を使用することを示す <code>FIXUP_FLAG_USE_UTF8</code> フラグが追加されました。</li>
+ <li><code>nsIDocumentViewer</code> インタフェースは <code>nsIContentViewer</code> に統合されました。</li>
+ <li><code>nsIURIFixup</code> インタフェースに、コンバートする際にプラットフォームの文字コードではなく UTF-8 を使用することを示す <code>FIXUP_FLAG_USE_UTF8</code> フラグが追加されました。</li>
 </ul>
 
 <h3 id="プラグインの変更">プラグインの変更</h3>

@@ -33,7 +33,7 @@ translation_of: Web/API/Window/confirm
 
 <p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span> Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). No obstante, hay muy buenas razones para <a href="http://alistapart.com/article/neveruseawarning">evitar el uso de cajas de diálogo para confirmaciones</a>.</p>
 
-<p>Los usuarios de <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> users (e.g. Firefox extensions) deberían usar métodos de {{interface("nsIPromptService")}} en vez de cajas de diálogo.</p>
+<p>Los usuarios de <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> users (e.g. Firefox extensions) deberían usar métodos de <code>nsIPromptService</code> en vez de cajas de diálogo.</p>
 
 <p>A partir de la versión {{CompatChrome(46.0)}} de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor <code>allow-modal</code>.</p>
 

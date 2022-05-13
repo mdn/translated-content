@@ -70,13 +70,13 @@ translation_of: Mozilla/Firefox/Releases/18
 <h3 id="インターフェース">インターフェース</h3>
 
 <dl>
- <dt>{{ interface("nsIStreamListener") }}</dt>
+ <dt><code>nsIStreamListener</code></dt>
  <dd><code>onDataAvailable()の</code>4番目の引数 (aOffset) が unsigned long long 型に変更されました。 ({{bug("784912")}})</dd>
- <dt>{{ interface("nsIUploadChannel") }}</dt>
+ <dt><code>nsIUploadChannel</code></dt>
  <dd><code>setUploadStream()</code> が 2GB を超える content-length をサポートしました。({{bug("790617")}})</dd>
- <dt>{{ interface("nsIEditor") }}</dt>
- <dd><code>addEditorObserver()</code> が削除されました。代わりに <code>setEditorObserver()</code> を使ってください。<code>removeEditorObserver()</code> は {{ interface("nsIEditorObserver") }} パラメータを受け取らなくなります。({{bug("785091")}})</dd>
- <dt>{{ interface("nsIHttpProtocolHandler") }}</dt>
+ <dt><code>nsIEditor</code></dt>
+ <dd><code>addEditorObserver()</code> が削除されました。代わりに <code>setEditorObserver()</code> を使ってください。<code>removeEditorObserver()</code> は <code>nsIEditorObserver</code> パラメータを受け取らなくなります。({{bug("785091")}})</dd>
+ <dt><code>nsIHttpProtocolHandler</code></dt>
  <dd><code>http-on-modify-request</code> オブザーバが <code>nsIChannel.asyncOpen() </code>中に同期的に呼ばれる保証はなくなります。<code>asyncOpen()</code> 中に呼び出される必要のあるオブザーバには新しく <code>http-on-opening-request</code> オブザーバトピックが追加されています<code>。詳細は</code>({{bug("800799")}})をご覧ください。</dd>
 </dl>
 
@@ -87,7 +87,7 @@ translation_of: Mozilla/Firefox/Releases/18
 <p>以下のインターフェースが削除されました:</p>
 
 <ul>
- <li>{{ interface("nsIEditorObserver") }}</li>
+ <li><code>nsIEditorObserver</code></li>
 </ul>
 
 <h2 id="関連記事">関連記事</h2>
