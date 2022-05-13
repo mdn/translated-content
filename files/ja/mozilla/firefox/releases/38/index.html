@@ -173,8 +173,8 @@ translation_of: Mozilla/Firefox/Releases/38
 
 <ul>
  <li><code>"@mozilla.org/network/atomic-file-output-stream;1"</code> および <code>"@mozilla.org/network/safe-file-output-stream;1"</code> は、<code>PR_TRUNCATE</code> を伴わずに <code>PR_APPEND</code> を渡した場合に例外が発生するようになりました ({{bug(1117580)}})。</li>
- <li>{{interface("nsICompositionStringSynthesizer")}} および {{ifmethod("nsIDOMWindowUtils", "sendCompositionEvent")}} を削除しました。代わりに {{interface("nsITextInputProcessor")}} を使用してください({{bug(917322)}})。</li>
- <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendKeyEvent%28%29">nsIDOMWindowUtils.sendKeyEvent()</a></code> は非推奨になりました。代わりに {{interface("nsITextInputProcessor")}} を使用してください ({{bug(1119609)}})。</li>
+ <li><code>nsICompositionStringSynthesizer</code> および {{ifmethod("nsIDOMWindowUtils", "sendCompositionEvent")}} を削除しました。代わりに <code>nsITextInputProcessor</code> を使用してください({{bug(917322)}})。</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendKeyEvent%28%29">nsIDOMWindowUtils.sendKeyEvent()</a></code> は非推奨になりました。代わりに <code>nsITextInputProcessor</code> を使用してください ({{bug(1119609)}})。</li>
 </ul>
 
 <h2 id="See_also" name="See_also">関連情報</h2>

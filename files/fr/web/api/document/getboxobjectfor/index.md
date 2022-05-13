@@ -9,7 +9,7 @@ tags:
   - Objets
 translation_of: Web/API/Document/getBoxObjectFor
 ---
-{{ ApiRef("DOM") }} {{obsolete_header}}
+{{ ApiRef("DOM") }}{{deprecated_header}}
 
 Renvoie un `boxObject` (x, y, largeur, hauteur) pour un élément spécifié.
 

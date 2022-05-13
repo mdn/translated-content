@@ -25,26 +25,26 @@ cd borderify</pre>
 
 <p>现在，在 "borderify" 目录内直接创建文件 "manifest.json"。文件内容如下：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">{
 
-  <span class="key token">"manifest_version":</span> <span class="number token">2</span><span class="punctuation token">,</span>
-  <span class="key token">"name":</span> <span class="string token">"Borderify"</span><span class="punctuation token">,</span>
-  <span class="key token">"version":</span> <span class="string token">"1.0"</span><span class="punctuation token">,</span>
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
 
-  <span class="key token">"description":</span> <span class="string token">"Adds a red border to all webpages matching mozilla.org."</span><span class="punctuation token">,</span>
+  "description": "Adds a red border to all webpages matching mozilla.org.",
 
-  <span class="key token">"icons":</span> <span class="punctuation token">{</span>
-    <span class="key token">"48":</span> <span class="string token">"icons/border-48.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
+  "icons": {
+    "48": "icons/border-48.png"
+  },
 
-  <span class="key token">"content_scripts":</span> <span class="punctuation token">[</span>
-    <span class="punctuation token">{</span>
-      <span class="key token">"matches":</span> <span class="punctuation token">[</span><span class="string token">"*://*.mozilla.org/*"</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-      <span class="key token">"js":</span> <span class="punctuation token">[</span><span class="string token">"borderify.js"</span><span class="punctuation token">]</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">]</span>
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["borderify.js"]
+    }
+  ]
 
-<span class="punctuation token">}</span></code></pre>
+}</code></pre>
 
 <ul>
  <li>前三个键：<code><a href="/zh-CN/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>、<code><a href="/zh-CN/Add-ons/WebExtensions/manifest.json/name">name</a></code> 和 <code><a href="/zh-CN/Add-ons/WebExtensions/manifest.json/version">version</a></code> 是强制的，包含有扩展的基本元数据.</li>
@@ -77,10 +77,10 @@ cd borderify</pre>
 
 <p>如果您选择使用自己的图标，它也应该是 48×48 像素。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 <code>icons</code> 对象中添加 <code>96</code> 属性即可：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-  <span class="key token">"48":</span> <span class="string token">"icons/border-48.png",
-  "96": "icons/border-96.png"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"icons": {
+  "48": "icons/border-48.png",
+  "96": "icons/border-96.png"
+}</code></pre>
 
 <p>或者，也可以在这里提供一个 SVG 文件，它会被正确地缩放。(不过：如果你正在使用 SVG 并且你的图标包含文字，有可能想要用你的 SVG 编辑器的“转换为路径”工具来拼和文字，这样图标会以一个恒定的大小/位置来缩放。）</p>
 
@@ -229,7 +229,7 @@ cd borderify</pre>
     <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="显示翻译器的按钮 3 秒"></div>
    </td>
    <td><a class="SL_options" title="显示选项">选项</a> : <a class="SL_options" title="翻译历史记录">历史</a> : <a class="SL_options" title="反馈">反馈</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="作出一点点贡献">Donate</a></td>
-   <td><span id="SL_Balloon_Close" title="关闭">关闭</span></td>
+   <td>关闭</td>
   </tr>
  </tbody>
 </table>

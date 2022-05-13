@@ -1,88 +1,38 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - PluralRules
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules
+browser-compat: javascript.builtins.Intl.PluralRules
 ---
 {{JSRef}}
 
-L'objet **`Intl.PluralRules`** est un constructeur d'objets qui permettent de mettre en forme des chaînes de caractères en fonction des règles de nombre (pluriel) d'une langue donnée.
+L'objet **`Intl.PluralRules`** permet de mettre en forme des chaînes de caractères en fonction des règles de nombre (pluriel) d'une locale donnée.
 
-## Syntaxe
+## Constructeur
 
-    new Intl.PluralRules([locales[, options]])
+- [`Intl.PluralRules()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
+  - : Crée un nouvel objet `Intl.PluralRules`.
 
-### Paramètres
+## Méthodes statiques
 
-- `locales`
-  - : Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Objets_globaux/Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}.
-- `options` {{optional_inline}}
+- [`Intl.PluralRules.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf)
+  - : Renvoie un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
-  - : Optionnel, un objet possédant tout ou partie des propriétés suivantes :
+## Méthodes des instances
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}
-    - `type`
-
-      - : Le type de numérotation à utiliser. Les valeurs possibles sont :
-
-        - `"cardinal"` pour les nombres cardinaux (la quantité de telle ou telle chose). Cette valeur est la valeur par défaut.
-        - `"ordinal"` pour les nombres ordinaux (l'ordre relatif de différentes choses « premier », « deuxième », « troisième »).
-
-## Description
-
-### Propriétés
-
-- {{jsxref("PluralRules.prototype", "Intl.PluralRules.prototype")}}
-  - : Cette propriété permet d'ajouter des propriétés aux objets `Intl.PluralRules`.
-
-### Méthodes
-
-- {{jsxref("PluralRules.supportedLocalesOf", "Intl.PluralRules.supportedLocalesOf()")}}
-  - : Cette méthode renvoie un tableau contenant les locales prises en charge sans que le moteur ait à utiliser la locale par défaut du système d'exécution.
-
-## Instances de `PluralRules`
-
-### Propriétés
-
-Les instances de `PluralRules` héritent des propriétés suivantes de par leur prototype :
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/PluralRules/prototype', 'Propriétés')}}
-
-### Méthodes
-
-Les instances de `PluralRules` héritent des méthodes suivantes de par leur prototype :
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/PluralRules/prototype', 'Méthodes')}}
+- [`Intl.PluralRules.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions)
+  - : Renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet.
+- [`Intl.PluralRules.prototype.select()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
+  - : Renvoie une chaîne de caractères indiquant la règle de nombre qui s'applique pour le formatage en fonction de la locale.
+- [`Intl.PluralRules.prototype.selectRange()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange)
+  - : Cette méthode prend deux valeurs en arguments et renvoie une chaîne de caractères indiquant la règle de nombre à utiliser pour le formatage en fonction de la locale.
 
 ## Exemples
 
-### Exemple simple
-
-Sans indiquer de locale, une chaîne formatée dans la locale par défaut et avec les options par défaut est renvoyée. On peut ainsi différencier entre le singulier et le pluriel (par exemple "chien" et "chiens").
-
-```js
-var pr = new Intl.PluralRules();
-
-pr.select(0);
-// → 'one' si utilisée avec une locale anglais américain
-
-pr.select(1);
-// → 'one' si utilisée avec une locale anglais américain
-
-pr.select(2);
-// → 'other' si utilisée avec une locale anglais américain
-```
-
 ### Utiliser `locales`
 
-Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin de respecter la langue de l'utilisateur dans votre application, assurez vous d'indiquer cette langue (et éventuellement une langue de secours) grâce à l'argument `locales` :
+Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin de respecter la langue de l'utilisatrice et de l'utilisateur dans votre application, assurez-vous d'indiquer cette langue (et éventuellement une langue de secours) grâce à l'argument `locales`&nbsp;:
 
 ```js
 // L'arabe possède plusieurs règles
@@ -100,37 +50,15 @@ new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
 ```
 
-### Utiliser `options`
-
-Les résultats obtenus peuvent être adaptés grâce à l'argument `options`. Celui-ci possède une propriété appelée `type` qui peut valoir `ordinal`. Cela peut être utile afin de déterminer la forme d'un indicateur ordinal (par exemple, "1er", "2e", etc.).
-
-```js
-var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
-
-pr.select(0);
-// → 'other'
-pr.select(1);
-// → 'one'
-pr.select(2);
-// → 'two'
-pr.select(3);
-// → 'few'
-pr.select(4);
-// → 'other'
-pr.select(42);
-// → 'two'
-```
-
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| [Proposition pour le constructeur `Intl.PluralRules`](https://tc39.es/ecma402/#sec-intl-pluralrules-constructor) | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.PluralRules")}}
+{{Compat}}
 
 ## Voir aussi
 
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl', 'Voir_aussi')}}
+- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [Une prothèse d'émulation pour `Intl.ListFormat` avec la bibliothèque FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)

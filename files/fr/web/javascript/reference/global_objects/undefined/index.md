@@ -50,7 +50,7 @@ var x;
 if (x === undefined) {
    // ces instructions seront exécutées
 }
-if (x&nbsp;!== undefined) {
+if (x !== undefined) {
    // ces instructions ne seront pas exécutées
 }
 ```

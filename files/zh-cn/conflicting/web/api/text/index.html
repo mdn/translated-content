@@ -1,0 +1,36 @@
+---
+title: text.replaceWholeText
+slug: conflicting/Web/API/Text
+translation_of: Web/API/Text/replaceWholeText
+original_slug: Web/API/Text/replaceWholeText
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ Obsolete_header() }}</p>
+
+<h3 id="Summary" name="Summary">Summary</h3>
+<p><strong>replaceWholeText</strong> replaces the text of the node and all of its logically adjacent text nodes with the specified text.  The replaced nodes are removed, including the current node, unless it was the recipient of the replacement text.</p>
+<div class="warning">
+ <strong>Warning:</strong> This method has been deprecated in DOM level 4 and is no longer implemented in recent browsers, including Gecko 10.0 {{ geckoRelease("10.0") }}.</div>
+<h3 id="Syntax" name="Syntax">Syntax</h3>
+<pre class="eval"><em>replacementNode</em> = textnode.replaceWholeText(content)
+</pre>
+<h3 id="Parameters" name="Parameters">Parameters</h3>
+<ul>
+ <li><code>replacementNode</code> is a <a class="internal" href="/zh-cn/DOM/Text" title="zh-cn/DOM/Text"><code>Text</code></a> node.</li>
+ <li><code>content</code> is a string specifying the text with which to replace the node's current contents.</li>
+</ul>
+<h3 id="Example" name="Example">Exceptions</h3>
+<p><strong>NO_MODIFICATION_ALLOWED_ERR</strong> : A <code>DOMException</code> thrown if one of the text nodes being replaced is read only.</p>
+<h3 id="Example" name="Example">Example</h3>
+<p>See the example for the <code><a class="internal" href="/zh-cn/DOM/Text.wholeText" title="zh-cn/DOM/Text.wholeText">text.wholeText</a></code> property.</p>
+<h3 id="Notes" name="Notes">Notes</h3>
+<p>This method returns the text node which received the replacement text, or <code>null</code> if the replacement text is an empty string.  The returned node is the current node unless the current node is read only, in which case the returned node is a newly created text node of the same type which has been inserted at the location of the replacement.</p>
+<div class="note">
+ <strong>Note:</strong> Firefox's implementation of this method does not yet support <code>EntityReference</code> nodes as defined by the <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1312295772" title="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1312295772">specification</a>.</div>
+<h3 id="Specification" name="Specification">Specification</h3>
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Text3-replaceWholeText" title="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Text3-replaceWholeText">replaceWholeText </a></p>
+<h3 id="See_also">See also</h3>
+<ul>
+ <li><code><a class="internal" href="/zh-cn/DOM/Text.wholeText" title="zh-cn/DOM/Text.wholeText">text.wholeText</a></code></li>
+ <li><a class="internal" href="/zh-cn/DOM/Text" title="zh-cn/DOM/Text"><code>Text</code></a></li>
+</ul>
