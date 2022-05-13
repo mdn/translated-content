@@ -61,7 +61,7 @@ IndexedDB est conçu pour la plupart des cas d'usage de stockage côté client. 
 
 De plus, il faut avoir conscience que le navigateur peut se débarrasser de la base de données dans certaines conditions&nbsp;:
 
-- Parce que la personne a demandé une suppression des données (la majorité des navigateurs possède des réglages qui permettent de supprimer l'ensemble des données stockées pour un site web donné, que ce soit les cookies, les marques-pages, les mots de passe enregistrés ou les données IndexedDB).
+- Parce que la personne a demandé une suppression des données (la majorité des navigateurs possède des réglages qui permettent de supprimer l'ensemble des données stockées pour un site web donné, que ce soit les cookies, les marque-pages, les mots de passe enregistrés ou les données IndexedDB).
 - Parce que le navigateur est utilisé en navigation privée/incognito. À la fin d'une telle session, les informations de navigation, dont le contenu des bases de données IndexedDB, seront supprimées.
 - Parce que la limite d'espace disque ou de quota alloué a été atteinte.
 - Parce que les données sont corrompues.
@@ -86,7 +86,7 @@ Un dépôt d'informations, généralement composé d'un ou plusieurs [_magasins 
 
 #### Connexion à la base de donnée
 
-Une opération créée lorsqu'on ouvre _[une base de données](#base_de_données)_. On peut avoir plusieurs connexions ouvertes pour une même base de données à un instant donné.
+Une opération créée lorsqu'on ouvre [_une base de données_](#base_de_données). On peut avoir plusieurs connexions ouvertes pour une même base de données à un instant donné.
 
 #### Index
 
@@ -100,7 +100,7 @@ Pour en savoir plus sur l'utilisation des index, voir l'article [Utiliser Indexe
 
 Il s'agit du mécanisme avec lequel les données sont stockées dans la base de données. Le magasin d'objets contient les enregistrements (des paires de clé/valeur) de façon persistante. Les enregistrements d'un magasin d'objets sont triés selon leur _[clé](#clé)_, dans l'ordre croissant.
 
-Chaque magasin d'objets doit avoir un nom unique au sein d'une base de données. Un magasin d'objet peut aussi avoir, optionnellement, un _[générateur de clé](#générateur_de_clé)_ et un _[chemin de clé](#chemin_de_clé)_. Si le magasin d'objets a un chemin de clé, il utilise des _[clés en ligne](#clés_en_ligne)_ et sinon il utilise _[des clés hors ligne](#clés_hors_ligne)_.
+Chaque magasin d'objets doit avoir un nom unique au sein d'une base de données. Un magasin d'objet peut aussi avoir, optionnellement, un [_générateur de clé_](#générateur_de_clé) et un [_chemin de clé_](#chemin_de_clé). Si le magasin d'objets a un chemin de clé, il utilise des [_clés en ligne_](#clés_en_ligne) et sinon il utilise [_des clés hors ligne_](#clés_hors_ligne).
 
 Pour la documentation de référence sur les magasins d'objets, voir [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore).
 
