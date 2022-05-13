@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 
-**`set`** 構文は、あるオブジェクトプロパティを関数に、プロパティに設定しようとしたときに呼び出される関数に結びつけます。
+**`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。
 
 {{EmbedInteractiveExample("pages/js/functions-setter.html")}}
 
