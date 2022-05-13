@@ -42714,22 +42714,6 @@
       "Arzak656"
     ]
   },
-  "orphaned/Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:26:01.488Z",
-    "contributors": [
-      "Arzak656",
-      "wakka27",
-      "tregagnon",
-      "dexterneo"
-    ]
-  },
-  "orphaned/Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:28:29.463Z",
-    "contributors": [
-      "Goofy",
-      "SphinxKnight"
-    ]
-  },
   "orphaned/Web/API/DOMLocator": {
     "modified": "2019-03-18T21:41:56.748Z",
     "contributors": [

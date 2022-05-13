@@ -3577,8 +3577,7 @@
 /fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 /fr/docs/Web/API/API_IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
-/fr/docs/Web/API/AbstractWorker	/fr/docs/orphaned/Web/API/AbstractWorker
-/fr/docs/Web/API/Ambient_Light_Events	/fr/docs/orphaned/Web/API/Ambient_Light_Events
+/fr/docs/Web/API/AbstractWorker	/fr/docs/Web/API/Worker
 /fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
@@ -5813,7 +5812,6 @@
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
 /fr/docs/WebAPI/Proximity	/fr/docs/Web/API/Proximity_Events
-/fr/docs/WebAPI/Utiliser_les_événéments_de_luminosité	/fr/docs/orphaned/Web/API/Ambient_Light_Events
 /fr/docs/WebGL	/fr/docs/Web/API/WebGL_API
 /fr/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /fr/docs/WebGL/Ajouter_des_couleurs_avec_les_shaders	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -6065,6 +6063,7 @@
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
+/fr/docs/orphaned/Web/API/AbstractWorker	/fr/docs/Web/API/Worker
 /fr/docs/orphaned/Web/API/ChildNode	/fr/docs/Web/API/Element
 /fr/docs/orphaned/Web/API/ChildNode/after	/fr/docs/Web/API/Element/after
 /fr/docs/orphaned/Web/API/ChildNode/before	/fr/docs/Web/API/Element/before
