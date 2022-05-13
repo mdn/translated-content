@@ -3863,7 +3863,7 @@
 /fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/fr/docs/conflicting/Web/API/Pointer_events
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
-/fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
+/fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
 /fr/docs/Web/API/WebGLRenderingContext/canevas	/fr/docs/Web/API/WebGLRenderingContext/canvas
 /fr/docs/Web/API/WebGL_API/By_example/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors
@@ -3932,7 +3932,6 @@
 /fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
-/fr/docs/Web/API/Window/ondevicelight	/fr/docs/orphaned/Web/API/Window/ondevicelight
 /fr/docs/Web/API/Window/onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
 /fr/docs/Web/API/WindowBase64	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
@@ -6087,6 +6086,7 @@
 /fr/docs/orphaned/Web/API/ParentNode/querySelectorAll	/fr/docs/Web/API/Element/querySelectorAll
 /fr/docs/orphaned/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/orphaned/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
+/fr/docs/orphaned/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
