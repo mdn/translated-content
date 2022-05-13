@@ -6058,9 +6058,6 @@
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
-/fr/docs/orphaned/Web/API/Element/tabStop	/fr/docs/Web/API/ShadowRoot/delegatesFocus
-/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style	/fr/docs/Web/API/HTMLElement/style
-/fr/docs/orphaned/Web/API/ElementTraversal	/fr/docs/Web/API/Element
 /fr/docs/orphaned/Web/API/AbstractWorker	/fr/docs/Web/API/Worker
 /fr/docs/orphaned/Web/API/ChildNode	/fr/docs/Web/API/Element
 /fr/docs/orphaned/Web/API/ChildNode/after	/fr/docs/Web/API/Element/after
@@ -6068,6 +6065,9 @@
 /fr/docs/orphaned/Web/API/ChildNode/remove	/fr/docs/Web/API/Element/remove
 /fr/docs/orphaned/Web/API/ChildNode/replaceWith	/fr/docs/Web/API/Element/replaceWith
 /fr/docs/orphaned/Web/API/Document_Object_Model/Events	/fr/docs/Learn/JavaScript/Building_blocks/Events
+/fr/docs/orphaned/Web/API/Element/tabStop	/fr/docs/Web/API/ShadowRoot/delegatesFocus
+/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style	/fr/docs/Web/API/HTMLElement/style
+/fr/docs/orphaned/Web/API/ElementTraversal	/fr/docs/Web/API/Element
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus
