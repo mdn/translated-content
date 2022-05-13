@@ -44,7 +44,7 @@ _L'interface n'hérite d'aucune propriété._
           <td>Affiche tous les noeuds.</td>
         </tr>
         <tr>
-          <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
+          <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
           <td><code>2</code></td>
           <td>
             Affiche l'attribut {{domxref("Attr")}} des noeuds. Cela n'a de sens
@@ -58,7 +58,7 @@ _L'interface n'hérite d'aucune propriété._
         </tr>
         <tr>
           <td>
-            <code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}
+            <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
           </td>
           <td><code>8</code></td>
           <td>Affiche les noeuds {{domxref("CDATASection")}}.</td>
@@ -89,7 +89,7 @@ _L'interface n'hérite d'aucune propriété._
           <td>Affiche les noeuds {{domxref("Element")}}.</td>
         </tr>
         <tr>
-          <td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
+          <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
           <td><code>32</code></td>
           <td>
             Affiche les noeuds {{domxref("Entity")}}. Cela n'a de sens que
@@ -103,13 +103,13 @@ _L'interface n'hérite d'aucune propriété._
         </tr>
         <tr>
           <td>
-            <code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}
+            <code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}
           </td>
           <td><code>16</code></td>
           <td>Affiche les noeuds {{domxref("EntityReference")}}.</td>
         </tr>
         <tr>
-          <td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
+          <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
           <td><code>2048</code></td>
           <td>
             Affiche les noeuds {{domxref("Notation")}}. Cela n'a de sens
@@ -149,7 +149,7 @@ _L'interface n'hérite d'aucune propriété._
 
 _Cette interface n'hérite d'aucune méthode._
 
-- {{domxref("NodeIterator.detach()")}} {{obsolete_inline()}}
+- {{domxref("NodeIterator.detach()")}} {{deprecated_inline}}
   - : Cette opération est une non opération. Elle ne fait rien. Auparavant, elle disait au moteur que le `NodeIterator` n'était plus utilisé, mais c'est maintenant inutile.
 - {{domxref("NodeIterator.previousNode()")}}
   - : Renvoie le noeud {{domxref("Node")}} précédent dans le document ou `null` s'il n'y en a aucun.
