@@ -31,7 +31,7 @@ Une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_
 
 ## Exemples
 
-Le fragment de code qui suit est tiré de [l'exemple registration-events](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([voir la démo correspondante](https://googlechrome.github.io/samples/service-worker/registration-events/)). Le code surveille tout changement de `ServiceWorker.state` et renvoie la valeur.
+Le fragment de code qui suit est tiré de [l'exemple `registration-events`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([voir la démo correspondante](https://googlechrome.github.io/samples/service-worker/registration-events/)). Le code surveille tout changement de `ServiceWorker.state` et renvoie la valeur.
 
 ```js
 let serviceWorker;
