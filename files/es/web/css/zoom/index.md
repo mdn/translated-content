@@ -23,7 +23,7 @@ zoom: 200%;
 zoom: 1.1;
 zoom: 0.7;
 
-/* Global values */
+/* Valores globales */
 zoom: inherit;
 zoom: initial;
 zoom: revert;
