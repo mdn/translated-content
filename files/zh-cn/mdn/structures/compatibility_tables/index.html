@@ -10,7 +10,7 @@ translation_of: MDN/Structures/Compatibility_tables
 ---
 <div>{{MDNSidebar}}</div>
 
-<p class="summary"><span class="seoSummary">MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。</span>本文将介绍如何使用我们的功能将兼容性数据添加到MDN页面。</p>
+<p class="summary">MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。本文将介绍如何使用我们的功能将兼容性数据添加到MDN页面。</p>
 
 <div class="warning syntaxbox">
 <p><strong>重要</strong>: <strong><em>数据的生成方式已经发生了变更</em></strong>。过去，我们的表格直接嵌入在页面中，而且数据是手动填写的。这样效率很低，难以维护，而且使得数据不够灵活，不便更新。所以我们正在把我们的兼容性表格迁移到一个数据 repo 中（<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>）并且改为使用程序化的方式生成它。<br>
@@ -53,13 +53,13 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <pre class="brush: bash notranslate">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
 
-<p><span id="result_box" lang="zh-CN">如果您不确定自己是否做到了这一点</span>， 您可以检查您仓库已经在用的远端服务器列表：</p>
+<p>如果您不确定自己是否做到了这一点， 您可以检查您仓库已经在用的远端服务器列表：</p>
 
 <pre class="brush: bash notranslate">git remote -v</pre>
 
 <h3 id="让您的分支与服务器上的内容同步">让您的分支与服务器上的内容同步</h3>
 
-<p><span id="result_box" lang="zh-CN"><span>现在，只要您想更新您</span></span><span lang="zh-CN"><span>的分支，</span></span><span id="result_box" lang="zh-CN"><span>您</span></span><span lang="zh-CN"><span>就可以这样做：</span></span></p>
+<p>现在，只要您想更新您的分支，您就可以这样做：</p>
 
 <ol>
  <li>
@@ -316,7 +316,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="Including_a_footnote">Including a footnote</h3>
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "<span class="pl-s">Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</span></p>
+<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
 
 <pre class="brush: json notranslate">"chrome_android": {
   "version_added": true,
@@ -339,7 +339,7 @@ translation_of: MDN/Structures/Compatibility_tables
 <p>To represent this in the compat data, you need to add the "flags" submember inside the relevant browser identifier submember. The value of "flags" is an array of objects each of which contains of three members:</p>
 
 <ul>
- <li>"type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using <code>about:config</code> in Firefox, or <code>chrome://flags</code> in Chrome), but you might also sometimes use a value of <span class="pl-s"><span class="pl-pds">"</span>compile_flag<span class="pl-pds">", which is a preference set when the browser build is compiled.</span></span></li>
+ <li>"type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using <code>about:config</code> in Firefox, or <code>chrome://flags</code> in Chrome), but you might also sometimes use a value of "compile_flag", which is a preference set when the browser build is compiled.</li>
  <li>"name": This is a string representing the name of the preference that needs to have a value set on it. For example, "Enable Experimental Web Platform Features" is a preference that exists in Chrome, found in <code>chrome://flags</code>.</li>
  <li>"value_to_set": This is a string representing the value that needs to be set on the preference, for example "true".</li>
 </ul>

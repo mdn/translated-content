@@ -18,23 +18,23 @@ translation_of: Web/HTTP/Messages
 <p>HTTP/2二进制框架机制被设计为不需要改动任何API或配置文件即可应用︰ 它大体上对用户是透明的。</p>
 
 <div class="textArea" id="destText" style="direction: ltr;">
-<div><span id="ouHighlight__0_3TO0_3">HTTP</span><span id="noHighlight_0.5187132851681917"> </span><span id="ouHighlight__5_12TO5_6">请求</span><span id="ouHighlight__15_17TO7_7">和</span><span id="ouHighlight__19_27TO8_9">响应</span><span id="ouHighlight__28_28TO10_10">具有</span><span id="ouHighlight__36_42TO13_14">相似</span><span id="noHighlight_0.6112710687035254">的</span><span id="ouHighlight__44_52TO16_17">结构，</span><span id="ouHighlight__54_56TO18_18">由以下部分</span><span id="ouHighlight__62_69TO19_20">组成</span><span id="ouHighlight__73_73TO21_21">︰</span></div>
+<div>HTTP 请求和响应具有相似的结构，由以下部分组成︰</div>
 </div>
 
 <ol>
- <li>一行<span class="highlighted" id="ouHighlight__4_13TO0_2">起</span>始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个<span class="highlighted" id="ouHighlight__4_13TO0_2">起</span>始行总是单行的。</li>
+ <li>一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。</li>
  <li>一个可选的HTTP头集合指明请求或描述消息正文。</li>
  <li>一个空行指示所有关于请求的元数据已经发送完毕。</li>
- <li>一个可选的包含请求相关数据的正文 (比如HTML表单内容), 或者响应相关的文档。 正文的大小有<span class="highlighted" id="ouHighlight__4_13TO0_2">起</span>始行的HTTP头来指定。</li>
+ <li>一个可选的包含请求相关数据的正文 (比如HTML表单内容), 或者响应相关的文档。 正文的大小有起始行的HTTP头来指定。</li>
 </ol>
 
-<p><span class="highlighted" id="ouHighlight__4_13TO0_2">起始行</span><span id="ouHighlight__15_17TO3_3">和</span><span id="noHighlight_0.24094207099483878"> </span><span id="noHighlight_0.20506469395890603"> </span><span id="ouHighlight__39_42TO14_17">HTTP</span><span id="noHighlight_0.7326949190272041"> </span><span id="ouHighlight__44_50TO19_20">消息中的</span><span id="ouHighlight__19_22TO5_8">HTTP</span><span id="noHighlight_0.8511727000124978"> </span><span id="ouHighlight__24_30TO10_11">头</span><span id="ouHighlight__52_73TO21_22">统称</span><span id="ouHighlight__75_76TO23_23">为</span><span id="ouHighlight__94_101TO27_28">请求头</span><span id="ouHighlight__102_102TO29_29">，</span><span id="ouHighlight__104_110TO30_30">而</span><span id="ouHighlight__112_114TO31_31">其</span><span id="ouHighlight__116_122TO32_35">有效负载</span><span id="ouHighlight__124_125TO36_36">被</span><span id="ouHighlight__127_134TO37_38">称为</span><span id="ouHighlight__140_143TO39_40">消息正文</span><span id="noHighlight_0.0840453271452073">。</span></p>
+<p>起始行和  HTTP 消息中的HTTP 头统称为请求头，而其有效负载被称为消息正文。</p>
 
 <p><img alt="Requests and responses share a common structure in HTTP" src="https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png" style="height: 368px; width: 1239px;"></p>
 
 <h2 id="HTTP_请求">HTTP 请求</h2>
 
-<h3 id="起始行"><span class="highlighted" id="ouHighlight__4_13TO0_2">起始行</span></h3>
+<h3 id="起始行">起始行</h3>
 
 <p>HTTP请求是由客户端发出的消息，用来使服务器执行动作。<em>起始行 (start-line) </em>包含三个元素：</p>
 

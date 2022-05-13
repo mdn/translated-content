@@ -45,6 +45,6 @@ temas, te aconsejamos consultar los enlaces que le ayudarán a ponerse al día
 rápidamente:
 
 - Tecnologías web: Si eres nuevo en HTML, CSS, JavaScript, etc., echa un vistazo a nuestros tutoriales [Aprender desarrollo web](/es/docs/Learn).
-- Código abierto: Si nunca has contribuido a un proyecto de código abierto, lee [Normas básicas para proyectos de código abierto] (/es/docs/MDN/Contribute/Open_source_etiquette).
+- Código abierto: Si nunca has contribuido a un proyecto de código abierto, lee [Normas básicas para proyectos de código abierto](/es/docs/MDN/Contribute/Open_source_etiquette).
 - Git y GitHub: Si no estás familiarizado con estas herramientas, [GitHub para principiantes](/es/docs/MDN/Contribute/GitHub_beginners) te ayudará a empezar.
 - Estructuras de repositorios de MDN: Si no estás seguro de qué repositorios debes editar para realizar cambios en las diferentes partes del contenido de MDN, [¿Dónde está todo en MDN?](/es/docs/MDN/Contribute/Where_is_everything) indica los lugares correctos.

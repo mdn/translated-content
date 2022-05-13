@@ -50,12 +50,6 @@
       "Jeremie"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-07-15T09:45:26.682Z",
-    "contributors": [
-      "Siudzi"
-    ]
-  },
   "Glossary/API": {
     "modified": "2020-12-01T17:59:12.054Z",
     "contributors": [
@@ -5832,6 +5826,12 @@
       "drm404"
     ]
   },
+  "Web/HTTP/Status/404": {
+    "modified": "2019-07-15T09:45:26.682Z",
+    "contributors": [
+      "Siudzi"
+    ]
+  },
   "Web/JavaScript": {
     "modified": "2020-03-12T19:36:18.888Z",
     "contributors": [
@@ -7200,12 +7200,6 @@
     "contributors": [
       "fscholz",
       "adam-tokarski"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-15T22:32:18.167Z",
-    "contributors": [
-      "jangromko"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
@@ -10171,6 +10165,12 @@
     "contributors": [
       "mitelak",
       "fscholz"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
+    "modified": "2020-10-15T22:32:18.167Z",
+    "contributors": [
+      "jangromko"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Number": {

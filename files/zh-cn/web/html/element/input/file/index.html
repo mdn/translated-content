@@ -403,7 +403,7 @@ input.style.opacity = 0;</pre>
  <li>我们使用定制的 <code>validFileType()</code> 函数来检查文件的类型是否正确。（例如，用 <code>accept</code> 属性指定的图片类型）。</li>
  <li>如果是，我们：
   <ul>
-   <li>将其名称和文件大小输出到到 <span style="font-size: 1rem; letter-spacing: -0.00278rem;">previous </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">&lt;div&gt;</code> 的一个列表项中（<span style="font-size: 1rem; letter-spacing: -0.00278rem;">从 </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.name</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 和 </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.size</code>获取）。定制的 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">returnFileSize()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 函数返回一个用 bytes/KB/MB 表示的</span>格式良好的大小（默认情况下，浏览器以绝对字节数报告大小）。</li>
+   <li>将其名称和文件大小输出到到 previous <code style="font-size: 1rem; letter-spacing: -0.00278rem;">&lt;div&gt;</code> 的一个列表项中（从 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.name</code> 和 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.size</code>获取）。定制的 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">returnFileSize()</code> 函数返回一个用 bytes/KB/MB 表示的格式良好的大小（默认情况下，浏览器以绝对字节数报告大小）。</li>
    <li>通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 {{htmlattrxref("src", "img")}} 设置为缩略图。</li>
   </ul>
  </li>

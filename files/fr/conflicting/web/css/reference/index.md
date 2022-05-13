@@ -8,7 +8,7 @@ tags:
 translation_of: Web/CSS/List_of_Proprietary_CSS_Features
 original_slug: Web/CSS/List_of_Proprietary_CSS_Features
 ---
-{{CSSRef}}{{Draft}}
+{{CSSRef}}
 
 > **Note :** Cette page est un brouillon et son contenu est incomplet voire obsolète. À lire avec un œil critique.
 
