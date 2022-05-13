@@ -78,7 +78,7 @@ const obj = {
 - 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`) と一緒に使ってください。
 
 ```js
-// 名前付きプロパティを使用 (ES6 より前)
+// 名前付きプロパティを使用
 const obj2 = {
   g: function* () {
     let index = 0
