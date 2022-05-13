@@ -42714,19 +42714,6 @@
       "Arzak656"
     ]
   },
-  "orphaned/Web/API/SVGStylable": {
-    "modified": "2020-10-15T21:34:30.185Z",
-    "contributors": [
-      "SphinxKnight",
-      "B_M"
-    ]
-  },
-  "orphaned/Web/API/ServiceWorkerState": {
-    "modified": "2019-03-18T21:18:01.317Z",
-    "contributors": [
-      "AurelieBayre"
-    ]
-  },
   "orphaned/Web/API/URLUtilsReadOnly": {
     "modified": "2020-10-15T22:17:11.893Z",
     "contributors": [
