@@ -74,8 +74,8 @@ const obj = {
 
 次のように行います。
 
-- ジェネレータープロパティ名の前にアスタリスク (*) が必要です。すなわち、 `* g(){}` は動作しますが、 `g *(){}` は動作しません。
-- 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`)と一緒に使ってください。
+- ジェネレータープロパティ名の前にアスタリスク (`*`) が必要です。すなわち、 `* g(){}` は動作しますが、 `g *(){}` は動作しません。
+- 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`) と一緒に使ってください。
 
 ```js
 // 名前付きプロパティを使用 (ES6 より前)
