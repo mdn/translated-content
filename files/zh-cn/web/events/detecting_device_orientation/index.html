@@ -19,7 +19,7 @@ tags:
 
 <p>第二种是{{domxref("DeviceMotionEvent")}}，它会在加速度发生改变时触发。跟{{domxref("DeviceOrientationEvent")}}不同，{{domxref("DeviceMotionEvent")}}监听的是相应方向上加速度的变化。传感器通常都具有监听{{domxref("DeviceMotionEvent")}}的能力，包括笔记本中用于保护移动中的存储设备的传感器。{{domxref("DeviceOrientationEvent")}}事件更多见于移动设备中。</p>
 
-<h2 id="处理方向（orientation）事件">处理方向（<span style="font-size: 2.14285714285714rem;">orientation</span><span style="font-size: 2.14285714285714rem;">）事件</span></h2>
+<h2 id="处理方向（orientation）事件">处理方向（orientation）事件</h2>
 
 <p>要接收设备方向变化信息，只需要监听{{ event("deviceorientation") }}事件：</p>
 
@@ -30,7 +30,7 @@ tags:
 <pre class="brush: js">window.addEventListener("deviceorientation", handleOrientation, true);
 </pre>
 
-<p>注册完事件监听处理函数后（对应这个例子中的<span style="background-color: rgba(234, 239, 242, 0.247059); font-family: Consolas,Monaco,'Andale Mono',monospace; font-size: 1rem; line-height: 19px; white-space: pre;">handleOrientation</span><span style="line-height: 1.5;">），监听函数会定期地接收到最新的设备方向数据。</span></p>
+<p>注册完事件监听处理函数后（对应这个例子中的handleOrientation），监听函数会定期地接收到最新的设备方向数据。</p>
 
 <p>方向事件对象中包含四个值：</p>
 
@@ -56,7 +56,7 @@ tags:
 
 <h3 id="相关值解释">相关值解释</h3>
 
-<p>关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。<a href="https://developer.mozilla.org/en-US/DOM/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="Orientation and motion data explained">Orientation and motion data explained</a><span style="line-height: 1.5;"> 这篇文章有更详细的描述，下面是对这篇文章的总结。</span></p>
+<p>关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。<a href="https://developer.mozilla.org/en-US/DOM/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="Orientation and motion data explained">Orientation and motion data explained</a> 这篇文章有更详细的描述，下面是对这篇文章的总结。</p>
 
 <ul>
  <li>{{ domxref("DeviceOrientationEvent.alpha") }} 表示设备沿z轴上的旋转角度，范围为0~360。</li>
@@ -68,37 +68,37 @@ tags:
 
 <p>这个例子会成功运行在支持检测自己方向的设备中的支持{{event("deviceorientation")}} 事件的浏览器中。</p>
 
-<p>让我们想象一下有一个球在花园<span style="line-height: 1.5;">中：</span></p>
+<p>让我们想象一下有一个球在花园中：</p>
 
-<pre class="brush: html  language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>div</span> <span class="attr-name token" style="color: #669900;">class</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>garden<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span>
-  <span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>div</span> <span class="attr-name token" style="color: #669900;">class</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>ball<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span><span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>div</span><span class="punctuation token" style="color: #999999;">&gt;</span></span>
-<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>div</span><span class="punctuation token" style="color: #999999;">&gt;</span></span>
+<pre class="brush: html  language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">&lt;div class="garden"&gt;
+  &lt;div class="ball"&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>pre</span> <span class="attr-name token" style="color: #669900;">class</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>output<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span><span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>pre</span><span class="punctuation token" style="color: #999999;">&gt;</span></span></code></pre>
+&lt;pre class="output"&gt;&lt;/pre&gt;</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
 
-<p><span style="line-height: 1.5;">花园只有200px宽（很小对吧），球在中央：</span></p>
+<p>花园只有200px宽（很小对吧），球在中央：</p>
 
-<pre class="brush: css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="selector token" style="color: #669900;">.garden </span><span class="punctuation token" style="color: #999999;">{</span>
-  <span class="property token" style="color: #990055;">position</span><span class="punctuation token" style="color: #999999;">:</span> relative<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">width</span> <span class="punctuation token" style="color: #999999;">:</span> 200px<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">height</span><span class="punctuation token" style="color: #999999;">:</span> 200px<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">border</span><span class="punctuation token" style="color: #999999;">:</span> 5px solid #CCC<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">border-radius</span><span class="punctuation token" style="color: #999999;">:</span> 10px<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span>
+<pre class="brush: css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">.garden {
+  position: relative;
+  width : 200px;
+  height: 200px;
+  border: 5px solid #CCC;
+  border-radius: 10px;
+}
 
-<span class="selector token" style="color: #669900;">.ball </span><span class="punctuation token" style="color: #999999;">{</span>
-  <span class="property token" style="color: #990055;">position</span><span class="punctuation token" style="color: #999999;">:</span> absolute<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">top</span>   <span class="punctuation token" style="color: #999999;">:</span> 90px<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">left</span>  <span class="punctuation token" style="color: #999999;">:</span> 90px<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">width</span> <span class="punctuation token" style="color: #999999;">:</span> 20px<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">height</span><span class="punctuation token" style="color: #999999;">:</span> 20px<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">background</span><span class="punctuation token" style="color: #999999;">:</span> green<span class="punctuation token" style="color: #999999;">;</span>
-  <span class="property token" style="color: #990055;">border-radius</span><span class="punctuation token" style="color: #999999;">:</span> 100%<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+.ball {
+  position: absolute;
+  top   : 90px;
+  left  : 90px;
+  width : 20px;
+  height: 20px;
+  background: green;
+  border-radius: 100%;
+}</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
@@ -134,39 +134,39 @@ tags:
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 304px; background: 0px 0px;"></div>
 
-<p><span style="line-height: 1.5;">现在，如果我们移动设备，球将随之移动：</span></p>
+<p>现在，如果我们移动设备，球将随之移动：</p>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> ball   <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> document<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">querySelector<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'.ball'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="keyword token" style="color: #0077aa;">var</span> garden <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> document<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">querySelector<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'.garden'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="keyword token" style="color: #0077aa;">var</span> output <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> document<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">querySelector<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'.output'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">var ball   = document.querySelector('.ball');
+var garden = document.querySelector('.garden');
+var output = document.querySelector('.output');
 
-<span class="keyword token" style="color: #0077aa;">var</span> maxX <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> garden<span class="punctuation token" style="color: #999999;">.</span>clientWidth  <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span> ball<span class="punctuation token" style="color: #999999;">.</span>clientWidth<span class="punctuation token" style="color: #999999;">;</span>
-<span class="keyword token" style="color: #0077aa;">var</span> maxY <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> garden<span class="punctuation token" style="color: #999999;">.</span>clientHeight <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span> ball<span class="punctuation token" style="color: #999999;">.</span>clientHeight<span class="punctuation token" style="color: #999999;">;</span>
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
 
-<span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">handleOrientation<span class="punctuation token" style="color: #999999;">(</span></span>event<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-  <span class="keyword token" style="color: #0077aa;">var</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> event<span class="punctuation token" style="color: #999999;">.</span>beta<span class="punctuation token" style="color: #999999;">;</span> <span class="comment token" style="color: #708090;"> // In degree in the range [-180,180]
-</span>  <span class="keyword token" style="color: #0077aa;">var</span> y <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> event<span class="punctuation token" style="color: #999999;">.</span>gamma<span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;"> // In degree in the range [-90,90]
-</span>
-  output<span class="punctuation token" style="color: #999999;">.</span>innerHTML  <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"beta : "</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"\n"</span><span class="punctuation token" style="color: #999999;">;</span>
-  output<span class="punctuation token" style="color: #999999;">.</span>innerHTML <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"gamma: "</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> y <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"\n"</span><span class="punctuation token" style="color: #999999;">;</span>
+function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180]
+  var y = event.gamma; // In degree in the range [-90,90]
 
- <span class="comment token" style="color: #708090;"> // Because we don't want to have the device upside down
-</span> <span class="comment token" style="color: #708090;"> // We constrain the x value to the range [-90,90]
-</span>  <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">&gt;</span>  <span class="number token" style="color: #990055;">90</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span>  <span class="number token" style="color: #990055;">90</span><span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">;</span>
-  <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">&lt;</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span><span class="number token" style="color: #990055;">90</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span><span class="number token" style="color: #990055;">90</span><span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">;</span>
+  output.innerHTML  = "beta : " + x + "\n";
+  output.innerHTML += "gamma: " + y + "\n";
 
- <span class="comment token" style="color: #708090;"> // To make computation easier we shift the range of
-</span> <span class="comment token" style="color: #708090;"> // x and y to [0,180]
-</span>  x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">90</span><span class="punctuation token" style="color: #999999;">;</span>
-  y <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">90</span><span class="punctuation token" style="color: #999999;">;</span>
+  // Because we don't want to have the device upside down
+  // We constrain the x value to the range [-90,90]
+  if (x &gt;  90) { x =  90};
+  if (x &lt; -90) { x = -90};
 
- <span class="comment token" style="color: #708090;"> // 10 is half the size of the ball
-</span> <span class="comment token" style="color: #708090;"> // It center the positioning point to the center of the ball
-</span>  ball<span class="punctuation token" style="color: #999999;">.</span>style<span class="punctuation token" style="color: #999999;">.</span>top  <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">(</span>maxX<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">*</span>x<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">/</span><span class="number token" style="color: #990055;">180</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span> <span class="number token" style="color: #990055;">10</span><span class="punctuation token" style="color: #999999;">)</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"px"</span><span class="punctuation token" style="color: #999999;">;</span>
-  ball<span class="punctuation token" style="color: #999999;">.</span>style<span class="punctuation token" style="color: #999999;">.</span>left <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">(</span>maxY<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">*</span>y<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">/</span><span class="number token" style="color: #990055;">180</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span> <span class="number token" style="color: #990055;">10</span><span class="punctuation token" style="color: #999999;">)</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"px"</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span>
+  // To make computation easier we shift the range of
+  // x and y to [0,180]
+  x += 90;
+  y += 90;
 
-window<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">addEventListener<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'deviceorientation'</span><span class="punctuation token" style="color: #999999;">,</span> handleOrientation<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+  // 10 is half the size of the ball
+  // It center the positioning point to the center of the ball
+  ball.style.top  = (maxX*x/180 - 10) + "px";
+  ball.style.left = (maxY*y/180 - 10) + "px";
+}
+
+window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
@@ -238,13 +238,13 @@ window<span class="punctuation token" style="color: #999999;">.</span><span clas
 
 <h2 id="处理移动（motion）事件" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">处理移动（motion）事件</h2>
 
-<p><span style="line-height: 1.5;">移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：{{ event("devicemotion") }}</span></p>
+<p>移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：{{ event("devicemotion") }}</p>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">window<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">addEventListener<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"devicemotion"</span><span class="punctuation token" style="color: #999999;">,</span> handleMotion<span class="punctuation token" style="color: #999999;">,</span> <span class="keyword token" style="color: #0077aa;">true</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">window.addEventListener("devicemotion", handleMotion, true);</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
-<p><span style="line-height: 1.5;">真正不同的是做为参数传递给</span><em>HandleMotion函数的</em><span style="line-height: 1.5;">{{ domxref("DeviceMotionEvent") }}对象所包含的信息。</span></p>
+<p>真正不同的是做为参数传递给<em>HandleMotion函数的</em>{{ domxref("DeviceMotionEvent") }}对象所包含的信息。</p>
 
 <p>这个对象包含四个属性：</p>
 
@@ -257,7 +257,7 @@ window<span class="punctuation token" style="color: #999999;">.</span><span clas
 
 <h3 id="相关值解释_2" style="line-height: 24px; font-size: 1.71428571428571rem;">相关值解释</h3>
 
-<p><span style="line-height: 1.5;">{{ domxref("DeviceMotionEvent") }}对象提供给web开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（</span><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a><span style="line-height: 1.5;">有更详细的说明。）</span></p>
+<p>{{ domxref("DeviceMotionEvent") }}对象提供给web开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a>有更详细的说明。）</p>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.acceleration" title="The acceleration property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2)."><code>acceleration</code></a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity" title="The accelerationIncludingGravity property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2). Unlike DeviceMotionEvent.acceleration which does not compensate for the influence of gravity, its value is the sum of the acceleration of the device as induced by the user and the acceleration caused by gravity."><code>accelerationIncludingGravity</code></a>，都包含下面三个轴：</p>
 
@@ -275,7 +275,7 @@ window<span class="punctuation token" style="color: #999999;">.</span><span clas
  <li><code>gamma</code>: 设备沿着屏幕（对于桌面设备则是键盘）下至上方向的轴的旋转速率</li>
 </ul>
 
-<p>最后，<a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.interval" style="line-height: 1.5;" title="Returns the interval, in milliseconds, at which data is obtained from the underlaying hardware. You can use this to determine the granularity of motion events."><code>interval</code></a><span style="line-height: 1.5;"> 表示的是从设备获取数据的间隔时间，单位是毫秒。</span></p>
+<p>最后，<a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.interval" style="line-height: 1.5;" title="Returns the interval, in milliseconds, at which data is obtained from the underlaying hardware. You can use this to determine the granularity of motion events."><code>interval</code></a> 表示的是从设备获取数据的间隔时间，单位是毫秒。</p>
 
 <h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
 

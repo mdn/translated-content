@@ -307,9 +307,9 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
-<p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
+<h3>Abas inativas</h3>
 
-<p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.</p>
+<p>Iniciado no Gecko 5.0 {{geckoRelease("5.0")}}, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.</p>
 
 <h2 id="O_problema_do_this">O problema do "<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>"</h2>
 

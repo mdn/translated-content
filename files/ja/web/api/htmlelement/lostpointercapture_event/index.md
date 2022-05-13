@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLElement/lostpointercapture_event
 ---
 {{APIRef}}
 
-**`lostpointercapture`** イベントは、[キャプチャされたポインター](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されましたときに発行されます。
+**`lostpointercapture`** イベントは、[キャプチャされたポインター](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発行されます。
 
 <table class="properties">
   <tbody>
