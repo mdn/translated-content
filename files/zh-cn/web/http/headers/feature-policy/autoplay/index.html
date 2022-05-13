@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>autoplay</code> directive controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.</span> When this policy is enabled and there were no user gestures, the {{domxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a <code>DOMException</code>. The {{htmlattrxref("autoplay", "audio")}} attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</p>
+<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>autoplay</code> directive controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is enabled and there were no user gestures, the {{domxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a <code>DOMException</code>. The {{htmlattrxref("autoplay", "audio")}} attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</p>
 
 <p>For more details on autoplay and autoplay blocking, see the article <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>.</p>
 

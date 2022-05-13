@@ -3,7 +3,7 @@ title: PUT
 slug: Web/HTTP/Methods/PUT
 tags:
   - HTTP
-  - Reference
+  - リファレンス
   - リクエストメソッド
 browser-compat: http.methods.PUT
 translation_of: Web/HTTP/Methods/PUT
@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Methods/PUT
 
 **HTTP の `PUT` リクエストメソッド**は、新しいリソースを作成するか、指定したリソースの表現をリクエストのペイロードで置き換えます。
 
-`PUT` と {{HTTPMethod("POST")}} との違いは、`PUT` はべき等であり、呼び出し回数が 1 回でも複数回でも同じ効果になる（副作用がない）一方で、 {{HTTPMethod("POST")}} は連続して同じものを実行すると、注文を複数回渡してしまうなどの追加の影響が発生する可能性があります。
+`PUT` と {{HTTPMethod("POST")}} との違いは、`PUT` はべき等であり、呼び出し回数が 1 回でも複数回でも同じ効果になる（*副*作用がない）一方で、 {{HTTPMethod("POST")}} は連続して同じものを実行すると、注文を複数回渡してしまうなどの追加の影響が発生する可能性があります。
 
 <table class="properties">
   <tbody>

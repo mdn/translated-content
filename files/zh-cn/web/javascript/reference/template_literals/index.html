@@ -108,34 +108,29 @@ classes += (isLargeScreen() ?
 
 <p>更高级的形式的模板字符串是带标签的模板字符串。标签使您可以用函数解析模板字符串。标签函数的第一个参数包含一个字符串值的数组。其余的参数与表达式相关。最后，你的函数可以返回处理好的的字符串（或者它可以返回完全不同的东西 , 如下个例子所述）。用于该标签的函数的名称可以被命名为任何名字。</p>
 
-<pre class="brush: js">var person = 'Mike';
-var age = 28;
+<pre class="brush: js">let person = 'Mike';
+let age = 28;
 
 function myTag(strings, personExp, ageExp) {
+  let str0 = strings[0]; // "That "
+  let str1 = strings[1]; // " is a "
+  let str2 = strings[2]; // "."
 
-  var str0 = strings[0]; // "that "
-  var str1 = strings[1]; // " is a "
-
-  // There is technically a string after
-  // the final expression (in our example),
-  // but it is empty (""), so disregard.
-  // var str2 = strings[2];
-
-  var ageStr;
-  if (ageExp &gt; 99){
+  let ageStr;
+  if (ageExp > 99){
     ageStr = 'centenarian';
   } else {
     ageStr = 'youngster';
   }
 
-  return str0 + personExp + str1 + ageStr;
-
+  // We can even return a string built using a template literal
+  return `${str0}${personExp}${str1}${ageStr}${str2}`;
 }
 
-var output = myTag`that ${ person } is a ${ age }`;
+let output = myTag`That ${ person } is a ${ age }.`;
 
 console.log(output);
-// that Mike is a youngster</pre>
+// That Mike is a youngster.</pre>
 
 <p class="brush: js">正如下面例子所展示的，标签函数并不一定需要返回一个字符串。</p>
 
