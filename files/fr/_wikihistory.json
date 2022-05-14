@@ -41073,20 +41073,6 @@
       "Pitux"
     ]
   },
-  "conflicting/Web/API/DedicatedWorkerGlobalScope/close": {
-    "modified": "2020-10-15T21:36:58.427Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
-  "conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4": {
-    "modified": "2020-10-15T21:33:54.728Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
   "conflicting/Web/API/Document/createEvent": {
     "modified": "2020-10-15T21:37:47.725Z",
     "contributors": [
@@ -41139,26 +41125,6 @@
       "Voulto",
       "tregagnon",
       "Sheppy"
-    ]
-  },
-  "conflicting/Web/API/Element/localName": {
-    "modified": "2020-10-15T21:17:55.986Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/API/Element/prefix": {
-    "modified": "2020-10-15T21:17:23.469Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "soumya",
-      "BenoitL"
     ]
   },
   "conflicting/Web/API/EventTarget/addEventListener": {
