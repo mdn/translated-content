@@ -275,7 +275,7 @@ translation_of: Web/API/XMLHttpRequest
   </tr>
   <tr id="channel">
    <td><code>channel</code> {{ReadOnlyInline()}}</td>
-   <td>{{Interface("nsIChannel")}}</td>
+   <td><code>nsIChannel</code></td>
    <td>O canal utilizado pelo objecto aquando da execução do pedido. Esta é null se o canal não foi criado ainda. No caso de um pedido de múltiplas partes, isto é o canal inicial, não as diferentes partes do pedido de várias partes. <strong>Requer privilégios elevados para o acesso.​​</strong></td>
   </tr>
   <tr id="mozAnon">
@@ -523,14 +523,14 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 <ul>
  <li class="note">Por padrão, o Firefox 3 limita o número de XMLHttpRequest conexões por servidor a 6 (versões anteriores limitar esta para 2 por servidor). Alguns sites interativos podem manter um XMLHttpRequest conexão aberta, de modo que a abertura de várias sessões para esses sites pode resultar no navegador pendurado de tal forma que a janela já não repaints e controles não respondem. Este valor pode ser alterado através da edição do network.http.max-persistent-connections-per-server preferência no <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
  <li class="note">Do Gecko 7 cabeçalhos estabelecidos pela {{ manch("setRequestHeader") }} asão enviados com o pedido, quando na sequência de um redirecionamento. Anteriormente, estes cabeçalhos não iria ser enviado.</li>
- <li class="note"><code>XMLHttpRequest é implementado em Gecko usando os</code> {{ interface("nsIXMLHttpRequest") }}, {{ interface("nsIXMLHttpRequestEventTarget") }}, e {{ interface("nsIJSXMLHttpRequest") }} interfaces.</li>
+ <li class="note"><code>XMLHttpRequest é implementado em Gecko usando os</code> <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, e <code>nsIJSXMLHttpRequest</code> interfaces.</li>
 </ul>
 
 <h4 class="note" id="Eventos">Eventos</h4>
 
 <p><code>onreadystatechange</code> como uma propriedade do <code>XMLHttpRequest</code> instância é suportado em todos os navegadores.</p>
 
-<p>Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja {{ interface("nsIXMLHttpRequestEventTarget") }} and <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja <code>nsIXMLHttpRequestEventTarget</code> and <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
 
 <p>avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão <code><a href="/en/DOM/element.addEventListener" title="element.addEventListener">addEventListener</a></code> APIs Além de definir on* propriedades para uma função de manipulador.</p>
 

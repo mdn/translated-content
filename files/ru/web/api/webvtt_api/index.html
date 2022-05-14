@@ -898,6 +898,6 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 
 <p>Prior to Firefox 50, the <code>AlignSetting</code> enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value <code>"middle"</code> instead of <code>"center"</code>. This has been corrected.</p>
 
-<p>WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
+<p>WebVTT was implemented in Firefox 24 behind the preference <code>media.webvtt.enabled</code>, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
 
 <p>Prior to Firefox 58, the <code>REGION</code> keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports <code>VTTRegion</code> and its use; however, this feature is disabled by default behind the preference <code>media.webvtt.regions.enabled</code>; set it to <code>true</code> to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).</p>

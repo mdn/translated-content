@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/iframe
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML 内联框架元素 (<code>&lt;iframe&gt;</code>)</strong> 表示嵌套的<span class="seoSummary">{{Glossary("browsing context")}}</span>。它能够将另一个 HTML 页面嵌入到当前页面中。</p>
+<p><strong>HTML 内联框架元素 (<code>&lt;iframe&gt;</code>)</strong> 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}</div>
 
@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/iframe
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
  <dd>对嵌入的资源配置<a href="/zh-CN/docs/Web/HTTP/CSP">内容安全策略</a>。 查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>以 CSS 像素格式<span style="line-height: inherit;">{{HTMLVersionInline(5)}}，或像素格式{{HTMLVersionInline(4.01)}}，或百分比格式指定 frame 的高度。默认值为<code>150</code>。</span></dd>
+ <dd>以 CSS 像素格式{{HTMLVersionInline(5)}}，或像素格式{{HTMLVersionInline(4.01)}}，或百分比格式指定 frame 的高度。默认值为<code>150</code>。</dd>
  <dt id="name-attribute">{{htmlattrdef("importance")}} {{experimental_inline}}</dt>
  <dd>表示 <code>&lt;iframe&gt; </code>的 <code>src</code> 属性指定的资源的加载优先级。允许的值有：
  <dl>
@@ -59,7 +59,7 @@ translation_of: Web/HTML/Element/iframe
  </dl>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>用于定位嵌入的浏览上下文的名称。该名称可以用作 <span style="line-height: inherit;">{{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 <code>target</code> 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 <code>formtarget</code> 属性值，还可以用作</span> {{domxref("Window.open()","window.open()")}} 方法的 <code>windowName</code> 参数值。</dd>
+ <dd>用于定位嵌入的浏览上下文的名称。该名称可以用作 {{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 <code>target</code> 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 <code>formtarget</code> 属性值，还可以用作 {{domxref("Window.open()","window.open()")}} 方法的 <code>windowName</code> 参数值。</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>表示在获取 iframe 资源时如何发送 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">referrer</a> 首部：
  <ul>
@@ -106,10 +106,10 @@ translation_of: Web/HTML/Element/iframe
  <dt>{{htmlattrdef("srcdoc")}} {{HTMLVersionInline(5)}} only</dt>
  <dd>该属性是一段 HTML 代码，这些代码会被渲染到 iframe 中。如果浏览器不支持 <code>srcdoc</code> 属性，则会渲染 <code>src</code> 属性表示的内容。</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>以 CSS 像素格式<span style="line-height: inherit;">{{HTMLVersionInline(5)}}</span><span style="line-height: inherit;">，或以像素格式</span><span style="line-height: inherit;">{{HTMLVersionInline(4.01)}}，或以百分比格式指定的 frame 的宽度。默认值是<code>300</code>。</span></dd>
+ <dd>以 CSS 像素格式{{HTMLVersionInline(5)}}，或以像素格式{{HTMLVersionInline(4.01)}}，或以百分比格式指定的 frame 的宽度。默认值是<code>300</code>。</dd>
 </dl>
 
-<h3 id="不赞成使用的属性"><span style="line-height: inherit;">不赞成使用的属性</span></h3>
+<h3 id="不赞成使用的属性">不赞成使用的属性</h3>
 
 <p>下面这些属性已不赞成使用，并且可能不再被所有的浏览器支持。你应避免在新项目里面使用它们，也应尽量从旧项目中移除它们。</p>
 
@@ -134,10 +134,10 @@ translation_of: Web/HTML/Element/iframe
  </dd>
 </dl>
 
-<h3 id="非标准属性_non-standard_inline">非标准属性 {{non-standard_inline}}<span class="hidden"> </span><span class="hidden"> </span></h3>
+<h3 id="非标准属性_non-standard_inline">非标准属性 {{non-standard_inline}}  </h3>
 
 <dl>
- <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong><span class="hidden"> </span><span class="hidden"> </span></dt>
+ <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong>  </dt>
 </dl>
 
 <div class="blockIndicator note">
@@ -207,7 +207,7 @@ translation_of: Web/HTML/Element/iframe
 
 <p>使用 <code>iframe</code> 的 <a href="/zh-CN/docs/Web/HTML/Global_attributes/title">title</a> 属性来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：</p>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>iframe</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Wikipedia page for Avocados<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>https://en.wikipedia.org/wiki/Avocado<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>iframe</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers language-html"><code class="language-html">&lt;iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"&gt;&lt;/iframe&gt;</code></pre>
 
 <p>如果没有标题，他们就只能浏览每一个框架来获取需要的内容。这非常耗时间，也很容易让人迷惑，尤其是当页面中包含很多框架或者互动内容如音视频等的时候。</p>
 

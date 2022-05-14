@@ -396,8 +396,8 @@
 /pl/docs/DOM/event.initUIEvent	/pl/docs/Web/API/UIEvent/initUIEvent
 /pl/docs/DOM/event.isChar	/pl/docs/Web/API/UIEvent/isChar
 /pl/docs/DOM/event.keyCode	/pl/docs/Web/API/KeyboardEvent/keyCode
-/pl/docs/DOM/event.layerX	/pl/docs/Web/API/UIEvent/layerX
-/pl/docs/DOM/event.layerY	/pl/docs/Web/API/UIEvent/layerY
+/pl/docs/DOM/event.layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/DOM/event.layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/DOM/event.metaKey	/pl/docs/Web/API/MouseEvent/metaKey
 /pl/docs/DOM/event.pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/DOM/event.pageY	/pl/docs/Web/API/MouseEvent/pageY
@@ -630,8 +630,8 @@
 /pl/docs/DOM:event.initUIEvent	/pl/docs/Web/API/UIEvent/initUIEvent
 /pl/docs/DOM:event.isChar	/pl/docs/Web/API/UIEvent/isChar
 /pl/docs/DOM:event.keyCode	/pl/docs/Web/API/KeyboardEvent/keyCode
-/pl/docs/DOM:event.layerX	/pl/docs/Web/API/UIEvent/layerX
-/pl/docs/DOM:event.layerY	/pl/docs/Web/API/UIEvent/layerY
+/pl/docs/DOM:event.layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/DOM:event.layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/DOM:event.metaKey	/pl/docs/Web/API/MouseEvent/metaKey
 /pl/docs/DOM:event.pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/DOM:event.pageY	/pl/docs/Web/API/MouseEvent/pageY
@@ -1186,6 +1186,7 @@
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Stworz_element_Canvas_i_rysuj_na_nim	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/odbijanie_od_scian	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/posusz_pilka	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+/pl/docs/Glossary/404	/pl/docs/Web/HTTP/Status/404
 /pl/docs/Glossary/AOM	/pl/docs/Glossary/Accessibility_tree
 /pl/docs/Glossary/Abstrakcja	/pl/docs/Glossary/Abstraction
 /pl/docs/Glossary/Hipertekst	/pl/docs/Glossary/Hypertext
@@ -1453,8 +1454,8 @@
 /pl/docs/Web/API/Event/initUIEvent	/pl/docs/Web/API/UIEvent/initUIEvent
 /pl/docs/Web/API/Event/isChar	/pl/docs/Web/API/UIEvent/isChar
 /pl/docs/Web/API/Event/keyCode	/pl/docs/Web/API/KeyboardEvent/keyCode
-/pl/docs/Web/API/Event/layerX	/pl/docs/Web/API/UIEvent/layerX
-/pl/docs/Web/API/Event/layerY	/pl/docs/Web/API/UIEvent/layerY
+/pl/docs/Web/API/Event/layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/Web/API/Event/layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/Web/API/Event/metaKey	/pl/docs/Web/API/MouseEvent/metaKey
 /pl/docs/Web/API/Event/pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/Web/API/Event/pageY	/pl/docs/Web/API/MouseEvent/pageY
@@ -1499,6 +1500,8 @@
 /pl/docs/Web/API/Stylesheet/cssRules	/pl/docs/Web/API/CSSRuleList
 /pl/docs/Web/API/Stylesheet/deleteRule	/pl/docs/Web/API/CSSStyleSheet/deleteRule
 /pl/docs/Web/API/Stylesheet/insertRule	/pl/docs/Web/API/CSSStyleSheet/insertRule
+/pl/docs/Web/API/UIEvent/layerX	/pl/docs/Web/API/MouseEvent/layerX
+/pl/docs/Web/API/UIEvent/layerY	/pl/docs/Web/API/MouseEvent/layerY
 /pl/docs/Web/API/UIEvent/pageX	/pl/docs/Web/API/MouseEvent/pageX
 /pl/docs/Web/API/UIEvent/pageY	/pl/docs/Web/API/MouseEvent/pageY
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/clearInterval
@@ -1843,6 +1846,7 @@
 /pl/docs/Web/JavaScript/Reference/Errors/Brakujący_średnik_po_własności_id	/pl/docs/Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 /pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe	/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /pl/docs/Web/JavaScript/Reference/Functions/Parametry_domyślne	/pl/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Referencje/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Referencje/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -1971,7 +1975,7 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/lineNumber	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/message	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/name	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/name
-/pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toSource	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource
+/pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toSource	/pl/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Error/toString	/pl/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pl/docs/Web/JavaScript/Referencje/Obiekty/EvalError	/pl/docs/Web/JavaScript/Reference/Global_Objects/EvalError
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Function	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function
