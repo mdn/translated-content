@@ -41975,17 +41975,6 @@
       "teoli"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Function": {
-    "modified": "2020-10-15T21:14:17.300Z",
-    "contributors": [
-      "SphinxKnight",
-      "Francoois",
-      "teoli",
-      "Jeremie",
-      "fscholz",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
     "modified": "2020-10-15T21:32:11.205Z",
     "contributors": [
@@ -42069,26 +42058,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
-    "modified": "2020-10-15T21:15:24.935Z",
-    "contributors": [
-      "SphinxKnight",
-      "opii93",
-      "ctjhoa",
-      "WSH",
-      "teoli",
-      "Jeremie",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2019-03-24T00:05:25.191Z",
-    "contributors": [
-      "wbamberg",
-      "Potappo",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
     "modified": "2020-10-15T21:30:11.290Z",
     "contributors": [
@@ -42126,18 +42095,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T21:14:12.465Z",
-    "contributors": [
-      "SphinxKnight",
-      "ylerjen",
-      "Pihemde",
-      "teoli",
-      "Jeremie",
-      "fscholz",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
     "modified": "2020-10-15T21:29:11.196Z",
     "contributors": [
@@ -42168,18 +42125,6 @@
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/URIError": {
     "modified": "2020-10-15T21:31:09.956Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {
-    "modified": "2020-10-15T21:30:49.753Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WeakSet": {
-    "modified": "2020-10-15T21:31:01.804Z",
     "contributors": [
       "SphinxKnight"
     ]

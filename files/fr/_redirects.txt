@@ -2345,7 +2345,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/displayName	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/fr/docs/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
+/fr/docs/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/InternalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError
@@ -2410,7 +2410,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Object/lookupGetter	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /fr/docs/JavaScript/Reference/Objets_globaux/Object/lookupSetter	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 /fr/docs/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-/fr/docs/JavaScript/Reference/Objets_globaux/Object/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
+/fr/docs/JavaScript/Reference/Objets_globaux/Object/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object
 /fr/docs/JavaScript/Reference/Objets_globaux/Object/seal	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /fr/docs/JavaScript/Reference/Objets_globaux/Object/setPrototypeOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /fr/docs/JavaScript/Reference/Objets_globaux/Object/toLocaleString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
@@ -2425,7 +2425,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/String/indexOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 /fr/docs/JavaScript/Reference/Objets_globaux/String/lastIndexOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /fr/docs/JavaScript/Reference/Objets_globaux/String/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length
-/fr/docs/JavaScript/Reference/Objets_globaux/String/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/JavaScript/Reference/Objets_globaux/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/JavaScript/Reference/Objets_globaux/String/replace	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 /fr/docs/JavaScript/Reference/Objets_globaux/String/split	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split
 /fr/docs/JavaScript/Reference/Objets_globaux/String/toLowerCase	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
@@ -2569,7 +2569,7 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/caller	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
+/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Math	/fr/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -2608,7 +2608,7 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/lookupGetter	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/lookupSetter	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/propertyIsEnumerable	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
+/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Object/valueOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
@@ -2617,7 +2617,7 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String/Match	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String/Substr	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substr
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String/replace	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/String/split	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/SyntaxError	/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
@@ -2792,7 +2792,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/caller	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Math	/fr/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -2831,7 +2831,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/lookupGetter	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/lookupSetter	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/propertyIsEnumerable	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Object/valueOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
@@ -2840,7 +2840,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String/Match	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String/Substr	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substr
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String/replace	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/String/split	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/SyntaxError	/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
@@ -4845,11 +4845,15 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
+/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 /fr/docs/Web/JavaScript/Reference/Grammaire_lexicale	/fr/docs/Web/JavaScript/Reference/Lexical_grammar
 /fr/docs/Web/JavaScript/Reference/Index_des_méthodes	/fr/docs/Web/JavaScript/Reference
@@ -5088,7 +5092,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/displayName	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator
@@ -5294,7 +5298,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/preventExtensions	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/proto	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/seal	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/setPrototypeOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/toLocaleString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
@@ -5435,7 +5439,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/String/normalize	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/String/padEnd	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/String/padStart	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/String/raw	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/raw
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/String/repeat	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/String/replace	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace
@@ -5535,14 +5539,14 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/delete	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/get	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/has	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/set	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/add	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/delete	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/has	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakSet
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/CompileError	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Global	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
@@ -6132,7 +6136,7 @@
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
-/fr/docs/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource
+/fr/docs/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/toString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 /fr/docs/valeur_reelle	/fr/docs/Web/CSS/actual_value
 /fr/docs/window.closed	/fr/docs/Web/API/Window/closed
