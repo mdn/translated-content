@@ -260,7 +260,7 @@ translation_of: Web/API/XMLHttpRequest
   </tr>
   <tr id="channel">
    <td><code>channel</code> {{ReadOnlyInline}}</td>
-   <td>{{Interface("nsIChannel")}}</td>
+   <td><code>nsIChannel</code></td>
    <td>Der Kanal, der vom Objekt zur Durchführung der Anfrage verwendet wurde. Das ist <code>null</code> falls der Kanal noch nicht erzeugt worden ist. Im Falle von mehrteiligen Anfragen ist das der anfängliche Kanal, nicht derjenige der anderen Teile der mehrteiligen Anfrage.<br>
     <strong>Zugriff nur mit erhöhten Rechten.</strong></td>
   </tr>
@@ -511,14 +511,14 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 <ul>
  <li class="note">Standardmässig begrenzt Firefox 3 die Anzahl gleichzeitiger <code>XMLHttpRequest</code> Verbindungen pro Server auf 6 (frühere Versionen begrenzen dies auf 2 pro Server). Manche interaktiven Websites können eine <code>XMLHttpRequest</code> Verbindung offen halten, so dass das Öffnen mehrerer Sitzungen auf solchen Sites dazu führen kann, dass der Browser auf eine Art und Weise hängen bleibt, dass das Fenster nicht mehr neu gezeichnet wird und Steuerelemente nicht mehr reagieren. Dieser Wert lässt sich ändern durch Editieren der Voreinstellung <code>network.http.max-persistent-connections-per-server</code> in <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
  <li class="note">Ab Gecko 7 werden Header, die durch <a href="#setrequestheader">setRequestHeader</a> gesetzt wurden, mit der Anfrage mitgeschickt, wenn einer Umleitung gefolgt wird. Zuvor wurden diese Header nicht gesendet.</li>
- <li class="note"><code>XMLHttpRequest</code> ist in Gecko implementiert mittels der {{interface("nsIXMLHttpRequest")}}, {{interface("nsIXMLHttpRequestEventTarget")}}, und {{interface("nsIJSXMLHttpRequest")}} Schnittstellen.</li>
+ <li class="note"><code>XMLHttpRequest</code> ist in Gecko implementiert mittels der <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, und <code>nsIJSXMLHttpRequest</code> Schnittstellen.</li>
 </ul>
 
 <h4 class="note" id="Events">Events</h4>
 
 <p><code>onreadystatechange</code> als eine Eigenschaft der <code>XMLHttpRequest</code> Instanz wird von allen Browsern unterstützt.</p>
 
-<p>Seither wurden einige zusätzliche Event Handler in verschiedenen Browsern implementiert (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). Diese werden in Firefox unterstützt. Für Genaueres, siehe {{interface("nsIXMLHttpRequestEventTarget")}} und <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Seither wurden einige zusätzliche Event Handler in verschiedenen Browsern implementiert (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). Diese werden in Firefox unterstützt. Für Genaueres, siehe <code>nsIXMLHttpRequestEventTarget</code> und <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
 
 <p>Neuere Browser, inklusive Firefox, unterstützen das 'Horchen' nach <code>XMLHttpRequest </code>Ereignissen mittels der Standard <code><a href="/en-US/docs/DOM/element.addEventListener" title="element.addEventListener">addEventListener</a></code> APIs zusätzlich zum Setzen von <code>on*</code> Eigenschaften auf eine Handler Funktion.</p>
 
