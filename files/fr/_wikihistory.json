@@ -41307,16 +41307,6 @@
       "wordsbybird"
     ]
   },
-  "conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0": {
-    "modified": "2019-03-23T23:34:26.249Z",
-    "contributors": [
-      "J.DMB",
-      "Goofy",
-      "AbrahamT",
-      "Hub",
-      "Blancdememoire"
-    ]
-  },
   "conflicting/Web/API/Web_Storage_API": {
     "modified": "2019-03-23T23:53:02.039Z",
     "contributors": [
@@ -41433,14 +41423,6 @@
     "contributors": [
       "VincentN",
       "Fredchat"
-    ]
-  },
-  "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
-    "modified": "2019-03-23T23:28:30.598Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "SphinxKnight"
     ]
   },
   "conflicting/Web/Accessibility": {
