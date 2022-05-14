@@ -18,7 +18,7 @@ L'interface **`HTMLIFrameElement`** fournit des propriétés et des méthodes sp
 
 _Propriétés héritées de son parent, {{domxref("HTMLElement")}}_.
 
-- {{domxref("HTMLIFrameElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLIFrameElement.align")}} {{deprecated_inline}}
   - : Est une caîne de caractères {{domxref("DOMString")}} qui spécifie l'alignement du cadre par rapport au contexte environnant.
 - {{domxref("HTMLIFrameElement.allow")}} {{experimental_inline}}
   - : Est une liste d'origines à partir desquelles le cadre est autorisé à afficher du contenu. Cet attribut accepte également les valeurs `self` et `src` qui représentent l'origine dans l'attribut src de l'iframe. La valeur par défaut est `src`.
@@ -32,15 +32,15 @@ _Propriétés héritées de son parent, {{domxref("HTMLElement")}}_.
   - : Renvoie un {{domxref("WindowProxy")}}, la fenêtre proxy pour le contexte de navigation imbriqué.
 - {{domxref("HTMLIFrameElement.csp")}}
   - : Spécifie la politique de sécurité du contenu qu'un document incorporé doit accepter d'appliquer à lui-même.
-- {{domxref("HTMLIFrameElement.frameBorder")}} {{obsolete_inline}}
+- {{domxref("HTMLIFrameElement.frameBorder")}} {{deprecated_inline}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui indique s'il faut créer des bordures entre les cadres.
 - {{domxref("HTMLIFrameElement.height")}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("height", "iframe")}} indiquant la hauteur du cadre.
-- {{domxref("HTMLIFrameElement.longDesc")}} {{obsolete_inline}}
+- {{domxref("HTMLIFrameElement.longDesc")}} {{deprecated_inline}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui contient l'URI d'une description longue du cadre.
-- {{domxref("HTMLIFrameElement.marginHeight")}} {{obsolete_inline}}
+- {{domxref("HTMLIFrameElement.marginHeight")}} {{deprecated_inline}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} représentant la hauteur de la marge du cadre.
-- {{domxref("HTMLIFrameElement.marginWidth")}} {{obsolete_inline}}
+- {{domxref("HTMLIFrameElement.marginWidth")}} {{deprecated_inline}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} représentant la largeur de la marge du cadre.
 - {{domxref("HTMLIFrameElement.name")}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("name", "iframe")}} contenant un nom permettant de faire référence au cadre.
@@ -50,7 +50,7 @@ _Propriétés héritées de son parent, {{domxref("HTMLElement")}}_.
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("referrerPolicy", "iframe")}} attribut HTML indiquant le référent à utiliser lors de l'extraction de la ressource liée.
 - {{domxref("HTMLIFrameElement.sandbox")}}
   - : Est un {{domxref("DOMSettableTokenList")}} qui reflète l'attribut {{htmlattrxref("sandbox", "iframe")}} indiquant des restrictions supplémentaires sur le comportement du contenu imbriqué.
-- {{domxref("HTMLIFrameElement.scrolling")}} {{obsolete_inline}}
+- {{domxref("HTMLIFrameElement.scrolling")}} {{deprecated_inline}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui indique si le navigateur doit fournir des barres de défilement pour le cadre.
 - {{domxref("HTMLIFrameElement.src")}}
   - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("src", "iframe")}} contenant l'adresse du contenu à intégrer. Notez que la suppression programmatique de l'attribut src d'un `<iframe>` (par exemple via {{domxref("Element.removeAttribute()")}}) entraîne le chargement de `about:blank` dans le cadre dans Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.

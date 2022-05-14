@@ -23,9 +23,9 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ### Attributs obsolètes
 
-- {{htmlattrdef("type")}} {{obsolete_inline}}
+- {{htmlattrdef("type")}} {{deprecated_inline}}
   - : Cet attribut est uniquement utilisé si l'attribut `valuetype` vaut `"ref"`. Il définit le type MIME des valeurs trouvées à l'URI.
-- {{htmlattrdef("valuetype")}} {{obsolete_inline}}
+- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
 
   - : Cet attribut définit le type de la valeur indiquée par l'attribut `value`. Les valeurs possibles sont :
 

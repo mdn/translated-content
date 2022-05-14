@@ -212,7 +212,7 @@ Il est possible de faire référence aux arguments d'une fonction au sein de cet
 
 - [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : Un objet semblable à un tableau qui contient les arguments passés à la fonction qui est exécutée.
 - [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee) {{Deprecated_inline}} : La fonction en cours d'exécution.
-- [`arguments.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/caller) {{Obsolete_inline}} : La fonction qui a appelé la fonction courante.
+- [`arguments.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/caller) {{deprecated_inline}} : La fonction qui a appelé la fonction courante.
 - [`arguments.length`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/length) : Le nombre d'arguments passés à la fonction.
 
 ## Récursion

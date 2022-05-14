@@ -35,7 +35,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés ou obsolètes
 
-- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Cet attribut indique que les règles de mises en forme ne s'appliquent qu'aux éléments ayant le même élément parent que l'élément courant.
 
 ## Exemples

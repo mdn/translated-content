@@ -18,9 +18,9 @@ L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-de
 
 _Hérite des propriétés de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("HTMLFrameSetElement.cols")}} {{obsolete_inline}}
+- {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la largeur de chaque colonne à l'intérieur d'un jeu de cadres.
-- {{domxref("HTMLFrameSetElement.rows")}} {{obsolete_inline}}
+- {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la hauteur de chaque colonne à l'intérieur d'un jeu de cadres.
 
 ## Méthodes

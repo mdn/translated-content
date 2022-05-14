@@ -202,7 +202,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
 
 _Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Obsolete_inline}}
+- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Initialise la valeur d'un `CloseEvent`. Si l'événement a déjà été envoyé, cette méthode ne fait rien.
 
 ## Spécifications
