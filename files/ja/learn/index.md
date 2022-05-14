@@ -60,25 +60,25 @@ MDN のこのエリアの目的は、あなたを「初心者」から「エキ�
 - [ウェブの性能 — ウェブサイトを高速かつレスポンシブにする](/ja/docs/Learn/Performance)
   - : ウェブの性能は、ウェブアプリケーションのダウンロードを確実に高速化し、ダウンロードを帯域幅、画面の寸法、ネットワーク、端末の能力にかかわらず、ユーザーの操作をレスポンシブにする技術です。
 - [ツールとテスト](/ja/docs/Learn/Tools_and_testing)
-  - : このトピックは開発者が作業をやり易くするツール、例えばクロスブラウザーテストツールなどについてカバーします。
+  - : このトピックでは、開発者が作業を円滑に進めるために使用するツール、例えばブラウザー間テストツール、リンター、フォーマッター、変換ツール、バージョン管理システム、デプロイツール、クライアント側 JavaScript フレームワークなどについて説明します。
 - [サーバーサイドのウェブサイトプログラミング](/ja/docs/Learn/Server-side)
   - : クライアントサイドのウェブ開発に集中していても、サーバーとサーバーサイドのコードがどう動くのかを知るのは有益です。このトピックではサーバーサイドの動作の一般的な入門と、2 つの有名フレームワーク — Django (Python) や Express (Node.js) を使ってサーバーサイドアプリを作る方法の詳しいチュートリアルを提供します。
 
 ## コード例の入手
 
-学習エリアにあるコードの例はすべて [GitHub で利用可能](https://github.com/mdn/learning-area/)です。それらすべてをあなたのコンピュータにコピーしたいのなら、最も簡単な方法は[最新の master コードブランチの ZIP をダウンロードする](https://codeload.github.com/mdn/learning-area/zip/main)ことです。
+学習エリアにあるコードの例はすべて [GitHub から利用可能](https://github.com/mdn/learning-area/)です。すべてのコードを自分のコンピューターにコピーしたいのであれば、[最新の master コードブランチの ZIP をダウンロードする](https://codeload.github.com/mdn/learning-area/zip/main)のが最も簡単です。
 
-自動更新を可能にするより柔軟な方法でリポジトリーをコピーしたい場合は、より複雑な指示に従うことになります。
+自動更新ができる、より柔軟な方法でリポジトリーをコピーしたい場合は、より複雑な指示に従うことになります。
 
-1. マシンに [Git をインストールします](https://git-scm.com/downloads)。これは GitHub が動作している、その下にあるバージョン管理システムのソフトウェアです。
-2. コンピューターで[コマンドプロンプト](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) またはターミナル ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)) を開きます。
-3. 学習エリアのリポジトリーを、コマンドプロンプト/ターミナルの現在位置の learning-area というフォルダーにコピーするには、下記のコマンドを使います。
+1. マシンに [Git をインストールします](https://git-scm.com/downloads)。これは GitHub が動作する基盤となっているバージョン管理システムのソフトウェアです。
+2. コンピューターで[コマンドプロンプト](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) またはターミナル ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)) を開きます。
+3. 学習エリアのリポジトリーを、コマンドプロンプト/ターミナルが指している現在位置の learning-area というフォルダーにコピーするには、下記のコマンドを使います。
 
     ```bash
     git clone https://github.com/mdn/learning-area
     ```
 
-4. そのディレクトリーに入って、ファイルが (Finder/エクスプローラーや、[cd コマンド](https://en.wikipedia.org/wiki/Cd_(command))のいずれか) の後に見つかるでしょう。
+4. （Finder/エクスプローラーや [cd コマンド](https://en.wikipedia.org/wiki/Cd_(command))を使用して）そのディレクトリーに入ると、ファイルが見つかります。
 
 `learning-area` リポジトリーを、GitHub の master バージョンになされたあらゆる変更で更新するには、以下の手順でできます。
 
