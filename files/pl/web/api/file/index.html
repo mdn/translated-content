@@ -15,7 +15,7 @@ translation_of: Web/API/File
 
 <p>The <strong><code>File</code></strong> interface provides information about files and allows JavaScript in a web page to access their content.</p>
 
-<p><code>File</code> objects are generally retrieved from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{domxref("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{domxref("HTMLCanvasElement")}}. In Gecko, privileged code can create <code>File</code> objects representing any local file without user interaction (see {{anch("Implementation notes")}} for more information.)</p>
+<p><code>File</code> objects are generally retrieved from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{domxref("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{domxref("HTMLCanvasElement")}}. In Gecko, privileged code can create <code>File</code> objects representing any local file without user interaction (see <a href="#implementation_notes">Implementation notes</a> for more information.)</p>
 
 <p>A <code>File</code> object is a specific kind of a {{domxref("Blob")}}, and can be used in any context that a Blob can. In particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, and {{domxref("XMLHttpRequest", "", "send()")}} accept both <code>Blob</code>s and <code>File</code>s.</p>
 
