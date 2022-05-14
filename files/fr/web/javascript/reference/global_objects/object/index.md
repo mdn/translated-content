@@ -61,7 +61,7 @@ Il n'existe pas de méthode pour `Object` qui permette de supprimer une proprié
 - [`Object.getPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
   - : Retourne le prototype de l'objet indiqué.
 - [`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
-  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la Comparaison d'Égalité Abstraite et de la Comparaison d'Égalité Stricte).
+  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la *comparaison d'égalité abstraite* et de la *comparaison d'égalité stricte*).
 - [`Object.isExtensible()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)
   - : Détermine si l'extension d'un objet est permise.
 - [`Object.isFrozen()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)
@@ -101,7 +101,7 @@ Il n'existe pas de méthode pour `Object` qui permette de supprimer une proprié
 - [`Object.prototype.isPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)
   - : Renvoie un booléen indiquant si l'objet courant (pour lequel est appelé cette méthode) fait partie de la chaîne de prototypes de l'objet passé en argument.
 - [`Object.prototype.propertyIsEnumerable()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript \[\[Enumerable\]\]](/fr/docs/Web/JavaScript/Data_structures#propriétés) est fixé.
+  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript `[[Enumerable]]`](/fr/docs/Web/JavaScript/Data_structures#propriétés) est fixé.
 - [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString)
   - : Appelle la méthode [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 - [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
