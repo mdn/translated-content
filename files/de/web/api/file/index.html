@@ -11,7 +11,7 @@ translation_of: Web/API/File
 
 <p>Das<strong><code>File</code></strong> Interface stellt Informationen über Dateien bereit und erlaubt den Zugriff auf deren Inhalt.</p>
 
-<p><code>File</code> werden generell von einem {{domxref("FileList")}} Objekt als das Ergebnis einer Benutzerauswahl von Dateien über ein <code>{{ HTMLElement("input") }}</code> Element, von einem <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> Objekt eines Drag-and-Drop-Vorgangs,<span style="line-height: 1.5;"> oder von der </span><code style="font-size: 14px;">mozGetAsFile()</code><span style="line-height: 1.5;"> API eines {{ domxref("HTMLCanvasElement") }} zurückgegeben</span><span style="line-height: 1.5;">. In Gecko ist es von privilegiertem Code aus möglich, den Konstruktor direkt mit einem String Pfad oder einem {{interface("nsIFile")}} aufzurufen. Siehe <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Using the DOM File API in chrome code">Using the DOM File API in chrome code</a> für weitere Details.</span></p>
+<p><code>File</code> werden generell von einem {{domxref("FileList")}} Objekt als das Ergebnis einer Benutzerauswahl von Dateien über ein <code>{{ HTMLElement("input") }}</code> Element, von einem <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> Objekt eines Drag-and-Drop-Vorgangs,<span style="line-height: 1.5;"> oder von der </span><code style="font-size: 14px;">mozGetAsFile()</code><span style="line-height: 1.5;"> API eines {{ domxref("HTMLCanvasElement") }} zurückgegeben</span><span style="line-height: 1.5;">. In Gecko ist es von privilegiertem Code aus möglich, den Konstruktor direkt mit einem String Pfad oder einem <code>nsIFile</code> aufzurufen. Siehe <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Using the DOM File API in chrome code">Using the DOM File API in chrome code</a> für weitere Details.</span></p>
 
 <p>Die Dateireferenz kann nach der Formularübermittlung gespeichert werden, während der Benutzer über keine Internetverbindung verfügt. Somit können die Daten empfangen und hochgeladen werden, sobald die Internetverbindung wiederhergestellt ist.</p>
 
@@ -117,8 +117,8 @@ translation_of: Web/API/File
 
 <ul>
  <li>In Gecko, you can use this API from chrome code. See <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Using the DOM File API in chrome code">Using the DOM File API in chrome code</a> for details.</li>
- <li>Starting in Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an {{interface("nsIFile")}} object to the DOM <code>File</code> constructor to specify the file to reference.</li>
- <li>Starting in Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the {{interface("nsIDOMFile")}} object directly. The constructor takes, in contrast to Blob, as second argument the filename. The filename can be any String.
+ <li>Starting in Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an <code>nsIFile</code> object to the DOM <code>File</code> constructor to specify the file to reference.</li>
+ <li>Starting in Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the <code>nsIDOMFile</code> object directly. The constructor takes, in contrast to Blob, as second argument the filename. The filename can be any String.
   <pre class="syntaxbox">File File(
   Array parts,
   String filename,
