@@ -42,19 +42,19 @@ La structure d'un fichier WebVTT se compose des éléments suivants, dont certai
 
 ### Exemples
 
-#### Exemple n°1 - le fichier WebVTT le plus simple
+#### Exemple n°1 — le fichier WebVTT le plus simple
 
 ```plain
 WEBVTT
 ```
 
-#### Exemple n°2 - un fichier WebVTT basique avec un en-tête
+#### Exemple n°2 — un fichier WebVTT basique avec un en-tête
 
 ```plain
 WEBVTT - Ce fichier n'a pas de réplique.
 ```
 
-#### Exemple n°3 - un exemple de fichier WebVTT usuel avec un en-tête et des répliques
+#### Exemple n°3 — un exemple de fichier WebVTT usuel avec un en-tête et des répliques
 
 ```plain
 WEBVTT - Ce fichier contient des répliques.
@@ -112,13 +112,13 @@ Un commentaire se compose de trois parties&nbsp;:
 - Un espace ou une nouvelle ligne.
 - Zéro ou plusieurs caractères en dehors de ceux indiqués ci-avant.
 
-#### Exemple n°4 - commentaire WebVTT
+#### Exemple n°4 — commentaire WebVTT
 
 ```plain
 NOTE Voici un commentaire
 ```
 
-#### Exemple n°5 - commentaire sur plusieurs lignes
+#### Exemple n°5 — commentaire sur plusieurs lignes
 
 ```plain
 NOTE
@@ -129,7 +129,7 @@ NOTE On peut aussi écrire un commentaire
 sur plusieurs lignes de cette façon.
 ```
 
-#### Exemple n°6 - utilisation usuelle des commentaires
+#### Exemple n°6 — utilisation usuelle des commentaires
 
 ```plain
 WEBVTT - Traduction d'un film que j'aime
@@ -257,7 +257,7 @@ Une réplique (<i lang="en">cue</i> en anglais) est un bloc de sous-titre distin
 
 ### Exemples 
 
-#### Exemple n°7 - exemple de réplique
+#### Exemple n°7 — exemple de réplique
 
 ```plain
 1 - Texte défilant introductif
@@ -269,13 +269,13 @@ Il y a bien longtemps, dans une galaxie lointaine, très lointaine…
 
 L'identifiant est un nom qui identifie la réplique. Il peut être utilisé pour faire référence à la réplique depuis un script. Un identifiant ne doit pas contenir de saut de ligne ni la chaîne de caractères `-->`. Il doit se terminer avec un seul saut de ligne. Les identifiants ne sont pas nécessairement uniques, même s'il est habituel de les numéroter (par exemple, 1, 2, 3…).
 
-#### Exemple n°8 - identifiant de réplique de l'exemple n°7
+#### Exemple n°8 — identifiant de réplique de l'exemple n°7
 
 ```plain
 1 - Texte défilant introductif
 ```
 
-#### Exemple n°9 - utilisation habituelle des identifiants
+#### Exemple n°9 — utilisation habituelle des identifiants
 
 ```plain
 WEBVTT
@@ -331,7 +331,7 @@ Où&nbsp;:
 
   - Comprises entre `000` et `999` (inclus).
 
-#### Exemple n°10 - exemples d'horodatages simples
+#### Exemple n°10 — exemples d'horodatages simples
 
 ```plain
 00:00:22.230 --> 00:00:24.606
@@ -340,7 +340,7 @@ Où&nbsp;:
 00:00:35.827 --> 00:00:40.122
 ```
 
-#### Exemple n°11 - exemples d'horodatages qui se chevauchent
+#### Exemple n°11 — exemples d'horodatages qui se chevauchent
 
 ```plain
 00:00:00.000 --> 00:00:10.000
@@ -348,7 +348,7 @@ Où&nbsp;:
 00:00:30.000 --> 00:00:50.000
 ```
 
-#### Exemple n°12 - exemples d'horodatage qui ne se chevauchent pas
+#### Exemple n°12 — exemples d'horodatage qui ne se chevauchent pas
 
 ```plain
 00:00:00.000 --> 00:00:10.000
@@ -547,7 +547,7 @@ Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espa
     </tbody>
   </table>
 
-#### Exemple n°13 - exemples de paramètres de réplique
+#### Exemple n°13 — exemples de paramètres de réplique
 
 La première ligne illustre l'absence de paramètre. La seconde ligne illustre ce qu'on pourrait faire pour afficher le texte sur un panneau ou une étiquette à l'écran. La troisième ligne pourrait être utilisée pour un titre. La dernière ligne pourrait être utilisée pour du texte d'une langue asiatique.
 
@@ -619,7 +619,7 @@ Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. 
 
   - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le *texte actif* correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le *texte actif* correspondra à du *texte précédent*. Tout texte situé après le *texte actif* correspondra à du *texte futur*. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
 
-  #### Exemple n°12 - texte de karaoké
+  #### Exemple n°14 — texte de karaoké
 
   ```plain
   1
@@ -641,7 +641,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Permet la mise en forme du texte contenu en ciblant la classe avec CSS.
 
-  #### Exemple n°14 - balise de classe
+  #### Exemple n°15 — balise de classe
 
   ```html
   <c.nomclasse>texte</c>
@@ -651,7 +651,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Met en italique le texte contenu.
 
-  #### Exemple n°15 - balise d'italique
+  #### Exemple n°16 — balise d'italique
 
   ```html
   <i>texte</i>
@@ -661,7 +661,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Met en gras le texte contenu.
 
-  #### Exemple n°16 - balise de gras
+  #### Exemple n°17 — balise de gras
 
   ```html
   <b>texte</b>
@@ -671,7 +671,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Souligne le texte contenu
 
-  #### Exemple n°17 - balise de soulignement
+  #### Exemple n°18 — balise de soulignement
 
   ```html
   <u>texte</u>
@@ -681,7 +681,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
 
-  ##### Exemple n°18 - balise ruby
+  ##### Exemple n°19 — balise ruby
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -691,7 +691,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
 
-  ##### Exemple n°19 - balise de texte ruby
+  ##### Exemple n°20 — balise de texte ruby
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -701,7 +701,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
   - Semblable à la balise de classe, permet également le ciblage à l'aide de CSS pour la mise en forme du texte.
 
-  ##### Exemple n°20 - balise de voix
+  ##### Exemple n°21 — balise de voix
 
   ```html
   <v Bob>texte</v>
