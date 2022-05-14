@@ -16896,6 +16896,16 @@
       "kipcode66"
     ]
   },
+  "Web/API/MouseEvent/layerX": {
+    "modified": "2019-04-19T04:25:56.943Z",
+    "contributors": [
+      "SphinxKnight",
+      "NemoNobobyPersonne",
+      "fscholz",
+      "khalid32",
+      "Feugy"
+    ]
+  },
   "Web/API/MouseEvent/offsetX": {
     "modified": "2019-03-23T22:01:19.710Z",
     "contributors": [
@@ -18520,16 +18530,6 @@
       "SphinxKnight",
       "Goofy",
       "Kalwyn"
-    ]
-  },
-  "Web/API/UIEvent/layerX": {
-    "modified": "2019-04-19T04:25:56.943Z",
-    "contributors": [
-      "SphinxKnight",
-      "NemoNobobyPersonne",
-      "fscholz",
-      "khalid32",
-      "Feugy"
     ]
   },
   "Web/API/UI_Events/Keyboard_event_key_values": {
@@ -29330,15 +29330,6 @@
       "doriangillet",
       "marie-ototoi",
       "Bat"
-    ]
-  },
-  "Web/HTML/Element/Input/datetime": {
-    "modified": "2019-04-04T15:45:35.933Z",
-    "contributors": [
-      "SphinxKnight",
-      "Antoine-Demailly",
-      "marie-ototoi",
-      "KylianLM"
     ]
   },
   "Web/HTML/Element/Input/datetime-local": {
@@ -41858,6 +41849,15 @@
       "regisg27",
       "Fredchat",
       "MatthieuMaler"
+    ]
+  },
+  "conflicting/Web/HTML/Element/input/datetime-local": {
+    "modified": "2019-04-04T15:45:35.933Z",
+    "contributors": [
+      "SphinxKnight",
+      "Antoine-Demailly",
+      "marie-ototoi",
+      "KylianLM"
     ]
   },
   "conflicting/Web/HTML/Global_attributes": {

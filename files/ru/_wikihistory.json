@@ -14585,14 +14585,6 @@
       "ishpartko"
     ]
   },
-  "Web/HTML/Element/Input/datetime": {
-    "modified": "2019-07-06T19:59:07.845Z",
-    "contributors": [
-      "fuggy",
-      "Brom95",
-      "bad4iz"
-    ]
-  },
   "Web/HTML/Element/Input/datetime-local": {
     "modified": "2019-03-18T21:42:35.150Z",
     "contributors": [
@@ -23838,6 +23830,14 @@
     "modified": "2019-03-23T23:27:06.077Z",
     "contributors": [
       "wbamberg"
+    ]
+  },
+  "conflicting/Web/HTML/Element/input/datetime-local": {
+    "modified": "2019-07-06T19:59:07.845Z",
+    "contributors": [
+      "fuggy",
+      "Brom95",
+      "bad4iz"
     ]
   },
   "conflicting/Web/HTTP/CORS": {

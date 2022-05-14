@@ -576,6 +576,7 @@
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin
 /ru/docs/Web/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
+/ru/docs/Web/HTML/Element/Input/datetime	/ru/docs/conflicting/Web/HTML/Element/input/datetime-local
 /ru/docs/Web/HTML/Element/video/seeking_event	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/HTML/Element/кнопка	/ru/docs/Web/HTML/Element/button
 /ru/docs/Web/HTML/Element/ссылка	/ru/docs/Web/HTML/Element/link

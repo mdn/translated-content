@@ -1,6 +1,6 @@
 ---
 title: <input type="datetime">
-slug: Web/HTML/Element/Input/datetime
+slug: conflicting/Web/HTML/Element/input/datetime-local
 tags:
   - Element
   - HTML
@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web
 translation_of: Web/HTML/Element/input/datetime
+original_slug: Web/HTML/Element/Input/datetime
 ---
 {{HTMLRef}}{{deprecated_header}}
 

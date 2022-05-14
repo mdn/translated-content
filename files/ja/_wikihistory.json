@@ -33994,17 +33994,10 @@
       "homirun"
     ]
   },
-  "Web/HTML/Element/input/datetime": {
+  "Web/HTML/Element/input/datetime-local": {
     "modified": "2020-08-31T13:34:59.919Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/HTML/Element/input/datetime-local": {
-    "modified": "2020-10-15T22:03:44.244Z",
-    "contributors": [
-      "mfuji09",
-      "shogo82148"
     ]
   },
   "Web/HTML/Element/input/email": {

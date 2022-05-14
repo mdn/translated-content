@@ -1861,6 +1861,7 @@
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
@@ -1935,7 +1936,7 @@
 /es/docs/Web/HTML/Elemento/input/checkbox	/es/docs/Web/HTML/Element/input/checkbox
 /es/docs/Web/HTML/Elemento/input/color	/es/docs/Web/HTML/Element/input/color
 /es/docs/Web/HTML/Elemento/input/date	/es/docs/Web/HTML/Element/input/date
-/es/docs/Web/HTML/Elemento/input/datetime	/es/docs/Web/HTML/Element/input/datetime
+/es/docs/Web/HTML/Elemento/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento/input/email	/es/docs/Web/HTML/Element/input/email
 /es/docs/Web/HTML/Elemento/input/hidden	/es/docs/Web/HTML/Element/input/hidden
 /es/docs/Web/HTML/Elemento/input/number	/es/docs/Web/HTML/Element/input/number

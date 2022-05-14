@@ -1,6 +1,6 @@
 ---
 title: UIEvent.layerY
-slug: Web/API/UIEvent/layerY
+slug: Web/API/MouseEvent/layerY
 tags:
   - API
   - DOM
@@ -8,8 +8,9 @@ tags:
   - 読み取り専用
   - リファレンス
   - UIEvent
-browser-compat: api.UIEvent.layerY
 translation_of: Web/API/UIEvent/layerY
+original_slug: Web/API/UIEvent/layerY
+browser-compat: api.UIEvent.layerY
 ---
 {{APIRef("DOM Events")}}{{Non-standard_header}}
 

@@ -989,7 +989,7 @@
 /fr/docs/DOM/element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/DOM/event	/fr/docs/Web/API/Event
 /fr/docs/DOM/event.initEvent	/fr/docs/Web/API/Event/initEvent
-/fr/docs/DOM/event.layerX	/fr/docs/Web/API/UIEvent/layerX
+/fr/docs/DOM/event.layerX	/fr/docs/Web/API/MouseEvent/layerX
 /fr/docs/DOM/event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
 /fr/docs/DOM/form	/fr/docs/Web/API/HTMLFormElement
 /fr/docs/DOM/manipuler_lhistorique_du_navigateur	/fr/docs/Web/API/History_API
@@ -3861,6 +3861,7 @@
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
 /fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/fr/docs/conflicting/Web/API/Pointer_events
+/fr/docs/Web/API/UIEvent/layerX	/fr/docs/Web/API/MouseEvent/layerX
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
@@ -4615,6 +4616,7 @@
 /fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
+/fr/docs/Web/HTML/Element/Input/datetime	/fr/docs/conflicting/Web/HTML/Element/input/datetime-local
 /fr/docs/Web/HTML/Element/Input/mois	/fr/docs/Web/HTML/Element/Input/month
 /fr/docs/Web/HTML/Element/Output_{{HTMLVersionInline(5)}}_{{fx_minversion_inline(4)}}	/fr/docs/Web/HTML/Element/Output
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event

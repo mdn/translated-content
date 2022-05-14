@@ -3344,6 +3344,8 @@
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
+/ja/docs/Web/API/UIEvent/layerX	/ja/docs/Web/API/MouseEvent/layerX
+/ja/docs/Web/API/UIEvent/layerY	/ja/docs/Web/API/MouseEvent/layerY
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
@@ -4114,7 +4116,7 @@
 /ja/docs/Web/HTML/Element/Input1/checkbox	/ja/docs/Web/HTML/Element/input/checkbox
 /ja/docs/Web/HTML/Element/Input1/color	/ja/docs/Web/HTML/Element/input/color
 /ja/docs/Web/HTML/Element/Input1/date	/ja/docs/Web/HTML/Element/input/date
-/ja/docs/Web/HTML/Element/Input1/datetime	/ja/docs/Web/HTML/Element/input/datetime
+/ja/docs/Web/HTML/Element/Input1/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/Input1/datetime-local	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/Input1/email	/ja/docs/Web/HTML/Element/input/email
 /ja/docs/Web/HTML/Element/Input1/file	/ja/docs/Web/HTML/Element/input/file
@@ -4140,6 +4142,7 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
+/ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn/Forms
