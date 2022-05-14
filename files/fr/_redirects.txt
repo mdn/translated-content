@@ -3044,9 +3044,9 @@
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Contribute/Feedback
 /fr/docs/MDN/Guidelines/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
 /fr/docs/MDN/Kuma	/fr/docs/MDN/Yari
-/fr/docs/MDN/User_guide	/fr/docs/conflicting/MDN/Tools
+/fr/docs/MDN/User_guide	/fr/docs/MDN/Tools
 /fr/docs/MDN_a_dix_ans	/fr/docs/MDN/At_ten
-/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/conflicting/MDN/Contribute
+/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/MDN/Contribute
 /fr/docs/MDN_a_dix_ans/Histoire_MDN	/fr/docs/MDN/At_ten/History_of_MDN
 /fr/docs/Manuel_de_référence_Javascript_1.5_(ECMA-262,_Edition_3)	/fr/docs/Web/JavaScript/Reference
 /fr/docs/MathML	/fr/docs/Web/MathML
@@ -6070,6 +6070,8 @@
 /fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /fr/docs/conflicting/Learn_370bfb0fa23e42f4384f010341852c43	/fr/docs/Learn
 /fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8	/fr/docs/Learn
+/fr/docs/conflicting/MDN/Contribute	/fr/docs/MDN/Contribute
+/fr/docs/conflicting/MDN/Tools	/fr/docs/MDN/Tools
 /fr/docs/conflicting/Mozilla/Add-ons/WebExtensions	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext	/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 /fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister	/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister

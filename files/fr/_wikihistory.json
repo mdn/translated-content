@@ -41048,22 +41048,6 @@
       "dattaz"
     ]
   },
-  "conflicting/MDN/Contribute": {
-    "modified": "2020-02-19T18:10:07.383Z",
-    "contributors": [
-      "jswisher",
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/MDN/Tools": {
-    "modified": "2019-01-16T20:49:48.849Z",
-    "contributors": [
-      "wbamberg",
-      "Jacqboel",
-      "Hell_Carlito",
-      "Sheppy"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-03-24T00:13:05.858Z",
     "contributors": [
