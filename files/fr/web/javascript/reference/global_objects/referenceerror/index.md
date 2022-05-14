@@ -6,14 +6,14 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/ReferenceError
 ---
 {{JSRef}}
 
-L'objet **`ReferenceError`** représente une erreur qui se produit lorsqu'il est fait référence à une variable qui n'existe pas (ou qui n'a pas encore été initialisée) dans la portée courante.
+L'objet **`ReferenceError`** représente une erreur qui se produit lorsqu'il fait référence à une variable qui n'existe pas (ou qui n'a pas encore été initialisée) dans la portée courante.
 
-## Constructor
+## Constructeur
 
 - [`ReferenceError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError)
   - : Crée un nouvel objet `ReferenceError`.
 
-## Instance properties
+## Propriétés des instances
 
 - [`ReferenceError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
   - : Le message d'erreur.
@@ -73,4 +73,3 @@ try {
 ## Voir aussi
 
 - [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-
