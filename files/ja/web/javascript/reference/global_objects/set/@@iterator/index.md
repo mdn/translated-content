@@ -1,14 +1,15 @@
 ---
-title: 'Set.prototype[@@iterator]()'
+title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 tags:
   - ECMAScript 2015
-  - Iterator
+  - 反復子
   - JavaScript
-  - Method
-  - Prototype
+  - メソッド
+  - プロトタイプ
   - リファレンス
   - set
+browser-compat: javascript.builtins.Set.@@iterator
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
 {{JSRef}}
@@ -17,21 +18,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 
 {{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+mySet[Symbol.iterator]
+```
 
-<pre class="syntaxbox notranslate"><var>mySet</var>[Symbol.iterator]</pre>
-
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
 `Set` **イテレーター**関数です。既定では {{jsxref("Set.prototype.values()", "values()")}} 関数です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_iterator" name="Using_iterator()">[@@iterator]() の使用</h3>
+### \[@@iterator]\() の使用
 
-<pre class="brush:js notranslate">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -41,11 +43,12 @@ const setIter = mySet[Symbol.iterator]();
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
-</pre>
+```
 
-<h3 id="Using_iterator_with_for..of" name="Using_iterator()_with_for..of">for..of とともに [@@iterator]() を使う</h3>
+### for..of とともに \[@@iterator]\() を使う
 
-<pre class="brush:js notranslate">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -53,31 +56,18 @@ mySet.add({});
 for (const v of mySet) {
   console.log(v);
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Set.@@iterator")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}
