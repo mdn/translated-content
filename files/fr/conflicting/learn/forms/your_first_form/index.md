@@ -1,8 +1,8 @@
 ---
 title: Exemple
-slug: Learn/Forms/Your_first_form/Example
+slug: conflicting/Learn/Forms/Your_first_form
 translation_of: Learn/Forms/Your_first_form/Example
-original_slug: Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple
+original_slug: Learn/Forms/Your_first_form/Example
 ---
 Ceci est l'exemple pour l'article [Mon premier formulaire HTML](/fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML "/en-US/docs/HTML/Forms/My_first_HTML_form").
 

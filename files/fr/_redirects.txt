@@ -1956,7 +1956,7 @@
 /fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /fr/docs/HTML/Formulaires/Les_blocs_de_formulaires_natifs	/fr/docs/Learn/Forms/Basic_native_form_controls
 /fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
-/fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form/Example
+/fr/docs/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/conflicting/Learn/Forms/Your_first_form
 /fr/docs/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
 /fr/docs/HTML/HTML5	/fr/docs/orphaned/Web/Guide/HTML/HTML5
 /fr/docs/HTML/HTML5/Introduction_to_HTML5	/fr/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
@@ -1978,7 +1978,7 @@
 /fr/docs/HTTP/Aperçu	/fr/docs/Web/HTTP/Overview
 /fr/docs/HTTP/Basics_of_HTTP	/fr/docs/Web/HTTP/Basics_of_HTTP
 /fr/docs/HTTP/Basics_of_HTTP/Choisir_entre_les_URLs_www_sans_www	/fr/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-/fr/docs/HTTP/Basics_of_HTTP/Data_URIs	/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/fr/docs/HTTP/Basics_of_HTTP/Data_URIs	/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /fr/docs/HTTP/Basics_of_HTTP/Evolution_of_HTTP	/fr/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /fr/docs/HTTP/Basics_of_HTTP/Identifier_des_ressources_sur_le_Web	/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /fr/docs/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -3002,6 +3002,7 @@
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/CSS/Using_CSS_in_a_web_page	/fr/docs/Learn/CSS/First_steps/How_CSS_works
+/fr/docs/Learn/Forms/Your_first_form/Example	/fr/docs/conflicting/Learn/Forms/Your_first_form
 /fr/docs/Learn/Index	/fr/docs/Learn
 /fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/Learn/JavaScript/Asynchronous/Promises
 /fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/Learn/JavaScript/Asynchronous
@@ -4546,7 +4547,7 @@
 /fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers	/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers
 /fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs	/fr/docs/Learn/Forms/Basic_native_form_controls
 /fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
-/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form/Example
+/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/conflicting/Learn/Forms/Your_first_form
 /fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets	/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript	/fr/docs/Learn/Forms/Sending_forms_through_JavaScript
 /fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire	/fr/docs/Learn/Forms/Form_validation
@@ -4642,7 +4643,7 @@
 /fr/docs/Web/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/How_to_structure_a_web_form/Example
 /fr/docs/Web/HTML/Formulaires/Les_blocs_de_formulaires_natifs	/fr/docs/Learn/Forms/Basic_native_form_controls
 /fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
-/fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form/Example
+/fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/conflicting/Learn/Forms/Your_first_form
 /fr/docs/Web/HTML/Gestion_du_focus_en_HTML	/fr/docs/Web/API/Document/hasFocus
 /fr/docs/Web/HTML/HTML5	/fr/docs/orphaned/Web/Guide/HTML/HTML5
 /fr/docs/Web/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/conflicting/Web/HTML/Element
@@ -4667,6 +4668,7 @@
 /fr/docs/Web/HTTP/Access_control_CORS	/fr/docs/Web/HTTP/CORS
 /fr/docs/Web/HTTP/Aperçu	/fr/docs/Web/HTTP/Overview
 /fr/docs/Web/HTTP/Basics_of_HTTP/Choisir_entre_les_URLs_www_sans_www	/fr/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /fr/docs/Web/HTTP/Basics_of_HTTP/Identifier_des_ressources_sur_le_Web	/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /fr/docs/Web/HTTP/Basics_of_HTTP/URLs_de_type_ressource	/fr/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs

@@ -1,6 +1,6 @@
 ---
 title: Example
-slug: Learn/Forms/Your_first_form/Example
+slug: Learn/Forms/Your_first_form
 tags:
   - Beginner
   - CodingScripting
@@ -10,6 +10,7 @@ tags:
   - HTML
   - Learn
   - Web
+original_slug: Learn/Forms/Your_first_form/Example
 ---
 This is the example code for the article [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form).
 

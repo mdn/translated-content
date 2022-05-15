@@ -198,6 +198,7 @@
 /ru/docs/Learn/CSS/Styling_text/Стилизация_списков	/ru/docs/Learn/CSS/Styling_text/Styling_lists
 /ru/docs/Learn/CSS/Как	/ru/docs/Learn/CSS/Howto
 /ru/docs/Learn/Discover_browser_developer_tools	/ru/docs/Learn/Common_questions/What_are_browser_developer_tools
+/ru/docs/Learn/Forms/Your_first_form/Example	/ru/docs/Learn/Forms/Your_first_form
 /ru/docs/Learn/Getting_started_with_the_web/Веб_и_веб_стандарты	/ru/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /ru/docs/Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения	/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /ru/docs/Learn/HTML/Forms	/ru/docs/Learn/Forms
@@ -598,6 +599,7 @@
 /ru/docs/Web/HTML/Ссылки	/ru/docs/Web/HTML/Reference
 /ru/docs/Web/HTML/Строчные_Элементы	/ru/docs/Web/HTML/Inline_elements
 /ru/docs/Web/HTML/Типы_ссылок	/ru/docs/Web/HTML/Link_types
+/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU	/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ru/docs/Web/HTTP/Response_codes	/ru/docs/Web/HTTP/Status

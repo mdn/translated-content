@@ -176,7 +176,7 @@
 /zh-TW/docs/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Web/HTTP/Link_prefetching_FAQ
 /zh-TW/docs/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
-/zh-TW/docs/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-TW/docs/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
 /zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-TW/docs/IndexedDB/Using_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -706,11 +706,12 @@
 /zh-TW/docs/Web/HTML/Supported_media_formats	/zh-TW/docs/conflicting/Web/Media/Formats
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Web/HTML/Block-level_elements
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/conflicting/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Status/418_I_m_a_teapot	/zh-TW/docs/Web/HTTP/Status/418
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
-/zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀（JavaScript_Overview）	/zh-TW/docs/Web/JavaScript/Guide/Introduction

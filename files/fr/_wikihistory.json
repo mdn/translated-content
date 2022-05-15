@@ -4320,14 +4320,6 @@
       "tregagnon"
     ]
   },
-  "Learn/Forms/Your_first_form/Example": {
-    "modified": "2020-07-16T22:21:08.230Z",
-    "contributors": [
-      "Dralyab",
-      "tregagnon",
-      "FredB"
-    ]
-  },
   "Learn/Front-end_web_developer": {
     "modified": "2020-12-12T07:17:26.887Z",
     "contributors": [
@@ -30970,7 +30962,7 @@
       "unpeudetout"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-10-15T21:59:04.672Z",
     "contributors": [
       "SphinxKnight",
@@ -41046,6 +41038,14 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Learn/Forms/Your_first_form": {
+    "modified": "2020-07-16T22:21:08.230Z",
+    "contributors": [
+      "Dralyab",
+      "tregagnon",
+      "FredB"
     ]
   },
   "conflicting/Web/API": {
