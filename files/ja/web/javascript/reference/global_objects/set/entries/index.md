@@ -10,21 +10,21 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>entries()</strong></code> メソッドは、<code>Set</code> オブジェクトの各要素を挿入順に<strong> <code>[value, value]</code> の配列</strong>を含む新しい<a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators">イテレーター</a>オブジェクトを返します。<code>Set</code> オブジェクトは、<code>Map</code> オブジェクトのように <code>key</code> を持つことはありません。しかしながら、<code>Map</code> オブジェクトと似た API をもつために、各 <em>entry</em> は <em>key</em> と <em>value</em> に対して同じ値を持ちます。そのため、配列 <code>[value, value]</code> が返されます。</p>
+`**entries()**` メソッドは、`Set` オブジェクトの各要素を挿入順に** `[value, value]` の配列**を含む新しい<a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators">イテレーター</a>オブジェクトを返します。`Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、各 <em>entry</em> は <em>key</em> と <em>value</em> に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate"><code><em>mySet</em>.entries()</code></pre>
+<pre class="syntaxbox notranslate">`<em>mySet</em>.entries()`</pre>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p><code>Set</code> オブジェクトの各要素を挿入順に<strong> <code>[value, value]</code> の配列</strong>を含む新しい <code>Iterator</code> オブジェクトです。</p>
+`Set` オブジェクトの各要素を挿入順に** `[value, value]` の配列**を含む新しい `Iterator` オブジェクトです。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -59,7 +59,7 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.entries")}}</p>
+{{Compat("javascript.builtins.Set.entries")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

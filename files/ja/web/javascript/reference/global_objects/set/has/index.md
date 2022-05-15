@@ -9,11 +9,11 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>has()</code></strong> メソッドは、特定の値をもつ要素が <code>Set</code> オブジェクト内に存在するかどうかを示す真偽値を返します。</p>
+**`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -24,16 +24,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 <h3 id="Parameters" name="Parameters">引数</h3>
 
 <dl>
- <dt><code><var>value</var></code></dt>
- <dd><code>Set</code> オブジェクトに存在するかテストする値です。</dd>
+ <dt>`<var>value</var>`</dt>
+ <dd>`Set` オブジェクトに存在するかテストする値です。</dd>
 </dl>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p><code>Set</code> オブジェクト内に特定の値をもつ要素が存在していたら <code>true</code> を返します。さもなければ <code>false</code> を返します。</p>
+`Set` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
 <div class="blockIndicator note">
-<p><strong>注:</strong> 技術的に言えば、<code>has()</code> は <a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">Same-value-zero</a> アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。</p>
+**注:** 技術的に言えば、`has()` は <a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">Same-value-zero</a> アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
 </div>
 
 <h2 id="Examples" name="Examples">例</h2>
@@ -72,7 +72,7 @@ set1.add({'key1': 1}); // set1 には2つのエントリが含まれるように
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.has")}}</p>
+{{Compat("javascript.builtins.Set.has")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
