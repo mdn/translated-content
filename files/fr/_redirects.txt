@@ -5809,7 +5809,7 @@
 /fr/docs/Web/XSLT/with-param	/fr/docs/Web/XSLT/Element/with-param
 /fr/docs/Web/XSLT/Éléments	/fr/docs/Web/XSLT/Element
 /fr/docs/Web/XSLT/Éléments/element	/fr/docs/Web/XSLT/Element/element
-/fr/docs/WebAPI	/fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3
+/fr/docs/WebAPI	/fr/docs/Web/API
 /fr/docs/WebAPI/Battery_Status	/fr/docs/Web/API/Battery_status_API
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
@@ -5830,7 +5830,7 @@
 /fr/docs/WebGL/Tutorial/Creer_des_objets_3D_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /fr/docs/WebGL/Tutorial/Utiliser_les_textures_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /fr/docs/WebGL/Using_shaders_to_apply_color_in_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-/fr/docs/WebRTC	/fr/docs/conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0
+/fr/docs/WebRTC	/fr/docs/Web/API/WebRTC_API
 /fr/docs/WebRTC/Introduction	/fr/docs/Web/API/WebRTC_API/Session_lifetime
 /fr/docs/WebRTC/MediaStream_API	/fr/docs/Web/API/Media_Streams_API
 /fr/docs/WebRTC/Prendre_des_photos_avec_la_webcam	/fr/docs/Web/API/WebRTC_API/Taking_still_photos
@@ -6094,8 +6094,10 @@
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3	/fr/docs/Web/API/Document_Object_Model
+/fr/docs/conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0	/fr/docs/Web/API/WebRTC_API
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
+/fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
 /fr/docs/document.createElement	/fr/docs/Web/API/Document/createElement
 /fr/docs/document.getElementById	/fr/docs/Web/API/Document/getElementById
 /fr/docs/en	/en-US/
