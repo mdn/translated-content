@@ -18,7 +18,7 @@ L'évènement `mousedown` est déclenché lorsqu'on appuie sur le bouton de la s
 cible.onmousedown = refFonction;
 ```
 
-### Value
+### Valeur
 
 `refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`MouseEvent`](/fr/docs/Web/API/MouseEvent) comme unique argument.
 
