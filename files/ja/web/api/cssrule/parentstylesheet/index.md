@@ -4,36 +4,31 @@ slug: Web/API/CSSRule/parentStyleSheet
 tags:
   - API
   - CSSOM
-  - NeedsCompatTable
-  - Property
-  - Reference
+  - CSSRule
+  - プロパティ
+  - リファレンス
+browser-compat: api.CSSRule.parentStyleSheet
 translation_of: Web/API/CSSRule/parentStyleSheet
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong>parentStyleSheet</strong> は、現在の規則を定義している stylesheet オブジェクトを返します。</p>
+**`parentStyleSheet`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、現在のルールを定義している {{domxref("StyleSheet")}} オブジェクトを返します。
 
-<h3 id="Syntax" name="Syntax">構文</h3>
+## 値
 
-<pre class="syntaxbox">var <em>stylesheet</em> = cssRule.parentStyleSheet</pre>
+{{domxref("StyleSheet")}} オブジェクトです。
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+## 例
 
-<ul>
- <li><code>stylesheet</code> はスタイルシートオブジェクトです。</li>
-</ul>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules.parentStyleSheet);
+```
 
-<h3 id="Example" name="Example">例</h3>
+## 仕様書
 
-<pre class="eval">if ( bgRule.parentStyleSheet != mySheet ) {
-   // alien style rule!
-}
-</pre>
+{{Specifications}}
 
-<h3 id="Notes" name="Notes">補記</h3>
+## ブラウザーの互換性
 
-<p>stylesheet オブジェクトのインターフェイスについての情報は、<a href="/Gecko_DOM_Reference/event#DOM_styleSheet_Object">Gecko DOM Reference:event#DOM_styleSheet_Object</a> を参照してください。</p>
-
-<h3 id="Specification" name="Specification">仕様書</h3>
-
-<p>DOM Level 2 Style - cssRule</p>
+{{Compat}}
