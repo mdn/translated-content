@@ -4,33 +4,35 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Method
-  - Prototype
+  - メソッド
+  - プロトタイプ
   - リファレンス
   - set
+browser-compat: javascript.builtins.Set.clear
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
 {{JSRef}}
 
-**`clear()`** メソッドは、`Set` オブジェクトからすべての要素を取り除きます。
+**`clear()`** メソッドは、 `Set` オブジェクトからすべての要素を取り除きます。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+clear()
+```
 
-<pre class="syntaxbox notranslate"><var>mySet</var>.clear();</pre>
-
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
 {{jsxref("undefined")}} です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_the_clear_method" name="Using_the_clear_method">clear() メソッドの使用</h3>
+### clear() メソッドの使用
 
-<pre class="brush: js notranslate">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add('foo');
 
@@ -41,30 +43,17 @@ mySet.clear();
 
 mySet.size;       // 0
 mySet.has('bar')  // false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Set.clear")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
