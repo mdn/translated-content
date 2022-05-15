@@ -7,15 +7,15 @@ tags:
   - JavaScript
   - Method
   - Prototype
-  - Reference
+  - リファレンス
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>@@iterator</code></strong> プロパティの初期値は {{jsxref("Set.prototype.values()", "values")}} プロパティの初期値と同じ関数オブジェクトです。</p>
+**`@@iterator`** プロパティの初期値は {{jsxref("Set.prototype.values()", "values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p><code>Set</code> <strong>イテレーター</strong>関数です。既定では {{jsxref("Set.prototype.values()", "values()")}} 関数です。</p>
+`Set` **イテレーター**関数です。既定では {{jsxref("Set.prototype.values()", "values()")}} 関数です。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -72,7 +72,7 @@ for (const v of mySet) {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.@@iterator")}}</p>
+{{Compat("javascript.builtins.Set.@@iterator")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

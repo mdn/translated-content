@@ -6,15 +6,15 @@ tags:
   - JavaScript
   - Method
   - Prototype
-  - Reference
+  - リファレンス
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>clear()</code></strong> メソッドは、<code>Set</code> オブジェクトからすべての要素を取り除きます。</p>
+**`clear()`** メソッドは、`Set` オブジェクトからすべての要素を取り除きます。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p>{{jsxref("undefined")}} です。</p>
+{{jsxref("undefined")}} です。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -60,7 +60,7 @@ mySet.has('bar')  // false
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.clear")}}</p>
+{{Compat("javascript.builtins.Set.clear")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

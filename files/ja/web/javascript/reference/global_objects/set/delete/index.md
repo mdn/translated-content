@@ -6,15 +6,15 @@ tags:
   - JavaScript
   - Method
   - Prototype
-  - Reference
+  - リファレンス
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>delete()</code></strong> メソッドは、<code>Set</code> オブジェクトから指定された要素を取り除きます。</p>
+**`delete()`** メソッドは、`Set` オブジェクトから指定された要素を取り除きます。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -25,13 +25,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 <h3 id="Syntax" name="Syntax">引数</h3>
 
 <dl>
- <dt><code><var>value</var></code></dt>
- <dd><code><var>mySet</var></code> から取り除く要素の値です。</dd>
+ <dt>`<var>value</var>`</dt>
+ <dd>`<var>mySet</var>` から取り除く要素の値です。</dd>
 </dl>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p><code><var>mySet</var></code> から <code><var>value</var></code> が正常に削除されたら <code>true</code> を返します。さもなければ、<code>false</code> を返します。</p>
+`<var>mySet</var>` から `<var>value</var>` が正常に削除されたら `true` を返します。さもなければ、`false` を返します。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -46,7 +46,7 @@ mySet.delete('foo'); // 正常に要素を削除出来れば true を返す
 mySet.has('foo');    // 存在しない要素を確認すると false を返す
 </pre>
 
-<p>Set から Objectを削除する方法を以下で確認してみましょう。</p>
+Set から Objectを削除する方法を以下で確認してみましょう。
 
 <pre class="brush: js notranslate">const setObj = new Set(); // 新しいセットを作成
 
@@ -79,7 +79,7 @@ setObj.forEach(function(point){
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.delete")}}</p>
+{{Compat("javascript.builtins.Set.delete")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

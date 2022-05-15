@@ -6,15 +6,15 @@ tags:
   - JavaScript
   - Method
   - Prototype
-  - Reference
+  - リファレンス
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>add()</code></strong> メソッドは、特定の <code>value</code> をもつ新しい要素を <code>Set</code> オブジェクトの最後に追加します。</p>
+**`add()`** メソッドは、特定の `value` をもつ新しい要素を `Set` オブジェクトの最後に追加します。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -25,13 +25,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 <h3 id="Syntax" name="Syntax">引数</h3>
 
 <dl>
- <dt><code><var>value</var></code></dt>
- <dd><code>Set</code> オブジェクトに追加する要素の値です。</dd>
+ <dt>`<var>value</var>`</dt>
+ <dd>`Set` オブジェクトに追加する要素の値です。</dd>
 </dl>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p><code>Set</code> オブジェクトです。</p>
+`Set` オブジェクトです。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -63,7 +63,7 @@ console.log(mySet);
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.add")}}</p>
+{{Compat("javascript.builtins.Set.add")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

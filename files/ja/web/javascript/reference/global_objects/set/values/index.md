@@ -10,15 +10,15 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>values()</code></strong> メソッドは、挿入順で <code>Set</code> オブジェクト内の各要素の値を含んだ、新しいイテレーターオブジェクトを返します。</p>
+**`values()`** メソッドは、挿入順で `Set` オブジェクト内の各要素の値を含んだ、新しいイテレーターオブジェクトを返します。
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: <strong><code>keys()</code></strong> メソッドは ({{jsxref("Map")}} オブジェクトとの類似性のため) このメソッドに対するエイリアスです。まったく同じように動作し、<code>Set</code> の各要素の<strong>値</strong>を返します。</p>
+**注**: **`keys()`** メソッドは ({{jsxref("Map")}} オブジェクトとの類似性のため) このメソッドに対するエイリアスです。まったく同じように動作し、`Set` の各要素の**値**を返します。
 </div>
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p>挿入順で <code>Set</code> オブジェクト内の各要素の値を含んだ、新しいイテレーターオブジェクトです。</p>
+挿入順で `Set` オブジェクト内の各要素の値を含んだ、新しいイテレーターオブジェクトです。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -62,7 +62,7 @@ console.log(setIter.next().value); // "baz"</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.values")}}</p>
+{{Compat("javascript.builtins.Set.values")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

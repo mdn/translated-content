@@ -9,17 +9,17 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>size</code></strong> アクセサープロパティは {{jsxref("Set")}} オブジェクト内の要素の数を返します。</p>
+**`size`** アクセサープロパティは {{jsxref("Set")}} オブジェクト内の要素の数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
 <h2 id="Description" name="Description">解説</h2>
 
-<p><code>size</code> の値は、<code>Set</code> オブジェクトがいくつの要素を持つかを表す整数値です。<code>size</code> に対するセットアクセサー関数は <code>undefined</code> です。よって、このプロパティは変更できません。</p>
+`size` の値は、`Set` オブジェクトがいくつの要素を持つかを表す整数値です。`size` に対するセットアクセサー関数は `undefined` です。よって、このプロパティは変更できません。
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -50,7 +50,7 @@ mySet.size; // 3
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.builtins.Set.size")}}</p>
+{{Compat("javascript.builtins.Set.size")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

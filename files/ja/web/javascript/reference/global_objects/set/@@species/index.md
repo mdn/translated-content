@@ -8,25 +8,25 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Array[Symbol.species]</code></strong> アクセサープロパティは、<code>Set</code> コンストラクターを返します。</p>
+**`Array[Symbol.species]`** アクセサープロパティは、`Set` コンストラクターを返します。
 
 <h2 id="Description" name="Description">解説</h2>
 
-<p><code>species</code> アクセサープロパティは、 <code>Set</code> オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。</p>
+`species` アクセサープロパティは、 `Set` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。
 
 <h2 id="Examples" name="Examples">例</h2>
 
 <h3 id="Species_in_ordinary_objects" name="Species_in_ordinary_objects">通常のオブジェクトの spicies</h3>
 
-<p><code>species</code> プロパティは、<code>Set</code> オブジェクトの既定のコンストラクター関数である <code>Set</code> コンストラクターを返します。</p>
+`species` プロパティは、`Set` オブジェクトの既定のコンストラクター関数である `Set` コンストラクターを返します。
 
 <pre class="brush: js notranslate">Set[Symbol.species]; // Set() 関数</pre>
 
 <h3 id="Species_in_derived_objects" name="Species_in_derived_objects">派生オブジェクトの spicies</h3>
 
-<p>派生コレクションオブジェクト (たとえば、独自の配列である <code>MySet</code>) では、<code>MySet</code> の species は <code>MySet</code> コンストラクターです。しかし、派生クラスのメソッドで、親である <code>Set</code> オブジェクトを返すためにこれをオーバーライドしたいかもしれません。</p>
+派生コレクションオブジェクト (たとえば、独自の配列である `MySet`) では、`MySet` の species は `MySet` コンストラクターです。しかし、派生クラスのメソッドで、親である `Set` オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
 
 <pre class="brush: js notranslate">class MySet extends Set {
   // MySet species を親である Set コンストラクターにオーバーライド。
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Set.@@species")}}</p>
+{{Compat("javascript.builtins.Set.@@species")}}
 </div>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
