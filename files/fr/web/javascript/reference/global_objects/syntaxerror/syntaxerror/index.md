@@ -24,7 +24,7 @@ new SyntaxError(message, nomFichier, numeroLigne)
 - `nomFichier` {{optional_inline}}
   - : Le nom du fichier contenant le code qui a déclenché l'exception.
 - `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne du code qui a déclenché l'exception
+  - : Le numéro de la ligne du code qui a déclenché l'exception.
 
 ## Exemples
 
