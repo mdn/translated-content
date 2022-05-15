@@ -131,6 +131,6 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
 - [Les <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
-- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) - une bibliothèque qui fournit des abstractions pour synchroniser et distribuer des tâches
-- [La mémoire partagée - un rapide tutoriel (en anglais)](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
-- [<i lang="en">A Taste of JavaScript's New Parallel Primitives</i> - Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [`parlib-simple`](https://github.com/lars-t-hansen/parlib-simple) — une bibliothèque qui fournit des abstractions pour synchroniser et distribuer des tâches
+- [La mémoire partagée — un rapide tutoriel (en anglais)](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
+- [<i lang="en">A Taste of JavaScript's New Parallel Primitives</i> — Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
