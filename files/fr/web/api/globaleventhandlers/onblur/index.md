@@ -24,7 +24,7 @@ target.onblur = refFonction;
 
 ## Exemple
 
-Cet exemple utilise `onblur` et [`onfocus`](/fr/docs/Web/API/GlobalEventHandlers/onfocus) pour changer le texte au s'in d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input).
+Cet exemple utilise `onblur` et [`onfocus`](/fr/docs/Web/API/GlobalEventHandlers/onfocus) pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input).
 
 ### HTML
 
