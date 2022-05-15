@@ -4,39 +4,40 @@ slug: Web/API/CSSRule/cssText
 tags:
   - API
   - CSSOM
-  - NeedsCompatTable
-  - Property
-  - Referrence
+  - プロパティ
+  - リファレンス
+browser-compat: api.CSSRule.cssText
 translation_of: Web/API/CSSRule/cssText
 ---
-<p>要素スタイル {{domxref("CSSStyleDeclaration.cssText")}} と混同しないでください。</p>
+{{APIRef("CSSOM") }}
 
-<div>{{APIRef("CSSOM") }}</div>
+**`cssText`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、 {{domxref("CSSStyleSheet")}} スタイルルールの実際のテキストを返します。
 
-<h2 id="Summary" name="Summary">概要</h2>
+> **Note:** このプロパティを要素のスタイルの {{domxref("CSSStyleDeclaration.cssText")}} と混同しないでください。
 
-<p><strong>cssText</strong> は、{{domxref("CSSStyleSheet")}} スタイル規則の実際のテキストを返します。</p>
+このプロパティは、[仕様化](https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013)されたとおり、*機能的に*変更のみで、かつ、暗黙的であることが指定されているため、直接設定することができなくなったことに注意してください。言い換えると、設定しようとしても警告もエラーもなく、_絶対に何も起こりません_。さらに、設定可能なサブプロパティもありません。従って、これを変更するには、スタイルシートの {{domxref("CSSRuleList", "cssRules")}}`[index]` プロパティおよび {{domxref("CSSStyleRule.selectorText", ".selectorText")}}、{{domxref("CSSStyleRule.style", ".style")}} （または、そのサブプロパティ）を使用してください。詳細は、[動的なスタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)を参照してください。
 
-<p>補足: <a href="https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013">仕様に明記</a> されたとおり、<em>機能</em> を <strong>暗黙的に</strong> 変更するだけで、直接設定することはできません。これに設定しようとしても、警告もエラーもなく、絶対に<strong>何も起こりません</strong>。さらに、設定可能なサブプロパティもありません。そのため、これを変更するには、スタイルシートの {{domxref("CSSRuleList","cssRules")}}[<em>index</em>] プロパティおよび {{domxref("CSSStyleRule.selectorText",".selectorText")}}、{{domxref("CSSStyleRule.style",".style")}} (または、そのサブプロパティ) を使用してください。詳細は、<a href="/ja/docs/DOM/Using_dynamic_styling_information">動的なスタイル情報の利用</a> を参照してください。</p>
+## 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+この {{domxref("CSSStyleSheet")}} ルールの実際のテキストを含む文字列です。
 
-<pre class="syntaxbox"><em>string</em> = cssRule.cssText</pre>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+```css
+body {
+  background-color: darkblue;
+}
+```
 
-<pre class="brush:html;">&lt;style&gt;
-body { background-color: darkblue; }
-&lt;/style&gt;
-&lt;script&gt;
-  var stylesheet = document.styleSheets[0];
-  alert(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }
-&lt;/script&gt;
+```js
+let stylesheet = document.styleSheets[0];
+console.log(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }
+```
 
-</pre>
+## 仕様書
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+{{Specifications}}
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule">DOM Level 2 Style CSS - Interface CSSStyleRule (introduced in DOM Level 2)</a></li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
