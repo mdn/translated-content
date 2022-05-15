@@ -41059,20 +41059,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Web/API/Canvas_API/Tutorial": {
-    "modified": "2019-03-23T23:59:59.422Z",
-    "contributors": [
-      "emersion",
-      "Laurent_Lyaudet",
-      "Delapouite",
-      "tregagnon",
-      "Nairod",
-      "BenoitL",
-      "Chbok",
-      "Mgjbot",
-      "Pitux"
-    ]
-  },
   "conflicting/Web/API/Document/createEvent": {
     "modified": "2020-10-15T21:37:47.725Z",
     "contributors": [
@@ -41105,18 +41091,6 @@
       "Mgjbot",
       "BenoitL",
       "Jorolo"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3": {
-    "modified": "2019-03-23T23:46:29.146Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "khalid32",
-      "Sheppy",
-      "Ame Nomade",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10": {
@@ -41317,18 +41291,6 @@
       "Blancdememoire"
     ]
   },
-  "conflicting/Web/API/Web_Storage_API": {
-    "modified": "2019-03-23T23:53:02.039Z",
-    "contributors": [
-      "AshfaqHossain",
-      "teoli",
-      "Nigel_Sheldon",
-      "BenoitL",
-      "Mgjbot",
-      "CedricP",
-      "Sum2807"
-    ]
-  },
   "conflicting/Web/API/Web_Workers_API/Using_web_workers": {
     "modified": "2019-03-23T23:02:10.788Z",
     "contributors": [
@@ -41424,13 +41386,6 @@
     "contributors": [
       "SphinxKnight",
       "wbamberg",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef": {
-    "modified": "2019-01-16T16:07:52.523Z",
-    "contributors": [
       "VincentN",
       "Fredchat"
     ]
