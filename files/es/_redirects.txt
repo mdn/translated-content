@@ -2015,7 +2015,8 @@
 /es/docs/Web/HTML/microformatos	/es/docs/Web/HTML/microformats
 /es/docs/Web/HTML/Índice	/es/docs/conflicting/Web/HTML
 /es/docs/Web/HTTP/Access_control_CORS	/es/docs/Web/HTTP/CORS
-/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
+/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME	/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /es/docs/Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x	/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x

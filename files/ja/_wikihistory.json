@@ -4681,23 +4681,6 @@
     ]
   },
   "Learn/Forms/Your_first_form": {
-    "modified": "2020-12-02T12:15:15.554Z",
-    "contributors": [
-      "hamasaki",
-      "dskmori",
-      "wlt",
-      "mfuji09",
-      "Uemmra3",
-      "michi-h0623",
-      "silverskyvicto",
-      "fscholz",
-      "chrisdavidmills",
-      "yyss",
-      "Sheppy",
-      "ethertank"
-    ]
-  },
-  "Learn/Forms/Your_first_form/Example": {
     "modified": "2020-12-02T12:12:26.573Z",
     "contributors": [
       "hamasaki",
@@ -35089,7 +35072,7 @@
       "yyss"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-12-04T15:28:57.902Z",
     "contributors": [
       "mfuji09",

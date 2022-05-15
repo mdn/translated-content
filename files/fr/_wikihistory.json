@@ -4320,14 +4320,6 @@
       "tregagnon"
     ]
   },
-  "Learn/Forms/Your_first_form/Example": {
-    "modified": "2020-07-16T22:21:08.230Z",
-    "contributors": [
-      "Dralyab",
-      "tregagnon",
-      "FredB"
-    ]
-  },
   "Learn/Front-end_web_developer": {
     "modified": "2020-12-12T07:17:26.887Z",
     "contributors": [
@@ -30970,7 +30962,7 @@
       "unpeudetout"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-10-15T21:59:04.672Z",
     "contributors": [
       "SphinxKnight",
@@ -41048,6 +41040,14 @@
       "dattaz"
     ]
   },
+  "conflicting/Learn/Forms/Your_first_form": {
+    "modified": "2020-07-16T22:21:08.230Z",
+    "contributors": [
+      "Dralyab",
+      "tregagnon",
+      "FredB"
+    ]
+  },
   "conflicting/Web/API": {
     "modified": "2019-03-24T00:13:05.858Z",
     "contributors": [
@@ -41057,20 +41057,6 @@
       "khalid32",
       "dextra",
       "BenoitL"
-    ]
-  },
-  "conflicting/Web/API/Canvas_API/Tutorial": {
-    "modified": "2019-03-23T23:59:59.422Z",
-    "contributors": [
-      "emersion",
-      "Laurent_Lyaudet",
-      "Delapouite",
-      "tregagnon",
-      "Nairod",
-      "BenoitL",
-      "Chbok",
-      "Mgjbot",
-      "Pitux"
     ]
   },
   "conflicting/Web/API/Document/createEvent": {
@@ -41105,18 +41091,6 @@
       "Mgjbot",
       "BenoitL",
       "Jorolo"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3": {
-    "modified": "2019-03-23T23:46:29.146Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "khalid32",
-      "Sheppy",
-      "Ame Nomade",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10": {
@@ -41307,18 +41281,6 @@
       "wordsbybird"
     ]
   },
-  "conflicting/Web/API/Web_Storage_API": {
-    "modified": "2019-03-23T23:53:02.039Z",
-    "contributors": [
-      "AshfaqHossain",
-      "teoli",
-      "Nigel_Sheldon",
-      "BenoitL",
-      "Mgjbot",
-      "CedricP",
-      "Sum2807"
-    ]
-  },
   "conflicting/Web/API/Web_Workers_API/Using_web_workers": {
     "modified": "2019-03-23T23:02:10.788Z",
     "contributors": [
@@ -41414,13 +41376,6 @@
     "contributors": [
       "SphinxKnight",
       "wbamberg",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef": {
-    "modified": "2019-01-16T16:07:52.523Z",
-    "contributors": [
       "VincentN",
       "Fredchat"
     ]
@@ -42409,29 +42364,6 @@
       "Bringdal",
       "tregagnon",
       "xaky"
-    ]
-  },
-  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-04-07T04:00:20.055Z",
-    "contributors": [
-      "n3wborn",
-      "mathildebuenerd",
-      "ledenis",
-      "JNa0",
-      "edspeedy",
-      "Pols12",
-      "efazenda",
-      "Phklrz",
-      "Mathieu_deLauniere",
-      "Havano",
-      "Fredchat",
-      "wakka27",
-      "jessmania",
-      "ferncoder",
-      "SphinxKnight",
-      "tregagnon",
-      "Blancdememoire",
-      "FredB"
     ]
   },
   "orphaned/Web/HTML/Element/isindex": {

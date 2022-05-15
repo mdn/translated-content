@@ -2673,7 +2673,8 @@
 /ja/docs/Learn/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Learn/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Learn/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
-/ja/docs/Learn/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
+/ja/docs/Learn/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
+/ja/docs/Learn/Forms/Your_first_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/Getting_started_with_the_web/ウェブサイトを公開する	/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /ja/docs/Learn/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
@@ -2697,7 +2698,7 @@
 /ja/docs/Learn/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Learn/HTML/Forms/UI_pseudo-classes	/ja/docs/Learn/Forms/UI_pseudo-classes
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
-/ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
+/ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /ja/docs/Learn/Index	/ja/docs/conflicting/Learn
 /ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous/Introducing
@@ -4212,6 +4213,7 @@
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes
+/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Gecko_user_agent_string_reference	/ja/docs/Web/HTTP/Headers/User-Agent/Firefox
 /ja/docs/Web/HTTP/HTTP_access_control	/ja/docs/Web/HTTP/CORS
@@ -4825,7 +4827,7 @@
 /ja/docs/ant_script_to_assemble_an_extension	/ja/docs/orphaned/ant_script_to_assemble_an_extension
 /ja/docs/console	/ja/docs/Web/API/console
 /ja/docs/counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-/ja/docs/data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/ja/docs/data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ja/docs/dummySlug/Reference	/ja/docs/Web/JavaScript/Reference
 /ja/docs/dummySlug/Reference/About	/ja/docs/Web/JavaScript/Reference/About
 /ja/docs/dummySlug/Reference/About/Formatting_Conventions	/ja/docs/MDN/Guidelines/Writing_style_guide

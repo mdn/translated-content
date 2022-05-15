@@ -2724,13 +2724,6 @@
       "arthur2323"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example": {
-    "modified": "2019-01-17T10:48:33.130Z",
-    "contributors": [
-      "wbamberg",
-      "arthur2323"
-    ]
-  },
   "MDN/Contribute/Howto/Create_and_edit_pages": {
     "modified": "2020-01-20T16:42:55.893Z",
     "contributors": [
@@ -15958,6 +15951,13 @@
       "teoli",
       "jaydson",
       "jswisher"
+    ]
+  },
+  "conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web": {
+    "modified": "2019-01-17T10:48:33.130Z",
+    "contributors": [
+      "wbamberg",
+      "arthur2323"
     ]
   },
   "conflicting/Mozilla/Add-ons": {

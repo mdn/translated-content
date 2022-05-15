@@ -426,6 +426,7 @@
 /pt-BR/docs/MDN/Contribute/Estruturas	/pt-BR/docs/MDN/Structures
 /pt-BR/docs/MDN/Contribute/Estruturas/Compatibility_tables	/pt-BR/docs/MDN/Structures/Compatibility_tables
 /pt-BR/docs/MDN/Contribute/Estruturas/Macros	/pt-BR/docs/MDN/Structures/Macros
+/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /pt-BR/docs/MDN/Contribute/Processos	/pt-BR/docs/MDN/Contribute/Processes
 /pt-BR/docs/MDN/Contribute/Tools	/pt-BR/docs/MDN/Tools
 /pt-BR/docs/MDN/Contribute/Tools/KumaScript	/pt-BR/docs/MDN/Tools/KumaScript
@@ -435,7 +436,7 @@
 /pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente	/pt-BR/docs/MDN/Contribute/Howto/Tag
 /pt-BR/docs/MDN/Contribute/guia/Converter_exemplos_codigo_para_ao_vivo	/pt-BR/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live
 /pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web	/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
-/pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example
+/pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /pt-BR/docs/MDN/Feedback	/pt-BR/docs/MDN/Contribute/Feedback
 /pt-BR/docs/MDN/Guidelines/Style_guide	/pt-BR/docs/MDN/Guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Kuma	/pt-BR/docs/MDN/Yari
