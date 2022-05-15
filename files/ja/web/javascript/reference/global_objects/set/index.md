@@ -2,163 +2,163 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 tags:
-  - Class
+  - クラス
   - ECMAScript 2015
-  - Global Objects
+  - グローバルオブジェクト
   - JavaScript
-  - Object
-  - Reference
+  - オブジェクト
+  - リファレンス
   - set
+  - Polyfill
+browser-compat: javascript.builtins.Set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Set</code></strong> オブジェクトは、{{Glossary("Primitive", "プリミティブ値")}}やオブジェクト参照を問わず、あらゆる型で一意の値を格納できます。</span></p>
+**`Set`** オブジェクトは、{{Glossary("Primitive", "プリミティブ値")}}やオブジェクト参照を問わず、あらゆる型で多数の一意の値を格納することができます。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>Set</code> オブジェクトは値のコレクションです。挿入順に要素を反復することができます。<code>Set</code> に<strong>重複する値は格納出来ません</strong>。<code>Set</code> 内の値はコレクション内で一意となります。</p>
+`Set` オブジェクトは値のコレクションです。挿入順に要素を反復することができます。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値はコレクション内で一意になります。
 
-<h3 id="Value_equality" name="Value_equality">値の等価性</h3>
+### 値の等価性
 
-<p><code>Set</code> オブジェクト内の各値は一意でなければならないので、値の等価性が調べられます。初期の ECMAScript では <code>===</code> 演算子とは違うアルゴリズムが用いられていました。特に <code>+0</code> (厳密に言えば <code>-0</code> と等価です) と <code>-0</code> が区別されていた点は重要です。しかしこの振る舞いは ECMAScript 2015 で変更されました。<a href="#Browser_compatibility">ブラウザーの互換性</a>の「-0 と +0 の等価性」を参照してください。</p>
+`Set` オブジェクト内の各値は一意でなければならないので、値の等価性が調べられます。初期の ECMAScript では `===` 演算子とは違うアルゴリズムが用いられていました。特に `+0` (厳密に言えば `-0` と等価です) と `-0` が区別されていた点は重要です。しかしこの振る舞いは ECMAScript 2015 で変更されました。[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。
 
-<p>また、 {{jsxref("NaN")}} と {{jsxref("undefined")}} も Set 内に格納できます。<code>NaN</code> は (<code>NaN !== NaN</code> として扱われますが) <code>NaN</code> と同じと扱われます。</p>
+また、 {{jsxref("NaN")}} と {{jsxref("undefined")}} も Set 内に格納できます。`NaN` は (`NaN !== NaN` として扱われますが) `NaN` と同じと扱われます。
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+### 性能
 
-<dl>
- <dt>{{jsxref("Global_Objects/Set/Set", "Set()")}}</dt>
- <dd>新しい <code>Set</code> オブジェクトを生成します。</dd>
-</dl>
+`Set` の [`has`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/has) メソッドは、値が `Set` オブジェクト内にあるかどうかをチェックします。これは、以前に `Set` オブジェクトに追加された要素のほとんどを確認するよりも平均すると高速なアプローチを使用します。特に、 `Array` オブジェクトの `length` が `Set` オブジェクトの `size` と等しい場合、平均して [`Array.prototype.includes`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドより速くなります。
 
-<h2 id="Static_properties" name="Static_properties">静的プロパティ</h2>
+## コンストラクター
 
-<dl>
- <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
- <dd>派生オブジェクトを生成するために使用されるコンストラクター関数。</dd>
-</dl>
+- {{jsxref("Set/Set", "Set()")}}
+  - : 新しい `Set` オブジェクトを生成します。
 
-<h2 id="Instance_properties" name="Instance_properties">インスタンスプロパティ</h2>
+## 静的プロパティ
 
-<dl>
- <dt>{{jsxref("Set.prototype.size")}}</dt>
- <dd><code>Set</code> オブジェクト内の値の数を返します。</dd>
-</dl>
+- {{jsxref("Set.@@species", "get Set[@@species]")}}
+  - : 派生オブジェクトを生成するために使用されるコンストラクター関数です。
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+## インスタンスプロパティ
 
-<dl>
- <dt>{{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}</dt>
- <dd><code><var>value</var></code> を <code>Set</code> オブジェクトに追加します。<code>Set</code> オブジェクトを返します。</dd>
- <dt>{{jsxref("Set.prototype.clear()")}}</dt>
- <dd>すべての要素を <code>Set</code> オブジェクトから取り除きます。</dd>
- <dt>{{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}</dt>
- <dd><code><var>value</var></code> に関連した要素を取り除き、<code>Set.prototype.has(<var>value</var>)</code> が以前に返していたはずの値を返します。<code>Set.prototype.has(<var>value</var>)</code> はその後に <code>false</code> を返します。</dd>
- <dt>{{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}</dt>
- <dd><code>Set</code> オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す真偽値を返します。</dd>
-</dl>
+- {{jsxref("Set.prototype.size")}}
+  - : `Set` オブジェクト内の値の数を返します。
 
-<h3 id="Iteration_methods" name="Iteration_methods">反復処理メソッド</h3>
+## インスタンスメソッド
 
-<dl>
- <dt>{{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}</dt>
- <dd>挿入順に <code>Set</code> オブジェクト内の各要素に対する <strong>values</strong> を生み出す新しい <code>Iterator</code> オブジェクトを返します。</dd>
- <dt>{{jsxref("Set.prototype.keys()")}}</dt>
- <dd>挿入順に <code>Set</code> オブジェクト内の各要素に対する値を含む新しい <code>Iterator</code> オブジェクトを返します。 (Set においては、これは<strong><code>values()</code></strong> メソッドと同じです。)</dd>
- <dt>{{jsxref("Set.prototype.values()")}}</dt>
- <dd>挿入順に <code>Set</code> オブジェクト内の各要素に対する <strong>values</strong> を含む新しい <code>Iterator</code> オブジェクトを返します。 (Set においては、これは <strong><code>keys()</code></strong> メソッドと同じです。</dd>
- <dt>{{jsxref("Set.prototype.entries()")}}</dt>
- <dd>
- <p>挿入順に <code>Set</code> オブジェクト内の各要素に対して <strong><code>[<var>value</var>, <var>value</var>]</code> の配列</strong>を含む新しい <code>Iterator</code> オブジェクトを返します。</p>
+- {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
+  - : `value` を `Set` オブジェクトに追加します。`Set` オブジェクトを返します。
+- {{jsxref("Set.prototype.clear()")}}
+  - : すべての要素を `Set` オブジェクトから取り除きます。
+- {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}
+  - : `value` に関連した要素を取り除き、要素の削除に成功したかどうかを示す論理値を返します。 `Set.prototype.has(value)` はその後は `false` を返します。
+- {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
+  - : `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
 
- <p>これは {{jsxref("Map")}} オブジェクトに似させています。そのため、 <code>Set</code> においては各項目が <em>key</em> と <em>value</em> が同じ値になります。</p>
- </dd>
- <dt>{{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}</dt>
- <dd>挿入順に <code>Set</code> オブジェクト内に存在する各値に対して一度 <code>callbackFn</code> を呼びます。<code>thisArg</code> 引数が <code>forEach</code> に渡されたら、各コールバックに対して <code>this</code> 値として使用されます。</dd>
-</dl>
+### 反復処理メソッド
 
-<h2 id="Examples" name="Examples">例</h2>
+- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
+- {{jsxref("Set.prototype.values()")}}
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
+- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
+  - : {{jsxref("Set.prototype.values()")}} の別名です。
+- {{jsxref("Set.prototype.entries()")}}
 
-<h3 id="Using_the_Set_object" name="Using_the_Set_object">Set オブジェクトの使用</h3>
+  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しい反復子オブジェクトを返します。
 
-<pre class="brush: js notranslate">let mySet = new Set()
+    これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `set` では _value_ と同じになります。
 
-mySet.add(1)           // Set [ 1 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add('some text') // Set [ 1, 5, 'some text' ]
-let o = {a: 1, b: 2}
-mySet.add(o)
+- {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
+  - : `Set` オブジェクト内に存在する各値に対して、挿入順に一度ずつ `callbackFn` を呼びます。`thisArg` 引数が指定された場合、それぞれの `callbackFn` の呼び出しにおいて `this` の値として使用されます。
 
-mySet.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
+## 例
 
-mySet.has(1)              // true
-mySet.has(3)              // 3 は集合にないため、false
-mySet.has(5)              // true
-mySet.has(Math.sqrt(25))  // true
-mySet.has('Some Text'.toLowerCase()) // true
-mySet.has(o)       // true
+### Set オブジェクトの使用
 
-mySet.size         // 5
+```js
+const mySet1 = new Set()
 
-mySet.delete(5)    // Set から 5 を削除
-mySet.has(5)       // 5 が削除されているため false
+mySet1.add(1)           // Set [ 1 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add('some text') // Set [ 1, 5, 'some text' ]
+const o = {a: 1, b: 2}
+mySet1.add(o)
 
-mySet.size         // 要素を 1 つ削除しているため 4
+mySet1.add({a: 1, b: 2})   // o は別なオブジェクトを参照しているので、これは良い
 
-console.log(mySet)
+mySet1.has(1)              // true
+mySet1.has(3)              // false。 3 はセットに追加されないため
+mySet1.has(5)              // true
+mySet1.has(Math.sqrt(25))  // true
+mySet1.has('Some Text'.toLowerCase()) // true
+mySet1.has(o)       // true
+
+mySet1.size         // 5
+
+mySet1.delete(5)    // セットから 5 を取り除く
+mySet1.has(5)       // false。 5 は削除された
+
+mySet1.size         // 4。 1 つの値を削除したばかりであるため
+
+console.log(mySet1)
 // logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
 // logs Set(4) { 1, "some text", {…}, {…} } in Chrome
-</pre>
+```
 
-<h3 id="Iterating_Sets" name="Iterating_Sets">Set の反復操作</h3>
+### Set の反復処理
 
-<pre class="brush: js notranslate">// iterate over items in set
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet) console.log(item)
+```js
+// セット内のアイテムを反復処理
+// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+for (let item of mySet1) console.log(item)
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.keys()) console.log(item)
+// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+for (let item of mySet1.keys()) console.log(item)
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.values()) console.log(item)
+// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+for (let item of mySet1.values()) console.log(item)
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-// (key and value are the same here)
-for (let [key, value] of mySet.entries()) console.log(key)
+// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+// （ここではキーと値は同じ）
+for (let [key, value] of mySet1.entries()) console.log(key)
 
-// convert Set object to an Array object, with <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>
-let myArr = Array.from(mySet) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+// Set オブジェクトを Array オブジェクトに Array.from で変換
+const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
-// the following will also work if run in an HTML document
-mySet.add(document.body)
-mySet.has(document.querySelector('body')) // true
+// HTML 文書内であれば以下のものも動作する
+mySet1.add(document.body)
+mySet1.has(document.querySelector('body')) // true
 
-// converting between Set and Array
-mySet2 = new Set([1, 2, 3, 4])
+// Set と Array の間の変換
+const mySet2 = new Set([1, 2, 3, 4])
 mySet2.size                    // 4
 [...mySet2]                    // [1, 2, 3, 4]
 
-// intersect can be simulated via
-let intersection = new Set([...set1].filter(x =&gt; set2.has(x)))
+// 交差する様子をシミュレートすることができる
+const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
 
-// difference can be simulated via
-let difference = new Set([...set1].filter(x =&gt; !set2.has(x)))
+// 差をシミュレートすることができる
+const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
 
-// Iterate set entries with forEach()
-mySet.forEach(function(value) {
+// セット内の項目を forEach() で反復処理
+mySet2.forEach(function(value) {
   console.log(value)
 })
 
 // 1
 // 2
 // 3
-// 4</pre>
+// 4
+```
 
-<h3 id="Implementing_basic_set_operations" name="Implementing_basic_set_operations">基本的な集合演算の実装</h3>
+### 基本的な集合演算の実装
 
-<pre class="brush: js notranslate">function isSuperset(set, subset) {
+```js
+function isSuperset(set, subset) {
     for (let elem of subset) {
         if (!set.has(elem)) {
             return false
@@ -205,77 +205,81 @@ function difference(setA, setB) {
     return _difference
 }
 
-// Examples
-let setA = new Set([1, 2, 3, 4])
-let setB = new Set([2, 3])
-let setC = new Set([3, 4, 5, 6])
+// 例
+const setA = new Set([1, 2, 3, 4])
+const setB = new Set([2, 3])
+const setC = new Set([3, 4, 5, 6])
 
-isSuperset(setA, setB)          // =&gt; true
-union(setA, setC)               // =&gt; Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC)        // =&gt; Set [3, 4]
-symmetricDifference(setA, setC) // =&gt; Set [1, 2, 5, 6]
-difference(setA, setC)          // =&gt; Set [1, 2]
+isSuperset(setA, setB)          // returns true
+union(setA, setC)               // returns Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC)        // returns Set {3, 4}
+symmetricDifference(setA, setC) // returns Set {1, 2, 5, 6}
+difference(setA, setC)          // returns Set {1, 2}
+```
 
-</pre>
+### Array オブジェクトとの関係
 
-<h3 id="Relation_with_Array_objects" name="Relation_with_Array_objects">Array オブジェクトとの関係</h3>
+```js
+let myArray = ['value1', 'value2', 'value3']
 
-<pre class="brush: js notranslate">let myArray = ['value1', 'value2', 'value3']
-
-// Use the regular Set constructor to transform an Array into a Set
+// 通常の Set コンストラクターを使用して、 Array を Set に変換
 let mySet = new Set(myArray)
 
 mySet.has('value1')     // returns true
 
-// Use the spread operator to transform a set into an Array.
-console.log([...mySet]) // Will show you exactly the same Array as myArray
-</pre>
+// スプレッド演算子を使って、集合を配列に変換
+console.log([...mySet]) // myArray と全く同じ Array が表示されます。
+```
 
-<h3 id="Remove_duplicate_elements_from_the_array" name="Remove_duplicate_elements_from_the_array">配列から重複した要素を取り除く</h3>
+### 配列から重複した要素を取り除く
 
-<pre class="brush: js notranslate">// Use to remove duplicate elements from the array
+```js
+// 配列から重複する要素を取り除くために使用
 
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
 console.log([...new Set(numbers)])
 
-// [2, 3, 4, 5, 6, 7, 32]</pre>
+// [2, 3, 4, 5, 6, 7, 32]
+```
 
-<h3 id="Relation_with_Strings" name="Relation_with_Strings">String との関係</h3>
+### 文字列との関係
 
-<pre class="brush: js notranslate">let text = 'India'
+```js
+let text = 'India'
 
-let mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
+const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
-//case sensitive &amp; duplicate ommision
-new Set("Firefox")  // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
-new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
-</pre>
+// 大文字と小文字の区別して重複を削除
+new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### Set を使用して、リスト中の値の一意姓を保証
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set-objects', 'Set')}}</td>
-  </tr>
- </tbody>
-</table>
+```js
+const array = Array
+  .from(document.querySelectorAll('[id]'))
+  .map(function(e) {
+      return e.id
+  });
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+const set = new Set(array);
+console.assert(set.size == array.length);
+```
 
-<p>{{Compat("javascript.builtins.Set")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [`Set` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#set)
+- {{jsxref("Map")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}
