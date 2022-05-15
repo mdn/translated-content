@@ -1967,7 +1967,7 @@
 /fr/docs/HTML/Manipulating_video_using_canvas	/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /fr/docs/HTML/Reglages_des_attributs_CORS	/fr/docs/Web/HTML/Attributes/crossorigin
 /fr/docs/HTML/Référence_Éléments_HTML	/fr/docs/Web/HTML/Element
-/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/HTML/formats_media_support	/fr/docs/Web/Media/Formats
 /fr/docs/HTML:Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/HTML:Element	/fr/docs/Web/HTML/Element
@@ -4560,7 +4560,7 @@
 /fr/docs/Web/Guide/HTML/Introduction	/fr/docs/Learn/HTML/Introduction_to_HTML
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 /fr/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_Colors/Applying_color
 /fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_Colors/Applying_color
@@ -4662,7 +4662,7 @@
 /fr/docs/Web/HTML/Preloading_content	/fr/docs/orphaned/Web/HTML/Preloading_content
 /fr/docs/Web/HTML/Précharger_du_contenu	/fr/docs/orphaned/Web/HTML/Preloading_content
 /fr/docs/Web/HTML/Reglages_des_attributs_CORS	/fr/docs/Web/HTML/Attributes/crossorigin
-/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Types_de_lien	/fr/docs/Web/HTML/Link_types
 /fr/docs/Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/formats_media_support	/fr/docs/Web/Media/Formats
@@ -6144,6 +6144,7 @@
 /fr/docs/orphaned/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
+/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/toString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
