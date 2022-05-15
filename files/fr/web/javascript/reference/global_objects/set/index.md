@@ -15,7 +15,7 @@ Les objets `Set` sont des ensembles de valeurs. Il est possible d'itérer sur le
 
 ### Égalité des valeurs
 
-Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des valeurs contenues. Dans une version antérieure de la spécification ECMAScript, cette égalité n'était pas la même que celle de l'opérateur ===. Notamment, pour les objets `Set`, `+0` (qui, selon l'égalité stricte, est égal à `-0`) et `-0` étaient des valeurs différentes. Cela a toutefois été changé avec la dernière version d'ECMAScript 2015 (ES6). Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) ci-après quant à la prise en charge de l'égalité des clés pour `0` et `-0`.
+Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des valeurs contenues. Dans une version antérieure de la spécification ECMAScript, cette égalité n'était pas la même que celle de l'opérateur `===`. Notamment, pour les objets `Set`, `+0` (qui, selon l'égalité stricte, est égal à `-0`) et `-0` étaient des valeurs différentes. Cela a toutefois été changé avec la dernière version d'ECMAScript 2015 (ES6). Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) ci-après quant à la prise en charge de l'égalité des clés pour `0` et `-0`.
 
 [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) et [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) peuvent être enregistrés dans un objet `Set`. `NaN` est considéré comme `NaN` (bien que `NaN !== NaN`).
 
@@ -40,13 +40,13 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 
 ## Méthodes des instances
 
-- [`Set.prototype.add(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
+- [<code>Set.prototype.add(<var>valeur</var>)</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
   - : Ajoute une valeur à l'objet `Set` et renvoie l'objet `Set` avec la valeur ajoutée.
 - [`Set.prototype.clear()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
   - : Supprime tous les éléments de l'objet `Set`.
-- [`Set.prototype.delete(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
+- [<code>Set.prototype.delete(<var>valeur</var>)</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
   - : Supprime l'élément associé à la valeur en argument et renvoie un booléen indiquant si l'élément a été retiré avec succès. Par la suite, `Set.prototype.has(valeur)` renverra `false`.
-- [`Set.prototype.has(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
+- [<code>Set.prototype.has(<var>valeur</var>)</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
   - : Renvoie un booléen indiquant si la valeur fournie en argument est présente dans l'ensemble représenté par l'objet `Set`.
 
 ### Méthodes d'itération
@@ -55,15 +55,14 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
   - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
 - [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
   - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
-- [` Set.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
+- [`Set.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
   - : Un alias pour [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values).
 - [`Set.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/entries)
-
   - : Renvoie un nouvel objet itérateur qui contient **un tableau `[valeur, valeur]`** pour chaque élément de l'objet `Set`, selon leur ordre d'insertion.
 
     Il s'agit d'une méthode analogue à celle disponible pour [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map), c'est pour ça qu'on a le doublonnement de la valeur à la place de la clé.
 
-- [`Set.prototype.forEach(<var>fnRappel</var>[, <var>thisArg</var>])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
+- [<code>Set.prototype.forEach(<var>fnRappel</var>[, <var>thisArg</var>])</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
   - : Appelle la fonction `fnRappel` une fois pour chaque valeur présente dans l'objet `Set`, selon leur ordre d'insertion. Si le paramètre `thisArg` est fourni, sa valeur sera utilisée comme valeur pour `this` pour chaque appel de `fnRappel`.
 
 ## Exemples
@@ -76,7 +75,7 @@ const monSet = new Set();
 monSet.add(1);          // { 1 }
 monSet.add(5);          // { 1, 5 }
 monSet.add(5);          // { 1, 5 }
-monSet.add("du texte"); // { 1, 5, "du texte" }
+monSet.add('du texte'); // { 1, 5, 'du texte' }
 
 const o = {a: 1, b: 2};
 monSet.add(o);
@@ -89,7 +88,7 @@ monSet.has(1); // true
 monSet.has(3); // false, 3 n'a pas été ajouté à l'ensemble
 monSet.has(5);              // true
 monSet.has(Math.sqrt(25));  // true
-monSet.has("Du Texte".toLowerCase()); // true
+monSet.has('Du Texte'.toLowerCase()); // true
 monSet.has(o); // true
 
 monSet.size; // 5
@@ -117,7 +116,7 @@ for (let item of monSet.keys()) console.log(item);
 for (let item of monSet.values()) console.log(item);
 
 // ici on affiche les clés de l'ensemble : 1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-//(ici, les clés et les valeurs sont les mêmes)
+// (ici, les clés et les valeurs sont les mêmes)
 for (let [clé, valeur] of monSet.entries()) console.log(clé);
 
 // Une méthode de conversion avec Array.from
@@ -125,12 +124,12 @@ const monTableau = Array.from(monSet);    // [1, "du texte", {"a": 1, "b": 2}, {
 
 // Cela fonctionnera également dans un document HTML
 monSet.add(document.body);
-monSet.has(document.querySelector("body")); // true
+monSet.has(document.querySelector('body')); // true
 
 // convertir un tableau (Array) en ensemble (Set) et vice versa
-const monSet2 = new Set([1,2,3,4]);
+const monSet2 = new Set([1, 2, 3, 4]);
 monSet2.size; // 4
-[...monSet2]; // [1,2,3,4]
+[...monSet2]; // [1, 2, 3, 4]
 
 // L'intersection peut être calculée avec
 const intersection = new Set([...set1].filter(x => set2.has(x)));
@@ -191,18 +190,18 @@ function symmetricDifference(setA, setB) {
   return _difference;
 }
 
-function difference (setA, setB) {
-  var difference = new Set(setA);
+function difference(setA, setB) {
+  let _difference = new Set(setA);
   for (let elem of setB) {
-    difference.delete(elem);
+    _difference.delete(elem);
   }
-  return difference;
+  return _difference;
 }
 
 // Exemples
-const setA = new Set([1,2,3,4]);
-const setB = new Set([2,3]);
-const setC = new Set([3,4,5,6]);
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([2, 3]);
+const setC = new Set([3, 4, 5, 6]);
 
 isSuperset(setA, setB);          // => true
 union(setA, setC);               // => Set [1, 2, 3, 4, 5, 6]
@@ -220,7 +219,7 @@ let monTableau = ["valeur1", "valeur2", "valeur3"];
 // un Array en Set
 let monSet = new Set(monTableau);
 
-monSet.has("valeur1"); // renvoie true
+monSet.has('valeur1'); // renvoie true
 
 // Et utiliser l'opérateur de décomposition pour 
 // transformer un Set en Array.
@@ -249,10 +248,10 @@ monSet.size;
 // 5
 
 // Sensibilité à la casse
-new Set("Firefox");
+new Set('Firefox');
 // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 
-new Set("firefox");
+new Set('firefox');
 // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
@@ -262,7 +261,7 @@ new Set("firefox");
 const tableau = Array
   .from(document.querySelectorAll('[id]'))
   .map(function(e) {
-      return e.id
+      return e.id;
   });
 
 const set = new Set(tableau);
