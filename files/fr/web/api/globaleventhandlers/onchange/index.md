@@ -15,7 +15,7 @@ Les évènements `change` sont déclenchés lorsque la personne valide un change
 ## Syntaxe
 
 ```js
-target.onchange = refFonction;
+cible.onchange = refFonction;
 ```
 
 `refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`Event`](/fr/docs/Web/API/Event) comme unique argument.

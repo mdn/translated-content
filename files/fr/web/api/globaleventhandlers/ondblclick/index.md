@@ -13,7 +13,7 @@ L'évènement `dblclick` est déclenché lorsque la personne double-clique sur u
 ## Syntaxe
 
 ```js
-target.ondblclick = refFonction;
+cible.ondblclick = refFonction;
 ```
 
 ### Valeur

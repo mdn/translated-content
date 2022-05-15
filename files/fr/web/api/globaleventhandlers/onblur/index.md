@@ -15,7 +15,7 @@ L'évènement `blur` est déclenché lorsqu'un élément perd le focus.
 ## Syntaxe
 
 ```js
-target.onblur = refFonction;
+cible.onblur = refFonction;
 ```
 
 ### Valeur
