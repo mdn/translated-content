@@ -4135,6 +4135,7 @@
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 /fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+/fr/docs/Web/CSS/CSS_Color	/fr/docs/Web/CSS/CSS_Colors
 /fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gestion_dépassement_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gérer_rupture_contenu_entre_colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
