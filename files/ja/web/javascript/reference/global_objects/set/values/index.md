@@ -3,38 +3,38 @@ title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 tags:
   - ECMAScript 2015
-  - Iterator
+  - 反復子
   - JavaScript
-  - Method
-  - Prototype
+  - メソッド
+  - プロトタイプ
   - set
+browser-compat: javascript.builtins.Set.values
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
 {{JSRef}}
 
-**`values()`** メソッドは、挿入順で `Set` オブジェクト内の各要素の値を含んだ、新しいイテレーターオブジェクトを返します。
+**`values()`** メソッドは、新しい[反復子](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは  `Set` オブジェクトの各要素の値を挿入順に返します。
 
-<div class="blockIndicator note">
-**注**: **`keys()`** メソッドは ({{jsxref("Map")}} オブジェクトとの類似性のため) このメソッドに対するエイリアスです。まったく同じように動作し、`Set` の各要素の**値**を返します。
-</div>
+> **Note:** **`keys()`** メソッドは（{{jsxref("Map")}} オブジェクトと似せるため）このメソッドに対するエイリアスになっています。まったく同じように動作し、 `Set` の各要素の**値**を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+values()
+```
 
-<pre class="syntaxbox notranslate"><var>mySet</var>.values();</pre>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+新しい反復子オブジェクトで、この `Set` オブジェクト内のそれぞれの要素の値を返します。
 
-挿入順で `Set` オブジェクト内の各要素の値を含んだ、新しいイテレーターオブジェクトです。
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### values() の使用
 
-<h3 id="Using_values" name="Using_values">values() の使用</h3>
-
-<pre class="brush:js notranslate">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
@@ -43,29 +43,17 @@ var setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
