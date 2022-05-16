@@ -6,217 +6,183 @@ tags:
   - JavaScript
   - Method
   - Object
-  - Object.assign
-  - polyfill
+  - Reference
+  - Polyfill
+browser-compat: javascript.builtins.Object.assign
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.assign()</strong></code> 方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。它将返回目标对象。</p>
+**`Object.assign()`** 方法将所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}（`Object.propertyIsEnumerable()` 返回 true）和{{jsxref("Object/hasOwnProperty", "自有", "", 1)}}（`Object.hasOwnProperty()` 返回 true）属性从一个或多个源对象复制到目标对象，返回修改后的对象。
 
-<div>{{EmbedInteractiveExample("pages/js/object-assign.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-assign.html")}}
 
+## 语法
 
+```js
+Object.assign(target, ...sources)
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code>Object.assign(<var>target</var>, ...<var>sources</var>)</code></pre>
+- `target`
+  - : 目标对象，接收源对象属性的对象，也是修改后的返回值。
+- `sources`
+  - : 源对象，包含将被合并的属性。
 
-<h3 id="Parameters">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>sources</code></dt>
- <dd>源对象。</dd>
-</dl>
+目标对象。
 
-<h3 id="Return_value">返回值</h3>
+## 描述
 
-<p>目标对象。</p>
+如果目标对象与源对象具有相同的 {{jsxref("Object/keys", "key", "", 1)}}，则目标对象中的属性将被源对象中的属性覆盖，后面的源对象的属性将类似地覆盖前面的源对象的属性。
 
-<h2 id="描述">描述</h2>
+`Object.assign` 方法只会拷贝源对象 _可枚举的_ 和 _自身的_ 属性到目标对象。该方法使用源对象的 `[[Get]]` 和目标对象的 `[[Set]]`，它会调用 [getters](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setters](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含 getters，这可能使其不适合将新属性合并到原型中。
 
-<p>如果目标对象中的属性具有相同的键，则属性将被源对象中的属性覆盖。后面的源对象的属性将类似地覆盖前面的源对象的属性。</p>
+为了将属性定义（包括其可枚举性）复制到原型，应使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}}，基本类型 {{jsxref("Global_Objects/String", "String")}} 和 {{jsxref("Symbol")}} 的属性会被复制.
 
-<p><code>Object.assign</code> 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的<code>[[Get]]</code>和目标对象的<code>[[Set]]</code>，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用{{jsxref("Object.getOwnPropertyDescriptor()")}}和{{jsxref("Object.defineProperty()")}} 。</p>
+如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前添加了任何属性，则会修改 `target` 对象（译者注：换句话说，`Object.assign()` 没有“回滚”之前赋值的概念，它是一个尽力而为、可能只会完成部分复制的方法）。
 
-<p>{{jsxref("String")}}类型和 {{jsxref("Symbol")}} 类型的属性都会被拷贝。</p>
+> **备注：** `Object.assign()` 不会在 `source` 对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
 
-<p>在出现错误的情况下，例如，如果属性不可写，会引发{{jsxref("TypeError")}}，如果在引发错误之前添加了任何属性，则可以更改<code>target</code>对象。</p>
+## 示例
 
-<div class="note">
-  <p><strong>备注：</strong> <code>Object.assign</code> 不会在那些<code>source</code>对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 的时候抛出错误。</p>
-</div>
+### 复制对象
 
-<h2 id="Polyfill_2">Polyfill</h2>
-
-<p>这个 <a href="/zh-CN/docs/Glossary/Polyfill">polyfill</a> 不支持 symbol 属性, 由于 ES5 中本来就不存在 symbols :</p>
-
-<pre>if (typeof Object.assign !== 'function') {
-  // Must be writable: true, enumerable: false, configurable: true
-  Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) { // .length of function is 2
-      'use strict';
-      if (target === null || target === undefined) {
-        throw new TypeError('Cannot convert undefined or null to object');
-      }
-
-      var to = Object(target);
-
-      for (var index = 1; index &lt; arguments.length; index++) {
-        var nextSource = arguments[index];
-
-        if (nextSource !== null &amp;&amp; nextSource !== undefined) {
-          for (var nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
-            }
-          }
-        }
-      }
-      return to;
-    },
-    writable: true,
-    configurable: true
-  });
-}</pre>
-
-<h2 id="Examples">示例</h2>
-
-<h3 id="Example_Cloning_an_object">复制一个对象</h3>
-
-<pre class="brush: js">const obj = { a: 1 };
+```js
+const obj = { a: 1 };
 const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
-</pre>
+```
 
-<h3 id="Deep_Clone">深拷贝问题</h3>
+### 深拷贝问题
 
-<p>针对深拷贝，需要使用其他办法，因为 <code>Object.assign()</code>拷贝的是（可枚举）属性值。</p>
+针对[深拷贝](/en-US/docs/Glossary/Deep_copy), 需要使用其他办法, 因为 `Object.assign()` 只复制属性值。
 
-<p>假如源值是一个对象的引用，它仅仅会复制其引用值。</p>
+假如源对象是一个对象的引用，它仅仅会复制其引用值。
 
-<pre class="brush: js">const log = console.log;
-
+```js
 function test() {
   'use strict';
+
   let obj1 = { a: 0 , b: { c: 0}};
   let obj2 = Object.assign({}, obj1);
-  log(JSON.stringify(obj2));
-  // { a: 0, b: { c: 0}}
+  console.log(JSON.stringify(obj2)); // { "a": 0, "b": { "c": 0}}
 
   obj1.a = 1;
-  log(JSON.stringify(obj1));
-  // { a: 1, b: { c: 0}}
-  log(JSON.stringify(obj2));
-  // { a: 0, b: { c: 0}}
+  console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 0}}
+  console.log(JSON.stringify(obj2)); // { "a": 0, "b": { "c": 0}}
 
   obj2.a = 2;
-  log(JSON.stringify(obj1));
-  // { a: 1, b: { c: 0}}
-  log(JSON.stringify(obj2));
-  // { a: 2, b: { c: 0}}
+  console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 0}}
+  console.log(JSON.stringify(obj2)); // { "a": 2, "b": { "c": 0}}
 
   obj2.b.c = 3;
-  log(JSON.stringify(obj1));
-  // { a: 1, b: { c: 3}}
-  log(JSON.stringify(obj2));
-  // { a: 2, b: { c: 3}}
+  console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 3}}
+  console.log(JSON.stringify(obj2)); // { "a": 2, "b": { "c": 3}}
 
   // Deep Clone
   obj1 = { a: 0 , b: { c: 0}};
   let obj3 = JSON.parse(JSON.stringify(obj1));
   obj1.a = 4;
   obj1.b.c = 4;
-  log(JSON.stringify(obj3));
-  // { a: 0, b: { c: 0}}
+  console.log(JSON.stringify(obj3)); // { "a": 0, "b": { "c": 0}}
 }
 
 test();
-</pre>
+```
 
-<h3 id="Example_Merging_objects">合并对象</h3>
+### 合并对象
 
-<pre class="brush: js">const o1 = { a: 1 };
+```js
+const o1 = { a: 1 };
 const o2 = { b: 2 };
 const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, 注意目标对象自身也会改变。
-</pre>
+console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+```
 
-<h3 id="合并具有相同属性的对象">合并具有相同属性的对象</h3>
+### 合并具有相同属性的对象
 
-<pre class="brush: js">const o1 = { a: 1, b: 1, c: 1 };
+```js
+const o1 = { a: 1, b: 1, c: 1 };
 const o2 = { b: 2, c: 2 };
 const o3 = { c: 3 };
 
 const obj = Object.assign({}, o1, o2, o3);
-console.log(obj); // { a: 1, b: 2, c: 3 }</pre>
+console.log(obj); // { a: 1, b: 2, c: 3 }
+```
 
-<p>属性被后续参数中具有相同属性的其他对象覆盖。</p>
+属性会被后续参数中具有相同属性的其他对象覆盖。
 
-<h3 id="Example_Symbol_properties">拷贝 symbol 类型的属性</h3>
+### 拷贝 Symbol 类型属性
 
-<pre class="brush: js">const o1 = { a: 1 };
+```js
+const o1 = { a: 1 };
 const o2 = { [Symbol('foo')]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
-Object.getOwnPropertySymbols(obj); // [Symbol(foo)]</pre>
+Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
+```
 
-<h3 id="Example_Only_own_enumerable_properties">继承属性和不可枚举属性是不能拷贝的</h3>
+### 原型链上的属性和不可枚举属性不能被复制
 
-<pre class="brush: js">const obj = Object.create({foo: 1}, { // foo 是个继承属性。
-    bar: {
-        value: 2  // bar 是个不可枚举属性。
-    },
-    baz: {
-        value: 3,
-        enumerable: true  // baz 是个自身可枚举属性。
-    }
+```js
+const obj = Object.create({ foo: 1 }, { // foo is on obj's prototype chain.
+  bar: {
+    value: 2  // bar is a non-enumerable property.
+  },
+  baz: {
+    value: 3,
+    enumerable: true  // baz is an own enumerable property.
+  }
 });
 
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
-</pre>
+```
 
-<h3 id="Example_Primitives">原始类型会被包装为对象</h3>
+### 基本类型会被包装为对象
 
-<pre class="brush: js">const v1 = "abc";
+```js
+const v1 = 'abc';
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol("foo")
+const v4 = Symbol('foo');
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
-// 原始类型会被包装，null 和 undefined 会被忽略。
-// 注意，只有字符串的包装对象才可能有自身可枚举属性。
-console.log(obj); // { "0": "a", "1": "b", "2": "c" }</pre>
+// Primitives will be wrapped, null and undefined will be ignored.
+// Note, only string wrappers can have own enumerable properties.
+console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+```
 
-<h3 id="Example_Exceptions">异常会打断后续拷贝任务</h3>
+### 异常会打断后续拷贝任务
 
-<pre class="brush: js">const target = Object.defineProperty({}, "foo", {
-    value: 1,
-    writable: false
-}); // target 的 foo 属性是个只读属性。
+```js
+const target = Object.defineProperty({}, 'foo', {
+  value: 1,
+  writable: false
+}); // target.foo is a read-only property
 
-Object.assign(target, {bar: 2}, {foo2: 3, foo: 3, foo3: 3}, {baz: 4});
+Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
-// 注意这个异常是在拷贝第二个源对象的第二个属性时发生的。
+// The Exception is thrown when assigning target.foo
 
-console.log(target.bar);  // 2，说明第一个源对象拷贝成功了。
-console.log(target.foo2); // 3，说明第二个源对象的第一个属性也拷贝成功了。
-console.log(target.foo);  // 1，只读属性不能被覆盖，所以第二个源对象的第二个属性拷贝失败了。
-console.log(target.foo3); // undefined，异常之后 assign 方法就退出了，第三个属性是不会被拷贝到的。
-console.log(target.baz);  // undefined，第三个源对象更是不会被拷贝到的。
-</pre>
+console.log(target.bar);  // 2, the first source was copied successfully.
+console.log(target.foo2); // 3, the first property of the second source was copied successfully.
+console.log(target.foo);  // 1, exception is thrown here.
+console.log(target.foo3); // undefined, assign method has finished, foo3 will not be copied.
+console.log(target.baz);  // undefined, the third source will not be copied either.
+```
 
-<h3 id="Example_Copy_accessors">拷贝访问器</h3>
+### 拷贝访问器
 
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   foo: 1,
   get bar() {
     return 2;
@@ -224,18 +190,20 @@ console.log(target.baz);  // undefined，第三个源对象更是不会被拷贝
 };
 
 let copy = Object.assign({}, obj);
-console.log(copy); // { foo: 1, bar: 2 } copy.bar的值来自obj.bar的getter函数的返回值
+console.log(copy);
+// { foo: 1, bar: 2 }
+// The value of copy.bar is obj.bar's getter's return value.
 
-// 下面这个函数会拷贝所有自有属性的属性描述符
+// This is an assign function that copies full descriptors
 function completeAssign(target, ...sources) {
-  sources.forEach(source =&gt; {
-    let descriptors = Object.keys(source).reduce((descriptors, key) =&gt; {
+  sources.forEach(source => {
+    let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
-    // Object.assign 默认也会拷贝可枚举的Symbols
-    Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
+    // By default, Object.assign copies enumerable Symbols, too
+    Object.getOwnPropertySymbols(source).forEach(sym => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;
@@ -249,38 +217,19 @@ function completeAssign(target, ...sources) {
 copy = completeAssign({}, obj);
 console.log(copy);
 // { foo:1, get bar() { return 2 } }
-</pre>
+```
 
+## 规范
 
-<h2 id="Specifications">规范</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范名称</th>
-   <th scope="col">规范状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.assign', 'Object.assign')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.assign', 'Object.assign')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## 浏览器兼容性
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+{{Compat}}
 
-<p>{{Compat("javascript.builtins.Object.assign")}}</p>
+## 参见
 
-<h2 id="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
-</ul>
+- [Polyfill of `Object.assign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- {{jsxref("Object.defineProperties()")}}
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [构造字面量对象时使用展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax#构造字面量对象时使用展开语法)
