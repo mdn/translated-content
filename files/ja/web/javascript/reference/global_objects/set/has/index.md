@@ -4,43 +4,41 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/has
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Method
-  - Prototype
+  - メソッド
+  - プロトタイプ
   - set
+browser-compat: javascript.builtins.Set.has
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 {{JSRef}}
 
-**`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す真偽値を返します。
+**`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す論理値を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+has(value)
+```
 
-<pre class="syntaxbox notranslate"><var>mySet</var>.has(<var>value</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value`
+  - : `Set` オブジェクトに存在するか検査する値です。
 
-<dl>
- <dt>`<var>value</var>`</dt>
- <dd>`Set` オブジェクトに存在するかテストする値です。</dd>
-</dl>
-
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
 `Set` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
-<div class="blockIndicator note">
-**注:** 技術的に言えば、`has()` は <a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">Same-value-zero</a> アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
-</div>
+> **Note:** 技術的に言えば、`has()` は [Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_the_has_method" name="Using_the_has_method">has() メソッドの使用</h3>
+### has() メソッドの使用
 
-<pre class="brush: js notranslate">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // returns true
@@ -52,32 +50,19 @@ set1.add(obj1);
 
 set1.has(obj1);        // returns true
 set1.has({'key1': 1}); // オブジェクト参照が異なるため false を返す
-set1.add({'key1': 1}); // set1 には2つのエントリが含まれるようになる
-</pre>
+set1.add({'key1': 1}); // set1 には 2 つの項目が含まれるようになる
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
+- {{jsxref("Set.prototype.delete()")}}
