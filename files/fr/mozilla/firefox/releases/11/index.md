@@ -99,7 +99,7 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 ### Changement dans les préférences
 
-- {{Pref("ui.tooltipDelay")}}
+- `"ui.tooltipDelay"`
   - : Définit le délai, en millisecondes, entre le moment où le curseur de la souris s'arrête et l'affichage d'une info-bulle.
 
 ### Changement dans le système de compilation

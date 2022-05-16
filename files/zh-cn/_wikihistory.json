@@ -30211,13 +30211,6 @@
       "tangj1206"
     ]
   },
-  "Web/HTML/Element/Input/datetime": {
-    "modified": "2019-07-13T11:00:17.487Z",
-    "contributors": [
-      "853419196",
-      "wizardforcel"
-    ]
-  },
   "Web/HTML/Element/Input/datetime-local": {
     "modified": "2020-10-24T12:05:38.587Z",
     "contributors": [
@@ -46850,6 +46843,13 @@
       "yongdi",
       "Breezewish",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/HTML/Element/input/datetime-local": {
+    "modified": "2019-07-13T11:00:17.487Z",
+    "contributors": [
+      "853419196",
+      "wizardforcel"
     ]
   },
   "conflicting/Web/HTML/Quirks_Mode_and_Standards_Mode": {

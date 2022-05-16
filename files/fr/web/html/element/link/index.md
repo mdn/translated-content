@@ -143,7 +143,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés, obsolètes ou non-standard
 
-- {{htmlattrdef("charset")}}{{obsolete_inline}}
+- {{htmlattrdef("charset")}}{{deprecated_inline}}
 
   - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
@@ -153,7 +153,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : La valeur de cet attribut fournit des informations quant aux fonctions qui peuvent être utilisées sur l'objet lié. Les valeurs sont généralement des méthodes HTTP mais elles peuvent également inclure des informations en avance sur le lien (le navigateur pourrait par exemple choisir un affichage différent pour un lien selon la méthode utilisée). Cet attribut n'est pas pris en charge de façon correcte, y compris par le navigateur qui le définit, Internet Explorer 4. Voir [la page MSDN sur la propriété `methods`](https://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
 - {{htmlattrdef("prefetch")}} {{Non-standard_inline}} {{secureContext_inline}}
   - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
-- {{htmlattrdef("rev")}}{{obsolete_inline}}
+- {{htmlattrdef("rev")}}{{deprecated_inline}}
 
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut {{htmlattrxref("href", "link")}}). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Types_de_lien) utilisés pour cet attribut sont semblables aux valeurs autorisés par {{htmlattrxref("rel", "link")}}.
 

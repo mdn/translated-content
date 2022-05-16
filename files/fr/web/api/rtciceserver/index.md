@@ -13,7 +13,7 @@ RTCIceServer définit comment se connecter à un serveur ICE unique (comme un se
   - : Les informations d'identification à utiliser lors de la connexion au serveur. Celles‑ci sont utilisées uniquement si `RTCIceServer` est un serveur TURN.
 - {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}
   - : Si `RTCIceServer` est un serveur TURN, cet attribut spécifie quel type d'information d'identification doit être utilisé lors de la connexion. Ce doit être l'une des valeurs définies par l'énumération {{domxref("RTCIceCredentialType")}}. La valeur par défaut est `password`.
-- {{domxref("RTCIceServer.url", "url")}} {{obsolete_inline}}
+- {{domxref("RTCIceServer.url", "url")}} {{deprecated_inline}}
   - : Cette propriété obsolète est une chaîne spécifiant l'URL d'un serveur ICE unique. **Ne pas utiliser cette propriété; utiliser plutôt {{domxref("RTCIceServer.urls")}}**. Étant donné que de nombreux livres et exemples anciens l'utilisent encore, nous l'incluons pour aider les développeurs à mettre à jour leur code ou donner un sens a des exemples plus anciens.
 - {{domxref("RTCIceServer.urls", "urls")}}
   - : Cette propriété est **obligatoire**, elle peut être soit une seule {{domxref("DOMString")}} ou un tableau de {{domxref("DOMString")}} , spécifiant chacun une URL qui peut être utilisée pour se connecter au serveur.

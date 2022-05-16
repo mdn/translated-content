@@ -13978,7 +13978,7 @@
       "fitojb"
     ]
   },
-  "Web/HTML/Element/input/datetime": {
+  "Web/HTML/Element/input/datetime-local": {
     "modified": "2019-03-23T22:36:20.508Z",
     "contributors": [
       "AngelMunoz",

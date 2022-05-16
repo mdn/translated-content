@@ -2120,6 +2120,7 @@
 /zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
 /zh-CN/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /zh-CN/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/zh-CN/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
+/zh-CN/docs/Web/HTML/Element/Input/datetime	/zh-CN/docs/conflicting/Web/HTML/Element/input/datetime-local
 /zh-CN/docs/Web/HTML/Element/Input/月份	/zh-CN/docs/Web/HTML/Element/input/month
 /zh-CN/docs/Web/HTML/Element/Input/范围	/zh-CN/docs/Web/HTML/Element/input/range
 /zh-CN/docs/Web/HTML/Element/Video/canplay_event	/zh-CN/docs/Web/API/HTMLMediaElement/canplay_event
