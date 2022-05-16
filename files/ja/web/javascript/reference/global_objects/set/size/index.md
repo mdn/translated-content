@@ -4,56 +4,43 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Property
-  - Prototype
+  - プロパティ
+  - プロトタイプ
   - set
+browser-compat: javascript.builtins.Set.size
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
 {{JSRef}}
 
-**`size`** アクセサープロパティは {{jsxref("Set")}} オブジェクト内の要素の数を返します。
+**`size`** アクセサープロパティは {{jsxref("Set")}} オブジェクト内の（固有の）要素の数を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
 `size` の値は、`Set` オブジェクトがいくつの要素を持つかを表す整数値です。`size` に対するセットアクセサー関数は `undefined` です。よって、このプロパティは変更できません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_size" name="Using_size">size の使用</h3>
+### size の使用
 
-<pre class="brush:js notranslate">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
 mySet.add('some text')
 
 mySet.size; // 3
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-set.prototype.size', 'Set.prototype.size')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Set.size")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Set")}}</li>
-</ul>
+- {{jsxref("Set")}}
