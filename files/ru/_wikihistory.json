@@ -15553,7 +15553,7 @@
       "cissoid"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-10-15T22:23:29.676Z",
     "contributors": [
       "alex3d",

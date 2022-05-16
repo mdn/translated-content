@@ -2147,6 +2147,7 @@
 /zh-CN/docs/Web/HTML/动作	/zh-CN/docs/Glossary/speculative_parsing
 /zh-CN/docs/Web/HTML/属性	/zh-CN/docs/Web/HTML/Attributes
 /zh-CN/docs/Web/HTTP/Access_control_CORS	/zh-CN/docs/Web/HTTP/CORS
+/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/选择_www_或非_www_URL_作为域名	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
@@ -2177,7 +2178,7 @@
 /zh-CN/docs/Web/HTTP/Response_codes/204	/zh-CN/docs/Web/HTTP/Status/204
 /zh-CN/docs/Web/HTTP/Response_codes/501	/zh-CN/docs/Web/HTTP/Status/501
 /zh-CN/docs/Web/HTTP/X-Frame-Options	/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options
-/zh-CN/docs/Web/HTTP/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-CN/docs/Web/HTTP/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/Web/HTTP/消息	/zh-CN/docs/Web/HTTP/Messages
 /zh-CN/docs/Web/HTTP/策略特征	/zh-CN/docs/Web/HTTP/Feature_Policy
 /zh-CN/docs/Web/HTTP/策略特征/Using_Feature_Policy	/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy
@@ -2408,7 +2409,7 @@
 /zh-CN/docs/XSLT/Elements	/zh-CN/docs/Web/XSLT/Element
 /zh-CN/docs/XSLT:Elements	/zh-CN/docs/Web/XSLT/Element
 /zh-CN/docs/d_temp	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-CN/docs/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/en	/en-US/
 /zh-CN/docs/keypress	/zh-CN/docs/Web/API/Document/keypress_event
 /zh-CN/docs/learn/Accessibility/CSS和JavaScript	/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript

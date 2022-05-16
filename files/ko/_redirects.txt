@@ -681,6 +681,7 @@
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/CORS
 /ko/docs/Web/HTTP/Access_control_CORS/Errors	/ko/docs/Web/HTTP/CORS/Errors
 /ko/docs/Web/HTTP/Access_control_CORS/Errors/CORSDidNotSucceed	/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed
+/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ko/docs/Web/HTTP/Index	/ko/docs/Web/HTTP
 /ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
