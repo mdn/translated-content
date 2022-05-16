@@ -304,7 +304,7 @@ body {
 
 <h2 id="Adding_scoped_styles">增加局部样式/h2>
 
-<p>我们最后想要修改样式的组件是我们的 <code>ToDoItem</code> 组件。为了保持样式定义更贴近组件，我们可以在里面增加一个<code>&lt;style&gt;</code> 元素。然而，如果这些样式的改变发生在组件外部，那么就可以追溯样式的责任并修复问题。这就是<code>scoped</code> 属性的作用所在- 这里附加了一个唯一的HTML <code>data</code>属性选择器给你所有的样式, 已避免全局冲突.</p>
+<p>我们最后想要修改样式的组件是我们的 <code>ToDoItem</code> 组件。为了保持样式定义更贴近组件，我们可以在里面增加一个 <code>&lt;style&gt;</code> 元素。然而，如果这些样式的改变发生在组件外部，那么追溯存在问题的样式并完成修复将变得较为困难。这就是 <code>scoped</code> 属性的作用所在——这里附加了一个唯一的 HTML <code>data</code> 属性选择器给你所有的样式，以避免全局冲突。</p>
 
 <p>To use the <code>scoped</code> modifier, create a <code>&lt;style&gt;</code> element inside <code>ToDoItem.vue</code>, at the bottom of the file, and give it a <code>scoped</code> attribute:</p>
 
