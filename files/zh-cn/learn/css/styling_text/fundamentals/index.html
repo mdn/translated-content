@@ -14,7 +14,7 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
 
 <div>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><span class="seoSummary">在这篇文章中，我们将带你开始掌握 {{glossary("CSS")}} 的文字样式的旅程。</span>这里我们将详细介绍文本/字体样式的所有基本原理，包括设置文字的粗细，字体和样式，文字的属性简写，文字的对齐，和其他效果，以及行和字母间距。</p>
+<p class="summary">在这篇文章中，我们将带你开始掌握 {{glossary("CSS")}} 的文字样式的旅程。这里我们将详细介绍文本/字体样式的所有基本原理，包括设置文字的粗细，字体和样式，文字的属性简写，文字的对齐，和其他效果，以及行和字母间距。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -178,27 +178,27 @@ occasion such as this that he did.&lt;/p&gt;</pre>
   <tr>
    <td><code>serif</code></td>
    <td>有衬线的字体 （衬线一词是指字体笔画尾端的小装饰，存在于某些印刷体字体中）</td>
-   <td><span style="font-family: serif;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>sans-serif</code></td>
    <td>没有衬线的字体。</td>
-   <td><span style="font-family: sans-serif;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>monospace</code></td>
    <td>每个字符具有相同宽度的字体，通常用于代码列表。</td>
-   <td><span style="font-family: monospace;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>cursive</code></td>
    <td>用于模拟笔迹的字体，具有流动的连接笔画。</td>
-   <td><span style="font-family: cursive;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
   <tr>
    <td><code>fantasy</code></td>
    <td>用来装饰的字体</td>
-   <td><span style="font-family: fantasy;">My big red elephant</span></td>
+   <td>My big red elephant</td>
   </tr>
  </tbody>
 </table>
@@ -331,10 +331,10 @@ p {
   <ul>
    <li><code>none</code>: 取消已经存在的任何文本装饰。</li>
    <li><code>underline</code>: <u>文本下划线</u>.</li>
-   <li><code>overline</code>: <span style="text-decoration: overline;">文本上划线</span></li>
+   <li><code>overline</code>: 文本上划线</li>
    <li><code>line-through</code>: 穿过文本的线 <s style="text-decoration: line-through;">strikethrough over the text</s>.</li>
   </ul>
-  你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 <span style="text-decoration: underline overline;"><code>text-decoration: underline overline</code></span>.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 <span style="text-decoration: line-through red wavy;"><code>text-decoration: line-through red wavy</code>.</span></li>
+  你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 <code>text-decoration: underline overline</code>.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
 
 <p>我们来看一下这几个属性添加到我们的例子中：</p>
@@ -399,10 +399,10 @@ p {
 
 <p>您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：</p>
 
-<pre class="brush: css"><code class="language-css"><span class="property token">text-shadow</span><span class="punctuation token">:</span> -<span class="number token">1</span>px -<span class="number token">1</span>px <span class="number token">1</span>px <span class="hexcode token">#aaa</span>,
-             <span class="number token">0</span>px <span class="number token">4</span>px <span class="number token">1</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.5</span><span class="punctuation token">)</span>,
-             <span class="number token">4</span>px <span class="number token">4</span>px <span class="number token">5</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.7</span><span class="punctuation token">)</span>,
-             <span class="number token">0</span>px <span class="number token">0</span>px <span class="number token">7</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.4</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: css"><code class="language-css">text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);</code></pre>
 
 <p>如果我们把这个样式应用到我们 "Tommy the cat" 示例中的 {{htmlelement("h1")}} 元素，就像这样：</p>
 

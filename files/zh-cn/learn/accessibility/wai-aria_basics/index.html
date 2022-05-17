@@ -84,7 +84,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <ol>
  <li>文章到现在，可以看得出浏览器端对于无障碍的支持做的很好。 <a href="http://caniuse.com/#feat=wai-aria">caniuse.com</a> 这一网站显示全球浏览器支持 WAI-ARIA 的比率达到了88%。</li>
- <li>屏幕阅读器支持无障碍特性反而没达到这个水平，但是主流的屏幕阅读器做到了。 你可以通过查看Powermapper来了解支持级别 <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA Screen reader compatibility</a><span> 。</span></li>
+ <li>屏幕阅读器支持无障碍特性反而没达到这个水平，但是主流的屏幕阅读器做到了。 你可以通过查看Powermapper来了解支持级别 <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA Screen reader compatibility</a> 。</li>
 </ol>
 
 <p>我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA功能。我们没有提到的任何支持细节，您可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。</p>
@@ -271,10 +271,10 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>首先， 让我们在此访问之前的文章（重读 <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive">Keeping it unobtrusive</a>）。 在本节的最后，我们展示了当您尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些ARIA属性：</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>errors<span class="punctuation token">"</span></span> <span class="attr-name token">role</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>alert<span class="punctuation token">"</span></span> <span class="attr-name token">aria-relevant</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>all<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html"><code class="language-html">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+  &lt;ul&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">role="alert"</a></code> 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> 的调用会导致一系列的可访问性问题，详情请看<a href="http://webaim.org/techniques/javascript/other#popups">Popup Windows</a> ）。</li>
@@ -306,9 +306,9 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>除了经典的 {{htmlelement("label")}} 元素之外，WAI-ARIA 还支持一些高级表单标注技术。 我们已经讨论过使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 属性来提供标签，我们不希望标签对于有视力的用户是可见的（参见上面的 <a href="#路牌地标_（signpostslandmarks）">路牌/地标 （Signposts/Landmarks）</a> 部分）。 还有一些其他标签技术使用其他属性，例如 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> ，如果你想将非&lt;label&gt;元素指定为标签或标签多个表单输入具有相同的标签，并且 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>，如果你想关联 带有表单输入的其他信息，并将其读出。 请查阅文章获得更多细节： <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a></p>
 
-<p>还有许多其他有用的属性和状态，用于指示表单元素的状态。 例如：<span class="subtitle"><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true" </code></span>可用于表示该表单字段已禁用。 许多浏览器只会跳过禁用的表单字段，它们甚至不会被屏幕阅读器读出，但在某些情况下它们会被识别出来，所以最好包含这个属性让屏幕阅读器知道禁用的输入事实上已经被禁用。</p>
+<p>还有许多其他有用的属性和状态，用于指示表单元素的状态。 例如：<code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true" </code>可用于表示该表单字段已禁用。 许多浏览器只会跳过禁用的表单字段，它们甚至不会被屏幕阅读器读出，但在某些情况下它们会被识别出来，所以最好包含这个属性让屏幕阅读器知道禁用的输入事实上已经被禁用。</p>
 
-<p>如果输入的禁用状态可能会改变，那么指示它何时发生以及结果是什么也是一个好主意。 例如，在我们的<span class="subtitle"><a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> </span>这一demo 中 ，有一个复选框，选中后，启用另一个表单输入以允许输入更多信息。 我们已经建立了一个隐藏的实时区域：</p>
+<p>如果输入的禁用状态可能会改变，那么指示它何时发生以及结果是什么也是一个好主意。 例如，在我们的<a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> 这一demo 中 ，有一个复选框，选中后，启用另一个表单输入以允许输入更多信息。 我们已经建立了一个隐藏的实时区域：</p>
 
 <pre class="brush: html">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 

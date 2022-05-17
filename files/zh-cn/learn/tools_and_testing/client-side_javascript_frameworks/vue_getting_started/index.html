@@ -151,7 +151,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 <p><code>&lt;template&gt;</code> 包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及一些我们接下来要讲的 Vue 特定的语法。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：通过设置 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">&lt;template&gt;</span></font> 标签的 <code>lang</code> 属性，例如可以通过设置 </strong><code>&lt;template lang="pug"&gt;</code> 就可以在使用 Pub 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是这种方式可行你还是值得知道。</p>
+<p><strong>注意：通过设置 <font face="consolas, Liberation Mono, courier, monospace">&lt;template&gt;</font> 标签的 <code>lang</code> 属性，例如可以通过设置 </strong><code>&lt;template lang="pug"&gt;</code> 就可以在使用 Pub 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是这种方式可行你还是值得知道。</p>
 </div>
 
 <p><code>&lt;script&gt;</code> 包含组件中所有的非显示逻辑，最重要的是， <code>&lt;script&gt;</code> 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个对象会被处理和转换（包含 template 模板）成为一个有 <code>render()</code> 函数的 Vue 组件。</p>
@@ -206,7 +206,7 @@ export default {
 
 <p>对应用作出第一步改动——删除 Vue logo。打开 <code>App.vue</code> 文件，在 template 部分删除 <code>&lt;img&gt;</code> 元素。</p>
 
-<pre class="brush: html notranslate"><span class="author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z8h7gz67ziz76zcz77zz80zz71zncfz69zz69ziaz82zz71zz72zhz77zz122zz90z14mcyd">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</span></pre>
+<pre class="brush: html notranslate">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</pre>
 
 <p>如果你的服务器还在正常运行，应该可以看到 logo 几乎即时从之前渲染出来的页面中消失。我们再把 <code>HelloWorld</code> 组件也删掉。</p>
 

@@ -11,7 +11,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary"><span id="result_box" lang="zh-CN"><span>超链接非常重要 ——它们使互联网成为一个互联的网络。</span><span>本文介绍了创建链接所需的语法，并且讨论了链接的最佳实现方法。</span></span></p>
+<p class="summary">超链接非常重要 ——它们使互联网成为一个互联的网络。本文介绍了创建链接所需的语法，并且讨论了链接的最佳实现方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -28,32 +28,32 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 <h2 id="什么是超链接">什么是超链接?</h2>
 
-<p><span id="result_box" lang="zh-CN"><span>超链接是互联网提供的最令人兴奋的创新之一，</span><span>它们从一开始就一直是互联网的一个特性，使互联网成为互联的网络。超链接使我们能够将我们的文档链接到任何其他文档（或其他资源），也可以链接</span><span>到文档的指定部分，我们可以在一个简单的网址上提供应用程序（与必须先安装的本地应用程序或其他东西相比）。几乎任何网络内容都可以转换为链接，</span><span>点击（或激活）超链接将使网络浏览器转到另一个网址（{{glossary("URL")}}）。</span></span></p>
+<p>超链接是互联网提供的最令人兴奋的创新之一，它们从一开始就一直是互联网的一个特性，使互联网成为互联的网络。超链接使我们能够将我们的文档链接到任何其他文档（或其他资源），也可以链接到文档的指定部分，我们可以在一个简单的网址上提供应用程序（与必须先安装的本地应用程序或其他东西相比）。几乎任何网络内容都可以转换为链接，点击（或激活）超链接将使网络浏览器转到另一个网址（{{glossary("URL")}}）。</p>
 
 <div class="note">
 <p>注意：URL可以指向HTML文件、文本文件、图像、文本文档、视频和音频文件以及可以在网络上保存的任何其他内容。 如果浏览器不知道如何显示或处理文件，它会询问您是否要打开文件（需要选择合适的本地应用来打开或处理文件）或下载文件（以后处理它）。</p>
 </div>
 
-<p><span lang="zh-CN"><span>以 BBC 的主页为例，里面就包含了非常多的链接，各自连到不同新闻、网站的其它地方（导览功能），或者登入/注册页面等等。</span></span></p>
+<p>以 BBC 的主页为例，里面就包含了非常多的链接，各自连到不同新闻、网站的其它地方（导览功能），或者登入/注册页面等等。</p>
 
 <p><img alt="frontpage of bbc.co.uk, showing many news items, and navigation menu functionality" src="https://mdn.mozillademos.org/files/17032/updated-bbc-website.png"></p>
 
-<h2 id="链接的解析"><span class="short_text" id="result_box" lang="zh-CN"><span>链接的解析</span></span></h2>
+<h2 id="链接的解析">链接的解析</h2>
 
-<p><span id="result_box" lang="zh-CN"><span>通过将文本（或其他内容，见<a href="#块级链接">块级链接</a>)转换为{{htmlelement("a")}}元素内的链接来创建基本链接，</span> <span>给它一个{{htmlattrxref("href", "a")}}属性（也称为目标），它将包含您希望链接指向的网址。</span></span></p>
+<p>通过将文本（或其他内容，见<a href="#块级链接">块级链接</a>)转换为{{htmlelement("a")}}元素内的链接来创建基本链接， 给它一个{{htmlattrxref("href", "a")}}属性（也称为目标），它将包含您希望链接指向的网址。</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;我创建了一个指向
 &lt;a href="https://www.mozilla.org/zh-CN/"&gt;Mozilla 主页&lt;/a&gt;
 的超链接。
 &lt;/p&gt;</pre>
 
-<p><span class="short_text" id="result_box" lang="zh-CN"><span>结果如下所示：</span></span></p>
+<p>结果如下所示：</p>
 
 <p>我创建了一个指向 <a href="https://www.mozilla.org/zh-CN/">Mozilla 主页</a> 的超链接。</p>
 
-<h3 id="使用title属性添加支持信息"><span class="short_text" id="result_box" lang="zh-CN"><span>使用title属性添加支持信息</span></span></h3>
+<h3 id="使用title属性添加支持信息">使用title属性添加支持信息</h3>
 
-<p><span id="result_box" lang="zh-CN"><span>您可能要添加到您的链接的另一个属性是标题；</span><span>这旨在包含关于链接的补充有用信息，例如页面包含什么样的信息或需要注意的事情。</span> <span>例如：</span></span></p>
+<p>您可能要添加到您的链接的另一个属性是标题；这旨在包含关于链接的补充有用信息，例如页面包含什么样的信息或需要注意的事情。 例如：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;我创建了一个指向
 &lt;a href="https://www.mozilla.org/zh-CN/"
@@ -61,7 +61,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 的超链接。
 &lt;/p&gt;</pre>
 
-<p><span class="short_text" id="result_box" lang="zh-CN"><span>结果如下（当鼠标指针悬停在链接上时，标题将作为提示信息出现）：</span></span></p>
+<p>结果如下（当鼠标指针悬停在链接上时，标题将作为提示信息出现）：</p>
 
 <p>我创建了一个指向 <a href="https://www.mozilla.org/zh-CN/" title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">Mozilla 主页</a> 的超链接。</p>
 
@@ -69,9 +69,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 <p>注意：链接的标题仅当鼠标悬停在其上时才会显示，这意味着使用键盘来导航网页的人很难获取到标题信息。如果标题信息对于页面非常重要，你应该使用所有用户能都方便获取的方式来呈现，例如放在常规文本中。</p>
 </div>
 
-<h3 id="主动学习：创建您自己的示例链接"><span class="short_text" id="result_box" lang="zh-CN"><span>主动学习：创建您自己的示例链接</span></span></h3>
+<h3 id="主动学习：创建您自己的示例链接">主动学习：创建您自己的示例链接</h3>
 
-<p><span class="short_text" id="result_box" lang="zh-CN"><span>主动学习时间：我们希望您使用本地代码编辑器创建一个HTML文档（我们的</span></span> <a href="https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">入门模板</a> 很适合<span class="short_text" lang="zh-CN"><span>）</span></span></p>
+<p>主动学习时间：我们希望您使用本地代码编辑器创建一个HTML文档（我们的 <a href="https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">入门模板</a> 很适合）</p>
 
 <ul>
  <li>在HTML内，尝试添加一个或者多个段落或其他你知道类型的内容。</li>
@@ -128,7 +128,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 <h3 id="文档片段">文档片段</h3>
 
-<p>超链接除了可以链接到文档外，也可以链接到HTML文档的特定部分（被称为<strong>文档片段</strong>）<span>。要做到这一点，你必须首先给要链接到的元素分配一个</span>{{htmlattrxref("id")}}<span>属性。例如，如果你想链接到一个特定的标题，可以这样做：</span></p>
+<p>超链接除了可以链接到文档外，也可以链接到HTML文档的特定部分（被称为<strong>文档片段</strong>）。要做到这一点，你必须首先给要链接到的元素分配一个{{htmlattrxref("id")}}属性。例如，如果你想链接到一个特定的标题，可以这样做：</p>
 
 <pre class="brush: html notranslate">&lt;h2 id="Mailing_address"&gt;邮寄地址&lt;/h2&gt;</pre>
 
@@ -140,9 +140,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 <pre class="brush: html notranslate">&lt;p&gt;本页面底部可以找到 &lt;a href="#Mailing_address"&gt;公司邮寄地址&lt;/a&gt;。&lt;/p&gt;</pre>
 
-<h3 id="绝对URL和相对URL">绝对<span><strong>URL</strong></span>和相对<span><strong>URL</strong></span></h3>
+<h3 id="绝对URL和相对URL">绝对<strong>URL</strong>和相对<strong>URL</strong></h3>
 
-<p><span>你可能会在网络上遇到两个术语，<strong>绝对URL</strong>和<strong>相对URL</strong><em>（或者称为，<strong>绝对链接</strong>和<strong>相对链接</strong>）</em>：</span></p>
+<p>你可能会在网络上遇到两个术语，<strong>绝对URL</strong>和<strong>相对URL</strong><em>（或者称为，<strong>绝对链接</strong>和<strong>相对链接</strong>）</em>：</p>
 
 <p><strong>绝对URL</strong>：指向由其在Web上的绝对位置定义的位置，包括 {{glossary("protocol")}}（协议） 和 {{glossary("domain name")}}（域名）。像下面的例子，如果<code>index.html</code>页面上传到<code>projects</code>这一个目录。并且<code>projects</code>目录位于web服务站点的根目录，web站点的域名为<code>http://www.example.com</code>，那么这个页面就可以通过<code>http://www.example.com/projects/index.html</code>访问（或者通过<code>http://www.example.com/projects/</code>来访问，因为在没有指定特定的URL的情况下，大多数web服务会默认访问加载<code>index.html</code>这类页面）</p>
 

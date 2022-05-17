@@ -151,13 +151,13 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 <p><strong>Note</strong>: 访问 <a href="https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3">Map marker or Icon names</a> 以找出还有哪些可以的图标，并查看它们的引用名称是什么。它们的文件名应当是当你点击它们时显示出的图标名，最后带有".png"。</p>
 </div>
 
-<h3 id="单击标记时显示弹出窗口"><span class="tlid-translation translation" lang="zh-CN"><span title="">单击标记时显示弹出窗口</span></span></h3>
+<h3 id="单击标记时显示弹出窗口">单击标记时显示弹出窗口</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">Google地图的另一个常见用例是在点击其名称或标记时显示有关某个地点的更多信息（弹出式广告在Google Maps API中称为信息窗口）。</span> <span title="">这也很容易实现，所以让我们来看看它。</span></span></p>
+<p>Google地图的另一个常见用例是在点击其名称或标记时显示有关某个地点的更多信息（弹出式广告在Google Maps API中称为信息窗口）。 这也很容易实现，所以让我们来看看它。</p>
 
 <ol>
  <li>
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">首先，您需要指定一个包含HTML的JavaScript字符串，该字符串将定义弹出窗口的内容。</span> <span title="">这将由API注入弹出窗口，并且可以包含您想要的任何内容。</span> <span title="">在<code>google.maps.Marker()</code>构造函数定义下面添加以下行：</span></span></p>
+  <p>首先，您需要指定一个包含HTML的JavaScript字符串，该字符串将定义弹出窗口的内容。 这将由API注入弹出窗口，并且可以包含您想要的任何内容。 在<code>google.maps.Marker()</code>构造函数定义下面添加以下行：</p>
 
   <pre class="brush: js notranslate">var contentString = '&lt;div id="content"&gt;&lt;h2 id="firstHeading" class="firstHeading"&gt;Custom info window&lt;/h2&gt;&lt;p&gt;This is a cool custom info window.&lt;/p&gt;&lt;/div&gt;';</pre>
  </li>
@@ -211,19 +211,19 @@ scaleControl: true,</pre>
 
 <h2 id="一个RESTful_API_—_NYTimes">一个RESTful API — NYTimes</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">现在让我们看看另一个API示例</span></span> - <a href="https://developer.nytimes.com">New York Times API</a><span class="tlid-translation translation" lang="zh-CN"><span title="">。</span> <span title="">此API允许您检索纽约时报的新闻故事信息并将其显示在您的网站上。</span> <span title="">这种类型的API称为RESTful API - 我们不像使用Google地图那样使用JavaScript库的功能获取数据，而是通过向特定网址发出HTTP请求来获取数据，其中包含搜索术语和其他属性编码的数据</span> <span title="">URL（通常作为URL参数）。</span> <span title="">这是您在API中遇到的常见模式。</span></span></p>
+<p>现在让我们看看另一个API示例 - <a href="https://developer.nytimes.com">New York Times API</a>。 此API允许您检索纽约时报的新闻故事信息并将其显示在您的网站上。 这种类型的API称为RESTful API - 我们不像使用Google地图那样使用JavaScript库的功能获取数据，而是通过向特定网址发出HTTP请求来获取数据，其中包含搜索术语和其他属性编码的数据 URL（通常作为URL参数）。 这是您在API中遇到的常见模式。</p>
 
 <h2 id="使用第三方API的方法">使用第三方API的方法</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">下面我们将带您完成练习，向您展示如何使用NYTimes API，它还提供了一组更为通用的步骤，您可以将其用作处理新API的方法。</span></span></p>
+<p>下面我们将带您完成练习，向您展示如何使用NYTimes API，它还提供了一组更为通用的步骤，您可以将其用作处理新API的方法。</p>
 
-<h3 id="查找文档"><span class="tlid-translation translation" lang="zh-CN"><span title="">查找文档</span></span></h3>
+<h3 id="查找文档">查找文档</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">当您想要使用第三方API时，必须找出文档的位置，以便了解API具有哪些功能，以及如何使用它们等等。NYTimes API文档位于</span></span> <a href="https://developer.nytimes.com/">https://developer.nytimes.com/</a>。</p>
+<p>当您想要使用第三方API时，必须找出文档的位置，以便了解API具有哪些功能，以及如何使用它们等等。NYTimes API文档位于 <a href="https://developer.nytimes.com/">https://developer.nytimes.com/</a>。</p>
 
 <h3 id="获取一个开发者密钥">获取一个开发者密钥</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">出于安全性和问责制的原因，大多数API都要求您使用某种开发人员密钥。</span> <span title="">要注册NYTimes API密钥，您需要访问</span></span> <a href="https://developer.nytimes.com/signup">https://developer.nytimes.com/signup</a>。</p>
+<p>出于安全性和问责制的原因，大多数API都要求您使用某种开发人员密钥。 要注册NYTimes API密钥，您需要访问 <a href="https://developer.nytimes.com/signup">https://developer.nytimes.com/signup</a>。</p>
 
 <ol>
  <li>

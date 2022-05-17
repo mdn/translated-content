@@ -218,10 +218,10 @@ var driver = new webdriver.Builder()
 
 <p>通过刚创建的驱动实例的 <code>get()</code> 方法，加载你需要测试的网页:</p>
 
-<pre class="brush: js"><span class="nx">driver</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://www.google.com'</span><span class="p">);</span></pre>
+<pre class="brush: js">driver.get('http://www.google.com');</pre>
 
 <div class="note">
-<p><span class="p"><strong>注意</strong>: 可以查看 <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> 了解这一部分提到内容的详情。</span></p>
+<p><strong>注意</strong>: 可以查看 <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> 了解这一部分提到内容的详情。</p>
 </div>
 
 <p>你可以使用包含<code>file://</code> 的 URL 来指向需要测试的本地文件:</p>
@@ -242,15 +242,15 @@ var driver = new webdriver.Builder()
 
 <p>得到测试的 document 后，我们就需要同它进行交互操作了，比如获取特定的元素对它进行某种测试。WebDriver提供了<a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">通过多种方法选择UI元素</a>，比如通过 ID, class, element name等等. 具体的选择通过 <code>findElement()</code> 方法完成, 只需要将选择的元素作为参数传给它即可. 举例来说, 通过ID选择一个元素:</p>
 
-<pre class="brush: js"><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
+<pre class="brush: js">var element = driver.findElement(By.id('myElementId'));</pre>
 
 <p>通过CSS查找一个元素的最常用方法是使用  By.css 方法，它可以通过CSS选择器的方式来选择元素。把下面代码敲到 <code>quick_test.js</code> 的最后面:</p>
 
-<pre class="brush: js"><span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'</span>button:nth-of-type(1)<span class="s1">'</span><span class="p">));</span></pre>
+<pre class="brush: js">var button = driver.findElement(By.css('button:nth-of-type(1)'));</pre>
 
-<h3 id="测试element"><span class="p">测试element</span></h3>
+<h3 id="测试element">测试element</h3>
 
-<p><span class="p">同 web documents 和 elements 交互的方式很多. 在</span>WebDriver的文档中有很多常用的例子，你可以从<a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">获取文本值</a>开始。</p>
+<p>同 web documents 和 elements 交互的方式很多. 在WebDriver的文档中有很多常用的例子，你可以从<a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">获取文本值</a>开始。</p>
 
 <p>比如获取button上的文本，可以这样操作：</p>
 
@@ -262,11 +262,11 @@ var driver = new webdriver.Builder()
 
 <p>在你的工程目录下，运行测试：</p>
 
-<pre class="brush: bash"><span class="p">node quick_test.js</span></pre>
+<pre class="brush: bash">node quick_test.js</pre>
 
-<p><span class="p">你可以看到button的文本标签打印到控制台。</span></p>
+<p>你可以看到button的文本标签打印到控制台。</p>
 
-<p><span class="p">现在进一步尝试一下。将上面输入的代码删除，然后添加下面的这行代码：</span></p>
+<p>现在进一步尝试一下。将上面输入的代码删除，然后添加下面的这行代码：</p>
 
 <pre class="brush: js">button.click();</pre>
 
@@ -284,8 +284,8 @@ alert.accept();</pre>
 
 <p>接下来, 我们试一下在表单的一个元素中输入文本。添加如下代码并运行测试:</p>
 
-<pre class="brush: js"><span class="kd">var</span> input <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'input1'</span><span class="p">));
-input.</span>sendKeys('Filling in my form');</pre>
+<pre class="brush: js">var input = driver.findElement(By.id('input1'));
+input.sendKeys('Filling in my form');</pre>
 
 <p>你可以提交一些使用常规<code>webdriver.Key</code>属性不能代表的按键操作。举个例子，下面我们使用指令在提交前将tab从input移走：</p>
 
@@ -333,9 +333,9 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <p>完成一次测试后，需要关闭所有打开的驱动实例,确保你的机器上不会出现一堆泛滥的浏览器实例。只需要调用驱动实例的 <code>quit()</code> 方法即可。现在将下面这行代码添加到你的 <code>quick_test.js</code> 最后:</p>
 
-<pre class="brush: js"><span class="nx">driver</span><span class="p">.</span><span class="nx">quit</span><span class="p">();</span></pre>
+<pre class="brush: js">driver.quit();</pre>
 
-<p><span class="p">运行测试文件，这次你会看到在测试执行完毕后浏览器被关掉了。这很有用，如果你不希望电脑被一堆浏览器实例搞挂。</span></p>
+<p>运行测试文件，这次你会看到在测试执行完毕后浏览器被关掉了。这很有用，如果你不希望电脑被一堆浏览器实例搞挂。</p>
 
 <h2 id="测试最佳实践">测试最佳实践</h2>
 
@@ -551,7 +551,7 @@ driver.quit();</pre>
   <pre class="brush: bash"><code class="language-html">npm install saucelabs --save-dev</code></pre>
  </li>
  <li>Require saucelabs — 在 <code>sauce_google_test.js</code> 文件顶端, 就在之前的变量声明下面添加如下代码:
-  <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> SauceLabs <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'saucelabs'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  <pre class="brush: js line-numbers  language-js"><code class="language-js">var SauceLabs = require('saucelabs');</code></pre>
  </li>
  <li>接着添加如下代码，创建一个新的SauceLabs实例:
   <pre class="brush: js">var saucelabs = new SauceLabs({
