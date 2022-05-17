@@ -77,10 +77,10 @@ translation_of: Mozilla/Firefox/Releases/11
 </dl>
 <h3 id="インタフェースの変更">インタフェースの変更</h3>
 <ul>
-  <li><code>mozIAsyncHistory</code> インタフェースに、ある URI が訪問済みであるかを確認するためのメソッド {{ ifmethod("mozIAsyncHistory","isURIVisited") }} が追加されました。</li>
-  <li>{{ ifmethod("mozIAsyncHistory","isURIVisited") }} でコールバックハンドリング機能を提供するため、新たに <code>mozIVisitStatusCallback</code> インタフェースを追加しました。</li>
+  <li><code>mozIAsyncHistory</code> インタフェースに、ある URI が訪問済みであるかを確認するためのメソッド <code>mozIAsyncHistory.isURIVisited</code> が追加されました。</li>
+  <li><code>mozIAsyncHistory.isURIVisited</code> でコールバックハンドリング機能を提供するため、新たに <code>mozIVisitStatusCallback</code> インタフェースを追加しました。</li>
   <li><code>nsIMacDockSupport</code> インタフェースが新属性 <code>badgeText</code> を用いて、Dock のアプリケーションアイコンへのテキスト追加をサポートしました。</li>
-  <li><code>nsINavHistoryResultObserver</code> インタフェースでは、非推奨になった <code>containerOpened()</code> および <code>containerClosed()</code> メソッドに代わり {{ ifmethod("nsINavHistoryResultObserver", "containerStateChanged") }} を実装することが必要です。</li>
+  <li><code>nsINavHistoryResultObserver</code> インタフェースでは、非推奨になった <code>containerOpened()</code> および <code>containerClosed()</code> メソッドに代わり <code>nsINavHistoryResultObserver.containerStateChanged</code> を実装することが必要です。</li>
 </ul>
 <h4 id="削除されたインタフェース">削除されたインタフェース</h4>
 <p>以下のインタフェースは、不要になったため削除されました:</p>
