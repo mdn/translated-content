@@ -363,7 +363,7 @@ app.listen(3000);</pre>
 
 <h3 id="托管静态文件">托管静态文件</h3>
 
-<p>可以使用 <a href="httsp://www.expressjs.com.cn/4x/api.html#express.static">express.static</a> 中间件来托管静态文件，包括图片、CSS 以及 JavaScript 文件（其实 <code>static()</code> 是 Express 提供的<strong>原生</strong>中间件函数之一）。例如，可以通过下面一行来托管 'public' 文件夹（应位于 Node 调用的同一级）中的文件：</p>
+<p>可以使用 <a href="https://www.expressjs.com.cn/4x/api.html#express.static">express.static</a> 中间件来托管静态文件，包括图片、CSS 以及 JavaScript 文件（其实 <code>static()</code> 是 Express 提供的<strong>原生</strong>中间件函数之一）。例如，可以通过下面一行来托管 'public' 文件夹（应位于 Node 调用的同一级）中的文件：</p>
 
 <pre class="brush: js">app.use(express.static('public'));
 </pre>
@@ -477,7 +477,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <h3 id="文件结构">文件结构</h3>
 
-<p>Express 不对文件结构和组件的选用做任何约定。路由、视图、静态文件，以及其它应用具体逻辑均可按任意文件结构保存在任意数量的文件中。当然可以让整个 Express 应用保存在单一文件中，但是一般情况下，把应用按功能（比如账户管理、博客、论坛）和架构问题域（比如 <a href="/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC 架构</a> 中的模型、视图、控制器）进行拆分是有意义的。</p>
+<p>Express 不对文件结构和组件的选用做任何约定。路由、视图、静态文件，以及其它应用具体逻辑均可按任意文件结构保存在任意数量的文件中。当然可以让整个 Express 应用保存在单一文件中，但是一般情况下，把应用按功能（比如账户管理、博客、论坛）和架构问题域（比如 <a href="/zh-CN/docs/Glossary/MVC">MVC 架构</a> 中的模型、视图、控制器）进行拆分是有意义的。</p>
 
 <p>后文将使用 <strong>Express 应用生成器 </strong>来创建一个模块化的应用框架，从而可以更方便的扩展出新的 web 应用。</p>
 
