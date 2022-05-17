@@ -41607,39 +41607,6 @@
       "xdelatour"
     ]
   },
-  "conflicting/Web/HTTP": {
-    "modified": "2019-03-23T22:26:53.499Z",
-    "contributors": [
-      "tonybengue",
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2020-04-19T02:52:23.292Z",
-    "contributors": [
-      "vvvaleee",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/404": {
-    "modified": "2019-03-23T23:07:59.110Z",
-    "contributors": [
-      "loella16",
-      "Jeremie",
-      "Porkepix",
-      "genma"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/502": {
-    "modified": "2019-03-23T23:00:23.677Z",
-    "contributors": [
-      "loella16",
-      "Jeremie",
-      "Goofy",
-      "htindon"
-    ]
-  },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {
     "modified": "2020-03-12T19:39:10.978Z",
     "contributors": [
