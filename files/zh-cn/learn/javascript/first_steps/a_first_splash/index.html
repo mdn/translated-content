@@ -316,7 +316,7 @@ let resetButton;</pre>
 
 <pre class="brush: js">checkGuess();</pre>
 
-<p>在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 "<code><font face="monospace">我是一个占位符</font></code>"；我们在代码中定义了一个函数，当我们调用它时，函数创建了一个告警窗口。</p>
+<p>在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 "<code>我是一个占位符</code>"；我们在代码中定义了一个函数，当我们调用它时，函数创建了一个告警窗口。</p>
 
 <div class="note">
 <p><strong>注</strong>: <a href="/zh-CN/docs/learn/JavaScript/Building_blocks/Functions">后续课程 </a>将讲解更多有关函数的知识。</p>
@@ -563,14 +563,14 @@ greeting;</pre>
  </li>
 </ul>
 
-<p>如果是, 我们让 <code>guesses</code> 段落的文本内容等于“<code><font face="monospace">上次猜的数：</font></code>”。如果不是就不用了。</p>
+<p>如果是, 我们让 <code>guesses</code> 段落的文本内容等于“<code>上次猜的数：</code>”。如果不是就不用了。</p>
 
 <ul>
  <li>第 6 行将当前 <code>userGuess</code> 值附加到 <code>guesses</code> 段落的末尾，并加上一个空格，以使每两个猜测值之间有一个空格。</li>
  <li>下一个代码块中（8 - 24 行）做了几个检查：
   <ul>
    <li>第一个 <code>if(){ }</code> 检查用户的猜测是否等于在代码顶端设置的 <code>randomNumber</code> 值。如果是，则玩家猜对了，游戏胜利，我们将向玩家显示一个漂亮的绿色的祝贺信息，并清除“高了 / 低了”信息框的内容，调用 <code>setGameOver()</code> 方法。</li>
-   <li><font face="Open Sans, arial, sans-serif">紧接着是一个 </font><code>else if(){ }</code> 结构。它会检查这个回合是否是玩家的最后一个回合。如果是，程序将做与前一个程序块相同的事情，只是这次它显示的是 Game Over 而不是祝贺消息。</li>
+   <li>紧接着是一个 <code>else if(){ }</code> 结构。它会检查这个回合是否是玩家的最后一个回合。如果是，程序将做与前一个程序块相同的事情，只是这次它显示的是 Game Over 而不是祝贺消息。</li>
    <li>最后的一个块是 <code>else { }</code>，前两个比较都不返回 <code>true</code> 时（也就是玩家尚未猜对，但是还有机会）才会执行这里的代码。在这个情况下，我们会告诉玩家他们猜错了，并执行另一个条件测试，判断并告诉玩家猜测的数字是高了还是低了。</li>
   </ul>
  </li>
@@ -703,7 +703,7 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 <ol>
  <li>首先在浏览器中打开你的程序。</li>
  <li>接下来打开 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>， 并且切换到 JavaScript 控制台的标签页。</li>
- <li><font face="Open Sans, arial, sans-serif">输入 </font><code>guessField</code> ，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！</li>
+ <li>输入 <code>guessField</code> ，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！</li>
  <li>现在输入下面的代码：
   <pre class="brush: js">guessField.value = 'Hello';</pre>
   <code>value</code> 属性表示当前文本区域中输入的值。 在输入这条指令后，你将看到文本域区中的文本被我们修改了！</li>

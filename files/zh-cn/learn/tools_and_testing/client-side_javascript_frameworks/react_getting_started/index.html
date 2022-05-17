@@ -16,36 +16,36 @@ translation_of: >-
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary"><font><font>本文会引导我们进入一段 React 学习之旅。</font><font>我们将逐步了解有关它的背景和用例的一些细节，在自己的电脑上建起基本的 React 工具链，创建并使用一个简单的入门应用程序，以学习一些关于 React 在此过程中如何工作的知识。</font></font></p>
+<p class="summary">本文会引导我们进入一段 React 学习之旅。我们将逐步了解有关它的背景和用例的一些细节，在自己的电脑上建起基本的 React 工具链，创建并使用一个简单的入门应用程序，以学习一些关于 React 在此过程中如何工作的知识。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row"><font><font>先决条件：</font></font></th>
+   <th scope="row">先决条件：</th>
    <td>
-    <p><font><font>熟悉核心 </font></font><a href="/en-US/docs/Learn/HTML"><font><font>HTML</font></font></a><font><font>，</font></font><font><font><a href="/en-US/docs/Learn/CSS">CSS</a> </font></font><font><font>和 </font></font><font><font><a href="/en-US/docs/Learn/JavaScript">JavaScript</a> </font></font><font><font>语言，了解</font></font><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"><font><font>终端/命令行</font></font></a><font><font>。</font></font></p>
+    <p>熟悉核心 <a href="/en-US/docs/Learn/HTML">HTML</a>，<a href="/en-US/docs/Learn/CSS">CSS</a> 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端/命令行</a>。</p>
 
-    <p><font><font>React 使用称为 JSX（JavaScript 和 XML）的 HTML-in-JavaScript 语法。</font><font>熟悉 HTML 和 JavaScript 可以帮助您学习 JSX，并更好地确定应用程序中的错误是与 JavaScript 还是与 React 的更特定领域相关。</font></font></p>
+    <p>React 使用称为 JSX（JavaScript 和 XML）的 HTML-in-JavaScript 语法。熟悉 HTML 和 JavaScript 可以帮助您学习 JSX，并更好地确定应用程序中的错误是与 JavaScript 还是与 React 的更特定领域相关。</p>
    </td>
   </tr>
   <tr>
-   <th scope="row"><font><font>目的：</font></font></th>
-   <td><font><font>要设置本地 React 开发环境，创建一个启动应用程序，并了解其工作原理</font></font></td>
+   <th scope="row">目的：</th>
+   <td>要设置本地 React 开发环境，创建一个启动应用程序，并了解其工作原理</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="你好_React"><font><font>你好 React</font></font></h2>
+<h2 id="你好_React">你好 React</h2>
 
-<p><font><font>如其官方口号所示，</font></font><font><font><a href="https://reactjs.org/">React</a> 是一个用于构建用户界面的库。React 不是一个框架 —— 它的应用甚至不局限于 Web 开发，它可以与其他库一起使用以渲染到特定环境。例如，</font></font><font><font><a href="https://reactnative.dev/">React Native</a> </font></font><font><font>可用于构建移动应用程序；</font></font><font><font><a href="https://facebook.github.io/react-360/">React 360</a> </font></font><font><font>可用于构建虚拟现实应用程序……</font></font></p>
+<p>如其官方口号所示，<a href="https://reactjs.org/">React</a> 是一个用于构建用户界面的库。React 不是一个框架 —— 它的应用甚至不局限于 Web 开发，它可以与其他库一起使用以渲染到特定环境。例如，<a href="https://reactnative.dev/">React Native</a> 可用于构建移动应用程序；<a href="https://facebook.github.io/react-360/">React 360</a> 可用于构建虚拟现实应用程序……</p>
 
-<p><font><font>为了构建 Web 应用，开发人员将 React 与 </font></font><a href="https://reactjs.org/docs/react-dom.html"><font><font>ReactDOM 结合使用</font></font></a><font><font>。</font><font>React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。</font><font>当我们将 React 称为“框架”时，</font></font>就是在进行口语化的理解<font><font>。</font></font></p>
+<p>为了构建 Web 应用，开发人员将 React 与 <a href="https://reactjs.org/docs/react-dom.html">ReactDOM 结合使用</a>。React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。当我们将 React 称为“框架”时，就是在进行口语化的理解。</p>
 
-<p><font><font>React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使您可以专注于 UI 设计(译者注：显而易见，此设计不等于视觉稿的设计)。</font></font></p>
+<p>React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使您可以专注于 UI 设计(译者注：显而易见，此设计不等于视觉稿的设计)。</p>
 
-<h2 id="用例"><font><font>用例</font></font></h2>
+<h2 id="用例">用例</h2>
 
-<p><font><font>与本模块中涵盖的其他框架不同，React 不会对代码约定或文件组织实施严格的规则。</font><font>这使团队可以设置最适合自己的约定，并以他们希望的任何方式采用 React。</font><font>React 可以处理一个按钮，一个界面的几个部分或应用程序的整个用户界面。</font></font></p>
+<p>与本模块中涵盖的其他框架不同，React 不会对代码约定或文件组织实施严格的规则。这使团队可以设置最适合自己的约定，并以他们希望的任何方式采用 React。React 可以处理一个按钮，一个界面的几个部分或应用程序的整个用户界面。</p>
 
 <div style="padding-top: 5px;">
 <p>尽管 React 可以用于<a href="https://reactjs.org/docs/add-react-to-a-website.html">界面的小片段</a>中，但要和 jQuery 这样的库，甚至是像 Vue 这样的框架那样“引入”应用程序并不容易 —— 当你使用 React 构建整个应用程序时更容易上手。</p>
@@ -460,21 +460,21 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing"><font><font>在Ember中路由</font></font></a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">在Ember中路由</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember资源和故障排除</a></li>
   </ul>
  </li>
- <li><font><font>Vue</font></font>
+ <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started"><font><font>Vue入门</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component"><font><font>创建我们的第一个Vue组件</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists"><font><font>渲染Vue组件列表</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models"><font><font>添加新的待办事项表单：Vue事件，方法和模型</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling"><font><font>使用CSS样式化Vue组件</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties"><font><font>使用Vue计算的属性</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering"><font><font>Vue条件渲染：编辑现有待办事项</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management"><font><font>使用Vue裁判进行焦点管理</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources"><font><font>Vue资源</font></font></a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue入门</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">创建我们的第一个Vue组件</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染Vue组件列表</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">添加新的待办事项表单：Vue事件，方法和模型</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">使用CSS样式化Vue组件</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用Vue计算的属性</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue条件渲染：编辑现有待办事项</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">使用Vue裁判进行焦点管理</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue资源</a></li>
   </ul>
  </li>
 </ul>

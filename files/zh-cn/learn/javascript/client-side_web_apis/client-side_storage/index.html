@@ -90,7 +90,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <ol>
  <li>
-  <p>第一步，访问 GitHub 上的 <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html">web storage blank template</a> (在新标签页打开此<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html" rel="noopener"><font>模板</font></a>)。</p>
+  <p>第一步，访问 GitHub 上的 <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html">web storage blank template</a> (在新标签页打开此<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html" rel="noopener">模板</a>)。</p>
  </li>
  <li>
   <p>打开你浏览器开发者工具的 JavaScript 控制台。</p>
@@ -160,7 +160,7 @@ myName</pre>
 
 <h3 id="更复杂的例子">更复杂的例子</h3>
 
-<p><font>让我们通过编写一个简单的工作示例来应用这些新发现的知识，让你了解如何使用网络存储。</font><font>我们的示例将允许你输入一个名称，然后该页面将刷新，以提供个性化问候。</font><font>这种状态也会页面/浏览器重新加载期间保持，因为这个名称存储在Web Storage 中。</font></p>
+<p>让我们通过编写一个简单的工作示例来应用这些新发现的知识，让你了解如何使用网络存储。我们的示例将允许你输入一个名称，然后该页面将刷新，以提供个性化问候。这种状态也会页面/浏览器重新加载期间保持，因为这个名称存储在Web Storage 中。</p>
 
 <p>你可以在 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> 中找到示例文件 —— 这包含一个具有标题，内容和页脚，以及用于输入您的姓名的表单的简单网站。</p>
 
@@ -173,10 +173,10 @@ myName</pre>
   <p>首先，在您的计算机上的新目录中创建一个 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> 文件的副本。</p>
  </li>
  <li>
-  <p><font><font>接下来，请注意我们的HTML如何引用一个名为</font></font><code>index.js</code><font><font>的 JavaScript 文件</font></font><font><font>（请参见第40行）。</font><font>我们需要创建它并将 JavaScript 代码写入其中。</font></font><font><font>在与HTML文件相同的目录中</font><font>创建一个</font></font><code>index.js</code><font><font>文件。</font></font> </p>
+  <p>接下来，请注意我们的HTML如何引用一个名为<code>index.js</code>的 JavaScript 文件（请参见第40行）。我们需要创建它并将 JavaScript 代码写入其中。在与HTML文件相同的目录中创建一个<code>index.js</code>文件。 </p>
  </li>
  <li>
-  <p><font>我们首先创建对所有需要在此示例中操作的HTML功能的引用 - 我们将它们全部创建为常量，因为这些引用在应用程序的生命周期中不需要更改。</font><font>将以下几行添加到你的 JavaScript 文件中：</font></p>
+  <p>我们首先创建对所有需要在此示例中操作的HTML功能的引用 - 我们将它们全部创建为常量，因为这些引用在应用程序的生命周期中不需要更改。将以下几行添加到你的 JavaScript 文件中：</p>
 
   <pre class="brush: js notranslate">// 创建所需的常量
 const rememberDiv = document.querySelector('.remember');
@@ -190,7 +190,7 @@ const h1 = document.querySelector('h1');
 const personalGreeting = document.querySelector('.personal-greeting');</pre>
  </li>
  <li>
-  <p><font>接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。</font><font>在您之前的代码下添加此代码段：</font> 在你之前的代码后添加这段代码：</p>
+  <p>接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在您之前的代码下添加此代码段： 在你之前的代码后添加这段代码：</p>
 
   <pre class="brush: js notranslate">// 当按钮按下时阻止表单提交
 form.addEventListener('submit', function(e) {
@@ -198,7 +198,7 @@ form.addEventListener('submit', function(e) {
 });</pre>
  </li>
  <li>
-  <p><font><font>现在我们需要添加一个事件监听器，当单击“Say hello”按钮时，它的处理函数将会运行。</font><font>这些注释详细解释了每一处都做了什么，但实际上我们在这里获取用户输入到文本输入框中的名字并使用</font></font><code>setItem()</code><font><font>将它保存在网络存储中</font></font><font><font>，然后运行一个名为</font></font><code>nameDisplayCheck()</code><font><font>的函数</font></font><font><font>来处理实际的网站文本的更新。将此添加到代码的底部：</font></font> </p>
+  <p>现在我们需要添加一个事件监听器，当单击“Say hello”按钮时，它的处理函数将会运行。这些注释详细解释了每一处都做了什么，但实际上我们在这里获取用户输入到文本输入框中的名字并使用<code>setItem()</code>将它保存在网络存储中，然后运行一个名为<code>nameDisplayCheck()</code>的函数来处理实际的网站文本的更新。将此添加到代码的底部： </p>
 
   <pre class="brush: js notranslate">// run function when the 'Say hello' button is clicked
 submitBtn.addEventListener('click', function() {
@@ -210,7 +210,7 @@ submitBtn.addEventListener('click', function() {
 });</pre>
  </li>
  <li>
-  <p><font><font>此时，我们还需要一个事件处理程序，以便在单击“</font></font>Forget<font><font>”按钮时运行一个函数——且仅在单击“Say hello”按钮（两种表单状态来回切换）后才显示。在这个功能中，我们</font></font><font><font>使用</font></font><code>removeItem()</code><font><font>从网络存储中</font><font>删除</font><font>项目</font></font><code>name</code><font><font>，然后再次运行</font></font><code>nameDisplayCheck()</code><font><font>以更新显示。</font><font>将其添加到底部：</font></font> </p>
+  <p>此时，我们还需要一个事件处理程序，以便在单击“Forget”按钮时运行一个函数——且仅在单击“Say hello”按钮（两种表单状态来回切换）后才显示。在这个功能中，我们使用<code>removeItem()</code>从网络存储中删除项目<code>name</code>，然后再次运行<code>nameDisplayCheck()</code>以更新显示。将其添加到底部： </p>
 
   <pre class="brush: js notranslate">// run function when the 'Forget' button is clicked
 forgetBtn.addEventListener('click', function() {
@@ -222,7 +222,7 @@ forgetBtn.addEventListener('click', function() {
 });</pre>
  </li>
  <li>
-  <p><font><font>现在是时候定义</font></font><code>nameDisplayCheck()</code><font><font>函数本身了。</font><font>在这里，我们通过使用</font></font><code>localStorage.getItem('name')</code><font><font>作为测试条件</font><font>来检查name 数据项是否已经存储在Web Storage 中</font><font>。</font><font>如果它已被存储，则该调用的返回值为</font></font><code>true</code><font><font>; </font><font>如果没有，它会是</font></font><code>false</code><font><font>。</font><font>如果是</font></font><code>true</code><font><font>，我们会显示个性化问候语，显示表格的“</font></font>forget<font><font>”部分，并隐藏表格的“</font></font>Say hello<font><font>”部分。</font><font>如果是</font></font><code>false</code><font><font>，我们会显示一个通用问候语，并做相反的事。</font><font>再次将下面的代码添到底部：</font></font></p>
+  <p>现在是时候定义<code>nameDisplayCheck()</code>函数本身了。在这里，我们通过使用<code>localStorage.getItem('name')</code>作为测试条件来检查name 数据项是否已经存储在Web Storage 中。如果它已被存储，则该调用的返回值为<code>true</code>; 如果没有，它会是<code>false</code>。如果是<code>true</code>，我们会显示个性化问候语，显示表格的“forget”部分，并隐藏表格的“Say hello”部分。如果是<code>false</code>，我们会显示一个通用问候语，并做相反的事。再次将下面的代码添到底部：</p>
 
   <pre class="brush: js notranslate">// define the nameDisplayCheck() function
 function nameDisplayCheck() {
@@ -246,27 +246,27 @@ function nameDisplayCheck() {
 }</pre>
  </li>
  <li>
-  <p><font><font>最后但同样重要的是，我们需要在</font></font><font><font>每次加载页面时</font><font>运行</font></font><code>nameDisplayCheck()</code><font><font>函数。</font><font>如果我们不这样做，那么个性化问候不会在页面重新加载后保持。</font><font>将以下代码添加到代码的底部：</font></font></p>
+  <p>最后但同样重要的是，我们需要在每次加载页面时运行<code>nameDisplayCheck()</code>函数。如果我们不这样做，那么个性化问候不会在页面重新加载后保持。将以下代码添加到代码的底部：</p>
 
   <pre class="brush: js notranslate">document.body.onload = nameDisplayCheck;</pre>
  </li>
 </ol>
 
-<p><font>你的例子完成了 - 做得好！</font><font>现在剩下的就是保存你的代码并在浏览器中测试你的HTML页面。你可以在这里看到我们的</font><a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html" rel="noopener"><font><font>完成版本并在线运行</font></font></a><font><font>。</font></font></p>
+<p>你的例子完成了 - 做得好！现在剩下的就是保存你的代码并在浏览器中测试你的HTML页面。你可以在这里看到我们的<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html" rel="noopener">完成版本并在线运行</a>。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 在 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> 中还有一个稍微复杂点儿的示例。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 在完成版本的源代码中， <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> 一行里， <code>defer</code> 属性指明<font>在页面加载完成之前，</font>{{htmlelement("script")}}<font>元素的内容</font><font>不会执行。</font></p>
+<p><strong>注意</strong>: 在完成版本的源代码中， <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> 一行里， <code>defer</code> 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。</p>
 </div>
 
 <h2 id="存储复杂数据_—_IndexedDB">存储复杂数据 — IndexedDB</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"><font><font>IndexedDB API</font></font></a><font><font>（有时简称 IDB ）是可以在浏览器中访问的一个完整的数据库系统，在这里，你可以存储复杂的关系数据。其种类不限于像字符串和数字这样的简单值。你可以在一个</font></font>IndexedDB中<font><font>存储视频，图像和许多其他的内容。</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>（有时简称 IDB ）是可以在浏览器中访问的一个完整的数据库系统，在这里，你可以存储复杂的关系数据。其种类不限于像字符串和数字这样的简单值。你可以在一个IndexedDB中存储视频，图像和许多其他的内容。</p>
 
-<p><font>但是，这确实是有代价的：使用IndexedDB要比Web Storage API复杂得多。</font><font>在本节中，我们仅仅只能浅尝辄止地一提它的能力，不过我们会给你足够基础知识以帮助你开始。</font></p>
+<p>但是，这确实是有代价的：使用IndexedDB要比Web Storage API复杂得多。在本节中，我们仅仅只能浅尝辄止地一提它的能力，不过我们会给你足够基础知识以帮助你开始。</p>
 
 <h3 id="通过一个笔记存储示例演示">通过一个笔记存储示例演示</h3>
 
@@ -309,23 +309,23 @@ let db;</pre>
   <p>我们将把所有的后续代码写在这个 <code>window.onload</code> 事件处理函数内，这个函数将在window的{{event("load")}}事件被触发时调用，为了确保我们没有在应用完整加载前试图使用IndexedDB功能（如果我们不这么做，它会失败）。</p>
  </li>
  <li>
-  <p><font><font>在</font></font><code>window.onload</code><font><font>处理程序内，添加以下内容：</font></font></p>
+  <p>在<code>window.onload</code>处理程序内，添加以下内容：</p>
 
   <pre class="brush: js notranslate">// Open our database; it is created if it doesn't already exist
 // (see onupgradeneeded below)
 let request = window.indexedDB.open('notes', 1);</pre>
 
-  <p><font><font>此行创建一个</font></font> <code>request</code> <font><font>变量，目的是打开</font></font> <code>notes</code><font><font>数据库的</font></font> <code>1</code><font><font>版本</font></font><font><font>。</font><font>如果<code>notes</code>数据库不存在，则后续代码将为您创建。</font><font>您将在IndexedDB中经常看到此请求模式。</font><font>数据库操作需要时间。</font><font>您不希望在等待结果时挂起浏览器，因此数据库操作是</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous" title="异步：异步是指通信环境，其中每个方在方便或可能时而不是立即接收和处理消息。"><font><font>异步的</font></font></a><font><font>，这意味着它们不会立即发生，而是在将来的某个时刻发生，并且在完成后会收到通知。</font></font></p>
+  <p>此行创建一个 <code>request</code> 变量，目的是打开 <code>notes</code>数据库的 <code>1</code>版本。如果<code>notes</code>数据库不存在，则后续代码将为您创建。您将在IndexedDB中经常看到此请求模式。数据库操作需要时间。您不希望在等待结果时挂起浏览器，因此数据库操作是<a href="https://developer.mozilla.org/en-US/docs/Glossary/asynchronous" title="异步：异步是指通信环境，其中每个方在方便或可能时而不是立即接收和处理消息。">异步的</a>，这意味着它们不会立即发生，而是在将来的某个时刻发生，并且在完成后会收到通知。</p>
 
-  <p><font><font>要在IndexedDB中处理此问题，您需要创建一个请求对象（可以随意命名 - </font></font>命名为<code>request</code>，<font><font>可以表明它的用途）。</font><font>然后，在请求完成或者失败时，使用事件处理程序来运行代码，您将在下面看到这些代码。</font></font></p>
+  <p>要在IndexedDB中处理此问题，您需要创建一个请求对象（可以随意命名 - 命名为<code>request</code>，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，您将在下面看到这些代码。</p>
 
   <div class="note">
-  <p><strong><font><font>注意</font></font></strong><font><font>：版本号很重要。</font><font>如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者</font></font><code>onupgradeneeded</code><font><font>处理程序</font><font>内指定的不同模式</font><font>（请参阅下文）等</font><font>再次运行代码</font><font>。在这个简单教程中，我们不讨论数据库升级。</font></font></p>
+  <p><strong>注意</strong>：版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者<code>onupgradeneeded</code>处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。</p>
   </div>
 
   <ol>
    <li>
-    <p><font><font>在之前添加的事件处理程序下方添加以下代码 - 在</font></font><code>window.onload</code><font><font>处理程序内：</font></font></p>
+    <p>在之前添加的事件处理程序下方添加以下代码 - 在<code>window.onload</code>处理程序内：</p>
 
     <pre class="brush: js notranslate">// onerror handler signifies that the database didn't open successfully
 request.onerror = function() {
@@ -343,14 +343,14 @@ request.onsuccess = function() {
   displayData();
 };</pre>
 
-    <p><font><font>如果系统返回：请求失败，</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBRequest/onerror" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.onerror</code></a><font><font>将会运行。</font><font>这将允许你对这个问题做出响应。</font><font>在我们的简单示例中，只是将消息打印到JavaScript控制台。</font></font></p>
+    <p>如果系统返回：请求失败，<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBRequest/onerror" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.onerror</code></a>将会运行。这将允许你对这个问题做出响应。在我们的简单示例中，只是将消息打印到JavaScript控制台。</p>
 
-    <p>如果系统返回：请求成功，<font><font>表明成功打开数据库</font></font> ，<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBRequest/onsuccess" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.onsuccess</code></a><font><font>将会运行。如果是这种情况，则表示已打开数据库的对象在</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBRequest/result" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.result</code></a><font><font>属性中</font><font>变为可用</font><font>，从而允许我们操作数据库。</font><font>我们将它存储在</font></font><code>db</code><font><font>我们之前创建</font><font>的</font><font>变量中供以后使用。</font><font>我们还运行一个名为</font></font><code>displayData()</code>的自定义函数<font><font>，它把数据库中的数据显示在</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul" title="The HTML &lt;ul> 元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的HTML描述定义, 但在其相关的CSS 可以用 list-style-type 属性。"><code>&lt;ul&gt;</code></a><font><font>。</font><font>我们现在运行它，以便在页面加载时显示数据库中已有的注释。</font><font>您将在稍后看到此定义。</font></font></p>
+    <p>如果系统返回：请求成功，表明成功打开数据库 ，<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBRequest/onsuccess" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.onsuccess</code></a>将会运行。如果是这种情况，则表示已打开数据库的对象在<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBRequest/result" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.result</code></a>属性中变为可用，从而允许我们操作数据库。我们将它存储在<code>db</code>我们之前创建的变量中供以后使用。我们还运行一个名为<code>displayData()</code>的自定义函数，它把数据库中的数据显示在<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul" title="The HTML &lt;ul> 元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的HTML描述定义, 但在其相关的CSS 可以用 list-style-type 属性。"><code>&lt;ul&gt;</code></a>。我们现在运行它，以便在页面加载时显示数据库中已有的注释。您将在稍后看到此定义。</p>
    </li>
   </ol>
  </li>
  <li>
-  <p><font><font>最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.onupgradeneeded</code></a><font><font>。</font><font>如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。</font><font>在上一个处理程序下面添加以下代码：</font></font></p>
+  <p>最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>request.onupgradeneeded</code></a>。如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。在上一个处理程序下面添加以下代码：</p>
 
   <pre class="brush: js notranslate">// Setup the database tables if this has not already been done
 request.onupgradeneeded = function(e) {
@@ -368,11 +368,11 @@ request.onupgradeneeded = function(e) {
   console.log('Database setup complete');
 };</pre>
 
-  <p><font><font>这是我们定义数据库的模式（结构）的地方; </font><font>也就是说，它包含的列（或字段）集。</font><font>这里我们首先从</font></font><code>e.target.result</code><font><font>（事件目标的</font></font><code>result</code><font><font>属性）中</font><font>获取对现有数据库的引用，该引用</font><font>是</font></font><code>request</code><font><font>对象。</font><font>这相当于</font><font>处理程序</font></font><code>db = request.result;</code><font><font>内部</font><font>的行</font></font><code>onsuccess</code><font><font>，但我们需要在此单独执行此操作，因为</font></font><code>onupgradeneeded</code><font><font>处理程序（如果需要）将在</font></font><code>onsuccess</code><font><font>处理程序</font><font>之前运行</font><font>，这意味着</font></font><code>db</code><font><font>如果我们不这样做</font><font>，该</font><font>值将不可用。</font></font></p>
+  <p>这是我们定义数据库的模式（结构）的地方; 也就是说，它包含的列（或字段）集。这里我们首先从<code>e.target.result</code>（事件目标的<code>result</code>属性）中获取对现有数据库的引用，该引用是<code>request</code>对象。这相当于处理程序<code>db = request.result;</code>内部的行<code>onsuccess</code>，但我们需要在此单独执行此操作，因为<code>onupgradeneeded</code>处理程序（如果需要）将在<code>onsuccess</code>处理程序之前运行，这意味着<code>db</code>如果我们不这样做，该值将不可用。</p>
 
-  <p><font><font>然后</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/createObjectStore" title="此方法接受一个参数作为 store 的名称，也接受一个可选的参数对象让你可以定义重要的可选属性。你可以用这个属性唯一的标识此 store 中的每个对象。因为参数是一个标识符，所以 store 中的每一个对象都应有此属性并保证此属性唯一。"><code>IDBDatabase.createObjectStore()</code></a><font><font>，</font><font>我们使用</font><font>在打开的数据库中创建一个新的对象库。</font><font>这相当于传统数据库系统中的单个表。</font><font>我们给它起了名称注释，并且还指定了一个</font></font><code>autoIncrement</code><font><font>名为</font><font>的</font><font>关键字段</font></font><code>id</code><font><font>- 在每个新记录中，这将自动赋予增量值 - 开发人员不需要明确地设置它。</font><font>作为密钥，该</font></font><code>id</code><font><font>字段将用于唯一标识记录，例如删除或显示记录时。</font></font></p>
+  <p>然后<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/createObjectStore" title="此方法接受一个参数作为 store 的名称，也接受一个可选的参数对象让你可以定义重要的可选属性。你可以用这个属性唯一的标识此 store 中的每个对象。因为参数是一个标识符，所以 store 中的每一个对象都应有此属性并保证此属性唯一。"><code>IDBDatabase.createObjectStore()</code></a>，我们使用在打开的数据库中创建一个新的对象库。这相当于传统数据库系统中的单个表。我们给它起了名称注释，并且还指定了一个<code>autoIncrement</code>名为的关键字段<code>id</code>- 在每个新记录中，这将自动赋予增量值 - 开发人员不需要明确地设置它。作为密钥，该<code>id</code>字段将用于唯一标识记录，例如删除或显示记录时。</p>
 
-  <p><font><font>我们还使用以下</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/createIndex" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.createIndex()</code></a><font><font>方法</font><font>创建另外两个索引（字段）</font><font>:( </font></font><code>title</code><font><font>每个音符将包含一个标题），以及</font></font><code>body</code><font><font>（包含音符的正文）。</font></font></p>
+  <p>我们还使用以下<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/createIndex" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.createIndex()</code></a>方法创建另外两个索引（字段）:( <code>title</code>每个音符将包含一个标题），以及<code>body</code>（包含音符的正文）。</p>
  </li>
 </ol>
 
@@ -386,14 +386,14 @@ request.onupgradeneeded = function(e) {
 
 <h3 id="添加数据到数据库">添加数据到数据库</h3>
 
-<p><font><font>现在让我们看一下如何将记录添加到数据库中。</font><font>这将使用我们页面上的表单完成。</font></font></p>
+<p>现在让我们看一下如何将记录添加到数据库中。这将使用我们页面上的表单完成。</p>
 
-<p><font><font>在您之前的事件处理程序下面（但仍在</font></font><code>window.onload</code><font><font>处理程序中），添加以下行，该行设置一个</font></font><code>onsubmit</code><font><font>处理程序，</font><font>该</font><font>处理程序运行</font></font><code>addData()</code><font><font>在提交表单时</font><font>调用的函数</font><font>（当</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button" title="HTML &lt;button> 元素表示一个可点击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方。"><code>&lt;button&gt;</code></a><font><font>按下</font><font>提交时</font><font>导致成功提交表单）：</font></font></p>
+<p>在您之前的事件处理程序下面（但仍在<code>window.onload</code>处理程序中），添加以下行，该行设置一个<code>onsubmit</code>处理程序，该处理程序运行<code>addData()</code>在提交表单时调用的函数（当<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button" title="HTML &lt;button> 元素表示一个可点击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方。"><code>&lt;button&gt;</code></a>按下提交时导致成功提交表单）：</p>
 
 <pre class="brush: js notranslate">// Create an onsubmit handler so that when the form is submitted the addData() function is run
 form.onsubmit = addData;</pre>
 
-<p><font><font>现在让我们定义一下这个</font></font><code>addData()</code><font><font>功能。</font><font>在上一行下面添加：</font></font></p>
+<p>现在让我们定义一下这个<code>addData()</code>功能。在上一行下面添加：</p>
 
 <pre class="brush: js notranslate">// Define the addData() function
 function addData(e) {
@@ -430,20 +430,20 @@ function addData(e) {
   };
 }</pre>
 
-<p><font>这很复杂; </font><font>打破它，我们：</font></p>
+<p>这很复杂; 打破它，我们：</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault" title="Event 接口的 preventDefault( ) 方法，告诉user agent：如果此事件没有需要显式处理，那么它默认的动作也不要做（因为默认是要做的）。此事件还是继续传播，除非碰到事件侦听器调用stopPropagation() 或stopImmediatePropagation()，才停止传播。"><code>Event.preventDefault()</code></a><font><font>在事件对象上</font><font>运行</font><font>以停止以传统方式实际提交的表单（这将导致页面刷新并破坏体验）。</font></font></li>
- <li><font><font>创建一个表示要输入数据库的记录的对象，并使用表单输入中的值填充它。</font><font>请注意，我们不必明确包含一个</font></font><code>id</code><font><font>值 - 正如我们提前详细说明的那样，这是自动填充的。</font></font></li>
- <li><font><font>使用该</font><font>方法</font><font>打开</font><font>对象存储</font><font>的</font></font><code>readwrite</code><font><font>事务</font><font>。</font><font>此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。</font></font><code>notes</code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction()</code></a></li>
- <li><font><font>使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction/objectStore" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.objectStore()</code></a><font><font>方法</font><font>访问对象库</font><font>，将结果保存在  </font></font><code>objectStore</code><font><font> 变量中。</font></font></li>
- <li><font><font>使用添加新记录到数据库</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/add" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.add()</code></a><font><font>。</font><font>这创建了一个请求对象，与我们之前看到的方式相同。</font></font></li>
- <li><font><font>在生命周期的关键点</font><font>添加一堆事件处理程序</font></font><code>request</code><font><font>以及</font></font><code>transaction</code><font><font>运行代码。</font><font>请求成功后，我们会清除表单输入，以便输入下一个注释。</font><font>交易完成后，我们</font></font><code>displayData()</code><font><font>再次</font><font>运行该</font><font>功能以更新页面上的注释显示。</font></font></li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault" title="Event 接口的 preventDefault( ) 方法，告诉user agent：如果此事件没有需要显式处理，那么它默认的动作也不要做（因为默认是要做的）。此事件还是继续传播，除非碰到事件侦听器调用stopPropagation() 或stopImmediatePropagation()，才停止传播。"><code>Event.preventDefault()</code></a>在事件对象上运行以停止以传统方式实际提交的表单（这将导致页面刷新并破坏体验）。</li>
+ <li>创建一个表示要输入数据库的记录的对象，并使用表单输入中的值填充它。请注意，我们不必明确包含一个<code>id</code>值 - 正如我们提前详细说明的那样，这是自动填充的。</li>
+ <li>使用该方法打开对象存储的<code>readwrite</code>事务。此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。<code>notes</code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction()</code></a></li>
+ <li>使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction/objectStore" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.objectStore()</code></a>方法访问对象库，将结果保存在  <code>objectStore</code> 变量中。</li>
+ <li>使用添加新记录到数据库<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/add" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.add()</code></a>。这创建了一个请求对象，与我们之前看到的方式相同。</li>
+ <li>在生命周期的关键点添加一堆事件处理程序<code>request</code>以及<code>transaction</code>运行代码。请求成功后，我们会清除表单输入，以便输入下一个注释。交易完成后，我们<code>displayData()</code>再次运行该功能以更新页面上的注释显示。</li>
 </ul>
 
 <h3 id="显示数据">显示数据</h3>
 
-<p><font><font>我们已经</font></font><code>displayData()</code><font><font>在代码中</font><font>引用了</font><font>两次，所以我们可能更好地定义它。</font><font>将其添加到您的代码中，位于上一个函数定义之下：</font></font></p>
+<p>我们已经<code>displayData()</code>在代码中引用了两次，所以我们可能更好地定义它。将其添加到您的代码中，位于上一个函数定义之下：</p>
 
 <pre class="brush: js notranslate">// Define the displayData() function
 function displayData() {
@@ -487,7 +487,7 @@ function displayData() {
 
       // Set an event handler so that when the button is clicked, the deleteItem()
       // function is run
-      <font face="Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace">deleteBtn.onclick = deleteItem;</font>
+      deleteBtn.onclick = deleteItem;
 
       // Iterate to the next item in the cursor
       cursor.continue();
@@ -504,21 +504,21 @@ function displayData() {
   };
 }</pre>
 
-<p><font><font>再次，让我们打破这个：</font></font></p>
+<p>再次，让我们打破这个：</p>
 
 <ul>
- <li><font><font>首先，我们清空</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul" title="The HTML &lt;ul> 元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的HTML描述定义, 但在其相关的CSS 可以用 list-style-type 属性。"><code>&lt;ul&gt;</code></a><font><font>元素的内容，然后填充更新的内容。</font><font>如果您不这样做，那么每次更新时都会添加大量重复内容。</font></font></li>
- <li><font><font>接下来，我们</font></font><code>notes</code><font><font>使用</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction()</code></a><font><font>和</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction/objectStore" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.objectStore()</code></a><font><font>我们一样</font><font>得到</font><font>对象存储</font><font>的引用</font></font><code>addData()</code><font><font>，除了这里我们将它们链接在一行中。</font></font></li>
- <li><font><font>下一步是使用</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/openCursor" title="要确定添加操作是否已成功完成，请侦听结果的成功事件。"><code>IDBObjectStore.openCursor()</code></a><font><font>方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。</font><font>我们将一个</font></font><code>onsuccess</code><font><font>处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。</font></font></li>
- <li><font><font>我们</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBCursor" title="IndexedDB API的IDBCursor接口表示用于遍历或迭代数据库中的多个记录的游标。"><code>IDBCursor</code></a><font><font>使用let </font><font>获取对游标本身（</font><font>对象）</font><font>的引用</font></font><code>cursor = e.target.result</code><font><font>。</font></font></li>
- <li><font><font>接下来，我们检查光标是否包含来自数据存储区（</font></font><code>if(cursor){ ... }</code><font><font>）</font><font>的记录</font><font>- 如果是这样，我们创建一个DOM片段，用记录中的数据填充它，然后将其插入页面（</font></font><code>&lt;ul&gt;</code><font><font>元素</font><font>内部</font><font>）。</font><font>我们还包括一个删除按钮，当单击该按钮时，将通过运行该</font></font><code>deleteItem()</code><font><font>功能</font><font>删除该注释</font><font>，我们将在下一节中查看。</font></font></li>
- <li><font><font>在</font></font><code>if</code><font><font>块</font><font>结束时</font><font>，我们使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBCursor/continue" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBCursor.continue()</code></a><font><font>方法将光标前进到数据存储区中的下</font><font>一条</font><font>记录，然后</font></font><code>if</code><font><font>再次</font><font>运行</font><font>块</font><font>的内容</font><font>。</font><font>如果有另一个要迭代的记录，这会导致它被插入到页面中，然后</font></font><code>continue()</code><font><font>再次运行，依此类推。</font></font></li>
- <li><font><font>当没有更多记录要迭代时，</font></font><code>cursor</code><font><font>将返回</font></font><code>undefined</code><font><font>，因此</font></font><code>else</code><font><font>块将运行而不是</font></font><code>if</code><font><font>块。</font><font>此块检查是否有任何注释被插入</font></font><code>&lt;ul&gt;</code><font><font>- 如果没有，它会插入一条消息，说没有存储注释。</font></font></li>
+ <li>首先，我们清空<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul" title="The HTML &lt;ul> 元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的HTML描述定义, 但在其相关的CSS 可以用 list-style-type 属性。"><code>&lt;ul&gt;</code></a>元素的内容，然后填充更新的内容。如果您不这样做，那么每次更新时都会添加大量重复内容。</li>
+ <li>接下来，我们<code>notes</code>使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction()</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction/objectStore" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.objectStore()</code></a>我们一样得到对象存储的引用<code>addData()</code>，除了这里我们将它们链接在一行中。</li>
+ <li>下一步是使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/openCursor" title="要确定添加操作是否已成功完成，请侦听结果的成功事件。"><code>IDBObjectStore.openCursor()</code></a>方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个<code>onsuccess</code>处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。</li>
+ <li>我们<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBCursor" title="IndexedDB API的IDBCursor接口表示用于遍历或迭代数据库中的多个记录的游标。"><code>IDBCursor</code></a>使用let 获取对游标本身（对象）的引用<code>cursor = e.target.result</code>。</li>
+ <li>接下来，我们检查光标是否包含来自数据存储区（<code>if(cursor){ ... }</code>）的记录- 如果是这样，我们创建一个DOM片段，用记录中的数据填充它，然后将其插入页面（<code>&lt;ul&gt;</code>元素内部）。我们还包括一个删除按钮，当单击该按钮时，将通过运行该<code>deleteItem()</code>功能删除该注释，我们将在下一节中查看。</li>
+ <li>在<code>if</code>块结束时，我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBCursor/continue" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBCursor.continue()</code></a>方法将光标前进到数据存储区中的下一条记录，然后<code>if</code>再次运行块的内容。如果有另一个要迭代的记录，这会导致它被插入到页面中，然后<code>continue()</code>再次运行，依此类推。</li>
+ <li>当没有更多记录要迭代时，<code>cursor</code>将返回<code>undefined</code>，因此<code>else</code>块将运行而不是<code>if</code>块。此块检查是否有任何注释被插入<code>&lt;ul&gt;</code>- 如果没有，它会插入一条消息，说没有存储注释。</li>
 </ul>
 
 <h3 id="删除一条笔记">删除一条笔记</h3>
 
-<p><font><font>如上所述，当按下音符的删除按钮时，音符将被删除。</font><font>这是通过</font></font><code>deleteItem()</code><font><font>函数</font><font>实现的</font><font>，如下所示：</font></font></p>
+<p>如上所述，当按下音符的删除按钮时，音符将被删除。这是通过<code>deleteItem()</code>函数实现的，如下所示：</p>
 
 <pre class="brush: js notranslate">// Define the deleteItem() function
 function deleteItem(e) {
@@ -549,22 +549,22 @@ function deleteItem(e) {
 }</pre>
 
 <ul>
- <li><font><font>第一部分可以使用一些解释 - 我们检索要删除</font></font><code>Number(e.target.parentNode.getAttribute('data-note-id'))</code><font><font>的记录的ID - 回想一下记录的ID是在</font><font>第一次显示时</font><font>保存在</font></font><code>data-note-id</code><font><font>属性中的</font></font><code>&lt;li&gt;</code><font><font>。</font><font>但是，我们需要通过全局内置的</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><font><font>Number（）</font></font></a><font><font>对象</font><font>传递属性</font><font>，因为它当前是一个字符串，否则将无法被数据库识别。</font></font></li>
- <li><font><font>然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/delete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.delete()</code></a><font><font>方法从数据库中删除记录，并将ID传递给它。</font></font></li>
- <li><font><font>当数据库事务完成后，我们</font></font><code>&lt;li&gt;</code><font><font>从DOM中</font><font>删除注释</font><font>，然后再次检查以查看它是否</font></font><code>&lt;ul&gt;</code><font><font>为空，并根据需要插入注释。</font></font></li>
+ <li>第一部分可以使用一些解释 - 我们检索要删除<code>Number(e.target.parentNode.getAttribute('data-note-id'))</code>的记录的ID - 回想一下记录的ID是在第一次显示时保存在<code>data-note-id</code>属性中的<code>&lt;li&gt;</code>。但是，我们需要通过全局内置的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number（）</a>对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。</li>
+ <li>然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/delete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.delete()</code></a>方法从数据库中删除记录，并将ID传递给它。</li>
+ <li>当数据库事务完成后，我们<code>&lt;li&gt;</code>从DOM中删除注释，然后再次检查以查看它是否<code>&lt;ul&gt;</code>为空，并根据需要插入注释。</li>
 </ul>
 
-<p><font><font>就是这样了！</font><font>你的例子现在应该有效。</font></font></p>
+<p>就是这样了！你的例子现在应该有效。</p>
 
-<p><font><font>如果您遇到问题，请随时</font></font><a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/" rel="noopener"><font><font>查看我们的实例</font></font></a><font><font>（请参阅</font></font><a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js" rel="noopener"><font><font>源代码</font></font></a><font><font>）。</font></font></p>
+<p>如果您遇到问题，请随时<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/" rel="noopener">查看我们的实例</a>（请参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js" rel="noopener">源代码</a>）。</p>
 
 <h3 id="通过_IndexedDB_存储复杂数据">通过 IndexedDB 存储复杂数据</h3>
 
-<p><font><font>如上所述，IndexedDB可用于存储不仅仅是简单的文本字符串。</font><font>您可以存储任何您想要的东西，包括复杂的对象，如视频或图像blob。</font><font>并且它比任何其他类型的数据更难实现。</font></font></p>
+<p>如上所述，IndexedDB可用于存储不仅仅是简单的文本字符串。您可以存储任何您想要的东西，包括复杂的对象，如视频或图像blob。并且它比任何其他类型的数据更难实现。</p>
 
-<p><font><font>为了演示如何操作，我们编写了另一个名为</font></font><a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store" rel="noopener"><font><font>IndexedDB视频存储的</font></font></a><font><font>示例</font><font>（请参阅</font></font><a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/" rel="noopener"><font><font>此处也可以在此处运行</font></font></a><font><font>）。</font><font>首次运行示例时，它会从网络下载所有视频，将它们存储在IndexedDB数据库中，然后在UI内部</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video" title="HTML &lt;video> 元素 用于在HTML或者XHTML文档中嵌入视频内容。"><code>&lt;video&gt;</code></a><font><font>元素中</font><font>显示视频</font><font>。</font><font>第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。</font></font></p>
+<p>为了演示如何操作，我们编写了另一个名为<a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store" rel="noopener">IndexedDB视频存储的</a>示例（请参阅<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/" rel="noopener">此处也可以在此处运行</a>）。首次运行示例时，它会从网络下载所有视频，将它们存储在IndexedDB数据库中，然后在UI内部<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video" title="HTML &lt;video> 元素 用于在HTML或者XHTML文档中嵌入视频内容。"><code>&lt;video&gt;</code></a>元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。</p>
 
-<p><font><font>让我们来看看这个例子中最有趣的部分。</font><font>我们不会全部看 - 它的很多内容与上一个示例类似，代码注释得很好。</font></font></p>
+<p>让我们来看看这个例子中最有趣的部分。我们不会全部看 - 它的很多内容与上一个示例类似，代码注释得很好。</p>
 
 <ol>
  <li>
@@ -580,9 +580,9 @@ function deleteItem(e) {
 ];</pre>
  </li>
  <li>
-  <p><font><font>首先，一旦数据库成功打开，我们就运行一个</font></font><code>init()</code><font><font>函数。</font><font>这会遍历不同的视频名称，尝试加载由</font></font><code>videos</code><font><font>数据库中的</font><font>每个名称标识的记录</font><font>。</font></font></p>
+  <p>首先，一旦数据库成功打开，我们就运行一个<code>init()</code>函数。这会遍历不同的视频名称，尝试加载由<code>videos</code>数据库中的每个名称标识的记录。</p>
 
-  <p><font><font>如果在数据库中找到每个视频（通过查看</font></font><code>request.result</code><font><font>评估</font><font>是否容易检查</font></font><code>true</code><font><font>- 如果记录不存在，那么</font></font><code>undefined</code><font><font>），视频文件（存储为blob）和视频名称将直接传递给</font></font><code>displayVideo()</code><font><font>函数以放置它们在用户界面中。</font><font>如果没有，视频名称将传递给</font></font><code>fetchVideoFromNetwork()</code><font><font>函数...你猜对了 - 从网络中获取视频。</font></font></p>
+  <p>如果在数据库中找到每个视频（通过查看<code>request.result</code>评估是否容易检查<code>true</code>- 如果记录不存在，那么<code>undefined</code>），视频文件（存储为blob）和视频名称将直接传递给<code>displayVideo()</code>函数以放置它们在用户界面中。如果没有，视频名称将传递给<code>fetchVideoFromNetwork()</code>函数...你猜对了 - 从网络中获取视频。</p>
 
   <pre class="brush: js notranslate">function init() {
   // Loop through the video names one by one
@@ -605,11 +605,11 @@ function deleteItem(e) {
 }</pre>
  </li>
  <li>
-  <p><font><font>以下片段是从内部</font></font><code>fetchVideoFromNetwork()</code><font><font>获取的 - 这里我们使用两个单独的</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>WindowOrWorkerGlobalScope.fetch()</code></a><font><font>请求</font><font>获取视频的MP4和WebM版本</font><font>。</font><font>然后，我们使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" title="Blob 对象表示一个不可变、原始数据的类文件对象。Blob 表示的不一定是JavaScript原生格式的数据。File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。"><code>Body.blob()</code></a><font><font>方法将每个响应的主体提取为blob，为我们提供可以在以后存储和显示的视频的对象表示。</font></font></p>
+  <p>以下片段是从内部<code>fetchVideoFromNetwork()</code>获取的 - 这里我们使用两个单独的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>WindowOrWorkerGlobalScope.fetch()</code></a>请求获取视频的MP4和WebM版本。然后，我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" title="Blob 对象表示一个不可变、原始数据的类文件对象。Blob 表示的不一定是JavaScript原生格式的数据。File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。"><code>Body.blob()</code></a>方法将每个响应的主体提取为blob，为我们提供可以在以后存储和显示的视频的对象表示。</p>
 
-  <p><font><font>我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个promises都满足时尝试显示或存储视频。</font><font>幸运的是，有一种处理这种问题的内置方法 - </font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" title="Promise.all(iterable) 方法返回一个 Promise 实例，此实例在 iterable 参数内所有的 promise 都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）；如果参数中  promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是第一个失败 promise 的结果。"><code>Promise.all()</code></a><font><font>。</font><font>这需要一个参数 - 引用您要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。</font></font></p>
+  <p>我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个promises都满足时尝试显示或存储视频。幸运的是，有一种处理这种问题的内置方法 - <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" title="Promise.all(iterable) 方法返回一个 Promise 实例，此实例在 iterable 参数内所有的 promise 都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）；如果参数中  promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是第一个失败 promise 的结果。"><code>Promise.all()</code></a>。这需要一个参数 - 引用您要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。</p>
 
-  <p><font><font>当所有这些承诺都履行完毕时，</font></font><code>all()</code><font><font>承诺将通过包含所有个人履行价值的数组来实现。</font><font>在</font></font><code>all()</code><font><font>块中，您可以看到我们</font></font><code>displayVideo()</code><font><font>之前</font><font>调用</font><font>函数，就像在UI中显示视频一样，然后我们也调用</font></font><code>storeVideo()</code><font><font>函数将这些视频存储在数据库中。</font></font></p>
+  <p>当所有这些承诺都履行完毕时，<code>all()</code>承诺将通过包含所有个人履行价值的数组来实现。在<code>all()</code>块中，您可以看到我们<code>displayVideo()</code>之前调用函数，就像在UI中显示视频一样，然后我们也调用<code>storeVideo()</code>函数将这些视频存储在数据库中。</p>
 
   <pre class="brush: js notranslate">let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =&gt;
   response.blob()
@@ -627,7 +627,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 });</pre>
  </li>
  <li>
-  <p><font><font>我们</font></font><code>storeVideo()</code><font><font>先</font><font>来看看吧</font><font>。</font><font>这与您在上一个示例中看到的用于向数据库添加数据的模式非常相似 - 我们打开一个</font></font><code>readwrite</code><font><font>事务并获取对象存储引用</font></font><code>videos</code><font><font>，创建一个表示要添加到数据库的记录的对象，然后使用它添加它</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/add" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.add()</code></a><font><font>。</font></font></p>
+  <p>我们<code>storeVideo()</code>先来看看吧。这与您在上一个示例中看到的用于向数据库添加数据的模式非常相似 - 我们打开一个<code>readwrite</code>事务并获取对象存储引用<code>videos</code>，创建一个表示要添加到数据库的记录的对象，然后使用它添加它<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBObjectStore/add" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBObjectStore.add()</code></a>。</p>
 
   <pre class="brush: js notranslate">function storeVideo(mp4Blob, webmBlob, name) {
   // Open transaction, get object store; make it a readwrite so we can write to the IDB
@@ -647,7 +647,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 };</pre>
  </li>
  <li>
-  <p><font><font>最后但并非最不重要的是，我们</font></font><code>displayVideo()</code><font><font>创建了在UI中插入视频然后将它们附加到页面所需的DOM元素。</font><font>最有趣的部分如下所示 - 要在</font></font><code>&lt;video&gt;</code><font><font>元素中</font><font>实际显示我们的视频blob </font><font>，我们需要使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URL/createObjectURL" title="URL.createObjectURL() 静态方法会创建一个 DOMString，其中包含一个表示参数中给出的对象的URL。这个 URL 的生命周期和创建它的窗口中的 document 绑定。这个新的URL 对象表示指定的 File 对象或 Blob 对象。"><code>URL.createObjectURL()</code></a><font><font>方法</font><font>创建对象URL（指向存储在内存中的视频blob的内部URL）</font><font>。</font><font>完成后，我们可以将对象URL设置为</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source" title="HTML &lt;source>元素为&lt;picture>，&lt;audio>或&lt;video>元素指定多个媒体资源。 这是一个空元素。 它通常用于以不同浏览器支持的多种格式提供相同的媒体内容。"><code>&lt;source&gt;</code></a><font><font>元素</font></font><code>src</code><font><font>属性的值，并且它可以正常工作。</font></font></p>
+  <p>最后但并非最不重要的是，我们<code>displayVideo()</code>创建了在UI中插入视频然后将它们附加到页面所需的DOM元素。最有趣的部分如下所示 - 要在<code>&lt;video&gt;</code>元素中实际显示我们的视频blob ，我们需要使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URL/createObjectURL" title="URL.createObjectURL() 静态方法会创建一个 DOMString，其中包含一个表示参数中给出的对象的URL。这个 URL 的生命周期和创建它的窗口中的 document 绑定。这个新的URL 对象表示指定的 File 对象或 Blob 对象。"><code>URL.createObjectURL()</code></a>方法创建对象URL（指向存储在内存中的视频blob的内部URL）。完成后，我们可以将对象URL设置为<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source" title="HTML &lt;source>元素为&lt;picture>，&lt;audio>或&lt;video>元素指定多个媒体资源。 这是一个空元素。 它通常用于以不同浏览器支持的多种格式提供相同的媒体内容。"><code>&lt;source&gt;</code></a>元素<code>src</code>属性的值，并且它可以正常工作。</p>
 
   <pre class="brush: js notranslate">function displayVideo(mp4Blob, webmBlob, title) {
   // Create object URLs out of the blobs
@@ -672,31 +672,31 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <h2 id="离线文件存储">离线文件存储</h2>
 
-<p><font>上面的示例已经说明了如何创建一个将大型资产存储在IndexedDB数据库中的应用程序，从而无需多次下载它们。</font><font>这已经是对用户体验的一个很大的改进，但仍然有一件事 - 每次访问网站时仍然需要下载主要的HTML，CSS和JavaScript文件，这意味着当没有网络连接时，它将无法工作。</font></p>
+<p>上面的示例已经说明了如何创建一个将大型资产存储在IndexedDB数据库中的应用程序，从而无需多次下载它们。这已经是对用户体验的一个很大的改进，但仍然有一件事 - 每次访问网站时仍然需要下载主要的HTML，CSS和JavaScript文件，这意味着当没有网络连接时，它将无法工作。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15759/ff-offline.png" style="border-style: solid; border-width: 1px; display: block; height: 307px; margin: 0px auto; width: 765px;"></p>
 
-<p><font><font>这就是</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"><font><font>服务工作者</font></font></a><font><font>和密切相关的</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache"><font><font>Cache API的</font></font></a><font><font>用武之地。</font></font></p>
+<p>这就是<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">服务工作者</a>和密切相关的<a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API的</a>用武之地。</p>
 
-<p><font><font>服务工作者是一个JavaScript文件，简单地说，它是在浏览器访问时针对特定来源（网站或某个域的网站的一部分）进行注册的。</font><font>注册后，它可以控制该来源的可用页面。</font><font>它通过坐在加载的页面和网络之间以及拦截针对该来源的网络请求来实现这一点。</font></font></p>
+<p>服务工作者是一个JavaScript文件，简单地说，它是在浏览器访问时针对特定来源（网站或某个域的网站的一部分）进行注册的。注册后，它可以控制该来源的可用页面。它通过坐在加载的页面和网络之间以及拦截针对该来源的网络请求来实现这一点。</p>
 
-<p><font><font>当它拦截一个请求时，它可以做任何你想做的事情（参见</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API#Other_use_case_ideas"><font><font>用例思路</font></font></a><font><font>），但经典的例子是离线保存网络响应，然后提供响应请求而不是来自网络的响应。</font><font>实际上，它允许您使网站完全脱机工作。</font></font></p>
+<p>当它拦截一个请求时，它可以做任何你想做的事情（参见<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API#Other_use_case_ideas">用例思路</a>），但经典的例子是离线保存网络响应，然后提供响应请求而不是来自网络的响应。实际上，它允许您使网站完全脱机工作。</p>
 
-<p><font><font>Cache API是另一种客户端存储机制，略有不同 - 它旨在保存HTTP响应，因此与服务工作者一起工作得非常好。</font></font></p>
+<p>Cache API是另一种客户端存储机制，略有不同 - 它旨在保存HTTP响应，因此与服务工作者一起工作得非常好。</p>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：现在大多数现代浏览器都支持服务工作者和缓存。</font><font>在撰写本文时，Safari仍在忙着实施它，但它应该很快就会存在。</font></font></p>
+<p><strong>注意</strong>：现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari仍在忙着实施它，但它应该很快就会存在。</p>
 </div>
 
 <h3 id="一个_service_worker_例子">一个 service worker 例子</h3>
 
-<p><font><font>让我们看一个例子，让你对这可能是什么样子有所了解。</font><font>我们已经创建了另一个版本的视频存储示例，我们在上一节中看到了 - 这个功能完全相同，只是它还通过服务工作者将Cache，CSS和JavaScript保存在Cache API中，允许示例脱机运行！</font></font></p>
+<p>让我们看一个例子，让你对这可能是什么样子有所了解。我们已经创建了另一个版本的视频存储示例，我们在上一节中看到了 - 这个功能完全相同，只是它还通过服务工作者将Cache，CSS和JavaScript保存在Cache API中，允许示例脱机运行！</p>
 
-<p><font><font>请参阅</font></font><a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/" rel="noopener"><font><font>IndexedDB视频存储，其中服务工作者正在运行</font></font></a><font><font>，并且还可以</font></font><a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/cache-sw/video-store-offline" rel="noopener"><font><font>查看源代码</font></font></a><font><font>。</font></font></p>
+<p>请参阅<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/" rel="noopener">IndexedDB视频存储，其中服务工作者正在运行</a>，并且还可以<a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/cache-sw/video-store-offline" rel="noopener">查看源代码</a>。</p>
 
-<h4 id="注册服务工作者"><font><font>注册服务工作者</font></font></h4>
+<h4 id="注册服务工作者">注册服务工作者</h4>
 
-<p><font><font>首先要注意的是，在主JavaScript文件中放置了一些额外的代码（请参阅</font></font><a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js" rel="noopener"><font><font>index.js</font></font></a><font><font>）。</font><font>首先，我们进行特征检测测试，以查看</font></font><code>serviceWorker</code><font><font>该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator" title="Navigator 接口表示用户代理的状态和标识。 它允许脚本查询它和注册自己进行一些活动。"><code>Navigator</code></a><font><font>对象中</font><font>是否有该</font><font>成员</font><font>。</font><font>如果返回true，那么我们知道至少支持服务工作者的基础知识。</font><font>在这里，我们使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a><font><font>方法将</font></font><code>sw.js</code><font><font>文件中</font><font>包含的服务工作者注册到</font><font>它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。</font><font>当其承诺履行时，服务人员被视为已注册。</font></font></p>
+<p>首先要注意的是，在主JavaScript文件中放置了一些额外的代码（请参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js" rel="noopener">index.js</a>）。首先，我们进行特征检测测试，以查看<code>serviceWorker</code>该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator" title="Navigator 接口表示用户代理的状态和标识。 它允许脚本查询它和注册自己进行一些活动。"><code>Navigator</code></a>对象中是否有该成员。如果返回true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a>方法将<code>sw.js</code>文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。</p>
 
 <pre class="brush: js notranslate">  // Register service worker to control making site work offline
 
@@ -707,18 +707,18 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
   }</pre>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：</font></font><code>sw.js</code><font><font>文件</font><font>的给定路径</font><font>是相对于站点源的，而不是包含代码的JavaScript文件。</font><font>服务人员在</font></font><code>https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code><font><font>。</font><font>原点是</font></font><code>https://mdn.github.io</code><font><font>，因此给定的路径必须是</font></font><code>/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code><font><font>。</font><font>如果您想在自己的服务器上托管此示例，则必须相应地更改此示例。</font><font>这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。</font></font></p>
+<p><strong>注意</strong>：<code>sw.js</code>文件的给定路径是相对于站点源的，而不是包含代码的JavaScript文件。服务人员在<code>https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>。原点是<code>https://mdn.github.io</code>，因此给定的路径必须是<code>/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>。如果您想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。</p>
 </div>
 
 <h4 id="安装_service_worker">安装 service worker</h4>
 
-<p><font><font>下次访问服务工作者控制下的任何页面时（例如，重新加载示例时），将针对该页面安装服务工作者，这意味着它将开始控制它。</font><font>发生这种情况时，</font></font><code>install</code><font><font>会向服务工作人员发起</font><font>一个</font><font>事件; </font><font>您可以在服务工作者本身内编写代码来响应安装。</font></font></p>
+<p>下次访问服务工作者控制下的任何页面时（例如，重新加载示例时），将针对该页面安装服务工作者，这意味着它将开始控制它。发生这种情况时，<code>install</code>会向服务工作人员发起一个事件; 您可以在服务工作者本身内编写代码来响应安装。</p>
 
-<p><font><font>让我们看一下</font></font><a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js" rel="noopener"><font><font>sw.js</font></font></a><font><font>文件（服务工作者）</font><font>中的一个例子</font><font>。</font><font>您将看到安装侦听器已注册</font></font><code>self</code><font><font>。</font><font>此</font></font><code>self</code><font><font>关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。</font></font></p>
+<p>让我们看一下<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js" rel="noopener">sw.js</a>文件（服务工作者）中的一个例子。您将看到安装侦听器已注册<code>self</code>。此<code>self</code>关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。</p>
 
-<p><font><font>在</font></font><code>install</code><font><font> 处理程序</font><font>内部，  </font><font>我们使用</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ExtendableEvent/waitUntil" title="ExtendableEvent.waitUntil() 方法扩展了事件的生命周期。在服务工作线程中，延长事件的寿命从而阻止浏览器在事件中的异步操作完成之前终止服务工作线程。"><code>ExtendableEvent.waitUntil()</code></a><font><font>事件对象上可用</font><font>的</font><font>方法来表示浏览器不应该完成服务工作者的安装，直到其中的promise成功完成。</font></font></p>
+<p>在<code>install</code> 处理程序内部，  我们使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ExtendableEvent/waitUntil" title="ExtendableEvent.waitUntil() 方法扩展了事件的生命周期。在服务工作线程中，延长事件的寿命从而阻止浏览器在事件中的异步操作完成之前终止服务工作线程。"><code>ExtendableEvent.waitUntil()</code></a>事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的promise成功完成。</p>
 
-<p><font><font>这是我们在运行中看到Cache API的地方。</font><font>我们使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage/open" title="CacheStorage  open() 方法返回一个resolve为匹配 cacheName 的 Cache 对象的 Promise ."><code>CacheStorage.open()</code></a><font><font>方法打开一个可以存储响应的新缓存对象（类似于IndexedDB对象存储）。</font><font>此承诺通过</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Cache" title="Cache 接口为缓存的 Request / Response  对象对提供存储机制，例如，作为ServiceWorker 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中,  但是它不必一定要配合 service worker 使用."><code>Cache</code></a><font><font>表示</font></font><code>video-store</code><font><font>缓存</font><font>的</font><font>对象来</font><font>实现</font><font>。</font><font>然后，我们使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Cache/addAll" title="Cache 接口的 addAll() 方法接受一个URL数组，检索它们，并将生成的response对象添加到给定的缓存中。 在检索期间创建的request对象成为存储的response操作的key。"><code>Cache.addAll()</code></a><font><font>方法获取一系列资产并将其响应添加到缓存中。</font></font></p>
+<p>这是我们在运行中看到Cache API的地方。我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage/open" title="CacheStorage  open() 方法返回一个resolve为匹配 cacheName 的 Cache 对象的 Promise ."><code>CacheStorage.open()</code></a>方法打开一个可以存储响应的新缓存对象（类似于IndexedDB对象存储）。此承诺通过<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Cache" title="Cache 接口为缓存的 Request / Response  对象对提供存储机制，例如，作为ServiceWorker 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中,  但是它不必一定要配合 service worker 使用."><code>Cache</code></a>表示<code>video-store</code>缓存的对象来实现。然后，我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Cache/addAll" title="Cache 接口的 addAll() 方法接受一个URL数组，检索它们，并将生成的response对象添加到给定的缓存中。 在检索期间创建的request对象成为存储的response操作的key。"><code>Cache.addAll()</code></a>方法获取一系列资产并将其响应添加到缓存中。</p>
 
 <pre class="brush: js notranslate">self.addEventListener('install', function(e) {
  e.waitUntil(
@@ -737,15 +737,15 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <h4 id="响应未来的请求">响应未来的请求</h4>
 
-<p><font><font>在我们的HTML页面上注册并安装了服务工作者，并且所有相关资产都添加到我们的缓存中，我们几乎准备好了。</font><font>还有一件事要做，写一些代码来响应进一步的网络请求。</font></font></p>
+<p>在我们的HTML页面上注册并安装了服务工作者，并且所有相关资产都添加到我们的缓存中，我们几乎准备好了。还有一件事要做，写一些代码来响应进一步的网络请求。</p>
 
-<p><font><font>这就是第二位代码的</font></font><code>sw.js</code><font><font>作用。</font><font>我们向服务工作者全局范围添加另一个侦听器，该范围在</font></font><code>fetch</code><font><font>引发事件</font><font>时运行处理函数</font><font>。</font><font>只要浏览器在服务工作者注册的目录中请求资产，就会发生这种情况。</font></font></p>
+<p>这就是第二位代码的<code>sw.js</code>作用。我们向服务工作者全局范围添加另一个侦听器，该范围在<code>fetch</code>引发事件时运行处理函数。只要浏览器在服务工作者注册的目录中请求资产，就会发生这种情况。</p>
 
-<p><font><font>在处理程序内部，我们首先记录所请求资产的URL。</font><font>然后，我们使用该</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FetchEvent/respondWith" title="FetchEvent 接口的 respondWith() 方法旨在包裹代码，这些代码为来自受控页面的request生成自定义的response。这些代码通过返回一个 Response 、 network error 或者 Fetch的方式resolve。"><code>FetchEvent.respondWith()</code></a><font><font>方法</font><font>为请求提供自定义响应</font><font>。</font></font></p>
+<p>在处理程序内部，我们首先记录所请求资产的URL。然后，我们使用该<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FetchEvent/respondWith" title="FetchEvent 接口的 respondWith() 方法旨在包裹代码，这些代码为来自受控页面的request生成自定义的response。这些代码通过返回一个 Response 、 network error 或者 Fetch的方式resolve。"><code>FetchEvent.respondWith()</code></a>方法为请求提供自定义响应。</p>
 
-<p><font><font>在这个块中，我们</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage/match" title="CacheStorage 接口(可适用于全局性caches) 的 match() 方法检查给定的Request 对象或url字符串是否是一个已存储的 Response 对象的key. 这个方法针对 Response 返回一个 Promise ，如果没有匹配则返回 undefined 。"><code>CacheStorage.match()</code></a><font><font>用来检查是否可以在任何缓存中找到匹配的请求（即匹配URL）。</font><font>如果未找到匹配，或者</font></font><code>undefined</code><font><font>如果</font><font>未找到匹配，则此承诺将满足匹配的响应</font><font>。</font></font></p>
+<p>在这个块中，我们<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage/match" title="CacheStorage 接口(可适用于全局性caches) 的 match() 方法检查给定的Request 对象或url字符串是否是一个已存储的 Response 对象的key. 这个方法针对 Response 返回一个 Promise ，如果没有匹配则返回 undefined 。"><code>CacheStorage.match()</code></a>用来检查是否可以在任何缓存中找到匹配的请求（即匹配URL）。如果未找到匹配，或者<code>undefined</code>如果未找到匹配，则此承诺将满足匹配的响应。</p>
 
-<p><font><font>如果找到匹配项，我们只需将其作为自定义响应返回。</font><font>如果没有，我们</font><font>从网络中</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch"><font><font>获取（）</font></font></a><font><font>响应并返回该响应。</font></font></p>
+<p>如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">获取（）</a>响应并返回该响应。</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
   console.log(e.request.url);
@@ -756,23 +756,23 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
   );
 });</pre>
 
-<p><font><font>这就是我们简单的服务工作者。</font><font>您可以使用它们进行更多的负载 - 有关详细信息，请参阅</font></font><a href="https://serviceworke.rs/" rel="noopener"><font><font>服务工作者手册</font></font></a><font><font>。</font><font>感谢Paul Kinlan在他的文章中</font></font><a href="https://developers.google.com/web/fundamentals/codelabs/offline/" rel="noopener"><font><font>添加服务工作者和离线到您的Web应用程序</font></font></a><font><font>，这启发了这个简单的例子。</font></font></p>
+<p>这就是我们简单的服务工作者。您可以使用它们进行更多的负载 - 有关详细信息，请参阅<a href="https://serviceworke.rs/" rel="noopener">服务工作者手册</a>。感谢Paul Kinlan在他的文章中<a href="https://developers.google.com/web/fundamentals/codelabs/offline/" rel="noopener">添加服务工作者和离线到您的Web应用程序</a>，这启发了这个简单的例子。</p>
 
 <h4 id="测试离线示例">测试离线示例</h4>
 
-<p><font><font>要测试我们的</font></font><a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/" rel="noopener"><font><font>服务工作者示例</font></font></a><font><font>，您需要加载它几次以确保它已安装。</font><font>完成后，您可以：</font></font></p>
+<p>要测试我们的<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/" rel="noopener">服务工作者示例</a>，您需要加载它几次以确保它已安装。完成后，您可以：</p>
 
 <ul>
- <li><font><font>尝试拔掉网络连接/关闭Wifi。</font></font></li>
- <li><font><font>如果您使用的是Firefox，请</font><font>选择</font></font><em><font><font>文件&gt;脱机工作</font></font></em><font><font>。</font></font></li>
- <li><font><font>转到devtools，然后选择</font></font><em><font><font>Application&gt; Service Workers</font></font></em><font><font>，</font><font>如果您使用的是Chrome </font><font>，请选中</font></font><em><font><font>Offline</font></font></em><font><font>选中。</font></font></li>
+ <li>尝试拔掉网络连接/关闭Wifi。</li>
+ <li>如果您使用的是Firefox，请选择<em>文件&gt;脱机工作</em>。</li>
+ <li>转到devtools，然后选择<em>Application&gt; Service Workers</em>，如果您使用的是Chrome ，请选中<em>Offline</em>选中。</li>
 </ul>
 
-<p><font><font>如果再次刷新示例页面，您仍应该看到它加载得很好。</font><font>所有内容都是脱机存储的 - 缓存中的页面资源以及IndexedDB数据库中的视频。</font></font></p>
+<p>如果再次刷新示例页面，您仍应该看到它加载得很好。所有内容都是脱机存储的 - 缓存中的页面资源以及IndexedDB数据库中的视频。</p>
 
 <h2 id="总结">总结</h2>
 
-<p><font>现在就是这些。</font><font>我们希望你能感觉到我们对客户端存储技术的介绍很有用。</font></p>
+<p>现在就是这些。我们希望你能感觉到我们对客户端存储技术的介绍很有用。</p>
 
 <h2 id="相关链接">相关链接</h2>
 
