@@ -301,17 +301,17 @@ function updateName() {
   <pre class="brush: html notranslate">&lt;script src="script.js" async&gt;&lt;/script&gt;</pre>
  </li>
  <li>在 <code>script.js</code> 文件中，添加下面的脚本：
-  <pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  let para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'你点击了这个按钮！'</span><span class="punctuation token">;</span>
-  document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>para<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code>
+  <pre class="brush: js notranslate"><code class="language-js">function createParagraph() {
+  let para = document.createElement('p');
+  para.textContent = '你点击了这个按钮！';
+  document.body.appendChild(para);
+}</code>
 
-const buttons <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">'button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+const buttons = document.querySelectorAll('button');
 
-<span class="keyword token">for</span><span class="punctuation token">(let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> buttons<span class="punctuation token">.</span>length <span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  buttons<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> createParagraph<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> </pre>
+for(let i = 0; i &lt; buttons.length ; i++) {
+  buttons[i].addEventListener('click', createParagraph);
+} </pre>
  </li>
  <li>保存并刷新浏览器，你会发现二者完全一样。但是现在我们把 JavaScript 写进了一个外部文件。这样做一般会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。</li>
 </ol>
@@ -324,11 +324,11 @@ const buttons <span class="operator token">=</span> document<span class="punctua
 
 <p dir="ltr">注意，有时候你会遇到在 HTML 中存在着一丝真实的 JavaScript 代码。它或许看上去像这样：</p>
 
-<pre class="brush: js example-bad line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  const para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'你点击了这个按钮！'</span><span class="punctuation token">;</span>
-  document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>para<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js example-bad line-numbers  language-js notranslate"><code class="language-js">function createParagraph() {
+  const para = document.createElement('p');
+  para.textContent = '你点击了这个按钮！';
+  document.body.appendChild(para);
+}</code></pre>
 
 <pre class="brush: html example-bad notranslate">&lt;button onclick="createParagraph()"&gt;点我呀&lt;/button&gt;</pre>
 
@@ -343,11 +343,11 @@ const buttons <span class="operator token">=</span> document<span class="punctua
     &lt;meta charset="utf-8"&gt;
     &lt;title&gt;JavaScript 示例&lt;/title&gt;
     &lt;script&gt;
-     </code><code class="language-js"><span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-       const para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-       para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'你点击了这个按钮！'</span><span class="punctuation token">;</span>
-       document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>para<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">     }</span></code>
+     </code><code class="language-js">function createParagraph() {
+       const para = document.createElement('p');
+       para.textContent = '你点击了这个按钮！';
+       document.body.appendChild(para);
+     }</code>
 <code>    &lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;

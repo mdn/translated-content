@@ -74,7 +74,7 @@ console.log(madeAString);
 <p>提示：如果需要，你可以随意将这些代码输入浏览器控制台以便于你熟悉其功能。</p>
 </div>
 
-<p>JavaScript有许多内置的函数<span style="">，可以让您做很多有用的事情，而无需自己编写所有的代码。事实上</span>, 许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用JavaScript来编写——大多数调用浏览器后台的函数的代码，是使用像C++这样更低级的系统语言编写的，而不是像JavaScript这样的web编程语言。</p>
+<p>JavaScript有许多内置的函数，可以让您做很多有用的事情，而无需自己编写所有的代码。事实上, 许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用JavaScript来编写——大多数调用浏览器后台的函数的代码，是使用像C++这样更低级的系统语言编写的，而不是像JavaScript这样的web编程语言。</p>
 
 <p>请记住，这些内置浏览器函数不是核心JavaScript语言的一部分——被定义为浏览器API的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地使用浏览器API。</p>
 
@@ -256,7 +256,7 @@ function greeting() {
   alert('Our company is called ' + name + '.');
 }</pre>
 
-<p><font><font>这两个函数都使用 </font></font><code>greeting()</code><font><font> 形式调用，但是你只能访问到 <font face="consolas, Liberation Mono, courier, monospace"><span style="">first.js</span></font> 文件的</font></font><code>greeting()</code><font><font>函数（第二个文件被忽视了）。另外，第二次尝试使用 <code>let</code> 关键字定义 <code>name</code> 变量导致了一个错误。</font></font></p>
+<p><font><font>这两个函数都使用 </font></font><code>greeting()</code><font><font> 形式调用，但是你只能访问到 <font face="consolas, Liberation Mono, courier, monospace">first.js</font> 文件的</font></font><code>greeting()</code><font><font>函数（第二个文件被忽视了）。另外，第二次尝试使用 <code>let</code> 关键字定义 <code>name</code> 变量导致了一个错误。</font></font></p>
 
 <div class="note">
 <p><strong>Note</strong>: 您可以参考这个例子 <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">running live on GitHub</a> (查看完整 <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">源代码</a>).</p>
@@ -289,7 +289,7 @@ function greeting() {
 <pre class="brush: js notranslate">output(y);
 output(z);</pre>
 
-<p><font><font>这两个都应该返回错误沿“ </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined"><font><font>ReferenceError：y未定义</font></font></a><font><font> ”。</font><font>这是为什么？</font><font>由于函数作用域 - </font></font><code>y<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="">和</span></font></code><code>z</code>被<font><font>锁定在</font><font>函数</font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>函数中，所以</font></font><code>output()</code><font><font>从全局作用域调用时无法访问它们。</font></font></p>
+<p><font><font>这两个都应该返回错误沿“ </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined"><font><font>ReferenceError：y未定义</font></font></a><font><font> ”。</font><font>这是为什么？</font><font>由于函数作用域 - </font></font><code>y<font face="Open Sans, arial, x-locale-body, sans-serif">和</font></code><code>z</code>被<font><font>锁定在</font><font>函数</font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>函数中，所以</font></font><code>output()</code><font><font>从全局作用域调用时无法访问它们。</font></font></p>
 
 <p><font><font>        5.但是，从另一个函数里面调用什么呢？</font><font>尝试编辑</font></font><code>a()</code><font><font>，</font></font><code>b()</code><font><font>所以他们看起来像这样：</font></font></p>
 
@@ -406,7 +406,7 @@ function subFunction3(value) {
   console.log(value);
 }</pre>
 
-<h2 id="测试你的技能！"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>测试你的技能！</strong></span></font></h2>
+<h2 id="测试你的技能！"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>测试你的技能！</strong></font></h2>
 
 <p>你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">测试你的技能：函数</a>（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。</p>
 

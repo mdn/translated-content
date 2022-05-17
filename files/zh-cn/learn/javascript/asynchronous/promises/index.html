@@ -222,9 +222,9 @@ document.body.appendChild(image);</code></pre>
 
 <p>缺少一些东西 - 如果其中一个promise失败（<strong>rejects</strong>，in promise-speak），目前没有什么可以明确地处理错误。我们可以通过运行前一个promise的 <code>.catch()</code> 方法来添加错误处理。立即添加：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> errorCase <span class="operator token">=</span> promise3<span class="punctuation token">.</span><span class="function token">catch</span><span class="punctuation token">(</span><span class="parameter token">e</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'There has been a problem with your fetch operation: '</span> <span class="operator token">+</span> e<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">let errorCase = promise3.catch(e =&gt; {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</code></pre>
 
 <p>要查看此操作，请尝试拼错图像的URL并重新加载页面。该错误将在浏览器的开发人员工具的控制台中报告。</p>
 
@@ -578,7 +578,7 @@ document.body.appendChild(para);</pre>
 
 <p>大多数现代Web API都是基于promise的，因此你需要了解promise才能充分利用它们。这些API包括<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>，<a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，<a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams</a>等等。随着时间的推移，Promises将变得越来越重要，因此学习使用和理解它们是学习现代JavaScript的重要一步。</p>
 
-<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>参见</strong></span></font></p>
+<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>参见</strong></font></p>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code></li>

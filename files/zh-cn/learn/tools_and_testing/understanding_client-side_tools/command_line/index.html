@@ -129,7 +129,7 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_
 </article>
 </section>
 
-<section id="sect19"><span>终端可在macOS的“应用程序/实用程序/终端”上使用。</span></section>
+<section id="sect19">终端可在macOS的“应用程序/实用程序/终端”上使用。</section>
 
 <h4 id="Windows">Windows</h4>
 
@@ -240,7 +240,7 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_
     <section id="sect43">
     <article>
     <section id="sect44">
-    <p>移动您的目录结构 :<span> </span><code>cd</code></p>
+    <p>移动您的目录结构 : <code>cd</code></p>
     </section>
     </article>
     </section>
@@ -424,7 +424,7 @@ cd src</pre>
 <section id="sect76">
 <article>
 <section id="sect77">
-<p><strong>注意</strong>:要确切地了解每个命令有哪些可用选项，您可以查看它<a href="https://en.wikipedia.org/wiki/Man_page">man page</a><span>. </span>通过键入<span> </span><code>man</code><span> </span>命令，后跟要查找的命令的名称，例如<code>man ls</code><span>. </span>这将在终端的默认文本文件查看器中打开手册页(例如<span>, </span><code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code><span>(在我的终端中)，然后您应该能够使用箭头键或其他类似的机制在页面中滚动。手册页详细地列出了所有选项，一开始可能有点吓人，但至少在需要时您知道它就在那里。一旦您完成了对手册页的查看，您需要使用文本查看器的quit命令退出它</span><span>("q" 在 </span><code>less</code><span>;</span><span>如果不明显，你可能需要在网上搜索才能找到</span><span>).</span></p>
+<p><strong>注意</strong>:要确切地了解每个命令有哪些可用选项，您可以查看它<a href="https://en.wikipedia.org/wiki/Man_page">man page</a>. 通过键入 <code>man</code> 命令，后跟要查找的命令的名称，例如<code>man ls</code>. 这将在终端的默认文本文件查看器中打开手册页(例如, <code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code>(在我的终端中)，然后您应该能够使用箭头键或其他类似的机制在页面中滚动。手册页详细地列出了所有选项，一开始可能有点吓人，但至少在需要时您知道它就在那里。一旦您完成了对手册页的查看，您需要使用文本查看器的quit命令退出它("q" 在 <code>less</code>;如果不明显，你可能需要在网上搜索才能找到).</p>
 </section>
 </article>
 </section>
@@ -473,39 +473,39 @@ cd src</pre>
 <section id="sect87"></section>
 
 <ul>
- <li><code>mkdir</code> —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如<code>mkdir my-awesome-website将创建一个新目录叫</code><code>my-awesome-website</code><span>.</span></li>
+ <li><code>mkdir</code> —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如<code>mkdir my-awesome-website将创建一个新目录叫</code><code>my-awesome-website</code>.</li>
  <li><code>rmdir</code> —删除指定目录，但仅当它为空时。例如<code>rmdir my-awesome-website</code>
   <section id="sect88">
   <article>
   <section id="sect89">
-  <p>将删除我们在上面创建的目录。如果您希望删除一个非空的目录(并删除其中包含的所有内容)，则可以使用<code>-r</code><span> </span><span>选项（递归），但这很危险。 确保以后在目录中不需要任何内容​​，因为它将永远消失。</span></p>
+  <p>将删除我们在上面创建的目录。如果您希望删除一个非空的目录(并删除其中包含的所有内容)，则可以使用<code>-r</code> 选项（递归），但这很危险。 确保以后在目录中不需要任何内容​​，因为它将永远消失。</p>
   </section>
   </article>
   </section>
  </li>
- <li><code>touch</code> —在当前目录中创建一个新的空文件。例如<code>touch mdn-example.md</code><span> 创建一个新的空文件叫做</span><span> </span><code>mdn-example.md</code><span>.</span></li>
+ <li><code>touch</code> —在当前目录中创建一个新的空文件。例如<code>touch mdn-example.md</code> 创建一个新的空文件叫做 <code>mdn-example.md</code>.</li>
  <li><code>mv</code> —
   <section id="sect90">
   <article>
   <section id="sect91">
-  <p>例如，将文件从第一个指定的文件位置移动到第二个指定的文件位置<code>mdn-example.md mdn-example.txt</code><span>(这些位置被写成文件路径)。此命令移动一个名为</span><code>mdn-example.md</code><span>在当前目录中调用一个文件</span><code>mdn-example.txt</code><span> in the current directory.从技术上讲，文件正在被移动，但是从实际的角度来看，这个命令实际上是在重命名文件。</span></p>
+  <p>例如，将文件从第一个指定的文件位置移动到第二个指定的文件位置<code>mdn-example.md mdn-example.txt</code>(这些位置被写成文件路径)。此命令移动一个名为<code>mdn-example.md</code>在当前目录中调用一个文件<code>mdn-example.txt</code> in the current directory.从技术上讲，文件正在被移动，但是从实际的角度来看，这个命令实际上是在重命名文件。</p>
   </section>
   </article>
   </section>
  </li>
  <li><code>cp</code> — 类似于 <code>mv</code>, <code>cp</code>在指定的第一个位置和第二个位置创建文件的副本。例如
-  <section id="sect92"><span>, </span><code>cp mdn-example.txt mdn-example.txt.bak<span>创建一个副本</span></code><code>mdn-example.txt</code><span> 叫做 </span><code>mdn-example.txt.bak</code><span>（当然，如果你愿意，你也可以叫它别的名字)。</span></section>
+  <section id="sect92">, <code>cp mdn-example.txt mdn-example.txt.bak创建一个副本</code><code>mdn-example.txt</code> 叫做 <code>mdn-example.txt.bak</code>（当然，如果你愿意，你也可以叫它别的名字)。</section>
  </li>
- <li><code>rm</code> —删除指定的文件。例如, <code>rm mdn-example.txt</code><span> 删除单个文件叫做 </span><code>mdn-example.txt</code><span>.</span>请注意，此删除是永久性的，不能通过桌面用户界面上的回收站撤消。</li>
+ <li><code>rm</code> —删除指定的文件。例如, <code>rm mdn-example.txt</code> 删除单个文件叫做 <code>mdn-example.txt</code>.请注意，此删除是永久性的，不能通过桌面用户界面上的回收站撤消。</li>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 许多终端命令允许您使用星号作为“通配符”字符，意思是“任何字符序列”。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子<span>, </span><code>rm mdn-*</code><span> </span>将删除所有文件开头<code>mdn-</code><span>. </span><code>rm mdn-*.bak</code><span> </span>会删除所有文件的开头<code>mdn- </code>结束<span> </span><code>.bak</code><span>.</span></p>
+<p><strong>注意</strong>: 许多终端命令允许您使用星号作为“通配符”字符，意思是“任何字符序列”。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子, <code>rm mdn-*</code> 将删除所有文件开头<code>mdn-</code>. <code>rm mdn-*.bak</code> 会删除所有文件的开头<code>mdn- </code>结束 <code>.bak</code>.</p>
 </div>
 
 <h2 id="考虑终端有害吗？">考虑终端有害吗？</h2>
 
-<section id="sect93"><span>我们之前提到过这一点，但为了明确起见，您需要小心使用终端。简单的命令不会带来太多危险，但是当您开始将更复杂的命令组合在一起时，您需要仔细考虑该命令将执行什么操作，并在最终在指定的目录中运行它们之前先尝试测试它们。</span></section>
+<section id="sect93">我们之前提到过这一点，但为了明确起见，您需要小心使用终端。简单的命令不会带来太多危险，但是当您开始将更复杂的命令组合在一起时，您需要仔细考虑该命令将执行什么操作，并在最终在指定的目录中运行它们之前先尝试测试它们。</section>
 
 <section id="sect94"></section>
 
@@ -517,12 +517,12 @@ cd src</pre>
 </article>
 </section>
 
-<section id="sect97"><span>要养成的一个好习惯是在文本编辑器中编写您的terminal命令，弄清楚您认为它应该是什么样子，然后对目录进行备份，并首先尝试在该备份上运行命令，以测试它。</span></section>
+<section id="sect97">要养成的一个好习惯是在文本编辑器中编写您的terminal命令，弄清楚您认为它应该是什么样子，然后对目录进行备份，并首先尝试在该备份上运行命令，以测试它。</section>
 
 <section id="sect98">
 <article>
 <section id="sect99">
-<p><span>另一个好建议是，如果你不习惯在自己的机器上尝试终端命令，可以在Glitch.com上试试。除了是测试web开发代码的好地方外，这些项目还允许您访问终端，这样您就可以直接在该终端中运行所有这些命令，而且不会破坏您自己的机器。</span></p>
+<p>另一个好建议是，如果你不习惯在自己的机器上尝试终端命令，可以在Glitch.com上试试。除了是测试web开发代码的好地方外，这些项目还允许您访问终端，这样您就可以直接在该终端中运行所有这些命令，而且不会破坏您自己的机器。</p>
 </section>
 </article>
 </section>
@@ -534,7 +534,7 @@ cd src</pre>
 <section id="sect101">
 <p>快速浏览特定终端命令的一个很好的资源是 <a href="https://tldr.sh/">tldr.sh</a>. 这是一个社区驱动的文档服务，类似于MDN，但特定于终端命令。</p>
 
-<section id="sect102"><span>在下一节中，让我们更进一步(实际上是几个层次)，看看如何在命令行上将工具连接在一起，从而真正了解终端如何优于常规的桌面用户界面。</span></section>
+<section id="sect102">在下一节中，让我们更进一步(实际上是几个层次)，看看如何在命令行上将工具连接在一起，从而真正了解终端如何优于常规的桌面用户界面。</section>
 </section>
 </article>
 </section>
@@ -578,7 +578,7 @@ cd src</pre>
 <section id="sect110">
 <article>
 <section id="sect111">
-<p>但是它还可以计算输入到它的输出的行数。例如，下面的命令计算<span class="seoSummary">ls</span>命令输出的行数(如果单独运行，它通常会打印到终端)，并计算到终端的输出</p>
+<p>但是它还可以计算输入到它的输出的行数。例如，下面的命令计算ls命令输出的行数(如果单独运行，它通常会打印到终端)，并计算到终端的输出</p>
 </section>
 </article>
 </section>
@@ -587,12 +587,12 @@ cd src</pre>
 
 <pre class="brush: bash notranslate">ls | wc -l</pre>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">因为</span></font>ls</code> 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。</p>
+<p><code><font face="Arial, x-locale-body, sans-serif">因为</font>ls</code> 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。</p>
 
 <section id="sect113">
 <article>
 <section id="sect114">
-<p>这是怎么回事?(unix)命令行工具的一般原理是，它们将文本打印到终端(也称为“打印到标准输出”或<code>STDOUT</code>). 很多命令也可以从流输入(称为“标准输入”o)中读取内容<span> </span><code>STDIN</code><span>).</span></p>
+<p>这是怎么回事?(unix)命令行工具的一般原理是，它们将文本打印到终端(也称为“打印到标准输出”或<code>STDOUT</code>). 很多命令也可以从流输入(称为“标准输入”o)中读取内容 <code>STDIN</code>).</p>
 </section>
 </article>
 </section>
@@ -610,7 +610,7 @@ cd src</pre>
 <section id="sect117">
 <article>
 <section id="sect118">
-<p>让我们看一些更复杂的东西。我们将首先尝试获取MDN的“获取”页面的内容 <code>curl</code> 命令(可用于从url请求内容)<a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch" style="">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a><span style="">.</span></p>
+<p>让我们看一些更复杂的东西。我们将首先尝试获取MDN的“获取”页面的内容 <code>curl</code> 命令(可用于从url请求内容)<a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch" style="">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
 </section>
 </article>
 </section>
@@ -618,7 +618,7 @@ cd src</pre>
 <section id="sect119">
 <article>
 <section id="sect120">
-<p>但是，这个URL是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将(最终)被重定向到<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch" style="">https://developer.mozilla.org/enUS/docs/Web/API/WindowOrWorkerGlobalScope/fetch</a><span style="">.</span></p>
+<p>但是，这个URL是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将(最终)被重定向到<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch" style="">https://developer.mozilla.org/enUS/docs/Web/API/WindowOrWorkerGlobalScope/fetch</a>.</p>
 </section>
 </article>
 </section>
@@ -787,7 +787,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
     <section id="sect146">
     <article>
     <section id="sect147">
-    <p>与前一点相关的是，它使得项目代码更难复制(如果您在本地安装工具，可以将它们设置为依赖项并使用npm进行安装(<code style="">npm install</code><span style="">).</span></p>
+    <p>与前一点相关的是，它使得项目代码更难复制(如果您在本地安装工具，可以将它们设置为依赖项并使用npm进行安装(<code style="">npm install</code>).</p>
     </section>
     </article>
     </section>
@@ -848,7 +848,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 
 <ul>
  <li>
-  <section id="sect158"><span style="">省去了在所有代码文件中手动保持样式一致的认知开销;Prettier可以自动为您完成此操作。</span></section>
+  <section id="sect158">省去了在所有代码文件中手动保持样式一致的认知开销;Prettier可以自动为您完成此操作。</section>
  </li>
  <li>帮助Web新手以最佳方式完成他们的代码.</li>
  <li>安装在任何操作系统上，甚至直接作为项目工具的一部分，以确保从事您的代码工作的同事和朋友使用您正在使用的代码风格。</li>
@@ -1019,7 +1019,7 @@ printMe(myObj);</pre>
   <section id="sect188">
   <article>
   <section id="sect189">
-  <p>在将代码提交到git存储库之前，使用<a href="https://github.com/typicode/husky" style="">Husky</a><span style="">.</span></p>
+  <p>在将代码提交到git存储库之前，使用<a href="https://github.com/typicode/husky" style="">Husky</a>.</p>
   </section>
   </article>
   </section>
@@ -1028,7 +1028,7 @@ printMe(myObj);</pre>
   <section id="sect190">
   <article>
   <section id="sect191">
-  <p>当你在代码编辑器中点击“保存”的时候，无论是<a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" style="">VS Code</a><span style="">, </span><a href="https://atom.io/packages/prettier-atom" style="">Atom</a><span style="">, 或</span><a href="https://packagecontrol.io/packages/JsPrettier" style="">Sublime Text</a><span style="">.</span></p>
+  <p>当你在代码编辑器中点击“保存”的时候，无论是<a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" style="">VS Code</a>, <a href="https://atom.io/packages/prettier-atom" style="">Atom</a>, 或<a href="https://packagecontrol.io/packages/JsPrettier" style="">Sublime Text</a>.</p>
   </section>
   </article>
   </section>
@@ -1037,7 +1037,7 @@ printMe(myObj);</pre>
   <section id="sect192">
   <article>
   <section id="sect193">
-  <p>作为持续集成检查的一部分，可以使用以下工具<a href="https://github.com/features/actions" style="">Github Actions</a><span style="">.</span></p>
+  <p>作为持续集成检查的一部分，可以使用以下工具<a href="https://github.com/features/actions" style="">Github Actions</a>.</p>
   </section>
   </article>
   </section>

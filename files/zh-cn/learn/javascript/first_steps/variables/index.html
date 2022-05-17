@@ -243,15 +243,15 @@ myAge;</pre>
 
 <p>首先，如果你编写一个声明并初始化变量的多行 JavaScript 程序，你可以在初始化一个变量之后用 <code>var</code> 声明它，它仍然可以工作。 例如：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">myName = 'Chris';
 
-<span class="keyword token">function</span> <span class="function token">logName</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>myName<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function logName() {
+  console.log(myName);
+}
 
-<span class="function token">logName</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+logName();
 
-var myName<span class="punctuation token">;</span></code></pre>
+var myName;</code></pre>
 
 <div class="blockIndicator note">
 <p>Note: 只有在 web 文档中运行多行 JavaScript 时才会有这种效果，当在 JavaScript 控制台中键入单独的行，这将不起作用。</p>
@@ -263,18 +263,18 @@ var myName<span class="punctuation token">;</span></code></pre>
 
 <p>其次，当你使用 <code>var</code> 时，可以根据需要多次声明相同名称的变量，但是 <code>let</code> 不能。 以下将有效：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">var</span> myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> myName <span class="operator token">=</span> <span class="string token">'Bob'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">var myName = 'Chris';
+var myName = 'Bob';</code></pre>
 
 <p>但是以下内容会在第二行引发错误：</p>
 
-<pre class="brush: js example-bad notranslate"><code class="language-js"><span class="keyword token">let</span> myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> myName <span class="operator token">=</span> <span class="string token">'Bob'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js example-bad notranslate"><code class="language-js">let myName = 'Chris';
+let myName = 'Bob';</code></pre>
 
 <p>你必须这样做：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
-myName <span class="operator token">=</span> <span class="string token">'Bob'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">let myName = 'Chris';
+myName = 'Bob';</code></pre>
 
 <p>同样，这是一个明智的语言决定。没有理由重新声明变量——这只会让事情变得更加混乱。</p>
 
