@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Deployment
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">现<font><font>在，您已经创建（并测试）了一个令人敬畏的</font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style='color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><font><font>LocalLibrary</font></font></a><font><font>网站，如果您希望将其安装在公共Web服务器上，以便图书馆工作人员和成员可以通过Internet访问它。</font><font>本文概述了如何找到主机来部署您的网站，以及您需要做什么才能让您的网站准备好生产</font></font>。</p>
+<p class="summary">现在，您已经创建（并测试）了一个令人敬畏的<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style='color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>LocalLibrary</a>网站，如果您希望将其安装在公共Web服务器上，以便图书馆工作人员和成员可以通过Internet访问它。本文概述了如何找到主机来部署您的网站，以及您需要做什么才能让您的网站准备好生产。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -28,7 +28,7 @@ translation_of: Learn/Server-side/Django/Deployment
 
 <p>一旦您的网站完成（或完成“足够”开始公开测试），您将需要将其托管在比您的个人开发计算机更公开和可访问的地方。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>到目前为止，您一直在开发环境中工作，使用Django开发Web服务器将您的站点共享到本地浏览器/网络，并使用暴露调试和其他私人信息的（不安全）开发设置运行您的网站。</font><font>在您可以从外部托管网站之前，您首先必须：</font></font></p>
+<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>到目前为止，您一直在开发环境中工作，使用Django开发Web服务器将您的站点共享到本地浏览器/网络，并使用暴露调试和其他私人信息的（不安全）开发设置运行您的网站。在您可以从外部托管网站之前，您首先必须：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
 </ul>
@@ -40,7 +40,7 @@ translation_of: Learn/Server-side/Django/Deployment
  <li>设置一个产品级的设施来为你的网站服务</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>本教程为您选择托管站点提供了一些指导，简要概述了为了让您的Django应用程序可用于生产需要做什么以及如何将LocalLibrary网站安装到</font></font><a class="external external-icon" href="https://www.heroku.com/" rel="noopener" style="font-style: normal !important; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; white-space: pre-line;"><font><font>Heroku</font></font></a><font><font>云托管上服务。</font></font></p>
+<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>本教程为您选择托管站点提供了一些指导，简要概述了为了让您的Django应用程序可用于生产需要做什么以及如何将LocalLibrary网站安装到<a class="external external-icon" href="https://www.heroku.com/" rel="noopener" style="font-style: normal !important; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; text-decoration: none; white-space: pre-line;">Heroku</a>云托管上服务。</p>
 
 <h2 id="什么是生产环境">什么是生产环境?</h2>
 

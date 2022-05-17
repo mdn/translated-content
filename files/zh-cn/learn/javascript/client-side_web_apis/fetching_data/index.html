@@ -60,22 +60,22 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 <p>Ajax模型包括使用Web API作为代理来更智能地请求数据，而不仅仅是让浏览器重新加载整个页面。让我们来思考这个意义：</p>
 
 <ol>
- <li><font><font>去你最喜欢的信息丰富的网站之一，如亚马逊，油管，CNN等，并加载它。</font></font></li>
+ <li>去你最喜欢的信息丰富的网站之一，如亚马逊，油管，CNN等，并加载它。</li>
  <li>现在搜索一些东西，比如一个新产品。 主要内容将会改变，但大部分周围的信息，如页眉，页脚，导航菜单等都将保持不变。</li>
 </ol>
 
 <p>这是一件非常好的事情，因为：</p>
 
 <ul>
- <li><font><font>页面更新速度更快，您不必等待页面刷新，这意味着该网站体验感觉更快，响应更快。</font></font></li>
- <li><font><font>每次更新都会下载更少的数据，这意味着更少地浪费带宽。</font><font>在宽带连接的桌面上这可能不是一个大问题，但是在移动设备和发展中国家没有无处不在的快速互联网服务是一个大问题。</font></font></li>
+ <li>页面更新速度更快，您不必等待页面刷新，这意味着该网站体验感觉更快，响应更快。</li>
+ <li>每次更新都会下载更少的数据，这意味着更少地浪费带宽。在宽带连接的桌面上这可能不是一个大问题，但是在移动设备和发展中国家没有无处不在的快速互联网服务是一个大问题。</li>
 </ul>
 
 <p>为了进一步提高速度，有些网站还会在首次请求时将资产和数据存储在用户的计算机上，这意味着在后续访问中，他们将使用本地版本，而不是在首次加载页面时下载新副本。 内容仅在更新后从服务器重新加载。</p>
 
 <p><img alt="A basic web app data flow architecture" src="https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png" style="display: block; height: 383px; margin: 0px auto; width: 562px;"></p>
 
-<p><font>本文不会涉及这种存储技术。</font><font>我们稍后会在模块中讨论它。</font></p>
+<p>本文不会涉及这种存储技术。我们稍后会在模块中讨论它。</p>
 
 <h2 id="基本的Ajax请求">基本的Ajax请求</h2>
 
