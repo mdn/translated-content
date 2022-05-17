@@ -877,7 +877,7 @@
 /fr/docs/DOM/Selection/toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/DOM/Whitespace_template	/fr/docs/Web/API/Document_Object_Model/Whitespace
-/fr/docs/DOM/dispatchEvent_exemple	/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events
+/fr/docs/DOM/dispatchEvent_exemple	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/DOM/document	/fr/docs/Web/API/Document
 /fr/docs/DOM/document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM/document.body	/fr/docs/Web/API/Document/body
@@ -1040,7 +1040,7 @@
 /fr/docs/DOM:Selection:toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/DOM:Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/DOM:Whitespace_template	/fr/docs/Web/API/Document_Object_Model/Whitespace
-/fr/docs/DOM:dispatchEvent_exemple	/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events
+/fr/docs/DOM:dispatchEvent_exemple	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/DOM:document	/fr/docs/Web/API/Document
 /fr/docs/DOM:document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM:document.createAttribute	/fr/docs/Web/API/Document/createAttribute
@@ -1188,7 +1188,7 @@
 /fr/docs/DragDrop	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Du_DHTML_accessible	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
-/fr/docs/Développement_Web	/fr/docs/conflicting/Web/Guide
+/fr/docs/Développement_Web	/fr/docs/Web/Guide
 /fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/Web/Guide/Writing_forward-compatible_websites
 /fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/Web/Guide/Introduction_to_Web_development
 /fr/docs/ECMAScript	/fr/docs/Web/JavaScript/Language_Resources
@@ -6123,6 +6123,8 @@
 /fr/docs/conflicting/Web/CSS/box-ordinal-group	/fr/docs/Web/CSS/box-ordinal-group
 /fr/docs/conflicting/Web/CSS/color_value	/fr/docs/Web/CSS/color_value
 /fr/docs/conflicting/Web/CSS/column-gap	/fr/docs/Web/CSS/column-gap
+/fr/docs/conflicting/Web/Guide	/fr/docs/Web/Guide
+/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
 /fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
