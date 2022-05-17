@@ -1,35 +1,29 @@
 ---
-title: lowest
+title: math:lowest()
 slug: Web/EXSLT/math/lowest
-tags:
-  - EXSLT
-  - XSLT
 translation_of: Web/EXSLT/math/lowest
 ---
-{{ XsltRef() }}
-`math:lowest()` retourne le nœud de l'ensemble de nœuds spécifié possédant la plus grande valeur (où la plus grande valeur est calculée avec [`math:min()`](fr/EXSLT/math/min)).
+{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
-Un nœud a sa valeur minimale si sa valeur de chaîne convertie en nombre est égale à la valeur minimale.
+`math:lowest()`  renvoie le nœud qui a la valeur minimale, parmi l'ensemble de nœuds passé en argument (la valeur minimale est calculée à l'aide de [`math:min()`](/fr/docs/Web/EXSLT/math/min)).
 
-{{ Note() }}
+Un nœud possède cette valeur minimale si la conversion de sa valeur qui est une chaîne de caractères en nombre est égale à la valeur minimale.
 
-### Syntaxe
+## Syntaxe
 
-    math:lowest(ensembleNœud)
+```js
+math:lowest(nodeSet)
+```
 
-### Arguments
+### Paramètres
 
-- `ensembleNœud`
-  - : L'ensemble de nœuds pour lequel il faut retourner la plus petite valeur.
+- `nodeSet`
+  - : L'ensemble de nœuds dont on souhaite connaître la valeur minimale.
 
-### Retourne
+### Valeur de retour
 
-Un fragment d'arbre résultat consistant en copies des nœuds retournés par la fonction [`math:min()`](fr/EXSLT/math/min).
+Un fragment d'arbre de résultat contenant les copies des nœuds renvoyés par [`math:min()`](/fr/docs/Web/EXSLT/math/min).
 
-### Définition
+## Spécifications
 
-- [EXSLT - MATH:HIGHEST (en)](http://www.exslt.org/regexp/functions/lowest/index.html)
-
-### Support par Gecko
-
-Supporté par Gecko 1.9 et ultérieur.
+[EXSLT - MATH:LOWEST](http://exslt.org/math/functions/lowest/index.html)

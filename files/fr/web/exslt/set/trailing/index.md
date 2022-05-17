@@ -1,36 +1,31 @@
 ---
-title: trailing
+title: set:trailing()
 slug: Web/EXSLT/set/trailing
-tags:
-  - EXSLT
-  - XSLT
 translation_of: Web/EXSLT/set/trailing
 ---
-{{ XsltRef() }}
+{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
-`set:trailing()` retourne les nœuds d'un 1er ensemble de nœuds qui se trouvent après le 1er nœud du 2nd ensemble de nœuds.
+`set:trailing()` renvoie les nœuds d'un premier ensemble de nœuds qui viennent après le premier nœud d'un deuxième ensemble.
 
-### Syntaxe
+## Syntaxe
 
-    set:trailing(ensembleNœuds1,ensembleNœuds2)
+```js
+set:trailing(nodeSet1, nodeSet2)
+```
 
-### Arguments
+### Paramètres
 
-- `ensembleNœuds1`
-  - : L'ensemble de nœuds dans lequel chercher les nœuds qui suivent le 1er nœuds du 2nd ensemble de nœuds.
-- `ensembleNœuds2`
-  - : L'ensemble de nœuds avec lequel on compare le 1er ensemble de nœuds.
+- `nodeSet1`
+  - : L'ensemble de nœuds dont on souhaite connaître les nœuds qui suivent le premier nœud de l'autre ensemble.
+- `nodeSet2`
+  - : L'ensemble de nœuds à comparer.
 
-### Retourne
+### Valeur de retour
 
-Un ensemble de nœuds contenant les nœuds appartenant à `ensembleNœuds1` dont les valeurs suivent le 1er nœud de `ensembleNœuds2`.
+Un ensemble de nœuds qui contient les nœuds de `nodeSet1` dont les valeurs suivent le premier nœud de `nodeSet2`.
 
-{{ Note("Si le 1er nœud de <code>ensembleNœuds2</code> n\'est pas contenu dans <code>ensembleNœuds1</code>, cette fonction retourne un ensemble vide. Si <code>ensembleNœuds2</code> est vide, alors le résultat est <code>ensembleNœuds1</code>.") }}
+> **Note :** Si le premier nœud de `nodeSet2` n'est pas contenu dans `nodeSet1`, un ensemble vide sera renvoyé. Si `nodeSet2` est vide, le résultat sera `nodeSet1`.
 
-### Définition
+## Spécifications
 
-[EXSLT - SET:TRAILING (en)](http://www.exslt.org/set/functions/trailing/)
-
-### Support par Gecko
-
-Supporté par Gecko 1.9 et ultérieur.
+[EXSLT - SET:TRAILING](http://exslt.org/set/functions/trailing/index.html)
