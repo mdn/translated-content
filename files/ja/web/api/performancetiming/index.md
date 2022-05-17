@@ -1,105 +1,96 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
+tags:
+  - API
+  - 後方互換性
+  - 非推奨
+  - インターフェイス
+  - Navigation Timing
+  - Navigation Timing API
+  - Optimization
+  - Performance
+  - Reference
+  - Timing
+  - legacy
+browser-compat: api.PerformanceTiming
 translation_of: Web/API/PerformanceTiming
 ---
-<div>{{APIRef("Navigation Timing")}}</div>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<div class="warning">
-<p>このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。</p>
-</div>
+> **Warning:** このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-<p><strong><code>PerformanceTiming</code></strong> インターフェイスは、下位互換性のために維持されている従来のインターフェイスであり、現在のページのロード中および使用中に発生するさまざまなイベントに関するパフォーマンスタイミング情報を提供するプロパティを含みます。{{domxref("Performance.timing", "window.performance.timing")}} プロパティを使用して、ページを記述する <code>PerformanceTiming</code> オブジェクトを取得します。</p>
+**`PerformanceTiming`** インターフェイスは、下位互換性のために維持されている古いインターフェイスであり、現在のページの読み込み中および使用中に発生するさまざまなイベントに関するパフォーマンスタイミング情報を提供するプロパティを含みます。ページを記述する `PerformanceTiming` オブジェクトは {{domxref("Performance.timing", "window.performance.timing")}} プロパティを使用して取得します。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>The <code>PerformanceTiming</code> interface doesn't inherit any properties.</em></p>
+_`PerformanceTiming` インターフェイスに継承したプロパティはありません。_
 
-<p>These properties each describe the time at which a particular point in the page loading process was reached. Some correspond to DOM events; others describe the time at which internal browser operations of interest took place.</p>
+これらのプロパティはそれぞれ、ページの読み込みプロセスにおいて特定のポイントに到達した時刻を表します。 DOM イベントに対応しているものもあれば、特徴的なブラウザーの内部操作が行われた時刻を記述するものもあります。
 
-<p>Each time is provided as an <code>unsigned long long</code> representing the moment, in milliseconds since the UNIX epoch</p>
+それぞれの時刻は符号なし 64 ビット整数 (`unsigned long long`) として提供され、 UNIX 元期からのミリ秒単位でその時点を表しています。
 
-<p>These properties are listed in the order in which they occur during the navigation process.</p>
+これらのプロパティは、ナビゲーション処理中に発生する順番に並べられています。
 
-<dl>
- <dt>{{deprecated_inline}} {{domxref("PerformanceTiming.navigationStart")}} {{readonlyInline}}</dt>
- <dd>When the prompt for unload terminates on the previous document in the same browsing context. If there is no previous document, this value will be the same as <code>PerformanceTiming.fetchStart</code>.</dd>
- <dt>{{deprecated_inline}} {{domxref("PerformanceTiming.unloadEventStart")}} {{readonlyInline}}</dt>
- <dd>When the {{event("unload")}} event has been thrown, indicating the time at which the previous document in the window began to unload. If there is no previous document, or if the previous document or one of the needed redirects is not of the same origin, the value returned is <code>0</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.unloadEventEnd")}} {{readonlyInline}}</dt>
- <dd>When the {{event("unload")}} event handler finishes. If there is no previous document, or if the previous document, or one of the needed redirects, is not of the same origin, the value returned is <code>0</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.redirectStart")}} {{readonlyInline}}</dt>
- <dd>When the first HTTP redirect starts. If there is no redirect, or if one of the redirects is not of the same origin, the value returned is <code>0</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.redirectEnd")}} {{readonlyInline}}</dt>
- <dd>When the last HTTP redirect is completed, that is when the last byte of the HTTP response has been received. If there is no redirect, or if one of the redirects is not of the same origin, the value returned is <code>0</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.fetchStart")}} {{readonlyInline}}</dt>
- <dd>When the browser is ready to fetch the document using an HTTP request. This moment is <em>before</em> the check to any application cache.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domainLookupStart")}} {{readonlyInline}}</dt>
- <dd>When the domain lookup starts. If a persistent connection is used, or the information is stored in a cache or a local resource, the value will be the same as <code>PerformanceTiming.fetchStart</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domainLookupEnd")}} {{readonlyInline}}</dt>
- <dd>When the domain lookup is finished. If a persistent connection is used, or the information is stored in a cache or a local resource, the value will be the same as <code>PerformanceTiming.fetchStart</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.connectStart")}} {{readonlyInline}}</dt>
- <dd>When the request to open a connection is sent to the network. If the transport layer reports an error and the connection establishment is started again, the last connection establishment start time is given. If a persistent connection is used, the value will be the same as <code>PerformanceTiming.fetchStart</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.connectEnd")}} {{readonlyInline}}</dt>
- <dd>When the connection is opened network. If the transport layer reports an error and the connection establishment is started again, the last connection establishment end time is given. If a persistent connection is used, the value will be the same as <code>PerformanceTiming.fetchStart</code>. A connection is considered as opened when all secure connection handshake, or SOCKS authentication, is terminated.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.secureConnectionStart")}} {{readonlyInline}}</dt>
- <dd>When the secure connection handshake starts. If no such connection is requested, it returns <code>0</code>.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.requestStart")}} {{readonlyInline}}</dt>
- <dd>When the browser sent the request to obtain the actual document, from the server or from a cache. If the transport layer fails after the start of the request and the connection is reopened, this property will be set to the time corresponding to the new request.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.responseStart")}} {{readonlyInline}}</dt>
- <dd>When the browser received the first byte of the response, from the server from a cache, or from a local resource.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.responseEnd")}} {{readonlyInline}}</dt>
- <dd>When the browser received the last byte of the response, or when the connection is closed if this happened first, from the server, the cache, or from a local resource.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domLoading")}} {{readonlyInline}}</dt>
- <dd>When the parser started its work, that is when its {{domxref("Document.readyState")}} changes to <code>'loading'</code> and the corresponding {{event("readystatechange")}} event is thrown.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domInteractive")}} {{readonlyInline}}</dt>
- <dd>When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to <code>'interactive'</code> and the corresponding {{event("readystatechange")}} event is thrown.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domContentLoadedEventStart")}} {{readonlyInline}}</dt>
- <dd>Right before the parser sent the {{event("DOMContentLoaded")}} event, that is right after all the scripts that need to be executed right after parsing have been executed.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domContentLoadedEventEnd")}} {{readonlyInline}}</dt>
- <dd>Right after all the scripts that need to be executed as soon as possible, in order or not, have been executed.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.domComplete")}} {{readonlyInline}}</dt>
- <dd>When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to <code>'complete'</code> and the corresponding {{event("readystatechange")}} event is thrown.</dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.loadEventStart")}} {{readonlyInline}}</dt>
- <dd>When the {{event("load")}} event was sent for the current document. If this event has not yet been sent, it returns <code>0.</code></dd>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.loadEventEnd")}} {{readonlyInline}}</dt>
- <dd>When the {{event("load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns <code>0.</code></dd>
-</dl>
+- {{domxref("PerformanceTiming.navigationStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : アンロードのプロンプトが、同じ閲覧コンテキスト内の前の文書で終了した時刻。前の文書が存在しない場合、この値は `PerformanceTiming.fetchStart` と同じになります。
+- {{domxref("PerformanceTiming.unloadEventStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : イベント {{domxref("Window/unload_event", "unload")}} が発生したとき、ウィンドウ内の前の文書がアンロードを開始した時刻を示す。前の文書が存在しない場合、または前の文書や必要なリダイレクトが同じオリジンでない場合、返される値は `0` です。
+- {{domxref("PerformanceTiming.unloadEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : domxref("Window/unload_event", "unload")}} イベントハンドラーが終了した時刻。前の文書が存在しない場合、または前の文書や必要なリダイレクトのいずれかが同じオリジンでない場合、返される値は `0` である。
+- {{domxref("PerformanceTiming.redirectStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 最初の HTTP リダイレクトが開始された時刻。リダイレクトがない場合、あるいはリダイレクトのひとつが同じオリジンでない場合、返される値は `0` になります。
+- {{domxref("PerformanceTiming.redirectEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 最後の HTTP リダイレクトが完了した時刻、すなわち HTTP レスポンスの最後のバイトを受信した時刻です。リダイレクトがない場合、あるいはリダイレクトに同一オリジンでないものが含まれている場合、返される値は `0` になります。
+- {{domxref("PerformanceTiming.fetchStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : ブラウザーが HTTP リクエストを使用して文書を取得する準備ができた時刻。この時点は、アプリケーションのキャッシュがチェックされる*前*です。
+- {{domxref("PerformanceTiming.domainLookupStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : ドメイン検索を開始した時刻。持続的な接続を使用している場合、または情報がキャッシュやローカルリソースに保存されている場合、この値は `PerformanceTiming.fetchStart` と同じになります。
+- {{domxref("PerformanceTiming.domainLookupEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : ドメイン検索が終了した時刻。持続的な接続を使用している場合、または情報がキャッシュやローカルリソースに保存されている場合、この値は `PerformanceTiming.fetchStart` と同じになります。
+- {{domxref("PerformanceTiming.connectStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 接続を開く要求をネットワークに送信した時刻。トランスポート層がエラーを報告し、接続確立が再び開始された場合、最後の接続確立開始時刻が与えられます。持続的な接続を使用している場合、この値は `PerformanceTiming.fetchStart` と同じになります。
+- {{domxref("PerformanceTiming.connectEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 接続がネットワークで開いた時刻。トランスポート層がエラーを報告し、接続の確立が再び開始された場合、最後の接続の確立に終了した時刻が与えられます。持続的な接続を使用している場合、この値は `PerformanceTiming.fetchStart` と同じになります。すべての安全な接続ハンドシェイク、または SOCKS 認証が終了すると、接続が開かれたとみなされます。
+- {{domxref("PerformanceTiming.secureConnectionStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 安全な接続のハンドシェイクが開始された時刻。そのような接続が要求されていない場合は、 `0` を返します。
+- {{domxref("PerformanceTiming.requestStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : ブラウザーが実際の文書を取得するために、サーバーまたはキャッシュからリクエストを送信した時刻。リクエスト開始後にトランスポート層に障害が発生し、接続が再開された場合は、このプロパティには新たなリクエストに対応する時刻が設定されます。
+- {{domxref("PerformanceTiming.responseStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : ブラウザーがレスポンスの最初のバイトを受信した時刻。サーバーからキャッシュ、またはローカルリソースから受信した時刻。
+- {{domxref("PerformanceTiming.responseEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : ブラウザーがサーバー、キャッシュ、ローカルリソースからレスポンスの最後のバイトを受信した時刻、またはこれが最初に発生した場合は接続が閉じられた時刻。
+- {{domxref("PerformanceTiming.domLoading")}} {{readonlyInline}} {{deprecated_inline}}
+  - : パーサーが処理を開始し、その {{domxref("Document.readyState")}} が `'loading'` に変わり、対応する {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発行された時刻。
+- {{domxref("PerformanceTiming.domInteractive")}} {{readonlyInline}} {{deprecated_inline}}
+  - : パーサーがメイン文書の処理を終了し、その {{domxref("Document.readyState")}} が `'interactive'` に変わり、対応する {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発行された時刻。
+- {{domxref("PerformanceTiming.domContentLoadedEventStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : パーサーが {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントを送信する直前、つまり解釈処理直後に実行する必要があるすべてのスクリプトの実行が完了した時刻。
+- {{domxref("PerformanceTiming.domContentLoadedEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 一刻も早く実行する必要のあるスクリプトが、順不同にかかわらず、すべて実行が完了した時刻。
+- {{domxref("PerformanceTiming.domComplete")}} {{readonlyInline}} {{deprecated_inline}}
+  - : パーサーがメイン文書の処理を終了し、その {{domxref("Document.readyState")}} が `'complete' ` に変わり、対応する {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発行された時刻。
+- {{domxref("PerformanceTiming.loadEventStart")}} {{readonlyInline}} {{deprecated_inline}}
+  - : 現在の文書に対して {{domxref("Window/load_event", "load")}} イベントが送信された時刻。このイベントがまだ送信されていない場合は、 `0` を返します。
+- {{domxref("PerformanceTiming.loadEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
+  - : {{domxref("Window/load_event", "load")}} イベントハンドラーが終了した時刻、すなわち load イベントが完了した時刻です。このイベントがまだ送信されていない場合、またはまだ完了していない場合、 `0` を返します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>The <code>PerformanceTiming</code></em> <em>interface doesn't inherit any methods.</em></p>
+_`PerformanceTiming` インターフェイスに継承したメソッドはありません。_
 
-<dl>
- <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.toJSON()")}} {{non-Standard_Inline}}</dt>
- <dd>Returns a <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON object</a> representing this <code>PerformanceTiming</code> object.</dd>
-</dl>
+- {{deprecated_inline}} {{domxref("PerformanceTiming.toJSON()")}} {{non-Standard_Inline}}
+  - : [JSON オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) で、この `PerformanceTiming` オブジェクトを表します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#sec-navigation-timing-interface', 'PerformanceTiming')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+[Navigation Timing 仕様書](https://w3c.github.io/navigation-timing/#obsolete) がこの機能を非推奨としたため、この機能は標準化される予定はありません。
+代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.PerformanceTiming")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li>The {{domxref("Performance.timing")}} property that creates such an object.</li>
-</ul>
+- このオブジェクトを生成する {{domxref("Performance.timing")}} プロパティ
