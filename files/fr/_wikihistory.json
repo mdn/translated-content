@@ -41548,31 +41548,6 @@
       "velvel53"
     ]
   },
-  "conflicting/Web/Guide": {
-    "modified": "2019-03-24T00:13:07.123Z",
-    "contributors": [
-      "bilali",
-      "pixelastic",
-      "traan",
-      "Owidd",
-      "BenoitL",
-      "Mgjbot",
-      "Takenbot",
-      "Mozinet",
-      "Mrueegg",
-      "Chbok"
-    ]
-  },
-  "conflicting/Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T23:50:28.205Z",
-    "contributors": [
-      "xuancanh",
-      "Mgjbot",
-      "BenoitL",
-      "Elethiomel",
-      "Fredchat"
-    ]
-  },
   "conflicting/Web/HTML": {
     "modified": "2019-01-16T18:47:13.379Z",
     "contributors": [
