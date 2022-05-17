@@ -3563,7 +3563,7 @@
 /fr/docs/Using_geolocation	/fr/docs/Web/API/Geolocation_API
 /fr/docs/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Utilisation_daudio_et_video_dans_Firefox	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/fr/docs/Utilisation_de_XPath	/fr/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/fr/docs/Utilisation_de_XPath	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /fr/docs/Utilisation_de_dégradés	/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /fr/docs/Utilisation_de_dégradés_(gradients)	/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /fr/docs/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL	/fr/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
@@ -6166,6 +6166,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 /fr/docs/conflicting/Web/JavaScript/Reference/Statements/switch	/fr/docs/Web/JavaScript/Reference/Statements/switch
+/fr/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /fr/docs/document.createElement	/fr/docs/Web/API/Document/createElement
 /fr/docs/document.getElementById	/fr/docs/Web/API/Document/getElementById
 /fr/docs/en	/en-US/
