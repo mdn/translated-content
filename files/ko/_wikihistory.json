@@ -5557,16 +5557,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2019-03-23T23:26:40.127Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Cho.Eun",
-      "teoli",
-      "oohii"
-    ]
-  },
   "Web/API/Navigator/connection": {
     "modified": "2019-03-23T23:26:48.403Z",
     "contributors": [
@@ -5580,6 +5570,16 @@
     "modified": "2020-10-15T22:19:19.512Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2019-03-23T23:26:40.127Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Cho.Eun",
+      "teoli",
+      "oohii"
     ]
   },
   "Web/API/Navigator/mediaDevices": {

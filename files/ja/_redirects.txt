@@ -63,7 +63,7 @@
 /ja/docs/API/Document/fullscreen	/ja/docs/Web/API/Document/fullscreen
 /ja/docs/API/Document/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
 /ja/docs/API/Document/fullscreenEnabled	/ja/docs/Web/API/Document/fullscreenEnabled
-/ja/docs/API/Document/getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
+/ja/docs/API/Document/getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/API/Document/getElementById	/ja/docs/Web/API/Document/getElementById
 /ja/docs/API/Document/getElementsByClassName	/ja/docs/Web/API/Document/getElementsByClassName
 /ja/docs/API/Document/getElementsByName	/ja/docs/Web/API/Document/getElementsByName
@@ -1280,7 +1280,7 @@
 /ja/docs/DOM/document.fgColor	/ja/docs/Web/API/Document/fgColor
 /ja/docs/DOM/document.firstChild	/ja/docs/Web/API/Node/firstChild
 /ja/docs/DOM/document.forms	/ja/docs/Web/API/Document/forms
-/ja/docs/DOM/document.getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
+/ja/docs/DOM/document.getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/DOM/document.getElementById	/ja/docs/Web/API/Document/getElementById
 /ja/docs/DOM/document.getElementsByClassName	/ja/docs/Web/API/Document/getElementsByClassName
 /ja/docs/DOM/document.getElementsByName	/ja/docs/Web/API/Document/getElementsByName
@@ -1501,7 +1501,7 @@
 /ja/docs/DOM/window.navigator.appCodeName-redirect-1	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/DOM/window.navigator.appName	/ja/docs/Web/API/Navigator/appName
 /ja/docs/DOM/window.navigator.appVersion	/ja/docs/Web/API/Navigator/appVersion
-/ja/docs/DOM/window.navigator.battery	/ja/docs/Web/API/Navigator/battery
+/ja/docs/DOM/window.navigator.battery	/ja/docs/conflicting/Web/API/Navigator/getBattery
 /ja/docs/DOM/window.navigator.buildID	/ja/docs/Web/API/Navigator/buildID
 /ja/docs/DOM/window.navigator.cookieEnabled	/ja/docs/Web/API/Navigator/cookieEnabled
 /ja/docs/DOM/window.navigator.isLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
@@ -3080,6 +3080,7 @@
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
+/ja/docs/Web/API/Document/getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
 /ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
@@ -3227,6 +3228,7 @@
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
+/ja/docs/Web/API/Navigator/battery	/ja/docs/conflicting/Web/API/Navigator/getBattery
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
@@ -3503,7 +3505,7 @@
 /ja/docs/Web/API/document.execCommand	/ja/docs/Web/API/Document/execCommand
 /ja/docs/Web/API/document.fgColor	/ja/docs/Web/API/Document/fgColor
 /ja/docs/Web/API/document.firstChild	/ja/docs/Web/API/Node/firstChild
-/ja/docs/Web/API/document.getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
+/ja/docs/Web/API/document.getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/Web/API/document.getElementById	/ja/docs/Web/API/Document/getElementById
 /ja/docs/Web/API/document.getElementsByClassName	/ja/docs/Web/API/Document/getElementsByClassName
 /ja/docs/Web/API/document.getElementsByName	/ja/docs/Web/API/Document/getElementsByName
@@ -3625,7 +3627,7 @@
 /ja/docs/Web/API/window.navigator	/ja/docs/Web/API/Window/navigator
 /ja/docs/Web/API/window.navigator.appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/window.navigator.appName	/ja/docs/Web/API/Navigator/appName
-/ja/docs/Web/API/window.navigator.battery	/ja/docs/Web/API/Navigator/battery
+/ja/docs/Web/API/window.navigator.battery	/ja/docs/conflicting/Web/API/Navigator/getBattery
 /ja/docs/Web/API/window.navigator.language	/ja/docs/Web/API/Navigator/language
 /ja/docs/Web/API/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu

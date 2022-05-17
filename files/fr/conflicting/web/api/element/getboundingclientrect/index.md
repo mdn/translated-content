@@ -1,6 +1,6 @@
 ---
 title: Document.getBoxObjectFor()
-slug: Web/API/Document/getBoxObjectFor
+slug: conflicting/Web/API/Element/getBoundingClientRect
 tags:
   - API
   - Boîte
@@ -8,6 +8,7 @@ tags:
   - Méthodes
   - Objets
 translation_of: Web/API/Document/getBoxObjectFor
+original_slug: Web/API/Document/getBoxObjectFor
 ---
 {{ ApiRef("DOM") }}{{deprecated_header}}
 

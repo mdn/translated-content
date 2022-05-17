@@ -1020,7 +1020,7 @@
 /fr/docs/DOM/window.location	/fr/docs/Web/API/window/location
 /fr/docs/DOM/window.matchMedia	/fr/docs/Web/API/Window/matchMedia
 /fr/docs/DOM/window.navigator	/fr/docs/Web/API/Window/navigator
-/fr/docs/DOM/window.navigator.battery	/fr/docs/Web/API/Navigator/battery
+/fr/docs/DOM/window.navigator.battery	/fr/docs/Web/API/Navigator/getBattery
 /fr/docs/DOM/window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
 /fr/docs/DOM/window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
@@ -3644,6 +3644,7 @@
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
+/fr/docs/Web/API/Document/getBoxObjectFor	/fr/docs/conflicting/Web/API/Element/getBoundingClientRect
 /fr/docs/Web/API/Document/onafterscriptexecute	/fr/docs/Web/API/Document/afterscriptexecute_event
 /fr/docs/Web/API/Document/onbeforescriptexecute	/fr/docs/Web/API/Document/beforescriptexecute_event
 /fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/conflicting/Web/API/Document/fullscreenchange_event
@@ -3807,6 +3808,7 @@
 /fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
 /fr/docs/Web/API/Navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/Navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
+/fr/docs/Web/API/Navigator/battery	/fr/docs/Web/API/Navigator/getBattery
 /fr/docs/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages

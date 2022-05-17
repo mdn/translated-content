@@ -12934,12 +12934,6 @@
       "Kalwyn"
     ]
   },
-  "Web/API/Document/getBoxObjectFor": {
-    "modified": "2019-03-18T21:39:17.387Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Document/getElementById": {
     "modified": "2020-10-15T21:13:25.383Z",
     "contributors": [
@@ -16941,15 +16935,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2019-03-23T23:37:50.722Z",
-    "contributors": [
-      "Perraudeau",
-      "fscholz",
-      "khalid32",
-      "Florent_ATo"
-    ]
-  },
   "Web/API/Navigator/connection": {
     "modified": "2019-03-23T22:11:57.924Z",
     "contributors": [
@@ -16983,6 +16968,15 @@
     "contributors": [
       "Goofy",
       "Lornkor"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2019-03-23T23:37:50.722Z",
+    "contributors": [
+      "Perraudeau",
+      "fscholz",
+      "khalid32",
+      "Florent_ATo"
     ]
   },
   "Web/API/Navigator/getGamepads": {
@@ -41099,6 +41093,12 @@
       "Voulto",
       "tregagnon",
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Element/getBoundingClientRect": {
+    "modified": "2019-03-18T21:39:17.387Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "conflicting/Web/API/EventTarget/addEventListener": {

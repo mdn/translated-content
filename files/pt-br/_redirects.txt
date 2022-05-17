@@ -563,7 +563,8 @@
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
-/pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/battery
+/pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/getBattery
+/pt-BR/docs/Web/API/Navigator/battery	/pt-BR/docs/Web/API/Navigator/getBattery
 /pt-BR/docs/Web/API/Node.appendChild	/pt-BR/docs/Web/API/Node/appendChild
 /pt-BR/docs/Web/API/Node.childNodes	/pt-BR/docs/Web/API/Node/childNodes
 /pt-BR/docs/Web/API/Node.contains	/pt-BR/docs/Web/API/Node/contains

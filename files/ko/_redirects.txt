@@ -488,10 +488,11 @@
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
-/ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
-/ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
+/ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/getBattery
+/ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/Navigator/Online_and_offline_events	/ko/docs/Web/API/Navigator/onLine
+/ko/docs/Web/API/Navigator/battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/NavigatorID	/ko/docs/Web/API/Navigator
 /ko/docs/Web/API/NavigatorLanguage	/ko/docs/Web/API/Navigator
 /ko/docs/Web/API/NavigatorLanguage/language	/ko/docs/Web/API/Navigator/language
@@ -542,7 +543,7 @@
 /ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
 /ko/docs/Web/API/document.importNode	/ko/docs/Web/API/Document/importNode
 /ko/docs/Web/API/element-temp	/ko/docs/Web/API/Element
-/ko/docs/Web/API/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
+/ko/docs/Web/API/window.navigator.battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/window.screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
 /ko/docs/Web/API/window.screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
