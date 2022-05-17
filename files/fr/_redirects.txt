@@ -1284,8 +1284,8 @@
 /fr/docs/Glisser_et_déposer	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Glisser_et_déposer/Opérations_de_glissement	/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /fr/docs/Glossaire	/fr/docs/Glossary
-/fr/docs/Glossaire/404	/fr/docs/conflicting/Web/HTTP/Status/404
-/fr/docs/Glossaire/502	/fr/docs/conflicting/Web/HTTP/Status/502
+/fr/docs/Glossaire/404	/fr/docs/Web/HTTP/Status/404
+/fr/docs/Glossaire/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/Glossaire/AJAX	/fr/docs/Glossary/AJAX
 /fr/docs/Glossaire/ALPN	/fr/docs/Glossary/ALPN
 /fr/docs/Glossaire/API	/fr/docs/Glossary/API
@@ -1740,8 +1740,8 @@
 /fr/docs/Glossaire/Élément	/fr/docs/Glossary/Element
 /fr/docs/Glossaire/Éléments_supports_de_script	/fr/docs/Glossary/Script-supporting_element
 /fr/docs/Glossaire/évènement	/fr/docs/Glossary/event
-/fr/docs/Glossary/404	/fr/docs/conflicting/Web/HTTP/Status/404
-/fr/docs/Glossary/502	/fr/docs/conflicting/Web/HTTP/Status/502
+/fr/docs/Glossary/404	/fr/docs/Web/HTTP/Status/404
+/fr/docs/Glossary/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
@@ -2015,7 +2015,7 @@
 /fr/docs/HTTP/Headers/Vary	/fr/docs/Web/HTTP/Headers/Vary
 /fr/docs/HTTP/Headers/WWW-Authenticate	/fr/docs/Web/HTTP/Headers/WWW-Authenticate
 /fr/docs/HTTP/Headers/X-Frame-Options	/fr/docs/Web/HTTP/Headers/X-Frame-Options
-/fr/docs/HTTP/Index	/fr/docs/conflicting/Web/HTTP
+/fr/docs/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
 /fr/docs/HTTP/Méthode/CONNECT	/fr/docs/Web/HTTP/Methods/CONNECT
 /fr/docs/HTTP/Méthode/DELETE	/fr/docs/Web/HTTP/Methods/DELETE
@@ -3554,7 +3554,7 @@
 /fr/docs/Tutoriel_canvas:Transformations	/fr/docs/Web/API/Canvas_API/Tutorial/Transformations
 /fr/docs/Tutoriel_canvas:Utilisation_d'images	/fr/docs/Web/API/Canvas_API/Tutorial/Using_images
 /fr/docs/Tutoriel_canvas:Utilisation_de_base	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage
-/fr/docs/Type_MIME_incorrect_pour_les_fichiers_CSS	/fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types
+/fr/docs/Type_MIME_incorrect_pour_les_fichiers_CSS	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /fr/docs/Un_raycaster_basique_avec_canvas	/fr/docs/Web/API/Canvas_API/A_basic_ray-caster
 /fr/docs/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /fr/docs/Useful_CSS_tips/Color_and_Background	/fr/docs/Web/CSS/color_value
@@ -4687,7 +4687,7 @@
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
-/fr/docs/Web/HTTP/Index	/fr/docs/conflicting/Web/HTTP
+/fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
 /fr/docs/Web/HTTP/Méthode/CONNECT	/fr/docs/Web/HTTP/Methods/CONNECT
 /fr/docs/Web/HTTP/Méthode/DELETE	/fr/docs/Web/HTTP/Methods/DELETE
@@ -6123,6 +6123,10 @@
 /fr/docs/conflicting/Web/CSS/box-ordinal-group	/fr/docs/Web/CSS/box-ordinal-group
 /fr/docs/conflicting/Web/CSS/color_value	/fr/docs/Web/CSS/color_value
 /fr/docs/conflicting/Web/CSS/column-gap	/fr/docs/Web/CSS/column-gap
+/fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
+/fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+/fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
+/fr/docs/conflicting/Web/HTTP/Status/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/conflicting/Web/JavaScript/Equality_comparisons_and_sameness	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/conflicting/Web/JavaScript/Guide	/fr/docs/Web/JavaScript/Guide
 /fr/docs/conflicting/Web/JavaScript/Guide/Introduction	/fr/docs/Web/JavaScript/Guide/Introduction
