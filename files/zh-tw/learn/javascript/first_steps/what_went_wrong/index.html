@@ -144,7 +144,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <pre class="notranslate">Math.floor(Math.random()) + 1</pre>
 
-<p><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">由於</span></font><code>Math.floor</code>是無條件捨去取整數(地板值)，所以一個介於0到1的隨機小數永遠只會得到0，幫這個小數加1的話又會永遠只得到1。所以進位前我們先幫隨機小數乘上100，如此一來我們就能得到介於0到99的隨機數字了：</p>
+<p><font face="Arial, x-locale-body, sans-serif">由於</font><code>Math.floor</code>是無條件捨去取整數(地板值)，所以一個介於0到1的隨機小數永遠只會得到0，幫這個小數加1的話又會永遠只得到1。所以進位前我們先幫隨機小數乘上100，如此一來我們就能得到介於0到99的隨機數字了：</p>
 
 <pre class="brush: js notranslate">Math.floor(Math.random()*100);</pre>
 
