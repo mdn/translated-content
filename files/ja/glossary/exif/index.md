@@ -10,4 +10,4 @@ tags:
 ## 関連情報
 
 - [EXIF](https://ja.wikipedia.org/wiki/Exchangeable_image_file_format) (Wikipedia)
-- [CIPA規格類, including "CIPA DC-008-2019 デジタルスチルカメラ用画像ファイルフォーマット規格 Exif 2.32"](https://www.cipa.jp/j/std/std-sec.html)
+- [CIPA 規格類, including "CIPA DC-008-2019 デジタルスチルカメラ用画像ファイルフォーマット規格 Exif 2.32"](https://www.cipa.jp/j/std/std-sec.html)
