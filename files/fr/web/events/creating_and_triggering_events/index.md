@@ -1,8 +1,9 @@
 ---
 title: Créer et déclencher des évènements
 slug: Web/Events/Creating_and_triggering_events
+translation_of: Web/Events/Creating_and_triggering_events
 ---
-Dans cet article, nou allons voir comment créer et diffuser des évènements dans le DOM. Ce type d'évènements ainsi créés sont appelés des **évènements synthétiques**, en opposition aux évènements déclenchés par le navigateur.
+Dans cet article, nous allons voir comment créer et diffuser des évènements dans le DOM. Ce type d'évènements ainsi créés sont appelés des **évènements synthétiques**, en opposition aux évènements déclenchés par le navigateur.
 
 ## Créer des évènements spécifiques
 
@@ -12,13 +13,13 @@ Les évènements peuvent être créés avec le constructeur [`Event`](/fr/docs/W
 const event = new Event('build');
 
 // On écoute l'évènement
-elem.addEventListener('build', function (e) { /* … */ }, false);
+elem.addEventListener('build', function(e) { /* … */ }, false);
 
 // On diffuse l'évènement
 elem.dispatchEvent(event);
 ```
 
-Dans l'exemple précédent, on utilise la méthode [EventTarget.dispatchEvent()](/fr/docs/Web/API/EventTarget/dispatchEvent).
+Dans l'exemple précédent, on utilise la méthode [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent).
 
 Le constructeur est pris en charge par la plupart des navigateurs modernes (Internet Explorer étant l'exception). Pour une approche plus verbeuse (mais qui fonctionne pour Internet Explorer), voir [l'ancienne méthode](#lancienne_méthode) ci-après.
 
@@ -50,7 +51,7 @@ const event = document.createEvent('Event');
 event.initEvent('build', true, true);
 
 // On écoute l'évènement
-elem.addEventListener('build', function (e) {
+elem.addEventListener('build', function(e) {
   // e.target === elem
 }, false);
 
@@ -132,17 +133,17 @@ function simulateClick() {
 
   if (cancelled) {
     // Un gestionnaire a appelé preventDefault.
-    console.log("annulé");
+    console.log('annulé');
   } else {
     // Aucun des gestionnaires n'a appelé preventDefault.
-    console.log("pas annulé");
+    console.log('pas annulé');
   }
 }
 ```
 
 ## Voir aussi
 
-- [CustomEvent()](/fr/docs/Web/API/CustomEvent/CustomEvent)
+- [`CustomEvent()`](/fr/docs/Web/API/CustomEvent/CustomEvent)
 - [`document.createEvent()`](/fr/docs/Web/API/Document/createEvent)
 - [`Event.initEvent()`](/fr/docs/Web/API/Event/initEvent)
 - [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent)
