@@ -265,10 +265,10 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>首先，讓我們再看一次在我們的CSS與JavaScript無障礙文章中第一次看的表單範例(請閱讀 <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive">Keeping it unobtrusive</a>完整回顧)。在本章節文末我們展示當你試著送出表單而驗證錯誤時，出現我們包含一些在錯誤訊息框的ARIA屬性。</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>errors<span class="punctuation token">"</span></span> <span class="attr-name token">role</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>alert<span class="punctuation token">"</span></span> <span class="attr-name token">aria-relevant</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>all<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html"><code class="language-html">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+  &lt;ul&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">role="alert"</a></code> 自動地將其應用的該元素轉換為即時區塊，以利讀出它的改變；它也將語意地辨識其為警告訊息(重要時間/內容脈絡敏感資訊)，而呈現以更好、更無障礙的方式向使用者傳遞警告(模態對話框如 <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> 具有許多無障礙的問題；請參見WebAIM的 <a href="http://webaim.org/techniques/javascript/other#popups">Popup Windows</a>)。</li>
@@ -298,11 +298,11 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p><strong>注意</strong>：你可以查看完成的範例 <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>。</p>
 </div>
 
-<p>除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA也能賦予一些進階的表單標籤技術。我們已經談論過使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 <a href="#路標地標">路標/地標</a> 章節。如果你想要指定一個非<code>&lt;label&gt;</code> 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>。更多細節請參見 <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a><span class="subtitle"> 。</span></p>
+<p>除了傳統的 {{htmlelement("label")}} 元素之外，WAI-ARIA也能賦予一些進階的表單標籤技術。我們已經談論過使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 屬性在我們不希望標籤讓有視覺的使用者看見的地方來提供標籤(參見上述 <a href="#路標地標">路標/地標</a> 章節。如果你想要指定一個非<code>&lt;label&gt;</code> 元素當作標籤或具有相同標籤多重的表單輸入標籤，這裡有使用其他屬性如 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> 的其他標籤技術，如果你想要其他的訊息與表單輸入關聯並且報讀出來，使用 <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>。更多細節請參見 <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a> 。</p>
 
-<p>還有許多其他有用的屬性與狀態，用來指出表單元素的狀態。例如，<span class="subtitle"> <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> </span>可用於指出表單區域是處於停用的狀態。許多瀏覽器只會跳過停用的表單區塊，並且甚至不會被螢幕報讀器讀出，但在某些情況下，他們可被感知，所以最好包含此屬性讓螢幕報讀器知道停用的輸入事實上即是停用的狀態。</p>
+<p>還有許多其他有用的屬性與狀態，用來指出表單元素的狀態。例如， <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> 可用於指出表單區域是處於停用的狀態。許多瀏覽器只會跳過停用的表單區塊，並且甚至不會被螢幕報讀器讀出，但在某些情況下，他們可被感知，所以最好包含此屬性讓螢幕報讀器知道停用的輸入事實上即是停用的狀態。</p>
 
-<p>如果輸入的停用狀態可能產生改變，也最好在發生時指出，以及其結果為何。例如，在我們的<span class="subtitle"> <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> </span>展示中，當核取框被核取時，可以讓另一個表單輸入允許輸入更進一步的資訊。我們已經設置一個隱藏的即時區塊：</p>
+<p>如果輸入的停用狀態可能產生改變，也最好在發生時指出，以及其結果為何。例如，在我們的 <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> 展示中，當核取框被核取時，可以讓另一個表單輸入允許輸入更進一步的資訊。我們已經設置一個隱藏的即時區塊：</p>
 
 <pre class="brush: html">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 
