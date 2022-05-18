@@ -3,65 +3,145 @@ title: cx
 slug: Web/SVG/Attribute/cx
 translation_of: Web/SVG/Attribute/cx
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+{{SVGRef}}
 
-<p>{{ SVGElement("circle") }}과  {{ SVGElement("ellipse") }}엘리먼트에서 사용될 경우, 본 속성은 엘리먼트의 중심의 x축의 위치를 나타낸다. 속성이 정의되어있지 않을 경우 속성 값이 "0"일 경우와 동일한 형태를 나타내게 된다.</p>
+**`cx`** 속성은 중심점의 x축 좌표를 정의합니다.
 
-<p>{{ SVGElement("radialGradient") }} 엘리먼트의 경우에는 본 속성은 원형 그래디언트의 가장 큰 원의 x축의 위치를 나타낸다. 그래디언트는 가장 큰 원의 둘레와 일치할 수 있도록 그려질것입니다. 속성이 정의되어있지 않을 경우 속성 값이 <strong>50%</strong>일 경우와 동일한 효과를 나타내게 된다.</p>
+다음 SVG 요소와 함께 이 속성을 사용할 수 있습니다:
 
-<p>Usage context</p>
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en/SVG/Content_type#Coordinate" title="https://developer.mozilla.org/en/SVG/Content_type#Coordinate">&lt;coordinate&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/shapes.html#CircleElementCXAttribute">SVG 1.1 (2nd Edition): The circle element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/shapes.html#EllipseElementCXAttribute">SVG 1.1 (2nd Edition): The ellipse element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute">SVG 1.1 (2nd Edition): The radialGradient element</a></td>
-  </tr>
- </tbody>
+## Example
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient cx="25%" id="myGradient">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+
+  <circle cx="50" cy="50" r="45"/>
+  <ellipse cx="150" cy="50" rx="45" ry="25" />
+  <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
+</svg>
+```
+
+{{EmbedLiveSample("Example", 100, 100)}}
+
+## circle
+
+{{SVGElement('circle')}} 의 경우, `cx`는 모양 중심의 x축 좌표를 정의합니다.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>{{ page("/en/SVG/Content_type","Coordinate") }}</p>
+> **Note:** SVG2 `cx`로 시작하는 것은 *기하학적 속성* 입니다. 즉, 이 속성은 circle의 CSS 속성으로도 사용할 수 있습니다.
 
-<h2 id="예시">예시</h2>
+## ellipse
 
-<pre class="brush: xml">  &lt;svg width="120" height="220"
-     viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+{{SVGElement('ellipse')}}의 경우, `cx`는 모양 중심의 x축 좌표를 정의합니다.
 
-    &lt;style type="text/css" &gt;
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-      &lt;![CDATA[
-       circle.circleClass {
-       stroke: #006600;
-       fill:   #cc0000;
-    }
+> **Note:** SVG2 `cx`로 시작하는 것은 *기하학적 속성* 입니다. 이는 이 속성이 ellipse의 CSS 속성으로도 사용될 수 있음을 의미합니다.
 
-      ]]&gt;
-    &lt;/style&gt;
-     &lt;circle  class="circleClass"   cx="40" cy="50" r="26"/&gt;
-&lt;/svg&gt;
-</pre>
+## radialGradient
 
-<h2 id="엘리먼트">엘리먼트</h2>
+{{SVGElement('radialGradient')}}의 경우 `cx`는 radial Gradient에 대한 끝 원의 x축 좌표를 정의합니다.
 
-<p>다음 엘리먼트에서 <code>cx</code>속성을 사용할 수 있습니다.</p>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("length")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-<ul>
- <li>{{ SVGElement("circle") }}</li>
- <li>{{ SVGElement("ellipse") }}</li>
- <li>{{ SVGElement("radialGradient") }}</li>
-</ul>
+## 예제
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient cx="0" id="myGradient000">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+
+    <radialGradient cx="50%" id="myGradient050">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+
+    <radialGradient cx="100%" id="myGradient100">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+  </defs>
+
+  <rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" />
+  <rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" />
+  <rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample('radialGradient', 150, '100%')}}
+
+## 명세서
+
+{{Specifications}}
+
+## 같이 보기
+
+- [cy](/en-US/docs/Web/SVG/Attribute/cy)
+- [r](/en-US/docs/Web/SVG/Attribute/r)
