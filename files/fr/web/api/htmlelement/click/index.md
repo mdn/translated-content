@@ -32,16 +32,16 @@ Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris s
 
 ```html
 <form>
-  <input type="checkbox" id="maCaseACocher" onmouseover="maFonction()" onclick="console.log("un évènement click a eu lieu")">
+  <input type="checkbox" id="maCaseACocher" onmouseover="maFonction()" onclick="console.log('un évènement click a eu lieu')">
 </form>
 ```
 
 ### JavaScript
 
 ```js
-// On mouse-over, execute maFonction
+// Lorsque l'évènement mouseover est déclenché, exécuter maFonction
 function maFonction() {
-  document.getElementById("maCaseACocher").click();
+  document.getElementById('maCaseACocher').click();
 }
 ```
 
@@ -55,8 +55,7 @@ function maFonction() {
 
 ## Voir aussi
 
-- Les gestionnaires d'évènements associés
-
+- Les gestionnaires d'évènements associés&nbsp;:
   - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick)
   - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/GlobalEventHandlers/ondblclick)
   - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/GlobalEventHandlers/onauxclick)

@@ -11,7 +11,7 @@ Pour correctement prendre en charge les interfaces utilisateur tactiles, les év
 
 Les interfaces relatives aux évènements tactiles sont des API de bas niveau qui peuvent être utilisées pour prendre en charge des interactions tactiles à plusieurs points spécifiques pour une application, comme un geste particulier effectué avec deux doigts. Une interaction tactile à plusieurs points démarre lorsqu'un doigt (ou un stylet) commence par toucher la surface de contact. Les autres doigts peuvent ensuite toucher la surface et éventuellement se déplacer sur la surface tactile. L'interaction se termine lorsque les doigts sont retirés de la surface. Pendant cette interaction, une application recevra les évènements tactiles pour les phases de début, de déplacement et de fin.
 
-Les évènements tactiles sont semblables aux évènements liés à la souris, sauf qu'ils prennent en charge les touchers simultanés à différents endroits de la surface tatcile. L'interface [`TouchEvent`](/fr/docs/Web/API/TouchEvent) encapsule tous les points de contact qui sont en cours d'activité. L'interface [`Touch`](/fr/docs/Web/API/Touch), représentant un seul point de contact, contient des informations telles la position du point de contact par rapport à la zone d'affichage (<i lang="en">viewport</i>) du navigateur.
+Les évènements tactiles sont semblables aux évènements liés à la souris, sauf qu'ils prennent en charge les touchers simultanés à différents endroits de la surface tactile. L'interface [`TouchEvent`](/fr/docs/Web/API/TouchEvent) encapsule tous les points de contact qui sont en cours d'activité. L'interface [`Touch`](/fr/docs/Web/API/Touch), représentant un seul point de contact, contient des informations telles la position du point de contact par rapport à la zone d'affichage (<i lang="en">viewport</i>) du navigateur.
 
 ## Définitions
 
@@ -68,7 +68,7 @@ function startup() {
   log('Initialisation.');
 }
 
-document.addEventListener("DOMContentLoaded", startup);
+document.addEventListener('DOMContentLoaded', startup);
 ```
 
 #### Suivre les nouvelles touches
@@ -104,7 +104,7 @@ function handleStart(evt) {
 
 On y appelle [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) pour éviter que le navigateur continue à traiter l'évènement tactile (et également pour éviter qu'un évènement de souris soit émis). Ensuite, on récupère le contexte et on récupère la liste des points de contact qui ont évolué avec la propriété [`TouchEvent.changedTouches`](/fr/docs/Web/API/TouchEvent/changedTouches).
 
-Après ça, on parcourt tous les objets [`Touch`](/fr/docs/Web/API/Touch) de la liste afin de les placer dans un tableau contenant les points de touche actis et on dessine le point de départ du tracé avec un petit cercle. On utilise une ligne de 4 pixels de large et un cercle avec un rayon de 4 pixels permettra un début de tracé net.
+Après ça, on parcourt tous les objets [`Touch`](/fr/docs/Web/API/Touch) de la liste afin de les placer dans un tableau contenant les points de touche actifs et on dessine le point de départ du tracé avec un petit cercle. On utilise une ligne de 4 pixels de large et un cercle avec un rayon de 4 pixels permettra un début de tracé net.
 
 #### Dessiner lors du déplacement du toucher
 
@@ -153,7 +153,7 @@ Lorsque la personne lève le doigt de la surface, un évènement [`touchend`](/f
 ```js
 function handleEnd(evt) {
   evt.preventDefault();
-  log("touchend");
+  log('touchend');
   const el = document.getElementById('canvas');
   const ctx = el.getContext('2d');
   const touches = evt.changedTouches;
@@ -279,24 +279,24 @@ En appelant `preventDefault()` sur un évènement [`touchstart`](/fr/docs/Web/AP
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (evt.touches.length > 1 || (evt.type == 'touchend' && evt.touches.length > 0))
     return;
 
-  const newEvt = document.createEvent("MouseEvents");
+  const newEvt = document.createEvent('MouseEvents');
   let type = null;
   let touch = null;
 
   switch (evt.type) {
-    case "touchstart":
-      type = "mousedown";
+    case 'touchstart':
+      type = 'mousedown';
       touch = evt.changedTouches[0];
       break;
-    case "touchmove":
-      type = "mousemove";
+    case 'touchmove':
+      type = 'mousemove';
       touch = evt.changedTouches[0];
       break;
-    case "touchend":
-      type = "mouseup";
+    case 'touchend':
+      type = 'mouseup';
       touch = evt.changedTouches[0];
       break;
   }
@@ -318,8 +318,6 @@ Une technique pour éviter les évènements `pinchZoom` sur une page consiste à
 
 ## Compatibilité des navigateurs
 
-### Tactile
-
 Les évènements tactiles sont généralement disponibles pour les appareils qui disposent d'un écran tactile. Toutefois, de nombreux navigateurs rendent cette API indisponible pour les appareils de bureau, y compris pour ceux dotés d'écrans tactiles.
 
 Ce comportement s'explique par la stratégie utilisée par certains sites web qui, s'ils détectent la disponibilité de l'API des évènements tactiles, détermineront que le navigateur s'exécute sur un appareil mobile et serviront un contenu optimisé pour mobile. Cette stratégie peut fournir une expérience de mauvaise qualité aux personnes qui utilisent un ordinateur de bureau doté d'un écran tactile.
@@ -327,11 +325,3 @@ Ce comportement s'explique par la stratégie utilisée par certains sites web qu
 Pour prendre en charge le tactile et la souris quel que soit le type d'appareil, on utilisera plutôt [les évènements de pointeur](/fr/docs/Web/API/Pointer_events).
 
 {{Compat}}
-
-### Firefox, évènements tactiles et multiprocessus (e10s)
-
-Dans Firefox, les évènements tactiles sont désactivés lorsque le mode multiprocessus de Firefox (e10s) est désactivé. Ce mode est activé par défaut mais peut être désactivé dans certaines situations, par exemple lorsque certains outils d'accessibilité ou certaines extensions Firefox sont installées et nécessitent la désactivation du mode multiprocessus pour fonctionner. Dans ces cas, cela signifie que, même sur un appareil avec un écran tactile, les évènements tactiles ne seront pas activés.
-
-Il est possible de tester si ce mode est désactivé en allant sur la page `about:support` et en vérifiant «&nbsp;Fenêtres multiprocessus&nbsp;» dans la section «&nbsp;Paramètres de base de l'application&nbsp;». 1/1 signifie que le mode est activé et 0/1 qu'il est désactivé.
-
-Si on souhaite forcer ce mode à l'état actif, par exemple pour réactiver explicitement la prise en charge des évènements tactiles, il faut aller sur la page `about:config` et créer une nouvelle préférence booléenne `browser.tabs.remote.force-enable`. Il faut alors la passer à `true`, redémarrer le navigateur et le mode multiprocessus sera activé, quels que soient les autres paramètres.
