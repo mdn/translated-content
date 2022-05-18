@@ -3,67 +3,67 @@ title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 tags:
   - Class
-  - Experimental
-  - Internationalization
+  - 実験的
+  - 国際化
   - Intl
   - JavaScript
   - ListFormat
-  - Reference
+  - リファレンス
+browser-compat: javascript.builtins.Intl.ListFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.ListFormat</code></strong> オブジェクトは、言語特有のリストの整形を可能にします。</p>
+**`Intl.ListFormat`** オブジェクトは、言語を考慮したリストの整形ができるようにします。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+
 <!-- このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
 
-<h2 id="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}</dt>
- <dd>新しい <code>Intl.ListFormat</code> オブジェクトを作成します。</dd>
-</dl>
+- {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+  - : 新しい `Intl.ListFormat` オブジェクトを作成します。
 
-<h2 id="Static_methods">静的メソッド</h2>
+## 静的メソッド
 
-<dl>
- <dt>{{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
- <dd>指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているものを含む配列を返します。</dd>
-</dl>
+- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+  - : 指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているものを含む配列を返します。
 
-<h2 id="Instance_methods">インスタンスメソッド</h2>
+## インスタンスメソッド
 
-<dl>
- <dt>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}</dt>
- <dd>言語固有の形式の文字列を返して，列挙要素を表示します。</dd>
- <dt>{{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}</dt>
- <dd>ロケールを考慮した方法で値のリストを整形するために使用できる、さまざまな部分を表すオブジェクトの配列を返します。</dd>
-</dl>
+- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
+  - : リストの要素を表す、言語を考慮して書式化された文字列を返します。
+- {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
+  - : ロケールを考慮した方法で値のリストを書式化するために使用できる、さまざまな部分を表すオブジェクトの配列を返します。
+- {{jsxref("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
+  - : 現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールおよびスタイルの書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Using_format">format の使用</h3>
+### format の使用
 
-<p>次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。</p>
+次の例は、英語を使用したリストフォーマッターの作成方法です。
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus and Car
+// > Motorcycle, Bus and Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus or Car
+// > Motorcycle, Bus or Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car
-</pre>
+// > Motorcycle Bus Car
+```
 
-<h3 id="Using_formatToParts">formatToParts の使用</h3>
+### formatToParts の使用
 
-<p>次の例では、整形済みの部分を返すリストフォーマッターを生成する方法を示します。</p>
+次の例では、整形済みの部分を返すリストフォーマッターを生成する方法を示します。
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
 // [ { "type": "element", "value": "Motorcycle" },
@@ -71,33 +71,17 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 //   { "type": "element", "value": "Bus" },
 //   { "type": "literal", "value": ", and " },
 //   { "type": "element", "value": "Car" } ];
-</pre>
+```
 
-<h2 id="Polyfill">ポリフィル</h2>
+## 仕様書
 
-<p><a href="https://formatjs.io/docs/polyfills/intl-listformat">formatjs Intl.ListFormat polyfill</a></p>
+{{Specifications}}
 
-<h2 id="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Intl.ListFormat', '#listformat-objects', 'ListFormat')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-<div>{{Compat("javascript.builtins.Intl.ListFormat")}}</div>
-
-<h2 id="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Intl")}}</li>
-</ul>
+- {{jsxref("Intl")}}
+- [FormatJS の `Intl.ListFormat` のポリフィル](https://formatjs.io/docs/polyfills/intl-listformat)
