@@ -5,6 +5,8 @@ translation_of: Web/SVG
 ---
 {{SVGRef}}
 
+## Démarrer avec SVG
+
 **SVG (pour <i lang="en">Scalable Vector Graphics</i> en anglais, soit «&nbsp;graphiques vectoriels adaptables&nbsp;»**) est un langage construit à partir de [XML](/fr/docs/Web/XML) et qui permet de décrire des [graphiques vectoriels](https://fr.wikipedia.org/wiki/Image_vectorielle) en deux dimensions.
 
 Il s'agit d'un format texte, standardisé de façon ouverte pour le Web, pour décrire des images qui peuvent être affichées nettement à n'importe quelle taille et qui est conçu pour fonctionner avec les autres technologies web standard comme [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), [JavaScript](/fr/docs/Web/JavaScript), et [SMIL](/fr/docs/Web/SVG/SVG_animation_with_SMIL). D'une certaine façon, SVG est aux graphiques ce que [HTML](/fr/docs/Web/HTML) est au texte.
@@ -15,7 +17,7 @@ Contrairement aux images matricielles classiques aux formats [JPEG](/fr/docs/Glo
 
 SVG a été développé par le [W3C (World Wide Web Consortium)](https://www.w3.org/) depuis 1999.
 
-Voir aussi [le tutoriel SVG](/fr/docs/Web/SVG/Tutorial)
+Voir aussi [le tutoriel SVG](/fr/docs/Web/SVG/Tutorial).
 
 ## Documentation
 
