@@ -7,12 +7,12 @@ translation_of: Web/HTTP/Headers/Origin
 
 <p>请求首部字段 <strong><code>Origin</code></strong> 指示了请求来自于哪个站点。该字段仅指示服务器名称，并不包含任何路径信息。该首部用于 {{Glossary("CORS")}} 请求或者 {{HTTPMethod("POST")}} 请求。除了不包含路径信息，该字段与 {{HTTPHeader("Referer")}} 首部字段相似。</p>
 <div class="note notecard">
- <p><strong>Note:&nbsp; </strong>基本上，浏览器会将Origin请求头添加到:</p>
+ <p><strong>Note:&nbsp; </strong>基本上，浏览器会将 Origin 请求头添加到：</p>
  <ul>
    <li>所有的跨域请求</li>
-   <li>除GET或HEAD请求外的同源请求(即它们被添加到同源POST、OPTIONS、PUT、PATCH和DELETE请求中)</li>
+   <li>除 GET 或 HEAD 请求外的同源请求 (即它们被添加到同源 POST、OPTIONS、PUT、PATCH 和 DELETE 请求中)</li>
  </ul>
- <p><strong>浏览器会将Origin请求头添加到所有跨域的请求中，除GET或HEAD请求外的同源请求。如果在no-cors模式下发出跨源GET或HEAD请求，则不会添加Origin头</strong></p>
+ <p><strong>浏览器会将 Origin 请求头添加到所有跨域的请求中，除 GET 或 HEAD 请求外的同源请求。如果在 no-cors 模式下发出跨源 GET 或 HEAD 请求，则不会添加 Origin 头</strong></p>
 </div>
 
 <table class="properties">
@@ -40,11 +40,11 @@ Origin: &lt;scheme&gt; "://" &lt;host&gt; [ ":" &lt;port&gt; ]
 
 <dl>
  <dt>&lt;scheme&gt;</dt>
- <dd>请求所使用的协议，通常是HTTP协议或者它的安全版本HTTPS协议。</dd>
+ <dd>请求所使用的协议，通常是 HTTP 协议或者它的安全版本 HTTPS 协议。</dd>
  <dt>&lt;host&gt;</dt>
  <dd>服务器的域名或 IP 地址。</dd>
  <dt>&lt;port&gt; {{optional_inline}}</dt>
- <dd>服务器正在监听的TCP 端口号。缺省为服务的默认端口（对于 HTTP 请求而言，默认端口为 80）。</dd>
+ <dd>服务器正在监听的 TCP 端口号。缺省为服务的默认端口（对于 HTTP 请求而言，默认端口为 80）。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
