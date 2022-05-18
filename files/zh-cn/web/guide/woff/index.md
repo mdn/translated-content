@@ -1,5 +1,5 @@
 ---
-title: 网页开放字体格式(WOFF)
+title: 网页开放字体格式 (WOFF)
 slug: Web/Guide/WOFF
 tags:
   - NeedsMobileBrowserCompatibility
