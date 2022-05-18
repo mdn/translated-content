@@ -3,52 +3,53 @@ title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 tags:
   - Collator
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
-  - Method
-  - Prototype
+  - ローカライズ
+  - メソッド
+  - プロトタイプ
+  - リファレンス
+browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.Collator.prototype.resolvedOptions()</code></strong> メソッドは、この {{jsxref("Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。</p>
+**`Intl.Collator.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>collator</var>.resolvedOptions()</pre>
+```js
+resolvedOptions()
+```
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>この {{jsxref("Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。</p>
+この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>返されるオブジェクトには以下のプロパティがあります。</p>
+返されるオブジェクトには、以下のプロパティがあります。
 
-<dl>
- <dt><code>locale</code></dt>
- <dd>実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが <code>locale</code> に含まれます。</dd>
- <dt><code>usage</code></dt>
- <dt><code>sensitivity</code></dt>
- <dt><code>ignorePunctuation</code></dt>
- <dd><code>options</code> 引数の同名のプロパティで提供された値、または既定値が入ります。</dd>
- <dt><code>collation</code></dt>
- <dd><code>locale</code> が対応している場合は、 Unicode 拡張キー <code>"co"</code> を使用して要求された値、そうでなければ <code>"default"</code> です。</dd>
- <dt><code>numeric</code></dt>
- <dt><code>caseFirst</code></dt>
- <dd><code>options</code> 引数の同名のプロパティ、または Unicode 拡張キーの <code>"kn"</code> および <code>"kf"</code> で要求された値、または既定値が入ります。実装がこれらのプロパティに対応していない場合は、省略されます。</dd>
-</dl>
+- `locale`
+  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
+- `usage`, `sensitivity`, `ignorePunctuation`
+  - : `options` 引数の同名のプロパティで提供された値、または既定値が入ります。
+- `collation`
+  - : `locale` が対応している場合は、 Unicode 拡張キー "`co`" を使用して要求された値、そうでなければ "`default`" です。
+- `numeric`, `caseFirst`
+  - : `options` 引数の同名のプロパティ、または Unicode 拡張キーの "`kn`" および "`kf`" で要求された値、または既定値が入ります。実装がこれらのプロパティに対応していない場合は、省略されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_the_resolvedOptions_method" name="Using_the_resolvedOptions_method">resolvedOptions メソッドの使用</h3>
+### resolvedOptions メソッドの使用
 
-<pre class="brush: js notranslate">var de = new Intl.Collator('de', { sensitivity: 'base' })
+```js
+var de = new Intl.Collator('de', { sensitivity: 'base' })
 var usedOptions = de.resolvedOptions();
 
 usedOptions.locale;            // "de"
@@ -57,29 +58,16 @@ usedOptions.sensitivity;       // "base"
 usedOptions.ignorePunctuation; // false
 usedOptions.collation;         // "default"
 usedOptions.numeric;           // false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.collator.prototype.resolvedoptions', 'Intl.Collator.prototype.resolvedOptions')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.Collator.resolvedOptions")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-</ul>
+- {{jsxref("Intl.Collator")}}
