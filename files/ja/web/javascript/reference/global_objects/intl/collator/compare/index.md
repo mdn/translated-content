@@ -1,86 +1,77 @@
 ---
-title: Intl.Collator.prototype.compare
+title: Intl.Collator.prototype.compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 tags:
   - Collator
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
-  - Method
-  - Prototype
+  - ローカライズ
+  - メソッド
+  - プロトタイプ
+  - リファレンス
+browser-compat: javascript.builtins.Intl.Collator.compare
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.Collator.prototype.compare()</code></strong> メソッドは、2つの文字列をこの {{jsxref("Collator")}} オブジェクトのソート順に従って比較します。</p>
+**`Intl.Collator.prototype.compare()`** メソッドは、 2 つの文字列をこの {{jsxref("Intl.Collator")}} オブジェクトのソート順に従って比較します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>collator</var>.compare(<var>string1</var>, <var>string2</var>)</pre>
+```js
+compare(string1, string2)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>string1</var></code></dt>
- <dt><code><var>string2</var></code></dt>
- <dd>互いに比較する文字列です。</dd>
-</dl>
+- `string1`, `string2`
+  - : 互いに比較する文字列です。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>compare</code> ゲッター関数は、 <code>string1</code> と <code>string2</code> をこの {{jsxref("Collator")}} オブジェクトのソート順に従って比較した結果を数値で返します。 <code>string1</code> が <code>string2</code> の前にくる場合は負の値、 <code>string1</code> が <code>string2</code> の後にくる場合は正の値、等しいとみなされる場合は 0 を返します。</p>
+`compare` ゲッター関数は、 `string1` と `string2` をこの {{jsxref("Intl.Collator")}} オブジェクトのソート順に従って比較した結果を数値で返します。 `string1` が `string2` の前にくる場合は負の値、 `string1` が `string2` の後にくる場合は正の値、等しいとみなされる場合は 0 を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_compare_for_array_sort" name="Using_compare_for_array_sort">配列の並べ替えにおける compare の使用</h3>
+### 配列の並べ替えにおける compare の使用
 
-<p>配列の並べ替えのために <code>compare</code> ゲッター関数を使用します。なお、この関数は、取得元の collator にバインドされているので、直接 {{jsxref("Array.prototype.sort()")}} に渡すことができます。</p>
+配列の並べ替えのために `compare` ゲッター関数を使用します。なお、この関数は、取得元の collator にバインドされているので、直接 {{jsxref("Array.prototype.sort()")}} に渡すことができます。
 
-<pre class="brush: js notranslate">var a = ['Offenbach', 'Österreich', 'Odenwald'];
+```js
+var a = ['Offenbach', 'Österreich', 'Odenwald'];
 var collator = new Intl.Collator('de-u-co-phonebk');
 a.sort(collator.compare);
 console.log(a.join(', '));
 // → "Odenwald, Österreich, Offenbach"
-</pre>
+```
 
-<h3 id="Using_compare_for_array_search" name="Using_compare_for_array_search">配列の検索における compare の使用</h3>
+### 配列の検索における compare の使用
 
-<p>配列内の文字列の検索のために <code>compare</code> ゲッター関数を使用します。</p>
+配列内の文字列の検索のために `compare` ゲッター関数を使用します。
 
-<pre class="brush: js notranslate">var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
+```js
+var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
 var collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
 var s = 'congres';
-var matches = a.filter(v =&gt; collator.compare(v, s) === 0);
+var matches = a.filter(v => collator.compare(v, s) === 0);
 console.log(matches.join(', '));
 // → "Congrès, congres"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.collator.prototype.compare', 'Intl.Collator.prototype.compare')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.Collator.compare")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Collator", "Intl.Collator")}}</li>
- <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-</ul>
+- {{jsxref("Intl.Collator")}}
+- {{jsxref("String.prototype.localeCompare()")}}
