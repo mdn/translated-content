@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 <p>{{JSRef}}</p>
 
-<p><strong>Promise </strong>对象用于表示一个异步操作的最终完成 (或失败)及其结果值。</p>
+<p><strong>Promise </strong>对象用于表示一个异步操作的最终完成 (或失败) 及其结果值。</p>
 
 <p>若想了解 promises 的工作方式以及如何使用它们，我们建议您先阅读<a href="/zh-CN/docs/Web/JavaScript/Guide/Using_promises">使用 promises</a></p>
 
@@ -39,10 +39,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 </div>
 
 <div class="note">
-<p><strong>备注：</strong> 如果一个 promise 已经被兑现（fulfilled）或被拒绝（rejected），那么我们也可以说它处于<em>已敲定（settled）</em>状态。您还会听到一个经常跟 promise 一起使用的术语：<em>已决议（resolved）</em>，它表示 promise 已经处于已敲定(settled)状态，或者为了匹配另一个 promise 的状态被"锁定"了。Domenic Denicola 的 <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> 中有更多关于 promise 术语的细节可以供您参考。</p>
+<p><strong>备注：</strong> 如果一个 promise 已经被兑现（fulfilled）或被拒绝（rejected），那么我们也可以说它处于<em>已敲定（settled）</em>状态。您还会听到一个经常跟 promise 一起使用的术语：<em>已决议（resolved）</em>，它表示 promise 已经处于已敲定 (settled) 状态，或者为了匹配另一个 promise 的状态被"锁定"了。Domenic Denicola 的 <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> 中有更多关于 promise 术语的细节可以供您参考。</p>
 </div>
 
-<h3 id="Promise的链式调用">Promise的链式调用</h3>
+<h3 id="Promise的链式调用">Promise 的链式调用</h3>
 
 <p>我们可以用 <code>promise.then()</code>，<code>promise.catch()</code> 和 <code>promise.finally()</code> 这些方法将进一步的操作与一个变为已敲定状态的 promise 关联起来。这些方法还会返回一个新生成的 promise 对象，这个对象可以被非强制性的用来做链式调用，就像这样：</p>
 
@@ -63,13 +63,13 @@ const myPromise =
 
 <p>过早地处理被拒绝的 promise 会对之后 promise 的链式调用造成影响。不过有时候我们因为需要马上处理一个错误也只能这样做。（有关应对影响的技巧，请参见下面示例中的 <code>throw -999</code> ）另一方面，在没有迫切需要的情况下，可以在最后一个.catch() 语句时再进行错误处理，这种做法更加简单。</p>
 
-<p>这两个函数的签名很简单，它们只接受一个任意类型的参数。这些函数由您（编程者）编写。这些函数的终止状态决定着链式调用中下一个promise的"已敲定 （settled）"状态是什么。任何不是 <code>throw</code> 的终止都会创建一个"已决议（resolved）"状态，而以 <code>throw</code> 终止则会创建一个"已拒绝"状态。</p>
+<p>这两个函数的签名很简单，它们只接受一个任意类型的参数。这些函数由您（编程者）编写。这些函数的终止状态决定着链式调用中下一个 promise 的"已敲定（settled）"状态是什么。任何不是 <code>throw</code> 的终止都会创建一个"已决议（resolved）"状态，而以 <code>throw</code> 终止则会创建一个"已拒绝"状态。</p>
 
 <pre>handleFulfilled(value)       { /*...*/; return nextValue;  }
 handleRejection(reason)  { /*...*/; throw  nextReason; }
 handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
 
-<p>被返回的 <code>nextValue</code> 可能是另一个promise对象，这种情况下这个promise会被动态地插入链式调用。 </p>
+<p>被返回的 <code>nextValue</code> 可能是另一个 promise 对象，这种情况下这个 promise 会被动态地插入链式调用。 </p>
 
 <p>当 <code>.then()</code> 中缺少能够返回 promise 对象的函数时，链式调用就直接继续进行下一环操作。因此，链式调用可以在最后一个 <code>.catch()</code> 之前把所有的 <code>handleRejection</code> 都省略掉。类似地， <code>.catch()</code> 其实只是没有给 <code>handleFulfilled</code> 预留参数位置的 <code>.then()</code> 而已。</p>
 
@@ -112,18 +112,18 @@ console.log("immediate logging");
 
 <dl>
  <dt>{{jsxref("Promise.all", "Promise.all(iterable)")}}</dt>
- <dd>这个方法返回一个新的promise对象，该promise对象在iterable参数对象里所有的promise对象都成功的时候才会触发成功，一旦有任何一个iterable里面的promise对象失败则立即触发该promise对象的失败。这个新的promise对象在触发成功状态以后，会把一个包含iterable里所有promise返回值的数组作为成功回调的返回值，顺序跟iterable的顺序保持一致；如果这个新的promise对象触发了失败状态，它会把iterable里第一个触发失败的promise对象的错误信息作为它的失败错误信息。Promise.all方法常被用于处理多个promise对象的状态集合。（可以参考jQuery.when方法---译者注）</dd>
+ <dd>这个方法返回一个新的 promise 对象，该 promise 对象在 iterable 参数对象里所有的 promise 对象都成功的时候才会触发成功，一旦有任何一个 iterable 里面的 promise 对象失败则立即触发该 promise 对象的失败。这个新的 promise 对象在触发成功状态以后，会把一个包含 iterable 里所有 promise 返回值的数组作为成功回调的返回值，顺序跟 iterable 的顺序保持一致；如果这个新的 promise 对象触发了失败状态，它会把 iterable 里第一个触发失败的 promise 对象的错误信息作为它的失败错误信息。Promise.all 方法常被用于处理多个 promise 对象的状态集合。（可以参考 jQuery.when 方法 --- 译者注）</dd>
  <dt>{{jsxref("Promise.allSettled", "Promise.allSettled(iterable)")}}</dt>
- <dd>等到所有promises都已敲定（settled）（每个promise都已兑现（fulfilled）或已拒绝（rejected））。<br>
- 返回一个promise，该promise在所有promise完成后完成。并带有一个对象数组，每个对象对应每个promise的结果。</dd>
+ <dd>等到所有 promises 都已敲定（settled）（每个 promise 都已兑现（fulfilled）或已拒绝（rejected））。<br>
+ 返回一个 promise，该 promise 在所有 promise 完成后完成。并带有一个对象数组，每个对象对应每个 promise 的结果。</dd>
  <dt>{{jsxref("Promise.any", "Promise.any(iterable)")}}</dt>
- <dd>接收一个Promise对象的集合，当其中的一个 promise 成功，就返回那个成功的promise的值。</dd>
+ <dd>接收一个 Promise 对象的集合，当其中的一个 promise 成功，就返回那个成功的 promise 的值。</dd>
  <dt>{{jsxref("Promise.race", "Promise.race(iterable)")}}</dt>
- <dd>当iterable参数里的任意一个子promise被成功或失败后，父promise马上也会用子promise的成功返回值或失败详情作为参数调用父promise绑定的相应句柄，并返回该promise对象。</dd>
+ <dd>当 iterable 参数里的任意一个子 promise 被成功或失败后，父 promise 马上也会用子 promise 的成功返回值或失败详情作为参数调用父 promise 绑定的相应句柄，并返回该 promise 对象。</dd>
  <dt>{{jsxref("Promise.reject", "Promise.reject(reason)")}}</dt>
- <dd>返回一个状态为失败的Promise对象，并将给定的失败信息传递给对应的处理方法</dd>
+ <dd>返回一个状态为失败的 Promise 对象，并将给定的失败信息传递给对应的处理方法</dd>
  <dt>{{jsxref("Promise.resolve", "Promise.resolve(value)")}}</dt>
- <dd>返回一个状态由给定value决定的Promise对象。如果该值是thenable(即，带有then方法的对象)，返回的Promise对象的最终状态由then方法执行决定；否则的话(该value为空，基本类型或者不带then方法的对象),返回的Promise对象状态为fulfilled，并且将该value传递给对应的then方法。通常而言，如果您不知道一个值是否是Promise对象，使用Promise.resolve(value) 来返回一个Promise对象,这样就能将该value以Promise对象形式使用。</dd>
+ <dd>返回一个状态由给定 value 决定的 Promise 对象。如果该值是 thenable(即，带有 then 方法的对象)，返回的 Promise 对象的最终状态由 then 方法执行决定；否则的话 (该 value 为空，基本类型或者不带 then 方法的对象),返回的 Promise 对象状态为 fulfilled，并且将该 value 传递给对应的 then 方法。通常而言，如果您不知道一个值是否是 Promise 对象，使用 Promise.resolve(value) 来返回一个 Promise 对象，这样就能将该 value 以 Promise 对象形式使用。</dd>
 </dl>
 
 <h2 id="Promise_原型">Promise 原型</h2>
@@ -136,19 +136,19 @@ console.log("immediate logging");
 
 <p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/Promise/prototype','方法')}}</p>
 
-<h2 id="创建Promise">创建Promise</h2>
+<h2 id="创建Promise">创建 Promise</h2>
 
 <p><code>Promise</code> 对象是由关键字 <code>new</code> 及其构造函数来创建的。该构造函数会把一个叫做“处理器函数”（executor function）的函数作为它的参数。这个“处理器函数”接受两个函数——<code>resolve</code> 和 <code>reject</code> ——作为其参数。当异步任务顺利完成且返回结果值时，会调用 <code>resolve</code> 函数；而当异步任务失败且返回失败原因（通常是一个错误对象）时，会调用<code>reject</code> 函数。</p>
 
 <pre class="brush: js">const myFirstPromise = new Promise((resolve, reject) =&gt; {
-  // ?做一些异步操作，最终会调用下面两者之一:
+  // ?做一些异步操作，最终会调用下面两者之一：
   //
   //   resolve(someValue); // fulfilled
   // ?或
   //   reject("failure reason"); // rejected
 });</pre>
 
-<p>想要某个函数拥有promise功能，只需让其返回一个promise即可。</p>
+<p>想要某个函数拥有 promise 功能，只需让其返回一个 promise 即可。</p>
 
 <pre class="brush: js">function myAsyncFunction(url) {
   return new Promise((resolve, reject) =&gt; {
@@ -165,16 +165,16 @@ console.log("immediate logging");
 <h3 id="基础示例">基础示例</h3>
 
 <pre class="brush: js">let myFirstPromise = new Promise(function(resolve, reject){
-    //当异步代码执行成功时，我们才会调用resolve(...), 当异步代码失败时就会调用reject(...)
-    //在本例中，我们使用setTimeout(...)来模拟异步代码，实际编码时可能是XHR请求或是HTML5的一些API方法.
+    //当异步代码执行成功时，我们才会调用 resolve(...), 当异步代码失败时就会调用 reject(...)
+    //在本例中，我们使用 setTimeout(...) 来模拟异步代码，实际编码时可能是 XHR 请求或是 HTML5 的一些 API 方法。
     setTimeout(function(){
-        resolve("成功!"); //代码正常执行！
+        resolve("成功！"); //代码正常执行！
     }, 250);
 });
 
 myFirstPromise.then(function(successMessage){
-    //successMessage的值是上面调用resolve(...)方法传入的值.
-    //successMessage参数不一定非要是字符串类型，这里只是举个例子
+    //successMessage 的值是上面调用 resolve(...) 方法传入的值。
+    //successMessage 参数不一定非要是字符串类型，这里只是举个例子
     console.log("Yay! " + successMessage);
 });
 </pre>
@@ -185,9 +185,9 @@ myFirstPromise.then(function(successMessage){
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
-<p>本例展示了 <code>Promise</code> 的一些机制。 <code>testPromise()</code> 方法在每次点击 {{HTMLElement("button")}} 按钮时被调用，该方法会创建一个promise 对象，使用 {{domxref("window.setTimeout()")}} 让Promise等待 1-3 秒不等的时间来填充数据（通过Math.random()方法）。</p>
+<p>本例展示了 <code>Promise</code> 的一些机制。 <code>testPromise()</code> 方法在每次点击 {{HTMLElement("button")}} 按钮时被调用，该方法会创建一个 promise 对象，使用 {{domxref("window.setTimeout()")}} 让 Promise 等待 1-3 秒不等的时间来填充数据（通过 Math.random() 方法）。</p>
 
-<p>Promise 的值的填充过程都被日志记录（logged）下来，这些日志信息展示了方法中的同步代码和异步代码是如何通过Promise完成解耦的。</p>
+<p>Promise 的值的填充过程都被日志记录（logged）下来，这些日志信息展示了方法中的同步代码和异步代码是如何通过 Promise 完成解耦的。</p>
 
 <pre class="brush: js">'use strict';
 var promiseCount = 0;
@@ -199,7 +199,7 @@ function testPromise() {
     log.insertAdjacentHTML('beforeend', thisPromiseCount +
         ') 开始 (&lt;small&gt;同步代码开始&lt;/small&gt;)&lt;br/&gt;');
 
-    // 新构建一个 Promise 实例：使用Promise实现每过一段时间给计数器加一的过程，每段时间间隔为1~3秒不等
+    // 新构建一个 Promise 实例：使用 Promise 实现每过一段时间给计数器加一的过程，每段时间间隔为 1~3 秒不等
     let p1 = new Promise(
         // resolver 函数在 Promise 成功或失败时都可能被调用
        (resolve, reject) =&gt; {
@@ -241,13 +241,13 @@ function testPromise() {
 }
 </pre>
 
-<p>点击下面的按钮可以看到示例代码运行的效果，前提是您的浏览器支持 <code>Promise</code>。快速点击按钮多次您会观察到Promises填充值的过程。</p>
+<p>点击下面的按钮可以看到示例代码运行的效果，前提是您的浏览器支持 <code>Promise</code>。快速点击按钮多次您会观察到 Promises 填充值的过程。</p>
 
 <p>{{EmbedLiveSample("高级一点的例子", "500", "200")}}</p>
 
 <h2 id="使用_XHR_加载图像">使用 XHR 加载图像</h2>
 
-<p>另一个用了 Promise 和<a href="/en-US/docs/Web/API/XMLHttpRequest"> XMLHttpRequest</a> 加载一个图像的例子可在MDN GitHub<a href="https://github.com/mdn/js-examples/tree/master/promises-test"> promise-test</a> 中找到。 您也可以<a href="https://mdn.github.io/js-examples/promises-test/">看这个实例</a>。每一步都有注释可以让您详细的了解Promise和XHR架构。</p>
+<p>另一个用了 Promise 和<a href="/en-US/docs/Web/API/XMLHttpRequest"> XMLHttpRequest</a> 加载一个图像的例子可在 MDN GitHub<a href="https://github.com/mdn/js-examples/tree/master/promises-test"> promise-test</a> 中找到。 您也可以<a href="https://mdn.github.io/js-examples/promises-test/">看这个实例</a>。每一步都有注释可以让您详细的了解 Promise 和 XHR 架构。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -261,7 +261,7 @@ function testPromise() {
   <tr>
    <td>{{SpecName('ES2015', '#sec-promise-objects', 'Promise')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td>ECMA标准中的首次定义</td>
+   <td>ECMA 标准中的首次定义</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-promise-objects', 'Promise')}}</td>

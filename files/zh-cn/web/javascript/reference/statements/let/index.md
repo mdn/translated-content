@@ -201,7 +201,7 @@ switch(x) {
 
 #### 暂时性死区与 `typeof`
 
-如果使用 `typeof` 检测在暂时性死区中的变量, 会抛出 `ReferenceError` 异常:
+如果使用 `typeof` 检测在暂时性死区中的变量，会抛出 `ReferenceError` 异常：
 
 ```js example-bad
 // results in a 'ReferenceError'
@@ -232,7 +232,7 @@ test();
 
 由于外部变量 `foo` 有值，因此会执行 `if` 语句块，但是由于词法作用域，该值在块内不可用：`if` 快内的标识符 `foo` 是 `let foo`。表达式 `(foo + 55)` 会抛出异常，是因为 `let foo` 还没完成初始化，它仍然在暂时性死区里。
 
-在以下情况下，这种现象可能会使您感到困惑。`let n of n.a` 已经在for循环块的私有范围内，因此，标识符 `n.a` 被解析为位于指令本身（`let n`）中的“ `n` ”对象的属性“ `a` ”。
+在以下情况下，这种现象可能会使您感到困惑。`let n of n.a` 已经在 for 循环块的私有范围内，因此，标识符 `n.a` 被解析为位于指令本身（`let n`）中的“ `n` ”对象的属性“ `a` ”。
 
 在没有执行到它的初始化语句之前，它仍旧存在于暂时性死区中。
 
@@ -269,7 +269,7 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误, 因为 `var` 会将变量提升至块的顶部, 这会导致隐式地重复声明变量。
+然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误，因为 `var` 会将变量提升至块的顶部，这会导致隐式地重复声明变量。
 
 ```js example-bad
 let x = 1;

@@ -135,13 +135,13 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 ### 符号类型
 
-符号（Symbols）类型是**唯一**且**不可修改**的原始值，并且可以用来作为对象的键(key)（如下），在某些语言当中也有与之相似的类型（原子类型，atoms）。
+符号（Symbols）类型是**唯一**且**不可修改**的原始值，并且可以用来作为对象的键 (key)（如下），在某些语言当中也有与之相似的类型（原子类型，atoms）。
 
 更多详情可查看 {{Glossary("Symbol")}} 和 {{jsxref("Symbol")}}。
 
 ## 对象
 
-在计算机科学中, 对象（object）是指内存中的可以被{{Glossary("Identifier", "标识符")}}引用的一块区域。
+在计算机科学中，对象（object）是指内存中的可以被{{Glossary("Identifier", "标识符")}}引用的一块区域。
 
 ### 属性
 
@@ -172,7 +172,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
   <tbody>
     <tr>
       <td>[[Value]]</td>
-      <td>任何 Javascript 类型</td>
+      <td>任何 JavaScript 类型</td>
       <td>包含这个属性的数据值。</td>
       <td><code>undefined</code></td>
     </tr>
@@ -217,7 +217,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 | 特性       | 类型  | 描述                                              |
 | ---------- | ------- | --------------------------------------------- |
-| Read-only  | Boolean | ES5 [[Writable]] 属性的反状态(Reversed state)。 |
+| Read-only  | Boolean | ES5 [[Writable]] 属性的反状态 (Reversed state)。 |
 | DontEnum   | Boolean | ES5 [[Enumerable]] 属性的反状态。               |
 | DontDelete | Boolean | ES5 [[Configurable]] 属性的反状态。             |
 
@@ -252,7 +252,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组是表示列表或集合的最优选择。
 
-[类型数组(Typed Arrays)](/en-US/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
+[类型数组 (Typed Arrays)](/en-US/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
 
 | 类型                                         | 取值范围                                       | 占用字节数 | 描述                                                                                 | Web IDL 类型            | 对等的 C 语言类型                      |
 | --------------------------------- | --------------------------------- | ------------ | ----------------------------------------------------------- | ---------------------- | --------------------------------- |

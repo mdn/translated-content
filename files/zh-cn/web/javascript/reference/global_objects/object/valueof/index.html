@@ -21,14 +21,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <h2 id="Description">描述</h2>
 
-<p>JavaScript调用<code>valueOf</code>方法将对象转换为原始值。你很少需要自己调用<code>valueOf</code>方法；当遇到要预期的原始值的对象时，JavaScript会自动调用它。</p>
+<p>JavaScript 调用<code>valueOf</code>方法将对象转换为原始值。你很少需要自己调用<code>valueOf</code>方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。</p>
 
 <p>默认情况下，<code>valueOf</code>方法由{{jsxref("Object")}}后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则<code>valueOf</code>将返回对象本身。</p>
 
-<p>JavaScript的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的valueOf()方法的返回值和返回值类型均可能不同。</p>
+<p>JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。</p>
 
 <table class="standard-table">
- <caption>不同类型对象的valueOf()方法的返回值</caption>
+ <caption>不同类型对象的 valueOf() 方法的返回值</caption>
  <thead>
   <tr>
    <th scope="col"><strong>对象</strong></th>
@@ -99,7 +99,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 var array = ["ABC", true, 12, -5];
 console.log(array.valueOf() === array);   // true
 
-// Date：当前时间距1970年1月1日午夜的毫秒数
+// Date：当前时间距 1970 年 1 月 1 日午夜的毫秒数
 var date = new Date(2013, 7, 18, 23, 11, 59, 230);
 console.log(date.valueOf());   // 1376838719230
 
@@ -107,15 +107,15 @@ console.log(date.valueOf());   // 1376838719230
 var num =  15.26540;
 console.log(num.valueOf());   // 15.2654
 
-// 布尔：返回布尔值true或false
+// 布尔：返回布尔值 true 或 false
 var bool = true;
 console.log(bool.valueOf() === bool);   // true
 
-// new一个Boolean对象
+// new 一个 Boolean 对象
 var newBool = new Boolean(true);
-// valueOf()返回的是true，两者的值相等
+// valueOf() 返回的是 true，两者的值相等
 console.log(newBool.valueOf() == newBool);   // true
-// 但是不全等，两者类型不相等，前者是boolean类型，后者是object类型
+// 但是不全等，两者类型不相等，前者是 boolean 类型，后者是 object 类型
 console.log(newBool.valueOf() === newBool);   // false
 
 // Function：返回函数本身
@@ -138,9 +138,9 @@ console.log( obj.valueOf() === obj );   // true
 var str = "http://www.xyz.com";
 console.log( str.valueOf() === str );   // true
 
-// new一个字符串对象
+// new 一个字符串对象
 var str2 = new String("http://www.xyz.com");
-// 两者的值相等，但不全等，因为类型不同，前者为string类型，后者为object类型
+// 两者的值相等，但不全等，因为类型不同，前者为 string 类型，后者为 object 类型
 console.log( str2.valueOf() === str2 );   // false</pre>
 
 <p> </p>

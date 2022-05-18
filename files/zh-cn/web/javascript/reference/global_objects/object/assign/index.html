@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <p>如果目标对象中的属性具有相同的键，则属性将被源对象中的属性覆盖。后面的源对象的属性将类似地覆盖前面的源对象的属性。</p>
 
-<p><code>Object.assign</code> 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的<code>[[Get]]</code>和目标对象的<code>[[Set]]</code>，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用{{jsxref("Object.getOwnPropertyDescriptor()")}}和{{jsxref("Object.defineProperty()")}} 。</p>
+<p><code>Object.assign</code> 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的<code>[[Get]]</code>和目标对象的<code>[[Set]]</code>，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含 getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用{{jsxref("Object.getOwnPropertyDescriptor()")}}和{{jsxref("Object.defineProperty()")}} 。</p>
 
 <p>{{jsxref("String")}}类型和 {{jsxref("Symbol")}} 类型的属性都会被拷贝。</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h2 id="Polyfill_2">Polyfill</h2>
 
-<p>这个 <a href="/zh-CN/docs/Glossary/Polyfill">polyfill</a> 不支持 symbol 属性, 由于 ES5 中本来就不存在 symbols :</p>
+<p>这个 <a href="/zh-CN/docs/Glossary/Polyfill">polyfill</a> 不支持 symbol 属性，由于 ES5 中本来就不存在 symbols :</p>
 
 <pre>if (typeof Object.assign !== 'function') {
   // Must be writable: true, enumerable: false, configurable: true
@@ -224,7 +224,7 @@ console.log(target.baz);  // undefined，第三个源对象更是不会被拷贝
 };
 
 let copy = Object.assign({}, obj);
-console.log(copy); // { foo: 1, bar: 2 } copy.bar的值来自obj.bar的getter函数的返回值
+console.log(copy); // { foo: 1, bar: 2 } copy.bar 的值来自 obj.bar 的 getter 函数的返回值
 
 // 下面这个函数会拷贝所有自有属性的属性描述符
 function completeAssign(target, ...sources) {
@@ -234,7 +234,7 @@ function completeAssign(target, ...sources) {
       return descriptors;
     }, {});
 
-    // Object.assign 默认也会拷贝可枚举的Symbols
+    // Object.assign 默认也会拷贝可枚举的 Symbols
     Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {

@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
-<div><strong>Object.setPrototypeOf() </strong>方法设置一个指定的对象的原型 ( 即, 内部[[Prototype]]属性）到另一个对象或  {{jsxref("null")}}。</div>
+<div><strong>Object.setPrototypeOf() </strong>方法设置一个指定的对象的原型 ( 即，内部 [[Prototype]] 属性）到另一个对象或  {{jsxref("null")}}。</div>
 
 
 
@@ -34,14 +34,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
  <dt>obj</dt>
  <dd>要设置其原型的对象。.</dd>
  <dt>prototype</dt>
- <dd>该对象的新原型(一个对象 或 {{jsxref("null")}}).</dd>
+ <dd>该对象的新原型 (一个对象 或 {{jsxref("null")}}).</dd>
 </dl>
 
 <h2 id="Description">描述</h2>
 
-<p>如果对象的[[Prototype]]被修改成不可扩展(通过 {{jsxref("Object.isExtensible()")}}查看)，就会抛出 {{jsxref("TypeError")}}异常。如果<code>prototype</code>参数不是一个对象或者{{jsxref("null")}}(例如，数字，字符串，boolean，或者 {{jsxref("undefined")}})，则什么都不做。否则，该方法将<code>obj</code>的<code>[[Prototype]]</code>修改为新的值。</p>
+<p>如果对象的 [[Prototype]] 被修改成不可扩展 (通过 {{jsxref("Object.isExtensible()")}}查看)，就会抛出 {{jsxref("TypeError")}}异常。如果<code>prototype</code>参数不是一个对象或者{{jsxref("null")}}(例如，数字，字符串，boolean，或者 {{jsxref("undefined")}})，则什么都不做。否则，该方法将<code>obj</code>的<code>[[Prototype]]</code>修改为新的值。</p>
 
-<p><code>Object.setPrototypeOf()是</code>ECMAScript 6最新草案中的方法，相对于 {{jsxref("Object.prototype.__proto__")}} ，它被认为是修改对象原型更合适的方法</p>
+<p><code>Object.setPrototypeOf() 是</code>ECMAScript 6 最新草案中的方法，相对于 {{jsxref("Object.prototype.__proto__")}} ，它被认为是修改对象原型更合适的方法</p>
 
 <h2 id="示例">示例</h2>
 
@@ -51,10 +51,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 <p>我们必须借助非标准的  </p>
 
-<p>使用较旧的 {{jsxref("Object.prototype.__proto__")}} 属性，我们可以很容易地定义Object.setPrototypeOf 如果它不可用：</p>
+<p>使用较旧的 {{jsxref("Object.prototype.__proto__")}} 属性，我们可以很容易地定义 Object.setPrototypeOf 如果它不可用：</p>
 
 <pre>if (!Object.setPrototypeOf) {
-    // 仅适用于Chrome和FireFox，在IE中不工作：
+    // 仅适用于 Chrome 和 FireFox，在 IE 中不工作：
      Object.prototype.setPrototypeOf = function(obj, proto) {
          if(obj.__proto__) {
              obj.__proto__ = proto;

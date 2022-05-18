@@ -33,21 +33,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <h2 id="Description">描述</h2>
 
-<p>该方法允许对一个属性的描述进行检索。在 Javascript 中， <dfn>属性</dfn> 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.</p>
+<p>该方法允许对一个属性的描述进行检索。在 JavaScript 中， <dfn>属性</dfn> 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.</p>
 
 <p>一个属性描述符是一个记录，由下面属性当中的某些组成的：</p>
 
 <dl>
  <dt><code><strong>value</strong></code></dt>
- <dd>该属性的值(仅针对数据属性描述符有效)</dd>
+ <dd>该属性的值 (仅针对数据属性描述符有效)</dd>
  <dt><code><strong>writable</strong></code></dt>
- <dd><code>当且仅当属性的值可以被改变时为true。(仅针对数据属性描述有效)</code></dd>
+ <dd><code>当且仅当属性的值可以被改变时为 true。(仅针对数据属性描述有效)</code></dd>
  <dt><code><strong>get</strong></code></dt>
- <dd>获取该属性的访问器函数（getter）。如果没有访问器， 该值为undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
+ <dd>获取该属性的访问器函数（getter）。如果没有访问器， 该值为 undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
  <dt><code><strong>set</strong></code></dt>
- <dd>获取该属性的设置器函数（setter）。 如果没有设置器， 该值为undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
+ <dd>获取该属性的设置器函数（setter）。 如果没有设置器， 该值为 undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
  <dt><code><strong>configurable</strong></code></dt>
- <dd><code>当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为true。</code></dd>
+ <dd><code>当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为 true。</code></dd>
  <dt><code><strong>enumerable</strong></code></dt>
  <dd>当且仅当指定对象的属性可以被枚举出时，为 <code>true</code>。</dd>
 </dl>
