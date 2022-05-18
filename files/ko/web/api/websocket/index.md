@@ -26,7 +26,7 @@ translation_of: Web/API/WebSocket
 ## 속성
 
 - {{domxref("WebSocket.binaryType")}}
-  - : 연결이 사용하는 이진 데이터의 유형입니다.
+  - : 연결에 사용되는 이진 데이터의 유형입니다.
 - {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
   - : 큐에 대기 중인 데이터의 바이트 수입니다.
 - {{domxref("WebSocket.extensions")}} {{readonlyinline}}
