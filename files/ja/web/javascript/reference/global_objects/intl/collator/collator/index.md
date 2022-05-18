@@ -3,108 +3,143 @@ title: Intl.Collator() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 tags:
   - Collator
-  - Constructor
+  - コンストラクター
+  - 国際化
   - Intl
   - JavaScript
-  - Reference
+  - ローカライズ
+  - リファレンス
+browser-compat: javascript.builtins.Intl.Collator.Collator
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.Collator</code></strong> オブジェクトは、言語を考慮した文字列の比較を可能にするオブジェクトである collator のコンストラクターです。</p>
+**`Intl.Collator()`** コンストラクターは、言語を考慮した文字列の比較を可能にする
+{{jsxref("Intl/Collator", "Intl.Collator")}} オブジェクトを生成します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new Intl.Collator([<var>locales</var>[, <var>options</var>]])</pre>
+```js
+new Intl.Collator()
+new Intl.Collator(locales)
+new Intl.Collator(locales, options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>locales</var></code></dt>
- <dd>
- <p>任意。 BCP47 言語タグの文字列またはその配列。 <code>locales</code> 引数の一般的な形式や解釈については {{jsxref("Global_Objects/Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。次のUnicode拡張キーが使用可能です。</p>
+- `locales` {{optional_inline}}
 
- <dl>
-  <dt><code>co</code></dt>
-  <dd>特定のロケールにおけるバリアントの比較方法を指定します。指定可能な値には "<code>big5han</code>", "<code>dict</code>", "<code>direct</code>", "<code>ducet</code>", "<code>gb2312</code>", "<code>phonebk</code>", "<code>phonetic</code>", "<code>pinyin</code>", "<code>reformed</code>", "<code>searchjl</code>", "<code>stroke</code>", "<code>trad</code>", "<code>unihan</code>" があります。なお "<code>standard</code>" と"<code>search</code>" については、 <code>options</code> 引数の <code>usage</code> プロパティによって代替されるため無視されます (下記参照)。</dd>
-  <dt><code>kn</code></dt>
-  <dd>"1" &lt; "2" &lt; "10" のように数値として比較を行うかどうかです。可能な値は "<code>true</code>" および "<code>false</code>" です。このオプションは <code><var>options</var></code> プロパティや、 Unicode 拡張キーで指定できます。両方で指定された場合、 <code><var>options</var></code> プロパティの指定が優先されます。</dd>
-  <dt><code>kf</code></dt>
-  <dd>大文字と小文字のどちらを先に並べるかを指定します。指定可能な値は "<code>upper</code>", "<code>lower</code>", "<code>false</code>" (ロケールの既定値を使用) です。このオプションは <code><var>options</var></code> プロパティや、 Unicode 拡張キーで指定できます。両方で指定された場合、 <code><var>options</var></code> プロパティの指定が優先されます。</dd>
- </dl>
- </dd>
- <dt><code><var>options</var></code></dt>
- <dd>
- <p>任意。次のプロパティの一部またはすべてを持つオブジェクトです。</p>
+  - : 任意。 BCP47 言語タグの文字列またはその配列。 `locales` 引数の一般的な形式や解釈については {{jsxref("Global_Objects/Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>ロケール文字列のマッチングに使用するアルゴリズム。指定可能な値は "<code>lookup</code>" と "<code>best fit</code>" で、既定値は "<code>best fit</code>" です。このオプションの詳細については {{jsxref("Global_Objects/Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。</dd>
-  <dt><code>usage</code></dt>
-  <dd>ソート用の比較をするのか、文字列検索用の比較をするのか。指定可能な値は "<code>sort</code>" または "<code>search</code>" で、既定値は "<code>sort</code>" です。</dd>
-  <dt><code>sensitivity</code></dt>
-  <dd>
-  <p>どの程度の文字の違いまでを区別するかです。以下の値を指定可能です。</p>
+  次の Unicode 拡張キーが使用可能です。
 
-  <ul>
-   <li>"<code>base</code>": ベース文字が異なれば、異なる文字であると評価します。 例: <code>a ≠ b</code>、 <code>a = á</code>、 <code>a = A</code></li>
-   <li>"<code>accent</code>": ベース文字が異なるか、またはアクセントその他の発音区別符号が異なれば、異なる文字であると評価します。 例: <code>a ≠ b</code>、 <code>a ≠ á</code>、 <code>a = A</code></li>
-   <li>"<code>case</code>": ベース文字が異なるか、ベース文字が同一でも大文字小文字が異なれば、異なる文字であると評価します。 例: <code>a ≠ b</code>、 <code>a = á</code>、 <code>a ≠ A</code></li>
-   <li>"<code>variant</code>": ベース文字、アクセントその他の発音区別符号、および大文字小文字のいずれかが異なれば、異なる文字であると評価します。他の違いも考慮されるかもしれません。 例: <code>a ≠ b</code>、 <code>a ≠ á</code>、 <code>a ≠ A</code></li>
-  </ul>
+    > **Note:** これらのキーは通常、 `options` でも設定することができます（下記でリストアップします）。両方が設定されている場合は、 `options` のプロパティが優先されます。
 
-  <p>既定値は、 <code>usage</code> が "<code>sort</code>" の場合は "<code>variant</code>"、 "<code>search</code>"の場合はロケール依存です。</p>
-  </dd>
-  <dt><code>ignorePunctuation</code></dt>
-  <dd>句読点を無視するかどうか。指定可能な値は <code>true</code> または <code>false</code> で、既定値は <code>false</code> です。</dd>
-  <dt><code>numeric</code></dt>
-  <dd>"1" &lt; "2" &lt; "10" のように数値として比較を行うかどうかです。可能な値は <code>true</code> および <code>false</code> です。既定値は <code>false</code> です。このオプションは <code><var>options</var></code> プロパティや、 Unicode 拡張キーで指定できます。両方で指定された場合、 <code><var>options</var></code> プロパティの指定が優先されます。実装はこのプロパティに対応することが要件とはされていません。</dd>
-  <dt><code>caseFirst</code></dt>
-  <dd>大文字と小文字のどちらを先に並べるかです。指定可能な値は "<code>upper</code>", "<code>lower</code>", "<code>false</code>" (ロケールの既定の動作) です。大文字と小文字のどちらを先に並べるかは <code><var>options</var></code> プロパティでも Unicode 拡張キーでも指定可能です。両方で指定された場合、 <code><var>options</var></code> プロパティの指定が優先されます。実装はこのプロパティに対応することが要件とはされていません。</dd>
- </dl>
- </dd>
-</dl>
+    - `co`
+      - : 特定のロケールにおける比較方法の変化形を指定します。指定可能な値は次の通りです。
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk` （ドイツ語のみ対応）
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
+        > **Note:**  このオプションは `options` プロパティ "`collation`" からも設定できます。
+    - `kn`
+      - : "1" < "2" < "10" のような数値照合順序を使用するかどうかを指定します。設定可能な値は "`true`" と "`false`" です。
+        このオプションは、 `options` の "`numeric`" プロパティでも設定することができます。
+    - `kf`
+      - : 大文字と小文字のどちらを先に並べるかを指定します。使用できる値は "`upper`", "`lower`", "`false`" （ロケールの既定値を使用）です。このオプションは、 `options` の "`caseFirst`" プロパティでも設定することができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+- `options` {{optional_inline}}
 
-<h3 id="Using_Collator" name="Using_Collator">Collator の使用</h3>
+  - : 任意。以下のプロパティの一部またはすべてを持つオブジェクトです。
 
-<p>次の例では、文字列が別の文字列の前であるか、後であるか、または同じレベルで発生したのかの様々な可能性のある結果を示しています。</p>
+    - `localeMatcher`
+      - : ロケールの照合に使用するアルゴリズム。指定可能な値は "`lookup`" と "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細については {{jsxref("Global_Objects/Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
+    - `usage`
+      - : この比較がソートのためなのか、それとも一致する文字列を検索するためなのか。使用可能な値は "`sort`" および "`search`" で、既定値は "`sort`" です。
+    - `sensitivity`
 
-<pre class="brush: js notranslate">console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
-console.log(new Intl.Collator().compare('c', 'a')); // → a positive value
+      - : 文字の違いをどの程度までを区別するかです。以下の値を指定可能です。
+
+        - "`base`": ベース文字が異なれば、異なる文字であると評価します。 例: a ≠ b, a = á, a = A
+        - "`accent`": ベース文字が異なるか、またはアクセントその他の発音区別符号が異なれば、異なる文字であると評価します。 例: a ≠ b, a ≠ á, a = A
+        - "`case`": ベース文字が異なるか、ベース文字が同一でも大文字小文字が異なれば、異なる文字であると評価します。 例: a ≠ b, a = á, a ≠ A
+        - "`variant`": ベース文字、アクセントその他の発音区別符号、および大文字小文字のいずれかが異なれば、異なる文字であると評価します。他の違いも考慮されるかもしれません。 例: a ≠ b, a ≠ á, a ≠ A
+
+        既定値は、 `usage` が "`sort`" の場合は "`variant`"、 "`search`" の場合はロケールに依存します。
+
+    - `ignorePunctuation`
+      - : 句読点を無視するかどうか。指定可能な値は `true` または `false` で、既定値は `false` です。
+    - `numeric`
+
+      - : "1" < "2" < "10" のように数値として比較を行うかどうかです。可能な値は `true` および `false` です。既定値は `false` です。
+
+        > **Note:** このオプションは Unicode 拡張キーの `kn` でも設定することができます。両方が指定された場合は、この `options` のプロパティが優先されます。
+
+    - `caseFirst`
+
+      - : 大文字と小文字のどちらを先に並べるかです。指定可能な値は "`upper`", "`lower`", "`false`" （ロケールの既定の動作）です。大文字と小文字のどちらを先に並べるかは `options` のプロパティでも Unicode 拡張キーでも指定可能です。両方で指定された場合、 `options` プロパティの指定が優先されます。
+
+        > **Note:** このオプションは Unicode 拡張キーの `kf` でも設定することができます。両方が指定された場合は、この `options` のプロパティが優先されます。
+
+    - `collation`
+      - : 特定のロケールにおける比較方法の変化形を指定します。指定可能な値は次の通りです。
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk` （ドイツ語のみ対応）
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
+        > **Note:** このオプションは Unicode 拡張キーの `co` でも設定することができます。両方が指定された場合は、この `options` のプロパティが優先されます。
+
+## 例
+
+### Collator の使用
+
+次の例では、文字列が別の文字列の前であるか、後であるか、または同じレベルで発生したのかの様々な可能性のある結果を示しています。
+
+```js
+console.log(new Intl.Collator().compare('a', 'c')); // → 負の値
+console.log(new Intl.Collator().compare('c', 'a')); // → 正の値
 console.log(new Intl.Collator().compare('a', 'a')); // → 0
-</pre>
+```
 
-<p>上記のコードで示された結果は、ブラウザーやブラウザーのバージョンによって異なる可能性があることに注意してください。これは、値が実装固有のものであるためです。つまり、仕様では前後の値が負と正の値であることだけが要求されています。</p>
+上記のコードで示された結果は、ブラウザーやブラウザーのバージョンによって異なる可能性があることに注意してください。これは、値が実装固有のものであるためです。つまり、仕様では前後の値が負と正の値であることだけが要求されています。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-the-intl-collator-constructor', 'Intl.Collator constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.Collator.Collator")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
-</ul>
+- {{jsxref("Intl.Collator")}}
+- {{jsxref("Intl")}}
