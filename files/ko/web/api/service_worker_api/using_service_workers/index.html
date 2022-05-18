@@ -86,7 +86,9 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
  <br>
  Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/promises-test/">look at it running live</a>.)</p>
 
-<p>{{note("A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.")}}</p>
+<div class="notecard note">
+  A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.</p>
+</div>
 
 <pre class="brush: js">function imgLoad(url) {
   return new Promise(function(resolve, reject) {
