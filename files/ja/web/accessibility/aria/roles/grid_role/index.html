@@ -47,7 +47,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 
 <p>セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">gridcell</a></code>) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code>) ロールと列ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>) ロールがあります。 セル要素は、行 (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code>) ロールを持つ要素によって所有される必要があります。 行は行グループ (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>) を使用してグループ化できます。</p>
 
-<p>グリッドをインタラクティブなウィジェットとして使用する場合は、{{anch("Keyboard interactions","キーボードインタラクション")}}を実装する必要があります。</p>
+<p>グリッドをインタラクティブなウィジェットとして使用する場合は、<a href="#keyboard_interactions">キーボードインタラクション</a>を実装する必要があります。</p>
 
 <p> </p>
 
@@ -661,7 +661,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティに関する懸念</h2>
 
-<p>{{anch("Keyboard interactions","キーボードインタラクション")}}が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (<code>grid</code>) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。</p>
+<p><a href="#keyboard_interactions">キーボードインタラクション</a>が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (<code>grid</code>) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。</p>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
