@@ -1,54 +1,39 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - TypeError
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
+browser-compat: javascript.builtins.TypeError
 ---
 {{JSRef}}
 
-L'objet **`TypeError`** représente une erreur qui intervient lorsque la valeur n'est pas du type attendu.
+Un objet **`TypeError`** représente une erreur qui se produit généralement (mais pas toujours) lorsqu'une opération n'a pu avoir lieu parce qu'une valeur n'a pas le type attendu.
 
-## Syntaxe
+Une exception `TypeError` peut être levée lorsque&nbsp;:
 
-    new TypeError([message[, nomFichier[, numLigne]]])
+- Un opérande ou un argument passé à une fonction est incompatible avec le type attendu par l'opérateur ou la fonction
+- On tente de modifier une valeur qui ne peut pas être changée
+- On tente d'utiliser une valeur de façon inappropriée.
 
-### Paramètres
+## Constructeur
 
-- `message`
-  - : Paramètre optionnel. Une description de l'erreur dans un format compréhensible par un humain.
-- `nomFichier` {{Non-standard_inline}}
-  - : Paramètre optionnel. Le nom du fichier contenant le code qui a causé l'erreur.
-- `numLigne` {{Non-standard_inline}}
-  - : Paramètre optionnel. Le numéro de ligne du code qui a causé l'erreur
+- [`TypeError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError/TypeError)
+  - : Crée un nouvel objet `TypeError`.
 
-## Description
+## Propriétés des instances
 
-Une exception `TypeError` est levée lorsque qu'un argument ou un opérande est utilisé avec une fonction ou un opérateur incompatible avec le type attendu.
-
-## Propriétés
-
-- {{jsxref("TypeError.prototype")}}
-  - : Permet d'ajouter des propriétés aux instances de `TypeError`.
-
-## Méthodes
-
-L'objet global `TypeError` ne contient pas de méthodes qui lui sont propres. Il possède malgré tout des méthodes héritées via sa chaîne de prototypes.
-
-## Instances de TypeError
-
-### Propriétés
-
-{{ page('fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError/prototype', 'Propri.C3.A9t.C3.A9s') }}
-
-### Méthodes
-
-{{ page('fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError/prototype', 'M.C3.A9thodes') }}
+- [`TypeError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
+  - : Le message d'erreur.
+- [`TypeError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+  - : Le nom de l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`TypeError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
+  - : Le chemin du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`TypeError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
+  - : Le numéro de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`TypeError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
+  - : Le numéro de colonne de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`TypeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+  - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples
 
@@ -58,13 +43,13 @@ L'objet global `TypeError` ne contient pas de méthodes qui lui sont propres. Il
 try {
   null.f();
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message);              // "null has no properties"
-  console.log(e.name);                 // "TypeError"
-  console.log(e.fileName);             // "Scratchpad/1"
-  console.log(e.lineNumber);           // 2
-  console.log(e.columnNumber);         // 2
-  console.log(e.stack);                // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError);  // true
+  console.log(e.message);               // "null has no properties"
+  console.log(e.name);                  // "TypeError"
+  console.log(e.fileName);              // "Scratchpad/1"
+  console.log(e.lineNumber);            // 2
+  console.log(e.columnNumber);          // 2
+  console.log(e.stack);                 // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -72,32 +57,26 @@ try {
 
 ```js
 try {
-  throw new TypeError('Coucou', "unFichier.js", 10);
+  throw new TypeError('Coucou', 'unFichier.js', 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message);              // "Coucou"
-  console.log(e.name);                 // "TypeError"
-  console.log(e.fileName);             // "unFichier.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError);  // true
+  console.log(e.message);               // "Coucou"
+  console.log(e.name);                  // "TypeError"
+  console.log(e.fileName);              // "unFichier.js"
+  console.log(e.lineNumber);            // 10
+  console.log(e.columnNumber);          // 0
+  console.log(e.stack);                 // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypeError")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Error")}}
-- {{jsxref("TypeError.prototype")}}
+- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)

@@ -81,13 +81,13 @@ Ces méthodes recupèrent les nœuds d'un segment et modifient le contenu d'un s
 
 Cette section décrit les méthodes de range qui sont particulières à Mozilla et ne font pas partie des spécifications DOM W3C.
 
-- [compareNode](/fr/docs/Web/API/range/compareNode) {{ Obsolete_inline() }}
+- [compareNode](/fr/docs/Web/API/range/compareNode) {{deprecated_inline}}
   - : Renvoie une constante qui indique si le nœud est avant, après, dans ou englobe le segment.
 - [comparePoint](/fr/docs/Web/API/range/comparePoint)
   - : Renvoie -1, 0, ou 1, indiquant si le point se trouve avant, après, ou dans le segment.
 - [createContextualFragment](/fr/docs/Web/API/range/createContextualFragment)
   - : Renvoie un fragment de document créé à partir d'un morceau de code donné.
-- [intersectsNode](/fr/docs/Web/API/range/intersectsNode) {{ Obsolete_inline() }}
+- [intersectsNode](/fr/docs/Web/API/range/intersectsNode) {{deprecated_inline}}
   - : Renvoie un booléen indiquant si un nœud donné a une intersection avec le segment.
 - [isPointInRange](/fr/docs/Web/API/range/isPointInRange)
   - : Renvoie un booléen indiquant si le point donné est dans le segment.

@@ -90,7 +90,7 @@ second.onchange = function() {
 
 <p class="note"><strong>Примечание</strong>: Обратите внимание, что <font face="consolas, Liberation Mono, courier, monospace"><code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</font></p>
 
-<p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте {{anch("Transferring data to and from workers: further details")}} для более подробного объяснения.</p>
+<p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте <a href="#transferring_data_to_and_from_workers:_further_details">Transferring data to and from workers: further details</a> для более подробного объяснения.</p>
 
 <h3 id="Завершение_работы_worker-а">Завершение работы worker-а</h3>
 

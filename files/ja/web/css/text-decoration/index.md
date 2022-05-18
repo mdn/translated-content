@@ -122,5 +122,6 @@ text-decoration: unset;
 
 ## 関連情報
 
-- text-decoration の個別指定プロパティは、 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} です。
+- text-decoration の個別指定プロパティは、 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}}、 {{cssxref("text-decoration-thickness")}} です。
+- {{cssxref("text-decoration-skip-ink")}}、 {{cssxref("text-underline-offset")}}、 {{cssxref("text-underline-position")}} 属性もテキストの装飾に影響しますが、一括指定プロパティには含まれません。
 - {{cssxref("list-style")}} 属性は HTML の {{HTMLElement("ol")}} および {{HTMLElement("ul")}} のリストの表示方法を制御します。

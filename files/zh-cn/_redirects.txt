@@ -448,7 +448,7 @@
 /zh-CN/docs/DOM/window.moveTo	/zh-CN/docs/Web/API/Window/moveTo
 /zh-CN/docs/DOM/window.mozAnimationStartTime	/zh-CN/docs/Web/API/Animation/startTime
 /zh-CN/docs/DOM/window.navigator	/zh-CN/docs/Web/API/Window/navigator
-/zh-CN/docs/DOM/window.navigator.battery	/zh-CN/docs/Web/API/Navigator/battery
+/zh-CN/docs/DOM/window.navigator.battery	/zh-CN/docs/conflicting/Web/API/Navigator/getBattery
 /zh-CN/docs/DOM/window.navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/DOM/window.navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled
 /zh-CN/docs/DOM/window.navigator.isLocallyAvailable	/zh-CN/docs/Web/API/Navigator/mozIsLocallyAvailable
@@ -1507,13 +1507,14 @@
 /zh-CN/docs/Web/API/MutationObserverInit	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe_2f2addbfa1019c23a6255648d6526387
 /zh-CN/docs/Web/API/MutationObserverInit/attributeFilter	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe
 /zh-CN/docs/Web/API/MutationObserverInit/childList	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe_7e3ecc5c48e14f4ecfdbe7d3aa534870
-/zh-CN/docs/Web/API/Navigator.battery	/zh-CN/docs/Web/API/Navigator/battery
+/zh-CN/docs/Web/API/Navigator.battery	/zh-CN/docs/conflicting/Web/API/Navigator/getBattery
 /zh-CN/docs/Web/API/Navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/Web/API/Navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled
 /zh-CN/docs/Web/API/Navigator.mozIsLocallyAvailable	/zh-CN/docs/Web/API/Navigator/mozIsLocallyAvailable
 /zh-CN/docs/Web/API/Navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
 /zh-CN/docs/Web/API/Navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/Web/API/Navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
+/zh-CN/docs/Web/API/Navigator/battery	/zh-CN/docs/conflicting/Web/API/Navigator/getBattery
 /zh-CN/docs/Web/API/NavigatorGeolocation.geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation/geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/Node.appendChild	/zh-CN/docs/Web/API/Node/appendChild
@@ -2120,6 +2121,7 @@
 /zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
 /zh-CN/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /zh-CN/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/zh-CN/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
+/zh-CN/docs/Web/HTML/Element/Input/datetime	/zh-CN/docs/conflicting/Web/HTML/Element/input/datetime-local
 /zh-CN/docs/Web/HTML/Element/Input/月份	/zh-CN/docs/Web/HTML/Element/input/month
 /zh-CN/docs/Web/HTML/Element/Input/范围	/zh-CN/docs/Web/HTML/Element/input/range
 /zh-CN/docs/Web/HTML/Element/Video/canplay_event	/zh-CN/docs/Web/API/HTMLMediaElement/canplay_event
@@ -2146,6 +2148,7 @@
 /zh-CN/docs/Web/HTML/动作	/zh-CN/docs/Glossary/speculative_parsing
 /zh-CN/docs/Web/HTML/属性	/zh-CN/docs/Web/HTML/Attributes
 /zh-CN/docs/Web/HTTP/Access_control_CORS	/zh-CN/docs/Web/HTTP/CORS
+/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/选择_www_或非_www_URL_作为域名	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
@@ -2176,7 +2179,7 @@
 /zh-CN/docs/Web/HTTP/Response_codes/204	/zh-CN/docs/Web/HTTP/Status/204
 /zh-CN/docs/Web/HTTP/Response_codes/501	/zh-CN/docs/Web/HTTP/Status/501
 /zh-CN/docs/Web/HTTP/X-Frame-Options	/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options
-/zh-CN/docs/Web/HTTP/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-CN/docs/Web/HTTP/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/Web/HTTP/消息	/zh-CN/docs/Web/HTTP/Messages
 /zh-CN/docs/Web/HTTP/策略特征	/zh-CN/docs/Web/HTTP/Feature_Policy
 /zh-CN/docs/Web/HTTP/策略特征/Using_Feature_Policy	/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy
@@ -2407,7 +2410,7 @@
 /zh-CN/docs/XSLT/Elements	/zh-CN/docs/Web/XSLT/Element
 /zh-CN/docs/XSLT:Elements	/zh-CN/docs/Web/XSLT/Element
 /zh-CN/docs/d_temp	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/zh-CN/docs/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/en	/en-US/
 /zh-CN/docs/keypress	/zh-CN/docs/Web/API/Document/keypress_event
 /zh-CN/docs/learn/Accessibility/CSS和JavaScript	/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript

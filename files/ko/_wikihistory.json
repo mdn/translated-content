@@ -715,13 +715,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Plugin": {
-    "modified": "2019-01-16T15:11:14.478Z",
-    "contributors": [
-      "teoli",
-      "Anonymous"
-    ]
-  },
   "Glossary/Polyfill": {
     "modified": "2019-11-18T11:28:34.172Z",
     "contributors": [
@@ -2648,32 +2641,6 @@
       "teoli",
       "fscholz",
       "Netaras"
-    ]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:51:24.922Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "zziuni",
-      "frankradio",
-      "galcyurio",
-      "Vi01et",
-      "jswisher"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.835Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:51:25.656Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Silvermist"
     ]
   },
   "MDN/Yari": {
@@ -5427,16 +5394,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2019-03-23T23:26:40.127Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Cho.Eun",
-      "teoli",
-      "oohii"
-    ]
-  },
   "Web/API/Navigator/connection": {
     "modified": "2019-03-23T23:26:48.403Z",
     "contributors": [
@@ -5450,6 +5407,16 @@
     "modified": "2020-10-15T22:19:19.512Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2019-03-23T23:26:40.127Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Cho.Eun",
+      "teoli",
+      "oohii"
     ]
   },
   "Web/API/Navigator/mediaDevices": {
@@ -10838,7 +10805,7 @@
       "devcken"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2019-03-23T22:27:00.710Z",
     "contributors": [
       "devcken"

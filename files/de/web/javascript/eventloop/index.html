@@ -50,7 +50,7 @@ console.log(bar(7)); // gibt 42 zurück
 
 <p>Eine JavaScript Laufzeitumgebung benutzt eine Nachrichten-Queue, welche eine Liste von Nachrichten ist, die ausgeführt werden. Jede Nachricht hat eine Funktion, die aufgerufen wird, um die Nachricht abzuarbeiten.</p>
 
-<p>An diesem Punkt, während der {{anch("Eventschleife", "Eventschleife")}}, beginnt die Laufzeitumgebung mit der ältesten Nachricht. Dazu wird die Nachricht aus der Queue entfernt und die zugehörige Funktion mit der Nachricht als Eingabeparameter aufgerufen. Wie immer erzeugt das Aufrufen einer Funktion einen neuen Frame auf dem Stack, für den Funktionsgebrauch.</p>
+<p>An diesem Punkt, während der <a href="#eventschleife">Eventschleife</a>, beginnt die Laufzeitumgebung mit der ältesten Nachricht. Dazu wird die Nachricht aus der Queue entfernt und die zugehörige Funktion mit der Nachricht als Eingabeparameter aufgerufen. Wie immer erzeugt das Aufrufen einer Funktion einen neuen Frame auf dem Stack, für den Funktionsgebrauch.</p>
 
 <p>Die Ausführung von Funktionen geht so lange weiter, bis der Stack wieder leer ist; dann wird die Eventschleife die nächste Nachricht ausführen (wenn eine vorhanden ist).</p>
 

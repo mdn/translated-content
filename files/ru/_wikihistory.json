@@ -8960,13 +8960,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:36:45.705Z",
-    "contributors": [
-      "bershanskiy",
-      "AlexAlex"
-    ]
-  },
   "Web/API/Navigator/connection": {
     "modified": "2019-03-23T22:54:21.417Z",
     "contributors": [
@@ -8988,6 +8981,13 @@
   "Web/API/Navigator/geolocation": {
     "modified": "2019-03-23T22:54:20.178Z",
     "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2020-10-15T21:36:45.705Z",
+    "contributors": [
+      "bershanskiy",
       "AlexAlex"
     ]
   },
@@ -14585,14 +14585,6 @@
       "ishpartko"
     ]
   },
-  "Web/HTML/Element/Input/datetime": {
-    "modified": "2019-07-06T19:59:07.845Z",
-    "contributors": [
-      "fuggy",
-      "Brom95",
-      "bad4iz"
-    ]
-  },
   "Web/HTML/Element/Input/datetime-local": {
     "modified": "2019-03-18T21:42:35.150Z",
     "contributors": [
@@ -15561,7 +15553,7 @@
       "cissoid"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-10-15T22:23:29.676Z",
     "contributors": [
       "alex3d",
@@ -23838,6 +23830,14 @@
     "modified": "2019-03-23T23:27:06.077Z",
     "contributors": [
       "wbamberg"
+    ]
+  },
+  "conflicting/Web/HTML/Element/input/datetime-local": {
+    "modified": "2019-07-06T19:59:07.845Z",
+    "contributors": [
+      "fuggy",
+      "Brom95",
+      "bad4iz"
     ]
   },
   "conflicting/Web/HTTP/CORS": {

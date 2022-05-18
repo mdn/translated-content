@@ -63,7 +63,7 @@
 /ja/docs/API/Document/fullscreen	/ja/docs/Web/API/Document/fullscreen
 /ja/docs/API/Document/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
 /ja/docs/API/Document/fullscreenEnabled	/ja/docs/Web/API/Document/fullscreenEnabled
-/ja/docs/API/Document/getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
+/ja/docs/API/Document/getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/API/Document/getElementById	/ja/docs/Web/API/Document/getElementById
 /ja/docs/API/Document/getElementsByClassName	/ja/docs/Web/API/Document/getElementsByClassName
 /ja/docs/API/Document/getElementsByName	/ja/docs/Web/API/Document/getElementsByName
@@ -1280,7 +1280,7 @@
 /ja/docs/DOM/document.fgColor	/ja/docs/Web/API/Document/fgColor
 /ja/docs/DOM/document.firstChild	/ja/docs/Web/API/Node/firstChild
 /ja/docs/DOM/document.forms	/ja/docs/Web/API/Document/forms
-/ja/docs/DOM/document.getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
+/ja/docs/DOM/document.getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/DOM/document.getElementById	/ja/docs/Web/API/Document/getElementById
 /ja/docs/DOM/document.getElementsByClassName	/ja/docs/Web/API/Document/getElementsByClassName
 /ja/docs/DOM/document.getElementsByName	/ja/docs/Web/API/Document/getElementsByName
@@ -1501,7 +1501,7 @@
 /ja/docs/DOM/window.navigator.appCodeName-redirect-1	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/DOM/window.navigator.appName	/ja/docs/Web/API/Navigator/appName
 /ja/docs/DOM/window.navigator.appVersion	/ja/docs/Web/API/Navigator/appVersion
-/ja/docs/DOM/window.navigator.battery	/ja/docs/Web/API/Navigator/battery
+/ja/docs/DOM/window.navigator.battery	/ja/docs/conflicting/Web/API/Navigator/getBattery
 /ja/docs/DOM/window.navigator.buildID	/ja/docs/Web/API/Navigator/buildID
 /ja/docs/DOM/window.navigator.cookieEnabled	/ja/docs/Web/API/Navigator/cookieEnabled
 /ja/docs/DOM/window.navigator.isLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
@@ -2673,7 +2673,8 @@
 /ja/docs/Learn/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Learn/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Learn/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
-/ja/docs/Learn/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
+/ja/docs/Learn/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
+/ja/docs/Learn/Forms/Your_first_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/Getting_started_with_the_web/ウェブサイトを公開する	/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /ja/docs/Learn/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
@@ -2697,7 +2698,7 @@
 /ja/docs/Learn/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Learn/HTML/Forms/UI_pseudo-classes	/ja/docs/Learn/Forms/UI_pseudo-classes
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
-/ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
+/ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /ja/docs/Learn/Index	/ja/docs/conflicting/Learn
 /ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous/Introducing
@@ -3079,6 +3080,7 @@
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
+/ja/docs/Web/API/Document/getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
 /ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
@@ -3166,6 +3168,7 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/search	/ja/docs/Web/API/HTMLAnchorElement/search
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
+/ja/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/ja/docs/conflicting/Web/API/HTMLInputElement
 /ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
 /ja/docs/Web/API/HTMLTableElement.bgColor	/ja/docs/Web/API/HTMLTableElement/bgColor
@@ -3225,6 +3228,7 @@
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
+/ja/docs/Web/API/Navigator/battery	/ja/docs/conflicting/Web/API/Navigator/getBattery
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
@@ -3338,12 +3342,16 @@
 /ja/docs/Web/API/SpeechRecognition/onspeechend	/ja/docs/Web/API/SpeechRecognition/speechend_event
 /ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
+/ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
 /ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
 /ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
+/ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
+/ja/docs/Web/API/UIEvent/layerX	/ja/docs/Web/API/MouseEvent/layerX
+/ja/docs/Web/API/UIEvent/layerY	/ja/docs/Web/API/MouseEvent/layerY
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
@@ -3497,7 +3505,7 @@
 /ja/docs/Web/API/document.execCommand	/ja/docs/Web/API/Document/execCommand
 /ja/docs/Web/API/document.fgColor	/ja/docs/Web/API/Document/fgColor
 /ja/docs/Web/API/document.firstChild	/ja/docs/Web/API/Node/firstChild
-/ja/docs/Web/API/document.getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
+/ja/docs/Web/API/document.getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/Web/API/document.getElementById	/ja/docs/Web/API/Document/getElementById
 /ja/docs/Web/API/document.getElementsByClassName	/ja/docs/Web/API/Document/getElementsByClassName
 /ja/docs/Web/API/document.getElementsByName	/ja/docs/Web/API/Document/getElementsByName
@@ -3619,7 +3627,7 @@
 /ja/docs/Web/API/window.navigator	/ja/docs/Web/API/Window/navigator
 /ja/docs/Web/API/window.navigator.appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/window.navigator.appName	/ja/docs/Web/API/Navigator/appName
-/ja/docs/Web/API/window.navigator.battery	/ja/docs/Web/API/Navigator/battery
+/ja/docs/Web/API/window.navigator.battery	/ja/docs/conflicting/Web/API/Navigator/getBattery
 /ja/docs/Web/API/window.navigator.language	/ja/docs/Web/API/Navigator/language
 /ja/docs/Web/API/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
@@ -4114,7 +4122,7 @@
 /ja/docs/Web/HTML/Element/Input1/checkbox	/ja/docs/Web/HTML/Element/input/checkbox
 /ja/docs/Web/HTML/Element/Input1/color	/ja/docs/Web/HTML/Element/input/color
 /ja/docs/Web/HTML/Element/Input1/date	/ja/docs/Web/HTML/Element/input/date
-/ja/docs/Web/HTML/Element/Input1/datetime	/ja/docs/Web/HTML/Element/input/datetime
+/ja/docs/Web/HTML/Element/Input1/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/Input1/datetime-local	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/Input1/email	/ja/docs/Web/HTML/Element/input/email
 /ja/docs/Web/HTML/Element/Input1/file	/ja/docs/Web/HTML/Element/input/file
@@ -4140,6 +4148,7 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
+/ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn/Forms
@@ -4209,6 +4218,7 @@
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes
+/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ja/docs/Web/HTTP/Gecko_user_agent_string_reference	/ja/docs/Web/HTTP/Headers/User-Agent/Firefox
 /ja/docs/Web/HTTP/HTTP_access_control	/ja/docs/Web/HTTP/CORS
@@ -4822,7 +4832,7 @@
 /ja/docs/ant_script_to_assemble_an_extension	/ja/docs/orphaned/ant_script_to_assemble_an_extension
 /ja/docs/console	/ja/docs/Web/API/console
 /ja/docs/counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-/ja/docs/data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/ja/docs/data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ja/docs/dummySlug/Reference	/ja/docs/Web/JavaScript/Reference
 /ja/docs/dummySlug/Reference/About	/ja/docs/Web/JavaScript/Reference/About
 /ja/docs/dummySlug/Reference/About/Formatting_Conventions	/ja/docs/MDN/Guidelines/Writing_style_guide

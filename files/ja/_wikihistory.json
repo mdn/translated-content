@@ -4681,23 +4681,6 @@
     ]
   },
   "Learn/Forms/Your_first_form": {
-    "modified": "2020-12-02T12:15:15.554Z",
-    "contributors": [
-      "hamasaki",
-      "dskmori",
-      "wlt",
-      "mfuji09",
-      "Uemmra3",
-      "michi-h0623",
-      "silverskyvicto",
-      "fscholz",
-      "chrisdavidmills",
-      "yyss",
-      "Sheppy",
-      "ethertank"
-    ]
-  },
-  "Learn/Forms/Your_first_form/Example": {
     "modified": "2020-12-02T12:12:26.573Z",
     "contributors": [
       "hamasaki",
@@ -12669,15 +12652,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/Document/getBoxObjectFor": {
-    "modified": "2020-10-15T21:21:40.094Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "Hasilt",
-      "ethertank"
-    ]
-  },
   "Web/API/Document/getElementById": {
     "modified": "2020-10-15T21:16:32.885Z",
     "contributors": [
@@ -13714,18 +13688,12 @@
     ]
   },
   "Web/API/Element/getBoundingClientRect": {
-    "modified": "2020-12-06T14:30:02.768Z",
+    "modified": "2020-10-15T21:21:40.094Z",
     "contributors": [
-      "naturallucky",
       "mfuji09",
-      "SphinxKnight",
-      "sii",
       "fscholz",
-      "khalid32",
-      "ethertank",
-      "Mgjbot",
-      "Potappo",
-      "Nanto vi"
+      "Hasilt",
+      "ethertank"
     ]
   },
   "Web/API/Element/getClientRects": {
@@ -16441,12 +16409,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/HTMLInputElement/mozGetFileNameArray": {
-    "modified": "2019-03-23T22:27:32.009Z",
-    "contributors": [
-      "MakeNowJust"
-    ]
-  },
   "Web/API/HTMLInputElement/multiple": {
     "modified": "2019-03-23T22:27:32.548Z",
     "contributors": [
@@ -18593,17 +18555,6 @@
       "khalid32",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:22:04.664Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "leaf0115"
     ]
   },
   "Web/API/Navigator/buildID": {
@@ -21782,7 +21733,7 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/API/SpeechRecognitionError": {
+  "Web/API/SpeechRecognitionErrorEvent": {
     "modified": "2020-10-15T22:12:55.460Z",
     "contributors": [
       "Marsf"
@@ -22047,12 +21998,6 @@
   },
   "Web/API/SyncEvent/lastChance": {
     "modified": "2020-10-15T22:32:54.897Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/SyncEvent/registration": {
-    "modified": "2020-10-15T22:32:47.070Z",
     "contributors": [
       "eltociear"
     ]
@@ -33994,17 +33939,10 @@
       "homirun"
     ]
   },
-  "Web/HTML/Element/input/datetime": {
+  "Web/HTML/Element/input/datetime-local": {
     "modified": "2020-08-31T13:34:59.919Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/HTML/Element/input/datetime-local": {
-    "modified": "2020-10-15T22:03:44.244Z",
-    "contributors": [
-      "mfuji09",
-      "shogo82148"
     ]
   },
   "Web/HTML/Element/input/email": {
@@ -35096,7 +35034,7 @@
       "yyss"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-12-04T15:28:57.902Z",
     "contributors": [
       "mfuji09",
@@ -48152,6 +48090,12 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/HTMLInputElement": {
+    "modified": "2019-03-23T22:27:32.009Z",
+    "contributors": [
+      "MakeNowJust"
+    ]
+  },
   "conflicting/Web/API/IDBRequest/success_event": {
     "modified": "2020-10-15T22:21:11.208Z",
     "contributors": [
@@ -48181,6 +48125,17 @@
     "modified": "2019-03-18T21:45:15.060Z",
     "contributors": [
       "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/Navigator/getBattery": {
+    "modified": "2020-10-15T21:22:04.664Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf",
+      "fscholz",
+      "jsx",
+      "ethertank",
+      "leaf0115"
     ]
   },
   "conflicting/Web/API/Navigator/onLine": {
@@ -48245,6 +48200,12 @@
     "contributors": [
       "Uemmra3",
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/SyncEvent": {
+    "modified": "2020-10-15T22:32:47.070Z",
+    "contributors": [
+      "eltociear"
     ]
   },
   "conflicting/Web/API/VideoTrackList/addtrack_event": {

@@ -5559,7 +5559,7 @@
       "mfuji09"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-06-09T11:41:01.440Z",
     "contributors": [
       "jhihruei",

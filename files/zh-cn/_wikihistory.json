@@ -16598,15 +16598,6 @@
       "gdccwxx"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:21:32.906Z",
-    "contributors": [
-      "jingkaimori",
-      "teoli",
-      "AshfaqHossain",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Navigator/buildID": {
     "modified": "2020-10-15T21:06:57.331Z",
     "contributors": [
@@ -30211,13 +30202,6 @@
       "tangj1206"
     ]
   },
-  "Web/HTML/Element/Input/datetime": {
-    "modified": "2019-07-13T11:00:17.487Z",
-    "contributors": [
-      "853419196",
-      "wizardforcel"
-    ]
-  },
   "Web/HTML/Element/Input/datetime-local": {
     "modified": "2020-10-24T12:05:38.587Z",
     "contributors": [
@@ -32096,7 +32080,7 @@
       "chaos_zhang"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-10-15T21:06:54.948Z",
     "contributors": [
       "leegent",
@@ -46296,6 +46280,15 @@
       "kivazqy"
     ]
   },
+  "conflicting/Web/API/Navigator/getBattery": {
+    "modified": "2020-10-15T21:21:32.906Z",
+    "contributors": [
+      "jingkaimori",
+      "teoli",
+      "AshfaqHossain",
+      "ziyunfei"
+    ]
+  },
   "conflicting/Web/API/Node": {
     "modified": "2019-03-24T00:17:51.751Z",
     "contributors": [
@@ -46850,6 +46843,13 @@
       "yongdi",
       "Breezewish",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/HTML/Element/input/datetime-local": {
+    "modified": "2019-07-13T11:00:17.487Z",
+    "contributors": [
+      "853419196",
+      "wizardforcel"
     ]
   },
   "conflicting/Web/HTML/Quirks_Mode_and_Standards_Mode": {
