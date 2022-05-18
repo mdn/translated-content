@@ -3,86 +3,130 @@ title: Intl.ListFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 tags:
   - Constructor
+  - 国際化
   - Intl
   - JavaScript
   - ListFormat
-  - Reference
+  - リファレンス
+browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.ListFormat()</code></strong> コンストラクターは、言語に応じたリストの書式化を可能にするオブジェクトを生成します。</p>
+**`Intl.ListFormat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする
+{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} オブジェクトを生成します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="notranslate">new Intl.ListFormat([<var>locales</var>[, <var>options</var>]])</pre>
+```js
+new Intl.ListFormat()
+new Intl.ListFormat(locales)
+new Intl.ListFormat(locales, options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>locales</var></code> {{optional_inline}}</dt>
- <dd>
- <p>BCP47 言語タグの文字列、または、そのような文字列の配列です。<code><var>locales</var></code> 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページをご覧ください。</p>
- </dd>
- <dt><code><var>options</var></code> {{optional_inline}}</dt>
- <dd>
- <p>以下のプロパティの一部またはすべてを持つオブジェクトです。</p>
+- `locales` {{optional_inline}}
+  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+- `options` {{optional_inline}}
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>使用するロケール照合アルゴリズム。利用可能な値は <code>lookup</code> と <code>best fit</code> です。既定値は <code>best fit</code> です。このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl のページ", "#Locale_negotiation", 1)}}をご覧ください。</dd>
-  <dt><code>type</code></dt>
-  <dd>出力メッセージの書式です。可能な値は "and" ベースのリストを表す <code>conjunction</code> (既定値、例えば <code>A, B, and C</code>)、または "or" ベースのリストを表す <code>disjunction</code> (例えば <code>A, B, or C</code>)、単位付きの値のリストを表す <code>unit</code> (例えば <code>5 pounds, 12 ounces</code>) です。</dd>
-  <dt><code>style</code></dt>
-  <dd>書式化されたメッセージの長さです。利用可能な値は、 <code>long</code> (既定値、例えば <code>A, B, and C</code>)、 <code>short</code> (例えば <code>A, B, C</code>)、 <code>narrow</code> (例えば <code>A B C</code>) です。 <code>style</code> が <code>short</code> または <code>narrow</code> であった場合、 type オプションには <code>unit</code> のみが許可されます。</dd>
- </dl>
- </dd>
-</dl>
+  - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
 
-<h2 id="Examples" name="Examples">例</h2>
+    - `localeMatcher`
+      - : 使用するロケール照合アルゴリズム。取りうる値は以下の通りです。
+        - "`best fit`" （既定値）
+        - "`lookup`"
+        このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
+    - `type`
+      - : グループ化の種類を示します。取りうる値は以下の通りです。
+        - "`conjunction`" - リスト項目の "and" ベースのグループ化: "A, B, and C" （既定値）
+        - "`disjunction`" - リスト項目の "or" ベースのグループ化: "A, B, or C"
+        - "`unit`" - リスト項目の単位としてのグループ化（"and" ベースでも "or" ベースでもない）: "A, B, C"
+    - `style`
+      - : グループ化のスタイルを示します（例えば、リストの区切り文字や結合などが含まれます）。取りうる値は以下の通りです。
+        - "`long`": "A, B, and C" （既定値）
+        - "`short`": "A, B, C"
+        - "`narrow`": "A B C"
 
-<h3 id="Using_format" name="Using_format">format の使用</h3>
+## 例
 
-<p>次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。</p>
+### format の使用
 
-<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus and Car
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus or Car
+console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
+.format(list));
+// Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car</pre>
+console.log(new Intl.ListFormat('en-GB', { style: 'long' })
+.format(list));
+// Motorcycle, Bus and Car
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+console.log(new Intl.ListFormat('en-US', { style: 'long' })
+.format(list));
+// Motorcycle, Bus, and Car
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Intl.ListFormat', '#sec-intl-listformat-constructor', 'ListFormat()')}}</td>
-  </tr>
- </tbody>
-</table>
+console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'conjunction' })
+.format(list));
+// Motorcycle, Bus and Car
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+console.log(new Intl.ListFormat('en-US', { style: 'short', type: 'conjunction' })
+.format(list));
+// Motorcycle, Bus, & Car
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.ListFormat.ListFormat")}}</p>
-</div>
+console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'conjunction' })
+.format(list));
+// Motorcycle, Bus, Car
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'disjunction' })
+.format(list));
+// Motorcycle, Bus or Car
 
-<ul>
- <li>{{jsxref("Intl")}}</li>
-</ul>
+console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' })
+.format(list));
+// Motorcycle, Bus or Car
+
+console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'disjunction' })
+.format(list));
+// Motorcycle, Bus or Car
+
+console.log(new Intl.ListFormat('en-US', { style: 'narrow' })
+.format(list));
+// Motorcycle, Bus, Car
+
+console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' })
+.format(list));
+// Motorcycle Bus Car
+
+console.log(new Intl.ListFormat('en-US', { style: 'long' })
+.format(["30 degrees", "15 minutes", "50 seconds"]));
+// 30 degrees, 15 minutes, and 50 seconds
+
+console.log(new Intl.ListFormat('en-US', { style: 'narrow' })
+.format(["30 degrees", "15 minutes", "50 seconds"]));
+// 30 degrees, 15 minutes, 50 seconds
+
+console.log(new Intl.ListFormat('en-US', { style: 'narrow', type: 'unit' })
+.format(["30°", "15′", "50″"]));
+// 30° 15′ 50″
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("Intl.ListFormat")}}
+- {{jsxref("Global_Objects/Intl", "Intl")}}
