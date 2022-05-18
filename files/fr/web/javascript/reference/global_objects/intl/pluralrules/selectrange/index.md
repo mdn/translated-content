@@ -44,4 +44,4 @@ Cette fonction sélectionne une catégorie de nombre selon les options de locale
 
 ## Voir aussi
 
-- [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules).
+- [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
