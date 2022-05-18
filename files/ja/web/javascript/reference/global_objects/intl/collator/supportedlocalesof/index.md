@@ -3,81 +3,70 @@ title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 tags:
   - Collator
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
-  - Method
+  - ローカライズ
+  - メソッド
+  - リファレンス
+browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.Collator.supportedLocalesOf()</code></strong> メソッドは、ランタイムの既定のロケールで代替しなくても照合で対応するロケールを含む配列を返します。</p>
+**`Intl.Collator.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替しなくても照合で対応するロケールを含む配列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><code>Intl.Collator.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</code></pre>
+```js
+Intl.Collator.supportedLocalesOf(locales)
+Intl.Collator.supportedLocalesOf(locales, options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>locales</var></code></dt>
- <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Global_Objects/Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。</dd>
- <dt><code><var>options</var></code></dt>
- <dd>
- <p>省略可能です。以下のプロパティを持つことがあるオブジェクトです。</p>
+- `locales`
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+- `options` {{optional_inline}}
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>使用するロケールの一致アルゴリズムです。指定可能な値は <code>lookup</code> および <code>best fit</code> で、既定値は <code>best fit</code> です。このオプションの詳細は、 {{jsxref("Global_Objects/IntlIntl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。</dd>
- </dl>
- </dd>
-</dl>
+  - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `localeMatcher`
+      - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
 
-<p>指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく複数形の書式で対応されているものを含みます。</p>
+### 返値
 
-<h2 id="Description" name="Description">解説</h2>
+指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく複数形の書式で対応されているものを含みます。
 
-<p><code>locales</code> で指定されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムがロケールの照合に対応しているもので、使用しているロケール照合アルゴリズムが、既定のロケールで代替することなく一致するとみなすものです。</p>
+## 解説
 
-<h2 id="Examples">Examples</h2>
+`locales` で指定されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムがロケールの照合に対応しているもので、使用しているロケール照合アルゴリズムが、既定のロケールで代替することなく一致するとみなすものです。
 
-<h3 id="Using_supportedLocalesOf">Using <code>supportedLocalesOf</code></h3>
+## 例
 
-<p>インドネシア語とドイツ語に対応しているもの、バリ語に対応していないランタイムを想定すると、ピンインの照合がインドネシア語では使用されておらず、インドネシアに特化したドイツ語がサポートされている可能性が低いとしても、 <code>supportedLocalesOf</code> はインドネシア語とドイツ語の言語タグを変更せずに返します。これは <code>lookup</code> アルゴリズムの仕様であること注意してください。 <code>best fit</code> マッチャーは、ほとんどのバリ語話者がインドネシア語も理解しているので、インドネシア語がバリ語に適切であると判断し、バリ語の言語タグも返すかもしれません。</p>
+### supportedLocalesOf() の使用
 
-<pre class="brush: js notranslate">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-var options = { localeMatcher: 'lookup' };
+インドネシア語とドイツ語に対応しているもの、バリ語に対応していないランタイムを想定すると、ピンインの照合がインドネシア語では使用されておらず、インドネシアに特化したドイツ語に対応している可能性が低いとしても、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返します。これは "`lookup`" アルゴリズムの仕様であること注意してください。 "`best fit`" マッチャーは、ほとんどのバリ語話者がインドネシア語も理解しているので、インドネシア語がバリ語に適切であると判断し、バリ語の言語タグも返すかもしれません。
+
+```js
+const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+const options = { localeMatcher: 'lookup' };
 console.log(Intl.Collator.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.collator.supportedlocalesof', 'Intl.Collator.supportedLocalesOf')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.Collator.supportedLocalesOf")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-</ul>
+- {{jsxref("Intl.Collator")}}
