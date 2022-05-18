@@ -19,10 +19,10 @@ translation_of: Web/API/CDATASection
 
 <p>例如：</p>
 
-<pre class="brush:xml">&lt;foo&gt;这是一个CDATA section: &lt;![CDATA[  &lt; &gt; &amp; ]]&gt; 其中包含了一些没有转义的字符。 &lt;/foo&gt;
+<pre class="brush:xml">&lt;foo&gt;这是一个 CDATA section: &lt;![CDATA[  &lt; &gt; &amp; ]]&gt; 其中包含了一些没有转义的字符。 &lt;/foo&gt;
 </pre>
 
-<p>唯一的例外就是，在一个 CDATA 片段中不可以使用  CDATA 片段本身的闭合标签片段:</p>
+<p>唯一的例外就是，在一个 CDATA 片段中不可以使用  CDATA 片段本身的闭合标签片段：</p>
 
 <pre class="brush:xml">&lt;![CDATA[  ]]&gt; 会引发错误   ]]&gt;
 </pre>

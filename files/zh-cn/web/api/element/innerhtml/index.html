@@ -8,7 +8,7 @@ translation_of: Web/API/Element/innerHTML
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><strong><code>Element.innerHTML</code></strong> 属性设置或获取HTML语法表示的元素的后代。</p>
+<p><strong><code>Element.innerHTML</code></strong> 属性设置或获取 HTML 语法表示的元素的后代。</p>
 
 <div class="note">
 <p><strong>Note: </strong>如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 <code>(&amp;),</code> <code>(&lt;),</code>  或<code>(&gt;)</code>, <code>innerHTML</code> 将这些字符分别返回为&amp;amp;, &amp;lt; 和 &amp;gt; 。使用{{domxref("Node.textContent")}}  可获取一个这些文本节点内容的正确副本。</p>
@@ -24,7 +24,7 @@ element.innerHTML = htmlString;
 
 <h3 id="值">值</h3>
 
-<p>{{domxref("DOMString")}} 包含元素后代的HTML序列。设置元素的 <code>innerHTML</code> 将会删除所有该元素的后代并以上面给出的 htmlString 替代。</p>
+<p>{{domxref("DOMString")}} 包含元素后代的 HTML 序列。设置元素的 <code>innerHTML</code> 将会删除所有该元素的后代并以上面给出的 htmlString 替代。</p>
 
 <h3 id="例外">例外</h3>
 
@@ -40,7 +40,7 @@ element.innerHTML = htmlString;
 
 <p><code>innerHTML</code> 属性可以用来检查当前页面自最初加载到当前的 HTML 源码的变化。</p>
 
-<h3 id="获取元素的HTML">获取元素的HTML</h3>
+<h3 id="获取元素的HTML">获取元素的 HTML</h3>
 
 <p>获取 <code>innerHTML</code> 会导致用户代理序列化 由元素后代组成的 HTML 或者 XML 。返回结果字符串。</p>
 
@@ -74,8 +74,8 @@ element.innerHTML = htmlString;
 <p>当给 <code>innerHTML</code> 设置一个值的时候到底发生了什么？用户代理按照以下步骤：</p>
 
 <ol>
- <li>给定的值被解析为 HTML 或者 XML （取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。</li>
- <li>如果元素内容被替换成 {{HTMLElement("template")}}  元素，<code>&lt;template&gt;</code> 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤1中创建的新的 <code>DocumentFragment</code>。</li>
+ <li>给定的值被解析为 HTML 或者 XML（取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。</li>
+ <li>如果元素内容被替换成 {{HTMLElement("template")}}  元素，<code>&lt;template&gt;</code> 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤 1 中创建的新的 <code>DocumentFragment</code>。</li>
  <li>对于其他所有元素，元素的内容都被替换为新的 <code>DocumentFragment</code>节点。</li>
 </ol>
 

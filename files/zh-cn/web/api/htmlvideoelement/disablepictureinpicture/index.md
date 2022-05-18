@@ -21,7 +21,7 @@ browser-compat: api.HTMLVideoElement.disablePictureInPicture
 
 ## 属性
 
-一个布尔值,如果为`true`,阻止用户代理向用户建议该功能。
+一个布尔值，如果为`true`,阻止用户代理向用户建议该功能。
 
 ## 规范
 

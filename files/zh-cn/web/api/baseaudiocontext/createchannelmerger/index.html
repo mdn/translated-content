@@ -12,7 +12,7 @@ original_slug: Web/API/AudioContext/createChannelMerger
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>AudioContext.<code>createChannelMerger()方法，会创建一个</code>ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。</p>
+<p>AudioContext.<code>createChannelMerger() 方法，会创建一个</code>ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -24,7 +24,7 @@ var merger = audioCtx.createChannelMerger(2);</pre>
 
 <dl>
  <dt>numberOfInputs</dt>
- <dd>通道输入音频流的数量，输出流将包含这个数量的通道。默认值6。</dd>
+ <dd>通道输入音频流的数量，输出流将包含这个数量的通道。默认值 6。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -33,7 +33,7 @@ var merger = audioCtx.createChannelMerger(2);</pre>
 
 <h2 id="（举个）栗（例）子">（举个）栗（例）子</h2>
 
-<p>下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定AudioNode.connect(AudioNode)方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。</p>
+<p>下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定 AudioNode.connect(AudioNode) 方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。</p>
 
 <pre class="brush: js;highlight[7,16,17,24]">var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {

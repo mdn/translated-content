@@ -38,7 +38,7 @@ console.log(test.isConnected); // Returns true
 <pre class="brush: js">// Create a shadow root
 var shadow = this.attachShadow({mode: 'open'});
 
-// Create some CSS to apply to the shadow dom
+// Create some CSS to apply to the shadow DOM
 var style = document.createElement('style');
 console.log(style.isConnected); // returns false
 
@@ -62,7 +62,7 @@ style.textContent = '.wrapper {' +
                         'z-index: 3;' +
                       '}' +
 
-// Attach the created style element to the shadow dom
+// Attach the created style element to the shadow DOM
 
 shadow.appendChild(style);
 console.log(style.isConnected); // Returns true</pre>

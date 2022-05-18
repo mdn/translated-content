@@ -7,7 +7,7 @@ translation_of: Web/API/Window/openDialog
 ---
 <p>{{ ApiRef() }}</p>
 <h3 id=".E7.AE.80.E4.BB.8B" name=".E7.AE.80.E4.BB.8B">简介</h3>
-<p><code>window.openDialog</code> 是对<a href="cn/DOM/window.open">window.open</a>的扩展。和它一样，可以传递<code>windowFeatures</code>参数, 但是 <code>windowFeatures</code> 的方式有变化。</p>
+<p><code>window.openDialog</code> 是对<a href="cn/DOM/window.open">window.open</a>的扩展。和它一样，可以传递<code>windowFeatures</code>参数，但是 <code>windowFeatures</code> 的方式有变化。</p>
 <p>The optional parameters, if present, will be bundled up in a JavaScript Array object and added to the newly created window as a property named <a href="cn/DOM/window.arguments">window.arguments</a>. They may be referenced in the JavaScript of the window at any time, including during the execution of a <code>load</code> handler. These parameters may be used, then, to pass arguments to and from the dialog window.</p>
 <p>Note that the call to <code>openDialog()</code> returns immediately. If you want the call to block until the user has closed the dialog, supply <code>modal</code> as a <code>windowFeatures</code> parameter. Note that this also means the user won't be able to interact with the opener window until he closes the modal dialog.</p>
 <h3 id=".E8.AF.AD.E6.B3.95" name=".E8.AF.AD.E6.B3.95">语法</h3>

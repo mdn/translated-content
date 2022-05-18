@@ -8,7 +8,7 @@ tags:
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 ---
-<p>结构化克隆算法是<a href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">由HTML5规范定义</a>的用于复制复杂JavaScript对象的算法。通过来自 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</a>的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage" title="en/JavaScript/Reference/Global Objects/Error">postMessage()</a> </code>或使用 <a href="https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB">IndexedDB</a> 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。</p>
+<p>结构化克隆算法是<a href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">由 HTML5 规范定义</a>的用于复制复杂 JavaScript 对象的算法。通过来自 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Workers</a>的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage" title="en/JavaScript/Reference/Global Objects/Error">postMessage()</a> </code>或使用 <a href="https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB">IndexedDB</a> 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。</p>
 
 <h2 id="结构化克隆所不能做到的">结构化克隆所不能做到的</h2>
 

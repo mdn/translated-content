@@ -44,7 +44,7 @@ target.onclick = functionRef;
 <div id="demo">请点击这里</div>
 ```
 
-#### Javascript
+#### JavaScript
 
 ```js
 document.getElementById('demo').onclick = function changeContent() {

@@ -24,7 +24,7 @@ formData.append(name, value, filename);</pre>
 
 <dl>
  <dt><code>name</code></dt>
- <dd><code>value中包含的数据对应的表单名称。</code></dd>
+ <dd><code>value 中包含的数据对应的表单名称。</code></dd>
  <dt><code>value</code></dt>
  <dd><code>表单的值。</code>可以是{{domxref("USVString")}} 或 {{domxref("Blob")}} (包括子类型，如 {{domxref("File")}})。</dd>
  <dt><code>filename </code>{{optional_inline}}</dt>
@@ -50,7 +50,7 @@ formData.append(name, value, filename);</pre>
 <pre class="brush: js">formData.append('username', 'Chris');
 formData.append('userpic', myFileInput.files[0], 'chris.jpg');</pre>
 
-<p>跟常规<code>表单数据一样，你可以使用同一个名称添加多个值</code> 。例如 (为了与PHP命名习惯一致在名称中添加了[])：</p>
+<p>跟常规<code>表单数据一样，你可以使用同一个名称添加多个值</code> 。例如 (为了与 PHP 命名习惯一致在名称中添加了 [])：</p>
 
 <pre class="brush: js">formData.append('userpic[]', myFileInput1.files[0], 'chris1.jpg');
 formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');</pre>

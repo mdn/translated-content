@@ -8,7 +8,7 @@ tags:
 translation_of: Web/API/Element/copy_event
 original_slug: Web/Events/copy
 ---
-<p>当用户通过浏览器UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>  键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发<code>copy</code>事件。</p>
+<p>当用户通过浏览器 UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>  键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发<code>copy</code>事件。</p>
 
 <h2 id="基本信息">基本信息</h2>
 
@@ -40,7 +40,7 @@ original_slug: Web/Events/copy
 <p>事件的默认行为与事件的来源和事件处理函数相关：</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> copy事件没有默认行为，除非：</li>
+ <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> copy 事件没有默认行为，除非：</li>
  <li>如果默认事件没有取消，就复制到选区（如果有选中内容）到剪切板；</li>
  <li>如果取消了默认事件，但是调用了<code>setData()</code>方法：就复制<code>clipboardData</code>的内容到到剪切板；</li>
  <li>如果取消了默认行为，而且没有调用<code>setData()</code>方法，就没有任何行为。</li>
