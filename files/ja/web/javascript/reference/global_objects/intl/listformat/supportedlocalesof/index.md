@@ -2,81 +2,66 @@
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 tags:
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
   - ListFormat
-  - Method
-  - supportedLocalesOf
+  - メソッド
+  - リファレンス
+browser-compat: javascript.builtins.Intl.ListFormat.supportedLocalesOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>Intl.ListFormat.supportedLocalesOf()</code></strong> メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。</p>
+**`Intl.ListFormat.supportedLocalesOf()`** メソッドは、指定したロケールのうち、ランタイムの既定のロケールに代替する必要なくリストの書式化に対応しているロケールを含む配列を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Intl.ListFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
+```js
+Intl.ListFormat.supportedLocalesOf(locales)
+Intl.ListFormat.supportedLocalesOf(locales, options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>locales</var></code></dt>
- <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。</dd>
- <dt><code><var>options</var></code></dt>
- <dd>
- <p>省略可能です。以下のプロパティを持つことがあるオブジェクトです。</p>
+- `locales`
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+- `options` {{optional_inline}}
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>使用するロケールの一致アルゴリズムです。指定可能な値は <code>lookup</code> および <code>best fit</code> で、既定値は <code>best fit</code> です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。</dd>
- </dl>
- </dd>
-</dl>
+  - : 以下のプロパティを持つ可能性があるオブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `localeMatcher`
+      - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
 
-<p>指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含みます。</p>
+### 返値
 
-<h2 id="Description" name="Description">解説</h2>
+指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なくリストの書式化に対応されているものを含みます。
 
-<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。</p>
+## 解説
 
-<h2 id="Examples" name="Examples">例</h2>
+`locales` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムがリストの書式化に対応しているロケールで、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。
 
-<h3 id="Using_supportedLocalesOf" name="Using_supportedLocalesOf">supportedLocalesOf() の使用</h3>
+## 例
 
-<p>日時の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 <code>supportedLocalesOf</code> はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 pinyin の照合は日時の書式には関係なく、インドネシア語でも使用されません。ここでの <code>lookup</code> アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 <code>best fit</code> のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。</p>
+### supportedLocalesOf() の使用
 
-<pre class="brush: js notranslate">const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+リストの書式化でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合はリストの書式化には関係なく、インドネシア語でも使用されません。ここでの `lookup` アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 `best fit` のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
+
+```js
+const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Intl.ListFormat', '#sec-Intl.ListFormat.supportedLocalesOf', 'supportedLocalesOf()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.ListFormat.supportedLocalesOf")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("ListFormat", "Intl.ListFormat")}}</li>
-</ul>
+- {{jsxref("Intl.ListFormat")}}
