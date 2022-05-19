@@ -2,49 +2,50 @@
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 tags:
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
   - ListFormat
-  - Localization
-  - Method
-  - Prototype
-  - Reference
+  - ローカライズ
+  - メソッド
+  - プロトタイプ
+  - リファレンス
+browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.ListFormat.prototype.formatToParts()</code></strong> メソッドは、ロケールを意識した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列を返します。</p>
+**`Intl.ListFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">Intl.ListFormat.prototype.formatToParts(<var>list</var>)
-</pre>
+```js
+formatToParts(list)
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-	<dt><code><var>list</var></code></dt>
-	<dd>ロケールに従って書式化するための値の {{jsxref("Array")}} です。</dd>
-</dl>
+- `list`
+  - : ロケールに従って書式化する反復可能オブジェクト、例えば配列 ({{jsxref("Array")}}) です。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>リストから書式された部品を含むコンポーネントの {{jsxref("Array")}} です。</p>
+リストから書式された部品を含むコンポーネントの配列 ({{jsxref("Array")}}) です。
 
-<h2 id="Description">解説</h2>
+## 解説
 
-<p>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}} は、 (渡されたロケールとスタイルのオプションに応じて) リストの書式化された文字列を返すのに対し、 <code>formatToParts()</code> は、書式化されたされた文字列のさまざまなコンポーネントの配列を返します。</p>
+{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}} が、（渡されたロケールとスタイルのオプションに応じて）リストの書式化された文字列を返すのに対し、 `formatToParts()` は、書式化されたされた文字列のさまざまなコンポーネントの配列を返します。
 
-<p>フォーマットに使用されるロケールとスタイルのオプションは、Intl.ListFormatインスタンスを構築する際に与えられます。結果として得られる配列の各要素には、 <code>type</code> と <code>value</code> という 2 つのプロパティがあります。 <code>type</code> プロパティには、リストの値を表す "<code>element</code>" か、言語構造を表す "<code>literal</code>" のいずれかを指定します。 <code>value</code> プロパティは、トークンの内容を文字列で表したものです。</p>
+結果として得られる配列の各要素には、 `type` と `value` の 2 つのプロパティがあります。 `type` プロパティはリストの値を指す "`element`" か、言語的な構成要素を指す "`literal`" かのどちらかです。 `value` プロパティはトークンの内容を文字列で指定します。
 
-<p>フォーマットに使用されるロケールとスタイルのオプションは、 {{jsxref("Intl.ListFormat")}} インスタンスを構築する際に与えられます。</p>
+書式化に使用されるロケールとスタイルのオプションは、 {{jsxref("Intl.ListFormat")}} インスタンスを構築する際に与えられたものです。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Using_formatToParts">formatToParts の使用</h3>
+### formatToParts の使用
 
-<pre class="brush: js">const fruits = ['Apple', 'Orange', 'Pineapple'];
+```js
+const fruits = ['Apple', 'Orange', 'Pineapple'];
 const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
 
 console.table(myListFormat.formatToParts(fruits));
@@ -55,38 +56,20 @@ console.table(myListFormat.formatToParts(fruits));
 //  { "type": "literal", "value": ", and " },
 //  { "type": "element", "value": "Pineapple" }
 // ]
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">仕様書</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('Intl.ListFormat',
-				'#sec-Intl.ListFormat.prototype.formatToParts', 'formatToParts()')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("javascript.builtins.Intl.ListFormat.formatToParts")}}</div>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-	<li>{{jsxref("Intl.ListFormat")}}</li>
-	<li>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-	</li>
-	<li>{{jsxref("Intl/RelativeTimeFormat/formatToParts",
-		"Intl.RelativeTimeFormat.prototype.formatToParts()")}}</li>
-	<li>{{jsxref("Intl/NumberFormat/formatToParts",
-		"Intl.NumberFormat.prototype.formatToParts()")}}</li>
-	<li>{{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}</li>
-</ul>
+- {{jsxref("Intl.ListFormat")}}
+- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
