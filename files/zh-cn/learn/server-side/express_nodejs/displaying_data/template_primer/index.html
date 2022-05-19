@@ -15,13 +15,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p><strong>注意:</strong> 使用 Pug 的缺点，是它对缩进和空格敏感（如果在错误的位置添加额外的空格，可能会得到没什么帮助的错误代码）。但是，一旦您的模板到位，它们就很容易阅读和维护。</p>
 </div>
 
-<h2 class="highlight-spanned" id="模板组态"><span class="highlight-span">模板</span>组态</h2>
+<h2 class="highlight-spanned" id="模板组态">模板组态</h2>
 
 <p>在我们<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">创建骨架网站</a>时，LocalLibrary 配置为使用 <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>。您应该看到 Pug 模块作为依赖项，包含在网站的 <strong>package.json</strong>文件中，以及 <strong>app.js</strong>文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在<strong> /views</strong>子目录中搜索模板。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'view engine'</span><span class="punctuation token">,</span> <span class="string token">'pug'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// View engine setup.
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');</code></pre>
 
 <p>如果查看 views 目录，您将看到项目默认视图的 .pug 文件。这包括需要用自己的内容替换的主页（<strong>index.pug</strong>）和基本模板（<strong>layout.pug</strong>）的视图。</p>
 
@@ -47,11 +47,11 @@ html(lang="en")
     h1= title
 
     p This is a line with #[em some emphasis] and #[strong strong text] markup.
-    p This line has un-escaped data: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'} and escaped data: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}.
+    p This line has un-escaped data: !{'&lt;em&gt; is emphasised&lt;/em&gt;'} and escaped data: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}.
       | This line follows on.
-    p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title
+    p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title
 
-    <span class="comment token">&lt;!-- You can add HTML comments directly --&gt;</span>
+    &lt;!-- You can add HTML comments directly --&gt;
     // You can add single line JavaScript comments and they are generated to HTML comments
     //- Introducing a single line JavaScript comment with "//-" ensures the comment isn't rendered to HTML
 
@@ -86,12 +86,12 @@ html(lang="en")
 <p>如果标记后跟着等号，则以下文本将被视为 JavaScript 表达式。因此，打个比方，在下面的第一行中，<code>h1</code>标记的内容将是标题变量<code>title</code>（在文件中定义，或从 Express 传递到模板中）。在第二行中，段落内容是与标题变量<code>title</code>连接的文本字符串。在这两种情况下，默认行为是转义该行。</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
-p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
+p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
 
 <p>如果标记后面没有等号，则将内容视为纯文本。在纯文本中，您可以使用<code>#{}</code> 和<code>!{}</code>语法，插入转义和非转义数据，如下所示。您还可以在纯文本中添加原始 HTML。</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
-p This line has an un-escaped string: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, an escaped string: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, and escaped variables: #{title}.</code></pre>
+p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
 <p><strong>提示:</strong> 您几乎总是希望转义来自用户的数据（通过<strong><code>#{}</code></strong>语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。</p>

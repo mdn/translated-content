@@ -721,13 +721,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Plugin": {
-    "modified": "2019-01-16T15:11:14.478Z",
-    "contributors": [
-      "teoli",
-      "Anonymous"
-    ]
-  },
   "Glossary/Polyfill": {
     "modified": "2019-11-18T11:28:34.172Z",
     "contributors": [
@@ -2654,32 +2647,6 @@
       "teoli",
       "fscholz",
       "Netaras"
-    ]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:51:24.922Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "zziuni",
-      "frankradio",
-      "galcyurio",
-      "Vi01et",
-      "jswisher"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:14.835Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:51:25.656Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Silvermist"
     ]
   },
   "MDN/Yari": {

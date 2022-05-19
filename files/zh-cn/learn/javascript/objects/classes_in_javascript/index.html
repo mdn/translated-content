@@ -34,7 +34,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <p>到目前为止我们已经了解了一些关于原型链的实现方式以及成员变量是如何通过它来实现继承，但是之前涉及到的大部分都是浏览器内置函数（比如 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>、<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>、<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>），那么我们如何创建一个继承自另一对象的JavaScript对象呢？</p>
 
-<p>正如前面课程所提到的，有些人认为JavaScript并不是真正的面向对象语言，在经典的面向对象语言中，您可能倾向于定义类对象,然后您可以简单地定义哪些类继承哪些类（参考<a href="http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm">C++ inheritance</a>里的一些简单的例子），JavaScript使用了另一套实现方式，继承的对象函数并不是通过复制而来，而是通过原型链继承（通常被称为 <strong>原型式继承 —— </strong><strong>prototypal inheritance<font face="Consolas, Liberation Mono, Courier, monospace">）</font></strong>。</p>
+<p>正如前面课程所提到的，有些人认为JavaScript并不是真正的面向对象语言，在经典的面向对象语言中，您可能倾向于定义类对象,然后您可以简单地定义哪些类继承哪些类（参考<a href="http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm">C++ inheritance</a>里的一些简单的例子），JavaScript使用了另一套实现方式，继承的对象函数并不是通过复制而来，而是通过原型链继承（通常被称为 <strong>原型式继承 —— </strong><strong>prototypal inheritance）</strong>。</p>
 
 <p>让我们通过具体的例子来解释上述概念</p>
 

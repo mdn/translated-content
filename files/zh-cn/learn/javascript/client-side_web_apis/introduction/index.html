@@ -146,7 +146,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 <p><strong>Note</strong>: 当您第一次加载上述实例，应当出现一个对话框询问您是否乐意对此应用共享位置信息（参见 <a href="#它们在适当的地方有额外的安全机制">它们在适当的地方有额外的安全机制</a> 这一稍后将会提到的部分）。 您需要同意这项询问以将您的位置于地图上绘制。如果您始终无法看见地图，您可能需要手动修改许可项。修改许可项的方法取决于您使用何种浏览器，对于Firefox浏览器来说，在页面信息 &gt; 权限 中修改位置权限，在Chrome浏览器中则进入 设置 &gt; 隐私 &gt; 显示高级设置 &gt; 内容设置，其后修改位置设定。</p>
 </div>
 
-<p>我们首先要使用 {{domxref("Geolocation.getCurrentPosition()")}} <font>方法返回设备的当前位置。</font><font>浏览器的 </font>{{domxref("Geolocation")}} 对象通过调用 {{domxref("Navigator.geolocation")}} <font>属性</font><font>来访问.</font></p>
+<p>我们首先要使用 {{domxref("Geolocation.getCurrentPosition()")}} 方法返回设备的当前位置。浏览器的 {{domxref("Geolocation")}} 对象通过调用 {{domxref("Navigator.geolocation")}} 属性来访问.</p>
 
 <pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition(function(position) { ... });</pre>
 
@@ -223,14 +223,14 @@ var ctx = canvas.getContext('2d');</pre>
 };</pre>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：您可以在我们的</font></font><a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html" rel="noopener"><font><font>弹跳球演示中</font></font></a><font><font>看到此代码的实际  </font></font><a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html" rel="noopener"><font><font>运行情况</font></font></a><font><font>  （</font><font> 也可以</font><font>参阅它  </font><a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html" rel="noopener"><font>现场运行</font></a><font>）。</font></font></p>
+<p><strong>注意</strong>：您可以在我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html" rel="noopener">弹跳球演示中</a>看到此代码的实际  <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html" rel="noopener">运行情况</a>  （ 也可以参阅它  <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html" rel="noopener">现场运行</a>）。</p>
 </div>
 
 <h3 id="它们使用事件来处理状态的变化">它们使用事件来处理状态的变化</h3>
 
-<p><font><font>我们之前已经在课程中讨论了事件，在我们的  </font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"><font><font>事件介绍</font></font></a><font><font>文章中 - 详细介绍了客户端Web事件是什么以及它们在代码中的用法。</font><font>如果您还不熟悉客户端Web API事件的工作方式，则应继续阅读。</font></font></p>
+<p>我们之前已经在课程中讨论了事件，在我们的  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a>文章中 - 详细介绍了客户端Web事件是什么以及它们在代码中的用法。如果您还不熟悉客户端Web API事件的工作方式，则应继续阅读。</p>
 
-<p><font><font>一些Web API不包含事件，但有些包含一些事件。</font><font>当事件触发时，允许我们运行函数的处理程序属性通常在单独的 “</font></font>Event handlers<font><font>”(事件处理程序) 部分的参考资料中列出。作为一个简单的例子，</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code><font><font> 对象的</font><font>实例  </font><font>（每一个实例都代表一个到服务器的HTTP请求,来取得某种新的资源）都有很多事件可用，例如  </font></font><code>onload</code><font><font> 事件在成功返回时就触发包含请求的资源，并且现在就可用。</font></font></p>
+<p>一些Web API不包含事件，但有些包含一些事件。当事件触发时，允许我们运行函数的处理程序属性通常在单独的 “Event handlers”(事件处理程序) 部分的参考资料中列出。作为一个简单的例子，<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> 对象的实例  （每一个实例都代表一个到服务器的HTTP请求,来取得某种新的资源）都有很多事件可用，例如  <code>onload</code> 事件在成功返回时就触发包含请求的资源，并且现在就可用。</p>
 
 <p>下面的代码提供了一个简单的例子来说明如何使用它：</p>
 
@@ -250,19 +250,19 @@ request.onload = function() {
 <p><strong>注意：您可以在我们的</strong><a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a><strong>示例中看到此代码</strong>  (或者 在线运行版本 <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">see it live</a> also).</p>
 </div>
 
-<p><font><font>前五行指定了我们要获取的资源的位置，使用</font></font><code>XMLHttpRequest()</code><font><font> 构造函数</font><font>创建请求对象的新实例  </font><font>，打开HTTP 的 </font></font><code>GET</code><font><font> 请求以取得指定资源，指定响应以JSON格式发送，然后发送请求。</font></font></p>
+<p>前五行指定了我们要获取的资源的位置，使用<code>XMLHttpRequest()</code> 构造函数创建请求对象的新实例  ，打开HTTP 的 <code>GET</code> 请求以取得指定资源，指定响应以JSON格式发送，然后发送请求。</p>
 
-<p><font><font>然后 </font></font><code>onload</code> 处理函数指定我们如何处理响应。 我们知道请求会成功返回，并在需要加载事件（如<code>onload</code><font><font> 事件</font></font>）之后可用（除非发生错误），所以我们将包含返回的JSON的响应保存在<code>superHeroes</code>变量中，然后将其传递给两个不同的函数以供进一步处理。</p>
+<p>然后 <code>onload</code> 处理函数指定我们如何处理响应。 我们知道请求会成功返回，并在需要加载事件（如<code>onload</code> 事件）之后可用（除非发生错误），所以我们将包含返回的JSON的响应保存在<code>superHeroes</code>变量中，然后将其传递给两个不同的函数以供进一步处理。</p>
 
 <h3 id="它们在适当的地方有额外的安全机制">它们在适当的地方有额外的安全机制</h3>
 
-<p><font><font>WebAPI功能受到与JavaScript和其他Web技术（例如</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy"><font><font>同源政策</font></font></a><font><font>）</font><font>相同的安全考虑</font></font> 但是他们有时会有额外的安全机制。<font><font>例如，一些更现代的WebAPI将只能在通过HTTPS提供的页面上工作，因为它们正在传输潜在的敏感数据（例如  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"><font><font>服务工作者</font></font></a><font><font>  和  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"><font><font>推送</font></font></a><font><font>）。</font></font></p>
+<p>WebAPI功能受到与JavaScript和其他Web技术（例如<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">同源政策</a>）相同的安全考虑 但是他们有时会有额外的安全机制。例如，一些更现代的WebAPI将只能在通过HTTPS提供的页面上工作，因为它们正在传输潜在的敏感数据（例如  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">服务工作者</a>  和  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">推送</a>）。</p>
 
-<p><font><font>另外，一旦调用WebAPI请求，用户就可以在您的代码中启用一些WebAPI请求权限。</font><font>作为一个例子，在加载我们之前的</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"><font><font>Geolocation</font></font></a><font><font>  示例</font><font>时，您可能注意到了类似下面的对话框  </font><font>：</font></font></p>
+<p>另外，一旦调用WebAPI请求，用户就可以在您的代码中启用一些WebAPI请求权限。作为一个例子，在加载我们之前的<a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">Geolocation</a>  示例时，您可能注意到了类似下面的对话框  ：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14313/location-permission.png"></p>
 
-<p><font><font>该  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API"><font><font>通知API</font></font></a><font><font>  请求以类似的方式许可：</font></font></p>
+<p>该  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">通知API</a>  请求以类似的方式许可：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14315/notification-permission.png"></p>
 
