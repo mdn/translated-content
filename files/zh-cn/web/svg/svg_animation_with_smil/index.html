@@ -20,13 +20,13 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
  <li>物件方向与运动路径方向同步</li>
 </ul>
 
-<p>只要在一个SVG元素内添加一个SVG元素比如说<span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }}，就能实现让元素动起来。下面是四个不同方法的示例：</span></p>
+<p>只要在一个SVG元素内添加一个SVG元素比如说{{ SVGElement("animate") }}，就能实现让元素动起来。下面是四个不同方法的示例：</p>
 
 <p>自从Chrome 45，SMIL动画被弃用了，以利于CSS动画和Web动画。</p>
 
 <h2 id="一个元素的动画属性">一个元素的动画属性</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">下面的示例变动了一个圆的cx属性。为了做到这，我们在{{ SVGElement("circle") }} 元素里面添加了一个{{ SVGElement("animate") }}元素。对{{ SVGElement("animate") }} 元素来说，重要的属性有：</span></p>
+<p>下面的示例变动了一个圆的cx属性。为了做到这，我们在{{ SVGElement("circle") }} 元素里面添加了一个{{ SVGElement("animate") }}元素。对{{ SVGElement("animate") }} 元素来说，重要的属性有：</p>
 
 <dl>
  <dt><strong>attributeName</strong></dt>
@@ -58,7 +58,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 
 <h2 id="让变形属性变化起来">让变形属性变化起来</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animateTransform") }} </span>元素用于变动<span class="author-g-shbl2alwmr0wm7ko"><strong>transform</strong></span>属性。这个新元素是必要的，否则我们就不能让一个简单的、仅仅是一个数字的属性比如说<strong>x</strong>动起来。旋转属性看起来是这样的：<code>rotation(theta, x, y)</code>，这里<code>theta</code>是以角度数计量的角度，<code>x</code>和<code>y</code>都是绝对位置。在下面的示例中，将变动旋转的中心以及角度。</p>
+<p>{{ SVGElement("animateTransform") }} 元素用于变动<strong>transform</strong>属性。这个新元素是必要的，否则我们就不能让一个简单的、仅仅是一个数字的属性比如说<strong>x</strong>动起来。旋转属性看起来是这样的：<code>rotation(theta, x, y)</code>，这里<code>theta</code>是以角度数计量的角度，<code>x</code>和<code>y</code>都是绝对位置。在下面的示例中，将变动旋转的中心以及角度。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -89,7 +89,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 
 <h2 id="沿着路径动画">沿着路径动画</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animateMotion") }}元素使一个元素的位置动起来，并顺着路径同步旋转。定义这个路径是与在{{ SVGElement("path") }}元素中定义路径的方法相同。你可以设置这个属性以定义对象是否与跟着路径的正切值旋转。</span></p>
+<p>{{ SVGElement("animateMotion") }}元素使一个元素的位置动起来，并顺着路径同步旋转。定义这个路径是与在{{ SVGElement("path") }}元素中定义路径的方法相同。你可以设置这个属性以定义对象是否与跟着路径的正切值旋转。</p>
 
 <h3 id="示例1：线性运动">示例1：线性运动</h3>
 
