@@ -25,7 +25,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
 
 </pre>
 
-<p>命名空间声明是通过xmlns attribute提供的。xmlns属性意味着这个&lt;svg&gt;标签和它的子节点都属于<span class="nowiki">'http://www.w3.org/2000/svg'</span> 这个SVG命名空间。注意，这个命名空间声明只需要在根节点上声明一次。这个声明定义了默认的命名空间，所以用户代理知道所有的&lt;svg&gt;标签的子标签也属于相同的命名空间。用户代理如果能识别这个命名空间就决定他们如何处理这个标记。</p>
+<p>命名空间声明是通过xmlns attribute提供的。xmlns属性意味着这个&lt;svg&gt;标签和它的子节点都属于'http://www.w3.org/2000/svg' 这个SVG命名空间。注意，这个命名空间声明只需要在根节点上声明一次。这个声明定义了默认的命名空间，所以用户代理知道所有的&lt;svg&gt;标签的子标签也属于相同的命名空间。用户代理如果能识别这个命名空间就决定他们如何处理这个标记。</p>
 
 <p>请注意，命名空间仅仅只是一些字符串，所以SVG上那些看起来像URI的命名空间并不重要。因为URIs的唯一性从而被广泛使用，它的本意并不是要“链接”到某个地址。（实际上URIs被如此频繁地使用是“命名空间 URI"普遍使用而不是”命名空间的名字“被使用。）</p>
 
@@ -141,7 +141,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
  </tbody>
 </table>
 
-<p>The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG <strong>elements</strong> this is <span class="nowiki">'http://www.w3.org/2000/svg'</span>. However, note carefully: the <a class="external" href="http://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) attributes</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
+<p>The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG <strong>elements</strong> this is 'http://www.w3.org/2000/svg'. However, note carefully: the <a class="external" href="http://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) attributes</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
 
 <pre>document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 </pre>
@@ -151,7 +151,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
 <pre class="eval">rect.getAttributeNS(<strong>null</strong>, 'x');
 </pre>
 
-<p>Note that this isn't the case for attributes <em>with</em> a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the <code>xlink:href</code> attribute require the namespace name that was assigned to that prefix (<span class="nowiki">http://www.w3.org/1999/xlink</span> for XLink). Hence to get the value of the <code>xlink:href</code> attribute of an <code>&lt;a&gt;</code> element in SVG you would write:</p>
+<p>Note that this isn't the case for attributes <em>with</em> a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the <code>xlink:href</code> attribute require the namespace name that was assigned to that prefix (http://www.w3.org/1999/xlink for XLink). Hence to get the value of the <code>xlink:href</code> attribute of an <code>&lt;a&gt;</code> element in SVG you would write:</p>
 
 <pre>elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
 </pre>
