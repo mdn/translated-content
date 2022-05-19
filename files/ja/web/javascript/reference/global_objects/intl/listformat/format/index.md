@@ -1,79 +1,73 @@
 ---
-title: Intl​.ListFormat.prototype​.format()
+title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 tags:
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
   - ListFormat
-  - Method
-  - Prototype
+  - ローカライズ
+  - メソッド
+  - プロトタイプ
+  - リファレンス
+browser-compat: javascript.builtins.Intl.ListFormat.format
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>format()</code></strong> メソッドは、リストの言語固有の表現を文字列で返します。</p>
+**`format()`** メソッドは、リストの言語固有の表現を文字列で返します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<pre class="syntaxbox notranslate"><var>listFormat</var>.format([<var>list</var>])</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+format()
+format(list)
+```
 
-<dl>
- <dt><code><var>list</var></code></dt>
- <dd>Array などの反復可能オブジェクトです。</dd>
-</dl>
+### 引数
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+- `list`
+  - : Array などの反復可能オブジェクトです。
 
-<p>リストのすべての要素を表現する、言語に依存した文字列表現です。</p>
+### 返値
 
-<h2 id="Description" name="Description">解説</h2>
+リストのすべての要素を表現する、言語に依存した文字列表現です。
 
-<p><strong><code>format()</code></strong> メソッドは、 <code>Intl.ListFormat</code> オブジェクトで提供された引数に基づいて書式化された文字列を返します。 <code>locales</code> と <code>options</code> 引数で <code>format()</code> の動作をカスタマイズし、アプリケーションがリストを書式化する言語の慣習を指定することができます。</p>
+## 解説
 
-<h2 id="Examples" name="Examples">例</h2>
+**`format()`** メソッドは、 `Intl.ListFormat` オブジェクトで提供された引数に基づいて書式化された文字列を返します。 `locales` と `options` 引数で `format()` の動作をカスタマイズし、アプリケーションがリストを書式化する言語の慣習を指定することができます。
 
-<h3 id="Using_format" name="Using_format">format の使用</h3>
+## 例
 
-<p>以下の例では、英語を使用したリストのフォーマッターの作り方を紹介します。</p>
+### format の使用
 
-<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+以下の例では、英語を使用したリストのフォーマッターの作り方を紹介します。
+
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus and Car
+// > Motorcycle, Bus and Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus or Car
+// > Motorcycle, Bus or Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car
-</pre>
+// > Motorcycle Bus Car
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Intl.ListFormat', '#sec-Intl.ListFormat.prototype.format', 'format()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Intl.ListFormat.format")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("ListFormat", "Intl.ListFormat")}}</li>
-</ul>
+- {{jsxref("Intl.ListFormat")}}
