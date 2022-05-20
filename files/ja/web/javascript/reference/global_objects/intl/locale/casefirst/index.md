@@ -2,89 +2,64 @@
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 tags:
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
-  - Property
-  - Prototype
-  - Reference
   - プロパティ
-  - 国際化
+  - Locale
+  - ローカライズ
+  - プロトタイプ
+  - リファレンス
+browser-compat: javascript.builtins.Intl.Locale.caseFirst
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Intl.Locale.prototype.caseFirst</code></strong> プロパティは、ロケールの照合規則に大文字・小文字を考慮するかどうかを返すアクセサプロパティです。</span></p>
+**`Intl.Locale.prototype.caseFirst`** プロパティは、ロケールの照合規則に大文字小文字を考慮するかどうかを返すアクセサープロパティです。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>ロケールの照合規則は、そのロケールでの文字列の並び順を決定するために用いられます。ロケールによっては、照合処理で文字の大文字・小文字を使用する場合があります。この追加ルールは、 {{jsxref("Locale", "Locale")}} の <code>caseFirst</code> プロパティで表現することができます。</p>
+ロケールの照合規則は、そのロケールでの文字列の並び順を決定するために用いられます。ロケールによっては、照合処理で文字の大文字小文字を使用する場合があります。この追加ルールは、 {{jsxref("Intl/Locale", "Locale")}} の `caseFirst` プロパティで表現することができます。
 
-<p><code>caseFirst</code> プロパティには下記の表にある通り、3種類の値を指定することができます。</p>
+`caseFirst` プロパティには下記の表にある通り、 3 種類の値を指定することができます。
 
-<h3 id="caseFirst_values" name="caseFirst_values"><code>caseFirst</code> の値</h3>
+### `caseFirst` の値
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">値</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>upper</code></td>
-   <td>大文字は小文字よりも前に並べられます。</td>
-  </tr>
-  <tr>
-   <td><code>lower</code></td>
-   <td>小文字は大文字よりも前に並べられます。</td>
-  </tr>
-  <tr>
-   <td><code>false</code></td>
-   <td>大文字・小文字で特別な並べ替えはしません。</td>
-  </tr>
- </tbody>
-</table>
+| 値      | 説明                                |
+| ------- | -------------------------------------- |
+| `upper` | 大文字が小文字よりも前に並べられます。 |
+| `lower` | 小文字が大文字よりも前に並べられます。 |
+| `false` | 大文字と小文字で特別な並べ替えはしません。  |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_the_caseFirst_value_via_the_locale_string" name="Setting_the_caseFirst_value_via_the_locale_string">ロケール文字列による <code>caseFirst</code> 値の設定</h3>
+### ロケール文字列による `caseFirst` 値の設定
 
-<p><a href="https://www.unicode.org/reports/tr35/" rel="noopener">Unicode ロケール文字列仕様書</a>では、 <code>caseFirst</code> が表す値は <code>kf</code> キーに対応します。 <code>kf</code> はロケール文字列の「拡張子サブタグ」として扱われます。これらのサブタグは、ロケールに関するデータを追加するもので、 <code>-u</code> 拡張を使用してロケール識別子に追加されます。つまり、 <code>caseFirst</code> の値は、 <code>Locale</code> コンストラクターに渡される初期のロケール識別子文字列に追加することができます。 <code>caseFirst</code> の値を追加するには、まず文字列に <code>-u</code> 拡張キーを追加します。次に、照合順序の型を追加することを示すために <code>-kf</code> 拡張キーを追加します。最後に、 <code>caseFirst</code> の値を文字列に追加します。</p>
+[Unicode ロケール文字列仕様書](https://www.unicode.org/reports/tr35/)では、 `caseFirst` が表す値は `kf` キーに対応します。 `kf` はロケール文字列の「拡張子サブタグ」として扱われます。これらのサブタグは、ロケールに関するデータを追加するもので、 `-u` 拡張を使用してロケール識別子に追加されます。つまり、 `caseFirst` の値は、 `Locale` コンストラクターに渡される初期のロケール識別子文字列に追加することができます。 `caseFirst` の値を追加するには、まず文字列に `-u` 拡張キーを追加します。次に、照合順序の型を追加することを示すために `-kf` 拡張キーを追加します。最後に、 `caseFirst` の値を文字列に追加します。
 
-<pre class="brush: js">let caseFirstStr = new Intl.Locale("fr-Latn-FR-u-kf-upper");
-console.log(caseFirstStr.caseFirst); // "upper" と表示</pre>
+```js
+let locale = new Intl.Locale("fr-Latn-FR-u-kf-upper");
+console.log(locale.caseFirst); // "upper" と表示
+```
 
-<h3 id="Setting_the_caseFirst_value_via_the_configuration_object_argument" name="Setting_the_caseFirst_value_via_the_configuration_object_argument">構成オブジェクト引数による caseFirst の値の設定</h3>
+### 構成オブジェクト引数による caseFirst の値の設定
 
-<p>{{jsxref("Locale/Locale", "Intl.Locale")}} コンストラクターには、オプションで構成オブジェクトの引数があり、拡張の種類を渡すために使用することができます。構成オブジェクトの <code>caseFirst</code> プロパティを望みの <code>caseFirst</code> の値に設定し、コンストラクターに渡します。</p>
+{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターには、オプションで構成オブジェクトの引数があり、拡張の種類を渡すために使用することができます。構成オブジェクトの `caseFirst` プロパティを望みの `caseFirst` の値に設定し、コンストラクターに渡します。
 
-<pre class="brush: js">let caseFirstObj= new Intl.Locale("en-Latn-US", {caseFirst: "lower"});
-console.log(us12hour.caseFirst); // "lower" と表示</pre>
+```js
+let locale = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
+console.log(locale.caseFirst); // "lower" と表示
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.caseFirst')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("javascript.builtins.Intl.Locale.caseFirst")}}</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
- <li><a href="https://github.com/unicode-org/cldr/blob/master/common/bcp47/collation.xml#L49">Unicode case first collation spec</a></li>
-</ul>
+- {{jsxref("Intl.Locale")}}
+- [Unicode case first collation spec](https://github.com/unicode-org/cldr/blob/main/common/bcp47/collation.xml#L49)
