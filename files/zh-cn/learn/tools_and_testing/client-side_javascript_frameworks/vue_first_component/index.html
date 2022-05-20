@@ -126,7 +126,6 @@ export default {
 
 <h3 id="Registering_props">注册 props</h3>
 
-<p>In Vue, there are two ways to register props:</p>
 <p>在Vue中，注册props的方式有两种：</p>
 
 <ul>
@@ -158,7 +157,6 @@ export default {
  </li>
 </ol>
 
-<p>Your component object should now look like this:</p>
 <p>你的组件对象现在看起来应该像是这样：</p>
 
 <pre class="brush: js notranslate">&lt;script&gt;
@@ -172,16 +170,12 @@ export default {
 
 <h3 id="Using_registered_props">使用已注册的props</h3>
 
-<p>With these props defined inside the component object, we can now use these variable values inside our template. Let's start by adding the <code>label</code> prop to the component template.</p>
 <p>随着组件对象中这些props的定义，我们可以在template里使用这些变量值。让我们开始向组件模版中添加 <code>label</code> prop。</p>
 
-<p>In your <code>&lt;template&gt;</code>, replace the contents of the <code>&lt;label&gt;</code> element with <code>\{{label}}</code>.</p>
 <p>在你的 <code>&lt;template&gt;</code> 中，将 <code>&lt;label&gt;</code> 标签的contents内容修改为 <code>\{{label}}</code>。</p>
 
-<p><code>\{{}}</code> is a special template syntax in Vue, which lets us print the result of JavaScript expressions defined in our class, inside our template, including values and methods. It’s important to know that content inside <code>\{{}}</code> is displayed as text and not HTML. In this case, we’re printing the value of the <code>label</code> prop.</p>
 <p><code>\{{}}</code> 是Vue中的一个特殊的模版语法，它能在template内打印 类中定义的JavaScript表达式的结果，包括值和方法。重要的是， <code>\{{}}</code> 里的内容是作为text文本显示，而非HTML。在此例中，我们打印的是 <code>label</code> 的值。</p>
 
-<p>Your component’s template section should now look like this:</p>
 <p>现在，你组件的template部分应该是像这样：</p>
 
 <pre class="brush: html notranslate">&lt;template&gt;
@@ -191,7 +185,6 @@ export default {
   &lt;/div&gt;
 &lt;/template&gt;</pre>
 
-<p>Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:</p>
 <p>回到网页浏览器中，您将会看到todo item 与之前相同，但是没有label。转到浏览器的开发者工具，您会在控制台中看到这样的警告：</p>
 
 <pre class="notranslate">[Vue warn]: Missing required prop: "label"
@@ -203,29 +196,23 @@ found in
          &lt;Root&gt;
 </pre>
 
-<p>This is because we marked the <code>label</code> as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.</p>
 <p>这是因为我们将 <code>label</code> prop标记为required, 但我们从未给组件这个prop————我们已经在template内定义了希望使用这个prop值的位置，但在调用时我们没有把它传递进组件。让我们修复这个问题。</p>
 
 <p>在我们的 <code>App.vue </code>文件中，像常规HTML属性那样，在 <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> 里添加一个 <code>label</code> 属性：</p>
 
 <pre class="brush: html notranslate">&lt;to-do-item label="My ToDo Item"&gt;&lt;/to-do-item&gt;</pre>
 
-<p>Now you'll see the label in your app, and the warning won't be spat out in the console again.</p>
 <p>现在您会在页面上看到label了，并且console里不会再出现警告提示。</p>
 
-<p>So that's props in a nutshell. Next we'll move on to how Vue persists data state.</p>
 <p>这就是一个简单的props。接下来我们将讨论Vue如何持久化数据状态</p>
 
-<h2 id="Vues_data_object">Vue's data object</h2>
 <h2 id="Vues_data_object">Vue的数据对象</h2>
 
-<p>If you change the value of the <code>label</code> prop passed into the <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.</p>
 <p>如果您改变 传递到在您的App组件中访问的 <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> 的 <code>label</code> prop值，您应该会看到该值被更新。这很ok。我们现在有了一个checkbox，一个可更新的label标签。然而，我们目前没有对"done"prop做任何事情————我们可以在UI中选中checkbox，但在应用程序中，我们没有实际记录todo item是否已完成。</p>
 
-<p>To achieve this, we want to bind the component's <code>done</code> prop to the <code>checked</code> attribute on the <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.</p>
 <p>为了实现它，我们将组件的 <code>done</code> prop 与 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> 标签的 <code>checked</code> 属性作绑定。这样就可以记录复选框是否被选中。但是，props是一种单向数据绑定，组件永远不该改变自己的props的值，这点很重要。坚守这点的原因有很多。其一是，组件修改props会造成程序调试困难。如果一个值被传递进多个子组件，将很难定位这个值是在哪里被修改的。此外，修改props会造成组件重新渲染。所以，一个组件里突变的props会触发组件重新渲染，这可能会反过来再次触发props突变。</p>
 
-<p>To work around this, we can manage the <code>done</code> state using Vue’s <code>data</code> property. The <code>data</code> property is where you can manage local state in a component, it lives inside the component object alongside the <code>props</code> property and has the following structure:</p>
+<p>要变通解决此问题，我们可以使用Vue的<code>data</data>属性来管理<code>done</code>的状态。<code>data</code>属性是你可以用来在组件中管理本地状态，它与<code>props</code>属性一同位于组件对象中并具有以下结构：</p>
 
 <pre class="brush: js notranslate">data() {
   return {
@@ -233,17 +220,16 @@ found in
   }
 }</pre>
 
-<p>You'll note that the <code>data</code> property is a function. This is to keep the data values unique for each instance of a component at runtime — the function is invoked separately for each component instance. If you declared data as just an object, all instances of that component would share the same values. This is a side-effect of the way Vue registers components and something you do not want.</p>
+<p>你将注意到 <code>data</code> 属性是一个函数。这是为了在运行时保持组件的每个实例的数据值是唯一的——为每个组件实例单独调用函数。如果将数据声明为仅一个对象，则该组件的所有实例将共享相同的值。这是 Vue 注册组件方式的副作用，也是你不想要的。</p>
 
-<p>You use <code>this</code> to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.</p>
-
+<p>您可以使用<code>this</code>从内部数据访问组件的 props 和其他属性，如所你料。我们很快就会看到一个示例。</p>
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
+<p><strong>注意</strong>：由于<code>this</code>在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，您将无法从内部<code>data</code>访问任何必要的属性。因此，不要对<code>data</code>属性使用箭头函数。</p>
 </div>
 
-<p>So let's add a <code>data</code> property to our <code>ToDoItem</code> component. This will return an object containing a single property that we'll call <code>isDone</code>, whose value is <code>this.done</code>.</p>
+<p>因此，让我们向 <code>ToDoItem</code> 组件添加一个<code>data</code>属性。这将返回一个包含单个属性的对象,即我们将调用<code>isDone</code>，其值为 <code>this.done</code>。</p>
 
-<p>Update the component object like so:</p>
+<p>按如下方式更新组件对象：</p>
 
 <pre class="brush: js notranslate">export default {
   props: {
@@ -257,25 +243,25 @@ found in
   }
 };</pre>
 
-<p>Vue does a little magic here — it binds all of your props directly to the component instance, so we don’t have to call <code>this.props.done</code>. It also binds other attributes (<code>data</code>, which you’ve already seen, and others like <code>methods</code>, <code>computed</code>, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our <code>data</code> attribute <code>isDone</code> instead of <code>done</code>.</p>
+<p>Vue 在这里做了一点魔术 — 它把你所有的 props 直接绑定到组件实例上，所以我们不必调用 <code>this.props.done</code>。它还将其他属性（你已经看到<code>data</code>，以及其他<code>methods</code>，<code>computed</code>等）直接绑该定到实例。这部分是为了使它们可用于的你模板。这样做的缺点是，你需要在这些属性中保持键的唯一性。这就是为什么我们将<code>data</code>属性为<code>isDone</code>而不是<code>done</code>。</p>
 
-<p>So now we need to attach the <code>isDone</code> property to our component. In a similar fashion to how Vue uses <code>\{{}}</code> expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: <code><strong>v-bind</strong></code>. The <code>v-bind</code> expression looks like this:</p>
+<p>因此，现在我们需要将 <code>isDone</code> 属性附加到我们的组件。与 Vue 使用 <code>\{{}}</code> 表达式在模板中显示 JavaScript 表达式的方式类似，Vue 有一种特殊的语法将 JavaScript 表达式绑定到 HTML 元素和组件：<code><strong>v-bind</strong></code>。<code>v-bind</code>表达式如下所示：</p>
 
 <pre class="notranslate">v-bind:attribute="expression"</pre>
 
-<p>In other words, you prefix whatever attribute/prop you want to bind to with <code>v-bind:</code>. In most cases, you can use a shorthand for the <code>v-bind</code> property, which is to just prefix the attribute/prop with a colon. So <code>:attribute="expression"</code> works the same as <code>v-bind:attribute="expression"</code>.</p>
+<p>换句话说，你可以在要绑定到的任何attribute/prop 前面加上 <code>v-bind:</code>。在大多数情况下，你可以对 <code>v-bind:</code> 属性使用速记，即只在attribute/prop 前面加上冒号。所以 <code>:attribute="expression"</code> 的工作方式与 <code>v-bind:attribute="expression"</code>相同。</p>
 
-<p>So in the case of the checkbox in our <code>ToDoItem</code> component, we can use <code>v-bind</code> to map the <code>isDone</code> property to the <code>checked</code> attribute on the <code>&lt;input&gt;</code> element. Both of the following are equivalent:</p>
+<p>因此，对于 <code>ToDoItem</code> 组件中的复选框，我们可以使用 <code>v-bind</code> 将 <code>isDone</code> 属性映射到<code>&lt;input&gt;</code>元素上的<code>checked</code>属性。以下两项是等效的：</p>
 
 <pre class="brush: html notranslate">&lt;input type="checkbox" id="todo-item" v-bind:checked="isDone" /&gt;
 
 &lt;input type="checkbox" id="todo-item" :checked="isDone" /&gt;</pre>
 
-<p>You're free to use whichever pattern you would like. It's best to keep it consistent though. Because the shorthand syntax is more commonly used, this tutorial will stick to that pattern.</p>
+<p>你可以自由使用任何您想要的模式。不过，最好保持一致。由于速记语法更常用，因此本教程将坚持该模式。</p>
 
-<p>So let's do this. Update your <code>&lt;input&gt;</code> element now to replace <code>checked="false"</code> with <code>:checked="isDone"</code>.</p>
+<p>所以让我们这样做。立即更新你的<code>&lt;input&gt;</code>元素，将 <code>checked="false"</code> 替换为 <code>:checked="isDone"</code>。</p>
 
-<p>Test out your component by passing <code>:done="true"</code> to the <code>ToDoItem</code> call in <code>App.vue</code>. Note that you need to use the <code>v-bind</code> syntax, because otherwise <code>true</code> is passed as a string. The displayed checkbox should be checked.</p>
+<p>通过将<code>:done="true"</code>传递给<code>App.vue</code>中的<code>ToDoItem</code>调用来测试你的组件。请注意，你需要使用 <code>v-bind</code> 语法，否则 <code>true</code> 将作为字符串传递。显示的复选框应该被选中。</p>
 
 <pre class="brush: js notranslate">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -289,27 +275,27 @@ found in
 &lt;/template&gt;
 </pre>
 
-<p>Try changing <code>true</code> to <code>false</code> and back again, reloading your app in between to see how the state changes.</p>
+<p>尝试将 <code>true</code> 更改为 <code>false</code>，然后再返回，在两者之间重新加载应用以查看状态如何更改。</p>
 
-<h2 id="Giving_Todos_a_unique_id">Giving Todos a unique id</h2>
+<h2 id="Giving_Todos_a_unique_id">给 Todos 一个唯一的 ID</h2>
 
-<p>Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one <code>ToDoList</code> component to the page because the <code>id</code> is hardcoded. This would result in errors with assistive technology since the <code>id</code> is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the <code>id</code> in the component data.</p>
+<p>很好！我们现在有一个工作着的复选框，我们可以在其中以编程方式设置状态。但是，我们目前只能向页面添加一个<code>ToDoList</code>组件，因为<code>id</code>是硬编码的。这将导致辅助技术出错，因为需要 <code>id</code> 才能将标签正确映射到其复选框。为了解决这个问题，我们可以以编程方式在组件数据中设置<code>id</code>。</p>
 
-<p>We can use the <a href="https://www.npmjs.com/package/lodash">lodash</a> package's <code>uniqueid()</code> method to help keep the index unique. This package exports a function that takes in a string and appends a unique integer to the end of the prefix. This will be sufficient for keeping component <code>id</code>s unique.</p>
+<p>我们可以使用 <a href="https://www.npmjs.com/package/lodash">lodash</a> 包的 <code>uniqueid()</code> 方法来帮助保持索引的唯一性。此包导出一个函数，该函数接收字符串并将唯一整数追加到前缀的末尾。这足以保持组件 <code>id</code>的唯一性。</p>
 
-<p>Let’s add the package to our project with npm; stop your server and enter the following command into your terminal:</p>
+<p>让我们使用 npm 将包添加到我们的项目中;停止服务器并在终端中输入以下命令：</p>
 
 <pre class="brush: bash notranslate">npm install --save lodash.uniqueid</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
+<p><strong>注意</strong>：如果你更喜欢yarn，则可以改用<code>yarn add lodash.uniqueid</code>。</p>
 </div>
 
-<p>We can now import this package into our <code>ToDoItem</code> component. Add the following line at the top of <code>ToDoItem.vue</code>’s <code>&lt;script&gt;</code> element:</p>
+<p>现在，我们可以将此包导入我们的<code>ToDoItem</code>组件中。在<code>ToDoItem.vue</code>的<code>&lt;script&gt;</code>元素的顶部添加以下行：</p>
 
 <pre class="brush: js notranslate">import uniqueId from 'lodash.uniqueid';</pre>
 
-<p>Next, add add an <code>id</code> field to our data property, so the component object ends up looking like so (<code>uniqueId()</code> returns the specified prefix — <code>todo-</code> — with a unique string appended to it):</p>
+<p>接下来，将字段<code>id</code>添加到我们的数据属性中，这样组件对象最终看起来就是这样（<code>uniqueId()</code> 返回指定的前缀 — <code>todo-</code> — 并附加一个唯一的字符串）：</p>
 
 <pre class="brush: js notranslate">import uniqueId from 'lodash.uniqueid';
 
@@ -326,7 +312,7 @@ export default {
   }
 };</pre>
 
-<p>Next, bind the <code>id</code> to both our checkbox’s <code>id</code> attribute and the label’s <code>for</code> attribute, updating the existing <code>id</code> and <code>for</code> attributes as shown:</p>
+<p>接下来，将 <code>id</code> 绑定到复选框的 <code>id</code> 属性和标签的 <code>for</code> 属性，更新现有 <code>id</code> 和<code>for</code> 属性，如下所示：<code></code></p>
 
 <pre class="brush: js notranslate">&lt;template&gt;
   &lt;div&gt;
@@ -335,15 +321,15 @@ export default {
   &lt;/div&gt;
 &lt;/template&gt;</pre>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">总结</h2>
 
-<p>And that will do for this article. At this point we have a nicely-working <code>ToDoItem</code> component that can be passed a label to display, will store its checked state, and will be rendered with a unique <code>id</code> each time it is called. You can check if the unique <code>id</code>s are working by temporarily adding more <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> calls into <code>App.vue</code>, and then checking their rendered output with your browser's DevTools.</p>
+<p>这将对本文有所帮助。此时，我们有一个工作良好的<code>ToDoItem</code>组件，可以传递一个标签来显示，将存储其检查状态，并在每次调用时使用唯一的<code>id</code>呈现。您可以通过在 <code>App.vue</code> 中临时添加更多<code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code>去调用，然后使用浏览器的 DevTools 检查其呈现的输出，从而检查唯一 <code>id</code>是否正常工作。</p>
 
-<p>Now we're ready to add multiple <code>ToDoItem</code> components to our App. In our next article we'll look at adding a set of todo item data to our <code>App.vue</code> component, which we'll then loop through and display inside <code>ToDoItem</code> components using the <code>v-for</code> directive.   </p>
+<p>现在，我们已准备好将多个 <code>ToDoItem</code> 组件添加到我们的应用中。在下一篇文章中，我们将介绍如何将一组待办事项数据添加到 <code>App.vue</code> 组件中，然后使用 <code>v-for</code> 指令在 <code>ToDoItem</code> 组件中循环显示这些数据。  </p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">在本模块中</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
