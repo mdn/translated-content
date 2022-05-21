@@ -137,7 +137,7 @@ NPM を使用して async モジュールのインストールを行い、コー
 npm install async
 ```
 
-## Next steps
+## 次のステップ
 
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of Part 5: [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer).
+- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data) へ戻る。
+- Part 5: 次の小項目「[テンプレートプライマー](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)」に進む。
