@@ -18,27 +18,27 @@ async には多くの便利なメソッドがあります（詳しくは [the do
 - [`async.series()`](https://caolan.github.io/async/v3/docs.html#series) は、非同期操作が直列に実行される必要がある場合に使用します。
 - [`async.waterfall()`](https://caolan.github.io/async/v3/docs.html#waterfall) は、直列に実行する必要がある操作の中でも、各操作が前の操作の結果に依存する場合に使用します。
 
-## Why is this needed?
+## なぜ非同期フロー制御が必要なのか？
 
-Most of the methods we use in _Express_ are asynchronous—you specify an operation to perform, passing a callback. The method returns immediately, and the callback is invoked when the requested operation completes. By convention in _Express_, callback functions pass an _error_ value as the first parameter (or `null` on success) and the results from the function (if there are any) as the second parameter.
+_Express_ で使用するメソッドの多くは非同期です。なので実行する操作を指定して、コールバックを渡します。メソッドはすぐに戻り、そしてコールバックは要求された操作が完了したときに呼び出されます。_Express_ の慣例として、コールバック関数は第 1 引数にエラー値 (成功時には `null`)、第 2 引数には関数からの結果 (存在する場合のみ) を渡します。
 
-If a controller only needs to _perform **one** asynchronous operation_ to get the information required to render a page then the implementation is easy—we render the template in the callback. The code fragment below shows this for a function that renders the count of a model `SomeModel` (using the Mongoose [`countDocuments`](https://mongoosejs.com/docs/api.html#model_Model.countDocuments) method):
+もしコントローラーがページのレンダリングに必要な情報を得るために **1 つの非同期操作**を実行するだけならば、実装は簡単です。コールバックでテンプレートをレンダリングするだけです。以下のコードでは、`SomeModel` モデルのカウントをレンダリングする関数 (Mongoose の [`countDocuments`](https://mongoosejs.com/docs/api.html#model_Model.countDocuments) メソッドを使用) を示しています。
 
 ```js
 exports.some_model_count = function(req, res, next) {
 
   SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
-    // ... do something if there is an err
+    // ... エラーが発生した場合
 
-    // On success, render the result by passing count into the render function (here, as the variable 'data').
+    // 成功したら count を render 関数に渡して結果をレンダリングする (ここでは変数 'data')
     res.render('the_template', { data: count } );
   });
 }
 ```
 
-What if you need to make **multiple** asynchronous queries, and you can't render the page until all the operations have completed? A naive implementation could "daisy chain" the requests, kicking off subsequent requests in the callback of a previous request, and rendering the response in the final callback. The problem with this approach is that our requests would have to be run in series, even though it might be more efficient to run them in parallel. This could also result in complicated nested code, commonly referred to as [callback hell](http://callbackhell.com/).
+では**複数**の非同期クエリを実行する必要があり、すべての操作が完了するまでページをレンダリングできない場合はどうすればよいでしょうか？甘い考えで実装するとリクエストを「デイジーチェーン」して、前のリクエストのコールバックで後続のリクエストを開始し、最後のコールバックでレスポンスを受け取ってレンダリングすることができます。この方法の問題点は並列で実行した方が効率的である場合でも、リクエストを直列で実行する必要がある点です。これにより一般的に[コールバック地獄](http://callbackhell.com/)と呼ばれる複雑にネストされたコードになる可能性があります。
 
-A much better solution would be to execute all the requests in parallel and then have a single callback that executes when all of the queries have completed. This is the sort of flow operation that the _Async_ module makes easy!
+より良い解決策はすべてのリクエストを並列で実行して、すべてのクエリが完了したときに実行される単一のコールバックを持つことです。そして、そのようなフロー操作を簡単に行うことができるのが _async_ モジュールなのです！
 
 ## Asynchronous operations in parallel
 
