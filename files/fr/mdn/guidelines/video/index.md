@@ -29,9 +29,9 @@ Dans de telles situations, il est souvent plus pratique de **montrer** ce qu'on 
 
 Une vidéo à destination de MDN devrait être&nbsp;:
 
-- **Courte**&nbsp;: On essaiera d'avoir des vidéos dont la durée est inférieure à 30 secondes, idéalement inférieure à 20 secondes. Elle sera ainsi suffisamment courte pour ne pas demander un temps d'attention trop long au spectateur.
+- **Courte**&nbsp;: On essaiera d'avoir des vidéos dont la durée est inférieure à 30 secondes, idéalement inférieure à 20 secondes. Elle sera ainsi suffisamment courte pour ne pas demander un temps d'attention trop long au spectateur ou à la spectatrice.
 - **Simple**&nbsp;: On essaiera de garder un cheminement simple avec 2 à 4 fragments distincts pour que les étapes soient faciles à suivre.
-- **Silencieuse**&nbsp;: Le son permet d'avoir des vidéos plus impactantes mais demande également plus de temps pour la réalisation et l'implication d'un spectateur qui peut ne pas pouvoir écouter au moment où il/elle regarde la vidéo. Cela peut également rallonger la vidéo et rajoute des coûts de maintenance et de localisation.
+- **Silencieuse**&nbsp;: Le son permet d'avoir des vidéos plus impactantes mais demande également plus de temps pour la réalisation et l'implication d'un spectateur ou d'une spectatrice qui peut ne pas pouvoir écouter au moment où il/elle regarde la vidéo. Cela peut également rallonger la vidéo et rajoute des coûts de maintenance et de localisation.
 
 Pour expliquer quelque chose de complexes, on pourra utiliser un ensemble de vidéos courtes et de captures d'écran avec du texte. Le texte permettra ainsi d'insister sur les notions vues dans les vidéos et la personne qui consulte le contenu pourra alors choisir de suivre le texte et/ou la vidéo.
 
@@ -48,30 +48,30 @@ Il vous faudra un outil pour enregistrer la vidéo. Il en existe une variété a
 
 Le tableau qui suit fournit quelques recommandations d'outils pour commencer.
 
-| Outil                     | Système d'exploitation | Coût          | Fonctionnalités de post-production ? |
-| ------------------------- | ---------------------- | ------------- | ------------------------------------ |
-| Open Broadcaster Software | macOS, Windows, Linux  | Gratuit       | Oui                                  |
-| CamStudio                 | Windows                | Gratuit       | Limitées                             |
-| Camtasia                  | Windows, macOS         | Élevé         | Oui                                  |
-| QuickTime Player          | macOS                  | Gratuit       | Aucune                               |
-| ScreenFlow                | macOS                  | Intermédiaire | Oui                                  |
-| Kazam                     | Linux                  | Gratuit       | Minimales                            |
+| Outil                     | Système d'exploitation | Coût          | Fonctionnalités de post-production&nbsp;? |
+| ------------------------- | ---------------------- | ------------- | ----------------------------------------- |
+| Open Broadcaster Software | macOS, Windows, Linux  | Gratuit       | Oui                                       |
+| CamStudio                 | Windows                | Gratuit       | Limitées                                  |
+| Camtasia                  | Windows, macOS         | Élevé         | Oui                                       |
+| QuickTime Player          | macOS                  | Gratuit       | Aucune                                    |
+| ScreenFlow                | macOS                  | Intermédiaire | Oui                                       |
+| Kazam                     | Linux                  | Gratuit       | Minimales                                 |
 
 ### Conseils pour QuickTime
 
 Si vous utilisez macOS, Quicktime Player est disponible et dispose de quelques fonctionnalités pour l'enregistrement&nbsp;:
 
-1.  Choisissez _Fichier_ > _Nouvel enregistrement d'écran_ à partir du menu principal.
-2.  Dans la boîte _Enregistrement d'écran_, utilisez le bouton d'enregistrement (le bouton rouge).
-3.  Dessinez un rectangle sur la zone de l'écran que vous souhaitez enregistrer.
-4.  Appuyez sur le bouton _Démarrer l'enregistrement_.
-5.  Effectuez les actions que vous souhaitez enregistrer.
-6.  Appuyez sur le bouton _Stop_.
-7.  Choisissez _Fichier_ > _Exporter en tant que…_ > _1080p_ à partir du menu principal afin d'avoir une définition suffisamment élevée.
+1. Choisissez _Fichier_ > _Nouvel enregistrement d'écran_ à partir du menu principal.
+2. Dans la boîte _Enregistrement d'écran_, utilisez le bouton d'enregistrement (le bouton rouge).
+3. Dessinez un rectangle sur la zone de l'écran que vous souhaitez enregistrer.
+4. Appuyez sur le bouton _Démarrer l'enregistrement_.
+5. Effectuez les actions que vous souhaitez enregistrer.
+6. Appuyez sur le bouton _Stop_.
+7. Choisissez _Fichier_ > _Exporter en tant que…_ > _1080p_ à partir du menu principal afin d'avoir une définition suffisamment élevée.
 
 ### Autres ressources
 
-- [How to Add Custom Callouts to Screencast Videos in Screenflow (en anglais)](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [Comment ajouter des boîtes de légende personnalisées aux <i lang="en">screencasts</i> dans Screenflow (en anglais)](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ## Étapes de création d'une vidéo
 
@@ -81,17 +81,17 @@ Les sections qui suivent décrivent les étapes principales à suivre pour crée
 
 Tout d'abord, planifiez la suite d'actions que vous souhaitez enregistrer et choisissez les meilleures façons de commencer et de finir.
 
-Assurez vous que votre arrière-plan de bureau et votre profil de navigateur soient vierges. Planifier les tailles et le positionnement des fenêtres, notamment si vous utilisez plusieurs fenêtres.
+Assurez-vous que votre arrière-plan de bureau et votre profil de navigateur soient vierges. Planifier les tailles et le positionnement des fenêtres, notamment si vous utilisez plusieurs fenêtres.
 
 Planifiez soigneusement les étapes que vous allez enregistrer et pratiquez cette séquence d'actions plusieurs fois avant d'enregistrer&nbsp;:
 
 - Ne commencez pas une vidéo au milieu d'une suite d'étape. Veillez à ce que le spectateur ait suffisamment de contexte pour que les actions illustrées aient du sens.
-- Pour chacune de vos actions, assurez vous de les réaliser suffisamment lentement et de les mettre en évidence. Par exemple, lorsqu'on doit cliquer quelque part on pourra&nbsp;:
+- Pour chacune de vos actions, assurez-vous de les réaliser suffisamment lentement et de les mettre en évidence. Par exemple, lorsqu'on doit cliquer quelque part on pourra&nbsp;:
 
-  1.  Déplacer la souris sur l'icône
-  2.  Mettre en évidence ou zoomer (selon ce qui est le plus pertinent)
-  3.  Suspendre le mouvement pendant un instant
-  4.  Cliquer sur l'icône
+  1. Déplacer la souris sur l'icône
+  2. Mettre en évidence ou zoomer (selon ce qui est le plus pertinent)
+  3. Suspendre le mouvement pendant un instant
+  4. Cliquer sur l'icône
 
 - Planifiez les niveaux de zoom pour les portions de l'interface utilisateur que vous afficherez. Tout le monde ne pourra pas forcément consulter la vidéo en haute définition. Vous pourrez également zoomer sur certaines parties en post-production mais ça peut être une bonne idée de zoomer dès l'enregistrement.
 
@@ -99,7 +99,7 @@ Planifiez soigneusement les étapes que vous allez enregistrer et pratiquez cett
 
 ### Enregistrement
 
-Lorsque vous enregistrez, avancez dans les étapes de façon calme et régulière. Effectuez des pauses d'une seconde ou deux aux moments importants (lorsqu'il faut cliquer sur un bouton par exemple) et assurez vous que le pointeur de la souris n'occulte pas d'icône ou de texte important.
+Lorsque vous enregistrez, avancez dans les étapes de façon calme et régulière. Effectuez des pauses d'une seconde ou deux aux moments importants (lorsqu'il faut cliquer sur un bouton par exemple) et assurez-vous que le pointeur de la souris n'occulte pas d'icône ou de texte important.
 
 N'oubliez pas de faire une pause d'une ou deux secondes à la fin pour montrer le résultat final de la séquence d'actions.
 
@@ -112,7 +112,7 @@ En post-production, vous pourrez mettre en avant certains éléments notamment g
 - Du zoom sur certaines parties de l'écran.
 - L'atténuation de l'arrière-plan.
 
-Mettez en avant les moments-clés et les détails difficiles à voir comme les clics sur une icône donnée ou la saisie d'une URL particulière. La mise en avant doit durer au moins 1 à 2 secondes et il sera généralement utile d'ajouter une courte transition (200 à 300 millisecondes) au début et à la fin de la mise en évidence.
+Mettez en avant les moments clés et les détails difficiles à voir comme les clics sur une icône donnée ou la saisie d'une URL particulière. La mise en avant doit durer au moins 1 à 2 secondes et il sera généralement utile d'ajouter une courte transition (200 à 300 millisecondes) au début et à la fin de la mise en évidence.
 
 Attention à ne pas abuser de ces effets, on ne veut pas que les spectateurs aient le mal de mer à force de voir des zooms/dézooms.
 
@@ -132,7 +132,7 @@ Une fois la vidéo uploadée, vous pouvez intégrer la vidéo à la page avec la
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
-Cette macro utilise un seul argument qui correspond à la fin de l'URL de la vidéo. Ainsi, pour afficher la vidéo disponible à l'URL https\://www\.youtube.com/watch?v=ELS2OOUvxIw, on appellera la macro ainsi&nbsp;:
+Cette macro utilise un seul argument qui correspond à la fin de l'URL de la vidéo. Ainsi, pour afficher la vidéo disponible à l'URL `https://www.youtube.com/watch?v=ELS2OOUvxIw`, on appellera la macro ainsi&nbsp;:
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

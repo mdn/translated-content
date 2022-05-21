@@ -56,7 +56,7 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
       </td>
       <td><a href="/fr/docs/Web/API">La référence du DOM</a> (/Web/API)</td>
       <td>
-        <code>\{{DOMxRef("Document")}}</code> devra être remplacé par <code>[`Document`](/fr/docs/Web/API/Document)</code>. 
+        <code>\{{DOMxRef("Document")}}</code> devra être remplacé par <code>[`Document`](/fr/docs/Web/API/Document)</code>.
         S'il y a un deuxième paramètre&nbsp;: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> devra être remplacé par <code>[`getElementsByName()`](/fr/docs/Web/API/Document/getElementsByName)</code>.
       </td>
     </tr>
@@ -196,7 +196,7 @@ Pour chaque grand ensemble de pages, on a des macros qui aident à la navigation
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) génère la barre latérale pour les pages de la référence CSS.
 - [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) génère la barre latérale pour les pages de la référence HTML.
-- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) génère la barre latérale pour les pages des références des API Web.
+- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) génère la barre latérale pour les pages des références des API web.
 
 ## Mise en forme
 
@@ -204,19 +204,19 @@ Pour chaque grand ensemble de pages, on a des macros qui aident à la navigation
 
 [`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) et [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) sont utilisées dans les documentations d'API pour décrire la liste des propriétés d'un objet ou les paramètres d'une fonction.
 
-##### Syntaxe
+#### Syntaxe
 
-`\{{Optional_Inline}}` 
+`\{{Optional_Inline}}`
 
 ou
 
 `\{{ReadOnlyInline}}`.
 
-##### Exemples
+#### Exemples
 
-- `isCustomObject`{{ReadOnlyInline}}
+- `isCustomObject` {{ReadOnlyInline}}
   - : Un booléen qui indique, s'il vaut `true`, que l'objet est spécifique.
-- `parameterX`{{Optional_Inline}}
+- `parameterX` {{Optional_Inline}}
   - : Bla bla bla…
 
 ## Indicateurs de statut et de compatibilité
