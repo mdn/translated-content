@@ -129,9 +129,9 @@ async.waterfall([
 );
 ```
 
-## Installing async
+## async のインストール
 
-Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the _LocalLibrary_ project and entering the following command:
+NPM を使用して async モジュールのインストールを行い、コードで使用できるようにします。これは _LocalLibrary_ のルートでプロンプトを開いて、下記のコマンドを入力するという通常の手法で行います。
 
 ```bash
 npm install async
