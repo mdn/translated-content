@@ -92,10 +92,10 @@ export interface Item {
 
 このファイルは[後で](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent)使用するまで使用しませんが、 `item` が何であるかを知って記録する良い機会です。 `Item` `interface` は、アプリケーションが `item` が何であるかを理解できるように、 `item` オブジェクトモデルを作成します。この to-do リストの場合、 `item` は説明があり、実行できるオブジェクトです。
 
-## Add logic to AppComponent
+## AppComponent にロジックを追加
 
-Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
-In `app.component.ts`, replace the contents with the following:
+`item` が何であるかがわかったので、TypeScript ファイル `app.component.ts` に追加することで、アプリケーションにいくつかのアイテムを与えることができます。
+`app.component.ts` で、内容を次のように置き換えます。
 
 ```js
 import { Component } from "@angular/core";
@@ -128,31 +128,31 @@ export class AppComponent {
 }
 ```
 
-The first line is a JavaScript import that imports Angular.
-The `@Component()` decorator specifies metadata about the `AppComponent`.
-The default metadata properties are as follows:
+最初の行は、Angular をインポートする JavaScript インポートです。
+`@Component()` デコレータは、 `AppComponent` に関するメタデータを指定します。
+デフォルトのメタデータプロパティは次のとおりです。
 
-- `selector`: Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is `'app-root'`.
-  In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
-  You use all component selectors in the same way by adding them to other component HTML templates.
-- `templateUrl`: Specifies the HTML file to associate with this component.
-  Here it is, './app.component.html',
-- `styleUrls`: Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- `selector`: このコンポーネントをインスタンス化するためにテンプレートで使用する CSS セレクターの名前を示します。 これが `'app-root'` です。
+  `index.html` の `body` タグ内で、AngularCLI はアプリケーションの生成時に `<app-root></app-root>` を追加しました。
+  すべてのコンポーネントセレクターを他のコンポーネント HTML テンプレートに追加することにより、同じように使用します。
+- `templateUrl`: このコンポーネントに関連付ける HTML ファイルを指定します。
+  これが、'./app.component.html'
+- `styleUrls`: このコンポーネントに特に適用されるスタイルのファイルの場所と名前を提供します。 これが `'./app.component.css'` です。
 
-The `filter` property is of type `union`, which means `filter` could have the value of `all`, `active`, or `done`.
-With the `union` type, if you make a typo in the value you assign to the `filter` property, TypeScript lets you know so that you can catch the bug early.
-This guide shows you how to add filtering in a later step, but you can also use a filter to show the default list of all the items.
+`filter` プロパティは `union` 型です。つまり、 `filter` は `all`, `active` 又は、 `done` の値を持つことができます。
+`union` タイプでは、 `filter` プロパティに割り当てる値にタイプミスをすると、TypeScript はバグを早期に発見できるように通知します。
+このガイドでは、後の手順でフィルタリングを追加する方法を示しますが、フィルターを使用してすべての items 　のデフォルトリストを表示することもできます。
 
-The `allItems` array contains the to-do items and whether they are `done`.
-The first item, `eat`, has a `done` value of true.
+`allItems` 配列には、to-do items と `done` が含まれます。
+最初のアイテムである `eat` は、 `done` の値が true です。
 
-The getter, `get items()`, retrieves the items from the `allItems` array if the `filter` is equal to `all`.
-Otherwise, `get items()` returns the `done` items or the outstanding items depending on how the user filters the view.
-The getter also establishes the name of the array as `items`, which you'll use in the next section.
+getter の `get items()` は、 `filter` が `all` と等しい場合、 `allItems` 配列からアイテムを取得します。
+それ以外の場合、 `get items()` は、ユーザーがビューをフィルタリングする方法に応じて、 `done` items または未処理の items を返します。
+ゲッターはまた、配列の名前を `items` として確立します。これは、次のセクションで使用します。
 
-## Add HTML to the AppComponent template
+## AppComponent テンプレートに HTML を追加
 
-To see the list of items in the browser, replace the contents of `app.component.html` with the following HTML:
+ブラウザで items のリストを表示するには、 `app.component.html` の内容を次の HTML に置き換えます。
 
 ```html
 <div class="main">
@@ -169,7 +169,11 @@ The `<li>` contains an `*ngFor`, a built-in Angular directive that iterates over
 For each item, `*ngFor` creates a new `<li>`.
 The double curly braces that contain `item.description` instructs Angular to populate each `<li>` with the text of each item's description.
 
-In the browser, you should see the list of items as follows:
+`<li>` には、 `items` 配列内のアイテムを反復処理する組み込みの Angular ディレクティブである `*ngFor` が含まれています。
+アイテムごとに、 `*ngFor` は新しい `<li>` を作成します。
+`item.description` を含む二重中括弧は、各 `<li>` に各アイテムの説明のテキストを入力するように Angular に指示します。
+
+ブラウザに、次のようなアイテムのリストが表示されます。
 
 ```
 My To Do List
@@ -181,11 +185,11 @@ What would you like to do today?
 * laugh
 ```
 
-## Add items to the list
+## リストに items を追加
 
-A to-do list needs a way to add items.
+to-do リストには、 items を追加する方法が必要です。
 
-In `app.component.ts`, add the following method to the class:
+`app.component.ts` で、次のメソッドをクラスに追加します。
 
 ```js
 addItem(description: string) {
@@ -196,13 +200,13 @@ addItem(description: string) {
 }
 ```
 
-The `addItem()` method takes an item that the user provides and adds it to the array when the user clicks the **Add** button.
-The `addItem()` method uses the array method `unshift()` to add a new item to the beginning of the array and the top of the list.
-You could alternatively use `push()`, which would add the new item to the end of the array and the bottom of the list.
+`addItem()` メソッドは、ユーザーが提供したアイテムを受け取り、ユーザーが[**Add**]ボタンをクリックすると、そのアイテムを配列に追加します。
+`addItem()` メソッドは、配列メソッド `unshift()` を使用して、配列の先頭とリストの先頭に新しいアイテムを追加します。
+または、 `push()` を使用して、配列の最後とリストの一番下に新しいアイテムを追加することもできます。
 
-To use the `addItem()` method, edit the HTML in the `AppComponent` template.
+`addItem()` メソッドを使用するには、 `AppComponent` テンプレートの HTML を編集します。
 
-In `app.component.html`, replace the `<h2>` with the following:
+`app.component.html` で、 `<h2>` を次のように置き換えます。
 
 ```js
 <label for="addItemInput">What would you like to do today?</label>
@@ -218,17 +222,17 @@ In `app.component.html`, replace the `<h2>` with the following:
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```
 
-When the user types a new item in the `<input>` and presses **Enter**, the `addItem()` method adds the value to the `items` array.
-Pressing the **Enter** key also resets the value of `<input>` to an empty string.
-Alternatively, the user can click the **Add** button which calls the same`addItem()` method.
+ユーザーが `<input>` に新しいアイテムを入力して**Enter**を押すと、 `addItem()` メソッドはその値を `items` 配列に追加します。
+**Enter** キーを押すと、 `<input>` の値も空の文字列にリセットされます。
+または、同じ `addItem()` メソッドを呼び出す**追加**ボタンをクリックすることもできます。
 
-## Summary
+## まとめ
 
-By now you should have your basic list of to-dos displaying in your browser. That's great progress! Of course, we have a lot more to do. In the next article we will look at adding some styling to our application.
+これで、ブラウザに to-do の基本的なリストが表示されるはずです。 それは大きな進歩です！ もちろん、やるべきことはまだたくさんあります。 次の記事では、アプリケーションにスタイルを追加する方法について説明します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## In this module
+## このモジュール内
 
 - [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 - [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
@@ -276,8 +280,8 @@ By now you should have your basic list of to-dos displaying in your browser. Tha
 
 - Angular
 
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Getting started with Angular](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
