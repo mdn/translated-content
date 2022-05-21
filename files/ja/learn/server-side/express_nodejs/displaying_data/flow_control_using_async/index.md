@@ -1,5 +1,5 @@
 ---
-title: Asynchronous flow control using async
+title: async を使用した非同期フロー制御
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 tags:
   - Express
@@ -8,15 +8,15 @@ tags:
   - part 5
   - server-side
 ---
-The controller code for some of our _LocalLibrary_ pages will depend on the results of multiple asynchronous requests, which may be required to run either in some particular order or in parallel. In order to manage flow control, and render pages when we have all the required information available, we'll use the popular node [async](https://www.npmjs.com/package/async) module.
+_LocalLibrary_ 中のいくつかのコントローラーのコードは、複数の非同期リクエストの結果に依存しています。そのため、操作を特定の順序もしくは並列して実行することが必要になる場合があります。フロー制御を管理して、必要となるすべての情報を取得した後でページをレンダリングするために、ここでは人気のある node [async](https://www.npmjs.com/package/async) を使うことにします。
 
-> **Note:** There are a number of other ways to manage asynchronous behavior and flow control in JavaScript, including relatively recent JavaScript language features like [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises).
+> **Note:** JavaScript で非同期動作やフロー制御を管理する手法には [Promises](/ja/docs/Web/JavaScript/Guide/Using_promises) のような比較的最近 JavaScript に導入された言語機能を含め、他にもあります。
 
-Async has a lot of useful methods (check out [the documentation](https://caolan.github.io/async/v3/docs.html)). Some of the more important functions are:
+async には多くの便利なメソッドがあります（詳しくは [the documentation](https://caolan.github.io/async/v3/docs.html) を参照してください）。ここでは重要ないくつかの関数を紹介します。
 
-- [`async.parallel()`](https://caolan.github.io/async/v3/docs.html#parallel) to execute any operations that must be performed in parallel.
-- [`async.series()`](https://caolan.github.io/async/v3/docs.html#series) for when we need to ensure that asynchronous operations are performed in series.
-- [`async.waterfall()`](https://caolan.github.io/async/v3/docs.html#waterfall) for operations that must be run in series, with each operation depending on the results of preceding operations.
+- [`async.parallel()`](https://caolan.github.io/async/v3/docs.html#parallel) は、並列して行う必要のある操作を実行する場合に使用します。
+- [`async.series()`](https://caolan.github.io/async/v3/docs.html#series) は、非同期操作が直列に実行される必要がある場合に使用します。
+- [`async.waterfall()`](https://caolan.github.io/async/v3/docs.html#waterfall) は、直列に実行する必要がある操作の中でも、各操作が前の操作の結果に依存する場合に使用します。
 
 ## Why is this needed?
 
