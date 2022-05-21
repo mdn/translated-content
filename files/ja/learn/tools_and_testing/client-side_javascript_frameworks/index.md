@@ -111,7 +111,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Angular チュートリアル
 
-> **Note:** この Angular チュートリアルは Angular CLI (NG) 11.2.5 で、 2021 年 4 月に動作確認を行いました。
+> **Note:** この Angular チュートリアルは Angular CLI (NG) 13.3.4 で、 2022 年 5 月に動作確認を行いました。
 >
 > もし、コードをこのバージョンと照合する必要がある場合は、サンプルの Angular アプリコードの完成版を [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) で確認ができます。
 
