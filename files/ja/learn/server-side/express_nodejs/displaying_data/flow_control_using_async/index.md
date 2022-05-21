@@ -104,11 +104,11 @@ async.series([
 );
 ```
 
-## Dependent asynchronous operations in series
+## 依存性のある直列の非同期操作
 
-The method [`async.waterfall()`](https://caolan.github.io/async/v3/docs.html#waterfall) is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.
+[`async.waterfall()`](https://caolan.github.io/async/v3/docs.html#waterfall) メソッドは、各操作が前の操作の結果に依存している場合において、複数の非同期操作を順番に実行するために使用されます。
 
-The callback invoked by each asynchronous function contains `null` for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the _async_ documentation):
+各非同期関数から呼び出されるコールバックは、第 1 引数に `null` を含み、それ以降の引数には結果が含まれます。直列の各関数は、最初の引数として直前のコールバックの結果を引数として受け取り、次にコールバック関数を受け取ります。すべての操作が完了すると、最後の操作の結果とともに最終的なコールバックが呼び出されます。これがどのように機能するかは、以下のコードの一部分をもとに考えるとより明確になります (この例は _async_ のドキュメントにもあります)。
 
 ```js
 async.waterfall([
@@ -116,15 +116,15 @@ async.waterfall([
     callback(null, 'one', 'two');
   },
   function(arg1, arg2, callback) {
-    // arg1 now equals 'one' and arg2 now equals 'two'
+    // arg1 は 'one' に、arg2 は 'two' になりました
     callback(null, 'three');
   },
   function(arg1, callback) {
-    // arg1 now equals 'three'
+    // arg1 が 'three' になりました
     callback(null, 'done');
   }
 ], function (err, result) {
-  // result now equals 'done'
+  // result が 'done' になりました
 }
 );
 ```
