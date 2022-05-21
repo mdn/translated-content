@@ -1,88 +1,79 @@
 ---
-title: Content
+title: CSS 生成コンテンツの使用
 slug: Learn/CSS/Howto/Generated_content
 tags:
+  - 基本
+  - 初心者
   - CSS
-  - 'CSS:Getting_Started'
-  - Getting_Started
+  - CSS:Getting_Started
+  - グラフィック
+  - ガイド
+  - NeedsUpdate
+  - ウェブ
 translation_of: Learn/CSS/Howto/Generated_content
 ---
-<div>{{CSSTutorialTOC}}</div>
+{{LearnSidebar}}
 
-<div>{{previousPage("/ja/docs/CSS/Getting_Started/Color", "Color")}} これは<span class="seoSummary"> <a href="/ja/docs/CSS/Getting_Started" title="CSS/Getting Started">CSS Getting Started</a>チュートリアルの第9章です; 文書が表示されたとき CSS を使ってコンテンツを追加するいくつかの方法について述べます。スタイルシートを編集して、テキストや画像を追加できます。</span></div>
+この記事では、 CSS を使用して文書を表示するときにコンテンツを追加するいくつかの方法について説明します。スタイルシートを修正して、テキストコンテンツや画像を追加するのです。
 
-<h2 class="clearLeft" id="Information.3A_Content" name="Information.3A_Content">コンテンツについて</h2>
+CSS の重要な利点の一つが、文書のスタイルをそのコンテンツから分離しやすくことです。しかし、あるコンテンツを文書の一部としてではなく、スタイルシートの一部として指定することが理にかなっている場合もあります。テキストや画像の内容が文書の構造に密接に関連している場合は、スタイルシートの中で指定することができます。
 
-<p>CSS の重要な利点のひとつが、文書の体裁（style）と内容（コンテンツ）を切り離しやすくすることです。それでも、あるコンテンツを文書ではなく、スタイルシートに含めたほうがわかりやすいことがあります。</p>
+> **Note:** スタイルシート内で記述されたコンテンツは、 DOM の一部にはなりません。
 
-<p>スタイルシートではテキストや画像から成るコンテンツを記述できます。コンテンツと文書の構造に強い関連があるとき、コンテンツをスタイルシート内に記述します。</p>
+スタイルシートでコンテンツを指定すると、厄介な問題が発生することがあります。例えば、スタイルシートが複数の言語版の文書で共有されていることがあります。スタイルシートの中で翻訳が必要なコンテンツを指定する場合は、スタイルシートのその部分を別なファイルに置き、適切な言語版の文書にリンクするようにする必要があります。
 
-<div class="tuto_details">
-<div class="tuto_type">さらに詳しく</div>
+この問題は、指定するコンテンツが、あらゆる言語や文化に適用される記号や画像で構成されている場合には発生しません。
 
-<p>スタイルシートでコンテンツを記述すると、面倒な話が生まれる可能性があります。例えば、文書の複数の言語版をスタイルシートを共有して作ることがあるかもしれません。これは、スタイルシートの部分的に訳すときには、その一部を別々のファイルにわけるとともに、適切な言語版の文書とリンクされるよう編集しなければならない、ということです。</p>
+## 例
 
-<p>この混乱は、コンテンツがすべての言語や文化で利用できる記号や画像で記述されていれば発生しません。</p>
+### テキストコンテンツ
 
-<p>スタイルシート内に記述されたコンテンツは、DOMの一部にはなりません。</p>
-</div>
+CSS で要素の前または後ろにテキストコンテンツを挿入することができます。このためには、ルールを作成して {{cssxref("::before")}} または {{cssxref("::after")}} をそのセレクターに追加します。宣言部分には、 {{ cssxref("content") }} プロパティと、その値としてテキストコンテンツを記述してください。
 
-<h3 id="Text_content" name="Text_content">テキストコンテンツ</h3>
+#### HTML
 
-<p>CSS で要素の前または後ろにテキストコンテンツを挿入できます。このためには、ルールを作って {{cssxref(":before")}} または {{cssxref(":after")}} をそのセレクタに追加します。宣言部分には、specify the {{cssxref("content")}} プロパティと、その値としてテキストコンテンツを記述します。</p>
+```html
+A text where I need to <span class="ref">something</span>
+```
 
-<div class="tuto_example">
-<div class="tuto_type">例
-<h4 id="HTML">HTML</h4>
+#### CSS
 
-<pre class="brush: html line-numbers language-html"><code class="language-html">A text where I need to <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>ref<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>something<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span></code></pre>
+```css
+.ref::before {
+  font-weight: bold;
+  color: navy;
+  content: "Reference ";
+}
+```
 
-<h4 id="CSS">CSS</h4>
+#### 出力
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.ref</span><span class="pseudo-element token">::before</span></span> <span class="punctuation token">{</span>
-  <span class="property token">font-weight</span><span class="punctuation token">:</span> bold<span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> navy<span class="punctuation token">;</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> <span class="string token">"Reference "</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+{{ EmbedLiveSample('Text_content', 600, 30) }}
 
-<h4 id="結果">結果</h4>
+スタイルシートの文字セットは規定で UTF-8 ですが、リンク、スタイルシート自身の内部、もしくはその他の方法で指定することができます。CSS 仕様書の [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) をご覧ください。
 
-<p>{{ EmbedLiveSample('Text_content', 600, 30) }}<span id="cke_1_bottom"><span id="cke_1_path"><a id="cke_elementspath_7_0" title="h3 要素">h3</a></span></span></p>
-</div>
-</div>
+個々の文字は、バックスラッシュをエスケープ文字として使用して、エスケープ機構を使って記述することもできます。例えば、 "\265B" はチェスの黒クイーン ♛ です。詳しくは CSS 仕様書の [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) と [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6) をご覧ください。
 
-<div class="tuto_details">
-<div class="tuto_type">さらに詳しく</div>
+### 画像コンテンツ
 
-<p>スタイルシートの文字セットのデフォルトは UTF-8 ですが、リンク、スタイルシート自身の内部、もしくはその他の方法で指定できます。CSS Specification の <a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#q23">4.4 CSS style sheet representation</a> をご覧ください。</p>
+要素の前や後ろに画像を追加するには、 {{ cssxref("content") }} プロパティの値として画像ファイルの URL を記述します。
 
-<p>文字を、バックスペースによるエスケープ機構を使って記述することもできます。例えば、\265B はチェスの黒クイーンの記号 ♛ です。詳しくは、<a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#q24">Referring to characters not represented in a character encoding</a> と CSS Specification の <a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#q6">Characters and case</a> をご覧ください。</p>
-</div>
+このルールは `glossary` を持つすべてのリンクの後ろに、空白とアイコンを追加します。
 
-<h3 id="Image_content" name="Image_content">画像コンテンツ</h3>
+#### HTML
 
-<p>要素の前や後ろに画像を追加するには、{{cssxref("content")}} プロパティの値として画像ファイルの URL を記述します。</p>
+```html
+<a href="developer.mozilla.org" class="glossary">developer.mozilla.org</a>
+```
 
-<div class="tuto_example">
-<div class="tuto_type">例</div>
+#### CSS
 
-<p>このルールは <code>glossary</code> を持つすべてのリンクの後ろに、空白文字とアイコンを追加します:</p>
+```css
+a.glossary::after {
+   content: " " url("glossary-icon.gif");
+}
+```
 
-<h3 id="HTML_2">HTML</h3>
+#### 出力結果
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>developer.mozilla.org<span class="punctuation token">"</span></span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>glossary<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>developer.mozilla.org<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span></code></pre>
-
-<h3 id="CSS_2">CSS</h3>
-
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token">a<span class="class token">.glossary</span><span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-   <span class="property token">content</span><span class="punctuation token">:</span> <span class="string token">" "</span> <span class="token url">url("https://mdn.mozillademos.org/files/16322/glossary-icon.gif")</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
-
-<h3 id="結果_2">結果</h3>
-
-<p>{{ EmbedLiveSample('Image_content', 600, 40) }}</p>
-</div>
-
-<p>次は何?</p>
-
-<div>{{nextPage("/ja/docs/CSS/Getting_Started/Lists", "Lists")}} スタイルシートでコンテンツを追加し、リストの項目に印をつけることがよくあります。次の章では <a href="/ja/docs/CSS/Getting_Started/Lists" title="CSS/Getting_Started/Lists">リスト要素のスタイル記述</a> について述べます。</div>
+{{ EmbedLiveSample('Image_content', 600, 40) }}
