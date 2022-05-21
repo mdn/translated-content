@@ -136,7 +136,7 @@ export class AppComponent {
   `index.html` の `body` タグ内で、AngularCLI はアプリケーションの生成時に `<app-root></app-root>` を追加しました。
   すべてのコンポーネントセレクターを他のコンポーネント HTML テンプレートに追加することにより、同じように使用します。
 - `templateUrl`: このコンポーネントに関連付ける HTML ファイルを指定します。
-  これが、'./app.component.html'
+  これが、'./app.component.html' です。
 - `styleUrls`: このコンポーネントに特に適用されるスタイルのファイルの場所と名前を提供します。 これが `'./app.component.css'` です。
 
 `filter` プロパティは `union` 型です。つまり、 `filter` は `all`, `active` 又は、 `done` の値を持つことができます。
