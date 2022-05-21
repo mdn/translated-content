@@ -5,8 +5,9 @@ tags:
   - API
   - File API
   - Property
+  - Read-only
   - Reference
-  - 파일
+browser-compat: api.File.name
 translation_of: Web/API/File/name
 ---
 {{APIRef("File API")}}
@@ -15,37 +16,49 @@ translation_of: Web/API/File/name
 
 ## 값
 
-`"My Resume.rtf"`와 같이 경로가 없는 파일의 이름을 포함하는 문자열입니다.
+`"My Resume.rtf"`와 같이, 경로 없는 파일 이름을 포함하는 문자열입니다.
 
 ## 예제
 
+### HTML
+
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" id="filepicker" multiple>
+<div>
+  <p>선택한 파일 목록:</p>
+  <ul id="output"></ul>
+</div>
 ```
+
+### JavaScript
 
 ```js
-function processSelectedFiles(fileInput) {
-  var files = fileInput.files;
+const output = document.getElementById('output');
+const filepicker = document.getElementById('filepicker');
 
-  for (var i = 0; i < files.length; i++) {
-    alert("Filename " + files[i].name);
+filepicker.addEventListener('change', (event) => {
+  const files = event.target.files;
+  output.textContent = '';
+
+  for (const file of files) {
+    const li = document.createElement('li');
+    li.textContent = file.name;
+    output.appendChild(li);
   }
-}
+})
 ```
 
-아래에서 결과를 확인해보세요.
+### 결과
 
-{{ EmbedLiveSample('예제', 300, 50) }}
+{{EmbedLiveSample('예제')}}
 
 ## 명세
 
-| Specification                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#file-attrs', 'name')}} | {{Spec2('File API')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("api.File.name")}}
+{{Compat}}
 
 ## 같이 보기
 
