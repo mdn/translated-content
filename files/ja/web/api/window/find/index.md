@@ -1,80 +1,83 @@
 ---
-title: window.find
+title: Window.find()
 slug: Web/API/Window/find
 tags:
   - API
-  - DOM
-  - DOM_0
-  - Gecko
-  - Non-standard
+  - HTML DOM
+  - メソッド
+  - NeedsCompatTable
+  - NeedsContent
+  - 標準外
+  - リファレンス
   - Window
+  - find
+browser-compat: api.Window.find
 translation_of: Web/API/Window/find
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}{{Non-standard_Header}}
 
-<div>
-<p id="comment_text_2">{{Non-standard_header}}</p>
-</div>
+> **Note:** `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 {{Bug("672395")}} を参照してください。
 
-<div>{{noteStart}} <code>window.find()</code> のサポートは、Gecko の将来のバージョンで変更される可能性があります（※参照 : {{Bug("672395")}}） {{noteEnd}}</div>
+**`Window.find()`** メソッドは、ウィンドウ内の文字列を順次検索します。
 
-<h2 id="Summary" name="Summary">概要</h2>
+## 構文
 
-<p>ウィンドウ内の文字列を検索します。</p>
+```js
+find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog)
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 引数
 
-<pre class="syntaxbox"><em>window</em>.find(<var>aString</var>, <var>aCaseSensitive</var>, <var>aBackwards</var>, <var>aWrapAround</var>,
-            <var>aWholeWord</var>, <var>aSearchInFrames</var>);</pre>
+- `aString`
+  - : 検索するテキスト文字列です。
+- `aCaseSensitive`
+  - : 論理値です。 `true` の場合、大文字と小文字を区別して検索します。
+- `aBackwards`
+  - : 論理値です。 `true` の場合、後方検索を行います。
+- `aWrapAround`
+  - : 論理値です。 `true` の場合、折り返し検索を行います。
+- `aWholeWord` {{Unimplemented_Inline}}
+  - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 {{bug("481513")}} を参照してください。
+- `aSearchInFrames`
+  - : 論理値です。 `true` の場合、フレーム内の検索を行います。
 
-<dl>
- <dt><code>aString</code></dt>
- <dd>検索するテキスト文字列</dd>
- <dt><code>aCaseSensitive</code></dt>
- <dd>真偽値。 <code>true</code> の場合、大文字と小文字を区別して検索します。</dd>
- <dt><code>aBackwards</code></dt>
- <dd>真偽値。 <code>true</code> の場合、後方検索を行います。</dd>
- <dt><code>aWrapAround</code></dt>
- <dd>真偽値。 <code>true</code> の場合、折り返し検索を行います。</dd>
- <dt><code>aWholeWord</code> {{unimplemented_inline}}</dt>
- <dd>真偽値。 <code>true</code> の場合、完全一致検索を行います（{{bug("481513")}}）</dd>
- <dt><code>aSearchInFrames</code></dt>
- <dd>真偽値。 <code>true</code> の場合、フレーム内の検索を行います。</dd>
-</dl>
+### 返値
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+文字列が見つかったら `true` です。それ以外の場合は `false` です。
 
-<p>真偽値。</p>
+## 例
 
-<ul>
- <li>文字列が見つかった場合 : <code>true</code></li>
- <li>それ以外 : <code>false</code></li>
-</ul>
+### JavaScript
 
-<h2 id="Example" name="Example">例</h2>
+```js
+function findString(text) {
+  document.querySelector("#output").textContent="String found? " + window.find(text);
+}
+```
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+### HTML
 
-<pre class="brush: js">findString = function findText(text) {
-  alert("String \x22" + text + "\x22 found? " + window.find(text));
-}</pre>
+```html
+<p>Apples, Bananas, and Oranges.</p>
+<button type="button" onClick='findString("Apples")'>Search for Apples</button>
+<button type="button" onClick='findString("Bananas")'>Search for Bananas</button>
+<button type="button" onClick='findString("Orange")'>Search for Orange</button>
 
-<h3 id="HTML" name="HTML">HTML</h3>
+<p id="output"></p>
+```
 
-<pre class="brush: html">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
-&lt;button type="button" onClick='findString("Apples")'&gt;Search for Apples&lt;/button&gt;
-&lt;button type="button" onClick='findString("Banana")'&gt;Search for Banana&lt;/button&gt;
-&lt;button type="button" onClick='findString("Orange")'&gt;Search for Orange&lt;/button&gt;
-</pre>
+### 結果
 
-<h3 id="Result" name="Result">表示結果</h3>
+{{EmbedLiveSample("Examples")}}
 
-<p>{{EmbedLiveSample('Example')}}</p>
+## メモ
 
-<h2 id="Notes" name="Notes">注記</h2>
+一部のブラウザーでは、 `Windows.find()` はサイト内で見つかったコンテンツを選択（強調表示）します。
 
-<p>Window.find() は、サイト上で発見したコンテンツを選択します。</p>
+## 仕様書
 
-<h2 id="Specification" name="Specification">仕様</h2>
+どの仕様書にも含まれていません。
 
-<p>どの標準にも属しません。</p>
+## ブラウザーの互換性
+
+{{Compat}}
