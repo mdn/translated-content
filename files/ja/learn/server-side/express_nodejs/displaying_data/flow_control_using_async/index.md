@@ -66,9 +66,9 @@ async.parallel({
 
 代わりに関数の配列を第 1 引数として渡すと、results は配列になります (results に入る配列の順序は関数が完了した順番ではなく、関数が宣言された元の順番と一致します)。
 
-## Asynchronous operations in series
+## 非同期操作の直列化
 
-The method [`async.series()`](https://caolan.github.io/async/v3/docs.html#series) is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as `async.parallel()`.
+[`async.series()`](https://caolan.github.io/async/v3/docs.html#series) メソッドは、後続の関数が以前の出力に依存しない場合において、複数の非同期操作を順番に実行するために使用されます。基本的には `async.parallel()` と同じように宣言され、同じように動作します。
 
 ```js
 async.series({
@@ -77,29 +77,29 @@ async.series({
   ...
   something_else: function(callback) { ... }
   },
-  // optional callback after the last asynchronous function completes.
+  // 最後の非同期関数が完了した後に、任意のコールバックを返します
   function(err, results) {
-    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
+    // 'results' が {one: 1, two: 2, ..., something_else: some_value} になりました
   }
 );
 ```
 
-> **Note:** The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined, so it is possible that the functions will not be called in the same order as you specify them on all platforms. If the order really is important, then you should pass an array instead of an object, as shown below.
+> **Note:** ECMAScript (JavaScript) の言語仕様ではオブジェクトの列挙順序は未定義であると規定されているため、すべてのプラットフォームで指定したのと同じ順序で関数の呼び出しが行われない可能性があります。もし順序が本当に重要な場合、以下のようにオブジェクトではなく配列を渡す必要があります。
 
 ```js
 async.series([
   function(callback) {
-    // do some stuff ...
+    // 何かを行う...
     callback(null, 'one');
   },
   function(callback) {
-    // do some more stuff ...
+    // さらに何かを行う...
     callback(null, 'two');
   }
  ],
-  // optional callback
+  // 任意のコールバック
   function(err, results) {
-  // results is now equal to ['one', 'two']
+  // results は ['one', 'two'] になりました
   }
 );
 ```
