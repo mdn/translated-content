@@ -14,18 +14,18 @@ tags:
 browser-compat: api.GlobalEventHandlers.onabort
 translation_of: Web/API/GlobalEventHandlers/onabort
 ---
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+{{ApiRef("HTML DOM")}}
 
-**`onabort`** は {{domxref("GlobalEventHandlers")}} ミックスインの[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 HTMLMediaElement に対して送られた {{domxref("HTMLMediaElement/abort_event", "abort")}} イベントを処理します。
+**`onabort`** は {{domxref("GlobalEventHandlers")}} ミックスインの[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 `abort` イベントを処理します。
 
-[文書の読み込みを中止するための標準](https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document)が定義されていますが、 [HTML issue #3525](https://github.com/whatwg/html/issues/3525) では、ブラウザーは `onabort` が呼ばれるきっかけとなる `Window` の `abort` イベントを現在発生させてはいけないと提案しています。
+現在、{{domxref("HTMLAudioElement")}} と {{domxref("HTMLVideoElement")}} インターフェイス（{{domxref("HTMLMediaElement")}} を継承しているもの）のみが {{domxref("HTMLMediaElement/abort_event", "abort")}} イベントを発行するようになっています。
 
-TODO: 何が "abort" であるかを定義しなければなりません。ウィンドウマネージャーからウィンドウを閉じること？ページの読み込みを停止すること？どのような手段で、どのような理由で（ユーザー、ネットワーク/サーバー）？どの段階で発行/捕捉されるのでしょうか？ IE では、 `onabort` は `<img>` タグでのみ有効です。
+> **Note:** 以前は `abort` イベントが `Window` で発生しましたが、標準から削除されました（[HTML issue #3525](https://github.com/whatwg/html/issues/3525) を参照してください）。
 
 ## 構文
 
 ```js
-window.onabort = functionRef;
+element.onabort = functionRef;
 ```
 
 ### 値
@@ -35,7 +35,7 @@ window.onabort = functionRef;
 ## 例
 
 ```js
-window.onabort = function() {
+element.onabort = function() {
   alert('Load aborted.');
 }
 ```
@@ -47,5 +47,3 @@ window.onabort = function() {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-このプロパティは Firefox 2 や Safari では利用できません。
