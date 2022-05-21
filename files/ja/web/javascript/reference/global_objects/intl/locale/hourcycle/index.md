@@ -2,93 +2,64 @@
 title: Intl.Locale.prototype.hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 tags:
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
-  - Property
-  - Prototype
-  - Reference
   - プロパティ
-  - 国際化
+  - Locale
+  - ローカライズ
+  - プロトタイプ
+  - リファレンス
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Intl.Locale.prototype.hourCycle</code></strong> プロパティは、ロケールで使用される時刻保持書式の規則を返すアクセサープロパティです。</span></p>
+**`Intl.Locale.prototype.hourCycle`** プロパティは、ロケールで使用される時刻保持書式の規則を返すアクセサープロパティです。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>世界中で使用されている時刻保持規則 (時制) には、主に12時制と24時制の2つの種類があります。 <code>hourCycle</code> プロパティを使用すると、 JavaScript のプログラマーが特定のロケールで使用されている時制に簡単にアクセスできるようになります。他の追加ロケールデータと同様に、時制種別は<a href="https://www.unicode.org/reports/tr35/#u_Extension">拡張サブタグ</a>であり、ロケール文字列に含まれるデータを拡張したものです。時制種別には、以下の表にある通り、いくつかの異なる値を設定することができます。</p>
+世界中で使用されている時刻保持規則（時制）には、主に 12 時制と 24 時制の 2 つの種類があります。 `hourCycle` プロパティを使用すると、 JavaScript のプログラマーが特定のロケールで使用されている時制に簡単にアクセスできるようになります。他の追加ロケールデータと同様に、時制種別は[拡張サブタグ](https://www.unicode.org/reports/tr35/#u_Extension)であり、ロケール文字列に含まれるデータを拡張したものです。時制種別には、以下の表にある通り、いくつかの異なる値を設定することができます。
 
-<h3 id="有効な時制種別">有効な時制種別</h3>
+### 有効な時制種別
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">時制種別</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>h12</code></td>
-   <td>1–12を使用する時制で、パターンの 'h' に対応します。12時制で、正子は午前12:00から始まります。</td>
-  </tr>
-  <tr>
-   <td><code>h23</code></td>
-   <td>0–23を使用する時制で、パターンの 'H' に対応します。24時制で、正子は0:00から始まります。</td>
-  </tr>
-  <tr>
-   <td><code>h11</code></td>
-   <td>0–11を使用する時制で、パターンの 'K' に対応します。12時制で、正子は午前0:00から始まります。</td>
-  </tr>
-  <tr>
-   <td><code>h24</code></td>
-   <td>1–24を使用する時制で、パターンの 'k' に対応します。24時制で、正子は24:00から始まります。</td>
-  </tr>
- </tbody>
-</table>
+| 時制種別 | 説明                                                                                                    |
+| --------------- | -------------------------------------------------------------------------------------------------------------- |
+| `h12`           | 1–12 を使用する時制で、パターンの 'h' に対応します。 12 時制で、正子は午前 12:00 から始まります。 |
+| `h23`           | 0–23 を使用する時制で、パターンの 'H' に対応します。 24 時制で、正子は 0:00 から始まります。  |
+| `h11`           | 0–11 を使用する時制で、パターンの 'K' に対応します。 12 時制で、正子は午前 0:00 から始まります。 |
+| `h24`           | 1–24 を使用する時制で、パターンの 'k' に対応します。 24 時制で、正子は 24:00 から始まります。 |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>これらの例は、時制データを {{jsxref("Locale", "Locale")}} オブジェクトに追加する方法を示しています。</p>
+これらの例は、時制データを {{jsxref("Intl/Locale", "Locale")}} オブジェクトに追加する方法を示しています。
 
-<h3 id="Setting_the_numeric_value_via_the_locale_string" name="Setting_the_numeric_value_via_the_locale_string">ロケール文字列による時制の追加</h3>
+### ロケール文字列による時制の追加
 
-<p><a href="https://www.unicode.org/reports/tr35/" rel="noopener">Unicode ロケール文字列仕様書</a>では、時制はロケール文字列の「拡張サブタグ」です。これらのサブタグはロケールについての追加データであり、拡張キー <code>-u</code> を使用してロケール識別子に追加されます。このようして、 <code>numeric</code> の値を {{jsxref("Locale/Locale", "Locale")}} コンストラクターに渡される初期のロケール識別子文字列に追加することができます。時制種別の値を設定するには、まず文字列に <code>-u</code> 拡張キーを追加します。次に、 <code>-hc</code> 拡張キーを追加して、時制種別の値を追加していることを示します。最後に、時制種別の値を文字列に追加します。</p>
+[Unicode ロケール文字列仕様書](https://www.unicode.org/reports/tr35/)では、時制はロケール文字列の「拡張サブタグ」です。これらのサブタグはロケールについての追加データであり、拡張キー `-u` を使用してロケール識別子に追加されます。このようして、時制の種類を {{jsxref("Intl/Locale/Locale", "Locale")}} コンストラクターに渡される初期のロケール識別子文字列に追加することができます。時制種別の値を設定するには、まず文字列に `-u` 拡張キーを追加します。次に、 `-hc` 拡張キーを追加して、時制種別の値を追加していることを示します。最後に、時制種別の値を文字列に追加します。
 
-<pre class="brush: js">let ja24hour = new Intl.Locale("ja-JP-u-hc-h23");
-console.log(ja24hour.hourCycle); // "h23" と表示</pre>
+```js
+let locale = new Intl.Locale("fr-FR-u-hc-h23");
+console.log(locale.hourCycle); // "h23" と表示
+```
 
-<h3 id="Adding_an_hour_cycle_via_the_configuration_object_argument" name="Adding_an_hour_cycle_via_the_configuration_object_argument">構成オブジェクト引数から時制を追加</h3>
+### 構成オブジェクト引数から時制を追加
 
-<p>{{jsxref("Locale/Locale", "Intl.Locale")}} コンストラクターには、オプションで構成オブジェクトの引数があり、これには時制種別を含む任意の拡張の種類をいくつか含めることができます。構成オブジェクトの <code>hourCycle</code> プロパティを任意の時制種別に設定し、コンストラクターに渡します。</p>
+{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターには、オプションで構成オブジェクトの引数があり、これには時制種別を含む任意の拡張の種類をいくつか含めることができます。構成オブジェクトの `hourCycle` プロパティを任意の時制種別に設定し、コンストラクターに渡します。
 
-<pre class="brush: js">let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
-console.log(us12hour.hourCycle); // "h12" と表示</pre>
+```js
+let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(locale.hourCycle); // "h12" と表示
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.hourCycle')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("javascript.builtins.Intl.Locale.hourCycle")}}</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
- <li><a href="https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier">Unicode 時間周期拡張キー仕様書</a></li>
-</ul>
+- {{jsxref("Intl.Locale")}}
+- [Unicode 時制拡張キー仕様書](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
