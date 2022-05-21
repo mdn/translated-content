@@ -208,7 +208,7 @@ teacher1.greeting();</pre>
  <li>那些定义在构造器函数中，用于给予对象实例的属性或方法。它们都很容易发现——在您自己的代码中，它们是构造函数中使用<code>this.x = x</code>类型的行；在浏览器内已经构建好的代码中，它们是可用于对象实例的成员（这些对象实例通常使用<code>new</code>关键字调用构造函数来创建，例如<code>var myInstance = new myConstructor()</code>）。</li>
  <li>那些直接在构造函数上定义，仅在构造函数上可用的属性或方法。它们通常仅在浏览器的内置对象中可用，并通过被直接链接到构造函数来识别，而不是实例。例如<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>。<strong>它们一般被称作静态属性或静态方法</strong>。</li>
  <li>那些在构造函数原型上定义，由所有实例和对象类继承的属性或方法。它们包括在构造函数的原型属性上定义的任何成员，如<code>myConstructor.prototype.x()</code>。</li>
- <li>Those available on an object instance, which can either be an object created when a constructor is instantiated like we saw above (so for example <code>let teacher1 = new Teacher( 'Chris' );</code> and then <code>teacher1.name</code>), or an object literal (<code>let teacher1 = { name : 'Chris' }</code> and then <code>teacher1.name</code>).</li>
+ <li>那些在对象实例上可用的对象，它可以是像我们上面看到的构造函数实例化时创建的对象（例如<code>let teacher1 = new Teacher( 'Chris' );</code>，然后是 <code>teacher1.name</code>），也可以是一个对象文本（<code>let teacher1 = { name : 'Chris' }</code>，然后是<code>teacher1.name</code>）。</li>
 </ol>
 
 <p>如果您现在觉得一团浆糊，别担心——您现在还处于学习阶段，不断练习才会慢慢熟悉这些知识。</p>
@@ -218,10 +218,10 @@ teacher1.greeting();</pre>
 <p>ECMAScript 2015 introduces <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class syntax</a> to JavaScript as a way to write reusable classes using easier, cleaner syntax, which is more similar to classes in C++ or Java. In this section we'll convert the Person and Teacher examples from prototypal inheritance to classes, to show you how it's done.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This modern way of writing classes is supported in all modern browsers, but it is still worth knowing about the underlying prototypal inheritance in case you work on a project that requires supporting a browser that doesn't support this syntax (most notably Internet Explorer).</p>
+<p><strong>注意</strong>：所有现代浏览器都支持这种编写类的现代方式，但是如果您处理的项目需要不支持此语法的浏览器（最明显的是Internet Explorer），那么仍然值得了解底层原型继承。</p>
 </div>
 
-<p>Let's look at a rewritten version of the Person example, class-style:</p>
+<p>让我们看一下 Person 示例的重写版本，类样式：</p>
 
 <pre class="brush: js">class Person {
   constructor(first, last, age, gender, interests) {
