@@ -36,7 +36,7 @@ tags:
     <tr>
       <th scope="row">目的:</th>
       <td>
-        基本的なアプリ構造を作成するには、やることのリストを表示するようにします アイテム、およびコンポーネントなどの基本的な Angular の概念を理解し、構造、コンポーネント間でのデータの共有、コンテンツのループ 作成する。
+        基本的なアプリ構造を作成するには、to-do items のリストを表示をすることで、コンポーネント構造、コンポーネント間でのデータ共有、コンテンツの作成をループなどの基本的な Angular の概念を理解することです。
       </td>
     </tr>
   </tbody>
@@ -164,10 +164,6 @@ getter の `get items()` は、 `filter` が `all` と等しい場合、 `allIte
   </ul>
 </div>
 ```
-
-The `<li>` contains an `*ngFor`, a built-in Angular directive that iterates over the items in the `items` array.
-For each item, `*ngFor` creates a new `<li>`.
-The double curly braces that contain `item.description` instructs Angular to populate each `<li>` with the text of each item's description.
 
 `<li>` には、 `items` 配列内のアイテムを反復処理する組み込みの Angular ディレクティブである `*ngFor` が含まれています。
 アイテムごとに、 `*ngFor` は新しい `<li>` を作成します。
