@@ -321,12 +321,6 @@
       "alattalatta"
     ]
   },
-  "Glossary/DHTML": {
-    "modified": "2019-03-23T23:41:48.331Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
   "Glossary/DOM": {
     "modified": "2019-03-18T21:26:45.962Z",
     "contributors": [
@@ -2962,121 +2956,6 @@
       "jongho"
     ]
   },
-  "Mozilla/Firefox/Releases": {
-    "modified": "2020-11-26T10:13:11.306Z",
-    "contributors": [
-      "dink95",
-      "alattalatta",
-      "ziyunfei"
-    ]
-  },
-  "Mozilla/Firefox/Releases/1.5": {
-    "modified": "2019-03-23T23:42:08.585Z",
-    "contributors": [
-      "teoli",
-      "Sebuls",
-      "Netaras"
-    ]
-  },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-23T23:42:04.353Z",
-    "contributors": [
-      "teoli",
-      "Netaras"
-    ]
-  },
-  "Mozilla/Firefox/Releases/2": {
-    "modified": "2019-01-16T16:12:14.974Z",
-    "contributors": [
-      "CN",
-      "Netaras",
-      "Yh",
-      "C0d3h4ck",
-      "Ranio710",
-      "Channy"
-    ]
-  },
-  "Mozilla/Firefox/Releases/2/Updating_extensions": {
-    "modified": "2019-03-23T23:47:28.581Z",
-    "contributors": [
-      "Channy"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3": {
-    "modified": "2019-03-23T23:19:50.607Z",
-    "contributors": [
-      "nacyot",
-      "ethertank"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3.5": {
-    "modified": "2019-03-24T00:00:11.117Z",
-    "contributors": [
-      "teoli",
-      "Gilchris"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3.6": {
-    "modified": "2019-12-13T20:33:13.788Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "teoli",
-      "kladess"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/DOM_improvements": {
-    "modified": "2019-03-23T23:52:57.206Z",
-    "contributors": [
-      "teoli",
-      "Suguni"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Full_page_zoom": {
-    "modified": "2019-03-23T23:51:11.591Z",
-    "contributors": [
-      "teoli",
-      "Wladimir_Palant",
-      "Jeongkyu"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Notable_bugs_fixed": {
-    "modified": "2019-03-23T23:51:11.073Z",
-    "contributors": [
-      "teoli",
-      "Jeongkyu"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/SVG_improvements": {
-    "modified": "2019-03-23T23:51:12.606Z",
-    "contributors": [
-      "teoli",
-      "Suguni"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Updating_extensions": {
-    "modified": "2019-12-13T20:35:48.646Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "Suguni"
-    ]
-  },
-  "Mozilla/Firefox/Releases/3/Updating_web_applications": {
-    "modified": "2019-03-23T23:50:12.740Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "Sheppy",
-      "Channy"
-    ]
-  },
-  "Mozilla/Firefox/Releases/66": {
-    "modified": "2019-04-07T22:34:47.827Z",
-    "contributors": [
-      "niceman114"
-    ]
-  },
   "Web": {
     "modified": "2020-02-16T02:49:58.384Z",
     "contributors": [
@@ -3820,15 +3699,6 @@
     "contributors": [
       "wbamberg",
       "hoony"
-    ]
-  },
-  "Web/API/Document/alinkColor": {
-    "modified": "2019-03-23T23:47:30.441Z",
-    "contributors": [
-      "fscholz",
-      "AshfaqHossain",
-      "teoli",
-      "pusanbear"
     ]
   },
   "Web/API/Document/all": {
@@ -7315,43 +7185,6 @@
     "modified": "2020-10-15T22:30:03.395Z",
     "contributors": [
       "DeadIntegral"
-    ]
-  },
-  "Web/API/XSLTProcessor": {
-    "modified": "2019-01-16T16:14:51.504Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Basic_Example": {
-    "modified": "2019-01-16T16:14:48.906Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Browser_Differences": {
-    "modified": "2019-01-16T16:15:11.615Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Generating_HTML": {
-    "modified": "2019-01-16T16:14:51.789Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Introduction": {
-    "modified": "2019-01-16T16:14:50.568Z",
-    "contributors": [
-      "Sebuls"
-    ]
-  },
-  "Web/API/XSLTProcessor/Resources": {
-    "modified": "2019-03-23T23:42:20.360Z",
-    "contributors": [
-      "teoli",
-      "Sebuls"
     ]
   },
   "Web/API/crypto_property": {
