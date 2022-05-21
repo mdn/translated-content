@@ -1,176 +1,153 @@
 ---
-title: <thead>
+title: '<thead>: 표 머릿글 요소'
 slug: Web/HTML/Element/thead
-translation_of: Web/HTML/Element/thead
+tags:
+  - Element
+  - HTML
+  - HTML tabular data
+  - Reference
+  - Tables
+  - Web
+browser-compat: html.elements.thead
 ---
-<h2 id="개요">개요</h2>
 
-<p>The <em>HTML Table Head Element</em> (<code>&lt;thead&gt;</code>) defines a set of rows defining the head of the columns of the table.</p>
+**`<thead>`** [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열의 머리글인 행들의 집합입니다.
 
-<h2 id="사용_문맥">사용 문맥</h2>
+{{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><a href="/en/HTML/Content_categories" title="en/HTML/Content categories">콘텐츠 범주</a></td>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <td>허용되는 콘텐츠</td>
-   <td>Zero or more {{ HTMLElement("tr") }} elements.</td>
-  </tr>
-  <tr>
-   <td>태그 생략</td>
-   <td>The start tag is mandatory. The end tag may be omitted if the {{ HTMLElement("thead") }} element is immediately followed by a {{ HTMLElement("tbody") }} or {{ HTMLElement("tfoot") }} element.</td>
-  </tr>
-  <tr>
-   <td>허용되는 부모 요소</td>
-   <td>A {{ HTMLElement("table") }} element. The {{ HTMLElement("thead") }} must appear after any {{ HTMLElement("caption") }} or {{ HTMLElement("colgroup") }} element, even implicitly defined, but before any {{ HTMLElement("tbody") }}, {{ HTMLElement("tfoot") }} and {{ HTMLElement("tr") }} element.</td>
-  </tr>
-  <tr>
-   <td>Normative document</td>
-   <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-thead-element" rel="external nofollow">HTML5, section 4.9.6</a> (<a href="http://www.w3.org/TR/REC-html40/struct/tables.html#edef-THEAD">HTML4.01, section 11.2.3</a>)</td>
-  </tr>
- </tbody>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories"
+          >콘텐츠 카테고리</a
+        >
+      </th>
+      <td>없음.</td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 콘텐츠</th>
+      <td>0개 이상의 {{HTMLElement("tr")}} 요소.</td>
+    </tr>
+    <tr>
+      <th scope="row">태그 생략</th>
+      <td>
+        여는 태그는 필수입니다. {{HTMLElement("thead")}} 요소 뒤에 {{HTMLElement("tbody")}} 또는 {{HTMLElement("tfoot")}} 요소가 바로 이어지는 경우에는 닫는 태그를 생략할 수 있습니다.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 부모 요소</th>
+      <td>
+        {{HTMLElement("table")}} 요소. {{HTMLElement("thead")}} 요소는 무조건 {{HTMLElement("caption")}} 또는 {{HTMLElement("colgroup")}} 요소 뒤에 (암시적으로 정의된 경우에도) 위치해야 하지만, {{HTMLElement("tbody")}},
+        {{HTMLElement("tfoot")}} 과 {{HTMLElement("tr")}} 요소의 앞에 위치해야 합니다.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">암시적 ARIA 역할</th>
+      <td>
+        <code
+          ><a href="/ko/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+            >rowgroup</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 ARIA 역할</th>
+      <td>모두</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 인터페이스</th>
+      <td>{{domxref("HTMLTableSectionElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="속성">속성</h2>
+## 특성
 
-<p><span style="line-height: 21px;">This element includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<dl>
- <dt>{{ htmlattrdef("align") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
- <dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
- <ul>
-  <li><code>left</code>, aligning the content to the left of the cell</li>
-  <li><code>center</code>, centering the content in the cell</li>
-  <li><code>right</code>, aligning the content to the right of the cell</li>
-  <li><code>justify</code>, inserting spaces into the textual content so that the content is justified in the cell</li>
-  <li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "thead") }} and {{ htmlattrxref("charoff", "thead") }} attributes {{ unimplemented_inline("2212") }}.</li>
- </ul>
+### 더 이상 사용하지 않는 특성
 
- <p>If this attribute is not set,  the <span style="font-family: courier new;">left</span> value is assumed.</p>
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
- <div class="note"><strong>참고: </strong>Do not use this attribute as it is obsolete (not supported) in the latest standard.
+  - : 아래에 나열된 속성들은 각 셀 컨텐츠의 수평 정렬 방법을 지정합니다. 가능한 값:
 
- <ul>
-  <li>To achieve the same effect as the <span style="font-family: courier new;">left</span>, <span style="font-family: courier new;">center</span>, <span style="font-family: courier new;">right</span> or <span style="font-family: courier new;">justify</span> values, use the CSS {{ cssxref("text-align") }} property on it.</li>
-  <li>To achieve the same effect as the <span style="font-family: courier new;">char</span> value, in CSS3, you can use the value of the {{ htmlattrxref("char", "thead") }} as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.</li>
- </ul>
- </div>
- </dd>
-</dl>
+    - `left`, 컨텐츠를 셀의 왼쪽으로 정렬합니다.
+    - `center`, 컨텐츠를 셀의 가운데로 정렬합니다.
+    - `right`, 컨텐츠를 셀의 오른쪽으로 정렬합니다.
+    - `justify`, 컨텐츠가 셀의 양쪽으로 정렬되도록 텍스트 컨텐츠에 공백을 삽입합니다.
+    - `char`, {{htmlattrxref("char", "thead")}} 와 {{htmlattrxref("charoff", "thead")}} 특성에 의해 정해지는 최소 오프셋을 가진 특수 문자에 대해 텍스트 컨텐츠를 정렬합니다.
 
-<dl>
- <dt>{{ htmlattrdef("bgcolor") }} {{ Non-standard_inline() }}</dt>
- <dd>This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in <a class="external" href="http://www.w3.org/Graphics/Color/sRGB">sRGB</a>, prefixed by a '#'. One of the sixteen predefined color strings may be used:
- <table style="width: 80%;">
-  <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">black</span> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">green</span> = "#008000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">silver</span> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">lime</span> = "#00FF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">gray</span> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">olive</span> = "#808000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">white</span> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">yellow</span> = "#FFFF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">maroon</span> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">navy</span> = "#000080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">red</span> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">blue</span> = "#0000FF"</td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">purple</span> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">teal</span> = "#008080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">fuchsia</span> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><span style="font-family: courier new;">aqua</span> = "#00FFFF"</td>
-   </tr>
-  </tbody>
- </table>
+    만약 값이 따로 할당되어 있지 않다면 `left` 가 기본값으로 지정됩니다.
 
- <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{ HTMLElement("thead") }} element should be styled using <a href="/en/CSS" title="en/CSS">CSS</a>. To give a similar effect to the <strong>bgcolor</strong> attribute, use the <a href="/en/CSS" title="en/CSS">CSS</a> property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements.</div>
- </dd>
-</dl>
+    > **주의:** 이 속성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오.
+    >
+    > - `left`, `center`, `right` 또는 `justify` 값과 같은 효과를 내고 싶다면, CSS {{cssxref("text-align")}} 속성을 적용하세요.
+    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 {{cssxref("text-align")}} 속성의 값으로 {{htmlattrxref("char", "thead")}}의 값을 사용할 수 있습니다.
 
-<dl>
- <dt>{{ htmlattrdef("char") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
- <dd>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{ htmlattrxref("align", "tr") }} is not set to <span style="font-family: courier new;">char</span>, this attribute is ignored.
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{ htmlattrxref("char", "thead") }}, in CSS3, you can use the character set using the {{ htmlattrxref("char", "thead") }} attribute as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.</div>
- </dd>
-</dl>
+- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
-<dl>
- <dt>{{ htmlattrdef("charoff") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
- <dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <strong>char</strong> attribute.
- <div class="note"><strong>참고: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard.</div>
- </dd>
-</dl>
+  - : 이 특성은 열의 각 셀의 배경색을 정의합니다. 앞에 '#'을 붙인 It is one of the 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) 6자리 16진수 코드입니다. 미리 정의된 16개의 색상 문자열을 사용할 수도 있습니다.
 
-<dl>
- <dt>{{ htmlattrdef("valign") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
- <dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
- <ul>
-  <li><span style="font-family: courier new;">baseline</span>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="http://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <span style="font-family: courier new;">bottom</span>.</li>
-  <li><span style="font-family: courier new;">bottom</span>, which will put the text as close to the bottom of the cell as it is possible;</li>
-  <li><span style="font-family: courier new;">middle</span>, which will center the text in the cell;</li>
-  <li><span style="font-family: courier new;">top</span>, which will put the text as close to the top of the cell as it is possible.</li>
- </ul>
+    - `black` = "#000000"
+    - `green` = "#008000"
+    - `silver` = "#C0C0C0"
+    - `lime` = "#00FF00"
+    - `gray` = "#808080"
+    - `olive` = "#808000"
+    - `white` = "#FFFFFF"
+    - `yellow` = "#FFFF00"
+    - `maroon` = "#800000"
+    - `navy` = "#000080"
+    - `red` = "#FF0000"
+    - `blue` = "#0000FF"
+    - `purple` = "#800080"
+    - `teal` = "#008080"
+    - `fuchsia` = "#FF00FF"
+    - `aqua` = "#00FFFF"
 
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{ cssxref("vertical-align") }} property on it.</div>
- </dd>
-</dl>
+    > **Note:** 이 특성은 표준이 아니며, Microsoft Internet Explorer의 몇몇 버전에서만 구현되므로 사용하지 마십시오. {{HTMLElement("thead")}} 요소에 스타일을 적용하려면 [CSS](/en-US/docs/Web/CSS)를 사용해야 합니다. **bgcolor** 특성과 비슷한 효과를 내고 싶다면, 관련된 {{HTMLElement("td")}} 또는 {{HTMLElement("th")}} 요소에 [CSS](/en-US/docs/Web/CSS) {{cssxref("background-color")}} 속성을 사용하세요.
 
-<h2 id="DOM_인터페이스">DOM 인터페이스</h2>
+- {{htmlattrdef("char")}} {{deprecated_inline}}
 
-<p>This element implements the <code><a href="/en/DOM/HTMLTableSectionElement" title="en/DOM/HTMLTableSectionElement">HTMLTableSectionElement</a></code> interface.</p>
+  - : 이 특성은 열의 셀을 정렬할 문자를 설정하는 데 사용됩니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 {{htmlattrxref("align", "thead")}}이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
 
-<h2 id="예제">예제</h2>
+    > **Note:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. {{htmlattrxref("char", "thead")}}와 같은 효과를 내고 싶다면, CSS3에서 {{htmlattrxref("char", "thead")}} 특성을 {{cssxref("text-align")}} 속성의 값으로 하여 문자 집합을 사용할 수 있습니다.
 
-<p>See {{ HTMLElement("table") }} for examples on<code> &lt;thead&gt;</code>.</p>
+- {{htmlattrdef("charoff")}} {{deprecated_inline}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+  - : 이 특성은 **char** 특성으로 지정된 정렬 문자에서 열 데이터를 오프셋할 문자의 수를 나타내는 데 사용됩니다.
 
-<p>{{Compat("html.elements.thead")}}</p>
+    > **주의:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오.
 
-<h2 id="같이_보기">같이 보기</h2>
+- {{htmlattrdef("valign")}} {{deprecated_inline}}
 
-<ul>
- <li>Other table-related HTML Elements: {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }}, {{ HTMLElement("tr") }};</li>
- <li>CSS properties and pseudo-classes that may be specially useful to style the <span style="font-family: courier new;">&lt;thead&gt;</span> element:
-  <ul>
-   <li>the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;</li>
-   <li>the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.&lt;</li>
-  </ul>
- </li>
-</ul>
+  - : 이 특성은 표 머리글의 각 행 내에 있는 텍스트의 수직 정렬 방식을 지정합니다. 이 특성에 사용 가능한 값:
 
-<p>{{HTMLRef}}</p>
+    - `baseline`, 텍스트를 가능한 셀의 하단에 가깝게, 하지만 텍스트의 [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)에 맞춰 배치합니다. 만약 문자들의 크기가 모두 같다면, 이것은 `bottom`과 같은 효과를 가집니다.
+    - `bottom`, 텍스트를 가능한 한 셀의 하단에 가깝게 배치합니다.
+    - `middle`, 텍스트를 셀의 가운데에 배치합니다.
+    - `top`, 텍스트를 가능한 한 셀의 상단에 가깝게 배치합니다.
+
+    > **Note:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. 대신 CSS의 {{cssxref("vertical-align")}} 속성을 적용하세요.
+
+## 예제
+
+`<thead>`에 대한 예제는 {{HTMLElement("table")}}을 참고해 주세요.
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- 테이블과 관련된 다른 HTML 요소들: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}.
+- `<thead>` 요소에 스타일을 지정할 때 특히 유용할 CSS 속성과 가상 클래스들:
+
+  - 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스;
+  - '.'같은 동일한 문자에 모든 셀 내용을 정렬할 때 사용하는 {{cssxref("text-align")}} 속성.
