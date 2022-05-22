@@ -1,66 +1,77 @@
 ---
-title: window.scrollBy
+title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 tags:
   - API
   - CSSOM View
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
-  - Method
-  - Reference
-  - Window
+  - メソッド
+  - リファレンス
+browser-compat: api.Window.scrollBy
 translation_of: Web/API/Window/scrollBy
 ---
-<div>{{ApiRef}}</div>
+{{ APIRef() }}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`Window.scrollBy()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。
 
-<p>指定された量だけウィンドウ内の文書をスクロールします。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+scrollBy(x-coord, y-coord)
+scrollBy(options)
+```
 
-<pre class="syntaxbox notranslate">window.scrollBy(<em>X</em>,<em>Y</em>);
-window.scrollBy(<var>options</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `x-coord` はスクロールさせたい水平方向のピクセル数です。
+- `y-coord` はスクロールさせたい垂直方向のピクセル数です。
 
-<ul>
- <li><code><var>x-coord</var></code> は、左上に表示されたい文書の水平軸上のピクセルです。</li>
- <li><code><var>y-coord</var></code> は、左上に表示されたい文書の垂直軸上のピクセルです。</li>
-</ul>
+\- または -
 
-<p>- または -</p>
+- `options`
+  - : 以下の引数を含む辞書です。
+    - `top`
+      - : ウィンドウまたは要素をスクロールする Y 軸方向のピクセル数を指定します。
+    - `left`
+      - : ウィンドウまたは要素をスクロールする X 軸方向のピクセル数を指定します。
+    - `behavior`
+      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時に一回のジャンプで行うか (`instant`)、あるいはブラウザーに選択させるか (`auto`, 既定値) を指定することができます。
 
-<ul>
- <li><code><var>options</var></code> は {{domxref("ScrollToOptions")}} 辞書です。</li>
-</ul>
+### 返値
 
-<h2 id="Example" name="Example">例</h2>
+なし ({{jsxref("undefined")}})。
 
-<p>1ページ下スクロールの例:</p>
+## 例
 
-<pre class="eval notranslate">window.scrollBy(0, window.innerHeight);
-</pre>
+1 ページ分下スクロールさせるには、次のようにします。
 
-<p>上スクロールの例:</p>
+```js
+window.scrollBy(0, window.innerHeight);
+```
 
-<pre class="notranslate">window.scrollBy(0, -window.innerHeight);</pre>
+上スクロールさせるには、次のようにします。
 
-<p><code>options</code> の使用例:</p>
+```js
+window.scrollBy(0, -window.innerHeight);
+```
 
-<pre class="notranslate">window.scrollBy({
+`options` を使用します。
+
+```js
+window.scrollBy({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Notes" name="Notes">注記</h2>
+## メモ
 
-<p>{{domxref("window.scrollBy")}} は、指定量のスクロール、 {{domxref("window.scroll")}} は、文書の絶対座標へのスクロールです。 {{domxref("window.scrollByLines")}} 、{{domxref("window.scrollByPages")}} も参照してください。</p>
+`window.scrollBy()` は特定の量だけスクロールしますが、 {{domxref("window.scroll()")}} は文書内の絶対位置までスクロールします。 {{domxref("window.scrollByLines()")}} および {{domxref("window.scrollByPages()")}} も参照してください。
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様書
 
-<p>{{DOM0}}</p>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
