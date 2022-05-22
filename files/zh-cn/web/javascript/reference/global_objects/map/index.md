@@ -347,7 +347,7 @@ console.log(original === clone); // false. 浅比较 不为同一个对象的引
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 
 ```js
-cosnt first = new Map([
+const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
