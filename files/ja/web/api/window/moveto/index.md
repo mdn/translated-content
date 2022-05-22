@@ -1,50 +1,59 @@
 ---
-title: window.moveTo
+title: Window.moveTo()
 slug: Web/API/Window/moveTo
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - CSSOM View
+  - Method
+  - Reference
   - Window
+browser-compat: api.Window.moveTo
 translation_of: Web/API/Window/moveTo
 ---
-<div>{{ApiRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`moveTo()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された座標へ移動します。
 
-<p>ウィンドウを指定座標に移動します。</p>
+> **Note:** この関数はウィンドウを絶対位置へ移動します。それに対して、 {{domxref("window.moveBy()")}} はウィンドウを現在の位置からの相対位置へ移動します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">window.moveTo(<var>x</var>, <var>y</var>)
-</pre>
+```js
+moveTo(x, y)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>x</code> : 移動される水平座標（絶対値）</li>
- <li><code>y</code> : 移動される垂直座標（絶対値）</li>
-</ul>
+- `x` は移動先の水平座標です。
+- `y` は移動先の垂直座標です。
 
-<h2 id="Example" name="Example">例</h2>
+### 返値
 
-<pre class="brush:js">function origin() {
-  // ウィンドウを画面の左上端に移動します
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+この例では、ウィンドウを画面の左上に移動しています。
+
+```js
+function origin() {
   window.moveTo(0, 0);
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">注記</h2>
+## 仕様書
 
-<p>この関数は、ウィンドウを絶対的な位置に移動するものです。相対的な移動には {{domxref("window.moveBy")}} を用います。</p>
+{{Specifications}}
 
-<p>Firefox 7 より、<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">以下の規則</a> に従い、 Web サイトからのブラウザのウィンドウの移動はできなくなっています。</p>
+## ブラウザーの互換性
 
-<ol>
- <li>{{domxref("window.open")}} によって作成されたものでないタブやウィンドウを移動することはできません。</li>
- <li>ウィンドウに 1 つよりも多くのタブがある場合、タブやウィンドウを移動することはできません。</li>
-</ol>
+{{Compat}}
 
-<h2 id="Specification" name="Specification">仕様</h2>
+Firefox 7 より、ウェブサイトは[以下の場合](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
 
-<p>{{dom0}}</p>
+1. {{domxref("Window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
+2. ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
+
+## 関連情報
+
+- {{domxref("Window.moveBy()")}}
