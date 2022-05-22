@@ -1,38 +1,69 @@
 ---
-title: window.resizeBy
+title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
 tags:
-  - DOM
-  - DOM Reference
-  - DOM_0
+  - API
+  - CSSOM View
+  - メソッド
+  - NeedsMarkupWork
+  - リファレンス
   - Window
+browser-compat: api.Window.resizeBy
 translation_of: Web/API/Window/resizeBy
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>現在のウィンドウを特定の量だけリサイズします。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">window.resizeBy(<em>xDelta</em>, <em>yDelta</em>)
-</pre>
-<h3 id="Parameters" name="Parameters">引数</h3>
-<ul>
- <li><code>xDelta</code> : ウィンドウの水平方向へのリサイズ量 (ピクセル値)</li>
- <li><code>yDelta</code> : ウィンドウの垂直方向へのリサイズ量 (ピクセル値)</li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">// ウィンドウを縮める
+{{APIRef}}
+
+**`Window.resizeBy()`** メソッドは、現在のウィンドウを指定した大きさにリサイズします。
+
+## 構文
+
+```js
+resizeBy(xDelta, yDelta)
+```
+
+### 引数
+
+- `xDelta` はウィンドウを水平方向に広げるピクセル数です。
+- `yDelta` はウィンドウを垂直方向に広げるピクセル数です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+```js
+// Shrink the window
 window.resizeBy(-200, -200);
-</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>Firefox 7 より、Web サイトは<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">以下の規則</a>に従う場合のみしかブラウザウィンドウの初期サイズを変更する事が出来なくなりました。</p>
-<ol>
- <li><code>window.open</code> で作成されたウィンドウ（またはタブ）しかリサイズ出来ません。</li>
- <li>ウィンドウが複数のタブを持つ場合、ウィンドウ（またはタブ）のリサイズは出来ません。</li>
-</ol>
-<h2 id="Specification" name="Specification">仕様</h2>
-<p>{{dom0}}</p>
-<h2 id="See_also" name="See_also">関連情報</h2>
-<ul>
- <li>{{domxref("window.resizeTo")}}</li>
-</ul>
+```
+
+## メモ
+
+このメソッドは、ウィンドウの大きさを現在の大きさからの相対値で変更します。ウィンドウの大きさを絶対的な値で変更する場合は {{domxref("window.resizeTo()")}} を使用してください。
+
+### 外部ウィンドウの生成とリサイズ
+
+セキュリティ上の理由から、 Firefox では、ウィンドウが `window.open()` によって生成されていない場合や、複数のタブを含む場合に、ウェブサイトがブラウザー内のウィンドウの既定のサイズを変更することができなくなりました。この変更の詳細については、互換性一覧表を参照してください。
+
+`window.open()` によってウィンドウを作成しても、 **既定ではリサイズできません。** ウィンドウをリサイズ可能にするには、 `"resizable"` 特性を使用してウィンドウを開く必要があります。
+
+```js
+// リサイズ可能なウィンドウを作成
+myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
+
+// ウィンドウを 500x500 にリサイズ
+myExternalWindow.resizeTo(500, 500);
+
+// ウィンドウをより小さく 400x400 にする
+myExternalWindow.resizeBy(-100, -100);
+```
+
+作成するウィンドウは、「同一オリジンポリシー」を尊重する必要があります。開いたウィンドウと現在のウィンドウのオリジンが同じでない場合、そのウィンドウ/タブの大きさを変更したり、情報にアクセスしたりすることはできません。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
