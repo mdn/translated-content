@@ -1483,7 +1483,6 @@
 /ja/docs/DOM/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM/window.history	/ja/docs/Web/API/Window/history
-/ja/docs/DOM/window.home	/ja/docs/Web/API/Window/home
 /ja/docs/DOM/window.innerHeight	/ja/docs/Web/API/Window/innerHeight
 /ja/docs/DOM/window.innerWidth	/ja/docs/Web/API/Window/innerWidth
 /ja/docs/DOM/window.length	/ja/docs/Web/API/Window/length
@@ -1709,7 +1708,6 @@
 /ja/docs/DOM:window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM:window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM:window.history	/ja/docs/Web/API/Window/history
-/ja/docs/DOM:window.home	/ja/docs/Web/API/Window/home
 /ja/docs/DOM:window.innerHeight	/ja/docs/Web/API/Window/innerHeight
 /ja/docs/DOM:window.innerWidth	/ja/docs/Web/API/Window/innerWidth
 /ja/docs/DOM:window.length	/ja/docs/Web/API/Window/length
@@ -3611,7 +3609,6 @@
 /ja/docs/Web/API/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/Web/API/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/Web/API/window.history	/ja/docs/Web/API/Window/history
-/ja/docs/Web/API/window.home	/ja/docs/Web/API/Window/home
 /ja/docs/Web/API/window.innerHeight	/ja/docs/Web/API/Window/innerHeight
 /ja/docs/Web/API/window.innerWidth	/ja/docs/Web/API/Window/innerWidth
 /ja/docs/Web/API/window.length	/ja/docs/Web/API/Window/length
