@@ -1,24 +1,43 @@
 ---
-title: window.focus
+title: Window.focus()
 slug: Web/API/Window/focus
 tags:
-  - DOM
-  - DOM_0
+  - API
   - Gecko
-  - Gecko DOM Reference
+  - HTML DOM
+  - メソッド
   - Window
+browser-compat: api.Window.focus
 translation_of: Web/API/Window/focus
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>ウィンドウにフォーカスを合わせます。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">window.focus()
-</pre>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">if ( clicked ) {
-  window.focus();
-}</pre>
-<h2 id="Specification" name="Specification">仕様</h2>
-<p>{{DOM0}}</p>
+{{APIRef}}
+
+ウィンドウを最前面にするようリクエストします。ユーザー設定によっては失敗する可能性があり、このメソッドが返される前にウィンドウが最前面になることは保証されません。
+
+## 構文
+
+```js
+focus()
+```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+```js
+if (clicked) { window.focus(); }
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
