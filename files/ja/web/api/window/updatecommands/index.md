@@ -1,26 +1,46 @@
 ---
-title: window.updateCommands
+title: Window.updateCommands()
 slug: Web/API/Window/updateCommands
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - メソッド
+  - リファレンス
   - Window
+  - XUL コマンドノード
+  - sCommandName
+  - updateCommands
+browser-compat: api.Window.updateCommands
 translation_of: Web/API/Window/updateCommands
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>現在の chrome ウィンドウ（UI）のコマンドの状態を更新します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">window.updateCommands("sCommandName")
-</pre>
-<h3 id="Parameters" name="Parameters">引数</h3>
-<ul>
- <li><code>sCommandName</code> : 更新するイベントを記述する特別な文字列 ("bold" など)</li>
-</ul>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>これは（特定のコマンドノードの "無効な" 属性を設定したり解除する）アイテムを有効、または、無効に、あるいは、XUL コマンドノードの "state" 属性における現在の状態の情報を設定することにより選択される状態がコマンドの状態に反映されることを確実にします。</p>
-<h2 id="Specification" name="Specification">仕様</h2>
-<p>{{DOM0}}</p>
+{{ ApiRef() }}{{Non-standard_header}}
+
+## 概要
+
+現在のクロームウィンドウ（UI）のコマンドの状態を更新します。
+
+## 構文
+
+```js
+updateCommands("sCommandName")
+```
+
+### 引数
+
+- sCommandName` は特定の文字列で、これがどのような更新イベントなのかを記述します（例えば、いま太字になったなど）。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## メモ
+
+これは、アイテムを有効または無効にしたり（コマンドノードの "disabled" 属性を適宜設定またはクリア）、 XUL コマンドノードの "state" 属性に現在の状態情報を設定してコマンドの状態が選択の状態を反映するようにするものです。
+
+## 関連情報
+
+DOM Level 0 です。仕様書には含まれていません。
+
+## ブラウザーの互換性
+
+{{Compat}}
