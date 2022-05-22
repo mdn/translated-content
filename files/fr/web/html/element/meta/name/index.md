@@ -118,7 +118,7 @@ La spécification CSS sur l'adaptation des appareils (<i lang="en">Device Adapta
         <tr>
           <td><code>width</code></td>
           <td>Un nombre entier positif ou le texte <code>device-width</code></td>
-          <td>Définit la largeur en pixel pour la zone d'afficahge selon laquelle on souhaite que le site web soit affiché.</td>
+          <td>Définit la largeur en pixel pour la zone d'affichage selon laquelle on souhaite que le site web soit affiché.</td>
         </tr>
         <tr>
           <td><code>height</code></td>
@@ -151,19 +151,19 @@ La spécification CSS sur l'adaptation des appareils (<i lang="en">Device Adapta
           <td>
             <p>La valeur <code>auto</code> n'a pas d'impact sur la disposition initiale de la zone d'affichage et toute la page web est visible.</p>
             <p>La valeur <code>contain</code> indique que la zone d'affichage est mise à l'échelle pour s'inscrire dans le plus grand rectangle possible de l'affichage.</p>
-            <p>La valeur <code>cover</code> indique que la zone d'afficahge est mise à l'échelle afin de remplir l'affichage de l'appareil. Il est grandement recommandé d'utiliser les variables <a href="/fr/docs/Web/CSS/env"><code>safe area inset</code></a> pour s'assurer que le contenu important ne se retrouve pas en dehors de l'affichage.
+            <p>La valeur <code>cover</code> indique que la zone d'affichage est mise à l'échelle afin de remplir l'affichage de l'appareil. Il est grandement recommandé d'utiliser les variables <a href="/fr/docs/Web/CSS/env"><code>safe area inset</code></a> pour s'assurer que le contenu important ne se retrouve pas en dehors de l'affichage.
             </p>
           </td>
         </tr>
       </tbody>
     </table>
 
-##### Points d'accessibilités quant à la mise à l'échelle de la zone d'affichage
+##### Points d'accessibilité quant à la mise à l'échelle de la zone d'affichage
 
 Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeur `no` empêchera les personnes ayant des troubles de la vision de pouvoir lire et comprendre le contenu de la page.
 
 - [Guide MDN pour la compréhension de WCAG, règle de bonne pratique 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Guide W3C pour la compréhension de WCAG 2.0 - Comprendre les critères de succès 1.4.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [Guide W3C pour la compréhension de WCAG 2.0 — Comprendre les critères de succès 1.4.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ##### Voir aussi
 
@@ -199,7 +199,7 @@ La règle-@ [`@viewport`](/fr/docs/Web/CSS/@viewport).
   >
   > - Ces règles ne sont pas contraignantes dans l'absolu. Seuls les robots suivants les bonnes pratiques les respecteront. Il ne faut pas s'attendre à ce qu'un acteur malveillant les suive.
   > - Le robot doit avoir accès à la page afin de lire ces règles. Pour éviter une consommation de bande passante, utilisez un fichier [`robots.txt`](/fr/docs/Glossary/Robots.txt).
-  > - Si vous souhaitez retirer une page d'un index, `noindex` fonctionnera à partir de la prochaine visite du robot. Assurez vous que le fichier `robots.txt` n'empêche pas les visites ultérieures.
+  > - Si vous souhaitez retirer une page d'un index, `noindex` fonctionnera à partir de la prochaine visite du robot. Assurez-vous que le fichier `robots.txt` n'empêche pas les visites ultérieures.
   > - Certaines valeurs s'excluent mutuellement (comme `index` et `noindex`, ou `follow` et `nofollow`). Dans ces cas, le comportement du robot est indéfini et peut varier selon les robots.
   > - Certains robots d'indexation comme ceux de Google, Yahoo et Bing prennent en charge ces valeurs pour l'en-tête HTTP `X-Robots-Tag`, ce qui permet aux robots d'accéder à ces règles pour les documents qui ne sont pas HTML (les images par exemple).
 
