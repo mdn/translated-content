@@ -37,6 +37,6 @@ console.log(stylesheet.media.mediaText);
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
