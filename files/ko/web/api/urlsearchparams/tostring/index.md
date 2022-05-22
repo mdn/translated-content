@@ -11,54 +11,46 @@ translation_of: Web/API/URLSearchParams/toString
 ---
 {{ApiRef("URL API")}}
 
-**`toString()` **은 {{domxref("URLSearchParams")}} 인터페이스의 메소드로서, URL에서 사용할 수 있는 쿼리 문자열을 리턴합니다.
+{{domxref("URLSearchParams")}} 인터페이스의 **`toString()`** 메서드는 URL에 사용할 수 있는 쿼리 문자열을 반환합니다.
 
-> **참고:** 이 메소드는 물음표가 없는 쿼리 문자열을 리턴합니다. 이는 물음표를 포함하여 리턴하는 [`window.location.search`](/ko/docs/Web/API/HTMLHyperlinkElementUtils/search)와는 다른 부분입니다.
+> **참고:** 이 메서드는 선행 `'?'`를 붙이지 않은 쿼리 문자열을 반환합니다. 이 동작은 `'?'`를 포함한 값을 반환하는 [`window.location.search`](/ko/docs/Web/API/HTMLHyperlinkElementUtils/search)와 다릅니다.
 
 {{availableinworkers}}
 
-## Syntax
+## 구문
 
 ```js
-URLSearchParams.toString()
+toString()
 ```
 
-### Parameters
+### 매개변수
 
-None.
+없음.
 
-### Return value
+### 반환 값
 
-A {{domxref("DOMString")}}, without the question mark.
+물음표 없는 문자열입니다. 아무런 검색 매개변수도 설정하지 않은 경우에는 빈 문자열을 반환합니다.
 
-## Examples
+## 예제
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search.slice(1));
+const url = new URL('https://example.com?foo=1&bar=2');
+const params = new URLSearchParams(url.search);
 
-//두번째 foo 파라미터를 추가합니다.
+// 두 번째 foo 매개변수 추가
 params.append('foo', 4);
-console.log(params.toString());
-//'foo=1&bar=2&foo=4'를 출력합니다.
-
-// note: params can also be directly created
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = url.searchParams;
-
-// or even simpler
-let params = new URLSearchParams('foo=1&bar=2');
+console.log(params.toString()); // 'foo=1&bar=2&foo=4' 출력
 ```
 
-## Specifications
+## 명세
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- The {{domxref("URL")}} interface.
+- {{domxref("URL")}} 인터페이스.
 - [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
