@@ -1,55 +1,60 @@
 ---
-title: window.moveBy
+title: Window.moveBy()
 slug: Web/API/Window/moveBy
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - CSSOM View
+  - メソッド
+  - リファレンス
   - Window
+browser-compat: api.Window.moveBy
 translation_of: Web/API/Window/moveBy
 ---
-<div>{{ApiRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`moveBy()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された量だけ移動します。
 
-<p>指定された量だけ現在のウィンドウを移動します。</p>
+> **Note:** この関数はウィンドウを現在の位置からの相対位置で移動します。
+> それに対して、 {{domxref("window.moveTo()")}} はウィンドウを絶対位置へ移動します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">window.moveBy(<var>deltaX</var>, <var>deltaY</var>)
-</pre>
+```js
+moveBy(deltaX, deltaY)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code>deltaX</code> : ウィンドウを水平方向に移動させるピクセル単位の大きさ</li>
- <li><code>deltaY</code> : ウィンドウを垂直方向に移動させるピクセル単位の大きさ</li>
-</ul>
+- `deltaX` は、ピクセル数でウィンドウを水平方向に移動させる量を示します。正の値は右へ、負の値は左へ移動します。
+- `deltaY` は、ピクセル数でウィンドウを垂直方向に移動させる量を示します。正の値は下方向、負の値は上方向です。
 
-<h2 id="Example" name="Example">例</h2>
+### 返値
 
-<pre class="brush:js">function budge() {
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+この例では、ウィンドウを右に 10 ピクセル、上に 10 ピクセル移動させています。
+
+```js
+function budge() {
   moveBy(10, -10);
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">注記</h2>
+## 仕様書
 
-<p>この関数に対して、負の数を引数に使うことができます。このメソッドは相対移動を、{{domxref("window.moveTo")}} は、絶対移動を行います。</p>
+{{Specifications}}
 
-<p>Firefox 7 より、<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">以下の規則</a> に従い、 Web サイトからのブラウザのウィンドウの移動はできなくなっています。</p>
+## ブラウザーの互換性
 
-<ol>
- <li>{{domxref("window.open")}} によって作成されたものでないタブやウィンドウを移動することはできません。</li>
- <li>ウィンドウに 1 つよりも多くのタブがある場合、タブやウィンドウを移動することはできません。</li>
-</ol>
+{{Compat}}
 
-<h2 id="Specification" name="Specification">仕様</h2>
+Firefox 7 より、ウェブサイトは[以下の場合](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
 
-<p>{{DOM0}}</p>
+1. {{domxref("Window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
+2. ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("window.moveTo")}}</li>
-</ul>
+- {{domxref("Window.moveTo()")}}
