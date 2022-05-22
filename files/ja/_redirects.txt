@@ -3687,7 +3687,6 @@
 /ja/docs/Web/API/window.scrollY	/ja/docs/Web/API/Window/scrollY
 /ja/docs/Web/API/window.scrollbars	/ja/docs/Web/API/Window/scrollbars
 /ja/docs/Web/API/window.self	/ja/docs/Web/API/Window/self
-/ja/docs/Web/API/window.setCursor	/ja/docs/Web/API/Window/setCursor
 /ja/docs/Web/API/window.setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/window.setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/window.showModalDialog	/ja/docs/Web/API/Window/showModalDialog
