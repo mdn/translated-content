@@ -1,175 +1,147 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
+tags:
+  - API
+  - HTML DOM
+  - インターフェイス
+  - NeedsNewLayout
+  - リファレンス
+browser-compat: api.HTMLScriptElement
 translation_of: Web/API/HTMLScriptElement
 ---
-<p>{{ApiRef}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>DOMの <code>Script</code>オブジェクトは<a class="external" href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element">HTMLScriptElement</a> (または {{ HTMLVersionInline(4) }} <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-81598695"><code>HTMLScriptElement</code></a>)インターフェイスに具現化されます．それは通常の<a href="/ja/docs/DOM/element" rel="internal">element</a>オブジェクトインターフェイスに加えて(継承によって利用可能)，{{ HTMLElement("script") }} 要素のレイアウトおよび表現を扱う特別なプロパティとメソッドを提供します．</p>
+HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスの公開しています。これは（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて） `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを提供します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+JavaScript ファイルは `application/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で提供されますが、 しかし、ブラウザーは寛大で、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("Element/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
 
-<p><em>親である </em><em>{{domxref("HTMLElement")}}</em><em>からプロパティを継承しています.</em></p>
+{{InheritanceDiagram}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Type</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code id="type_property">type</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>スクリプトの<a href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#valid-mime-type">MIME type</a>を表します．これは{{htmlattrxref("type","script")}}属性を反映します．</td>
-  </tr>
-  <tr>
-   <td><code id="src_property">src</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>
-    <p>使用される外部スクリプトリソースのアドレスを表します．これは {{htmlattrxref("src","script")}}属性を反映します．</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code id="htmlFor_property">htmlFor</code> {{obsolete_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>[Description missing]</td>
-  </tr>
-  <tr>
-   <td><code id="event_property">event</code>{{obsolete_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>[Description missing]</td>
-  </tr>
-  <tr>
-   <td><code id="charset_property">charset</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>外部スクリプトリソースの文字エンコードを表します．これは{{htmlattrxref("charset","script")}}属性を反映します．</td>
-  </tr>
-  <tr>
-   <td><code id="async_property">async</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td rowspan="2">
-    <p><code>async</code>と<code>defer</code>属性は<a href="/ja/docs/JavaScript/Reference/Global_Objects/Boolean" title="/en-US/docs/JavaScript/Reference/Global_Objects/Boolean">boolean</a>属性です．スクリプトがどのように実行されるべきかを示します． <strong><code>defer</code> および <code>async</code> 属性は</strong><strong><code>，src</code> </strong><strong>属性が無ければ指定してはならない．</strong></p>
+## プロパティ
 
-    <p>これら2つの属性値を用いて選択可能な3つのモードがあります．<code>async</code>属性があれば，スクリプトは可能な限り非同期的に実行されます．<code>async</code>属性が無く<code>defer</code>属性があれば. スクリプトはページのパースが完了した時点で実行されます．両方の属性があれば，スクリプトはユーザーエージェントによるページのパース完了を待つこと無く，フェッチ後，直ちに実行されます．</p>
+_親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
-    <div class="note"><strong>注記:</strong> これらの属性の正確な処理の詳細は，大部分が歴史的な理由により，幾分複雑でHTMLの様々な局面に関連しています．従って，実装の要件は，仕様の至る所に散らばっている必要性によります．<a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script" title="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script">These algorithms</a> describe the core of this processing, but these algorithms reference and are referenced by the parsing rules for {{ HTMLElement("script") }} <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag" title="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag">start</a> and <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag" title="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag">end</a> tags in HTML, <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag">in foreign content</a>, and <a href="http://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML">in XML</a>, the rules for the <a href="/ja/docs/DOM/document.write" title="/en-US/docs/DOM/document.write"><code>document.write()</code></a> method, the handling of <a href="http://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting">scripting</a>, etc.</div>
+- {{domxref("HTMLScriptElement.type")}}
+  - : 文字列で、スクリプトの MIME タイプを表します。これは {{htmlattrxref("type","script")}} 属性を反映します。
+- {{domxref("HTMLScriptElement.src")}}
+  - : 文字列で、外部スクリプトの URL を表します。これは {{htmlattrxref("src","script")}} 属性を反映します。
+- {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
+  - : 文字列です。 HTML 文書で要素にイベントハンドラーを設定するための廃止された方法です。
+- {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
+  - : 文字列で、外部スクリプトの文字エンコーディングを表します。これは {{htmlattrxref("charset","script")}} 属性を反映します。
+- {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
 
-    <p>The <code>defer</code> attribute may be specified even if the <code>async</code> attribute is specified, to cause legacy Web browsers that only support <code>defer</code> (and not <code>async</code>) to fall back to the <code>defer</code> behavior instead of the synchronous blocking behavior that is the default.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code id="defer_property">defer</code></td>
-   <td>{{domxref("Boolean")}}</td>
-  </tr>
-  <tr>
-   <td><code id="crossOrigin_property">crossOrigin</code> {{experimental_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this script element. See <a href="/ja/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a> for details. It controls, for scripts that are obtained from other <a href="http://www.w3.org/html/wg/drafts/html/master/browsers.html#origin-0">origins</a>, whether error information will be exposed.</td>
-  </tr>
-  <tr>
-   <td><code id="text_property">text</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>
-    <p>IDLの<code>text</code>属性は，すべてのテキストノード(<a href="/ja/docs/DOM/Text" title="/en-US/docs/DOM/Text"><code>Text</code> nodes</a>)内容の連結を返さなければなりません．(コメントや要素のような他のノードを無視すれば)テキストノードは，木構造(tree)上の順序でscript要素の子要素です．設定上，これはIDLの<a href="/ja/docs/DOM/Node.textContent" title="/en-US/docs/DOM/Node.textContent"><code>textContent</code></a>属性と同様に機能せねばなりません．</p>
+  - : `async` および `defer` 属性は論理属性で、スクリプトの実行方法を制御します。 **`defer` および `async` 属性は `src` 属性がないときには指定しないでください。**
 
-    <p><strong>注記:</strong>  <a href="/ja/docs/DOM/document.write" title="/en-US/docs/DOM/document.write"><code>document.write()</code></a> メソッドを用いて, {{HTMLElement("script") }} 要素を挿入した時，実行されます(典型的には同期的に)．しかし,  <a href="/ja/docs/DOM/element.innerHTML" title="/en-US/docs/DOM/element.innerHTML"><code>innerHTML</code></a> and <a href="/ja/docs/DOM/element.outerHTML" title="/en-US/docs/DOM/element.outerHTML"><code>outerHTML</code></a> 属性を用いて挿入した場合,結局何も実行されません．</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+    取りうる実行モードは 3 種類あります。
 
-<h2 id="メソッド">メソッド</h2>
+    1. `async` 属性が存在した場合、スクリプトはダウンロードされ次第、非同期に実行されます。
+    2. `async` 属性がなく `defer` 属性が存在した場合、スクリプトは[ページの解釈の終了](/ja/docs/Web/API/Window/DOMContentLoaded_event)時に実行されます。
+    3. どちらの属性もなかった場合、スクリプトは直ちに読み取られて実行され、ページの解釈はブロックされます。
 
-<p><em>固有のメソッドはありません;親である</em><em>, {{domxref("HTMLElement")}}</em><em>から継承しています.</em></p>
+    `defer` 属性は `async` 属性と共に指定することができます。 `defer` のみに対応している（そして `async` には対応していない）ブラウザーでは、既定のブロックが発生する動作の代わりに `defer` で代替することができます。
 
-<h2 id="例">例</h2>
+    > **Note:** これらの属性における正確な処理の詳細は、 HTML の多くの異なる側面を含むため複雑であり、そのため仕様全体に散らばっています。[これらのアルゴリズム](https://html.spec.whatwg.org/multipage/scripting.html)は、核となる考えを記述していますが、 {{HTMLElement("script")}} の[開始](https://html.spec.whatwg.org/multipage/syntax.html)および[終了](https://html.spec.whatwg.org/multipage/syntax.html)タグのHTML、[外部コンテンツ](https://html.spec.whatwg.org/multipage/syntax.html)、[XML](https://html.spec.whatwg.org/multipage/xhtml.html)における解釈ルール、 [`document.write()`](/ja/docs/Web/API/Document/write) メソッドのルール、[スクリプティング](https://html.spec.whatwg.org/multipage/webappapis.html)の扱い、などによります。
 
-<h3 id="例1_スクリプトを動的にインポートする">例#1: スクリプトを動的にインポートする</h3>
+- {{domxref("HTMLScriptElement.crossOrigin")}} {{experimental_inline}}
+  - : 文字列で、 script 要素の [CORS 設定](/ja/docs/Web/HTML/Attributes/crossorigin) を反映します。他の[オリジン](/ja/docs/Glossary/Origin)のスクリプトについては、エラー情報が公開されるかどうかを制御します。
+- {{domxref("HTMLScriptElement.text")}}
 
-<p>新しいスクリプトをドキュメント内にインポート可能にするため<code>importScript(<em>url</em>[, <em>onloadFunction</em>])</code>と名付けた関数を生成しましょう．インポートはドキュメントの(既存の){{ HTMLElement("script") }}の直前に(新たな){{ HTMLElement("script") }}ノードを生成して行ないます．既存の{{ HTMLElement("script") }}は，下記のコード({{domxref("document.currentScript")}}通じて取得)を提供するものです．これらのスクリプトは<strong>非同期的に</strong>実行されます．詳細は<a href="#defer_property" title="#defer_property"><code>defer</code></a>および<a href="#async_property" title="#async_property"><code>async</code></a>プロパティを参照．</p>
+  - : この {{HTMLElement("script")}} 要素の中にあるすべての [`Text` ノード](/ja/docs/Web/API/Text)（コメントなどの他のノードを除く）の内容をツリー順で連結した文字列です。設定すると、 [`textContent`](/ja/docs/Web/API/Node/textContent) IDL 属性と同様に動作します。
 
-<pre class="brush: js">function loadError (oError) {
-  throw new URIError("The script " + oError.target.src + " is not accessible.");
+    > **Note:** [`document.write()`](/ja/docs/Web/API/Document/write) メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 [`innerHTML`](/ja/docs/Web/API/Element/innerHTML) または [`outerHTML`](/ja/docs/Web/API/Element/outerHTML) を使用して挿入された場合は実行されません。
+
+- {{domxref("HTMLScriptElement.fetchPriority")}}
+  - : オプションの文字列で、ブラウザーが外部スクリプトの取得を他の外部スクリプトと比較してどのように優先させるべきかのヒントを表します。この値を指定する場合は、許可された値のいずれかでなければなりません。高い優先度で取得する場合は `high` 、低い優先度で取得する場合は `low` 、優先度がない場合は `auto` （既定値）となります。
+- {{domxref("HTMLScriptElement.noModule")}}
+  - : 論理値で、 true ならば [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) に対応したブラウザーにおいてスクリプトの実行を停止します。 — JavaScript モジュールに対応して*いない*古いブラウザーで代替スクリプトを実行するために使用します。
+- {{domxref("HTMLScriptElement.referrerPolicy")}}
+  - : 文字列で、 HTML 属性 {{htmlattrxref("referrerPolicy", "script")}} を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
+
+## 静的メソッド
+
+- {{domxref("HTMLScriptElement.supports()")}}
+  - : ブラウザーが指定された種類のスクリプトに対応している場合は `true` を、それ以外の場合は `false` を返します。
+     このメソッドは、スクリプト関連の機能検出のためのシンプルで統一された方法を提供します。
+
+## メソッド
+
+_独自のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+
+## 例
+
+### スクリプトの動的なインポート
+
+文書内の新しいスクリプトをインポートする関数を作成しましょう。次のコードをホストする {{HTMLElement("script")}} の直前に {{HTMLElement("script")}} ノードを作成します（{{domxref("document.currentScript")}} を使用）。これらのスクリプトは**非同期**で実行されます。詳細については、 [`defer`](#defer_property) および [`async`](#async_property) プロパティを参照してください。
+
+```js
+function loadError(oError) {
+  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
 }
 
-function importScript (sSrc, fOnload) {
-  var oScript = document.createElement("script");
-  oScript.type = "text\/javascript";
-  oScript.src = sSrc;
-  oScript.onerror = loadError;
-  if (fOnload) { oScript.onload = fOnload; }
-  document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
-}</pre>
+function prefixScript(url, onloadFunction) {
+  var newScript = document.createElement("script");
+  newScript.onerror = loadError;
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
+  newScript.src = url;
+}
+```
 
-<p>同じことだがスクリプトを{{domxref("document.currentScript")}}要素の直前に加える代わりに，{{ HTMLElement("head") }} タグの末尾の子として加えています．　</p>
+次の関数は、新しいスクリプトを {{domxref("document.currentScript")}} 要素の直前に追加するのではなく、 {{HTMLElement("head")}} タグの子として追加するものです。
 
-<pre class="brush: js">var importScript = (function (oHead) {
 
-  function loadError (oError) {
-    throw new URIError("The script " + oError.target.src + " is not accessible.");
-  }
+```js
+function loadError(oError) {
+  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+}
 
-  return function (sSrc, fOnload) {
-    var oScript = document.createElement("script");
-    oScript.type = "text\/javascript";
-    oScript.src = sSrc;
-    oScript.onerror = loadError;
-    if (fOnload) { oScript.onload = fOnload; }
-    oHead.appendChild(oScript);
-  }
+function affixScriptToHead(url, onloadFunction) {
+  var newScript = document.createElement("script");
+  newScript.onerror = loadError;
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.head.appendChild(newScript);
+  newScript.src = url;
+}
+```
 
-})(document.getElementsByTagName("head")[0]);
-</pre>
+サンプルの使用法:
 
-<p>使用法:</p>
+```js
+affixScriptToHead("myScript1.js");
+affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
+```
 
-<pre class="brush: js">importScript("myScript1.js");
-importScript("myScript2.js", /* onload 関数: */ function () {
-alert("You read this alert because the script \"myScript2.js\" has been correctly loaded."); });</pre>
+### あるスクリプト種別に対応しているかどうかをチェック
 
-<h2 id="仕様">仕様</h2>
+{{domxref("HTMLScriptElement.supports()")}} は、ブラウザーが特定の種類のスクリプトに対応しているかどうかをチェックする統一的な仕組みを提要します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">地位</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following properties are now obsolete: <code>htmlFor,</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-81598695', 'HTMLScriptElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-81598695', 'HTMLScriptElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+以下の例では、 `noModule` 属性の存在を代替として使用して、モジュールの対応をチェックする方法を示しています。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+```js
+function checkModuleSupport() {
+  if ('supports' in HTMLScriptElement) {
+    return HTMLScriptElement.supports('module');
+  }
+  return 'noModule' in document.createElement('script');
+}
+```
 
-<p>{{Compat("api.HTMLScriptElement")}}</p>
+クラシックスクリプトはすべてのブラウザーで対応していると想定できます。
 
-<h2 id="参考">参考</h2>
+## 仕様書
 
-<ul>
- <li>HTML {{ HTMLElement("script") }} element</li>
- <li>HTML {{ HTMLElement("noscript") }} element</li>
- <li>{{domxref("document.currentScript")}}</li>
- <li><a href="/ja/docs/DOM/Using_web_workers" title="/en-US/docs/DOM/Using_web_workers">Web Workers</a> (code snippets similar to scripts but executed in <a href="/ja/docs/JavaScript/DedicatedWorkerGlobalScope" title="/en-US/docs/JavaScript/DedicatedWorkerGlobalScope">another global context</a>)</li>
- <li><a href="http://pieisgood.org/test/script-link-events/">Ryan Grove's &lt;script&gt; and &lt;link&gt; node event compatibility chart</a></li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- HTML の {{HTMLElement("script")}} 要素
+- HTML の {{HTMLElement("noscript")}} 要素
+- {{domxref("document.currentScript")}}
+- [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) （script と似たコードの断片だが、[別なグローバルコンテキスト](/ja/docs/Web/API/DedicatedWorkerGlobalScope)で実行されるもの）
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
