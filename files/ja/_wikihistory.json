@@ -14676,12 +14676,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/API/FileError": {
-    "modified": "2020-10-15T22:11:49.645Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2020-10-15T21:44:07.768Z",
     "contributors": [
