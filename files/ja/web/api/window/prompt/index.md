@@ -1,61 +1,88 @@
 ---
-title: window.prompt
+title: Window.prompt()
 slug: Web/API/Window/prompt
 tags:
-  - DOM
-  - Gecko
+  - API
+  - HTML DOM
+  - MakeBrowserAgnostic
+  - メソッド
+  - リファレンス
+  - Window
+  - prompt
+browser-compat: api.Window.prompt
 translation_of: Web/API/Window/prompt
 ---
-<div>{{ApiRef()}}</div>
+{{ApiRef("Window")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+`window.prompt()` は、ユーザーにテキストを入力するように促すダイアログをオプションのメッセージと共に表示し、ユーザーがテキストを送信するかダイアログをキャンセルするまで待機するようにブラウザーに指示します。
 
-<p>ユーザにテキストを入力することを促すメッセージを持つダイアログを表示します。</p>
+ある条件下では、例えば、ユーザーがタブを切り替えたとき、ブラウザーは実際にはダイアログを表示しないかもしれませんし、ユーザーがテキストを送信したり、ダイアログをキャンセルしたりするまで待たないかもしれません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><code><var>result</var> = window.prompt( <em>text</em>, <em>value</em> );</code></pre>
+```js
+prompt()
+prompt(message)
+prompt(message, default)
+```
 
-<ul>
- <li><code>result</code> は、ユーザによって入力されたテキストを含む文字列、または、<code>null</code> 値です。</li>
- <li><code>text</code> は、ユーザに表示するテキストの文字列です。</li>
- <li><code>value</code> は、テキスト入力フィールド内に表示されるデフォルト値を含む文字列です。この引数は、オプションです。</li>
-</ul>
+### 引数
 
-<h2 id="Example" name="Example">例</h2>
+- `message` {{optional_inline}}
+  - : ユーザーに表示する文字列。プロンプトウィンドウに表示するものがない場合は省略可能です。
+- `default` {{optional_inline}}
+  - : テキスト入力フィールドに表示される既定値を指定する文字列。 Internet Explorer 7 および 8 では、この引数を指定しなかった場合、文字列 `"undefined"` が既定値となることに注意してください。
 
-<pre class="brush:js">var sign = prompt("What's your sign?");
+### 返値
 
-if (sign.toLowerCase() == "scorpio") alert("Wow! I'm a Scorpio too!");
+ユーザーが入力したテキストを含む文字列、または `null` です。
+
+## 例
+
+```js
+let sign = prompt("What's your sign?");
+
+if (sign.toLowerCase() == "scorpio") {
+  alert("Wow! I'm a Scorpio too!");
+}
 
 // プロンプトの使い方には色々なものがあります。
-var sign = window.prompt(); // 空のプロンプトを表示
-var sign = prompt();       //  同上
-var sign = window.prompt("元気にしてる ?"); // 「元気にしてる ?」の文字列入りで表示
-var sign = window.prompt("元気にしてる ?", "元気だよ !"); // 「元気にしてる ?」 の文字列入りで、入力欄の初期値に「元気だよ !」を設定して表示</pre>
+sign = window.prompt(); // 空のプロンプトを表示
+sign = prompt();       //  同上
+sign = window.prompt("元気にしてる ?"); // 「元気にしてる ?」の文字列入りで表示
+sign = window.prompt("元気にしてる ?", "元気だよ !"); // 「元気にしてる ?」 の文字列入りで、入力欄の初期値に「元気だよ !」を設定して表示
+```
 
-<p>ユーザが OK ボタンをクリックすると、入力フィールドに入力されたテキストが返ります。ユーザがテキストを入力せずに OK をクリックする場合、空文字列が返ります。ユーザがキャンセルボタンをクリックする場合、この関数は、null を返します。</p>
+ユーザーが OK ボタンをクリックすると、入力フィールドに入力されたテキストが返ります。ユーザーがテキストを入力せずに OK をクリックする場合、空文字列が返ります。ユーザーがキャンセルボタンをクリックする場合、この関数は、 `null` を返します。
 
-<p>上記例のプロンプトは次の様に表示されます(※ Chrome on Windows 7)</p>
+上記例のプロンプトは次のように表示されます（macOS の Chrome）。
 
-<p><img src="https://lh4.googleusercontent.com/-uDx7r8y4tV8/UKv_PjG163I/AAAAAAAAHd0/Arwk0l4cpq0/s362/Prompt_Chrome_Windows7.png" style="width: 362px;"></p>
+[![prompt() dialog in Chrome on macOS](prompt.png)](prompt.png)
 
-<h2 id="Notes" name="Notes">注記</h2>
+## メモ
 
-<p>プロンプトダイアログは、単一の行のテキストボックス、キャンセルボタン、OK ボタンを含み、ユーザがテキストボックスに入力した（空の可能性もある）テキストを返します。</p>
+プロンプトダイアログは、単一の行のテキストボックス、キャンセルボタン、OK ボタンを含み、ユーザーがテキストボックスに入力した（空の可能性もある）テキストを返します。
 
+返値は文字列であることに注意してください。つまり、ユーザーから与えられた値をキャストする必要がある場合があります。例えば、答えが Number であるべきなら、その値を Number にキャストする必要があります。
 
-<p>Chrome のコード（拡張機能など）では、<a href="/ja/docs/NsIPromptService" title="NsIPromptService"><code>nsIPromptService</code></a> メソッドを代わりに使うべきです。</p>
+```js
+const aNumber = Number(window.prompt("Type a number", ""));
+```
 
-<p>Safari では、<code>window.prompt</code> をキャンセルした場合の戻り値が空文字であるため、テキストボックス内に何も入力されていない場合との差別化をはかることができませんので、注意して使うべきです。</p>
+ダイアログボックスはモーダルウィンドウです。ダイアログボックスが閉じられるまで、ユーザーはプログラムの他のインターフェイスにアクセスすることができなくなります。このため、ダイアログボックス（またはモーダルウィンドウ）を作成する関数は、使いすぎないようにしましょう。
 
-<h2 id="Specification" name="Specification">仕様</h2>
+他にもユーザー入力には {{HTMLElement("dialog")}} 要素を使用することができます。
 
-<p>{{dom0()}}</p>
+## 仕様書
 
-<h2 id="See also" name="See also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>{{domxref("window.alert")}}</li>
- <li>{{domxref("window.confirm")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{HTMLElement("dialog")}} 要素
+- {{domxref("window.alert", "alert")}}
+- {{domxref("window.confirm", "confirm")}}
