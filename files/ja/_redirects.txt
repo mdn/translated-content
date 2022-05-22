@@ -3128,7 +3128,6 @@
 /ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
-/ja/docs/Web/API/FileException	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/conflicting/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/conflicting/Web/API/FileReader/error_event
 /ja/docs/Web/API/FileReader/onload	/ja/docs/conflicting/Web/API/FileReader/load_event
