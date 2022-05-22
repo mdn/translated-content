@@ -24032,16 +24032,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Window/home": {
-    "modified": "2020-10-15T21:16:24.433Z",
-    "contributors": [
-      "YujiSoftware",
-      "teoli",
-      "jsx",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:43:14.616Z",
     "contributors": [
@@ -24586,14 +24576,6 @@
     "contributors": [
       "Uemmra3",
       "yyss"
-    ]
-  },
-  "Web/API/Window/setCursor": {
-    "modified": "2019-03-23T23:29:45.573Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "ethertank"
     ]
   },
   "Web/API/Window/showModalDialog": {
