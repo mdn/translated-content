@@ -25859,12 +25859,6 @@
       "Wind1808"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-03-18T21:11:33.822Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute": {
     "modified": "2019-03-18T21:23:04.624Z",
     "contributors": [
@@ -48377,16 +48371,6 @@
     "contributors": [
       "yuheiy",
       "mfuji09"
-    ]
-  },
-  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
-    "modified": "2020-05-24T03:45:53.652Z",
-    "contributors": [
-      "mfuji09",
-      "teoli",
-      "siokoshou",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "conflicting/Web/CSS/Reference": {
