@@ -33,7 +33,7 @@ let stylesheet = stylesheets[0];
 console.log(stylesheet.media.mediaText);
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
