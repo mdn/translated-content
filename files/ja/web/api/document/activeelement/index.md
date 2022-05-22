@@ -1,97 +1,79 @@
 ---
-title: document.activeElement
+title: Document.activeElement
 slug: Web/API/Document/activeElement
 tags:
-  - DOM
-  - Focus
-  - Gecko
-  - HTML5
-  - NeedsTranslation
-  - 要更新
+  - API
+  - Document
+  - フォーカス
+  - プロパティ
+  - リファレンス
+  - ShadowRoot
+  - activeElement
+browser-compat: api.Document.activeElement
 translation_of: Web/API/DocumentOrShadowRoot/activeElement
 translation_of_original: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
-<div>{{ApiRef}}</div>
+{{APIRef("Shadow DOM")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`activeElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、DOM 内で現在フォーカスを持っている要素 ({{domxref("Element")}}) を返します。
 
-<p>Returns the currently focused element, that is, the element that will get keystroke events if the user types any. This attribute is read only.</p>
+多くの場合、 `activeElement` はその時点でテキストが選択されていれば {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトを返します。もしそうなら、そのオブジェクトの `selectionStart` と `selectionEnd` プロパティを使用することで、より詳細な情報を得ることができます。
+その他、フォーカスされている要素が {{HTMLElement("select")}} 要素（メニュー）や {{HTMLElement("input")}} 要素（ `type` `"button"`, `"checkbox"`, `"radio"`） である場合もあります。
 
-<p>Often this will return an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} object, if it has the text selection at the time.  If so, you can get more detail by using the element's <code>selectionStart</code> and <code>selectionEnd</code> properties.  Other times the focused element might be a {{HTMLElement("select")}} element (menu) or an {{HTMLElement("input")}} element, of <code>type</code> button, checkbox or radio.</p>
+通常、ユーザーはタブキーを押して、フォーカス可能な要素間でページ内のフォーカスを移動させ、スペースバーを使用して 1 つの要素をアクティブにします（つまり、ボタンを押したり、ラジオボタンをトグル切り替えしたりします）。どの要素にフォーカスが当たるかは、プラットフォームやブラウザーの現在の設定によって異なります。例えば、 macOS システムでは通常、既定では、テキスト入力要素以外の要素はフォーカスされません。
 
-<div class="note"><strong>注記:</strong> On Mac, elements that aren't text input elements tend not to get focus assigned to them.</div>
+> **Note:** フォーカス（どの要素がユーザー入力イベントを受信しているか）と選択範囲（文書内で現在強調表示されている部分）は同じものではありません。現在の選択範囲は {{domxref("window.getSelection()")}} で取得することができます。
 
-<p>Typically a user can press the tab key to move the focus around the page among focusable elements, and use the space bar to activate it (press a button, choose a radio).</p>
+## 値
 
-<p>Do not confuse focus with a selection over the document, consisting mostly of static text nodes.  See {{domxref("window.getSelection()")}} for that.</p>
+現在フォーカスがある {{domxref('Element')}} です。フォーカスされている要素がない場合は {{HTMLElement("body")}} または `null` となります。
 
-<p>When there is no selection, the active element is the page's {{HTMLElement("body")}}.</p>
+## 例
 
-<p>{{Note("This attribute is part of the in-development HTML 5 specification.")}}</p>
+### HTML
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```html
+<p>下のテキストエリアからテキストを選択してください。</p>
 
-<pre>var curElement = document.activeElement;
-</pre>
+<form>
+  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">これはテキストエリア 1 です。 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea>
+  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">これはテキストエリア 2 です。 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea>
+</form>
 
-<h2 id="Example" name="Example">例</h2>
+<p>アクティブな要素の ID: <b id="output-element"></b></p>
+<p>選択されているテキスト: <b id="output-text"></b></p>
+```
 
-<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
-    function init() {
+### JavaScript
 
-        function onMouseUp(e) {
-            console.log(e);
-            var outputElement = document.getElementById('output-element');
-            var outputText = document.getElementById('output-text');
-            var selectedTextArea = document.<strong>activeElement</strong>;
-            var selection = selectedTextArea.value.substring(
-            selectedTextArea.<strong>selectionStart</strong>, selectedTextArea.<strong>selectionEnd</strong>);
-            outputElement.innerHTML = selectedTextArea.id;
-            outputText.innerHTML = selection;
-        }
+```js
+function onMouseUp(e) {
+  const activeTextarea = document.activeElement;
+  const selection = activeTextarea.value.substring(
+    activeTextarea.selectionStart, activeTextarea.selectionEnd
+  );
 
-        document.getElementById("ta-example-one").addEventListener("mouseup", onMouseUp, false);
-        document.getElementById("ta-example-two").addEventListener("mouseup", onMouseUp, false);
-    }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
-&lt;div&gt;
-    Select some text from one of the Textareas below:
-&lt;/div&gt;
-&lt;form id="frm-example" action="#" accept-charset="utf-8"&gt;
-&lt;textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40"&gt;
-This is Textarea Example One:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
-&lt;/textarea&gt;
-&lt;textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40"&gt;
-This is Textarea Example Two:
-Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.
-&lt;/textarea&gt;
-&lt;/form&gt;
-Active Element Id: &lt;span id="output-element"&gt;&lt;/span&gt;&lt;br/&gt;
-Selected Text: &lt;span id="output-text"&gt;&lt;/span&gt;
+  const outputElement = document.getElementById('output-element');
+  const outputText = document.getElementById('output-text');
+  outputElement.innerHTML = activeTextarea.id;
+  outputText.innerHTML = selection;
+}
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+const textarea1 = document.getElementById('ta-example-one');
+const textarea2 = document.getElementById('ta-example-two');
+textarea1.addEventListener('mouseup', onMouseUp, false);
+textarea2.addEventListener('mouseup', onMouseUp, false);
+```
 
-<p><a href="https://jsfiddle.net/w9gFj">JSFiddle で確認</a></p>
+### 結果
 
-<h2 id="Notes" name="Notes">注記</h2>
+{{ EmbedLiveSample('Example', '400', '400') }}
 
-<p>Originally introduced as a proprietary DOM extension in Internet Explorer 4, this property also is supported in Opera and Safari (as of version 4).</p>
+## 仕様書
 
-<h2 id="Specification" name="Specification">仕様</h2>
+{{Specifications}}
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#focus-management">Focus management </a></li>
-</ul>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<p>{{Compat("api.Document.activeElement")}}</p>
+{{Compat}}
