@@ -130,20 +130,20 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <h2 id="Setting_Teachers_prototype_and_constructor_reference">设置 Teacher() 的原型和构造器引用</h2>
 
-<p>All is good so far, but we have a problem. We have defined a new constructor, and it has a <code>prototype</code> property, which by default just contains an object with a reference to the constructor function itself. It does not contain the methods of the Person constructor's <code>prototype</code> property. To see this, enter <code>Object.getOwnPropertyNames(Teacher.prototype)</code> into either the text input field or your JavaScript console. Then enter it again, replacing <code>Teacher</code> with <code>Person</code>. Nor does the new constructor <em>inherit</em> those methods. To see this, compare the outputs of <code>Person.prototype.greeting</code> and <code>Teacher.prototype.greeting</code>. We need to get <code>Teacher()</code> to inherit the methods defined on <code>Person()</code>'s prototype. So how do we do that?</p>
+<p>到目前为止，一切都很好，但我们遇到了一个问题。我们已经定义了一个新的构造器，并且它具有一个<code>prototype</code>属性，默认情况下，该属性仅包含一个引用构造函数本身的对象。它不包含 Person 构造器的<code>prototype</code>属性的属性。要查看此，请在文本输入字段或 JavaScript 控制台中输入<code>Object.getOwnPropertyNames(Teacher.prototype)</code>。然后再次输入它，将<code>Teacher</code> 替换为<code>Person</code>。新构造器也不会<em>继承</em>这些方法。要查看此，请比较 <code>Person.prototype.greeting</code> 和 <code>Teacher.prototype.greeting</code>的输出。我们需要让<code>Teacher()</code>继承<code>Person()</code> 的原型上定义的方法。那么我们该怎么做呢？</p>
 
 <ol>
-	<li>Add the following line below your previous addition:
+	<li>在你之前添加的内容下面添加以下行：
 	<pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
-	Here our friend <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> comes to the rescue again. In this case we are using it to create a new object and make it the value of <code>Teacher.prototype</code>. The new object has <code>Person.prototype</code> as its prototype and will therefore inherit, if and when needed, all the methods available on <code>Person.prototype</code>.</li>
-	<li>We need to do one more thing before we move on. After adding the last line, <code>Teacher.</code><code>prototype</code>'s <code>constructor</code> property is now equal to <code>Person()</code>, because we just set <code>Teacher.prototype</code> to reference an object that inherits its properties from <code>Person.prototype</code>! Try saving your code, loading the page in a browser, and entering <code>Teacher.prototype.constructor</code> into the console to verify.</li>
-	<li>This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
+	在这里，我们的朋友<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> 再次来救援。在本例中，我们使用它来创建一个新对象，并使其成为 <code>Teacher.prototype</code> 的值。新对象将<code>Person.prototype</code>作为其原型，并将因此继承，当需要的情况下，<code>Person.prototype</code>上的所有方法都是可提供的。</li>
+	<li>在我们继续前进之前，我们需要再做一件事。添加最后一行<code>Teacher.</code><code>prototype</code> 的<code>constructor</code>属性现在等于<code>Person()</code>，因为我们只需设置<code>Teacher.prototype</code>来引用从<code>Person.prototype</code>继承其属性的对象！尝试保存代码，在浏览器中加载页面，然后在控制台中输入<code>Teacher.prototype.constructor</code>进行验证。</li>
+	<li>这可能会成为一个问题，因此我们需要设置此权利。为此，你可以返回到源代码并在底部添加以下行：
 	<pre class="brush: js">Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // so that it does not appear in 'for in' loop
     writable: true });</pre>
 	</li>
-	<li>Now if you save and refresh, entering <code>Teacher.prototype.constructor</code> should return <code>Teacher()</code>, as desired, plus we are now inheriting from <code>Person()</code>!</li>
+	<li>现在，如果你保存并刷新，输入<code>Teacher.prototype.constructor</code>应该会根据需要返回<code>Teacher()</code>，此外，我们现在在继承<code>Person()</code>！</li>
 </ol>
 
 <h2 id="向_Teacher_添加一个新的greeting函数">向 Teacher() 添加一个新的greeting()函数</h2>
