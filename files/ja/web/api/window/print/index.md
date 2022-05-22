@@ -1,24 +1,47 @@
 ---
-title: window.print
+title: Window.print()
 slug: Web/API/Window/print
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - メソッド
+  - リファレンス
+  - Window
+browser-compat: api.Window.print
 translation_of: Web/API/Window/print
 ---
-<div>
- {{ApiRef()}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>現在の文書を印刷するための印刷ダイアログを開きます。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">window.print()</pre>
-<h2 id="Specification" name="Specification">仕様</h2>
-<p>{{DOM0()}}</p>
-<h2 id="See_also" name="See_also">関連情報</h2>
-<ul>
- <li><a href="/ja/docs/Printing" title="Printing">Printing</a></li>
- <li>{{domxref("window.onbeforeprint")}}</li>
- <li>{{domxref("window.onafterprint")}}</li>
-</ul>
+{{ ApiRef() }}
+
+現在の文書を印刷するための印刷ダイアログを開きます。
+
+この関数が呼び出されたとき、文書がまだ読み込み中であった場合、文書は印刷ダイアログを開く前に読み込みを終了します。
+
+このメソッドは、印刷ダイアログが開いている間、ブロックされます。
+
+## 構文
+
+```js
+print()
+```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [印刷](/ja/docs/Web/Guide/Printing)
+- {{ domxref("window.beforeprint_event", "beforeprint") }} イベント
+- {{ domxref("window.afterprint_event", "afterprint") }} イベント
