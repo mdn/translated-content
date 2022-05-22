@@ -1,51 +1,85 @@
 ---
-title: document.elementFromPoint
+title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - 座標
+  - Document
+  - メソッド
+  - リファレンス
+browser-compat: api.Document.elementFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
 translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
-<div>
- {{ApiRef()}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>文書の左上を基点として指定された座標上にある要素を返します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><var>element</var> = document.elementFromPoint(<i>x</i>,<i>y</i>);</pre>
-<ul>
- <li><code>element</code> には <a href="/ja/docs/DOM/element">element</a> オブジェクトが入ります。</li>
- <li><code>x</code> と <code>y</code> には取得したい要素の座標を指定してください。</li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;title&gt;elementFromPoint の使用例&lt;/title&gt;
+{{APIRef("DOM")}}
 
-&lt;script&gt;
+**`elementFromPoint()`** メソッドは {{domxref("Document")}} オブジェクト上で利用可能で、指定した座標（ビューポートからの相対座標）における最上位の要素 ({{domxref("Element")}}) を返します。
+
+指定された点の要素が他の文書（例えば {{HTMLElement("iframe")}} の文書）に属する場合、その文書の親要素（`<iframe>` 自身）が返される。指定された点の要素が無名または XBL で生成されたコンテンツ、例えばテキストボックスのスクロールバーである場合、最初の無名ではない祖先要素（例えばテキストボックス）が返されます。
+
+{{cssxref("pointer-events")}} が `none` に設定されている要素は無視され、その下の要素が返されます。
+
+このメソッドが他の文書（`<iframe>` のサブ文書など）で実行された場合、座標はメソッドが呼び出された文書からの相対座標となります。
+
+指定した点が文書の可視領域外にある場合や、どちらかの座標が負の値である場合、結果は `null` となります。
+
+要素内の特定の位置を見つける必要がある場合は、 {{domxref("Document.caretPositionFromPoint()")}} を使用してください。
+
+## 構文
+
+```js
+elementFromPoint(x, y)
+```
+
+### 引数
+
+- `x`
+  - : 点の水平座標で、現在の{{Glossary("viewport", "ビューポート")}}の左端からの相対値です。
+- `y`
+  - : 点の垂直座標で、現在の{{Glossary("viewport", "ビューポート")}}の上端からの相対値です。
+
+### 返値
+
+指定された座標にある最も上の要素（{{domxref("Element")}} オブジェクト）です。
+
+## 例
+
+この例では、座標 `(2, 2)` の下にある段落要素の現在の色を設定するためのボタンを 2 つ作成しています。
+
+### JavaScript
+
+```js
 function changeColor(newColor) {
   elem = document.elementFromPoint(2, 2);
   elem.style.color = newColor;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+```
 
+`changeColor()` メソッドは、指定した位置にある要素を取得し、その要素の現在の前景色の {{cssxref("color")}} プロパティを `newColor` 引数で指定した色に設定します。
 
-&lt;body&gt;
-&lt;p id="para1"&gt;色は匂へど　散りぬるを……&lt;/p&gt;
-&lt;button onclick="changeColor('blue');"&gt;blue&lt;/button&gt;
-&lt;button onclick="changeColor('red');"&gt;red&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>指定された座標にある要素が別のドキュメント(例えば iframe　内にあるサブドキュメント) に属する場合、指定された座標にあるドキュメントの DOM 要素 (iframe) を返します。もし指定された座標にある要素が匿名あるいは textbox のスクロールバーのように XBL によって生成された内容の場合、指定された座標にある要素を基点として、匿名ではない最初の親要素(例えば textbox)が返されます。</p>
-<p>指定された座標がドキュメントの表示外にあるか、座標のどちらかに負の値が設定されている場合は <code>NULL</code> を返します。</p>
-<p>{{Note("XUL ドキュメントからは onload イベントが発生するまでは、このメソッドを使用してはいけません。")}}</p>
-<h2 id="Specification" name="Specification">仕様</h2>
-<ul>
- <li>仮仕様: <a class="external" href="http://dev.w3.org/csswg/cssom/#documentlayout-elementfrompoint"><code>elementFromPoint</code></a></li>
-</ul>
+### HTML
+
+```html
+<p id="para1">こちらがテキストです</p>
+<button onclick="changeColor('blue');">青</button>
+<button onclick="changeColor('red');">赤</button>
+```
+
+HTMLには、色を変更する段落と、色を青に変更するボタン、色を赤に変更するボタンの 2 つが用意されています。
+
+### 結果
+
+{{EmbedLiveSample('Examples', 400, 120)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Document.elementsFromPoint()")}}
