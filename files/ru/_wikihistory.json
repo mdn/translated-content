@@ -8960,13 +8960,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:36:45.705Z",
-    "contributors": [
-      "bershanskiy",
-      "AlexAlex"
-    ]
-  },
   "Web/API/Navigator/connection": {
     "modified": "2019-03-23T22:54:21.417Z",
     "contributors": [
@@ -8988,6 +8981,13 @@
   "Web/API/Navigator/geolocation": {
     "modified": "2019-03-23T22:54:20.178Z",
     "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2020-10-15T21:36:45.705Z",
+    "contributors": [
+      "bershanskiy",
       "AlexAlex"
     ]
   },

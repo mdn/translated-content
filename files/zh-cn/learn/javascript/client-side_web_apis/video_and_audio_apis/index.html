@@ -257,7 +257,7 @@ controls.style.visibility = 'visible';</pre>
   }
 }</pre>
 
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">我们使用if语句来检查</span></span>视频<span class="tlid-translation translation" lang="zh-CN"><span title="">是否暂停。如果</span></span>视频<span class="tlid-translation translation" lang="zh-CN"><span title="">已暂停，</span></span>{{domxref("HTMLMediaElement.paused")}} 属性将返回 true，任何视频没有播放的时间，包括第一次加载时处于0的时间段都是视频暂停状态。如果已暂停，我们把play按钮的 <code>data-icon</code> 属性值设置成"u", 用以表示 "暂停" 按钮图标，并且调用{{domxref("HTMLMediaElement.play()")}} 函数播放视频。</p>
+  <p>我们使用if语句来检查视频是否暂停。如果视频已暂停，{{domxref("HTMLMediaElement.paused")}} 属性将返回 true，任何视频没有播放的时间，包括第一次加载时处于0的时间段都是视频暂停状态。如果已暂停，我们把play按钮的 <code>data-icon</code> 属性值设置成"u", 用以表示 "暂停" 按钮图标，并且调用{{domxref("HTMLMediaElement.play()")}} 函数播放视频。</p>
 
   <p>点击第二次，按钮将会切换回去——"播放"按钮图标将会再次显示，并且视频将会被{{domxref("HTMLMediaElement.paused()")}} 函数暂停。</p>
  </li>
@@ -453,17 +453,17 @@ clearInterval(intervalFwd);
 
 <h2 id="小结">小结</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">我想我们已经在这篇文章中教过你足够多了。使用</span></span>{{domxref("HTMLMediaElement")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">API可以为创建简单的视频和音频播放器提供丰富的可用功能，然而这只是冰山一角。</span> <span title="">有关更复杂和有趣功能的链接，请参阅下面的“另请参阅”部分。</span></span></p>
+<p>我想我们已经在这篇文章中教过你足够多了。使用{{domxref("HTMLMediaElement")}} API可以为创建简单的视频和音频播放器提供丰富的可用功能，然而这只是冰山一角。 有关更复杂和有趣功能的链接，请参阅下面的“另请参阅”部分。</p>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">以下是一些有关如何增强我们构建的现有示例的建议：</span></span></p>
+<p>以下是一些有关如何增强我们构建的现有示例的建议：</p>
 
 <ol>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。</span> <span title="">你能弄清楚如何更改示例以使其显示小时数吗？</span></span></li>
+ <li>如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。 你能弄清楚如何更改示例以使其显示小时数吗？</li>
  <li>
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">由于 <code>&lt;audio&gt; </code>元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于<code> &lt;audio&gt; </code>元素。</span> <span title="">试着这样做。</span></span></p>
+  <p>由于 <code>&lt;audio&gt; </code>元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于<code> &lt;audio&gt; </code>元素。 试着这样做。</p>
  </li>
  <li>
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">你能找到一种方法将计时器内部的<code> &lt;div&gt; </code>元素转换为真正的搜索条/ 滑动条- 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？</span></span> <span class="tlid-translation translation" lang="zh-CN"><span title="">作为提示，您可以通过</span></span><code><a href="/ch-ZN/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> <span class="tlid-translation translation" lang="zh-CN"><span title="">方法找出元素左/右和上/下侧的X和Y值</span></span> ， 而且你可以通过 {{domxref("Document")}} 对象调用的click事件的事件对象找到鼠标单击的坐标。举个栗子：</p>
+  <p>你能找到一种方法将计时器内部的<code> &lt;div&gt; </code>元素转换为真正的搜索条/ 滑动条- 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？ 作为提示，您可以通过<code><a href="/ch-ZN/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> 方法找出元素左/右和上/下侧的X和Y值 ， 而且你可以通过 {{domxref("Document")}} 对象调用的click事件的事件对象找到鼠标单击的坐标。举个栗子：</p>
 
   <pre class="brush: js">document.onclick = function(e) {
   console.log(e.x) + ',' + console.log(e.y)

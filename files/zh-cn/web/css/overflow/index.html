@@ -38,20 +38,20 @@ translation_of: Web/CSS/overflow
 
 <h2 id="语法" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">语法</h2>
 
-<pre class="brush:css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">/* 默认值。内容不会被修剪，会呈现在元素框之外 */</span>
-<span class="property token" style="color: #990055;">overflow</span><span class="punctuation token" style="color: #999999;">:</span> visible<span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush:css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">/* 默认值。内容不会被修剪，会呈现在元素框之外 */
+overflow: visible;
 
-<span class="comment token" style="color: #708090;">/* 内容会被修剪，并且其余内容不可见 */</span>
-<span class="property token" style="color: #990055;">overflow</span><span class="punctuation token" style="color: #999999;">:</span> hidden<span class="punctuation token" style="color: #999999;">;</span>
+/* 内容会被修剪，并且其余内容不可见 */
+overflow: hidden;
 
-<span class="comment token" style="color: #708090;">/* 内容会被修剪，浏览器会显示滚动条以便查看其余内容 */</span>
-<span class="property token" style="color: #990055;">overflow</span><span class="punctuation token" style="color: #999999;">:</span> scroll<span class="punctuation token" style="color: #999999;">;</span>
+/* 内容会被修剪，浏览器会显示滚动条以便查看其余内容 */
+overflow: scroll;
 
-<span class="comment token" style="color: #708090;">/* 由浏览器定夺，如果内容被修剪，就会显示滚动条 */</span>
-<span class="property token" style="color: #990055;">overflow</span><span class="punctuation token" style="color: #999999;">:</span> auto<span class="punctuation token" style="color: #999999;">;</span>
+/* 由浏览器定夺，如果内容被修剪，就会显示滚动条 */
+overflow: auto;
 
-<span class="comment token" style="color: #708090;">/* 规定从父元素继承overflow属性的值 */</span>
-<span class="property token" style="color: #990055;">overflow</span><span class="punctuation token" style="color: #999999;">:</span> inherit<span class="punctuation token" style="color: #999999;">;</span></code>
+/* 规定从父元素继承overflow属性的值 */
+overflow: inherit;</code>
 
 </pre>
 
@@ -103,12 +103,12 @@ overflow: scroll hidden;</code></pre>
 
 <h2 id="示例" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">示例</h2>
 
-<pre class="brush: css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="selector token" style="color: #669900;">p </span><span class="punctuation token" style="color: #999999;">{</span>
-     <span class="property token" style="color: #990055;">width</span><span class="punctuation token" style="color: #999999;">:</span> 12em<span class="punctuation token" style="color: #999999;">;</span>
-     <span class="property token" style="color: #990055;">height</span><span class="punctuation token" style="color: #999999;">:</span> 6em<span class="punctuation token" style="color: #999999;">;</span>
-     <span class="property token" style="color: #990055;">border</span><span class="punctuation token" style="color: #999999;">:</span> dotted<span class="punctuation token" style="color: #999999;">;</span>
-     <span class="property token" style="color: #990055;">overflow</span><span class="punctuation token" style="color: #999999;">:</span> visible<span class="punctuation token" style="color: #999999;">;</span> <span class="comment token" style="color: #708090;">/* 内容不会被修剪 */</span>
-<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+<pre class="brush: css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">p {
+     width: 12em;
+     height: 6em;
+     border: dotted;
+     overflow: visible; /* 内容不会被修剪 */
+}</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
@@ -125,21 +125,21 @@ overflow: scroll hidden;</code></pre>
 <p style="border-style: dotted; border-width: initial; overflow: visible; display: inline-block; width: 12em; height: 6em;"><code>visible</code> (default)<br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="selector token" style="color: #669900;">p</span></code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> { </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="property token" style="color: #990055;">overflow</span></code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">: hidden; </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">/* 不显示滚动条 */</span> </code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> }</code></pre>
+<pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">p</code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> { </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">overflow</code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">: hidden; </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">/* 不显示滚动条 */ </code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> }</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
 <p style="border-style: dotted; border-width: initial; overflow: hidden; display: inline-block; width: 12em; height: 6em;"><code>overflow: hidden</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="selector token" style="color: #669900;">  p</span></code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> { </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="property token" style="color: #990055;">overflow</span></code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">: scroll; </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">/* 始终显示滚动条 */</span> </code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> }</code></pre>
+<pre><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">  p</code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> { </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">overflow</code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">: scroll; </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">/* 始终显示滚动条 */ </code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> }</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 
 <p style="border-style: dotted; border-width: initial; overflow: scroll; display: inline-block; width: 12em; height: 6em;"><code>overflow: scroll</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="selector token" style="color: #669900;">p</span></code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> { </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="property token" style="color: #990055;">overflow</span></code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">: auto; </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">/* 必要时显示滚动条 */</span> </code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> }</code></pre>
+<pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">p</code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> { </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">overflow</code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">: auto; </code><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">/* 必要时显示滚动条 */ </code><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"> }</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
 

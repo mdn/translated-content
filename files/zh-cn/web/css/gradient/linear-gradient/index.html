@@ -128,7 +128,7 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
 <pre class="notranslate">-moz-linear-gradient(<code>[ [ [top | bottom] || [left | right] ],]? &lt;color-stop&gt;[, &lt;color-stop&gt;]+);</code>
 </pre>
 
-<p>新的语法不需要<code>to()、</code><code>from()<font face="Open Sans, Arial, sans-serif">和</font></code><code>color-stop()函数，所以这些函数被丢弃。而</code><code>top</code>/<code>bottom</code>与<code>left</code>/<code>right的顺序也被标记为不重要，所以</code>Mozilla移除了必需首先定义<code>top</code>/<code>bottom</code>的限制。</p>
+<p>新的语法不需要<code>to()、</code><code>from()和</code><code>color-stop()函数，所以这些函数被丢弃。而</code><code>top</code>/<code>bottom</code>与<code>left</code>/<code>right的顺序也被标记为不重要，所以</code>Mozilla移除了必需首先定义<code>top</code>/<code>bottom</code>的限制。</p>
 
 <p>新的语法仍然有一个缺点：它只允许水平和垂直渐变。在多次变更解决了方向限制的问题之后，它被增加到<a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient">CSS Images Values and Content Replacement Level 3 draft in 2011-02-17</a>。</p>
 
@@ -197,7 +197,7 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
 
 <h3 id="包含多个颜色中间点的渐变">包含多个颜色中间点的渐变</h3>
 
-<p>如果第一个颜色中间点没有<font face="Consolas, Liberation Mono, Courier, monospace">定义长度或百分比，</font>它将包含缺省值<font face="Consolas, Liberation Mono, Courier, monospace">0</font>。如果最后一个颜色中间点没有定义长度或百分比，它将包含缺省值100%。如果中间的颜色中间点没定义长度或百分比，那么它将被设定为前后两站的平均值。</p>
+<p>如果第一个颜色中间点没有定义长度或百分比，它将包含缺省值0。如果最后一个颜色中间点没有定义长度或百分比，它将包含缺省值100%。如果中间的颜色中间点没定义长度或百分比，那么它将被设定为前后两站的平均值。</p>
 
 <p>颜色中间点必须被按顺序定义。第一个和最后一个被分配为默认值之后，如果一个颜色中间点的位置比前一个小，那么将会被设定成与前一个相同的值。</p>
 

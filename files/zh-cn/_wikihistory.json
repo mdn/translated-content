@@ -16598,15 +16598,6 @@
       "gdccwxx"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:21:32.906Z",
-    "contributors": [
-      "jingkaimori",
-      "teoli",
-      "AshfaqHossain",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Navigator/buildID": {
     "modified": "2020-10-15T21:06:57.331Z",
     "contributors": [
@@ -46287,6 +46278,15 @@
     "modified": "2020-10-15T22:16:10.551Z",
     "contributors": [
       "kivazqy"
+    ]
+  },
+  "conflicting/Web/API/Navigator/getBattery": {
+    "modified": "2020-10-15T21:21:32.906Z",
+    "contributors": [
+      "jingkaimori",
+      "teoli",
+      "AshfaqHossain",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/Node": {

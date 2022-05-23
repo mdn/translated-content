@@ -47,7 +47,7 @@ Les présentations ayant été faites pour les concepts du JavaScript orienté o
 
 Nous avons déjà vu le concept d'héritage en action, nous avons vu comment la chaîne de prototypage fonctionnait, et comment les propriétés de cette chaîne sont lues de manière ascendante. En revanche,nous n'avons utilisé pratiquement que quelques fonctionnalités déjà intégrées dans le navigateur pour le faire. Comment créer un objet JavaScript qui hérite d'un autre objet ?
 
-Certains pensent que JavaScript n'est pas un véritable langage orienté objet. Dans les langages orientés objets classiques, on définit des classes objet et on peut ensuite définir laquelle hérite d'une autre (voir [C++ inheritance](http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm) en anglais pour des exemples simples). JavasScript utilise une approche différente : les objets héritant d'un autre n'ont pas de fonctionnalités copiées d'un autre objet, au lieu de ça, ils héritent des fonctionnalités via les liens de la chaîne de prototypage (on parle alors d'un **héritage prototypique**).
+Certains pensent que JavaScript n'est pas un véritable langage orienté objet. Dans les langages orientés objets classiques, on définit des classes objet et on peut ensuite définir laquelle hérite d'une autre (voir [C++ inheritance](http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm) en anglais pour des exemples simples). JavaScript utilise une approche différente : les objets héritant d'un autre n'ont pas de fonctionnalités copiées d'un autre objet, au lieu de ça, ils héritent des fonctionnalités via les liens de la chaîne de prototypage (on parle alors d'un **héritage prototypique**).
 
 Voyons comment cela se passe avec un exemple concret.
 
