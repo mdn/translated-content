@@ -17,7 +17,7 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <p>只要在更改发生之前添加属性，就可以在要宣布更改的元素上包含 <code>aria-live</code> 属性或专门的活动区域角色（例如<code>role =“ alert”</code>）——在原始标记中或动态地使用JavaScript。</p>
 </div>
 
-<h2 id="简单的活动区域"><span class="mw-headline" id="Live_Region_State">简单的活动区域</span></h2>
+<h2 id="简单的活动区域">简单的活动区域</h2>
 
 <p>在不重新加载页面的情况下更新的动态内容通常是区域或窗口小部件。 非交互式的简单内容更改应标记为实时区域。 以下是每个相关的ARIA活动区域属性的列表，并带有说明。</p>
 
@@ -171,11 +171,11 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 <ol>
  <li><code><strong>aria-atomic</strong></code><strong> </strong>: <code>aria-atomic=BOOLEAN</code> 被用来设置屏幕阅读器是否应该总是将活动区域整个播报，即使区域中只有一部分内容改变。可能的值为 <code>false</code> 或者 <code>true</code> 。默认值为 <code>false</code> 。</li>
  <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute" title="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code> : <code>aria-relevant=[LIST_OF_CHANGES]</code> 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code> 。 默认值是 <code>additions text</code> 。</li>
- <li><code><strong>aria-labelledby</strong></code> : <code>aria-labelledby=[IDLIST]</code> 被用来将一个区域与其标签关联起来，与 <font face="consolas, Liberation Mono, courier, monospace"><span>aria-control</span></font> 类似，但将标签与区域关联。标签标识符间用空格隔开。</li>
- <li><code><strong>aria-describedby</strong></code> : <code>aria-describedby=[IDLIST]</code> 被用来将一个区域与其描述关联起来，与 <font face="consolas, Liberation Mono, courier, monospace"><span>aria-control</span></font> 类似，但将标签与描述关联。描述标识符间用空格隔开。</li>
+ <li><code><strong>aria-labelledby</strong></code> : <code>aria-labelledby=[IDLIST]</code> 被用来将一个区域与其标签关联起来，与 <font face="consolas, Liberation Mono, courier, monospace">aria-control</font> 类似，但将标签与区域关联。标签标识符间用空格隔开。</li>
+ <li><code><strong>aria-describedby</strong></code> : <code>aria-describedby=[IDLIST]</code> 被用来将一个区域与其描述关联起来，与 <font face="consolas, Liberation Mono, courier, monospace">aria-control</font> 类似，但将标签与描述关联。描述标识符间用空格隔开。</li>
 </ol>
 
-<h3 id="高级用例_时钟"><span class="mw-headline">高级用例: 时钟</span></h3>
+<h3 id="高级用例_时钟">高级用例: 时钟</h3>
 
 <p>为了举例说明 <code>aria-atomic</code> ，请考虑一个带有简单时钟的站点，其中显示了小时和分钟。 时钟每分钟更新一次，而新的剩余时间仅会覆盖当前内容。</p>
 
@@ -235,7 +235,7 @@ setInterval(function() {
 
 <p>如果有 <code>aria-atomic-="true"</code> ，屏幕阅读器会播报"设置的年为: <em>改变的值</em>"。</p>
 
-<h3 id="高级用例_名册"><span class="mw-headline">高级用例: 名册</span></h3>
+<h3 id="高级用例_名册">高级用例: 名册</h3>
 
 <p>一个聊天站点想要显示当前登录用户的列表。列表将动态反映用户的登录和注销状态的用户（无需重新加载页面）。</p>
 
