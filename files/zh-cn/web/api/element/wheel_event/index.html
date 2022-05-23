@@ -87,7 +87,7 @@ translation_of: Web/API/Element/wheel_event
 
 <h3 id="跨浏览器监听滚动事件">跨浏览器监听滚动事件</h3>
 
-<p><code><font face="Open Sans, Arial, sans-serif">以下脚本创建了一个全局的 </font>addWheelListener</code> 方法，它可以兼容各浏览器监听滚动事件，并且阻止默认行为。</p>
+<p><code>以下脚本创建了一个全局的 addWheelListener</code> 方法，它可以兼容各浏览器监听滚动事件，并且阻止默认行为。</p>
 
 <pre class="brush:js;">// creates a global "addWheelListener" method
 // example: addWheelListener( elem, function( e ) { console.log( e.deltaY ); e.preventDefault(); } );
@@ -164,15 +164,15 @@ translation_of: Web/API/Element/wheel_event
 
 <ol>
  <li>滚轮事件处于默认事件组 (web应用和浏览器插件都可以处理这个组的事件)</li>
- <li>当连续滚轮事件 deltaY 的值累计大于1或小于－1时，<code><font face="Open Sans, Arial, sans-serif">竖直方向的 </font>DOMMouseScroll</code> 事件既属于默认事件组也属于系统事件组</li>
+ <li>当连续滚轮事件 deltaY 的值累计大于1或小于－1时，<code>竖直方向的 DOMMouseScroll</code> 事件既属于默认事件组也属于系统事件组</li>
  <li>当最近的滚轮事件的 deltaY 值非零时，两个事件组都包含竖直方向的 MozMousePixelScroll 事件</li>
- <li>当连续滚轮事件 deltaX 的值累计大于1或小于－1时，两个事件组都包含水平<code><font face="Open Sans, Arial, sans-serif">方向的 </font>DOMMouseScroll</code> 事件</li>
+ <li>当连续滚轮事件 deltaX 的值累计大于1或小于－1时，两个事件组都包含水平<code>方向的 DOMMouseScroll</code> 事件</li>
  <li>当最近的滚轮事件的 deltaX 值非零时，两个事件组都包含水平方向的 MozMousePixelScroll 事件</li>
  <li>一个滚轮事件处于系统事件组 (只有浏览器插件可以处理这个组的事件)</li>
 </ol>
 
 <table>
- <caption><code><font face="Open Sans, Arial, sans-serif">各个事件调用 </font>preventDefault()</code> 会发生什么？</caption>
+ <caption><code>各个事件调用 preventDefault()</code> 会发生什么？</caption>
  <thead>
  </thead>
  <tbody>
@@ -237,7 +237,7 @@ translation_of: Web/API/Element/wheel_event
 
 <h3 id="deltaMode_值">deltaMode 值</h3>
 
-<p>在 Windows 下, 以下三个原生事件造成了 DOM <font face="Consolas, Liberation Mono, Courier, monospace">滚轮事件。</font></p>
+<p>在 Windows 下, 以下三个原生事件造成了 DOM 滚轮事件。</p>
 
 <dl>
  <dt>WM_MOUSEWHEEL (竖直方向的滚动事件)</dt>
@@ -250,7 +250,7 @@ translation_of: Web/API/Element/wheel_event
 
 <p>在 Mac 下 deltaMode 值由设备决定. 如果设备支持高分辨率像素级滚动, <code>deltaMode </code>值就是典型的 <code>DOM_DELTA_PIXEL</code>. 然而用户可以通过加前缀<code>"mousewheel.enable_pixel_scrolling"</code>将其改变为 <code>DOM_DELTA_LINE</code> 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 <code>DOM_DELTA_LINE</code>.</p>
 
-<p><code><font face="Open Sans, Arial, sans-serif">在其它平台下， deltaMode 值总是 </font>DOM_DELTA_LINE</code>.</p>
+<p><code>在其它平台下， deltaMode 值总是 DOM_DELTA_LINE</code>.</p>
 
 <h3 id="Untrusted_events">Untrusted events</h3>
 

@@ -116,7 +116,7 @@ function onMessage(e) {
 }
 </pre>
 
-<p>当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 <code>initPort</code> 函数。它会保存传来的 port, 并且注册了一个 <font face="consolas, Liberation Mono, courier, monospace">onmessage</font> 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。</p>
+<p>当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 <code>initPort</code> 函数。它会保存传来的 port, 并且注册了一个 onmessage 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。</p>
 
 <p>当收到从主页面发来的消息时，我们创建一个列表项，并把它插入到这个无序列表中，然后把这个列表项的 {{domxref("Node.textContent","textContent")}} 设置为事件的 <code>data</code> 属性（里面包含真正的消息）。</p>
 

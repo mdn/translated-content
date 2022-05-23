@@ -33,7 +33,7 @@ translation_of: Web/API/PushManager
  <dt>{{domxref("PushManager.getSubscription()")}}</dt>
  <dd>用于获取已经存在的push订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着push订阅信息的{{domxref("PushSubscription")}}对象。如果没有已经存在的订阅，则返回<code>null</code>。</dd>
  <dt>{{domxref("PushManager.permissionState()")}}</dt>
- <dd>返回一个{{jsxref("Promise")}}，标识这当前{{domxref("PushManager")}}的权限状态，只能是<code>'granted'<font face="Arial, x-locale-body, sans-serif">，</font></code><code>'denied'</code> ，<code>'prompt'</code>中的一种。</dd>
+ <dd>返回一个{{jsxref("Promise")}}，标识这当前{{domxref("PushManager")}}的权限状态，只能是<code>'granted'，</code><code>'denied'</code> ，<code>'prompt'</code>中的一种。</dd>
  <dt>{{domxref("PushManager.subscribe()")}}</dt>
  <dd>向push服务器（即第三方push server）发起订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着push订阅信息的{{domxref("PushSubscription")}}对象。如果当前的service worke没有已经存在的订阅，则会创建一个新的push订阅。</dd>
 </dl>
@@ -42,7 +42,7 @@ translation_of: Web/API/PushManager
 
 <dl>
  <dt>{{domxref("PushManager.hasPermission()")}} {{deprecated_inline}}</dt>
- <dd>（已废弃）返回一个{{jsxref("Promise")}}，标识着该webapp的<code>PushPermissionStatus</code>状态，该状态只能是<code>'granted'<font face="Arial, x-locale-body, sans-serif">，</font></code><code>'denied'</code> ，<code>'default'</code>中的一种。目前已经被{{domxref("PushManager.permissionState()")}}取代。</dd>
+ <dd>（已废弃）返回一个{{jsxref("Promise")}}，标识着该webapp的<code>PushPermissionStatus</code>状态，该状态只能是<code>'granted'，</code><code>'denied'</code> ，<code>'default'</code>中的一种。目前已经被{{domxref("PushManager.permissionState()")}}取代。</dd>
  <dt>{{domxref("PushManager.register()")}} {{deprecated_inline}}</dt>
  <dd>（已废弃）发起注册push订阅。目前已经被{{domxref("PushManager.subscribe()")}}取代。</dd>
  <dt>{{domxref("PushManager.registrations()")}} {{deprecated_inline}}</dt>

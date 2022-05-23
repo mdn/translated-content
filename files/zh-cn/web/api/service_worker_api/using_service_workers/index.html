@@ -200,7 +200,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <ol>
  <li>你没有在 HTTPS 下运行你的程序</li>
- <li>service worker文件的地址没有写对— 需要相对于 origin , 而不是 app 的根目录。在我们的例子例， service worker 是在 <code>https://mdn.github.io/sw-test/sw.js</code><font face="Open Sans, Arial, sans-serif">，app 的根目录是 </font><code>https://mdn.github.io/sw-test/</code>。应该写成 <code>/sw-test/sw.js</code> 而非 <code>/sw.js</code>.</li>
+ <li>service worker文件的地址没有写对— 需要相对于 origin , 而不是 app 的根目录。在我们的例子例， service worker 是在 <code>https://mdn.github.io/sw-test/sw.js</code>，app 的根目录是 <code>https://mdn.github.io/sw-test/</code>。应该写成 <code>/sw-test/sw.js</code> 而非 <code>/sw.js</code>.</li>
  <li> service worker 在不同的 origin 而不是你的app的，这是不被允许的。</li>
 </ol>
 
@@ -297,7 +297,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
   <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
  </li>
  <li>
-  <p><font face="Open Sans, Arial, sans-serif">下面这个更复杂点的 </font><code>Response</code> 展示了你可以在你的响应里选择性的传一系列 header，来模仿标准的 HTTP 响应 header。这里我们只告诉浏览器我们虚假的响应的 content type：</p>
+  <p>下面这个更复杂点的 <code>Response</code> 展示了你可以在你的响应里选择性的传一系列 header，来模仿标准的 HTTP 响应 header。这里我们只告诉浏览器我们虚假的响应的 content type：</p>
 
   <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }

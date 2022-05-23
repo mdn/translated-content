@@ -27,7 +27,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <p>data属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作为查看初始像素数据。每个像素用4个1bytes值(按照红，绿，蓝和透明值的顺序; 这就是"RGBA"格式) 来代表。每个颜色值部份用0至255来代表。每个部份被分配到一个在数组内连续的索引，左上角像素的红色部份在数组的索引0位置。像素从左到右被处理，然后往下，遍历整个数组。</p>
 
-<p>{{jsxref("Uint8ClampedArray")}}  包含高度 × 宽度 × 4 bytes数据，索引值从0到(<code style="font-style: normal;">高度</code>×<font face="Consolas, Monaco, Andale Mono, monospace">宽度</font>×4)-1</p>
+<p>{{jsxref("Uint8ClampedArray")}}  包含高度 × 宽度 × 4 bytes数据，索引值从0到(<code style="font-style: normal;">高度</code>×宽度×4)-1</p>
 
 <p>例如，要读取图片中位于第50行，第200列的像素的蓝色部份，你会写以下代码：</p>
 

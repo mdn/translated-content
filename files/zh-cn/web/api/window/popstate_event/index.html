@@ -7,9 +7,9 @@ translation_of: Web/API/Window/popstate_event
 ---
 <p>当活动历史记录条目更改时，将触发popstate事件。如果被激活的历史记录条目是通过对history.pushState（）的调用创建的，或者受到对history.replaceState（）的调用的影响，popstate事件的state属性包含历史条目的状态对象的副本。</p>
 
-<p><font face="Courier New, Andale Mono, monospace">需要注意的是调用<code>history.pushState()</code>或</font><code>history.replaceState()</code>不会触发<code>popstate</code>事件。只有在做出浏览器动作时，才会触发该事件，如用户点击浏览器的回退按钮（或者在Javascript代码中调用<code>history.back()</code>或者<code>history.forward()</code>方法）</p>
+<p>需要注意的是调用<code>history.pushState()</code>或<code>history.replaceState()</code>不会触发<code>popstate</code>事件。只有在做出浏览器动作时，才会触发该事件，如用户点击浏览器的回退按钮（或者在Javascript代码中调用<code>history.back()</code>或者<code>history.forward()</code>方法）</p>
 
-<p><font face="Courier New, Andale Mono, monospace">不同的浏览器在加载页面时处理<code>popstate</code>事件的形式存在差异。页面加载时Chrome和Safari通常会触发(</font>emit <font face="Courier New, Andale Mono, monospace">)<code>popstate</code>事件，但Firefox则不会。</font></p>
+<p>不同的浏览器在加载页面时处理<code>popstate</code>事件的形式存在差异。页面加载时Chrome和Safari通常会触发(emit )<code>popstate</code>事件，但Firefox则不会。</p>
 
 <h2 id="常规信息">常规信息</h2>
 

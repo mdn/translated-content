@@ -77,7 +77,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>假如现在用户在bar.html点击了返回按钮，将会执行alert(2)。</p>
 
-<p>假设现在用户在bar.html又访问了 http://google.com，然后点击了返回按钮。此时，地址栏将显示 http://mozilla.org/bar.html，<code>history.</code><code>state</code> 中包含了 <code>stateObj</code> 的一份拷贝。页面此时展现为<font face='consolas,"Liberation Mono",courier,monospace'><font><code>bar.html</code></font></font>。且因为页面被重新加载了，所以<code>popstate</code>事件将不会被触发，也不会执行alert(2)。</p>
+<p>假设现在用户在bar.html又访问了 http://google.com，然后点击了返回按钮。此时，地址栏将显示 http://mozilla.org/bar.html，<code>history.</code><code>state</code> 中包含了 <code>stateObj</code> 的一份拷贝。页面此时展现为<code>bar.html</code>。且因为页面被重新加载了，所以<code>popstate</code>事件将不会被触发，也不会执行alert(2)。</p>
 
 <p>如果我们再次点击返回按钮，页面URL会变为http://mozilla.org/foo.html，文档对象document会触发另外一个 <code>popstate</code> 事件(如果有bar.html，且bar.html注册了onpopstate事件，将会触发此事件，因此也不会执行foo页面注册的onpopstate事件，也就是不会执行alert(2))，这一次的事件对象state object为null。 这里也一样，返回并不改变文档的内容，尽管文档在接收 <code>popstate</code> 事件时可能会改变自己的内容，其内容仍与之前的展现一致。</p>
 

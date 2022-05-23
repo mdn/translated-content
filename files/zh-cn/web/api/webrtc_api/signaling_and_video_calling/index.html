@@ -81,7 +81,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 <p>开始处理信号的时候，用户的初始化操作会创建一个<strong>请求（offer）</strong> ，根据 {{Glossary("SDP")}} 协议其中会包含一个session描述符，并且需要把这个发送到我们称之为<strong>接收者（callee）</strong>那里， 接受者需要返回一个包含描述符的<strong>应答（answer）</strong>信息。我们的服务器使用 WebSocket 来传递 <code>"video-offer"</code> <code>"video-answer"</code>  两种类型的消息数据。这些消息包含以下属性：</p>
 
 <dl>
- <dt><code><font face="Arial, x-locale-body, sans-serif"> </font>type</code></dt>
+ <dt><code> type</code></dt>
  <dd>消息类型; <code>"video-offer"</code> 或 <code>"video-answer"</code></dd>
  <dt><code>name</code></dt>
  <dd>发送者用户名</dd>
