@@ -84,7 +84,7 @@ function handleFiles() {
 
 <p>上述的例子顯示獲取在檔案清單裡所有檔案物件的方法。</p>
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">{{domxref("File")}} </font>提供三個包含檔案重要訊息的屬性。</p>
+<p>{{domxref("File")}} 提供三個包含檔案重要訊息的屬性。</p>
 
 <dl>
  <dt><code>name</code></dt>
@@ -134,9 +134,9 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 </pre>
 
-<p>在這個範例中，我們將 ID "dropbox" 設為放的區域，這是由於我們監聽了 <code>dragenter <font face="Open Sans, Arial, sans-serif">、</font></code><code>dragover </code>和 <code>drop</code>事件<font face="Consolas, Liberation Mono, Courier, monospace">。</font></p>
+<p>在這個範例中，我們將 ID "dropbox" 設為放的區域，這是由於我們監聽了 <code>dragenter 、</code><code>dragover </code>和 <code>drop</code>事件。</p>
 
-<p>我們甚至不需要處理 <code>dragenter <font face="Open Sans, Arial, sans-serif">和 </font></code><code>dragover</code>事件，所以這些函數很簡單。他們阻止了事件的傳播和預設事件的發生：</p>
+<p>我們甚至不需要處理 <code>dragenter 和 </code><code>dragover</code>事件，所以這些函數很簡單。他們阻止了事件的傳播和預設事件的發生：</p>
 
 <pre class="brush: js">function dragenter(e) {
   e.stopPropagation();
@@ -162,7 +162,7 @@ function dragover(e) {
 }
 </pre>
 
-<p><code><font face="Open Sans, Arial, sans-serif">這邊我們用 </font>dataTransfer </code>來獲取檔案清單, 並傳遞給 <code>handleFiles()</code>.。 我們可以發現，不論使用拖放或是其他取得檔案，處理檔案的方式都是相同。</p>
+<p><code>這邊我們用 dataTransfer </code>來獲取檔案清單, 並傳遞給 <code>handleFiles()</code>.。 我們可以發現，不論使用拖放或是其他取得檔案，處理檔案的方式都是相同。</p>
 
 <dl>
 </dl>
@@ -196,7 +196,7 @@ function dragover(e) {
 
 <p>為了使圖片可以在DOM裡面更容易被找到，所以每個圖片都有設定CSS class “obj”。 我們也在每個圖檔標記 <code>file</code> 屬性以辨認 <code><a href="/en/DOM/File" title="en/DOM/File">File</a></code>；這使我們更容易取得真正要上傳的圖檔。最後我們使用{{ domxref("Node.appendChild()") }} 在文件中增加縮圖的元素。</p>
 
-<p><a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> 處理要非同步讀取的圖檔並跟 <code>img</code> 元素連接。在創建 <code>FileReader</code> 物件後，我們設置了 <code>onload </code>並 呼叫 <code>readAsDataURL()</code> 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 <code>onload callback <font face="Open Sans, Arial, sans-serif">的</font></code><code> data</code> URL。 這個範例簡易的設置<code>img</code> 元素的 <code>src</code> 屬性來讀取圖檔並在螢幕上顯示。</p>
+<p><a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> 處理要非同步讀取的圖檔並跟 <code>img</code> 元素連接。在創建 <code>FileReader</code> 物件後，我們設置了 <code>onload </code>並 呼叫 <code>readAsDataURL()</code> 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 <code>onload callback 的</code><code> data</code> URL。 這個範例簡易的設置<code>img</code> 元素的 <code>src</code> 屬性來讀取圖檔並在螢幕上顯示。</p>
 
 <h2 id="使用_object_URLs">使用 object URLs</h2>
 
@@ -399,8 +399,8 @@ function handleFiles(files) {
 
 <ul>
  <li><code>{{domxref("File")}}</code></li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">{{domxref("FileList")}}  </font></li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">{{domxref("FileReader") }}  </font></li>
+ <li>{{domxref("FileList")}}  </li>
+ <li>{{domxref("FileReader") }}  </li>
  <li><a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
  <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
  <li><code>{{domxref("XMLHttpRequest")}}</code></li>
