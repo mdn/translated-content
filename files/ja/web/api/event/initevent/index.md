@@ -1,51 +1,70 @@
 ---
-title: event.initEvent
+title: Event.initEvent()
 slug: Web/API/Event/initEvent
 tags:
-  - DOM
-  - Gecko
+  - 非推奨
+  - メソッド
+  - リファレンス
+browser-compat: api.Event.initEvent
 translation_of: Web/API/Event/initEvent
 ---
-<p>{{ ApiRef() }}{{deprecated_header}}</p>
+{{ ApiRef("DOM") }}{{deprecated_header}}
 
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+**`Event.initEvent()`** メソッドは、 {{domxref("Document.createEvent()")}} を使用して作成された {{ domxref("event") }} の値を初期化するために使用します。
 
-<p><code>initEvent</code> メソッドは <a href="/ja/DOM/document.createEvent">document.createEvent</a> によって作成された <a href="/ja/DOM/event">event</a> の値を初期化するために使われます。</p>
+この方法で初期化されたイベントは、 {{domxref("Document.createEvent()") }} メソッドで作成されている必要があります。
+このメソッドは {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
+配信されると、もう何もしません。
 
-<div class="note">
-<p><strong>このメソッドは廃止されているため、使用しないでください。</strong></p>
+> **Note:** **このメソッドは廃止されているため、使用しないでください。**
+> 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法の詳細が記載されています。
 
-代わりに、{{domxref("Event.Event", "Event()")}}のような特定のイベントコンストラクターを使用します。 <a href="/ja/docs/Web/Guide/Events/Creating_and_triggering_events">イベントの作成と起動</a>のページに、これらの使用方法の詳細が記載されています。
-</div>
+## 構文
 
-<h3 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h3>
+```js
+event.initEvent(type, bubbles, cancelable);
+```
 
-<pre class="eval"><em>event</em>.initEvent(<em>type</em>,<em>bubbles</em>,<em>cancelable</em>)
-</pre>
+### 引数
 
-<dl>
- <dt><code>type</code></dt>
- <dd>イベントの種類。</dd>
- <dt><code>bubbles</code></dt>
- <dd>イベントチェーンを通じてイベントを浮上させるかどうかを示す真偽値 (<a href="bubbles">bubbles</a> 参照)。</dd>
- <dt><code>cancelable</code></dt>
- <dd>イベントがキャンセル可能かどうかを示す真偽値 (<a href="cancelable">cancelable</a> 参照)。</dd>
-</dl>
+- _`type`_
+  - : 文字列で、イベントの種類を定義します。
+- _`bubbles`_
+  - : 論理値で、イベントがイベントチェーンを通じてバブルアップするかどうかを決定します。設定されると、読み取り専用のプロパティ {{ domxref("Event.bubbles") }} がその値を提供します。
+- _`cancelable`_
+  - : 論理値で、イベントをキャンセルできるかどうかを定義します。設定されると、読み取り専用のプロパティ {{ domxref("Event.cancelable") }} がその値を提供します。
 
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+### 返値
 
-<pre class="eval">// 浮上し、キャンセル不可能なクリックイベントを作成
-event.initEvent("click", true, false);
-</pre>
+なし。
 
-<h3 id=".E6.B3.A8.E6.84.8F.E7.82.B9" name=".E6.B3.A8.E6.84.8F.E7.82.B9">注意点</h3>
+## 例
 
-<p>この方法で初期化されるイベントは、<a href="/ja/DOM/document.createEvent">document.createEvent</a> メソッドで作成されたものでなければなりません。<code>initEvent</code> によるイベントの設定は、イベントを <a href="/ja/DOM/element.dispatchEvent">割り当てる</a> 前に呼び出す必要があります。</p>
+```js
+// イベントを作成
+const event = document.createEvent('Event');
 
-<h3 id=".E4.BB.95.E6.A7.98.E6.9B.B8" name=".E4.BB.95.E6.A7.98.E6.9B.B8">仕様書</h3>
+// バブルアップしキャンセルできないクリックイベントを
+// 作成
+event.initEvent('click', true, false);
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initEvent">DOM Level 2 Events: Event.initEvent</a></p>
+// イベントを待ち受けする
+elem.addEventListener('click', function (e) {
+  // e.target matches elem
+}, false);
 
-<div class="noinclude"></div>
+elem.dispatchEvent(event);
+```
 
-<p>{{ languages( { "en": "en/DOM/event.initEvent", "es": "es/DOM/event.initEvent", "fr": "fr/DOM/event.initEvent", "pl": "pl/DOM/event.initEvent" } ) }}</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- この非推奨のメソッドの代わりに使用するコンストラクター:
+  {{domxref("Event.Event", "Event()")}}。より具体的なイベントインターフェイスを作成するには、目的のイベントインターフェイスに対して定義されたコンストラクターを使用します。
