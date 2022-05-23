@@ -126,7 +126,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Creating_or_updating_the_version_of_the_database" name="Creating_or_updating_the_version_of_the_database">データベースを作成またはデータベースのバージョンを更新する</h3>
 
-<p><a name="Updating_the_version_of_the_database"></a>新しいデータベースを作成したり既存のデータベースのバージョンを更新したりする ({{anch("Opening a database","データベースを開く")}}際に、従来より大きなバージョン番号を指定する) と <code>onupgradeneeded</code> イベントが発生して、<code>request.result</code> (すなわち、以下の例の <code>db</code>) に設定した <code>onversionchange</code> イベントハンドラーに <a href="/ja/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> オブジェクトが渡されます。<code>upgradeneeded</code> イベントのハンドラーでは、このバージョンのデータベースで必要なオブジェクトストアを作成します。</p>
+<p><a name="Updating_the_version_of_the_database"></a>新しいデータベースを作成したり既存のデータベースのバージョンを更新したりする (<a href="#opening_a_database">データベースを開く</a>際に、従来より大きなバージョン番号を指定する) と <code>onupgradeneeded</code> イベントが発生して、<code>request.result</code> (すなわち、以下の例の <code>db</code>) に設定した <code>onversionchange</code> イベントハンドラーに <a href="/ja/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> オブジェクトが渡されます。<code>upgradeneeded</code> イベントのハンドラーでは、このバージョンのデータベースで必要なオブジェクトストアを作成します。</p>
 
 <pre class="brush:js;">// このイベントは最新のブラウザーにのみ実装されています
 request.onupgradeneeded = function(event) {
@@ -323,7 +323,7 @@ for (var i in customerData) {
   };
 }</pre>
 
-<p><code>add()</code> を呼び出して生成されたリクエストの <code>result</code> は、追加された値のキーです。よってこのケースでは、オブジェクトストアでキーパスとして <code>ssn</code> プロパティを使用していますので、追加されたオブジェクトの <code>ssn</code> プロパティと等しくなります。<code>add()</code> 関数では、データベース内に同一のキーを持つオブジェクトが存在しないことを要求しますので注意してください。既存の項目を変更しようとする場合や、既存の項目があるかを配慮しない場合は、{{anch("Updating an entry in the database", "データベース内の項目を更新する")}} の章で説明している <code>put()</code> 関数を使用できます。</p>
+<p><code>add()</code> を呼び出して生成されたリクエストの <code>result</code> は、追加された値のキーです。よってこのケースでは、オブジェクトストアでキーパスとして <code>ssn</code> プロパティを使用していますので、追加されたオブジェクトの <code>ssn</code> プロパティと等しくなります。<code>add()</code> 関数では、データベース内に同一のキーを持つオブジェクトが存在しないことを要求しますので注意してください。既存の項目を変更しようとする場合や、既存の項目があるかを配慮しない場合は、<a href="#updating_an_entry_in_the_database">データベース内の項目を更新する</a> の章で説明している <code>put()</code> 関数を使用できます。</p>
 
 <h3 id="Removing_data_from_the_database">データベースからのデータの削除</h3>
 

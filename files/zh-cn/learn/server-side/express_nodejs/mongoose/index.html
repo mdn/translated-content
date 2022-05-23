@@ -235,7 +235,7 @@ const SomeModel = mongoose.model('SomeModel', SomeModelSchema);</strong></pre>
 <ul>
  <li><code>ObjectId</code>：表示数据库中某一模型的特定实例。例如，一本书可能会使用它来表示其作者对象。它实际只包含指定对象的唯一 ID（<code>_id</code>） 。可以使用 <code>populate()</code> 方法在需要时提取相关信息。</li>
  <li><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a>：任意模式类型。</li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">[]</font>：对象数组。以在此类模型上执行 JavaScript 数组操作（<code>push</code>、<code>pop</code>、<code>unshift</code>等）。上例中有一个没有指定类型的对象数组和一个 <code>String</code> 对象数组，数组中的对象可以是任意类型的。</li>
+ <li>[]：对象数组。以在此类模型上执行 JavaScript 数组操作（<code>push</code>、<code>pop</code>、<code>unshift</code>等）。上例中有一个没有指定类型的对象数组和一个 <code>String</code> 对象数组，数组中的对象可以是任意类型的。</li>
 </ul>
 
 <p>代码还展示了声明字段的两种方法：</p>

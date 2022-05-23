@@ -13,26 +13,29 @@ translation_of: Web/API/console/group
 ---
 {{APIRef("Console API")}}
 
-**`console.group()`** メソッドは、[ウェブコンソール](/ja/docs/Tools/Web_Console)のログに、新たなインライングループを作成します。{{domxref("console.groupEnd()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。
+**`console.group()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)のログに、新たなインライングループを作成します。{{domxref("console.groupEnd()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。
 
 {{AvailableInWorkers}}
 
 ## 構文
 
 ```js
-console.group([label]);
+group()
+group(label)
 ```
 
-## 引数
+### 引数
 
-- `label`
-  - : グループ用のラベル。任意。（Chrome 59 でのテストでは） `console.groupEnd()` は動作しません。
+- `label` {{optional_inline}}
+  - : グループ用のラベルです。
 
-{{h3_gecko_minversion("コンソールでのグループの使用", "9.0")}}
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
 
 ネストされたグループを使用して関連したメッセージを視覚的に結びつけることで、出力を整理する手助けができます。新しいネストのブロックを作成するには、`console.group()` を呼び出します。`console.groupCollapsed()` メソッドは類似していますが、新しいブロックが折りたたまれており、表示するには、展開ボタンをクリックする必要があります。
-
-> **Note:** Gecko 9 から Gecko 51 までは、`groupCollapsed()` メソッドは、`group()` と同じでした。折りたたまれたグループには、 Gecko 52 から完全に対応しています。 {{bug("1088360")}} をご覧ください。
 
 現在のグループを終了するには、`console.groupEnd()` を呼び出してください。例えば、以下のようなコードがあったとします。
 
@@ -62,3 +65,7 @@ console.log("Back to the outer level");
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("console.groupEnd()")}}

@@ -150,15 +150,15 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>如果你希望所有元素都使用替代模式，而且确实很常用，设置 <code>box-sizing</code> 在 <code>&lt;html&gt;</code> 元素上，然后设置所有元素继承该属性，正如下面的例子。如果想要深入理解，请看 <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>。</p>
 
-<pre class="brush: css notranslate"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="selector token">*, *<span class="pseudo-element token">::before</span>, *<span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: css notranslate"><code class="language-css">html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}</code></pre>
 
 <div class="blockIndicator note">
-<p><strong>注：</strong> 一个有趣的历史记录 ——Internet Explorer默认使用替代盒模型，没有可用的机制来切换。（译者注：IE8+ 支持使用<code class="language-css"><span class="property token">box-sizing</span></code> 进行切换 ）</p>
+<p><strong>注：</strong> 一个有趣的历史记录 ——Internet Explorer默认使用替代盒模型，没有可用的机制来切换。（译者注：IE8+ 支持使用<code class="language-css">box-sizing</code> 进行切换 ）</p>
 </div>
 
 <h2 id="玩转盒模型">玩转盒模型</h2>

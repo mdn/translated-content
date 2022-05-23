@@ -192,7 +192,7 @@ textarea.onkeyup = function(){
 
 <p>それは簡単で楽しいものでしたか? {{htmlelement("iframe")}} 要素は、他のウェブ文書を現在の文書に埋め込むことができるように設計されています。これは、直接制御できない可能性のある第三者のコンテンツをウェブサイトに組み込むのに適していて、独自のバージョンを実装する必要はありません — オンライン動画プロバイダの動画、<a href="https://disqus.com/">Disqus</a> のようなコメントシステム、オンライン地図プロバイダの地図、広告バナーなど。このコースで使用しているライブ編集可能な例は、<code>&lt;iframe&gt;</code> を使用して実装されています。</p>
 
-<p><code>&lt;iframe&gt;</code> で検討すべき{{anch("Security concerns","セキュリティ上の懸念")}}がいくつかあり、これについては以下で説明しますが、あなたのウェブサイトで使用しないでください — ちょっとした知識と慎重な考えが必要です。コードを少し詳しく見てみましょう。あなたのウェブページの1つに MDN の用語集を含めることを考えていたら、次のようなことを試すことができます。</p>
+<p><code>&lt;iframe&gt;</code> で検討すべき<a href="#security_concerns">セキュリティ上の懸念</a>がいくつかあり、これについては以下で説明しますが、あなたのウェブサイトで使用しないでください — ちょっとした知識と慎重な考えが必要です。コードを少し詳しく見てみましょう。あなたのウェブページの1つに MDN の用語集を含めることを考えていたら、次のようなことを試すことができます。</p>
 
 <pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
@@ -235,7 +235,7 @@ textarea.onkeyup = function(){
 <p>{{interwiki('wikipedia','クリックジャッキング')}}は、ハッカーが目に見えない iframe をあなたの文書に埋め込んだり(あなたの文書を自分の悪意のあるウェブサイトに埋め込んだり)して、ユーザの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザを誤解させたり機密データを盗む一般的な方法です。</p>
 </div>
 
-<p>簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">ライブ</a>が公開されています(<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">ソースコード</a>も参照してください)。実際にページに何も表示されませんが、<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザーの開発者ツール</a>のコンソールに、理由を示すメッセージが表示されます。Firefox では、"Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing." (X-Frame-Optionsによって読み込みが拒否されました: https://developer.mozilla.org/en-US/docs/Glossary はフレーミングを許可していません。)というメッセージが表示されます。これは、MDN を作成した開発者が、<code>&lt;iframe&gt;</code> 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです(下記の {{anch("Configure CSP directives","CSP ディレクティブの設定")}}を参照してください)。これは、理にかなっています — あなたのサイトにそれらを埋め込んであなた自身のものと主張するようなことをしない限り、MDN のページ全体が他のページに埋め込まれるのは本当に意味がありません — または、クリックジャッキングを介してデータを盗み出そうとする。どちらも本当に悪いことです。さらに、誰もがこれをやり始めたら、すべての追加の帯域幅が Mozilla に多額の費用をかけるようになります。</p>
+<p>簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">ライブ</a>が公開されています(<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">ソースコード</a>も参照してください)。実際にページに何も表示されませんが、<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">ブラウザーの開発者ツール</a>のコンソールに、理由を示すメッセージが表示されます。Firefox では、"Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing." (X-Frame-Optionsによって読み込みが拒否されました: https://developer.mozilla.org/en-US/docs/Glossary はフレーミングを許可していません。)というメッセージが表示されます。これは、MDN を作成した開発者が、<code>&lt;iframe&gt;</code> 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです(下記の <a href="#configure_csp_directives">CSP ディレクティブの設定</a>を参照してください)。これは、理にかなっています — あなたのサイトにそれらを埋め込んであなた自身のものと主張するようなことをしない限り、MDN のページ全体が他のページに埋め込まれるのは本当に意味がありません — または、クリックジャッキングを介してデータを盗み出そうとする。どちらも本当に悪いことです。さらに、誰もがこれをやり始めたら、すべての追加の帯域幅が Mozilla に多額の費用をかけるようになります。</p>
 
 <h4 id="Only_embed_when_necessary" name="Only_embed_when_necessary">必要なときにのみ埋め込みます</h4>
 
@@ -290,7 +290,7 @@ textarea.onkeyup = function(){
 <p><strong>メモ</strong>: <strong>プラグイン</strong>は、ブラウザーがネイティブに読むことができないコンテンツへのアクセスを提供するソフトウェアです。</p>
 </div>
 
-<p>しかし、あなたはこれらの要素を大いに利用することはまずありません。アプレットは何年も使われておらず、Flash は多くの理由から人気がなくなりました (下記の{{anch("The case against plugins","プラグインに対するケース")}}を参照)。PDF は埋め込まれたものよりもリンクされている傾向があり、画像や動画などの他のコンテンツには、それらを扱うためのずっと優れた、より簡単な要素があります。プラグインとこれらの埋め込み方法は、従来の技術ですが、イントラネットやエンタープライズプロジェクトのような特定の状況でそれらを見かけた場合に備えて言及しています。</p>
+<p>しかし、あなたはこれらの要素を大いに利用することはまずありません。アプレットは何年も使われておらず、Flash は多くの理由から人気がなくなりました (下記の<a href="#the_case_against_plugins">プラグインに対するケース</a>を参照)。PDF は埋め込まれたものよりもリンクされている傾向があり、画像や動画などの他のコンテンツには、それらを扱うためのずっと優れた、より簡単な要素があります。プラグインとこれらの埋め込み方法は、従来の技術ですが、イントラネットやエンタープライズプロジェクトのような特定の状況でそれらを見かけた場合に備えて言及しています。</p>
 
 <p>プラグインのコンテンツを埋め込む必要がある場合の最低限必要な情報です。</p>
 

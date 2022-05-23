@@ -145,7 +145,7 @@ gulp.task('default', function() {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -204,12 +204,12 @@ var csslint = require('gulp-csslint');</pre>
 <ol>
  <li>Install using the following lines:
   <pre class="editor editor-colors">npm install --save-dev gulp-babel babel-preset-es2015
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
   <pre class="editor editor-colors">var babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>var</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+var jshint = require('gulp-jshint');
 </pre>
  </li>
  <li class="line">Add the following test to the bottom of <code>gulpfile.js</code>:

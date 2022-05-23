@@ -8,7 +8,7 @@ original_slug: learn/JavaScript/异步/简介
 
 <div>{{PreviousMenuNext("Learn/JavaScript/异步/概念", "Learn/JavaScript/异步/Timeouts_and_intervals", "Learn/JavaScript/异步")}}</div>
 
-<p class="summary"><span class="tlid-translation translation" lang="zh-CN"><span title="">在本文中，我们简要回顾一下与同步JavaScript相关的问题，首次介绍你将遇到的一些不同的异步技术，并展示如何使用这些技术解决问题。</span></span></p>
+<p class="summary">在本文中，我们简要回顾一下与同步JavaScript相关的问题，首次介绍你将遇到的一些不同的异步技术，并展示如何使用这些技术解决问题。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -58,7 +58,7 @@ btn.addEventListener('click', () =&gt; {
 <p>所以上面的例子，点击了按钮以后，段落不会创建，直到在alert消息框中点击ok，段落才会出现，你可以自己试试：</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
+<pre class="brush: html notranslate">&lt;button&gt;Click me&lt;/button&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
@@ -234,7 +234,7 @@ console.log("all done");</pre>
 
 <p>此时控制台将会报错，而不会显示第三个 <code>console.log</code> 的信息：</p>
 
-<pre class="notranslate"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
+<pre class="notranslate">TypeError: image is undefined; can't access its "src" property</pre>
 
 <p>这是因为：浏览器运行第三个<code>console.log()</code>的时候，<code>fetch()</code> 语句块还没有完成，因此<code>image</code>还没有赋值。</p>
 

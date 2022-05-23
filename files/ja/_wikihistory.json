@@ -12652,15 +12652,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/Document/getBoxObjectFor": {
-    "modified": "2020-10-15T21:21:40.094Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "Hasilt",
-      "ethertank"
-    ]
-  },
   "Web/API/Document/getElementById": {
     "modified": "2020-10-15T21:16:32.885Z",
     "contributors": [
@@ -13697,18 +13688,12 @@
     ]
   },
   "Web/API/Element/getBoundingClientRect": {
-    "modified": "2020-12-06T14:30:02.768Z",
+    "modified": "2020-10-15T21:21:40.094Z",
     "contributors": [
-      "naturallucky",
       "mfuji09",
-      "SphinxKnight",
-      "sii",
       "fscholz",
-      "khalid32",
-      "ethertank",
-      "Mgjbot",
-      "Potappo",
-      "Nanto vi"
+      "Hasilt",
+      "ethertank"
     ]
   },
   "Web/API/Element/getClientRects": {
@@ -18570,17 +18555,6 @@
       "khalid32",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "Web/API/Navigator/battery": {
-    "modified": "2020-10-15T21:22:04.664Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "leaf0115"
     ]
   },
   "Web/API/Navigator/buildID": {
@@ -48151,6 +48125,17 @@
     "modified": "2019-03-18T21:45:15.060Z",
     "contributors": [
       "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/Navigator/getBattery": {
+    "modified": "2020-10-15T21:22:04.664Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf",
+      "fscholz",
+      "jsx",
+      "ethertank",
+      "leaf0115"
     ]
   },
   "conflicting/Web/API/Navigator/onLine": {

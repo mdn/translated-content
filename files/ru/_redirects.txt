@@ -411,6 +411,7 @@
 /ru/docs/Web/API/KeyboardEvent/which	/ru/docs/Web/API/UIEvent/which
 /ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event
 /ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which
+/ru/docs/Web/API/Navigator/battery	/ru/docs/Web/API/Navigator/getBattery
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
 /ru/docs/Web/API/Node.contains	/ru/docs/Web/API/Node/contains

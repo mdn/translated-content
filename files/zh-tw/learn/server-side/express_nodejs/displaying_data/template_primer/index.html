@@ -15,13 +15,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
 </div>
 
-<h2 class="highlight-spanned" id="Template_configuration"><span class="highlight-span">Template configuration</span></h2>
+<h2 class="highlight-spanned" id="Template_configuration">Template configuration</h2>
 
 <p>The <em>LocalLibrary</em> was configured to use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> when we <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'view engine'</span><span class="punctuation token">,</span> <span class="string token">'pug'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// View engine setup.
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');</code></pre>
 
 <p>If you look in the views directory you will see the .pug files for the project's default views. These include the view for the home page (<strong>index.pug</strong>) and base template (<strong>layout.pug</strong>) that we will need to replace with our own content.</p>
 
@@ -32,7 +32,7 @@ app<span class="punctuation token">.</span><span class="keyword token">set</span
     layout.pug</code>
 </pre>
 
-<h2 class="highlight-spanned" id="Template_syntax"><span class="highlight-span">Template syntax</span></h2>
+<h2 class="highlight-spanned" id="Template_syntax">Template syntax</h2>
 
 <p>The example template file below shows off many of Pug's most useful features.</p>
 
@@ -47,11 +47,11 @@ html(lang="en")
     h1= title
 
     p This is a line with #[em some emphasis] and #[strong strong text] markup.
-    p This line has un-escaped data: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'} and escaped data: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}.
+    p This line has un-escaped data: !{'&lt;em&gt; is emphasised&lt;/em&gt;'} and escaped data: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}.
       | This line follows on.
-    p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title
+    p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title
 
-    <span class="comment token">&lt;!-- You can add HTML comments directly --&gt;</span>
+    &lt;!-- You can add HTML comments directly --&gt;
     // You can add single line JavaScript comments and they are generated to HTML comments
     //- Introducing a single line JavaScript comment with "//-" ensures the comment isn't rendered to HTML
 
@@ -86,12 +86,12 @@ html(lang="en")
 <p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
-p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
+p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
 
 <p>If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the <code>#{}</code> and<code> !{}</code> syntax, as shown below. You can also add raw HTML within the plain text.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
-p This line has an un-escaped string: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, an escaped string: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, and escaped variables: #{title}.</code></pre>
+p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
 <p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
@@ -117,7 +117,7 @@ else
 
 <p>The syntax also supports comments (that can be rendered in the output—or not—as you choose), mixins to create reusable blocks of code, case statements, and many other features. For more detailed information see <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">The Pug docs</a>.</p>
 
-<h2 class="highlight-spanned" id="Extending_templates"><span class="highlight-span">Extending templates</span></h2>
+<h2 class="highlight-spanned" id="Extending_templates">Extending templates</h2>
 
 <p>Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, <em>Pug</em> allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.</p>
 

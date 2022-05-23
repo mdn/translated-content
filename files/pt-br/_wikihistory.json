@@ -5431,14 +5431,6 @@
       "teoli"
     ]
   },
-  "Web/API/Navigator/battery": {
-    "modified": "2019-03-23T23:16:59.785Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "eliezerb"
-    ]
-  },
   "Web/API/Navigator/cookieEnabled": {
     "modified": "2020-10-15T22:13:23.552Z",
     "contributors": [
@@ -5456,6 +5448,14 @@
     "contributors": [
       "mateusvelleda",
       "michaelycus"
+    ]
+  },
+  "Web/API/Navigator/getBattery": {
+    "modified": "2019-03-23T23:16:59.785Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "eliezerb"
     ]
   },
   "Web/API/Navigator/getUserMedia": {

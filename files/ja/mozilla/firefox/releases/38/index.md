@@ -32,7 +32,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 - カスタム要素向けに {{cssxref(":unresolved")}} 擬似クラスを実装しました ({{bug(1111633)}})。
 - 定義済みスタイル {{cssxref("list-style-type", "ethiopic-numeric")}} の接尾辞は最近の仕様書の変更に合わせて、ドットに代わり空白文字を使用するようになりました ({{bug(1120721)}})。
 - インライン要素とブロック要素の両方に分けて生成した Generated Content ({{cssxref("::before")}} や {{cssxref("::after")}} による) の CSS Transitions が、仕様書で要求されているとおりに動作するようになりました ({{bug(1110277)}})。
-- CSS 論理的プロパティの実装が大きく前進しました。{{pref("layout.css.vertical-text.enabled")}} フラグの設定 (既定値は `false`) により、以下のプロパティを使用できます。
+- CSS 論理的プロパティの実装が大きく前進しました。 `layout.css.vertical-text.enabled` フラグの設定 (既定値は `false`) により、以下のプロパティを使用できます。
 
   - 書字方向に依存しない {{cssxref("width")}} および {{cssxref("height")}}: {{cssxref("block-size")}} および {{cssxref("inline-size")}} ({{bug(1117983)}})。
   - 書字方向に依存しない {{cssxref("min-width")}} および {{cssxref("min-height")}}: {{cssxref("min-block-size")}} および {{cssxref("min-inline-size")}} ({{bug(1117983)}})。
@@ -111,7 +111,7 @@ _変更なし。_
 
 - Firefox では、ログインフォームを扱う際に {{htmlattrxref("autocomplete", "input")}}`=false` 属性を無視するようになりました ({{bug(1025703)}})。これはパスワードマネージャーがより確実に動作できるようにすることで、より安全なパスワードの使用を促進しようとするものです。
 - ホワイトリストで明示されたウェブサイトを除き、TLS を使用する際は RC4 が無効になりました。このホワイトリストは、ウェブサイトが修正されるまでの経過措置です ({{bug(1124039)}})。このフォールバック機能は設定項目 `security.tls.unrestricted_rc4_fallback` で制御されており、現在の既定値は `true` です ({{bug(1138882)}})。
-- 安全でないバージョンの TLS へのフォールバックが必要なウェブサイトを、ハードコードされたホワイトリストに記載します。これは次第に削減する予定です ({{bug(1114816)}})。{{pref("security.tls.insecure_fallback_hosts.use_static_list")}} を `false` に設定すると、ホワイトリストを無効化できます。
+- 安全でないバージョンの TLS へのフォールバックが必要なウェブサイトを、ハードコードされたホワイトリストに記載します。これは次第に削減する予定です ({{bug(1114816)}})。 `security.tls.insecure_fallback_hosts.use_static_list` を `false` に設定すると、ホワイトリストを無効化できます。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

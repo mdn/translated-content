@@ -237,7 +237,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>另一方面，你不应该使用{{cssxref("visibility")}}<code>:hidden</code>或者{{cssxref("display")}}<code>:none</code>, 因为它们会让屏幕阅读器取不到那些内容，除非你真的想让屏幕阅读器不读取那些内容。</p>
 
 <div class="note">
-<p><strong>Note</strong>: <span class="subtitle"><a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a>有更多关于这个话题的详细信息</span></p>
+<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a>有更多关于这个话题的详细信息</p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -263,7 +263,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>可访问性存在问题的主要领域之一是复杂的应用程序，其中涉及复杂的表单控件（例如日期选择器）和动态内容，内容会经常增量更新。</p>
 
-<p>非自带的复杂的表单控件可能会存在问题，因为它们往往涉及大量嵌套的<code>&lt;div&gt;</code>，浏览器默认情况下不知道如何处理它们。如果你自己开发控件，则需要确保它们可以通过键盘访问。如果你使用的是某种第三方框架，请在开始使用之前仔细检查可用的选项以了解它们是否具有完备的可访问性。例如，Bootstrap就对可访问性有相当好的支持（尽管Rhiana Heath的<span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a></span>探讨了它的一些问题（主要与色彩对比度有关），并着眼于一些解决方案）。</p>
+<p>非自带的复杂的表单控件可能会存在问题，因为它们往往涉及大量嵌套的<code>&lt;div&gt;</code>，浏览器默认情况下不知道如何处理它们。如果你自己开发控件，则需要确保它们可以通过键盘访问。如果你使用的是某种第三方框架，请在开始使用之前仔细检查可用的选项以了解它们是否具有完备的可访问性。例如，Bootstrap就对可访问性有相当好的支持（尽管Rhiana Heath的<a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a>探讨了它的一些问题（主要与色彩对比度有关），并着眼于一些解决方案）。</p>
 
 <p>定期更新的动态内容可能会成为问题，因为屏幕阅读器用户可能会错过这些内容，尤其是在意外更新的情况下。如果你有一个包含主要内容面板的单页应用程序，该应用程序使用<a href="/zh-CN/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>或<a href="/zh-CN/docs/Web/API/Fetch_API">Fetch</a>定期更新，那么屏幕阅读器用户可能会错过这些更新。</p>
 

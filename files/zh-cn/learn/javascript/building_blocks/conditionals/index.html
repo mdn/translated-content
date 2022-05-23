@@ -32,7 +32,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <h2 id="if_..._else_语句">if ... else 语句</h2>
 
-<p><code><font face="Open Sans, arial, sans-serif">让我们看看到目前为止你将会在JavaScript中用到的最常见的条件语句类型 — </font><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else语句</a>。</code></p>
+<p><code>让我们看看到目前为止你将会在JavaScript中用到的最常见的条件语句类型 — <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else语句</a>。</code></p>
 
 <h3 id="基本的的_if…else_语法">基本的的 if…else 语法</h3>
 
@@ -335,7 +335,7 @@ function setWeather() {
 
 <h2 id="三元运算符">三元运算符</h2>
 
-<p><font><font>在我们举一些例子之前，我们要介绍一下最后一句语法。</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"><font><font>三元或条件运算符</font></font></a><font><font>是一个语法的小点，用于测试一个条件，并返回一个值/表达，如果它是</font></font><code>true</code><font><font>，另一个是</font></font><code>false</code><font><font>-这种情况下是有用的，并且可以占用比</font></font><code>if...else</code><font><font>块较少的代码块。如果你只有两个通过</font></font><code>true</code><font><font>/ </font></font><code>false</code><font><font>条件</font><font>选择</font><font>。</font><font>伪代码看起来像这样：</font></font></p>
+<p>在我们举一些例子之前，我们要介绍一下最后一句语法。<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">三元或条件运算符</a>是一个语法的小点，用于测试一个条件，并返回一个值/表达，如果它是<code>true</code>，另一个是<code>false</code>-这种情况下是有用的，并且可以占用比<code>if...else</code>块较少的代码块。如果你只有两个通过<code>true</code>/ <code>false</code>条件选择。伪代码看起来像这样：</p>
 
 <pre class="notranslate">( condition ) ? run this code : run this code instead</pre>
 
@@ -343,7 +343,7 @@ function setWeather() {
 
 <pre class="brush: js notranslate">var greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
 
-<p><font><font>在这里我们有一个变量叫做</font></font><code>isBirthday</code><font><font>- 如果它是</font></font><code>true</code><font><font>，我们给客人一个生日快乐的消息; </font><font>如果不是，我们给她标准的每日问候。</font></font></p>
+<p>在这里我们有一个变量叫做<code>isBirthday</code>- 如果它是<code>true</code>，我们给客人一个生日快乐的消息; 如果不是，我们给她标准的每日问候。</p>
 
 <h3 id="三元运算符示例">三元运算符示例</h3>
 
@@ -373,9 +373,9 @@ select.onchange = function() {
 
 <p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300) }}</p>
 
-<p><font><font>在这里，我们有一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a><font><font>选择主题（黑色或白色）</font><font>的</font><font>元素，加上一个简单</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a><font><font>的显示网站标题。</font><font>我们也有一个函数叫做</font></font><code>update()</code><font><font>，它将两种颜色作为参数（输入）。</font><font>网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。</font></font></p>
+<p>在这里，我们有一个<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a>选择主题（黑色或白色）的元素，加上一个简单<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a>的显示网站标题。我们也有一个函数叫做<code>update()</code>，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。</p>
 
-<p><font><font>最后，我们还有一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><font><font>onchange</font></font></a><font><font>事件监听器，用于运行一个包含三元运算符的函数。</font><font>它以测试条件开始</font></font><code>select.value === 'black'</code><font><font>。</font><font>如果这返回</font></font><code>true</code><font><font>，我们运行</font></font><code>update()</code><font><font>带有黑色和白色参数</font><font>的</font><font>函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。</font><font>如果返回</font></font><code>false</code><font><font>，我们运行</font></font><code>update()</code><font><font>带有白色和黑色参数</font><font>的</font><font>函数，这意味着站点颜色被反转。</font></font></p>
+<p>最后，我们还有一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a>事件监听器，用于运行一个包含三元运算符的函数。它以测试条件开始<code>select.value === 'black'</code>。如果这返回<code>true</code>，我们运行<code>update()</code>带有黑色和白色参数的函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。如果返回<code>false</code>，我们运行<code>update()</code>带有白色和黑色参数的函数，这意味着站点颜色被反转。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">在线运行</a>。）</p>
@@ -383,29 +383,29 @@ select.onchange = function() {
 
 <h2 id="主动学习：一个简单的日历">主动学习：一个简单的日历</h2>
 
-<p><font><font>在这个例子中，您将帮助我们完成一个简单的日历应用程序。</font><font>在你的代码中：</font></font></p>
+<p>在这个例子中，您将帮助我们完成一个简单的日历应用程序。在你的代码中：</p>
 
 <ul>
- <li><font><font>一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a><font><font>元素，允许用户在不同月份之间进行选择。</font></font></li>
- <li><code>onchange</code><font><font>检测</font></font><code>&lt;select&gt;</code><font><font>菜单中</font><font>选择的值何时</font><font>更改</font><font>的</font><font>事件处理程序</font><font>。</font></font></li>
- <li><font><font>一个函数叫做</font></font><code>createCalendar()</code><font><font>绘制日历并在</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a><font><font>元素中</font><font>显示正确的月份</font><font>。</font></font></li>
+ <li>一个<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a>元素，允许用户在不同月份之间进行选择。</li>
+ <li><code>onchange</code>检测<code>&lt;select&gt;</code>菜单中选择的值何时更改的事件处理程序。</li>
+ <li>一个函数叫做<code>createCalendar()</code>绘制日历并在<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a>元素中显示正确的月份。</li>
 </ul>
 
-<p><font><font>我们需要你在</font></font><code>onchange</code><font><font>处理函数中</font><font>写一个条件语句</font><font>，就在</font></font><code>// ADD CONDITIONAL HERE</code><font><font>任务的</font><font>下面  </font><font>。</font><font>这应该：</font></font></p>
+<p>我们需要你在<code>onchange</code>处理函数中写一个条件语句，就在<code>// ADD CONDITIONAL HERE</code>任务的下面  。这应该：</p>
 
 <ol>
- <li><font><font>查看所选月份（存储在</font></font><code>choice</code><font><font>变量中，这将是</font></font><code>&lt;select&gt;</code><font><font>值更改后的元素值，例如“1月”）。</font></font></li>
- <li><font><font>设置一个被调用</font></font><code>days</code><font><font>为等于所选月份天数的</font><font>变量</font><font>。</font><font>为此，您必须查看一年中每个月的天数。</font><font>为了这个例子的目的，你可以忽略闰年。</font></font></li>
+ <li>查看所选月份（存储在<code>choice</code>变量中，这将是<code>&lt;select&gt;</code>值更改后的元素值，例如“1月”）。</li>
+ <li>设置一个被调用<code>days</code>为等于所选月份天数的变量。为此，您必须查看一年中每个月的天数。为了这个例子的目的，你可以忽略闰年。</li>
 </ol>
 
 <p>提示：</p>
 
 <ul>
- <li><font><font>建议您使用逻辑或将多个月组合成一个单一条件; </font><font>他们中的许多人共享相同的天数。</font></font></li>
- <li><font><font>考虑最常用的天数，并将其用作默认值。</font></font></li>
+ <li>建议您使用逻辑或将多个月组合成一个单一条件; 他们中的许多人共享相同的天数。</li>
+ <li>考虑最常用的天数，并将其用作默认值。</li>
 </ul>
 
-<p><font>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。</font><font>如果真的卡住了，请按“Show solution”查看解决方案。</font></p>
+<p>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。如果真的卡住了，请按“Show solution”查看解决方案。</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -516,15 +516,15 @@ window.addEventListener('load', updateCode);
 
 <h2 id="主动学习：更多颜色选择！">主动学习：更多颜色选择！</h2>
 
-<p><font><font>在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个switch语句，这将允许我们对简单的网站应用更多的选择。</font><font>看看</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a><font><font>- 这次你会看到它不是两个主题选项，而是五个。</font><font>您需要在</font></font><code>// ADD SWITCH STATEMENT</code><font><font>注释</font><font>下面添加一个switch语句</font><font>：</font></font></p>
+<p>在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个switch语句，这将允许我们对简单的网站应用更多的选择。看看<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a>- 这次你会看到它不是两个主题选项，而是五个。您需要在<code>// ADD SWITCH STATEMENT</code>注释下面添加一个switch语句：</p>
 
 <ul>
- <li><font><font>它应该接受</font></font><code>choice</code><font><font>变量作为其输入表达式。</font></font></li>
- <li><font><font>对于每种情况，选择应该等于可以选择的可能值之一，即白色，黑色，紫色，黄色或迷幻色。</font></font></li>
- <li><font><font>对于每种情况，应运行</font></font><code>update()</code><font><font>函数，并传递两个颜色值，第一个颜色值为背景颜色，第二个颜色值为文本颜色。</font><font>请记住，颜色值是字符串，因此需要用引号括起来。</font></font></li>
+ <li>它应该接受<code>choice</code>变量作为其输入表达式。</li>
+ <li>对于每种情况，选择应该等于可以选择的可能值之一，即白色，黑色，紫色，黄色或迷幻色。</li>
+ <li>对于每种情况，应运行<code>update()</code>函数，并传递两个颜色值，第一个颜色值为背景颜色，第二个颜色值为文本颜色。请记住，颜色值是字符串，因此需要用引号括起来。</li>
 </ul>
 
-<p><font>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。</font><font>如果真的卡住了，请按“Show solution”查看解决方案。</font></p>
+<p>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。如果真的卡住了，请按“Show solution”查看解决方案。</p>
 
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
@@ -595,15 +595,15 @@ window.addEventListener('load', updateCode);
 
 <h2 id="结论">结论</h2>
 
-<p><font><font>这就是现在您真正需要了解的JavaScript中的条件结构！</font><font>我相信你会理解这些概念，并轻松地通过这些例子; </font><font>如果有什么不明白的，请随时阅读文章，或者</font></font><a href="https://developer.mozilla.org/en-US/Learn#Contact_us"><font><font>联系我们</font></font></a><font><font>寻求帮助。</font></font></p>
+<p>这就是现在您真正需要了解的JavaScript中的条件结构！我相信你会理解这些概念，并轻松地通过这些例子; 如果有什么不明白的，请随时阅读文章，或者<a href="https://developer.mozilla.org/en-US/Learn#Contact_us">联系我们</a>寻求帮助。</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators"><font><font>比较运算符</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements"><font><font>条件声明详细</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><font><font>如果...其他参考</font></font></a></li>
- <li><font><font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三元）运算符引用</a></font></font></li>
+ <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">比较运算符</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">条件声明详细</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">如果...其他参考</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三元）运算符引用</a></li>
 </ul>
 
 <p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>

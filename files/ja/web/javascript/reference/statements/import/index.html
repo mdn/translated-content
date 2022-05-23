@@ -98,7 +98,7 @@ var promise = import("<em>module-name</em>");
 <pre class="brush: js notranslate">import '/modules/my-module.js';
 </pre>
 
-<p>これは{{anch("Dynamic Imports", "動的インポート")}}にも対応しています。</p>
+<p>これは<a href="#dynamic_imports">動的インポート</a>にも対応しています。</p>
 
 <pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
@@ -129,7 +129,7 @@ var promise = import("<em>module-name</em>");
 // 特定の名前つきのインポート
 </pre>
 
-<p>{{anch("Dynamic Imports", "動的インポート")}}を使用してデフォルトのエクスポートをインポートする場合、動作が少し異なります。返されたオブジェクトから "default" キーを破棄して名前を変更する必要があります。</p>
+<p><a href="#dynamic_imports">動的インポート</a>を使用してデフォルトのエクスポートをインポートする場合、動作が少し異なります。返されたオブジェクトから "default" キーを破棄して名前を変更する必要があります。</p>
 
 <pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
