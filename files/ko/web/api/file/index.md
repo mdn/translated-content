@@ -14,7 +14,7 @@ translation_of: Web/API/File
 
 **`File`** 인터페이스는 파일에 대한 정보를 제공하고, 웹 페이지가 JavaScript로 파일의 내용에 접근할 수 있는 방법을 제공합니다.
 
-`File` 객체는 보통 {{domxref("FileList")}} 객체에서 가져옵니다. `FileList` 객체는 사용자가 {{htmlelement("input")}} 요소로 파일을 선택했을 때나 {{domxref("HTMLCanvasElement")}}의 `mozGetAsFile()` API의 반환 값이며, 드래그 앤 드롭 작업의 {{domxref("DataTransfer")}} 객체도 `FileList`를 포함합니다.
+`File` 객체는 보통 {{domxref("FileList")}} 객체가 포함한 것을 사용하게 됩니다. `FileList` 객체는 사용자가 {{htmlelement("input")}} 요소로 파일을 선택한 결과 값으로, 또는 드래그 앤 드롭 작업의 {{domxref("DataTransfer")}} 객체에서 가져올 수 있습니다.
 
 `File` 객체는 {{domxref("Blob")}}의 한 종류로, `Blob`을 사용할 수 있는 모든 맥락에서 사용할 수 있습니다. 특히 {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("createImageBitmap()")}}, {{domxref("XMLHttpRequest", "", "send()")}}는 `Blob`과 `File`을 모두 허용합니다.
 
