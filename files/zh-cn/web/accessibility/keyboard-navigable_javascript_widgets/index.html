@@ -49,7 +49,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
  </tbody>
 </table>
 
-<h4 id="简单控件_Simple_Controls"><span style="color: #000000;"><span class="toctext">简单控件 Simple Controls</span></span></h4>
+<h4 id="简单控件_Simple_Controls">简单控件 Simple Controls</h4>
 
 <p>可以在 {{ HTMLElement("div") }} or {{ HTMLElement("span") }} 元素上设置 tabindex="0" 使得此简单控件变得可 tab 导航.这里有个 span-based checkbox 使用这个方法的例子。</p>
 
@@ -76,11 +76,11 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 &lt;/div&gt;</code>
 </pre>
 
-<h4 id="组合控件_Grouping_controls"><span style="color: #000000;"><span class="toctext">组合控件 Grouping controls</span></span></h4>
+<h4 id="组合控件_Grouping_controls">组合控件 Grouping controls</h4>
 
 <p>针对像菜单、标签面板、树等这些组合控件，父元素应该在 tab 序列里面(tabindex="0") 而每个后代选择/标签/单元/行应该从 tab 序列里面移除(tabindex="-1")。用户应该可通过方向键来操控这些后代元素。(关于组件一般预期的键盘支持，可以查看 <a class="external text" href="http://access.aol.com/dhtml-style-guide-working-group/" rel="nofollow" title="http://access.aol.com/dhtml-style-guide-working-group/">DHTML Style Guide</a>.)</p>
 
-<p>下面这个组合菜单的例子展示了这种技术的使用。 一旦键盘 focus 中容器 ul 元素，Javascript  开发人员需要在键盘事件里针对方向键的响应里管理里面元素的 focus 顺序。在组件里管理 focus 的办法，看下面这个<span style="line-height: 1.5;"> "在组合控件里管理 focus " 例子.</span></p>
+<p>下面这个组合菜单的例子展示了这种技术的使用。 一旦键盘 focus 中容器 ul 元素，Javascript  开发人员需要在键盘事件里针对方向键的响应里管理里面元素的 focus 顺序。在组件里管理 focus 的办法，看下面这个 "在组合控件里管理 focus " 例子.</p>
 
 <p><em>范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件</em></p>
 
@@ -110,7 +110,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
-<h4 id="失效控件"><span class="toctext">失效控件</span></h4>
+<h4 id="失效控件">失效控件</h4>
 
 <p>当一个自定义控件变成失效（disabled）状态时，通过设置 tabindex="-1" 把它从 tab 序列里面移除。注意在一个组合组件里面失效状态的子项（比如菜单控件里面某一个菜单项）应该在方向键的响应事件里面跳过它不让 focus 中。</p>
 
@@ -119,11 +119,11 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 <p>当用户从一个组件 tab 离开之后 focus 回来，焦点应该回到离开之时正被 focus 中的元素上，比如某个树节点或者网格单元. 有两种办法完成这一点：</p>
 
 <ol>
- <li><code><font face="Open Sans, sans-serif"><span style="line-height: 21px;">流动 </span></font>tabindex</code>: 通过编程移动 focus</li>
+ <li><code><font face="Open Sans, sans-serif">流动 </font>tabindex</code>: 通过编程移动 focus</li>
  <li><code>aria-activedescendent</code>: 管理一个“虚拟” focus</li>
 </ol>
 
-<h4 id="方法_1_流动_tabindex"><span style="color: #000000;"><span class="toctext">方法 1: 流动 tabindex</span> </span></h4>
+<h4 id="方法_1_流动_tabindex">方法 1: 流动 tabindex </h4>
 
 <p>在被 focus 中元素上设置 <code>tabindex</code> 为 "0"，这样可以保证在用户在 tab 离开又返回后仍然选中组合组件中之前被选中的那项。注意在更改 tabindex 为“0”同时需要把之前选中过的那项设置<code>tabindex="-1"</code>。这个方法包含在键盘事件里面通过程序移动焦点以及更改 <code>tabindex</code> 到当前焦点中的那项上。需要做以下几步：</p>
 
@@ -153,7 +153,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <p>这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 <code>aria-activedescendent属性</code>来追踪一个 "虚拟" 焦点。（关于ARIA更多的信息, 查看 <a class="external text" href="../../../../An_Overview_of_Accessible_Web_Applications_and_Widgets" rel="nofollow" title="https://developer.mozilla.org/An_Overview_of_Accessible_Web_Applications_and_Widgets">overview of accessible web applications and widgets</a>.）</p>
 
-<p><code>aria-activedescendant</code> 属性用来标识拥有虚拟焦点的后代元素的 ID。在窗口容器的事件句柄里面在键盘和鼠标事件响应更新 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">aria-activedescendant 值并且确保当前</span><span style="line-height: 1.5;">The event handler on the container must respond to key and mouse events by updating the value of </span><code style="font-size: 14px;">aria-activedescendant</code><span style="line-height: 1.5;"> and ensuring that the current item is styled appropriately (for example, with a border or background color). </span></p>
+<p><code>aria-activedescendant</code> 属性用来标识拥有虚拟焦点的后代元素的 ID。在窗口容器的事件句柄里面在键盘和鼠标事件响应更新 aria-activedescendant 值并且确保当前The event handler on the container must respond to key and mouse events by updating the value of <code style="font-size: 14px;">aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color). </p>
 
 <h5 id="Tips">Tips</h5>
 
@@ -186,7 +186,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <p>IE 7 及更早版本不支持 <code>:focus</code> 伪选择器，不要用它来设置焦点的样式。替代方法是在 <code>onfocus </code>事件处理程序中设置样式，例如，添加一个 CSS 样式到 <code>class</code> 属性中。</p>
 
-<h4 id="始终用程序为_tabindex-1_的项和元素设置焦点样式"><span style="font-size: 1.28571428571429rem;">始终</span>用程序为 tabindex="-1" 的项和元素设置焦点样式</h4>
+<h4 id="始终用程序为_tabindex-1_的项和元素设置焦点样式">始终用程序为 tabindex="-1" 的项和元素设置焦点样式</h4>
 
 <p>IE 不会自动为<code> tabindex="-1" </code>的元素绘制聚焦框。可以选择一种方法解决，比如通过 <code>this.style.backgroundColor="gray"</code> 改变选中项目的背景颜色，或通过 <code>this.style.border="1px dotted invert"</code> 添加虚线边框。如果使用虚线边框的，需要确保这些元素有隐含的一象素边框，这样，当聚焦的边框样式应用上去的时候，元素的大小才不会改变（边框会占用空间，而 IE 没有实现 CSS outline）。 </p>
 

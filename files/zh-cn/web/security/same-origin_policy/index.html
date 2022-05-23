@@ -16,7 +16,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <p>如果两个 URL 的 {{Glossary("protocol")}}、{{Glossary("port")}} (如果有指定的话)和 {{Glossary("host")}} 都相同的话，则这两个 URL 是<em>同源</em>。这个方案也被称为“协议/主机/端口元组”，或者直接是 “元组”。（“元组” 是指一组项目构成的整体，双重/三重/四重/五重/等的通用形式）。</p>
 
-<p>下表给出了与 URL <code><span class="nowiki">http://store.company.com/dir/page.html</span></code> 的源进行对比的示例:</p>
+<p>下表给出了与 URL <code>http://store.company.com/dir/page.html</code> 的源进行对比的示例:</p>
 
 <table class="standard-table">
  <tbody>
@@ -26,27 +26,27 @@ translation_of: Web/Security/Same-origin_policy
    <th>原因</th>
   </tr>
   <tr>
-   <td><code><span class="nowiki">http://store.company.com/dir2/other.html</span></code></td>
+   <td><code>http://store.company.com/dir2/other.html</code></td>
    <td>同源</td>
    <td><font face="consolas, Liberation Mono, courier, monospace">只有路径不同</font></td>
   </tr>
   <tr>
-   <td><code><span class="nowiki">http://store.company.com/dir/inner/another.html</span></code></td>
+   <td><code>http://store.company.com/dir/inner/another.html</code></td>
    <td>同源</td>
    <td><font face="consolas, Liberation Mono, courier, monospace">只有路径不同</font></td>
   </tr>
   <tr>
-   <td><code><span class="nowiki">https://store.company.com/secure.html</span></code></td>
+   <td><code>https://store.company.com/secure.html</code></td>
    <td>失败</td>
    <td>协议不同</td>
   </tr>
   <tr>
-   <td><code><span class="nowiki">http://store.company.com:81/dir/etc.html</span></code></td>
+   <td><code>http://store.company.com:81/dir/etc.html</code></td>
    <td>失败</td>
    <td>端口不同 ( <code>http://</code> 默认端口是80)</td>
   </tr>
   <tr>
-   <td><code><span class="nowiki">http://news.company.com/dir/other.html</span></code></td>
+   <td><code>http://news.company.com/dir/other.html</code></td>
    <td>失败</td>
    <td>主机不同</td>
   </tr>
@@ -75,7 +75,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <ul>
  <li><strong>授信范围</strong>（Trust Zones）：两个相互之间高度互信的域名，如公司域名（corporate domains），则不受同源策略限制。</li>
- <li><strong>端口</strong>：IE 未将端口号纳入到同源策略的检查中，因此<span> </span><span><code>https://company.com:81/index.html</code> </span><span>和 </span><span><code>https://company.com/index.html</code>  </span>属于同源并且不受任何限制。</li>
+ <li><strong>端口</strong>：IE 未将端口号纳入到同源策略的检查中，因此 <code>https://company.com:81/index.html</code> 和 <code>https://company.com/index.html</code>  属于同源并且不受任何限制。</li>
 </ul>
 
 <p>这些差异点是不规范的，其它浏览器也未做出支持，但会助于开发基于window RT IE的应用程序。</p>
@@ -89,7 +89,7 @@ translation_of: Web/Security/Same-origin_policy
 <pre class="eval">document.domain = "company.com";
 </pre>
 
-<p>这条语句执行之后，页面将会成功地通过与 <code><span class="nowiki">http://company.com/dir/page.html</span></code> 的同源检测（假设<code>http://company.com/dir/page.html</code> 将其 <code>document.domain</code> 设置为“<code>company.com</code>”，以表明它希望允许这样做 - 更多有关信息，请参阅 {{domxref("document.domain")}} ）。然而，<code>company.com</code> 不能设置 <code>document.domain</code> 为 <code>othercompany.com</code>，因为它不是 <code>company.com</code> 的父域。</p>
+<p>这条语句执行之后，页面将会成功地通过与 <code>http://company.com/dir/page.html</code> 的同源检测（假设<code>http://company.com/dir/page.html</code> 将其 <code>document.domain</code> 设置为“<code>company.com</code>”，以表明它希望允许这样做 - 更多有关信息，请参阅 {{domxref("document.domain")}} ）。然而，<code>company.com</code> 不能设置 <code>document.domain</code> 为 <code>othercompany.com</code>，因为它不是 <code>company.com</code> 的父域。</p>
 
 <p>端口号是由浏览器另行检查的。任何对document.domain的赋值操作，包括 <code>document.domain = document.domain</code> 都会导致端口号被重写为 <code>null</code> 。因此 <code>company.com:8080</code> <strong>不能</strong>仅通过设置 <code>document.domain = "company.com"</code> 来与<code>company.com</code> 通信。必须在他们双方中都进行赋值，以确保端口号都为 <code>null</code> 。</p>
 
@@ -111,12 +111,12 @@ translation_of: Web/Security/Same-origin_policy
 
 <ul>
  <li><code>&lt;script src="..."&gt;&lt;/script&gt;</code> 标签嵌入跨域脚本。语法错误信息只能被同源脚本中捕捉到。</li>
- <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入CSS。由于CSS的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制：<span> </span><a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a><span>, </span><a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a><span>, </span><a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a><span>, </span><a href="http://support.apple.com/kb/HT4070">Safari</a><span> (跳至CVE-2010-0051)部分 和 </span><a href="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
+ <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入CSS。由于CSS的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制： <a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> (跳至CVE-2010-0051)部分 和 <a href="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
  <li>通过 {{htmlelement("img")}} 展示的图片。支持的图片格式包括PNG,JPEG,GIF,BMP,SVG,...</li>
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/object" title="HTML/Element/object">&lt;object&gt;</a></code>、 <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/CSS/@font-face" title="CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨域字体（cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
- <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">通过</span></font> <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/iframe" title="HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
+ <li><font face="consolas, Liberation Mono, courier, monospace">通过</font> <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/iframe" title="HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
 </ul>
 
 <h3 id="如何允许跨源访问"><strong>如何允许跨源访问</strong></h3>
@@ -126,14 +126,14 @@ translation_of: Web/Security/Same-origin_policy
 <h3 id="如何阻止跨源访问"><strong>如何阻止跨源访问</strong></h3>
 
 <ul>
- <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记(CSRF token)即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a><span> 标记。你必须使用这个标记来阻止页面的跨站读操作。</span></li>
- <li><span>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</span></li>
- <li><span>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在HTML文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为JavaScript。 当您的资源不是您网站的入口点时，您还可以使用CSRF令牌来防止嵌入。</span></li>
+ <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记(CSRF token)即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨站读操作。</li>
+ <li>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</li>
+ <li>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在HTML文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为JavaScript。 当您的资源不是您网站的入口点时，您还可以使用CSRF令牌来防止嵌入。</li>
 </ul>
 
 <h2 id="跨源脚本API访问">跨源脚本API访问</h2>
 
-<p>JavaScript 的 API 中，如<span> </span><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、<span> {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对</span><span> </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a><span> 和 </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
+<p>JavaScript 的 API 中，如 <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、 {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a> 和 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
 
 <p>为了能让不同源中文档进行交流，可以使用 {{domxref("window.postMessage")}}。</p>
 
