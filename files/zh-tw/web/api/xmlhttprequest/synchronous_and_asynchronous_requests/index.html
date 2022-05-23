@@ -65,7 +65,7 @@ function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */
 loadFile("message.txt", showMessage, "New message!\n\n");
 </pre>
 
-<p>Line 1 declares a function which will pass all arguments after the third to the <font face="Courier New, Andale Mono, monospace">callback </font>function when the file has been loaded.</p>
+<p>Line 1 declares a function which will pass all arguments after the third to the callback function when the file has been loaded.</p>
 
 <p>Line 4 creates an event handler function object and assigns it to the request's <code>onload</code> attribute.  This handler looks at the request's <code>readyState</code> to see if the transaction is complete in line 5, and if it is, and the HTTP status is 200, calls the callback function.  If an error occurred, an error message is displayed.</p>
 
