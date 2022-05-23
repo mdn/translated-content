@@ -59,7 +59,7 @@ function receiveMessage(event)
  <dt><code>data</code></dt>
  <dd>从其他 window 中传递过来的对象。</dd>
  <dt><code>origin</code></dt>
- <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code><span class="nowiki">https://example.org</span></code> (隐含端口 <code>443</code>)”、“<code><span class="nowiki">http://example.net</span></code> (隐含端口 <code>80</code>)”、“<code><span class="nowiki">http://example.com:8080</span></code>”。请注意，这个origin不能保证是该窗口的当前或未来origin，因为postMessage被调用后可能被导航到不同的位置。</dd>
+ <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个origin不能保证是该窗口的当前或未来origin，因为postMessage被调用后可能被导航到不同的位置。</dd>
  <dt><code>source</code></dt>
  <dd>对发送消息的<a href="/en-US/docs/DOM/window">窗口</a>对象的引用; 您可以使用此来在具有不同origin的两个窗口之间建立双向通信。</dd>
 </dl>
@@ -163,7 +163,7 @@ window.addEventListener("message", receiveMessage, false);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p><span style="">{{Compat("api.Window.postMessage")}}</span></p>
+<p>{{Compat("api.Window.postMessage")}}</p>
 
 <h2 id="See_also" name="See_also">参见</h2>
 

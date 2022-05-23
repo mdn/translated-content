@@ -5,7 +5,7 @@ translation_of: Web/API/MediaStream
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<div><span class="seoSummary"><strong><code>MediaStream</code></strong><strong> </strong>接口是一个媒体内容的流.。一个流包含几个<em>轨道</em>，比如视频和音频轨道。</span></div>
+<div><strong><code>MediaStream</code></strong><strong> </strong>接口是一个媒体内容的流.。一个流包含几个<em>轨道</em>，比如视频和音频轨道。</div>
 
 <h2 id="属性">属性</h2>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个<span style="font-family: consolas,monaco,andale mono,monospace;">INVALID_STATE_RAISE异常会产生。</span></dd>
+ <dd>存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个INVALID_STATE_RAISE异常会产生。</dd>
 </dl>
 
 <dl>
@@ -54,7 +54,7 @@ translation_of: Web/API/MediaStream
 </dl>
 
 <dl>
- <dt><span style="line-height: 1.572;">{{domxref("MediaStream.getAudioTracks()")}}</span></dt>
+ <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
  <dd>返回流中kind属性为"audio"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。</dd>
 </dl>
 
@@ -70,7 +70,7 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>移除作为参数传入的 {{domxref("MediaStreamTrack")}}。 如果这个轨道不在<code style="font-size: 14px;">MediaStream对象中什么也不会发生；</code> 如果目标轨道为“完成”状态，一个<span style="font-family: consolas,monaco,andale mono,monospace;">INVALID_STATE_RAISE异常会产生。</span></dd>
+ <dd>移除作为参数传入的 {{domxref("MediaStreamTrack")}}。 如果这个轨道不在<code style="font-size: 14px;">MediaStream对象中什么也不会发生；</code> 如果目标轨道为“完成”状态，一个INVALID_STATE_RAISE异常会产生。</dd>
 </dl>
 
 <h2 id="说明">说明</h2>

@@ -96,17 +96,17 @@ translation_of: Web/API/SVGAElement
 
 <p>在下面的这个例子里， {{SVGElement("a")}} 元素的 {{SVGAttr("target")}} 属性值是 <code>_blank</code> ，当链接被点击时，它将记录以通知是否符合条件。</p>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> linkRef <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"a"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-linkRef<span class="punctuation token">.</span>target <span class="operator token">=</span> <span class="string token">"_self"</span><span class="punctuation token">;</span> </code>
+<pre class="brush: js"><code class="language-js">var linkRef = document.querySelector("a");
+linkRef.target = "_self"; </code>
 
-linkRef<span class="punctuation token">.</span><span class="function function-variable token">onclick</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>linkRef<span class="punctuation token">.</span>target <span class="operator token">===</span> <span class="string token">"_blank"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"BLANK!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    linkRef<span class="punctuation token">.</span>target <span class="operator token">=</span> <span class="string token">"_self"</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"SORRY! not _blank"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></pre>
+linkRef.onclick = function(){
+  if (linkRef.target === "_blank") {
+    console.log("BLANK!");
+    linkRef.target = "_self";
+  } else {
+    console.log("SORRY! not _blank");
+  }
+}</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 

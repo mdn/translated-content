@@ -37,14 +37,14 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <pre class="notranslate">imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];</pre>
 
-<p>你可能用会使用<span style="font-family: consolas,monaco,andale mono,monospace;">Uint8ClampedArray.length属性来读取</span>像素数组的大小（以bytes为单位）：</p>
+<p>你可能用会使用Uint8ClampedArray.length属性来读取像素数组的大小（以bytes为单位）：</p>
 
 <pre class="brush: js notranslate">var numBytes = imageData.data.length;
 </pre>
 
 <h2 id="创建一个ImageData对象">创建一个<code>ImageData对象</code></h2>
 
-<p>去创建一个新的，空白的ImageData<code>对象</code>，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有2个版本的<span style="font-family: consolas,monaco,andale mono,monospace;">createImageData()方法。</span></p>
+<p>去创建一个新的，空白的ImageData<code>对象</code>，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有2个版本的createImageData()方法。</p>
 
 <pre class="brush: js notranslate">var myImageData = ctx.createImageData(width, height);</pre>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 <h2 id="得到场景像素数据">得到场景像素数据</h2>
 
-<p>为了获得一个包含画布场景像素数据的ImageData对像，你可以用<span style="font-family: consolas,monaco,andale mono,monospace;">getImageData()方法：</span></p>
+<p>为了获得一个包含画布场景像素数据的ImageData对像，你可以用getImageData()方法：</p>
 
 <pre class="brush: js notranslate">var myImageData = ctx.getImageData(left, top, width, height);</pre>
 
@@ -153,7 +153,7 @@ canvas.addEventListener('click', function(event) {
 
 <h3 id="Grayscaling_and_inverting_colors" name="Grayscaling_and_inverting_colors">图片灰度和反相颜色</h3>
 
-<p>在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过putImageData()放回到画布中去。invert函数仅仅是去减掉颜色的最大色值255.grayscale函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如<span style="font-family: consolas,monaco,andale mono,monospace;">x = 0.299r + 0.587g + 0.114b这个公式。更多资料请参考维基百科的</span><a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a>。</p>
+<p>在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过putImageData()放回到画布中去。invert函数仅仅是去减掉颜色的最大色值255.grayscale函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如x = 0.299r + 0.587g + 0.114b这个公式。更多资料请参考维基百科的<a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a>。</p>
 
 <div class="hidden">
 <pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
@@ -272,7 +272,7 @@ for (const input of inputs) {
                   Math.abs(x - 5), Math.abs(y - 5),
                   10, 10, 0, 0, 200, 200);</pre>
 
-<p>因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到<span style="font-family: consolas,monaco,andale mono,monospace;">imageSmoothingEnabled属性的效果（不同浏览器需要不同前缀）。</span></p>
+<p>因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到imageSmoothingEnabled属性的效果（不同浏览器需要不同前缀）。</p>
 
 <h6 class="hidden" id="Zoom_example">Zoom example</h6>
 
@@ -326,7 +326,7 @@ function draw(img) {
 
 <h2 id="保存图片">保存图片</h2>
 
-<p>{{domxref("HTMLCanvasElement")}}  提供一个<span style="font-family: consolas,monaco,andale mono,monospace;">toDataURL()方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs">数据链接</a>。返回的图片分辨率是96dpi。</span></p>
+<p>{{domxref("HTMLCanvasElement")}}  提供一个toDataURL()方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs">数据链接</a>。返回的图片分辨率是96dpi。</p>
 
 <dl>
  <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
@@ -342,7 +342,7 @@ function draw(img) {
 
 <dl>
  <dt>{{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}</dt>
- <dd>这个创建了一个在画布中的代表图片的<span style="font-family: consolas,monaco,andale mono,monospace;">Blob对像。</span></dd>
+ <dd>这个创建了一个在画布中的代表图片的Blob对像。</dd>
 </dl>
 
 <h2 id="参见">参见</h2>

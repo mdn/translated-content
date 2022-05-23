@@ -6,7 +6,7 @@ translation_of: Web/API/AudioBufferSourceNode
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div class="summary">
-<p><span class="seoSummary"><strong><code>AudioBufferSourceNode</code></strong><strong> </strong>接口继承自</span>{{domxref("AudioScheduledSourceNode")}} <span class="seoSummary">,表现为一个音频源，它包含了一些写在内存中的音频数据，通常储存在一个ArrayBuffer对象中。在处理有严格的时间精确度要求的回放的情形下它尤其有用。比如播放那些需要满足一个指定节奏的声音或者那些储存在内存而不是硬盘或者来自网络的声音。为了播放那些有时间精确度需求但来自网络的流文件或者来自硬盘，则使用</span>{{domxref("AudioWorkletNode")}}来实现回放。</p>
+<p><strong><code>AudioBufferSourceNode</code></strong><strong> </strong>接口继承自{{domxref("AudioScheduledSourceNode")}} ,表现为一个音频源，它包含了一些写在内存中的音频数据，通常储存在一个ArrayBuffer对象中。在处理有严格的时间精确度要求的回放的情形下它尤其有用。比如播放那些需要满足一个指定节奏的声音或者那些储存在内存而不是硬盘或者来自网络的声音。为了播放那些有时间精确度需求但来自网络的流文件或者来自硬盘，则使用{{domxref("AudioWorkletNode")}}来实现回放。</p>
 
 <p>{{InheritanceDiagram}}</p>
 </div>
@@ -79,7 +79,7 @@ translation_of: Web/API/AudioBufferSourceNode
 <p>在这个例子中, 我们将会创建一个2秒的缓冲器,并用白噪音填充它, 然后通过{{domxref("AudioBufferSourceNode")}}来播放它.  注释里说明了它的功能.</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 你可以 <a class="external external-icon" href="http://mdn.github.io/audio-buffer/">查看在线演示</a> 或 <a class="external external-icon" href="https://github.com/mdn/audio-buffer">查看源代码</a>.</p>
+<p><strong>注意</strong>: 你可以 <a class="external external-icon" href="http://mdn.github.io/audio-buffer/">查看在线演示</a> 或 <a class="external external-icon" href="https://github.com/mdn/audio-buffer">查看源代码</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -123,7 +123,7 @@ button.onclick = function() {
 }</pre>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面.</p>
+<p><strong>注意</strong>: 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面.</p>
 </div>
 
 <h2 id="规范">规范</h2>

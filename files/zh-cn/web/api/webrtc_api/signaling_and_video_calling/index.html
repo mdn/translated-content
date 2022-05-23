@@ -5,7 +5,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p><span class="seoSummary"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</a>允许在两个设备之间进行实时的对等媒体交换。通过称为<strong>信令</strong>的发现和协商过程建立连接。本教程将指导你构建双向视频通话。</span></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</a>允许在两个设备之间进行实时的对等媒体交换。通过称为<strong>信令</strong>的发现和协商过程建立连接。本教程将指导你构建双向视频通话。</p>
 
 <p><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>是一个完全对等技术，用于实时交换音频、视频和数据，同时提供一个中心警告。如其他地方所讨论的，必须进行一种发现和媒体格式协商，以使不同网络上的两个设备相互定位。这个过程被称为<strong>信令</strong>，并涉及两个设备连接到第三个共同商定的服务器。通过这个第三方服务器，这两台设备可以相互定位，并交换协商消息。</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 <p>开始处理信号的时候，用户的初始化操作会创建一个<strong>请求（offer）</strong> ，根据 {{Glossary("SDP")}} 协议其中会包含一个session描述符，并且需要把这个发送到我们称之为<strong>接收者（callee）</strong>那里， 接受者需要返回一个包含描述符的<strong>应答（answer）</strong>信息。我们的服务器使用 WebSocket 来传递 <code>"video-offer"</code> <code>"video-answer"</code>  两种类型的消息数据。这些消息包含以下属性：</p>
 
 <dl>
- <dt><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff; font-weight: 400;"> </span></font>type</code></dt>
+ <dt><code><font face="Arial, x-locale-body, sans-serif"> </font>type</code></dt>
  <dd>消息类型; <code>"video-offer"</code> 或 <code>"video-answer"</code></dd>
  <dt><code>name</code></dt>
  <dd>发送者用户名</dd>
@@ -477,7 +477,7 @@ function invite(evt) {
 
 <p>这将构建一个包含候选对象的对象，然后使用前面在 <a href="#向信令服务器发送信息">向信令服务器发送信息</a> 中描述的<code>sendToServer()</code> 函数将其发送给另一个对等方。消息属性为：</p>
 
-<p><strong><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-size: 1rem; font-style: inherit; font-weight: inherit; letter-spacing: -0.00278rem;'>type</span></strong></p>
+<p><strong>type</strong></p>
 
 <dl>
  <dd>消息类型: <code>"new-ice-candidate"</code>.</dd>

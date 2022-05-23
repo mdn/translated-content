@@ -82,7 +82,7 @@ translation_of: Web/API/Background_Tasks_API
 
 <h3 id="HTML_内容">HTML 内容</h3>
 
-<p>为了了解我们的目标，看一下HTML。这里创建了一个盒子 (ID <code>"Container"</code>)来显示操作进度（因为毕竟我们没法知道解码“ <span class="tlid-translation translation" lang="zh-CN"><span title="">量子丝极谱发射</span></span> ”会用多长时间），还创建了一个次要的盒子 (ID <code>"logBox"</code>)来展示文本输出。</p>
+<p>为了了解我们的目标，看一下HTML。这里创建了一个盒子 (ID <code>"Container"</code>)来显示操作进度（因为毕竟我们没法知道解码“ 量子丝极谱发射 ”会用多长时间），还创建了一个次要的盒子 (ID <code>"logBox"</code>)来展示文本输出。</p>
 
 <pre>&lt;p&gt;
   演示使用 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API"&gt;
@@ -91,7 +91,7 @@ translation_of: Web/API/Background_Tasks_API
 &lt;/p&gt;
 
 &lt;div class="container"&gt;
-  &lt;div class="label"&gt;解码<span class="tlid-translation translation" lang="zh-CN"><span title="">量子丝极谱发射</span></span>中...&lt;/div&gt;
+  &lt;div class="label"&gt;解码量子丝极谱发射中...&lt;/div&gt;
   &lt;progress id="progress" value="0"&gt;&lt;/progress&gt;
   &lt;div class="button" id="startButton"&gt;
     开始
@@ -188,7 +188,7 @@ translation_of: Web/API/Background_Tasks_API
 
 <h3 id="JavaScript_内容">JavaScript 内容</h3>
 
-<p>现在，已经定义了文档结构，再构造出JavaS代码就可以运行了。目标：可以<span class="tlid-translation translation" lang="zh-CN"><span title="">向队列添加调用函数的请求，并具有一个空闲回调，空闲回调会在系统空闲且空闲时间足够长以取得进展时运行。</span></span></p>
+<p>现在，已经定义了文档结构，再构造出JavaS代码就可以运行了。目标：可以向队列添加调用函数的请求，并具有一个空闲回调，空闲回调会在系统空闲且空闲时间足够长以取得进展时运行。</p>
 
 <h4 id="变量声明">变量声明</h4>
 
@@ -402,9 +402,9 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
   logFragment.appendChild(el);
 }</pre>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">首先，如果当前不存在一个名为</span></span><code>logFragment</code><span class="tlid-translation translation" lang="zh-CN"><span title="">的</span></span> {{domxref("DocumentFragment")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">对象。</span> <span title="">该元素是伪DOM，我们可以在其中插入元素，而无需立即更改主DOM本身。</span></span></p>
+<p>首先，如果当前不存在一个名为<code>logFragment</code>的 {{domxref("DocumentFragment")}} 对象。 该元素是伪DOM，我们可以在其中插入元素，而无需立即更改主DOM本身。</p>
 
-<p>然后我们创建一个新的元素， <span class="tlid-translation translation" lang="zh-CN"><span title="">并将其内容设置为与输入文本匹配</span></span>。接下来我们向<code>logFragment</code>中的伪DOM末尾添加一个新的元素。<code>logFragment</code>将会累积记录条目直到下次因DOM改变而调用<code>updateDisplay()</code>的时候。</p>
+<p>然后我们创建一个新的元素， 并将其内容设置为与输入文本匹配。接下来我们向<code>logFragment</code>中的伪DOM末尾添加一个新的元素。<code>logFragment</code>将会累积记录条目直到下次因DOM改变而调用<code>updateDisplay()</code>的时候。</p>
 
 <h3 id="运行任务">运行任务</h3>
 
@@ -412,7 +412,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <h4 id="任务处理器">任务处理器</h4>
 
-<p><code>logTaskHandler()</code>，将是我们用来作为任务处理器的函数，也是用作任务对象<code>handler</code>属性的值。它是一个简单的为每个任务向记录输出大量内容的函数。 <span class="tlid-translation translation" lang="zh-CN"><span title="">在您自己的应用程序中，您可以将此代码替换为您希望在空闲时间执行的任何任务</span></span> 。只要记住任何DOM变化都需要通过 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 处理。</p>
+<p><code>logTaskHandler()</code>，将是我们用来作为任务处理器的函数，也是用作任务对象<code>handler</code>属性的值。它是一个简单的为每个任务向记录输出大量内容的函数。 在您自己的应用程序中，您可以将此代码替换为您希望在空闲时间执行的任何任务 。只要记住任何DOM变化都需要通过 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 处理。</p>
 
 <pre class="brush: js">function logTaskHandler(data) {
   log("&lt;strong&gt;Running task #" + currentTaskNumber + "&lt;/strong&gt;");
@@ -465,7 +465,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 <ul>
  <li><code>count</code> 是要从任务输出到记录中的字符串数量。</li>
- <li><code>text</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">是要输出到日志的文本（由</span></span><code>count</code><span class="tlid-translation translation" lang="zh-CN"><span title="">指定的次数）。</span></span></li>
+ <li><code>text</code> 是要输出到日志的文本（由<code>count</code>指定的次数）。</li>
 </ul>
 
 <p>我们调用<code>enqueueTask()</code>来将每个任务排入队列，将<code>logTaskHandler</code><code>()</code>传入作为处理函数，将<code>taskData</code>传入，待处理函数调用时传入其中。</p>

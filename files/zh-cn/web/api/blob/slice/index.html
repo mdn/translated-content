@@ -17,11 +17,11 @@ translation_of: Web/API/Blob/slice
 
 <dl>
  <dt><code>start</code> {{ optional_inline() }}</dt>
- <dd>这个参数代表 {{domxref("Blob")}} 里的下标，表示第一个会被会被拷贝进新的 {{domxref("Blob")}} 的字节的起始位置。如果你传入的是一个负数，那么这个偏移量将会从数据的末尾从后到前开始计算。举例来说, -10 将会是  {{domxref("Blob")}} 的倒数第十个字节。它的默认值是0， 如果你传入的<span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">start的长度大于源 </span><span style="line-height: 1.5;">{{domxref("Blob")}} 的长度，那么返回的</span><span style="line-height: 1.5;">将会是一个长度为0并且不包含任何数据的一个 </span><span style="line-height: 1.5;">{{domxref("Blob")}} 对象。</span></dd>
+ <dd>这个参数代表 {{domxref("Blob")}} 里的下标，表示第一个会被会被拷贝进新的 {{domxref("Blob")}} 的字节的起始位置。如果你传入的是一个负数，那么这个偏移量将会从数据的末尾从后到前开始计算。举例来说, -10 将会是  {{domxref("Blob")}} 的倒数第十个字节。它的默认值是0， 如果你传入的start的长度大于源 {{domxref("Blob")}} 的长度，那么返回的将会是一个长度为0并且不包含任何数据的一个 {{domxref("Blob")}} 对象。</dd>
  <dt><code>end</code> {{ optional_inline() }}</dt>
  <dd>这个参数代表的是 {{domxref("Blob")}} 的一个下标，这个下标-1的对应的字节将会是被拷贝进新的{{domxref("Blob")}} 的最后一个字节。如果你传入了一个负数，那么这个偏移量将会从数据的末尾从后到前开始计算。举例来说， -10 将会是 {{domxref("Blob")}} 的倒数第十个字节。它的默认值就是它的原始长度(<code>size</code>).</dd>
  <dt><code>contentType</code> {{ optional_inline() }}</dt>
- <dd>给新的 {{domxref("Blob")}} 赋予一个新的文档类型。这将会把它的 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">type 属性设为被传入的值。它的默认值是一个空的字符串。</span></dd>
+ <dd>给新的 {{domxref("Blob")}} 赋予一个新的文档类型。这将会把它的 type 属性设为被传入的值。它的默认值是一个空的字符串。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
