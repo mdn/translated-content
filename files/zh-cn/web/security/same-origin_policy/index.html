@@ -28,12 +28,12 @@ translation_of: Web/Security/Same-origin_policy
   <tr>
    <td><code>http://store.company.com/dir2/other.html</code></td>
    <td>同源</td>
-   <td><font face="consolas, Liberation Mono, courier, monospace">只有路径不同</font></td>
+   <td>只有路径不同</td>
   </tr>
   <tr>
    <td><code>http://store.company.com/dir/inner/another.html</code></td>
    <td>同源</td>
-   <td><font face="consolas, Liberation Mono, courier, monospace">只有路径不同</font></td>
+   <td>只有路径不同</td>
   </tr>
   <tr>
    <td><code>https://store.company.com/secure.html</code></td>
@@ -116,7 +116,7 @@ translation_of: Web/Security/Same-origin_policy
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/object" title="HTML/Element/object">&lt;object&gt;</a></code>、 <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/CSS/@font-face" title="CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨域字体（cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
- <li><font face="consolas, Liberation Mono, courier, monospace">通过</font> <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/iframe" title="HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
+ <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/iframe" title="HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
 </ul>
 
 <h3 id="如何允许跨源访问"><strong>如何允许跨源访问</strong></h3>
