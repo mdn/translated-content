@@ -117,7 +117,7 @@ if (elem.requestFullscreen) {
   }
 }</pre>
 
-<p>这段代码首先检查 {{DOMxRef("document")}} 的<code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms<font face="Arial, x-locale-body, sans-serif">、</font></code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用{{DOMxRef("element.requestFullscreen()")}}，可以切换到全屏模式。</p>
+<p>这段代码首先检查 {{DOMxRef("document")}} 的<code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms、</code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用{{DOMxRef("element.requestFullscreen()")}}，可以切换到全屏模式。</p>
 
 <p>如果全屏模式已经激活 (<code>fullscreenElement</code> 不为 <code>null</code>)，我们可以调用 {{DOMxRef("document.exitFullscreen()")}}（或其前缀化的版本，这取决于你使用的浏览器）。</p>
 

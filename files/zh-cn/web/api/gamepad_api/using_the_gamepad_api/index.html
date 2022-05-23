@@ -159,7 +159,7 @@ function pollGamepads() {
 
 <p>现在看主要的游戏循环。在每次我们所需的四个按钮被按下的时候进行处理。如果被按下了我就会适当地更新动量变量  <code>a</code> 和 <code>b</code> 的值，然后分别用 <code>a</code> 和 <code>b</code> 的值更新球的 {{ cssxref("left") }} 和 {{ cssxref("top") }} 属性。这样就可以在屏幕上移动数的位置了。在当前版本的 Chrome 中 (版本 34) button 的值是存储为数组的两个值，而不是 {{ domxref("GamepadButton") }} 对象。此问题已于开发者版本修复了。</p>
 
-<p>当这些处理好之后，我们使用我们的 <font face="Consolas, Monaco, Andale Mono, monospace"><code>requestAnimationFrame()</code></font> 来请求下一个动画帧，然后运行 <code>gameLoop()</code> 再继续执行。</p>
+<p>当这些处理好之后，我们使用我们的 <code>requestAnimationFrame()</code> 来请求下一个动画帧，然后运行 <code>gameLoop()</code> 再继续执行。</p>
 
 <pre class="brush: js">function buttonPressed(b) {
   if (typeof(b) == "object") {

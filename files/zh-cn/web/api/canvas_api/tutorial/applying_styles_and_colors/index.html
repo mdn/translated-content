@@ -439,9 +439,9 @@ var offset = 0;</code>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}</dt>
- <dd><font face="Source Code Pro Semibold">createLinearGradient</font> 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。</dd>
+ <dd>createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}</dt>
- <dd><font face="Source Code Pro Semibold">createRadialGradient</font> 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。</dd>
+ <dd>createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。</dd>
 </dl>
 
 <pre class="brush: js notranslate">var lineargradient = ctx.createLinearGradient(0,0,150,150);
@@ -452,7 +452,7 @@ var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
 
 <dl>
  <dt>{{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}</dt>
- <dd><font face="Source Code Pro Semibold">addColorStop</font> 方法接受 2 个参数，<code><font face="Source Code Pro Semibold">position</font></code> 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。<code><font face="Source Code Pro Semibold">color</font></code> 参数必须是一个有效的 CSS 颜色值（如 #FFF， rgba(0,0,0,1)，等等）。</dd>
+ <dd>addColorStop 方法接受 2 个参数，<code>position</code> 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。<code>color</code> 参数必须是一个有效的 CSS 颜色值（如 #FFF， rgba(0,0,0,1)，等等）。</dd>
 </dl>
 
 <p>你可以根据需要添加任意多个色标（color stops）。下面是最简单的线性黑白渐变的例子。</p>
@@ -551,7 +551,7 @@ lineargradient.addColorStop(1,'black');
 
 <p>这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。</p>
 
-<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，<code><font face="Source Code Pro Semibold">#019F62 = rgba(1,159,98,1)。</font></code></p>
+<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，<code>#019F62 = rgba(1,159,98,1)。</code></p>
 
 <p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
 
@@ -561,7 +561,7 @@ lineargradient.addColorStop(1,'black');
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}</dt>
- <dd>该方法接受两个参数。Image 可以是一个 <code><font face="Source Code Pro Semibold">Image</font></code> 对象的引用，或者另一个 canvas 对象。<code>Type</code> 必须是下面的字符串值之一：<code><font face="Source Code Pro Semibold">repeat</font></code>，<code><font face="Source Code Pro Semibold">repeat-x</font></code>，<code><font face="Source Code Pro Semibold">repeat-y</font></code> 和 <code><font face="Source Code Pro Semibold">no-repeat</font></code>。</dd>
+ <dd>该方法接受两个参数。Image 可以是一个 <code>Image</code> 对象的引用，或者另一个 canvas 对象。<code>Type</code> 必须是下面的字符串值之一：<code>repeat</code>，<code>repeat-x</code>，<code>repeat-y</code> 和 <code>no-repeat</code>。</dd>
 </dl>
 
 <div class="note"><strong>注意:</strong> 用 canvas 对象作为 <code>Image</code> 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。</div>
@@ -613,14 +613,14 @@ var ptrn = ctx.createPattern(img,'repeat');
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}</dt>
  <dd>
- <p><code><font face="Source Code Pro Semibold">shadowOffsetX</font></code> 和 <code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</p>
+ <p><code>shadowOffsetX</code> 和 <code>shadowOffsetY </code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</p>
  </dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowOffsetX</font> 和 <code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
+ <dd>shadowOffsetX 和 <code>shadowOffsetY </code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowBlur</font> 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
+ <dd>shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code>0</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowColor</font> 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
+ <dd>shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
 </dl>
 
 <h3 id="A_shadowed_text_example" name="A_shadowed_text_example">文字阴影的例子</h3>

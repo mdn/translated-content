@@ -66,7 +66,7 @@ translation_of: Web/API/IndexedDB_API
  <dt>{{domxref("IDBObjectStore")}}</dt>
  <dd>表示允许访问通过主键查找的 IndexedDB 数据库中的一组数据的对象存储区。</dd>
  <dt>{{domxref("IDBIndex")}}</dt>
- <dd><font><font>也是为了允许访问 IndexedDB 数据库中的数据子集，但使用索引来检索记录而不是主键。</font><font>这有时比使用 </font></font><a href="/zh-CN/docs/Web/API/IDBObjectStore">IDBObjectStore</a> 更快<font><font>。</font></font></dd>
+ <dd>也是为了允许访问 IndexedDB 数据库中的数据子集，但使用索引来检索记录而不是主键。这有时比使用 <a href="/zh-CN/docs/Web/API/IDBObjectStore">IDBObjectStore</a> 更快。</dd>
  <dt>{{domxref("IDBCursor")}}</dt>
  <dd>迭代对象存储和索引。</dd>
  <dt>{{domxref("IDBCursorWithValue")}}</dt>
@@ -85,10 +85,10 @@ translation_of: Web/API/IndexedDB_API
  <dt>
  <h3 id="过时的接口">过时的接口</h3>
 
- <p><font>规范的早期版本还定义了这些现在已删除的接口。这些文档便于您需要更新以前编写的代码</font>：</p>
+ <p>规范的早期版本还定义了这些现在已删除的接口。这些文档便于您需要更新以前编写的代码：</p>
  </dt>
  <dt>{{domxref("IDBVersionChangeRequest")}} {{obsolete_inline}}</dt>
- <dd><font>表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用</font>{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。</dd>
+ <dd>表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。</dd>
  <dt>{{domxref("IDBDatabaseException")}}  {{obsolete_inline}}</dt>
  <dd>表示执行数据库操作时可能遇到的异常情况。</dd>
  <dt>{{domxref("IDBTransactionSync")}} {{obsolete_inline}}</dt>
@@ -146,7 +146,7 @@ translation_of: Web/API/IndexedDB_API
  <li><a href="http://www.dexie.org/">Dexie.js</a>：IndexedDB 的包装，通过简单的语法，可以更快地进行代码开发。</li>
  <li><a href="https://github.com/erikolson186/zangodb">ZangoDB</a>：类似 MongoDB 的 IndexedDB 接口，支持 MongoDB 的大多数熟悉的过滤、投影、排序、更新和聚合功能。</li>
  <li><a href="http://jsstore.net/">JsStore</a>：一个带有 SQL 语法的 IndexedDB 包装器。</li>
- <li><a href="https://github.com/mWater/minimongo">MiniMongo</a>：<font>由 localstorage 支持的客户端内存中的 mongodb，通过 http 进行服务器同步。</font><font>MeteorJS 使用 MiniMongo。</font></li>
+ <li><a href="https://github.com/mWater/minimongo">MiniMongo</a>：由 localstorage 支持的客户端内存中的 mongodb，通过 http 进行服务器同步。MeteorJS 使用 MiniMongo。</li>
  <li><a href="https://pouchdb.com/">PouchDB</a>：使用 IndexedDB 在浏览器中实现 CouchDB 的客户端。</li>
  <li><a href="https://www.npmjs.com/package/idb">idb</a>：一个微小的（〜1.15k）库，大多 API 与 IndexedDB 类似，但做了一些小的改进，让数据库的可用性得到了大大的提升。</li>
  <li><a href="https://www.npmjs.com/package/idb-keyval">idb-keyval</a>：使用 IndexedDB 实现的超级简单且小巧的（~600B）基于 Promise 的键值对存储。</li>
