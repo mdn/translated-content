@@ -48508,13 +48508,6 @@
       "silverskyvicto"
     ]
   },
-  "orphaned/Building_a_Mozilla_Distribution": {
-    "modified": "2019-03-23T23:49:07.062Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "orphaned/Code_snippets/Toolbar": {
     "modified": "2019-03-23T23:46:21.932Z",
     "contributors": [
@@ -48582,13 +48575,6 @@
       "RobinEgg"
     ]
   },
-  "orphaned/Mozilla_Modules_and_Module_Ownership": {
-    "modified": "2019-01-16T15:50:48.596Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": [
@@ -48638,14 +48624,6 @@
       "Kohei",
       "Mgjbot",
       "Taken"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector/DOM_Inspector_FAQ": {
-    "modified": "2020-07-16T22:36:25.610Z",
-    "contributors": [
-      "wbamberg",
-      "Kohei",
-      "Mgjbot"
     ]
   },
   "orphaned/Tools/Add-ons/DOM_Inspector/Internals": {
@@ -49188,15 +49166,6 @@
       "Marsf"
     ]
   },
-  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2020-01-19T16:30:15.396Z",
-    "contributors": [
-      "mfuji09",
-      "teoli",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-08-09T13:53:14.893Z",
     "contributors": [
@@ -49504,12 +49473,6 @@
     "contributors": [
       "fscholz",
       "ethertank"
-    ]
-  },
-  "orphaned/ant_script_to_assemble_an_extension": {
-    "modified": "2019-08-11T02:17:04.841Z",
-    "contributors": [
-      "Marsf"
     ]
   },
   "orphaned/reftest_opportunities_files": {
