@@ -10,7 +10,7 @@ translation_of: Web/API/Range/endOffset
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p><span style="line-height: 1.5;">只读属性</span> <code><strong>Range.endOffset</strong></code> 返回代表<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">Range</code><span style="line-height: 1.5;"> 结束位置在 </span>{{domxref("Range.endContainer")}} <span style="line-height: 1.5;">中的偏移值的数字。</span></p>
+<p>只读属性 <code><strong>Range.endOffset</strong></code> 返回代表 <code style="font-style: normal; line-height: 1.5;">Range</code> 结束位置在 {{domxref("Range.endContainer")}} 中的偏移值的数字。</p>
 
 <p>如果 <code>endContainer</code> 的 {{domxref("Node")}} 类型为 {{domxref("Text")}}, {{domxref("Comment")}}，或 {{domxref("CDATASection")}}，偏移值是 <code>endContainer</code> 节点开头到 {{domxref("Range")}} 末尾的总字符个数。对其他类型的 {{domxref("Node")}} ， <code>endOffset</code> 指 <code>endContainer</code> 开头到 {{domxref("Range")}} 末尾的总 {{domxref("Node")}} 个数。如需修改 <code>endOffset</code> 的值， 使用 {{domxref("Range.setEnd")}} 方法。</p>
 

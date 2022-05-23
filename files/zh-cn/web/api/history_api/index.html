@@ -60,7 +60,7 @@ translation_of: Web/API/History_API
 
 <h3 id="pushState_方法的例子">pushState() 方法的例子</h3>
 
-<p><span class="nowiki">假设在 http://mozilla.org/foo.html</span> 页面的console中执行了以下 JavaScript 代码:</p>
+<p>假设在 http://mozilla.org/foo.html 页面的console中执行了以下 JavaScript 代码:</p>
 
 <pre class="brush: js notranslate">window.onpopstate = function(e) {
    alert(2);
@@ -73,13 +73,13 @@ let stateObj = {
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>这将使浏览器地址栏显示为 <span class="nowiki">http://mozilla.org/bar.html，但并不会导致浏览器加载 </span><code>bar.html</code> ，甚至不会检查<code>bar.html</code> 是否存在。</p>
+<p>这将使浏览器地址栏显示为 http://mozilla.org/bar.html，但并不会导致浏览器加载 <code>bar.html</code> ，甚至不会检查<code>bar.html</code> 是否存在。</p>
 
 <p>假如现在用户在bar.html点击了返回按钮，将会执行alert(2)。</p>
 
-<p><span class="nowiki">假设现在用户在bar.html又访问了 http://google.com</span>，然后点击了返回按钮。此时，地址栏将显示 <span class="nowiki">http://mozilla.org/bar.html，<code>history.</code></span><code>state</code> 中包含了 <code>stateObj</code> 的一份拷贝。页面此时展现为<font face='consolas,"Liberation Mono",courier,monospace'><font><code>bar.html</code></font></font>。且因为页面被重新加载了，所以<code>popstate</code>事件将不会被触发，也不会执行alert(2)。</p>
+<p>假设现在用户在bar.html又访问了 http://google.com，然后点击了返回按钮。此时，地址栏将显示 http://mozilla.org/bar.html，<code>history.</code><code>state</code> 中包含了 <code>stateObj</code> 的一份拷贝。页面此时展现为<font face='consolas,"Liberation Mono",courier,monospace'><font><code>bar.html</code></font></font>。且因为页面被重新加载了，所以<code>popstate</code>事件将不会被触发，也不会执行alert(2)。</p>
 
-<p>如果我们再次点击返回按钮，页面URL会变为<span class="nowiki">http://mozilla.org/foo.html，文档对象</span>document会触发另外一个 <code>popstate</code> 事件(如果有bar.html，且bar.html注册了onpopstate事件，将会触发此事件，因此也不会执行foo页面注册的onpopstate事件，也就是不会执行alert(2))，这一次的事件对象state object为null。 这里也一样，返回并不改变文档的内容，尽管文档在接收 <code>popstate</code> 事件时可能会改变自己的内容，其内容仍与之前的展现一致。</p>
+<p>如果我们再次点击返回按钮，页面URL会变为http://mozilla.org/foo.html，文档对象document会触发另外一个 <code>popstate</code> 事件(如果有bar.html，且bar.html注册了onpopstate事件，将会触发此事件，因此也不会执行foo页面注册的onpopstate事件，也就是不会执行alert(2))，这一次的事件对象state object为null。 这里也一样，返回并不改变文档的内容，尽管文档在接收 <code>popstate</code> 事件时可能会改变自己的内容，其内容仍与之前的展现一致。</p>
 
 <p>如果我们再次点击返回按钮，页面URL变为其他页面的url，依然不会执行alert(2)。因为在返回到foo页面的时候并没有pushState。</p>
 
@@ -128,7 +128,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h3 id="replaceState_方法示例">replaceState() 方法示例</h3>
 
-<p>假设 <span class="nowiki">http://mozilla.org/foo.html</span> 执行了如下JavaScript代码：</p>
+<p>假设 http://mozilla.org/foo.html 执行了如下JavaScript代码：</p>
 
 <pre class="brush: js notranslate">let stateObj = {
     foo: "bar",
@@ -137,14 +137,14 @@ history.pushState(stateObj, "page 2", "bar.html");
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>上文2行代码可以在 "pushState()方法示例" 部分找到。然后，假设<span class="nowiki">http://mozilla.org/bar.html执行了如下</span> JavaScript：</p>
+<p>上文2行代码可以在 "pushState()方法示例" 部分找到。然后，假设http://mozilla.org/bar.html执行了如下 JavaScript：</p>
 
 <pre class="brush: js notranslate">history.replaceState(stateObj, "page 3", "bar2.html");
 </pre>
 
-<p>这将会导致地址栏显示<span class="nowiki">http://mozilla.org/bar2.html</span>,，但是浏览器并不会去加载<code>bar2.html</code> 甚至都不需要检查 <code>bar2.html</code> 是否存在。</p>
+<p>这将会导致地址栏显示http://mozilla.org/bar2.html,，但是浏览器并不会去加载<code>bar2.html</code> 甚至都不需要检查 <code>bar2.html</code> 是否存在。</p>
 
-<p>假设现在用户重新导向到了<span class="nowiki">http://www.microsoft.com，然后点击了回退按钮。这里，地址栏会显示</span><span class="nowiki">http://mozilla.org/bar2.html。假如用户再次点击回退按钮，地址栏会显示http://mozilla.org/foo.html，完全跳过了bar.html。</span></p>
+<p>假设现在用户重新导向到了http://www.microsoft.com，然后点击了回退按钮。这里，地址栏会显示http://mozilla.org/bar2.html。假如用户再次点击回退按钮，地址栏会显示http://mozilla.org/foo.html，完全跳过了bar.html。</p>
 
 <h3 id="popstate_事件">popstate 事件</h3>
 
@@ -154,7 +154,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h3 id="获取当前状态">获取当前状态</h3>
 
-<p>        页面加载时，或许会有个非null的状态对象。这是有可能发生的，举个例子，假如页面（通过<code>pushState()</code> 或 <code>replaceState()</code> 方法）设置了状态对象而后用户重启了浏览器。那么当页面重新加载时，页面会接收一个<span style="font-family: courier new;">onload事件，但没有</span><span style="font-family: helvetica;"> <span style="font-family: courier new;">popstate</span> 事件。然而，假如你读取了</span><span style="font-family: courier new;">history.state属性，你将会得到如同</span><span style="font-family: courier new;">popstate</span> 被触发时能得到的状态对象。</p>
+<p>        页面加载时，或许会有个非null的状态对象。这是有可能发生的，举个例子，假如页面（通过<code>pushState()</code> 或 <code>replaceState()</code> 方法）设置了状态对象而后用户重启了浏览器。那么当页面重新加载时，页面会接收一个onload事件，但没有 popstate 事件。然而，假如你读取了history.state属性，你将会得到如同popstate 被触发时能得到的状态对象。</p>
 
 <p>你可以读取当前历史记录项的状态对象state，而不必等待<code>popstate</code> 事件， 只需要这样使用<code>history.state</code> 属性： </p>
 

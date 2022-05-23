@@ -59,7 +59,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>{{ EmbedLiveSample('示例', 250, 100) }}</p>
 
-<h2 id="注意"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.5rem;'>注意</span></h2>
+<h2 id="注意">注意</h2>
 
 <p>对 “Id” 的拼写一定要正确。如果大小写不匹配，无论看起来多么合情合理，<code>getElementByID()</code> 都是不合理的且永远都不会工作的。</p>
 
@@ -89,7 +89,7 @@ translation_of: Web/API/Document/getElementById
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>如果没有查找到对应的元素，方法会返回null。注意ID参数是大小写敏感的，所以<span style="font-family: consolas,monaco,andale mono,monospace;">document.getElementById("</span><strong style="font-family: consolas,monaco,andale mono,monospace;">M</strong><span style="font-family: consolas,monaco,andale mono,monospace;">ain")无法获取到元素&lt;div id="</span><strong style="font-family: consolas,monaco,andale mono,monospace;">m</strong><span style="font-family: consolas,monaco,andale mono,monospace;">ain"&gt;，因为'M'和'm'是不一样的。</span></p>
+<p>如果没有查找到对应的元素，方法会返回null。注意ID参数是大小写敏感的，所以document.getElementById("<strong style="font-family: consolas,monaco,andale mono,monospace;">M</strong>ain")无法获取到元素&lt;div id="<strong style="font-family: consolas,monaco,andale mono,monospace;">m</strong>ain"&gt;，因为'M'和'm'是不一样的。</p>
 
 <p>getElementById方法不会搜索<strong>不在文档中的元素。</strong>当创建一个元素，并且分配ID后，你必须要使用<a href="/en-US/docs/DOM/Node.insertBefore" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en-US/docs/DOM/Node.insertBefore">insertBefore</a>或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到:</p>
 
@@ -142,6 +142,6 @@ var el = document.getElementById('testqq'); // el 是个 null
 
 <ul>
  <li><a href="/zh-CN/docs/DOM/document" title="en-US/docs/DOM/document">document</a> 包含其他用于在文档中查找元素的方法</li>
- <li><a href="/zh-CN/docs/Web/API/document.querySelector">document.querySelector()</a> 类似<span style="font-family: consolas,monaco,andale mono,monospace;">'div.myclass'的元素的选择</span></li>
+ <li><a href="/zh-CN/docs/Web/API/document.querySelector">document.querySelector()</a> 类似'div.myclass'的元素的选择</li>
  <li><a href="/zh-CN/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> - has a utility method for allowing <code>getElementById</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
 </ul>

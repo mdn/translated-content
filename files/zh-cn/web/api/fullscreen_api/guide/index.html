@@ -16,7 +16,7 @@ original_slug: Web/API/Fullscreen_API/指南
 ---
 <div>{{DefaultAPISidebar("Fullscreen API")}}</div>
 
-<p><span class="seoSummary">本文主要说明如何使用全屏API将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。</span></p>
+<p>本文主要说明如何使用全屏API将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。</p>
 
 <h2 id="激活全屏模式">激活全屏模式</h2>
 
@@ -117,7 +117,7 @@ if (elem.requestFullscreen) {
   }
 }</pre>
 
-<p>这段代码首先检查 {{DOMxRef("document")}} 的<code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用{{DOMxRef("element.requestFullscreen()")}}，可以切换到全屏模式。</p>
+<p>这段代码首先检查 {{DOMxRef("document")}} 的<code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms<font face="Arial, x-locale-body, sans-serif">、</font></code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用{{DOMxRef("element.requestFullscreen()")}}，可以切换到全屏模式。</p>
 
 <p>如果全屏模式已经激活 (<code>fullscreenElement</code> 不为 <code>null</code>)，我们可以调用 {{DOMxRef("document.exitFullscreen()")}}（或其前缀化的版本，这取决于你使用的浏览器）。</p>
 

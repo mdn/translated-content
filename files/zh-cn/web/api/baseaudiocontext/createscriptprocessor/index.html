@@ -28,11 +28,11 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 </dl>
 
 <div class="warning">
-<p><span style="font-size: 14px;"><strong>重要</strong></span>: Webkit (version 31)要求调用这个方法的时候必须传入一个有效的bufferSize .</p>
+<p><strong>重要</strong>: Webkit (version 31)要求调用这个方法的时候必须传入一个有效的bufferSize .</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: <code>numberOfInputChannels<font face="Open Sans, Arial, sans-serif">和</font></code><code>numberOfOutputChannels的值不能同时为0，二者同时为0是无效的</code></p>
+<p><strong>注意</strong>: <code>numberOfInputChannels<font face="Open Sans, Arial, sans-serif">和</font></code><code>numberOfOutputChannels的值不能同时为0，二者同时为0是无效的</code></p>
 </div>
 
 <h3 id="Description" name="Description">返回</h3>
@@ -44,7 +44,7 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 <p><code><font face="Open Sans, Arial, sans-serif">下面的例子展示了一个</font>ScriptProcessorNode的基本用法，数据源取自</code> {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放(其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，<code>scriptNode.onaudioprocess方法<font face="Open Sans, Arial, sans-serif">关联</font></code><code>audioProcessingEvent</code> ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
+<p><strong>注意</strong>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
 </div>
 
 <pre class="brush: js">var myScript = document.querySelector('script');

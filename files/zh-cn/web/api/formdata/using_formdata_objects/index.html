@@ -11,7 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/Using_FormData_Objects
 ---
-<p class="summary">FormData对象用以将数据编译成键值对，以便用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据(keyed data)，而独立于表单使用。如果表单<code>enctype</code>属性设为<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">multipart/form-data</span></font> ，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。</p>
+<p class="summary">FormData对象用以将数据编译成键值对，以便用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据(keyed data)，而独立于表单使用。如果表单<code>enctype</code>属性设为<font face="consolas, Liberation Mono, courier, monospace">multipart/form-data</font> ，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。</p>
 
 <h2 id="从零开始创建FormData对象">从零开始创建FormData对象</h2>
 
@@ -112,7 +112,7 @@ form.addEventListener('submit', function(ev) {
 </pre>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意：</strong></span>如果FormData对象是通过表单创建的，则表单中指定的请求方式会被应用到方法open()中 。</p>
+<p><strong>注意：</strong>如果FormData对象是通过表单创建的，则表单中指定的请求方式会被应用到方法open()中 。</p>
 </div>
 
 <p>你还可以直接向FormData对象附加File或Blob类型的文件，如下所示：</p>

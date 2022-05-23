@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 <h2 id="Colors" name="Colors">色彩 Colors</h2>
 
-<p>到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：<code>fillStyle</code> <span>和 </span><code>strokeStyle。</code></p>
+<p>到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：<code>fillStyle</code> 和 <code>strokeStyle。</code></p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
@@ -89,7 +89,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
 
-<h2 id="Transparency" name="Transparency">透明度 <span>Transparency</span></h2>
+<h2 id="Transparency" name="Transparency">透明度 Transparency</h2>
 
 <p>除了可以绘制实色图形，我们还可以用 canvas 来绘制半透明的图形。通过设置 <code>globalAlpha</code> 属性或者使用一个半透明颜色作为轮廓或填充的样式。</p>
 
@@ -102,8 +102,8 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p>因为 <code>strokeStyle</code> 和 <code>fillStyle</code> 属性接受符合 CSS 3 规范的颜色值，那我们可以用下面的写法来设置具有透明度的颜色。</p>
 
-<pre class="brush: js notranslate">// <span>指定</span><span>透明颜色，用于描边</span><span>和</span><span>填充样式
-</span>ctx.strokeStyle = "rgba(255,0,0,0.5)";
+<pre class="brush: js notranslate">// 指定透明颜色，用于描边和填充样式
+ctx.strokeStyle = "rgba(255,0,0,0.5)";
 ctx.fillStyle = "rgba(255,0,0,0.5)";
 </pre>
 
@@ -148,7 +148,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <h3 id="An_example_using_rgba" name="An_example_using_rgba"><code>rgba()</code> 示例</h3>
 
-<p>第二个例子和上面那个类似，不过不是画圆，而是画矩形。这里还可以看出，rgba() 可以分别设置轮廓和填充样式，因而具有更好的可操作性和使用<span class="hps">灵活性</span>。</p>
+<p>第二个例子和上面那个类似，不过不是画圆，而是画矩形。这里还可以看出，rgba() 可以分别设置轮廓和填充样式，因而具有更好的可操作性和使用灵活性。</p>
 
 <pre class="brush: js notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -191,14 +191,14 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
  <dt>{{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}</dt>
  <dd>设置线条末端样式。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}</dt>
- <dd><span>设定线条与线条间接合处的样式</span>。</dd>
+ <dd>设定线条与线条间接合处的样式。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}</dt>
- <dd><span>限制当两条线相交时交接处最大长度</span><span>；</span><span>所谓交接处长度</span><span>（</span><span>斜接长度</span><span>）</span><span>是指线条交接处内角顶点到外角顶点的长度</span><span>。</span></dd>
+ <dd>限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}</dt>
- <dd>返回一个包含当前虚线样式，长度为非负<span>偶数的</span>数组。</dd>
+ <dd>返回一个包含当前虚线样式，长度为非负偶数的数组。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}</dt>
  <dd>设置当前虚线样式。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</dt>
@@ -551,7 +551,7 @@ lineargradient.addColorStop(1,'black');
 
 <p>这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。</p>
 
-<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的<span style="font-family: monospace;">，</span><code><font face="Source Code Pro Semibold">#019F62 = rgba(1,159,98,1)。</font></code></p>
+<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，<code><font face="Source Code Pro Semibold">#019F62 = rgba(1,159,98,1)。</font></code></p>
 
 <p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
 
@@ -613,10 +613,10 @@ var ptrn = ctx.createPattern(img,'repeat');
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}</dt>
  <dd>
- <p><code><font face="Source Code Pro Semibold">shadowOffsetX</font></code> <span style="font-family: monospace;">和 </span><code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</p>
+ <p><code><font face="Source Code Pro Semibold">shadowOffsetX</font></code> 和 <code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</p>
  </dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowOffsetX</font> <span style="font-family: monospace;">和 </span><code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
+ <dd><font face="Source Code Pro Semibold">shadowOffsetX</font> 和 <code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
  <dd><font face="Source Code Pro Semibold">shadowBlur</font> 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
