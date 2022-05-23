@@ -345,17 +345,17 @@ snape.subject; // Dark arts
 <p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html">es2015-class-inheritance.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html">see it live also</a>).</p>
 </div>
 
-<h2 id="Getters_and_Setters">Getters and Setters</h2>
+<h2 id="Getters_and_Setters">Getters和Setters</h2>
 
-<p>There may be times when we want to change the values of an attribute in the classes we create or we don't know what the final value of an attribute will be. Using the <code>Teacher</code> example, we may not know what subject the teacher will teach before we create them, or their subject may change between terms.</p>
+<p>有时我们可能想更改我们创建的类中属性的值，或者我们不知道属性的最终值是什么。 使用 <code>Teacher</code> 示例，我们可能在创建教师之前不知道教师将教授什么科目，或者他们的科目可能会在不同学期之间发生变化。</p>
 
-<p>We can handle such situations with getters and setters.</p>
+<p>我们可以使用 getter 和 setter 来处理这种情况。</p>
 
-<p>Let's enhance the Teacher class with getters and setters. The class starts the same as it was the last time we looked at it.</p>
+<p>让我们用 getter 和 setter 来增强 Teacher 类。 课程开始时与我们上次查看时相同。</p>
 
-<p>Getters and setters work in pairs. A getter returns the current value of the variable and its corresponding setter changes the value of the variable to the one it defines.</p>
+<p>Getter 和 setter 成对工作。 getter 返回变量的当前值，其对应的 setter 将变量的值更改为它定义的值。</p>
 
-<p>The modified <code>Teacher</code> class looks like this:</p>
+<p>修改后的<code>Teacher</code>类如下：</p>
 
 <pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
@@ -375,14 +375,15 @@ snape.subject; // Dark arts
 }
 </pre>
 
-<p>In our class above we have a getter and setter for the <code>subject</code> property. We use <strong><code>_</code></strong> to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:</p>
+<p>在我们上面的类中，我们有一个用于 <code>subject</code> 属性的 getter 和 setter。 我们使用 <strong><code>_</code></strong> 创建一个单独的值来存储我们的 name 属性。 如果不使用这个约定，每次调用 get 或 set 时都会出错。 此时：</p>
 
 <ul>
-	<li>To show the current value of the <code>_subject</code> property of the <code>snape</code> object we can use the <code>snape.subject</code> getter method.</li>
-	<li>To assign a new value to the <code>_subject</code> property we can use the <code>snape.subject="new value"</code> setter method.</li>
+        <li>要显示 <code>snape</code> 对象的 <code>_subject</code> 属性的当前值，我们可以使用 <code>snape.subject</code> getter 方法。</li >
+	<li>要为 <code>_subject</code> 属性分配新值，我们可以使用 <code>snape.subject="new value"</code> 设置方法。</li>
+
 </ul>
 
-<p>The example below shows the two features in action:</p>
+<p>下面的例子展示了这两个功能的作用：</p>
 
 <pre class="brush: js">// Check the default value
 console.log(snape.subject) // Returns "Dark arts"
@@ -395,11 +396,11 @@ console.log(snape.subject) // Returns "Balloon animals"
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html">es2015-getters-setters.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html">see it live also</a>).</p>
+<p><strong>注意</strong>：你可以在 GitHub 上找到这个例子 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015 -getters-setters.html">es2015-getters-setters.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters .html">也可以预览</a>)。</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Getters and setters can be very useful at times, for example when you want to run some code every time a property is requested or set. For simple cases, however, plain property access without a getter or setter will do just fine.</p>
+<p><strong>注意：</strong> Getter 和 setter 有时非常有用，例如，当您希望在每次请求或设置属性时运行一些代码时。 然而，对于简单的情况，没有 getter 或 setter 的普通属性访问就可以了。</p>
 </div>
 
 <h2 id="何时在_JavaScript_中使用继承？">何时在 JavaScript 中使用继承？</h2>
