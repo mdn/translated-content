@@ -203,7 +203,7 @@ button.addEventListener('click', async () => {
 });
 ```
 
-{{EmbedLiveSample("在 alarm() API 上使用 async 和 await", "100%", 600, 160)}}
+{{EmbedLiveSample("在 alarm() API 上使用 async 和 await", 600, 160)}}
 
 ## 参见
 
