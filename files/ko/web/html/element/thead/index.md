@@ -11,6 +11,8 @@ tags:
 browser-compat: html.elements.thead
 ---
 
+{{HTMLRef}}
+
 **`<thead>`** [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열의 머리글인 행들의 집합입니다.
 
 {{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
@@ -88,7 +90,7 @@ browser-compat: html.elements.thead
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
-  - : 이 특성은 열의 각 셀의 배경색을 정의합니다. 앞에 '#'을 붙인 It is one of the 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) 6자리 16진수 코드입니다. 미리 정의된 16개의 색상 문자열을 사용할 수도 있습니다.
+  - : 이 특성은 열의 각 셀의 배경색을 정의합니다. 앞에 '#'을 붙인 [sRGB](https://www.w3.org/Graphics/Color/sRGB) 6자리 16진수 코드입니다. 미리 정의된 16개의 색상 문자열을 사용할 수도 있습니다.
 
     - `black` = "#000000"
     - `green` = "#008000"
@@ -149,5 +151,5 @@ browser-compat: html.elements.thead
 - 테이블과 관련된 다른 HTML 요소들: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}.
 - `<thead>` 요소에 스타일을 지정할 때 특히 유용할 CSS 속성과 가상 클래스들:
 
-  - 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스;
+  - 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스.
   - '.'같은 동일한 문자에 모든 셀 내용을 정렬할 때 사용하는 {{cssxref("text-align")}} 속성.
