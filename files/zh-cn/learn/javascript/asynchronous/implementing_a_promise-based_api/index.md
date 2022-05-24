@@ -63,7 +63,7 @@ function setAlarm() {
 button.addEventListener('click', setAlarm);
 ```
 
-{{EmbedLiveSample("用 setTimeout() 包裹", "100%", 600, 100)}}
+{{EmbedLiveSample("用 setTimeout() 包裹", 600, 100)}}
 
 ### Promise() 构造器
 
