@@ -17,11 +17,11 @@ translation_of: Web/API/Cache/add
 <p>对于更复杂的操作，您可以直接使用{{domxref("Cache.put","Cache.put()")}}这个API。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: <code>add()</code> 将会覆盖之前存储在cache中与request匹配的任何key/value对。</p>
+<p><strong>注意</strong>: <code>add()</code> 将会覆盖之前存储在cache中与request匹配的任何key/value对。</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 之前的Cache  (Blink 和 Gecko内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在response结果完全写入缓存后才会resolve当前的promise。更新后的规范版本中一旦条目被记录到数据库就会resolve当前的promise，即使当前response结果还在传输中。</p>
+<p><strong>注意</strong>: 之前的Cache  (Blink 和 Gecko内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在response结果完全写入缓存后才会resolve当前的promise。更新后的规范版本中一旦条目被记录到数据库就会resolve当前的promise，即使当前response结果还在传输中。</p>
 </div>
 
 <h2 id="语法">语法</h2>

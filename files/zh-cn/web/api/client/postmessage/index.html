@@ -28,32 +28,32 @@ translation_of: Web/API/Client/postMessage
 
 <p>从 service worker 向 client 发送消息：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'fetch'</span><span class="punctuation token">,</span> <span class="parameter token">event</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  event<span class="punctuation token">.</span><span class="function token">waitUntil</span><span class="punctuation token">(</span><span class="keyword token">async</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// Exit early if we don't have access to the client.</span>
-    <span class="comment token">// Eg, if it's cross-origin.</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>event<span class="punctuation token">.</span>clientId<span class="punctuation token">)</span> <span class="keyword token">return</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">addEventListener('fetch', event =&gt; {
+  event.waitUntil(async function() {
+    // Exit early if we don't have access to the client.
+    // Eg, if it's cross-origin.
+    if (!event.clientId) return;
 
-    <span class="comment token">// Get the client.</span>
-    <span class="keyword token">const</span> client <span class="operator token">=</span> <span class="keyword token">await</span> clients<span class="punctuation token">.</span><span class="function token">get</span><span class="punctuation token">(</span>event<span class="punctuation token">.</span>clientId<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="comment token">// Exit early if we don't get the client.</span>
-    <span class="comment token">// Eg, if it closed.</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>client<span class="punctuation token">)</span> <span class="keyword token">return</span><span class="punctuation token">;</span>
+    // Get the client.
+    const client = await clients.get(event.clientId);
+    // Exit early if we don't get the client.
+    // Eg, if it closed.
+    if (!client) return;
 
-    <span class="comment token">// Send a message to the client.</span>
-    client<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-      msg<span class="punctuation token">:</span> <span class="string token">"Hey I just got a fetch from you!"</span><span class="punctuation token">,</span>
-      url<span class="punctuation token">:</span> event<span class="punctuation token">.</span>request<span class="punctuation token">.</span>url
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    // Send a message to the client.
+    client.postMessage({
+      msg: "Hey I just got a fetch from you!",
+      url: event.request.url
+    });
 
-  <span class="punctuation token">}</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  }());
+});</code></pre>
 
-<p><span class="punctuation token">接收message:</span></p>
+<p>接收message:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator<span class="punctuation token">.</span>serviceWorker<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'message'</span><span class="punctuation token">,</span> <span class="parameter token">event</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>event<span class="punctuation token">.</span>data<span class="punctuation token">.</span>msg<span class="punctuation token">,</span> event<span class="punctuation token">.</span>data<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code> </pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.serviceWorker.addEventListener('message', event =&gt; {
+  console.log(event.data.msg, event.data.url);
+});</code> </pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -53,7 +53,7 @@ translation_of: Web/API/Node/textContent
    <li>此外，由于 <code>innerText</code> 受 CSS 样式的影响，它会触发回流（ <a href="/zh-CN/docs/Glossary/Reflow">reflow</a> ）去确保是最新的计算样式。（回流在计算上可能会非常昂贵，因此应尽可能避免。）</li>
   </ul>
  </li>
- <li><font face="Open Sans, Arial, sans-serif">与 </font><code>textContent</code> 不同的是, 在 Internet Explorer (小于和等于 11 的版本) 中对 <code>innerText</code> 进行修改， 不仅会移除当前元素的子节点，而且还会<em>永久性地破坏</em>所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
+ <li>与 <code>textContent</code> 不同的是, 在 Internet Explorer (小于和等于 11 的版本) 中对 <code>innerText</code> 进行修改， 不仅会移除当前元素的子节点，而且还会<em>永久性地破坏</em>所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
 </ul>
 
 <h3 id="与_innerHTML_的区别">与 <strong>innerHTML </strong>的区别</h3>

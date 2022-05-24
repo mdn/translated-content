@@ -172,57 +172,36 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <p>我想让你开发一个猜数字游戏。游戏应随机选择一个 100 以内的自然数, 然后邀请玩家在 10 轮以内猜出这个数字。每轮后都应告知玩家的答案正确与否，如果出错了，则告诉他数字是低了还是高了。并且应显示出玩家前一轮所猜的数字。一旦玩家猜对，或者用尽所有机会，游戏将结束。游戏结束后，可以让玩家选择再次开始。</p>
 </blockquote>
 
-<p><span title="Upon looking at this brief, the first thing we can do is to start breaking it down into simple actionable tasks, in as much of a programmer mindset as possible:
-
-    ">看到这个要求，首先我们要做的是将其分解成简单的可操作的任务，尽可能从程序员的思维去思考：</span></p>
+<p>看到这个要求，首先我们要做的是将其分解成简单的可操作的任务，尽可能从程序员的思维去思考：</p>
 
 <ol>
- <li>随机<span title="Generate a random number between 1 and 100.
-    ">生成一个 100 以内的自然数。</span></li>
- <li>记录玩家当前的轮数。<span title="Start it on 1.
-    ">从 1 开始。</span></li>
- <li><span title="Provide the player with a way to guess what the number is.
-    ">为玩家提供一种猜测数字的方法。</span></li>
- <li><span title="Once a guess has been submitted first record it somewhere so the user can see their previous guesses.
-    ">一旦有结果提交，先将其记录下来，以便用户可以看到他们先前的猜测。</span></li>
- <li><span title="Next, check whether it is the correct number.
-    ">然后检查它是否正确。</span></li>
- <li><span title="If it is correct:
-        ">如果正确：</span>
+ <li>随机生成一个 100 以内的自然数。</li>
+ <li>记录玩家当前的轮数。从 1 开始。</li>
+ <li>为玩家提供一种猜测数字的方法。</li>
+ <li>一旦有结果提交，先将其记录下来，以便用户可以看到他们先前的猜测。</li>
+ <li>然后检查它是否正确。</li>
+ <li>如果正确：
   <ol>
-   <li><span title="Display congratulations message.
-        ">显示祝贺消息。</span></li>
-   <li><span title="Stop the player from being able to enter more guesses (this would mess the game up).
-        ">阻止玩家继续猜测（这会使游戏混乱）。</span></li>
-   <li><span title="Display control allowing the player to restart the game.
-    ">显示控件允许玩家重新开始游戏。</span></li>
+   <li>显示祝贺消息。</li>
+   <li>阻止玩家继续猜测（这会使游戏混乱）。</li>
+   <li>显示控件允许玩家重新开始游戏。</li>
   </ol>
  </li>
- <li><span title="If it is wrong and the player has turns left:
-        ">如果出错，并且玩家有剩余轮次：</span>
+ <li>如果出错，并且玩家有剩余轮次：
   <ol>
-   <li><span title="Tell the player they are wrong.
-        ">告诉玩家他们错了。</span></li>
-   <li><span title="Allow them to enter another guess.
-        ">允许他们输入另一个猜测。</span></li>
-   <li><span title="Increment the turn number by 1.
-    ">轮数加 1。</span></li>
+   <li>告诉玩家他们错了。</li>
+   <li>允许他们输入另一个猜测。</li>
+   <li>轮数加 1。</li>
   </ol>
  </li>
- <li><span title="If it is wrong and the player has no turns left:
-        ">如果出错，并且玩家没有剩余轮次：</span>
+ <li>如果出错，并且玩家没有剩余轮次：
   <ol>
-   <li><span title="Tell the player it is game over.
-        ">告诉玩家游戏结束。</span></li>
-   <li><span title="Stop the player from being able to enter more guesses (this would mess the game up).
-        ">阻止玩家继续猜测（这会使游戏混乱）。</span></li>
-   <li><span title="Display control allowing the player to restart the game.
-    ">显示控件允许玩家重新开始游戏。</span></li>
+   <li>告诉玩家游戏结束。</li>
+   <li>阻止玩家继续猜测（这会使游戏混乱）。</li>
+   <li>显示控件允许玩家重新开始游戏。</li>
   </ol>
  </li>
- <li><span title="Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
-
-">一旦游戏重启，确保游戏的逻辑和UI完全重置，然后返回步骤1。</span></li>
+ <li>一旦游戏重启，确保游戏的逻辑和UI完全重置，然后返回步骤1。</li>
 </ol>
 
 <p>让我们继续，看看我们如何将这些步骤转换为代码，构建这个示例，从而探索 JavaScript 的功能。</p>
@@ -678,11 +657,7 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 
 <p>这一行通过 {{domxref("HTMLElement.focus", "focus()")}} 方法让光标在页面加载完毕时自动放置于 {{htmlelement("input")}}  输入框内，这意味着玩家可以马上开始第一次猜测，而无需点击输入框。 这只是一个小的改进，却提高了可用性——为使用户能投入游戏提供一个良好的视觉线索。</p>
 
-<p>深入分析一下。JavaScript 中一切都是对象。对象是存储在单个分组中的相关功能的集合。可以创建自己的对象，但这是较高阶的知识，我们今后才会谈及。<span title="For now, we'll just briefly discuss the built-in objects that your browser contains, which allow you to do lots of useful things.
-
-">现在，仅需简要讨论浏览器内置的</span><span title="For now, we'll just briefly discuss the built-in objects that your browser contains, which allow you to do lots of useful things.
-
-">对象，它们已经能够做许多有用的事情。</span></p>
+<p>深入分析一下。JavaScript 中一切都是对象。对象是存储在单个分组中的相关功能的集合。可以创建自己的对象，但这是较高阶的知识，我们今后才会谈及。现在，仅需简要讨论浏览器内置的对象，它们已经能够做许多有用的事情。</p>
 
 <p>在本示例的特定情况下，我们首先创建一个 <code>guessField</code> 常量来存储对 HTML 中的文本输入表单域的引用，在文档顶部的声明区域中可以找到以下行：</p>
 

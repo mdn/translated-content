@@ -11,8 +11,6 @@ tags:
 translation_of: Web/Events/Orientation_and_motion_data_explained
 original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
 ---
-{{ Draft() }}
-
 ## 概要
 
 方向や動きのイベントを使用するときは、ブラウザーから与えられる値の意味を理解することが重要です。この記事では操作時の座標システムに関する詳細情報と、それらの使い方を説明します。

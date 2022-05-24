@@ -22,10 +22,9 @@ translation_of: MDN/Structures/Page_types/API_event_subpage_template
 
 <h3 id="Top_macros" name="Top_macros">先頭で使用するマクロ</h3>
 
-<p>既定では、テンプレートの先頭に5つのマクロ呼び出しがあります。以下のアドバイスに従って、更新や削除をしてください。</p>
+<p>既定では、テンプレートの先頭に4つのマクロ呼び出しがあります。以下のアドバイスに従って、更新や削除をしてください。</p>
 
 <ul>
- <li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
  <li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/ja/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
  <li>\{{securecontext_header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/ja/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
  <li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
@@ -47,7 +46,7 @@ translation_of: MDN/Structures/Page_types/API_event_subpage_template
 <p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
 </div>
 
-<div>{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{deprecated_header}}{{APIRef("GroupDataName")}}</div>
+<div>{{SeeCompatTable}}{{securecontext_header}}{{deprecated_header}}{{APIRef("GroupDataName")}}</div>
 
 <p class="summary">The summary paragraph — start by naming the event, saying what interface it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the property's summary on the corresponding API reference page.</p>
 

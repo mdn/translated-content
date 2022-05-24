@@ -41,9 +41,9 @@ translation_of: Web/API/CSS/supports
 result = CSS.supports("display", "flex");
 result = CSS.supports('--foo', 'red');
 result = CSS.supports('(--foo: red)');
-result = CSS.supports("<code class="language-css">( <span class="property token">transform-origin</span><span class="punctuation token">:</span> 5% 5% )");
-result = <code class="language-css">CSS.supports("( <span class="property token">transform-style</span><span class="punctuation token">:</span> preserve ) or ( <span class="property token">-moz-transform-style</span><span class="punctuation token">:</span> preserve ) or " +
-                      "( <span class="property token">-o-transform-style</span><span class="punctuation token">:</span> preserve ) or ( <span class="property token">-webkit-transform-style</span><span class="punctuation token">:</span> preserve )" );</code></code>
+result = CSS.supports("<code class="language-css">( transform-origin: 5% 5% )");
+result = <code class="language-css">CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: preserve ) or " +
+                      "( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve )" );</code></code>
 //result is true or false
 </pre>
 
