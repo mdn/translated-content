@@ -144,7 +144,7 @@ button.addEventListener('click', () => {
 });
 ```
 
-{{EmbedLiveSample("使用 alarm() API", "100%", 600, 160)}}
+{{EmbedLiveSample("使用 alarm() API", 600, 160)}}
 
 尝试对 "Name" 和 "Delay" 设置不同的值。尝试为 "Delay" 设置一个负值。
 
