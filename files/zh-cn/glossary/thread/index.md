@@ -25,4 +25,4 @@ translation_of: Glossary/Thread
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [术语表](/zh-CN/docs/Glossary)
 
-  - {{Glossary("Main_thread")}}
+  - {{Glossary("Main_thread", "主线程")}}
