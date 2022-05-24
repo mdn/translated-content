@@ -122,14 +122,14 @@ fetch(myRequest,myInit).then(function(response) {
 
 <p><code>init</code> 对象中的 <code>headers</code> 也可以是一个对象字面量：</p>
 
-<pre class="brush: js notranslate"><span class="keyword token">var</span> myInit <span class="operator token">=</span> <span class="punctuation token">{</span> method<span class="punctuation token">:</span> <span class="string token">'GET'</span><span class="punctuation token">,</span>
-               headers<span class="punctuation token">:</span> <span class="punctuation token">{</span>
-                   <span class="string token">'Content-Type'</span><span class="punctuation token">:</span> <span class="string token">'image/jpeg'</span>
-               <span class="punctuation token">}</span><span class="punctuation token">,</span>
-               mode<span class="punctuation token">:</span> <span class="string token">'cors'</span><span class="punctuation token">,</span>
-               cache<span class="punctuation token">:</span> <span class="string token">'default'</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js notranslate">var myInit = { method: 'GET',
+               headers: {
+                   'Content-Type': 'image/jpeg'
+               },
+               mode: 'cors',
+               cache: 'default' };
 
-<span class="keyword token">var</span> myRequest <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Request</span><span class="punctuation token">(</span><span class="string token">'flowers.jpg'</span><span class="punctuation token">,</span> myInit<span class="punctuation token">)</span><span class="punctuation token">;</span></pre>
+var myRequest = new Request('flowers.jpg', myInit);</pre>
 
 <h2 id="规范">规范</h2>
 

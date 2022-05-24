@@ -71,41 +71,41 @@ translation_of: Web/API/MessageEvent
 
 <p>下面的代码片段展示了使用{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}构造器创建一个 <code>SharedWorker</code>对象。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> myWorker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">SharedWorker</span><span class="punctuation token">(</span><span class="string token">'worker.js'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var myWorker = new SharedWorker('worker.js');</code></pre>
 
 <p>接下来两份脚本通过一个{{domxref("SharedWorker.port")}}方法创建的{{domxref("MessagePort")}}对象访问worker。如果onmessage事件通过addEventListener被绑定，端口可以用<code>start()</code>方法手动开启：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">myWorker.port.start();</code></pre>
 
 <p>当端口被打开，两份脚本各自都可用 <code>port.postMessage()</code> 向worker传消息并用  <code>port.onmessage</code>处理它（worker）传来的消息:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">first<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message posted to worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">first.onchange = function() {
+  myWorker.port.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
 
-second<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message posted to worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+second.onchange = function() {
+  myWorker.port.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
 
-myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span>onmessage <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  result1<span class="punctuation token">.</span>textContent <span class="operator token">=</span> e<span class="punctuation token">.</span>data<span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message received from worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+myWorker.port.onmessage = function(e) {
+  result1.textContent = e.data;
+  console.log('Message received from worker');
+}</code></pre>
 
 <p>在worker内部我们使用{{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口. 与worker相关联的端口可以在{{event("connect")}}事件的<code>ports</code> 属性中访问到 — 接着我们使用{{domxref("MessagePort")}} <code>start()</code> 方法打开端口,  <code>onmessage</code> 处理器来处理主线程传来的消息。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">onconnect <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> port <span class="operator token">=</span> e<span class="punctuation token">.</span>ports<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">onconnect = function(e) {
+  var port = e.ports[0];
 
-  port<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'message'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> workerResult <span class="operator token">=</span> <span class="string token">'Result: '</span> <span class="operator token">+</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">*</span> e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span>workerResult<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  port.addEventListener('message', function(e) {
+    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    port.postMessage(workerResult);
+  });
 
-  port<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Required when using addEventListener. Otherwise called implicitly by onmessage setter.</span>
-<span class="punctuation token">}</span></code></pre>
+  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+}</code></pre>
 
 <h2 id="规范">规范</h2>
 

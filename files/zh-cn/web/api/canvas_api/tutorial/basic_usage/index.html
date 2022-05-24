@@ -20,7 +20,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 <pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>{{HTMLElement("canvas")}} 看起来和 {{HTMLElement("img")}} 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。实际上，<code>&lt;canvas&gt;</code> 标签只有两个属性<strong>——</strong> {{htmlattrxref("width", "canvas")}}和{{htmlattrxref("height", "canvas")}}。这些都是可选的，并且同样利用 {{Glossary("DOM")}} <a href="/zh-CN/docs/Web/API/HTMLCanvasElement">properties</a> 来设置。当没有设置宽度和高度的时候，canvas会初始化宽度为300像素和高度为150像素。该元素可以使用{{Glossary("CSS")}}来定义大小，但在绘制时图像会伸缩以适应它的框架尺寸：<span class="short_text" id="result_box" lang="zh-CN"><span>如果</span><span>CSS</span></span><span class="gt-baf-back">的尺寸</span><span class="short_text" lang="zh-CN"><span>与</span><span>初始</span><span>画布的</span><span>比例不一致</span><span>，</span><span>它会出现</span><span>扭曲</span><span>。</span></span></p>
+<p>{{HTMLElement("canvas")}} 看起来和 {{HTMLElement("img")}} 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。实际上，<code>&lt;canvas&gt;</code> 标签只有两个属性<strong>——</strong> {{htmlattrxref("width", "canvas")}}和{{htmlattrxref("height", "canvas")}}。这些都是可选的，并且同样利用 {{Glossary("DOM")}} <a href="/zh-CN/docs/Web/API/HTMLCanvasElement">properties</a> 来设置。当没有设置宽度和高度的时候，canvas会初始化宽度为300像素和高度为150像素。该元素可以使用{{Glossary("CSS")}}来定义大小，但在绘制时图像会伸缩以适应它的框架尺寸：如果CSS的尺寸与初始画布的比例不一致，它会出现扭曲。</p>
 
 <div class="note">
 <p><strong>注意:</strong> 如果你绘制出来的图像是扭曲的, 尝试用width和height属性为&lt;canvas&gt;明确规定宽高，而不是使用CSS。</p>
@@ -28,12 +28,12 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <p><a href="/zh-CN/docs/Web/HTML/Global_attributes/id"><code>id</code></a>属性并不是&lt;canvas&gt;元素所特有的，而是每一个HTML元素都默认具有的属性（比如class属性）。给每个标签都加上一个id属性是个好主意，因为这样你就能在我们的脚本中很容易的找到它。</p>
 
-<p>&lt;canvas&gt;元素可以像任何一个普通的图像一样（有{{cssxref("margin")}}，{{cssxref("border")}}，{{cssxref("background")}}等等属性）被设计。然而，这些样式不会影响在canvas中的实际图像。我们将会在一个<span class="short_text" id="result_box" lang="zh-CN"><span><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">专门的章节</a>里</span></span>看到这是如何解决的。当开始时没有为canvas规定样式规则，其将会完全透明。</p>
+<p>&lt;canvas&gt;元素可以像任何一个普通的图像一样（有{{cssxref("margin")}}，{{cssxref("border")}}，{{cssxref("background")}}等等属性）被设计。然而，这些样式不会影响在canvas中的实际图像。我们将会在一个<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">专门的章节</a>里看到这是如何解决的。当开始时没有为canvas规定样式规则，其将会完全透明。</p>
 
 <div id="section_2">
 <h3 id="替换内容">替换内容</h3>
 
-<p>&lt;canvas&gt;元素与{{HTMLElement("img")}}标签的不同之处在于，就像{{HTMLElement("video")}}，{{HTMLElement("audio")}}，或者 {{HTMLElement("picture")}}元素一样，<span class="short_text" id="result_box" lang="zh-CN"><span>很容易</span><span>定义一些</span><span>替代内容</span></span><span lang="zh-CN"><span>。</span></span>由于某些较老的浏览器（尤其是IE9之前的IE浏览器）或者<span class="short_text" id="result_box" lang="zh-CN"><span>文本</span><span>浏览器</span></span>不支持HTML元素"canvas"，在这些浏览器上你应该总是能展示替代内容。</p>
+<p>&lt;canvas&gt;元素与{{HTMLElement("img")}}标签的不同之处在于，就像{{HTMLElement("video")}}，{{HTMLElement("audio")}}，或者 {{HTMLElement("picture")}}元素一样，很容易定义一些替代内容。由于某些较老的浏览器（尤其是IE9之前的IE浏览器）或者文本浏览器不支持HTML元素"canvas"，在这些浏览器上你应该总是能展示替代内容。</p>
 
 <p>这非常简单：我们只是在&lt;canvas&gt;标签中提供了替换内容。不支持&lt;canvas&gt;的浏览器将会忽略容器并在其中渲染后备内容。而支持&lt;canvas&gt;的浏览器将会忽略在容器中包含的内容，并且只是正常渲染canvas。</p>
 
@@ -114,7 +114,7 @@ if (canvas.getContext){
 
 <p>上面的脚本中包含一个叫做draw()的函数，当页面加载结束的时候就会执行这个函数。通过使用在文档上加载事件来完成。只要页面加载结束，这个函数，或者像是这个的，同样可以使用 {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}， {{domxref("WindowTimers.setInterval", "window.setInterval()")}}，或者其他任何事件处理程序来调用。</p>
 
-<p>模板看起来会是这样。<span class="short_text" id="result_box" lang="zh-CN"><span>如这里所示</span><span>，</span><span>它</span><span>最初是</span><span>空白的</span><span>。</span></span></p>
+<p>模板看起来会是这样。如这里所示，它最初是空白的。</p>
 
 <p>{{EmbedLiveSample("一个模板骨架", 160, 160)}}</p>
 

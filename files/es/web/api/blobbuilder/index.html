@@ -13,7 +13,7 @@ translation_of: Web/API/BlobBuilder
 ---
 <p>{{APIRef("File API")}}{{ obsolete_header}}</p>
 
-<p>La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref("Blob")}} . Solo crea un BlobBuilder y anexa trozos de datos invocando  el método {{manch("append")}} . Cuando termines de construir tu objeto, llama al método {{manch("getBlob")}} para obtener un objeto  {{domxref("Blob")}}  que contiene los datos que le enviaste al blob builder.</p>
+<p>La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref("Blob")}} . Solo crea un BlobBuilder y anexa trozos de datos invocando  el método <a href="#append">append</a> . Cuando termines de construir tu objeto, llama al método <a href="#getblob">getBlob</a> para obtener un objeto  {{domxref("Blob")}}  que contiene los datos que le enviaste al blob builder.</p>
 
 <div class="note"><strong>Nota:</strong> La interfaz <code>BlobBuilder</code> ha sido descontinuada en favor de introducir el constructor mas reciente {{domxref('Blob')}}.</div>
 
@@ -71,7 +71,7 @@ void append(
 
 <h3 id="getBlob()">getBlob()</h3>
 
-<p>Regresa el objeto  {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método {{manch("append")}}.</p>
+<p>Regresa el objeto  {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método <a href="#append">append</a>.</p>
 
 <pre class="syntaxbox">Blob getBlob(
   in DOMString contentType {{optional_inline}}
@@ -87,7 +87,7 @@ void append(
 
 <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
 
-<p>Un objeto  {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier llamada hecha  al método {{manch("append")}} desde que el  <code>BlobBuilder</code> fue creado. Esto tambien reinicializa el  <code>BlobBuilder</code> sí que la siguiente llamada al metodo {{manch("append")}} es empezar de nuevo , un blob vacio.</p>
+<p>Un objeto  {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier llamada hecha  al método <a href="#append">append</a> desde que el  <code>BlobBuilder</code> fue creado. Esto tambien reinicializa el  <code>BlobBuilder</code> sí que la siguiente llamada al metodo <a href="#append">append</a> es empezar de nuevo , un blob vacio.</p>
 
 <h3 id="getFile()_non-standard_inline">getFile() {{non-standard_inline}}</h3>
 

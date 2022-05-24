@@ -14,7 +14,7 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 <div> {{APIRef("XMLHttpRequest")}}</div>
 
-<p>在该教程中，我们将使用<span class="seoSummary">{{domxref("XMLHttpRequest")}} 来发送 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> 请求以实现网站和服务器之间的数据交换。</span><code>XMLHttpRequest</code><span class="seoSummary">常见和晦涩的使用情况都将包含在例子中。</span></p>
+<p>在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> 请求以实现网站和服务器之间的数据交换。<code>XMLHttpRequest</code>常见和晦涩的使用情况都将包含在例子中。</p>
 
 <p>发送一个 HTTP 请求，需要创建一个 <code>XMLHttpRequest</code> 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status</a> 的有用信息。</p>
 
@@ -68,7 +68,7 @@ oReq.send();</pre>
 
 <h2 id="处理二进制数据">处理二进制数据</h2>
 
-<p>尽管 {{domxref("XMLHttpRequest")}} 一般用来发送和接收文本数据，但其实也可以发送和接收二进制内容。有许多经过良好测试的方法来强制使用 <code>XMLHttpRequest</code> <span style="line-height: 1.5;">发送二进制数据。利用 </span> <code>XMLHttpRequest</code> 对象<span style="line-height: 1.5;">的 <span style="line-height: 1.5;"> </span></span> {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}} <span style="line-height: 1.5;"> 方法是一个解决方案，虽然它并不是一个标准方法。</span></p>
+<p>尽管 {{domxref("XMLHttpRequest")}} 一般用来发送和接收文本数据，但其实也可以发送和接收二进制内容。有许多经过良好测试的方法来强制使用 <code>XMLHttpRequest</code> 发送二进制数据。利用  <code>XMLHttpRequest</code> 对象的   {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}}  方法是一个解决方案，虽然它并不是一个标准方法。</p>
 
 <pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("GET", url);

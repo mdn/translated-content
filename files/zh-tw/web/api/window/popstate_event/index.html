@@ -41,7 +41,7 @@ history.back(); // 跳出 "location: http://example.com/example.html, state: nul
 history.go(2);  // 跳出 "location: http://example.com/example.html?page=3, state: {"page":3}
 </pre>
 
-<p><span style="line-height: inherit;">請注意，</span><span style="line-height: inherit;">雖然原始的歷史紀錄（</span><code><var>http://example.com/example.html</var></code><span style="line-height: inherit;">）沒有關聯的 state 物件，在我們第二次呼叫 </span><code style="font-size: 14px; line-height: inherit;">hitsory.back() 時仍然會觸發</code><code style="font-size: 14px; line-height: inherit;"> </code><code style="font-size: 14px; line-height: inherit;">popstate</code><span style="line-height: inherit;"> 事件</span><span style="line-height: inherit;">。</span></p>
+<p>請注意，雖然原始的歷史紀錄（<code><var>http://example.com/example.html</var></code>）沒有關聯的 state 物件，在我們第二次呼叫 <code style="font-size: 14px; line-height: inherit;">hitsory.back() 時仍然會觸發</code><code style="font-size: 14px; line-height: inherit;"> </code><code style="font-size: 14px; line-height: inherit;">popstate</code> 事件。</p>
 
 <h2 id="Specification" name="Specification">標準</h2>
 

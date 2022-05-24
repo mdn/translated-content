@@ -330,7 +330,7 @@ function handleFiles(files) {
 <p>如果传入 <code>handleFiles()</code> 的 {{ domxref("FileList") }} 对象值为 <code>null</code> 时，我们只要简单将这块的内部HTML为显示“No files selected!”。否则，我们就需要像下面这样编写我们的文件列表：</p>
 
 <ol>
- <li><span>创建一个无序列表 ({{ HTMLElement("ul") }}) 元素。</span></li>
+ <li>创建一个无序列表 ({{ HTMLElement("ul") }}) 元素。</li>
  <li>通过调用列表的{{ domxref("Node.appendChild()") }}方法来将新的列表元素插入到 {{ HTMLElement("div") }}块。</li>
  <li>遍历文件集合 {{ domxref("FileList") }}（即<code>files</code>）中的每个 {{ domxref("File") }}：
   <ol>
@@ -365,7 +365,7 @@ function handleFiles(files) {
 }
 </pre>
 
-<p>第2行获取了文档中所有CSS类为<code>obj</code>的元素的 <span style="line-height: 1.5;">{{ domxref("NodeList") }}</span>，命名为<code>imgs</code>。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的<code>FileUpload</code>实例就很简单了。每个实例都可以处理相应文件的上传。</p>
+<p>第2行获取了文档中所有CSS类为<code>obj</code>的元素的 {{ domxref("NodeList") }}，命名为<code>imgs</code>。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的<code>FileUpload</code>实例就很简单了。每个实例都可以处理相应文件的上传。</p>
 
 <h3 id="Handling_the_upload_process_for_a_file处理文件的上传过程">Handling the upload process for a file处理文件的上传过程</h3>
 
