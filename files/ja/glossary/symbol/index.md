@@ -69,7 +69,7 @@ alert(_Sym.description); // Sym
 
 well-known symbol の例としては、配列風オブジェクトのための {{jsxref("Symbol.iterator")}}、文字列オブジェクトのための {{jsxref("Symbol.search")}} などがあります。
 
-仕様書の<a href="https://tc39.github.io/ecma262/#sec-well-known-symbols">Well-known symbol</a> の表に挙げられているものは次の通りです。
+仕様書の [Well-known symbol](https://tc39.github.io/ecma262/#sec-well-known-symbols) の表に挙げられているものは次の通りです。
 
 - `Symbol.hasInstance`
 - `Symbol.isConcatSpreadable`
@@ -89,7 +89,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString" // true
 
 ## 関連情報
 
-- Wikipedia の <a href="https://en.wikipedia.org/wiki/Symbol_(programming)">Symbol (programming)</a> (英語)
+- Wikipedia の [Symbol (programming)](https://en.wikipedia.org/wiki/Symbol_(programming)) (英語)
 - [JavaScript データ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
 - [Symbols in ECMAScript 6](https://2ality.com/2014/12/es6-symbols.html)
 - {{jsxref("Symbol")}} （MDN JS リファレンス）
