@@ -29,7 +29,7 @@ Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_
 
 ```js
 // On crée un segmenteur propre à une locale
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter('fr', {granularity: 'word'});
 
 // On l'utilise pour obtenir un itérateur sur les segments
 // d'une chaîne de caractères
@@ -38,10 +38,10 @@ const segments = segmenter.segment(input);
 
 // Et on parcourt cet ensemble
 for (const {segment, index, isWordLike} of segments) {
-  console.log("segment situé aux unités [%d, %d]: «%s»%s",
+  console.log('segment situé aux unités [%d, %d]: «%s»%s',
     index, index + segment.length,
     segment,
-    isWordLike ? " (type mot)" : ""
+    isWordLike ? ' (type mot)' : ''
   );
 }
 // Affiche dans la console
