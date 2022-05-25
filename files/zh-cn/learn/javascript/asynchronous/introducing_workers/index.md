@@ -226,7 +226,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 不过，还有其他类型的 worker：
 
 - {{DOMxRef("SharedWorker")}} 可以由运行在不同窗口中的多个不同脚本共享。
-- {{DOMxRef("Service_Worker_API", "Service workers")}} 的行为就像代理服务器，缓存资源以便于 web 应用程序可以在用户离线时工作。他们是 [渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps) 的关键组件。
+- [_Service worker_](/zh-CN/docs/Web/API/Service_Worker_API) 的行为就像代理服务器，缓存资源以便于 web 应用程序可以在用户离线时工作。他们是[渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)的关键组件。
 
 ## 总结
 
