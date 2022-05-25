@@ -7,7 +7,7 @@ tags:
 translation_of: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Sequencing_animations")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使您能够在单独执行 {{Glossary("Thread", "线程")}} 中运行一些任务。
 
@@ -240,7 +240,7 @@ Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不�
 - [使用 service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Web workers API](/zh-CN/docs/Web/API/Web_Workers_API)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Sequencing_animations")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 ## 在本模块中
 
