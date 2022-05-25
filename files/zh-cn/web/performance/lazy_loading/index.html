@@ -17,8 +17,7 @@ translation_of: Web/Performance/Lazy_loading
 
 <p>随着网络的发展，我们已经看到发送给用户的资产数量和规模都在急剧增加。从2011年到2019年，台式机的资源中位数从 <strong>~100KB </strong>增至 <strong>~400KB</strong>，移动版的资源中位数从 <strong>~50KB</strong> 增至<strong>~350KB</strong>。图像大小已从台式机上的<strong>~250KB </strong>增至 <strong>~900KB</strong>，而移动设备上的 <strong>~100KB</strong>增至<strong>~850KB</strong>。</p>
 
-<p>用来对付这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短<a href="/zh-CN/docs/Web/Performance/Critical_rendering_path">关键渲染路径</a>的长度。<br>
-  一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且<strong>只有</strong>在用户导航到购物车页面/区域时才会下载其所有资源（JS, CSS, images......）</p>
+<p>解决这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短<a href="/zh-CN/docs/Web/Performance/Critical_rendering_path">关键渲染路径</a>的长度。一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且<strong>只有</strong>在用户导航到购物车页面/区域时才会下载其所有资源（JS、CSS、images……）。</p>
 
 <h2 id="策略">策略</h2>
 
