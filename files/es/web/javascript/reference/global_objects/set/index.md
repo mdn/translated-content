@@ -257,7 +257,7 @@ new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 const array = Array
   .from(document.querySelectorAll('[id]'))
   .map(function(e) {
-      return e.id
+    return e.id
   });
 
 const set = new Set(array);
