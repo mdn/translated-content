@@ -208,7 +208,7 @@ teacher1.greeting();</pre>
  <li>那些定义在构造器函数中，用于给予对象实例的属性或方法。它们都很容易发现——在您自己的代码中，它们是构造函数中使用<code>this.x = x</code>类型的行；在浏览器内已经构建好的代码中，它们是可用于对象实例的成员（这些对象实例通常使用<code>new</code>关键字调用构造函数来创建，例如<code>var myInstance = new myConstructor()</code>）。</li>
  <li>那些直接在构造函数上定义，仅在构造函数上可用的属性或方法。它们通常仅在浏览器的内置对象中可用，并通过被直接链接到构造函数来识别，而不是实例。例如<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>。<strong>它们一般被称作静态属性或静态方法</strong>。</li>
  <li>那些在构造函数原型上定义，由所有实例和对象类继承的属性或方法。它们包括在构造函数的原型属性上定义的任何成员，如<code>myConstructor.prototype.x()</code>。</li>
- <li>那些在对象实例上可用的对象，它可以是像我们上面看到的构造函数实例化时创建的对象（例如 <code>let teacher1 = new Teacher( 'Chris' );</code>  以及其属性 <code>teacher1.name</code>)，也可以是一个对象字面量（<code>let teacher1 = { name : 'Chris' }</code> 以及其属性 <code>teacher1.name</code>）。</li>
+ <li>那些在对象实例上可用的对象，它可以是像我们上面看到的构造函数实例化时创建的对象（例如 <code>let teacher1 = new Teacher( 'Chris' );</code> 以及其属性 <code>teacher1.name</code>)，也可以是一个对象字面量（<code>let teacher1 = { name : 'Chris' }</code> 以及其属性 <code>teacher1.name</code>）。</li>
 </ol>
 
 <p>如果您现在觉得一团浆糊，别担心——您现在还处于学习阶段，不断练习才会慢慢熟悉这些知识。</p>
