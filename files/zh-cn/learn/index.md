@@ -34,13 +34,13 @@ translation_of: Learn
 ## 学习起点
 
 - 零基础的初学者
-  - : 如果你完全没有 Web 开发经验，那么我们推荐从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 部分开始，该部分教程通过实践的方式向你介绍 Web 开发。
+  - : 如果你完全没有 Web 开发经验，那么我们推荐从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)部分开始，该部分教程通过实践的方式向你介绍 Web 开发。
 - 有一定基础
   - : 如果你已经具备了一定的开发知识，下一步就是深入学习 {{glossary("HTML")}} 和 {{glossary("CSS")}}。先学习 [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)，再学习 [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)。
 - 学习脚本编写
-  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过[JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps) 和 [服务端初步](/zh-CN/docs/Learn/Server-side/First_steps) 开始学习。
+  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过[JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)和[服务端编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)开始学习。
 - 框架与工具
-  - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习 [前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [ JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及 [网站服务器端编程](/zh-CN/docs/Learn/Server-side) 了。
+  - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习[前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及[网站服务端编程](/zh-CN/docs/Learn/Server-side)了。
 
 > **备注：** 可在 [词汇表](/zh-CN/docs/Glossary) 中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在 [常见问题](/zh-CN/docs/Learn/Common_questions) 寻找答案。
 
@@ -51,7 +51,7 @@ translation_of: Learn
 - [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
   - : 为零基础初学者提供实用的 Web 开发入门简介。
 - [HTML 构建网站](/zh-CN/docs/Learn/HTML)
-  - : HTML 是用于构建网页的内容并定义其含义或目的的。该专题将详细讲解 HTML。
+  - : HTML 是用于构建网页的内容并定义其含义或目的的语言。该专题将详细讲解 HTML。
 - [CSS 风格化站点](/zh-CN/docs/Learn/CSS)
   - : CSS 是用于对网页内容进行设计、布局或添加动画等行为的语言。该专题对 CSS 进行了全面介绍。
 - [JavaScript - 动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
@@ -80,10 +80,10 @@ translation_of: Learn
 3. 在命令提示符 / 终端中输入以下命令，即可将 `roy-tian/learning-area` 仓库拷贝到本地的 `learning-area` 文件夹：
 
     ```bash
-    git clone https://github.com/roy-tian/learning-area/
+    git clone https://github.com/roy-tian/learning-area
     ```
 
-4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或[`cd` 命令](https://zh.wikipedia.org/wiki/Cd_(命令))) 进入该目录，查找所需文件。
+4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](https://zh.wikipedia.org/wiki/Cd_(命令))) 进入该目录，查找所需文件。
 
 你可以随时对本地 `learning-area` 目录与 GitHub 仓库中的 master 分支进行同步，具体步骤如下：
 
@@ -101,7 +101,7 @@ translation_of: Learn
 
 ## 联系我们
 
-如果你想就任何事宜联系我们，最好的方式是在 [论坛](https://discourse.mozilla.org/c/mdn/236) 上留言。如果你认为网站上有任何错误或遗漏、请求新的学习主题、针对你不理解的部分请求帮助、或提出任何其他问题，我们都期待听到你的意见。
+如果你想就任何事宜联系我们，最好的方式是在[论坛](https://discourse.mozilla.org/c/mdn/236)上留言。如果你认为网站上有任何错误或遗漏、请求新的学习主题、针对你不理解的部分请求帮助、或提出任何其他问题，我们都期待听到你的意见。
 
 如果你有兴趣帮助我们开发或改进社区内容，请阅读 [如何做出贡献](/zh-CN/docs/MDN/Contribute) 部分并联系我们！无论您是学生、老师、经验丰富的 Web 开发者、还是其他有兴趣通过帮助我们以提升自学经验的人，我们都不胜荣幸！
 
