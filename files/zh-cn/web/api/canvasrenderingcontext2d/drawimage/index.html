@@ -253,7 +253,7 @@ function drawImageActualSize() {
 <ul>
  <li>在 Gecko 5.0 {{geckoRelease("5.0")}}中，支持通过给 sw 和 sh 赋负值，对图像进行翻转。</li>
  <li>从 {{geckoRelease("5.0")}} 开始，<code>drawImage()</code> 按照规范处理负参数，沿着合适的轴翻转矩形。</li>
- <li>从{{geckoRelease("5.0")}}开始，当<span style="font-family: consolas,monaco,andale mono,monospace;">drawImage()</span>调用 <code>null</code> 或者 <code>undefined</code> 图像时，会抛出 <code>TYPE_MISMATCH_ERR</code> 异常。</li>
+ <li>从{{geckoRelease("5.0")}}开始，当drawImage()调用 <code>null</code> 或者 <code>undefined</code> 图像时，会抛出 <code>TYPE_MISMATCH_ERR</code> 异常。</li>
  <li>在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是0，Firefox 会抛出一个异常。 按照规范描述，这种情况不会再发生。</li>
  <li>Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要<a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
  <li>Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas ，不需要 <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>

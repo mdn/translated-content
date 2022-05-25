@@ -17,8 +17,8 @@ translation_of: Web/API/Notification/data
 
 <p>博客作者认为目前（参考）最快的object克隆、复制方式。</p>
 
-<pre style="color: #f8f8f2; background-color: #272822;"><code class="language-js"><span style="color: #66d9ef;">function</span> <span style="color: #a6e22e;">structuralClone</span>(<span style="color: #a6e22e;">obj</span>) {
-  <span style="color: #66d9ef;">return</span> <span style="color: #66d9ef;">new</span> <span style="color: #a6e22e;">Notification</span>(<span style="color: #e6db74;">''</span>, {<span style="color: #a6e22e;">data</span><span style="color: #f92672;">:</span> <span style="color: #a6e22e;">obj</span>, <span style="color: #a6e22e;">silent</span><span style="color: #f92672;">:</span> <span style="color: #66d9ef;">true</span>}).<span style="color: #a6e22e;">data</span>;
+<pre style="color: #f8f8f2; background-color: #272822;"><code class="language-js">function structuralClone(obj) {
+  return new Notification('', {data: obj, silent: true}).data;
 }</code></pre>
 
 <h2 id="Syntax" name="Syntax">Syntax 表达式</h2>

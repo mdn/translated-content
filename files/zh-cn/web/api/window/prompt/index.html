@@ -22,18 +22,18 @@ translation_of: Web/API/Window/prompt
 
 <h3 id="Example" name="Example">例子</h3>
 
-<pre class="eval">var sign = prompt("<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你是什么星座的</span></span>?");
+<pre class="eval">var sign = prompt("你是什么星座的?");
 if (sign == "天蝎座"){
    alert("哇! 我也是天蝎座的耶!");
 }
 // 有多种使用prompt方法的方式
 var sign = window.prompt(); // 打开空的提示窗口
 var sign = prompt();       // 打开空的提示窗口
-var sign = window.prompt('<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗</span></span>?'); // 打开显示提示文本为"<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗?</span></span>"的提示窗口
-var sign = window.prompt('<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗</span></span>?','是的'); // 打开显示提示文本为"<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗</span></span>?"并且输入框默认值为"是的"的提示窗口
+var sign = window.prompt('你觉得很幸运吗?'); // 打开显示提示文本为"你觉得很幸运吗?"的提示窗口
+var sign = window.prompt('你觉得很幸运吗?','是的'); // 打开显示提示文本为"你觉得很幸运吗?"并且输入框默认值为"是的"的提示窗口
 </pre>
 
-<p><span class="long_text" id="result_box" lang="zh-CN"><span>当用户点击</span><span>"确定"按钮</span><span>后，文本</span><span>输入框中的文字被</span><span>返回。</span><span>如果文本输入框中为空</span><span>,</span><span>则返回一个空字符串。</span><span>如果用户点击</span><span>"取消"按钮，</span><span>则返回null。</span></span></p>
+<p>当用户点击"确定"按钮后，文本输入框中的文字被返回。如果文本输入框中为空,则返回一个空字符串。如果用户点击"取消"按钮，则返回null。</p>
 
 <h3 id="Notes" name="Notes">注意</h3>
 

@@ -166,7 +166,7 @@ function loadShader(gl, type, source) {
 
 <p>这段代码简单给出了绘画场景的本质。首先，它调用 gl 的成员函数 {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} 得到了缓冲对象并存储在顶点缓冲器。然后调用 {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} 函数绑定上下文。</p>
 
-<p><span style="line-height: 1.5;">当上一步完成，我们创建一个Javascript 数组去记录每一个正方体的每一个顶点。然后将其转化为 WebGL 浮点型类型的数组，并将其传到 gl 对象的 </span> {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}}<span style="line-height: 1.5;"> 方法来建立对象的顶点。</span></p>
+<p>当上一步完成，我们创建一个Javascript 数组去记录每一个正方体的每一个顶点。然后将其转化为 WebGL 浮点型类型的数组，并将其传到 gl 对象的  {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} 方法来建立对象的顶点。</p>
 
 <p><strong style="">绘制场景</strong></p>
 

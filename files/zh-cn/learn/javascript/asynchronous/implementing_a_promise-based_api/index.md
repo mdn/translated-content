@@ -2,16 +2,13 @@
 title: 如何实现基于 Promise 的 API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 tags:
-  - Promise
-  - resolve
-  - reject
-  - then
-  - catch
+  - JavaScript
+  - Learn
 translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 ---
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Introducing_workers")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 在上一篇文章中，我们讨论了如何使用返回 promises 的 APIs。在本文中，我们将研究另一方面--如何实现返回 promises 的 APIs。跟使用基于 promise 的 APIs 相比，这是一个不太常见的任务，但它仍然值得了解。
 
@@ -47,6 +44,12 @@ translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 <div id="output"></div>
 ```
 
+```css hidden
+div {
+  margin: .5rem 0;
+}
+```
+
 ```js
 const output = document.querySelector('#output');
 const button = document.querySelector('#set-alarm');
@@ -60,7 +63,7 @@ function setAlarm() {
 button.addEventListener('click', setAlarm);
 ```
 
-{{EmbedLiveSample("用 setTimeout() 包裹", "100%", 100)}}
+{{EmbedLiveSample("用 setTimeout() 包裹", 600, 100)}}
 
 ### Promise() 构造器
 
@@ -94,7 +97,7 @@ function alarm(person, delay) {
 
 这一部分同上一篇文章是相当相似的。我们可以调用 `alarm()`，在返回的 promise 中调用 `then()` 和 `catch()` 来设置 promise 兑现和拒绝状态的处理器。
 
-```html
+```html hidden
 <div>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" size="4" value="Matilda">
@@ -105,6 +108,16 @@ function alarm(person, delay) {
 </div>
 <button id="set-alarm">Set alarm</button>
 <div id="output"></div>
+```
+
+```css hidden
+button {
+  display: block;
+}
+
+div, button {
+  margin: .5rem 0;
+}
 ```
 
 ```js
@@ -131,15 +144,15 @@ button.addEventListener('click', () => {
 });
 ```
 
-{{EmbedLiveSample("使用 alarm() API", "100%", 160)}}
+{{EmbedLiveSample("使用 alarm() API", 600, 160)}}
 
 尝试对 "Name" 和 "Delay" 设置不同的值。尝试为 "Delay" 设置一个负值。
 
 ## 在 alarm() API 上使用 async 和 await
 
-自从 `alarm()` 返回了一个 Promise，我们可以对它做任何我们可以对其他任何 promise 做的事情：`Promise.all()`，和 `async` / `await`：
+自从 `alarm()` 返回了一个 `Promise`，我们可以对它做任何我们可以对其他任何 promise 做的事情：`Promise.all()`，和 `async` / `await`：
 
-```html
+```html hidden
 <div>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" size="4" value="Matilda">
@@ -150,6 +163,16 @@ button.addEventListener('click', () => {
 </div>
 <button id="set-alarm">Set alarm</button>
 <div id="output"></div>
+```
+
+```css hidden
+button {
+  display: block;
+}
+
+div, button {
+  margin: .5rem 0;
+}
 ```
 
 ```js
@@ -180,14 +203,14 @@ button.addEventListener('click', async () => {
 });
 ```
 
-{{EmbedLiveSample("在 alarm() API 上使用 async 和 await", "100%", 160)}}
+{{EmbedLiveSample("在 alarm() API 上使用 async 和 await", 600, 160)}}
 
 ## 参见
 
 - [Promise() 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
 - [使用 Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Introducing_workers")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 ## 在本模块中
 

@@ -10,7 +10,7 @@ tags:
 browser-compat: css.at-rules.media.prefers-reduced-data
 translation_of: Web/CSS/@media/prefers-reduced-data
 ---
-{{CSSRef}}{{SeeCompatTable}}{{draft}}
+{{CSSRef}}{{SeeCompatTable}}
 
 > **Note:** この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
 

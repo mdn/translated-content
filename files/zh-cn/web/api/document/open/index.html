@@ -46,7 +46,7 @@ document.close();</code></pre>
 <p>当 <a href="/en/DOM/document.write" title="en/DOM/document.write">document.write()</a> 在页面加载后调用，会发生自动的 <code>document.open()</code>调用。</p>
 
 <p>很多年以来，Firefox和IE浏览器会在清除所有节点的同时，将所有Javascript变量等一并清除，但现在已经不采用这一做法。<br>
- <span class="comment">document non-spec'ed parameters to document.open</span></p>
+ document non-spec'ed parameters to document.open</p>
 
 <p>不要和 <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容, 而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
 
