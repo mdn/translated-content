@@ -154,50 +154,50 @@ mySet2.forEach(function(value) {
 
 ```js
 function isSuperset(set, subset) {
-    for (let elem of subset) {
-        if (!set.has(elem)) {
-            return false
-        }
+  for (let elem of subset) {
+    if (!set.has(elem)) {
+      return false
     }
-    return true
+  }
+  return true
 }
 
 function union(setA, setB) {
-    let _union = new Set(setA)
-    for (let elem of setB) {
-        _union.add(elem)
-    }
-    return _union
+  let _union = new Set(setA)
+  for (let elem of setB) {
+    _union.add(elem)
+  }
+  return _union
 }
 
 function intersection(setA, setB) {
-    let _intersection = new Set()
-    for (let elem of setB) {
-        if (setA.has(elem)) {
-            _intersection.add(elem)
-        }
+  let _intersection = new Set()
+  for (let elem of setB) {
+    if (setA.has(elem)) {
+      _intersection.add(elem)
     }
-    return _intersection
+  }
+  return _intersection
 }
 
 function symmetricDifference(setA, setB) {
-    let _difference = new Set(setA)
-    for (let elem of setB) {
-        if (_difference.has(elem)) {
-            _difference.delete(elem)
-        } else {
-            _difference.add(elem)
-        }
+  let _difference = new Set(setA)
+  for (let elem of setB) {
+    if (_difference.has(elem)) {
+      _difference.delete(elem)
+    } else {
+      _difference.add(elem)
     }
-    return _difference
+  }
+  return _difference
 }
 
 function difference(setA, setB) {
-    let _difference = new Set(setA)
-    for (let elem of setB) {
-        _difference.delete(elem)
-    }
-    return _difference
+  let _difference = new Set(setA)
+  for (let elem of setB) {
+    _difference.delete(elem)
+  }
+  return _difference
 }
 
 // Ejemplos
