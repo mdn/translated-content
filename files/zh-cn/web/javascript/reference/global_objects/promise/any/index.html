@@ -55,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <h3 id="失败拒绝（Rejection）：">失败/拒绝（Rejection）：</h3>
 
-<p>如果所有传入的 <code>promises</code> 都失败, <code>Promise.any</code> 将返回异步失败，和一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError">AggregateError</a> 对象，它继承自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>，有一个 <code>error</code> 属性，属性值是由所有失败值填充的数组。</p>
+<p>如果所有传入的 <code>promises</code> 都失败, <code>Promise.any</code> 将返回异步失败，和一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError">AggregateError</a> 对象，它继承自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>，有一个 <code>errors</code> 属性，属性值是由所有失败值填充的数组。</p>
 
 <h2 id="示例">示例</h2>
 
