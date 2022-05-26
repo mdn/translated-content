@@ -62,7 +62,7 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : 업로드 과정을 나타내는 {{domxref("XMLHttpRequestUpload")}}입니다.
 - {{domxref("XMLHttpRequest.withCredentials")}}
-  - : 사이트 간 `Access-Control` 요청에 쿠키나 인증 헤더 등 자격 증명을 사용해야 하는지 여부를 나타냅니다.
+  - : 쿠키 또는 권한 부여 헤더와 같은 자격 증명을 사용하여 사이트 간 `Access-Control` 요청을 만들어야 하는 경우 `true`를 반환합니다. 그렇지 않으면 `false`를 반환합니다.
 
 ## 메서드
 
