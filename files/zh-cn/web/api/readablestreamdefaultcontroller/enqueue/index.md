@@ -1,36 +1,38 @@
 ---
-title: ReadableStreamDefaultController
-slug: Web/API/ReadableStreamDefaultController
+title: ReadableStreamDefaultController.enqueue()
+slug: Web/API/ReadableStreamDefaultController/enqueue
 tags:
   - API
-  - Fetch
-  - Interface
+  - Method
   - ReadableStreamDefaultController
   - Reference
   - Streams
-translation_of: Web/API/ReadableStreamDefaultController
+  - enqueue
+translation_of: Web/API/ReadableStreamDefaultController.enqueue
 ---
 {{APIRef("Streams")}}
 
-[流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。 默认控制器用于不是字节流的流。
+{{domxref("ReadableStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定块送入到关联的流中。
 
-## 构造函数
+## 语法
 
-无。`ReadableStreamDefaultController` 实例会在构造 `ReadableStream` 时被自动创造。
+```js
+enqueue(chunk)
+```
 
-## 属性
+### 参数
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
-  - : 返回填充满流的内部队列所需要的大小。
+- `chunk`
+  - : 要送入的块。
 
-## 方法
+### 返回值
 
-- {{domxref("ReadableStreamDefaultController.close()")}}
-  - : 关闭关联的流。
-- {{domxref("ReadableStreamDefaultController.enqueue()")}}
-  - : 将给定的块排入关联的流。
-- {{domxref("ReadableStreamDefaultController.error()")}}
-  - : 导致未来任何与关联流交互都会出错。
+无 ({{jsxref("undefined")}})。
+
+### 异常
+
+- {{jsxref("TypeError")}}
+  - : 如果源对象不是 `ReadableStreamDefaultController` 则抛出。
 
 ## 示例
 
