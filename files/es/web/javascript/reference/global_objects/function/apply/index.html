@@ -122,14 +122,14 @@ var min = minOfArray([5, 6, 2, 3, 7]);</pre>
 
 <p><code>apply </code>puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función <code>someobject.foo</code>, puedes modificar la función de una forma 'hacker', como ésta:</p>
 
-<pre><code>var originalfoo = someobject.foo;
+<pre class="brush: js">var originalfoo = someobject.foo;
 someobject.foo = function() {
   // Haz algo antes de llamar a la función
   console.log(arguments);
   // Llama a la función como la hubieras llamado normalmente
   originalfoo.apply(this, arguments);
   // Aquí, ejecuta algo después
-}</code></pre>
+}</pre>
 
 <p>Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos <code>.on</code> (eventos<code> [event]..., </code>como los que se usan en el <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Developer_API">Devtools Inspector</a>)</p>
 
