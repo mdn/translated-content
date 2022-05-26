@@ -43,7 +43,7 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
   - : {{domxref("XMLHttpRequest.responseType")}}의 값에 따라, 응답 개체 본문을 포함하는 {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, JavaScript 객체, 또는 {{domxref("DOMString")}}을 반환합니다.
 - {{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}
-  - : 요청에 대한 응답을 텍스트로 나타내는 {{domxref("DOMString")}}을 반환합니다. 요청이 실패했거나, 아직 전송하지않은 경우에는 `null`을 반환합니다.
+  - : 요청에 대한 응답을 텍스트로 나타내는 `string`을 반환합니다. 요청이 실패했거나, 아직 전송하지않은 경우에는 `null`을 반환합니다.
 - {{domxref("XMLHttpRequest.responseType")}}
   - : 응답의 유형을 지정합니다.
 - {{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}
