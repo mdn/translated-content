@@ -35,8 +35,8 @@ browser-compat: css.at-rules.layer
   }
 }
 ```
-一个级联层同样可以通过 {{cssxref("@import")}} 来创建，规则存在于被引入的样式表内：
 
+一个级联层同样可以通过 {{cssxref("@import")}} 来创建，规则存在于被引入的样式表内：
 
 ```css
 @import(utilities.css) layer(utilities);
@@ -47,7 +47,6 @@ browser-compat: css.at-rules.layer
 ```css
 @layer utilities
 ```
-
 
 或者，多个命名层也可以被同时定义。例如：
 

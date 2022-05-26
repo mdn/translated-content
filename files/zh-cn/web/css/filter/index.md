@@ -1028,7 +1028,6 @@ table.standard-table td {
 
 {{EmbedLiveSample('sepia','100%','229px','','', 'no-codepen')}}
 
-
 ## 复合函数
 
 你可以组合任意数量的函数来控制渲染。下面的例子可以增强图像的对比度和亮度。
@@ -1144,7 +1143,6 @@ img {
 ```
 
 ## 规范
-
 
 {{Specifications}}
 

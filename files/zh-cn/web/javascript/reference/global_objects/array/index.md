@@ -310,7 +310,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 - {{jsxref("Array.prototype.findIndex()")}}
   - : 返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回 `-1`
 - {{jsxref("Array.prototype.flat()")}}
-  - : 按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回 
+  - : 按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回
 - {{jsxref("Array.prototype.flatMap()")}}
   - : 使用映射函数映射每个元素，然后将结果压缩成一个新数组
 - {{jsxref("Array.prototype.forEach()")}}
@@ -436,16 +436,16 @@ console.table(values)
 
 ```plain
 // The first column is the index
-0	1	0
-1	2	2
-2	4	8
-3	8	18
-4	16	32
-5	32	50
-6	64	72
-7	128	98
-8	256	128
-9	512	162
+0  1    0
+1  2    2
+2  4    8
+3  8    18
+4  16   32
+5  32   50
+6  64   72
+7  128  98
+8  256  128
+9  512  162
 ```
 
 ## 规范

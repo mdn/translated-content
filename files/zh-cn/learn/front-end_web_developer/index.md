@@ -174,5 +174,5 @@ translation_of: Learn/Front-end_web_developer
 #### 核心模块
 
 - [Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub) (5 hour read)
-- [客户端 Web 开发工具入门 ](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)(20–25 hour read)
+- [客户端 Web 开发工具入门](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools) (20–25 hour read)
 - [客户端 JavaScript 开发框架入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) (30-60 hour read/exercises)

@@ -19,7 +19,7 @@ browser-compat: javascript.builtins.Map
 
 ## 描述
 
-一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。 
+一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。
 
 ### 键的相等
 
@@ -205,7 +205,7 @@ console.log(contacts.size) // 1
 ### 迭代方法
 
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。 
+  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.keys()")}}
   - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的**键**，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.values()")}}
