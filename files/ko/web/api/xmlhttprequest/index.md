@@ -32,7 +32,7 @@ translation_of: Web/API/XMLHttpRequest
 ## 생성자
 
 - {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
-  - : `XMLHttpRequst`를 초기화합니다.
+  - : `XMLHttpRequst`를 초기화합니다. 다른 메서드가 호출되기 전에 호출되어야 합니다.
 
 ## 속성
 
