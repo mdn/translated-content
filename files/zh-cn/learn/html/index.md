@@ -44,7 +44,7 @@ translation_of: Learn/HTML
 - [多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)
   - : 这个模块带你探索如何使用 HTML 在你的网页里如何包含多媒体信息，例如用各种方法包含图片，以及嵌入视频、音频，甚至是嵌入其他完整的网页。
 - [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
-  - : 在网页上用易于理解和可访问{{glossary("Accessibility", "accessible")}} 的方式来表示表格数据是一项挑战。这个模块包括了基本的表格标记及更多复杂的特性，例如实现标题和总结。
+  - : 在网页上用易于理解和{{glossary("Accessibility", "无障碍")}}的方式来表示表格数据是一项挑战。这个模块包括了基本的表格标记及更多复杂的特性，例如实现标题和总结。
 
 ## 解决常见的 HTML 问题
 
