@@ -2,15 +2,12 @@
 title: workers 简介
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
 tags:
-  - Worker
-  - Web Worker
-  - dedicated worker
-  - shared worker
-  - Service worker
+  - JavaScript
+  - Learn
 translation_of: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Sequencing_animations")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使您能够在单独执行 {{Glossary("Thread", "线程")}} 中运行一些任务。
 
@@ -229,7 +226,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 不过，还有其他类型的 worker：
 
 - {{DOMxRef("SharedWorker")}} 可以由运行在不同窗口中的多个不同脚本共享。
-- {{DOMxRef("Service_Worker_API", "Service workers")}} 的行为就像代理服务器，缓存资源以便于 web 应用程序可以在用户离线时工作。他们是 {{domxref("Progressive_web_apps", "渐进式 Web 应用")}} 的关键组件。
+- [_Service worker_](/zh-CN/docs/Web/API/Service_Worker_API) 的行为就像代理服务器，缓存资源以便于 web 应用程序可以在用户离线时工作。他们是[渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)的关键组件。
 
 ## 总结
 
@@ -243,7 +240,7 @@ Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不�
 - [使用 service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Web workers API](/zh-CN/docs/Web/API/Web_Workers_API)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous", "Learn/JavaScript/Asynchronous/Sequencing_animations")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 ## 在本模块中
 

@@ -208,17 +208,17 @@ teacher1.greeting();</pre>
  <li>那些定义在构造器函数中，用于给予对象实例的属性或方法。它们都很容易发现——在您自己的代码中，它们是构造函数中使用<code>this.x = x</code>类型的行；在浏览器内已经构建好的代码中，它们是可用于对象实例的成员（这些对象实例通常使用<code>new</code>关键字调用构造函数来创建，例如<code>var myInstance = new myConstructor()</code>）。</li>
  <li>那些直接在构造函数上定义，仅在构造函数上可用的属性或方法。它们通常仅在浏览器的内置对象中可用，并通过被直接链接到构造函数来识别，而不是实例。例如<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>。<strong>它们一般被称作静态属性或静态方法</strong>。</li>
  <li>那些在构造函数原型上定义，由所有实例和对象类继承的属性或方法。它们包括在构造函数的原型属性上定义的任何成员，如<code>myConstructor.prototype.x()</code>。</li>
- <li>那些在对象实例上可用的对象，它可以是像我们上面看到的构造函数实例化时创建的对象（例如<code>let teacher1 = new Teacher( 'Chris' );</code>，然后是 <code>teacher1.name</code>），也可以是一个对象文本（<code>let teacher1 = { name : 'Chris' }</code>，然后是<code>teacher1.name</code>）。</li>
+ <li>那些在对象实例上可用的对象，它可以是像我们上面看到的构造函数实例化时创建的对象（例如 <code>let teacher1 = new Teacher( 'Chris' );</code> 以及其属性 <code>teacher1.name</code>），也可以是一个对象字面量（<code>let teacher1 = { name : 'Chris' }</code> 以及其属性 <code>teacher1.name</code>）。</li>
 </ol>
 
 <p>如果您现在觉得一团浆糊，别担心——您现在还处于学习阶段，不断练习才会慢慢熟悉这些知识。</p>
 
-<h2 id="ECMAScript_2015_Classes">ECMAScript 2015 Classes</h2>
+<h2 id="ECMAScript_2015_Classes">ECMAScript 2015 类</h2>
 
-<p>ECMAScript 2015 introduces <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class syntax</a> to JavaScript as a way to write reusable classes using easier, cleaner syntax, which is more similar to classes in C++ or Java. In this section we'll convert the Person and Teacher examples from prototypal inheritance to classes, to show you how it's done.</p>
-
+<p>ECMAScript 2015 引入了<a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">class syntax</a> 到 JavaScript，作为使用更简单、更简洁的语法编写可重用类的一种方式，这更类似于 C++ 或 Java 中的类。在本节中，我们将个人和教师示例从原型继承转换为类，以向你展示它是如何完成的。</p>
 <div class="note">
-<p><strong>注意</strong>：所有现代浏览器都支持这种编写类的现代方式，但是如果您处理的项目需要不支持此语法的浏览器（最明显的是Internet Explorer），那么仍然值得了解底层原型继承。</p>
+  
+<p><strong>注意</strong>：所有现代浏览器都支持这种现代的编写类的方式，但是如果你处理的项目需要支持不支持此语法的浏览器（最明显的是 Internet Explorer），那么仍然值得了解底层原型继承。</p>
 </div>
 
 <p>让我们看一下 Person 示例的重写版本，类样式：</p>
@@ -244,14 +244,14 @@ teacher1.greeting();</pre>
 }
 </pre>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a> statement indicates that we are creating a new class. Inside this block, we define all the features of the class:</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class">类（class）</a>语句表示我们正在创建一个新类。在此块中，我们定义了该类的所有功能：</p>
 
 <ul>
-	<li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> method defines the constructor function that represents our <code>Person</code> class.</li>
-	<li><code>greeting()</code> and <code>farewell()</code> are class methods. Any methods you want associated with the class are defined inside it, after the constructor. In this example, we've used <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> rather than string concatenation to make the code easier to read.</li>
+	<li><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> 方法定义了一个构造函数来表示我们的 <code>Person</code> 类。</li>
+	<li><code>greeting()</code> 和 <code>farewell()</code> 是类方法。任何你想要和这个类联系的方法都被定义在其中，在构造器之后。在这个例子里，我们使用了<a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字符串（template literals）</a>而不是字符串拼接以使代码更易读。</li>
 </ul>
 
-<p>We can now instantiate object instances using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, in just the same way as we did before:</p>
+<p>我们现在可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 运算符</a>来实例化对象实例，就像我们之前使用过的方式一样：</p>
 
 <pre class="brush: js">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
 han.greeting();
@@ -263,7 +263,7 @@ leia.farewell();
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Under the hood, your classes are being converted into Prototypal Inheritance models — this is just syntactic sugar. But I'm sure you'll agree that it's easier to write.</p>
+<p><strong>注意</strong>：在 JS 引擎下，类会被转换为原型继承模型——这只是语法糖。但我相信你会觉得这是一种更容易的写法。</p>
 </div>
 
 <h3 id="Inheritance_with_class_syntax">类语法继承</h3>
