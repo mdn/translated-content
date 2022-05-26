@@ -1,36 +1,39 @@
 ---
-title: ReadableStreamDefaultController
-slug: Web/API/ReadableStreamDefaultController
+title: ReadableStreamDefaultController.close()
+slug: Web/API/ReadableStreamDefaultController/close
 tags:
   - API
-  - Fetch
-  - Interface
+  - Method
   - ReadableStreamDefaultController
   - Reference
   - Streams
-translation_of: Web/API/ReadableStreamDefaultController
+  - close
+translation_of: Web/API/ReadableStreamDefaultController.close
 ---
 {{APIRef("Streams")}}
 
-[流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。 默认控制器用于不是字节流的流。
+{{domxref("ReadableStreamDefaultController")}} 接口的 **`close()`** 方法由于关闭关联的流。
 
-## 构造函数
+读取器将仍然可以从流中读取任何先前排队的块，但是一旦读取这些块，流将被关闭。 如果你想完全的摆脱流并且抱起任何排队的块，你可以使用{{domxref("ReadableStream.cancel()")}} 或者 {{domxref("ReadableStreamDefaultReader.cancel()")}}。
 
-无。`ReadableStreamDefaultController` 实例会在构造 `ReadableStream` 时被自动创造。
+## 语法
 
-## 属性
+```js
+close()
+```
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
-  - : 返回填充满流的内部队列所需要的大小。
+### 参数
 
-## 方法
+无。
 
-- {{domxref("ReadableStreamDefaultController.close()")}}
-  - : 关闭关联的流。
-- {{domxref("ReadableStreamDefaultController.enqueue()")}}
-  - : 将给定的块排入关联的流。
-- {{domxref("ReadableStreamDefaultController.error()")}}
-  - : 导致未来任何与关联流交互都会出错。
+### 返回值
+
+无 ({{jsxref("undefined")}})。
+
+### 异常
+
+- {{jsxref("TypeError")}}
+  - : 如果源对象不是 `ReadableStreamDefaultController` 则抛出。
 
 ## 示例
 
