@@ -106,7 +106,7 @@ function lockPointer() {
 
 <p>Pointer lock API, 和 Fullscreen API 类似，通过添加新方法来扩展 DOM 元素, <code>requestPointerLock</code>, 目前还是厂商前缀。按下面这样来写：</p>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">element.webkitRequestPointerLock(); // Chrome</span></span>
+<pre class="brush: js notranslate">element.webkitRequestPointerLock(); // Chrome
 
 element.mozRequestPointerLock(); // Firefox
 </pre>
@@ -117,9 +117,9 @@ element.mozRequestPointerLock(); // Firefox
 
 <p><code>pointerLockElement</code> 属性适用于确定当前是否有被指针锁定的元素（例如，用来做一个布尔检查），以及当有元素被锁定时获取该元素的一个引用。下面是这两种用法的一个例子：</p>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.pointerLockElement = document.pointerLockElement    ||
+<pre class="brush: js notranslate">document.pointerLockElement = document.pointerLockElement    ||
                               document.mozPointerLockElement ||
-                              document.webkitPointerLockElement;</span></span>
+                              document.webkitPointerLockElement;
 
 // 1) 用于布尔检查--我们被指针锁定了吗？
 if (!!document.pointerLockElement) {
@@ -136,14 +136,14 @@ if (document.pointerLockElement === someElement) {
 
 <p><code>document</code> 的 <code>exitPointerLock</code> 方法被用来退出指针锁定，而且和 requestPointerLock 一样，使用 <code>pointerlockchange</code> 和 <code>pointerlockerror</code>事件以异步方式工作：</p>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.exitPointerLock = document.exitPointerLock    ||
+<pre class="brush: js notranslate">document.exitPointerLock = document.exitPointerLock    ||
                            document.mozExitPointerLock ||
-                           document.webkitExitPointerLock;</span></span>
+                           document.webkitExitPointerLock;
 
 function pointerLockChange() {
-  <span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.pointerLockElement = document.pointerLockElement    ||
+  document.pointerLockElement = document.pointerLockElement    ||
                                 document.mozPointerLockElement ||
-                                document.webkitPointerLockElement;</span></span>
+                                document.webkitPointerLockElement;
 
   if (!!document.pointerLockElement) {
     console.log("目前还是被锁定。");
@@ -176,10 +176,10 @@ document.exitPointerLock();
 
 <p>Pointer lock API 使用 movement 属性扩展了标准的 <code>MouseEvent</code>。</p>
 
-<pre class="idl notranslate"><span class="idlInterface" id="idl-def-MouseEvent">partial interface <span class="idlInterfaceID">MouseEvent</span> {
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a></span>;</span>
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a></span>;</span>
-};</span></pre>
+<pre class="idl notranslate">partial interface MouseEvent {
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a>;
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a>;
+};</pre>
 
 <div class="note">movement 属性目前在 Firefox 中被加上前缀为 <code>.mozMovementX</code> 和 <code>.mozMovementY</code> , 在 Chrome 中为<code>.webkitMovementX</code> 和 <code>.webkitMovementY</code>。</div>
 

@@ -13,7 +13,7 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><code><strong>XMLHttpRequest.send()</strong></code> 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。<font face="Consolas, Liberation Mono, Courier, monospace">XMLHttpRequest.send() 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。</font></p>
+<p><code><strong>XMLHttpRequest.send()</strong></code> 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。XMLHttpRequest.send() 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。</p>
 
 <p>如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 <code>"* / *"</code> 的{{HTTPHeader("Accept")}} 头部。</p>
 

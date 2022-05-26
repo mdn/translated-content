@@ -197,7 +197,7 @@ const openRequestedPopup = () =&gt; {
  <dd>In MSIE 6, the nearest equivalent to this feature is the <code>showModelessDialog()</code> method.</dd>
  <dd>Supported in: <img alt="Netscape 6.x" src="https://developer.mozilla.org/@api/deki/files/785/=Ns6.gif">, <img alt="Netscape 7.x" src="https://developer.mozilla.org/@api/deki/files/281/=NS7_ico4.gif">, <img alt="Mozilla 1.x" src="https://developer.mozilla.org/@api/deki/files/277/=Mozilla1_ico.png">, <img alt="Firefox 1.x" src="https://developer.mozilla.org/@api/deki/files/200/=FF1x.png"></dd>
  <dt>dialog</dt>
- <dd><span class="float-right"><a href="https://developer.mozilla.org/@api/deki/files/268/=MenuSystemCommands.png" title="MenuSystemCommands.png"><img alt="MenuSystemCommands.png" class="internal lwrap" src="https://developer.mozilla.org/@api/deki/files/268/=MenuSystemCommands.png?size=webview" style="float: left; height: 170px; width: 170px;"></a></span>The <code>dialog</code> feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet.</dd>
+ <dd><a href="https://developer.mozilla.org/@api/deki/files/268/=MenuSystemCommands.png" title="MenuSystemCommands.png"><img alt="MenuSystemCommands.png" class="internal lwrap" src="https://developer.mozilla.org/@api/deki/files/268/=MenuSystemCommands.png?size=webview" style="float: left; height: 170px; width: 170px;"></a>The <code>dialog</code> feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet.</dd>
  <dd>Supported in: <img alt="Netscape 6.x" src="https://developer.mozilla.org/@api/deki/files/785/=Ns6.gif">, <img alt="Netscape 7.x" src="https://developer.mozilla.org/@api/deki/files/281/=NS7_ico4.gif">, <img alt="Mozilla 1.x" src="https://developer.mozilla.org/@api/deki/files/277/=Mozilla1_ico.png">, <img alt="Firefox 1.x" src="https://developer.mozilla.org/@api/deki/files/200/=FF1x.png"></dd>
  <dt>minimizable</dt>
  <dd>This setting can only apply to dialog windows; "minimizable" requires <code>dialog=yes</code>. If <code>minimizable</code> is on, the new dialog window will have a minimize system command icon in the titlebar and it will be minimizable. Any non-dialog window is always minimizable and <code>minimizable=no</code> will be ignored.</dd>
@@ -279,15 +279,15 @@ const openRequestedPopup = () =&gt; {
 
 <p>Example:</p>
 
-<pre class="brush:js  language-js"><code class="language-js"><span class="keyword token">var</span> windowObjectReference<span class="punctuation token">;</span><span class="comment token"> // global variable
-</span>
-<span class="keyword token">function</span> <span class="function token">openRequestedPopup<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>
-    <span class="string token">"http://www.domainname.ext/path/ImgFile.png"</span><span class="punctuation token">,</span>
-    <span class="string token">"DescriptiveWindowName"</span><span class="punctuation token">,</span>
-    <span class="string token">"width=420,height=230,resizable,scrollbars=yes,status=1"</span>
-  <span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush:js  language-js"><code class="language-js">var windowObjectReference; // global variable
+
+function openRequestedPopup() {
+  windowObjectReference = window.open(
+    "http://www.domainname.ext/path/ImgFile.png",
+    "DescriptiveWindowName",
+    "width=420,height=230,resizable,scrollbars=yes,status=1"
+  );
+}</code></pre>
 
 <div class="line-number" style="top: 0px;"></div>
 
@@ -295,39 +295,39 @@ const openRequestedPopup = () =&gt; {
 
 <h2 id="Best_practices" name="Best_practices">Best practices</h2>
 
-<pre class="brush:js  language-js"><code class="language-js"><span class="operator token">&lt;</span>script type<span class="operator token">=</span><span class="string token">"text/javascript"</span><span class="operator token">&gt;</span>
-<span class="keyword token">var</span> windowObjectReference <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span><span class="comment token"> // global variable
-</span>
-<span class="keyword token">function</span> <span class="function token">openFFPromotionPopup<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>windowObjectReference <span class="operator token">==</span> <span class="keyword token">null</span> <span class="operator token">||</span> windowObjectReference<span class="punctuation token">.</span>closed<span class="punctuation token">)</span>
-  <span class="comment token">/* if the pointer to the window object in memory does not exist
-     or if such pointer exists but the window was closed */</span>
+<pre class="brush:js  language-js"><code class="language-js">&lt;script type="text/javascript"&gt;
+var windowObjectReference = null; // global variable
 
-  <span class="punctuation token">{</span>
-    windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"http://www.spreadfirefox.com/"</span><span class="punctuation token">,</span>
-   <span class="string token">"PromoteFirefoxWindowName"</span><span class="punctuation token">,</span> <span class="string token">"resizable,scrollbars,status"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="comment token">/* then create it. The new window will be created and
-       will be brought on top of any other window. */</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">else</span>
-  <span class="punctuation token">{</span>
-    windowObjectReference<span class="punctuation token">.</span><span class="function token">focus<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="comment token">/* else the window reference must exist and the window
+function openFFPromotionPopup() {
+  if(windowObjectReference == null || windowObjectReference.closed)
+  /* if the pointer to the window object in memory does not exist
+     or if such pointer exists but the window was closed */
+
+  {
+    windowObjectReference = window.open("http://www.spreadfirefox.com/",
+   "PromoteFirefoxWindowName", "resizable,scrollbars,status");
+    /* then create it. The new window will be created and
+       will be brought on top of any other window. */
+  }
+  else
+  {
+    windowObjectReference.focus();
+    /* else the window reference must exist and the window
        is not closed; therefore, we can bring it back on top of any other
        window with the focus() method. There would be no need to re-create
-       the window or to reload the referenced resource. */</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="operator token">&lt;</span><span class="operator token">/</span>script<span class="operator token">&gt;</span>
+       the window or to reload the referenced resource. */
+  };
+}
+&lt;/script&gt;
 
-<span class="punctuation token">(</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">)</span>
+(...)
 
-<span class="operator token">&lt;</span>p<span class="operator token">&gt;</span><span class="operator token">&lt;</span>a
- href<span class="operator token">=</span><span class="string token">"http://www.spreadfirefox.com/"</span>
- target<span class="operator token">=</span><span class="string token">"PromoteFirefoxWindowName"</span>
- onclick<span class="operator token">=</span><span class="string token">"openFFPromotionPopup(); return false;"</span>
- title<span class="operator token">=</span><span class="string token">"This link will create a new window or will re-use an already opened one"</span>
-<span class="operator token">&gt;</span>Promote Firefox adoption<span class="operator token">&lt;</span><span class="operator token">/</span>a<span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>p<span class="operator token">&gt;</span></code></pre>
+&lt;p&gt;&lt;a
+ href="http://www.spreadfirefox.com/"
+ target="PromoteFirefoxWindowName"
+ onclick="openFFPromotionPopup(); return false;"
+ title="This link will create a new window or will re-use an already opened one"
+&gt;Promote Firefox adoption&lt;/a&gt;&lt;/p&gt;</code></pre>
 
 <div class="line-number" style="top: 0px;"></div>
 
@@ -343,74 +343,74 @@ const openRequestedPopup = () =&gt; {
 
 <p>You can also parameterize the function to make it versatile, functional in more situations, therefore re-usable in scripts and webpages:</p>
 
-<pre class="brush:js  language-js"><code class="language-js"><span class="operator token">&lt;</span>script type<span class="operator token">=</span><span class="string token">"text/javascript"</span><span class="operator token">&gt;</span>
-<span class="keyword token">var</span> windowObjectReference <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span><span class="comment token"> // global variable
-</span>
-<span class="keyword token">function</span> <span class="function token">openRequestedPopup<span class="punctuation token">(</span></span>strUrl<span class="punctuation token">,</span> strWindowName<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>windowObjectReference <span class="operator token">==</span> <span class="keyword token">null</span> <span class="operator token">||</span> windowObjectReference<span class="punctuation token">.</span>closed<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>strUrl<span class="punctuation token">,</span> strWindowName<span class="punctuation token">,</span>
-           <span class="string token">"resizable,scrollbars,status"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    windowObjectReference<span class="punctuation token">.</span><span class="function token">focus<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="operator token">&lt;</span><span class="operator token">/</span>script<span class="operator token">&gt;</span>
+<pre class="brush:js  language-js"><code class="language-js">&lt;script type="text/javascript"&gt;
+var windowObjectReference = null; // global variable
 
-<span class="punctuation token">(</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">)</span>
+function openRequestedPopup(strUrl, strWindowName) {
+  if(windowObjectReference == null || windowObjectReference.closed) {
+    windowObjectReference = window.open(strUrl, strWindowName,
+           "resizable,scrollbars,status");
+  } else {
+    windowObjectReference.focus();
+  };
+}
+&lt;/script&gt;
 
-<span class="operator token">&lt;</span>p<span class="operator token">&gt;</span><span class="operator token">&lt;</span>a
- href<span class="operator token">=</span><span class="string token">"http://www.spreadfirefox.com/"</span>
- target<span class="operator token">=</span><span class="string token">"PromoteFirefoxWindow"</span>
- onclick<span class="operator token">=</span><span class="string token">"openRequestedPopup(this.href, this.target); return false;"</span>
- title<span class="operator token">=</span><span class="string token">"This link will create a new window or will re-use an already opened one"</span>
-<span class="operator token">&gt;</span>Promote Firefox adoption<span class="operator token">&lt;</span><span class="operator token">/</span>a<span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>p<span class="operator token">&gt;</span></code>
+(...)
+
+&lt;p&gt;&lt;a
+ href="http://www.spreadfirefox.com/"
+ target="PromoteFirefoxWindow"
+ onclick="openRequestedPopup(this.href, this.target); return false;"
+ title="This link will create a new window or will re-use an already opened one"
+&gt;Promote Firefox adoption&lt;/a&gt;&lt;/p&gt;</code>
 </pre>
 
 <div class="line-number" style="top: 380px;"></div>
 
 <p>You can also make such function able to open only 1 secondary window and to reuse such single secondary window for other links in this manner:</p>
 
-<pre class="brush:js  language-js"><code class="language-js"><span class="operator token">&lt;</span>script type<span class="operator token">=</span><span class="string token">"text/javascript"</span><span class="operator token">&gt;</span>
-<span class="keyword token">var</span> windowObjectReference <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span><span class="comment token"> // global variable
-</span><span class="keyword token">var</span> PreviousUrl<span class="punctuation token">;</span> <span class="comment token">/* global variable which will store the
-                    url currently in the secondary window */</span>
+<pre class="brush:js  language-js"><code class="language-js">&lt;script type="text/javascript"&gt;
+var windowObjectReference = null; // global variable
+var PreviousUrl; /* global variable which will store the
+                    url currently in the secondary window */
 
-<span class="keyword token">function</span> <span class="function token">openRequestedSinglePopup<span class="punctuation token">(</span></span>strUrl<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>windowObjectReference <span class="operator token">==</span> <span class="keyword token">null</span> <span class="operator token">||</span> windowObjectReference<span class="punctuation token">.</span>closed<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>strUrl<span class="punctuation token">,</span> <span class="string token">"SingleSecondaryWindowName"</span><span class="punctuation token">,</span>
-         <span class="string token">"resizable,scrollbars,status"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span><span class="punctuation token">(</span>PreviousUrl <span class="operator token">!</span><span class="operator token">=</span> strUrl<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>strUrl<span class="punctuation token">,</span> <span class="string token">"SingleSecondaryWindowName"</span><span class="punctuation token">,</span>
-      <span class="string token">"resizable=yes,scrollbars=yes,status=yes"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="comment token">/* if the resource to load is different,
+function openRequestedSinglePopup(strUrl) {
+  if(windowObjectReference == null || windowObjectReference.closed) {
+    windowObjectReference = window.open(strUrl, "SingleSecondaryWindowName",
+         "resizable,scrollbars,status");
+  } else if(PreviousUrl != strUrl) {
+    windowObjectReference = window.open(strUrl, "SingleSecondaryWindowName",
+      "resizable=yes,scrollbars=yes,status=yes");
+    /* if the resource to load is different,
        then we load it in the already opened secondary window and then
-       we bring such window back on top/in front of its parent window. */</span>
-    windowObjectReference<span class="punctuation token">.</span><span class="function token">focus<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    windowObjectReference<span class="punctuation token">.</span><span class="function token">focus<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
+       we bring such window back on top/in front of its parent window. */
+    windowObjectReference.focus();
+  } else {
+    windowObjectReference.focus();
+  };
 
-  PreviousUrl <span class="operator token">=</span> strUrl<span class="punctuation token">;</span>
-  <span class="comment token">/* explanation: we store the current url in order to compare url
-     in the event of another call of this function. */</span>
-<span class="punctuation token">}</span>
-<span class="operator token">&lt;</span><span class="operator token">/</span>script<span class="operator token">&gt;</span>
+  PreviousUrl = strUrl;
+  /* explanation: we store the current url in order to compare url
+     in the event of another call of this function. */
+}
+&lt;/script&gt;
 
-<span class="punctuation token">(</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">)</span>
+(...)
 
-<span class="operator token">&lt;</span>p<span class="operator token">&gt;</span><span class="operator token">&lt;</span>a
- href<span class="operator token">=</span><span class="string token">"http://www.spreadfirefox.com/"</span>
- target<span class="operator token">=</span><span class="string token">"SingleSecondaryWindowName"</span>
- onclick<span class="operator token">=</span><span class="string token">"openRequestedSinglePopup(this.href); return false;"</span>
- title<span class="operator token">=</span><span class="string token">"This link will create a new window or will re-use an already opened one"</span>
-<span class="operator token">&gt;</span>Promote Firefox adoption<span class="operator token">&lt;</span><span class="operator token">/</span>a<span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>p<span class="operator token">&gt;</span>
+&lt;p&gt;&lt;a
+ href="http://www.spreadfirefox.com/"
+ target="SingleSecondaryWindowName"
+ onclick="openRequestedSinglePopup(this.href); return false;"
+ title="This link will create a new window or will re-use an already opened one"
+&gt;Promote Firefox adoption&lt;/a&gt;&lt;/p&gt;
 
-<span class="operator token">&lt;</span>p<span class="operator token">&gt;</span><span class="operator token">&lt;</span>a
- href<span class="operator token">=</span><span class="string token">"http://www.mozilla.org/support/firefox/faq"</span>
- target<span class="operator token">=</span><span class="string token">"SingleSecondaryWindowName"</span>
- onclick<span class="operator token">=</span><span class="string token">"openRequestedSinglePopup(this.href); return false;"</span>
- title<span class="operator token">=</span><span class="string token">"This link will create a new window or will re-use an already opened one"</span>
-<span class="operator token">&gt;</span>Firefox FAQ<span class="operator token">&lt;</span><span class="operator token">/</span>a<span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>p<span class="operator token">&gt;</span></code>
+&lt;p&gt;&lt;a
+ href="http://www.mozilla.org/support/firefox/faq"
+ target="SingleSecondaryWindowName"
+ onclick="openRequestedSinglePopup(this.href); return false;"
+ title="This link will create a new window or will re-use an already opened one"
+&gt;Firefox FAQ&lt;/a&gt;&lt;/p&gt;</code>
 </pre>
 
 <h2 id="FAQ" name="FAQ">FAQ</h2>
@@ -439,7 +439,7 @@ const openRequestedPopup = () =&gt; {
  <dd>With the built-in popup blockers of Mozilla/Firefox and Internet Explorer 6 SP2, you have to check the return value of <code>window.open()</code>: it will be <var>null</var> if the window wasn't allowed to open. However, for most other popup blockers, there is no reliable way.</dd>
  <dt>What is the JavaScript relationship between the main window and the secondary window?</dt>
  <dd>The <code>window.open()</code> method gives a main window a reference to a secondary window; the <a href="https://developer.mozilla.org/en-US/docs/DOM/window.opener" title="DOM/window.opener">opener</a> property gives a secondary window a reference to its main window.</dd>
- <dt>I can not access the properties of the new secondary window. I always get an error in the javascript console saying "Error<span class="nowiki">:</span> uncaught exception<span class="nowiki">:</span> Permission denied to get property &lt;property_name or method_name&gt;. Why is that?</dt>
+ <dt>I can not access the properties of the new secondary window. I always get an error in the javascript console saying "Error: uncaught exception: Permission denied to get property &lt;property_name or method_name&gt;. Why is that?</dt>
  <dd>It is because of the cross-domain script security restriction (also referred as the "Same Origin Policy"). A script loaded in a window (or frame) from a distinct origin (domain name) <strong>cannot get nor set</strong> properties of another window (or frame) or the properties of any of its HTML objects coming from another distinct origin (domain name). Therefore, before executing a script targeting a secondary window, the browser in the main window will verify that the secondary window has the same domain name.</dd>
  <dd>More reading on the cross-domain script security restriction: <a href="http://www.mozilla.org/projects/security/components/same-origin.html" rel="freelink">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
 </dl>
@@ -566,11 +566,11 @@ const openRequestedPopup = () =&gt; {
 
 <p>In cases where <code>left</code> and <code>screenX</code> (and/or <code>top</code> and <code>screenY</code>) have conflicting values, then <code>left</code> and <code>top</code> have precedence over <code>screenX</code> and <code>screenY</code> respectively. If <code>left</code> and <code>screenX</code> (and/or <code>top</code> and <code>screenY</code>) are defined in the <var>features</var> list, then <code>left</code> (and/or <code>top</code>) will be honored and rendered. In the following example the new window will be positioned at 100 pixels from the left side of the work area for applications of the user's operating system, not at 200 pixels.</p>
 
-<pre class="brush:js  language-js"><code class="language-js">windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>
-  <span class="string token">"http://news.bbc.co.uk/"</span><span class="punctuation token">,</span>
-  <span class="string token">"BBCWorldNewsWindowName"</span><span class="punctuation token">,</span>
-  <span class="string token">"left=100,screenX=200,resizable,scrollbars,status"</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush:js  language-js"><code class="language-js">windowObjectReference = window.open(
+  "http://news.bbc.co.uk/",
+  "BBCWorldNewsWindowName",
+  "left=100,screenX=200,resizable,scrollbars,status"
+);</code></pre>
 
 <div class="line-number" style="top: 0px;"></div>
 
@@ -578,11 +578,11 @@ const openRequestedPopup = () =&gt; {
 
 <p>outerWidth has precedence over width and width has precedence over innerWidth. outerHeight has precedence over height and height has precedence over innerHeight. In the following example, Mozilla-browsers will create a new window with an outerWidth of 600 pixels wide and will ignore the request of a width of 500 pixels and will also ignore the request of an innerWidth of 400 pixels.</p>
 
-<pre class="brush:js  language-js"><code class="language-js">windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>
-  <span class="string token">"http://www.wwf.org/"</span><span class="punctuation token">,</span>
-  <span class="string token">"WWildlifeOrgWindowName"</span><span class="punctuation token">,</span>
-  <span class="string token">"outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status"</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush:js  language-js"><code class="language-js">windowObjectReference = window.open(
+  "http://www.wwf.org/",
+  "WWildlifeOrgWindowName",
+  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status"
+);</code></pre>
 
 <div class="line-number" style="top: 0px;"></div>
 
@@ -658,11 +658,11 @@ const openRequestedPopup = () =&gt; {
 
 <p>If the <code>strWindowName</code> parameter is omitted, a new window or tab is opened. If a window with the same name already exists, the existing window is refreshed.</p>
 
-<pre class="script-jem;brush:js  language-js"><code class="language-js"><span class="comment token">//Always opens a new window/tab
-</span>window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"map.php"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">
+<pre class="script-jem;brush:js  language-js"><code class="language-js">//Always opens a new window/tab
+window.open("map.php");
+
 //Refreshes an existing window/tab that was opened with the same name, if one exists
-</span>window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"map.php"</span><span class="punctuation token">,</span> <span class="string token">"BiggerMap"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+window.open("map.php", "BiggerMap");</code>
 </pre>
 
 <div class="line-number" style="top: 76px;"></div>

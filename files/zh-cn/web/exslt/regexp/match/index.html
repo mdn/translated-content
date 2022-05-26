@@ -41,7 +41,7 @@ translation_of: Web/EXSLT/regexp/match
 
 <p>例如:</p>
 
-<pre class="eval">&lt;xsl:for-each select="regExp:match('<span class="nowiki">http://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>',
+<pre class="eval">&lt;xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
                                    '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
    Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
 &lt;/xsl:for-each&gt;
@@ -49,7 +49,7 @@ translation_of: Web/EXSLT/regexp/match
 
 <p>This code generates the following output:</p>
 
-<pre class="eval">Part 1 = <span class="nowiki">http://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>
+<pre class="eval">Part 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
 Part 2 = http
 Part 3 = developer.mozilla.org
 Part 4 =

@@ -273,12 +273,12 @@
 /fr/docs/Apprendre/a11y/WAI-ARIA_basics	/fr/docs/Learn/Accessibility/WAI-ARIA_basics
 /fr/docs/Apprendre/a11y/What_is_accessibility	/fr/docs/Learn/Accessibility/What_is_accessibility
 /fr/docs/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche	/fr/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines
-/fr/docs/Astuces_CSS	/fr/docs/conflicting/Web/CSS
+/fr/docs/Astuces_CSS	/fr/docs/Web/CSS
 /fr/docs/Astuces_CSS/Couleurs_et_fonds	/fr/docs/Web/CSS/color_value
-/fr/docs/Astuces_CSS/Liens	/fr/docs/conflicting/Web/CSS/Pseudo-classes
+/fr/docs/Astuces_CSS/Liens	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/Astuces_CSS/Tableaux	/fr/docs/Web/CSS/border-collapse
 /fr/docs/Astuces_CSS:Couleurs_et_fonds	/fr/docs/Web/CSS/color_value
-/fr/docs/Astuces_CSS:Liens	/fr/docs/conflicting/Web/CSS/Pseudo-classes
+/fr/docs/Astuces_CSS:Liens	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/Astuces_CSS:Tableaux	/fr/docs/Web/CSS/border-collapse
 /fr/docs/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /fr/docs/Bugs_importants_corrigés_dans_Firefox_3	/fr/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
@@ -600,7 +600,7 @@
 /fr/docs/CSS/min-width	/fr/docs/Web/CSS/min-width
 /fr/docs/CSS/nombre	/fr/docs/Web/CSS/number
 /fr/docs/CSS/none	/fr/docs/conflicting/Web/CSS/float
-/fr/docs/CSS/normal	/fr/docs/conflicting/Web/CSS/font-variant
+/fr/docs/CSS/normal	/fr/docs/Web/CSS/font-variant
 /fr/docs/CSS/number	/fr/docs/Web/CSS/number
 /fr/docs/CSS/opacity	/fr/docs/Web/CSS/opacity
 /fr/docs/CSS/orphans	/fr/docs/Web/CSS/orphans
@@ -3557,7 +3557,9 @@
 /fr/docs/Type_MIME_incorrect_pour_les_fichiers_CSS	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /fr/docs/Un_raycaster_basique_avec_canvas	/fr/docs/Web/API/Canvas_API/A_basic_ray-caster
 /fr/docs/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/fr/docs/Useful_CSS_tips	/fr/docs/Web/CSS
 /fr/docs/Useful_CSS_tips/Color_and_Background	/fr/docs/Web/CSS/color_value
+/fr/docs/Useful_CSS_tips/Links	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/Useful_CSS_tips/Tables	/fr/docs/Web/CSS/border-collapse
 /fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File/Using_files_from_web_applications
 /fr/docs/Using_geolocation	/fr/docs/Web/API/Geolocation_API
@@ -4390,7 +4392,7 @@
 /fr/docs/Web/CSS/motion-path	/fr/docs/Web/CSS/offset-path
 /fr/docs/Web/CSS/motion-rotation	/fr/docs/Web/CSS/offset-rotate
 /fr/docs/Web/CSS/none	/fr/docs/conflicting/Web/CSS/float
-/fr/docs/Web/CSS/normal	/fr/docs/conflicting/Web/CSS/font-variant
+/fr/docs/Web/CSS/normal	/fr/docs/Web/CSS/font-variant
 /fr/docs/Web/CSS/offset-block-end	/fr/docs/Web/CSS/inset-block-end
 /fr/docs/Web/CSS/offset-block-start	/fr/docs/Web/CSS/inset-block-start
 /fr/docs/Web/CSS/offset-inline-end	/fr/docs/Web/CSS/inset-inline-end
@@ -6102,6 +6104,7 @@
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
+/fr/docs/conflicting/Web/CSS	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is
 /fr/docs/conflicting/Web/CSS/:placeholder-shown	/fr/docs/Web/CSS/:placeholder-shown
@@ -6119,10 +6122,12 @@
 /fr/docs/conflicting/Web/CSS/@viewport_ff9d4f4f351256d9fdb3d21397eb3880	/fr/docs/Web/CSS/@viewport
 /fr/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /fr/docs/conflicting/Web/CSS/CSS_Color	/fr/docs/Web/CSS/CSS_Colors
+/fr/docs/conflicting/Web/CSS/Pseudo-classes	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/conflicting/Web/CSS/border-collapse	/fr/docs/Web/CSS/border-collapse
 /fr/docs/conflicting/Web/CSS/box-ordinal-group	/fr/docs/Web/CSS/box-ordinal-group
 /fr/docs/conflicting/Web/CSS/color_value	/fr/docs/Web/CSS/color_value
 /fr/docs/conflicting/Web/CSS/column-gap	/fr/docs/Web/CSS/column-gap
+/fr/docs/conflicting/Web/CSS/font-variant	/fr/docs/Web/CSS/font-variant
 /fr/docs/conflicting/Web/Guide	/fr/docs/Web/Guide
 /fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP

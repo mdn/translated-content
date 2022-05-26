@@ -14,7 +14,7 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
 <p>Web Speech API 有一个主要的控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"><code>SpeechRecognition</code></a>， 外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS上的 Siri，Win10上的 Cortana，Android Speech 等等。</p>
 
-<p><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 1.375rem;'>Demo</span></p>
+<p>Demo</p>
 
 <p>为了简单展示 Web speech recognition 的作用，我们写了一个demo——<a href="https://github.com/mdn/web-speech-api/tree/master/speech-color-changer">Speech color changer</a>。点击屏幕之后，说出 HTML 颜色关键字(网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。</p>
 
@@ -33,16 +33,16 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
  <li>
   <p>Firefox OS 2.5+ 也支持，但作为一个特权API(privileged API)需要权限，因此你需要在<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Build/Manifest">manifest.webapp</a> (也可以通过 WebIDE 下载， 或者使应用得到验证后在 <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> 可使用)如下设置：</p>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"permissions":</span> <span class="punctuation token">{</span>
-  <span class="key token">"audio-capture" :</span> <span class="punctuation token">{</span>
-    <span class="key token">"description" :</span> <span class="string token">"Audio capture"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"speech-recognition" :</span> <span class="punctuation token">{</span>
-    <span class="key token">"description" :</span> <span class="string token">"Speech recognition"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">"permissions": {
+  "audio-capture" : {
+    "description" : "Audio capture"
+  },
+  "speech-recognition" : {
+    "description" : "Speech recognition"
+  }
+}</code></pre>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"type":</span> <span class="string token">"privileged"</span></code></pre>
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">"type": "privileged"</code></pre>
  </li>
  <li>
   <p>Chrome桌面端和Android端自version 33 以来均支持，但是带有前缀，所以你需要使用带有前缀的版本，比如：<code>webkitSpeechRecognition</code></p>

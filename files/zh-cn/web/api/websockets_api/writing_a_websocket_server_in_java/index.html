@@ -23,7 +23,7 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 
 <p>实例化ServerSocket类时，它将绑定到port参数指定的端口号。</p>
 
-<p><span style="line-height: 1.572;">实现代码片段一：</span></p>
+<p>实现代码片段一：</p>
 
 <pre><code>import java.io.IOException;
 import java.io.InputStream;
@@ -50,9 +50,9 @@ public class WebSocket {
 <p>方法：</p>
 
 <ul>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a></span>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a>()</code><br>
   返回这个Socket的输入流InputStream</li>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a></span>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a>()</code><br>
   返回这个Socket的输出流OutputStream</li>
 </ul>
 
@@ -156,7 +156,7 @@ public class WebSocket {
  </tbody>
 </table>
 
-<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码0x1表示这是一个完整的消息。<span style="line-height: 1.572;"> </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
+<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码0x1表示这是一个完整的消息。 <a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
 
 <p>- 134:</p>
 

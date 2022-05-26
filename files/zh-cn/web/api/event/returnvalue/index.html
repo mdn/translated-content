@@ -11,7 +11,7 @@ translation_of: Web/API/Event/returnValue
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p><span class="seoSummary"><code><strong>Event.returnValue</strong></code> 属性表示该事件的默认操作是否已被阻止。</span>默认情况下，它被设置为 <code>true</code>，即允许进行默认操作。将该属性设置为 <code>false</code> 即可阻止默认操作。</p>
+<p><code><strong>Event.returnValue</strong></code> 属性表示该事件的默认操作是否已被阻止。默认情况下，它被设置为 <code>true</code>，即允许进行默认操作。将该属性设置为 <code>false</code> 即可阻止默认操作。</p>
 
 <div class="note">
 <p><strong>注意：</strong> While <code>returnValue</code> has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.</p>

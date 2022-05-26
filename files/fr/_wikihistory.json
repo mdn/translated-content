@@ -41392,12 +41392,6 @@
       "paul.bignier"
     ]
   },
-  "conflicting/Web/CSS": {
-    "modified": "2019-01-16T16:09:55.868Z",
-    "contributors": [
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
     "modified": "2019-04-06T12:38:31.267Z",
     "contributors": [
@@ -41430,13 +41424,6 @@
       "xdelatour"
     ]
   },
-  "conflicting/Web/CSS/Pseudo-classes": {
-    "modified": "2019-01-16T15:51:16.166Z",
-    "contributors": [
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-04-06T13:18:27.677Z",
     "contributors": [
@@ -41461,14 +41448,6 @@
   },
   "conflicting/Web/CSS/float": {
     "modified": "2019-03-18T21:17:42.214Z",
-    "contributors": [
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "conflicting/Web/CSS/font-variant": {
-    "modified": "2019-03-24T00:11:40.284Z",
     "contributors": [
       "teoli",
       "FredB",

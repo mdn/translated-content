@@ -36,7 +36,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><span style="font-family: courier new;">&lt;input type="URL"&gt;</span></td>
+   <td>&lt;input type="URL"&gt;</td>
    <td>值必须是绝对的URL, 即，是下面的某一种:
     <ul>
      <li>a valid URI (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>)</li>
@@ -48,11 +48,11 @@ tags:
    <td><strong>Type mismatch </strong>constraint violation</td>
   </tr>
   <tr>
-   <td> <span style="font-family: courier new;">&lt;input type="email"&gt;</span></td>
+   <td> &lt;input type="email"&gt;</td>
    <td>The value must follow the <a class="external" href="http://www.ietf.org/rfc/std/std68.txt">ABNF</a> production: <code>1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )</code> where:
     <ul>
-     <li><code>atext</code> is defined in <a class="external" href="http://tools.ietf.org/html/rfc5322">RFC 5322</a>, i.e., a US-ASCII letter (<span style="font-family: courier new;">A</span> to <span style="font-family: courier new;">Z</span> and <span style="font-family: courier new;">a</span>-<span style="font-family: courier new;">z</span>), a digit (<span style="font-family: courier new;">0</span> to <span style="font-family: courier new;">9</span>) or one of the following<span style="font-family: courier new;">! # $ % &amp; ' * + - / = ? ` { } | ~ </span>special character,</li>
-     <li><code>ldh-str</code> is defined in <a class="external" href="http://www.apps.ietf.org/rfc/rfc1034.html#sec-3.5">RFC 1034</a>, i.e., US-ASCII letters, mixed with digits and <span style="font-family: courier new;">-</span> grouped in words separated by a dot (<span style="font-family: courier new;">.</span>).</li>
+     <li><code>atext</code> is defined in <a class="external" href="http://tools.ietf.org/html/rfc5322">RFC 5322</a>, i.e., a US-ASCII letter (A to Z and a-z), a digit (0 to 9) or one of the following! # $ % &amp; ' * + - / = ? ` { } | ~ special character,</li>
+     <li><code>ldh-str</code> is defined in <a class="external" href="http://www.apps.ietf.org/rfc/rfc1034.html#sec-3.5">RFC 1034</a>, i.e., US-ASCII letters, mixed with digits and - grouped in words separated by a dot (.).</li>
     </ul>
 
     <div class="note"><strong>Note:</strong> if the {{ htmlattrxref("multiple", "input") }} attribute is set, several e-mail addresses can be set, as a comma-separated list, for this input. If any of these do not satisfy the condition described here, the <strong>Type mismatch </strong>constraint violation is triggered.</div>
@@ -127,7 +127,7 @@ tags:
    <td rowspan="5">{{ htmlattrxref("step", "input") }}</td>
    <td>date</td>
    <td>An integer number of days</td>
-   <td rowspan="5">Unless the step is set to the <span style="font-family: courier new;">any</span> literal, the value must be <strong>min</strong> + an integral multiple of the step.</td>
+   <td rowspan="5">Unless the step is set to the any literal, the value must be <strong>min</strong> + an integral multiple of the step.</td>
    <td rowspan="5"><strong>Step mismatch </strong>constraint violation</td>
   </tr>
   <tr>
@@ -156,7 +156,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Constraint_validation_process"><span class="author-g-by4vjwmiwjiydpj7">Constraint validation process</span></h2>
+<h2 id="Constraint_validation_process">Constraint validation process</h2>
 
 <p>Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:</p>
 
@@ -174,11 +174,11 @@ tags:
 </ul>
 </div>
 
-<h2 id="Complex_constraints_using_HTML5_Constraint_API"><span class="author-g-by4vjwmiwjiydpj7">Complex constraints using HTML5 Constraint API</span></h2>
+<h2 id="Complex_constraints_using_HTML5_Constraint_API">Complex constraints using HTML5 Constraint API</h2>
 
-<p><span class="author-g-by4vjwmiwjiydpj7">Using JavaScript and the Constraint API, it is possible to implement more complex constraints, for example, constraints combining several fields, or constraints involving complex calculations.</span></p>
+<p>Using JavaScript and the Constraint API, it is possible to implement more complex constraints, for example, constraints combining several fields, or constraints involving complex calculations.</p>
 
-<p><span class="author-g-by4vjwmiwjiydpj7">Basically, the idea is to trigger JavaScript on some form field event (like <strong>onchange</strong>) to calculate whether the constraint is violated, and then to use the method <code><em>field</em>.setCustomValidity()</code> to set the result of the validation: an empty string means the constraint is satisfied, and any other string means there is an error and this string is the error message to display to the user.</span></p>
+<p>Basically, the idea is to trigger JavaScript on some form field event (like <strong>onchange</strong>) to calculate whether the constraint is violated, and then to use the method <code><em>field</em>.setCustomValidity()</code> to set the result of the validation: an empty string means the constraint is satisfied, and any other string means there is an error and this string is the error message to display to the user.</p>
 
 <h3 id="Constraint_combining_several_fields_Postal_code_validation">Constraint combining several fields: Postal code validation</h3>
 
@@ -188,7 +188,7 @@ tags:
 <p><strong>Note: </strong>This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts. </p>
 </div>
 
-<p><span style="line-height: 1.5;">As an example, we will add a script checking the constraint validation for this simple form:</span></p>
+<p>As an example, we will add a script checking the constraint validation for this simple form:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
     &lt;label for="ZIP"&gt;ZIP : &lt;/label&gt;
@@ -294,7 +294,7 @@ tags:
 
 <p>You can see a <a href="/@api/deki/files/4745/=fileconstraint.html" title="https://developer.mozilla.org/@api/deki/files/4745/=fileconstraint.html">live example</a> of the File size constraint validation.</p>
 
-<h2 id="Visual_styling_of_constraint_validation"><span class="author-g-by4vjwmiwjiydpj7">Visual styling of constraint validation</span></h2>
+<h2 id="Visual_styling_of_constraint_validation">Visual styling of constraint validation</h2>
 
 <p>Apart from setting constraints, web developers want to control what messages are displayed to the users and how they are styled.</p>
 
@@ -330,16 +330,16 @@ tags:
 
 <p>The element.setCustomValidity(error) method is used to set a custom error message to be displayed when a form is submitted. The method works by taking a string parameter error. If error is a non-empty string, the method assumes validation was unsuccessful and displays error as an error message. If error is an empty string, the element is considered validated and resets the error message.</p>
 
-<h4 id="Constraint_APIs_ValidityState_object"><span class="author-g-by4vjwmiwjiydpj7">Constraint API's ValidityState object</span></h4>
+<h4 id="Constraint_APIs_ValidityState_object">Constraint API's ValidityState object</h4>
 
 <p>The DOM <a href="/en-US/docs/Web/API/ValidityState" title="/en-US/docs/Web/API/ValidityState"><code>ValidityState</code></a> interface represents the <em>validity states</em> that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid.</p>
 
-<h3 id="Examples_of_personalized_styling"><span class="author-g-by4vjwmiwjiydpj7">Examples of personalized styling</span></h3>
+<h3 id="Examples_of_personalized_styling">Examples of personalized styling</h3>
 
-<h3 id="HTML4_fallback"><span class="author-g-by4vjwmiwjiydpj7">HTML4 fallback</span></h3>
+<h3 id="HTML4_fallback">HTML4 fallback</h3>
 
-<h4 id="Trivial_fallback"><span class="author-g-by4vjwmiwjiydpj7">Trivial fallback</span></h4>
+<h4 id="Trivial_fallback">Trivial fallback</h4>
 
-<h4 id="JS_fallback"><span class="author-g-by4vjwmiwjiydpj7">JS fallback</span></h4>
+<h4 id="JS_fallback">JS fallback</h4>
 
-<h2 id="Conclusion"><span class="author-g-by4vjwmiwjiydpj7">Conclusion</span></h2>
+<h2 id="Conclusion">Conclusion</h2>

@@ -51,7 +51,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h3 id="示例">示例</h3>
 
-<p>本例创建了一个新的 WebSocket，连接到地址为 <code><span class="nowiki">ws://www.example.com/socketserver</span></code> 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。</p>
+<p>本例创建了一个新的 WebSocket，连接到地址为 <code>ws://www.example.com/socketserver</code> 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。</p>
 
 <pre class="brush: js">var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 </pre>
@@ -65,7 +65,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <p>一旦连接建立了（也就是说 <code>readyState</code> 是 <code>OPEN</code>） <code>exampleSocket.protocol</code> 就会告诉你服务器选择了哪个协议。</p>
 
-<p>上面的例子中 <code>ws</code> 替代了 <code>http</code>，同样地 <code>wss 也会替代https</code>. 建立WebSocket链接有赖于 <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">HTTP Upgrade mechanism</a>, 所以当我们使用 <code><span class="nowiki">ws://www.example.com</span></code>或者 <code><span class="nowiki">wss://www.example.com</span></code>来访问HTTP服务器的时候协议会隐式地升级。</p>
+<p>上面的例子中 <code>ws</code> 替代了 <code>http</code>，同样地 <code>wss 也会替代https</code>. 建立WebSocket链接有赖于 <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">HTTP Upgrade mechanism</a>, 所以当我们使用 <code>ws://www.example.com</code>或者 <code>wss://www.example.com</code>来访问HTTP服务器的时候协议会隐式地升级。</p>
 
 <h2 id="向服务器发送数据">向服务器发送数据</h2>
 

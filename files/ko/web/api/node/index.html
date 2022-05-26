@@ -22,17 +22,17 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the base URL. The concept of base URL changes from one language to another; in HTML, it corresponds to the protocol, the domain name and the directory structure, that is all until the last <code>'/'</code>.</dd>
  <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd>(Not available to web content.) The read-only {{ Interface("nsIURI") }} object representing the base URI for the element.</dd>
+ <dd>(Not available to web content.) The read-only <code>nsIURI</code> object representing the base URI for the element.</dd>
  <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
  <dd>Returns a live {{domxref("NodeList")}} containing all the children of this node. {{domxref("NodeList")}} being live means that if the children of the <code>Node</code> change, the {{domxref("NodeList")}} object is automatically updated.</dd>
  <dt>{{domxref("Node.firstChild")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Node")}} representing the first direct child node of the node, or <code>null</code> if the node has no child.</dd>
  <dt>{{domxref("Node.lastChild")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Node")}} representing the last direct child node of the node, or <code>null</code> if the node has no child.</dd>
- <dt>{{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
+ <dt>{{domxref("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. {{ gecko_minversion_inline("1.9.2") }}<br>
  Though recent specifications require <code>localName</code> to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.</dd>
- <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
+ <dt>{{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}</dt>
  <dd>The namespace URI of this node, or <code>null</code> if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2") }}<br>
  Though recent specifications require <code>namespaceURI</code> to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.</dd>
  <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
@@ -40,7 +40,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} containing the name of the <code>Node</code>. The structure of the name will differ with the name type. E.g. An {{domxref("HTMLElement")}} will contain the name of the corresponding tag, like <code>'audio'</code> for an {{domxref("HTMLAudioElement")}}, a {{domxref("Text")}} node will have the <code>'#text'</code> string, or a {{domxref("Document")}} node will have the <code>'#document'</code> string.</dd>
  <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}</dt>
- <dd>A {{ Interface("nsIPrincipal") }} representing the node principal.</dd>
+ <dd>A <code>nsIPrincipal</code> representing the node principal.</dd>
  <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
  <dd>Returns an <code>unsigned short</code> representing the type of the node. Possible values are:
  <table class="standard-table">
@@ -108,7 +108,7 @@ translation_of: Web/API/Node
  <dd>Returns a {{domxref("Node")}} that is the parent of this node. If there is no such node, like if this node is the top of the tree or if doesn't participate in a tree, this property returns <code>null</code>.</dd>
  <dt>{{domxref("Node.parentElement")}} {{readonlyInline}}</dt>
  <dd>Returns an {{domxref("Element")}} that is the parent of this node. If the node has no parent, or if that parent is not an {{domxref("Element")}}, this property returns <code>null</code>.</dd>
- <dt>{{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}</dt>
+ <dt>{{domxref("Node.prefix")}} {{deprecated_inline}}{{readonlyInline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the namespace prefix of the node, or <code>null</code> if no prefix is specified.<br>
  Though recent specifications require <code>prefix</code> to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.</dd>
  <dt>{{domxref("Node.previousSibling")}} {{readonlyInline}}</dt>
@@ -130,11 +130,11 @@ translation_of: Web/API/Node
  <dd></dd>
  <dt>{{domxref("Node.contains()")}}</dt>
  <dd></dd>
- <dt>{{domxref("Node.getFeature()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Node.getFeature()")}} {{deprecated_inline}}</dt>
  <dd>...</dd>
- <dt>{{domxref("Node.getUserData()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Node.getUserData()")}} {{deprecated_inline}}</dt>
  <dd>Allows a user to get some {{domxref("DOMUserData")}} from the node.</dd>
- <dt>{{domxref("Node.hasAttributes()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Node.hasAttributes()")}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating if the element has any attributes, or not.</dd>
  <dt>{{domxref("Node.hasChildNodes()")}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating if the element has any child nodes, or not.</dd>
@@ -144,9 +144,9 @@ translation_of: Web/API/Node
  <dd></dd>
  <dt>{{domxref("Node.isEqualNode()")}}</dt>
  <dd></dd>
- <dt>{{domxref("Node.isSameNode()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Node.isSameNode()")}} {{deprecated_inline}}</dt>
  <dd></dd>
- <dt>{{domxref("Node.isSupported()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Node.isSupported()")}} {{deprecated_inline}}</dt>
  <dd>Returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> flag containing the result of a test whether the DOM implementation implements a specific feature and this feature is supported by the specific node.</dd>
  <dt>{{domxref("Node.lookupPrefix()")}}</dt>
  <dd></dd>
@@ -158,7 +158,7 @@ translation_of: Web/API/Node
  <dd>Removes a child node from the current element, which must be a child of the current node.</dd>
  <dt>{{domxref("Node.replaceChild()")}}</dt>
  <dd>Replaces one child {{domxref("Node")}} of the current one with the second one given in parameter.</dd>
- <dt>{{domxref("Node.setUserData()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Node.setUserData()")}} {{deprecated_inline}}</dt>
  <dd>Allows a user to attach, or remove, {{domxref("DOMUserData")}} to the node.</dd>
 </dl>
 

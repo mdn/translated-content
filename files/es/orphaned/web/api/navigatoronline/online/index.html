@@ -3,6 +3,7 @@ title: Navigator.onLine
 slug: orphaned/Web/API/NavigatorOnLine/onLine
 translation_of: Web/API/NavigatorOnLine/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
+browser-compat: api.NavigatorOnLine.onLine
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
@@ -48,111 +49,11 @@ window.addEventListener('online', function(e) { console.log('online'); });
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#navigator.online", "navigator.onLine")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.9.1)}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop(2.0)}}<sup>[4]</sup></td>
-   <td>8<sup>[3]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>5.0.4</td>
-  </tr>
-  <tr>
-   <td>on {{domxref("WorkerNavigator")}}</td>
-   <td>Yes</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(29)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>BlackBerry</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.2<sup>[5]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.9.1)}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>7<br>
-     10</p>
-   </td>
-  </tr>
-  <tr>
-   <td>on {{domxref("WorkerNavigator")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(29)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Earlier versions of Chrome incorrectly return <code>true</code> when a tab is first opened, but it starts reporting the correct connectivity status after the first network event. Windows: 11, Mac: 14, Chrome OS: 13, Linux: Always returns <code>true</code>. For history, see <a href="http://crbug.com/7469">crbug.com/7469</a>.</p>
-
-<p>[2] Since Firefox 4, and Opera 11.10, the browser returns <code>true</code> when "Work Offline" mode is disabled and <code>false</code> when it is enabled, regardless of actual connectivity.</p>
-
-<p>[3] in Internet Explorer 8 "online" and "offline" events are raised on the <code>document.body</code>; under IE 9 they are raised on both <code>document.body</code> and <code>window</code>.</p>
-
-<p>[4] Since Firefox 41, on OS X and Windows, the returned values follow the actual network connectivity, unless "Work offline" mode is selected (where it will always return <code>false</code>).</p>
-
-<p>[5] Faulty in a WebView component, see Issue <a href="http://code.google.com/p/android/issues/detail?id=16760">bug 16760</a>.</p>
+{{Compat}}
 
 <h2 id="Notas">Notas</h2>
 
