@@ -140,7 +140,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 ### 多页面间的导航栏
 
-[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 {{TemplateLink("PreviousNext")}}，需要的两个参数是相应文章的 Wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
+[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs)，需要的两个参数是相应文章的 Wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
 
 ## 代码示例
 
