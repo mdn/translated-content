@@ -23,7 +23,7 @@ translation_of: Web/API/XMLHttpRequest
 
 {{InheritanceDiagram}}
 
-이름에 `XML`이 들어가긴 하지만, XHR은 XML 뿐만 아니라 모든 종류의 데이터를 가져올 수 있습니다.
+이름에 `XML`이 들어가긴 하지만, `XMLHttpRequest`은 XML 뿐만 아니라 모든 종류의 데이터를 가져올 수 있습니다.
 
 이벤트 데이터나 메시지 데이터를 서버에서 가져와야 하는 통신의 경우, {{domxref("EventSource")}} 인터페이스를 통한 [서버발 이벤트](/ko/docs/Web/API/Server-sent_events)(Server-sent events)의 사용을 고려하세요. 완전한 양방향 통신의 경우에는 [WebSocket](/ko/docs/Web/API/WebSockets_API)이 더 좋은 선택일 수 있습니다.
 
