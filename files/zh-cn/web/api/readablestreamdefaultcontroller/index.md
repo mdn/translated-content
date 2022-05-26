@@ -8,19 +8,19 @@ tags:
   - ReadableStreamDefaultController
   - Reference
   - Streams
-browser-compat: api.ReadableStreamDefaultController
+translation_of: Web/API/ReadableStreamDefaultController
 ---
 {{APIRef("Streams")}}
 
-[流操作 API](/en-US/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。 默认控制器用于不是字节流的流。
+[流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。 默认控制器用于不是字节流的流。
 
 ## 构造函数
 
-没有。 在 `ReadableStream` 构造函数中， `ReadableStreamDefaultController` 实例被自动创造。
+没有。在 `ReadableStream` 构造函数中，`ReadableStreamDefaultController` 实例被自动创造。
 
 ## 属性
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{只读}}
+- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
   - : 返回填充满流的内部队列所需要的大小。
 
 ## 方法
@@ -32,9 +32,9 @@ browser-compat: api.ReadableStreamDefaultController
 - {{domxref("ReadableStreamDefaultController.error()")}}
   - : 导致任何未来与关联流交互都会出错。
 
-## Examples
+## 示例
 
-在下面的简单示例中， 使用 `ReadableStream` 自定义构造函数创建一个 (有关完整代码， 参见我们的 [简单随即流展示](https://mdn.github.io/dom-examples/streams/simple-random-stream/))。 `start()` 函数每秒生成一个随机文本字符串并且将他们排入流中。 `cancel()` 函数被用来停止生成出于任何原因调用的 {{domxref("ReadableStream.cancel()")}} 。
+在下面的简单示例中，使用 `ReadableStream` 自定义构造函数创建一个 (有关完整代码，参见我们的[简单随即流展示](https://mdn.github.io/dom-examples/streams/simple-random-stream/))。`start()` 函数每秒生成一个随机文本字符串并且将他们排入流中。`cancel()` 函数被用来停止生成出于任何原因调用的 {{domxref("ReadableStream.cancel()")}} 。
 
 请注意， {{domxref("ReadableStreamDefaultController")}} 对象作为参数提供给 `start()` 和 `pull()` 函数。
 
