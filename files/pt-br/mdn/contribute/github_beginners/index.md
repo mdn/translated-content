@@ -70,29 +70,29 @@ _Bifurcar_, geralmente mencionado como _criar um fork_ ou _forkar_, e _clonar_ s
 
 Vamos criar um fork do <https://github.com/mdn/content> agora mesmo; você definitivamente vai estar contribuindo para este repo em algum momento. Siga estes passos:
 
-1.  Localize o botão Fork no canto superior direito da página do repo content, e clique nele:
+1. Localize o botão Fork no canto superior direito da página do repo content, e clique nele:
 
     ![Botão rotulado fork, com o número 609 próximo a ele](fork-button.png)
 
-2.  Uma janela modular vai aparecer, perguntando onde você quer fazer o fork do repo. Selecione sua conta pessoal do GitHub.
+2. Uma janela modular vai aparecer, perguntando onde você quer fazer o fork do repo. Selecione sua conta pessoal do GitHub.
 
   Uma mensagem vai aparecer dizendo algo como "Bifurcando mdn/content. Isso deve levar apenas alguns segundos.". Uma vez que o GitHub tenha terminado de fazer o fork, seu browser deve redirecionar para a página do novo fork. Como um exemplo, meu fork do <https://github.com/mdn/content> está disponível em <https://github.com/chrisdavidmills/content>.
 
 Agora que você criou o fork do repo, é hora de clonar o fork localmente. Para fazer isto:
 
-1.  Vá para a página do fork em github.com (e.g. `https://github.com/<seu-nome-de-usuario>/content`). 
-2.  Clique no botão verde "Code" no topo da lista de arquivos. Algo similar ao popup abaixo deve aparecer:
+1. Vá para a página do fork em github.com (e.g. `https://github.com/<seu-nome-de-usuario>/content`).
+2. Clique no botão verde "Code" no topo da lista de arquivos. Algo similar ao popup abaixo deve aparecer:
 
     ![Janela popup mostrando uma URL para clonar junto com opções para abrir com o GitHub desktop e baixar o zip](code-popup.png)
 
-3.  Se você configurar a autenticação SSH como mostrado acima, clique na tab "SSH" e copie a URL `git@github.com:<seu-nome-de-usuario>/content.git` do campo de texto na caixa. Se você não configurou a autenticação SSH, ao invés disso copie a URL do campo de texto na tab "HTTPS", que deve ser parecida com esta: `https://github.com/<seu-nome-de-usuario>/content.git`.
-4.  Agora abra a linha de comando no seu computador, e navegue para o diretório que você configurou anteriormente para armazenar localmente os clones de repos usando o comando cd, e.g.
+3. Se você configurar a autenticação SSH como mostrado acima, clique na tab "SSH" e copie a URL `git@github.com:<seu-nome-de-usuario>/content.git` do campo de texto na caixa. Se você não configurou a autenticação SSH, ao invés disso copie a URL do campo de texto na tab "HTTPS", que deve ser parecida com esta: `https://github.com/<seu-nome-de-usuario>/content.git`.
+4. Agora abra a linha de comando no seu computador, e navegue para o diretório que você configurou anteriormente para armazenar localmente os clones de repos usando o comando cd, e.g.
 
     ```bash
     cd git
     ```
 
-5.  Clone seu fork inserindo um comando com a seguinte forma:
+5. Clone seu fork inserindo um comando com a seguinte forma:
 
     ```bash
     git clone url-que-você-copiou
@@ -121,14 +121,14 @@ git remote add nome-remoto repo-para-o-qual-você-quer-apontar
 
 Então, adicionar seu remoto:
 
-1.  Vá para a página da versão principal do repo em github.com (<https://github.com/mdn/content> neste exemplo) e recupere a URL SSH ou HTTPS, como for conveniente, do popup "Code".
-2.  Na sua linha de comando, `cd` para o seu diretório content:
+1. Vá para a página da versão principal do repo em github.com (<https://github.com/mdn/content> neste exemplo) e recupere a URL SSH ou HTTPS, como for conveniente, do popup "Code".
+2. Na sua linha de comando, `cd` para o seu diretório content:
 
     ```bash
     cd content
     ```
 
-3.  Agora rode a linha a seguir, substituindo _nome-remoto_ e _repo-para-o-qual-você-quer-apontar_ de forma apropriada:
+3. Agora rode a linha a seguir, substituindo _nome-remoto_ e _repo-para-o-qual-você-quer-apontar_ de forma apropriada:
 
     ```bash
     git remote add nome-remoto repo-para-o-qual-você-quer-apontar
@@ -172,7 +172,7 @@ Em seguida, você deveria atualizar sua branch main para que ela tenha o mesmo c
 
 Para atualizar seu repo:
 
-1.  Primeiro, busque o conteúdo atualizado do seu repositório remoto com o comando a seguir:
+1. Primeiro, busque o conteúdo atualizado do seu repositório remoto com o comando a seguir:
 
     ```bash
     git fetch nome-remoto
@@ -184,7 +184,7 @@ Para atualizar seu repo:
     git fetch mozilla
     ```
 
-2.  Em seguida, substitua o conteúdo da sua branch main com o conteúdo da branch main do repo remoto. Existem várias formas que você poderia fazer isto, mas eu tendo a usar o comando `rebase`, assim:
+2. Em seguida, substitua o conteúdo da sua branch main com o conteúdo da branch main do repo remoto. Existem várias formas que você poderia fazer isto, mas eu tendo a usar o comando `rebase`, assim:
 
     ```bash
     git rebase nome-remoto/nome-branch-principal
@@ -196,7 +196,7 @@ Para atualizar seu repo:
     git rebase mozilla/main
     ```
 
-3.  Finalmente, suba essas mudanças para a versão remota do seu fork usando:
+3. Finalmente, suba essas mudanças para a versão remota do seu fork usando:
 
     ```bash
     git push
@@ -210,19 +210,19 @@ Uma vez que você tenha atualizado a branch principal do seu fork, você deve cr
 
 Para criar uma branch nova:
 
-1.  Vá para a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>) e encontre botão de branch no canto superior esquerdo da lista de arquivos, no qual deve estar escrito "main":
+1. Vá para a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>) e encontre botão de branch no canto superior esquerdo da lista de arquivos, no qual deve estar escrito "main":
 
     ![Botão rotulado como main](branch-button.png)
 
-2.  Clique nele, e você receberá uma lista de branches e um campo de texto que diz "Encontre ou crie uma branch...":
+2. Clique nele, e você receberá uma lista de branches e um campo de texto que diz "Encontre ou crie uma branch...":
 
     ![menu mostrando a lista de nomes de branches com uma caixa de texto rotulada como encontre ou crie uma branch](branch-menu.png)
 
-3.  Se você digitar parte do nome de uma branch que exista no campo de texto, a lista de branches vai ser filtrada a partir desse texto, permitindo que você busque por uma branch existente facilmente. Contudo, nós queremos criar uma branch nova. Digite o nome de uma branch que ainda não existe (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie uma branch: test-branch a partir da 'main'":
+3. Se você digitar parte do nome de uma branch que exista no campo de texto, a lista de branches vai ser filtrada a partir desse texto, permitindo que você busque por uma branch existente facilmente. Contudo, nós queremos criar uma branch nova. Digite o nome de uma branch que ainda não existe (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie uma branch: test-branch a partir da 'main'":
 
     ![menu mostrando uma nova branch chamada test-branch digitado em uma caixa de texto, com um botão de criar branch embaixo](new-branch.png)
 
-4.  Assim que você estiver feliz com o nome da sua branch, clique no botão, e a tela vai ser atualizada para mostrar o nome da branch no botão branch:
+4. Assim que você estiver feliz com o nome da sua branch, clique no botão, e a tela vai ser atualizada para mostrar o nome da branch no botão branch:
 
     ![Botão rotulado test-branch](branch-button-new-branch.png)
 
@@ -239,9 +239,9 @@ A seção anterior te ensinou com criar uma nova branch no seu fork, mas atualme
 
 Para fazer isto, volte para o seu terminal e, tendo certeza que você está dentro do diretório do repo no qual você está trabalhando (`content` para este exemplo):
 
-1.  Puxe as mudanças remotas para o seu clone local rodando o comando `git pull`
-2.  Entre a mensagem exibida, você deve ver as linhas `* [new branch] test-branch -> origin/test-branch`
-3.  Para mudar para sua branch (O que significa mudar do "main" para trabalhar na sua branch ao invés disso), rode o comando `git switch test-branch`
+1. Puxe as mudanças remotas para o seu clone local rodando o comando `git pull`
+2. Entre a mensagem exibida, você deve ver as linhas `* [new branch] test-branch -> origin/test-branch`
+3. Para mudar para sua branch (O que significa mudar do "main" para trabalhar na sua branch ao invés disso), rode o comando `git switch test-branch`
 
 Se você foi bem sucedido, o git deve te dizer algo como:
 
@@ -267,8 +267,8 @@ Neste ponto você já está preparado para fazer alterações no repo que você 
 
 Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos fazer algo simples.
 
-1.  Vá para o arquivo `content/README.md`, e adicione uma única letra no título superior do README.
-2.  Agora volte para a linha de comando e rode o comando `git status` de novo. Desta vez, o git deve dizer algo como:
+1. Vá para o arquivo `content/README.md`, e adicione uma única letra no título superior do README.
+2. Agora volte para a linha de comando e rode o comando `git status` de novo. Desta vez, o git deve dizer algo como:
 
     ```plain
     Your branch is up to date with 'origin/test-branch'.
@@ -281,7 +281,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
         no changes added to commit (use "git add" and/or "git commit -a")
     ```
 
-3.  Então, neste momento a mensagem está falando quais arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit e então subir as alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
+3. Então, neste momento a mensagem está falando quais arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit e então subir as alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
 
     ```bash
     git add README.md
@@ -289,7 +289,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
 
     > **Nota:** `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
 
-4.  Se você rodar `git status` de novo, você vai ver isto agora:
+4. Se você rodar `git status` de novo, você vai ver isto agora:
 
     ```plain
     On branch test-branch
@@ -300,7 +300,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
             modified:   README.md
     ```
 
-5.  O Git está nos dizendo que `README.md` agora está em nossa lista de commit. Para incluir todos os arquivos da lista de commit em um commit (um único conjunto de mudanças que depois nós vamos tentar enviar para a branch principal), rode o seguinte (a opção `-m` é a abreviação para mensagem):
+5. O Git está nos dizendo que `README.md` agora está em nossa lista de commit. Para incluir todos os arquivos da lista de commit em um commit (um único conjunto de mudanças que depois nós vamos tentar enviar para a branch principal), rode o seguinte (a opção `-m` é a abreviação para mensagem):
 
     ```bash
     git commit -m 'meu primeiro commit'
@@ -315,7 +315,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
 
     Para mostrar que o commit que você fez foi registrado.
 
-6.  Rode `git status` de novo, e você vai obter esta informação:
+6. Rode `git status` de novo, e você vai obter esta informação:
 
     ```plain
     On branch test-branch
@@ -345,7 +345,7 @@ To github.com:chrisdavidmills/content.git
 
 Neste momento, volte para a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Sua branch está 1 commit a frente de mdn:main." o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe na branch "main" do mozilla.
 
-1.  Para enviar nossas mudanças para a cópia principal do repo, nós precisamos criar um pull request (PR). Isto pode ser feito facilmente usando o botão "Compare & pull request" que você deve ver no topo da lista de arquivos, uma vez que você tenha subido alterações na branch.
+1. Para enviar nossas mudanças para a cópia principal do repo, nós precisamos criar um pull request (PR). Isto pode ser feito facilmente usando o botão "Compare & pull request" que você deve ver no topo da lista de arquivos, uma vez que você tenha subido alterações na branch.
 
     ![Banner com o texto test branch tem alterações recentes, e um botão com o texto comparar e criar um pull request](compare-and-pull-request.png)
 
@@ -355,12 +355,12 @@ Neste momento, volte para a página do fork remoto em github.com. Você deve ver
 
     > **Aviso:** Sigo os próximos passos apenas se você tiver uma alteração real para ser feito no repo! Por favor, não faça PRs de teste em nossos repos.
 
-2.  Neste momento, coloque um título e uma descrição úteis para o seu PR, dizendo exatamente o que você mudou, o porquê disto ser uma coisa boa, e qual a issue que é corrigida, se necessário. Especificamente, inclua uma linha dizendo `Corrige url-issue`. O GitHub automaticamente renderiza isto como um link para o número da issue, e.g. `Corrige #1234` e, além disso, automaticamente fecha a issue relacionada uma vez que o pull request for mesclado.
-3.  Uma vez que você esteja pronto para enviar o seu pull request, clique no botão "Criar pull request". Isto fará com que seu pull request apareça na [Lista de pull requests](https://github.com/mdn/content/pulls) do repo na qual ele será revisado pela equipe de revisão, e, com sorte, mesclado na base principal de código.
+2. Neste momento, coloque um título e uma descrição úteis para o seu PR, dizendo exatamente o que você mudou, o porquê disto ser uma coisa boa, e qual a issue que é corrigida, se necessário. Especificamente, inclua uma linha dizendo `Corrige url-issue`. O GitHub automaticamente renderiza isto como um link para o número da issue, e.g. `Corrige #1234` e, além disso, automaticamente fecha a issue relacionada uma vez que o pull request for mesclado.
+3. Uma vez que você esteja pronto para enviar o seu pull request, clique no botão "Criar pull request". Isto fará com que seu pull request apareça na [Lista de pull requests](https://github.com/mdn/content/pulls) do repo na qual ele será revisado pela equipe de revisão, e, com sorte, mesclado na base principal de código.
 
     Caso a equipe de revisão queira que você faça mudanças, eles vão te falar nos comentários do seu pull request (você deve receber uma notificação por email te avisando sobre isto).
 
-4.  Se você quiser fazer mais mudanças para o mesmo pull request que você já submeteu, você pode fazer isso criando mais commits na mesma branch local e então dando push conforme foi explicado anteriormente. Não há necessidade de criar um novo pull request. **Tenha certeza de estar fazendo as alterações na mesma branch de antes**
+4. Se você quiser fazer mais mudanças para o mesmo pull request que você já submeteu, você pode fazer isso criando mais commits na mesma branch local e então dando push conforme foi explicado anteriormente. Não há necessidade de criar um novo pull request. **Tenha certeza de estar fazendo as alterações na mesma branch de antes**
 
 ## Solução de problemas
 
@@ -400,14 +400,14 @@ Isto fará com que volte para o estado de quando as mudanças nesse commit ainda
 
 Neste ponto, não existe nenhum retorno real, ou forma de rebobinar. Ao invés disso, você vai precisar subir outro commit para reverter os efeitos do que você quer tirar. Você pode fazer isto manualmente usando algumas das ferramentas que nós te demos acima, mas tem um comando já existente que facilita isto — `git revert`. Ele pode ser usado para criar automaticamente um commit que reverte mudanças de volta para o ponto que você especificar.
 
-1.  Da forma mais simples, você pode rodar o comando a seguir para criar um commit que vai fazer a sua branch remota voltar ao estado inicial em que ela estava antes de você começar a commitar: 
+1. Da forma mais simples, você pode rodar o comando a seguir para criar um commit que vai fazer a sua branch remota voltar ao estado inicial em que ela estava antes de você começar a commitar:
 
     ```bash
     git revert HEAD
     ```
 
-2.  Isto vai resultar na abertura de uma mensagem de commit no seu editor padrão, a qual você precisa verificar se está como você gostaria. Feche-a, e o git vai finalizar criando o commit.
-3.  Agora você só precisar fazer o push:
+2. Isto vai resultar na abertura de uma mensagem de commit no seu editor padrão, a qual você precisa verificar se está como você gostaria. Feche-a, e o git vai finalizar criando o commit.
+3. Agora você só precisar fazer o push:
 
     ```bash
     git push
