@@ -64,6 +64,16 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.withCredentials")}}
   - : 쿠키 또는 권한 부여 헤더와 같은 자격 증명을 사용하여 사이트 간 `Access-Control` 요청을 만들어야 하는 경우 `true`를 반환합니다. 그렇지 않으면 `false`를 반환합니다.
 
+## 비표준 속성들
+
+- {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
+ - : 요청을 수행할 때 객체에서 사용하는 채널입니다.
+- {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
+ - : 'boolean'입니다. `true`인 경우 쿠키 및 인증 헤더 없이 요청이 전송됩니다.
+- {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
+ - : 'boolean'입니다. `true`인 경우 `same origin policy`가 요청에 적용되지 않습니다.
+- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
+ - : 'boolean'입니다. 객체가 백그라운드에서 서비스 요청을 나타내는지 여부를 나타냅니다.      
 ## 메서드
 
 - {{domxref("XMLHttpRequest.abort()")}}
