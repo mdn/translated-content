@@ -132,6 +132,22 @@ Instance properties 必須在 class 內定義:
   }
 }</pre>
 
+<h3 id="宣告欄位">宣告欄位</h3>
+<h4 id="宣告公共欄位">宣告公共欄位</h4>
+
+<p>y在 JavaScript 以宣告欄位改寫上面的程式，可以寫成如下：</p>
+<pre class="brush: js">class Rectangle {
+  height = 0;
+  width;
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}</pre>
+<p>通過事前宣告欄位，類別定義變得更加self-documenting ，並且欄位會一直存在。
+<p>另外，如上面例子所示，聲明字段可以不用設定默認值。</p>
+<p>想知道更多資訊，可參閱 {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}}。</p>
+
 <h3 id="裝箱、原型方法及靜態方法">裝箱、原型方法及靜態方法</h3>
 
 <p>當一個靜態方法或原形方法被呼叫，但沒有一個物件的值與this綁定時，被呼叫的函數中this關鍵字會是<strong><code>undefined</code>。</strong>在此情況下，自動裝箱(autoboxing)不會發生<strong>。?</strong>即使我們在非嚴格模式中寫程式，此行為仍然會存在，這是因為所有的函式、定義方法、建構子、getters和setters都是在嚴格模式中執行。因此，若我們沒有定義this的值，this會是<strong><code>undefined</code></strong><code>。</code></p>
