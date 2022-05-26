@@ -17,17 +17,16 @@ translation_of: Web/Performance/Lazy_loading
 
 <p>随着网络的发展，我们已经看到发送给用户的资产数量和规模都在急剧增加。从2011年到2019年，台式机的资源中位数从 <strong>~100KB </strong>增至 <strong>~400KB</strong>，移动版的资源中位数从 <strong>~50KB</strong> 增至<strong>~350KB</strong>。图像大小已从台式机上的<strong>~250KB </strong>增至 <strong>~900KB</strong>，而移动设备上的 <strong>~100KB</strong>增至<strong>~850KB</strong>。</p>
 
-<p>One of the methods we can use to tackle this problem is to shorten the <a href="/en-US/docs/Web/Performance/Critical_rendering_path">Critical Rendering Path</a> length by lazy loading resources that are not critical for the first render to happen.<br>
- A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images...) are downloaded <strong>only</strong> when the user navigates to that cart page.</p>
+<p>解决这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短<a href="/zh-CN/docs/Web/Performance/Critical_rendering_path">关键渲染路径</a>的长度。一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且<strong>只有</strong>在用户导航到购物车页面/区域时才会下载其所有资源（JS、CSS、images……）。</p>
 
 <h2 id="策略">策略</h2>
 
 <p>延迟加载可以通过多种策略应用于多个资源。</p>
 
-<h3 id="一般">    一般</h3>
+<h3 id="综述">综述</h3>
 
-<p id="Code_splitting">代码拆分<br>
- JavaScript, CSS and HTML can be split into smaller chunks. This enables sending the minimal code required to provide value upfront, improving page-load times. The rest can be loaded on demand.</p>
+<p><strong>代码拆分</strong><br>
+ 可以将 JavaScript、CSS 和 HTML 分割成小块，以发送最少的代码提供关键信息，以优化页面加载时间。其余的部分可以在需要时加载。</p>
 
 <ul>
  <li>    Entry point splitting: separates code by entry point(s) in the app</li>
