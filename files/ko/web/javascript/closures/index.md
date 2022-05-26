@@ -148,6 +148,7 @@ original_slug: Web/JavaScript/Guide/Closures
 {{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/","","200")}}
 
 다음 링크로 실행해보자. [JSFiddle](https://jsfiddle.net/vnkuZ/7726/)
+
 ## 클로저를 이용해서 프라이빗 메소드 (private method) 흉내내기
 
 자바와 같은 몇몇 언어들은 메소드를 프라이빗으로 선언할 수 있는 기능을 제공한다. 이는 같은 클래스 내부의 다른 메소드에서만 그 메소드들을 호출할 수 있다는 의미이다.
@@ -183,7 +184,7 @@ original_slug: Web/JavaScript/Guide/Closures
     console.log(counter.value()); // logs 1
 ```
 
-이전 예제에서 각 클로저들이 고유한 문법적 환경을 가졌지만 여기서 우리는 `counter.increment`, `counter.decrement`, `counter.value `세 함수에 의해 공유되는 하나의 어휘적 환경을 만든다.
+이전 예제에서 각 클로저들이 고유한 문법적 환경을 가졌지만 여기서 우리는 `counter.increment`, `counter.decrement`, `counter.value` 세 함수에 의해 공유되는 하나의 어휘적 환경을 만든다.
 
 공유되는 어휘적 환경은 실행되는 익명 함수 안에서 만들어진다. 이 익명 함수는 정의되는 즉시 실행된다. 이 어휘적 환경은 두 개의 프라이빗 아이템을 포함한다. 하나는 `privateCounter`라는 변수이고 나머지 하나는 `changeBy`라는 함수이다. 둘 다 익명 함수 외부에서 접근될 수 없다. 대신에 익명 래퍼에서 반환된 세 개의 퍼블릭 함수를 통해서만 접근되어야만 한다.
 
@@ -406,7 +407,7 @@ ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "
 
 위의 경우 `var` 대신 `let`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input "The HTML <input> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
 
 ```js
 function showHelp(help) {

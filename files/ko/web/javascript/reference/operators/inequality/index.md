@@ -30,7 +30,7 @@ x != y
 !(x == y)
 ```
 
-비교 알고리즘에 대한 자세한 내용은 [동등 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality) 페이지를 참조하십시오. 
+비교 알고리즘에 대한 자세한 내용은 [동등 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality) 페이지를 참조하십시오.
 
 동등 연산자와 마찬가지로 부등 연산자도 다른 유형의 피연산자를 변환하여 비교합니다.
 

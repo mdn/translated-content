@@ -61,7 +61,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 우리가 필요한 기본 구문을 다시 익히기 위해 몇 가지 숫자를 빠르게 생각해 봅시다. [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 들어가서 아래의 나열된 명령어를 입력해주세요.
 
-1.  먼저, 두 개의 변수를 선언합니다. 그리고 두 개의 변수를 정수와 실수로 초기화해줍니다. 각각 변수명을 콘솔 창에 입력해주세요. 그리고 어떤 값이 나오는지 확인해주세요.
+1. 먼저, 두 개의 변수를 선언합니다. 그리고 두 개의 변수를 정수와 실수로 초기화해줍니다. 각각 변수명을 콘솔 창에 입력해주세요. 그리고 어떤 값이 나오는지 확인해주세요.
 
     ```js
     var myInt = 5;
@@ -70,8 +70,8 @@ translation_of: Learn/JavaScript/First_steps/Math
     myFloat;
     ```
 
-2.  숫자는 따옴표(" 또는 ')가 없습니다. — 계속 하기 전에 여러 개의 변수를 선언하고 숫자를 초기화 해주세요.
-3.  우리들의 변수들의 데이터 타입을 확인합니다. 자바스크립트에서는 데이터 타입을 확인하기 위해 {{jsxref("Operators/typeof", "typeof")}} 라는 키워드를 사용합니다. 아래와 같이 입력해 주세요:
+2. 숫자는 따옴표(" 또는 ')가 없습니다. — 계속 하기 전에 여러 개의 변수를 선언하고 숫자를 초기화 해주세요.
+3. 우리들의 변수들의 데이터 타입을 확인합니다. 자바스크립트에서는 데이터 타입을 확인하기 위해 {{jsxref("Operators/typeof", "typeof")}} 라는 키워드를 사용합니다. 아래와 같이 입력해 주세요:
 
     ```js
     typeof myInt;
@@ -134,7 +134,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
 
-1.  아래의 명령어를 콘솔창에 입력해주세요.
+1. 아래의 명령어를 콘솔창에 입력해주세요.
 
     ```js
     10 + 7
@@ -142,7 +142,7 @@ translation_of: Learn/JavaScript/First_steps/Math
     60 % 3
     ```
 
-2.  You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
+2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
     ```js
     var num1 = 10;
@@ -151,7 +151,7 @@ translation_of: Learn/JavaScript/First_steps/Math
     num2 / num1;
     ```
 
-3.  Last for this section, try entering some more complex expressions, such as:
+3. Last for this section, try entering some more complex expressions, such as:
 
     ```js
     5 + 10 * 3;

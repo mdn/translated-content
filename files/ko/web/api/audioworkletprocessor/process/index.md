@@ -70,9 +70,9 @@ var isActivelyProcessing = audioWorkletProcessor.process(inputs, outputs, parame
 
 세 가지 가장 흔한 유형의 오디오 노드는:
 
-1.  출력의 소스. 이런 노드를 구현하는 {{domxref("AudioWorkletProcessor")}}는 이것이 출력을 생산하는 한 `process` 메서드에서 `true` 를 반환해야 합니다. 이 메서드는 이것이 더 이상 출력을 생산하지 않을 것이라는 것을 알게 되지마자 `false` 를 반환해야 합니다. 예시로, {{domxref("AudioBufferSourceNode")}}를 생각해 보십시오 — 이런 노드 뒤의 프로세서는 버퍼가 재생되는 동안 `process` 메서드에서 `true` 를 반환해야 하고, 버퍼 재생이 끝났을 때 `false` 반환을 시작해야 합니다 (같은 {{domxref("AudioBufferSourceNode")}}에서 다시 `play` 를 호출할 방법은 없습니다).
-2.  입력을 변형시키는 노드. 이런 노드를 구현하는 프로세서는 활동 중인 입력 노드들의 존재와 그 노드에 대한 참조들이 garbage-collected 될 수 있는지를 결정할 수 있게 허용하도록 `process` 메서드에서 `false` 를 반환해야 합니다. 이 동작을 하는 노드의 예시는 {{domxref("GainNode")}}입니다. 연결된 입력과 유지되는 참조가 없어지자마자, gain은 더 이상 무엇에도 적용되지 않을 수 있으므로, 이것은 안전하게 garbage-collected 될 수 있습니다.
-3.  입력을 변형시키나 소위 _tail-time_ 을 가지고 있는 노드 — 이는 이것이 심지어 입력이 끊기거나 활동이 없는 후일지라도 (0개의 채널을 생산) 몇 번에 대해 출력을 생산할 것임을 의미합니다. 이런 노드를 구현하는 프로세서는 `process` 메서드에서, 0개의 채널을 포함하는 입력이 발견되자마자 시작하며, _tail-time_ 의 기간 동안 `true` 를 반환해야 합니다.
+1. 출력의 소스. 이런 노드를 구현하는 {{domxref("AudioWorkletProcessor")}}는 이것이 출력을 생산하는 한 `process` 메서드에서 `true` 를 반환해야 합니다. 이 메서드는 이것이 더 이상 출력을 생산하지 않을 것이라는 것을 알게 되지마자 `false` 를 반환해야 합니다. 예시로, {{domxref("AudioBufferSourceNode")}}를 생각해 보십시오 — 이런 노드 뒤의 프로세서는 버퍼가 재생되는 동안 `process` 메서드에서 `true` 를 반환해야 하고, 버퍼 재생이 끝났을 때 `false` 반환을 시작해야 합니다 (같은 {{domxref("AudioBufferSourceNode")}}에서 다시 `play` 를 호출할 방법은 없습니다).
+2. 입력을 변형시키는 노드. 이런 노드를 구현하는 프로세서는 활동 중인 입력 노드들의 존재와 그 노드에 대한 참조들이 garbage-collected 될 수 있는지를 결정할 수 있게 허용하도록 `process` 메서드에서 `false` 를 반환해야 합니다. 이 동작을 하는 노드의 예시는 {{domxref("GainNode")}}입니다. 연결된 입력과 유지되는 참조가 없어지자마자, gain은 더 이상 무엇에도 적용되지 않을 수 있으므로, 이것은 안전하게 garbage-collected 될 수 있습니다.
+3. 입력을 변형시키나 소위 _tail-time_ 을 가지고 있는 노드 — 이는 이것이 심지어 입력이 끊기거나 활동이 없는 후일지라도 (0개의 채널을 생산) 몇 번에 대해 출력을 생산할 것임을 의미합니다. 이런 노드를 구현하는 프로세서는 `process` 메서드에서, 0개의 채널을 포함하는 입력이 발견되자마자 시작하며, _tail-time_ 의 기간 동안 `true` 를 반환해야 합니다.
 
 **참고**: `return` 문의 부재는 이 메서드가 `undefined` 를 반환할 것임을 의미하고, 이것은 falsy 값이므로, 이것은 `false`를 반환하는 것과도 같습니다. 명시적인 `return` 문을 누락하는 것은 여러분의 노드에서 감지하기 어려운 문제를 야기할 수도 있습니다.
 

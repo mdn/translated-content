@@ -14,6 +14,7 @@ translation_of: Web/API/EventTarget/addEventListener
 일반적인 대상은 {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}지만, {{domxref("XMLHttpRequest")}}와 같이 이벤트를 지원하는 모든 객체가 대상이 될 수 있습니다.
 
 > **참고:** 이벤트 수신기는 다른 방법으로도 추가할 수 있지만, `addEventListener()` 메서드를 사용해서 다음의 장점을 누리는 것이 좋습니다.
+>
 > - 하나의 이벤트 유형에 대해 다수의 수신기를 부착할 수 있습니다. 라이브러리, JavaScript 모듈 등, 다른 라이브러리나 확장 코드와 충돌하지 않고 동작해야 하는 코드에 특히 중요한 점입니다.
 > - `onXYZ` 속성과 달리, 수신기가 어떤 이벤트 전파 단계(캡처링 vs. 버블링)에 동작해야 하는지 조절할 수 있습니다.
 > - HTML과 SVG 요소가 아니어도 이벤트 대상이라면 사용할 수 있습니다.
@@ -59,7 +60,7 @@ addEventListener(type, listener, useCapture);
 
   - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다. 캡처 모드인 수신기는 DOM 트리의 위쪽으로 버블링 중인 이벤트에 의해선 발동하지 않습니다. 이벤트 버블링과 캡처링은 조상-자손 관계를 가진 두 개의 요소가 동일한 이벤트 유형에 대한 수신기를 가지고 있을 때, 두 요소에 이벤트가 전파되는 방법을 말합니다. 이벤트 전파 모드에 따라 두 요소 중 이벤트를 먼저 수신하는 쪽이 달라집니다. [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)와 [JavaScript Event 순서](https://www.quirksmode.org/js/events_order.html#link4)에서 자세한 설명을 확인하세요. 기본 값은 `false`입니다.
 
-    > **참고:** 이벤트의 대상에 부착된 수신기의 경우 캡처링도, 버블링 단계도 아닌 별도의 단계에 발동합니다. 
+    > **참고:** 이벤트의 대상에 부착된 수신기의 경우 캡처링도, 버블링 단계도 아닌 별도의 단계에 발동합니다.
     > 캡처 모드의 수신기는 캡처 모드가 아닌 다른 모든 수신기보다 앞서 발동합니다.
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}

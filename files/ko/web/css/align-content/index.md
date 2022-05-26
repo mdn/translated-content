@@ -54,7 +54,9 @@ align-content: initial;
 align-content: revert;
 align-content: unset;
 ```
+
 ### 값
+
 - `start`
   - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 시작 모서리에 배치합니다.
 - `end`
@@ -85,12 +87,19 @@ align-content: unset;
   - : 정렬 키워드와 함께 사용합니다. 주어진 키워드로 인해 항목이 정렬 컨테이너 밖으로 오버플로하게 되어 데이터가 유실될 수 있으면 항목 정렬에 `start`를 대신 사용합니다.
 - `unsafe`
   - : 정렬 키워드와 함께 사용합니다. 컨테이너와 항목의 상대적 크기 및 오버플로로 인한 데이터 유실에 상관하지 않고 주어진 정렬을 준수합니다.
+
 ## 형식 정의
+
 {{CSSInfo}}
-## 형식 구문 
+
+## 형식 구문
+
 {{csssyntax}}
+
 ## 예제
+
 ### CSS
+
 ```css
 #container {
   height:200px;
@@ -224,7 +233,7 @@ display.addEventListener('change', function (evt) {
 
 {{Compat}}
 
-## 같이 보기 
+## 같이 보기
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_

@@ -44,118 +44,9 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 문자열은 숫자와 유사하게 다루어지지만, 더 깊게 파고들면 눈에 띄는 차이점을 발견하기 시작할 것입니다. 먼저 몇 가지 기본 라인을 콘솔에 입력하여 우리와 친숙하게 만드는 것으로 시작하겠습니다. [이 링크](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)를 통해 다른 탭이나 창에서 열 수 있고, [브라우저 개발자 도구](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용할 수도 있습니다).
 
-<div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html">&#x3C;!DOCTYPE html>
-&#x3C;html>
-  &#x3C;head>
-    &#x3C;meta charset="utf-8">
-    &#x3C;title>JavaScript console&#x3C;/title>
-    &#x3C;style>
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        background-color: #0C323D;
-        color: #809089;
-        font-family: monospace;
-      }
-
-      body {
-        max-width: 700px;
-      }
-
-      p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
-      }
-
-      .input p {
-        margin-right: 1%;
-      }
-
-      .output p {
-        width: 100%;
-      }
-
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0C323D;
-        color: #809089;
-      }
-
-      div {
-        clear: both;
-      }
-
-    &#x3C;/style>
-
-&#x3C;/head>
-&#x3C;body>
-
-&#x3C;/body>
-
-&#x3C;script>
-var geval = eval;
-function createInput() {
-var inputDiv = document.createElement('div');
-var inputPara = document.createElement('p');
-var inputForm = document.createElement('input');
-
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
-
-      if(document.querySelectorAll('div').length > 1) {
-
-inputForm.focus();
-      }
-
-      inputForm.addEventListener('change', executeCode);
-    }
-
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
-      }
-
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
-
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
-
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
-
-      createInput()
-    }
-
-    createInput();
-
-&#x3C;/script>
-&#x3C;/html></pre></div>
-
-{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
-
 ### 문자열 만들기
 
-1.  먼저 아래의 명령어를 입력하세요.
+1. 먼저 아래의 명령어를 입력하세요.
 
     ```js
     var string = 'The revolution will not be televised.';
@@ -164,7 +55,7 @@ inputForm.focus();
 
     숫자에서 했던 것과 같게, 우리는 변수를 선언하고, 문자열을 초기화 하고, 값을 반환합니다. 차이점은 오직 숫자 대신 문자열을 넣었고, 문자열 값을 따옴표로 감싸주었습니다.
 
-2.  따옴표를 빼거나 잘못쓰면 에러가 뜰 것입니다. 아래의 코드를 입력해 보세요.
+2. 따옴표를 빼거나 잘못쓰면 에러가 뜰 것입니다. 아래의 코드를 입력해 보세요.
 
     ```js example-bad
     var badString = This is a test;
@@ -174,7 +65,7 @@ inputForm.focus();
 
     따옴표로 감싸져 있지 않은 텍스트는 변수 이름, 속성 이름, 예약어와 유사하다고 가정하기 때문에 이러한 코드는 작동하지 않습니다. 만약 브라우저가 찾을 수 없다면 에러가 발생할 것입니다. (e.g. "missing ; before statement"). 만약 브라우저가 문자열이 시작하는 곳은 볼 수 있지만, 끝나는 곳을 찾지 못하면 에러를 던집니다.("unterminated string literal"). 만약 당신의 프로그램이 에러를 계속 만들어낸다면, 다시 돌아가 당신의 문자열에 빠진 따옴표가 없는지 찾아보십시오.
 
-3.  다음의 코드는 당신이 변수 `string` 을 선언했다면 작동할 것입니다. 아래의 코드를 입력해보세요 :
+3. 다음의 코드는 당신이 변수 `string` 을 선언했다면 작동할 것입니다. 아래의 코드를 입력해보세요 :
 
     ```js
     var badString = string;
@@ -185,7 +76,7 @@ inputForm.focus();
 
 ### 따옴표 vs 쌍따옴표
 
-1.  자바스크립트에서는 따옴표와 쌍따옴표가 모두 허용됩니다. 다음의 코드는 문제 없이 작동할 것입니다.
+1. 자바스크립트에서는 따옴표와 쌍따옴표가 모두 허용됩니다. 다음의 코드는 문제 없이 작동할 것입니다.
 
     ```js
     var sgl = 'Single quotes.';
@@ -194,13 +85,13 @@ inputForm.focus();
     dbl;
     ```
 
-2.  따옴표와 쌍따옴표는 차이점이 거의 없어, 편한대로 사용할 수 있습니다. 하지만 당신은 문자열을 감싸는데 한 종류의 따옴표만 사용해야 되며 그렇지 않으면 에러가 발생합니다. 아래의 코드를 실행해 보세요.
+2. 따옴표와 쌍따옴표는 차이점이 거의 없어, 편한대로 사용할 수 있습니다. 하지만 당신은 문자열을 감싸는데 한 종류의 따옴표만 사용해야 되며 그렇지 않으면 에러가 발생합니다. 아래의 코드를 실행해 보세요.
 
     ```js example-bad
     var badQuotes = 'What on earth?";
     ```
 
-3.  브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다.  예를 들어, 아래 두 가지 모두 괜찮습니다.
+3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다.  예를 들어, 아래 두 가지 모두 괜찮습니다.
 
     ```js
     var sglDbl = 'Would you eat a "fish supper"?';
@@ -209,7 +100,7 @@ inputForm.focus();
     dblSgl;
     ```
 
-4.  하지만, 당신은 같은 종류의 따옴표를 문자열에 포함시킬 수 없습니다. 브라우저는 어느 따옴표가 문자열이 끝났다는 것을 알리는지 혼돈하게 됩니다. 따라서 다음의 코드는 에러가 발생합니다.
+4. 하지만, 당신은 같은 종류의 따옴표를 문자열에 포함시킬 수 없습니다. 브라우저는 어느 따옴표가 문자열이 끝났다는 것을 알리는지 혼돈하게 됩니다. 따라서 다음의 코드는 에러가 발생합니다.
 
     ```js example-bad
     var bigmouth = 'I've got no right to take my place...';
@@ -223,14 +114,14 @@ inputForm.focus();
 
 ```js
 var bigmouth = 'I\'ve got no right to take my place...';
-bigmouth;
+console.log(bigmouth);
 ```
 
 이것은 에러가 일어나지 않습니다. 당신은 `\"` 와 같게도 사용할 수 있습니다. 자세한 사항은 [이스케이프 표기법](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)을 참고하십시오
 
 ## 문자열 연결하기
 
-1.  'Concatenate'는 '결합' 을 의미하는 프로프래밍 단어입니다. 자바스크립트에서 문자열을 함꼐 결합하려면 숫자를 더할 때 사용하는 것과 동일한 더하기 (+) 연산자를 사용하지만 이 상황에서는 다른 작업을 수행합니다. 콘솔에 예를 들어 보겠습니다.
+1. 'Concatenate'는 '결합' 을 의미하는 프로프래밍 단어입니다. 자바스크립트에서 문자열을 함꼐 결합하려면 숫자를 더할 때 사용하는 것과 동일한 더하기 (+) 연산자를 사용하지만 이 상황에서는 다른 작업을 수행합니다. 콘솔에 예를 들어 보겠습니다.
 
     ```js
     var one = 'Hello, ';
@@ -241,14 +132,14 @@ bigmouth;
 
     변수 `joined` 의 값은 "Hello, how are you?" 입니다.
 
-2.  마지막 예에서는, 그저 두 개의 문자열을 결합했을 뿐이지만 각 문자열 사이에 +를 포함하기만 하면 원하는 만큼의 문자열을 결합할 수 있습니다. 다음을 시도해 보십시오.
+2. 마지막 예에서는, 그저 두 개의 문자열을 결합했을 뿐이지만 각 문자열 사이에 +를 포함하기만 하면 원하는 만큼의 문자열을 결합할 수 있습니다. 다음을 시도해 보십시오.
 
     ```js
     var multiple = one + one + one + one + two;
     multiple;
     ```
 
-3.  또한 변수와 실제 문자열을 혼합하여 사용할 수도 있습니다. 다음을 시도해 보십시오.
+3. 또한 변수와 실제 문자열을 혼합하여 사용할 수도 있습니다. 다음을 시도해 보십시오.
 
     ```js
     var response = one + 'I am fine — ' + two;
@@ -280,7 +171,7 @@ button.onclick = function() {
 
 ### 숫자 vs 문자열
 
-1.  그러면 문자열과 숫자를 추가 (또는 연결) 하면 어떻게 될까요? 콘솔에서 사용해 보겠습니다.
+1. 그러면 문자열과 숫자를 추가 (또는 연결) 하면 어떻게 될까요? 콘솔에서 사용해 보겠습니다.
 
     ```js
     'Front ' + 242;
@@ -288,14 +179,14 @@ button.onclick = function() {
 
     이 경우 오류가 발생할 것으로 예상할 수 있지만 잘 작동합니다. 숫자로 문자열을 나타내려는 것은 말이 안되지만 숫자를 문자열로 표현하는 것은 의미가 있습니다. 그래서 브라우저는 숫자를 문자열로 변환하고 두 문자열을 서로 연결시킵니다.
 
-2.  숫자 두 개로도 연결할 수 있습니다 — 따옴표로 감싸면 숫자를 강제로 문자열로 만들 수 있습니다. 아래 코드를 실행해보세요(아래 코드에서 변수가 숫자인지 문자열인지를 확인하기 위해 `typeof` 연산자를 사용합니다.):
+2. 숫자 두 개로도 연결할 수 있습니다 — 따옴표로 감싸면 숫자를 강제로 문자열로 만들 수 있습니다. 아래 코드를 실행해보세요(아래 코드에서 변수가 숫자인지 문자열인지를 확인하기 위해 `typeof` 연산자를 사용합니다.):
 
     ```js
     var myDate = '19' + '67';
     typeof myDate;
     ```
 
-3.  만약 코드에 문자열로 바꾸고 싶은 숫자형 변수가 있지만 변수 자체의 값을 바꾸고 싶지 않거나 숫자로 바꾸고 싶은 문자열 변수가 있지만 변수 자체의 값을 바꾸고 싶지 않으면 아래와 같은 생성자를 사용할 수 있습니다:
+3. 만약 코드에 문자열로 바꾸고 싶은 숫자형 변수가 있지만 변수 자체의 값을 바꾸고 싶지 않거나 숫자로 바꾸고 싶은 문자열 변수가 있지만 변수 자체의 값을 바꾸고 싶지 않으면 아래와 같은 생성자를 사용할 수 있습니다:
 
     - {{jsxref("Number")}} 객체는 가능하면 어떠한 입력값이건 숫자로 바꿉니다. 다음 코드를 실행해보세요:
 

@@ -35,7 +35,6 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 하나의 종류 또는 다른 종류의 데이터를 클라이언트 측(즉, 로컬 디스크 상)에 저장하는 웹 기술은 많습니다. IndexedDB는 가장 일반적으로 언급되는 것입니다. 브라우저가 얼마만큼의 공간을 web data storage에 할당할지 그리고 용량이 한계에 도달했을 때 무엇을 지울지의 프로세스는 간단하지 않고, 브라우저마다 다릅니다. [브라우저 저장 공간 제한과 축출 기준 (en-US)](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)을 Firefox의 경우에 이것이 어떻게 작동하는지 설명하려고 시도합니다.
 
-
 ## 인터페이스
 
 데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/en-US/docs/Web/API/indexedDB) 속성에서 [`open()` (en-US)](/en-US/docs/Web/API/IDBFactory/open)을 호춣해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.

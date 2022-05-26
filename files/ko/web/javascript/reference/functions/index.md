@@ -147,7 +147,6 @@ function* name([param[, param[, ... param]]]) {
 
 생성기 함수 표현식은 생성기 함수 선언과 비슷하고 구문도 같습니다. (자세한 정보는 [`function*` 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function*)을 참고하세요)
 
-
 ```js
 function* [name]([param[, param[, ... param]]]) {
    statements

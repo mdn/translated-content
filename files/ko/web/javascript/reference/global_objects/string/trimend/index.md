@@ -18,7 +18,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 
 {{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
-
 ## 구문
 
 ```js

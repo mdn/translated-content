@@ -28,8 +28,6 @@ JavaScript는 3가지 서로 다른 값 비교 연산을 제공합니다:
 
 어느 연산을 쓸 지 그 선택은 당신이 어떤 종류의 비교를 수행하기 위해 찾고 있는 지에 달렸습니다.
 
-
-
 - 이중 equals (`==`)는 두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 `NaN`, `-0` 및 `+0`을 특별히 처리합니다 (그래서`NaN != NaN`이고 `-0 == +0`입니다);
 - 트리플 equals (`===`)는 이중 equals (`NaN`, `-0` 및 `+0`의 특수 처리 포함)와 동일한 비교를 수행하지만 유형 변환은 수행하지 않습니다. 형식이 다른 경우 `false`가 반환됩니다.
 - `Object.is`는 형식 변환을하지 않으며 `NaN`, `-0` 및 `+0`에 대한 특수 처리를 수행하지 않습니다 (특수 숫자 값을 제외하고는 `===`와 동일한 동작을 제공함).
@@ -64,7 +62,7 @@ console.log(obj === undefined); // false
 
 The behavior for performing loose equality using `==` is as follows:
 
-- 느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 후에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다. 
+- 느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 후에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다.
 - 느슨한 같음은 대칭(_symmetric_)입니다: `A == B`는 `A` 및 `B`가 어떤 값이든 항상 `B == A`와 같은 의미를 갖습니다 (적용된 변환의 순서 말고는).
 - `undefined` and `null` are loosely equal; that is, `undefined == null` is true, and `null == undefined` is true
 
@@ -165,8 +163,6 @@ ES2015 이전에, 이중 등호 및 삼중 등호에 대해 하나가 다른 하
 
 However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't simply "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)`evaluated to `false`, we *could* say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
 
-
-
 | x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
 | `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
@@ -202,11 +198,14 @@ In general, the only time {{jsxref("Object.is")}}'s special behavior towards zer
 
 여기 당신 코드에서 그 자체를 드러내기 위해 `-0`과 `+0` 사이의 구별을 일으킬 수도 있는 철저하지 않은(in-exhaustive) 내장 메서드 및 연산자 목록이 있습니다:
 
-- [-(unary negation)](/ko/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
-  - ```js
+- {{jsxref("Operators/Unary_negation", "- (unary negation)")}}
+  - : Consider the following example:
+
+  ```js
     let stoppingForce = obj.mass * -obj.velocity;
-    ```
-    If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
+  ```
+
+  If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
