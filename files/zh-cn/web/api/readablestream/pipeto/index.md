@@ -12,7 +12,7 @@ translation_of: api/ReadableStream/pipeTo
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} 接口的 **`pipeTo()`** 方法通过管道将当前的 `ReadableStream` 传递给给定的 {{domxref("WritableStream")}} 并且当管道过程成功完成时返回一个兑现的 {{jsxref("Promise")}}，如果遇到任何错误则返回一个拒绝的 Promise。
+{{domxref("ReadableStream")}} 接口的 **`pipeTo()`** 方法通过管道将当前的 `ReadableStream` 输出到给定的 {{domxref("WritableStream")}} 并且当管道过程成功完成时返回一个兑现的 {{jsxref("Promise")}}，如果遇到任何错误则返回一个拒绝的 Promise。
 
 管道流通常在管道持续时间[锁定](/zh-CN/docs/Web/API/ReadableStream/locked)它，阻止其他 reader 锁定它。
 
