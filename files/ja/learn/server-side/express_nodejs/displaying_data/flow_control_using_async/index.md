@@ -12,7 +12,7 @@ _LocalLibrary_ 中のいくつかのコントローラーのコードは、複�
 
 > **Note:** JavaScript で非同期動作やフロー制御を管理する手法には [Promises](/ja/docs/Web/JavaScript/Guide/Using_promises) のような比較的最近 JavaScript に導入された言語機能を含め、他にもあります。
 
-async には多くの便利なメソッドがあります（詳しくは [the documentation](https://caolan.github.io/async/v3/docs.html) を参照してください）。ここでは重要ないくつかの関数を紹介します。
+async には多くの便利なメソッドがあります（詳しくは[ドキュメント (en-US)](https://caolan.github.io/async/v3/docs.html) を参照してください）。ここでは重要ないくつかの関数を紹介します。
 
 - [`async.parallel()`](https://caolan.github.io/async/v3/docs.html#parallel) は、並列して行う必要のある操作を実行する場合に使用します。
 - [`async.series()`](https://caolan.github.io/async/v3/docs.html#series) は、非同期操作が直列に実行される必要がある場合に使用します。
