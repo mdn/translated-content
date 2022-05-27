@@ -18,7 +18,6 @@ translation_of: Web/JavaScript/Reference/Statements/let
 
 {{EmbedInteractiveExample("pages/js/statement-let.html")}}
 
-
 ## 语法
 
 ```js
@@ -210,6 +209,7 @@ let i = 10;
 ```
 
 这与使用 `typeof` 检测值为 `undefined` 的未声明变量不同：
+
 ```js
 // prints out 'undefined'
 console.log(typeof undeclaredVariable);
@@ -218,7 +218,6 @@ console.log(typeof undeclaredVariable);
 #### 暂时性死区和词法作用域
 
 以下代码会导致 `ReferenceError`：
-
 
 ```js example-bad
 function test() {

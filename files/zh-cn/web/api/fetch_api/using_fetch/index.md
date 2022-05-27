@@ -372,9 +372,7 @@ fetch(myRequest)
 - {{domxref("Response.statusText")}} — 字符串（默认值为 ""），该值与 HTTP 状态码消息对应。 注意：HTTP/2 [不支持](https://fetch.spec.whatwg.org/#concept-response-status-message)状态消息
 - {{domxref("Response.ok")}} — 如上所示，该属性是来检查 response 的状态是否在 200 - 299（包括200 和 299）这个范围内。该属性返回一个布尔值。
 
-
 它的实例也可用通过 JavaScript 来创建，但只有在 {{domxref("Service_Worker_API", "ServiceWorkers")}} 中使用 {{domxref("FetchEvent.respondWith","respondWith()")}} 方法并提供了一个自定义的 response 来接受 request 时才真正有用：
-
 
 ```js
 const myBody = new Blob();

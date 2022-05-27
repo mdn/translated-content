@@ -71,11 +71,11 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 
     1. 使用你的代码编辑器，从页面中拷贝粘贴代码到一个新的文本文件中，然后将其保存到一个适当的地方。
     2. 按下页面中的 "Raw" 按钮，从浏览器的菜单中选择 *另存为...*，然后选择一个地方来保存这个文件。
- 
+
 2. 在浏览器中打开文件，你会看到类似这样效果：
   ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)
   现在很明显的可以看到 `<h1>` 出现的地方，和 `<title>` 出现的地方！
- 
+
 3. 你应该尝试着在你的代码编辑器中打开这些代码，编辑这些元素的内容，然后在你的浏览器中刷新页面。祝你玩得开心。
 
 `<title>` 元素也被以其他的方式使用着。比如说，如果你尝试为某个页面添加书签，（在火狐浏览器中：点击*书签 > 将当前标签页添加到书签*，或点击地址栏末尾的星标），你会看到 `<title>` 的内容被作为建议的书签名。
@@ -219,7 +219,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 
 不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，你将不会被要求在这个课堂上学习这个知识点。这里的主要目的是让你提前了解有这一样东西以防当你浏览其他网站的源代码时不理解源代码的含义。
 
-> **备注：** 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令 ](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有禁止访问图标。
+> **备注：** 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有禁止访问图标。
 
 ## 在 HTML 中应用 CSS 和 JavaScript
 
@@ -281,7 +281,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 ## 本章目录
 
 - [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [<head>标签里有什么? Metadata-HTML中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [\<head>标签里有什么? Metadata-HTML中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [高阶文字排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
