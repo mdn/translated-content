@@ -8,7 +8,7 @@ tags:
   - Reference
   - Streams
   - enqueue
-translation_of: Web/API/ReadableStreamDefaultController.enqueue
+translation_of: Web/API/ReadableStreamDefaultController/enqueue
 ---
 {{APIRef("Streams")}}
 
@@ -32,7 +32,7 @@ enqueue(chunk)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果源对象不是 `ReadableStreamDefaultController` 则抛出。
+  - : 如果源对象不是 `ReadableStreamDefaultController` 则抛出该异常。
 
 ## 示例
 

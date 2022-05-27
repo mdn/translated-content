@@ -8,13 +8,13 @@ tags:
   - Reference
   - Streams
   - close
-translation_of: Web/API/ReadableStreamDefaultController.close
+translation_of: Web/API/ReadableStreamDefaultController/close
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultController")}} 接口的 **`close()`** 方法由于关闭关联的流。
+{{domxref("ReadableStreamDefaultController")}} 接口的 **`close()`** 方法用于关闭关联的流。
 
-读取器将仍然可以从流中读取任何先前排队的块，但是一旦读取这些块，流将被关闭。 如果你想完全的摆脱流并且抱起任何排队的块，你可以使用{{domxref("ReadableStream.cancel()")}} 或者 {{domxref("ReadableStreamDefaultReader.cancel()")}}。
+reader 将仍然可以从流中读取任何先前入队的块，但是一旦读取这些块，流将被关闭。如果你想完全的丢弃流并且丢弃任何排队的块，你可以使用 {{domxref("ReadableStream.cancel()")}} 或者 {{domxref("ReadableStreamDefaultReader.cancel()")}}。
 
 ## 语法
 
@@ -28,12 +28,12 @@ close()
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果源对象不是 `ReadableStreamDefaultController` 则抛出。
+  - : 如果源对象不是 `ReadableStreamDefaultController` 则抛出该异常。
 
 ## 示例
 
