@@ -8,15 +8,11 @@ tags:
   - Reference
   - Streams
   - cancel
-translation_of: Web/API/ReadableStream.cancel
+translation_of: Web/API/ReadableStream/cancel
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} 接口的 **`cancel()`** 方法在流被取消后，返回 {{jsxref("Promise")}}。
-
-当你完全完成流并且不需要来自它的任何数据时使用取消，即使有排队等待的数据块。
-调用cancel后该数据丢失，并且流不再可读。
-为了仍然可以读这些数据块并且而不是完全摆脱流，你应该使用 {{domxref("ReadableStreamDefaultController.close()")}}。
+{{domxref("ReadableStream")}} 接口的 **`cancel()`** 方法返回 {{jsxref("Promise")}}，这个 promise 会在流被取消的时候兑现。当完全结束流并且不再需要来自它的任何数据时使用 cancel，即使仍有排队等待的数据块。调用 cancel 后该数据丢失，并且流不再可读。为了仍然可以读这些数据块并且而不完全摆脱流，你应该使用 {{domxref("ReadableStreamDefaultController.close()")}}。
 
 ## 语法
 
@@ -32,7 +28,7 @@ cancel(reason)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，它满足 `reason` 参数给定的值。
+一个 {{jsxref("Promise")}}，会在结束时使用 `reason` 参数兑现。
 
 ### 异常
 
@@ -41,12 +37,11 @@ cancel(reason)
 
 ## 示例
 
-在 Jake Archibald's [取消一个fetch](https://jsbin.com/gameboy/edit?js,console)示例中，流用于逐块获取 WHATWG HTML规范;
-每个块中搜索 "service workers"字符串。当找到搜索词时，`cancel()` 用于取消流 — 作业已被完成，因此不在需要它。
+在 Jake Archibald 的[取消一个 fetch](https://jsbin.com/gameboy/edit?js,console)示例中，流用于逐块获取 WHATWG HTML 规范;并在每个块中搜索 "service workers" 字符串。当找到搜索词时，`cancel()` 用于取消流——作业已被完成，因此不在需要它。
 
 ```js
 var searchTerm = "service workers";
-// 字符显示匹配结果的任意一方
+// Chars to show either side of the result in the match
 var contextBefore = 30;
 var contextAfter = 30;
 var caseInsensitive = true;
@@ -69,7 +64,7 @@ fetch(url).then(response => {
     bytesReceived += result.value.length;
     console.log(`Received ${bytesReceived} bytes of data so far`);
     buffer += decoder.decode(result.value, {stream: true});
-    // 已经找到匹配 & 只是 context-gathering?
+    // already found match & just context-gathering?
     if (matchFoundAt === -1) {
       matchFoundAt = (caseInsensitive ? buffer.toLowerCase() : buffer).indexOf(toMatch);
     }

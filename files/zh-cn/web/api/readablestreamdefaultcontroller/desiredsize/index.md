@@ -8,7 +8,7 @@ tags:
   - Reference
   - Streams
   - desiredSize
-translation_of: Web/API/ReadableStreamDefaultController.desiredSize
+translation_of: Web/API/ReadableStreamDefaultController/desiredSize
 ---
 {{APIRef("Streams")}}
 
@@ -16,7 +16,7 @@ translation_of: Web/API/ReadableStreamDefaultController.desiredSize
 
 ## 值
 
-一个整数。请注意过满，则可能是负数。
+一个整数。请注意，在队列已满的情况下，则可能是负数。
 
 ## 示例
 
