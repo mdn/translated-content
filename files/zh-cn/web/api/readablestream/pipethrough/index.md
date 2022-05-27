@@ -38,11 +38,11 @@ pipeThrough(transformStream, options)
 
     - `preventAbort`
 
-      - : 如果设置为 `true`， 目标 `WritableStream` 的错误将不再取消源 `ReadableStream` 。该方法将会返回一个因源错误而被拒绝的 promise， 或者任何在中止目标期间的错误。
+      - : 如果设置为 `true`， 目标 `WritableStream` 的错误将不再取消源 `ReadableStream`。该方法将会返回一个因源错误而被拒绝的 promise，或者任何在中止目标期间的错误。
 
     - `preventCancel`
 
-      - : 如果设置为 `true`，目标 `WritableStream` 的错误将不在取消源 `ReadableStream`。在这种情况下，该方法将会返回一个因源错误而被拒绝的 promise， 或者任何在中止目标期间的错误。此外，如果目标可读流开始关闭或者正在关闭，源可写流将不再被关闭。在这种情况下，方法将返回一个拒绝并带有错误的 promise，或者任何在中止目标期间的错误，来表明管道关闭失败。
+      - : 如果设置为 `true`，目标 `WritableStream` 的错误将不在取消源 `ReadableStream`。在这种情况下，该方法将会返回一个因源错误而被拒绝的 promise，或者任何在中止目标期间的错误。此外，如果目标可读流开始关闭或者正在关闭，源可写流将不再被关闭。在这种情况下，方法将返回一个拒绝并带有错误的 promise，或者任何在中止目标期间的错误，来表明管道关闭失败。
 
     - `signal`
 
@@ -61,7 +61,7 @@ pipeThrough(transformStream, options)
 
 在下面的例子中(有关实时运行的完整代码，参见 [解压缩 PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/)，有关源代码，参见 [png-transform-stream](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream))，获取图像并将它的 body 属性修正为 {{domxref("ReadableStream")}}。
 
-接下来， 我们记录可读流的内容，并且使用 `pipeThrough()` 将它发动到一个创建灰度版本流的新函数，并且也记录新流的内容。
+接下来，我们记录可读流的内容，并且使用 `pipeThrough()` 将它发动到一个创建灰度版本流的新函数，并且也记录新流的内容。
 
 ```js
 // 获取原始图像

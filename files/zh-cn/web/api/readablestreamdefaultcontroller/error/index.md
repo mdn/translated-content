@@ -14,8 +14,7 @@ translation_of: Web/API/ReadableStreamDefaultController/error
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`error()`** 方法会导致未来任何与关联流的交互出错。
 
-> **注意:** `error()` 方法可以被调用多次，
-> 并且可以在流不可读时被调用。
+> **备注：** `error()` 方法可以被多次调用，并且可以在流不可读时被调用。
 
 ## 语法
 
