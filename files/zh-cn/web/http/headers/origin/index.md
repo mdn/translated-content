@@ -1,83 +1,93 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
+tags:
+  - HTTP
+  - Reference
+  - Request header
+  - header
+  - origin
 translation_of: Web/HTTP/Headers/Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>请求首部字段 <strong><code>Origin</code></strong> 指示了请求来自于哪个站点。该字段仅指示服务器名称，并不包含任何路径信息。该首部用于 {{Glossary("CORS")}} 请求或者 {{HTTPMethod("POST")}} 请求。除了不包含路径信息，该字段与 {{HTTPHeader("Referer")}} 首部字段相似。</p>
-<div class="note notecard">
- <p><strong>Note:&nbsp; </strong>基本上，浏览器会将Origin请求头添加到:</p>
- <ul>
-   <li>所有的跨域请求</li>
-   <li>除GET或HEAD请求外的同源请求(即它们被添加到同源POST、OPTIONS、PUT、PATCH和DELETE请求中)</li>
- </ul>
- <p><strong>浏览器会将Origin请求头添加到所有跨域的请求中，除GET或HEAD请求外的同源请求。如果在no-cors模式下发出跨源GET或HEAD请求，则不会添加Origin头</strong></p>
-</div>
+请求标头 **`Origin`** 表示了请求的{{glossary("origin", "来源")}}（协议、主机、端口）。例如，如果一个用户代理需要请求一个页面中包含的资源，或者执行脚本中的 HTTP 请求（fetch），那么该页面的来源（origin）就可能被包含在这次请求中。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Origin: ""
-Origin: &lt;scheme&gt; "://" &lt;host&gt; [ ":" &lt;port&gt; ]
-</pre>
+```
+Origin: null
+Origin: <scheme>://<hostname>
+Origin: <scheme>://<hostname>:<port>
+```
 
-<p><code>有时候将该字段的值置空是有用的，例如，资源由一个 data URL 指定。</code></p>
+## 指令
 
-<h2 id="声明">声明</h2>
+- `null`
+  - : 请求的来源是“隐私敏感”的，或者是 HTML 规范定义的*不透明来源*（具体情况在[描述](#描述)部分列出）。
+- `<scheme>`
+  - : 请求所使用的协议，通常是 HTTP 协议或者它的安全版本（HTTPS 协议）。
+- `<hostname>`
+  - : 源站的域名或 IP 地址。
+- `<port>` {{optional_inline}}
+  - : 服务器正在监听的端口号。缺省为服务的默认端口（对于 HTTP 请求而言，默认端口为 80）。
 
-<dl>
- <dt>&lt;scheme&gt;</dt>
- <dd>请求所使用的协议，通常是HTTP协议或者它的安全版本HTTPS协议。</dd>
- <dt>&lt;host&gt;</dt>
- <dd>服务器的域名或 IP 地址。</dd>
- <dt>&lt;port&gt; {{optional_inline}}</dt>
- <dd>服务器正在监听的TCP 端口号。缺省为服务的默认端口（对于 HTTP 请求而言，默认端口为 80）。</dd>
-</dl>
+## 描述
 
-<h2 id="示例">示例</h2>
+`Origin` 标头与 {{HTTPHeader("Referer")}} 标头类似，但前者不会暴露 URL 的 path 部分，而且其可以为 `null` 值。其用于为源站的请求提供“安全上下文”，除非源站的信息敏感或不必要的。
 
-<pre>Origin: https://developer.mozilla.org</pre>
+从广义上讲，用户代理会在以下情况中添加 {{httpheader("Origin")}} 请求标头：
 
-<h2 id="规范">规范</h2>
+- {{Glossary("CORS", "跨源")}}请求。
+- 除 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 以外的[同源](/zh-CN/docs/Web/Security/Same-origin_policy)请求（即它会被添加到同源的 {{HTTPMethod("POST")}}、{{HTTPMethod("OPTIONS")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("PATCH")}} 和 {{HTTPMethod("DELETE")}} 请求中）。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6454", "Origin", "7")}}</td>
-   <td>The Web Origin Concept</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#origin-header','Origin header')}}</td>
-   <td>Supplants the <code>Origin</code> header as defined in RFC6454.</td>
-  </tr>
- </tbody>
-</table>
+除上述规则外，还有一些特殊情况。例如，在 [no-cors 模式](/zh-CN/docs/Web/API/Request/mode#属性值)下的跨源 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 请求不会发送 `Origin` 标头。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+`Origin` 标头在以下情况中（不完整）会被设置为 `null`：
 
-<p>{{Compat("http/headers/origin")}}</p>
+- 请求来源的协议不是 `http`、`https`、`ftp`、`ws`、`wss` 或 `gopher` 中的任意一个（如：`blob`、`file` 和 `data`）。
+- 跨源的图像或媒体，包括：`<img>`、`<video>` 和 `<audio>` 元素。
+- 属于以下几种文档类型的：使用 `createDocument()` 创建的、通过 `data:` URL 生成的或没有创建者的浏览上下文的。
+- 跨源重定向。
+- 没有为 sandbox 属性设置 `allow-same-origin` 值的 iframe。
+- 响应（response）是网络错误。
 
-<h2 id="参见">参见</h2>
+> **备注：** 了解更详细的关于其值何时为 `null` 的清单，请参见 Stack Overflow：[When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/)。
 
-<ul>
- <li>{{HTTPHeader("Host")}}</li>
- <li>{{HTTPHeader("Referer")}}</li>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">同源策略</a></li>
-</ul>
+## 示例
+
+```http
+Origin: https://developer.mozilla.org
+```
+
+```http
+Origin: http://developer.mozilla.org:80
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Referer")}}
+- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [浏览器在何时会发送 Origin 请求标头？又会在何时将其设置为 null？](https://stackoverflow.com/a/42242802/)（Stack Overflow）
