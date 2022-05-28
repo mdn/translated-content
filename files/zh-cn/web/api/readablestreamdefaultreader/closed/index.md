@@ -16,7 +16,7 @@ translation_of: api/ReadableStreamDefaultReader/closed
 
 ## 值
 
-A {{jsxref("Promise")}}。
+一个 {{jsxref("Promise")}}。
 
 ## 示例
 
