@@ -1,230 +1,177 @@
 ---
-title: MDNのビデオコンテンツ
+title: MDN の動画コンテンツ
 slug: MDN/Guidelines/Video
+tags:
+  - ガイドライン
+  - メタ
+  - 動画
 translation_of: MDN/Guidelines/Video
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
+MDN Web Docs は動画が多いサイトではありませんが、動画コンテンツを記事の一部として使用することに意味がある場所がいくつかあります。この記事では、 MDN の記事に動画を含めることが適切な場合について説明し、シンプルだが効果的な動画を予算内で作成するためのヒントを提供します。
 
-<p class="summary">MDNのWeb Docsは動画が多いサイトではありませんが、ビデオコンテンツを記事の一部として使用することに意味がある場所がいくつかあります。この記事では、MDNの記事に動画を含めることが適切な場合について説明し、シンプルだが効果的なビデオを予算内で作成するためのヒントを提供します。</p>
+## MDN で動画を使用する場合
 
-<h2 id="MDNで動画を使用する場合">MDNで動画を使用する場合</h2>
+技術文書、特に参考資料や上級レベルガイドに動画コンテンツを使用することには、いくつかの反対意見があります。
 
-<p>技術文書、特に参考資料や上級レベルガイドにビデオコンテンツを使用することには、いくつかの反対意見があります。：</p>
+- 動画は直線的です。
+  人々はオンラインドキュメントを最初から最後まで直線的に読むことはありません。
+  彼らは探すのです。
+  動画は探しにくいので、ユーザーは強制的に最初から最後までコンテンツを消費しなければなりません。
+- 動画はテキストよりも情報密度が低い。
+  何かを説明する動画を視聴するのは、同等の説明書を読むよりも時間がかかります。
+- 動画はファイルサイズが大きいので、テキストよりもコストがかかり、パフォーマンスも低い。
+- 動画にはアクセシビリティの問題があります。一般にテキストよりも制作費がかかりますが、特にローカライズや画面リーダーの利用者が使えるようにするのが大変です。
+- 最後の点に加えて、動画は、テキストコンテンツよりも編集・更新・保守がはるかに困難です。
 
-<ul>
- <li>
-  <p>Video is linear. People don’t tend to read online documentation in a linear fashion, starting at the start and reading through to the end. <a href="http://www.sensible.com/chapter.html">They scan</a>. Video is really hard to scan — it forces the user to consume the content start-to-finish.</p>
- </li>
- <li>
-  <p>Video is less information-dense than text. It takes longer to consume a video explaining something than it does to read the equivalent instructions.</p>
- </li>
- <li>
-  <p>Video is big in terms of file size, and therefore more expensive and less performant than text.</p>
- </li>
- <li>
-  <p>Video has accessibility problems: it’s more expensive to produce generally than text,  but especially to localize, or make usable by screen reader users.</p>
- </li>
- <li>
-  <p>Following on from the last point, video is much harder to edit/update/maintain than text content.</p>
- </li>
-</ul>
+> **Note:** 動画を作るときにも、これらの問題を念頭に置いて、少しでも軽減できるように工夫するとよいでしょう。
 
-<div class="note">
-<p><strong>Note</strong>: It’s worth keeping these problems in mind, even when you are making videos, so you can try to alleviate some of them.</p>
-</div>
+多くの人気の動画サイトがあり、多くの動画チュートリアルを提供しています。
+MDN は動画主体のサイトではありませんが、動画は特定の文脈で MDN に登場することがあります。
 
-<p>There are many popular video sites that provide a lot of video tutorials. MDN just isn't a video-driven site. But video does have a place on MDN, in certain contexts.</p>
+私たちが最もよく使うのは、言葉で簡潔に説明するのが難しい、ある種の指示シーケンスや複数ステップのワークフローを説明するときです。「こうして、ああして、こうなる」。
+特に、複数のアプリケーションやウィンドウにまたがるプロセスや、簡単には説明できないような GUI 操作を記述する場合に便利です。「左上のアヒルのようなボタンをクリックしてください。」
 
-<p>We tend to most commonly use video when describing some kind of instruction sequence or multi-step workflow that would be hard to describe concisely in words: <em>"do this, then do that, then this will happen"</em>. It is especially useful when trying to describe processes that cross over multiple applications or windows, and include GUI interactions that might not be simple to describe: <em>"now click on the button near the top-left that looks a bit like a duck"</em>.</p>
+このような場合、「何を意味しているのか」を**見せる**方が効果的なことが多いのです。
+私たちは、 [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) の機能を説明するときに、最もよく動画を使用します。
 
-<p>In such cases it is often more effective to just <strong>show</strong> what you mean. We most commonly use videos when explaining features of the <a href="/ja/docs/Tools">Firefox DevTools</a>.</p>
+## MDN の動画はどのようなものであるべきか
 
-<h2 id="What_should_MDN_videos_look_like">What should MDN videos look like?</h2>
+MDN 用の動画は以下のようにあるべきです。
 
-<p>Videos for MDN should be:</p>
+- **短い**。 30 秒以下、できれば 20 秒以下の動画にするようにしましょう。
+  これは、人々の注意力に大きな負担をかけない程度の短さです。
+- **シンプル**。ワークフローはシンプルに、 2 ～ 4 つの明確なピースを作るようにしましょう。
+  そうすることで、よりわかりやすくなります。
+- **無音**。音声は動画をより魅力的にしますが、作るのにずっと時間がかかります。
+  また、何をやっているのか説明しなければならないので、動画が長くなり、ローカライズのコストが（金銭的にも時間的にも）かさみます。
 
-<ul>
- <li>
-  <p><strong>Short</strong>: Try to keep videos under 30 seconds, ideally under 20 seconds. This is short enough not to make big demands on peoples’ attention spans.</p>
- </li>
- <li>
-  <p><strong>Simple</strong>: Try to make the workflow simple, 2-4 distinct pieces. This makes them easier to follow.</p>
- </li>
- <li>
-  <p><strong>Silent</strong>: Audio makes videos much more engaging, but they are much more time-consuming to make. Also, having to explain what you’re doing makes the videos much longer, and adds to the costs (both financial and in terms of time) of localization.</p>
- </li>
-</ul>
+もっと複雑なことを説明する場合は、短い動画とスクリーンショットを組み合わせて、テキストを挟むとよいでしょう。
+テキストは、動画で説明した内容を補強するのに役立ち、ユーザーはテキストと動画のどちらを頼りにしてもかまいません。
+良い例として、[アニメーションインスペクターの使い方](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animation-inspector)を参照してください。
 
-<p>To explain something more complex, you can use a blend of short videos and screenshots, interspersed with text. The text can help reinforce the points made in the video, and the user can rely on the text or the video as they choose. See <a href="/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Animation_inspector">Working with the Animation Inspector</a> for a good example.</p>
+さらに、以下のことを考慮してください。
 
-<p>In addition, you should consider the following tips:</p>
+- 動画は、埋め込み前に YouTube にアップロードしてください。
+  この用途では、アスペクト比 16:9 を推奨します。そうすれば、表示フレーム全体が埋まり、動画の上下（または左右）に醜い黒帯が発生することはありません。
+  そのため、例えば 1024×576、1152×648、1280×720 の解像度を選択するとよいでしょう。
+- アップロード時に見栄えが良くなるように、動画は HD で録画してください。
+- DevTools の動画では、ページのコンテンツとは対照的なテーマを選択することをお勧めします、例えば、例のウェブページが明るいテーマであれば、暗いテーマを選択してください。
+  それは、何が起こっているのか、どこで DevTools が始まり、ページが終了するのかを容易に理解することができます。
+- DevTools の動画では、見せたいものをすべて見せながら、 DevTools をできるだけ拡大し、問題なく見えるようにしてください。
+- デモしようとしているものがマウスカーソルで覆い隠されていないことを確認してください。
+- 画面録画ツールで、マウスクリックの視覚的なインジケーターを表示するように設定することが有用であるかどうかを検討してください。
 
-<ul>
- <li>The video will end up being uploaded to YouTube before embedding. We'd recommend a 16:9 aspect ratio for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video. So for example, you might choose a resolution of 1024×576, 1152×648, or 1280×720.</li>
- <li>Record the video in HD, so that it looks better when uploaded.</li>
- <li>For DevTools videos, it is often a good idea to choose a contrasting theme to the page content, for example choose the dark theme if the example webpage is light-themed. It is easier to see what is going on, and where the DevTools start and the page ends.</li>
- <li>For DevTools videos, zoom in the DevTools as much as you can while still showing everything you want to show and making it look OK.</li>
- <li>Make sure the thing you are trying to demonstrate isn't covered up by the mouse cursor.</li>
- <li>Consider whether or not it would be useful to configure the screen recording tool to add a visual indicator of mouse clicks.</li>
-</ul>
+## 動画ツール
 
-<h2 id="Video_tools">Video tools</h2>
+動画を録画するためには、何らかのツールが必要です。
+無料のものから高価なものまで、またシンプルなものから複雑なものまで、さまざまなものがあります。
+もし、すでに動画コンテンツ制作の経験があるのなら、それは素晴らしいことです。
+そうでない場合は、簡単なツールから始めて、動画制作が楽しくなり、より興味深い作品を作りたくなったら、より複雑なものに手を出すことをお勧めします。
 
-<p>You'll need some kind of a tool for recording the video. These range from free to expensive, and simple to complex. If you are already experienced in creating video content, then great. If not, then we'd recommend that you start with a simple tool and then work up to something more complex if you start to enjoy creating video and want to create more interesting productions.</p>
+次の表は、良いスターターツールのお勧めをいくつか示しています。
 
-<p>The following table provides some recommendations for good starter tools.</p>
+| ツール                      | OS                    | コスト   | 後処理機能 |
+| ------------------------- | --------------------- | ------ | ----------------------------------- |
+| Open Broadcaster Software | macOS, Windows, Linux | フリー   | あり                                 |
+| CamStudio                 | Windows               | フリー   | 限定的                             |
+| Camtasia                  | Windows, macOS        | 高   | あり                                 |
+| QuickTime Player          | macOS                 | フリー   | なし。単純に録画できるだけ    |
+| ScreenFlow                | macOS                 | 中 | あり                                 |
+| Kazam                     | Linux                 | フリー   | 最小限                             |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Tool</th>
-   <th scope="col">OS</th>
-   <th scope="col">Cost</th>
-   <th scope="col">Post-production features available?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Open Broadcaster Software</td>
-   <td>macOS, Windows, Linux</td>
-   <td>Free</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <td>CamStudio</td>
-   <td>Windows</td>
-   <td>Free</td>
-   <td>Limited</td>
-  </tr>
-  <tr>
-   <td>Camtasia</td>
-   <td>Windows, macOS</td>
-   <td>High</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <td>QuickTime Player</td>
-   <td>macOS</td>
-   <td>Free</td>
-   <td>No, just allows simple recording</td>
-  </tr>
-  <tr>
-   <td>ScreenFlow</td>
-   <td>macOS</td>
-   <td>Medium</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <td>Kazam</td>
-   <td>Linux</td>
-   <td>Free</td>
-   <td>Minimal</td>
-  </tr>
- </tbody>
-</table>
+### QuickTime のコツ
 
-<h3 id="QuickTime_tips">QuickTime tips</h3>
+macOS をお使いの場合は、 QuickTime Player が利用できるはずです。
+実はこれもかなり簡単な簡易録画機能を備えています。
 
-<p>If you are using macOS, you should have QuickTime Player available. This actually provides pretty easy simple recording facilities too:</p>
+1. メインメニューから _ファイル_ > _新規画面録画_ を選択します。
+2. _画面録画_ ボックスで、録画ボタン（赤い丸いボタン）を押す。
+3. 録画したい画面の領域を矩形でドラッグします。
+4. _録画開始_ ボタンを押します。
+5. 録画したい動作をする。
+6. _停止_ ボタンを押す。
+7. メインメニューから_File_ > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
 
-<ol>
- <li>Choose <em>File</em> &gt; <em>New Screen Recording</em> from the main menu.</li>
- <li>In the <em>Screen Recording</em> box, hit the record button (the red round button).</li>
- <li>Drag a rectangle round the area of the screen you want to record.</li>
- <li>Press the <em>Start Recording</em> button.</li>
- <li>Perform whatever actions you want to record.</li>
- <li>Press the <em>Stop</em> button.</li>
- <li>Choose <em>File</em> &gt; <em>Export As...</em> &gt; <em>1080p</em> from the main menu to save as hi definition.</li>
-</ol>
+### その他のリソース
 
-<h3 id="Other_resources">Other resources</h3>
+- [How to Add Custom Callouts to Screencast Videos in Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
-<ul>
- <li><a href="https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122">How to Add Custom Callouts to Screencast Videos in Screenflow</a></li>
-</ul>
+## 動画を作成するためのワークフロー
 
-<h2 id="A_workflow_for_creating_videos">A workflow for creating videos</h2>
+以下の節では、動画を作成して MDN ページに表示させるための一般的な手順を説明します。
 
-<p>the following subsections describe the general steps you'd want to follow to create a video and get it shown on an MDN page.</p>
+### 準備
 
-<h3 id="Preparation">Preparation</h3>
+まず、撮影したい流れを計画します。開始と終了の最適なポイントを検討します。
 
-<p>First, plan the flow you want to capture: consider the best points to start and end.</p>
+デスクトップの背景とブラウザーのプロファイルがきれいであることを確認します。
+特に複数のウィンドウを使用する場合は、ブラウザーのウィンドウの大きさと配置を計画します。
 
-<p>Make sure the desktop background and your browser profile are clean. Plan the size and positioning of browser windows, especially if you will be using multiple windows.</p>
+実際に録画する内容を綿密に計画し、録画する前に何度か手順を練習してください。
 
-<p>Plan carefully what you are actually going to record, and practice the steps a few times before recording them:</p>
+- 手順の途中で動画を開始するようにしないでください。視聴者が操作を理解するのに十分な文脈を持っているかどうかを考慮してください。
+  例えば、短い DevTools の動画では、 DevTools を開くところから始めて、視聴者が方向感覚を掴めるようにするのがよい考えです。
+- 操作の内容を考え、スピードを落とし、明確にしてください。
+  ある動作（例えば、アイコンをクリックする）をしなければならないときは、ゆっくり明確に操作してください。例えば、
 
-<ul>
- <li>
-  <p>Don't start a video in the middle of a process — consider whether the viewer has enough context for your actions to make sense to them. In a short DevTools video for example, it is a good idea to start by opening the DevTools to allow the viewer to get oriented.</p>
- </li>
- <li>
-  <p>Consider what your actions are, slow down, and make them obvious. Whenever you have to perform an action (say, click an icon), take it slow and make it obvious, so for example:</p>
+  - マウスをアイコンの上に移動させる
+  - 強調またはズーム（常にではなく、必要性を感じるかどうかによる）
+  - 一旦停止する
+  - アイコンをクリックする
 
-  <ul>
-   <li>
-    <p>Move the mouse over the icon</p>
-   </li>
-   <li>
-    <p>Highlight or zoom (not always, depending on whether it feels needed)</p>
-   </li>
-   <li>
-    <p>Pause for a beat</p>
-   </li>
-   <li>
-    <p>Click the icon</p>
-   </li>
-  </ul>
- </li>
- <li>Plan zoom levels for the parts of the UI that you’re going to show. Not everyone will be able to view your video in high definition. You will be able to zoom particular parts in post-production, but it’s a good idea to zoom the app beforehand as well.</li>
-</ul>
+- UI を表示する部分のズームレベルを計画します。
+  すべての人が高解像度で動画を見ることができるわけではありません。
+  後処理で特定の部分をズームすることができますが、事前にアプリをズームするのも良い考えです。
 
-<div class="note">
-<p><strong>Note</strong>: Don’t zoom so far that the UIs you are showing start to look unfamiliar or ugly.</p>
-</div>
+> **Note:** あまりにズームしすぎて、見せている UI が見慣れなくなったり、醜く見えたりならないようにしてください。
 
-<h3 id="Recording">Recording</h3>
+### 録画
 
-<p>When recording the workflow you want to show, go through the flow smoothly and steadily. Pause for a second or two when you are at key moments — for example, about to click on a button. Make sure the mouse pointer doesn’t obscure any icons or text that are important to what you are trying to demonstrate.</p>
+見せたいワークフローを録音するときは、スムーズかつ着実に流れを進めてください。
+ボタンをクリックするなど、重要な場面では 1 〜 2 秒の間、一時停止してください。
+マウスポインターが、デモを行う上で重要なアイコンやテキストを隠してしまわないように注意してください。
 
-<p>Remember to pause for a second or two at the end, to show the result of the flow.</p>
+最後に 1 ～ 2 秒の間を置いて、流れの結果を示すことを忘れないでください。
 
-<div class="note">
-<p><strong>Note</strong>: If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the <a href="/ja/docs/Tools/Rulers">Rulers Tool</a> to make sure the viewport is at the right aspect ratio for the recording.</p>
-</div>
+> **Note:** QuickTime Player のような本当にシンプルなツールを使っていて、何らかの理由で後処理ができない場合、見せたい領域を表示するために正しいサイズのウィンドウをセットアップしておく必要があります。 Firefox DevTools の [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) を使うと、ビューポートが録画に適したアスペクト比になっていることを確認することができます。
 
-<h3 id="Post-production">Post-production</h3>
+### 後処理
 
-<p>You’ll be able to highlight key moments in post-production. A highlight can consist of a couple of things, which you’ll often combine:</p>
+後処理では、重要な瞬間を強調することができます。
+ハイライトはいくつかの要素で構成されており、それらを組み合わせて使うことが多いでしょう。
 
-<ul>
- <li>Zoom in on parts of the screen.</li>
- <li>Fade the background.</li>
-</ul>
+- 画面の一部を拡大する。
+- 背景をフェードさせる。
 
-<p>Highlight key moments of the workflow, especially where the detail is hard to see: clicking on a particular icon or entering a particular URL, for example. Aim for the highlight to last for 1-2 seconds. It’s a good idea to add a short transition (200-300 milliseconds) at the starts and ends of the highlights.</p>
+ワークフローの重要な瞬間、特に詳細が見えにくい部分を強調します。例えば、特定のアイコンをクリックする、特定の URL を入力するなどです。
+ハイライトは 1 〜 2 秒を目安に。
+ハイライトの最初と最後に、短いトランジション（200～300ミリ秒）を追加するとよいでしょう。
 
-<p>Use some restraint here: don’t make the video a constant procession of zooming in and out, or viewers will get seasick.</p>
+ズームイン、ズームアウトの連続では、視聴者が船酔いしてしまいますので、ほどほどに。
 
-<p>Crop the video to the desired aspect ratio, if required.</p>
+必要であれば、動画を希望するアスペクト比に切り抜いてください。
 
-<h3 id="Uploading">Uploading</h3>
+### アップロード
 
-<p>Videos currently have to be uploaded to YouTube to be displayed on MDN, for example the <a href="https://www.youtube.com/user/mozhacks/videos">mozhacks</a> channel. Ask a member of MDN staff to upload the video if you don't have somewhere appropriate to put it.</p>
+現在 MDN で動画を表示するには YouTube にアップロードする必要があります。例えば [mozhacks](https://www.youtube.com/user/mozhacks/videos) チャンネルなどです。
+もし適切な場所がなければ、 MDN スタッフにアップロードを依頼してください。
 
-<div class="note">
-<p><strong>Note</strong>: Mark the video as "unlisted" if it doesn’t make sense out of the context of the page (if it’s a short video, then it probably doesn't).</p>
-</div>
+> **Note:** 動画がページの文脈から意味をなさない場合は "unlisted" としてマークしてください（短い動画であれば、おそらく意味をなさないでしょう）。
 
-<h3 id="Embedding">Embedding</h3>
+### 埋め込み
 
-<p>Once uploaded, you can embed the video in the page using the {{TemplateLink("EmbedYouTube")}} macro. This is used by inserting the following in your page at the position you want the video to appear:</p>
+アップロードした動画は、[`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) というマクロを使って、ページ内に埋め込むことができます。
+これは、ページ内の動画を表示させたい位置に以下のように挿入することで使用します。
 
-<p>\{{EmbedYouTube("you-tube-url-slug")}}</p>
+```
+\{{EmbedYouTube("you-tube-url-slug")}}
+```
 
-<p>The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL. For example, the video embedded in our <a href="/ja/docs/Tools/Page_Inspector/3-pane_mode">Page inspector 3-pane mode</a> article is available at https://www.youtube.com/watch?v=ELS2OOUvxIw, so the required macro call looks like this:</p>
+マクロ呼び出しで取得されるプロパティは、URL全体ではなく、動画のURLの末尾にある文字列の1つです。
+例えば、[ページインスペクター 3 ペインモード](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html)の記事に埋め込まれている動画は、 https\://www\.youtube.com/watch?v=ELS2OOUvxIw で公開されているので、必要なマクロ呼び出しは次のようになります。
 
-<p>\{{EmbedYouTube("ELS2OOUvxIw")}}</p>
+```
+\{{EmbedYouTube("ELS2OOUvxIw")}}
+```
