@@ -47,8 +47,7 @@ cancel(reason)
 function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
-  // 当 reader 接收到值时
-  // read() 返回一个兑现的 promise
+  // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
     // 结果包含两个属性:
     // done  - 如果为 true，表示流已经返回所有的数据.
