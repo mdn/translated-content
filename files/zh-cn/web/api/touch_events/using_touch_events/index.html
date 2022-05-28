@@ -5,13 +5,13 @@ translation_of: Web/API/Touch_events/Using_Touch_Events
 ---
 <p>{{DefaultAPISidebar("Touch Events")}}</p>
 
-<p>今天，大多数 Web 内容是为键盘和鼠标输入而设计的。然而，具有触摸屏（特别是便携式设备）的设备是主流的，Web应用程序可以使用 {{domxref("Touch_events","Touch Events")}} 直接处理基于触摸的输入，或者应用程序可以使用可解释的鼠标事件以处理应用程序的输入。使用鼠标事件的缺点是它们不支持并发用户输入，而触摸事件支持多个同时输入（可能在触摸面上的不同位置），从而增强用户体验。</p>
+<p>今天，大多数 Web 内容是为键盘和鼠标输入而设计的。然而，具有触摸屏（特别是便携式设备）的设备是主流的，Web 应用程序可以使用 {{domxref("Touch_events","Touch Events")}} 直接处理基于触摸的输入，或者应用程序可以使用可解释的鼠标事件以处理应用程序的输入。使用鼠标事件的缺点是它们不支持并发用户输入，而触摸事件支持多个同时输入（可能在触摸面上的不同位置），从而增强用户体验。</p>
 
 <p>触摸事件界面支持应用程序特定的单触摸和多点触控交互，例如双指手势。当手指（或触控笔）首先触摸接触面时，多点触摸交互开始。其他手指随后可以触摸该表面并且可选地移动穿过该触摸表面。当手指从表面移除时，相互作用结束。在此交互期间，应用程序在开始，移动和结束阶段接收触摸事件。应用程序可以将其自己的语义应用于触摸输入。</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
-<p>触摸事件有三个接口 ({{domxref("Touch")}}, {{domxref("TouchEvent")}} 和 {{domxref("TouchList")}}) 和以下事件类型:</p>
+<p>触摸事件有三个接口 ({{domxref("Touch")}}, {{domxref("TouchEvent")}} 和 {{domxref("TouchList")}}) 和以下事件类型：</p>
 
 <ul>
  <li>{{event("touchstart")}} - 当触摸点放置在触摸面上时触发。</li>
@@ -20,7 +20,7 @@ translation_of: Web/API/Touch_events/Using_Touch_Events
  <li>{{event("touchcancel")}} - 当触摸点以实现特定的方式中断（例如，创建的触摸点太多）时触发。</li>
 </ul>
 
-<p>{{domxref("Touch")}} 接口表示触敏设备上的单个接触点。接触点通常被称为触摸点或仅仅是触摸点。触摸通常由触摸屏，笔或触控板上的手指或触控笔产生。触摸点的属性包括唯一标识符，触摸点的目标元素以及触摸点相对于视口，页面和屏幕的位置的X和Y坐标。</p>
+<p>{{domxref("Touch")}} 接口表示触敏设备上的单个接触点。接触点通常被称为触摸点或仅仅是触摸点。触摸通常由触摸屏，笔或触控板上的手指或触控笔产生。触摸点的属性包括唯一标识符，触摸点的目标元素以及触摸点相对于视口，页面和屏幕的位置的 X 和 Y 坐标。</p>
 
 <p>{{domxref("TouchList")}} 接口表示触摸表面上的触点的列表。因此，如果用户用一根手指触摸触控表面，则该列表将包含一个触点，并且如果用户用三个手指触摸该表面，则列表长度将为三个。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Touch_events/Using_Touch_Events
 
 <ul>
  <li>{{domxref("TouchEvent.touches","touches")}} - 屏幕上当前所有触摸点的列表。</li>
- <li>{{domxref("TouchEvent.targetTouches","targetTouches")}} - 目标DOM元素上的触摸点列表。</li>
+ <li>{{domxref("TouchEvent.targetTouches","targetTouches")}} - 目标 DOM 元素上的触摸点列表。</li>
  <li>{{domxref("TouchEvent.changedTouches","changedTouches")}} - 依赖于关联的触摸事件类型的触摸点列表：
   <ul>
    <li>对于 {{event("touchstart")}} 事件，它是当前事件变为活动的触摸点的列表。</li>
@@ -108,7 +108,7 @@ function process_touchmove(ev) {
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Web/API/Touch_events#Browser_compatibility">touch events browser compatibility data</a> 表明移动浏览器中的触摸事件支持相对较好，尽管其他实现正在进行中，桌面浏览器支持滞后。</p>
 
-<p>关于触摸点的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Web/API/Touch#Touch_area">touch area</a> 的一些新功能 - 用户和触摸表面之间的接触面积正在被标准化。新功能包括最接近触摸点与触摸面的接触区域的椭圆的X和Y半径。接触点的旋转角度 - 应用于所描述的椭圆以与接触面积对准的旋转角度的数量也被标准化，以及触摸点上对屏幕的力量。</p>
+<p>关于触摸点的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Web/API/Touch#Touch_area">touch area</a> 的一些新功能 - 用户和触摸表面之间的接触面积正在被标准化。新功能包括最接近触摸点与触摸面的接触区域的椭圆的 X 和 Y 半径。接触点的旋转角度 - 应用于所描述的椭圆以与接触面积对准的旋转角度的数量也被标准化，以及触摸点上对屏幕的力量。</p>
 
 <h2 id="What_about_Pointer_Events">What about Pointer Events?</h2>
 
