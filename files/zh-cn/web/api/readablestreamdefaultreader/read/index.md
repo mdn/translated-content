@@ -12,7 +12,7 @@ translation_of: Web/API/ReadableStreamDefaultReader/read
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供对流内部队列中下一个分块（以供访问）。
+{{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供流的内部队列中下一个分块（以供访问）。
 
 ## 语法
 
@@ -26,7 +26,7 @@ read()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，兑现/拒绝的结果取决于流的状态。不同的可能性如下:
+一个 {{jsxref("Promise")}}，其兑现/拒绝的结果取决于流的状态。不同的可能性如下:
 
 - 如果有分块可用，则 promise 将使用 `{ value: theChunk, done: false }` 形式的对象来兑现。
 - 如果流已经关闭，则 promise 将使用 `{ value: undefined, done: true }` 形式的对象来兑现。
@@ -43,7 +43,7 @@ read()
 
 这个例子展示了基本的 API 使用方法，但是其不会尝试处理一些复杂的问题，如流中的分块不在行的末尾结束。
 
-在此示例中 `stream` 是一个先前创建的自定义 `ReadableStream`。它使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取。（有关完整代码[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。每个块按顺序读取并作为 UTF-8 字节数组输出到 UI，直到流完成读取，此时我们退出递归函数并将整个流打印到 UI 的另一部分。
+在此示例中 `stream` 是一个先前创建的自定义 `ReadableStream`。它使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取。（有关完整代码请参见[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。每个块按顺序读取并作为 UTF-8 字节数组输出到 UI，直到流完成读取，此时我们退出递归函数并将整个流打印到 UI 的另一部分。
 
 ```js
 function fetchStream() {
