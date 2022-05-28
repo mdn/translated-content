@@ -44,18 +44,18 @@ Referrer-Policy: unsafe-url
 <dl>
  <dt>no-referrer</dt>
  <dd>整个 {{HTTPHeader("Referer")}}  首部会被移除。访问来源信息不随着请求一起发送。</dd>
- <dt>no-referrer-when-downgrade （默认值）</dt>
- <dd>在没有指定任何策略的情况下用户代理的默认行为。在同等安全级别的情况下，引用页面的地址会被发送(HTTPS-&gt;HTTPS)，但是在降级的情况下不会被发送 (HTTPS-&gt;HTTP)。</dd>
+ <dt>no-referrer-when-downgrade（默认值）</dt>
+ <dd>在没有指定任何策略的情况下用户代理的默认行为。在同等安全级别的情况下，引用页面的地址会被发送 (HTTPS-&gt;HTTPS)，但是在降级的情况下不会被发送 (HTTPS-&gt;HTTP)。</dd>
  <dt>origin</dt>
  <dd>在任何情况下，仅发送文件的源作为引用地址。例如  <code>https://example.com/page.html</code> 会将 <code>https://example.com/ 作为引用地址。</code></dd>
  <dt>origin-when-cross-origin</dt>
- <dd>对于同源的请求，会发送完整的URL作为引用地址，但是对于非同源请求仅发送文件的源。</dd>
+ <dd>对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。</dd>
  <dt>same-origin</dt>
  <dd>对于<a href="/en-US/docs/Web/Security/Same-origin_policy">同源的请求</a>会发送引用地址，但是对于非同源请求则不发送引用地址信息。</dd>
  <dt>strict-origin</dt>
- <dd>在同等安全级别的情况下，发送文件的源作为引用地址(HTTPS-&gt;HTTPS)，但是在降级的情况下不会发送 (HTTPS-&gt;HTTP)。</dd>
+ <dd>在同等安全级别的情况下，发送文件的源作为引用地址 (HTTPS-&gt;HTTPS)，但是在降级的情况下不会发送 (HTTPS-&gt;HTTP)。</dd>
  <dt>strict-origin-when-cross-origin</dt>
- <dd>对于同源的请求，会发送完整的URL作为引用地址；在同等安全级别的情况下，发送文件的源作为引用地址(HTTPS-&gt;HTTPS)；在降级的情况下不发送此首部 (HTTPS-&gt;HTTP)。</dd>
+ <dd>对于同源的请求，会发送完整的 URL 作为引用地址；在同等安全级别的情况下，发送文件的源作为引用地址 (HTTPS-&gt;HTTPS)；在降级的情况下不发送此首部 (HTTPS-&gt;HTTP)。</dd>
  <dt>unsafe-url</dt>
  <dd>无论是同源请求还是非同源请求，都发送完整的 URL（移除参数信息之后）作为引用地址。
  <div class="note">这项设置会将受 TLS 安全协议保护的资源的源和路径信息泄露给非安全的源服务器。进行此项设置的时候要慎重考虑。</div>

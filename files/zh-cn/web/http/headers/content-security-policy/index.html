@@ -43,7 +43,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  </dt>
  <dt></dt>
  <dt>{{CSP("connect-src")}}</dt>
- <dd><strong>connect-src：</strong>限制能通过脚本接口加载的URL。</dd>
+ <dd><strong>connect-src：</strong>限制能通过脚本接口加载的 URL。</dd>
  <dt>{{CSP("default-src")}}</dt>
  <dd><strong>default-src：</strong>为其他取指令提供备用服务{{Glossary("Fetch directive", "fetch directives")}}。</dd>
  <dt>{{CSP("font-src")}}</dt>
@@ -61,14 +61,14 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 </dl>
 
 <div class="blockIndicator note">
-<p>被<code>object-src</code>控制的元素可能碰巧被当作遗留HTML元素，导致不支持新标准中的功能（例如<code>&lt;iframe&gt;</code>中的安全属性<code>sandbox</code>和<code>allow</code>）。因此<strong>建议</strong>限制该指令的使用（比如，如果可行，将<code>object-src</code>显式设置为<code>'none'</code>）。</p>
+<p>被<code>object-src</code>控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如<code>&lt;iframe&gt;</code>中的安全属性<code>sandbox</code>和<code>allow</code>）。因此<strong>建议</strong>限制该指令的使用（比如，如果可行，将<code>object-src</code>显式设置为<code>'none'</code>）。</p>
 </div>
 
 <dl>
  <dt>{{CSP("prefetch-src")}} </dt>
  <dd>指定预加载或预渲染的允许源地址。</dd>
  <dt>{{CSP("script-src")}}</dt>
- <dd>限制JavaScript的源地址。</dd>
+ <dd>限制 JavaScript 的源地址。</dd>
  <dt>{{CSP("style-src")}}</dt>
  <dd>限制层叠样式表文件源。</dd>
  <dt>{{CSP("webrtc-src")}} {{experimental_inline}}</dt>
@@ -79,11 +79,11 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <h3 id="文档指令_Document_directives">文档指令 | Document directives</h3>
 
-<p>文档指令管理文档属性或者worker环境应用的策略。</p>
+<p>文档指令管理文档属性或者 worker 环境应用的策略。</p>
 
 <dl>
  <dt>{{CSP("base-uri")}}</dt>
- <dd>限制在DOM中{{HTMLElement("base")}}元素可以使用的URL。</dd>
+ <dd>限制在 DOM 中{{HTMLElement("base")}}元素可以使用的 URL。</dd>
  <dt>{{CSP("plugin-types")}}</dt>
  <dd>通过限制可以加载的资源类型来限制哪些插件可以被嵌入到文档中。</dd>
  <dt>{{CSP("sandbox")}}</dt>
@@ -102,16 +102,16 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dt>{{CSP("frame-ancestors")}}</dt>
  <dd>指定可能嵌入页面的有效父项{{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.</dd>
  <dt>{{CSP("navigation-to")}} {{experimental_inline}}</dt>
- <dd>限制文档可以通过以下任何方式访问URL (a, form, window.location, window.open, etc.)</dd>
+ <dd>限制文档可以通过以下任何方式访问 URL (a, form, window.location, window.open, etc.)</dd>
 </dl>
 
 <h3 id="报告指令">报告指令</h3>
 
-<p>报告指令控制 CSP 违规的报告过程. 更多请看 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 报头.</p>
+<p>报告指令控制 CSP 违规的报告过程。更多请看 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 报头。</p>
 
 <dl>
  <dt>{{CSP("report-uri")}} {{deprecated_inline}}</dt>
- <dd>当出现可能违反CSP的操作时，让客户端提交报告。这些违规报告会以JSON文件的格式通过POST请求发送到指定的URI</dd>
+ <dd>当出现可能违反 CSP 的操作时，让客户端提交报告。这些违规报告会以 JSON 文件的格式通过 POST 请求发送到指定的 URI</dd>
  <dt>{{CSP("report-to")}} {{experimental_inline}}</dt>
  <dd>Fires a <code>SecurityPolicyViolationEvent</code>.</dd>
 </dl>
@@ -120,7 +120,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <dl>
  <dt>{{CSP("block-all-mixed-content")}}</dt>
- <dd>当使用HTTPS加载页面时阻止使用HTTP加载任何资源。</dd>
+ <dd>当使用 HTTPS 加载页面时阻止使用 HTTP 加载任何资源。</dd>
  <dt>{{CSP("referrer")}} {{obsolete_inline}}</dt>
  <dd>用来指定会离开当前页面的跳转链接的 referer header 信息。应该使用 {{HTTPHeader("Referrer-Policy")}} 替代。</dd>
  <dt>{{CSP("require-sri-for")}}</dt>
@@ -131,15 +131,15 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <h2 id="CSP_和_Workers">CSP 和 Workers</h2>
 
-<p><a href="/en-US/docs/Web/API/Worker">Workers</a> 一般来说不被创建他的文档（或者父级Worker）的CSP策略管理。如果要为Worker指定CSP策略，可以为Worker脚本的请求的响应的头部设置CSP策略。 </p>
+<p><a href="/en-US/docs/Web/API/Worker">Workers</a> 一般来说不被创建他的文档（或者父级 Worker）的 CSP 策略管理。如果要为 Worker 指定 CSP 策略，可以为 Worker 脚本的请求的响应的头部设置 CSP 策略。 </p>
 
-<p>例外的情况是，如果Worker脚本的来源是一个全局唯一ID（比如，它的URL是一个结构化的数据或者BLOB）。在这种情况下，这个Worker会继承它所属的文档或者创建它的Worker的CSP策略。</p>
+<p>例外的情况是，如果 Worker 脚本的来源是一个全局唯一 ID（比如，它的 URL 是一个结构化的数据或者 BLOB）。在这种情况下，这个 Worker 会继承它所属的文档或者创建它的 Worker 的 CSP 策略。</p>
 
 <h2 id="多内容安全策略">多内容安全策略</h2>
 
-<p>CSP 允许在一个资源中指定多个策略, 包括通过 <code>Content-Security-Policy</code> 头, 以及 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头，和 {{HTMLElement("meta")}} 组件。</p>
+<p>CSP 允许在一个资源中指定多个策略，包括通过 <code>Content-Security-Policy</code> 头，以及 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头，和 {{HTMLElement("meta")}} 组件。</p>
 
-<p>你可以像以下实例一样多次调用 <code>Content-Security-Policy</code> 头。 特别注意这里的 {{CSP("connect-src")}} 指令。 尽管第二个策略允许连接, 第一个策略仍然包括了 <code>connect-src 'none'</code>。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，<code>connect-src 'none'</code> 强制开启。</p>
+<p>你可以像以下实例一样多次调用 <code>Content-Security-Policy</code> 头。 特别注意这里的 {{CSP("connect-src")}} 指令。 尽管第二个策略允许连接，第一个策略仍然包括了 <code>connect-src 'none'</code>。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，<code>connect-src 'none'</code> 强制开启。</p>
 
 <pre>Content-Security-Policy: default-src 'self' http://example.com;
                          connect-src 'none';
@@ -148,7 +148,7 @@ Content-Security-Policy: connect-src http://example.com/;
 
 <h2 id="示例">示例</h2>
 
-<p>示例: 禁用不安全的内联/动态执行, 只允许通过 https加载这些资源 (images, fonts, scripts, etc.)</p>
+<p>示例：禁用不安全的内联/动态执行，只允许通过 https 加载这些资源 (images, fonts, scripts, etc.)</p>
 
 <pre>// header
 Content-Security-Policy: default-src https:
@@ -157,7 +157,7 @@ Content-Security-Policy: default-src https:
 &lt;meta http-equiv="Content-Security-Policy" content="default-src https:"&gt;
 </pre>
 
-<p>示例: 已经存在的一个网站，用了太多内联代码修复问题，而且想确保资源只从 https 加载，并且禁止插件：</p>
+<p>示例：已经存在的一个网站，用了太多内联代码修复问题，而且想确保资源只从 https 加载，并且禁止插件：</p>
 
 <pre>Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'</pre>
 
@@ -165,7 +165,7 @@ Content-Security-Policy: default-src https:
 
 <pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
-<p>查看 <a href="https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5">Mozilla Web Security Guidelines</a> 上的更多例子.</p>
+<p>查看 <a href="https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5">Mozilla Web Security Guidelines</a> 上的更多例子。</p>
 
 <h2 id="规范">规范</h2>
 
