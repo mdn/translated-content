@@ -17,7 +17,7 @@ translation_of: Web/API/IDBFactory/open
  </li>
  <li>如果已有数据库版本高于给定的 <code>version，中止操作并返回</code>类型为 <code style="font-size: 14px;">VersionError 的</code> <code>DOMError</code> 。</li>
  <li>如果已有数据库版本低于给定的 <code>version，触发一个</code> <code>versionchange</code> 操作。</li>
- <li>如果数据库不存在，创建指定名称的数据库，将版本号设置为给定版本，如果给定版本号，则设置为1，and no object stores.</li>
+ <li>如果数据库不存在，创建指定名称的数据库，将版本号设置为给定版本，如果给定版本号，则设置为 1，and no object stores.</li>
  <li>创建数据库连接。</li>
 </ol>
 <p>如果操作成功执行，将触发 <code>success</code> 事件 on the request object that is returned from this method, with its <code>result</code> attribute set to the new {{domxref("IDBDatabase")}} object for the connection.</p>
