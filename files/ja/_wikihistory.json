@@ -24205,12 +24205,6 @@
       "ethertank"
     ]
   },
-  "Web/API/Window/mozPaintCount": {
-    "modified": "2020-10-15T22:08:53.974Z",
-    "contributors": [
-      "k-kuwahara"
-    ]
-  },
   "Web/API/Window/name": {
     "modified": "2019-03-23T23:50:00.364Z",
     "contributors": [
@@ -48250,6 +48244,12 @@
     "contributors": [
       "Mr.Chenzm",
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Window": {
+    "modified": "2020-10-15T22:08:53.974Z",
+    "contributors": [
+      "k-kuwahara"
     ]
   },
   "conflicting/Web/API/Window/afterprint_event": {

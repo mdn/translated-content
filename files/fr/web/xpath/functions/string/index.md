@@ -12,7 +12,9 @@ La fonction `string` convertit l'argument passé en une chaîne.
 
 ### Syntaxe
 
-    string( [objet] )
+```
+string( [objet] )
+```
 
 ### Arguments
 
