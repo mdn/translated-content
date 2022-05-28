@@ -41,7 +41,7 @@ read()
 
 ### 示例 1 - 简单的例子
 
-这个例子展示了基本的 API 使用，但是不会尝试处理流块的结束的行边界情况。
+这个例子展示了基本的 API 使用方法，但是其不会尝试处理一些复杂的问题，如流中的分块不在行的末尾结束。
 
 在此示例中 `stream` 是一个先前创建的自定义 `ReadableStream`。它使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取。（有关完整代码[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。每个块按顺序读取并作为 UTF-8 字节数组输出到 UI，直到流完成读取，此时我们退出递归函数并将整个流打印到 UI 的另一部分。
 
@@ -74,7 +74,7 @@ function fetchStream() {
 
 ### 示例 2 - 逐行处理文本
 
-这个示例向你展示如何获取一个文本文件并且将以流的形式处理文本行。它不会处理流块的行边界并且将 Uint8Array 转换为字符串。
+这个示例向你展示如何获取一个文本文件并以流的形式处理文本中的每一行。它能够处理分块不在行的末尾结束的情况，并将 Uint8Array 转换为字符串。
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
