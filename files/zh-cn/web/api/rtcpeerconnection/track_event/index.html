@@ -4,7 +4,7 @@ slug: Web/API/RTCPeerConnection/track_event
 translation_of: Web/API/RTCPeerConnection/ontrack
 original_slug: Web/API/RTCPeerConnection/ontrack
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}<code><strong>RTCPeerConnection.ontrack</strong></code> 属性是一个 {{event("Event_handlers", "event handler")}} 此属性指定了在{{domxref("RTCPeerConnection")}}接口上触发 {{event("track")}} 事件时调用的方法。该方法接收一个{{domxref("RTCTrackEvent")}}类型的event对象，该event对象将在{{domxref("MediaStreamTrack")}}被创建时或者是关联到已被添加到接收集合的{{domxref("RTCRtpReceiver")}}对象中时被发送。</p>
+<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}<code><strong>RTCPeerConnection.ontrack</strong></code> 属性是一个 {{event("Event_handlers", "event handler")}} 此属性指定了在{{domxref("RTCPeerConnection")}}接口上触发 {{event("track")}} 事件时调用的方法。该方法接收一个{{domxref("RTCTrackEvent")}}类型的 event 对象，该 event 对象将在{{domxref("MediaStreamTrack")}}被创建时或者是关联到已被添加到接收集合的{{domxref("RTCRtpReceiver")}}对象中时被发送。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -13,7 +13,7 @@ original_slug: Web/API/RTCPeerConnection/ontrack
 
 <h3 id="参数">参数</h3>
 
-<p>将<code>ontrack</code>设置为你提供的一个输入{{domxref("RTCTrackEvent")}}对象用于描述新的track将如何使用的方法。这一信息包含了代表新track的{{domxref("MediaStreamTrack")}}对象、{{domxref("RTCRtpReceiver")}}对象、{{domxref("RTCRtpTransceiver")}}对象以及一个{{domxref("MediaStream")}}对象列表，该对象列表表示该track是那个媒体流的一部分。</p>
+<p>将<code>ontrack</code>设置为你提供的一个输入{{domxref("RTCTrackEvent")}}对象用于描述新的 track 将如何使用的方法。这一信息包含了代表新 track 的{{domxref("MediaStreamTrack")}}对象、{{domxref("RTCRtpReceiver")}}对象、{{domxref("RTCRtpTransceiver")}}对象以及一个{{domxref("MediaStream")}}对象列表，该对象列表表示该 track 是那个媒体流的一部分。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/API/RTCPeerConnection/ontrack
 };
 </pre>
 
-<p>在第一行代码中，我们的<code>ontrack</code> 事件处理器获取传入的第媒体流数组中的第一个，并赋值给video元素的{{htmlattrxref("srcObject", "video")}} 。这样媒体流就和页面中的video元素结合起来以便于呈现给用户。第二行代码简单启用了“挂断”按钮，用户可以使用它去断开呼叫。</p>
+<p>在第一行代码中，我们的<code>ontrack</code> 事件处理器获取传入的第媒体流数组中的第一个，并赋值给 video 元素的{{htmlattrxref("srcObject", "video")}} 。这样媒体流就和页面中的 video 元素结合起来以便于呈现给用户。第二行代码简单启用了“挂断”按钮，用户可以使用它去断开呼叫。</p>
 
 <h2 id="说明">说明</h2>
 
