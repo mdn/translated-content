@@ -12,7 +12,9 @@ La fonction `number` convertit un objet en un nombre et retourne ce nombre.
 
 ### Syntaxe
 
-    number( [objet] )
+```
+number( [objet] )
+```
 
 ### Arguments
 
