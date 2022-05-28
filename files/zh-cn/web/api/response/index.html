@@ -16,7 +16,7 @@ translation_of: Web/API/Response
 
 <p> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <code>Response</code> 接口呈现了对一次请求的响应数据。</p>
 
-<p>你可以使用 {{domxref("Response.Response()")}} 构造函数来创建一个 <code>Response</code> 对象，但通常更可能遇到的情况是，其他的API操作返回了一个 Response 对象。例如一个service worker 的 {{domxref("Fetchevent.respondWith")}}，或者一个简单的 {{domxref("GlobalFetch.fetch()")}}。</p>
+<p>你可以使用 {{domxref("Response.Response()")}} 构造函数来创建一个 <code>Response</code> 对象，但通常更可能遇到的情况是，其他的 API 操作返回了一个 Response 对象。例如一个 service worker 的 {{domxref("Fetchevent.respondWith")}}，或者一个简单的 {{domxref("GlobalFetch.fetch()")}}。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -35,13 +35,13 @@ translation_of: Web/API/Response
  <dt>{{domxref("Response.redirected")}} {{ReadOnlyInline}}</dt>
  <dd>表示该 Response 是否来自一个重定向，如果是的话，它的 URL 列表将会有多个条目。</dd>
  <dt>{{domxref("Response.status")}} {{readonlyinline}}</dt>
- <dd>包含 Response 的状态码 （例如 <code>200</code> 表示成功）。</dd>
+ <dd>包含 Response 的状态码（例如 <code>200</code> 表示成功）。</dd>
  <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
- <dd>包含了与该 Response 状态码一致的状态信息（例如，OK对应 <code>200</code>）。</dd>
+ <dd>包含了与该 Response 状态码一致的状态信息（例如，OK 对应 <code>200</code>）。</dd>
  <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
  <dd>包含 Response 的类型（例如，<code>basic</code>、<code>cors</code>）。</dd>
  <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
- <dd>包含 Response 的URL。</dd>
+ <dd>包含 Response 的 URL。</dd>
  <dt>{{domxref("Response.useFinalURL")}}</dt>
  <dd>包含了一个布尔值，来标示这是否是该 Response 的最终 URL。</dd>
 </dl>
@@ -83,7 +83,7 @@ translation_of: Web/API/Response
 
 <h2 id="示例">示例</h2>
 
-<p>在我们的<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch">基础实例</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">点击运行</a>) 中 , 我们使用了一个简单的函数调用 , 调用了 <code>fetch()</code> 函数来获取一张图片并将其显示在 HTML 的 IMG 标签中 , <code>fetch()</code> 函数返回了一个 Promise，它使用与资源获取操作相关联的 Response 对象进行解析. 你会注意到，由于我们正在请求一张图片，我们需要运行{{domxref("Body.blob")}}（{{domxref("Response")}} 实现了），以为响应提供正确的 MIME 类型。</p>
+<p>在我们的<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch">基础实例</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">点击运行</a>) 中 , 我们使用了一个简单的函数调用 , 调用了 <code>fetch()</code> 函数来获取一张图片并将其显示在 HTML 的 IMG 标签中 , <code>fetch()</code> 函数返回了一个 Promise，它使用与资源获取操作相关联的 Response 对象进行解析。你会注意到，由于我们正在请求一张图片，我们需要运行{{domxref("Body.blob")}}（{{domxref("Response")}} 实现了），以为响应提供正确的 MIME 类型。</p>
 
 <pre class="brush: js">const image = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
