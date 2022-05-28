@@ -8,11 +8,11 @@ tags:
   - Reference
   - Streams
   - read
-translation_of: api/ReadableStreamDefaultReader/read
+translation_of: Web/API/ReadableStreamDefaultReader/read
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供对流内部队列中下一个块的使用权。
+{{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供对流内部队列中下一个分块（以供访问）。
 
 ## 语法
 
@@ -28,8 +28,8 @@ read()
 
 一个 {{jsxref("Promise")}}，兑现/拒绝的结果取决于流的状态。不同的可能性如下:
 
-- 如果一个块可用，则 promise 将使用 `{ value: theChunk, done: false }` 形式的对象来兑现。
-- 如果流关闭，则 promise 将使用 `{ value: undefined, done: true }` 形式的对象来兑现。
+- 如果有分块可用，则 promise 将使用 `{ value: theChunk, done: false }` 形式的对象来兑现。
+- 如果流已经关闭，则 promise 将使用 `{ value: undefined, done: true }` 形式的对象来兑现。
 - 如果流发生错误，promise 将因相关错误被拒绝。
 
 ### 异常
@@ -41,7 +41,7 @@ read()
 
 ### 示例 1 - 简单的例子
 
-这个例子展示了基本的 API 使用，但是不会尝试处理像流块不在边界上结束之类的情况。
+这个例子展示了基本的 API 使用，但是不会尝试处理流块的结束的行边界情况。
 
 在此示例中 `stream` 是一个先前创建的自定义 `ReadableStream`。它使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取。（有关完整代码[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。每个块按顺序读取并作为 UTF-8 字节数组输出到 UI，直到流完成读取，此时我们退出递归函数并将整个流打印到 UI 的另一部分。
 
@@ -74,7 +74,7 @@ function fetchStream() {
 
 ### 示例 2 - 逐行处理文本
 
-这个示例向你展示如何获取一个文本文件并且将它作为文本行流处理。它处理不以行边界结束的流块并且从 Uint8Array 转换为字符串。
+这个示例向你展示如何获取一个文本文件并且将以流的形式处理文本行。它不会处理流块的行边界并且将 Uint8Array 转换为字符串。
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
