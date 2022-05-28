@@ -1,6 +1,6 @@
 ---
 title: Window.mozPaintCount
-slug: Web/API/Window/mozPaintCount
+slug: conflicting/Web/API/Window
 tags:
   - API
   - API:Mozilla Extensions
@@ -12,6 +12,7 @@ tags:
   - Reference
   - Window
 translation_of: Web/API/Window/mozPaintCount
+original_slug: Web/API/Window/mozPaintCount
 ---
 {{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{deprecated_header}}
 
