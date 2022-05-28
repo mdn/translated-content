@@ -11,33 +11,33 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 
 <h2 id="原因">原因</h2>
 
-<pre class="syntaxbox">原因：缺少CORS “Access-Control-Allow-Origin”</pre>
+<pre class="syntaxbox">原因：缺少 CORS “Access-Control-Allow-Origin”</pre>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
 <p>对 {{Glossary("CORS")}} 请求的响应缺少必需的{{HTTPHeader("Access-Control-Allow-Origin")}}头，其用于确定在当前源内操作的资源是否可以访问。</p>
 
 <p>如果服务器在您的控制之下，请将请求站点的源添加到允许访问的域集，方法是将其添加到<code>Access-Control-Allow-Origin</code>头的值。</p>
 
-<p>例如，要允许https://amazing.site上的站点使用CORS访问资源，这个http头应该为：</p>
+<p>例如，要允许 https://amazing.site 上的站点使用 CORS 访问资源，这个 http 头应该为：</p>
 
 <pre>Access-Control-Allow-Origin: https://amazing.site
 </pre>
 
-<p>您还可以使用<code>"*"</code>通配符配置站点使得允许任何站点访问它。您应该只将它用于公共的API。私有API永远不应使用<code>"*"</code>，而应设置特定的一个域或一些域。此外，通配符仅适用于将{{htmlattrxref("crossorigin")}} 属性设置为<code>"anonymous"</code>的请求。</p>
+<p>您还可以使用<code>"*"</code>通配符配置站点使得允许任何站点访问它。您应该只将它用于公共的 API。私有 API 永远不应使用<code>"*"</code>，而应设置特定的一个域或一些域。此外，通配符仅适用于将{{htmlattrxref("crossorigin")}} 属性设置为<code>"anonymous"</code>的请求。</p>
 
 <pre>Access-Control-Allow-Origin: *</pre>
 
 <div class="warning">
-<p><strong>警告:</strong> 使用通配符允许所有站点访问私有API是显而易见的坏主意。</p>
+<p><strong>警告：</strong> 使用通配符允许所有站点访问私有 API 是显而易见的坏主意。</p>
 </div>
 
-<p>例如，在Apache服务器中，将下面一行添加到服务器的配置中（在相应的&lt;Directory&gt;，&lt;Location&gt;，&lt;Files&gt;或&lt;VirtualHost&gt;部分中）。 配置通常位于.conf文件中（httpd.conf和apache.conf是这些文件的通用名称），或者位于<code>.htaccess</code>文件中。</p>
+<p>例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的&lt;Directory&gt;，&lt;Location&gt;，&lt;Files&gt;或&lt;VirtualHost&gt;部分中）。 配置通常位于.conf 文件中（httpd.conf 和 apache.conf 是这些文件的通用名称），或者位于<code>.htaccess</code>文件中。</p>
 
 <pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'
 </pre>
 
-<p>对于Nginx，设置此http头的命令是：</p>
+<p>对于 Nginx，设置此 http 头的命令是：</p>
 
 <pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'
 </pre>
