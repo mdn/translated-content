@@ -12,9 +12,9 @@ translation_of: api/ReadableStreamDefaultReader/releaseLock
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} 接口的 **`releaseLock()`** 方法,该方法释放 reader 对流的锁定。
+{{domxref("ReadableStreamDefaultReader")}} 接口的 **`releaseLock()`** 方法，该方法释放 reader 对流的锁定。
 
-如果释放锁时关联流出错，reader 随后会以同样的方式发生错误;此外，reader 将关闭。
+如果释放锁时关联流出错，reader 随后会以同样的方式发生错误；此外，reader 将关闭。
 
 reader 的锁在仍有待处理的读取请求时无法释放，即，如果 reader 的 {{domxref("ReadableStreamDefaultReader.read()")}} 方法返回的 promise 尚未完成，这将导致抛出 `TypeError`。
 
