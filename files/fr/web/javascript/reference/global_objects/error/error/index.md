@@ -8,7 +8,7 @@ browser-compat: javascript.builtins.Error.Error
 
 Le constructeur **`Error`** permet de créer un objet représentant une erreur.
 
-## Syntax
+## Syntaxe
 
 ```js
 new Error()
@@ -27,9 +27,9 @@ new Error(message, nomFichier, numeroLigne)
 
     - `cause` {{Optional_Inline}}
       - : Une propriété qui indique la cause spécifique de l'erreur. Lors de l'interception puis du renvoi d'une erreur avec un autre message d'erreur, cette propriété devrait être utilisée afin de transmettre le message d'erreur original.
-- `nomFichier` {{Optional_Inline}}{{Non-standard_inline}}
+- `nomFichier` {{Optional_Inline}} {{Non-standard_inline}}
   - : La valeur de la propriété `nomFichier` pour l'objet `Error` créé. Par défaut, il s'agit du nom du fichier contenant le code qui a invoqué le constructeur `Error()`.
-- `numeroLigne` {{Optional_Inline}}{{Non-standard_inline}}
+- `numeroLigne` {{Optional_Inline}} {{Non-standard_inline}}
   - : La valeur de la propriété `numeroLigne` pour l'objet `Error` créé. Par défaut, il s'agit du numéro de ligne du fichier contenant l'appel au constructeur `Error()`.
 
 ## Exemples
