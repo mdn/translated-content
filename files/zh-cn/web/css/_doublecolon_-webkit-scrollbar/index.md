@@ -18,7 +18,7 @@ translation_of: 'Web/CSS/::-webkit-scrollbar'
 
 > **备注：** 如果没有设置 `overflow:scroll;`，元素的滚动条将不会显示。
 
-> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如, Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其它基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
+> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如，Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及 [其它基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於 WebKit 排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
 
 ## CSS 滚动条选择器
 
@@ -131,6 +131,6 @@ Who thought scrollbars could be made weeeeird?
 
 ## 参见
 
-- WebKit 论坛[设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
+- WebKit 论坛 [设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
