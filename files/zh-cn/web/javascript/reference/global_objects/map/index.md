@@ -23,9 +23,9 @@ browser-compat: javascript.builtins.Map
 
 ### 键的相等
 
-- 键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法。
+- 键的比较基于 [零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等) 算法。
 - {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其它的值是根据 `===` 运算符的结果判断是否相等。
-- 在目前的 ECMAScript 规范中，`-0` 和 `+0` 被认为是相等的，尽管这在早期的草案中并不是这样。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的“Value equality for -0 and 0”。
+- 在目前的 ECMAScript 规范中，`-0` 和 `+0` 被认为是相等的，尽管这在早期的草案中并不是这样。有关详细信息，请参阅 [浏览器兼容性](#浏览器兼容性) 表中的“Value equality for -0 and 0”。
 
 ### Objects 和 maps 的比较
 
@@ -46,7 +46,7 @@ browser-compat: javascript.builtins.Map
       <th scope="row">意外的键</th>
       <td><code>Map</code> 默认情况不包含任何键。只包含显式插入的键。</td>
       <td>
-        <p>一个 <code>Object</code> 有一个原型, 原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
+        <p>一个 <code>Object</code> 有一个原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
         <div class="notecard note">
           <p><strong>备注：</strong>虽然从 ES5 开始可以用 {{jsxref("Object.create", "Object.create(null)")}} 来创建一个没有原型的对象，但是这种用法不太常见。</p>
         </div>
@@ -229,20 +229,20 @@ const keyFunc = function() {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
-myMap.set(keyObj, "和键keyObj关联的值");
-myMap.set(keyFunc, "和键keyFunc关联的值");
+myMap.set(keyObj, "和键 keyObj 关联的值");
+myMap.set(keyFunc, "和键 keyFunc 关联的值");
 
 myMap.size; // 3
 
 // 读取值
 myMap.get(keyString);    // "和键'a string'关联的值"
-myMap.get(keyObj);       // "和键keyObj关联的值"
-myMap.get(keyFunc);      // "和键keyFunc关联的值"
+myMap.get(keyObj);       // "和键 keyObj 关联的值"
+myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
 
 myMap.get('a string');   // "和键'a string'关联的值"
-                         // 因为keyString === 'a string'
-myMap.get({});           // undefined, 因为keyObj !== {}
-myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}
+                         // 因为 keyString === 'a string'
+myMap.get({});           // undefined，因为 keyObj !== {}
+myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
 ```
 
 ### 将 NaN 作为 Map 的键

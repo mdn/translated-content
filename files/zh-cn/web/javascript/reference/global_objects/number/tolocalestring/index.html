@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 <h3 id="参数">参数</h3>
 
-<p>查阅<a href="#Browser_Compatibility">浏览器兼容性</a>部分，了解哪些浏览器支持 <code>locales</code> 和 <code>options</code> 参数，通过<a href="#Checking_for_support_for_locales_and_options_arguments">示例: 检查 <code>locales</code> 和 <code>options</code> 参数的支持</a>了解特征检测。</p>
+<p>查阅<a href="#Browser_Compatibility">浏览器兼容性</a>部分，了解哪些浏览器支持 <code>locales</code> 和 <code>options</code> 参数，通过<a href="#Checking_for_support_for_locales_and_options_arguments">示例：检查 <code>locales</code> 和 <code>options</code> 参数的支持</a>了解特征检测。</p>
 
 <div class="note">
 <p><strong>备注：</strong> ECMAScript 国际化 API，在 Firefox 29 中得以实施，增加了 <code>locales</code> 参数的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString"><code>Number.toLocaleString</code></a> 方法。如果参数为 <code>undefined</code>，此方法返回本地操作系统指定的位数，而 Firefox 的早期版本中返回<a href="https://en.wikipedia.org/wiki/Arabic_numerals">阿拉伯语</a>数字。这一变化已被报告为向后影响的兼容性问题并可能会被尽快修复。({{ bug(999003) }})</p>
@@ -90,7 +90,7 @@ console.log(number.toLocaleString('en-IN'));
 
 // nu 扩展字段要求编号系统，e.g. 中文十进制
 console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
-// → 一二三,四五六.七八九
+// → 一二三，四五六。七八九
 
 // 当请求不支持的语言时，例如巴厘语，加入一个备用语言，比如印尼语
 console.log(number.toLocaleString(['ban', 'id']));
