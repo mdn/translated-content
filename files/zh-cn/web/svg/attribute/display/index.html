@@ -41,7 +41,7 @@ translation_of: Web/SVG/Attribute/display
 
 <p>The <code>display</code> attribute only affects the direct rendering of a given element, whereas it does not prevent elements from being referenced by other elements. For example, setting it to <code>none</code> on a {{SVGElement("path")}} element will prevent that element from getting rendered directly onto the canvas, but the {{SVGElement("path")}} element can still be referenced by a {{SVGElement("textPath")}} element; furthermore, its geometry will be used in text-on-a-path processing even if the {{SVGElement("path")}} has a <code>display</code> value of <code>none</code>.</p>
 
-<p><code>display</code>属性只影响能被直接渲染的元素，尽管它不能防止该元素被其他元素参考。例如：将{SVGElement("path")}}元素设为none，会使得该元素不会被直接渲染到canvas上，但是{{SVGElement("textPath")}}元素依旧会参考{{SVGElement("path")}}。此外，即便{SVGElement("path")}}的<code>display</code>为<code>none</code>，它的形状在处理路径上的文本时仍然会被用到。</p>
+<p><code>display</code>属性只影响能被直接渲染的元素，尽管它不能防止该元素被其他元素参考。例如：将{SVGElement("path")}}元素设为 none，会使得该元素不会被直接渲染到 canvas 上，但是{{SVGElement("textPath")}}元素依旧会参考{{SVGElement("path")}}。此外，即便{SVGElement("path")}}的<code>display</code>为<code>none</code>，它的形状在处理路径上的文本时仍然会被用到。</p>
 
 <p>This attribute also affects direct rendering into offscreen canvases, such as occurs with masks or clip paths. Thus, setting <code>display="none"</code> on a child of a {{SVGElement("mask")}} will prevent the given child element from being rendered as part of the mask. Similarly, setting <code>display="none"</code> on a child of a {{SVGElement("clipPath")}} element will prevent the given child element from contributing to the clipping path.</p>
 
