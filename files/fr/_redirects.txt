@@ -3942,6 +3942,7 @@
 /fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
+/fr/docs/Web/API/Window/mozPaintCount	/fr/docs/conflicting/Web/API/Window
 /fr/docs/Web/API/Window/onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
 /fr/docs/Web/API/WindowBase64	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64

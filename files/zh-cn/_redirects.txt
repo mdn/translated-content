@@ -1702,6 +1702,7 @@
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
+/zh-CN/docs/Web/API/Window/mozPaintCount	/zh-CN/docs/conflicting/Web/API/Window_6e431ebabeaed587e8dfd0ccc4543b75
 /zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event
 /zh-CN/docs/Web/API/Window/onbeforeinstallprompt	/zh-CN/docs/Web/API/Window/beforeinstallprompt_event
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
