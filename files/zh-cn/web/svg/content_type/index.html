@@ -11,7 +11,7 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;angle&gt;</dt>
  <dd>
- <p>可以用两种办法指定角度。如果用在样式表的属性的值中，<code>&lt;angle&gt;</code>可以用如下方法定义：</p>
+ <p>可以用两种办法指定角度。如果用在样式表的属性的值中，<code>&lt;angle&gt;</code> 可以用如下方法定义：</p>
 
  <pre>angle ::= number (~"deg" | ~"grad" | ~"rad")?</pre>
 
@@ -25,7 +25,7 @@ translation_of: Web/SVG/Content_type
 
  <p>在这个&lt;angle&gt;值中，单位标识符必须是小写的。</p>
 
- <p>在 SVG DOM 中，&lt;angle&gt;值使用{{domxref("SVGAngle")}}或{{domxref("SVGAnimatedAngle objects")}}表达。</p>
+ <p>在 SVG DOM 中，&lt;angle&gt; 值使用{{domxref("SVGAngle")}}或{{domxref("SVGAnimatedAngle objects")}}表达。</p>
  </dd>
 </dl>
 
@@ -34,7 +34,7 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;anything&gt;</dt>
  <dd>
- <p>基本类型&lt;anything&gt;是一个零字符或多字符的序列。具体如下：</p>
+ <p>基本类型 &lt;anything&gt; 是一个零字符或多字符的序列。具体如下：</p>
 
  <pre>anything ::= Char*</pre>
 
@@ -63,7 +63,7 @@ Timecount         ::= DIGIT+
 DIGIT             ::= [0-9]
 </pre>
 
- <p>对于<code>Timecount</code>值，默认的公制前缀是“s”（秒）。在时钟值中不能嵌入空白，而且前导和末尾的空白字符会被忽略掉。</p>
+ <p>对于<code>Timecount</code>值，默认的公制前缀是 “s”（秒）。在时钟值中不能嵌入空白，而且前导和末尾的空白字符会被忽略掉。</p>
 
  <p>下面是合法的时钟值的示例：</p>
 
@@ -94,15 +94,15 @@ DIGIT             ::= [0-9]
 <dl>
  <dt>&lt;color&gt;</dt>
  <dd>
- <p>基本类型&lt;color&gt;是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。&lt;color&gt;应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt;还提供了可选的基于 ICC 的颜色规范。</p>
+ <p>基本类型&lt;color&gt;是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。&lt;color&gt; 应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt; 还提供了可选的基于 ICC 的颜色规范。</p>
 
- <p>SVG 支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2 句法和基本数据类型</a>中的&lt;color&gt;供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的&lt;color&gt;句法（取决于编译器）。</p>
+ <p>SVG 支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2 句法和基本数据类型</a>中的 &lt;color&gt; 供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的 &lt;color&gt; 句法（取决于编译器）。</p>
 
- <p>一个&lt;color&gt;可以是一个关键词，或者一个数字化的 RGB 规范。</p>
+ <p>一个&lt;color&gt; 可以是一个关键词，或者一个数字化的 RGB 规范。</p>
 
  <p>除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。 这些关键词的规范定义可以在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">用户对颜色的引用</a>（CSS2 规范第 18.2 节）中找到。</p>
 
- <p>一个 16 进制记号法的 RGB 值的格式是一个“#”后面紧跟着 3 个或者 6 个 16 进制字符。三数字 RGB 记号法（#rgb）可以转换成六数字 RGB 格式（#rrggbb），只需要复制数字，而不是添加 0。举个例子，#fb0 扩展为#ffbb00。这样确保白色（#ffffff）可以用缩写记法#fff 指定，去掉任何对显示器的色深的依赖。一个函数记号法的 RGB 值的格式是一个 RGB 开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号“)”。一个 RGB 开头函数是一个大小写不敏感的字符串“rgb(”，举个例子，“RGB(”或者“rGb(”。为了兼容性，建议使用全小写形式“rgb(”。整型值 255 对应于 100%，也对应于 16 进制计号法中的 F 或 FF：<code>rgb(255,255,255)</code> = <code>rgb(100%,100%,100%)</code> = <code>#FFF。数字值周围允许存在空白字符。所有的 RGB 值都指定在 sRGB 颜色空间里。使用 sRGB 提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。</code></p>
+ <p>一个 16 进制记号法的 RGB 值的格式是一个 “#” 后面紧跟着 3 个或者 6 个 16 进制字符。三数字 RGB 记号法（#rgb）可以转换成六数字 RGB 格式（#rrggbb），只需要复制数字，而不是添加 0。举个例子，#fb0 扩展为 #ffbb00。这样确保白色（#ffffff）可以用缩写记法 #fff 指定，去掉任何对显示器的色深的依赖。一个函数记号法的 RGB 值的格式是一个 RGB 开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号 “)”。一个 RGB 开头函数是一个大小写不敏感的字符串 “rgb(”，举个例子，“RGB(” 或者 “rGb(”。为了兼容性，建议使用全小写形式 “rgb(”。整型值 255 对应于 100%，也对应于 16 进制计号法中的 F 或 FF：<code>rgb(255,255,255)</code> = <code>rgb(100%,100%,100%)</code> = <code>#FFF。数字值周围允许存在空白字符。所有的 RGB 值都指定在 sRGB 颜色空间里。使用 sRGB 提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。</code></p>
 
  <pre>color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
              | "rgb("integer, integer, integer")"
@@ -113,7 +113,7 @@ hexdigit ::= [0-9A-Fa-f]
 
  <p>在这里，color-keyword 要于匹配列于<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的颜色关键词（大小写不敏感）中的一个，要么匹配列于<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">对颜色的用户参考</a>中的一个。</p>
 
- <p>SVG DOM 对&lt;color&gt;的定义，CSS 中也做了同样的定义。SVG 对颜色的扩展，包括指定基于 ICC 的颜色的能力，可以使用 DOM 接口{{domxref("SVGColor")}}来表现。</p>
+ <p>SVG DOM 对 &lt;color&gt; 的定义，CSS 中也做了同样的定义。SVG 对颜色的扩展，包括指定基于 ICC 的颜色的能力，可以使用 DOM 接口{{domxref("SVGColor")}}来表现。</p>
  </dd>
 </dl>
 
@@ -122,7 +122,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;coordinate&gt;</dt>
  <dd>
- <p>一个&lt;coordinate&gt;是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与<a href="/en-US/docs/SVG/Content_type#length" title="https://developer.mozilla.org/en/SVG/Content_type#length">&lt;length&gt;</a>相同。</p>
+ <p>一个&lt;coordinate&gt; 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与<a href="/en-US/docs/SVG/Content_type#length" title="https://developer.mozilla.org/en/SVG/Content_type#length">&lt;length&gt;</a>相同。</p>
 
  <p>在 SVG DOM 内部，一个 &lt;coordinate&gt; 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.</p>
  </dd>
@@ -170,15 +170,15 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;integer&gt;</dt>
  <dd>
- <p>用一个可选的正负符号（“+”或“-”）后面跟着一个或多个 0 到 9 的数字可以指定一个&lt;integer&gt;：</p>
+ <p>用一个可选的正负符号（“+” 或 “-”）后面跟着一个或多个 0 到 9 的数字可以指定一个&lt;integer&gt;：</p>
 
  <pre>integer ::= [+-]? [0-9]+</pre>
 
  <p>如果正负符号不出现，则这个数字是非负的。</p>
 
- <p>除非是另有声明为特殊的属性，&lt;integer&gt;的范围是-2147483648 到 2147483647 之间。</p>
+ <p>除非是另有声明为特殊的属性，&lt;integer&gt; 的范围是 -2147483648 到 2147483647 之间。</p>
 
- <p>在 SVG DOM 内部，一个&lt;integer&gt;代表了一个数字或者一个{{domxref("SVGAnimatedInteger")}}。</p>
+ <p>在 SVG DOM 内部，一个 &lt;integer&gt; 代表了一个数字或者一个{{domxref("SVGAnimatedInteger")}}。</p>
  </dd>
 </dl>
 
@@ -276,7 +276,7 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>
  <p>一个命名，是一个字符串，是不符合句法意义的少量的字符。</p>
 
- <pre>name  ::= [^,()#x20#x9#xD#xA] /* 除了",", "(", ")" 或 wsp 之外的任何字符 */</pre>
+ <pre>name  ::= [^,()#x20#x9#xD#xA] /* 除了 ",", "(", ")" 或 wsp 之外的任何字符 */</pre>
  </dd>
 </dl>
 
@@ -285,17 +285,17 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;number&gt;</dt>
  <dd>
- <p>真实数字可以用两种方法指定。如果用在样式表中，一个&lt;number&gt;可以如下定义：</p>
+ <p>真实数字可以用两种方法指定。如果用在样式表中，一个 &lt;number&gt; 可以如下定义：</p>
 
  <pre>number ::= integer | [+-]? [0-9]* "." [0-9]+</pre>
 
  <p>该句法与 CSS（CSS2 第 4.3.1 章节）中的定义一样。</p>
 
- <p>如果用在一个 SVG 属性中，一个&lt;number&gt;可以用别的方法定义，允许一个数字后面跟着大数指数，以指定得更精确：</p>
+ <p>如果用在一个 SVG 属性中，一个 &lt;number&gt; 可以用别的方法定义，允许一个数字后面跟着大数指数，以指定得更精确：</p>
 
  <pre>number ::= integer ([Ee] integer)?| [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?</pre>
 
- <p>在 SVG DOM 内部，一个&lt;number&gt;可以用浮点数、{{domxref("SVGNumber")}}对象或者{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
+ <p>在 SVG DOM 内部，一个 &lt;number&gt; 可以用浮点数、{{domxref("SVGNumber")}}对象或者{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
  </dd>
 </dl>
 
@@ -304,11 +304,11 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;number-optional-number&gt;</dt>
  <dd>
- <p>一对&lt;number&gt;，其中第二个&lt;number&gt;是可视情况取舍的。</p>
+ <p>一对&lt;number&gt;，其中第二个 &lt;number&gt; 是可视情况取舍的。</p>
 
  <pre>number-optional-number ::= number | number, number</pre>
 
- <p>在 SVG DOM 中，一个&lt;number-optional-number&gt;可以用一对{{domxref("SVGAnimatedInteger")}}对象或者一对{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
+ <p>在 SVG DOM 中，一个 &lt;number-optional-number&gt; 可以用一对{{domxref("SVGAnimatedInteger")}}对象或者一对{{domxref("SVGAnimatedNumber")}}对象来表达。</p>
  </dd>
 </dl>
 
@@ -326,7 +326,7 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>
  <p>属性{{SVGAttr("fill")}}和属性{{SVGAttr("stroke")}}的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG 规范的<a href="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint">Specifying paint</a>章节中描述了&lt;paint&gt;可用的选项以及句法。</p>
 
- <p>在 SVG DOM 内部，&lt;paint&gt;值用{{domxref("SVGPaint")}}对象表达。</p>
+ <p>在 SVG DOM 内部，&lt;paint&gt; 值用{{domxref("SVGPaint")}}对象表达。</p>
  </dd>
 </dl>
 
@@ -339,11 +339,11 @@ hexdigit ::= [0-9A-Fa-f]
 
  <pre>percentage ::= number "%"</pre>
 
- <p>注意&lt;number&gt;的意义取决于百分数是在一个样式表中指定的，还是在一个 SVG 属性非外观属性中指定的。</p>
+ <p>注意&lt;number&gt; 的意义取决于百分数是在一个样式表中指定的，还是在一个 SVG 属性非外观属性中指定的。</p>
 
  <p>百分数值总是关联到另一个值。举个例子，每种允许百分比的属性同时定义了引用了给百分比数参考的距离测量。</p>
 
- <p>在 SVG DOM 内部，&lt;percentage&gt;用{{domxref("SVGNumber")}}对象或{{domxref("SVGAnimatedNumber")}}对象表达。</p>
+ <p>在 SVG DOM 内部，&lt;percentage&gt; 用{{domxref("SVGNumber")}}对象或{{domxref("SVGAnimatedNumber")}}对象表达。</p>
  </dd>
 </dl>
 
@@ -352,7 +352,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;time&gt;</dt>
  <dd>
- <p>一个时间值是一个&lt;number&gt;后面紧跟着时间单位标识符。时间单位标识符可以是：</p>
+ <p>一个时间值是一个 &lt;number&gt; 后面紧跟着时间单位标识符。时间单位标识符可以是：</p>
 
  <ul>
   <li>ms：毫秒</li>
@@ -366,8 +366,8 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;transform-list&gt;</dt>
  <dd>
- <p>一个&lt;transform-list&gt;是用来指定一个坐标系统转换数列。属性{{SVGAttr("transform")}}的定义中给出了&lt;transform-list&gt;的可用值的详细描述。</p>
+ <p>一个&lt;transform-list&gt; 是用来指定一个坐标系统转换数列。属性{{SVGAttr("transform")}}的定义中给出了 &lt;transform-list&gt; 的可用值的详细描述。</p>
 
- <p>在 SVG DOM 内部，一个&lt;transform-list&gt;值是用了一个{{domxref("SVGTransformList")}}对象或者{{domxref("SVGAnimatedTransformList")}}对象来表达的。</p>
+ <p>在 SVG DOM 内部，一个 &lt;transform-list&gt; 值是用了一个{{domxref("SVGTransformList")}}对象或者{{domxref("SVGAnimatedTransformList")}}对象来表达的。</p>
  </dd>
 </dl>
