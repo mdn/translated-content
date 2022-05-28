@@ -9,7 +9,7 @@ translation_of: Web/API/Document/visibilitychange_event
 ---
 <p>{{APIRef}}</p>
 
-<p>当其选项卡的内容变得可见或被隐藏时，会在文档上触发 <code>visibilitychange</code> (能见度更改)事件。</p>
+<p>当其选项卡的内容变得可见或被隐藏时，会在文档上触发 <code>visibilitychange</code> (能见度更改) 事件。</p>
 
 <h2 id="概述">概述</h2>
 
@@ -33,11 +33,11 @@ translation_of: Web/API/Document/visibilitychange_event
 <p>该事件不包括文档的更新的可见性状态，但是您可以从文档的  {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。</p>
 
 <div class="blockIndicator warning">
-<p>当 visibleStateState 属性的值转换为 <code>hidden </code>时，Safari不会按预期触发<code>visibilitychange</code>； 因此，在这种情况下，您还需要包含代码以侦听 <code><a href="/zh-CN/docs/Web/API/Window/pagehide_event">pagehide</a></code> 事件。</p>
+<p>当 visibleStateState 属性的值转换为 <code>hidden </code>时，Safari 不会按预期触发<code>visibilitychange</code>； 因此，在这种情况下，您还需要包含代码以侦听 <code><a href="/zh-CN/docs/Web/API/Window/pagehide_event">pagehide</a></code> 事件。</p>
 </div>
 
 <div class="blockIndicator warning">
-<p>出于兼容性原因，请确保使用  <code>document.addEventListener </code>而不是<code>window.addEventListener</code>来注册回调。 Safari &lt;14.0仅支持前者。</p>
+<p>出于兼容性原因，请确保使用  <code>document.addEventListener </code>而不是<code>window.addEventListener</code>来注册回调。 Safari &lt;14.0 仅支持前者。</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -119,6 +119,6 @@ translation_of: Web/API/Document/visibilitychange_event
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/DOM/Using_the_Page_Visibility_API" title="DOM/Using_the_Page_Visibility_API">使用页面可见性API</a></li>
+ <li><a href="/zh-CN/docs/DOM/Using_the_Page_Visibility_API" title="DOM/Using_the_Page_Visibility_API">使用页面可见性 API</a></li>
  <li>{{domxref("Document.visibilityState")}}</li>
 </ul>
