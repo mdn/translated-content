@@ -1,5 +1,5 @@
 ---
-title: 使用aria-hidden属性
+title: 使用 aria-hidden 属性
 slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 tags:
   - HTML
@@ -10,9 +10,9 @@ tags:
   - 客户端
   - 警告
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性
+original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ---
-<p>本文用来说明如何使用aria-hidden属性。aria-hidden属性可以用来控制一系列可访问API中的非交互内容的显示或隐藏。</p>
+<p>本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -36,7 +36,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性
 
 <h3 id="比较_aria-hiddentrue，_rolepresentation_和_rolenone">比较 <code>aria-hidden="true"</code>， <code>role="presentation" 和 </code><code>role="none"</code></h3>
 
-<p>表面上，<code>aria-hidden="true"</code>，<code>role="presentation"</code>，和<code>role="none"</code> 很相似，因为这三者都有以下特性:</p>
+<p>表面上，<code>aria-hidden="true"</code>，<code>role="presentation"</code>，和<code>role="none"</code> 很相似，因为这三者都有以下特性：</p>
 
 <ul>
  <li>根据辅助即使隐藏页面内容</li>
@@ -47,7 +47,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性
 <p dir="ltr">尽管有上面这些相同点，但是各个属性的意图是不同的。</p>
 
 <ul dir="ltr">
- <li><code>aria-hidden="true"</code> 会把整个元素从可访问性API中移除</li>
+ <li><code>aria-hidden="true"</code> 会把整个元素从可访问性 API 中移除</li>
  <li><code>role="presentation"</code> 和<code>role="none"</code> 会将元素从语义上移除，仍然会将元素暴露给辅助技术。</li>
 </ul>
 
@@ -57,11 +57,11 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性
 
 <dl>
  <dt><code>false</code></dt>
- <dd>（默认）元素会暴露给可访问性API。</dd>
+ <dd>（默认）元素会暴露给可访问性 API。</dd>
  <dt><code>true</code></dt>
- <dd>元素不会暴露给可访问性API。</dd>
+ <dd>元素不会暴露给可访问性 API。</dd>
  <dt><code>undefined</code></dt>
- <dd>（默认）客户端决定元素是否暴露给可访问性API。</dd>
+ <dd>（默认）客户端决定元素是否暴露给可访问性 API。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -73,10 +73,10 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性
 
 <h2 id="最佳实践">最佳实践</h2>
 
-<p> <code>aria-hidden="true"</code> 在以下场景不应该被使用:</p>
+<p> <code>aria-hidden="true"</code> 在以下场景不应该被使用：</p>
 
 <ul>
- <li>HTML的<code>hidden</code>属性被设置了</li>
+ <li>HTML 的<code>hidden</code>属性被设置了</li>
  <li>祖先元素被<code>display: none</code>属性设置成不显示状态</li>
  <li>祖先元素被<code>visibility: hidden</code>属性设置成不显示状态</li>
 </ul>
