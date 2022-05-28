@@ -45,7 +45,7 @@ autoplay를 비활성화시킬 때 autoplay="false"는 동작하지 않습니다
   <dt>anonymous</dt>
   <dd>CORS(<code>Origin:</code> HTTP 헤더 사용)를 수행 합니다. 하지만 credential가 전송되지 않습니다. (즉, cookie, X.509 certificate, HTTP 기본 인증이 전송되지 않습니다). 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, <code>Access-Control-Allow-Origin:</code> HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.</dd>
   <dt>use-credentials</dt>
-  <dd>credential을 포함한 CORS를 (<code>Origin:</code> HTTP 헤더 사용) 수행 합니다. (즉, cookie, certificate, HTTP 기본 인증이 수행됩니다.) 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, <code>Access-Control-Allow-Origin:</code> HTTP 헤더를 설정하지 않음으로써), 이미지가 <em>오염</em>되고 사용이 제한됩니다.</dd>
+  <dd>credential을 포함한 CORS를 (<code>Origin:</code> HTTP 헤더 사용) 수행 합니다. (즉, cookie, certificate, HTTP 기본 인증이 수행됩니다.) 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, <code>Access-Control-Allow-Origin:</code> HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.</dd>
  </dl>
  crossorigin이 존재하지 않는 경우, CORS 요청 없이 (즉, <code>Origin:</code> HTTP 헤더를 사용 보내지 않고), 리소스를 가져와 {{HTMLElement('canvas')}} 요소에 오염되는 것을 방지합니다. 값을 설정하지 않을 경우 <strong>anonymous</strong>가 사용 됩니다. 추가 정보는 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS settings attributes</a> 를 참조하십시오.
  <dt>{{htmlattrdef("height")}}</dt>
