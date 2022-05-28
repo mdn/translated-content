@@ -50,8 +50,8 @@ function fetchStream() {
   // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
     // 结果包含两个属性:
-    // done  - 如果为 true，表示流已经返回所有的数据.
-    // value - 一些数据，当 done 为 true，始终为 undefined.
+    // done  - 如果为 true，表示流已经返回所有的数据。
+    // value - 一些数据，done 为 true 时，其值始终为 undefined。
     if (done) {
       console.log("Stream complete");
       para.textContent = result;
