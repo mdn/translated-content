@@ -64,7 +64,7 @@ function fetchStream() {
     listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
     list2.appendChild(listItem);
     result += chunk;
-    // 再次调用该函数调用更多数据
+    // 再次调用该函数以读取更多数据
     return reader.read().then(processText);
   });
 }
