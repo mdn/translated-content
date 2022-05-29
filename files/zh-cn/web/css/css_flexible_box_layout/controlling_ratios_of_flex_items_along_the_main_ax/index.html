@@ -164,7 +164,7 @@ translation_of: >-
 
 <p>第二个原因是在negative free space消除期间flexbox会阻止小的flex子元素缩小到0. 这些flex子元素会以<code>min-content</code>的大小进行铺设  —这个大小是它们利用任何可以利用的自动断行机会后所变成的.</p>
 
-<p>在下面的例子中，在 <code>flex-basis</code> 解析为内容大小的位置你会看到 <code>min-content</code> 的铺设,. 如果你改变flex容器的宽度 — 比如增加到700px 宽 — 再减少flex子元素的宽度, 你会看到前两个flex子元素 将换行, 但是它们绝不会小于<code>min-content</code>的大小. 随着盒子变得越来越小，空间随后从第三个flex子元素 中移除.</p>
+<p>在下面的例子中，在 <code>flex-basis</code> 解析为内容大小的位置你会看到 <code>min-content</code> 的铺设。如果你改变 flex 容器的宽度——比如增加到 700px 宽，再减少 flex 子元素的宽度，你会看到前两个 flex 子元素将换行，但是它们绝不会小于 <code>min-content</code> 的大小。随着盒子变得越来越小，第三个 flex 子元素随后从空间中溢出。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}</p>
 
