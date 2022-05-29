@@ -17,7 +17,7 @@ translation_of: >-
    <th scope="row">先决条件：</th>
    <td>
     <p>熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</ a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解 <a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools /Command_line">终端/命令行</a>。</p>
-    <p>Vue 组件被编写为管理应用程序数据的 JavaScript 对象和映射到底层 DOM 结构的基于 HTML 的模板语法的组合。 对于安装，以及使用 Vue 的一些更高级的功能（如单文件组件或渲染功能），您需要一个安装了 node + npm 的终端。</p>
+    <p>Vue 组件被编写为管理应用程序数据的 JavaScript 对象和映射到底层 DOM 结构的基于 HTML 的模板语法的组合。 对于安装，以及使用 Vue 的一些更高级的功能（如单文件组件或渲染功能），你需要一个安装了 node + npm 的终端。</p>
     </td>
   </tr>
   <tr>
@@ -172,7 +172,7 @@ translation_of: >-
 };</pre>
  </li>
  <li>
-  <p>我们现在需要一些方法将 <code>new-todo-input</code> <code>&lt;input&gt;</code> 字段的值附加到 <code>label</code> 字段。Vue 对此有一个特殊的指令：<code><a href="https://vuejs.org/v2/api/#v-model">v-model</a></code>。<code>v-model</code> 绑定到您在其上设置的数据属性，并使其与 <code>&lt;input&gt;</code> 保持同步。<code>v-model</code> 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 <code>v-model</code>，你需要向 <code>&lt;input&gt;</code> 添加一个结构为 <code>v-model="variable"</code> 的属性。<p>
+  <p>我们现在需要一些方法将 <code>new-todo-input</code> <code>&lt;input&gt;</code> 字段的值附加到 <code>label</code> 字段。Vue 对此有一个特殊的指令：<code><a href="https://vuejs.org/v2/api/#v-model">v-model</a></code>。<code>v-model</code> 绑定到你在其上设置的数据属性，并使其与 <code>&lt;input&gt;</code> 保持同步。<code>v-model</code> 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 <code>v-model</code>，你需要向 <code>&lt;input&gt;</code> 添加一个结构为 <code>v-model="variable"</code> 的属性。<p>
 
   <p>所以在我们的例子中，我们会将它添加到我们的 <code>new-todo-input</code> 字段中，如下所示。现在就这样做：</p>
    
@@ -282,7 +282,7 @@ translation_of: >-
  </li>
 </ol>
 
-<p>如果你再次测试你的表单，你将在提交时看到你在控制台中输入的任何文本。Vue 自动将 <code>this.$emit()</code> 中事件名称后面的参数传递给您的事件处理程序。</p>
+<p>如果你再次测试你的表单，你将在提交时看到你在控制台中输入的任何文本。Vue 自动将 <code>this.$emit()</code> 中事件名称后面的参数传递给你的事件处理程序。</p>
 
 <h2 id="Adding_the_new_todo_into_our_data">将新的待办事项添加到我们的数据中</h2>
 
