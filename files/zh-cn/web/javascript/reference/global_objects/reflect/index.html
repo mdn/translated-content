@@ -14,9 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 <h2 id="描述">描述</h2>
 
-<p>与大多数全局对象不同<code>Reflect</code>并非一个构造函数，所以不能通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new运算符</a>对其进行调用，或者将<code>Reflect</code>对象作为一个函数来调用。<code>Reflect</code>的所有属性和方法都是静态的（就像{{jsxref("Math")}}对象）。</p>
+<p>与大多数全局对象不同<code>Reflect</code>并非一个构造函数，所以不能通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new 运算符</a>对其进行调用，或者将<code>Reflect</code>对象作为一个函数来调用。<code>Reflect</code>的所有属性和方法都是静态的（就像{{jsxref("Math")}}对象）。</p>
 
-<p><code>Reflect</code> 对象提供了以下静态方法，这些方法与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler methods</a>的命名相同.</p>
+<p><code>Reflect</code> 对象提供了以下静态方法，这些方法与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler methods</a>的命名相同。</p>
 
 <p>其中的一些方法与 {{jsxref("Object")}} 相同，尽管二者之间存在<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods">某些细微上的差别</a>。</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
  <dt>{{jsxref("Reflect.get()", "Reflect.get(<var>target</var>, <var>propertyKey</var>[, <var>receiver</var>])")}}</dt>
  <dd>获取对象身上某个属性的值，类似于 <code>target[name]。</code></dd>
  <dt>{{jsxref("Reflect.getOwnPropertyDescriptor()", "Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)")}}</dt>
- <dd>类似于 {{jsxref("Object.getOwnPropertyDescriptor()")}}。如果对象中存在该属性，则返回对应的属性描述符,  否则返回 {{jsxref("undefined")}}.</dd>
+ <dd>类似于 {{jsxref("Object.getOwnPropertyDescriptor()")}}。如果对象中存在该属性，则返回对应的属性描述符，否则返回 {{jsxref("undefined")}}。</dd>
  <dt>{{jsxref("Reflect.getPrototypeOf()", "Reflect.getPrototypeOf(<var>target</var>)")}}</dt>
  <dd>类似于 {{jsxref("Object.getPrototypeOf()")}}。</dd>
  <dt>{{jsxref("Reflect.has()", "Reflect.has(<var>target, propertyKey</var>)")}}</dt>
@@ -42,13 +42,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
  <dt>{{jsxref("Reflect.isExtensible()", "Reflect.isExtensible(<var>target</var>)")}}</dt>
  <dd>类似于 {{jsxref("Object.isExtensible()")}}.</dd>
  <dt>{{jsxref("Reflect.ownKeys()", "Reflect.ownKeys(<var>target</var>)")}}</dt>
- <dd>返回一个包含所有自身属性（不包含继承属性）的数组。(类似于 {{jsxref("Object.keys()")}}, 但不会受<code>enumerable影响</code>).</dd>
+ <dd>返回一个包含所有自身属性（不包含继承属性）的数组。(类似于 {{jsxref("Object.keys()")}}, 但不会受<code>enumerable</code> 影响).</dd>
  <dt>{{jsxref("Reflect.preventExtensions()", "Reflect.preventExtensions(<var>target</var>)")}}</dt>
  <dd>类似于 {{jsxref("Object.preventExtensions()")}}。返回一个{{jsxref("Boolean")}}。</dd>
  <dt>{{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}</dt>
  <dd>将值分配给属性的函数。返回一个{{jsxref("Boolean")}}，如果更新成功，则返回<code>true</code>。</dd>
  <dt>{{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}</dt>
- <dd>设置对象原型的函数. 返回一个 {{jsxref("Boolean")}}， 如果更新成功，则返回<code>true。</code></dd>
+ <dd>设置对象原型的函数。返回一个 {{jsxref("Boolean")}}， 如果更新成功，则返回<code>true。</code></dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
