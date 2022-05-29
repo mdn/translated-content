@@ -17,12 +17,14 @@ Les objets sont [des tables de hachage](https://fr.wikipedia.org/wiki/Table_de_h
 
 L'optimisation des moteurs s'applique grâce à l'ordre selon lequel les propriétés sont ajoutées aux objets. La plupart des propriétés ajoutées aux objets sont ajoutés dans un ordre semblable (exception faite des accès effectués sous la forme `obj[val]` où `val` est une valeur dynamique non constante).
 
-    function Landmark(lat, lon, desc) {
-      this.location = { lat: lat, long: lon };
-      this.description = desc;
-    }
-    var lm1 = new Landmark(-90, 0, "South Pole");
-    var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
+```js
+function Landmark(lat, lon, desc) {
+  this.location = { lat: lat, long: lon };
+  this.description = desc;
+}
+var lm1 = new Landmark(-90, 0, "South Pole");
+var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
+```
 
 Dans cet exemple, chaque `Landmark` possède les propriétés `location` et `description`, **dans cet ordre.** Chaque objet `location` représentant l'emplacement enregistrera la latitude puis la longitude, **dans cet ordre**. Le code qui suit _pourrait_ supprimer une propriété mais comme c'est peu probable, les moteurs peuvent être amenés à produire du code non optimal pour ces cas de figure. Pour SpiderMonkey, le moteur JavaScript de Firefox, l'ordre spécifique des propriétés (et de certains de leurs aspects en dehors de leurs valeurs) est appelé une _forme_ (le moteur V8, utilisé par Chrome, intitule ce concept _structure ID_). Si deux objets partagent la même forme, leurs propriétés seront stockées de façon identique.
 
