@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 
 <h3 id="作为函数使用">作为函数使用</h3>
 
-<p>当像函数一样使用 <code>Error</code> 时 -- 如果没有 {{jsxref("Operators/new", "new")}}，它将返回一个 <code>Error</code> 对象。所以， 仅仅调用 <code>Error</code> 产生的结果与通过<code>new</code> 关键字构造 <code>Error</code> 对象生成的结果相同。 </p>
+<p>当像函数一样使用 <code>Error</code> 时 -- 如果没有 {{jsxref("Operators/new", "new")}}，它将返回一个 <code>Error</code> 对象。所以，仅仅调用 <code>Error</code> 产生的结果与通过<code>new</code> 关键字构造 <code>Error</code> 对象生成的结果相同。 </p>
 
 <pre><code>// this:
 const x = Error('I was created using a function call!');
@@ -49,29 +49,29 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
  <dt><strong>{{jsxref("EvalError")}}</strong></dt>
  <dd>创建一个 error 实例，表示错误的原因：与 {{jsxref("Global_Objects/eval", "eval()")}} 有关。</dd>
  <dt><strong>{{jsxref("InternalError")}} {{non-standard_inline}}</strong></dt>
- <dd>创建一个代表 Javascript 引擎内部错误的异常抛出的实例。 如: "递归太多".</dd>
+ <dd>创建一个代表 Javascript 引擎内部错误的异常抛出的实例。如: "递归太多".</dd>
  <dt><strong>{{jsxref("RangeError", "RangeError")}}</strong></dt>
  <dd>创建一个 error 实例，表示错误的原因：数值变量或参数超出其有效范围。</dd>
  <dt><strong>{{jsxref("ReferenceError")}}</strong></dt>
  <dd>创建一个 error 实例，表示错误的原因：无效引用。</dd>
  <dt><strong>{{jsxref("SyntaxError")}}</strong></dt>
- <dd>创建一个 error 实例，表示错误的原因：{{jsxref("Global_Objects/eval", "eval()")}}在解析代码的过程中发生的语法错误。</dd>
+ <dd>创建一个 error 实例，表示错误的原因：{{jsxref("Global_Objects/eval", "eval()")}} 在解析代码的过程中发生的语法错误。</dd>
  <dt><strong>{{jsxref("TypeError")}}</strong></dt>
  <dd>创建一个 error 实例，表示错误的原因：变量或参数不属于有效类型。</dd>
  <dt><strong>{{jsxref("URIError")}}</strong></dt>
- <dd>创建一个 error 实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}或  {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}传递的参数无效。</dd>
+ <dd>创建一个 error 实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} 或 {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} 传递的参数无效。</dd>
 </dl>
 
 <h2 id="Properties">属性</h2>
 
 <dl>
  <dt>{{jsxref("Error.prototype")}}</dt>
- <dd>允许添加属性到<code>Error</code>实例。</dd>
+ <dd>允许添加属性到 <code>Error</code> 实例。</dd>
 </dl>
 
 <h2 id="Methods">方法</h2>
 
-<p>全局<code>Error</code>对象自身不包含任何方法，但从原型链中继承了一些方法。</p>
+<p>全局 <code>Error</code> 对象自身不包含任何方法，但从原型链中继承了一些方法。</p>
 
 <h2 id="Error_instances"><code>Error</code> 实例</h2>
 
@@ -102,7 +102,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <h3 id="Example_Handling_a_specific_error">处理一个特定错误</h3>
 
-<p>你可以通过判断异常的类型来特定处理某一类的异常，即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代 Javascript 引擎时，可使用{{jsxref("Operators/instanceof", "instanceof")}} 关键字：</p>
+<p>你可以通过判断异常的类型来特定处理某一类的异常，即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代 JavaScript 引擎时，可使用{{jsxref("Operators/instanceof", "instanceof")}} 关键字：</p>
 
 <pre class="brush: js">try {
     foo.bar();
@@ -118,7 +118,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <h3 id="自定义异常类型">自定义异常类型</h3>
 
-<p>你可能希望自定义基于 Error 的异常类型，使得你能够 throw new MyError() 并可以使用 <code>instanceof MyError</code> 来检查某个异常的类型。这种需求的通用解决方法如下。</p>
+<p>你可能希望自定义基于 Error 的异常类型，使得你能够 <code>throw new MyError()</code> 并可以使用 <code>instanceof MyError</code> 来检查某个异常的类型。这种需求的通用解决方法如下。</p>
 
 <div class="warning">
 <p><strong>警告：</strong>注意，在 FireFox 中抛出自定义类型的异常会显示不正确的行号和文件名。</p>
