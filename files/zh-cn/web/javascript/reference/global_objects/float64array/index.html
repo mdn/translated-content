@@ -25,7 +25,7 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>返回元素字节数。 <code>在</code> <code>Float64Array 的情况下返回 8。</code></dd>
+ <dd>返回元素字节数。<code>在</code> <code>Float64Array</code> 的情况下返回 8。</dd>
  <dt>Float64Array.length</dt>
  <dd>长度属性的值为 3。关于其实际长度 (元素数量) 参见 {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}。</dd>
  <dt>{{jsxref("TypedArray.name", "Float64Array.name")}}</dt>
@@ -45,13 +45,13 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
 
 <h2 id="Float64Array_属性"><code>Float64Array</code> 属性</h2>
 
-<p>所有的<code>Float64Array 对象都</code>继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}。</p>
+<p>所有的 <code>Float64Array</code> 对象都继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}。</p>
 
 <h3 id="特性">特性</h3>
 
 <dl>
  <dt><code>Float64Array.prototype.constructor</code></dt>
- <dd>返回创建这个实例原型的函数。 这是<code>Float64Array</code> 默认的构造函数。</dd>
+ <dd>返回创建这个实例原型的函数。 这是 <code>Float64Array</code> 默认的构造函数。</dd>
  <dt>{{jsxref("TypedArray.prototype.buffer", "Float64Array.prototype.buffer")}} {{readonlyInline}}</dt>
  <dd>返回这个<code>Float64Array 引用的</code> {{jsxref("ArrayBuffer")}}。构造时已固定，所以是<strong>只读</strong>的。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteLength", "Float64Array.prototype.byteLength")}} {{readonlyInline}}</dt>
@@ -59,7 +59,7 @@ new Float64Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "Float64Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
  <dd>返回从<code>Float64Array 的</code>{{jsxref("ArrayBuffer")}}开头开始<code>的偏移量</code> (以字节为单位) 。构造时已固定，所以是<strong>只读</strong>的。</dd>
  <dt>{{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>返回<code>Float64Array 中的元素个数</code>。构造时已固定，所以是<strong>只读</strong>的。</dd>
+ <dd>返回 <code>Float64Array</code> 中的元素个数。构造时已固定，所以是<strong>只读</strong>的。</dd>
 </dl>
 
 <h3 id="方法_2">方法</h3>
@@ -177,7 +177,7 @@ var z = new Float64Array(buffer, 0, 4);
 
 <h2 id="一致性提示">一致性提示</h2>
 
-<p>从 ECMAScript 2015 (ES6) 开始， <code>Float32Array</code>构造函数需要用一个{{jsxref("Operators/new", "new")}}操作符来构造。现在直接把<code>Float32Array 构造函数当函数调用而不使用 new，会抛出一个</code>{{jsxref("TypeError")}}。</p>
+<p>从 ECMAScript 2015 (ES6) 开始，<code>Float32Array</code> 构造函数需要用一个 {{jsxref("Operators/new", "new")}} 操作符来构造。现在直接把 <code>Float32Array</code> 构造函数当函数调用而不使用 new，会抛出一个 {{jsxref("TypeError")}}。</p>
 
 <pre class="brush: js example-bad">var dv = Float64Array([1, 2, 3]);
 // TypeError: calling a builtin Float64Array constructor
