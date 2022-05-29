@@ -26,7 +26,7 @@ TypeError: Atomics is not a constructor
 
 <p>{{jsxref("TypeError")}}</p>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
 <p>是因为尝试将不是构造器的对象或者变量来作为构造器使用。参考 {{Glossary("constructor")}} 或者 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> 来了解什么是构造器。</p>
 
@@ -55,7 +55,7 @@ var obj = new f;
 
 <h3 id="一个构造器">一个构造器</h3>
 
-<p>假设你想为汽车创建一个对象类型。 你希望此类型的对象被称为 <code>car</code>，并且您希望它具有make，model 和 year 属性。 为此，你编写以下函数：</p>
+<p>假设你想为汽车创建一个对象类型。 你希望此类型的对象被称为 <code>car</code>，并且您希望它具有 make，model 和 year 属性。 为此，你编写以下函数：</p>
 
 <pre class="brush: js">function Car(make, model, year) {
   this.make = make;
@@ -64,7 +64,7 @@ var obj = new f;
 }
 </pre>
 
-<p>现在你可以创建一个名为 <code>mycar</code> 的对象，如下所示:</p>
+<p>现在你可以创建一个名为 <code>mycar</code> 的对象，如下所示：</p>
 
 <pre class="brush: js">var mycar = new Car("Eagle", "Talon TSi", 1993);</pre>
 
@@ -82,7 +82,7 @@ var obj = new f;
 <pre class="brush: js">// 这是合法的，但是没必要这么长：
 return new Promise((resolve, reject) =&gt; { resolve(true); })
 
-// 用静态方法来代替:
+// 用静态方法来代替：
 return Promise.resolve(true);
 return Promise.reject(false);
 </pre>

@@ -12,7 +12,9 @@ La fonction `key` retourne un ensemble de nœuds ayant la valeur donnée pour la
 
 ### Syntaxe
 
-    key( nom-de-clef , valeur )
+```
+key( nom-de-clef , valeur )
+```
 
 ### Arguments
 

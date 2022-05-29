@@ -19,7 +19,7 @@ translation_of: Web/CSS/@document
 
 <h2 id="语法">语法</h2>
 
-<p><code>@document</code> 规则可以指定一个或多个匹配函数。如果任何功能适用于给定的 URL，则该规则将对该URL生效。可用的函数如下：</p>
+<p><code>@document</code> 规则可以指定一个或多个匹配函数。如果任何功能适用于给定的 URL，则该规则将对该 URL 生效。可用的函数如下：</p>
 
 <ul>
  <li><code>url()</code>，匹配整个 URL。</li>
@@ -30,7 +30,7 @@ translation_of: Web/CSS/@document
 
 <p>提供给 <code>url()</code>、<code>url-prefix()</code>，和 <code>domain()</code> 函数的参数可以不使用引号括起来。但提供给 <code>regexp()</code> 函数的参数必须用引号括起来。</p>
 
-<p>提供给 <code>regexp()</code> 函数的正则表达式中的转义字符必须再次进行一次 CSS 转义。例如，一个点号（<code>.</code>），在正则表达式中匹配任意换行符之外的字母.如果想要匹配一个正真的点号，必须首先按照正则表达式的规则转义一次（变为 <code>\.</code>）然后在使用CSS的规则再转义一次（转换为<code>\\.</code>）。</p>
+<p>提供给 <code>regexp()</code> 函数的正则表达式中的转义字符必须再次进行一次 CSS 转义。例如，一个点号（<code>.</code>），在正则表达式中匹配任意换行符之外的字母。如果想要匹配一个正真的点号，必须首先按照正则表达式的规则转义一次（变为 <code>\.</code>）然后在使用 CSS 的规则再转义一次（转换为<code>\\.</code>）。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -39,11 +39,11 @@ translation_of: Web/CSS/@document
           domain(mozilla.org),
           regexp("https:.*")
 {
-  /* 该条CSS规则会应用在下面的网页:
-     + URL为"http://www.w3.org/"的页面.
-     + 任何URL以"http://www.w3.org/Style/"开头的网页
+  /* 该条 CSS 规则会应用在下面的网页：
+     + URL 为"http://www.w3.org/"的页面。
+     + 任何 URL 以"http://www.w3.org/Style/"开头的网页
      + 任何主机名为"mozilla.org"或者主机名以".mozilla.org"结尾的网页
-     + 任何URL以"https:"开头的网页 */
+     + 任何 URL 以"https:"开头的网页 */
 
   /* 让上述网页变得超级丑 */
   body {
