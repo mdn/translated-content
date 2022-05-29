@@ -26,7 +26,7 @@ new Int8Array(buffer, decalageOctets, longueur);
 - `longueur`
   - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
 - `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type non [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non** [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
 - `object`
   - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
 - `buffer`, `decalageOctets`, `longueur`
@@ -38,28 +38,28 @@ new Int8Array(buffer, decalageOctets, longueur);
 
 ```js
 // À partir d'une longueur
-let int8 = new Int8Array(2);
+const int8 = new Int8Array(2);
 int8[0] = 42;
 console.log(int8[0]); // 42
 console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // À partir d'un tableau
-let arr = new Int8Array([21,31]);
+const arr = new Int8Array([21,31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
-let x = new Int8Array([21, 31]);
-let y = new Int8Array(x);
+const x = new Int8Array([21, 31]);
+const y = new Int8Array(x);
 console.log(y[0]); // 21
 
 // À partir d'un ArrayBuffer
-let buffer = new ArrayBuffer(8);
-let z = new Int8Array(buffer, 1, 4);
+const buffer = new ArrayBuffer(8);
+const z = new Int8Array(buffer, 1, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
-let int8 = new Int8Array(iterable);
+const iterable = function*(){ yield* [1,2,3]; }();
+const int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```
 
@@ -76,13 +76,13 @@ let int8 = new Int8Array(iterable);
 À partir d'ECMAScript 2015, le constructeur de `Int8Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Int8Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js example-bad
-let dv = Int8Array([1, 2, 3]);
+const dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-let dv = new Int8Array([1, 2, 3]);
+const dv = new Int8Array([1, 2, 3]);
 ```
 
 ## Voir aussi
