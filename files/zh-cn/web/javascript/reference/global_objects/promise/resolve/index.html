@@ -48,7 +48,7 @@ Promise.resolve(thenable) //这会造成一个死循环
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用静态_Promise.resolve_方法">使用静态 <code>Promise.resolve</code> 方法</h3>
+<h3 id="使用静态_promise.resolve_方法">使用静态 <code>Promise.resolve</code> 方法</h3>
 
 <pre class="brush: js">Promise.resolve("Success").then(function(value) {
   console.log(value); // "Success"
@@ -57,7 +57,7 @@ Promise.resolve(thenable) //这会造成一个死循环
 });
 </pre>
 
-<h3 id="resolve一个数组">resolve 一个数组</h3>
+<h3 id="resolve_一个数组">resolve 一个数组</h3>
 
 <pre class="brush: js">var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
