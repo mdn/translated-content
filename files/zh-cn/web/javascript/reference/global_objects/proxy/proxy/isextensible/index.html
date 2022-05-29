@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensible
 ---
 <div>{{JSRef}}<br>
-<strong>handler.isExtensible() </strong>方法用于拦截对对象的Object.isExtensible()。</div>
+<strong>handler.isExtensible() </strong>方法用于拦截对对象的 Object.isExtensible()。</div>
 
 <div>
 <p>{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}</p>
@@ -35,15 +35,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensibl
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>isExtensible</code>方法必须返回一个 Boolean值或可转换成Boolean的值。</p>
+<p><code>isExtensible</code>方法必须返回一个 Boolean 值或可转换成 Boolean 的值。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>handler.isExtensible()用于拦截对对象的Object.isExtensible()。</p>
+<p>handler.isExtensible() 用于拦截对对象的 Object.isExtensible()。</p>
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截目标对象的以下操作:</p>
+<p>该方法会拦截目标对象的以下操作：</p>
 
 <ul>
  <li>{{jsxref("Object.isExtensible()")}}</li>
@@ -52,10 +52,10 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensibl
 
 <h3 id="约束">约束</h3>
 
-<p>如果违背了以下的约束，proxy会抛出 TypeError:</p>
+<p>如果违背了以下的约束，proxy 会抛出 TypeError:</p>
 
 <ul>
- <li><code>Object.isExtensible(proxy)</code> 必须同<code>Object.isExtensible(target)</code>返回相同值。也就是必须返回true或者为true的值,返回false和为false的值都会报错。</li>
+ <li><code>Object.isExtensible(proxy)</code> 必须同 <code>Object.isExtensible(target)</code> 返回相同值。也就是必须返回 true 或者为 true 的值，返回 false 和为 false 的值都会报错。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -65,7 +65,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensibl
 <pre class="brush: js">var p = new Proxy({}, {
   isExtensible: function(target) {
     console.log('called');
-    return true;//也可以return 1;等表示为true的值
+    return true; // 也可以 return 1; 等表示为 true 的值
   }
 });
 
@@ -77,7 +77,7 @@ console.log(Object.isExtensible(p)); // "called"
 
 <pre class="brush: js">var p = new Proxy({}, {
   isExtensible: function(target) {
-    return false;//return 0;return NaN等都会报错
+    return false; // return 0; return NaN 等都会报错
   }
 });
 
