@@ -18,7 +18,9 @@ La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des prop
 
 ## Syntaxe
 
-    Reflect.deleteProperty(cible, cléPropriété)
+```js
+Reflect.deleteProperty(cible, cléPropriété)
+```
 
 ### Paramètres
 
