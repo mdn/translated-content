@@ -7,26 +7,26 @@ tags:
   - 动画
 translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
-<div class="note"><strong>注意：</strong>真正的SVG文档未来有望面世。在当下，示例将引导你入门，你可以查看<a href="/en/SVG/SVG_animation_with_SMIL#See_also" title="en/SVG/SVG animation with SMIL#See also">specification and other documents</a> 以了解语法详情。</div>
+<div class="note"><strong>注意：</strong>真正的 SVG 文档未来有望面世。在当下，示例将引导你入门，你可以查看<a href="/en/SVG/SVG_animation_with_SMIL#See_also" title="en/SVG/SVG animation with SMIL#See also">specification and other documents</a> 以了解语法详情。</div>
 
-<p>Chrome 45弃用了SMIL，以利于CSS动画以及Web动画。</p>
+<p>Chrome 45 弃用了 SMIL，以利于 CSS 动画以及 Web 动画。</p>
 
-<p>Firefox 4 利用<a class="external" href="http://www.w3.org/TR/REC-smil">Synchronized Multimedia Integration Language</a> (SMIL)引入了对动画SVG的支持。SMIL允许你：</p>
+<p>Firefox 4 利用<a class="external" href="http://www.w3.org/TR/REC-smil">Synchronized Multimedia Integration Language</a> (SMIL) 引入了对动画 SVG 的支持。SMIL 允许你：</p>
 
 <ul>
  <li>变动一个元素的数字属性（x、y……）</li>
- <li>变动变形属性（translation或rotation）</li>
+ <li>变动变形属性（translation 或 rotation）</li>
  <li>变动颜色属性</li>
  <li>物件方向与运动路径方向同步</li>
 </ul>
 
-<p>只要在一个SVG元素内添加一个SVG元素比如说{{ SVGElement("animate") }}，就能实现让元素动起来。下面是四个不同方法的示例：</p>
+<p>只要在一个 SVG 元素内添加一个 SVG 元素比如说{{ SVGElement("animate") }}，就能实现让元素动起来。下面是四个不同方法的示例：</p>
 
-<p>自从Chrome 45，SMIL动画被弃用了，以利于CSS动画和Web动画。</p>
+<p>自从 Chrome 45，SMIL 动画被弃用了，以利于 CSS 动画和 Web 动画。</p>
 
 <h2 id="一个元素的动画属性">一个元素的动画属性</h2>
 
-<p>下面的示例变动了一个圆的cx属性。为了做到这，我们在{{ SVGElement("circle") }} 元素里面添加了一个{{ SVGElement("animate") }}元素。对{{ SVGElement("animate") }} 元素来说，重要的属性有：</p>
+<p>下面的示例变动了一个圆的 cx 属性。为了做到这，我们在{{ SVGElement("circle") }} 元素里面添加了一个{{ SVGElement("animate") }}元素。对{{ SVGElement("animate") }} 元素来说，重要的属性有：</p>
 
 <dl>
  <dt><strong>attributeName</strong></dt>
@@ -36,7 +36,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
  <dt>to</dt>
  <dd>变动的终值</dd>
  <dt>dur</dt>
- <dd>动画的持续时间（举个例子，写“5s”代表5秒表）</dd>
+ <dd>动画的持续时间（举个例子，写“5s”代表 5 秒表）</dd>
 </dl>
 
 <p>如果你想在同一个元素里变动更多的属性，只要添加更多的{{ SVGElement("animate") }}元素。</p>
@@ -91,9 +91,9 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 
 <p>{{ SVGElement("animateMotion") }}元素使一个元素的位置动起来，并顺着路径同步旋转。定义这个路径是与在{{ SVGElement("path") }}元素中定义路径的方法相同。你可以设置这个属性以定义对象是否与跟着路径的正切值旋转。</p>
 
-<h3 id="示例1：线性运动">示例1：线性运动</h3>
+<h3 id="示例1：线性运动">示例 1：线性运动</h3>
 
-<p>在这个示例中，一个蓝色的圆球在左右边界之间弹动，一次又一次，永不停息。这个动画是用{{ SVGElement("animateMotion") }}元素操纵的。在这个例子中，我们建立了一个由<strong>M</strong>oveTo命令和<strong>H</strong>orizontal-line命令、<strong>Z</strong>命令构成的路径，<strong>M</strong>oveTo命令命令指定动画路径的起始点，而<strong>H</strong>orizontal-line命令把圆移到右边300像素处，<strong>Z</strong>命令闭合路径，建立一个回到起始点的回路。把<strong>repeatCount</strong>属性的值设置为<code>indefinite</code>，我们指明了反复循环的动画，只要SVG图像还存在就会一直循环下去。</p>
+<p>在这个示例中，一个蓝色的圆球在左右边界之间弹动，一次又一次，永不停息。这个动画是用{{ SVGElement("animateMotion") }}元素操纵的。在这个例子中，我们建立了一个由<strong>M</strong>oveTo 命令和<strong>H</strong>orizontal-line 命令、<strong>Z</strong>命令构成的路径，<strong>M</strong>oveTo 命令命令指定动画路径的起始点，而<strong>H</strong>orizontal-line 命令把圆移到右边 300 像素处，<strong>Z</strong>命令闭合路径，建立一个回到起始点的回路。把<strong>repeatCount</strong>属性的值设置为<code>indefinite</code>，我们指明了反复循环的动画，只要 SVG 图像还存在就会一直循环下去。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -112,7 +112,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 
 <p><a href="https://developer.mozilla.org/samples/svg/svganimdemo1.html">View live sample</a></p>
 
-<h3 id="示例2：曲线运动">示例2：曲线运动</h3>
+<h3 id="示例2：曲线运动">示例 2：曲线运动</h3>
 
 <p>略有改变的示例，其运动路径是一条曲线，沿着路径的方向运动。</p>
 
@@ -136,6 +136,6 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 
 <ul>
  <li><a href="/en/SVG" title="en/SVG">SVG</a></li>
- <li><a class="external" href="http://www.w3.org/TR/SVG/animate.html">SVG动画参考</a></li>
- <li><a class="external" href="http://www.w3.org/TR/REC-smil">SMIL动画参考</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/SVG/animate.html">SVG 动画参考</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/REC-smil">SMIL 动画参考</a></li>
 </ul>
