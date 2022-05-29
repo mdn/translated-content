@@ -16,21 +16,23 @@ La méthode **`TypedArray.of()`** crée un nouvel objet {{jsxref("TypedArray", "
 
 ## Syntaxe
 
-    TypedArray.of(élément0[, élément1[, ...[, élémentN]]])
+```js
+TypedArray.of(élément0[, élément1[, ...[, élémentN]]])
+```
 
-    où TypedArray est l'un de :
+où TypedArray est l'un de :
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
-    BigInt64Array
-    BigUint64Array
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
+- {{jsxref("BigInt64Array")}}
+- {{jsxref("BigUint64Array")}}
 
 ### Paramètres
 

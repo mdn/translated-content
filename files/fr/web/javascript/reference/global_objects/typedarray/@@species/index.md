@@ -17,19 +17,21 @@ La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [
 
 ## Syntaxe
 
-    TypedArray[Symbol.species]
+```js
+TypedArray[Symbol.species]
+```
 
-    où TypedArray vaut :
+où TypedArray vaut :
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
 
 ## Description
 
