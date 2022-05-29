@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>Object.defineProperties()</code> </strong>方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。</p>
+<p><strong><code>Object.defineProperties()</code></strong> 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
  <dt><code>obj</code></dt>
  <dd>在其上定义或修改属性的对象。</dd>
  <dt><code>props</code></dt>
- <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅{{jsxref("Object.defineProperty()")}}）。描述符具有以下键：
+ <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅 {{jsxref("Object.defineProperty()")}}）。描述符具有以下键：
  <dl>
   <dt><code>configurable</code></dt>
   <dd><code>true</code> 只有该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。<br>
@@ -52,7 +52,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <h2 id="描述">描述</h2>
 
-<p><code>Object.defineProperties</code>本质上定义了<code>obj</code> 对象上<code>props</code>的可枚举属性相对应的所有属性。</p>
+<p><code>Object.defineProperties</code> 本质上定义了 <code>obj</code> 对象上 <code>props</code> 的可枚举属性相对应的所有属性。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -71,7 +71,7 @@ Object.defineProperties(obj, {
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code>几乎完全等同于（注意<code>isCallable</code>中的注释）以下 JavaScript 中的重新实现：</p>
+<p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code> 几乎完全等同于（注意 <code>isCallable</code> 中的注释）以下 JavaScript 中的重新实现：</p>
 
 <pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
