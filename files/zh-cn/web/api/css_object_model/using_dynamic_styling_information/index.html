@@ -10,7 +10,7 @@ translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
 <div>{{DefaultAPISidebar("CSSOM")}}</div>
 
-<p class="summary">CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，允许操作很多与 CSS 相关的信息。最初定义在 <em>DOM Level 2 Style</em> 提议中，现在，这些接口形成了一个规范，<em>CSS 对象模型（CSSOM）</em>，旨在取代它。</p>
+<p>CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，允许操作很多与 CSS 相关的信息。最初定义在 <em>DOM Level 2 Style</em> 提议中，现在，这些接口形成了一个规范，<em>CSS 对象模型（CSSOM）</em>，旨在取代它。</p>
 
 <p>在很多情况下，如果可能的话，通过 {{ domxref("element.className", "className") }} 属性来动态操作元素类名确实是最好的方式，因为所有的样式钩子的最终外观都可以在一个样式表中控制。这样写出的 JavaScript 代码也会变得更清晰，因为它不专注与样式相关的细节，而是专注于所创作或者操作的每一部分的整体语义，将精细的样式细节留给样式表。然而实际上也有以一些获取或者操作样式规则有用的情况（无论是对于正样式包还是的那个元素），将在下面进一步详细描述。同样应该注意，同操作单独元素的样式一样，当说到操作样式表的时候，并不是真的操作实际的物理文档，而仅仅是文档的内部表示。</p>
 
