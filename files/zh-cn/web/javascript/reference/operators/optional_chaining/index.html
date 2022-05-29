@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p><strong>可选链</strong>操作符( <strong><code>?.</code></strong> )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。<code>?.</code> 操作符的功能类似于 <code>.</code> 链式操作符，不同之处在于，在引用为空(<a href="/zh-CN/docs/Glossary/nullish">nullish</a> ) ({{JSxRef("null")}} 或者 {{JSxRef("undefined")}}) 的情况下不会引起错误，该表达式短路返回值是 <code>undefined</code>。与函数调用一起使用时，如果给定的函数不存在，则返回 <code>undefined</code>。</p>
+<p><strong>可选链</strong>操作符 ( <strong><code>?.</code></strong> ) 允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。<code>?.</code> 操作符的功能类似于 <code>.</code> 链式操作符，不同之处在于，在引用为空 (<a href="/zh-CN/docs/Glossary/nullish">nullish</a> ) ({{JSxRef("null")}} 或者 {{JSxRef("undefined")}}) 的情况下不会引起错误，该表达式短路返回值是 <code>undefined</code>。与函数调用一起使用时，如果给定的函数不存在，则返回 <code>undefined</code>。</p>
 
 <p>当尝试访问可能不存在的对象属性时，可选链操作符将会使表达式更短、更简明。在探索一个对象的内容时，如果不能确定哪些属性必定存在，可选链操作符也是很有帮助的。</p>
 
@@ -55,14 +55,14 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <h3 id="可选链与函数调用">可选链与函数调用</h3>
 
-<p>当尝试调用一个可能不存在的方法时也可以使用可选链。这将是很有帮助的，比如，当使用一个API的方法可能不可用时，要么因为实现的版本问题要么因为当前用户的设备不支持该功能。</p>
+<p>当尝试调用一个可能不存在的方法时也可以使用可选链。这将是很有帮助的，比如，当使用一个 API 的方法可能不可用时，要么因为实现的版本问题要么因为当前用户的设备不支持该功能。</p>
 
 <p>函数调用时如果被调用的方法不存在，使用可选链可以使表达式自动返回<code>undefined</code>而不是抛出一个异常。</p>
 
 <pre class="brush: js">let result = someInterface.customMethod?.();</pre>
 
 <div class="note">
-<p><strong>备注：</strong>如果存在一个属性名且不是函数, 使用 <code>?.</code> 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (<code>x.y</code><code> is not a function</code>).</p>
+<p><strong>备注：</strong>如果存在一个属性名且不是函数，使用 <code>?.</code> 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (<code>x.y</code><code> is not a function</code>).</p>
 </div>
 
 <div class="note">
@@ -73,13 +73,13 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <p>如果使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>来解构的一个对象的回调函数或 fetch 方法，你可能得到不能当做函数直接调用的不存在的值，除非你已经校验了他们的存在性。使用<code>?.</code>的你可以忽略这些额外的校验：</p>
 
-<pre class="brush: js">//  ES2019的写法
+<pre class="brush: js">//  ES2019 的写法
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
   }
   catch (err) {
-    if (onError) { // 校验onError是否真的存在
+    if (onError) { // 校验 onError 是否真的存在
       onError(err.message);
     }
   }
@@ -92,7 +92,7 @@ function doSomething(onContent, onError) {
    // ... do something with the data
   }
   catch (err) {
-    onError?.(err.message); // 如果onError是undefined也不会有异常
+    onError?.(err.message); // 如果 onError 是 undefined 也不会有异常
   }
 }
 </pre>

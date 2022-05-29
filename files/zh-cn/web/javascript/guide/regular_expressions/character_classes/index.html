@@ -26,40 +26,40 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>.</code></td>
    <td>
-    <p>有下列含义之一:</p>
+    <p>有下列含义之一：</p>
 
     <ul>
-     <li>匹配除行终止符之外的任何单个字符: <code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如, <code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
+     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
      <li>在字符集内，点失去了它的特殊意义，并与文字点匹配。</li>
     </ul>
 
-    <p>需要注意的是，<code>m</code> multiline标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
+    <p>需要注意的是，<code>m</code> multiline 标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
 
-    <p>ES2018 添加了 <code>s</code> "dotAll" 标志,它允许点也匹配行终止符。</p>
+    <p>ES2018 添加了 <code>s</code> "dotAll" 标志，它允许点也匹配行终止符。</p>
    </td>
   </tr>
   <tr>
    <td><code>\d</code></td>
    <td>
-    <p>匹配任何数字(阿拉伯数字)。 相当于 <code>[0-9]</code>. 例如, <code>/\d/</code> 或 <code>/[0-9]/</code> 匹配 “B2is the suite number”中的“2”。</p>
+    <p>匹配任何数字 (阿拉伯数字)。 相当于 <code>[0-9]</code>. 例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配 “B2is the suite number”中的“2”。</p>
    </td>
   </tr>
   <tr>
    <td><code>\D</code></td>
    <td>
-    <p>匹配任何非数字(阿拉伯数字)的字符。相当于<code>[^0-9]</code>. 例如, <code>/\D/</code> or <code>/[^0-9]/</code> 在 "B2 is the suite number" 中 匹配 "B".</p>
+    <p>匹配任何非数字 (阿拉伯数字) 的字符。相当于<code>[^0-9]</code>. 例如，<code>/\D/</code> or <code>/[^0-9]/</code> 在 "B2 is the suite number" 中 匹配 "B".</p>
    </td>
   </tr>
   <tr>
    <td><code>\w</code></td>
    <td>
-    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>. 例如, <code>/\w/</code> 在 "apple" 匹配 "a" , "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".</p>
+    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>. 例如，<code>/\w/</code> 在 "apple" 匹配 "a" , "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".</p>
    </td>
   </tr>
   <tr>
    <td><code>\W</code></td>
    <td>
-    <p>匹配任何不是来自基本拉丁字母的单词字符。相当于 <code>[^A-Za-z0-9_]</code>. 例如, <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> 匹配 "%" 在 "50%" 以及 "É" 在 "Émanuel" 中.</p>
+    <p>匹配任何不是来自基本拉丁字母的单词字符。相当于 <code>[^A-Za-z0-9_]</code>. 例如，<code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> 匹配 "%" 在 "50%" 以及 "É" 在 "Émanuel" 中。</p>
    </td>
   </tr>
   <tr>

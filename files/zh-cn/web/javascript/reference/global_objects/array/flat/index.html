@@ -55,7 +55,7 @@ arr4.flat(Infinity);
 
 <h3 id="扁平化与数组空项">扁平化与数组空项</h3>
 
-<p><code>flat()</code> 方法会移除数组中的空项:</p>
+<p><code>flat()</code> 方法会移除数组中的空项：</p>
 
 <pre class="brush: js">var arr4 = [1, 2, , 4, 5];
 arr4.flat();
@@ -118,7 +118,7 @@ const forFlat = (arr = [], depth = 1) =&gt; {
       if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
         flat(item, depth - 1)
       } else {
-        // 去除空元素，添加非undefined元素
+        // 去除空元素，添加非 undefined 元素
         item !== void 0 &amp;&amp; result.push(item);
       }
     }
@@ -127,7 +127,7 @@ const forFlat = (arr = [], depth = 1) =&gt; {
 }
 </pre>
 
-<h3 id="使用堆栈stack">使用堆栈stack</h3>
+<h3 id="使用堆栈_stack">使用堆栈 stack</h3>
 
 <pre>// 无递归数组扁平化，使用堆栈
 // 注意：深度的控制比较低效，因为需要检查每一个值的深度

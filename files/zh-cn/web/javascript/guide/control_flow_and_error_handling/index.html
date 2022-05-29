@@ -7,11 +7,11 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 <p>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}</p>
 
-<p>JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章节我们将带来关于JavaScript语句的一些概览。</p>
+<p>JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章节我们将带来关于 JavaScript 语句的一些概览。</p>
 
-<p> 这一章中的语句，在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript参考</a> 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。</p>
+<p> 这一章中的语句，在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 参考</a> 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。</p>
 
-<p>在JavaScript中，任何表达式(expression)都可以看作一条语句(statement),如果你想了解表达式的详细信息，可以阅读<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">表达式与运算符（Expressions and operators）</a>这一章节。</p>
+<p>在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">表达式与运算符（Expressions and operators）</a>这一章节。</p>
 
 <h2 id="语句块">语句块</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 <p>这里<code>{ x++; }</code>就是语句块。</p>
 
 <div>
-<p><strong>重要</strong>：在ECMAScript 6标准之前，Javascript没有块作用域。在一个块中引入的变量的作用域是包含函数或脚本，并且设置它们的效果会延续到块之外。换句话说，块语句不定义范围。JavaScript中的“独立”块会产生与C或Java中完全不同的结果。示例：</p>
+<p><strong>重要</strong>：在 ECMAScript 6 标准之前，Javascript 没有块作用域。在一个块中引入的变量的作用域是包含函数或脚本，并且设置它们的效果会延续到块之外。换句话说，块语句不定义范围。JavaScript 中的“独立”块会产生与 C 或 Java 中完全不同的结果。示例：</p>
 </div>
 
 <pre class="brush: js">var x = 1;
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 alert(x); // 输出的结果为 2
 </pre>
 
-<p>这段代码的输出是<strong>2</strong>，这是因为块级作用域中的 var x变量声明与之前的声明在同一个作用域内。在C语言或是Java语言中，同样的代码输出的结果是1。</p>
+<p>这段代码的输出是<strong>2</strong>，这是因为块级作用域中的 var x 变量声明与之前的声明在同一个作用域内。在 C 语言或是 Java 语言中，同样的代码输出的结果是 1。</p>
 
 <p>从 ECMAScript 2015 开始，使用 <code>let</code> 和<code>const</code>变量是块作用域的。 更多信息请参考 {{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}}。</p>
 
@@ -58,18 +58,18 @@ alert(x); // 输出的结果为 2
 
 <h3 id="if...else_语句"><code>if...else</code> 语句</h3>
 
-<p>当一个逻辑条件为真，用if语句执行一个语句。当这个条件为假，使用可选择的 else 从句来执行这个语句。if 语句如下所示：</p>
+<p>当一个逻辑条件为真，用 if 语句执行一个语句。当这个条件为假，使用可选择的 else 从句来执行这个语句。if 语句如下所示：</p>
 
 <pre class="brush: js">if (condition) {
   statement_1;
 }else {
   statement_2;
-} //推荐使用严格的语句块模式，语句else可选
+} //推荐使用严格的语句块模式，语句 else 可选
 </pre>
 
-<p>条件可以是任何返回结果被计算为true 或 false的表达式。如果条件表达式返回的是 true，statement_1 语句会被执行；否则，statement_2 被执行。statement_1 和 statement_2 可以是任何语句，甚至你可以将另一个if语句嵌套其中。 </p>
+<p>条件可以是任何返回结果被计算为 true 或 false 的表达式。如果条件表达式返回的是 true，statement_1 语句会被执行；否则，statement_2 被执行。statement_1 和 statement_2 可以是任何语句，甚至你可以将另一个 if 语句嵌套其中。 </p>
 
-<p>你也可以组合语句通过使用 <code>else if</code> 来测试连续多种条件判断，就像下面一样:</p>
+<p>你也可以组合语句通过使用 <code>else if</code> 来测试连续多种条件判断，就像下面一样：</p>
 
 <pre class="brush: js">if (condition_1) {
   statement_1;
@@ -82,14 +82,14 @@ alert(x); // 输出的结果为 2
 }
 </pre>
 
-<p>要执行多个语句，可以使用语句块({ ... }) 来分组这些语句。通常，总是使用语句块是一个好的习惯，特别是在代码涉及比较多的 if 语句时:</p>
+<p>要执行多个语句，可以使用语句块 ({ ... }) 来分组这些语句。通常，总是使用语句块是一个好的习惯，特别是在代码涉及比较多的 if 语句时：</p>
 
 <pre class="brush: js">if (条件) {
-  当条件为真的时候，执行语句1;
-  当条件为真的时候，执行语句2;
+  当条件为真的时候，执行语句 1;
+  当条件为真的时候，执行语句 2;
 } else {
-  当条件为假的时候，执行语句3;
-  当条件为假的时候，执行语句4;
+  当条件为假的时候，执行语句 3;
+  当条件为假的时候，执行语句 4;
 }
 </pre>
 
@@ -137,7 +137,7 @@ if (b == true) // 结果视为假</pre>
 
 <h4 id="示例_2"><strong>示例</strong></h4>
 
-<p>在以下示例中，如果<code>Text</code>对象中的字符数为3，函数<code>checkData</code>将返回<code>true</code>；否则，显示警报并返回<code>false</code>。</p>
+<p>在以下示例中，如果<code>Text</code>对象中的字符数为 3，函数<code>checkData</code>将返回<code>true</code>；否则，显示警报并返回<code>false</code>。</p>
 
 <pre class="brush: js">function checkData() {
   if (document.form1.threeChar.value.length == 3) {
@@ -168,12 +168,12 @@ if (b == true) // 结果视为假</pre>
 }
 </pre>
 
-<p>程序首先查找一个与 <code>expression </code>匹配的 <code>case </code>语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值， 程序会去找 <code>default </code>语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 <code>default</code>，程序会继续执行 <code>switch </code>语句后面的语句。<code>default</code> 语句通常出现在switch语句里的最后面，当然这不是必须的。</p>
+<p>程序首先查找一个与 <code>expression </code>匹配的 <code>case </code>语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值， 程序会去找 <code>default </code>语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 <code>default</code>，程序会继续执行 <code>switch </code>语句后面的语句。<code>default</code> 语句通常出现在 switch 语句里的最后面，当然这不是必须的。</p>
 
-<p><code>可选的 break</code> 语句与每个 <code>case</code> 语句相关联， 保证在匹配的语句被执行后程序可以跳出 <code>switch </code>并且继续执行 <code>switch</code> 后面的语句。如果break被忽略，则程序将继续执行switch语句中的下一条语句。</p>
+<p><code>可选的 break</code> 语句与每个 <code>case</code> 语句相关联， 保证在匹配的语句被执行后程序可以跳出 <code>switch </code>并且继续执行 <code>switch</code> 后面的语句。如果 break 被忽略，则程序将继续执行 switch 语句中的下一条语句。</p>
 
 <p><strong>示例</strong><br>
- 在如下示例中, 如果 <code>fruittype</code> 等于 "Bananas", 程序匹配到对应 "Bananas" 的<code>case</code> 语句，并执行相关语句。 当执行到 <code>break</code> 时，程序结束了 <code>switch</code> 并执行 <code>switch</code> 后面的语句。 如果不写 <code>break</code> ，那么程序将会执行 <code>case "Cherries"</code> 下的语句。</p>
+ 在如下示例中，如果 <code>fruittype</code> 等于 "Bananas", 程序匹配到对应 "Bananas" 的<code>case</code> 语句，并执行相关语句。 当执行到 <code>break</code> 时，程序结束了 <code>switch</code> 并执行 <code>switch</code> 后面的语句。 如果不写 <code>break</code> ，那么程序将会执行 <code>case "Cherries"</code> 下的语句。</p>
 
 <pre class="brush: js">switch (fruittype) {
    case "Oranges":
@@ -233,7 +233,7 @@ throw {toString: function() { return "I'm an object!"; } };
 </pre>
 
 <div class="note">
-  <p><strong>备注：</strong>你可以在抛出异常时声明一个对象。那你就可以在catch块中查询到对象的属性。</p>
+  <p><strong>备注：</strong>你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。</p>
 </div>
 
 <pre class="brush: js">// Create an object type UserException
@@ -255,7 +255,7 @@ throw new UserException("Value too high");</pre>
 
 <p><code>try...catch</code> 语句标记一块待尝试的语句，并规定一个以上的响应应该有一个异常被抛出。如果我们抛出一个异常，<code>try...catch</code>语句就捕获它。</p>
 
-<p><code>try...catch</code> 语句有一个包含一条或者多条语句的try代码块，0个或1个的<code>catch</code>代码块，catch代码块中的语句会在try代码块中抛出异常时执行。 换句话说，如果你在try代码块中的代码如果没有执行成功，那么你希望将执行流程转入catch代码块。如果try代码块中的语句（或者<code>try</code> 代码块中调用的方法）一旦抛出了异常，那么执行流程会立即进入<code>catch</code> 代码块。如果try代码块没有抛出异常，catch代码块就会被跳过。<code>finally</code> 代码块总会紧跟在try和catch代码块之后执行，但会在try和catch代码块之后的其他代码之前执行。</p>
+<p><code>try...catch</code> 语句有一个包含一条或者多条语句的 try 代码块，0 个或 1 个的<code>catch</code>代码块，catch 代码块中的语句会在 try 代码块中抛出异常时执行。 换句话说，如果你在 try 代码块中的代码如果没有执行成功，那么你希望将执行流程转入 catch 代码块。如果 try 代码块中的语句（或者<code>try</code> 代码块中调用的方法）一旦抛出了异常，那么执行流程会立即进入<code>catch</code> 代码块。如果 try 代码块没有抛出异常，catch 代码块就会被跳过。<code>finally</code> 代码块总会紧跟在 try 和 catch 代码块之后执行，但会在 try 和 catch 代码块之后的其他代码之前执行。</p>
 
 <p>下面的例子使用了<code>try...catch</code>语句。示例调用了一个函数用于从一个数组中根据传递值来获取一个月份名称。如果该值与月份数值不相符，会抛出一个带有<code>"InvalidMonthNo"</code>值的异常，然后在捕捉块语句中设<code>monthName</code>变量为<code>unknown</code>。</p>
 
@@ -287,7 +287,7 @@ catch (e) {
 }
 </pre>
 
-<p>捕捉块指定了一个标识符（上述语句中的<code>catchID</code>）来存放抛出语句指定的值；你可以用这个标识符来获取抛出的异常信息。在插入<code>throw</code>块时JavaScript创建这个标识符；标识符只存在于<code>catch</code>块的存续期间里；当<code>catch</code>块执行完成时，标识符不再可用。</p>
+<p>捕捉块指定了一个标识符（上述语句中的<code>catchID</code>）来存放抛出语句指定的值；你可以用这个标识符来获取抛出的异常信息。在插入<code>throw</code>块时 JavaScript 创建这个标识符；标识符只存在于<code>catch</code>块的存续期间里；当<code>catch</code>块执行完成时，标识符不再可用。</p>
 
 <p>举个例子，下面代码抛出了一个异常。当异常出现时跳到<code>catch</code>块。</p>
 
@@ -302,9 +302,9 @@ catch (e) {
 
 <h4 id="finally块"><code>finally</code>块</h4>
 
-<p><code>finally</code>块包含了在try和catch块完成后、下面接着try...catch的语句之前执行的语句。<code>finally</code>块无论是否抛出异常都会执行。如果抛出了一个异常，就算没有异常处理，<code>finally</code>块里的语句也会执行。</p>
+<p><code>finally</code>块包含了在 try 和 catch 块完成后、下面接着 try...catch 的语句之前执行的语句。<code>finally</code>块无论是否抛出异常都会执行。如果抛出了一个异常，就算没有异常处理，<code>finally</code>块里的语句也会执行。</p>
 
-<p>你可以用<code>finally</code>块来令你的脚本在异常发生时优雅地退出；举个例子，你可能需要在绑定的脚本中释放资源。接下来的例子用文件处理语句打开了一个文件（服务端的JavaScript允许你进入文件）。如果在文件打开时一个异常抛出，<code>finally</code>块会在脚本错误之前关闭文件。</p>
+<p>你可以用<code>finally</code>块来令你的脚本在异常发生时优雅地退出；举个例子，你可能需要在绑定的脚本中释放资源。接下来的例子用文件处理语句打开了一个文件（服务端的 JavaScript 允许你进入文件）。如果在文件打开时一个异常抛出，<code>finally</code>块会在脚本错误之前关闭文件。</p>
 
 <pre class="brush: js">openMyFile();
 try {
@@ -369,7 +369,7 @@ try {
 
 <h4 id="Nesting_try...catch_Statements">嵌套 try...catch 语句</h4>
 
-<p>你可以嵌套一个或多个<code>try ... catch</code>语句。如果一个内部<code>try ... catch</code>语句没有<code>catch</code>块，它需要有一个<code>finally</code>块，并且封闭的<code>try ... catch</code>语句的<code>catch</code>块被检查匹配。有关更多信息，请参阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch">try... catch</a>参考页上的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">嵌套try-blocks</a>。</p>
+<p>你可以嵌套一个或多个<code>try ... catch</code>语句。如果一个内部<code>try ... catch</code>语句没有<code>catch</code>块，它需要有一个<code>finally</code>块，并且封闭的<code>try ... catch</code>语句的<code>catch</code>块被检查匹配。有关更多信息，请参阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch">try... catch</a>参考页上的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">嵌套 try-blocks</a>。</p>
 
 <h3 id="使用Error对象">使用<code>Error</code>对象</h3>
 

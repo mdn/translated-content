@@ -22,12 +22,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 
 <dl>
  <dt><code>separator</code> {{optional_inline}}</dt>
- <dd>指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（<code>,</code>）分隔。如果<code>separator</code>是空字符串(<code>""</code>)，则所有元素之间都没有任何字符。</dd>
+ <dd>指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（<code>,</code>）分隔。如果<code>separator</code>是空字符串 (<code>""</code>)，则所有元素之间都没有任何字符。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为0，则返回空字符串。</p>
+<p>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为 0，则返回空字符串。</p>
 
 <h2 id="Description">描述</h2>
 
@@ -44,10 +44,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 <p>下例首先创建了一个数组 <code>a</code>，包含有三个元素，然后用四种不同的分隔符连接所有数组元素。首先是默认的分隔符逗号，然后是一个逗号加空格，接下来是一个加号前后加空格，最后是一个空字符串。</p>
 
 <pre class="brush: js">var a = ['Wind', 'Rain', 'Fire'];
-var myVar1 = a.join();      // myVar1的值变为"Wind,Rain,Fire"
-var myVar2 = a.join(', ');  // myVar2的值变为"Wind, Rain, Fire"
-var myVar3 = a.join(' + '); // myVar3的值变为"Wind + Rain + Fire"
-var myVar4 = a.join('');    // myVar4的值变为"WindRainFire"
+var myVar1 = a.join();      // myVar1 的值变为"Wind,Rain,Fire"
+var myVar2 = a.join(', ');  // myVar2 的值变为"Wind, Rain, Fire"
+var myVar3 = a.join(' + '); // myVar3 的值变为"Wind + Rain + Fire"
+var myVar4 = a.join('');    // myVar4 的值变为"WindRainFire"
 </pre>
 
 <h3 id="连接类数组对象">连接类数组对象</h3>

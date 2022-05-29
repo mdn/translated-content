@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Operators/await
 
 <h2 id="描述">描述</h2>
 
-<p>await 表达式会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，等待 Promise 处理完成。若 Promise 正常处理(fulfilled)，其回调的resolve函数参数作为 await 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。</p>
+<p>await 表达式会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，等待 Promise 处理完成。若 Promise 正常处理 (fulfilled)，其回调的 resolve 函数参数作为 await 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。</p>
 
-<p>若 Promise 处理异常(rejected)，await 表达式会把 Promise 的异常原因抛出。</p>
+<p>若 Promise 处理异常 (rejected)，await 表达式会把 Promise 的异常原因抛出。</p>
 
 <p>另外，如果 await 操作符后的表达式的值不是一个 Promise，则返回该值本身。</p>
 
@@ -54,7 +54,7 @@ f1();
 
 </pre>
 
-<p>如果该值不是一个 Promise，await 会把该值转换为已正常处理的Promise，然后等待其处理结果。</p>
+<p>如果该值不是一个 Promise，await 会把该值转换为已正常处理的 Promise，然后等待其处理结果。</p>
 
 <pre class="brush: js">async function f2() {
   var y = await 20;
