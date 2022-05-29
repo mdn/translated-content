@@ -5,9 +5,9 @@ translation_of: 'Web/CSS/::slotted'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><strong><code>:slotted()</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a> 用于选定那些被放在 HTML模板 中的元素 (更多请查看 <a href="/zh-CN/docs/Web/Web_Components/Using_templates_and_slots">使用模板和插槽</a>).</p>
+<p><strong><code>:slotted()</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a> 用于选定那些被放在 HTML 模板中的元素 (更多请查看 <a href="/zh-CN/docs/Web/Web_Components/Using_templates_and_slots">使用模板和插槽</a>)。</p>
 
-<p>这个伪类选择器仅仅适用于 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">影子节点树(Shadow Dom)</a>. 并且只会选择实际的元素节点， 而不包括文本节点.</p>
+<p>这个伪类选择器仅仅适用于 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">影子节点树 (Shadow Dom)</a>。并且只会选择实际的元素节点， 而不包括文本节点。</p>
 
 <pre class="brush: css no-line-numbers">/* Selects any element placed inside a slot */
 ::slotted(*) {
@@ -26,9 +26,9 @@ translation_of: 'Web/CSS/::slotted'
 
 <h2 id="样例">样例</h2>
 
-<p>下面的小片段是关于 <a href="https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element">插槽伪类元素</a> 小demo (<a href="https://mdn.github.io/web-components-examples/slotted-pseudo-element/">点击查看实例</a>).</p>
+<p>下面的小片段是关于 <a href="https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element">插槽伪类元素</a> 小 demo (<a href="https://mdn.github.io/web-components-examples/slotted-pseudo-element/">点击查看实例</a>).</p>
 
-<p>在这个小demo 中, 我们使用一个带有3个插槽的HTML模板:</p>
+<p>在这个小 demo 中，我们使用一个带有 3 个插槽的 HTML 模板：</p>
 
 <pre class="brush: html">&lt;template id="person-template"&gt;
   &lt;div&gt;
@@ -41,7 +41,7 @@ translation_of: 'Web/CSS/::slotted'
   &lt;/div&gt;
 &lt;/template&gt;</pre>
 
-<p>自定义元素 <code>&lt;person-details&gt;</code> 的定义如下:</p>
+<p>自定义元素 <code>&lt;person-details&gt;</code> 的定义如下：</p>
 
 <pre class="brush: js">customElements.define('person-details',
   class extends HTMLElement {
@@ -64,9 +64,9 @@ translation_of: 'Web/CSS/::slotted'
   }
 })</pre>
 
-<p>为了更好地区分<strong>未被成功填充的插槽</strong>和<strong>成功填充的插槽</strong>, 我们在CSS中选择了所有的插槽元素(<code>::slotted(*)</code>), 并填充了不一样的颜色和字体. 结果也是如此.</p>
+<p>为了更好地区分<strong>未被成功填充的插槽</strong>和<strong>成功填充的插槽</strong>, 我们在 CSS 中选择了所有的插槽元素 (<code>::slotted(*)</code>), 并填充了不一样的颜色和字体。结果也是如此。</p>
 
-<p>元素就像如下被填充了起来:</p>
+<p>元素就像如下被填充了起来：</p>
 
 <pre class="brush: html">&lt;person-details&gt;
   &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
