@@ -18,7 +18,9 @@ La méthode **`Number.isInteger()`** permet de déterminer si l'argument est un 
 
 ## Syntaxe
 
-    Number.isInteger(valeurÀTester)
+```js
+Number.isInteger(valeurÀTester)
+```
 
 ### Paramètres
 
