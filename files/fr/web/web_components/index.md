@@ -13,7 +13,7 @@ On essaie tant que possible de réutiliser du code. Cette réutilisation n'a pas
 
 Les composants web (<i lang="en">Web Components</i> en anglais) visent à résoudre ces problèmes. Il s'agit de trois technologies qui peuvent être combinées ensemble pour créer des éléments sur mesure avec des fonctionnalités encapsulées et qu'on peut réutiliser à volonté, sans risque de collisions.
 
-- **Les éléments personnalisés (<i lang="en">custom elements</i>)**&nbsp;: un ensemble d'API JavaScript qui permettent de définir des éléments personnalisés ainsi que leur comportement
+- **Les éléments personnalisés (<i lang="en">custom elements</i>)**&nbsp;: un ensemble d'API JavaScript qui permettent de définir des éléments personnalisés ainsi que leur comportement.
 - **Le <i lang="en">Shadow DOM</i>**&nbsp;: un ensemble d'API JavaScript qui permettent d'attacher un DOM «&nbsp;sombre&nbsp;» encapsulé à un élément, qui est rendu séparément du DOM du document principal et de contrôler les fonctionnalités associées. Ainsi, les fonctionnalités d'un élément peuvent être gardées privées pour que la mise en forme et le script puissent être appliqués sans risque de collision avec les autres parties du document.
 - **Les gabarits HTML**&nbsp;: les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) permettent d'écrire des gabarits de balisage qui ne sont pas affichés sur la page et qui peuvent être réutilisés comme base de la structure d'un élément personnalisé.
 
