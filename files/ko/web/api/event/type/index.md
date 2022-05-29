@@ -10,11 +10,11 @@ translation_of: Web/API/Event/type
 ---
 {{APIRef}}
 
-{{domxref("Event")}} 인터페이스의 **`type`** 읽기 전용 속성은 이벤트의 유형을 나타내는 문자열을 반환합니다. 이 속성은 이벤트를 생성할 때 설정되며, `click`, `load`, `error`처럼 특정 이벤트를 지칭할 때 사용하는 그 이름과 같습니다.
+{{domxref("Event")}} 인터페이스의 **`type`** 읽기 전용 속성은 이벤트의 유형을 나타내는 문자열을 반환합니다. 이 속성은 이벤트를 생성할 때 설정되며, `click`, `load`, `error`처럼 특정 이벤트를 지칭할 때 사용하는 이름과 같은 값을 반환합니다.
 
 ## 값
 
-{{domxref("Event")}}의 유형을 나타내는 {{jdxref("String")}}.
+{{domxref("Event")}}의 유형을 나타내는 {{jdxref("String")}}입니다.
 
 ## 예제
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Event/type
 ### HTML
 
 ```html
-<p>아무 키를 누르거나 마우스를 클릭해서 이벤트 유형을 알아보세요.</p>
+<p>아무 키나 누르거나 마우스를 클릭해서 이벤트 유형을 알아보세요.</p>
 <p id="log"></p>
 ```
 
