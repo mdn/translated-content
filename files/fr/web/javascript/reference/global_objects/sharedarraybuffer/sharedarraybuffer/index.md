@@ -26,7 +26,7 @@ new SharedArrayBuffer(longueur)
 
 ### Valeur de retour
 
-Un nouvel objet `SharedArrayBuffer` de la taille indiquée et dont les éléments du tableau sont initialisés à 0.
+Un nouvel objet `SharedArrayBuffer` de la taille indiquée et dont les éléments du tableau sont initialisés à `0`.
 
 ## Exemples
 
@@ -35,13 +35,13 @@ Un nouvel objet `SharedArrayBuffer` de la taille indiquée et dont les élément
 Le constructeur `SharedArrayBuffer()` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler le constructeur `SharedArrayBuffer()` comme une fonction, c'est-à-dire sans utiliser `new`, déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js example-bad
-let sab = SharedArrayBuffer(1024);
+const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden
 ```
 
 ```js example-good
-let sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 ```
 
 ## Spécifications

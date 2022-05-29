@@ -41,18 +41,18 @@ Cette proposition définit également un nouvel ensemble d'instructions [atomiqu
 
 ## Voir aussi
 
-- [Explication des en-têtes `Cross-Origin-Opener-Policy` et `Cross-Origin-Embedder-Policy` (en anglais)](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit).
-- `Cross-Origin-Opener-Policy`
-  - [Issue n°3740 sur le dépôt whatwg/html](https://github.com/whatwg/html/issues/3740),
+- [Explication des en-têtes `Cross-Origin-Opener-Policy` et `Cross-Origin-Embedder-Policy` (en anglais)](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit)
+- `Cross-Origin-Opener-Policy`&nbsp;:
+  - [Issue n°3740 sur le dépôt `whatwg/html`](https://github.com/whatwg/html/issues/3740),
   - [Brouillon de spécification](https://gist.github.com/annevk/6f2dd8c79c77123f39797f6bdac43f3e).
-- `Cross-Origin-Embedder-Policy`
-  - [Issue n°4175 sur le dépôt whatwg/html](https://github.com/whatwg/html/issues/4175),
+- `Cross-Origin-Embedder-Policy`&nbsp;:&nbsp;:
+  - [Issue n°4175 sur le dépôt `whatwg/html`](https://github.com/whatwg/html/issues/4175),
   - [Brouillon de spécification](https://mikewest.github.io/corpp/).
-- `Cross-Origin-Resource-Policy`
+- `Cross-Origin-Resource-Policy`&nbsp;:
   - [Standardisée avec l'API Fetch](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header)
   - La nouvelle valeur `cross-origin` fait partie des travaux sur `Cross-Origin-Embedder-Policy`.
 - Modifications apportées à `postMessage()` et [`self.crossOriginIsolated`](/fr/docs/Web/API/crossOriginIsolated)
-  - [Issue #4732 sur le dépôt whatwg/html](https://github.com/whatwg/html/issues/4732),
-  - [Issue #4872 sur le dépôt whatwg/html](https://github.com/whatwg/html/issues/4872),
+  - [Issue n°4732 sur le dépôt `whatwg/html`](https://github.com/whatwg/html/issues/4732),
+  - [Issue n°4872 sur le dépôt `whatwg/html`](https://github.com/whatwg/html/issues/4872),
   - [Brouillon de spécification](https://github.com/whatwg/html/pull/4734).
 - [Mises à jour quant à `SharedArrayBuffer` pour Chrome pour Android 88 et Chrome pour ordinateur 92 (en anglais)](https://developer.chrome.com/blog/enabling-shared-array-buffer/)
