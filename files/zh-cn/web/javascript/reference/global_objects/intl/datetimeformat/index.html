@@ -59,26 +59,26 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
  <dl>
   <dt><code>weekday</code></dt>
-  <dd>工作日的展现方式。可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>工作日的展现方式：可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>era</code></dt>
-  <dd>纪元的展现方式。可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>纪元的展现方式。可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>year</code></dt>
-  <dd>年的展现方式.  可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>年的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>month</code></dt>
-  <dd>月的展现方式。可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>, <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>月的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>, <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>day</code></dt>
-  <dd>日的展现方式。可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>日的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>hour</code></dt>
-  <dd>时的展现方式。可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>时的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>minute</code></dt>
-  <dd>分钟的展现方式。可能的值有 <code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>分钟的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>second</code></dt>
-  <dd>秒的展现方式. 可能的值有<code>"numeric"</code>, <code>"2-digit"</code>.</dd>
+  <dd>秒的展现方式：可能的值有<code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>timeZoneName</code></dt>
-  <dd>时区名称的展现方式。可能的值有 <code>"short"</code>, <code>"long"</code>.</dd>
+  <dd>时区名称的展现方式：可能的值有 <code>"short"</code>, <code>"long"</code></dd>
  </dl>
 
- <p>每个日期时间组件属性的默认值都是{{jsxref("undefined")}},但是若所有的组件属性都是{{jsxref("undefined")}},那么<code>year</code>, <code>month</code>, and <code>day</code> 的值就都被认为是"<code>numeric</code>".</p>
+ <p>每个日期时间组件属性的默认值都是 {{jsxref("undefined")}}，但是若所有的组件属性都是 {{jsxref("undefined")}}，那么 <code>year</code>、<code>month</code> 和 <code>day</code> 的值就都被认为是 <code>numeric</code>。</p>
  </dd>
 </dl>
 
@@ -146,35 +146,35 @@ console.log(new Intl.DateTimeFormat('en-GB').format(date));
 console.log(new Intl.DateTimeFormat('ko-KR').format(date));
 // → "2012. 12. 20."
 
-//大部分阿拉伯国家使用阿拉伯字母 (real Arabic digits)
+// 大部分阿拉伯国家使用阿拉伯字母 (real Arabic digits)
 console.log(new Intl.DateTimeFormat('ar-EG').format(date));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
-//在日本，应用可能想要使用日本日历，
-//2012 是平成 24 年（平成是是日本天皇明仁的年号，由 1989 年 1 月 8 日起开始计算直至现在）
+// 在日本，应用可能想要使用日本日历，
+// 2012 是平成 24 年（平成是是日本天皇明仁的年号，由 1989 年 1 月 8 日起开始计算直至现在）
 console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
 // → "平成 24/12/20"
 
-//当请求一个语言可能不支持，如巴厘 (ban)，若有备用的语言印尼语 (id)，
-//那么将使用印尼语 (id)
+// 当请求一个语言可能不支持，如巴厘 (ban)，若有备用的语言印尼语 (id)，
+// 那么将使用印尼语 (id)
 console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 // → "20/12/2012"
 </pre>
 
 <h3 id="使用options">使用<code>options</code></h3>
 
-<p>可以使用 <code>options </code>参数来自定义 日期时间格式化方法返回的字符串。</p>
+<p>可以使用 <code>options</code> 参数来自定义日期时间格式化方法返回的字符串。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-//请求参数 (options) 中包含参数星期 (weekday)，并且该参数的值为长类型 (long)
+// 请求参数 (options) 中包含参数星期 (weekday)，并且该参数的值为长类型 (long)
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 console.log(new Intl.DateTimeFormat('de-DE', options).format(date));
 // → "Donnerstag, 20. Dezember 2012"
 
-// 一个应用使用 世界标准时间 (UTC),并且 UTC 使用短名字 (short) 展示
+// 一个应用使用世界标准时间 (UTC)，并且 UTC 使用短名字 (short) 展示
 options.timeZone = 'UTC';
-options.timeZoneName = 'short';//若不写这一行那么仍然显示的是世界标准时间；但是 GMT 三个字母不会显示
+options.timeZoneName = 'short'; // 若不写这一行那么仍然显示的是世界标准时间；但是 GMT 三个字母不会显示
 console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // → "Thursday, December 20, 2012, GMT"
 
