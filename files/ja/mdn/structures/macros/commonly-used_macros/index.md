@@ -3,208 +3,295 @@ title: よく使われるマクロ
 slug: MDN/Structures/Macros/Commonly-used_macros
 tags:
   - CSS
-  - Macros
-  - Reference
-  - Structures
+  - マクロ
+  - リファレンス
+  - 構造
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 ---
-<p>{{MDNSidebar}}</p>
-
-<p><span class="seoSummary">このページには MDN で使うために作られた汎用のマクロがたくさん掲載されています。これらのマクロの使い方については、<a href="/ja/docs/MDN/Contribute/Structures/Macros"> マクロの使い方</a> と <a href="/ja/docs/MDN/Contribute/Editor/Links#Using_link_macros">リンクを生成するマクロ</a> を見てください。</span> <a href="/ja/docs/MDN/Contribute/Structures/Macros/Other">その他のマクロ</a> には、めったに使われないマクロ、特殊な文脈でのみ使われるマクロ、使用が推奨されないマクロについての情報が書かれています。また、<a href="/ja/dashboards/macros">MDNで使用できるマクロの完全な一覧</a>もあります。</p>
-
-<p><a href="/ja/docs/MDN/Contribute/Guidelines/CSS_style_guide">CSS スタイルガイド</a>も見てください。</p>
-
-<h2 id="Linking" name="Linking">リンク</h2>
-
-<h3 id="Creating_a_single_hyperlink" name="Creating_a_single_hyperlink">単一のハイパーリンクを作成する</h3>
-
-<p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">一般的に、単なるリンクを作成するためにマクロを使う必要はありません。エディターインターフェイスにある <strong>リンク</strong> ボタンを使えば、リンクを作成できます。</p>
-
-<ul>
- <li>{{TemplateLink("Glossary")}} マクロは MDN <a href="/ja/docs/Glossary">用語集</a>の中の指定した用語のエントリへのリンクを作成するのに使います。このマクロは、1つの必須の引数または2つの任意の引数を受け付けます。
-
-  <p>例:</p>
-
-  <ol>
-   <li>用語の名前 (例えば "HTML")</li>
-   <li>用語の名前の代わりに記事内に表示するテキスト (これはあまり使用するべきではありません)。 {{Optional_Inline}}</li>
-   <li>この引数が指定されており 0 以外である場合、用語集へのリンクに使われるカスタムスタイルが適用されません。{{Optional_Inline}}</li>
-  </ol>
-
-  <ul>
-   <li><code>\{{Glossary("HTML")}}</code> の表示は {{Glossary("HTML")}} となり、</li>
-   <li><code>\{{Glossary("CSS", "カスケーディングスタイルシート")}}</code> の表示は {{Glossary("CSS", "カスケーディングスタイルシート")}} となり、</li>
-   <li><code>\{{Glossary("HTML", "", 1)}}</code> の表示は {{Glossary("HTML", "", 1)}} となります。</li>
-  </ul>
- </li>
- <li>{{TemplateLink("anch")}} - ページ内の節へのリンクを生成
-  <ul>
-   <li><code>\<a href="#linking_to_pages_in_references">Linking to pages in references</a></code></li>
-   <li>
-    <p>デモ: <a href="#linking_to_pages_in_references">Linking to pages in references</a></p>
-   </li>
-  </ul>
- </li>
-</ul>
-
-<h3 id="Linking_to_pages_in_references" name="Linking_to_pages_in_references">リファレンス内のページへのリンク</h3>
-
-<p>いろいろなマクロがあり、MDN の指定したリファレンスエリア内のページへのリンクを作成することができます。</p>
-
-<ul>
- <li>{{TemplateLink("cssxref")}} は、<a href="/ja/docs/Web/CSS/Reference">CSS リファレンス</a>のページにリンクします。<br>
-  例: <code>\{{CSSxRef("cursor")}}</code> の結果は {{CSSxRef("cursor")}} になります</li>
- <li>{{TemplateLink("domxref")}} は DOM リファレンス内のページにリンクします。最後にカッコを入れると、関数名のようにリンクが表示されます。たとえば、<code>\{{DOMxRef("document.getElementsByName()")}}</code> は {{DOMxRef("document.getElementsByName()")}} になります。<code>\{{DOMxRef("Node")}}</code> は {{DOMxRef("Node")}} になります</li>
- <li>{{TemplateLink("event")}} は DOM イベントリファレンスのページにリンクします。たとえば、<code>\{{Event("change")}}</code> は {{Event("change")}} になります</li>
- <li>{{TemplateLink("HTMLElement")}} は HTML リファレンスの HTML 要素にリンクします</li>
- <li>{{TemplateLink("htmlattrxref")}} は HTML 属性にリンクします。属性のみを指定する場合はグローバル属性の、属性名と要素名を指定する場合は特定の要素に関連付けられた属性の説明にリンクします。たとえば、<code>\{{HTMLAttrxRef("lang")}}</code> は {{HTMLAttrxRef("lang")}} のリンクを生成します。<code>\{{HTMLAttrxRef("type","input")}}</code> は {{htmlattrxref("type","input")}} のリンクを生成します。</li>
- <li>{{TemplateLink("jsxref")}} は <a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a>のページにリンクします。</li>
- <li>{{TemplateLink("SVGAttr")}} は特定の SVG 属性にリンクします。たとえば、<code>\{{SVGAttr("d")}}</code> は {{SVGAttr("d")}} のリンクを生成します。</li>
- <li>{{TemplateLink("SVGElement")}} は SVG リファレンスの SVG 要素にリンクします。</li>
- <li>{{TemplateLink("HTTPHeader")}} は <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a>にリンクします。</li>
- <li>{{TemplateLink("HTTPMethod")}} は <a href="/ja/docs/Web/HTTP/Methods">HTTP リクエストメソッド</a>にリンクします。</li>
- <li>{{TemplateLink("HTTPStatus")}} は <a href="/ja/docs/Web/HTTP/Status">HTTP レスポンスステータスコード</a>にリンクします。</li>
-</ul>
-
-<h3 id="Linking_to_bugs" name="Linking_to_bugs">バグへのリンク</h3>
-
-<ul>
- <li>バグ
-  <ul>
-   <li>{{TemplateLink("bug")}} を使うと、 bugzilla.mozilla.org に登録されているバグへのリンクを簡単に作ることができます。文法は <code>\{{Bug(123456)}}</code> です。 {{Bug(123456)}} のようなリンクになります。</li>
-   <li>{{TemplateLink("WebkitBug")}} は WebKit バグのデータベースへのリンクを挿入します。例えば <code>\{{WebkitBug(31277)}}</code> は {WebkitBug(31277)}} のようになります。</li>
-  </ul>
- </li>
-</ul>
-
-<h3 id="Navigation_aids_for_multi-page_guides" name="Navigation_aids_for_multi-page_guides">複数のページからなるガイドのためのナビゲーション補助</h3>
-
-<p>{{TemplateLink("Previous")}}、{{TemplateLink("Next")}}、{{TemplateLink("PreviousNext")}} は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す1つの引数が必要です。{{TemplateLink("PreviousNext")}} については、前の記事、次の記事を指す 2つの引数を取ります。最初の引数が前の記事を指し、2番めの引数が次の記事を指します。</p>
-
-<h2 id="Code_samples" name="Code_samples">コードのサンプル</h2>
-
-<h3 id="Live_samples" name="Live_samples">Live サンプル</h3>
-
-<ul>
- <li>{{TemplateLink("EmbedLiveSample")}} はコードサンプルの出力をページに埋め込むのに使います。解説は <a href="/ja/docs/MDN/Contribute/Structures/Live_samples">Live サンプル</a>のページにあります</li>
- <li>{{TemplateLink("LiveSampleLink")}} はコードサンプルの出力を含むページへのリンクを作成します。解説は <a href="/ja/docs/MDN/Contribute/Structures/Live_samples">Live サンプル</a>のページにあります</li>
-</ul>
-
-<h2 id="Sidebar_generation" name="Sidebar_generation">サイドバーの生成</h2>
-
-<p>ほぼすべての大きなページの集まりについて、雛形があります。典型的には、リファレンス、ガイド、チュートリアルでメインページに戻るためのリンク (パンくずリストではできないことがある) を提供し、記事を適切なカテゴリに配置します。</p>
-
-<ul>
- <li>{{TemplateLink("CSSRef")}} は CSS リファレンスページのサイドバーを生成します</li>
- <li>{{TemplateLink("HTMLRef")}} は HTML リファレンスページのサイドバーを生成します</li>
- <li>{{TemplateLink("APIRef")}} は Web API リファレンスページのサイドバーを生成します</li>
-</ul>
-
-<h2 id="General-purpose_formatting" name="General-purpose_formatting">汎用の書式</h2>
-
-<h3 id="Inline_indicators_for_API_documentation" name="Inline_indicators_for_API_documentation">API 文書のためのインラインインジケーター</h3>
-
-<p>{{TemplateLink("optional_inline")}} と {{TemplateLink("ReadOnlyInline")}} は API 文書の中で通常、オブジェクトのプロパティまたは関数の引数のリストを記述するのに使われます。</p>
-
-<p>用法: <code>\{{optional_inline()}}</code> または <code>\{{ReadOnlyInline}}</code>. 例:</p>
-
-<dl>
- <dt><code>isCustomObject</code>{{ReadOnlyInline}}</dt>
- <dd><code>true</code> の場合、オブジェクトはカスタムオブジェクトであることを示します。</dd>
- <dt><code>parameterX</code>{{Optional_Inline}}</dt>
- <dd>ごにょごにょごにょ...</dd>
-</dl>
-
-<h2 id="Status_and_compatibility_indicators" name="Status_and_compatibility_indicators">状態と互換性についての表示</h2>
-
-<h3 id="Inline_indicators_with_no_additional_parameters" name="Inline_indicators_with_no_additional_parameters">インラインインジケーター (追加引数なし)</h3>
-
-<h4 id="Non-standard" name="Non-standard">標準外のもの</h4>
-
-<p>{{TemplateLink("non-standard_inline")}} は、その API が標準化されておらず、また標準化の予定もないことを示すインラインマークを付けます。</p>
-
-<h5 id="Syntax" name="Syntax">構文</h5>
-
-<p><code>\{{Non-standard_Inline}}</code></p>
-
-<h5 id="Examples" name="Examples">例</h5>
-
-<ul>
- <li>アイコン: {{Non-standard_Inline}}</li>
-</ul>
-
-<h4 id="Experimental" name="Experimental">実験的なもの</h4>
-
-<p>{{TemplateLink("experimental_inline")}} は、その API が広く実装されておらず、また将来変更される可能性があることを示すインラインマークを付けます。</p>
-
-<h5 id="Syntax_2" name="Syntax_2">構文</h5>
-
-<p><code>\{{Experimental_Inline}}</code></p>
-
-<h5 id="Examples_2" name="Examples_2">例</h5>
-
-<ul>
- <li>アイコン: {{Experimental_Inline}}</li>
-</ul>
-
-<h3 id="Inline_indicators_that_support_specifying_the_technology" name="Inline_indicators_that_support_specifying_the_technology">特定の技術の対応状況を表すインラインインジケーター</h3>
-
-<p>これらのマクロにパラメータを指定する場合は、"html", "js", "css", "gecko",のうちの1つにバージョン番号を加えたものとなります。</p>
-
-<h4 id="Deprecated" name="Deprecated">非推奨のもの</h4>
-
-<p>{{TemplateLink("deprecated_inline")}} はインラインの非推奨(deprecated) マークを付け、その API が公式には非推奨であり、使用を控えるべきであることを示します。<strong>注:</strong> 非推奨 (deprecated) が意味するのは、その項目はもう使用されるべきではないが、まだ機能するものであることです。もう機能しないものを示す用語としては、廃止 (obsolete) を使ってください。</p>
-
-<p>ブラウザー特有の記述 (HTML, API, JS, CSS, …) では、引数を使用しないでください。</p>
-
-<h5 id="Syntax_3" name="Syntax_3">構文</h5>
-
-<p><code>\{{Deprecated_Inline}}</code> または <code>\{{Deprecated_Inline("gecko5")}}</code></p>
-
-<h5 id="Examples_3" name="Examples_3">例</h5>
-
-<ul>
- <li>アイコン: {{Deprecated_Inline}}</li>
- <li>バッジ: {{Deprecated_Inline("gecko5")}}</li>
-</ul>
-
-<h4 id="Obsolete" name="Obsolete">廃止</h4>
-
-<p>{{TemplateLink("obsolete_inline")}} はインラインの廃止 (obsolete) マークを付け、例えばその関数、メソッド、またはプロパティ等を使用してはいけないことを示します。</p>
-
-<p>ブラウザー特有の記述 (HTML, API, JS, CSS, …) では、引数を使用しないでください。</p>
-
-<h5 id="Syntax_4" name="Syntax_4">構文</h5>
-
-<p><code>\{{Obsolete_Inline}}</code> または <code>\{{Obsolete_Inline("js1.8.5")}}</code></p>
-
-<h5 id="Examples_4" name="Examples_4">例</h5>
-
-<ul>
- <li>アイコン: {{Obsolete_Inline}}</li>
- <li>バッジ: {{Obsolete_Inline("js1.8.5")}}</li>
-</ul>
-
-<h3 id="Template_badges" name="Template_badges">テンプレートバッジ</h3>
-
-<p>これらのマクロはほとんど <a href="/ja/docs/Web/API">WebAPI</a> ページで使われます。<a href="#creating_new_badges">Creating new badges</a> に新しいバッジを作成するための情報があります。</p>
-
-<h3 id="Page_or_section_header_indicators" name="Page_or_section_header_indicators">ページまたはセクションのヘッダーを示すインジケーター</h3>
-
-<p>これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。ページ内のセクションをマークアップすることもできます。</p>
-
-<ul>
- <li>{{TemplateLink("non-standard_header")}}: <code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">実験的な機能</a>を説明するページでは {{TemplateLink("SeeCompatTable")}} を使用する必要があります。例: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
- <li>{{TemplateLink("deprecated_header")}}: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
- <li>{{TemplateLink("deprecated_header")}} with parameter: <code>\{{Deprecated_Header("gecko5")}}</code> {{Deprecated_Header("gecko5")}} ブラウザーに依存しない領域 (HTML、API、JS、CSS など) でこの引数を使用しないでください</li>
- <li>{{TemplateLink("obsolete_header")}}: <code>\{{Obsolete_Header}}</code> {{Obsolete_Header}}</li>
- <li>{{TemplateLink("obsolete_header")}} with parameter: <code>\{{Obsolete_Header("gecko30")}}</code> {{Obsolete_Header("gecko30")}} ブラウザーに依存しない領域 (HTML、API、JS、CSS など) でこの引数を使用しないでください</li>
- <li>{{TemplateLink("secureContext_header")}}: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
-</ul>
-
-<h3 id="Indicating_that_a_feature_is_available_in_web_workers" name="Indicating_that_a_feature_is_available_in_web_workers">ウェブワーカーで使用できる機能であることを示す</h3>
-
-<p>{{TemplateLink("AvailableInWorkers")}} マクロは、その機能が<a href="/ja/docs/Web/API/Web_Workers_API">ウェブワーカー</a>のコンテキストで有効であることを示すためのローカライズされた注記ボックスを挿入するのに使われます。</p>
-
-<p>{{AvailableInWorkers}}</p>
+{{MDNSidebar}}
+
+このページには MDN で使うために作られた汎用のマクロの大部分が掲載されています。
+これらのマクロの使い方については、[マクロの使い方](/ja/docs/MDN/Structures/Macros)を参照してください。
+
+[その他のマクロ](/ja/docs/MDN/Structures/Macros/Other)には、めったに使われないマクロ、特殊な文脈でのみ使われるマクロ、使用が推奨されないマクロについての情報が書かれています。
+
+## リンク
+
+MDN では、リファレンスページや用語集などへのリンクを簡単に作成するためのリンクマクロを多数提供しています。
+
+リンクマクロは、簡潔で翻訳に適しているため、通常の HTML リンクよりも推奨されます。
+例えば、マクロを使って作成された用語集やリファレンスのリンクは、翻訳する必要がありません。 他のロケールでは、自動的に正しいバージョンのファイルへリンクされます。
+
+### 用語集へのリンク
+
+[`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs) マクロは、 MDN の[用語集](/ja/docs/Glossary)の中の指定した用語の項目へのリンクを作成するのに使います。
+このマクロは、 1 つの必須の引数または 2 つの任意の引数を受け付けます。
+
+1. 用語の名前（"HTML" など）: `\{{Glossary("HTML")}}` は {{Glossary("HTML")}} となります。
+2. オプション: 記事内で用語名の代わりに表示するテキスト: `\{{Glossary("CSS", "Cascading Style Sheets")}}` は {{Glossary("CSS", "Cascading Style Sheets")}} となります。
+
+### リファレンスのページへのリンク
+
+MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）のページに、ロケールに依存しないリンクを張るためのマクロが用意されています。
+
+マクロの使い方は簡単です。
+必要なのは、第一引数にリンクするアイテムの名前を指定することだけです。
+ほとんどのマクロは、第二引数で表示テキストを変更することができます（ドキュメントは、以下の左端のコラムのリンクから参照できます）。
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th>マクロ</th>
+      <th>リンク先のページ</th>
+      <th>例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/CSS/Reference">CSS リファレンス</a> (/Web/CSS/Reference)
+      </td>
+      <td>
+        <code>\{{CSSxRef("cursor")}}</code> は {{CSSxRef("cursor")}} となります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+      </td>
+      <td><a href="/ja/docs/Web/API">DOM リファレンス</a> (/Web/API)</td>
+      <td>
+        <code>\{{DOMxRef("Document")}}</code> または <code>\{{DOMxRef("document")}}</code> は {{DOMxRef("Document")}} になります。<br />
+        <code>\{{DOMxRef("document.getElementsByName()")}}</code> は {{DOMxRef("document.getElementsByName()")}} になります。<br />
+        <code>\{{DOMxRef("Node")}}</code> は {{DOMxRef("Node")}} になります。<br />
+        第 2 引数を使用して表示するテキストを変更することができます。<code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> は {{DOMxRef("document.getElementsByName()","getElementsByName()")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element">HTML 要素リファレンス</a> (/Web/HTML/Element)
+      </td>
+      <td>
+        <code>\{{HTMLElement("select")}}</code> は {{HTMLElement("select")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
+          >HTMLAttrxRef</a>
+      </td>
+      <td>
+        属性名のみを指定した場合は <a href="/ja/docs/Web/HTML/Global_attributes">HTML のグローバル属性の説明。</a>
+        <br />属性名と要素名を指定した場合は、特定の HTML 要素に関連付けられた属性。
+      </td>
+      <td>
+        <code>\{{HTMLAttrxRef("lang")}}</code> は、グローバル属性の説明 {{HTMLAttrxRef("lang")}} にリンクします。<br />
+        <code>\{{HTMLAttrxRef("type","input")}}</code> は（{{HTMLElement("input")}} 要素の） {{htmlattrxref("type","input")}} 属性へのリンクになります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a> (/Web/JavaScript/Reference).
+      </td>
+      <td>
+        <code>\{{JSxRef("Promise")}}</code> は {{JSxRef("Promise")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/SVG/Attribute">SVG の属性リファレンス</a> (/Web/SVG/Attribute)
+      </td>
+      <td>
+        <code>\{{SVGAttr("d")}}</code> は {{SVGAttr("d")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/SVG/Attribute">SVG 要素リファレンス</a> (/Web/SVG/Element)
+      </td>
+      <td>
+        <code>\{{SVGElement("view")}}</code> は {{SVGElement("view")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a> (/Web/HTTP/Headers).
+      </td>
+      <td>
+        <code>\{{HTTPHeader("ACCEPT")}}</code> は {{HTTPHeader("ACCEPT")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/HTTP/Methods">HTTP リクエストメソッド</a> (/Web/HTTP/Methods).
+      </td>
+      <td>
+        <code>\{{HTTPMethod("HEAD")}}</code> は {{HTTPMethod("HEAD")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+      </td>
+      <td>
+        <a href="/ja/docs/Web/HTTP/Status">HTTP レスポンスステータスコード</a> (/Web/HTTP/Status)
+      </td>
+      <td>
+        <code>\{{HTTPStatus("404")}}</code> は {{HTTPStatus("404")}} になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.
+      </td>
+      <td>
+        <a href="/ja/docs/Web/Events">イベントリファレンス</a> (/Web/Events)
+      </td>
+      <td>
+        <div class="note">
+          <p>
+            <strong>Note:</strong> このマクロは、イベントが関連する DOM 要素の下に移動したため、特に有用ではありません。
+            wheel イベントにリンクするには、 <code>\{{DOMxRef("Document.wheel_event")}}</code> を使用すれば 
+            {{DOMxRef("Document.wheel_event")}} となります。
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### バグへのリンク
+
+- バグ
+
+  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) を使うと、 bugzilla.mozilla.org に登録されているバグへのリンクを簡単に作ることができます。構文は `\{{Bug(123456)}}` です。 {{Bug(123456)}} のようなリンクになります。
+  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) は WebKit バグのデータベースへのリンクを挿入します。例えば `\{{WebkitBug(31277)}}` は {{WebkitBug(31277)}} を挿入します。
+
+### 複数のページからなるガイドのためのナビゲーション補助
+
+[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs)、[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す 1 つの引数が必要です。[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) については、前の記事、次の記事を指す 2 つの引数を取ります。最初の引数が前の記事を指し、2 番めの引数が次の記事を指します。
+
+## コードのサンプル
+
+### ライブサンプル
+
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) はコードサンプルの出力をページに埋め込むのに使います。解説は[ライブサンプル](/ja/docs/MDN/Structures/Live_samples)のページにあります。
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) はコードサンプルの出力を含むページへのリンクを作成します。解説は[ライブサンプル](/ja/docs/MDN/Structures/Live_samples)のページにあります。
+- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) は GitHub ページからライブサンプルを埋め込むことができます。
+  詳しい情報は [GitHub ライブサンプル](/ja/docs/MDN/Structures/Code_examples#github_live_samples)にあります。
+
+## サイドバーの生成
+
+ほぼすべての大きなページの集まりについて、雛形があります。
+典型的には、リファレンス、ガイド、チュートリアルでメインページに戻るためのリンク (パンくずリストではできないことがある) を提供し、記事を適切なカテゴリーに配置します。
+
+- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) は CSS リファレンスページのサイドバーを生成します。
+- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) は HTML リファレンスページのサイドバーを生成します。
+- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) は Web API リファレンスページのサイドバーを生成します。
+
+## 汎用的な書式化
+
+### API ドキュメントのためのインラインインジケーター
+
+[`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) と [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) は API 文書の中で通常、オブジェクトのプロパティまたは関数の引数のリストを記述するのに使われます。
+
+用法: `\{{Optional_Inline}}` または `\{{ReadOnlyInline}}` です。
+例:
+
+- `isCustomObject`{{ReadOnlyInline}}
+  - : `true` の場合、オブジェクトはカスタムオブジェクトであることを示します。
+- `parameterX`{{Optional_Inline}}
+  - : ごにょごにょごにょ...
+
+## 状態と互換性についての表示
+
+### インラインインジケーター (追加引数なし)
+
+#### 標準外のもの
+
+[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) は、その API が標準化されておらず、また標準化の予定もないことを示すインラインマークを付けます。
+
+##### 構文
+
+`\{{Non-standard_Inline}}`
+
+##### 例
+
+- アイコン: {{Non-standard_Inline}}
+
+#### 実験的なもの
+
+[`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) は、その API が広く実装されておらず、また将来変更される可能性があることを示すインラインマークを付けます。
+
+##### 構文
+
+`\{{Experimental_Inline}}`
+
+##### 例
+
+- アイコン: {{Experimental_Inline}}
+
+### 特定の技術の対応状況を表すインラインインジケーター
+
+#### 非推奨のもの
+
+[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) はインラインの非推奨 (deprecated) マークを付け、その API が公式には非推奨であり、使用を控えるべきであることを示します。
+
+##### 構文
+
+`\{{Deprecated_Inline}}`
+
+##### 例
+
+- アイコン: {{Deprecated_Inline}}
+
+### ページまたはセクションのヘッダーを示すインジケーター
+
+これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。ページ内のセクションをマークアップすることもできます。
+
+- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) は[実験的な機能](/ja/docs/MDN/Guidelines/Conventions_definitions#experimental)のドキュメントのページに使用してください。
+  例: `\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
+  インターフェイスページ、 API 概要ページ、 API エントリーポイント（例: `navigator.xyz`）などのメインページで使用するべきですが、通常メソッドやプロパティページなどのサブページでは使用するべきではありません。
+  例: `\{{SecureContext_Header}}` {{SecureContext_Header}}
+
+### ウェブワーカーで使用できる機能であることを示す
+
+[`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) マクロは、その機能が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)のコンテキストで有効であることを示すためのローカライズされた注釈ボックスを挿入するのに使われます。
+引数 `notservice` を使用すると、ある機能がサービスワーカー以外のウェブワーカーで動作することを示すことができます。
+
+##### 構文
+
+```plain
+\{{AvailableInWorkers}}
+\{{AvailableInWorkers("notservice")}}
+```
+
+##### 例
+
+{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}
