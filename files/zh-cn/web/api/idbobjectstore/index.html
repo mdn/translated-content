@@ -103,7 +103,7 @@ translation_of: Web/API/IDBObjectStore
 
 <p>add方法只能插入数据。如果以key参数作为某记录的关键字，并且该条记录已存在，则其所返回的请求对象会产生ConstrainError错误。</p>
 
-<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> </span><a href="#add" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#add">add</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> (in any value, in optional any key) raises (</span><a href="/En/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/DOM/DOMException">DOMException</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">);</span></pre>
+<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#add" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#add">add</a> (in any value, in optional any key) raises (<a href="/En/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/DOM/DOMException">DOMException</a>);</pre>
 
 <h5 id="参数">参数</h5>
 
@@ -142,7 +142,7 @@ translation_of: Web/API/IDBObjectStore
    <td>This IDBObjectStore's transaction is inactive.</td>
   </tr>
   <tr>
-   <td><span style="line-height: normal;">DataError</span></td>
+   <td>DataError</td>
    <td>
     <p>Any of the following conditions apply:</p>
 
@@ -169,7 +169,7 @@ translation_of: Web/API/IDBObjectStore
 
 <p>创建并立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象, 并且在一个单独的线程中清除这个对象存储. 清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。</p>
 
-<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> </span><a href="#clear" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#clear">clear</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> () raises (</span><a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">);</span></pre>
+<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#clear" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#clear">clear</a> () raises (<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
 <h5 id="Returns">Returns</h5>
 
@@ -427,7 +427,7 @@ objectstore.delete(key);</pre>
 
 <p>Immediately returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, with its <code><a href="/en/IndexedDB/IDBSuccessEvent#attr_result" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the retrieved value, and <code><a href="/en/IndexedDB/IDBTransactionEvent#attr_transaction" title="en/IndexedDB/IDBTransactionEvent#attr transaction">transaction</a></code> set to the transaction in which this object store is opened. </p>
 
-<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> </span><a href="#get" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#get">get</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> (in any key) raises (</span><a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">);</span></pre>
+<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#get" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#get">get</a> (in any key) raises (<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
 <p>{{ Note("This function produces the same result if no record with the given key exists in the database as when a record exists, but with an <code>undefined</code> value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.") }}</p>
 
@@ -523,7 +523,7 @@ objectstore.delete(key);</pre>
 
 <p>Immediately returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and creates a <a href="/en-US/docs/IndexedDB/IDBCursor" title="en/IndexedDB#gloss cursor">cursor</a> over the records in this object store, in a separate thread. If there is even a single record that matches the <a href="/en/IndexedDB#gloss_key_range" title="en/IndexedDB#gloss key range">key range</a>, then a success event is fired on the returned object, with its <code><a href="/en/IndexedDB/IDBSuccessEvent#attr_result" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the <a href="/en/IndexedDB/IDBCursor" title="en/IndexedDB/IDBCursor">IDBCursor</a> object for the new cursor. If no records match the key range, then a success event is fired on the returned object, with its <code><a href="/en/IndexedDB/IDBSuccessEvent#attr_result" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to null.</p>
 
-<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> </span><a href="#openCursor" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#openCursor">openCursor</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> (in optional </span><a href="/en/IndexedDB/IDBKeyRange" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBKeyRange">IDBKeyRange</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> range, in optional unsigned short direction) raises(</span><a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">);</span></pre>
+<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#openCursor" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#openCursor">openCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises(<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
 <h5 id="Parameters_6">Parameters</h5>
 
@@ -578,9 +578,9 @@ objectstore.delete(key);</pre>
 
 <p>Returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the <code><a href="/en-US/docs/IndexedDB/IDBRequest" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the key for the stored record, and <code><a href="/en-US/docs/IndexedDB/IDBRequest" title="en/IndexedDB/IDBTransactionEvent#attr transaction">transaction</a></code> set to the transaction in which this object store is opened.</p>
 
-<p>The put method is an<span class="database"> <em>update or insert</em> </span>method. See also the <a href="#add()">add()</a> method.</p>
+<p>The put method is an <em>update or insert</em> method. See also the <a href="#add()">add()</a> method.</p>
 
-<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> </span><a href="#put" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#put">put</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;"> (in any value, in optional any key) raises (</span><a href="/En/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/DOM/DOMException">DOMException</a><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">);</span></pre>
+<pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#put" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#put">put</a> (in any value, in optional any key) raises (<a href="/En/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/DOM/DOMException">DOMException</a>);</pre>
 
 <h5 id="Parameters_7">Parameters</h5>
 

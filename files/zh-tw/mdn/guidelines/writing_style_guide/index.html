@@ -257,11 +257,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <dl>
  <dt>元素名稱</dt>
- <dd>使用 {{TemplateLink("HTMLElement")}} 巨集，這會建立連向該元素頁面的連結。譬如，撰寫 \{{HTMLElement("title")}} 會產生 "{{HTMLElement("title")}}" 。如果不想要建立連結，<strong>就把元素名稱置於角括號中</strong>並使用「行內程式碼樣式」（舉例， <code>&lt;title&gt;</code> ）。</dd>
+ <dd>使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs"><code>HTMLElement</code></a> 巨集，這會建立連向該元素頁面的連結。譬如，撰寫 \{{HTMLElement("title")}} 會產生 "{{HTMLElement("title")}}" 。如果不想要建立連結，<strong>就把元素名稱置於角括號中</strong>並使用「行內程式碼樣式」（舉例， <code>&lt;title&gt;</code> ）。</dd>
  <dt>屬性名稱</dt>
  <dd>使用「行內程式碼」樣式讓它以<code>程式碼字型</code>顯示。此外，當屬性在解釋其為何的相關說明或其在文章中首次出現時要把它們加上<strong><em>粗體</em></strong>。</dd>
  <dt>屬性定義</dt>
- <dd>對定義的術語使用 {{TemplateLink("htmlattrdef")}} 巨集（舉例， \{{htmlattrdef("type")}} ） ，以便它們可以用 {{TemplateLink("htmlattrxref")}} 巨集（舉例， \{{htmlattrxref("type","element")}} ）的方式被其他頁面連結來參照屬性定義。</dd>
+ <dd>對定義的術語使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs"><code>htmlattrdef</code></a> 巨集（舉例， \{{htmlattrdef("type")}} ） ，以便它們可以用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs"><code>htmlattrxref</code></a> 巨集（舉例，\{{htmlattrxref("type","element")}} ）的方式被其他頁面連結來參照屬性定義。</dd>
  <dt>屬性值</dt>
  <dd>使用「行內程式碼」樣式來套用 <code>&lt;code&gt;</code> 屬性值，而且不要使用引述標示環繞字串值，除非程式碼範例有此需要。</dd>
  <dd><strong>譬如：</strong>「當 <code>&lt;input&gt;</code> 的 <code>type</code> 屬性被設定為 <code>email</code> 或 <code>tel</code> ……」</dd>
@@ -570,7 +570,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <p>使用「元素」（ elements ）來指稱 HTML 和 XML 元素，而非「標籤」（ tags ）。此外，還需要把它們用「 &lt;&gt; 」包裹並以 {{HTMLElement("code")}} 樣式呈現。</p>
 
-<p>當第一次在章節中參照了某個元素，應使用 {{TemplateLink("HTMLElement")}} 巨集來建立指向該元素的文件（除非就在撰寫該元素的參考文件）。</p>
+<p>當第一次在章節中參照了某個元素，應使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs"><code>HTMLElement</code></a> 巨集來建立指向該元素的文件（除非就在撰寫該元素的參考文件）。</p>
 
 <ul>
  <li><strong>正確</strong>： {{HTMLElement("span")}} 元素</li>

@@ -28,9 +28,9 @@ toBlob(callback, type, quality)
 - `callback`
   - : 回调函数，可获得一个单独的 {{domxref("Blob")}} 对象参数。如果图像未被成功创建，可能会获得 `null` 值。
 - `type` {{optional_inline}}
-   - : {{domxref("DOMString")}} 类型，指定图片格式，默认格式（未指定或不支持）为 `image/png`。
+  - : {{domxref("DOMString")}} 类型，指定图片格式，默认格式（未指定或不支持）为 `image/png`。
 - `quality` {{optional_inline}}
-   - : {{jsxref("Number")}} 类型，值在 0 与 1 之间，当请求图片格式为 `image/jpeg` 或者 `image/webp` 时用来指定图片展示质量。如果这个参数的值不在指定类型与范围之内，则使用默认值，其余参数将被忽略。
+  - : {{jsxref("Number")}} 类型，值在 0 与 1 之间，当请求图片格式为 `image/jpeg` 或者 `image/webp` 时用来指定图片展示质量。如果这个参数的值不在指定类型与范围之内，则使用默认值，其余参数将被忽略。
 
 ### 返回值
 
@@ -39,7 +39,7 @@ toBlob(callback, type, quality)
 ### 异常
 
 - `SecurityError`
-   - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
+  - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
 
 ## 示例
 

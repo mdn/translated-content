@@ -30,7 +30,7 @@ worker.postMessage(sab);
 
 共享内存能被同时创建和更新于 `worker` 线程或主线程。依赖于系统（CPU、操作系统、浏览器），变化传递给所有上下文环境需要一段时间。因此需要通过{{jsxref("Atomics", "原子", "", 1)}}操作来进行同步。
 
-### 接受 SharedArrayBuffer 对象的API
+### 接受 SharedArrayBuffer 对象的 API
 
 - {{domxref("WebGLRenderingContext.bufferData()")}}
 - {{domxref("WebGLRenderingContext.bufferSubData()")}}
@@ -38,7 +38,7 @@ worker.postMessage(sab);
 
 ### 安全需求
 
-为应对[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)，所有主流浏览器均默认[于2018年1月5日禁用SharedArrayBuffer](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。在 2020 年，一种新的、安全的方法已经标准化，以重新启用 `SharedArrayBuffer`。通过一些安全措施，[`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 将不再抛出有关 `SharedArrayBuffer` 对象的异常，跨线程共享内存也变得可用：
+为应对[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)，所有主流浏览器均默认[于 2018 年 1 月 5 日禁用 SharedArrayBuffer](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。在 2020 年，一种新的、安全的方法已经标准化，以重新启用 `SharedArrayBuffer`。通过一些安全措施，[`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 将不再抛出有关 `SharedArrayBuffer` 对象的异常，跨线程共享内存也变得可用：
 
 作为基准需求，你的文档需处于[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中。
 

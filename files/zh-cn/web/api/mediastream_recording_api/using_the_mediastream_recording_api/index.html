@@ -5,7 +5,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 ---
 <p>{{DefaultAPISidebar("MediaStream Recording")}}</p>
 
-<div class="summary">
+<div>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">媒体流(音/视频)录制API</a>让记录音频流或视频流信息更加容易。当使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices/getUserMedia">navigator.mediaDevices.getUserMedia()"</a>时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在web apps中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个API的MediaRecorder的界面。</p>
 </div>
 
@@ -161,7 +161,7 @@ var soundClips = document.querySelector('.sound-clips');</pre>
 <pre class="brush: js">var chunks = [];
 
 mediaRecorder.ondataavailable = function(e) {
-  <span class="pl-smi">chunks</span>.<span class="pl-c1">push</span>(<span class="pl-smi">e</span>.<span class="pl-c1">data</span>);
+  chunks.push(e.data);
 }</pre>
 
 <p>浏览器会在需要的时候触发这个事件，我们也可以通过为{{domxref("MediaRecorder.start()")}}传递一个时间（毫秒）来周期性的触发这个事件或者调用{{domxref("MediaRecorder.requestData()")}}来直接触发。</p>

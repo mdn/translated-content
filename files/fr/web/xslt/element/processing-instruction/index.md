@@ -12,9 +12,11 @@ L'élément `<xsl:processing-instruction>` écrit une instruction de traitement 
 
 ### Syntaxe
 
-    <code><xsl:processing-instruction name=NOM>
-    	MODÈLE
-    </xsl:processing-instruction></code>
+```xml
+<xsl:processing-instruction name=NOM>
+  MODÈLE
+</xsl:processing-instruction>
+```
 
 ### Attribut obligatoire
 

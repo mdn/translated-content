@@ -3,51 +3,51 @@ title: 手机网页开发
 slug: Web/Guide/Mobile
 translation_of: Web/Guide/Mobile
 ---
-<p><span style="line-height: 1.5;">本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找Mozilla 火狐系统相关的项目，请参考</span><a href="/en/Mozilla/Firefox_OS" style="line-height: 1.5;" title="Boot to Gecko">Firefox OS</a><span style="line-height: 1.5;"> 。或者你可能会对</span><a href="/en/Mozilla/Firefox_for_Android" style="line-height: 1.5;" title="Firefox for Android">Firefox for Android</a><span style="line-height: 1.5;">感兴趣。</span></p>
+<p>本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找 Mozilla 火狐系统相关的项目，请参考<a href="/en/Mozilla/Firefox_OS" style="line-height: 1.5;" title="Boot to Gecko">Firefox OS</a> 。或者你可能会对<a href="/en/Mozilla/Firefox_for_Android" style="line-height: 1.5;" title="Firefox for Android">Firefox for Android</a>感兴趣。</p>
 
-<p>我们准备用两个章节来组织本文的内容，<a href="#Designing_for_mobile_devices" style="line-height: 1.5;">designing for mobile devices</a><span style="line-height: 1.5;"> 和</span><a href="#Cross-browser_development" style="line-height: 1.5;">cross-browser compatibility</a>。另外，这还有一篇Jason Grlick为web开发者写的指南<span style="line-height: 1.5;"> </span><a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness" style="line-height: 1.5;" title="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">mobile-friendliness</a>。</p>
+<p>我们准备用两个章节来组织本文的内容，<a href="#Designing_for_mobile_devices" style="line-height: 1.5;">designing for mobile devices</a> 和<a href="#Cross-browser_development" style="line-height: 1.5;">cross-browser compatibility</a>。另外，这还有一篇 Jason Grlick 为 web 开发者写的指南 <a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness" style="line-height: 1.5;" title="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">mobile-friendliness</a>。</p>
 
 <h2 id="手机设备设计">手机设备设计</h2>
 
-<p>与台式机和笔记本相比，在硬件特性上手持设备有非常大的不同。当然通常他们的屏幕尺寸更小，另外一个特性是当用户旋转设备时，他们会在portrait和landscape模式下自动切换。旋转用户输入一般通过触屏。类似地理定位和排列方向这样在台式机上没有多大作用的API，在手机用户使用你网站的时候有了全新的体验！</p>
+<p>与台式机和笔记本相比，在硬件特性上手持设备有非常大的不同。当然通常他们的屏幕尺寸更小，另外一个特性是当用户旋转设备时，他们会在 portrait 和 landscape 模式下自动切换。旋转用户输入一般通过触屏。类似地理定位和排列方向这样在台式机上没有多大作用的 API，在手机用户使用你网站的时候有了全新的体验！</p>
 
 <h3 id="在更小的屏幕下工作">在更小的屏幕下工作</h3>
 
 <p><a href="/en/Web_Development/Responsive_Web_design">响应式网页设计</a>是一项让你的网站在手持设备上通过不同的使用环境进行自动适应的技术，通常来说体现在尺寸和屏幕的排列方向上。他包含下面的技术：</p>
 
 <ul>
- <li>弹性化CSS布局设计，保证当浏览器窗口的尺寸变化时网页也能流畅地适应</li>
- <li>根据设备屏幕的宽高，合理使用css媒体查询规则</li>
+ <li>弹性化 CSS 布局设计，保证当浏览器窗口的尺寸变化时网页也能流畅地适应</li>
+ <li>根据设备屏幕的宽高，合理使用 css 媒体查询规则</li>
 </ul>
 
 <p><a href="/zh-CN/docs/">viewport meta 标签</a>指定在用户设备的浏览器中的网页的缩放比例。</p>
 
 <h3 id="处理触摸屏">处理触摸屏</h3>
 
-<p>在触摸设备中你需要使用dom的touch事件。不再需要使用css:hover伪类；同时因为手指比鼠标要大的缘故，要将可点击元素做的更大一点。参见此文 <a class="external" href="http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
+<p>在触摸设备中你需要使用 dom 的 touch 事件。不再需要使用 css:hover 伪类；同时因为手指比鼠标要大的缘故，要将可点击元素做的更大一点。参见此文 <a class="external" href="http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
 
-<p>你可以使用<a href="/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled </a>media query属性在可触摸设备上加载不同的css。</p>
+<p>你可以使用<a href="/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled </a>media query 属性在可触摸设备上加载不同的 css。</p>
 
 <h3 id="优化图片">优化图片</h3>
 
 <p>为了解决那些带宽小或者流量费用昂贵的用户，你可以通过根据用户的屏幕尺寸和分辨率加载合适的图片来优化图片的加载。你可以通过媒体查询来获取屏幕的 <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>，<a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a> 以及 <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>。</p>
 
-<p>你也可以不使用图片，使用css属性像<a href="/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a> 和 <a href="/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a> 来实现更好的视觉效果。</p>
+<p>你也可以不使用图片，使用 css 属性像<a href="/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a> 和 <a href="/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a> 来实现更好的视觉效果。</p>
 
 <h3 id="移动_APIs">移动 APIs</h3>
 
-<p>最后, 你可以利用移动设备提供的新可能性， 例如 <a href="/en/Detecting_device_orientation" title="en/Detecting_device_orientation">orientation</a> 和 <a href="/En/Using_geolocation" title="En/Using_geolocation">geolocation</a>。</p>
+<p>最后，你可以利用移动设备提供的新可能性， 例如 <a href="/en/Detecting_device_orientation" title="en/Detecting_device_orientation">orientation</a> 和 <a href="/En/Using_geolocation" title="En/Using_geolocation">geolocation</a>。</p>
 
 <h2 id="跨浏览器开发">跨浏览器开发</h2>
 
 <h3 id="书写跨浏览器代码">书写跨浏览器代码</h3>
 
-<p>创建能够完美工作在不同移动浏览器的web sites:</p>
+<p>创建能够完美工作在不同移动浏览器的 web sites:</p>
 
 <ul>
- <li>请尽力避免使用特定浏览器的features, 例如CSS属性前的vendor-prefixed(浏览器厂商前缀，也称浏览器引擎前缀)。例如-moz-为Firefox|Firefox OS浏览器引擎使用到的前缀。</li>
- <li>如果你需要使用这些features, 请检查是否其它浏览器也有实现这些特性的版本。</li>
- <li>对于不支持这些特性的浏览器，请提供一个可接受的fallback。</li>
+ <li>请尽力避免使用特定浏览器的 features，例如 CSS 属性前的 vendor-prefixed(浏览器厂商前缀，也称浏览器引擎前缀)。例如-moz-为 Firefox|Firefox OS 浏览器引擎使用到的前缀。</li>
+ <li>如果你需要使用这些 features，请检查是否其它浏览器也有实现这些特性的版本。</li>
+ <li>对于不支持这些特性的浏览器，请提供一个可接受的 fallback。</li>
 </ul>
 
 <p>例如，如果使用诸如 <code>-webkit-linear-gradient</code> 之类带有渲染器前缀的属性为一些文字设置了渐变背景，你最好能够将其他带有渲染器前缀的 <code>linear-gradient</code> 的相应属性一并添上。如果你没有这么做，请至少确保文字和默认的背景能形成对比。这样，即便在你没有指定 <code>linear-gradient</code> 的浏览器里，这个页面仍然是可用的。</p>
@@ -64,9 +64,9 @@ translation_of: Web/Guide/Mobile
 
 <h3 id="多浏览器中测试">多浏览器中测试</h3>
 
-<p>在多个浏览器中测试你的网站。这意味着在多个平台测试—至少iOS和Android。</p>
+<p>在多个浏览器中测试你的网站。这意味着在多个平台测试—至少 iOS 和 Android。</p>
 
 <ul>
- <li>使用 <a class="link-https" href="https://developer.apple.com/devcenter/ios/index.action">iOS simulator</a> 在IPhone上测试移动版Safari。</li>
- <li>使用<a class="link-https" href="https://developer.android.com/sdk/index.html"> Android SDK </a>测试Opera和Firefox。详细方法请点击 <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">running Firefox for Android using the Android emulator</a> 查看。</li>
+ <li>使用 <a class="link-https" href="https://developer.apple.com/devcenter/ios/index.action">iOS simulator</a> 在 IPhone 上测试移动版 Safari。</li>
+ <li>使用<a class="link-https" href="https://developer.android.com/sdk/index.html"> Android SDK </a>测试 Opera 和 Firefox。详细方法请点击 <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">running Firefox for Android using the Android emulator</a> 查看。</li>
 </ul>

@@ -38,7 +38,7 @@ myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 <pre class="brush: js">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
 var myHeaders = new Headers(httpHeaders);</pre>
 
-<p><code><font face="Open Sans, Arial, sans-serif">你可以通过init属性将一个已存在的</font>Headers对象来创建另一个新的Headers对象</code>:</p>
+<p><code>你可以通过init属性将一个已存在的Headers对象来创建另一个新的Headers对象</code>:</p>
 
 <pre class="brush: js">var secondHeadersObj = new Headers(myHeaders);
 secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object</pre>

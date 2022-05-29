@@ -10,23 +10,23 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
-<p>现代浏览器支持在 <a href="/en-US/docs/Web/CSS" title="Cascading Style Sheets">CSS</a> 样式中使用 <a href="/en-US/docs/SVG">SVG</a> 来对HTML内容应用图像效果。</p>
+<p>现代浏览器支持在 <a href="/en-US/docs/Web/CSS" title="Cascading Style Sheets">CSS</a> 样式中使用 <a href="/en-US/docs/SVG">SVG</a> 来对 HTML 内容应用图像效果。</p>
 
-<p>你可以在同一文件中使用SVG样式，也可以通过外部样式表引入。有三个属性可以使用： <a href="/en-US/docs/Web/CSS/mask"><code>mask</code></a>, <a href="/en-US/docs/Web/CSS/clip-path"><code>clip-path</code></a>, 和 <code><a href="/en-US/docs/Web/CSS/filter">filter</a>。</code></p>
+<p>你可以在同一文件中使用 SVG 样式，也可以通过外部样式表引入。有三个属性可以使用： <a href="/en-US/docs/Web/CSS/mask"><code>mask</code></a>, <a href="/en-US/docs/Web/CSS/clip-path"><code>clip-path</code></a>, 和 <code><a href="/en-US/docs/Web/CSS/filter">filter</a>。</code></p>
 
-<div class="note"><strong>注意:</strong> 在外部文件引入的SVG必须与原始文件 <a href="/en-US/docs/Web/Security/Same-origin_policy">同源</a> 。</div>
+<div class="note"><strong>注意：</strong> 在外部文件引入的 SVG 必须与原始文件 <a href="/en-US/docs/Web/Security/Same-origin_policy">同源</a> 。</div>
 
-<h2 id="使用内嵌SVG">使用内嵌SVG</h2>
+<h2 id="使用内嵌SVG">使用内嵌 SVG</h2>
 
-<p>要想在CSS样式中应用SVG效果，首先需要创建一个引用SVG的CSS样式。</p>
+<p>要想在 CSS 样式中应用 SVG 效果，首先需要创建一个引用 SVG 的 CSS 样式。</p>
 
 <pre class="brush: html notranslate">&lt;style&gt;p { mask: url(#my-mask); }&lt;/style&gt;</pre>
 
-<p>在上面的例子中, 所有段落会被<a href="/en-US/docs/Web/HTML/Global_attributes/id">ID</a> 为<code>my-mask的</code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/mask">SVG <code>&lt;mask&gt;</code></a>遮罩.</p>
+<p>在上面的例子中，所有段落会被<a href="/en-US/docs/Web/HTML/Global_attributes/id">ID</a> 为<code>my-mask 的</code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/mask">SVG <code>&lt;mask&gt;</code></a>遮罩。</p>
 
 <h3 id="例子_Masking">例子: Masking</h3>
 
-<p>例如，你可以在你的HTML文档中用SVG和CSS代码对HTML内容作渐变mask效果。</p>
+<p>例如，你可以在你的 HTML 文档中用 SVG 和 CSS 代码对 HTML 内容作渐变 mask 效果。</p>
 
 <pre class="brush: html notranslate">&lt;svg height="0"&gt;
   &lt;mask id="mask-1"&gt;
@@ -49,9 +49,9 @@ p {
   display: inline-block;
 }</pre>
 
-<p>注意，在CSS中 遮罩（mask） 使用一个指向 ID 为 <code>#mask-1</code>的URL，这个ID是在上面的SVG中指定的。 SVG中其他的内容指定了渐变遮罩的细节。</p>
+<p>注意，在 CSS 中 遮罩（mask）使用一个指向 ID 为 <code>#mask-1</code>的 URL，这个 ID 是在上面的 SVG 中指定的。 SVG 中其他的内容指定了渐变遮罩的细节。</p>
 
-<p>将SVG效果应用于 (X)HTML 是通过将 <code>target</code> 这个class应用于其他元素来实现的，如下所示：</p>
+<p>将 SVG 效果应用于 (X)HTML 是通过将 <code>target</code> 这个 class 应用于其他元素来实现的，如下所示：</p>
 
 <pre class="brush: html notranslate">&lt;p class="target" style="background:lime;"&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -71,7 +71,7 @@ p {
 
 <h3 id="例子_Clipping">例子: Clipping</h3>
 
-<p>此示例演示如何使用SVG剪辑HTML内容。请注意，即使链接的可点击区域也被剪切。</p>
+<p>此示例演示如何使用 SVG 剪辑 HTML 内容。请注意，即使链接的可点击区域也被剪切。</p>
 
 <pre class="brush: html notranslate">&lt;p class="target" style="background:lime;"&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -103,9 +103,9 @@ p {
   display: inline-block;
 }</pre>
 
-<p>这个例子将建立一个由圆形和矩形组成的剪切区域，为其指定 ID <code>#clipping-path-1</code>，然后在CSS中引用它。剪切路径可以分配给具有 <code>target</code> class的任何元素。</p>
+<p>这个例子将建立一个由圆形和矩形组成的剪切区域，为其指定 ID <code>#clipping-path-1</code>，然后在 CSS 中引用它。剪切路径可以分配给具有 <code>target</code> class 的任何元素。</p>
 
-<p>你可以实时地对SVG进行更改，并看到它们立即影响HTML的渲染。例如，可以在上面建立的剪切路径中调整圆形的大小：</p>
+<p>你可以实时地对 SVG 进行更改，并看到它们立即影响 HTML 的渲染。例如，可以在上面建立的剪切路径中调整圆形的大小：</p>
 
 <pre class="brush: js notranslate">function toggleRadius() {
   var circle = document.getElementById("circle");
@@ -117,7 +117,7 @@ p {
 
 <h3 id="例子_Filtering">例子: Filtering</h3>
 
-<p>这个例子演示了如何使用SVG对HTML内容进行过滤。它建立了几个过滤器，这些过滤器与CSS一起作用于正常和鼠标悬停状态 <a href="/en-US/docs/Web/CSS/:hover">hover</a> 下的三个元素。</p>
+<p>这个例子演示了如何使用 SVG 对 HTML 内容进行过滤。它建立了几个过滤器，这些过滤器与 CSS 一起作用于正常和鼠标悬停状态 <a href="/en-US/docs/Web/CSS/:hover">hover</a> 下的三个元素。</p>
 
 <pre class="brush: html notranslate">&lt;p class="target" style="background: lime;"&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -132,7 +132,7 @@ p {
 &lt;/p&gt;
 </pre>
 
-<p>任何SVG过滤器都可以这样使用。例如，要应用模糊效果，你可以这样使用：</p>
+<p>任何 SVG 过滤器都可以这样使用。例如，要应用模糊效果，你可以这样使用：</p>
 
 <pre class="brush: html notranslate">&lt;svg height="0"&gt;
   &lt;filter id="f1"&gt;
@@ -154,8 +154,8 @@ p {
 
 <p>或更多的过滤器：</p>
 
-<pre class="brush: html notranslate"><span>&lt;svg height="0"&gt;
-</span>  &lt;filter id="f3"&gt;
+<pre class="brush: html notranslate">&lt;svg height="0"&gt;
+  &lt;filter id="f3"&gt;
     &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
       order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
   &lt;/filter&gt;
@@ -171,9 +171,9 @@ p {
                            0 0 1 0 0
                            0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
   &lt;/filter&gt;
-<span>&lt;/svg&gt;</span></pre>
+&lt;/svg&gt;</pre>
 
-<p>使用以下CSS应用五个过滤器：</p>
+<p>使用以下 CSS 应用五个过滤器：</p>
 
 <pre class="brush: css notranslate">p.target { filter:url(#f3); }
 p.target:hover { filter:url(#f5); }
@@ -189,7 +189,7 @@ pre.target:hover { filter:url(#f3); }
 
 <h3 id="例子_Blurred_Text">例子: Blurred Text</h3>
 
-<p>为了模糊文本，基于Webkit的浏览器有一个名为blur的（前缀）CSS过滤器，（另见 <a href="/en-US/docs/Web/CSS/filter#blur%28%29_2">CSS filter</a>）。你可以使用SVG过滤器获得相同的效果。</p>
+<p>为了模糊文本，基于 Webkit 的浏览器有一个名为 blur 的（前缀）CSS 过滤器，（另见 <a href="/en-US/docs/Web/CSS/filter#blur%28%29_2">CSS filter</a>）。你可以使用 SVG 过滤器获得相同的效果。</p>
 
 <pre class="brush: html notranslate">&lt;p class="blur"&gt;Time to clean my glasses&lt;/p&gt;
 &lt;svg height="0"&gt;
@@ -201,7 +201,7 @@ pre.target:hover { filter:url(#f3); }
 &lt;/svg&gt;
 </pre>
 
-<p>你可以在同一个class中使用SVG和CSS过滤器：</p>
+<p>你可以在同一个 class 中使用 SVG 和 CSS 过滤器：</p>
 
 <pre class="brush: css notranslate">.blur { filter: url(#wherearemyglasses); }</pre>
 
@@ -213,9 +213,9 @@ pre.target:hover { filter:url(#f3); }
 
 <h3 id="例子_Text_Effects">例子: Text Effects</h3>
 
-<p>SVG 还可以用于添加比纯HTML文本更动态、更灵活的文本添加方法。</p>
+<p>SVG 还可以用于添加比纯 HTML 文本更动态、更灵活的文本添加方法。</p>
 
-<p>通过使用SVG元素与HTML结合创建文本，你可以产生不同的文本的效果。如旋转文本：</p>
+<p>通过使用 SVG 元素与 HTML 结合创建文本，你可以产生不同的文本的效果。如旋转文本：</p>
 
 <pre class="notranslate">&lt;svg height="60" width="200"&gt;
   &lt;text x="0" y="15" fill="blue" transform="rotate(30 20,50)"&gt;Example text&lt;/text&gt;
@@ -223,13 +223,13 @@ pre.target:hover { filter:url(#f3); }
 
 <h2 id="使用外部引用">使用外部引用</h2>
 
-<p>用来clipping，masking，filtering的SVG可以从其他外部源载入，只要外部源是与要使用SVG的该HTML文档同源的。</p>
+<p>用来 clipping，masking，filtering 的 SVG 可以从其他外部源载入，只要外部源是与要使用 SVG 的该 HTML 文档同源的。</p>
 
-<p>例如，CSS规则在一个名为default.css的文件中，如下这样：</p>
+<p>例如，CSS 规则在一个名为 default.css 的文件中，如下这样：</p>
 
 <pre class="brush: css notranslate" id="line1">.target { clip-path: url(resources.svg#c1); }</pre>
 
-<p>这个SVG就可以从一个名为resources.svg的文件中导入，clip路径为ID c1。</p>
+<p>这个 SVG 就可以从一个名为 resources.svg 的文件中导入，clip 路径为 ID c1。</p>
 
 <h2 id="参见">参见</h2>
 

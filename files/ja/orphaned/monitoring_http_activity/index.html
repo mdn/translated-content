@@ -6,7 +6,7 @@ original_slug: Monitoring_HTTP_activity
 <p> {{ gecko_minversion_header("1.9.2") }}</p>
 <p>Gecko は <code>nsIHttpActivityObserver</code> インターフェースを含んでおり、コールバックを受け取る形でHTTPトランザクションをリアルタイムにモニタすることができます。</p>
 <h2 id="HTTP_activity_observer_を作る">HTTP activity observer を作る</h2>
-<p>HTTP上のアクティビティを観察するには、コード内で <code>nsIHttpActivityObserver</code> を実装する必要があります。このインターフェースはとても単純で、 {{ ifmethod("nsIHttpActivityObserver", "observeActivity") }} という1つのメソッドを実装するだけです。このメソッドはHTTPチャンネルで対象となるアクションが発生するごとに呼び出されます。</p>
+<p>HTTP上のアクティビティを観察するには、コード内で <code>nsIHttpActivityObserver</code> を実装する必要があります。このインターフェースはとても単純で、 <code>nsIHttpActivityObserver.observeActivity</code> という1つのメソッドを実装するだけです。このメソッドはHTTPチャンネルで対象となるアクションが発生するごとに呼び出されます。</p>
 <pre><span>// インターフェースへの参照を定義する<br>var nsIHttpActivityObserver = Components.interfaces.</span>nsIHttpActivityObserver;
 
 var httpObserver =
@@ -26,7 +26,7 @@ var httpObserver =
     }
 };
 </pre>
-<p>次に、activity observer を実際に組み込む必要があります。これは <code>nsIHttpActivityDistributor</code> の{{ ifmethod("nsIHttpActivityDistributor", "addObserver") }} メソッドを用いて行います：</p>
+<p>次に、activity observer を実際に組み込む必要があります。これは <code>nsIHttpActivityDistributor</code> の<code>nsIHttpActivityDistributor.addObserver</code> メソッドを用いて行います：</p>
 <pre>var activityDistributor = Components.classes["@mozilla.org/network/http-activity-distributor;1"]
                                     .getService(Components.interfaces.nsIHttpActivityDistributor);
 activityDistributor.addObserver(httpObserver);

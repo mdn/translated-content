@@ -5,7 +5,7 @@ translation_of: Web/API/AudioContext/baseLatency
 ---
 <p>{{SeeCompatTable}}{{APIRef("Web Audio API")}}</p>
 
-<p class="summary">The <strong><code>baseLatency</code></strong> read-only property of the {{domxref("AudioContext")}} interface returns a double that represents the number of seconds of processing latency incurred by the <code>AudioContext</code> passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.</p>
+<p>The <strong><code>baseLatency</code></strong> read-only property of the {{domxref("AudioContext")}} interface returns a double that represents the number of seconds of processing latency incurred by the <code>AudioContext</code> passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.</p>
 
 <p>You can request a certain latency during {{domxref("AudioContext.AudioContext()", "construction time", "", "true")}} with the <code>latencyHint</code> option but the browser may ignore the option.</p>
 
@@ -30,20 +30,7 @@ console.log(audioCtx2.baseLatency);//0.02
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#dom-audiocontext-baselatency','baseLatency')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_Compatibility">Browser Compatibility</h2>
 

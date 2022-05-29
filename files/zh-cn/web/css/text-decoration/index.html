@@ -13,21 +13,21 @@ translation_of: Web/CSS/text-decoration
 
 <p><code>text-decoration</code> 这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线/删除线  或 闪烁）它是 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, 和新出现的 {{cssxref("text-decoration-thickness")}} 属性的缩写。</p>
 
-<p>文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中<code> &lt;p&gt;This text has &lt;em&gt;some emphasized words&lt;/em&gt; in it.&lt;/p&gt;，应用样式</code><code>p { text-decoration: underline }</code> 会对整个段落添加下划线，此时再添加样式 <code>em { text-decoration: none }</code> 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 <code>em { text-decoration: overline }</code> 则会在&lt;em&gt;标记的文字上再添加上这种overline样式。</p>
+<p>文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中<code> &lt;p&gt;This text has &lt;em&gt;some emphasized words&lt;/em&gt; in it.&lt;/p&gt;，应用样式</code><code>p { text-decoration: underline }</code> 会对整个段落添加下划线，此时再添加样式 <code>em { text-decoration: none }</code> 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 <code>em { text-decoration: overline }</code> 则会在&lt;em&gt;标记的文字上再添加上这种 overline 样式。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<p>text-decoration属性是一种简写属性，并且可以使用普通属性三个值中的任何一个。普通属性如下：{{cssxref("text-decoration-line")}}，{{cssxref("text-decoration-color")}}和{{cssxref("text-decoration-style")}}</p>
+<p>text-decoration 属性是一种简写属性，并且可以使用普通属性三个值中的任何一个。普通属性如下：{{cssxref("text-decoration-line")}}，{{cssxref("text-decoration-color")}}和{{cssxref("text-decoration-style")}}</p>
 
 <h3 id="值">值</h3>
 
 <dl>
  <dt>{{cssxref("text-decoration-line")}}</dt>
- <dd>文本修饰的位置, 如下划线<code>underline</code>，删除线<code>line-through</code></dd>
+ <dd>文本修饰的位置，如下划线<code>underline</code>，删除线<code>line-through</code></dd>
  <dt>{{cssxref("text-decoration-color")}}</dt>
  <dd>文本修饰的颜色</dd>
  <dt>{{cssxref("text-decoration-style")}}</dt>
- <dd>文本修饰的样式, 如波浪线<code>wavy</code>实线<code>solid</code>虚线<code>dashed</code></dd>
+ <dd>文本修饰的样式，如波浪线<code>wavy</code>实线<code>solid</code>虚线<code>dashed</code></dd>
  <dt>{{cssxref("text-decoration-thickness")}}</dt>
  <dd>文本修饰线的粗细</dd>
 </dl>

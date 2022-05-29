@@ -144,7 +144,6 @@
 /zh-TW/docs/Firefox_4_for_developers/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Firefox_4_開發者新功能概覽	/zh-TW/docs/orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽
 /zh-TW/docs/Firefox_7_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/7
-/zh-TW/docs/Firefox_中的離線資源	/zh-TW/docs/orphaned/Firefox_中的離線資源
 /zh-TW/docs/Games/Workflows	/zh-TW/docs/Games/Tutorials
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls

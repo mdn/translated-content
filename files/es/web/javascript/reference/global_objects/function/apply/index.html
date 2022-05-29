@@ -28,7 +28,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
  <dt><code>thisArg</code></dt>
  <dd>El valor del objeto <strong>this</strong> a utilizar dentro de la llamada a <em>fun</em>. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} o {{jsxref("Global_Objects/undefined", "undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.</dd>
  <dt><code>argsArray</code></dt>
- <dd>Un objeto similar a un array (<a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects" title="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects">array like object</a>), que contiene los parámetros con los que será llamada <em><code>fun</code></em>, o <code>null</code> o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase {{anch("Browser_compatibility", "browser compatibility")}} para mayor información.</dd>
+ <dd>Un objeto similar a un array (<a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects" title="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects">array like object</a>), que contiene los parámetros con los que será llamada <em><code>fun</code></em>, o <code>null</code> o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase <a href="#browser_compatibility">browser compatibility</a> para mayor información.</dd>
  <dt>
  <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
@@ -122,14 +122,14 @@ var min = minOfArray([5, 6, 2, 3, 7]);</pre>
 
 <p><code>apply </code>puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función <code>someobject.foo</code>, puedes modificar la función de una forma 'hacker', como ésta:</p>
 
-<pre><code>var originalfoo = someobject.foo;
+<pre class="brush: js">var originalfoo = someobject.foo;
 someobject.foo = function() {
   // Haz algo antes de llamar a la función
   console.log(arguments);
   // Llama a la función como la hubieras llamado normalmente
   originalfoo.apply(this, arguments);
   // Aquí, ejecuta algo después
-}</code></pre>
+}</pre>
 
 <p>Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos <code>.on</code> (eventos<code> [event]..., </code>como los que se usan en el <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Developer_API">Devtools Inspector</a>)</p>
 

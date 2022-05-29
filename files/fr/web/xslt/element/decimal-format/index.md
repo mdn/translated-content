@@ -12,18 +12,20 @@ L'élément `<xsl:decimal-format>` définit les caractères et symboles à utili
 
 ### Syntaxe
 
-    <xsl:decimal-format
-    	name=NOM
-    	decimal-separator=CARACTÈRE
-    	grouping-separator=CARACTÈRE
-    	infinity=CHAÎNE
-    	minus-sign=CARACTÈRE
-    	NaN=CHAÎNE
-    	percent=CARACTÈRE
-    	per-mille=CARACTÈRE
-    	zero-digit=CARACTÈRE
-    	digit=CARACTÈRE
-    	pattern-separator=CARACTÈRE />
+```xml
+<xsl:decimal-format
+  name=NOM
+  decimal-separator=CARACTÈRE
+  grouping-separator=CARACTÈRE
+  infinity=CHAÎNE
+  minus-sign=CARACTÈRE
+  NaN=CHAÎNE
+  percent=CARACTÈRE
+  per-mille=CARACTÈRE
+  zero-digit=CARACTÈRE
+  digit=CARACTÈRE
+  pattern-separator=CARACTÈRE />
+```
 
 ### Attributs obligatoires
 

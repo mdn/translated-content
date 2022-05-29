@@ -73,7 +73,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 	var
 	  proto = DOMParser.prototype
-	, nativeParse = <span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString</span>
+	, nativeParse = proto.parseFromString
 	;
 
 	// Firefox/Opera/IE throw errors on unsupported types
@@ -85,7 +85,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 		}
 	} catch (ex) {}
 
-	<span style="font-size: 1rem;">proto</span><span style="font-size: 1rem;">.parseFromString = function(markup, type) {</span>
+	proto.parseFromString = function(markup, type) {
 		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
 			var
 			  doc = document.implementation.createHTMLDocument("")
@@ -98,7 +98,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
       			}
 			return doc;
 		} else {
-			return <span style="font-size: 1rem;">nativeParse</span><span style="font-size: 1rem;">.apply(this, arguments);</span>
+			return nativeParse.apply(this, arguments);
 		}
 	};
 }(DOMParser));

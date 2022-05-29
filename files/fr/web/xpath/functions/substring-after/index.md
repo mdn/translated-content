@@ -12,7 +12,9 @@ La fonction `substring-after()` retourne la partie d'une chaîne donnée suivant
 
 ### Syntaxe
 
-    substring-after( bottedefoin , aiguille )
+```
+substring-after( bottedefoin , aiguille )
+```
 
 ### Arguments
 

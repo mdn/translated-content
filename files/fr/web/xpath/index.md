@@ -53,8 +53,8 @@ XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la
 - **[XPath](/fr/docs/Web/XPath)**
 - Guides
 
-  1.  [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
-  2.  [Exemples de fragments XPath](/fr/docs/Web/XPath/Snippets)
+  1. [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
+  2. [Exemples de fragments XPath](/fr/docs/Web/XPath/Snippets)
 
 - [Axes XPath](/fr/docs/Web/XPath/Axes)
   {{ListSubpagesForSidebar("/fr/docs/Web/XPath/Axes")}}
