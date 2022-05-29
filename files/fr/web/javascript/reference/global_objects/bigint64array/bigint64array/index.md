@@ -38,28 +38,28 @@ new BigInt64Array(buffer, decalageOctets, longueur);
 
 ```js
 // À partir d'une longueur
-let bigint64 = new BigInt64Array(2);
+const bigint64 = new BigInt64Array(2);
 bigint64[0] = 42n;
 console.log(bigint64[0]); // 42n
 console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
 // À partir d'un tableau
-let arr = new BigInt64Array([21n,31n]);
+const arr = new BigInt64Array([21n,31n]);
 console.log(arr[1]); // 31n
 
 // À partir d'un autre tableau typé
-let x = new BigInt64Array([21n, 31n]);
-let y = new BigInt64Array(x);
+const x = new BigInt64Array([21n, 31n]);
+const y = new BigInt64Array(x);
 console.log(y[0]); // 21n
 
 // À partir d'un ArrayBuffer
-let buffer = new ArrayBuffer(32);
-let z = new BigInt64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(32);
+const z = new BigInt64Array(buffer, 0, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1n, 2n, 3n]; }();
-let bigint64 = new BigInt64Array(iterable);
+const iterable = function*(){ yield* [1n, 2n, 3n]; }();
+const bigint64 = new BigInt64Array(iterable);
 // BigInt64Array[1n, 2n, 3n]
 ```
 
