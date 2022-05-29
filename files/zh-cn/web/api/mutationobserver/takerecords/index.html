@@ -24,12 +24,12 @@ translation_of: Web/API/MutationObserver/takeRecords
 <p>返回一个{{domxref("MutationRecord")}} 对象列表，每个对象都描述了应用于 DOM 树某部分的一次改动。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 调用<code>takeRecords()</code>后，已发生但未传递给回调的变更队列将保留为空。</p>
+<p><strong>注意：</strong>调用 <code>takeRecords()</code> 后，已发生但未传递给回调的变更队列将保留为空。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
-<p>下面的示例展示了在断开观察者之前如何通过调用<code>takeRecords()</code>来处理任何未传递的{{domxref("MutationRecord")}}。</p>
+<p>下面的示例展示了在断开观察者之前如何通过调用 <code>takeRecords()</code> 来处理任何未传递的 {{domxref("MutationRecord")}}。</p>
 
 <pre class="brush: js; highlight:[12-18]">var targetNode = document.querySelector("#someElement");
 var observerOptions = {
@@ -53,7 +53,7 @@ if (mutations) {
 observer.disconnect();
 </pre>
 
-<p>代码中第 12-17 行抓取了所有未处理的变更记录，然后调用回调，并将变更记录列表传递给回调，以保证所有变更记录都被处理。这是在调用{{domxref("MutationObserver.disconnect", "disconnect()")}}之前完成的，以便停止观察 DOM。 </p>
+<p>代码中第 12-17 行抓取了所有未处理的变更记录，然后调用回调，并将变更记录列表传递给回调，以保证所有变更记录都被处理。这是在调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} 之前完成的，以便停止观察 DOM。 </p>
 
 <h2 id="Specifications" name="Specifications">规范</h2>
 
