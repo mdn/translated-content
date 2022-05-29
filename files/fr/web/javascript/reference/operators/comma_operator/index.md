@@ -16,7 +16,9 @@ L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauch
 
 ## Syntaxe
 
-    expr1, expr2, expr3...
+```
+expr1, expr2, expr3...
+```
 
 ### Paramètres
 

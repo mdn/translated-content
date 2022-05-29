@@ -19,9 +19,11 @@ Le mot-clé **`function*`** peut être utilisé pour définir une fonction gén�
 
 ## Syntaxe
 
-    function* [nom]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```
+function* [nom]([param1[, param2[, ..., paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 

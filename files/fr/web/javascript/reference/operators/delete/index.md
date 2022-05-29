@@ -16,12 +16,16 @@ L'opérateur **`delete`** permet de retirer une propriété d'un objet.
 
 ## Syntaxe
 
-    delete expression
+```
+delete expression
+```
 
 où _expression_ est évaluée comme une référence à une propriété :
 
-    delete objet.propriete
-    delete objet['propriete']
+```js
+delete objet.propriete
+delete objet['propriete']
+```
 
 ### Paramètres
 
