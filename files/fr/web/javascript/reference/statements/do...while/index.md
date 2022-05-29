@@ -16,7 +16,7 @@ L'instruction **`do...while`** crée une boucle qui exécute une instruction jus
 
 ## Syntaxe
 
-```
+```js
 do
   instruction
 while (condition);

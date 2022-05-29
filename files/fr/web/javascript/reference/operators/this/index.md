@@ -18,7 +18,7 @@ Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la f
 
 ## Syntaxe
 
-```
+```js
 this
 ```
 

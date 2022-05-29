@@ -129,10 +129,10 @@ Un des aspects négatifs de cette migration est la sémantique : le sens du code
 2. Minimisez l'utilisation des éléments dont la sémantique pourrait changer :
 
     1. `eval`&nbsp;: n'utilisez cette fonction uniquement si vous êtes certains que c'est l'unique solution
-    2. `arguments` : utilisez les arguments d'une fonction via leur nom ou faites une copie de l'objet en utilisant :
+    2. `arguments`&nbsp;: utilisez les arguments d'une fonction via leur nom ou faites une copie de l'objet en utilisant&nbsp;:
         `var args = Array.prototype.slice.call(arguments)`
         au tout début de votre fonction
-    3. `this` : n'utilisez `this` que pour faire référence à un objet que vous avez créé
+    3. `this`&nbsp;: n'utilisez `this` que pour faire référence à un objet que vous avez créé
 
 ## Voir aussi
 

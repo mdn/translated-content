@@ -20,8 +20,8 @@ On peut également définir des fonctions asynchrones grâce au constructeur {{j
 
 ## Syntaxe
 
-```
-async function name([param[, param[, ... param]]]) {
+```js
+async function name([param[, param[, …param]]]) {
   instructions
 }
 ```

@@ -16,7 +16,7 @@ L'instruction **`switch`** évalue une expression et, selon le résultat obtenu 
 
 ## Syntaxe
 
-```
+```js
 switch (expression) {
   case valeur1:
     // Instructions à exécuter lorsque le résultat
@@ -28,7 +28,7 @@ switch (expression) {
     // de l'expression correspond à valeur2
     instructions 2;
     [break;]
-  ...
+  …
   case valeurN:
     // Instructions à exécuter lorsque le résultat
     // de l'expression à valeurN

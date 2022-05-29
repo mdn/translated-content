@@ -20,8 +20,8 @@ Il est aussi possible de définir une classe avec une {{jsxref("Opérateurs/clas
 
 ## Syntaxe
 
-```
-class nom [extends]{
+```js
+class nom [extends autreNom] {
   // corps de la classe
 }
 ```

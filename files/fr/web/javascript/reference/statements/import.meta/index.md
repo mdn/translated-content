@@ -14,7 +14,7 @@ L'objet **`import.meta`** est une méta-propriété qui expose des métadonnées
 
 ## Syntaxe
 
-```
+```js
 import.meta
 ```
 

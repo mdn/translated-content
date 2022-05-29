@@ -16,7 +16,7 @@ L'opérateur **`delete`** permet de retirer une propriété d'un objet.
 
 ## Syntaxe
 
-```
+```js
 delete expression
 ```
 

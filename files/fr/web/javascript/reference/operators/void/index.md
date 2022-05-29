@@ -16,7 +16,7 @@ L'**opérateur `void`** permet d'évaluer une _expression_ donnée et de renvoye
 
 ## Syntaxe
 
-```
+```js
 void expression
 ```
 

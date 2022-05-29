@@ -16,8 +16,8 @@ L'instruction **`continue`** arrête l'exécution des instructions pour l'itéra
 
 ## Syntaxe
 
-```
-continue [ label ];
+```js
+continue [label];
 ```
 
 - `label`

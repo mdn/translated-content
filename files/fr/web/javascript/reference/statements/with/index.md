@@ -17,7 +17,7 @@ L'instruction **`with`** permet d'étendre la portée chaînée d'une instructio
 
 ## Syntaxe
 
-```
+```js
 with (expression) {
   instruction
 }

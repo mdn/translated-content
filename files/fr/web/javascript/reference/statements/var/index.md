@@ -16,8 +16,8 @@ L'instruction **`var`** (pour variable) permet de déclarer une variable et éve
 
 ## Syntaxe
 
-```
-var nomVar1 [= valeur1] [, nomVar2 [= valeur2] ... [, nomVarN [= valeurN]]];
+```js
+var nomVar1 [= valeur1] [, nomVar2 [= valeur2] … [, nomVarN [= valeurN]]];
 ```
 
 - `nomvarN`

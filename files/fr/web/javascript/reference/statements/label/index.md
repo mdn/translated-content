@@ -18,7 +18,7 @@ Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec
 
 ## Syntaxe
 
-```
+```js
 label :
     instruction
 ```

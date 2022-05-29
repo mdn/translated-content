@@ -17,7 +17,7 @@ L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérable
 
 ## Syntaxe
 
-```
+```js
 for (variable in objet) {
   instructions
 }

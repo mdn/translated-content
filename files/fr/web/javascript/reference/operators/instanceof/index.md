@@ -18,7 +18,7 @@ L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa cha
 
 ## Syntaxe
 
-```
+```js
 objet instanceof constructeur
 ```
 

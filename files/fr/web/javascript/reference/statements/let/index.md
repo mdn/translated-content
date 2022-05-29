@@ -17,8 +17,8 @@ L'instruction **`let`** permet de déclarer une variable dont la portée est cel
 
 ## Syntaxe
 
-```
-let var1 [= valeur1] [, var2 [= valeur2]] [, ..., varN [= valeurN]];
+```js
+let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
 ```
 
 ### Paramètres
@@ -315,7 +315,7 @@ for ( let i = a; i < 10; i++ ) {
 
 #### Règles de portées
 
-```
+```js
 for (let expr1; expr2; expr3) instruction
 ```
 

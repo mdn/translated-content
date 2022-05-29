@@ -18,8 +18,8 @@ L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'u
 
 ## Syntaxe
 
-```
-Opérateur : x = y
+```js
+x = y
 ```
 
 ## Exemples

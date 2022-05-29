@@ -14,8 +14,8 @@ L'instruction **`for await…of`** permet de créer une boucle qui parcourt les 
 
 ## Syntaxe
 
-```
-for await (variable of iterable) {
+```js
+for await (const variable of iterable) {
   instruction
 }
 ```

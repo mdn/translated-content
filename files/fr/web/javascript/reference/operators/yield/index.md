@@ -18,8 +18,8 @@ Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction géné
 
 ## Syntaxe
 
-```
-[[rv =]] yield [[expression]];
+```js
+[rv] = yield [expression]
 ```
 
 - `expression`

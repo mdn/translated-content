@@ -16,8 +16,9 @@ L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une
 
 ## Syntaxe
 
-```
-while (condition) instruction
+```js
+while (condition)
+  instruction
 ```
 
 - `condition`

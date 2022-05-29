@@ -17,7 +17,7 @@ L'instruction **`throw`** permet de lever une exception définie par l'utilisate
 
 ## Syntaxe
 
-```
+```js
 throw expression;
 ```
 

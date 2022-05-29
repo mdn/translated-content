@@ -21,7 +21,7 @@ Ainsi, l'opérateur de multiplication (« `*` ») (ayant une précédence plus h
 
 L'associativité détermine l'ordre dans lequel des opérateurs de même précédence sont évalués. Par exemple, considérons l'expression suivante :
 
-```
+```js
 a OP b OP c
 ```
 

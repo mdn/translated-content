@@ -19,8 +19,8 @@ Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une
 
 ## Syntaxe
 
-```
-function [nom]([param1[, param2[, ..., paramN]]]) {
+```js
+function [nom]([param1[, param2[, …, paramN]]]) {
   instructions
 }
 ```

@@ -17,8 +17,8 @@ Une **expression de classe** est un moyen de définir une classe avec ECMASCript
 
 ## Syntaxe
 
-```
-var MaClasse = class [nomClasse] [extends] {
+```js
+const MaClasse = class [nomClasse] [extends autreNomClasse] {
   // corps de la classe
 };
 ```

@@ -16,8 +16,8 @@ L'instruction **`return`** met fin à l'exécution d'une fonction et définit un
 
 ## Syntaxe
 
-```
-return [[expression]];
+```js
+return [expression];
 ```
 
 - `expression`

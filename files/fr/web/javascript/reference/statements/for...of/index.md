@@ -17,9 +17,10 @@ L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui
 
 ## Syntaxe
 
-```
-for (variable of iterable)
+```js
+for (variable of iterable) {
   instruction
+}
 ```
 
 - `variable`

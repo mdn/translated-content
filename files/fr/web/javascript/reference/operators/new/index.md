@@ -23,7 +23,7 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 
 ## Syntaxe
 
-```
+```js
 new constructeur[([arguments])]
 ```
 
@@ -46,7 +46,7 @@ Pour définir un type d'objet, créez une fonction pour ce type qui spécifie so
 Lorsque le code `new Toto(...)` est exécuté, voici ce qui se passe :
 
 1. Un nouvel objet est créé qui hérite de `Toto.prototype`.
-2. La fonction constructrice `Toto` est appelée avec les arguments fournis, [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) étant lié au nouvel objet créé. `new Toto` sera équivalent à `new Toto()` (i.e. un appel sans argument).
+2. La fonction constructrice `Toto` est appelée avec les arguments fournis, [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) étant lié au nouvel objet créé. `new Toto` sera équivalent à `new Toto()` (i.e. un appel sans argument).
 3. L'objet renvoyé par le constructeur devient le résultat de l'expression qui contient `new`. Si le constructeur ne renvoie pas d'objet de façon explicite, l'objet créé à l'étape 1 sera utilisé. (En général, les constructeurs ne renvoient pas de valeurs mais si on souhaite surcharger le processus habituel, on peut utiliser cette valeur de retour).
 
 Il est toujours possible d'ajouter une propriété à un objet défini précédemment. Par exemple, l'instruction `voiture1.couleur = "noir"` ajoute une propriété couleur à `voiture1`, et lui assigne une valeur : "`noir`". Cependant, ceci n'affecte aucunement les autres objets. Pour ajouter une nouvelle propriété à tous les objets du même type, cette propriété doit être ajoutée à la définition du type d'objet `Voiture`.

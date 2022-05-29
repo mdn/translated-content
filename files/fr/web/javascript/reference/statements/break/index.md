@@ -16,7 +16,7 @@ L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction
 
 ## Syntaxe
 
-```
+```js
 break [label];
 ```
 

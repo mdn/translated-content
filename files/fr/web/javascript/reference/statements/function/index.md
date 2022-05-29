@@ -18,8 +18,8 @@ Il est également possible de définir des fonctions en utilisant le constructeu
 
 ## Syntaxe
 
-```
-function nom([param1[, param2,[..., paramN]]]) {
+```js
+function nom([param1[, param2,[…, paramN]]]) {
   [instructions]
 }
 ```
