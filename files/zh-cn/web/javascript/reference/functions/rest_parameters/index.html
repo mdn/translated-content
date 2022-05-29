@@ -85,9 +85,9 @@ f(1, 2, 3, 4) // 6 (the fourth parameter is not destructured)</pre>
   alert(theArgs.length);
 }
 
-fun1();  // 弹出 "0", 因为theArgs没有元素
-fun1(5); // 弹出 "1", 因为theArgs只有一个元素
-fun1(5, 6, 7); // 弹出 "3", 因为theArgs有三个元素</pre>
+fun1();  // 弹出 "0", 因为 theArgs 没有元素
+fun1(5); // 弹出 "1", 因为 theArgs 只有一个元素
+fun1(5, 6, 7); // 弹出 "3", 因为 theArgs 有三个元素</pre>
 
 <p>下例中，剩余参数包含了从第二个到最后的所有实参，然后用第一个实参依次乘以它们：</p>
 
@@ -115,7 +115,7 @@ function sortArguments() {
   return sortedArgs; // 不会执行到这里
 }
 
-alert(sortArguments(5,3,7,1)); // 抛出TypeError异常:arguments.sort is not a function
+alert(sortArguments(5,3,7,1)); // 抛出 TypeError 异常:arguments.sort is not a function
 </pre>
 
 <p>为了在<code>arguments</code>对象上使用<code>Array</code>方法，它必须首先被转换为一个真正的数组。</p>

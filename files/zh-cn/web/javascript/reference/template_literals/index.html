@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 ---
 <div>{{JsSidebar("More")}} </div>
 
-<p>模板字面量 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。它们在ES2015规范的先前版本中被称为“模板字符串”。</p>
+<p>模板字面量 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。它们在 ES2015 规范的先前版本中被称为“模板字符串”。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -85,7 +85,7 @@ classes += (isLargeScreen() ?
    '' : item.isCollapsed ?
      ' icon-expander' : ' icon-collapser');</pre>
 
-<p>在ES2015中使用模板文字而没有嵌套：</p>
+<p>在 ES2015 中使用模板文字而没有嵌套：</p>
 
 <pre class="brush: js">const classes = `header ${ isLargeScreen() ? '' :
     (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
@@ -93,7 +93,7 @@ classes += (isLargeScreen() ?
 
 <p> </p>
 
-<p>在ES2015的嵌套模板字面量中：</p>
+<p>在 ES2015 的嵌套模板字面量中：</p>
 
 <p> </p>
 
@@ -177,25 +177,25 @@ str.split('').join(',');.
 
 <h3 id="带标签的模版字面量及转义序列">带标签的模版字面量及转义序列</h3>
 
-<p>自ES2016起，带标签的模版字面量遵守以下转义序列的规则：</p>
+<p>自 ES2016 起，带标签的模版字面量遵守以下转义序列的规则：</p>
 
 <ul>
- <li>Unicode字符以"\u"开头，例如<code>\u00A9</code></li>
- <li>Unicode码位用"\u{}"表示，例如<code>\u{2F804}</code></li>
+ <li>Unicode 字符以"\u"开头，例如<code>\u00A9</code></li>
+ <li>Unicode 码位用"\u{}"表示，例如<code>\u{2F804}</code></li>
  <li>十六进制以"\x"开头，例如<code>\xA9</code></li>
  <li>八进制以"\"和数字开头，例如<code>\251</code></li>
 </ul>
 
-<p>这表示类似下面这种带标签的模版是有问题的，因为对于每一个ECMAScript语法，解析器都会去查找有效的转义序列，但是只能得到这是一个形式错误的语法：</p>
+<p>这表示类似下面这种带标签的模版是有问题的，因为对于每一个 ECMAScript 语法，解析器都会去查找有效的转义序列，但是只能得到这是一个形式错误的语法：</p>
 
 <pre class="brush: js">latex`\unicode`
-// 在较老的ECMAScript版本中报错（ES2016及更早）
+// 在较老的 ECMAScript 版本中报错（ES2016 及更早）
 // SyntaxError: malformed Unicode character escape sequence
 </pre>
 
-<h4 id="ES2018关于非法转义序列的修订">ES2018关于非法转义序列的修订</h4>
+<h4 id="ES2018关于非法转义序列的修订">ES2018 关于非法转义序列的修订</h4>
 
-<p>带标签的模版字符串应该允许嵌套支持常见转义序列的语言（例如<a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSLs</a>、<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>）。ECMAScript提议<a href="https://tc39.github.io/proposal-template-literal-revision/">模版字面量修订</a>(第4阶段，将要集成到ECMAScript 2018标准) 移除对ECMAScript在带标签的模版字符串中转义序列的语法限制。</p>
+<p>带标签的模版字符串应该允许嵌套支持常见转义序列的语言（例如<a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSLs</a>、<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>）。ECMAScript 提议<a href="https://tc39.github.io/proposal-template-literal-revision/">模版字面量修订</a>(第 4 阶段，将要集成到 ECMAScript 2018 标准) 移除对 ECMAScript 在带标签的模版字符串中转义序列的语法限制。</p>
 
 <p>不过，非法转义序列在"cooked"当中仍然会体现出来。它们将以 {{jsxref("undefined")}} 元素的形式存在于"cooked"之中：</p>
 
