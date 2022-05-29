@@ -94,9 +94,9 @@ myWorker.port.onmessage = function(e) {
   console.log('Message received from worker');
 }</code></pre>
 
-<p>在 worker 内部我们使用{{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在{{event("connect")}}事件的<code>ports</code> 属性中访问到 — 接着我们使用{{domxref("MessagePort")}} <code>start()</code> 方法打开端口，<code>onmessage</code> 处理器来处理主线程传来的消息。</p>
+<p>在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{event("connect")}} 事件的 <code>ports</code> 属性中访问到 — 接着我们使用 {{domxref("MessagePort")}} <code>start()</code> 方法打开端口，<code>onmessage</code> 处理器来处理主线程传来的消息。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">onconnect = function(e) {
+<pre class="brush: js"><code class="language-js">onconnect = function(e) {
   var port = e.ports[0];
 
   port.addEventListener('message', function(e) {

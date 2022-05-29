@@ -31,7 +31,7 @@ translation_of: Web/API/MutationObserver/takeRecords
 
 <p>下面的示例展示了在断开观察者之前如何通过调用 <code>takeRecords()</code> 来处理任何未传递的 {{domxref("MutationRecord")}}。</p>
 
-<pre class="brush: js; highlight:[12-18]">var targetNode = document.querySelector("#someElement");
+<pre class="brush: js">var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true
