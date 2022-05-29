@@ -9,7 +9,7 @@ translation_of: Web/API/Navigator/share
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}</div>
 
-<p><strong><code>Navigator.share()</code></strong>方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为<code>undefined</code>。</p>
+<p><strong><code>Navigator.share()</code></strong> 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 <code>undefined</code>。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Navigator/share
 
 <p>该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个 promise 将会接受 。如果指定的共享数据格式不正确，promise 将会立即拒绝；如果用户取消了分享，promise 也会拒绝。</p>
 
-<p>例如， 在 Android 的 Chrome 上，将在用户选择要共享的应用程序后将会解析共享的内容。.</p>
+<p>例如，在 Android 的 Chrome 上，将在用户选择要共享的应用程序后将会解析共享的内容。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -49,7 +49,7 @@ translation_of: Web/API/Navigator/share
 
 <h4 id="分享文件"><strong>分享文件</strong></h4>
 
-<p>分享文件之前，先使用<code>navigator.canShare()</code>.判断这个文件能否被分享，Then include an array of files in the call to <code>navigator.share():</code></p>
+<p>分享文件之前，先使用 <code>navigator.canShare()</code> 判断这个文件能否被分享，Then include an array of files in the call to <code>navigator.share():</code></p>
 
 <p>Notice: That the sample handles feature detection by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>. The data object passed to <code>canShare()</code> only supports the <code>files</code> property. Image, video, audio, and text files can be shared.</p>
 
