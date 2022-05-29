@@ -25,9 +25,9 @@ new WeakSet(iterable)
 ### Utiliser `WeakSet()`
 
 ```js
-let ws = new WeakSet();
-let toto = {};
-let truc = {};
+const ws = new WeakSet();
+const toto = {};
+const truc = {};
 
 ws.add(toto);
 ws.add(truc);
