@@ -1,5 +1,5 @@
 ---
-title: 'Adding a new todo form: Vue events, methods, and models'
+title: 使用 Vue event、method 和 model 添加一个新的 todo 表单
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 translation_of: >-
@@ -44,7 +44,7 @@ translation_of: >-
 &lt;/script&gt;</pre>
  </li>
  <li>
-  <p>新建一个 HTML 表单来允许我们输入新的待办项并把它提交到app。我们需要一个 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> ，它里面包含 <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>,一个 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>, 一个 <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>。更新后的模版如下：</p>
+  <p>新建一个 HTML 表单来允许我们输入新的待办项并把它提交到app。我们需要一个 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> ，它里面包含 <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>。更新后的模版如下：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;
   &lt;form&gt;
@@ -73,7 +73,7 @@ translation_of: >-
  <li>
   <p>在你的App组件中注册它</p>
 
-  <pre class="brush: js notranslate">components: {
+  <pre class="brush: js">components: {
   ToDoItem,
   ToDoForm
 }</pre>
