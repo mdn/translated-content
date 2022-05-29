@@ -107,7 +107,7 @@ Array.from({length: 5}, (v, i) =&gt; i);
 // [0, 1, 2, 3, 4]
 </pre>
 
-<h3 id="序列生成器指定范围">序列生成器 (指定范围)</h3>
+<h3 id="序列生成器_指定范围">序列生成器 (指定范围)</h3>
 
 <pre class="brush: js">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
 const range = (start, stop, step) =&gt; Array.from({ length: (stop - start) / step + 1}, (_, i) =&gt; start + (i * step));
