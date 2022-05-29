@@ -1,112 +1,118 @@
 ---
-title: 互換性一覧表とブラウザー互換性データリポジトリ (BCD)
+title: 互換性一覧表とブラウザー互換性データリポジトリー (BCD)
 slug: MDN/Structures/Compatibility_tables
 tags:
-  - MDN Meta
   - ガイド
-  - ブラウザー互換性
-  - 互換性テーブル
-  - 互換性一覧表
+  - MDN メタ
   - 構造
+  - ブラウザーの互換性
+  - 互換性一覧表
+browser-compat: api.AbortController
 translation_of: MDN/Structures/Compatibility_tables
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p class="summary"><span class="seoSummary">MDN には、オープンなウェブ文書のための互換性一覧表の標準形式があります。これは、すべてのブラウザーにわたって共有される DOM, HTML, CSS, JavaScript, SVG などの技術の文書で使用されます。</span>この記事は、作成した互換性一覧表をデータベースにどのように追加して維持するか、また、一覧表を記事に統合する方法についての「始め方」のガイドです。</p>
+MDN には、オープンなウェブ文書のための互換性一覧表の標準形式があります。これは、すべてのブラウザーにわたって共有される DOM, HTML, CSS, JavaScript, SVG などの技術の文書で使用されます。この記事は、作成した互換性一覧表をデータベースにどのように追加して維持するか、また、一覧表を記事に統合する方法についての「始め方」のガイドです。
 
-<p class="summary">より高度なドキュメントや、データを表現するために使用される手続きや JSON スキーマの最新の変更点については、データリポジトリの <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md">contributor guide</a> や <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md">data guidelines guide</a> をご覧ください。</p>
+より高度なドキュメントや、データを表現するために使用される手続きや JSON スキーマの最新の変更点については、データリポジトリーの[協力者ガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)や[データガイドラインのガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)をご覧ください。
 
-<p class="summary">質問がある場合や問題を発見した場合は、 <a href="https://discourse.mozilla-community.org/c/mdn">MDN ディスカッションフォーラム</a>で相談してください。</p>
+質問や問題が見つかった場合は、[助けを求める](/ja/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)をご利用ください。
 
-<h2 id="How_to_access_the_data_repository" name="How_to_access_the_data_repository">データリポジトリにアクセスする方法</h2>
+## データリポジトリーにアクセスする方法
 
-<p>データは GitHub リポジトリに保存されています - <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> を参照してください。アクセスするには GitHub アカウントを取得し、 browser-compat-data を自分のアカウントで<ruby>フォーク<rp> (</rp><rt>fork</rt><rp>) </rp></ruby>し、フォークしたものをローカルマシンに<ruby>クローン<rp> (</rp><rt>クローン</rt><rp>) </rp></ruby>する必要があります。</p>
+データは GitHub リポジトリーに保存されています。 <https://github.com/mdn/browser-compat-data> を参照してください。アクセスするには GitHub アカウントを取得し、 browser-compat-data を自分のアカウントでフォーク (fork) し、フォークしたものをローカルマシンにクローン (clone) する必要があります。
 
-<h2 id="Preparing_to_add_the_data" name="Preparing_to_add_the_data">データを追加する準備</h2>
+## データを追加する準備
 
-<p>新しいデータを追加する前に、フォークがメインリポジトリの最新である (同じ内容を含む) ことを確認し、フォーク内に追加を格納するための新しい<ruby>ブランチ<rp> (</rp><rt>ブランチ</rt><rp>) </rp></ruby>を作成し、そのブランチをローカルのクローンにプルすれば、その中で作業を始めることができます。</p>
+新しいデータを追加する前に、フォークがメインリポジトリーの最新である（同じ内容を含む）ことを確認し、フォーク内に追加を格納するための新しいブランチ (branch) を作成し、そのブランチをローカルのクローンにプル (pull) すれば、その中で作業を始めることができます。
 
-<p>フォークが最新であることを、次のように簡単な方法で確認してみましょう。</p>
+フォークが最新であることを、次のように簡単な方法で確認してみましょう。
 
-<h3 id="Adding_the_main_browser-compat-data_repo_as_a_remote" name="Adding_the_main_browser-compat-data_repo_as_a_remote">メインの browser-compat-data リポジトリをリモートとして追加</h3>
+### メインの browser-compat-data リポジトリーをリモートとして追加
 
-<p>端末またはコマンドラインでフォークをローカルにクローンした場所へ行き、次のようにしてリモートにメイン (upstream) リポジトリを指すよう追加します (これを行う必要があるのは一度だけです)。</p>
+端末またはコマンドラインでフォークをローカルにクローンした場所へ行き、次のようにしてリモートにメイン (upstream) リポジトリーを指すよう追加します（これを行う必要があるのは一度だけです）。
 
-<pre class="brush: bash notranslate">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
+```bash
+git remote add upstream https://github.com/mdn/browser-compat-data.git
+```
 
-<p>もしこれをしたか不明確であれば、次のようにリポジトリがどのリモートを指しているかを確認することができます。</p>
+これをやったかどうか自信がない場合は、次のようするとリポジトリーがどのリモートを指しているかを確認することができます。
 
-<pre class="brush: bash notranslate">git remote -v</pre>
+```bash
+git remote -v
+```
 
-<h3 id="Updating_your_fork_with_the_remotes_content" name="Updating_your_fork_with_the_remotes_content">リモートのコンテンツでフォークを更新する</h3>
+### リモートのコンテンツでフォークを更新
 
-<p>では、フォークを更新したいときは、次のようにできます。</p>
+では、フォークを更新したいときは、次のようにできます。
 
-<ol>
- <li>
-  <p>master ブランチにいることを確認します。</p>
+1. main ブランチにいることを確認します。
 
-  <pre class="brush: bash notranslate">git checkout master</pre>
- </li>
- <li>
-  <p>以下のように更新されたリポジトリのコンテンツを<ruby>フェッチ<rp> (</rp><rt>fetch</rt><rp>) </rp></ruby>します。</p>
+    ```bash
+    git checkout main
+    ```
 
-  <pre class="brush: bash notranslate">git fetch upstream</pre>
- </li>
- <li>
-  <p>ローカルの master の内容をメイン (upstream) リポジトリの master の内容に<ruby>リベース<rp> (</rp><rt>rebase</rt><rp>) </rp></ruby>します。</p>
+2. 以下のように更新されたリポジトリーのコンテンツをフェッチ (fetch) します。
 
-  <pre class="brush: bash notranslate">git rebase upstream/master</pre>
- </li>
- <li>
-  <p>以下のようにしてここまでの変更をあなたがフォークしたリモートへ反映します。</p>
+    ```bash
+    git fetch upstream
+    ```
 
-  <pre class="brush: bash notranslate">git push</pre>
- </li>
-</ol>
+3. 自分の main ブランチの内容を公式のリポジトリーのコンテンツでリベース (rebase) します。
 
-<h3 id="Creating_a_new_branch_to_do_your_work_in" name="Creating_a_new_branch_to_do_your_work_in">作業用の新しいブランチの作成</h3>
+    ```bash
+    git rebase upstream/main
+    ```
 
-<p>次に、自分のリモートフォーク (普通は<code>https://github.com/<em>自分のユーザー名</em>/browser-compat-data</code>) へ行き、以下の手順で新しいブランチを作成します。変更したい内容をここに追加していくことになります。</p>
+4. これらの更新を、次のようにしてリモートのフォークにプッシュして書き戻します。
 
-<ol>
- <li>"Branch: Master" ボタンをクリックします。</li>
- <li>新しいブランチの名前を "Find or create a branch..." と書かれたところに入力します。</li>
- <li>"Create branch <em>ブランチ名</em> from Master" と書かれたボタンを押します。</li>
-</ol>
+    ```bash
+    git push
+    ```
 
-<p>例えば、 WebVR API についてデータを追加したい場合 "webvr" という名前がブランチ名として考えられるでしょう。</p>
+### 作業用の新しいブランチの作成
 
-<h3 id="Switching_to_the_new_branch" name="Switching_to_the_new_branch">新しいブランチへの切り替え</h3>
+次に、自分のリモートフォーク（`https://github.com/ユーザー名/browser-compat-data`となる）へ行き、以下の手順で新しいブランチを作成します。変更したい内容をここに追加していくことになります。
 
-<p>ここから先は作業が端末またはコマンドラインに戻ります。ローカルにクローンしたものを更新して新しく作成したブランチを使えるようにするには、下のコマンドを使います。</p>
+1. "Branch: Main" ボタンをクリックします。
+2. 新しいブランチの名前を "Find or create a branch..." と書かれたところに入力します。
+3. "Create branch _ブランチ名_ from Main" と書かれたボタンを押します。
 
-<pre class="brush: bash notranslate">git pull</pre>
+例えば、 WebVR API についてデータを追加したい場合 "webvr" という名前がブランチ名として考えられるでしょう。
 
-<p>そして以下のように新しく作成したブランチに切り替えます。</p>
+### 新しいブランチへの切り替え
 
-<pre class="brush: bash notranslate">git checkout <em>name-of-branch</em></pre>
+ここから先は作業が端末またはコマンドラインに戻ります。ローカルにクローンしたものを更新して新しく作成したブランチを使えるようにするには、下のコマンドを使います。
 
-<p>これでデータを追加するための準備が完了しました！</p>
+```bash
+git pull
+```
 
-<h2 id="Adding_the_data" name="Adding_the_data">データの追加</h2>
+そして以下のように新しく作成したブランチに切り替えます。
 
-<p>データを追加するには、新たに互換性データを書いたファイルを作成する必要があります。作成する必要があるファイルは、どの技術分野について作業しようとするかによって異なります。</p>
+```bash
+git checkout ブランチ名
+```
 
-<ul>
- <li><strong><a href="/ja/docs/Web/HTML">HTML</a>:</strong> HTML の要素ごとに一つのファイルが<a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a>に格納されています。ファイル名は要素の名前をすべて小文字でつけるべきです。 例) <code>div.json</code></li>
- <li><strong><a href="/ja/docs/Web/CSS">CSS</a>:</strong> CSS のプロパティないしセレクターごとに一つのファイルが <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a> 以下の適切なディレクトリに格納されています。ファイル名はその機能の名前をすべて小文字でつけてください。 例) <code>background-color.json</code>, <code>hover.json</code></li>
- <li><strong><a href="/ja/docs/Web/JavaScript">JS</a>:</strong> JavaScriptオブジェクトごとに一つのファイルが<a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a>に格納されています。ファイル名は大文字小文字を含めて完全にオブジェクト名と一致させてください。 例) <code>Date.json</code>, <code>InternalError.json</code></li>
- <li><strong><a href="/ja/docs/Web/API">APIs</a>:</strong> API のインターフェイスごとに一つのファイルが<a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a>に格納されています。ファイル名は大文字小文字を含めて完全にインターフェイス名と一致させてください。 例) WebVR API には<code>VRDisplay.json</code>や<code>VRDisplayCapabilities.json</code>などがあります</li>
-</ul>
+これでデータを追加するための準備が完了しました。
 
-<p>あなたが作成するファイルは、このリポジトリに含まれているスキーマで定義されている構造に従わなければなりません。<a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md">詳細なスキーマの説明はこちら</a>で見ることができます。</p>
+## データの追加
 
-<h3 id="Basic_compat_data_structure" name="Basic_compat_data_structure">基本的な互換性データの構造</h3>
+データを追加するには、新たに互換性データを書いたファイルを作成する必要があります。作成する必要があるファイルは、どの技術分野について作業しようとするかによって異なります。
 
-<p>では例を見ていきましょう。例として CSS プロパティの JSON ファイルに求められる基本構造を次に示します。</p>
+- **[HTML](/ja/docs/Web/HTML):** HTML の要素ごとに一つのファイルが [browser-compat-data/html/elements](https://github.com/mdn/browser-compat-data/tree/main/html/elements) に格納されています。ファイル名は要素の名前をすべて小文字でつけてください。 例) `div.json`
+- **[CSS](/ja/docs/Web/CSS):** CSS のプロパティないしセレクターごとに一つのファイルが [browser-compat-data/css](https://github.com/mdn/browser-compat-data/tree/main/css) 以下の適切なディレクトリに格納されています。ファイル名はその機能の名前をすべて小文字でつけてください。 例) `background-color.json`, `hover.json`
+- **[JS](/ja/docs/Web/JavaScript):** JavaScript オブジェクトごとに一つのファイルが [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/main/javascript/builtins) に格納されています。ファイル名は大文字小文字を含めて完全にオブジェクト名と一致させてください。 例) `Date.json`, `InternalError.json`
+- **[APIs](/ja/docs/Web/API):** API のインターフェイスごとに一つのファイルが [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/main/api) に格納されています。ファイル名は大文字小文字を含めて完全にインターフェイス名と一致させてください。 例) WebVR API には `VRDisplay.json` や `VRDisplayCapabilities.json` などがあります。
 
-<pre class="brush: json notranslate">{
+作成するファイルは、このリポジトリーに含まれているスキーマで定義されている構造に従う必要があります。[詳細なスキーマの説明はこちら](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md)で見ることができます。
+
+### 基本的な互換性データの構造
+
+では例を見ていきましょう。例として CSS プロパティの JSON ファイルに求められる基本構造を次に示します。
+
+```json
+{
   "css": {
     "properties": {
       "border-width": {
@@ -116,56 +122,50 @@ translation_of: MDN/Structures/Compatibility_tables
       }
     }
   }
-}</pre>
+}
+```
 
-<p>まず <code>css</code> オブジェクトがあります。その中に <code>properties</code> オブジェクトがあります。 <code>properties</code> オブジェクトの中には、互換性データとして定義したい特定の機能につき一つのメンバーが必要です。それぞれのメンバーは <code>__compat</code> をメンバーに持ち、この中に実際のデータを記述します。</p>
+まず `css` オブジェクトがあります。その中に `properties` オブジェクトがあります。 `properties` オブジェクトの中には、互換性データとして定義したい特定の機能につき一つのメンバーが必要です。それぞれのメンバーは `__compat` をメンバーに持ち、この中に実際のデータを記述します。
 
-<p>上記のデータは <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> にあります。 <a href="/ja/docs/Web/CSS/border-width#Browser_compatibility">MDN で表示された border-width の表</a>と見比べてみてください。</p>
+上記のデータは [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json) にあります。 [MDN で表示された border-width の表](/ja/docs/Web/CSS/border-width#browser_compatibility)と見比べてみてください。
 
-<p>他の種類の機能についても同様ですが、ただしオブエジェクトの名前が異なります。</p>
+他の種類の機能についても同様ですが、オブジェクトの名前が異なります。
 
-<ul>
- <li>CSS セレクターは CSS プロパティと基本的に同様ですが、最上位のオブジェクト構造が <code>css.properties</code> ではなく <code>css.selectors</code> になります。例として <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> を見てください。</li>
- <li>HTML についても基本的に同様ですが、最上位のオブジェクト構造が <code>html.elements</code> です。例として <a href="https://github.com/mdn/browser-compat-data/blob/master/html/elements/article.json">article.json</a> を見てください。</li>
- <li>JavaScript の組込みオブジェクトについての最上位のオブジェクト構造は <code>javascript.builtins</code> です。例として <a href="https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json">Array.json</a> を見てください。</li>
-</ul>
+- CSS セレクターは CSS プロパティと基本的に同様ですが、最上位のオブジェクト構造が `css.properties` ではなく `css.selectors` になります。例として [cue.json](https://github.com/mdn/browser-compat-data/blob/main/css/selectors/cue.json) を見てください。
+- HTML についても基本的に同様ですが、最上位のオブジェクト構造が `html.elements` です。例として [article.json](https://github.com/mdn/browser-compat-data/blob/main/html/elements/article.json) を見てください。
+- JavaScript の組込みオブジェクトについての最上位のオブジェクト構造は `javascript.builtins` です。例として [Array.json](https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Array.json) を見てください。
 
-<div>
-<p>HTML や CSS、 JavaScript のページにおいては、普通一つだけの機能について記述するでしょう。しかし API インターフェイスについては少し事情が異なります。なぜなら常に複数のサブ機能を持つからです (下の <a href="#sub-features">サブ機能</a> を参照してください)。</p>
+HTML や CSS、 JavaScript のページにおいては、普通一つだけの機能について記述するでしょう。しかし API インターフェイスについては少し事情が異なります。なぜなら常に複数のサブ機能を持つからです（下の[サブ機能](#サブ機能)を参照してください）。
 
-<h3 id="Basic_structure_inside_a_feature" name="Basic_structure_inside_a_feature">機能内の基本構造</h3>
+### 機能内の基本構造
 
-<p>機能の <code>__compat</code> メンバーの中には、以下のメンバーを記述する必要があります。</p>
+機能の `__compat` メンバーの中には、以下のメンバーを記述する必要があります。
 
-<ul>
- <li><code>mdn_url</code>: MDN 上のこの機能の参照ページの URL を指定します。これは、ロケールのディレクトリを含めずに記述する必要があることに注意してください。例えば、 <code>/docs/...</code> であり、 <code>/ja/docs/...</code> ではありません。これは、ローカライゼーションのために、データがページに置かれるときにマクロで追加されます。</li>
- <li><code>support</code>: 報告したいすべての各ブラウザーにおける、この機能のブラウザーの対応情報を表すメンバーが含まれています。</li>
- <li><code>status</code>: この機能の標準化過程の状態を報告するメンバーが含まれています。</li>
-</ul>
+- `mdn_url`: MDN 上のこの機能の参照ページの URL を指定します。これは、ロケールのディレクトリを含めずに記述する必要があることに注意してください。例えば、 `/docs/...` であり、 `/ja/docs/...` ではありません。これは、ローカライズのために、データがページに置かれるときにマクロで追加されます。
+- `support`: 報告したいすべての各ブラウザーにおける、この機能のブラウザーの対応情報を表すメンバーが含まれています。
+- `status`: この機能の標準化過程の状態を報告するメンバーが含まれています。
 
-<p>ブラウザーメンバーの名前はスキーマで定義されています (<a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">Browser identifiers</a> を参照してください)。現在定義されている識別子の完全な一覧のもの使用してください。他のブラウザーを追加したい場合は、広範な影響があり、慎重に考えずに行うべきではありませんので、まず私たちに相談してください。</p>
+ブラウザーメンバーの名前はスキーマで定義されています ([Browser identifiers](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#browser-identifiers) を参照してください)。現在定義されている識別子の完全な一覧のもの使用してください。他のブラウザーを追加したい場合は、広範な影響があり、慎重に考えずに行うべきではありませんので、まず私たちに相談してください。
 
-<p>基本的なブラウザーの compat データファイルでは、ブラウザー識別子のメンバーの中に "version_added" を含めるだけでよいでしょう (後ほど <a href="#adding_data_advanced_cases">データの追加: 高度な場合</a> で説明します)。記述することができる値は以下の通りです。</p>
+基本的なブラウザーの compat データファイルでは、ブラウザー識別子のメンバーの中に "version_added" を含めるだけでよいでしょう（後ほど[データの追加: 高度な場合](#データの追加_高度な場合)で説明します）。記述することができる値は以下の通りです。
 
-<ul>
- <li>バージョン番号: ブラウザーがその機能に対応し始めた正確なバージョンが分かる場合は、その番号を表す文字列を使用してください。例) <code>"47"</code>.</li>
- <li><code>true</code>: ブラウザがその機能に対応しているが、正確なバージョン番号がわからない場合は、 <code>true</code> の値を使用してください。</li>
- <li><code>false</code>: ブラウザーがその機能に対応していない場合は、 <code>false</code> の値を使用してください。</li>
- <li><code>null</code>: ブラウザーがその機能に対応しているかどうかわからない場合は、 <code>null</code> の値を使用してください。</li>
-</ul>
+- 版番号: ブラウザーがその機能に対応し始めた正確な版が分かる場合は、その番号を表す文字列を使用してください。例) `"47"`
+- `true`: ブラウザーがその機能に対応しているが、正確な版番号がわからない場合は、 `true` の値を使用してください。
+- `false`: ブラウザーがその機能に対応していない場合は、 `false` の値を使用してください。
+- `null`: ブラウザーがその機能に対応しているかどうかわからない場合は、 `null` の値を使用してください。
 
-<p><code>status</code> メンバーの内容には、以下の3つのサブメンバーの記述してください。</p>
+`status` メンバーの内容には、以下の 3 つのサブメンバーの記述してください。
 
-<ul>
- <li><code>experimental</code>: この機能が<a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">実験的</a>であれば <code>true</code> を設定し、そうでない場合は <code>false</code> を設定してください。</li>
- <li><code>standard_track</code>: この機能が何らかの標準化過程 (最も有名なものは W3C/WHATWG ですが、他にも Khronos, TC39, など) にある場合は <code>true</code> を設定し、そうでない場合は <code>false</code> を設定してください。</li>
- <li><code>deprecated</code>: この機能が<a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">非推奨</a>であれば <code>true</code> に設定し、そうでない場合は <code>false</code> を設定してください。</li>
-</ul>
+- `experimental`: この機能が[実験的](/ja/docs/MDN/Guidelines/Conventions_definitions#実験的)であれば `true` を設定し、そうでない場合は `false` を設定してください。
+- `standard_track`: この機能が何らかの標準化過程（最も有名なものは W3C/WHATWG ですが、他にも Khronos, TC39, など）にある場合は `true` を設定し、そうでない場合は `false` を設定してください。
+- `deprecated`: この機能が[非推奨](/ja/docs/MDN/Guidelines/Conventions_definitions#非推奨と廃止)であれば `true` に設定し、そうでない場合は `false` を設定してください。
 
-<p><a href="/ja/docs/Web/CSS/border-width#Browser_compatibility">border-width</a> の機能データ (<a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> も参照) を一例として以下に示します。</p>
+[border-width](/ja/docs/Web/CSS/border-width#browser_compatibility) の機能データ ([border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json) も参照) を一例として以下に示します。
 
-<pre class="brush: json notranslate">"__compat": {
+```json
+"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
+  "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-width",
   "support": {
     "chrome": {
       "version_added": "1"
@@ -209,13 +209,15 @@ translation_of: MDN/Structures/Compatibility_tables
     "standard_track": true,
     "deprecated": false
   }
-}</pre>
+}
+```
 
-<h4 id="Adding_a_description" name="Adding_a_description">説明の追加</h4>
+#### 説明の追加
 
-<p><code>__compat</code> メンバーには、4つ目のオプションのメンバである、<code>description</code>があります。これを使用することで、その機能に関する人間にとって読みやすい説明を含めることができます。これを含めるべきなのは、データを少し見ただけではその機能が何であるかがわかりにくい場合だけです。例えば、データ構造を見ただけではコンストラクタが何であるかわからないかもしれないので、次のような記述を含めることができます。</p>
+`__compat` メンバーには、 4 つ目のオプションのメンバーである `description` があります。これを使用することで、その機能に関する人間にとって読みやすい説明を含めることができます。これを含めるべきなのは、データを少し見ただけではその機能が何であるかがわかりにくい場合だけです。例えば、データ構造を見ただけではコンストラクターが何であるかわからないかもしれないので、次のような記述を含めることができます。
 
-<pre class="brush: json notranslate">{
+```json
+{
   "api": {
     "AbortController": {
       "__compat": {
@@ -224,7 +226,7 @@ translation_of: MDN/Structures/Compatibility_tables
       "AbortController": {
         "__compat": {
           "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/AbortController",
-          "description": "&lt;code&gt;AbortController()&lt;/code&gt; constructor",
+          "description": "<code>AbortController()</code> constructor",
           "support": {
             ...
           }
@@ -234,15 +236,17 @@ translation_of: MDN/Structures/Compatibility_tables
       ... etc.
     }
   }
-}</pre>
+}
+```
 
-<h3 id="Sub-features" name="Sub-features">サブ機能</h3>
+### サブ機能
 
-<p>互換性一覧表が複数の行を持つページでは、各行の情報を定義するために、各機能の中に複数の副機能が必要になります。これは、例えば、ある機能の基本的なサポートが一つの行に格納されていても、そのしばらく後に、その機能が新しいプロパティや値の型を持つようになった場合などに起こります。</p>
+互換性一覧表が複数の行を持つページでは、各行の情報を定義するために、各機能の中に複数の副機能が必要になります。これは、例えば、ある機能の基本的な対応が一つの行に格納されていても、そのしばらく後に、その機能が新しいプロパティや値の型を持つようになった場合などに起こります。
 
-<p>例として、<code>background-color</code>プロパティの<a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">互換性データ</a> と <a href="/ja/docs/Web/CSS/background-color">対応するMDNページ</a> を参照してください。基本的なサポートは上で説明したように <code>__compat</code> オブジェクトの中に存在しており、ブラウザの "16進数値のアルファチャンネル "のサポートするに関する追加の行は、それ自身の<code>__compat</code> オブジェクトを含んでいます。</p>
+例として、 `background-color` プロパティの[互換性データ](https://github.com/mdn/browser-compat-data/blob/main/css/properties/background-color.json) と[対応する MDN ページ](/ja/docs/Web/CSS/background-color)を参照してください。基本的な対応は上で説明したように `__compat` オブジェクトの中に存在しており、ブラウザーの "16 進数値のアルファチャンネル "の対応するに関する追加の行は、それ自身の`__compat` オブジェクトを含んでいます。
 
-<pre class="brush: json notranslate">{
+```json
+{
   "css": {
     "properties": {
       "background-color": {
@@ -257,11 +261,13 @@ translation_of: MDN/Structures/Compatibility_tables
       }
     }
   }
-}</pre>
+}
+```
 
-<p>API の場合、上位 2 つのレベルを <code>api.<em>name-of-the-interface</em></code> として定義し、次に上位の <code>__compat</code> セクションでインターフェイスの全体的なブラウザ互換性を定義し、インターフェイス内に含まれるメソッド、プロパティ、およびコンストラクタのそれぞれのサブ機能を定義します。基本的な構造は以下のようになります。</p>
+API の場合、上位 2 つのレベルを `api.インターフェイス名` として定義し、次に上位の `__compat` セクションでインターフェイスの全体的なブラウザー互換性を定義し、インターフェイス内に含まれるメソッド、プロパティ、およびコンストラクターのそれぞれのサブ機能を定義します。基本的な構造は以下のようになります。
 
-<pre class="brush: json notranslate">{
+```json
+{
   "api": {
     "VRDisplay": {
       "__compat": {
@@ -282,48 +288,51 @@ translation_of: MDN/Structures/Compatibility_tables
 
     }
   }
-}</pre>
+}
+```
 
-<p>完全な例は、<a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>を参照してください。</p>
-</div>
+完全な例は、 [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) を参照してください。
 
-<h2 id="Adding_data_Advanced_cases" name="Adding_data_Advanced_cases">データの追加: 高度な場合</h2>
+## データの追加: 高度な場合
 
-<p>ブラウザの互換性データには、いくつかの高度な機能があります。このセクションの目的は、最も一般的なものをリストアップし、それぞれの例を提供して、あなた自身の互換性データにそれらを実装する方法を示すことです。</p>
+ブラウザーの互換性データには、いくつかの高度な機能があります。このセクションの目的は、最も一般的なものをリストアップし、それぞれの例を提供して、互換性データにそれらを実装する方法を示すことです。
 
-<h3 id="Including_a_footnote" name="Including_a_footnote">脚注を含める</h3>
+### 脚注を含める
 
-<p>しばしば互換性一覧表には、有益な詳細や、開発者にとって有用な奇妙な動作を説明する、特定のエントリに関連した脚注が含まれています。例として、{{domxref("VRDisplay.capabilities")}} (<a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>も参照) の Chrome Android エントリには、(執筆時点では)"現在はGoogle Daydreamのみでサポートされています "という脚注がありました。これを互換性データに含めるために、関連する "chrome_android "サブメンバーの中に "notes "サブメンバーを追加しました。これはこのようになります。</p>
+しばしば互換性一覧表には、有益な詳細や、開発者にとって有用な奇妙な動作を説明する、特定の項目に関連した脚注が含まれています。例として、{{domxref("VRDisplay.capabilities")}} ([VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json)も参照) の Chrome Android の項目には、（執筆時点では）「現在は Google Daydream のみで対応されています」という脚注がありました。これを互換性データに含めるために、 "notes" サブメンバーを関連する "chrome_android" サブメンバーの中に追加しました。これはこのようになります。
 
-<pre class="brush: json notranslate">"chrome_android": {
+```json
+"chrome_android": {
   "version_added": true,
   "notes": "Currently supported only by Google Daydream."
-}</pre>
+}
+```
 
-<h3 id="Including_a_vendor_prefix" name="Including_a_vendor_prefix">ベンダープレフィックスを含める</h3>
+### ベンダー接頭辞を含める
 
-<p>ある機能が、あるブラウザでベンダープレフィックス付きでサポートされている場合、ブラウザの互換性データでそのことを明確にしたいと思うでしょう。Firefoxにおいて、 <code>-moz-</code> プレフィックスによりサポートされている機能を想像してください。互換性データでこれを指定するには、該当する "firefox" サブメンバーの中に "prefix" サブメンバーを追加する必要があります。これは次のようになります。</p>
+ある機能が、あるブラウザーでベンダー接頭辞付きで対応されている場合、ブラウザーの互換性データでそのことを明確にしたいと思うでしょう。 Firefox において、 `-moz-` 接頭辞により対応されている機能を想像してください。互換性データでこれを指定するには、該当する "firefox" サブメンバーの中に "prefix" サブメンバーを追加する必要があります。これは次のようになります。
 
-<pre class="brush: json notranslate">"firefox": {
+```json
+"firefox": {
   "version_added": true,
   "prefix": "-moz-"
-}</pre>
+}
+```
 
-<h3 id="Including_browser_preferences_or_flags" name="Including_browser_preferences_or_flags">ブラウザーの設定やフラグを含める</h3>
+### ブラウザーの設定やフラグを含める
 
-<p>いくつかの機能はブラウザでサポートされているかもしれませんが、それらは実験的なものであり、デフォルトではオフになっています。ユーザがこの機能を使いたい場合は、環境設定/フラグを使ってオンにする必要があります。</p>
+機能によっては、ブラウザーが対応しているものの、実験的なものであり既定ではオフになっている場合があります。ユーザーがこの機能を使いたい場合は、環境設定/フラグを使ってオンにする必要があります。
 
-<p>互換性データでこれを表現するには、関連するブラウザ識別子サブメンバーの中に "flags" サブメンバーを追加する必要があります。flags" の値は、3つのメンバを含むオブジェクトの配列です。</p>
+互換性データでこれを表現するには、関連するブラウザー識別子サブメンバーの中に "flags" サブメンバーを追加する必要があります。 "flags" の値は、 3 つのメンバーを含むオブジェクトの配列です。
 
-<ul>
- <li><code>type</code>: フラグやプリファレンスのタイプ。最も一般的な値は "preference"で、これはブラウザ内部で設定されます(例えば、Firefoxではabout:config、Chromeではchrome://flagsを使用します)が、時には "compile_flag "という、ブラウザのビルドがコンパイルされるときに設定される値を使用することもあります。</li>
- <li><code>name</code>: これは、値を設定する必要がある設定の名前を表す文字列です。例えば、"Enable Experimental Web Platform Features" はChromeに存在する環境設定で、Chromeでは<code>chrome://flags</code>にあります。</li>
- <li><code>value_to_set</code>: 設定する値を表す文字列で、例えば "true "などです。</li>
-</ul>
+- `type`: フラグや環境設定の種類。最も一般的な値は "preference" で、これはブラウザー内部で設定されます（例えば、 Firefox では about:config、 Chrome では chrome://flags を使用します）が、時には "compile_flag"という、ブラウザーのビルドがコンパイルされるときに設定される値を使用することもあります。
+- `name`: これは、値を設定する必要がある設定の名前を表す文字列です。例えば、"Enable Experimental Web Platform Features" は Chrome に存在する環境設定で、 Chrome では `chrome://flags` にあります。
+- `value_to_set`: 設定する値を表す文字列で、例えば "true" などです。
 
-<p>つまり、ある機能のChromeのサポートに環境設定/フラグを追加するには、次のようにします。</p>
+つまり、ある機能の Chrome の対応に環境設定/フラグを追加するには、次のようにします。
 
-<pre class="brush: json notranslate">"chrome": {
+```json
+"chrome": {
   "version_added": "50",
   "flags": [
     {
@@ -332,11 +341,13 @@ translation_of: MDN/Structures/Compatibility_tables
       "value_to_set": "true"
     }
   ]
-},</pre>
+},
+```
 
-<p>もしその機能が2つ以上のフラグの元にある場合、この例のように "flags"配列にオブジェクトを追加することができます。</p>
+もしその機能が 2 つ以上のフラグの元にある場合、この例のように "flags" 配列にオブジェクトを追加することができます。
 
-<pre class="brush: json notranslate">"firefox": {
+```json
+"firefox": {
   "version_added": "57",
   "flags": [
     {
@@ -350,28 +361,32 @@ translation_of: MDN/Structures/Compatibility_tables
       "value_to_set": "true"
     }
   ]
-},</pre>
+},
+```
 
-<h3 id="Including_a_version_where_support_was_removed" name="Including_a_version_where_support_was_removed">対応が削除されたバージョンを含める</h3>
+### 対応が削除された版を含める
 
-<p>あるブラウザのバージョンで追加された機能が、非推奨となったために再び削除されることがあります。これは、削除されたバージョン番号を表す文字列を値として受けとる、"version_removed" サブメンバーを使えば簡単に表現できます。例えば、以下のようになります。</p>
+あるブラウザーのある版で機能が追加され、その後その機能が非推奨になったために再び削除されることがあります。これは、 "version_removed" サブメンバーを使って簡単に表現できます。このサブメンバーは、削除されたバージョン番号を表す文字列を値として受け取ります。例えば、以下のようになります。
 
-<pre class="brush: json notranslate">"firefox": {
+```json
+"firefox": {
   "version_added": "35",
   "version_removed": "47",
-},</pre>
+},
+```
 
-<h3 id="Including_multiple_support_points_for_the_same_browser_entry" name="Including_multiple_support_points_for_the_same_browser_entry">同じブラウザーの項目に複数の対応ポイントを含む</h3>
+### 同じブラウザーの項目に複数の対応ポイントを含む
 
-<p>同じブラウザの複数のサポートデータポイントを、同じ機能の中に追加したい場合もあるでしょう。</p>
+同じブラウザーの複数の対応データポイントを、同じ機能の中に追加したい場合もあるでしょう。
 
-<p>例えば、 {{cssxref("text-align-last")}} プロパティ（<a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/text-align-last.json">text-align-last.json</a>も参照）は、バージョン35でChromeに追加され、プレフィックス付きでサポートされました。</p>
+例えば、 {{cssxref("text-align-last")}} プロパティ（[text-align-last.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/text-align-last.json)も参照）は、 Chrome にバージョン 35 で追加され、接頭辞付きで対応されました。
 
-<p>上記のサポートはバージョン 47 で削除されましたが、バージョン 47 でもデフォルトで <code>text-align-last</code> が有効になるようにサポートが追加されました。</p>
+上記の対応はバージョン 47 で削除されましたが、バージョン 47 では既定で `text-align-last` が有効になるような対応も追加されました。
 
-<p>これらのデータポイントの両方を含めるために、"chrome "サブメンバーの値を、単一のサポート情報オブジェクトではなく、2つのサポート情報オブジェクトを含む配列にすることができます。</p>
+これらのデータポイントの両方を含めるために、 "chrome" サブメンバーの値を、単一の対応情報オブジェクトではなく、 2 つの対応情報オブジェクトを含む配列にすることができます。
 
-<pre class="brush: json notranslate">"chrome": [
+```json
+"chrome": [
   {
     "version_added": "47"
   },
@@ -386,89 +401,99 @@ translation_of: MDN/Structures/Compatibility_tables
       }
     ]
   }
-],</pre>
+],
+```
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> ​​​​配列の中には、最新または重要なサポートポイントを最初に配置するべきです。こうすることで、単に最新の情報を取得したい人にとって読みやすいデータとなります。</p>
-</div>
+> **Note:** ​​​​配列の中には、最新または重要な対応ポイントを最初に配置するべきです。こうすることで、単に最新の情報を取得したい人にとって読みやすいデータとなります。
 
-<h3 id="Including_an_alternative_name" name="Including_an_alternative_name">別名を含める</h3>
+### 別名を含める
 
-<p>時々、ブラウザが仕様とは異なる名前で機能をサポートすることがあります。これは例えば、あるブラウザがある機能の実験的なサポートを早くから追加していて、仕様が安定する前に名前が変わってしまったというような場合が考えられます。</p>
+時々、ブラウザーが仕様とは異なる名前で機能を対応することがあります。これは例えば、あるブラウザーがある機能の実験的な対応を早くから追加していて、仕様が安定する前に名前が変わってしまったというような場合が考えられます。
 
-<p>このようなケースをブラウザの互換性データに含めるには、"alternative_name"メンバの中に代替名を指定するサポート情報ポイントを含めます。</p>
+このようなケースをブラウザーの互換性データに含めるには、 "alternative_name" メンバーの中に代替名を指定する対応情報ポイントを含めます。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> 代替名は正確なエイリアスではないかもしれません。標準バージョンとは異なる動作をするかもしれません。</p>
-</div>
+> **Note:** 代替名は正確なエイリアスではないかもしれません。標準版とは異なる動作をするかもしれません。
 
-<p>では例を見てみましょう。{{cssxref("border-top-right-radius")}} プロパティ（<a href="https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json">border-top-right-radius.json</a>も参照）のFirefoxでのサポートは以下の通りです。</p>
+では例を見てみましょう。 {{cssxref("border-top-right-radius")}} プロパティ（[border-top-right-radius.json](https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json)も参照）の Firefox での対応は以下の通りです。
 
-<ul>
- <li>バージョン 4 以降では <code>border-top-right-radius</code> という標準的な名前でサポートされています。</li>
- <li>バージョン 49 以降では、ブラウザの互換性を考慮し、<code>-webkit-</code>プレフィクスと共に使用されます。</li>
- <li>バージョン 1 以降では <code>-moz-border-radius-topright</code> という代替名を使用しています。このエイリアスのサポートはバージョン12で削除されました。</li>
-</ul>
+- バージョン 4 以降では `border-top-right-radius` という標準的な名前で対応されています。
+- バージョン 49 以降では、ブラウザーの互換性を考慮し、 `-webkit-` 接頭辞と共に使用されます。
+- バージョン 1 以降では `-moz-border-radius-topright` という代替名を使用しています。このエイリアスの対応はバージョン 12 で削除されました。
 
-<p>これをデータで表現するために、以下のJSONを使用しました。</p>
+これをデータで表現するために、以下の JSON を使用しました。
 
-<pre class="brush: json notranslate">"firefox": [
+```json
+"firefox": [
   {
     "version_added": "4",
-    "notes": "Prior to Firefox 50.0, border styles of rounded corners were always rendered as if &lt;code&gt;border-style&lt;/code&gt; was solid. This has been fixed in Firefox 50.0."
+    "notes": "Prior to Firefox 50.0, border styles of rounded corners were always rendered as if <code>border-style</code> was solid. This has been fixed in Firefox 50.0."
   },
   {
     "prefix": "-webkit-",
     "version_added": "49",
-    "notes": "From Firefox 44 to 48, the &lt;code&gt;-webkit-&lt;/code&gt; prefix was available with the &lt;code&gt;layout.css.prefixes.webkit&lt;/code&gt; preference. Starting with Firefox 49, the preference defaults to &lt;code&gt;true&lt;/code&gt;."
+    "notes": "From Firefox 44 to 48, the <code>-webkit-</code> prefix was available with the <code>layout.css.prefixes.webkit</code> preference. Starting with Firefox 49, the preference defaults to <code>true</code>."
   },
   {
     "alternative_name": "-moz-border-radius-topright",
     "version_added": "1",
     "version_removed": "12"
   }
-],</pre>
+],
+```
 
-<h2 id="Pushing_a_change_back_to_the_main_repo" name="Pushing_a_change_back_to_the_main_repo">変更のメインリポジトリへの反映</h2>
+## 変更のメインリポジトリーへの反映
 
-<p>互換性データの追加が終わったら、まず以下のコマンドを使ってテストしてみてください。</p>
+互換性データの追加が終わったら、まず以下のコマンドを使ってテストしてみてください。
 
-<ul>
- <li><code>npm run lint</code> — すべての互換性データをテストして、JSONが有効であること、正しいスタイルで書かれていること、例えば正しいインデント、カンマの欠落がないことなどを確認します。ファイル名とテスト結果の長いリストが表示されます。エラーが見つかった場合、リンターは見つかったファイルに対してエラーをスローし、行番号やエラーメッセージなどのデバッグに役立つ情報を表示します。</li>
- <li><code>npm run show-errors</code> — JSON をデータスキーマと照らし合わせて検証し、無効なブラウザのバージョン番号が使用されているなどのエラーをハイライトします。</li>
-</ul>
+- `npm run lint` — すべての互換性データをテストして、 JSON が有効であること、正しいスタイルで書かれていること、例えば正しいインデント、カンマの欠落がないことなどを確認します。ファイル名とテスト結果の長いリストが表示されます。エラーが見つかった場合、リンターは見つかったファイルに対してエラーをスローし、行番号やエラーメッセージなどのデバッグに役立つ情報を表示します。
+- `npm run show-errors` — JSON をデータスキーマと照らし合わせて検証し、無効なブラウザーのバージョン番号が使用されているなどのエラーをハイライトします。
 
-<p>問題がなさそうであれば、コミットして、GitHub上のあなたのリモートフォークにプッシュする必要があります。これは、以下のようなターミナルコマンドで簡単に行うことができます。</p>
+問題がなさそうであれば、コミットして、 GitHub 上のあなたのリモートフォークにプッシュする必要があります。これは、以下のようなターミナルコマンドで簡単に行うことができます。
 
-<pre class="brush: bash notranslate">git add .
-git commit -m 'adding compat data for <em>name-of-feature</em>'
-git push</pre>
+```bash
+git add .
+git commit -m 'adding compat data for name-of-feature'
+git push
+```
 
-<p>リモートフォーク (URLの例: <code>https://github.com/<em>your-username</em>/browser-compat-data</code>) に行くと、ファイルリストの一番上 (「最近プッシュしたブランチ」の下) にあなたのプッシュに関する情報が表示されているはずです。プルリクエスト（あなたのリモートフォークをメインリポジトリに取り込むための、最初の過程のことです）を作成するには、"Compare &amp; pull request" ボタンを押して、続く画面の簡単なプロンプトに従ってください。</p>
+リモートフォーク（すなわち `https://github.com/ユーザー名/browser-compat-data`）に行くと、ファイル一覧の一番上 （"Your recently pushed branches" の下）にプッシュに関する情報が表示されているはずです。プルリクエスト（リモートフォークをメインリポジトリーに取り込むための、最初の過程のことです）を作成するには、"Compare & pull request" ボタンを押して、続く画面の簡単なプロンプトに従ってください。
 
-<p>これが終われば、ただ待つのみです。レビュアーがあなたのプルリクエストをレビューし、メインリポジトリにマージします。そうでない場合は、変更を依頼します。変更が必要な場合は、変更を加えて、プルリクエストが受理されるまで再度投稿してください。</p>
+これが終われば、ただ待つのみです。レビュアーがあなたのプルリクエストをレビューし、メインリポジトリーにマージします。そうでない場合は、変更を依頼します。変更が必要な場合は、変更を加えて、プルリクエストが受理されるまで再度投稿してください。
 
-<h2 id="Inserting_the_data_into_MDN_pages" name="Inserting_the_data_into_MDN_pages">MDN ページへのデータの挿入</h2>
+## MDN ページへのデータの挿入
 
-<p>一度あなたの新しいデータがメインリポジトリに含められたら、{{TemplateLink("Compat")}} マクロを使って、MDNページ上でそのデータに基づいてブラウザの互換性一覧表を動的に生成することができます。これは、JSONデータを探索して、互換性一覧表を生成したい機能を表すオブジェクトを見つけるために必要なドット記法を唯一のパラメータとして受け取ります。</p>
+新しい互換性データがメインの [browser-compat-data](https://github.com/mdn/browser-compat-data) リポジトリーに含まれると、そのデータを基にしたブラウザー互換性一覧表や仕様書一覧表を MDN ページに動的に生成することができるようになります。
 
-<p><br>
- マクロ呼び出しの上に、他のコントリビューターにとって使いやすくするために、編集モードのMDNでコントリビューターにのみ表示される隠しテキストを追加します。</p>
+まず、取り込みたい互換性データのクエリー文字列を見つける必要があります。これは、そのソースファイルを検査することによって決定することができます。例えば、
 
-<pre class="brush: html notranslate">&lt;div class="hidden"&gt;
-The compatibility table on this page is generated from structured data.
-If you'd like to contribute to the data, please check out
-&lt;a href="https://github.com/mdn/browser-compat-data"&gt;https://github.com/mdn/browser-compat-data&lt;/a&gt;
-and send us a pull request.
-&lt;/div&gt;</pre>
+- {{domxref("AbortController")}} の互換性データは [AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) で定義されており、 `api.AbortController` を使用して問い合わせすることができます。
+- {{HTTPHeader("Content-Type")}} HTTP ヘッダーの互換性データは [content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) で定義されており、 `http.headers.Content-Type` を使用して問い合わせすることができます。
+- {{domxref("VRDisplay.capabilities")}} プロパティの互換性データは [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) で定義されており、 `api.VRDisplay.capabilities` で問い合わせすることができます。
 
-<p>例として、HTTPヘッダーに関するページである {{HTTPHeader("Accept-Charset")}} では、マクロの呼び出しは次のようになっています。 <code>\{{Compat("http.headers.Accept-Charset")}}</code>リポジトリ内の<a href="https://github.com/mdn/browser-compat-data/blob/master/http/headers/accept-charset.json">accept-charset.json</a>ファイルを見ると、これが JSON データにどのように反映されているかがわかると思います。</p>
+互換性データのクエリーは、ページの先頭部分で `browser-compat` キーを使用して指定する必要があります。
+例えば、 {{domxref("AbortController")}} の場合、以下のように追加します
 
-<p>別の例として、{{domxref("VRDisplay.capabilities")}} プロパティの互換性一覧表は、 <code>\{{Compat("api.VRDisplay.capabilities")}}</code>を使用して生成されます。マクロ呼び出しにより、以下の表（および対応する一連の注釈）が生成されます。</p>
+```plain
+---
+title: AbortController
+slug: Web/API/AbortController
 
-<hr>
-<p>{{Compat("api.VRDisplay.capabilities")}}</p>
+...
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> ファイル名は、JSON 構造体内のインターフェイスに与えられたラベルと一致することがよくありますが、必ずしもそうとは限りません。マクロ呼び出しがテーブルを生成するときには、使用する JSON を見つけるまですべてのファイルを探索するので、ファイル名はそれほど重要ではありません。そうは言っても、常に可能な限り直感的な名前を付けるべきです。</p>
-</div>
+browser-compat: api.AbortController
+---
+```
+
+そして、そのキーに対応する互換性一覧表と仕様書一覧表が、ソース中の `\{{Compat}}` と `\{{Specifications}}` マクロの代わりに自動的にレンダリングされます。
+
+また、以下のようにマクロの第一引数として目的の API を指定することもできます。 `\{{Compat("api.AbortController")}}` のように、マクロの第一引数に目的の API を指定することもできます。これは、同じページで複数の互換性一覧表が必要な場合に便利です。
+
+マクロの呼び出しにより、以下の表（とそれに対応する一連の注釈）が生成されます。
+
+#### 互換性一覧表の例
+
+{{Compat}}
+
+#### 仕様書一覧表の例
+
+{{Specifications}}
