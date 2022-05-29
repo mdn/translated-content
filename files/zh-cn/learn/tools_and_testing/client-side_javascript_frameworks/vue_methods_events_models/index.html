@@ -95,15 +95,15 @@ translation_of: >-
  </li>
 </ol>
 
-<p>现在，当您查看正在运行的站点时，您应该会看到显示的新表单。</p>
+<p>现在，当你查看正在运行的站点时，你应该会看到显示的新表单。</p>
 
 <p><img alt="Our todo list app rendered with a text input to enter new todos" src="rendered-form-with-text-input.png"></p>
 
-<p>如果您填写并单击“添加”按钮，页面会将表单发送回服务器，但这并不是我们真正想要的。我们真正想要做的是在 <a href="/zh-CN/docs/Web/API/HTMLFormElement/submit_event"><code>submit</code> 事件</a>上运行一个方法，该方法将添加 <code>App</code> 中定义的 <code>ToDoItem</code> 数据列表的新待办事项。为此，我们需要向组件实例添加一个方法。</p>
+<p>如果你填写并单击“添加”按钮，页面会将表单发送回服务器，但这并不是我们真正想要的。我们真正想要做的是在 <a href="/zh-CN/docs/Web/API/HTMLFormElement/submit_event"><code>submit</code> 事件</a>上运行一个方法，该方法将添加 <code>App</code> 中定义的 <code>ToDoItem</code> 数据列表的新待办事项。为此，我们需要向组件实例添加一个方法。</p>
 
 <h2 id="Creating_a_method_binding_it_to_an_event_with_v-on">创建一个方法并用 v-on 绑定这个方法到一个事件上</h2>
 
-<p>我们需要将方法添加到 <code>ToDoForm</code> 组件对象中，以使方法可用。这是在组件的 <code>methods</code> 属性中完成的，它与 <code>data()</code>、<code>props</code> 等位于同一位置。<code>methods</code> 属性包含我们可能需要在组件中调用的任何方法。引用时，方法已完全运行，因此使用它们在模板内显示信息不是一个好主意。为了显示通过计算获得的数据，您应该使用 <code>computed</code> 属性，我们稍后会介绍。</p>
+<p>我们需要将方法添加到 <code>ToDoForm</code> 组件对象中，以使方法可用。这是在组件的 <code>methods</code> 属性中完成的，它与 <code>data()</code>、<code>props</code> 等位于同一位置。<code>methods</code> 属性包含我们可能需要在组件中调用的任何方法。引用时，方法已完全运行，因此使用它们在模板内显示信息不是一个好主意。为了显示通过计算获得的数据，你应该使用 <code>computed</code> 属性，我们稍后会介绍。</p>
 
 <ol>
  <li>
@@ -118,13 +118,13 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>接下来我们需要将该方法绑定到我们的 <code>&lt;form&gt;</code> 元素的 <code>submit</code> 事件处理程序。 就像 Vue 如何使用 <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> 语法来绑定属性，Vue 有 用于事件处理的特殊指令：<code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>。 <code>v-on</code> 指令通过 <code>v-on:event="method"</code> 语法工作。 和 <code>v-bind</code> 很像，还有一个简写语法：<code>@event="method"</code>。为了保持一致性，我们将在此处使用简写语法。 将 <code>submit</code> 处理程序添加到您的 <code>&lt;form&gt;</code> 元素，如下所示：</p>
+  <p>接下来我们需要将该方法绑定到我们的 <code>&lt;form&gt;</code> 元素的 <code>submit</code> 事件处理程序。 就像 Vue 如何使用 <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> 语法来绑定属性，Vue 有 用于事件处理的特殊指令：<code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>。 <code>v-on</code> 指令通过 <code>v-on:event="method"</code> 语法工作。 和 <code>v-bind</code> 很像，还有一个简写语法：<code>@event="method"</code>。为了保持一致性，我们将在此处使用简写语法。 将 <code>submit</code> 处理程序添加到你的 <code>&lt;form&gt;</code> 元素，如下所示：</p>
    
   <pre class="brush: html notranslate">&lt;form @submit="onSubmit"&gt;
 </pre>
  </li>
  <li>
-  <p>当您运行此程序时，应用程序仍会将数据发布到服务器，从而导致刷新。由于我们在客户端上进行所有处理，因此没有服务器来处理回发。我们还会在页面刷新时丢失所有本地状态。为了防止浏览器发布到服务器，我们需要阻止事件的默认操作通过页面冒泡（<code><a href="/zh-CN/docs/Web/API/Event/preventDefault">Event .preventDefault()</a></code>，在原生 JavaScript 中）。Vue 有一个特殊的语法叫做 <strong>event modifiers</strong> 可以在我们的模板中为我们处理这个问题。修饰符被附加到事件的末尾，带有一个点，如下所示：<code>@event.modifier</code>。以下是事件修饰符列表：</p>
+  <p>当你运行此程序时，应用程序仍会将数据发布到服务器，从而导致刷新。由于我们在客户端上进行所有处理，因此没有服务器来处理回发。我们还会在页面刷新时丢失所有本地状态。为了防止浏览器发布到服务器，我们需要阻止事件的默认操作通过页面冒泡（<code><a href="/zh-CN/docs/Web/API/Event/preventDefault">Event .preventDefault()</a></code>，在原生 JavaScript 中）。Vue 有一个特殊的语法叫做 <strong>event modifiers</strong> 可以在我们的模板中为我们处理这个问题。修饰符被附加到事件的末尾，带有一个点，如下所示：<code>@event.modifier</code>。以下是事件修饰符列表：</p>
   
    <ul>
    <li><code>.stop</code>：停止传播事件。 等效于常规 JavaScript 事件中的 <code><a href="/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation()</a></code>。</li>
@@ -145,7 +145,7 @@ translation_of: >-
  </li>
 </ol>
 
-<p>如果您现在尝试提交表单，您会注意到页面没有重新加载。如果打开控制台，可以看到我们在 <code>onSubmit()</code> 方法中添加的 <code><a href="/zh-CN/docs/Web/API/Console/log">console.log()</a></code> 所输出结果。</p>
+<p>如果你现在尝试提交表单，你会注意到页面没有重新加载。如果打开控制台，可以看到我们在 <code>onSubmit()</code> 方法中添加的 <code><a href="/zh-CN/docs/Web/API/Console/log">console.log()</a></code> 所输出结果。</p>
 
 <h2 id="Binding_data_to_inputs_with_v-model">用 v-model 来绑定数据到输入</h2>
 
@@ -156,7 +156,7 @@ translation_of: >-
  <li>
   <p>向我们的 <code>ToDoForm</code> 组件对象添加一个 <code>data()</code> 方法，该方法返回一个 <code>label</code> 字段。 我们可以将<code>label</code>的初始值设置为空字符串。</p>
    
-  <p>您的组件对象现在应该如下所示：</p>
+  <p>你的组件对象现在应该如下所示：</p>
    
   <pre class="brush: js notranslate">export default {
   methods: {
@@ -191,7 +191,7 @@ translation_of: >-
  <li>
   <p>让我们通过记录在我们的 <code>onSubmit()</code> 方法中提交的数据的值来测试我们对 <code>v-model</code> 的使用。 在组件中，使用 <code>this</code> 关键字访问数据属性。 所以我们使用 <code>this.label</code> 访问我们的 <code>label</code> 字段。</p>
    
-  <p>更新您的 <code>onSubmit()</code> 方法，使其如下所示：</p>
+  <p>更新你的 <code>onSubmit()</code> 方法，使其如下所示：</p>
    
   <pre class="brush: js notranslate">methods: {
   onSubmit() {
@@ -200,7 +200,7 @@ translation_of: >-
 },</pre>
  </li>
  <li>
-  <p>现在回到您正在运行的应用程序，在 <code>&lt;input&gt;</code> 字段中添加一些文本，然后单击“添加”按钮。 您应该会看到您输入的值已记录到控制台，例如：</p>
+  <p>现在回到你正在运行的应用程序，在 <code>&lt;input&gt;</code> 字段中添加一些文本，然后单击“添加”按钮。 你应该会看到你输入的值已记录到控制台，例如：</p>
    
   <pre class="notranslate">Label value: My value</pre>
  </li>
@@ -214,7 +214,7 @@ translation_of: >-
 
 <p>要同时使用 <code>.lazy</code> 修饰符和 <code>.trim</code> 修饰符，我们可以将它们链接起来，例如 <code>v-model.lazy.trim="label"</code>。</p>
 
-<p>如上所示更新您的 <code>v-model</code> 属性以链接 <code>lazy</code> 和 <code>trim</code>，然后再次测试您的应用。 例如，尝试提交一个两端都有空格的值。</p>
+<p>如上所示更新你的 <code>v-model</code> 属性以链接 <code>lazy</code> 和 <code>trim</code>，然后再次测试你的应用。 例如，尝试提交一个两端都有空格的值。</p>
 
 <h2 id="Passing_data_to_parents_with_custom_events">使用自定义事件将数据传递给父母</h2>
 
@@ -258,9 +258,9 @@ translation_of: >-
   <pre class="brush: html notranslate">&lt;to-do-form @todo-added="addToDo"&gt;&lt;/to-do-form&gt;</pre>
  </li>
  <li>
-  <p>当您提交 <code>ToDoForm</code> 时，您应该会看到来自 <code>addToDo()</code> 方法的控制台日志。 这很好，但我们仍然没有将任何数据传递回 <code>App.vue</code> 组件。 我们可以通过将额外的参数传递给 <code>ToDoForm</code> 组件中的 <code>this.$emit()</code> 函数来做到这一点。</p>
+  <p>当你提交 <code>ToDoForm</code> 时，你应该会看到来自 <code>addToDo()</code> 方法的控制台日志。 这很好，但我们仍然没有将任何数据传递回 <code>App.vue</code> 组件。 我们可以通过将额外的参数传递给 <code>ToDoForm</code> 组件中的 <code>this.$emit()</code> 函数来做到这一点。</p>
    
-  <p>在这种情况下，当我们触发事件时，我们希望将 <code>label</code> 数据连同它一起传递。 这是通过在 <code>$emit()</code> 方法中包含您要作为另一个参数传递的数据来完成的：<code>this.$emit("todo-added", this.label)</code >。 这类似于原生 JavaScript 事件如何包含数据，除了自定义 Vue 事件默认不包含事件对象。 这意味着发出的事件将直接匹配您提交的任何对象。 所以在我们的例子中，我们的事件对象只是一个字符串。</p>
+  <p>在这种情况下，当我们触发事件时，我们希望将 <code>label</code> 数据连同它一起传递。 这是通过在 <code>$emit()</code> 方法中包含你要作为另一个参数传递的数据来完成的：<code>this.$emit("todo-added", this.label)</code>。 这类似于原生 JavaScript 事件如何包含数据，除了自定义 Vue 事件默认不包含事件对象。 这意味着发出的事件将直接匹配你提交的任何对象。 所以在我们的例子中，我们的事件对象只是一个字符串。</p>
    
   <p>像这样更新你的 <code>onSubmit()</code> 方法：</p>
    
@@ -282,7 +282,7 @@ translation_of: >-
  </li>
 </ol>
 
-<p>如果您再次测试您的表单，您将在提交时看到您在控制台中输入的任何文本。 Vue 自动将 <code>this.$emit()</code> 中事件名称后面的参数传递给您的事件处理程序。</p>
+<p>如果你再次测试你的表单，你将在提交时看到你在控制台中输入的任何文本。Vue 自动将 <code>this.$emit()</code> 中事件名称后面的参数传递给您的事件处理程序。</p>
 
 <h2 id="Adding_the_new_todo_into_our_data">将新的待办事项添加到我们的数据中</h2>
 
@@ -296,10 +296,10 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>再次尝试测试您的表单，您应该会看到新的待办事项被附加到列表的末尾。</p>
+  <p>再次尝试测试你的表单，你应该会看到新的待办事项被附加到列表的末尾。</p>
  </li>
  <li>
-  <p>在我们继续之前，让我们做进一步的改进。如果您在输入为空时提交表单，则没有文本的待办事项仍会添加到列表中。为了解决这个问题，我们可以防止在 name 为空时触发 todo-added 事件。由于 <code>.trim</code> 指令已经对 name 进行了修剪，因此我们只需要测试空字符串。回到你的 <code>ToDoForm</code> 组件，像这样更新 <code>onSubmit()</code> 方法。如果标签值为空，我们就不发出 <code>todo-added</code> 事件。</p>
+  <p>在我们继续之前，让我们做进一步的改进。如果你在输入为空时提交表单，则没有文本的待办事项仍会添加到列表中。为了解决这个问题，我们可以防止在 name 为空时触发 todo-added 事件。由于 <code>.trim</code> 指令已经对 name 进行了修剪，因此我们只需要测试空字符串。回到你的 <code>ToDoForm</code> 组件，像这样更新 <code>onSubmit()</code> 方法。如果标签值为空，我们就不发出 <code>todo-added</code> 事件。</p>
    
   <pre class="brush: js notranslate">onSubmit() {
   if(this.label === "") {
@@ -309,7 +309,7 @@ translation_of: >-
 }</pre>
  </li>
  <li>
- <p>再次尝试您的表单。 现在您将无法将空项目添加到待办事项列表中。</p> </li>
+ <p>再次尝试你的表单。 现在你将无法将空项目添加到待办事项列表中。</p> </li>
 </ol>
 
 <p><img alt="我们的待办事项列表应用程序使用文本输入呈现以输入新待办事项" src="rendered-form-with-new-items.png"></p>
