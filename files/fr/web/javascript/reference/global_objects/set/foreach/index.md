@@ -19,7 +19,9 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois po
 
 ## Syntaxe
 
-    monSet.forEach(callback[, thisArg])
+```js
+monSet.forEach(callback[, thisArg])
+```
 
 ### Valeur de retour
 
