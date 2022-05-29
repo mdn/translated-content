@@ -8,11 +8,11 @@ tags:
   - Reference
   - Streams
   - releaseLock
-translation_of: api/ReadableStreamDefaultReader/releaseLock
+translation_of: Web/API/ReadableStreamDefaultReader/releaseLock
 ---
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} 接口的 **`releaseLock()`** 方法，该方法释放 reader 对流的锁定。
+{{domxref("ReadableStreamDefaultReader")}} 接口的 **`releaseLock()`** 方法用于释放 reader 对流的锁定。
 
 如果释放锁时关联流出错，reader 随后会以同样的方式发生错误；此外，reader 将关闭。
 
@@ -35,7 +35,7 @@ releaseLock()
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果源对象不是一个 `ReadableStreamDefaultReader`，或者读取请求处于等待状态，则抛出异常。
+  - : 如果源对象不是一个 `ReadableStreamDefaultReader`，或者仍有读取请求处于等待状态。
 
 ## 示例
 
