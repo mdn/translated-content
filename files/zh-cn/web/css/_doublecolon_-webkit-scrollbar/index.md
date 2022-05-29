@@ -131,6 +131,6 @@ Who thought scrollbars could be made weeeeird?
 
 ## 参见
 
-- WebKit 论坛 [设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
+- WebKit 论坛[设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
