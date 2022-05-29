@@ -31,7 +31,7 @@ Dans les lignes d'exemple qui suivent, on utilise le fichier de départ **_in.vi
 
 On créera la piste audio avec :
 
-```
+```bash
 ffmpeg -i in.video -vn -acodec libvorbis -ab 128k -dash 1 my_audio.webm
 ```
 
