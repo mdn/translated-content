@@ -2,238 +2,203 @@
 title: ページの種類
 slug: MDN/Structures/Page_types
 tags:
-  - MDN Meta
+  - ドキュメント
   - ガイド
-  - ドキュメンテーション
+  - MDN メタ
   - 構造
+  - テンプレート
 translation_of: MDN/Structures/Page_types
 ---
-<div>{{MDNSidebar}}{{IncludeSubnav("/ja/docs/MDN")}}</div>
+{{MDNSidebar}}
 
-<p class="summary">MDN に繰り返し使用されるいくつかの種類のページがあります。この記事では、これらのページの種類とその目的、および新しいページを作成するときに使用するそれぞれのテンプレートの例と使用方法について説明します。</p>
+MDN には繰り返し使用されるいくつかの種類のページがあります。
+この記事では、これらのページの種類とその目的、および新しいページを作成するときに使用するそれぞれのテンプレートの例と使用方法について説明します。
 
-<p>MDN には大きく分けて3種類のページがありますが、いくつかの種類のページはは複数のカテゴリに分類されます。</p>
+MDN には大きく分けて 3 種類のページがありますが、いくつかの種類のページは複数のカテゴリーに分類されます。
 
-<ul>
- <li><strong>リファレンス</strong>ページは何かの詳細を記述し、記述されているものの構造に従って編成されています</li>
- <li><strong>ガイド</strong>ページには、何かを行う方法や使う方法が書かれており、読者の目標に基づいて編成されています</li>
- <li><strong>ナビゲーションページ</strong>は、主に関連するトピックに関する他のページへのリンクを提供するために存在します</li>
-</ul>
+- **リファレンス**ページは何かの詳細を記述し、記述されているものの構造に従って編成されています
+- **ガイド**ページには、何かを行う方法や使う方法が書かれており、読者の目標に基づいて編成されています
+- **ナビゲーションページ**は、主に関連するトピックに関する他のページへのリンクを提供するために存在します
 
-<h2 id="Creating_a_new_page" name="Creating_a_new_page">新しいページの作成</h2>
+## 新しいページの作成
 
-<p>MDN に新しいページを作成するには、まず「ページ作成者」のアクセス許可が必要です。これを持っていない場合は、MDN 管理チームのメンバーからリクエストできます (<a href="/ja/docs/MDN/Contribute/Structures/mdn-admins@mozilla.org">mdn-admins メーリングリスト</a>を使用してください)。これを取得したら、いくつかの方法で新しいページを作成することができます：</p>
+MDN に新しいページを作成するには、 GitHub を使用する必要があります。詳しい説明については [content リポジトリーの README](https://github.com/mdn/content#adding-a-new-document) を参照してください。
 
-<ul>
- <li>いずれのページでも、ギアメニューの [新しいサブ記事] オプションを使用して新しいサブページを作成できます。<img alt="options or gear menu on mdn, which includes the new sub-article option " src="https://mdn.mozillademos.org/files/15912/171EA6E3-FEA6-4B2D-AFF7-31E52A1FEA09.png" style="border-style: solid; border-width: 1px; display: block; height: 300px; margin: 0px auto; width: 233px;"></li>
- <li>また、マクロ呼び出しで作成された赤いリンク (まだ存在しないページへのリンク。例えば a \{{domxref()}}) をたどって新しいページを作成することもできます</li>
-</ul>
+## テンプレートの使い方
 
-<p>これは新しいページの UI で、そこで新しいページへのコンテンツの入力を開始できます。</p>
+新しいページを作成する際、ページテンプレートを参照することで、正しいページ構成やコンテンツを使用したことを確認することができます。
+（コピーしたい場合は）各テンプレートの下にある "Source on **GitHub**" リンクをたどると、正確なソースコードを見つけることができます。
+これらのページテンプレートは、公開されたページとしてはあまり意味を持ちませんが、ソースコードを見ると、多くの有用なコメント、プレースホルダー、不足する情報を埋めてページを作成する方法の詳細なヒントが含まれていることがわかります。
 
-<h2 id="How_to_use_the_templates" name="How_to_use_the_templates">テンプレートの使い方</h2>
+各テンプレートの上部には、_Remove before publishing_ というセクションがあります。ここには、ページのタイトル、スラッグ、サイドバーメニュー、タグ（例えば、実際には記事の本文に表示されない情報）を記入する方法についての情報が記載されています。
+このセクションの指示に従った後、ページが完成したとみなされる前に、このセクションを削除する必要があります。
 
-<p>When creating a new page you can ensure that you've used the right page structure/contents by using one of our page templates (see the sections below).</p>
+## 古い様式のページレイアウト
 
-<p>These page templates don't make much sense as published pages, but if you view them in edit view you'll see that they contain a lot of helpful comments, placeholders, and hints detailing how to fill in the missing information and create your page.</p>
+時々、ここで紹介するテンプレートとは明らかに異なる古い様式のリファレンスページを見かけることがあります。
+例えば、古い様式のインターフェイスページでは、インターフェイスの全てのメンバーの詳細が 1 つのページ上にあり、個々のメソッド/プロパティ/コンストラクタ/イベントリスナーページは存在しませんでした。
 
-<p>At the top of each template you'll find a section entitled <em>Remove before publishing</em> — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g. information that doesn't actually appear in the body of the article). You need to delete this section after you've followed the instructions in it, before the page can be considered finished.</p>
+もし、古い様式のページを見つけたら、ぜひ新しい様式に更新してください。
+しかし、これは大変な作業となる可能性があることを承知しています。
+更新する情報がそれほど多くなく、お時間があるようでしたら、ぜひ新しい様式に更新してみてください。
 
-<p>To use a template, currently you just have to copy the source of the template out of its edit view and paste the contents into the <em>New document</em> page you are creating your new article in. In the future, we hope to update the editor UI to allow you to choose templates directly from there.</p>
+もし作業量が多い場合は、いくつかの要素を考慮して作業の優先順位を決めるとよいでしょう。
 
-<h2 id="Old-style_page_layouts" name="Old-style_page_layouts">古い形式のページレイアウト</h2>
+- どの程度古い情報なのか？
+- その情報はどの程度古いか、どの程度品質が低いか
+- その特集はどの程度人気があるか？その情報はどの程度求められているか？
 
-<p>Sometimes you will come across old-style reference pages that look markedly different from the templates presented here. For example, old-style interface pages had all the interfaces' member details on a single page, and individual method/property/constructor/event listener pages didn't exist.</p>
+もし、チームを結成して更新作業を行いたい場合、または単に更新が必要なコンテンツを報告または議論したい場合は、お気軽に[コンテンツの問題を報告](https://github.com/mdn/content/issues)または[助けを求める](/ja/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)までお問い合わせください。
 
-<p>If you come across an old-style set of pages, we'd love for you to update them to the new style! However, we do appreciate that this could be a large amount of work. If the information to update is not too large, and you have some free time, by all means try updating it to the new style.</p>
+## API ランディングページ
 
-<p>If the work is more significant, then you should consider a few factors when prioritising the work:</p>
+**{{Glossary("API")}} ランディングページ**では、特定の API が行うことの概要と、その API が提供する各インターフェイス、グローバル、関数などのドキュメントへのリンクが提供されます。
+概要テキストのコンテキストを除いて、 API のクラス内の特定のメソッドやプロパティに直接リンクすることはありません。
+このページは主に*ナビゲーション*ページですが、 API の一目でわかる*リファレンス*ページとしても機能します。
 
-<ul>
- <li>How out-of-date is the information?</li>
- <li>How low quality is the information?</li>
- <li>How popular is the feature? How sought after is the information?</li>
-</ul>
+複数の API が存在し、それぞれ独自の仕様で定義されていますが、それらは密接に関連しているため、 1 つの API ランディングページでカバーすることが理にかなっている場合があります。
+例えば、 [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) は一般的なセンサーに関する事項をカバーしていますが、より具体的な事項は [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/) や [Motion Sensor](https://www.w3.org/TR/motion-sensors/) など、他の API でカバーされています。
+このような場合、高レベルの概念の多くが同じであるため、複数のランディングページにわたってそれらを繰り返すことは意味がありません。
+そのような場合は、 1 つの「ウェブセンサー」ランディングページですべてをカバーする方が、繰り返しの意味でも見つけやすさの意味でも理にかなっています。
 
-<p>If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, <a href="https://discourse.mozilla.org/c/mdn">send us a message on discourse</a>.</p>
+### 例
 
-<h2 id="API_landing_page" name="API_landing_page">API ランディングページ</h2>
+- [WebVR API](/ja/docs/Web/API/WebVR_API)
 
-<p>An <strong>{{Glossary("API")}} landing page</strong> provides an overview of what a particular API does, as well as links to the documentation for each of the interfaces, globals, functions, etc. offered by the API. It does not link directly to specific methods or properties within the API's classes, except in the context of the overview text. It is primarily a <em>navigation</em> page, but also functions as an at-a-glance <em>reference</em> page for the API.</p>
+### テンプレート
 
-<p>There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page. For example, the <a href="https://www.w3.org/TR/generic-sensor/">Generic Sensor API</a> cover general sensor concerns, but more specific concerns are covered in other APIs such as <a href="https://www.w3.org/TR/ambient-light/">Ambient Light Sensor</a>, <a href="https://www.w3.org/TR/motion-sensors/">Motion Sensor</a>, etc. In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages. In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.</p>
+- [API ランディングページテンプレート](/ja/docs/MDN/Structures/Page_types/API_landing_page_template)
 
-<h3 id="Example" name="Example">例</h3>
+## API リファレンスページ
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a></li>
-</ul>
+> **Note:** *インターフェイスランディングページ*とも呼ばれます。
 
-<h3 id="Templates" name="Templates">テンプレート</h3>
+**API リファレンスページ**は、特定のインターフェイスやクラスのメンバーであるすべてのメソッド、プロパティ、イベントなどを列挙します。
+クラスまたはインターフェイスが何を行うか、または何のために使用されるかの概要を提供し、これらの各メンバーのドキュメントへのリンクを提供します。
+通常、複数の API リファレンスページにリンクしている API ランディングページよりも、より詳細な情報を提供します。
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_landing_page_template">API landing page template</a></li>
-</ul>
+### 例
 
-<h2 id="API_reference_page" name="API_reference_page">API リファレンスページ</h2>
+- [フェッチ API](/ja/docs/Web/API/Fetch_API) の [Request インターフェイス](/ja/docs/Web/API/Request)。
 
-<div class="note">
-<p><strong>メモ:</strong> Also known as an <em>Interface landing page.</em></p>
-</div>
+### テンプレート
 
-<p>An <strong>API reference page</strong> lists all the methods, properties, events, and so forth that are members of a particular interface or class. It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members. It is more granular than an API landing page, which typically links to multiple API reference pages.</p>
+- [API リファレンスページテンプレート](/ja/docs/MDN/Structures/Page_types/API_reference_page_template)
 
-<h3 id="Example_2" name="Example_2">例</h3>
+## API リファレンスサブページ
 
-<ul>
- <li><a href="/ja/docs/Web/API/Request">Request interface</a> of the <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a>.</li>
-</ul>
+**API リファレンスサブページ**は、 API リファレンスページの子ページです。
+これは、インターふぃえすの単一のメンバーを詳細に記述します。
 
-<h3 id="Templates_2" name="Templates_2">テンプレート</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_reference_page_template">API reference page template</a></li>
-</ul>
+- [IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイスの [`count()` メソッド](/ja/docs/Web/API/IDBIndex/count)（[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の一部）
+- [VRDisplay](/ja/docs/Web/API/VRDisplay) インターフェイスの [capabilities プロパティ](/ja/docs/Web/API/VRDisplay/capabilities)（[WebVR API](/ja/docs/Web/API/WebVR_API) の一部）
+- [Request](/ja/docs/Web/API/Request) インターフェイスの [Request() コンストラクター](/ja/docs/Web/API/Request/Request)（[Fetch API](/ja/docs/Web/API/Fetch_API) の一部）
+- [vrdisplaypresentchange イベント](/ja/docs/Web/API/Window/vrdisplaypresentchange_event) ([WebVR API](/ja/docs/Web/API/WebVR_API) の一部、 [Window](/ja/docs/Web/API/Window) インターフェイスにぶら下がっている）
 
-<h2 id="API_reference_subpage" name="API_reference_subpage">API リファレンスサブページ</h2>
+### テンプレート
 
-<p>An <strong>API reference subpage</strong> is a child of an API reference page. It documents a single interface member in detail.</p>
+- [API メソッドサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_method_subpage_template)
+- [API プロパティサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_property_subpage_template)
+- [API コンストラクターサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_constructor_subpage_template)
+- [API イベントサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_event_subpage_template)
 
-<h3 id="Examples" name="Examples">例</h3>
+## HTML 要素リファレンスページ
 
-<ul>
- <li><a href="/ja/docs/Web/API/IDBIndex/count"><code>count()</code> method</a> of the <a href="/ja/docs/Web/API/IDBIndex">IDBIndex</a> interface (part of the <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB API</a>)</li>
- <li><a href="/ja/docs/Web/API/VRDisplay/capabilities">capabilities property</a> of the <a href="/ja/docs/Web/API/VRDisplay">VRDisplay</a> interface (part of the <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a>)</li>
- <li><a href="/ja/docs/Web/API/Request/Request">Request() constructor</a> of the <a href="/ja/docs/Web/API/Request">Request</a> interface (part of the <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a>)</li>
- <li><a href="/ja/docs/Web/API/Window/onvrdisplaypresentchange">onvrdisplaypresentchange event handler</a> (part of the <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a>, which hangs off the <a href="/ja/docs/Web/API/Window">Window</a>) interface</li>
-</ul>
+**HTML リファレンスページ**は、 HTML 要素で利用可能なすべての属性を列挙し、要素の目的や使用方法を説明し、例やブラウザーの互換性情報、その他の重要なデータを提供します。
 
-<h3 id="Templates_3" name="Templates_3">テンプレート</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_method_subpage_template">API method subpage template</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_property_subpage_template">API property subpage template</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_constructor_subpage_template">API constructor subpage template</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_event_subpage_template">API event subpage template</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/API_event_handler_subpage_template">API event handler subpage template</a></li>
-</ul>
+- [`<video>` 要素](/ja/docs/Web/HTML/Element/video)
 
-<h2 id="HTML_element_reference_page" name="HTML_element_reference_page">HTML 要素リファレンスページ</h2>
+### テンプレート
 
-<p>An <strong>HTML reference page</strong> lists all the attributes that are available on an HTML element, explains the element's purpose and usage, and provides examples, browser compatibility information, and other important data.</p>
+- [HTML 要素ページテンプレート](/ja/docs/MDN/Structures/Page_types/HTML_element_page_template)
 
-<h3 id="Example_3" name="Example_3">例</h3>
+## SVG 要素リファレンスページ
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code> element</a></li>
-</ul>
+**SVG リファレンスページ**は、 SVG 要素で利用可能なすべての属性の一覧、要素の目的および使用法の説明、例、ブラウザーの互換性情報、その他の重要なデータを提供するものです。
 
-<h3 id="Templates_4" name="Templates_4">テンプレート</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/HTML_element_page_template">HTML element page template</a></li>
-</ul>
+- [\<g> 要素](/ja/docs/Web/SVG/Element/g)
 
-<h2 id="SVG_element_reference_page" name="SVG_element_reference_page">SVG 要素リファレンスページ</h2>
+### テンプレート
 
-<p>An <strong>SVG reference page</strong> lists all the attributes that are available on an SVG element, explains the element's purpose and usage, and provides examples, browser compatibility information, and other important data.</p>
+- [SVG 要素ページテンプレート](/ja/docs/MDN/Structures/Page_types/SVG_element_page_template)
 
-<h3 id="Example_4" name="Example_4">例</h3>
+## CSS 機能リファレンスページ
 
-<ul>
- <li><a href="/ja/docs/Web/SVG/Element/g">&lt;g&gt; element</a></li>
-</ul>
+**CSS リファレンスページ**は、セレクターやプロパティなどの CSS 機能について、利用可能なすべての構文を列挙し、その目的や使い方を説明するものです。また、例やブラウザーの互換性などの重要なデータも提供します。
 
-<h3 id="Templates_5" name="Templates_5">テンプレート</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/SVG_element_page_template">SVG element page template</a></li>
-</ul>
+- [background-color プロパティ](/ja/docs/Web/CSS/background-color)
+- [:hover 擬似クラス](/ja/docs/Web/CSS/:hover)
+- [@media アットルール](/ja/docs/Web/CSS/@media)
 
-<h2 id="CSS_feature_reference_page" name="CSS_feature_reference_page">CSS 特性リファレンスページ</h2>
+### テンプレート
 
-<p>A <strong>CSS reference page</strong> lists all the available syntax for a CSS feature such as a selector or property, and explains the feature's purpose and usage. It also provides examples, browser compatibility information, and other important data.</p>
+- [CSS プロパティページテンプレート](/ja/docs/MDN/Structures/Page_types/CSS_property_page_template)
+- [CSS セレクターページテンプレート](/ja/docs/MDN/Structures/Page_types/CSS_selector_page_template)
 
-<h3 id="Examples_2" name="Examples_2">例</h3>
+## HTTP ヘッダーリファレンスページ
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/background-color">background-color property</a></li>
- <li><a href="/ja/docs/Web/CSS/:hover">:hover pseudo-class</a></li>
- <li><a href="/ja/docs/Web/CSS/@media">@media at-rule</a></li>
-</ul>
+**HTTP ヘッダーのリファレンスページ**は、 HTTP ヘッダーが含むことのできるすべてのディレクティブを列挙し、ヘッダーの目的と使用法を説明します。
+また、例やブラウザの互換性、その他の重要な説明も含まれています。
 
-<h3 id="Templates_6" name="Templates_6">テンプレート</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/CSS_property_page_template">CSS property page template</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/CSS_selector_page_template">CSS selector page template</a></li>
-</ul>
+- [Cache-Control ヘッダー](/ja/docs/Web/HTTP/Headers/Cache-Control)
 
-<h2 id="HTTP_header_reference_page" name="HTTP_header_reference_page">HTTP ヘッダーリファレンスページ</h2>
+### テンプレート
 
-<p>An <strong>HTTP header reference page</strong> lists all the available directives that an HTTP header can contain, and explains the header's purpose and usage. It also provides examples, browser compatibility information, and other important expl.</p>
+- [HTTP ヘッダーページテンプレート](/ja/docs/MDN/Structures/Page_types/HTTP_header_page_template)
 
-<h3 id="Example_5" name="Example_5">例</h3>
+## 概念ページ
 
-<ul>
- <li><a href="/ja/docs/Web/HTTP/Headers/Cache-Control">Cache-Control header</a></li>
-</ul>
+**概念ページ**は、何かを説明したり教えたりする*ガイド*ページです。
+一般に、あるページが主に散文で書かれており、他のページ種別に分類されない場合、それはおそらく概念ページです。
+あるトピックに関する幅広い議論は、複数の概念ページにまたがり、 [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) と [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) マクロを使用してリンクされるかもしれません。
 
-<h3 id="Templates_7" name="Templates_7">テンプレート</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/HTTP_header_page_template">HTTP header page template</a></li>
-</ul>
+- [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
+- [ウェブ音声 API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [CSS のカスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
-<h2 id="Conceptual_page" name="Conceptual_page">概念のページ</h2>
+## 用語集ページ
 
-<p>A <strong>conceptual page</strong> is a <em>guide</em> page that explains or teaches something. Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page. An extended discussion of a topic might be spread across multiple conceptual pages, and linked using <a href="https://github.com/mdn/kumascript/blob/master/macros/Next.ejs">Next</a> and <a href="https://github.com/mdn/kumascript/blob/master/macros/Previous.ejs">Previous</a> macros.</p>
+**用語集ページ**は、用語、トピック、概念の簡単な説明を含んでいます。
+最初の段落は、その用語の簡単で自己完結した説明であるべきで、 2 文以下でなければなりません。
+その後に、さらに詳しい情報へのリンクを **関連情報** セクションに記述することができます。
+ページが画面いっぱいになるほど大きくなる場合は、長すぎるので、概念ページに変換する必要があります。詳しくは、[用語集の項目の書き方と参照方法](/ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)を参照してください。
 
-<h3 id="Examples_3" name="Examples_3">例</h3>
+### 例
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">Using the WebVR API</a></li>
- <li><a href="/ja/docs/Web/API/Web_Audio_API">Creating visualizations with the Web Audio API</a></li>
- <li><a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance in CSS</a></li>
-</ul>
+- [DOM](/ja/docs/Glossary/DOM)
+- [Exception](/ja/docs/Glossary/Exception)
+- [Hyperlink](/ja/docs/Glossary/Hyperlink)
 
-<h2 id="Glossary_page" name="Glossary_page">用語集のページ</h2>
+### テンプレート
 
-<p>A <strong>glossary page</strong> contains a brief explanation of a term, topic, or concept. The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences. This can be followed by links to further information in the <strong>Learn more</strong> section. If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See <a href="/ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary">How to write and reference an entry in the glossary</a> for more details.</p>
+- [用語集ページテンプレート](/ja/docs/MDN/Structures/Page_types/Glossary_page_template)
 
-<h3 id="Examples_4" name="Examples_4">例</h3>
+## ランディングページ
 
-<ul>
- <li><a href="/ja/docs/Glossary/DOM">DOM</a></li>
- <li><a href="/ja/docs/Glossary/Exception">Exception</a></li>
- <li><a href="/ja/docs/Glossary/Hyperlink">Hyperlink</a></li>
-</ul>
+**ランディングページ**は、サブページのメニューのような役割を果たすため、主にナビゲーションページと呼ばれます。
+ランディングページのレイアウトは、通常、特定のトピックに関するページのツリーのルートページに使用されます。
+トピックの簡単な要約で始まり、サブページへのリンクの構造化されたリストが表示され、オプションとして読者に役立つ追加資料が表示されます。
 
-<h3 id="Templates_8" name="Templates_8">テンプレート</h3>
+サブページのリストは、テンプレート [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), [`SubpageMenuByCategories`](https://github.com/mdn/yari/tree/main/kumascript/macros/SubpageMenuByCategories.ejs), [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) を使用して自動的に生成することができます。
+しかし、より複雑なケースでは、リストを手作業で作成する必要があるかもしれません（そして、メンテナンスも必要です）。
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Structures/Page_types/Glossary_page_template">Glossary page template</a></li>
-</ul>
+### 例
 
-<h2 id="Landing_page" name="Landing_page">ランディングページ</h2>
-
-<p>A <strong>landing page</strong> serves as a menu, of sorts, for its subpages, and is therefore primarily a <em>navigation</em> page. A landing page layout is typically used for the root page of a tree of pages about a particular topic. It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.</p>
-
-<p>The list of subpages can be generated automatically using the templates {{TemplateLink("SubpagesWithSummaries")}}, {{TemplateLink("SubpageMenuByCategories")}}, and {{TemplateLink("LandingPageListSubpages")}}. However, in more complex cases, the list may need to be created (and maintained!) by hand.</p>
-
-<p>If you use one of the page list macros, it may be worthwhile to edit the page properties and set a non-zero value for "Rendering max age." This value is the maximum amount of time that MDN will let elapse between fully re-rendering the page, including re-running all macros. By setting an appropriate, reasonable time you can help ensure that the landing page is never out of date for more than a short time.</p>
-
-<p>Choose an interval that makes sense based on the likelihood of the content to change. For an area which is under constant work, such as a new API in the process of being documented, a low value such as 2 hours could make sense. The value should be higher if the content won't change often; 3 days, for example.</p>
-
-<p>Try to remember to reset the interval to 0 hours, 0 minutes, and 0 seconds once the content reaches a relatively stable state, to let MDN cache the pages over a longer period of time.</p>
-
-<h3 id="Examples_5" name="Examples_5">例</h3>
-
-<ul>
- <li><a href="/ja/docs/Web/HTML">HTML</a></li>
- <li><a href="/ja/docs/Web/CSS">CSS</a></li>
- <li><a href="/ja/docs/Web/API">Web APIs</a></li>
- <li><a href="/ja/docs/Web/JavaScript">JavaScript</a></li>
- <li><a href="/ja/docs/Learn">Learning area</a></li>
- <li><a href="/ja/docs/MDN/Contribute">Contributing to MDN</a></li>
-</ul>
+- [HTML](/ja/docs/Web/HTML)
+- [CSS](/ja/docs/Web/CSS)
+- [Web API](/ja/docs/Web/API)
+- [JavaScript](/ja/docs/Web/JavaScript)
+- [学習領域](/ja/docs/Learn)
+- [MDN への協力](/ja/docs/MDN/Contribute)
