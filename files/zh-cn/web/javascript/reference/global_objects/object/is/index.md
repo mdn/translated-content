@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 {{JSRef}}
 
-**`Object.is()`** 方法判断两个值是否为 [同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
+**`Object.is()`** 方法判断两个值是否为[同一个值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
 
 ## 语法
 
