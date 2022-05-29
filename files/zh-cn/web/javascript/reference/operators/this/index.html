@@ -407,7 +407,7 @@ for(var i=0 ; i&lt;elements.length ; i++){
 
 <p>在这种情况下，没有设置内部函数的 <code>this</code>，所以它指向 global/window 对象（即非严格模式下调用的函数未设置 <code>this</code> 时指向的默认对象）。</p>
 
-<h3 id="类中的this">类中的 this</h3>
+<h3 id="类中的_this">类中的 this</h3>
 
 <p>和其他普通函数一样，方法中的 <code>this</code> 值取决于它们如何被调用。有时，改写这个行为，让类中的 <code>this</code> 值总是指向这个类实例会很有用。为了做到这一点，可在构造函数中绑定类方法：</p>
 
