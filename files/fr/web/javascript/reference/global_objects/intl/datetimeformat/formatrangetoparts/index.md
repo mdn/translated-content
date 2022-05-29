@@ -15,7 +15,9 @@ La fonction **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** permet, sel
 
 ## Syntaxe
 
-    Intl.DateTimeFormat.prototype.formatRangeToParts(dateDebut, dateFin)
+```js
+Intl.DateTimeFormat.prototype.formatRangeToParts(dateDebut, dateFin)
+```
 
 ## Exemples
 

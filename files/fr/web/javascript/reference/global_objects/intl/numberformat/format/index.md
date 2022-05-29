@@ -21,7 +21,9 @@ La méthode **`Intl.NumberFormat.prototype.format()`** formate un nombre en fonc
 
 ## Syntaxe
 
-    numberFormat.format(nombre)
+```js
+numberFormat.format(nombre)
+```
 
 ### Paramètres
 
