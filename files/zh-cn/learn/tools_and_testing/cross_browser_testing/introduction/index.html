@@ -80,7 +80,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 
 
-<p>在初步规划阶段，你会和网站主人/客户（可能是你的老板或来自客户公司的人）开一些计划会议，你们会决定这个网站到底是什么——应该又什么内容和功能、什么样的外观等等。此时你也会想知道开发周期是多长——何时是他们的截止日期、他们会支付你多少酬劳。我们不会深入这些细节，但跨浏览器问题会大大影响这个计划。</p>
+<p>在初步规划阶段，你会和网站主人/客户（可能是你的老板或来自客户公司的人）开一些计划会议，你们会决定这个网站到底是什么——应该有什么内容和功能、什么样的外观等等。此时你也会想知道开发周期是多长——何时是他们的截止日期、他们会支付你多少酬劳。我们不会深入这些细节，但跨浏览器问题会大大影响这个计划。</p>
 
 <p>一旦你了解了需求，确定了技术选型，你就该开始调查目标用户——使用这个网站的用户用什么浏览器、什么设备等等。也行客户通过前期调查已经有了这方面的数据，比如通过他们的其他网站，或你将要开发的网站的之前版本。若没有，你将要通过搜寻其他资源，诸如竞品的使用数据，或网站将要服务的国家来了解清楚。也可以凭直觉。</p>
 
@@ -124,7 +124,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>此时，你要修复一切发现的问题。</p>
 
-<p>接下来，你应该试在所有浏览器上测试并集中精力排除跨浏览器问题（关于<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">determining your target browers</a>，请查阅下一篇文章获取更多信息）。例如</p>
+<p>接下来，你应该在所有浏览器上测试并集中精力排除跨浏览器问题（关于<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">determining your target browers</a>，请查阅下一篇文章获取更多信息）。例如</p>
 
 <ul>
  <li>尝试在所有现代桌面浏览器上测试最新的修改——包括（理想条件下，Windows、Mac、Linux的）Firefox、Chrome、Opera、IE、Edge和Safari。</li>
@@ -132,24 +132,24 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
  <li>也要在你所列出的其他目标浏览器中测试。</li>
 </ul>
 
-<p>最起码你要独自进行你能实现的所有测试（如果有团队，你可拉队友来帮你）。你应该尽可能在真实物理设备上进行测试。</p>
+<p>最起码你要独自进行你能实现的所有测试（如果有团队，你可以拉队友来帮你）。你应该尽可能在真实物理设备上进行测试。</p>
 
-<p>如果你无法测试所有那些不同的浏览器、操作系统和物理真机，你也可以用模拟器（在PC端用软件模拟设备）和虚拟机（能使你在PC上模拟多种操作系统/软件的软件）。这是很流行的选择，特别是在某些环境中——例如，Windows不允许你在同一台机器上模拟安装多个版本的Windows，那么使用虚拟机就是唯一选择。</p>
+<p>如果你无法测试所有那些不同的浏览器、操作系统和物理真机，你也可以用模拟器（在PC端用软件模拟设备）和虚拟机（能使你在PC上模拟多种操作系统/软件的软件）。这是很普遍的做法，特别是在某些环境中——例如，Windows不允许你在同一台机器上模拟安装多个版本的Windows，那么使用虚拟机就是唯一选择。</p>
 
 <p>另一个选择是用户群组——使用开发团队之外的一组人测试你的网站。可以是一些朋友或家庭，其他员工们，一个班级或一个当地大学，或一个专业测试团队。</p>
 
-<p>最终，通过使用统计或自动化工具，你的测试会更智能；当你的项目变得更大，这是个明智的选择，毕竟手动做全部这些测试会花很长时间。你可以建立你的自动化测试系统（Selenium正在成为最流行选择），这样你就可以实现诸如在一些不同浏览器加载你的网站的功能，以及：</p>
+<p>最终，通过使用统计或自动化工具，你的测试会更智能；当你的项目变得更大，这是个明智的选择，毕竟手动做全部这些测试会花很长时间。你可以建立你的自动化测试系统（Selenium正在成为最流行选择），这样你就可以实现诸如在一些不同浏览器加载你的网站的功能，比如：</p>
 
 <ul>
  <li>看一个按钮点击事件是否成功生效（例如显示地图），测试完成后就显示结果。</li>
- <li>逐个截屏，允许你检查是否每个布局在跨浏览器时是否一致。</li>
+ <li>逐个截屏，允许你检查每个布局在跨浏览器中是否显示一致。</li>
 </ul>
 
-<p>如果你愿意，你也可以更深入一些。如果你希望为测试投资一些钱，一些诸如<a href="https://saucelabs.com/">Sauce Labs</a>和<a href="https://www.browserstack.com/">Browser Stack</a>的商业工具都可以为你做这些事，你不必操心测试的构建。搭建一个自动为你运行的测试环境也是可能的，之后，你只要把测试通过的更改代码签入中央代码仓库就可以了。</p>
+<p>如果你愿意，你可以为测试投入一些资金，诸如<a href="https://saucelabs.com/">Sauce Labs</a>和<a href="https://www.browserstack.com/">Browser Stack</a>的商业工具都可以为你做这些事，那你就不用操心如何搭建测试环境了。亲自搭建一个属于你自己的测试环境也可以，这样以后你只要把更改后并通过了测试的代码提交到中央代码仓库就可以了。</p>
 
 <h4 id="在预发布的浏览器上测试">在预发布的浏览器上测试</h4>
 
-<p>测试即将发布的浏览器版本也是个不错的注意。请看下面的链接：</p>
+<p>测试即将发布的浏览器版本也是个不错的主意。请看下面的链接：</p>
 
 <ul>
  <li><a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a></li>
@@ -159,25 +159,23 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
  <li><a href="http://www.opera.com/computer/beta">Opera Developer</a></li>
 </ul>
 
-<p>假如你使用了很新的技术并想测试最新版本的实现，或者你在最新版浏览器中遇到故障，你想检查浏览器开发者是否在新版本中修复了这个问题，这将是很流行的做法。</p>
+<p>假如你使用了很新的技术并想测试最新版本的实现，或者你在最新版的浏览器中遇到故障，你想检查浏览器开发者是否在新版本中修复了这个问题，这会是很普遍的做法。</p>
 
 <h3 id="修复迭代">修复/迭代</h3>
 
 <p>当你发现一个Bug，你需要尝试修复它。</p>
 
-<p>首要之举是尽可能锁定Bug出现之处。从Bug报告者那里尽可能多的获得信息——什么平台、设备、浏览器版本等等。在相似环境（比如不同桌面平台的同一个浏览器版本，或同一平台中同一浏览器的小差别版本）中测试来检查该Bug波及多大范围。</p>
+<p>首要之举是尽可能锁定Bug出现之处。从Bug报告者那里尽可能多的获得信息——平台、设备、浏览器版本等等。在相似环境（比如不同桌面平台的同一个浏览器版本，或同一平台中同一浏览器的小差别版本）中测试来检查该Bug波及多大范围。</p>
 
 <p>那可能不是你的错误——如果是一个浏览器的Bug，那就希望厂商尽快修复它。也许它已经被修复了——例如若一个Bug存在于Firefox版本49，但Firefox Nightly中已经不存在了。如果还未修复，你可能需要提交一个Bug报告。</p>
 
 <p>如果是你的错误，你需要修复它！查出导致该Bug的原因（再次，查阅<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>，<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>，和<a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a>）。当你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用Javascript功能检测代码来检测问题功能不运行的情况，并运行一些在那些情况下生效的代码。</p>
 
-<p>Once a fix has been made, you'll want to repeat your testing process to make sure your fix is working OK, and hasn't caused the site to break in other places or in other browsers.</p>
-
-<p>一旦修复完成，你应该重复测试来确保你的修复工作有效，并没有导致网站的其他地方在其他浏览器中出问题。</p>
+<p>一旦完成修复，你应该重新测试来确保你的修复工作有效，并且没有导致网站的其他地方在其他浏览器中出问题。</p>
 
 <h2 id="报告Bug">报告Bug</h2>
 
-<p>重申上述内容：如果你发现浏览器Bug，你应该：</p>
+<p>重申一遍，如果你发现浏览器Bug，你应该：</p>
 
 <ul>
  <li><a href="https://bugzilla.mozilla.org/">Firefox Bugzilla</a></li>
