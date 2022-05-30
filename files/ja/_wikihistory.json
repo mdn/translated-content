@@ -46902,12 +46902,6 @@
       "momdo"
     ]
   },
-  "conflicting/Learn": {
-    "modified": "2020-07-16T22:33:38.849Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
     "contributors": [
@@ -46919,12 +46913,6 @@
       "hamasaki",
       "kenji-yamasaki",
       "sii"
-    ]
-  },
-  "conflicting/Learn_5c079fa29d8d329cb43586076f0bb7bf": {
-    "modified": "2020-09-28T09:40:44.944Z",
-    "contributors": [
-      "silverskyvicto"
     ]
   },
   "conflicting/MDN/Contribute/Markdown_in_MDN": {
