@@ -15,8 +15,10 @@ La méthode **`toSource()`** renvoie une chaîne de caractères représentant le
 
 ## Syntaxe
 
-    function.toSource();
-    Function.toSource();
+```js
+function.toSource();
+Function.toSource();
+```
 
 ### Valeur de retour
 
