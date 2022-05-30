@@ -3,51 +3,32 @@ title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
 tags:
   - API
-  - Encoding
-  - Property
-  - Read-only
-  - Reference
-  - TextEncoder
+  - エンコーディング
   - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - TextEncoder
+browser-compat: api.TextEncoder.encoding
 translation_of: Web/API/TextEncoder/encoding
 ---
-<div>{{APIRef("Encoding API")}}</div>
+{{APIRef("Encoding API")}}
 
-<p><strong><code>TextEncoder.encoding</code></strong> は読み取り専用プロパティで、特定のエンコーダーで使用されるエンコーディングアルゴリズムの名前が入った {{DOMxRef("DOMString")}} を返します。</p>
+**`TextEncoder.encoding`** は読み取り専用プロパティで、特定のエンコーダーで使用されるエンコーディングアルゴリズムの名前が入った文字列を返します。
 
-<p>持つことができる値は <code>utf-8</code> のみです。</p>
+持つことができる値は `utf-8` のみです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><var>b</var> = <var>encoder</var>.encoding;</pre>
+文字列です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Encoding", "#dom-textencoder-encoding", "TextEncoder.encoding")}}</td>
-   <td>{{Spec2("Encoding")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.TextEncoder.encoding")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>所属する {{DOMxRef("TextEncoder")}} インターフェイス</li>
-</ul>
+- 所属先の {{DOMxRef("TextEncoder")}} インターフェイス
