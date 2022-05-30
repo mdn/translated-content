@@ -13,7 +13,7 @@ translation_of: api/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 
 **`ReadableStreamDefaultReader()`** 构造函数创建并返回一个 `ReadableStreamDefaultReader` 实例对象。
 
-> **备注：**你通常不需要手动创建，可以使用 {{domxref("ReadableStream.getReader()")}} 方法代替。
+> **备注：** 你通常不需要手动创建，可以使用 {{domxref("ReadableStream.getReader()")}} 方法代替。
 
 ## 语法
 
@@ -33,11 +33,11 @@ new ReadableStreamDefaultReader(stream)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - 如果提供的 `stream` 参数不是一个 {{domxref("ReadableStream")}}，或者它已经被另一个 reader 锁定则抛出异常。
+  - : 如果提供的 `stream` 参数不是一个 {{domxref("ReadableStream")}}，或者它已经被另一个 reader 锁定则抛出异常。
 
 ## 示例
 
-在下面的简单示例中，使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取先前自定义的 `ReadableStream`。(有关完整代码[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/))。直到流完成读取，每一个块都按顺序读取并输出到 UI，此时我们退出递归函数并且将整个流打印到 UI 的另一部分。
+在下面的简单示例中，使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取先前自定义的 `ReadableStream`。（有关完整代码[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。直到流完成读取，每一个块都按顺序读取并输出到 UI，此时我们退出递归函数并且将整个流打印到 UI 的另一部分。
 
 ```js
 function fetchStream() {
