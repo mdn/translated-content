@@ -7,11 +7,11 @@ translation_of: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 
 <h2 id="局限">局限</h2>
 
-<p>为了阻止同步使用 XMLHttpRequest，HTML 在同步模式下不支持使用。并且，只有当 responseType 属性设置为'document'的情况下，HTML 支持才可用。这种限制避免了浪费时间解析 HTML，而传统代码在默认模式下使用 XMLHttpRequest 来检索 text/html 资源的 responseText. 此外，该限制避免了遗留代码的问题，该代码假定 Http 错误页面（通常具有 text/html 响应正文）的 responseXML 为空。</p>
+<p>为了阻止同步使用 XMLHttpRequest，HTML 在同步模式下不支持使用。并且，只有当 responseType 属性设置为 'document' 的情况下，HTML 支持才可用。这种限制避免了浪费时间解析 HTML，而传统代码在默认模式下使用 XMLHttpRequest 来检索 <code>text/html</code> 资源的 responseText. 此外，该限制避免了遗留代码的问题，该代码假定 HTTP 错误页面（通常具有 <code>text/html</code> 响应正文）的 responseXML 为空。</p>
 
 <h2 id="用法">用法</h2>
 
-<p>使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串“document”分配给 responseType 属性来显式请求文档调用 open（）之后调用 send（）之前的 XMLHttpRequest 对象。</p>
+<p>使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串 “document” 分配给 responseType 属性来显式请求文档调用 <code>open()</code> 之后调用 <code>send</code> 之前的 XMLHttpRequest 对象。</p>
 
 <p> </p>
 
@@ -26,9 +26,9 @@ xhr.send();
 
 <h2 id="功能检测">功能检测</h2>
 
-<h3 id="方法1">方法 1</h3>
+<h3 id="方法_1">方法 1</h3>
 
-<p>该方法依赖于功能的“强制异步”性质。当你尝试设置一个以“sync”方式打开的 XMLHttpRequest 对象后，尝试将设置 responseType 会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。</p>
+<p>该方法依赖于功能的 “强制异步” 性质。当你尝试设置一个以 “sync” 方式打开的 XMLHttpRequest 对象后，尝试将设置 responseType 会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。</p>
 
 <div class="line" id="LC13">
 <pre class="brush: js">function HTMLinXHR() {
@@ -50,9 +50,7 @@ xhr.send();
 
 <p>This method is synchronous, does not rely on external assets though it may not be as reliable as method 2 described below since it does not check the actual feature but an indication of that feature.</p>
 
-<h3 id="方法2">方法 2</h3>
-
-<p> </p>
+<h3 id="方法_2">方法 2</h3>
 
 <p>检测浏览器是否支持 XMLHttpRequest 中的 HTML 解析有两个挑战。首先，检测结果是异步获取的，因为 HTML 支持仅在异步模式下可用。Second, you have to actually fetch a test document over HTTP, because testing with a <code>data:</code> URL would end up testing <code>data:</code>URL support at the same time.</p>
 
@@ -104,7 +102,7 @@ xhr.send();
 
 <p>如果在 HTTP Content-Type 头部中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果有一个 meta tag 声明文件的前 1024 个字节中的编码，则使用该编码。否则，文件被解码为 UTF-8。</p>
 
-<h2 id="老版本的浏览器中处理HTML">老版本的浏览器中处理 HTML</h2>
+<h2 id="老版本的浏览器中处理_HTML">老版本的浏览器中处理 HTML</h2>
 
 <p>XMLHttpRequest 最初只支持 XML 解析。 HTML 解析支持是最近的一个补充。对于较老的浏览器，您甚至可以使用与正则表达式关联的 responseText 属性，以获取例如已知其 ID 的 HTML 元素的源代码：</p>
 
