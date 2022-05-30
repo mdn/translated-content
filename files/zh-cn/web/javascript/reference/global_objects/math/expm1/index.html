@@ -36,7 +36,7 @@ Math.expm1("foo") // NaN
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>因为我们已经有了 <code>Math.exp </code>函数，所以很容易 polyfill.</p>
+<p>因为我们已经有了 <code>Math.exp</code> 函数，所以很容易 polyfill。</p>
 
 <pre class="brush: js">Math.expm1 = Math.expm1 || function (x) {
     return Math.exp(x) - 1
