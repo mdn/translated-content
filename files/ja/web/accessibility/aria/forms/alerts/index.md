@@ -1,22 +1,22 @@
 ---
-title: alerts
+title: アラート
 slug: Web/Accessibility/ARIA/forms/alerts
 tags:
   - ARIA
-  - Accessibility
-  - Forms
-  - Web
+  - アクセシビリティ
+  - フォーム
+  - ウェブ
 translation_of: Web/Accessibility/ARIA/forms/alerts
 ---
-<h2 id="The_problem" name="The_problem">問題点</h2>
+## 問題点
 
-<p>アクセシブルなエラーチェックを組み入れたいフォーム、例えば問い合わせフォームがあります。よくある問題点は電子メールアドレスが有効ではない、あるいは名前欄に姓も名も含まれていないことです。</p>
+アクセシブルなエラーチェックを組み入れたいフォーム、例えば問い合わせフォームがあるとします。よくある問題点は電子メールアドレスが有効ではない、あるいは名前欄に姓も名も含まれていないことです。
 
-<h2 id="The_form" name="The_form">フォーム</h2>
+## フォーム
 
-<p>始めに、<a href="/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints" title="Web/Accessibility/ARIA/forms/Basic_form_hints"><code>aria-required</code> の手法に関する記事</a>を読んでいないのでしたら、まずはそちらをお読みください。ここでは、その手法を拡張します。</p>
+始めに、[`aria-required` の手法に関する記事](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)を読んでいないのでしたら、まずはそちらをお読みください。ここでは、その手法を拡張します。
 
-<p>こちらがシンプルなフォームです:</p>
+こちらがシンプルなフォームです。
 
 <pre class="brush: html"> &lt;form method="post" action="post.php"&gt;
    &lt;fieldset&gt;
@@ -40,28 +40,23 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
  &lt;/form&gt;
 </pre>
 
-<p>ストレートでシンプルですが、この時点では美しさの賞は与えられないでしょう。:-)</p>
+## 有効性の確認とユーザーへの通知
 
-<h2 id="Checking_for_validity_and_notifying_the_user" name="Checking_for_validity_and_notifying_the_user">有効性の確認とユーザへの通知</h2>
+有効性の確認とユーザーへの通知は、いくつかのステップで構成されます。
 
-<p>有効性の確認とユーザへの通知は、いくつかのステップで構成されます:</p>
+1. 電子メールアドレスや入力された名前が有効かを確認します。シンプルにするため、電子メールアドレスは "@" 記号を含んでいるか、名前は 1 文字以上であるかを確認します。
+2. 上記の条件に合わない場合、フィールドの `aria-invalid` 属性が "`true`" の値になります。
+3. 条件に合わなかった場合、アラートを通じてユーザーに通知します。 JavaScript の '`alert`' 関数を使用する代わりに、シンプルな WAI-ARIA のウィジェットを使用します。これはユーザーにエラーを通知しますが、（JavaScript の既定の '`alert`' 関数の "`onblur`" ハンドラーによって）フォーカスを失うことなくフォームの変更を続けることができます。
 
-<ol>
- <li>電子メールアドレスや入力された名前が有効かを確認します。シンプルにするため、電子メールアドレスは “@” 記号を含んでいるか、名前は空白 ” “ を少なくとも 1 文字含んでいるかを確認します。</li>
- <li>フィールドの <code>aria-invalid</code> 属性を設定して、値を “<code>true</code>” にします。</li>
- <li>alert を通して、入力した値が間違っていることをユーザに通知します。それには JavaScript の ‘<code>alert</code>’ 関数を使用した押しつけがましいダイアログボックスではなく、シンプルな WAI-ARIA のウィジェットを使用します。これはユーザに通知を行いますが、ユーザは割り込まれることなくフォームとの対話を続けられます。</li>
-</ol>
-
-<p>これらのすべては <code>input</code> がフォーカスを失ったとき、つまり “<code>onblur</code>” ハンドラの状況で発生します。</p>
-
-<p>私が作成した JavaScript コードは以下のとおりであり、“<code>head</code>” の終了タグの前に挿入しました:</p>
+私が作成した JavaScript コードは以下のとおりであり、 "`head`" の終了タグの前に挿入しました。
 
 <pre class="brush: js"> &lt;script type="application/javascript"&gt;
  function removeOldAlert()
  {
    var oldAlert = document.getElementById("alert");
-   if (oldAlert)
+   if (oldAlert){
      document.body.removeChild(oldAlert);
+   }
  }
 
  function addAlert(aMsg)
@@ -90,34 +85,32 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
  &lt;/script&gt;
 </pre>
 
-<h2 id="The_checkValidity_function" name="The_checkValidity_function"><code>checkValidity</code> 関数</h2>
+## `checkValidity` 関数
 
-<p>中核をなすのが <code>checkValidity</code> 関数です。これは 3 つの引数をとります: 検証を行う <code>input</code> の ID、有効性を確かめるために検索する語句、alert に挿入するエラーメッセージです。</p>
+中核をなすのが `checkValidity` 関数です。これは 3 つの引数をとります。検証を行う `input` の ID、有効性を確かめるために検索する語句、アラートに挿入するエラーメッセージです。
 
-<p>値が有効かを調べるため、この関数は <code>input</code> の値 <code>indexOf</code> が -1 より大きいかを確認します。検索語句が値の中で見つからないときに、<code>-1</code> 以下の値が返ります。</p>
+値が有効かを調べるため、この関数は `input` の値 `indexOf` が -1 より大きいかを確認します。検索語句が値の中で見つからないときに、`-1` 以下の値が返ります。
 
-<p>値が無効であるとき、この関数は 2 つのことを行います:</p>
+値が無効であるとき、この関数は 2 つのことを行います。
 
-<ol>
- <li>要素の <code>aria-invalid</code> 属性を “<code>true</code>” に設定します。これは、そこに無効な内容物があることをスクリーンリーダーに示します。</li>
- <li>示されたエラーメッセージを持つ alert を追加するため、<code>addAlert</code> 関数を呼び出します。</li>
-</ol>
+1. 要素の `aria-invalid` 属性を “`true`” に設定します。これは、そこに無効な内容物があることを画面リーダーに示します。
+2. 示されたエラーメッセージを持つアラートを追加するため、`addAlert` 関数を呼び出します。
 
-<p>検索語句が見つかった場合は <code>aria-invalid</code> 属性を “<code>false</code>” にリセットします。加えて、まだ残っているかもしれない alert を削除します。</p>
+検索語句が見つかった場合は `aria-invalid` 属性を “`false`” にリセットします。加えて、まだ残っているかもしれないアラートを削除します。
 
-<h2 id="The_addAlert_function" name="The_addAlert_function"><code>addAlert</code> 関数</h2>
+## `addAlert` 関数
 
-<p>この関数は始めに、古い alert を削除します。この機能はシンプルです: id が “<code>alert</code>” である要素を探して、発見した場合はその要素を Document Object Model から削除します。</p>
+この関数は始めに、古いアラートを削除します。この機能はシンプルです: id が “`alert`” である要素を探して、発見した場合はその要素を Document Object Model から削除します。
 
-<p>次にこの関数は、alert のテキストを保持する <code>div</code> 要素を作成します。これは “<code>alert</code>” という ID を持ちます。また、“alert” が設定された role を持ちます。これは属性名に “aria” がついていませんが、実は ARIA から生まれたものです。その理由は role が、簡素化のため単純に HTML へ移植された、<a class="external text" href="http://www.w3.org/TR/xhtml-role/" title="XHTML Role Attribute Module">XHTML Role Attribute Module</a> に基づいているためです。</p>
+次にこの関数は、アラートのテキストを保持する `div` 要素を作成します。これは “`alert`” という ID を持ちます。また、“alert” が設定されたロールを持ちます。これは属性名に “aria” がついていませんが、実は ARIA から生まれたものです。その理由はロールが、簡素化のため単純に HTML へ移植された、<a class="external text" href="http://www.w3.org/TR/xhtml-role/">XHTML Role Attribute Module</a> に基づいているためです。
 
-<p>テキストは <code>div</code> 要素に追加され、また <code>div</code> 要素はドキュメントに追加されます。</p>
+テキストは `div` 要素に追加され、また `div` 要素はドキュメントに追加されます。
 
-<p>これが発生したとき、その <code>div</code> が現れるとすぐに Firefox は支援技術に対して “alert”イベントを発生させます。ほとんどのスクリーンリーダーは自動的にその div 要素を拾い上げて、読み上げるでしょう。これはパスワードを保存したいかを尋ねる、Firefox の通知バーに似ています。ここで作成した alert はボタンを持たず、何が誤っているかを伝えるのみです。</p>
+これが発生したとき、その `div` が現れるとすぐに Firefox は支援技術に対して “alert”イベントを発生させます。ほとんどの画面リーダーは自動的にその div 要素を拾い上げて、読み上げるでしょう。これはパスワードを保存したいかを尋ねる、Firefox の通知バーに似ています。ここで作成した alert はボタンを持たず、何が誤っているかを伝えるのみです。
 
-<h2 id="Adding_the_magic_to_the_“onblur”_event" name="Adding_the_magic_to_the_“onblur”_event">“<code>onblur</code>” イベントのマジックを加える</h2>
+## "`onblur`" イベントのマジックを加える
 
-<p>あとはイベントハンドラの追加が残っています。以下のように電子メールアドレスと名前の入力欄の変更が必要です:</p>
+あとはイベントハンドラのー追加が残っています。以下のように電子メールアドレスと名前の入力欄の変更が必要です。
 
 <pre class="brush: html"> &lt;input name="name" id="name" aria-required="true"
         onblur="checkValidity('name', ' ', 'Invalid name entered!');"/&gt;
@@ -126,28 +119,20 @@ translation_of: Web/Accessibility/ARIA/forms/alerts
         onblur="checkValidity('email', '@', 'Invalid e-mail address');"/&gt;
 </pre>
 
-<p><strong>サンプルのテスト</strong></p>
+**サンプルのテスト**
 
-<p>Firefox 3 およびサポート済みのスクリーンリーダーを使用している場合は、以下を試してみましょう:</p>
+Firefox 3 および対応済みの画面リーダーを使用している場合は、以下を試してみましょう。
 
-<ol>
- <li>名前欄に (姓を除く) 名だけを入力してください。Tab キーを押すと、無効な名前を入力したことを伝える警告が聞こえるでしょう。Shift-Tab を押して戻り、エラーを修正できます。</li>
- <li>“@” 記号がない電子メールアドレスを入力してください。Tab を押してフィールドを離れると、有効な電子メールアドレスを入力していないことを伝える警告が聞こえるでしょう。</li>
-</ol>
+1. 名前欄に (姓を除く) 名だけを入力してください。Tab キーを押すと、無効な名前を入力したことを伝える警告が聞こえるでしょう。Shift-Tab を押して戻り、エラーを修正できます。
+2. "@" 記号がない電子メールアドレスを入力してください。Tab を押してフィールドを離れると、有効な電子メールアドレスを入力していないことを伝える警告が聞こえるでしょう。
 
-<p>どちらのケースでも問題のフィールドへフォーカスを戻すと、スクリーンリーダーはそのフィールドのデータが無効であることを伝えるでしょう。JAWS 9 はこれをサポートしていますが JAWS 8 は未サポートであり、サポートしているスクリーンリーダーの前バージョンで動作するわけではありません。</p>
+どちらのケースでも問題のフィールドへフォーカスを戻すと、画面リーダーはそのフィールドのデータが無効であることを伝えるでしょう。 JAWS 9 はこれに対応していますが JAWS 8 は未対応であり、対応している画面リーダーの前バージョンで動作するわけではありません。
 
-<h2 id="A_few_questions_that_you_might_have" name="A_few_questions_that_you_might_have">よくある質問</h2>
+## よくある質問
 
-<dl>
- <dt>Q. いくつかの input で、ラベルテキストの “<code>(required)</code>” と <code>aria-required</code> 属性の両方を置いている理由は?</dt>
- <dd>A. これが実際のフォームで、またサイトを ARIA 未サポートのブラウザでアクセスされた場合でも、入力必須のフィールドであることを示したいと考えているためです。</dd>
- <dt>Q. 無効なデータのフィールドへ自動的にフォーカスを戻さない理由は?</dt>
- <dd>A. これは少なくとも Windows API の仕様で許可されていないなどの理由があります。また、実際のユーザとの対話なしにフォーカスを飛ばせるようにすることは、一般的によいことではありません。</dd>
-</dl>
+- Q. いくつかの input で、ラベルテキストの “`(required)`” と `aria-required` 属性の両方を置いている理由は?
+  - : A. これが実際のフォームで、またサイトを ARIA 未対応のブラウザでアクセスされた場合でも、入力必須のフィールドであることを示したいと考えているためです。
+- Q. 無効なデータのフィールドへ自動的にフォーカスを戻さない理由は?
+  - : A. これは少なくとも Windows API の仕様で許可されていないなどの理由があります。また、実際のユーザーとの対話なしにフォーカスを飛ばせるようにすることは、一般的によいことではありません。
 
 <div class="warning">TBD: これは再考しましょう -- 個人的には、キーボードトラップを発生させずに行えるのであれば、フォーカスの設定はよいであろうと考えます。</div>
-
-<h2 id="In_conclusion" name="In_conclusion">おわりに</h2>
-
-<p>Web サイトのアクセシビリティは、クライアントサイドの検証向けにアクセシブルな alert を提供することで大きく向上します。ユーザにとっては、20 個ほどのフィールドを埋めて送信するとフィールド 3 のデータが無効であるとわかるだけで、すべてのフィールドで値が残っているかを見直さなければならなかったりいくつかの情報を余計に入力したりすることより失望させられることはありません。</p>
