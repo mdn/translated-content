@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_
 
 ## Message
 
-    ReferenceError: Use before delaration (Edge)
-    ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-    ReferenceError: 'x' is not defined (Chrome)
+```
+ReferenceError: Use before delaration (Edge)
+ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
+ReferenceError: 'x' is not defined (Chrome)
+```
 
 ## Type d'erreur
 

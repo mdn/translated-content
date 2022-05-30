@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_parenthesis_after_condit
 
 ## Message
 
-    SyntaxError: Expected ')' (Edge)
-    SyntaxError: missing ) after condition (Firefox)
+```
+SyntaxError: Expected ')' (Edge)
+SyntaxError: missing ) after condition (Firefox)
+```
 
 ## Type d'erreur
 

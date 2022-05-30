@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Array_sort_argument
 
 ## Message
 
-    TypeError: argument is not a function object (Edge)
-    TypeError: invalid Array.prototype.sort argument (Firefox)
+```
+TypeError: argument is not a function object (Edge)
+TypeError: invalid Array.prototype.sort argument (Firefox)
+```
 
 ## Type d'erreur
 
