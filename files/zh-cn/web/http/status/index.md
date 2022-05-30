@@ -83,7 +83,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - `306 unused`
   - : 此响应代码不再使用；它只是保留。它曾在 HTTP/1.1 规范的早期版本中使用过。
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
-  - : 服务器发送此响应，以指示客户端使用在前一个请求中使用的相同方法在另一个 URI 上获取所请求的资源。这与`302 Found`HTTP 响应代码具有相同的语义，但用户代理 _不能_ 更改所使用的 HTTP 方法：如果在第一个请求中使用了`POST`，则在第二个请求中必须使用`POST`
+  - : 服务器发送此响应，以指示客户端使用在前一个请求中使用的相同方法在另一个 URI 上获取所请求的资源。这与 `302 Found` HTTP 响应代码具有相同的语义，但用户代理 _不能_ 更改所使用的 HTTP 方法：如果在第一个请求中使用了 `POST`，则在第二个请求中必须使用 `POST`
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
   - : 这意味着资源现在永久位于由`Location:` HTTP Response 标头指定的另一个 URI。 这与 `301 Moved Permanently` HTTP 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 `POST`，则必须在第二个请求中使用 `POST`。
 
@@ -96,13 +96,13 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}
   - : 此响应代码保留供将来使用。创建此代码的最初目的是将其用于数字支付系统，但是此状态代码很少使用，并且不存在标准约定。
 - {{HTTPStatus(403, "403 Forbidden")}}
-  - : 客户端没有访问内容的权限；也就是说，它是未经授权的，因此服务器拒绝提供请求的资源。与`401 Unauthorized`不同，服务器知道客户端的身份。
+  - : 客户端没有访问内容的权限；也就是说，它是未经授权的，因此服务器拒绝提供请求的资源。与 `401 Unauthorized` 不同，服务器知道客户端的身份。
 - {{HTTPStatus(404, "404 Not Found")}}
-  - : 服务器找不到请求的资源。在浏览器中，这意味着无法识别 URL。在 API 中，这也可能意味着端点有效，但资源本身不存在。服务器也可以发送此响应，而不是`403 Forbidden`，以向未经授权的客户端隐藏资源的存在。这个响应代码可能是最广为人知的，因为它经常出现在网络上。
+  - : 服务器找不到请求的资源。在浏览器中，这意味着无法识别 URL。在 API 中，这也可能意味着端点有效，但资源本身不存在。服务器也可以发送此响应，而不是 `403 Forbidden`，以向未经授权的客户端隐藏资源的存在。这个响应代码可能是最广为人知的，因为它经常出现在网络上。
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : 服务器知道请求方法，但目标资源不支持该方法。例如，API 可能不允许调用`DELETE`来删除资源。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : 当 web 服务器在执行 [服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制) 后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
+  - : 当 web 服务器在执行 服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制)后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : 类似于 `401 Unauthorized` 但是认证需要由代理完成。
 - {{HTTPStatus(408, "408 Request Timeout")}}
@@ -116,17 +116,17 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(412, "412 Precondition Failed")}}
   - : 客户端在其头文件中指出了服务器不满足的先决条件。
 - {{HTTPStatus(413, "413 Payload Too Large")}}
-  - : 请求实体大于服务器定义的限制。服务器可能会关闭连接，或在标头字段后返回重试`Retry-After`。
+  - : 请求实体大于服务器定义的限制。服务器可能会关闭连接，或在标头字段后返回重试 `Retry-After`。
 - {{HTTPStatus(414, "414 URI Too Long")}}
   - : 客户端请求的 URI 比服务器愿意接收的长度长。
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}
   - : 服务器不支持请求数据的媒体格式，因此服务器拒绝请求。
 - {{HTTPStatus(416, "416 Range Not Satisfiable")}}
-  - : 无法满足请求中`Range`标头字段指定的范围。该范围可能超出了目标 URI 数据的大小。
+  - : 无法满足请求中 `Range` 标头字段指定的范围。该范围可能超出了目标 URI 数据的大小。
 - {{HTTPStatus(417, "417 Expectation Failed")}}
-  - : 此响应代码表示服务器无法满足`Expect`请求标头字段所指示的期望。
+  - : 此响应代码表示服务器无法满足 `Expect` 请求标头字段所指示的期望。
 - {{HTTPStatus(418, "418 I'm a teapot")}}
-  - : 服务端拒绝用茶壶煮咖啡。笑话，典故来源 [茶壶冲泡咖啡](https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E5%92%96%E5%95%A1%E5%A3%B6%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE)
+  - : 服务端拒绝用茶壶煮咖啡。笑话，典故来源[茶壶冲泡咖啡](https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E5%92%96%E5%95%A1%E5%A3%B6%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE)
 - {{HTTPStatus(421, "421 Misdirected Request")}}
   - : 请求被定向到无法生成响应的服务器。这可以由未配置为针对请求 URI 中包含的方案和权限组合生成响应的服务器发送。
 - {{HTTPStatus(422, "422 Unprocessable Entity")}} ({{Glossary("WebDAV")}})
@@ -141,7 +141,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
   - : 服务器拒绝使用当前协议执行请求，但在客户端升级到其他协议后可能愿意这样做。
     服务端发送带有{{HTTPHeader("Upgrade")}} 字段的 426 响应 来表明它所需的协议（们）。
 - {{HTTPStatus(428, "428 Precondition Required")}}
-  - : 源服务器要求请求是有条件的。此响应旨在防止'丢失更新'问题，即当第三方修改服务器上的状态时，客户端`GET`s 获取资源的状态，对其进行修改并将其`PUT`s 放回服务器，从而导致冲突。
+  - : 源服务器要求请求是有条件的。此响应旨在防止'丢失更新'问题，即当第三方修改服务器上的状态时，客户端 `GET` 获取资源的状态，对其进行修改并将其 `PUT` 放回服务器，从而导致冲突。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
   - : 用户在给定的时间内发送了太多请求（"限制请求速率"）
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
@@ -158,7 +158,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : 此错误响应表明服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。
 - {{HTTPStatus(503, "503 Service Unavailable")}}
-  - : 服务器没有准备好处理请求。常见原因是服务器因维护或重载而停机。请注意，与此响应一起，应发送解释问题的用户友好页面。这个响应应该用于临时条件和如果可能的话，HTTP 头`Retry-After`字段应该包含恢复服务之前的估计时间。网站管理员还必须注意与此响应一起发送的与缓存相关的标头，因为这些临时条件响应通常不应被缓存。
+  - : 服务器没有准备好处理请求。常见原因是服务器因维护或重载而停机。请注意，与此响应一起，应发送解释问题的用户友好页面。这个响应应该用于临时条件和如果可能的话，HTTP 标头 `Retry-After` 字段应该包含恢复服务之前的估计时间。网站管理员还必须注意与此响应一起发送的与缓存相关的标头，因为这些临时条件响应通常不应被缓存。
 - {{HTTPStatus(504, "504 Gateway Timeout")}}
   - : 当服务器充当网关且无法及时获得响应时，会给出此错误响应。
 - {{HTTPStatus(505, "505 HTTP Version Not Supported")}}
