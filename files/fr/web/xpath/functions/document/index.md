@@ -12,7 +12,9 @@ La fonction `document` recherche un ensemble de nœuds dans un ou des documents 
 
 ### Syntaxe
 
-    document( URI [, ensemble-de-nœuds] )
+```
+document( URI [, ensemble-de-nœuds] )
+```
 
 ### Arguments
 

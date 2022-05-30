@@ -12,7 +12,9 @@ La fonction `round` retourne le nombre entier le plus proche d'un nombre donné.
 
 ### Syntaxe
 
-    round( décimal )
+```
+round( décimal )
+```
 
 ### Arguments
 

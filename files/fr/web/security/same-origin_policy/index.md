@@ -26,7 +26,9 @@ Les cookies utilisent une définition de l'origine différente de celle qui vien
 
 Une page peut changer son origine dans une certaine mesure. Un script peut définir la valeur de `document.domain` vers un suffixe du domaine courant. S'il procéde ainsi, le domaine le plus court sera utilisé pour les prochaines vérifications d'origines. Par exemple, un script dans la page `http://store.company.com/dir/other.html` exécute le code suivant :
 
-    document.domain = "company.com";
+```
+document.domain = "company.com";
+```
 
 Après l'exécution de ce code, la page passerait le test d'origine avec `http://company.com/dir/page.html`. Ceci-dit, il ne serait pas possible de définir `document.domain` à `othercompany.com`.
 

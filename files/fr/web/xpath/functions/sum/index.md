@@ -12,7 +12,9 @@ La fonction `sum` retourne un nombre qui est la somme des valeurs numériques de
 
 ### Syntaxe
 
-    sum( ensemble-de-nœuds )
+```
+sum( ensemble-de-nœuds )
+```
 
 ### Arguments
 
