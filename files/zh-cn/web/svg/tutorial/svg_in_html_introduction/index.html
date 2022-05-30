@@ -74,8 +74,8 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 <div class="note">
 <p>如果需要给一个内嵌的SVG元素通过DOM方法添加一个有外链的图片，我们需要使用 <code>setAttributeNS</code> 来设置外链地址 <code>href</code>. 示例如下:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> img <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElementNS</span><span class="punctuation token">(</span><span class="string token">"http://www.w3.org/2000/svg"</span><span class="punctuation token">,</span> <span class="string token">"image"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-img<span class="punctuation token">.</span><span class="function token">setAttributeNS</span><span class="punctuation token">(</span><span class="string token">"http://www.w3.org/1999/xlink"</span><span class="punctuation token">,</span> <span class="string token">"xlink:href"</span><span class="punctuation token">,</span> <span class="string token">"move.png"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+<pre class="brush: js line-numbers language-js"><code class="language-js">var img = document.createElementNS("http://www.w3.org/2000/svg", "image");
+img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");</code>
 </pre>
 </div>
 

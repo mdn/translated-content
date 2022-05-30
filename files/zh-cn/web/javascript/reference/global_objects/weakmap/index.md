@@ -13,7 +13,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 你可以从这里了解更多关于 `WeakMap` 的内容：[WeakMap对象](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)。
 
-
 ## 描述
 
 WeakMap 的 key 只能是 `Object` 类型。 {{Glossary("Primitive", "原始数据类型")}} 是不能作为 key 的（比如 {{jsxref("Symbol")}}）。
@@ -24,9 +23,9 @@ WeakMap 的 key 只能是 `Object` 类型。 {{Glossary("Primitive", "原始数�
 
 但这样的实现会有两个很大的缺点：
 
-1.  首先赋值和搜索操作都是 *O(*n*)* 的时间复杂度（_n_ 是键值对的个数），因为这两个操作都需要遍历全部整个数组来进行匹配。
+1. 首先赋值和搜索操作都是 *O(*n*)* 的时间复杂度（_n_ 是键值对的个数），因为这两个操作都需要遍历全部整个数组来进行匹配。
 
-2.  另外一个缺点是可能会导致内存泄漏，因为数组会一直引用着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使没有其他任何引用存在了。
+2. 另外一个缺点是可能会导致内存泄漏，因为数组会一直引用着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使没有其他任何引用存在了。
 
 相比之下，原生的 `WeakMap` 持有的是每个键对象的“弱引用”，这意味着在没有其他引用存在时垃圾回收能正确进行。原生 `WeakMap` 的结构是特殊且有效的，其用于映射的 key _只有_在其没有被回收时才是有效的。
 
@@ -102,7 +101,6 @@ class ClearableWeakMap {
   }
 }
 ```
-
 
 ## 规范
 

@@ -22,11 +22,11 @@ original_slug: WebRTC/介绍
 
 <h3 id="信令">信令</h3>
 
-<p>信令是在两个设备之间发送控制信息以确定通信协议、信道、媒体编解码器和格式以及数据传输方法以及任何所需的路由信息的过程。 关于WebRTC的信令流程最重要的一点是：<strong>信令在规范中并没有定义。</strong>所以开发者需要自己决定如何实现这个过程。开发者可以为应用程序引擎选择任意的信息协议（如SIP或XMPP），任意双向通信信道（如WebSocket或XMLHttpRequest)与持久连接服务器的API（如<a href="https://developers.google.com/appengine/docs/python/channel/overview" style="line-height: 1.5; text-decoration: none;">Google Channel API</a><span style="line-height: 1.5;">）一起工作。</span></p>
+<p>信令是在两个设备之间发送控制信息以确定通信协议、信道、媒体编解码器和格式以及数据传输方法以及任何所需的路由信息的过程。 关于WebRTC的信令流程最重要的一点是：<strong>信令在规范中并没有定义。</strong>所以开发者需要自己决定如何实现这个过程。开发者可以为应用程序引擎选择任意的信息协议（如SIP或XMPP），任意双向通信信道（如WebSocket或XMLHttpRequest)与持久连接服务器的API（如<a href="https://developers.google.com/appengine/docs/python/channel/overview" style="line-height: 1.5; text-decoration: none;">Google Channel API</a>）一起工作。</p>
 
-<p><span style="line-height: 1.5;">你可能会想，为什么这么一个对于建立WebRTC连接至关重要的基本过程居然没有定义在规范里？ 答案很简单：由于两个设备无法直接相互联系，规范无法预测WebRTC的所有可能用例，因此更明智的做法就是让开发人员们自己选择合适的网络技术和消息传递协议。</span></p>
+<p>你可能会想，为什么这么一个对于建立WebRTC连接至关重要的基本过程居然没有定义在规范里？ 答案很简单：由于两个设备无法直接相互联系，规范无法预测WebRTC的所有可能用例，因此更明智的做法就是让开发人员们自己选择合适的网络技术和消息传递协议。</p>
 
-<p><span style="line-height: 1.5;">尤其是如果一个开发人员已经有了一个连接两个设备的方法，那也没有必要强迫他们就为了WebRTC使用另一个规范定义的方法。 由于WebRTC没有生活在真空中，所以可能还有其他的连接，因此，如果可以使用已有的连接通道，就可以避免添加额外的连接通道。</span></p>
+<p>尤其是如果一个开发人员已经有了一个连接两个设备的方法，那也没有必要强迫他们就为了WebRTC使用另一个规范定义的方法。 由于WebRTC没有生活在真空中，所以可能还有其他的连接，因此，如果可以使用已有的连接通道，就可以避免添加额外的连接通道。</p>
 
 <p>为了交换信令信息，您可以选择通过WebSocket连接来回发送JSON对象，或者您可以在适当的通道（Channel）上使用XMPP或SIP，或者您可以通过HTTPS使用XMLHttpRequest进行轮询或者其他任何你可以想出来的技术组合。你甚至可以使用电子邮件作为信号通道。</p>
 

@@ -17146,24 +17146,11 @@
       "chansbro"
     ]
   },
-  "conflicting/Web/API/RTCPeerConnection/icegatheringstatechange_event": {
-    "modified": "2020-10-15T22:21:36.115Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
     "modified": "2019-03-23T22:54:05.275Z",
     "contributors": [
       "fscholz",
       "hanmomhanda"
-    ]
-  },
-  "conflicting/Web/API/Window/popstate_event": {
-    "modified": "2019-03-23T22:33:09.328Z",
-    "contributors": [
-      "joeunha",
-      "joshua1988"
     ]
   },
   "conflicting/Web/CSS/@viewport": {

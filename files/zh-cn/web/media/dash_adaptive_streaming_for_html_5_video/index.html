@@ -10,7 +10,7 @@ tags:
 translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 original_slug: Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
-<p><span class="seoSummary">经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。</span> 这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。</p>
+<p>经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。 这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。</p>
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
@@ -85,7 +85,7 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame
 <p>您将需要修改网页，使其首先指向DASH清单，而不是直接指向特定的视频文件：</p>
 
 <pre class="brush: html">&lt;video&gt;
-  &lt;source src="movie.<span class="ZmSearchResult" id="DWT648"><span class="ZmSearchResult" id="DWT650">mpd</span></span>"&gt;
+  &lt;source src="movie.mpd"&gt;
   &lt;source src="movie.webm"&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;</pre>

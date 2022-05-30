@@ -73,18 +73,13 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}</dt>
- <dd>{{Interface("nsIChannel")}} 입니다. 요청을 수행할 때 객체에 의해 사용된 채널입니다.</dd>
+ <dd>요청을 수행할 때 객체에 의해 사용된 채널입니다.</dd>
  <dt>{{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}</dt>
  <dd>Boolean 입니다. true 일 경우, 요청이 쿠키나 인증 헤더 없이 전송됩니다.</dd>
  <dt>{{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}</dt>
  <dd>Boolean 입니다. true 일 경우, 요청에대해 동일 출처 정책(same origin policy)이 강제되지 않습니다.</dd>
  <dt>{{domxref("XMLHttpRequest.mozBackgroundRequest")}}</dt>
- <dd> Boolean 입니다. 객체가 백그라운드 서비스 요청을 나타내는지 여부를 표시합니다.</dd>
- <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}}{{gecko_minversion_inline("2.0")}} {{deprecated_inline}} {{ReadOnlyInline}}</dt>
- <dd>{{jsxref("ArrayBuffer")}}. 요청에 대한 응답입니다. 타입이 지정된 JavaScript 배열입니다.</dd>
- <dt>{{domxref("XMLHttpRequest.multipart")}}{{deprecated_inline}}</dt>
- <dd><strong>This Gecko-only feature, a boolean, was removed in Firefox/Gecko 22.</strong><br>
- 대신 <a href="https://developer.mozilla.org/ko/docs/Web/API/Server-sent_events">Server-Sent Events</a>, <a href="https://developer.mozilla.org/ko/docs/WebSockets">웹 소켓</a>, 또는 프로그레스 이벤트의 <code>responseText</code> 를 사용하시기 바랍니다.</dd>
+ <dd>Boolean 입니다. 객체가 백그라운드 서비스 요청을 나타내는지 여부를 표시합니다.</dd>
 </dl>
 
 <h3 id="이벤트_핸들러">이벤트 핸들러</h3>

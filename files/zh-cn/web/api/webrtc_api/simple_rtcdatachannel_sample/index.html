@@ -9,7 +9,7 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>{{domxref("RTCDataChannel")}} <span id="result_box" lang="zh-CN"><span>接口是</span></span><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a><span lang="zh-CN"><span>的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。</span> <span>API有意地类似于</span></span><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a><span lang="zh-CN"><span>，因此可以为每个API使用相同的编程模型。</span></span></p>
+<p>{{domxref("RTCDataChannel")}} 接口是<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。 API有意地类似于<a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>，因此可以为每个API使用相同的编程模型。</p>
 
 <p>在本示例中, 我们会在一个页面内建立 一条{{domxref("RTCDataChannel")}}链接 . 这个场景是为了演示如何链接两个Peer，实际场景并不常见。在本示例中解释了协商和建立链接的过程，定位和链接另外一台主机的场景在另外的一个示例中。 </p>
 
@@ -223,9 +223,9 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>首先，待发送的消息文本从文本输入框的 {{htmlattrxref("value", "input")}}属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到remote节点。 都搞定了！ 余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。</p>
 
-<h3 id="接收消息"><span id="result_box" lang="zh-CN"><span>接收消息</span></span></h3>
+<h3 id="接收消息">接收消息</h3>
 
-<p><span id="result_box" lang="zh-CN"><span>当远程通道发生“message”事件时，我们的handleReceiveMessage（）方法被调用来处理事件</span></span><span lang="zh-CN"><span>。</span></span></p>
+<p>当远程通道发生“message”事件时，我们的handleReceiveMessage（）方法被调用来处理事件。</p>
 
 <pre class="brush: js">  function handleReceiveMessage(event) {
     var el = document.createElement("p");

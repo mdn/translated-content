@@ -138,7 +138,7 @@ original_slug: MDN/Guidelines/Style_guide
 
 <h3 id="小节、段落和换行">小节、段落和换行</h3>
 
-<p>对于小节的标题，应使用从大到小的方式来定义级别：{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}} 这样，并且中间不要跳过某一级。因为 H1 已用于文章的标题，因此小节的标题应该从 H2 开始。如果你的文章中小节的层次超过了 3 到 4 级，那么你可能需要考虑将整篇文章拆分成几篇小的文章，然后用一个引导页给出这些文章的链接，并用 {{TemplateLink("Next")}}、{{TemplateLink("Previous")}}、{{TemplateLink("PreviousNext")}} 宏为它们创建导航。</p>
+<p>对于小节的标题，应使用从大到小的方式来定义级别：{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}} 这样，并且中间不要跳过某一级。因为 H1 已用于文章的标题，因此小节的标题应该从 H2 开始。如果你的文章中小节的层次超过了 3 到 4 级，那么你可能需要考虑将整篇文章拆分成几篇小的文章，然后用一个引导页给出这些文章的链接，并用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs"><code>Next</code></a>、<a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs"><code>Previous</code></a>、<a href="https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs"><code>PreviousNext</code></a> 宏为它们创建导航。</p>
 
 <p>按下回车键（Enter 或 Return）可以开始一个新的段落。如果只是想换行而不是另起一段，可以按住 Shift 并敲下回车。</p>
 
@@ -279,11 +279,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <dl>
  <dt>元素名称</dt>
- <dd>使用 {{TemplateLink("HTMLElement")}} 宏会生成一个指向该元素详情页的链接。比如，\{{HTMLElement("title")}} 会生成”{{HTMLElement("title")}}“。如果不想生成链接，就将元素名称用尖括号括起来，然后将其设置为内联代码样式，比如 <code>&lt;title&gt;</code>。</dd>
+ <dd>使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs"><code>HTMLElement</code></a> 宏会生成一个指向该元素详情页的链接。比如，\{{HTMLElement("title")}} 会生成”{{HTMLElement("title")}}“。如果不想生成链接，就将元素名称用尖括号括起来，然后将其设置为内联代码样式，比如 <code>&lt;title&gt;</code>。</dd>
  <dt>属性名称</dt>
  <dd>请使用<strong>粗体</strong>。</dd>
  <dt>属性定义</dt>
- <dd>对正在定义的术语使用 {{TemplateLink("htmlattrdef")}} 宏（如 \{{htmlattrdef("type")}}），这样其他页面就可以使用 {{TemplateLink("htmlattrxref")}} 宏来链接到该页面了（例如 \{{htmlattrxref("attr","属性")}}）。</dd>
+ <dd>对正在定义的术语使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs"><code>htmlattrdef</code></a> 宏（如 \{{htmlattrdef("type")}}），这样其他页面就可以使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs"><code>htmlattrxref</code></a> 宏来链接到该页面了（例如 \{{htmlattrxref("attr","属性")}}）。</dd>
  <dt>属性值</dt>
  <dd>请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将 <code>&lt;input&gt;</code> 元素的 <strong>type</strong> 属性设置为 <code>email</code> 或 <code>tel</code> 时……</dd>
  <dt>为属性添加说明标签</dt>
@@ -586,7 +586,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="HTML_元素">HTML 元素</h4>
 
-<p>请使用”元素“来表示 HTML 和 XML 元素，不要使用”标记“。另外，请在元素名称两边使用尖括号 ”&lt;&gt;“ 括起来，并使用 {{HTMLElement("code")}} 样式。当文章中第一次出现某个元素的时候，应该用 {{TemplateLink("HTMLElement")}} 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。</p>
+<p>请使用”元素“来表示 HTML 和 XML 元素，不要使用”标记“。另外，请在元素名称两边使用尖括号 ”&lt;&gt;“ 括起来，并使用 {{HTMLElement("code")}} 样式。当文章中第一次出现某个元素的时候，应该用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs"><code>HTMLElement</code></a> 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。</p>
 
 <dl>
  <dd>
@@ -686,7 +686,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <ul>
  <li>Junk（需删除）：用于因为不小心弄错了而创建的页面、或因为内容太差而准备删除的页面。具有该标签的页面随时会被删除。</li>
- <li>Obsolete（已废弃）：用于技术已经作废或已被其他技术所取代，但是该技术仍然可用的文章。例如某个在 HTML 4.01 中依然可用但在 HTML5 中已经废弃的元素。你也可以使用 {{TemplateLink("obsolete_header")}} 宏在文章顶部显示一个醒目的提示。</li>
+ <li>Obsolete（已废弃）：用于技术已经作废或已被其他技术所取代，但是该技术仍然可用的文章。例如某个在 HTML 4.01 中依然可用但在 HTML5 中已经废弃的元素。你也可以使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/obsolete_header.ejs"><code>obsolete_header</code></a> 宏在文章顶部显示一个醒目的提示。</li>
  <li>Archive（存档）：用于技术已经废弃或已被其他技术所取代，并且已无法使用的文章。如果可能，请在文章顶部再添加一条提示，给读者提供新的技术文章的链接。例如，介绍如何使用 Mozilla CVS 仓库的文章中应该添加一条指向介绍使用 Mercurial 仓库的文章链接。（如果新技术的文章的页面还没有创建，可以使用 NeedsUpdate（需要更新）标签，并在 Talk 页面添加一条说明。）添加了”Archive“标签的页面最终都会从主内容区移到 MDN 的<a href="https://developer.mozilla.org/zh-CN/docs/Archive">存档</a>区。</li>
 </ul>
 

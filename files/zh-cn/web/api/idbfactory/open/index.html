@@ -24,9 +24,9 @@ translation_of: Web/API/IDBFactory/open
 <p>If an error occurs while the database connection is being opened, then an <a href="/en-US/docs/IndexedDB/IDBErrorEvent">error event</a> is fired on the request object returned from this method.</p>
 <h2 id="Syntax">Syntax</h2>
 <p>For the current standard:</p>
-<pre class="syntaxbox"><span class="idlInterface" id="idl-def-IDBFactory"><span class="idlMethod"> <span class="idlMethType"><a class="idlType" href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#idl-def-IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a></span> <span class="idlMethName"><a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version">open</a></span> (<span class="idlParam"><span class="idlParamType">DOMString</span> <span class="idlParamName">name</span></span>, <span class="idlParam">[<span class="extAttr">EnforceRange</span>] optional <span class="idlParamType">unsigned long long</span> <span class="idlParamName">version</span></span>);</span></span></pre>
+<pre class="syntaxbox"> <a class="idlType" href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#idl-def-IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> <a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version">open</a> (DOMString name, [EnforceRange] optional unsigned long long version);</pre>
 <p>For the experimental version with <code>options</code> (see below):</p>
-<pre class="syntaxbox"><span class="idlInterface"><span class="idlMethod">IDBOpenDBRequest open (DOMString name, optional IDBOpenDBOptions options);</span></span></pre>
+<pre class="syntaxbox">IDBOpenDBRequest open (DOMString name, optional IDBOpenDBOptions options);</pre>
 <h2 id="示例">示例</h2>
 <p>For the current standard:</p>
 <pre class="brush: js">var request = window.indexedDB.open("toDoList", 4);</pre>
@@ -41,7 +41,7 @@ translation_of: Web/API/IDBFactory/open
  <dt>
   version</dt>
  <dd>
-  指定数据库版本，当你想要更改数据库格式（比如增加对象存储，非增加记录），必须指定更高版本，通过 <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">versionchange 来更改</span></dd>
+  指定数据库版本，当你想要更改数据库格式（比如增加对象存储，非增加记录），必须指定更高版本，通过 versionchange 来更改</dd>
  <dt>
   options (version and storage) {{ NonStandardBadge() }}</dt>
  <dd>

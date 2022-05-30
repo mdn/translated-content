@@ -36,7 +36,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
  <dd>
  <p>作为一个{{domxref("MediaStreamConstraints")}} 对象，指定了请求的媒体类型和相对应的参数。</p>
 
- <p>constraints 参数是一个包含了<code>video</code> 和 <code>audio</code>两个成员<font face="Open Sans, Arial, sans-serif">的</font><code>MediaStreamConstraints</code> 对象，用于说明请求的媒体类型。必须至少一个类型或者两个同时可以被指定。如果浏览器无法找到指定的媒体类型或者无法满足相对应的参数要求，那么返回的Promise对象就会处于rejected［失败］状态，<code>NotFoundError</code>作为rejected［失败］回调的参数。 </p>
+ <p>constraints 参数是一个包含了<code>video</code> 和 <code>audio</code>两个成员的<code>MediaStreamConstraints</code> 对象，用于说明请求的媒体类型。必须至少一个类型或者两个同时可以被指定。如果浏览器无法找到指定的媒体类型或者无法满足相对应的参数要求，那么返回的Promise对象就会处于rejected［失败］状态，<code>NotFoundError</code>作为rejected［失败］回调的参数。 </p>
 
  <p>以下同时请求不带任何参数的音频和视频：</p>
 
