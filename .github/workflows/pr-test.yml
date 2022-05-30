@@ -159,7 +159,7 @@ jobs:
           # to debug JS or CSS.
           find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs rm
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           # This must match what we set in the "Build changed content" step above
