@@ -20,7 +20,9 @@ La propriété **`fontsize()`** permet de créer un élément HTML {{HTMLElement
 
 ## Syntaxe
 
-    str.fontsize(taille)
+```js
+str.fontsize(taille)
+```
 
 ### Paramètres
 

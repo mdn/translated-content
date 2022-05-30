@@ -18,7 +18,9 @@ La méthode **`Symbol.keyFor(sym)`** permet de récupérer la clé d'un symbole 
 
 ## Syntaxe
 
-    Symbol.keyFor(sym);
+```js
+Symbol.keyFor(sym);
+```
 
 ### Paramètres
 
