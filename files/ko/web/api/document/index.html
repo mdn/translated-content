@@ -338,54 +338,6 @@ translation_of: Web/API/Document
  <dd>캐럿을 포함하는 DOM 노드와 그 노드내 캐첫의 문자 오프셋을 포함하는 {{domxref('CaretPosition')}} 객체를 반환합니다.</dd>
 </dl>
 
-<h2 id="비표준_확장_non-standard_inline">비표준 확장 {{non-standard_inline}}</h2>
-
-<p>{{non-standard_header}}</p>
-
-<h3 id="Firefox_노트">Firefox 노트</h3>
-
-<p>Mozilla는 XUL 컨텐츠만을 위해 만들어진 비표준 속성의 집합을 정의합니다.</p>
-
-<dl>
- <dt>{{domxref("document.currentScript")}} {{non-standard_inline}}</dt>
- <dd>현재 실행중인 {{HTMLElement("script")}} 엘리먼트를 반환합니다.</dd>
- <dt>{{domxref("document.documentURIObject")}}</dt>
- <dd>(<strong>Mozilla 부가 기능 전용!</strong>) 다큐먼트의 URI 를 나타내는 {{Interface("nsIURI")}} 객체를 반환합니다. 이 속성은 권한을 가진 자바스크립트 코드(UniversalXPConnect 권한을 갖는)에서만 특별한 의미를 갖습니다.</dd>
- <dt>{{domxref("document.popupNode")}}</dt>
- <dd>팝업이 불려진 노드를 반환합니다.</dd>
- <dt>{{domxref("document.tooltipNode")}}</dt>
- <dd>현재 툴팁의 대상이되는 노드를 반환합니다.</dd>
-</dl>
-
-<p>Mozilla 는 또한 일부 비표준 메소드를 정의합니다.</p>
-
-<dl>
- <dt>{{domxref("document.execCommandShowHelp")}} {{deprecated_inline}}</dt>
- <dd>이 메소드는 아무것도 하지 않았지만 항상 예외를 발생시켰으므로 Gecko 14.0 {{geckoRelease("14.0")}} 에서 제거되었습니다.</dd>
- <dt>{{domxref("document.getBoxObjectFor")}} {{deprecated_inline}}</dt>
- <dd>{{domxref("Element.getBoundingClientRect()")}} 메소드를 대신 사용하세요.</dd>
- <dt>{{domxref("document.loadOverlay")}}</dt>
- <dd><a href="https://developer.mozilla.org/ko/docs/Mozilla/Tech/XUL" title="XUL_Overlays">XUL 오버레이</a>를 동적으로 로드합니다. XUL 다큐먼트에서만 동작합니다.</dd>
- <dt>{{domxref("document.queryCommandText")}} {{deprecated_inline}}</dt>
- <dd>이 메소드는 아무것도 하지 않았지만 예외를 발생시켰으므로 Gecko 14.0 {{geckoRelease("14.0")}} 에서 제거되었습니다.</dd>
-</dl>
-
-<h3 id="Internet_Explorer_노트">Internet Explorer 노트</h3>
-
-<p>Microsoft는 일부 비표준 속성을 정의합니다.</p>
-
-<dl>
- <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
-</dl>
-
-<p>Internet Explorer는 <code>Document</code> 인터페이스내 <code>Node</code> 인터페이스의 모든 메소드를 지원하지 않습니다:</p>
-
-<dl>
- <dt>{{domxref("document.contains")}}</dt>
- <dd>대안으로 <code>document.body.contains()</code> 를 사용할 수 있습니다.</dd>
-</dl>
-
 <h2 id="명세">명세</h2>
 
 <table class="standard-table">

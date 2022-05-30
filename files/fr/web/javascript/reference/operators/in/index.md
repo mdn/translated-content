@@ -16,7 +16,9 @@ L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'
 
 ## Syntaxe
 
-    propriété in nomObjet
+```js
+propriété in nomObjet
+```
 
 ### Paramètres
 

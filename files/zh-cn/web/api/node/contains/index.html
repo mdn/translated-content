@@ -15,22 +15,22 @@ translation_of: Web/API/Node/contains
 </pre>
 
 <ul>
- <li><code>node</code> 是否包含otherNode节点.</li>
- <li><code>otherNode</code> 是否是node的后代节点.</li>
+ <li><code>node</code> 是否包含 otherNode 节点。</li>
+ <li><code>otherNode</code> 是否是 node 的后代节点。</li>
 </ul>
 
-<p>如果 <code>otherNode</code> 是 <code>node 的后代节点或是</code> <code>node</code> 节点本身.则返回<code>true</code> , 否则返回 <code>false</code>.</p>
+<p>如果 <code>otherNode</code> 是 <code>node 的后代节点或是</code> <code>node</code> 节点本身。则返回<code>true</code> , 否则返回 <code>false</code>.</p>
 
 <h2 id="Example" name="Example">例子</h2>
 
-<p>下面的函数用来检查一个元素是否是body元素的后代元素且非body元素本身.</p>
+<p>下面的函数用来检查一个元素是否是 body 元素的后代元素且非 body 元素本身。</p>
 
 <pre class="brush:js">function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);
 }</pre>
 
 <ul>
- <li><code>node</code> 是我们想要检查的元素节点.</li>
+ <li><code>node</code> 是我们想要检查的元素节点。</li>
 </ul>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>

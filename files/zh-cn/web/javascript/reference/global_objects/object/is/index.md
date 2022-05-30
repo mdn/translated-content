@@ -48,7 +48,7 @@ Object.is(value1, value2);
   - 都是 `+0`
   - 都是 `-0`
   - 都是 {{jsxref("NaN")}}
-  - 都是同一个值，非零且都不是 {{jsxref("NaN")}} 
+  - 都是同一个值，非零且都不是 {{jsxref("NaN")}}
 
 `Object.is()` 与 {{jsxref("Operators", "==", "#相等运算符")}} 不同。`==` 运算符在判断相等前对两边的变量（如果它们不是同一类型）进行强制转换（这种行为将 `"" == false` 判断为 `true`），而 `Object.is` 不会强制转换两边的值。
 

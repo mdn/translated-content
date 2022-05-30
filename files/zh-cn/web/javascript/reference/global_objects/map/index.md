@@ -19,7 +19,7 @@ browser-compat: javascript.builtins.Map
 
 ## 描述
 
-一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。 
+一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。
 
 ### 键的相等
 
@@ -46,7 +46,7 @@ browser-compat: javascript.builtins.Map
       <th scope="row">意外的键</th>
       <td><code>Map</code> 默认情况不包含任何键。只包含显式插入的键。</td>
       <td>
-        <p>一个 <code>Object</code> 有一个原型, 原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
+        <p>一个 <code>Object</code> 有一个原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
         <div class="notecard note">
           <p><strong>备注：</strong>虽然从 ES5 开始可以用 {{jsxref("Object.create", "Object.create(null)")}} 来创建一个没有原型的对象，但是这种用法不太常见。</p>
         </div>
@@ -205,7 +205,7 @@ console.log(contacts.size) // 1
 ### 迭代方法
 
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。 
+  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.keys()")}}
   - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的**键**，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.values()")}}
@@ -229,20 +229,20 @@ const keyFunc = function() {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
-myMap.set(keyObj, "和键keyObj关联的值");
-myMap.set(keyFunc, "和键keyFunc关联的值");
+myMap.set(keyObj, "和键 keyObj 关联的值");
+myMap.set(keyFunc, "和键 keyFunc 关联的值");
 
 myMap.size; // 3
 
 // 读取值
 myMap.get(keyString);    // "和键'a string'关联的值"
-myMap.get(keyObj);       // "和键keyObj关联的值"
-myMap.get(keyFunc);      // "和键keyFunc关联的值"
+myMap.get(keyObj);       // "和键 keyObj 关联的值"
+myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
 
 myMap.get('a string');   // "和键'a string'关联的值"
-                         // 因为keyString === 'a string'
-myMap.get({});           // undefined, 因为keyObj !== {}
-myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}
+                         // 因为 keyString === 'a string'
+myMap.get({});           // undefined，因为 keyObj !== {}
+myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
 ```
 
 ### 将 NaN 作为 Map 的键
@@ -347,7 +347,7 @@ console.log(original === clone); // false. 浅比较 不为同一个对象的引
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 
 ```js
-cosnt first = new Map([
+const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],

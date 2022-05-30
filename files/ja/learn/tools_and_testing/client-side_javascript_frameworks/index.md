@@ -111,13 +111,13 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Angular チュートリアル
 
-> **Note:** この Angular チュートリアルは Angular CLI (NG) 11.2.5 で、 2021 年 4 月に動作確認を行いました。
+> **Note:** この Angular チュートリアルは Angular CLI (NG) 13.3.4 で、 2022 年 5 月に動作確認を行いました。
 >
 > もし、コードをこのバージョンと照合する必要がある場合は、サンプルの Angular アプリコードの完成版を [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) で確認ができます。
 
 - [1. Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
-- [2. Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+- [2. Beginning our Angular todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - : At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
 - [3. Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - : Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.

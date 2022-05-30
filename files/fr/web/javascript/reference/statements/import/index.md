@@ -18,17 +18,19 @@ L'instruction **`import`** est utilisée pour importer des liens qui sont export
 
 ## Syntaxe
 
-    import exportParDefaut from "nom-module";
-    import * as nom from "nom-module";
-    import { export } from "nom-module";
-    import { export as alias } from "nom-module";
-    import { export1 , export2 } from "nom-module";
-    import { export1 , export2 as alias2 , [...] } from "nom-module";
-    import exportParDefaut, { export [ , [...] ] } from "nom-module";
-    import exportParDefaut, * as nom from "nom-module";
-    import "nom-module";
-    import { toto , truc } from "nom-module/chemin/vers/fichier-non-exporte";
-    let promesse = import("nom-module");
+```js
+import exportParDefaut from "nom-module";
+import * as nom from "nom-module";
+import { export } from "nom-module";
+import { export as alias } from "nom-module";
+import { export1 , export2 } from "nom-module";
+import { export1 , export2 as alias2 , [...] } from "nom-module";
+import exportParDefaut, { export [ , [...] ] } from "nom-module";
+import exportParDefaut, * as nom from "nom-module";
+import "nom-module";
+import { toto , truc } from "nom-module/chemin/vers/fichier-non-exporte";
+let promesse = import("nom-module");
+```
 
 - `exportParDefaut`
   - : Nom qui fera référence à l'export par défaut du module.

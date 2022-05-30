@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <p> JavaScript 的 <strong><code>Number</code></strong> 对象是经过封装的能让你处理数字值的对象。<code>Number</code> 对象由 <code>Number()</code> 构造器创建。</p>
 
-<p>JavaScript的<code>Number</code>类型为<a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">双精度IEEE 754 64位浮点</a>类型。</p>
+<p>JavaScript 的<code>Number</code>类型为<a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">双精度 IEEE 754 64 位浮点</a>类型。</p>
 
-<p>最近出了stage3{{jsxref("BigInt")}} 任意精度数字类型，已经进入stage3规范</p>
+<p>最近出了 stage3{{jsxref("BigInt")}} 任意精度数字类型，已经进入 stage3 规范</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -43,7 +43,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
 
 <dl>
  <dt>{{jsxref("Number.EPSILON")}}</dt>
- <dd>两个可表示(representable)数之间的最小间隔。</dd>
+ <dd>两个可表示 (representable) 数之间的最小间隔。</dd>
  <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}}</dt>
  <dd>JavaScript 中最大的安全整数 (<code>2^53 - 1</code>)。</dd>
  <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
@@ -72,7 +72,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
  <dt>{{jsxref("Number.isInteger()")}}</dt>
  <dd>确定传递的值类型是“number”，且是整数。</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>确定传递的值是否为安全整数 ( -<code>(2^53 - 1)</code> 至 <code>2^53 - 1</code>)之间。</dd>
+ <dd>确定传递的值是否为安全整数 ( -<code>(2^53 - 1)</code> 至 <code>2^53 - 1</code>) 之间。</dd>
  <dt>{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</dt>
  <dd>计算传递的值并将其转换为整数 (或无穷大)。</dd>
 </dl>
@@ -116,7 +116,7 @@ var notANum = Number.NaN;
 var smallestInt = Number.MIN_SAFE_INTEGER;
 //-9007199254740991</pre>
 
-<p>在解析序列化的JSON时，如果JSON解析器将它们强制转换为Number类型，那么超出此范围的整数值可能会被破坏。在工作中使用{{jsxref("String")}} 类型代替，是一个可行的解决方案。</p>
+<p>在解析序列化的 JSON 时，如果 JSON 解析器将它们强制转换为 Number 类型，那么超出此范围的整数值可能会被破坏。在工作中使用{{jsxref("String")}} 类型代替，是一个可行的解决方案。</p>
 
 <h3 id="Example_Using_Number_to_convert_a_Date_object">使用 <code>Number</code> 转换 <code>Date</code> 对象</h3>
 

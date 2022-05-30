@@ -272,7 +272,7 @@ translation_of: Web/HTML/Element/img
 
 <h3 id="使用_srcset_和_sizes_属性">使用 <code>srcset</code> 和 <code>sizes</code> 属性</h3>
 
-<p>在支持 <code>srcset</code> 的用户代理中，当使用 <code>w</code> 描述符时，src 属性会被忽略。当匹配了媒体条件 <code>(min-width: 600px)</code> 时，图像将宽 200px，否则宽 50vw（视图宽度的 50%）。</p>
+<p>在支持 <code>srcset</code> 的用户代理中，当使用 <code>w</code> 描述符时，src 属性会被忽略。当匹配了媒体条件 <code>(max-width: 600px)</code> 时，图像将宽 200px，否则宽 50vw（视图宽度的 50%）。</p>
 
 <pre class="brush: html notranslate"> &lt;img src="clock-demo-200px.png"
       alt="Clock"

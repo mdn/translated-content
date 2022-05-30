@@ -22373,12 +22373,6 @@
       "FEhaoxinjie"
     ]
   },
-  "Web/API/Window/mozPaintCount": {
-    "modified": "2019-03-23T22:35:06.349Z",
-    "contributors": [
-      "Qcui"
-    ]
-  },
   "Web/API/Window/name": {
     "modified": "2020-10-15T21:29:36.392Z",
     "contributors": [
@@ -46541,6 +46535,12 @@
       "ziyunfei"
     ]
   },
+  "conflicting/Web/API/Window_6e431ebabeaed587e8dfd0ccc4543b75": {
+    "modified": "2019-03-23T22:35:06.349Z",
+    "contributors": [
+      "Qcui"
+    ]
+  },
   "conflicting/Web/API/Worker/message_event": {
     "modified": "2020-11-04T10:01:25.018Z",
     "contributors": [
@@ -46755,18 +46755,6 @@
       "lon",
       "fscholz",
       "lazurey"
-    ]
-  },
-  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
-    "modified": "2019-03-23T23:12:04.497Z",
-    "contributors": [
-      "Robinx",
-      "Harvesty",
-      "jasonzhyan",
-      "ziyunfei",
-      "yeol",
-      "teoli",
-      "Chajn"
     ]
   },
   "conflicting/Web/CSS/cursor": {

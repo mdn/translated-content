@@ -148,7 +148,7 @@ _変更なし。_
 ### XPCOM
 
 - `"@mozilla.org/network/atomic-file-output-stream;1"` および `"@mozilla.org/network/safe-file-output-stream;1"` は、`PR_TRUNCATE` を伴わずに `PR_APPEND` を渡した場合に例外が発生するようになりました ({{bug(1117580)}})。
-- `nsICompositionStringSynthesizer` および {{ifmethod("nsIDOMWindowUtils", "sendCompositionEvent")}} を削除しました。代わりに `nsITextInputProcessor` を使用してください({{bug(917322)}})。
+- `nsICompositionStringSynthesizer` および `nsIDOMWindowUtils.sendCompositionEvent` を削除しました。代わりに `nsITextInputProcessor` を使用してください({{bug(917322)}})。
 - `nsIDOMWindowUtils.sendKeyEvent()` は非推奨になりました。代わりに `nsITextInputProcessor` を使用してください ({{bug(1119609)}})。
 
 ## 過去のバージョン

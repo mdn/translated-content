@@ -52,7 +52,7 @@ Reflect.getPrototypeOf({})  // Object.prototype
 Object.getPrototypeOf('foo')   // Throws TypeError
 Reflect.getPrototypeOf('foo')  // Throws TypeError
 
-// 在 ES2015 规范下，Reflect 抛异常, Object 强制转换非 Object
+// 在 ES2015 规范下，Reflect 抛异常，Object 强制转换非 Object
 Object.getPrototypeOf('foo')   // String.prototype
 Reflect.getPrototypeOf('foo')  // Throws TypeError
 

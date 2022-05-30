@@ -12,33 +12,33 @@ translation_of: 'Web/CSS/:nth-last-child'
 <p><strong><code>:nth-last-child()</code></strong> 这个<a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 从兄弟节点中从后往前匹配处于某些位置的元素</p>
 
 <pre class="brush: css no-line-numbers">/* 在所有兄弟节点中，从后往前
-   选择所有4的倍数的节点 */
+   选择所有 4 的倍数的节点 */
 :nth-last-child(4n) {
   color: lime;
 }</pre>
 
 <div class="note">
-<p><strong>注意:</strong> 这个伪类和 {{Cssxref(":nth-child")}} 基本一致, 但它是从<em>结尾</em>计数, 而不是从开始计数.</p>
+<p><strong>注意：</strong> 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从<em>结尾</em>计数，而不是从开始计数。</p>
 </div>
 
 <h2 id="语法">语法</h2>
 
-<p><code>nth-last-child</code>伪类接受一个参数, 用来作为一个模式，从后往前匹配元素.</p>
+<p><code>nth-last-child</code>伪类接受一个参数，用来作为一个模式，从后往前匹配元素。</p>
 
 <h3 id="Keyword_values">Keyword values</h3>
 
 <dl>
  <dt><code>odd</code></dt>
- <dd>代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如: 1, 3, 5等.</dd>
+ <dd>代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如: 1, 3, 5 等。</dd>
  <dt><code>even</code></dt>
- <dd>代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如: 2, 4, 6等.</dd>
+ <dd>代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如: 2, 4, 6 等。</dd>
 </dl>
 
 <h3 id="Functional_notation">Functional notation</h3>
 
 <dl>
  <dt><code>&lt;An+B&gt;</code></dt>
- <dd>代表一些元素，它们在所在兄弟节点中的数字位置满足模式 <code>An+B</code>, <code>n</code>是0或者任意的正整数. 从结尾开始计算的第一个元素的索引值是<code>1</code>. <code>A</code> 和 <code>B</code> 必须都是 {{cssxref("&lt;integer&gt;")}}.</dd>
+ <dd>代表一些元素，它们在所在兄弟节点中的数字位置满足模式 <code>An+B</code>, <code>n</code>是 0 或者任意的正整数。从结尾开始计算的第一个元素的索引值是<code>1</code>. <code>A</code> 和 <code>B</code> 必须都是 {{cssxref("&lt;integer&gt;")}}.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -51,19 +51,19 @@ translation_of: 'Web/CSS/:nth-last-child'
 
 <dl>
  <dt><code>tr:nth-last-child(odd)</code> or <code>tr:nth-last-child(2n+1)</code></dt>
- <dd>表示HTML表的倒数的奇数行:1、3、5等。</dd>
+ <dd>表示 HTML 表的倒数的奇数行:1、3、5 等。</dd>
  <dt><code>tr:nth-last-child(even)</code> or <code>tr:nth-last-child(2n)</code></dt>
- <dd>表示HTML表的倒数的偶数行:2、4、6等。</dd>
+ <dd>表示 HTML 表的倒数的偶数行:2、4、6 等。</dd>
  <dt><code>:nth-last-child(7)</code></dt>
- <dd>表示倒数第7个元素。</dd>
+ <dd>表示倒数第 7 个元素。</dd>
  <dt><code>:nth-last-child(5n)</code></dt>
- <dd>表示倒数的第5、10、15等元素。</dd>
+ <dd>表示倒数的第 5、10、15 等元素。</dd>
  <dt><code>:nth-last-child(3n+4)</code></dt>
- <dd>表示倒数的第4、7、10、13等元素。</dd>
+ <dd>表示倒数的第 4、7、10、13 等元素。</dd>
  <dt><code>:nth-last-child(-n+3)</code></dt>
  <dd>表示一组兄弟节点中的最后三个元素。</dd>
  <dt><code>p:nth-last-child(n)</code> or <code>p:nth-last-child(n+1)</code></dt>
- <dd>表示一组兄弟节点中的每个<code>&lt;p&gt;</code>元素。这与一个简单的<code>p</code>选择器相同。(由于<code>n</code>从0开始，而最后一个元素从1开始，<code>n</code>和<code>n+1</code>都会选择相同的元素。)</dd>
+ <dd>表示一组兄弟节点中的每个<code>&lt;p&gt;</code>元素。这与一个简单的<code>p</code>选择器相同。(由于<code>n</code>从 0 开始，而最后一个元素从 1 开始，<code>n</code>和<code>n+1</code>都会选择相同的元素。)</dd>
  <dt><code>p:nth-last-child(1)</code> or <code>p:nth-last-child(0n+1)</code></dt>
  <dd>表示所有处于兄弟节点中倒数第一位的元素<code>&lt;p&gt;</code>。这与{{cssxref(":last-child")}}选择器相同。</dd>
 </dl>

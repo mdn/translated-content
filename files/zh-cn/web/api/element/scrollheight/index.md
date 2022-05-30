@@ -41,6 +41,7 @@ Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
 ```js
 element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 ```
+
 ### 判断元素是否能滚动
 
 当容器不滚动但有溢出的子容器时，这些检查可以确定容器能否滚动：
@@ -57,6 +58,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 监听 {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} 事件, 这个等价事件可以用来判定用户是否阅读过文本。 (参见 {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} 属性)。
 
 下面演示中的复选框已禁用，文本区域的内容滚动倒底部时，复选框才能被选中表示同意。
+
 #### HTML
 
 ```html
