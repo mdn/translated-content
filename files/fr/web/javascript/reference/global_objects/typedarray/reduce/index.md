@@ -19,7 +19,9 @@ La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque v
 
 ## Syntaxe
 
-    typedarray.reduce(callback[, valeurInitiale])
+```js
+typedarray.reduce(callback[, valeurInitiale])
+```
 
 ### Paramètres
 
