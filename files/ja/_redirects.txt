@@ -1136,8 +1136,6 @@
 /ja/docs/DOM/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/DOM/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/DOM/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
-/ja/docs/DOM/File.fileName	/ja/docs/conflicting/Web/API/File/name
-/ja/docs/DOM/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/DOM/File.lastModifiedDate	/ja/docs/Web/API/File/lastModifiedDate
 /ja/docs/DOM/File.name	/ja/docs/Web/API/File/name
 /ja/docs/DOM/File.size	/ja/docs/Web/API/Blob/size
@@ -3222,14 +3220,9 @@
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
-/ja/docs/Web/API/File.fileName	/ja/docs/conflicting/Web/API/File/name
-/ja/docs/Web/API/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
-/ja/docs/Web/API/File/Using_files_from_web_applications	/ja/docs/Web/API/File_API/Using_files_from_web_applications
-/ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
-/ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/conflicting/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/conflicting/Web/API/FileReader/error_event
@@ -3417,7 +3410,6 @@
 /ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
 /ja/docs/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController	/ja/docs/orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
-/ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
 /ja/docs/Web/API/SVGTests	/ja/docs/orphaned/Web/API/SVGTests
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
@@ -4334,7 +4326,6 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
-/ja/docs/Web/HTTP/Headers/Cookie2	/ja/docs/conflicting/Web/HTTP/Headers/Cookie
 /ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
@@ -4596,7 +4587,6 @@
 /ja/docs/Web/JavaScript/Typed_arrays/Uint16Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
-/ja/docs/Web/Manifest/serviceworker	/ja/docs/orphaned/Web/Manifest/serviceworker
 /ja/docs/Web/MathML/Index	/ja/docs/conflicting/Web/MathML
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps

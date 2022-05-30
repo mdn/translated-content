@@ -46949,15 +46949,6 @@
       "Wind1808"
     ]
   },
-  "conflicting/Web/API/Blob/size": {
-    "modified": "2020-09-25T16:46:05.461Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "fscholz",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/API/BroadcastChannel/message_event": {
     "modified": "2020-10-15T22:19:53.795Z",
     "contributors": [
@@ -47013,15 +47004,6 @@
     "contributors": [
       "tyankatsu",
       "Marsf"
-    ]
-  },
-  "conflicting/Web/API/File/name": {
-    "modified": "2020-09-25T16:45:23.436Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "fscholz",
-      "ethertank"
     ]
   },
   "conflicting/Web/API/FileReader/abort_event": {
@@ -47446,12 +47428,6 @@
     "modified": "2019-03-18T21:35:45.067Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers/Cookie": {
-    "modified": "2020-10-15T22:08:54.618Z",
-    "contributors": [
-      "silverskyvicto"
     ]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
@@ -47928,12 +47904,6 @@
     "modified": "2020-10-15T22:26:44.153Z",
     "contributors": [
       "Wind1808"
-    ]
-  },
-  "orphaned/Web/API/Response/useFinalURL": {
-    "modified": "2020-10-15T22:32:38.418Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "orphaned/Web/API/SVGTests": {
@@ -48465,12 +48435,6 @@
     "contributors": [
       "ethertank",
       "Potappo"
-    ]
-  },
-  "orphaned/Web/Manifest/serviceworker": {
-    "modified": "2020-10-15T22:29:06.759Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {
