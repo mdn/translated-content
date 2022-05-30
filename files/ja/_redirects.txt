@@ -1483,7 +1483,6 @@
 /ja/docs/DOM/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM/window.history	/ja/docs/Web/API/Window/history
-/ja/docs/DOM/window.home	/ja/docs/Web/API/Window/home
 /ja/docs/DOM/window.innerHeight	/ja/docs/Web/API/Window/innerHeight
 /ja/docs/DOM/window.innerWidth	/ja/docs/Web/API/Window/innerWidth
 /ja/docs/DOM/window.length	/ja/docs/Web/API/Window/length
@@ -1709,7 +1708,6 @@
 /ja/docs/DOM:window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM:window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM:window.history	/ja/docs/Web/API/Window/history
-/ja/docs/DOM:window.home	/ja/docs/Web/API/Window/home
 /ja/docs/DOM:window.innerHeight	/ja/docs/Web/API/Window/innerHeight
 /ja/docs/DOM:window.innerWidth	/ja/docs/Web/API/Window/innerWidth
 /ja/docs/DOM:window.length	/ja/docs/Web/API/Window/length
@@ -3130,7 +3128,6 @@
 /ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
-/ja/docs/Web/API/FileException	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/conflicting/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/conflicting/Web/API/FileReader/error_event
 /ja/docs/Web/API/FileReader/onload	/ja/docs/conflicting/Web/API/FileReader/load_event
@@ -3611,7 +3608,6 @@
 /ja/docs/Web/API/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/Web/API/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/Web/API/window.history	/ja/docs/Web/API/Window/history
-/ja/docs/Web/API/window.home	/ja/docs/Web/API/Window/home
 /ja/docs/Web/API/window.innerHeight	/ja/docs/Web/API/Window/innerHeight
 /ja/docs/Web/API/window.innerWidth	/ja/docs/Web/API/Window/innerWidth
 /ja/docs/Web/API/window.length	/ja/docs/Web/API/Window/length
@@ -3690,7 +3686,6 @@
 /ja/docs/Web/API/window.scrollY	/ja/docs/Web/API/Window/scrollY
 /ja/docs/Web/API/window.scrollbars	/ja/docs/Web/API/Window/scrollbars
 /ja/docs/Web/API/window.self	/ja/docs/Web/API/Window/self
-/ja/docs/Web/API/window.setCursor	/ja/docs/Web/API/Window/setCursor
 /ja/docs/Web/API/window.setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/window.setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/window.showModalDialog	/ja/docs/Web/API/Window/showModalDialog

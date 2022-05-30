@@ -46,7 +46,7 @@ browser-compat: javascript.builtins.Map
       <th scope="row">意外的键</th>
       <td><code>Map</code> 默认情况不包含任何键。只包含显式插入的键。</td>
       <td>
-        <p>一个 <code>Object</code> 有一个原型, 原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
+        <p>一个 <code>Object</code> 有一个原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
         <div class="notecard note">
           <p><strong>备注：</strong>虽然从 ES5 开始可以用 {{jsxref("Object.create", "Object.create(null)")}} 来创建一个没有原型的对象，但是这种用法不太常见。</p>
         </div>
@@ -229,20 +229,20 @@ const keyFunc = function() {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
-myMap.set(keyObj, "和键keyObj关联的值");
-myMap.set(keyFunc, "和键keyFunc关联的值");
+myMap.set(keyObj, "和键 keyObj 关联的值");
+myMap.set(keyFunc, "和键 keyFunc 关联的值");
 
 myMap.size; // 3
 
 // 读取值
 myMap.get(keyString);    // "和键'a string'关联的值"
-myMap.get(keyObj);       // "和键keyObj关联的值"
-myMap.get(keyFunc);      // "和键keyFunc关联的值"
+myMap.get(keyObj);       // "和键 keyObj 关联的值"
+myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
 
 myMap.get('a string');   // "和键'a string'关联的值"
-                         // 因为keyString === 'a string'
-myMap.get({});           // undefined, 因为keyObj !== {}
-myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}
+                         // 因为 keyString === 'a string'
+myMap.get({});           // undefined，因为 keyObj !== {}
+myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
 ```
 
 ### 将 NaN 作为 Map 的键
