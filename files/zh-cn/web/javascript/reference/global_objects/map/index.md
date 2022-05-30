@@ -23,9 +23,9 @@ browser-compat: javascript.builtins.Map
 
 ### 键的相等
 
-- 键的比较基于 [零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等) 算法。
+- 键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法。
 - {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其它的值是根据 `===` 运算符的结果判断是否相等。
-- 在目前的 ECMAScript 规范中，`-0` 和 `+0` 被认为是相等的，尽管这在早期的草案中并不是这样。有关详细信息，请参阅 [浏览器兼容性](#浏览器兼容性) 表中的“Value equality for -0 and 0”。
+- 在目前的 ECMAScript 规范中，`-0` 和 `+0` 被认为是相等的，尽管这在早期的草案中并不是这样。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的“Value equality for -0 and 0”。
 
 ### Objects 和 maps 的比较
 
