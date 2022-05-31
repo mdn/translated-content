@@ -18,7 +18,9 @@ La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boo
 
 ## Syntaxe
 
-    bool.valueOf()
+```js
+bool.valueOf()
+```
 
 ### Valeur de retour
 

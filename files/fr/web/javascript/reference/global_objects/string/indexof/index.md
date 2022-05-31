@@ -20,8 +20,10 @@ La méthode **`indexOf()`** renvoie l'indice de la première occurence de la val
 
 ## Syntaxe
 
-    str.indexOf(valeurRecherchée)
-    str.indexOf(valeurRecherchée, indexDébut)
+```js
+str.indexOf(valeurRecherchée)
+str.indexOf(valeurRecherchée, indexDébut)
+```
 
 ### Paramètres
 

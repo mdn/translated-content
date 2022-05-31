@@ -21,7 +21,9 @@ La méthode **`substr()`** retourne la partie d'une chaîne de caractères compr
 
 ## Syntaxe
 
-    chn.substr(début[, longueur])
+```js
+chn.substr(début[, longueur])
+```
 
 ### Paramètres
 

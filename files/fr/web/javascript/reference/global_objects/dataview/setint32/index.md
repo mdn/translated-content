@@ -19,7 +19,9 @@ La méthode **`setInt32()`** permet d'enregister un entier signé sur 32 bits (t
 
 ## Syntaxe
 
-    dataview.setInt32(positionOctet, value [, littleEndian])
+```js
+dataview.setInt32(positionOctet, value [, littleEndian])
+```
 
 ### Paramètres
 

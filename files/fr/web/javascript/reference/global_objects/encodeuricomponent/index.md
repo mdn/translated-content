@@ -16,7 +16,9 @@ La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Unifor
 
 ## Syntaxe
 
-    encodeURIComponent(str);
+```js
+encodeURIComponent(str);
+```
 
 ### Paramètres
 

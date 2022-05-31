@@ -17,9 +17,9 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <dl>
  <dt><code>variable</code></dt>
- <dd>在每次迭代时，variable会被赋值为不同的属性名。</dd>
+ <dd>在每次迭代时，variable 会被赋值为不同的属性名。</dd>
  <dt><code>object</code></dt>
- <dd>非Symbol类型的可枚举属性被迭代的对象。</dd>
+ <dd>非 Symbol 类型的可枚举属性被迭代的对象。</dd>
 </dl>
 
 <h2 id="sect1"></h2>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，您可以使用检查方法扩展内置原型。</p>
 
-<h2 id="Example">为什么用for ... in?</h2>
+<h2 id="Example">为什么用 for ... in?</h2>
 
 <p><code>for ... in</code>是为遍历对象属性而构建的，不建议与数组一起使用，数组可以用<code>Array.prototype.forEach()</code>和<code>for ... of</code>，那么<code>for ... in</code>的到底有什么用呢？</p>
 
@@ -130,7 +130,7 @@ for (var i = 0 in obj) {
 // 3
 </pre>
 
-<p>这个非标准行为现在在版本40及更高版本中被忽略，并将在严格模式（{{bug(748550)}} 和 {{bug(1164741)}}）中呈现{{jsxref("SyntaxError")}}（"<a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>"）错误。</p>
+<p>这个非标准行为现在在版本 40 及更高版本中被忽略，并将在严格模式（{{bug(748550)}} 和 {{bug(1164741)}}）中呈现{{jsxref("SyntaxError")}}（"<a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>"）错误。</p>
 
 <p>像其他引擎 V8(Chrome)，Chakra (IE/Edge)， JSC (WebKit/Safari) 正在研究去除这种不标准的行为。</p>
 

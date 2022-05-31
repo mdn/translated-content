@@ -16,7 +16,9 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@species
 
 ## Syntaxe
 
-    Set[Symbol.species]
+```js
+Set[Symbol.species]
+```
 
 ## Description
 

@@ -20,7 +20,9 @@ La méthode **`getBigInt64()`** permet de lire un entier signé sur 64 bits (typ
 
 ## Syntaxe
 
-    dataview.getBigInt64(positionOctet [, littleEndian])
+```js
+dataview.getBigInt64(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

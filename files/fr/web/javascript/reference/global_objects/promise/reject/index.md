@@ -18,7 +18,9 @@ La méthode **`Promise.reject(raison)`** renvoie un objet `Promise` qui est reje
 
 ## Syntaxe
 
-    Promise.reject(raison);
+```js
+Promise.reject(raison);
+```
 
 ### Paramètres
 

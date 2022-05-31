@@ -19,7 +19,9 @@ La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de carac
 
 ## Syntaxe
 
-    str.endsWith(chaîneRecherchée[, position]);
+```js
+str.endsWith(chaîneRecherchée[, position]);
+```
 
 ### Paramètres
 

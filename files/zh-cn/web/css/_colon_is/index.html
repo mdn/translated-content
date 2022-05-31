@@ -20,10 +20,10 @@ translation_of: 'Web/CSS/:is'
 <p>The <strong><code>:is()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。</p>
 
 <div>
-<p>注意，许多浏览器通过一个更旧的、带前缀的伪类:any()来支持这个功能，包括旧版本的Chrome、Firefox和Safari。这与<code>:is()</code>的工作方式完全相同，只是它需要厂商前缀，不支持<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">复杂的选择器。</a></p>
+<p>注意，许多浏览器通过一个更旧的、带前缀的伪类:any() 来支持这个功能，包括旧版本的 Chrome、Firefox 和 Safari。这与 <code>:is()</code> 的工作方式完全相同，只是它需要厂商前缀，不支持<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">复杂的选择器</a>。</p>
 </div>
 
-<pre class="brush: css no-line-numbers">/* 选择header, main, footer里的任意一个悬浮状态的段落(p标签) */
+<pre class="brush: css no-line-numbers">/* 选择 header, main, footer 里的任意一个悬浮状态的段落 (p 标签) */
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
@@ -127,7 +127,7 @@ function applyHandler(elem) {
 
 <h3 id="简化列表选择器">简化列表选择器</h3>
 
-<p><code>:is()</code> 伪类可以大大简化CSS选择器。例如，下面的CSS:</p>
+<p><code>:is()</code> 伪类可以大大简化 CSS 选择器。例如，下面的 CSS:</p>
 
 <pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
@@ -146,7 +146,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 }
 </pre>
 
-<p>... 可以被替换为:</p>
+<p>... 可以被替换为：</p>
 
 <pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
@@ -163,9 +163,9 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <h3 id="Notes" name="Notes">Simplifying section selectors</h3>
 
-<p><code>:is</code> 伪类在处理HTML5 <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections and headings</a>特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}},  {{HTMLElement("nav")}} 经常嵌套在一起, 没有 <code>:is()</code>的话匹配其他元素将会很棘手。</p>
+<p><code>:is</code> 伪类在处理 HTML5 <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections and headings</a>特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}},  {{HTMLElement("nav")}} 经常嵌套在一起，没有 <code>:is()</code>的话匹配其他元素将会很棘手。</p>
 
-<p>例如, 在没有 <code>:is()</code>的情况下, 在不同深度对所有{{HTMLElement("h1")}} 素进行样式化可能非常复杂:</p>
+<p>例如，在没有 <code>:is()</code>的情况下，在不同深度对所有{{HTMLElement("h1")}} 素进行样式化可能非常复杂：</p>
 
 <pre class="brush: css">/* Level 0 */
 h1 {
@@ -186,7 +186,7 @@ nav section h1, nav article h1, nav aside h1, nav nav h1, {
 /* ... don't even think about it! */
 </pre>
 
-<p>使用 <code>:is()</code>之后,它变的非常简单:</p>
+<p>使用 <code>:is()</code>之后，它变的非常简单：</p>
 
 <pre class="brush: css">/* Level 0 */
 h1 {

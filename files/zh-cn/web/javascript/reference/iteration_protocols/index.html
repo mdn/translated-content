@@ -146,7 +146,7 @@ someString + "";                              // "hi"
 
 <h3 id="自定义可迭代对象">自定义可迭代对象</h3>
 
-<p>我们可以实现一个自己的可迭代对象，就像这样:</p>
+<p>我们可以实现一个自己的可迭代对象，就像这样：</p>
 
 <pre class="brush: js">var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
@@ -345,7 +345,7 @@ for (const val of simple) {
 
 <h2 id="生成器对象到底是一个迭代器，还是一个可迭代对象？">生成器对象到底是一个迭代器，还是一个可迭代对象？</h2>
 
-<p>{{jsxref("Generator", "生成器")}}对象既是迭代器，也是可迭代对象:</p>
+<p>{{jsxref("Generator", "生成器")}}对象既是迭代器，也是可迭代对象：</p>
 
 <pre class="brush: js">let aGeneratorObject = function* (){
     yield 1;
@@ -354,19 +354,19 @@ for (const val of simple) {
 }();
 
 typeof aGeneratorObject.next;
-// 返回"function", 因为有一个next方法，所以这是一个迭代器
+// 返回"function", 因为有一个 next 方法，所以这是一个迭代器
 
 typeof aGeneratorObject[Symbol.iterator];
-// 返回"function", 因为有一个@@iterator方法，所以这是一个可迭代对象
+// 返回"function", 因为有一个 @@iterator 方法，所以这是一个可迭代对象
 
 aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
-// 返回true, 因为@@iterator方法返回自身（即迭代器），所以这是一个格式良好的可迭代对象
+// 返回 true，因为 @@iterator 方法返回自身（即迭代器），所以这是一个格式良好的可迭代对象
 
 [...aGeneratorObject];
-// 返回[1, 2, 3]
+// 返回 [1, 2, 3]
 
 console.log(Symbol.iterator in aGeneratorObject)
-// 返回true, 因为@@iterator方法是aGeneratorObject的一个属性</pre>
+// 返回 true，因为 @@iterator 方法是 aGeneratorObject 的一个属性</pre>
 
 <h2 id="规范">规范</h2>
 

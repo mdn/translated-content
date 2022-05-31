@@ -17,7 +17,9 @@ Le constructeur **`WebAssembly.RuntimeError()`** permet de créer un nouvel obje
 
 ## Syntaxe
 
-    new WebAssembly.RuntimeError(message, nomFichier, numeroLigne)
+```js
+new WebAssembly.RuntimeError(message, nomFichier, numeroLigne)
+```
 
 ### Paramètres
 
