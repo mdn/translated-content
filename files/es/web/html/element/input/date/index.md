@@ -20,7 +20,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
     <tr>
       <td><strong><a href="#value">Valor</a></strong></td>
       <td>
-        Un {{domxref("DOMString")}} vacío o representando una fecha en el formato 
+        Un {{domxref("DOMString")}} vacío o representando una fecha en el formato
         AAAA-MM-DD
       </td>
     </tr>

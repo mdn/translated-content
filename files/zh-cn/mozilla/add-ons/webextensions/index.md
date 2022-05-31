@@ -23,6 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions
   - : 了解如何为Firefox构建、发布扩展: 在[扩展工作坊](https://extensionworkshop.com/)了解开发者工具，发布和移植的基本原理。
 
 > **备注：** 如果你有任何的想法、问题或者是需要帮助，可以在[社区论坛](https://discourse.mozilla.org/c/add-ons)和在 [Matrix](https://wiki.mozilla.org/Matrix) 上的[附加组件](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)房间联系到我们。
+
 ## 开始
 
 在构建[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先去了解下[扩展都可以做些什么](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。学习[扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)章节，对[扩展开发、发布工作流和 Firefox 风格](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)有一个大致的了解。在[扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)中

@@ -17,8 +17,10 @@ La propriété non-standard **`rightContext`** est une propriété statique, acc
 
 ## Syntaxe
 
-    RegExp.rightContext
-    RegExp["$'"]
+```js
+RegExp.rightContext
+RegExp["$'"]
+```
 
 ## Description
 

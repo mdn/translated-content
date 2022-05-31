@@ -14,9 +14,9 @@ Le mode strict de [ECMAScript 5](https://www.ecma-international.org/publications
 
 Le mode strict apporte quelques changements à la sémantique « normale » de JavaScript:
 
-1.  Le mode strict élimine quelques erreurs silencieuses de JavaScript en les changeant en erreurs explicites (une exception sera levée).
-2.  Le mode strict corrige les erreurs qui font qu'autrement il est difficile pour les moteurs JavaScript d'effectuer des optimisations. Le code sera donc exécuté plus rapidement en mode strict, sans changer une seule ligne si cela n'est pas nécessaire.
-3.  Le mode strict interdit les mot-clés susceptibles d'être définis dans les futures versions de ECMAScript.
+1. Le mode strict élimine quelques erreurs silencieuses de JavaScript en les changeant en erreurs explicites (une exception sera levée).
+2. Le mode strict corrige les erreurs qui font qu'autrement il est difficile pour les moteurs JavaScript d'effectuer des optimisations. Le code sera donc exécuté plus rapidement en mode strict, sans changer une seule ligne si cela n'est pas nécessaire.
+3. Le mode strict interdit les mot-clés susceptibles d'être définis dans les futures versions de ECMAScript.
 
 Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict) pour plus de détails quant à la migration d'une base de code non-stricte vers une base de code compatible avec le mode strict.
 

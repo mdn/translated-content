@@ -5,14 +5,14 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP头部 {{HTTPHeader("Content-Security-Policy")}} (CSP) <code>中的<strong>frame-ancestors</strong></code> 指令指定了一个可以包含{{HTMLElement("frame")}}，{{HTMLElement("iframe")}}，{{HTMLElement("object")}}，{{HTMLElement("embed")}}，or {{HTMLElement("applet")}}等元素的有效父级。</p>
+<p>HTTP 头部 {{HTTPHeader("Content-Security-Policy")}} (CSP) <code>中的<strong>frame-ancestors</strong></code> 指令指定了一个可以包含{{HTMLElement("frame")}}，{{HTMLElement("iframe")}}，{{HTMLElement("object")}}，{{HTMLElement("embed")}}，or {{HTMLElement("applet")}}等元素的有效父级。</p>
 
 <p>当该指令设置为<code>'none'时，其作用类似于</code>{{HTTPHeader("X-Frame-Options")}}<code>: DENY</code> （该头部被一些老版本浏览器所支持）。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row">CSP版本（CSP version）</th>
+   <th scope="row">CSP 版本（CSP version）</th>
    <td>2</td>
   </tr>
   <tr>
@@ -24,7 +24,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
    <td>否。如未设置则允许所有可能值。</td>
   </tr>
   <tr>
-   <th colspan="2" scope="row">该指令不支持通过{{HTMLElement("meta")}} 元素或通过 {{HTTPHeader("Content-Security-policy-Report-Only")}} 头域所指定.</th>
+   <th colspan="2" scope="row">该指令不支持通过{{HTMLElement("meta")}} 元素或通过 {{HTTPHeader("Content-Security-policy-Report-Only")}} 头域所指定。</th>
   </tr>
  </tbody>
 </table>
@@ -47,27 +47,27 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <dl>
  <dt>&lt;host-source&gt;</dt>
- <dd>一个Internet主机的名称或IP地址，以及一个可选的<a href="/en-US/docs/URIs_and_URLs">URL scheme</a>和／或端口号。这些站点的地址可以包含一个可选的引导通配符（星号， <code>'*'），或者你可以使用通配符</code>（同样还是， <code>'*'）作为端口地址</code>，以示这个源的所有合法端口地址都是有效的。<br>
- 例子:
+ <dd>一个 Internet 主机的名称或 IP 地址，以及一个可选的<a href="/en-US/docs/URIs_and_URLs">URL scheme</a>和／或端口号。这些站点的地址可以包含一个可选的引导通配符（星号， <code>'*'），或者你可以使用通配符</code>（同样还是， <code>'*'）作为端口地址</code>，以示这个源的所有合法端口地址都是有效的。<br>
+ 例子：
  <ul>
-  <li><code>http://*.example.com</code>: 匹配所有使用http:URL scheme并来对于example.com及其子域名的加载意图。</li>
-  <li><code>mail.example.com:443</code>: 匹配所有对于mail.example.com在443端口的访问意图。</li>
-  <li><code>https://store.example.com</code>: 匹配所有使用https:访问store.example.com的意图。</li>
+  <li><code>http://*.example.com</code>: 匹配所有使用 http:URL scheme 并来对于 example.com 及其子域名的加载意图。</li>
+  <li><code>mail.example.com:443</code>: 匹配所有对于 mail.example.com 在 443 端口的访问意图。</li>
+  <li><code>https://store.example.com</code>: 匹配所有使用 https:访问 store.example.com 的意图。</li>
  </ul>
  </dd>
  <dt>&lt;scheme-source&gt;</dt>
- <dd>一个schema配置，比如'http:'或'https:'。注意，冒号是必要的。你同样也可以指定一个data schema（但并不推荐）。
+ <dd>一个 schema 配置，比如'http:'或'https:'。注意，冒号是必要的。你同样也可以指定一个 data schema（但并不推荐）。
  <ul>
   <li>'<code>data:</code>' 允许 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URIs</a> 作为内容源。<em> 这是不安全的，攻击者可以用此来注入恶意代码。请谨慎使用，并不要令其作用于脚本。</em></li>
-  <li><code>'mediastream:'</code> 允许 <a href="/en-US/docs/Web/API/MediaStream_API"><code>mediastream:</code> URIs</a> 作为内容源.</li>
-  <li><code>'blob:'</code> 允许 <a href="/en-US/docs/Web/API/Blob"><code>blob:</code> URIs</a> 作为内容源.</li>
-  <li><code>'filesystem:'</code> 允许 <a href="/en-US/docs/Web/API/FileSystem"><code>filesystem:</code> URIs</a> 作为内容源.</li>
+  <li><code>'mediastream:'</code> 允许 <a href="/en-US/docs/Web/API/MediaStream_API"><code>mediastream:</code> URIs</a> 作为内容源。</li>
+  <li><code>'blob:'</code> 允许 <a href="/en-US/docs/Web/API/Blob"><code>blob:</code> URIs</a> 作为内容源。</li>
+  <li><code>'filesystem:'</code> 允许 <a href="/en-US/docs/Web/API/FileSystem"><code>filesystem:</code> URIs</a> 作为内容源。</li>
  </ul>
  </dd>
  <dt><code>'self'</code></dt>
- <dd>指向一个该受保护文档所在的源，包含同样的URL schema和端口号。必须用单引号设置。有些浏览器会从源指令中排<code>除blob</code>和<code>filesystem</code>。需要允许这些内容类型的站点可以通过Data属性指定它们。</dd>
+ <dd>指向一个该受保护文档所在的源，包含同样的 URL schema 和端口号。必须用单引号设置。有些浏览器会从源指令中排<code>除 blob</code>和<code>filesystem</code>。需要允许这些内容类型的站点可以通过 Data 属性指定它们。</dd>
  <dt><code>'none'</code></dt>
- <dd>指向一个空集，意味着没有URL会被匹配。也需要单引号包裹设置。</dd>
+ <dd>指向一个空集，意味着没有 URL 会被匹配。也需要单引号包裹设置。</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

@@ -16,7 +16,9 @@ La méthode **`link()`** permet de créer une chaîne de caractères représenta
 
 ## Syntaxe
 
-    str.link(url)
+```js
+str.link(url)
+```
 
 ### Paramètres
 

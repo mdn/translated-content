@@ -15,9 +15,9 @@ translation_of: Web/API/Window/frames
 </pre>
 
 <ul>
- <li>frameList是一个frame对象的集合，它类似一个数组，有length属性且可以使用索引（[i]）来访问。</li>
- <li><code>frameList === window</code> 计算结果为true。</li>
- <li>在window.frames类数组中的每一项都代表了窗口对应给定对象的&lt;frame&gt;或&lt;iframe&gt;的内容，而不是(i)frame DOM元素（即window.frames[ 0 ]与document.getElementsByTagName( "iframe" )[ 0 ].contentWindow是相同的）。</li>
+ <li>frameList 是一个 frame 对象的集合，它类似一个数组，有 length 属性且可以使用索引（[i]）来访问。</li>
+ <li><code>frameList === window</code> 计算结果为 true。</li>
+ <li>在 window.frames 类数组中的每一项都代表了窗口对应给定对象的&lt;frame&gt;或&lt;iframe&gt;的内容，而不是 (i)frame DOM 元素（即 window.frames[ 0 ] 与 document.getElementsByTagName( "iframe" )[ 0 ].contentWindow 是相同的）。</li>
  <li>有关返回值的更多详细信息，请参考 <a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1" title="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1">thread on mozilla.dev.platform</a> 。</li>
 </ul>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/Window/frames
 
 <pre class="brush: js">var frames = window.frames; // 或 // var frames = window.parent.frames;
 for (var i = 0; i &lt; frames.length; i++) {
-  // 在这对frames的一个frame做点什么
+  // 在这对 frames 的一个 frame 做点什么
   frames[i].document.body.style.background = "red";
 
 }

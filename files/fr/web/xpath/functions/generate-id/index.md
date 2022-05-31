@@ -12,7 +12,9 @@ La fonction `generate-id` génère un identifiant `id` unique pour le premier n�
 
 ### Syntaxe
 
-    generate-id( [ensemble-de-nœuds] )
+```
+generate-id( [ensemble-de-nœuds] )
+```
 
 ### Arguments
 

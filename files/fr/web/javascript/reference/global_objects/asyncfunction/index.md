@@ -40,7 +40,7 @@ Les objets de [fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements
 
 Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction qui sera créée, dans l'ordre dans lequel ils sont passés.
 
-> **Note :** Les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créées avec le constructeur `AsyncFunction` ne créent pas de fermetures avec leurs contextes de création. Elles sont toujours créées dans la portée globale. 
+> **Note :** Les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créées avec le constructeur `AsyncFunction` ne créent pas de fermetures avec leurs contextes de création. Elles sont toujours créées dans la portée globale.
 >
 > Lorsqu'on les exécute, elles ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles qui appartiennent à la portée dans laquelle `AsyncFunction` a été appelé.
 >

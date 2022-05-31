@@ -60,8 +60,6 @@ Le "manifest" est un fichier écrit au format JSON standard et doit être placé
 
 > **Note :** L'extension `.webmanifest` est spécifiée dans la section Enregistrement du type de fichier, mais les navigateurs prennent aussi en charge les manifest avec d'autres extensions appropriées, par exemple `.json` .
 
-
-
 Les champs nécessaires pour A2HS sont les suivants:
 
 - `background_color` : spécifie une couleur d'arrière-plan à utiliser dans certains contextes d'application. Le plus pertinent pour A2HS est l'écran de démarrage qui s'affiche lorsque l'icône de l'application sur l'écran d'accueil est activée et qu'elle commence à se charger (elle ne s'affiche actuellement que lorsque des applications ont été ajoutées à l'écran d'accueil par Chrome).
@@ -92,8 +90,6 @@ Le fichier "manifest" de notre exemple ressemble à ceci:
 
 ### Icône
 
-
-
 Comme indiqué dans le "manifest" ci-dessus, nous incluons une icône de 192 x 192 px. Vous pouvez inclure plus de tailles si vous le souhaitez. Android choisira la taille la plus appropriée pour chaque cas d'utilisation différent. Vous pouvez également décider d'inclure différents types d'icônes afin que les appareils puissent utiliser le meilleur qu'ils puissent (par exemple, Chrome prend déjà en charge le format WebP).
 
 Notez que le membre de `type` dans l'objet de chaque icône spécifie le type MIME de l'icône, afin que le navigateur puisse rapidement identifier le type de l'icône, puis l'ignorer et passer à une autre icône s'il ne le prend pas en charge.
@@ -112,8 +108,6 @@ Les navigateurs prenant en charge A2HS sauront où chercher votre manifeste une 
 
 ## Qu'est-ce que A2HS ne vous donne pas?
 
-
-
 N'oubliez pas que lorsque vous ajoutez une application à votre écran d'accueil, cela la rend simplement facilement accessible. Elle ne télécharge pas les ressources et les données de l'application sur votre appareil et ne la rend pas disponible hors connexion, ou quelque chose du genre. Pour que votre application fonctionne en mode hors connexion, vous devez utiliser l' API Service Worker pour gérer le stockage hors connexion et, si nécessaire, le stockage Web ou IndexedDB pour stocker ses données.
 
 Dans notre exemple d'application, nous venons d'utiliser un agent de service pour stocker tous les fichiers nécessaires. Le fichier [`index.js`](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js) est inscrit sur le site avec le bloc de code final dans le fichier [`index.js`](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js) . Nous mettons ensuite en cache toutes les ressources du site à l'aide de l' API de cache et les servons à partir du cache plutôt que du réseau à l'aide du code [contenu](https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js) dans le fichier [sw.js.](https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js)
@@ -123,8 +117,6 @@ Dans notre exemple d'application, nous venons d'utiliser un agent de service pou
 Bien que conçu à l'origine pour améliorer l'expérience utilisateur sur les systèmes d'exploitation mobiles, il existe également une technique pour rendre les PWA installables sur les plates-formes de bureau.
 
 > **Note :** au moment de la rédaction de ce document, les fonctionnalités décrites ci-dessous n'étaient prises en charge que par les versions les plus récentes de Chrome: par défaut sous Windows et derrière l'indicateur `#enable-desktop-pwas` sous macOS.
-
-
 
 ### Ajout d'un bouton d'installation
 
@@ -156,8 +148,6 @@ addBtn.style.display = 'none';
 
 Nous masquons le bouton initialement car le PWA ne sera pas disponible pour l’installation tant qu’il ne respectera pas les critères A2HS. Lorsque cela se produit, les navigateurs prenant en charge déclenchent un événement `beforeinstallprompt` . Nous pouvons ensuite utiliser un gestionnaire comme celui ci-dessous pour gérer l'installation:
 
-
-
 ```js
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -184,8 +174,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
 ```
-
-
 
 Ici il faut:
 
@@ -214,8 +202,6 @@ Si l'utilisateur sélectionne _Annuler_ , l'état de l'application revient à ce
 > **Note :** Le code de cette section provient principalement des bannières d'installation de l' application / Ajouter à l'écran d'accueil de Pete LaPage.
 
 ## Voir aussi
-
-
 
 - Applications web progressives (PWA
 - Service Worker API

@@ -119,7 +119,7 @@ function checkNotificationPromise() {
   return true;
 }
 ```
-    
+
 Básicamente tratamos de ver si el método `.then()` está disponible en `requestPermission()`. Si es así, continuamos y devolvemos `true`. Si falla, devolvemos `false` en el bloque `catch() {}`.
 
 ## Crear una notificación
@@ -265,4 +265,3 @@ window.addEventListener('load', function () {
 ## Véase también
 
 - {{ domxref("Notification") }}
-
