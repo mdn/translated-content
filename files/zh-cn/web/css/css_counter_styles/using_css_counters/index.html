@@ -12,13 +12,13 @@ original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 <div>{{CSSRef}}</div>
 
-<p>本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。 CSS 计数器是 CSS2.1 中<a class="external" href="http://www.w3.org/TR/CSS21/generate.html#counters">自动计数编号</a>部分的实现。</p>
+<p>本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。CSS 计数器是 CSS2.1 中<a class="external" href="http://www.w3.org/TR/CSS21/generate.html#counters">自动计数编号</a>部分的实现。</p>
 
 <p>计数器的值通过使用{{cssxref("counter-reset")}} 和 {{cssxref("counter-increment")}} 操作，在 <code><a href="/en-US/docs/CSS/content" title="CSS/content">content</a></code> 上应用 <code>counter()</code> 或 <code>counters()</code>函数来显示在页面上。</p>
 
 <h2 id="使用计数器">使用计数器</h2>
 
-<p>使用 CSS 计数器之前，必须<a href="/en-US/docs/CSS/counter-reset" title="CSS/counter-reset">重置</a>一个值，默认是 0。使用{{cssxref("counter()")}}函数来给元素增加计数器。 下面的 CSS 给每个 h3 元素的前面增加了 "Section <em>&lt;计算器值&gt;</em>:"。</p>
+<p>使用 CSS 计数器之前，必须<a href="/en-US/docs/CSS/counter-reset" title="CSS/counter-reset">重置</a>一个值，默认是 0。使用{{cssxref("counter()")}}函数来给元素增加计数器。下面的 CSS 给每个 h3 元素的前面增加了 "Section <em>&lt;计算器值&gt;</em>:"。</p>
 
 <pre class="brush: css">body {
   counter-reset: section;           /* 重置计数器成 0 */
