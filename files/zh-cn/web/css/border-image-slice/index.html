@@ -7,7 +7,7 @@ translation_of: Web/CSS/border-image-slice
 
 <h2 id="概要">概要</h2>
 
-<p>通过 {{cssxref("border-image-source")}} 引用边框图片后，<strong><code>border-image-slice</code></strong>属性会将图片分割为9个区域：四个角，四个边（edges）以及中心区域。四条切片线，从它们各自的侧面设置给定距离，控制区域的大小。</p>
+<p>通过 {{cssxref("border-image-source")}} 引用边框图片后，<strong><code>border-image-slice</code></strong>属性会将图片分割为 9 个区域：四个角，四个边（edges）以及中心区域。四条切片线，从它们各自的侧面设置给定距离，控制区域的大小。</p>
 
 <p><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png"></p>
 
@@ -16,10 +16,10 @@ translation_of: Web/CSS/border-image-slice
 <ul>
  <li>区域 1-4 为角区域（corner region）。 每一个都用一次来形成最终边界图像的角点。（Each one is used a single time to form the corners of the final border image.）</li>
  <li>区域 5-8 边区域（edge region）。在最终的边框图像中重复，缩放或修改它们以匹配元素的尺寸。（These are <a href="/zh-CN/docs/Web/CSS/border-image-repeat">repeated, scaled, or otherwise modified</a> in the final border image to match the dimensions of the element.）</li>
- <li>区域 9 为中心区域（ middle region）。它在默认情况下会被丢弃，但如果设置了关键字<code>fill</code>，则会将其用作背景图像。（It is discarded by default, but is used like a background image if the keyword <code>fill</code> is set.）</li>
+ <li>区域 9 为中心区域（middle region）。它在默认情况下会被丢弃，但如果设置了关键字<code>fill</code>，则会将其用作背景图像。（It is discarded by default, but is used like a background image if the keyword <code>fill</code> is set.）</li>
 </ul>
 
-<p>中间的区域将不会被边框使用，但当设置有 fill 关键词时将会被作为 background-image。这个关键词可以被设置在属性的任何一个位置(前面、后面或者两个值之间)</p>
+<p>中间的区域将不会被边框使用，但当设置有 fill 关键词时将会被作为 background-image。这个关键词可以被设置在属性的任何一个位置 (前面、后面或者两个值之间)</p>
 
 <p>{{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} 属性则定义这些图片将如何使用。</p>
 
@@ -37,7 +37,7 @@ border-image-slice: 30 30% 45;
 /* 上 右 下 左 */
 border-image-slice: 7 12 14 5;
 
-/* 使用fill（fill可以放在任意位置） */
+/* 使用 fill（fill 可以放在任意位置） */
 border-image-slice: 10% fill 7 12;
 
 /* Global values */
