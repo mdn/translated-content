@@ -188,7 +188,7 @@ if (request.status === 200) {
 
 <p>Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.</p>
 
-<p style="text-align: center;"><img alt="" class="internal" src="/@api/deki/files/6227/=AsyncUnload.jpg" style="height: 359px; width: 467px;"></p>
+<p><img alt="" class="internal" src="/@api/deki/files/6227/=AsyncUnload.jpg" style="height: 359px; width: 467px;"></p>
 
 <p>A possible solution is to make sure that any AJAX requests that you make on unload are make synchronously instead of asynchronously. This will ensure that the page doesn’t finish unloading before the server response comes back.</p>
 
