@@ -3,42 +3,32 @@ title: Document directive (文書ディレクティブ)
 slug: Glossary/Document_directive
 tags:
   - CSP
-  - Directive
-  - Document
-  - Glossary
-  - HTTP
-  - Security
-  - セキュリティ
   - ディレクティブ
   - 文書
   - 用語集
+  - HTTP
+  - セキュリティ
 translation_of: Glossary/Document_directive
 ---
-<p><strong>{{Glossary("CSP")}} の文書ディレクティブ</strong>は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、ポリシーが適用される文書または<a href="/ja/docs/Web/API/Web_Workers_API">ワーカー</a>環境のプロパティを管理します。</p>
+**{{Glossary("CSP")}} の文書ディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、ポリシーが適用される文書または[ワーカー](/ja/docs/Web/API/Web_Workers_API)環境のプロパティを管理します。
 
-<p>文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。</p>
+文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。
 
-<p>完全な一覧は<a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy#Document_directives">文書ディレクティブ</a>を参照してください。</p>
+完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#document_directives)を参照してください。
 
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Glossary">用語集</a>
+## 関連情報
 
-  <ol>
-   <li>{{Glossary("CSP")}}</li>
-   <li>{{Glossary("Reporting directive", "報告ディレクティブ")}}</li>
-   <li>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</li>
-   <li>{{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}</li>
-  </ol>
- </li>
- <li>リファレンス
-  <ol>
-   <li><a href="https://www.w3.org/TR/CSP/#directives-document">https://www.w3.org/TR/CSP/#directives-document</a></li>
-   <li>{{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}</li>
-   <li>{{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}</li>
-   <li>{{HTTPHeader("Content-Security-Policy/require-sri-for", "require-sri-for")}} {{obsolete_inline}}</li>
-   <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+- [用語集](/ja/docs/Glossary)
+
+  - {{Glossary("CSP")}}
+  - {{Glossary("Reporting directive", "報告ディレクティブ")}}
+  - {{Glossary("Fetch directive", "フェッチディレクティブ")}}
+  - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
+
+- リファレンス
+
+  - <https://www.w3.org/TR/CSP/#directives-document>
+  - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
+  - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
+  - {{HTTPHeader("Content-Security-Policy/require-sri-for", "require-sri-for")}} {{Deprecated_Inline}}
+  - {{HTTPHeader("Content-Security-Policy")}}
