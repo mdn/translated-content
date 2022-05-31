@@ -19,7 +19,7 @@ WeakMap 的 key 只能是 `Object` 类型。 {{Glossary("Primitive", "原始数�
 
 ### Why *Weak*Map ？
 
-在 JavaScript 里，map API _可以_ 通过使其四个 API 方法共用两个数组 (一个存放键，一个存放值) 来实现。给这种 map 设置值时会同时将键和值添加到这两个数组的末尾。从而使得键和值的索引在两个数组中相对应。当从该 map 取值的时候，需要遍历所有的键，然后使用索引从存储值的数组中检索出相应的值。
+在 JavaScript 里，map API _可以_ 通过使其四个 API 方法共用两个数组（一个存放键，一个存放值）来实现。给这种 map 设置值时会同时将键和值添加到这两个数组的末尾。从而使得键和值的索引在两个数组中相对应。当从该 map 取值的时候，需要遍历所有的键，然后使用索引从存储值的数组中检索出相应的值。
 
 但这样的实现会有两个很大的缺点：
 
@@ -64,7 +64,7 @@ wm2.set(o1, o2); // value 可以是任意值，包括一个对象或一个函数
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // 键和值可以是任意对象，甚至另外一个 WeakMap 对象
 wm1.get(o2); // "azerty"
-wm2.get(o2); // undefined,wm2 中没有 o2 这个键
+wm2.get(o2); // undefined，wm2 中没有 o2 这个键
 wm2.get(o3); // undefined，值就是 undefined
 wm1.has(o2); // true
 wm2.has(o2); // false
