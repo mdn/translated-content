@@ -14,7 +14,7 @@ translation_of: Web/API/ReadableStream/pipeThrough
 
 {{domxref("ReadableStream")}} 接口的 **`pipeThrough()`** 方法提供了一种链式的方式，将当前流通过转换流或者任何其他可写/可读流进行管道传输。
 
-一个传输流通常在管道持续时间锁定他，阻止其他 reader 锁定它。
+传输一个流通常在管道传输的时间内锁定这个流，以阻止其他 reader 锁定它。
 
 ## 语法
 
@@ -30,14 +30,14 @@ pipeThrough(transformStream, options)
 
 - `options` {{optional_inline}}
 
-  - : 传输至 `writable` 应该被使用的选项。可用选项是:
+  - : 传输至 `writable` 流应该被使用的选项。可用选项是:
 
     - `preventClose`
-      - : 如果设置为 `true`，源 `ReadableStream` 关闭将不再导致目标 `WritableStream` 关闭。一旦此过程完成，该方法将返回一个兑现的 promise，除非在关闭目标时遇到错误，在这种情况下下，它将因为该错误被拒绝。
+      - : 如果设置为 true，源 ReadableStream 的关闭将不再导致目标 WritableStream 关闭。一旦此过程完成，该方法将返回的 promise 将被兑现；除非在关闭目标时遇到错误，在这种情况下，它将因为该错误被拒绝。
     - `preventAbort`
-      - : 如果设置为 `true`，源 `ReadableStream` 中的错误将不再中止目标 `WritableStream`。该方法将会返回一个被拒绝的 promise，该 promise 因源错误或者任何在中止目标期间的错误而被拒绝。
+      - : 如果设置为 true，源 ReadableStream 中的错误将不再中止目标 WritableStream。该方法返回的 promise 将因源流的错误或者任何在中止目地流期间的错误而被拒绝。
     - `preventCancel`
-      - : 如果设置为 `true`，目标 `WritableStream` 的错误将不再取消源 `ReadableStream`。在这种情况下，该方法将会返回一个因源错误或者在取消期间发生的任何错误而被拒绝的 promise。此外，如果目标可写流开始关闭或者正在关闭，则源可读流将不再被取消。在这种情况下，方法将返回一个因错误而被拒绝的 promise，该错误表明连接到关闭流失败,或者在取消源期间发生的任何错误。
+      - : 如果设置为 true，目标 WritableStream 的错误将不再取消源 ReadableStream。在这种情况下，该方法返回的 promise 将因源流的错误或者在取消源流期间发生的任何错误而被拒绝。此外，如果目标可写流开始关闭或者正在关闭，则源可读流将不再被取消。在这种情况下，方法返回的 promise 也将被拒绝，其错误为连接到一个已关闭的流或者在取消源流期间发生的任何错误。
     - `signal`
       - : 如果设置一个 [`AbortSignal`](/zh-CN/docs/Web/API/AbortSignal) 对象，然后可以通过相应的[`AbortController`](/zh-CN/docs/Web/API/AbortController)中止正在进行的传输操作。
 
