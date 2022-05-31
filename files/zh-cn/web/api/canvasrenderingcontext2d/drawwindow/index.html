@@ -27,16 +27,16 @@ translation_of: Web/API/CanvasRenderingContext2D/drawWindow
  <dt>h</dt>
  <dd>窗体的高度。</dd>
  <dt><code>bgColor</code></dt>
- <dd>{{domxref("DOMString")}}，描述当窗体渲染到 canvas 之前，进行填充的颜色。 颜色可以是透明/半透明。 它被赋值为 CSS 颜色字符串（例如： <code>rgb()</code> 或者 <code>rgba()）。</code><br>
+ <dd>{{domxref("DOMString")}}，描述当窗体渲染到 canvas 之前，进行填充的颜色。 颜色可以是透明/半透明。它被赋值为 CSS 颜色字符串（例如： <code>rgb()</code> 或者 <code>rgba()）。</code><br>
  注意：
  <ul>
-  <li>如果"<code>rgba(0,0,0,0)</code>"用来当背景色， 图像透明的地方窗体也是透明的。</li>
+  <li>如果"<code>rgba(0,0,0,0)</code>"用来当背景色，图像透明的地方窗体也是透明的。</li>
   <li>顶级的预览文档通常不会是透明的，因为用户的背景色偏好设置会被应用。但是{{HTMLElement("iframe", "iframes")}} 是透明的，如果页面没有设置背景。</li>
-  <li>如果不透明的颜色做为背景色， 渲染速度会更快，因为我们不需要计算窗体的透明度。 </li>
+  <li>如果不透明的颜色做为背景色，渲染速度会更快，因为我们不需要计算窗体的透明度。 </li>
  </ul>
  </dd>
  <dt>flags {{optional_inline}}</dt>
- <dd>用来更好的控制 <code>drawWindow</code> 。 Flags 可以使用或运算符进行连接。
+ <dd>用来更好的控制 <code>drawWindow</code> 。Flags 可以使用或运算符进行连接。
  <table class="standard-table">
   <tbody>
    <tr>
@@ -62,7 +62,7 @@ translation_of: Web/API/CanvasRenderingContext2D/drawWindow
    <tr>
     <td><code>DRAWWINDOW_USE_WIDGET_LAYERS</code></td>
     <td><code>0x08</code></td>
-    <td>使用小部件层进行有效的管理。这意味着可以使用硬件加速， 但是实际上会变慢，并且降低品质。不管怎样，它都会更准确地反映已经渲染到屏幕上的像素。</td>
+    <td>使用小部件层进行有效的管理。这意味着可以使用硬件加速，但是实际上会变慢，并且降低品质。不管怎样，它都会更准确地反映已经渲染到屏幕上的像素。</td>
    </tr>
    <tr>
     <td><code>DRAWWINDOW_ASYNC_DECODE_IMAGES</code></td>

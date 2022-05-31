@@ -39,9 +39,9 @@ void <var><em>ctx</em>.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth,
  <dt><code>dy</code></dt>
  <dd><code>image</code>的左上角在目标 canvas 上 Y 轴坐标。</dd>
  <dt><code>dWidth</code>{{optional_inline}}</dt>
- <dd><code>image</code>在目标 canvas 上绘制的宽度。 允许对绘制的<code>image</code>进行缩放。 如果不说明， 在绘制时<code>image</code>宽度不会缩放。</dd>
+ <dd><code>image</code>在目标 canvas 上绘制的宽度。允许对绘制的<code>image</code>进行缩放。如果不说明，在绘制时<code>image</code>宽度不会缩放。</dd>
  <dt><code>dHeight</code>{{optional_inline}}</dt>
- <dd><code>image</code>在目标 canvas 上绘制的高度。 允许对绘制的<code>image</code>进行缩放。 如果不说明， 在绘制时<code>image</code>高度不会缩放。</dd>
+ <dd><code>image</code>在目标 canvas 上绘制的高度。 允许对绘制的<code>image</code>进行缩放。如果不说明，在绘制时<code>image</code>高度不会缩放。</dd>
 </dl>
 
 <h3 id="抛出异常">抛出异常</h3>
@@ -241,9 +241,9 @@ function drawImageActualSize() {
  <li>在 Gecko 5.0 {{geckoRelease("5.0")}}中，支持通过给 sw 和 sh 赋负值，对图像进行翻转。</li>
  <li>从 {{geckoRelease("5.0")}} 开始，<code>drawImage()</code> 按照规范处理负参数，沿着合适的轴翻转矩形。</li>
  <li>从{{geckoRelease("5.0")}}开始，当 drawImage() 调用 <code>null</code> 或者 <code>undefined</code> 图像时，会抛出 <code>TYPE_MISMATCH_ERR</code> 异常。</li>
- <li>在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是 0，Firefox 会抛出一个异常。 按照规范描述，这种情况不会再发生。</li>
+ <li>在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是 0，Firefox 会抛出一个异常。按照规范描述，这种情况不会再发生。</li>
  <li>Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要<a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas ，不需要 <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
+ <li>Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas，不需要 <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
 </ul>
 
 <h2 id="Notes">Notes</h2>
@@ -251,7 +251,7 @@ function drawImageActualSize() {
 <ul>
  <li>当<code>drawImage()</code>需要在{{domxref("HTMLVideoElement")}}工作时，仅当{{domxref("HTMLMediaElement.readyState")}}大于 1 时<code>drawImage()</code>才能正常工作。</li>
  <li>在绘制，裁剪和/或缩放时，<code>drawImage()</code> 将始终使用 CSS 像素中源元素的固有尺寸。</li>
- <li><code>drawImage()</code>将忽略图像中的所有 EXIF 元数据，包括方向。 此行为在 iOS 设备上尤其麻烦。 您应该自己检测方向并使用<code>rotate()</code>使其正确。</li>
+ <li><code>drawImage()</code>将忽略图像中的所有 EXIF 元数据，包括方向。此行为在 iOS 设备上尤其麻烦。您应该自己检测方向并使用<code>rotate()</code>使其正确。</li>
 </ul>
 
 <h2 id="参见">参见</h2>
