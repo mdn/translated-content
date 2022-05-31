@@ -46909,16 +46909,6 @@
       "sii"
     ]
   },
-  "conflicting/MDN/Contribute/Markdown_in_MDN": {
-    "modified": "2020-09-30T15:30:25.061Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
   "conflicting/Mozilla/Add-ons/WebExtensions": {
     "modified": "2020-03-07T04:25:12.950Z",
     "contributors": [
@@ -47906,10 +47896,10 @@
       "Wind1808"
     ]
   },
-  "orphaned/Web/API/SVGTests": {
-    "modified": "2020-10-15T21:50:41.779Z",
+  "orphaned/Web/API/Response/useFinalURL": {
+    "modified": "2020-10-15T22:32:38.418Z",
     "contributors": [
-      "Uemmra3"
+      "eltociear"
     ]
   },
   "orphaned/Web/API/SVGTransformable": {
