@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.BigInt.BigInt
 ---
 {{JSRef}}
 
-Le constructeur **`BigInt()`** renvoie une valeur de type **bigint** (grand entier).
+Le constructeur **`BigInt()`** renvoie une valeur de type `bigint` (grand entier).
 
 ## Syntaxe
 
