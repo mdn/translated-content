@@ -19,7 +19,7 @@ new AggregateError(erreurs, message)
 
 - `erreurs`
   - : Un objet itérable contenant des erreurs (qui peuvent ne pas être des instances de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)).
-- `message`{{Optional_Inline}}
+- `message` {{Optional_Inline}}
   - : Une description optionnelle, compréhensible par un humain, de l'erreur agrégée.
 
 ## Exemples
@@ -29,7 +29,7 @@ new AggregateError(erreurs, message)
 ```js
 try {
   throw new AggregateError([
-    new Error("une erreur"),
+    new Error('une erreur'),
   ], 'Coucou');
 } catch (e) {
   console.log(e instanceof AggregateError); // true
