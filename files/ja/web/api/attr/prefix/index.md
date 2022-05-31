@@ -1,72 +1,75 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+  - 読み取り専用
+browser-compat: api.Attr.prefix
 translation_of: Web/API/Attr/prefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Attr.prefix</strong></code> という読み取り専用のプロパティは特定の属性の名前空間の接頭辞、もしくは接頭辞の指定がなければ <code>null</code> を返します。</p>
+**`prefix`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間接頭辞を返します。接頭辞が指定されていなければ `null` を返します。
 
-<div class="note">
-<p>DOM4 以前は この API は {{domxref("Node")}} で定義されていました。</p>
-</div>
+接頭辞は、属性が作成されたときの大文字小文字に関わらず、常に小文字になります。
 
-<h2 id="構文">構文</h2>
+> **Note:** XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
 
-<pre class="syntaxbox"><var>string</var> = <var>attribute</var>.prefix
-</pre>
+また、`xml` （`xml:lang` 属性）、`xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、 `xpath` 名前空間だけに、 SVG と MathML 要素でのみ対応しています。
 
-<h2 id="例">例</h2>
+## 値
 
-<p>次の例はコンソールに "x" と出力します。</p>
+その属性が属する名前空間の接頭辞が入った文字列です。もしない場合は `null` を返します。
 
-<pre class="brush:xml">&lt;div x:id="example" onclick="console.log(this.attributes[0].prefix)"/&gt;
-</pre>
+## 例
 
-<h2 id="注記">注記</h2>
+### HTML コンテンツ
 
-<p>これは例えば文書が XML の MIME タイプで提供されているといった名前空間を認識するパーサーを使用した場合だけ動作します。これは HTML 文書では動作しません。</p>
+```html
+<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
+<label xml:lang="en-US" class="struct"></label>
 
-<h2 id="仕様">仕様</h2>
+<button>Click me for &lt;svg&gt;…</button>
+<button>Click me for &lt;label&gt;…</button>
+<br><br>
+Prefix of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-attr-prefix', 'Attr: prefix')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-attr-prefix", "Attr.prefix")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+### JavaScript コンテンツ
 
-<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
+```js
+const elements = document.getElementsByClassName("struct");
+const buttons = document.getElementsByTagName("button");
+const result  = document.querySelector("#result");
 
+function handleEvent(element) {
+  return function(e) {
+    attribute = element.attributes[0];
+    result.value = attribute.prefix;
+  }
+}
 
+let i=0;
+for (let button of buttons) {
+  button.addEventListener('click', handleEvent(elements[i]));
+  i++;
+}
+```
 
-<p>{{Compat("api.Attr.prefix")}}</p>
+### 結果
+{{ EmbedLiveSample('Example','100%',100) }}
 
-<h2 id="関連情報">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.localName")}}</li>
- <li>{{domxref("Element.prefix")}}</li>
- <li>{{domxref("Node.prefix")}}</li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Attr.name")}} プロパティはこの属性の修飾名を返し、 {{domxref("Attr.localName")}} プロパティはこの属性の修飾名のローカル名の部分を返します。
+- {{domxref("Element.prefix()")}} プロパティは {{domxref("Element")}} の名前空間接頭辞を返します。
