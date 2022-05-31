@@ -27,22 +27,22 @@ new Boolean(valeur)
 ### Créer des objets `Boolean` avec une valeur initiale à `false`
 
 ```js
-let bPasDeParam = new Boolean();
-let bZero = new Boolean(0);
-let bNull = new Boolean(null);
-let bChaineVide = new Boolean('');
-let bFalse = new Boolean(false);
+const bPasDeParam = new Boolean();
+const bZero = new Boolean(0);
+const bNull = new Boolean(null);
+const bChaineVide = new Boolean('');
+const bFalse = new Boolean(false);
 ```
 
 ### Créer des objets `Boolean` avec une valeur initiale à `true`
 
 ```js
-let bTrue = new Boolean(true);
-let bChaineTrue = new Boolean('true');
-let bChaineFalse = new Boolean('false');
-let bSuLin = new Boolean('Su Lin');
-let bArrayProto = new Boolean([]);
-let bObjProto = new Boolean({});
+const bTrue = new Boolean(true);
+const bChaineTrue = new Boolean('true');
+const bChaineFalse = new Boolean('false');
+const bSuLin = new Boolean('Su Lin');
+const bArrayProto = new Boolean([]);
+const bObjProto = new Boolean({});
 ```
 
 ## Spécifications
