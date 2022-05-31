@@ -46,8 +46,8 @@ Cet objet peut être vu comme un interpréteur du tableau d'octets fourni par le
 ### Utiliser `DataView()`
 
 ```js
-let buffer = new ArrayBuffer(16);
-let view = new DataView(buffer, 0);
+const buffer = new ArrayBuffer(16);
+const view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42
