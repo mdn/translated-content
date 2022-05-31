@@ -1,5 +1,5 @@
 ---
-title: 网页开放字体格式(WOFF)
+title: 网页开放字体格式 (WOFF)
 slug: Web/Guide/WOFF
 tags:
   - NeedsMobileBrowserCompatibility
@@ -25,7 +25,7 @@ WOFF 有两个版本：WOFF 和 WOFF2。它们之间最大的差别体现在使�
 
 ## 相关工具
 
-- 可以使用[用于处理 WOFF 字体的工具](https://github.com/odemiral/woff2sfnt-sfnt2woff)。`sfnt2woff` 和 `woff2sfnt` 将转换为 WOFF 或 OpenType。
+- 可以使用 [用于处理 WOFF 字体的工具](https://github.com/odemiral/woff2sfnt-sfnt2woff)。`sfnt2woff` 和 `woff2sfnt` 将转换为 WOFF 或 OpenType。
 
 ## 规范
 

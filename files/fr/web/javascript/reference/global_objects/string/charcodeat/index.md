@@ -20,7 +20,9 @@ Le codet UTF-16 renvoyé correspond au codet Unicode si le caractère peut être
 
 ## Syntaxe
 
-    str.charCodeAt(indice)
+```js
+str.charCodeAt(indice)
+```
 
 ### Paramètres
 

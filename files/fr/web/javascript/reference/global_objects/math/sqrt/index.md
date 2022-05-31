@@ -19,7 +19,9 @@ La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonct
 
 ## Syntaxe
 
-    Math.sqrt(x)
+```js
+Math.sqrt(x)
+```
 
 ### Paramètres
 

@@ -18,7 +18,9 @@ La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la dat
 
 ## Syntaxe
 
-    dateObj.getMilliseconds()
+```js
+dateObj.getMilliseconds()
+```
 
 ### Valeur de retour
 

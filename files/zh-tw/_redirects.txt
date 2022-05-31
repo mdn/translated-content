@@ -456,9 +456,6 @@
 /zh-TW/docs/MDN/Contribute/Content	/zh-TW/docs/MDN/Guidelines
 /zh-TW/docs/MDN/Contribute/Content/Style_guide	/zh-TW/docs/MDN/Guidelines/Writing_style_guide
 /zh-TW/docs/MDN/Contribute/Creating_and_editing_pages	/zh-TW/docs/MDN/Contribute/Howto/Create_and_edit_pages
-/zh-TW/docs/MDN/Contribute/Editor	/zh-TW/docs/orphaned/MDN/Editor
-/zh-TW/docs/MDN/Contribute/Editor/Basics	/zh-TW/docs/orphaned/MDN/Editor/Basics
-/zh-TW/docs/MDN/Contribute/Editor/Edit_box	/zh-TW/docs/orphaned/MDN/Editor/Keyboard_shortcuts
 /zh-TW/docs/MDN/Contribute/Guidelines	/zh-TW/docs/MDN/Guidelines
 /zh-TW/docs/MDN/Contribute/Guidelines/Style_guide	/zh-TW/docs/MDN/Guidelines/Writing_style_guide
 /zh-TW/docs/MDN/Contribute/Guidelines/Writing_style_guide	/zh-TW/docs/MDN/Guidelines/Writing_style_guide
@@ -470,9 +467,6 @@
 /zh-TW/docs/MDN/Contribute/Tools	/zh-TW/docs/MDN/Tools
 /zh-TW/docs/MDN/Contribute/Tools/KumaScript	/zh-TW/docs/MDN/Tools/KumaScript
 /zh-TW/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting
-/zh-TW/docs/MDN/Editor	/zh-TW/docs/orphaned/MDN/Editor
-/zh-TW/docs/MDN/Editor/Basics	/zh-TW/docs/orphaned/MDN/Editor/Basics
-/zh-TW/docs/MDN/Editor/Edit_box	/zh-TW/docs/orphaned/MDN/Editor/Keyboard_shortcuts
 /zh-TW/docs/MDN/Getting_started	/zh-TW/docs/MDN/Contribute/Getting_started
 /zh-TW/docs/MDN/Kuma	/zh-TW/docs/MDN/Yari
 /zh-TW/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting

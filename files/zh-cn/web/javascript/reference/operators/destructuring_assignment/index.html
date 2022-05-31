@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><strong>解构赋值</strong>语法是一种 Javascript 表达式。通过<strong>解构赋值, </strong>可以将属性/值从对象/数组中取出,赋值给其他变量。</p>
+<p><strong>解构赋值</strong>语法是一种 Javascript 表达式。通过<strong>解构赋值，</strong>可以将属性/值从对象/数组中取出，赋值给其他变量。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}</p>
 
@@ -94,7 +94,7 @@ console.log(b); // 7</pre>
 
 <p>在一个解构表达式中可以交换两个变量的值。</p>
 
-<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a class="external" href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap技巧</a>）。</p>
+<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a class="external" href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap 技巧</a>）。</p>
 
 <pre class="brush: js">var a = 1;
 var b = 3;
@@ -342,7 +342,7 @@ var user = {
 console.log("userId: " + userId(user)); // "userId: 42"
 whois(user); // "jdoe is John"</pre>
 
-<p>这段代码从user对象中提取并输出<code>id、</code><code>displayName</code> 和 <code>firstName</code>。</p>
+<p>这段代码从 user 对象中提取并输出<code>id、</code><code>displayName</code> 和 <code>firstName</code>。</p>
 
 <h3 id="对象属性计算名和解构">对象属性计算名和解构</h3>
 
@@ -365,7 +365,7 @@ rest; // { c: 30, d: 40 }</pre>
 
 <h3 id="无效的_JavaScript_标识符作为属性名称">无效的 JavaScript 标识符作为属性名称</h3>
 
-<p>通过提供有效的替代标识符，解构可以与不是有效的JavaScript<a href="/zh-CN/docs/Glossary/Identifier">标识符</a>的属性名称一起使用。</p>
+<p>通过提供有效的替代标识符，解构可以与不是有效的 JavaScript<a href="/zh-CN/docs/Glossary/Identifier">标识符</a>的属性名称一起使用。</p>
 
 <pre class="brush: js">const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;

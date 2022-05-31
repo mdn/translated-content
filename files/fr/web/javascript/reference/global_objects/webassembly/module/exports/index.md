@@ -19,7 +19,9 @@ La fonction **`WebAssembly.Module.exports()`** renvoie un tableau qui contient l
 
 ## Syntaxe
 
-    var exports = WebAssembly.Module.exports(module);
+```js
+var exports = WebAssembly.Module.exports(module);
+```
 
 ### Paramètres
 

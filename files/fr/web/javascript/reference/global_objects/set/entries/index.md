@@ -20,7 +20,9 @@ La méthode **`entries()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/Ja
 
 ## Syntaxe
 
-    monSet.entries()
+```js
+monSet.entries()
+```
 
 ### Valeur de retour
 

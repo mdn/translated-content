@@ -20,9 +20,11 @@ La méthode **`toLocaleLowerCase()`** renvoie la chaîne de caractères qui appe
 
 ## Syntaxe
 
-    str.toLocaleLowerCase()
-    str.toLocaleLowerCase(locale)
-    str.toLocaleLowerCase([locale, locale, ...])
+```js
+str.toLocaleLowerCase()
+str.toLocaleLowerCase(locale)
+str.toLocaleLowerCase([locale, locale, ...])
+```
 
 ### Paramètres
 

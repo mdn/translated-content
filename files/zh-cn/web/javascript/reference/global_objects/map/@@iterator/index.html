@@ -39,13 +39,13 @@ myMap.set(1, 'bar');
 myMap.set({}, 'baz');
 
 var mapIter = myMap[Symbol.iterator]();
-//返回的其实是个generator
+//返回的其实是个 generator
 console.log(mapIter.next().value); // ["0", "foo"]
 console.log(mapIter.next().value); // [1, "bar"]
 console.log(mapIter.next().value); // [Object, "baz"]
 </pre>
 
-<h3 id="在for..of中使用iterator()">在<code>for..of中</code>使用<code>[@@iterator]()</code> </h3>
+<h3 id="在_for..of_中使用_iterator">在 <code>for..of</code> 中使用 <code>[@@iterator]()</code></h3>
 
 <pre class="brush:js">var myMap = new Map();
 myMap.set('0', 'foo');
