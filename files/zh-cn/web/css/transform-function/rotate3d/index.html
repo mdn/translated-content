@@ -10,15 +10,15 @@ original_slug: Web/CSS/transform-function/rotate3d()
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>rotate3d()</code></strong> CSS函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。</p>
+<p><strong><code>rotate3d()</code></strong> CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/rotate3d.html")}}</div>
 
 
 
-<p>在3D空间之中，旋转有3个自由维度，描述了旋转轴。旋转轴由一组 [x, y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxref("transform-origin") }} CSS 属性定义）。如果这些矢量被赋予非标准值，即3个坐标值的平方和不等于1时，它将会被内部隐式标准化。非标准矢量，例如空值和 [0, 0, 0]，将会使旋转不起作用，但是不影响整个CSS属性的其他效果（译者注：如transform中的多项变换）。</p>
+<p>在 3D 空间之中，旋转有 3 个自由维度，描述了旋转轴。旋转轴由一组 [x, y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxref("transform-origin") }} CSS 属性定义）。如果这些矢量被赋予非标准值，即 3 个坐标值的平方和不等于 1 时，它将会被内部隐式标准化。非标准矢量，例如空值和 [0, 0, 0]，将会使旋转不起作用，但是不影响整个 CSS 属性的其他效果（译者注：如 transform 中的多项变换）。</p>
 
-<div class="note">与平面旋转相反的是，3D旋转的组合通常是不可交换的；这意味着定义旋转规则的值的顺序是严格控制的。</div>
+<div class="note">与平面旋转相反的是，3D 旋转的组合通常是不可交换的；这意味着定义旋转规则的值的顺序是严格控制的。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -29,11 +29,11 @@ original_slug: Web/CSS/transform-function/rotate3d()
 
 <dl>
  <dt><em>x</em></dt>
- <dd> {{cssxref("&lt;number&gt;")}} 类型，可以是0到1之间的数值，表示旋转轴X坐标方向的矢量。</dd>
+ <dd> {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 X 坐标方向的矢量。</dd>
  <dt><em>y</em></dt>
- <dd>{{cssxref("&lt;number&gt;")}} 类型， 可以是0到1之间的数值，表示旋转轴Y坐标方向的矢量。</dd>
+ <dd>{{cssxref("&lt;number&gt;")}} 类型， 可以是 0 到 1 之间的数值，表示旋转轴 Y 坐标方向的矢量。</dd>
  <dt><em>z</em></dt>
- <dd>{{cssxref("&lt;number&gt;")}} 类型， 可以是0到1之间的数值，表示旋转轴Z坐标方向的矢量。</dd>
+ <dd>{{cssxref("&lt;number&gt;")}} 类型， 可以是 0 到 1 之间的数值，表示旋转轴 Z 坐标方向的矢量。</dd>
  <dt><em>a</em></dt>
  <dd> {{ cssxref("&lt;angle&gt;") }} 类型，表示旋转角度。正的角度值表示顺时针旋转，负值表示逆时针旋转。</dd>
 </dl>
@@ -42,7 +42,7 @@ original_slug: Web/CSS/transform-function/rotate3d()
  <tbody>
   <tr>
    <th scope="col">在ℝ<sup>2</sup>上的笛卡尔坐标</th>
-   <td rowspan="2">这种变换应用于3D空间，不可用于平面空间</td>
+   <td rowspan="2">这种变换应用于 3D 空间，不可用于平面空间</td>
   </tr>
   <tr>
    <th scope="col">在ℝℙ<sup>2</sup>上的齐次坐标</th>
@@ -60,7 +60,7 @@ original_slug: Web/CSS/transform-function/rotate3d()
 
 <h2 id="示例">示例</h2>
 
-<h3 id="绕Y轴旋转">绕Y轴旋转</h3>
+<h3 id="绕Y轴旋转">绕 Y 轴旋转</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -86,7 +86,7 @@ div {
 
 <h4 id="效果">效果</h4>
 
-<p>{{EmbedLiveSample("绕Y轴旋转","100%","200")}}</p>
+<p>{{EmbedLiveSample("绕 Y 轴旋转","100%","200")}}</p>
 
 <h3 id="围绕自定义轴旋转">围绕自定义轴旋转</h3>
 
