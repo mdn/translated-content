@@ -11,9 +11,9 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 {{domxref("EventTarget")}} 인터페이스의 **`EventTarget.removeEventListener()`** 메서드는 {{domxref("EventTarget.addEventListener()")}}로 이벤트 대상에 등록한 수신기를 제거합니다. 제거 대상 수신기의 식별은 이벤트 유형, 수신기 함수 참조, 그리고 식별에 관련된 다양한 옵션을 사용해 이뤄집니다. [제거할 이벤트 수신기의 식별](#제거할_이벤트_수신기의_식별)을 참고하세요.
 
-`EventTarget`에 등록된 {{domxref("EventListener")}} 중 무엇에도 일치하지 않는 매개변수를 사용해서 `removeEventListener()`를 호출하면 아무 효과도 발생하지 않습니다.
+`removeEventListener()`를 호출할 때, `EventTarget`에 등록된 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener#이벤트_수신기_콜백) 중 어느 것에도 일치하지 않는 매개변수를 사용하면 아무 효과도 나타나지 않습니다.
 
-{{domxref("EventTarget")}}의 어느 수신기 중 하나가 이벤트를 처리하는 중에 다른 수신기를 제거할 경우, 제거된 {{domxref("EventListener")}}는 현재 이벤트에 대해 발동하지 않습니다. 그러나 다시 부착할 수는 있습니다.
+{{domxref("EventTarget")}}의 어느 수신기 중 하나가 이벤트를 처리하는 중에 다른 수신기를 제거할 경우, 제거된 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener#이벤트_수신기_콜백)는 현재 이벤트에 대해 발동하지 않습니다. 그러나 다시 부착할 수는 있습니다.
 
 > **경고:** 같은 수신기를 다른 캡처 플래그 값으로 두 번, 즉 한 번은 `capture` 플래그를 지정하고 한 번은 지정하지 않은 채 부착하는 경우 각각 따로따로 제거해야 합니다. 캡처 플래그를 지정한 수신기의 제거는 비 캡처 수신기에 영향을 주지 않고, 그 반대도 마찬가지입니다.
 
