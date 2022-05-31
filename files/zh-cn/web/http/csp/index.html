@@ -162,7 +162,7 @@ translation_of: Web/HTTP/CSP
   }
 }</code></pre>
 
-<p>如你所见，该报告在<code>blocked-uri 字段</code>中包含了违规资源的完整路径 ，但情况并非总是如此。比如，当 signup.html 试图从   <a href="http://anothercdn.example.com/stylesheet.css"><code>http://anothercdn.example.com/stylesheet.css</code></a>加载 CSS 时，浏览器将不会包含完整路径，而只会保留源路径 (<code>http://anothercdn.example.com</code>)。CSP 技术规范小组对此古怪行为给出了<a href="http://www.w3.org/TR/CSP/#violation-reports">解释</a>。大体上说，这样是为了防止泄露跨域资源的敏感信息。</p>
+<p>如你所见，该报告在 <code>blocked-uri 字段</code> 中包含了违规资源的完整路径，但情况并非总是如此。比如，当 signup.html 试图从 <a href="http://anothercdn.example.com/stylesheet.css"><code>http://anothercdn.example.com/stylesheet.css</code></a> 加载 CSS 时，浏览器将不会包含完整路径，而只会保留源路径 (<code>http://anothercdn.example.com</code>)。CSP 技术规范小组对此古怪行为给出了<a href="https://www.w3.org/TR/CSP/#violation-reports">解释</a>。大体上说，这样是为了防止泄露跨域资源的敏感信息。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

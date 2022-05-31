@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Authentication
 
 <h2 id="通用的_HTTP_认证框架">通用的 HTTP 认证框架</h2>
 
-<p>{{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}}（质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）状态码，并在  {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 <code>Authorization</code>  首部的请求。</p>
+<p>{{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}}（质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）状态码，并在 {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 <code>Authorization</code>  首部的请求。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;"></p>
 
@@ -60,10 +60,10 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 <p>最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。 IANA 维护了<a class="external external-icon" href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">一系列的验证方案</a>，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS 。常见的验证方案包括：</p>
 
 <ul>
- <li><strong>Basic</strong> (查看 {{rfc(7617)}}, base64 编码凭证。详情请参阅下文.),</li>
- <li><strong>Bearer</strong> (查看 {{rfc(6750)}}, bearer 令牌通过 OAuth 2.0 保护资源),</li>
- <li><strong>Digest</strong> (查看 {{rfc(7616)}}, 只有 md5 散列 在 Firefox 中支持，查看 {{bug(472823)}} 用于 SHA 加密支持),</li>
- <li><strong>HOBA</strong> (查看 {{rfc(7486)}} (草案), <strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound 认证，基于数字签名),</li>
+ <li><strong>Basic</strong> (查看 {{rfc(7617)}}，base64 编码凭证。详情请参阅下文.),</li>
+ <li><strong>Bearer</strong> (查看 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源),</li>
+ <li><strong>Digest</strong> (查看 {{rfc(7616)}}，只有 md5 散列 在 Firefox 中支持，查看 {{bug(472823)}} 用于 SHA 加密支持),</li>
+ <li><strong>HOBA</strong> (查看 {{rfc(7486)}}（草案），<strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound 认证，基于数字签名),</li>
  <li><strong>Mutual</strong> (查看 <a href="https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11">draft-ietf-httpauth-mutual</a>),</li>
  <li>
   <p><strong>AWS4-HMAC-SHA256</strong> (查看 <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS docs</a>).</p>
