@@ -19,7 +19,9 @@ La méthode statique **`String.fromCharCode()`** renvoie une chaîne de caractè
 
 ## Syntaxe
 
-    String.fromCharCode(num1, ..., numN)
+```js
+String.fromCharCode(num1, ..., numN)
+```
 
 ### Paramètres
 

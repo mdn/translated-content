@@ -5,9 +5,9 @@ translation_of: Web/SVG/Attribute/pointer-events
 ---
 <div>{{SVGRef}}</div>
 
-<p>pointer-events属性是一个展示属性，用于定义元素是否或何时可能是鼠标事件的目标元素。</p>
+<p>pointer-events 属性是一个展示属性，用于定义元素是否或何时可能是鼠标事件的目标元素。</p>
 
-<p class="note"><strong>Note:</strong> 作为一个展示属性， {{cssxref('pointer-events')}} 可以被当做CSS属性使用.</p>
+<p class="note"><strong>Note:</strong> 作为一个展示属性， {{cssxref('pointer-events')}} 可以被当做 CSS 属性使用。</p>
 
 <div id="topExample">
 <div class="hidden">
@@ -16,18 +16,18 @@ translation_of: Web/SVG/Attribute/pointer-events
 
 <pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
-  Circle元素将始终拦截鼠标事件。
-  为了改变较底部的的rect元素的颜色，
-  你需要点击rect元素在圆外的部分
+  Circle 元素将始终拦截鼠标事件。
+  为了改变较底部的的 rect 元素的颜色，
+  你需要点击 rect 元素在圆外的部分
   --&gt;
   &lt;rect x="0" y="0" height="10" width="10" fill="black" /&gt;
   &lt;circle cx="5" cy="5" r="4" fill="white"
           pointer-events="visiblePoint" /&gt;
 
   &lt;!--
-  下面的circle元素将永远不会获取到鼠标事件，
-  当你点击circle元素或者点击rect元素时，
-  rect元素都会改变颜色
+  下面的 circle 元素将永远不会获取到鼠标事件，
+  当你点击 circle 元素或者点击 rect 元素时，
+  rect 元素都会改变颜色
   --&gt;
   &lt;rect x="10" y="0" height="10" width="10" fill="black" /&gt;
   &lt;circle cx="15" cy="5" r="4" fill="white"
@@ -35,20 +35,20 @@ translation_of: Web/SVG/Attribute/pointer-events
 &lt;/svg&gt;</pre>
 
 <pre class="brush: js">window.addEventListener('mouseup', (e) =&gt; {
-  // 在 #000000 和 #FFFFFF之间随机选取一个颜色
+  // 在 #000000 和 #FFFFFF 之间随机选取一个颜色
   const color = Math.round(Math.random() * 0xFFFFFF)
 
-  // 将color变量的值按照css的要求进行格式化
+  // 将 color 变量的值按照 CSS 的要求进行格式化
   const fill = '#' + color.toString(16).padStart(6,'0')
 
-  // 将color变量设置的颜色应用到实际点击的元素上
+  // 将 color 变量设置的颜色应用到实际点击的元素上
   e.target.style.fill = fill
 })</pre>
 
 <p>{{EmbedLiveSample('topExample', '100%', 150)}}</p>
 </div>
 
-<p>作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的23个元素: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('switch')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tspan')}}, {{SVGElement('use')}}</p>
+<p>作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的 23 个元素: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('switch')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tspan')}}, {{SVGElement('use')}}</p>
 
 <h2 id="用法">用法</h2>
 
@@ -69,7 +69,7 @@ translation_of: Web/SVG/Attribute/pointer-events
  </tbody>
 </table>
 
-<p><em>为了详细了解每个可能的值，请参考CSS文档 {{cssxref('pointer-events')}}.</em></p>
+<p><em>为了详细了解每个可能的值，请参考 CSS 文档 {{cssxref('pointer-events')}}.</em></p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容</h2>
 

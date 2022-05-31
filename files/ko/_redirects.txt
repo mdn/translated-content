@@ -489,7 +489,7 @@
 /ko/docs/Web/API/RTCPeerConnection/onconnectionstatechange	/ko/docs/Web/API/RTCPeerConnection/connectionstatechange_event
 /ko/docs/Web/API/RTCPeerConnection/ondatachannel	/ko/docs/Web/API/RTCPeerConnection/datachannel_event
 /ko/docs/Web/API/RTCPeerConnection/onicecandidate	/ko/docs/Web/API/RTCPeerConnection/icecandidate_event
-/ko/docs/Web/API/RTCPeerConnection/onicegatheringstatechange	/ko/docs/conflicting/Web/API/RTCPeerConnection/icegatheringstatechange_event
+/ko/docs/Web/API/RTCPeerConnection/onicegatheringstatechange	/ko/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
 /ko/docs/Web/API/RTCPeerConnection/ontrack	/ko/docs/Web/API/RTCPeerConnection/track_event
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
@@ -513,7 +513,7 @@
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
-/ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/conflicting/Web/API/Window/popstate_event
+/ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/WindowEventHandlers/onstorage	/ko/docs/Web/API/Window/storage_event
 /ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/setTimeout

@@ -20,7 +20,9 @@ La méthode **`startsWith()`** renvoie un booléen indiquant si la chaine de car
 
 ## Syntaxe
 
-    str.startsWith(chaîneRecherchée [, position]);
+```js
+str.startsWith(chaîneRecherchée [, position]);
+```
 
 ### Paramètres
 

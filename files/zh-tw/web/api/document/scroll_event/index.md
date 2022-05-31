@@ -50,8 +50,6 @@ Since scroll events can fire at a high rate, the event handler shouldn't execute
 
 Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes thescroll event for requestAnimationFrame.
 
-
-
 有鑒於`scroll`事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如DOM修改）。所以，建議改用{{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}或{{DOMxRef("CustomEvent")}}以調控事件的觸發次數，如下。
 
 不過需要注意，輸入事件和動畫影格的觸發速率大致相同，因此通常沒有必要進行下述的最佳化。本範例最佳化`requestAnimationFrame`的`scroll`事件。

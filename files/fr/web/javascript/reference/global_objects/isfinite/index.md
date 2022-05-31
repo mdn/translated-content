@@ -16,7 +16,9 @@ La fonction globale **`isFinite()`** détermine si la valeur passée en argument
 
 ## Syntaxe
 
-    isFinite(valeurÀTester)
+```js
+isFinite(valeurÀTester)
+```
 
 ### Paramètres
 

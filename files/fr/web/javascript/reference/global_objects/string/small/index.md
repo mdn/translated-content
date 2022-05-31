@@ -18,7 +18,9 @@ La méthode **`small()`** permet de créer un élément HTML {{HTMLElement("smal
 
 ## Syntaxe
 
-    str.small()
+```js
+str.small()
+```
 
 ### Valeur de retour
 

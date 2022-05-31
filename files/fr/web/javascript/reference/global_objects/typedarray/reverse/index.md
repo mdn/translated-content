@@ -20,7 +20,9 @@ La méthode **`reverse()`** inverse les éléments d'un tableau. Le premier él�
 
 ## Syntaxe
 
-    typedarray.reverse();
+```js
+typedarray.reverse();
+```
 
 ### Valeur de retour
 

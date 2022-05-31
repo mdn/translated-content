@@ -15,8 +15,6 @@ Il existe treize axes différents dans la spécification [XPath](XPath). Un axe 
 
 Pour plus d'informations sur l'utilisation des expressions XPath, veuillez vous reportez à la section [Autres ressources](Transformations_XML_avec_XSLT/Autres_ressources) à la fin du document [Transformations XML avec XSLT](Transformations_XML_avec_XSLT).
 
-
-
 - [ancestor](Axes/ancestor)
   - : Indique tous les ancêtres du nœud de contexte, depuis le nœud parent jusqu'au nœud racine.
 

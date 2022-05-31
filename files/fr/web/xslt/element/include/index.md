@@ -12,7 +12,9 @@ L'élément `<xsl:include>` fusionne les contenus de deux feuilles de styles. Co
 
 ### Syntaxe
 
-    <xsl:include href=URI />
+```xml
+<xsl:include href=URI />
+```
 
 ### Attribut obligatoire
 

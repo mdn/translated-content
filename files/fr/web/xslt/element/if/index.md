@@ -12,9 +12,11 @@ L'élément `<xsl:if>` regroupe un attribut test et un modèle. Si le test renvo
 
 ### Syntaxe
 
-    <xsl:if test=EXPRESSION>
-    	MODÈLE
-    </xsl:if>
+```xml
+<xsl:if test=EXPRESSION>
+  MODÈLE
+</xsl:if>
+```
 
 ### Attribut obligatoire
 

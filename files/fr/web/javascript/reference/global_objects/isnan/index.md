@@ -16,7 +16,9 @@ La fonction **`isNaN()`** permet de déterminer si une valeur est {{jsxref("NaN"
 
 ## Syntaxe
 
-    isNaN(valeurÀTester)
+```js
+isNaN(valeurÀTester)
+```
 
 ### Paramètres
 

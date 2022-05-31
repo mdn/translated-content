@@ -53,7 +53,6 @@ background: conic-gradient(
 - `<color-hint>`
   - : 颜色中转点是一个 {{Glossary("interpolation")}} 提示，它定义了在相邻颜色之间渐变如何进行。长度定义了渐变色应在两个颜色断点之间的哪一点到达颜色过渡的中点。如果省略，颜色转换的中点是两个颜色断点之间的中点。
 
-
 > **备注：** 渲染颜色中间点的规则（[color stops in CSS gradients](#gradient_with_multiple_color_stops)）与[SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
 
 ## 描述
