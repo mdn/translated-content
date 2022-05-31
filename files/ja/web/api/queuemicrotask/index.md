@@ -31,7 +31,7 @@ browser-compat: api.queueMicrotask
 
 これを利用すると他の（優先度が高いであろう）保留中のコードへ干渉することなく、ブラウザーが実行コンテキストの制御を取り戻す前に完了させたい処理を走らせることができます。マイクロタスクの使い方や使う理由については[マイクロタスクのガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)で詳しく学ぶことができます。
 
-マイクロタスクの重要性はタスクを非同期かつ指定の順序で実行することです。詳しくは[JavaScript で queueMicrotask() によるマイクロタスクの使用](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)をご覧ください。
+マイクロタスクの重要性はタスクを非同期かつ指定の順序で実行することです。詳しくは[JavaScript で queueMicrotask() によるマイクロタスクの使用](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)をご覧ください。
 
 マイクロタスクはライブラリーやフレームワークで必要なクリーンアップなど、描画直前のタスクに特に有用です。
 
@@ -103,9 +103,8 @@ if (typeof self.queueMicrotask !== "function") {
 ## 関連情報
 
 - [Polyfill of `queueMicrotask` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
-- [Using microtasks in
-  JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- [JavaScript で queueMicrotask() によるマイクロタスクの使用](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
 - [queueMicrotask
   explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [Tasks,
