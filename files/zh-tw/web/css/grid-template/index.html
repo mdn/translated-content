@@ -7,7 +7,7 @@ translation_of: Web/CSS/grid-template
 
 <div>{{EmbedInteractiveExample("pages / css / grid-template.html")}}</div>
 
-<p class="hidden">該交互式示例的源存儲在GitHub存儲庫中。如果您想為交互式示例項目做出貢獻，請克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>並向我們發送請求請求。</p>
+<p>該交互式示例的源存儲在GitHub存儲庫中。如果您想為交互式示例項目做出貢獻，請克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>並向我們發送請求請求。</p>
 
 <p>作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}},{{cssxref("grid-template-columns")}}和{{cssxref("grid-template-areas ")}}。</p>
 
@@ -47,11 +47,11 @@ grid-template: unset;
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
  <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
 
- <p class="note">Note: The {{cssxref("repeat")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
+ <p>Note: The {{cssxref("repeat")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
  </dd>
 </dl>
 
-<p class="note"><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
+<p><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 

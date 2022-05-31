@@ -34,19 +34,19 @@ translation_of: Learn/Server-side/Django/Models
 
 <h2 id="設計LocalLibrary模型">設計LocalLibrary模型</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在你投入開始編寫模型之前，花幾分鐘時間考慮我們需要存放的數據、以及不同物件之間的關係。</p>
+<p>在你投入開始編寫模型之前，花幾分鐘時間考慮我們需要存放的數據、以及不同物件之間的關係。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>我們知道，我們需要存放書籍的信息（標題，摘要，作者，語言，類別，ISBN），並且我們可能有多個副本（具有全域唯一的ID，可用狀態等）。我們可以存放更多關於作者的信息，而不僅僅是他的名字，或多個作者的相同或相似的名稱。我們希望能根據書名，作者名，語言和類別對信息進行排序。</p>
+<p>我們知道，我們需要存放書籍的信息（標題，摘要，作者，語言，類別，ISBN），並且我們可能有多個副本（具有全域唯一的ID，可用狀態等）。我們可以存放更多關於作者的信息，而不僅僅是他的名字，或多個作者的相同或相似的名稱。我們希望能根據書名，作者名，語言和類別對信息進行排序。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在設計模型時，為每個“物件”分別設置模型（相關信息分組）是有意義的。在這種情況下，明顯的物件是書籍，書本實例和作者。</p>
+<p>在設計模型時，為每個“物件”分別設置模型（相關信息分組）是有意義的。在這種情況下，明顯的物件是書籍，書本實例和作者。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>你可能想要使用模型，來表示選擇列表選項（例如：選擇下拉列表），而不是硬編碼，將選項編寫進網站—這是當所有選項面臨未知、或改變時候的建議。在本網站，模型的明顯候選，包括書籍類型（例如：科幻小說，法國詩歌等）和語言（英語，法語，日語）。</p>
+<p>你可能想要使用模型，來表示選擇列表選項（例如：選擇下拉列表），而不是硬編碼，將選項編寫進網站—這是當所有選項面臨未知、或改變時候的建議。在本網站，模型的明顯候選，包括書籍類型（例如：科幻小說，法國詩歌等）和語言（英語，法語，日語）。</p>
 
 <p>一旦我們已經決定了我們的模型和字段，我們需要考慮它們的關聯性。Django允許你來定義一對一的關聯（<code>OneToOneField</code>），一對多（<code>ForeignKey</code>）和多對多（<code>ManyToManyField</code>）。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>思考一下，在網站中，我們將定義模型展示在下面UML關聯圖中（下圖）。如以上，我們創建了書的模型（書的通用細節），書本實例（系統中特定物理副本的書籍狀態），和作者。我們也決定了各類型模型，以便通過管理界面創建／選擇值。我們決定不給<code>BookInstance:status</code>一個模型 —我們硬編碼了（<code>LOAN_STATUS</code>）的值，因為我們不希望其改變。在每個框中，你可以看到模型名稱，字段名稱和類型，以及方法和返回類型。</p>
+<p>思考一下，在網站中，我們將定義模型展示在下面UML關聯圖中（下圖）。如以上，我們創建了書的模型（書的通用細節），書本實例（系統中特定物理副本的書籍狀態），和作者。我們也決定了各類型模型，以便通過管理界面創建／選擇值。我們決定不給<code>BookInstance:status</code>一個模型 —我們硬編碼了（<code>LOAN_STATUS</code>）的值，因為我們不希望其改變。在每個框中，你可以看到模型名稱，字段名稱和類型，以及方法和返回類型。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>該圖顯示模型之間的關係，包括它們的多重性。多重性是圖中的數字，顯示可能存在於關係中的每個模型的數量（最大值和最小值）。例如，盒子之間的連接線，顯示書和類型相關。書模型中數字表明，一本書必須有一個或多個類型（想要多少就多少），而類型(Genres)模型線的另一端的數字(0..*)，表明它可以有零個或多個關聯書本(可以有這個書籍類別，也有對應的書；也可以是有這個書籍類別，但沒有對應的書)。</p>
+<p>該圖顯示模型之間的關係，包括它們的多重性。多重性是圖中的數字，顯示可能存在於關係中的每個模型的數量（最大值和最小值）。例如，盒子之間的連接線，顯示書和類型相關。書模型中數字表明，一本書必須有一個或多個類型（想要多少就多少），而類型(Genres)模型線的另一端的數字(0..*)，表明它可以有零個或多個關聯書本(可以有這個書籍類別，也有對應的書；也可以是有這個書籍類別，但沒有對應的書)。</p>
 
 <p><img alt="LocalLibrary Model UML" src="https://mdn.mozillademos.org/files/15646/local_library_model_uml.png" style="height: 660px; width: 977px;"></p>
 
@@ -85,11 +85,11 @@ class MyModelName(models.Model):
         """String for representing the MyModelName object (in Admin site etc.)."""
         return self.field_name</pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在下面章節中，我們將更詳細解釋模型的每個功能。</p>
+<p>在下面章節中，我們將更詳細解釋模型的每個功能。</p>
 
 <h4 id="字段" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>字段</h4>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>模型可以有任意數量的字段、任何類型的字段 — 每個字段都表示我們要存放在我們的一個資料庫中的一欄數據(a column of data)。每筆資料庫記錄（列 row）將由每個字段值之一組成。我們來看看上面看到的例子。</p>
+<p>模型可以有任意數量的字段、任何類型的字段 — 每個字段都表示我們要存放在我們的一個資料庫中的一欄數據(a column of data)。每筆資料庫記錄（列 row）將由每個字段值之一組成。我們來看看上面看到的例子。</p>
 
 <pre class="syntaxbox notranslate">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
 
@@ -97,16 +97,16 @@ class MyModelName(models.Model):
 <p>Our above example has a single field called <code>my_field_name</code>, of type <code>models.CharField</code> — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:</p>
 </div>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>在上面例子中，有個叫 <code>my_field_name</code> 的單一字段，其類型為 <code>models.CharField</code>  — 這意味著這個字段將會包含字母、數字字符串。使用特定的類別分配字段類型，這些類別，決定了用於將數據存放在資料庫中的記錄的類型，以及從HTML表單接收到值（即構成有效值）時使用的驗證標準。字段類型還可以獲取參數，進一步指定字段如何存放或如何被使用。在這裡的情況下，我們給了字段兩個參數：</p>
+<p>在上面例子中，有個叫 <code>my_field_name</code> 的單一字段，其類型為 <code>models.CharField</code>  — 這意味著這個字段將會包含字母、數字字符串。使用特定的類別分配字段類型，這些類別，決定了用於將數據存放在資料庫中的記錄的類型，以及從HTML表單接收到值（即構成有效值）時使用的驗證標準。字段類型還可以獲取參數，進一步指定字段如何存放或如何被使用。在這裡的情況下，我們給了字段兩個參數：</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>max_length=20</code> — 表示此字段中值的最大長度為20個字符的狀態。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>help_text="Enter field documentation"</code> — 提供一個幫助用戶的文本標籤，讓用戶知道當前透過HTML表單輸入時要提供什麼值。</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>字段名稱用於在視圖和模版中引用它。字段還有一個標籤，它被指定一個參數（<code>verbose_name</code>），或者通過大寫字段的變量名的第一個字母，並用空格替換下劃線（例如<code>my_field_name</code> 的默認標籤為 My field name ）。</p>
+<p>字段名稱用於在視圖和模版中引用它。字段還有一個標籤，它被指定一個參數（<code>verbose_name</code>），或者通過大寫字段的變量名的第一個字母，並用空格替換下劃線（例如<code>my_field_name</code> 的默認標籤為 My field name ）。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>如果模型在表單中呈現（例如：在管理站點中），則聲明該字段的順序，將影響其默認順序，但可能會被覆蓋。</p>
+<p>如果模型在表單中呈現（例如：在管理站點中），則聲明該字段的順序，將影響其默認順序，但可能會被覆蓋。</p>
 
 <h5 id="常用字段參數">常用字段參數</h5>
 
@@ -122,11 +122,11 @@ class MyModelName(models.Model):
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#primary-key" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">primary_key</a> :如果是True，將當前字段設置為模型的主鍵（主鍵是被指定用來唯一辨識所有不同表記錄的特殊數據庫欄位(column)）。如果沒有指定字段作為主鍵，則Django將自動為此添加一個字段。</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>還有許多其他選項 — 你可以在<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-options" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">這裡看到完整的字段選項</a>。</p>
+<p>還有許多其他選項 — 你可以在<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-options" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">這裡看到完整的字段選項</a>。</p>
 
 <h5 id="常用字段類型">常用字段類型</h5>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>以下列表描述了一些更常用的字段類型。</p>
+<p>以下列表描述了一些更常用的字段類型。</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">CharField</a> 是用來定義短到中等長度的字段字符串。你必須指定<code>max_length</code>要存儲的數據。</li>
@@ -140,9 +140,9 @@ class MyModelName(models.Model):
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">ManyToManyField</a> 用於指定<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">多對多</a>關係（例如，一本書可以有幾種類型，每種類型可以包含幾本書）。在我們的圖書館應用程序中，我們將非常類似地使用它們 ForeignKeys，但是可以用更複雜的方式來描述組之間的關係。這些具有參數 <code>on_delete</code> 來定義關聯記錄被刪除時會發生什麼（例如，值 <code>models.SET_NULL</code> 將簡單地設置為值 NULL ）。</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>還有許多其他類型的字段，包括不同類型數字的字段（大整數，小整數，浮點數），布林值，URLs，唯一 ids 和其他 “時間相關” 的信息（持續時間，時間等）。你可以查閱<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">完整列表</a> .</p>
+<p>還有許多其他類型的字段，包括不同類型數字的字段（大整數，小整數，浮點數），布林值，URLs，唯一 ids 和其他 “時間相關” 的信息（持續時間，時間等）。你可以查閱<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">完整列表</a> .</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'></p>
+<p></p>
 
 <h4 id="元數據Metadata">元數據(Metadata)</h4>
 
@@ -152,29 +152,29 @@ class MyModelName(models.Model):
     ordering = ['-my_field_name']
 </pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>此元數據最有用的功能之一是控制在查詢模型類型時返回之記錄的默認排序。你可以透過在<code>ordering</code> 屬性的字段名稱列表中指定匹配順序來執行此操作，如上所示。排序將依賴字段的類型（字符串字段按字母順序排序，而日期字段按時間順序排序）。如上所示，你可以使用減號（-）前綴字段名稱以反轉排序順序。</p>
+<p>此元數據最有用的功能之一是控制在查詢模型類型時返回之記錄的默認排序。你可以透過在<code>ordering</code> 屬性的字段名稱列表中指定匹配順序來執行此操作，如上所示。排序將依賴字段的類型（字符串字段按字母順序排序，而日期字段按時間順序排序）。如上所示，你可以使用減號（-）前綴字段名稱以反轉排序順序。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>例如，如果我們選擇依照此預設來排列書單：</p>
+<p>例如，如果我們選擇依照此預設來排列書單：</p>
 
 <pre class="brush: python notranslate">ordering = ['title', '-pubdate']</pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>書單通過標題依據--字母排序--排列，從A到Z，然後再依每個標題的出版日期，從最新到最舊排列。</p>
+<p>書單通過標題依據--字母排序--排列，從A到Z，然後再依每個標題的出版日期，從最新到最舊排列。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>另一個常見的屬性是 <code>verbose_name</code> ,一個 <code>verbose_name</code> 說明單數和複數形式的類別。</p>
+<p>另一個常見的屬性是 <code>verbose_name</code> ,一個 <code>verbose_name</code> 說明單數和複數形式的類別。</p>
 
 <pre class="brush: python notranslate">verbose_name = 'BetterName'</pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>其他有用的屬性允許你為模型創建和應用新的“訪問權限”（預設權限會被自動套用），允許基於其他的字段排序，或聲明該類是”抽象的“（你無法創建的記錄基類，並將由其他型號派生）。</p>
+<p>其他有用的屬性允許你為模型創建和應用新的“訪問權限”（預設權限會被自動套用），允許基於其他的字段排序，或聲明該類是”抽象的“（你無法創建的記錄基類，並將由其他型號派生）。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>許多其他元數據選項控制模型中必須使用哪些數據庫以及數據的存儲方式。（如果你需要模型映射一個現有數據庫，這會有用）。</p>
+<p>許多其他元數據選項控制模型中必須使用哪些數據庫以及數據的存儲方式。（如果你需要模型映射一個現有數據庫，這會有用）。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>完整有用的元數據選項在這裡<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/options/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">Model metadata options</a> (Django docs).</p>
+<p>完整有用的元數據選項在這裡<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/models/options/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">Model metadata options</a> (Django docs).</p>
 
 <h4 id="方法Methods" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>方法(Methods)</h4>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>一個模型也可以有方法。</p>
+<p>一個模型也可以有方法。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><strong>最起碼，在每個模型中，你應該定義標準的Python 類方法<code>__str__()</code> </strong> ，<strong>來為每個物件返回一個人類可讀的字符串</strong>。此字符用於表示管理站點的各個記錄（以及你需要引用模型實例的任何其他位置）。通常這將返回模型中的標題或名稱字段。</p>
+<p><strong>最起碼，在每個模型中，你應該定義標準的Python 類方法<code>__str__()</code> </strong> ，<strong>來為每個物件返回一個人類可讀的字符串</strong>。此字符用於表示管理站點的各個記錄（以及你需要引用模型實例的任何其他位置）。通常這將返回模型中的標題或名稱字段。</p>
 
 <pre class="brush: python notranslate">def __str__(self):
     return self.field_name</pre>
@@ -187,9 +187,9 @@ class MyModelName(models.Model):
 </pre>
 
 <div class="note">
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'><strong style="border: 0px; font-style: normal; font-weight: 700; margin: 0px; padding: 0px;">注意</strong> :假設你將使用URL<code>/myapplication/mymodelname/2</code> 來顯示模型的單個記錄（其中“2”是id特定記錄），則需要創建一個URL映射器來將響應和id傳遞給“模型詳細視圖” （這將做出顯示記錄所需的工作）。以上示例中，<code>reverse()</code>函數可以“反轉”你的url映射器（在上訴命名為“model-detail-view”的案例中，以創建正確格式的URL。</p>
+<p><strong style="border: 0px; font-style: normal; font-weight: 700; margin: 0px; padding: 0px;">注意</strong> :假設你將使用URL<code>/myapplication/mymodelname/2</code> 來顯示模型的單個記錄（其中“2”是id特定記錄），則需要創建一個URL映射器來將響應和id傳遞給“模型詳細視圖” （這將做出顯示記錄所需的工作）。以上示例中，<code>reverse()</code>函數可以“反轉”你的url映射器（在上訴命名為“model-detail-view”的案例中，以創建正確格式的URL。</p>
 
-<p style='font-style: normal; margin: 0px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>當然要做這個工作，你還是要寫URL映射，視圖和模版！</p>
+<p>當然要做這個工作，你還是要寫URL映射，視圖和模版！</p>
 </div>
 
 <p>你可以定義一些你喜歡的其他方法，並從你的代碼或模版調用它們（只要它們不帶任何參數）。</p>
