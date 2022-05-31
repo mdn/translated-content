@@ -63,7 +63,7 @@ const stream = new ReadableStream({
   },
   cancel() {
     // 如果取消了 reader，则会调用该函数，
-    // 所以我们应该停止生成字符串
+    // 所以我们应该在这里停止生成字符串
     clearInterval(interval);
   }
 });

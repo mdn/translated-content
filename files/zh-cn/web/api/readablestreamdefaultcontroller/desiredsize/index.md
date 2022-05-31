@@ -20,7 +20,7 @@ translation_of: Web/API/ReadableStreamDefaultController/desiredSize
 
 ## 示例
 
-规范中 [具有底层推送源和背压支持的流](https://streams.spec.whatwg.org/#example-rs-push-backpressure) 提供了一个很好的例子，说明如何使用 `desiredSize` 去手动检测流何时已满并应使用背压，以及使用 {{domxref("ReadablestreamDefaultController.error()")}} 在流所依赖的系统一部分失效的情况去手动触发一个流错误。
+规范中[具有底层推送源和背压支持的流](https://streams.spec.whatwg.org/#example-rs-push-backpressure)提供了一个很好的例子，说明如何使用 `desiredSize` 去手动检测流何时已满并应使用背压，以及使用 {{domxref("ReadablestreamDefaultController.error()")}} 在流所依赖的系统一部分失效的情况去手动触发一个流错误。
 
 ## 规范
 
