@@ -247,7 +247,7 @@ myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}
 
 ### 将 NaN 作为 Map 的键
 
-`NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但是因为所有的`NaN`的值都是无法单独辨别的，所以下面的例子成立：
+`NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但是因为所有的 `NaN` 的值都是无法区分的，所以下面的例子成立：
 
 ```js
 const myMap = new Map()
