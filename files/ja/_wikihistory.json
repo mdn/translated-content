@@ -10812,13 +10812,6 @@
       "gurezo"
     ]
   },
-  "Web/API/DOMObject": {
-    "modified": "2019-03-23T23:33:16.888Z",
-    "contributors": [
-      "momdo",
-      "ethertank"
-    ]
-  },
   "Web/API/DOMParser": {
     "modified": "2020-10-15T21:14:36.017Z",
     "contributors": [

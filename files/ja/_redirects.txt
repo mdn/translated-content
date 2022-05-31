@@ -1116,7 +1116,6 @@
 /ja/docs/DOM/CompositionEvent	/ja/docs/Web/API/CompositionEvent
 /ja/docs/DOM/DOMError	/ja/docs/Web/API/DOMError
 /ja/docs/DOM/DOMException	/ja/docs/Web/API/DOMException
-/ja/docs/DOM/DOMObject	/ja/docs/Web/API/DOMObject
 /ja/docs/DOM/DOMString	/ja/docs/Web/API/DOMString
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Web/API/DOMTimeStamp
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
