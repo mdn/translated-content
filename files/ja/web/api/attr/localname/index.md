@@ -1,87 +1,78 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+  - 読み取り専用
+browser-compat: api.Attr.localName
 translation_of: Web/API/Attr/localName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong>Attr.localName</strong>読み取り専用プロパティは、要素の修飾名のローカル部分を返します。</p>
+**`localName`** は {{domxref("Attr")}} インターフェイスのプロパティで、属性の*修飾名*の*ローカル部分*、すなわち属性の名前からその前の名前空間を外したものを返します。例えば、修飾名が `xml:lang` であった場合、要素が名前空間に対応していればローカル名は `lang` となります。
 
-<div class="note">
-<p>以前のDOM仕様では、このAPIは{{domxref("Node")}}インターフェース内で定義されていました。</p>
-</div>
+ローカル名は、属性の作成時に大文字であっても小文字であっても、常に小文字になります。
 
-<h2 id="構文">構文</h2>
+> **Note:** HTML は SVG と MathML の要素に対して、固定された一連の名前空間のみに対応しています。これらは `xml` （`xml:lang` 属性）、 `xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、`xpath` です。
+>
+> つまり、 HTML 要素の属性のローカル名は常にその修飾名と等しくなります。コロンは通常の文字として扱われます。 XML では、 SVG や MathML のように、コロンは接頭辞の終わりを表し、それ以前は名前空間となります。ローカル名は、修飾名と異なる場合があります。
 
-<pre class="syntaxbox"><var>name</var> = <var>attribute</var>.localName
-</pre>
+### 値
 
-<h3 id="戻り値">戻り値</h3>
+属性の修飾名のローカル部分を表す文字列です。
 
-<p>属性の修飾名のローカル部分を表す{{domxref("DOMString")}}。</p>
+## 例
 
-<h2 id="例">例</h2>
+次の例では、適切なボタンをクリックすると、 2 つの最初の要素の最初の属性のローカル名が表示されます。 {{SVGElement("svg")}} 要素は XML であり、名前空間に対応しているので、ローカル名 (`lang`) は修飾名 `xml:lang` と異なるものになります。 {{HTMLElement("label")}} 要素は HTML で、名前空間に対応していないため、ローカル名と修飾名が共に `xml:lang` となります。
 
-<p>次の例は、警告ダイアログの"id"を示しています。</p>
+### HTML コンテンツ
 
-<h3 id="HTML_Content">HTML Content</h3>
+```html
+<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
+<label xml:lang="en-US" class="struct"></label>
 
-<pre class="brush: html">&lt;button id="example"&gt;Click me&lt;/button&gt;</pre>
+<button>Click me for &lt;svg&gt;…</button>
+<button>Click me for &lt;label&gt;…</button>
+<br><br>
+Local part of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript コンテンツ
 
-<pre class="brush: js">const element = document.querySelector("#example");
-element.addEventListener("click", function() {
-  const attribute = element.attributes[0];
-  alert(attribute.localName);
-});
-</pre>
+```js
+const elements = document.getElementsByClassName("struct");
+const buttons = document.getElementsByTagName("button");
+const result  = document.querySelector("#result");
 
-<p>{{ EmbedLiveSample('例','100%',30) }}</p>
+function handleEvent(element) {
+  return function(e) {
+    attribute = element.attributes[0];
+    result.value = attribute.localName;
+  }
+}
 
-<h2 id="注意">注意</h2>
+let i=0;
+for (let button of buttons) {
+  button.addEventListener('click', handleEvent(elements[i]));
+  i++;
+}
+```
 
-<p>属性のローカル名は、コロンの後に続く属性の修飾名の一部です。 修飾名は、通常、特定のXML文書の名前空間の一部としてXMLで使用されます。</p>
+### 結果
 
-<div class="note">
-<p><strong>注意：</strong>{{Gecko("1.9.2")}}以前では、（XML DOMでのDOMのXHTML属性とは対照的に）HTML DOMのHTML属性のローカル名の大文字のプロパティを返します。 後のバージョンでは、HTML5に準拠して、内部DOMストレージの場合に、HTML DOMのHTML属性とXML DOMのXHTML属性の両方で小文字のプロパティが返されます。</p>
-</div>
+{{ EmbedLiveSample('Example','100%',100) }}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-attr-localname', 'Attr.localName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Attr.localName")}}</p>
+{{Compat}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.prefix")}}</li>
- <li>{{domxref("Element.localName")}}</li>
- <li>{{domxref("Node.localName")}}</li>
-</ul>
+- {{domxref("Attr.name")}} プロパティはこの属性の修飾名を返し、 {{domxref("Attr.prefix")}} は名前空間接頭辞を返します。
+- {{domxref("Element.localName()")}} プロパティは {{domxref("Element")}} のローカル名を返します。
