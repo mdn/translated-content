@@ -45,10 +45,10 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 <p>这里，有一些 Shadow DOM 特有的术语需要我们了解：</p>
 
 <ul>
- <li>Shadow host：一个常规 DOM节点，Shadow DOM 会被附加到这个节点上。</li>
- <li>Shadow tree：Shadow DOM内部的DOM树。</li>
- <li>Shadow boundary：Shadow DOM结束的地方，也是常规 DOM开始的地方。</li>
- <li>Shadow root: Shadow tree的根节点。</li>
+ <li>Shadow host：一个常规 DOM 节点，Shadow DOM 会被附加到这个节点上。</li>
+ <li>Shadow tree：Shadow DOM 内部的 DOM 树。</li>
+ <li>Shadow boundary：Shadow DOM 结束的地方，也是常规 DOM 开始的地方。</li>
+ <li>Shadow root: Shadow tree 的根节点。</li>
 </ul>
 
 <p>你可以使用同样的方式来操作 Shadow DOM，就和操作常规 DOM 一样——例如添加子节点、设置属性，以及为节点添加自己的样式（例如通过 <code>element.style</code> 属性），或者为整个 Shadow DOM 添加样式（例如在 {{htmlelement("style")}} 元素内添加样式）。不同的是，Shadow DOM 内部的元素始终不会影响到它外部的元素（除了 {{CSSxRef(":focus-within")}}），这为封装提供了便利。</p>
@@ -76,7 +76,7 @@ let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
 
 <pre class="brush: js">let shadow = this.attachShadow({mode: 'open'});</pre>
 
-<p>将 Shadow DOM 附加到一个元素之后，就可以使用 DOM APIs对它进行操作，就和处理常规 DOM 一样。</p>
+<p>将 Shadow DOM 附加到一个元素之后，就可以使用 DOM APIs 对它进行操作，就和处理常规 DOM 一样。</p>
 
 <pre class="brush: js">var para = document.createElement('p');
 shadow.appendChild(para);
@@ -88,7 +88,7 @@ etc.</pre>
 
 <pre class="brush: js">class PopUpInfo extends HTMLElement {
   constructor() {
-    // 必须首先调用 super方法
+    // 必须首先调用 super 方法
     super();
 
     // 元素的具体功能写在下面
@@ -196,7 +196,7 @@ customElements.define('popup-info', PopUpInfo);</pre>
 
 <h3 id="使用外部引入的样式">使用外部引入的样式</h3>
 
-<p>在上面的示例中，我们使用行内{{htmlelement("style")}} 元素为Shadow DOM添加样式，但是完全可以通过{{htmlelement("link")}} 标签引用外部样式表来替代行内样式。</p>
+<p>在上面的示例中，我们使用行内{{htmlelement("style")}} 元素为 Shadow DOM 添加样式，但是完全可以通过{{htmlelement("link")}} 标签引用外部样式表来替代行内样式。</p>
 
 <p>例如，我们可以看下 <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> 例子 (查看源代码 <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
 
@@ -209,7 +209,7 @@ linkElem.setAttribute('href', 'style.css');
 
 shadow.appendChild(linkElem);</pre>
 
-<p>请注意， 因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制, 因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。</p>
+<p>请注意， 因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。</p>
 
 <p>许多现代浏览器都对从公共节点克隆的或具有相同文本的{{htmlelement("style")}} 标签实现了优化，以允许它们共享单个支持样式表，通过这种优化，外部和内部样式的性能表现比较接近。</p>
 
