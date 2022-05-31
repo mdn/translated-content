@@ -30,20 +30,20 @@ pipeTo(destination, options)
 
 - `options` {{optional_inline}}
 
-  - : 管道至 `writable` 应该被使用的选项。可用选项是:
+  - : 传输至 `writable` 应该被使用的选项。可用选项是:
 
     - `preventClose`
       - : 如果设置为 `true`，源 `ReadableStream` 关闭将不再导致目标 `WritableStream` 关闭。一旦此过程完成，该方法将返回一个兑现的 promise，除非在关闭目标时遇到错误，在这种情况下下，它将因为该错误被拒绝。
     - `preventAbort`
       - : 如果设置为 `true`，源 `ReadableStream` 中的错误将不再中止目标 `WritableStream`。该方法将会返回一个被拒绝的 promise，该 promise 因源错误或者任何在中止目标期间的错误而被拒绝。
     - `preventCancel`
-      - : 如果设置为 `true`，目标 `WritableStream` 的错误将不再取消源 `ReadableStream`。在这种情况下，该方法将会返回一个因源错误或者在取消期间发生的任何错误而被拒绝的 promise。此外，如果目标可写流开始关闭或者正在关闭，则源可读流将不再被取消。在这种情况下，方法将返回一个因错误而被拒绝的 promise，表明通往封闭流的管道失败,或者在取消源期间发生任何错误。
+      - : 如果设置为 `true`，目标 `WritableStream` 的错误将不再取消源 `ReadableStream`。在这种情况下，该方法将会返回一个因源错误或者在取消期间发生的任何错误而被拒绝的 promise。此外，如果目标可写流开始关闭或者正在关闭，则源可读流将不再被取消。在这种情况下，方法将返回一个因错误而被拒绝的 promise，该错误表明通往封闭流的管道失败,或者在取消源期间发生的任何错误。
     - `signal`
       - : 如果设置一个 [`AbortSignal`](/zh-CN/docs/Web/API/AbortSignal) 对象，然后可以通过相应的[`AbortController`](/zh-CN/docs/Web/API/AbortController)中止正在进行的管道操作。
 
 ### 返回值
 
-当管道完成时返回一个兑现的 {{jsxref("Promise")}}。
+返回一个 {{jsxref("Promise")}}，其在传输完成时兑现。
 
 ### 异常
 
