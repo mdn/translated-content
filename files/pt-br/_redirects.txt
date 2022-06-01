@@ -508,7 +508,7 @@
 /pt-BR/docs/Tools/Web_Console/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html
 /pt-BR/docs/Tools/Working_with_iframes	https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html
 /pt-BR/docs/Tools/atuação	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
-/pt-BR/docs/Using_files_from_web_applications	/pt-BR/docs/Web/API/File/Using_files_from_web_applications
+/pt-BR/docs/Using_files_from_web_applications	/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications
 /pt-BR/docs/Using_geolocation	/pt-BR/docs/Web/API/Geolocation_API
 /pt-BR/docs/Web/API/API_Push	/pt-BR/docs/Web/API/Push_API
 /pt-BR/docs/Web/API/API_Push/Best_Practices	/pt-BR/docs/Web/API/Push_API/Best_Practices
@@ -558,6 +558,7 @@
 /pt-BR/docs/Web/API/EventListener	/pt-BR/docs/conflicting/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
+/pt-BR/docs/Web/API/File/Using_files_from_web_applications	/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select

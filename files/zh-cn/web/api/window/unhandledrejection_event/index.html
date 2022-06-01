@@ -64,7 +64,7 @@ original_slug: Web/Events/unhandledrejection
 });
 </pre>
 
-<p>您还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器:</p>
+<p>您还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器：</p>
 
 <pre class="brush: js notranslate">window.onunhandledrejection = event =&gt; {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
@@ -73,7 +73,7 @@ original_slug: Web/Events/unhandledrejection
 
 <h3 id="防止默认处理">防止默认处理</h3>
 
-<p>许多环境(例如 {{Glossary("Node.js")}} ) 默认情况下会向控制台打印未处理的 Promise rejections。您可以通过添加一个处理程序来防止 <code>unhandledrejection</code> 这种情况的发生，该处理程序除了您希望执行的任何其他任务之外，还可以调用 {{domxref("Event.preventDefault()", "preventDefault()")}} 来取消该事件，从而防止该事件冒泡并由运行时的日志代码处理。这种方法之所以有效，是因为 <code>unhandledrejection</code> 是可以取消的。</p>
+<p>许多环境 (例如 {{Glossary("Node.js")}} ) 默认情况下会向控制台打印未处理的 Promise rejections。您可以通过添加一个处理程序来防止 <code>unhandledrejection</code> 这种情况的发生，该处理程序除了您希望执行的任何其他任务之外，还可以调用 {{domxref("Event.preventDefault()", "preventDefault()")}} 来取消该事件，从而防止该事件冒泡并由运行时的日志代码处理。这种方法之所以有效，是因为 <code>unhandledrejection</code> 是可以取消的。</p>
 
 <pre class="brush:js; notranslate">window.addEventListener('unhandledrejection', function (event) {
   // ...您的代码可以处理未处理的拒绝...

@@ -9,26 +9,26 @@ translation_of: Web/HTTP/Methods/POST
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong>HTTP <code>POST</code> 方法</strong> 发送数据给服务器. 请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定.</p>
+<p><strong>HTTP <code>POST</code> 方法</strong> 发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定。</p>
 
-<p>PUT 和{{HTTPMethod("POST")}}方法的区别是,PUT方法是幂等的：连续调用一次或者多次的效果相同（无副作用）。连续调用同一个POST可能会带来额外的影响，比如多次提交订单。</p>
+<p>PUT 和{{HTTPMethod("POST")}}方法的区别是，PUT 方法是幂等的：连续调用一次或者多次的效果相同（无副作用）。连续调用同一个 POST 可能会带来额外的影响，比如多次提交订单。</p>
 
-<p>一个 <code>POST</code> 请求通常是通过 <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML 表单</a>发送, 并返回服务器的修改结果. 在这种情况下, content type 是通过在 <dfn>{{HTMLElement("form")}} 元素中设置正确的 {{htmlattrxref("enctype", "form")}} 属性, 或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 {{htmlattrxref("formenctype", "input")}} 属性来选择的</dfn>:</p>
+<p>一个 <code>POST</code> 请求通常是通过 <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML 表单</a>发送，并返回服务器的修改结果。在这种情况下，content type 是通过在 <dfn>{{HTMLElement("form")}} 元素中设置正确的 {{htmlattrxref("enctype", "form")}} 属性，或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 {{htmlattrxref("formenctype", "input")}} 属性来选择的</dfn>:</p>
 
 <ul>
- <li><code>application/</code><dfn><code>x-www-form-urlencoded</code>: 数据被编码成以 <code>'&amp;'</code> 分隔的键-值对, 同时以 <code>'='</code> 分隔键和值. 非字母或数字的字符会被 </dfn>{{glossary("percent-encoding")}}<dfn>: 这也就是为什么这种类型不支持二进制数据(应使用 <code>multipart/form-data</code> 代替).</dfn></li>
+ <li><code>application/</code><dfn><code>x-www-form-urlencoded</code>: 数据被编码成以 <code>'&amp;'</code> 分隔的键 - 值对，同时以 <code>'='</code> 分隔键和值。非字母或数字的字符会被 </dfn>{{glossary("percent-encoding")}}<dfn>: 这也就是为什么这种类型不支持二进制数据 (应使用 <code>multipart/form-data</code> 代替).</dfn></li>
  <li><dfn><code>multipart/form-data</code></dfn></li>
  <li><dfn><code>text/plain</code></dfn></li>
 </ul>
 
-<p>当 POST 请求是通过除 HTML 表单之外的方式发送时, 例如使用 {{domxref("XMLHttpRequest")}}, 那么请求主体可以是任何类型.按HTTP 1.1规范中描述，POST为了以统一的方法来涵盖以下功能：</p>
+<p>当 POST 请求是通过除 HTML 表单之外的方式发送时，例如使用 {{domxref("XMLHttpRequest")}}, 那么请求主体可以是任何类型。按 HTTP 1.1 规范中描述，POST 为了以统一的方法来涵盖以下功能：</p>
 
 <ul>
  <li>注释已有的资源</li>
  <li>在公告板，新闻组，邮件列表或类似的文章组中发布消息;</li>
  <li>通过注册新增用户;</li>
  <li>向数据处理程序提供一批数据，例如提交一个表单;</li>
- <li>通过追加操作，扩展数据库数据.</li>
+ <li>通过追加操作，扩展数据库数据。</li>
 </ul>
 
 <table class="properties">
@@ -67,7 +67,7 @@ translation_of: Web/HTTP/Methods/POST
 
 <h2 id="示例">示例</h2>
 
-<p>使用默认的 <code>application/x-www-form-urlencoded</code> 做为 content type 的简单表单:</p>
+<p>使用默认的 <code>application/x-www-form-urlencoded</code> 做为 content type 的简单表单：</p>
 
 <pre class="line-numbers  language-html">POST / HTTP/1.1
 Host: foo.com
@@ -76,7 +76,7 @@ Content-Length: 13
 
 say=Hi&amp;to=Mom</pre>
 
-<p>使用 <code>multipart/form-data</code> 作为 content type 的表单:</p>
+<p>使用 <code>multipart/form-data</code> 作为 content type 的表单：</p>
 
 <pre>POST /test.html HTTP/1.1
 Host: example.org

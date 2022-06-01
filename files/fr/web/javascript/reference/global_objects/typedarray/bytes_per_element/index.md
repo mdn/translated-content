@@ -18,7 +18,9 @@ La propriété **`TypedArray.BYTES_PER_ELEMENT`** représente la taille, exprim�
 
 ## Syntaxe
 
-    TypedArray.BYTES_PER_ELEMENT;
+```js
+TypedArray.BYTES_PER_ELEMENT;
+```
 
 ## Description
 

@@ -10,7 +10,7 @@ tags:
   - NeedsContent
   - events
 ---
-<p>本文演示了如何创建和分派DOM事件。这些事件通常称为<strong>合成事件</strong>，而不是浏览器本身触发的事件。</p>
+<p>本文演示了如何创建和分派 DOM 事件。这些事件通常称为<strong>合成事件</strong>，而不是浏览器本身触发的事件。</p>
 
 <h2 id="创建自定义事件">创建自定义事件</h2>
 
@@ -44,7 +44,7 @@ elem.dispatchEvent(event);</pre>
 
 <h3 id="过时的方式">过时的方式</h3>
 
-<p>早期的创建事件的方法使用了受Java启发的API。下面展示了一个示例：</p>
+<p>早期的创建事件的方法使用了受 Java 启发的 API。下面展示了一个示例：</p>
 
 <pre class="brush: js">// Create the event.
 var event = document.createEvent('Event');
@@ -107,7 +107,7 @@ textarea.addEventListener('input', function() {
 
 <h2 id="触发内置事件">触发内置事件</h2>
 
-<p>下面的例子演示了一个在复选框上点击（click）的模拟（就是说在程序里生成一个click事件），这个模拟点击使用了DOM方法。<a href="http://developer.mozilla.org/samples/domref/dispatchEvent.html">参见这个动态示例</a></p>
+<p>下面的例子演示了一个在复选框上点击（click）的模拟（就是说在程序里生成一个 click 事件），这个模拟点击使用了 DOM 方法。<a href="http://developer.mozilla.org/samples/domref/dispatchEvent.html">参见这个动态示例</a></p>
 
 <pre class="brush: js">function simulateClick() {
   var event = new MouseEvent('click', {

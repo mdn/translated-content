@@ -18,7 +18,9 @@ La méthode **`__defineSetter__`** permet de lier une propriété d'un objet à 
 
 ## Syntaxe
 
-    obj.__defineSetter__(prop, fun)
+```js
+obj.__defineSetter__(prop, fun)
+```
 
 ### Paramètres
 

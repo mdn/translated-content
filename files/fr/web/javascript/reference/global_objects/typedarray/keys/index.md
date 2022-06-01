@@ -21,7 +21,9 @@ La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les 
 
 ## Syntaxe
 
-    arr.keys()
+```js
+arr.keys()
+```
 
 ### Valeur de retour
 

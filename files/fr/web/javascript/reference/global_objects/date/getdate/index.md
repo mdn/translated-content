@@ -18,7 +18,9 @@ La méthode **`getDate()`** retourne le jour du mois pour la date spécifiée d'
 
 ## Syntaxe
 
-    dateObj.getDate()
+```js
+dateObj.getDate()
+```
 
 ### Paramètres
 

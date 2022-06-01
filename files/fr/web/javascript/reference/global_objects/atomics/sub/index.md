@@ -18,7 +18,9 @@ La méthode statique **`Atomics.sub()`** permet de soustraire une valeur donnée
 
 ## Syntaxe
 
-    Atomics.sub(typedArray, index, valeur)
+```js
+Atomics.sub(typedArray, index, valeur)
+```
 
 ### Paramètres
 

@@ -23,7 +23,7 @@ L'attribut `color` est utilisé pour définir indirectement une valeur potentiel
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/SVG/Content_type#Color" title="en/SVG/Content_type#Color"
+        <a href="/fr/SVG/Content_type#Color"
           >&#x3C;color></a
         >
         | inherit

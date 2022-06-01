@@ -20,7 +20,9 @@ La méthode **`map()`** crée un nouveau tableau avec les résultats de l'appel 
 
 ## Syntaxe
 
-    var nouveauTableau = arr.map(callback [, thisArg])
+```js
+var nouveauTableau = arr.map(callback [, thisArg])
+```
 
 ### Paramètres
 

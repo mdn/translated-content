@@ -12,9 +12,9 @@ translation_of: Web/API/Location/replace
 ---
 <p>{{ APIRef("Location") }}</p>
 
-<p><code><strong>Location</strong></code><strong><code>.replace()</code></strong> 方法以给定的URL来替换当前的资源。 与{{domxref("Location.assign","assign()")}} 方法 不同的是，调用 <code>replace()</code> 方法后，当前页面不会保存到会话历史中（session {{domxref("History")}}），这样，用户点击<em>回退</em>按钮时，将不会再跳转到该页面。</p>
+<p><code><strong>Location</strong></code><strong><code>.replace()</code></strong> 方法以给定的 URL 来替换当前的资源。 与{{domxref("Location.assign","assign()")}} 方法 不同的是，调用 <code>replace()</code> 方法后，当前页面不会保存到会话历史中（session {{domxref("History")}}），这样，用户点击<em>回退</em>按钮时，将不会再跳转到该页面。</p>
 
-<p>因违反安全规则导致的赋值失败，浏览器将会抛出类型为 <code>SECURITY_ERROR</code> 的 {{domxref("DOMException")}} 异常。当调用该方法的脚本所属的源与拥有 {{domxref("Location")}} 对象所属源不同时，通常情况会发生这种异常,此时通常该脚本是存在不同的域下。</p>
+<p>因违反安全规则导致的赋值失败，浏览器将会抛出类型为 <code>SECURITY_ERROR</code> 的 {{domxref("DOMException")}} 异常。当调用该方法的脚本所属的源与拥有 {{domxref("Location")}} 对象所属源不同时，通常情况会发生这种异常，此时通常该脚本是存在不同的域下。</p>
 
 <p>如果 URL 无效，浏览器也会抛出 <code>SYNTAX_ERROR</code> 类型的 {{domxref("DOMException")}} 异常。</p>
 

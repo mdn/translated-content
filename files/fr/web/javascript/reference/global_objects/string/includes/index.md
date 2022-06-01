@@ -18,8 +18,10 @@ La méthode **`includes()`** détermine si une chaîne de caractères est conten
 
 ## Syntaxe
 
-    str.includes(chaîneRecherchée);
-    str.includes(chaîneRecherchée, position);
+```js
+str.includes(chaîneRecherchée);
+str.includes(chaîneRecherchée, position);
+```
 
 ### Paramètres
 

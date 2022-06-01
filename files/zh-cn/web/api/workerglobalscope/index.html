@@ -14,9 +14,9 @@ translation_of: Web/API/WorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>  的 <code><strong>WorkerGlobalScope</strong></code> 接口 是一个代表了任何 scope of worker的接口. Workers 没有浏览内容; 这个 scope 包含的信息总是通过 {{domxref("Window")}} objects传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object.每个 <code>WorkerGlobalScope</code> 都有自己的事件循环.</p>
+<p> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>  的 <code><strong>WorkerGlobalScope</strong></code> 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 <code>WorkerGlobalScope</code> 都有自己的事件循环。</p>
 
-<p>每个 worker type都有专门的这个接口: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. <code>self</code> 属性返回每个内容的专门 scope .</p>
+<p>每个 worker type 都有专门的这个接口：{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. <code>self</code> 属性返回每个内容的专门 scope.</p>
 
 <h2 id="Properties">Properties</h2>
 

@@ -44,7 +44,7 @@ Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mi
 
 Regardons un peu plus en détails ce que nous avons écrit en CSS :
 
-![Diagramme expliquant les différents éléments d'une déclaration CSS](CSS.svg)
+![Diagramme expliquant les différents éléments d'une déclaration CSS](css-declaration-small.png)
 
 Cette structure s'appelle **un ensemble de règles** (ou seulement « une règle »). Les différentes parties se nomment :
 
