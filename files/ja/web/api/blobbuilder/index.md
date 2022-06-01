@@ -1,119 +1,134 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
+page-type: web-api-interface
+tags:
+  - API
+  - DOM
+  - DOM リファレンス
+  - File API
+  - 非推奨
+  - リファレンス
+browser-compat: api.BlobBuilder
 translation_of: Web/API/BlobBuilder
 ---
-<p>{{APIRef("File API")}}{{ obsolete_header}}</p>
+{{APIRef("File API")}}{{ deprecated_header}}
 
-<p><code>BlobBuilder</code> インターフェースは、{{domxref("Blob")}} オブジェクトを構築する簡単な方法を提供します。単に <code>BlobBuilder</code> を作成し、 <a href="#append">append</a> メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら <a href="#getblob">getBlob</a> メソッドを呼んで、あなたがビルダに送り込んだデータの {{domxref("Blob")}} を取得してください。</p>
+> **Note:** `BlobBuilder` インターフェイスは新しく導入された {{domxref('Blob')}} コンストラクターに置き換えられて非推奨になりました。
 
-<div class="note"><strong>注記:</strong> <code>BlobBuilder</code> インターフェースは非推奨です。新しく導入された {{domxref('Blob')}} コンストラクタを使用してください。</div>
+**`BlobBuilder`** インターフェイスは {{domxref("Blob")}} オブジェクトを構築する簡単な方法を提供します。単に `BlobBuilder` を作成し、 [`append()`](#append) メソッドを使ってデータのチャンクを付け足していってください。 blob の生成が完了したら [`getBlob()`](#getblob) メソッドを呼んで、ビルダーに送り込んだデータの {{domxref("Blob")}} を取得してください。
 
-<h2 id="メソッド概観">メソッド概観</h2>
+## メソッド概要
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="/ja/docs/Web/API/BlobBuilder#append()">append</a>(in ArrayBuffer data);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="/ja/docs/Web/API/BlobBuilder#append()">append</a>(in Blob data);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="/ja/docs/Web/API/BlobBuilder#append()">append</a>(in String data, [optional] in String endings);</code></td>
-  </tr>
-  <tr>
-   <td><code>Blob <a href="/ja/docs/Web/API/BlobBuilder#getBlob()">getBlob</a>([optional] in DOMString contentType);</code></td>
-  </tr>
-  <tr>
-   <td><code>File <a href="/ja/docs/Web/API/BlobBuilder#getFile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code>void <a href="/ja/docs/Web/API/BlobBuilder#append()">append</a>(in ArrayBuffer data);</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>void <a href="/ja/docs/Web/API/BlobBuilder#append()">append</a>(in Blob data);</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>void <a href="/ja/docs/Web/API/BlobBuilder#append()">append</a>(in String data, [optional] in String endings);</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>Blob <a href="/ja/docs/Web/API/BlobBuilder#getblob()">getBlob</a>([optional] in DOMString contentType);</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>File <a href="/ja/docs/Web/API/BlobBuilder#getfile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<h3 id="append">append()</h3>
+### append()
 
-<p>生成中の {{domxref("Blob")}} に対して、指定されたJavaScriptオブジェクトの内容を付け足します。もし指定した値が {{domxref("Blob")}} 、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> または <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a> のいずれでもなければ、強制的に文字列に変換されたのち、blobに付け足されます。</p>
+生成中の {{domxref("Blob")}} に対して、指定された JavaScript オブジェクトの内容を付け足します。もし指定した値が {{domxref("Blob")}} 、[`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) のいずれでもなければ、文字列に変換されたのち、 blob に付け足されます。
 
-<pre class="syntaxbox notranslate">void append(
-  in ArrayBuffer data
+```js
+void append(
+  in ArrayBuffer data
 );
 
 void append(
-  in Blob data
+  in Blob data
 );
 
-
 void append(
-  in String data,
+  in String data,
   [optional] in String endings
 );
-</pre>
+```
 
-<h6 id="パラメータ">パラメータ</h6>
+#### 引数
 
-<dl>
- <dt><code>data</code></dt>
- <dd>{{domxref("Blob")}} に付け足されるデータ</dd>
- <dt><code>endings</code></dt>
- <dd><code>\n</code> を含む文字列がどのように扱われるか指定します。指定できる値は <code>"transparent"</code> (終端を変更しない) または <code>"native"</code> (ホストOSのファイルシステムに従って終端を変更する) です。デフォルトの値は <code>"transparent"</code> です。</dd>
-</dl>
+- `data`
+  - : 構築中の {{domxref("Blob")}} に追加するデータです。
+- `endings`
+  - : `\n` を含む文字列をどのように書き出するかを指定します。これは
+    `"transparent"` （改行を変更しない）または `"native"` （ホスト OS のファイルシステムの習慣に合うよう改行を変更する）のどちらかを取ります。既定値は `"transparent"` です。
 
-<h3 id="getBlob">getBlob()</h3>
+### getBlob()
 
-<p><a href="#append">append</a> メソッドで渡したデータから生成される {{domxref("Blob")}} オブジェクトを返します。</p>
+{{domxref("Blob")}} オブジェクトで、 [`append()`](#append) の呼び出し経由で渡されたデータを使用して構築した結果を返します。
 
-<pre class="syntaxbox notranslate">Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+```js
+Blob getBlob(
+  in DOMString contentType {{optional_inline}}
 );
-</pre>
+```
 
-<h6 id="パラメータ_2">パラメータ</h6>
+#### 引数
 
-<dl>
- <dt>contentType {{optional_inline}}</dt>
- <dd>{{domxref("Blob")}} の中で返されるデータのMIMEタイプ。これは <code>Blob</code> オブジェクトのtype プロパティの値になります。</dd>
-</dl>
+- `contentType` {{optional_inline}}
+  - : {{domxref("Blob")}} で返されるデータの MIME タイプです。これは `Blob` オブジェクトの type プロパティの値になります。
 
-<h6 id="戻り値">戻り値</h6>
+#### 返値
 
-<p><code>BlobBuilder</code> が生成されてから <a href="#append">append</a> によって渡された全てのデータを含む {{domxref("Blob")}} オブジェクト。またこのメソッドにより <code>BlobBuilder</code> はリセットされ、次の <a href="#append">append</a> メソッド呼び出しでは、新しいの空のblobをスタートすることができます。</p>
+{{domxref("Blob")}} オブジェクトで、 `BlobBuilder` が作成されてから行われた [`append()`](#append) への呼び出しに渡されたすべてのデータを含むものです。また、これは `BlobBuilder` をリセットし、次に [`append()`](#append) を呼び出すと、新しい空の blob が開始されるようにします。
 
-<h3 id="getFile_non-standard_inline">getFile() {{non-standard_inline}}</h3>
+### getFile() {{non-standard_inline}}
 
-<p>{{domxref("File")}} オブジェクトを返します。</p>
+{{domxref("File")}} オブジェクトを返します。
 
-<pre class="syntaxbox notranslate">File getFile(
+```js
+File getFile(
   in DOMString name,
   [optional] in DOMString contentType
 );
-</pre>
+```
 
-<h6 id="パラメータ_3">パラメータ</h6>
+#### 引数
 
-<dl>
- <dt>name</dt>
- <dd>ファイル名。</dd>
- <dt>contentType {{optional_inline}}</dt>
- <dd>{{domxref("File")}} の中で返されるデータのMIMEタイプ。これは <code>File</code> オブジェクトのtype プロパティの値になります。</dd>
-</dl>
+- `name`
+  - : ファイル名です。
+- `contentType` {{optional_inline}}
+  - : {{domxref("File")}} で返されるデータの MIME タイプを指定します。これは `File` オブジェクトの type プロパティの値になります。
 
-<h6 id="戻り値_2">戻り値</h6>
+#### 返値
 
-<p>{{domxref("File")}} オブジェクト。</p>
+{{domxref("File")}} オブジェクトです。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## 仕様書
 
+この機能はどの仕様にも含まれていません。標準化される予定もありません。
 
+## ブラウザーの互換性
 
-<p>{{Compat("api.BlobBuilder")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder", "File API Specification: BlobBuilder", "ED")}}</li>
- <li>{{domxref("Blob")}}</li>
- <li>{{domxref("File")}}</li>
-</ul>
+- {{domxref("Blob")}}
+- {{domxref("File")}}
