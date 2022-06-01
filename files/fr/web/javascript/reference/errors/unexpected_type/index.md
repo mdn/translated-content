@@ -16,8 +16,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Unexpected_type
 ```
 TypeError: Unable to get property {x} of undefined or null reference (Edge)
 TypeError: "x" is (not) "y" (Firefox)
+```
 
-Examples:
+Exemples&nbsp;:
+
+```
 TypeError: "x" is undefined
 TypeError: "x" is null
 TypeError: "undefined" is not an object

@@ -14,15 +14,15 @@ original_slug: Web/JavaScript/Reference/Erreurs/Strict_Non_Simple_Params
 ## Message
 
 ```
-Edge:
+Edge :
 Cannot apply strict mode on functions with non-simple parameter list
 
-Firefox:
+Firefox :
 SyntaxError: "use strict" not allowed in function with default parameter
 SyntaxError: "use strict" not allowed in function with rest parameter
 SyntaxError: "use strict" not allowed in function with destructuring parameter
 
-Chrome:
+Chrome :
 SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
 ```
 
