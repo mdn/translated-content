@@ -5,7 +5,7 @@ translation_of: Web/CSS/flex-direction
 ---
 <p>{{ CSSRef("CSS Flexible Boxes") }}</p>
 
-<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <code><strong>flex-direction</strong></code> 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向(正方向或反方向)。</p>
+<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <code><strong>flex-direction</strong></code> 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。</p>
 
 <pre><code>/* The direction text is laid out in a line */
 flex-direction: row;
@@ -24,25 +24,25 @@ flex-direction: inherit;
 flex-direction: initial;
 flex-direction: unset;</code></pre>
 
-<p>请注意，值 <code>row</code> 和 <code>row-reverse</code> 受 flex 容器的方向性的影响。 如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。</p>
+<p>请注意，值 <code>row</code> 和 <code>row-reverse</code> 受 flex 容器的方向性的影响。如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。</p>
 
 <p>{{cssinfo}}</p>
 
-<p>查看 <a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a> 以了解更多的属性和信息.</p>
+<p>查看 <a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a> 以了解更多的属性和信息。</p>
 
 <h2 id="语法">语法</h2>
 
 <h3 id="取值">取值</h3>
 
-<p>接受以下取值:</p>
+<p>接受以下取值：</p>
 
 <dl>
  <dt><code>row</code></dt>
- <dd>flex容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。</dd>
+ <dd>flex 容器的主轴被定义为与文本方向相同。主轴起点和主轴终点与内容方向相同。</dd>
  <dt><code>row-reverse</code></dt>
- <dd>表现和row相同，但是置换了主轴起点和主轴终点</dd>
+ <dd>表现和 row 相同，但是置换了主轴起点和主轴终点</dd>
  <dt><code>column</code></dt>
- <dd>flex容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同</dd>
+ <dd>flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同</dd>
  <dt><code>column-reverse</code></dt>
  <dd>表现和<code>column</code>相同，但是置换了主轴起点和主轴终点</dd>
  <dt>

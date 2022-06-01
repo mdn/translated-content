@@ -19,7 +19,9 @@ La méthode statique **`String.fromCodePoint()`** renvoie une chaîne de caract�
 
 ## Syntaxe
 
-    String.fromCodePoint(num1[, ...[, numN]])
+```js
+String.fromCodePoint(num1[, ...[, numN]])
+```
 
 ### Paramètres
 

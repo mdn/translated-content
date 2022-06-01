@@ -17,7 +17,9 @@ La fonction **`Math.max()`** renvoie le plus grand nombre d'une série de 0 ou p
 
 ## Syntaxe
 
-    Math.max([valeur1[,valeur2, ...]])
+```js
+Math.max([valeur1[,valeur2, ...]])
+```
 
 ### Paramètres
 

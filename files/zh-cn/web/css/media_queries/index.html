@@ -14,23 +14,23 @@ original_slug: Web/CSS/媒体查询
 
 <p>通过<strong>媒体查询</strong>（<strong>Media queries</strong>），您可以根据各种设备特征和参数的值或者是否存在来调整您的网站或应用。</p>
 
-<p>它们是<a href="/zh-CN/docs/Web/Apps/Progressive/Responsive">响应式设计</a>的关键组成部分。 例如，媒体查询可以缩小小型设备上的字体大小，在纵向模式下查看页面时增加段落之间的填充，或者增加触摸屏上按钮的大小。</p>
+<p>它们是<a href="/zh-CN/docs/Web/Apps/Progressive/Responsive">响应式设计</a>的关键组成部分。例如，媒体查询可以缩小小型设备上的字体大小，在纵向模式下查看页面时增加段落之间的填充，或者增加触摸屏上按钮的大小。</p>
 
-<p>在 CSS 中，使用 {{cssxref("@media")}} <a href="/zh-CN/docs/Web/CSS/At-rule">at-rule</a> 根据媒体查询的结果有条件地应用样式表的一部分。 使用 {{cssxref("@import")}} 有条件地应用整个样式表。</p>
+<p>在 CSS 中，使用 {{cssxref("@media")}} <a href="/zh-CN/docs/Web/CSS/At-rule">at-rule</a> 根据媒体查询的结果有条件地应用样式表的一部分。使用 {{cssxref("@import")}} 有条件地应用整个样式表。</p>
 
 <h3 id="在_HTML_中使用媒体查询">在 HTML 中使用媒体查询</h3>
 
 <p>在 <a href="/zh-CN/docs/Web/HTML">HTML </a>中，媒体查询可以应用于各种元素：</p>
 
 <ul>
- <li>在{{HTMLElement("link")}}元素的{{htmlattrxref("media", "link")}}属性中，它们定义了待应用链接资源（通常是CSS）的媒体。</li>
+ <li>在{{HTMLElement("link")}}元素的{{htmlattrxref("media", "link")}}属性中，它们定义了待应用链接资源（通常是 CSS）的媒体。</li>
  <li>在{{HTMLElement("source")}}元素的{{htmlattrxref("media", "source")}}属性中，它们定义待应用源的媒体。 （这仅在{{HTMLElement("picture")}}元素内有效。）</li>
  <li>在{{HTMLElement("style")}}元素的{{htmlattrxref("media", "style")}}属性中，它们定义待应用样式的媒体。</li>
 </ul>
 
 <h3 id="在_JavaScript_中使用媒体查询">在 JavaScript 中使用媒体查询</h3>
 
-<p>在<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>中，您可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。 您还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。 借助此功能，您的站点或应用可以响应设备配置，方向或状态的更改。</p>
+<p>在<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>中，您可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。您还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。借助此功能，您的站点或应用可以响应设备配置，方向或状态的更改。</p>
 
 <p>您可以学习更多以编程方式使用媒体查询在<a href="/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries">测试媒体查询</a>中。</p>
 

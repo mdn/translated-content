@@ -17,7 +17,9 @@ La méthode **`next()`** renvoie un objet possédant deux propriétés `done` et
 
 ## Syntaxe
 
-    gen.next(valeur)
+```js
+gen.next(valeur)
+```
 
 ### Paramètres
 

@@ -17,7 +17,9 @@ La méthode **`reduceRight()`** applique une fonction sur un accumulateur et cha
 
 ## Syntaxe
 
-    typedarray.reduceRight(callback[, valeurInitiale])
+```js
+typedarray.reduceRight(callback[, valeurInitiale])
+```
 
 ### Paramètres
 

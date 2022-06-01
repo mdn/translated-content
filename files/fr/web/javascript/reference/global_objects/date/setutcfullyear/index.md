@@ -18,7 +18,9 @@ La méthode **`setUTCFullYear()`** définit l'année complête pour la date, sel
 
 ## Syntaxe
 
-    dateObj.setUTCFullYear(valeurAnnée[, valeurMois[, valeurJour]])
+```js
+dateObj.setUTCFullYear(valeurAnnée[, valeurMois[, valeurJour]])
+```
 
 ### Paramètres
 

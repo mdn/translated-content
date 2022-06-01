@@ -17,8 +17,10 @@ La méthode **`toSource()`** renvoie une chaine de caractères représentant le 
 
 ## Syntaxe
 
-    booleanObj.toSource()
-    Boolean.toSource()
+```js
+booleanObj.toSource()
+Boolean.toSource()
+```
 
 ### Valeur de retour
 

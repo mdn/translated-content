@@ -17,7 +17,9 @@ La méthode **`return()`** renvoie la valeur fournie et termine le générateur.
 
 ## Syntaxe
 
-    gen.return(valeur)
+```js
+gen.return(valeur)
+```
 
 ### Paramètres
 
