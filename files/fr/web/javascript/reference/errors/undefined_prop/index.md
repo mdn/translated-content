@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Undefined_prop
 
 ## Message
 
-    ReferenceError: reference to undefined property "x" (Firefox)
+```
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
 ## Type d'erreur
 
