@@ -13,8 +13,6 @@ translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}</div>
 
-
-
 <h2 id="相依性(Associativity)">相依性(Associativity)</h2>
 
 <p>當優先序相同時，使用相依性決定運算方向。範例如下：</p>
@@ -27,11 +25,11 @@ translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 <pre class="brush: js">a = b = 5;
 </pre>
 
-<p><code>a</code> 和 <code>b</code> 的預期結果為 5，因為賦值運算符 (Assignment operator) 為右相依性，因此從右至左返回值。一開始 <code>b</code> 被設定為 5，接著 <code>a</code> 也被設定為 5。</p>
+<p><code>a</code> 和 <code>b</code> 的預期結果為 5，因為賦值運算符 (Assignment operator) 為右相依性，因此從右至左返回值。一開始 <code>b</code> 被設定為 5，接著 <code>a</code> 也被設定為 5。</p>
 
 <h2 id="表格(Table)">表格(Table)</h2>
 
-<p>下方表格列出運算子的相依性，從高 (20) 到低 (1)。</p>
+<p>下方表格列出運算子的相依性，從高 (19) 到低 (1)。</p>
 
 <table class="fullwidth-table">
  <tbody>
@@ -46,19 +44,19 @@ translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
     Individual operators</th>
   </tr>
   <tr>
-   <td>20</td>
-   <td>{{jsxref("Operators/Grouping", "Grouping")}}</td>
+   <td>19</td>
+   <td>{{jsxref("Operators/Grouping", "Grouping", "", 1)}}</td>
    <td>無</td>
    <td><code>( … )</code></td>
   </tr>
   <tr>
-   <td colspan="1" rowspan="4">19</td>
-   <td>{{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation")}}</td>
+   <td rowspan="5">18</td>
+   <td>{{jsxref("Operators/Property_Accessors", "Member Access", "#dot_notation", 1)}}</td>
    <td>從左至右</td>
    <td><code>… . …</code></td>
   </tr>
   <tr>
-   <td>{{jsxref("Operators/Property_Accessors", "Computed Member Access","#Bracket_notation")}}</td>
+   <td>{{jsxref("Operators/Property_Accessors", "Computed Member Access", "#bracket_notation", 1)}}</td>
    <td>從左至右</td>
    <td><code>… [ … ]</code></td>
   </tr>
@@ -68,249 +66,259 @@ translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
    <td><code>new … ( … )</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions">呼叫函式</a></td>
    <td>從左至右</td>
-   <td><code>… ( <var>… </var>)</code></td>
+   <td><code>… ( <var>… </var>)</code></td>
   </tr>
   <tr>
-   <td rowspan="1">18</td>
-   <td>{{jsxref("Operators/new","new")}} (without argument list)</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining">可選串連（Optional chaining）</a></td>
+   <td>從左至右</td>
+   <td><code>?.</code></td>
+  </tr>
+  <tr>
+   <td>17</td>
+   <td>{{jsxref("Operators/new","new")}} (without argument list)</td>
    <td>從右至左</td>
    <td><code>new …</code></td>
   </tr>
   <tr>
-   <td rowspan="2">17</td>
-   <td>{{jsxref("Operators/Arithmetic_Operators","Postfix Increment","#Increment")}}</td>
-   <td colspan="1" rowspan="2">無</td>
+   <td rowspan="2">16</td>
+   <td>{{jsxref("Operators","字尾遞增","#遞增與遞減", 1)}}</td>
+   <td rowspan="2">無</td>
    <td><code>… ++</code></td>
   </tr>
   <tr>
-   <td>{{jsxref("Operators/Arithmetic_Operators","Postfix Decrement","#Decrement")}}</td>
+   <td>{{jsxref("Operators","字尾遞減","#遞增與遞減", 1)}}</td>
    <td><code>… --</code></td>
   </tr>
   <tr>
-   <td colspan="1" rowspan="10">16</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">Logical NOT</a></td>
-   <td colspan="1" rowspan="10">從右至左</td>
+   <td rowspan="10">15</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_NOT">Logical NOT</a></td>
+   <td rowspan="10">從右至左</td>
    <td><code>! …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT">Bitwise NOT</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">Bitwise NOT</a></td>
    <td><code>~ …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">Unary Plus</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary Plus</a></td>
    <td><code>+ …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation">Unary Negation</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary Negation</a></td>
    <td><code>- …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">Prefix Increment</a></td>
+   <td>{{jsxref("Operators","字首遞增","#遞增與遞減", 1)}}</td>
    <td><code>++ …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement">Prefix Decrement</a></td>
+   <td>{{jsxref("Operators","字首遞減","#遞增與遞減", 1)}}</td>
    <td><code>-- …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></td>
+   <td>{{jsxref("Operators/typeof", "typeof")}}</td>
    <td><code>typeof …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></td>
+   <td>{{jsxref("Operators/void", "void")}}</td>
    <td><code>void …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></td>
+   <td>{{jsxref("Operators/delete", "delete")}}</td>
    <td><code>delete …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></td>
+   <td>{{jsxref("Operators/await", "await")}}</td>
    <td><code>await …</code></td>
   </tr>
   <tr>
-   <td>15</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Exponentiation</a></td>
+   <td>14</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation</a></td>
    <td>從右至左</td>
    <td><code>… ** …</code></td>
   </tr>
   <tr>
-   <td rowspan="3">14</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication">Multiplication</a></td>
-   <td colspan="1" rowspan="3">從左至右</td>
-   <td><code>… * …</code></td>
+   <td rowspan="3">13</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication</a></td>
+   <td rowspan="3">從左至右</td>
+   <td><code>… * …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">Division</a></td>
-   <td><code>… / …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Division">Division</a></td>
+   <td><code>… / …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder">Remainder</a></td>
-   <td><code>… % …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder</a></td>
+   <td><code>… % …</code></td>
   </tr>
   <tr>
-   <td rowspan="2">13</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">Addition</a></td>
-   <td colspan="1" rowspan="2">從左至右</td>
-   <td><code>… + …</code></td>
+   <td rowspan="2">12</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition">Addition</a></td>
+   <td rowspan="2">從左至右</td>
+   <td><code>… + …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction">Subtraction</a></td>
-   <td><code>… - …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction</a></td>
+   <td><code>… - …</code></td>
   </tr>
   <tr>
-   <td rowspan="3">12</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Left Shift</a></td>
-   <td colspan="1" rowspan="3">從左至右</td>
-   <td><code>… &lt;&lt; …</code></td>
+   <td rowspan="3">11</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Left_shift">Bitwise Left Shift</a></td>
+   <td rowspan="3">從左至右</td>
+   <td><code>… &lt;&lt; …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Right Shift</a></td>
-   <td><code>… &gt;&gt; …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Right_shift">Bitwise Right Shift</a></td>
+   <td><code>… &gt;&gt; …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Unsigned Right Shift</a></td>
-   <td><code>… &gt;&gt;&gt; …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Bitwise Unsigned Right Shift</a>
+   </td>
+   <td><code>… &gt;&gt;&gt; …</code></td>
   </tr>
   <tr>
-   <td rowspan="6">11</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator">Less Than</a></td>
-   <td colspan="1" rowspan="6">從左至右</td>
-   <td><code>… &lt; …</code></td>
+   <td rowspan="6">10</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Less_than">Less Than</a></td>
+   <td rowspan="6">從左至右</td>
+   <td><code>… &lt; …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator">Less Than Or Equal</a></td>
-   <td><code>… &lt;= …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less Than Or Equal</a></td>
+   <td><code>… &lt;= …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator">Greater Than</a></td>
-   <td><code>… &gt; …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater Than</a></td>
+   <td><code>… &gt; …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator">Greater Than Or Equal</a></td>
-   <td><code>… &gt;= …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater Than Or Equal</a></td>
+   <td><code>… &gt;= …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in">in</a></td>
-   <td><code>… in …</code></td>
+   <td>{{jsxref("Operators/in", "in")}}</td>
+   <td><code>… in …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></td>
-   <td><code>… instanceof …</code></td>
+   <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+   <td><code>… instanceof …</code></td>
   </tr>
   <tr>
-   <td rowspan="4">10</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">Equality</a></td>
-   <td colspan="1" rowspan="4">從左至右</td>
-   <td><code>… == …</code></td>
+   <td rowspan="4">9</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Equality">Equality</a></td>
+   <td rowspan="4">從左至右</td>
+   <td><code>… == …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality">Inequality</a></td>
-   <td><code>… != …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Inequality">Inequality</a></td>
+   <td><code>… != …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">Strict Equality</a></td>
-   <td><code>… === …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict Equality</a></td>
+   <td><code>… === …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity">Strict Inequality</a></td>
-   <td><code>… !== …</code></td>
-  </tr>
-  <tr>
-   <td>9</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND">Bitwise AND</a></td>
-   <td>從左至右</td>
-   <td><code>… &amp; …</code></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict Inequality</a></td>
+   <td><code>… !== …</code></td>
   </tr>
   <tr>
    <td>8</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">Bitwise XOR</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">Bitwise AND</a></td>
    <td>從左至右</td>
-   <td><code>… ^ …</code></td>
+   <td><code>… &amp; …</code></td>
   </tr>
   <tr>
    <td>7</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR">Bitwise OR</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR">Bitwise XOR</a></td>
    <td>從左至右</td>
-   <td><code>… | …</code></td>
+   <td><code>… ^ …</code></td>
   </tr>
   <tr>
    <td>6</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">Logical AND</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_OR">Bitwise OR</a></td>
    <td>從左至右</td>
-   <td><code>… &amp;&amp; …</code></td>
+   <td><code>… | …</code></td>
   </tr>
   <tr>
    <td>5</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">Logical OR</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_AND">Logical AND</a></td>
    <td>從左至右</td>
-   <td><code>… || …</code></td>
+   <td><code>… &amp;&amp; …</code></td>
   </tr>
   <tr>
-   <td>4</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Conditional</a></td>
+   <td rowspan="2">4</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR</a></td>
+   <td>從左至右</td>
+   <td><code>… || …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Nullish Coalescing</a></td>
+   <td>從左至右</td>
+   <td><code>… ?? …</code></td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">條件運算</a></td>
    <td>從右至左</td>
    <td><code>… ? … : …</code></td>
   </tr>
   <tr>
-   <td rowspan="13">3</td>
-   <td rowspan="13"><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Assignment</a></td>
-   <td rowspan="13">從右至左</td>
-   <td><code>… = …</code></td>
+   <td rowspan="16">2</td>
+   <td rowspan="16"><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators#賦值運算子">賦值</a></td>
+   <td rowspan="16">從右至左</td>
+   <td><code>… = …</code></td>
   </tr>
   <tr>
-   <td><code>… += …</code></td>
+   <td><code>… += …</code></td>
   </tr>
   <tr>
-   <td><code>… -= …</code></td>
+   <td><code>… -= …</code></td>
   </tr>
   <tr>
-   <td><code>… **= …</code></td>
+   <td><code>… **= …</code></td>
   </tr>
   <tr>
-   <td><code>… *= …</code></td>
+   <td><code>… *= …</code></td>
   </tr>
   <tr>
-   <td><code>… /= …</code></td>
+   <td><code>… /= …</code></td>
   </tr>
   <tr>
-   <td><code>… %= …</code></td>
+   <td><code>… %= …</code></td>
   </tr>
   <tr>
-   <td><code>… &lt;&lt;= …</code></td>
+   <td><code>… &lt;&lt;= …</code></td>
   </tr>
   <tr>
-   <td><code>… &gt;&gt;= …</code></td>
+   <td><code>… &gt;&gt;= …</code></td>
   </tr>
   <tr>
-   <td><code>… &gt;&gt;&gt;= …</code></td>
+   <td><code>… &gt;&gt;&gt;= …</code></td>
   </tr>
   <tr>
-   <td><code>… &amp;= …</code></td>
+   <td><code>… &amp;= …</code></td>
   </tr>
   <tr>
-   <td><code>… ^= …</code></td>
+   <td><code>… ^= …</code></td>
   </tr>
   <tr>
-   <td><code>… |= …</code></td>
+   <td><code>… |= …</code></td>
   </tr>
   <tr>
-   <td rowspan="2">2</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></td>
-   <td colspan="1" rowspan="2">從右至左</td>
-   <td><code>yield …</code></td>
+   <td><code>… &amp;&amp;= …</code></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield*">yield*</a></td>
-   <td><code>yield* …</code></td>
+   <td><code>… ||= …</code></td>
+  </tr>
+  <tr>
+   <td><code>… ??= …</code></td>
   </tr>
   <tr>
    <td>1</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator">Comma / Sequence</a></td>
+   <td><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Comma_Operator">Comma / Sequence</a></td>
    <td>從左至右</td>
-   <td><code>… , …</code></td>
+   <td><code>… , …</code></td>
   </tr>
  </tbody>
 </table>

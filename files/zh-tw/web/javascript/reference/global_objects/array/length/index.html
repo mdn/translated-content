@@ -7,16 +7,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 
 <p><code><strong>length</strong></code> 為<code>Array物件的屬性</code> ，可供設定或回傳該陣列實體中包含的元素個數。其值必為一大於零、32位元、且恆大於該陣列最大索引數的正整數。</p>
 
-<pre class="brush: js notranslate">var items = ['shoes', 'shirts', 'socks', 'sweaters'];
+<pre class="brush: js">var items = ['shoes', 'shirts', 'socks', 'sweaters'];
 items.length;
 
 // returns 4</pre>
 
 <h2 id="描述">描述</h2>
 
-<p><code>length</code> 屬性的值必為一正整數，其值必介於 0 ～ 2<sup>32</sup> (不包含)之間.</p>
+<p><code>length</code> 屬性的值必為一正整數，其值必介於 0 ～ 2^32 (不包含)之間.</p>
 
-<pre class="brush: js notranslate">var namelistA = new Array(4294967296); //2<sup>32</sup><sup> = </sup>4294967296
+<pre class="brush: js">var namelistA = new Array(4294967296); //2^32 = 4294967296
 var namelistC = new Array(-100) //負數
 
 console.log(namelistA.length); //RangeError: Invalid array length
@@ -25,14 +25,14 @@ console.log(namelistC.length); //RangeError: Invalid array length
 
 
 var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; //將長度設定介於 0 ~ 2<sup>32 </sup>-1
+namelistB.length = Math.pow(2,32)-1; //將長度設定介於 0 ~ 2^32 -1
 console.log(namelistB.length);
 
 //4294967295</pre>
 
 <p>你可以透過改變 <code>length</code> 屬性來改變陣列的長度。當你透過 <code>length</code> 屬性來增加陣列的長度時，陣列中實際的元素也會隨之增加。舉例來說，當你將 array.length 由 2 增加為3，則改動後該陣列即擁有3個元素，該新增的元素則會是一個不可迭代(non-iterable)的空槽(empty slot)。</p>
 
-<pre class="notranslate">const arr = [1, 2];
+<pre>const arr = [1, 2];
 console.log(arr);
 // [ 1, 2 ]
 
@@ -62,7 +62,7 @@ arr.forEach(element =&gt; console.log(element)); // 空元素無法被迭代
 
 <p>以下範例中, 陣列 <code>numbers</code> 透過 <code>length</code> 屬性進行迭代操作，並將其內容值加倍。</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 2, 3, 4, 5];
+<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
 var length = numbers.length;
 for (var i = 0; i &lt; length; i++) {
   numbers[i] *= 2;
@@ -74,7 +74,7 @@ for (var i = 0; i &lt; length; i++) {
 
 <p>以下範例中, 陣列 <code>numbers</code>  的長度若大於 3，則將其長度縮減至 3。</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 2, 3, 4, 5];
+<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
 
 if (numbers.length &gt; 3) {
   numbers.length = 3;

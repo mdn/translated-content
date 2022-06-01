@@ -1,59 +1,43 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Error
-  - EvalError
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 original_slug: Web/JavaScript/Reference/Objets_globaux/EvalError
+browser-compat: javascript.builtins.EvalError
 ---
 {{JSRef}}
 
-L'objet **`EvalError`** indique une erreur concernant la fonction globale {{jsxref("Objets_globaux/eval","eval()")}}. Cette exception n'est plus levée par JavaScript mais l'objet `EvalError` est conservé pour des raisons de compatibilité.
+L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par JavaScript, toutefois, l'objet `EvalError` est toujours présent à des fins de compatibilité.
 
-## Syntaxe
+## Constructeur
 
-    new EvalError([message[, nomFichier[, numeroLigne]]])
+- [`EvalError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError/EvalError)
+  - : Crée un nouvel objet `EvalError`.
 
-### Paramètres
+## Propriétés des instances
 
-- `message`
-  - : Paramètre optionnel, une description compréhensible de l'erreur
-- `nomFichier` {{Non-standard_inline}}
-  - : Paramètre optionnel, le nom du fichier qui contient le code à l'origine de l'exception
-- `numeroLigne` {{Non-standard_inline}}
-  - : Paramètre optionnel, le numéro de la ligne du code qui a entrainé l'exception
-
-## Propriétés
-
-- {{jsxref("EvalError.prototype")}}
-  - : Cette propriété permet l'addition de propriétés à un objet `EvalError`.
-
-## Méthodes
-
-L'objet global `EvalError` ne contient pas de méthodes propres. En revanche, il hérite de certaines méthodes via sa chaîne de prototypes.
-
-## Instances de `EvalError`
-
-### Propriétés
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/EvalError/prototype','Properties')}}
-
-### Méthodes
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/EvalError/prototype','Methods')}}
+- [`EvalError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
+  - : Le message d'erreur.
+- [`EvalError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+  - : Le nom de l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`EvalError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
+  - : Le chemin vers le fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`EvalError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
+  - : Le numéro de la ligne dans le fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`EvalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
+  - : Le numéro de la colonne de la ligne du fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`EvalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+  - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples
 
-`EvalError` n'est pas utilisée par la spécification ECMAScript actuelle et ne sera donc pas levée lors de l'exécution. Cependant, l'objet reste disponible à des fins de compatibilité avec les versions antérieures de la spécification.
+`EvalError` n'est pas utilisée par la spécification ECMAScript actuelle et ne sera donc pas déclenchée par un moteur récent. Toutefois, cet objet reste disponible pour la rétrocompatibilité avec les anciennes versions de la spécification.
 
-### Créer une exception `EvalError`
+### Créer un objet `EvalError`
 
 ```js
 try {
-  throw new EvalError("Coucou", "unFichier.js", 10);
+  throw new EvalError('Coucou', 'unFichier.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
   console.log(e.message);              // "Coucou"
@@ -67,19 +51,13 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                       | Commentaires                                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Définition initiale                                                              |
-| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                                             | {{Spec2('ES5.1')}}     | Non utilisé dans cette spécificaition. Présent à des fins de rétrocompatibilité. |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}         | {{Spec2('ES6')}}         | Non utilisé dans cette spécificaition. Présent à des fins de rétrocompatibilité. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.EvalError")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Error")}}
-- {{jsxref("EvalError.prototype")}}
-- {{jsxref("Objets_globaux/eval", "eval()")}}
+- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)

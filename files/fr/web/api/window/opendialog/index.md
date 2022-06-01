@@ -102,4 +102,4 @@ Voir aussi[window.importDialog()](/fr/DOM/window.importDialog).
 ### Voir également
 
 - [Another example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)
-- [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog) (mobile) {{obsolete_inline}}
+- [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog) (mobile) {{deprecated_inline}}

@@ -17,9 +17,9 @@ tags:
 translation_of: Web/API/Payment_Request_API/Concepts
 original_slug: Web/API/支付_请求_接口/Concepts
 ---
-<p>{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}{{draft}}</p>
+<p>{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}</p>
 
-<p><a href="zh-CN/docs/Web/API/%E6%94%AF%E4%BB%98_%E8%AF%B7%E6%B1%82_%E6%8E%A5%E5%8F%A3">交易请求API</a>使在网站或应用上进行的交易变得更便捷。<span class="seoSummary">在这篇文档中，我们将了解此接口如何运作，以及各个组件的功能。</span></p>
+<p><a href="zh-CN/docs/Web/API/%E6%94%AF%E4%BB%98_%E8%AF%B7%E6%B1%82_%E6%8E%A5%E5%8F%A3">交易请求API</a>使在网站或应用上进行的交易变得更便捷。在这篇文档中，我们将了解此接口如何运作，以及各个组件的功能。</p>
 
 <h2 id="术语">术语</h2>
 
@@ -70,7 +70,7 @@ original_slug: Web/API/支付_请求_接口/Concepts
 
 <ol>
  <li><strong>确保交易正确进行。</strong> 交易正确进行的条件取决于不同的支付类型和用户的支付请求；例如，如果用户选择了信用卡支付，而收款方并不支持这种方式，交易就无法正确进行。</li>
- <li><strong>响应用户代理发起的对商家进行认证的请求（在处理机支持商家认证的前提下）。</strong> 详细说明请参考{{anch("Merchant validation")}}。</li>
+ <li><strong>响应用户代理发起的对商家进行认证的请求（在处理机支持商家认证的前提下）。</strong> 详细说明请参考<a href="#商家认证">商家认证</a>。</li>
  <li><strong>验证用户提交的信息有资格发起一次有效交易。</strong>这一步骤会创建并返回一个基于具体支付方式的对象，此对象包含处理交易所需要的信息。</li>
 </ol>
 

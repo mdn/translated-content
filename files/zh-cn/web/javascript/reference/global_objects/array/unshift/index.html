@@ -13,16 +13,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>unshift()</code></strong> 方法将一个或多个元素添加到数组的<strong>开头</strong>，并返回该数组的<strong>新长度(该</strong>方法修改原有数组<strong>)</strong>。</p>
+<p><strong><code>unshift()</code></strong> 方法将一个或多个元素添加到数组的<strong>开头</strong>，并返回该数组的<strong>新长度</strong>（该方法修改原有数组）。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-unshift.html")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">arr.unshift(element1, ..., elementN)
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数列表</h3>
+<h3 id="Parameters">参数列表</h3>
 
 <dl>
  <dt><code>elementN</code></dt>
@@ -36,13 +36,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 <dl>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>unshift</code> 方法会在调用它的类数组对象的开始位置插入给定的参数。</p>
 
-<p><code>unshift</code> 特意被设计成具有通用性；这个方法能够通过 {{jsxref("Function.call", "call")}} 或 {{jsxref("Function.apply", "apply")}} 方法作用于类数组对象上。<span style="line-height: inherit;">不过对于没有 length 属性（代表从0开始的一系列连续的数字属性的最后一个）的对象，调用该方法可能没有任何意义。</span></p>
+<p><code>unshift</code> 特意被设计成具有通用性；这个方法能够通过 {{jsxref("Function.call", "call")}} 或 {{jsxref("Function.apply", "apply")}} 方法作用于类数组对象上。不过对于没有 length 属性（代表从 0 开始的一系列连续的数字属性的最后一个）的对象，调用该方法可能没有任何意义。</p>
 
-<p>注意, 如果传入多个参数，它们会被以块的形式插入到对象的开始位置，它们的顺序和被作为参数传入时的顺序一致。 于是，传入多个参数调用一次 <code>unshift</code> ，和传入一个参数调用多次 <code>unshift</code> (例如，循环调用)，它们将得到不同的结果。例如:</p>
+<p>注意，如果传入多个参数，它们会被以块的形式插入到对象的开始位置，它们的顺序和被作为参数传入时的顺序一致。 于是，传入多个参数调用一次 <code>unshift</code> ，和传入一个参数调用多次 <code>unshift</code> (例如，循环调用)，它们将得到不同的结果。例如：</p>
 
 <pre class="syntaxbox">let arr = [4,5,6];
 arr.unshift(1,2,3);

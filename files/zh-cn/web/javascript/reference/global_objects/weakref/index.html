@@ -5,37 +5,37 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
 <div>{{JSRef}}</div>
 
-<div></div>
 
-<p>WeakRef对象允许您保留对另一个对象的弱引用，而不会阻止被弱引用对象被GC回收</p>
+
+<p>WeakRef 对象允许您保留对另一个对象的弱引用，而不会阻止被弱引用对象被 GC 回收</p>
 
 <h2 id="描述">描述</h2>
 
-<p>WeakRef对象包含对对象的弱引用，这个弱引用被称为该WeakRef对象的target或者是referent。对对象的弱引用是指当该对象应该被GC回收时不会阻止GC的回收行为。而与此相反的，一个普通的引用（默认是强引用）会将与之对应的对象保存在内存中。只有当该对象没有任何的强引用时，JavaScript引擎GC才会销毁该对象并且回收该对象所占的内存空间。如果上述情况发生了，那么你就无法通过任何的弱引用来获取该对象。</p>
+<p>WeakRef 对象包含对对象的弱引用，这个弱引用被称为该 WeakRef 对象的 target 或者是 referent。对对象的弱引用是指当该对象应该被 GC 回收时不会阻止 GC 的回收行为。而与此相反的，一个普通的引用（默认是强引用）会将与之对应的对象保存在内存中。只有当该对象没有任何的强引用时，JavaScript 引擎 GC 才会销毁该对象并且回收该对象所占的内存空间。如果上述情况发生了，那么你就无法通过任何的弱引用来获取该对象。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 在使用前请阅读<a href="#Avoid_where_possible">Avoid where possible</a>，对于WeakRef对象的使用要慎重考虑，<strong>能不使用就尽量不要使用</strong></p>
+<p><strong>备注：</strong> 在使用前请阅读<a href="#Avoid_where_possible">Avoid where possible</a>，对于 WeakRef 对象的使用要慎重考虑，<strong>能不使用就尽量不要使用</strong></p>
 </div>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{jsxref("WeakRef/WeakRef", "WeakRef()")}}</dt>
- <dd>创建一个WeakRef对象</dd>
+ <dd>创建一个 WeakRef 对象</dd>
 </dl>
 
 <h2 id="实例方法">实例方法</h2>
 
 <dl>
  <dt>{{jsxref("WeakRef.deref", "WeakRef.prototype.deref()")}}</dt>
- <dd>返回当前实例的WeakRef对象所绑定的target对象，如果该target对象已被GC回收则返回<code>undefined</code></dd>
+ <dd>返回当前实例的 WeakRef 对象所绑定的 target 对象，如果该 target 对象已被 GC 回收则返回<code>undefined</code></dd>
 </dl>
 
 <h2 id="为什么尽量避免使用">为什么尽量避免使用</h2>
 
-<p>正确使用WeakRef对象需要仔细的考虑，最好尽量避免使用。避免依赖于规范没有保证的任何特定行为也是十分重要的。何时、如何以及是否发生垃圾回收取决于任何给定JavaScript引擎的实现。<strong>GC在一个JavaScript引擎中的行为有可能在另一个JavaScript引擎中的行为大相径庭，或者甚至在同一类引擎，不同版本中GC的行为都有可能有较大的差距</strong>。GC目前还是JavaScript引擎实现者不断改进和改进解决方案的一个难题。</p>
+<p>正确使用 WeakRef 对象需要仔细的考虑，最好尽量避免使用。避免依赖于规范没有保证的任何特定行为也是十分重要的。何时、如何以及是否发生垃圾回收取决于任何给定 JavaScript 引擎的实现。<strong>GC 在一个 JavaScript 引擎中的行为有可能在另一个 JavaScript 引擎中的行为大相径庭，或者甚至在同一类引擎，不同版本中 GC 的行为都有可能有较大的差距</strong>。GC 目前还是 JavaScript 引擎实现者不断改进和改进解决方案的一个难题。</p>
 
-<p>以下是WeakRef提案的作者在其解释文件（<a href="https://github.com/tc39/proposal-weakrefs/blob/master/README.md">explainer document</a>）中提出的一些具体观点</p>
+<p>以下是 WeakRef 提案的作者在其解释文件（<a href="https://github.com/tc39/proposal-weakrefs/blob/master/README.md">explainer document</a>）中提出的一些具体观点</p>
 
 <blockquote>
 <p><a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">Garbage collectors</a> are complicated. If an application or library depends on GC cleaning up a WeakRef or calling a finalizer [cleanup callback] in a timely, predictable manner, it's likely to be disappointed: the cleanup may happen much later than expected, or not at all. Sources of variability include:</p>
@@ -50,25 +50,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 </ul>
 </blockquote>
 
-<h2 id="关于WeakRefs的说明">关于WeakRefs的说明</h2>
+<h2 id="关于WeakRefs的说明">关于 WeakRefs 的说明</h2>
 
-<p>关于WeakRefs的一些说明</p>
+<p>关于 WeakRefs 的一些说明</p>
 
 <ul>
- <li>如果您的代码刚刚为目标对象创建了WeakRef，或者从WeakRef的deref方法获取了目标对象，在当前JavaScript <a href="https://tc39.es/ecma262/#job">job</a> (包括在脚本作业末尾运行的任何promise reaction作业) 结束之前，不会回收该目标对象。也就是说，您只能“看到”在事件循环的两次循环之间回收的对象。这主要是为了避免在代码中显示任何给定JavaScript引擎的GC行为 ------ 因为如果不这样的话，那么人们会根据这个行为来编写代码，而当GC的行为改变时，就会造成不可预知的后果。(GC是一个棘手的问题；JavaScript引擎实现者依然不断地改进和改进它的工作方式)</li>
- <li>如果多个<code>WeakRef</code>s 有相同的目标，那么他们的target对象是一样的。对其中一个调用deref的结果将与对另一个调用deref的结果匹配（在同一个作业中），您不会从其中一个获取目标对象，而是从另一个获取未定义的对象。</li>
- <li>如果一个对象是WeakRef的target,又是in a {{jsxref("FinalizationRegistry")}},那么该target就会在调用与注册表关联的任何清理回调之前或者同时被清理。如果清理回调调用对象的WeakRef上的deref，它将收到<code>undefined</code></li>
- <li>你不能更改WeakRef的target，它将始终是第一次指定的target或者在回收该target时会定义</li>
- <li>WeakRef可能永远不会从deref返回undefined，即使没有什么东西能很好地保存target，因为GC可能永远不会决定回收对象。</li>
+ <li>如果您的代码刚刚为目标对象创建了 WeakRef，或者从 WeakRef 的 deref 方法获取了目标对象，在当前 JavaScript <a href="https://tc39.es/ecma262/#job">job</a> (包括在脚本作业末尾运行的任何 promise reaction 作业) 结束之前，不会回收该目标对象。也就是说，您只能“看到”在事件循环的两次循环之间回收的对象。这主要是为了避免在代码中显示任何给定 JavaScript 引擎的 GC 行为 ------ 因为如果不这样的话，那么人们会根据这个行为来编写代码，而当 GC 的行为改变时，就会造成不可预知的后果。(GC 是一个棘手的问题；JavaScript 引擎实现者依然不断地改进和改进它的工作方式)</li>
+ <li>如果多个<code>WeakRef</code>s 有相同的目标，那么他们的 target 对象是一样的。对其中一个调用 deref 的结果将与对另一个调用 deref 的结果匹配（在同一个作业中），您不会从其中一个获取目标对象，而是从另一个获取未定义的对象。</li>
+ <li>如果一个对象是 WeakRef 的 target，又是 in a {{jsxref("FinalizationRegistry")}},那么该 target 就会在调用与注册表关联的任何清理回调之前或者同时被清理。如果清理回调调用对象的 WeakRef 上的 deref，它将收到<code>undefined</code></li>
+ <li>你不能更改 WeakRef 的 target，它将始终是第一次指定的 target 或者在回收该 target 时会定义</li>
+ <li>WeakRef 可能永远不会从 deref 返回 undefined，即使没有什么东西能很好地保存 target，因为 GC 可能永远不会决定回收对象。</li>
 </ul>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="使用WeakRef对象">使用WeakRef对象</h3>
+<h3 id="使用WeakRef对象">使用 WeakRef 对象</h3>
 
-<p>这个例子演示了在一个DOM元素中启动一个计数器，当这个元素不存在时停止:</p>
+<p>这个例子演示了在一个 DOM 元素中启动一个计数器，当这个元素不存在时停止：</p>
 
-<pre class="brush: js notranslate">class Counter {
+<pre class="brush: js">class Counter {
   constructor(element) {
     // Remember a weak reference to the DOM element
     this.ref = new WeakRef(element);

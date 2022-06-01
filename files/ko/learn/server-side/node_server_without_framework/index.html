@@ -19,7 +19,7 @@ original_slug: Node_server_without_framework
 
 <p>다음은 짧고 간단한 정적 파일 nodejs 서버입니다.</p>
 
-<pre>var http = require('http');
+<pre class="brush: js">var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -27,42 +27,42 @@ http.createServer(function (request, response) {
     console.log('request ', request.url);
 
     var filePath = '.' + request.url;
-    if (filePath == './')
+    if (filePath == './') {
         filePath = './index.html';
+    }
 
     var extname = String(path.extname(filePath)).toLowerCase();
-    var contentType = 'text/html';
     var mimeTypes = {
-        '.html': 'text/html',
+        '.html': 'text/html',
         '.js': 'text/javascript',
         '.css': 'text/css',
         '.json': 'application/json',
         '.png': 'image/png',
         '.jpg': 'image/jpg',
         '.gif': 'image/gif',
+        '.svg': 'image/svg+xml',
         '.wav': 'audio/wav',
         '.mp4': 'video/mp4',
         '.woff': 'application/font-woff',
         '.ttf': 'application/font-ttf',
         '.eot': 'application/vnd.ms-fontobject',
         '.otf': 'application/font-otf',
-        '.svg': 'application/image/svg+xml'
+        '.wasm': 'application/wasm'
     };
 
-    contentType = mimeTypes[extname] || 'application/octet-stream';
+    var contentType = mimeTypes[extname] || 'application/octet-stream';
 
     fs.readFile(filePath, function(error, content) {
         if (error) {
-            if(error.code == 'ENOENT'){
+            if(error.code == 'ENOENT') {
                 fs.readFile('./404.html', function(error, content) {
-                    response.writeHead(200, { 'Content-Type': contentType });
+                    response.writeHead(404, { 'Content-Type': 'text/html' });
                     response.end(content, 'utf-8');
                 });
             }
             else {
                 response.writeHead(500);
                 response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
-                response.end();
             }
         }
         else {

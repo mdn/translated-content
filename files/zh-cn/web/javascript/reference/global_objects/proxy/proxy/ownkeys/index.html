@@ -24,16 +24,16 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys
 
 <h3 id="参数">参数</h3>
 
-<p>下面的参数被传递给<code>ownKeys。this</code>被绑定在<code>handler上。</code></p>
+<p>下面的参数被传递给 ownKeys。<code>this</code> 被绑定在 <code>handler</code> 上。</p>
 
 <dl>
  <dt><code>target</code></dt>
- <dd>目标对象.</dd>
+ <dd>目标对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>ownKeys</code> 方法必须返回一个可枚举对象.</p>
+<p><code>ownKeys</code> 方法必须返回一个可枚举对象。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -52,13 +52,13 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys
 
 <h3 id="约束">约束</h3>
 
-<p>如果违反了下面的约束，proxy将抛出错误 {{jsxref("TypeError")}}:</p>
+<p>如果违反了下面的约束，proxy 将抛出错误 {{jsxref("TypeError")}}:</p>
 
 <ul>
- <li><code>ownKeys</code> 的结果必须是一个数组.</li>
+ <li><code>ownKeys</code> 的结果必须是一个数组。</li>
  <li>数组的元素类型要么是一个 {{jsxref("String")}} ，要么是一个 {{jsxref("Symbol")}}.</li>
- <li>结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的key.</li>
- <li>如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的key，不能有其它值.</li>
+ <li>结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的 key.</li>
+ <li>如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的 key，不能有其它值。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -93,7 +93,7 @@ var p = new Proxy(obj, {
 console.log(Object.getOwnPropertyNames(p));
 
 // TypeError: proxy [[OwnPropertyKeys]] 必须返回一个数组
-// 数组元素类型只能是String或Symbol
+// 数组元素类型只能是 String 或 Symbol
 </pre>
 
 <h2 id="标准">标准</h2>
@@ -118,68 +118,20 @@ console.log(Object.getOwnPropertyNames(p));
  </tbody>
 </table>
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="兼容性注意事项">兼容性注意事项</h2>
 
-<h3 id="Firefox火狐">Firefox火狐</h3>
+<h3 id="Firefox_火狐">Firefox 火狐</h3>
 
 <ul>
- <li>在Gecko 42 {{geckoRelease(42)}}版本中, <code>ownKey</code> 的实施已经更新了，为了反映最终的ES5标准 (see {{bug(1049662)}}):
+ <li>在 Gecko 42 {{geckoRelease(42)}} 版本中，<code>ownKey</code> 的实施已经更新了，为了反映最终的 ES5 标准 (see {{bug(1049662)}}):
 
   <ul>
-   <li>现在需要检查结果是不是数组以及数组元素类型是不是string或symbol.</li>
-   <li>枚举重复的自有的属性名称不再失败.</li>
+   <li>现在需要检查结果是不是数组以及数组元素类型是不是 string 或 symbol。</li>
+   <li>枚举重复的自有的属性名称不再失败。</li>
   </ul>
  </li>
 </ul>

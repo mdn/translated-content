@@ -10,30 +10,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 <div>{{JSRef}}</div>
 
-<div></div>
+<div><code><strong>finally()</strong></code> 方法返回一个 {{jsxref("Promise")}}。在 promise 结束时，无论结果是 fulfilled 或者是 rejected，都会执行指定的回调函数。这为在 <code>Promise</code> 是否成功完成后都需要执行的代码提供了一种方式。</div>
 
-<div><code><strong>finally()</strong></code> 方法返回一个{{jsxref("Promise")}}。在promise结束时，无论结果是fulfilled或者是rejected，都会执行指定的回调函数。这为在<code>Promise</code>是否成功完成后都需要执行的代码提供了一种方式。</div>
-
-<div>这避免了同样的语句需要在{{jsxref("Promise.then", "then()")}}和{{jsxref("Promise.catch", "catch()")}}中各写一次的情况。</div>
+<div>这避免了同样的语句需要在 {{jsxref("Promise.then", "then()")}} 和 {{jsxref("Promise.catch", "catch()")}} 中各写一次的情况。</div>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox"><var>p.finally(onFinally)</var>;
 
 p.finally(function() {
-   // 返回状态为(resolved 或 rejected)
+   // 返回状态为 (resolved 或 rejected)
 });</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>onFinally</code></dt>
- <dd><code>Promise</code> 结束后调用的{{jsxref("Function")}}。</dd>
+ <dd><code>Promise</code> 结束后调用的 {{jsxref("Function")}}。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个设置了 <code>finally</code> 回调函数的{{jsxref("Promise")}}对象。 </p>
+<p>返回一个设置了 <code>finally</code> 回调函数的 {{jsxref("Promise")}} 对象。 </p>
 
 <h2 id="描述">描述</h2>
 
@@ -43,13 +41,13 @@ p.finally(function() {
 
 <ul>
  <li>调用内联函数时，不需要多次声明该函数或为该函数创建一个变量保存它。</li>
- <li>由于无法知道<code>promise</code>的最终状态，所以<code>finally</code>的回调函数中不接收任何参数，它仅用于无论最终结果如何都要执行的情况。</li>
- <li>与<code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> （resolved的结果为<code>undefined</code>）不同，<code>Promise.resolve(2).finally(() =&gt; {})</code> resolved的结果为 <code>2</code>。</li>
- <li>同样，<code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (fulfilled的结果为<code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> rejected 的结果为 <code>3</code>。</li>
+ <li>由于无法知道 <code>promise</code> 的最终状态，所以 <code>finally</code> 的回调函数中不接收任何参数，它仅用于无论最终结果如何都要执行的情况。</li>
+ <li>与<code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code>（resolved 的结果为<code>undefined</code>）不同，<code>Promise.resolve(2).finally(() =&gt; {})</code> resolved 的结果为 <code>2</code>。</li>
+ <li>同样，<code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (fulfilled 的结果为<code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> rejected 的结果为 <code>3</code>。</li>
 </ul>
 
 <div class="note">
-<p><strong>注意:</strong> 在<code>finally</code>回调中 <code>throw</code>（或返回被拒绝的promise）将以 <code>throw()</code> 指定的原因拒绝新的promise.</p>
+<p><strong>备注：</strong> 在 <code>finally</code> 回调中 <code>throw</code>（或返回被拒绝的 promise）将以 <code>throw()</code> 指定的原因拒绝新的 promise.</p>
 </div>
 
 <h2 id="示例">示例</h2>

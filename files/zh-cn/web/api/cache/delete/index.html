@@ -8,7 +8,7 @@ translation_of: Web/API/Cache/delete
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("Cache")}} 接口的 <strong><code>delete()</code></strong> 方法查询request为key的 {{domxref("Cache")}} 条目，如果找到，则删除该 {{domxref("Cache")}} 条目并返回resolve为true的 {{jsxref("Promise")}} 。 如果没有找到，则返回resolve为false的 {{jsxref("Promise")}} 。</p>
+<p>{{domxref("Cache")}} 接口的 <strong><code>delete()</code></strong> 方法查询 request 为 key 的 {{domxref("Cache")}} 条目，如果找到，则删除该 {{domxref("Cache")}} 条目并返回 resolve 为 true 的 {{jsxref("Promise")}} 。 如果没有找到，则返回 resolve 为 false 的 {{jsxref("Promise")}} 。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Cache/delete
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果cache条目被删除，则返回resolve为true的 {{jsxref("Promise")}}，否则，返回resolve为false的 {{jsxref("Promise")}}。</p>
+<p>如果 cache 条目被删除，则返回 resolve 为 true 的 {{jsxref("Promise")}}，否则，返回 resolve 为 false 的 {{jsxref("Promise")}}。</p>
 
 <h3 id="参数">参数</h3>
 
@@ -29,9 +29,9 @@ translation_of: Web/API/Cache/delete
  <dt>options {{optional_inline}}</dt>
  <dd>一个对象，其属性控制删除操作中如何处理匹配缓存。可用的选项是：
  <ul>
-  <li><code>ignoreSearch</code>: 一个 {{domxref("Boolean")}} 值，指定匹配进程中是否忽略url中的查询字符串。如果设置为true，<code>http://foo.com/?value=bar 中的 ?value=bar 部分在执行匹配时会被忽略。默认为false。</code></li>
-  <li><code>ignoreMethod</code>: 一个 {{domxref("Boolean")}} 值，当设置为true时，将阻止匹配操作验证{domxref("Request")}} <code>HTTP方法（通常只允许GET和HEAD）。默认为false。</code></li>
-  <li><code>ignoreVary</code>: 一个 {{domxref("Boolean")}} 值，当设置为true时，告诉匹配操作不执行<code>VARY头匹配。</code>In other words, if the URL matches you will get a match regardless of  whether the {{domxref("Response")}} object has a <code>VARY</code> header. <code>默认为false。</code></li>
+  <li><code>ignoreSearch</code>: 一个 {{domxref("Boolean")}} 值，指定匹配进程中是否忽略 url 中的查询字符串。如果设置为 true，<code>http://foo.com/?value=bar 中的 ?value=bar 部分在执行匹配时会被忽略。默认为 false。</code></li>
+  <li><code>ignoreMethod</code>: 一个 {{domxref("Boolean")}} 值，当设置为 true 时，将阻止匹配操作验证{domxref("Request")}} <code>HTTP 方法（通常只允许 GET 和 HEAD）。默认为 false。</code></li>
+  <li><code>ignoreVary</code>: 一个 {{domxref("Boolean")}} 值，当设置为 true 时，告诉匹配操作不执行<code>VARY 头匹配。</code>In other words, if the URL matches you will get a match regardless of  whether the {{domxref("Response")}} object has a <code>VARY</code> header. <code>默认为 false。</code></li>
   <li><code>cacheName</code>: A {{domxref("DOMString")}} that represents a specific cache to search within. Note that this option is ignored by <code>Cache.delete()</code>.</li>
  </ul>
  </dd>
@@ -47,99 +47,11 @@ translation_of: Web/API/Cache/delete
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(39)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(24)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>All options supported</td>
-   <td>{{CompatChrome(54.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatOpera(41)}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(39)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>All options supported</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatOperaMobile(41)}}</td>
-   <td> </td>
-   <td>{{CompatChrome(54.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The options parameter only supports <code>ignoreSearch</code>, and <code>cacheName</code>. </p>
-
-<p>[2] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.Cache.delete")}}
 
 <h2 id="参见">参见</h2>
 

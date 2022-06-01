@@ -26,21 +26,21 @@ Le menu de deuxième niveau est positionné en absolu à l'intérieur de son él
 
 Ainsi donc, un menu de troisième niveau s'empilera sous les menus de deuxième niveau suivants, car tous les menus de deuxième niveau partagent la même valeur de `z-index` et que les règles d'empilement par défaut s'appliquent.
 
-Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement :
+Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement&nbsp;:
 
 - Contexte d'empilement racine
 
   - Niveau #1
 
-    - Niveau #2 (z-index : 1)
+    - Niveau #2 (z-index&nbsp;: 1)
 
       - Niveau #3
       - …
       - Niveau #3
 
-    - Niveau #2 (z-index : 1)
+    - Niveau #2 (z-index&nbsp;: 1)
     - …
-    - Niveau #2 (z-index : 1)
+    - Niveau #2 (z-index&nbsp;: 1)
 
   - Niveau #1
   - …

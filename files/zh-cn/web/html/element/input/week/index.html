@@ -11,26 +11,26 @@ translation_of: Web/HTML/Element/input/week
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} 类型为 <strong><code>week</code></strong> 的元素会创建输入字段，以便轻松输入年份以及该年（即第1周到<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>周）的<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> </span></p>
+<p>{{HTMLElement("input")}} 类型为 <strong><code>week</code></strong> 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>周）的<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> </p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">该交互式示例的源存储在GitHub存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发送请求请求。</div>
+<div class="hidden">该交互式示例的源存储在 GitHub 存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发送请求请求。</div>
 
-<p>控件的用户界面因浏览器而异； 跨浏览器的支持目前受到限制，目前只有Chrome / Opera和Microsoft Edge支持。 在不支持的浏览器中，该控件会正常降级，使其功能与 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>相同。</p>
+<p>控件的用户界面因浏览器而异； 跨浏览器的支持目前受到限制，目前只有 Chrome / Opera 和 Microsoft Edge 支持。 在不支持的浏览器中，该控件会正常降级，使其功能与 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>相同。</p>
 
-<p>  在Chrome / Opera中，在<code>week</code>控件提供了用于填写周和年值的插槽，弹出式日历界面（可以更直观地选择它们）以及“ X”按钮以清除控件的值。</p>
+<p>  在 Chrome / Opera 中，在<code>week</code>控件提供了用于填写周和年值的插槽，弹出式日历界面（可以更直观地选择它们）以及 “ X” 按钮以清除控件的值。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15409/week-control-chrome.png" style="display: block; height: 235px; margin: 0px auto; width: 320px;"></p>
 
-<p>Edge的<code>week</code>控制更加精细，使用滚动的滚轮打开周和年的选择器。</p>
+<p>Edge 的<code>week</code>控制更加精细，使用滚动的滚轮打开周和年的选择器。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15411/week-control-edge.png" style="display: block; height: 391px; margin: 0px auto; width: 227px;"></p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a week and year, or empty</td>
   </tr>
   <tr>
@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/input/week
  </tbody>
 </table>
 
-<h2 id="价值">价值</h2>
+<h2 id="值">值</h2>
 
 <p>一个 {{domxref("DOMString")}} 代表输入到输入中的星期/年的值。{{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}} 中描述了此输入类型使用的日期和时间值的格式。</p>
 
@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/input/week
 
 <p>要注意的一件事是，显示的格式可能与<code>value</code>不同，后者始终采用 <code>yyyy-Www</code>格式。 例如，当将上述值提交给服务器时，浏览器可能会将其显示为 <code>Week 01, 2017</code>, 但是提交的值始终看起来像<code>week=2017-W01</code>.</p>
 
-<p>您还可以使用输入元素的 {{domxref("HTMLInputElement.value", "value")}} 属性获取并设置JavaScript中的值，例如：</p>
+<p>您还可以使用输入元素的 {{domxref("HTMLInputElement.value", "value")}} 属性获取并设置 JavaScript 中的值，例如：</p>
 
 <pre class="brush: js">var weekControl = document.querySelector('input[type="week"]');
 weekControl.value = '2017-W45';</pre>
@@ -83,51 +83,51 @@ weekControl.value = '2017-W45';</pre>
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>接受为有效输入的最新年份和星期</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>最早的年和周接受为有效输入</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>一个布尔值（如果存在），指示用户无法编辑字段的内容</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>用于用户界面和约束验证的步进间隔（允许值之间的距离）</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="max">max</h3>
 
-<p>接受以上 {{anch("Value")}} 部分中讨论的字符串格式的最新（按时间）年份和星期数。 如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a>。 如果<code>max</code>属性的值不是有效的周字符串，则该元素没有最大值。</p>
+<p>接受以上 <a href="#值">值</a> 部分中讨论的字符串格式的最新（按时间）年份和星期数。 如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a>。 如果<code>max</code>属性的值不是有效的周字符串，则该元素没有最大值。</p>
 
 <p>此值必须大于或等于<code>min</code> 属性指定的年和周。</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="min">min</h3>
 
 <p>最早接受的年和周。 如果元素的 {{htmlattrxref("value", "input")}}小于此值，则该元素将无法通过 <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a>。 如果为<code>min</code>指定的值不是有效的星期字符串，则输入没有最小值。</p>
 
-<p>该值必须小于或等于 <code>max</code> 属性的值。</p>
+<p>该值必须小于或等于 <code>max</code> 属性的值。</p>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="step">step</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
-<p>对于<code>week</code> 输入， <code>step</code> 的值以周为单位，比例因子为604,800,000（因为基础数值以毫秒为单位）。 <code>step</code>的默认值为1，表示1周。 默认的步进基数是-259,200,000，这是1970年第一周的开始 (<code>"1970-W01"</code>).</p>
+<p>对于<code>week</code> 输入， <code>step</code> 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。 <code>step</code>的默认值为 1，表示 1 周。 默认的步进基数是-259,200,000，这是 1970 年第一周的开始 (<code>"1970-W01"</code>).</p>
 
 <p><em>目前，尚不清楚当与<code>week</code>输入一起使用时，<code>"any"</code> 的值对<code>step</code> 意味着什么。 确定该信息后，将对其进行更新。</em></p>
 
 <h2 id="使用星期输入">使用星期输入</h2>
 
-<p>乍看之下，周输入听起来很方便，因为它们提供了用于选择周的简单UI，并且它们标准化了发送到服务器的数据格式，而与用户的浏览器或区域设置无关。 但是， <code>&lt;input type="week"&gt;</code> 存在问题，因为不能保证所有浏览器都支持浏览器。</p>
+<p>乍看之下，周输入听起来很方便，因为它们提供了用于选择周的简单 UI，并且它们标准化了发送到服务器的数据格式，而与用户的浏览器或区域设置无关。 但是， <code>&lt;input type="week"&gt;</code> 存在问题，因为不能保证所有浏览器都支持浏览器。</p>
 
-<p>我们将研究 <code>&lt;input type="week"&gt;</code>的基本和更复杂的用法，然后在以后提供有关缓解浏览器支持问题的建议（请参阅 {{anch("Handling browser support")}}).</p>
+<p>我们将研究 <code>&lt;input type="week"&gt;</code>的基本和更复杂的用法，然后在以后提供有关缓解浏览器支持问题的建议（请参阅 <a href="#处理浏览器支持">处理浏览器支持</a>).</p>
 
 <h3 id="周的基本用途">周的基本用途</h3>
 
@@ -144,13 +144,13 @@ weekControl.value = '2017-W45';</pre>
 
 <p><code>&lt;input type="week"&gt;</code> 不支持 {{htmlattrxref("size", "input")}}. 您必须依靠<a href="/en-US/docs/Web/CSS">CSS</a>来确定大小 。</p>
 
-<h3 id="使用step属性">使用step属性</h3>
+<h3 id="使用step属性">使用 step 属性</h3>
 
 <p>您应该能够使用{{htmlattrxref("step", "input")}} 属性来更改每次递增或递减的跳转周数，但是这似乎对支持浏览器没有任何影响。</p>
 
 <h2 id="验证方式">验证方式</h2>
 
-<p>默认情况下，<code>&lt;input type="week"&gt;</code> 不会对输入的值应用任何验证。 UI实现通常不允许您指定不是有效的周/年的任何内容，这很有用，但是仍然可以在字段为空的情况下提交，并且您可能希望限制可选择的周数范围。</p>
+<p>默认情况下，<code>&lt;input type="week"&gt;</code> 不会对输入的值应用任何验证。 UI 实现通常不允许您指定不是有效的周/年的任何内容，这很有用，但是仍然可以在字段为空的情况下提交，并且您可能希望限制可选择的周数范围。</p>
 
 <h3 id="设置最大和最小星期">设置最大和最小星期</h3>
 
@@ -165,7 +165,7 @@ weekControl.value = '2017-W45';</pre>
 
 <p>{{EmbedLiveSample('Setting_maximum_and_minimum_weeks', 600, 40)}}</p>
 
-<p>这是上面示例中使用的CSS。 在这里，我们利用{{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS属性根据当前值是否有效来设置输入的样式。 我们必须将图标放在输入旁边的 {{htmlelement("span")}} 上，而不是输入本身上，因为在Chrome中，生成的内容位于表单控件内，无法设置样式或显示 有效。</p>
+<p>这是上面示例中使用的 CSS。 在这里，我们利用{{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS 属性根据当前值是否有效来设置输入的样式。 我们必须将图标放在输入旁边的 {{htmlelement("span")}} 上，而不是输入本身上，因为在 Chrome 中，生成的内容位于表单控件内，无法设置样式或显示 有效。</p>
 
 <pre class="brush: css">div {
   margin-bottom: 10px;
@@ -192,7 +192,7 @@ input:valid+span:after {
   padding-left: 5px;
 }</pre>
 
-<p>结果是，在2017年W01到W52之间只有几周才被视为有效，并且可以在支持的浏览器中选择。</p>
+<p>结果是，在 2017 年 W01 到 W52 之间只有几周才被视为有效，并且可以在支持的浏览器中选择。</p>
 
 <h3 id="使周值成为必需">使周值成为必需</h3>
 
@@ -221,36 +221,36 @@ input:valid+span:after {
 <p><img alt="" src="https://mdn.mozillademos.org/files/15415/week-validation-chrome.png" style="display: block; height: 85px; margin: 0px auto; width: 473px;"></p>
 
 <div class="warning">
-<p><strong>重要提示：</strong>HTML表单验证不能代替脚本来确保输入的数据采用正确的格式。 对于某人来说，对HTML进行调整以使其绕过验证或完全删除验证太容易了。 有人也可以完全绕开您的HTML并将数据直接提交到您的服务器。 如果您的服务器端代码无法验证其接收到的数据，则在提交格式不正确的数据（或太大，类型错误的数据等）时，灾难可能会发生。</p>
+<p><strong>重要提示：</strong>HTML 表单验证不能代替脚本来确保输入的数据采用正确的格式。 对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。 有人也可以完全绕开您的 HTML 并将数据直接提交到您的服务器。 如果您的服务器端代码无法验证其接收到的数据，则在提交格式不正确的数据（或太大，类型错误的数据等）时，灾难可能会发生。</p>
 </div>
 
 <h2 id="处理浏览器支持">处理浏览器支持</h2>
 
-<p>如上所述，现在使用星期输入的主要问题是浏览器支持：Safari和Firefox在桌面上不支持它，而旧版本的IE不支持它。</p>
+<p>如上所述，现在使用星期输入的主要问题是浏览器支持：Safari 和 Firefox 在桌面上不支持它，而旧版本的 IE 不支持它。</p>
 
 <p><br>
- 诸如Android和iOS之类的移动平台确实很好地利用了这种输入类型，提供了专门的UI控件，使在触摸屏环境中选择值变得非常容易。 例如，Android版Chrome上的周选择器如下所示：<img alt="" src="https://mdn.mozillademos.org/files/15413/week-chrome-android.png" style="display: block; margin: 0 auto;"></p>
+ 诸如 Android 和 iOS 之类的移动平台确实很好地利用了这种输入类型，提供了专门的 UI 控件，使在触摸屏环境中选择值变得非常容易。 例如，Android 版 Chrome 上的周选择器如下所示：<img alt="" src="https://mdn.mozillademos.org/files/15413/week-chrome-android.png" style="display: block; margin: 0 auto;"></p>
 
 <p>不支持的浏览器会优雅地降级为文本输入，但这在用户界面的一致性（所提供的控件将有所不同）和数据处理方面都产生了问题。</p>
 
 <p>第二个问题是更严重的。 如前所述，在输入一个<code>week</code> 的情况下，实际值始终会归一化为 <code>yyyy-Www</code>格式。当浏览器退回通用文本输入时，没有什么可以指导用户正确格式化输入的格式（这肯定是不直观的）。 人们可以通过多种方式来写星期值。 例如：</p>
 
 <ul>
- <li><code>2017年第1周</code></li>
- <li><code>2017年1月2日至8日</code></li>
+ <li><code>2017 年第 1 周</code></li>
+ <li><code>2017 年 1 月 2 日至 8 日</code></li>
  <li><code>2017-W01</code></li>
  <li>等等。</li>
 </ul>
 
-<p>目前，以跨浏览器方式处理星期/年的最佳方法是让用户在单独的控件中输入星期数和年份 ({{htmlelement("select")}} 元素很流行； 参见下面的示例），或使用JavaScript库（例如 <a href="https://jqueryui.com/datepicker/">jQuery日期选择器</a>。</p>
+<p>目前，以跨浏览器方式处理星期/年的最佳方法是让用户在单独的控件中输入星期数和年份 ({{htmlelement("select")}} 元素很流行； 参见下面的示例），或使用 JavaScript 库（例如 <a href="https://jqueryui.com/datepicker/">jQuery 日期选择器</a>。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>在此示例中，我们创建了两组用于选择星期的UI元素：使用 <code>&lt;input type="week"&gt;</code>，创建的本机选择器，以及两个用于选择星期/年的 {{htmlelement("select")}} 元素的集合 不支持<code>week</code>输入类型的旧版浏览器。  </p>
+<p>在此示例中，我们创建了两组用于选择星期的 UI 元素：使用 <code>&lt;input type="week"&gt;</code>，创建的本机选择器，以及两个用于选择星期/年的 {{htmlelement("select")}} 元素的集合 不支持<code>week</code>输入类型的旧版浏览器。  </p>
 
 <p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
 
-<p>HTML看起来像这样：</p>
+<p>HTML 看起来像这样：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div class="nativeWeekPicker"&gt;
@@ -278,7 +278,7 @@ input:valid+span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>周值由下面的JavaScript代码动态生成。</p>
+<p>周值由下面的 JavaScript 代码动态生成。</p>
 
 <div class="hidden">
 <pre class="brush: css">div {
@@ -351,7 +351,7 @@ function populateWeeks() {
 }</pre>
 
 <div class="note">
-<p><strong>注意：</strong> 请记住，有些年份有53周（请参阅 <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">每年的周数</a>)！ 在开发生产应用程序时，您需要考虑到这一点。</p>
+<p><strong>注意：</strong> 请记住，有些年份有 53 周（请参阅 <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">每年的周数</a>)！ 在开发生产应用程序时，您需要考虑到这一点。</p>
 </div>
 
 <h2 id="技术指标">技术指标</h2>
@@ -381,6 +381,6 @@ function populateWeeks() {
 
 <ul>
  <li>通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">HTML中使用的日期和时间格式</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">HTML 中使用的日期和时间格式</a></li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, 和 <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
 </ul>

@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</div>
 
-<p class="summary">循环提供了一种快速和简单的方式去做一些重复的事。<a href="/en-US/docs/Web/JavaScript/Guide">JavaScript入门</a>的这个章节会介绍在JavaScript中存在哪些不同的迭代语句。</p>
+<p>循环提供了一种快速和简单的方式去做一些重复的事。<a href="/en-US/docs/Web/JavaScript/Guide">JavaScript 入门</a>的这个章节会介绍在 JavaScript 中存在哪些不同的迭代语句。</p>
 
-<p>你可以把循环想成一种计算机化的游戏，告诉某人在一个方向上走X步，然后在另一个方向上走Y步；例如，“向东走5步”可以用一个循环来这样表达：</p>
+<p>你可以把循环想成一种计算机化的游戏，告诉某人在一个方向上走 X 步，然后在另一个方向上走 Y 步；例如，“向东走 5 步”可以用一个循环来这样表达：</p>
 
 <pre class="brush: js">var step;
 for (step = 0; step &lt; 5; step++) {
@@ -23,17 +23,17 @@ for (step = 0; step &lt; 5; step++) {
 
 <p>循环有很多种类，但本质上它们都做的是同一件事：它们把一个动作重复了很多次（实际上重复的次数有可能为 0）。各种循环机制提供了不同的方法去确定循环的开始和结束。不同情况下，某一种类型循环会比其它的循环用起来更简单。</p>
 
-<p>JavaScript中提供了这些循环语句：</p>
+<p>JavaScript 中提供了这些循环语句：</p>
 
 <ul>
- <li>{{anch("for 语句")}}</li>
- <li>{{anch("do...while 语句")}}</li>
- <li>{{anch("while 语句")}}</li>
- <li>{{anch("labeled 语句")}}</li>
- <li>{{anch("break 语句")}}</li>
- <li>{{anch("continue 语句")}}</li>
- <li>{{anch("for...in 语句")}}</li>
- <li>{{anch("for...of 语句")}}</li>
+ <li><a href="#for_语句">for 语句</a></li>
+ <li><a href="#do...while_语句">do...while 语句</a></li>
+ <li><a href="#while_语句">while 语句</a></li>
+ <li><a href="#label_语句">label 语句</a></li>
+ <li><a href="#break_语句">break 语句</a></li>
+ <li><a href="#continue_语句">continue 语句</a></li>
+ <li><a href="#for...in_语句">for...in 语句</a></li>
+ <li><a href="#for...of_语句">for...of 语句</a></li>
 </ul>
 
 <h2 id="for_语句"><code>for</code> 语句</h2>
@@ -48,7 +48,7 @@ for (step = 0; step &lt; 5; step++) {
 
 <ol>
  <li>如果有初始化表达式 <code>initialExpression</code>，它将被执行。这个表达式通常会初始化一个或多个循环计数器，但语法上是允许一个任意复杂度的表达式的。这个表达式也可以声明变量。</li>
- <li>计算 <code>condition</code> 表达式的值。如果 <code>condition</code> 的值是 true，循环中的语句会被执行。如果 <code>condition</code> 的值是 false，<code>for</code> 循环终止。如果 <code>condition</code> 表达式整个都被省略掉了，condition的值会被认为是true。</li>
+ <li>计算 <code>condition</code> 表达式的值。如果 <code>condition</code> 的值是 true，循环中的语句会被执行。如果 <code>condition</code> 的值是 false，<code>for</code> 循环终止。如果 <code>condition</code> 表达式整个都被省略掉了，condition 的值会被认为是 true。</li>
  <li>循环中的 <code>statement</code> 被执行。如果需要执行多条语句，可以使用块（<code>{ ... }</code>）来包裹这些语句。</li>
  <li>如果有更新表达式 <code>incrementExpression</code>，执行更新表达式。</li>
  <li>回到步骤 2。</li>
@@ -56,7 +56,7 @@ for (step = 0; step &lt; 5; step++) {
 
 <h3 id="例子"><strong>例子</strong></h3>
 
-<p>下面的函数包含一个含有 <code>for</code> 循环去计算一个滑动列表中被选中项目的个数（一个 {{HTMLElement("select")}} 元素允许选择多项）。<code>for</code> 循环声明了变量i并将它的初始值设为 0。它检查 <code>i</code> 是否比 <code>&lt;select&gt;</code> 元素中的选项数量少，执行了随后的 <code>if</code> 语句，然后在每次完成循环后，<code>i</code> 的值增加 1。</p>
+<p>下面的函数包含一个含有 <code>for</code> 循环去计算一个滑动列表中被选中项目的个数（一个 {{HTMLElement("select")}} 元素允许选择多项）。<code>for</code> 循环声明了变量 i 并将它的初始值设为 0。它检查 <code>i</code> 是否比 <code>&lt;select&gt;</code> 元素中的选项数量少，执行了随后的 <code>if</code> 语句，然后在每次完成循环后，<code>i</code> 的值增加 1。</p>
 
 <pre class="brush: html">&lt;form name="selectForm"&gt;
   &lt;p&gt;
@@ -70,7 +70,7 @@ for (step = 0; step &lt; 5; step++) {
       &lt;option&gt;歌剧&lt;/option&gt;
     &lt;/select&gt;
   &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="选择了多少个选项?" /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input id="btn" type="button" value="选择了多少个选项？" /&gt;&lt;/p&gt;
 &lt;/form&gt;
 
 &lt;script&gt;
@@ -224,7 +224,7 @@ for(var i = 0; i &lt; 10; i++) {
 }
 alert(num);  // 95</pre>
 
-<p>从alert(num)的值可以看出，continue outPoint; 语句的作用是跳出当前循环，并跳转到outPoint（标签）下的 for 循环继续执行。</p>
+<p>从 alert(num) 的值可以看出，continue outPoint; 语句的作用是跳出当前循环，并跳转到 outPoint（标签）下的 for 循环继续执行。</p>
 
 <h2 id="break_语句"><code>break</code> 语句</h2>
 

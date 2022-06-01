@@ -67,7 +67,7 @@ translation_of: Web/Performance/How_browsers_work
 
 <p>Как только мы установили соединение с веб-сервером, браузер отправляет инициирующий <a href="/en-US/docs/Web/HTTP/Methods">HTTP <code>GET</code> запрос</a> от имени пользователя. Чаще всего запрашивается HTML файл. В момент, когда сервер получает запрос, он начинает ответ с посылки заголовков ответа и содержимым HTML-файла.</p>
 
-<pre class="brush: html notranslate">&lt;!doctype HTML&gt;
+<pre class="brush: html">&lt;!doctype HTML&gt;
 &lt;html&gt;
  &lt;head&gt;
   &lt;meta charset="UTF-8"/&gt;
@@ -127,7 +127,7 @@ translation_of: Web/Performance/How_browsers_work
 
 <p>Построение дерева DOM занимает весь поток процесса. Так как это явно узкое место в производительности, был создан особый сканер предзагрузки. Он обрабатывает доступное содержимое документа и запрашивает высокоприоритетные ресурсы (CSS, JavaScript и шрифты). Благодаря этому сканеру нам не нужно ждать, пока парсер дойдёт до конкретного места, где вызывается ресурс. Он запрашивает и получает эти данные заранее, в фоновом режиме, так что когда основной поток HTML-парсера доходит до запроса ресурса, высока вероятность, что ресурс уже запрошен или находится в процессе загрузки. Оптимизации, которые даёт этот сканер, уменьшают время блокирования рендера.</p>
 
-<pre class="brush:html notranslate">&lt;link rel="stylesheet" src="styles.css"/&gt;
+<pre class="brush:html">&lt;link rel="stylesheet" src="styles.css"/&gt;
 &lt;script src="myscript.js" <strong>async</strong>&gt;&lt;/script&gt;
 &lt;img src="myimage.jpg" alt="image description"/&gt;
 &lt;script src="anotherscript.js" <strong>async</strong>&gt;&lt;/script&gt;

@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/definePrope
 
 <h3 id="参数">参数</h3>
 
-<p>下列参数将会被传递给 <code>defineProperty</code> 方法。<code> this</code> 绑定在 handler 对象上。</p>
+<p>下列参数将会被传递给 <code>defineProperty</code> 方法。<code>this</code> 绑定在 handler 对象上。</p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -39,7 +39,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/definePrope
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截目标对象的以下操作 :</p>
+<p>该方法会拦截目标对象的以下操作：</p>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>
@@ -49,14 +49,14 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/definePrope
 
 <h3 id="不变量">不变量</h3>
 
-<p>如果违背了以下的不变量，proxy会抛出 {{jsxref("TypeError")}}:</p>
+<p>如果违背了以下的不变量，proxy 会抛出 {{jsxref("TypeError")}}:</p>
 
 <ul>
  <li>如果目标对象不可扩展， 将不能添加属性。</li>
  <li>不能添加或者修改一个属性为不可配置的，如果它不作为一个目标对象的不可配置的属性存在的话。</li>
  <li>如果目标对象存在一个对应的可配置属性，这个属性可能不会是不可配置的。</li>
  <li>如果一个属性在目标对象中存在对应的属性，那么 <code>Object.defineProperty(target, prop, descriptor)</code> 将不会抛出异常。</li>
- <li>在严格模式下， <code>false</code> 作为<code> handler.defineProperty</code> 方法的返回值的话将会抛出 {{jsxref("TypeError")}} 异常.</li>
+ <li>在严格模式下，<code>false</code> 作为 <code>handler.defineProperty</code> 方法的返回值的话将会抛出 {{jsxref("TypeError")}} 异常。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -74,7 +74,7 @@ var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, 'a', desc); // "called: a"
 </pre>
 
-<p>当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 <code>defineProperty</code> 的 <code>descriptor</code>   有一个限制 - 只有以下属性才有用，非标准的属性将会被无视 :</p>
+<p>当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 <code>defineProperty</code> 的 <code>descriptor</code>   有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：</p>
 
 <ul>
  <li><code>enumerable</code></li>
@@ -122,55 +122,7 @@ Object.defineProperty(p, 'name', {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

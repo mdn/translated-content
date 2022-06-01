@@ -21,7 +21,7 @@ translation_of: Web/API/CanvasRenderingContext2D/shadowBlur
 
 <h3 id="Using_the_shadowBlur_property" name="Using_the_shadowBlur_property">使用 <code>shadowBlur</code> 属性</h3>
 
-<p>这是一段简单的代码片段，使用 <code>shadowblur 属性设置模糊阴影。</code> 注意：只有设置shadowColor属性值为不透明，阴影才会被绘制。</p>
+<p>这是一段简单的代码片段，使用 <code>shadowblur 属性设置模糊阴影。</code> 注意：只有设置 shadowColor 属性值为不透明，阴影才会被绘制。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -87,85 +87,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-shadowblur", "CanvasRenderingContext2D.shadowBlur")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
-
-<ul>
- <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不规范的并且不赞成使用的方法 <code>ctx.setShadow()</code> 。
-
-  <pre class="brush: js">setShadow(width, height, blur, color, alpha);
-setShadow(width, height, blur, graylevel, alpha);
-setShadow(width, height, blur, r, g, b, a);
-setShadow(width, height, blur, c, m, y, k, a);
-</pre>
- </li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.shadowBlur")}}
 
 <h2 id="参见">参见</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/HTML/Global_attributes/itemprop
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>全局属性 <code><strong>itemprop</strong></code>被用于向一个物体中添加属性。每一个HTML元素都可以指定一个itemprop属性，一个<code>itemprop</code><font face="Open Sans, arial, sans-serif">属性</font>由name-value对组成。每一个键值对称为一个属性，一个元素可以有一个或者多个属性。属性值可以是一个string或者一个URL，并且可以和大部分元素进行组合，包括{{HTMLElement("audio")}}， {{HTMLElement("embed")}}， {{HTMLElement("iframe")}}， {{HTMLElement("img")}}， {{HTMLElement("link")}}， {{HTMLElement("object")}}， {{HTMLElement("source")}} ， {{HTMLElement("track")}}， 和 {{HTMLElement("video")}}。</p>
+<p>全局属性 <code><strong>itemprop</strong></code>被用于向一个物体中添加属性。每一个 HTML 元素都可以指定一个 itemprop 属性，一个<code>itemprop</code>属性由 name-value 对组成。每一个键值对称为一个属性，一个元素可以有一个或者多个属性。属性值可以是一个 string 或者一个 URL，并且可以和大部分元素进行组合，包括{{HTMLElement("audio")}}， {{HTMLElement("embed")}}， {{HTMLElement("iframe")}}， {{HTMLElement("img")}}， {{HTMLElement("link")}}， {{HTMLElement("object")}}， {{HTMLElement("source")}} ， {{HTMLElement("track")}}， 和 {{HTMLElement("video")}}。</p>
 
 <h2 id="样例">样例</h2>
 
@@ -60,7 +60,7 @@ translation_of: Web/HTML/Global_attributes/itemprop
 
 <h2 id="属性">属性</h2>
 
-<p>属性拥有的值可能是字符串又或者是URL。当一个字符串值是一个URL的时候，它被用 {{HTMLElement("a")}} 及它的属性值 {{htmlattrxref("href", "a")}} 、{{HTMLElement("img")}} 及它的属性值 {{htmlattrxref("src", "img")}} 、或者其它被链接到或嵌入外部的资源的元素来表述。</p>
+<p>属性拥有的值可能是字符串又或者是 URL。当一个字符串值是一个 URL 的时候，它被用 {{HTMLElement("a")}} 及它的属性值 {{htmlattrxref("href", "a")}} 、{{HTMLElement("img")}} 及它的属性值 {{htmlattrxref("src", "img")}} 、或者其它被链接到或嵌入外部的资源的元素来表述。</p>
 
 <h3 id="Three_properties_with_values_that_are_strings">Three properties with values that are strings</h3>
 
@@ -80,11 +80,11 @@ translation_of: Web/HTML/Global_attributes/itemprop
    src="google-logo.png" alt="Google"&gt;
 &lt;/div&gt;</pre>
 
-<p>当一个字符串值不能令人通俗易懂的时候（e.g.，一个长串的数字和字母），它能被用data元素的value属性表示，用所给元素内容的更易懂的版本（它不是结构化数据的一部分-请看下面的例子）。</p>
+<p>当一个字符串值不能令人通俗易懂的时候（e.g.，一个长串的数字和字母），它能被用 data 元素的 value 属性表示，用所给元素内容的更易懂的版本（它不是结构化数据的一部分 - 请看下面的例子）。</p>
 
 <h3 id="An_item_with_a_property_whose_value_is_a_product_ID">An item with a property whose value is a product ID</h3>
 
-<p>ID不是人性化的，所以产品的名字是用的人所能看懂的文字而不是ID。</p>
+<p>ID 不是人性化的，所以产品的名字是用的人所能看懂的文字而不是 ID。</p>
 
 <pre class="brush: html">&lt;h1 itemscope&gt;
  &lt;data itemprop="product-id"
@@ -167,7 +167,7 @@ translation_of: Web/HTML/Global_attributes/itemprop
  &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
-<p>这产生了一个物体有两个属性,都拥有名字 "flavor" 但是却有不同的值 "Lemon sorbet" 和 "Apricot sorbet"。</p>
+<p>这产生了一个物体有两个属性，都拥有名字 "flavor" 但是却有不同的值 "Lemon sorbet" 和 "Apricot sorbet"。</p>
 
 <p>为了当一些属性有相同值的时候避免重复，一个介绍一个属性的元素同样可以一次性介绍多个属性。</p>
 
@@ -204,7 +204,7 @@ translation_of: Web/HTML/Global_attributes/itemprop
   (1986)&lt;/figcaption&gt;
 &lt;/figure&gt;</pre>
 
-<p>两者都是拥有标题的图，并且都同时， 和图完全无关地, 有一个 名字是 "name" 并且值是"The Castle"的键值对的物体项。唯一的区别是如果用户把图片标题拖拽出文档的话，这个项会包含在拖拽的数据中。图像相关的项不会被包括。</p>
+<p>两者都是拥有标题的图，并且都同时， 和图完全无关地，有一个 名字是 "name" 并且值是"The Castle"的键值对的物体项。唯一的区别是如果用户把图片标题拖拽出文档的话，这个项会包含在拖拽的数据中。图像相关的项不会被包括。</p>
 
 <h2 id="名字和值">名字和值</h2>
 
@@ -257,24 +257,24 @@ translation_of: Web/HTML/Global_attributes/itemprop
  </tbody>
 </table>
 
-<p><strong>序列</strong>既可以是字符串也可以是URL。如果是一个URL，那么这个项被称为<strong>类型项</strong>。否则它是一个字符串。字符串不能包括句号和冒号（如下）。</p>
+<p><strong>序列</strong>既可以是字符串也可以是 URL。如果是一个 URL，那么这个项被称为<strong>类型项</strong>。否则它是一个字符串。字符串不能包括句号和冒号（如下）。</p>
 
 <ol>
- <li>如果项是一个类型项它必须满足:
+ <li>如果项是一个类型项它必须满足：
   <ol>
    <li>是一个被定义的属性名</li>
-   <li>一个合法的指向语法定义的URL</li>
-   <li>一个合法的被用来当作所有权项属性名的URL</li>
+   <li>一个合法的指向语法定义的 URL</li>
+   <li>一个合法的被用来当作所有权项属性名的 URL</li>
   </ol>
  </li>
  <li>如果一个项不是类型项，他必须：
   <ol>
-   <li>一个不含 "<strong>.</strong>" (U+002E 句号) 和 "<strong>:</strong>" (U+003A冒号) 并且被用作一个所有权项的属性名（没有公共规范定义的）</li>
+   <li>一个不含 "<strong>.</strong>" (U+002E 句号) 和 "<strong>:</strong>" (U+003A 冒号) 并且被用作一个所有权项的属性名（没有公共规范定义的）</li>
   </ol>
  </li>
 </ol>
 
-<p class="note"><strong>注意:</strong> 上面的规则不允许 ":" 在没有URL的值中 是因为否则它们没法和URL作区分。带有"." 的值被保留作为将来可能的拓展。 空格也不被允许是因为否则值就会被解析为多个序列。</p>
+<p class="note"><strong>注意：</strong> 上面的规则不允许 ":" 在没有 URL 的值中 是因为否则它们没法和 URL 作区分。带有"." 的值被保留作为将来可能的拓展。 空格也不被允许是因为否则值就会被解析为多个序列。</p>
 
 <h2 id="值">值</h2>
 
@@ -441,59 +441,13 @@ translation_of: Web/HTML/Global_attributes/itemprop
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("html.global_attributes.itemprop")}}
 
 <h2 id="查看其他">查看其他</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/HTML/Global_attributes">其他不同的全局属性</a></li>
- <li>其他，微数据相关的全局属性:
+ <li>其他，微数据相关的全局属性：
   <ul>
    <li>{{htmlattrxref("itemid")}}</li>
    <li>{{htmlattrxref("itemprop")}}</li>

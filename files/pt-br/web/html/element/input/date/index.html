@@ -17,7 +17,7 @@ original_slug: Web/HTML/Element/Input/data
 ---
 <p>Os elementos {{htmlelement("input")}} do tipo <strong><code>date</code></strong> cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o <code>horário</code>. Os tipos de entrada <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time">time</a> e <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> permitem informar horário e data/hora.</p>
 
-<p>A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja {{anch("Browser compatibility")}} para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um  <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> simples.</p>
+<p>A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja <a href="#browser_compatibility">Browser compatibility</a> para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um  <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> simples.</p>
 
 <pre class="brush: html">&lt;input id="date" type="date"&gt;</pre>
 
@@ -38,7 +38,7 @@ original_slug: Web/HTML/Element/Input/data
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>Um {{domxref("DOMString")}} que representa uma data no formato AAAA-MM-DD ou vazio</td>
   </tr>
   <tr>
@@ -90,19 +90,19 @@ dateControl.value = '2017-06-01';</pre>
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>A maior data aceitável</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>A menor data aceitável</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>Se o conteúdo da caixa de texto é somente leitura</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>O intervalo a ser usado, quando clicar nos botões de seta para baixo e para cima, e também para validação</td>
   </tr>
  </tbody>
@@ -114,7 +114,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <p>Caixas de texto de data se mostra conveniente à primeira vista — eles fornecem uma interface simples para escolha de datas e normalizam o formato da data enviado para o servidor, independentemente da localização do usuário. Contudo, há problemas com o <code>&lt;input type="date"&gt;</code> por causa do suporte limitado do navegador.</p>
 
-<p>Iremos dar uma olhada em usos básicos e mais complexos de <code>&lt;input type="date"&gt;</code>, então aconselharemos sobre como atenuar os problemas de suporte dos navegadores (veja {{anch("Handling browser support")}}). Claro, esperamos que ao longo do tempo o supore dos navegadores sejam mais universal e este problema desapareça.</p>
+<p>Iremos dar uma olhada em usos básicos e mais complexos de <code>&lt;input type="date"&gt;</code>, então aconselharemos sobre como atenuar os problemas de suporte dos navegadores (veja <a href="#handling_browser_support">Handling browser support</a>). Claro, esperamos que ao longo do tempo o supore dos navegadores sejam mais universal e este problema desapareça.</p>
 
 <h3 id="Uso_básico_da_data">Uso básico da data</h3>
 
@@ -156,7 +156,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <p>Por padrão <code>&lt;input type="date"&gt;</code> não aplica nenhuma validação de entrada de valores. As implementações da interface geralmente não deixam você informar nada que não seja uma data — o que é útil — mas você pode continuar deixando o campo vazio ou (em navegadores onde a entrada converte para o tipo <code>text</code>) informar uma data inválida (ex.: o 32 de Abril).</p>
 
-<p>Se você usa {{htmlattrxref("min", "input")}} e {{htmlattrxref("max", "input")}} para restringir datas disponíveis (ver {{anch("Definindo data mínima e máxima")}}), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.</p>
+<p>Se você usa {{htmlattrxref("min", "input")}} e {{htmlattrxref("max", "input")}} para restringir datas disponíveis (ver <a href="#definindo_data_mínima_e_máxima">Definindo data mínima e máxima</a>), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.</p>
 
 <p>Adicionalmente, você pode usar o atributo {{htmlattrxref("required", "input")}} para tornar o preenchimento da data obrigatório — novamente, um erro será mostrado se você tentar submeter um campo de data vazia. Isto, finalmente, deve funcionar em muitos navegadores.</p>
 
@@ -210,7 +210,7 @@ input:valid+span:after {
 
 <h2 id="Manipulação_do_suporte_do_navegador">Manipulação do suporte do navegador</h2>
 
-<p>Como mencionado acima, o maior problema em usar caixas de entrada de data em tempo de escrita é o {{anch("Browser compatibility", "suporte do navegador")}}. Por exemplo, o selecionador de data no Firefox para Android se parece com isso:</p>
+<p>Como mencionado acima, o maior problema em usar caixas de entrada de data em tempo de escrita é o <a href="#browser_compatibility">suporte do navegador</a>. Por exemplo, o selecionador de data no Firefox para Android se parece com isso:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
 

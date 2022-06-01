@@ -10,7 +10,7 @@ translation_of: Web/CSS/-moz-outline-radius-topleft
 ---
 {{Non-standard_header}}{{CSSRef}}
 
-Dans les applications Mozilla, la propriété **`-moz-outline-radius-`\*\***`topleft`\*\* définit l'arrondi du coin supérieur gauche du contour.
+Dans les applications Mozilla, la propriété **`-moz-outline-radius-topleft`** définit l'arrondi du coin supérieur gauche du contour.
 
 ## Exemples
 

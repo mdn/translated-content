@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h2 id="Syntax">문법</h2>
 
-<pre class="syntaxbox notranslate">for (<var>variable</var> in <var>object</var>) {<em> ... </em>}</pre>
+<pre class="syntaxbox ">for (<var>variable</var> in <var>object</var>) {<em> ... </em>}</pre>
 
 <h3 id="Parameters">파라미터</h3>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h3 id="배열의_반복과_for...in">배열의 반복과 for...in</h3>
 
-<div class="note" id="arrayNote">
+<div class="note"  >
 <p><strong>Note: <code>for...in</code>은</strong> 인덱스의 순서가 중요한<strong> </strong>{{jsxref("Array")}}에서 반복을 위해 사용할 수 없습니다.</p>
 </div>
 
@@ -64,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>아래의 예는 열거 가능한 non-Symbol속성들을 반복해서 속성의 이름과 그 값을 기록합니다.</p>
 
-<pre class="notranslate"><code>var obj = {a: 1, b: 2, c: 3};
+<pre ><code>var obj = {a: 1, b: 2, c: 3};
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -79,7 +79,7 @@ for (const prop in obj) {
 
 <p>아래는 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 를 사용하는 예를 보여주고 있습니다. 상속된 속성은 표시되지 않습니다.</p>
 
-<pre class="brush: js notranslate">var triangle = {a:1, b:2, c:3};
+<pre class="brush: js ">var triangle = {a:1, b:2, c:3};
 
 function ColoredTriangle() {
   this.color = "red";
@@ -148,7 +148,7 @@ alert(show_own_props(o, "o")); /* alerts: o.color = red */
 
 <p>Prior to SpiderMonkey 40 {{geckoRelease(40)}}, it was possible to use an initializer expression (<code>i=0</code>) in a <code>for...in</code> loop:</p>
 
-<pre class="notranslate"><code>var obj = {a: 1, b: 2, c: 3};
+<pre ><code>var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }

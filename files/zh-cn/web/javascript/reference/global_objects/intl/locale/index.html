@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 
 <h2 id="描述">描述</h2>
 
-<p><code><strong>Intl.Locale</strong></code> 对象是为了更便捷地处理 Unicode 区域设置。Unicode 使用字符串作为区域识别标识。区域标识符由<em>语言标识符</em>和<em>扩展标记</em>组成。语言标识符是区域(locale)的核心，包含了语言、脚本和地域子标记(region subtags)。有关区域设置的其他信息体现在可选的扩展标记中。扩展标记保存有关区域设置方面的信息，例如日历类型、时钟类型和编号系统类型。</p>
+<p><code><strong>Intl.Locale</strong></code> 对象是为了更便捷地处理 Unicode 区域设置。Unicode 使用字符串作为区域识别标识。区域标识符由<em>语言标识符</em>和<em>扩展标记</em>组成。语言标识符是区域 (locale) 的核心，包含了语言、脚本和地域子标记 (region subtags)。有关区域设置的其他信息体现在可选的扩展标记中。扩展标记保存有关区域设置方面的信息，例如日历类型、时钟类型和编号系统类型。</p>
 
-<p>传统上，Intl 接口像 Unicode 一样使用字符串来表示区域设置，这是一个简单而轻量且效果好的解决方案。但是，添加一个Locale 类可以更容易地解析和操作语言、脚本、区域以及扩展标记。</p>
+<p>传统上，Intl 接口像 Unicode 一样使用字符串来表示区域设置，这是一个简单而轻量且效果好的解决方案。但是，添加一个 Locale 类可以更容易地解析和操作语言、脚本、区域以及扩展标记。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -64,13 +64,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 
 <p>很简单，就是需要给{{jsxref("Locale/Locale", "Intl.Locale")}} 构造函数传入一个 locale 标识字符串作为参数：</p>
 
-<pre class="brush: js notranslate">let us = new Intl.Locale('zh-Hans-CN');</pre>
+<pre class="brush: js">let us = new Intl.Locale('zh-Hans-CN');</pre>
 
 <h3 id="使用配置实例化">使用配置实例化</h3>
 
 <p>构造函数支持传入 object 作为配置，object 中可包含多个配置属性。例如，设置 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle">hourCycle</a></code> 属性，用于设置您所需要的小时周期类型：</p>
 
-<pre class="brush: js notranslate">let zh12hour = new Intl.Locale("zh-Hans-CN", {hourCycle: "h12"});
+<pre class="brush: js">let zh12hour = new Intl.Locale("zh-Hans-CN", {hourCycle: "h12"});
 console.log(zh12hour.hourCycle); // Prints "h12"</pre>
 
 <h2 id="规范">规范</h2>

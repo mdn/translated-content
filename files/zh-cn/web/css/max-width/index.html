@@ -135,76 +135,7 @@ max-width: unset;
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>7.0</td>
-   <td>4.0</td>
-   <td>2.0.2 (416),<br>
-    buggy before</td>
-  </tr>
-  <tr>
-   <td>applies to <code>&lt;table&gt; </code>[1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td rowspan="1"><code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, and <code>fill-</code><code>available</code> {{ experimental_inline() }}</td>
-   <td>{{ CompatNo() }} [3]</td>
-   <td>{{CompatGeckoDesktop("1.9")}}{{property_prefix("-moz")}} [2]</td>
-   <td rowspan="1">{{ CompatNo() }}</td>
-   <td rowspan="1">{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }} [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] CSS 2.1 explicitly leaves the behavior of <code>max-width</code> with {{ HTMLElement("table") }} undefined. Therefore any behavior is CSS2.1-compliant; newer CSS specifications may define this behavior, so Web developers shouldn't rely on a specific one now.</p>
-
-<p>[2] Gecko experimentally implements the definitions given in CSS3 Basic Box. This one defines <code>available</code> and not <code>fill-available</code>. Also the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.</p>
-
-<p>[3] WebKit implements an earlier proposal for setting the height to an intrinsic height: the keywords <code>intrinsic</code>, instead of <code>max-content</code>, and <code>min-intrinsic</code>, instead of <code>min-content</code> There is no equivalent for <code>fill-available</code> or <code>fit-content</code>.</p>
+{{Compat("css.properties.max-width")}}
 
 <h2 id="参考链接">参考链接</h2>
 

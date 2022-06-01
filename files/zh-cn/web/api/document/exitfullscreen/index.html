@@ -44,62 +44,7 @@ document.onclick = function (event) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatGeckoDesktop("9.0")}} as <code>mozCancelFullScreen</code><sup>[1]</sup><br>
-    {{CompatGeckoDesktop("47.0")}}<sup>[1]</sup> (behind <code>full-screen-api.unprefix.enabled</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webkit</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatGeckoMobile("9.0")}} as <code>mozCancelFullScreen</code><sup>[1]</sup><br>
-    {{CompatGeckoMobile("47.0")}}<sup>[1]</sup> (behind <code>full-screen-api.unprefix.enabled</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 可通过<code><strong>Document.exitFullscreen()</strong></code>方法让全屏元素栈的栈顶元素退出全屏状态，并让新的栈顶的元素进入全屏状态。此特征在Gecko 11.0 {{geckoRelease("11.0")}}中被实现.</p>
+{{Compat("api.Document.exitFullscreen")}}
 
 <h2 id="参阅">参阅</h2>
 

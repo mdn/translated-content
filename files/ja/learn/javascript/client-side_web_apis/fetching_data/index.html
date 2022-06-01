@@ -199,7 +199,7 @@ request.send();</pre>
 
 <h4 id="Fetch_のコードでは何が起きている">Fetch のコードでは何が起きている?</h4>
 
-<p>まず最初に、{{domxref("WorkerOrWindowGlobalScope.fetch()","fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば <code>.send()</code> に相当するものは必要ありません。</p>
+<p>まず最初に、{{domxref("fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば <code>.send()</code> に相当するものは必要ありません。</p>
 
 <p>その後に、{{jsxref("Promise.then",".then()")}} メソッドが <code>fetch()</code> の後に連鎖されているのがわかるでしょう — このメソッドは {{jsxref("Promise","Promises")}} の一部で、非同期処理を行なうための今風な JavaScript に備わる機能です。<code>fetch()</code> はプロミスを返し、これはサーバから送られたレスポンスによって解決されます — <code>.then()</code> を使ってプロミスが解決された後にある種後始末のコードを走らせるようにし、そのコードとは内側で定義した関数にあたります。これは XHR 版の <code>onload</code> イベントハンドラに相当します。</p>
 
@@ -310,7 +310,7 @@ myFetch.then(function(response) {
 
 <ol>
  <li>例題のファイルのローカルコピーを作成して下さい(<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true">缶詰屋の ZIPファイル</a>をダウンロードして展開して下さい)。</li>
- <li>コードを Web サーバから読んで走らせるようにします(方法は前に {{anch("Serving your example from a server")}}で解説しました)。</li>
+ <li>コードを Web サーバから読んで走らせるようにします(方法は前に <a href="#serving_your_example_from_a_server">Serving your example from a server</a>で解説しました)。</li>
  <li>fetch するファイルのパスを、'produc.json' のようなものに変更します(誤ったファイル名にして下さい)。</li>
  <li>ここでインデックスファイルをブラウザに読み込んで( <code>localhost:8000</code> から)、あなたのブラウザの開発者コンソールを見ます。次の行のようなメッセージが表示されるはずです「Network request for produc.json failed with response 404: File not found」。</li>
 </ol>

@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><font><font>求幂运算符（</font></font><code>**</code><font><font>）返回将第一个操作数加到第二个操作数</font><font>的幂</font><font>的结果。</font><font>它等效于</font></font><code>Math.pow</code><font><font>，不同之处在于它也接受BigInts作为操作数。</font></font></p>
+<p>求幂运算符（<code>**</code>）返回将第一个操作数加到第二个操作数的幂的结果。它等效于<code>Math.pow</code>，不同之处在于它也接受 BigInts 作为操作数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}</div>
 
@@ -18,18 +18,18 @@ translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><strong>Operator:</strong> <var>var1</var> ** <var>var2</var>
+<pre class="syntaxbox"><strong>Operator:</strong> <var>var1</var> ** <var>var2</var>
 </pre>
 
 <h2 id="简介">简介</h2>
 
 <p>求幂运算符是是<strong>右结合的</strong>: <code><var>a</var> ** <var>b</var> ** <var>c</var></code> 等于 <code><var>a</var> ** (<var>b</var> ** <var>c</var>)</code>.</p>
 
-<p>在大多数语言里，比如PHP、Python等那些有一个幂运算符 (<code>**</code>) 的语言，幂运算符被定义有一个比一元运算符，比如一元的 <code>+</code> 和一元的 <code>-</code> 更高的运算顺序，但有一些例外。在Bash语言里，<code>**</code> 运算符被定义有一个比一元运算符更低的运算顺序。</p>
+<p>在大多数语言里，比如 PHP、Python 等那些有一个幂运算符 (<code>**</code>) 的语言，幂运算符被定义有一个比一元运算符，比如一元的 <code>+</code> 和一元的 <code>-</code> 更高的运算顺序，但有一些例外。在 Bash 语言里，<code>**</code> 运算符被定义有一个比一元运算符更低的运算顺序。</p>
 
-<p>在JavaScript里，你不可能写出一个不明确的求幂表达式。这就是说，你不能立刻将一个一元运算符（<code>+/-/~/!/delete/void/typeof</code>）放在基数前，这样做只会导致一个语法错误。</p>
+<p>在 JavaScript 里，你不可能写出一个不明确的求幂表达式。这就是说，你不能立刻将一个一元运算符（<code>+/-/~/!/delete/void/typeof</code>）放在基数前，这样做只会导致一个语法错误。</p>
 
-<pre class="brush: js notranslate">-2 ** 2;
+<pre class="brush: js">-2 ** 2;
 // 4 in Bash, -4 in other languages.
 // This is invalid in JavaScript, as the operation is ambiguous.
 
@@ -38,13 +38,13 @@ translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 // -4 in JavaScript and the author's intention is unambiguous.
 </pre>
 
-<p>注意有些编程语言用扬抑符 <kbd>^</kbd> 做乘方运算，但是JavaScript将这个符号作为了<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">XOR位逻辑运算符</a>。</p>
+<p>注意有些编程语言用扬抑符 <kbd>^</kbd> 做乘方运算，但是 JavaScript 将这个符号作为了<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">XOR 位逻辑运算符</a>。</p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="基本求幂">基本求幂</h3>
 
-<pre class="brush: js notranslate">2 ** 3   // 8
+<pre class="brush: js">2 ** 3   // 8
 3 ** 2   // 9
 3 ** 2.5 // 15.588457268119896
 10 ** -1 // 0.1
@@ -53,7 +53,7 @@ NaN ** 2 // NaN
 
 <h3 id="结合">结合</h3>
 
-<pre class="brush: js notranslate">2 ** 3 ** 2   // 512
+<pre class="brush: js">2 ** 3 ** 2   // 512
 2 ** (3 ** 2) // 512
 (2 ** 3) ** 2 // 64</pre>
 
@@ -61,12 +61,12 @@ NaN ** 2 // NaN
 
 <p>取求幂表达式的值的相反数：</p>
 
-<pre class="brush: js notranslate">-(2 ** 2) // -4
+<pre class="brush: js">-(2 ** 2) // -4
 </pre>
 
 <p>将求幂表达式的底数转化为一个负数：</p>
 
-<pre class="brush: js notranslate">(-2) ** 2 // 4
+<pre class="brush: js">(-2) ** 2 // 4
 </pre>
 
 <h2 id="规范">规范</h2>
@@ -101,7 +101,3 @@ NaN ** 2 // NaN
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
 </ul>
-
-<p>
- <audio class="hidden"></audio>
-</p>

@@ -10,7 +10,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><span class="seoSummary"><code><strong>encodeURI()</strong></code> 함수는 {{glossary("URI")}}의 특정한 문자를 UTF-8로 인코딩해 하나, 둘, 셋, 혹은 네 개의 연속된 이스케이프 문자로 나타냅니다.</span> (두 개의 대리 문자로 이루어진 문자만 이스케이프 문자 네 개로 변환됩니다.)</p>
+<p><code><strong>encodeURI()</strong></code> 함수는 {{glossary("URI")}}의 특정한 문자를 UTF-8로 인코딩해 하나, 둘, 셋, 혹은 네 개의 연속된 이스케이프 문자로 나타냅니다. (두 개의 대리 문자로 이루어진 문자만 이스케이프 문자 네 개로 변환됩니다.)</p>
+
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}</div>
 
@@ -33,11 +34,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 <h2 id="설명">설명</h2>
 
-<p><span id="result_box" lang="ko"><span><code>encodeURI()</code> 함수는 URI에서 특별한 뜻을 가진 문자(예약 문자)는 인코딩 하지 않습니다. 아래 예제는 "URI 도식"이 포함할 수 있는 모든 부분을 담고 있습니다. 일부 문자가 어떤 방식으로 특별한 의미를 주입하고 있는지 잘 살펴보세요.</span></span></p>
+<p><code>encodeURI()</code> 함수는 URI에서 특별한 뜻을 가진 문자(예약 문자)는 인코딩 하지 않습니다. 아래 예제는 "URI 도식"이 포함할 수 있는 모든 부분을 담고 있습니다. 일부 문자가 어떤 방식으로 특별한 의미를 주입하고 있는지 잘 살펴보세요.</p>
 
 <pre>http://username:password@www.example.com:80/path/to/file.php?foo=316&amp;bar=this+has+spaces#anchor</pre>
 
-<p><span id="result_box" lang="ko"><span>따라서 <code>encodeURI()</code>는 완전한 URI를 형성하는데 필요한 문자는 인코딩 <strong>하지 않습니다</strong>.</span> <span>또한, 예약된 목적을 가지지는 않지만 URI가 그대로 포함할 수 있는 몇 가지 문자("비예약 표식")도 인코딩 <strong>하지 않습니다</strong>. (<a href="https://www.ietf.org/rfc/rfc2396.txt">RFC 2396</a>을 참고하세요)</span></span></p>
+<p>따라서 <code>encodeURI()</code>는 완전한 URI를 형성하는데 필요한 문자는 인코딩 <strong>하지 않습니다</strong>. 또한, 예약된 목적을 가지지는 않지만 URI가 그대로 포함할 수 있는 몇 가지 문자("비예약 표식")도 인코딩 <strong>하지 않습니다</strong>. (<a href="https://www.ietf.org/rfc/rfc2396.txt">RFC 2396</a>을 참고하세요)</p>
 
 <p><code>encodeURI()</code> 는 다음 문자를 <strong>제외</strong>한 문자를 이스케이프 합니다.</p>
 
@@ -65,7 +66,7 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (공백은 %20으로 �
 
 <p><code>encodeURI()</code> 혼자서는 {{domxref("XMLHttpRequest")}} 등이 사용할, 적합한 HTTP {{httpmethod("GET")}}과 {{httpmethod("POST")}} 요청을 구성할 수 없습니다. <code>GET</code>과 <code>POST</code>에서 특별한 문자로 취급하는 <code>"&amp;"</code>, <code>"+"</code>, <code>"="</code>를 인코딩 하지 않기 때문입니다. 그러나 <code>encodeURIComponent()</code>는 저 세 문자도 인코딩 대상에 포함합니다.</p>
 
-<p><span id="result_box" lang="ko"><span>상위-하위 쌍을 이루지 않은 단일 대리 문자를 인코딩 시도하면 {{jsxref("URIError")}}가 발생합니다.</span></span></p>
+<p>상위-하위 쌍을 이루지 않은 단일 대리 문자를 인코딩 시도하면 {{jsxref("URIError")}}가 발생합니다.</p>
 
 <pre class="brush: js">// high-low pair ok
 console.log(encodeURIComponent('\uD800\uDFFF'));

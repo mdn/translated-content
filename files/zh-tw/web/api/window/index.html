@@ -5,7 +5,7 @@ translation_of: Web/API/Window
 ---
 <p>{{APIRef}}</p>
 
-<p><span class="seoSummary"><code>window</code> 物件代表了一個包含 DOM 文件的視窗，其中的 <code>document</code> 屬性指向了視窗中載入的 {{domxref("Document")}} 物件。而使用 <code>document</code> 的</span> {{Domxref("Document.defaultView", "defaultView")}} 屬性，則可取得該 Document 物件所在的視窗 <code>window</code> 物件。</p>
+<p><code>window</code> 物件代表了一個包含 DOM 文件的視窗，其中的 <code>document</code> 屬性指向了視窗中載入的 {{domxref("Document")}} 物件。而使用 <code>document</code> 的 {{Domxref("Document.defaultView", "defaultView")}} 屬性，則可取得該 Document 物件所在的視窗 <code>window</code> 物件。</p>
 
 <p>本節提供了 DOM <code>window</code> 物件的所有方法、屬性以及事件的說明。<code>window</code> 物件實作了 <code>Window</code> 介面，而 <code>Window</code> 介面則繼承自 <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code> 介面。一些額外、與 <code>window</code> 物件沒有直接關係，但卻置於 <code>window</code> 物件中的全域函式、命名空間、物件、介面以及建構式，將會在 <a href="/zh-TW/docs/JavaScript/Reference">JavaScript 參考文件</a>和<a href="/zh-TW/docs/Web/API/Document_Object_Model">文件物件模型（DOM）</a>中說明。</p>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Window
 <p>請注意，指向物件的屬性（例如覆蓋了內建物件原型的元素）會在另外的列表中說明。</p>
 
 <dl>
- <dt>{{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}</dt>
+ <dt>{{domxref("Window.applicationCache")}} {{readOnlyInline}}</dt>
  <dd>指向 {{domxref("OfflineResourceList")}} 物件，此物件提供了視窗的離線資源。</dd>
  <dt>{{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}</dt>
  <dd>This property indicates whether the current window is closed or not.</dd>
@@ -39,7 +39,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the ratio between physical pixels and device independent pixels in the current display.</dd>
  <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
- <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.</dd>
+ <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an <code>nsIArray</code>.</dd>
  <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
  <dd>Synonym of {{domxref("window.personalbar")}}</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
@@ -48,9 +48,9 @@ translation_of: Web/API/Window
  <dd>Returns the element in which the window is embedded, or null if the window is not embedded.</dd>
  <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
  <dd>Returns an array of the subframes in the current window.</dd>
- <dt>{{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}</dt>
+ <dt>{{domxref("Window.fullScreen")}}</dt>
  <dd>此屬性表示目前視窗是否為全螢幕顯示。</dd>
- <dt>{{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
+ <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
  <dd>Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.<br>
  Was: Multiple storage objects that are used for storing data across multiple pages.</dd>
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
@@ -67,19 +67,19 @@ translation_of: Web/API/Window
  <dd>Gets/sets the location, or current URL, of the window object.</dd>
  <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the locationbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}</dt>
+ <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}</dt>
  <dd>Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.</dd>
  <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the menubar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.messageManager")}}</dt>
  <dd>Returns the <a href="/zh-TW/docs/The_message_manager">message manager</a> object for this window.</dd>
- <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}} {{Deprecated_inline}}</dt>
+ <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}</dt>
  <dd>The time in milliseconds since epoch at which the current animation cycle began.</dd>
- <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
+ <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}</dt>
+ <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in <code>nsIDOMWindowUtils</code> for a conversion factor to adapt to screen pixels if needed.</dd>
+ <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
  <dd>Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd>
  <dt>{{domxref("Window.name")}}</dt>
  <dd>Gets/sets the name of the window.</dd>
@@ -209,7 +209,7 @@ translation_of: Web/API/Window
  <dd>Returns the selection object representing the selected item(s).</dd>
  <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Returns the browser to the home page.</dd>
- <dt>{{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("Window.matchMedia()")}}</dt>
  <dd>Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.</dd>
  <dt>{{domxref("Window.maximize()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
@@ -231,7 +231,7 @@ translation_of: Web/API/Window
  <dd>Returns the text entered by the user in a prompt dialog.</dd>
  <dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{Deprecated_inline}}</dt>
  <dd>Releases the window from trapping events of a specific type.</dd>
- <dt>{{domxref("Window.requestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.requestAnimationFrame()")}}</dt>
  <dd>Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.</dd>
  <dt>{{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}</dt>
  <dd>Enables the scheduling of tasks during a browser's idle periods.</dd>
@@ -334,9 +334,9 @@ translation_of: Web/API/Window
  <dd>Called when the RIGHT mouse button is pressed</dd>
  <dt>{{domxref("Window.ondevicelight")}}</dt>
  <dd>An event handler property for any ambient light levels changes</dd>
- <dt>{{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("Window.ondevicemotion")}}</dt>
  <dd>Called if accelerometer detects a change (For mobile devices)</dd>
- <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("Window.ondeviceorientation")}}</dt>
  <dd>Called when the orientation is changed (For mobile devices)</dd>
  <dt>{{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only</dt>
  <dd>An event handler property for any device orientation changes.</dd>
@@ -346,7 +346,7 @@ translation_of: Web/API/Window
  <dd>Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.</dd>
  <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
  <dd>Called after the window receives or regains focus. See {{event("focus")}} events.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}</dt>
+ <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
  <dd>An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
  <dt>{{domxref("Window.onappinstalled")}}</dt>
  <dd>Called when the page is installed as a webapp. See {{event('appinstalled')}} event.</dd>
@@ -378,7 +378,7 @@ translation_of: Web/API/Window
  <dd>Called when the pointer enters the window</dd>
  <dt>{{domxref("GlobalEventHandlers.onmouseup")}}</dt>
  <dd>Called when ANY mouse button is released</dd>
- <dt>{{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.onmozbeforepaint")}}</dt>
  <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.</dd>
  <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
  <dd>Called when network connection is lost. See {{event("offline")}} event.</dd>
@@ -390,7 +390,7 @@ translation_of: Web/API/Window
  <dd>Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.</dd>
  <dt>{{domxref("Window.onpaint")}}</dt>
  <dd>An event handler property for paint events on the window.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
  <dd>Called when a back putton is pressed.</dd>
  <dt>{{domxref("Window.onrejectionhandled")}} {{experimental_inline}}</dt>
  <dd>An event handler for handled {{jsxref("Promise")}} rejection events.</dd>

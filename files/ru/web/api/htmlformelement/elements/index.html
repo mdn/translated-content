@@ -17,7 +17,7 @@ translation_of: Web/API/HTMLFormElement/elements
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>nodeList</em> = <em>HTMLFormElement</em>.elements
+<pre class="syntaxbox"><em>nodeList</em> = <em>HTMLFormElement</em>.elements
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -34,13 +34,13 @@ translation_of: Web/API/HTMLFormElement/elements
 
 <p>In this example, we see how to obtain the list of form controls as well as how to access its members by index and by name or ID.</p>
 
-<pre class="brush: html notranslate">&lt;form id="my-form"&gt;
+<pre class="brush: html">&lt;form id="my-form"&gt;
   &lt;input type="text" name="username"&gt;
   &lt;input type="text" name="full-name"&gt;
   &lt;input type="password" name="password"&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush:js notranslate">var inputs = document.getElementById("my-form").elements;
+<pre class="brush:js">var inputs = document.getElementById("my-form").elements;
 var inputByIndex = inputs[0];
 var inputByName = inputs["username"];
 </pre>
@@ -49,7 +49,7 @@ var inputByName = inputs["username"];
 
 <p>This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> so that some form of processing can be performed on them.</p>
 
-<pre class="brush: js notranslate">var inputs = document.getElementById("my-form").elements;
+<pre class="brush: js">var inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
 for (i = 0; i &lt; inputs.length; i++) {
@@ -62,7 +62,7 @@ for (i = 0; i &lt; inputs.length; i++) {
 
 <h3 id="Disabling_form_controls">Disabling form controls</h3>
 
-<pre class="brush: js notranslate">var inputs = document.getElementById("my-form").elements;
+<pre class="brush: js">var inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
 for (i = 0; i &lt; inputs.length; i++) {
@@ -97,4 +97,4 @@ for (i = 0; i &lt; inputs.length; i++) {
 
 
 
-<p>{{Compat("api.HTMLFormElement.elements")}}</p>
+<p>{{Compat}}</p>

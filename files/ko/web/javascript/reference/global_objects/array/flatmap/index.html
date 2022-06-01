@@ -49,13 +49,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h3 id="map_과_flatMap"><code>map</code> 과 <code>flatMap</code></h3>
 
-<pre class="brush: js">let arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
+<pre class="brush: js">let arr1 = [1, 2, 3, 4];
 
-arr1.map(</span></span></span></span></span>x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]
 
 // 한 레벨만 평탄화됨
 arr1.flatMap(x =&gt; [[x * 2]]);
@@ -71,8 +71,8 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 arr1.map(x=&gt;x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x =&gt; x.split(" ")<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// ["it's","Sunny","in","California"]</span></span></span></span></span></pre>
+arr1.flatMap(x =&gt; x.split(" "));
+// ["it's","Sunny","in","California"]</pre>
 
 <p>출력 리스트의 길이는 입력 리스트의 길이와 다를 수 있습니다.</p>
 
@@ -93,21 +93,21 @@ a.flatMap( (n) =&gt;
 
 // expected output: [4, 1, 4, 20, 16, 1, 18]</code></pre>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
 
 <h2 id="대안">대안</h2>
 
 <h3 id="reduce_와_concat"><code>reduce</code> 와 <code>concat</code></h3>
 
-<pre class="brush: js">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
-</span></span></span></span></span>
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+<pre class="brush: js">var arr1 = [1, 2, 3, 4];
+
+arr1.flatMap(x =&gt; [x * 2]);
 // 다음과 동일합니다
-arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>), []);</span></span></span></span></span>
-<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.reduce((acc, x) =&gt; acc.concat([x * 2]), []);
+// [2, 4, 6, 8]
 </pre>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
 
 <h2 id="명세">명세</h2>
 

@@ -21,11 +21,11 @@ RangeError: Invalid count value (Chrome)
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="发生了什么">发生了什么?</h2>
+<h2 id="发生了什么">发生了什么？</h2>
 
-<p>代码中使用了 {{jsxref("String.prototype.repeat()")}}方法。<span class="short_text" id="result_box" lang="zh-CN"><span>它有一个计数参数，表示重复该字符串的次数</span></span>。该参数必须在 0 及正 {{jsxref("Infinity")}} 之间，且不能为负数。该值的合法范围可以这样表示： [0, +∞)。</p>
+<p>代码中使用了 {{jsxref("String.prototype.repeat()")}}方法。它有一个计数参数，表示重复该字符串的次数。该参数必须在 0 及正 {{jsxref("Infinity")}} 之间，且不能为负数。该值的合法范围可以这样表示： [0, +∞)。</p>
 
-<p><span class="short_text" id="result_box" lang="zh-CN"><span>其结果字符串也不能长于最大字符串，不同 JavaScript 引擎中可能有所不同。</span></span> 在 Firefox (SpiderMonkey) 里最大字符串大小为 2<sup>28</sup> -1 (<code>0xFFFFFFF</code>)。</p>
+<p>其结果字符串也不能长于最大字符串，不同 JavaScript 引擎中可能有所不同。 在 Firefox (SpiderMonkey) 里最大字符串大小为 2^28 -1 (<code>0xFFFFFFF</code>)。</p>
 
 <h2 id="示例">示例</h2>
 

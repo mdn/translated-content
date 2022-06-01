@@ -49,7 +49,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>(편집기로 본) 소스안에 최상위 수준에 {{htmlelement("header")}} 요소와 세 개의 {{htmlelement("article")}}를 포함한 {{htmlelement("section")}} 요소가 있음을 알 수 있습니다. 우리는 이것들을 사용해 상당히 표준적인 삼단 레이아웃을 생성할 겁니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="flexbox로_레이아웃할_요소_지정">flexbox로 레이아웃할 요소 지정</h2>
 
@@ -61,7 +61,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>그 결과는 다음과 같아야 합니다:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>자. 이 단일 선언이 우리에게 필요한 모든 것을 제공합니다. 놀랍죠, 그쵸? 우리는 단의 크기가 동일한 다단 레이아웃를 갖게 되었고, 단의 높이가 모두 같습니다. 이렇게 된 까닭은 (flex container의 자식인) flex item에 주어진 기본값이 이와 같은 일반적인 문제를 해결하도록 설정되었기 때문입니다. 관련 내용은 나중에 추가합니다.</p>
 
@@ -73,7 +73,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>요소들을 flexbox로 레이아웃될 때 그 상자들은 두 개의 축을 따라 배치됩니다.</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li><ruby><strong>기본 축</strong><rp> (</rp><rt>main axis</rt><rp>) </rp></ruby>은 flex item이 배치되고 있는 방향으로 진행하는 축입니다(예: 페이지를 가로지르는 행 또는 페이지 밑으로 쌓이는 열). 이 기본 축의 시작과 끝을 일컬어 <strong>main start</strong>과 <strong>main end</strong>라고 합니다.</li>
@@ -95,26 +95,26 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 <p>이로써 항목 무리를 열 레이아웃으로 되돌려 놓는걸 확인하게 된다. 해당 항목들은 어떤 내용의 CSS를 추가하기 이전 상황과 유사하다. 진도를 더 나가기 전에 동 선언문을 예제에서 삭제하십시오.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 당신은 <code>row-reverse</code>와 <code>column-reverse</code> 속성값을 사용하여 역방향으로 배치할 수 있습니다. 이들 값으로도 실험해보십시요!</p>
+<p><strong>참고</strong>: 당신은 <code>row-reverse</code>와 <code>column-reverse</code> 속성값을 사용하여 역방향으로 배치할 수 있습니다. 이들 값으로도 실험해보십시오!</p>
 </div>
 
 <h2 id="접기">접기</h2>
 
 <p>당신의 레이아웃에 너비 또는 높이가 고정 크기를 갖고 있어 생기는 한 가지 문제는 결국 flexbox 자식 요소가 컨테이너에서 대열이탈하면서 레이아웃이 깨진다는 것입니다. 우리가 제시하는 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> 예제를 확인하고 난 뒤 <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">라이브 보기</a>를 시도하세요(이 예제를 따라해보고 싶다면 이제 이 파일의 사본을 내려받으세요):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>여기서 우리는 자식들이 정말로 소속 컨테이너에서 이탈하는 모습을 확인할 수 있습니다. 이것을 해소할 수 있는 한 가지 방법은 다음 선언을 {{htmlelement("section")}} 규칙 부분에 추가하면 됩니다:</p>
 
 <pre class="brush: css">flex-wrap: wrap;</pre>
 
-<p>또한, 디음 선언문을 {{htmlelement("article")}} 규칙 부분에 추가해보세요:</p>
+<p>또한, 다음 선언문을 {{htmlelement("article")}} 규칙 부분에 추가해보세요:</p>
 
 <pre class="brush: css">flex: 200px;</pre>
 
-<p>지금 시도해보십시오. 동 규칙이 포함된 상태에선 레이아웃 모양이 개선되는 걸 보게 됩겁니다:</p>
+<p>지금 시도해보십시오. 이 규칙이 포함되면 레이아웃이 훨씬 더 나아 보입니다:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">우리는 이제 여러 행을 갖게 되었다. 많은 flexbox 자녀들이 합당하다 싶게 각 행마다 (분배되어) 알맞게 맞춰졌습니다. 대열이탈된 것들은 다음 행으로 넘어갑니다. 아티클 요소에 <code>flex: 200px</code> 선언이 지정되었다는 의미는 각 요소에 적어도 200px 너비가 지정되었다는 의미이다. 우리는 나중에 이 속성에 대해 더 자세히 논의할 겁니다. 마지막 행에 있는 마지막 몇몇 자식들의 각 너비가 더 연장되면서 전체 행이 마찬가지로 채워진 것을 볼 수 있습니다.</p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">우리는 이제 여러 행을 갖게 되었다. 많은 flexbox 자녀들이 합당하다 싶게 각 행마다 (분배되어) 알맞게 맞춰졌습니다. 대열이탈된 것들은 다음 행으로 넘어갑니다. 아티클 요소에 <code>flex: 200px</code> 선언이 지정되었다는 의미는 각 요소에 적어도 200px 너비가 지정되었다는 의미이다. 우리는 나중에 이 속성에 대해 더 자세히 논의할 겁니다. 마지막 행에 있는 마지막 몇몇 자식들의 각 너비가 더 연장되면서 전체 행이 마찬가지로 채워진 것을 볼 수 있습니다.</p>
 
 <p>하지만 할 수 있는 게 더 있습니다. 우선, {{cssxref("flex-direction")}} 속성값을 <code>row-reverse</code>로 변경해 보십시오. 이제 여러 행 레이아웃을 보유한 것은 마찬가지지만, 브라우저 창의 반대쪽 구석에서 시작하여 역방향 대열이 된 것이 확인될 겁니다.</p>
 
@@ -161,9 +161,9 @@ article:nth-of-type(3) {
 
 <p>이것은 기본적으로 "각 flex item은 먼저 사용 가능한 공간에서 200px를 부여받습니다. 그 후, 나머지 사용 가능한 공간은 비례 단위에 따라 분배됩니다." 새로 고침을 해보면 공간 배분 방식이 달라진 것이 확인될 겁니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
-<p>flexbox의 실제 값은 flex성/반응성에 포함되어 있다고 볼 수 있습니다. 다시말해 브라우저 창의 크기를 재조정하거나 다른 {{htmlelement("article")}} 요소를 추가하더라도 레이아웃이 계속 정상적으로 작동합니다.</p>
+<p>flexbox의 실제 값은 flex성/반응성에 포함되어 있다고 볼 수 있습니다. 다시 말해 브라우저 창의 크기를 재조정하거나 다른 {{htmlelement("article")}} 요소를 추가하더라도 레이아웃이 계속 정상적으로 작동합니다.</p>
 
 <h2 id="flex_약칭_對_정식_명칭">flex: 약칭 對 정식 명칭</h2>
 
@@ -171,7 +171,7 @@ article:nth-of-type(3) {
 
 <ul>
  <li>단위없는 비례 값은 우리가 위에서 논의한 바 있습니다. 단위없는 비례 값은 {{cssxref("flex-grow")}}라는 정식 명칭 속성을 사용하여 개별적으로 지정할 수 있습니다.</li>
- <li>두 번째 단위없는 비례 값인 {{cssxref("flex-shrink")}}는 flex item이 컨테이너에서 넘칠때(대열이탈) 존재를 드러냅니다. 이 값은 컨테이너 대열이탈을 방지하기 위해 넘치는 양을 각 flex item의 크기에서 어느 정도나 뺏어올지를 지정합니다. 이 값은 꽤 고수준의 flexbox 기능이며, 우리는 이 문서에서는 추가 내용을 다루지 않겠습니다.</li>
+ <li>두 번째 단위없는 비례 값인 {{cssxref("flex-shrink")}}는 flex item이 컨테이너에서 넘칠 때(대열이탈) 존재를 드러냅니다. 이 값은 컨테이너 대열이탈을 방지하기 위해 넘치는 양을 각 flex item의 크기에서 어느 정도나 뺏어올지를 지정합니다. 이 값은 꽤 고수준의 flexbox 기능이며, 우리는 이 문서에서는 추가 내용을 다루지 않겠습니다.</li>
  <li>위에서 논의했던 최소 크기 값입니다. 최소 크기 값은 {{cssxref("flex-basis")}}라는 정식 명칭 값을 사용하여 개별적으로 지정될 수 있습니다.</li>
 </ul>
 
@@ -181,7 +181,7 @@ article:nth-of-type(3) {
 
 <p>또한 flexbox 기능을 사용하여 기본 축 또는 교차축을 따라 flex item을 정렬할수 있습니다. 이 기능은 새로운 예제인 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a>을 통해 살펴보자(<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">라이브로도 보세요</a>). flexbox가 우리는 깔끔한 flex형 단추/툴바로 바뀌게될 겁니다. 지금 당장은 몇몇 단추들이 왼쪽 상단 모서리에 몰린 상태의 수평 메뉴 표시줄이 보입니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>우선 이 예제의 사본을 취득합니다.</p>
 
@@ -193,13 +193,13 @@ article:nth-of-type(3) {
   justify-content: space-around;
 }</pre>
 
-<p>페이지를 새로 고치면 단추가 수평 및 수직으로 중심이 잘 맞춰져 있음을 알 수 있습니다. 우리는 두 가지 새로운 속성을 통해 이 작업을 수행했습니다.</p>
+<p>페이지를 새로 고치면 버튼들이 수평 및 수직으로 중심이 잘 맞춰져 있음을 알 수 있습니다. 우리는 두 가지 새로운 속성을 통해 이 작업을 수행했습니다.</p>
 
 <p>{{cssxref("align-items")}} 속성은 flex item이 교차축 어디에 놓일 지를 제어합니다.</p>
 
 <ul>
  <li>이 속성값은 기본값으로 <code>stretch</code>입니다. 이 값은 교차축 방향으로 부모 요소를 채우기 위해 모든 flex item을 연장합니다. 부모가 교차 축 방향으로 고정폭이 주어지지 않았다면 모든 flex item이 최장 항목만큼 길어집니다. 이런 방식으로 우리의 첫 번째 예제가 기본값으로 같은 높이의 열을 얻게 된 것입니다.</li>
- <li>우리가 위의 코드에서 사용한 <code>center</code> 값은 항목 무리가 자기들 고유의 면적를 유지하는 동시에 교차축을 따라 중심에 놓이게 만듭니다. 그런 까닭에 현재 예제 속 단추가 수직으로 중심에 놓여있습니다.</li>
+ <li>우리가 위의 코드에서 사용한 <code>center</code> 값은 항목 무리가 자기들 고유의 면적를 유지하는 동시에 교차축을 따라 중심에 놓이게 만듭니다. 그런 까닭에 현재 예제 속 버튼이 수직으로 중심에 놓여있습니다.</li>
  <li>또한 교차축의 시작과 끝에 맞춰 모든 항목을 정렬하게 해주는 <code>flex-start</code>와 <code>flex-end</code>와 같은 값도 가질 수 있습니다. 자세한 내용은 {{cssxref("align-items")}}을 참조하십시오.</li>
 </ul>
 
@@ -216,7 +216,7 @@ article:nth-of-type(3) {
 <ul>
  <li>기본값은 <code>flex-start</code>이며, 이는 모든 항목이 기본 축의 시작 부분에 놓이도록 만듭니다.</li>
  <li>당신은 <code>flex-end</code>를 사용하여 항목 무리를 기본 축의 가장자리에 놓이도록 만들 수도 있습니다.</li>
- <li><code>center</code>는 <code>justify-content</code>를 대체할 수 있는 값으로 flex item 무리를 기본 축의 중심에 놓이도록 만들겁니다.</li>
+ <li><code>center</code>는 <code>justify-content</code>를 대체할 수 있는 값으로 flex item 무리를 기본 축의 중심에 놓이도록 만들 겁니다.</li>
  <li>우리가 위에서 사용했던 값인 <code>space-around</code>는 유용합니다. 모든 항목을 기본 축을 따라 고르게 분배하고 양쪽 끝에 약간의 공간도 남겨 놓습니다.</li>
  <li>그 외에도 <code>space-between</code>이라는 값도 있습니다. 이는 <code>space-around</code>와 매우 흡사하다. 다만 이것은 양쪽 끝에 공간을 남기지 않습니다.</li>
 </ul>
@@ -227,13 +227,13 @@ article:nth-of-type(3) {
 
 <p>flexbox에는 소스 순서에 영향을 미치지 않고 flex item의 레이아웃 순서를 변경하는 기능도 있습니다. 이는 전통적인 레이아웃 메서드로는 불가능했던 내용입니다.</p>
 
-<p>이를 위한 코드는 간단합니다: 당신의 단추표시줄 예제 코도에 다음과 같은 CSS를 추가해 보십시요:</p>
+<p>이를 위한 코드는 간단합니다: 당신의 버튼바 예제 코드에 다음과 같은 CSS를 추가해 보십시오:</p>
 
 <pre class="brush: css">button:first-child {
   order: 1;
 }</pre>
 
-<p>페이지를 새로 고치면 이제 "스마일" 단추가 기본 축의 끝으로 이동한 것이 확인될 겁니다. 어떻게 이런 식으로 작동하는지 좀 더 상세히 얘기해 보겠습니다:</p>
+<p>페이지를 새로 고치면 이제 "Smile" 버튼이 기본 축의 끝으로 이동한 것이 확인될 겁니다. 어떻게 이런 식으로 작동하는지 좀 더 상세히 얘기해 보겠습니다:</p>
 
 <ul>
  <li>기본값으로 모든 flex item들은 {{cssxref("order")}} 값이 0입니다.</li>
@@ -242,7 +242,7 @@ article:nth-of-type(3) {
  <li>제 3항목은 동일한 순서값을 가지고 있지만, 소스 순서 상 제 2항목 뒤에 있기 때문에 제 2 항목 뒤에 나타납니다.</li>
 </ul>
 
-<p>당신은 0 지정 항목보다 일찍 항목을 표시하도록 음수 순서 값을 설정할 수 있습니다. 예를 들어, 다음 규칙을 사용하여 "Blush" 단추를 기본 축의 시작 부분에 표시할 수 있습니다:</p>
+<p>당신은 0 지정 항목보다 일찍 항목을 표시하도록 음수 순서 값을 설정할 수 있습니다. 예를 들어, 다음 규칙을 사용하여 "Blush" 버튼을 기본 축의 시작 부분에 표시할 수 있습니다:</p>
 
 <pre class="brush: css">button:last-child {
   order: -1;
@@ -252,7 +252,7 @@ article:nth-of-type(3) {
 
 <p>flexbox를 사용하여 꽤 복잡한 레이아웃을 만들 수 있습니다. flex item을 flex container로 설정해도 전혀 문제없습니다. 그렇게 되면 그 컨테이너의 자녀가 flexbox처럼 배치됩니다. <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a>를 찾아보세요. (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">라이브로도 보세요</a>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>이를 위한 HTML은 상당히 간단합니다. 세 개의 {{htmlelement("article")}}를 포함하는 {{htmlelement("section")}} 요소가 있습니다. 세 번째 {{htmlelement("article")}}은 세 개의 {{htmlelement("div")}}를 포함하고 있습니다. :</p>
 
@@ -285,7 +285,7 @@ article:nth-of-type(3) {
 }
 </pre>
 
-<p>다음으로 첫 번째 {{htmlelement("div")}}를 선택합니다. 우리는 먼저 선택된 요소에 100px의 최소 높이를 효과적으로 주기 위해 <code>flex:1 100px;</code>을 사용합니다. 그리고 나서 우리는 그것의 자식들을 ({{htmlelement("button")}} 요소 무리를) flex item처럼 배치하도록 설정했습니다. 여기서 우리는 그것들을 줄 바꿈 행에 배치하고, 우리가 앞서 본 개별 단추 예제에서 했던 것처럼 사용 가능한 공간의 중심에 정렬합니다.</p>
+<p>다음으로 첫 번째 {{htmlelement("div")}}를 선택합니다. 우리는 먼저 선택된 요소에 100px의 최소 높이를 효과적으로 주기 위해 <code>flex:1 100px;</code>을 사용합니다. 그리고 나서 우리는 그것의 자식들을 ({{htmlelement("button")}} 요소 무리를) flex item처럼 배치하도록 설정했습니다. 여기서 우리는 그것들을 줄 바꿈 행에 배치하고, 우리가 앞서 본 개별 버튼 예제에서 했던 것처럼 사용 가능한 공간의 중심에 정렬합니다.</p>
 
 <pre class="brush: css">article:nth-of-type(3) div:first-child {
   flex:1 100px;
@@ -295,7 +295,7 @@ article:nth-of-type(3) {
   justify-content: space-around;
 }</pre>
 
-<p>마지막으로, 우리는 단추에 약간의 크기를 설정하되, 다소 흥미롭게도 1 auto라는 flex 값을 부여합니다. 이것은 매우 흥미로운 효과를 지니게 되는데, 브라우저 창의 폭을 조정해 보면 확인됩니다. 단추는 최대한의 공간을 점유할 뿐만아니라 동일 선상에 가능한 한 많은 요소를 놓으려고 합니다. 그러나 해당 요소들이 더 이상 동일 선상에 안착할 수 없을 경우 새로운 라인으로 밀려납니다.</p>
+<p>마지막으로, 우리는 버튼에 약간의 크기를 설정하되, 다소 흥미롭게도 1 auto라는 flex 값을 부여합니다. 이것은 매우 흥미로운 효과를 지니게 되는데, 브라우저 창의 폭을 조정해 보면 확인됩니다. 버튼은 최대한의 공간을 점유할 뿐만아니라 동일 선상에 가능한 한 많은 요소를 놓으려고 합니다. 그러나 해당 요소들이 더 이상 동일 선상에 안착할 수 없을 경우 새로운 라인으로 밀려납니다.</p>
 
 <pre class="brush: css">button {
   flex: 1 auto;

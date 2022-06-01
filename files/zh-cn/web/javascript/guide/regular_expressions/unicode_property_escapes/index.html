@@ -5,32 +5,30 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escape
 ---
 <p>{{jsSidebar("JavaScript Guide")}}</p>
 
-<p><strong>Unicode property escapes</strong> <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式</a> 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母(甚至适用特定语言或文字)等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。</p>
+<p><strong>Unicode property escapes</strong> <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式</a> 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母 (甚至适用特定语言或文字) 等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}</div>
 
-<div class="blockIndicator note">
-<p><strong>Note: </strong>使用 Unicode 属性转义依靠 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode"><code>\u</code> 标识</a>，<code>\u</code> 表示该字符串被视为一串 Unicode 代码点。参考 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">RegExp.prototype.nicode</a></code>.</p>
+<div class="note">
+<p><strong>备注：</strong>使用 Unicode 属性转义依靠 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode"><code>\u</code> 标识</a>，<code>\u</code> 表示该字符串被视为一串 Unicode 代码点。参考 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">RegExp.prototype.nicode</a></code>.</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 某些 Unicode 属性比<a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">字符类</a>(如 <code>\w</code> 只匹配拉丁字母 <code>a</code> 到 <code>z</code>)包含更多的字符  ，但后者浏览器兼容性更好 (截至2020 一月).</p>
+<div class="note">
+<p><strong>备注：</strong> 某些 Unicode 属性比<a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">字符类</a>(如 <code>\w</code> 只匹配拉丁字母 <code>a</code> 到 <code>z</code>) 包含更多的字符  ，但后者浏览器兼容性更好 (截至 2020 一月).</p>
 </div>
 
 <h2 id="句法">句法</h2>
 
-<div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
-
-<pre class="brush: js notranslate">// Non-binary 属性
-\p{<em>Unicode属性值</em>}
-\p{<em>Unicode属性名</em>=<em>Unicode属性值</em>}
+<pre class="brush: js">// Non-binary 属性
+\p{<em>Unicode 属性值</em>}
+\p{<em>Unicode 属性名</em>=<em>Unicode 属性值</em>}
 
 // Binary and non-binary 属性
-\p{<em>UnicodeBinary属性名</em>}
+\p{<em>UnicodeBinary 属性名</em>}
 
 // \P 为 \p 取反
-\P{<em>Unicode属性值</em>}
-\P{<em>UnicodeBinary属性名</em>}
+\P{<em>Unicode 属性值</em>}
+\P{<em>UnicodeBinary 属性名</em>}
 </pre>
 
 <ul>
@@ -39,34 +37,34 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escape
  <li><a href="https://unicode.org/reports/tr24/#Script_Extensions">Script_Extensions</a> (<code>scx</code>)</li>
 </ul>
 
-<p>参考 <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt">PropertyValueAliases.txt<span class="hidden"> </span></a></p>
+<p>参考 <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt">PropertyValueAliases.txt </a></p>
 
 <dl>
- <dt>UnicodeBinary属性名</dt>
- <dd><a href="https://tc39.es/ecma262/#table-binary-unicode-properties">Binary 属性</a>名. E.g.: <code><a href="https://unicode.org/reports/tr18/#General_Category_Property">ASCII</a></code>. <code><a href="https://unicode.org/reports/tr44/#Alphabetic">Alpha</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#Diacritic">Diacritic</a></code>, <code><a href="https://unicode.org/reports/tr51/#Emoji_Properties">Emoji</a></code>, <code><a href="https://unicode.org/reports/tr44/#Hex_Digit">Hex_Digit</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#White_Space">White_space</a></code>, 等. 另见 <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode Data PropList.txt</a>.</dd>
- <dt>Unicode属性名</dt>
- <dd><a href="https://tc39.es/ecma262/#table-nonbinary-unicode-properties">Non-binary</a> 属性名:</dd>
- <dt>Unicode属性值</dt>
- <dd>很多值有同名或简写(e.g. 对应着 <code>General_Category</code> 属性名的属性值 <code>Decimal_Number</code> 可以写作 <code>Nd</code>, <code>digit</code>, 或 <code>Decimal_Number</code>). 大多数属性值的 <em><code>Unicode属性名</code></em> 和等号可以省去。如果想明确某 <em><code>Unicode属性名</code></em>，必须给出它的值。</dd>
+ <dt>UnicodeBinary 属性名</dt>
+ <dd><a href="https://tc39.es/ecma262/#table-binary-unicode-properties">Binary 属性</a>名. E.g.: <code><a href="https://unicode.org/reports/tr18/#General_Category_Property">ASCII</a></code>. <code><a href="https://unicode.org/reports/tr44/#Alphabetic">Alpha</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#Diacritic">Diacritic</a></code>, <code><a href="https://unicode.org/reports/tr51/#Emoji_Properties">Emoji</a></code>, <code><a href="https://unicode.org/reports/tr44/#Hex_Digit">Hex_Digit</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#White_Space">White_space</a></code>, 等。另见 <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode Data PropList.txt</a>.</dd>
+ <dt>Unicode 属性名</dt>
+ <dd><a href="https://tc39.es/ecma262/#table-nonbinary-unicode-properties">Non-binary</a> 属性名：</dd>
+ <dt>Unicode 属性值</dt>
+ <dd>很多值有同名或简写 (e.g. 对应着 <code>General_Category</code> 属性名的属性值 <code>Decimal_Number</code> 可以写作 <code>Nd</code>, <code>digit</code>, 或 <code>Decimal_Number</code>). 大多数属性值的 <em><code>Unicode 属性名</code></em> 和等号可以省去。如果想明确某 <em><code>Unicode 属性名</code></em>，必须给出它的值。</dd>
 </dl>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 因为可使用的属性和值太多，这里不一一赘述，仅提供几个例子。</p>
+<div class="note">
+<p><strong>备注：</strong> 因为可使用的属性和值太多，这里不一一赘述，仅提供几个例子。</p>
 </div>
 
 <h2 id="基本原理">基本原理</h2>
 
-<p>在 ES2018 之前，JavaScript 没有强有效的方式用匹配出不同<code>文字</code>(如马其顿语，希腊语，Georgian 等)或不同 <code>属性名</code> (如 Emoji 等)的字符。另见 <a href="https://github.com/tc39/proposal-regexp-unicode-property-escapes">tc39 Proposal on Unicode Property Escapes</a>.</p>
+<p>在 ES2018 之前，JavaScript 没有强有效的方式用匹配出不同<code>文字</code>(如马其顿语，希腊语，Georgian 等) 或不同 <code>属性名</code> (如 Emoji 等) 的字符。另见 <a href="https://github.com/tc39/proposal-regexp-unicode-property-escapes">tc39 Proposal on Unicode Property Escapes</a>.</p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="（一般类别）General_categories">（一般类别）General categories</h3>
 
-<p>General categories 对 Unicode 字符进行分类，子类别用于精确定义类别。长名和简写的 Unicode 属性转义都可用.</p>
+<p>General categories 对 Unicode 字符进行分类，子类别用于精确定义类别。长名和简写的 Unicode 属性转义都可用。</p>
 
 <p>它们可匹配字母、数字、符号、标点符号、空格等等。一般类别详见 <a href="https://unicode.org/reports/tr18/#General_Category_Property">the Unicode specification</a>.</p>
 
-<pre class="brush: js notranslate">// finding all the letters of a text
+<pre class="brush: js">// finding all the letters of a text
 let story = "It’s the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
@@ -86,9 +84,9 @@ story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 
 <p>某些语言使用不同的文字，如英语和西班牙语使用拉丁文，而阿拉伯语和俄语用阿拉伯文和俄文。<code>Script</code> 和 <code>Script_Extensions</code> Unicode 属性允许正则表达式根据字符所属的<code>文字</code>或该文字所属的<code>文字扩充</code>进行匹配。</p>
 
-<p>比如，<code>A</code> 属于 <code>拉丁文</code>，<code>ε</code> 属于<code>希腊(Greek)</code>文。</p>
+<p>比如，<code>A</code> 属于 <code>拉丁文</code>，<code>ε</code> 属于<code>希腊 (Greek)</code>文。</p>
 
-<pre class="brush: js notranslate">let mixedCharacters = "aεЛ";
+<pre class="brush: js">let mixedCharacters = "aεЛ";
 
 // Using the canonical "long" name of the script
 mixedCharacters.match(/\p{Script=Latin}/u); // a
@@ -104,7 +102,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>某字符用于多种文字时，<code>Script</code> 优先匹配最主要使用那个字符的文字。如果想要根据非主要的文字进行匹配，我们可以使用 <code>Script_Extensions</code> 属性 (简写为<code>Scx</code>).</p>
 
-<pre class="brush: js notranslate">// ٢ is the digit 2 in Arabic-Indic notation
+<pre class="brush: js">// ٢ is the digit 2 in Arabic-Indic notation
 // while it is predominantly written within the Arabic script
 // it can also be written in the Thaana script
 
@@ -121,7 +119,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>Unicode 属性转义 categories 包含更多字符， <code>\p{Letter}</code> 或 <code>\p{Number}</code> 将会适用于任何文字。</p>
 
-<pre class="brush: js notranslate">// Trying to use ranges to avoid \w limitations:
+<pre class="brush: js">// Trying to use ranges to avoid \w limitations:
 
 const nonEnglishText = "Приключения Алисы в Стране чудес";
 const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;

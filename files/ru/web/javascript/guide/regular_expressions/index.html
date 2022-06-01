@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 <ul>
  <li>Используя литерал регулярного выражения, например:
   <div style="margin-right: 270px;">
-  <pre class="brush: js notranslate">var re = /ab+c/;
+  <pre class="brush: js">var re = /ab+c/;
 </pre>
   </div>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  </li>
  <li>Вызывая функцию конструктор объекта <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp" title="en-US/docs/JavaScript/Reference/Global Objects/RegExp">RegExp</a></code>, например:
   <div style="margin-right: 270px;">
-  <pre class="brush: js notranslate">var re = new RegExp("ab+c");
+  <pre class="brush: js">var re = new RegExp("ab+c");
 </pre>
   </div>
 
@@ -321,7 +321,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>Экранирование пользовательского ввода, соответствующего буквенной строке внутри регулярного выражения, может быть достигнуто простой заменой: </p>
 
-<pre class="brush: js notranslate"><code>function escapeRegExp(string){
+<pre class="brush: js"><code>function escapeRegExp(string){
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
 }</code></pre>
 
@@ -366,7 +366,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/replace" title="en-US/docs/JavaScript/Reference/Global_Objects/String/replace">replace</a></code></td>
-   <td>Метод <code>String</code>, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой переданной как аргумент в этот метод.</td>
+   <td>Метод <code>String</code>, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод.</td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="en-US/docs/JavaScript/Reference/Global_Objects/String/split">split</a></code></td>
@@ -375,22 +375,22 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  </tbody>
 </table>
 
-<p>Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами <code>test</code> или <code>search</code>; а чтобы получить больше информации пользуйтесь методами <code>exec</code> или <code>match</code> (хотя эти метода работают медленнее). Если вы пользуетесь <code>exec</code> или <code>match</code> и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта <code>RegExp </code>регулярного выражения. Если совпадений нет, метод <code>exec</code> вернёт <code>null</code> (который сконвертируется в  <code>false</code>).</p>
+<p>Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами <code>test</code> или <code>search</code>; а чтобы получить больше информации пользуйтесь методами <code>exec</code> или <code>match</code> (хотя эти методы работают медленнее). Если вы пользуетесь <code>exec</code> или <code>match</code> и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта <code>RegExp </code>регулярного выражения. Если совпадений нет, метод <code>exec</code> вернёт <code>null</code> (который сконвертируется в  <code>false</code>).</p>
 
 <p>В след. примере, скрипт использует метод <code>exec</code> чтобы найти совпадения в строке.</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 </pre>
 
 <p>Если вам не нужен доступ к свойствам регулярного выражения, то альтернативный способ получить <code>myArray</code> можно так:</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 </pre>
 
 <p>Если вы хотите сконструировать регулярное выражение из строки, другой способ сделать это приведён ниже:</p>
 
-<pre class="brush: js notranslate">var myRe = new RegExp("d(b+)d", "g");
+<pre class="brush: js">var myRe = new RegExp("d(b+)d", "g");
 var myArray = myRe.exec("cdbbdbsbz");
 </pre>
 
@@ -444,25 +444,25 @@ var myArray = myRe.exec("cdbbdbsbz");
 
 <p>Как показано во втором варианте этого примера, вы можете использовать регулярное выражение, созданное при помощи инициализатора объекта, без присваивания его переменной. Таким образом, если вы используете данную форму записи без присваивания переменной, то в процессе дальнейшего использования вы не можете получить доступ к свойствам данного регулярного выражения. Например, у вас есть следующий скрипт:</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + myRe.lastIndex);
 </pre>
 
 <p>Этот скрипт выведет:</p>
 
-<pre class="notranslate">The value of lastIndex is 5
+<pre>The value of lastIndex is 5
 </pre>
 
 <p>Однако, если у вас есть следующий скрипт:</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 </pre>
 
 <p>Он выведет:</p>
 
-<pre class="notranslate">The value of lastIndex is 0
+<pre>The value of lastIndex is 0
 </pre>
 
 <div class="syntaxbox">Совпадения <code>/d(b+)d/g</code> в двух случаях являются разными объектами регулярного выражения и, следовательно, имеют различные значения для свойства <code>lastIndex</code>. Если вам необходим доступ к свойствам объекта, созданного при помощи инициализатора, то вы должны сначала присвоить его переменной.</div>
@@ -477,7 +477,7 @@ console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 
 <p>Следующий скрипт использует метод <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/replace" title="en-US/docs/JavaScript/Reference/Global Objects/String/replace">replace()</a>,</code> чтобы поменять местами слова (символы) в строке. Для замены текста скрипт использует обозначения  <code>$1</code> и <code>$2</code> для обозначения первого и второго совпадения скобочного выражения.</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
 var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
@@ -519,19 +519,19 @@ console.log(newstr);
 
 <p>Чтобы использовать флаги в шаблоне регулярного выражения используйте следующий синтаксис:</p>
 
-<pre class="brush: js notranslate">var re = /pattern/flags;
+<pre class="brush: js">var re = /pattern/flags;
 </pre>
 
 <p>или</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("pattern", "flags");
+<pre class="brush: js">var re = new RegExp("pattern", "flags");
 </pre>
 
 <p>Обратите внимание, что флаги являются неотъемлемой частью регулярного выражения. Флаги не могут быть добавлены или удалены позднее.</p>
 
 <p>Для примера, <code>re = /\w+\s/g</code> создаёт регулярное выражение, которое ищет один или более символов, после которых следует пробел и ищет данное совпадение на протяжении всей строки.</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 var str = "fee fi fo fum";
 var myArray = str.match(re);
 console.log(myArray);
@@ -539,12 +539,12 @@ console.log(myArray);
 
 <p>Выведет  ["fee ", "fi ", "fo "]. В этом примере вы бы могли заменить строку:</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 </pre>
 
 <p>на следующую:</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("\\w+\\s", "g");
+<pre class="brush: js">var re = new RegExp("\\w+\\s", "g");
 </pre>
 
 <p>и получить тот же результат.</p>
@@ -559,7 +559,7 @@ console.log(myArray);
 
 <p>След. пример иллюстрирует формирование регулярного выражения и использование <code>string.split()</code> и <code>string.replace()</code>. Он очищает неправильно сформатированную исходную строку, которая содержит имена в неправильном порядке (имя идёт первым) разделённые пробелами, табуляцией и одной точкой с запятой. В конце, изменяется порядок следования имён (фамилия станет первой) и сортируется список.</p>
 
-<pre class="brush: js notranslate">// The name string contains multiple spaces and tabs,
+<pre class="brush: js">// The name string contains multiple spaces and tabs,
 // and may have multiple spaces between first and last names.
 var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
 
@@ -629,7 +629,7 @@ console.log(output.join("\n"));
 
 <p>Событие "Изменить" активируется, когда пользователь подтвердит ввод значения регулярного выражения, нажав клавишу "Enter". </p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
@@ -655,5 +655,5 @@ console.log(output.join("\n"));
 &lt;/html&gt;
 </pre>
 
-<pre class="script notranslate">autoPreviousNext("JSGChapters");
+<pre class="script">autoPreviousNext("JSGChapters");
 </pre>

@@ -1,10 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/gradient
 ---
 {{CSSRef}}
@@ -72,7 +68,7 @@ body {
 
 {{EmbedLiveSample('Les_dégradés_répétés', 600, 20)}}
 
-#### Dégradé conique
+### Dégradé conique
 
 Les couleurs de transitions s'appliquent progressivement autour d'un cercle. Un tel dégradé est généré avec la fonction {{cssref("conic-gradient","conic-gradient()")}}.
 
@@ -93,7 +89,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('dégradé_conique', 240, 80)}}
+{{EmbedLiveSample('Dégradé_conique', 240, 80)}}
 
 ## Spécifications
 

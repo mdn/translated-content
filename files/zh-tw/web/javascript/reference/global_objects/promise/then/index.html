@@ -7,8 +7,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 <p><strong><code>then()</code> </strong>方法回傳一個 {{domxref("Promise")}} 物件。它接收兩個引數： <code>Promise</code> 在成功及失敗情況時的回呼函式。</p>
 
-<div class="note">
-<p>如果有一個或兩個引數被省略，或為非函式（non-functions），則 <code>then</code> 將處於遺失 handler(s) 的狀態，但不會產生錯誤。若發起 <code>then</code> 之 <code>Promise</code> 採取了一個狀態（實現（<code>fulfillment）</code>或拒絕（<code>rejection））</code>而 <code>then</code> 沒有處理它的函式，一個不具有額外 handlers 的新 <code>Promise</code> 物件將被建立，單純採取原 <code>Promise</code> 其最終狀態。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如果有一個或兩個引數被省略，或為非函式（non-functions），則 <code>then</code> 將處於遺失 handler(s) 的狀態，但不會產生錯誤。若發起 <code>then</code> 之 <code>Promise</code> 採取了一個狀態（實現（<code>fulfillment）</code>或拒絕（<code>rejection））</code>而 <code>then</code> 沒有處理它的函式，一個不具有額外 handlers 的新 <code>Promise</code> 物件將被建立，單純採取原 <code>Promise</code> 其最終狀態。</p>
 </div>
 
 <h2 id="語法">語法</h2>

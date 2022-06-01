@@ -1,99 +1,102 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - CSS
-  - Propriété
-  - Reference
+browser-compat: css.properties.border-image-outset
 translation_of: Web/CSS/border-image-outset
 ---
 {{CSSRef}}
 
 La propriété **`border-image-outset`** définit la distance avec laquelle la bordure est déplacée par rapport à la boîte de bordure.
 
-{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
+Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'évènements de pointeur par rapport à l'élément concerné.
 
-Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'événements de pointeur par rapport à l'élément concerné.
+{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
 
 ## Syntaxe
 
 ```css
-/* border-image-outset :                 */
-/* Une même valeur pour les quatre côtés */
+/* Longueur */
+/* Type <length> */
+border-image-outset: 1rem;
+
+/* Valeur numérique */
+/* Type <number> */
 border-image-outset: 1.5;
 
-/* border-image-outset :              */
-/* Première valeur : côtés verticaux  */
-/* Seconde valeur : côtés horizontaux */
+/* côtés verticaux | horizontaux */
 border-image-outset: 1 1.2;
 
-/* border-image-outset :               */
-/* Première valeur : côté haut         */
-/* Deuxième valeur : côtés horizontaux */
-/* Troisième valeur : côté bas         */
+/* haut | côtés horizontaux | bas */
 border-image-outset: 30px 2 45px;
 
-/* border-image-outset :          */
-/* Première valeur : côté haut    */
-/* Deuxième valeur : côté droit   */
-/* Troisième valeur : côté bas    */
-/* Quatrième valeur : côté gauche */
+/* haut | droit | bas | gauche */
 border-image-outset: 7px 12px 14px 5px;
 
 /* Valeurs globales */
 border-image-outset: inherit;
 border-image-outset: initial;
+border-image-outset: revert;
 border-image-outset: unset;
 ```
+
+La propriété `border-image-outset` peut être définie à l'aide d'une, deux, trois ou quatre valeurs. Chaque valeur est une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un nombre ([`<number>`](/fr/docs/Web/CSS/number)). Les valeurs négatives sont invalides (la déclaration est alors ignorée).
+
+1. Si **une** valeur est indiquée, elle s'applique **aux quatre côtés**.
+2. Si **deux** valeurs sont indiquées, la première s'applique aux côtés **haut et bas** et la seconde s'applique aux côtés **gauche et droit**.
+3. Si **trois** valeurs sont indiquées, la première s'applique au côté **haut**, la deuxième aux côtés **gauche et droit**, et la troisième au côté **bas**.
+4. Si **quatre** valeurs sont indiquées, elles s'appliquent dans le sens des aiguilles d'une montre&nbsp;: la première au côté **haut**, la seconde au côté **droit**, la troisième au côté **bas**, et la quatrième au côté **gauche**.
 
 ### Valeurs
 
 - `<length>`
-  - : Une valeur de longueur (cf. type {{cssxref("&lt;length&gt;")}}) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de longueur (cf. type [`<length>`](/fr/docs/Web/CSS/length)) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
 - `<number>`
-  - : Une valeur numérique (cf. type {{cssxref("&lt;number&gt;")}}) qui sera multipliée par la valeur calculée de {{cssxref("border-width")}} afin de déterminer la longueur de l'espace duquel dépasser.
+  - : Une valeur numérique (cf. type [`<number>`](/fr/docs/Web/CSS/number)) qui sera multipliée par la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) afin de déterminer la longueur de l'espace duquel dépasser.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Décaler la bordure d'une image
+
+#### HTML
+
+```html
+<div id="outset">Un élément avec une bordure décalée !</div>
+```
+
+#### CSS
 
 ```css
-p {
-  border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
-  border-image-slice: 30;
-  border-image-width: 20px;
-  border-image-repeat: round;
-  border-image-outset: 10px;
-  padding: 40px;
+#outset {
+  width: 10rem;
+  background: #cef;
+  border: 1.4rem solid;
+  border-image: radial-gradient(#ff2, #55f) 40;
+  border-image-outset: 1.5;  /* 1.5 × 1.4rem = 2.1rem */
+  margin: 2.1rem;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-  no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples', '480', '320')}}
+{{EmbedLiveSample('', 'auto', '200')}}
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-image-outset', 'border-image-outset')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-image-outset")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

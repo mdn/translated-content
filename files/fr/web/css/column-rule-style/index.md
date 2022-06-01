@@ -38,7 +38,7 @@ La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
 
 ### Valeurs
 
-- `<br-style> `
+- `<br-style>`
   - : Un mot-clé (défini comme pour {{cssxref("border-style")}}) qui permet de définir le style appliqué au trait. Les épaisseurs résultantes sont calculées avec la même méthode que pour les bordures (cf. _[collapsing border model](https://www.w3.org/TR/CSS2/tables.html#collapsing-borders)_).
 
 ### Syntaxe formelle

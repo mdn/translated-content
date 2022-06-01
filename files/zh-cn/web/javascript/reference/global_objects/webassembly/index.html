@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 <p><strong><code>WebAssembly</code></strong>JavaScript 对象是所有 <a href="/en-US/docs/WebAssembly">WebAssembly</a> 相关功能的命名空间。</p>
 
-<p>和大多数全局对象不一样，<code>WebAssembly</code>不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl则是用于国际化和其他语言相关函数的命名空间对象。</p>
+<p>和大多数全局对象不一样，<code>WebAssembly</code>不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
  <dt>{{jsxref("WebAssembly.instantiate()")}}</dt>
  <dd>用于编译和实例化 WebAssembly 代码的主 API，返回一个 <code>Module</code> 和它的第一个<code>Instance</code>实例。</dd>
  <dt>{{jsxref("WebAssembly.instantiateStreaming()")}}</dt>
- <dd>直接从流式底层源编译和实例化WebAssembly模块，同时返回<code>Module</code>及其第一个<code>Instance</code>实例。</dd>
+ <dd>直接从流式底层源编译和实例化 WebAssembly 模块，同时返回<code>Module</code>及其第一个<code>Instance</code>实例。</dd>
  <dt>{{jsxref("WebAssembly.compile()")}}</dt>
  <dd>把 WebAssembly 二进制代码编译为一个 {{jsxref("WebAssembly.Module")}} ，不进行实例化。</dd>
  <dt>{{jsxref("WebAssembly.compileStreaming()")}}</dt>
@@ -42,31 +42,31 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 <dl>
  <dt>{{jsxref("WebAssembly.Global()")}}</dt>
- <dd>创建一个新的WebAssembly <code>Global</code> 全局对象.</dd>
+ <dd>创建一个新的 WebAssembly <code>Global</code> 全局对象。</dd>
  <dt>{{jsxref("WebAssembly.Module()")}}</dt>
- <dd>创建一个新的WebAssembly <code>Module</code>模块对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>Module</code>模块对象。</dd>
  <dt>{{jsxref("WebAssembly.Instance()")}}</dt>
- <dd>创建一个新的WebAssembly <code>Instance</code>实例对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>Instance</code>实例对象。</dd>
  <dt>{{jsxref("WebAssembly.Memory()")}}</dt>
- <dd>创建一个新的WebAssembly <code>Memory</code>内存对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>Memory</code>内存对象。</dd>
  <dt>{{jsxref("WebAssembly.Table()")}}</dt>
- <dd>创建一个新的WebAssembly <code>Table</code>表格对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>Table</code>表格对象。</dd>
  <dt>{{jsxref("WebAssembly.CompileError()")}}</dt>
- <dd>创建一个新的WebAssembly <code>CompileError</code>编译错误对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>CompileError</code>编译错误对象。</dd>
  <dt>{{jsxref("WebAssembly.LinkError()")}}</dt>
- <dd>创建一个新的WebAssembly <code>LinkError</code>链接错误对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>LinkError</code>链接错误对象。</dd>
  <dt>{{jsxref("WebAssembly.RuntimeError()")}}</dt>
- <dd>创建一个新的WebAssembly <code>RuntimeError</code>运行时错误对象。</dd>
+ <dd>创建一个新的 WebAssembly <code>RuntimeError</code>运行时错误对象。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>下面的示例（请参见GitHub上的<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">Instantiate-streaming.html</a>演示，并查看<a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">在线演示</a>）直接从流式底层源传输.wasm模块，然后对其进行编译和实例化，并通过<code>ResultObject</code>实现promise。 由于<code>instantiateStreaming()</code>函数接受对 {{domxref("Response")}} 对象的promise，因此您可以直接向其传递{{domxref("WindowOrWorkerGlobalScope.fetch()")}}调用，然后它将把返回的response传递给随后的函数。</p>
+<p>下面的示例（请参见 GitHub 上的<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">Instantiate-streaming.html</a>演示，并查看<a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">在线演示</a>）直接从流式底层源传输.wasm 模块，然后对其进行编译和实例化，并通过<code>ResultObject</code>实现 promise。 由于<code>instantiateStreaming()</code>函数接受对 {{domxref("Response")}} 对象的 promise，因此您可以直接向其传递{{domxref("WindowOrWorkerGlobalScope.fetch()")}}调用，然后它将把返回的 response 传递给随后的函数。</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> importObject <span class="operator token">=</span> <span class="punctuation token">{</span> imports<span class="punctuation token">:</span> <span class="punctuation token">{</span> <span class="function function-variable token">imported_func</span><span class="punctuation token">:</span> <span class="parameter token">arg</span> <span class="operator token">=&gt;</span> console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>arg<span class="punctuation token">)</span> <span class="punctuation token">}</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 
-WebAssembly<span class="punctuation token">.</span><span class="function token">instantiateStreaming</span><span class="punctuation token">(</span><span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'simple.wasm'</span><span class="punctuation token">)</span><span class="punctuation token">,</span> importObject<span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="parameter token">obj</span> <span class="operator token">=&gt;</span> obj<span class="punctuation token">.</span>instance<span class="punctuation token">.</span>exports<span class="punctuation token">.</span><span class="function token">exported_func</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span></code></pre>
+WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
+.then(obj =&gt; obj.instance.exports.exported_func())</pre>
 
 <p>返回的<code>ResultObject</code>实例的成员可以被随后访问到，可以调用实例中被导出的方法。</p>
 
@@ -89,7 +89,7 @@ WebAssembly<span class="punctuation token">.</span><span class="function token">
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
 

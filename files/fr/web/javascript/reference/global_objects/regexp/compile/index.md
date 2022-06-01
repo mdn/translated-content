@@ -13,11 +13,13 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/compile
 ---
 {{JSRef}} {{deprecated_header}}
 
-La méthode dépréciée **`compile`\*\***`()`\*\* est utilisée afin de (re)compiler une expression rationnelle lors de l'exécution d'un script. Cette méthode effectue essentiellement les mêmes actions que le constructeur `RegExp`.
+La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une expression rationnelle lors de l'exécution d'un script. Cette méthode effectue essentiellement les mêmes actions que le constructeur `RegExp`.
 
 ## Syntaxe
 
-    regexObj.compile(motif, flags)
+```js
+regexObj.compile(motif, flags)
+```
 
 ### Paramètres
 
@@ -42,7 +44,7 @@ La méthode `compile` est dépréciée. Pour obtenir le même effet, on utiliser
 
 ## Exemples
 
-Dans l'exemple qui suit, on voit comment réinitialiser le motif et les drapeaux d'une expression rationnelle grâce à  la méthode `compile()`.
+Dans l'exemple qui suit, on voit comment réinitialiser le motif et les drapeaux d'une expression rationnelle grâce à la méthode `compile()`.
 
 ```js
 var regexObj = new RegExp("toto", "gi");

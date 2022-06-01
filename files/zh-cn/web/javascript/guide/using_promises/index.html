@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Guide/Using_promises
 
 <p>以下为使用 <code>createAudioFileAsync()</code> 的示例：</p>
 
-<pre class="brush: js notranslate">// 成功的回调函数
+<pre class="brush: js">// 成功的回调函数
 function successCallback(result) {
   console.log("音频文件创建成功: " + result);
 }
@@ -36,13 +36,13 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback)</pre>
 
 <p>如果函数 <code>createAudioFileAsync()</code> 被重写为返回 Promise 的形式，那么我们可以像下面这样简单地调用它：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">const promise = createAudioFileAsync(audioSettings);
+<pre class="brush: js">const promise = createAudioFileAsync(audioSettings);
 promise.then(successCallback, failureCallback);
 </pre>
 
 <p>或者简写为：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
+<pre class="brush: js">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 </pre>
 
 <p>我们把这个称为 <em>异步函数调用</em>，这种形式有若干优点，下面我们将会逐一讨论。</p>
@@ -65,13 +65,13 @@ promise.then(successCallback, failureCallback);
 
 <p>见证奇迹的时刻：<code>then()</code> 函数会返回一个和原来不同的<strong>新的 Promise</strong>：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">const promise = doSomething();
+<pre class="brush: js">const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 
 <p>或者</p>
 
-<pre class="brush: js notranslate">const promise2 = doSomething().then(successCallback, failureCallback);</pre>
+<pre class="brush: js">const promise2 = doSomething().then(successCallback, failureCallback);</pre>
 
 <p><code>promise2</code> 不仅表示 <code>doSomething()</code> 函数的完成，也代表了你传入的 <code>successCallback</code> 或者 <code>failureCallback</code> 的完成，这两个函数也可以返回一个 Promise 对象，从而形成另一个异步操作，这样的话，在 <code>promise2</code> 上新增的回调函数会排在这个 Promise 对象的后面。</p>
 
@@ -79,7 +79,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>在过去，要想做多重的异步操作，会导致经典的回调地狱：</p>
 
-<pre class="brush: js notranslate">doSomething(function(result) {
+<pre class="brush: js">doSomething(function(result) {
   doSomethingElse(result, function(newResult) {
     doThirdThing(newResult, function(finalResult) {
       console.log('Got the final result: ' + finalResult);
@@ -90,7 +90,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>现在，我们可以把回调绑定到返回的 Promise 上，形成一个 Promise 链：</p>
 
-<pre class="brush: js notranslate">doSomething().then(function(result) {
+<pre class="brush: js">doSomething().then(function(result) {
   return doSomethingElse(result);
 })
 .then(function(newResult) {
@@ -104,7 +104,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>then 里的参数是可选的，<code>catch(failureCallback)</code> 是 <code>then(null, failureCallback)</code> 的缩略形式。如下所示，我们也可以用<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>来表示：</p>
 
-<pre class="brush: js notranslate">doSomething()
+<pre class="brush: js">doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
 .then(finalResult =&gt; {
@@ -119,7 +119,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>有可能会在一个回调失败之后继续使用链式操作，即，使用一个 <code>catch</code>，这对于在链式操作中抛出一个失败之后，再次进行新的操作会很有用。请阅读下面的例子：</p>
 
-<pre class="brush: js notranslate">new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">new Promise((resolve, reject) =&gt; {
     console.log('初始化');
 
     resolve();
@@ -139,7 +139,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>输出结果如下：</p>
 
-<pre class="notranslate">初始化
+<pre>初始化
 执行“那个”
 执行“这个”，无论前面发生了什么
 </pre>
@@ -150,7 +150,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>在之前的回调地狱示例中，你可能记得有 3 次 <code>failureCallback</code> 的调用，而在 Promise 链中只有尾部的一次调用。</p>
 
-<pre class="brush: js notranslate">doSomething()
+<pre class="brush: js">doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
 .then(finalResult =&gt; console.log(`Got the final result: ${finalResult}`))
@@ -160,7 +160,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>通常，一遇到异常抛出，浏览器就会顺着 Promise 链寻找下一个 <code>onRejected</code> 失败回调函数或者由 <code>.catch()</code> 指定的回调函数。这和以下同步代码的工作原理（执行过程）非常相似。</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   let result = syncDoSomething();
   let newResult = syncDoSomethingElse(result);
   let finalResult = syncDoThirdThing(newResult);
@@ -172,7 +172,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>在 ECMAScript 2017 标准的 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function">async/await</a></code> 语法糖中，这种异步代码的对称性得到了极致的体现：</p>
 
-<pre class="brush: js notranslate">async function foo() {
+<pre class="brush: js">async function foo() {
   try {
     const result = await doSomething();
     const newResult = await doSomethingElse(result);
@@ -204,7 +204,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>一个特别有用的例子：当你使用 {{Glossary("Node.js")}} 时，有些依赖模块可能会有未被处理的 rejected promises，这些都会在运行时打印到控制台。你可以在自己的代码中捕捉这些信息，然后添加与 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} 相应的处理函数来做分析和处理，或只是为了让你的输出更整洁。举例如下：</p>
 
-<pre class="brush: js notranslate">window.addEventListener("unhandledrejection", event =&gt; {
+<pre class="brush: js">window.addEventListener("unhandledrejection", event =&gt; {
   /* 你可以在这里添加一些代码，以便检查
      event.promise 中的 promise 和
      event.reason 中的 rejection 原因 */
@@ -223,19 +223,19 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>理想状态下，所有的异步函数都已经返回 Promise 了。但有一些 API 仍然使用旧方式来传入的成功（或者失败）的回调。典型的例子就是 {{domxref("WindowTimers.setTimeout", "setTimeout()")}} 函数：</p>
 
-<pre class="brush: js notranslate">setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);
+<pre class="brush: js">setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);
 </pre>
 
 <p>混用旧式回调和 Promise 可能会造成运行时序问题。如果 <code>saySomething</code> 函数失败了，或者包含了编程错误，那就没有办法捕获它了。这得怪 <code>setTimeout</code>。</p>
 
 <p>幸运地是，我们可以用 Promise 来封装它。最好的做法是，将这些有问题的函数封装起来，留在底层，并且永远不要再直接调用它们：</p>
 
-<pre class="brush: js notranslate">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 </pre>
 
-<p>通常，Promise 的构造器接收一个执行函数(executor)，我们可以在这个执行函数里手动地 resolve 和 reject 一个 Promise。既然 <code>setTimeout</code> 并不会真的执行失败，那么我们可以在这种情况下忽略 reject。</p>
+<p>通常，Promise 的构造器接收一个执行函数 (executor)，我们可以在这个执行函数里手动地 resolve 和 reject 一个 Promise。既然 <code>setTimeout</code> 并不会真的执行失败，那么我们可以在这种情况下忽略 reject。</p>
 
 <h2 id="组合">组合</h2>
 
@@ -245,33 +245,33 @@ wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 
 <p>我们可以发起并行操作，然后等多个操作全部结束后进行下一步操作，如下：</p>
 
-<pre class="brush: js notranslate">Promise.all([func1(), func2(), func3()])
+<pre class="brush: js">Promise.all([func1(), func2(), func3()])
 .then(([result1, result2, result3]) =&gt; { /* use result1, result2 and result3 */ });</pre>
 
 <p>可以使用一些聪明的 JavaScript 写法实现时序组合：</p>
 
-<pre class="brush: js notranslate">[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
+<pre class="brush: js">[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
 .then(result3 =&gt; { /* use result3 */ });</pre>
 
 <p>通常，我们递归调用一个由异步函数组成的数组时，相当于一个 Promise 链：</p>
 
-<pre class="notranslate"><code>Promise.resolve().then(func1).then(func2).then(func3);</code></pre>
+<pre><code>Promise.resolve().then(func1).then(func2).then(func3);</code></pre>
 
 <p>我们也可以写成可复用的函数形式，这在函数式编程中极为普遍：</p>
 
-<pre class="brush: js notranslate">const applyAsync = (acc,val) =&gt; acc.then(val);
+<pre class="brush: js">const applyAsync = (acc,val) =&gt; acc.then(val);
 const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.resolve(x));
 </pre>
 
 <p><code>composeAsync()</code> 函数将会接受任意数量的函数作为其参数，并返回一个新的函数，该函数接受一个通过 composition pipeline 传入的初始值。这对我们来说非常有益，因为任一函数可以是异步或同步的，它们能被保证按顺序执行：</p>
 
-<pre class="brush: js notranslate">const transformData = composeAsync(func1, func2, func3);
+<pre class="brush: js">const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 </pre>
 
-<p>在 ECMAScript 2017 标准中, 时序组合可以通过使用 <code>async/await</code> 而变得更简单：</p>
+<p>在 ECMAScript 2017 标准中，时序组合可以通过使用 <code>async/await</code> 而变得更简单：</p>
 
-<pre class="brush: js notranslate">let result;
+<pre class="brush: js">let result;
 for (const f of [func1, func2, func3]) {
   result = await f(result);
 }
@@ -281,13 +281,13 @@ for (const f of [func1, func2, func3]) {
 
 <p>为了避免意外，即使是一个已经变成 resolve 状态的 Promise，传递给 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 的函数也总是会被异步调用：</p>
 
-<pre class="brush: js notranslate">Promise.resolve().then(() =&gt; console.log(2));
+<pre class="brush: js">Promise.resolve().then(() =&gt; console.log(2));
 console.log(1); // 1, 2
 </pre>
 
 <p>传递到 <code>then()</code> 中的函数被置入到一个微任务队列中，而不是立即执行，这意味着它是在 JavaScript 事件队列的所有运行时结束了，且事件队列被清空之后，才开始执行：</p>
 
-<pre class="brush: js notranslate">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait().then(() =&gt; console.log(4));
 Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
@@ -299,22 +299,22 @@ console.log(1); // 1, 2, 3, 4</pre>
 
 <p>嵌套 Promise 是一种可以限制 <code>catch</code> 语句的作用域的控制结构写法。明确来说，嵌套的 <code>catch</code> 仅捕捉在其之前同时还必须是其作用域的 failureres，而捕捉不到在其链式以外或者其嵌套域以外的 error。如果使用正确，那么可以实现高精度的错误修复。</p>
 
-<pre class="brush: js notranslate">doSomethingCritical()
+<pre class="brush: js">doSomethingCritical()
 .then(result =&gt; doSomethingOptional()
   .then(optionalResult =&gt; doSomethingExtraNice(optionalResult))
   .catch(e =&gt; {console.log(e.message)})) // 即使有异常也会忽略，继续运行;(最后会输出)
 .then(() =&gt; moreCriticalStuff())
 .catch(e =&gt; console.log("Critical failure: " + e.message));// 没有输出</pre>
 
-<p>注意,有些代码步骤是嵌套的，而不是一个简单的纯链式，这些语句前与后都被括号 <code>()</code> 包裹着。</p>
+<p>注意，有些代码步骤是嵌套的，而不是一个简单的纯链式，这些语句前与后都被括号 <code>()</code> 包裹着。</p>
 
-<p>这个内部的 <code>catch</code>  语句仅能捕获到 <code>doSomethingOptional()</code> 和 <code>doSomethingExtraNice()</code> 的失败，<code>之后就恢复到moreCriticalStuff()</code> 的运行。重要提醒：如果 <code>doSomethingCritical()</code> 失败，这个错误仅会被最后的（外部）<code>catch</code> 语句捕获到。</p>
+<p>这个内部的 <code>catch</code>  语句仅能捕获到 <code>doSomethingOptional()</code> 和 <code>doSomethingExtraNice()</code> 的失败，<code>之后就恢复到 moreCriticalStuff()</code> 的运行。重要提醒：如果 <code>doSomethingCritical()</code> 失败，这个错误仅会被最后的（外部）<code>catch</code> 语句捕获到。</p>
 
 <h2 id="常见错误">常见错误</h2>
 
 <p>在编写 Promise 链时，需要注意以下示例中展示的几个错误：</p>
 
-<pre class="brush: js example-bad notranslate">// 错误示例，包含 3 个问题！
+<pre class="brush: js example-bad">// 错误示例，包含 3 个问题！
 
 doSomething().then(function(result) {
   doSomethingElse(result) // 没有返回 Promise 以及没有必要的嵌套 Promise
@@ -330,7 +330,7 @@ doSomething().then(function(result) {
 
 <p>一个好的经验法则是总是返回或终止 Promise 链，并且一旦你得到一个新的 Promise，返回它。下面是修改后的平面化的代码：</p>
 
-<pre class="brush: js example-good notranslate">doSomething()
+<pre class="brush: js example-good">doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })

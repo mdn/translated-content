@@ -65,8 +65,8 @@ f2() === undefined; //true</pre>
 
 <p>所以在嚴格模式下，如果 <code>this</code> 沒有定義到執行環境內，其預設值就會是 <code>undefined</code>。</p>
 
-<div class="note">
-<p>在第二個例子裡面，<code>this</code> 應為 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>，因為 <code>f2</code> 是直接被呼叫，而不是在其為某個物件的方法或屬性的情況下（例如 <code>window.f2()</code>）被直接呼叫。某些瀏覽器首次支援<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="Strict mode">嚴格模式</a>時沒導入這個特徵，它們會因此錯誤的回傳 <code>window</code> 物件。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>在第二個例子裡面，<code>this</code> 應為 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>，因為 <code>f2</code> 是直接被呼叫，而不是在其為某個物件的方法或屬性的情況下（例如 <code>window.f2()</code>）被直接呼叫。某些瀏覽器首次支援<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="Strict mode">嚴格模式</a>時沒導入這個特徵，它們會因此錯誤的回傳 <code>window</code> 物件。</p>
 </div>
 
 <p>要從某個語境訪問另一個 <code>this</code> 語境的值，請使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a> 或 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>:</p>
@@ -138,8 +138,8 @@ console.log(o.f(), o.g(), o.h()); // 37, azerty, azerty</code>
 var foo = (() =&gt; this);
 console.log(foo() === globalObject); // true</pre>
 
-<div class="note">
-<p>註：如果這參數被傳遞給箭頭函式的 call, bind, apply 調用，該參數會被忽略。你仍然可以將參數預先調用到call，但第一個參數(thisArg)必須設置為空。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如果這參數被傳遞給箭頭函式的 call, bind, apply 調用，該參數會被忽略。你仍然可以將參數預先調用到call，但第一個參數(thisArg)必須設置為空。</p>
 </div>
 
 <pre class="brush: js">// 作為物件的方法呼叫
@@ -253,8 +253,8 @@ console.log(o.average, o.sum); // logs 2, 6
 
 <p>若函式以建構子的身份呼叫（使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/new">new</a></code> 關鍵字） <code>this</code> 會和被建構的新物件綁定。</p>
 
-<div class="note">
-<p>建構子預設透過 <code>this</code> 回傳該物件的參照，但它其實能回傳其他物件。如果回傳值不是物件的話，就會回傳 <code>this</code> 這個物件。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>建構子預設透過 <code>this</code> 回傳該物件的參照，但它其實能回傳其他物件。如果回傳值不是物件的話，就會回傳 <code>this</code> 這個物件。</p>
 </div>
 
 <pre class="brush:js">/*

@@ -5,7 +5,7 @@ translation_of: Web/API/WebVR_API
 ---
 <div>{{SeeCompatTable}}{{APIRef("WebVR API")}}</div>
 
-<p class="summary">WebVR 可以讓穿戴的VR裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) 與 web 應用程式結合。開發人員可以將VR裝置所提供的位置與動作資訊轉移到3D的場景中。利用 WebVR可以創造出很多有趣的應用程式: 包含虛擬導覽、互動訓練軟體等等。</p>
+<p>WebVR 可以讓穿戴的VR裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) 與 web 應用程式結合。開發人員可以將VR裝置所提供的位置與動作資訊轉移到3D的場景中。利用 WebVR可以創造出很多有趣的應用程式: 包含虛擬導覽、互動訓練軟體等等。</p>
 
 <h2 id="用法與基本觀念">用法與基本觀念</h2>
 
@@ -52,7 +52,7 @@ translation_of: Web/API/WebVR_API
  <dt>{{domxref("VRDisplayCapabilities")}}</dt>
  <dd>Describes the capabilities of a {{domxref("VRDisplay")}} — it's features can be used to perform VR device capability tests, for example can it return position information.</dd>
  <dt>{{domxref("VRDisplayEvent")}}</dt>
- <dd>Represents the event object of WebVR-related events (see the {{anch("Window", "window object extensions")}} listed below).</dd>
+ <dd>Represents the event object of WebVR-related events (see the <a href="#window">window object extensions</a> listed below).</dd>
  <dt>{{domxref("VRFrameData")}}</dt>
  <dd>Represents all the information needed to render a single frame of a VR scene; constructed by {{domxref("VRDisplay.getFrameData()")}}.</dd>
  <dt>{{domxref("VRPose")}}</dt>
@@ -149,90 +149,7 @@ translation_of: Web/API/WebVR_API
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(55)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Gamepad extensions</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-   <th>Samsung Internet for GearVR</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(55)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}<br>
-     </td>
-  </tr>
-  <tr>
-   <td>Gamepad extensions</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] API Available on all platforms behind a flag, but currently only works on desktop in an <a href="https://webvr.info/get-chrome/">experimental version of Chrome</a> (other builds won't return any devices when {{domxref("Navigator.getVRDisplays()")}} is invoked).</p>
-
-<p>[2] Currently only Windows support is enabled by default. Mac support is <a href="https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/">available in Firefox Nightly</a>.</p>
-
-<p>[3] Currently supported only by Google Daydream.</p>
-
-<p>[4] Enabled in Firefox Nightly and Beta, versions 55 and above. Enabled/disabled by the <code>dom.gamepad-extensions.enabled</code> pref.</p>
+{{Compat("api.Navigator.getVRDisplays")}}
 
 <h2 id="See_also">See also</h2>
 

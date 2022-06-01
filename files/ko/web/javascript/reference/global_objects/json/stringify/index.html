@@ -10,7 +10,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>JSON.stringify()</code></strong> 메서드는 JavaScript 값이나 객체를 JSON 문자열로 변환합니다.</span> 선택적으로, <code>replacer</code>를 함수로 전달할 경우 변환 전 값을 변형할 수 있고, 배열로 전달할 경우 지정한 속성만 결과에 포함합니다.</p>
+<p><strong><code>JSON.stringify()</code></strong> 메서드는 JavaScript 값이나 객체를 JSON 문자열로 변환합니다. 선택적으로, <code>replacer</code>를 함수로 전달할 경우 변환 전 값을 변형할 수 있고, 배열로 전달할 경우 지정한 속성만 결과에 포함합니다.</p>
+
 
 <div>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</div>
 
@@ -18,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
+<pre class="syntaxbox">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
 
 <h3 id="매개변수">매개변수</h3>
 
@@ -54,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
  <li>열거 불가능한 속성들은 무시된다.</li>
 </ul>
 
-<pre class="brush: js notranslate">JSON.stringify({});                  // '{}'
+<pre class="brush: js">JSON.stringify({});                  // '{}'
 JSON.stringify(true);                // 'true'
 JSON.stringify('foo');               // '"foo"'
 JSON.stringify([1, 'false', false]); // '[1,"false",false]'
@@ -104,7 +105,7 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
 
 <h4 id="함수에_대한_예제">함수에 대한 예제</h4>
 
-<pre class="brush: js notranslate">function replacer(key, value) {
+<pre class="brush: js">function replacer(key, value) {
   if (typeof value === "string") {
     return undefined;
   }
@@ -121,7 +122,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <p><code>replacer</code> 가 배열인 경우, 그 배열의 값은 JSON 문자열의 결과에 포함되는 속성의 이름을 나타낸다.</p>
 
-<pre class="brush: js notranslate">JSON.stringify(foo, ['week', 'month']);
+<pre class="brush: js">JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', 단지 "week" 와 "month" 속성을 포함한다
 </pre>
 
@@ -129,7 +130,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <p><code>space</code> 매개변수는 최종 문자열의 간격을 제어한다. 숫자일 경우 최대 10자 만큼의 공백 문자 크기로 들여쓰기되며, 문자열인 경우 해당 문자열 또는 처음 10자 만큼 들여쓰기 된다.</p>
 
-<pre class="brush: js notranslate">JSON.stringify({ a: 2 }, null, ' ');
+<pre class="brush: js">JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
@@ -137,7 +138,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <p>'\t'를 사용하면 일반적으로 들여쓰기 된 코드스타일과 유사함.</p>
 
-<pre class="brush: js notranslate">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+<pre class="brush: js">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // returns the string:
 // '{
 //     "uno": 1,
@@ -149,7 +150,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <p>If an object being stringified has a property named <code>toJSON</code> whose value is a function, then the <code>toJSON()</code> method customizes JSON stringification behavior: instead of the object being serialized, the value returned by the <code>toJSON()</code> method when called will be serialized. For example:</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   foo: 'foo',
   toJSON: function() {
     return 'bar';
@@ -167,7 +168,7 @@ JSON.stringify({ x: obj }); // '{"x":"bar"}'
 <p>Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.</p>
 </div>
 
-<pre class="brush: js notranslate">// Creating an example of JSON
+<pre class="brush: js">// Creating an example of JSON
 var session = {
   'screens': [],
   'state': true

@@ -188,34 +188,34 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
   <p>  這些 CSS 程式使滑鼠滑過時 (在該 element 的 {{ cssxref(":hover") }} state) 造成背景及文字顏色的改變。</p>
   <h2 id="使用_transitions_來使_JavaScript_運作的更順暢">使用 transitions 來使 JavaScript 運作的更順暢</h2>
   <p>  Transition 是一種很好的工具，他可以幫助你的 JavaScript 執行結果看起來的更為順暢。舉例來說：</p>
-  <pre><span class="xml-punctuation">&lt;</span><span class="xml-tagname">p</span><span class="xml-punctuation">&gt;</span><span class="xml-text">Click anywhere to move the ball</span><span class="xml-punctuation">&lt;/</span><span class="xml-tagname">p</span><span class="xml-punctuation">&gt;</span>
-<span class="xml-punctuation">&lt;</span><span class="xml-tagname">div </span><span class="xml-attname">id</span><span class="xml-punctuation">=</span><span class="xml-attribute">"foo"</span><span class="xml-punctuation">&gt;</span><span class="xml-punctuation">&lt;/</span><span class="xml-tagname">div</span><span class="xml-punctuation">&gt;</span>
+  <pre>&lt;p&gt;Click anywhere to move the ball&lt;/p&gt;
+&lt;div id="foo"&gt;&lt;/div&gt;
 </pre>
   <p>  當你使用 JavaScript 可以將 ball 移動到特定位置：</p>
-  <pre><span class="js-keyword">var </span><span class="js-variable">f </span><span class="js-operator">= </span><span class="js-variable">document</span><span class="js-punctuation">.</span><span class="js-property">getElementById</span><span class="js-punctuation">(</span><span class="js-string">'foo'</span><span class="js-punctuation">)</span><span class="js-punctuation">;</span>
-<span class="js-variable">document</span><span class="js-punctuation">.</span><span class="js-property">addEventListener</span><span class="js-punctuation">(</span><span class="js-string">'click'</span><span class="js-punctuation">, </span><span class="js-keyword">function</span><span class="js-punctuation">(</span><span class="js-variabledef">ev</span><span class="js-punctuation">)</span><span class="js-punctuation">{</span>
-<span class="whitespace">    </span><span class="js-variable">f</span><span class="js-punctuation">.</span><span class="js-property">style</span><span class="js-punctuation">.</span><span class="js-property">left </span><span class="js-operator">= </span><span class="js-punctuation">(</span><span class="js-localvariable">ev</span><span class="js-punctuation">.</span><span class="js-property">clientX</span><span class="js-operator">-</span><span class="js-atom">25</span><span class="js-punctuation">)</span><span class="js-operator">+</span><span class="js-string">'px'</span><span class="js-punctuation">;</span>
-<span class="whitespace">    </span><span class="js-variable">f</span><span class="js-punctuation">.</span><span class="js-property">style</span><span class="js-punctuation">.</span><span class="js-property">top </span><span class="js-operator">= </span><span class="js-punctuation">(</span><span class="js-localvariable">ev</span><span class="js-punctuation">.</span><span class="js-property">clientY</span><span class="js-operator">-</span><span class="js-atom">25</span><span class="js-punctuation">)</span><span class="js-operator">+</span><span class="js-string">'px'</span><span class="js-punctuation">;</span>
-<span class="js-punctuation">}</span><span class="js-punctuation">,</span><span class="js-atom">false</span><span class="js-punctuation">)</span><span class="js-punctuation">;    </span>
+  <pre>var f = document.getElementById('foo');
+document.addEventListener('click', function(ev){
+    f.style.left = (ev.clientX-25)+'px';
+    f.style.top = (ev.clientY-25)+'px';
+},false);    
 </pre>
   <p>  藉由 CSS，你可以使執行結果更為流暢。我們加入了：</p>
-  <pre><span class="css-selector">p</span><span class="css-punctuation">{
-  </span><span class="css-identifier">padding-left</span><span class="css-punctuation">:</span><span class="css-unit">60px</span><span class="css-punctuation">;
-</span><span class="css-punctuation">}</span>
-<span class="css-selector">#foo</span><span class="css-punctuation">{</span>
-<span class="css-identifier">  border-radius</span><span class="css-punctuation">:</span><span class="css-unit">50px</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  width</span><span class="css-punctuation">:</span><span class="css-unit">50px</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  height</span><span class="css-punctuation">:</span><span class="css-unit">50px</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  background</span><span class="css-punctuation">:</span><span class="css-colorcode">#c00</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  position</span><span class="css-punctuation">:</span><span class="css-value">absolute</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  top</span><span class="css-punctuation">:</span><span class="css-unit">0</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  left</span><span class="css-punctuation">:</span><span class="css-unit">0</span><span class="css-punctuation">;</span>
-<span class="css-identifier">  -moz-transition</span><span class="css-punctuation">: </span><span class="css-value">all </span><span class="css-unit">1s</span><span class="css-punctuation">; </span>
-<span class="css-identifier">  -webkit-transition</span><span class="css-punctuation">: </span><span class="css-value">all </span><span class="css-unit">1s</span><span class="css-punctuation">;  </span>
-<span class="css-identifier">  -ms-transition</span><span class="css-punctuation">: </span><span class="css-value">all </span><span class="css-unit">1s</span><span class="css-punctuation">;  </span>
-<span class="css-identifier">  -o-transition</span><span class="css-punctuation">: </span><span class="css-value">all </span><span class="css-unit">1s</span><span class="css-punctuation">;  </span>
-<span class="css-identifier">  transition</span><span class="css-punctuation">: </span><span class="css-value">all </span><span class="css-unit">1s</span><span class="css-punctuation">;  </span>
-<span class="css-punctuation">}</span>
+  <pre>p{
+  padding-left:60px;
+}
+#foo{
+  border-radius:50px;
+  width:50px;
+  height:50px;
+  background:#c00;
+  position:absolute;
+  top:0;
+  left:0;
+  -moz-transition: all 1s; 
+  -webkit-transition: all 1s;  
+  -ms-transition: all 1s;  
+  -o-transition: all 1s;  
+  transition: all 1s;  
+}
 </pre>
   <p>  你可以到 <a class="external" href="http://jsfiddle.net/RwtHn/5/" title="http://jsfiddle.net/RwtHn/5/">http://jsfiddle.net/RwtHn/5/</a> 看範例。</p>
   <h2 id="使用_transition_events_來替_object_製作動畫">使用 transition events 來替 object 製作動畫</h2>
@@ -289,7 +289,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 }
 </pre>
   <p>  他呼叫了 <code>updateTransition()</code> function (這待會會定義)，並且他捕捉了 "transitionend" event，這使我們能夠知道動畫結束了。</p>
-  <p><code><font face="'Lucida Grande', 'Lucida Sans Unicode', Lucida, Arial, Helvetica, sans-serif"><span style="line-height: 13px;">  </span></font>updateTransition()</code> function 內容如下：</p>
+  <p><code>  updateTransition()</code> function 內容如下：</p>
   <pre class="brush: js">function updateTransition() {
   var el = document.querySelector("div.slideLeft");
 
@@ -304,68 +304,8 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 }
 </pre>
   <p>  這裡的機制很簡單，我們找到 "slideLeft" 而後將他改變成 "slideRight"，接著動畫便結束。倘若此時並沒有 "slideLeft"，就表示已在右端點，於是執行反向動作。</p>
-  <h2 id="瀏覽器的支援情形">瀏覽器的支援情形</h2>
-  <p>{{ CompatibilityTable() }}</p>
-  <div id="compat-desktop">
-   <table class="compat-table">
-    <tbody>
-     <tr>
-      <th>Feature</th>
-      <th>Chrome</th>
-      <th>Firefox (Gecko)</th>
-      <th>Internet Explorer</th>
-      <th>Opera</th>
-      <th>Safari (WebKit)</th>
-     </tr>
-     <tr>
-      <td>Basic support</td>
-      <td>1.0</td>
-      <td>{{ CompatGeckoDesktop("2") }}</td>
-      <td>10</td>
-      <td>10.5</td>
-      <td>3.2</td>
-     </tr>
-     <tr>
-      <td>Property</td>
-      <td><code>-webkit-transition</code></td>
-      <td><code>-moz-transition</code></td>
-      <td><code>-ms-transition</code></td>
-      <td><code>-o-transition</code></td>
-      <td><code>-webkit-transition</code></td>
-     </tr>
-     <tr>
-      <td>Transition ended event</td>
-      <td><code>webkitTransitionEnd</code></td>
-      <td><code>transitionend</code></td>
-      <td><code>MSTransitionEnd</code></td>
-      <td><code>oTransitionEnd</code></td>
-      <td><code>webkitTransitionEnd</code></td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-  <div id="compat-mobile">
-   <table class="compat-table">
-    <tbody>
-     <tr>
-      <th>Feature</th>
-      <th>Android</th>
-      <th>Firefox Mobile (Gecko)</th>
-      <th>IE Phone</th>
-      <th>Opera Mobile</th>
-      <th>Safari Mobile</th>
-     </tr>
-     <tr>
-      <td>Basic support</td>
-      <td>2.1</td>
-      <td>{{ CompatGeckoMobile("2") }}</td>
-      <td>{{ CompatUnknown() }}</td>
-      <td>10</td>
-      <td>3.2</td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
+
+
   <h2 id="更多資訊">更多資訊</h2>
   <ul>
    <li><a class="external" href="http://dev.w3.org/csswg/css3-transitions/">CSS Transitions</a></li>

@@ -510,7 +510,7 @@ Si on utilise `display:` `contents` sur un élément, la boîte qu'il aurait nor
 }
 ```
 
-{{EmbedLiveSample('utiliser_display_contents_avant', '400', '420')}}
+{{EmbedLiveSample('Utiliser_display_contents_avant', '400', '420')}}
 
 ### Utiliser display contents après
 
@@ -567,7 +567,7 @@ Si on ajoute `display:` `contents` aux règles qui ciblent `box1`, la boîte de 
 }
 ```
 
-{{EmbedLiveSample('utiliser_display_contents_après', '400', '330')}}
+{{EmbedLiveSample('Utiliser_display_contents_après', '400', '330')}}
 
 Cela permet que des éléments imbriqués agissent comme s'ils faisaient partie de la grille. C'est également une méthode de contournement pour certains problèmes qui seront résolus par les « sous-grilles » (_subgrids_) lorsqu'elles seront implémentées. Vous pouvez également utiliser `display:` `contents` de façon similaire avec les boîtes flexibles afin que les éléments imbriqués deviennent des éléments flexibles.
 

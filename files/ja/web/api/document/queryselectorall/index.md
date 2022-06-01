@@ -141,8 +141,8 @@ inner.length; // 0
 ## 関連情報
 
 - [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-- CSS ガイドの[[属性セレクター]](/ja/docs/Web/CSS/Attribute_selectors)
-- MDN 学習領域の[[属性セレクター]](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
+- MDN 学習領域の[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}

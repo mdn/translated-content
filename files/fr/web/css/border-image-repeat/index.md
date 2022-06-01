@@ -1,91 +1,108 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - CSS
-  - Propriété
-  - Reference
+browser-compat: css.properties.border-image-repeat
 translation_of: Web/CSS/border-image-repeat
 ---
 {{CSSRef}}
 
-La propriété **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisée pour s'étendre sur chacun des côtés de la bordure. Cette propriété est multi-valuée : une valeur indiquera le comportement pour tous les côtés et deux valeurs indiqueront respectivement le comportement pour les côtés horizontaux et verticaux.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
 
 {{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
 ## Syntaxe
 
 ```css
-/* border-image-repeat                      */
-/* Une valeur : s'applique à tous les côtés */
+/* Valeurs avec un mot-clé */
 border-image-repeat: stretch;
+border-image-repeat: repeat;
+border-image-repeat: round;
+border-image-repeat: space;
 
-/* border-image-repeat
-/* Première valeur : côtés horizontaux */
-/* Deuxième valeur : côtés verticaux   */
+/* côtés horizontaux | verticaux */
 border-image-repeat: round stretch;
 
 /* Valeurs globales */
 border-image-repeat: inherit;
 border-image-repeat: initial;
+border-image-repeat: revert;
 border-image-repeat: unset;
 ```
+
+La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux valeurs parmi la liste qui suit.
+
+- Avec **une** valeur indiquée, celle-ci s'applique **aux quatre côtés**.
+- Avec **deux** valeurs indiquées, la première s'applique aux côtés **haut et bas**, la seconde s'applique aux côtés **gauche et droite**.
 
 ### Valeurs
 
 - `stretch`
   - : Un mot-clé qui indique que la zone de l'image doit être étirée pour remplir l'espace entre les deux bordures.
 - `repeat`
-  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures.
+  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Les portions répétées peuvent être rognées si nécessaire.
 - `round`
   - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Si on ne peut pas remplir cet espace avec un nombre entier de motifs, ceux-ci seront étirés pour qu'il y ait une répétition entière et que l'espace soit parfaitement rempli.
 - `space`
-  - : Un mot-clé qui indique que la zone de l'image est répétée afin de remplir la zone entre les deux bordures. Si on ne peut pas remplir exactement la zone avec un nombre entier de motifs, l'espace restant sera répartis entre ces motifs.
+  - : Un mot-clé qui indique que la zone de l'image est répétée afin de remplir la zone entre les deux bordures. Si on ne peut pas remplir exactement la zone avec un nombre entier de motifs, l'espace restant sera réparti entre ces motifs.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Répéter l'image de bordure
+
+#### CSS
 
 ```css
-p {
- border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
- border-image-slice: 30;
- border-image-width: 20px;
- border-image-repeat: round;
- padding: 40px;
+#bordered {
+  width: 12rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 40px solid;
+  border-image: url("border.png") 27;
+  border-image-repeat: stretch;  /* Peut être changé avec la liste déroulante */
 }
 ```
 
-### HTML
+```html hidden
+<div id="bordered">Vous pouvez essayer différentes valeurs !</div>
 
-```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-  no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</p>
+<select id="repetition">
+  <option value="stretch">stretch</option>
+  <option value="repeat">repeat</option>
+  <option value="round">round</option>
+  <option value="space">space</option>
+  <option value="stretch repeat">stretch repeat</option>
+  <option value="space round">space round</option>
+</select>
+```
+
+```js hidden
+var repetition = document.getElementById("repetition");
+repetition.addEventListener("change", function (evt) {
+  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+});
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', '480', '320')}}
+{{EmbedLiveSample('', '480', '250')}}
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-image-repeat', 'border-image-repeat')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-image-repeat")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [L'article de CSS Tricks sur `border-image` (en anglais)](https://css-tricks.com/almanac/properties/b/border-image/)
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

@@ -4,12 +4,12 @@ slug: Web/API/Navigator/getUserMedia
 translation_of: Web/API/Navigator/getUserMedia
 ---
 <div class="note">
-<p><strong>Note:</strong> 此API已更名为 {{domxref("MediaDevices.getUserMedia()")}}。 请使用那个版本进行替代！ 这个已废弃的API版本仅为了向后兼容而存在。</p>
+<p><strong>Note:</strong> 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。</p>
 </div>
 
 <p>{{APIRef}}{{deprecated_header}}</p>
 
-<p><strong>Navigator.getUserMedia()</strong>方法提醒用户需要使用音频（0或者1）和（0或者1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，<strong>successCallback</strong>回调就会被调用，{{domxref("MediaStream")}}对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，<strong>errorCallback</strong>就会被调用，类似的，<strong><code>PermissionDeniedError</code> </strong>或者<strong><code>NotFoundError</code></strong><code>对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。</code></p>
+<p><strong>Navigator.getUserMedia()</strong> 方法提醒用户需要使用音频（0 或者 1）和（0 或者 1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，<strong>successCallback</strong> 回调就会被调用，{{domxref("MediaStream")}} 对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，<strong>errorCallback</strong> 就会被调用，类似的，<strong><code>PermissionDeniedError</code> </strong>或者<strong> <code>NotFoundError</code></strong> 对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,11 +19,11 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <p><strong>constraints </strong></p>
 
-<p>{{domxref("MediaStreamConstaints")}}对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见{{domxref("MediaDevices.getUserMedia()")}} 方法下面的<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Parameters">constraints</a>部分。</p>
+<p>{{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Parameters">constraints</a> 部分。</p>
 
 <p><strong>successCallback</strong></p>
 
-<p>当调用成功后，successCallback中指定的函数就被调用，包含了媒体流的{{domxref("MediaStream")}}对象作为它的参数，你可以把媒体流对象赋值给合适的元素，然后使用它，就像下面的例子一样：</p>
+<p>当调用成功后，successCallback 中指定的函数就被调用，包含了媒体流的 {{domxref("MediaStream")}} 对象作为它的参数，你可以把媒体流对象赋值给合适的元素，然后使用它，就像下面的例子一样：</p>
 
 <pre>function(stream) {
    var video = document.querySelector('video');
@@ -38,7 +38,7 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <p><strong>errorCallback</strong></p>
 
-<p>当调用失败，errorCallback中指定的函数就会被调用，{{domxref("MediaStreamError")}}对象作为它唯一的参数；此对象基于{{domxref("DOMException")}}对象构建。错误码描述见参见以下：</p>
+<p>当调用失败，errorCallback 中指定的函数就会被调用，{{domxref("MediaStreamError")}} 对象作为它唯一的参数；此对象基于 {{domxref("DOMException")}} 对象构建。错误码描述见参见以下：</p>
 
 <table>
  <thead>
@@ -55,7 +55,7 @@ translation_of: Web/API/Navigator/getUserMedia
   <tr>
    <td><code>NotFoundError</code></td>
    <td>
-    <p>找不到constraints中指定媒体类型</p>
+    <p>找不到 constraints 中指定媒体类型</p>
    </td>
   </tr>
  </tbody>
@@ -65,7 +65,7 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <h3 id="宽度和高度">宽度和高度</h3>
 
-<p>使用getUserMedia()的示例，包括了可以适用于多种浏览器前缀的代码。注意这种使用方式已经被废除，现代的使用方法请参见{{domxref("MediaDevices.getUserMedia()")}} 下面的<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate">示例</a>部分。</p>
+<p>使用 getUserMedia() 的示例，包括了可以适用于多种浏览器前缀的代码。注意这种使用方式已经被废除，现代的使用方法请参见 {{domxref("MediaDevices.getUserMedia()")}} 下面的<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate">示例</a>部分。</p>
 
 <pre><code>navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
@@ -90,7 +90,7 @@ if (navigator.getUserMedia) {
 
 <h2 id="权限">权限</h2>
 
-<p>在一个可以安装的app（比如，Firefox OS app）中使用getUserMedia()，你需要在你的manifest文件中指定一个或者多个以下条目：</p>
+<p>在一个可以安装的 app（比如，Firefox OS app）中使用 getUserMedia()，你需要在你的 manifest 文件中指定一个或者多个以下条目：</p>
 
 <pre><code>"permissions": {
   "audio-capture": {
@@ -123,70 +123,10 @@ if (navigator.getUserMedia) {
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div class="warning">
-<p>新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代.</p>
+<p>新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代。</p>
 </div>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>21{{property_prefix("webkit")}} [1]</td>
-   <td>17{{property_prefix("moz")}} [3]</td>
-   <td>{{CompatNo}}</td>
-   <td>12 [2]<br>
-    18{{property_prefix("webkit")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-<div id="compat-mobile">
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic Support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(40.0)}}{{property_prefix("webkit")}} [2]</td>
-   <td>24{{property_prefix("moz")}} [3]</td>
-   <td>1.2{{property_prefix("moz")}} [4]<br>
-    1.4{{property_prefix("moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12 [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-<p>[1] 新版的Chrome支持未带前缀的 {{domxref("MediaDevices.getUserMedia()")}}, 用以取代此已废弃版本.</p>
-
-<p>[2] Chrome 和 Opera 仍然在使用已经过期的 constraint 语法, 但是此描述中的语法可以通过 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill来使用.</p>
-
-<p>[3]  在此描述的constraint 语法自 Firefox 38后可用. 更早的版本 (32-37) 使用了已经过期的语法, 但是此描述中的语法可以通过 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill来使用.</p>
-
-<p>[4] 在 Firefox OS 1.2中， 只有音频的到支持, 1.4 添加了视频支持.</p>
+{{Compat("api.Navigator.getUserMedia")}}
 
 <h2 id="更多参见">更多参见 </h2>
 

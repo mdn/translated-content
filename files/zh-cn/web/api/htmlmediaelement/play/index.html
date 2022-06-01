@@ -50,7 +50,7 @@ translation_of: Web/API/HTMLMediaElement/play
 
 <p>虽然“autoplay”这个词常常被用于描述当媒体加载完成时立即开始播放，浏览器的自动播放策略其实也应用于脚本驱动的媒体播放，包括调用 <code>play()</code>。</p>
 
-<p>如果 {{Glossary("user agent")}} 被设置为不允许自动或脚本驱动的媒体播放，调用 <code>play()</code> 会导致返回的 promise 被立即以 <code>NotAllowedError</code> 拒绝。网页应该对这种情况做好准备。举个例子，一个网页不应该假定播放已经自动开始而直接展示相应的用户界面，而应该在返回的 promise 被解决或拒绝后再更新用户界面。更多信息参见 {{anch("示例", "示例")}}。</p>
+<p>如果 {{Glossary("user agent")}} 被设置为不允许自动或脚本驱动的媒体播放，调用 <code>play()</code> 会导致返回的 promise 被立即以 <code>NotAllowedError</code> 拒绝。网页应该对这种情况做好准备。举个例子，一个网页不应该假定播放已经自动开始而直接展示相应的用户界面，而应该在返回的 promise 被解决或拒绝后再更新用户界面。更多信息参见 <a href="#示例">示例</a>。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong><code>play()</code> 方法可能会让用户被询问是否给予播放媒体的权限，这可能会使返回的 promise 延迟解决。你应该确保你的代码不需要即时响应。</p>

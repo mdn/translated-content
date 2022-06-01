@@ -5,44 +5,44 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<p><code><strong>toLocaleString()</strong></code> <span style="line-height: 1.5;">方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 </span><code style="font-style: normal; line-height: 1.5;">locales</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">options</code><span style="line-height: 1.5;"> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， </span><code style="font-style: normal; line-height: 1.5;">locales</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">options</code><span style="line-height: 1.5;"> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</span></p>
+<p><code><strong>toLocaleString()</strong></code> 方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 <code>locales</code> 和 <code>options</code> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， <code>locales</code> 和 <code>options</code> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}</div>
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>dateObj.toLocaleString([locales [, options]])</var></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
-<p>查看<a href="#Browser_Compatibility" title="#Browser_Compatibility">浏览器兼容性</a>小节，看下哪些浏览器支持 <code style="font-style: normal;">locales</code> 和 <code style="font-style: normal;">options</code> 参数，还可以参看<a href="#Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</a>。</p>
+<p>查看<a href="#Browser_Compatibility" title="#Browser_Compatibility">浏览器兼容性</a>小节，看下哪些浏览器支持 <code>locales</code> 和 <code>options</code> 参数，还可以参看<a href="#Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</a>。</p>
 
 <p>{{page('zh-CN/docs/JavaScript/Reference/Global_Objects/DateTimeFormat','Parameters')}}</p>
 
-<p>每个日期时间组件的默认值都是undefined, 但是如果 <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code> 属性都是 <code>undefined</code>, 那么 <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute<font face="Open Sans, Arial, sans-serif"> 和 </font></code><code>second</code> 的值都被认为是 "numeric".</p>
+<p>每个日期时间组件的默认值都是 undefined，但是如果 <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code> 属性都是 <code>undefined</code>, 那么 <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute 和 </code><code>second</code> 的值都被认为是 "numeric".</p>
 
 <h3 id="返回值">返回值</h3>
 
 <p>根据当地语言规定返回代表着时间的字符串。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Using_toLocaleString" name="Example:_Using_toLocaleString">例子：使用 <code>toLocaleString</code></h3>
+<h3 id="Example:_Using_toLocaleString">例子：使用 <code>toLocaleString</code></h3>
 
 <p>没有指定语言环境（locale）时，返回一个使用默认语言环境和格式设置（options）的格式化字符串。</p>
 
 <pre class="brush:js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
-// toLocaleString 不包含参数的返回值取决于实现,
-// 默认的区域(locale),和默认的时区(time zone)
+// toLocaleString 不包含参数的返回值取决于实现，
+// 默认的区域 (locale),和默认的时区 (time zone)
 date.toLocaleString();
-// → 如果是在en-US区域和America/Los_Angeles时区运行返回值为"12/11/2012, 7:00:00 PM"</pre>
+// → 如果是在 en-US 区域和 America/Los_Angeles 时区运行返回值为"12/11/2012, 7:00:00 PM"</pre>
 
-<h3 id="Example:_Checking_for_support_for_locales_and_options_arguments" name="Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</h3>
+<h3 id="Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</h3>
 
-<p><code style="font-style: normal;">locales</code> 和 <code style="font-style: normal;">options</code> 参数不是所有的浏览器都支持。为了检测一种实现环境（implementation）是否支持它们，可以使用不合法的语言标签，如果实现环境支持该参数，则会抛出一个 <code style="font-style: normal;">RangeError</code> 异常，反之会忽略参数。</p>
+<p><code>locales</code> 和 <code>options</code> 参数不是所有的浏览器都支持。为了检测一种实现环境（implementation）是否支持它们，可以使用不合法的语言标签，如果实现环境支持该参数，则会抛出一个 <code>RangeError</code> 异常，反之会忽略参数。</p>
 
 <pre class="brush: js">function toLocaleStringSupportsLocales() {
     try {
@@ -54,18 +54,18 @@ date.toLocaleString();
 }
 </pre>
 
-<h3 id="Example:_Using_locales" name="Example:_Using_locales">例子：使用 <code>locales</code> 参数</h3>
+<h3 id="Example:_Using_locales">例子：使用 <code>locales</code> 参数</h3>
 
-<p>下例展示了本地化日期格式的一些变化。为了在应用的用户界面得到某种语言的日期和时间格式，必须确保使用 <code style="font-style: normal;">locales</code> 参数指定了该语言（可能还需要设置某些回退语言）。</p>
+<p>下例展示了本地化日期格式的一些变化。为了在应用的用户界面得到某种语言的日期和时间格式，必须确保使用 <code>locales</code> 参数指定了该语言（可能还需要设置某些回退语言）。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 //假定本地时区是 America/Los_Angeles(美国时区)
-//en-US(美利坚英语)使用 month-day-year 的顺序展示年月日
+//en-US(美利坚英语) 使用 month-day-year 的顺序展示年月日
 alert(date.toLocaleString("en-US"));
 // → "12/19/2012, 7:00:00 PM"
 
-// en-GB(不列颠英语)使用 day-month-year 顺序展示年月日
+// en-GB(不列颠英语) 使用 day-month-year 顺序展示年月日
 alert(date.toLocaleString("en-GB"));
 // → "20/12/2012 03:00:00"
 
@@ -75,42 +75,42 @@ alert(date.toLocaleString("ko-KR"));
 
 // 大多数阿拉伯语国家的阿拉伯语使用阿拉伯数字
 alert(date.toLocaleString("ar-EG"));
-// → "<span dir="rtl">٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص</span>"
+// → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
-//在日本，应用可能想要使用日本日历,
-//2012 是平成24年（平成是是日本天皇明仁的年号,由1989年1月8日起开始计算直至现在）
+//在日本，应用可能想要使用日本日历，
+//2012 是平成 24 年（平成是是日本天皇明仁的年号，由 1989 年 1 月 8 日起开始计算直至现在）
 alert(date.toLocaleString("ja-JP-u-ca-japanese"));
 // → "24/12/20 12:00:00"
 
-//当请求一个语言可能不支持，如巴厘(ban)，若有备用的语言印尼语(id)，
-//那么将使用印尼语(id)
+//当请求一个语言可能不支持，如巴厘 (ban)，若有备用的语言印尼语 (id)，
+//那么将使用印尼语 (id)
 alert(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 11.00.00"
 </pre>
 
-<h3 id="Example:_Using_options" name="Example:_Using_options">例子：使用 <code>options</code> 参数</h3>
+<h3 id="Example:_Using_options">例子：使用 <code>options</code> 参数</h3>
 
-<p>可以使用 <code style="font-style: normal;">options </code>参数来自定义 <code style="font-style: normal;">toLocaleString</code> 方法返回的字符串。</p>
+<p>可以使用 <code>options </code>参数来自定义 <code>toLocaleString</code> 方法返回的字符串。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-//请求参数(options)中包含参数星期(weekday)，并且该参数的值为长类型(long)
+//请求参数 (options) 中包含参数星期 (weekday)，并且该参数的值为长类型 (long)
 var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
 alert(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
-//一个应用使用 世界标准时间(UTC),并且UTC使用短名字(short)展示
+//一个应用使用 世界标准时间 (UTC),并且 UTC 使用短名字 (short) 展示
 options.timeZone = "UTC";
-options.timeZoneName = "short";//若不写这一行那么仍然显示的是世界标准时间；但是GMT三个字母不会显示
+options.timeZoneName = "short";//若不写这一行那么仍然显示的是世界标准时间；但是 GMT 三个字母不会显示
 alert(date.toLocaleString("en-US", options));
 // → "Thursday, December 20, 2012, GMT"
 
-// 使用24小时制
+// 使用 24 小时制
 alert(date.toLocaleString("en-US", {hour12: false}));
 // → "12/19/2012, 19:00:00"
 </pre>
 
-<h2 id="Performance" name="Performance">性能</h2>
+<h2 id="Performance">性能</h2>
 
 <p>当格式化大量日期时，最好创建一个 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat" title="/en-US/docs/JavaScript/Reference/Global_Objects/DateTimeFormat"><code>Intl.DateTimeFormat</code></a> 对象，然后使用该对象 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format" title="/en-US/docs/JavaScript/Reference/Global_Objects/DateTimeFormat/format"><code>format</code></a> 属性提供的方法。</p>
 
@@ -139,7 +139,7 @@ alert(date.toLocaleString("en-US", {hour12: false}));
    <td> </td>
   </tr>
   <tr>
-   <td><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-13.3.1">ECMAScript Internationalization API Specification, 1<sup>st</sup> Edition</a></td>
+   <td><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-13.3.1">ECMAScript Internationalization API Specification, 1 Edition</a></td>
    <td>Standard</td>
    <td>Defines <code>locales</code> and <code>options</code> arguments.</td>
   </tr>
@@ -150,7 +150,7 @@ alert(date.toLocaleString("en-US", {hour12: false}));
 
 <p>{{Compat("javascript.builtins.Date.toLocaleString")}}</p>
 
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}</li>

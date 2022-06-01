@@ -35,7 +35,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 
 <p>Псевдоклассы — это ключевые слова, которые начинаются с двоеточия:</p>
 
-<pre class="notranslate">:<em>pseudo-class-name</em></pre>
+<pre>:<em>pseudo-class-name</em></pre>
 
 <h3 id="Простой_пример_псевдокласса">Простой пример псевдокласса</h3>
 
@@ -74,7 +74,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 
 <p>Псевдоэлементы ведут себя сходным образом, однако они действуют так, как если бы вы добавили в разметку целый новый HTML-элемент, а не применили класс к существующим элементам. Псевдоэлементы начинаются с двойного двоеточия <code>::</code>.</p>
 
-<pre class="notranslate"><em>::pseudo-element-name</em></pre>
+<pre><em>::pseudo-element-name</em></pre>
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: Некоторые ранние псевдоэлементы использовали синтаксис одинарного двоеточия, которое вы можете иногда видеть в коде или примерах. Современные браузеры поддерживают ранние псевдоэлементы с одинарным или двойным двоеточием синтаксиса для обратной совместимости.</p>
@@ -94,7 +94,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_p
 
 <p>Если вы хотите сделать шрифт первой строки первого абзаца жирным, вы можете связать вместе селекторы <code>:first-child</code> и <code>::first-line</code>. Попробуйте отредактировать предыдущий живой пример, чтобы использовалась следующая CSS. Мы говорим, что хотим выбрать первую строку первого элемента <code>&lt;p&gt;,</code> который находится внутри элемента <code>&lt;article&gt;</code>.</p>
 
-<pre class="brush: css notranslate"><code>article p:first-child::first-line {
+<pre class="brush: css"><code>article p:first-child::first-line {
   font-size: 120%;
   font-weight: bold;
 }</code></pre>

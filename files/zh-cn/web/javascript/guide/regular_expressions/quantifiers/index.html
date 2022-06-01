@@ -12,8 +12,6 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 
 <h2 id="类型">类型</h2>
 
-<div class="hidden">The following table is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
-
 <table class="standard-table">
  <thead>
   <tr>
@@ -25,39 +23,39 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
   <tr>
    <td><code><em>x</em>*</code></td>
    <td>
-    <p>将前面的项“x”匹配0次或更多次。例如，/bo*/匹配“A ghost booooed”中的“boooo”和“A bird warbled”中的“b”，但在“A goat grunt”中没有匹配。</p>
+    <p>将前面的项“x”匹配 0 次或更多次。例如，/bo*/匹配“A ghost booooed”中的“boooo”和“A bird warbled”中的“b”，但在“A goat grunt”中没有匹配。</p>
    </td>
   </tr>
   <tr>
    <td><code><em>x</em>+</code></td>
    <td>
-    <p>将前一项“x”匹配1次或更多次。等价于{1,}。例如，/a+/匹配“candy”中的“a”和“caaaaaaandy”中的“a”。</p>
+    <p>将前一项“x”匹配 1 次或更多次。等价于{1,}。例如，/a+/匹配“candy”中的“a”和“caaaaaaandy”中的“a”。</p>
    </td>
   </tr>
   <tr>
    <td><code><em>x</em>?</code></td>
    <td>
-    <p>将前面的项“x”匹配0或1次。例如,/e?le?/匹配angel中的el和angle中的le。</p>
+    <p>将前面的项“x”匹配 0 或 1 次。例如，/e?le?/匹配 angel 中的 el 和 angle 中的 le。</p>
 
-    <p>如果立即在任何量词*、+、?或{}之后使用，则使量词是非贪婪的(匹配最小次数)，而不是默认的贪婪的(匹配最大次数)。</p>
+    <p>如果立即在任何量词*、+、?或{}之后使用，则使量词是非贪婪的 (匹配最小次数)，而不是默认的贪婪的 (匹配最大次数)。</p>
    </td>
   </tr>
   <tr>
    <td><code><em>x</em>{<em>n</em>}</code></td>
    <td>
-    <p>其中“n”是一个正整数，与前一项“x”的n次匹配。例如，<code>/a{2}/ </code>不匹配“candy”中的“a”，但它匹配“caandy”中的所有“a”，以及“caaandy”中的前两个“a”。</p>
+    <p>其中“n”是一个正整数，与前一项“x”的 n 次匹配。例如，<code>/a{2}/ </code>不匹配“candy”中的“a”，但它匹配“caandy”中的所有“a”，以及“caaandy”中的前两个“a”。</p>
    </td>
   </tr>
   <tr>
    <td><code><em>x</em>{<em>n</em>,}</code></td>
    <td>
-    <p>其中，“n”是一个正整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code>不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有a。</p>
+    <p>其中，“n”是一个正整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code>不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有 a。</p>
    </td>
   </tr>
   <tr>
    <td><code><em>x</em>{<em>n</em>,<em>m</em>}</code></td>
    <td>
-    <p>其中，“n”是0或一个正整数，“m”是一个正整数，而m &gt; n至少与前一项“x”匹配，最多与“m”匹配。例如，/a{1,3}/不匹配“cndy”中的“a”，“candy”中的“a”，“caandy”中的两个“a”，以及“caaaaaaandy”中的前三个“a”。注意，当匹配“caaaaaaandy”时，匹配的是“aaa”，即使原始字符串中有更多的“a”。</p>
+    <p>其中，“n”是 0 或一个正整数，“m”是一个正整数，而 m &gt; n 至少与前一项“x”匹配，最多与“m”匹配。例如，/a{1,3}/不匹配“cndy”中的“a”，“candy”中的“a”，“caandy”中的两个“a”，以及“caaaaaaandy”中的前三个“a”。注意，当匹配“caaaaaaandy”时，匹配的是“aaa”，即使原始字符串中有更多的“a”。</p>
    </td>
   </tr>
   <tr>
@@ -85,27 +83,27 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 
 <h3 id="重复模式">重复模式</h3>
 
-<pre class="brush: js notranslate">var wordEndingWithAs = /\w+a+/;
+<pre class="brush: js">var wordEndingWithAs = /\w+a+/;
 var delicateMessage = "This is Spartaaaaaaa";
 
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]</pre>
 
 <h3 id="计算字符集">计算字符集</h3>
 
-<pre class="brush: js notranslate">var singleLetterWord = /\b\w\b/g;
+<pre class="brush: js">var singleLetterWord = /\b\w\b/g;
 var notSoLongWord = /\b\w{1,6}\b/g;
 var loooongWord = /\b\w{13,}\b/g;
 
 var sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-array"><span class="arrayLeftBracket">[ </span><span class="objectBox objectBox-string">"Why"</span>, <span class="objectBox objectBox-string">"do"</span>, <span class="objectBox objectBox-string">"I"</span>, <span class="objectBox objectBox-string">"have"</span>, <span class="objectBox objectBox-string">"to"</span>, <span class="objectBox objectBox-string">"learn"</span>, <span class="objectBox objectBox-string">"table"</span><span class="arrayRightBracket"> ]</span></span></span></span></span>
-console.table(sentence.match(loooongWord));      // ["multiplication"]可选可选字符
+console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord));      // ["multiplication"] 可选可选字符
 </pre>
 
 <h3 id="可选字符"> 可选字符</h3>
 
-<pre class="brush: js notranslate">var britishText = "He asked his neighbour a favour.";
+<pre class="brush: js">var britishText = "He asked his neighbour a favour.";
 var americanText = "He asked his neighbor a favor.";
 
 var regexpEnding = /\w+ou?r/g;
@@ -123,7 +121,7 @@ console.table(americanText.match(regexpEnding));
 
 <h3 id="贪婪_与_非贪婪的">贪婪 与 非贪婪的</h3>
 
-<pre class="brush: js notranslate">var text = "I must be getting somewhere near the centre of the earth.";
+<pre class="brush: js">var text = "I must be getting somewhere near the centre of the earth.";
 var greedyRegexp = /[\w ]+/;
 // [\w ]      a letter of the latin alphabet or a whitespace
 //      +     one or several times

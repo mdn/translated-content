@@ -16,7 +16,7 @@ Les événements de pointeur sont des événements DOM déclenché pour tout pé
 
 Avoir un seul modèle pour gérer les événements de pointeur peut simplifier la création de sites web et applications et fournir une bonne expérience utilisateur quelque soit le matériel de l'utilisateur. Toutefois, pour les scénarios dans lesquels une gestion spécifique au périphérique est souhaitée, les événements de pointeur définissent une propriété {{domxref("PointerEvent.pointerType","pointerType")}} qui permet de connaître le type de périphérique ayant déclenché l'événement.
 
-Les événements nécessaires pour gérer les entrées de pointeur génériques sont analogues aux {{domxref("MouseEvent","événements de souris")}}. Par conséquent, les types d'événement de pointeur sont intentionnelement similaires aux événements de souris (`mousedown/pointerdown`, `mousemove/pointermove`, etc). De plus, les événements de pointeur contiennent les propriétés usuelles présentes dans les événements de souris (coordonnées client, élément cible, états des boutons, etc.) ainsi que de nouvelles propriétés pour les autres types d'entrée: pression, géométrie de contact, inclinaison, etc. En fait, l'interface {{domxref("PointerEvent")}} hérite toutes les propriétés de {{domxref("MouseEvent","MouseEvent")}} ce qui facilite la migration des événements souris aux événements de pointeur.
+Les événements nécessaires pour gérer les entrées de pointeur génériques sont analogues aux {{domxref("MouseEvent","événements de souris")}}. Par conséquent, les types d'événement de pointeur sont intentionnelement similaires aux événements de souris (`mousedown/pointerdown`, `mousemove/pointermove`, etc). De plus, les événements de pointeur contiennent les propriétés usuelles présentes dans les événements de souris (coordonnées client, élément cible, états des boutons, etc.) ainsi que de nouvelles propriétés pour les autres types d'entrée: pression, géométrie de contact, inclinaison, etc. En fait, l'interface {{domxref("PointerEvent")}} hérite toutes les propriétés de {{domxref("MouseEvent","MouseEvent")}} ce qui facilite la migration des événements souris aux événements de pointeur.
 
 ## Terminologie
 
@@ -44,7 +44,7 @@ L'interface {{domxref("PointerEvent")}} hérite de l'interface {{domxref("MouseE
 - {{ domxref('PointerEvent.pointerId','pointerId')}} - un identifiant unique pour le pointeur ayant déclenché l'événement.
 - {{ domxref('PointerEvent.width','width')}} - la largeur (ordre de grandeur sur l'axe X), en pixels CSS, du point de contact.
 - {{ domxref('PointerEvent.height','height')}} - la hauteur (ordre de grandeur sur l'axe Y), en pixels CSS, du point de contact.
-- {{ domxref('PointerEvent.pressure','pressure')}} - la pression du pointeur normalisée sur une échelle entre 0 et 1, où 0 et 1 représentent respectivement la pression minimale et le maximale que l'appareil est capable de détecter.
+- {{ domxref('PointerEvent.pressure','pressure')}} - la pression du pointeur normalisée sur une échelle entre 0 et 1, où 0 et 1 représentent respectivement la pression minimale et le maximale que l'appareil est capable de détecter.
 - {{ domxref('PointerEvent.tiltX','tiltX')}} - l'angle du plan (en degrés, sur une échelle de -90 à 90) entre le plan Y-Z et le plan qui contient l'axe du stylo et l'axe Y.
 - {{ domxref('PointerEvent.tiltY','tiltY')}} - l'angle du plan (en degrés, sur une échelle de -90 à 90) entre le plan X-Z et le plan qui contient l'axe du stylo et l'axe X.
 - {{ domxref('PointerEvent.pointerType','pointerType')}} - indique le type d'appareil ayant déclenché l'événement (souris, stylet, toucher, etc.)
@@ -52,7 +52,7 @@ L'interface {{domxref("PointerEvent")}} hérite de l'interface {{domxref("MouseE
 
 ### Types d'événements et gestionnaires d'événements globaux
 
-Il existe dix types d'événement de pointeur, dont sept qui ont la même sémantique que les événements souris (`down, up, move, over, out, enter, leave`). Vous trouverez ci-dessous une courte description de chaque type d'événement et son {{domxref("GlobalEventHandlers","gestionnaire d'événement global")}} associé.
+Il existe dix types d'événement de pointeur, dont sept qui ont la même sémantique que les événements souris (`down, up, move, over, out, enter, leave`). Vous trouverez ci-dessous une courte description de chaque type d'événement et son {{domxref("GlobalEventHandlers","gestionnaire d'événement global")}} associé.
 
 | Event                                    | On Event Handler                                                                             | Description                                                                                                                                                                                                                                   |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

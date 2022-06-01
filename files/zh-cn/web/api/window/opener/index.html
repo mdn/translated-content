@@ -7,7 +7,7 @@ translation_of: Web/API/Window/opener
 
 <h3 id="Summary" name="Summary">概述</h3>
 
-<p>返回打开当前窗口的那个窗口的引用，例如：在window A中打开了window B，B.opener 返回 A.</p>
+<p>返回打开当前窗口的那个窗口的引用，例如：在 window A 中打开了 window B，B.opener 返回 A.</p>
 
 <h3 id="Syntax" name="Syntax">语法</h3>
 
@@ -23,16 +23,14 @@ translation_of: Web/API/Window/opener
 
 <h3 id="Notes" name="Notes">备注</h3>
 
-<p>如果当前窗口是由另一个窗口打开的, <strong>window.opener</strong>保留了那个窗口的引用. 如果当前窗口不是由其他窗口打开的, 则该属性返回 null.</p>
+<p>如果当前窗口是由另一个窗口打开的，<strong>window.opener</strong>保留了那个窗口的引用。如果当前窗口不是由其他窗口打开的，则该属性返回 null.</p>
 
 <h3 id="Specification" name="Specification">规范</h3>
 
 <p>{{ DOM0() }}</p>
 
-<p>{{ languages( { "fr": "fr/DOM/window.opener", "ja": "ja/DOM/window.opener", "pl": "pl/DOM/window.opener", "en": "en/DOM/window.opener" } ) }}</p>
-
 <h3 id="浏览器兼容性">浏览器兼容性</h3>
 
 <p>{{Compat("api.Window.opener")}}</p>
 
-<p>注意：在Chrome78最近的几个版本，如果A、B页面跨域，A页面中打开B页面，在B页面使用console.log在控制台打印<strong>window.opener</strong>会报跨域的错误。</p>
+<p>注意：在 Chrome78 最近的几个版本，如果 A、B 页面跨域，A 页面中打开 B 页面，在 B 页面使用 console.log 在控制台打印<strong>window.opener</strong>会报跨域的错误。</p>

@@ -6,7 +6,7 @@ tags:
   - TopicStub
 translation_of: Web/API/Server-sent_events
 ---
-Habituellement, une page web doit envoyer une requête au serveur pour obtenir de nouvelles données. Avec les server-Sent events, le serveur peut envoyer de nouvelles données vers une page web à n'importe quel moment. La page web reçoit alors ces nouveaux messages qui peuvent être traités comme des événements contenant des données.
+Habituellement, une page web doit envoyer une requête au serveur pour obtenir de nouvelles données. Avec les server-Sent events, le serveur peut envoyer de nouvelles données vers une page web à n'importe quel moment. La page web reçoit alors ces nouveaux messages qui peuvent être traités comme des événements contenant des données.
 
 ## Documentation
 
@@ -23,7 +23,7 @@ Habituellement, une page web doit envoyer une requête au serveur pour obtenir d
 
 ## Rubriques connexes
 
-- [AJAX](/en-US/docs/AJAX), [JavaScript](/en-US/docs/JavaScript), [WebSockets](/en-US/docs/WebSockets)
+- [AJAX](/en-US/docs/AJAX), [JavaScript](/en-US/docs/JavaScript), [WebSockets](/en-US/docs/WebSockets)
 
 ## Voir également
 

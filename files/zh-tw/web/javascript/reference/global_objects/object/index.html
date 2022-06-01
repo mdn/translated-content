@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">// Object initialiser or literal
+<pre class="syntaxbox">// Object initialiser or literal
 { [ <var>nameValuePair1</var>[, <var>nameValuePair2</var>[, ...<var>nameValuePairN</var>] ] ] }
 
 // Called as a constructor
@@ -110,110 +110,34 @@ new Object([<var>value</var>])</pre>
 
 <p>下面例子儲存一個空物件至變數o</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 </pre>
 
-<pre class="brush: js notranslate">var o = new Object(undefined);
+<pre class="brush: js">var o = new Object(undefined);
 </pre>
 
-<pre class="brush: js notranslate">var o = new Object(null);
+<pre class="brush: js">var o = new Object(null);
 </pre>
 
 <h3 id="Using_Object_to_create_Boolean_objects">Using <code>Object</code> to create <code>Boolean</code> objects</h3>
 
 <p>下面例子儲存 {{jsxref("Boolean")}} 物件在 <code>o</code>:</p>
 
-<pre class="brush: js notranslate">// equivalent to o = new Boolean(true);
+<pre class="brush: js">// equivalent to o = new Boolean(true);
 var o = new Object(true);
 </pre>
 
-<pre class="brush: js notranslate">// equivalent to o = new Boolean(false);
+<pre class="brush: js">// equivalent to o = new Boolean(false);
 var o = new Object(Boolean());
 </pre>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2', 'Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Added Object.assign, Object.getOwnPropertySymbols, Object.setPrototypeOf, Object.is</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Added Object.entries, Object.values and Object.getOwnPropertyDescriptors.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

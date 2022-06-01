@@ -5,15 +5,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
 <div>{{JSRef("Global_Objects", "WeakMap")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>delete()</strong></code> 方法可以从一个 <code>WeakMap</code> 对象中删除指定的元素。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>wm</em>.delete(key);</code></pre>
 
-<h3 id="Parameters参数">Parameters参数</h3>
+<h3 id="Parameters参数">Parameters 参数</h3>
 
 <dl>
  <dt>key</dt>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 
 <p>如果成功删除，返回 <code>true</code>，否则返回 <code>false</code>。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js;">var wm = new WeakMap();
 wm.set(window, "foo");
@@ -53,53 +53,7 @@ wm.has(window);    // 返回 false，因为 window 对象已经被删除了。
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (SpiderMonkey)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}[1]</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>11</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (SpiderMonkey)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

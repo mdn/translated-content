@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Operators/class
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<div></div>
+
 
 <p><strong>Class expression</strong> это способ определения класса в ECMAScript 2015 (ES6). Схожий с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expressions</a>, class expressions может быть именованным либо не иметь имени. Если он именованный, то его имя доступно только внутри класса. JavaScript классы используют прототипно-ориентирование наследование.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var MyClass = class <em>[className]</em> [extends] {
+<pre class="syntaxbox">var MyClass = class <em>[className]</em> [extends] {
   // тело класса
 };</pre>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Operators/class
 
 <p>Так же, как и при использовании class declaration, тело класса у class expression будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 var Foo = class {}; // свойство конструктора опционально
 var Foo = class {}; // повторное объявление разрешено
 
@@ -39,7 +39,7 @@ class Foo {}; // Throws TypeError, doesn't allow re-declaration
 
 <p>Простой анонимный class expression, на который можно сослаться с помощью переменной "Foo".</p>
 
-<pre class="brush: js notranslate">var Foo = class {
+<pre class="brush: js">var Foo = class {
   constructor() {}
   bar() {
     return "Hello World!";
@@ -55,7 +55,7 @@ Foo.name; // "Foo"
 
 <p>Если вы хотите сослаться на конкретный класс внутри тела класса, вы можете создать именованный class expression. Это имя будет доступно только внутри области видимости самого class expression.</p>
 
-<pre class="brush: js notranslate">var Foo = class NamedFoo {
+<pre class="brush: js">var Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;

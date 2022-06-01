@@ -5,11 +5,11 @@ translation_of: Web/HTML/Element/input/datetime-local
 ---
 <div>{{HTMLRef}}</div>
 
-<p>{{htmlelement("input")}} 元素的 <code><strong>datetime-local </strong></code>类型创建让用户便捷输入日期和时间的输入控件，包括“年”、“月”、“日”，以及“时”和“分”。</p>
+<p>{{htmlelement("input")}} 元素的 <code><strong>datetime-local </strong></code>类型创建让用户便捷输入日期和时间的输入控件，包括 “年”、“月”、“日”，以及 “时” 和 “分”。</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}</p>
 
-<p>所使用的是用户所在时区。此控件的样式因浏览器而异；目前支持的浏览器为数不多，桌面端仅有 Chrome/Opera 和 Edge，移动端大多数较新版本的览器提供能使用的实现方案。在其它的浏览器中，此类型会降级显示为简单的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> 控件.</p>
+<p>所使用的是用户所在时区。此控件的样式因浏览器而异；目前支持的浏览器为数不多，桌面端仅有 Chrome/Opera 和 Edge，移动端大多数较新版本的览器提供能使用的实现方案。在其它的浏览器中，此类型会降级显示为简单的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> 控件。</p>
 
 <p>控件不支持输入秒。</p>
 
@@ -30,8 +30,8 @@ translation_of: Web/HTML/Element/input/datetime-local
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>一个表示日期和时间的 {{domxref("DOMString")}} （本地时区）或空值。</td>
+   <td><strong><a href="#取值">取值</a></strong></td>
+   <td>一个表示日期和时间的 {{domxref("DOMString")}}（本地时区）或空值。</td>
   </tr>
   <tr>
    <td><strong>事件</strong></td>
@@ -64,10 +64,10 @@ translation_of: Web/HTML/Element/input/datetime-local
 <p>一件需要注意的事情是显示的日期时间的格式与实际 <code>value</code> 里的格式不同，显示的日期和时间格式以用户操作系统所的区域设置信息为准，而控件的日期/时间值 <code>value</code> 总是 <code>yyyy-MM-ddThh:mm</code> 格式。例如，当上例中的值被提供到服务器之后，将会像这样 <code>partydate=2017-06-01T08:30</code>.</p>
 
 <div class="note">
-<p>另外请注意，如果这样的数据以 HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> 提交，时间部分的冒号“:”需要编码之后才能放在 URL 参数中，例如 <code>partydate=2017-06-01T08%3A30</code>。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} 。</p>
+<p>另外请注意，如果这样的数据以 HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> 提交，时间部分的冒号 “:” 需要编码之后才能放在 URL 参数中，例如 <code>partydate=2017-06-01T08%3A30</code>。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} 。</p>
 </div>
 
-<p>你也可以在 JavaScript中使用 {{domxref("HTMLInputElement.value")}} 属性来获取和设置日期的值，例如：</p>
+<p>你也可以在 JavaScript 中使用 {{domxref("HTMLInputElement.value")}} 属性来获取和设置日期的值，例如：</p>
 
 <pre class="brush: js notranslate">var dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';</pre>
@@ -76,7 +76,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>Date/time 输入控件乍看非常实用；它们提供了方便的用户接口来选择日期和时间，并且无论用户端是什么样的本地化设置，都会以标准化数据发送给服务器。但是受限于浏览器的支持， <code>&lt;input type="datetime-local"&gt;</code> 也有不少问题。</p>
 
-<p>我们先来看看 <code>&lt;input type="datetime-local"&gt;</code> 基本的和高级的用法，之后在（参见{{anch("处理浏览器支持")}}）会提供一些减少浏览器兼容问题的建议。</p>
+<p>我们先来看看 <code>&lt;input type="datetime-local"&gt;</code> 基本的和高级的用法，之后在（参见<a href="#处理浏览器支持">处理浏览器支持</a>）会提供一些减少浏览器兼容问题的建议。</p>
 
 <h3 id="datetime-local_的基本用法">datetime-local 的基本用法</h3>
 
@@ -103,8 +103,8 @@ dateControl.value = '2017-06-01T08:30';</pre>
 <p>结果如下：</p>
 
 <ul>
- <li>只有“2017年6月”可供选择 —— 只有“日期”部分的值可修改，并且6月以外的日期不能被选到日期控件内</li>
- <li>视你所使用的浏览器，你或许会发现时间选择控件中特定值以外的时间可能不可选（如 Edge），或是无效（参见 {{anch("校验")}}）但仍可选（如Chrome）</li>
+ <li>只有 “2017 年 6 月” 可供选择 —— 只有 “日期” 部分的值可修改，并且 6 月以外的日期不能被选到日期控件内</li>
+ <li>视你所使用的浏览器，你或许会发现时间选择控件中特定值以外的时间可能不可选（如 Edge），或是无效（参见 <a href="#校验">校验</a>）但仍可选（如 Chrome）</li>
 </ul>
 
 <div class="note">
@@ -117,7 +117,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <h3 id="设置时区">设置时区</h3>
 
-<p><code>datetime-local</code> 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 <code><a href="/en-US/docs/Web/HTML/Element/input/datetime">datetime</a></code> 输入类型上提供过此功能，但这个类型现在已被废弃，业已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。</p>
+<p><code>datetime-local</code> 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 <code><a href="/en-US/docs/Web/HTML/Element/input/datetime">datetime</a></code> 输入类型上提供过此功能，但这个类型现在已被废弃，也已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。</p>
 
 <p>例如，如果你在开发一套系统，某位用户可能已经登录进来，并且已经设置了时区，你可以把时区放在一个 <code><a href="/en-US/docs/Web/HTML/Element/input/hidden">hidden</a></code> 输入控件里。例如：</p>
 
@@ -145,9 +145,9 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <h2 id="校验">校验</h2>
 
-<p>默认情况下 <code>&lt;input type="datetime-local"&gt;</code> 不对输入内容进行验证。用户交互（UI）的实现通常不允许你输入不是日期/时间的值 —— 这非常有用 —— 但用户也仍会在不填写任何值的情况下提交数据，或者输入一个不无效的日期/时间（如：4月32日）。</p>
+<p>默认情况下 <code>&lt;input type="datetime-local"&gt;</code> 不对输入内容进行验证。用户交互（UI）的实现通常不允许你输入不是日期/时间的值 —— 这非常有用 —— 但用户也仍会在不填写任何值的情况下提交数据，或者输入一个不无效的日期/时间（如：4 月 32 日）。</p>
 
-<p>你可以使用 {{htmlattrxref("min", "input")}} 及 {{htmlattrxref("max", "input")}} 来限制可选择的日期（参见 anch("设定日期时间的最大值和最小值")），并且使用 {{htmlattrxref("required", "input")}} 属性使日期/时间为强制的输入项。这样做的结果是，可以使相应的浏览器在你输入一个超出范围的日期或不输入时显示一个错误信息。</p>
+<p>你可以使用 {{htmlattrxref("min", "input")}} 及 {{htmlattrxref("max", "input")}} 来限制可选择的日期（参见 <a href="#设定日期时间的最大值和最小值">设定日期时间的最大值和最小值</a>），并且使用 {{htmlattrxref("required", "input")}} 属性使日期/时间为强制的输入项。这样做的结果是，可以使相应的浏览器在你输入一个超出范围的日期或不输入时显示一个错误信息。</p>
 
 <p>让我们来看个例子，这里我们设置日期/时间的最小值和最大值，并且设置该项为必填：</p>
 
@@ -170,7 +170,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14957/datetime-local-error.png" style="display: block; height: 100px; margin: 0px auto; width: 558px;"></p>
 
-<p>这里有上面例子的CSS。在这里我们使用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} CSS 属性来控制当前值正确和错误的样式。我们需要这两个图标放一个 {{htmlelement("span")}} 到输入元素后面，而非使用输入元素本身，因为在 Chrome 下生成的内容会被放在表单控件里面，不能设置样式或显示出来。</p>
+<p>这里有上面例子的 CSS。在这里我们使用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} CSS 属性来控制当前值正确和错误的样式。我们需要这两个图标放一个 {{htmlelement("span")}} 到输入元素后面，而非使用输入元素本身，因为在 Chrome 下生成的内容会被放在表单控件里面，不能设置样式或显示出来。</p>
 
 <pre class="brush: css notranslate">div {
     margin-bottom: 10px;
@@ -194,7 +194,7 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>重要提示：</strong>HTML 表单验证并不能取代脚本校验输入数据是否符合格式要求。有人可以非常容易地修改 HTML 以绕过验证，亦或是完全删除这个元素。同样可能的是，有人可以非常轻易做到完全绕过 HTML 而直接向你的服务器提交数据。如果你服务器代码不对接收到的数据进行校验，灾难性的打击就可能发生在这些错误格式数据提交的时候 （或是数据太大，或是格式错误，等等）。</p>
+<p><strong>重要提示：</strong>HTML 表单验证并不能取代脚本校验输入数据是否符合格式要求。有人可以非常容易地修改 HTML 以绕过验证，亦或是完全删除这个元素。同样可能的是，有人可以非常轻易做到完全绕过 HTML 而直接向你的服务器提交数据。如果你服务器代码不对接收到的数据进行校验，灾难性的打击就可能发生在这些错误格式数据提交的时候（或是数据太大，或是格式错误，等等）。</p>
 </div>
 
 <h2 id="处理浏览器支持">处理浏览器支持</h2>
@@ -213,8 +213,8 @@ input:valid+span:after {
  <li><code>mm/dd/yyyy</code></li>
  <li><code>dd-mm-yyyy</code></li>
  <li><code>mm-dd-yyyy</code></li>
- <li><code>mm-dd-yyyy hh:mm</code> （12小时制）</li>
- <li><code>mm-dd-yyyy HH:mm</code> （24小时制）</li>
+ <li><code>mm-dd-yyyy hh:mm</code> （12 小时制）</li>
+ <li><code>mm-dd-yyyy HH:mm</code> （24 小时制）</li>
  <li>等等</li>
 </ul>
 
@@ -236,7 +236,7 @@ input:valid+span:after {
 
 <p>{{ EmbedLiveSample('处理浏览器支持', 600, 100) }}</p>
 
-<p>你试一下提交数据，如果你输入的内容不满足 <code>nnnn-nn-nnTnn:nn</code> 格式（n为0 ~ 9的数字），你会看到浏览器显示一条错误信息（并高亮输入框标记为无效），但这并不能妨碍用户输入无效的日期或是不正确的日期和时间。</p>
+<p>你试一下提交数据，如果你输入的内容不满足 <code>nnnn-nn-nnTnn:nn</code> 格式（n 为 0 ~ 9 的数字），你会看到浏览器显示一条错误信息（并高亮输入框标记为无效），但这并不能妨碍用户输入无效的日期或是不正确的日期和时间。</p>
 
 <p>然而什么样的用户会去理解这样一个他们要输入的日期和时间格式呢？</p>
 
@@ -268,15 +268,15 @@ input:valid + span:after {
 }</pre>
 </div>
 
-<p>目前处理跨浏览器表单中输入日期的最好办法是让用户分别在不同的控件中输入年、月、日和时间（{{htmlelement("select")}} 元素很流行 —— 参见下面的实现），或者使用 JavaScript库，如 <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> 及 <a href="http://timepicker.co/">jQuery timepicker plugin</a>。</p>
+<p>目前处理跨浏览器表单中输入日期的最好办法是让用户分别在不同的控件中输入年、月、日和时间（{{htmlelement("select")}} 元素很流行 —— 参见下面的实现），或者使用 JavaScript 库，如 <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> 及 <a href="http://timepicker.co/">jQuery timepicker plugin</a>。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>在这个例子中，我们创建两套UI元素来选择日期时间 —— 一套原生的 <code>&lt;input type="datetime-local"&gt;</code> ，另一套是一系列 {{htmlelement("select")}} 元素以在不支持原生控件的浏览器下选择日期和时间。</p>
+<p>在这个例子中，我们创建两套 UI 元素来选择日期时间 —— 一套原生的 <code>&lt;input type="datetime-local"&gt;</code> ，另一套是一系列 {{htmlelement("select")}} 元素以在不支持原生控件的浏览器下选择日期和时间。</p>
 
 <p>{{ EmbedLiveSample('例子', 600, 140) }}</p>
 
-<p>HTML代码如下：</p>
+<p>HTML 代码如下：</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;div class="nativeDateTimePicker"&gt;
@@ -359,7 +359,7 @@ input:valid+span:after {
 }</pre>
 </div>
 
-<p>代码的另一部分也许会引起一定的兴趣，那就是功能检查代码 —— 检查浏览器是否支持 <code>&lt;input type="datetime-local"&gt;</code>，我们可以创建一个新的 {{htmlelement("input")}} 元素，设置它的 <code>type</code> 为 <code>datetime-local</code>，然后立即检查它被设置的类型。不支持 <code>datetime-local</code> 的浏览器返回 <code>text</code>，因为这就是 <code>datetime-local</code> 要回退的类型。 如果 <code>&lt;input type="datetime-local"&gt;</code> 不被支持，我们隐藏原生的控件并显示备用的控件UI （{{htmlelement("select")}}）来替代。</p>
+<p>代码的另一部分也许会引起一定的兴趣，那就是功能检查代码 —— 检查浏览器是否支持 <code>&lt;input type="datetime-local"&gt;</code>，我们可以创建一个新的 {{htmlelement("input")}} 元素，设置它的 <code>type</code> 为 <code>datetime-local</code>，然后立即检查它被设置的类型。不支持 <code>datetime-local</code> 的浏览器返回 <code>text</code>，因为这就是 <code>datetime-local</code> 要回退的类型。 如果 <code>&lt;input type="datetime-local"&gt;</code> 不被支持，我们隐藏原生的控件并显示备用的控件 UI （{{htmlelement("select")}}）来替代。</p>
 
 <pre class="brush: js notranslate">// define variables
 var nativePicker = document.querySelector('.nativeDateTimePicker');
@@ -497,7 +497,7 @@ daySelect.onchange = function() {
 }</pre>
 
 <div class="note">
-<p><strong>注意：请记住某些年份有53个星期（见</strong><a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a><strong>）！当你在开发产品应用时应当考虑这个问题。</strong></p>
+<p><strong>注意：请记住某些年份有 53 个星期（见</strong><a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a><strong>）！当你在开发产品应用时应当考虑这个问题。</strong></p>
 </div>
 
 <h2 id="规范">规范</h2>

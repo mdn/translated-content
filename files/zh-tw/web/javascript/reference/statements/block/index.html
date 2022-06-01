@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/block
 <table class="standard-table">
  <tbody>
   <tr>
-   <td class="header" colspan="2">陳述句</td>
+   <th colspan="2">陳述句</th>
   </tr>
   <tr>
    <td>Implemented in</td>
@@ -63,11 +63,11 @@ alert(x); // outputs 2
 
 <p>當使用<code>let</code>或是<code>const</code>進行宣告時，其存取範圍是只有本身定義的區塊中。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">let</span> x <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-<span class="punctuation token">{</span>
-  <span class="keyword token">let</span> x <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// logs 1</span></code></pre>
+<pre class="brush: js">let x = 1;
+{
+  let x = 2;
+}
+console.log(x); // logs 1</pre>
 
 <h4 id="function"><code>function</code></h4>
 

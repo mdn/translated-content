@@ -10,9 +10,9 @@ translation_of: Web/HTML/Global_attributes/is
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><span class="seoSummary">is 全局属性( <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> )允许您指定标准HTML元素像定义的内置元素一样工作（请参阅使用自定义元素( <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> )以获取更多详细信息）。</span></p>
+<p>is 全局属性 ( <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> ) 以获取更多详细信息）。</p>
 
-<p>只有在当前文档中已成功定义( <a href="/en-US/docs/Web/API/CustomElementRegistry/define">defined</a> )指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。</p>
+<p>只有在当前文档中已成功定义 ( <a href="/en-US/docs/Web/API/CustomElementRegistry/define">defined</a> ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -33,7 +33,7 @@ class WordCount extends HTMLParagraphElement {
 // Define the new element
 customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
-<pre class="brush: html">&lt;<span class="pl-ent">p</span> <span class="pl-e">is</span>=<span class="pl-s"><span class="pl-pds">"</span>word-count<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
+<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
 
 <h2 id="规范">规范</h2>
 

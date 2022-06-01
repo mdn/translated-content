@@ -31,90 +31,11 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
 
 <h2 id="Specification" name="Specification">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#constructorBlob', 'Blob()')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>
-    <p>基礎支援</p>
-   </td>
-   <td>20</td>
-   <td>{{CompatGeckoDesktop("13.0")}} [1]</td>
-   <td>10</td>
-   <td>12.10</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>在 Workers 中</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("14.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基礎支援</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>在 Workers 中</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("14.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Firefox 16 以前，第二個參數若被設為 <code>null</code> 或 <code>undefined</code> 會導致錯誤而不是當成一個空鍵值。</p>
+{{Compat("api.Blob.Blob")}}
 
 <h2 id="參見">參見</h2>
 

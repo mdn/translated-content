@@ -42,8 +42,8 @@ Voici un exemple où un bloc caché est utilisé pour contenir un message de rem
 ```js
 document.getElementById("boutonOk")
         .addEventListener("click", function() {
-  document.getElementById("bienvenue").hidden = true;
-  document.getElementById("impressionnant").hidden = false;
+  document.getElementById("bienvenue").hidden = true;
+  document.getElementById("impressionnant").hidden = false;
 }, false);
 ```
 
@@ -104,7 +104,7 @@ h1 {
 
 ### Résultat
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Exemple', 560, 200) }}
 
 ## Spécifications
 

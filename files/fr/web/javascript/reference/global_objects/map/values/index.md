@@ -20,7 +20,9 @@ La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript
 
 ## Syntaxe
 
-    maMap.values()
+```js
+maMap.values()
+```
 
 ### Valeur de retour
 
@@ -48,7 +50,7 @@ console.log(mapIter.next().value); // "licorne"
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype.values', 'Map.prototype.values')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.values', 'Map.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-map.prototype.values', 'Map.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

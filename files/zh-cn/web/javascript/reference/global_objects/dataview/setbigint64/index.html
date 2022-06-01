@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>setBigInt64()</code></strong>方法在距{{jsxref("DataView")}} 的起始位置的指定字节偏移处存储一个带符号的64位整数（long long类型）值。</p>
+<p><strong><code>setBigInt64()</code></strong>方法在距{{jsxref("DataView")}} 的起始位置的指定字节偏移处存储一个带符号的 64 位整数（long long 类型）值。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-setbigint64.html")}}</div>
 
@@ -24,11 +24,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 <dl>
  <dt>byteOffset</dt>
  <dd>字节偏移量，为从视图的起始位置到数据存储位置的字节字节偏移量。</dd>
- <dt></dt>
  <dt>value</dt>
- <dd><span class="blob-code-inner blob-code-marker">作为一个</span>{{jsxref("BigInt")}}类型设置的数值。满足一个带符号的64位整数的最大可能数值是 <code><span class="blob-code-inner blob-code-marker">2n ** (64n -1n) - 1n</span></code><span class="blob-code-inner blob-code-marker"> (<code>9223372036854775807n</code>)。当发生溢出时，将会变成负数(</span><code>-9223372036854775808n</code><span class="blob-code-inner blob-code-marker">)。</span></dd>
+ <dd>作为一个{{jsxref("BigInt")}}类型设置的数值。满足一个带符号的 64 位整数的最大可能数值是 <code>2n ** (64n -1n) - 1n</code> (<code>9223372036854775807n</code>)。当发生溢出时，将会变成负数 (<code>-9223372036854775808n</code>)。</dd>
  <dt>littleEndian</dt>
- <dd>{{optional_inline}} 为可选参数，表示这个64位整数是否以{{Glossary("Endianness", "little-endian 或者big-endian")}}格式存储。如果设置为<code>false</code> 或者未指定（<code>undefined</code>），将会写入一个big-endian（大端模式：高位字节排放在内存的低地址端，低位字节排放在内存的高地址端）格式的数值。</dd>
+ <dd>{{optional_inline}} 为可选参数，表示这个 64 位整数是否以{{Glossary("Endianness", "little-endian 或者 big-endian")}}格式存储。如果设置为<code>false</code> 或者未指定（<code>undefined</code>），将会写入一个 big-endian（大端模式：高位字节排放在内存的低地址端，低位字节排放在内存的高地址端）格式的数值。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>

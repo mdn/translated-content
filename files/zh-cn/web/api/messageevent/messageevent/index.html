@@ -3,9 +3,9 @@ title: MessageEvent.MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 translation_of: Web/API/MessageEvent/MessageEvent
 ---
-<div>{{APIRef("HTML DOM")}}{{draft}}</div>
+<div>{{APIRef("HTML DOM")}}</div>
 
-<p><code><strong>MessageEvent()</strong></code>构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。</p>
+<p><code><strong>MessageEvent()</strong></code> 构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -14,20 +14,20 @@ translation_of: Web/API/MessageEvent/MessageEvent
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">type</span></font></dt>
- <dd>要创建的<code>MessageEvent</code>的类型。这可能是XXX中的一个</dd>
+ <dt>type</dt>
+ <dd>要创建的 <code>MessageEvent</code> 的类型。这可能是 XXX 中的一个</dd>
  <dt>
  <p><strong><code>init</code> </strong>{{optional_inline}}</p>
  </dt>
  <dd>
- <p>可以包含以下属性的dictionary对象：</p>
+ <p>可以包含以下属性的 dictionary 对象：</p>
 
  <ul>
-  <li><code>data</code>: 您希望包含在MessageEvent中的数据。这可以是任何数据类型，如果没有指定，则默认为null。</li>
-  <li><code>origin</code>: {{domxref("USVString")}} 表示消息发送源。如果没有指定，则默认为空字符串("")。</li>
-  <li><code>lastEventId</code>: {{domxref("DOMString")}} 表示事件的唯一ID。如果没有指定，则默认为空字符串("")。</li>
-  <li><code>source</code>: <code>MessageEventSource</code> (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 表示消息发送对象。如果没有设置，则默认为null。</li>
-  <li><code>ports</code>:  {{domxref("MessagePort")}} 对象数组，表示正在通过的消息通道关联的端口(在适当的情况下，例如在通道消息传递或向共享工作者发送消息时)。如果没有指定，则默认为空数组([])。</li>
+  <li><code>data</code>: 您希望包含在 MessageEvent 中的数据。这可以是任何数据类型，如果没有指定，则默认为 null。</li>
+  <li><code>origin</code>: {{domxref("USVString")}} 表示消息发送源。如果没有指定，则默认为空字符串 ("")。</li>
+  <li><code>lastEventId</code>: {{domxref("DOMString")}} 表示事件的唯一 ID。如果没有指定，则默认为空字符串 ("")。</li>
+  <li><code>source</code>: <code>MessageEventSource</code> (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 表示消息发送对象。如果没有设置，则默认为 null。</li>
+  <li><code>ports</code>: {{domxref("MessagePort")}} 对象数组，表示正在通过的消息通道关联的端口 (在适当的情况下，例如在通道消息传递或向共享工作者发送消息时)。如果没有指定，则默认为空数组 ([])。</li>
  </ul>
  </dd>
 </dl>
@@ -58,75 +58,7 @@ translation_of: Web/API/MessageEvent/MessageEvent
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>9</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari('10.0+')}}</td>
-  </tr>
-  <tr>
-   <td><code>origin</code> as {{domxref("USVString")}} and source as <code>MessageEventSource</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("55.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>3.0+</td>
-  </tr>
-  <tr>
-   <td><code>origin</code> as {{domxref("USVString")}} and source as <code>MessageEventSource</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("55.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MessageEvent.MessageEvent")}}
 
 <h2 id="另见">另见</h2>
 

@@ -111,7 +111,7 @@ translation_of: Web/API/Web_Authentication_API
 <p> В целях безопасности вызовы Web Authentication API ({{domxref('CredentialsContainer.create','create()')}} и {{domxref('CredentialsContainer.get','get()')}}) отменяются, если браузер теряет фокус до завершения вызова.</p>
 </div>
 
-<pre class="brush: js notranslate">// sample arguments for registration
+<pre class="brush: js">// sample arguments for registration
 var createCredentialDefaultArgs = {
     publicKey: {
         // Relying Party (a.k.a. - Service):
@@ -185,19 +185,17 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://w3c.github.io/webauthn/">Web Authentication: An API for accessing Public Key Credentials</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Совместимость">Совместимость</h2>

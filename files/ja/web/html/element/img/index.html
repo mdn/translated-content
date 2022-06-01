@@ -107,7 +107,7 @@ translation_of: Web/HTML/Element/img
 		<dd>CORS リクエストは、資格情報 (つまり、Cookie、X.509 証明書、 <code>Authorization</code> リクエストヘッダー) が含まれた状態で送信されます。サーバーが元のサイトとの資格情報の共有を選択する (<code>Access-Control-Allow-Credentials: true</code> レスポンスヘッダーを送り返す) ことをしなかった場合、ブラウザーは画像を汚染されたものとしてマークし、その画像データへのアクセスを制限します。</dd>
 	</dl>
 
-	<p>この属性がの値が無効である場合は、列挙型のキーワードに <code>anonymous</code> が指定されたものとして扱われます。詳しくは <a href="/ja/docs/Web/HTML/Attributes/crossorigin">CORS 設定属性</a>を参照してください。</p>
+	<p>この属性の値が無効である場合は、列挙型のキーワードに <code>anonymous</code> が指定されたものとして扱われます。詳しくは <a href="/ja/docs/Web/HTML/Attributes/crossorigin">CORS 設定属性</a>を参照してください。</p>
 	</dd>
 	<dt>{{htmlattrdef("decoding")}}</dt>
 	<dd>
@@ -159,7 +159,7 @@ translation_of: Web/HTML/Element/img
 	<dt>{{htmlattrdef("sizes")}}</dt>
 	<dd>ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。それぞれのソースサイズの構成は以下のとおりです。
 	<ol>
-		<li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#syntax">メディア条件</a>。リスト内の最後のアイテムでは省略しなければなりません。</li>
+		<li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#構文">メディア条件</a>。リスト内の最後のアイテムでは省略しなければなりません。</li>
 		<li>ソースサイズ値。</li>
 	</ol>
 
@@ -250,7 +250,7 @@ translation_of: Web/HTML/Element/img
 
 <p>以下の簡単な例では、ページに画像を埋め込み、アクセシビリティを向上させるために代替テキストを含めています。</p>
 
-<pre class="brush: html">&lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
+<pre class="brush: html">&lt;img src="favicon144.png"
      alt="MDN ロゴ"&gt;
 </pre>
 
@@ -261,7 +261,7 @@ translation_of: Web/HTML/Element/img
 <p>この例は前回のを土台に、画像をリンクにする方法を示しています。これを行うのはとても単純です。 — <code>&lt;img&gt;</code> タグを {{HTMLElement("a")}} の中に組み込むだけです。一つの考慮事項として、リンクが指すリソースを説明する代替テキストを作成するようにしてください。</p>
 
 <pre class="brush: html">&lt;a href="https://developer.mozilla.org"&gt;
-  &lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
+  &lt;img src="favicon144.png"
        alt="MDN サイトにおいでください"&gt;
 &lt;/a&gt;</pre>
 
@@ -271,9 +271,9 @@ translation_of: Web/HTML/Element/img
 
 <p>この例では、 <code>srcset</code> 属性によって高解像度版のロゴの参照を指定しています。これで、高解像度の端末では <code>src</code> 画像の代わりにこちらが読み込まれます。 <code>src</code> で参照される画像は、 <code>srcset</code> に対応している{{glossary("User agent", "ユーザーエージェント")}}では、 <code>1x</code> の候補としてカウントされます。</p>
 
-<pre class="brush: html"> &lt;img src="https://developer.mozilla.org/static/img/favicon72.png"
+<pre class="brush: html"> &lt;img src="favicon72.png"
       alt="MDN logo"
-      srcset="https://developer.mozilla.org/static/img/favicon144.png 2x"&gt;</pre>
+      srcset="favicon144.png 2x"&gt;</pre>
 
 <p>{{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}</p>
 
@@ -281,10 +281,10 @@ translation_of: Web/HTML/Element/img
 
 <p><code>src</code> 属性は、 <code>srcset</code> に対応している{{glossary("User agent", "ユーザーエージェント")}}で '<code>w</code>' 記述子を使用している場合は無視されます。 <code>(max-width: 600px)</code> のメディア条件に一致すると、 200px の幅の画像 (200px にもっと近いもの) が読み込まれ、そうでなければ他の画像が読み込まれます。</p>
 
-<pre class="brush: html"> &lt;img src="/files/16864/clock-demo-200px.png"
+<pre class="brush: html"> &lt;img src="clock-demo-200px.png"
       alt="時計"
-      srcset="/files/16864/clock-demo-200px.png 200w,
-          /files/16797/clock-demo-400px.png 400w"
+      srcset="clock-demo-200px.png 200w,
+          clock-demo-400px.png 400w"
       sizes="(max-width: 600px) 200px, 50vw"&gt;</pre>
 
 <p>{{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}</p>

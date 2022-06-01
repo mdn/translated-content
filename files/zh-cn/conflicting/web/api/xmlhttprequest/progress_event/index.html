@@ -1,0 +1,65 @@
+---
+title: XMLHttpRequestEventTarget.onprogress
+slug: conflicting/Web/API/XMLHttpRequest/progress_event
+translation_of: Web/API/XMLHttpRequestEventTarget/onprogress
+original_slug: Web/API/XMLHttpRequestEventTarget/onprogress
+---
+<p>{{APIRef("XMLHttpRequest")}}</p>
+
+<p><strong><code>XMLHttpRequestEventTarget.onprogress</code></strong> 是在 {{domxref("XMLHttpRequest")}} 完成之前周期性调用的函数。</p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre><em>XMLHttpRequest</em>.onprogress = <em>callback</em>;</pre>
+
+<h3 id="值">值</h3>
+
+<ul>
+ <li><code><em>callback</em></code> 在请求完成之前周期性调用的函数。</li>
+</ul>
+
+<h3 id="Example" name="Example">事件</h3>
+
+<ul>
+ <li><em><code>event.loaded</code></em>  已传输的数据量</li>
+ <li><em><code>event.total</code></em>  总共的数据量</li>
+</ul>
+
+<pre>XMLHttpRequest.onprogress = function (event) {
+  event.loaded;
+  event.total;
+};</pre>
+
+<h2 id="Example" name="Example">示例</h2>
+
+<pre>var xmlhttp = new XMLHttpRequest(),
+  method = 'GET',
+  url = 'https://developer.mozilla.org/';
+
+xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.onprogress = function () {
+  //do something
+};
+xmlhttp.send();
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onload')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("api.XMLHttpRequestEventTarget.onprogress")}}</p>

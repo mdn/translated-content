@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield*
 
 <p> <strong><code>yield*</code> 表达式</strong>用于委托给另一个{{jsxref("Statements/function*", "generator")}} 或可迭代对象。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"> yield* [[expression]];</pre>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield*
 
 <p><code>yield*</code> 表达式本身的值是当迭代器关闭时返回的值（即<code>done</code>为<code>true</code>时）。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="委托给其他生成器">委托给其他生成器</h3>
 
@@ -105,7 +105,7 @@ console.log(iterator.next()); // { value: undefined, done: true },
 console.log(result);          // "foo"
 </pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -129,14 +129,14 @@ console.log(result);          // "foo"
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容</h2>
+<h2 id="Browser_compatibility">浏览器兼容</h2>
 
 <p>{{Compat("javascript.operators.yield_star")}}</p>
 
 <h2 id="Firefox_特别提示">Firefox 特别提示</h2>
 
 <ul>
- <li>从 Gecko 33 {{geckoRelease(33)}} 开始，<code>yield</code>表达式的解析已被更新以符合ES2015规范（{{bug(981599)}}）：
+ <li>从 Gecko 33 {{geckoRelease(33)}} 开始，<code>yield</code>表达式的解析已被更新以符合 ES2015 规范（{{bug(981599)}}）：
 
   <ul>
    <li>现在有行结束符限制。在 <code>yield</code> 和 <code>*</code> 之间不允许有换行符。如下代码会抛出{{jsxref("SyntaxError")}}：
@@ -150,7 +150,7 @@ console.log(result);          // "foo"
  </li>
 </ul>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol">迭代器协议</a></li>

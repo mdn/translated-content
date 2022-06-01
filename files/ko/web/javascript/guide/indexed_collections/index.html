@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</div>
 
-<p class="summary">이번장에서는 인덱스값에 의해 정렬이 되는 데이터 자료구조에 대해 소개합니다.  배열과 유사 배열 생성자인 {{jsxref("Array")}} 객체와 {{jsxref("TypedArray")}} 객체 같은 생성자들을 포함합니다. </p>
+<p >이번장에서는 인덱스값에 의해 정렬이 되는 데이터 자료구조에 대해 소개합니다.  배열과 유사 배열 생성자인 {{jsxref("Array")}} 객체와 {{jsxref("TypedArray")}} 객체 같은 생성자들을 포함합니다. </p>
 
-<h2 id="배열_객체"><font face="Consolas, Liberation Mono, Courier, monospace">배열 객체</font></h2>
+<h2 id="배열_객체">배열 객체</h2>
 
 <p>배열은 이름과 인덱스로 참조되는 정렬된 값들의 집합입니다. 예를 들면, 숫자로 된 사원번호를 index로하여 사원명을 가지고 있는 emp라는 배열을 가질 수 있습니다. 그래서 emp[1]은 사원번호 1번, emp[2]는 사원번호 2번, 이런식으로 사원번호를 인덱스 값으로 가질 수 있는 것입니다.</p>
 
@@ -305,8 +305,8 @@ myArray.sort(sortFn);
 </pre>
 
 <ul>
- <li>a의 순서가 b보다 뒤에 오면 -1(혹은 음수)을 반환합니다.</li>
- <li>a의 순서가 b보다 앞에 오면 1(혹은 양수)을 반환합니다.</li>
+ <li>a의 순서가 b보다 앞에 오면 -1(혹은 음수)을 반환합니다.</li>
+ <li>a의 순서가 b보다 뒤에 오면 1(혹은 양수)을 반환합니다.</li>
  <li>a와 b가 같으면 0을 반환합니다.</li>
 </ul>
 
@@ -439,7 +439,7 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 <p>유연성과 효율성을 극대화 하기 위해, 자바스크립트 타입 배열을 <strong>버퍼</strong>와 <strong>뷰</strong>라는 구조로 구현되어 있습니다. 하나의 버퍼({{jsxref("ArrayBuffer")}}객체로 구현되어 있습니다.)는 하나의 데이터 덩어리를 의미하는 객체입니다. 버퍼는 구체적으로 언급할 형식이 없고, 버퍼가 담고 있는 내용에 접근할 메카니즘을 제공하지 않습니다. 버퍼에 담겨져 있는 메모리에 접근하기 위해선, 뷰를 사용해야 합니다. 하나의 뷰는 컨덱스트를 제공하는데, 컨텍스트는 데이터 형, 시작 오프셋 그리고 실제 타입배열로 변경되는 요소의 갯수를 제공합니다. </p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png"></p>
 
 <h3 id="배열버퍼">배열버퍼</h3>
 
@@ -449,8 +449,114 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 <p>타입 배열 뷰들은 스스로를 나타낼 수 있는 이름과 <code>Int8</code>, <code>Uint32</code>, <code>Float64등의 일반적인 숫자 형들을 위한 뷰를 제공합니다.Uint8ClampedArray라는 특별한 타입 배열 뷰가 있습니다. 0부터 255까지의 값을 가질수 있습니다. 예를 들며, Uint8ClampedArray는 </code><a href="/en-US/docs/Web/API/ImageData">Canvas data processing</a>에 유용합니다. </p>
 
-<p>{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}</p>
-
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Value Range</th>
+      <th>Size in bytes</th>
+      <th>Description</th>
+      <th>Web IDL type</th>
+      <th>Equivalent C type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{jsxref("Int8Array")}}</td>
+      <td><code>-128</code> to <code>127</code></td>
+      <td>1</td>
+      <td>8-bit two's complement signed integer</td>
+      <td><code>byte</code></td>
+      <td><code>int8_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint8Array")}}</td>
+      <td><code>0</code> to <code>255</code></td>
+      <td>1</td>
+      <td>8-bit unsigned integer</td>
+      <td><code>octet</code></td>
+      <td><code>uint8_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint8ClampedArray")}}</td>
+      <td><code>0</code> to <code>255</code></td>
+      <td>1</td>
+      <td>8-bit unsigned integer (clamped)</td>
+      <td><code>octet</code></td>
+      <td><code>uint8_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Int16Array")}}</td>
+      <td><code>-32768</code> to <code>32767</code></td>
+      <td>2</td>
+      <td>16-bit two's complement signed integer</td>
+      <td><code>short</code></td>
+      <td><code>int16_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint16Array")}}</td>
+      <td><code>0</code> to <code>65535</code></td>
+      <td>2</td>
+      <td>16-bit unsigned integer</td>
+      <td><code>unsigned short</code></td>
+      <td><code>uint16_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Int32Array")}}</td>
+      <td><code>-2147483648</code> to <code>2147483647</code></td>
+      <td>4</td>
+      <td>32-bit two's complement signed integer</td>
+      <td><code>long</code></td>
+      <td><code>int32_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint32Array")}}</td>
+      <td><code>0</code> to <code>4294967295</code></td>
+      <td>4</td>
+      <td>32-bit unsigned integer</td>
+      <td><code>unsigned long</code></td>
+      <td><code>uint32_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Float32Array")}}</td>
+      <td><code>1.2E-38</code> to <code>3.4E38</code></td>
+      <td>4</td>
+      <td>
+        32-bit IEEE floating point number (7 significant digits e.g.,
+        <code>1.1234567</code>)
+      </td>
+      <td><code>unrestricted float</code></td>
+      <td><code>float</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Float64Array")}}</td>
+      <td><code>5E-324</code> to <code>1.8E308</code></td>
+      <td>8</td>
+      <td>
+        64-bit IEEE floating point number (16 significant digits e.g.,
+        <code>1.123...15</code>)
+      </td>
+      <td><code>unrestricted double</code></td>
+      <td><code>double</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("BigInt64Array")}}</td>
+      <td><code>-2^63</code> to <code>2^63 - 1</code></td>
+      <td>8</td>
+      <td>64-bit two's complement signed integer</td>
+      <td><code>bigint</code></td>
+      <td><code>int64_t (signed long long)</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("BigUint64Array")}}</td>
+      <td><code>0</code> to <code>2^64 - 1</code></td>
+      <td>8</td>
+      <td>64-bit unsigned integer</td>
+      <td><code>bigint</code></td>
+      <td><code>uint64_t (unsigned long long)</code></td>
+    </tr>
+  </tbody>
+</table>
 <p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a>를 참조하시면 보다 많은 정보를 보실 수 있습니다. </p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</p>

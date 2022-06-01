@@ -8,14 +8,14 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.setRequestHeader()</strong> 是设置HTTP请求头部的方法。此方法必须在  {{domxref("XMLHttpRequest.open", "open()")}} 方法和 {{domxref("XMLHttpRequest.send", "send()")}}   之间调用。如果多次对同一个请求头赋值，只会生成一个合并了多个值的请求头。</p>
+<p><strong>XMLHttpRequest.setRequestHeader()</strong> 是设置 HTTP 请求头部的方法。此方法必须在 {{domxref("XMLHttpRequest.open", "open()")}} 方法和 {{domxref("XMLHttpRequest.send", "send()")}} 之间调用。如果多次对同一个请求头赋值，只会生成一个合并了多个值的请求头。</p>
 
-<p>如果没有设置 {{HTTPHeader("Accept")}} 属性，则此发送出{{domxref("XMLHttpRequest.send", "send()")}} 的值为此属性的默认值<code>*/*</code> 。</p>
+<p>如果没有设置 {{HTTPHeader("Accept")}} 属性，则此发送出{{domxref("XMLHttpRequest.send", "send()")}} 的值为此属性的默认值：<code>*/*</code>。</p>
 
-<p>安全起见，有些请求头的值只能由user agent设置：{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p>安全起见，有些请求头的值只能由 user agent 设置：{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
 <div class="note">
-<p>自定义一些header属性进行跨域请求时，可能会遇到"<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>"，你可能需要在你的服务端设置"Access-Control-Allow-Headers"。</p>
+<p>自定义一些 header 属性进行跨域请求时，可能会遇到"<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>"，你可能需要在你的服务端设置 "Access-Control-Allow-Headers"。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -51,59 +51,8 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 
 <h2 id="兼容性">兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatIe('5')}}<sup>[1]</sup><br>
-    {{CompatIe('7')}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari('1.2')}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 使用ActiveXObject()实现的。Internet Explorer 7之后使用的是标准的XMLHttpRequest。</p>
+{{Compat("api.XMLHttpRequest.setRequestHeader")}}
 
 <h2 id="参考">参考</h2>
 
-<p><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用XMLHttpRequest</a></p>
+<p><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></p>

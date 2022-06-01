@@ -8,7 +8,10 @@ translation_of: Web/JavaScript/Reference/Classes
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<p>ECMAScript 6 中引入了類別 (class) 作為 JavaScript 現有原型程式(prototype-based)繼承的語法糖。類別語法並<strong>不是</strong>要引入新的物件導向繼承模型到 JavaScript 中，而是提供一個更簡潔的語法來建立物件和處理繼承。</p>
+<p>類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。
+  類別基於基於原型（prototype），但在語法和定義上，與 ES5 的類類別（class-like）有所不同。</p>
+
+
 
 <h2 id="定義類別">定義類別</h2>
 
@@ -118,6 +121,55 @@ const p2 = new Point(10, 10);
 
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 </pre>
+<h3 id="Instance_properties">Instance properties</h3>
+
+Instance properties 必須在 class 內定義:
+
+<pre class="brush: js">class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}</pre>
+
+<h3 id="宣告欄位">宣告欄位</h3>
+<h4 id="宣告公共欄位">宣告公共欄位</h4>
+
+<p>在 JavaScript 以宣告欄位改寫上面的程式，可以寫成如下：</p>
+<pre class="brush: js">class Rectangle {
+  height = 0;
+  width;
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}</pre>
+<p>通過事前宣告欄位，類別定義變得更加self-documenting ，並且欄位會一直存在。
+<p>另外，如上面例子所示，聲明字段可以不用設定默認值。</p>
+<p>想知道更多資訊，可參閱 {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}}。</p>
+
+<h4 id="宣告私有欄位">宣告私有欄位</h4>
+
+<p>私有欄位的宣告，可以參考下方例子：</p>
+
+<pre class="brush: js">class Rectangle {
+  #height = 0;
+  #width;
+  constructor(height, width) {
+    this.#height = height;
+    this.#width = width;
+  }
+}</pre>
+
+
+<p>從類別外部使用私有欄位會出現錯誤；私有欄位只能在類別內讀寫。</p>
+<p>通過宣告這些在類別以外不可見的東西，你可以確保類別的使用者不會倚賴類別的內部結構，畢竟一個類別的內部結構可能會隨著版本的更新而有所變化。</p>
+<blockquote>
+<p><strong>注意：</strong>私有欄位只能在建立類別時事先宣告。</p>
+</blockquote>
+<p>私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。</p>
+
+<p>想知道更多資訊，可參閱 {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}。</p>
 
 <h3 id="裝箱、原型方法及靜態方法">裝箱、原型方法及靜態方法</h3>
 
@@ -279,76 +331,11 @@ l.speak();
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規格</th>
-   <th scope="col">狀態</th>
-   <th scope="col">評論</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}<sup>[1]</sup><br>
-    {{CompatChrome(49.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>13</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari(9.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9</td>
-   <td>{{CompatChrome(42.0)}}<sup>[1]</sup><br>
-    {{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

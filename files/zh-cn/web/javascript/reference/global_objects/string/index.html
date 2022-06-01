@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p><strong><code>String</code></strong> 全局对象是一个用于字符串或一个字符序列的构造函数。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <p>字符串字面量采取以下形式：</p>
 
@@ -35,20 +35,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 <pre class="syntaxbox">String(thing)
 new String(thing)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>thing</code></dt>
  <dd>任何可以被转换成字符串的值。</dd>
 </dl>
 
-<h3 id="Parameters" name="Parameters">模板字面量</h3>
+<h3 id="Parameters">模板字面量</h3>
 
 <p>从 ECMAScript 2015 开始，字符串字面量也可以称为<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">模板字面量</a>：</p>
 
 <pre>`hello world` `hello! world!` `hello ${who}` escape `&lt;a&gt;${who}&lt;/a&gt;`</pre>
 
-<h3 id="Parameters" name="Parameters">转义字符</h3>
+<h3 id="Parameters">转义字符</h3>
 
 <dl>
 </dl>
@@ -113,12 +113,12 @@ new String(thing)</pre>
   </tr>
   <tr>
    <td><code>\xXX</code></td>
-   <td>Latin-1 字符(x小写)</td>
+   <td>Latin-1 字符 (x 小写)</td>
   </tr>
  </tbody>
 </table>
 
-<div class="note">和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。</div>
+<div class="note"><p><strong>备注：</strong>和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。</p></div>
 
 <h3 id="长字符串">长字符串</h3>
 
@@ -141,27 +141,27 @@ otherwise my code is unreadable.";</code></pre>
 <dl>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length">字符串长度</a>，使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators"> + 和 += </a>运算符来构建和连接字符串，使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a> 方法检查某一子字符串在父字符串中的位置，又或是使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring</a> 方法提取从父字符串中提取子字符串。</p>
 
-<h3 id="Character_access" name="Character_access">从字符串中获取单个字符</h3>
+<h3 id="Character_access">从字符串中获取单个字符</h3>
 
 <p>获取字符串的某个字符有两种方法。 第一种是使用 {{jsxref("String.charAt", "charAt")}} 方法：</p>
 
 <pre class="brush: js">return 'cat'.charAt(1); // returns "a"
 </pre>
 
-<p>另一种 (在ECMAScript 5中有所介绍) 是把字符串当作一个类似数组的对象，其中的每个字符对应一个数值索引：</p>
+<p>另一种 (在 ECMAScript 5 中有所介绍) 是把字符串当作一个类似数组的对象，其中的每个字符对应一个数值索引：</p>
 
 <pre class="brush: js">return 'cat'[1]; // returns "a"
 </pre>
 
 <p>使用括号访问字符串不可以对其进行删除或添加，因为字符串对应未知的属性并不是可读或配置的。 (更多的信息请参阅 {{jsxref("Object.defineProperty")}}。 )</p>
 
-<h3 id="Comparing_strings" name="Comparing_strings">字符串比较</h3>
+<h3 id="Comparing_strings">字符串比较</h3>
 
-<p>熟练使用 C 语言的开发者经常使用 <code>strcmp</code> 函数来比较字符串，但在 JavaScript 中，你只需要使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作符(&gt;/&lt;/&gt;=/&lt;=)</a>：</p>
+<p>熟练使用 C 语言的开发者经常使用 <code>strcmp</code> 函数来比较字符串，但在 JavaScript 中，你只需要使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作符 (&gt;/&lt;/&gt;=/&lt;=)</a>：</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -175,11 +175,11 @@ else
 
 <p>使用从字符串实例继承而来的 {{jsxref("String.localeCompare", "localeCompare")}} 方法也能达到同样的效果。 </p>
 
-<h3 id="基本字符串和字符串对象的区别">基本字符串和<font face="Consolas, Liberation Mono, Courier, monospace">字符串</font>对象的区别</h3>
+<h3 id="基本字符串和字符串对象的区别">基本字符串和字符串对象的区别</h3>
 
 <p>请注意区分 JavaScript 字符串对象和基本字符串值 . ( 对于 {{jsxref("Global_Objects/Boolean", "Boolean")}} 和{{jsxref("Global_Objects/Number", "Numbers")}} 也同样如此.)</p>
 
-<p>字符串字面量 (通过单引号或双引号定义) 和 直接调用 String 方法(没有通过 new 生成字符串对象实例)的字符串都是基本字符串。JavaScript会自动将基本字符串转换为字符串对象，只有将基本字符串转化为字符串对象之后才可以使用字符串对象的方法。当基本字符串需要调用一个字符串对象才有的方法或者查询值的时候(基本字符串是没有这些方法的)，JavaScript 会自动将基本字符串转化为字符串对象并且调用相应的方法或者执行查询。</p>
+<p>字符串字面量 (通过单引号或双引号定义) 和 直接调用 String 方法 (没有通过 new 生成字符串对象实例) 的字符串都是基本字符串。JavaScript 会自动将基本字符串转换为字符串对象，只有将基本字符串转化为字符串对象之后才可以使用字符串对象的方法。当基本字符串需要调用一个字符串对象才有的方法或者查询值的时候 (基本字符串是没有这些方法的)，JavaScript 会自动将基本字符串转化为字符串对象并且调用相应的方法或者执行查询。</p>
 
 <pre class="brush: js">var s_prim = "foo";
 var s_obj = new String(s_prim);
@@ -188,7 +188,7 @@ console.log(typeof s_prim); // Logs "string"
 console.log(typeof s_obj);  // Logs "object"
 </pre>
 
-<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和<font face="Consolas, Liberation Mono, Courier, monospace">字符串</font>对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而<font face="Consolas, Liberation Mono, Courier, monospace">字符串</font>对象则被看作对象处理, 返回对象。 例如：</p>
+<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理，返回对象。 例如：</p>
 
 <pre class="brush: js">s1 = "2 + 2";               // creates a string primitive
 s2 = new String("2 + 2");   // creates a String object
@@ -196,14 +196,16 @@ console.log(eval(s1));      // returns the number 4
 console.log(eval(s2));      // returns the string "2 + 2"
 </pre>
 
-<p>由于上述原因, 当一段代码在需要使用基本字符串的时候却使用了字符串对象就会导致执行失败(虽然一般情况下程序员们并不需要考虑这样的问题)。</p>
+<p>由于上述原因，当一段代码在需要使用基本字符串的时候却使用了字符串对象就会导致执行失败 (虽然一般情况下程序员们并不需要考虑这样的问题)。</p>
 
 <p>利用 {{jsxref("String.valueOf", "valueOf")}} 方法，我们可以将字符串对象转换为其对应的基本字符串。</p>
 
 <pre class="brush: js">console.log(eval(s2.valueOf())); // returns the number 4
 </pre>
 
-<div class="note"><strong>注意:</strong> 其他的将字符串对象转换成基本字符串的方法可以及参考 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView" title="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</div>
+<div class="note">
+<p><strong>备注：</strong> 其他的将字符串对象转换成基本字符串的方法可以及参考 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView" title="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</p>
+</div>
 
 <h2 id="属性">属性</h2>
 
@@ -212,14 +214,11 @@ console.log(eval(s2));      // returns the string "2 + 2"
  <dd>可以为 String 对象增加新的属性。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{jsxref("String.fromCharCode()")}}  </dt>
  <dd> <strong>通过一串 Unicode 创建字符串。</strong></dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
  <dd>通过一串 码点 创建字符串。</dd>
 </dl>
@@ -234,10 +233,10 @@ console.log(eval(s2));      // returns the string "2 + 2"
 <h2 id="字符串泛型方法">字符串泛型方法</h2>
 
 <div class="warning">
-<p>字符串泛型是<strong>非标准的</strong>，<strong>已弃用</strong>，<strong>并且会在不远的</strong><strong>将来删除</strong>。注意，你不能依靠他们的跨浏览器，而不使用下面提供的垫片。</p>
+<p><strong>警告：</strong>字符串泛型是<strong>非标准的</strong>，<strong>已弃用</strong>，<strong>并且会在不远的</strong><strong>将来删除</strong>。注意，你不能依靠他们的跨浏览器，而不使用下面提供的垫片。</p>
 </div>
 
-<p>应该避免在 Javascript 1.6 （Firefox 浏览器的 JS 引擎）中使用（虽然也支持）将其他对象转化为字符的方法，因为方法并没有成为 ECMA 标准：</p>
+<p>应该避免在 Javascript 1.6（Firefox 浏览器的 JS 引擎）中使用（虽然也支持）将其他对象转化为字符的方法，因为方法并没有成为 ECMA 标准：</p>
 
 <pre class="brush: js">let num = 15;
 console.log(String.replace(num, /5/, '2'));
@@ -245,15 +244,15 @@ console.log(String.replace(num, /5/, '2'));
 
 <p class="brush: js">移除字符串泛型的措施，参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_string_generics">Warning: String.x is deprecated; use String.prototype.x instead</a>.</p>
 
-<p class="brush: js"><span style="background-color: #ffffff; color: #4d4e53; font-family: open sans,arial,sans-serif; font-size: 14px; line-height: 21px;">{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}} 在 Javascript 1.6 中同样支持{{jsxref("Global_Objects/Array", "Array")}}。</span></p>
+<p class="brush: js">{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}} 在 Javascript 1.6 中同样支持{{jsxref("Global_Objects/Array", "Array")}}。</p>
 
-<h2 id="String_instances" name="String_instances"><code>String</code> 实例</h2>
+<h2 id="String_instances"><code>String</code> 实例</h2>
 
 <h3 id="属性_2">属性</h3>
 
 <p>{{page('zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}</p>
 
-<p><span style="line-height: 1.5;">{{page('zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}</span></p>
+<p>{{page('zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}</p>
 
 <h2 id="示例">示例 </h2>
 
@@ -296,57 +295,7 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>0.2</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"></h2>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

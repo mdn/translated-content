@@ -5,39 +5,37 @@ translation_of: Web/SVG/Tutorial/Introduction
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/348/=SVG_Overview.png" style="float: right;"><a href="/en/SVG" title="en/SVG">SVG</a>是一种<a href="/en/XML" title="en/XML">XML</a>语言，类似XHTML，可以用来绘制矢量图形，例如右面展示的图形。SVG可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。</p>
+<p><img alt="" class="internal" src="/@api/deki/files/348/=SVG_Overview.png" style="float: right;"><a href="/en/SVG" title="en/SVG">SVG</a>是一种<a href="/en/XML" title="en/XML">XML</a>语言，类似 XHTML，可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。</p>
 
-<p>SVG诞生于1999年，之前有几个相互竞争的格式规范被提交到<a class="external" href="http://www.w3.org" title="en/W3C">W3C</a>，但是都没有获得批准。主流浏览器均支持SVG。加载慢是SVG的一个缺点。但是SVG也有自身的优点，比如它实现了DOM接口（比Canvas方便），不需要安装第三方扩展(extensions，原文有误，应该是插件plugins，类似flash)。当然，是否使用SVG还要取决于你要实现什么。</p>
+<p>SVG 诞生于 1999 年，之前有几个相互竞争的格式规范被提交到<a class="external" href="http://www.w3.org" title="en/W3C">W3C</a>，但是都没有获得批准。主流浏览器均支持 SVG。加载慢是 SVG 的一个缺点。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方扩展 (extensions，原文有误，应该是插件 plugins，类似 flash)。当然，是否使用 SVG 还要取决于你要实现什么。</p>
 
 <h3 id="基本要素">基本要素</h3>
 
-<p>HTML提供了定义标题、段落、表格等等内容的元素。与此类似，SVG也提供了一些元素，用于定义圆形、矩形、简单或复杂的曲线。一个简单的SVG文档由<code>{{ SVGElement('svg') }}</code>根元素和基本的形状元素构成。另外还有一个<code>g</code>元素，它用来把若干个基本形状编成一个组。</p>
+<p>HTML 提供了定义标题、段落、表格等等内容的元素。与此类似，SVG 也提供了一些元素，用于定义圆形、矩形、简单或复杂的曲线。一个简单的 SVG 文档由<code>{{ SVGElement('svg') }}</code>根元素和基本的形状元素构成。另外还有一个<code>g</code>元素，它用来把若干个基本形状编成一个组。</p>
 
-<p>从这些开始，SVG可以变得更加复杂。SVG支持渐变、旋转、动画、滤镜效果、与JavaScript交互等等功能，但是所有这些额外的语言特性，都需要在一个定义好的图形区域内实现。</p>
+<p>从这些开始，SVG 可以变得更加复杂。SVG 支持渐变、旋转、动画、滤镜效果、与 JavaScript 交互等等功能，但是所有这些额外的语言特性，都需要在一个定义好的图形区域内实现。</p>
 
 <h3 id="Before_you_start" name="Before_you_start">开始之前</h3>
 
-<p>包括<a class="external" href="http://www.inkscape.org/">Inkscape</a>在内的很多免费应用原生支持SVG格式的文件。但是本教程建议在学习过程中使用XML或文本编辑器，因为想要理解SVG内部的原理，最好的方法就是动手写一些SVG的标记。你需要注意到你的最终目标。各种SVG浏览器是有差异的，因此很可能你制作了一个SVG图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持SVG标准的程度不同，另外，如果你将其他技术和SVG一起使用（比如<a href="/en/JavaScript">JavaScript</a>和<a href="/en/CSS" title="en/CSS">CSS</a>），也会出现类似的情况。</p>
+<p>包括<a class="external" href="http://www.inkscape.org/">Inkscape</a>在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手写一些 SVG 的标记。你需要注意到你的最终目标。各种 SVG 浏览器是有差异的，因此很可能你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如<a href="/en/JavaScript">JavaScript</a>和<a href="/en/CSS" title="en/CSS">CSS</a>），也会出现类似的情况。</p>
 
-<p>所有的现代浏览器都支持SVG，在某些情况下甚至几个版本都支持SVG。<a class="external" href="https://caniuse.com/#feat=svg">Can I use</a>上有一份比较详细的支持SVG的浏览器列表，Firefox 1.5以后的版本支持SVG的部分内容，并且支持的程度越来越高。希望通过这份教程，MDC能帮助开发者理解Gecko内核和其他一些主要编译器之间的差异。</p>
+<p>所有的现代浏览器都支持 SVG，在某些情况下甚至几个版本都支持 SVG。<a class="external" href="https://caniuse.com/#feat=svg">Can I use</a>上有一份比较详细的支持 SVG 的浏览器列表，Firefox 1.5 以后的版本支持 SVG 的部分内容，并且支持的程度越来越高。希望通过这份教程，MDN 能帮助开发者理解 Gecko 内核和其他一些主要编译器之间的差异。</p>
 
-<p>正式开始之前，你需要基本掌握XML和其它标记语言比如说<abbr title="HyperText Markup Language">HTML</abbr>，如果你不是很熟悉XML，这里有几个重点一定要记住：</p>
+<p>正式开始之前，你需要基本掌握 XML 和其它标记语言比如说<abbr title="HyperText Markup Language">HTML</abbr>，如果你不是很熟悉 XML，这里有几个重点一定要记住：</p>
 
 <ul>
- <li>SVG的元素和属性必须按标准格式书写，因为XML是区分大小写的（这一点和HTML不同）</li>
- <li>SVG里的属性值必须用引号引起来，就算是数值也必须这样做。</li>
+ <li>SVG 的元素和属性必须按标准格式书写，因为 XML 是区分大小写的（这一点和 HTML 不同）</li>
+ <li>SVG 里的属性值必须用引号引起来，就算是数值也必须这样做。</li>
 </ul>
 
-<p>SVG是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用<a href="/en/SVG/Element" title="en/SVG/Element">元素参考</a>和<a href="/zh-CN/docs/Web/API/Document_Object_Model#SVG_%E6%8E%A5%E5%8F%A3" title="en/SVG/Interface">接口参考</a>，学习其他你需要知道的内容。</p>
+<p>SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用<a href="/en/SVG/Element" title="en/SVG/Element">元素参考</a>和<a href="/zh-CN/docs/Web/API/Document_Object_Model#SVG_%E6%8E%A5%E5%8F%A3" title="en/SVG/Interface">接口参考</a>，学习其他你需要知道的内容。</p>
 
-<h3 id="SVG的种类">SVG的种类</h3>
+<h3 id="SVG的种类">SVG 的种类</h3>
 
-<p>自从2003年成为W3C推荐标准以来，最接近的“完整版”SVG版本是1.1版，它基于1.0版，并且增加了更多便于实现的模块化内容，SVG1.1的第二个版本在2011年成为推荐标准，完整的SVG1.2本来是下一个标准版本，但它又被SVG2.0取代。SVG2.0正在制定当中，它采用了类似CSS3的制定方法，通过若干松散耦合的组件形成一套标准。</p>
+<p>自从 2003 年成为 W3C 推荐标准以来，最接近的“完整版”SVG 版本是 1.1 版，它基于 1.0 版，并且增加了更多便于实现的模块化内容，SVG1.1 的第二个版本在 2011 年成为推荐标准，完整的 SVG1.2 本来是下一个标准版本，但它又被 SVG2.0 取代。SVG2.0 正在制定当中，它采用了类似 CSS3 的制定方法，通过若干松散耦合的组件形成一套标准。</p>
 
-<p>除了完整的SVG推荐标准，W3C工作组还在2003年推出了SVG Tiny和SVG Basic。这两个配置文件主要瞄准移动设备。首先SVG Tiny主要是为性能低的小设备生成图元，而SVG Basic实现了完整版SVG里的很多功能，只是舍弃了难以实现的大型渲染（比如动画）。2008年，SVG Tiny1.2成为W3C推荐标准。</p>
+<p>除了完整的 SVG 推荐标准，W3C 工作组还在 2003 年推出了 SVG Tiny 和 SVG Basic。这两个配置文件主要瞄准移动设备。首先 SVG Tiny 主要是为性能低的小设备生成图元，而 SVG Basic 实现了完整版 SVG 里的很多功能，只是舍弃了难以实现的大型渲染（比如动画）。2008 年，SVG Tiny1.2 成为 W3C 推荐标准。</p>
 
-<p>另外还有一些关于SVG打印规格的项目，增加对多页面和颜色管理的支持，但是这项工作已经终止。</p>
+<p>另外还有一些关于 SVG 打印规格的项目，增加对多页面和颜色管理的支持，但是这项工作已经终止。</p>
 
 <p>{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}</p>
-
-<p>{{ languages( { "de": "de/SVG/Tutorial/Einführung", "fr": "fr/SVG/Tutoriel/Introduction", "ja": "ja/SVG/Tutorial/Introduction", "zh-CN": "zh-CN/SVG/Tutorial/Introduction" } ) }}</p>

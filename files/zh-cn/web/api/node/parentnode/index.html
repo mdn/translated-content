@@ -5,68 +5,24 @@ translation_of: Web/API/Node/parentNode
 ---
 <p>{{ ApiRef() }}</p>
 <h2 id="Summary" name="Summary">概述</h2>
-<p>返回指定的节点在DOM树中的父节点.</p>
+<p>返回指定的节点在 DOM 树中的父节点。</p>
 <h2 id="Syntax" name="Syntax">语法</h2>
 <pre class="eval"><em>parentNode</em> = <em>node</em>.parentNode
 </pre>
-<p><code>parentNode是指定节点的父节点.一个元素节点的父节点可能是一个元素(</code><code>Element</code> <code>)节点,也可能是一个文档(</code><code>Document</code> <code>)节点,或者是个</code>文档碎片(<code>DocumentFragment</code>)节点.</p>
+<p><code>parentNode 是指定节点的父节点。一个元素节点的父节点可能是一个元素 (</code><code>Element</code> <code>) 节点，也可能是一个文档 (</code><code>Document</code> <code>) 节点，或者是个</code>文档碎片 (<code>DocumentFragment</code>) 节点。</p>
 <h2 id="Example" name="Example">例子</h2>
 <pre class="eval">if (node.parentNode) {
-  // 从DOM树中删除node节点,除非它已经被删除了.
+  // 从 DOM 树中删除 node 节点，除非它已经被删除了。
   node.parentNode.removeChild(node);
 }
 </pre>
 <h2 id="Notes" name="Notes">备注</h2>
 <p>对于下面的<a href="/zh-cn/DOM/Node.nodeType" title="zh-cn/DOM/Node.nodeType">节点类型</a>: <code>Attr</code>, <code>Document</code>, <code>DocumentFragment</code>, <code>Entity</code>, <code>Notation</code>,其<code>parentNode</code>属性返回<code>null</code>.</p>
-<p>如果当前节点刚刚被建立,还没有被插入到DOM树中,则该节点的<code>parentNode属性也返回</code><code>null.</code></p>
+<p>如果当前节点刚刚被建立，还没有被插入到 DOM 树中，则该节点的<code>parentNode 属性也返回</code><code>null.</code></p>
 <h2 id="See_also" name="See_also">相关链接</h2>
 <p>{{ Domxref("element.firstChild") }}, {{ Domxref("element.lastChild") }}, {{ Domxref("element.childNodes") }}, {{ Domxref("element.nextSibling") }}, {{ Domxref("element.previousSibling") }}.</p>
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Firefox (Gecko)</th>
-    <th>Chrome</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatGeckoDesktop("1") }}</td>
-    <td>0.2</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatGeckoMobile("1") }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
+{{Compat("api.Node.parentNode")}}
+
 <h2 id="Specification" name="Specification">规范</h2>
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317">DOM Level 2 Core: Node.parentNode</a></p>
-<p>{{ languages( { "it": "it/DOM/element.parentNode", "ja": "ja/DOM/element.parentNode", "fr": "fr/DOM/element.parentNode", "pl": "pl/DOM/element.parentNode" , "en": "en/DOM/Node.parentNode" } ) }}</p>

@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>var newArray = arr</var>.flat([<var>depth]</var>)</pre>
+<pre class="syntaxbox"><var>var newArray = arr</var>.flat([<var>depth]</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 <h3 id="扁平化嵌套数组">扁平化嵌套数组</h3>
 
-<pre class="notranslate">var arr1 = [1, 2, [3, 4]];
+<pre>var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -55,9 +55,9 @@ arr4.flat(Infinity);
 
 <h3 id="扁平化与数组空项">扁平化与数组空项</h3>
 
-<p><code>flat()</code> 方法会移除数组中的空项:</p>
+<p><code>flat()</code> 方法会移除数组中的空项：</p>
 
-<pre class="brush: js notranslate">var arr4 = [1, 2, , 4, 5];
+<pre class="brush: js">var arr4 = [1, 2, , 4, 5];
 arr4.flat();
 // [1, 2, 4, 5]</pre>
 
@@ -65,7 +65,7 @@ arr4.flat();
 
 <h3 id="使用_reduce_与_concat">使用 <code>reduce</code> 与 <code>concat</code></h3>
 
-<pre class="notranslate"><code>var arr = [1, 2, [3, 4]];
+<pre><code>var arr = [1, 2, [3, 4]];
 
 // 展开一层数组
 arr.flat();
@@ -76,22 +76,20 @@ arr.reduce((acc, val) =&gt; acc.concat(val), []);
 // 使用扩展运算符 ...
 const flattened = arr =&gt; [].concat(...arr);</code></pre>
 
-<h3 class="brush: js" id="reduce_concat_isArray_recursivity">reduce + concat + isArray + recursivity</h3>
+<h3 id="reduce_concat_isArray_recursivity">reduce + concat + isArray + recursivity</h3>
 
-<pre class="brush: js notranslate"><code>// 使用 reduce、concat 和递归展开无限多层嵌套的数组
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
-</code>
-<code class="language-js"><span class="keyword token">function</span> <span class="function token">flatDeep</span><span class="punctuation token">(</span><span class="parameter token">arr<span class="punctuation token">,</span> d <span class="operator token">=</span> <span class="number token">1</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">return</span> d <span class="operator token">&gt;</span> <span class="number token">0</span> <span class="operator token">?</span> arr<span class="punctuation token">.</span><span class="function token">reduce</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="parameter token">acc<span class="punctuation token">,</span> val</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> acc<span class="punctuation token">.</span><span class="function token">concat</span><span class="punctuation token">(</span>Array<span class="punctuation token">.</span><span class="function token">isArray</span><span class="punctuation token">(</span>val<span class="punctuation token">)</span> <span class="operator token">?</span> <span class="function token">flatDeep</span><span class="punctuation token">(</span>val<span class="punctuation token">,</span> d <span class="operator token">-</span> <span class="number token">1</span><span class="punctuation token">)</span> <span class="punctuation token">:</span> val<span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
-                <span class="punctuation token">:</span> arr<span class="punctuation token">.</span><span class="function token">slice</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code>
-<code>
+<pre class="brush: js">// 使用 reduce、concat 和递归展开无限多层嵌套的数组
+  var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+function flatDeep(arr, d = 1) {
+   return d &gt; 0 ? arr.reduce((acc, val) =&gt; acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+                : arr.slice();
+};
 flatDeep(arr1, Infinity);
-// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</code></pre>
+// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
 
 <h3 id="forEachisArraypushrecursivity">forEach+isArray+push+recursivity</h3>
 
-<pre class="brush: js notranslate">// forEach 遍历数组会自动跳过空元素
+<pre class="brush: js">// forEach 遍历数组会自动跳过空元素
 const eachFlat = (arr = [], depth = 1) =&gt; {
   const result = []; // 缓存递归结果
   // 开始递归
@@ -120,7 +118,7 @@ const forFlat = (arr = [], depth = 1) =&gt; {
       if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
         flat(item, depth - 1)
       } else {
-        // 去除空元素，添加非undefined元素
+        // 去除空元素，添加非 undefined 元素
         item !== void 0 &amp;&amp; result.push(item);
       }
     }
@@ -129,9 +127,9 @@ const forFlat = (arr = [], depth = 1) =&gt; {
 }
 </pre>
 
-<h3 id="使用堆栈stack">使用堆栈stack</h3>
+<h3 id="使用堆栈_stack">使用堆栈 stack</h3>
 
-<pre class="notranslate">// 无递归数组扁平化，使用堆栈
+<pre>// 无递归数组扁平化，使用堆栈
 // 注意：深度的控制比较低效，因为需要检查每一个值的深度
 // 也可能在 shift / unshift 上进行 w/o 反转，但是末端的数组 OPs 更快
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
@@ -153,7 +151,7 @@ function flatten(input) {
 }
 flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
 
-<pre class="notranslate">// 递归版本的反嵌套
+<pre>// 递归版本的反嵌套
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
@@ -167,7 +165,7 @@ function flatten(array) {
 
 <h3 id="Use_Generator_function">Use <code>Generator</code> function</h3>
 
-<pre class="notranslate"><code>function* flatten(array) {
+<pre><code>function* flatten(array) {
     for (const item of array) {
         if (Array.isArray(item)) {
             yield* flatten(item);

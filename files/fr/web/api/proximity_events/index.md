@@ -16,14 +16,14 @@ Les événements de proximité permettent, simplement, de savoir lorsqu'un utili
 
 ## Événements de proximité
 
-Lorsque le capteur de l'appareil détecte un changement entre l'appareil et l'objet, il informe le navigateur de ce changement en lui envoyant une notification. Lorsque le navigateur reçoit une notification comme celle-ci, il déclenche un événement {{domxref("DeviceProximityEvent")}} à chaque fois qu'il y a un changement et un événement  {{domxref("UserProximityEvent")}} dans le cas où un changement plus brutal se produit.
+Lorsque le capteur de l'appareil détecte un changement entre l'appareil et l'objet, il informe le navigateur de ce changement en lui envoyant une notification. Lorsque le navigateur reçoit une notification comme celle-ci, il déclenche un événement {{domxref("DeviceProximityEvent")}} à chaque fois qu'il y a un changement et un événement  {{domxref("UserProximityEvent")}} dans le cas où un changement plus brutal se produit.
 
 Cet événement peut être capturé en utilisant un objet au niveau `window` en utilisant la méthode {{domxref("EventTarget.addEventListener","addEventListener")}} (en utilisant les noms d'événements {{event("deviceproximity")}} ou {{event("userproximity")}}) ou en attachant un gestionnaire d'événement à la propriété {{domxref("window.ondeviceproximity")}} ou à la propriété {{domxref("window.onuserproximity")}}.
 
 Une fois qu'il a été capturé, l'événement donne accès à différentes informations :
 
 - L'événement {{domxref("DeviceProximityEvent")}} permet de connaître la distance exacte entre l'appareil et l'objet avec sa propriété {{domxref("DeviceProximityEvent.value","value")}}. Il fournit également la distance la plus courte et la distance la plus grande que l'appareil peut détecter avec les propriétés {{domxref("DeviceProximityEvent.min","min")}} et {{domxref("DeviceProximityEvent.max","max")}}.
-- L'événement {{domxref("UserProximityEvent")}} fournit une valeur approximative pour la distance en utilisant un booléen. La propriété  {{domxref("UserProximityEvent.near")}} vaut `true` si l'objet est proche ou `false` si l'objet est loin.
+- L'événement {{domxref("UserProximityEvent")}} fournit une valeur approximative pour la distance en utilisant un booléen. La propriété  {{domxref("UserProximityEvent.near")}} vaut `true` si l'objet est proche ou `false` si l'objet est loin.
 
 ## Exemple
 

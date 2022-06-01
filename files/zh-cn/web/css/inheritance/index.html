@@ -38,18 +38,6 @@ translation_of: Web/CSS/inheritance
 
 <p>…文本 "emphasized text" 就没有边框，因为 {{ Cssxref("border-style") }} 属性的初始值为<code>none</code>。</p>
 
-<p> {{ Cssxref("inherit") }} 关键字允许显式的声明继承性，它对继承和非继承属性都生效。</p>
-
-<p>可以使用 {{cssxref("all")}} 简写属性一次控制所有属性的继承，该属性将其值应用于所有属性，例如:</p>
-
-<pre class="brush: css">font {
-  all: revert;
-  font-size: 200%;
-  font-weight: bold;
-}</pre>
-
-<p>这会将 {{cssxref("font")}} 属性的样式恢复为用户代理（浏览器）的默认值，除非存在用户样式表，在这种情况下使用该样式表。然后它将字体大小加倍并应用 {{cssxref("font-weight")}} 属性 为<code>"bold"</code></p>
-
 <h2 id="注意">注意</h2>
 
 <p>{{ Cssxref("inherit") }} 关键字允许显式的声明继承性，它对继承和非继承属性都生效。</p>

@@ -10,8 +10,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 original_slug: Web/API/WebGL_API/By_example/Tailles_de_canvas_et_WebGL
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
 
 {{EmbedLiveSample("Les_effets_liés_à_la_taille_du_canevas_sur_le_rendu_avec_WebGL",660,180)}}

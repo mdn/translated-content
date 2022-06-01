@@ -10,7 +10,7 @@ translation_of: Web/CSS/scroll-snap-points-x
 
 <h2 id="摘要">摘要</h2>
 
-<p><strong><code>scroll-snap-points-x</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性定义滚动容器中内容的snap点的水平位置。</p>
+<p><strong><code>scroll-snap-points-x</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性定义滚动容器中内容的 snap 点的水平位置。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/CSS/scroll-snap-points-x
 <pre class="brush: css">/* 关键值 */
 scroll-snap-points-x: none;
 
-/* 重复的snap点 */
+/* 重复的 snap 点 */
 scroll-snap-points-x: repeat(400px);
 
 /* 全局值 */
@@ -32,9 +32,9 @@ scroll-snap-points-x: unset;
 
 <dl>
  <dt><code>none</code></dt>
- <dd>滚动容器没有定义任何snap点。Elements within the scroll container may still define snap points of behalf of the scroll container.（i don't understand this statement）</dd>
+ <dd>滚动容器没有定义任何 snap 点。Elements within the scroll container may still define snap points of behalf of the scroll container.（i don't understand this statement）</dd>
  <dt><code>repeat(&lt;长度&gt;)</code></dt>
- <dd>定义snap点的一个间隔，从容器相关的边缘开始。仅允许正数长度。</dd>
+ <dd>定义 snap 点的一个间隔，从容器相关的边缘开始。仅允许正数长度。</dd>
 </dl>
 
 <h3 id="正式语法">正式语法</h3>
@@ -43,7 +43,7 @@ scroll-snap-points-x: unset;
 
 <h2 id="Example" name="Example">示例</h2>
 
-<h3 id="HTML内容">HTML内容</h3>
+<h3 id="HTML内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;1&lt;/div&gt;
@@ -51,7 +51,7 @@ scroll-snap-points-x: unset;
   &lt;div&gt;3&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<h3 id="CSS内容">CSS内容</h3>
+<h3 id="CSS内容">CSS 内容</h3>
 
 <pre class="brush: css">#container {
   width: 200px;
@@ -87,54 +87,4 @@ scroll-snap-points-x: unset;
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>支持度</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>支持度</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("39.0")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoMobile("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Firefox移动版上，从内核Gecko 39开始可用，但是低于 <code>layout.css.vertical-text.enabled</code>优先级，默认不可用。</p>
+{{Compat("css.properties.scroll-snap-points-x")}}

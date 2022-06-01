@@ -43,7 +43,7 @@ translation_of: Web/Guide/Parsing_and_serializing_XML
 <p>В этом примере фрагмент XML в строке преобразуется в дерево DOM с помощью {{domxref ("DOMParser")}}:</p>
 
 <div style="overflow: hidden;">
-<pre class="brush: js notranslate">var sMyString = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
+<pre class="brush: js">var sMyString = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
 var oParser = new DOMParser();
 var oDOM = oParser.parseFromString(sMyString, "application/xml");
 // print the name of the root element or error message
@@ -57,7 +57,7 @@ console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsin
 
 <p>Вот пример кода, который считывает и анализирует XML-файл с URL-адресом в дереве DOM:</p>
 
-<pre class="brush: js notranslate">var xhr = new XMLHttpRequest();
+<pre class="brush: js">var xhr = new XMLHttpRequest();
 xhr.onload = function() {
   dump(xhr.responseXML.documentElement.nodeName);
 }
@@ -89,21 +89,21 @@ xhr.send();
 
 <p>Чтобы сериализовать документ дерева DOM в текст XML, вызовите {{domxref ("XMLSerializer.serializeToString ()")}}:</p>
 
-<pre class="brush: js notranslate">var oSerializer = new XMLSerializer();
+<pre class="brush: js">var oSerializer = new XMLSerializer();
 var sXML = oSerializer.serializeToString(doc);</pre>
 
 <h3 id="Serializing_HTML_documents">Serializing HTML documents</h3>
 
 <p>Если у вас есть модель DOM в виде HTML-документа, вы можете сериализовать её с помощью serializeToString (), но есть более простой вариант: просто используйте свойство {{domxref ("Element.innerHTML")}} (если вам нужны только потомки указанный узел) или свойство {{domxref ("Element.outerHTML")}}, если вам нужен узел и все его потомки.</p>
 
-<pre class="brush: js notranslate">var docHTML = document.documentElement.innerHTML;
+<pre class="brush: js">var docHTML = document.documentElement.innerHTML;
 </pre>
 
 <p>В результате docHTML представляет собой {{domxref ("DOMString")}}, содержащий HTML-код содержимого документа; то есть содержимое элемента {{HTMLElement ("body")}}.</p>
 
 <p>Вы можете получить HTML, соответствующий &lt;body&gt; и его потомкам, с помощью этого кода:</p>
 
-<pre class="brush: js notranslate">var docHTML = document.documentElement.outerHTML;</pre>
+<pre class="brush: js">var docHTML = document.documentElement.outerHTML;</pre>
 
 <h2 id="See_also">See also</h2>
 

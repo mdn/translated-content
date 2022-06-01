@@ -23,7 +23,9 @@ La fonction **`Math.cosh()`** renvoie le cosinus hyperbolique d'un nombre, défi
 
 ## Syntaxe
 
-    Math.cosh(x)
+```js
+Math.cosh(x)
+```
 
 ### Paramètres
 
@@ -72,7 +74,7 @@ Math.cosh = Math.cosh || function(x) {
 | Spécification                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-math.cosh', 'Math.cosh')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

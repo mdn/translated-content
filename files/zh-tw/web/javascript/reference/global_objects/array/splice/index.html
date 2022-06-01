@@ -26,9 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
  <dt><code>start</code></dt>
  <dd>陣列中要開始改動的元素索引（起始為 0）。若索引大於陣列長度，則實際開始的索引值會被設為陣列長度。若索引為負，則會從陣列中最後一個元素開始往前改動（起始為 -1）且若其絕對值大於陣列的長度，則會被設為 0。</dd>
  <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>一個表示欲刪除的原陣列元素數量的整數。</dd>
- <dd>若省略了 <code>deleteCount</code>，或假如其值大於 <code>array.length - start</code>（也就是 <code>deleteCount</code> 大於 <code>start</code> 算起的剩餘元素數量），則所有從 <code>start</code> 開始到陣列中最後一個元素都會被刪除。</dd>
- <dd>若 <code>deleteCount</code> 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。</dd>
+ <dd>一個表示欲刪除的原陣列元素數量的整數。若省略了 <code>deleteCount</code>，或假如其值大於 <code>array.length - start</code>（也就是 <code>deleteCount</code> 大於 <code>start</code> 算起的剩餘元素數量），則所有從 <code>start</code> 開始到陣列中最後一個元素都會被刪除。若 <code>deleteCount</code> 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。</dd>
  <dt><code>item1, item2, <em>...</em></code> {{optional_inline}}</dt>
  <dd>從 <code>start</code> 開始，要加入到陣列的元素。 如果你沒有指定任何元素，則 <code>splice()</code> 只會依照 <code>start</code> 和 <code>deleteCount</code> 刪除陣列的元素。</dd>
 </dl>

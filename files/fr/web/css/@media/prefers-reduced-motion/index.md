@@ -1,13 +1,6 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - Accessibility
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
 {{CSSRef}}
@@ -28,7 +21,7 @@ La [requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#media_f
 Dans Firefox, la valeur `reduce` est utilisée par le moteur selon des conditions provenant du système d'exploitation/environnement de bureau :
 
 - Pour GTK/Gnome, si `gtk-enable-animation` vaut `false`. Cela peut être configuré par le menu « Ajustements » de Gnome.
-- Pour Windows 10 : Paramètres > Options d'ergonomie > Vision > Afficher > Afficher les animations dans windows
+- Pour Windows 10 : Paramètres > Options d'ergonomie > Vision > Afficher > Afficher les animations dans windows
 - Pour macOS : Préférences système > Accessibilité > Affichage > Réduire les animations.
 - Dans iOS : Paramètres > ; Général > ; Accessibilité > ; Réduire les animations.
 - Dans Android 9+ : Paramètres > ; Accessibilité > ; Supprimer les animations.
@@ -104,7 +97,7 @@ Cet exemple possède une animation désagréable qui sera exécutée à moins d'
 
 ### Résultat
 
-{{EmbedLiveSample("example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Spécifications
 

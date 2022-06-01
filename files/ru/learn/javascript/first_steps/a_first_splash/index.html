@@ -49,7 +49,7 @@ original_slug: Learn/JavaScript/Первые_шаги/A_first_splash
 <div class="hidden">
 <h6 id="Top_hidden_code">Top hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -207,7 +207,7 @@ original_slug: Learn/JavaScript/Первые_шаги/A_first_splash
 
 <p>Место, где мы будем добавлять весь наш код, находится внутри элемента {{htmlelement("script")}} в нижней части HTML:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
 
   // Your JavaScript goes here
 
@@ -218,7 +218,7 @@ original_slug: Learn/JavaScript/Первые_шаги/A_first_splash
 
 <p>Давайте начнём. Прежде всего добавьте следующие строки внутри элемента  {{htmlelement("script")}} :</p>
 
-<pre class="notranslate"><code>var randomNumber = Math.floor(Math.random() * 100) + 1;
+<pre><code>var randomNumber = Math.floor(Math.random() * 100) + 1;
 
 var guesses = document.querySelector('.guesses');
 var lastResult = document.querySelector('.lastResult');
@@ -237,12 +237,12 @@ var resetButton;</code></pre>
 <ul>
  <li>Первой переменной - randomNumber - присваивается случайное число от 1 до 100, вычисленное с использованием математического алгоритма.</li>
  <li>Следующие три переменные сделаны для хранения ссылок на абзацы результатов в нашем HTML и используются для вставки значений в абзацы, приведённые далее в коде:
-  <pre class="brush: html notranslate">&lt;p class="guesses"&gt;&lt;/p&gt;
+  <pre class="brush: html">&lt;p class="guesses"&gt;&lt;/p&gt;
 &lt;p class="lastResult"&gt;&lt;/p&gt;
 &lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
  <li>Следующие две переменных хранят ссылки на форму ввода текста и кнопку отправки а позже используются для управления подачи догадки .
-  <pre class="brush: html notranslate">&lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
+  <pre class="brush: html">&lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
 &lt;input type="submit" value="Submit guess" class="guessSubmit"&gt;</pre>
  </li>
  <li>Наши последние две переменные сохраняют количество догадок 1 (используется для отслеживания того, сколько догадок у игрока было), и ссылку на кнопку сброса, которая ещё не существует (но позже).</li>
@@ -256,7 +256,7 @@ var resetButton;</code></pre>
 
 <p>Затем добавьте следующие ниже предыдущего JavaScript:</p>
 
-<pre class="brush: js notranslate">function checkGuess() {
+<pre class="brush: js">function checkGuess() {
   alert('I am a placeholder');
 }</pre>
 
@@ -268,7 +268,7 @@ var resetButton;</code></pre>
 
 <p>Перейдите к <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">консоли JavaScript в инструментах разработчика</a>, и введите следующую строку:</p>
 
-<pre class="brush: js notranslate">checkGuess();</pre>
+<pre class="brush: js">checkGuess();</pre>
 
 <p>Вы должны увидеть предупреждение, в котором говорится "I am a placeholder"; в нашем коде мы определили функцию, которая создаёт предупреждение, когда её вызывают.</p>
 
@@ -285,7 +285,7 @@ var resetButton;</code></pre>
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -428,7 +428,7 @@ var resetButton;</code></pre>
 
 <p>Вы также можете использовать оператор <code>+</code> для сложения строк текста (в программировании это называется конкатенацией). Попробуйте ввести следующие строки:</p>
 
-<pre class="brush: js notranslate">var name = 'Bingo';
+<pre class="brush: js">var name = 'Bingo';
 name;
 var hello = ' says hello!';
 hello;
@@ -437,13 +437,13 @@ greeting;</pre>
 
 <p>Также есть сокращённые операторы, называемые расширенными операторами присваивания. Например, если вы просто хотите добавить новую строку к существующей и вернуть результат, вы можете сделать так:</p>
 
-<pre class="brush: js notranslate">name += ' says hello!';</pre>
+<pre class="brush: js">name += ' says hello!';</pre>
 
 <p>Это эквивалентно этому:</p>
 
-<pre class="brush: js notranslate">name = name + ' says hello!';</pre>
+<pre class="brush: js">name = name + ' says hello!';</pre>
 
-<p>Когда мы запускаем проверку true/false (истина/ложь) (например, внутри условных выражений — смотри {{anch("Conditionals", "ниже")}}), мы используем операторы сравнения, например:</p>
+<p>Когда мы запускаем проверку true/false (истина/ложь) (например, внутри условных выражений — смотри <a href="#conditionals">ниже</a>), мы используем операторы сравнения, например:</p>
 
 <table class="standard-table">
  <thead>
@@ -481,7 +481,7 @@ greeting;</pre>
 
 <p>Теперь, заменим вашу текущую функцию<code>checkGuess()</code> на эту версию:</p>
 
-<pre class="brush: js notranslate">function checkGuess() {
+<pre class="brush: js">function checkGuess() {
   var userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Previous guesses: ';
@@ -516,7 +516,7 @@ greeting;</pre>
 <ul>
  <li>Первая строка (строка под номером 2 в коде выше) объявляет переменную с именем <code>userGuess</code> и устанавливает её значение на то, что сейчас введено в текстовое поле. Мы также пропускаем это значение через встроенный метод <code>Number()</code>, чтобы убедится, что значение точно является числом.</li>
  <li>Затем мы сталкиваемся с нашим первым блоком условного кода (строки 3–5 в коде выше). Блок условного кода позволяет выборочно запускать код в зависимости от того, является определённое условие истинным или нет. Он немного похож на функцию, но это не так. Простейшая форма условного блока начинается с ключевого слова <code>if</code>, за ним круглые скобки, за ними ещё фигурные скобки. В круглые скобки мы добавляем проверку. Если проверка возвращает <code>true</code>, запускается код в фигурных скобках. Если нет, этот код пропускается и мы переходим к следующей части кода. В этом случае проверяется равна ли переменная <code>guessCount</code> числу <code>1</code> (то есть является ли это первой попыткой игрока или нет):
-  <pre class="brush: js notranslate">guessCount === 1</pre>
+  <pre class="brush: js">guessCount === 1</pre>
   Если это так, мы выводим параграф с содержанием "Previous guesses: ". Если нет, ничего не делаем.</li>
  <li>Строка 6 добавляет текущее значение <code>userGuess</code>  в конец параграфа <code>guesses</code>, плюс пустое пространство поэтому между каждыми показанными предположениями будет пробел.</li>
  <li>Следующий блок (строки 8–24 ) делает несколько проверок:
@@ -535,7 +535,7 @@ greeting;</pre>
 
 <p><span id="result_box" lang="ru"><span>Добавьте следующую строку ниже закрывающей фигурной скобки функции <code>checkGuess()</code>:</span></span></p>
 
-<pre class="brush: js notranslate">guessSubmit.addEventListener('click', checkGuess);</pre>
+<pre class="brush: js">guessSubmit.addEventListener('click', checkGuess);</pre>
 
 <p><span id="result_box" lang="ru"><span>Здесь мы добавляем обработчик событий к кнопке <code>guessSubmit</code>.</span> <span>Это метод, который принимает два входных значения (называемые аргументами) - тип события, которое мы обработаем (в данном случае <code>click</code>) в виде строки, и код, который мы хотим запустить при возникновении события (в данном случае</span> <span>функция <code>checkGuess()</code> - обратите внимание, что нам не нужно указывать круглые скобки при записи внутри</span></span> {{domxref("EventTarget.addEventListener", "addEventListener()")}}).</p>
 
@@ -545,7 +545,7 @@ greeting;</pre>
 
 <p><span id="result_box" lang="ru"><span>Давайте добавим функцию <code>setGameOver()</code> в конец нашего кода, а затем пройдём по ней.</span> <span>Добавьте это под нижней частью вашего JavaScript:</span></span></p>
 
-<pre class="brush: js notranslate">function setGameOver() {
+<pre class="brush: js">function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement('button');
@@ -562,7 +562,7 @@ greeting;</pre>
 
 <p><span id="result_box" lang="ru"><span>Теперь нам нужно также определить эту функцию!</span> <span>Добавьте следующий код, снова в нижнюю часть вашего JavaScript:</span></span></p>
 
-<pre class="brush: js notranslate">function resetGame() {
+<pre class="brush: js">function resetGame() {
   guessCount = 1;
 
   var resetParas = document.querySelectorAll('.resultParas p');
@@ -607,14 +607,14 @@ greeting;</pre>
 </div>
 </div>
 
-<pre class="brush: js notranslate">for (var i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
+<pre class="brush: js">for (var i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
 
 <p><span lang="ru">Что случилось? Номера с 1 по 20 были напечатаны в консоли. Это из-за цикла. Цикл for принимает три входных значения (аргументы):</span><br>
  <span lang="ru">Начальное значение: в этом случае мы начинаем подсчёт c 1, но это может быть любое число которое вам нравится. Вы можете заменить i любым другим именем, которое вам нравится, но я использую его как условность, потому что оно короткое и легко запоминается. Условие выхода: Здесь мы указали i &lt;21 - цикл будет продолжаться до тех пор, пока i будет меньше 21. Когда i достигнет 21, цикл больше не будет работать. Инкремент: мы указали i ++, что означает «увеличить i на 1». Цикл будет выполняться один раз для каждого значения i, пока оно не достигнет значения 21 (как обсуждалось выше). В этом случае мы просто печатаем значение i в консоли на каждой итерации с помощью {{domxref ("Console.log", "console.log ()")}}.</span></p>
 
 <p><span lang="ru">Теперь давайте посмотрим на цикл в нашей игре угадывания чисел - в функции resetGame () можно найти следующее:</span></p>
 
-<pre class="brush: js notranslate">var resetParas = document.querySelectorAll('.resultParas p');
+<pre class="brush: js">var resetParas = document.querySelectorAll('.resultParas p');
 for (var i = 0 ; i &lt; resetParas.length ; i++) {
   resetParas[i].textContent = '';
 }</pre>
@@ -625,7 +625,7 @@ for (var i = 0 ; i &lt; resetParas.length ; i++) {
 
 <p>Давайте добавим ещё одно окончательное улучшение, прежде чем перейти к обсуждению. Добавьте следующую строку чуть ниже <code>var resetButton;</code> в верхней части вашего JavaScript, затем сохраните файл:</p>
 
-<pre class="brush: js notranslate">guessField.focus();</pre>
+<pre class="brush: js">guessField.focus();</pre>
 
 <p>Эта строка использует метод {{domxref("HTMLElement.focus", "focus()")}}, чтобы автоматически помещать текстовый курсор в текстовое поле {{htmlelement("input")}}, как только загрузится страница. Пользователь сможет сразу набрать свою первую догадку, не нажимая поле формы. Это всего лишь небольшое дополнение, но оно улучшает удобство использования - даёт пользователю хорошую визуальную подсказку относительно того, что они должны делать в игре.</p>
 
@@ -633,13 +633,13 @@ for (var i = 0 ; i &lt; resetParas.length ; i++) {
 
 <p>В нашем примере мы сначала создали переменную <code>guessField</code>, которая запоминает значение из поля ввода в нашем HTML - следующая строка находится среди первых в нашем коде:</p>
 
-<pre class="brush: js notranslate">var guessField = document.querySelector('.guessField');</pre>
+<pre class="brush: js">var guessField = document.querySelector('.guessField');</pre>
 
 <p>Чтобы получить это значение, мы использовали метод {{domxref("document.querySelector", "querySelector()")}} объекта {{domxref("document")}}. <code>querySelector()</code> "берет" одну часть информации -  <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">CSS selector</a>, который выбирает нужный элемент<em>.</em></p>
 
 <p>Поскольку <code>guessField</code> теперь содержит ссылку на элемент {{htmlelement("input")}}, теперь он будет иметь доступ к ряду свойств (в основном к переменным, хранящимся внутри объектов, некоторые значения которых нельзя изменять) и методы (в основном функции, хранящиеся внутри объектов). Одним из методов, доступных для ввода элементов, является focus (), поэтому мы можем теперь использовать эту строку для фокусировки ввода текста:</p>
 
-<pre class="brush: js notranslate">guessField.focus();</pre>
+<pre class="brush: js">guessField.focus();</pre>
 
 <p>Для переменных, которые не содержат ссылок на элементы формы, не будет доступен <code>focus()</code>. Например, переменная <code>guesses</code> содержит ссылку на элемент {{htmlelement ("p")}}, а <code>guessCount</code> содержит число.</p>
 
@@ -652,17 +652,17 @@ for (var i = 0 ; i &lt; resetParas.length ; i++) {
  <li>Далее, откройте <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">инструменты разработчика в вашем браузере</a>, и убедитесь, что вы перешли во вкладку с консолью JavaScript.</li>
  <li>Введите <code>guessField</code> и консоль покажет, что переменная содержит элемент {{htmlelement("input")}}. Вы также можете заметить, что консоль автоматически заполняет имена объектов, которые существуют внутри исполняющей среды, включая ваши переменные!</li>
  <li>Теперь введите следующее:
-  <pre class="brush: js notranslate">guessField.value = 'Hello';</pre>
+  <pre class="brush: js">guessField.value = 'Hello';</pre>
   Свойство <code>value</code> представляет текущее значение, введённое в текстовое поле. Заметьте, что, введя эту команду, мы изменили его!</li>
  <li>Попробуйте ввести <code>guesses</code> и нажать return. Консоль покажет, что в переменной содержится элемент {{htmlelement("p")}}.</li>
  <li>Теперь попробуйте ввести:
-  <pre class="brush: js notranslate">guesses.value</pre>
+  <pre class="brush: js">guesses.value</pre>
   Браузер вернёт вам <code>undefined</code>, потому что <code>value</code> не существует в параграфах.</li>
  <li>Для изменения текста внутри параграфа, взамен используйте свойство {{domxref("Node.textContent", "textContent")}}. Попробуйте:
-  <pre class="brush: js notranslate">guesses.textContent = 'Where is my paragraph?';</pre>
+  <pre class="brush: js">guesses.textContent = 'Where is my paragraph?';</pre>
  </li>
  <li>Теперь немного повеселимся. Попробуйте ввести следующие строки, одну за другой:
-  <pre class="brush: js notranslate">guesses.style.backgroundColor = 'yellow';
+  <pre class="brush: js">guesses.style.backgroundColor = 'yellow';
 guesses.style.fontSize = '200%';
 guesses.style.padding = '10px';
 guesses.style.boxShadow = '3px 3px 6px black';</pre>

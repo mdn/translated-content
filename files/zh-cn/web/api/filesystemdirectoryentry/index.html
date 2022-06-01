@@ -8,7 +8,7 @@ translation_of: Web/API/FileSystemDirectoryEntry
 <p><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">文件和目录条目 API</a> 的 <strong><code>FileSystemDirectoryEntry</code></strong> 接口表示文件系统中的目录。它提供了方法，使其能够访问和操作目录中的文件，以及访问目录中的条目。</p>
 
 <div class="note">
-<p>由于这是个非标准的 API，它的规范当前并没有在标准进程中，重要的是要记住，并不是所有浏览器都实现了他，并且实现它的浏览器可能仅仅实现了一小部分。更多细节请查看 {{anch("Browser compatibility")}} 。</p>
+<p>由于这是个非标准的 API，它的规范当前并没有在标准进程中，重要的是要记住，并不是所有浏览器都实现了他，并且实现它的浏览器可能仅仅实现了一小部分。更多细节请查看 <a href="#browser_compatibility">Browser compatibility</a> 。</p>
 </div>
 
 <h2 id="basic_concepts" name="basic_concepts">基本概念</h2>
@@ -86,107 +86,7 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Microsoft Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(50) }}<sup>[2]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatNo}}<sup>[3]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>removeRecursively()</code></td>
-   <td>13 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatNo }}<sup>[1]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>getFile()</code> and <code>getDirectory()</code></td>
-   <td>13 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(50) }}<sup>[2]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>0.16 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(50) }}<sup>[2]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>removeRecursively()</code></td>
-   <td>{{ CompatNo }}</td>
-   <td>0.16 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatNo }}<sup>[1]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>getFile()</code> and <code>getDirectory()</code></td>
-   <td>{{ CompatNo }}</td>
-   <td>0.16 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(50) }}<sup>[2]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 虽然 {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}} 方法存在于 Firefox 50，它所做的所有事情就是使用 <code>NS_ERROR_DOM_SECURITY_ERR</code> 调用错误回调。它已经从 Firefox 52 中移除了，并且也从规范中移除。</p>
-
-<p>[2] 在 Firefox 中，错误回调的参数是 {{domxref("DOMException")}} ，而不是 {{domxref("FileError")}} 对象。</p>
-
-<p>[3] Microsoft Edge 在 <code>WebKitEntry</code> 接口中实现了这个接口的功能，它就是 {{domxref("FileSystemEntry")}}。</p>
+{{Compat("api.FileSystemDirectoryEntry")}}
 
 <h2 id="另见">另见</h2>
 

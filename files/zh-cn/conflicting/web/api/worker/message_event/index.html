@@ -1,0 +1,77 @@
+---
+title: Worker.onmessage
+slug: conflicting/Web/API/Worker/message_event
+translation_of: Web/API/Worker/onmessage
+original_slug: Web/API/Worker/onmessage
+---
+<p>{{APIRef("Web Workers API")}}</p>
+
+<p>{{domxref("Worker")}} 接口的<strong><code>onmessage</code></strong>属性表示一个{{event("Event_handlers", "event handler")}}事件处理函数，当{{event("message")}} 事件发生时，该函数被调用。这些事件所属{{domxref("MessageEvent")}}类型，且当Worker子线程返回一条消息时被调用（比如：从{{domxref("DedicatedWorkerGlobalScope.postMessage")}}函数发出的信息）</p>
+
+<div class="note">
+<p><strong>注意</strong>: 消息被装载到 {{event("message")}}事件对象的<code>data</code>属性。（译者：即传递的消息参数将被赋值给<code>onmessage</code>处理函数的事件参数<code>e</code>中的<code>data</code>属性）</p>
+</div>
+
+<h2 id="语法">语法</h2>
+
+<pre class="brush: js notranslate">myWorker.onmessage = function(e) { ... }</pre>
+
+<h2 id="范例">范例</h2>
+
+<p>下面的代码片段示范用{{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个{{domxref("Worker")}}对象。当表单的<code>first</code>输入框的值变更时，消息被传递给worker。<code>myWorker.onmessage</code>函数用来处理从worker回传的消息。</p>
+
+<pre class="brush: js notranslate">var myWorker = new Worker('worker.js');
+
+first.onchange = function() {
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
+
+myWorker.onmessage = function(e) {
+  result.textContent = e.data;
+  console.log('Message received from worker');
+}
+</pre>
+
+<p>在<code>worker.js</code>中,  <code>onmessage</code> 函数用来接收从主线程传递过来的信息:</p>
+
+<pre class="brush: js notranslate">onmessage = function(e) {
+  console.log('Message received from main script');
+  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  console.log('Posting message back to main script');
+  postMessage(workerResult);
+}</pre>
+
+<p>请注意，主线程中必须以myWorker.<code>onmessage</code>方式调用,  反之 <code>worker.js</code> 脚本中, 只需定义 <code>onmessage</code>, 因为worker.js全域有效({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+
+<p>完整范例，请参考<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">注释</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#handler-worker-onmessage", "Worker.onmessage")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No change from {{SpecName("Web Workers")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Workers', "#handler-worker-onmessage", "Worker.onmessage")}}</td>
+   <td>{{Spec2('Web Workers')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.Worker.onmessage")}}
+
+<h2 id="参阅">参阅</h2>
+
+<p>{{domxref("Worker")}} 接口所属。</p>

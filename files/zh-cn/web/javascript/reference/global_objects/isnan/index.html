@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>isNaN(value)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -28,32 +28,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>如果给定值为 {{jsxref("NaN")}}则返回值为<code>true</code>；否则为<code>false</code>。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<h3 id="The_necessity_of_an_isNaN_function" name="The_necessity_of_an_isNaN_function"><code>isNaN</code> 函数的必要性</h3>
+<h3 id="The_necessity_of_an_isNaN_function"><code>isNaN</code> 函数的必要性</h3>
 
 <p>与 JavaScript 中其他的值不同，{{jsxref("Global_Objects/NaN", "NaN")}}不能通过相等操作符（== 和 ===）来判断 ，因为 <code>NaN == NaN</code> 和 <code>NaN === NaN</code> 都会返回 <code>false</code>。 因此，<code>isNaN</code> 就很有必要了。</p>
 
-<h3 id="Origin_of_NaN_values" name="Origin_of_NaN_values"><code>NaN值</code>的产生</h3>
+<h3 id="Origin_of_NaN_values"><code>NaN 值</code>的产生</h3>
 
-<p><font face="Courier New, Andale Mono, monospace">当算术运算返回一个未定义的或无法表示的值时，<code>NaN</code>就产生了。但是，<code>NaN</code>并不一定用于表示某些值超出表示范围的情况。</font><font face="Consolas, Monaco, 'Andale Mono', monospace">将某些不能强制转换为数值的非数值转换为数值的时候，也会得到<code>NaN</code></font>。</p>
+<p>当算术运算返回一个未定义的或无法表示的值时，<code>NaN</code>就产生了。但是，<code>NaN</code>并不一定用于表示某些值超出表示范围的情况。将某些不能强制转换为数值的非数值转换为数值的时候，也会得到<code>NaN</code>。</p>
 
-<p>例如，0 除以0会返回<code>NaN </code>—— 但是其他数除以0则不会返回<code>NaN</code>。</p>
+<p>例如，0 除以 0 会返回<code>NaN </code>—— 但是其他数除以 0 则不会返回<code>NaN</code>。</p>
 
 <h3 id="令人费解的怪异行为">令人费解的怪异行为</h3>
 
-<p>如果<code>isNaN</code>函数的参数不是<code>Number</code>类型， <code>isNaN</code>函数会首先尝试将这个参数转换为数值，然后才会对转换后的结果是否是{{jsxref("NaN")}}进行判断。因此，对于能被强制转换为有效的非NaN数值来说（空字符串和布尔值分别会被强制转换为数值0和1），返回<code>false</code>值也许会让人感觉莫名其妙。比如说，空字符串就明显“不是数值（not a number）”。这种怪异行为起源于："不是数值（not a number）"在基于IEEE-754数值的浮点计算体制中代表了一种特定的含义。<code>isNaN</code>函数其实等同于回答了这样一个问题：被测试的值在被强制转换成数值时会不会返回IEEE-754​中所谓的“不是数值（not a number）”。</p>
+<p>如果<code>isNaN</code>函数的参数不是<code>Number</code>类型， <code>isNaN</code>函数会首先尝试将这个参数转换为数值，然后才会对转换后的结果是否是{{jsxref("NaN")}}进行判断。因此，对于能被强制转换为有效的非 NaN 数值来说（空字符串和布尔值分别会被强制转换为数值 0 和 1），返回<code>false</code>值也许会让人感觉莫名其妙。比如说，空字符串就明显“不是数值（not a number）”。这种怪异行为起源于："不是数值（not a number）"在基于 IEEE-754 数值的浮点计算体制中代表了一种特定的含义。<code>isNaN</code>函数其实等同于回答了这样一个问题：被测试的值在被强制转换成数值时会不会返回 IEEE-754​中所谓的“不是数值（not a number）”。</p>
 
-<p>下一个版本的ECMAScript (ES2015)包含{{jsxref("Number.isNaN()")}}函数。通过<code>Number.isNaN(x)</code>来检测变量<code>x</code>是否是一个<code>NaN</code><font face="'Open Sans', sans-serif">将会是一种可靠的做法</font>。然而，在缺少<code>Number.isNaN</code>函数的情况下, 通过表达式<code>(x != x)</code> 来检测<code>变量x</code>是否是<code>NaN</code>会更加可靠。</p>
+<p>下一个版本的 ECMAScript (ES2015) 包含{{jsxref("Number.isNaN()")}}函数。通过<code>Number.isNaN(x)</code>来检测变量<code>x</code>是否是一个<code>NaN</code>将会是一种可靠的做法。然而，在缺少<code>Number.isNaN</code>函数的情况下，通过表达式<code>(x != x)</code> 来检测<code>变量 x</code>是否是<code>NaN</code>会更加可靠。</p>
 
-<p>一个<code>isNaN</code>的 polyfill 可以理解为（这个polyfill利用了<code>NaN</code>自身永不相等于自身这一特征 ）：</p>
+<p>一个<code>isNaN</code>的 polyfill 可以理解为（这个 polyfill 利用了<code>NaN</code>自身永不相等于自身这一特征 ）：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> isNaN <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>value<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> n <span class="operator token">=</span> <span class="function token">Number</span><span class="punctuation token">(</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">return</span> n <span class="operator token">!==</span> n<span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var isNaN = function(value) {
+    var n = Number(value);
+    return n !== n;
+};</pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">isNaN(NaN);       // true
 isNaN(undefined); // true
@@ -64,26 +64,26 @@ isNaN(null);      // false
 isNaN(37);        // false
 
 // strings
-isNaN("37");      // false: 可以被转换成数值37
-isNaN("37.37");   // false: 可以被转换成数值37.37
+isNaN("37");      // false: 可以被转换成数值 37
+isNaN("37.37");   // false: 可以被转换成数值 37.37
 isNaN("37,5");    // true
-isNaN('123ABC');  // true:  parseInt("123ABC")的结果是 123, 但是Number("123ABC")结果是 NaN
-isNaN("");        // false: 空字符串被转换成0
-isNaN(" ");       // false: 包含空格的字符串被转换成0
+isNaN('123ABC');  // true:  parseInt("123ABC") 的结果是 123，但是 Number("123ABC") 结果是 NaN
+isNaN("");        // false: 空字符串被转换成 0
+isNaN(" ");       // false: 包含空格的字符串被转换成 0
 
 // dates
 isNaN(new Date());                // false
 isNaN(new Date().toString());     // true
 
 isNaN("blabla")   // true: "blabla"不能转换成数值
-                  // 转换成数值失败， 返回NaN
+                  // 转换成数值失败， 返回 NaN
 </pre>
 
 <h3 id="有用的特殊行为">有用的特殊行为</h3>
 
-<p>有许多方式来看待<code>isNaN()</code>：如果<code>isNaN(x)</code>返回false，那么x在任何算数表达式中都不会使表达式等于NaN；如果返回true，x会使所有算数表达式返回NaN。这就意味着，在JavaScript中，isNaN(x)==true等价于x-0=NaN(在JavaScript中 x-0 == NaN 总是返回false，所以你不用去测试它)。实际上， <code>isNaN(x)</code>, <code>isNaN(x - 0)</code>,<code>isNaN(Number(x))</code>, <code>Number.isNaN(x - 0)</code>,和<code>Number.isNaN(Number(x))</code> 的返回值都是一样的 并且在JavaScript中isNaN(x)是这些表达式中最短的表达。</p>
+<p>有许多方式来看待<code>isNaN()</code>：如果<code>isNaN(x)</code>返回 false，那么 x 在任何算数表达式中都不会使表达式等于 NaN；如果返回 true，x 会使所有算数表达式返回 NaN。这就意味着，在 JavaScript 中，isNaN(x)==true 等价于 x-0=NaN(在 JavaScript 中 x-0 == NaN 总是返回 false，所以你不用去测试它)。实际上， <code>isNaN(x)</code>, <code>isNaN(x - 0)</code>,<code>isNaN(Number(x))</code>, <code>Number.isNaN(x - 0)</code>,和<code>Number.isNaN(Number(x))</code> 的返回值都是一样的 并且在 JavaScript 中 isNaN(x) 是这些表达式中最短的表达。</p>
 
-<p>举个例子，可以利用这个特殊行为来检测函数的参数是可运算的（可以像number一样进行加减乘除等运算）。如果不可运算，则可赋予这个参数一个默认的值或其他合适的内容。这样，就可以得到一个隐式转换参数值的函数，而这得益于Javascript的全功能性。</p>
+<p>举个例子，可以利用这个特殊行为来检测函数的参数是可运算的（可以像 number 一样进行加减乘除等运算）。如果不可运算，则可赋予这个参数一个默认的值或其他合适的内容。这样，就可以得到一个隐式转换参数值的函数，而这得益于 Javascript 的全功能性。</p>
 
 <h2 id="例子">例子</h2>
 

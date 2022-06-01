@@ -12,22 +12,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 <div>{{JSRef}} {{non-standard_header}}</div>
 </div>
 
-<p><strong><code>toSource()</code></strong>方法返回一个表示对象源代码的字符串。</p>
+<p><strong><code>toSource()</code></strong> 方法返回一个表示对象源代码的字符串。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>Object.toSource(); obj</em>.toSource()</code></pre>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
 <p>一个表示对象的源代码的字符串。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>toSource()</code>方法返回以下值:</p>
+<p><code>toSource()</code>方法返回以下值：</p>
 
 <ul>
- <li>对于内置的{{jsxref("Object")}} 对象, <code>toSource</code>返回了下面的字符串，表示源码没法获取：</li>
+ <li>对于内置的{{jsxref("Object")}} 对象，<code>toSource</code>返回了下面的字符串，表示源码没法获取：</li>
 </ul>
 
 <pre class="brush: js">function Object() {
@@ -35,14 +35,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 }</pre>
 
 <ul>
- <li>对于{{jsxref("Object")}}的实例，<code>toSource()</code> 会返回该实例源代码的字符串表示。</li>
+ <li>对于 {{jsxref("Object")}} 的实例，<code>toSource()</code> 会返回该实例源代码的字符串表示。</li>
 </ul>
 
-<p>在调试时,你可以通过<code>toSource()</code>来查看一个对象的内容。</p>
+<p>在调试时，你可以通过 <code>toSource()</code> 来查看一个对象的内容。</p>
 
-<h3 id="重写toSource()方法">重写toSource()方法</h3>
+<h3 id="重写_toSource_方法">重写 toSource() 方法</h3>
 
-<p>允许对象重写<code>toSource()</code>方法。例如：</p>
+<p>允许对象重写 <code>toSource()</code> 方法。例如：</p>
 
 <pre class="brush: js">function Person(name) {
     this.name = name;
@@ -54,9 +54,9 @@ Person.prototype.toSource = function Person_toSource() {
 
 alert(new Person("Joe").toSource()); // ---&gt; new Person("Joe")</pre>
 
-<h3 id="Built-in_toString_methods" name="Built-in_toString_methods">内置<code>的toSource方法</code></h3>
+<h3 id="Built-in_toString_methods">内置 的 <code>toSource</code> 方法</h3>
 
-<p>每个JavaScript核心类型都有它自己的<code>toSource()</code>方法.这些对象是：</p>
+<p>每个 JavaScript 核心类型都有它自己的 <code>toSource()</code> 方法。这些对象是：</p>
 
 <ul>
  <li>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.</li>
@@ -73,7 +73,7 @@ alert(new Person("Joe").toSource()); // ---&gt; new Person("Joe")</pre>
 
 <h3 id="循环引用限制">循环引用限制</h3>
 
-<p><span id="noHighlight_0.3266603437527873">对于包含对自身的引用的对象 (例如, 循环链表或可以遍历两种方式的树), </span><code>toSource()</code><span>不会重新创建自引用, 如火狐24。例如:</span></p>
+<p>对于包含对自身的引用的对象 (例如，循环链表或可以遍历两种方式的树), <code>toSource()</code> 不会重新创建自引用，如 Firefox 24。例如：</p>
 
 <pre class="brush: js">var obj1 = {};
 var obj2 = { a: obj1 };
@@ -87,13 +87,13 @@ obj1 = eval(objSource);
 
 console.log('Cyclical: ' + (obj1.b.a == obj1));</pre>
 
-<p><span id="noHighlight_0.30716570898096807">如果使用循环结构, 并且需要 </span><code>toSource()</code><span>, 则对象必须提供对 </span><code>toSource()</code><span> 的重写,  无论是对构造函数的引用还是提供匿名函数。</span></p>
+<p>如果使用循环结构，并且需要 <code>toSource()</code>, 则对象必须提供对 <code>toSource()</code> 的重写，无论是对构造函数的引用还是提供匿名函数。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Using_toSource" name="Example:_Using_toSource">使用<code>toSource()</code></h3>
+<h3 id="Example:_Using_toSource">使用 <code>toSource()</code></h3>
 
-<p>下面的代码定义了一个<code>Dog</code>对象类型还创建了一个<code>Dog</code>类型的对象实例<code>theDog</code>：</p>
+<p>下面的代码定义了一个 <code>Dog</code> 对象类型还创建了一个 <code>Dog</code> 类型的对象实例 <code>theDog</code>：</p>
 
 <pre class="brush:js">function Dog(name, breed, color, sex) {
    this.name = name;
@@ -104,23 +104,23 @@ console.log('Cyclical: ' + (obj1.b.a == obj1));</pre>
 
 theDog = new Dog("Gabby", "Lab", "chocolate", "girl");</pre>
 
-<p>在<code>theDog</code>上调用<code>toSource</code>方法会显示出能定义该对象的源码：</p>
+<p>在 <code>theDog</code> 上调用 <code>toSource</code> 方法会显示出能定义该对象的源码：</p>
 
 <pre class="brush: js">theDog.toSource();
 // returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})</pre>
 
 <h2 id="特性">特性</h2>
 
-<p>不属于任何标准的一部分。在JavaScript1.3中实现。</p>
+<p>不属于任何标准的一部分。在 JavaScript 1.3 中实现。</p>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
 <p>{{Compat("javascript.builtins.Object.toSource")}}</p>
 
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.toString()")}}</li>
 </ul>
 
-<p></p>
+

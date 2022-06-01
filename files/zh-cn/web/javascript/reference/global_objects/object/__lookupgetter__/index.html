@@ -5,22 +5,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 <div>{{JSRef("Global_Objects", "Object")}} {{ Non-standard_header }} {{ Deprecated_header }}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>__lookupGetter__</strong></code> 方法会返回当前对象上指定属性的<strong>属性读取访问器函数（getter）。</strong></p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>obj</em>.__lookupGetter__(<em>sprop</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>sprop</code></dt>
  <dd>属性名</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">var obj = {
     get foo() {
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 obj.__lookupGetter__("foo")
 // (function (){return Math.random() &gt; 0.5 ? "foo" : "bar"}) </pre>
 
-<h2 id="Description" name="Description">附注</h2>
+<h2 id="Description">附注</h2>
 
 <p><code><strong>__lookupGetter__</strong></code> 方法是非标准的，我们应该使用标准中定义的方法来完成同样的事情，那就是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 方法：</p>
 
@@ -53,63 +53,15 @@ Object.getOwnPropertyDescriptor(prototype, "foo").get
 // function __proto__() {[native code]}
 </pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <p>不属于任何规范。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.__lookupSetter__", "Object.prototype.__lookupSetter__()")}}</li>

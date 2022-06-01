@@ -19,7 +19,9 @@ La fonction **`Math.random()`** renvoie un nombre flottant pseudo-aléatoire com
 
 ## Syntaxe
 
-    Math.random()
+```js
+Math.random()
+```
 
 ### Valeur de retour
 

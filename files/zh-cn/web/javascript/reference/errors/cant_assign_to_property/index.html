@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Errors/不能添加属性
 
 <h2 id="信息">信息</h2>
 
-<pre class="syntaxbox">TypeError: <code class="highlighted" id="line-87">can't assign to property "x" on {y}: not an object</code> (Firefox)
+<pre class="syntaxbox">TypeError: can't assign to property "x" on {y}: not an object (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
 </pre>
 
@@ -18,9 +18,9 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 <h2 id="原因">原因</h2>
 
-<p>在 {{jsxref("Strict_mode")}}下, 当试图给一个{{Glossary("symbol")}},{{Glossary("string")}},{{Glossary("number")}}或者一个{{Glossary("boolean")}}类型的数据创建一个属性时就会报 {{jsxref("TypeError")}}, 任何 {{Glossary("Primitive")}} 值都不允许有{{Glossary("property/JavaScript", "property")}}.</p>
+<p>在 {{jsxref("Strict_mode")}}下，当试图给一个{{Glossary("symbol")}},{{Glossary("string")}},{{Glossary("number")}}或者一个{{Glossary("boolean")}}类型的数据创建一个属性时就会报 {{jsxref("TypeError")}}, 任何 {{Glossary("Primitive")}} 值都不允许有{{Glossary("property/JavaScript", "property")}}.</p>
 
-<p>这个问题可能是由一个错误的值被放在了一个错误的地方导致的, 或者预期{{jsxref("String")}}或{{jsxref("Number")}}的对象变体</p>
+<p>这个问题可能是由一个错误的值被放在了一个错误的地方导致的，或者预期{{jsxref("String")}}或{{jsxref("Number")}}的对象变体</p>
 
 <p> </p>
 
@@ -31,13 +31,13 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 <pre class="brush: js example-bad">'use strict';
 
 var foo = "my string";
-// 下面这行代码在非严格模式下不会执行.
-foo.bar = {}; // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: can't assign to property "bar" on "my string": not an object</span></span></span>
+// 下面这行代码在非严格模式下不会执行。
+foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
 </pre>
 
 <h3 id="如何正确使用">如何正确使用</h3>
 
-<p>有两种方式, 第一种修复这部分代码阻止{{Glossary("primitive")}}被用于这种情况, 或者可以通过使用对象构造器创建来修复.</p>
+<p>有两种方式，第一种修复这部分代码阻止{{Glossary("primitive")}}被用于这种情况，或者可以通过使用对象构造器创建来修复。</p>
 
 <pre class="brush: js example-good">'use strict';
 

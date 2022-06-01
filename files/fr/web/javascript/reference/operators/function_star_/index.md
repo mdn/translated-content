@@ -19,9 +19,11 @@ Le mot-clé **`function*`** peut être utilisé pour définir une fonction gén�
 
 ## Syntaxe
 
-    function* [nom]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```js
+function* [nom]([param1[, param2[, …, paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 
@@ -51,7 +53,7 @@ var x = function*(y) {
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

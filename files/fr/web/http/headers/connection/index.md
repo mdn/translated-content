@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Headers/Connection
 
 L'en-tête général **`Connection`** contrôle la façon dont la connexion reste ouverte ou non après que la transaction courante soit terminée. Si la valeur envoyée est `keep-alive`, la connexion est persistente et n'est pas fermée, permettant aux requêtes qui suivent et s'adressent au même serveur d'être envoyées.
 
-> **Note :**[Les champs d'en-tête spécifiques à la connexion (tels que `Connection`) ne doivent pas être utilisés avec HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
+> **Note :** [Les champs d'en-tête spécifiques à la connexion (tels que `Connection`) ne doivent pas être utilisés avec HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
 
 Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any hop-by-hop headers used by the message must be listed in the `Connection` header, so that the first proxy knows it has to consume them and not forward them further. Standard hop-by-hop headers can be listed too (it is often the case of {{HTTPHeader("Keep-Alive")}}, but this is not mandatory).
 

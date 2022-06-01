@@ -10,36 +10,36 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}</div>
 
-<p class="summary">JavaScript 是一种基于原型而不是基于类的基于对象(object-based)语言。正是由于这一根本的区别，其如何创建对象的层级结构以及对象的属性与属性值是如何继承的并不是那么清晰。本节试着阐明。</p>
+<p>JavaScript 是一种基于原型而不是基于类的基于对象 (object-based) 语言。正是由于这一根本的区别，其如何创建对象的层级结构以及对象的属性与属性值是如何继承的并不是那么清晰。本节试着阐明。</p>
 
 <p>本节假设您已经有一些 JavaScript 基础，并且用 JavaScript 函数创建过简单的对象。</p>
 
-<h2 id="class-based_vs_prototype-based_languages" name="class-based_vs_prototype-based_languages">基于类 vs 基于原型的语言</h2>
+<h2 id="class-based_vs_prototype-based_languages">基于类 vs 基于原型的语言</h2>
 
 <p>基于类的面向对象语言，比如 Java 和 C++，是构建在两个不同实体之上的：类和实例。</p>
 
 <ul>
- <li>一个<em>类(class)</em>定义了某一对象集合所具有的特征性属性（可以将 Java 中的方法和域以及 C++ 中的成员都视作属性）。类是抽象的，而不是其所描述的对象集合中的任何特定的个体。例如 <code>Employee</code> 类可以用来表示所有雇员的集合。</li>
- <li>另一方面，一个<em>实例(instance)</em>是一个<em>类</em>的实例化。例如， <code>Victoria</code> 可以是 <code>Employee</code> 类的一个实例，表示一个特定的雇员个体。实例具有和其父类完全一致的属性，不多也不少。</li>
+ <li>一个<em>类 (class)</em>定义了某一对象集合所具有的特征性属性（可以将 Java 中的方法和域以及 C++ 中的成员都视作属性）。类是抽象的，而不是其所描述的对象集合中的任何特定的个体。例如 <code>Employee</code> 类可以用来表示所有雇员的集合。</li>
+ <li>另一方面，一个<em>实例 (instance)</em>是一个<em>类</em>的实例化。例如， <code>Victoria</code> 可以是 <code>Employee</code> 类的一个实例，表示一个特定的雇员个体。实例具有和其父类完全一致的属性，不多也不少。</li>
 </ul>
 
-<p>基于原型的语言（如 JavaScript）并不存在这种区别：它只有对象。基于原型的语言具有所谓<em>原型对象(prototypical object)</em>的概念。原型对象可以作为一个模板，新对象可以从中获得原始的属性。任何对象都可以指定其自身的属性，既可以是创建时也可以在运行时创建。而且，任何对象都可以作为另一个对象的<em>原型(prototype)</em>，从而允许后者共享前者的属性。</p>
+<p>基于原型的语言（如 JavaScript）并不存在这种区别：它只有对象。基于原型的语言具有所谓<em>原型对象 (prototypical object)</em>的概念。原型对象可以作为一个模板，新对象可以从中获得原始的属性。任何对象都可以指定其自身的属性，既可以是创建时也可以在运行时创建。而且，任何对象都可以作为另一个对象的<em>原型 (prototype)</em>，从而允许后者共享前者的属性。</p>
 
 <h3 id="定义类">定义类</h3>
 
-<p>在基于类的语言中，需要专门的<em>类定义(class definition)</em>来定义类。在定义类时，允许定义被称为<em>构造器(constructor)</em>的特殊的方法来创建该类的实例。在构造器方法中，可以指定实例的属性的初始值并做一些其他的操作。你可以通过使用 <code>new</code> 操作符来创建类的实例。</p>
+<p>在基于类的语言中，需要专门的<em>类定义 (class definition)</em>来定义类。在定义类时，允许定义被称为<em>构造器 (constructor)</em>的特殊的方法来创建该类的实例。在构造器方法中，可以指定实例的属性的初始值并做一些其他的操作。你可以通过使用 <code>new</code> 操作符来创建类的实例。</p>
 
-<p>JavaScript 大体上与之类似，但并没有专门的<em>类定义</em>，你通过定义构造函数的方式来创建一系列有着特定初始值和方法的对象。任何JavaScript函数都可以被用作构造函数。你也可以使用 <code>new</code> 操作符来创建一个新对象。</p>
+<p>JavaScript 大体上与之类似，但并没有专门的<em>类定义</em>，你通过定义构造函数的方式来创建一系列有着特定初始值和方法的对象。任何 JavaScript 函数都可以被用作构造函数。你也可以使用 <code>new</code> 操作符来创建一个新对象。</p>
 
-<div class="blockIndicator note">
-<p><strong>提示：</strong>在ES6中引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">类定义</a> ，但它实际上是已有的原型继承方式的语法糖而已，并没有引入新的面向对象继承模型。</p>
+<div class="note">
+<p><strong>备注：</strong>在 ES6 中引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">类定义</a> ，但它实际上是已有的原型继承方式的语法糖而已，并没有引入新的面向对象继承模型。</p>
 </div>
 
 <h3 id="子类和继承">子类和继承</h3>
 
 <p>基于类的语言是通过对类的定义中构建类的层级结构的。在类定义中，可以指定新的类是一个现存的类的子类。子类将继承父类的全部属性，并可以添加新的属性或者修改继承的属性。例如，假设 <code>Employee</code> 类只有 <code>name</code> 和 <code>dept</code> 属性，而 <code>Manager</code> 是 <code>Employee</code> 的子类并添加了 <code>reports</code> 属性。这时，<code>Manager</code> 类的实例将具有所有三个属性：<code>name</code>，<code>dept</code>和<code>reports</code>。</p>
 
-<p>JavaScript 通过将构造器函数与原型对象相关联的方式来实现继承。这样，您可以创建完全一样的 <code>Employee</code> — <code>Manager</code> 示例，不过需要使用略微不同的术语。首先，定义Employee构造函数，在该构造函数内定义name、dept属性；接下来，定义Manager构造函数，在该构造函数内调用Employee构造函数，并定义reports属性；最后，将一个获得了Employee.prototype(Employee构造函数原型)的新对象赋予manager构造函数，以作为Manager构造函数的原型。之后当你创建新的Manager对象实例时，该实例会从Employee对象继承name、dept属性。</p>
+<p>JavaScript 通过将构造器函数与原型对象相关联的方式来实现继承。这样，您可以创建完全一样的 <code>Employee</code> — <code>Manager</code> 示例，不过需要使用略微不同的术语。首先，定义 Employee 构造函数，在该构造函数内定义 name、dept 属性；接下来，定义 Manager 构造函数，在该构造函数内调用 Employee 构造函数，并定义 reports 属性；最后，将一个获得了 Employee.prototype(Employee 构造函数原型) 的新对象赋予 manager 构造函数，以作为 Manager 构造函数的原型。之后当你创建新的 Manager 对象实例时，该实例会从 Employee 对象继承 name、dept 属性。</p>
 
 <h3 id="添加和移除属性">添加和移除属性</h3>
 
@@ -91,7 +91,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/3060/figure8.1.png"></p>
 
-<div style="display: table-cell; vertical-align: middle; padding: 10px;">
+<div>
 <ul>
  <li><code>Employee</code> 具有 <code>name</code> 属性（默认值为空的字符串）和 <code>dept</code> 属性（默认值为 "general"）。</li>
  <li><code>Manager</code> 是 <code>Employee</code>的子类。它添加了 <code>reports</code> 属性（默认值为空的数组，以 <code>Employee</code> 对象数组作为它的值）。</li>
@@ -109,7 +109,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>在实际应用程序中，您很可能想定义构造器，以允许您在创建对象时指定属性值。（参见<a href="#More_flexible_constructors">More flexible constructors</a>）。当前，这些简单的定义只是说明了继承是如何实现的。</p>
 
-<p>下面关于 <code>Employee</code> 的 Java 和 JavaScript 的定义是非常类似的。唯一的不同是在 Java 中需要指定每个属性的类型，而在 JavaScript 中则不需要（这是因为Java是 <a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5">强类型</a> 语言，而 JavaScript 是弱类型语言）。</p>
+<p>下面关于 <code>Employee</code> 的 Java 和 JavaScript 的定义是非常类似的。唯一的不同是在 Java 中需要指定每个属性的类型，而在 JavaScript 中则不需要（这是因为 Java 是 <a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5">强类型</a> 语言，而 JavaScript 是弱类型语言）。</p>
 
 <table class="standard-table">
  <thead>
@@ -121,7 +121,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Employee () {
   this.name = "";
   this.dept = "general";
@@ -129,7 +129,7 @@ function Employee () {
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Employee {
    public String name = "";
    public String dept = "general";
@@ -139,7 +139,7 @@ public class Employee {
  </tbody>
 </table>
 
-<p><code>Manager 和 WorkerBee 的定义表示在如何指定继承链中上一层对象时，两者存在不同点。在 JavaScript 中，您会添加一个原型实例作为构造器函数prototype 属性的值，然后将该构造函数原型的构造器重载为其自身。这一动作可以在构造器函数定义后的任意时刻执行。而在 Java 中，则需要在类定义中指定父类，且不能在类定义之外改变父类。</code></p>
+<p><code>Manager<code/> 和 <code>WorkerBee<code/> 的定义表示在如何指定继承链中上一层对象时，两者存在不同点。在 JavaScript 中，您会添加一个原型实例作为构造器函数 prototype 属性的值，然后将该构造函数原型的构造器重载为其自身。这一动作可以在构造器函数定义后的任意时刻执行。而在 Java 中，则需要在类定义中指定父类，且不能在类定义之外改变父类。</p>
 
 <table class="standard-table">
  <thead>
@@ -151,7 +151,7 @@ public class Employee {
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Manager() {
   Employee.call(this);
   this.reports = [];
@@ -165,7 +165,7 @@ function WorkerBee() {
 WorkerBee.prototype = Object.create(Employee.prototype);</pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Manager extends Employee {
    public Employee[] reports = new Employee[0];
 }
@@ -192,7 +192,7 @@ public class WorkerBee extends Employee {
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function SalesPerson() {
    WorkerBee.call(this);
    this.dept = 'sales';
@@ -208,7 +208,7 @@ function Engineer() {
 Engineer.prototype <code>= Object.create(WorkerBee.prototype);</code></pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 <code>public class SalesPerson extends WorkerBee {
    public String dept = "sales";
    public double quota = 100.0;
@@ -227,7 +227,7 @@ public class Engineer extends WorkerBee {
 <p>使用这些定义，您可以创建这些对象的实例，以获取其属性的默认值。下图说明了如何使用这些 JavaScript 定义创建新对象并显示新对象的属性值。</p>
 
 <div class="note">
-<p><strong>提示：</strong>实例在基于类的语言中具有特定的技术含义。在这些语言中，一个实例是一个类的单独实例化，与一个类本质上是不同的。在 JavaScript 中，“实例”没有这个技术含义，因为JavaScript在类和实例之间不存在这样的区别。然而，在讨论 JavaScript 时，可以非正式地使用“实例”来表示使用特定构造函数创建的对象。 所以，在这个例子中，你可以非正式地说<code>jane</code> 是 <code>Engineer</code>的一个实例。同样，虽然术语 parent，child，ancestor 和 descendant 在 JavaScript 中没有正式含义；你可以非正式地使用它们来引用原型链中较高或更低的对象。</p>
+<p><strong>备注：</strong>实例在基于类的语言中具有特定的技术含义。在这些语言中，一个实例是一个类的单独实例化，与一个类本质上是不同的。在 JavaScript 中，“实例”没有这个技术含义，因为 JavaScript 在类和实例之间不存在这样的区别。然而，在讨论 JavaScript 时，可以非正式地使用“实例”来表示使用特定构造函数创建的对象。 所以，在这个例子中，你可以非正式地说<code>jane</code> 是 <code>Engineer</code>的一个实例。同样，虽然术语 parent，child，ancestor 和 descendant 在 JavaScript 中没有正式含义；你可以非正式地使用它们来引用原型链中较高或更低的对象。</p>
 </div>
 
 <h3 id="用简单的定义创建对象">用简单的定义创建对象</h3>
@@ -240,7 +240,7 @@ public class Engineer extends WorkerBee {
 
 <h4 id="个别对象">个别对象</h4>
 
-<pre class="brush: js notranslate">var jim = new Employee; // 如构造函数无须接受任何参数，圆括号可以省略。
+<pre class="brush: js">var jim = new Employee; // 如构造函数无须接受任何参数，圆括号可以省略。
 // jim.name is ''
 // jim.dept is 'general'
 
@@ -274,14 +274,14 @@ var jane = new Engineer;
 
 <p>假设您通过如下语句创建一个<code>mark</code>对象作为 <code>WorkerBee</code>的实例：</p>
 
-<pre class="brush: js notranslate">var mark = new WorkerBee;
+<pre class="brush: js">var mark = new WorkerBee;
 </pre>
 
 <p>当 JavaScript 执行 <code>new</code> 操作符时，它会先创建一个普通对象，并将这个普通对象中的 [[prototype]] 指向 <code>WorkerBee.prototype</code> ，然后再把这个普通对象设置为执行 <code>WorkerBee</code> 构造函数时 <code>this</code>  的值。该普通对象的 [[Prototype]] 决定其用于检索属性的原型链。当构造函数执行完成后，所有的属性都被设置完毕，JavaScript 返回之前创建的对象，通过赋值语句将它的引用赋值给变量 <code>mark</code>。</p>
 
-<p>这个过程不会显式的将 <code style="font-size: 14px;">mark</code>所继承的原型链中的属性作为本地属性存放在 <code>mark</code> 对象中。当访问属性时，JavaScript 将首先检查对象自身中是否存在该属性，如果有，则返回该属性的值。如果不存在，JavaScript会检查原型链（使用内置的 [[Prototype]] ）。如果原型链中的某个对象包含该属性，则返回这个属性的值。如果遍历整条原型链都没有找到该属性，JavaScript 则认为对象中不存在该属性，返回一个 <code>undefined</code>。这样，<code>mark</code> 对象中将具有如下的属性和对应的值：</p>
+<p>这个过程不会显式的将 <code>mark</code>所继承的原型链中的属性作为本地属性存放在 <code>mark</code> 对象中。当访问属性时，JavaScript 将首先检查对象自身中是否存在该属性，如果有，则返回该属性的值。如果不存在，JavaScript 会检查原型链（使用内置的 [[Prototype]] ）。如果原型链中的某个对象包含该属性，则返回这个属性的值。如果遍历整条原型链都没有找到该属性，JavaScript 则认为对象中不存在该属性，返回一个 <code>undefined</code>。这样，<code>mark</code> 对象中将具有如下的属性和对应的值：</p>
 
-<pre class="brush: js notranslate">mark.name = "";
+<pre class="brush: js">mark.name = "";
 mark.dept = "general";
 mark.projects = [];
 </pre>
@@ -290,7 +290,7 @@ mark.projects = [];
 
 <p>由于这些构造器不支持为实例设置特定的值，所以这些属性值仅仅是创建自 <code>WorkerBee</code> 的所有对象所共享的默认值。当然这些属性的值是可以修改的，所以您可以为 <code>mark</code>指定特定的信息，如下所示：</p>
 
-<pre class="brush: js notranslate">mark.name = "Doe, Mark";
+<pre class="brush: js">mark.name = "Doe, Mark";
 mark.dept = "admin";
 mark.projects = ["navigator"];</pre>
 
@@ -298,26 +298,26 @@ mark.projects = ["navigator"];</pre>
 
 <p>在 JavaScript 中，您可以在运行时为任何对象添加属性，而不必受限于构造函数提供的属性。添加特定于某个对象的属性，只需要为该对象指定一个属性值，如下所示：</p>
 
-<pre class="brush: js notranslate">mark.bonus = 3000;
+<pre class="brush: js">mark.bonus = 3000;
 </pre>
 
 <p>这样 <code>mark</code> 对象就有了 <code>bonus</code> 属性，而其它 <code>WorkerBee</code> 则没有该属性。</p>
 
 <p>如果您向某个构造函数的原型对象中添加新的属性，那么该属性将添加到从这个原型中继承属性的所有对象的中。例如，可以通过如下的语句向所有雇员中添加 <code>specialty</code> 属性：</p>
 
-<pre class="brush: js notranslate">Employee.prototype.specialty = "none";
+<pre class="brush: js">Employee.prototype.specialty = "none";
 </pre>
 
 <p>只要 JavaScript 执行了该语句，则 <code>mark</code> 对象也将具有 <code>specialty</code> 属性，其值为 <code>"none"</code>。下图则表示了在 <code>Employee</code> 原型中添加该属性，然后在 <code>Engineer</code> 的原型中重载该属性的效果。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png"><br>
  <small><strong>添加属性</strong></small></p>
 
-<h2 id="more_flexible_constructors" name="more_flexible_constructors">更灵活的构造器</h2>
+<h2 id="more_flexible_constructors">更灵活的构造器</h2>
 
 <p>到目前为止，本文所展示的构造函数都不能让你在创建新实例时为其制定属性值。其实我们也可以像 Java 一样，为构造器提供参数以初始化实例的属性值。下图展示了一种实现方式。</p>
 
-<p><img alt="" class="internal" id="figure8.5" src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4423/=figure8.5.png"><br>
  <small><strong>Specifying properties in a constructor, take 1</strong></small></p>
 
 <p>下面的表格中罗列了这些对象在 Java 和 JavaScript 中的定义。</p>
@@ -332,7 +332,7 @@ mark.projects = ["navigator"];</pre>
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Employee (name, dept) {
   this.name = name || "";
   this.dept = dept || "general";
@@ -340,7 +340,7 @@ function Employee (name, dept) {
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Employee {
    public String name;
    public String dept;
@@ -360,7 +360,7 @@ public class Employee {
   </tr>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function WorkerBee (projs) {
   this.projects = projs || [];
 }
@@ -368,7 +368,7 @@ WorkerBee.prototype = new Employee;
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class WorkerBee extends Employee {
    public String[] projects;
    public WorkerBee () {
@@ -384,7 +384,7 @@ public class WorkerBee extends Employee {
   </tr>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 
 function Engineer (mach) {
    this.dept = "engineering";
@@ -394,7 +394,7 @@ Engineer.prototype = new WorkerBee;
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Engineer extends WorkerBee {
    public String machine;
    public Engineer () {
@@ -414,23 +414,23 @@ public class Engineer extends WorkerBee {
 
 <p>上面使用 JavaScript 定义过程使用了一种设置默认值的特殊惯用法：</p>
 
-<pre class="brush: js notranslate">this.name = name || "";
+<pre class="brush: js">this.name = name || "";
 </pre>
 
 <p>JavaScript 的逻辑或操作符（<code>||</code>）会对第一个参数进行判断。如果该参数值运算后结果为真，则操作符返回该值。否则，操作符返回第二个参数的值。因此，这行代码首先检查 <code>name</code> 是否是对<code>name</code> 属性有效的值。如果是，则设置其为 <code>this.name</code> 的值。否则，设置 <code>this.name</code> 的值为空的字符串。尽管这种用法乍看起来有些费解，为了简洁起见，本章将使用这种习惯用法。</p>
 
 <div class="note">
-<p><strong>提示：</strong>如果调用构造函数时，指定了可以转换为 <code><code>false</code></code> 的参数（比如<code>0</code>和空字符串），结果可能出乎调用者意料。此时，将使用默认值（译注：不是指定的参数值 0 和 ""）。</p>
+<p><strong>备注：</strong>如果调用构造函数时，指定了可以转换为 <code><code>false</code></code> 的参数（比如<code>0</code>和空字符串），结果可能出乎调用者意料。此时，将使用默认值（译注：不是指定的参数值 0 和 ""）。</p>
 </div>
 
 <p>使用这些定义，当创建对象的实例时，可以为本地定义的属性指定值。你可以使用以下语句创建一个新的<code>Engineer</code>：</p>
 
-<pre class="brush: js notranslate">var jane = new Engineer("belau");
+<pre class="brush: js">var jane = new Engineer("belau");
 </pre>
 
 <p>此时，<code>Jane</code> 的属性如下所示：</p>
 
-<pre class="brush: js notranslate">jane.name == "";
+<pre class="brush: js">jane.name == "";
 jane.dept == "engineering";
 jane.projects == [];
 jane.machine == "belau"
@@ -440,12 +440,12 @@ jane.machine == "belau"
 
 <p>到目前为止，构造函数已经能够创建一个普通对象，然后为新对象指定本地的属性和属性值。您还可以通过直接调用原型链上的更高层次对象的构造函数，让构造器添加更多的属性。下图即实现了这一功能。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png"><br>
  <small><strong>Specifying properties in a constructor, take 2</strong></small></p>
 
 <p>我们来详细看一下这些定义。这是<code>Engineer</code>构造函数的新定义：</p>
 
-<pre class="brush: js notranslate">function Engineer (name, projs, mach) {
+<pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
@@ -454,7 +454,7 @@ jane.machine == "belau"
 
 <p>假设您创建了一个新的 <code>Engineer</code> 对象，如下所示：</p>
 
-<pre class="brush: js notranslate">var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
+<pre class="brush: js">var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
 </pre>
 
 <p>JavaScript 会按以下步骤执行：</p>
@@ -475,7 +475,7 @@ jane.machine == "belau"
 
 <p>你可以认为，在 <code>Engineer</code> 的构造器中调用了 <code>WorkerBee</code> 的构造器，也就为 <code>Engineer</code> 对象设置好了继承关系。事实并非如此。调用 <code>WorkerBee</code> 构造器确保了<code>Engineer</code> 对象以所有在构造器中所指定的属性被调用。但是，如果后续在 <code>Employee</code> 或者 <code>WorkerBee</code> 原型中添加了属性，那些属性不会被 <code>Engineer</code> 对象继承。例如，假设如下语句：</p>
 
-<pre class="brush: js notranslate">function Engineer (name, projs, mach) {
+<pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
@@ -486,7 +486,7 @@ Employee.prototype.specialty = "none";
 
 <p>对象 <code>jane</code> 不会继承 <code>specialty</code> 属性。您必须显式地设置原型才能确保动态的继承。如果修改成如下的语句：</p>
 
-<pre class="brush: js notranslate">function Engineer (name, projs, mach) {
+<pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
@@ -504,7 +504,7 @@ Employee.prototype.specialty = "none";
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
@@ -513,7 +513,7 @@ function Engineer (name, projs, mach) {
 </pre>
    </td>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Engineer (name, projs, mach) {
   WorkerBee.call(this, name, "engineering", projs);
   this.machine = mach || "";
@@ -543,7 +543,7 @@ function Engineer (name, projs, mach) {
 
 <p>以上步骤的结果依赖于你是如何定义的。最早的例子中有如下定义：</p>
 
-<pre class="brush: js notranslate">function Employee () {
+<pre class="brush: js">function Employee () {
   this.name = "";
   this.dept = "general";
 }
@@ -556,19 +556,19 @@ WorkerBee.prototype = new Employee;
 
 <p>基于这些定义，假定通过如下的语句创建 <code>WorkerBee</code> 的实例 <code>amy</code>：</p>
 
-<pre class="brush: js notranslate">var amy = new WorkerBee;
+<pre class="brush: js">var amy = new WorkerBee;
 </pre>
 
 <p>则 <code>amy</code> 对象将具有一个本地属性 <code>projects</code>。<code>name</code>和 <code>dept</code> 则不是 <code>amy</code> 对象的本地属性，而是从 <code>amy</code> 对象的 <code>__proto__</code> 属性获得的。因此，<code>amy</code> 将具有如下的属性值：</p>
 
-<pre class="brush: js notranslate">amy.name == "";
+<pre class="brush: js">amy.name == "";
 amy.dept == "general";
 amy.projects == [];
 </pre>
 
 <p>现在，假设修改了与 <code>Employee</code> 的相关联原型中的 <code>name</code> 属性的值：</p>
 
-<pre class="brush: js notranslate">Employee.prototype.name = "Unknown"
+<pre class="brush: js">Employee.prototype.name = "Unknown"
 </pre>
 
 <p>乍一看，你可能觉得新的值会传播给所有 <code>Employee</code> 的实例。然而，并非如此。</p>
@@ -577,7 +577,7 @@ amy.projects == [];
 
 <p>如果想在运行时修改一个对象的属性值并且希望该值被所有该对象的后代所继承，您就不能在该对象的构造器函数中定义该属性。而应该将该属性添加到该对象所关联的原型中。例如，假设将前面的代码作如下修改：</p>
 
-<pre class="brush: js notranslate">function Employee () {
+<pre class="brush: js">function Employee () {
   this.dept = "general";
 }
 Employee.prototype.name = "";
@@ -600,21 +600,21 @@ Employee.prototype.name = "Unknown";
 
 <p>JavaScript 的属性查找机制首先在对象自身的属性中查找，如果指定的属性名称没有找到，将在对象的特殊属性 <code>__proto__</code> 中查找。这个过程是递归的；被称为“在原型链中查找”。</p>
 
-<p>特殊的 <code>__proto__</code> 属性是在构建对象时设置的；设置为构造器的 <code>prototype</code> 属性的值。所以表达式 <code>new Foo()</code> 将创建一个对象，其 <code>__proto__ == <code class="moz-txt-verticalline">Foo.prototype</code></code>。因而，修改 <code class="moz-txt-verticalline">Foo.prototype</code> 的属性，将改变所有通过 <code>new Foo()</code> 创建的对象的属性的查找。</p>
+<p>特殊的 <code>__proto__</code> 属性是在构建对象时设置的；设置为构造器的 <code>prototype</code> 属性的值。所以表达式 <code>new Foo()</code> 将创建一个对象，其 <code>__proto__ == <code>Foo.prototype</code></code>。因而，修改 <code>Foo.prototype</code> 的属性，将改变所有通过 <code>new Foo()</code> 创建的对象的属性的查找。</p>
 
 <p>每个对象都有一个 <code>__proto__</code> 对象属性（除了 <code>Object）；每个函数都有一个</code> <code>prototype</code> 对象属性。因此，通过“原型继承”，对象与其它对象之间形成关系。通过比较对象的 <code>__proto__</code> 属性和函数的 <code>prototype</code> 属性可以检测对象的继承关系。JavaScript 提供了便捷方法：<code>instanceof</code> 操作符可以用来将一个对象和一个函数做检测，如果对象继承自函数的原型，则该操作符返回真。例如：</p>
 
-<pre class="brush: js notranslate">var f = new Foo();
+<pre class="brush: js">var f = new Foo();
 var isTrue = (f instanceof Foo);</pre>
 
 <p>作为详细一点的例子，假定我们使用和在 <a href="#Inheriting_properties">Inheriting properties</a> 中相同的一组定义。创建 <code>Engineer</code> 对象如下：</p>
 
-<pre class="brush: js notranslate">var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
+<pre class="brush: js">var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
 </pre>
 
 <p>对于该对象，以下所有语句均为真：</p>
 
-<pre class="brush: js notranslate">chris.__proto__ == Engineer.prototype;
+<pre class="brush: js">chris.__proto__ == Engineer.prototype;
 chris.__proto__.__proto__ == WorkerBee.prototype;
 chris.__proto__.__proto__.__proto__ == Employee.prototype;
 chris.__proto__.__proto__.__proto__.__proto__ == Object.prototype;
@@ -623,7 +623,7 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 
 <p>基于此，可以写出一个如下所示的 <code>instanceOf</code> 函数：</p>
 
-<pre class="brush: js notranslate">function instanceOf(object, constructor) {
+<pre class="brush: js">function instanceOf(object, constructor) {
    while (object != null) {
       if (object == constructor.prototype)
          return true;
@@ -636,13 +636,15 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> 在上面的实现中，检查对象的类型是否为 "xml" 的目的在于解决新近版本的 JavaScript 中表达 XML 对象的特异之处。如果您想了解其中琐碎细节，可以参考 {{ bug(634150) }}。</div>
+<div class="note">
+<p><strong>备注：</strong> 在上面的实现中，检查对象的类型是否为 "xml" 的目的在于解决新近版本的 JavaScript 中表达 XML 对象的特异之处。如果您想了解其中琐碎细节，可以参考 {{ bug(634150) }}。</p>
+</div>
 
 <div>使用上面定义的 instanceOf 函数，这些表达式为真：</div>
 
-<div></div>
 
-<pre class="brush: js notranslate">instanceOf (chris, Engineer)
+
+<pre class="brush: js">instanceOf (chris, Engineer)
 instanceOf (chris, WorkerBee)
 instanceOf (chris, Employee)
 instanceOf (chris, Object)
@@ -650,13 +652,13 @@ instanceOf (chris, Object)
 
 <p>但如下表达式为假：</p>
 
-<pre class="brush: js notranslate">instanceOf (chris, SalesPerson)</pre>
+<pre class="brush: js">instanceOf (chris, SalesPerson)</pre>
 
 <h3 id="构造器中的全局信息">构造器中的全局信息</h3>
 
 <p>在创建构造器时，在构造器中设置全局信息要小心。例如，假设希望为每一个雇员分配一个唯一标识。可能会为 <code>Employee</code> 使用如下定义：</p>
 
-<pre class="brush: js notranslate">var idCounter = 1;
+<pre class="brush: js">var idCounter = 1;
 
 function Employee (name, dept) {
    this.name = name || "";
@@ -667,13 +669,13 @@ function Employee (name, dept) {
 
 <p>基于该定义，在创建新的 <code>Employee</code> 时，构造器为其分配了序列中的下一个标识符。然后递增全局的标识符计数器。因此，如果，如果随后的语句如下，则 <code>victoria.id</code> 为 1 而 <code>harry.id</code> 为 2：</p>
 
-<pre class="brush: js notranslate">var victoria = new Employee("Pigbert, Victoria", "pubs")
+<pre class="brush: js">var victoria = new Employee("Pigbert, Victoria", "pubs")
 var harry = new Employee("Tschopik, Harry", "sales")
 </pre>
 
 <p>乍一看似乎没问题。但是，无论什么目的，在每一次创建 <code>Employee</code> 对象时，<code>idCounter</code> 都将被递增一次。如果创建本章中所描述的整个 <code>Employee</code> 层级结构，每次设置原型的时候，<code>Employee</code> 构造器都将被调用一次。假设有如下代码：</p>
 
-<pre class="brush: js notranslate">var idCounter = 1;
+<pre class="brush: js">var idCounter = 1;
 
 function Employee (name, dept) {
    this.name = name || "";
@@ -700,7 +702,7 @@ var mac = new Engineer("Wood, Mac");
 
 <p>依赖于应用程序，计数器额外的递增可能有问题，也可能没问题。如果确实需要准确的计数器，则以下构造器可以作为一个可行的方案：</p>
 
-<pre class="brush: js notranslate">function Employee (name, dept) {
+<pre class="brush: js">function Employee (name, dept) {
    this.name = name || "";
    this.dept = dept || "general";
    if (name)
@@ -712,7 +714,7 @@ var mac = new Engineer("Wood, Mac");
 
 <p>或者，您可以创建一个 Employee 的原型对象的副本以分配给 WorkerBee：</p>
 
-<pre class="brush: js notranslate">WorkerBee.prototype = Object.create(Employee.prototype);
+<pre class="brush: js">WorkerBee.prototype = Object.create(Employee.prototype);
 // instead of WorkerBee.prototype = new Employee</pre>
 
 <h3 id="没有多重继承">没有多重继承</h3>
@@ -723,7 +725,7 @@ var mac = new Engineer("Wood, Mac");
 
 <p>在 JavaScript 中，可以在构造器函数中调用多个其它的构造器函数。这一点造成了多重继承的假象。例如，考虑如下语句：</p>
 
-<pre class="brush: js notranslate">function Hobbyist (hobby) {
+<pre class="brush: js">function Hobbyist (hobby) {
    this.hobby = hobby || "scuba";
 }
 
@@ -741,7 +743,7 @@ var dennis = new Engineer("Doe, Dennis", ["collabra"], "hugo")
 
 <p>进一步假设使用本章前面所属的 <code>WorkerBee</code> 的定义。此时 <code>dennis</code> 对象具有如下属性：</p>
 
-<pre class="brush: js notranslate">dennis.name == "Doe, Dennis"
+<pre class="brush: js">dennis.name == "Doe, Dennis"
 dennis.dept == "engineering"
 dennis.projects == ["collabra"]
 dennis.machine == "hugo"
@@ -750,9 +752,9 @@ dennis.hobby == "scuba"
 
 <p><code>dennis</code> 确实从 <code>Hobbyist</code> 构造器中获得了 <code>hobby</code> 属性。但是，假设添加了一个属性到 <code>Hobbyist</code> 构造器的原型：</p>
 
-<pre class="brush: js notranslate">Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"]
+<pre class="brush: js">Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"]
 </pre>
 
 <p><code>dennis</code> 对象不会继承这个新属性。</p>
 
-<div>{{ PreviousNext("JavaScript/Guide/Predefined_Core_Objects", "JavaScript/Guide/Using_promises") }}</div>
+<div>{{ PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}</div>

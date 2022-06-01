@@ -2,7 +2,7 @@
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 tags:
-  - ASCII码变成字符串
+  - ASCII 码变成字符串
   - fromCharCode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
@@ -14,11 +14,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+<pre class="syntaxbox"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>num1, ..., num<em>N</em></code></dt>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <p>一个长度为 <code>N</code> 的字符串，由 <code>N</code> 个指定的 UTF-16 代码单元组成。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>该方法返回一个字符串，而不是一个  {{jsxref("String")}} 对象。</p>
 
@@ -37,11 +37,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <h3 id="返回补充字符">返回补充字符</h3>
 
-<p>在 UTF-16 中，绝大部分常用的字符可以用一个 16 位的值表示（即一个代码单元）。然而，有一类字符叫 Base Multilingual Plane (BMP)，是所有可寻址的 Unicode 码点的 <sup>1</sup>/<sub>17</sub><sup>th</sup>。剩下的码点，从范围 <code>65536</code> (<code>0x010000</code>) 到 <code>1114111</code> (<code>0x10FFFF</code>) 被称之为补充字符。在 UTF-16 中，补充字符也叫代理（surrogates），用两个 16 位代码单元表示，它是有目的被保留下来的。两个代理（surrogates）形成一个有效组合，也叫代理对，可以用来表示一个补充字符。</p>
+<p>在 UTF-16 中，绝大部分常用的字符可以用一个 16 位的值表示（即一个代码单元）。然而，有一类字符叫 Base Multilingual Plane (BMP)，是所有可寻址的 Unicode 码点的 1/17th。剩下的码点，从范围 <code>65536</code> (<code>0x010000</code>) 到 <code>1114111</code> (<code>0x10FFFF</code>) 被称之为补充字符。在 UTF-16 中，补充字符也叫代理（surrogates），用两个 16 位代码单元表示，它是有目的被保留下来的。两个代理（surrogates）形成一个有效组合，也叫代理对，可以用来表示一个补充字符。</p>
 
 <p>因为 <code>fromCharCode()</code> 只作用于 16 位的值 (跟 <code>\u</code> 转义序列一样)，为了返回一个补充字符，一个代理对是必须的。例如，<code>String.fromCharCode(0xD83C, 0xDF03)</code> 和 <code>\uD83C\uDF03</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
 
-<p>While there is a mathematical relationship between the supplementary code point value (e.g. <code>0x1F303</code>) and both surrogate values that represent it (e.g., <code>0xD83C</code> and <code>0xDF03</code>), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}} （ES2015 标准下的一个方法）更方便， 这个方法允许你基于真实的码点返回补充字符。例如 <code>String.fromCodePoint(0x1F303)</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
+<p>While there is a mathematical relationship between the supplementary code point value (e.g. <code>0x1F303</code>) and both surrogate values that represent it (e.g., <code>0xD83C</code> and <code>0xDF03</code>), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}}（ES2015 标准下的一个方法）更方便， 这个方法允许你基于真实的码点返回补充字符。例如 <code>String.fromCodePoint(0x1F303)</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <p>在 UTF-16 中，BMP 字符使用一个代码单元：</p>
 
-<pre class="brush: js notranslate">String.fromCharCode(65, 66, 67);   // 返回 "ABC"
+<pre class="brush: js">String.fromCharCode(65, 66, 67);   // 返回 "ABC"
 String.fromCharCode(0x2014);       // 返回 "—"
 String.fromCharCode(0x12014);      // 也是返回 "—"; 数字 1 被剔除并忽略
 String.fromCharCode(8212);         // 也是返回 "—"; 8212 是 0x2014 的十进制表示
@@ -58,7 +58,7 @@ String.fromCharCode(8212);         // 也是返回 "—"; 8212 是 0x2014 的十
 <p><a href="https://asecuritysite.com/coding/asc2">完整的 UTF 16 表格</a>.<br>
  在 UTF-16 中，补充字符需要两个代码单元（即一个代理对）：</p>
 
-<pre class="brush: js notranslate">String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
+<pre class="brush: js">String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
 String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
 
 String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"
@@ -81,7 +81,7 @@ String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD8
 
 <p>{{Compat("javascript.builtins.String.fromCharCode")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.charCodeAt()")}}</li>

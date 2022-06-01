@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p> </p>
 
-<h2 id="What_is_JavaScript.3F" name="What_is_JavaScript.3F">什麼是 JavaScript？</h2>
+<h2 id="What_is_JavaScript.3F">什麼是 JavaScript？</h2>
 
 <p>JavaScript 是個跨平台、物件導向、輕小型的腳本語言。作為獨立語言並不實用，而是為了能簡單嵌入其他產品和應用程式（例如：網頁瀏覽器）而設計。JavaScript 若寄宿在主體環境（Host environment）時，可以與環境中的物件 （Object）相連，並以程式控制這些物件。</p>
 
@@ -29,19 +29,19 @@ translation_of: Web/JavaScript/Guide/Introduction
  <li>用戶端 - JavaScript 藉由提供物件來擴增核心語言達到控制網頁瀏覽器和其文件物件模型（DOM，Document Object Model）的目的。</li>
 </ul>
 
-<p style="margin-left: 40px;">舉例來說：用戶端的擴充套件允許某個應用程式將元素放置在 HTML 的表單上及對使用者的操作（例如：滑鼠點選、表單輸入、頁面導覽等）做出回應。</p>
+<p>舉例來說：用戶端的擴充套件允許某個應用程式將元素放置在 HTML 的表單上及對使用者的操作（例如：滑鼠點選、表單輸入、頁面導覽等）做出回應。</p>
 
 <ul>
  <li>伺服器端 - JavaScript 藉由提供和伺服器上執行 JavaScript 相關的物件來擴增核心語言。</li>
 </ul>
 
-<p style="margin-left: 40px;">舉例來說：伺服器端的擴充套件允許某個應用程式和相關的資料庫交換訊息、對一個其他應用程式的呼叫提供連續性的資訊、在伺服器上執行檔案操作。</p>
+<p>舉例來說：伺服器端的擴充套件允許某個應用程式和相關的資料庫交換訊息、對一個其他應用程式的呼叫提供連續性的資訊、在伺服器上執行檔案操作。</p>
 
 <p>透過 JavaScript 的 LiveConnect 功能，你可以使 Java 和 JavaScript 的程式碼彼此相連。在 JavaScript 的程式碼中，你可以實例化（instantiate）Java 的物件並存取那些物件的公有方法（public methods）及欄位（fields）。在 Java 的程式碼中，你可以存取 JavaScript 的物件、屬性（properties）及方法（methods）。</p>
 
 <p>Netscape 公司發明了 JavaScript ，而 JavaScript 的第一次使用正是在 Netscape 自家的瀏覽器上。</p>
 
-<h2 id="JavaScript_and_Java" name="JavaScript_and_Java">JavaScript 與 Java</h2>
+<h2 id="JavaScript_and_Java">JavaScript 與 Java</h2>
 
 <p>JavaScript 與 Java 在某些方面非常相似但本質上卻是不同的。 JavaScript 雖然和 Java 類似，卻沒有 Java 的靜態定型（static typing）及強型態確認（strong type checking）特性。 JavaScript 遵從大部份的 Java 表達式語法、命名傳統和基本的流程控制概念，這特性同時也是為何要將 LiveScript 重新命名為 JavaScript 的原因。</p>
 
@@ -99,13 +99,13 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>更多關於 JavaScript 和 Java 的差異比較，請參見 <a href="/zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model" title="JavaScript/Guide/Details of the Object Model">Details of the Object Model</a> 。</p>
 
-<h2 id="JavaScript_and_the_ECMAScript_Specification" name="JavaScript_and_the_ECMAScript_Specification">JavaScript 與 ECMAScript 規格</h2>
+<h2 id="JavaScript_and_the_ECMAScript_Specification">JavaScript 與 ECMAScript 規格</h2>
 
 <p>Netscape 公司發明了 JavaScript ，而 JavaScript 的第一次應用正是在 Netscape 瀏覽器。然而，Netscape 後來和 <a class="external" href="http://www.ecma-international.org/">Ecma International</a>（一個致力於將資訊及通訊系統標準化的歐洲組織，前身為 ECMA - 歐洲計算機製造商協會）合作，開發一個基於 JavaScript 核心並同時兼具標準化與國際化的程式語言，這個經過標準化的 JavaScript 便稱作 ECMAScript ，和 JavaScript 有著相同的應用方式並支援相關標準。各個公司都可以使用這個開放的標準語言去開發 JavaScript 的專案。ECMAScript 標準記載於 ECMA-262 這個規格中。</p>
 
 <p>ECMA-262 標準同時也經過 <a class="external" href="http://www.iso.ch/">ISO</a>（國際標準化組織）認証，成為 ISO-16262 標準。你可以在 Mozilla 的網站上找到 <a class="external" href="http://www-archive.mozilla.org/js/language/E262-3.pdf" title="http://www-archive.mozilla.org/js/language/E262-3.pdf">PDF版本的ECMA-262</a>，但這板本已過期；你也可以在<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm"> Ecma International 的網站</a> 找到這個規格。 ECMAScript 規格中並沒有描述已經被 W3C（全球資訊網協會）標準化的文件物件模型（DOM）。文件物件模型定義了 HTML 文件物件（document objects）和腳本之間運作的方式。</p>
 
-<h3 id="Relationship_between_JavaScript_Versions_and_ECMAScript_Editions" name="Relationship_between_JavaScript_Versions_and_ECMAScript_Editions">JavaScript 版本與 ECMAScript 版本之間的關係</h3>
+<h3 id="Relationship_between_JavaScript_Versions_and_ECMAScript_Editions">JavaScript 版本與 ECMAScript 版本之間的關係</h3>
 
 <p>ECMAScript 規格（ECMA-262）在 Netscape 和 Ecma International 的密切合作下產生。下表描述了 JavaScript 的版本和 ECMAScript 的版本之間的關係。</p>
 
@@ -115,7 +115,7 @@ translation_of: Web/JavaScript/Guide/Introduction
  <caption> </caption>
  <thead>
   <tr>
-   <th scope="row" style="width: 9em;">JavaScript 的版本</th>
+   <th scope="row">JavaScript 的版本</th>
    <th scope="col">和 ECMAScript 版本的關係</th>
   </tr>
  </thead>
@@ -154,7 +154,7 @@ translation_of: Web/JavaScript/Guide/Introduction
  </tbody>
 </table>
 
-<div class="note">注意：ECMA-262 第2版是由已修正錯誤的第1版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1版</div>
+<div class="notecard note"><p><strong>備註：</strong>ECMA-262 第2版是由已修正錯誤的第1版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1版</p></div>
 
 <p><a href="/zh-TW/docs/JavaScript/Reference" title="JavaScript/Reference">JavaScript Reference</a> 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。</p>
 
@@ -162,13 +162,13 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>JavaScript 不僅相容於 ECMAScript 更提供了額外的特性。</p>
 
-<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification" name="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript 使用說明 v.s ECMAScript 規格</h3>
+<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript 使用說明 v.s ECMAScript 規格</h3>
 
 <p>ECMAScript 規格是執行 ECMAScript 所必須的條件，當你想判斷某個 JavaScript 的特性是否在其他 ECMAScript 實作中有被支援時，ECMAScript 規格是非常有用的。如果你打算撰寫 JavaScript 程式碼並在程式碼中使用僅有 ECMAScript 所支援的特性，那你可能需要查閱一下 ECMAScript 規格。</p>
 
 <p>ECMAScript 文件並不是為了幫助腳本程式設計師而撰寫，如果想知道撰寫腳本的相關資訊，請參考 JavaScript 使用說明。</p>
 
-<h3 id="JavaScript_and_ECMAScript_Terminology" name="JavaScript_and_ECMAScript_Terminology">JavaScript 和 ECMAScript 的專門術語</h3>
+<h3 id="JavaScript_and_ECMAScript_Terminology">JavaScript 和 ECMAScript 的專門術語</h3>
 
 <p>ECMAScript 規格使用的術語和語法對於 JavaScript 的程式設計師來說可能不是那麼的親切。雖然語言的描述在 ECMAScript 中可能會有所不同，但語言本身的性質仍然是不變的。JavaScript 支援所有在 ECMAScript 規格中被描述到的功能。</p>
 

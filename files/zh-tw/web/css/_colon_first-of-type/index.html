@@ -19,7 +19,7 @@ p:first-of-type {
 }</pre>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>附註</strong></span>: 在初始定義中，被選取的節點必須擁有父節點。從選取器層級4（Selectors Level 4）開始已經不再有這個限制了。</p>
+<p><strong>附註</strong>: 在初始定義中，被選取的節點必須擁有父節點。從選取器層級4（Selectors Level 4）開始已經不再有這個限制了。</p>
 </div>
 
 <h2 id="語法">語法</h2>
@@ -52,7 +52,7 @@ p:first-of-type {
 
 <p>這個範例展示了當沒有指定一般選擇器（simple selector）時，通用選擇器是如何被預判。</p>
 
-<p id="HTML">首先來看 HTML：</p>
+<p>首先來看 HTML：</p>
 
 <pre class="brush: html">&lt;div&gt;
   &lt;span&gt;This `span` is first!&lt;/span&gt;
@@ -64,93 +64,23 @@ p:first-of-type {
 &lt;/div&gt;
 </pre>
 
-<p id="CSS">接著是 CSS：</p>
+<p>接著是 CSS：</p>
 
 <pre class="brush: css">div :first-of-type {
   background-color: lime;
 }</pre>
 
-<p id="Result">會有這樣的效果:</p>
+<p>會有這樣的效果:</p>
 
 <p>{{EmbedLiveSample('Example_2_Assumed_universal_selector','100%', '120')}}</p>
 
 <h2 id="特定規格">特定規格</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">規格</th>
-   <th scope="col">狀態</th>
-   <th scope="col">附註</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>配對節點不需要具有父節點。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>初始定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>9.0</td>
-   <td>10.0</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.first-of-type")}}
 
 <h2 id="參見">參見</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/AudioNode
 ---
 <div>{{ APIRef("Web Audio API") }} {{SeeCompatTable}}</div>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/5081/WebAudioBasics.png" style="float: left; height: 260px; margin: 10px; width: 355px;"><strong><code>AudioNode</code></strong><strong> </strong>接口是一个处理音频的通用模块, 比如一个音频源 (e.g. 一个 HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} 元素), 一个音频地址或者一个中间处理模块 (e.g. 一个过滤器如 {{domxref("BiquadFilterNode")}}, 或一个音量控制器如 {{domxref("GainNode")}}).</p>
+<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/5081/WebAudioBasics.png"><strong><code>AudioNode</code></strong><strong> </strong>接口是一个处理音频的通用模块, 比如一个音频源 (e.g. 一个 HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} 元素), 一个音频地址或者一个中间处理模块 (e.g. 一个过滤器如 {{domxref("BiquadFilterNode")}}, 或一个音量控制器如 {{domxref("GainNode")}}).</p>
 
 <p><code>一个AudioNode</code> 既有输入也有输出。输入与输出都有一定数量的通道。<em>只有一个输出而没有输入的</em> <code>AudioNode</code> 叫做音频源。</p>
 
@@ -282,86 +282,7 @@ translation_of: Web/API/AudioNode
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>channelCount</code> <code>channelCountMode</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} (?)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>connect</code><code>(AudioParam)</code></td>
-   <td>{{CompatNo}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>channelCount</code><br>
-    <code>channelCountMode</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} (?)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>connect</code><code>(AudioParam)</code></td>
-   <td>{{CompatNo}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioNode")}}
 
 <h2 id="相关内容">相关内容</h2>
 

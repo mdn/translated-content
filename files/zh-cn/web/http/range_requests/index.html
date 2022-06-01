@@ -1,5 +1,5 @@
 ---
-title: HTTP请求范围
+title: HTTP 请求范围
 slug: Web/HTTP/Range_requests
 tags:
   - 分块传输
@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Range_requests
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTTP 协议范围请求允许服务器只发送 HTTP 消息的一部分到客户端。范围请求在传送大的媒体文件，或者与文件下载的断点续传功能搭配使用时非常有用。</p>
+<p>HTTP 协议范围请求允许服务器只发送 HTTP 消息的一部分到客户端。范围请求在传送大的媒体文件，或者与文件下载的断点续传功能搭配使用时非常有用。</p>
 
 <h2 id="检测服务器端是否支持范围请求">检测服务器端是否支持范围请求</h2>
 
@@ -64,11 +64,11 @@ Content-Length: 1024
 
 <h3 id="多重范围">多重范围</h3>
 
-<p>Range头部也支持一次请求文档的多个部分。请求范围用一个逗号分隔开。</p>
+<p>Range 头部也支持一次请求文档的多个部分。请求范围用一个逗号分隔开。</p>
 
 <pre>curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"</pre>
 
-<p>服务器返回206 Partial Content状态码和Content-Type：multipart/byteranges; boundary=3d6b6a416f9b5头部，Content-Type：multipart/byteranges表示这个响应有多个byterange。每一部分byterange都有他自己的Centen-type头部和Content-Range，并且使用boundary参数对body进行划分。</p>
+<p>服务器返回 206 Partial Content 状态码和 Content-Type：multipart/byteranges; boundary=3d6b6a416f9b5 头部，Content-Type：multipart/byteranges 表示这个响应有多个 byterange。每一部分 byterange 都有他自己的 Content-type 头部和 Content-Range，并且使用 boundary 参数对 body 进行划分。</p>
 
 <pre>HTTP/1.1 206 Partial Content
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
@@ -103,7 +103,7 @@ eta http-equiv="Content-type" content="text/html; c
 
 <ul>
  <li>在请求成功的情况下，服务器会返回  {{HTTPStatus("206")}} <code>Partial Content</code> 状态码。</li>
- <li>在请求的范围越界的情况下（范围值超过了资源的大小），服务器会返回 {{HTTPStatus("416")}} <code>Requested Range Not Satisfiable</code> （请求的范围无法满足） 状态码。</li>
+ <li>在请求的范围越界的情况下（范围值超过了资源的大小），服务器会返回 {{HTTPStatus("416")}} <code>Requested Range Not Satisfiable</code> （请求的范围无法满足）状态码。</li>
  <li>在不支持范围请求的情况下，服务器会返回 {{HTTPStatus("200")}} <code>OK</code> 状态码。</li>
 </ul>
 

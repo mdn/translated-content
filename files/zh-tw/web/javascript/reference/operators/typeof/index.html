@@ -9,9 +9,9 @@ translation_of: Web/JavaScript/Reference/Operators/typeof
 
 <h2 id="摘要">摘要</h2>
 
-<p style="line-height: 22px;"><span style="line-height: 1.572;">typeof 運算子會傳回一個字串值, 指出未經運算 (unevaluated) 的運算元所代表的型別。</span></p>
+<p>typeof 運算子會傳回一個字串值, 指出未經運算 (unevaluated) 的運算元所代表的型別。</p>
 
-<table class="standard-table" style="line-height: 22px;">
+<table class="standard-table">
  <thead>
   <tr>
    <th colspan="2" scope="col">運算子</th>
@@ -31,15 +31,15 @@ translation_of: Web/JavaScript/Reference/Operators/typeof
 
 <h2 id="語法">語法</h2>
 
-<p style="line-height: 22px;"><code style="font-size: 14px;">typeof</code> 之後面跟著它的唯一運算元:</p>
+<p><code>typeof</code> 之後面跟著它的唯一運算元:</p>
 
-<pre style="font-size: 14px;"><code style="font-size: 14px;">typeof <code style="font-size: 14px;"><em>operand</em></code></code></pre>
+<pre><code>typeof <code><em>operand</em></code></code></pre>
 
-<h2 id="Parameters" name="Parameters" style="margin: 0px 0px 0.8em; padding: 0px;">參數</h2>
+<h2 id="Parameters">參數</h2>
 
-<div><code style="line-height: inherit; font-size: 14px;"><em>operand</em></code><span style="line-height: inherit;"> 表示式代表傳入的物件或原始型別。</span></div>
+<div><code><em>operand</em></code> 表示式代表傳入的物件或原始型別。</div>
 
-<h2 id="Description" name="Description">說明</h2>
+<h2 id="Description">說明</h2>
 
 <p>下表摘要列出了 <code>typeof 可能的傳回值</code>:</p>
 
@@ -144,8 +144,8 @@ typeof Math.sin === 'function';
 
 <p>這個問題已計畫<a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">在下一版 ECMAScript 予以修正</a> (會以 opt-in 方式提供). 屆時它將會做出如 <code>typeof null === 'null'</code> 的正確回傳結果。</p>
 
-<div class="note">
-<p>註: 此修正計畫已被拒絕</p>
+<div class="notecard note">
+<p><strong>備註：</strong>此修正計畫已被拒絕</p>
 </div>
 
 <h3 id="正規表示式_(Regular_expressions)">正規表示式 (Regular expressions)</h3>
@@ -162,15 +162,15 @@ typeof /s/ === 'object'; // Firefox 5+ ...    // 符合 ECMAScript 5.1
 
 <p>在 IE 6, 7 和 8, <code>typeof alert === 'object'</code></p>
 
-<div class="note">
-<p>註: 這並不怪異。這是實情。在許多較舊的 IE 中, 主機端物件的確是物件, 而非函數</p>
+<div class="notecard note">
+<p><strong>備註：</strong>這並不怪異。這是實情。在許多較舊的 IE 中, 主機端物件的確是物件, 而非函數</p>
 </div>
 
 <h2 id="規格">規格</h2>
 
 <p><a class="external" href="http://ecma-international.org/ecma-262/5.1/#sec-11.4.3">ECMA-262 section 11.4.3</a></p>
 
-<h2 id="See_also" name="See_also">參照</h2>
+<h2 id="See_also">參照</h2>
 
 <ul>
  <li><a href="/en-US/docs/JavaScript/Reference/Operators/instanceof" title="/en-US/docs/JavaScript/Reference/Operators/instanceof">instanceof</a></li>

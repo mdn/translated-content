@@ -74,17 +74,17 @@ En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/@media
 
 ```html
 <div class="box">
-  <p>Voici une boîte qui utilisera vos préférences de couleurs.</p>
+  <p>Voici une boîte qui utilisera vos préférences de couleurs.</p>
 </div>
 
 <div class="box forced">
-  <p>Voici une boîte qui conservera les couleurs définies par le site.</p>
+  <p>Voici une boîte qui conservera les couleurs définies par le site.</p>
 </div>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("preserving_colors", 640, 260)}}
+{{EmbedLiveSample("Exemples", 640, 260)}}
 
 ![L'exemple présenté ci-dessus affiche la première boîte avec un arrière-plan noir et la seconde avec un arrière-plan gris définit en CSS.](windows-high-contrast.jpg)
 

@@ -7,7 +7,7 @@ translation_of: Web/HTTP/Headers/Trailer
 
 L'en-tête **Trailer** permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages pour fournir des métadonnées supplémentaires qui peuvent être générées de manière dynamique pendant que le corps du message sera envoyé, il peut s'agir de la vérification de l'intégrité du message, une signature numérique, ou encore un statut après le traitement.
 
-> **Note :** L'en-tête {{HTTPHeader("TE")}} de la requête devra être définie en tant que "trailers" pour autoriser les champs de type "trailer".
+> **Note :** L'en-tête {{HTTPHeader("TE")}} de la requête devra être définie en tant que "trailers" pour autoriser les champs de type "trailer".
 
 <table class="properties">
   <tbody>

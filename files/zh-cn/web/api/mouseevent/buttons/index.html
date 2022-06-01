@@ -7,7 +7,7 @@ translation_of: Web/API/MouseEvent/buttons
 
 <div>只读属性<strong><code>MouseEvent.buttons</code></strong><code>指示事件触发时哪些鼠标按键被按下。</code></div>
 
-<div></div>
+
 
 <p>每一个按键都用一个给定的数（见下文）表示。如果同时多个按键被按下，buttons 的值为各键对应值做与计算（+）后的值。例如，如果右键（2）和滚轮键（4）被同时按下，buttons 的值为 2 + 4 = 6。</p>
 
@@ -52,67 +52,7 @@ translation_of: Web/API/MouseEvent/buttons
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>43<sup>[2]</sup></td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko supports the <code>buttons</code> attribute on Windows, Linux (GTK), and Mac OS with the following restrictions:</p>
-
-<ul>
- <li>On Windows, if you install a mouse driver, and its utility software allows you to customize button actions (e.g., IntelliPoint and SetPoint), the middle (wheel) button, the 4th button, and the 5th button might not be set, even when they are pressed.</li>
- <li>On Linux (GTK), the 4th button and the 5th button are not supported. In addition, a mouseup event always has the releasing button information in this attribute value.</li>
- <li>On Mac OS X 10.5, the buttons attribute always returns 0 because there is no platform API for implementing this feature.</li>
-</ul>
-
-<p>[2] This feature got implemented in <a href="https://crbug.com/276941">bug 276941</a>.</p>
+{{Compat("api.MouseEvent.buttons")}}
 
 <h2 id="See_also">See also</h2>
 

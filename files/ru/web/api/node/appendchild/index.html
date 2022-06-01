@@ -24,7 +24,7 @@ translation_of: Web/API/Node/appendChild
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var child = <em>element</em>.appendChild(<em>child</em>);</pre>
+<pre class="syntaxbox">var child = <em>element</em>.appendChild(<em>child</em>);</pre>
 
 <ul>
  <li><code>element</code> родительский <a href="/en-US/docs/DOM/element" title="/en-US/docs/DOM/element">элемент</a>.</li>
@@ -39,13 +39,13 @@ translation_of: Web/API/Node/appendChild
 
 <p>Цепочка может работать не так, как ожидалось, из-за того, что <code>appendChild()</code> возвращает дочерний элемент:</p>
 
-<pre class="brush: js notranslate">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
+<pre class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
 
 <p>Присваивает переменной <code>aBlock</code> элемент <code>&lt;b&gt;&lt;/b&gt;</code>, а не <code>&lt;block&gt;&lt;/block&gt;</code>, как вы могли ожидать.</p>
 
 <h2 id="Example">Пример</h2>
 
-<pre class="brush:js notranslate">// Создаём новый элемент параграфа, и вставляем в конец document body
+<pre class="brush:js">// Создаём новый элемент параграфа, и вставляем в конец document body
 var p = document.createElement("p");
 document.body.appendChild(p);</pre>
 

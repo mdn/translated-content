@@ -46,7 +46,7 @@ translation_of: Web/API/Storage
 
 <p>В данном примере мы получаем доступ к объекту Storage вызывая localStorage. Для начала мы проверяем содержит ли local storage элементы данных используя <code>!localStorage.getItem('bgcolor')</code>. Если да, мы вызываем функцию <code>setStyles()</code> которая получает элементы данных используя {{domxref("localStorage.getItem()")}} и использует их значения для обновления стилей на странице. Если нет, мы вызывает другую функцию, <code>populateStorage()</code>, которая использует {{domxref("localStorage.setItem()")}} что бы установить значения для элементов,  потом вызываем <code>setStyles()</code>.</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -80,24 +80,11 @@ function setStyles() {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Storage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

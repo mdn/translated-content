@@ -21,7 +21,7 @@ translation_of: Web/API/Console
 
 <pre class="brush: js">console.log("Failed to open the specified link")</pre>
 
-<p>This page documents the {{anch("Methods")}} available on the <code>Console</code> object and gives a few {{anch("Usage")}} examples.</p>
+<p>This page documents the <a href="#methods">Methods</a> available on the <code>Console</code> object and gives a few <a href="#usage">Usage</a> examples.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -166,19 +166,13 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <div>The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.</div>
 
-<div> </div>
-
 <div><img alt="" src="https://mdn.mozillademos.org/files/12527/CSS-styling.png" style="display: block; margin: 0 auto;"></div>
-
-<div> </div>
 
 <div class="note">
 <p><strong>Note</strong>: Quite a few CSS properties are supported by this styling; you should experiment and see which ones prove useful.</p>
 </div>
 
-<div> </div>
-
-<div>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</div>
+<h3 id="using_groups_in_the_console">Using groups in the console</h3> 
 
 <p>You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.</p>
 
@@ -202,7 +196,7 @@ console.debug("Back to the outer level");
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
 
-<div>{{h3_gecko_minversion("Timers", "10.0")}}</div>
+<h3 id="timers">Timers</h3>
 
 <p>In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the <code>console</code> object. To start a timer, call the <code>console.time</code><code>()</code> method, giving it a name as the only parameter. To stop the timer, and to get the elapsed time in milliseconds, just call the <code>console.timeEnd()</code> method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.</p>
 
@@ -241,26 +235,11 @@ foo();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Console API')}}</td>
-   <td>{{Spec2('Console API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
-<p>{{Compat("api.Console")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Notes">Notes</h2>
 

@@ -14,12 +14,12 @@ translation_of: Web/HTML/Element/input/tel
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}}  <code><strong>"tel"</strong></code> 类型的元素用于让用户输入和编辑电话号码。 Unli不同于<code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。</span></p>
+<p>{{HTMLElement("input")}} <code><strong>"tel"</strong></code> 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于<code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。</p>
 
-<p>尽管 <code>tel</code> 类型的输入在功能上和 <code>text</code> 输入一致, 但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。</p>
+<p>尽管 <code>tel</code> 类型的输入在功能上和 <code>text</code> 输入一致，但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。</p>
 
 <div class="note">
-<p>不支持 <code>"tel"</code> 类型的浏览器会默认使用 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 类型输入.</p>
+<p>不支持 <code>"tel"</code> 类型的浏览器会默认使用 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 类型输入。</p>
 </div>
 
 <div id="Basic_example">
@@ -31,7 +31,7 @@ translation_of: Web/HTML/Element/input/tel
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a telephone number, or empty</td>
   </tr>
   <tr>
@@ -59,13 +59,13 @@ translation_of: Web/HTML/Element/input/tel
 
 <h2 id="使用_tel_输入">使用 tel 输入</h2>
 
-<p>电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，您都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的“一刀切”解决方案是不实际的。</p>
+<p>电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，您都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的 “一刀切” 解决方案是不实际的。</p>
 
-<p>幸运的是，您可以考虑自己网站的要求，并自行实施适当的验证级别。有关详细信息，请参阅下面的 {{anch("Validation")}}</p>
+<p>幸运的是，您可以考虑自己网站的要求，并自行实施适当的验证级别。有关详细信息，请参阅下面的 <a href="#验证">验证</a></p>
 
 <h3 id="自定义键盘">自定义键盘</h3>
 
-<p><code>&lt;input type="tel"&gt;</code> 主要优势是它可以在移动浏览器显示一个特殊的电话号码输入键盘, For 例如，这是键盘在几种设备上的外观。</p>
+<p><code>&lt;input type="tel"&gt;</code> 主要优势是它可以在移动浏览器显示一个特殊的电话号码输入键盘，For 例如，这是键盘在几种设备上的外观。</p>
 
 <table class="standard-table">
  <caption>移动设备上自定义键盘的示例。</caption>
@@ -83,9 +83,9 @@ translation_of: Web/HTML/Element/input/tel
  </tbody>
 </table>
 
-<h3 id="一个简单的tel输入">一个简单的tel输入</h3>
+<h3 id="一个简单的tel输入">一个简单的 tel 输入</h3>
 
-<p>在最基本的形式中，tel输入可以这样实现：</p>
+<p>在最基本的形式中，tel 输入可以这样实现：</p>
 
 <pre class="brush: html">&lt;label for="telNo"&gt;Phone number:&lt;/label&gt;
 &lt;input id="telNo" name="telNo" type="tel"&gt;</pre>
@@ -96,7 +96,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <h3 id="占位字符">占位字符</h3>
 
-<p>有时候提供关于输入数据应该采用什么形式的上下文提示是很有帮助的。如果页面设计没有为每个{{HTMLElement("input")}}页面提供描述性标签，这可能是特别重要的 。所以需要占位符。一个占位符是一个值，它通过提供一个有效值的例子来演示值的形式，当元素的值是“”时，它显示在编辑框中。一旦数据输入框中，占位符消失;如果该框被清空，占位符重新出现。</p>
+<p>有时候提供关于输入数据应该采用什么形式的上下文提示是很有帮助的。如果页面设计没有为每个{{HTMLElement("input")}}页面提供描述性标签，这可能是特别重要的 。所以需要占位符。一个占位符是一个值，它通过提供一个有效值的例子来演示值的形式，当元素的值是 “” 时，它显示在编辑框中。一旦数据输入框中，占位符消失;如果该框被清空，占位符重新出现。</p>
 
 <p>在这里，我们有<code>"tel"</code> 输入的占位符<code>"123-4567-8901"</code>。请注意占位符如何消失并在编辑字段内容时重新出现。</p>
 
@@ -111,7 +111,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <h4 id="物理输入元素大小">物理输入元素大小</h4>
 
-<p>可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的物理大小, 使用它,你可以指定输入框一次可显示的字符数,在下面的例子中 <code>tel</code> 编辑框是20个字符的宽度:</p>
+<p>可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的物理大小，使用它，你可以指定输入框一次可显示的字符数，在下面的例子中 <code>tel</code> 编辑框是 20 个字符的宽度：</p>
 
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        size="20"&gt;</pre>
@@ -120,9 +120,9 @@ translation_of: Web/HTML/Element/input/tel
 
 <h4 id="元素值的长度">元素值的长度</h4>
 
-<p><code>size</code> 和电话号码的长度限制是分开的, 你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入电话的最小长度;同样使用 {{htmlattrxref("maxlength", "input")}} 设置输入电话号码的最大长度.</p>
+<p><code>size</code> 和电话号码的长度限制是分开的， 你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入电话的最小长度;同样使用 {{htmlattrxref("maxlength", "input")}} 设置输入电话号码的最大长度。</p>
 
-<p>下面的示例创建了一个20个字符的电话号码输入框，要求内容不少于9个字符且不超过14个字符。</p>
+<p>下面的示例创建了一个 20 个字符的电话号码输入框，要求内容不少于 9 个字符且不超过 14 个字符。</p>
 
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        size="20" minlength="9" maxlength="14"&gt;</pre>
@@ -130,12 +130,12 @@ translation_of: Web/HTML/Element/input/tel
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 上述属性确实会影响 {{anch("validation", "Validation")}} — 如果值的长度小于9个字符，或者大于14个，上述示例的输入将被视为无效。甚至不会让你输入超过最大长度的值。</p>
+<p><strong>注意</strong>: 上述属性确实会影响 <a href="#验证">验证</a> — 如果值的长度小于 9 个字符，或者大于 14 个，上述示例的输入将被视为无效。甚至不会让你输入超过最大长度的值。</p>
 </div>
 
 <h3 id="提供默认选项">提供默认选项</h3>
 
-<p>与往常一样, 你可以通过设置其 {{htmlattrxref("value", "input")}} 属性为<code>"tel"</code>输入框提供默认值:</p>
+<p>与往常一样，你可以通过设置其 {{htmlattrxref("value", "input")}} 属性为<code>"tel"</code>输入框提供默认值：</p>
 
 <div id="Default_value">
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
@@ -171,7 +171,7 @@ translation_of: Web/HTML/Element/input/tel
 <p>正如我们之前谈到的那样，为电话号码提供一种通用的客户端验证解决方案是相当困难的。所以，我们能做些什么？让我们考虑一些选项。</p>
 
 <div class="warning">
-<p><strong>重要</strong>: HTML表单验证不能替代服务器端脚本，以确保输入的数据在被允许进入数据库之前是正确的格式。对于有些人来说，调整html是非常容易的，这样他们就可以绕过验证，或者完全删除它。也有人可能完全绕过你的html，直接提交数据到你的服务器。如果您的服务器端代码无法验证接收到的数据，那么当格式不正确的数据（或数据太大，类型错误等等）输入到数据库时，可能会导致灾难。</p>
+<p><strong>重要</strong>: HTML 表单验证不能替代服务器端脚本，以确保输入的数据在被允许进入数据库之前是正确的格式。对于有些人来说，调整 html 是非常容易的，这样他们就可以绕过验证，或者完全删除它。也有人可能完全绕过你的 html，直接提交数据到你的服务器。如果您的服务器端代码无法验证接收到的数据，那么当格式不正确的数据（或数据太大，类型错误等等）输入到数据库时，可能会导致灾难。</p>
 </div>
 
 <h3 id="要求电话号码必填">要求电话号码必填</h3>
@@ -422,60 +422,7 @@ input:valid+span:after {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>10.62</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>iOS WebKit<br>
-    <sup><sub>(Safari/Chrome/Firefox/etc)</sub></sup></th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.input.input-tel")}}
 
 <h2 id="参见">参见</h2>
 

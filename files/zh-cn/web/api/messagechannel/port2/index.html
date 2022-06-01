@@ -21,7 +21,7 @@ translation_of: Web/API/MessageChannel/port2
 
 <h2 id="示例">示例</h2>
 
-<p>如下代码所示，通过{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}}构造函数创建了一个新的通道。当IFrame加载完毕，我们使用{{domxref("MessagePort.postMessage")}}将一条消息以及port2传递给IFrame。handleMessage处理程序响应从IFrame发回的消息（使用 {{domxref("MessagePort.onmessage")}}），将其放入段落中。{{domxref("MessageChannel.port1")}}已经监听，以检测消息何时到达。</p>
+<p>如下代码所示，通过{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}}构造函数创建了一个新的通道。当 IFrame 加载完毕，我们使用{{domxref("MessagePort.postMessage")}}将一条消息以及 port2 传递给 IFrame。handleMessage 处理程序响应从 IFrame 发回的消息（使用 {{domxref("MessagePort.onmessage")}}），将其放入段落中。{{domxref("MessageChannel.port1")}}已经监听，以检测消息何时到达。</p>
 
 <pre class="brush: js">var channel = new MessageChannel();
 var para = document.querySelector('p');
@@ -40,7 +40,7 @@ function handleMessage(e) {
   para.innerHTML = e.data;
 }   </pre>
 
-<p>有关完整的运行示例，请参阅我们在GitHub的 <a class="external external-icon" href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a>  (<a class="external external-icon" href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>).</p>
+<p>有关完整的运行示例，请参阅我们在 GitHub 的 <a class="external external-icon" href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a>  (<a class="external external-icon" href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -61,81 +61,7 @@ function handleMessage(e) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0</td>
-   <td>11.5</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MessageChannel.port2")}}
 
 <h2 id="See_also">See also</h2>
 

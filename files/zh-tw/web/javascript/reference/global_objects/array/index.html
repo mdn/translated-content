@@ -101,7 +101,7 @@ console.log(removedItems);
 // ["Strawberry", "<code>Mango</code>"]
 </pre>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox">[<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 new Array(<var>element0</var>, <var>element1</var>[, ...[, <var>elementN</var>]])
@@ -111,19 +111,18 @@ new Array(<var>arrayLength</var>)</pre>
 
 <dl>
  <dt><code>element<em>N</em></code></dt>
- <dd>除了只傳遞一個參數給 <code>Array</code> 構造函數，且該參數為一個數字的情況（詳見下方的 arrayLength 參數），JavaScript 陣列會以傳入的元素進行初始化。</dd>
- <dd>請注意，這種特殊情況僅適用於以 <code>Array </code>構造函數建立的 JavaScript 陣列，而不適用於以括號語法建立的陣列常值（Array Literals）。</dd>
+ <dd>除了只傳遞一個參數給 <code>Array</code> 構造函數，且該參數為一個數字的情況（詳見下方的 arrayLength 參數），JavaScript 陣列會以傳入的元素進行初始化。請注意，這種特殊情況僅適用於以 <code>Array </code>構造函數建立的 JavaScript 陣列，而不適用於以括號語法建立的陣列常值（Array Literals）。</dd>
  <dt><code>arrayLength</code></dt>
- <dd>如果傳遞給 <code>Array</code> 構造函數的唯一參數是 0 和 2<sup>32</sup>-1（含）之間的整數，將回傳一個新的 JavaScript 陣列，其長度被設定為這個數字。如果參數是任何其他數值，將拋出 {{jsxref("RangeError")}} 異常。</dd>
+ <dd>如果傳遞給 <code>Array</code> 構造函數的唯一參數是 0 和 2^32 - 1（含）之間的整數，將回傳一個新的 JavaScript 陣列，其長度被設定為這個數字。如果參數是任何其他數值，將拋出 {{jsxref("RangeError")}} 異常。</dd>
 </dl>
 
-<h2 id="Description" name="Description">說明</h2>
+<h2 id="Description">說明</h2>
 
 <p>Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合您的用途，您可能會想使用型別陣列（typed arrays）。</p>
 
 <p>有些人認為即便會發生警告，仍然<a class="external" href="http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/">不應該使用關聯陣列</a>，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。您可參考<a class="external" href="http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html">輕量級 JavaScript 字典</a>當中的範例。</p>
 
-<h3 id="Accessing_array_elements" name="Accessing_array_elements">存取陣列元素</h3>
+<h3 id="Accessing_array_elements">存取陣列元素</h3>
 
 <p>JavaScript 陣列是 zero-indexed：陣列元素的索引值編排從 0 開始，而最後一個元素的索引值等同於陣列的 {{jsxref("Array.length", "length")}} 屬性減 1。</p>
 
@@ -166,7 +165,7 @@ renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 console.log(promise['var']);
 </pre>
 
-<h3 id="Relationship_between_length_and_numerical_properties" name="Relationship_between_length_and_numerical_properties"><code>length</code> 與數值屬性的關係</h3>
+<h3 id="Relationship_between_length_and_numerical_properties"><code>length</code> 與數值屬性的關係</h3>
 
 <p>JavaScript 陣列的 {{jsxref("Array.length", "length")}} 屬性和其數值屬性相關。許多陣列的方法被呼叫時會參考 {{jsxref("Array.length", "length")}} 屬性的值（例如 {{jsxref("Array.join", "join")}}、{{jsxref("Array.slice", "slice")}}、{{jsxref("Array.indexOf", "indexOf")}} 等）。而有另一些方法則會去改變 {{jsxref("Array.length", "length")}} 屬性的值，如 {{jsxref("Array.push", "push")}}、{{jsxref("Array.splice", "splice")}}。</p>
 
@@ -202,7 +201,7 @@ console.log(fruits.length); // 2
 <p>在 {{jsxref("Array.length")}} 頁面裡有進一步解釋。</p>
 </div>
 
-<h3 id="Creating_an_array_using_the_result_of_a_match" name="Creating_an_array_using_the_result_of_a_match">使用 match 回傳結果來建立陣列</h3>
+<h3 id="Creating_an_array_using_the_result_of_a_match">使用 match 回傳結果來建立陣列</h3>
 
 <p>在字串與正規表示式之間的比對結果會產生一個 javascript 陣列。此陣列內含關於比對資訊的屬性與元素。 這樣的陣列由{{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, 和 {{jsxref("String.replace")}} 所產生。參考以下範例和表格，會有助於說明這些屬性和元素：</p>
 
@@ -216,12 +215,12 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 <p>這項比對結果的屬性與元素參考如下：</p>
 
-<table class="fullwidth-table">
+<table>
  <tbody>
   <tr>
-   <td class="header">屬性/元素</td>
-   <td class="header">說明</td>
-   <td class="header">範例</td>
+   <th>屬性/元素</th>
+   <th>說明</th>
+   <th>範例</th>
   </tr>
   <tr>
    <td><code>input</code></td>
@@ -247,7 +246,7 @@ var myArray = myRe.exec('cdbBdbsbz');
  </tbody>
 </table>
 
-<h2 id="Properties" name="Properties">屬性</h2>
+<h2 id="Properties">屬性</h2>
 
 <dl>
  <dt>Array.length</dt>
@@ -258,7 +257,7 @@ var myArray = myRe.exec('cdbBdbsbz');
  <dd>可加入屬性至所有陣列物件。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{jsxref("Array.from()")}}</dt>
@@ -269,32 +268,32 @@ var myArray = myRe.exec('cdbBdbsbz');
  <dd>用可變數量的引數來建立新的 <code>Array</code> 實例，不論引數的數量或型別。</dd>
 </dl>
 
-<h2 id="Array_instances" name="Array_instances"><code>Array</code> 實例</h2>
+<h2 id="Array_instances"><code>Array</code> 實例</h2>
 
 <p>所有的陣列實例都繼承自 {{jsxref("Array.prototype")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。</p>
 
-<h3 id="Methods_of_array_instances" name="Methods_of_array_instances">屬性</h3>
+<h3 id="Methods_of_array_instances">屬性</h3>
 
 <div>{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_array_instances" name="Methods_of_array_instances">方法</h3>
+<h3 id="Methods_of_array_instances">方法</h3>
 
-<h4 id="Mutator_methods" name="Mutator_methods">Mutator methods</h4>
+<h4 id="Mutator_methods">Mutator methods</h4>
 
 <div>{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods')}}</div>
 
-<h4 id="Accessor_methods" name="Accessor_methods">Accessor methods</h4>
+<h4 id="Accessor_methods">Accessor methods</h4>
 
 <div>{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods')}}</div>
 
-<h4 id="Iteration_methods" name="Iteration_methods">Iteration methods</h4>
+<h4 id="Iteration_methods">Iteration methods</h4>
 
 <div>{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods')}}</div>
 
 <h2 id="Array_泛型方法"><code>Array</code> 泛型方法</h2>
 
-<div class="warning">
-<p><strong>泛型陣列並非標準且已被棄用，將會在不久之後被去除。</strong> </p>
+<div class="notecard warning">
+<p><strong>警告：</strong>泛型陣列並非標準且已被棄用，將會在不久之後被去除。</p>
 </div>
 
 <p>有時你想將陣列方法用於字串或其他類陣列物件（像是函數 {{jsxref("Functions/arguments", "arguments", "", 1)}}）。藉此操作，你將此字串視為由字元組成的陣列（反之為將其他非陣列視為物件）。如範例，若要確認字串中的每個字元是不是字母，你可能會這樣寫：</p>
@@ -324,9 +323,9 @@ if (Array.prototype.every.call(str, isLetter)) {
 }
 </pre>
 
-<h2 id="Examples" name="Examples">範例</h2>
+<h2 id="Examples">範例</h2>
 
-<h3 id="Example_Creating_an_array" name="Example:_Creating_an_array">範例：建立陣列</h3>
+<h3 id="Example_Creating_an_array">範例：建立陣列</h3>
 
 <p>以下範例會產生長度為 0 的 <code>msgArray</code> 陣列，然後指派字串值到 <code>msgArray[0]</code> 及 <code>msgArray[99]</code>，使陣列的長度變為 100。</p>
 
@@ -339,7 +338,7 @@ if (msgArray.length === 100) {
 }
 </pre>
 
-<h3 id="Example_Creating_a_two-dimensional_array" name="Example:_Creating_a_two-dimensional_array">建立二維陣列</h3>
+<h3 id="Example_Creating_a_two-dimensional_array">建立二維陣列</h3>
 
 <p>以下範例會用字串產生一張西洋棋盤的二維陣列。第一步是將士兵 'p' 從 (6,4) 移動至 (4,4)，然後清空原本的位置 (6,4)。</p>
 
@@ -408,7 +407,7 @@ console.table(values)</pre>
 
 <p>（第一欄為索引）</p>
 
-<h2 id="Specifications" name="Specifications">規範</h2>
+<h2 id="Specifications">規範</h2>
 
 <table class="standard-table">
  <tbody>
@@ -440,13 +439,13 @@ console.table(values)</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
+<h2 id="Browser_compatibility">瀏覽器相容性</h2>
 
 
 
 <p>{{Compat("javascript.builtins.Array")}}</p>
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties">JavaScript Guide: “Indexing object properties”</a></li>

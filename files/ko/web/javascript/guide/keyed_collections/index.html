@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</div>
 
-<p class="summary">이번 장에서는 입력된 키값을 기준으로 정렬되는 데이터의 집합(자료 구조)에 대해 소개 할 것이다. Map과 Set은 입력된 순서대로 반복적으로 접근 가능한 요소들을 포함하고 있다. </p>
+<p >이번 장에서는 입력된 키값을 기준으로 정렬되는 데이터의 집합(자료 구조)에 대해 소개 할 것이다. Map과 Set은 입력된 순서대로 반복적으로 접근 가능한 요소들을 포함하고 있다. </p>
 
 <h2 id="Maps">Maps</h2>
 
@@ -31,7 +31,7 @@ for (var [key, value] of sayings) {
 // "elephant goes toot"
 </pre>
 
-<h3 id="Object와_Map_비교"><font face="Consolas, Liberation Mono, Courier, monospace">Object와 Map 비교</font></h3>
+<h3 id="Object와_Map_비교">Object와 Map 비교</h3>
 
 <p>전통적으로 {{jsxref("Object", "objects", "", 1)}} 는 문자열을 값에 매핑하는 데 사용되었다. Object는 키를 값으로 설정하고, 값을 검색하고, 키를 삭제하고, 키에 저장된 내용을 검색 할 수 있게 만들어준다. 그러나 Map 객체는 더 나은 맵이 되도록 하는 몇 가지 장점을 가지고 있다.</p>
 
@@ -108,7 +108,7 @@ for (let item of mySet) console.log(item);
 mySet2 = new Set([1,2,3,4]);
 </pre>
 
-<h3 id="배열과_Set비교"><font face="Consolas, Liberation Mono, Courier, monospace">배열과 Set비교</font></h3>
+<h3 id="배열과_Set비교">배열과 Set비교</h3>
 
 <p>일반적으로 Javascript에선 배열에 특정 요소의 집합을 저장한다. 하지만 Set객체는 몇가지 이점을 제공한다. </p>
 
@@ -129,7 +129,7 @@ mySet2 = new Set([1,2,3,4]);
 
 <ul>
  <li><code>Set과는 다르게 WeakSet은 객체의 집합이며 객체만 저장할 수 있다. 특정 type의 값을 저장할 수는 없다. </code></li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">WeakSet은 약한 참조를 가진다. WeakSet내의 객체에 대한 참조는 약하게 연결이 되어 있다. WeakSet내에 저장되어 있는 객체에 대한 참조가 없게되면 garbage collection 대상이되어 수거 된다. 따라서 현재 저장되어 있는 객체에 대한 목록은 없으며 WeakSet은 열거형이 아니다. </font></li>
+ <li>WeakSet은 약한 참조를 가진다. WeakSet내의 객체에 대한 참조는 약하게 연결이 되어 있다. WeakSet내에 저장되어 있는 객체에 대한 참조가 없게되면 garbage collection 대상이되어 수거 된다. 따라서 현재 저장되어 있는 객체에 대한 목록은 없으며 WeakSet은 열거형이 아니다.</li>
 </ul>
 
 <p><code>WeakSet객체의 사용 사례는 제한되어 있다. 메모리 누수가 발생되지 않기때문에 안전하게 DOM요소를 키로 저장할 수 있고 예를 들면 추적을 위해 DOM요소들을 WeakSet에 저장할 수 있다. </code></p>

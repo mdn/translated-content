@@ -20,9 +20,9 @@ TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
 
 <h2 id="错误类型">错误类型</h2>
 
-<p>仅在严格模式下出现的 {{jsxref("ReferenceError")}} 警告。<span class="short_text" id="result_box" lang="zh-CN"><span>JavaScript 的执行将不会停止。</span></span></p>
+<p>仅在严格模式下出现的 {{jsxref("ReferenceError")}} 警告。JavaScript 的执行将不会停止。</p>
 
-<h2 id="发生了什么">发生了什么?</h2>
+<h2 id="发生了什么">发生了什么？</h2>
 
 <p>在 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 中，{{jsxref("Function.caller")}} 和 {{jsxref("Function.arguments")}} 属性是不该使用的。它们都是已经被废弃的了，因为这两者泄露了函数的调用者，是不标准的，难于优化和有这潜在的性能问题。</p>
 

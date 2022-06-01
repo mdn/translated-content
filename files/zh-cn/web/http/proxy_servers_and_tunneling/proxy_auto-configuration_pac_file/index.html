@@ -20,7 +20,7 @@ original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PA
 
 <dl>
  <dt><code><var>url</var></code></dt>
- <dd>要访问的 URL。URL 中类似 <code>https://</code> 这样的的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中, 你可以通过设置 <code>PacHttpsUrlStrippingEnabled</code> 为 <code>false</code> 来禁止这种行为，或者以 <code>--unsafe-pac-url</code> 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 <code>network.proxy.autoconfig_url.include_path</code>。</dd>
+ <dd>要访问的 URL。URL 中类似 <code>https://</code> 这样的的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过设置 <code>PacHttpsUrlStrippingEnabled</code> 为 <code>false</code> 来禁止这种行为，或者以 <code>--unsafe-pac-url</code> 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 <code>network.proxy.autoconfig_url.include_path</code>。</dd>
  <dt><code><var>host</var></code></dt>
  <dd>从 URL 中提取得到的主机名。这只是为了方便；它与 <code>://</code> 之后到第一个 <code>:</code> 或 <code>/</code> 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 URL 中提取。</dd>
 </dl>
@@ -60,7 +60,7 @@ original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PA
 
 <p>如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 Firefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。</p>
 
-<p>30分钟后，浏览器将自动重试之前没有响应的代理。下一次尝试则将在一小时后开始，再下一次是一个半小时。每次尝试后，间隔会增加 30 分钟。</p>
+<p>30 分钟后，浏览器将自动重试之前没有响应的代理。下一次尝试则将在一小时后开始，再下一次是一个半小时。每次尝试后，间隔会增加 30 分钟。</p>
 
 <p>如果所有代理都挂了，并且最后没有指定直连配置项（<code>DIRECT</code>），浏览器将询问是否应该暂时忽略代理，并尝试直接连接。20 分钟后，浏览器会再次询问是否应该重试代理，40 分钟后会再问一次。每次询问后，间隔会增加 20 分钟。</p>
 
@@ -144,8 +144,8 @@ original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PA
 <p><strong>注意：</strong> pactester ( <a href="https://github.com/pacparser/pacparser">pacparser </a>的一部分) 可以用来检测语法是否符合要求，使用方法如下：</p>
 
 <ul>
- <li>PAC文件保存为 <code>proxy.pac</code></li>
- <li>命令行输入: <code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。</code>
+ <li>PAC 文件保存为 <code>proxy.pac</code></li>
+ <li>命令行输入：<code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。</code>
   <ul>
    <li>该命令中， <code>host</code> 参数为 <code>www.mozilla.org</code> ， <code>url</code> 参数为<code>http://www.mozilla.org</code>。</li>
   </ul>
@@ -193,7 +193,7 @@ isPlainHostName("www") // true
 
 <h4 id="描述_3">描述</h4>
 
-<p>如果匹配，返回true。</p>
+<p>如果匹配，返回 true。</p>
 
 <h4 id="例子_3">例子</h4>
 
@@ -218,7 +218,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 
 <h4 id="描述_4">描述</h4>
 
-<p>完整域名匹配或主机名（如<code>www</code>）匹配时返回true。</p>
+<p>完整域名匹配或主机名（如<code>www</code>）匹配时返回 true。</p>
 
 <h4 id="例子_4">例子</h4>
 
@@ -240,7 +240,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
  <dd>从 URL 中得到的主机名。</dd>
 </dl>
 
-<p>尝试解析主机名。如果成功，则返回true。</p>
+<p>尝试解析主机名。如果成功，则返回 true。</p>
 
 <h4 id="例子：">例子：</h4>
 
@@ -259,12 +259,12 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
  <dt>host</dt>
  <dd>一个 DNS 主机名，或者一个 IP 地址。如果传入了主机名，则会被此函数解析为 IP 地址，再进行判断。</dd>
  <dt>pattern</dt>
- <dd>点号（.）分隔的IP地址。</dd>
+ <dd>点号（.）分隔的 IP 地址。</dd>
  <dt>mask</dt>
  <dd>子网掩码，0 代表忽略，255 代表完全匹配。</dd>
 </dl>
 
-<p>仅在 host 属于由 pattern 和 mask 指定的ip地址段时返回true。</p>
+<p>仅在 host 属于由 pattern 和 mask 指定的 ip 地址段时返回 true。</p>
 
 <p>Pattern and mask specification is done the same way as for SOCKS configuration.</p>
 
@@ -304,10 +304,10 @@ function FindProxyForURL(url, host) {
 
 <dl>
  <dt>ipaddr</dt>
- <dd>点号（.）分隔的IP地址或子网掩码。</dd>
+ <dd>点号（.）分隔的 IP 地址或子网掩码。</dd>
 </dl>
 
-<p>将IP地址转换为32位整数地址。</p>
+<p>将 IP 地址转换为 32 位整数地址。</p>
 
 <h4 id="例子_6">例子</h4>
 
@@ -346,7 +346,7 @@ function FindProxyForURL(url, host) {
  <dd>从 URL 中得到的主机名。</dd>
 </dl>
 
-<p>返回主机名中DNS域名级别的整数数量（域名中包含点的个数）。</p>
+<p>返回主机名中 DNS 域名级别的整数数量（域名中包含点的个数）。</p>
 
 <h4 id="例子：_3">例子：</h4>
 
@@ -365,12 +365,12 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 <dl>
  <dt>str</dt>
- <dd>任何要比较的字符串（如URL或主机名）。</dd>
+ <dd>任何要比较的字符串（如 URL 或主机名）。</dd>
  <dt>shexp</dt>
  <dd>要用来对比的 Shell 表达式。</dd>
 </dl>
 
-<p>如果字符串匹配指定的Shell表达式则返回true。</p>
+<p>如果字符串匹配指定的 Shell 表达式则返回 true。</p>
 
 <p><strong>注意，本函数接收 shell glob 表达式而非正则表达式。</strong><code>*</code> 和 <code>?</code> 始终被支持，<code>[characters]</code> 和 <code>[^characters]</code> 只在包括 Firefox 在内的某些实现上被支持。这主要是由于 glob 表达式在内部被翻译为正则表达式。如要使用正则表达式语法，请直接使用 RegExp 类。</p>
 
@@ -508,7 +508,7 @@ timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;
  <dt>min</dt>
  <dd>分钟，区间为 0 到 59。</dd>
  <dt>sec</dt>
- <dd>　秒，区间为 0 到 59。</dd>
+ <dd>秒，区间为 0 到 59。</dd>
  <dt>gmt</dt>
  <dd>可以指定为字符串 "<code>GMT</code>"，代表使用 GMT 时区，或者留白不指定，代表使用浏览器获取到的平台本地时区。</dd>
 </dl>
@@ -536,7 +536,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 <p><strong>注意：</strong> 以下所有示例都只针对特定需求并未经测试</p>
 </div>
 
-<p>所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过w3proxy:8080 连接。如果代理不可用，则自动回退到直连。</p>
+<p>所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过 w3proxy:8080 连接。如果代理不可用，则自动回退到直连。</p>
 
 <pre class="brush: js notranslate">function FindProxyForURL(url, host) {
   if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
@@ -578,7 +578,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 <h3 id="如果无法解析域名，则使用代理">如果无法解析域名，则使用代理</h3>
 
-<p>这个示例可用于网络中的DNS服务器只解析内部主机名的情况，其功能是只对不能成功解析的域名使用代理。</p>
+<p>这个示例可用于网络中的 DNS 服务器只解析内部主机名的情况，其功能是只对不能成功解析的域名使用代理。</p>
 
 <pre class="brush: js notranslate">function FindProxyForURL(url, host) {
   if (isResolvable(host))
@@ -587,7 +587,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
     return "PROXY proxy.mydomain.com:8080";
 }</pre>
 
-<p>以上代码每一次均会进行DNS查询，这可以通过添加其他一些规则，只在其他规则不能给出结果时进行DNS查询来解决：</p>
+<p>以上代码每一次均会进行 DNS 查询，这可以通过添加其他一些规则，只在其他规则不能给出结果时进行 DNS 查询来解决：</p>
 
 <pre class="brush: js notranslate">function FindProxyForURL(url, host) {
   if (

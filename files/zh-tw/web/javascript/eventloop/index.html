@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="視覺化呈現（Visual_representation）">視覺化呈現（Visual representation）</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg" ></p>
+<p><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg" /></p>
 
 <h3 id="堆疊（Stack）">堆疊（Stack）</h3>
 
@@ -36,7 +36,7 @@ function bar(x) {
 console.log(bar(7));
 </pre>
 
-<p>當呼叫 <code><font face="Consolas, Liberation Mono, Courier, monospace">bar</font></code> 時，會產生一個含有 <code>bar</code> 的參數及區域變數的 frame，而在 <code><font face="Consolas, Liberation Mono, Courier, monospace">bar</font></code> 呼叫了 <code>foo</code> 時，含有 <code>foo</code> 參數及變數的第二個 frame 就會被置於堆疊的最上面。當 <code>foo</code> 回傳後，最上面的 frame 會被抽離堆疊（僅留下 <font face="Consolas, Liberation Mono, Courier, monospace"><code>bar</code></font> 的呼叫 frame）。然後當 bar 返回之後，堆疊就會清空。</p>
+<p>當呼叫 <code>bar</code> 時，會產生一個含有 <code>bar</code> 的參數及區域變數的 frame，而在 <code>bar</code> 呼叫了 <code>foo</code> 時，含有 <code>foo</code> 參數及變數的第二個 frame 就會被置於堆疊的最上面。當 <code>foo</code> 回傳後，最上面的 frame 會被抽離堆疊（僅留下 <code>bar</code> 的呼叫 frame）。然後當 bar 返回之後，堆疊就會清空。</p>
 
 <h3 id="堆積（Heap）">堆積（Heap）</h3>
 

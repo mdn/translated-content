@@ -23,7 +23,7 @@ Lorsqu'il est possible d'utiliser une valeur de type `<angle-percentage>` dans u
 
 | Spécification                                                                                            | État                             | Commentaires                                               |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#mixed-percentages', '&lt;angle-percentage&gt;')}} | {{Spec2('CSS4 Values')}} |                                                            |
+| {{SpecName('CSS4 Values', '#mixed-percentages', '&lt;angle-percentage&gt;')}} | {{Spec2('CSS4 Values')}} |                                                            |
 | {{SpecName('CSS3 Values', '#mixed-percentages', '&lt;angle-percentage&gt;')}} | {{Spec2('CSS3 Values')}} | Définition du type `<angle-percentage>`. Ajout de `calc()` |
 
 ## Compatibilité des navigateurs

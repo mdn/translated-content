@@ -1,0 +1,139 @@
+---
+title: alert ロールの使用
+slug: conflicting/Web/Accessibility/ARIA/Roles/alert_role
+tags:
+  - ARIA
+  - Accessibility
+  - Advanced
+  - CSS
+  - Example
+  - HTML
+  - NeedsContent
+  - alert
+  - alert role
+  - alertrole
+  - alerts
+  - assitive technology
+  - role configuration
+  - wcag1.2.1
+  - wcag3.3.1
+translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+---
+<h3 id="説明">説明</h3>
+
+<div class="summary">
+<p><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a> ロールの使用方法についての技術デモとブラウザおよび支援技術に及ぼす影響の説明。</p>
+</div>
+
+<p>alert ロールは重要かつ一般に時間的制約のあるメッセージをユーザーへ伝えるために使用されます。このロールが要素へ追加されたとき、ブラウザはアクセシブルなアラートイベントをユーザーに向けて通知可能な支援技術製品へ送信します。 アラートロールはユーザの注意を即座に必要とする場合において最も便利です、例えば:</p>
+
+<ul>
+ <li>不正な値がフォームフィールドに入れられたとき</li>
+ <li>ユーザーのログインセッションが切れようとしているとき</li>
+ <li>サーバーとの接続が切れ、ローカルの変更が保存されないとき</li>
+</ul>
+
+<p>その押し付けがましい性質から、アラートロールはユーザーの注意を直ちに引く必要があるときにだけかつ控えめに使用されるべきです。 緊急度の低い動的な変更は、aria-live="polite" や他のライブリージョンロールなどのあまり積極的ではない方法を使うべきです。</p>
+
+<h3 id="ユーザーエージェントと支援技術への影響">ユーザーエージェントと支援技術への影響</h3>
+
+<p>アラートロールが要素へ追加されたとき、もしくはそのような要素が可視になったときにユーザーエージェントは以下のことを実行する必要があります:</p>
+
+<ul>
+ <li>オペレーティングシステムのアクセシビリティAPIにアラートロールを持った要素を公開します。</li>
+ <li>もしサポートしていればオペレーティングシステムのアクセシビリティAPIを使ったアクセシブルなアラートイベントを発火する。</li>
+</ul>
+
+<p>支援技術製品はそのようなイベントを監視し、それに応じてユーザへ通知すべきです:</p>
+
+<ul>
+ <li>スクリーンリーダーは現在のアウトプット（音声または点字関係なく）を妨害し、直ちにアラートメッセージをアナウンスもしくは表示すことがあります。</li>
+ <li>画面拡大鏡はアラートが起こったこと、およびアラートテキストが何であるかを視覚的に示すことがあります。 </li>
+</ul>
+
+<div class="note"><strong>注釈:</strong> 支援技術がこの技術をどのように処理すべきかについては意見が異なる場合があります。上記の情報は意見の一つで、したがって標準ではありません。</div>
+
+<h3 id="例">例</h3>
+
+<h4 id="例1_HTMLコードへのロールの追加">例1: HTMLコードへのロールの追加</h4>
+
+<p>下のスニペットは html ソースコードへどうのようにアラートロールが直接追加されるかを示しています。要素が読み込み完了した瞬間にスクリーンリーダーはアラートの通知をするはずです。ページが読み込み終わったとき、もし要素がすでにオリジナルのソースコードにあったら、スクリーンリーダーはページタイトルをアナウンスした後にすぐにエラーを知らせるでしょう。</p>
+
+<pre class="brush: html">&lt;h2 role="alert"&gt;Your form could not be submitted because of 3 validation errors.&lt;/h2&gt;</pre>
+
+<h4 id="例2_動的にアラートロールをもつ要素を追加">例2: 動的にアラートロールをもつ要素を追加</h4>
+
+<p>このスニペットはアラートロールを持つ要素を動的に生成し、ドキュメント構造へ追加します。</p>
+
+<pre class="brush: js">var myAlert = document.createElement("p");
+myAlert.setAttribute("role", "alert");
+var myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
+myAlert.appendChild(myAlertText);
+document.body.appendChild(myAlert);
+</pre>
+
+<p><strong>注:</strong> jQuery のようなスクリプトライブラリを使ったときはより少ないコードで同じ結果を実現することができます:</p>
+
+<pre class="brush: js">$("&lt;p role='alert'&gt;You must agree with our terms of service to create an account.&lt;/p&gt;").appendTo(document.body);
+</pre>
+
+<h4 id="例3_存在する要素へのアラートロールの追加">例3: 存在する要素へのアラートロールの追加</h4>
+
+<p>時々新しい要素を作るよりもすでにページに見えている要素にアラートロールを追加するほうが便利なことがあります。これにより開発者はユーザーへより関連度や緊急性の高い情報を繰り返し表示することができます。例えば、フォームコントロールは期待値についての指示を持っているかもしれません。違う値が入力されたら、スクリーンリーダーがそれを警告としてアナウンスするために <code>role="alert</code> を指示文へ追加される場合があります。以下の疑似スニペットコードはこのアプローチを示しています:</p>
+
+<pre class="brush: html">&lt;p id="formInstruction"&gt;You must select at least 3 options&lt;/p&gt;
+</pre>
+
+<pre class="brush: js">// When the user tries to submit the form with less than 3 checkboxes selected:
+document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
+
+<h4 id="例4_アラートロールをもつ要素を表示する">例4: アラートロールをもつ要素を表示する</h4>
+
+<p>要素が既に <code>role="alert"</code> を持ち、CSS を使用して最初に非表示になっている場合、それを表示することはページにちょうど追加されたかのようにアラートをが発せられます。存在するアラートを何回も "再利用" できるということを意味しています。</p>
+
+<p><strong>注: </strong>ほとんどのケースではこのアプローチは推奨されません、なぜなら現在適応できないエラーやアラート文を隠すことは理想的ではないからです。古い支援技術のユーザーは現在アラートが適応されてないときにもかかわらずアラート文を認識して、ユーザへ問題があると間違って信じこませてしまうかもしれません。</p>
+
+<pre class="brush: css">.hidden {
+  display:none;
+}
+</pre>
+
+<pre class="brush: html">&lt;p id="expirationWarning" role="alert" class="hidden"&gt;Your log in session will expire in 2 minutes&lt;/p&gt;
+</pre>
+
+<pre class="brush: js">// removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
+document.getElementById("expirationWarning").className = ""; </pre>
+
+<h3 id="注記">注記 </h3>
+
+<ul>
+ <li>要素でのアラートロールの使用は要素が <code>aria-live="assertive"</code> を持っていることを意味します。</li>
+ <li>アラートロールは静的な文章のためにのみ使用されるべきです。アラートロールが使用された要素はフォーカスを受け取ることができず、スクリーンリーダーはキーボードフォーカスが現在位置している場所にかかわらずに自動的にアラートをアナウンスするかもしれません。</li>
+ <li>もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、<a href="/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="Using the alert role">アラートダイアログ</a>ロールを代わりに使用するべきです。 </li>
+</ul>
+
+<h3 id="使用される_ARIA_属性">使用される ARIA 属性</h3>
+
+<ul>
+ <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a></li>
+</ul>
+
+<h3 id="関連_ARIA_技術">関連 ARIA 技術</h3>
+
+<ul>
+ <li><a href="/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="en/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
+ <li><a href="/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property" title="Using the aria-invalid property">Using the aria-invalid property</a></li>
+</ul>
+
+<h3 id="互換性">互換性</h3>
+
+<p class="comment">TBD: Add support information for common UA and AT product combinations</p>
+
+<h3 id="その他のリソース">その他のリソース</h3>
+
+<ul>
+ <li>ARIA Best Practices - Alert Role: <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert</a></li>
+</ul>
+
+<p> </p>

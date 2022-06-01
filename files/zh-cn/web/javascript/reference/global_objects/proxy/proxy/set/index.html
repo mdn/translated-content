@@ -6,7 +6,7 @@ tags:
   - JavaScript
   - Method
   - Proxy
-  - Proxy拦截
+  - Proxy 拦截
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
@@ -40,7 +40,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
  <dt><code><var>receiver</var></code></dt>
  <dd>最初被调用的对象。通常是 proxy 本身，但 handler 的 set 方法也有可能在原型链上，或以其他方式被间接地调用（因此不一定是 proxy 本身）。
  <div class="note">
- <p><strong>比如：</strong>假设有一段代码执行 <code>obj.name = "jen"</code>， <code><var>obj</var></code> 不是一个 proxy，且自身不含 <code>name</code> 属性，但是它的原型链上有一个 proxy，那么，那个 proxy 的 <code>set()</code> 处理器会被调用，而此时，<code><var>obj</var></code> 会作为 receiver 参数传进来。</p>
+ <p><strong>备注：</strong>假设有一段代码执行 <code>obj.name = "jen"</code>， <code><var>obj</var></code> 不是一个 proxy，且自身不含 <code>name</code> 属性，但是它的原型链上有一个 proxy，那么，那个 proxy 的 <code>set()</code> 处理器会被调用，而此时，<code><var>obj</var></code> 会作为 receiver 参数传进来。</p>
  </div>
  </dd>
 </dl>
@@ -60,7 +60,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截目标对象的以下操作:</p>
+<p>该方法会拦截目标对象的以下操作：</p>
 
 <ul>
  <li>指定属性值：<code>proxy[foo] = bar</code> 和 <code>proxy.foo = bar</code></li>

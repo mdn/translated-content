@@ -200,8 +200,8 @@ console.log(q); // true
 
 ({a, b} = {a:1, b:2});</pre>
 
-<div class="note">
-<p><strong>注意</strong>：當針對物件進行解構，而該句式沒有進行宣告時，指派式外必須加上括號 <code>( ... )</code> 。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>當針對物件進行解構，而該句式沒有進行宣告時，指派式外必須加上括號 <code>( ... )</code> 。</p>
 
 <p><code>{a, b} = {a: 1, b: 2}</code> 不是有效的獨立語法，因為左邊的 <code>{a, b}</code> 被視為程式碼區塊而非物件。</p>
 
@@ -277,8 +277,8 @@ drawChart({
   radius: 30
 });</pre>
 
-<div class="note">
-<p>在上述函式 <strong><code>drawChart</code></strong> 中，左方之解構式被指派到一個空物件: <code>{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}</code> 。你也可以略過填寫右方的指派式。不過，當你沒有使用右方指派式時，函式在呼叫時會找出最少一個參數。透過上述形式，你可以直接不使用參數的呼叫 <code><strong>drawChart()</strong></code> 。當你希望在呼叫這個函式時不傳送參數，這個設計會帶來方便。而另一個設計則能讓你確保函式必須傳上一個物件作為參數。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>在上述函式 <strong><code>drawChart</code></strong> 中，左方之解構式被指派到一個空物件: <code>{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}</code> 。你也可以略過填寫右方的指派式。不過，當你沒有使用右方指派式時，函式在呼叫時會找出最少一個參數。透過上述形式，你可以直接不使用參數的呼叫 <code><strong>drawChart()</strong></code> 。當你希望在呼叫這個函式時不傳送參數，這個設計會帶來方便。而另一個設計則能讓你確保函式必須傳上一個物件作為參數。</p>
 </div>
 
 <h3 id="巢狀物件或陣列的解構">巢狀物件或陣列的解構</h3>

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">function [<em>name</em>]([<em>param1</em>[ = defaultValue1 ][, ..., <em>paramN</em>[ = defaultValueN ]]]) {
+<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[ = defaultValue1 ][, ..., <em>paramN</em>[ = defaultValueN ]]]) {
    <em>要執行的程序</em>
 }
 </pre>
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 <p>以往設定預設值有個普遍方法：在函式的內容裡檢查傳入參數是否為 <code>undefined ，如果是的話，爲他指定一個值。如下列範例，若函式被呼叫時，並沒有提供 b 的值，它的值就會是 undefined，在計算 a*b 時，以及呼叫 multiply 時，就會回傳 NaN。然而這在範例的第二行被阻止了：</code>:</p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js">function multiply(a, b) {
   b = (typeof b !== 'undefined') ?  b : 1;
   return a * b;
 }
@@ -32,7 +32,7 @@ multiply(5);    // 5
 
 <p>有了 ES2015 的預設參數，再也不用於函式進行檢查了，現在只要簡單的在函式的起始處為 b 指定 1 的值：</p>
 
-<pre class="brush: js notranslate">function multiply(a, b = 1) {
+<pre class="brush: js">function multiply(a, b = 1) {
   return a * b;
 }
 
@@ -47,7 +47,7 @@ multiply(5);    // 5
 
 <p>這邊第二段函式呼叫中，僅管第二個傳入參數在呼叫時明確地指定為undefined（雖不是null），其顏色參數的值是預設值（rosybrown）。</p>
 
-<pre class="brush: js notranslate">function setBackgroundColor(element, color = 'rosybrown') {
+<pre class="brush: js">function setBackgroundColor(element, color = 'rosybrown') {
   element.style.backgroundColor = color;
 }
 
@@ -60,7 +60,7 @@ setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
 
 <p>跟Python等語言不同的地方是，先前預設的代數值會拿來進行函式內的程序，也因此在函式呼叫的時候，會建立新物件。</p>
 
-<pre class="brush: js notranslate">function append(value, array = []) {
+<pre class="brush: js">function append(value, array = []) {
   array.push(value);
   return array;
 }
@@ -71,7 +71,7 @@ append(2); //[2], 而非 [1, 2]
 
 <p>諸如此類的做法，也適用在函式和變量。</p>
 
-<pre class="brush: js notranslate">function callSomething(thing = something()) {
+<pre class="brush: js">function callSomething(thing = something()) {
  return thing;
 }
 
@@ -85,7 +85,7 @@ callSomething();  //sth</pre>
 
 <p>先前有碰到的參數，後來的即可使用。</p>
 
-<pre class="brush: js notranslate">function singularAutoPlural(singular, plural = singular + '們',
+<pre class="brush: js">function singularAutoPlural(singular, plural = singular + '們',
                             rallyingCry = plural + '，進攻啊!!!') {
   return [singular, plural, rallyingCry];
 }
@@ -103,7 +103,7 @@ singularAutoPlural('鹿兒', '鹿兒們', '鹿兒們平心靜氣的 \
 
 <p>This functionality is approximated in a straight forward fashion and demonstrates how many edge cases are handled.</p>
 
-<pre class="brush: js notranslate">function go() {
+<pre class="brush: js">function go() {
   return ':P';
 }
 
@@ -145,7 +145,7 @@ withoutDefaults.call({value: '=^_^='});
 
 <p>Introduced in Gecko 33 {{geckoRelease(33)}}. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see {{bug(1022967)}}). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.</p>
 
-<pre class="brush: js notranslate">// 行不通的！ 最後會丟出 ReferenceError。
+<pre class="brush: js">// 行不通的！ 最後會丟出 ReferenceError。
 function f(a = go()) {
   function go() { return ':P'; }
 }
@@ -155,7 +155,7 @@ function f(a = go()) {
 
 <p>Prior to Gecko 26 {{geckoRelease(26)}}, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in {{bug(777060)}} and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.</p>
 
-<pre class="brush: js notranslate">function f(x = 1, y) {
+<pre class="brush: js">function f(x = 1, y) {
   return [x, y];
 }
 
@@ -167,7 +167,7 @@ f(2); // [2, undefined]
 
 <p>You can use default value assignment with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring assignment</a> notation:</p>
 
-<pre class="brush: js notranslate">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+<pre class="brush: js">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
   return x + y + z;
 }
 
@@ -175,115 +175,11 @@ f(); // 6</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器的兼容性">瀏覽器的兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能特徵</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{CompatChrome(49)}}</td>
-   <td>{{CompatGeckoDesktop("15.0")}}</td>
-   <td>Edge</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
-  <tr>
-   <td>Parameters without defaults after default parameters</td>
-   <td>{{CompatChrome(49)}}</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
-  <tr>
-   <td>Destructured parameter with default value assignment</td>
-   <td>{{CompatChrome(49)}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能特徵</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49)}}</td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49)}}</td>
-  </tr>
-  <tr>
-   <td>Parameters without defaults after default parameters</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49)}}</td>
-   <td>{{CompatGeckoMobile("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(49)}}</td>
-  </tr>
-  <tr>
-   <td>Destructured parameter with default value assignment</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="要不要也看看">要不要也看看</h2>
 

@@ -44,7 +44,7 @@ translation_of: Web/API/Element/classList
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<pre class="brush: js" dir="rtl">// div es una referencia de objeto al elemento &lt;div&gt; con class="foo bar"
+<pre class="brush: js" dir="ltr">// div es una referencia de objeto al elemento &lt;div&gt; con class="foo bar"
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
@@ -98,114 +98,7 @@ div.classList.replace("foo", "bar");</pre>
 
 <h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>8</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(1.9.2)}}</td>
-   <td>10<sup>[1]</sup></td>
-   <td>11.50</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>Segundo argumento del método <code>toggle()</code></td>
-   <td>24</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(24)}}</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>15</td>
-   <td>7</td>
-  </tr>
-  <tr>
-   <td>Múltiples argumentos para <code>add()</code> y <code>remove()</code></td>
-   <td>28</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(26)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15</td>
-   <td>7</td>
-  </tr>
-  <tr>
-   <td><code>replace()</code></td>
-   <td>61</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("49")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>3.0</td>
-   <td>12</td>
-   <td>{{CompatGeckoMobile(1.9.2)}}</td>
-   <td>10<sup>[1]</sup></td>
-   <td>11.10</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td>Segundo argumento del método <code>toggle()</code></td>
-   <td>4.4</td>
-   <td>12</td>
-   <td>{{CompatGeckoMobile(24)}}</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>7.0</td>
-  </tr>
-  <tr>
-   <td>Múltiples argumentos para <code>add()</code> y <code>remove()</code></td>
-   <td>4.4</td>
-   <td>12</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>7.0</td>
-  </tr>
-  <tr>
-   <td><code>replace()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("49")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] No soportado para elementos SVG.  Vea <a href="https://connect.microsoft.com/IE/feedback/details/1046039/classlist-not-working-on-svg-elements">un informe de Microsoft acerca de esto</a>.<br>
- [2] Internet Explorer no lo implementa actualmente. Vea <a href="https://connect.microsoft.com/IE/feedback/details/878564/element-classlist-toggle-does-not-support-second-parameter">un informe de Microsoft acerca de esto</a>.</p>
+{{Compat("api.Element.classList")}}
 
 <h2 id="Vea_también">Vea también</h2>
 

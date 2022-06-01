@@ -18,23 +18,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 
 
-<div class="note"><strong>Note:</strong> For the Array method, see {{jsxref("Array.prototype.indexOf()")}}.</div>
+<div class="note">
+<p><strong>备注：</strong> For the Array method, see {{jsxref("Array.prototype.indexOf()")}}.</p>
+</div>
 
 <h2 id="语法">语法</h2>
 
-<pre class="notranslate"><var>str</var>.indexOf(<var>searchValue [</var>, <var>fromIndex]</var>)</pre>
+<pre><var>str</var>.indexOf(<var>searchValue [</var>, <var>fromIndex]</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>searchValue</code></dt>
- <dd>要被查找的字符串值。</dd>
- <dd>如果没有提供确切地提供字符串，<a href="https://tc39.github.io/ecma262/#sec-tostring"><var>searchValue</var> 会被强制设置为 <code>"undefined"</code></a>， 然后在当前字符串中查找这个值。</dd>
- <dd>举个例子：<code>'undefined'.indexOf()</code> 将会返回0，因为 <code>undefined</code> 在位置0处被找到，但是 <code>'undefine'.indexOf()</code> 将会返回 -1 ，因为字符串 <code>'undefined'</code> 未被找到。</dd>
+ <dd>要被查找的字符串值。如果没有提供确切地提供字符串，<a href="https://tc39.github.io/ecma262/#sec-tostring"><var>searchValue</var> 会被强制设置为 <code>"undefined"</code></a>， 然后在当前字符串中查找这个值。举个例子：<code>'undefined'.indexOf()</code> 将会返回 0，因为 <code>undefined</code> 在位置 0 处被找到，但是 <code>'undefine'.indexOf()</code> 将会返回 -1 ，因为字符串 <code>'undefined'</code> 未被找到。</dd>
  <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>数字表示开始查找的位置。可以是任意整数，默认值为 <code>0</code>。</dd>
- <dd>如果 <code>fromIndex</code> 的值小于 <code>0</code>，或者大于 <code><var>str</var>.length</code> ，那么查找分别从 <code>0</code> 和<code><var>str</var>.length</code> 开始。（译者注：  <code>fromIndex</code> 的值小于 <code>0</code>，等同于为空情况； <code>fromIndex</code> 的值大于或等于 <code><var>str</var>.length</code> ，那么结果会直接返回 <code>-1</code> 。）</dd>
- <dd>举个例子，<code>'hello world'.indexOf('o', -5)</code> 返回 <code>4</code> ，因为它是从位置<code>0</code>处开始查找，然后 <code>o</code> 在位置<code>4</code>处被找到。另一方面，<code>'hello world'.indexOf('o', 11)</code> （或 <code>fromIndex</code> 填入任何大于<code>11</code>的值）将会返回 <code>-1</code> ，因为开始查找的位置<code>11</code>处，已经是这个字符串的结尾了。</dd>
+ <dd>数字表示开始查找的位置。可以是任意整数，默认值为 <code>0</code>。如果 <code>fromIndex</code> 的值小于 <code>0</code>，或者大于 <code><var>str</var>.length</code> ，那么查找分别从 <code>0</code> 和<code><var>str</var>.length</code> 开始。（译者注：  <code>fromIndex</code> 的值小于 <code>0</code>，等同于为空情况； <code>fromIndex</code> 的值大于或等于 <code><var>str</var>.length</code> ，那么结果会直接返回 <code>-1</code> 。）举个例子，<code>'hello world'.indexOf('o', -5)</code> 返回 <code>4</code> ，因为它是从位置<code>0</code>处开始查找，然后 <code>o</code> 在位置<code>4</code>处被找到。另一方面，<code>'hello world'.indexOf('o', 11)</code> （或 <code>fromIndex</code> 填入任何大于<code>11</code>的值）将会返回 <code>-1</code> ，因为开始查找的位置<code>11</code>处，已经是这个字符串的结尾了。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -43,24 +41,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 <p>若被查找的字符串 <code><var>searchValue</var></code><var> </var>是一个空字符串，将会产生“奇怪”的结果。如果 <code>fromIndex</code> 值为空，或者 <code>fromIndex</code> 值小于被查找的字符串的长度，返回值和以下的 <code>fromIndex</code> 值一样：</p>
 
-<pre class="brush: js notranslate">'hello world'.indexOf('') // 返回 0
+<pre class="brush: js">'hello world'.indexOf('') // 返回 0
 'hello world'.indexOf('', 0) // 返回 0
 'hello world'.indexOf('', 3) // 返回 3
 'hello world'.indexOf('', 8) // 返回 8</pre>
 
 <p>另外，如果 <code>fromIndex</code> 值大于等于字符串的长度，将会直接返回字符串的长度（<code>str.length</code>）：</p>
 
-<pre class="brush: js notranslate">'hello world'.indexOf('', 11) // 返回 11
+<pre class="brush: js">'hello world'.indexOf('', 11) // 返回 11
 'hello world'.indexOf('', 13) // 返回 11
 'hello world'.indexOf('', 22) // 返回 11</pre>
 
-<p>从前面一个例子可以看出，被查找的值是空值时，Javascript将直接返回指定的索引值。从后面一个例子可以看出，被查找的值是空值时，Javascript将直接返回字符串的长度。</p>
+<p>从前面一个例子可以看出，被查找的值是空值时，JavaScript 将直接返回指定的索引值。从后面一个例子可以看出，被查找的值是空值时，JavaScript 将直接返回字符串的长度。</p>
 
 <h2 id="描述">描述</h2>
 
 <p>字符串中的字符被从左向右索引。第一个字符的索引（index）是 <code>0</code>，变量名为 <code>stringName</code> 的字符串的最后一个字符的索引是 <code>stringName.length - 1</code> 。</p>
 
-<pre class="brush: js notranslate">"Blue Whale".indexOf("Blue")       // 返回 0
+<pre class="brush: js">"Blue Whale".indexOf("Blue")       // 返回 0
 "Blue Whale".indexOf("Blute")      // 返回 -1
 "Blue Whale".indexOf("Whale", 0)   // 返回 5
 "Blue Whale".indexOf("Whale", 5)   // 返回 5
@@ -69,26 +67,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 "Blue Whale".indexOf("", 10)       // 返回 10
 "Blue Whale".indexOf("", 11)       // 返回 10</pre>
 
-<p id="Example_indexOf_and_case-sensitivity"><code>indexOf</code> 方法是区分大小写的。例如，下面的表达式将返回 <code>-1</code>：</p>
+<p><code>indexOf</code> 方法是区分大小写的。例如，下面的表达式将返回 <code>-1</code>：</p>
 
-<pre class="brush: js notranslate">"Blue Whale".indexOf("blue")      // 返回 -1
+<pre class="brush: js">"Blue Whale".indexOf("blue")      // 返回 -1
 </pre>
 
 <h3 id="检测是否存在某字符串">检测是否存在某字符串</h3>
 
 <p>注意 <code>0</code> 并不会被当成 <code>true</code> ，<code>-1</code> 不会被当成 <code>false</code> 。所以当检测某个字符串是否存在于另一个字符串中时，可使用下面的方法：</p>
 
-<pre class="notranslate">'Blue Whale'.indexOf('Blue') !== -1    // true
+<pre>'Blue Whale'.indexOf('Blue') !== -1    // true
 'Blue Whale'.indexOf('Bloe') !== -1    // false
-~('Blue Whale'.indexOf('Bloe'))        // 0, 这是一种错误用法</pre>
+~('Blue Whale'.indexOf('Bloe'))        // 0，这是一种错误用法</pre>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example_Using_indexOf_and_lastIndexOf" name="Example:_Using_indexOf_and_lastIndexOf">使用<code>indexOf()</code> 和 <code>lastIndexOf()</code></h3>
+<h3 id="Example_Using_indexOf_and_lastIndexOf">使用<code>indexOf()</code> 和 <code>lastIndexOf()</code></h3>
 
 <p>下例使用 <code>indexOf()</code> 和 <code>lastIndexOf()</code> 方法定位字符串中 "<code>Brave new world</code>" 的值。</p>
 
-<pre class="brush: js notranslate">var anyString = "Brave new world";
+<pre class="brush: js">var anyString = "Brave new world";
 
 console.log("The index of the first w from the beginning is " + anyString.indexOf("w"));
 // logs 8
@@ -105,7 +103,7 @@ console.log("The index of 'new' from the end is " + anyString.lastIndexOf("new")
 
 <p>下例定义了两个字符串变量。两个变量包含相同的字符串，除了第二个字符串中的某些字符为大写。第一个 <code>log</code> 方法输出 19。但是由于 <code>indexOf</code> 方法区分大小写，因此不会在 <code>myCapString</code> 中发现字符串 <code>“cheddar"</code>，所以，第二个 <code>log</code> 方法会输出 -1。</p>
 
-<pre class="brush: js notranslate">var myString    = "brie, pepper jack, cheddar";
+<pre class="brush: js">var myString    = "brie, pepper jack, cheddar";
 var myCapString = "Brie, Pepper Jack, Cheddar";
 
 console.log('myString.indexOf("cheddar") is ' + myString.indexOf("cheddar"));
@@ -115,9 +113,9 @@ console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf("cheddar"
 
 <h3 id="使用_indexOf_统计一个字符串中某个字母出现的次数">使用 <code>indexOf</code> 统计一个字符串中某个字母出现的次数</h3>
 
-<p>在下例中，设置了 <code>count</code> 来记录字母 <code><font face="Consolas, Liberation Mono, Courier, monospace">e</font></code> 在字符串 <code>str</code> 中出现的次数：</p>
+<p>在下例中，设置了 <code>count</code> 来记录字母 <code>e</code> 在字符串 <code>str</code> 中出现的次数：</p>
 
-<pre class="brush: js notranslate">// 翻译：生存还是毁灭？这是个问题。（莎士比亚《哈姆雷特》）
+<pre class="brush: js">// 翻译：生存还是毁灭？这是个问题。（莎士比亚《哈姆雷特》）
 var str = 'To be, or not to be, that is the question.';
 var count = 0;
 var pos = str.indexOf('e');

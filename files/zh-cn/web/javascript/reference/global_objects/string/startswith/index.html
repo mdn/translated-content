@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><code><strong>startsWith()</strong></code> 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 <code>true</code> 或 <code>false</code>。</span></p>
+<p><code><strong>startsWith()</strong></code> 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 <code>true</code> 或 <code>false</code>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-startswith.html")}}</div>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</pre>
+<pre class="syntaxbox"><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 <p>此方法已被添加至 ECMAScript 2015 规范之中，但可能不能在所有的现行 JavaScript 实现中使用。不过，你可以用以下的代码段为 <code>String.prototype.startsWith()</code> 制作 Polyfill：</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.startsWith) {
+<pre class="brush: js">if (!String.prototype.startsWith) {
     Object.defineProperty(String.prototype, 'startsWith', {
         value: function(search, pos) {
             pos = !pos || pos &lt; 0 ? 0 : +pos;
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 <h3 id="使用_startsWith">使用 <code>startsWith()</code></h3>
 
-<pre class="brush:js; notranslate">var str = "To be, or not to be, that is the question.";
+<pre class="brush:js;">var str = "To be, or not to be, that is the question.";
 
 alert(str.startsWith("To be"));         // true
 alert(str.startsWith("not to be"));     // false

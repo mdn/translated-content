@@ -13,21 +13,21 @@ translation_of: Web/JavaScript/EventLoop
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p><span class="seoSummary">JavaScript有一个基于<strong>事件循环</strong>的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务。</span>这个模型与其它语言中的模型截然不同，比如 C 和 Java。</p>
+<p>JavaScript 有一个基于<strong>事件循环</strong>的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务。这个模型与其它语言中的模型截然不同，比如 C 和 Java。</p>
 
 <h2 id="运行时概念">运行时概念</h2>
 
-<p>接下来的内容解释了这个理论模型。现代JavaScript引擎实现并着重优化了以下描述的这些语义。</p>
+<p>接下来的内容解释了这个理论模型。现代 JavaScript 引擎实现并着重优化了以下描述的这些语义。</p>
 
 <h3 id="可视化描述">可视化描述</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg" style="height: 271px; width: 295px;"></p>
+<p><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg"></p>
 
 <h3 id="栈">栈</h3>
 
 <p>函数调用形成了一个由若干帧组成的栈。</p>
 
-<pre class="brush: js notranslate">function foo(b) {
+<pre class="brush: js">function foo(b) {
   let a = 10;
   return a + b + 11;
 }
@@ -57,17 +57,17 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>之所以称之为 <strong>事件循环</strong>，是因为它经常按照类似如下的方式来被实现：</p>
 
-<pre class="brush: js notranslate">while (queue.waitForMessage()) {
+<pre class="brush: js">while (queue.waitForMessage()) {
   queue.processNextMessage();
 }</pre>
 
-<p><code>queue.waitForMessage()</code> 会同步地等待消息到达(如果当前没有任何消息等待被处理)。</p>
+<p><code>queue.waitForMessage()</code> 会同步地等待消息到达 (如果当前没有任何消息等待被处理)。</p>
 
 <h3 id="执行至完成">"执行至完成"</h3>
 
-<p>每一个消息完整地执行后，其它消息才会被执行。这为程序的分析提供了一些优秀的特性，包括：当一个函数执行时，它不会被抢占，只有在它运行完毕之后才会去运行任何其他的代码，才能修改这个函数操作的数据。这与C语言不同，例如，如果函数在线程中运行，它可能在任何位置被终止，然后在另一个线程中运行其他代码。</p>
+<p>每一个消息完整地执行后，其它消息才会被执行。这为程序的分析提供了一些优秀的特性，包括：当一个函数执行时，它不会被抢占，只有在它运行完毕之后才会去运行任何其他的代码，才能修改这个函数操作的数据。这与 C 语言不同，例如，如果函数在线程中运行，它可能在任何位置被终止，然后在另一个线程中运行其他代码。</p>
 
-<p>这个模型的一个缺点在于当一个消息需要太长时间才能处理完毕时，Web应用程序就无法处理与用户的交互，例如点击或滚动。为了缓解这个问题，浏览器一般会弹出一个“这个脚本运行时间过长”的对话框。一个良好的习惯是缩短单个消息处理时间，并在可能的情况下将一个消息裁剪成多个消息。</p>
+<p>这个模型的一个缺点在于当一个消息需要太长时间才能处理完毕时，Web 应用程序就无法处理与用户的交互，例如点击或滚动。为了缓解这个问题，浏览器一般会弹出一个“这个脚本运行时间过长”的对话框。一个良好的习惯是缩短单个消息处理时间，并在可能的情况下将一个消息裁剪成多个消息。</p>
 
 <h3 id="添加消息">添加消息</h3>
 
@@ -77,19 +77,19 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>下面的例子演示了这个概念（<code>setTimeout</code> 并不会在计时器到期之后直接执行）：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">const</span> s <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getSeconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const s = new Date().getSeconds();
 
-<span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Ran after "</span> <span class="operator token">+</span> <span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getSeconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">-</span> s<span class="punctuation token">)</span> <span class="operator token">+</span> <span class="string token">" seconds"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">500</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+setTimeout(function() {
+  // 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行
+  console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
+}, 500);
 
-<span class="keyword token">while</span><span class="punctuation token">(</span><span class="keyword token">true</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getSeconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">-</span> s <span class="operator token">&gt;=</span> <span class="number token">2</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Good, looped for 2 seconds"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">break</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+while(true) {
+  if(new Date().getSeconds() - s &gt;= 2) {
+    console.log("Good, looped for 2 seconds");
+    break;
+  }
+}</pre>
 
 <h3 id="零延迟">零延迟</h3>
 
@@ -99,7 +99,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>基本上，<code>setTimeout</code> 需要等待当前队列中所有的消息都处理完毕之后才能执行，即使已经超出了由第二参数所指定的时间。</p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
 
   console.log('这是开始');
 
@@ -130,7 +130,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <h2 id="永不阻塞">永不阻塞</h2>
 
-<p>JavaScript的事件循环模型与许多其他语言不同的一个非常有趣的特性是，它永不阻塞。 处理 I/O 通常通过事件和回调来执行，所以当一个应用正等待一个 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 查询返回或者一个 <a href="/zh-CN/docs/Web/API/XMLHttpRequest">XHR</a> 请求返回时，它仍然可以处理其它事情，比如用户输入。</p>
+<p>JavaScript 的事件循环模型与许多其他语言不同的一个非常有趣的特性是，它永不阻塞。 处理 I/O 通常通过事件和回调来执行，所以当一个应用正等待一个 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 查询返回或者一个 <a href="/zh-CN/docs/Web/API/XMLHttpRequest">XHR</a> 请求返回时，它仍然可以处理其它事情，比如用户输入。</p>
 
 <p>由于历史原因有一些例外，如 <code>alert</code> 或者同步 XHR，但应该尽量避免使用它们。注意，<a href="https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外的例外也是存在的</a>（但通常是实现错误而非其它原因）。</p>
 

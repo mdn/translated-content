@@ -5,17 +5,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 <div>{{JSRef("Global_Objects", "Date")}} {{Deprecated_header("")}}</div>
 
-<p>getYear() 方法返回指定的本地日期的年份。因为 <code>getYear</code> 不返回千禧年[full years] ("year 2000 problem")，所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}} .</p>
+<p>getYear() 方法返回指定的本地日期的年份。因为 <code>getYear</code> 不返回千禧年 [full years] ("year 2000 problem")，所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}} .</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><code>dateObj.getYear() </code></pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <p>None.</p>
 
-<h3 id="Description" name="Description">Returns</h3>
+<h3 id="Description">Returns</h3>
 
 <p>The <code>getYear</code> method returns the year minus 1900; thus:</p>
 
@@ -27,9 +27,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 
 <p>To take into account years before and after 2000, you should use {{jsxref("Date.getFullYear", "getFullYear()")}} instead of <code>getYear</code> so that the year is specified in full.</p>
 
-<h2 id="Backward_Compatibility" name="Backward_Compatibility">Backward Compatibility</h2>
+<h2 id="Backward_Compatibility">Backward Compatibility</h2>
 
-<h3 id="JavaScript_1.2_and_earlier" name="JavaScript_1.2_and_earlier">Behaviour in JavaScript 1.2 and earlier</h3>
+<h3 id="JavaScript_1.2_and_earlier">Behaviour in JavaScript 1.2 and earlier</h3>
 
 <p>The <code>getYear</code> method returns either a 2-digit or 4-digit year:</p>
 
@@ -38,9 +38,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
  <li>For years less than 1900 or greater than 1999, the value returned by <code>getYear</code> is the four-digit year. For example, if the year is 1856, the value returned is 1856. If the year is 2026, the value returned is 2026.</li>
 </ul>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
-<h3 id="Example:_Years_between_1900_and_1999" name="Example:_Years_between_1900_and_1999">Example: Years between 1900 and 1999</h3>
+<h3 id="Example:_Years_between_1900_and_1999">Example: Years between 1900 and 1999</h3>
 
 <p>The second statement assigns the value 95 to the variable <code>year</code>.</p>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 var year = Xmas.getYear(); // returns 95
 </pre>
 
-<h3 id="Example:_Years_above_1999" name="Example:_Years_above_1999">Example: Years above 1999</h3>
+<h3 id="Example:_Years_above_1999">Example: Years above 1999</h3>
 
 <p>The second statement assigns the value 100 to the variable <code>year</code>.</p>
 
@@ -56,7 +56,7 @@ var year = Xmas.getYear(); // returns 95
 var year = Xmas.getYear(); // returns 100
 </pre>
 
-<h3 id="Example:_Years_below_1900" name="Example:_Years_below_1900">Example: Years below 1900</h3>
+<h3 id="Example:_Years_below_1900">Example: Years below 1900</h3>
 
 <p>The second statement assigns the value -100 to the variable <code>year</code>.</p>
 
@@ -64,7 +64,7 @@ var year = Xmas.getYear(); // returns 100
 var year = Xmas.getYear(); // returns -100
 </pre>
 
-<h3 id="Example:_Setting_and_getting_a_year_between_1900_and_1999" name="Example:_Setting_and_getting_a_year_between_1900_and_1999">Example: Setting and getting a year between 1900 and 1999</h3>
+<h3 id="Example:_Setting_and_getting_a_year_between_1900_and_1999">Example: Setting and getting a year between 1900 and 1999</h3>
 
 <p>The second statement assigns the value 95 to the variable <code>year</code>, representing the year 1995.</p>
 
@@ -103,7 +103,7 @@ var year = Xmas.getYear(); // returns 95
 
 <p>{{Compat("javascript.builtins.Date.getYear")}}</p>
 
-<h2 id="See_Also" name="See_Also">See also</h2>
+<h2 id="See_Also">See also</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getFullYear()")}}</li>

@@ -32,9 +32,9 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 <h2 id="描述">描述</h2>
 
-<p>有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在JavaScript中，可以使用 <em>getter </em>来实现。</p>
+<p>有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在 JavaScript 中，可以使用 <em>getter </em>来实现。</p>
 
-<p>尽管可以结合使用getter和setter来创建一个伪属性，但是不可能同时将一个 getter 绑定到一个属性并且该属性实际上具有一个值。</p>
+<p>尽管可以结合使用 getter 和 setter 来创建一个伪属性，但是不可能同时将一个 getter 绑定到一个属性并且该属性实际上具有一个值。</p>
 
 <p>使用<code>get</code>语法时应注意以下问题：</p>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example_Defining_a_getter_with_the_get_operator" name="Example:_Defining_a_getter_with_the_get_operator">在新对象初始化时定义一个getter</h3>
+<h3 id="Example_Defining_a_getter_with_the_get_operator">在新对象初始化时定义一个 getter</h3>
 
 <p>这会为<code>obj</code>创建一个伪属性<code>latest</code>，它会返回<code>log</code>数组的最后一个元素。</p>
 
@@ -63,7 +63,7 @@ console.log(obj.latest); // "test".</pre>
 
 <p>注意，尝试为<code>latest</code>分配一个值不会改变它。</p>
 
-<h3 id="Example_Deleting_a_getter_using_the_delete_operator" name="Example:_Deleting_a_getter_using_the_delete_operator">使用<code>delete</code>操作符删除 getter</h3>
+<h3 id="Example_Deleting_a_getter_using_the_delete_operator">使用<code>delete</code>操作符删除 getter</h3>
 
 <p>只需使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>，就可删除 getter：</p>
 
@@ -94,16 +94,16 @@ console.log(obj.foo); // "bar"</pre>
 
 <p>Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。 getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。</p>
 
-<p>一种额外的优化技术是用<strong>智能(或称<a href="https://en.wikipedia.org/wiki/Memoization">记忆化</a>)getters </strong>延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：</p>
+<p>一种额外的优化技术是用<strong>智能 (或称<a href="https://en.wikipedia.org/wiki/Memoization">记忆化</a>)getters </strong>延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：</p>
 
 <ul>
- <li>如果属性值的计算是昂贵的（占用大量RAM或CPU时间，产生工作线程，检索远程文件等）。</li>
+ <li>如果属性值的计算是昂贵的（占用大量 RAM 或 CPU 时间，产生工作线程，检索远程文件等）。</li>
  <li>如果现在不需要该值。它将在稍后使用，或在某些情况下它根本不使用。</li>
  <li>如果被使用，它将被访问几次，并且不需要重新计算，该值将永远不会被改变，或者不应该被重新计算。</li>
 </ul>
 
-<div class="blockIndicator note">
-<p>这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。</p>
+<div class="note">
+<p><strong>备注：</strong>这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。</p>
 </div>
 
 <p>在以下示例中，对象具有一个 getter 属性。在获取属性时，该属性将从对象中删除并重新添加，但此时将隐式显示为数据属性。最后返回得到值。</p>
@@ -114,7 +114,7 @@ console.log(obj.foo); // "bar"</pre>
 },
 </pre>
 
-<p>对于Firefox代码，另请参阅定义<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code>函数的<code>XPCOMUtils.jsm</code>代码模块。</p>
+<p>对于 Firefox 代码，另请参阅定义<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code>函数的<code>XPCOMUtils.jsm</code>代码模块。</p>
 
 <h3 id="get_vs._defineProperty"><code>get</code> vs. <code>defineProperty</code></h3>
 
@@ -161,7 +161,7 @@ console.log(
 
 <p>{{Compat("javascript.functions.get")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a></li>
@@ -169,5 +169,5 @@ console.log(
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
  <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li>在Javascript指南中 <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">定义Getters和Setters</a></li>
+ <li>在 Javascript 指南中 <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">定义 Getters 和 Setters</a></li>
 </ul>

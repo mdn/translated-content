@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 <p><code><strong>every()</strong></code> 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。</p>
 
 <div class="note">
-<p><strong>注意</strong>：若收到一个空数组，此方法在一切情况下都会返回 <code>true</code>。</p>
+<p><strong>备注：</strong>若收到一个空数组，此方法在任何情况下都会返回 <code>true</code>。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/array-every.html")}}</div>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <h2 id="语法">语法</h2>
 
-<pre class="notranslate"><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+<pre><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果回调函数的每一次返回都为 {{Glossary("truthy")}} 值，返回 <code><strong>true</strong></code> ，否则返回 <code><strong>false</strong></code>。</p>
+<p>如果回调函数的每一次返回都为 {{Glossary("truthy")}} 值，返回 <code><strong>true</strong></code>，否则返回 <code><strong>false</strong></code>。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p><code>every</code> 遍历的元素范围在第一次调用 <code>callback</code> 之前就已确定了。在调用 <code>every</code> 之后添加到数组中的元素不会被 <code>callback</code> 访问到。如果数组中存在的元素被更改，则他们传入 <code>callback</code> 的值是 <code>every</code> 访问到他们那一刻的值。那些被删除的元素或从来未被赋值的元素将不会被访问到。</p>
 
-<p><code>every</code> 和数学中的"所有"类似，当所有的元素都符合条件才会返回<code>true</code>。正因如此，若传入一个空数组，无论如何都会返回 <code>true</code>。（这种情况属于<a href="http://en.wikipedia.org/wiki/Vacuous_truth">无条件正确</a>：正因为一个<a href="https://en.wikipedia.org/wiki/Empty_set#Properties">空集合</a>没有元素，所以它其中的所有元素都符合给定的条件。)</p>
+<p><code>every</code> 和数学中的"所有"类似，当所有的元素都符合条件才会返回 <code>true</code>。正因如此，若传入一个空数组，无论如何都会返回 <code>true</code>。（这种情况属于<a href="http://en.wikipedia.org/wiki/Vacuous_truth">无条件正确</a>：正因为一个<a href="https://en.wikipedia.org/wiki/Empty_set#Properties">空集合</a>没有元素，所以它其中的所有元素都符合给定的条件。)</p>
 
 <h2 id="例子">例子</h2>
 
@@ -68,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p>下例检测数组中的所有元素是否都大于 10。</p>
 
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
+<pre class="brush: js">function isBigEnough(element, index, array) {
   return element &gt;= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
@@ -79,14 +79,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>为上面的检测过程提供了更简短的语法。</p>
 
-<pre class="brush: js notranslate">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false
+<pre class="brush: js">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false
 [12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
 
 <h2 id="兼容旧环境（Polyfill）">兼容旧环境（Polyfill）</h2>
 
 <p>在 ECMA-262 第 5 版时，<code>every</code> 被添加进 ECMA-262 标准；因此，在某些实现环境中，它尚未被支持。你可以把下面的代码放到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>every</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，它假定 <code>Object</code> 和 <code>TypeError</code> 拥有它们的初始值，且 <code>fun.call</code> 等价于 {{jsxref("Function.prototype.call")}}。</p>
 
-<pre class="brush: js notranslate">if (!Array.prototype.every) {
+<pre class="brush: js">if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;

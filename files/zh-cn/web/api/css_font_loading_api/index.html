@@ -10,7 +10,7 @@ translation_of: Web/API/CSS_Font_Loading_API
 ---
 <div>{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</div>
 
-<p class="summary">CSS 字体加载 API 为您提供了动态加载字体资源时的events和interfaces。</p>
+<p>CSS 字体加载 API 为您提供了动态加载字体资源时的 events 和 interfaces。</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/CSS_Font_Loading_API
  <dt>{{domxref('FontFace')}}</dt>
  <dd>表示单个可用的字体。</dd>
  <dt>{{domxref('FontFaceSet')}}</dt>
- <dd>字体API的一个接口，支持检测它们（字体文件）的下载状态。</dd>
+ <dd>字体 API 的一个接口，支持检测它们（字体文件）的下载状态。</dd>
  <dt>{{domxref('FontFaceSource')}}</dt>
  <dd>提供混合了所有的字体相关操作，除非你别有深意。它定义了 {{domxref("Document")}} 和 {{domxref("WorkerGlobalScope")}} 中的可用属性 {{domxref("FontFaceSources.fonts")}} 。</dd>
  <dt>{{event('FontFaceSetLoadEvent')}}</dt>
@@ -27,71 +27,8 @@ translation_of: Web/API/CSS_Font_Loading_API
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Font Loading')}}</td>
-   <td>{{Spec2('CSS3 Font Loading')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性"><span class="highlight-span">浏览器兼容性</span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(35.0)}}</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(22)}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(56.0)}}</td>
-   <td>{{CompatChrome(35.0)}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(22)}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.FontFace")}}

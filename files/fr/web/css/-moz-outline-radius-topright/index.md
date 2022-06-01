@@ -10,7 +10,7 @@ translation_of: Web/CSS/-moz-outline-radius-topright
 ---
 {{Non-standard_header}}{{CSSRef}}
 
-Dans les applications Mozilla, la propriété **`-moz-outline-radius-`\*\***`topright`\*\* définit l'arrondi du coin supérieur droit du contour.
+Dans les applications Mozilla, la propriété **`-moz-outline-radius-topright`** définit l'arrondi du coin supérieur droit du contour.
 
 ## Exemples
 

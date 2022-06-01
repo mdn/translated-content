@@ -5,20 +5,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>WebAssembly.instantiate()</code></strong> 允许你编译和实例化 WebAssembly 代码。这个方法有两个重载方式:</p>
+<p><strong><code>WebAssembly.instantiate()</code></strong> 允许你编译和实例化 WebAssembly 代码。这个方法有两个重载方式：</p>
 
 <ul>
- <li>第一种主要重载方式使用WebAssembly二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 <code>Promise</code> 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.</li>
- <li>第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 <code>Promise</code> 携带一个 <code>Module</code>的实例化对象 <code>Instance</code>. 如果这个 <code>Module</code> 已经被编译了或者是从缓存中获取的( <a href="/en-US/docs/WebAssembly/Caching_modules">retrieved from cache</a>), 那么这种重载方式是非常有用的.</li>
+ <li>第一种主要重载方式使用 WebAssembly 二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 <code>Promise</code> 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.</li>
+ <li>第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 <code>Promise</code> 携带一个 <code>Module</code>的实例化对象 <code>Instance</code>. 如果这个 <code>Module</code> 已经被编译了或者是从缓存中获取的 ( <a href="/en-US/docs/WebAssembly/Caching_modules">retrieved from cache</a>), 那么这种重载方式是非常有用的。</li>
 </ul>
 
-<div class="blockIndicator warning">
-<p><strong>重要</strong>: 此方法不是获取(fetch)和实例化wasm模块的最具效率方法。 如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。</p>
+<div class="warning">
+<p><strong>警告：</strong>此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。 如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。</p>
 </div>
 
 <h2 id="语法">语法</h2>
 
-<h3 id="主重载方式_—_使用wasm二进制代码">主重载方式 — 使用wasm二进制代码</h3>
+<h3 id="主重载方式_—_使用wasm二进制代码">主重载方式 — 使用 wasm 二进制代码</h3>
 
 <pre class="syntaxbox">Promise&lt;ResultObject&gt; WebAssembly.instantiate(bufferSource, importObject);
 </pre>
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 <dl>
  <dt><em>bufferSource</em></dt>
- <dd>一个包含你想编译的wasm模块二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>(类型数组) or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(数组缓冲区)</dd>
+ <dd>一个包含你想编译的 wasm 模块二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>(类型数组) or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(数组缓冲区)</dd>
  <dt><em>importObject</em> {{optional_inline}}</dt>
  <dd>一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">WebAssembly.LinkError</a>。</dd>
 </dl>
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 <p>解析为包含两个字段的 <code>ResultObject</code> 的一个 <code>Promise</code>:</p>
 
 <ul>
- <li><code>module</code>: 一个被编译好的 {{jsxref("WebAssembly.Module")}} 对象. 这个模块可以被再次实例化，通过 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 被分享，或者缓存到 <a href="/en-US/docs/WebAssembly/Caching_modules">IndexedDB</a>。</li>
+ <li><code>module</code>: 一个被编译好的 {{jsxref("WebAssembly.Module")}} 对象。这个模块可以被再次实例化，通过 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 被分享，或者缓存到 <a href="/en-US/docs/WebAssembly/Caching_modules">IndexedDB</a>。</li>
  <li><code>instance</code>: 一个包含所有 <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a>的{{jsxref("WebAssembly.Instance")}}对象。</li>
 </ul>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 <ul>
  <li>如果参数的类型或结构不正确，将会抛出异常 {{jsxref("TypeError")}} .</li>
- <li>如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出3种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
+ <li>如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
 </ul>
 
 <h3 id="第二种重载_—_使用模块对象">第二种重载 — 使用模块对象</h3>
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 <ul>
  <li>如果参数的类型或结构不正确，将抛出异常 {{jsxref("TypeError")}} 。</li>
- <li>如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出3种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
+ <li>如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
 </ul>
 
 <h2 id="例子">例子</h2>
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
   },
 };
 
-/* 2019-08-03：importObject必须存在env对象以及env对象的abort方法 */
+/* 2019-08-03：importObject 必须存在 env 对象以及 env 对象的 abort 方法 */
 
 fetch('simple.wasm').then(response =&gt;
   response.arrayBuffer()
@@ -103,12 +103,12 @@ fetch('simple.wasm').then(response =&gt;
 );</pre>
 
 <div class="note">
-<p><strong>注</strong>: 查看GitHub(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">在线实例</a>)的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html">index.html</a> 中一个相似的例子，使用了我们的<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1">fetchAndInstantiate()</a></code>库函数</p>
+<p><strong>备注：</strong>: 查看 GitHub(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">在线实例</a>) 的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html">index.html</a> 中一个相似的例子，使用了我们的<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1">fetchAndInstantiate()</a></code>库函数</p>
 </div>
 
 <h3 id="第二种重载例子">第二种重载例子</h3>
 
-<p>下面的例子（查看我们GitHub的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> 例子，可在线演示）使用 <code>compile()</code> 方法编译了 simple.wasm 字节码，然后通过 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 发送给一个线程 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>。</p>
+<p>下面的例子（查看我们 GitHub 的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> 例子，可在线演示）使用 <code>compile()</code> 方法编译了 simple.wasm 字节码，然后通过 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 发送给一个线程 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>。</p>
 
 <pre class="brush: js">var worker = new Worker("wasm_worker.js");
 
@@ -158,13 +158,9 @@ onmessage = function(e) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.WebAssembly.instantiate")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="参见">参见</h2>
 

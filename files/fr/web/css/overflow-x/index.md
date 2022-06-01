@@ -113,7 +113,7 @@ La propriété `overflow-x` est définie avec l'un des mots-clés définis ci-ap
 
 | Spécification                                                                            | État                                 | Commentaires |
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-x', 'overflow-x')}} | {{Spec2('CSS3 Overflow')}} |              |
+| {{SpecName('CSS3 Overflow', '#propdef-overflow-x', 'overflow-x')}} | {{Spec2('CSS3 Overflow')}} |              |
 
 {{cssinfo}}
 

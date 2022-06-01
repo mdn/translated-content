@@ -7,7 +7,7 @@ translation_of: Web/API/XMLHttpRequest/statusText
 
 <div>只读属性 <code><strong>XMLHttpRequest.statusText</strong></code> 返回了<code>XMLHttpRequest</code> 请求中由服务器返回的一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> 类型的文本信息，这则信息中也包含了响应的数字状态码。不同于使用一个数字来指示的状态码<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHTTPRequest/status" title="The XMLHttpRequest.status property returns an unsigned short with the status of the response of the request. These are the standard HTTP status codes. For example, status is 200 denotes a successful request. Before the request is complete, the value of status will be 0.">XMLHTTPRequest.status</a></code>，这个属性包含了返回状态对应的文本信息，例如"OK"或是"Not Found"。如果请求的状态<code><a href="/en-US/docs/Web/API/XMLHttpRequest/readyState">readyState</a></code>的值为"UNSENT"或者"OPENED"，则这个属性的值将会是一个空字符串。</div>
 
-<div></div>
+
 
 <div>如果服务器未明确指定一个状态文本信息，则<code>statusText</code>的值将会被自动赋值为"OK"。</div>
 
@@ -30,7 +30,7 @@ xhr.onload = function () {
 xhr.send(null);
 
 /**
- * 输出如下:
+ * 输出如下：
  *
  * 0 UNSENT
  * 1 OPENED

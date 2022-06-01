@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">const <em>name1 = <em>value1 [</em>, <em>name2</em> = <em>value2</em><em> [</em>, ... [</em>, <em>nameN</em> = <em>valueN]]]</em>;</pre>
+<pre class="syntaxbox">const <em>name1 = <em>value1 [</em>, <em>name2</em> = <em>value2</em><em> [</em>, ... [</em>, <em>nameN</em> = <em>valueN]]]</em>;</pre>
 
 <dl>
  <dt><code>nameN</code></dt>
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <p>常量在声明的时候可以使用大小写，但通常情况下全部用大写字母。</p>
 
-<pre class="brush: js; notranslate">// 定义常量MY_FAV并赋值7
+<pre class="brush: js;">// 定义常量 MY_FAV 并赋值 7
 const MY_FAV = 7;
 
 // 报错 - Uncaught TypeError: Assignment to constant variable.
@@ -69,7 +69,7 @@ let MY_FAV = 20;
 
 <p>注意块作用域的性质很重要</p>
 
-<pre class="brush: js notranslate">if (MY_FAV === 7) {
+<pre class="brush: js">if (MY_FAV === 7) {
   // 没问题，并且创建了一个块作用域变量 MY_FAV
   // (works equally well with let to declare a block scoped non const variable)
   let MY_FAV = 20;
@@ -81,13 +81,13 @@ let MY_FAV = 20;
   var MY_FAV = 20;
 }
 
-// MY_FAV 依旧为7
+// MY_FAV 依旧为 7
 console.log('my favorite number is ' + MY_FAV);
 </pre>
 
 <h3 id="常量要求一个初始值">常量要求一个初始值</h3>
 
-<pre class="brush: js notranslate">// 报错
+<pre class="brush: js">// 报错
 // Uncaught SyntaxError: Missing initializer in const declaration
 
 const FOO;
@@ -97,7 +97,7 @@ const FOO;
 
 <p>常量可以定义成对象和数组</p>
 
-<pre class="brush: js notranslate">const MY_OBJECT = {'key': 'value'};
+<pre class="brush: js">const MY_OBJECT = {'key': 'value'};
 
 // 重写对象和上面一样会失败
 // Uncaught TypeError: Assignment to constant variable.

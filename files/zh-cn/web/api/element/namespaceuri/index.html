@@ -28,7 +28,7 @@ translation_of: Web/API/Element/namespaceURI
 
 <p>这不是一个计算值，它是基于范围内的名称空间声明检查的名称空间查找的结果。节点命名空间在节点创建时被冻结。</p>
 
-<p>在Firefox 3.5 以及之前的版本， HTML文档中的HTML元素的名称空间URI为 <code>null</code>。 在更早的版本中, 符合HTML5， 它是<code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> 如 XHTML。{{gecko_minversion_inline("1.9.2")}}</p>
+<p>在Firefox 3.5 以及之前的版本， HTML文档中的HTML元素的名称空间URI为 <code>null</code>。 在更早的版本中, 符合HTML5， 它是<code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> 如 XHTML。</p>
 
 <p>您可以使用DOM Level 2方法指定的<code>namespaceURI</code>创建一个元素 <a href="/en-US/docs/Web/API/Document/createElementNS" title="Document.createElementNS">document.createElementNS</a>。</p>
 
@@ -55,55 +55,7 @@ translation_of: Web/API/Element/namespaceURI
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>46.0<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 这API 可以预先在 {{domxref("Node")}} API中获得.</p>
+{{Compat("api.Element.namespaceURI")}}
 
 <h2 id="See_also">See also</h2>
 

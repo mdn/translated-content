@@ -5,9 +5,7 @@ translation_of: Web/HTML/Element/input/url
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} 元素有一个 <code><strong>url</strong></code> 来让用户输入URL</span>{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</p>
-
-
+<p>{{HTMLElement("input")}} 元素有一个 <code><strong>url</strong></code> 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</p>
 
 <p>The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.</p>
 
@@ -16,7 +14,7 @@ translation_of: Web/HTML/Element/input/url
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a URL, or empty</td>
   </tr>
   <tr>
@@ -47,7 +45,7 @@ translation_of: Web/HTML/Element/input/url
  <li>A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means <code>urlscheme://restofurl</code>.</li>
 </ol>
 
-<p>See {{anch("Validation")}} for details on how URLs are validated to ensure that they're formatted properly.</p>
+<p>See <a href="#validation">Validation</a> for details on how URLs are validated to ensure that they're formatted properly.</p>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
@@ -62,59 +60,59 @@ translation_of: Web/HTML/Element/input/url
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("list")}}</code></td>
+   <td><code><a href="#list">list</a></code></td>
    <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
   </tr>
   <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
+   <td><code><a href="#maxlength">maxlength</a></code></td>
    <td>The maximum number of characters the input should accept</td>
   </tr>
   <tr>
-   <td><code>{{anch("minlength")}}</code></td>
+   <td><code><a href="#minlength">minlength</a></code></td>
    <td>The minimum number of characters long the input can be and still be considered valid</td>
   </tr>
   <tr>
-   <td><code>{{anch("pattern")}}</code></td>
+   <td><code><a href="#pattern">pattern</a></code></td>
    <td>A regular expression the input's contents must match in order to be valid</td>
   </tr>
   <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
+   <td><code><a href="#placeholder">placeholder</a></code></td>
    <td>An exemplar value to display in the input field whenever it is empty</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>A Boolean attribute indicating whether or not the contents of the input should be read-only</td>
   </tr>
   <tr>
-   <td><code>{{anch("size")}}</code></td>
+   <td><code><a href="#size">size</a></code></td>
    <td>A number indicating how many characters wide the input field should be</td>
   </tr>
   <tr>
-   <td><code>{{anch("spellcheck")}}</code></td>
+   <td><code><a href="#spellcheck">spellcheck</a></code></td>
    <td>Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used</td>
   </tr>
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="list">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+<h3 id="maxlength">maxlength</h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+<h3 id="minlength">minlength</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no minimum length.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+<h3 id="pattern">pattern</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
 
-<p>See the section {{anch("Pattern validation")}} for details and an example.</p>
+<p>See the section <a href="#pattern_validation">Pattern validation</a> for details and an example.</p>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
 
@@ -137,11 +135,11 @@ translation_of: Web/HTML/Element/input/url
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("autocorrect")}}</code></td>
+   <td><code><a href="#autocorrect">autocorrect</a></code></td>
    <td>A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong></td>
   </tr>
   <tr>
-   <td><code>{{anch("mozactionhint")}}</code></td>
+   <td><code><a href="#mozactionhint">mozactionhint</a></code></td>
    <td>A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. <strong>Firefox for Android only.</strong></td>
   </tr>
  </tbody>
@@ -361,7 +359,7 @@ translation_of: Web/HTML/Element/input/url
 
 <h2 id="Examples">Examples</h2>
 
-<p>There's not much else to say about <code>url</code> type inputs; check the {{anch("Pattern validation")}} and {{anch("Using URL inputs")}} sections for numerous examples.</p>
+<p>There's not much else to say about <code>url</code> type inputs; check the <a href="#pattern_validation">Pattern validation</a> and <a href="#using_url_inputs">Using URL inputs</a> sections for numerous examples.</p>
 
 <p>You can also find our <a href="https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html">pattern validation example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/html/forms/url-example/">running live also</a>).</p>
 

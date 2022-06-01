@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">BigInt.asUintN(<var>width</var>, <var>bigint</var>);</pre>
+<pre class="syntaxbox">BigInt.asUintN(<var>width</var>, <var>bigint</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 
 <p>The <code>BigInt.asUintN()</code> method can be useful to stay in the range of 64-bit arithmetic.</p>
 
-<pre class="brush: js notranslate">const max = 2n ** 64n - 1n;
+<pre class="brush: js">const max = 2n ** 64n - 1n;
 
 BigInt.asUintN(64, max);
 // ↪ 18446744073709551615n
@@ -62,7 +62,7 @@ BigInt.asUintN(64, max + 1n);
 
 
 
-<p>{{Compat("javascript.builtins.BigInt.asUintN")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

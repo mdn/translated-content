@@ -3,8 +3,8 @@ title: <input type="time">
 slug: Web/HTML/Element/Input/time
 tags:
   - HTML
-  - HTML表单
-  - INPUT元素
+  - HTML 表单
+  - INPUT 元素
   - Input
   - Time
   - 元素
@@ -13,19 +13,19 @@ translation_of: Web/HTML/Element/input/time
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">类型为time的输入元素{{htmlelement("input")}} ，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。</span></p>
+<p>类型为 time 的输入元素{{htmlelement("input")}} ，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。</p>
 
-<p>控件的用户界面因浏览器而异。在现代浏览器中，支持是很好的，因为Safari是唯一尚未实现的主要浏览器；在Safari和任何其他不支持<code>&lt;time&gt;</code>的浏览器中，它会优雅地降级为<code>&lt;input type=“text”&gt;</code>。</p>
+<p>控件的用户界面因浏览器而异。在现代浏览器中，支持是很好的，因为 Safari 是唯一尚未实现的主要浏览器；在 Safari 和任何其他不支持<code>&lt;time&gt;</code>的浏览器中，它会优雅地降级为<code>&lt;input type=“text”&gt;</code>。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}</div>
 
-<p class="hidden">这个交互式示例的源代码存储在GitHub存储库中。如果您想对交互式示例项目作出贡献，请克隆https://github.com/mdn/interactive-examples并向我们发送请求。</p>
+<p class="hidden">这个交互式示例的源代码存储在 GitHub 存储库中。如果您想对交互式示例项目作出贡献，请克隆 https://github.com/mdn/interactive-examples 并向我们发送请求。</p>
 
 <h2 id="Appearance">Appearance</h2>
 
 <h3 id="Chrome_and_Opera">Chrome and Opera</h3>
 
-<p>在chrome/opera中，选择时间很简单，根据操作系统区域设置，插槽以12或24小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个“x”按钮来清除控件的值。</p>
+<p>在 chrome/opera 中，选择时间很简单，根据操作系统区域设置，插槽以 12 或 24 小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个 “x” 按钮来清除控件的值。</p>
 
 <p><img alt="12-hour Chrome time input" src="https://mdn.mozillademos.org/files/16417/chrome_time.PNG" style="height: 30px; width: 93px;"> 12-hour</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/HTML/Element/input/time
 
 <h3 id="Firefox">Firefox</h3>
 
-<p>火狐的时间选择和Chrome非常相似，只是它没有上下箭头。它还使用12或24小时格式输入时间，基于系统区域设置。提供“X”按钮以清除控件的值。</p>
+<p>火狐的时间选择和 Chrome 非常相似，只是它没有上下箭头。它还使用 12 或 24 小时格式输入时间，基于系统区域设置。提供 “X” 按钮以清除控件的值。</p>
 
 <p><img alt="12-hour Firefox time input" src="https://mdn.mozillademos.org/files/15403/firefox-time.png" style="height: 29px; width: 106px;"> 12-hour</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/HTML/Element/input/time
 
 <h3 id="Edge">Edge</h3>
 
-<p>Edgede 时间选择有点复杂，打开一个小时和分钟的滚动区域。它和chrome一样，使用12或24小时格式输入时间，基于系统区域设置：</p>
+<p>Edgede 时间选择有点复杂，打开一个小时和分钟的滚动区域。它和 chrome 一样，使用 12 或 24 小时格式输入时间，基于系统区域设置：</p>
 
 <p><img alt="12-hour Edge time input" src="https://mdn.mozillademos.org/files/16418/edge_time.PNG" style="display: block; height: 290px; width: 188px;"> 12-hour</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/HTML/Element/input/time
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a time, or empty.</td>
   </tr>
   <tr>
@@ -90,11 +90,11 @@ timeControl.value = '15:30';</pre>
 
 <h3 id="Time_value_format">Time value format</h3>
 
-<p>The <code>value</code> of the <code>time</code> input is always in 24-hour format: <code>hh:mm</code>, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see {{anch("Using the step attribute")}}), the format is always <code>hh:mm:ss</code>. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.</p>
+<p>The <code>value</code> of the <code>time</code> input is always in 24-hour format: <code>hh:mm</code>, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see <a href="#using_the_step_attribute">Using the step attribute</a>), the format is always <code>hh:mm:ss</code>. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.</p>
 
 <p>在此示例中，您可以通过输入时间并查看之后如何更改来查看时间输入的值。</p>
 
-<p>首先，看一下HTML。这很简单，带有我们之前看到的标签和输入，但添加了额外的元素<code>p</code>和<code>span</code>用来显示时间值</p>
+<p>首先，看一下 HTML。这很简单，带有我们之前看到的标签和输入，但添加了额外的元素<code>p</code>和<code>span</code>用来显示时间值</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;label for="startTime"&gt;Start time: &lt;/label&gt;
@@ -116,7 +116,7 @@ startTime.addEventListener("input", function() {
 
 <p>{{EmbedLiveSample("Time_value_format", 600, 80)}}</p>
 
-<p>When a form including a <code>time</code> input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form <code>name=hh%3Amm</code>, or <code>name=hh%3Amm%3ass</code> if seconds are included (see {{anch("Using the step attribute")}}).</p>
+<p>When a form including a <code>time</code> input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form <code>name=hh%3Amm</code>, or <code>name=hh%3Amm%3ass</code> if seconds are included (see <a href="#using_the_step_attribute">Using the step attribute</a>).</p>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
@@ -131,19 +131,19 @@ startTime.addEventListener("input", function() {
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The latest time to accept, in the syntax described under {{anch("Time value format")}}</td>
+   <td><code><a href="#max">max</a></code></td>
+   <td>The latest time to accept, in the syntax described under <a href="#time_value_format">Time value format</a></td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>The earliest time to accept as a valid input</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>A Boolean attribute which, if present, indicates that the contents of the <code>time</code> input should not be user-editable</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>The stepping interval to use both for user interfaces purposes and during constraint validation</td>
   </tr>
  </tbody>
@@ -151,17 +151,17 @@ startTime.addEventListener("input", function() {
 
 <div class="callout-box">Unlike many data types, time values have a <strong>periodic domain</strong>, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a <code>min</code> of <code>14:00</code> and a <code>max</code> of <code>2:00</code> means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM.</div>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="max">max</h3>
 
-<p>A string indicating the latest time to accept, specified in the same {{anch("Time value format", "time value format")}} as described above. If the specified string isn't a valid time, no maximum value is set.</p>
+<p>A string indicating the latest time to accept, specified in the same <a href="#time_value_format">time value format</a> as described above. If the specified string isn't a valid time, no maximum value is set.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="min">min</h3>
 
-<p>A string specifying the earliest time to accept, given in the {{anch("Time value format", "time value format")}} described previously. If the value specified isn't a valid time string, no minimum value is set.</p>
+<p>A string specifying the earliest time to accept, given in the <a href="#time_value_format">time value format</a> described previously. If the value specified isn't a valid time string, no minimum value is set.</p>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="step">step</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
@@ -171,9 +171,9 @@ startTime.addEventListener("input", function() {
 
 <h2 id="Using_time_inputs">Using time inputs</h2>
 
-<p>虽然data和time输入类型中的时间具有最广泛的浏览器支持，但它尚未接近普及，因此您可能需要提供一种替代方法来输入日期和时间，以便Safari用户（和用户）其他非支持浏览器）仍然可以轻松输入时间值。</p>
+<p>虽然 data 和 time 输入类型中的时间具有最广泛的浏览器支持，但它尚未接近普及，因此您可能需要提供一种替代方法来输入日期和时间，以便 Safari 用户（和用户）其他非支持浏览器）仍然可以轻松输入时间值。</p>
 
-<p>We'll look at basic and more complex uses of <code>&lt;input type="time"&gt;</code>, then offer advice on mitigating the browser support issue later on (see {{anch("Handling browser support")}}).</p>
+<p>We'll look at basic and more complex uses of <code>&lt;input type="time"&gt;</code>, then offer advice on mitigating the browser support issue later on (see <a href="#handling_browser_support">Handling browser support</a>).</p>
 
 <h3 id="Basic_uses_of_time">Basic uses of time</h3>
 

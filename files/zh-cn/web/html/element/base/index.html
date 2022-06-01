@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/base
 
 <p><strong>HTML &lt;base&gt; 元素</strong> 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 &lt;base&gt; 元素。</p>
 
-<p>一个文档的基本 URL, 可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 <code>&lt;base&gt;</code> 元素，<code>baseURI</code> 默认为 <code>{{domxref("document.location.href")}}</code>。</p>
+<p>一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 <code>&lt;base&gt;</code> 元素，<code>baseURI</code> 默认为 <code>{{domxref("document.location.href")}}</code>。</p>
 
 <table class="properties">
  <tbody>
@@ -46,11 +46,11 @@ translation_of: Web/HTML/Element/base
 
 <p>该标签包含<a href="/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
 
-<p>如果指定了以下任一属性，这个元素<strong>必须</strong>在其他任何属性是URL的元素之前。例如：<code>{{HTMLElement("link")}}</code> 的 <code>href</code> 属性。</p>
+<p>如果指定了以下任一属性，这个元素<strong>必须</strong>在其他任何属性是 URL 的元素之前。例如：<code>{{HTMLElement("link")}}</code> 的 <code>href</code> 属性。</p>
 
 <dl>
  <dt>{{htmlattrdef("href")}}</dt>
- <dd>用于文档中相对 URL 地址的基础 URL。允许绝对和相对URL。</dd>
+ <dd>用于文档中相对 URL 地址的基础 URL。允许绝对和相对 URL。</dd>
  <dt>{{htmlattrdef("target")}}</dt>
  <dd>默认浏览上下文的关键字或作者定义的名称，当没有明确目标的链接 <code>{{HTMLElement("a")}}</code> 或表单 <code>{{HTMLElement("form")}}</code> 导致导航被激活时显示其结果。该属性值定位到<em>浏览上下文</em>（例如选项卡，窗口或内联框 <code>{{HTMLElement("iframe")}}</code> ）。</dd>
  <dd>以下的关键字指定特殊的意思：
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/base
   <li><code>_self</code>: 载入结果到当前浏览上下文中。（该值是元素的默认值）。</li>
   <li><code>_blank</code>: 载入结果到一个新的未命名的浏览上下文。</li>
   <li><code>_parent</code>: 载入结果到父级浏览上下文（如果当前页是内联框）。如果没有父级结构，该选项的行为和<code>_self</code>一样。</li>
-  <li><code>_top</code>: 载入结果到顶级浏览上下文（该浏览上下文是当前上下文的最顶级上下文）。如果没有父级，该选项的行为和_self一样。</li>
+  <li><code>_top</code>: 载入结果到顶级浏览上下文（该浏览上下文是当前上下文的最顶级上下文）。如果没有父级，该选项的行为和_self 一样。</li>
  </ul>
  </dd>
 </dl>
@@ -67,7 +67,7 @@ translation_of: Web/HTML/Element/base
 
 <h3 id="多个_&lt;base>_元素">多个 <code>&lt;base&gt;</code> 元素</h3>
 
-<p>如果指定了多个 <code>&lt;base&gt;</code> 元素，只会使用第一个 <code>href </code>和 <code>target </code>值, 其余都会被忽略。</p>
+<p>如果指定了多个 <code>&lt;base&gt;</code> 元素，只会使用第一个 <code>href </code>和 <code>target </code>值，其余都会被忽略。</p>
 
 <h3 id="页内锚">页内锚</h3>
 
@@ -81,7 +81,7 @@ translation_of: Web/HTML/Element/base
 
 <h3 id="Open_Graph">Open Graph</h3>
 
-<p><a href="https://ogp.me">Open Graph</a> 标签不接受 <code>&lt;base&gt;</code>，并且应该始终具有完整的绝对URL。例如：</p>
+<p><a href="https://ogp.me">Open Graph</a> 标签不接受 <code>&lt;base&gt;</code>，并且应该始终具有完整的绝对 URL。例如：</p>
 
 <pre><code>&lt;meta property="og:image" content="https://example.com/thumbnail.jpg"&gt;</code></pre>
 
@@ -111,7 +111,7 @@ translation_of: Web/HTML/Element/base
   <tr>
    <td>{{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td><font face="Arial, x-locale-body, sans-serif"><span style="background-color: rgba(212, 221, 228, 0.14902);">指定 </span></font><code>target</code> 的行为</td>
+   <td>指定 <code>target</code> 的行为</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}</td>

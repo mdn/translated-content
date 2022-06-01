@@ -21,26 +21,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function</var>)</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function</var>)</code></pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>regexp </code>(pattern)</dt>
  <dd>一个{{jsxref("RegExp")}} 对象或者其字面量。该正则所匹配的内容会被第二个参数的返回值替换掉。</dd>
-</dl>
-
-<dl>
  <dt><code>substr </code>(pattern)</dt>
  <dd>一个将被 <code>newSubStr</code> 替换的 {{jsxref("String","字符串")}}。其被视为一整个字符串，而不是一个正则表达式。仅第一个匹配项会被替换。</dd>
-</dl>
-
-<dl>
  <dt><code>newSubStr</code> (replacement)</dt>
  <dd>用于替换掉第一个参数在原字符串中的匹配部分的{{jsxref("String", "字符串")}}。该字符串中可以内插一些特殊的变量名。参考下面的<a href="#使用字符串作为参数">使用字符串作为参数</a>。</dd>
-</dl>
-
-<dl>
  <dt><code>function</code> (replacement)</dt>
  <dd>一个用来创建新子字符串的函数，该函数的返回值将替换掉第一个参数匹配到的结果。参考下面的<a href="#指定一个函数作为参数">指定一个函数作为参数</a>。</dd>
 </dl>
@@ -62,8 +53,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 <table class="fullwidth-table">
  <tbody>
   <tr>
-   <td class="header">变量名</td>
-   <td class="header">代表的值</td>
+   <th>变量名</th>
+   <th>代表的值</th>
   </tr>
   <tr>
    <td><code>$$</code></td>
@@ -82,13 +73,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
    <td>插入当前匹配的子串右边的内容。</td>
   </tr>
   <tr>
-   <td style="white-space: nowrap;"><code>$<em>n</em></code></td>
+   <td><code>$<em>n</em></code></td>
    <td>
-    <p>假如第一个参数是 {{jsxref("RegExp")}}对象，并且 n 是个小于100的非负整数，那么插入第 n 个括号匹配的字符串。提示：索引是从1开始。如果不存在第 n个分组，那么将会把匹配到到内容替换为字面量。比如不存在第3个分组，就会用“$3”替换匹配到的内容。</p>
+    <p>假如第一个参数是 {{jsxref("RegExp")}}对象，并且 n 是个小于 100 的非负整数，那么插入第 n 个括号匹配的字符串。提示：索引是从 1 开始。如果不存在第 n 个分组，那么将会把匹配到到内容替换为字面量。比如不存在第 3 个分组，就会用“$3”替换匹配到的内容。</p>
    </td>
   </tr>
   <tr>
-   <td style="white-space: nowrap;"><code><em>$&lt;Name&gt;</em></code></td>
+   <td><code><em>$&lt;Name&gt;</em></code></td>
    <td> 这里<em><code>Name</code></em> 是一个分组名称。如果在正则表达式中并不存在分组（或者没有匹配），这个变量将被处理为空字符串。只有在支持命名分组捕获的浏览器中才能使用。</td>
   </tr>
  </tbody>
@@ -103,8 +94,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 <table class="fullwidth-table">
  <tbody>
   <tr>
-   <td class="header">变量名</td>
-   <td class="header">代表的值</td>
+   <th>变量名</th>
+   <th>代表的值</th>
   </tr>
   <tr>
    <td><code>match</code></td>
@@ -113,7 +104,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
   <tr>
    <td><code>p1,p2, ...</code></td>
    <td>
-    <p>假如replace()方法的第一个参数是一个{{jsxref("RegExp")}} 对象，则代表第n个括号匹配的字符串。（对应于上述的$1，$2等。）例如，如果是用 <code>/(\a+)(\b+)/</code> 这个来匹配，<code>p1</code> 就是匹配的 <code>\a+</code>，<code>p2</code> 就是匹配的 <code>\b+</code>。</p>
+    <p>假如 replace() 方法的第一个参数是一个{{jsxref("RegExp")}} 对象，则代表第 n 个括号匹配的字符串。（对应于上述的$1，$2等。）例如，如果是用 <code>/(\a+)(\b+)/</code> 这个来匹配，<code>p1</code> 就是匹配的 <code>\a+</code>，<code>p2</code> 就是匹配的 <code>\b+</code>。</p>
    </td>
   </tr>
   <tr>
@@ -137,7 +128,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 <p>下面的例子将会使 <code>newString</code> 变成 <code>'abc - 12345 - #$*%'</code>：</p>
 
-<pre class="brush: js notranslate">function replacer(match, p1, p2, p3, offset, string) {
+<pre class="brush: js">function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
@@ -145,22 +136,22 @@ var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
 </pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="在_replace_中使用正则表达式">在 <code>replace()</code> 中使用正则表达式</h3>
 
 <p>在下面的例子中，<code>replace()</code> 中使用了正则表达式及忽略大小写标示。</p>
 
-<pre class="brush: js notranslate">var str = 'Twas the night before Xmas...';
+<pre class="brush: js">var str = 'Twas the night before Xmas...';
 var newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr);  // Twas the night before Christmas...
 </pre>
 
 <h3 id="在_replace_中使用_global_和_ignore_选项">在 <code>replace()</code> 中使用 <code>global</code> 和 <code>ignore</code> 选项</h3>
 
-<p>下面的例子中,正则表达式包含有全局替换(g)和忽略大小写(i)的选项,这使得replace方法用'oranges'替换掉了所有出现的"apples".</p>
+<p>下面的例子中，正则表达式包含有全局替换 (g) 和忽略大小写 (i) 的选项，这使得 replace 方法用'oranges'替换掉了所有出现的"apples".</p>
 
-<pre class="brush: js notranslate">var re = /apples/gi;
+<pre class="brush: js">var re = /apples/gi;
 var str = "Apples are round, and apples are juicy.";
 var newstr = str.replace(re, "oranges");
 
@@ -172,7 +163,7 @@ console.log(newstr);
 
 <p>下面的例子演示了如何交换一个字符串中两个单词的位置，这个脚本使用$1 和 $2 代替替换文本。</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
 var newstr = str.replace(re, "$2, $1");
 // Smith, John
@@ -185,7 +176,7 @@ console.log(newstr);
 
 <p>在返回前，替换函数允许匹配片段作为参数，并且将它和连字符进行连接作为新的片段。</p>
 
-<pre class="brush: js notranslate">function styleHyphenFormat(propertyName) {
+<pre class="brush: js">function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match) {
     return '-' + match.toLowerCase();
   }
@@ -193,22 +184,22 @@ console.log(newstr);
 }
 </pre>
 
-<p>运行 <code>styleHyphenFormat('borderTop')</code><code>，</code><span>将</span><span>返回 'border-top'。</span></p>
+<p>运行 <code>styleHyphenFormat('borderTop')</code><code>，</code>将返回 'border-top'。</p>
 
 <p>因为我们想在最终的替换中进一步转变匹配结果，所以我们必须使用一个函数。这迫使我们在使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}方法前进行评估。如果我们尝试不用一个函数进行匹配，那么使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 方法将不会有效。</p>
 
-<pre class="brush: js notranslate">var newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
+<pre class="brush: js">var newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
 </pre>
 
-<p>这是因为 <code>'$&amp;'.toLowerCase()</code> 会先被解析成字符串字面量（这会导致相同的'$&amp;')而不是当作一个模式。</p>
+<p>这是因为 <code>'$&amp;'.toLowerCase()</code> 会先被解析成字符串字面量（这会导致相同的'$&amp;') 而不是当作一个模式。</p>
 
 <h3 id="将华氏温度转换为对等的摄氏温度">将华氏温度转换为对等的摄氏温度</h3>
 
 <p>下面的例子演示如何将华氏温度转换为对等的摄氏温度。华氏温度用一个数字加一个"F"来表示，这个函数将返回一个数字加"C"来表示的摄氏温度。例如，如果输入是 212F，这个函数将返回 100C。如果输入的数字是 0F，这个方法将返回 "-17.77777777777778C"。</p>
 
-<p>正则表达式test检查任何数字是否以 F 结尾。华氏温度通过第二个参数p1进入函数。这个函数基于华氏温度作为字符串传递给f2c函数设置成摄氏温度。然后f2c()返回摄氏温度。这个函数与Perl的 s///e 标志相似。</p>
+<p>正则表达式 test 检查任何数字是否以 F 结尾。华氏温度通过第二个参数 p1 进入函数。这个函数基于华氏温度作为字符串传递给 f2c 函数设置成摄氏温度。然后 f2c() 返回摄氏温度。这个函数与 Perl 的 s///e 标志相似。</p>
 
-<pre class="brush: js notranslate">function f2c(x)
+<pre class="brush: js">function f2c(x)
 {
   function convert(str, p1, offset, s)
   {
@@ -227,7 +218,7 @@ console.log(newstr);
 <p><strong>输入：</strong><br>
  一个由 x，- 和 _ 组成的字符串。</p>
 
-<pre class="notranslate">x-x_
+<pre>x-x_
 
 ---x---x---x---
 
@@ -238,9 +229,9 @@ _x_x___x___x___
 
 <p><strong>输出：</strong></p>
 
-<p>一个数组对象。'x' 产生一个 'on' 状态，'-'（连接符）产生一个 'off' 状态，而 '_' （下划线）表示 'on' 状态的长度。</p>
+<p>一个数组对象。'x' 产生一个 'on' 状态，'-'（连接符）产生一个 'off' 状态，而 '_'（下划线）表示 'on' 状态的长度。</p>
 
-<pre class="brush: js notranslate">[
+<pre class="brush: js">[
   { on: true, length: 1 },
   { on: false, length: 1 },
   { on: true, length: 2 }
@@ -249,7 +240,7 @@ _x_x___x___x___
 
 <p>代码片段：</p>
 
-<pre class="brush: js notranslate">var str = 'x-x_';
+<pre class="brush: js">var str = 'x-x_';
 var retArr = [];
 str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
   if (p1) { retArr.push({ on: true, length: p1.length }); }
@@ -300,7 +291,7 @@ console.log(retArr);</pre>
 
 <ul>
  <li><code>flags</code> 是一个仅在 Gecko 中可用的非标准的第三方参数：<code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function, flags</var>)</code></li>
- <li>从 Gecko 27 {{geckoRelease(27)}} 开始，这个方法就被整合到了ECMAScript规范中。当 replace() 被使用全局 g 标志的正则表达式调用时，{{jsxref("RegExp.lastIndex")}} 属性将被重置为 0（{{bug(501739)}}）。</li>
+ <li>从 Gecko 27 {{geckoRelease(27)}} 开始，这个方法就被整合到了 ECMAScript 规范中。当 replace() 被使用全局 g 标志的正则表达式调用时，{{jsxref("RegExp.lastIndex")}} 属性将被重置为 0（{{bug(501739)}}）。</li>
  <li>从 Gecko 39 {{geckoRelease(39)}} 开始，<code>flags</code> 参数便被弃用，且在调用时会抛出一个控制台警告（{{bug(1142351)}}）。</li>
  <li>从 Gecko 47 {{geckoRelease(47)}} 开始，在非发行版本中已不再支持非标准的 <code>flags</code> 参数，并且不久后会完全移除该参数（{{bug(1245801)}}）。</li>
  <li>从 Gecko 49 {{geckoRelease(49)}} 开始，不再支持非标准的 <code>flags</code> 参数（{{bug(1108382)}}）。</li>

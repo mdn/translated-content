@@ -11,28 +11,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Object</strong></code> 构造函数创建一个对象包装器。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="notranslate">// 对象初始化器（Object initialiser）或对象字面量（literal）
-{ [ <var>nameValuePair1</var>[, <var>nameValuePair2</var>[, ...<var>nameValuePairN</var>] ] ] }
-
-// 以构造函数形式来调用
-new Object([<var>value</var>])</pre>
-
-<h3 id="参数">参数</h3>
-
-<dl>
- <dt><code>nameValuePair1, nameValuePair2, ... nameValuePair<em>N</em></code></dt>
- <dd>成对的名称（字符串）与值（任何值），其中名称通过冒号与值分隔。</dd>
- <dt><code>value</code></dt>
- <dd>任何值。</dd>
-</dl>
+<p><code><strong>Object</strong></code> 是 JavaScript 的一种 <a href="/zh-CN/docs/Web/JavaScript/Data_structures">数据类型</a> 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 <code>{{jsxref("Object.prototype.Object", "Object()")}}</code> 构造函数或者使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">对象字面量</a> 的方式创建</p>
 
 <h2 id="描述">描述</h2>
 
-<p>在JavaScript中，几乎所有的对象都是<code>Object</code>类型的实例，它们都会从<code>Object.prototype</code>继承属性和方法。<code>Object</code> 构造函数为给定值创建一个对象包装器。<code>Object</code>构造函数，会根据给定的参数创建对象，具体有以下情况：</p>
+<p>
+  在 JavaScript 中，几乎所有的对象都是 <code>Object</code> 类型的实例，它们都会从 <code>Object.prototype</code> 继承属性和方法，虽然大部分属性都会被覆盖（shadowed）或者说被重写了（overridden）。
+  除此之外，<code>Object</code> 还可以被故意的创建，但是这个对象并不是一个“真正的对象”（例如：通过 <code>{{jsxref("Object.create()", "Object.create(null)")}}</code>），或者通过一些手段改变对象，使其不再是一个“真正的对象”（比如说：<code>{{jsxref("Object.setPrototypeOf")}}</code>）。
+</p>
+
+<p>通过原型链，所有的 <code>object</code> 都能观察到 Object 原型对象（Object prototype object）的改变，除非这些受到改变影响的属性和方法沿着原型链被进一步的重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。</p>
+<p>
+  <code>Object</code> 构造函数为给定的参数创建一个包装类对象（object wrapper），具体有以下情况：
+</p>
 
 <ul>
  <li>如果给定值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}，将会创建并返回一个空对象</li>
@@ -44,17 +35,17 @@ new Object([<var>value</var>])</pre>
 
 <p>可查看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">对象初始化/字面量语法</a>。</p>
 
-<h2 id="Properties" name="Properties"><code>Object</code> 构造函数的属性</h2>
+<h3>从一个对象上删除一个属性</h3>
+
+<p> Object 自身没有提供方法删除其自身属性（Map 中的 <code>{{jsxref("Map.prototype.delete()")}}</code> 可以删除自身属性 ）为了删除对象上的属性，必须使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete 操作符</a> </p>
+
+<h2 id="构造函数">构造函数</h2>
 
 <dl>
- <dt><code>Object.length</code></dt>
- <dd>值为 1。</dd>
+  <dt>{{jsxref("Object.prototype.Object()", "Object()")}}</dt>
+  <dd>创建一个新的 <code>Object</code> 对象。该对象将会包裹（wrapper）传入的参数 </dd>
 </dl>
 
-<dl>
- <dt>{{jsxref("Object.prototype")}}</dt>
- <dd>可以为所有 Object 类型的对象添加属性。</dd>
-</dl>
 
 <h2 id="静态方法">静态方法</h2>
 
@@ -99,43 +90,179 @@ new Object([<var>value</var>])</pre>
  <dd>返回给定对象自身可枚举值的数组。</dd>
 </dl>
 
-<h2 id="Object_实例和_Object_原型对象"><code>Object</code> 实例和 <code>Object</code> 原型对象</h2>
 
-<p>JavaScript中的所有对象都来自 <code>Object</code>；所有对象从{{jsxref("Object.prototype")}}继承方法和属性，尽管它们可能被覆盖。例如，其他构造函数的原型将覆盖 <code>constructor</code> 属性并提供自己的 <code>toString()</code> 方法。<code>Object</code> 原型对象的更改将传播到所有对象，除非受到这些更改的属性和方法将沿原型链进一步覆盖。</p>
+<h2 id="实例属性">实例属性</h2>
 
-<h3 id="属性">属性</h3>
+<dl>
+  <dt>{{jsxref("Object.prototype.constructor")}}</dt>
+  <dd>一个引用值，指向 Object 构造函数</dd>
+  <dt>{{jsxref("Object.prototype.proto", "Object.prototype.__proto__")}}</dt>
+  <dd>指向一个对象，当一个 object 实例化时，使用该对象作为实例化对象的原型</dd>
+</dl>
 
-<div>{{ page('zh-CN/docs/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') }}</div>
+<h2 id="实例属性">实例方法</h2>
 
-<h3 id="Methods_of_Object_instances" name="Methods_of_Object_instances">方法</h3>
+<dl>
+  <dt>{{jsxref("Object.prototype.__defineGetter__", "Object.prototype.__defineGetter__()")}}</dt>
+  <dd>将一个属性与一个函数相关联，当该属性被访问时，执行该函数，并且返回函数的返回值。</dd>
+  <dt>{{jsxref("Object.prototype.__defineSetter__", "Object.prototype.__defineSetter__()")}}</dt>
+  <dd>将一个属性与一个函数相关联，当该属性被设置时，执行该函数，执行该函数去修改某个属性。</dd>
+  <dt>{{jsxref("Object.prototype.__lookupGetter__", "Object.prototype.__lookupGetter__()")}}</dt>
+  <dd>返回一个函数，该函数通过给定属性的 <code>{{jsxref("Object.prototype.__defineGetter__", "Object.prototype.__defineGetter__()")}}</code> 得出。</dd>
+  <dt>{{jsxref("Object.prototype.__lookupSetter__", "Object.prototype.__lookupSetter__()")}}</dt>
+  <dd>返回一个函数，该函数通过给定属性的 <code>{{jsxref("Object.prototype.__defineSetter__", "Object.prototype.__defineSetter__()")}}</code> 得出。</dd>
+  
+  <dt>{{jsxref("Object.prototype.hasOwnProperty", "Object.prototype.hasOwnProperty()")}}</dt>
+  <dd>返回一个布尔值，用于表示一个对象自身是否包含指定的属性，该方法并不会查找原型链上继承来的属性。</dd>
 
-<div>{{ page('zh-CN/docs/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') }}</div>
+  <dt>{{jsxref("Object.prototype.isPrototypeOf", "Object.prototype.isPrototypeOf()")}}</dt>
+  <dd>返回一个布尔值，用于表示该方法所调用的对象是否在指定对象的原型链中。</dd>
 
-<h2 id="Examples" name="Examples">示例</h2>
+  <dt>{{jsxref("Object.prototype.propertyIsEnumerable", "Object.prototype.propertyIsEnumerable()")}}</dt>
+  <dd>返回一个布尔值，用于表示内部属性 <a href="/zh-CN/docs/Web/JavaScript/Data_structures#属性">ECMAScript [[Enumerable]] attribute</a> 是否被设置。</dd>
 
-<h3 id="Example.3A_Using_Object_given_undefined_and_null_types" name="Example.3A_Using_Object_given_undefined_and_null_types">给定 <code>undefined</code> 和 <code>null</code> 类型使用 <code>Object</code></h3>
+  <dt>{{jsxref("Object.prototype.toLocaleString", "Object.prototype.toLocaleString()")}}</dt>
+  <dd>调用 <code>toString()。</code></dd>
+
+  <dt>{{jsxref("Object.prototype.toString", "Object.prototype.toString()")}}</dt>
+  <dd>返回一个代表该对象的字符串。</dd>
+
+  <dt>{{jsxref("Object.prototype.valueOf", "Object.prototype.valueOf()")}}</dt>
+  <dd>返回指定对象的原始值。</dd>
+</dl>
+
+
+
+<h2 id="Examples">示例</h2>
+
+<h3 id="Example.3A_Using_Object_given_undefined_and_null_types">给定 <code>undefined</code> 和 <code>null</code> 类型使用 <code>Object</code></h3>
 
 <p>下面的例子将一个空的 <code>Object</code> 对象存到 <code>o</code> 中：</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 </pre>
 
-<pre class="brush: js notranslate">var o = new Object(undefined);
+<pre class="brush: js">var o = new Object(undefined);
 </pre>
 
-<pre class="brush: js notranslate">var o = new Object(null);
+<pre class="brush: js">var o = new Object(null);
 </pre>
 
 <h3 id="使用_Object_生成布尔对象">使用 <code>Object</code> 生成布尔对象</h3>
 
 <p>下面的例子将{{jsxref("Boolean")}} 对象存到 <code>o</code> 中：</p>
 
-<pre class="brush: js notranslate">// 等价于 o = new Boolean(true);
+<pre class="brush: js">// 等价于 o = new Boolean(true);
 var o = new Object(true);
 </pre>
 
-<pre class="brush: js notranslate">// 等价于 o = new Boolean(false);
+<pre class="brush: js">// 等价于 o = new Boolean(false);
 var o = new Object(Boolean());
+</pre>
+
+<h3>Object prototypes</h3>
+<p>
+  当我们要修改现有的 <code>Object.prototype</code> 方法时，请你考虑一下在已经存在的逻辑之前或者之后通过包装扩展代码的方式来注入代码。
+  比如说，有一段代码将会在执行内部逻辑或者是其他扩展之前，有条件的执行一段自定义的逻辑。
+</p>
+
+<p>
+  当一个函数被调用时，调用的参数被保存在一个类似数组的“变量”  <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>。
+  比如说：在调用 <code>myFn(a, b, c)</code> 时，myFunc 函数体中的 arguments 将会包含三个类似数组的元素，对应 <code>(a, b , c)</code>
+</p>
+
+<p>
+  When modifying prototypes with hooks, pass <code>this</code> and the arguments (the call state) to the current behavior by calling <code>apply()</code> on the function. This pattern can be used for any prototype, such as <code>Node.prototype</code>, <code>Function.prototype</code>, etc.
+</p>
+
+<pre class="brush: js notranslate">
+var current = Object.prototype.valueOf;
+
+// Since my property "-prop-value" is cross-cutting and isn't always
+// on the same prototype chain, I want to modify Object.prototype:
+Object.prototype.valueOf = function() {
+  if (this.hasOwnProperty('-prop-value')) {
+    return this['-prop-value'];
+  } else {
+    // It doesn't look like one of my objects, so let's fall back on
+    // the default behavior by reproducing the current behavior as best we can.
+    // The apply behaves like "super" in some other languages.
+    // Even though valueOf() doesn't take arguments, some other hook may.
+    return current.apply(this, arguments);
+  }
+}
+</pre>
+
+<p>Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a “base class” object of certain functions that act as objects. For example:</p>
+
+<pre class="brush: js notranslate">
+  var Person = function(name) {
+    this.name = name;
+    this.canTalk = true;
+  };
+  
+  Person.prototype.greet = function() {
+    if (this.canTalk) {
+      console.log('Hi, I am ' + this.name);
+    }
+  };
+  
+  var Employee = function(name, title) {
+    Person.call(this, name);
+    this.title = title;
+  };
+  
+  Employee.prototype = Object.create(Person.prototype);
+  Employee.prototype.constructor = Employee; //If you don't set Object.prototype.constructor to Employee,
+                                             //it will take prototype.constructor of Person (parent).
+                                             //To avoid that, we set the prototype.constructor to Employee (child).
+  
+  Employee.prototype.greet = function() {
+    if (this.canTalk) {
+      console.log('Hi, I am ' + this.name + ', the ' + this.title);
+    }
+  };
+  
+  var Customer = function(name) {
+    Person.call(this, name);
+  };
+  
+  Customer.prototype = Object.create(Person.prototype);
+  Customer.prototype.constructor = Customer; //If you don't set Object.prototype.constructor to Customer,
+                                             //it will take prototype.constructor of Person (parent).
+                                             //To avoid that, we set the prototype.constructor to Customer (child).
+  
+  var Mime = function(name) {
+    Person.call(this, name);
+    this.canTalk = false;
+  };
+  
+  Mime.prototype = Object.create(Person.prototype);
+  Mime.prototype.constructor = Mime; //If you don't set Object.prototype.constructor to Mime,
+                                     //it will take prototype.constructor of Person (parent).
+                                     //To avoid that, we set the prototype.constructor to Mime (child).
+  
+  var bob = new Employee('Bob', 'Builder');
+  var joe = new Customer('Joe');
+  var rg = new Employee('Red Green', 'Handyman');
+  var mike = new Customer('Mike');
+  var mime = new Mime('Mime');
+  
+  bob.greet();
+  // Hi, I am Bob, the Builder
+  
+  joe.greet();
+  // Hi, I am Joe
+  
+  rg.greet();
+  // Hi, I am Red Green, the Handyman
+  
+  mike.greet();
+  // Hi, I am Mike
+  
+  mime.greet();
+  
+
 </pre>
 
 <h2 id="规范">规范</h2>
@@ -174,7 +301,7 @@ var o = new Object(Boolean());
 
 <p>{{Compat("javascript.builtins.Object")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">初始化对象</a></li>

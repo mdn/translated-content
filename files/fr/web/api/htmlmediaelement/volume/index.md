@@ -18,7 +18,7 @@ La propriété **`HTMLMediaElement.volume`** définit le volume auquel le média
 
 ## Syntaxe
 
-    var volume ​= video.volume; //1
+    var volume = video.volume; //1
 
 ### Valeur
 

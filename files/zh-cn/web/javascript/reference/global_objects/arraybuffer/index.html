@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new ArrayBuffer(length)
+<pre class="syntaxbox">new ArrayBuffer(length)
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <h3 id="异常">异常</h3>
 
-<p>如果 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">length</span></font> 大于 {{jsxref("Number.MAX_SAFE_INTEGER")}}（&gt;= 2 ** 53）或为负数，则抛出一个  {{jsxref("RangeError")}}  异常。</p>
+<p>如果 <code>length</code> 大于 {{jsxref("Number.MAX_SAFE_INTEGER")}}（&gt;= 2 ** 53）或为负数，则抛出一个  {{jsxref("RangeError")}}  异常。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -57,15 +57,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <dl>
  <dt><code>ArrayBuffer.length</code></dt>
- <dd>ArrayBuffer 构造函数的 length 属性，其值为1。</dd>
-</dl>
-
-<dl>
+ <dd>ArrayBuffer 构造函数的 length 属性，其值为 1。</dd>
  <dt>{{jsxref("ArrayBuffer.prototype.byteLength")}}</dt>
- <dd>只读属性，表示 <code>ArrayBuffer</code> 的byte的大小，在ArrayBuffer构造完成时生成，不可改变。</dd>
-</dl>
-
-<dl>
+ <dd>只读属性，表示 <code>ArrayBuffer</code> 的 byte 的大小，在 ArrayBuffer 构造完成时生成，不可改变。</dd>
  <dt>{{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}</dt>
  <dd>返回 ArrayBuffer 的构造函数。</dd>
  <dt>{{jsxref("ArrayBuffer.prototype")}}</dt>
@@ -104,7 +98,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <p>下面的例子创建了一个 8 字节的缓冲区，并使用一个 {{jsxref("Global_Objects/Int32Array", "Int32Array")}} 来引用它：</p>
 
-<pre class="notranslate"><code>var buffer = new ArrayBuffer(8);
+<pre><code>var buffer = new ArrayBuffer(8);
 var view   = new Int32Array(buffer);</code>
 </pre>
 
@@ -143,11 +137,11 @@ var view   = new Int32Array(buffer);</code>
 
 <p>从 ECMAScript 2015 开始，<code>ArrayBuffer</code> 对象需要用 {{jsxref("Operators/new", "new")}} 运算符创建。如果调用构造函数时没有使用 <code>new</code>，将会抛出 {{jsxref("TypeError")}}  异常。</p>
 
-<pre class="brush: js example-bad notranslate">var dv = ArrayBuffer(10);
+<pre class="brush: js example-bad">var dv = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new ArrayBuffer(10);</pre>
+<pre class="brush: js example-good">var dv = new ArrayBuffer(10);</pre>
 
 <h2 id="相关链接">相关链接</h2>
 

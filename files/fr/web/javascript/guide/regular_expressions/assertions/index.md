@@ -9,7 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Assertions
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+{{jsSidebar("JavaScript Guide")}}
 
 Les assertions indiquent les conditions selon lesquelles il est possible d'avoir une correspondance (contenu situé avant la correspondance, situé après ou expressions conditionnelles).
 
@@ -85,7 +85,7 @@ Les assertions indiquent les conditions selon lesquelles il est possible d'avoir
           seulement si celui-ci n'est pas précédé d'un signe moins.<br /><code
             >/(?&#x3C;!-)\d+/.exec('3')</code
           >
-          cible "3".<br /> <code>/(?&#x3C;!-)\d+/.exec('-3')</code>  ne trouve
+          cible "3".<br /> <code>/(?&#x3C;!-)\d+/.exec('-3')</code>  ne trouve
           aucune correspondance car le nombre est précédé d'un signe
         </p>
       </td>

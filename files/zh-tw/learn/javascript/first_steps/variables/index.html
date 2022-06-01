@@ -11,7 +11,7 @@ translation_of: Learn/JavaScript/First_steps/Variables
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">閱讀完最後幾篇文章之後，您現在應該知道 JavaScript 是什麼，它可以為您做什麼，如何將它與其他 Web 技術一起使用，以及它的主要功能從高層看起來如何。 在本文中，我們將深入了解真正的基礎知識，了解如何使用 JavaScript 的大多數基本構建塊 - 變數。</p>
+<p>閱讀完最後幾篇文章之後，您現在應該知道 JavaScript 是什麼，它可以為您做什麼，如何將它與其他 Web 技術一起使用，以及它的主要功能從高層看起來如何。 在本文中，我們將深入了解真正的基礎知識，了解如何使用 JavaScript 的大多數基本構建塊 - 變數。</p>
 
 <table class="learn-box">
  <tbody>
@@ -68,44 +68,44 @@ if (name === 'Adam') {
 // ... 等等 ...
 </pre>
 
-<p><font>你可能暫時還沒有完全理解這些代碼和語法，但是你應該能夠理解到</font> — <font>如果我們沒有變量，我們就不得不寫大量的代碼去檢查輸入的名字，然後顯示相應名稱的消息 。這樣做顯然是低效率（雖然例子中只有5種選擇，但代碼卻相對地長）和不可行的</font> — <font>你沒有辦法列舉出所有可能的名字。</font></p>
+<p>你可能暫時還沒有完全理解這些代碼和語法，但是你應該能夠理解到 — 如果我們沒有變量，我們就不得不寫大量的代碼去檢查輸入的名字，然後顯示相應名稱的消息 。這樣做顯然是低效率（雖然例子中只有5種選擇，但代碼卻相對地長）和不可行的 — 你沒有辦法列舉出所有可能的名字。</p>
 
 <p>使用變量才是明智的。隨著您對 JavaScript 越來越了解，您會開始習慣使用變量。</p>
 
-<p><font>變量的另一個特性就是它們能夠存儲任何的東西</font> — <font>不只是字符串和數字。變量可以存儲更複雜的數據，甚至是函數。</font><font>你將在後續的內容中體驗到這些用法。</font></p>
+<p>變量的另一個特性就是它們能夠存儲任何的東西 — 不只是字符串和數字。變量可以存儲更複雜的數據，甚至是函數。你將在後續的內容中體驗到這些用法。</p>
 
 <div class="note">
-<p><strong><font><font>提示</font></font></strong>：變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。</p>
+<p><strong>提示</strong>：變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。</p>
 </div>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13506/boxes.png" style="display: block; height: 436px; margin: 0px auto; width: 1052px;"></p>
 
-<h2 id="定義變量_Declaring_a_variable">定義<font><font>變量 (Declaring a variable)</font></font></h2>
+<h2 id="定義變量_Declaring_a_variable">定義變量 (Declaring a variable)</h2>
 
-<p><font>要想使用變量，你需要做的第一步就是創建它</font> — <font>更準確的說，是</font>定義<font>一個變量。</font>定義<font>一個變量的語法是在關鍵字</font> <code>var</code> 或 <code>let</code> <font>之後加上變量的名字：</font></p>
+<p>要想使用變量，你需要做的第一步就是創建它 — 更準確的說，是定義一個變量。定義一個變量的語法是在關鍵字 <code>var</code> 或 <code>let</code> 之後加上變量的名字：</p>
 
 <pre class="brush: js notranslate">let myName;
 let myAge;
 </pre>
 
-<p><font><font>在這裡我們</font></font>定義<font><font>了兩個變量  </font></font><code>myName</code><font><font> 和 </font></font><code>myAge</code><font><font>。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用您自己選擇的名稱來創建一兩個變量。</font></font></p>
+<p>在這裡我們定義了兩個變量  <code>myName</code> 和 <code>myAge</code>。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用您自己選擇的名稱來創建一兩個變量。</p>
 
 <div class="note">
-<p><strong>提示</strong>：<font><font>在 JavaScript 中，所有代碼指令都會以分號結尾（ </font></font><code>;</code><font><font>）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。</font></font></p>
+<p><strong>提示</strong>：在 JavaScript 中，所有代碼指令都會以分號結尾（ <code>;</code>）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。</p>
 </div>
 
-<p><font>你可以輸入變量的名稱，來驗證這個變量的數值是否在執行環境（</font>execution environment）<font>中已經存在。例如，</font></p>
+<p>你可以輸入變量的名稱，來驗證這個變量的數值是否在執行環境（execution environment）中已經存在。例如，</p>
 
 <pre class="brush: js notranslate">myName;
 myAge;
 </pre>
 
-<p><font><font>以上這兩個變量並沒有數值，他們是空的容器。當你輸入變量名並按輸入鍵後，你會得到一個 </font></font><code>undefined</code><font><font> （</font></font>沒有定義的值<font><font>）的返回值。如果</font>變量<font>並不存在的話，你就會得到一個錯誤信息。請嘗試輸入：</font></font></p>
+<p>以上這兩個變量並沒有數值，他們是空的容器。當你輸入變量名並按輸入鍵後，你會得到一個 <code>undefined</code> （沒有定義的值）的返回值。如果變量並不存在的話，你就會得到一個錯誤信息。請嘗試輸入：</p>
 
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
 <div class="note">
-<p><strong><font><font>提示：</font></font></strong><font><font>千萬不要把兩個概念弄混淆了，「一個變量<strong>存在，但是沒有數值</strong>」和「一個變量<strong>並不存在</strong>」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。</font><font>沒有定義的值意味著<strong>有</strong>一個「盒子」，但是它裡面沒有任何數值。</font></font></p>
+<p><strong>提示：</strong>千萬不要把兩個概念弄混淆了，「一個變量<strong>存在，但是沒有數值</strong>」和「一個變量<strong>並不存在</strong>」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著<strong>有</strong>一個「盒子」，但是它裡面沒有任何數值。</p>
 </div>
 
 <h2 id="初始化變量_Initializing_a_variable">初始化變量 (Initializing a variable)</h2>
@@ -128,7 +128,7 @@ myAge;</pre>
 
 <h2 id="比較var和let的不同_The_difference_between_var_and_let">比較var和let的不同 (The difference between var and let)</h2>
 
-<p>此刻你或許會思考「為什麼我們需要兩種方法來定義變數??<font><font>」</font></font>「為甚麼要有<code>var</code>和<code>let</code>??<font><font>」</font></font></p>
+<p>此刻你或許會思考「為什麼我們需要兩種方法來定義變數??」「為甚麼要有<code>var</code>和<code>let</code>??」</p>
 
 <p>原因有些歷史淵源。在Javascript剛被創造的時候，只有<code>var</code>可以使用。在大部分的情況下都很正常，但是<code>var</code>的運作方式有些問題 — 它的設計有時會令人困惑甚至惹惱人。所以<code>let</code>在現代版本中的Javascript被創造出來，一個與<code>var</code>工作原理有些不同的創建變數的關鍵字，修復了<code>var</code>的種種問題。</p>
 
@@ -315,13 +315,13 @@ typeof myNumber;</pre>
 
 <p>一開始JavaScript是沒有常數的，直到今日我們才有了關鍵字 <code>const</code>，讓我們儲存不能改變的值：</p>
 
-<pre class="brush: js notranslate">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
-const hoursInDay = 24;</span></span></span></span></pre>
+<pre class="brush: js notranslate">const daysInWeek = 7;
+const hoursInDay = 24;</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> works in exactly the same way as <code>let</code>, except that you can't give a <code>const</code> a new value. In the following example, the second line would throw an error:</span></span></span></span></p>
+<p><code>const</code> works in exactly the same way as <code>let</code>, except that you can't give a <code>const</code> a new value. In the following example, the second line would throw an error:</p>
 
-<pre class="brush: js notranslate">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
-daysInWeek = 8;</span></span></span></span></pre>
+<pre class="brush: js notranslate">const daysInWeek = 7;
+daysInWeek = 8;</pre>
 
 <h2 id="Summary">Summary</h2>
 

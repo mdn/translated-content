@@ -15,7 +15,7 @@ original_slug: Server-sent_events/Using_server-sent_events
 ---
 <p>{{DefaultAPISidebar("Server Sent Events")}}</p>
 
-<p class="summary">开发一个使用服务器发送的事件的Web应用程序是很容易的。你需要在服务器上的一些代码将事件流传输到Web应用程序，但Web应用程序端的事情几乎完全相同，处理任何其他类型的事件。</p>
+<p>开发一个使用服务器发送的事件的Web应用程序是很容易的。你需要在服务器上的一些代码将事件流传输到Web应用程序，但Web应用程序端的事情几乎完全相同，处理任何其他类型的事件。</p>
 
 <p>在Web应用程序中使用服务器发送事件很简单.在服务器端,只需要按照一定的格式返回事件流,在客户端中,只需要为一些事件类型绑定监听函数,和处理其他普通的事件没多大区别.</p>
 
@@ -61,7 +61,7 @@ original_slug: Server-sent_events/Using_server-sent_events
 
 <h2 id="服务器端如何发送事件流">服务器端如何发送事件流</h2>
 
-<p>服务器端发送的响应内容应该使用值为<code>text/event-stream</code>的MIME类型.每个通知以文本块形式发送，并以一对换行符结尾。有关事件流的格式的详细信息，请参见{{ anch("Event stream format") }}。</p>
+<p>服务器端发送的响应内容应该使用值为<code>text/event-stream</code>的MIME类型.每个通知以文本块形式发送，并以一对换行符结尾。有关事件流的格式的详细信息，请参见<a href="#事件流格式">事件流格式</a>。</p>
 
 <p>演示的{{Glossary("PHP")}}代码如下:</p>
 
@@ -132,7 +132,7 @@ while (true) {
  <dt><code>id</code></dt>
  <dd>事件ID,会成为当前<code>EventSource</code>对象的内部属性"最后一个事件ID"的属性值.</dd>
  <dt><code>retry</code></dt>
- <dd><span class="short_text" id="result_box" lang="zh-CN"><span>一个</span><span>整数值</span><span>,</span><span>指定了</span><span>重新连接的时间(</span><span>单位为毫秒),</span></span>如果该字段值不是整数,则会被忽略.</dd>
+ <dd>一个整数值,指定了重新连接的时间(单位为毫秒),如果该字段值不是整数,则会被忽略.</dd>
 </dl>
 
 <p>除了上面规定的字段名,其他所有的字段名都会被忽略.</p>

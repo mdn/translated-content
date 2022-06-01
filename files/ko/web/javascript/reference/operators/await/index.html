@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/await
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate">[<em>rv</em>] = await <em>expression</em>;</pre>
+<pre class="syntaxbox ">[<em>rv</em>] = await <em>expression</em>;</pre>
 
 <dl>
  <dt><code>expression</code></dt>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Operators/await
 
 <p>만약 <code>Promise</code>가 <code>await</code>에 넘겨지면, <code>await</code>은 <code>Promise</code>가 fulfill되기를 기다렸다가, 해당 값을 리턴합니다.</p>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds(x) {
+<pre class="brush: js ">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
     setTimeout(() =&gt; {
       resolve(x);
@@ -52,7 +52,7 @@ f1();
 
 <p>{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just the same.</p>
 
-<pre class="notranslate"><code>async function f2() {
+<pre ><code>async function f2() {
   const thenable = {
     then: function(resolve, _reject) {
       resolve('resolved!')
@@ -65,7 +65,7 @@ f2();</code></pre>
 
 <p>만약 값이 <code>Promise</code>가 아니라면, 해당 값은 <code>resolve</code>된 <code>Promise</code>로 변환되며 이를 기다립니다.</p>
 
-<pre class="brush: js notranslate">async function f2() {
+<pre class="brush: js ">async function f2() {
   var y = await 20;
   console.log(y); // 20
 }
@@ -74,7 +74,7 @@ f2();
 
 <p>만약 <code>Promise</code>가 <code>reject</code>되면, <code>reject</code>된 값이 <code>throw</code>됩니다.</p>
 
-<pre class="brush: js notranslate">async function f3() {
+<pre class="brush: js ">async function f3() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
@@ -86,7 +86,7 @@ f3();
 
 <p>try블럭 없이 rejected <code>Promise</code>다루기</p>
 
-<pre class="notranslate"><code>var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
+<pre ><code>var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
 // response will be undefined if the promise is rejected</code></pre>
 
 <h2 id="Specifications">Specifications</h2>

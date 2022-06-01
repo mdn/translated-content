@@ -56,7 +56,7 @@ text-decoration-thickness: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 <h3 id="Varying_thickness">様々な太さ</h3>
 
@@ -90,7 +90,7 @@ text-decoration-thickness: unset;
 }
 ```
 
-#### Results
+#### 結果
 
 {{ EmbedLiveSample('Varying_thickness', '', '', '') }}
 

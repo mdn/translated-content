@@ -30,9 +30,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 
 <p>因为 <code>now()</code> 是 {{jsxref("Date")}} 的一个静态函数，所以必须以 <code>Date.now()</code> 的形式来使用。</p>
 
-<h2 id="时间精度被降低"><span class="tlid-translation translation" lang="zh-CN"><span title="">时间精度被降低</span></span></h2>
+<h2 id="时间精度被降低">时间精度被降低</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">为了提供针对定时攻击和指纹追踪的保护，</span></span><code>Date.now()</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">的精度可能会根据浏览器的高级设置项目而被取整。</span></span><br>
+<p>为了提供针对定时攻击和指纹追踪的保护，<code>Date.now()</code> 的精度可能会根据浏览器的高级设置项目而被取整。<br>
  在 Firefox 中，默认启用 <code>privacy.reduceTimerPrecision</code> 设置项，在 Firefox 59 中，默认被取整至 20 微秒；在 Firefox 60 中，则被取整至 2 毫秒。</p>
 
 <pre class="brush: js">// reduced time precision (2ms) in Firefox 60

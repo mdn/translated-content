@@ -16,46 +16,46 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">arguments</pre>
+<pre class="syntaxbox">arguments</pre>
 
 <h2 id="描述">描述</h2>
 
-<div class="blockIndicator note">
-<p>Note: 如果你有在使用 ES6 語法，建議參考<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘參數</a>。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如果你有在使用 ES6 語法，建議參考<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘參數</a>。</p>
 </div>
 
-<div class="blockIndicator note">
-<p>Note: 「類陣列 (Array-like)」 的意思是 <code>arguments</code> 一樣擁有 <code>length</code>這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 <code>forEach()</code> ，或是 <code>map()</code> 。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>「類陣列 (Array-like)」 的意思是 <code>arguments</code> 一樣擁有 <code>length</code>這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 <code>forEach()</code> ，或是 <code>map()</code> 。</p>
 </div>
 
 <p>The <code>arguments</code> object is a local variable available within all (non-arrow) functions. You can refer to a function's arguments within the function by using the <code>arguments</code> object. This object contains an entry for each argument passed to the function, the first entry's index starting at 0.</p>
 
 <p>For example, if a function is passed three arguments, you can refer to them as follows:</p>
 
-<pre class="brush: js notranslate">arguments[0]
+<pre class="brush: js">arguments[0]
 arguments[1]
 arguments[2]
 </pre>
 
 <p>arguments 也可以被指定：</p>
 
-<pre class="brush: js notranslate">arguments[1] = 'new value';</pre>
+<pre class="brush: js">arguments[1] = 'new value';</pre>
 
 <p><code>arguments</code> 物件不是陣列。它與陣列非常相似，但是它沒有除了 <code>length</code> 這個屬性以外的其他陣列屬性。舉例，它沒有 <code>pop</code> 這個陣列方法。</p>
 
 <p>然而，它依然可以被轉換為真正的陣列(Array)。</p>
 
-<pre class="brush: js notranslate">var args = Array.prototype.slice.call(arguments);
+<pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 
 // ES2015
 const args = Array.from(arguments);
 </pre>
 
-<div class="warning">
-<p class="brush: js">Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">more information</a>). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised <code>Array</code> constructor as a function:</p>
+<div class="notecard warning">
+<p><strong>警告：</strong>Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">more information</a>). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised <code>Array</code> constructor as a function:</p>
 
-<pre class="brush: js notranslate">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));</pre>
+<pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));</pre>
 </div>
 
 <p>You can use the <code>arguments</code> object if you call a function with more arguments than it is formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments. Use <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code> to determine the number of arguments passed to the function, and then process each argument by using the <code>arguments</code> object. To determine the number of parameters in the function <a href="/en-US/docs/Glossary/Signature/Function">signature</a>, use the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code> property.</p>
@@ -64,17 +64,17 @@ const args = Array.from(arguments);
 
 <p>The typeof arguments returns 'object'. </p>
 
-<pre class="notranslate">console.log(typeof arguments); // 'object' </pre>
+<pre>console.log(typeof arguments); // 'object' </pre>
 
 <p>The typeof individual arguments can be determined with the use of indexing.</p>
 
-<pre class="notranslate">console.log(typeof arguments[0]); //this will return the typeof individual arguments.</pre>
+<pre>console.log(typeof arguments[0]); //this will return the typeof individual arguments.</pre>
 
 <h3 id="Using_the_Spread_Syntax_with_Arguments">Using the Spread Syntax with Arguments</h3>
 
 <p>You can also use the {{jsxref("Array.from()")}} method or the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> to convert arguments to a real Array:</p>
 
-<pre class="brush: js notranslate">var args = Array.from(arguments);
+<pre class="brush: js">var args = Array.from(arguments);
 var args = [...arguments];
 </pre>
 
@@ -97,14 +97,14 @@ var args = [...arguments];
 
 <p>This example defines a function that concatenates several strings. The only formal argument for the function is a string that specifies the characters that separate the items to concatenate. The function is defined as follows:</p>
 
-<pre class="brush:js notranslate">function myConcat(separator) {
+<pre class="brush:js">function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }</pre>
 
 <p>You can pass any number of arguments to this function, and it creates a list using each argument as an item in the list.</p>
 
-<pre class="brush:js notranslate">// returns "red, orange, blue"
+<pre class="brush:js">// returns "red, orange, blue"
 myConcat(', ', 'red', 'orange', 'blue');
 
 // returns "elephant; giraffe; lion; cheetah"
@@ -117,7 +117,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is "<code>u</code>" if the list is to be unordered (bulleted), or "<code>o</code>" if the list is to be ordered (numbered). The function is defined as follows:</p>
 
-<pre class="brush:js notranslate">function list(type) {
+<pre class="brush:js">function list(type) {
   var result = '&lt;' + type + 'l&gt;&lt;li&gt;';
   var args = Array.prototype.slice.call(arguments, 1);
   result += args.join('&lt;/li&gt;&lt;li&gt;');
@@ -128,7 +128,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>You can pass any number of arguments to this function, and it adds each argument as an item to a list of the type indicated. For example:</p>
 
-<pre class="brush:js notranslate">var listHTML = list('u', 'One', 'Two', 'Three');
+<pre class="brush:js">var listHTML = list('u', 'One', 'Two', 'Three');
 
 /* listHTML is:
 
@@ -140,7 +140,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>The <code>arguments</code> object can be used in conjunction with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters.</p>
 
-<pre class="brush: js notranslate">function foo(...args) {
+<pre class="brush: js">function foo(...args) {
   return args;
 }
 foo(1, 2, 3); // [1,2,3]
@@ -150,7 +150,7 @@ foo(1, 2, 3); // [1,2,3]
 
 <p>When a non-strict function <strong><strong>does </strong>not</strong> contain <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters, then the values in the <code>arguments</code> object <strong>do</strong> track the values of the arguments (and vice versa). See the code below:</p>
 
-<pre class="brush: js notranslate">function func(a) {
+<pre class="brush: js">function func(a) {
   arguments[0] = 99; // updating arguments[0] also updates a
   console.log(a);
 }
@@ -159,7 +159,7 @@ func(10); // 99
 
 <p>and</p>
 
-<pre class="brush: js notranslate">function func(a) {
+<pre class="brush: js">function func(a) {
   a = 99; // updating a also updates arguments[0]
   console.log(arguments[0]);
 }
@@ -168,7 +168,7 @@ func(10); // 99
 
 <p>When a non-strict function <strong>does</strong> contain <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured</a> parameters, then the values in the <code>arguments</code> object <strong>do not</strong> track the values of the arguments (and vice versa). Instead, they reflect the arguments provided at the time of invocation:</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   arguments[0] = 99; // updating arguments[0] does not also update a
   console.log(a);
 }
@@ -176,7 +176,7 @@ func(10); // 10</pre>
 
 <p>and</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   a = 99; // updating a does not also update arguments[0]
   console.log(arguments[0]);
 }
@@ -185,7 +185,7 @@ func(10); // 10
 
 <p>and</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   console.log(arguments[0]);
 }
 func(); // undefined</pre>

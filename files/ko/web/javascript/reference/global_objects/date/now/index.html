@@ -19,7 +19,7 @@ browser-compat: javascript.builtins.Date.now
 
 <h2 id="문법">문법</h2>
 
-<pre class="syntaxbox notranslate"><code>var timeInMs = Date.now();</code></pre>
+<pre class="syntaxbox"><code>var timeInMs = Date.now();</code></pre>
 
 <h3 id="반환_값">반환 값</h3>
 
@@ -35,7 +35,7 @@ browser-compat: javascript.builtins.Date.now
 
 <p>이 메소드는 ECMA-262 5판에서 표준화되었습니다. 아직 이 메소드를 지원하도록 갱신되지 않은 엔진들은 이 메소드의 미지원에 대한 차선책으로 다음 코드를 활용하실 수 있습니다.</p>
 
-<pre class="brush: js notranslate">if (!Date.now) {
+<pre class="brush: js">if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
@@ -50,7 +50,7 @@ browser-compat: javascript.builtins.Date.now
 <p>타이밍 공격 및 핑거 프린팅에 대한 보호를 제공하기 위해 <code>Date.now ()</code>의 정밀도는 브라우저 설정에 따라 반올림 될 수 있습니다.<br>
  Firefox에서는 <code>privacy.reduceTimerPrecision</code> 기본 설정이 기본적으로 활성화되어 있으며 Firefox 59에서는 기본값이 20µs입니다. 60 분에는 2ms가됩니다.</p>
 
-<pre class="syntaxbox notranslate">// Firefox 60에서 시간 정밀도 (2ms) 감소
+<pre class="syntaxbox">// Firefox 60에서 시간 정밀도 (2ms) 감소
 Date.now();
 // 1519211809934
 // 1519211810362

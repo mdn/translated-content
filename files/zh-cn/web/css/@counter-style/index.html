@@ -7,9 +7,9 @@ translation_of: Web/CSS/@counter-style
 
 <h2 id="概要">概要</h2>
 
-<p><code>@counter-style是一个</code> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> ，它让开发者可以自定义counter的样式。 一个 <code>@counter-style规则</code> 定义了如何把一个计数器的值转化为字符串表示。</p>
+<p><code>@counter-style 是一个</code> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> ，它让开发者可以自定义 counter 的样式。 一个 <code>@counter-style 规则</code> 定义了如何把一个计数器的值转化为字符串表示。</p>
 
-<p>最初版的CSS定义了一系列很好用的计数器样式， 尽管近几年又添加了很多样式，但是这种限制方式被证明已经不能满足全球化的排版了。<code>@counter-style规则用一种开放的方式弥补了这一缺点，在预定义的样式不能满足需求时，它可以使开发者自定义他们自己的计数器样式。</code></p>
+<p>最初版的 CSS 定义了一系列很好用的计数器样式， 尽管近几年又添加了很多样式，但是这种限制方式被证明已经不能满足全球化的排版了。<code>@counter-style 规则用一种开放的方式弥补了这一缺点，在预定义的样式不能满足需求时，它可以使开发者自定义他们自己的计数器样式。</code></p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -50,17 +50,17 @@ translation_of: Web/CSS/@counter-style
 
 <dl>
  <dt>{{cssxref("suffix")}}</dt>
- <dd>与{{cssxref("prefix")}}类似，suffix指定一个符号，加在标记表示符的后面。</dd>
+ <dd>与{{cssxref("prefix")}}类似，suffix 指定一个符号，加在标记表示符的后面。</dd>
 </dl>
 
 <dl>
  <dt>{{cssxref("range")}}</dt>
- <dd> 指定一个counter-style生效的范围，如果计数器的值不再这个范围内，那么自定义的counter-style不会生效，counter-style会后退到{{cssxref("fallback")}}的style。</dd>
+ <dd> 指定一个 counter-style 生效的范围，如果计数器的值不再这个范围内，那么自定义的 counter-style 不会生效，counter-style 会后退到{{cssxref("fallback")}}的 style。</dd>
 </dl>
 
 <dl>
  <dt>{{cssxref("pad")}}</dt>
- <dd>在你想要给标记表示符最小值时使用。比如说，你想要计数器从01开始，经过02，03，04，那么这时可以使用pad了。对于大于pad指定值的表示符，标记会恢复为normal。</dd>
+ <dd>在你想要给标记表示符最小值时使用。比如说，你想要计数器从 01 开始，经过 02，03，04，那么这时可以使用 pad 了。对于大于 pad 指定值的表示符，标记会恢复为 normal。</dd>
 </dl>
 
 <dl>
@@ -70,9 +70,9 @@ translation_of: Web/CSS/@counter-style
 
 <dl>
  <dt>{{cssxref("symbols-descriptor", "symbols")}}</dt>
- <dd>定义一个符号，用于标记的表示。符号可以包含字符串，图片或自定义的识别码。这个符号怎样构建标记呢？这依赖于system描述符里面所定义的算法。 举个例子，如果system的值是fixed,那么symbols属性指定的固定的N个符号，将被用来表示计数器的前N个值。用完了前N个符号后，列表里剩下的值将使用fallback定义的样式来表示。<br>
+ <dd>定义一个符号，用于标记的表示。符号可以包含字符串，图片或自定义的识别码。这个符号怎样构建标记呢？这依赖于 system 描述符里面所定义的算法。 举个例子，如果 system 的值是 fixed，那么 symbols 属性指定的固定的 N 个符号，将被用来表示计数器的前 N 个值。用完了前 N 个符号后，列表里剩下的值将使用 fallback 定义的样式来表示。<br>
  <br>
- 下面的@counter-style规则使用图片而不是字符标记。<br>
+ 下面的 @counter-style 规则使用图片而不是字符标记。<br>
 
  <pre class="brush: css">@counter-style winners-list {
   system: fixed;
@@ -84,7 +84,7 @@ translation_of: Web/CSS/@counter-style
 
 <dl>
  <dt>{{cssxref("additive-symbols")}}</dt>
- <dd>尽管symbols属性中指定的符号可以被system中定义的大部分算法所使用，但是一些system属性的值，比如additive，依赖于本描述符所描述的加性元组。Each additive tuple consists of a counter symbol and a non negative integer weight. 每个加性元组包含一个可数的符号和一个非负证书的权重。The additive tuples must be specified in the descending order of their weights.</dd>
+ <dd>尽管 symbols 属性中指定的符号可以被 system 中定义的大部分算法所使用，但是一些 system 属性的值，比如 additive，依赖于本描述符所描述的加性元组。Each additive tuple consists of a counter symbol and a non negative integer weight. 每个加性元组包含一个可数的符号和一个非负证书的权重。The additive tuples must be specified in the descending order of their weights.</dd>
 </dl>
 
 <dl>
@@ -100,7 +100,7 @@ translation_of: Web/CSS/@counter-style
   suffix: " ";
 }</pre>
 
-<p>上面的counter style规则在列表中可以如下使用：</p>
+<p>上面的 counter style 规则在列表中可以如下使用：</p>
 
 <pre class="brush: css">.items {
    list-style: circled-alpha;
@@ -147,53 +147,7 @@ translation_of: Web/CSS/@counter-style
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(33)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(33)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.at-rules.counter-style")}}
 
 <h2 id="相关阅读">相关阅读</h2>
 

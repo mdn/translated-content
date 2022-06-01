@@ -26,8 +26,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <p>A variable that has not been assigned a value is of type undefined. A method or statement also returns <code>undefined</code> if the variable that is being evaluated does not have an assigned value. A function returns <code>undefined</code> if a value was not {{jsxref("Statements/return", "returned")}}.</p>
 
-<div class="warning">
-<p>While it is possible to use it as an {{Glossary("Identifier", "identifier")}} (variable name) in any scope other than the global scope (because <code>undefined</code> is not a {{jsxref("Reserved_Words", "reserved word")}}), doing so is a very bad idea that will make your code difficult to maintain and debug.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> While it is possible to use it as an {{Glossary("Identifier", "identifier")}} (variable name) in any scope other than the global scope (because <code>undefined</code> is not a {{jsxref("Reserved_Words", "reserved word")}}), doing so is a very bad idea that will make your code difficult to maintain and debug.</p>
 
 <pre class="brush: js">//DON'T DO THIS
 
@@ -54,8 +54,8 @@ else {
 }
 </pre>
 
-<div class="note">
-<p>備註：The strict equality operator rather than the standard equality operator must be used here, because <code>x == undefined</code> also checks whether <code>x</code> is <code>null</code>, while strict equality doesn't. <code>null</code> is not equivalent to <code>undefined</code>. See {{jsxref("Operators/Comparison_Operators", "comparison operators")}} for details.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> The strict equality operator rather than the standard equality operator must be used here, because <code>x == undefined</code> also checks whether <code>x</code> is <code>null</code>, while strict equality doesn't. <code>null</code> is not equivalent to <code>undefined</code>. See {{jsxref("Operators/Comparison_Operators", "comparison operators")}} for details.</p>
 </div>
 
 <h3 id="Typeof_operator_and_undefined"><code>Typeof</code> operator and <code>undefined</code></h3>

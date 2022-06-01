@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">Object.assign(<var>target</var>, ...<var>sources</var>)</pre>
+<pre class="syntaxbox">Object.assign(<var>target</var>, ...<var>sources</var>)</pre>
 
 <h3 id="參數">參數</h3>
 
@@ -40,16 +40,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h3 id="複製物件">複製物件</h3>
 
-<pre class="brush: js notranslate">var obj = { a: 1 };
+<pre class="brush: js">var obj = { a: 1 };
 var copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 </pre>
 
-<h3 id="Deep_Clone" name="Deep_Clone">警告:非深層複製</h3>
+<h3 id="Deep_Clone">警告:非深層複製</h3>
 
 <p>深層複製(deep clone)需要使用其他的替代方案，因為 <code>Object.assign()</code> 僅複製屬性值。若來源物件的值參照到一個子物件，它只會複製該子物件的參照。</p>
 
-<pre class="brush: js notranslate">function test() {
+<pre class="brush: js">function test() {
   let a = { b: {c:4} , d: { e: {f:1}} }
   let g = Object.assign({},a) // 淺層
   let h = JSON.parse(JSON.stringify(a)); // 深層
@@ -70,7 +70,7 @@ test();
 
 <h3 id="合併物件">合併物件</h3>
 
-<pre class="brush: js notranslate">var o1 = { a: 1 };
+<pre class="brush: js">var o1 = { a: 1 };
 var o2 = { b: 2 };
 var o3 = { c: 3 };
 
@@ -80,7 +80,7 @@ console.log(o1);  // { a: 1, b: 2, c: 3 }, 目標物件本身也被改變。</pr
 
 <h3 id="有相同屬性時合併物件">有相同屬性時合併物件</h3>
 
-<pre class="brush: js notranslate">var o1 = { a: 1, b: 1, c: 1 };
+<pre class="brush: js">var o1 = { a: 1, b: 1, c: 1 };
 var o2 = { b: 2, c: 2 };
 var o3 = { c: 3 };
 
@@ -91,7 +91,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }，屬性c為o3.c的值，最後一個�
 
 <h3 id="複製_Symbol_型別的屬性">複製 Symbol 型別的屬性</h3>
 
-<pre class="brush: js notranslate">var o1 = { a: 1 };
+<pre class="brush: js">var o1 = { a: 1 };
 var o2 = { [Symbol('foo')]: 2 };
 
 var obj = Object.assign({}, o1, o2);
@@ -101,7 +101,7 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]非不在
 
 <h3 id="在屬性鏈中的不可列舉屬性不會被複製">在屬性鏈中的不可列舉屬性不會被複製</h3>
 
-<pre class="brush: js notranslate">var obj = Object.create({ foo: 1 }, { // foo 是 obj 的屬性鏈。
+<pre class="brush: js">var obj = Object.create({ foo: 1 }, { // foo 是 obj 的屬性鏈。
   bar: {
     value: 2  // bar 是不可列舉的屬性，因為enumerable預設為false。
   },
@@ -117,7 +117,7 @@ console.log(copy); // { baz: 3 }
 
 <h3 id="原始型別會被包成物件">原始型別會被包成物件</h3>
 
-<pre class="brush: js notranslate">var v1 = 'abc';
+<pre class="brush: js">var v1 = 'abc';
 var v2 = true;
 var v3 = 10;
 var v4 = Symbol('foo');
@@ -130,7 +130,7 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 
 <h3 id="任何異常將會中斷正進行的複製程序">任何異常將會中斷正進行的複製程序</h3>
 
-<pre class="brush: js notranslate">var target = Object.defineProperty({}, 'foo', {
+<pre class="brush: js">var target = Object.defineProperty({}, 'foo', {
   value: 1,
   writable: false
 }); // target.foo 是 read-only (唯讀)屬性
@@ -148,7 +148,7 @@ console.log(target.baz);  // undefined, 第三個來源物件也不會被複製�
 
 <h3 id="複製的存取程序">複製的存取程序</h3>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   foo: 1,
   get bar() {
     return 2;
@@ -187,7 +187,7 @@ console.log(copy);
 
 <p>{{Glossary("Polyfill","polyfill")}} 不支援Symbol屬性，因為ES5沒有Symbol型別。</p>
 
-<pre class="brush: js notranslate">if (typeof Object.assign != 'function') {
+<pre class="brush: js">if (typeof Object.assign != 'function') {
   Object.assign = function (target, varArgs) { // .length of function is 2
     'use strict';
     if (target == null) { // TypeError if undefined or null
@@ -239,7 +239,7 @@ console.log(copy);
 
 <div>{{Compat("javascript.builtins.Object.assign")}}</div>
 
-<div id="compat-desktop"></div>
+<div></div>
 
 <h2 id="參閱">參閱</h2>
 

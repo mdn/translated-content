@@ -16,11 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Object.freeze(<em>obj</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -31,15 +31,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 <p>被冻结的对象。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>被冻结对象自身的所有属性都不可能以任何方式被修改。任何修改尝试都会失败，无论是静默地还是通过抛出{{jsxref("TypeError")}}异常（最常见但不仅限于{{jsxref("Strict_mode", "strict mode", "", 1)}}）。</p>
 
-<p>数据属性的值不可更改，访问器属性（有getter和setter）也同样（但由于是函数调用，给人的错觉是还是可以修改这个属性）。如果一个属性的值是个对象，则这个对象中的属性是可以修改的，除非它也是个冻结对象。数组作为一种对象，被冻结，其元素不能被修改。没有数组元素可以被添加或移除。</p>
+<p>数据属性的值不可更改，访问器属性（有 getter 和 setter）也同样（但由于是函数调用，给人的错觉是还是可以修改这个属性）。如果一个属性的值是个对象，则这个对象中的属性是可以修改的，除非它也是个冻结对象。数组作为一种对象，被冻结，其元素不能被修改。没有数组元素可以被添加或移除。</p>
 
 <p>这个方法返回传递的对象，而不是创建一个被冻结的副本。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <h3 id="冻结对象">冻结对象</h3>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
   foo: 'bar'
 };
 
-// 新的属性会被添加, 已存在的属性可能
+// 新的属性会被添加，已存在的属性可能
 // 会被修改或移除
 obj.foo = 'baz';
 obj.lumpy = 'woof';
@@ -70,7 +70,7 @@ obj.quaxxor = 'the friendly duck';
 function fail(){
   'use strict';
   obj.foo = 'sparky'; // throws a TypeError
-  delete obj.quaxxor; // 返回true，因为quaxxor属性从来未被添加
+  delete obj.quaxxor; // 返回 true，因为 quaxxor 属性从来未被添加
   obj.sparky = 'arf'; // throws a TypeError
 }
 
@@ -86,10 +86,10 @@ Object.defineProperty(obj, 'foo', { value: 'eit' });
 Object.setPrototypeOf(obj, { x: 20 })
 obj.__proto__ = { x: 20 }</pre>
 
-<h3 class="brush: js" id="冻结数组">冻结数组</h3>
+<h3 id="冻结数组">冻结数组</h3>
 
 <pre class="brush: js">let a = [0];
-Object.freeze(a); // 现在数组不能被修改了.
+Object.freeze(a); // 现在数组不能被修改了。
 
 a[0]=1; // fails silently
 a.push(2); // fails silently
@@ -117,24 +117,24 @@ obj1.internal.a // 'aValue'
 
 <p>对于一个常量对象，整个引用图（直接和间接引用其他对象）只能引用不可变的冻结对象。冻结的对象被认为是不可变的，因为整个对象中的整个对象状态（对其他对象的值和引用）是固定的。注意，字符串，数字和布尔总是不可变的，而函数和数组是对象。</p>
 
-<p>要使对象不可变，需要递归冻结每个类型为对象的属性（深冻结）。当你知道对象在引用图中不包含任何 <em><a href="https://en.wikipedia.org/wiki/Cycle_(graph_theory)">环</a> </em>(循环引用)时，将根据你的设计逐个使用该模式，否则将触发无限循环。对 deepFreeze()  的增强将是具有接收路径（例如Array）参数的内部函数，以便当对象进入不变时，可以递归地调用 deepFreeze() 。你仍然有冻结不应冻结的对象的风险，例如[window]。</p>
+<p>要使对象不可变，需要递归冻结每个类型为对象的属性（深冻结）。当你知道对象在引用图中不包含任何 <em><a href="https://en.wikipedia.org/wiki/Cycle_(graph_theory)">环</a> </em>(循环引用) 时，将根据你的设计逐个使用该模式，否则将触发无限循环。对 deepFreeze()  的增强将是具有接收路径（例如 Array）参数的内部函数，以便当对象进入不变时，可以递归地调用 deepFreeze() 。你仍然有冻结不应冻结的对象的风险，例如 [window]。</p>
 
-<pre class="brush: js">// 深冻结函数.
+<pre class="brush: js">// 深冻结函数。
 function deepFreeze(obj) {
 
-  // 取回定义在obj上的属性名
+  // 取回定义在 obj 上的属性名
   var propNames = Object.getOwnPropertyNames(obj);
 
   // 在冻结自身之前冻结属性
   propNames.forEach(function(name) {
     var prop = obj[name];
 
-    // 如果prop是个对象，冻结它
+    // 如果 prop 是个对象，冻结它
     if (typeof prop == 'object' &amp;&amp; prop !== null)
       deepFreeze(prop);
   });
 
-  // 冻结自身(no-op if already frozen)
+  // 冻结自身 (no-op if already frozen)
   return Object.freeze(obj);
 }
 
@@ -149,7 +149,7 @@ obj2.internal.a; // undefined
 
 <h2 id="Notes">Notes</h2>
 
-<p>在ES5中，如果这个方法的参数不是一个对象（一个原始值），那么它会导致 {{jsxref("TypeError")}}。在ES2015中，非对象参数将被视为要被冻结的普通对象，并被简单地返回。</p>
+<p>在 ES5 中，如果这个方法的参数不是一个对象（一个原始值），那么它会导致 {{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为要被冻结的普通对象，并被简单地返回。</p>
 
 <pre class="brush: js">&gt; Object.freeze(1)
 TypeError: 1 is not an object // ES5 code
@@ -161,7 +161,7 @@ TypeError: 1 is not an object // ES5 code
 
 <p>用<code>Object.seal()</code>密封的对象可以改变它们现有的属性。使用<code>Object.freeze()</code> 冻结的对象中现有属性是不可变的。</p>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -193,7 +193,7 @@ TypeError: 1 is not an object // ES5 code
 
 <p>{{Compat("javascript.builtins.Object.freeze")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.isFrozen")}}</li>

@@ -1,10 +1,6 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/outline-style
 ---
 {{CSSRef}}
@@ -119,7 +115,7 @@ La valeur `auto` indique une bordure sur mesure selon l'interface du système d'
 
 #### Résulat
 
-{{EmbedLiveSample('Example_0_-_auto')}}
+{{EmbedLiveSample('Utilisation_de_la_valeur_auto')}}
 
 ## Spécifications
 

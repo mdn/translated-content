@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Statements/do...while
 <div>{{jsSidebar("Statements")}}</div>
 </div>
 
-<p><strong><code>do...while</code> 语句</strong><span lang="zh-CN"><span>创建一个执行指定语句的循环，直到</span></span><code>condition</code><span lang="zh-CN"><span>值为 false。</span><span>在执行</span></span><code>statement</code> <span lang="zh-CN"><span>后检测</span></span><code>condition</code><span lang="zh-CN"><span>，所以指定的</span></span><code>statement</code><span lang="zh-CN"><span>至少执行一次。</span></span></p>
+<p><strong><code>do...while</code> 语句</strong>创建一个执行指定语句的循环，直到<code>condition</code>值为 false。在执行<code>statement</code> 后检测<code>condition</code>，所以指定的<code>statement</code>至少执行一次。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">do
    <em>statement</em>
@@ -21,33 +21,30 @@ while (<em>condition</em>);
 
 <dl>
  <dt><code>statement</code></dt>
- <dd><span class="short_text" id="result_box" lang="zh-CN"><span>执行至少一次的语句，并在每次 </span></span><code>condition</code> <span class="short_text" lang="zh-CN"><span>值为真时重新执行。</span></span>想执行多行语句，可使用<span style="line-height: 19.0909080505371px;">{{jsxref("Statements/block", "block")}}</span>语句<span style="line-height: 19.0909080505371px;">（</span><code style="font-style: normal; line-height: 19.0909080505371px;">{ ... }</code><span style="line-height: 19.0909080505371px;">）</span>包裹这些语句。</dd>
-</dl>
-
-<dl>
+ <dd>执行至少一次的语句，并在每次 <code>condition</code> 值为真时重新执行。想执行多行语句，可使用{{jsxref("Statements/block", "block")}}语句（<code>{ ... }</code>）包裹这些语句。</dd>
  <dt><code>condition</code></dt>
- <dd>循环中每次都会计算的表达式。如果 <code>condition</code> 值为真， <code>statement</code> 会再次执行。当 <code>condition</code> <span style="line-height: 19.0909080505371px;">值为假</span>，则跳到<code>do...while</code>之后的语句。</dd>
+ <dd>循环中每次都会计算的表达式。如果 <code>condition</code> 值为真， <code>statement</code> 会再次执行。当 <code>condition</code> 值为假，则跳到<code>do...while</code>之后的语句。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Using_do...while" name="Example:_Using_do...while">使用 <code>do...while</code></h3>
+<h3 id="Example:_Using_do...while">使用 <code>do...while</code></h3>
 
 <p>下面的例子中，<code>do...while</code> 循环至少迭代一次，并且继续迭代直到 <code>i</code>不再小于 5 时结束。</p>
 
 <h3 id="HTML_内容">HTML 内容</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>example<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;div id="example"&gt;&lt;/div&gt;</pre>
 
 <h3 id="JavaScript_内容">JavaScript 内容</h3>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> result <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
-<span class="keyword token">do</span> <span class="punctuation token">{</span>
-   i <span class="operator token">+</span><span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-   result <span class="operator token">+</span><span class="operator token">=</span> i <span class="operator token">+</span> <span class="string token">' '</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">while</span> <span class="punctuation token">(</span>i <span class="operator token">&lt;</span> <span class="number token">5</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'example'</span><span class="punctuation token">)</span><span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> result<span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var result = '';
+var i = 0;
+do {
+   i += 1;
+   result += i + ' ';
+} while (i &lt; 5);
+document.getElementById('example').innerHTML = result;</pre>
 
 <h3 id="结果">结果</h3>
 
@@ -91,7 +88,7 @@ document<span class="punctuation token">.</span><span class="function token">get
 
 <p>{{Compat("javascript.statements.do_while")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Statements/while", "while")}}</li>

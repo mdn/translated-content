@@ -11,7 +11,7 @@ translation_of: Web/API/Event/target
 
 <p id="Синтаксис">Синтаксис</p>
 
-<pre class="syntaxbox notranslate">theTarget = event.target</pre>
+<pre class="syntaxbox">theTarget = event.target</pre>
 
 <p>Значение:</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Event/target
 
 <p>Свойство <code>event.target</code> может быть использовано для реализации <strong>делегирования событий</strong>.</p>
 
-<pre class="notranslate">// Создадим список
+<pre>// Создадим список
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -42,40 +42,17 @@ ul.addEventListener('click', hide, false);</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
 
-<p>{{Compat("api.Event.target")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Примечания">Примечания</h2>
 
 <p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно идентично <code>event.target</code>.</p>
 
-<pre class="brush: js notranslate">function hide(e) {
+<pre class="brush: js">function hide(e) {
   // Поддержка IE 6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';

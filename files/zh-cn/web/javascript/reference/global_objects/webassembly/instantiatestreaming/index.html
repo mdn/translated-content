@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateS
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>WebAssembly.instantiateStreaming()</code></strong> 方法直接从流式底层源编译和实例化WebAssembly模块。这是加载wasm代码一种非常有效的优化方式。</p>
+<p><strong><code>WebAssembly.instantiateStreaming()</code></strong> 方法直接从流式底层源编译和实例化 WebAssembly 模块。这是加载 wasm 代码一种非常有效的优化方式。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,23 +22,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateS
 
 <h3 id="Return_value">Return value</h3>
 
-<p>一个 <code>Promise</code> ，通过resolve返回一个包含两个属性的 <code>ResultObject</code> ：</p>
+<p>一个 <code>Promise</code>，通过 resolve 返回一个包含两个属性的 <code>ResultObject</code> ：</p>
 
 <ul>
- <li><code>module</code>: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的WebAssembly模块. 这个<code>Module</code>能够再次被实例化 或 通过<a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>共享。</li>
- <li><code>instance</code>: {{jsxref("WebAssembly.Instance")}} 对象包含WebAssembly所有公开方法 <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a>.</li>
+ <li><code>module</code>: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个<code>Module</code>能够再次被实例化 或 通过<a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>共享。</li>
+ <li><code>instance</code>: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a>.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li>如果任意参数的类型或结构错误, {{jsxref("TypeError")}} 抛出.</li>
- <li>如果操作失败, Promise通过reject根据失败原因返回 {{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}} 或 {{jsxref("WebAssembly.RuntimeError")}}。</li>
+ <li>如果任意参数的类型或结构错误，{{jsxref("TypeError")}} 抛出。</li>
+ <li>如果操作失败，Promise 通过 reject 根据失败原因返回 {{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}} 或 {{jsxref("WebAssembly.RuntimeError")}}。</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
-<p>下面的示例 (在GitHub上查看 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> 示例, 并且也可 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> ) 直接从基础源传输一个 .wasm 模块，然后进行编译和实例化, Promise 履行后返回一个 <code>ResultObject</code>. 因为 <code>instantiateStreaming()</code> 方法允许履行后返回{{domxref("Response")}}对象的Promise，你可以直接传递一个 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 请求，它会在履行后将response传递给方法.</p>
+<p>下面的示例 (在 GitHub 上查看 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> 示例，并且也可 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> ) 直接从基础源传输一个 .wasm 模块，然后进行编译和实例化，Promise 履行后返回一个 <code>ResultObject</code>. 因为 <code>instantiateStreaming()</code> 方法允许履行后返回{{domxref("Response")}}对象的 Promise，你可以直接传递一个 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 请求，它会在履行后将 response 传递给方法。</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 
@@ -66,13 +66,9 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.WebAssembly.instantiateStreaming")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 
@@ -81,5 +77,5 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></li>
- <li><a href="/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">使用Fetch</a></li>
+ <li><a href="/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">使用 Fetch</a></li>
 </ul>

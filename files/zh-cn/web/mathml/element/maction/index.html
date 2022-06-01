@@ -5,7 +5,7 @@ translation_of: Web/MathML/Element/maction
 ---
 <div>{{MathMLRef}}</div>
 
-<div class="summary">
+<div>
 <p>MathML<code><strong>&lt;maction&gt;</strong></code>元素提供了一种让表达式（或子表达式）具有某种特定行为的可能性。具体行为方式由<code><strong>actiontype</strong></code>属性的取值来确定。也可以使用<code><strong>selection</strong></code>属性来手动指定该行为作用在哪个子元素上。</p>
 </div>
 
@@ -15,8 +15,8 @@ translation_of: Web/MathML/Element/maction
  <dt id="attr-actiontype">actiontype</dt>
  <dd>该属性描述元素上发生了哪种行为，有如下几种取值：
  <ul>
-  <li><code>statusline</code>: 当元素被点击或屏幕阅读器的指针指向该元素时触发，message会在浏览器的状态栏中显示。语法如下：<code>&lt;maction actiontype="statusline"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;</code>。</li>
-  <li><code>toggle</code>: 当子表达式被点击时触发，子表达式会依次显示。因此每次点击时selection的值都会增加。语法如下：<code>&lt;maction actiontype="toggle" selection="<em>positive-integer</em>" &gt; <em>expression1</em> <em>expression2</em> <em>expressionN</em> &lt;/maction&gt;</code>。</li>
+  <li><code>statusline</code>: 当元素被点击或屏幕阅读器的指针指向该元素时触发，message 会在浏览器的状态栏中显示。语法如下：<code>&lt;maction actiontype="statusline"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;</code>。</li>
+  <li><code>toggle</code>: 当子表达式被点击时触发，子表达式会依次显示。因此每次点击时 selection 的值都会增加。语法如下：<code>&lt;maction actiontype="toggle" selection="<em>positive-integer</em>" &gt; <em>expression1</em> <em>expression2</em> <em>expressionN</em> &lt;/maction&gt;</code>。</li>
   <li><code>tooltip</code>: 当指针指向表达式时触发，会在表达式附近显示一个提示框。语法如下：<code>&lt;maction actiontype="tooltip"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;</code>。</li>
  </ul>
  </dd>
@@ -25,9 +25,9 @@ translation_of: Web/MathML/Element/maction
  <dt id="attr-href">href</dt>
  <dd>用来设置标签点击后跳转的链接。</dd>
  <dt id="attr-mathbackground">mathbackground</dt>
- <dd>用来设置标签的背景色，可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML颜色名</a>。</dd>
+ <dd>用来设置标签的背景色，可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
  <dt id="attr-mathcolor">mathcolor</dt>
- <dd>用来设置文字和分数的线的颜色，同样可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML颜色名</a>。</dd>
+ <dd>用来设置文字和分数的线的颜色，同样可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
  <dt id="attr-selection">selection</dt>
  <dd>用来设置该行为作用在哪个子元素上，默认为<code><strong>1</strong></code>，代表第一个子元素。</dd>
 </dl>
@@ -94,142 +94,18 @@ translation_of: Web/MathML/Element/maction
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat("mathml.elements.maction")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} [2]</td>
-  </tr>
-  <tr>
-   <td><code>actiontype</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}} [4]</td>
-  </tr>
-  <tr>
-   <td><code>href</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.0 {{webkitbug(85733)}} [3]</td>
-  </tr>
-  <tr>
-   <td><code>mathbackground</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>mathcolor</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>actiontype</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>href</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathbackground</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathcolor</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 只包括 <code>toggle</code> 和 <code>statusline</code>， <code>tooltip</code> 暂未实现。参考 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=544001">bug 544001</a>.</p>
-
-<p>[2] 参考 <a href="https://bugs.webkit.org/show_bug.cgi?id=85734">WebKit bug 85734</a>.</p>
-
-<p>[3] 参考 <a href="https://bugs.webkit.org/show_bug.cgi?id=85733">WebKit bug 85733</a>.</p>
-
-<p>[4] 只包括<code>toggle</code>， <code>statusline</code> 和 <code>tooltip</code> 暂未实现 。参考<a href="https://bugs.webkit.org/show_bug.cgi?id=120059">WebKit bug 120059</a>.</p>
-
-<h2 id="Gecko具体说明">Gecko具体说明</h2>
+<h2 id="Gecko具体说明">Gecko 具体说明</h2>
 
 <ul>
- <li>在Gecko 9.0 {{ geckoRelease("9.0") }} 之前，<code><strong>actiontype</strong></code>属性支持的非标准的<code><strong>restyle</strong></code>值，如今它已经不再支持。</li>
- <li>在Gecko 14.0 {{ geckoRelease("14.0") }} 之前，<strong><code>statusline</code></strong> 行为类型使用了如下所示的非标准语法，如今它已按照MathML规范被修复了。
+ <li>在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，<code><strong>actiontype</strong></code>属性支持的非标准的<code><strong>restyle</strong></code>值，如今它已经不再支持。</li>
+ <li>在 Gecko 14.0 {{ geckoRelease("14.0") }} 之前，<strong><code>statusline</code></strong> 行为类型使用了如下所示的非标准语法，如今它已按照 MathML 规范被修复了。
   <pre class="brush: html">&lt;maction actiontype="statusline#(message)"&gt;
 (expression)
 &lt;/maction&gt;
 </pre>
  </li>
- <li>在Gecko 15.0 {{geckoRelease("15.0")}}中，只有actiontype属性的值为<code><strong>toggle</strong></code>时，<code><strong>selection</strong></code>属性才会有作用。</li>
- <li>从Gecko 16.0 {{geckoRelease("16.0")}}开始，当<code><strong>actiontype</strong></code>属性的值无效时，<code><strong>selection</strong></code>属性仍然起作用。如果未指定<code><strong>actiontype</strong></code>或者<code><strong>selection</strong></code>属性的值无效，将抛出一个MathML错误（无效的标记）。</li>
+ <li>在 Gecko 15.0 {{geckoRelease("15.0")}}中，只有 actiontype 属性的值为<code><strong>toggle</strong></code>时，<code><strong>selection</strong></code>属性才会有作用。</li>
+ <li>从 Gecko 16.0 {{geckoRelease("16.0")}}开始，当<code><strong>actiontype</strong></code>属性的值无效时，<code><strong>selection</strong></code>属性仍然起作用。如果未指定<code><strong>actiontype</strong></code>或者<code><strong>selection</strong></code>属性的值无效，将抛出一个 MathML 错误（无效的标记）。</li>
 </ul>

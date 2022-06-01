@@ -13,8 +13,6 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 
 <h2 id="类型">类型</h2>
 
-<div class="hidden">The following table is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
-
 <table class="standard-table">
  <thead>
   <tr>
@@ -28,40 +26,40 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>.</code></td>
    <td>
-    <p>有下列含义之一:</p>
+    <p>有下列含义之一：</p>
 
     <ul>
-     <li>匹配除行终止符之外的任何单个字符: <code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如, <code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
+     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
      <li>在字符集内，点失去了它的特殊意义，并与文字点匹配。</li>
     </ul>
 
-    <p>需要注意的是，<code>m</code> multiline标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
+    <p>需要注意的是，<code>m</code> multiline 标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
 
-    <p>ES2018 添加了 <code>s</code> "dotAll" 标志,它允许点也匹配行终止符。</p>
+    <p>ES2018 添加了 <code>s</code> "dotAll" 标志，它允许点也匹配行终止符。</p>
    </td>
   </tr>
   <tr>
    <td><code>\d</code></td>
    <td>
-    <p>匹配任何数字(阿拉伯数字)。 相当于 <code>[0-9]</code>. 例如, <code>/\d/</code> 或 <code>/[0-9]/</code> 匹配 “B2is the suite number”中的“2”。</p>
+    <p>匹配任何数字 (阿拉伯数字)。 相当于 <code>[0-9]</code>. 例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配 “B2is the suite number”中的“2”。</p>
    </td>
   </tr>
   <tr>
    <td><code>\D</code></td>
    <td>
-    <p>匹配任何非数字(阿拉伯数字)的字符。相当于<code>[^0-9]</code>. 例如, <code>/\D/</code> or <code>/[^0-9]/</code> 在 "B2 is the suite number" 中 匹配 "B".</p>
+    <p>匹配任何非数字 (阿拉伯数字) 的字符。相当于<code>[^0-9]</code>. 例如，<code>/\D/</code> or <code>/[^0-9]/</code> 在 "B2 is the suite number" 中 匹配 "B".</p>
    </td>
   </tr>
   <tr>
    <td><code>\w</code></td>
    <td>
-    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>. 例如, <code>/\w/</code> 在 "apple" 匹配 "a" , "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".</p>
+    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>. 例如，<code>/\w/</code> 在 "apple" 匹配 "a" , "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".</p>
    </td>
   </tr>
   <tr>
    <td><code>\W</code></td>
    <td>
-    <p>匹配任何不是来自基本拉丁字母的单词字符。相当于 <code>[^A-Za-z0-9_]</code>. 例如, <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> 匹配 "%" 在 "50%" 以及 "É" 在 "Émanuel" 中.</p>
+    <p>匹配任何不是来自基本拉丁字母的单词字符。相当于 <code>[^A-Za-z0-9_]</code>. 例如，<code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> 匹配 "%" 在 "50%" 以及 "É" 在 "Émanuel" 中。</p>
    </td>
   </tr>
   <tr>
@@ -132,8 +130,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
      <li>For characters that are usually treated specially, indicates that the next character is not special and should be interpreted literally. For example, "*" is a special character that means 0 or more occurrences of the preceding character should be matched; for example, <code>/a*/</code> means match 0 or more "a"s. To match <code>*</code> literally, precede it with a backslash; for example, <code>/a\*/</code> matches "a*".</li>
     </ul>
 
-    <div class="blockIndicator note">
-    <p>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
+    <div class="note">
+    <p><strong>备注：</strong>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
     </div>
    </td>
   </tr>
@@ -144,7 +142,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 
 <h3 id="Looking_for_a_series_of_digits">Looking for a series of digits</h3>
 
-<pre class="brush: js notranslate">var randomData = "015 354 8787 687351 3512 8735";
+<pre class="brush: js">var randomData = "015 354 8787 687351 3512 8735";
 var regexpFourDigits = /\b\d{4}\b/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // \d{4} indicates a digit, four times
@@ -157,7 +155,7 @@ console.table(randomData.match(regexpFourDigits));
 
 <h3 id="Looking_for_a_word_from_the_latin_alphabet_starting_with_A">Looking for a word (from the latin alphabet) starting with A</h3>
 
-<pre class="brush: js notranslate">var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+<pre class="brush: js">var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // [aA] indicates the letter a or A
@@ -171,17 +169,13 @@ console.table(aliceExcerpt.match(regexpWordStartingWithA));
 
 <p>Instead of the Latin alphabet, we can use a range of Unicode characters to identify a word (thus being able to deal with text in other languages like Russian or Arabic). The "Basic Multilingual Plane" of Unicode contains most of the characters used around the world and we can use character classes and ranges to match words written with those characters.</p>
 
-<pre class="brush: js notranslate">var nonEnglishText = "Приключения Алисы в Стране чудес";
+<pre class="brush: js">var nonEnglishText = "Приключения Алисы в Стране чудес";
 var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
 [ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
 </pre>
-
-<div class="hidden">
-<p>Note for MDN editors: please do not try to add funny examples with emoji as those characters are not handled by the platform (Kuma).</p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 

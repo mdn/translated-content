@@ -10,9 +10,9 @@ translation_of: Web/CSS/table-layout
 ---
 <div>{{CSSRef}}</div>
 
-<div></div>
 
-<p><strong>table-layout </strong>CSS属性定义了用于布局表格<em>单元格</em>，<em>行</em>和<em>列</em>的算法。</p>
+
+<p><strong>table-layout </strong>CSS 属性定义了用于布局表格<em>单元格</em>，<em>行</em>和<em>列</em>的算法。</p>
 
 <pre><code>/* Keyword values */
 table-layout: auto;
@@ -45,7 +45,7 @@ table-layout: unset;
  <dt><code>fixed</code></dt>
  <dd>表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。在当前列中，该单元格所在行之后的行并不会影响整个列宽。<br>
  <br>
- 使用 “fixed” 布局方式时，整个表格可以在其首行被下载后就被解析和渲染。这样对于 “automatic” 自动布局方式来说可以加速渲染，但是其后的单元格内容并不会自适应当前列宽。任何一个包含溢出内容的单元格可以使用 {{Cssxref("overflow")}}  属性控制是否允许内容溢出。</dd>
+ 使用“fixed”布局方式时，整个表格可以在其首行被下载后就被解析和渲染。这样对于“automatic”自动布局方式来说可以加速渲染，但是其后的单元格内容并不会自适应当前列宽。任何一个包含溢出内容的单元格可以使用 {{Cssxref("overflow")}}  属性控制是否允许内容溢出。</dd>
 </dl>
 
 <h3 id="正式语法">正式语法</h3>
@@ -54,9 +54,9 @@ table-layout: unset;
 
 <h2 id="示例">示例</h2>
 
-<p>本示例使用了fixed的表格布局，结合{{cssxref("width")}}属性来限制表格的宽。{{cssxref("text-overflow")}} 属性用于文字过长时显示省略号。</p>
+<p>本示例使用了 fixed 的表格布局，结合{{cssxref("width")}}属性来限制表格的宽。{{cssxref("text-overflow")}} 属性用于文字过长时显示省略号。</p>
 
-<p>如果表格的布局是auto，即使指定了表格的width，表格仍然会自适应内容自动撑开。</p>
+<p>如果表格的布局是 auto，即使指定了表格的 width，表格仍然会自适应内容自动撑开。</p>
 
 <h3 id="HTML">HTML</h3>
 

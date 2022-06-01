@@ -5,24 +5,20 @@ translation_of: Web/HTML/Element/input/password
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><code>&lt;input&gt;</code> 元素 里有一种叫做 <strong><code>"password"</code></strong> 的值，给我们一个方法让用户更加安全的输入密码。</span>这个元素是作为一行纯文本编辑器控件呈现的，其中文本被遮蔽以致于无法读取，通常通过用诸如星号（“*”）或点（“•”）等符号替换每个字符来实现。）这个符号会根据用户的浏览器和操作系统来具体显示哪个。</p>
+<p><code>&lt;input&gt;</code> 元素 里有一种叫做 <strong><code>"password"</code></strong> 的值，给我们一个方法让用户更加安全的输入密码。这个元素是作为一行纯文本编辑器控件呈现的，其中文本被遮蔽以致于无法读取，通常通过用诸如星号（“*”）或点（“•”）等符号替换每个字符来实现。）这个符号会根据用户的浏览器和操作系统来具体显示哪个。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}</div>
 
-
-
 <p>入门过程的具体细节可能因浏览器而异; 例如，移动设备经常在隐藏它之前显示键入的字符一段时间，以允许用户确定他们按下了他们意图按下的键; 考虑到按键的小尺寸以及可以轻松按下错误的按键（特别是在虚拟键盘上），这是有帮助的。</p>
 
-
-
 <div class="note">
-<p>任何涉及密码等敏感信息的表格（例如登录表格）都应通过HTTPS提供; 许多浏览器现在都实现了警告不安全登录表单的机制; 请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Insecure_passwords">Insecure passwords</a>。</p>
+<p>任何涉及密码等敏感信息的表格（例如登录表格）都应通过 HTTPS 提供; 许多浏览器现在都实现了警告不安全登录表单的机制; 请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Insecure_passwords">Insecure passwords</a>。</p>
 </div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a password, or empty</td>
   </tr>
   <tr>
@@ -48,7 +44,7 @@ translation_of: Web/HTML/Element/input/password
 
 <p>The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} whose value is the current contents of the text editing control being used to enter the password. 如果用户还没有输入任何内容，则此值为空字符串（“”）。 If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.</p>
 
-<p>If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a <code>"password"</code> control is only considered valid if the value passes validation; see {{anch("Validation")}} for more information.</p>
+<p>If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a <code>"password"</code> control is only considered valid if the value passes validation; see <a href="#验证">Validation</a> for more information.</p>
 
 <div class="note">
 <p>The line feed (U+000A) and carriage return (U+000D) characters are not permitted in a <code>"password"</code> value. When setting the value of a password control, line feed and carriage return characters are stripped out of the value.</p>
@@ -60,7 +56,7 @@ translation_of: Web/HTML/Element/input/password
 
 <h3 id="一个简单的密码输入框">一个简单的密码输入框</h3>
 
-<p>在这里，我们看到了最基本的密码输入，并使用了 {{HTMLElement("label")}} 元素.</p>
+<p>在这里，我们看到了最基本的密码输入，并使用了 {{HTMLElement("label")}} 元素。</p>
 
 <pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password"&gt;</pre>
@@ -73,13 +69,13 @@ translation_of: Web/HTML/Element/input/password
 
 <dl>
  <dt><code>"on"</code></dt>
- <dd>允许浏览器或密码管理器自动填写密码字段。 这不像使用“current-password”或“new-password”那样提供信息。</dd>
+ <dd>允许浏览器或密码管理器自动填写密码字段。 这不像使用 “current-password” 或 “new-password” 那样提供信息。</dd>
  <dt><code>"off"</code></dt>
  <dd>不让浏览器或密码管理器自动填写密码字段。 请注意，某些软件会忽略此值，因为它通常会损害用户维护安全密码操作的能力。</dd>
  <dt><code>"current-password"</code></dt>
- <dd>允许浏览器或密码管理器输入网站的当前密码。 这提供了比“on”更多的信息，因为它允许浏览器或密码管理器自动在该字段中输入当前已知的网站密码，但不建议新密码。</dd>
+ <dd>允许浏览器或密码管理器输入网站的当前密码。 这提供了比 “on” 更多的信息，因为它允许浏览器或密码管理器自动在该字段中输入当前已知的网站密码，但不建议新密码。</dd>
  <dt><code>"new-password"</code></dt>
- <dd>允许浏览器或密码管理器自动输入网站的新密码; 这用于“更改密码”和“新用户”表单，在该字段询问用户新密码。 新密码可能以多种方式生成，具体取决于使用的密码管理器。 它可能只是填写新的建议密码，或者它可能会向用户显示创建密码的界面。</dd>
+ <dd>允许浏览器或密码管理器自动输入网站的新密码; 这用于 “更改密码” 和 “新用户” 表单，在该字段询问用户新密码。 新密码可能以多种方式生成，具体取决于使用的密码管理器。 它可能只是填写新的建议密码，或者它可能会向用户显示创建密码的界面。</dd>
 </dl>
 
 <div id="Autocomplete_sample1">
@@ -101,7 +97,7 @@ translation_of: Web/HTML/Element/input/password
 
 <h3 id="指定输入模式">指定输入模式</h3>
 
-<p>If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the {{htmlattrxref("inputmode", "input")}} attribute to request a specific one. 最明显的用例是密码必须是数字（例如PIN）。 例如，带有虚拟键盘的移动设备可能会选择切换到数字键盘布局而不是全键盘，以便更轻松地输入密码。</p>
+<p>If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the {{htmlattrxref("inputmode", "input")}} attribute to request a specific one. 最明显的用例是密码必须是数字（例如 PIN）。 例如，带有虚拟键盘的移动设备可能会选择切换到数字键盘布局而不是全键盘，以便更轻松地输入密码。</p>
 
 <pre class="brush: html">&lt;label for="pin"&gt;PIN: &lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric"&gt;</pre>
@@ -110,7 +106,7 @@ translation_of: Web/HTML/Element/input/password
 
 <h3 id="设置长度要求">设置长度要求</h3>
 
-<p>As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes to establish minimum and maximum acceptable lengths for the password.此示例通过指定用户的PIN必须至少为4且不超过8位来扩展前一个示例。The {{htmlattrxref("size", "input")}} attribute is used to ensure that the password entry control is eight characters wide.</p>
+<p>As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes to establish minimum and maximum acceptable lengths for the password.此示例通过指定用户的 PIN 必须至少为 4 且不超过 8 位来扩展前一个示例。The {{htmlattrxref("size", "input")}} attribute is used to ensure that the password entry control is eight characters wide.</p>
 
 <pre class="brush: html">&lt;label for="pin"&gt;PIN:&lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric" minlength="4"
@@ -166,9 +162,9 @@ translation_of: Web/HTML/Element/input/password
 
 <h3 id="申请社会安全号码">申请社会安全号码</h3>
 
-<p>此示例仅接受与有效的美国社会安全号码格式相匹配的输入。这些用于美国税务和识别目的的数字的格式为“123-45-6789”。 还存在针对每个组中允许的值的各种规则。</p>
+<p>此示例仅接受与有效的美国社会安全号码格式相匹配的输入。这些用于美国税务和识别目的的数字的格式为 “123-45-6789”。 还存在针对每个组中允许的值的各种规则。</p>
 
-<h4 id="HTML版本的实例">HTML版本的实例</h4>
+<h4 id="HTML版本的实例">HTML 版本的实例</h4>
 
 <pre class="brush: html">&lt;label for="ssn"&gt;SSN:&lt;/label&gt;
 &lt;input type="password" id="ssn" inputmode="number" minlength="9" maxlength="12"
@@ -178,7 +174,7 @@ translation_of: Web/HTML/Element/input/password
 &lt;label for="ssn"&gt;Value:&lt;/label&gt;
 &lt;span id="current"&gt;&lt;/span&gt;</pre>
 
-<p>This uses a {{htmlattrxref("pattern", "input")}} which limits the entered value to strings representing legal Socal Security numbers. 很显然，这个正则表达式并不能保证有效的SSN（因为我们没有进入社会保障局的数据库），但它确实保证数量可能是一个号; 它通常会避免无效的值。 此外，它允许三组数字由空格，短划线（“ - ”）分隔，或者什么也不分。</p>
+<p>This uses a {{htmlattrxref("pattern", "input")}} which limits the entered value to strings representing legal Socal Security numbers. 很显然，这个正则表达式并不能保证有效的 SSN（因为我们没有进入社会保障局的数据库），但它确实保证数量可能是一个号; 它通常会避免无效的值。 此外，它允许三组数字由空格，短划线（“ - ”）分隔，或者什么也不分。</p>
 
 <div class="note">
 <p>Isn't that regular expression just <em>beautiful</em>?</p>
@@ -186,9 +182,9 @@ translation_of: Web/HTML/Element/input/password
 
 <p>The {{htmlattrxref("inputmode", "input")}} is set to <code>"number"</code> to encourage devices with virtual keyboards to switch to a numeric keypad layout for easier entry. The {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes are set to 9 and 12, respectively, to require that the value be at least nine and no more than 12 characters (the former without separating characters between the groups of digits and the latter with them). The {{htmlattrxref("required", "input")}} attribute is used to indicate that this control must have a value. Finally, {{htmlattrxref("autocomplete", "input")}} is set to <code>"off"</code> to avoid password managers trying to set its value, since this isn't a password at all.</p>
 
-<h4 id="JavaScript版本的实例">JavaScript版本的实例</h4>
+<h4 id="JavaScript版本的实例">JavaScript 版本的实例</h4>
 
-<p>这只是一些简单的代码，用于在屏幕上显示输入的SSN，以便您可以看到它。 显然这会破坏密码字段的目的，但它有助于试验模式。</p>
+<p>这只是一些简单的代码，用于在屏幕上显示输入的 SSN，以便您可以看到它。 显然这会破坏密码字段的目的，但它有助于试验模式。</p>
 
 <pre class="brush: js">var ssn = document.getElementById("ssn");
 var current = document.getElementById("current");

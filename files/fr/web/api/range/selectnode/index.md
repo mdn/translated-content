@@ -19,7 +19,7 @@ La méthode `Range.selectNode()` définit le {{domxref ("Range")}} destiné à c
 ### Paramètres
 
 - _noeudDeReference_
-  - : Le {{domxref("Node")}} à choisir à l'intérieur d'un `{domxref("Range")}}`.
+  - : Le {{domxref("Node")}} à choisir à l'intérieur d'un `{domxref("Range")}}`.
 
 ## Exemple
 

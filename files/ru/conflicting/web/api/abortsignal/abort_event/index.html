@@ -1,0 +1,41 @@
+---
+title: AbortSignal.onabort
+slug: conflicting/Web/API/AbortSignal/abort_event
+translation_of: Web/API/AbortSignal/onabort
+original_slug: Web/API/AbortSignal/onabort
+---
+<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+
+<p>Свойство <strong><code>onabort</code></strong> интерфейса {{domxref("AbortSignal")}} является обработчиком события {{event("abort_(cancellable_fetch)", "abort")}} и вызывается при его срабатывании, т.е. когда fetch запрос(ы), с которым связан сигнал, был отменён.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: js">abortSignal.onabort = function() { ... };</pre>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве <code>signal</code>). Позже с помощью свойства <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">onabort</span></font> мы проверяем, был ли прерван сигнал, и выводим соответствующее сообщение в консоль.</p>
+
+<pre class="brush: js">var controller = new AbortController();
+var signal = controller.signal;
+
+signal.onabort = function() {
+  console.log('Запрос прерван');
+};
+</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+{{Specifications}}
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+
+
+<p>{{Compat}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
+</ul>

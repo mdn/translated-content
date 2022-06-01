@@ -49,7 +49,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <ul>
  <li>Persistent: Persistente Daten sollen für einen längeren Zeitraum zur Verfügung stehen. Sie werden nur gelöscht, wenn sich der Benutzer aktiv dazu entschließt (zum Beispiel kann man in Firefox und Chrome auswählen, alle Daten oder nur Daten von bestimmten Seiten zu löschen, indem man dies über <em>Einstellungen</em> und <em>Datenschutz &amp; Sicherheit &gt; Websitedaten</em> auswählt).</li>
- <li>Temporär: Diese Daten müssen nicht über einen längeren Zeitraum gespeichert werden. Sie werden in der Reihenfolge gelöscht, wie sie am wenigsten benutzt wurden ({{anch("LRU policy")}}) sobald {{anch("Storage limits")}} erreicht wurden.</li>
+ <li>Temporär: Diese Daten müssen nicht über einen längeren Zeitraum gespeichert werden. Sie werden in der Reihenfolge gelöscht, wie sie am wenigsten benutzt wurden (<a href="#lru_policy">LRU policy</a>) sobald <a href="#storage_limits">Storage limits</a> erreicht wurden.</li>
 </ul>
 
 <p>Sobald persistente Daten gespeichert werden sollen, bekommt ein Benutzer in Firefox eine Popup-Warnung, um darauf hinzuweisen, dass die Daten dauerhaft gespeichert werden sollen und fragt gleichzeitig ab, ob er damit einverstanden ist. Temporäre Datenspeicherung löst nicht eine solche Warnung aus.</p>

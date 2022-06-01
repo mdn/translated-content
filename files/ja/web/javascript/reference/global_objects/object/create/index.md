@@ -4,11 +4,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/create
 tags:
   - ECMAScript 5
   - JavaScript
-  - Method
+  - メソッド
   - 'Null'
   - Object
-  - Reference
-  - Polyfill
+  - リファレンス
+  - ポリフィル
 browser-compat: javascript.builtins.Object.create
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
@@ -213,33 +213,6 @@ _(上記の文字列関連の関数に加えて、以下の関数も追加され
 
 このように、この方法で変更されたオブジェクトは、普通のオブジェクトと同じように見えます。
 
-## ポリフィル
-
-このポリフィルは、プロトタイプは選択されたが第二引数を考慮しない状況向けに、新規オブジェクトを生成する主要な利用法に対応します。
-
-`null` を `[[Prototype]]` として設定することが、実際の ES5 の `Object.create` では対応していますが、このポリフィルは ECMAScript 5 以前のバージョンに対応する制約上、これに対応できないことに注意してください。
-
-```js
- if (typeof Object.create !== "function") {
-    Object.create = function (proto, propertiesObject) {
-        if (typeof proto !== 'object' && typeof proto !== 'function') {
-            throw new TypeError('Object prototype may only be an Object: ' + proto);
-        } else if (proto === null) {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.");
-        }
-
-        if (typeof propertiesObject != 'undefined') {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support a second argument.");
-        }
-
-        function F() {}
-        F.prototype = proto;
-
-        return new F();
-    };
-}
-```
-
 ## 例
 
 ### `Object.create()` を用いた古典的な継承
@@ -279,29 +252,6 @@ console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // 
 console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
-
-複数のオブジェクトから継承したい場合は、ミックスインが利用可能です。
-
-```js
-function MyClass() {
-  SuperClass.call(this);
-  OtherSuperClass.call(this);
-}
-
-// inherit one class
-MyClass.prototype = Object.create(SuperClass.prototype);
-// mixin another
-Object.assign(Object.getPrototypeOf(MyClass.prototype), OtherSuperClass.prototype);
-// re-assign constructor
-MyClass.prototype.constructor = MyClass;
-
-MyClass.prototype.myMethod = function() {
-  // do something
-};
-```
-
-{{jsxref("Object.assign()")}} は OtherSuperClass プロトタイプから MyClass プロトタイプへプロパティをコピーし、 MyClass のすべてのインスタンスで利用できるようにします。 `Object.assign()` は ES2015 で導入され、[ポリフィルを利用することができます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill)。古いブラウザーへの対応が必要な場合は、 [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) または
-[`_.assign()`](https://lodash.com/docs/#assign) を利用することができます。
 
 ### Object.create() と propertiesObject 引数の併用
 

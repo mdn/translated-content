@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><em>str</em>.charCodeAt(<em>index</em>)</code></pre>
+<pre class="syntaxbox"><code><em>str</em>.charCodeAt(<em>index</em>)</code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -39,8 +39,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <p>Unicode 码点（code points）的范围从 <code>0</code> 到 <code>1114111</code> <code>(0x10FFFF）</code>。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">JavaScript Guide</a>。）</p>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>，<code>charCodeAt</code> 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。</p>
+<div class="note">
+<p><strong>备注：</strong>，<code>charCodeAt</code> 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。</p>
 
 <p>因此，为了检查（或重现）<code>65536</code> 及以上编码字符的完整字符，需要在获取 <code>charCodeAt(i)</code> 的值的同时获取 <code>charCodeAt(i+1)</code> 的值（如同用两个字母操纵一个字符串），或者改为获取 <code>codePointAt(i)</code> 的值。参看下面例 2 和例 3。</p>
 </div>
@@ -49,13 +49,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <p>向后兼容：在历史版本中（如 JavaScript 1.2），<code>charCodeAt</code> 返回一个数字，表示给定 index 处字符的 ISO-Latin-1 编码值。ISO-Latin-1 编码集范围从 <code>0</code> 到 <code>255</code>。开头的 <code>0</code> 到 <code>127</code> 直接匹配 ASCII 字符集。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_charCodeAt" name="Example:_Using_charCodeAt">使用 <code>charCodeAt()</code></h3>
+<h3 id="Example_Using_charCodeAt">使用 <code>charCodeAt()</code></h3>
 
 <p>下例介绍了不同索引情况下返回的 Unicode 值：</p>
 
-<pre class="brush: js notranslate">"ABC".charCodeAt(0) // returns 65:"A"
+<pre class="brush: js">"ABC".charCodeAt(0) // returns 65:"A"
 
 "ABC".charCodeAt(1) // returns 66:"B"
 
@@ -63,11 +63,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 "ABC".charCodeAt(3) // returns NaN</pre>
 
-<h3 id="使用_charCodeAt_修复字符串中出现的未知的非基本多语言范围（非BMP，non-Basic-Multilingual-Plane）字符">使用 <code>charCodeAt()</code> 修复字符串中出现的未知的非基本多语言范围（非BMP，non-Basic-Multilingual-Plane）字符</h3>
+<h3 id="使用_charCodeAt_修复字符串中出现的未知的非基本多语言范围（非_bmp，non-basic-multilingual-plane）字符">使用 <code>charCodeAt()</code> 修复字符串中出现的未知的非基本多语言范围（非 BMP，non-Basic-Multilingual-Plane）字符</h3>
 
-<p>这段代码可以被用在 for 循环和其他类似语句中，当在指定引索之前不确定是否有非BMP字符存在时。</p>
+<p>这段代码可以被用在 for 循环和其他类似语句中，当在指定引索之前不确定是否有非 BMP 字符存在时。</p>
 
-<pre class="brush:js notranslate">function fixedCharCodeAt (str, idx) {
+<pre class="brush:js">function fixedCharCodeAt (str, idx) {
     // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
     // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
     idx = idx || 0;
@@ -96,9 +96,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 }
 </pre>
 
-<h3 id="使用_charCodeAt_修复字符串中出现的已知的非BMP字符">使用 <code>charCodeAt()</code> 修复字符串中出现的已知的非BMP字符</h3>
+<h3 id="使用_charcodeat_修复字符串中出现的已知的非_bmp_字符">使用 <code>charCodeAt()</code> 修复字符串中出现的已知的非 BMP 字符</h3>
 
-<pre class="brush:js notranslate">function knownCharCodeAt (str, idx) {
+<pre class="brush:js">function knownCharCodeAt (str, idx) {
     str += '';
     var code,
         end = str.length;

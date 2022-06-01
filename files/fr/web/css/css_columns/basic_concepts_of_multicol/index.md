@@ -71,7 +71,7 @@ La [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) `columns`
 Ce fragment de code CSS donnera donc le même résultat que pour le premier exemple où `column-count` vaut 3.
 
     .container {
-      columns: 3;
+      columns: 3;
     }
 
 Ce fragment de code CSS donnera le même résultat que pour le deuxième exemple où `column-width` vaut `200px`.

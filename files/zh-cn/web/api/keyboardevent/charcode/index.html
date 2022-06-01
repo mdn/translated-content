@@ -64,7 +64,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 <p>要获取按键代码而不考虑是 <code>keyCode</code> 还是<code>charCode</code>, 请使用 {{ domxref("event.which", "which") }} 属性。</p>
 
-<p>通过输入法输入的字符，不会被设置到注册到通过 <code>keyCode</code> 和 <code>charCode</code>。 <span class="comment">Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</span></p>
+<p>通过输入法输入的字符，不会被设置到注册到通过 <code>keyCode</code> 和 <code>charCode</code>。 Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</p>
 
 <p>要查看特定按键的 <code>charCode</code> 值的列表，运行这个示例页面 <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> ，然后查看HTML 表格结果。</p>
 
@@ -89,56 +89,4 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>26 (probably earlier)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3</td>
-   <td>9</td>
-   <td>12.1</td>
-   <td>5.1 (probably earlier)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>5.1 (probably earlier)</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.KeyboardEvent.charCode")}}

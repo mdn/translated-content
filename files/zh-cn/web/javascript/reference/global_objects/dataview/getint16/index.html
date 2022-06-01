@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>getInt16()</code></strong><code>方法</code><code>从</code>{{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个16-bit数(短整型，2个字节).</p>
+<p><strong><code>getInt16()</code></strong> 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}</div>
 
@@ -22,29 +22,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 
 <dl>
  <dt>byteOffset</dt>
- <dd>偏移量, 单位为字节, 从头开始计算.</dd>
+ <dd>偏移量，单位为字节，从头开始计算。</dd>
  <dt>littleEndian</dt>
- <dd>{{optional_inline}} 表示该 16 位整数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储的（就是使用的字节序格式，具体参考链接页面）；如果传入的值为 <code>true</code>，就表示使用 little-endian（低字节序），如果传入的值为 <code>false</code> 或者 <code>undefined</code>，则会使用 big-endian（高字节序） 方式读值。</dd>
+ <dd>{{optional_inline}} 表示该 16 位整数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储的（就是使用的字节序格式，具体参考链接页面）；如果传入的值为 <code>true</code>，就表示使用 little-endian（低字节序），如果传入的值为 <code>false</code> 或者 <code>undefined</code>，则会使用 big-endian（高字节序）方式读值。</dd>
 </dl>
 
 <h3 id="返回">返回</h3>
 
-<dl>
- <dd>一个短整型16位数.</dd>
-</dl>
+<p>一个短整型 16 位数。</p>
 
 <h3 id="抛出错误">抛出错误</h3>
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果byteOffset超出了视图能储存的值，就会抛出错误.</dd>
+ <dd>如果 byteOffset 超出了视图能储存的值，就会抛出错误。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<dl>
- <dd> 没有对齐约束; 多字节值可以从任何偏移量获取.</dd>
-</dl>
+<p> 没有对齐约束; 多字节值可以从任何偏移量获取。</p>
 
 <h2 id="例子">例子</h2>
 

@@ -64,7 +64,7 @@ td {
 
 #### Résultat
 
-{{EmbedLiveSample('basic_example', 250, 200)}}
+{{EmbedLiveSample('Exemple_basique', 250, 200)}}
 
 ## Spécifications
 

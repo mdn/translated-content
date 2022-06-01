@@ -22,7 +22,7 @@ Une autre possibilité consiste à utiliser l'élément HTML {{HTMLElement("meta
 
 ### Réduction des attaques _cross site scripting_ (XSS)
 
-L'un des objectifs de CSP est la réduction et le rapport d'attaques XSS (injections de contenu). Les attaques XSS exploitent la confiance que les navigateurs ont dans le contenu reçu des serveurs. Des scripts malveillants peuvent être exécutés par le navigateur d'une victime parce que le navigateur fait confiance au serveur qui lui envoie des données même quand le contenu ne vient pas de là où il semble venir.
+L'un des objectifs de CSP est la réduction et le rapport d'attaques XSS (injections de contenu). Les attaques XSS exploitent la confiance que les navigateurs ont dans le contenu reçu des serveurs. Des scripts malveillants peuvent être exécutés par le navigateur d'une victime parce que le navigateur fait confiance au serveur qui lui envoie des données même quand le contenu ne vient pas de là où il semble venir.
 
 CSP permet aux administrateurs système de réduire ou éliminer les moyens de réaliser des attaques XSS en permettant de spécifier les domaines autorisés à fournir des scripts pour la page visitée. Un navigateur compatible avec CSP n'exécute que les scripts provenant d'une origine autorisée par les règles CSP reçues et ignore ceux qui ne sont pas autorisés. On peut ainsi bloquer les domaines non autorisés, les scripts _inline_ (inclus dans une page HTML) ou associés à des événements via les attributs HTML dédiés.
 
@@ -50,7 +50,7 @@ Une règle est définie par une série de directives qui décrivent chacune le c
 
 ## Exemples pour les cas courants
 
-Cette section propose des règles CSP pour les scenarios les plus classiques.
+Cette section propose des règles CSP pour les scenarios les plus classiques.
 
 ### Exemple 1
 

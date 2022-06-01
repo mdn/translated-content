@@ -57,9 +57,9 @@ translation_of: Mozilla/Firefox/Releases/19
 <h3 id="接口变化">接口变化</h3>
 
 <dl>
- <dt>{{interface("nsIImgLoadingContent")}}</dt>
- <dd>The parameter (aObserver) of <code>addObserver()</code> method changes from {{interface("imgIDecoderObserver")}} to {{interface("imgINotificationObserver")}}. The <code>notify()</code> method of {{interface("imgINotificationObserver")}} is not scriptable, so you need to use <code>createScriptedObserver()</code> from {{interface("imgITools")}}.</dd>
- <dt>{{interface("nsIChannel")}}</dt>
+ <dt><code>nsIImgLoadingContent</code></dt>
+ <dd>The parameter (aObserver) of <code>addObserver()</code> method changes from <code>imgIDecoderObserver</code> to <code>imgINotificationObserver</code>. The <code>notify()</code> method of <code>imgINotificationObserver</code> is not scriptable, so you need to use <code>createScriptedObserver()</code> from <code>imgITools</code>.</dd>
+ <dt><code>nsIChannel</code></dt>
  <dd> <code>contentLength</code> 属性的类型由<code> long</code> 改成 <code>int64_t</code>.</dd>
 </dl>
 

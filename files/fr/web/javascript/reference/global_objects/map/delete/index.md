@@ -19,7 +19,9 @@ La méthode **`delete()`** permet de retirer un élément donné d'un objet `Map
 
 ## Syntaxe
 
-    maMap.delete(clé);
+```js
+maMap.delete(clé);
+```
 
 ### Paramètres
 
@@ -45,7 +47,7 @@ maMap.has("truc");    // Renvoie false. "truc" n'est plus présent.
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

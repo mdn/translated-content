@@ -14,11 +14,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 
 <div>{{EmbedInteractiveExample("pages/js/array-length.html")}}</div>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>length</code> 属性的值是一个 0 到 2<sup>32</sup>-1 的整数。</p>
+<p><code>length</code> 属性的值是一个 0 到 2^32 - 1 的整数。</p>
 
-<pre class="brush: js">var namelistA = new Array(4294967296); // 2的32次方 = 4294967296
+<pre class="brush: js">var namelistA = new Array(4294967296); // 2 的 32 次方 = 4294967296
 var namelistC = new Array(-100) // 负号
 
 console.log(namelistA.length); // RangeError: 无效数组长度
@@ -33,7 +33,7 @@ console.log(namelistB.length);
 // 4294967295
 </pre>
 
-<p>你可以设置 <code>length</code> 属性的值来截断任何数组。当通过改变<code>length</code>属性值来扩展数组时，实际元素的数目将会增加。例如：将一个拥有 2 个元素的数组的 <code>length</code> 属性值设为 3 时，那么这个数组将会包含3个元素，并且，第三个元素的值将会是 <code>undefined</code> 。</p>
+<p>你可以设置 <code>length</code> 属性的值来截断任何数组。当通过改变<code>length</code>属性值来扩展数组时，实际元素的数目将会增加。例如：将一个拥有 2 个元素的数组的 <code>length</code> 属性值设为 3 时，那么这个数组将会包含 3 个元素，并且，第三个元素的值将会是 <code>undefined</code> 。</p>
 
 <pre><code>var arr = [1, 2, 3];
 printEntries(arr);
@@ -76,31 +76,31 @@ function printEntries(arr) {
  <li><code>Enumerable</code> ：如果设置为 <code>true</code> ，属性可以通过迭代器<a href="zh-CN/docs/Web/JavaScript/Reference/Statements/for">for</a>或<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a>进行迭代。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">示例 </h2>
+<h2 id="Examples">示例 </h2>
 
-<h3 id="Example:_Iterating_over_an_array" name="Example:_Iterating_over_an_array">遍历数组</h3>
+<h3 id="Example:_Iterating_over_an_array">遍历数组</h3>
 
-<p>下面的例子中，通过数组下标遍历数组元素，并把每个元素的值修改为原值的2倍。</p>
+<p>下面的例子中，通过数组下标遍历数组元素，并把每个元素的值修改为原值的 2 倍。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> numbers <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">,</span> <span class="number token">4</span><span class="punctuation token">,</span> <span class="number token">5</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> length <span class="operator token">=</span> numbers<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  numbers<span class="punctuation token">[</span>i<span class="punctuation token">]</span> <span class="operator token">*</span><span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="comment token">// 遍历后的结果 [2, 4, 6, 8, 10]</span></code></pre>
+<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
+var length = numbers.length;
+for (var i = 0; i &lt; length; i++) {
+  numbers[i] *= 2;
+}
+// 遍历后的结果 [2, 4, 6, 8, 10]</pre>
 
-<h3 id="Example:_Shortening_an_array" name="Example:_Shortening_an_array">截断数组</h3>
+<h3 id="Example:_Shortening_an_array">截断数组</h3>
 
 <p>下面的例子中，如果数组长度大于 3，则把该数组的长度截断为 3 。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> numbers <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">,</span> <span class="number token">4</span><span class="punctuation token">,</span> <span class="number token">5</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
 
-<span class="keyword token">if</span> <span class="punctuation token">(</span>numbers<span class="punctuation token">.</span>length <span class="operator token">&gt;</span> <span class="number token">3</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  numbers<span class="punctuation token">.</span>length <span class="operator token">=</span> <span class="number token">3</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+if (numbers.length &gt; 3) {
+  numbers.length = 3;
+}
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>numbers<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// [1, 2, 3]</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>numbers<span class="punctuation token">.</span>length<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 3</span></code></pre>
+console.log(numbers); // [1, 2, 3]
+console.log(numbers.length); // 3</pre>
 
 <h2 id="规范">规范</h2>
 

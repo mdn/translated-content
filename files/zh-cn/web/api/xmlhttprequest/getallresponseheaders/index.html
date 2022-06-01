@@ -3,9 +3,9 @@ title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
-<p>{{draft}}{{APIRef('XMLHttpRequest')}}</p>
+<p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.getAllResponseHeaders()</strong> 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 <code>null</code> 如果没有收到任何响应。<strong> 注意：</strong> 对于复合请求 （ multipart requests ），这个方法返回当前请求的头部，而不是最初的请求的头部。</p>
+<p><strong>XMLHttpRequest.getAllResponseHeaders()</strong> 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 <code>null</code> 如果没有收到任何响应。<strong> 注意：</strong> 对于复合请求（ multipart requests ），这个方法返回当前请求的头部，而不是最初的请求的头部。</p>
 
 <pre class="syntaxbox">DOMString getAllResponseHeaders();</pre>
 
@@ -16,11 +16,11 @@ translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 
 <h3 id="参数">参数</h3>
 
-<p>无。</p>
+<p>无</p>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个原始的header头例子：</p>
+<p>一个原始的 Header 头例子：</p>
 
 <pre><code>date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
@@ -70,14 +70,4 @@ request.onreadystatechange = function() {
 <pre><code>var contentType = headerMap["content-type"];</code>
 </pre>
 
-<p>上面的变量contentType可以获取到http header里的content-type字段值。</p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
+<p>上面的变量 <code>contentType</code> 可以获取到 HTTP header 里的 <code>content-type</code> 字段值。</p>

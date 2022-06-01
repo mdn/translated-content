@@ -18,7 +18,9 @@ La méthode **`Date.now()`** renvoie le nombre de millisecondes écoulées depui
 
 ## Syntaxe
 
-    var tempsEnMs = Date.now();
+```js
+var tempsEnMs = Date.now();
+```
 
 ### Valeur de retour
 
@@ -70,8 +72,8 @@ Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting
 | Spécification                                                        | État                         | Commentaires                                          |
 | -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}} | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.now', 'Date.now')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.now', 'Date.now')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

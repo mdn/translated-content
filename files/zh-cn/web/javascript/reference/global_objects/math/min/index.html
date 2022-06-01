@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 
 <p><code><strong>Math.min()</strong></code> 返回零个或更多个数值的最小值。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.min([<em>value1</em>[,<em>value2</em>, ...]]) </code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value1, value2, ...</code></dt>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 
 <p>给定数值中最小的数。如果任一参数不能转换为数值，则返回{{jsxref("NaN")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>由于 <code>min</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.min()</code>，而不是作为你创建的 <code>Math</code> 实例的方法（Math 不是构造函数）。</p>
 
@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 
 <p>如果有任一参数不能被转换为数值，结果为 {{jsxref("NaN")}}。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Using_Math.min" name="Example:_Using_Math.min">使用 <code>Math.min()</code></h3>
+<h3 id="Example:_Using_Math.min">使用 <code>Math.min()</code></h3>
 
 <p>下例找出 x 和 y 的最小值，并把它赋值给 z：</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 var z = Math.min(x, y);
 </pre>
 
-<h3 id="Example.3A_Clipping_a_value_with_Math.min" name="Example.3A_Clipping_a_value_with_Math.min">使用 <code>Math.min()</code> 裁剪值（Clipping a value）</h3>
+<h3 id="Example.3A_Clipping_a_value_with_Math.min">使用 <code>Math.min()</code> 裁剪值（Clipping a value）</h3>
 
 <p><code>Math.min</code> 经常用于裁剪一个值，以便使其总是小于或等于某个边界值。例如：</p>
 
@@ -98,58 +98,6 @@ if (x &gt; boundary) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Math.max()")}}</li>
-</ul>
+<h2

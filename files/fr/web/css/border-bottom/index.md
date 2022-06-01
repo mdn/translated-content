@@ -51,11 +51,11 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 
 ### Valeurs
 
-- `<br-width> `
+- `<br-width>`
   - : Voir {{cssxref("border-bottom-width")}}.
-- `<br-style> `
+- `<br-style>`
   - : Voir {{cssxref("border-bottom-style")}}.
-- `<color> `
+- `<color>`
   - : Voir {{cssxref("border-bottom-color")}}.
 
 ### Syntaxe formelle

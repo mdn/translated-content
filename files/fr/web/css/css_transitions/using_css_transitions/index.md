@@ -30,18 +30,18 @@ On peut définir les propriétés qu'on souhaite animer et la façon dont on sou
 
 > **Note :** La gestion de la valeur `auto` représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec `auto`.
 
-> **Note :** Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via `.appendChild()` ou en modiant `display: none;`. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer `window.setTimeout()` pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.
+> **Note :** Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via `.appendChild()` ou en supprimant la propriété `display: none;`. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer `window.setTimeout()` pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.
 
 ## Les propriétés CSS relatives aux transitions
 
 Les transitions CSS sont généralement contrôlées grâce à la propriété raccourcie {{cssxref("transition")}}. Les différents composants d'une transition CSS peuvent être décrits dans le détail grâce aux propriétés détaillées suivantes :
 
-> **Note :**Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
+> **Note :** Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
 
 - {{cssxref("transition-property")}}
   - : Cette propriété définit le nom des propriétés CSS pour lesquelles on veut appliquer des transitions. Seules les propriétés listées ici seront sujettes aux transitions. Les modifications appliquées aux autres propriétés seront instantanées.
 - {{cssxref("transition-duration")}}
-  - : Cette propriété définit la durée de la transition. On peut définir une durée pour toutes les transitions ou une durée pour chacuune des propriétés.
+  - : Cette propriété définit la durée de la transition. On peut définir une durée pour toutes les transitions ou une durée pour chacune des propriétés.
 - {{cssxref("transition-timing-function")}}
   - : Cette propriété définit une fonction qui décrit la façon dont les valeurs intermédiaires sont calculées. On utilise pour cela des [fonctions de temporisation](/fr/docs/Web/CSS/easing-function).
 - {{cssxref("transition-delay")}}
@@ -254,7 +254,7 @@ Les transitions permettent de lisser les opérations effectuées avec JavaScript
 <div id="foo"></div>
 ```
 
-Avec JavaScript on peut ajouter un effet de mouvement sur la balle :
+Avec JavaScript, on peut ajouter un effet de mouvement sur la balle :
 
 ```js
 var f = document.getElementById('foo');

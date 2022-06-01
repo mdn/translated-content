@@ -9,17 +9,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<p><code><strong>Date.UTC()</strong></code> 方法接受的参数同日期构造函数接受最多参数时一样，返回从1970-1-1 00:00:00 UTC到指定日期的的毫秒数。</p>
+<p><code><strong>Date.UTC()</strong></code> 方法接受的参数同日期构造函数接受最多参数时一样，返回从 1970-1-1 00:00:00 UTC 到指定日期的的毫秒数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Date.UTC(<em>year</em>,<em>month</em>[,<em>date</em>[,<em>hrs</em>[,<em>min</em>[,<em>sec</em>{{mediawiki.external(',<em>ms</em>')}}]]]]) </code></pre>
 
-<h2 id="Parameters" name="Parameters">参数</h2>
+<h2 id="Parameters">参数</h2>
 
 <dl>
  <dt><code>year</code></dt>
@@ -38,9 +38,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
  <dd>0 到 999 之间的一个整数，表示毫秒。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>UTC</code> 方法接受以逗号隔开的日期参数，返回1970-1-1 00:00:00 UTC到指定的日期之间的毫秒数。</p>
+<p><code>UTC</code> 方法接受以逗号隔开的日期参数，返回 1970-1-1 00:00:00 UTC 到指定的日期之间的毫秒数。</p>
 
 <p>你应该指定一个完整格式的年份，如 1998。如果年份被指定为 0 到 99 之间，则该方法会将年份转换为 20 世纪的一个年份（即 1900 + year），例如，指定为 95， 则年份为 1995。</p>
 
@@ -55,9 +55,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 
 <p>由于 <code>UTC</code> 是 <code>Date</code>（日期对象）的一个静态方法，所以应该在 <code>Date </code>上直接调用，就像 <code>Date.UTC()</code>，而不要把它作为创建的日期对象的方法。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Using_Date.UTC" name="Example:_Using_Date.UTC">例子：使用 <code>Date.UTC</code></h3>
+<h3 id="Example:_Using_Date.UTC">例子：使用 <code>Date.UTC</code></h3>
 
 <p>下面的语句使用 UTC 时间代替本地时间创建了一个日期对象。</p>
 
@@ -95,7 +95,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 
 <p>{{Compat("javascript.builtins.Date.UTC")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.parse()")}}</li>

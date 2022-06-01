@@ -12,18 +12,18 @@ translation_of: Web/HTML/Global_attributes/spellcheck
 
 <ul>
  <li><code>true</code>, 设置在可能的情况下会去检查元素内容的拼写错误;</li>
- <li><code>false</code>, 设置在可能的情况下关闭对元素内容拼写检查.</li>
+ <li><code>false</code>, 设置在可能的情况下关闭对元素内容拼写检查。</li>
 </ul>
 
 <p>如果没有设置这个属性，默认值由元素自身类型和浏览器设置决定。默认值也可以被继承，当有祖先元素的<em> spellcheck </em>设置为 <code>true</code> 的情况下，子元素的默认值也是 <code>true</code>。<br>
  <br>
  你可以参考这篇文章的例子来使用这个属性。</p>
 
-<p>这个属性是枚举型而不是布尔类型. 这意味着显式设置其中一个值true或false是强制性的，如果使用简写 <code>&lt;label spellcheck&gt;Example Label&lt;/label&gt; 是不行的</code>。 正确的用法是<code> &lt;label spellcheck="true"&gt;Example Label&lt;/label&gt;</code>.</p>
+<p>这个属性是枚举型而不是布尔类型。这意味着显式设置其中一个值 true 或 false 是强制性的，如果使用简写 <code>&lt;label spellcheck&gt;Example Label&lt;/label&gt; 是不行的</code>。 正确的用法是<code> &lt;label spellcheck="true"&gt;Example Label&lt;/label&gt;</code>.</p>
 
-<p>这个属性仅仅是浏览器上的提示: 浏览器并不会强制去检查拼写错误，通常不可编辑的元素是不会去检查拼写错误的，就算它的spellcheck 属性被设置为true而且浏览器支持拼写检查。</p>
+<p>这个属性仅仅是浏览器上的提示：浏览器并不会强制去检查拼写错误，通常不可编辑的元素是不会去检查拼写错误的，就算它的 spellcheck 属性被设置为 true 而且浏览器支持拼写检查。</p>
 
-<p>各个浏览器的默认设置和元素依赖:</p>
+<p>各个浏览器的默认设置和元素依赖：</p>
 
 <table class="fullwidth-table">
  <tbody>
@@ -63,21 +63,21 @@ translation_of: Web/HTML/Global_attributes/spellcheck
    <td><code>false</code></td>
    <td><code>false</code></td>
    <td><em>inherited</em></td>
-   <td>当 <code>layout.spellcheckDefault</code> 值为 <span style="font-family: Courier New;"><code>0</code></span></td>
+   <td>当 <code>layout.spellcheckDefault</code> 值为 <code>0</code></td>
   </tr>
   <tr>
    <td><strong><code>false</code></strong></td>
    <td><strong><code>true</code></strong></td>
    <td><strong><em>inherited</em></strong></td>
    <td><strong><em>inherited</em></strong></td>
-   <td><strong>当 <code>layout.spellcheckDefault</code> 值为 <span style="font-family: Courier New;">1</span><strong>（默认如此）</strong></strong></td>
+   <td><strong>当 <code>layout.spellcheckDefault</code> 值为 1<strong>（默认如此）</strong></strong></td>
   </tr>
   <tr>
    <td><code>false</code></td>
    <td><code>true</code></td>
    <td><code>true</code></td>
    <td><em>inherited</em></td>
-   <td>当 <code>layout.spellcheckDefault</code> 值为 <span style="font-family: Courier New;"><code>2</code></span></td>
+   <td>当 <code>layout.spellcheckDefault</code> 值为 <code>2</code></td>
   </tr>
   <tr>
    <td rowspan="3">Camino</td>
@@ -85,21 +85,21 @@ translation_of: Web/HTML/Global_attributes/spellcheck
    <td><code>false</code></td>
    <td><code>false</code></td>
    <td><em>inherited</em></td>
-   <td>当 <code>layout.spellcheckDefault</code> 值为 <span style="font-family: Courier New;"><code>0</code></span></td>
+   <td>当 <code>layout.spellcheckDefault</code> 值为 <code>0</code></td>
   </tr>
   <tr>
    <td><code>false</code></td>
    <td><code>true</code></td>
    <td><em>inherited</em></td>
    <td><em>inherited</em></td>
-   <td>当 <code>layout.spellcheckDefault</code> 值为 <span style="font-family: Courier New;"><code>1</code></span></td>
+   <td>当 <code>layout.spellcheckDefault</code> 值为 <code>1</code></td>
   </tr>
   <tr>
    <td><strong><code>false</code></strong></td>
    <td><strong><code>true</code></strong></td>
    <td><strong><code>true</code></strong></td>
    <td><strong><em>inherited</em></strong></td>
-   <td><strong>当 <span style="font-family: Courier New;">layout.spellcheckDefault</span> 值为 <span style="font-family: Courier New;"><code>2</code></span><strong>（默认如此）</strong></strong></td>
+   <td><strong>当 layout.spellcheckDefault 值为 <code>2</code><strong>（默认如此）</strong></strong></td>
   </tr>
   <tr>
    <td>Chrome</td>
@@ -156,55 +156,7 @@ translation_of: Web/HTML/Global_attributes/spellcheck
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.spellcheck")}}
 
 <h2 id="另见">另见</h2>
 

@@ -74,7 +74,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 À l'avenir, les service workers seront capables de réaliser nombre d'autres tâches utiles au sein d'une plate-forme web, ce qui les rapprochera de la viabilité des applications natives. Il est intéressant de noter que d'autres spécifications peuvent ou commencent à faire usage du contexte des service workers, par exemple :
 
 - [Synchronisation en arrière-plan](https://github.com/slightlyoff/BackgroundSync) : démarrer un service worker même lorsqu'aucun utilisateur est sur le site, afin de mettre à jour les caches, etc.
-- [Réagir à des messages de push ](/fr/docs/Web/API/Push_API): démarrer un service worker pour envoyer aux utilisateurs un message leur signalant qu'un nouveau contenu est disponible.
+- [Réagir à des messages de `push`](/fr/docs/Web/API/Push_API)&nbsp;: démarrer un service worker pour envoyer aux utilisatrices et utilisateurs un message leur signalant qu'un nouveau contenu est disponible.
 - Réagir à une date particulière
 - Enregistrer une géo-localisation
 
@@ -101,7 +101,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 - {{domxref("NotificationEvent") }}
   - : Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, l'interface `NotificationEvent` représente un événement de notification au clic qui est envoyé au {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
 - {{domxref("PeriodicSyncEvent")}} {{non-standard_inline}}
-  - : Le paramètre passé au gestionnaire sync, l'interface SyncEvent représente une action de synchronisation périodique qui est envoyée au  {{domxref("ServiceWorkerGlobalScope")}} d'un ServiceWorker.
+  - : Le paramètre passé au gestionnaire sync, l'interface SyncEvent représente une action de synchronisation périodique qui est envoyée au  {{domxref("ServiceWorkerGlobalScope")}} d'un ServiceWorker.
 - {{domxref("PeriodicSyncManager")}} {{non-standard_inline}}
   - : Fournit une interface pour l'enregistrement et la récupération des objets {{domxref("PeriodicSyncRegistration")}}.
 - {{domxref("PeriodicSyncRegistration")}} {{non-standard_inline}}

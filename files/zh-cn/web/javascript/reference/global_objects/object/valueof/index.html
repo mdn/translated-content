@@ -7,11 +7,11 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
-<div style="margin: 0px; padding: 0px; border: 0px; color: rgb(77, 78, 83); font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 21px; background-color: rgb(255, 255, 255);">{{JSRef}}</div>
+<div>{{JSRef}}</div>
 
 <p><code><strong>valueOf()</strong></code> 方法返回指定对象的原始值。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre>object.valueOf()</pre>
 
@@ -19,16 +19,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <p>返回值为该对象的原始值。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>JavaScript调用<code>valueOf</code>方法将对象转换为原始值。你很少需要自己调用<code>valueOf</code>方法；当遇到要预期的原始值的对象时，JavaScript会自动调用它。</p>
+<p>JavaScript 调用 <code>valueOf</code> 方法将对象转换为原始值。你很少需要自己调用 <code>valueOf</code> 方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。</p>
 
-<p>默认情况下，<code>valueOf</code>方法由{{jsxref("Object")}}后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则<code>valueOf</code>将返回对象本身。</p>
+<p>默认情况下，<code>valueOf</code> 方法由 {{jsxref("Object")}} 后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 <code>valueOf</code> 将返回对象本身。</p>
 
-<p>JavaScript的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的valueOf()方法的返回值和返回值类型均可能不同。</p>
+<p>JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。</p>
 
 <table class="standard-table">
- <caption>不同类型对象的valueOf()方法的返回值</caption>
+ <caption>不同类型对象的 valueOf() 方法的返回值</caption>
  <thead>
   <tr>
    <th scope="col"><strong>对象</strong></th>
@@ -71,26 +71,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
  </tbody>
 </table>
 
-<p>你可以在自己的代码中使用<code>valueOf</code>将内置对象转换为原始值。 创建自定义对象时，可以覆盖<code>Object.prototype.valueOf()</code>来调用自定义方法，而不是默认{{jsxref("Object")}}方法。</p>
+<p>你可以在自己的代码中使用 <code>valueOf</code> 将内置对象转换为原始值。创建自定义对象时，可以覆盖 <code>Object.prototype.valueOf()</code> 来调用自定义方法，而不是默认 {{jsxref("Object")}} 方法。</p>
 
-<h3 id="覆盖自定义对象的_valueOf方法">覆盖自定义对象的 <code>valueOf</code>方法</h3>
+<h3 id="覆盖自定义对象的_valueOf_方法">覆盖自定义对象的 <code>valueOf</code> 方法</h3>
 
-<p>你可以创建一个取代 <code>valueOf</code>方法的函数，你的方法必须不能传入参数。</p>
+<p>你可以创建一个取代 <code>valueOf</code> 方法的函数，你的方法必须不能传入参数。</p>
 
-<p>假设你有个对象叫 <code>MyNumberType</code>而你想为它创建一个<code>valueOf</code>方法。下面的代码为<code>valueOf</code>方法赋予了一个自定义函数：</p>
+<p>假设你有个对象叫 <code>MyNumberType</code> 而你想为它创建一个 <code>valueOf</code> 方法。下面的代码为 <code>valueOf</code> 方法赋予了一个自定义函数：</p>
 
 <pre class="brush: js">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
 
-<div class="line-number" style="margin: 1em 0px 0px; border: 0px; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
+<p>有了这样的一个方法，下一次每当 <code>MyNumberType</code> 要被转换为原始类型值时，JavaScript 在此之前会自动调用自定义的 <code>valueOf</code> 方法。</p>
 
-<p>有了这样的一个方法，下一次每当<code>MyNumberType</code>要被转换为原始类型值时，JavaScript 在此之前会自动调用自定义的<code>valueOf</code>方法。</p>
-
-<p><code>valueOf</code>方法一般都会被 JavaScript 自动调用，但你也可以像下面代码那样自己调用：</p>
+<p><code>valueOf</code> 方法一般都会被 JavaScript 自动调用，但你也可以像下面代码那样自己调用：</p>
 
 <pre class="brush: js">myNumberType.valueOf()</pre>
 
 <div class="note">
-<p dir="ltr"><strong style="border: 0px; margin: 0px; padding: 0px;">注意：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的{{jsxref("String")}}对象不同。所有对象都能转换成一个“<code>[object <em>类型</em>]</code>”这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
+<p><strong>备注：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “<code>[object <em>类型</em>]</code>” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
 </div>
 
 <h2 id="示例">示例</h2>
@@ -101,23 +99,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 var array = ["ABC", true, 12, -5];
 console.log(array.valueOf() === array);   // true
 
-// Date：当前时间距1970年1月1日午夜的毫秒数
+// Date：当前时间距 1970 年 1 月 1 日午夜的毫秒数
 var date = new Date(2013, 7, 18, 23, 11, 59, 230);
 console.log(date.valueOf());   // 1376838719230
 
 // Number：返回数字值
-var num =  15.26540;
+var num = 15.26540;
 console.log(num.valueOf());   // 15.2654
 
-// 布尔：返回布尔值true或false
+// 布尔：返回布尔值 true 或 false
 var bool = true;
 console.log(bool.valueOf() === bool);   // true
 
-// new一个Boolean对象
+// new 一个 Boolean 对象
 var newBool = new Boolean(true);
-// valueOf()返回的是true，两者的值相等
+// valueOf() 返回的是 true，两者的值相等
 console.log(newBool.valueOf() == newBool);   // true
-// 但是不全等，两者类型不相等，前者是boolean类型，后者是object类型
+// 但是不全等，两者类型不相等，前者是 boolean 类型，后者是 object 类型
 console.log(newBool.valueOf() === newBool);   // false
 
 // Function：返回函数本身
@@ -140,25 +138,25 @@ console.log( obj.valueOf() === obj );   // true
 var str = "http://www.xyz.com";
 console.log( str.valueOf() === str );   // true
 
-// new一个字符串对象
+// new 一个字符串对象
 var str2 = new String("http://www.xyz.com");
-// 两者的值相等，但不全等，因为类型不同，前者为string类型，后者为object类型
+// 两者的值相等，但不全等，因为类型不同，前者为 string 类型，后者为 object 类型
 console.log( str2.valueOf() === str2 );   // false</pre>
 
 <p> </p>
 
 <h3 id="改写_.prototype.valueof">改写 .prototype.valueof</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">MyNumberType</span><span class="punctuation token">(</span>n<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>number <span class="operator token">=</span> n<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js">function MyNumberType(n) {
+    this.number = n;
+}
 
-MyNumberType<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>valueOf <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">.</span>number<span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
+MyNumberType.prototype.valueOf = function() {
+    return this.number;
+};
 
-<span class="keyword token">var</span> myObj <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MyNumberType</span><span class="punctuation token">(</span><span class="number token">4</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-myObj <span class="operator token">+</span> <span class="number token">3</span><span class="punctuation token">;</span> <span class="comment token">// 7</span></code></pre>
+var myObj = new MyNumberType(4);
+myObj + 3; // 7</pre>
 
 <h2 id="规范">规范</h2>
 

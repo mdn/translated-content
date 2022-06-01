@@ -12,39 +12,39 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
 <div>{{JSRef("Global_Objects", "生成器函数")}}</div>
 
-<p><strong><code>GeneratorFunction</code>构造器</strong>生成新的{{jsxref("Statements/function*", "生成器函数")}} 对象。在JavaScript中，生成器函数实际上都是<code>GeneratorFunction</code>的实例对象。</p>
+<p><strong><code>GeneratorFunction</code>构造器</strong>生成新的{{jsxref("Statements/function*", "生成器函数")}} 对象。在 JavaScript 中，生成器函数实际上都是<code>GeneratorFunction</code>的实例对象。</p>
 
 <p>注意，<code>GeneratorFunction</code>并不是一个全局对象。它可以通过下面的代码获取。</p>
 
 <pre class="brush: js">Object.getPrototypeOf(function*(){}).constructor
 </pre>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>new GeneratorFunction ([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>函数使用的名称作为形式参数名称。每个必须是一个字符串，对应于一个有效的JavaScript标识符或这样的字符串的列表，用逗号分隔；如“<code>x</code>”，“<code>theValue</code>”或“<code>a,b</code>”。</dd>
+ <dd>函数使用的名称作为形式参数名称。每个必须是一个字符串，对应于一个有效的 JavaScript 标识符或这样的字符串的列表，用逗号分隔；如“<code>x</code>”，“<code>theValue</code>”或“<code>a,b</code>”。</dd>
  <dt><code>functionBody</code></dt>
- <dd>一个包含多条表示JavaScript函数体语句的字符串。</dd>
+ <dd>一个包含多条表示 JavaScript 函数体语句的字符串。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>当创建函数时，将使用<code>GeneratorFunction</code>构造函数创建的{{jsxref("Statements/function*", "生成器函数")}}对象进行解析。这比使用{{jsxref("Statements/function*", "function* 表达式")}} 声明生成器函数效率更低，并且在代码中调用它，因为这些函数与其余的代码一起被解析。</p>
 
 <p>传递给函数的所有参数按照它们被传递的顺序被视为要创建的函数中参数的标识符的名称。</p>
 
 <div class="note">
-<p><strong>提示：</strong>使用<code>GeneratorFunction</code>构造函数创建的{{jsxref("Statements/function*", "生成器函数")}}不会为其创建上下文创建闭包；它们始终在全局范围内创建。当运行它们时，它们只能访问自己的本地变量和全局变量，而不是从<code>GeneratorFunction</code>构造函数调用的范围的变量。这与使用{{jsxref("Global_Objects/eval", "eval")}}与生成函数表达式的代码不同。</p>
+<p><strong>备注：</strong>使用<code>GeneratorFunction</code>构造函数创建的{{jsxref("Statements/function*", "生成器函数")}}不会为其创建上下文创建闭包；它们始终在全局范围内创建。当运行它们时，它们只能访问自己的本地变量和全局变量，而不是从<code>GeneratorFunction</code>构造函数调用的范围的变量。这与使用{{jsxref("Global_Objects/eval", "eval")}}与生成函数表达式的代码不同。</p>
 </div>
 
 <p>将<code>GeneratorFunction</code>构造函数调用为函数（不使用<code>new</code>运算符）与将其作为构造函数调用的效果相同。</p>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt><code><strong>GeneratorFunction.length</strong></code></dt>
@@ -59,11 +59,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 
 <div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype', 'Properties')}}</div>
 
-<h2 id="GeneratorFunction_instances" name="GeneratorFunction_instances"><code>GeneratorFunction</code> 实例</h2>
+<h2 id="GeneratorFunction_instances"><code>GeneratorFunction</code> 实例</h2>
 
 <p><code>GeneratorFunction</code>实例从{{jsxref("GeneratorFunction.prototype")}}继承方法和属性。与所有构造函数一样，你可以更改构造函数的原型对象以对所有<code>GeneratorFunction</code>实例进行更改。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="从GeneratorFunction构造函数创建一个生成器函数">从<code>GeneratorFunction</code>构造函数创建一个生成器函数</h3>
 
@@ -99,7 +99,7 @@ console.log(iterator.next().value); // 20
 
 <p>{{Compat("javascript.builtins.GeneratorFunction")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Statements/function*", "function* function")}}</li>

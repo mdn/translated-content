@@ -5,7 +5,7 @@ translation_of: 'Web/CSS/:defined'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><span class="seoSummary"><strong><code>:defined</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。</span></p>
+<p><strong><code>:defined</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。</p>
 
 <pre class="brush: css no-line-numbers">/* 选择所有已定义的元素 */
 :defined {
@@ -26,7 +26,7 @@ simple-custom:defined {
 
 <p>下面的片段摘自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">定义伪类</a> demo (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">点击查看源码</a>).</p>
 
-<p>在这个 demo 中我们定义了一个非常简单的自定义元素:</p>
+<p>在这个 demo 中我们定义了一个非常简单的自定义元素：</p>
 
 <pre class="brush: js">customElements.define('simple-custom',
   class extends HTMLElement {
@@ -41,13 +41,13 @@ simple-custom:defined {
   }
 })</pre>
 
-<p>然后在文档中插入一个该元素的副本，以及一个标准的 <code>&lt;p&gt;</code> 标签:</p>
+<p>然后在文档中插入一个该元素的副本，以及一个标准的 <code>&lt;p&gt;</code> 标签：</p>
 
 <pre class="brush: html">&lt;simple-custom text="Custom element example text"&gt;&lt;/simple-custom&gt;
 
 &lt;p&gt;Standard paragraph example text&lt;/p&gt;</pre>
 
-<p>在 CSS 中我们首先包含以下规则:</p>
+<p>在 CSS 中我们首先包含以下规则：</p>
 
 <pre class="brush: css">// 为两个元素设置不同的背景色
 p {

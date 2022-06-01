@@ -11,15 +11,15 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<div></div>
 
-<p><strong>可選串連</strong>運算子 <strong><code>?.</code></strong> 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。<span class="seoSummary"><code>?.</code> 運算子的操作與 <code>.</code> 屬性存取運算子相似，後者會在參照到 <a href="/zh-TW/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 <code>undefined</code> 。</span> 當需要存取一個函數，而這函數並不存在時，則會回傳 <code>undefined</code> 。</p>
+
+<p><strong>可選串連</strong>運算子 <strong><code>?.</code></strong> 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。<code>?.</code> 運算子的操作與 <code>.</code> 屬性存取運算子相似，後者會在參照到 <a href="/zh-TW/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 <code>undefined</code> 。 當需要存取一個函數，而這函數並不存在時，則會回傳 <code>undefined</code> 。</p>
 
 <p>當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}</div>
 
-<div></div>
+
 
 
 
@@ -61,8 +61,8 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <pre class="brush: js">let result = someInterface.customMethod?.();</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 假如物件有同樣的屬性名稱，而不是一個方法，使用 <code>?.</code> 將會抛出 {{JSxRef("TypeError")}} 錯誤（<code>x.y</code><code> 不是一個函數</code>.</p>
+<div class="notecard note">
+<p><strong>備註：</strong>假如物件有同樣的屬性名稱，而不是一個方法，使用 <code>?.</code> 將會抛出 {{JSxRef("TypeError")}} 錯誤（<code>x.y</code><code> 不是一個函數</code>.</p>
 </div>
 
 <h4 id="處理回呼函式或事件處理器">處理回呼函式或事件處理器</h4>

@@ -10,20 +10,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>Object.defineProperties()</code> </strong>方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。</p>
+<p><strong><code>Object.defineProperties()</code></strong> 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="notranslate"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+<pre><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>obj</code></dt>
  <dd>在其上定义或修改属性的对象。</dd>
  <dt><code>props</code></dt>
- <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅{{jsxref("Object.defineProperty()")}}）。描述符具有以下键：</dd>
- <dd>
+ <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅 {{jsxref("Object.defineProperty()")}}）。描述符具有以下键：
  <dl>
   <dt><code>configurable</code></dt>
   <dd><code>true</code> 只有该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。<br>
@@ -31,18 +30,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
   <dt><code>enumerable</code></dt>
   <dd><code>true</code> 只有在枚举相应对象上的属性时该属性显现。<br>
   <strong>默认为 <code>false</code></strong></dd>
- </dl>
-
- <dl>
   <dt><code>value</code></dt>
-  <dd>与属性关联的值。可以是任何有效的JavaScript值（数字，对象，函数等）。<br>
+  <dd>与属性关联的值。可以是任何有效的 JavaScript 值（数字，对象，函数等）。<br>
   <strong>默认为 {{jsxref("undefined")}}.</strong></dd>
   <dt><code>writable</code></dt>
   <dd><code>true</code>只有与该属性相关联的值被{{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}改变时。<br>
   <strong>默认为 <code>false</code></strong></dd>
- </dl>
-
- <dl>
   <dt><code>get</code></dt>
   <dd>作为该属性的 getter 函数，如果没有 getter 则为{{jsxref("undefined")}}。函数返回值将被用作属性的值。<br>
   <strong>默认为 {{jsxref("undefined")}}</strong></dd>
@@ -59,11 +52,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <h2 id="描述">描述</h2>
 
-<p><code>Object.defineProperties</code>本质上定义了<code>obj</code> 对象上<code>props</code>的可枚举属性相对应的所有属性。</p>
+<p><code>Object.defineProperties</code> 本质上定义了 <code>obj</code> 对象上 <code>props</code> 的可枚举属性相对应的所有属性。</p>
 
 <h2 id="例子">例子</h2>
 
-<pre class="brush: js notranslate">var obj = {};
+<pre class="brush: js">var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -78,9 +71,9 @@ Object.defineProperties(obj, {
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code>几乎完全等同于（注意<code>isCallable</code>中的注释）以下JavaScript中的重新实现：</p>
+<p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code> 几乎完全等同于（注意 <code>isCallable</code> 中的注释）以下 JavaScript 中的重新实现：</p>
 
-<pre class="brush: js notranslate">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -141,7 +134,7 @@ Object.defineProperties(obj, {
   return obj;
 }</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -172,7 +165,7 @@ Object.defineProperties(obj, {
 
 <p>{{Compat("javascript.builtins.Object.defineProperties")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>

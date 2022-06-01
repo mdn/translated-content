@@ -64,7 +64,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 | Spécification                                                                                    | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

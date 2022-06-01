@@ -72,7 +72,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-objectStore', 'objectStore')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-objectStore', 'objectStore')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

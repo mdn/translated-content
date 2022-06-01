@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>SharedArrayBuffer.prototype.slice()</strong></code> 方法返回一个新的{{jsxref("SharedArrayBuffer")}} 副本，其内容是<code>该SharedArrayBuffer</code>的字节从<code>begin</code>开始(包含<code>begin</code>)，直到<code>end</code>结束(不包含<code>end</code>)。如果<code>begin</code>或<code>end</code>是负的，它指的是从数组末尾开始的索引。此方法与 {{jsxref("Array.prototype.slice()")}} 具有相同的算法。</p>
+<p><code><strong>SharedArrayBuffer.prototype.slice()</strong></code> 方法返回一个新的{{jsxref("SharedArrayBuffer")}} 副本，其内容是<code>该 SharedArrayBuffer</code>的字节从<code>begin</code>开始 (包含<code>begin</code>)，直到<code>end</code>结束 (不包含<code>end</code>)。如果<code>begin</code>或<code>end</code>是负的，它指的是从数组末尾开始的索引。此方法与 {{jsxref("Array.prototype.slice()")}} 具有相同的算法。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/sharedarraybuffer-slice.html")}}</p>
 
@@ -22,14 +22,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 
 <dl>
  <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>从零开始的索引，从该索引开始提取。</dd>
- <dd>可以使用一个负索引，表示从序列末尾开始的偏移量。 <code>slice(-2)</code>提取序列中的最后两个元素。</dd>
- <dd>If <code>begin</code> is undefined, <code>slice</code> begins from index <code>0</code>.如果<code>begin</code>为undefined，<code>slice</code>则从索引为<code>0</code>处开始。</dd>
+ <dd>从零开始的索引，从该索引开始提取。可以使用一个负索引，表示从序列末尾开始的偏移量。 <code>slice(-2)</code>提取序列中的最后两个元素。If <code>begin</code> is undefined, <code>slice</code> begins from index <code>0</code>.如果<code>begin</code>为 undefined，<code>slice</code>则从索引为<code>0</code>处开始。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>从零开始的索引，在此索引<em>之前</em>终止提取。 <code>slice</code> 执行提取到索引为<code>end</code>的位置(不包含<code>end</code>)。</dd>
- <dd>例如，<code>slice(1,4)</code>提取第二个元素到第四个元素（索引为1、2和3的元素）。</dd>
- <dd>可以使用一个负索引，表示从序列末尾开始的偏移量。 <code>slice(2,-1)</code>提取序列中从第三个元素开始，到倒数第二个元素结束的全部元素。</dd>
- <dd>如果省略<code>end</code>，则<code>slice</code>一直提取到序列的末尾（<code>sab.byteLength）。</code></dd>
+ <dd>从零开始的索引，在此索引<em>之前</em>终止提取。 <code>slice</code> 执行提取到索引为<code>end</code>的位置 (不包含<code>end</code>)。例如，<code>slice(1,4)</code>提取第二个元素到第四个元素（索引为 1、2 和 3 的元素）。可以使用一个负索引，表示从序列末尾开始的偏移量。 <code>slice(2,-1)</code>提取序列中从第三个元素开始，到倒数第二个元素结束的全部元素。如果省略<code>end</code>，则<code>slice</code>一直提取到序列的末尾（<code>sab.byteLength）。</code></dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>

@@ -22,12 +22,12 @@ Cela signifie que les règles de style CSS permettent de positionner des boîtes
 
 Ces articles ont pour but d'expliquer ces règles, de proposer quelques simplifications et de nombreux exemples.
 
-1.  [L'empilement sans `z-index`](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_sans_z-index) : Règles d'empilement par défaut
-2.  [L'empilement et `float`](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_et_float) : Comportement des éléments flottants
-3.  [Ajouter `z-index`](/fr/docs/Web/CSS/Comprendre_z-index/Ajout_de_z-index) : Utiliser `z-index` pour modifier l'empilement par défaut
-4.  [L'empilement de couches](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches) : Remarques sur l'empilement de couches
-5.  [Exemple d'empilement n°1](/fr/docs/Web/CSS/Comprendre_z-index/Exemple_1) : Hiérarchie HTML à 2 niveaux, `z-index` sur le dernier niveau
-6.  [Exemple d'empilement n°2](/fr/docs/Web/CSS/Comprendre_z-index/Exemple_2) : Hiérarchie HTML à 2 niveaux, `z-index` sur tous les éléments
-7.  [Exemple d'empilement n°3](/fr/docs/Web/CSS/Comprendre_z-index/Exemple_3) : Hiérarchie HTML à 3 niveaux, `z-index` sur le deuxième niveau
+1.  [L'empilement sans `z-index`](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_sans_z-index)&nbsp;: Règles d'empilement par défaut
+2.  [L'empilement et `float`](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_et_float)&nbsp;: Comportement des éléments flottants
+3.  [Ajouter `z-index`](/fr/docs/Web/CSS/Comprendre_z-index/Ajout_de_z-index)&nbsp;: Utiliser `z-index` pour modifier l'empilement par défaut
+4.  [L'empilement de couches](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches)&nbsp;: Remarques sur l'empilement de couches
+5.  [Exemple d'empilement n°1](/fr/docs/Web/CSS/Comprendre_z-index/Exemple_1)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur le dernier niveau
+6.  [Exemple d'empilement n°2](/fr/docs/Web/CSS/Comprendre_z-index/Exemple_2)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur tous les éléments
+7.  [Exemple d'empilement n°3](/fr/docs/Web/CSS/Comprendre_z-index/Exemple_3)&nbsp;: Hiérarchie HTML à 3 niveaux, `z-index` sur le deuxième niveau
 
 {{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_sans_z-index", "Web/CSS/Comprendre_z-index")}}

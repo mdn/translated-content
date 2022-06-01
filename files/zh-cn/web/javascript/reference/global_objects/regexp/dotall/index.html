@@ -7,9 +7,9 @@ tags:
   - 正则表达式
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 ---
-<p>{{JSRef}}{{Draft}}</p>
+<p>{{JSRef}}</p>
 
-<p><strong><code>dotAll</code></strong> 属性表明是否在正则表达式中一起使用"<code>s</code>"修饰符（引入/s修饰符，使得.可以匹配任意单个字符）。<code>dotAll</code> 是一个只读的属性，属于单个正则表达式实例。</p>
+<p><strong><code>dotAll</code></strong> 属性表明是否在正则表达式中一起使用"<code>s</code>"修饰符（引入/s 修饰符，使得。可以匹配任意单个字符）。<code>dotAll</code> 是一个只读的属性，属于单个正则表达式实例。</p>
 
 <p>{{JS_Property_Attributes(0, 0, 1)}}</p>
 
@@ -20,11 +20,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 <ul>
  <li>U+000A 换行符（"<code>\n</code>"）</li>
  <li>U+000D 回车符（"<code>\r</code>"）</li>
- <li>U+2028 行分隔符（<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">line separator</span></span></span></span>）</li>
- <li>U+2029 段分隔符（<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">paragraph separator</span></span></span></span>）</li>
+ <li>U+2028 行分隔符（line separator）</li>
+ <li>U+2029 段分隔符（paragraph separator）</li>
 </ul>
 
-<p>这实际上意味着"<code>.</code>"将会匹配任意的单个Unicode Basic Multilingual Plane (BMP)字符。若要使其与astral字符（大于\uFFFF的Unicode字符）匹配，你应当使用"<code>u</code>"（Unicode）修饰符。一起使用这两个修饰符，"<code>.</code>"将无一例外地匹配任意Unicode字符。</p>
+<p>这实际上意味着"<code>.</code>"将会匹配任意的单个 Unicode Basic Multilingual Plane (BMP) 字符。若要使其与 astral 字符（大于 \uFFFF 的 Unicode 字符）匹配，你应当使用"<code>u</code>"（Unicode）修饰符。一起使用这两个修饰符，"<code>.</code>"将无一例外地匹配任意 Unicode 字符。</p>
 
 <p>无法直接修改此属性。</p>
 

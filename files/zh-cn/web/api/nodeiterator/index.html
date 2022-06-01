@@ -10,7 +10,7 @@ translation_of: Web/API/NodeIterator
 
 <p><strong><code>NodeIterator</code></strong> 接口表示一个遍历 DOM 子树中节点列表的成员的迭代器。节点将按照文档顺序返回。</p>
 
-<p>NodeIterator可以使用{{domxref("Document.createNodeIterator()")}} 方法创建，如下所示：</p>
+<p>NodeIterator 可以使用 {{domxref("Document.createNodeIterator()")}} 方法创建，如下所示：</p>
 
 <pre class="brush: js">var nodeIterator = document.createNodeIterator(<em>root</em>, <em>whatToShow</em>, <em>filter</em>);</pre>
 
@@ -20,9 +20,9 @@ translation_of: Web/API/NodeIterator
 
 <dl>
  <dt>{{domxref("NodeIterator.root")}} {{readonlyInline}}</dt>
- <dd>返回一个{{domxref("Node")}} ，它代表创建 NodeIterator 时指定的根节点。</dd>
+ <dd>返回一个 {{domxref("Node")}}，它代表创建 NodeIterator 时指定的根节点。</dd>
  <dt>{{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}</dt>
- <dd>返回一个无符号长整型，它是一个由描述必须呈现的{{domxref("Node")}}类型的常量构成的位掩码。不匹配的节点被跳过，但是如果相关，他们的子节点可能被包括在内。可能的值是：
+ <dd>返回一个无符号长整型，它是一个由描述必须呈现的 {{domxref("Node")}} 类型的常量构成的位掩码。不匹配的节点被跳过，但是如果相关，他们的子节点可能被包括在内。可能的值是：
  <table class="standard-table">
   <tbody>
    <tr>
@@ -38,7 +38,7 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
     <td><code>2</code></td>
-    <td>显示属性 {{ domxref("Attr") }} 节点. 只有当用一个 {{ domxref("Attr") }} 节点作为根节点来创建 {{ domxref("NodeIterator") }} 时才有意义; 在这种情况下, 这意味着属性节点会出现在迭代或遍历的首位. 因为属性永远不会是其它节点的子节点, 当遍历整个文档树时它们不会出现.</td>
+    <td>显示属性 {{ domxref("Attr") }} 节点。只有当用一个 {{ domxref("Attr") }} 节点作为根节点来创建 {{ domxref("NodeIterator") }} 时才有意义; 在这种情况下，这意味着属性节点会出现在迭代或遍历的首位。因为属性永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}</td>
@@ -75,7 +75,7 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
     <td><code>32</code></td>
-    <td>显示 {{ domxref("Entity") }} 节点. 只有当用一个 {{ domxref("Entity") }} 节点作为它的根节点来创建一个 {{ domxref("NodeIterator") }} 时才有意义; 在这种情况下,  {{ domxref("Entity") }} 节点会出现在迭代或遍历的首位. 因为 {{ domxref("Entity") }}  永远不会是其它节点的子节点, 当遍历整个文档树时它们不会出现.</td>
+    <td>显示 {{ domxref("Entity") }} 节点。只有当用一个 {{ domxref("Entity") }} 节点作为它的根节点来创建一个 {{ domxref("NodeIterator") }} 时才有意义; 在这种情况下，  {{ domxref("Entity") }} 节点会出现在迭代或遍历的首位。因为 {{ domxref("Entity") }} 永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}</td>
@@ -85,7 +85,7 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
     <td><code>2048</code></td>
-    <td>显示 {{ domxref("Notation") }} 节点. 只有当用一个 {{ domxref("Notation") }} 节点作为它的根节点时来创建一个 {{ domxref("NodeIterator") }} 才有意义; 在这种情况下,  {{ domxref("Notation") }} 节点会出现在迭代或遍历的首位. 因为 {{ domxref("Notation") }}  永远不会是其它节点的子节点, 当遍历整个文档树时它们不会出现.</td>
+    <td>显示 {{ domxref("Notation") }} 节点。只有当用一个 {{ domxref("Notation") }} 节点作为它的根节点时来创建一个 {{ domxref("NodeIterator") }} 才有意义; 在这种情况下，  {{ domxref("Notation") }} 节点会出现在迭代或遍历的首位。因为 {{ domxref("Notation") }}  永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -116,11 +116,11 @@ translation_of: Web/API/NodeIterator
 
 <dl>
  <dt>{{domxref("NodeIterator.detach()")}} {{obsolete_inline()}}</dt>
- <dd>这个方法不是必需的. 它现在什么也不做. 之前用来告诉引擎，<code>NodeIterator</code> 已经不会再使用，现在已经不做任何事情.</dd>
+ <dd>这个方法不是必需的。它现在什么也不做. 之前用来告诉引擎，<code>NodeIterator</code> 已经不会再使用，现在已经不做任何事情。</dd>
  <dt>{{domxref("NodeIterator.previousNode()")}}</dt>
- <dd>返回前一个 {{domxref("Node")}} ，如果不存在则返回 <code>null</code>.</dd>
+ <dd>返回前一个 {{domxref("Node")}}，如果不存在则返回 <code>null</code>.</dd>
  <dt>{{domxref("NodeIterator.nextNode()")}}</dt>
- <dd>返回下一个 {{domxref("Node")}} , 如果不存在则返回<code>null</code> .</dd>
+ <dd>返回下一个 {{domxref("Node")}}, 如果不存在则返回<code>null</code> .</dd>
 </dl>
 
 <h2 id="Specification" name="Specification">特性</h2>
@@ -150,57 +150,7 @@ translation_of: Web/API/NodeIterator
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.0</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.NodeIterator")}}
 
 <h2 id="扩展阅读">扩展阅读</h2>
 

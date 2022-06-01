@@ -17,7 +17,7 @@ La propriété **`function.arguments`** fait référence à un objet dont la str
 
 ## Description
 
-La syntaxe `function.arguments` est obsolète.  La méthode recommandée pour accéder à l'objet {{jsxref("Fonctions/arguments", "arguments")}} disponible au sein des fonctions est simplement de faire référence à la variable {{jsxref("Fonctions/arguments", "arguments")}}.
+La syntaxe `function.arguments` est obsolète.  La méthode recommandée pour accéder à l'objet {{jsxref("Fonctions/arguments", "arguments")}} disponible au sein des fonctions est simplement de faire référence à la variable {{jsxref("Fonctions/arguments", "arguments")}}.
 
 Si on utilise la récursivité (autrement dit si une fonction `f` apparaît plusieurs fois dans la pile d'appels ou encore qu'une fonction `f` s'appelle elle-même), la valeur de `f.arguments` représentera les arguments correspondant à l'appel le plus « récent » de la fonction.
 

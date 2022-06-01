@@ -21,10 +21,9 @@
 
 ### 과거 구성원
 
-- [@cos18](https://github.com/cos18)
-
 ### 현재 구성원
 
+- [@cos18](https://github.com/cos18)
 - [@yechoi42](https://github.com/yechoi42)
 - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
 - [@pje1740](https://github.com/pje1740)

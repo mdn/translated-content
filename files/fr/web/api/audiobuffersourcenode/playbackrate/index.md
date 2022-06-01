@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBufferSourceNode/playbackRate
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété `playbackRate` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/en-US/docs/DOM/AudioParam#k-rate) qui définit la vitesse à laquelle le contenu audio sera lu.
+La propriété `playbackRate` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/en-US/docs/DOM/AudioParam#k-rate) qui définit la vitesse à laquelle le contenu audio sera lu.
 
 Une valeur de 1.0 (c'est ) indique que le son doit être lu à la vitesse de son taux d'échantillonnage, une valeur inférieure qu'il doit être lu plus lentement, et une valeur supérieure plus rapidement. la valeur par défaut est `1.0`. Pour toute autre valeur l'`AudioBufferSourceNode` rééchantillone le son avant de l'envoyer vers la sortie.
 
@@ -32,7 +32,7 @@ Considérons un buffer audio échantillonné à 44.1 kHz (44,100 échantillons p
 
 Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés `playbackRate`, `loopStart` et `loopEnd` à la volée.
 
-> **Note :** Voir [ l'exemple complet](http://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
+> **Note :** Voir l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ```html
 <input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
@@ -41,37 +41,32 @@ Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est ut
 
 ```js
 function getData() {
-  source = contexteAudio.createBufferSource();
-  requete = new XMLHttpRequest();
+  source = audioCtx.createBufferSource();
+  request = new XMLHttpRequest();
 
-  requete.open('GET', 'viper.ogg', true);
+  request.open('GET', 'viper.ogg', true);
 
-  requete.responseType = 'arraybuffer';
+  request.responseType = 'arraybuffer';
 
+  request.onload = function() {
+    var audioData = request.response;
 
-  requete.onload = function() {
-    var donneesAudio = requete.response;
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+        myBuffer = buffer;
+        source.buffer = myBuffer;
+        source.playbackRate.value = playbackControl.value;
+        source.connect(audioCtx.destination);
+        source.loop = true;
+      },
 
-    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
-        maMemoireTampon = buffer;
-        dureeMorceau = buffer.duration;
-        source.buffer = maMemoireTampon;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(contexteAudio.destination);
-        source.loop = true;
+      function(e){"Erreur lors du décodage des données " + e.err});
 
-        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
-        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
-      },
+  }
 
-      function(e){"Erreur lors du décodage des données audio " + e.err});
-
-  }
-
-  requete.send();
+  request.send();
 }
 
-// connecte les boutons pour lancer et arrêter la lecture, et modifier la vitesse de lecture
+// wire up buttons to stop and play audio, and range slider control
 
 play.onclick = function() {
   getData();
@@ -96,7 +91,7 @@ playbackControl.oninput = function() {
 
 | Spécification                                                                                                            | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

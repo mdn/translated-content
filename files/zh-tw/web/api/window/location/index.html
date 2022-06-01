@@ -25,7 +25,7 @@ window.location = <em>newLocation</em>;
 <p>All of the following properties are strings. You can read them to get information about the current URL or set them to navigate to another URL.</p>
 <p>The "Example" column contains the values of the properties of the following URL:</p>
 <ul>
- <li><span class="nowiki">http://[www.example.com]:80/search?q=devmo#test</span></li>
+ <li>http://[www.example.com]:80/search?q=devmo#test</li>
 </ul>
 <table class="fullwidth-table">
  <tbody>
@@ -53,7 +53,7 @@ window.location = <em>newLocation</em>;
   <tr>
    <td><code>href</code></td>
    <td>the entire URL.</td>
-   <td><span class="nowiki">http://[www.example.com]:80/search?q=devmo#test</span></td>
+   <td>http://[www.example.com]:80/search?q=devmo#test</td>
   </tr>
   <tr>
    <td><code>pathname</code></td>
@@ -79,12 +79,12 @@ window.location = <em>newLocation</em>;
 </table>
 <p>If the hash part of the URL contains encoded characters (see <a href="/en/JavaScript/Reference/Global_Objects/encodeURIComponent" title="en/Core_JavaScript_1.5_Reference/Global_Functions/encodeURIComponent">Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent</a>), <code>hash</code> returns the decoded URL part. This is a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=483304" title="https://bugzilla.mozilla.org/show_bug.cgi?id=483304">bug</a> in Firefox. <code>href</code>, <code>search</code> and <code>pathname</code> return the correct, encoded URL parts. For example:</p>
 <ul>
- <li><span class="nowiki">http://www.example.com/search?q=Fire%20fox#Fire%20fox</span></li>
+ <li>http://www.example.com/search?q=Fire%20fox#Fire%20fox</li>
 </ul>
 <p>results in:</p>
 <ul>
- <li><span class="nowiki">hash=#Fire fox</span></li>
- <li><span class="nowiki">search=?q=Fire%20fox</span></li>
+ <li>hash=#Fire fox</li>
+ <li>search=?q=Fire%20fox</li>
 </ul>
 <h4 id="Methods" name="Methods">Methods</h4>
 <table class="fullwidth-table">
@@ -323,51 +323,4 @@ span.intLink {
 <h3 id="See_also">See also</h3>
 <p><a href="/en/DOM/Manipulating_the_browser_history" title="en/DOM/Manipulating the browser history">Manipulating the browser history</a></p>
 <h3 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h3>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari (WebKit)</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Phone</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h3 id="Specification" name="Specification">Specification</h3>
-<p>HTML Specification: <var>window</var> . <code title="dom-location"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#dom-location">location</a></code></p>
-<p>{{ languages( { "fr": "fr/DOM/window.location", "ja": "ja/DOM/window.location" } ) }}</p>
+{{Compat("api.Window.location")}}

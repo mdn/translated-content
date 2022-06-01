@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 <p><strong><code>big()</code></strong>方法的作用是创建一个使字符串显示大号字体的{{HTMLElement("big")}}标签。</p>
 
 <div class="note">
-<p><strong>使用说明:</strong>  &lt;big&gt; 元素在<a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>中已经被移除了，不应该再使用它。 取而代之的是web开发人员应该使用<a href="/en-US/docs/Web/CSS">CSS</a> 属性。</p>
+<p><strong>备注：</strong> &lt;big&gt; 元素在<a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>中已经被移除了，不应该再使用它。取而代之的是 Web 开发人员应该使用<a href="/en-US/docs/Web/CSS">CSS</a> 属性。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -21,11 +21,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 
 <h2 id="描述">描述</h2>
 
-<p><code>big()</code> 方法会将一个字符串嵌入到<code>&lt;big&gt;标签中:</code> <code>"&lt;big&gt;str&lt;/big&gt;"。</code></p>
+<p><code>big()</code> 方法会将一个字符串嵌入到 <code>&lt;big&gt;</code> 标签中：<code>"&lt;big&gt;str&lt;/big&gt;"</code>。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用big()函数"><code><font face="Open Sans, Arial, sans-serif">使用</font>big()函数</code></h3>
+<h3 id="使用_big_函数">使用 <code>big()</code> 函数</h3>
 
 <p>下面的例子使用了字符串方法来改变一个字符串的字体大小：</p>
 
@@ -36,7 +36,7 @@ console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
 console.log(worldString.fontsize(7)); // &lt;fontsize=7&gt;Hello, world&lt;/fontsize&gt;
 </pre>
 
-<p>使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更加一般地获得和操作该元素的style属性，比如：</p>
+<p>使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更加一般地获得和操作该元素的 style 属性，比如：</p>
 
 <pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '2em';
 </pre>
@@ -53,67 +53,19 @@ console.log(worldString.fontsize(7)); // &lt;fontsize=7&gt;Hello, world&lt;/font
   <tr>
    <td>{{SpecName('ES6', '#sec-string.prototype.big', 'String.prototype.big')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>初始定义。 在JavaScript 1.0中实现。在（规范性）附件B中定义了用于Web浏览器的附加ECMAScript 特性。</td>
+   <td>初始定义。在 JavaScript 1.0 中实现。在（规范性）附件 B 中定义了用于 Web 浏览器的附加 ECMAScript 特性。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td>在（规范性）附件B中定义了用于Web浏览器的附加ECMAScript 特性。</td>
+   <td>在（规范性）附件 B 中定义了用于 Web 浏览器的附加 ECMAScript 特性。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

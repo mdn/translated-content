@@ -14,7 +14,7 @@ translation_of: Web/API/StorageEvent
 <p>{{InheritanceDiagram}}</p>
 
 <div class="note">
-<p><strong>Note:</strong> 尽管这个事件已经早在 {{ Gecko("2.0") }}时就已存在,但是并不符合规范. 老的事件模型直到 {{ interface("nsIDOMStorageEventObsolete") }} 确定才被表现出来.</p>
+<p><strong>Note:</strong> 尽管这个事件已经早在 {{ Gecko("2.0") }}时就已存在,但是并不符合规范. 老的事件模型直到 <code>nsIDOMStorageEventObsolete</code> 确定才被表现出来.</p>
 </div>
 
 <h2 id="方法描述">方法描述</h2>
@@ -43,12 +43,12 @@ translation_of: Web/API/StorageEvent
   <tr>
    <td><code>key</code></td>
    <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
-   <td>该属性代表被修改的键值。当被<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">clear()</span></font>方法清除之后该属性值为<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">null</span></font>。<strong>（只读）</strong></td>
+   <td>该属性代表被修改的键值。当被clear()方法清除之后该属性值为null。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>newValue</code></td>
    <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
-   <td>该属性代表修改后的新值。当被<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">clear()</span></font>方法清理后或者该键值对被移除，<code>newValue</code> 的值为 <code>null</code> 。<strong>（只读）</strong></td>
+   <td>该属性代表修改后的新值。当被clear()方法清理后或者该键值对被移除，<code>newValue</code> 的值为 <code>null</code> 。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>oldValue</code></td>
@@ -57,14 +57,14 @@ translation_of: Web/API/StorageEvent
   </tr>
   <tr>
    <td><code>storageArea</code></td>
-   <td><code>{{ Interface("nsIDOMStorage") }}</code></td>
+   <td><code>nsIDOMStorage</code></td>
    <td>被操作的storage对象。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
    <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
    <td>
-    <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">key</span></font> 发生改变的对象所在文档的URL地址。<strong>（只读）</strong></p>
+    <p>key 发生改变的对象所在文档的URL地址。<strong>（只读）</strong></p>
    </td>
   </tr>
  </tbody>

@@ -51,14 +51,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-end-end-radius: 10px;
+  border-end-end-radius: 10px;
 }
 
 .texteExemple {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-end-end-radius: 10px;
+  border-end-end-radius: 10px;
 }
 ```
 

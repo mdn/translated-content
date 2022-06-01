@@ -5,23 +5,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
 <div>
  {{JSRef("Global_Objects", "Math")}}</div>
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 <p><code><strong>Math.acos()</strong></code> 返回一个数的反余弦值（单位为弧度），即：</p>
 <p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arccos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mo stretchy="false">[</mo><mn>0</mn><mo>;</mo><mi>π</mi><mo stretchy="false">]</mo><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique } \; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math></p>
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 <pre class="syntaxbox">Math.acos(<em>x</em>) </pre>
-<h2 id="Parameters" name="Parameters">参数</h2>
+<h2 id="Parameters">参数</h2>
 <dl>
  <dt>
   <code>x</code></dt>
  <dd>
   一个数值</dd>
 </dl>
-<h2 id="Description" name="Description">描述</h2>
-<p><code>acos</code> 方法以 -1 到 1 的一个数为参数，返回一个 0 到 pi （弧度）的数值。如果传入的参数值超出了限定的范围，将返回 <code>NaN</code>。</p>
+<h2 id="Description">描述</h2>
+<p><code>acos</code> 方法以 -1 到 1 的一个数为参数，返回一个 0 到 pi（弧度）的数值。如果传入的参数值超出了限定的范围，将返回 <code>NaN</code>。</p>
 <p>由于 <code>acos</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.acos()</code>，而不是作为你创建的 <code>Math</code> 实例的属性（<code>Math</code> 不是一个构造函数）。</p>
-<h2 id="Examples" name="Examples">示例</h2>
-<h3 id="Example:_Using_Math.acos" name="Example:_Using_Math.acos">例子：使用 <code>Math.acos</code></h3>
+<h2 id="Examples">示例</h2>
+<h3 id="Example:_Using_Math.acos">例子：使用 <code>Math.acos</code></h3>
 <pre class="brush:js">Math.acos(-2);  // NaN
 Math.acos(-1);  // 3.141592653589793
 Math.acos(0);   // 1.5707963267948966
@@ -55,55 +55,12 @@ Math.acos(2);   // NaN
   </tr>
  </tbody>
 </table>
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Chrome for Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="See_also" name="See_also">相关链接</h2>
+
+{{Compat}}
+
+<h2 id="See_also">相关链接</h2>
 <ul>
  <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>
  <li>{{jsxref("Math.asin()")}}</li>

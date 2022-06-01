@@ -22,14 +22,14 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox"><em>serviceWorkerContainer</em>.register(<em>scriptURL</em>, <em>options</em>)
-  .then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+<pre class="brush: js">serviceWorkerContainer.register(scriptURL, options)
+  .then(function(serviceWorkerRegistration) { ... });</pre>
 
 <h3 id="Parameters" name="Parameters">パラメーター</h3>
 
 <dl>
  <dt><code>scriptURL</code></dt>
- <dd>サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">JavaScript の MIME タイプ</a>が必要です。</dd>
+ <dd>サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript">JavaScript の MIME タイプ</a>が必要です。</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>登録オプションを含むオブジェクト。 現在利用可能なオプションは次のとおりです。
  <ul>

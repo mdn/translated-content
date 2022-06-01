@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript 是弱型別，也能說是動態的程式語言。這代表你不必特別宣告變數的型別。程式在運作時，型別會自動轉換。這也代表你可以以不同的型別使用同一個變數。</p>
 
-<pre class="brush: js notranslate">var foo = 42;    // foo 目前是數字
+<pre class="brush: js">var foo = 42;    // foo 目前是數字
 var foo = 'bar'; // foo 目前是字串
 var foo = true;  // foo 目前是布林值
 </pre>
@@ -53,13 +53,13 @@ var foo = true;  // foo 目前是布林值
 
 <h3 id="數字型別">數字型別</h3>
 
-<p>根據 ECMAScript 標準，數字型別只有一種：<a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">雙精度 64 位元二進制格式 IEEE 754 值</a>（在 -(2<sup>53</sup> -1) and 2<sup>53</sup> -1 之間的數字）。<strong>而整數並沒有指定的型別</strong>。數字除了能代表浮點數以外，還有三個符號值：<code>+Infinity</code>、<code>-Infinity</code>、<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>（not-a-number，非數字）。</p>
+<p>根據 ECMAScript 標準，數字型別只有一種：<a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">雙精度 64 位元二進制格式 IEEE 754 值</a>（在 -(2^53 -1) and 2^53 -1 之間的數字）。<strong>而整數並沒有指定的型別</strong>。數字除了能代表浮點數以外，還有三個符號值：<code>+Infinity</code>、<code>-Infinity</code>、<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>（not-a-number，非數字）。</p>
 
 <p>要檢查在 <code>+/-Infinity</code> 內可用的最大值或最小值，可以用 {{jsxref("Number.MAX_VALUE")}} 或 {{jsxref("Number.MIN_VALUE")}} 常數。從 ECMAScript 6 開始，也可以透過 {{jsxref("Number.isSafeInteger()")}}、{{jsxref("Number.MAX_SAFE_INTEGER")}}、{{jsxref("Number.MIN_SAFE_INTEGER")}} 檢查某數字是否為雙精度浮點值之間。Beyond this range, integers in JavaScript are not safe anymore and will be a double-precision floating point approximation of the value.</p>
 
 <p>The number type has only one integer that has two representations: 0 is represented as -0 and +0. ("0" is an alias for +0). In the praxis, this has almost no impact. For example <code>+0 === -0</code> is <code>true</code>. However, you are able to notice this when you divide by zero:</p>
 
-<pre class="brush: js notranslate">&gt; 42 / +0
+<pre class="brush: js">&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity
@@ -212,8 +212,8 @@ Infinity
  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note: </strong>Attribute is usually used by JavaScript engine, so you can't directly access it(see more about <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a>).That's why the attribute is put in double square brackets instead of single.</p>
+<div class="notecard note">
+<p><strong>備註：</strong>Attribute is usually used by JavaScript engine, so you can't directly access it(see more about <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a>).That's why the attribute is put in double square brackets instead of single.</p>
 </div>
 
 <h3 id="Normal_objects_and_functions">"Normal" objects, and functions</h3>
@@ -250,7 +250,7 @@ Infinity
 
 <p>JavaScript has a standard library of built-in objects. Please have a look at the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">reference</a> to find out about more objects.</p>
 
-<h2 id="使用_typeof_運算子來判斷型別"><code><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="background-color: #ffffff;">使用 </span></font>typeof</code> 運算子來判斷型別</h2>
+<h2 id="使用_typeof_運算子來判斷型別">使用 <code>typeof</code> 運算子來判斷型別</h2>
 
 <p><code>typeof</code> 運算子可以幫助你找到你的變數型別，請閱讀〈<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">reference page</a> 〉來取得更多細節及邊緣案例。</p>
 

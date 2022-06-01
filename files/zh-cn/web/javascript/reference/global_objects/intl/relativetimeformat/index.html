@@ -10,11 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 <div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
 
-<p class="hidden">此交互式示例的源存储在GitHub存储库中。如果您想参与交互式示例项目,请克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>并向我们​​发送拉取请求。</p>
-
 <h2 id="句法">句法</h2>
 
-<pre class="notranslate"><code>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])
+<pre><code>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])
 </code></pre>
 
 <h3 id="参数">参数</h3>
@@ -22,24 +20,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选的。带有BCP 47语言标记的字符串,或此类字符串的数组。有关参数的一般形式和解释<code>locales</code>,请参阅{{jsxref("Global_Objects/Intl","Intl page","＃Locale_identification_and_negotiation",1)}}。</p>
+ <p>可选的。带有 BCP 47 语言标记的字符串，或此类字符串的数组。有关参数的一般形式和解释<code>locales</code>,请参阅{{jsxref("Global_Objects/Intl","Intl page","＃Locale_identification_and_negotiation",1)}}。</p>
  </dd>
  <dt><code>options</code></dt>
  <dd>可选的。具有以下部分或全部属性的对象：
  <ul>
   <li><code>localeMatcher</code><br>
-   要使用的区域设置匹配算法。可能的值是<code>"lookup"</code>和<code>"best fit"</code>; 默认是<code>"best fit"</code>。有关此选项的信息,请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code></a>。</li>
+   要使用的区域设置匹配算法。可能的值是<code>"lookup"</code>和<code>"best fit"</code>; 默认是<code>"best fit"</code>。有关此选项的信息，请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code></a>。</li>
   <li><code>numeric</code><br>
    输出消息的格式。可能的值是：
    <ul>
-    <li><code>"always"</code>(默认,例如,<code>1 day ago</code>),</li>
+    <li><code>"always"</code>(默认，例如，<code>1 day ago</code>),</li>
     <li>或<code>"auto"</code>(例如<code>yesterday</code>)。该<code>"auto"</code>值允许不必总是在输出中使用数值。</li>
    </ul>
   </li>
   <li><code>style</code><br>
    国际化信息的长度。可能的值是：
    <ul>
-    <li><code>"long"</code>(默认,例如,<code>in 1 month</code>)</li>
+    <li><code>"long"</code>(默认，例如，<code>in 1 month</code>)</li>
     <li><code>"short"</code>(例如<code>in 1 mo.</code>),</li>
     <li>或<code>"narrow"</code>(例如<code>in 1 mo.</code>)。狭窄的风格可能类似于某些语言环境的短风格。</li>
    </ul>
@@ -61,7 +59,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 <dl>
  <dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf","Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>返回一个数组,其中包含所支持的语言环境,而不必回退到运行时的默认语言环境。</dd>
+ <dd>返回一个数组，其中包含所支持的语言环境，而不必回退到运行时的默认语言环境。</dd>
 </dl>
 
 <h2 id="RelativeTimeFormat_实例"><code>RelativeTimeFormat</code> 实例</h2>
@@ -84,7 +82,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 <p>以下示例显示如何使用英语创建相对时间格式化程序。</p>
 
-<pre class="brush: js notranslate">//在语言环境中创建相对时间格式化程序
+<pre class="brush: js">//在语言环境中创建相对时间格式化程序
 //显式传入默认值。
 const rtf = new Intl.RelativeTimeFormat("en",{
     localeMatcher: "bestfit",//其他值："lookup"
@@ -92,27 +90,27 @@ const rtf = new Intl.RelativeTimeFormat("en",{
     style: "long",//其他值："short"或"narrow"
 });
 
-//使用负值(-1)格式化相对时间。
+//使用负值 (-1) 格式化相对时间。
 rtf.format(-1,"day");
 //&gt;"1 day ago"
 
-//使用正值(1)格式化相对时间。
+//使用正值 (1) 格式化相对时间。
 rtf.format(1,"day");
 //&gt;"in 1 day"</pre>
 
 <h3 id="使用auto选项">使用<code>auto</code>选项</h3>
 
-<p>如果<code>numeric:auto</code>选项被传递,它将生成字符串<code>yesterday</code>或<code>tomorrow</code>代替<code>1 day ago</code>或<code>in 1 day</code>。这允许不必总是在输出中使用数值。</p>
+<p>如果<code>numeric:auto</code>选项被传递，它将生成字符串<code>yesterday</code>或<code>tomorrow</code>代替<code>1 day ago</code>或<code>in 1 day</code>。这允许不必总是在输出中使用数值。</p>
 
-<pre class="brush: js notranslate">//在语言环境中创建相对时间格式化程序
+<pre class="brush: js">//在语言环境中创建相对时间格式化程序
 //使用数字：传入"auto"选项值。
 const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
 
-//使用负值(-1)格式化相对时间。
+//使用负值 (-1) 格式化相对时间。
 rtf.format(-1,"day");
 //&gt;"yesterday"
 
-//使用正日单位(1)格式化相对时间。
+//使用正日单位 (1) 格式化相对时间。
 rtf.format(1,"day");
 //&gt;"tomorrow"
 </pre>
@@ -121,7 +119,7 @@ rtf.format(1,"day");
 
 <p>以下示例显示如何创建返回格式化部件的相对时间格式器</p>
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
+<pre class="brush: js">const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
 
 //使用日期单位格式化相对时间。
 rtf.formatToParts(-1,"day");

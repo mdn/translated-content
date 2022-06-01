@@ -5,8 +5,6 @@ tags:
   - XMLHttpRequest.responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-<div>{{draft}}</div>
-
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
 <p><strong>XMLHttpRequest.responseText </strong>在一个请求被发送后，从服务器端返回文本。</p>
@@ -17,11 +15,11 @@ translation_of: Web/API/XMLHttpRequest/responseText
 
 <h3 id="取值">取值</h3>
 
-<p>{{domxref("DOMString")}} 是<code>XMLHttpRequest</code> 返回的纯文本的值。当{{domxref("DOMString")}} 为<code>null</code>时，表示请求失败了。当{{domxref("DOMString")}} 为""时，表示这个请求还没有被{{domxref("XMLHttpRequest.send", "send()")}}</p>
+<p>{{domxref("DOMString")}} 是 <code>XMLHttpRequest</code> 返回的纯文本的值。当 {{domxref("DOMString")}} 为 <code>null</code> 时，表示请求失败了。当{{domxref("DOMString")}} 为 "" 时，表示这个请求还没有被 {{domxref("XMLHttpRequest.send", "send()")}}</p>
 
-<p>当处理一个异步request的时候，尽管当前请求并没有结束，<code>responseText</code>的返回值是当前从后端收到的内容。</p>
+<p>当处理一个异步 request 的时候，尽管当前请求并没有结束，<code>responseText</code> 的返回值是当前从后端收到的内容。</p>
 
-<p>当请求状态{{domxref("XMLHttpRequest.readyState", "readyState")}}变为{{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>)，且{{domxref("XMLHttpRequest.status", "status")}}值为200（<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">"OK"</span></font>）时，<code>responseText</code>是全部后端的返回数据</p>
+<p>当请求状态 {{domxref("XMLHttpRequest.readyState", "readyState")}} 变为 {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>)，且 {{domxref("XMLHttpRequest.status", "status")}} 值为 200（"OK"）时，<code>responseText</code> 是全部后端的返回数据</p>
 
 <h2 id="例子">例子</h2>
 
@@ -61,54 +59,4 @@ xhr.send(null);</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在IE10前的版本请求完成时， XMLHttpRequest.responseText 的值为只读。</p>
+{{Compat("api.XMLHttpRequest.responseText")}}

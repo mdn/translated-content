@@ -5,42 +5,40 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 ---
 <h2 id="Background" name="Background">背景</h2>
 
-<p>利用非http协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 <code>mailto:</code> 协议:</p>
+<p>利用非 HTTP 协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 <code>mailto:</code> 协议：</p>
 
 <div style="overflow: hidden;">
 <pre class="brush:html">&lt;a href="mailto:webmaster@example.com"&gt;Web Master&lt;/a&gt;</pre>
 </div>
 
-<p>当Web页面作者想直接从网页上，为用户提供一个方便的方式发送一个电子邮件,时可以使用mailto:链接。激活链接时,浏览器应该启动默认的桌面应用程序来处理电子邮件。你可以认为这是一个<em>基于桌面的</em>协议处理器。</p>
+<p>当 Web 页面作者想直接从网页上，为用户提供一个方便的方式发送一个电子邮件，时可以使用 <code>mailto:</code> 链接。激活链接时，浏览器应该启动默认的桌面应用程序来处理电子邮件。你可以认为这是一个<em>基于桌面的</em>协议处理器。</p>
 
-<p>基于网络的协议处理程序也允许基于web的应用程序参与这一过程。随着越来越多的类型的应用程序迁移到web，这变得越来越重要。事实上,有许多基于web的电子邮件处理的应用程序可以处理一个mailto链接。</p>
+<p>基于网络的协议处理程序也允许基于 Web 的应用程序参与这一过程。随着越来越多的类型的应用程序迁移到 Web，这变得越来越重要。事实上，有许多基于 Web 的电子邮件处理的应用程序可以处理一个 mailto 链接。</p>
 
 <h2 id="Registering" name="Registering">注册</h2>
 
-<p>设置一个web应用程序作为一个协议处理器不是一个很麻烦的过程。web应用程序可以使用<a href="/en-US/docs/Web/API/navigator.registerProtocolHandler">registerProtocolHandler()</a>注册到浏览器上，从而对于一个给定的协议来讲，作为一个潜在的处理程序。例如:</p>
+<p>设置一个 Web 应用程序作为一个协议处理器不是一个很麻烦的过程。Web 应用程序可以使用 <a href="/en-US/docs/Web/API/navigator.registerProtocolHandler">registerProtocolHandler()</a> 注册到浏览器上，从而对于一个给定的协议来讲，作为一个潜在的处理程序。例如：</p>
 
 <pre class="brush: js">navigator.registerProtocolHandler("mailto",
                                   "https://www.example.com/?uri=%s",
                                   "Example Mail");
 </pre>
 
-<p>参数为:</p>
+<p>参数为：</p>
 
 <ul>
- <li>协议名称.</li>
- <li>url模板。%s用来替换链接的<code>href</code>属性，之后通过这个url来发起一个GET请求.</li>
- <li>一个对用户友好的协议处理器的名字.</li>
+ <li>协议名称。</li>
+ <li>URL 模板。%s 用来替换链接的 <code>href</code> 属性，之后通过这个 URL 来发起一个 GET 请求。</li>
+ <li>一个对用户友好的协议处理器的名字。</li>
 </ul>
 
-<p>当一个浏览器执行这段代码时,它应该向用户显示一个请求,让用户许可为处理这个协议而注册一个web应用程序的请求。Firefox在通知栏区域显示一个提示:</p>
+<p>当一个浏览器执行这段代码时，它应该向用户显示一个请求，让用户许可为处理这个协议而注册一个 Web 应用程序的请求。Firefox 在通知栏区域显示一个提示：</p>
 
 <p><img alt="Image:wph-notification.png" src="/@api/deki/files/972/=Wph-notification.png"></p>
 
-<div class="note"><strong>Note:</strong>试图执行登记或注册时，当前网页必须与提供的URL模板在相同的域，否则将会失败。例如,http://example.com/homepage.html可以为<code class="plain" style="font-size: 14px;">http://example.com/handle_mailto/%s</code><span style="line-height: 1.5;">注册一个协议处理程序</span><span style="line-height: 1.5em;">, 但</span><code class="plain" style="font-size: 14px;">http://example.<em><strong>org</strong></em>/handle_mailto/%s不可以</code><span style="line-height: 1.5em;">.</span></div>
+<div class="note"><strong>Note:</strong> 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，http://example.com/homepage.html 可以为 <code>http://example.com/handle_mailto/%s</code> 注册一个协议处理程序，但 <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code> 不可以。</div>
 
-<p> </p>
-
-<p>多次注册相同的协议处理程序会弹出不同的通知,表明协议处理器已经注册。因此,发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子。</p>
+<p>多次注册相同的协议处理程序会弹出不同的通知，表明协议处理器已经注册。因此，发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子：</p>
 
 <h3 id="Example" name="Example">例子</h3>
 
@@ -64,7 +62,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <h2 id="Activating" name="Activating">激活</h2>
 
-<p>现在,只要用户点击链接,使用注册协议,浏览器将跳转到web应用程序注册时提供的URL。Firefox在默认情况下,跳转前会提示用户操作。</p>
+<p>现在，只要用户点击链接，使用注册协议，浏览器将跳转到 Web 应用程序注册时提供的 URL。Firefox 在默认情况下，跳转前会提示用户操作。</p>
 
 <p><img alt="Image:wph-launch.png" src="/@api/deki/files/971/=Wph-launch.png"></p>
 
@@ -83,13 +81,13 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <h2 id="Handling" name="Handling">处理</h2>
 
-<p>下一步是处理这个动作。浏览器在激活的链接中提取出href属性，之后与注册时提供的URL模板进行拼装，之后经由拼装好的URL发起一个HTTP GET请求.因此下面的例子中，浏览器会基于此URL发起一个GET请求:</p>
+<p>下一步是处理这个动作。浏览器在激活的链接中提取出 href 属性，之后与注册时提供的 URL 模板进行拼装，之后经由拼装好的 URL 发起一个 HTTP GET 请求。因此下面的例子中，浏览器会基于此 URL 发起一个 GET 请求：</p>
 
 <pre>http://starkravingfinkle.org/projects/wph/handler.php?value=fake:this%20is%20fake</pre>
 
 <p>服务端代码可以提取查询字符串的参数，执行所需的操作。</p>
 
-<div class="note"><strong>Note:</strong>服务端代码会接收到href的<strong>全部</strong>内容。这意味着服务端代码必须解析出数据中的协议。</div>
+<div class="note"><strong>Note:</strong> 服务端代码会接收到 href 的<strong>全部</strong>内容。这意味着服务端代码必须解析出数据中的协议。</div>
 
 <h3 id="Example_3" name="Example_3">Example</h3>
 

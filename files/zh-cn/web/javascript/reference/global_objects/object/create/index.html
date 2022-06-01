@@ -12,40 +12,38 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Object.create()</code></strong>方法创建一个新对象，使用现有的对象来提供新创建的对象的__proto__。 （请打开浏览器控制台以查看运行结果。）</p>
+<p><strong><code>Object.create()</code></strong> 方法创建一个新对象，使用现有的对象来提供新创建的对象的 __proto__。（请打开浏览器控制台以查看运行结果。）</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<h2 id="Syntax">语法</h2>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<pre>Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
 
-<pre class="notranslate">Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
-
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>proto</code></dt>
  <dd>新创建对象的原型对象。</dd>
  <dt><code>propertiesObject</code></dt>
- <dd>可选。需要传入一个对象，该对象的属性类型参照{{jsxref("Object.defineProperties()")}}的第二个参数。如果该参数被指定且不为 {{jsxref("undefined")}}，该传入对象的自有可枚举属性(即其自身定义的属性，而不是其原型链上的枚举属性)将为新创建的对象添加指定的属性值和对应的属性描述符。</dd>
+ <dd>可选。需要传入一个对象，该对象的属性类型参照{{jsxref("Object.defineProperties()")}}的第二个参数。如果该参数被指定且不为 {{jsxref("undefined")}}，该传入对象的自有可枚举属性 (即其自身定义的属性，而不是其原型链上的枚举属性) 将为新创建的对象添加指定的属性值和对应的属性描述符。</dd>
 </dl>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
 <p>一个新对象，带着指定的原型对象和属性。</p>
 
-<h3 id="Description" name="Description">例外</h3>
+<h3 id="Description">例外</h3>
 
-<p>如果<code>propertiesObject</code>参数是 {{jsxref("null")}} 或非原始包装对象，则抛出一个 {{jsxref("TypeError")}} 异常。</p>
+<p>如果<code>proto</code>参数不是 {{jsxref("null")}} 或非原始包装对象，则抛出一个 {{jsxref("TypeError")}} 异常。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="用_Object.create实现类式继承">用 <code>Object.create</code>实现类式继承</h3>
+<h3 id="用_object.create_实现类式继承">用 <code>Object.create</code> 实现类式继承</h3>
 
-<p>下面的例子演示了如何使用<code>Object.create()</code>来实现类式继承。这是一个所有版本JavaScript都支持的单继承。</p>
+<p>下面的例子演示了如何使用 <code>Object.create()</code> 来实现类式继承。这是一个所有版本 JavaScript 都支持的单继承。</p>
 
-<pre class="brush: js notranslate">// Shape - 父类(superclass)
+<pre class="brush: js">// Shape - 父类 (superclass)
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -58,7 +56,7 @@ Shape.prototype.move = function(x, y) {
   console.info('Shape moved.');
 };
 
-// Rectangle - 子类(subclass)
+// Rectangle - 子类 (subclass)
 function Rectangle() {
   Shape.call(this); // call super constructor.
 }
@@ -75,9 +73,9 @@ console.log('Is rect an instance of Shape?',
   rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'</pre>
 
-<p>如果你希望能继承到多个对象，则可以使用<span class="short_text" id="result_box" lang="zh-CN"><span>混入的方式。</span></span></p>
+<p>如果你希望能继承到多个对象，则可以使用混入的方式。</p>
 
-<pre class="brush: js notranslate">function MyClass() {
+<pre class="brush: js">function MyClass() {
      SuperClass.call(this);
      OtherSuperClass.call(this);
 }
@@ -86,7 +84,7 @@ rect.move(1, 1); // Outputs, 'Shape moved.'</pre>
 MyClass.prototype = Object.create(SuperClass.prototype);
 // 混合其它
 Object.assign(MyClass.prototype, OtherSuperClass.prototype);
-// 重新指定constructor
+// 重新指定 constructor
 MyClass.prototype.constructor = MyClass;
 
 MyClass.prototype.myMethod = function() {
@@ -96,27 +94,27 @@ MyClass.prototype.myMethod = function() {
 
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a> 会把  <code>OtherSuperClass</code>原型上的函数拷贝到 <code>MyClass</code>原型上，使 MyClass 的所有实例都可用 OtherSuperClass 的方法。Object.assign 是在 ES2015 引入的，且可用<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill"> polyfilled</a>。要支持旧浏览器的话，可用使用 <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a> 或者 <a href="https://lodash.com/docs/#assign">_.assign()</a>。</p>
 
-<h3 id="使用_Object.create_的_propertyObject参数">使用 <code>Object.create</code> 的 <code>propertyObject</code>参数</h3>
+<h3 id="使用_object.create_的_propertyObject_参数">使用 <code>Object.create</code> 的 <code>propertyObject</code> 参数</h3>
 
-<pre class="brush: js notranslate">var o;
+<pre class="brush: js">var o;
 
-// 创建一个原型为null的空对象
+// 创建一个原型为 null 的空对象
 o = Object.create(null);
 
 
 o = {};
-// 以字面量方式创建的空对象就相当于:
+// 以字面量方式创建的空对象就相当于：
 o = Object.create(Object.prototype);
 
 
 o = Object.create(Object.prototype, {
-  // foo会成为所创建对象的数据属性
+  // foo 会成为所创建对象的数据属性
   foo: {
     writable:true,
     configurable:true,
     value: "hello"
   },
-  // bar会成为所创建对象的访问器属性
+  // bar 会成为所创建对象的访问器属性
   bar: {
     configurable: false,
     get: function() { return 10 },
@@ -129,15 +127,15 @@ o = Object.create(Object.prototype, {
 
 function Constructor(){}
 o = new Constructor();
-// 上面的一句就相当于:
+// 上面的一句就相当于：
 o = Object.create(Constructor.prototype);
-// 当然,如果在Constructor函数中有一些初始化代码,Object.create不能执行那些代码
+// 当然，如果在 Constructor 函数中有一些初始化代码，Object.create 不能执行那些代码
 
 
-// 创建一个以另一个空对象为原型,且拥有一个属性p的对象
+// 创建一个以另一个空对象为原型，且拥有一个属性 p 的对象
 o = Object.create({}, { p: { value: 42 } })
 
-// 省略了的属性特性默认为false,所以属性p是不可写,不可枚举,不可配置的:
+// 省略了的属性特性默认为 false，所以属性 p 是不可写，不可枚举，不可配置的：
 o.p = 24
 o.p
 //42
@@ -151,7 +149,7 @@ for (var prop in o) {
 delete o.p
 //false
 
-//创建一个可写的,可枚举的,可配置的属性p
+//创建一个可写的，可枚举的，可配置的属性 p
 o2 = Object.create({}, {
   p: {
     value: 42,
@@ -161,13 +159,13 @@ o2 = Object.create({}, {
   }
 });</pre>
 
-<h2 id="Polyfill" style="line-height: 24px;">Polyfill</h2>
+<h2 id="Polyfill">Polyfill</h2>
 
 <p>这个 polyfill 涵盖了主要的应用场景，它创建一个已经选择了原型的新对象，但没有把第二个参数考虑在内。</p>
 
-<p>请注意，尽管在 ES5 中 <code>Object.create</code>支持设置为<code>[[Prototype]]</code>为<code>null</code>，但因为那些ECMAScript5以前版本限制，此 polyfill 无法支持该特性。</p>
+<p>请注意，尽管在 ES5 中 <code>Object.create</code>支持设置为<code>[[Prototype]]</code>为<code>null</code>，但因为那些 ECMAScript5 以前版本限制，此 polyfill 无法支持该特性。</p>
 
-<pre class="brush: js notranslate">if (typeof Object.create !== "function") {
+<pre class="brush: js">if (typeof Object.create !== "function") {
     Object.create = function (proto, propertiesObject) {
         if (typeof proto !== 'object' &amp;&amp; typeof proto !== 'function') {
             throw new TypeError('Object prototype may only be an Object: ' + proto);
@@ -184,7 +182,7 @@ o2 = Object.create({}, {
     };
 }</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -215,11 +213,11 @@ o2 = Object.create({}, {
 
 <p>{{Compat("javascript.builtins.Object.create")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty")}}</li>
  <li>{{jsxref("Object.defineProperties")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
- <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" style="white-space: pre-line;" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
+ <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
 </ul>

@@ -12,18 +12,18 @@ original_slug: Web/HTML/Element/Input/范围
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}}  <strong><code>range</code></strong> 类型的元素允许用户指定一个数值，该数值必须不小于给定值，并且不得大于另一个给定值。但是，精确值并不重要。通常使用滑块或拨号控件而不是像 {{HTMLElement('input/number', 'number')}}  输入类型这样的文本输入框来表示。</span> 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。</p>
+<p>{{HTMLElement("input")}}  <strong><code>range</code></strong> 类型的元素允许用户指定一个数值，该数值必须不小于给定值，并且不得大于另一个给定值。但是，精确值并不重要。通常使用滑块或拨号控件而不是像 {{HTMLElement('input/number', 'number')}}  输入类型这样的文本输入框来表示。 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}</div>
 
-<p class="hidden">该交互式示例的源存储在GitHub存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发送请求请求。</p>
+<p class="hidden">该交互式示例的源存储在 GitHub 存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发送请求请求。</p>
 
 <p>如果用户的浏览器不支持类型范围，它将回退并将其视为 <code>{{HTMLElement('input/text', 'text')}}</code> 输入。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">Value</a></strong></td>
    <td>A {{domxref("DOMString")}} containing the string representation of the selected numeric value; use {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} to get the value as a {{jsxref("Number")}}.</td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ original_slug: Web/HTML/Element/Input/范围
    <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("max", "input")}}, {{htmlattrxref("min", "input")}}, and {{htmlattrxref("step", "input")}}</td>
   </tr>
   <tr>
-   <td><strong>IDL属性</strong></td>
+   <td><strong>IDL 属性</strong></td>
    <td><code>list</code>, <code>value</code>, 和 <code>valueAsNumber</code></td>
   </tr>
   <tr>
@@ -51,9 +51,9 @@ original_slug: Web/HTML/Element/Input/范围
 
 <ul>
  <li>如果将 {{htmlattrxref("value", "input")}} 设置为无法转换为有效浮点数的值，则验证将失败，因为输入正遭受错误的输入。</li>
- <li>该值不得小于 {{htmlattrxref("min", "input")}}. 默认值为0。</li>
- <li>该值将不大于 {{htmlattrxref("max", "input")}}.  默认值为100。</li>
- <li>该值将是 {{htmlattrxref("step", "input")}}.  预设值为1。</li>
+ <li>该值不得小于 {{htmlattrxref("min", "input")}}. 默认值为 0。</li>
+ <li>该值将不大于 {{htmlattrxref("max", "input")}}.  默认值为 100。</li>
+ <li>该值将是 {{htmlattrxref("step", "input")}}.  预设值为 1。</li>
 </ul>
 
 <h3 id="值">值</h3>
@@ -78,45 +78,45 @@ original_slug: Web/HTML/Element/Input/范围
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>&lt;datalist&gt;元素的ID，其中包含可选的预定义选项</td>
+   <td><code><a href="#list">list</a></code></td>
+   <td>&lt;datalist&gt;元素的 ID，其中包含可选的预定义选项</td>
   </tr>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>最大允许值</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>最小允许值</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>步进间隔，用于用户界面和验证目的</td>
   </tr>
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="list">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
 
 <p>有关在支持的浏览器中如何表示范围中的选项的示例，请参见下面的<a href="#A_range_control_with_hash_marks">带散列的标记范围控制</a></p>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="max">max</h3>
 
 <p>允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a>。  如果 <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> 属性的值不是数字，则元素没有最大值。</p>
 
-<p>此值必须大于或等于min属性的值。 请参见 <a href="/en-US/docs/Web/HTML/Attributes/max">HTML <code>max</code></a><code>属性。</code></p>
+<p>此值必须大于或等于 min 属性的值。 请参见 <a href="/en-US/docs/Web/HTML/Attributes/max">HTML <code>max</code></a><code>属性。</code></p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="min">min</h3>
 
 <p>允许值范围内的最小值。 如果元素的{{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过 <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a>。如果为<code>min</code> 指定的值不是有效数字，则输入没有最小值。</p>
 
-<p>该值必须小于或等于max属性的值。 请参见 <a href="/en-US/docs/Web/HTML/Attributes/min">HTML <code>min</code>属性</a>。</p>
+<p>该值必须小于或等于 max 属性的值。 请参见 <a href="/en-US/docs/Web/HTML/Attributes/min">HTML <code>min</code>属性</a>。</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="step">step</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
-<p><code>range</code> 输入的默认步进值为1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为1。 例如，如果将 <code>min</code> 设置为-10并将 <code>value</code> 设置为1.5，则1的 <code>step</code> 将只允许正方向上的值为1.5、2.5、3.5，...，以及-0.5，-1.5，-2.5等。 ..朝负面方向发展。 请参阅<a href="/en-US/docs/Web/HTML/Attributes/step">HTML <code>step</code> 属性</a>。</p>
+<p><code>range</code> 输入的默认步进值为 1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。 例如，如果将 <code>min</code> 设置为-10 并将 <code>value</code> 设置为 1.5，则 1 的 <code>step</code> 将只允许正方向上的值为 1.5、2.5、3.5，...，以及-0.5，-1.5，-2.5 等。 ..朝负面方向发展。 请参阅<a href="/en-US/docs/Web/HTML/Attributes/step">HTML <code>step</code> 属性</a>。</p>
 
 <h3 id="非标准属性">非标准属性</h3>
 
@@ -129,19 +129,19 @@ original_slug: Web/HTML/Element/Input/范围
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("orient")}}</code></td>
-   <td>设置范围滑块的方向。 <strong>仅限Firefox .</strong></td>
+   <td><code><a href="#attr-orient">orient</a></code></td>
+   <td>设置范围滑块的方向。 <strong>仅限 Firefox .</strong></td>
   </tr>
  </tbody>
 </table>
 
 <dl>
  <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
- <dd id="orient-include">类似于-moz-orient非标准CSS属性会影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素， <code>orient</code> 属性定义范围滑块的方向。 值包括 <code>horizontal</code>, 表示范围是水平呈现， 和 <code>vertical</code>, 其中范围是垂直呈现）。</dd>
+ <dd id="orient-include">类似于-moz-orient 非标准 CSS 属性会影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素， <code>orient</code> 属性定义范围滑块的方向。 值包括 <code>horizontal</code>, 表示范围是水平呈现， 和 <code>vertical</code>, 其中范围是垂直呈现）。</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p>注意：以下输入属性不适用于输入范围：<code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>,高度, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, 和 <code>width</code>. 这些属性中的任何一个（如果包含）将被忽略。</p>
+<p>注意：以下输入属性不适用于输入范围：<code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>,高度，<code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, 和 <code>width</code>. 这些属性中的任何一个（如果包含）将被忽略。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -157,13 +157,13 @@ original_slug: Web/HTML/Element/Input/范围
  <li>密码管理员生成的密码的密码长度。</li>
 </ul>
 
-<p>通常，如果用户对最小值和最大值之间的距离的百分比比实际数字本身更感兴趣，则范围输入是一个不错的选择。 例如，在家庭立体声音量控制的情况下，用户通常认为“将音量设置为最大音量的一半”而不是“将音量设置为0.5”。</p>
+<p>通常，如果用户对最小值和最大值之间的距离的百分比比实际数字本身更感兴趣，则范围输入是一个不错的选择。 例如，在家庭立体声音量控制的情况下，用户通常认为 “将音量设置为最大音量的一半” 而不是 “将音量设置为 0.5”。</p>
 
 <h3 id="指定最小和最大">指定最小和最大</h3>
 
-<p>默认情况下，最小值为0，最大值为100。如果这不是您想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。 这些可以是任何浮点值。</p>
+<p>默认情况下，最小值为 0，最大值为 100。如果这不是您想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。 这些可以是任何浮点值。</p>
 
-<p>例如，要要求用户输入介于-10和10之间的值，可以使用：</p>
+<p>例如，要要求用户输入介于-10 和 10 之间的值，可以使用：</p>
 
 <pre class="brush: html notranslate">&lt;input type="range" min="-10" max="10"&gt;</pre>
 
@@ -171,7 +171,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h3 id="设置值的粒度">设置值的粒度</h3>
 
-<p>默认情况下，粒度为1，表示该值始终是整数。 您可以更改 {{htmlattrxref("step")}} 属性以控制粒度。 例如，如果您需要一个介于5到10之间的值（精确到两位小数），则应将 <code>step</code> 的值设置为0.01:</p>
+<p>默认情况下，粒度为 1，表示该值始终是整数。 您可以更改 {{htmlattrxref("step")}} 属性以控制粒度。 例如，如果您需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 <code>step</code> 的值设置为 0.01:</p>
 
 <div id="Granularity_sample1">
 <pre class="brush: html notranslate">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
@@ -186,16 +186,16 @@ original_slug: Web/HTML/Element/Input/范围
 
 <p>{{EmbedLiveSample("Granularity_sample2", 600, 40)}}</p>
 
-<p>该示例使用户可以选择0到π之间的任何值，而对所选值的小数部分没有任何限制。</p>
+<p>该示例使用户可以选择 0 到π之间的任何值，而对所选值的小数部分没有任何限制。</p>
 </div>
 
 <h3 id="添加井号和标签">添加井号和标签</h3>
 
-<p>HTML规范使浏览器在如何显示范围控件方面具有一定的灵活性。 在散列标记和较小程度上的标签方面，这种灵活性最明显。 该规范描述了如何使用 {{htmlattrxref("list", "input")}} 属性和 {{HTMLElement("datalist")}} 元素将自定义点添加到范围控件，但没有任何要求或 甚至是沿控件长度的标准化哈希或刻度线的建议。</p>
+<p>HTML 规范使浏览器在如何显示范围控件方面具有一定的灵活性。 在散列标记和较小程度上的标签方面，这种灵活性最明显。 该规范描述了如何使用 {{htmlattrxref("list", "input")}} 属性和 {{HTMLElement("datalist")}} 元素将自定义点添加到范围控件，但没有任何要求或 甚至是沿控件长度的标准化哈希或刻度线的建议。</p>
 
 <h4 id="范围控制模型">范围控制模型</h4>
 
-<p>由于浏览器具有这种灵活性，并且迄今为止都不支持HTML为范围控件定义的所有功能，因此以下是一些模型，以向您展示在支持它们的浏览器中在macOS上可以得到的功能。</p>
+<p>由于浏览器具有这种灵活性，并且迄今为止都不支持 HTML 为范围控件定义的所有功能，因此以下是一些模型，以向您展示在支持它们的浏览器中在 macOS 上可以得到的功能。</p>
 
 <h5 id="无装饰的范围控制">无装饰的范围控制</h5>
 
@@ -228,7 +228,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h5 id="带散列标记的范围控件">带散列标记的范围控件</h5>
 
-<p>此范围控件使用的 <code>list</code> 属性指定{{HTMLElement("datalist")}} 的ID，该ID定义了控件上的一系列带散列的标记。 其中有11个，因此在0％和每个10％标记处都有一个。 每个点均使用 {{HTMLElement("option")}} 元素表示，其元素 {{htmlattrxref("value", "option")}} 设置为应绘制标记的范围值。</p>
+<p>此范围控件使用的 <code>list</code> 属性指定{{HTMLElement("datalist")}} 的 ID，该 ID 定义了控件上的一系列带散列的标记。 其中有 11 个，因此在 0％和每个 10％标记处都有一个。 每个点均使用 {{HTMLElement("option")}} 元素表示，其元素 {{htmlattrxref("value", "option")}} 设置为应绘制标记的范围值。</p>
 
 <table class="fullwidth standard-table">
  <tbody>
@@ -315,15 +315,15 @@ original_slug: Web/HTML/Element/Input/范围
 </table>
 
 <div class="note">
-<p><strong>注意</strong>: 目前没有浏览器完全支持这些特性。例如，Firefox根本不支持散列标记和标签，而Chrome支持散列标记，但不支持标签。Chrome的66版本(66.0.3359.181)支持标签，但是 {{htmlelement("datalist")}} 标签必须使用CSS样式，因为它的 {{cssxref("display")}}属性默认设置为 <code>none</code> ，隐藏了标签。</p>
+<p><strong>注意</strong>: 目前没有浏览器完全支持这些特性。例如，Firefox 根本不支持散列标记和标签，而 Chrome 支持散列标记，但不支持标签。Chrome 的 66 版本 (66.0.3359.181) 支持标签，但是 {{htmlelement("datalist")}} 标签必须使用 CSS 样式，因为它的 {{cssxref("display")}}属性默认设置为 <code>none</code> ，隐藏了标签。</p>
 </div>
 
 <h3 id="改变方向">改变方向</h3>
 
 <div class="xhidden">
-<p>使旋钮向左和向右滑动。 如果支持，我们将能够声明垂直高度，并通过声明高度值大于宽度值来使用CSS上下滑动。 任何主要的浏览器实际上尚未实现此功能。（请参阅{{bug(981916)}}, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=341071">Chrome bug 341071</a>)。也许它仍在讨论中。</p>
+<p>使旋钮向左和向右滑动。 如果支持，我们将能够声明垂直高度，并通过声明高度值大于宽度值来使用 CSS 上下滑动。 任何主要的浏览器实际上尚未实现此功能。（请参阅{{bug(981916)}}, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=341071">Chrome bug 341071</a>)。也许它仍在讨论中。</p>
 
-<p>同时，我们可以通过使用CSS变换旋转范围来使范围垂直，或者通过使用各自的方法定位每个浏览器引擎，包括通过将 {{cssxref('appearance')}} 设置为 <code>slider-vertical</code>, 在Firefox中使用非标准的<code>orient</code> 属性，或通过更改Internet Explorer和Edge的文本方向。</p>
+<p>同时，我们可以通过使用 CSS 变换旋转范围来使范围垂直，或者通过使用各自的方法定位每个浏览器引擎，包括通过将 {{cssxref('appearance')}} 设置为 <code>slider-vertical</code>, 在 Firefox 中使用非标准的<code>orient</code> 属性，或通过更改 Internet Explorer 和 Edge 的文本方向。</p>
 
 <p>考虑以下范围控制：</p>
 
@@ -337,7 +337,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h3 id="标准">标准</h3>
 
-<p>根据规范，使其垂直需要添加CSS来更改控件的尺寸，以使其比宽度高，如下所示：</p>
+<p>根据规范，使其垂直需要添加 CSS 来更改控件的尺寸，以使其比宽度高，如下所示：</p>
 
 <div id="Orientation_sample2">
 <h4 id="CSS">CSS</h4>
@@ -361,11 +361,11 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h3 id="变换：旋转（-90deg）">变换：旋转（-90deg）</h3>
 
-<p>但是，您可以通过在侧面绘制水平范围控件来创建垂直范围控件。 最简单的方法是使用CSS：通过应用 {{cssxref("transform")}} 旋转元素，可以使其垂直。 让我们来看看。</p>
+<p>但是，您可以通过在侧面绘制水平范围控件来创建垂直范围控件。 最简单的方法是使用 CSS：通过应用 {{cssxref("transform")}} 旋转元素，可以使其垂直。 让我们来看看。</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<p>需要更新HTML，以将 {{HTMLElement("input")}} 包裹在 {{HTMLElement("div")}} 中，以便我们在执行转换后纠正布局（因为转换不会自动影响 页面的布局）：</p>
+<p>需要更新 HTML，以将 {{HTMLElement("input")}} 包裹在 {{HTMLElement("div")}} 中，以便我们在执行转换后纠正布局（因为转换不会自动影响 页面的布局）：</p>
 
 <pre class="brush: html notranslate">&lt;div class="slider-wrapper"&gt;
   &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
@@ -373,7 +373,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h4 id="CSS_2">CSS</h4>
 
-<p>现在我们需要一些CSS。 首先是包装器本身的CSS； 这指定了我们想要的显示模式和大小，以便页面正确布局； 本质上，它是为滑块保留页面的区域，以便旋转的滑块适合保留的空间而不会造成混乱。</p>
+<p>现在我们需要一些 CSS。 首先是包装器本身的 CSS； 这指定了我们想要的显示模式和大小，以便页面正确布局； 本质上，它是为滑块保留页面的区域，以便旋转的滑块适合保留的空间而不会造成混乱。</p>
 
 <pre class="brush: css notranslate">.slider-wrapper {
   display: inline-block;
@@ -393,7 +393,7 @@ original_slug: Web/HTML/Element/Input/范围
   transform: rotate(-90deg);
 }</pre>
 
-<p>控件的大小设置为150像素长x 20像素高。 边距设置为0， {{cssxref("transform-origin")}} 移至滑块旋转通过的空间的中间； 由于滑块配置为150像素宽，因此它将旋转通过每边150像素的框。 在每个轴上将原点偏移75像素，这意味着我们将围绕该空间的中心旋转。 最后，我们将逆时针旋转90°。 结果：旋转一个范围输入，因此最大值在顶部，最小值在底部。</p>
+<p>控件的大小设置为 150 像素长 x 20 像素高。 边距设置为 0， {{cssxref("transform-origin")}} 移至滑块旋转通过的空间的中间； 由于滑块配置为 150 像素宽，因此它将旋转通过每边 150 像素的框。 在每个轴上将原点偏移 75 像素，这意味着我们将围绕该空间的中心旋转。 最后，我们将逆时针旋转 90°。 结果：旋转一个范围输入，因此最大值在顶部，最小值在底部。</p>
 
 <p>{{EmbedLiveSample("transform_rotate-90deg", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}</p>
 
@@ -403,7 +403,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h4 id="HTML_3">HTML</h4>
 
-<p>我们使用与前面的示例相同的HTML：</p>
+<p>我们使用与前面的示例相同的 HTML：</p>
 
 <pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
@@ -420,11 +420,11 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h3 id="定向属性">定向属性</h3>
 
-<p>仅在Firefox中，有一个非标准的 <code>orient</code> 属性。</p>
+<p>仅在 Firefox 中，有一个非标准的 <code>orient</code> 属性。</p>
 
 <h4 id="HTML_4">HTML</h4>
 
-<p>使用与前面示例类似的HTML，我们添加属性值为 <code>vertical</code>:</p>
+<p>使用与前面示例类似的 HTML，我们添加属性值为 <code>vertical</code>:</p>
 
 <pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
@@ -437,7 +437,7 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h4 id="HTML_5">HTML</h4>
 
-<p>我们使用与前面的示例相同的HTML：</p>
+<p>我们使用与前面的示例相同的 HTML：</p>
 
 <pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
@@ -458,14 +458,14 @@ original_slug: Web/HTML/Element/Input/范围
 
 <h4 id="HTML_6">HTML</h4>
 
-<p>对于Firefox，我们将<code>orient</code>属性的值保持为<code>vertical：</code></p>
+<p>对于 Firefox，我们将<code>orient</code>属性的值保持为<code>vertical：</code></p>
 
 <pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <h4 id="CSS_5">CSS</h4>
 
-<p>对于Edge和Internet Explorer，我们仅将输入类型作为目标，将写入模式从默认更改为 <code>bt-lr</code>, 或者从下至上，从左至右，然后添加 <code>-webkit-appearance: slider-vertical</code>用于所有基于-webkit的浏览器：</p>
+<p>对于 Edge 和 Internet Explorer，我们仅将输入类型作为目标，将写入模式从默认更改为 <code>bt-lr</code>, 或者从下至上，从左至右，然后添加 <code>-webkit-appearance: slider-vertical</code>用于所有基于-webkit 的浏览器：</p>
 
 <pre class="brush: css notranslate">input[type="range"] {
   writing-mode: bt-lr;
@@ -509,6 +509,6 @@ original_slug: Web/HTML/Element/Input/范围
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code></li>
  <li>{{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">使用ConstantSourceNode控制多个参数</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">使用 ConstantSourceNode 控制多个参数</a></li>
  <li><a href="https://css-tricks.com/sliding-nightmare-understanding-range-input">设置范围元素的样式</a></li>
 </ul>

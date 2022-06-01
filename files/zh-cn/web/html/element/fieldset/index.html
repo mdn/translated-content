@@ -4,7 +4,7 @@ slug: Web/HTML/Element/fieldset
 tags:
   - Element
   - HTML
-  - HTML表单
+  - HTML 表单
   - 元素
   - 参考
   - 表单
@@ -14,11 +14,11 @@ translation_of: Web/HTML/Element/fieldset
 
 <div><strong>HTML <code>&lt;fieldset&gt;</code> </strong>元素用于对表单中的控制元素进行分组（也包括 label 元素）。</div>
 
-<div></div>
+
 
 <div>{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}</div>
 
-<div>如上述例子所示，<code>&lt;fieldset&gt;</code> 元素将一个HTML表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 <code>fieldset</code> 的标题。这个元素有几个属性，最值得注意的是 <code>form</code>，其可以包含同一页面的 {{htmlelement("form")}} 元素的 <code>id</code>，以使 <code>&lt;fieldset&gt;</code> 成为这个 <code>&lt;form&gt;</code> 的一部分，即使 <code>&lt;fieldset&gt;</code> 不在其内。还有 <code>disabled</code> 属性，可将 <code>&lt;fieldset&gt;</code> 及其所有内容设置为不可用。</div>
+<div>如上述例子所示，<code>&lt;fieldset&gt;</code> 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 <code>fieldset</code> 的标题。这个元素有几个属性，最值得注意的是 <code>form</code>，其可以包含同一页面的 {{htmlelement("form")}} 元素的 <code>id</code>，以使 <code>&lt;fieldset&gt;</code> 成为这个 <code>&lt;form&gt;</code> 的一部分，即使 <code>&lt;fieldset&gt;</code> 不在其内。还有 <code>disabled</code> 属性，可将 <code>&lt;fieldset&gt;</code> 及其所有内容设置为不可用。</div>
 
 <h2 id="属性">属性</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/fieldset
 
 <dl>
  <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>如果设置了这个 bool 值属性, <code>&lt;fieldset&gt;</code> 的所有子代表单控件也会继承这个属性。这意味着它们不可编辑，也不会随着 {{htmlelement("form")}} 一起提交。它们也不会接收到任何浏览器事件，如鼠标点击或与聚焦相关的事件。默认情况下，浏览器会将这样的控件展示为灰色。注意，{{HTMLElement("legend")}} 中的表单元素不会被禁用。</dd>
+ <dd>如果设置了这个 bool 值属性，<code>&lt;fieldset&gt;</code> 的所有子代表单控件也会继承这个属性。这意味着它们不可编辑，也不会随着 {{htmlelement("form")}} 一起提交。它们也不会接收到任何浏览器事件，如鼠标点击或与聚焦相关的事件。默认情况下，浏览器会将这样的控件展示为灰色。注意，{{HTMLElement("legend")}} 中的表单元素不会被禁用。</dd>
  <dt>{{htmlattrdef("form")}}</dt>
  <dd>将该值设为一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id")}} 属性值以将 <code>&lt;fieldset&gt;</code> 设置成这个 {{HTMLElement("form")}} 的一部分。      </dd>
  <dt>{{htmlattrdef("name")}}</dt>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/fieldset
 <p>你可以以任意方式自行设置 <code>&lt;fieldset&gt;</code> 和 <code>&lt;legend&gt;</code> 的样式以配合你的页面设计。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 <a href="/zh-CN/docs/Glossary/Flexbox">flexbox</a> 和 <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">grid </a>布局。<a href="https://github.com/w3c/csswg-drafts/issues/321">这个 GitHub issue</a> 跟踪了这个bug。</p>
+<p><strong>注意：</strong>截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 <a href="/zh-CN/docs/Glossary/Flexbox">flexbox</a> 和 <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">grid </a>布局。<a href="https://github.com/w3c/csswg-drafts/issues/321">这个 GitHub issue</a> 跟踪了这个 bug。</p>
 </div>
 
 <h2 id="Examples">示例</h2>

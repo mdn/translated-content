@@ -24,7 +24,7 @@ translation_of: Web/API/Clipboard
 <p>多くのアプリケーションでは、<a href="https://ja.wikipedia.org/wiki/ショートカットキー">ショートカットキー</a>や<a href="https://ja.wikipedia.org/wiki/メニュー_(コンピュータ)">メニュー</a>など、このインターフェイスに結び付けられた<a href="https://ja.wikipedia.org/wiki/入出力">ユーザーからの入力</a>を使うことにより、クリップボード機能にアクセスします。</p>
 </div>
 
-<div></div>
+
 
 <p><span class="seoSummary"><strong><code>Clipboard</code></strong> インターフェイスは <a href="/ja-jp/docs/Web/API/Clipboard_API">Clipboard API</a> を実装します。この API は、ユーザーが許可する場合、システムクリップボードの内容に対する読み取りと書き込みの両方を提供します。</span> Clipboard API は、ウェブアプリケーションにカット (切り取り)、コピー (複写)、ペースト (貼り付け) の機能を実装するために使うことができます。</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Clipboard
 <p><code>Clipboard</code> オブジェクトのメソッド呼び出しは、ユーザーが <a href="/ja-jp/docs/Web/API/Permissions_API">Permissions API</a> と <code>"clipboard-read"</code> や <code>"clipboard-write"</code> パーミッションを適切に使って必要なパーミッションを与えていない場合、成功しません。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 現実には、ブラウザーがクリップボードへアクセスする場合に必要となることは、非常に多岐に渡ります。詳細は {{anch("Clipboard_availability", "クリップボードの可用性")}} を参照してください。</p>
+<p><strong>注意:</strong> 現実には、ブラウザーがクリップボードへアクセスする場合に必要となることは、非常に多岐に渡ります。詳細は <a href="#clipboard_availability">クリップボードの可用性</a> を参照してください。</p>
 </div>
 
 <p>Clipboard API の全てのメソッドは非同期で動作します。つまり、それらはクリップボードにアクセスできたときに解決される {{jsxref("Promise")}} オブジェクトを返します。この Promise は、クリップボードへのアクセスが拒絶された場合には拒否されます。</p>

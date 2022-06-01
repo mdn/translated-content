@@ -105,7 +105,7 @@ translation_of: Mozilla/Firefox/Releases/7
  <li>The <a href="/en/Components.utils.unload" title="Components.utils.unload"><code>Components.utils.unload()</code></a> method lets you unload JavaScript code modules previously loaded by calling <a href="/en/Components.utils.load" title="en/Components.utils.load"><code>Components.utils.load()</code></a>.</li>
 </ul>
 <h3 id="Memory_reporters">Memory reporters</h3>
-<p>Support has been added for multi-reporters; that is, memory reporters that gather data on request and call a callback for each generated result. See {{ interface("nsIMemoryMultiReporter") }} and {{ interface("nsIMemoryMultiReporterCallback") }} for the relevant interfaces, as well as the {{ ifmethod("nsIMemoryReporterManager", "registerMultiReporter") }} and {{ ifmethod("nsIMemoryReporterManager", "unregisterMultiReporter") }} methods.</p>
+<p>Support has been added for multi-reporters; that is, memory reporters that gather data on request and call a callback for each generated result. See <code>nsIMemoryMultiReporter</code> and <code>nsIMemoryMultiReporterCallback</code> for the relevant interfaces, as well as the <code>nsIMemoryReporterManager.registerMultiReporter()</code> and <code>nsIMemoryReporterManager.unregisterMultiReporter()</code> methods.</p>
 <h3 id="User_experience_changes">User experience changes</h3>
 <ul>
  <li>Extension options can now be <a href="/en/Extensions/Inline_Options" title="en/Extensions/Inline_Options">displayed inside the Add-on Manager</a> for both restartless and traditional extensions.</li>
@@ -113,35 +113,35 @@ translation_of: Mozilla/Firefox/Releases/7
 </ul>
 <h3 id="Changes_to_the_build_system">Changes to the build system</h3>
 <ul>
- <li>The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see {{ anch("Removed interfaces") }}.</li>
+ <li>The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see <a href="#removed_interfaces">Removed interfaces</a>.</li>
  <li>You should no longer specify <code>-Zc:wchar_t-</code> when building on Windows. See the <a href="/En/Developer_Guide/Build_Instructions#Build_and_install" title="En/Developer_Guide/Build_Instructions#Build_and_install">updated Build documentation</a> for details.</li>
 </ul>
 <h3 id="Interface_changes">Interface changes</h3>
 <ul>
- <li>{{ interface("nsISocketTransport") }} now offers a new connection flag: <code>DISABLE_IPV6</code>; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, {{ interface("nsIDNSService") }} now offers a new resolve flag: <code>RESOLVE_DISABLE_IPV6</code>; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the <a class="external" href="http://tools.ietf.org/html/draft-wing-http-new-tech-00">"happy eyeballs" strategy</a> for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).</li>
- <li>{{ interface("inIDOMUtils") }} has two new methods, {{ ifmethod("inIDOMUtils","getChildrenForNode") }} which returns a list of child nodes of a node and {{ ifmethod("inIDOMUtils","getUsedFontFaces") }} which returns a list of font faces used in a range.</li>
- <li>The <code>nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIMarkupDocumentViewer") }} interface.</li>
- <li>The <code>nsIDOMWindow2</code> interface has been merged into the {{ interface("nsIDOMWindow") }} interface.</li>
- <li>The <code>nsIDOMWindow_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIDOMWindowInternal") }} interface.</li>
- <li>{{ interface("nsINavHistoryObserver") }} methods with URI parameters now require a GUID as well.</li>
- <li>The <code>nsISHistory_2_0_BRANCH</code> interface has been merged into the {{ interface("nsISHistory") }} interface.</li>
- <li>{{ interface("nsITelemetry") }} has a new method, {{ ifmethod("nsITelemetry","getHistogramById") }} which returns a histogram by its ID, and a new attribute, <code>canRecord</code> which when set to <code>false</code> disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }})<br>
-  Telemetry histograms defined with {{ ifmethod("nsITelemetry","newHistogram") }} will not be reported in the telemetry ping.</li>
- <li>The {{ interface("nsIMemoryReporter") }} interface has been substantially changed; if you use it, you will need to make some adjustments to your code.</li>
- <li>{{ interface("nsIXMLHttpRequest") }}, headers set by {{ ifmethod("nsIXMLHttpRequest","setRequestHeader") }} are sent with the request when following a redirect. Previously these headers would not be sent.</li>
- <li>{{ interface("nsIDocShell") }} has a new <code>allowWindowControl</code> attribute. If <code>true</code>, the docshell's content is allowed to control the window (that is, to move or resize the window).</li>
- <li>The <code>nsIThreadInternal2</code> interface has been merged into the {{ interface("nsIThreadInternal") }} interface.</li>
+ <li><code>nsISocketTransport</code> now offers a new connection flag: <code>DISABLE_IPV6</code>; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, <code>nsIDNSService</code> now offers a new resolve flag: <code>RESOLVE_DISABLE_IPV6</code>; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the <a class="external" href="http://tools.ietf.org/html/draft-wing-http-new-tech-00">"happy eyeballs" strategy</a> for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).</li>
+ <li><code>inIDOMUtils</code> has two new methods, <code>inIDOMUtils.getChildrenForNode()</code> which returns a list of child nodes of a node and <code>inIDOMUtils.getUsedFontFaces()</code> which returns a list of font faces used in a range.</li>
+ <li>The <code>nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIMarkupDocumentViewer</code> interface.</li>
+ <li>The <code>nsIDOMWindow2</code> interface has been merged into the <code>nsIDOMWindow</code> interface.</li>
+ <li>The <code>nsIDOMWindow_2_0_BRANCH</code> interface has been merged into the <code>nsIDOMWindowInternal</code> interface.</li>
+ <li><code>nsINavHistoryObserver</code> methods with URI parameters now require a GUID as well.</li>
+ <li>The <code>nsISHistory_2_0_BRANCH</code> interface has been merged into the <code>nsISHistory</code> interface.</li>
+ <li><code>nsITelemetry</code> has a new method, <code>nsITelemetry.getHistogramById()</code> which returns a histogram by its ID, and a new attribute, <code>canRecord</code> which when set to <code>false</code> disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }})<br>
+  Telemetry histograms defined with <code>nsITelemetry.newHistogram()</code> will not be reported in the telemetry ping.</li>
+ <li>The <code>nsIMemoryReporter</code> interface has been substantially changed; if you use it, you will need to make some adjustments to your code.</li>
+ <li><code>nsIXMLHttpRequest</code>, headers set by <code>nsIXMLHttpRequest.setRequestHeader()</code> are sent with the request when following a redirect. Previously these headers would not be sent.</li>
+ <li><code>nsIDocShell</code> has a new <code>allowWindowControl</code> attribute. If <code>true</code>, the docshell's content is allowed to control the window (that is, to move or resize the window).</li>
+ <li>The <code>nsIThreadInternal2</code> interface has been merged into the <code>nsIThreadInternal</code> interface.</li>
 </ul>
 <h4 id="New_interfaces">New interfaces</h4>
 <dl>
  <dt>
-  {{ interface("nsIDOMFontFace") }}</dt>
+  <code>nsIDOMFontFace</code></dt>
  <dd>
   Describes a single font face.</dd>
  <dt>
-  {{ interface("nsIDOMFontFaceList") }}</dt>
+  <code>nsIDOMFontFaceList</code></dt>
  <dd>
-  Describes a list of font faces, each represented by {{ interface("nsIDOMFontFace") }}.</dd>
+  Describes a list of font faces, each represented by <code>nsIDOMFontFace</code>.</dd>
 </dl>
 <h4 id="Removed_interfaces">Removed interfaces</h4>
 <p>The following interfaces were implementation details that are no longer needed:</p>
@@ -153,7 +153,7 @@ translation_of: Mozilla/Firefox/Releases/7
  <li><code>nsIDOMDocumentStyle</code></li>
  <li><code>nsIDOMNSDocument</code></li>
  <li><code>nsIDOMNSFeatureFactory</code></li>
- <li>{{ interface("nsIDOMNSHTMLDocument") }}</li>
+ <li><code>nsIDOMNSHTMLDocument</code></li>
  <li><code>nsIDOMNSHTMLFormElement</code></li>
  <li><code>nsIDOMNSHTMLHRElement</code></li>
  <li><code>nsIDOMNSHTMLTextAreaElement</code></li>
@@ -163,7 +163,7 @@ translation_of: Mozilla/Firefox/Releases/7
  <li><code>DITestScriptHelper</code></li>
  <li><code>DWebBrowserEvents</code></li>
  <li><code>DWebBrowserEvents2</code></li>
- <li>{{ interface("IDispatch") }}</li>
+ <li><code>IDispatch</code></li>
  <li><code>IMozControlBridge</code></li>
  <li><code>IMozPluginHostCtrl</code></li>
  <li><code>IWebBrowser</code></li>
@@ -174,7 +174,7 @@ translation_of: Mozilla/Firefox/Releases/7
  <li><code>IXMLElementCollection</code></li>
  <li><code>IXMLError</code></li>
  <li><code>nsIActiveXSecurityPolicy</code></li>
- <li>{{ interface("nsIDispatchSupport") }}</li>
+ <li><code>nsIDispatchSupport</code></li>
  <li><code>nsIMozAxPlugin</code></li>
  <li><code>nsIScriptEventHandler</code></li>
  <li><code>nsIScriptEventManager</code></li>

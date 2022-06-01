@@ -13,14 +13,14 @@ original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 <p>Toda extensión debe contener un archivo llamado <a href="/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#manifest.json">"manifest.json"</a>. Este puede tener enlaces a otros tipos de archivos:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano">Páginas en segundo plano</a>: implementan la lógica de larga ejecución.</li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido">Scripts de contenido</a>: interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).</li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2">Archivos de acción del navegador</a>: implementan los botones de la barra de herramientas.</li>
+ <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano">Páginas en segundo plano</a>: Implementan la lógica de larga ejecución.</li>
+ <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido">Scripts de contenido</a>: Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).</li>
+ <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2">Archivos de acción del navegador</a>: Implementan los botones de la barra de herramientas.</li>
  <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas">Archivos de acción de la página: </a>Implementan botones en la barra de direcciones.</li>
  <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Opciones_de_las_páginas">Páginas de opciones</a>: Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.</li>
  <li>
   <div id="gt-res-content">
-  <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="es"><span><a href="/es/Add-ons/WebExtensions/user_interface/Sidebars">archivos de la barra lateral</a>: agregue una barra lateral al navegador.</span></span></div>
+  <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="es"><span><a href="/es/Add-ons/WebExtensions/user_interface/Sidebars">archivos de la barra lateral</a>: Agregue una barra lateral al navegador.</span></span></div>
   </div>
  </li>
  <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles">Recursos Web accesibles</a>: Hace posible que el contenido empaquetado acceda a páginas web y scripts.</li>
@@ -50,7 +50,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
   "scripts": ["background-script.js"]
 }</pre>
 
-<p>Puedes especificar múltiples scripts en segundo plano: si lo haces, ellos se ejecutarán en el mismo contexto, justo como son cargados múltiples scripts en una página web.</p>
+<p>Puedes especificar múltiples scripts en segundo plano: Si lo haces, ellos se ejecutarán en el mismo contexto, justo como son cargados múltiples scripts en una página web.</p>
 
 <h3 id="Entorno_del_script_en_segundo_plano">Entorno del script en segundo plano</h3>
 
@@ -86,9 +86,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 
 <p>Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin embargo, pueden cargar <a href="/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenido</a> en páginas web, y <a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">comunicarse con esos scripts empleando la API de paso de mensajes</a>.</p>
 
-<h4 id="Políticas_de_segurdiad_para_el_contendio">Políticas de segurdiad para el contendio</h4>
+<h4 id="Políticas_de_seguridad_para_el_contenido">Políticas de seguridad para el contenido</h4>
 
-<p>Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, a través de la  Política de Seguridad del Contenido. Vea la <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Política de Segurdiad del Contenido </a>para más detalles sobre esto.</p>
+<p>Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, a través de la  Política de Seguridad del Contenido. Vea la <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Política de Seguridad del Contenido </a>para más detalles sobre esto.</p>
 
 <h2 id="Scripts_de_contenido">Scripts de contenido</h2>
 

@@ -48,67 +48,7 @@ let result = anchor.search;
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22")}} [3][4]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("22")}} [3][4]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 自Chrome 52起，该属性移至{{domxref('URL')}}</p>
-
-<p>[2] 虽然没有被分在一个独立的抽象接口，但该方法可以在实现了它的那些接口上直接使用，如果支持该接口。</p>
-
-<p>[3] 从Gecko 22 到 Gecko 44，该属性在 <code>URLUtils</code> mixin 上。它已经被移到 <code>HTMLHyperlinkElementUtils</code> mixin，或者直接在这个接口上。</p>
-
-<p>[4] 在 Firefox 53之前， <code>pathname</code> 和<code> search</code> <code>HTMLHyperLinkElementUtils</code> 属性返回的URL部分是错误的。例如，对一个值为 <code>http://z.com/x?a=true&amp;b=false</code> 的URL，<code>pathname</code> 会返回"<code>/x?a=true&amp;b=false"</code> <code>，search</code> 会返回 "", 而不是各自返回 "<code>/x</code>" 和"<code>?a=true&amp;b=false"</code> 。这已经被修正了。</p>
+{{Compat("api.HTMLAnchorElement.search")}}
 
 <h2 id="相关链接">相关链接</h2>
 

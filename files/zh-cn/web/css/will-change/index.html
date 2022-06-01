@@ -5,7 +5,7 @@ translation_of: Web/CSS/will-change
 ---
 <div>{{ CSSRef() }}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary"><a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <code>will-change</code> 为web开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。</span> 这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <code>will-change</code> 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。</p>
 
 <p>用好这个属性并不是很容易：</p>
 
@@ -113,52 +113,4 @@ function removeHint() {
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(36)}}</td>
-   <td>{{CompatGeckoDesktop(36)}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(24)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>37</td>
-   <td>{{CompatGeckoMobile(36)}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Firefox 31 到 35 中，需要在 <code>about:config</code> 中开启 <code>layout.css.will-change.enabled</code> 选项。</p>
+{{Compat("css.properties.will-change")}}

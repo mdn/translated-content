@@ -10,12 +10,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 <div>{{JSRef("Global_Objects", "Function")}}</div>
 
-<div><code><strong><em>function</em>.name</strong></code> 属性返回函数实例的名称。</div>
+<div><code>function.name</code> 属性返回函数实例的名称。</div>
 
 <p>{{js_property_attributes(0,0,1)}}</p>
 
 <div class="note">
-<p>请注意，在非标准的ES2015之前的实现中，<code>configurable</code>属性也是<code>false</code> 。</p>
+<p><strong>备注：</strong>在非标准的 ES2015 之前的实现中，<code>configurable</code>属性也是<code>false</code> 。</p>
 </div>
 
 <h2 id="示例">示例</h2>
@@ -36,7 +36,7 @@ doSomething.name;  // "doSomething"
 
 <h3 id="推断函数名称">推断函数名称</h3>
 
-<p>变量和方法可以从句法位置推断匿名函数的名称（ECMAScript 2015中新增）。</p>
+<p>变量和方法可以从句法位置推断匿名函数的名称（ECMAScript 2015 中新增）。</p>
 
 <pre class="brush: js">var f = function() {};
 var object = {
@@ -46,7 +46,7 @@ var object = {
 console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"</pre>
 
-<p style="color: rgb(77, 78, 83);">你可以在 {{jsxref("Operators/Function", "函数表达式", "", 1)}}中定义函数的名称:</p>
+<p>你可以在 {{jsxref("Operators/Function", "函数表达式", "", 1)}}中定义函数的名称：</p>
 
 <pre class="brush:js">var object = {
   someMethod: function object_someMethod() {}
@@ -59,10 +59,6 @@ try { object_someMethod } catch(e) { alert(e); }
 </pre>
 
 <p>你不能更改函数的名称，此属性是只读的：</p>
-
-<div class="hidden">
-<p>Example below contradicts with what is said at the beginning of this section and doesn't work as described.</p>
-</div>
 
 <pre class="brush: js">var object = {
   // anonymous
@@ -90,7 +86,7 @@ foo.bind({}).name; // "bound foo"</pre>
 
 <h3 id="getters_和_setters_的函数名">getters 和 setters 的函数名</h3>
 
-<p>当通过 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/get">get</a></code> 和 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/set">set</a></code> 访问器来存取属性时, "get" 或 "set" 会出现在函数名称前。</p>
+<p>当通过 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/get">get</a></code> 和 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/set">set</a></code> 访问器来存取属性时，"get" 或 "set" 会出现在函数名称前。</p>
 
 <pre class="brush: js">var o = {
   get foo(){},
@@ -111,7 +107,7 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"</pre>
 
 <div class="warning">
-<p><strong>警告：</strong>脚本解释器只有在函数没有名为name的属性时才会设置内置的<code>Function.name</code>属性（参见 <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">9.2.11 of the ECMAScript2015 Language Specification</a>）。但是，ES2015规定由关键字<em>static</em>修饰的静态方法也会被认为是类的属性（ECMAScript2015, <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation">14.5.14.21.b</a> + <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation">12.2.6.9</a>）。</p>
+<p><strong>警告：</strong>脚本解释器只有在函数没有名为 name 的属性时才会设置内置的<code>Function.name</code>属性（参见 <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">9.2.11 of the ECMAScript2015 Language Specification</a>）。但是，ES2015 规定由关键字<em>static</em>修饰的静态方法也会被认为是类的属性（ECMAScript2015, <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation">14.5.14.21.b</a> + <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation">12.2.6.9</a>）。</p>
 </div>
 
 <p>因此，我们无法获取具有静态方法属性<code>name()</code>的几乎任何类的类名称：</p>
@@ -122,7 +118,7 @@ console.log(fooInstance.constructor.name); // logs "Foo"</pre>
 }
 </pre>
 
-<p>使用<code>static name()</code>方法<code>Foo.name</code>不再保存实际的类名称，而是引用<code>name()</code>函数对象。 ES2015语法中的上述类定义将在Chrome或Firefox中运行，类似于ES5语法中的以下代码段：</p>
+<p>使用<code>static name()</code>方法<code>Foo.name</code>不再保存实际的类名称，而是引用<code>name()</code>函数对象。 ES2015 语法中的上述类定义将在 Chrome 或 Firefox 中运行，类似于 ES5 语法中的以下代码段：</p>
 
 <pre class="brush: js">function Foo() {}
 Object.defineProperty(Foo, 'name', { writable: true });
@@ -134,18 +130,18 @@ Foo.name = function() {};
 <pre class="brush: js">var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs function name()</pre>
 
-<p>你也可以从ES5语法示例中看到，在Chrome或Firefox的中静态定义的<code>Foo.name</code>变得可写。内置定义在没有自定义静态定义时是只读的：</p>
+<p>你也可以从 ES5 语法示例中看到，在 Chrome 或 Firefox 的中静态定义的<code>Foo.name</code>变得可写。内置定义在没有自定义静态定义时是只读的：</p>
 
 <pre class="brush: js">Foo.name = 'Hello';
 console.log(Foo.name);
-//如果Foo具有静态name()属性，则输出“Hello”，否则为“Foo”
+//如果 Foo 具有静态 name() 属性，则输出“Hello”，否则为“Foo”
 </pre>
 
 <p>因此，你不能依赖内置的<code>Function.name</code>属性来保持一个类的名称。</p>
 
-<h3 id="Symbol作为函数名称">Symbol作为函数名称</h3>
+<h3 id="Symbol作为函数名称">Symbol 作为函数名称</h3>
 
-<p>如果{{jsxref("Symbol")}} 被用于函数名称，并且这个symbol具有相应的描述符，那么方法的名字就是方括号中的描述符。</p>
+<p>如果{{jsxref("Symbol")}} 被用于函数名称，并且这个 symbol 具有相应的描述符，那么方法的名字就是方括号中的描述符。</p>
 
 <pre class="brush: js">var sym1 = Symbol("foo");
 var sym2 = Symbol();
@@ -161,10 +157,10 @@ o[sym2].name; // ""
 <h2 id="JavaScript_压缩和_minifiers">JavaScript 压缩和 minifiers</h2>
 
 <div class="warning">
-<p><strong>警告：</strong>当使用<code>Function.name</code>和那些JavaScript压缩器（minifiers）或混淆器进行源码转换时要小心。这些工具通常用作JavaScript构建管道的一部分，以在程序部署到生产之前减少程序的大小。但这种转换通常会在构建时更改函数的名称。</p>
+<p><strong>警告：</strong>当使用<code>Function.name</code>和那些 JavaScript 压缩器（minifiers）或混淆器进行源码转换时要小心。这些工具通常用作 JavaScript 构建管道的一部分，以在程序部署到生产之前减少程序的大小。但这种转换通常会在构建时更改函数的名称。</p>
 </div>
 
-<p>例如下面的代码:</p>
+<p>例如下面的代码：</p>
 
 <pre class="brush: js">function Foo() {};
 var foo = new Foo();
@@ -175,7 +171,7 @@ if (foo.constructor.name === 'Foo') {
   console.log('Oops!');
 }</pre>
 
-<p>可能被压缩为:</p>
+<p>可能被压缩为：</p>
 
 <pre class="brush: js">function a() {};
 var b = new a();
@@ -186,9 +182,8 @@ if (b.constructor.name === 'Foo') {
 }
 </pre>
 
-<p>在未压缩版本中，程序运行到真实分支并打印<code>'foo' is an instance of 'Foo'</code>。 而在压缩版本中，它的行为不同，并且进入else分支。如果您依赖于<code>Function.name</code>，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。</p>
+<p>在未压缩版本中，程序运行到真实分支并打印<code>'foo' is an instance of 'Foo'</code>。 而在压缩版本中，它的行为不同，并且进入 else 分支。如果您依赖于<code>Function.name</code>，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。</p>
 
-<article>
 <h2 id="规范">规范</h2>
 
 <table class="standard-table">
@@ -214,4 +209,3 @@ if (b.constructor.name === 'Foo') {
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Function.name")}}</p>
-</article>

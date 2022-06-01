@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p><strong><code>WebAssembly.compile()</code></strong> 方法编译WebAssembly二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）</p>
+<p><strong><code>WebAssembly.compile()</code></strong> 方法编译 WebAssembly 二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 
 <dl>
  <dt><em>bufferSource</em></dt>
- <dd>一个包含你想编译的wasm模块二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>(类型数组) or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(数组缓冲区)</dd>
+ <dd>一个包含你想编译的 wasm 模块二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>(类型数组) or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(数组缓冲区)</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子 (查看GitHub上的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> 例子, 并且也能 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html">查看运行效果</a>) 使用 <code>compile()</code> 方法编译加载进来的 simple.wasm 二进制代码并且使用 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 发送给一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>。</p>
+<p>下面的例子 (查看 GitHub 上的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> 例子，并且也能 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html">查看运行效果</a>) 使用 <code>compile()</code> 方法编译加载进来的 simple.wasm 二进制代码并且使用 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 发送给一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>。</p>
 
 <pre class="brush: js">var worker = new Worker("wasm_worker.js");
 
@@ -84,7 +84,7 @@ onmessage = function(e) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 

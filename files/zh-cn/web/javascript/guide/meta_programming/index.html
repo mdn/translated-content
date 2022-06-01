@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}</div>
 
-<p class="summary">从ECMAScript 2015 开始，JavaScript 获得了 {{jsxref("Proxy")}} 和 {{jsxref("Reflect")}} 对象的支持，允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）。借助这两个对象，你可以在 JavaScript 元级别进行编程。</p>
+<p>从 ECMAScript 2015 开始，JavaScript 获得了 {{jsxref("Proxy")}} 和 {{jsxref("Reflect")}} 对象的支持，允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）。借助这两个对象，你可以在 JavaScript 元级别进行编程。</p>
 
 <h2 id="代理">代理</h2>
 
 <p>在 ECMAScript 6 中引入的 {{jsxref("Proxy")}} 对象可以拦截某些操作并实现自定义行为。例如获取一个对象上的属性：</p>
 
-<pre class="brush: js notranslate">let handler = {
+<pre class="brush: js">let handler = {
   get: function(target, name){
     return name in target ? target[name] : 42;
 }};
@@ -204,7 +204,7 @@ console.log(p.a, p.b); // 1, 42
 
 <p>{{jsxref("Proxy.revocable()")}} 方法被用来创建可撤销的 <code>Proxy</code> 对象。这意味着 proxy 可以通过 <code>revoke</code> 函数来撤销，并且关闭代理。此后，代理上的任意的操作都会导致{{jsxref("TypeError")}}。</p>
 
-<pre class="brush: js notranslate">var revocable = Proxy.revocable({}, {
+<pre class="brush: js">var revocable = Proxy.revocable({}, {
   get: function(target, name) {
     return "[[" + name + "]]";
   }
@@ -227,18 +227,18 @@ typeof proxy            // "object", typeof doesn't trigger any trap</pre>
 
 <p>以 {{jsxref("Reflect.has()")}} 为例，你可以将 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> 运算符</a>作为函数：</p>
 
-<pre class="brush: js notranslate">Reflect.has(Object, "assign"); // true
+<pre class="brush: js">Reflect.has(Object, "assign"); // true
 </pre>
 
 <h3 id="更好的_apply_函数">更好的 <code>apply</code> 函数</h3>
 
 <p>在 ES5 中，我们通常使用 {{jsxref("Function.prototype.apply()")}} 方法调用一个具有给定 <code>this</code> 值和 <code>arguments</code> 数组（或<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">类数组对象</a>）的函数。</p>
 
-<pre class="brush: js notranslate">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+<pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
 
 <p>使用 {{jsxref("Reflect.apply")}}，这变得不那么冗长和容易理解：</p>
 
-<pre class="brush: js notranslate">Reflect.apply(Math.floor, undefined, [1.75]);
+<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
@@ -254,7 +254,7 @@ Reflect.apply(''.charAt, 'ponies', [3]);
 
 <p>使用 {{jsxref("Object.defineProperty")}}，如果成功返回一个对象，否则抛出一个 {{jsxref("TypeError")}}，你将使用 {{jsxref("Statements/try...catch","try...catch")}} 块来捕获定义属性时发生的任何错误。因为 {{jsxref("Reflect.defineProperty")}} 返回一个布尔值表示的成功状态，你可以在这里使用 {{jsxref("Statements/if...else","if...else")}} 块：</p>
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure

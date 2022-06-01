@@ -12,7 +12,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
  <tbody>
   <tr>
    <th scope="row">Prerrequisitos:</th>
-   <td>Conocimientos básicos de informática, tener el <a href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico">software básico</a> instalado, conocimientos básicos de cómo <a href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos">trabajar con archivos</a>, conocimientos básicos de HTML (véase <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción al HTML</a>) y nociones de CSS (véase <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).</td>
+   <td>Conocimientos básicos de informática, tener el <a href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software">software básico</a> instalado, conocimientos básicos de cómo <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files">trabajar con archivos</a>, conocimientos básicos de HTML (véase <a href="/es/docs/Learn/HTML/Introduction_to_HTML">Introducción al HTML</a>) y nociones de CSS (véase <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -53,7 +53,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>En este punto, será mejor que también expliquemos los tipos de visualización <strong>interna</strong> y <strong>externa</strong>. Como se mencionó anteriormente, las cajas en CSS tienen un tipo de visualización <em>externa</em>, que define si se trata de una caja en bloque o en línea.</p>
 
-<p>Sin embargo, las cajas también tienen un tipo de visualización <em>interna</em>, que determina cómo se disponen los elementos dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en <strong><a href="/es/docs/Learn/CSS/CSS_layout/Flujo_normal">flujo normal</a></strong>, lo que significa que se comportan como otros elementos de tipo en bloque o en línea (como se explicó anteriormente).</p>
+<p>Sin embargo, las cajas también tienen un tipo de visualización <em>interna</em>, que determina cómo se disponen los elementos dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en <strong><a href="/es/docs/Learn/CSS/CSS_layout/Normal_Flow">flujo normal</a></strong>, lo que significa que se comportan como otros elementos de tipo en bloque o en línea (como se explicó anteriormente).</p>
 
 <p>Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de <code>display</code>, como <code>flex</code>. Si en un elemento establecemos <code>display: flex;</code>, el tipo de visualización externa es de tipo bloque (<code>block</code>), pero el tipo de visualización interna cambia a flexible (<code>flex</code>). Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo con las reglas que se establecen en la especificación de <a href="/es/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, tema que veremos más adelante.</p>
 
@@ -106,7 +106,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>El diagrama siguiente muestra estas capas:</p>
 
-<p><img alt="Diagrama del modelo de cajas" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+<p><img alt="Diagrama del modelo de cajas" src="https://mdn.mozillademos.org/files/16558/box-model.png"></p>
 
 <h3 id="El_modelo_de_cajas_CSS_estándar">El modelo de cajas CSS estándar</h3>
 
@@ -125,7 +125,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.</p>
 
-<p><img alt="Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar." src="https://mdn.mozillademos.org/files/16559/standard-box-model.png" style="height: 300px; width: 500px;"></p>
+<p><img alt="Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar." src="https://mdn.mozillademos.org/files/16559/standard-box-model.png"></p>
 
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: El margen no se cuenta para el tamaño real de la caja; por supuesto, afecta al espacio total que la caja ocupa en la página, pero solo al espacio de fuera de la caja. El área de la caja se termina en el borde, no se extiende hasta el margen.</p>
@@ -135,7 +135,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>Podrías pensar que es más bien incómodo tener que sumar el borde y el área de relleno para obtener el tamaño real de la caja, ¡y tienes razón! Por este motivo, CSS introdujo un modelo de caja alternativo algún tiempo después del modelo de cajas estándar. Con este modelo, cualquier ancho es el ancho de la caja visible en la página, por lo tanto, el ancho del área de contenido es ese ancho menos el ancho para el relleno y el borde. El mismo CSS que hemos usado antes daría entonces el resultado siguiente (ancho = 350 px, altura = 150 px).</p>
 
-<p><img alt="Mostrar el tamaño de la caja cuando se usa el modelo de cajas alternativo." src="https://mdn.mozillademos.org/files/16557/alternate-box-model.png" style="height: 240px; width: 440px;"></p>
+<p><img alt="Mostrar el tamaño de la caja cuando se usa el modelo de cajas alternativo." src="https://mdn.mozillademos.org/files/16557/alternate-box-model.png"></p>
 
 <p>Por defecto, los navegadores usan el modelo de cajas estándar. Si deseas activar el modelo de cajas alternativo para un elemento, hazlo configurando <code>box-sizing: border-box</code>. Con ello, le dices al navegador que tome como el borde de la caja el área definida por cualquier tamaño que establezcas.</p>
 
@@ -172,7 +172,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>Las <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">herramientas del desarrollador de tu navegador</a> pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.</p>
 
-<p><img alt="Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools" src="https://mdn.mozillademos.org/files/16560/box-model-devtools.png" style="height: 683px; width: 1150px;"></p>
+<p><img alt="Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools" src="https://mdn.mozillademos.org/files/16560/box-model-devtools.png"></p>
 
 <h2 id="Márgenes_relleno_y_bordes">Márgenes, relleno y bordes</h2>
 
@@ -207,7 +207,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}} </p>
 
-<p>Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre <a href="/es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing">entender el colapso de márgenes</a>. Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.</p>
+<p>Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre <a href="/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">entender el colapso de márgenes</a>. Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.</p>
 
 <h3 id="Bordes">Bordes</h3>
 
@@ -259,7 +259,7 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <p>El relleno se encuentra entre el borde y el área de contenido. A diferencia de los márgenes, el relleno no puede tomar valores negativos, por lo que el valor debe ser 0 o positivo. Cualquier fondo aplicado a tu elemento se mostrará detrás del área de relleno y, generalmente, se usa para mantener el contenido alejado del borde.</p>
 
-<p>Podemos controlar el área de relleno para todos los lados de un mismo elemento usando la propiedad {{cssxref ("padding")}}, o para cada lado uno de los lados usando las propiedades equivalentes:</p>
+<p>Podemos controlar el área de relleno para todos los lados de un mismo elemento usando la propiedad {{cssxref ("padding")}}, o para cada uno de los lados usando las propiedades equivalentes:</p>
 
 <ul>
  <li>{{cssxref("padding-top")}}</li>
@@ -309,13 +309,13 @@ original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 
 <h2 id="Pon_a_prueba_tus_habilidades">Pon a prueba tus habilidades</h2>
 
-<p>Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más relevante? Encontrarás más pruebas para verificar que has retenido esa información en <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
+<p>Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más relevante? Encontrarás más pruebas para verificar que has retenido esa información en <a href="/es/docs/Learn/CSS/Building_blocks/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
 
 <h2 id="Resumen">Resumen</h2>
 
 <p>Eso es lo que hay que entender sobre el modelo de cajas. Es posible que en el futuro desees volver a este artículo si alguna vez te lías con los tamaños de las cajas en la disposición de tu página web.</p>
 
-<p>En el artículo siguiente veremos cómo se pueden usar los <a href="/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes">fondos y bordes</a> para hacer que tus simples cajas presenten un aspecto más interesante.</p>
+<p>En el artículo siguiente veremos cómo se pueden usar los <a href="/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">fondos y bordes</a> para hacer que tus simples cajas presenten un aspecto más interesante.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}</p>
 

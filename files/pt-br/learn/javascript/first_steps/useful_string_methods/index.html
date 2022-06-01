@@ -170,7 +170,7 @@ browserType.length;</pre>
 <h3 id="Encontrando_uma_substring_dentro_de_uma_string_e_extraindo-a">Encontrando uma substring dentro de uma string e extraindo-a</h3>
 
 <ol>
- <li>Às vezes você quer sabe se uma string menor está presente dentro de uma maior (geralmente dizemos <em>se uma substring está presente dentro de uma string</em>). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
+ <li>Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos <em>se uma substring está presente dentro de uma string</em>). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
 
   <pre class="brush: js">browserType.indexOf('zilla');</pre>
   Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2  — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".</li>

@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLElement/outerText
 
 ## Résumé
 
-**`HTMLElement.outerText`** n'est pas une propriété standard. En lecture, elle renvoie la même valeur que {{domxref("Node.innerText")}}. En écriture, elle supprime le noeud courant et le remplace par le texte fourni.
+**`HTMLElement.outerText`** n'est pas une propriété standard. En lecture, elle renvoie la même valeur que {{domxref("Node.innerText")}}. En écriture, elle supprime le noeud courant et le remplace par le texte fourni.
 
 ## Exemple
 

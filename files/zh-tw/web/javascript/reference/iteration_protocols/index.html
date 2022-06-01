@@ -71,8 +71,8 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
  </tbody>
 </table>
 
-<div class="note">
-<p>我們無法反射性的一眼看出一個特定的物件是否實作了迭代器協議，然而要建立一個同時滿足迭代器及可迭代協議的物件卻是相當容易（如下例所示）。範例的做法允許一個迭代器被各個預期其可迭代行為的語法所消費。因此很少有需要實作迭代器協議而沒有實作可迭代協議的情況。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>我們無法反射性的一眼看出一個特定的物件是否實作了迭代器協議，然而要建立一個同時滿足迭代器及可迭代協議的物件卻是相當容易（如下例所示）。範例的做法允許一個迭代器被各個預期其可迭代行為的語法所消費。因此很少有需要實作迭代器協議而沒有實作可迭代協議的情況。</p>
 
 <pre class="brush: js">var myIterator = {
     next: function() {

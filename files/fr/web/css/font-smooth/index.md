@@ -28,7 +28,7 @@ font-smooth: 2em;
 >
 > - `auto` : c'est le navigateur qui décide la meilleure approche
 > - `none` - l'anti-crénelage est désactivé.
-> - `antialiased `- lisse les caractères au niveau du pixel (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.
+> - `antialiased` - lisse les caractères au niveau du pixel (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.
 > - `subpixel-antialiased` - sur la plupart des affichages non-Retina, cela donnera le texte le plus lisse.
 
 > **Note :** Firefox implémente **`-moz-osx-font-smoothing`** avec d'autres valeurs, **là aussi c'est une propriété non-standard qui ne devrait pas être utilisée**.

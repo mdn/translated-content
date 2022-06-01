@@ -121,7 +121,7 @@ var objectStore = transaction.objectStore("toDoList");
 // Ajoute l'enregistrement au magasin d'objet
 var objectStoreRequest = objectStore.add(newItem[0]);
 
-//l'enregistrement c'est bien passé.
+//l'enregistrement s'est bien passé.
 objectStoreRequest.onsuccess = function(event) {
   note.innerHTML += '<li>L\'enregistrement à été ajouté au magasin d\'objet.</li>';
 }
@@ -133,7 +133,7 @@ objectStoreRequest.onsuccess = function(event) {
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

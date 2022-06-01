@@ -1,0 +1,46 @@
+---
+title: WebSocket.onclose
+slug: Web/API/WebSocket/close_event
+tags:
+  - API
+  - Eigenschaft
+  - Referenz
+  - Web API
+  - WebSocket
+translation_of: Web/API/WebSocket/onclose
+original_slug: Web/API/WebSocket/onclose
+---
+<p>{{APIRef("Web Sockets API")}}</p>
+
+<p>Die Eigenschaft <code><strong>WebSocket.onclose</strong></code> ist ein {{event("Event_handlers", "event handler")}}, der aufgerufen wird, wenn die Eigenschaft {{domxref("WebSocket.readyState","WebSocket.readyState")}} zu {{domxref("WebSocket.readyState","CLOSED")}} geändert bzw. die Verbindung geschlossen wird.</p>
+
+<p>Als Parameter übergeben wird ein {{domxref("CloseEvent")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>aWebSocket</em>.onclose = function(event) {
+  console.log("WebSocket is closed now.");
+};</pre>
+
+<h2 id="Wert">Wert</h2>
+
+<p>Ein {{domxref("EventListener")}}.</p>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onclose', 'WebSocket: onclose')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>

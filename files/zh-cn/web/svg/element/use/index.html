@@ -3,7 +3,7 @@ title: use
 slug: Web/SVG/Element/use
 tags:
   - SVG
-  - SVG图形
+  - SVG 图形
   - 元素
   - 参考
   - 需要浏览器兼容性
@@ -11,9 +11,9 @@ translation_of: Web/SVG/Element/use
 ---
 <div>{{SVGRef}}</div>
 
-<p><code>use</code>元素在SVG文档内取得目标节点，并在别的地方复制它们。它的效果等同于这些节点被深克隆到一个不可见的DOM中，然后将其粘贴到<code>use</code>元素的位置，很像HTML5中的克隆<a href="/en-US/docs/Web/HTML/Element/template">模板元素</a>。因为克隆的节点是不可见的，所以当使用<a href="/en/CSS">CSS</a>样式化一个<code>use</code>元素以及它的隐藏的后代元素的时候，必须小心注意。隐藏的、克隆的DOM不能保证继承CSS属性，除非你明文设置使用<a href="/en/CSS/inheritance">CSS继承</a>。</p>
+<p><code>use</code>元素在 SVG 文档内取得目标节点，并在别的地方复制它们。它的效果等同于这些节点被深克隆到一个不可见的 DOM 中，然后将其粘贴到<code>use</code>元素的位置，很像 HTML5 中的克隆<a href="/en-US/docs/Web/HTML/Element/template">模板元素</a>。因为克隆的节点是不可见的，所以当使用<a href="/en/CSS">CSS</a>样式化一个<code>use</code>元素以及它的隐藏的后代元素的时候，必须小心注意。隐藏的、克隆的 DOM 不能保证继承 CSS 属性，除非你明文设置使用<a href="/en/CSS/inheritance">CSS 继承</a>。</p>
 
-<p>出于安全原因，一些浏览器可能在use元素上应用同源策略，还有可能拒绝载入xlink:href属性内的跨源URI。</p>
+<p>出于安全原因，一些浏览器可能在 use 元素上应用同源策略，还有可能拒绝载入 xlink:href 属性内的跨源 URI。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -51,7 +51,7 @@ translation_of: Web/SVG/Element/use
  <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">核心属性</a> »</li>
  <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
  <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Xlink属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
  <li>{{ SVGAttr("class") }}</li>
  <li>{{ SVGAttr("style") }}</li>
  <li>{{ SVGAttr("externalResourcesRequired") }}</li>
@@ -68,88 +68,10 @@ translation_of: Web/SVG/Element/use
  <li>{{ SVGAttr("xlink:href") }}</li>
 </ul>
 
-<h2 id="DOM接口">DOM接口</h2>
+<h2 id="DOM_接口">DOM 接口</h2>
 
 <p>该元素实现了<code><a href="/en/DOM/SVGUseElement" title="en/DOM/SVGUseElement">SVGUseElement</a></code>接口。</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Load from external URI</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatNo()}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Load from data: URI</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("10.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Load from external URI</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Load from data: URI</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("svg.elements.use")}}

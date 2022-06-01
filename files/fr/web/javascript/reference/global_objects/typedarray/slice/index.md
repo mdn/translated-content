@@ -21,7 +21,9 @@ La méthode **`slice()`** renvoie une copie superficielle (shallow copy) d'un fr
 
 ## Syntaxe
 
-    typedarray.slice([début[, fin]])
+```js
+typedarray.slice([début[, fin]])
+```
 
 ## Paramètres
 
@@ -74,7 +76,7 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

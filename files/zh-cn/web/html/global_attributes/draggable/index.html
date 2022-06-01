@@ -7,16 +7,16 @@ translation_of: Web/HTML/Global_attributes/draggable
 ---
 <p class="note">{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}</p>
 
-<p><a href="/zh-CN/docs/Web/HTML/Global_attributes" style="text-decoration: underline;">全局属性</a> <strong>draggable</strong> 是一个枚举类型的属性，用于标识元素是否允许使用 <a href="/zh-CN/docs/DragDrop/Drag_and_Drop" title="https://developer.mozilla.org/En/DragDrop/Drag_and_Drop">拖放操作API</a> 拖动。它的取值如下：</p>
+<p><a href="/zh-CN/docs/Web/HTML/Global_attributes" style="text-decoration: underline;">全局属性</a> <strong>draggable</strong> 是一个枚举类型的属性，用于标识元素是否允许使用 <a href="/zh-CN/docs/DragDrop/Drag_and_Drop" title="https://developer.mozilla.org/En/DragDrop/Drag_and_Drop">拖放操作 API</a> 拖动。它的取值如下：</p>
 
 <ul>
- <li><span style="font-family: Courier New;">true，表示元素可以被拖动</span></li>
- <li><span style="font-family: Courier New;">false，表示元素不可以被拖动</span></li>
+ <li>true，表示元素可以被拖动</li>
+ <li>false，表示元素不可以被拖动</li>
 </ul>
 
-<p>如果该属性没有设值，则默认值 为 <span style="font-family: Courier New;">auto ，表示使用浏览器定义的默认行为。</span></p>
+<p>如果该属性没有设值，则默认值 为 auto ，表示使用浏览器定义的默认行为。</p>
 
-<p>这个属性是<em>枚举类型</em>，而不是 <em>布尔类型</em> 。这意味着必须显式指定值为 <span style="font-family: Courier New;">true</span> 或者 <span style="font-family: Courier New;">false</span> ，像 <code>&lt;label draggable&gt;Example Label&lt;/label&gt; 这样的简写是不允许的。正确的用法是</code> <code>&lt;label draggable="true"&gt;Example Label&lt;/label&gt;。</code></p>
+<p>这个属性是<em>枚举类型</em>，而不是 <em>布尔类型</em> 。这意味着必须显式指定值为 true 或者 false ，像 <code>&lt;label draggable&gt;Example Label&lt;/label&gt; 这样的简写是不允许的。正确的用法是</code> <code>&lt;label draggable="true"&gt;Example Label&lt;/label&gt;。</code></p>
 
 <p>默认情况下，只有已选中的文本、图片、链接可以拖动。对其它的元素来说，必须按拖动机制的顺序设置 <strong>ondragstart</strong> 事件才能正常工作， 见 <a href="/zh-CN/docs/DragDrop/Drag_Operations" title="https://developer.mozilla.org/En/DragDrop/Drag_Operations">综合示例</a> 。</p>
 
@@ -44,55 +44,7 @@ translation_of: Web/HTML/Global_attributes/draggable
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.draggable")}}
 
 <h2 id="参考资料">参考资料</h2>
 

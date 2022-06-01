@@ -9,98 +9,95 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 <div>{{JSRef}} </div>
 
-<p><strong>symbol</strong> 是一种基本数据类型 （{{Glossary("Primitive", "primitive data type")}}）。<code>Symbol()</code>函数会返回<strong>symbol</strong>类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的symbol注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："<code>new Symbol()</code>"。</p>
+<p><strong>symbol</strong> 是一种基本数据类型（{{Glossary("Primitive", "primitive data type")}}）。<code>Symbol()</code> 函数会返回 <strong>symbol</strong> 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："<code>new Symbol()</code>"。</p>
 
-<p>每个从<code>Symbol()</code>返回的symbol值都是唯一的。一个symbol值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见—— <a href="https://developer.mozilla.org/en-US/docs/Glossary/Symbol">glossary entry for Symbol</a>。</p>
+<p>每个从 <code>Symbol()</code> 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见—— <a href="https://developer.mozilla.org/en-US/docs/Glossary/Symbol">glossary entry for Symbol</a>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-constructor.html")}}</div>
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Symbol(<em>[description]</em>)</code></pre>
+<pre class="syntaxbox"><code>Symbol(<em>[description]</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>description</code> {{optional_inline}}</dt>
- <dd>可选的，字符串类型。对symbol的描述，可用于调试但不是访问symbol本身。</dd>
+ <dd>可选的，字符串类型。对 symbol 的描述，可用于调试但不是访问 symbol 本身。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>直接使用<code>Symbol()</code>创建新的symbol类型，并用一个可选的字符串作为其描述。</p>
+<p>直接使用<code>Symbol()</code>创建新的 symbol 类型，并用一个可选的字符串作为其描述。</p>
 
-<pre class="brush: js notranslate">var sym1 = Symbol();
+<pre class="brush: js">var sym1 = Symbol();
 var sym2 = Symbol('foo');
 var sym3 = Symbol('foo');
 </pre>
 
-<p>上面的代码创建了三个新的symbol类型。 注意，<code>Symbol("foo")</code> 不会强制将字符串 “foo” 转换成symbol类型。它每次都会创建一个新的 symbol类型：</p>
+<p>上面的代码创建了三个新的 symbol 类型。 注意，<code>Symbol("foo")</code> 不会强制将字符串 “foo” 转换成 symbol 类型。它每次都会创建一个新的 symbol 类型：</p>
 
-<pre class="brush: js notranslate">Symbol("foo") === Symbol("foo"); // false</pre>
+<pre class="brush: js">Symbol("foo") === Symbol("foo"); // false</pre>
 
 <p>下面带有 {{jsxref("Operators/new", "new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：</p>
 
-<pre class="brush: js notranslate">var sym = new Symbol(); // TypeError</pre>
+<pre class="brush: js">var sym = new Symbol(); // TypeError</pre>
 
-<p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code style="font-style: normal;">new Boolean</code>、<code style="font-style: normal;">new String</code>以及<span style="font-family: consolas,monaco,andale mono,monospace;"><code>new Number</code>，因为遗留原因仍可被创建。</span></p>
+<p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code>new Boolean</code>、<code>new String</code>以及<code>new Number</code>，因为遗留原因仍可被创建。</p>
 
-<p>如果你真的想创建一个 <u>Symbol 包装器对象 </u>(<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
+<p>如果你真的想创建一个 <u>Symbol 包装器对象</u> (<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
 
-<pre class="brush: js notranslate">var sym = Symbol("foo");
+<pre class="brush: js">var sym = Symbol("foo");
 typeof sym;     // "symbol"
 var symObj = Object(sym);
 typeof symObj;  // "object"</pre>
 
 <h3 id="全局共享的_Symbol">全局共享的 Symbol</h3>
 
-<p>上面使用<code>Symbol()</code> 函数的语法，不会在你的整个代码库中创建一个可用的全局的symbol类型。 要创建跨文件可用的symbol，甚至跨域（每个都有它自己的全局作用域） , 使用 {{jsxref("Symbol.for()")}} 方法和  {{jsxref("Symbol.keyFor()")}} 方法从全局的symbol注册表设置和取得symbol。</p>
+<p>上面使用 <code>Symbol()</code> 函数的语法，不会在你的整个代码库中创建一个可用的全局的 symbol 类型。要创建跨文件可用的 symbol，甚至跨域（每个都有它自己的全局作用域），使用 {{jsxref("Symbol.for()")}} 方法和 {{jsxref("Symbol.keyFor()")}} 方法从全局的 symbol 注册表设置和取得 symbol。</p>
 
 <h3 id="在对象中查找_Symbol_属性">在对象中查找 Symbol 属性</h3>
 
-<p>{{jsxref("Object.getOwnPropertySymbols()")}} 方法让你在查找一个给定对象的符号属性时返回一个symbol类型的数组。注意，每个初始化的对象都是没有自己的symbol属性的，因此这个数组可能为空，除非你已经在对象上设置了symbol属性。</p>
+<p>{{jsxref("Object.getOwnPropertySymbols()")}} 方法让你在查找一个给定对象的符号属性时返回一个 symbol 类型的数组。注意，每个初始化的对象都是没有自己的 symbol 属性的，因此这个数组可能为空，除非你已经在对象上设置了 symbol 属性。</p>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt><code>Symbol.length</code></dt>
- <dd>长度属性，值为0。</dd>
+ <dd>长度属性，值为 0。</dd>
  <dt>{{jsxref("Symbol.prototype")}}</dt>
- <dd><code>symbol</code>构造函数的原型。</dd>
+ <dd><code>symbol</code> 构造函数的原型。</dd>
 </dl>
 
 <h3 id="众所周知的_symbols">众所周知的 symbols</h3>
 
-<p>除了自己创建的symbol，JavaScript还内建了一些在ECMAScript 5 之前没有暴露给开发者的symbol，它们代表了内部语言行为。它们可以使用以下属性访问：</p>
+<p>除了自己创建的 symbol，JavaScript 还内建了一些在 ECMAScript 5 之前没有暴露给开发者的 symbol，它们代表了内部语言行为。它们可以使用以下属性访问：</p>
 
 <dl>
  <dt>
- <h4 id="迭代_symbols">迭代 symbols</h4>
+  迭代 symbols {{jsxref("Symbol.iterator")}}
  </dt>
- <dt>{{jsxref("Symbol.iterator")}}</dt>
  <dd>一个返回一个对象默认迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 使用。</dd>
  <dt>{{jsxref("Symbol.asyncIterator")}} {{experimental_inline}}</dt>
  <dd>一个返回对象默认的异步迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of">for await of</a></code> 使用。</dd>
  <dt>
- <h4 id="正则表达式_symbols">正则表达式 symbols</h4>
+  正则表达式 symbols {{jsxref("Symbol.match")}}
  </dt>
- <dt>{{jsxref("Symbol.match")}}</dt>
  <dd>一个用于对字符串进行匹配的方法，也用于确定一个对象是否可以作为正则表达式使用。被 {{jsxref("String.prototype.match()")}} 使用。</dd>
  <dt>{{jsxref("Symbol.replace")}}</dt>
- <dd>一个替换匹配字符串的子串的方法. 被 {{jsxref("String.prototype.replace()")}} 使用。</dd>
+ <dd>一个替换匹配字符串的子串的方法。被 {{jsxref("String.prototype.replace()")}} 使用。</dd>
  <dt>{{jsxref("Symbol.search")}}</dt>
- <dd>一个返回一个字符串中与正则表达式相匹配的索引的方法。被{{jsxref("String.prototype.search()")}} 使用。</dd>
+ <dd>一个返回一个字符串中与正则表达式相匹配的索引的方法。被 {{jsxref("String.prototype.search()")}} 使用。</dd>
  <dt>{{jsxref("Symbol.split")}}</dt>
  <dd>一个在匹配正则表达式的索引处拆分一个字符串的方法.。被 {{jsxref("String.prototype.split()")}} 使用。</dd>
  <dt>
- <h4 id="其他_symbols">其他 symbols</h4>
+  其他 symbols {{jsxref("Symbol.hasInstance")}}
  </dt>
- <dt>{{jsxref("Symbol.hasInstance")}}</dt>
  <dd>一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("Operators/instanceof", "instanceof")}} 使用。</dd>
  <dt>{{jsxref("Symbol.isConcatSpreadable")}}</dt>
- <dd>一个布尔值，表明一个对象是否应该flattened为它的数组元素。被 {{jsxref("Array.prototype.concat()")}} 使用。</dd>
+ <dd>一个布尔值，表明一个对象是否应该 flattened 为它的数组元素。被 {{jsxref("Array.prototype.concat()")}} 使用。</dd>
  <dt>{{jsxref("Symbol.unscopables")}}</dt>
  <dd>拥有和继承属性名的一个对象的值被排除在与环境绑定的相关对象外。</dd>
  <dt>{{jsxref("Symbol.species")}}</dt>
@@ -111,36 +108,48 @@ typeof symObj;  // "object"</pre>
  <dd>用于对象的默认描述的字符串值。被 {{jsxref("Object.prototype.toString()")}} 使用。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{jsxref("Symbol.for()", "Symbol.for(key)")}}</dt>
- <dd>使用给定的key搜索现有的symbol，如果找到则返回该symbol。否则将使用给定的key在全局symbol注册表中创建一个新的symbol。</dd>
+ <dd>使用给定的 key 搜索现有的 symbol，如果找到则返回该 symbol。否则将使用给定的 key 在全局 symbol 注册表中创建一个新的 symbol。</dd>
  <dt>{{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}</dt>
- <dd>从全局symbol注册表中，为给定的symbol检索一个共享的?symbol key。</dd>
+ <dd>从全局 symbol 注册表中，为给定的 symbol 检索一个共享的？symbol key。</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances"><font face="Consolas, Monaco, Andale Mono, monospace">Symbol 原型</font></h2>
+<h2 id="Boolean_instances">Symbol 原型</h2>
 
 <p>所有 Symbols 继承自 {{jsxref("Symbol.prototype")}}.</p>
 
-<h3 id="属性">属性</h3>
+<h3 id="属性">实例属性</h3>
 
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties')}}</p>
+<dl>
+  <dt>{{jsxref("Symbol.prototype.description")}}</dt>
+  <dd>一个只读的字符串，意为对该 Symbol 对象的描述</dd>
+</dl>
 
-<h3 id="方法">方法</h3>
+<h3 id="方法">实例方法</h3>
 
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods')}}</p>
+<dl>
+  <dt>{{jsxref("Symbol.prototype.toSource")}}</dt>
+  <dd>返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toSource")}} 方法</dd>
+  <dt>{{jsxref("Symbol.prototype.toString")}}</dt>
+  <dd>返回一个包含着该 Symbol 对象描述的字符串。该方法重写了 {{jsxref("Object.prototype.toString")}} 方法</dd>
+  <dt>{{jsxref("Symbol.prototype.valueOf")}}</dt>
+  <dd>返回该 Symbol 对象。该方法重写了 {{jsxref("Symbol.prototype.valueOf")}} 方法</dd>
+  <dt>{{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}</dt>
+  <dd>返回该 Symbol 对象。</dd>
+</dl>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false" name="Creating_Boolean_objects_with_an_initial_value_of_false">对 symbol 使用 typeof 运算符</h3>
+<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">对 symbol 使用 typeof 运算符</h3>
 
 <p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
 
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">typeof</span> <span class="function token">Symbol<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="operator token">==</span><span class="operator token">=</span> <span class="string token">'symbol'</span>
-<span class="keyword token">typeof</span> <span class="function token">Symbol<span class="punctuation token">(</span></span><span class="string token">'foo'</span><span class="punctuation token">)</span> <span class="operator token">==</span><span class="operator token">=</span> <span class="string token">'symbol'</span>
-<span class="keyword token">typeof</span> Symbol<span class="punctuation token">.</span>iterator <span class="operator token">==</span><span class="operator token">=</span> <span class="string token">'symbol'</span></code>
+<pre class="brush: js">typeof Symbol() === 'symbol'
+typeof Symbol('foo') === 'symbol'
+typeof Symbol.iterator === 'symbol'
 </pre>
 
 <h3 id="Symbol_类型转换">Symbol 类型转换</h3>
@@ -148,33 +157,33 @@ typeof symObj;  // "object"</pre>
 <p>当使用 symbol 值进行类型转换时需要注意一些事情：</p>
 
 <ul>
- <li>尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误  (e.g. <code>+sym</code> or <code>sym | 0</code>).</li>
- <li>使用宽松相等时， <code>Object(sym) == sym</code> returns <code>true.</code></li>
- <li>这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，<code>Symbol("foo") + "bar" 将抛出一个</code> {{jsxref("TypeError")}} (can't convert symbol to string).</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> 的作用会像symbol类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 <code>new String(sym)</code> 将抛出异常。</li>
+ <li>尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误 (e.g. <code>+sym</code> or <code>sym | 0</code>).</li>
+ <li>使用宽松相等时，<code>Object(sym) == sym</code> returns <code>true.</code></li>
+ <li>这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，<code>Symbol("foo") + "bar"</code> 将抛出一个 {{jsxref("TypeError")}} (can't convert symbol to string).</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 <code>new String(sym)</code> 将抛出异常。</li>
 </ul>
 
 <h3 id="Symbols_与_for...in_迭代">Symbols 与 <code>for...in</code> 迭代</h3>
 
 <p>Symbols 在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 迭代中不可枚举。另外，{{jsxref("Object.getOwnPropertyNames()")}} 不会返回 symbol 对象的属性，但是你能使用 {{jsxref("Object.getOwnPropertySymbols()")}} 得到它们。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js">var obj = {};
 
-obj<span class="punctuation token">[</span><span class="function token">Symbol</span><span class="punctuation token">(</span><span class="string token">"a"</span><span class="punctuation token">)</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="string token">"a"</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">[</span>Symbol<span class="punctuation token">.</span><span class="keyword token">for</span><span class="punctuation token">(</span><span class="string token">"b"</span><span class="punctuation token">)</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="string token">"b"</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">[</span><span class="string token">"c"</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="string token">"c"</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">.</span>d <span class="operator token">=</span> <span class="string token">"d"</span><span class="punctuation token">;</span>
+obj[Symbol("a")] = "a";
+obj[Symbol.for("b")] = "b";
+obj["c"] = "c";
+obj.d = "d";
 
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="keyword token">in</span> obj<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>i<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// logs "c" and "d"</span>
-<span class="punctuation token">}</span></code></pre>
+for (var i in obj) {
+   console.log(i); // logs "c" and "d"
+}</pre>
 
 <h3 id="Symbols_与_JSON.stringify">Symbols 与 <code>JSON.stringify()</code></h3>
 
 <p>当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：</p>
 
-<pre class="brush: js notranslate"><code class="language-js">JSON<span class="punctuation token">.</span><span class="function token">stringify</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">[</span><span class="function token">Symbol</span><span class="punctuation token">(</span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">:</span> <span class="string token">"foo"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// '{}'</span></code></pre>
+<pre class="brush: js">JSON.stringify({[Symbol("foo")]: "foo"});
+// '{}'</pre>
 
 <p>更多细节，请看 {{jsxref("JSON.stringify()")}}。</p>
 
@@ -182,14 +191,14 @@ obj<span class="punctuation token">.</span>d <span class="operator token">=</spa
 
 <p>当一个 Symbol 包装器对象作为一个属性的键时，这个对象将被强制转换为它包装过的 symbol 值：</p>
 
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">var</span> sym <span class="operator token">=</span> <span class="function token">Symbol</span><span class="punctuation token">(</span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span><span class="punctuation token">[</span>sym<span class="punctuation token">]</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">[</span>sym<span class="punctuation token">]</span><span class="punctuation token">;</span>            <span class="comment token">// 1</span>
-obj<span class="punctuation token">[</span><span class="function token">Object</span><span class="punctuation token">(</span>sym<span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">;</span>    <span class="comment token">// still 1</span></code></pre>
+<pre class="brush: js">var sym = Symbol("foo");
+var obj = {[sym]: 1};
+obj[sym];            // 1
+obj[Object(sym)];    // still 1</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table" style="height: 143px; width: 640px;">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">标准</th>
@@ -221,7 +230,5 @@ obj<span class="punctuation token">[</span><span class="function token">Object</
  <li><a href="/en-US/docs/Glossary/Symbol">Glossary: Symbol data type</a></li>
  <li>{{jsxref("Operators/typeof", "typeof")}}</li>
  <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
- <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols"（深入ES6 Symbols ） on hacks.mozilla.org</a></li>
+ <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols"（深入 ES6 Symbols ）on hacks.mozilla.org</a></li>
 </ul>
-
-<div class="itanywhere-activator" style="left: 41px; top: 3679px; display: none;" title="Google Translator Anywhere"></div>

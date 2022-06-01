@@ -10,19 +10,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 <p>一个安全整数是一个符合下面条件的整数：</p>
 
 <ul>
- <li>可以准确地表示为一个IEEE-754双精度数字,</li>
- <li>其IEEE-754表示不能是舍入任何其他整数以适应IEEE-754表示的结果。.</li>
+ <li>可以准确地表示为一个 IEEE-754 双精度数字，</li>
+ <li>其 IEEE-754 表示不能是舍入任何其他整数以适应 IEEE-754 表示的结果。.</li>
 </ul>
 
-<p>比如，<code>2<sup>53</sup> - 1</code> 是一个安全整数，它能被精确表示，在任何 IEEE-754 舍入模式（rounding mode）下，没有其他整数舍入结果为该整数。作为对比，<code>2<sup>53</sup></code> 就不是一个安全整数，它能够使用 IEEE-754 表示，但是 <code>2<sup>53</sup> + 1</code> 不能使用 IEEE-754 直接表示，在就近舍入（round-to-nearest）和向零舍入中，会被舍入为 <code>2<sup>53</sup></code>。</p>
+<p>比如，<code>2^53 - 1</code> 是一个安全整数，它能被精确表示，在任何 IEEE-754 舍入模式（rounding mode）下，没有其他整数舍入结果为该整数。作为对比，<code>2^53</code> 就不是一个安全整数，它能够使用 IEEE-754 表示，但是 <code>2^53 + 1</code> 不能使用 IEEE-754 直接表示，在就近舍入（round-to-nearest）和向零舍入中，会被舍入为 <code>2^53</code>。</p>
 
-<p>安全整数范围为 <code>-(2<sup>53</sup> - 1)到</code> <code>2<sup>53</sup> - 1 </code>之间的整数，包含 <code>-(2<sup>53</sup> - 1)和</code> <code>2<sup>53</sup> - 1</code>。</p>
+<p>安全整数范围为 <code>-(2^53 - 1) 到</code> <code>2^53 - 1 </code>之间的整数，包含 <code>-(2^53 - 1) 和</code> <code>2^53 - 1</code>。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Number.isSafeInteger(<var>testValue</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code><var>testValue</var></code></dt>
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 <p>一个{{jsxref("Boolean", "布尔值")}} 表示给定的值是否是一个安全整数（safe integer）。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush:js">Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53))       // false
@@ -73,7 +73,7 @@ Number.isSafeInteger(3.0);                  // true
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Number.isSafeInteger")}}</p>
 

@@ -124,7 +124,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <p>It is seen as a more advanced tool than SFTP, beause by default it is used on the command line. A basic command looks like so:</p>
 
-<pre class="brush: bash notranslate">rsync [-options] SOURCE user@x.x.x.x:DESTINATION</pre>
+<pre class="brush: bash">rsync [-options] SOURCE user@x.x.x.x:DESTINATION</pre>
 
 <ul>
  <li><code>-options</code> is a dash followed by a one or more letters, for example <code>-v</code> for verbose error messages, and <code>-b</code> to make backups. You can see the full list at the <a href="https://linux.die.net/man/1/rsync">rsync man page</a> (search for "Options summary").</li>
@@ -140,7 +140,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <p>Of course, it is a good idea to use a secure connection, like with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the <code>-e</code> option. For example:</p>
 
-<pre class="brush: bash notranslate">rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</pre>
+<pre class="brush: bash">rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</pre>
 
 <p>You can find more details of what is needed at <a href="https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh">How To Copy Files With Rsync Over SSH</a>.</p>
 

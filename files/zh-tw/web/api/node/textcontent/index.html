@@ -35,7 +35,7 @@ element.textContent = "this is some sample text";
 
 <h3 id="與_innerHTML_的差異">與 <code>innerHTML</code> 的差異</h3>
 
-<p><code>innerHTML</code> returns the HTML as its name indicates. Quite often, in order to retrieve or write text within an element, people use <code>innerHTML</code>. <code>textContent</code> should be used instead. Because the text is not parsed as HTML, it's likely to have better performance. Moreover, this avoids an <span title="cross-site scripting">XSS</span> attack vector.</p>
+<p><code>innerHTML</code> returns the HTML as its name indicates. Quite often, in order to retrieve or write text within an element, people use <code>innerHTML</code>. <code>textContent</code> should be used instead. Because the text is not parsed as HTML, it's likely to have better performance. Moreover, this avoids an XSS attack vector.</p>
 
 <h2 id="Example" name="Example">範例</h2>
 
@@ -76,53 +76,7 @@ document.getElementById("divA").textContent = "This is some text";
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1+</td>
-   <td>2</td>
-   <td>9</td>
-   <td>9.64 (possibly earlier)</td>
-   <td>3 (possibly earlier)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Node.textContent")}}
 
 <h2 id="Specifications" name="Specifications">規範</h2>
 

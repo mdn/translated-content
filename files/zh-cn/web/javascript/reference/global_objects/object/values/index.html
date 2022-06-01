@@ -57,9 +57,9 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']</pre>
 
 <h2 id="Polyfill">Polyfill </h2>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">如果要 </span></font>Object.values</code>兼容不支持它的旧环境，可在<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;"> </span></font><a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 或 <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a> 中找到 Polyfill 。</p>
+<p><code>如果要 Object.values</code>兼容不支持它的旧环境，可在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 或 <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a> 中找到 Polyfill 。</p>
 
-<p>根据<strong>Object.keys()</strong>的Polyfill仿写一个：</p>
+<p>根据<strong>Object.keys()</strong>的 Polyfill 仿写一个：</p>
 
 <pre class="brush: js">if (!Object.values) Object.values = function(obj) {
     if (obj !== Object(obj))

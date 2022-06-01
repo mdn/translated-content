@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Operators/new
 
 <ol>
  <li>Создаётся новый объект, наследующий <code><em>Foo</em>.prototype.</code></li>
- <li>Вызывается конструктор — функция <code><em>Foo</em></code> с указанными аргументами и <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a>, привязанным к только что созданному объекту</code>. <code>new F<em>oo</em></code> эквивалентно <code>new </code><em>F<code>oo</code></em><code>()</code>, то есть если аргументы не указаны, Foo вызывается без аргументов.</li>
+ <li>Вызывается конструктор — функция <code><em>Foo</em></code> с указанными аргументами и <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, привязанным к только что созданному объекту. <code>new <em>Foo</em></code> эквивалентно <code>new <em>Foo</em>()</code>, то есть если аргументы не указаны, <code><em>Foo</em></code> вызывается без аргументов.</li>
  <li>Результатом выражения new становится объект, возвращённый конструктором. Если конструктор не возвращает объект явно, используется объект из п. 1. (Обычно конструкторы не возвращают значение, но они могут делать это, если нужно переопределить обычный процесс создания объектов.)</li>
 </ol>
 
@@ -127,35 +127,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-new-operator', 'The new Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.2.2', 'The new Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-11.2.2', 'The new Operator')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.2.2', 'The new Operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализовано JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 

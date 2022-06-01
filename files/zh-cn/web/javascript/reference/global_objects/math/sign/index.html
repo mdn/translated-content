@@ -11,32 +11,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 
 <div> </div>
 
-<p><strong><code>Math.sign()</code></strong> 函数返回一个数字的符号, 指示数字是正数，负数还是零。</p>
+<p><strong><code>Math.sign()</code></strong> 函数返回一个数字的符号，指示数字是正数，负数还是零。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.sign(<em>x</em>);</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>x</code></dt>
- <dd>任意数字.</dd>
+ <dd>任意数字。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>因为 <code>sign </code>是 <code>Math </code>的一个静态方法，所以你应该使用 Math.sign() ，而不是作为你创建的一个Math对象的一种方法 （Math不是一个构造函数）。</p>
+<p>因为 <code>sign</code> 是 <code>Math</code> 的一个静态方法，所以你应该使用 Math.sign()，而不是作为你创建的一个 Math 对象的一种方法（Math 不是一个构造函数）。</p>
 
-<p>而不是作为您创建的Math对象的一种方法（Math不是构造函数）。</p>
+<p>而不是作为您创建的 Math 对象的一种方法（Math 不是构造函数）。</p>
 
-<p>此函数共有5种返回值, 分别是<strong> 1, -1, 0, -0, NaN.</strong> 代表的各是<strong>正数, 负数, 正零, 负零, NaN</strong>。</p>
+<p>此函数共有 5 种返回值，分别是<strong> 1, -1, 0, -0, NaN.</strong> 代表的各是<strong>正数，负数，正零，负零，NaN</strong>。</p>
 
 <p>传入该函数的参数会被<strong>隐式转换</strong>成数字类型。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="使用Math.sign()">使用Math.sign()</h3>
+<h3 id="使用_math.sign">使用 Math.sign()</h3>
 
 <pre class="brush:js">Math.sign(3);     //  1
 Math.sign(-3);    // -1
@@ -48,14 +48,14 @@ Math.sign("foo"); // NaN
 Math.sign();      // NaN
 </pre>
 
-<h2 id="Compatibility" name="Compatibility">Polyfill</h2>
+<h2 id="Compatibility">Polyfill</h2>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">sign<span class="punctuation token">(</span></span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    x <span class="operator token">=</span> <span class="operator token">+</span>x<span class="comment token"> ;// convert to a number
-</span>    <span class="keyword token">if</span> <span class="punctuation token">(</span>x <span class="operator token">===</span> <span class="number token">0</span> <span class="operator token">||</span> <span class="function token">isNaN<span class="punctuation token">(</span></span>x<span class="punctuation token">)</span><span class="punctuation token">)</span>
-        <span class="keyword token">return</span> x;
-    <span class="keyword token">return</span> x <span class="operator token">&gt;</span> <span class="number token">0</span> <span class="operator token">?</span> <span class="number token">1</span> <span class="punctuation token">:</span> <span class="operator token">-</span><span class="number token">1;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">function sign(x) {
+    x = +x ;// convert to a number
+    if (x === 0 || isNaN(x))
+        return x;
+    return x &gt; 0 ? 1 : -1;
+}</pre>
 
 <p> </p>
 
@@ -95,57 +95,9 @@ Math.sign();      // NaN
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>38</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/Math", "Math")}} 对象</li>

@@ -93,7 +93,7 @@ translation_of: Web/API/Response
 
 <p>You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.</p>
 
-<pre class="brush: js notranslate">const image = document.querySelector('.my-image');
+<pre class="brush: js">const image = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
   return response.blob();
 }).then(function(blob) {
@@ -103,13 +103,13 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>You can also use the {{domxref("Response.Response()")}} constructor to create your own custom <code>Response</code> object:</p>
 
-<pre class="brush: js notranslate">const response = new Response();</pre>
+<pre class="brush: js">const response = new Response();</pre>
 
 <h3 id="Ajax_запрос">Ajax запрос</h3>
 
 <p>Здесь мы с помощью функции doAjax вызываем PHP скрипт, который генерирует JSON строку, и возвращает распарсенный JSON в виде JavaScript объекта. Также реализована простая обработка ошибок.</p>
 
-<pre class="brush: js notranslate">// Функция, которая делает Ajax запрос
+<pre class="brush: js">// Функция, которая делает Ajax запрос
 const doAjax = async () =&gt; {
     const response = await fetch('Ajax.php'); // Генерируем объект Response
     if (response.ok) {
@@ -148,7 +148,7 @@ doAjax().then(console.log).catch(console.log);
 
 
 
-<p>{{Compat("api.Response")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -62,7 +62,7 @@ findString = function findText(text) {
 
 ### Résultat
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Notes
 

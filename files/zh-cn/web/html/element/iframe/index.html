@@ -11,13 +11,13 @@ translation_of: Web/HTML/Element/iframe
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML内联框架元素 (<code>&lt;iframe&gt;</code>)</strong> 表示嵌套的<span class="seoSummary">{{Glossary("browsing context")}}</span>。它能够将另一个HTML页面嵌入到当前页面中。</p>
+<p><strong>HTML 内联框架元素 (<code>&lt;iframe&gt;</code>)</strong> 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}</div>
 
-<div class="hidden">这个示例的源代码存储在GitHub仓库中。如果你想给这个项目贡献代码，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>仓库并给我们提交 pull request。</div>
+<div class="hidden">这个示例的源代码存储在 GitHub 仓库中。如果你想给这个项目贡献代码，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>仓库并给我们提交 pull request。</div>
 
-<p>每个嵌入的浏览上下文（embedded browsing context）都有自己的<a href="/zh-CN/docs/Web/API/History">会话历史记录(session history)</a>和<a href="/zh-CN/docs/Web/API/Document">DOM树</a>。包含嵌入内容的浏览上下文称为<em><dfn>父级</dfn>浏览上下文</em>。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。</p>
+<p>每个嵌入的浏览上下文（embedded browsing context）都有自己的<a href="/zh-CN/docs/Web/API/History">会话历史记录 (session history)</a>和<a href="/zh-CN/docs/Web/API/Document">DOM 树</a>。包含嵌入内容的浏览上下文称为<em><dfn>父级</dfn>浏览上下文</em>。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。</p>
 
 <div class="blockIndicator warning">
 <p>页面上的每个<code>&lt;iframe&gt;</code>都需要增加内存和其它计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的<code>&lt;iframe&gt;</code>，但是你最好还是先看看这么做会不会导致某些性能问题。</p>
@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/iframe
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
  <dd>对嵌入的资源配置<a href="/zh-CN/docs/Web/HTTP/CSP">内容安全策略</a>。 查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>以CSS像素格式<span style="line-height: inherit;">{{HTMLVersionInline(5)}}，或像素格式{{HTMLVersionInline(4.01)}}，或百分比格式指定frame的高度。默认值为<code>150</code>。</span></dd>
+ <dd>以 CSS 像素格式{{HTMLVersionInline(5)}}，或像素格式{{HTMLVersionInline(4.01)}}，或百分比格式指定 frame 的高度。默认值为<code>150</code>。</dd>
  <dt id="name-attribute">{{htmlattrdef("importance")}} {{experimental_inline}}</dt>
  <dd>表示 <code>&lt;iframe&gt; </code>的 <code>src</code> 属性指定的资源的加载优先级。允许的值有：
  <dl>
@@ -59,7 +59,7 @@ translation_of: Web/HTML/Element/iframe
  </dl>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>用于定位嵌入的浏览上下文的名称。该名称可以用作 <span style="line-height: inherit;">{{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 <code>target</code> 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 <code>formtarget</code> 属性值，还可以用作</span> {{domxref("Window.open()","window.open()")}} 方法的 <code>windowName</code> 参数值。</dd>
+ <dd>用于定位嵌入的浏览上下文的名称。该名称可以用作 {{HTMLElement("a")}} 标签与 {{HTMLElement("form")}} 标签的 <code>target</code> 属性值，也可以用作 {{HTMLElement("input")}} 标签和 {{HTMLElement("button")}} 标签的 <code>formtarget</code> 属性值，还可以用作 {{domxref("Window.open()","window.open()")}} 方法的 <code>windowName</code> 参数值。</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>表示在获取 iframe 资源时如何发送 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">referrer</a> 首部：
  <ul>
@@ -67,16 +67,16 @@ translation_of: Web/HTML/Element/iframe
   <li><code>no-referrer-when-downgrade</code> (default): 向不受 {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) 保护的 {{Glossary("origin")}} 发送请求时，不发送 {{HTTPHeader("Referer")}} 首部。</li>
   <li><code>origin</code>: referrer 首部中仅包含来源页面的源。换言之，仅包含来源页面的 <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/URIScheme">scheme</a>, {{Glossary("host")}}, 以及 {{Glossary("port")}}。</li>
   <li><code>origin-when-cross-origin</code>: 发起跨域请求时，仅在 referrer 中包含来源页面的源。发起同源请求时，仍然会在 referrer 中包含来源页面在服务器上的路径信息。</li>
-  <li><code>same-origin</code>: 对于 {{Glossary("Same-origin policy", "same origin")}} （同源）请求，发送 referrer 首部，否则不发送。</li>
+  <li><code>same-origin</code>: 对于 {{Glossary("Same-origin policy", "same origin")}}（同源）请求，发送 referrer 首部，否则不发送。</li>
   <li><code>strict-origin</code>: 仅当被请求页面和来源页面具有相同的协议安全等级时才发送 referrer 首部（比如从采用 HTTPS 协议的页面请求另一个采用 HTTPS 协议的页面）。如果被请求页面的协议安全等级较低，则不会发送 referrer 首部（比如从采用 HTTPS 协议的页面请求采用 HTTP 协议的页面）。</li>
   <li><code>strict-origin-when-cross-origin</code>: 当发起同源请求时，在 referrer 首部中包含完整的 URL。当被请求页面与来源页面不同源但是有相同协议安全等级时（比如 HTTPS→HTTPS），在 referrer 首部中仅包含来源页面的源。当被请求页面的协议安全等级较低时（比如 HTTPS→HTTP），不发送 referrer 首部。</li>
-  <li><code>unsafe-url</code>: 始终在 referrer 首部中包含源以及路径 （但不包括 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">密码</a>，或<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">用户名</a>）。<strong>这个值是不安全的</strong>, 因为这样做会暴露受 TLS 保护的资源的源和路径信息。</li>
+  <li><code>unsafe-url</code>: 始终在 referrer 首部中包含源以及路径（但不包括 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">密码</a>，或<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">用户名</a>）。<strong>这个值是不安全的</strong>, 因为这样做会暴露受 TLS 保护的资源的源和路径信息。</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("sandbox")}}</dt>
  <dd>该属性对呈现在 iframe 框架中的内容启用一些额外的限制条件。属性值可以为空字符串（这种情况下会启用所有限制），也可以是用空格分隔的一系列指定的字符串。有效的值有：
  <ul>
-  <li><code>allow-downloads-without-user-activation</code> {{experimental_inline}}: 允许在没有征求用户同意的情况下下载文件.</li>
+  <li><code>allow-downloads-without-user-activation</code> {{experimental_inline}}: 允许在没有征求用户同意的情况下下载文件。</li>
   <li><code>allow-forms</code>: 允许嵌入的浏览上下文提交表单。如果没有使用该关键字，则无法提交表单。</li>
   <li><code>allow-modals</code>: 允许嵌入的浏览上下文打开模态窗口。</li>
   <li><code>allow-orientation-lock</code>: 允许嵌入的浏览上下文锁定屏幕方向（译者注：比如智能手机、平板电脑的水平朝向或垂直朝向）。</li>
@@ -92,24 +92,24 @@ translation_of: Web/HTML/Element/iframe
  </ul>
 
  <div class="note">
- <p><strong>注意:</strong></p>
+ <p><strong>注意：</strong></p>
 
  <ul>
   <li>当被嵌入的文档与主页面同源时，强烈建议不要同时使用 <code>allow-scripts</code> 和 <code>allow-same-origin</code>。如果同时使用，嵌入的文档就可以通过代码删除 <code>sandbox</code> 属性，如此，就安全性而言还不如不用<code>sandbox</code>。</li>
   <li>如果攻击者可以在沙箱化的 <code>iframe</code> 之外展示内容，例如用户在新标签页中打开内联框架，那么沙箱化也就没有意义了。建议把这种内容放置到独立的专用域中，以减小可能的损失。</li>
-  <li>沙箱属性(sandbox)在Internet Explorer 9及更早的版本上不被支持。</li>
+  <li>沙箱属性 (sandbox) 在 Internet Explorer 9 及更早的版本上不被支持。</li>
  </ul>
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>被嵌套的页面的 URL 地址。使用 <code>about:blank</code> 值可以嵌入一个遵从<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>的空白页。在 Firefox （version 65及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 <code>iframe</code> 的 <code>src</code> 属性（例如通过 {{domxref("Element.removeAttribute()")}} ）会导致 <code>about:blank</code> 被载入 frame。</dd>
+ <dd>被嵌套的页面的 URL 地址。使用 <code>about:blank</code> 值可以嵌入一个遵从<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>的空白页。在 Firefox（version 65 及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 <code>iframe</code> 的 <code>src</code> 属性（例如通过 {{domxref("Element.removeAttribute()")}} ）会导致 <code>about:blank</code> 被载入 frame。</dd>
  <dt>{{htmlattrdef("srcdoc")}} {{HTMLVersionInline(5)}} only</dt>
- <dd>该属性是一段HTML代码，这些代码会被渲染到 iframe 中。如果浏览器不支持 <code>srcdoc</code> 属性，则会渲染 <code>src</code> 属性表示的内容。</dd>
+ <dd>该属性是一段 HTML 代码，这些代码会被渲染到 iframe 中。如果浏览器不支持 <code>srcdoc</code> 属性，则会渲染 <code>src</code> 属性表示的内容。</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>以CSS像素格式<span style="line-height: inherit;">{{HTMLVersionInline(5)}}</span><span style="line-height: inherit;">，或以像素格式</span><span style="line-height: inherit;">{{HTMLVersionInline(4.01)}}，或以百分比格式指定的 frame 的宽度。默认值是<code>300</code>。</span></dd>
+ <dd>以 CSS 像素格式{{HTMLVersionInline(5)}}，或以像素格式{{HTMLVersionInline(4.01)}}，或以百分比格式指定的 frame 的宽度。默认值是<code>300</code>。</dd>
 </dl>
 
-<h3 id="不赞成使用的属性"><span style="line-height: inherit;">不赞成使用的属性</span></h3>
+<h3 id="不赞成使用的属性">不赞成使用的属性</h3>
 
 <p>下面这些属性已不赞成使用，并且可能不再被所有的浏览器支持。你应避免在新项目里面使用它们，也应尽量从旧项目中移除它们。</p>
 
@@ -134,10 +134,10 @@ translation_of: Web/HTML/Element/iframe
  </dd>
 </dl>
 
-<h3 id="非标准属性_non-standard_inline">非标准属性 {{non-standard_inline}}<span class="hidden"> </span><span class="hidden"> </span></h3>
+<h3 id="非标准属性_non-standard_inline">非标准属性 {{non-standard_inline}}  </h3>
 
 <dl>
- <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong><span class="hidden"> </span><span class="hidden"> </span></dt>
+ <dt><strong>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}} </strong>  </dt>
 </dl>
 
 <div class="blockIndicator note">
@@ -150,7 +150,7 @@ translation_of: Web/HTML/Element/iframe
 
 <p>内联的框架，就像 {{HTMLElement("frame")}} 元素一样，会被包含在 {{domxref("window.frames")}} 伪数组（类数组的对象）中。</p>
 
-<p>有了 DOM {{domxref("HTMLIFrameElement")}} 对象，脚本可以通过 {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} 访问内联框架的 {{domxref("window")}} 对象。 {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} 属性则引用了 <code>&lt;iframe&gt;</code> 内部的 <code>document</code> 元素，(等同于使用contentWindow.document），但IE8-不支持。</p>
+<p>有了 DOM {{domxref("HTMLIFrameElement")}} 对象，脚本可以通过 {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} 访问内联框架的 {{domxref("window")}} 对象。 {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} 属性则引用了 <code>&lt;iframe&gt;</code> 内部的 <code>document</code> 元素，(等同于使用 contentWindow.document），但 IE8-不支持。</p>
 
 <p>在框架内部，脚本可以通过 {{domxref("window.parent")}} 引用父窗口对象。</p>
 
@@ -168,7 +168,7 @@ translation_of: Web/HTML/Element/iframe
 
 <h4 id="HTML">HTML</h4>
 
-<pre><code>&lt;iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300"&gt;
+<pre class="brush: html"><code>&lt;iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300"&gt;
   &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
 &lt;/iframe&gt;</code></pre>
 
@@ -182,7 +182,7 @@ translation_of: Web/HTML/Element/iframe
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre><code>&lt;base target="_blank"&gt;
+<pre class="brush: html"><code>&lt;base target="_blank"&gt;
 &lt;iframe id="Example2"
     title="Example2"
     width="400"
@@ -207,7 +207,7 @@ translation_of: Web/HTML/Element/iframe
 
 <p>使用 <code>iframe</code> 的 <a href="/zh-CN/docs/Web/HTML/Global_attributes/title">title</a> 属性来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：</p>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>iframe</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Wikipedia page for Avocados<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>https://en.wikipedia.org/wiki/Avocado<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>iframe</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers language-html"><code class="language-html">&lt;iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"&gt;&lt;/iframe&gt;</code></pre>
 
 <p>如果没有标题，他们就只能浏览每一个框架来获取需要的内容。这非常耗时间，也很容易让人迷惑，尤其是当页面中包含很多框架或者互动内容如音视频等的时候。</p>
 
@@ -225,7 +225,7 @@ translation_of: Web/HTML/Element/iframe
   <tr>
    <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}}</td>
    <td>{{Spec2('Referrer Policy')}}</td>
-   <td>新增属性: <code>referrerpolicy</code></td>
+   <td>新增属性：<code>referrerpolicy</code></td>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}</td>

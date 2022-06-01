@@ -11,33 +11,33 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Web/Guide/CSS/Consistent_list_indentation
 ---
-<p><span class="seoSummary">对列表最常见的样式修改之一是改变缩进距离，即列表项向右侧移动的距离。令人沮丧的是，缩进在一个浏览器中的表现常常与其他浏览器中的效果不尽相同。例如，如果声明列表的左边距为0，在IE浏览器中生效，但是在基于</span>Gecko引擎的浏览器中却不起作用。本文将帮助你理解这些可能发生的问题，以及如何避免这些问题的产生。</p>
+<p>对列表最常见的样式修改之一是改变缩进距离，即列表项向右侧移动的距离。令人沮丧的是，缩进在一个浏览器中的表现常常与其他浏览器中的效果不尽相同。例如，如果声明列表的左边距为 0，在 IE 浏览器中生效，但是在基于 Gecko 引擎的浏览器中却不起作用。本文将帮助你理解这些可能发生的问题，以及如何避免这些问题的产生。</p>
 
 <p>为了弄明白这是为什么，以及如何避免这些问题发生，有必要研究一下列表结构的具体细节。</p>
 
 <h3 id="Making_a_List" name="Making_a_List">创建一个列表</h3>
 
-<p>首先，来看一个简单，单独的列表项目。该列表项目没有标记符号（或称之为“着重号”），并且没有被列表包裹起来。如下图图1所示，单独的列表项是无效的，简单且没有任何装饰。</p>
+<p>首先，来看一个简单，单独的列表项目。该列表项目没有标记符号（或称之为“着重号”），并且没有被列表包裹起来。如下图图 1 所示，单独的列表项是无效的，简单且没有任何装饰。</p>
 
 <p><img alt="Figure 1" class="internal" src="/@api/deki/files/619/=Consistent-list-indentation-figure1.gif"></p>
 
-<p>红色的虚线边框代表列表项目内容区域的外边界。记住，从这一点上看，这个列表项目没有内边距和边框。如果我们再添加两个列表项目，我们得到下面的结果，如图2所示。</p>
+<p>红色的虚线边框代表列表项目内容区域的外边界。记住，从这一点上看，这个列表项目没有内边距和边框。如果我们再添加两个列表项目，我们得到下面的结果，如图 2 所示。</p>
 
 <p><img alt="Figure 2" class="internal" src="/@api/deki/files/620/=Consistent-list-indentation-figure2.gif"></p>
 
-<p>现在我们在外面加上父元素；这个例子中，我们使用一个无序列表(i.e., <code>&lt;ul&gt;</code>)。根据 CSS 盒子模型，列表项目的盒子必须显示在其父元素的内容区域里。因为这里的父元素既没有 padding 也没有 margin，所以我们得到下面的结果，如图3所示。</p>
+<p>现在我们在外面加上父元素；这个例子中，我们使用一个无序列表 (i.e., <code>&lt;ul&gt;</code>)。根据 CSS 盒子模型，列表项目的盒子必须显示在其父元素的内容区域里。因为这里的父元素既没有 padding 也没有 margin，所以我们得到下面的结果，如图 3 所示。</p>
 
 <p><img alt="Figure 3" class="internal" src="/@api/deki/files/621/=Consistent-list-indentation-figure3.gif"></p>
 
-<p>这里，蓝色的虚线边框表示 &lt;ul&gt; 元素内容区域的边缘。因为我们没有给 &lt;ul&gt; 元素添加内边距,  所以它的内容的包裹层紧贴在三个列表项外。</p>
+<p>这里，蓝色的虚线边框表示 &lt;ul&gt; 元素内容区域的边缘。因为我们没有给 &lt;ul&gt; 元素添加内边距， 所以它的内容的包裹层紧贴在三个列表项外。</p>
 
-<p>现在我们来添加列表项目标记，由于这是一个无序列表，我们添加传统的实心圆“着重标记”，如下图图4所示。</p>
+<p>现在我们来添加列表项目标记，由于这是一个无序列表，我们添加传统的实心圆“着重标记”，如下图图 4 所示。</p>
 
 <p><img alt="Figure 4" class="internal" src="/@api/deki/files/622/=Consistent-list-indentation-figure4.gif"></p>
 
 <p>可以看到，这些标记符号在&lt;ul&gt;内容区域的外面，但这无关紧要。重要的是，这些标记被放到主要的&lt;li&gt;元素盒子外面了。它们有点像列表项目的附件，在&lt;li&gt;的内容区域外游荡，但依然依附于&lt;li&gt;。</p>
 
-<p>这就是为什么在除了IE浏览器以外的所有浏览器上，标记符号都被放在&lt;li&gt;元素的边框外，假设列表项位置的值为外部"outside"。如果该值被改为内部"inside"，则标记符号会被放到&lt;li&gt;的内容区域里面，像是放在&lt;li&gt;最开头的内联盒子一样。</p>
+<p>这就是为什么在除了 IE 浏览器以外的所有浏览器上，标记符号都被放在&lt;li&gt;元素的边框外，假设列表项位置的值为外部"outside"。如果该值被改为内部"inside"，则标记符号会被放到&lt;li&gt;的内容区域里面，像是放在&lt;li&gt;最开头的内联盒子一样。</p>
 
 <h3 id="Indenting_It_Twice" name="Indenting_It_Twice">二次缩进</h3>
 
@@ -90,7 +90,7 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 <h3 id="Recommendations" name="Recommendations">建议</h3>
 
 <ul>
- <li><span style="line-height: 1.5em;">在你调整列表的缩进的时候，务必确认同时设置了 padding 和 margin.</span></li>
+ <li>在你调整列表的缩进的时候，务必确认同时设置了 padding 和 margin.</li>
 </ul>
 
 <div class="originaldocinfo">
@@ -103,5 +103,3 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
  <li>Note: This reprinted article was originally part of the DevEdge site.</li>
 </ul>
 </div>
-
-<p>{{ languages( { "fr": "fr/Indentation_homog\u00e8ne_des_listes" } ) }}</p>

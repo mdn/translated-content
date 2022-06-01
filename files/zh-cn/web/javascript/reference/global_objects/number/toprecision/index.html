@@ -5,22 +5,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>toPrecision()</strong></code> 方法以指定的精度返回该数值对象的字符串表示。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>numObj</em>.toPrecision(<em>precision</em>)</code></pre>
 
-<h3 id="Parameter" name="Parameter">参数</h3>
+<h3 id="Parameter">参数</h3>
 
 <dl>
  <dt>precision</dt>
  <dd>可选。一个用来指定有效数个数的整数。</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">返回值</h3>
+<h3 id="Returns">返回值</h3>
 
 <p>以定点表示法或指数表示法表示的一个数值对象的字符串表示，四舍五入到 <code>precision</code> 参数指定的显示数字位数。查看 {{jsxref("Number.prototype.toFixed()")}} 方法关于四舍五入的讨论，同样应用于 <code>toPrecision</code> 方法。</p>
 
@@ -30,10 +30,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>如果 <em>precison</em> 参数不在 1 和 100 （包括）之间，将会抛出一个 <code>RangeError</code> 。执行环境也可以支持更大或更小的范围。ECMA-262 只需要最多 21 位显示数字。</dd>
+ <dd>如果 <em>precison</em> 参数不在 1 和 100（包括）之间，将会抛出一个 <code>RangeError</code> 。执行环境也可以支持更大或更小的范围。ECMA-262 只需要最多 21 位显示数字。</dd>
 </dl>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush: js">var numObj = 5.123456;
 console.log("numObj.toPrecision()  is " + numObj.toPrecision());  //输出 5.123456
@@ -74,57 +74,9 @@ console.log((1234.5).toPrecision(2)); // "1.2e+3"
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toFixed()")}}</li>

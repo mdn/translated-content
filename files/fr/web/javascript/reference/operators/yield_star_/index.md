@@ -20,7 +20,9 @@ Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'it�
 
 ## Syntaxe
 
-     yield* [[expression]];
+```js
+yield* expression
+```
 
 - `expression`
   - : L'expression qui renvoie un objet itérable.
@@ -113,7 +115,7 @@ console.log(résultat);          // "toto"
 | Spécification                                                                                                                        | État                         | Commentaires        |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

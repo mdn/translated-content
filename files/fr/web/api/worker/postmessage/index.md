@@ -5,7 +5,7 @@ translation_of: Web/API/Worker/postMessage
 ---
 {{ apiref("Worker") }}
 
-La méthode **`Worker.postMessage()`** envoie un message à la portée locale du worker. Cette fonction accepte un seul paramètre, qui est la donnée à envoyer au worker. Cette donnée peut-être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de clone structuré, qui inclut les références cycliques.
+La méthode **`Worker.postMessage()`** envoie un message à la portée locale du worker. Cette fonction accepte un seul paramètre, qui est la donnée à envoyer au worker. Cette donnée peut-être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de clone structuré, qui inclut les références cycliques.
 
 Le Worker peut renvoyer une information au thread qui l'a créé en utilisant la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}.
 
@@ -45,7 +45,7 @@ second.onchange = function() {
 }
 ```
 
-Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.com/mdn/simple-web-worker) ([démonstration](http://mdn.github.io/simple-web-worker/)).
+Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.com/mdn/simple-web-worker) ([démonstration](http://mdn.github.io/simple-web-worker/)).
 
 > **Note :** `postMessage()` peut n'envoyer qu'un objet à la fois. Comme ci-dessus, si vous voulez envoyez plusieurs valeurs, vous pouvez utiliser un tableau.
 

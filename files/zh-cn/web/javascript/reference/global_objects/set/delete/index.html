@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 
 <p><code><strong>delete()</strong></code> 方法可以从一个 <code>Set</code> 对象中删除指定的元素。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>mySet</em>.delete(value);</code></pre>
 
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 
 <p>成功删除返回 <code>true</code>，否则返回 <code>false。</code></p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">var mySet = new Set();
 mySet.add("foo");
@@ -62,57 +62,9 @@ mySet.has("foo");    // 返回 false，"foo" 已经成功删除
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>38</td>
-   <td>{{CompatGeckoDesktop("13.0")}}</td>
-   <td>11</td>
-   <td>25</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>38</td>
-   <td>{{CompatGeckoMobile("13.0")}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Set")}}</li>

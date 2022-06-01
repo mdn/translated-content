@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>Math.PI</strong></code> 表示一个圆的周长与直径的比例，约为 3.14159：</p>
 
@@ -13,21 +13,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 
 <div>{{js_property_attributes(0,0,0)}}</div>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>由于 <code>PI</code> 是 <code>Math</code> 的静态属性，所以应该像这样使用：<code>Math.PI</code>，而不是作为你创建的 <code>Math</code> 实例的属性（<code>Math</code> 不是构造函数）。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Using_PI" name="Example:_Using_PI">使用 <code>Math.PI</code></h3>
+<h3 id="Example:_Using_PI">使用 <code>Math.PI</code></h3>
 
 <p>下面的函数使用 Math.PI 计算给定半径的圆周长：</p>
 
-<pre class="brush:js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: rgb(0, 119, 170);">function</span> calculateCircumference <span class="punctuation token" style="color: rgb(153, 153, 153);">(</span>radius<span class="punctuation token" style="color: rgb(153, 153, 153);">)</span> <span class="punctuation token" style="color: rgb(153, 153, 153);">{</span>
-  <span class="keyword token" style="color: rgb(0, 119, 170);">return</span> <span class="number token" style="color: rgb(153, 0, 85);">2</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: rgb(166, 127, 89);">*</span> Math<span class="punctuation token" style="color: rgb(153, 153, 153);">.</span>PI <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: rgb(166, 127, 89);">*</span> radius<span class="punctuation token" style="color: rgb(153, 153, 153);">;</span>
-<span class="punctuation token" style="color: rgb(153, 153, 153);">}</span>
+<pre class="brush:js">function calculateCircumference (radius) {
+  return 2 * Math.PI * radius;
+}
 
-<span class="function token" style="color: rgb(221, 74, 104);">calculateCircumference<span class="punctuation token" style="color: rgb(153, 153, 153);">(</span></span><span class="number token" style="color: rgb(153, 0, 85);">1</span><span class="punctuation token" style="color: rgb(153, 153, 153);">)</span><span class="punctuation token" style="color: rgb(153, 153, 153);">;</span> <span class="comment token" style="color: rgb(112, 128, 144);"> // 6.283185307179586</span></code></pre>
+calculateCircumference(1);  // 6.283185307179586</pre>
 
 <h2 id="规范">规范</h2>
 
@@ -58,57 +58,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>

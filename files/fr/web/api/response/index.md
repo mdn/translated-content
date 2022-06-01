@@ -72,7 +72,9 @@ Par ailleurs, `Response` implémente également une propriété {{domxref("Body"
 
 ## Exemples
 
-Dans notre [exemple basique d'utilisation de fetch ](https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch)([exemple](http://mdn.github.io/fetch-examples/basic-fetch/)), nous utilisons un simple appel `fetch()` pour récupérer une image et l'afficher dans un tag {{htmlelement("img")}}. L'appel `fetch()` retourne une promise qui est résolue avec un objet `Response` associé à l'opération de récupération de la ressource. Vous remarquerez que puisque nous récupérons une image, nous avons besoin d'utiliser {{domxref("Body.blob")}} (disponible dans le body de la {{domxref("Response")}}) pour attribuer le bon MIME type à la réponse.
+Dans notre [exemple basique d'utilisation de `fetch()`](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([voir l'exemple en direct](https://mdn.github.io/fetch-examples/basic-fetch/)), nous utilisons un simple appel `fetch()` pour récupérer une image et l'afficher dans un élément [`<img>`](/fr/docs/Web/HTML/Element/img). L'appel `fetch()` retourne une promesse qui est résolue avec un objet `Response` associé à l'opération de récupération de la ressource.
+
+Vous remarquerez que puisque nous récupérons une image, nous avons besoin d'utiliser [`Response.blob`](/fr/docs/Web/API/Response/blob) pour attribuer le bon type MIME à la réponse.
 
 ```js
 var myImage = document.querySelector('.my-image');

@@ -18,20 +18,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>str.split([separator[, limit]])</em></code>
 </pre>
 
-<div class="blockIndicator warning">
-<p>注意：如果使用空字符串(“)作为分隔符，则字符串不是在每个用户感知的字符(图形素集群)之间，也不是在每个Unicode字符(代码点)之间，而是在每个UTF-16代码单元之间。这会摧毁代理对。还请参见<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">how do you get a string to a character array in javascript</a></p>
+<div class="warning">
+<p><strong>警告：</strong>如果使用空字符串 (“) 作为分隔符，则字符串不是在每个用户感知的字符 (图形素集群) 之间，也不是在每个 Unicode 字符 (代码点) 之间，而是在每个 UTF-16 代码单元之间。这会摧毁代理对。还请参见<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">how do you get a string to a character array in javascript</a></p>
 </div>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>separator</code></dt>
- <dd>指定表示每个拆分应发生的点的字符串。<code>separator</code> 可以是一个字符串或<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" title="JavaScript/Reference/Global_Objects/RegExp">正则表达式</a>。 如果纯文本分隔符包含多个字符，则必须找到整个字符串来表示分割点。如果在str中省略或不出现分隔符，则返回的数组包含一个由整个字符串组成的元素。如果分隔符为空字符串，则将str原字符串中每个字符的数组形式返回。</dd>
+ <dd>指定表示每个拆分应发生的点的字符串。<code>separator</code> 可以是一个字符串或<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" title="JavaScript/Reference/Global_Objects/RegExp">正则表达式</a>。 如果纯文本分隔符包含多个字符，则必须找到整个字符串来表示分割点。如果在 str 中省略或不出现分隔符，则返回的数组包含一个由整个字符串组成的元素。如果分隔符为空字符串，则将 str 原字符串中每个字符的数组形式返回。</dd>
  <dt><code>limit</code></dt>
  <dd>一个整数，限定返回的分割片段数量。当提供此参数时，split 方法会在指定分隔符的每次出现时分割该字符串，但在限制条目已放入数组时停止。如果在达到指定限制之前达到字符串的末尾，它可能仍然包含少于限制的条目。新数组中不返回剩下的文本。</dd>
 </dl>
@@ -40,17 +40,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 
 <p>返回源字符串以分隔符出现位置分隔而成的一个 {{jsxref("Array")}} </p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>找到分隔符后，将其从字符串中删除，并将子字符串的数组返回。如果没有找到或者省略了分隔符，则该数组包含一个由整个字符串组成的元素。如果分隔符为空字符串，则将str转换为字符数组。如果分隔符出现在字符串的开始或结尾，或两者都分开，分别以空字符串开头，结尾或两者开始和结束。因此，如果字符串仅由一个分隔符实例组成，则该数组由两个空字符串组成。</p>
+<p>找到分隔符后，将其从字符串中删除，并将子字符串的数组返回。如果没有找到或者省略了分隔符，则该数组包含一个由整个字符串组成的元素。如果分隔符为空字符串，则将 str 转换为字符数组。如果分隔符出现在字符串的开始或结尾，或两者都分开，分别以空字符串开头，结尾或两者开始和结束。因此，如果字符串仅由一个分隔符实例组成，则该数组由两个空字符串组成。</p>
 
 <p>如果分隔符是包含捕获括号的正则表达式，则每次分隔符匹配时，捕获括号的结果（包括任何未定义的结果）将被拼接到输出数组中。但是，并不是所有浏览器都支持此功能。</p>
 
 <p>{{Note("当字符串为空时，split（）返回一个包含一个空字符串的数组，而不是一个空数组，如果字符串和分隔符都是空字符串，则返回一个空数组。")}}</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_split" name="Example:_Using_split">使用 <code>split()</code></h3>
+<h3 id="Example_Using_split">使用 <code>split()</code></h3>
 
 <p>下例定义了一个函数：根据指定的分隔符将一个字符串分割成一个字符串数组。分隔字符串后，该函数依次输出原始字符串信息，被使用的分隔符，返回数组元素的个数，以及返回数组中所有的元素。</p>
 
@@ -91,7 +91,7 @@ The separator is: ","
 The array has 12 elements: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec /
 </pre>
 
-<h3 id="Example_Removing_spaces_from_a_string" name="Example:_Removing_spaces_from_a_string">移出字符串中的空格</h3>
+<h3 id="Example_Removing_spaces_from_a_string">移出字符串中的空格</h3>
 
 <p>下例中，<code>split()</code> 方法会查找“0 或多个空白符接着的分号，再接着 0 或多个空白符”模式的字符串，找到后，就将空白符从字符串中移除，<code>nameList</code> 是 <code>split</code> 的返回数组。</p>
 
@@ -111,7 +111,7 @@ console.log(nameList);
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]</code>
 </pre>
 
-<h3 id="Example_Returning_a_limited_number_of_splits" name="Example:_Returning_a_limited_number_of_splits">限制返回值中分割元素数量</h3>
+<h3 id="Example_Returning_a_limited_number_of_splits">限制返回值中分割元素数量</h3>
 
 <p>下例中，<code>split</code> 查找字符串中的 0 或多个空格，并返回找到的前 3 个分割元素（splits）。</p>
 
@@ -125,7 +125,7 @@ console.log(splits);
 
 <pre><code>["Hello", "World.", "How"]</code></pre>
 
-<h3 id="Example_Capturing_parentheses" name="Example:_Capturing_parentheses">靠正则来分割使结果中包含分隔块</h3>
+<h3 id="Example_Capturing_parentheses">靠正则来分割使结果中包含分隔块</h3>
 
 <p>如果 <code>separator</code> 包含捕获括号（capturing parentheses），则其匹配结果将会包含在返回的数组中。</p>
 
@@ -153,16 +153,16 @@ const splits = myString.split(['a','b']);
 
 console.log(splits);  //["c", "c,", "c", "c", "c"]</code></pre>
 
-<h3 id="用split来颠倒字符串顺序">用split()来颠倒字符串顺序</h3>
+<h3 id="用split来颠倒字符串顺序">用 split() 来颠倒字符串顺序</h3>
 
-<div class="blockIndicator warning">
-<p>注意这并非一种很健壮的逆转字符串的方法:</p>
+<div class="warning">
+<p><strong>警告：</strong>注意这并非一种很健壮的逆转字符串的方法：</p>
 
 <pre><code>const str = 'asdfghjkl';
 const strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
 // split() returns an array on which reverse() and join() can be applied</code></pre>
 
-<p>如果字符串包含图形素集群，即使使用Unicode感知的拆分(use for example <a href="https://github.com/mathiasbynens/esrever">esrever</a> instead)，也不能工作。</p>
+<p>如果字符串包含图形素集群，即使使用 Unicode 感知的拆分 (use for example <a href="https://github.com/mathiasbynens/esrever">esrever</a> instead)，也不能工作。</p>
 
 <pre><code>const str = 'résumé';
 const strReverse = str.split(/(?:)/u).reverse().join('');
@@ -203,7 +203,7 @@ const strReverse = str.split(/(?:)/u).reverse().join('');
 
 <p>{{Compat("javascript.builtins.String.split")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.charAt()")}}</li>

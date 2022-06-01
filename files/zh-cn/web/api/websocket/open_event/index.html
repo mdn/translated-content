@@ -1,0 +1,42 @@
+---
+title: WebSocket.onopen
+slug: Web/API/WebSocket/open_event
+translation_of: Web/API/WebSocket/onopen
+original_slug: Web/API/WebSocket/onopen
+---
+<p><strong><code>WebSocket.onopen</code></strong>属性定义一个事件处理程序，当{{domxref("WebSocket")}} 的连接状态{{domxref("WebSocket.readyState","readyState")}} 变为{{domxref("WebSocket.readyState","1")}}时调用;这意味着当前连接已经准备好发送和接受数据。这个事件处理程序通过 {{domxref("事件")}}（建立连接时）触发。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox notranslate"><em>aWebSocket</em>.onopen = function(event) {
+  console.log("WebSocket is open now.");
+};</pre>
+
+<h2 id="返回值">返回值</h2>
+
+<p>An {{domxref("EventListener")}}.</p>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onopen', 'WebSocket: onopen')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.WebSocket.onopen")}}</p>

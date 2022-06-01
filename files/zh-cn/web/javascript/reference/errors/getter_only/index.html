@@ -48,7 +48,7 @@ arc.temperature = 30;
 
 <p>至于修复问题的方法，可以将第 16 行的代码移除，因为它试图为 temperature 属性赋值，或者是为它添加一个 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> 特性，就像下面这样：</p>
 
-<pre class="brush: js example-good highlight[12]">"use strict";
+<pre class="brush: js example-good">"use strict";
 
 function Archiver() {
   var temperature = null;

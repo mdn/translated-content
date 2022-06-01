@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">現在，我們已經為本地圖書館網站 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 創建了模型，我們接下來使用 Django 管理網站，去添加 一些 “真實的“ 書本數據。首先，我們展示如何用管理網站註冊模型，然後展示如何登錄和創建一些數據。本文最後，我們介紹可以進一步改進管理網站的建議。</p>
+<p>現在，我們已經為本地圖書館網站 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 創建了模型，我們接下來使用 Django 管理網站，去添加 一些 “真實的“ 書本數據。首先，我們展示如何用管理網站註冊模型，然後展示如何登錄和創建一些數據。本文最後，我們介紹可以進一步改進管理網站的建議。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -194,7 +194,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <pre class="brush: python">class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')</pre>
 
-<p>很不幸地，我們無法直接在 <code>list_display</code> 中指定「書籍類別」(<font face="Consolas, Liberation Mono, Courier, monospace">genre </font>field)字段，因為它是一個 <code>ManyToManyField</code> (多對多字段)，因為如果這樣做會造成很大的資料庫讀寫「成本」，所以 Django 會預防這樣的狀況發生，因此，取而代之，我們將定義一個 <code>display_genre</code> 函式以「字串」形式得到書籍類別。(下方有定義此函式)</p>
+<p>很不幸地，我們無法直接在 <code>list_display</code> 中指定「書籍類別」(genre field)字段，因為它是一個 <code>ManyToManyField</code> (多對多字段)，因為如果這樣做會造成很大的資料庫讀寫「成本」，所以 Django 會預防這樣的狀況發生，因此，取而代之，我們將定義一個 <code>display_genre</code> 函式以「字串」形式得到書籍類別。(下方有定義此函式)</p>
 
 <div class="note">
 <p><strong>Note</strong>: Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete </em>link next to every item in the list.</p>

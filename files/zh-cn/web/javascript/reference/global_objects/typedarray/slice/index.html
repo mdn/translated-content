@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>slice()</strong></code>方法将一个typed array的一部分浅拷贝到一个新的typed array对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}}相同的算法。<em>TypedArray指</em> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a>中的一员 .</p>
+<p><code><strong>slice()</strong></code>方法将一个 typed array 的一部分浅拷贝到一个新的 typed array 对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}}相同的算法。<em>TypedArray 指</em> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a>中的一员 .</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-slice.html")}}</div>
 
@@ -19,14 +19,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 
 <dl>
  <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>从0开始的索引位置。</dd>
- <dd>可以使用负值索引, 表示从数组末尾往前的偏移量。<code>slice(-2)</code> 表示提取数组中的末尾两个元素.</dd>
- <dd>如果没有设定起始位置，则将从开始位置开始截取。</dd>
+ <dd>从 0 开始的索引位置。可以使用负值索引，表示从数组末尾往前的偏移量。<code>slice(-2)</code> 表示提取数组中的末尾两个元素。如果没有设定起始位置，则将从开始位置开始截取。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>从0开始到尾元素前的索引值。 <code>slice</code> 取出的元素到此位置之前，不包含该位置。</dd>
- <dd>例, <code>slice(1,4)</code> 表示读取第2个元素到第4个元素(元素索引：1, 2, 3)。</dd>
- <dd>可以使用负值索引, 表示从数组末尾往前的偏移量。 <code>slice(2,-1)</code> 表示取出数组中的第3个到倒数第2个元素。</dd>
- <dd>如果没有设定结束位置，则将从开始位置截取到序列尾部。(默认值为<code>typedarray.length</code>).</dd>
+ <dd>从 0 开始到尾元素前的索引值。 <code>slice</code> 取出的元素到此位置之前，不包含该位置。例，<code>slice(1,4)</code> 表示读取第 2 个元素到第 4 个元素 (元素索引：1, 2, 3)。可以使用负值索引，表示从数组末尾往前的偏移量。 <code>slice(2,-1)</code> 表示取出数组中的第 3 个到倒数第 2 个元素。如果没有设定结束位置，则将从开始位置截取到序列尾部。(默认值为<code>typedarray.length</code>).</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -63,9 +58,9 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
   });
 }</pre>
 
-<p>这不是一个完整的 polyfill，因为它返回的是一个Array的实例而不是Uint8Array，所以它没有TypedArrays应有的一些属性。</p>
+<p>这不是一个完整的 polyfill，因为它返回的是一个 Array 的实例而不是 Uint8Array，所以它没有 TypedArrays 应有的一些属性。</p>
 
-<p>如果你要在不支持 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> </code>的老旧JavaScript引擎上支持这个特性，最好不要去实现 <code>Array.prototype</code> 中那些方法的 polyfill ，因为你没法让它们不可枚举。</p>
+<p>如果你要在不支持 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> </code>的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 <code>Array.prototype</code> 中那些方法的 polyfill ，因为你没法让它们不可枚举。</p>
 
 <h2 id="规范">规范</h2>
 

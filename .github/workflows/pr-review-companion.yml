@@ -59,21 +59,21 @@ jobs:
 
       - name: Unzip what was downloaded
         run: |
-          unzip build.zip -d build
+          7z x build.zip -obuild -bb1
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
            repository: mdn/yari
            path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v3
         with:
           python-version: "3.8"
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3.0.2
         with:
           path: ~/.local
           key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
@@ -86,7 +86,7 @@ jobs:
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3.0.2
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}

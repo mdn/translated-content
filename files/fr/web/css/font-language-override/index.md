@@ -53,7 +53,7 @@ p.para1 {
 }
 
 p.para2 {
-  font-language-override: "DAN";
+  font-language-override: "DAN";
 }
 ```
 

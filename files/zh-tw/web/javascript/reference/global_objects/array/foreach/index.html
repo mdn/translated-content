@@ -66,8 +66,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 <p><code>forEach()</code> does not mutate the array on which it is called (although <code>callback</code>, if invoked, may do so).</p>
 
-<div class="note">
-<p>除非是拋出異常，否則並沒有中止 <code>forEach()</code> 迴圈的辦法。如果你需要這樣做，<code>forEach()</code> 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>除非是拋出異常，否則並沒有中止 <code>forEach()</code> 迴圈的辦法。如果你需要這樣做，<code>forEach()</code> 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。</p>
 </div>
 
 <h2 id="範例">範例</h2>
@@ -140,8 +140,8 @@ obj.sum;
 
 <p>Since the <code>thisArg</code> parameter (<code>this</code>) is provided to <code>forEach()</code>, it is passed to <code>callback</code> each time it's invoked, for use as its <code>this</code> value.</p>
 
-<div class="note">
-<p>If passing the function argument using an <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> the <code>thisArg</code> parameter can be omitted as arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> If passing the function argument using an <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> the <code>thisArg</code> parameter can be omitted as arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.</p>
 </div>
 
 <h3 id="An_object_copy_function">An object copy function</h3>

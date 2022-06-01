@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <p><code><strong>call()</strong></code> 方法使用一个指定的 <code>this</code> 值和单独给出的一个或多个参数来调用一个函数。</p>
 
-<div class="note"><strong>注意：</strong>该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 <code>call()</code> 方法接受的是<strong>一个参数列表</strong>，而 <code>apply()</code> 方法接受的是<strong>一个包含多个参数的数组</strong>。</div>
+<div class="note">
+<p><strong>备注：</strong>该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 <code>call()</code> 方法接受的是<strong>一个参数列表</strong>，而 <code>apply()</code> 方法接受的是<strong>一个包含多个参数的数组</strong>。</p>
+</div>
 
 <div>{{EmbedInteractiveExample("pages/js/function-call.html")}}</div>
 
@@ -44,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <h3 id="使用_call_方法调用父构造函数">使用 <code>call</code> 方法调用父构造函数</h3>
 
-<p>在一个子构造函数中，你可以通过调用父构造函数的 <code>call</code> 方法来实现继承，类似于 <code>Java</code> 中的写法。下例中，使用 <code>Food</code> 和 <code>Toy </code>构造函数创建的对象实例都会拥有在 <code>Product</code> 构造函数中添加的 <code>name</code> 属性和 <code>price</code> 属性,但 <code>category</code> 属性是在各自的构造函数中定义的。</p>
+<p>在一个子构造函数中，你可以通过调用父构造函数的 <code>call</code> 方法来实现继承，类似于 <code>Java</code> 中的写法。下例中，使用 <code>Food</code> 和 <code>Toy </code>构造函数创建的对象实例都会拥有在 <code>Product</code> 构造函数中添加的 <code>name</code> 属性和 <code>price</code> 属性，但 <code>category</code> 属性是在各自的构造函数中定义的。</p>
 
 <pre class="brush: js">function Product(name, price) {
   this.name = name;
@@ -101,7 +103,7 @@ var obj = {
 greet.call(obj);  // cats typically sleep between 12 and 16 hours
 </pre>
 
-<h3 id="使用_call_方法调用函数并且不指定第一个参数（argument）" style="margin-bottom: 20px; line-height: 30px;">使用 <code><strong>call</strong></code> 方法调用函数并且不指定第一个参数（<code>argument</code>）</h3>
+<h3 id="使用_call_方法调用函数并且不指定第一个参数（argument）">使用 <code><strong>call</strong></code> 方法调用函数并且不指定第一个参数（<code>argument</code>）</h3>
 
 <p>在下面的例子中，我们调用了 <code>display</code> 方法，但并没有传递它的第一个参数。如果没有传递第一个参数，<code>this</code> 的值将会被绑定为全局对象。</p>
 
@@ -114,7 +116,7 @@ function display() {
 display.call();  // sData value is Wisen</pre>
 
 <div class="note">
-<p><strong>注意：</strong>在严格模式下，<code>this</code> 的值将会是 <code>undefined</code>。见下文。</p>
+<p><strong>备注：</strong>在严格模式下，<code>this</code> 的值将会是 <code>undefined</code>。见下文。</p>
 </div>
 
 <pre class="brush: js">'use strict';
@@ -127,7 +129,7 @@ function display() {
 
 display.call(); // Cannot read the property of 'sData' of undefined</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -165,7 +167,7 @@ display.call(); // Cannot read the property of 'sData' of undefined</pre>
 
 <p>{{Compat("javascript.builtins.Function.call")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Function.prototype.bind()")}}</li>

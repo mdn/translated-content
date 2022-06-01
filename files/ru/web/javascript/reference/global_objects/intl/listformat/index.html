@@ -33,11 +33,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
  <dd>Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
  <ul>
   <li><code>localeMatcher</code><br>
-   Используемый алгоритм сопоставления локалей. Возможные значения: <code>"lookup"</code> и <code>"best fit"</code>; по умолчанию используется <code>"best fit"</code>. Подробнее см. на странице <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code></a>.</li>
+   Используемый алгоритм сопоставления локалей. Возможные значения: <code>"lookup"</code> и <code>"best fit"</code>; по умолчанию используется <code>"best fit"</code>. Подробнее см. на странице <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation" rel="nofollow"><code>Intl</code></a>.</li>
   <li><code>type</code><br>
-   Формат вывода. Возможные значения: <code>"conjunction"</code> для вывода значений через "и" (используется по умолчанию, прим. <code>A, B, и C</code>) или <code>"disjunction"</code> для вывода значений через "или" (прим. <code>A, B, или C</code>). <code>"unit"</code> для вывода значений с единицами измерений (прим. <code>5 фунтов, 12 унций</code>).</li>
+   Формат вывода. Возможные значения: <code>"conjunction"</code> для вывода значений через "и" (используется по умолчанию, прим. <code>A, B и C</code>) или <code>"disjunction"</code> для вывода значений через "или" (прим. <code>A, B или C</code>). <code>"unit"</code> для вывода значений с единицами измерений (прим. <code>5 фунтов, 12 унций</code>).</li>
   <li><code>style</code><br>
-   Стиль форматирования вывода. Возможные значения: <code>"long"</code> (используется по умолчанию, прим. <code>A, B, и C</code>); <code>"short"</code> или <code>"narrow"</code> (прим. <code>A, B, C</code>). При использовании <code>narrow</code>, параметр <code>type</code> может принимать только значение <code>unit</code>.</li>
+   Стиль форматирования вывода. Возможные значения: <code>"long"</code> (используется по умолчанию, прим. <code>A, B и C</code>); <code>"short"</code> или <code>"narrow"</code> (прим. <code>A, B, C</code>). При использовании <code>narrow</code>, параметр <code>type</code> может принимать только значение <code>unit</code>.</li>
  </ul>
  </dd>
 </dl>
@@ -88,17 +88,4 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/tc39/proposal-intl-list-format/">Intl.ListFormat proposal</a></td>
-   <td>Stage 3</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}

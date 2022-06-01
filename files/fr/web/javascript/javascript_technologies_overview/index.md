@@ -30,7 +30,7 @@ Entre autres choses, ECMAScript définit :
 - Les types de variables (booléen, nombre, chaîne de caractères, fonction, objet...)
 - L'objet global. Dans l'environnement d'un navigateur, cet objet global est l'objet {{domxref("Window","window")}}. ECMAScript ne définit ici que les API accessibles depuis l'objet global (peu importe l'environnement qui peut être différent d'un navigateur) (par exemple {{jsxref("parseInt","parseInt()")}}, {{jsxref("parseFloat","parseFloat()")}}, {{jsxref("decodeURI","decodeURI()")}}, {{jsxref("encodeURI","encodeURI()")}}...)
 - [Le mécanisme d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) basé sur le concept de prototype
-- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de` `{{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
+- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de {{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Support des navigateurs

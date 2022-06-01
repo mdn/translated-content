@@ -39,7 +39,7 @@ window.scrollByPages(1);</pre>
 
 <pre>window.pageYOffset == window.scrollY; // 总是返回 true</pre>
 
-<p>为了跨浏览器兼容，请使用 <code>window.pageYOffset</code> 代替 <code>window.scrollY</code>。另外，旧版本IE（&lt;9）两个属性都不支持，必须使用其他的非标准属性。完整的兼容性代码如下：</p>
+<p>为了跨浏览器兼容，请使用 <code>window.pageYOffset</code> 代替 <code>window.scrollY</code>。另外，旧版本 IE（&lt;9）两个属性都不支持，必须使用其他的非标准属性。完整的兼容性代码如下：</p>
 
 <pre class="brush: js">var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
@@ -69,60 +69,7 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 <div id="compat-desktop">
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Microsoft Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Window.scrollY")}}
 
 <h2 id="See_also" name="See_also">相关链接</h2>
 

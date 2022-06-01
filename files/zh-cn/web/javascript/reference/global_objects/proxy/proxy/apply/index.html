@@ -15,8 +15,6 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}</div>
 
-<p class="hidden">此交互式示例的源代码存储在GitHub存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发起拉取请求</p>
-
 <h2 id="语法">语法</h2>
 
 <pre class="brush: js">var p = new Proxy(target, {
@@ -27,7 +25,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="参数">参数</h3>
 
-<p>以下是传递给apply方法的参数，<code>this上下文绑定在</code>handler对象上.</p>
+<p>以下是传递给 apply 方法的参数，<code>this</code> 上下文绑定在 handler 对象上。</p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -40,7 +38,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>apply方法可以返回任何值。</code></p>
+<p><code>apply 方法可以返回任何值。</code></p>
 
 <h2 id="描述">描述</h2>
 
@@ -48,7 +46,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截目标对象的以下操作:</p>
+<p>该方法会拦截目标对象的以下操作：</p>
 
 <ul>
  <li><code>proxy(...args)</code></li>
@@ -58,9 +56,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="约束">约束</h3>
 
-<p>如果违反了以下约束，代理将抛出一个TypeError：</p>
+<p>如果违反了以下约束，代理将抛出一个 TypeError：</p>
 
-<p><code>target</code>必须是可被调用的。也就是说，它必须是一个函数对象。</p>
+<p><code>target</code> 必须是可被调用的。也就是说，它必须是一个函数对象。</p>
 
 <h2 id="示例">示例</h2>
 

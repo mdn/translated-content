@@ -16,29 +16,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <div>{{EmbedInteractiveExample("pages/js/array-slice.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
+<pre class="syntaxbox"><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
 
 <h2 id="参数">参数</h2>
 
 <dl>
  <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>提取起始处的索引（从 <code>0</code> 开始），从该索引开始提取原数组元素。</dd>
- <dd>如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，<code>slice(-2)</code> 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。</dd>
- <dd>如果省略 <code>begin</code>，则 <code>slice</code> 从索引 <code>0</code> 开始。</dd>
- <dd>如果 <code>begin</code> 超出原数组的索引范围，则会返回空数组。</dd>
-</dl>
-
-<dl>
+ <dd>提取起始处的索引（从 <code>0</code> 开始），从该索引开始提取原数组元素。如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，<code>slice(-2)</code> 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。如果省略 <code>begin</code>，则 <code>slice</code> 从索引 <code>0</code> 开始。如果 <code>begin</code> 超出原数组的索引范围，则会返回空数组。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>提取终止处的索引（从 <code>0</code> 开始），在该索引处结束提取原数组元素。<code>slice</code> 会提取原数组中索引从 <code>begin</code> 到 <code>end</code> 的所有元素（包含 <code>begin</code>，但不包含 <code>end</code>）。</dd>
- <dd><code>slice(1,4)</code> 会提取原数组中从第二个元素开始一直到第四个元素的所有元素 （索引为 1, 2, 3的元素）。</dd>
- <dd>如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 <code>slice(-2,-1)</code> 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。</dd>
- <dd>如果 <code>end</code> 被省略，则 <code>slice</code> 会一直提取到原数组末尾。</dd>
- <dd>如果 <code>end</code> 大于数组的长度，<code>slice</code> 也会一直提取到原数组末尾。</dd>
+ <dd>提取终止处的索引（从 <code>0</code> 开始），在该索引处结束提取原数组元素。<code>slice</code> 会提取原数组中索引从 <code>begin</code> 到 <code>end</code> 的所有元素（包含 <code>begin</code>，但不包含 <code>end</code>）。<code>slice(1,4)</code> 会提取原数组中从第二个元素开始一直到第四个元素的所有元素（索引为 1, 2, 3 的元素）。如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 <code>slice(-2,-1)</code> 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。如果 <code>end</code> 被省略，则 <code>slice</code> 会一直提取到原数组末尾。如果 <code>end</code> 大于数组的长度，<code>slice</code> 也会一直提取到原数组末尾。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -50,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 <p><code>slice</code> 不会修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。原数组的元素会按照下述规则拷贝：</p>
 
 <ul>
- <li>如果该元素是个对象引用 （不是实际的对象），<code>slice</code> 会拷贝这个对象引用到新的数组里。两个对象引用都引用了同一个对象。如果被引用的对象发生改变，则新的和原来的数组中的这个元素也会发生改变。</li>
+ <li>如果该元素是个对象引用（不是实际的对象），<code>slice</code> 会拷贝这个对象引用到新的数组里。两个对象引用都引用了同一个对象。如果被引用的对象发生改变，则新的和原来的数组中的这个元素也会发生改变。</li>
 </ul>
 
 <ul>
@@ -59,26 +47,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <p>如果向两个数组任一中添加了新元素，则另一个不会受到影响。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="返回现有数组的一部分">返回现有数组的一部分</h3>
 
-<pre class="brush: js notranslate">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+<pre class="brush: js">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
 </pre>
 
-<div class="standardNoteBlock">
-<p class="syntaxbox"><strong>译者注：citrus</strong> <em>[n.]</em> 柑橘类果实</p>
+<div class="callout">
+<p><strong>标注：</strong> citrus <em>[n.]</em> 柑橘类果实——译注</p>
 </div>
 
 <h3 id="使用_slice">使用 <code>slice</code></h3>
 
-<p>在下例中, <code>slice</code> 从 <code>myCar</code> 中创建了一个新数组<code>newCar</code>。两个数组都包含了一个 <code>myHonda</code> 对象的引用。当 <code>myHonda</code> 的 <code>color</code> 属性改变为 <code>purple</code>，则两个数组中的对应元素都会随之改变。</p>
+<p>在下例中，<code>slice</code> 从 <code>myCar</code> 中创建了一个新数组<code>newCar</code>。两个数组都包含了一个 <code>myHonda</code> 对象的引用。当 <code>myHonda</code> 的 <code>color</code> 属性改变为 <code>purple</code>，则两个数组中的对应元素都会随之改变。</p>
 
-<pre class="brush: js notranslate">// 使用 slice 方法从 myCar 中创建一个 newCar。
+<pre class="brush: js">// 使用 slice 方法从 myCar 中创建一个 newCar。
 var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 var myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 var newCar = myCar.slice(0, 2);
@@ -89,7 +77,7 @@ console.log('newCar = ' + JSON.stringify(newCar));
 console.log(' myCar[0].color = ' + JSON.stringify(myCar[0].color));
 console.log('newCar[0].color = ' + JSON.stringify(newCar[0].color));
 
-// 改变 myHonda 对象的 color 属性.
+// 改变 myHonda 对象的 color 属性。
 myHonda.color = 'purple';
 console.log('The new color of my Honda is ' + myHonda.color);
 
@@ -100,7 +88,7 @@ console.log('newCar[0].color = ' + newCar[0].color);
 
 <p>上述代码输出：</p>
 
-<pre class="brush: js notranslate"> myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
+<pre class="brush: js"> myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
        'cherry condition', 'purchased 1997']
 newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
  myCar[0].color = red
@@ -110,11 +98,11 @@ The new color of my Honda is purple
 newCar[0].color = purple
 </pre>
 
-<h2 id="Array-like" name="Array-like">类数组（Array-like）对象</h2>
+<h2 id="Array-like">类数组（Array-like）对象</h2>
 
 <p><code>slice</code> 方法可以用来将一个类数组（Array-like）对象/集合转换成一个新数组。你只需将该方法绑定到这个对象上。 一个函数中的  {{jsxref("Functions/arguments", "arguments")}} 就是一个类数组对象的例子。</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
 }
 
@@ -123,7 +111,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>除了使用 <code>Array.prototype.slice.call(</code><code>arguments</code><code>)</code>，你也可以简单的使用 <code>[].slice.call(arguments)</code> 来代替。另外，你可以使用 <code>bind</code> 来简化该过程。</p>
 
-<pre class="brush: js notranslate">var unboundSlice = Array.prototype.slice;
+<pre class="brush: js">var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -137,7 +125,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>根据规范，使用 <code>Array.prototype.slice</code> 转换宿主对象（如 DOM 对象）时，不必遵循 Mozilla 的默认行为，即可以转化任何符合条件的伪数组宿主对象为数组，IE &lt; 9 没有遵循，而 IE9 + 遵循这个行为，但是稍加改造可以使其在跨浏览器使用时更可靠。只要其他现代浏览器继续支持该行为，目前 IE 9+、FireFox、Chrome、Safari 以及 Opera 都支持，开发者在使用下面代码时遍历 DOM 时就不会被该方法的字面意义误导，即 IE &lt; 9 不能转化 DOM Collections。开发者可以安全地根据语义知道该方法的实际上的标准行为。（下面的代码还修正了 IE 中 <code>slice()</code> 方法第二个参数不允许为显式的 {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} 值的问题，其他现代浏览器，包括 IE9+ 都允许）。</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Shim for "fixing" IE's lack of support (IE &lt; 9) for applying slice
  * on host objects like NamedNodeMap, NodeList, and HTMLCollection
  * (technically, since host objects have been implementation-dependent,
@@ -203,7 +191,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 }());
 </pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -236,7 +224,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
 
@@ -244,7 +232,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 <p>{{Compat("javascript.builtins.Array.slice")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.splice()")}}</li>

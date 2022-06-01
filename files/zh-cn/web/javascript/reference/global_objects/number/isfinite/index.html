@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 <p>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Number.isFinite(v<var>alue</var>)</code></pre>
+<pre class="syntaxbox"><code>Number.isFinite(v<var>alue</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -36,13 +36,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (Number.isFinite === undefined) Number.isFinite = function(value) {
+<pre class="brush: js">if (Number.isFinite === undefined) Number.isFinite = function(value) {
     return typeof value === 'number' &amp;&amp; isFinite(value);
 }</pre>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js notranslate">Number.isFinite(Infinity);  // false
+<pre class="brush: js">Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -77,11 +77,11 @@ Number.isFinite(null);      // false, would've been true with
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>{{Compat("javascript.builtins.Number.isFinite")}}</div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>The {{jsxref("Number")}} object it belongs to.</li>

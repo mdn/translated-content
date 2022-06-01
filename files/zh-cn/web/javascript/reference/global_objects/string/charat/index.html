@@ -7,30 +7,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
 <p>{{JSRef}}</p>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><strong>charAt()</strong> 方法从一个字符串中返回指定的字符。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>str</em>.charAt(<em>index</em>)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>index</code></dt>
- <dd>一个介于0 和字符串长度减1之间的整数。 (0~length-1)</dd>
- <dd>如果没有提供索引，charAt() 将使用0。</dd>
- <dt> </dt>
+ <dd>一个介于 0 和字符串长度减 1 之间的整数。(0~length-1) 如果没有提供索引，charAt() 将使用 0。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>字符串中的字符从左向右索引，第一个字符的索引值为 0，最后一个字符（假设该字符位于字符串 stringName 中）的索引值为 <code>stringName.length - 1</code>。 如果指定的 index 值超出了该范围，则返回一个空字符串。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Displaying_characters_at_different_locations_in_a_string" name="Example:_Displaying_characters_at_different_locations_in_a_string">例子：输出字符串中不同位置的字符</h3>
+<h3 id="Example:_Displaying_characters_at_different_locations_in_a_string">例子：输出字符串中不同位置的字符</h3>
 
 <p>下例输出字符串 "<code>Brave new world</code>" 不同位置处的字符：</p>
 
@@ -109,7 +107,7 @@ function getWholeChar (str, i) {
 
 </pre>
 
-<p>在允许解构分配的独占JavaScript 1.7+环境（如Firefox）中，以下是一个更简洁和更灵活的替代方法，它会自动递增一个递增变量（如果字符保证它是一个替代对）。</p>
+<p>在允许解构分配的独占 JavaScript 1.7+ 环境（如 Firefox）中，以下是一个更简洁和更灵活的替代方法，它会自动递增一个递增变量（如果字符保证它是一个替代对）。</p>
 
 <pre class="brush: js">var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
 for (var i=0, chr; i &lt; str.length; i++) {
@@ -158,9 +156,9 @@ function getWholeCharAndI (str, i) {
   return [str.charAt(i+1), i+1];
 }</pre>
 
-<h3 id="示例：修复charAt以支持非基本多文种平面（BMP）字符">示例：修复charAt以支持非基本多文种平面（BMP）字符</h3>
+<h3 id="示例：修复_charat_以支持非基本多文种平面（bmp）字符">示例：修复 charAt 以支持非基本多文种平面（BMP）字符</h3>
 
-<p>虽然上面的例子对于那些希望支持非BMP字符的用户可能更有用（因为它不要求调用者知道任何非BMP字符可能出现在哪里），在人们希望的情况下，在选择字符 通过索引，将字符串中的替代对作为它们表示的单个字符，可以使用以下：</p>
+<p>虽然上面的例子对于那些希望支持非 BMP 字符的用户可能更有用（因为它不要求调用者知道任何非 BMP 字符可能出现在哪里），在人们希望的情况下，在选择字符 通过索引，将字符串中的替代对作为它们表示的单个字符，可以使用以下：</p>
 
 <pre class="brush: js">function fixedCharAt (str, idx) {
   var ret = '';
@@ -219,57 +217,9 @@ function getWholeCharAndI (str, i) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.indexOf()")}}, {{jsxref("String.prototype.lastIndexOf()")}}</li>

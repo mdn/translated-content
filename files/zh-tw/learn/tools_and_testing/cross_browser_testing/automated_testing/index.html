@@ -7,7 +7,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">每天在好幾個瀏覽器與設備上，運行手動測試數次，既乏味又浪費時間。要有效率的處理這種事，就要開始熟悉自動化工具。我們會在這篇文章看看有哪些可用的工具、如何使用它們、以及如何使用如 Sauce Labs 與 Browser Stack 的商業化瀏覽器測試程式之基本講述。</p>
+<p>每天在好幾個瀏覽器與設備上，運行手動測試數次，既乏味又浪費時間。要有效率的處理這種事，就要開始熟悉自動化工具。我們會在這篇文章看看有哪些可用的工具、如何使用它們、以及如何使用如 Sauce Labs 與 Browser Stack 的商業化瀏覽器測試程式之基本講述。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -145,7 +145,7 @@ gulp.task('default', function() {
 
 <ol>
  <li>輸入以下指令安裝：
-  <pre class="brush: bash"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -204,12 +204,12 @@ var csslint = require('gulp-csslint');</pre>
 <ol>
  <li>輸入以下指令安裝：
   <pre class="editor editor-colors">npm install --save-dev gulp-babel babel-preset-es2015
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>在 <code>gulpfile.js</code> 增加這個相依：
   <pre class="editor editor-colors">var babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>var</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+var jshint = require('gulp-jshint');
 </pre>
  </li>
  <li class="line">在 <code>gulpfile.js</code> 的底部加入以下測試：
@@ -319,7 +319,7 @@ var csslint = require('gulp-csslint');</pre>
 <p>Let's have a brief look at how we'd access the API using Node.js and <a href="https://github.com/danjenkins/node-saucelabs">node-saucelabs</a>.</p>
 
 <ol>
- <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
+ <li>First, set up a new npm project to test this out, as detailed in <a href="#設定_node_與_npm">Setting up Node and npm</a>. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
  <li>使用以下指令安裝 Node Sauce Labs wrapper：
   <pre>npm install saucelabs</pre>
  </li>

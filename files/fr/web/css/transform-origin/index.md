@@ -1,13 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-tags:
-  - CSS
-  - CSS Transoforms
-  - Propriété CSS
-  - Reference
-  - transform-origin
-  - 'valeur par défaut : center'
 translation_of: Web/CSS/transform-origin
 ---
 {{CSSRef}}
@@ -301,7 +294,7 @@ transform-origin: 100% -30%;
 }
 ```
 
-{{EmbedLiveSample('a_demonstration_of_various_transform_values', '', 1350) }}
+{{EmbedLiveSample('Exemples', '', 1350) }}
 
 ## Spécifications
 

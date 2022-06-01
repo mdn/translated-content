@@ -9,7 +9,7 @@ translation_of: Web/API/Blob
 ---
 {{APIRef("File API")}}
 
-Un objet **`Blob`** représente un objet, semblable à un fichier, qui est immuable et qui contient des données brutes. Les _blobs_ (pour **\*B**inary **L**arge **Ob**jects\*) représentent des données qui ne sont pas dans un format JavaScript natif. L'interface {{domxref("File")}} est basée sur l'interface `Blob` et hérite des fonctionnalités de cette dernière tout en ajoutant des fonctionnalités pour gérer les fichiers sur le système de l'utilisateur.
+Un objet **`Blob`** représente un objet, semblable à un fichier, qui est immuable et qui contient des données brutes. Les _blobs_ (pour **B**inary **L**arge **Ob**jects) représentent des données qui ne sont pas dans un format JavaScript natif. L'interface {{domxref("File")}} est basée sur l'interface `Blob` et hérite des fonctionnalités de cette dernière tout en ajoutant des fonctionnalités pour gérer les fichiers sur le système de l'utilisateur.
 
 Pour construire un `Blob` à partir d'objets qui ne sont pas des blobs ou à partir d'autres données, on pourra utiliser le constructeur {{domxref("Blob.Blob", "Blob()")}}. Pour créer un blob qui contient un sous-ensemble d'un autre blob, on pourra employer la méthode {{domxref("Blob.slice()", "slice()")}}. Pour obtenir un `Blob` à partir d'un fichier du système de l'utilisateur, consulter la documentation {{domxref("File")}}.
 

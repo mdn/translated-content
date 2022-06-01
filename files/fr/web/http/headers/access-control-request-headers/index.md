@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
 {{HTTPSidebar}}
 
-L'entête **`Access-Control-Request-Headers`** est utilisé quand une requête de pré-vérification ({{glossary("preflight request")}}) et faite vers le serveur pour savoir les entêtes qui seront utilisés après la pré-vérification.
+L'entête **`Access-Control-Request-Headers`** est utilisé quand une requête de pré-vérification ({{glossary("preflight request")}}) et faite vers le serveur pour savoir les entêtes qui seront utilisés après la pré-vérification.
 
 <table class="properties">
   <tbody>

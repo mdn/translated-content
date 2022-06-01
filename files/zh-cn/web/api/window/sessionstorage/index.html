@@ -17,15 +17,15 @@ translation_of: Web/API/Window/sessionStorage
 <ul>
  <li>页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。</li>
  <li><strong>在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文，</strong>这点和 session cookies 的运行方式不同。</li>
- <li>打开多个相同的URL的Tabs页面，会创建各自的<code>sessionStorage</code>。</li>
- <li>关闭对应浏览器窗口（Window）/ tab，会清除对应的<code>sessionStorage</code>。 </li>
+ <li>打开多个相同的 URL 的 Tabs 页面，会创建各自的 <code>sessionStorage</code>。</li>
+ <li>关闭对应浏览器标签或窗口，会清除对应的 <code>sessionStorage</code>。 </li>
 </ul>
 
 <div class="blockIndicator note">
-<p>应该注意，存储在sessionStorage或localStorage中的数据<strong>特定于页面的协议</strong>。也就<br>
- 是说<code><strong>http</strong>://example.com</code> 与 <code><strong>https</strong>://example.com</code>的sessionStorage相互隔离。</p>
+<p>应该注意，存储在 sessionStorage 或 localStorage 中的数据<strong>特定于页面的协议</strong>。也就<br>
+ 是说 <code><strong>http</strong>://example.com</code> 与 <code><strong>https</strong>://example.com</code> 的 sessionStorage 相互隔离。</p>
 
-<p>被存储的键值对总是以UTF-16 <a href="/zh-CN/docs/Web/API/DOMString">DOMString</a> 的格式所存储，其使用两个字节来表示一个字符。对于对象、整数key值会自动转换成字符串形式。</p>
+<p>被存储的键值对总是以 UTF-16 <a href="/zh-CN/docs/Web/API/DOMString">DOMString</a> 的格式所存储，其使用两个字节来表示一个字符。对于对象、整数 key 值会自动转换成字符串形式。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -74,7 +74,7 @@ field.addEventListener("change", function() {
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>完整的使用示例可以查看<a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a>一文。</p>
+<p><strong>备注：</strong>完整的使用示例可以查看<a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a> 一文。</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -97,12 +97,12 @@ field.addEventListener("change", function() {
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("api.Window.sessionStorage")}}<br>
- <span>各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 </span><a class="external external-icon" href="http://dev-test.nemikor.com/web-storage/support-test/" title="http://dev-test.nemikor.com/web-storage/support-test/">detailed rundown of all the storage capacities for various browsers</a><span>。</span></p>
+ 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 <a class="external external-icon" href="http://dev-test.nemikor.com/web-storage/support-test/" title="http://dev-test.nemikor.com/web-storage/support-test/">detailed rundown of all the storage capacities for various browsers</a>。</p>
 
 <div id="compat-mobile"></div>
 
 <div class="note">
-<p><strong>Note: </strong>从iOS 5.1之后，移动端的Safari将localStorage数据存储在cache文件中，在操作系统的要求下，会偶尔进行清除，特别是空间不足时。</p>
+<p><strong>Note: </strong>从 iOS 5.1 之后，移动端的 Safari 将 localStorage 数据存储在 cache 文件中，在操作系统的要求下，会偶尔进行清除，特别是空间不足时。</p>
 </div>
 
 <h2 id="相关链接">相关链接</h2>

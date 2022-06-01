@@ -5,32 +5,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
-<p><code><strong>Math.atan2(</strong></code><code><strong>)</strong></code> 返回从原点(0,0)到(x,y)点的线段与x轴正方向之间的平面角度(弧度值)，也就是Math.atan2(y,x)</p>
+<p><code><strong>Math.atan2(</strong></code><code><strong>)</strong></code> 返回从原点 (0,0) 到 (x,y) 点的线段与 x 轴正方向之间的平面角度 (弧度值)，也就是 Math.atan2(y,x)</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">Math.atan2(<em>y</em>, <em>x</em>) </pre>
 
-<h2 id="Parameters" name="Parameters">参数</h2>
+<h2 id="Parameters">参数</h2>
 
 <dl>
  <dt><code>y, x</code></dt>
  <dd>数值</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>atan2</code> 方法返回一个 -pi 到 pi 之间的数值，表示点 (x, y) 对应的偏移角度。这是一个逆时针角度，以弧度为单位，正X轴和点 (x, y) 与原点连线 之间。注意此函数接受的参数：先传递 y 坐标，然后是 x 坐标。</p>
+<p><code>atan2</code> 方法返回一个 -pi 到 pi 之间的数值，表示点 (x, y) 对应的偏移角度。这是一个逆时针角度，以弧度为单位，正 X 轴和点 (x, y) 与原点连线 之间。注意此函数接受的参数：先传递 y 坐标，然后是 x 坐标。</p>
 
 <p><code>atan2</code> 接受单独的 x 和 y 参数，而 <code>atan</code> 接受两个参数的比值。</p>
 
 <p>由于 <code>atan2</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.atan2()</code>，而不是作为你创建的 <code>Math</code> 实例的方法。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_Math.atan2" name="Example:_Using_Math.atan2">例子：使用 <code>Math.atan2</code></h3>
+<h3 id="Example_Using_Math.atan2">例子：使用 <code>Math.atan2</code></h3>
 
 <pre class="brush:js">Math.atan2(90, 15) // 1.4056476493802699
 Math.atan2(15, 90) // 0.16514867741462683
@@ -77,57 +77,9 @@ Math.atan2(15, 90) // 0.16514867741462683
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>

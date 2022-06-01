@@ -2,7 +2,7 @@
 title: '::after (:after)'
 slug: 'Web/CSS/::after'
 tags:
-  - CSS伪元素
+  - CSS 伪元素
   - getComputedStyle
   - getPropertyValue
   - setProperty
@@ -19,7 +19,7 @@ a::after {
   content: "</code>→<code>";
 }</code></pre>
 
-<p>{{ fx_minversion_note("3.5", "Firefox 3.5之前版本仅实现了CSS 2.0版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5开始没有了这项限制。") }}</p>
+<p>{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}</p>
 
 <h2 id="语法">语法</h2>
 
@@ -27,9 +27,9 @@ a::after {
 
 element::after { <em>style properties</em> }  /* CSS3 语法 */</pre>
 
-<p><code>::after表示法是在</code>CSS 3中引入的，::符号是用来区分<a href="/zh-CN/CSS/Pseudo-classes" title="Pseudo-classes">伪类</a>和伪元素的。支持CSS3的浏览器同时也都支持CSS2中引入的表示法<code>:after。</code></p>
+<p><code>::after 表示法是在</code>CSS 3 中引入的，::符号是用来区分<a href="/zh-CN/CSS/Pseudo-classes" title="Pseudo-classes">伪类</a>和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法<code>:after。</code></p>
 
-<div class="note"><strong>注:</strong> IE8仅支持<code>:after。</code></div>
+<div class="note"><strong>注：</strong> IE8 仅支持<code>:after。</code></div>
 
 <h2 id="示例">示例</h2>
 
@@ -39,80 +39,80 @@ element::after { <em>style properties</em> }  /* CSS3 语法 */</pre>
 
 <pre class="brush: html">&lt;p class="boring-text"&gt;这是些无聊的文字&lt;/p&gt;
 &lt;p&gt;这是不无聊也不有趣的文字&lt;/p&gt;
-&lt;p class="exciting-text"&gt;在MDN上做贡献简单又轻松。
+&lt;p class="exciting-text"&gt;在 MDN 上做贡献简单又轻松。
 按右上角的编辑按钮添加新示例或改进旧示例！&lt;/p&gt;</pre>
 
 <pre class="brush: css">.exciting-text::after {
-  content: "&lt;- 让人兴兴兴奋!";
+  content: "&lt;- 让人兴兴兴奋！";
   color: green;
 }
 
 .boring-text::after {
-   content:    "&lt;- 无聊!";
-   color:      red;
+  content: "&lt;- 无聊！";
+  color: red;
 }</pre>
 
-<h4 id="输出" style="line-height: 18px;">输出</h4>
+<h4 id="输出">输出</h4>
 
-<p>{{ EmbedLiveSample('Simple_usage', 500, 150) }}</p>
+<p>{{ EmbedLiveSample('Simple_usage', 500, 170) }}</p>
 
 <h3 id="装饰用法">装饰用法</h3>
 
-<p>我们几乎可以用想要的任何方法给 {{ cssxref("content") }} 属性里的文字和图片的加上样式.</p>
+<p>我们几乎可以用想要的任何方法给 {{ cssxref("content") }} 属性里的文字和图片的加上样式。</p>
 
 <pre class="brush: html">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
 
 <pre class="brush: css">.ribbon {
-  background-color: #5BC8F7;
+ background-color: #5BC8F7;
 }
 
 .ribbon::after {
-  content: "Look at this orange box.";
-  background-color: #FFBA10;
-  border-color: black;
-  border-style: dotted;
+ content: "Look at this orange box.";
+ background-color: #FFBA10;
+ border-color: black;
+ border-style: dotted;
 }</pre>
 
-<h4 id="输出_2" style="line-height: 18px;">输出</h4>
+<h4 id="输出_2">输出</h4>
 
 <p>{{ EmbedLiveSample('Decorative_example', 450, 20) }}</p>
 
 <h3 id="提示用法">提示用法</h3>
 
-<p>接下来的示例展示了用<code>::after</code><a href="/en/CSS/Pseudo-elements" title="Pseudo-elements">伪元素</a>，<a href="/en-US/docs/CSS/attr" title="/en-US/docs/CSS/attr"><code>attr()</code></a>CSS表达式和一个<a href="/en/HTML/Global_attributes#attr-data-*" title="en/HTML/Global_attributes#attr-data-*">自定义数据属性</a> <code>data-descr</code> 创建一个纯CSS, 词汇表提示工具。在<a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html" title="css-only_tooltips.html">单独页面</a>看这个例子。</p>
+<p>接下来的示例展示了用<code>::after</code><a href="/en/CSS/Pseudo-elements" title="Pseudo-elements">伪元素</a>，<a href="/en-US/docs/CSS/attr" title="/en-US/docs/CSS/attr"><code>attr()</code></a>CSS 表达式和一个<a href="/en/HTML/Global_attributes#attr-data-*" title="en/HTML/Global_attributes#attr-data-*">自定义数据属性</a> <code>data-descr</code> 创建一个纯 CSS，词汇表提示工具。在<a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html" title="css-only_tooltips.html">单独页面</a>看这个例子。</p>
 
 <pre class="brush: html">&lt;p&gt;这是上面代码的实现&lt;br /&gt;
   我们有一些 &lt;span data-descr="collection of words and punctuation"&gt;文字&lt;/span&gt; 有一些
   &lt;span data-descr="small popups which also hide again"&gt;提示&lt;/span&gt;。&lt;br /&gt;
-  把鼠标放上去&lt;span data-descr="not to be taken literally"&gt;看看&lt;/span&gt;.
+  把鼠标放上去&lt;span data-descr="not to be taken literally"&gt;看看&lt;/span&gt;。
 &lt;/p&gt;
 </pre>
 
 <pre class="brush: css">span[data-descr] {
-  position: relative;
-  text-decoration: underline;
-  color: #00F;
-  cursor: help;
+ position: relative;
+ text-decoration: underline;
+ color: #00F;
+ cursor: help;
 }
 
 span[data-descr]:hover::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 0;
-  top: 24px;
-  min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
-  padding: 12px;
-  color: #000000;
-  font-size: 14px;
-  z-index: 1;
+ content: attr(data-descr);
+ position: absolute;
+ left: 0;
+ top: 24px;
+ min-width: 200px;
+ border: 1px #aaaaaa solid;
+ border-radius: 10px;
+ background-color: #ffffcc;
+ padding: 12px;
+ color: #000000;
+ font-size: 14px;
+ z-index: 1;
 }</pre>
 
-<h4 id="输出_3" style="line-height: 18px;">输出</h4>
+<h4 id="输出_3">输出</h4>
 
-<p>{{ EmbedLiveSample('Tooltips', 450, 120) }}</p>
+<p>{{ EmbedLiveSample('Tooltips', 450, 160) }}</p>
 
 <h2 id="规范">规范</h2>
 
@@ -128,12 +128,12 @@ span[data-descr]:hover::after {
   <tr>
    <td>{{ SpecName('CSS3 Selectors', '#gen-content', '::after') }}</td>
    <td>{{ Spec2('CSS2.1') }}</td>
-   <td>双冒号.</td>
+   <td>双冒号。</td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS2.1', 'generate.html#before-after-content', '::after') }}</td>
    <td>{{ Spec2('CSS2.1') }}</td>
-   <td>最初版本,使用单冒号</td>
+   <td>最初版本，使用单冒号</td>
   </tr>
  </tbody>
 </table>

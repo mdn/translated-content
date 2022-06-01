@@ -16,29 +16,29 @@ translation_of: Web/HTML/Global_attributes/lang
 <div class="note">
 <h2 id="语言标签语法">语言标签语法</h2>
 
-<p>完整的BCP47语法足以标记极其特定的语言方言，但大多数用法都要简单得多。</p>
+<p>完整的 BCP47 语法足以标记极其特定的语言方言，但大多数用法都要简单得多。</p>
 
-<p>语言标记由连字符分隔的语言子标签组成，其中每个子标签指示该语言的特定属性。 3个最常见的子标签是：</p>
+<p>语言标记由连字符分隔的语言子标签组成，其中每个子标签指示该语言的特定属性。 3 个最常见的子标签是：</p>
 
 <dl>
  <dt>语言子标签</dt>
- <dd>Required。一个2或3个字符的代码，用于定义基本语言，通常全部用小写编写。例如，English的语言代码是<code>en</code>，Badeshi的代码是<code>bdz</code>。
+ <dd>Required。一个 2 或 3 个字符的代码，用于定义基本语言，通常全部用小写编写。例如，English 的语言代码是<code>en</code>，Badeshi 的代码是<code>bdz</code>。
 
  </dd>
  <dt>脚本子标签</dt>
- <dd>该子标签定义了用于该语言的书写系统，并且总是4个字符长，首字母大写。例如，French-in-Braille是<code>fr-Brai</code>，<code>ja-Kana</code>是用Katakana字母书写的日文。如果语言是以非常典型的方式编写的，例如拉丁字母表中的英语，则无需使用此子标签。</dd>
+ <dd>该子标签定义了用于该语言的书写系统，并且总是 4 个字符长，首字母大写。例如，French-in-Braille 是<code>fr-Brai</code>，<code>ja-Kana</code>是用 Katakana 字母书写的日文。如果语言是以非常典型的方式编写的，例如拉丁字母表中的英语，则无需使用此子标签。</dd>
  <dt>地区子标签</dt>
- <dd>该子标签定义了来自特定位置的基本语言的方言，并且是ALLCAPS中与国家代码匹配的2个字母，或者是与非国家区域匹配的3个数字。例如，<code>es-ES</code>是西班牙语中的西班牙语，<code>es-013</code>是中美洲的西班牙语。 “国际西班牙语”就是<code>es</code>。</dd>
+ <dd>该子标签定义了来自特定位置的基本语言的方言，并且是 ALLCAPS 中与国家代码匹配的 2 个字母，或者是与非国家区域匹配的 3 个数字。例如，<code>es-ES</code>是西班牙语中的西班牙语，<code>es-013</code>是中美洲的西班牙语。 “国际西班牙语”就是<code>es</code>。</dd>
 </dl>
 
-<p>如果两者都存在，则脚本子标签位于区域子标签之前 ––ru-Cyrl-BY是俄语，用白俄罗斯语中的西里尔字母书写。</p>
+<p>如果两者都存在，则脚本子标签位于区域子标签之前 ––ru-Cyrl-BY 是俄语，用白俄罗斯语中的西里尔字母书写。</p>
 
 <p>要查找语言的正确子标签代码，请参阅<a href="https://r12a.github.io/app-subtags/">语言子标签查找</a>。</p>
 </div>
 
 <p>即使设置了 <strong>lang</strong> 属性，也可能无效，因为 <a href="/en-US/docs/Web/HTML/Global_attributes/xml:lang"><strong>xml:lang</strong></a> 属性更加优先。</p>
 
-<p>对于CSS伪类{{cssxref(":lang")}}，如果它们的名称不同，则两个无效的语言名称是不同的。比如:<code>lang(es)</code>匹配<code>lang =“es-ES”</code>和<code>lang =“es-419”</code>，而<code>:lang(xyzzy)</code>与l<code>ang =“xyzzy-Zorp！”</code>不匹配。</p>
+<p>对于 CSS 伪类{{cssxref(":lang")}}，如果它们的名称不同，则两个无效的语言名称是不同的。比如<code>:lang(es)</code>匹配<code>lang = "es-ES"</code>和<code>lang = "es-419"</code>，而<code>:lang(xyzzy)</code>与<code>lang = "xyzzy-Zorp!"</code>不匹配。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -74,55 +74,7 @@ translation_of: Web/HTML/Global_attributes/lang
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.lang")}}
 
 <h2 id="相关链接">相关链接</h2>
 

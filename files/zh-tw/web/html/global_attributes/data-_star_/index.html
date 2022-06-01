@@ -3,7 +3,7 @@ title: data-*
 slug: Web/HTML/Global_attributes/data-*
 translation_of: Web/HTML/Global_attributes/data-*
 ---
-<p class="note">{{HTMLSidebar("Global_attributes")}}</p>
+<p>{{HTMLSidebar("Global_attributes")}}</p>
 
 <p><strong>data-*</strong><a href="/zh-TW/docs/Web/HTML/Global_attributes">全域屬性</a>構成一組稱作<strong>自訂 data 屬性</strong>的屬性。它能令 <a href="/zh-TW/docs/Web/HTML" title="zh-TW/HTML">HTML</a> 與其 <a href="/zh-TW/docs/DOM" title="zh-TW/DOM">DOM</a> 擁有給腳本用的交換資訊。這種屬性設置的自訂資料，能透過元素的 {{domxref("HTMLElement")}} 介面而活用。{{domxref("HTMLElement.dataset")}} property 允許訪問它們。<code>*</code> 可以是任何遵循以下規則的 <a class="external" href="http://www.w3.org/TR/REC-xml/#NT-Name" title="http://www.w3.org/TR/REC-xml/#NT-Name">xml 名稱</a>：</p>
 
@@ -25,86 +25,15 @@ translation_of: Web/HTML/Global_attributes/data-*
   onclick="spaceships[this.dataset.shipId].blasted()" /&gt;
 </pre>
 
-<p id="Specifications">（參見<em><a href="https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes">這個網站</a></em>）</p>
+<p>（參見<em><a href="https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes">這個網站</a></em>）</p>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of  {{SpecName('HTML WHATWG')}}, initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop(6) }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile(6) }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.data_attributes")}}
 
 <h2 id="參見">參見</h2>
 

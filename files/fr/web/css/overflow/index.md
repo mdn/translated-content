@@ -1,11 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/overflow
 ---
 {{CSSRef}}
@@ -16,7 +11,7 @@ La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/
 
 Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` (la valeur par défaut), cela entraîne la création [d'un nouveau contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context). Cette création est nécessaire d'un point de vue technique. Ceci est nécessaire techniquement puisque si un élément flottant traverse l'élément avec barres de défilement, cela forcera l'encapsulation du contenu de ce dernier autour de l'élément flottant. L'encapsulation devrait alors se produire après chaque défilement de la barre et mènerait à une expérience utilisateur dégradée
 
-Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
+Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
 
 > **Note :** Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
 
@@ -59,11 +54,11 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 
 #### Extensions propres au moteur Mozilla
 
-- `-moz-scrollbars-none `{{obsolete_inline}}
+- `-moz-scrollbars-none` {{deprecated_inline}}
   - : `overflow:hidden` doit être utilisé à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-scrollbars-horizontal `{{Deprecated_inline}}
+- `-moz-scrollbars-horizontal` {{Deprecated_inline}}
   - : Utilisez {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}} à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-scrollbars-vertical `{{Deprecated_inline}}
+- `-moz-scrollbars-vertical` {{Deprecated_inline}}
   - : Utilisez {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}} à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
 - `-moz-hidden-unscrollable` {{non-standard_inline}}
   - : Principalement utilisé en interne et par les thèmes. Cela désactive le défilement pour les éléments XML racines `<html>`, `<body>` (avec les flèches du clavier et la roue de la souris).
@@ -146,7 +141,7 @@ p.auto {
 
 #### Résultat
 
-{{EmbedLiveSample("définir_différentes_valeurs_d_overflow_pour_le_texte", "600", "250")}}
+{{EmbedLiveSample("Exemples", "600", "250")}}
 
 ## Spécifications
 

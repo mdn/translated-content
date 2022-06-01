@@ -16,9 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">var <var>new_array</var> = <var>old_array</var>.concat(<var>value1</var>[, <var>value2</var>[, ...[, <var>valueN</var>]]])</pre>
+<pre class="syntaxbox">var <var>new_array</var> = <var>old_array</var>.concat(<var>value1</var>[, <var>value2</var>[, ...[, <var>valueN</var>]]])</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value<em>N</em></code>{{optional_inline}}</dt>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 <p>新的 {{jsxref("Array")}} 实例。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>concat</code>方法创建一个新的数组，它由被调用的对象中的元素组成，每个参数的顺序依次是该参数的元素（如果参数是数组）或参数本身（如果参数不是数组）。它不会递归到嵌套数组参数中。</p>
 
@@ -44,26 +44,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>数组/值在连接时保持不变。此外，对于新数组的任何操作（仅当元素不是对象引用时）都不会对原始数组产生影响，反之亦然。</p>
+<p><strong>备注：</strong>数组/值在连接时保持不变。此外，对于新数组的任何操作（仅当元素不是对象引用时）都不会对原始数组产生影响，反之亦然。</p>
 </div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Concatenating_two_arrays" name="Example:_Concatenating_two_arrays">连接两个数组</h3>
+<h3 id="Example_Concatenating_two_arrays">连接两个数组</h3>
 
 <p>以下代码将两个数组合并为一个新数组：</p>
 
-<pre class="brush: js notranslate">var alpha = ['a', 'b', 'c'];
+<pre class="brush: js">var alpha = ['a', 'b', 'c'];
 var numeric = [1, 2, 3];
 
 alpha.concat(numeric);
 // result in ['a', 'b', 'c', 1, 2, 3]</pre>
 
-<h3 id="Example_Concatenating_three_arrays" name="Example:_Concatenating_three_arrays">连接三个数组</h3>
+<h3 id="Example_Concatenating_three_arrays">连接三个数组</h3>
 
 <p>以下代码将三个数组合并为一个新数组：</p>
 
-<pre class="brush: js notranslate">var num1 = [1, 2, 3],
+<pre class="brush: js">var num1 = [1, 2, 3],
     num2 = [4, 5, 6],
     num3 = [7, 8, 9];
 
@@ -72,11 +72,11 @@ var nums = num1.concat(num2, num3);
 console.log(nums);
 // results in [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
 
-<h3 id="Example_Concatenating_values_to_an_array" name="Example:_Concatenating_values_to_an_array">将值连接到数组</h3>
+<h3 id="Example_Concatenating_values_to_an_array">将值连接到数组</h3>
 
 <p>以下代码将三个值连接到数组：</p>
 
-<pre class="brush: js notranslate">var alpha = ['a', 'b', 'c'];
+<pre class="brush: js">var alpha = ['a', 'b', 'c'];
 
 var alphaNumeric = alpha.concat(1, [2, 3]);
 
@@ -87,7 +87,7 @@ console.log(alphaNumeric);
 
 <p>以下代码合并数组并保留引用：</p>
 
-<pre class="brush: js notranslate">var num1 = [[1]];
+<pre class="brush: js">var num1 = [[1]];
 var num2 = [2, [3]];
 var num3=[5,[6]];
 

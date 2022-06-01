@@ -50,7 +50,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p>Преимущество применения ORM состоит в том, что программисты могут сосредоточиться на объектах JavaScript, а не  на семантике базы данных —  особенно, если требуется работать с разными базами данных (на одном или разных веб-сайтах). Они также дают очевидное место для валидации и проверки данных.</p>
 
 <div class="note">
-<p>Совет:  Применение ODM / ORMs часто приводит к снижению затрат на разработку и обслуживание! Если вы не очень хорошо знакомы с родным языком запросов или если производительность имеет первостепенное значение, следует серьёзно рассмотреть возможность применения ODM.</p>
+<p>Совет:  Применение ODM / ORMs часто приводит к снижению затрат на разработку и обслуживание! Если вы не очень хорошо знакомы с языком запросов базы данных или если производительность не имеет первостепенного значения, следует серьёзно рассмотреть возможность применения ODM.</p>
 </div>
 
 <h3 id="Какую_модель_ORMODM_следует_использовать">Какую модель ORM/ODM следует использовать?</h3>
@@ -106,21 +106,21 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p>Также показаны отношения между моделями, включая множественные отношения. Числа на линиях связи показывают максимум и минимум  моделей, участвующих отношении. Например, линия между <code>Book</code> и <code>Genre</code> показывает, что <code>Book</code> и <code>Genre</code> связаны. Числа на этой линии рядом с моделью <code>Book</code> показывают, что жанр может быть связан с любым количеством книг, а числа на другом конце линии рядом с <code>Genre</code> отмечают, что книга может быть связана с любым количеством жанров.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Как показано в примере<a href="#related_documents">Mongoose primer</a> ниже, часто лучше иметь поле, определяющее отношение между документами (моделями), только в одной модели (обратное отношение можно найти по присвоенному идентификатору <code>_id</code> в другой модели). Ниже мы предпочли задать отношения между Book/Genre и между Book/Author в схеме  Book, а отношение между  Book/BookInstance -- в схеме BookInstance. Этот выбор в некотором смысле был произвольным -- таким же хорошим мог бы быть выбор другого поля в другой схеме.</p>
+<p><strong>Примечание</strong>: Как показано в <a href="#Mongoose_Справочник">Учебнике по Mongoose</a> ниже, часто лучше иметь поле, определяющее отношение между документами (моделями), только в одной модели (обратное отношение можно найти по присвоенному идентификатору <code>_id</code> в другой модели). Ниже мы предпочли задать отношения между Book/Genre и между Book/Author в схеме  Book, а отношение между  Book/BookInstance -- в схеме BookInstance. Этот выбор в некотором смысле был произвольным -- таким же хорошим мог бы быть выбор другого поля в другой схеме.</p>
 </div>
 
 <p><img alt="Mongoose Library Model  with correct cardinality" src="https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png" style="height: 620px; width: 737px;"></p>
 
 <div class="note">
-<p><strong>Примечание</strong>: В следующем разделе дан базовый пример, в котором объясняется, как задавать и как использовать модели. При чтении обратите внимание, как будут создаваться модели, приведённые на диаграмме.</p>
+<p><strong>Примечание</strong>: В следующем разделе дан базовый учебник, в котором объясняется, как задавать и как использовать модели. При чтении обратите внимание, как будут создаваться модели, приведённые на диаграмме.</p>
 </div>
 
-<h2 id="Mongoose_Справочник">Mongoose Справочник</h2>
+<h2 id="Mongoose_Справочник">Учебник по Mongoose</h2>
 
 <p>В этом разделе кратко описано как подключиться к базе MongoDB с помощью Mongoose, как определить схемы и модели, как сформировать основные запросы.</p>
 
 <div class="note">
-<p><strong> Примечание: </strong>На этот  пример значительно повлияли документы <a href="https://www.npmjs.com/package/mongoose">Mongoose <font color="#3d7e9a"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3">quick start</font></font></font></a> на npm и <a href="http://mongoosejs.com/docs/guide.html">официальная документация.</a></p>
+<p><strong> Примечание: </strong>На этот учебник значительно повлияло руководство <a href="https://www.npmjs.com/package/mongoose">Mongoose quick start</a> на npm и <a href="http://mongoosejs.com/docs/guide.html">официальная документация.</a></p>
 </div>
 
 <h3 id="Установка_Mongoose_и_MongoDB">Установка Mongoose и MongoDB</h3>
@@ -133,7 +133,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p>Установка <em>Mongoose </em>добавит все зависимости, включая драйвер MongoDB, но не установит саму базу данных. При желании  установить сервер MongoDB локально,  можно <a href="https://www.mongodb.com/download-center">скачать установочный файл здесь</a> для своей операционной системы и установить его.  Также  можно использовать облако MongoDB.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> В примере для хранения базы данных мы используем облачный сервис <a href="https://mlab.com/plans/pricing/">sandbox tier</a> ("песочницу"). This is suitable for development, and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might well use for your production database).</p>
+<p><strong>Примечание:</strong> В примере для хранения базы данных мы используем облачный сервис <a href="https://mlab.com/plans/pricing/">sandbox tier</a> ("песочницу"). Это удобно для разработки и имеет смысл для руководства, потому что такой подход делает "установку" базы данных независимой от операционной системы (база данных как веб-сервис — это также подход, который вы можете использовать для своей базы данных, находящейся в реальной эксплуатации).</p>
 </div>
 
 <h3 id="Подключение_к_MongoDB">Подключение к MongoDB</h3>
@@ -573,7 +573,7 @@ SomeModel.find(callback_function);</code></pre>
 
 <h2 id="Установка_Mongoose">Установка Mongoose</h2>
 
-<p>Откройте окно команд и перейдите в каталог, в котором создан  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">каркас веб-сайта Local Library</a>. Введите команду install, чтобы установить Mongoose (и её зависимости), а также добавьте её в файл <strong>package.json</strong>, если вы ещё не сделали этого ранее, при чтении примера <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a>.</p>
+<p>Откройте окно команд и перейдите в каталог, в котором создан  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">каркас веб-сайта Local Library</a>. Введите команду install, чтобы установить Mongoose (и её зависимости), а также добавьте её в файл <strong>package.json</strong>, если вы ещё не сделали этого ранее, при чтении <a href="#Installing_Mongoose_and_MongoDB">Учебника по Mongoose</a>.</p>
 
 <pre class="brush: bash">npm install mongoose
 </pre>
@@ -590,7 +590,7 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
-<p>Как указано ранее в примере <a href="#Connecting_to_MongoDB">Mongoose primer</a>, этот код задаёт соединение по умолчанию с привязкой события ошибки error (так что ошибки будут выведены в консоль). </p>
+<p>Как указано ранее в <a href="#Connecting_to_MongoDB">Учебнике по Mongoose</a>, этот код задаёт соединение по умолчанию с привязкой события ошибки error (так что ошибки будут выведены в консоль). </p>
 
 <h2 id="Определение_схемы_LocalLibrary">Определение схемы LocalLibrary</h2>
 

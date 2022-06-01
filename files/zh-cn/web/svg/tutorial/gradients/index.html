@@ -7,11 +7,11 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>并非只能简单填充颜色和描边，更令人兴奋的是，你还可以创建和并在填充和描边上应用渐变色。</p>
 
-<p>有两种类型的渐变：线性渐变和径向渐变。你<strong>必须</strong>给渐变内容指定一个id属性，否则文档内的其他元素就不能引用它。为了让渐变能被重复使用，渐变内容需要定义在&lt;defs&gt;标签内部，而不是定义在形状上面。</p>
+<p>有两种类型的渐变：线性渐变和径向渐变。你<strong>必须</strong>给渐变内容指定一个 id 属性，否则文档内的其他元素就不能引用它。为了让渐变能被重复使用，渐变内容需要定义在&lt;defs&gt;标签内部，而不是定义在形状上面。</p>
 
 <h2 id="SVGLinearGradient" name="SVGLinearGradient">线性渐变</h2>
 
-<p>线性渐变沿着直线改变颜色，要插入一个线性渐变，你需要在SVG文件的<code>defs元素</code>内部，创建一个{{SVGElement('linearGradient')}} 节点。</p>
+<p>线性渐变沿着直线改变颜色，要插入一个线性渐变，你需要在 SVG 文件的<code>defs 元素</code>内部，创建一个{{SVGElement('linearGradient')}} 节点。</p>
 
 <h3 id="基础示例">基础示例</h3>
 
@@ -42,19 +42,19 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>{{ EmbedLiveSample('SVGLinearGradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}</p>
 
-<p>以上是一个应用了线性渐变的<code>&lt;rect&gt;</code>元素的示例。线性渐变内部有几个{{SVGElement('stop')}} 结点，这些结点通过指定位置的offset（偏移）属性和stop-color（颜色中值）属性来说明在渐变的特定位置上应该是什么颜色；可以直接指定这两个属性值，也可以通过CSS来指定他们的值，该例子中混合使用了这两种方法。例如：该示例中指明了渐变开始颜色为红色，到中间位置时变成半透明的黑色，最后变成蓝色。虽然你可以根据需求按照自己的喜好插入很多中间颜色，但是偏移量应该始终从0%开始（或者0也可以，百分号可以扔掉），到100%（或1）结束。如果<code>stop</code>设置的位置有重合，将使用XML树中较晚设置的值。而且，类似于填充和描边，你也可以指定属性<code>stop-opacity</code>来设置某个位置的半透明度（同样，对于FF3你也可以设置rgba值）。</p>
+<p>以上是一个应用了线性渐变的<code>&lt;rect&gt;</code>元素的示例。线性渐变内部有几个{{SVGElement('stop')}} 结点，这些结点通过指定位置的 offset（偏移）属性和 stop-color（颜色中值）属性来说明在渐变的特定位置上应该是什么颜色；可以直接指定这两个属性值，也可以通过 CSS 来指定他们的值，该例子中混合使用了这两种方法。例如：该示例中指明了渐变开始颜色为红色，到中间位置时变成半透明的黑色，最后变成蓝色。虽然你可以根据需求按照自己的喜好插入很多中间颜色，但是偏移量应该始终从 0% 开始（或者 0 也可以，百分号可以扔掉），到 100%（或 1）结束。如果<code>stop</code>设置的位置有重合，将使用 XML 树中较晚设置的值。而且，类似于填充和描边，你也可以指定属性<code>stop-opacity</code>来设置某个位置的半透明度（同样，对于 FF3 你也可以设置 rgba 值）。</p>
 
 <pre class="eval"> &lt;stop offset="100%" stop-color="yellow" stop-opacity="0.5"/&gt;
 </pre>
 
-<p>使用渐变时，我们需要在一个对象的属性<code>fill</code>或属性<code>stroke</code>中引用它，这跟你在CSS中使用<code>url</code>引用元素的方法一样。在本例中，url只是一个渐变的引用，我们已经给这个渐变一个ID——“Gradient”。要想附加它，将属性<code>fill</code>设置为<code>url(#Gradient)</code>即可。现在对象就变成多色的了，也可以用同样的方式处理<code>stroke</code>。</p>
+<p>使用渐变时，我们需要在一个对象的属性<code>fill</code>或属性<code>stroke</code>中引用它，这跟你在 CSS 中使用<code>url</code>引用元素的方法一样。在本例中，url 只是一个渐变的引用，我们已经给这个渐变一个 ID——“Gradient”。要想附加它，将属性<code>fill</code>设置为<code>url(#Gradient)</code>即可。现在对象就变成多色的了，也可以用同样的方式处理<code>stroke</code>。</p>
 
-<p><code>&lt;linearGradient&gt;元素还需要一些其他的属性值，它们指定了渐变的大小和出现范围。渐变的方向可以通过两个点来控制，它们分别是属性x1、x2、y1和y2，这些属性定义了渐变路线走向。渐变色默认是水平方向的，但是通过修改这些属性，就可以旋转该方向。下例中的Gradient2创建了一个垂直渐变。</code></p>
+<p><code>&lt;linearGradient&gt;元素还需要一些其他的属性值，它们指定了渐变的大小和出现范围。渐变的方向可以通过两个点来控制，它们分别是属性 x1、x2、y1 和 y2，这些属性定义了渐变路线走向。渐变色默认是水平方向的，但是通过修改这些属性，就可以旋转该方向。下例中的 Gradient2 创建了一个垂直渐变。</code></p>
 
 <pre class="eval"> &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
 </pre>
 
-<div class="note"><strong>注意:</strong> 你也可以在渐变上使用<code>xlink:href属性。如果</code>使用了该属性时，一个渐变的属性和颜色中值（stop）可以被另一个渐变包含引用。在下例中，你就不需要再Grandient2中重新创建全部的颜色中值（stop）。
+<div class="note"><strong>注意：</strong> 你也可以在渐变上使用<code>xlink:href 属性。如果</code>使用了该属性时，一个渐变的属性和颜色中值（stop）可以被另一个渐变包含引用。在下例中，你就不需要在 Grandient2 中重新创建全部的颜色中值（stop）。
 
 <pre class="eval"> &lt;linearGradient id="Gradient1"&gt;
    &lt;stop id="stop1" offset="0%"/&gt;
@@ -64,7 +64,7 @@ translation_of: Web/SVG/Tutorial/Gradients
  &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
     xmlns:xlink="<a class="external" href="http://www.w3.org/1999/xlink" rel="freelink">http://www.w3.org/1999/xlink</a>" xlink:href="#Gradient1"/&gt;
 </pre>
-尽管通常你可能在文档的顶部就定义了Gradient1，但我在结点上直接包含了xlink的命名空间，关于这点的更多信息我们会在<a href="/en-US/Web/SVG/Tutorial/Other_content_in_SVG" title="en-US/Web/SVG/Tutorial/Other content in SVG">讨论图片</a>的时候详解。</div>
+尽管通常你可能在文档的顶部就定义了 Gradient1，但我在结点上直接包含了 xlink 的命名空间，关于这点的更多信息我们会在<a href="/en-US/Web/SVG/Tutorial/Other_content_in_SVG" title="en-US/Web/SVG/Tutorial/Other content in SVG">讨论图片</a>的时候详解。</div>
 
 <h2 id="Radial_Gradient" name="Radial_Gradient">径向渐变</h2>
 
@@ -92,9 +92,9 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>{{ EmbedLiveSample('Radial_Gradient','120','240','/files/726/SVG_Radial_Gradient_Example.png') }}</p>
 
-<p>中值（stops）的使用方法与之前一致，但是现在这个对象的颜色是中间是红色的，且向着边缘的方向渐渐的变成蓝色。跟线性渐变一样，<code>&lt;radialGradient&gt;</code> 节点可以有多个属性来描述其位置和方向，但是它更加复杂。径向渐变也是通过两个点来定义其边缘位置，两点中的第一个点定义了渐变结束所围绕的圆环，它需要一个中心点，由cx和cy属性及半径r来定义，通过设置这些点我们可以移动渐变范围并改变它的大小，如上例的第二个&lt;rect&gt;所展示的。</p>
+<p>中值（stops）的使用方法与之前一致，但是现在这个对象的颜色是中间是红色的，且向着边缘的方向渐渐的变成蓝色。跟线性渐变一样，<code>&lt;radialGradient&gt;</code> 节点可以有多个属性来描述其位置和方向，但是它更加复杂。径向渐变也是通过两个点来定义其边缘位置，两点中的第一个点定义了渐变结束所围绕的圆环，它需要一个中心点，由 cx 和 cy 属性及半径 r 来定义，通过设置这些点我们可以移动渐变范围并改变它的大小，如上例的第二个&lt;rect&gt;所展示的。</p>
 
-<p>第二个点被称为焦点，由fx和fy属性定义。第一个点描述了渐变边缘位置，焦点则描述了渐变的中心，如下例。</p>
+<p>第二个点被称为焦点，由 fx 和 fy 属性定义。第一个点描述了渐变边缘位置，焦点则描述了渐变的中心，如下例。</p>
 
 <h3 id="中心和焦点">中心和焦点</h3>
 
@@ -125,7 +125,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>因为如果焦点如之前描述的那样被移到圆圈的外面，渐变将不能正确呈现，所以该点会被假定在圆圈范围内。如果没有给出焦点，将认为该点与中心点的位置一致。</p>
 
-<p>线性渐变和径向渐变都需要一些额外的属性用于描述渐变过程，这里我希望额外提及一个<code>spreadMethod</code>属性，该属性控制了当渐变到达终点的行为，但是此时该对象尚未被填充颜色。这个属性可以有三个值：pad、reflect或repeat。Pad就是目前我们见到的效果，即当渐变到达终点时，最终的偏移颜色被用于填充对象剩下的空间。reflect会让渐变一直持续下去，不过它的效果是与渐变本身是相反的，以100%偏移位置的颜色开始，逐渐偏移到0%位置的颜色，然后再回到100%偏移位置的颜色。repeat也会让渐变继续，但是它不会像reflect那样反向渐变，而是跳回到最初的颜色然后继续渐变。</p>
+<p>线性渐变和径向渐变都需要一些额外的属性用于描述渐变过程，这里我希望额外提及一个<code>spreadMethod</code>属性，该属性控制了当渐变到达终点的行为，但是此时该对象尚未被填充颜色。这个属性可以有三个值：pad、reflect 或 repeat。Pad 就是目前我们见到的效果，即当渐变到达终点时，最终的偏移颜色被用于填充对象剩下的空间。reflect 会让渐变一直持续下去，不过它的效果是与渐变本身是相反的，以 100% 偏移位置的颜色开始，逐渐偏移到 0% 位置的颜色，然后再回到 100% 偏移位置的颜色。repeat 也会让渐变继续，但是它不会像 reflect 那样反向渐变，而是跳回到最初的颜色然后继续渐变。</p>
 
 <h3 id="spreadMethod">spreadMethod</h3>
 
@@ -165,7 +165,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>{{ EmbedLiveSample('spreadMethod','220','220','/files/728/SVG_SpreadMethod_Example.png') }}</p>
 
-<p>两种渐变都有一个叫做 <code>gradientUnits（渐变单元）</code>的属性，它描述了用来描述渐变的大小和方向的单元系统。该属性有两个值：<code>userSpaceOnUse</code> 、<code>objectBoundingBox。默认值为objectBoundingBox，我们目前看到的效果都是在这种系统下的，它大体上定义了对象的渐变大小范围，所以你只要指定从0到1的坐标值，渐变就会自动的缩放到对象相同大小。</code>userSpaceOnUse使用绝对单元，所以你必须知道对象的位置，并将渐变放在同样地位置上。上例中的radialGradient需要被重写成：</p>
+<p>两种渐变都有一个叫做 <code>gradientUnits（渐变单元）</code>的属性，它描述了用来描述渐变的大小和方向的单元系统。该属性有两个值：<code>userSpaceOnUse</code> 、<code>objectBoundingBox。默认值为 objectBoundingBox，我们目前看到的效果都是在这种系统下的，它大体上定义了对象的渐变大小范围，所以你只要指定从 0 到 1 的坐标值，渐变就会自动的缩放到对象相同大小。</code>userSpaceOnUse 使用绝对单元，所以你必须知道对象的位置，并将渐变放在同样地位置上。上例中的 radialGradient 需要被重写成：</p>
 
 <pre class="eval"> &lt;radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse"&gt;
 </pre>

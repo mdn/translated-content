@@ -1,12 +1,6 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-tags:
-  - API
-  - DOM
-  - Event
-  - Method
-  - Reference
 translation_of: Web/API/Event/preventDefault
 browser-compat: api.Event.preventDefault
 ---
@@ -52,7 +46,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 #### Résultat
 
-{{EmbedLiveSample("blocking_default_click_handling")}}
+{{EmbedLiveSample("Bloquer_la_gestion_du_clic_par_défaut")}}
 
 ### Empêcher les pressions du clavier sur un champ texte
 
@@ -90,7 +84,7 @@ function bloqueSaisie(evt) {
 
 #### Résultat
 
-{{EmbedLiveSample('stopping_keystrokes_from_reaching_an_edit_field', 600, 200)}}
+{{EmbedLiveSample('Empêcher_les_pressions_du_clavier_sur_un_champ_texte', 600, 200)}}
 
 ## Notes
 

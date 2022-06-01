@@ -10,16 +10,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 <div>
 <div>{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-</div>
-
 <div>{{js_property_attributes(0,0,0)}}</div>
 
 <h2 id="示例">示例</h2>
 
-<p><font face="Open Sans, Arial, sans-serif">你可实现一个自定义的</font><code>instanceof</code> 行为，<font face="Open Sans, Arial, sans-serif">例如：</font></p>
+<p>你可实现一个自定义的<code>instanceof</code> 行为，例如：</p>
 
-<pre class="brush: js notranslate">class MyArray {
+<pre class="brush: js">class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance);
   }

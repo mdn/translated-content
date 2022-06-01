@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">new Set([<em>iterable</em>]);</pre>
+<pre class="syntaxbox">new Set([<em>iterable</em>]);</pre>
 
 <h3 id="參數">參數</h3>
 
@@ -67,7 +67,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h3 id="使用_Set_物件">使用 <code>Set</code> 物件</h3>
 
-<pre class="brush: js notranslate">var mySet = new Set();
+<pre class="brush: js">var mySet = new Set();
 
 mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
@@ -95,7 +95,7 @@ console.log(mySet);// Set [ 1, "some text", Object {a: 1, b: 2}, Object {a: 1, b
 
 <h3 id="迭代_Sets">迭代 Sets</h3>
 
-<pre class="brush: js notranslate">// iterate over items in set
+<pre class="brush: js">// iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet) console.log(item);
 
@@ -139,7 +139,7 @@ mySet.forEach(function(value) {
 
 <h3 id="實作基本的_set_操作">實作基本的 set 操作</h3>
 
-<pre class="brush: js notranslate">Set.prototype.isSuperset = function(subset) {
+<pre class="brush: js">Set.prototype.isSuperset = function(subset) {
     for (var elem of subset) {
         if (!this.has(elem)) {
             return false;
@@ -188,7 +188,7 @@ setA.difference(setC); // =&gt; Set [1, 2]
 
 <h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
 
-<pre class="brush: js notranslate">var myArray = ['value1', 'value2', 'value3'];
+<pre class="brush: js">var myArray = ['value1', 'value2', 'value3'];
 
 // Use the regular Set constructor to transform an Array into a Set
 var mySet = new Set(myArray);
@@ -200,7 +200,7 @@ console.log([...mySet]); // Will show you exactly the same Array as myArray</pre
 
 <h3 id="與_Strings_關聯">與 <code>Strings</code> 關聯</h3>
 
-<pre class="brush: js notranslate">var text = 'India';
+<pre class="brush: js">var text = 'India';
 
 var mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
 mySet.size;  // 5

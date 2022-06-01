@@ -17,10 +17,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 <div>{{EmbedInteractiveExample("pages/js/array-indexof.html")}}</div>
 
 <div class="note">
-<p>注意：对于String方法，请参阅 {{jsxref("String.prototype.indexOf()")}}。</p>
+<p><strong>备注：</strong>对于 String 方法，请参阅 {{jsxref("String.prototype.indexOf()")}}。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre><var>arr</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var>])</pre>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
  <dt><code>searchElement</code></dt>
  <dd>要查找的元素</dd>
  <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
- <dd>开始查找的位置。如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。如果参数中提供的索引值是一个负值，则将其作为数组末尾的一个抵消，即-1表示从最后一个元素开始查找，-2表示从倒数第二个元素开始查找 ，以此类推。 注意：如果参数中提供的索引值是一个负值，并不改变其查找顺序，查找顺序仍然是从前向后查询数组。如果抵消后的索引值仍小于0，则整个数组都将会被查询。其默认值为0.</dd>
+ <dd>开始查找的位置。如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回 -1。如果参数中提供的索引值是一个负值，则将其作为数组末尾的一个抵消，即 -1 表示从最后一个元素开始查找，-2 表示从倒数第二个元素开始查找 ，以此类推。 注意：如果参数中提供的索引值是一个负值，并不改变其查找顺序，查找顺序仍然是从前向后查询数组。如果抵消后的索引值仍小于 0，则整个数组都将会被查询。其默认值为 0。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -39,13 +39,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 <h2 id="描述">描述</h2>
 
-<p><code>indexOf</code> 使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">strict equality</a> (无论是 ===, 还是 triple-equals操作符都基于同样的方法)进行判断 <code>searchElement与</code>数组中包含的元素之间的关系。</p>
+<p><code>indexOf</code> 使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">strict equality</a> (无论是 ===, 还是 triple-equals 操作符都基于同样的方法) 进行判断 <code>searchElement</code> 与数组中包含的元素之间的关系。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用indexOf">使用indexOf</h3>
+<h3 id="使用_indexof">使用 indexOf</h3>
 
-<p>以下例子使用<code>indexOf方法确定多个值在数组中的位置。</code></p>
+<p>以下例子使用<code>indexOf 方法确定多个值在数组中的位置。</code></p>
 
 <pre class="brush: js">var array = [2, 5, 9];
 array.indexOf(2);     // 0
@@ -89,7 +89,7 @@ updateVegetablesCollection(veggies, 'spinach'); </pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>indexOf</code> 在ECMA-262 标准 的第5版中被加入，但并非所有的浏览器都支持该方法。你可以在编写scripts时，在其开头使用以下代码，它能够允许你在没有本地支持的情况下使用indexOf方法。该算法符合ECMA-262第5版其中一项规定, 即假定 {{jsxref("Global_Objects/TypeError", "TypeError")}}和 {{jsxref("Math.abs")}} 呈现它们原有的值。</p>
+<p><code>indexOf</code> 在 ECMA-262 标准 的第 5 版中被加入，但并非所有的浏览器都支持该方法。你可以在编写 scripts 时，在其开头使用以下代码，它能够允许你在没有本地支持的情况下使用 indexOf 方法。该算法符合 ECMA-262 第 5 版其中一项规定，即假定 {{jsxref("Global_Objects/TypeError", "TypeError")}}和 {{jsxref("Math.abs")}} 呈现它们原有的值。</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: http://es5.github.io/#x15.4.4.14
@@ -189,7 +189,7 @@ if (!Array.prototype.indexOf) {
 <p>{{Compat("javascript.builtins.Array.indexOf")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>

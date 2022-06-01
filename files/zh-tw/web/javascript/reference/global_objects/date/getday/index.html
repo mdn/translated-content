@@ -5,15 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>getDay()</code></strong> 方法會根據當地時間將指定日期返回一星期中的第幾天，</span>其中0代表星期日。 在當月的某天可以參考{{jsxref("Date.prototype.getDate()")}}。</p>
+<p><strong><code>getDay()</code></strong> 方法會根據當地時間將指定日期返回一星期中的第幾天，其中0代表星期日。 在當月的某天可以參考{{jsxref("Date.prototype.getDate()")}}。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getDay()</code></pre>
+<pre class="syntaxbox"><code><var>dateObj</var>.getDay()</code></pre>
 
 <h3 id="返回值">返回值</h3>
 
@@ -25,16 +23,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <p>下面第二行表示根據日期對象'Xmas95'的值，把1賦值給'weekday'。則1995年12月25日是星期一。</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
 </pre>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上<code>options</code>參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上<code>options</code>參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：</p>
 
-<pre class="brush: js notranslate">var options = { weekday: 'long'};
+<pre class="brush: js">var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 // Monday
 console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));

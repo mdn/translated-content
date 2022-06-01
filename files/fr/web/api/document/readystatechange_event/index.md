@@ -6,7 +6,7 @@ original_slug: Web/Events/readystatechange
 ---
 {{ApiRef}}
 
-L'événement `readystatechange` est déclenché lorsque l'attribut [`readyState` ](/fr/docs/DOM/document.readyState)d'un document a changé.
+L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyState`](/fr/docs/Web/API/Document/readyState) d'un document a changé.
 
 ## Information générale
 
@@ -49,7 +49,7 @@ document.onreadystatechange = function () {
 
 ## Navigateur compatible
 
-Cet événement a longtemps été soutenue par Internet Explorer et peut être utilisé comme une alternative à l'evenement [`DOMContentLoaded`](/fr/docs/) (voir la note \[2] de la section [Navigateurs compatibles](/fr/docs/Web/Events/DOMContentLoaded#Navigateurs_compatibles)).
+Cet événement a longtemps été soutenue par Internet Explorer et peut être utilisé comme une alternative à l'evenement [`DOMContentLoaded`](/fr/docs/) (voir la note \[2] de la section [Navigateurs compatibles](/fr/docs/Web/Events/DOMContentLoaded#Navigateurs_compatibles)).
 
 ## Les événements liés
 

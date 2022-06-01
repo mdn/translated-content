@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>replaceAll()</code></strong> 方法返回一个新字符串，新字符串所有满足 <code>pattern</code> 的部分都已被<code>replacement</code> 替换。</span><span class="seoSummary"><code>pattern</code></span>可以是一个字符串或一个 {{jsxref("RegExp")}}， <code>replacement</code>可以是一个字符串或一个在每次匹配被调用的函数。</p>
+<p><strong><code>replaceAll()</code></strong> 方法返回一个新字符串，新字符串所有满足 <code>pattern</code> 的部分都已被<code>replacement</code> 替换。<code>pattern</code>可以是一个字符串或一个 {{jsxref("RegExp")}}， <code>replacement</code>可以是一个字符串或一个在每次匹配被调用的函数。</p>
 
 <p>原始字符串保持不变。</p>
 
@@ -19,10 +19,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
+<pre class="syntaxbox">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
 
-<div class="blockIndicator note">
-<p>当使用一个 `regex`时，您必须设置全局（“ g”）标志，<br>
+<div class="note">
+<p><strong>备注：</strong>当使用一个 `regex`时，您必须设置全局（“ g”）标志，<br>
  否则，它将引发 <code>TypeError</code>：“必须使用全局 RegExp 调用 replaceAll”。</p>
 </div>
 
@@ -54,8 +54,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 <table class="standard-table">
  <thead>
   <tr>
-   <th class="header" scope="col">Pattern</th>
-   <th class="header" scope="col">Inserts</th>
+   <th scope="col">Pattern</th>
+   <th scope="col">Inserts</th>
   </tr>
  </thead>
  <tbody>
@@ -93,8 +93,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 <table class="standard-table">
  <thead>
   <tr>
-   <th class="header" scope="col">Possible name</th>
-   <th class="header" scope="col">Supplied value</th>
+   <th scope="col">Possible name</th>
+   <th scope="col">Supplied value</th>
   </tr>
  </thead>
  <tbody>
@@ -123,20 +123,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 <h3 id="使用_replaceAll">使用 replaceAll</h3>
 
-<pre class="brush: js notranslate">'aabbcc'.replaceAll('b', '.');
+<pre class="brush: js">'aabbcc'.replaceAll('b', '.');
 // 'aa..cc'</pre>
 
 <h3 id="非全局_regex_抛出">非全局 regex 抛出</h3>
 
 <p>使用正则表达式搜索值时，它必须是全局的。这将行不通：</p>
 
-<pre class="brush: js; example-bad notranslate">'aabbcc'.replaceAll(/b/, '.');
+<pre class="brush: js; example-bad">'aabbcc'.replaceAll(/b/, '.');
 TypeError: replaceAll must be called with a global RegExp
 </pre>
 
-<p>这将可以正常运行:</p>
+<p>这将可以正常运行：</p>
 
-<pre class="brush: js; example-good notranslate">'aabbcc'.replaceAll(/b/g, '.');
+<pre class="brush: js; example-good">'aabbcc'.replaceAll(/b/g, '.');
 "aa..cc"
 </pre>
 

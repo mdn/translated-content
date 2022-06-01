@@ -38,7 +38,7 @@ On peut comparer cette méthode avec une recherche par curseur. Effectivement, i
 - `TransactionInactiveError`
   - : Cette {{domxref("DOMException","exception")}} est levée si la transaction ({{domxref("IDBTransaction")}}) est inactive.
 - `DataError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si la clé ou l'intervalle de clé ({{domxref("IDBKeyRange")}}) est invalide.
+  - : Cette exception ({{domxref("DOMException")}}) est levée si la clé ou l'intervalle de clé ({{domxref("IDBKeyRange")}}) est invalide.
 - `InvalidStateError`
   - : Cette exception ({{domxref("DOMException")}}) est levée si l'index à été supprimé.
 - `TypeError`

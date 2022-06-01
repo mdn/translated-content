@@ -7,16 +7,16 @@ tags:
   - web app manifest
 translation_of: Web/Manifest
 ---
-<p><a href="web app manifest" id="web app manifest" name="web app manifest" title="web app manifest">Web应用程序清单</a>在一个JSON文本文件中提供有关应用程序的信息（如名称，作者，图标和描述）。manifest 的目的是将Web应用程序安装到设备的主屏幕，为用户提供更快的访问和更丰富的体验。</p>
+<p><a href="web app manifest" id="web app manifest" name="web app manifest" title="web app manifest">Web 应用程序清单</a>在一个 JSON 文本文件中提供有关应用程序的信息（如名称，作者，图标和描述）。manifest 的目的是将 Web 应用程序安装到设备的主屏幕，为用户提供更快的访问和更丰富的体验。</p>
 
-<p>Web应用程序清单是被称为<a href="/en-US/docs/Web/Apps/Progressive">渐进式Web应用程序(PWA)</a>的Web技术集合的一部分, 它们是可以安装到设备的主屏幕的网络应用程序，而不需要用户通过应用商店，伴随着其他功能, 比如离线可用和接收推送通知。</p>
+<p>Web 应用程序清单是被称为<a href="/en-US/docs/Web/Apps/Progressive">渐进式 Web 应用程序 (PWA)</a>的 Web 技术集合的一部分，它们是可以安装到设备的主屏幕的网络应用程序，而不需要用户通过应用商店，伴随着其他功能，比如离线可用和接收推送通知。</p>
 
 <h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">部署一个 manifest</h2>
 
-<p>Web应用程序清单部署在您的HTML页面中，使用在你的文件的头部的一个链接标记：</p>
+<p>Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的头部的一个链接标记：</p>
 
 <div class="highlight">
-<pre><code class="language-html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/manifest.json"</span><span class="nt">&gt;</span></code></pre>
+<pre><code class="language-html">&lt;link rel="manifest" href="/manifest.json"&gt;</code></pre>
 </div>
 
 <h2 id="manifest_范例">manifest 范例 </h2>
@@ -26,7 +26,7 @@ translation_of: Web/Manifest
   "short_name": "HackerWeb",
   "start_url": ".",
   "display": "standalone",
-<span class="pl-s"><span class="pl-pds">  "</span>background_color<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>#fff<span class="pl-pds">"</span></span>,
+  "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
   "icons": [{
     "src": "images/touch/homescreen48.png",
@@ -65,29 +65,29 @@ translation_of: Web/Manifest
 
 <h3 id="background_color"><code>background_color</code></h3>
 
-<p>为web应用程序预定义的背景颜色。此值在应用程序样式表中可以再次声明。它主要用于在样式表加载之前，当加载manifest，浏览器可以用来绘制web应用程序的背景颜色。在启动web应用程序和加载应用程序的内容之间创建了一个平滑的过渡。</p>
+<p>为 web 应用程序预定义的背景颜色。此值在应用程序样式表中可以再次声明。它主要用于在样式表加载之前，当加载 manifest，浏览器可以用来绘制 web 应用程序的背景颜色。在启动 web 应用程序和加载应用程序的内容之间创建了一个平滑的过渡。</p>
 
 <pre class="brush: json">"background_color": "red"</pre>
 
 <div class="note">
-<p>注意：background_color只是在web应用程序加载时提高用户体验，而当web应用程序的样式表可用时，不能替代作为背景颜色使用。</p>
+<p>注意：background_color 只是在 web 应用程序加载时提高用户体验，而当 web 应用程序的样式表可用时，不能替代作为背景颜色使用。</p>
 </div>
 
 <h3 id="description"><code>description</code></h3>
 
-<p>提供有关Web应用程序的一般描述。</p>
+<p>提供有关 Web 应用程序的一般描述。</p>
 
 <pre class="brush: json">"description": "The app that helps you find the best food in town!"</pre>
 
 <h3 id="dir"><code>dir</code></h3>
 
-<p>指定名称、短名称和描述成员的主文本方向。与lang一起配置，可以帮助正确显示右到左文本。</p>
+<p>指定名称、短名称和描述成员的主文本方向。与 lang 一起配置，可以帮助正确显示右到左文本。</p>
 
 <pre class="brush: json" dir="rtl">"dir": "rtl",
 "lang": "ar",
 "short_name": "أنا من التطبيق!"</pre>
 
-<p>可选值:</p>
+<p>可选值：</p>
 
 <ul>
  <li><code>ltr</code> (由左到右)</li>
@@ -96,16 +96,16 @@ translation_of: Web/Manifest
 </ul>
 
 <div class="note">
-<p><strong>注意：当省略时，默认为auto</strong></p>
+<p><strong>注意：当省略时，默认为 auto</strong></p>
 </div>
 
 <h3 id="display"><code>display</code></h3>
 
-<p>定义开发人员对Web应用程序的首选显示模式。</p>
+<p>定义开发人员对 Web 应用程序的首选显示模式。</p>
 
 <pre class="brush: json">"display": "standalone"</pre>
 
-<p>有效值:</p>
+<p>有效值：</p>
 
 <table class="standard-table">
  <thead>
@@ -118,12 +118,12 @@ translation_of: Web/Manifest
  <tbody>
   <tr>
    <td><code>fullscreen</code></td>
-   <td>全屏显示, 所有可用的显示区域都被使用, 并且不显示状态栏{{Glossary("chrome")}}。</td>
+   <td>全屏显示，所有可用的显示区域都被使用，并且不显示状态栏{{Glossary("chrome")}}。</td>
    <td><code>standalone</code></td>
   </tr>
   <tr>
    <td><code>standalone</code></td>
-   <td>让这个应用看起来像一个独立的应用程序，包括具有不同的窗口，在应用程序启动器中拥有自己的图标等。这个模式中，用户代理将移除用于控制导航的UI元素，但是可以包括其他UI元素，例如状态栏。</td>
+   <td>让这个应用看起来像一个独立的应用程序，包括具有不同的窗口，在应用程序启动器中拥有自己的图标等。这个模式中，用户代理将移除用于控制导航的 UI 元素，但是可以包括其他 UI 元素，例如状态栏。</td>
    <td><code>minimal-ui</code></td>
   </tr>
   <tr>
@@ -140,12 +140,12 @@ translation_of: Web/Manifest
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: 您可以使用显示模式媒体功能，根据<a href="/docs/Web/CSS/@media/display-mode">显示模式</a>选择性地将CSS应用到您的应用程序。 这可用于在从URL启动网站和从桌面图标启动网站之间提供一致的用户体验。</p>
+<p><strong>Note</strong>: 您可以使用显示模式媒体功能，根据<a href="/docs/Web/CSS/@media/display-mode">显示模式</a>选择性地将 CSS 应用到您的应用程序。 这可用于在从 URL 启动网站和从桌面图标启动网站之间提供一致的用户体验。</p>
 </div>
 
 <h3 id="icons"><code>icons</code></h3>
 
-<p>指定可在各种环境中用作应用程序图标的图像对象数组。 例如，它们可以用来在其他应用程序列表中表示Web应用程序，或者将Web应用程序与<abbr title="operating system">OS</abbr>的任务切换器和/或系统偏好集成在一起。</p>
+<p>指定可在各种环境中用作应用程序图标的图像对象数组。 例如，它们可以用来在其他应用程序列表中表示 Web 应用程序，或者将 Web 应用程序与<abbr title="operating system">OS</abbr>的任务切换器和/或系统偏好集成在一起。</p>
 
 <pre class="brush: json">"icons": [
   {
@@ -183,7 +183,7 @@ translation_of: Web/Manifest
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td>图像文件的路径。 如果<code>src</code>是一个相对URL，则基本URL将是manifest的URL。</td>
+   <td>图像文件的路径。 如果<code>src</code>是一个相对 URL，则基本 URL 将是 manifest 的 URL。</td>
   </tr>
   <tr>
    <td><code>type</code></td>
@@ -206,7 +206,7 @@ translation_of: Web/Manifest
 
 <h3 id="orientation"><code>orientation</code></h3>
 
-<p>定义所有Web应用程序顶级的默认方向 {{Glossary("Browsing context", "browsing contexts")}}.</p>
+<p>定义所有 Web 应用程序顶级的默认方向 {{Glossary("Browsing context", "browsing contexts")}}.</p>
 
 <pre class="brush: json"><code>​​"orientation": "portrait-primary"</code></pre>
 
@@ -225,17 +225,17 @@ translation_of: Web/Manifest
 
 <h3 id="prefer_related_applications"><code>prefer_related_applications</code></h3>
 
-<p>指定一个布尔值，提示用户代理向用户指示指定的相关应用程序（请参见下文）可用，并建议通过Web应用程序。 只有当相关的本地应用程序确实提供了某些Web应用程序无法做到的事情时，才应该使用它。</p>
+<p>指定一个布尔值，提示用户代理向用户指示指定的相关应用程序（请参见下文）可用，并建议通过 Web 应用程序。 只有当相关的本地应用程序确实提供了某些 Web 应用程序无法做到的事情时，才应该使用它。</p>
 
 <pre class="brush: json">"prefer_related_applications": false</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 如果省略,默认设置为 <code>false</code>.</p>
+<p><strong>Note</strong>: 如果省略，默认设置为 <code>false</code>.</p>
 </div>
 
 <h3 id="related_applications"><code>related_applications</code></h3>
 
-<p>指定一个“应用程序对象”数组，代表可由底层平台安装或可访问的本机应用程序 - 例如可通过Google Play Store获取的原生Android应用程序。 这样的应用程序旨在替代提供类似或等同功能的Web应用程序 - 就像Web应用程序的本机应用程序版本一样。</p>
+<p>指定一个“应用程序对象”数组，代表可由底层平台安装或可访问的本机应用程序 - 例如可通过 Google Play Store 获取的原生 Android 应用程序。 这样的应用程序旨在替代提供类似或等同功能的 Web 应用程序 - 就像 Web 应用程序的本机应用程序版本一样。</p>
 
 <pre class="brush: json">"related_applications": [
   {
@@ -263,49 +263,49 @@ translation_of: Web/Manifest
   </tr>
   <tr>
    <td><code>url</code></td>
-   <td>可以找到应用程序的URL。</td>
+   <td>可以找到应用程序的 URL。</td>
   </tr>
   <tr>
    <td><code>id</code></td>
-   <td>用于表示指定平台上的应用程序的ID。</td>
+   <td>用于表示指定平台上的应用程序的 ID。</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="scope"><code>scope</code></h3>
 
-<p>定义此Web应用程序的应用程序上下文的导航范围。 这基本上限制了manifest可以查看的网页。 如果用户在范围之外浏览应用程序，则返回到正常的网页。</p>
+<p>定义此 Web 应用程序的应用程序上下文的导航范围。 这基本上限制了 manifest 可以查看的网页。 如果用户在范围之外浏览应用程序，则返回到正常的网页。</p>
 
-<p>如果<code>scope</code>是相对URL，则基本URL将是manifest的URL。</p>
+<p>如果<code>scope</code>是相对 URL，则基本 URL 将是 manifest 的 URL。</p>
 
 <pre class="brush: json">"scope": "/myapp/"</pre>
 
 <h3 id="short_name"><code>short_name</code></h3>
 
-<p>为应用程序提供简短易读的名称。 这是为了在没有足够空间显示Web应用程序的全名时使用。</p>
+<p>为应用程序提供简短易读的名称。 这是为了在没有足够空间显示 Web 应用程序的全名时使用。</p>
 
 <pre class="brush: json">"short_name": "I/O 2017"
 </pre>
 
 <h3 id="start_url"><code>start_url</code></h3>
 
-<p>指定用户从设备启动应用程序时加载的URL。 如果以相对URL的形式给出，则基本URL将是manifest的URL。</p>
+<p>指定用户从设备启动应用程序时加载的 URL。 如果以相对 URL 的形式给出，则基本 URL 将是 manifest 的 URL。</p>
 
 <pre class="brush: json">"start_url": "./?utm_source=web_app_manifest"</pre>
 
 <h3 id="theme_color"><code>theme_color</code></h3>
 
-<p>定义应用程序的默认主题颜色。 这有时会影响操作系统显示应用程序的方式（例如，在Android的任务切换器上，主题颜色包围应用程序）。</p>
+<p>定义应用程序的默认主题颜色。 这有时会影响操作系统显示应用程序的方式（例如，在 Android 的任务切换器上，主题颜色包围应用程序）。</p>
 
 <pre class="brush: json">"theme_color": "aliceblue"</pre>
 
 <h2 id="初始屏幕">初始屏幕</h2>
 
-<p>在Chrome 47及更高版本中，从主屏幕启动的Web应用程序将显示启动画面。 这个启动画面是使用Web应用程序清单中的属性自动生成的，具体来说就是：<code>name</code>，<code>background_color</code>以及<code>icons</code> 中距设备最近128dpi的图标。</p>
+<p>在 Chrome 47 及更高版本中，从主屏幕启动的 Web 应用程序将显示启动画面。 这个启动画面是使用 Web 应用程序清单中的属性自动生成的，具体来说就是：<code>name</code>，<code>background_color</code>以及<code>icons</code> 中距设备最近 128dpi 的图标。</p>
 
-<h2 id="Mime类型">Mime类型</h2>
+<h2 id="Mime类型">Mime 类型</h2>
 
-<p>Manifests 应使用 <code>application/manifest+json</code> MIME 类型. 但是, 你不必非得这样做.</p>
+<p>Manifests 应使用 <code>application/manifest+json</code> MIME 类型。但是，你不必非得这样做。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -326,88 +326,4 @@ translation_of: Web/Manifest
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>32.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>background_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>theme_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>icons</code>, <code>name</code>, <code>short_name</code>, and <code>theme_color</code> used for <a href="https://support.mozilla.org/t5/Other/How-to-add-a-shortcut-to-a-website-on-Android/ta-p/21992">Add to home screen</a> feature.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Does not support <code>lang</code> or <code>scope</code>.</p>
-
-<p>[2] The <code>icons</code>, <code>name</code>, <code>short_name</code>, and <code>theme_color</code> fields of the <a href="/en-US/docs/Web/Manifest">Web App Manifest</a> (if present) can now be as the source of the homescreen/apps window icons, apps window title, homescreen icon title, and apps window color (respectively) for "Add to home screen" (Firefox Mobile only; see {{bug(1234558)}}).</p>
+{{Compat("html.manifest")}}

@@ -5,18 +5,18 @@ translation_of: Web/API/CacheStorage/keys
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">{{domxref("CacheStorage")}} 接口的 <code><strong>keys</strong></code><strong><code>()</code></strong> 方法返回一个 {{jsxref("Promise")}}对象，它使用一个数组resolve，该数组包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有命名 {{domxref("Cache")}}  对象对应的字符串。使用此方法迭代所有 {{domxref("Cache")}} 对象。</span></p>
+<p>{{domxref("CacheStorage")}} 接口的 <code><strong>keys</strong></code><strong><code>()</code></strong> 方法返回一个 {{jsxref("Promise")}}对象，它使用一个数组 resolve，该数组包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有命名 {{domxref("Cache")}}  对象对应的字符串。使用此方法迭代所有 {{domxref("Cache")}} 对象。</p>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">caches.keys().then(function(<em>keyList</em>) {
-  //对keyList做操作
+  //对 keyList 做操作
 });
 </pre>
 
 <h3 id="返回">返回</h3>
 
-<p>一个使用 {{domxref("CacheStorage")}} 对象中 {{domxref("Cache")}} 名称数组resolve的 {{jsxref("Promise")}} </p>
+<p>一个使用 {{domxref("CacheStorage")}} 对象中 {{domxref("Cache")}} 名称数组 resolve 的 {{jsxref("Promise")}} </p>
 
 <h3 id="参数">参数</h3>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/CacheStorage/keys
 
 <h2 id="示例" style="line-height: 30px; font-size: 2.14285714285714rem;">示例</h2>
 
-<p>在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的cache。 这里我们设置一个包含缓存名称的白名单。 通过使用 <code>keys()方法</code> 来返回{{domxref("CacheStorage")}} 对象中的keys集合，然后检查缓存key是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。</p>
+<p>在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的 cache。 这里我们设置一个包含缓存名称的白名单。 通过使用 <code>keys() 方法</code> 来返回{{domxref("CacheStorage")}} 对象中的 keys 集合，然后检查缓存 key 是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。</p>
 
 <pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
@@ -42,76 +42,11 @@ translation_of: Web/API/CacheStorage/keys
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(44)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(27)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatOperaMobile(27)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.CacheStorage.keys")}}
 
 <h2 id="亦可参考">亦可参考</h2>
 

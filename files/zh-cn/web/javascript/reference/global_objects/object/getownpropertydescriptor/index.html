@@ -14,11 +14,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <p>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate">Object.getOwnPropertyDescriptor(<em>obj</em>, <em>prop</em>)</pre>
+<pre class="syntaxbox">Object.getOwnPropertyDescriptor(<em>obj</em>, <em>prop</em>)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -27,11 +27,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
  <dd>目标对象内属性名称</dd>
 </dl>
 
-<h3 id="返回值" style="line-height: 24px;">返回值</h3>
+<h3 id="返回值">返回值</h3>
 
 <p>如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 {{jsxref("undefined")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>该方法允许对一个属性的描述进行检索。在 Javascript 中， <dfn>属性</dfn> 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.</p>
 
@@ -39,22 +39,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <dl>
  <dt><code><strong>value</strong></code></dt>
- <dd>该属性的值(仅针对数据属性描述符有效)</dd>
+ <dd>该属性的值 (仅针对数据属性描述符有效)</dd>
  <dt><code><strong>writable</strong></code></dt>
- <dd><code>当且仅当属性的值可以被改变时为true。(仅针对数据属性描述有效)</code></dd>
+ <dd><code>当且仅当属性的值可以被改变时为 true。(仅针对数据属性描述有效)</code></dd>
  <dt><code><strong>get</strong></code></dt>
- <dd>获取该属性的访问器函数（getter）。如果没有访问器， 该值为undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
+ <dd>获取该属性的访问器函数（getter）。如果没有访问器，该值为 undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
  <dt><code><strong>set</strong></code></dt>
- <dd>获取该属性的设置器函数（setter）。 如果没有设置器， 该值为undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
+ <dd>获取该属性的设置器函数（setter）。如果没有设置器，该值为 undefined。(仅针对包含访问器或设置器的属性描述有效)</dd>
  <dt><code><strong>configurable</strong></code></dt>
- <dd><code>当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为true。</code></dd>
+ <dd><code>当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为 true。</code></dd>
  <dt><code><strong>enumerable</strong></code></dt>
  <dd>当且仅当指定对象的属性可以被枚举出时，为 <code>true</code>。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<pre class="brush: js notranslate">var o, d;
+<pre class="brush: js">var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, "foo");
@@ -92,7 +92,7 @@ d = Object.getOwnPropertyDescriptor(o, "baz");
 
 <p>在 ES5 中，如果该方法的第一个参数不是对象（而是原始类型），那么就会产生出现 {{jsxref("TypeError")}}。而在 ES2015，第一个的参数不是对象的话就会被强制转换为对象。</p>
 
-<pre class="brush: js notranslate">Object.getOwnPropertyDescriptor('foo', 0);
+<pre class="brush: js">Object.getOwnPropertyDescriptor('foo', 0);
 // 类型错误: "foo" 不是一个对象  // ES5 code
 
 Object.getOwnPropertyDescriptor('foo', 0);
@@ -103,7 +103,7 @@ Object.getOwnPropertyDescriptor('foo', 0);
 //   writable: false
 // }</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -135,11 +135,11 @@ Object.getOwnPropertyDescriptor('foo', 0);
 
 <div>{{Compat("javascript.builtins.Object.getOwnPropertyDescriptor")}}</div>
 
+
+
 <div></div>
 
-<div id="compat-mobile"></div>
-
-<div id="compat-desktop"><strong style="">相关链接</strong> </div>
+<div><strong>相关链接</strong> </div>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>

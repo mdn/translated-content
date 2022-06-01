@@ -11,7 +11,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">ServiceWorkerContainer.register(scriptURL, options)
+<pre class="brush: js">ServiceWorkerContainer.register(scriptURL, options)
   .then(function(ServiceWorkerRegistration) { ... });</pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -37,7 +37,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <p>Следующий пример использует дефолтный scope (не указывая его прямо). Service worker в этом случае будет контролировать <code>example.com/index.html</code> и страницы, расположенные "глубже", например <code>example.com/product/description.html</code>.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // Регистрация service worker-а, расположенного в корне сайта
   // за счёт использования дефолтного scope (не указывая его)
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -52,7 +52,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <p>Следующий пример, если он размещён на странице корня сайта, будет применён ровно к тем же страницам, что и пример выше. Помните, scope, если он указан, использует path страницы в качестве своей базы. Это значит, что, если следующий пример будет использоваться на странице <code>example.com/product/description.html</code>, то scope <code>./</code> будет означать, что service worker работает только со страницами внутри <code>example.com/product</code>. Если необходимо зарегистрировать service worker на <code>example.com/product/description.html</code>, и вы хотите, чтобы он обслуживал и корень, <code>example.com</code>, то scope лучше не указывать совсем, как в примере выше.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // Регистрация service worker-а, расположенного в корне сайта
   // с указанием более строгого scope
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
@@ -68,21 +68,8 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Первичное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
-<p>{{Compat("api.ServiceWorkerContainer.register")}}</p>
+<p>{{Compat}}</p>

@@ -19,7 +19,9 @@ La méthode **`keys()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/G
 
 ## Syntaxe
 
-    maMap.keys()
+```js
+maMap.keys()
+```
 
 ### Valeur de retour
 
@@ -47,7 +49,7 @@ console.log(mapIter.next().value); // Object
 | Spécification                                                                                    | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

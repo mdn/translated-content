@@ -12,22 +12,22 @@ translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 
 <h2 id="애니메이션_동작_축소하기(Reduced_Motion)">애니메이션 동작 축소하기(Reduced Motion)</h2>
 
-<p>깜빡이거나 반짝이는 애니메이션은 주의력결핍 과잉행동증후군(注意力缺乏過剩行動症候群 : ADHD)와 같은 인식장애를 가진 사람들에게 문제가 될 수 있다. 이러한 종류의 애니메이션 동작들은 시력 장애, 간질이나 편두통과 암소시성 민감증을 유발할 수 있습니다.</p>
+<p>깜빡이거나 반짝이는 애니메이션은 주의력결핍 과잉행동증후군(ADHD)와 같은 인지 문제를 가진 사람들에게 문제가 될 수 있습니다. 이러한 종류의 애니메이션 동작들은 전정편두통, 뇌전증, 편두통과 광과민증을 유발할 수 있습니다.</p>
 
-<p>또한, 이 애니메이션 동작을 줄이는.방법을 통해 배터리가 부족한 사람이나 보급형 스마트폰 및 컴퓨터를 사용하는 사람들에게 도음을 줄 수 있습니다.</p>
+<p>또한, 이 애니메이션 동작을 줄이는 방법을 통해 배터리가 부족한 사람이나 보급형 스마트폰 및 컴퓨터를 사용하는 사람들에게 도음을 줄 수 있습니다.</p>
 
 <h3 id="문법"><strong>문법</strong></h3>
 
 <dl>
  <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>사용자가 디바이스에서 애니메이션 축소와 관련된 기능을 설정하지 않았을 경우에 적용될 스타일을 나타냅니다.</dd>
+ <dd>사용자가 시스템에 관련된 설정을 하지 않았다는 것을 의미합니다.</dd>
  <dt><code><dfn>reduce</dfn></code></dt>
- <dd>사용자가 디바이스에서 애니메이션 축소와 관련된 기능을 설정하였을 경우에 적용될 스타일을 나타냅니다.</dd>
+ <dd>사용자가 시스템에 애니메이션 동작을 최소화하도록 설정하였다는 것을 의미합니다. 가급적이면 필수적이지 않은 동작은 모두 제거됩니다.</dd>
 </dl>
 
 <h3 id="예제"><strong>예제</strong></h3>
 
-<p>이 예시는 디바이스에서 애니메이션 축소와 관련된 기능을 설정하지 않으면 애니메이션 효과가 축소되지 않습니다.</p>
+<p>이 예제는 접근성 설정에서 동작 줄이기를 설정하지 않으면 난잡한 애니메이션이 실행됩니다.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -52,9 +52,9 @@ translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 
 <div>{{CSSRef}}{{Non-standard_header}}</div>
 
-<p><strong>-ms-high-contrast</strong> <a href="/en-US/docs/Web/CSS">CSS media 속성</a>은 애플리케이션이 고대비 모드로 표시되고 있는지의 여부에따라 어떤 색상으로 웹사이트를 표시할 지를 정의하는 <a href="/en-US/docs/Web/CSS/Microsoft_extensions">Microsoft 확장기능</a>입니다.</p>
+<p><strong>-ms-high-contrast</strong> <a href="/en-US/docs/Web/CSS">CSS media 속성</a>은 애플리케이션이 고대비 모드인지, 어떤 색상으로 강조되어 있는지를 정의하는 <a href="/en-US/docs/Web/CSS/Microsoft_extensions">Microsoft 확장기능</a>입니다.</p>
 
-<p> 이 미디어 속성은 저시력 사용자나 대비에 민감한 문제가 있는 사람뿐만 아니라 직사광선 아래에서 컴퓨터나 휴대폰을 사용하는 사람에게도 도움이 됩니다.</p>
+<p> 저시력 사용자나 대비감도에 문제가 있는 사람뿐만 아니라 직사광선 아래에서 컴퓨터나 휴대폰을 사용하는 사람에게도 도움이 됩니다.</p>
 
 <h3 id="문법_2"><strong>문법</strong></h3>
 
@@ -65,21 +65,21 @@ translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 <dl>
  <dt><code>active</code></dt>
  <dd>
- <p>시스템이 색상과 관계없이 고대비 모드로 변경되었을 때 후속 스타일링 규칙이 적용됨을 나타냅니다.</p>
+ <p>시스템이 색상과 관계없이 고대비 모드로 설정되었을 때 후속 스타일링 규칙이 적용됨을 나타냅니다.</p>
  </dd>
  <dt><code>black-on-white</code></dt>
  <dd>
- <p>시스템이 검은색-흰 색 고대비 모드로 변경되었을 때 후속 스타일링 규칙이 적용됨을 나타냅니다.</p>
+ <p>시스템이 흰 바탕에 검은 글씨 고대비 모드로 설정되었을 때 후속 스타일링 규칙이 적용됨을 나타냅니다.</p>
  </dd>
  <dt><code>white-on-black</code></dt>
  <dd>
- <p>시스템이 흰 색-검은 색 고대비 모드로 변경되었을 때 후속 스타일링 규칙이 적용됨을 나타냅니다.</p>
+ <p>시스템이 검은 바탕에 흰 글씨 고대비 모드로 설정되었을 때 후속 스타일링 규칙이 적용됨을 나타냅니다.</p>
  </dd>
 </dl>
 
 <h3 id="예제_2"><strong>예제</strong></h3>
 
-<p>다음 선언된 스타일들은 시스템과 애플리케이션에서 고대비 모드의 색상 변화에 따라 스타일을 일치시켜줍니다.</p>
+<p>다음 선언된 스타일들은 어플리케이션이 모든 종류의 색상, black-on-white 색상, white-on-black 색상의 고대비 모드로 표시되도록 합니다.</p>
 
 <pre class="brush: css">@media screen and (-ms-high-contrast: active) {
   /* 모든 고대비 모드에 대한 스타일 규칙입니다 */

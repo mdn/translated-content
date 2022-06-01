@@ -21,11 +21,11 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p><span class="notranslate">Метод </span> {{jsxref("Number.prototype.toString()")}} <span class="notranslate">был вызван с дополнительным параметром <code>radix</code>.</span> <span class="notranslate"> Его значение должно быть целым числом, принадлежащим промежутку от 2 до 36 и указывающим основание системы счисления, которая должна быть использована для представления численных значений.</span> <span class="notranslate"> Например, десятичное (основание 10) число 169 представляется в шестнадцатеричном виде (основание 16) как A9.</span></p>
+<p><span>Метод </span> {{jsxref("Number.prototype.toString()")}} <span>был вызван с дополнительным параметром <code>radix</code>.</span> <span> Его значение должно быть целым числом, принадлежащим промежутку от 2 до 36 и указывающим основание системы счисления, которая должна быть использована для представления численных значений.</span> <span> Например, десятичное (основание 10) число 169 представляется в шестнадцатеричном виде (основание 16) как A9.</span></p>
 
-<p><span class="notranslate">Почему значение этого параметра не может быть больше, чем 36? Для оснований</span><span class="notranslate">, превышающих 10, в качестве цифр используются алфавитные символы;</span> <span class="notranslate"> следовательно, основание не может быть больше 36, поскольку в латинском алфавите (используемом английским и многими другими языками) только 26 символов.</span></p>
+<p><span>Почему значение этого параметра не может быть больше, чем 36? Для оснований</span><span>, превышающих 10, в качестве цифр используются алфавитные символы;</span> <span> следовательно, основание не может быть больше 36, поскольку в латинском алфавите (используемом английским и многими другими языками) только 26 символов.</span></p>
 
-<p><span class="notranslate">Наиболее распространённые основания систем счисления:</span></p>
+<p><span>Наиболее распространённые основания систем счисления:</span></p>
 
 <ul>
  <li>2 для <a href="https://ru.wikipedia.org/wiki/Двоичная_система_счисления">двоичных чисел</a>,</li>
@@ -36,7 +36,7 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 class="highlight-spanned" id="Некорректное_применение"><span class="highlight-span"><span class="notranslate">Некорректное применение</span></span></h3>
+<h3 class="highlight-spanned" id="Некорректное_применение"><span class="highlight-span"><span>Некорректное применение</span></span></h3>
 
 <pre class="brush: js example-bad">(42).toString(0);
 (42).toString(1);
@@ -54,7 +54,7 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 (100000).toString(16) // "186a0"  (шестнадцатеричная)
 </pre>
 
-<h2 id="Смотрите_также"><span class="notranslate">Смотрите также</span></h2>
+<h2 id="Смотрите_также"><span>Смотрите также</span></h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toString()")}}</li>

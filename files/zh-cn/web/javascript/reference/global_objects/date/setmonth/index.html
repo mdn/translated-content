@@ -5,41 +5,38 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<p><code><strong>setMonth()</strong></code> 方法根据本地时间为一个设置年份的日期对象设置月份。</p>
+<p><code><strong>setMonth()</strong></code> 方法根据本地时间为一个日期对象设置月份。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>dateObj</var>.setMonth(<em>monthValue</em>[, <em>dayValue</em>])</pre>
 
-<h3 id="Versions_prior_to_JavaScript_1.3" name="Versions_prior_to_JavaScript_1.3">JavaScript 1.3版本之前</h3>
+<h3 id="Versions_prior_to_JavaScript_1.3">JavaScript 1.3 版本之前</h3>
 
 <pre class="syntaxbox"><var>dateObj</var>.setMonth(<em>monthValue</em>)</pre>
 
-<h3 id="Parameter" name="Parameter">参数</h3>
+<h3 id="Parameter">参数</h3>
 
 <dl>
  <dt><code>monthValue</code></dt>
  <dd>介于 0 到 11 之间的整数（表示一月到十二月）。</dd>
-</dl>
-
-<dl>
  <dt><code>dayValue</code></dt>
- <dd>从 1 到 31 之间的整数，表示月份中的第几天。0为上个月最后一天</dd>
+ <dd>从 1 到 31 之间的整数，表示月份中的第几天。0 为上个月最后一天</dd>
  <dt>返回值！</dt>
  <dd>基于 1 January 1970 00:00:00 UTC 开始计算的毫秒数</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果不指定 <code>dayValue</code> 参数，就会使用 {{jsxref("Date.getDate", "getDate")}} 方法的返回值。</p>
 
-<p>如果有一个指定的参数超出了合理范围，<code>setMonth</code> 会相应地更新日期对象中的日期信息。<font face="Courier New, Andale Mono, monospace">例如，为</font> <code>monthValue</code> 指定 15，则年份会加 1，月份将会使用 3。</p>
+<p>如果有一个指定的参数超出了合理范围，<code>setMonth</code> 会相应地更新日期对象中的日期信息。例如，为 <code>monthValue</code> 指定 15，则年份会加 1，月份将会使用 3。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example_Using_setMonth" name="Example:_Using_setMonth">例子：使用<code>setMonth方法</code></h3>
+<h3 id="Example_Using_setMonth">例子：使用 <code>setMonth</code> 方法</h3>
 
 <pre class="brush: js">var theBigDay = new Date();
 theBigDay.setMonth(6);
@@ -76,7 +73,7 @@ theBigDay.setMonth(6);
 
 <p>{{Compat("javascript.builtins.Date.setMonth")}}</p>
 
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getMonth()")}}</li>

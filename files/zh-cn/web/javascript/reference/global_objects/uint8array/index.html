@@ -5,12 +5,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Uint8Array</code></strong> 数组类型表示一个8位无符号整型数组，创建时内容被初始化为0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。</p>
+<p><strong><code>Uint8Array</code></strong> 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。</p>
 
 <h2 id="语法格式">语法格式</h2>
 
 <pre class="syntaxbox">new Uint8Array(); // ES2017 最新语法
-new Uint8Array(length); // 创建初始化为0的，包含length个元素的无符号整型数组
+new Uint8Array(length); // 创建初始化为 0 的，包含 length 个元素的无符号整型数组
 new Uint8Array(typedArray);
 new Uint8Array(object);
 new Uint8Array(buffer [, byteOffset [, length]]);</pre>
@@ -21,13 +21,13 @@ new Uint8Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>返回数组中元素的字节数，Uint8Array中返回1字节。</dd>
+ <dd>返回数组中元素的字节数，Uint8Array 中返回 1 字节。</dd>
  <dt>Uint8Array.length</dt>
- <dd>静态属性length一直为0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.</dd>
+ <dd>静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.</dd>
  <dt>{{jsxref("TypedArray.name", "Uint8Array.name")}}</dt>
- <dd>返回构造名的字符串，对Uint8Array类型而言返回 “Uint8Array”</dd>
+ <dd>返回构造名的字符串，对 Uint8Array 类型而言返回 “Uint8Array”</dd>
  <dt>{{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}</dt>
- <dd><em>TypedArray</em> 对象的原型.</dd>
+ <dd><em>TypedArray</em> 对象的原型。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -39,9 +39,9 @@ new Uint8Array(buffer [, byteOffset [, length]]);</pre>
  <dd>通过一个可变数目的参数创建一个新的<code>Uint8Array</code>数组，可参见{{jsxref("Array.of()")}}.</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances"><code>Uint8Array</code> 原型声明</h2>
+<h2 id="Boolean_instances"><code>Uint8Array</code> 原型声明</h2>
 
-<p>所有的<code>Uint8Array对象继承自</code> {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+<p>所有的<code>Uint8Array 对象继承自</code> {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
 
 <h3 id="属性_2">属性</h3>
 
@@ -158,7 +158,7 @@ var uint8 = new Uint8Array(iterable);
   <tr>
    <td><a href="https://www.khronos.org/registry/typedarray/specs/latest/#7">类型化数组规范</a></td>
    <td>Obsolete</td>
-   <td><span><span>由 ECMAScript 6 取代。</span></span></td>
+   <td>由 ECMAScript 6 取代。</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#table-45', 'TypedArray constructors')}}</td>

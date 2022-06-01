@@ -36,7 +36,7 @@ a:local-link {
 
 ### Résultat
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -48,4 +48,4 @@ a:local-link {
 
 ## Voir aussi
 
-- Pseudo-classes relatives aux liens : {{cssxref(":link")}}, {{cssxref(":visited")}}, {{cssxref(":hover")}}, {{cssxref(":active")}}
+- Pseudo-classes relatives aux liens&nbsp;: {{cssxref(":link")}}, {{cssxref(":visited")}}, {{cssxref(":hover")}}, {{cssxref(":active")}}

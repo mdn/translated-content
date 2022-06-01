@@ -12,21 +12,21 @@ translation_of: Web/HTML/Element/input/text
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><code>{{HTMLElement("input")}}</code> 元素的<code><strong>text</strong></code> 类型创建基础的单行文本框.</span></p>
+<p><code>{{HTMLElement("input")}}</code> 元素的<code><strong>text</strong></code> 类型创建基础的单行文本框。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">交互示例的资源储存在一个github的仓库。如果你想为示例项目做贡献，请clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并给我们发送 pull request.</p>
+<p class="hidden">交互示例的资源储存在一个 github 的仓库。如果你想为示例项目做贡献，请 clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并给我们发送 pull request.</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
-   <td>input的一个属性，代表包含在文本框中的文字</td>
+   <td><strong><a href="#值">值</a></strong></td>
+   <td>input 的一个属性，代表包含在文本框中的文字</td>
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{event("change")}} 和 {{event("input")}}</td>
+   <td>{{event("change")}} 和 {{event("input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
@@ -45,16 +45,16 @@ translation_of: Web/HTML/Element/input/text
 
 <h2 id="值">值</h2>
 
-<p><code>{{htmlattrxref("value", "input")}}</code> 属性是一个包含了文本框当前文字的<code>{{domxref("DOMString")}}</code>。 你可以在Javascript中获取 <code>{{domxref("HTMLInputElement.value")}}</code> 特性的用途。</p>
+<p><code>{{htmlattrxref("value", "input")}}</code> 属性是一个包含了文本框当前文字的<code>{{domxref("DOMString")}}</code>。 你可以在 Javascript 中获取 <code>{{domxref("HTMLInputElement.value")}}</code> 特性的用途。</p>
 
 <pre class="brush: js">let theText = myTextInput.value;
 </pre>
 
-<p>如何输入没有验证约束 (查看 {{anch("Validation")}} 获取更多详细信息), <code>value</code>值应该是空字符串("").</p>
+<p>如何输入没有验证约束 (查看 <a href="#验证">验证</a> 获取更多详细信息), <code>value</code>值应该是空字符串 ("").</p>
 
 <h2 id="其他属性">其他属性</h2>
 
-<p>除了所有 <code>{{HTMLElement("input")}}</code> 元素上共有的可操作的属性，以及忽略type属性, 文本输入框还支持以下属性:</p>
+<p>除了所有 <code>{{HTMLElement("input")}}</code> 元素上共有的可操作的属性，以及忽略 type 属性，文本输入框还支持以下属性：</p>
 
 <table class="standard-table">
  <thead>
@@ -65,52 +65,52 @@ translation_of: Web/HTML/Element/input/text
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
+   <td><code><a href="#maxlength">maxlength</a></code></td>
    <td>文本框能接受的最大字符数。</td>
   </tr>
   <tr>
-   <td><code>{{anch("minlength")}}</code></td>
+   <td><code><a href="#minlength">minlength</a></code></td>
    <td>文本框能输入的最小字符数，并且仍然被认为是有效的。</td>
   </tr>
   <tr>
-   <td><code>{{anch("pattern")}}</code></td>
+   <td><code><a href="#pattern">pattern</a></code></td>
    <td> 验证文本框内容的正则表达式。</td>
   </tr>
   <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
+   <td><code><a href="#placeholder">placeholder</a></code></td>
    <td>文本框为空时显示的一个示例值。</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>一个布尔属性，指示文本框中的内容是否应该为只读。</td>
   </tr>
   <tr>
-   <td><code>{{anch("size")}}</code></td>
+   <td><code><a href="#size">size</a></code></td>
    <td>一个数字，指示文本框有多少个字符宽度。</td>
   </tr>
   <tr>
-   <td><code>{{anch("spellcheck")}}</code></td>
-   <td>控制是否可以检查文本框的拼写,或者默认的拼写检查配置是否应该使用。 </td>
+   <td><code><a href="#spellcheck">spellcheck</a></code></td>
+   <td>控制是否可以检查文本框的拼写，或者默认的拼写检查配置是否应该使用。 </td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+<h3 id="maxlength">maxlength</h3>
 
-<p>用户可以输入<code>文本</code>输入框中的最大字符(参考UTF-16编码单元)数。 必须为整数，值等于0或者更大。 如果没有规定 <code>maxlength</code> ， 或者规定的值无效, 文本输入框就没有最大值。这个值也必须更大或者等于<code>minlength</code>的值。</p>
+<p>用户可以输入<code>文本</code>输入框中的最大字符 (参考 UTF-16 编码单元) 数。 必须为整数，值等于 0 或者更大。 如果没有规定 <code>maxlength</code> ， 或者规定的值无效，文本输入框就没有最大值。这个值也必须更大或者等于<code>minlength</code>的值。</p>
 
-<p>如果文本框中的字符数大于 <code><font color="#333333" face="Consolas">maxlength</font></code><span style="background-color: transparent; color: #333333; display: inline !important; float: none; font-family: Arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: 0px; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;"> UTF-16编码单元，输入框的</span><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">验证</a>就会失败。 约束验证仅作用于用户输入值的时候。</p>
+<p>如果文本框中的字符数大于 <code>maxlength</code> UTF-16 编码单元，输入框的<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">验证</a>就会失败。 约束验证仅作用于用户输入值的时候。</p>
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+<h3 id="minlength">minlength</h3>
 
-<p>用户可以输入到 <code>text</code> 中的最小字符数（以UTF-16代码为单位）。 该值必须是小于或等于 <code>maxlength</code> 指定的值的非负整数值。 如果未指定 <code>minlength</code> 或指定了无效的值，则 <code>text</code> 将没有最小长度。</p>
+<p>用户可以输入到 <code>text</code> 中的最小字符数（以 UTF-16 代码为单位）。 该值必须是小于或等于 <code>maxlength</code> 指定的值的非负整数值。 如果未指定 <code>minlength</code> 或指定了无效的值，则 <code>text</code> 将没有最小长度。</p>
 
-<p>如果输入到字段中的文本的长度小于 <code>minlength</code> UTF-16代码单元的长度，则输入将无法通过约束验证(<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>) 约束验证仅在用户更改值时应用。</p>
+<p>如果输入到字段中的文本的长度小于 <code>minlength</code> UTF-16 代码单元的长度，则输入将无法通过约束验证 (<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>) 约束验证仅在用户更改值时应用。</p>
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+<h3 id="pattern">pattern</h3>
 
 <div id="pattern-include">
-<p>如果指定了 <code>pattern</code> 属性，则它是输入的 <code>{{htmlattrxref("value")}}</code> 必须匹配正则表达式，以使该值通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。它必须是 <code>{{jsxref("RegExp")}}</code> 类型使用有效 JavaScript 正则表达式，并且已在我们的正则表达式指南（<a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>）中进行了说明；在编译正则表达式时指定了 <code>'u'</code> 标志，因此该模式被视为Unicode代码点的序列，而不是ASCII。 模式文本周围不能指定正斜杠。</p>
+<p>如果指定了 <code>pattern</code> 属性，则它是输入的 <code>{{htmlattrxref("value")}}</code> 必须匹配正则表达式，以使该值通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。它必须是 <code>{{jsxref("RegExp")}}</code> 类型使用有效 JavaScript 正则表达式，并且已在我们的正则表达式指南（<a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>）中进行了说明；在编译正则表达式时指定了 <code>'u'</code> 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。 模式文本周围不能指定正斜杠。</p>
 
 <p>如果指定的模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。</p>
 
@@ -119,35 +119,35 @@ translation_of: Web/HTML/Element/input/text
 </div>
 </div>
 
-<p>请参照 {{anch("Specifying a pattern")}} 更多内容和例子。</p>
+<p>请参照 <a href="#指定模式">指定模式</a> 更多内容和例子。</p>
 
-<h3 id="htmlattrdefplaceholder">{{htmlattrdef("placeholder")}}</h3>
+<h3 id="placeholder">placeholder</h3>
 
 <p><code>placeholder</code> 属性是一个字符串，可向用户提供有关该字段中需要什么样的信息的简短提示。 它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。 文本中不得包含回车符或换行符。</p>
 
-<p>如果控件的内容具有一个方向性的 ({{Glossary("LTR")}} 或 {{Glossary("RTL")}}) ，但需要以相反的方向性来显示占位符则可以使用Unicode双向算法格式化字符来 在占位符中覆盖方向性；请参见 {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}。</p>
+<p>如果控件的内容具有一个方向性的 ({{Glossary("LTR")}} 或 {{Glossary("RTL")}}) ，但需要以相反的方向性来显示占位符则可以使用 Unicode 双向算法格式化字符来 在占位符中覆盖方向性；请参见 {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}。</p>
 
 <div class="note">
 <p><strong>注意：</strong>如果可以，请避免使用占位符属性。 它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。 请参见 {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}}。</p>
 </div>
 
-<h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
+<h3 id="readonly">readonly</h3>
 
-<p>一个布尔属性，如果存在，则表示该字段不能由用户编辑。 但是，仍可以通过JavaScript代码直接设置 {{domxref("HTMLInputElement.value")}} 属性来更改其 <code>value</code>。</p>
+<p>一个布尔属性，如果存在，则表示该字段不能由用户编辑。 但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement.value")}} 属性来更改其 <code>value</code>。</p>
 
 <div class="note">
 <p><strong>注意：</strong>因为只读字段不能有值，所以 <code>required</code> 也对指定了 <code>readonly</code> 属性的输入没有任何影响。</p>
 </div>
 
-<h3 id="htmlattrdefsize">{{htmlattrdef("size")}}</h3>
+<h3 id="size">size</h3>
 
-<p><code>size</code> 属性是一个数字值，指示输入字段应有多少个字符宽。 该值必须是一个大于零的数字，默认值是20。 根据字符和字体 (使用 {{cssxref("font")}} 设置)，结果输入可能比指定的字符数窄或宽。</p>
+<p><code>size</code> 属性是一个数字值，指示输入字段应有多少个字符宽。 该值必须是一个大于零的数字，默认值是 20。 根据字符和字体 (使用 {{cssxref("font")}} 设置)，结果输入可能比指定的字符数窄或宽。</p>
 
-<p>这并不限制用户可以在该字段中输入多少个字符。 它仅指定一次可以看到多少个。 要设置输入数据长度的上限，使用 <code>{{anch("maxlength")}}</code> 属性。</p>
+<p>这并不限制用户可以在该字段中输入多少个字符。 它仅指定一次可以看到多少个。 要设置输入数据长度的上限，使用 <code><a href="#maxlength">maxlength</a></code> 属性。</p>
 
-<h3 id="htmlattrdefspellcheck">{{htmlattrdef("spellcheck")}}</h3>
+<h3 id="spellcheck">spellcheck</h3>
 
-<p><code>spellcheck</code> 是一个全局属性，用于指示是否启用元素的拼写检查。 它可以用于任何可编辑的内容，但是这里我们考虑与在 {{HTMLElement("input")}} 元素上使用 <code>spellcheck</code> 细节. 则 <code>spellcheck</code> 的允许值为：</p>
+<p><code>spellcheck</code> 是一个全局属性，用于指示是否启用元素的拼写检查。 它可以用于任何可编辑的内容，但是这里我们考虑与在 {{HTMLElement("input")}} 元素上使用 <code>spellcheck</code> 细节。则 <code>spellcheck</code> 的允许值为：</p>
 
 <dl>
  <dt><code>false</code></dt>
@@ -158,7 +158,7 @@ translation_of: Web/HTML/Element/input/text
  <dd>遵循元素的默认行为进行拼写检查。 这可能基于父元素 <code>spellcheck</code> 设置或其他因素。</dd>
 </dl>
 
-<p>如果输入字段没有设置 {{anch("readonly")}} 属性且未禁用，则可以启用拼写检查。</p>
+<p>如果输入字段没有设置 <a href="#readonly">readonly</a> 属性且未禁用，则可以启用拼写检查。</p>
 
 <p>如果 {{Glossary("user agent", "user agent's")}} 首选项覆盖了设置，则通过读取 <code>spellcheck</code> 返回的值可能无法反映控件中拼写检查的实际状态。</p>
 
@@ -175,20 +175,20 @@ translation_of: Web/HTML/Element/input/text
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("autocorrect")}}</code></td>
+   <td><code><a href="#autocorrect">autocorrect</a></code></td>
    <td>一个字符串，指示是否 <code>on</code> 或 <code>off</code> 自动更正。 <strong>Safari only.</strong></td>
   </tr>
   <tr>
-   <td><code>{{anch("mozactionhint")}}</code></td>
+   <td><code><a href="#mozactionhint">mozactionhint</a></code></td>
    <td>一个字符串，指示当用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时将执行的操作类型； 用于确定虚拟键盘上该键的适当标签。 <strong>Firefox for Android only.</strong></td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefautocorrect_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
+<h3 id="autocorrect">autocorrect</h3>
 
 <div id="autocorrect-include">
-<p>Safari扩展， the <code>autocorrect</code> 属性是一个字符串，它指示在用户编辑此字段时是否激活自动更正。 允许的值为：</p>
+<p>Safari 扩展， the <code>autocorrect</code> 属性是一个字符串，它指示在用户编辑此字段时是否激活自动更正。 允许的值为：</p>
 
 <dl>
  <dt><code>on</code></dt>
@@ -198,13 +198,13 @@ translation_of: Web/HTML/Element/input/text
 </dl>
 </div>
 
-<h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
+<h3 id="mozactionhint">mozactionhint</h3>
 
 <div id="mozactionhint-include">
-<p>一个Mozilla扩展程序，由Firefox for Android支持，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。 此信息用于确定在虚拟键盘上的 <kbd>Enter</kbd> 键上使用哪种标签。</p>
+<p>一个 Mozilla 扩展程序，由 Firefox for Android 支持，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。 此信息用于确定在虚拟键盘上的 <kbd>Enter</kbd> 键上使用哪种标签。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 注意：<a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">已将其标准化</a>为全局属性 {{htmlattrxref("enterkeyhint")}}，但尚未广泛实现。 要查看Firefox中正在实施的更改的状态，请参阅 {{bug(1490661)}}.</p>
+<p><strong>注意：</strong> 注意：<a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">已将其标准化</a>为全局属性 {{htmlattrxref("enterkeyhint")}}，但尚未广泛实现。 要查看 Firefox 中正在实施的更改的状态，请参阅 {{bug(1490661)}}.</p>
 </div>
 
 <p>允许的值为： <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, 和 <code>send</code>. 浏览器使用此提示来决定在回车键上放置什么标签。</p>
@@ -255,7 +255,7 @@ translation_of: Web/HTML/Element/input/text
 
 <h3 id="输入框元素大小">输入框元素大小</h3>
 
-<p>可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的尺寸。 使用它，您可以指定文本输入一次可以显示的字符数。 这会影响元素的宽度，使您可以按字符而不是像素指定宽度。 例如，在此示例中，输入为30个字符宽：</p>
+<p>可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的尺寸。 使用它，您可以指定文本输入一次可以显示的字符数。 这会影响元素的宽度，使您可以按字符而不是像素指定宽度。 例如，在此示例中，输入为 30 个字符宽：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -276,12 +276,12 @@ translation_of: Web/HTML/Element/input/text
 <p><code>&lt;input&gt;</code> 元素的 <code>text</code> 属性没有应用自动验证（因为基本文本输入需要能够接受任意字符串），但是有一些客户端验证选项可用，我们将在下面讨论。</p>
 
 <div class="note">
-<p><strong>注意：</strong>HTML表单验证不能替代服务器脚本，以确保输入的数据格式正确。 对于某人来说，对HTML进行调整以使其绕过验证或完全删除验证太容易了。 有人也可以完全绕开您的HTML并将数据直接提交到您的服务器。 如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大，类型错误的数据等等）输入数据库时，灾难可能会发生。</p>
+<p><strong>注意：</strong>HTML 表单验证不能替代服务器脚本，以确保输入的数据格式正确。 对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。 有人也可以完全绕开您的 HTML 并将数据直接提交到您的服务器。 如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大，类型错误的数据等等）输入数据库时，灾难可能会发生。</p>
 </div>
 
 <h3 id="样式注意事项">样式注意事项</h3>
 
-<p>有一些有用的伪类可用于设置表单元素的样式，以帮助用户查看其值是有效还是无效。 它们是 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}}。 在本节中，我们将使用以下CSS，它将在包含有效值的输入旁边放置一个复选标记（tick），并在包含无效值的输入旁边放置一个叉号（X）。</p>
+<p>有一些有用的伪类可用于设置表单元素的样式，以帮助用户查看其值是有效还是无效。 它们是 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}}。 在本节中，我们将使用以下 CSS，它将在包含有效值的输入旁边放置一个复选标记（tick），并在包含无效值的输入旁边放置一个叉号（X）。</p>
 
 <pre class="brush: css">div {
   margin-bottom: 10px;
@@ -334,7 +334,7 @@ input:valid+span:after {
 
 <p>您可以使用 {{htmlattrxref("minlength", "input")}} 属性指定输入值的最小长度（以字符为单位）； 同样，请使用 {{htmlattrxref("maxlength", "input")}} 设置输入值的最大长度（以字符为单位）。</p>
 
-<p>下面的示例要求输入的值的长度为4–8个字符。</p>
+<p>下面的示例要求输入的值的长度为 4–8 个字符。</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -357,7 +357,7 @@ input:valid+span:after {
 
 <p>{{ EmbedLiveSample('Input_value_length', 600, 70) }}</p>
 
-<p>如果您尝试提交少于4个字符的表单，则会收到一条相应的错误消息（不同的浏览器会有所不同）。 如果您尝试输入8个以上的字符，浏览器将不允许您输入。</p>
+<p>如果您尝试提交少于 4 个字符的表单，则会收到一条相应的错误消息（不同的浏览器会有所不同）。 如果您尝试输入 8 个以上的字符，浏览器将不允许您输入。</p>
 
 <div class="note">
 <p><strong>注意：</strong> 如果您指定了 <code>minlength</code> 但未指定 <code>required</code>, 则输入被视为有效，因为不需要用户指定值。</p>
@@ -367,7 +367,7 @@ input:valid+span:after {
 
 <p>您可以使用 {{htmlattrxref("pattern","input")}} 属性指定输入值必须匹配才能被认为是有效的正则表达式 (请参照 <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a>).</p>
 
-<p>下面的示例将值限制为4-8个字符，并要求该值仅包含小写字母。</p>
+<p>下面的示例将值限制为 4-8 个字符，并要求该值仅包含小写字母。</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -452,5 +452,5 @@ input:valid+span:after {
  <li><a href="/en-US/docs/Learn/HTML/Forms">HTML Forms</a></li>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
- <li>{{HTMLElement("textarea")}}: Multi-line text input<font face="Consolas">maxlength</font></li>
+ <li>{{HTMLElement("textarea")}}: Multi-line text inputmaxlength</li>
 </ul>

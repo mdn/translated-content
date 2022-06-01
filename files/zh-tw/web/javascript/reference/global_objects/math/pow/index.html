@@ -7,11 +7,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Math.pow()</code></strong> 函式回傳 <code>base</code> 的 <code>exponent</code> 次方（幂）值，也就是 <code>base<sup>exponent</sup></code>。</p>
+<p><strong><code>Math.pow()</code></strong> 函式回傳 <code>base</code> 的 <code>exponent</code> 次方（幂）值，也就是 <code>base^exponent</code>。</p>
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate"><code>Math.pow(<var>base</var>, <var>exponent</var>)</code></pre>
+<pre class="syntaxbox"><code>Math.pow(<var>base</var>, <var>exponent</var>)</code></pre>
 
 <h3 id="參數">參數</h3>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 
 <h2 id="敘述">敘述</h2>
 
-<p>The <strong><code>Math.pow()</code></strong> function returns the <code>base</code> to the <code>exponent</code> power, that is, <code>base<sup>exponent</sup></code>, the base and the exponent are in decimal numeral system.</p>
+<p>The <strong><code>Math.pow()</code></strong> function returns the <code>base</code> to the <code>exponent</code> power, that is, <code>base^exponent</code>, the base and the exponent are in decimal numeral system.</p>
 
 <p>由於 <code>pow()</code> 是 <code>Math</code> 的靜態方法，you always use it as <code>Math.pow()</code>, rather than as a method of a <code>Math</code> object you created（<code>Math</code> 並沒有建構子）。</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 
 <h3 id="使用_Math.pow">使用 <code>Math.pow()</code></h3>
 
-<pre class="brush: js notranslate">// simple
+<pre class="brush: js">// simple
 Math.pow(7, 2);    // 49
 Math.pow(7, 3);    // 343
 Math.pow(2, 10);   // 1024

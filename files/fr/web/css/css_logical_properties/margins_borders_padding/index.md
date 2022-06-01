@@ -71,7 +71,7 @@ De nouvelles propriétés raccourcies sont également apparues et permettent de 
 
 ## Exemples de marges
 
-Les quatre propriétés logiques {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}} et {{cssxref("margin-inline-end")}} peuvent être utilisées à la place des propriétés physiques habituelles afin de définir une marge.
+Les quatre propriétés logiques {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}} et {{cssxref("margin-inline-end")}} peuvent être utilisées à la place des propriétés physiques habituelles afin de définir une marge.
 
 Dans l'exemple qui suit, on a créé deux boîtes et définit une marge différente pour chaque côté. On a aussi ajouté un conteneur supplémentaire avec une bordure afin de mieux visualiser la bordure.
 
@@ -97,7 +97,7 @@ Avec un mode d'écriture horizontal, cette déclaration CSS appliquerait une mar
 
 ## Exemples pour le remplissage
 
-Pour le remplissage, ce sont les propriétés logiques {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}} et {{cssxref("padding-inline-end")}} qui ont été ajoutées et qui peuvent être utilisées en lieu et place de leur équivalent physique.
+Pour le remplissage, ce sont les propriétés logiques {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}} et {{cssxref("padding-inline-end")}} qui ont été ajoutées et qui peuvent être utilisées en lieu et place de leur équivalent physique.
 
 Dans l'exemple suivant, on dispose de deux boîtes, la première possède des remplissages définis avec des propriétés physiques et la seconde avec des propriétés logiques. En utilisant un mode d'écriture `horizontal-tb`, les deux boîtes auront la même apparence.
 

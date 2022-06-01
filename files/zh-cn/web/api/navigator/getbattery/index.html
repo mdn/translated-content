@@ -5,13 +5,13 @@ translation_of: Web/API/Navigator/getBattery
 ---
 <p>{{ ApiRef("Battery API") }}</p>
 
-<p><code>getBattery()方法提供了系统的电量信息，返回一个battery的promise对象，然后resolve后得到</code>{{domxref("BatteryManager")}}对象，它提供了一些新的事件，以及方法供您监控电池的状态。这个方法实现了<a href="/en-US/docs/WebAPI/Battery_Status" title="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a> （查看更多细节以及使用方法和实例代码）</p>
+<p><code>getBattery() 方法提供了系统的电量信息，返回一个 battery 的 promise 对象，然后 resolve 后得到</code>{{domxref("BatteryManager")}}对象，它提供了一些新的事件，以及方法供您监控电池的状态。这个方法实现了 <a href="/en-US/docs/WebAPI/Battery_Status" title="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a>（查看更多细节以及使用方法和实例代码）</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
 <pre class="syntaxbox">navigator.getBattery().then(funcRef);</pre>
 
-<p><code><em>funcRef</em></code> 是{{domxref("navigator.getBattery")}} 返回的battery promise对象被resolve后执行的函数，即回调函数。</p>
+<p><code><em>funcRef</em></code> 是{{domxref("navigator.getBattery")}} 返回的 battery promise 对象被 resolve 后执行的函数，即回调函数。</p>
 
 <h2 id="相关规范">相关规范</h2>
 
@@ -34,67 +34,7 @@ translation_of: Web/API/Navigator/getBattery
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>功能支持</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoDesktop("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("43")}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>功能支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>
-    <p>{{CompatGeckoMobile("10")}} {{property_prefix("moz")}}<br>
-     {{CompatGeckoMobile("16")}}<sup>[1]</sup><br>
-     {{CompatGeckoDesktop("43")}}<sup>[2]</sup></p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Firefox 10.0 被默认禁止, 但可以设置<code>dom.battery.enabled<font face="Open Sans, Arial, sans-serif"> = </font></code><code>true来启用</code>. 从Starting with Firefox 11.0开始, <code>mozBattery</code> 是默认启动的. UPower 安装后， Android, Windows, and Linux.就支持Battery API了。MacOS的支持是从Gecko 18.0 {{geckoRelease("18.0")}}开始的. fireFox依然支持已经被弃用 {{domxref("navigator.battery")}}.</p>
-
-<p>[2] 全新的基于promise语法的{{domxref("Navigator.getBattery()")}}在FireFox 43 被支持。</p>
+{{Compat("api.Navigator.getBattery")}}
 
 <h2 id="请参见">请参见</h2>
 

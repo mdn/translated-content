@@ -1,12 +1,6 @@
 ---
 title: Utilisation d'images
 slug: Web/API/Canvas_API/Tutorial/Using_images
-tags:
-  - Advanced
-  - Canvas
-  - Graphics
-  - HTML
-  - Tutorial
 translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_d'images
 ---
@@ -150,7 +144,7 @@ function draw() {
 
 Le graphique résultant ressemble à ceci :
 
-{{EmbedLiveSample("example_a_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("Exemple_un_graphique_linéaire_simple", 220, 160, "canvas_backdrop.png")}}
 
 ## Mise à l'échelle
 
@@ -190,7 +184,7 @@ function draw() {
 
 Le canevas résultant ressemble à ceci :
 
-{{EmbedLiveSample("example_tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("Exemple_mosaïque_à_partir_d\'une_image", 160, 160, "canvas_scale_image.png")}}
 
 ## Découpage
 
@@ -237,7 +231,7 @@ function draw() {
 
 Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Element/Img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
 
-{{EmbedLiveSample("example_framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Exemple_encadrer_une_image", 160, 160, "canvas_drawimage2.jpg")}}
 
 Chaque [`<img>`](/fr/docs/Web/HTML/Element/Img) se voit attribuer un attribut `id`, ce qui facilite leur sélection en utilisant [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Nous utilisons `drawImage()` pour découper le rhinocéros de la première image et le mettre à l'échelle sur le canevas, puis dessiner le cadre par-dessus en utilisant un deuxième appel `drawImage()`.
 
@@ -323,7 +317,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("art_gallery_example", 725, 400)}}
+{{EmbedLiveSample("Exemple_d\'une_galerie_d'art", 725, 400)}}
 
 ## Contrôler la mise à l'échelle de l'image
 

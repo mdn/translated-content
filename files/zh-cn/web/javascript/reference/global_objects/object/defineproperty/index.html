@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</pre>
+<pre class="syntaxbox">Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 <p>被传递给函数的对象。</p>
 
 <div class="note">
-<p>在ES6中，由于 Symbol类型的特殊性，用Symbol类型的值来做对象的key与常规的定义或修改不同，而<code>Object.defineProperty</code> 是定义key为Symbol的属性的方法之一。</p>
+<p><strong>备注：</strong>在 ES6 中，由于 Symbol 类型的特殊性，用 Symbol 类型的值来做对象的 key 与常规的定义或修改不同，而<code>Object.defineProperty</code> 是定义 key 为 Symbol 的属性的方法之一。</p>
 </div>
 
 <h2 id="描述">描述</h2>
@@ -88,15 +88,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 <h4 id="描述符默认值汇总">描述符默认值汇总</h4>
 
 <ul>
- <li>拥有布尔值的键 <code>configurable</code>、<code>enumerable</code> 和 <code>writable</code> 的默认值都是 <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>false</code></span>。</li>
+ <li>拥有布尔值的键 <code>configurable</code>、<code>enumerable</code> 和 <code>writable</code> 的默认值都是 <code>false</code>。</li>
  <li>属性值和函数的键 <code>value</code>、<code>get</code> 和 <code>set</code> 字段的默认值为 <code>undefined</code>。</li>
 </ul>
 
 <h4 id="描述符可拥有的键值">描述符可拥有的键值</h4>
 
-<dl>
- <dt>
- <table class="standard-table">
+<table class="standard-table">
   <caption></caption>
   <tbody>
    <tr>
@@ -128,14 +126,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
    </tr>
   </tbody>
  </table>
- </dt>
-</dl>
 
 <p>如果一个描述符不具有 <code>value</code>、<code>writable</code>、<code>get</code> 和 <code>set</code> 中的任意一个键，那么它将被认为是一个数据描述符。如果一个描述符同时拥有 <code>value</code> 或 <code>writable</code> 和 <code>get</code> 或 <code>set</code> 键，则会产生一个异常。</p>
 
 <p>记住，这些选项不一定是自身属性，也要考虑继承来的属性。为了确认保留这些默认值，在设置之前，可能要冻结 {{jsxref("Object.prototype")}}，明确指定所有的选项，或者通过 {{jsxref("Object.create", "Object.create(null)")}} 将 {{jsxref("Object.prototype.__proto__", "__proto__")}} 属性指向 {{jsxref("null")}}。</p>
 
-<pre class="brush: js notranslate">// 使用 __proto__
+<pre class="brush: js">// 使用 __proto__
 var obj = {};
 var descriptor = Object.create(null); // 没有继承的属性
 // 默认没有 enumerable，没有 configurable，没有 writable
@@ -166,19 +162,19 @@ function withValue(value) {
 // ... 并且 ...
 Object.defineProperty(obj, "key", withValue("static"));
 
-// 如果 freeze 可用, 防止后续代码添加或删除对象原型的属性
+// 如果 freeze 可用，防止后续代码添加或删除对象原型的属性
 // （value, get, set, enumerable, writable, configurable）
 (Object.freeze||Object)(Object.prototype);</pre>
 
 <h2 id="示例">示例</h2>
 
-<p>如果你想了解如何使用 <code>Object.defineProperty</code> 方法和<em>类二进制标记</em>语法<span style="line-height: 1.5;">，可以看看</span>这些<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples" style="line-height: 1.5;">额外示例</a><span style="line-height: 1.5;">。</span></p>
+<p>如果你想了解如何使用 <code>Object.defineProperty</code> 方法和<em>类二进制标记</em>语法，可以看看这些<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">额外示例</a>。</p>
 
 <h3 id="创建属性">创建属性</h3>
 
-<p>如果对象中不存在指定的属性，<span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>Object.defineProperty()</code></span> 会创建这个属性。当描述符中省略某些字段时，这些字段将使用它们的默认值。</p>
+<p>如果对象中不存在指定的属性，<code>Object.defineProperty()</code> 会创建这个属性。当描述符中省略某些字段时，这些字段将使用它们的默认值。</p>
 
-<pre class="brush: js notranslate">var o = {}; // 创建一个新对象
+<pre class="brush: js">var o = {}; // 创建一个新对象
 
 // 在对象中添加一个属性与数据描述符的示例
 Object.defineProperty(o, "a", {
@@ -225,7 +221,7 @@ Object.defineProperty(o, "conflict", {
 
 <p>当 <code>writable</code> 属性设置为 <code>false</code> 时，该属性被称为“不可写的”。它不能被重新赋值。</p>
 
-<pre class="brush: js notranslate">var o = {}; // 创建一个新对象
+<pre class="brush: js">var o = {}; // 创建一个新对象
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -256,7 +252,7 @@ console.log(o.a); // logs 37. The assignment didn't work.
 
 <p><code>enumerable</code> 定义了对象的属性是否可以在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中被枚举。</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 Object.defineProperty(o, "a", { value : 1, enumerable: true });
 Object.defineProperty(o, "b", { value : 2, enumerable: false });
 Object.defineProperty(o, "c", { value : 3 }); // enumerable 默认为 false
@@ -296,7 +292,7 @@ p[Symbol.for('f')] // undefined</pre>
 
 <p><code>configurable</code> 特性表示对象的属性是否可以被删除，以及除 <code>value</code> 和 <code>writable</code> 特性外的其他特性是否可以被修改。</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 Object.defineProperty(o, 'a', {
   get() { return 1; },
   configurable: false
@@ -329,7 +325,7 @@ console.log(o.a); // logs 1</pre>
 
 <p>考虑特性被赋予的默认特性值非常重要，通常，使用点运算符和 <code>Object.defineProperty()</code> 为对象的属性赋值时，数据描述符中的属性默认值是不同的，如下例所示。</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 
 o.a = 1;
 // 等同于：
@@ -356,7 +352,7 @@ Object.defineProperty(o, "a", {
 
 <p>下面的例子展示了如何实现一个自存档对象。当设置<code>temperature</code> 属性时，<code>archive</code> 数组会收到日志条目。</p>
 
-<pre class="brush: js notranslate">function Archiver() {
+<pre class="brush: js">function Archiver() {
   var temperature = null;
   var archive = [];
 
@@ -382,7 +378,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
 
 <p>下面这个例子中，getter 总是会返回一个相同的值。</p>
 
-<pre class="brush: js notranslate">var pattern = {
+<pre class="brush: js">var pattern = {
     get: function () {
         return 'I alway return this string,whatever you have assigned';
     },
@@ -409,7 +405,7 @@ console.log(instance.myname);</pre>
 
 <p>如果访问者的属性是被继承的，它的 <code>get</code> 和 <code>set</code> 方法会在子对象的属性被访问或者修改时被调用。如果这些方法用一个变量存值，该值会被所有对象共享。</p>
 
-<pre class="brush: js notranslate">function myclass() {
+<pre class="brush: js">function myclass() {
 }
 
 var value;
@@ -430,7 +426,7 @@ console.log(b.x); // 1
 
 <p>这可以通过将值存储在另一个属性中解决。在 <code>get</code> 和 <code>set</code> 方法中，<code>this</code> 指向某个被访问和修改属性的对象。</p>
 
-<pre class="brush: js notranslate">function myclass() {
+<pre class="brush: js">function myclass() {
 }
 
 Object.defineProperty(myclass.prototype, "x", {
@@ -449,7 +445,7 @@ console.log(b.x); // undefined</pre>
 
 <p>不像访问者属性，值属性始终在对象自身上设置，而不是一个原型。然而，如果一个不可写的属性被继承，它仍然可以防止修改对象的属性。</p>
 
-<pre class="brush: js notranslate">function myclass() {
+<pre class="brush: js">function myclass() {
 }
 
 myclass.prototype.x = 1;
@@ -508,11 +504,11 @@ console.log(myclass.prototype.y); // 1
 
 <p>在 Firefox 4 至 22 版本中，尝试重定义数组的 length 属性都会抛出 {{jsxref("TypeError")}} 异常。</p>
 
-<p>一些版本的 Chrome 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的length值。有些情况下改变可写性并不起作用（也不抛出异常）。同时，比如{{jsxref("Array.prototype.push")}}的一些数组操作方法也不会考虑不可读的length属性。</p>
+<p>一些版本的 Chrome 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的 length 值。有些情况下改变可写性并不起作用（也不抛出异常）。同时，比如{{jsxref("Array.prototype.push")}}的一些数组操作方法也不会考虑不可读的 length 属性。</p>
 
-<p>一些版本的 Safari 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的length值。尝试改变可写性的操作会正常执行而不抛出错误，但事实上并未改变属性的可写性。</p>
+<p>一些版本的 Safari 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的 length 值。尝试改变可写性的操作会正常执行而不抛出错误，但事实上并未改变属性的可写性。</p>
 
-<p>只在Internet Explorer 9及以后版本和Firefox 23及以后版本中，才完整地正确地支持数组 {{jsxref("Array.length", "length")}} 属性的重新定义。目前不要依赖于重定义数组 {{jsxref("Array.length", "length")}} 属性能够起作用，或在特定情形下起作用。与此同时，即使你能够依赖于它，你也<a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">没有合适的理由这样做</a>。</p>
+<p>只在 Internet Explorer 9 及以后版本和 Firefox 23 及以后版本中，才完整地正确地支持数组 {{jsxref("Array.length", "length")}} 属性的重新定义。目前不要依赖于重定义数组 {{jsxref("Array.length", "length")}} 属性能够起作用，或在特定情形下起作用。与此同时，即使你能够依赖于它，你也<a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">没有合适的理由这样做</a>。</p>
 
 <h3 id="Internet_Explorer_8_特别备注">Internet Explorer 8 特别备注</h3>
 
@@ -520,7 +516,7 @@ console.log(myclass.prototype.y); // 1
 
 <ul>
  <li>尝试在原生对象上使用 <code>Object.defineProperty()</code> 会报错。</li>
- <li>属性特性必须设置一些特定的值。对于数据属性描述符，<code>configurable</code>, <code>enumerable</code> 和 <code>writable</code> 属性必须全部设置为 <code>true</code>；对于访问器属性描述符，<code>configurable</code> 必须设置为 <code>true</code>，<code>enumerable</code> 必须设置为 <code>false</code>。(?) 任何试图提供其他值(?)将导致一个错误抛出。</li>
+ <li>属性特性必须设置一些特定的值。对于数据属性描述符，<code>configurable</code>, <code>enumerable</code> 和 <code>writable</code> 属性必须全部设置为 <code>true</code>；对于访问器属性描述符，<code>configurable</code> 必须设置为 <code>true</code>，<code>enumerable</code> 必须设置为 <code>false</code>。(?) 任何试图提供其他值 (?) 将导致一个错误抛出。</li>
  <li>重新配置一个属性首先需要删除该属性。如果属性没有删除，就如同重新配置前的尝试。</li>
 </ul>
 

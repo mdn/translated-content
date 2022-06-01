@@ -3,10 +3,10 @@ title: widows
 slug: Web/CSS/widows
 tags:
   - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
+  - CSS 断片化
+  - CSS 段組みレイアウト
   - CSS プロパティ
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.widows
 translation_of: Web/CSS/widows
@@ -48,15 +48,15 @@ widows: unset;
 
 ## 例
 
-<h3 id="Controlling_column_widows">段の widow の制御</h3>
+<h3 id="Controlling_column_widows">段のウィドウの制御</h3>
 
 #### HTML
 
 ```html
 <div>
-  <p>これは幾らかのテキストを含む最初の段落です。</p>
-  <p>これは最初の段落よりも多くのテキストを含む第二の段落です。これはウィドウがどの様に動作するのかを示すために用います。</p>
-  <p>これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。</p>
+  これは幾らかのテキストを含む最初の段落です。
+  これは最初の段落よりも多くのテキストを含む第二の段落です。これはウィドウがどの様に動作するのかを示すために用います。
+  これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。
 </div>
 ```
 

@@ -18,11 +18,15 @@ La méthode **`setHours()`** définit les heures pour une date donnée, selon l'
 
 ## Syntaxe
 
-    dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```js
+dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setHours(valeurHeures)
+```js
+dateObj.setHours(valeurHeures)
+```
 
 ### Paramètres
 
@@ -59,9 +63,9 @@ leGrandJour.setHours(7);
 | Spécification                                                                                                | État                         | Commentaires                                         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}                     | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} | {{Spec2('ESDraft')}} |                                                      |
+| {{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}                     | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilité des navigateurs
 

@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
-tags:
-  - API
-  - Chaînes de caractères
-  - DOM
-  - Itérateurs
-  - Listes
-  - Méthodes
 translation_of: Web/API/DOMTokenList/entries
 ---
 {{APIRef("DOM")}}
@@ -24,7 +17,7 @@ Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les paires clé / valeur en utilisant `entries()`, puis parcourons chacune d'entre elles en utilisant une boucle [for ... of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) , et les écrivons dans un  {{domxref("Node.textContent")}}  du `<span>`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les paires clé / valeur en utilisant `entries()`, puis parcourons chacune d'entre elles en utilisant une boucle [for ... of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) , et les écrivons dans un  {{domxref("Node.textContent")}}  du `<span>`.
 
 D'abord le HTML :
 
@@ -46,7 +39,7 @@ for(var value of iterator) {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

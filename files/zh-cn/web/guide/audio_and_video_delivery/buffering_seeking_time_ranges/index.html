@@ -3,15 +3,15 @@ title: 'Media buffering, seeking, and time ranges'
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 translation_of: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
-<div class="summary">
-<p><span class="seoSummary">有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的 — 音频和视频的缓冲条就是这个的一个好例子。 这篇文章讨论 用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">TimeRanges</a>如何创建一个 buffer/seek bar, 和 media API 的其他特性。</span></p>
+<div>
+<p>有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的 — 音频和视频的缓冲条就是这个的一个好例子。 这篇文章讨论 用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">TimeRanges</a>如何创建一个 buffer/seek bar，和 media API 的其他特性。</p>
 </div>
 
 <h2 id="Buffered">Buffered</h2>
 
-<p><code>Buffered</code> 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象, 表名哪些块已经下载。 这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。</p>
+<p><code>Buffered</code> 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象，表名哪些块已经下载。 这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。</p>
 
-<p>它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }}一起工作; 现在我们来考虑一个简单的aodio例子：</p>
+<p>它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }}一起工作; 现在我们来考虑一个简单的 aodio 例子：</p>
 
 <pre class="brush: html">&lt;audio id="my-audio" controls src="music.mp3"&gt;
 &lt;/audio&gt;</pre>
@@ -34,14 +34,14 @@ var bufferedTimeRanges = myAudio.buffered;</pre>
  <li><code>end(index)</code>: The end time, in seconds, of a time range.</li>
 </ul>
 
-<p>没有用户操作的话通常只有一个时间范围，但是如果你在媒体中跳来跳去那么就会出现多个时间范围, 下面形象化的表名了这一点。 This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.</p>
+<p>没有用户操作的话通常只有一个时间范围，但是如果你在媒体中跳来跳去那么就会出现多个时间范围，下面形象化的表名了这一点。 This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.</p>
 
 <pre>------------------------------------------------------
 |=============|                    |===========|     |
 ------------------------------------------------------
 0             5                    15          19    21</pre>
 
-<p>对于这个audio实例，相关联的 {{ domxref("TimeRange") }} 对象会有以下的可用属性：</p>
+<p>对于这个 audio 实例，相关联的 {{ domxref("TimeRange") }} 对象会有以下的可用属性：</p>
 
 <pre class="brush: js">myAudio.buffered.length;   // returns 2
 myAudio.buffered.start(0); // returns 0
@@ -92,7 +92,7 @@ myAudio.buffered.end(1);   // returns 19</pre>
     });
   }</pre>
 
-<p>这在长一些的audio或video上工作的更好， 但是按开始键并在进度条上点击，你会得到这个。 每个红色填充的长方形代表一个时间范围。</p>
+<p>这在长一些的 audio 或 video 上工作的更好， 但是按开始键并在进度条上点击，你会得到这个。 每个红色填充的长方形代表一个时间范围。</p>
 
 <p><img alt="A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges." src="https://mdn.mozillademos.org/files/7347/bufferedtimeranges.png" style="display: block; height: 89px; margin: 0px auto; width: 318px;"></p>
 

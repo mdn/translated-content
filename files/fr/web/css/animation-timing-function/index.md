@@ -48,7 +48,7 @@ animation-timing-function: initial;
 animation-timing-function: unset;
 ```
 
-Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou _[keyframes](/fr/docs/Web/CSS/@keyframes)_) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
+Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou [`@keyframes`](/fr/docs/Web/CSS/@keyframes)) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
 
 Une fonction de progression pour une animation qui est définie pour une étape sera appliquée à cette étape en particulier. Si aucune fonction n'est définie pour l'étape, ce sera la fonction de progression de toute l'animation qui sera utilisée.
 
@@ -94,7 +94,7 @@ Une fonction de progression pour une animation qui est définie pour une étape 
     - `step-end`
       - : Synonyme de `steps(1, jump-end)`
 
-> **Note :** Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par  {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations).
+> **Note :** Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par  {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations).
 
 ### Syntaxe formelle
 

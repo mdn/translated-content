@@ -32,7 +32,7 @@ original_slug: Aprender/JavaScript/Objetos/Object_prototypes
 <p>Em JavaScript, é feito um link entre a instância do objeto e seu protótipo (sua propriedade  <code>__proto__</code>, que é derivada da propriedade <code>prototype</code> no construtor), e as propriedades e os métodos são encontrados percorrendo a cadeia de protótipos.</p>
 
 <div class="note">
-<p><strong>Note:</strong> É importante entender que há uma distinção entre o protótipo de um objeto (que está disponível por meio de <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>, ou por meio da propriedade <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> ) e a propriedade <code>prototype</code> em funções construtoras. O primeiro é a propriedade em cada instância e o último é a propriedade no construtor. Ou seja, <code>Object.getPrototypeOf(new Foobar())</code> efere-se ao mesmo objeto que <code>Foobar.prototype</code>.</p>
+<p><strong>Note:</strong> É importante entender que há uma distinção entre o protótipo de um objeto (que está disponível por meio de <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>, ou por meio da propriedade <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> ) e a propriedade <code>prototype</code> em funções construtoras. O primeiro é a propriedade em cada instância e o último é a propriedade no construtor. Ou seja, <code>Object.getPrototypeOf(new Foobar())</code> refere-se ao mesmo objeto que <code>Foobar.prototype</code>.</p>
 </div>
 
 <p>Vejamos um exemplo para tornar isso um pouco mais claro.</p>
@@ -221,7 +221,7 @@ Person.prototype.farewell = function() {
 
 <pre class="brush: js">Person.prototype.fullName = 'Bob Smith';</pre>
 
-<p>sso não é muito flexível, pois a pessoa pode não ser chamada assim. Seria muito melhor construir o <code>fullName</code> fora do <code>name.first</code> e <code>name.last</code>:</p>
+<p>Isso não é muito flexível, pois a pessoa pode não ser chamada assim. Seria muito melhor construir o <code>fullName</code> fora do <code>name.first</code> e <code>name.last</code>:</p>
 
 <pre class="brush: js">Person.prototype.fullName = this.name.first + ' ' + this.name.last;</pre>
 

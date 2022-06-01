@@ -60,7 +60,7 @@ regex2.test(".\nfoo"); // true
 | Spécification                                                                                                        | Etat                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

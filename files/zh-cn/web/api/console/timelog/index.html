@@ -15,7 +15,7 @@ translation_of: Web/API/Console/timeLog
 
 <div>在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。</div>
 
-<div></div>
+
 
 <p>参阅文档中的 <a href="/en-US/docs/Web/API/console#Timers">Timers</a> 部分获取详细说明和示例。 </p>
 
@@ -47,11 +47,11 @@ translation_of: Web/API/Console/timeLog
 
 <p>如果计时器未启动， <code>timeLog()</code> 会返回一个警告：</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “default” doesn’t exist.</span></span></span></pre>
+<pre>Timer “default” doesn’t exist.</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">如果传入的 label 索引没有与之对应的计时器，则返回如下警告：</span></span></span></p>
+<p>如果传入的 label 索引没有与之对应的计时器，则返回如下警告：</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “timer name” doesn’t exist.</span></span></span> </pre>
+<pre>Timer “timer name” doesn’t exist. </pre>
 
 <h2 id="示例">示例</h2>
 
@@ -70,30 +70,11 @@ console.timeEnd("answer time");
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#timelog", "console.timeLog()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("api.Console.timeLog")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="相关文档">相关文档</h2>
 

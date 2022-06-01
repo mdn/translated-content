@@ -9,7 +9,7 @@ translation_of: Web/API/WorkerGlobalScope/importScripts
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">self.importScripts('foo.js');
+<pre class="brush: js">self.importScripts('foo.js');
 self.importScripts('foo.js', 'bar.js', ...);</pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -41,32 +41,19 @@ self.importScripts('foo.js', 'bar.js', ...);</pre>
 
 <p>Если вы хотите использовать некоторую функциональность, определённую файлом <code>foo.js</code>, необходимо сделать следующее:</p>
 
-<pre class="brush: js notranslate">importScripts('foo.js');</pre>
+<pre class="brush: js">importScripts('foo.js');</pre>
 
 <p><code>importScripts()</code> и <code>self.importScripts()</code> по сути эквивалентны — и то и другое вызывает функцию <code>importScripts()</code> в области видимости воркера.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("api.WorkerGlobalScope.importScripts")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_Также">Смотрите Также</h2>
 

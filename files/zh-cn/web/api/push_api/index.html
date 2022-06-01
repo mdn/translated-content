@@ -99,85 +99,13 @@ translation_of: Web/API/Push_API
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
+<h3>PushEvent</h3>
 
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}<sup>[1][3]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("api.PushEvent")}}
 
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(48.0)}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(48.0)}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
+<h3>PushMessageData</h3>
 
-<ul>
- <li>[1] Currently available only on desktop versions of Firefox; also, push messages are only delivered when Firefox is running.</li>
- <li>[2] This is currently not implemented. See the <a href="https://dev.modern.ie/platform/status/pushapi/">Microsoft Edge status information</a>.</li>
- <li>[3] Push (and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</li>
- <li>[4] 在Firefox for Android version 48，Push已经默认开启了。</li>
-</ul>
-
-<p> </p>
+{{Compat("api.PushMessageData")}}
 
 <h2 id="另见">另见</h2>
 

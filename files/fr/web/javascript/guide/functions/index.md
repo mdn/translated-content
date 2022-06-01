@@ -74,11 +74,11 @@ maFonction(mavoiture);
 y = mavoiture.fabricant;     // y reçoit la valeur "Honda"
 ```
 
-Dans le premier exemple, l'objet `mavoiture `était passé à la fonction `maFonction` qui le modifiait. Dans le second exemple, la fonction n'a pas modifié l'objet qui avait été passé en argument, elle a créé une nouvelle variable locale, possédant le même nom que l'objet global passé en argument : il n'y a donc pas de modifications sur cet objet global.
+Dans le premier exemple, l'objet `mavoiture` était passé à la fonction `maFonction` qui le modifiait. Dans le second exemple, la fonction n'a pas modifié l'objet qui avait été passé en argument, elle a créé une nouvelle variable locale, possédant le même nom que l'objet global passé en argument : il n'y a donc pas de modifications sur cet objet global.
 
 ### Les expressions de fonction
 
-Syntaxiquement, la déclaration de fonction utilisée ci-dessus est une instruction. On peut également créer une fonction grâce à une **[expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)**. De telles fonctions peuvent être **anonymes** (ne pas avoir de nom correspondant). La fonction `carré `aurait pu être définie de la façon suivante :
+Syntaxiquement, la déclaration de fonction utilisée ci-dessus est une instruction. On peut également créer une fonction grâce à une **[expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)**. De telles fonctions peuvent être **anonymes** (ne pas avoir de nom correspondant). La fonction `carré` aurait pu être définie de la façon suivante :
 
 ```js
 var carré = function (nombre) { return nombre * nombre };
@@ -488,7 +488,7 @@ var créerAnimal = function(nom) {  // La fonction externe définit une variable
 }
 ```
 
-L`'opérateur `[`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
+L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
 
 ## Utiliser l'objet `arguments`
 
@@ -580,7 +580,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Fonctions fléchées
 
-[Une expression de fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques. Une telle fonction ne possède alors pas de valeur propre pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Les fonctions fléchées sont nécessairement anonymes.
+[Une expression de fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques. Une telle fonction ne possède alors pas de valeur propre pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Les fonctions fléchées sont nécessairement anonymes.
 
 Les fonctions fléchées ont été introduites pour deux raisons principales : une syntaxe plus courte et l'absence de `this` rattaché à la fonction. Voir aussi [ce billet sur tech.mozfr.org sur les fonctions fléchées](https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees).
 
@@ -597,7 +597,7 @@ var a = [
   "Hydrogen",
   "Helium",
   "Lithium",
-  "Beryl­lium"
+  "Beryllium"
 ];
 
 var a2 = a.map(function(s){ return s.length });
@@ -613,13 +613,13 @@ Avant les fonctions fléchées, chaque nouvelle fonction définissait sa propre 
 ```js
 function Personne() {
   // Le constructeur Personne() utilise `this` comme lui-même.
-  this.âge = 0;
+  this.âge = 0;
 
   setInterval(function grandir() {
     // En mode non-strict, la fonction grandir() définit `this`
     // avec l'objet global, qui est donc différent du `this`
     // défini par le constructeur Person().
-    this.âge++;
+    this.âge++;
   }, 1000);
 }
 
@@ -670,7 +670,7 @@ JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau
 - {{jsxref("Objets_globaux/isFinite","isFinite()")}}
   - : La fonction **`isFinite()`** détermine si la valeur passée est un nombre fini. Si nécessaire, le paramètre sera converti en un nombre.
 - {{jsxref("Objets_globaux/isNaN","isNaN()")}}
-  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof) afin de déterminer si la valeur est **\*N**ot-**A**-**N**umber\*.
+  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof) afin de déterminer si la valeur est **N**ot-**A**-**N**umber.
 - {{jsxref("Objets_globaux/parseFloat","parseFloat()")}}
   - : La fonction **`parseFloat()`** convertit une chaîne de caractères en un nombre flottant.
 - {{jsxref("Objets_globaux/parseInt","parseInt()")}}

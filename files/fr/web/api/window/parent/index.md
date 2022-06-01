@@ -19,7 +19,7 @@ Renvoie une référence à la fenêtre parente ou cadre parent de la fenêtre co
 
 ### Exemple
 
-    if (window.parent != window.top) {
+    if (window.parent&nbsp;!= window.top) {
          // on se trouve dans une imbrication de cadres
     }
 

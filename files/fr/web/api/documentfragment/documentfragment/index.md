@@ -12,7 +12,7 @@ translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
-Le constructeur **`DocumentFragment()`** renvoie un nouvel objet  {{domxref("DocumentFragment")}} créé vide.
+Le constructeur **`DocumentFragment()`** renvoie un nouvel objet  {{domxref("DocumentFragment")}} créé vide.
 
 ## Syntaxe
 

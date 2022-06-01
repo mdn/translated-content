@@ -3,8 +3,8 @@ title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
-<div class="summary">
-<p><span style="line-height: inherit;">Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行</span>，<span style="line-height: inherit;">另外，Worker也可以利用 </span><a href="https://developer.mozilla.org/en/nsIXMLHttpRequest" style="line-height: inherit;" title="https://developer.mozilla.org/en/nsIXMLHttpRequest">XMLHttpRequest</a><span style="line-height: inherit;"> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)</span>；<span style="line-height: inherit;">一個worker可以藉由事件處理器來和</span> <span style="line-height: inherit;">web worker 創造端互相傳送訊息</span>，接下來本文會提供使用 web worker 的詳細說明。</p>
+<div>
+<p>Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker也可以利用 <a href="https://developer.mozilla.org/en/nsIXMLHttpRequest" style="line-height: inherit;" title="https://developer.mozilla.org/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)；一個worker可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。</p>
 </div>
 
 <h2 id="Web_Workers_API">Web Workers API</h2>
@@ -21,7 +21,7 @@ translation_of: Web/API/Web_Workers_API/Using_web_workers
 
 <p>主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 <code>onmessage</code> 事件接受訊息 (訊息存在 {{event("Message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。</p>
 
-<p>worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，<span style="line-height: inherit;">也可以利用 </span><a href="https://developer.mozilla.org/en/nsIXMLHttpRequest" style="line-height: inherit;" title="https://developer.mozilla.org/en/nsIXMLHttpRequest">XMLHttpRequest</a> <span style="line-height: inherit;">執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)。</span></p>
+<p>worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 <a href="https://developer.mozilla.org/en/nsIXMLHttpRequest" style="line-height: inherit;" title="https://developer.mozilla.org/en/nsIXMLHttpRequest">XMLHttpRequest</a> 執行輸出/輸入(但是responseXML 和channel這兩個屬性為null)。</p>
 
 <h2 id="Dedicated_workers">Dedicated workers</h2>
 
@@ -88,7 +88,7 @@ second.onchange = function() {
 
 <div class="note"><strong>Note</strong>: 在主執行緒中存取 <code>onmessage</code> <code>與 postMessage</code> 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。</div>
 
-<div class="note"><strong>Note</strong>: 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 {{anch("Transferring data to and from workers: further details")}}。</div>
+<div class="note"><strong>Note</strong>: 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 <a href="#和_workers_傳遞資料：更多細節">和 workers 傳遞資料：更多細節</a>。</div>
 
 <h3 id="結束_worker">結束 worker</h3>
 
@@ -117,9 +117,9 @@ second.onchange = function() {
  <dd>錯誤發生所在的行數</dd>
 </dl>
 
-<h3 id="產生_subworker"><span style="line-height: inherit;">產生</span> subworker</h3>
+<h3 id="產生_subworker">產生 subworker</h3>
 
-<p><span style="line-height: inherit;">worker 可以產生其他 worker (subworker)，subworker </span><span style="line-height: inherit;">的來源</span><span style="line-height: inherit;">也必須和主頁相同，另外，subworker 的 URI 的解析是相對於父 worker 的位置而非所在頁面，這項特色有助於追蹤 worker 間的相依性。</span></p>
+<p>worker 可以產生其他 worker (subworker)，subworker 的來源也必須和主頁相同，另外，subworker 的 URI 的解析是相對於父 worker 的位置而非所在頁面，這項特色有助於追蹤 worker 間的相依性。</p>
 
 <h3 id="引入程式腳本與函式庫_(library)">引入程式腳本與函式庫 (library)</h3>
 
@@ -132,7 +132,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.setTimeout" title="https://developer.mozilla.org/en-US/docs/Web/API/window.setTimeout">window.setTimeout()</a> 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。</p>
 
-<div class="note"><strong>Note:</strong> <span style="color: #333333; line-height: inherit;">雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。</span></div>
+<div class="note"><strong>Note:</strong> 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。</div>
 
 <h2 id="Shared_workers">Shared workers</h2>
 
@@ -620,7 +620,7 @@ onmessage = function(event) {
 
 <h2 id="Worker_可存取之函數與介面">Worker 可存取之函數與介面</h2>
 
-<p>大多數 Javascript 的功能 workre 皆可以使用，包含：</p>
+<p>大多數 Javascript 的功能 worker 皆可以使用，包含：</p>
 
 <ul>
  <li>{{domxref("Navigator")}}</li>
@@ -637,149 +637,7 @@ onmessage = function(event) {
 
 <h2 id="標準規範">標準規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#toc-workers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("Web Workers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Workers')}}</td>
-   <td>{{Spec2('Web Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
-
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10.0</td>
-   <td>10.6<sup>[1]</sup></td>
-   <td>4<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td>Shared workers</td>
-   <td>4<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(29)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.6</td>
-   <td>4<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td>Passing data using <a href="/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">structured cloning</a></td>
-   <td>13</td>
-   <td>{{CompatGeckoDesktop(8)}}</td>
-   <td>10.0</td>
-   <td>11.5</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>Passing data using <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#transferable-objects">transferable objects</a></td>
-   <td>17 {{property_prefix("webkit")}}<br>
-    21</td>
-   <td>{{CompatGeckoDesktop(18)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>Global {{domxref("window.URL", "URL")}}</td>
-   <td>10<sup>[3]</sup><br>
-    23</td>
-   <td>{{CompatGeckoDesktop(21)}}</td>
-   <td>11</td>
-   <td>15</td>
-   <td>6<sup>[3]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome Mobile</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>4<sup>[1]</sup></td>
-   <td>3.5</td>
-   <td>1.0.1</td>
-   <td>10.0</td>
-   <td>11.5<sup>[1]</sup></td>
-   <td>5.1<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td>Shared workers</td>
-   <td>{{CompatNo}}</td>
-   <td>4<sup>[1]</sup></td>
-   <td>8</td>
-   <td>1.0.1</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Passing data using <a href="/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">structured cloning</a></td>
-   <td>{{CompatNo}}</td>
-   <td>4</td>
-   <td>8</td>
-   <td>1.0.1</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Passing data using <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#transferable-objects">transferable objects</a></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>18</td>
-   <td>1.0.1</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Chrome 和 Opera 會丟出錯誤："<code>Uncaught SecurityError: Failed to construct 'Worker': Script at 'file:///Path/to/worker.js' cannot be accessed from origin 'null'.</code>"，當從 local 端而非網域執行 worker。</p>
-
-<p>[2] Safari 7.1.2 可以從 worker 呼叫 <code>console.log，但並不會任何效果，而更早的版本則是不允許呼叫</code> <code>console.log。</code></p>
-
-<p>[3] 會有前綴 <code>webkitURL</code>.</p>
+{{Specifications}}
 
 <h2 id="延伸閱讀">延伸閱讀</h2>
 

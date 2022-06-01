@@ -62,7 +62,7 @@ translation_of: Web/HTML/Element/ol
  <dd>此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。</dd>
  <dt>{{htmlattrdef("start")}}</dt>
  <dd>一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 <code>type</code> 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 <code>start="4"</code>。
- <div class="note"><strong>Note</strong>: 这个属性在 HTML4中弃用，但是在 HTML5 中被重新引入。</div>
+ <div class="note"><strong>Note</strong>: 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。</div>
  </dd>
  <dt>{{htmlattrdef("type")}}</dt>
  <dd>设置编号的类型：
@@ -76,7 +76,7 @@ translation_of: Web/HTML/Element/ol
 
  <p>编号类型适用于整个列表，除非在 <code>&lt;ol&gt;</code> 元素的 {{HTMLElement("li")}} 元素中使用不同的 {{HTMLAttrxRef("type", "li")}} 属性。</p>
 
- <div class="note"><strong>Note: </strong>这个属性在 HTML4中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。</div>
+ <div class="note"><strong>Note: </strong>这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。</div>
  </dd>
 </dl>
 
@@ -97,7 +97,7 @@ translation_of: Web/HTML/Element/ol
 <p>至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{HTMLElement("ol")}} 元素，否则使用 {{HTMLElement("ul")}} 更合适。</p>
 
 <div class="standardNoteBlock">
-<p><strong>译者注：</strong>“更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。<br>
+<p><strong>译者注：</strong>“更改顺序” 时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。<br>
  如果只有一个元素，以至于根本不存在什么顺序可言，可能最好先考虑是否应当使用列表元素，以及是否要在列表最后增加一些占位的空项。</p>
 </div>
 
@@ -221,10 +221,10 @@ translation_of: Web/HTML/Element/ol
 
 <ul>
  <li>其他列表相关的 HTML 元素: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};</li>
- <li>对 <code>&lt;ol&gt;</code> 元素常用的 CSS 属性:
+ <li>对 <code>&lt;ol&gt;</code> 元素常用的 CSS 属性：
   <ul>
-   <li>the {{cssxref("list-style")}} 属性, 有用的选择序数的显示方式,</li>
-   <li><a href="/en-US/docs/CSS_Counters">CSS计数器</a>, 用于处理复杂的嵌套列表,</li>
+   <li>the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，</li>
+   <li><a href="/en-US/docs/CSS_Counters">CSS 计数器</a>, 用于处理复杂的嵌套列表，</li>
    <li>{{cssxref("line-height")}} 属性，可以模拟过时的 {{htmlattrxref("compact", "ol")}} 属性；</li>
    <li>{{cssxref("margin")}} 属性，用来控制列表的缩进。</li>
   </ul>

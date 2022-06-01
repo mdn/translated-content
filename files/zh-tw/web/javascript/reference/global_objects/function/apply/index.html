@@ -7,8 +7,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p><code><strong>apply() </strong>方法會呼叫一個以 this 的代表值和一個陣列形式的值組(或是一個 </code><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a> <code>)為參數的函式。</code></p>
 
-<div class="note">
-<p><strong>注意：</strong>這個函式的語法和{{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 <code>call()</code> 接受<code><strong>一連串的參數</strong></code>，而 <code>apply() 接受<strong>一組陣列形式的參數</strong>。</code></p>
+<div class="notecard note">
+<p><strong>備註：</strong>這個函式的語法和{{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 <code>call()</code> 接受<code><strong>一連串的參數</strong></code>，而 <code>apply() 接受<strong>一組陣列形式的參數</strong>。</code></p>
 </div>
 
 <h2 id="語法">語法</h2>
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
  <dt><code>thisArg</code></dt>
  <dd>讓 <em><code>fun </code></em><code>呼叫時</code>可以視為 this  的值。注意，這可能並不是最後會在方法裡看見的值：如果這是一個在非 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 下運作的程式碼，{{jsxref("null")}} 及 {{jsxref("undefined")}} 將會被全域物件取代，而原始類別將被封裝。</dd>
  <dt><code>argsArray</code></dt>
- <dd>一個 array-like object ，定義了 <em><code>fun </code></em><code>要呼叫的一組參數，如果沒有需要提供，可以傳入 </code>{{jsxref("null")}} 或 {{jsxref("undefined")}} 。從 ECMAScript 5 開始，這些參數不僅可以是泛型的 array-like object ，而不一定要是一組陣列。查看下方的{{anch("Browser_compatibility", "browser compatibility")}} 資訊。</dd>
+ <dd>一個 array-like object ，定義了 <em><code>fun </code></em><code>要呼叫的一組參數，如果沒有需要提供，可以傳入 </code>{{jsxref("null")}} 或 {{jsxref("undefined")}} 。從 ECMAScript 5 開始，這些參數不僅可以是泛型的 array-like object ，而不一定要是一組陣列。查看下方的<a href="#瀏覽器相容性">瀏覽器相容性</a> 資訊。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
@@ -38,8 +38,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p>從 ECMAScript 5th 版本後，也可以使用陣列形式的物件，在實踐上這代表他會擁有 <code>length 以及整數範圍 </code> <code>(0...length-1) 的屬性。舉例來說，你可以使用 </code>{{domxref("NodeList")}}  或是一個像這樣的自定義屬性： <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }。</code></p>
 
-<div class="note">
-<p>一般瀏覽器，包括 Chrome 14 及 Internet Explorer 9，仍不支援陣列形式的物件，所以會對此丟出一個錯誤。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>一般瀏覽器，包括 Chrome 14 及 Internet Explorer 9，仍不支援陣列形式的物件，所以會對此丟出一個錯誤。</p>
 </div>
 
 <h2 id="範例">範例</h2>
@@ -55,8 +55,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 };
 </pre>
 
-<div class="note">
-<p><strong>注意：</strong>如上範例的 <code>Object.create()</code> 方法是屬於比較新的寫法。如需使用閉包的替代方法，請參考以下的範例：</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如上範例的 <code>Object.create()</code> 方法是屬於比較新的寫法。如需使用閉包的替代方法，請參考以下的範例：</p>
 
 <pre class="brush: js">Function.prototype.construct = function(aArgs) {
   var fConstructor = this, fNewConstr = function() {
@@ -83,8 +83,8 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
 </pre>
 
-<div class="note">
-<p><strong>注意：</strong>This non-native <code>Function.construct</code> method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: <code>[2012, 11, 4]</code>; in this case you have to write something like: <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> — anyhow this is not the best way to do things and probably should not be used in any production environment).</p>
+<div class="notecard note">
+<p><strong>備註：</strong>This non-native <code>Function.construct</code> method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: <code>[2012, 11, 4]</code>; in this case you have to write something like: <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> — anyhow this is not the best way to do things and probably should not be used in any production environment).</p>
 </div>
 
 <h3 id="使用_apply_於內建的函數">使用 <code>apply</code> 於內建的函數</h3>
@@ -150,104 +150,11 @@ someobject.foo = function() {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ES 5.1 generic array-like object as {{jsxref("Functions/arguments", "arguments")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ES 5.1 generic array-like object as {{jsxref("Functions/arguments", "arguments")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

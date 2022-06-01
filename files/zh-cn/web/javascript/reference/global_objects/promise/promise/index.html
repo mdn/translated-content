@@ -5,11 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Promise</code></strong> 构造器主要用于包装不支持promise（返回值不是<code>Promise</code>）的函数。</p>
+<p><strong><code>Promise</code></strong> 构造器主要用于包装不支持 promise（返回值不是 <code>Promise</code>）的函数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}</div>
-
-<p class="hidden">交互式的demo的源码在GitHub仓库，如果你乐于为交互式的demo做贡献，请克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>并提交pull request .</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,12 +17,62 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
 <dl>
  <dt><code>executor</code></dt>
- <dd>这是一个双参函数，参数为<code>resolve<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">和</span></font>reject</code>。<code>Promise</code>的实现会立即执行<code>executor</code>，并传入<code>resolve<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">和</span></font>reject</code>函数（<code>Promise</code>构造器将会在返回新对象之前<code>executor</code>）。当<code>resolve</code>和<code>reject</code>函数被调用时，它们分别对promise执行<code>resolve</code>和<code>reject</code>。<code>executor</code>通常会触发一些异步运算，一旦运算成功完成，则<code>resolve</code>掉这个promise，如果出错则<code>reject</code>掉。如果<code>executor</code>函数执行时抛出异常，promise状态会变为<code>rejected</code>。<code>executor</code>的返回值也会被忽略。</dd>
+ <dd>
+   <p>该函数将在构造这个新<code>Promise</code>对象过程中，被构造函数执行。该<code>executor</code>是一段将输出与 promise 联系起来的自定义代码。<code>executor</code>的函数签名应为：</p>
+   <pre class="brush: js;">function(resolutionFunc, rejectionFunc){
+      // 通常是一些异步操作
+    }
+   </pre>
+   <p>
+    <code>resolutionFunc</code>与<code>rejectionFunc</code>也是函数，可以使用任何名字。这两个函数的签名很简单：接受任何类型的单个参数。
+   </p>
+   <pre class="brush: js;">
+        resolutionFunc(value) // 当被敲定时调用
+        rejectionFunc(reason) // 当被拒绝时调用
+   </pre>
+   <p>
+    当该 promise 动态插入<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise%E7%9A%84%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8">promise 链</a>的情况下，该 <code>resolutionFunc</code> 的 <code>value</code> 参数可能是另一个 promise 对象。
+   </p>
+   <p>
+    关于 <code>executor</code>，需理解以下几点：
+   </p>
+   <ul>
+     <li>该 <code>executor</code> 的返回值将被忽略。</li>
+     <li>如果在该 <code>executor</code> 中抛出一个错误，该 promise 将被拒绝。</li>
+   </ul>
+   <p>
+     因此，<code>executor</code> 的代码生效的原理如下：
+   </p>
+   <ul>
+    <li>在构造函数生成新 <code>Promise</code> 对象时，构造函数也生成了一对相关的函数 <code>resolutionFunc</code> 与 <code>rejectionFunc</code>。他们被绑定在了 <code>Promise</code> 对象上。</li>
+    <li><code>executor</code> 内的代码有机会执行一些操作，然后通过分别调用 <code>resolutionFunc</code> 或者 <code>rejectionFunc</code>，反应这些操作的结果（如果这些结果不是另一个 <code>Promise</code> 对象的话），要么为已敲定（resolved），要么为已拒绝（rejected）。</li>
+    <li>换句话说，<code>executor</code>中的代码通过 <code>resolutionFunc</code> 或 <code>rejectionFunc</code> 产生的副作用进行通信。这里的副作用是指 <code>Promise</code> 对象变成已敲定（resolved），要么为已拒绝（rejected）。</li>
+  </ul>
+  <p>
+    综上所述，对典型流程进行总结：
+  </p>
+  <ol>
+    <li><code>executor</code> 内的操作是异步的，并且提供一个回调（callback）。</li>
+    <li>该回调在 <code>executor</code> 内定义。</li>
+    <li>该回调通过调用 <code>resolutionFunc</code> 终止。</li>
+    <li><code>resolutionFunc</code> 的调用包含一个 <code>value</code> 参数。</li>
+    <li>该<code>value</code> 被返回给绑定的 <code>Promise</code> 对象上。</li>
+    <li>该<code>Promise</code> 对象（异步地）调用任何相关的 <code>.then(handleResolved)</code>。</li>
+    <li><code>.then(handleResolved)</code> 收到的 <code>value</code> 作为入参被传递给了 <code>handleResolved</code> 的调用。（参见<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise%E7%9A%84%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8">Promise 的链式调用</a>）</li>
+  </ol>
+</dd>
 </dl>
+
+<h3 id="返回值">返回值</h3>
+<div>
+  <p>
+    当通过 <code>new</code> 调用时，<code>Promise</code> 构造函数返回一个 promise 对象。当 <code>resolutionFunc</code> 或者 <code>rejectionFunc</code> 被调用时，该 promise 对象将会“被敲定”。注意，如果您调用 <code>resolutionFunc</code> 或者 <code>rejectionFunc</code> 时将另一个 Promise 对象作为参数，您可以称其“被敲定（resolved）”，但仍不能称其“被解决（settled）”。
+  </p>
+</div>
 
 <h2 id="例子">例子</h2>
 
-<p>我们通过<code>new</code>关键字和<code>Promise</code>构造器创建它的对象。这个构造器接受一个名为"executor function"的函数。这个函数应当接受两个函数参数。当异步任务成功时，第一个函数（<code>resolve</code>）将被调用，并返回一个值代表成功。当其失败时，第二个函数（<code>reject</code>）将被调用，并返回失败原因（失败原因通常是一个error对象）。</p>
+<p>我们通过 <code>new</code> 关键字和 <code>Promise</code> 构造器创建它的对象。这个构造器接受一个名为 "executor function" 的函数。这个函数应当接受两个函数参数。当异步任务成功时，第一个函数（<code>resolve</code>）将被调用，并返回一个值代表成功。当其失败时，第二个函数（<code>reject</code>）将被调用，并返回失败原因（失败原因通常是一个 error 对象）。</p>
 
 <pre class="brush: js;">const myFirstPromise = new Promise((resolve, reject) =&gt; {
   // do something asynchronous which eventually calls either:
@@ -35,7 +83,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 });
 </pre>
 
-<p>为了提供一个拥有promise功能的函数，简单的返回一个promise即可:</p>
+<p>为了提供一个拥有 promise 功能的函数，简单的返回一个 promise 即可：</p>
 
 <pre class="brush: js;">function myAsyncFunction(url) {
   return new Promise((resolve, reject) =&gt; {

@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/WWW-Authenticate
 
 HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Authentication)メソッド (「チャレンジ」) を定義します。</p>
 
-> **Note:** このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#the_general_http_authentication_framework)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#authentication_schemes)で使用することができます。
+> **Note:** このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用することができます。
 > それぞれの「チャレンジ」には、サーバーが対応している方式と、その方式型に定義されている追加引数が記載されています。
 
 [HTTP 認証]((/ja/docs/Web/HTTP/Authentication))を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
@@ -68,7 +68,7 @@ WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ...
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
-例えば、[Basic 認証](/ja/docs/Web/HTTP/Authentication#basic_authentication_scheme)では任意で `realm` および `charset` キーを指定することができますが、`token68` には対応していません。
+例えば、[Basic 認証](/ja/docs/Web/HTTP/Authentication#basic_認証方式)では任意で `realm` および `charset` キーを指定することができますが、`token68` には対応していません。
 
 ```http
 WWW-Authenticate: Basic
@@ -80,9 +80,9 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ## ディレクティブ
 
 - `<auth-scheme>`
-  - : [認証方式](/ja/docs/Web/HTTP/Authentication#authentication_schemes)です。有名なものとしては、 [`Basic`](/ja/docs/Web/HTTP/Authentication#basic_authentication_scheme)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります (大文字小文字の区別なし)。
+  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)です。有名なものとしては、 [`Basic`](/ja/docs/Web/HTTP/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります (大文字小文字の区別なし)。
 
-    > **Note:** 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#authentication_schemes)を参照してください。
+    > **Note:** 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)を参照してください。
 - **realm=**\<realm> {{optional_inline}}
   - : 保護領域を説明する文字列です。
     realm によってサーバーが保護する領域を分割することができ (そのような分割を許可しているスキームが対応している場合)、どの特定のユーザー名/パスワードが必要であるかをユーザーに通知します。
@@ -91,7 +91,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
   - : 方式によっては役立つ可能性のあるトークンです。このトークンでは、66 種類の予約されていない URI 文字に加えて、いくつかの文字を使用できます。
     仕様書によれば、 base64、base64url、base32、base16 (16 進数) の各エンコード方式のいずれかを、パディングの有無にかかわらず、ホワイトスーペースを除いて保持することができます。
 
-`<auth-scheme>` とキー `realm` 以外の認証引数は、それぞれの[認証方式](/ja/docs/Web/HTTP/Authentication#authentication_schemes)に固有のものです。
+`<auth-scheme>` とキー `realm` 以外の認証引数は、それぞれの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)に固有のものです。
 通常、これらについては関連する仕様を確認する必要があります (一部のスキームのキーを以下に示します)。
 
 

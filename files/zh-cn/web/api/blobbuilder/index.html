@@ -5,7 +5,7 @@ translation_of: Web/API/BlobBuilder
 ---
 <p>{{ deprecated_header() }}</p>
 <p>{{ SeeCompatTable() }}</p>
-<p>The <code>BlobBuilder</code> interface provides an easy way to construct {{ domxref("Blob") }} objects. Just create a <code>BlobBuilder</code> and append chunks of data to it by calling the {{ manch("append") }} method. When you're done building your blob, call {{ manch("getBlob") }} to retrieve a {{ domxref("Blob") }} containing the data you sent into the blob builder.</p>
+<p>The <code>BlobBuilder</code> interface provides an easy way to construct {{ domxref("Blob") }} objects. Just create a <code>BlobBuilder</code> and append chunks of data to it by calling the <a href="#append()"><code>append()</code></a> method. When you're done building your blob, call <a href="#getBlob()"><code>getBlob()</code></a> to retrieve a {{ domxref("Blob") }} containing the data you sent into the blob builder.</p>
 <div class="note">
   <strong>注:</strong><code>BlobBuilder</code>接口已经废弃,请使用新版草案中引入的 {{domxref('Blob') }}构造函数.</div>
 <h2 id="Method_overview" name="Method_overview">方法概述</h2>
@@ -57,7 +57,7 @@ void append(
     Specifies how strings containing <code>\n</code> are to be written out. This can be <code>"transparent"</code> (endings unchanged) or <code>"native"</code> (endings changed to match host OS filesystem convention). The default value is <code>"transparent"</code>.</dd>
 </dl>
 <h3 id="getBlob()">getBlob()</h3>
-<p>Returns the {{ domxref("Blob") }} object that has been constructed using the data passed through calls to {{ manch("append") }}.</p>
+<p>Returns the {{ domxref("Blob") }} object that has been constructed using the data passed through calls to <a href="#append()"><code>append()</code></a>.</p>
 <pre class="eval">Blob getBlob(
   in DOMString contentType {{ optional_inline() }}
 );
@@ -70,7 +70,7 @@ void append(
     The MIME type of the data to be returned in the {{ domxref("Blob") }}. This will be the value of the <code>Blob</code> object's type property.</dd>
 </dl>
 <h6 id="返回值">返回值</h6>
-<p>A {{ domxref("Blob") }} object containing all of the data passed to any calls to {{ manch("append") }} made since the <code>BlobBuilder</code> was created. This also resets the <code>BlobBuilder</code> so that the next call to {{ manch("append") }} is starting a new, empty blob.</p>
+<p>A {{ domxref("Blob") }} object containing all of the data passed to any calls to <a href="#append()"><code>append()</code></a> made since the <code>BlobBuilder</code> was created. This also resets the <code>BlobBuilder</code> so that the next call to <a href="#append()"><code>append()</code></a> is starting a new, empty blob.</p>
 <h3 id="getFile()_non-standard_inline()">getFile() {{ non-standard_inline() }}</h3>
 <p>返回一个{{ domxref("File") }}对象.</p>
 <pre class="eval">File getFile(
@@ -92,78 +92,8 @@ void append(
 <h6 id="返回值_2">返回值</h6>
 <p>一个{{ domxref("File") }}对象.</p>
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Feature</th>
-        <th>Chrome</th>
-        <th>Firefox (Gecko)</th>
-        <th>Internet Explorer</th>
-        <th>Opera</th>
-        <th>Safari</th>
-      </tr>
-      <tr>
-        <td>Basic support</td>
-        <td>8<br>
-          As <code>WebKitBlobBuilder</code> †</td>
-        <td>{{ CompatGeckoDesktop("6.0") }}<br>
-          As <code>MozBlobBuilder</code></td>
-        <td>10<br>
-          As <code>MSBlobBuilder</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}†</td>
-      </tr>
-      <tr>
-        <td><code>getfile()</code> {{ non-standard_inline() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoDesktop("8.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div id="compat-mobile">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Feature</th>
-        <th>Android</th>
-        <th>Firefox Mobile (Gecko)</th>
-        <th>IE Mobile</th>
-        <th>Opera Mobile</th>
-        <th>Safari Mobile</th>
-      </tr>
-      <tr>
-        <td>Basic support</td>
-        <td>3<br>
-          As <code>WebKitBlobBuilder</code></td>
-        <td>{{ CompatGeckoMobile("6.0") }}<br>
-          As <code>MozBlobBuilder</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>getfile()</code> {{ non-standard_inline() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoMobile("8.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h3 id="注BlobBuilder已被废弃">注:BlobBuilder已被废弃</h3>
-<ul>
-  <li>从Firefox 14开始,使用<code>MozBlobBuilder</code>会在Web控制台显示一条警告消息: <code>MozBlobBuilder</code>已被废弃,请使用{{ domxref("Blob") }}来代替.</li>
-  <li>从Firefox 18开始,<code>MozBlobBuilder</code>已被删除.</li>
-  <li>WebKit has deprecated <code>WebKitBlobBuilder</code> and has made its support configurable. Currently Safari disables the feature in Nightly, so it will never likely to ship in the final version. On the other hand, Chrome, which has supported it since Chrome 8, still enables the feature. So Chrome might continue to support the feature. (See this <a class="external" href="http://trac.webkit.org/changeset/115666">WebKit changeset</a> for details).</li>
-</ul>
+{{Compat("api.BlobBuilder")}}
+
 <h2 id="相关链接">相关链接</h2>
 <ul>
   <li>{{ spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder", "File API Specification: BlobBuilder", "ED") }}</li>

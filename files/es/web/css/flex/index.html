@@ -140,66 +140,7 @@ flex.addEventListener("click", function() {
 
 <h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-<p>{{CompatibilityTable()}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("20.0")}}<br>
-    {{CompatGeckoDesktop("28.0")}}<sup>[2]</sup></td>
-   <td>21.0{{property_prefix("-webkit")}}<br>
-    29.0</td>
-   <td>10.0{{property_prefix("-ms")}}<sup>[3]</sup><br>
-    11.0<sup>[3]</sup></td>
-   <td>12.10</td>
-   <td>
-    <p>6.1{{property_prefix("-webkit")}}<br>
-     9.0</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>4.4</td>
-   <td>11</td>
-   <td>12.10</td>
-   <td>7.1{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] En Gecko 18.0 {{geckoRelease("18.0")}} y 19.0 {{geckoRelease("19.0")}} el soporte de cajas flexibles está oculto en las preferencias <code>about:config</code> en <code>layout.css.flexbox.enabled</code>, por defecto en <code>false</code>.</p>
-
-<p>[2] Las cajas flexibles multi-línea están soportadas desde Gecko 28.0 {{geckoRelease("28.0")}}.</p>
-
-<p>[3] Internet Explorer 10-11 (pero no 12+) ignora el uso de <a href="/en-US/docs/Web/CSS/calc"><code>calc()</code></a> en la parte <code>flex-basis</code> de la sintaxis de flex. Esto se puede solucionar mediante el uso de las propiedades normales en lugar de las abreviadas. Ver <a href="https://github.com/philipwalton/flexbugs#8-flex-basis-doesnt-support-calc">Flexbug #8</a> para más info. Además una declaración <code>flex</code>  con un valor sin unidad en su parte <code>flex-basis</code> es considerado sintácticamente no valido en esas versiones y por lo tanto será ignorado. Una solución consiste en incluir siempre una unidad en la parte <code>flex-basis</code> del valor abreviador <code>flex</code>. Ver <a href="https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored">Flexbug #4</a> para más info.</p>
+{{Compat("css.properties.flex")}}
 
 <h2 id="See_also" name="See_also">Ver también</h2>
 

@@ -8,7 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/canvas
 ---
-<p><code>&lt;canvas&gt;</code>元素可被用来通过JavaScript（<a href="/zh-CN/docs/Web/API/Canvas_API">Canvas</a> API 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API">WebGL</a> API）绘制图形及图形动画。</p>
+<p><code>&lt;canvas&gt;</code>元素可被用来通过 JavaScript（<a href="/zh-CN/docs/Web/API/Canvas_API">Canvas</a> API 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API">WebGL</a> API）绘制图形及图形动画。</p>
 
 <p>{{HTMLRef}}</p>
 
@@ -22,7 +22,7 @@ US/docs/HTML/Global_attributes">全局属性</a>.</p>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。</dd>
  <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>通过设置这个属性，来控制canvas元素是否半透明。如果你不想canvas元素被设置为半透明，使用这个元素将可以优化浏览器绘图性能。</dd>
+ <dd>通过设置这个属性，来控制 canvas 元素是否半透明。如果你不想 canvas 元素被设置为半透明，使用这个元素将可以优化浏览器绘图性能。</dd>
  <dt>{{htmlattrdef("width")}}</dt>
  <dd>该元素占用空间的宽度，以 CSS 像素（px）表示，默认为 300。</dd>
 </dl>
@@ -31,13 +31,13 @@ US/docs/HTML/Global_attributes">全局属性</a>.</p>
 
 <h3 id="标签需要闭合">标签需要闭合</h3>
 
-<p>不同于 {{HTMLElement("img")}} 元素,  {{HTMLElement ("canvas")}}元素需要有闭合标签 (<code>&lt;/canvas&gt;</code>).</p>
+<p>不同于 {{HTMLElement("img")}} 元素， {{HTMLElement ("canvas")}}元素需要有闭合标签 (<code>&lt;/canvas&gt;</code>).</p>
 
-<h3 id="设置画布canvas的大小">设置画布(canvas)的大小</h3>
+<h3 id="设置画布canvas的大小">设置画布 (canvas) 的大小</h3>
 
-<p>直接在html标签中设置width和height属性或者使用JavaScript来指定画布尺寸，这将改变一个画布的水平像素和垂直像素数，就像定义了一张图片的大小一样。</p>
+<p>直接在 html 标签中设置 width 和 height 属性或者使用 JavaScript 来指定画布尺寸，这将改变一个画布的水平像素和垂直像素数，就像定义了一张图片的大小一样。</p>
 
-<p>可以使用CSS的width和height以在渲染期间缩放图像以适应样式大小，就像&lt;img&gt;元素一样。如果您发现&lt;canvas&gt;元素中展示的内容变形，您可以通过&lt;canvas&gt;自带的height和width属性进行相关设置，而不要使用CSS。</p>
+<p>可以使用 CSS 的 width 和 height 以在渲染期间缩放图像以适应样式大小，就像&lt;img&gt;元素一样。如果您发现&lt;canvas&gt;元素中展示的内容变形，您可以通过&lt;canvas&gt;自带的 height 和 width 属性进行相关设置，而不要使用 CSS。</p>
 
 <h3 id="最大的画布尺寸">最大的画布尺寸</h3>
 
@@ -85,8 +85,8 @@ US/docs/HTML/Global_attributes">全局属性</a>.</p>
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;
-  抱歉，您的浏览器不支持canvas元素
-  （这些内容将会在不支持&lt;canvas&gt;元素的浏览器或是禁用了JavaScript的浏览器内渲染并展现）
+  抱歉，您的浏览器不支持 canvas 元素
+ （这些内容将会在不支持&lt;canvas&gt;元素的浏览器或是禁用了 JavaScript 的浏览器内渲染并展现）
 &lt;/canvas&gt;
 </pre>
 
@@ -105,7 +105,7 @@ ctx.fillRect(10, 10, 100, 100);</pre>
 
 <h2 id="可访问性">可访问性</h2>
 
-<p><code>&lt;canvas&gt;</code> 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像HTML那样具有语义并能暴露给可访问性工具。以下指南可以帮助您更方便地访问它。</p>
+<p><code>&lt;canvas&gt;</code> 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给可访问性工具。以下指南可以帮助您更方便地访问它。</p>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">MDN Hit regions and accessability</a></li>

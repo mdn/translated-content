@@ -5,7 +5,7 @@ translation_of: Web/API/BiquadFilterNode/frequency
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété `frequency` de l'interface {{ domxref("BiquadFilterNode") }} est un  {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) : un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage courant, exprimée en hertz (Hz).
+La propriété `frequency` de l'interface {{ domxref("BiquadFilterNode") }} est un  {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) : un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage courant, exprimée en hertz (Hz).
 
 Sa valeur par défaut est de `350` avec une portée nominale de `10` à la [fréquence de Nyquist](http://en.wikipedia.org/wiki/Nyquist_frequency), qui est la moitié de la fréquence d'échantillonnage.
 
@@ -58,7 +58,7 @@ filtreBiquad.gain.value = 25;
 
 | Specification                                                                                            | Status                               | Comment |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-BiquadFilterNode-frequency', 'frequency')}} | {{Spec2('Web Audio API')}} |         |
+| {{SpecName('Web Audio API', '#widl-BiquadFilterNode-frequency', 'frequency')}} | {{Spec2('Web Audio API')}} |         |
 
 ## Compatibilité navigateurs
 

@@ -63,7 +63,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>Модели обычно определяются в приложении <strong>models.py</strong>. Они реализуются как подклассы <code>django.db.models.Model</code>, и могут включать поля, методы и метаданные. В приведённом ниже фрагменте кода показана «типичная» модель, названная <code>MyModelName</code>:</p>
 
-<pre class="notranslate">from django.db import models
+<pre>from django.db import models
 
 class MyModelName(models.Model):
     """
@@ -97,7 +97,7 @@ class MyModelName(models.Model):
 
 <p>Модель может иметь произвольное количество полей любого типа - каждый представляет столбец данных, который мы хотим сохранить в одной из наших таблиц базы данных. Каждая запись (строка) базы данных будет состоять из одного значения каждого поля. Давайте рассмотрим приведённый выше пример:</p>
 
-<pre class="brush: js notranslate">my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")</pre>
+<pre class="brush: js">my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")</pre>
 
 <p>Наш вышеприведённый пример имеет одно поле, называемое my_<code>field_name</code>, типа <code>models.CharField</code> — что означает, что это поле будет содержать строки буквенно-цифровых символов. Типы полей назначаются с использованием определённых классов, которые определяют тип записи, которая используется для хранения данных в базе данных, а также критерии проверки, которые должны использоваться, когда значения получены из формы HTML (то есть, что составляет действительное значение). Типы полей также могут принимать аргументы, которые дополнительно определяют, как поле хранится или может использоваться. В этом случае мы даём нашему полю два аргумента:</p>
 
@@ -148,7 +148,7 @@ class MyModelName(models.Model):
 
 <p>Вы можете объявить метаданные на уровне модели для своей модели, объявив класс Meta, как показано на рисунке.</p>
 
-<pre class="brush: python notranslate">class Meta:
+<pre class="brush: python">class Meta:
     ordering = ["-my_field_name"]
     ...</pre>
 
@@ -156,13 +156,13 @@ class MyModelName(models.Model):
 
 <p>Например, если мы решили сортировать книги по умолчанию:</p>
 
-<pre class="brush: python notranslate">ordering = ["title", "-pubdate"]</pre>
+<pre class="brush: python">ordering = ["title", "-pubdate"]</pre>
 
 <p>Книги будут отсортированы по алфавиту по названию, от A-Z, а затем по дате публикации внутри каждого названия, от самого нового до самого старого.</p>
 
 <p>Другим распространённым атрибутом является verbose_name, подробное имя для класса в единственной и множественной форме:</p>
 
-<pre class="brush: python notranslate">verbose_name = "BetterName"</pre>
+<pre class="brush: python">verbose_name = "BetterName"</pre>
 
 <p>Другие полезные атрибуты позволяют создавать и применять новые «разрешения доступа» для модели (разрешения по умолчанию применяются автоматически), разрешить упорядочение на основе другого поля или объявить, что класс является «абстрактным» (базовый класс, для которого вы не можете создавать записи, и вместо этого будет создан для создания других моделей). Многие другие параметры метаданных управляют тем, какая база данных должна использоваться для модели и как хранятся данные (это действительно полезно, если вам нужно сопоставить модель с существующей базой данных). Полный список опций метаданных доступен здесь: <a href="https://docs.djangoproject.com/en/2.2/ref/models/options/#model-meta-options">Model metadata options</a> (Django документация).</p>
 
@@ -170,12 +170,12 @@ class MyModelName(models.Model):
 
 <p>Модель также может иметь методы. Минимально в каждой модели вы должны определить стандартный метод класса для Python __str __ (), чтобы вернуть удобочитаемую строку для каждого объекта. Эта строка используется для представления отдельных записей на сайте администрирования (и в любом другом месте, где вам нужно обратиться к экземпляру модели). Часто это возвращает поле названия или имени из модели.</p>
 
-<pre class="brush: python notranslate">def __str__(self):
+<pre class="brush: python">def __str__(self):
     return self.field_name</pre>
 
 <p>Другим распространённым методом включения в модели Django является get_absolute_url (), который возвращает URL-адрес для отображения отдельных записей модели на веб-сайте (если вы определяете этот метод, тогда Django автоматически добавит кнопку «Просмотр на сайте» на экранах редактирования записей модели на сайте администратора). Типичный шаблон для get_absolute_url () показан ниже.</p>
 
-<pre class="brush: python notranslate">def get_absolute_url(self):
+<pre class="brush: python">def get_absolute_url(self):
     """
     Returns the url to access a particular instance of the model.
     """
@@ -198,7 +198,7 @@ class MyModelName(models.Model):
 
 <p>Чтобы создать запись, вы можете определить экземпляр модели, а затем вызвать метод save ().</p>
 
-<pre class="brush: python notranslate"># Create a new record using the model's constructor.
+<pre class="brush: python"># Create a new record using the model's constructor.
 a_record = MyModelName(my_field_name="Instance #1")
 
 # Save the object into the database.
@@ -211,7 +211,7 @@ a_record.save()
 
 <p>Вы можете получить доступ к полям в этой новой записи с использованием синтаксиса точек и изменить значения. Вы должны вызвать save (), чтобы сохранить изменённые значения в базе данных.</p>
 
-<pre class="brush: python notranslate"># Access model field values using Python attributes.
+<pre class="brush: python"># Access model field values using Python attributes.
 print(a_record.id) #should return 1 for the first record.
 print(a_record.my_field_name) # should print 'Instance #1'
 
@@ -229,12 +229,12 @@ a_record.save()</pre>
 
 <p>Мы можем получить все записи для модели как объект QuerySet,  используя <code>objects.all()</code>. QuerySet - это итерируемый объект, означающий, что он содержит несколько объектов, которые мы можем перебирать / прокручивать.</p>
 
-<pre class="brush: python notranslate">all_books = Book.objects.all()
+<pre class="brush: python">all_books = Book.objects.all()
 </pre>
 
 <p>Метод <code>filter()</code> Django позволяет отфильтровать возвращаемый <code>QuerySet</code> для соответствия указанному текстовому или числовому полю по конкретным критериям. Например, чтобы отфильтровать книги, содержащие  слово «wild» («дикие») в заголовке, а затем подсчитать их, мы могли бы сделать следующее.</p>
 
-<pre class="brush: python notranslate">wild_books = Book.objects.filter(title__contains='wild')
+<pre class="brush: python">wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = Book.objects.filter(title__contains='wild').count()
 </pre>
 
@@ -242,7 +242,7 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 
 <p>В некоторых случаях вам нужно будет фильтровать поле, которое определяет отношение «один ко многим» к другой модели (например, <code>ForeignKey</code>). В этом случае вы можете «индексировать» поля в связанной модели с дополнительными двойными подчёркиваниями. Так, например, чтобы фильтровать книги с определённым жанровым рисунком, вам нужно будет указывать имя в поле жанра, как показано ниже:</p>
 
-<pre class="brush: python notranslate">books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')  # Will match on: Fiction, Science fiction, non-fiction etc.
+<pre class="brush: python">books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')  # Will match on: Fiction, Science fiction, non-fiction etc.
 </pre>
 
 <div class="note">
@@ -255,7 +255,7 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 
 <p>В этом разделе мы начнём определять модели для библиотеки. Откройте <em>models.py (в / locallibrary / catalog /)</em>. Шаблон в верхней части страницы импортирует модуль моделей, который содержит базовый класс модели <code>models.Model</code>, от которого наследуются наши модели.</p>
 
-<pre class="brush: python notranslate">from django.db import models
+<pre class="brush: python">from django.db import models
 
 # Create your models here.</pre>
 
@@ -263,7 +263,7 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 
 <p>Скопируйте приведённый ниже код модели <code>Genre </code>и вставьте его в нижнюю часть вашего файла <code>models.py</code>. Эта модель используется для хранения информации о категории книг - например, будь то художественная или документальная, роман или военно-историческая и т. д. Как уже упоминалось выше, мы создали жанр как модель, а не как свободный текст или список выбора, чтобы возможные значения могли управляться через базу данных, а не были закодированными.</p>
 
-<pre class="brush: python notranslate">class Genre(models.Model):
+<pre class="brush: python">class Genre(models.Model):
     """
     Model representing a book genre (e.g. Science Fiction, Non Fiction).
     """
@@ -281,7 +281,7 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 
 <p>Скопируйте модель книги ниже и снова вставьте её в нижнюю часть файла. Модель книги представляет всю информацию о доступной книге в общем смысле, но не конкретный физический «экземпляр» или «копию» для временного использования. Модель использует CharField для представления названия книги и isbn (обратите внимание, как isbn указывает свой ярлык как «ISBN», используя первый неименованный параметр, поскольку в противном случае ярлык по умолчанию был бы «Isbn»). Модель использует TextField для summary, потому что этот текст, возможно, должен быть очень длинным.</p>
 
-<pre class="brush: python notranslate">from django.urls import reverse #Used to generate URLs by reversing the URL patterns
+<pre class="brush: python">from django.urls import reverse #Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
     """
@@ -326,7 +326,7 @@ class Book(models.Model):
  <li>CharField, для представления данных (конкретного выпуска) о книге.</li>
 </ul>
 
-<pre class="brush: python notranslate">import uuid # Required for unique book instances
+<pre class="brush: python">import uuid # Required for unique book instances
 
 class BookInstance(models.Model):
     """
@@ -382,7 +382,7 @@ class BookInstance(models.Model):
 
 <p>Теперь все поля/методы должны быть знакомы. Модель определяет автора как имя, фамилию, дату рождения и (необязательную) дату смерти. Он указывает, что по умолчанию __str __ () возвращает имя в фамилии, порядковый номер первого имени. Метод get_absolute_url () отменяет сопоставление URL-адреса автора с целью получения URL-адреса для отображения отдельного автора.</p>
 
-<pre class="brush: python notranslate">class Author(models.Model):
+<pre class="brush: python">class Author(models.Model):
     """
     Model representing an author.
     """
@@ -409,7 +409,7 @@ class BookInstance(models.Model):
 
 <p>Теперь все ваши модели созданы. Теперь переустановите миграцию базы данных, чтобы добавить их в свою базу данных.</p>
 
-<pre class="notranslate"><code>python3 manage.py makemigrations
+<pre><code>python3 manage.py makemigrations
 python3 manage.py migrate</code></pre>
 
 <h2 id="Языковая_модель_-_вызов">Языковая модель - вызов</h2>

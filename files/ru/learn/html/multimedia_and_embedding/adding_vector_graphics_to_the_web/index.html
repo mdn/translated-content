@@ -58,7 +58,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <p>В качестве простого примера, следующий код создаёт круг и прямоугольник:</p>
 
-<pre class="brush: html notranslate">&lt;svg version="1.1"
+<pre class="brush: html">&lt;svg version="1.1"
      baseProfile="full"
      width="300" height="200"
      xmlns="http://www.w3.org/2000/svg"&gt;
@@ -101,7 +101,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <p>Чтобы встроить SVG используя элемент {{htmlelement ("img")}}, вам просто нужно сослаться на него в атрибуте src, как и следовало ожидать. Вам понадобится атрибут <code>height</code> или <code>width</code> (или оба, если ваш SVG не имеет собственного соотношения сторон). Если вы ещё этого не делали, пожалуйста, прочтите <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Изображения в HTML</a>.</p>
 
-<pre class="brush: html notranslate">&lt;img
+<pre class="brush: html">&lt;img
     src="equilateral.svg"
     alt="triangle with all three sides equal"
     height="87px"
@@ -126,11 +126,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <p>Для браузеров которые не поддерживают SVG (IE 8 и ниже, Android 2.3 и ниже), вы можете ссылаться на PNG или JPG в <code>src</code> атрибуте и использовать {{htmlattrxref("srcset", "img")}} атрибут (который распознают только последние браузеры) чтобы сослаться на SVG. В этом случае <span class="tlid-translation translation" lang="ru"><span title="">SVG будут загружаться только поддерживающими браузерами - старые же браузеры будут загружать PNG:</span></span></p>
 
-<pre class="brush: html notranslate">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;</pre>
+<pre class="brush: html">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;</pre>
 
 <p>Также вы можете использовать SVG в качестве фоновых изображение CSS, как показано ниже. В приведённом коде ниже старые браузеры будут придерживаться PNG, который они понимают, тогда как новые браузеры будут загружать SVG:</p>
 
-<pre class="brush: css notranslate"><code>background: url("fallback.png") no-repeat center;</code>
+<pre class="brush: css"><code>background: url("fallback.png") no-repeat center;</code>
 background<code>-image: url("image.svg");
 background-size: contain;</code></pre>
 
@@ -142,7 +142,7 @@ background-size: contain;</code></pre>
 
 <p>Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (<strong>SVG inline</strong> или <strong>inlining SVG</strong>). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code> (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:</p>
 
-<pre class="brush: html notranslate">&lt;svg width="300" height="200"&gt;
+<pre class="brush: html">&lt;svg width="300" height="200"&gt;
     &lt;rect width="100%" height="100%" fill="green" /&gt;
 &lt;/svg&gt;
 </pre>
@@ -174,7 +174,7 @@ background-size: contain;</code></pre>
 
 <p>Вот краткий обзор:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="triangle.svg" width="500" height="500" sandbox&gt;
+<pre class="brush: html">&lt;iframe src="triangle.svg" width="500" height="500" sandbox&gt;
     &lt;img src="triangle.png" alt="Triangle with three unequal sides" /&gt;
 &lt;/iframe&gt;</pre>
 
@@ -196,7 +196,7 @@ background-size: contain;</code></pre>
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -221,7 +221,7 @@ background-size: contain;</code></pre>
   &lt;input id="solution" type="button" value="Show solution" disabled&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -241,7 +241,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -328,10 +328,10 @@ textarea.onkeyup = function(){
 
 <p>В последней статье этого модуля мы будем исследовать адаптивные изображения в деталях, рассматривая инструменты HTML, которые позволяют делать ваши изображения так, чтоб они могли лучше работать на разных устройствах.</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
  <li><a href="http://thenewcode.com/744/Making-SVG-Responsive">Quick tips for responsive SVGs</a></li>
  <li><a href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">Sara Soueidan's tutorial on responsive SVG images</a></li>
  <li><a href="http://www.w3.org/TR/SVG-access/">Accessibility benefits of SVG</a></li>
@@ -340,13 +340,13 @@ textarea.onkeyup = function(){
 
 <p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">В этом модуле</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Изображения в HTML</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Видео и аудио контент</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">От &lt;object&gt; до &lt;iframe&gt; — другие способы встраивать контент</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Добавление векторной графики</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Адаптивные изображения</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Задание: страница о Mozilla</a></li>
 </ul>

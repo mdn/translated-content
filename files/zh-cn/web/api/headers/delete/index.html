@@ -7,11 +7,11 @@ translation_of: Web/API/Headers/delete
 
 <p><strong><code>delete()</code></strong> 方法可以从Headers对象中删除指定header.</p>
 
-<p>下列原因将会导致该方法抛出一个<span style="line-height: 19.0909080505371px;">{{jsxref("TypeError")}}:</span></p>
+<p>下列原因将会导致该方法抛出一个{{jsxref("TypeError")}}:</p>
 
 <ul>
- <li><span style="line-height: 19.0909080505371px;">header名在HTTP header中是不存在的.</span></li>
- <li><span style="line-height: 19.0909080505371px;"><span style="line-height: 19.0909080505371px;">header被锁定了.<span style="line-height: 19.0909080505371px;"><span style="line-height: 19.0909080505371px;">​</span></span></span></span></li>
+ <li>header名在HTTP header中是不存在的.</li>
+ <li>header被锁定了.​</li>
 </ul>
 
 <div class="note">
@@ -69,63 +69,7 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref<br>
-     </td>
-   <td>{{ CompatGeckoDesktop(39)}}<br>
-    34 behind pref</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers.delete")}}
 
 <h2 id="See_also">See also</h2>
 

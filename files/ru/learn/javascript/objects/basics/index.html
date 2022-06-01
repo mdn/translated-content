@@ -34,15 +34,15 @@ original_slug: Learn/JavaScript/Объекты/Основы
 
 <p>Как и во многих случаях в JavaScript, создание объекта часто начинается с определения и инициализации переменной. Попробуйте ввести следующий код JavaScript в ваш файл, а затем сохраните файл и обновите страницу браузера:</p>
 
-<pre class="brush: js notranslate">const person = {};</pre>
+<pre class="brush: js">const person = {};</pre>
 
 <p>Если вы введёте <code>person</code> в текстовое JS консоль и нажмёте клавишу Enter, должен получиться следующий результат:</p>
 
-<pre class="brush: js notranslate"><code class="language-js">Object</code><code> </code>{ }</pre>
+<pre class="brush: js"><code class="language-js">Object</code><code> </code>{ }</pre>
 
 <p>Поздравляем, вы только что создали ваш первый объект. Но это пустой объект, поэтому мы не можем с ним ничего сделать. Давайте обновим наш объект, чтобы он выглядел так:</p>
 
-<pre class="brush: js notranslate">const person = {
+<pre class="brush: js">const person = {
   name: ['Bob', 'Smith'],
   age: 32,
   gender: 'male',
@@ -58,7 +58,7 @@ original_slug: Learn/JavaScript/Объекты/Основы
 
 <p>После сохранения и обновления, попробуйте ввести что-нибудь следующее в консоль JavaScript браузера:</p>
 
-<pre class="brush: js notranslate"><code class="language-js">person<span class="punctuation token">.</span>name</code>
+<pre class="brush: js"><code class="language-js">person<span class="punctuation token">.</span>name</code>
 person.name[0]
 person.age
 person.interests[1]
@@ -73,7 +73,7 @@ person.greeting()</pre>
 
 <p>Итак что здесь происходит? Объект состоит из нескольких элементов, каждый из которых имеет своё название (пример <code>name</code> и <code>age</code> выше), и значение (пример <code>['Bob', 'Smith']</code> и <code>32</code>). Каждая пара название/значение должны быть разделены запятой, а название и значение в каждом случае разделяются двоеточием. Синтаксис всегда следует этому образцу:</p>
 
-<pre class="brush: js notranslate">const objectName = {
+<pre class="brush: js">const objectName = {
   member1Name: member1Value,
   member2Name: member2Value,
   member3Name: member3Value
@@ -89,7 +89,7 @@ person.greeting()</pre>
 
 <p>Выше вы получили доступ к свойствам и методам используя <strong>точечную запись (dot notation). </strong>Имя объекта (person) действует как <strong>пространство имён (namespace) </strong>— оно должно быть введено первым, для того чтобы получить доступ ко всему что заключено (<strong>encapsulated)</strong> внутри объекта. Далее вы пишете точку, затем элемент, к которому хотите получить доступ — это может быть имя простого свойства, элемент массива, или вызов одного из методов объекта, например:</p>
 
-<pre class="brush: js notranslate">person.age
+<pre class="brush: js">person.age
 person.interests[1]
 person.bio()</pre>
 
@@ -97,28 +97,28 @@ person.bio()</pre>
 
 <p>Можно даже сделать значением элемента объекта другой объект. Например, попробуйте изменить значение свойства name с такого</p>
 
-<pre class="brush: js notranslate">name: ['Bob', 'Smith'],</pre>
+<pre class="brush: js">name: ['Bob', 'Smith'],</pre>
 
 <p>на такое</p>
 
-<pre class="brush: js notranslate">name : {
+<pre class="brush: js">name : {
   first: 'Bob',
   last: 'Smith'
 },</pre>
 
 <p>Здесь мы фактически создаём <strong>внутреннее пространство имён (sub-namespace). </strong>Это звучит сложно, но на самом деле это не так — для доступа к этим элементам вам нужно сделать один дополнительный шаг с ещё одной точкой. Попробуйте в консоли браузера следующее: </p>
 
-<pre class="brush: js notranslate">person.name.first
+<pre class="brush: js">person.name.first
 person.name.last</pre>
 
 <p><strong>Важно</strong>: На этом этапе вам также нужно будет пересмотреть код метода и изменить все экземпляры с</p>
 
-<pre class="brush: js notranslate">name[0]
+<pre class="brush: js">name[0]
 name[1]</pre>
 
 <p>на</p>
 
-<pre class="brush: js notranslate">name.first
+<pre class="brush: js">name.first
 name.last</pre>
 
 <p>Иначе ваши методы больше не будут работать.</p>
@@ -127,12 +127,12 @@ name.last</pre>
 
 <p>Существует другой способ получить свойства объекта — использовать скобочную запись (bracket notation). Вместо написания этого кода:</p>
 
-<pre class="brush: js notranslate">person.age
+<pre class="brush: js">person.age
 person.name.first</pre>
 
 <p>Вы можете использовать следующий</p>
 
-<pre class="brush: js notranslate">person['age']
+<pre class="brush: js">person['age']
 person['name']['first']</pre>
 
 <p>Это выглядит очень похоже на то, как вы получаете элементы массива, и в принципе это так и есть — вместо использования числовых индексов для выбора элемента, вы ассоциируете имя свойства для каждого значения. Ничего удивительного, что эти объекты иногда называют ассоциативными массивами — они сопоставляют строки со значениями так же, как массивы сопоставляют числовые индексы со значениями.</p>
@@ -141,42 +141,42 @@ person['name']['first']</pre>
 
 <p>До сих пор мы рассматривали только возврат (или получение) элементов объекта — вы так же можете установить (обновить) значение элемента объекта просто объявив элемент, который вы хотите установить (используя точечную или скобочную запись), например:</p>
 
-<pre class="brush: js notranslate">person.age = 45;
+<pre class="brush: js">person.age = 45;
 person['name']['last'] = 'Cratchit';</pre>
 
 <p>Попробуйте ввести эти строки, а затем снова верните элементы, чтобы увидеть, как они изменились</p>
 
-<pre class="brush: js notranslate">person.age
+<pre class="brush: js">person.age
 person['name']['last']</pre>
 
 <p>Вы можете не просто обновлять и устанавливать значения свойств и методов объекта, а так же устанавливать совершенно новые элементы. Попробуйте их в консоли JS:</p>
 
-<pre class="brush: js notranslate">person['eyes'] = 'hazel';
+<pre class="brush: js">person['eyes'] = 'hazel';
 person.farewell = function() { alert("Bye everybody!"); }</pre>
 
 <p>Теперь вы можете проверить ваши новые элементы:</p>
 
-<pre class="brush: js notranslate">person['eyes']
+<pre class="brush: js">person['eyes']
 person.farewell()</pre>
 
 <p>Одним из полезных аспектов скобочной записи является то, что с её помощью можно динамически задавать не только значения элементов, но и их имена. Предположим, что мы хотим, чтобы пользователи могли хранить пользовательские типы данных, введя имя и значение элемента в два следующих поля? Мы могли бы получить эти значения следующим образом:</p>
 
-<pre class="brush: js notranslate">let myDataName = nameInput.value;
+<pre class="brush: js">let myDataName = nameInput.value;
 let myDataValue = nameValue.value;</pre>
 
 <p>Затем мы можем добавить имя и значение этого нового элемента в объект <code>person</code> таким образом:</p>
 
-<pre class="brush: js notranslate">person[myDataName] = myDataValue;</pre>
+<pre class="brush: js">person[myDataName] = myDataValue;</pre>
 
 <p>Чтобы проверить это, попробуйте добавить следующие строки в свой код, после закрывающей скобки объекта <code>person</code> :</p>
 
-<pre class="brush: js notranslate">let myDataName = 'height';
+<pre class="brush: js">let myDataName = 'height';
 let myDataValue = '1.75m';
 person[myDataName] = myDataValue;</pre>
 
 <p>Теперь попробуйте сохранить и обновить, затем введите следующее в консоль браузера:</p>
 
-<pre class="brush: js notranslate">person.height</pre>
+<pre class="brush: js">person.height</pre>
 
 <p>Добавление свойства объекта с использованием вышеописанного метода невозможно с использованием точечной записи, которая может принимать только литеральное имя элемента, а не значение переменной указывающее на имя.</p>
 
@@ -184,7 +184,7 @@ person[myDataName] = myDataValue;</pre>
 
 <p>Возможно, вы заметили что-то странное в наших методах. Посмотрите на этот пример:</p>
 
-<pre class="brush: js notranslate">greeting: function() {
+<pre class="brush: js">greeting: function() {
   alert('Hi! I\'m ' + this.name.first + '.');
 }</pre>
 
@@ -192,7 +192,7 @@ person[myDataName] = myDataValue;</pre>
 
 <p>Давайте проиллюстрируем, что мы имеем в виду, с упрощённой парой объектов <code>person</code> :</p>
 
-<pre class="brush: js notranslate">const person1 = {
+<pre class="brush: js">const person1 = {
   name: 'Chris',
   greeting: function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -214,13 +214,13 @@ const person2 = {
 
 <p>Поэтому, когда вы использовали строковые методы, такие как:</p>
 
-<pre class="brush: js notranslate">myString.split(',');</pre>
+<pre class="brush: js">myString.split(',');</pre>
 
 <p>Вы использовали метод доступный в экземпляре класса <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>. Каждый раз создавая строку в вашем коде, эта строка автоматически создаётся как экземпляр <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>, и поэтому имеет несколько общих методов/свойств, доступных на нем.</p>
 
 <p>Когда вы обращались к объектной модели документа (DOM), используя следующие строки:</p>
 
-<pre class="brush: js notranslate">const myDiv = document.createElement('div');
+<pre class="brush: js">const myDiv = document.createElement('div');
 const myVideo = document.querySelector('video');</pre>
 
 <p>Вы использовали методы доступные в экземпляре класса <code><a href="/en-US/docs/Web/API/Document">Document</a></code>. Для каждой загруженной веб-страницы создаётся экземпляр <code><a href="/en-US/docs/Web/API/Document">Document</a></code>, называемый <code>document</code>, который представляет всю структуру страницы, её содержимое и другие функции, такие как URL-адрес. Опять же, это означает, что он имеет несколько общих методов/свойств, доступных на нем.</p>
@@ -229,7 +229,7 @@ const myVideo = document.querySelector('video');</pre>
 
 <p>Обратите внимание, что встроенные объекты/API не всегда создают экземпляры объектов автоматически. Как пример, <a href="/ru/docs/Web/API/Notifications_API">Notifications API</a> — который позволяет новым браузерам запускать системные уведомления, требует, чтобы вы создавали новый экземпляр объекта с помощью конструктора для каждого уведомления, которое вы хотите запустить. Попробуйте ввести следующее в консоль JavaScript:</p>
 
-<pre class="brush: js notranslate">const myNotification = new Notification('Hello!');</pre>
+<pre class="brush: js">const myNotification = new Notification('Hello!');</pre>
 
 <p>Опять же, мы рассмотрим конструкторы в следующей статье.</p>
 

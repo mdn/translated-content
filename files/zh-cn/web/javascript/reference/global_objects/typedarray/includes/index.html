@@ -31,8 +31,8 @@ uint8.includes(2);     // true
 uint8.includes(4);     // false
 uint8.includes(3, 3);  // false
 
-// NaN 的处理 （仅仅对 Float32 和 Float64 为 true）
-new Uint8Array([NaN]).includes(NaN); // false, 因为 NaN 传递给构造器时转换为 0
+// NaN 的处理（仅仅对 Float32 和 Float64 为 true）
+new Uint8Array([NaN]).includes(NaN); // false，因为 NaN 传递给构造器时转换为 0
 new Float32Array([NaN]).includes(NaN); // true;
 new Float64Array([NaN]).includes(NaN); // true;
 </pre>
@@ -61,57 +61,7 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>47</td>
-   <td>43</td>
-   <td>14</td>
-   <td>{{CompatNo}}</td>
-   <td>34</td>
-   <td>10</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>47</td>
-   <td>43</td>
-   <td>{{CompatNo}}</td>
-   <td>34</td>
-   <td>10</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

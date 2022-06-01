@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Guide/Functions
 ---
 <p>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</p>
 
-<p class="summary">函数是 JavaScript 中的基本组件之一。 一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。</p>
+<p>函数是 JavaScript 中的基本组件之一。 一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。</p>
 
-<p class="summary">一个JavaScript 函数用<code>function</code>关键字定义，后面跟着函数名和圆括号。</p>
+<p>一个 JavaScript 函数用<code>function</code>关键字定义，后面跟着函数名和圆括号。</p>
 
 <p>查看 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript 函数详细参考文档</a> 了解更多。</p>
 
@@ -30,51 +30,51 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <p>例如，以下的代码定义了一个简单的<code>square</code>函数：</p>
 
-<pre class="brush: js notranslate">function square(number) {
+<pre class="brush: js">function square(number) {
   return number * number;
 }
 </pre>
 
 <p>函数<code>square</code>使用了一个参数，叫作<code>number</code>。这个函数只有一个语句，它说明该函数将函数的参数（即<code>number</code>）自乘后返回。函数的<a href="/en-US/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a>语句确定了函数的返回值：</p>
 
-<pre class="brush: js notranslate">return number * number;
+<pre class="brush: js">return number * number;
 </pre>
 
 <p>原始参数（比如一个具体的数字）被作为<strong>值</strong>传递给函数；值被传递给函数，如果被调用函数改变了这个参数的值，这样的改变不会影响到全局或调用函数。</p>
 
 <p>如果你传递一个对象（即一个非原始值，例如{{jsxref("Array")}}或用户自定义的对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示：</p>
 
-<pre class="brush: js notranslate">function myFunc(theObject) {
+<pre class="brush: js">function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
 var mycar = {make: "Honda", model: "Accord", year: 1998};
 var x, y;
 
-x = mycar.make;     // x获取的值为 "Honda"
+x = mycar.make;     // x 获取的值为 "Honda"
 
 myFunc(mycar);
-y = mycar.make;     // y获取的值为 "Toyota"
-                    // (make属性被函数改变了)
+y = mycar.make;     // y 获取的值为 "Toyota"
+                    // (make 属性被函数改变了)
 </pre>
 
 <h3 id="函数表达式">函数表达式</h3>
 
 <p>虽然上面的函数声明在语法上是一个语句，但函数也可以由函数表达式创建。这样的函数可以是<strong>匿名</strong>的；它不必有一个名称。例如，函数<code>square</code>也可这样来定义：</p>
 
-<pre class="brush: js notranslate"><code>const square = function(number) { return number * number; };
+<pre class="brush: js"><code>const square = function(number) { return number * number; };
 var x = square(4); // x gets the value 16</code></pre>
 
 <p>然而，函数表达式也可以提供函数名，并且可以用于在函数内部代指其本身，或者在调试器堆栈跟踪中识别该函数：</p>
 
-<pre class="brush: js notranslate">const factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
+<pre class="brush: js">const factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
 
 console.log(factorial(3));
 </pre>
 
 <p>当将函数作为参数传递给另一个函数时，函数表达式很方便。下面的例子演示了一个叫<code>map</code>的函数如何被定义，而后使用一个表达式函数作为其第一个参数进行调用：</p>
 
-<pre class="brush: js notranslate">function map(f,a) {
+<pre class="brush: js">function map(f,a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
   for (i = 0; i != a.length; i++)
@@ -85,7 +85,7 @@ console.log(factorial(3));
 
 <p>下面的代码：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function map(f, a) {
+<pre class="brush: js">function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
   for (i = 0; i != a.length; i++)
@@ -97,13 +97,13 @@ const f = function(x) {
 }
 let numbers = [0,1, 2, 5,10];
 let cube = map(f,numbers);
-console.log(cube);</code></pre>
+console.log(cube);</pre>
 
 <p>返回 [0, 1, 8, 125, 1000]。</p>
 
 <p>在 JavaScript 中，可以根据条件来定义一个函数。比如下面的代码，当<code>num</code> 等于 0 的时候才会定义 <code>myFunc</code> ：</p>
 
-<pre class="brush: js notranslate">var myFunc;
+<pre class="brush: js">var myFunc;
 if (num == 0){
   myFunc = function(theObject) {
     theObject.make = "Toyota"
@@ -118,14 +118,14 @@ if (num == 0){
 
 <p>定义一个函数并不会自动的执行它。定义了函数仅仅是赋予函数以名称并明确函数被调用时该做些什么。<strong>调用</strong>函数才会以给定的参数真正执行这些动作。例如，一旦你定义了函数<code>square</code>，你可以如下这样调用它：</p>
 
-<pre class="brush: js notranslate">square(5);
+<pre class="brush: js">square(5);
 </pre>
 
-<p>上述语句通过提供参数 5 来调用函数。函数执行完它的语句会返回值25。</p>
+<p>上述语句通过提供参数 5 来调用函数。函数执行完它的语句会返回值 25。</p>
 
-<p>函数一定要处于调用它们的域中，但是函数的声明可以被提升(出现在调用语句之后)，如下例：</p>
+<p>函数一定要处于调用它们的域中，但是函数的声明可以被提升 (出现在调用语句之后)，如下例：</p>
 
-<pre class="brush: js notranslate">console.log(square(5));
+<pre class="brush: js">console.log(square(5));
 /* ... */
 function square(n) { return n*n }
 </pre>
@@ -133,20 +133,20 @@ function square(n) { return n*n }
 <p>函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。</p>
 
 <div class="note">
-<p><strong>提示：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
+<p><strong>备注：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
 </div>
 
-<pre class="brush: js example-bad line-numbers  language-js notranslate"><code class="language-js">console.log(square); // square is hoisted with an initial value undefined.
+<pre class="brush: js example-bad">console.log(square); // square is hoisted with an initial value undefined.
 console.log(square(5)); // Uncaught TypeError: square is not a function
 const square = function (n) {
   return n * n;
-}</code></pre>
+}</pre>
 
 <p>函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 <code>show_props</code>（其定义参见 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">用对象编程</a>）就是一个将对象作为参数的例子。</p>
 
 <p>函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：</p>
 
-<pre class="brush: js notranslate">function factorial(n){
+<pre class="brush: js">function factorial(n){
   if ((n == 0) || (n == 1))
     return 1;
   else
@@ -154,24 +154,24 @@ const square = function (n) {
 }
 </pre>
 
-<p>你可以计算1-5的阶乘如下：</p>
+<p>你可以计算 1-5 的阶乘如下：</p>
 
-<pre class="brush: js notranslate">var a, b, c, d, e;
+<pre class="brush: js">var a, b, c, d, e;
 
-a = factorial(1); // 1赋值给a
-b = factorial(2); // 2赋值给b
-c = factorial(3); // 6赋值给c
-d = factorial(4); // 24赋值给d
-e = factorial(5); // 120赋值给e
+a = factorial(1); // 1 赋值给 a
+b = factorial(2); // 2 赋值给 b
+c = factorial(3); // 6 赋值给 c
+d = factorial(4); // 24 赋值给 d
+e = factorial(5); // 120 赋值给 e
 </pre>
 
 <p>还有其它的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。</p>
 
-<h2 class="deki-transform" id="函数作用域">函数作用域</h2>
+<h2 id="函数作用域">函数作用域</h2>
 
 <p>在函数内定义的变量不能在函数之外的任何地方访问，因为变量仅仅在该函数的域的内部有定义。相对应的，一个函数可以访问定义在其范围内的任何变量和函数。换言之，定义在全局域中的函数可以访问所有定义在全局域中的变量。在另一个函数中定义的函数也可以访问在其父函数中定义的所有变量和父函数有权访问的任何其他变量。</p>
 
-<pre class="brush: js notranslate">// 下面的变量定义在全局作用域(global scope)中
+<pre class="brush: js">// 下面的变量定义在全局作用域 (global scope) 中
 var num1 = 20,
     num2 = 3,
     name = "Chamahk";
@@ -212,7 +212,7 @@ getScore(); // 返回 "Chamahk scored 5"
 
 <p>例如，思考一下如下的函数定义：</p>
 
-<pre class="brush: js notranslate">var foo = function bar() {
+<pre class="brush: js">var foo = function bar() {
    // statements go here
 };
 </pre>
@@ -221,13 +221,13 @@ getScore(); // 返回 "Chamahk scored 5"
 
 <ol>
  <li><code>bar()</code></li>
- <li><code>arguments.callee()</code> <strong>（译者注：ES5禁止在严格模式下使用此属性）</strong></li>
+ <li><code>arguments.callee()</code> <strong>（译者注：ES5 禁止在严格模式下使用此属性）</strong></li>
  <li><code>foo()</code></li>
 </ol>
 
 <p>调用自身的函数我们称之为<em>递归函数</em>。在某种意义上说，递归近似于循环。两者都重复执行相同的代码，并且两者都需要一个终止条件（避免无限循环或者无限递归）。例如以下的循环：</p>
 
-<pre class="brush: js notranslate">var x = 0;
+<pre class="brush: js">var x = 0;
 while (x &lt; 10) { // "x &lt; 10" 是循环条件
    // do stuff
    x++;
@@ -236,7 +236,7 @@ while (x &lt; 10) { // "x &lt; 10" 是循环条件
 
 <p>可以被转化成一个递归函数和对其的调用：</p>
 
-<pre class="brush: js notranslate">function loop(x) {
+<pre class="brush: js">function loop(x) {
   if (x &gt;= 10) // "x &gt;= 10" 是退出条件（等同于 "!(x &lt; 10)"）
     return;
   // 做些什么
@@ -247,7 +247,7 @@ loop(0);
 
 <p>不过，有些算法并不能简单的用迭代来实现。例如，获取树结构中所有的节点时，使用递归实现要容易得多：</p>
 
-<pre class="brush: js notranslate">function walkTree(node) {
+<pre class="brush: js">function walkTree(node) {
   if (node == null) //
     return;
   // do something with node
@@ -263,7 +263,7 @@ loop(0);
 
 <p>这种类似堆栈的行为可以在下例中看到：</p>
 
-<pre class="brush: js notranslate">function foo(i) {
+<pre class="brush: js">function foo(i) {
   if (i &lt; 0)
     return;
   console.log('begin:' + i);
@@ -272,7 +272,7 @@ loop(0);
 }
 foo(3);
 
-// 输出:
+// 输出：
 
 // begin:3
 // begin:2
@@ -298,7 +298,7 @@ foo(3);
 
 <p>下面的例子展示了嵌套函数：</p>
 
-<pre class="brush: js notranslate">function addSquares(a, b) {
+<pre class="brush: js">function addSquares(a, b) {
   function square(x) {
     return x * x;
   }
@@ -310,13 +310,13 @@ c = addSquares(4, 5); // returns 41</pre>
 
 <p>由于内部函数形成了闭包，因此你可以调用外部函数并为外部函数和内部函数指定参数：</p>
 
-<pre class="brush: js notranslate">function outside(x) {
+<pre class="brush: js">function outside(x) {
   function inside(y) {
     return x + y;
   }
   return inside;
 }
-fn_inside = outside(3); // 可以这样想：给一个函数，使它的值加3
+fn_inside = outside(3); // 可以这样想：给一个函数，使它的值加 3
 result = fn_inside(5); // returns 8
 
 result1 = outside(3)(5); // returns 8</pre>
@@ -329,11 +329,11 @@ result1 = outside(3)(5); // returns 8</pre>
 
 <h3 id="多层嵌套函数">多层嵌套函数</h3>
 
-<p>函数可以被多层嵌套。例如，函数A可以包含函数B，函数B可以再包含函数C。B和C都形成了闭包，所以B可以访问A，C可以访问B和A。因此，闭包可以包含多个作用域；他们递归式的包含了所有包含它的函数作用域。这个称之为作用<em>域链</em>。（稍后会详细解释）</p>
+<p>函数可以被多层嵌套。例如，函数 A 可以包含函数 B，函数 B 可以再包含函数 C。B 和 C 都形成了闭包，所以 B 可以访问 A，C 可以访问 B 和 A。因此，闭包可以包含多个作用域；他们递归式的包含了所有包含它的函数作用域。这个称之为作用<em>域链</em>。（稍后会详细解释）</p>
 
 <p>思考一下下面的例子：</p>
 
-<pre class="brush: js notranslate">function A(x) {
+<pre class="brush: js">function A(x) {
   function B(y) {
     function C(z) {
       console.log(x + y + z);
@@ -344,15 +344,15 @@ result1 = outside(3)(5); // returns 8</pre>
 }
 A(1); // logs 6 (1 + 2 + 3)</pre>
 
-<p>在这个例子里面，C可以访问B的y和A的x。这是因为：</p>
+<p>在这个例子里面，C 可以访问 B 的 y 和 A 的 x。这是因为：</p>
 
 <ol>
- <li>B形成了一个包含A的闭包，B可以访问A的参数和变量</li>
- <li>C形成了一个包含B的闭包</li>
- <li>B包含A，所以C也包含A，C可以访问B和A的参数和变量。换言之，C用这个顺序链接了B和A的作用域</li>
+ <li>B 形成了一个包含 A 的闭包，B 可以访问 A 的参数和变量</li>
+ <li>C 形成了一个包含 B 的闭包</li>
+ <li>B 包含 A，所以 C 也包含 A，C 可以访问 B 和 A 的参数和变量。换言之，C 用这个顺序链接了 B 和 A 的作用域</li>
 </ol>
 
-<p>反过来却不是这样。A不能访问C，因为A看不到B中的参数和变量，C是B中的一个变量，所以C是B私有的。</p>
+<p>反过来却不是这样。A 不能访问 C，因为 A 看不到 B 中的参数和变量，C 是 B 中的一个变量，所以 C 是 B 私有的。</p>
 
 <h3 id="命名冲突">命名冲突</h3>
 
@@ -360,7 +360,7 @@ A(1); // logs 6 (1 + 2 + 3)</pre>
 
 <p>看以下的例子：</p>
 
-<pre class="brush: js notranslate">function outside() {
+<pre class="brush: js">function outside() {
   var x = 5;
   function inside(x) {
     return x * 2;
@@ -370,7 +370,7 @@ A(1); // logs 6 (1 + 2 + 3)</pre>
 
 outside()(10); // returns 20 instead of 10</pre>
 
-<p>命名冲突发生在<code>return x</code>上，<code>inside</code>的参数<code>x</code>和<code>outside</code>变量<code>x</code>发生了冲突。这里的作用链域是{<code style="font-style: normal;">inside</code>, <code style="font-style: normal;">outside</code>, 全局对象}。因此<code>inside</code>的<code>x</code>具有最高优先权，返回了20（<code>inside</code>的<code>x</code>）而不是10（<code>outside</code>的<code>x</code>）。</p>
+<p>命名冲突发生在<code>return x</code>上，<code>inside</code>的参数<code>x</code>和<code>outside</code>变量<code>x</code>发生了冲突。这里的作用链域是{<code>inside</code>, <code>outside</code>, 全局对象}。因此<code>inside</code>的<code>x</code>具有最高优先权，返回了 20（<code>inside</code>的<code>x</code>）而不是 10（<code>outside</code>的<code>x</code>）。</p>
 
 <h2 id="闭包">闭包</h2>
 
@@ -380,7 +380,7 @@ outside()(10); // returns 20 instead of 10</pre>
 
 <p>此外，由于内部函数可以访问外部函数的作用域，因此当内部函数生存周期大于外部函数时，外部函数中定义的变量和函数的生存周期将比内部函数执行时间长。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。</p>
 
-<pre class="brush: js notranslate">var pet = function(name) {          //外部函数定义了一个变量"name"
+<pre class="brush: js">var pet = function(name) {          //外部函数定义了一个变量"name"
   var getName = function() {
     //内部函数可以访问 外部函数定义的"name"
     return name;
@@ -395,7 +395,7 @@ myPet();                            // 返回结果 "Vivie"
 
 <p>实际上可能会比上面的代码复杂的多。在下面这种情形中，返回了一个包含可以操作外部函数的内部变量方法的对象。</p>
 
-<pre class="brush: js notranslate">var createPet = function(name) {
+<pre class="brush: js">var createPet = function(name) {
   var sex;
 
   return {
@@ -431,7 +431,7 @@ pet.getName();                  // Oliver
 
 <p>在上面的代码中，外部函数的<code>name</code>变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其它任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。</p>
 
-<pre class="brush: js notranslate">var getCode = (function(){
+<pre class="brush: js">var getCode = (function(){
   var secureCode = "0]Eal(eh&amp;2";    // A code we do not want outsiders to be able to modify...
 
   return function () {
@@ -442,10 +442,10 @@ pet.getName();                  // Oliver
 getCode();    // Returns the secret code
 </pre>
 
-<div class="blockIndicator note">
-<p>尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。</p>
+<div class="note">
+<p><strong>备注：</strong>尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。</p>
 
-<pre class="brush: js notranslate">var createPet = function(name) {  // Outer function defines a variable called "name"
+<pre class="brush: js">var createPet = function(name) {  // Outer function defines a variable called "name"
   return {
     setName: function(name) {    // Enclosed function also defines a variable called "name"
       name = name;               // ??? How do we access the "name" defined by the outer function ???
@@ -457,30 +457,30 @@ getCode();    // Returns the secret code
 
 <h2 id="使用_arguments_对象">使用 arguments 对象</h2>
 
-<p>函数的实际参数会被保存在一个类似数组的arguments对象中。在函数内，你可以按如下方式找出传入的参数：</p>
+<p>函数的实际参数会被保存在一个类似数组的 arguments 对象中。在函数内，你可以按如下方式找出传入的参数：</p>
 
-<pre class="brush: js notranslate">arguments[i]
+<pre class="brush: js">arguments[i]
 </pre>
 
-<p>其中<code>i</code>是参数的序数编号（译注：数组索引），以0开始。所以第一个传来的参数会是<code>arguments[0]</code>。参数的数量由<code>arguments.length</code>表示。</p>
+<p>其中<code>i</code>是参数的序数编号（译注：数组索引），以 0 开始。所以第一个传来的参数会是<code>arguments[0]</code>。参数的数量由<code>arguments.length</code>表示。</p>
 
-<p>使用arguments对象，你可以处理比声明的更多的参数来调用函数。这在你事先不知道会需要将多少参数传递给函数时十分有用。你可以用<code>arguments.length</code>来获得实际传递给函数的参数的数量，然后用<code>arguments</code>对象来取得每个参数。</p>
+<p>使用 arguments 对象，你可以处理比声明的更多的参数来调用函数。这在你事先不知道会需要将多少参数传递给函数时十分有用。你可以用<code>arguments.length</code>来获得实际传递给函数的参数的数量，然后用<code>arguments</code>对象来取得每个参数。</p>
 
 <p>例如，设想有一个用来连接字符串的函数。唯一事先确定的参数是在连接后的字符串中用来分隔各个连接部分的字符（译注：比如例子里的分号“；”）。该函数定义如下：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">myConcat</span><span class="punctuation token">(</span>separator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">var</span> result <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span> <span class="comment token">// 把值初始化成一个字符串，这样就可以用来保存字符串了！！</span>
-   <span class="keyword token">var</span> i<span class="punctuation token">;</span>
-   <span class="comment token">// iterate through arguments</span>
-   <span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> arguments<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      result <span class="operator token">+</span><span class="operator token">=</span> arguments<span class="punctuation token">[</span>i<span class="punctuation token">]</span> <span class="operator token">+</span> separator<span class="punctuation token">;</span>
-   <span class="punctuation token">}</span>
-   <span class="keyword token">return</span> result<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">function myConcat(separator) {
+   var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
+   var i;
+   // iterate through arguments
+   for (i = 1; i &lt; arguments.length; i++) {
+      result += arguments[i] + separator;
+   }
+   return result;
+}</pre>
 
 <p>你可以给这个函数传递任意数量的参数，它会将各个参数连接成一个字符串“列表”：</p>
 
-<pre class="brush: js notranslate">// returns "red, orange, blue, "
+<pre class="brush: js">// returns "red, orange, blue, "
 myConcat(", ", "red", "orange", "blue");
 
 // returns "elephant; giraffe; lion; cheetah; "
@@ -490,21 +490,23 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 </pre>
 
-<div class="note"><strong>提示：</strong><code>arguments</code>变量只是 <em>”</em><strong>类数组对象</strong>“，并不是一个数组。称其为类数组对象是说它有一个索引编号和<code>length</code>属性。尽管如此，它并不拥有全部的Array对象的操作方法。</div>
+<div class="note">
+<p><strong>备注：</strong><code>arguments</code>变量只是 <em>”</em><strong>类数组对象</strong>“，并不是一个数组。称其为类数组对象是说它有一个索引编号和<code>length</code>属性。尽管如此，它并不拥有全部的 Array 对象的操作方法。</p>
+</div>
 
-<p>更多信息请阅读JavaScript参考里的{{jsxref("Function")}}一文。</p>
+<p>更多信息请阅读 JavaScript 参考里的{{jsxref("Function")}}一文。</p>
 
 <h2 id="函数参数">函数参数</h2>
 
-<p>从ECMAScript 6开始，有两个新的类型的参数：默认参数，剩余参数。</p>
+<p>从 ECMAScript 6 开始，有两个新的类型的参数：默认参数，剩余参数。</p>
 
 <h3 id="默认参数">默认参数</h3>
 
-<p>在JavaScript中，函数参数的默认值是<code>undefined</code>。然而，在某些情况下设置不同的默认值是有用的。这时默认参数可以提供帮助。</p>
+<p>在 JavaScript 中，函数参数的默认值是<code>undefined</code>。然而，在某些情况下设置不同的默认值是有用的。这时默认参数可以提供帮助。</p>
 
 <p>在过去，用于设定默认参数的一般策略是在函数的主体中测试参数值是否为<code>undefined</code>，如果是则赋予这个参数一个默认值。如果在下面的例子中，调用函数时没有实参传递给<code>b</code>，那么它的值就是<code>undefined</code>，于是计算<code>a*b</code>得到、函数返回的是 <code>NaN</code>。但是，在下面的例子中，这个已经被第二行获取处理：</p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js">function multiply(a, b) {
   b = (typeof b !== 'undefined') ?  b : 1;
 
   return a*b;
@@ -513,9 +515,9 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 multiply(5); // 5
 </pre>
 
-<p>使用默认参数，在函数体的检查就不再需要了。现在，你可以在函数头简单地把1设定为<code>b</code>的默认值：</p>
+<p>使用默认参数，在函数体的检查就不再需要了。现在，你可以在函数头简单地把 1 设定为<code>b</code>的默认值：</p>
 
-<pre class="brush: js notranslate">function multiply(a, b = 1) {
+<pre class="brush: js">function multiply(a, b = 1) {
   return a*b;
 }
 
@@ -527,7 +529,7 @@ multiply(5); // 5</pre>
 
 <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">剩余参数</a>语法允许将不确定数量的参数表示为数组。在下面的例子中，使用剩余参数收集从第二个到最后参数。然后，我们将这个数组的每一个数与第一个参数相乘。这个例子是使用了一个箭头函数，这将在下一节介绍。</p>
 
-<pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
+<pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);
 }
 
@@ -536,7 +538,7 @@ console.log(arr); // [2, 4, 6]</pre>
 
 <h2 id="箭头函数">箭头函数</h2>
 
-<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数表达式</a>（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 <code>this</code>。箭头函数总是匿名的。另见 hacks.mozilla.org 的博文：“<a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">深度了解ES6：箭头函数</a>”。</p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数表达式</a>（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 <code>this</code>。箭头函数总是匿名的。另见 hacks.mozilla.org 的博文：“<a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">深度了解 ES6：箭头函数</a>”。</p>
 
 <p>有两个因素会影响引入箭头函数：更简洁的函数和 <code>this</code>。</p>
 
@@ -544,7 +546,7 @@ console.log(arr); // [2, 4, 6]</pre>
 
 <p>在一些函数模式中，更简洁的函数很受欢迎。对比一下：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var a = [
+<pre class="brush: js">var a = [
   "Hydrogen",
   "Helium",
   "Lithium",
@@ -557,29 +559,29 @@ console.log(a2); // logs [ 8, 6, 7, 9 ]
 
 var a3 = a.map( s =&gt; s.length );
 
-console.log(a3); // logs [ 8, 6, 7, 9 ]</code></pre>
+console.log(a3); // logs [ 8, 6, 7, 9 ]</pre>
 
 <h3 id="this_的词法"><code>this</code> 的词法</h3>
 
 <p>在箭头函数出现之前，每一个新函数都重新定义了自己的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a> 值（在构造函数中是一个新的对象；在严格模式下是未定义的；在作为“对象方法”调用的函数中指向这个对象；等等）。以面向对象的编程风格，这样着实有点恼人。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function Person() {
-  // 构造函数Person()将`this`定义为自身
+<pre class="brush: js">function Person() {
+  // 构造函数 Person() 将`this`定义为自身
   this.age = 0;
 
   setInterval(function growUp() {
-    // 在非严格模式下，growUp()函数将`this`定义为“全局对象”，
-    // 这与Person()定义的`this`不同，
+    // 在非严格模式下，growUp() 函数将`this`定义为“全局对象”，
+    // 这与 Person() 定义的`this`不同，
     // 所以下面的语句不会起到预期的效果。
     this.age++;
   }, 1000);
 }
 
-var p = new Person();</code></pre>
+var p = new Person();</pre>
 
-<p>在ECMAScript 3/5里，通过把<code>this</code>的值赋值给一个变量可以修复这个问题。</p>
+<p>在 ECMAScript 3/5 里，通过把<code>this</code>的值赋值给一个变量可以修复这个问题。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function Person() {
+<pre class="brush: js">function Person() {
   var self = this; // 有的人习惯用`that`而不是`self`，
                    // 无论你选择哪一种方式，请保持前后代码的一致性
   self.age = 0;
@@ -588,30 +590,30 @@ var p = new Person();</code></pre>
     // 以下语句可以实现预期的功能
     self.age++;
   }, 1000);
-}</code></pre>
+}</pre>
 
 <p>另外，创建一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">约束函数</a>可以使得 <code>this</code>值被正确传递给 <code>growUp()</code> 函数。</p>
 
 <p>箭头函数捕捉闭包上下文的<code>this</code>值，所以下面的代码工作正常。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function Person(){
+<pre class="brush: js">function Person(){
   this.age = 0;
 
   setInterval(() =&gt; {
-    this.age++; // 这里的`this`正确地指向person对象
+    this.age++; // 这里的`this`正确地指向 person 对象
   }, 1000);
 }
 
-var p = new Person();</code></pre>
+var p = new Person();</pre>
 
 <h2 id="预定义函数">预定义函数</h2>
 
-<p>JavaScript语言有好些个顶级的内建函数：</p>
+<p>JavaScript 语言有好些个顶级的内建函数：</p>
 
 <dl>
  <dt>{{jsxref("Global_Objects/eval", "eval()")}}</dt>
  <dd>
- <p><code><strong>eval()</strong></code>方法会对一串字符串形式的JavaScript代码字符求值。</p>
+ <p><code><strong>eval()</strong></code>方法会对一串字符串形式的 JavaScript 代码字符求值。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}</dt>
  <dd>
@@ -623,7 +625,7 @@ var p = new Person();</code></pre>
  </dd>
  <dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
  <dd>
- <p><code><strong>isNaN()</strong></code>函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：<code>isNaN</code>函数内部的<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">强制转换规则</a></code>十分有趣； 另一个可供选择的是ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code>来判断数值类型。</p>
+ <p><code><strong>isNaN()</strong></code>函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：<code>isNaN</code>函数内部的<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">强制转换规则</a></code>十分有趣； 另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code>来判断数值类型。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
  <dd>
@@ -643,11 +645,11 @@ var p = new Person();</code></pre>
  </dd>
  <dt>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</dt>
  <dd>
- <p><code><strong>encodeURI()</strong></code>方法通过用以一个，两个，三个或四个转义序列表示字符的UTF-8编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。</p>
+ <p><code><strong>encodeURI()</strong></code>方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</dt>
  <dd>
- <p><code><strong>encodeURIComponent()</strong></code> 方法通过用以一个，两个，三个或四个转义序列表示字符的UTF-8编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。</p>
+ <p><code><strong>encodeURIComponent()</strong></code> 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}</dt>
  <dd>

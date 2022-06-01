@@ -9,9 +9,9 @@ tags:
 translation_of: Glossary/Function
 original_slug: Глоссарий/Функция
 ---
-<p><strong>Функция</strong> это отрывок кода который может быть вызван из другого кода или вызван собой, или это {{Glossary("variable")}} которая ссылается на функцию. Когда функция вызвана, {{Glossary("Argument", "аргументы")}} переданы в функцию как вход, и функция может необязательно вернуть вывод. Функция в {{glossary("JavaScript")}} это {{glossary("object")}}.</p>
+<p><strong>Функция</strong> это отрывок кода который может быть вызван из другого кода или вызван собой, или это {{glossary("variable","переменная")}} которая ссылается на функцию. Когда функция вызвана, {{glossary("argument","аргументы")}} переданы в функцию как вход, и функция может необязательно вернуть вывод. Функция в {{glossary("JavaScript")}} это {{glossary("object","объект")}}.</p>
 
-<p>Имя функции это {{Glossary("identifier")}} объявлённый как часть объявления функции или выражения функции. Имя функции {{Glossary("scope")}} зависит от того является ли имя функции объявлением или выражением.</p>
+<p>Имя функции это {{Glossary("identifier","идентификатор")}}, объявленный как часть объявления функции или выражения функции. Имя функции {{Glossary("scope")}} зависит от того является ли имя функции объявлением или выражением.</p>
 
 <h3 id="Различные_типы_функций">Различные типы функций</h3>
 
@@ -37,7 +37,7 @@ original_slug: Глоссарий/Функция
 
 <p><strong>Рекурсивная функция</strong> это функция которая вызывает саму себя. См {{Glossary("Recursion", "recursion")}}.</p>
 
-<pre>function loop(x) {
+<pre class="brush: js">function loop(x) {
    if (x &gt;= 10)
       return;
    loop(x + 1);
@@ -49,7 +49,7 @@ original_slug: Глоссарий/Функция
 
 <p><a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">https://en.wikipedia.org/wiki/Immediately-invoked_function_expression</a></p>
 
-<pre>Examples:
+<pre class="brush: js">// Примеры:
 
 ​function foo(){
  console.log('Здравствуй Foo');
@@ -65,14 +65,10 @@ original_slug: Глоссарий/Функция
     console.log('Здравствуй Foo');
 })();</pre>
 
-<p> </p>
-
-<p> </p>
-
 <h2 id="Узнайте_больше">Узнайте больше</h2>
 
 <h3 id="Технический_справочник">Технический справочник</h3>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" title="en-US/docs/Web/JavaScript/Guide/Functions">Функции</a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Guide/Functions">Функции</a></li>
 </ul>

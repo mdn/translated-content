@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/input/file
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>A {{domxref("DOMString")}} 表示已选择文件的路径</td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@ translation_of: Web/HTML/Element/input/file
 <div class="note"><strong>Note:</strong>
 
 <ol>
- <li>如果选择了多个文件, 这个值表示第一个已选择文件的路径。JavaScript 可以<a href="/zh-CN/docs/Web/API/File/Using_files_from_web_applications#Getting_information_about_selected_files">通过 input 的 files 属性访问其他文件</a>。</li>
+ <li>如果选择了多个文件，这个值表示第一个已选择文件的路径。JavaScript 可以<a href="/zh-CN/docs/Web/API/File/Using_files_from_web_applications#Getting_information_about_selected_files">通过 input 的 files 属性访问其他文件</a>。</li>
  <li>如果没有选择文件，该值为空字符串 <code>""</code>。</li>
  <li>为了阻止恶意软件猜测文件路径，字符串<a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly">以 C:\fakepath\ 为前缀</a>。</li>
 </ol>
@@ -89,19 +89,19 @@ translation_of: Web/HTML/Element/input/file
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("accept")}}</code></td>
-   <td>一个或多个 {{anch("Unique file type specifiers", "unique file type specifiers")}} 描述允许的文件类型</td>
+   <td><code><a href="#attr-accept">accept</a></code></td>
+   <td>一个或多个 <a href="#唯一文件类型说明符">唯一文件类型说明符</a> 描述允许的文件类型</td>
   </tr>
   <tr>
-   <td><code>{{anch("capture")}}</code></td>
+   <td><code><a href="#attr-capture">capture</a></code></td>
    <td>捕获图像或视频数据的源</td>
   </tr>
   <tr>
-   <td><code>{{anch("files")}}</code></td>
+   <td><code><a href="#attr-files">files</a></code></td>
    <td>{{domxref("FileList")}} 列出了已选择的文件</td>
   </tr>
   <tr>
-   <td><code>{{anch("multiple")}}</code></td>
+   <td><code><a href="#attr-multiple">multiple</a></code></td>
    <td>布尔值，如果出现，则表示用户可以选择多个文件</td>
   </tr>
  </tbody>
@@ -109,7 +109,7 @@ translation_of: Web/HTML/Element/input/file
 
 <h3 id="htmlattrdefaccept">{{htmlattrdef("accept")}}</h3>
 
-<p><code><a href="/zh-CN/docs/Web/HTML/Attributes/accept">accept</a></code> 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的 <strong>{{anch("Unique file type specifiers", "</strong>唯一文件类型说明符<strong>")}} </strong>列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。</p>
+<p><code><a href="/zh-CN/docs/Web/HTML/Attributes/accept">accept</a></code> 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的<strong><a href="#唯一文件类型说明符">唯一文件类型说明符</a></strong>列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。</p>
 
 <p>例如，有许多方法可以识别 Microsoft Word 文件，所以接受 Word 文件的站点可以使用一个<code>&lt;input&gt;</code>：</p>
 
@@ -118,7 +118,7 @@ translation_of: Web/HTML/Element/input/file
 
 <h3 id="htmlattrdefcapture">{{htmlattrdef("capture")}}</h3>
 
-<p><a href="/zh-CN/docs/Web/HTML/Attributes/capture"><code>capture</code></a> 属性是一个字符串，如果 <code><a href="/zh-CN/docs/Web/HTML/Attributes/accept">accept</a></code> 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去这些数据。值 <code>user</code> 表示应该使用前置摄像头和/或麦克风。值 <code>environment</code> 表示应该使用后置摄像头和/或麦克风。如果缺少此属性，则 {{Glossary("user agent")}} 可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。</p>
+<p><a href="/zh-CN/docs/Web/HTML/Attributes/capture"><code>capture</code></a> 属性是一个字符串，如果 <code><a href="/zh-CN/docs/Web/HTML/Attributes/accept">accept</a></code> 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去获取这些数据。值 <code>user</code> 表示应该使用前置摄像头和/或麦克风。值 <code>environment</code> 表示应该使用后置摄像头和/或麦克风。如果缺少此属性，则 {{Glossary("user agent")}} 可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。</p>
 
 <div class="note"><strong>Note:</strong> <code>capture</code> 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。</div>
 
@@ -143,8 +143,8 @@ translation_of: Web/HTML/Element/input/file
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("webkitdirectory")}}</code></td>
-   <td>一个布尔值，表示是否仅允许用户选择一个目录（或多个目录，如果 <code>{{anch("multiple")}}</code> 也出现的话）</td>
+   <td><code><a href="#attr-webkitdirectory">webkitdirectory</a></code></td>
+   <td>一个布尔值，表示是否仅允许用户选择一个目录（或多个目录，如果 <code><a href="#attr-multiple">multiple</a></code> 也出现的话）</td>
   </tr>
  </tbody>
 </table>
@@ -155,7 +155,7 @@ translation_of: Web/HTML/Element/input/file
 <p>如果出现布尔属性 <code>webkitdirectory，</code>表示在文件选择器界面中用户只能选择目录。更多细节和示例见  {{domxref("HTMLInputElement.webkitdirectory")}}。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 尽管 <code>webkitdirectory</code> 最初仅为基于webkit的浏览器实现，它还在Microsoft Edge和Firefox 50及其后版本中可用。然而，尽管它有相对广泛的支持，它仍然是非标准的。除非你别无选择，否则不要使用它。</p>
+<p><strong>Note:</strong> 尽管 <code>webkitdirectory</code> 最初仅为基于 webkit 的浏览器实现，它还在 Microsoft Edge 和 Firefox 50 及其后版本中可用。然而，尽管它有相对广泛的支持，它仍然是非标准的。除非你别无选择，否则不要使用它。</p>
 </div>
 </div>
 
@@ -166,7 +166,7 @@ translation_of: Web/HTML/Element/input/file
 <ul>
  <li>一个以英文句号（"."）开头的合法的不区分大小写的文件名扩展名。例如： <code>.jpg</code>，<code>.pdf</code> 或 <code>.doc</code>。</li>
  <li>一个不带扩展名的 MIME 类型字符串。</li>
- <li>字符串 <code>audio/*</code>， 表示“任何音频文件”。</li>
+ <li>字符串 <code>audio/*</code>， 表示 “任何音频文件”。</li>
  <li>字符串 <code>video/*</code>，表示 “任何视频文件”。</li>
  <li>字符串 <code>image/*</code>，表示 “任何图片文件”。</li>
 </ul>
@@ -217,7 +217,7 @@ translation_of: Web/HTML/Element/input/file
  <dt><code>name</code></dt>
  <dd>文件名。</dd>
  <dt><code>lastModified</code></dt>
- <dd>一个数字，指定文件最后一次修改的日期和时间，以 UNIX 新纪元（1970年1月1日午夜）以来的毫秒数表示。</dd>
+ <dd>一个数字，指定文件最后一次修改的日期和时间，以 UNIX 新纪元（1970 年 1 月 1 日午夜）以来的毫秒数表示。</dd>
  <dt><code>lastModifiedDate</code> {{deprecated_inline}}</dt>
  <dd>一个 {{jsxref("Date")}} 对象，表示文件最后一次修改的日期和时间。<em>这被弃用，并且不应使用。使用 <code>lastModified</code> 作为替代</em>。</dd>
  <dt><code>size</code></dt>
@@ -300,7 +300,7 @@ input.value = "foo";
 <p>在本例中，我们将展示一个稍微高级一点的文件选择器，它利用了在 <code>HTMLInputElement.files</code> 属性中可用的文件信息，并且展示了一些聪明的技巧。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以在 GitHub 中查看本示例的完整源代码 — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> （<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">在线运行</a>）。我们不会解释 CSS；JavaScript是主要的关注点。</p>
+<p><strong>Note</strong>: 你可以在 GitHub 中查看本示例的完整源代码 — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> （<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">在线运行</a>）。我们不会解释 CSS；JavaScript 是主要的关注点。</p>
 </div>
 
 <p>首先，让我们看看 HTML：</p>
@@ -376,7 +376,7 @@ form label:active, form button:active {
 
 <p>这和我们之前看到的类似 — 没有什么要说明的。</p>
 
-<p>接下来，让我们看一下JavaScript。</p>
+<p>接下来，让我们看一下 JavaScript。</p>
 
 <p>在脚本的第一行，我们获得了对表单 input 本身和拥有 <code>.preview</code> 类的 {{htmlelement("div")}} 元素的引用。然后，我们隐藏了 {{htmlelement("input")}} 元素 — 我们这样做是因为文件输入往往很难看，难于设计样式，而且在跨浏览器中对它们的设计不一致。你可以通过单击 <code>input</code> 元素来激活它，因此，最好在视觉上隐藏 input 并将 label 设计成按钮的样式，这样用户如果想上传文件就会知道如何与之交互。</p>
 
@@ -396,14 +396,14 @@ input.style.opacity = 0;</pre>
 <p>每当 <code>updateImageDisplay()</code> 函数被调用时，我们：</p>
 
 <ul>
- <li>使用一个 {{jsxref("Statements/while", "while")}} 循环来清空preview <code>&lt;div&gt;</code> 留下的内容。</li>
+ <li>使用一个 {{jsxref("Statements/while", "while")}} 循环来清空 preview <code>&lt;div&gt;</code> 留下的内容。</li>
  <li>获取包含所有已选择文件信息的 {{domxref("FileList")}} 对象，并将其用一个变量 <code>curFiles</code> 保存。</li>
- <li>通过检查 <code>curFiles.length</code> 是否等于0来检查是否没有文件被选择。如果是，则用 preview <code>&lt;div&gt;</code> 输出一条消息，来表示没有选择文件。</li>
+ <li>通过检查 <code>curFiles.length</code> 是否等于 0 来检查是否没有文件被选择。如果是，则用 preview <code>&lt;div&gt;</code> 输出一条消息，来表示没有选择文件。</li>
  <li>如果<em>选择</em>了文件，我们将循环遍历每个文件，并将关于它的信息输出到 preview <code>&lt;div&gt;</code>。注意事项：</li>
  <li>我们使用定制的 <code>validFileType()</code> 函数来检查文件的类型是否正确。（例如，用 <code>accept</code> 属性指定的图片类型）。</li>
  <li>如果是，我们：
   <ul>
-   <li>将其名称和文件大小输出到到 <span style="font-size: 1rem; letter-spacing: -0.00278rem;">previous </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">&lt;div&gt;</code> 的一个列表项中（<span style="font-size: 1rem; letter-spacing: -0.00278rem;">从 </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.name</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 和 </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.size</code>获取）。定制的 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">returnFileSize()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 函数返回一个用 bytes/KB/MB 表示的</span>格式良好的大小（默认情况下，浏览器以绝对字节数报告大小）。</li>
+   <li>将其名称和文件大小输出到到 previous <code style="font-size: 1rem; letter-spacing: -0.00278rem;">&lt;div&gt;</code> 的一个列表项中（从 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.name</code> 和 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">file.size</code>获取）。定制的 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">returnFileSize()</code> 函数返回一个用 bytes/KB/MB 表示的格式良好的大小（默认情况下，浏览器以绝对字节数报告大小）。</li>
    <li>通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 {{htmlattrxref("src", "img")}} 设置为缩略图。</li>
   </ul>
  </li>
@@ -509,5 +509,5 @@ function validFileType(file) {
 
 <ul>
  <li><a href="/zh-CN/docs/Web/API/File/Using_files_from_web_applications">在 web 应用中使用文件</a> — 包含许多其它关于 <code>&lt;input type="file"&gt;</code> 和 <a href="/zh-CN/docs/Web/API/File">File API</a> 的有用示例。</li>
- <li><a href="zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">CCSS属性兼容性</a></li>
+ <li><a href="zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">CCSS 属性兼容性</a></li>
 </ul>

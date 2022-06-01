@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <p>{{JSRef}}{{SeeCompatTable}}</p>
 
-<p><code>BigInt</code> 是一個內建的物件，提供了表示大於2<sup>53</sup>的整數的功能 (2<sup>53</sup>是JavaScript原生的{{JSxRef("Number")}}能夠表示的最大值)</p>
+<p><code>BigInt</code> 是一個內建的物件，提供了表示大於2^53的整數的功能 (2^53是JavaScript原生的{{JSxRef("Number")}}能夠表示的最大值)</p>
 
 <h2 id="語法">語法</h2>
 
@@ -19,8 +19,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
  <dd>欲創建的數值，可以為整數或字串。</dd>
 </dl>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: <code>BigInt()</code> 不和 {{JSxRef("Operators/new", "new")}} 一起使用。</p>
+<div class="notecard note">
+<p><strong>Note:</strong> <code>BigInt()</code> 不和 {{JSxRef("Operators/new", "new")}} 一起使用。</p>
 </div>
 
 <dl>
@@ -47,8 +47,8 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 
 <p><code>BigInt</code> 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 <code>Number</code> 的實體混用運算子。</p>
 
-<div class="blockIndicator warning">
-<p>{{JSxRef("Number")}} 和 <code>BigInt</code> 不能混和計算 — 他們必須被轉換到同一個型態。</p>
+<div class="notecard warning">
+<p><strong>警告：</strong> {{JSxRef("Number")}} 和 <code>BigInt</code> 不能混和計算 — 他們必須被轉換到同一個型態。</p>
 
 <p>然而，在相互轉換時要注意， <code>BigInt</code> 在被轉換成 <code>Number</code> 時可能會遺失部分精度的資訊。</p>
 </div>
@@ -97,8 +97,8 @@ bigN * -1n
 
 <p><code>/</code> 運算子也同樣的能夠運行。然而，因為型態是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。</p>
 
-<div class="blockIndicator warning">
-<p>回傳值帶小數的運算在使用<code>BigInt</code>  時小數部分會被捨去。</p>
+<div class="notecard warning">
+<p><strong>警告：</strong>回傳值帶小數的運算在使用<code>BigInt</code> 時小數部分會被捨去。</p>
 </div>
 
 <pre class="brush: js">const expected = 4n / 2n;
@@ -189,9 +189,9 @@ Boolean(12n)
 
 <dl>
  <dt>{{JSxRef("BigInt.asIntN()")}}</dt>
- <dd>Wraps a BigInt between -2<sup>width-1</sup> and 2<sup>width-1</sup>-1</dd>
+ <dd>Clamps a BigInt value to a signed integer value, and returns that value.</dd>
  <dt>{{JSxRef("BigInt.asUintN()")}}</dt>
- <dd>Wraps a BigInt between 0 and 2<sup>width</sup>-1</dd>
+ <dd>Clamps a BigInt value to an unsigned integer value, and returns that value.</dd>
 </dl>
 
 <h2 id="屬性">屬性</h2>
@@ -213,7 +213,7 @@ Boolean(12n)
 
 <h3 id="轉型">轉型</h3>
 
-<p>因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 之間轉換可能造成精度遺失，建議當數值會超過2<sup>53</sup>時只使用 <code>BigInt</code> ，而不要在兩者之間進行轉換。</p>
+<p>因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 之間轉換可能造成精度遺失，建議當數值會超過2^53時只使用 <code>BigInt</code> ，而不要在兩者之間進行轉換。</p>
 
 <h3 id="加密">加密</h3>
 
@@ -251,26 +251,11 @@ nthPrime(20n)
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-bigint/#sec-bigint-objects">BigInt</a></td>
-   <td>Stage 3</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.BigInt")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="另見">另見</h2>
 

@@ -11,7 +11,7 @@ tags:
   - 参考
 translation_of: Web/HTML/Element/b
 ---
-<p id="摘要"><strong>HTML提醒注意（Bring Attention To）元素（<code>&lt;b&gt;</code>）</strong>用于吸引读者的注意到该元素的内容上（如果没有另加特别强调）。这个元素过去被认为是<strong>粗体（Boldface）元素</strong>，并且大多数浏览器仍然将文字显示为粗体。尽管如此，你不应将 <code>&lt;b&gt;</code> 元素用于显示粗体文字；替代方案是使用 CSS {{cssxref("font-weight")}} 属性来创建粗体文字。</p>
+<p id="摘要"><strong>HTML 提醒注意（Bring Attention To）元素（<code>&lt;b&gt;</code>）</strong>用于吸引读者的注意到该元素的内容上（如果没有另加特别强调）。这个元素过去被认为是<strong>粗体（Boldface）元素</strong>，并且大多数浏览器仍然将文字显示为粗体。尽管如此，你不应将 <code>&lt;b&gt;</code> 元素用于显示粗体文字；替代方案是使用 CSS {{cssxref("font-weight")}} 属性来创建粗体文字。</p>
 
 <table class="properties">
  <tbody>
@@ -44,7 +44,7 @@ translation_of: Web/HTML/Element/b
 
 <h2 id="属性">属性</h2>
 
-<p><span style="line-height: 21px;">这个元素只包含<a href="/en-US/docs/HTML/Global_attributes">全局属性</a>。</span></p>
+<p>这个元素只包含<a href="/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
 
 <h2 id="使用说明"><strong>使用说明</strong></h2>
 
@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/b
   <p>不要将&lt;b&gt;元素与 {{HTMLElement("strong")}}、{{HTMLElement("em")}}或{{HTMLElement("mark")}}元素混淆。 {{HTMLElement("strong")}}元素表示某些重要性的文本，{{HTMLElement("em")}}强调文本，而{{HTMLElement("mark")}}元素表示某些相关性的文本。 <code>&lt;b&gt;</code>元素不传达这样的特殊语义信息；仅在没有其他合适的元素时使用它。</p>
  </li>
  <li>类似的，也不要用 <code>&lt;b&gt;</code> 元素来标记标题。如果需要表示标题，请使用 {{HTMLElement("h1")}} 到 {{HTMLElement("h6")}} 标签。此外，可以通过样式表来改变这些元素的的默认样式，结果就是它们并<em>不一定</em>都是粗体。</li>
- <li>通过在 <code>&lt;b&gt;</code> 元素上添加<strong> </strong>{{htmlattrxref("class")}} 属性来表示额外的语义信息是一个很好的方式（例如 <code>&lt;b class="lead"&gt;</code> 来表示段落中的第一句）。这可以在样式需要变动的情况下更轻松地处理不同应用场合的 <code>&lt;b&gt;</code> 元素，无须改动HTML。</li>
+ <li>通过在 <code>&lt;b&gt;</code> 元素上添加<strong> </strong>{{htmlattrxref("class")}} 属性来表示额外的语义信息是一个很好的方式（例如 <code>&lt;b class="lead"&gt;</code> 来表示段落中的第一句）。这可以在样式需要变动的情况下更轻松地处理不同应用场合的 <code>&lt;b&gt;</code> 元素，无须改动 HTML。</li>
  <li>以前 <code>&lt;b&gt;</code> 元素的意思就是让文本变成粗体。但从 HTML4 开始，不赞成标签表示带样式信息，于是 <code>&lt;b&gt;</code> 元素的含义发生了变化。</li>
  <li>如果不是出于语义目的而使用 <code>&lt;b&gt;</code> 元素，那么让文本显示粗体更好的方式是使用将 CSS 的 {{cssxref("font-weight")}} 属性设置为 <code>"bold"</code>。</li>
 </ul>
@@ -107,57 +107,7 @@ Keywords are displayed with the default style of the &lt;b&gt; element, likely i
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.b")}}
 
 <h2 id="相关链接">相关链接</h2>
 

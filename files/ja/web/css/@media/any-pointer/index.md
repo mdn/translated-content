@@ -9,9 +9,9 @@ tags:
   - リファレンス
 translation_of: Web/CSS/@media/any-pointer
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-**`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
+**`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
 
 > **Note:** *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
 
@@ -28,7 +28,7 @@ translation_of: Web/CSS/@media/any-pointer
 
 > **Note:** 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
 
-<h2 id="Examples">例</h2>
+## 例
 
 この例は、精度の高いポインターを持つユーザーには小さなチェックボックスを、精度の低いポインターを持つユーザーには大きなチェックボックスを生成します。大きなチェックボックスは小さなチェックボックスよりも後に宣言されているので優先されます。
 

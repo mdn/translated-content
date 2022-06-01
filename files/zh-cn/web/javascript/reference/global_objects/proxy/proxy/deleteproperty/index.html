@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deletePrope
 
 <h3 id="参数">参数</h3>
 
-<p><code>deleteProperty</code> 方法将会接受以下参数。 <code>this</code> 被绑定在 handler上。</p>
+<p><code>deleteProperty</code> 方法将会接受以下参数。<code>this</code> 被绑定在 handler 上。</p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -37,10 +37,10 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deletePrope
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截以下操作:</p>
+<p>该方法会拦截以下操作：</p>
 
 <ul>
- <li>删除属性: <code>delete proxy[foo]</code> 和 <code>delete proxy.foo</code></li>
+ <li>删除属性：<code>delete proxy[foo]</code> 和 <code>delete proxy.foo</code></li>
  <li>{{jsxref("Reflect.deleteProperty()")}}</li>
 </ul>
 
@@ -90,55 +90,7 @@ delete p.a; // "called: a"
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("18")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

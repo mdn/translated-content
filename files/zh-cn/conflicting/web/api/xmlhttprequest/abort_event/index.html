@@ -1,0 +1,57 @@
+---
+title: XMLHttpRequestEventTarget.onabort
+slug: conflicting/Web/API/XMLHttpRequest/abort_event
+translation_of: Web/API/XMLHttpRequestEventTarget/onabort
+original_slug: Web/API/XMLHttpRequestEventTarget/onabort
+---
+<div>{{APIRef("XMLHttpRequest")}}</div>
+
+<p><strong><code>XMLHttpRequestEventTarget.onabort</code></strong> 会在 {{domxref("XMLHttpRequest")}} 交易操作被诸如 {{domxref("XMLHttpRequest.abort()")}} 函数中止时调用。</p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox"><em>XMLHttpRequest</em>.onabort = <em>callback</em>;</pre>
+
+<h3 id="值">值</h3>
+
+<ul>
+ <li><code><em>callback</em></code> 在交易被中止时调用的函数。</li>
+</ul>
+
+<h2 id="Example" name="Example">示例</h2>
+
+<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
+  method = 'GET',
+  url = 'https://developer.mozilla.org/';
+
+xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.onabort = function () {
+  console.log('** 请求被中止');
+};
+xmlhttp.send();
+//..
+xmlhttp.abort(); // 这将会调用我们上面定义的 onabort 回调函数
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onabort')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.XMLHttpRequestEventTarget.onabort")}}</p>

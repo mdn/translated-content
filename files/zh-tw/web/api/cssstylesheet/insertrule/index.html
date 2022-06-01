@@ -105,110 +105,11 @@ function addStylesheetRules (rules) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM', '#dom-cssstylesheet-insertrule', 'CSSStyleSheet.insertRule')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>No change from {{SpecName('DOM2 Style')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleSheet-insertRule', 'CSSStyleSheet.insertRule')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>index</code> is optional</td>
-   <td>{{CompatChrome(60)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(47)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>index</code> is optional</td>
-   <td>{{CompatChrome(60)}}</td>
-   <td>{{CompatChrome(60)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(47)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Legacy_browser_support">Legacy browser support</h3>
-
-<ul>
- <li>
-  <h4 id="Internet_Explorer_-_pre_v9"><strong>Internet Explorer - pre v9</strong></h4>
-  <strong>addRule</strong>(<var>selector</var>, <var>rule</var> [, <var>index</var>]);  --  Example:<code> addRule('pre', 'font: 14px verdana'); // add rule at end</code><br>
-  <br>
-  <em>Also note the non-standard <code><a class="external" href="http://www.quirksmode.org/dom/w3c_css.html#change">removeRule()</a> </code> and <code><a class="external" href="http://www.quirksmode.org/dom/w3c_css.html#access">.rules</a> </code> instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}}  and {{domxref("CSSStyleSheet",".cssRules")}}  respectively.</em></li>
-</ul>
+{{Compat("api.CSSStyleSheet.insertRule")}}
 
 <h2 id="See_also">See also</h2>
 

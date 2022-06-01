@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toSource
 
 <p><code><strong>toSource()</strong></code> 方法返回代表该对象源码的字符串。</p>
 
-<p>该方法通常由JavaScript内部调用。</p>
+<p>该方法通常由 JavaScript 内部调用。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -18,15 +18,15 @@ sym.toSource()</pre>
 
 <h2 id="Description">Description</h2>
 
-<p><code>toSource</code>方法返回以下值：</p>
+<p><code>toSource</code> 方法返回以下值：</p>
 
-<p>对于内建<code>Symbol对象</code>, <code>toSource</code> 返回以下字符串，表明源代码不可见：</p>
+<p>对于内建<code>Symbol</code> 对象, <code>toSource</code> 返回以下字符串，表明源代码不可见：</p>
 
 <pre class="brush:js">"function Symbol() {
    [native code]
 }"</pre>
 
-<p>对于<code>Symbol实例</code>, <code>toSource</code> 返回代表源码的字符串。</p>
+<p>对于<code>Symbol</code> 实例, <code>toSource</code> 返回代表源码的字符串。</p>
 
 <pre class="brush: js">"Symbol()"</pre>
 
@@ -34,57 +34,9 @@ sym.toSource()</pre>
 
 <p>还未成为任何标准的一部分</p>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("36.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("36.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExte
 
 <h2 id="语法">语法</h2>
 
-<pre class="brush: js notranslate">var p = new Proxy(target, {
+<pre class="brush: js">var p = new Proxy(target, {
   preventExtensions: function(target) {
   }
 });
@@ -22,24 +22,24 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExte
 
 <h3 id="参数">参数</h3>
 
-<p>以下参数传递给 <code>preventExtensions</code> 方法. 它会绑定到这个handler.</p>
+<p>以下参数传递给 <code>preventExtensions</code> 方法。它会绑定到这个 handler.</p>
 
 <dl>
  <dt><code>target</code></dt>
- <dd>所要拦截的目标对象.</dd>
+ <dd>所要拦截的目标对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>preventExtensions</code> 方法返回一个布尔值.</p>
+<p><code>preventExtensions</code> 方法返回一个布尔值。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code><strong>handler.preventExtensions()</strong></code> 拦截 {{jsxref("Object.preventExtensions()")}}返回一个布尔值.</p>
+<p><code><strong>handler.preventExtensions()</strong></code> 拦截 {{jsxref("Object.preventExtensions()")}}返回一个布尔值。</p>
 
 <h3 id="拦截">拦截</h3>
 
-<p>这个trap可以拦截这些操作:</p>
+<p>这个 trap 可以拦截这些操作：</p>
 
 <ul>
  <li>{{jsxref("Object.preventExtensions()")}}</li>
@@ -48,7 +48,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExte
 
 <h3 id="约束">约束</h3>
 
-<p>如果违反了下列规则, proxy则会抛出一个 {{jsxref("TypeError")}}:</p>
+<p>如果违反了下列规则，proxy 则会抛出一个 {{jsxref("TypeError")}}:</p>
 
 <ul>
  <li>如果目标对象是可扩展的，那么只能返回 <code>false</code></li>
@@ -58,7 +58,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExte
 
 <p>以下代码演示了如何拦截{{jsxref("Object.preventExtensions()")}}。</p>
 
-<pre class="brush: js notranslate">var p = new Proxy({}, {
+<pre class="brush: js">var p = new Proxy({}, {
   preventExtensions: function(target) {
     console.log('called');
     Object.preventExtensions(target);
@@ -70,9 +70,9 @@ console.log(Object.preventExtensions(p)); // "called"
                                           // false
 </pre>
 
-<p>以下代码违反了约束.</p>
+<p>以下代码违反了约束。</p>
 
-<pre class="brush: js notranslate">var p = new Proxy({}, {
+<pre class="brush: js">var p = new Proxy({}, {
   preventExtensions: function(target) {
     return true;
   }

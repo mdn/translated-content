@@ -91,59 +91,7 @@ console.log(result); // true
 
 <h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h3>
-
-<p>Antes de Gecko 8.0 {{geckoRelease("8.0")}}, <code>test()</code> estaba incorrectamente implementado; cuando era llamado sin parámetros, buscaba emparejar contra el valor de la entrada anterior (la propiedad <code>RegExp.input</code>) en lugar de hacerlo contra la cadena <code>"undefined"</code>. Esto ha sido corregido; ahora <code>/undefined/.test()</code> resulta correctamente en <code>true</code>, en lugar de un error.</p>
+{{Compat("javascript.builtins.RegExp.test")}}
 
 <h2 id="Vea_también">Vea también</h2>
 

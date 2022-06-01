@@ -1,0 +1,71 @@
+---
+title: XMLHttpRequest.onreadystatechange
+slug: Web/API/XMLHttpRequest/readystatechange_event
+tags:
+  - XHR
+  - XMLHttpRequest
+  - 参考
+  - 处理程序
+  - 属性
+  - 接口
+translation_of: Web/API/XMLHttpRequest/onreadystatechange
+original_slug: Web/API/XMLHttpRequest/onreadystatechange
+---
+<div>{{APIRef}}</div>
+
+<p>只要 <code>readyState</code> 属性发生变化，就会调用相应的<a href="/zh-CN/docs/Web/API/EventHandler">处理函数</a>。这个回调函数会被用户线程所调用。<strong><code>XMLHttpRequest.onreadystatechange</code></strong> 会在 {{domxref("XMLHttpRequest")}} 的{{domxref("XMLHttpRequest.readyState", "readyState")}} 属性发生改变时触发 {{event("readystatechange")}} 事件的时候被调用。</p>
+
+<div class="warning">
+<p><strong>警告</strong>：这个方法不该用于同步的 requests 对象，并且不能在内部 (C++) 代码中使用。</p>
+</div>
+
+<p>当一个 <code>XMLHttpRequest</code> 请求被 <a href="/en-US/docs/Web/API/XMLHttpRequest/abort">abort()</a> 方法取消时，其对应的 <code>readystatechange</code> 事件不会被触发。</p>
+
+<div class="note">
+<p>UPDATE: 在下面的浏览器版本中会触发 (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). 例子在 <a href="https://jsfiddle.net/merksam/ve5oc0gn/">here</a> - 重新加载几次页面即可。</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+
+<h3 id="取值">取值</h3>
+
+<ul>
+ <li>当 <code>readyState</code> 的值改变的时候，<code><em>callback</em></code> 函数会被调用。</li>
+</ul>
+
+<h2 id="Example" name="Example">示例</h2>
+
+<pre class="brush: js">var xhr= new XMLHttpRequest(),
+    method = "GET",
+    url = "https://developer.mozilla.org/";
+
+xhr.open(<em>method</em>, <em>url</em>, true);
+xhr.onreadystatechange = function () {
+  if(xhr.readyState === XMLHttpRequest.DONE &amp;&amp; xhr.status === 200) {
+    console.log(xhr.responseText)
+  }
+}
+xhr.send();</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">注释</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.XMLHttpRequest.readystatechange_event")}}

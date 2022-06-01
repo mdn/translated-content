@@ -7,7 +7,7 @@ translation_of: Web/CSS/touch-action
 
 <p>Css-свойство touch-action указывает как элемент будет управляться через тачскрин (например, при помощи возможности приближения (zooming), встроенной в браузер).</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 touch-action: auto;
 touch-action: none;
 touch-action: pan-x;
@@ -68,14 +68,14 @@ touch-action: unset;
 
 <p>The most common usage is to disable all gestures on an element (and its non-scrollable descendants) that provides its own dragging and zooming behavior – such as a map or game surface. </p>
 
-<pre class="brush: css notranslate">#map {
+<pre class="brush: css">#map {
   touch-action: none;
 }
 </pre>
 
 <p>Another common pattern is that of an image carousel which uses pointer events to handle horizontal panning, but doesn't want to interfere with vertical scrolling or zooming of the document.</p>
 
-<pre class="brush: css notranslate">.image-carousel {
+<pre class="brush: css">.image-carousel {
   width: 100%;
   height: 150px;
   touch-action: pan-y pinch-zoom;
@@ -84,7 +84,7 @@ touch-action: unset;
 
 <p><strong>touch-action </strong>is also often used to completely disable the delay of <strong>click </strong>events caused by support for the<strong> </strong>double-tap to zoom gesture.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   touch-action: manipulation;
 }
 </pre>

@@ -115,13 +115,13 @@ p.relatif {
 
 ```css
 div {
-  border: 2px black dashed;
+  border: 2px black dashed;
 }
 
 p.absolu {
-  position: absolute;
-  top: 5em;
-  border: 2px black solid;
+  position: absolute;
+  top: 5em;
+  border: 2px black solid;
 }
 ```
 

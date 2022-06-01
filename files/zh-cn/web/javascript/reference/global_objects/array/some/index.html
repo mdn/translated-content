@@ -12,19 +12,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>some()</strong></code> 方法测试数组中是不是至少有1个元素通过了被提供的函数测试。它返回的是一个Boolean类型的值。</p>
+<p><code><strong>some()</strong></code> 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 Boolean 类型的值。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果用一个空数组进行测试，在任何情况下它返回的都是<code>false</code>。</p>
+<p><strong>备注：</strong>如果用一个空数组进行测试，在任何情况下它返回的都是<code>false</code>。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/array-some.html")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>arr</em>.some(<em>callback(element[, index[, array]])[, thisArg]</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -44,23 +44,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <h3 id="返回值">返回值</h3>
 
-<p>数组中有至少一个元素通过回调函数的测试就会返回<strong><code>true</code></strong>；所有元素都没有通过回调函数的测试返回值才会为false。</p>
+<p>数组中有至少一个元素通过回调函数的测试就会返回<strong><code>true</code></strong>；所有元素都没有通过回调函数的测试返回值才会为 false。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>some()</code> 为数组中的每一个元素执行一次 <code>callback</code> 函数，直到找到一个使得 callback 返回一个“真值”（即可转换为布尔值 true 的值）。如果找到了这样一个值，<code>some()</code> 将会立即返回 <code>true</code>。否则，<code>some()</code> 返回 <code>false</code>。<code>callback</code> 只会在那些”有值“的索引上被调用，不会在那些被删除或从来未被赋值的索引上调用。</p>
 
-<p><code style="font-style: normal; line-height: 1.5;">callback</code><span style="line-height: 1.5;"> 被调用时传入三个参数：元素的值，元素的索引，被遍历的数组。</span></p>
+<p><code>callback</code> 被调用时传入三个参数：元素的值，元素的索引，被遍历的数组。</p>
 
-<p>如果一个<code>thisArg</code>参数提供给some()，它将被用作调用的 <code>callback</code>的 <code>this</code> 值。否则， 它的 <code>this</code> value将是 <code>undefined</code>。<code>this</code>的值最终通过callback来观察，根据 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>的this判定规则来确定。</p>
+<p>如果一个<code>thisArg</code>参数提供给 some()，它将被用作调用的 <code>callback</code>的 <code>this</code> 值。否则， 它的 <code>this</code> value 将是 <code>undefined</code>。<code>this</code>的值最终通过 callback 来观察，根据 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>的 this 判定规则来确定。</p>
 
 <p><code>some()</code> 被调用时不会改变数组。</p>
 
 <p><code>some()</code> 遍历的元素的范围在第一次调用 <code>callback</code>. 前就已经确定了。在调用 <code>some()</code> 后被添加到数组中的值不会被 <code>callback</code> 访问到。如果数组中存在且还未被访问到的元素被 <code>callback</code> 改变了，则其传递给 <code>callback</code> 的值是 <code>some()</code> 访问到它那一刻的值。已经被删除的元素不会被访问到。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Testing_size_of_all_array_elements" name="Example:_Testing_size_of_all_array_elements">测试数组元素的值</h3>
+<h3 id="Example_Testing_size_of_all_array_elements">测试数组元素的值</h3>
 
 <p>下面的例子检测在数组中是否有元素大于 10。</p>
 
@@ -73,14 +73,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <h3 id="使用箭头函数测试数组元素的值">使用箭头函数测试数组元素的值</h3>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a> 可以通过更简洁的语法实现相同的用例.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a> 可以通过更简洁的语法实现相同的用例。</p>
 
 <pre class="brush: js"><code>[2, 5, 8, 1, 4].some(x =&gt; x &gt; 10);  // false
 [12, 5, 8, 1, 4].some(x =&gt; x &gt; 10); // true</code></pre>
 
 <h3 id="判断数组元素中是否存在某个值">判断数组元素中是否存在某个值</h3>
 
-<p>此例中为模仿 <code>includes()</code>  方法, 若元素在数组中存在, 则回调函数返回值为 <code>true</code> :</p>
+<p>此例中为模仿 <code>includes()</code>  方法，若元素在数组中存在，则回调函数返回值为 <code>true</code> :</p>
 
 <pre class="brush: js">var fruits = ['apple', 'banana', 'mango', 'guava'];
 
@@ -127,7 +127,7 @@ getBoolean(1);       // true
 getBoolean('true');  // true
 </pre>
 
-<h2 id="Compatibility" name="Compatibility">Polyfill</h2>
+<h2 id="Compatibility">Polyfill</h2>
 
 <p>在第 5 版时，<code>some()</code> 被添加进 ECMA-262 标准；这样导致某些实现环境可能不支持它。你可以把下面的代码插入到脚本的开头来解决此问题，从而允许在那些没有原生支持它的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 <code>Object </code>和 <code>TypeError</code> 拥有他们的初始值，且 <code>fun.call</code> 等价于 <code>{{jsxref("Function.prototype.call")}}</code>。</p>
 
@@ -196,7 +196,7 @@ if (!Array.prototype.some) {
 <p>{{Compat("javascript.builtins.Array.some")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.find()")}}</li>

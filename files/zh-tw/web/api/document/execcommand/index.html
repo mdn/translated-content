@@ -5,7 +5,7 @@ translation_of: Web/API/Document/execCommand
 ---
 <div>{{ApiRef("DOM")}}{{Obsolete_header}}</div>
 
-<p><span class="seoSummary">當 HTML 文件（document）被切換到 <code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code> 時，它的 <code>document</code> 物件就會對外暴露 <strong><code>execCommand</code></strong> 方法作為操控目前可編輯區域的指令，譬如 <a href="/en-US/docs/Web/HTML/Element/input">form inputs</a> 或 <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code> 元素。</span></p>
+<p>當 HTML 文件（document）被切換到 <code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code> 時，它的 <code>document</code> 物件就會對外暴露 <strong><code>execCommand</code></strong> 方法作為操控目前可編輯區域的指令，譬如 <a href="/en-US/docs/Web/HTML/Element/input">form inputs</a> 或 <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code> 元素。</p>
 
 <p>多數的指令會作用在文件的<a href="/en-US/docs/Web/API/Selection">選取</a> （粗體、斜體等），而其他則像是插入新的元素（新增一個連結）或是影響一整列的文字（縮排）。當使用 <code>contentEditable</code> 時， <code>execCommand()</code> 會作用在目前活躍的可編輯元素上。</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Document/execCommand
 
 <dl>
  <dt><code>aCommandName</code></dt>
- <dd>一個 {{domxref("DOMString")}} 作為指定要執行的指令。所有可用的指令列表請見 {{anch("Commands")}} 。</dd>
+ <dd>一個 {{domxref("DOMString")}} 作為指定要執行的指令。所有可用的指令列表請見 <a href="#指令">指令</a> 。</dd>
  <dt><code>aShowDefaultUI</code></dt>
  <dd>一個 {{jsxref("Boolean")}} 作為指示是否顯示預設的使用者介面。 Mozilla 並未實作這項功能。</dd>
  <dt><code>aValueArgument</code></dt>

@@ -46,8 +46,8 @@ Vous pouvez utiliser l'événement `vrdisplayconnect` dans une méthode [`addEve
 
 ```js
 window.addEventListener('vrdisplayconnect', function() {
-  info.textContent = 'Affichage connecté.';
-  reportDisplays();
+  info.textContent = 'Affichage connecté.';
+  reportDisplays();
 });
 ```
 

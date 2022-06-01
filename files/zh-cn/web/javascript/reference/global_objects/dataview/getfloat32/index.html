@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>getFloat32()</code></strong>方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个32-bit浮点数(单精度浮点数，4个字节).</p>
+<p><strong><code>getFloat32()</code></strong>方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}</div>
 
@@ -22,29 +22,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 
 <dl>
  <dt>byteOffset</dt>
- <dd>偏移量, 单位为字节, 为从视图的开始位置到读取数值的位置的偏移。</dd>
+ <dd>偏移量，单位为字节，为从视图的开始位置到读取数值的位置的偏移。</dd>
  <dt>littleEndian</dt>
- <dd>{{optional_inline}} 表示这个32位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用big-endian格式读取数值。</dd>
+ <dd>{{optional_inline}} 表示这个 32 位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用 big-endian 格式读取数值。</dd>
 </dl>
 
 <h3 id="返回">返回</h3>
 
-<dl>
- <dd>一个带符号的32位浮点数。</dd>
-</dl>
+<p>一个带符号的 32 位浮点数。</p>
 
 <h3 id="抛出错误">抛出错误</h3>
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。</dd>
+ <dd>如果 byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。</dd>
 </dl>
 
 <h2 id="说明">说明</h2>
 
-<dl>
- <dd>没有对齐约束; 多字节值可以从任何偏移处获取。</dd>
-</dl>
+<p>没有对齐约束; 多字节值可以从任何偏移处获取。</p>
 
 <h2 id="例子">例子</h2>
 

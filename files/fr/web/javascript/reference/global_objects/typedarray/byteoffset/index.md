@@ -16,7 +16,9 @@ La propriété **`byteOffset`** est un accesseur qui représente le décalage, e
 
 ## Syntaxe
 
-    typedarray.byteOffset
+```js
+typedarray.byteOffset
+```
 
 ## Description
 
@@ -39,7 +41,7 @@ uint8.byteOffset; // 3 (correspond au décalage défini lors de la construction 
 | Spécification                                                                                                                                | Statut                       | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

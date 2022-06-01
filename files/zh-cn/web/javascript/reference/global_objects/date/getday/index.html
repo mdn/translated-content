@@ -11,28 +11,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox  language-html" style="margin-bottom: 0px; padding: 1em; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(212, 221, 228, 0.498039);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr;"><em>dateObj</em>.getDay()</code>
+<pre class="brush: js"><em>dateObj</em>.getDay()
 </pre>
 
-<h3 id="Description" name="Description">返回值</h3>
+<h3 id="Description">返回值</h3>
 
-<p>根据本地时间，返回一个0到6之间的整数值，代表星期几： 0 代表星期日， 1 代表星期一，2 代表星期二， 依次类推。</p>
+<p>根据本地时间，返回一个 0 到 6 之间的整数值，代表星期几： 0 代表星期日， 1 代表星期一，2 代表星期二， 依次类推。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example_Using_getDay" name="Example:_Using_getDay">使用<code>getDay()</code></h3>
+<h3 id="Example_Using_getDay">使用<code>getDay()</code></h3>
 
-<p>下面第二条语句，基于{{jsxref("Date")}}对象 <code>Xmas95</code> 的值，把 1 赋值给 <code>weekday</code>。也就是说1995年12月25日是星期一。</p>
+<p>下面第二条语句，基于{{jsxref("Date")}}对象 <code>Xmas95</code> 的值，把 1 赋值给 <code>weekday</code>。也就是说 1995 年 12 月 25 日是星期一。</p>
 
-<pre class="brush:js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> Xmas95 <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">Date</span><span class="punctuation token" style="color: #999999;">(</span><span class="string token" style="color: #669900;">"December 25, 1995 23:15:30"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-<span class="keyword token" style="color: #0077aa;">var</span> weekday <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> Xmas95<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getDay<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush:js">var Xmas95 = new Date("December 25, 1995 23:15:30");
+var weekday = Xmas95.getDay();
 
-<span class="function token">console.log<span class="punctuation token" style="color: #999999;">(</span></span>weekday<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090; display: inherit;"> // 1</span></code></pre>
+console.log(weekday); // 1</pre>
 
-<div class="blockIndicator note">
-<p dir="ltr">注意：如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的<code>options</code> 参数，从而返回这天的全称（如<code>"Monday"</code>）.使用此方法，结果会更加国际化：</p>
+<div class="note">
+<p><strong>备注：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的<code>options</code> 参数，从而返回这天的全称（如<code>"Monday"</code>）.使用此方法，结果会更加国际化：</p>
 
 <pre class="brush: js"><code>var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
@@ -41,7 +41,7 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
 // Montag</code></pre>
 </div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -51,7 +51,7 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
    <th scope="col">注解</th>
   </tr>
   <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}<span class="hidden"> </span><span class="hidden"> </span></td>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}  </td>
    <td>{{Spec2('ESDraft')}}  </td>
    <td></td>
   </tr>
@@ -73,11 +73,11 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Date.getDay")}}</p>
 
-<h2 id="See_Also" name="See_Also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>

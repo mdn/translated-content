@@ -5,17 +5,13 @@ translation_of: Web/API/Resource_Timing_API
 ---
 <div>{{DefaultAPISidebar("Resource Timing API")}}</div>
 
-<div> </div>
-
-<div>通过<strong><code>Resource Timing API</code></strong>可以获取和分析应用资源加载的详细网络计时数据, 应用程序可以</div>
+<div>通过<strong><code>Resource Timing API</code></strong>可以获取和分析应用资源加载的详细网络计时数据, 应用程序可以</div>
 
 <div>使用时间度量标准来确定加载特定资源所需要的时间, 比如 {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, 图片, 或者脚本.</div>
 
-<div> </div>
+<p><code><strong>Resource Timing API</strong></code>为网络事件(如重定向的开始和结束事件, DNS查找的开始和结束事件, 请求开始, 响应开始和结束时间等)生成有高分辨率时间戳( {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} )的资源加载时间线, 并提供了资源大小和资源类型.</p>
 
-<p><code><strong>Resource Timing API</strong></code>为网络事件(如重定向的开始和结束事件, DNS查找的开始和结束事件, 请求开始, 响应开始和结束时间等)生成有高分辨率时间戳( {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} )的资源加载时间线, 并提供了资源大小和资源类型.</p>
-
-<p>本文档是Resource Timing API的概述. 更多详细信息, 请查阅每个接口的参考说明, <a href="/Web/API/Resource_Timing/Using_Resource_Timing">Using Resource Timing</a> 和 {{anch("See_Also","附录")}} 的参考链接. 有关资源时序处理模型的图示，请参阅 <a href="https://w3c.github.io/resource-timing/#process">resource timing phases</a> .</p>
+<p>本文档是Resource Timing API的概述. 更多详细信息, 请查阅每个接口的参考说明, <a href="/Web/API/Resource_Timing/Using_Resource_Timing">Using Resource Timing</a> 和 <a href="#参见">参见</a> 的参考链接. 有关资源时序处理模型的图示，请参阅 <a href="https://w3c.github.io/resource-timing/#process">resource timing phases</a> .</p>
 
 <p class="note"><code>PerformanceResourceTiming</code> 接口只统计{{domxref("PerformanceEntry","performance entries", "", 1)}} 中 {{domxref("PerformanceEntry.entryType","entryType")}} 为"<code>resource</code>"类型的 {{domxref("PerformanceEntry")}}</p>
 
@@ -65,7 +61,7 @@ translation_of: Web/API/Resource_Timing_API
 
 <p>To test your browser's support for these interfaces, run the <code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code> application.</p>
 
-<h2 id="附录">附录</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="https://w3c.github.io/resource-timing/">Resource Timing Standard</a>; W3C Editor's Draft</li>

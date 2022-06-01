@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 </div>
 </div>
 
-<p><strong><code>parseFloat()</code> </strong>函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。</p>
+<p><strong><code>parseFloat()</code></strong> 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}</div>
 
@@ -28,21 +28,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <h3 id="返回值">返回值</h3>
 
-<dl>
- <dd>给定值被解析成浮点数。如果给定值不能被转换成数值，则会返回 {{jsxref("NaN")}}。</dd>
-</dl>
+<p>给定值被解析成浮点数。如果给定值不能被转换成数值，则会返回 {{jsxref("NaN")}}。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code>parseFloat</code>是个全局函数,不属于任何对象。</p>
+<p><code>parseFloat</code> 是个全局函数，不属于任何对象。</p>
 
 <ul>
  <li>如果 <code>parseFloat</code> 在解析过程中遇到了正号（<code>+</code>）、负号（<code>-</code> U+002D HYPHEN-MINUS）、数字（<code>0</code>-<code>9</code>）、小数点（<code>.</code>）、或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符，返回当前已经解析到的浮点数。</li>
  <li>第二个小数点的出现也会使解析停止（在这之前的字符都会被解析）。</li>
  <li>参数首位和末位的空白符会被忽略。</li>
- <li>如果参数字符串的第一个字符不能被解析成为数字,<code>则</code> <code>parseFloat</code> 返回 <code>NaN</code>。</li>
+ <li>如果参数字符串的第一个字符不能被解析成为数字，<code>则</code> <code>parseFloat</code> 返回 <code>NaN</code>。</li>
  <li><code>parseFloat</code> 也可以解析并返回 {{jsxref("Infinity")}}。</li>
- <li><code>parseFloat</code>解析 {{jsxref("BigInt")}} 为 {{jsxref("Number", "Numbers")}}, 丢失精度。因为末位 <code>n</code> 字符被丢弃。</li>
+ <li><code>parseFloat</code> 解析 {{jsxref("BigInt")}} 为 {{jsxref("Number", "Numbers")}}, 丢失精度。因为末位 <code>n</code> 字符被丢弃。</li>
 </ul>
 
 <p>考虑使用 {{jsxref("Number", "Number(<em>value</em>)")}} 进行更严谨的解析，只要参数带有无效字符就会被转换为 {{jsxref("NaN")}} 。</p>
@@ -51,19 +49,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <h2 id="例子">例子</h2>
 
-<h3 id="例子_parseFloat返回正常数字">例子: <code>parseFloat</code>返回正常数字</h3>
+<h3 id="例子_parseFloat返回正常数字">例子：<code>parseFloat</code>返回正常数字</h3>
 
-<p>下面的例子都返回<strong>3.14</strong></p>
+<p>下面的例子都返回 <strong>3.14</strong></p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="number token">3.14</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="string token">'3.14'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="string token">'  3.14  '</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="string token">'314e-2'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="string token">'0.0314E+2'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="string token">'3.14some non-digit characters'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="punctuation token">{</span> <span class="function function-variable token">toString</span><span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="string token">"3.14"</span> <span class="punctuation token">}</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">parseFloat(3.14);
+parseFloat('3.14');
+parseFloat('  3.14  ');
+parseFloat('314e-2');
+parseFloat('0.0314E+2');
+parseFloat('3.14some non-digit characters');
+parseFloat({ toString: function() { return "3.14" } });</pre>
 
-<h3 id="parseFloat返回NaN"><code>parseFloat</code>返回NaN</h3>
+<h3 id="parsefloat_返回_nan"><code>parseFloat</code> 返回 NaN</h3>
 
 <p>下面的例子将返回<code>NaN</code></p>
 
@@ -74,8 +72,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <p>以下例子均返回 <code>900719925474099300</code>，当整数太大以至于不能被转换时将失去精度。</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="number token">900719925474099267n</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">parseFloat</span><span class="punctuation token">(</span><span class="string token">'900719925474099267n'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">parseFloat(900719925474099267n);
+parseFloat('900719925474099267n');</pre>
 
 <h2 id="规范">规范</h2>
 
@@ -113,7 +111,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <p>{{Compat("javascript.builtins.parseFloat")}}</p>
 
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</li>

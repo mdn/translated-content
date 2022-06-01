@@ -66,64 +66,7 @@ element.addEventListener("transitionend", showMessage, false);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0<sup>[1]</sup><br>
-    36</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>10.5<sup>[2]</sup><br>
-    12<br>
-    12.10<br>
-    23</td>
-   <td>3.2<sup>[1]</sup><br>
-    7.0.6</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10<sup>[2]</sup><br>
-    12<br>
-    12.10</td>
-   <td>3.2<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Chrome 1.0, Android 2.1 与 WebKit 3.2 上实现 <code>webkitTransitionEnd</code>. Chrome 36 与 WebKit 7.0.6 上请使用标准事件 <code>transitionend</code>.</p>
-
-<p>[2] 在 Opera 10.5 上实现<code>oTransitionEnd</code>，从版本12开始实现 <code>otransitionend，</code> 从版本12.10开始实现 <code>transitionend.</code></p>
+{{Compat("api.HTMLElement.transitionend_event")}}
 
 <h2 id="参考">参考</h2>
 

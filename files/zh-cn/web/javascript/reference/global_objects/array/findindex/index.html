@@ -18,15 +18,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <p>另请参见  {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的<strong>值</strong>，而不是其索引。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><em>arr</em>.findIndex(<em>callback</em>[, <em>thisArg</em>])</code></pre>
+<pre class="syntaxbox"><code><em>arr</em>.findIndex(<em>callback</em>[, <em>thisArg</em>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>针对数组中的每个元素, 都会执行该回调函数, 执行时会自动传入下面三个参数:
+ <dd>针对数组中的每个元素，都会执行该回调函数，执行时会自动传入下面三个参数：
  <dl>
   <dt><code>element</code></dt>
   <dd>当前元素。</dd>
@@ -37,16 +37,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
  </dl>
  </dd>
  <dt><code>thisArg</code></dt>
- <dd>可选。执行<code>callback</code>时作为<code style="font-size: 14px; line-height: inherit;">this</code>对象<span style="line-height: inherit;">的值.</span></dd>
+ <dd>可选。执行<code>callback</code>时作为<code>this</code>对象的值。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
 <p>    数组中通过提供测试函数的第一个元素的<strong>索引</strong>。否则，返回-1</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code>findIndex</code>方法对数组中的每个数组索引<code>0..length-1</code>（包括）执行一次<code>callback</code>函数，直到找到一个<code>callback</code>函数返回真实值（强制为<code>true</code>）的值。如果找到这样的元素，<code>findIndex</code>会立即返回该元素的索引。如果回调从不返回真值，或者数组的<code>length</code>为0，则<code>findIndex</code>返回-1。 与某些其他数组方法（如Array#some）不同，在稀疏数组中，即使对于数组中不存在的条目的索引也会调用回调函数。</p>
+<p><code>findIndex</code>方法对数组中的每个数组索引<code>0..length-1</code>（包括）执行一次<code>callback</code>函数，直到找到一个<code>callback</code>函数返回真实值（强制为<code>true</code>）的值。如果找到这样的元素，<code>findIndex</code>会立即返回该元素的索引。如果回调从不返回真值，或者数组的<code>length</code>为 0，则<code>findIndex</code>返回-1。 与某些其他数组方法（如 Array#some）不同，在稀疏数组中，即使对于数组中不存在的条目的索引也会调用回调函数。</p>
 
 <p>回调函数调用时有三个参数：元素的值，元素的索引，以及被遍历的数组。</p>
 
@@ -56,13 +56,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <p>在第一次调用<code>callback</code>函数时会确定元素的索引范围，因此在<code>findIndex</code>方法开始执行之后添加到数组的新元素将不会被<code>callback</code>函数访问到。如果数组中一个尚未被<code>callback</code>函数访问到的元素的值被<code>callback</code>函数所改变，那么当<code>callback</code>函数访问到它时，它的值是将是根据它在数组中的索引所访问到的当前值。被删除的元素仍然会被访问到。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Testing_size_of_all_array_elements" name="Example:_Testing_size_of_all_array_elements">查找数组中首个质数元素的索引</h3>
+<h3 id="Example_Testing_size_of_all_array_elements">查找数组中首个质数元素的索引</h3>
 
-<p><span style="line-height: inherit;">以下示例查找数组中素数的元素的索引（如果不存在素数，则返回-1）。</span></p>
+<p>以下示例查找数组中素数的元素的索引（如果不存在素数，则返回-1）。</p>
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+<pre class="brush: js">function isPrime(element, index, array) {
   var start = 2;
   while (start &lt;= Math.sqrt(element)) {
     if (element % start++ &lt; 1) {
@@ -77,7 +77,7 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {
@@ -123,9 +123,9 @@ if (!Array.prototype.findIndex) {
 }
 </pre>
 
-<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的JavaScript引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
+<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
 
-<p>使用此方法需要注意你是否在uc浏览器环境,如果你的页面在支付宝上使用尤其注意,因为支付宝使用的就是uc浏览器环境.</p>
+<p>使用此方法需要注意你是否在 uc 浏览器环境，如果你的页面在支付宝上使用尤其注意，因为支付宝使用的就是 uc 浏览器环境。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -153,7 +153,7 @@ if (!Array.prototype.findIndex) {
 
 <p>{{Compat("javascript.builtins.Array.findIndex")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.find()")}}</li>

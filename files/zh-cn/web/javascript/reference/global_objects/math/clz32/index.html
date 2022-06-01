@@ -5,33 +5,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
-<p><code><strong>Math.clz32() </strong></code>函数返回一个数字在转换成 32 无符号整形数字的二进制形式后, 开头的 0 的个数, 比如 <code>1000000</code> 转换成 32 位无符号整形数字的二进制形式后是 <code>00000000000011110100001001000000</code>, 开头的 0 的个数是 12 个, 则 <code>Math.clz32(1000000)</code> 返回 <code>12</code>.</p>
+<p><code><strong>Math.clz32() </strong></code>函数返回一个数字在转换成 32 无符号整形数字的二进制形式后，开头的 0 的个数，比如 <code>1000000</code> 转换成 32 位无符号整形数字的二进制形式后是 <code>00000000000011110100001001000000</code>, 开头的 0 的个数是 12 个，则 <code>Math.clz32(1000000)</code> 返回 <code>12</code>.</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.clz32 (x)
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt>x</dt>
- <dd>一个数字.</dd>
+ <dd>一个数字。</dd>
 </dl>
 
-<h2 id="描述" style="line-height: 30px;">描述</h2>
+<h2 id="描述">描述</h2>
 
-<p>"clz32" 是 CountLeadingZeroes32 的缩写.</p>
+<p>"clz32" 是 CountLeadingZeroes32 的缩写。</p>
 
-<p>如果 <code>x</code> 不是数字类型, 则它首先会被转换成数字类型, 然后再转成 32 位无符号整形数字. </p>
+<p>如果 <code>x</code> 不是数字类型，则它首先会被转换成数字类型，然后再转成 32 位无符号整形数字. </p>
 
 <p>如果转换后的 32 位无符号整形数字是 <code>0</code>, 则返回 <code>32</code>, 因为此时所有位上都是 <code>0</code>.</p>
 
 <p><code>NaN</code>, <code>Infinity</code>,<code> -Infinity</code> 这三个数字转成 32 位无符号整形数字后都是 <code>0</code>.</p>
 
-<p><span>这个函数主要用于那些编译目标为 JS 语言的系统中, 比如 Emscripten.</span></p>
+<p>这个函数主要用于那些编译目标为 JS 语言的系统中，比如 Emscripten.</p>
 
 <h2 id="示例">示例</h2>
 
@@ -45,17 +45,17 @@ Math.clz32(true)             // 31
 Math.clz32(3.5)              // 30
 </pre>
 
-<h2 id="Compatibility" name="Compatibility">计算前导1的个数</h2>
+<h2 id="Compatibility">计算前导 1 的个数</h2>
 
-<p>目前javascript尚未提供<code>Math.clon</code>函数来计算前导1的个数（之所以叫“clon”而非“clo”，是因为“clo”与“clz”太过相似，特别对那些母语不是英语的人来说），但是你可以通过将一个数取反并将其作为<code>Math.clz32</code>的参数来实现clon函数。其中的原理非常简单，因为对1取反是0，反之亦然，所以用<code>Math.clz32</code>计算前导0的个数就变成计算前导1的个数。</p>
+<p>目前 javascript 尚未提供 <code>Math.clon</code> 函数来计算前导 1 的个数（之所以叫“clon”而非“clo”，是因为“clo”与“clz”太过相似，特别对那些母语不是英语的人来说），但是你可以通过将一个数取反并将其作为 <code>Math.clz32</code> 的参数来实现 clon 函数。其中的原理非常简单，因为对 1 取反是 0，反之亦然，所以用 <code>Math.clz32</code> 计算前导 0 的个数就变成计算前导 1 的个数。</p>
 
 <p>先看以下代码：</p>
 
-<pre>var a = 32776;   // 00000000000000001000000000001000 (16个前导0)
+<pre>var a = 32776;   // 00000000000000001000000000001000 (16 个前导 0)
 Math.clz32(a);   // 16
 
-var b = ~32776;  // 11111111111111110111111111110111 (对32776取反, 0个前导0)
-Math.clz32(b);   // 0 (相当于0个前导1)</pre>
+var b = ~32776;  // 11111111111111110111111111110111 (对 32776 取反，0 个前导 0)
+Math.clz32(b);   // 0 (相当于 0 个前导 1)</pre>
 
 <p>通过以上方法，<code>clon</code> 函数可以定义如下：</p>
 
@@ -64,75 +64,75 @@ function clon(integer){
     return clz(~integer);
 }</pre>
 
-<p>现在，我们可以进一步实现计算“尾随0”和“尾随1”的个数了。下面的<code>ctrz</code>函数将第一个1之后的高数位全部置为1然后取反，再用<code>Math.clz32求得</code>尾随0的个数。</p>
+<p>现在，我们可以进一步实现计算“尾随 0”和“尾随 1”的个数了。下面的<code>ctrz</code>函数将第一个 1 之后的高数位全部置为 1 然后取反，再用<code>Math.clz32 求得</code>尾随 0 的个数。</p>
 
 <pre>var clz = Math.clz32;
-function ctrz(integer){ // 计算尾随0个数
-    // 1. 将第一个1之后的高数位全部置为1
+function ctrz(integer){ // 计算尾随 0 个数
+    // 1. 将第一个 1 之后的高数位全部置为 1
     // 00000000000000001000000000001000 =&gt; 11111111111111111111111111111000
     integer |= integer &lt;&lt; 16;
     integer |= integer &lt;&lt; 8;
     integer |= integer &lt;&lt; 4;
     integer |= integer &lt;&lt; 2;
     integer |= integer &lt;&lt; 1;
-    // 2. 然后，对该数取反，此时低位的1的个数即为所求
+    // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
     return 32 - clz(~integer) |0; // `|0`用于保证结果为整数
 }
-function ctron(integer){ // 计算尾随1个数
-    // JavaScript中没有移位补1的运算符
+function ctron(integer){ // 计算尾随 1 个数
+    // JavaScript 中没有移位补 1 的运算符
     // 所以下面的代码是最快的
     return ctrz(~integer);
     /* 为了看起来比较对称，你也可以使用以下代码：
-       // 1. 将第一个0之后的高数位全部置为0
+       // 1. 将第一个 0 之后的高数位全部置为 0
        integer &amp;= (integer &lt;&lt; 16) | 0xffff;
        integer &amp;= (integer &lt;&lt; 8 ) | 0x00ff;
        integer &amp;= (integer &lt;&lt; 4 ) | 0x000f;
        integer &amp;= (integer &lt;&lt; 2 ) | 0x0003;
        integer &amp;= (integer &lt;&lt; 1 ) | 0x0001;
-       // 2. 然后，对该数取反，此时低位的0的个数即为所求
+       // 2. 然后，对该数取反，此时低位的 0 的个数即为所求
        return 32 - clon(~integer) |0;
     */
 }</pre>
 
-<p>将以上函数改写成 ASM.JS模块——然后，你就可以去跟别人炫耀了！ASM.JS就是用来干这个的。</p>
+<p>将以上函数改写成 ASM.JS 模块——然后，你就可以去跟别人炫耀了！ASM.JS 就是用来干这个的。</p>
 
 <pre>var countTrailsMethods = (function(stdlib, foreign, heap) {
     "use asm";
     var clz = stdlib.Math.clz32;
-    function ctrz(integer) { // 计算尾随0个数
+    function ctrz(integer) { // 计算尾随 0 个数
         integer = integer | 0; // 确保是整数
-        // 1. 将第一个1之后的高数位全部置为1
-        // ASMjs中不允许^=、&amp;=、和|=
+        // 1. 将第一个 1 之后的高数位全部置为 1
+        // ASMjs 中不允许^=、&amp;=、和 |=
         integer = integer | (integer &lt;&lt; 16);
         integer = integer | (integer &lt;&lt; 8);
         integer = integer | (integer &lt;&lt; 4);
         integer = integer | (integer &lt;&lt; 2);
         integer = integer | (integer &lt;&lt; 1);
-        // 2. 然后，对该数取反，此时低位的1的个数即为所求
+        // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
         return 32 - clz(~integer) |0;
     }
-    function ctron(integer) { // 计算尾随1个数
+    function ctron(integer) { // 计算尾随 1 个数
         integer = integer | 0; // 确保是整数
         return ctrz(~integer) |0;
     }
-    // 蛋疼的是，ASM.JS必须使用糟糕的object类型：
+    // 蛋疼的是，ASM.JS 必须使用糟糕的 object 类型：
     // unfourtunately, ASM.JS demands slow crummy objects:
     return {a: ctrz, b: ctron};
 })(window, null, null);
 var ctrz = countTrailsMethods.a;
 var ctron = countTrailsMethods.b;</pre>
 
-<h2 id="Compatibility" name="Compatibility">Polyfill</h2>
+<h2 id="Compatibility">Polyfill</h2>
 
-<p>这个polyfill效率最高。</p>
+<p>这个 polyfill 效率最高。</p>
 
 <pre>if (!Math.clz32) Math.clz32 = (function(log, LN2){
   return function(x) {
-    var asUint = x &gt;&gt;&gt; 0; // 将x转换为Uint32类型
+    var asUint = x &gt;&gt;&gt; 0; // 将 x 转换为 Uint32 类型
     if (asUint === 0) {
       return 32;
     }
-    return 31 - (log(asUint) / LN2 | 0) |0; // "| 0"相当于Math.floor
+    return 31 - (log(asUint) / LN2 | 0) |0; // "| 0"相当于 Math.floor
   };
 })(Math.log, Math.LN2);</pre>
 
@@ -157,7 +157,7 @@ var ctron = countTrailsMethods.b;</pre>
 
 <p>{{Compat("javascript.builtins.Math.clz32")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Math")}}</li>

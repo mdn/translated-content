@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate"><var>regexObj</var>.test(<var>str</var>)</pre>
+<pre class="syntaxbox "><var>regexObj</var>.test(<var>str</var>)</pre>
 
 <h3 id="매개변수">매개변수</h3>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <p>문자열의 맨 처음에 <code>"hello"</code>가 포함됐는지 알아보는 간단한 예제 코드입니다.</p>
 
-<pre class="brush: js notranslate">const str = 'hello world!';
+<pre class="brush: js ">const str = 'hello world!';
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -56,7 +56,7 @@ console.log(result); // true
 
 <p>다음은 일치 여부에 따라 다른 메시지를 기록하는 예제입니다.</p>
 
-<pre class="brush: js notranslate">function testInput(re, str) {
+<pre class="brush: js ">function testInput(re, str) {
   let midstring;
   if (re.test(str)) {
     midstring = 'contains';
@@ -81,7 +81,7 @@ console.log(result); // true
 
 <p>이 행동에 대한 예제가 다음 코드입니다.</p>
 
-<pre class="brush: js notranslate">const regex = /foo/g; // the "global" flag is set
+<pre class="brush: js ">const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
 regex.test('foo')     // true

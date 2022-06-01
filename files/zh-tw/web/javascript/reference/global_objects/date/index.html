@@ -18,31 +18,31 @@ new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minutes</var>[, <var>seconds</var>[, <var>milliseconds</var>]]]]]);
 </pre>
 
-<div class="note">
-<p><strong>附註：</strong> JavaScript <code>Date</code> 物件只能由以 Date 作為建構子來產生，如果把 Date 作為一般的函數來呼叫（省略掉 {{jsxref("Operators/new", "new")}} 運算子）將會得到一個字串而非 Date 物件；與其它 JavaScript 物件不同，它並沒有物件實體語法（例如：以中刮號 [ ] 表示陣列的宣告方式）。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>JavaScript <code>Date</code> 物件只能由以 Date 作為建構子來產生，如果把 Date 作為一般的函數來呼叫（省略掉 {{jsxref("Operators/new", "new")}} 運算子）將會得到一個字串而非 Date 物件；與其它 JavaScript 物件不同，它並沒有物件實體語法（例如：以中刮號 [ ] 表示陣列的宣告方式）。</p>
 </div>
 
 <h3 id="參數">參數</h3>
 
-<div class="note">
-<p><strong>附註：</strong>當傳入超過一個參數到 Date 建構子，若參數值超過它的合理範圍（例如：傳數值 13 到月份，或傳數值 70 給分鐘），相鄰的參數值將會被調整。例如： <code>new Date(2013, 13, 1)</code> 將等同於 <code>new Date(2014, 1, 1)</code> 都會建立代表 <code>2014-02-01</code> 的物件（注意月份值由 0 開始）。同樣的， <code>new Date(2013, 2, 1, 0, 70)</code> 與 <code>new Date(2013, 2, 1, 1, 10)</code> 一樣會建立代表 <code>2013-03-01T01:10:00</code> 的 Date 物件。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>當傳入超過一個參數到 Date 建構子，若參數值超過它的合理範圍（例如：傳數值 13 到月份，或傳數值 70 給分鐘），相鄰的參數值將會被調整。例如： <code>new Date(2013, 13, 1)</code> 將等同於 <code>new Date(2014, 1, 1)</code> 都會建立代表 <code>2014-02-01</code> 的物件（注意月份值由 0 開始）。同樣的， <code>new Date(2013, 2, 1, 0, 70)</code> 與 <code>new Date(2013, 2, 1, 1, 10)</code> 一樣會建立代表 <code>2013-03-01T01:10:00</code> 的 Date 物件。</p>
 </div>
 
-<div class="note">
-<p><strong>附註：</strong>當傳入超過一個參數到 Date 建構子，所指定的參數值會視為本地時間。如果希望指定的值為世界標準時間（UTC），則應使用 <code>new Date({{jsxref("Date.UTC()", "Date.UTC(...)")}})</code> 語法，傳入一樣格式的參數。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>當傳入超過一個參數到 Date 建構子，所指定的參數值會視為本地時間。如果希望指定的值為世界標準時間（UTC），則應使用 <code>new Date({{jsxref("Date.UTC()", "Date.UTC(...)")}})</code> 語法，傳入一樣格式的參數。</p>
 </div>
 
 <dl>
  <dt><code>value</code></dt>
- <dd>自世界標準時間（UTC） 1970 年 1 月 1 日 00:00:00 開始的毫秒整數（Integer）值（Unix 紀元；但要注意到大多 Unix 時間<span class="short_text" id="result_box" lang="zh-CN"><span>戳記是以秒而非毫秒為單位）。</span></span></dd>
+ <dd>自世界標準時間（UTC） 1970 年 1 月 1 日 00:00:00 開始的毫秒整數（Integer）值（Unix 紀元；但要注意到大多 Unix 時間戳記是以秒而非毫秒為單位）。</dd>
  <dt><code>dateString</code></dt>
  <dd>表示時間日期的字串。這個字串應該要能被 {{jsxref("Date.parse()")}} 方法解析（符合 <a href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 timestamps</a> 及 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a> 格式要求).
- <div class="note">
- <p><strong>附註：</strong> 由於各家瀏覽器有所不同且具有差異性，因此非常不鼓勵使用 Date 建構子（或 <code>Date.parse</code> 方法，它們是同等的）來解析時間日期字串。</p>
+ <div class="notecard note">
+ <p><strong>備註：</strong>由於各家瀏覽器有所不同且具有差異性，因此非常不鼓勵使用 Date 建構子（或 <code>Date.parse</code> 方法，它們是同等的）來解析時間日期字串。</p>
  </div>
  </dd>
  <dt><code>year</code></dt>
- <dd>表示年份的整數。當數值落在 0 到 99 之間，表示 1900 到 1999 之間的年份。參考{{anch("Two_digit_years_map_to_1900_-_1999", "下面的範例")}}.</dd>
+ <dd>表示年份的整數。當數值落在 0 到 99 之間，表示 1900 到 1999 之間的年份。參考<a href="#兩位數的年份對應到_1900_-_1999">下面的範例</a>.</dd>
  <dt><code>month</code></dt>
  <dd>表示月份的整數。由 0 開始（一月）到 11 （十二月）。</dd>
  <dt><code>day</code></dt>
@@ -84,8 +84,8 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
  <dd>回傳對應於當下時間的數值 - 1970/01/01 00:00:00 (UTC) 到當下的毫秒數。</dd>
  <dt>{{jsxref("Date.parse()")}}</dt>
  <dd>解析字串所表示的時間，回傳由 1970/01/01 00:00:00 (UTC) 到該時間的毫秒數值。
- <div class="note">
- <p><strong>附註：</strong>由於瀏覽器之間的不同與差異，強烈不建議使用 <code>Date.parse</code> 。</p>
+ <div class="notecard note">
+ <p><strong>備註：</strong>由於瀏覽器之間的不同與差異，強烈不建議使用 <code>Date.parse</code> 。</p>
  </div>
  </dd>
  <dt>{{jsxref("Date.UTC()")}}</dt>
@@ -106,8 +106,8 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <p>接下來的幾個範例，展示幾種建立 Date 物件的方式：</p>
 
-<div class="note">
-<p><strong>附註：</strong> 由於瀏覽器之間的不同與差異，強烈不建議使用解析字串的方式建立 Date 物件。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>由於瀏覽器之間的不同與差異，強烈不建議使用解析字串的方式建立 Date 物件。</p>
 </div>
 
 <pre class="brush: js">var today = new Date();
@@ -166,97 +166,17 @@ function printElapsedTime(fTest) {
 yourFunctionReturn = printElapsedTime(yourFunction);
 </pre>
 
-<div class="note">
-<p><strong>附註：</strong>在瀏覽器支援 {{domxref("window.performance", "Web Performance API", "", 1)}} 高精度特性下， {{domxref("Performance.now()")}} 可以提供比 {{jsxref("Date.now()")}} 更可靠、精確的執行時間測試結果。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>在瀏覽器支援 {{domxref("window.performance", "Web Performance API", "", 1)}} 高精度特性下， {{domxref("Performance.now()")}} 可以提供比 {{jsxref("Date.now()")}} 更可靠、精確的執行時間測試結果。</p>
 </div>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date-objects', 'Date')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date-objects', 'Date')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9', 'Date')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初步定義。實作在 JavaScript 1.1。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>平台</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>
-    <p>基本支援</p>
-   </td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}} [2]</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>平台</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>
-    <p>基本支援</p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] 一些瀏覽器在解析日期時間會發生問題： <a href="http://dygraphs.com/date-formats.html">3/14/2012 blog from danvk Comparing FF/IE/Chrome on Parsing Date Strings</a></p>
 

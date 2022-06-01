@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>WebAssembly.Global</code></strong> 对象表示一个全局变量实例, 可以被JavaScript 和importable/exportable 访问 ,跨越一个或多个{{jsxref("WebAssembly.Module")}} 实例. 他允许被多个modules动态连接.</p>
+<p><strong><code>WebAssembly.Global</code></strong> 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问 ,跨越一个或多个{{jsxref("WebAssembly.Module")}} 实例。他允许被多个 modules 动态连接。</p>
 
 <h2 id="构造函数语法">构造函数语法</h2>
 
@@ -15,35 +15,35 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 
 <h2 id="Global_实例">Global 实例</h2>
 
-<p>所有的 <code>Global</code> 实例 继承自 <code>Global()</code> 构造函数 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype">prototype object</a> — 修改会影响 所有 <code>Global</code> 实例.</p>
+<p>所有的 <code>Global</code> 实例 继承自 <code>Global()</code> 构造函数 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype">prototype object</a> — 修改会影响 所有 <code>Global</code> 实例。</p>
 
 <h3 id="实例属性">实例属性</h3>
 
 <dl>
  <dt><code>Global.prototype.constructor</code></dt>
- <dd>返回创建对象实例的函数. 缺省为构造函数为 {{jsxref("WebAssembly.Global()")}}</dd>
+ <dd>返回创建对象实例的函数。缺省为构造函数为 {{jsxref("WebAssembly.Global()")}}</dd>
  <dt><code>Global.prototype[@@toStringTag]</code></dt>
  <dd>属性 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag">@@toStringTag</a> 初始值为字符串 "WebAssembly.Global".</dd>
  <dt><code>Global.prototype.value</code></dt>
- <dd>全局变量包含的值 — 可以直接用于设置和获取全局变量的值.</dd>
+ <dd>全局变量包含的值 — 可以直接用于设置和获取全局变量的值。</dd>
 </dl>
 
 <h3 id="实例方法">实例方法</h3>
 
 <dl>
  <dt><code>Global.prototype.valueOf()</code></dt>
- <dd>旧式的方法，返回全局变量包含的值.</dd>
+ <dd>旧式的方法，返回全局变量包含的值。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="创建_Global_实例">创建 Global 实例 </h3>
 
-<p>以下例子展示了使用 <code>WebAssembly.Global()</code> 构造函数创建一个新的实例. 它定义为可修饰的 类型为<code>i32</code> , 值为 0.</p>
+<p>以下例子展示了使用 <code>WebAssembly.Global()</code> 构造函数创建一个新的实例。它定义为可修饰的类型为<code>i32</code>，值为 0。</p>
 
-<p>global的值发生改变, 首先设置<code>Global.value</code> 为42, 然后使用导出函数 <code>incGlobal()</code> 增加为43. 导出函数在 <code>global.wasm</code> 模块中(它将参数的值加一并返回).</p>
+<p>global 的值发生改变，首先设置<code>Global.value</code> 为 42，然后使用导出函数 <code>incGlobal()</code> 增加为 43. 导出函数在 <code>global.wasm</code> 模块中 (它将参数的值加一并返回).</p>
 
-<pre class="brush: js notranslate">const output = document.getElementById('output');
+<pre class="brush: js">const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
     output.innerHTML += `Testing ${msg}: `;
@@ -67,7 +67,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以在<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a> 查看例子; 也可以访问<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
+<p><strong>备注：</strong>: 你可以在<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a> 查看例子; 也可以访问<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
 </div>
 
 <h2 id="规格">规格</h2>
@@ -89,13 +89,9 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.WebAssembly.Global")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

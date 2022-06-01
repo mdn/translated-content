@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
 <div>{{JSRef}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><strong><code>Number.parseInt()</code></strong> 方法依据指定基数 [ 参数 <strong>radix </strong>的值]，把字符串 [ 参数 <strong>string</strong> 的值] 解析成整数。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Number.parseInt(<var>string</var>[, <var>radix</var>])</code>
 </pre>
@@ -23,22 +23,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 
 <p>{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Parameters")}} </p>
 
-<p>参数string：要解析的值。 如果此参数不是字符串，则使用ToString抽象操作将其转换为字符串。忽略此参数中的前导空格。<br>
- 参数radix：一个介于2到36之间的整数，代表字符串的基数(数学数字系统中的基)。小心-这并不是默认为10。</p>
+<p>参数 string：要解析的值。 如果此参数不是字符串，则使用 ToString 抽象操作将其转换为字符串。忽略此参数中的前导空格。<br>
+ 参数 radix：一个介于 2 到 36 之间的整数，代表字符串的基数 (数学数字系统中的基)。小心 - 这并不是默认为 10。</p>
 
 <h3 id="返回值">返回值</h3>
 
 <p>{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Return value")}}</p>
 
-<p>从给定字符串中解析的整数。如果基数小于11，且第一个非空白字符不能转换为数字，则返回NaN。</p>
+<p>从给定字符串中解析的整数。如果基数小于 11，且第一个非空白字符不能转换为数字，则返回 NaN。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>这个方法和全局的 {{jsxref("parseInt", "parseInt()")}} 函数具有一样的函数功能:</p>
+<p>这个方法和全局的 {{jsxref("parseInt", "parseInt()")}} 函数具有一样的函数功能：</p>
 
 <pre><code>Number.parseInt === parseInt; // true</code></pre>
 
-<p>ECMAScript 2015添加了这部分 (其目的是对全局变量进行模块化). 请另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例.</p>
+<p>ECMAScript 2015 添加了这部分 (其目的是对全局变量进行模块化). 请另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例。</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
   <tr>
    <td>{{SpecName('ES2015', '#sec-number.parseint', 'Number.parseInt')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td>初始定义.</td>
+   <td>初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}}</td>
@@ -74,7 +74,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 
 <p>{{Compat("javascript.builtins.Number.parseInt")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><code>{{jsxref("Global_Objects/Number", "Number()")}}</code></li>

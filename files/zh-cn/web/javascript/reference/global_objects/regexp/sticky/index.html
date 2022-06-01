@@ -29,15 +29,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 var regex = /foo/y;
 
 regex.lastIndex = 1;
-regex.test(str); // true （译注：此例仅当 lastIndex = 1 时匹配成功，这就是 sticky 的作用）
+regex.test(str); // true（译注：此例仅当 lastIndex = 1 时匹配成功，这就是 sticky 的作用）
 regex.lastIndex = 5;
-regex.test(str); // false （lastIndex 被 sticky 标志考虑到，从而导致匹配失败）
-regex.lastIndex; // 0 （匹配失败后重置）
+regex.test(str); // false（lastIndex 被 sticky 标志考虑到，从而导致匹配失败）
+regex.lastIndex; // 0（匹配失败后重置）
 </pre>
 
 <h3 id="锚定的_sticky_标志">锚定的 sticky 标志</h3>
 
-<p>火狐的 SpiderMonkey 引擎的几个版本有一个 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773687">bug</a>，处理 <code>^</code> 断言和 sticky 标志时，会允许使用了 sticky 标志的表达式从 <code>^</code> 断言开始匹配，这是不对的。这个 bug 是在 Firefox 3.6 之后的某个版本引入的（which had the sticky flag but not the bug）并于2015年修复。 可能正因为这个 bug， ES2015 规范 <a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion">特别指出</a>：</p>
+<p>火狐的 SpiderMonkey 引擎的几个版本有一个 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773687">bug</a>，处理 <code>^</code> 断言和 sticky 标志时，会允许使用了 sticky 标志的表达式从 <code>^</code> 断言开始匹配，这是不对的。这个 bug 是在 Firefox 3.6 之后的某个版本引入的（which had the sticky flag but not the bug）并于 2015 年修复。 可能正因为这个 bug， ES2015 规范 <a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion">特别指出</a>：</p>
 
 <blockquote>
 <p>当使用带有 <code>y</code> 标识的匹配模式时，^ 断言总是会匹配输入的开始位置或者（如果是多行模式）每一行的开始位置。</p>
@@ -47,13 +47,13 @@ regex.lastIndex; // 0 （匹配失败后重置）
 
 <pre class="brush: js">var regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test("..foo");   // false - 索引2不是字符串的开始
+regex.test("..foo");   // false - 索引 2 不是字符串的开始
 
 var regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test("..foo");  // false - 索引2不是字符串或行的开始
+regex2.test("..foo");  // false - 索引 2 不是字符串或行的开始
 regex2.lastIndex = 2;
-regex2.test(".\nfoo"); // true - 索引2是行的开始
+regex2.test(".\nfoo"); // true - 索引 2 是行的开始
 </pre>
 
 <h2 id="规范">规范</h2>
@@ -73,9 +73,9 @@ regex2.test(".\nfoo"); // true - 索引2是行的开始
 
 <p>{{Compat("javascript.builtins.RegExp.sticky")}}</p>
 
-<div></div>
 
-<h2 id="相关链接"><span style="">相关链接</span></h2>
+
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
  <li>{{jsxref("RegExp.lastIndex")}}</li>

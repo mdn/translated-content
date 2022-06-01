@@ -12,7 +12,7 @@ translation_of: Web/API/CloseEvent
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p><code>CloseEvent</code> 会在连接关闭时发送给使用 {{Glossary("WebSockets")}} 的客户端. 它在 <code>WebSocket</code> <code>对象的</code> <code>onclose</code> 事件监听器中使用.</p>
+<p><code>CloseEvent</code> 会在连接关闭时发送给使用 {{Glossary("WebSockets")}} 的客户端。它在 <code>WebSocket</code> <code>对象的</code> <code>onclose</code> 事件监听器中使用。</p>
 
 <h2 id="构造器">构造器</h2>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/CloseEvent
 
 <h2 id="属性">属性</h2>
 
-<p><em>该接口也继承了其父类 {{domxref("Event")}} 的属性.</em></p>
+<p><em>该接口也继承了其父类 {{domxref("Event")}} 的属性。</em></p>
 
 <dl>
  <dt>{{domxref("CloseEvent.code")}} {{readOnlyInline}}</dt>
- <dd>返回一个 unsigned short 类型的数字, 表示服务端发送的关闭码, 以下为已分配的状态码.
+ <dd>返回一个 unsigned short 类型的数字，表示服务端发送的关闭码，以下为已分配的状态码。
  <table class="standard-table" id="Status_codes">
   <tbody>
    <tr>
@@ -38,22 +38,22 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>0</code>–<code>999</code></td>
     <td></td>
-    <td><strong>保留段, 未使用.</strong></td>
+    <td><strong>保留段，未使用。</strong></td>
    </tr>
    <tr>
     <td><code>1000</code></td>
     <td><code>CLOSE_NORMAL</code></td>
-    <td>正常关闭; 无论为何目的而创建, 该链接都已成功完成任务.</td>
+    <td>正常关闭; 无论为何目的而创建，该链接都已成功完成任务。</td>
    </tr>
    <tr>
     <td><code>1001</code></td>
     <td><code>CLOSE_GOING_AWAY</code></td>
-    <td>终端离开, 可能因为服务端错误, 也可能因为浏览器正从打开连接的页面跳转离开.</td>
+    <td>终端离开，可能因为服务端错误，也可能因为浏览器正从打开连接的页面跳转离开。</td>
    </tr>
    <tr>
     <td><code>1002</code></td>
     <td><code>CLOSE_PROTOCOL_ERROR</code></td>
-    <td>由于协议错误而中断连接.</td>
+    <td>由于协议错误而中断连接。</td>
    </tr>
    <tr>
     <td><code>1003</code></td>
@@ -63,17 +63,17 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>1004</code></td>
     <td></td>
-    <td><strong>保留.</strong> 其意义可能会在未来定义.</td>
+    <td><strong>保留。</strong> 其意义可能会在未来定义。</td>
    </tr>
    <tr>
     <td><code>1005</code></td>
     <td><code>CLOSE_NO_STATUS</code></td>
-    <td><strong>保留.</strong>  表示没有收到预期的状态码.</td>
+    <td><strong>保留。</strong>  表示没有收到预期的状态码。</td>
    </tr>
    <tr>
     <td><code>1006</code></td>
     <td><code>CLOSE_ABNORMAL</code></td>
-    <td><strong>保留.</strong> 用于期望收到状态码时连接非正常关闭 (也就是说, 没有发送关闭帧).</td>
+    <td><strong>保留。</strong> 用于期望收到状态码时连接非正常关闭 (也就是说，没有发送关闭帧).</td>
    </tr>
    <tr>
     <td><code>1007</code></td>
@@ -83,153 +83,84 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>1008</code></td>
     <td>Policy Violation</td>
-    <td>由于收到不符合约定的数据而断开连接. 这是一个通用状态码, 用于不适合使用 1003 和 1009 状态码的场景.</td>
+    <td>由于收到不符合约定的数据而断开连接。这是一个通用状态码，用于不适合使用 1003 和 1009 状态码的场景。</td>
    </tr>
    <tr>
     <td><code>1009</code></td>
     <td><code>CLOSE_TOO_LARGE</code></td>
-    <td>由于收到过大的数据帧而断开连接.</td>
+    <td>由于收到过大的数据帧而断开连接。</td>
    </tr>
    <tr>
     <td><code>1010</code></td>
     <td>Missing Extension</td>
-    <td>客户端期望服务器商定一个或多个拓展, 但服务器没有处理, 因此客户端断开连接.</td>
+    <td>客户端期望服务器商定一个或多个拓展，但服务器没有处理，因此客户端断开连接。</td>
    </tr>
    <tr>
     <td><code>1011</code></td>
     <td>Internal Error</td>
-    <td>客户端由于遇到没有预料的情况阻止其完成请求, 因此服务端断开连接.</td>
+    <td>客户端由于遇到没有预料的情况阻止其完成请求，因此服务端断开连接。</td>
    </tr>
    <tr>
     <td><code>1012</code></td>
     <td>Service Restart</td>
-    <td>服务器由于重启而断开连接. [<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</td>
+    <td>服务器由于重启而断开连接。[<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</td>
    </tr>
    <tr>
     <td><code>1013</code></td>
     <td>Try Again Later</td>
-    <td>服务器由于临时原因断开连接, 如服务器过载因此断开一部分客户端连接. [<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</td>
+    <td>服务器由于临时原因断开连接，如服务器过载因此断开一部分客户端连接。[<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</td>
    </tr>
    <tr>
     <td><code>1014</code></td>
     <td></td>
-    <td><strong>由 WebSocket 标准保留以便未来使用.</strong></td>
+    <td><strong>由 WebSocket 标准保留以便未来使用。</strong></td>
    </tr>
    <tr>
     <td><code>1015</code></td>
     <td>TLS Handshake</td>
-    <td><strong>保留.</strong> 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td>
+    <td><strong>保留。</strong> 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td>
    </tr>
    <tr>
     <td><code>1016</code>–<code>1999</code></td>
     <td></td>
-    <td><strong>由 WebSocket 标准保留以便未来使用.</strong></td>
+    <td><strong>由 WebSocket 标准保留以便未来使用。</strong></td>
    </tr>
    <tr>
     <td><code>2000</code>–<code>2999</code></td>
     <td></td>
-    <td><strong>由 WebSocket 拓展保留使用.</strong></td>
+    <td><strong>由 WebSocket 拓展保留使用。</strong></td>
    </tr>
    <tr>
     <td><code>3000</code>–<code>3999</code></td>
     <td></td>
-    <td>?可以由库或框架使用.? <strong>不应</strong>由应用使用. 可以在 IANA 注册, 先到先得.</td>
+    <td>?可以由库或框架使用.? <strong>不应</strong>由应用使用。可以在 IANA 注册，先到先得。</td>
    </tr>
    <tr>
     <td><code>4000</code>–<code>4999</code></td>
     <td></td>
-    <td>可以由应用使用.</td>
+    <td>可以由应用使用。</td>
    </tr>
   </tbody>
  </table>
  </dd>
  <dt>{{domxref("CloseEvent.reason")}} {{readOnlyInline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}} 用以表示服务器关闭连接的原因. 这是由服务器和子协议决定的.</dd>
+ <dd>返回一个 {{domxref("DOMString")}} 用以表示服务器关闭连接的原因。这是由服务器和子协议决定的。</dd>
  <dt>{{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}</dt>
- <dd>返回一个 {{jsxref("Boolean")}} 用以表示连接是否完全关闭.</dd>
+ <dd>返回一个 {{jsxref("Boolean")}} 用以表示连接是否完全关闭。</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>该接口也继承了其父类 {{domxref("Event")}} 的属性.</em></p>
+<p><em>该接口也继承了其父类 {{domxref("Event")}} 的属性。</em></p>
 
 <dl>
  <dt>{{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Obsolete_inline}}</dt>
- <dd>初始化创建的 <code>CloseEvent</code> 的值. 如果该事件已经被处理, 这个方法什么也不做. 不要直接使用这个方法, 使用 {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} ?构造器来代替.</dd>
+ <dd>初始化创建的 <code>CloseEvent</code> 的值。如果该事件已经被处理，这个方法什么也不做。不要直接使用这个方法，使用 {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} ?构造器来代替。</dd>
 </dl>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("12.0")}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}<br>
-    {{CompatNo}} 41.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}<br>
-    {{CompatNo}} 41.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 8.0 {{geckoRelease("8.0")}} 以前, Gecko ?简单地发送 {{event("close")}} ?事件给 WebSocket ?监听器. ?对 <code>CloseEvent</code> ?的支持是在 Gecko 8.0 实现的.</p>
-
-<p>[2] Gecko 12.0 {{geckoRelease("12.0")}} 以前, Gecko 当通道由于未知错误关闭, 或是错误原因不在标准之内时会上报 <code>CLOSE_NORMAL</code> <code>状态码</code>. ?现在则使用 <code>CLOSE_GOING_AWAY</code> 代替.</p>
+{{Compat("api.CloseEvent")}}
 
 <h2 id="参考">参考</h2>
 

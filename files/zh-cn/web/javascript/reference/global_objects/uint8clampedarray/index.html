@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Uint8ClampedArray</code>（8位无符号整型固定数组）</strong> 类型化数组表示一个由值固定在0-255区间的8位无符号整型组成的数组；如果你指定一个在 [0,255] 区间外的值，它将被替换为0或255；如果你指定一个非整数，那么它将被设置为最接近它的整数。（数组）内容被初始化为0。一旦（数组）被创建，你可以使用对象的方法引用数组里的元素，或使用标准的数组索引语法（即使用方括号标记）。</p>
+<p><strong><code>Uint8ClampedArray</code>（8 位无符号整型固定数组）</strong> 类型化数组表示一个由值固定在 0-255 区间的 8 位无符号整型组成的数组；如果你指定一个在 [0,255] 区间外的值，它将被替换为 0 或 255；如果你指定一个非整数，那么它将被设置为最接近它的整数。（数组）内容被初始化为 0。一旦（数组）被创建，你可以使用对象的方法引用数组里的元素，或使用标准的数组索引语法（即使用方括号标记）。</p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new Uint8ClampedArray(length);
+<pre class="syntaxbox">new Uint8ClampedArray(length);
 new Uint8ClampedArray(typedArray);
 new Uint8ClampedArray(object);
 new Uint8ClampedArray(buffer [, byteOffset [, length]]);</pre>
@@ -20,9 +20,9 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}</dt>
- <dd>返回元素大小的一个数值。对 <code>Uint8ClampedArray</code> 而言是1。</dd>
+ <dd>返回元素大小的一个数值。对 <code>Uint8ClampedArray</code> 而言是 1。</dd>
  <dt>{{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}</dt>
- <dd>静态长度属性值为0。对于实际长度（元素的数量），见 {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}。</dd>
+ <dd>静态长度属性值为 0。对于实际长度（元素的数量），见 {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}。</dd>
  <dt>{{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}</dt>
  <dd>返回构造函数名的字符串值。对 <code>Uint8ClampedArray</code> 类型而言："Uint8ClampedArray"。</dd>
  <dt>{{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}</dt>
@@ -120,7 +120,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);</pre>
 
 <p>创建一个 <code>Uint8ClampedArray</code> 的不同方式：</p>
 
-<pre class="brush: js notranslate">// From a length
+<pre class="brush: js">// From a length
 var uintc8 = new Uint8ClampedArray(2);
 uintc8[0] = 42;
 uintc8[1] = 1337;
@@ -177,99 +177,17 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>7.0</td>
-   <td>{{ CompatGeckoDesktop(2) }}</td>
-   <td>11 (as of <a href="https://support.microsoft.com/en-us/kb/2929437">KB2929437</a>)</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>需要使用 <code>new</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>构造函数中可枚举</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(52) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(2) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
-  <tr>
-   <td>需要使用 <code>new</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>构造函数中可枚举</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(52) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="兼容性注意事项">兼容性注意事项</h2>
 
 <p>从 ECMAScript 2015 开始， <code>Uint8ClampedArray</code> 构造函数需要用一个 {{jsxref("Operators/new", "new")}} 操作符来构建。从现在开始，不使用 <code>new</code> 来调用一个 <code>Uint8ClampedArray</code> 构造函数将会抛出一个 {{jsxref("TypeError")}}。</p>
 
-<pre class="brush: js example-bad notranslate">var dv = Uint8ClampedArray([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Uint8ClampedArray([1, 2, 3]);
 // TypeError: calling a builtin Uint8ClampedArray constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new Uint8ClampedArray([1, 2, 3]);</pre>
+<pre class="brush: js example-good">var dv = new Uint8ClampedArray([1, 2, 3]);</pre>
 
 <h2 id="参见">参见</h2>
 

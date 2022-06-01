@@ -9,44 +9,46 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 <div>{{JSRef}}</div>
 
-<div><code><strong>Promise.resolve(value)</strong></code>方法返回一个以给定值解析后的{{jsxref("Promise")}} 对象。如果这个值是一个 promise ，那么将返回这个 promise ；如果这个值是thenable（即带有{{jsxref("Promise.then", "\"then\" ")}}方法），返回的promise会“跟随”这个thenable的对象，采用它的最终状态；否则返回的promise将以此值完成。<span style="font-size: 1rem; letter-spacing: -0.00278rem;">此函数将类promise对象的多层嵌套展平。</span></div>
+<div><code><strong>Promise.resolve(value)</strong></code>方法返回一个以给定值解析后的 {{jsxref("Promise")}} 对象。如果这个值是一个 promise ，那么将返回这个 promise ；如果这个值是 thenable（即带有 {{jsxref("Promise.then", "\"then\" ")}} 方法），返回的 promise 会“跟随”这个 thenable 的对象，采用它的最终状态；否则返回的 promise 将以此值完成。此函数将类 promise 对象的多层嵌套展平。</div>
 
-<div></div>
-
-<div></div>
-
-<div class="blockIndicator warning">
-<p>警告：不要在解析为自身的thenable 上调用<code>Promise.resolve</code>。这将导致无限递归，因为它试图展平无限嵌套的promise。一个例子是将它与Angular中的异步管道一起使用。在<a href="https://angular.io/guide/template-syntax#avoid-side-effects">此处</a>了解更多信息。</p>
+<div class="warning">
+<p><strong>警告：</strong>不要在解析为自身的 thenable 上调用<code>Promise.resolve</code>。这将导致无限递归，因为它试图展平无限嵌套的 promise。一个例子是将它与 Angular 中的异步管道一起使用。在<a href="https://angular.io/guide/template-syntax#avoid-side-effects">此处</a>了解更多信息。</p>
 </div>
+<div>例如下例代码</div>
+<pre class="brush: js">
+let thenable = {
+  then: (resolve, reject) => {
+    resolve(thenable)
+  }
+}
+
+Promise.resolve(thenable) //这会造成一个死循环
+</pre>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>Promise.resolve(value)</var>;
 </pre>
 
 <h3 id="参数">参数</h3>
 
-<dl>
- <dt>value</dt>
-</dl>
+<p>value</p>
 
-<p>将被<code>Promise</code>对象解析的参数，也可以是一个<code>Promise</code>对象，或者是一个thenable。</p>
+<p>将被 <code>Promise</code> 对象解析的参数，也可以是一个<code>Promise</code> 对象，或者是一个 thenable。</p>
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个带着给定值解析过的<code>Promise</code>对象，如果参数本身就是一个<code>Promise</code>对象，则直接返回这个<code>Promise</code>对象。</p>
+<p>返回一个带着给定值解析过的 <code>Promise</code> 对象，如果参数本身就是一个 <code>Promise</code> 对象，则直接返回这个 <code>Promise</code> 对象。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>静态方法 <code>Promise.resolve</code>返回一个解析过的<code>Promise</code>对象。</p>
+<p>静态方法 <code>Promise.resolve</code> 返回一个解析过的 <code>Promise</code> 对象。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用静态Promise.resolve方法">使用静态<code>Promise.resolve</code>方法</h3>
+<h3 id="使用静态_promise.resolve_方法">使用静态 <code>Promise.resolve</code> 方法</h3>
 
 <pre class="brush: js">Promise.resolve("Success").then(function(value) {
   console.log(value); // "Success"
@@ -55,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 });
 </pre>
 
-<h3 id="resolve一个数组">resolve一个数组</h3>
+<h3 id="resolve_一个数组">resolve 一个数组</h3>
 
 <pre class="brush: js">var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
@@ -63,7 +65,7 @@ p.then(function(v) {
 });
 </pre>
 
-<h3 id="resolve另一个promise">resolve另一个promise</h3>
+<h3 id="resolve_另一个_promise">resolve 另一个 promise</h3>
 
 <pre class="brush: js">var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
@@ -78,15 +80,15 @@ console.log('original === cast ? ' + (original === cast));
 *  value: 33
 */</pre>
 
-<p>日志顺序颠倒其实是由于异步地调用<code>then</code> 方法。在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">这里</a>查看<code>then</code> 是如何工作的。</p>
+<p>日志顺序颠倒其实是由于异步地调用 <code>then</code> 方法。在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">这里</a>查看 <code>then</code> 是如何工作的。</p>
 
 <h3 id="resolve_thenable_并抛出错误">resolve thenable 并抛出错误</h3>
 
-<pre class="brush: js">// Resolve一个thenable对象
+<pre class="brush: js">// Resolve 一个 thenable 对象
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill("fulfilled!"); }
 });
-console.log(p1 instanceof Promise) // true, 这是一个Promise对象
+console.log(p1 instanceof Promise) // true，这是一个 Promise 对象
 
 p1.then(function(v) {
     console.log(v); // 输出"fulfilled!"
@@ -94,7 +96,7 @@ p1.then(function(v) {
     // 不会被调用
 });
 
-// Thenable在callback之前抛出异常
+// Thenable 在 callback 之前抛出异常
 // Promise rejects
 var thenable = { then: function(resolve) {
   throw new TypeError("Throwing");
@@ -108,7 +110,7 @@ p2.then(function(v) {
   console.log(e); // TypeError: Throwing
 });
 
-// Thenable在callback之后抛出异常
+// Thenable 在 callback 之后抛出异常
 // Promise resolves
 var thenable = { then: function(resolve) {
   resolve("Resolving");
@@ -135,7 +137,7 @@ p3.then(function(v) {
   <tr>
    <td>{{SpecName('ES6', '#sec-promise.resolve', 'Promise.resolve')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>ECMA标准中的首次定义</td>
+   <td>ECMA 标准中的首次定义</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}}</td>

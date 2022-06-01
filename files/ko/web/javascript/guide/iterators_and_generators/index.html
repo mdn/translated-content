@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}</div>
 
-<p class="summary">컬렉션 내 각 항목 처리는 매우 흔한 연산입니다. JavaScript는 간단한 {{jsxref("Statements/for","for")}} 루프에서 {{jsxref("Global_Objects/Array/map","map()")}} 및 {{jsxref("Global_Objects/Array/filter","filter()")}}에 이르기까지, 컬렉션을 반복하는 많은 방법을 제공합니다. 반복기(iterator) 및 생성기(generator)는 반복 개념을 핵심 언어 내로 바로 가져와 {{jsxref("Statements/for...of","for...of")}} 루프의 동작(behavior)을 사용자 정의하는 메커니즘을 제공합니다.</p>
+<p >컬렉션 내 각 항목 처리는 매우 흔한 연산입니다. JavaScript는 간단한 {{jsxref("Statements/for","for")}} 루프에서 {{jsxref("Global_Objects/Array/map","map()")}} 및 {{jsxref("Global_Objects/Array/filter","filter()")}}에 이르기까지, 컬렉션을 반복하는 많은 방법을 제공합니다. 반복기(iterator) 및 생성기(generator)는 반복 개념을 핵심 언어 내로 바로 가져와 {{jsxref("Statements/for...of","for...of")}} 루프의 동작(behavior)을 사용자 정의하는 메커니즘을 제공합니다.</p>
 
 <p>자세한 내용은, 다음을 참조하세요:</p>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 <p>여기에 실습할 수 있는 예제가 있습니다.  <code>start</code>에서 <code>end</code>까지 <code>step</code> 수 만큼 띄어진  정수 시퀀스를 정의하는 간단한 범위 반복자를 만들 수 있습니다. 최종적으로 시퀀스의 크기가 반환됩니다.</p>
 
-<pre class="notranslate"><code>function makeRangeIterator(start = 0, end = Infinity, step = 1) {
+<pre><code>function makeRangeIterator(start = 0, end = Infinity, step = 1) {
     var nextIndex = start;
     var n = 0;
 
@@ -55,7 +55,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 <p>위의 반복자를 사용하면 아래와 같습니다:</p>
 
-<pre class="notranslate"><code>var it = makeRangeIterator(1, 4);
+<pre><code>var it = makeRangeIterator(1, 4);
 
 var result = it.next();
 while (!result.done) {
@@ -78,7 +78,7 @@ console.log("Iterated over sequence of size: ", result.value);</code>
 
 <p>위의 예제 코드에 생성자를 적용한 것입니다. 두 코드의 행위는 동일하지만, 생성자를 사용한 쪽이 쓰거나 읽기가 훨씬 쉽습니다. </p>
 
-<pre class="notranslate"><code>function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
+<pre><code>function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
     let n = 0;
     for (let i = start; i &lt; end; i += step) {
         n++;
@@ -99,7 +99,7 @@ console.log("Iterated over sequence of size: ", result.value);</code>
 
 <p>이와 같이 자신의 반복가능 객체를 만들 수 있습니다:</p>
 
-<pre class="notranslate"><code>var myIterable = {
+<pre><code>var myIterable = {
     *[Symbol.iterator]() {
         yield 1;
         yield 2;
@@ -126,7 +126,7 @@ or
 
 <p>일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_operator","spread syntax","","true")}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring_assignment","해체 할당","","true")}}.</p>
 
-<pre class="brush: js notranslate">for(let value of ['a', 'b', 'c']){
+<pre class="brush: js">for(let value of ['a', 'b', 'c']){
     console.log(value)
 }
 // "a"
@@ -155,7 +155,7 @@ a // "a"
 
 <p>여기 sequence(수열)을 재시작하기 위해 <code>next(x)</code>를 사용하는 피보나치 생성기가 있습니다:</p>
 
-<pre class="brush: js notranslate">function* fibonacci(){
+<pre class="brush: js">function* fibonacci(){
   var fn1 = 0;
   var fn2 = 1;
   while (true){
@@ -184,10 +184,10 @@ console.log(sequence.next().value);     // 1
 console.log(sequence.next().value);     // 2
 </pre>
 
-<p>You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the <code>yield</code> that is currently suspended were instead a <code>throw<em>value</em></code> statement.</p>
+<p>제너레이터의 {{jsxref("Global_Objects/Generator/throw","throw()")}} 메서드를 호출하고 throw해야 하는 예외 값을 전달하여 생성자가 예외를 throw하도록 할 수 있습니다. 이 예외는 생성기의 현재 일시 중단된 컨텍스트에서 throw됩니다. 마치 현재 일시 중단된 <code>yield</code> 가 대신 <code>throw<em>value</em></code> 문인 것처럼 말입니다.</p>
+  
+<p>예외가 생성기 내에서 포착되지 않으면 <code>throw()</code> 호출을 통해 전파되고 이후의 <code>next()</code> 호출은 <code>done</code> 속성이 <code>true</code> 가 됩니다.</p>
 
-<p>If the exception is not caught from within the generator,  it will propagate up through the call to <code>throw()</code>, and subsequent calls to <code>next()</code> will result in the <code>done</code> property being <code>true</code>.</p>
-
-<p>Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.</p>
+<p>제너레이터에는 주어진 값을 반환하고 제너레이터 자체를 완료하는 {{jsxref("Global_Objects/Generator/return","return(value)")}} 메서드가 있습니다.</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}</p>

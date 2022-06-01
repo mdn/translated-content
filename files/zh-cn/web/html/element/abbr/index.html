@@ -12,11 +12,11 @@ translation_of: Web/HTML/Element/abbr
 ---
 <p>{{HTMLRef}}</p>
 
-<p><span class="seoSummary"><strong>HTML 缩写元素</strong>（<strong><code>&lt;abbr&gt;</code></strong>）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。</span>若使用 <code>title</code> 属性，则它必须且仅可包含完整的描述内容。</p>
+<p><strong>HTML 缩写元素</strong>（<strong><code>&lt;abbr&gt;</code></strong>）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。若使用 <code>title</code> 属性，则它必须且仅可包含完整的描述内容。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}</div>
 
-<div></div>
+
 
 <p class="hidden">Github 的仓库中存储了该可交互化的示例项目。如果宁愿意为此可交互化的示例项目作出贡献，请克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们提起 pull 请求。</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/HTML/Element/abbr
 
 <h2 id="属性">属性</h2>
 
-<p><span style="line-height: 21px;"><span style="line-height: 21px;">这个元素只有</span></span><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a>。在同 <code>&lt;abbr&gt;</code> 元素一起使用的时候，{{htmlattrxref("title")}} 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。</p>
+<p>这个元素只有<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a>。在同 <code>&lt;abbr&gt;</code> 元素一起使用的时候，{{htmlattrxref("title")}} 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。</p>
 
 <p>你使用的每一个 <code>&lt;abbr&gt;</code>  元素与其它同类元素都是相互独立的，为其中一个提供 <code>title</code> 不会自动把相同的附加文字依附到其它内容文字相同的元素上。</p>
 
@@ -67,8 +67,7 @@ translation_of: Web/HTML/Element/abbr
  <li>当你想为缩写在文档流外提供一段扩展或定义的时候，为 <code>&lt;abbr&gt;</code> 设置一个合适的{{htmlattrxref("title")}}。</li>
  <li>在定义一个读者可能不太熟悉的缩写时，使用 <code>&lt;abbr&gt;</code> 和<code>title</code>属性或内联的文本来表现这个术语。</li>
  <li>当文本中出现需要进行语义上的标注的缩写词时，<code>&lt;abbr&gt;</code>元素可用于依次将其作用样式和脚本。</li>
- <li>You can use <code>&lt;abbr&gt;</code> in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example {{anch("Defining an abbreviation")}} below.</li>
- <li>可以将 <code>&lt;abbr&gt;</code> 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。 请参阅下面的示例 {{anch("定义一个缩写")}}。</li>
+ <li>可以将 <code>&lt;abbr&gt;</code> 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。 请参阅下面的示例 <a href="#定义一个缩写">定义一个缩写</a>。</li>
 </ul>
 
 <h3 id="语法注意事项">语法注意事项</h3>
@@ -101,7 +100,7 @@ translation_of: Web/HTML/Element/abbr
 
 <h3 id="缩写样式">缩写样式</h3>
 
-<p>你可以像这个简单的例子一样，用CSS来为缩写做一个样式。</p>
+<p>你可以像这个简单的例子一样，用 CSS 来为缩写做一个样式。</p>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -153,7 +152,7 @@ accessed.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}</p>
 
-<p>可以在 <em><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">How to mark abbreviations and make them understandable</a></em> 中浏览更多深层次的实例.</p>
+<p>可以在 <em><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">How to mark abbreviations and make them understandable</a></em> 中浏览更多深层次的实例。</p>
 
 <h2 id="可访问性问题">可访问性问题</h2>
 

@@ -18,8 +18,10 @@ La méthode **`set()`** permet d'enregistrer plusieurs valeurs dans le tableau t
 
 ## Syntaxe
 
-    typedArr.set(tableau [, décalage])
-    typedArr.set(tableauTypé [, décalage])
+```js
+typedArr.set(tableau [, décalage])
+typedArr.set(tableauTypé [, décalage])
+```
 
 ### Paramètres
 
@@ -56,7 +58,7 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                                 | {{Spec2('Typed Array')}} | Englobée avec ECMAScript 6.                     |
 | {{SpecName('ES6', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

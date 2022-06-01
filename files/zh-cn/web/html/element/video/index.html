@@ -22,7 +22,7 @@ translation_of: Web/HTML/Element/video
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;video&gt;</code> 元素</strong> 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。</span>你也可以将 <code>&lt;video&gt;</code>  标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。</p>
+<p><strong>HTML <code>&lt;video&gt;</code> 元素</strong> 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 <code>&lt;video&gt;</code>  标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}</div>
 
@@ -84,13 +84,11 @@ translation_of: Web/HTML/Element/video
 
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>视频显示区域的高度，单位是 <a href="https://drafts.csswg.org/css-values/#px" class="external" rel=" noopener">CSS 像素</a>（仅限绝对值；<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes" class="external" rel=" noopener">不支持百分比</a>）。</dd>
-
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>布尔属性；指定后，会在视频播放结束的时候，自动返回视频开始的地方，继续播放。</dd>
 
  <dt>{{htmlattrdef("muted")}}</dt>
  <dd>布尔属性，指明在视频中音频的默认设置。设置后，音频会初始化为静音。默认值是 false, 意味着视频播放的时候音频也会播放。</dd>
-
  <dt>{{htmlattrdef("playsinline")}}</dt>
  <dd>
   <p>布尔属性，指明视频将内联（inline）播放，即在元素的播放区域内。请注意，没有此属性并不意味着视频始终是全屏播放的。</p>
@@ -98,7 +96,6 @@ translation_of: Web/HTML/Element/video
 
  <dt>{{htmlattrdef("poster")}}</dt>
  <dd>海报帧图片 URL，用于在视频处于下载中的状态时显示。如果未指定该属性，则在视频第一帧可用之前不会显示任何内容，然后将视频的第一帧会作为海报（poster）帧来显示。</dd>
-
  <dt>{{htmlattrdef("preload")}}</dt>
  <dd>
   <p>该枚举属性旨在提示浏览器，作者认为在播放视频之前，加载哪些内容会达到最佳的用户体验。可能是下列值之一：</p>
@@ -255,7 +252,7 @@ translation_of: Web/HTML/Element/video
 <pre class="brush: html notranslate">&lt;!-- Simple video example --&gt;
 &lt;video src="videofile.ogg" autoplay poster="posterimage.jpg"&gt;
   抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以 &lt;a href="videofile.ogg"&gt;下载&lt;/a&gt;
-  并用你喜欢的播放器观看!
+  并用你喜欢的播放器观看！
 &lt;/video&gt;
 
 &lt;!-- Video with subtitles --&gt;
@@ -271,21 +268,21 @@ translation_of: Web/HTML/Element/video
 
 <h2 id="Server_support" name="Server_support">服务器支持</h2>
 
-<p>如果视频的MIME类型设置不正确，视频可能不会显示，或者显示包含一个X的灰色盒子（如果启用了JavaScript的话）。</p>
+<p>如果视频的 MIME 类型设置不正确，视频可能不会显示，或者显示包含一个 X 的灰色盒子（如果启用了 JavaScript 的话）。</p>
 
-<p>如果你提供的视频是Ogg Theora格式的，在Apache Web 服务器上， 你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在httpd.conf中的“AddType的”配置指令，把视频文件的扩展名(最常见的是".ogm", ".ogv", or ".ogg")添加到 MIME 类型 "video/ogg"， 来解决这个问题。</p>
+<p>如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上， 你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"， 来解决这个问题。</p>
 
 <pre class="notranslate">AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
 </pre>
 
-<p>如果你以 WebM 格式提供视频，在Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在httpd.conf中的“AddType的”配置指令，把视频文件的扩展名(最常见的是".webm")添加到 MIME 类型 "video/webm"， 来解决这个问题。</p>
+<p>如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"， 来解决这个问题。</p>
 
 <pre class="notranslate">AddType video/webm .webm
 </pre>
 
-<p>你的web主机可能会提供一个简单的接口来修改MIME类型配置，直到服务器全面升级。</p>
+<p>你的 web 主机可能会提供一个简单的接口来修改 MIME 类型配置，直到服务器全面升级。</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
@@ -306,9 +303,9 @@ AddType video/ogg .ogg
  </li>
  <li>使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 设置 video 中图像位置和大小</li>
  <li>{{htmlelement("audio")}}</li>
- <li><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content" title="使用 HTML5 audio 和 video">使用 HTML5 audio 和 video</a></li>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas" title="使用 canvas 操作 video">使用 canvas 操作 video</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media" title="Ogg 格式媒体文件的服务器配置">Ogg 格式媒体文件的服务器配置</a></li>
+ <li><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">使用 HTML5 audio 和 video</a></li>
+ <li><a href="/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">使用 canvas 操作 video</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media">Ogg 格式媒体文件的服务器配置</a></li>
 </ul>
 
 <p>{{HTMLRef}}</p>

@@ -53,7 +53,7 @@ right: unset;
     - pour les éléments à positionnement relatif : le décalage à droite que l'élément subit par rapport à sa position dans le flux normal s'il n'était pas positionné.
 
 - `<percentage>`
-  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} représentant le pourcentage de la largeur du bloc englobant.
+  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} représentant le pourcentage de la largeur du bloc englobant.
 - `auto`
 
   - : Un mot-clé qui représente :

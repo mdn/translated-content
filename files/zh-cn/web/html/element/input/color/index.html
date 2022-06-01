@@ -3,15 +3,15 @@ title: <input type="color">
 slug: Web/HTML/Element/Input/color
 translation_of: Web/HTML/Element/input/color
 ---
-<p><strong><code>&lt;input type="color"&gt;</code>元素</strong>是{{HTMLElement("input")}}元素中的一个特定种类，用来创建一个允许用户使用颜色选择器，或输入兼容CSS语法的颜色代码的区域。（不支持Alpha通道）</p>
+<p><strong><code>&lt;input type="color"&gt;</code>元素</strong>是{{HTMLElement("input")}}元素中的一个特定种类，用来创建一个允许用户使用颜色选择器，或输入兼容 CSS 语法的颜色代码的区域。（不支持 Alpha 通道）</p>
 
-<p>此元素的外观会因浏览器不同而不同，可能是简单的验证颜色输入格式的文本框，也可能使用平台原生或自定义样式的颜色选择器。其UI除要能接收文本格式的颜色外，未要求其他特性。（<a href="https://www.w3.org/TR/html5/forms.html#color-state-%28type=color%29">更多信息</a>）</p>
+<p>此元素的外观会因浏览器不同而不同，可能是简单的验证颜色输入格式的文本框，也可能使用平台原生或自定义样式的颜色选择器。其 UI 除要能接收文本格式的颜色外，未要求其他特性。（<a href="https://www.w3.org/TR/html5/forms.html#color-state-%28type=color%29">更多信息</a>）</p>
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流动区域</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_listed">列表</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_submittable">可提交</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_resettable">可重置</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form-associated_content">表单相关元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>, 可标记元素, 可触摸元素。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流动区域</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_listed">列表</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_submittable">可提交</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_resettable">可重置</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form-associated_content">表单相关元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>, 可标记元素，可触摸元素。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/input/color
    <td>任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
   </tr>
   <tr>
-   <th scope="row">DOM接口</th>
+   <th scope="row">DOM 接口</th>
    <td>{{domxref("HTMLInputElement")}}</td>
   </tr>
  </tbody>
@@ -38,17 +38,17 @@ translation_of: Web/HTML/Element/input/color
 
 <dl>
  <dt>{{htmlattrdef("autocomplete")}}{{HTMLVersionInline("5")}}</dt>
- <dd>设置颜色区域的autocomplete值。如果为true，则将自动填充颜色选择器上次存储的值。</dd>
+ <dd>设置颜色区域的 autocomplete 值。如果为 true，则将自动填充颜色选择器上次存储的值。</dd>
  <dt>{{htmlattrdef("autofocus")}}{{HTMLVersionInline("5")}}</dt>
  <dd>此布尔值属性使你可以指定当页面加载时，表单区域是否应当获得输入焦点。除非用户的操作覆盖这个属性，例如：在其他区域内进行输入。在整个文档中，只有一个元素可以拥有<strong>autofocus</strong>属性，值为布尔值。</dd>
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>
- <p>此布尔值标明颜色选择其是否不可用于交互。另外，disabled时的值不会随表单提交。</p>
+ <p>此布尔值标明颜色选择其是否不可用于交互。另外，disabled 时的值不会随表单提交。</p>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>随表单一起提交的颜色选择器的name。</dd>
+ <dd>随表单一起提交的颜色选择器的 name。</dd>
  <dt>{{htmlattrdef("value")}}</dt>
- <dd>颜色选择器的value，指定颜色选择器默认选择的颜色。input的value值必须是长度为7的字符串，以#开始，包含16进制格式的颜色值。例如：#FF0000为红色的16进制值。</dd>
+ <dd>颜色选择器的 value，指定颜色选择器默认选择的颜色。input 的 value 值必须是长度为 7 的字符串，以#开始，包含 16 进制格式的颜色值。例如：#FF0000 为红色的 16 进制值。</dd>
 </dl>
 
 <h2 id="使用">使用</h2>
@@ -69,11 +69,11 @@ translation_of: Web/HTML/Element/input/color
 
 <p>{{EmbedLiveSample("Providing_a_default_color", 700, 30)}}</p>
 
-<p>下面的图片展示了macOS平台Chrome浏览器的颜色选择器：</p>
+<p>下面的图片展示了 macOS 平台 Chrome 浏览器的颜色选择器：</p>
 
 <p><img alt="This is how an input type color looks on Mac and within Chrome" src="https://mdn.mozillademos.org/files/12311/Input_Type_Color_sample.png" style="height: 400px; width: 318px;"></p>
 
-<p>如果你没有手动指定的话，元素的默认值为<code>"#000000"</code>，即黑色。输入必须为7个字符，以"#"符号开始，后跟代表红、绿、蓝的十六进制字符各2个，形如<code>"#rrggbb"</code>。如果你想输入的颜色是其他格式（比如CSS中的<code>rgb()</code>或<code>rgba()</code>记法），在设定<code>value</code>值时必须将其转换为这种格式。</p>
+<p>如果你没有手动指定的话，元素的默认值为<code>"#000000"</code>，即黑色。输入必须为 7 个字符，以"#"符号开始，后跟代表红、绿、蓝的十六进制字符各 2 个，形如<code>"#rrggbb"</code>。如果你想输入的颜色是其他格式（比如 CSS 中的<code>rgb()</code>或<code>rgba()</code>记法），在设定<code>value</code>值时必须将其转换为这种格式。</p>
 
 <h3 id="监听颜色变化">监听颜色变化</h3>
 
@@ -86,14 +86,14 @@ translation_of: Web/HTML/Element/input/color
 
 <p>对于这两个事件，都可以通过{{domxref("HTMLInputElement.value", "value")}}属性获取新值。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">colorPicker<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"input"</span><span class="punctuation token">,</span> updateFirst<span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-colorPicker<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"change"</span><span class="punctuation token">,</span> watchColorPicker<span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">colorPicker.addEventListener("input", updateFirst, false);
+colorPicker.addEventListener("change", watchColorPicker, false);
 
-<span class="keyword token">function</span> <span class="function token">watchColorPicker</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">forEach</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>p<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    p<span class="punctuation token">.</span>style<span class="punctuation token">.</span>color <span class="operator token">=</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+function watchColorPicker(event) {
+  document.querySelectorAll("p").forEach(function(p) {
+    p.style.color = event.target.value;
+  });
+}</code></pre>
 
 <h3 id="选取值">选取值</h3>
 
@@ -103,21 +103,21 @@ colorPicker<span class="punctuation token">.</span><span class="function token">
 
 <h3 id="实现差异">实现差异</h3>
 
-<p>如上文所说，如果浏览器不提供选色器，此元素将会显示为一个具备输入验证功能的文本框。例如，在Safari 10.1中，你将会看到以下内容：</p>
+<p>如上文所说，如果浏览器不提供选色器，此元素将会显示为一个具备输入验证功能的文本框。例如，在 Safari 10.1 中，你将会看到以下内容：</p>
 
 <p><img alt="Screenshot of the example taken in Safari." src="https://mdn.mozillademos.org/files/14899/input-color-safari.png" style="border-style: solid; border-width: 1px; height: 160px; width: 598px;"></p>
 
-<p>而相同的内容在Firefox 55下则会显示成：</p>
+<p>而相同的内容在 Firefox 55 下则会显示成：</p>
 
 <p><img alt="Screenshot of the example taken in Firefox 55 for macOS" src="https://mdn.mozillademos.org/files/14901/input-color-firefox.png" style="border-style: solid; border-width: 1px; height: 160px; width: 598px;"></p>
 
-<p>如果点击元素，则会弹出选色器，在此例中，为macOS平台的选色器。</p>
+<p>如果点击元素，则会弹出选色器，在此例中，为 macOS 平台的选色器。</p>
 
 <p><img alt="Screenshot of the element with the color picker open in Firefox Mac." src="https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png" style="border-style: solid; border-width: 1px; height: 405px; width: 682px;"></p>
 
 <h2 id="验证">验证</h2>
 
-<p>如果当前的{{Glossary("user agent")}}下，用户输入无法转换为7个字符的十六进制RGB形式，会被判定为非法输入。在这种情况下，{{cssxref(":invalid")}}伪类会生效。</p>
+<p>如果当前的{{Glossary("user agent")}}下，用户输入无法转换为 7 个字符的十六进制 RGB 形式，会被判定为非法输入。在这种情况下，{{cssxref(":invalid")}}伪类会生效。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -150,71 +150,4 @@ colorPicker<span class="punctuation token">.</span><span class="function token">
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>1.0</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>2</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>type="color"</td>
-   <td>20.0</td>
-   <td>38</td>
-   <td>{{CompatGeckoDesktop("29.0")}} <sup><a href="#footnote_1">[1]</a></sup></td>
-   <td>{{CompatNo}}</td>
-   <td>11.01</td>
-   <td>10</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>type=color</td>
-   <td>4.4</td>
-   <td>{{CompatGeckoDesktop("27.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p id="footnote_1">[1]  在Windows Touch上尚未实现。</p>
+{{Compat("html.elements.input.input-color")}}

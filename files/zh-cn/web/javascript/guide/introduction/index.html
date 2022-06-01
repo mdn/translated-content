@@ -8,9 +8,7 @@ translation_of: Web/JavaScript/Guide/Introduction
 ---
 <div>{{jsSidebar("JavaScript 指南")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</div>
 
-<div class="summary">
 <p>本章节介绍了 JavaScript，并且讨论了它的一些基本概念。</p>
-</div>
 
 <h2 id="你应该已经掌握哪些知识？">你应该已经掌握哪些知识？</h2>
 
@@ -36,7 +34,7 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <h2 id="什么是_JavaScript">什么是 JavaScript?</h2>
 
-<p>JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如拥有复杂的动画，可点击的按钮，通俗的菜单等）。另外还有高级的服务端Javascript版本，例如Node.js，它可以让你在网页上添加更多功能，不仅仅是下载文件（例如在多台电脑之间的协同合作）。在宿主环境（例如 web 浏览器）中， JavaScript 能够通过其所连接的环境提供的编程接口进行控制。</p>
+<p>JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如拥有复杂的动画，可点击的按钮，通俗的菜单等）。另外还有高级的服务端 Javascript 版本，例如 Node.js，它可以让你在网页上添加更多功能，不仅仅是下载文件（例如在多台电脑之间的协同合作）。在宿主环境（例如 web 浏览器）中， JavaScript 能够通过其所连接的环境提供的编程接口进行控制。</p>
 
 <p>JavaScript 内置了一些对象的标准库，比如数组（<code>Array</code>），日期（<code>Date</code>），数学（<code>Math</code>）和一套核心语句，包括运算符、流程控制符以及声明方式等。JavaScript 的核心部分可以通过添加对象来扩展语言以适应不同用途；例如：</p>
 
@@ -47,15 +45,15 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>这意味着，在浏览器中，JavaScript 可以改变网页（DOM）的外观与样式。同样地，在服务器上，Node.js 中的 JavaScript 可以对浏览器上编写的代码发出的客户端请求做出响应。</p>
 
-<h2 id="JavaScript_and_Java" name="JavaScript_and_Java">JavaScript 和 Java</h2>
+<h2 id="JavaScript_and_Java">JavaScript 和 Java</h2>
 
-<p>JavaScript 和 Java 有一些共性但是在另一些方面有着根本性区别。JavaScript语言类似 Java 但是并没有 Java 的静态类型和强类型检查特性。JavaScript 遵循了 Java 的表达式语法，命名规范以及基础流程控制，这也是 JavaScript 从 LiveScript 更名的原因。</p>
+<p>JavaScript 和 Java 有一些共性但是在另一些方面有着根本性区别。JavaScript 语言类似 Java 但是并没有 Java 的静态类型和强类型检查特性。JavaScript 遵循了 Java 的表达式语法，命名规范以及基础流程控制，这也是 JavaScript 从 LiveScript 更名的原因。</p>
 
 <p>与 Java 通过声明的方式构建类的编译时系统不同，JavaScript 采用基于少量的数据类型如数字、布尔、字符串值的运行时系统。JavaScript 拥有基于原型的对象模型提供的动态继承；也就是说，独立对象的继承是可以改变的。 JavaScript 支持匿名函数。 函数也可以作为对象的属性被当做宽松的类型方式执行。</p>
 
 <p>与 Java 相比，Javascript 是一门形式自由的语言。你不必声明所有的变量，类和方法。你不必关心方法是否是公有、私有或者受保护的，也不需要实现接口。无需显式指定变量、参数、方法返回值的数据类型。</p>
 
-<p>Java 是基于类的编程语言，设计的初衷就是为了确保快速执行和类型安全。类型安全，举个例子，你不能将一个 Java 整数变量转化为一个对象引用，或者由Java字节码访问专有存储器。Java基于类的模型，意味着程序包含专有的类及其方法。Java的类继承和强类型要求紧耦合的对象层级结构。这些要求使得Java编程比JavaScript要复杂的多。</p>
+<p>Java 是基于类的编程语言，设计的初衷就是为了确保快速执行和类型安全。类型安全，举个例子，你不能将一个 Java 整数变量转化为一个对象引用，或者由 Java 字节码访问专有存储器。Java 基于类的模型，意味着程序包含专有的类及其方法。Java 的类继承和强类型要求紧耦合的对象层级结构。这些要求使得 Java 编程比 JavaScript 要复杂的多。</p>
 
 <p>相比之下，JavaScript 传承了 HyperTalk 和 dBASE 语句精简、动态类型等精髓，这些脚本语言为更多开发者提供了一种语法简单、内置功能强大以及用最小需求创建对象的编程工具。</p>
 
@@ -73,8 +71,8 @@ translation_of: Web/JavaScript/Guide/Introduction
    <td>基于类系统。分为类和实例，通过类层级的定义实现继承。不能动态增加对象或类的属性或方法。</td>
   </tr>
   <tr>
-   <td>变量类型不需要提前声明(动态类型)。</td>
-   <td>变量类型必须提前声明(静态类型)。</td>
+   <td>变量类型不需要提前声明 (动态类型)。</td>
+   <td>变量类型必须提前声明 (静态类型)。</td>
   </tr>
   <tr>
    <td>不能直接自动写入硬盘。</td>
@@ -83,65 +81,70 @@ translation_of: Web/JavaScript/Guide/Introduction
  </tbody>
 </table>
 
-<p>请查看章节 <a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">对象模型的详情</a> 来了解更多JavaScript和Java的不同。</p>
+<p>请查看章节 <a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">对象模型的详情</a> 来了解更多 JavaScript 和 Java 的不同。</p>
 
-<h2 id="JavaScript_and_the_ECMAScript_Specification" name="JavaScript_and_the_ECMAScript_Specification">JavaScript 和 ECMAScript 规范</h2>
+<h2 id="JavaScript_and_the_ECMAScript_Specification">JavaScript 和 ECMAScript 规范</h2>
 
-<p>JavaScript 的标准化组织是 <a class="external" href="http://www.ecma-international.org/">ECMA</a> ——这个欧洲信息与通信系统标准化协会提供基于 Javascript 的标准化方案（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这种标准化版本的 JavaScript 被称作 ECMAScript，在所有支持该标准的应用中以相同的方式工作。公司可以使用开放标准语言来开发他们自己的 JavaScript 实现版本。ECMAScript 标准在ECMA－262规范中进行文档化。 参照 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript">JavaScript的新特性</a> 以便学习更多关于不同版本的 JavaScript 和 ECMAScript 规范版本。</p>
+<p>JavaScript 的标准化组织是 <a class="external" href="http://www.ecma-international.org/">ECMA</a> ——这个欧洲信息与通信系统标准化协会提供基于 Javascript 的标准化方案（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这种标准化版本的 JavaScript 被称作 ECMAScript，在所有支持该标准的应用中以相同的方式工作。公司可以使用开放标准语言来开发他们自己的 JavaScript 实现版本。ECMAScript 标准在 ECMA－262 规范中进行文档化。 参照 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript">JavaScript 的新特性</a> 以便学习更多关于不同版本的 JavaScript 和 ECMAScript 规范版本。</p>
 
-<p>ECMA-262 标准也通过了 国际标准化组织（<a class="external" href="http://www.iso.ch/">ISO</a>）的 ISO-16262。你可以<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">在这里</a>找到该规范文件。 ECMAScript 规范并没有描述文档对象模型（<a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM</a>），该模型由 万维网联盟（<a href="http://www.w3.org/">W3C</a>） 制定。DOM 定义了HTML文件对象被脚本操作的方法。为了更清楚地了解当使用JavaScript编程时用到的不同技术，请参阅 <a href="/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript 技术概述</a>。</p>
+<p>ECMA-262 标准也通过了 国际标准化组织（<a class="external" href="http://www.iso.ch/">ISO</a>）的 ISO-16262。你可以<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">在这里</a>找到该规范文件。 ECMAScript 规范并没有描述文档对象模型（<a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM</a>），该模型由 万维网联盟（<a href="http://www.w3.org/">W3C</a>） 制定。DOM 定义了 HTML 文件对象被脚本操作的方法。为了更清楚地了解当使用 JavaScript 编程时用到的不同技术，请参阅 <a href="/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript 技术概述</a>。</p>
 
-<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification" name="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript 文献 和 ECMAScript 规范</h3>
+<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript 文献 和 ECMAScript 规范</h3>
 
-<p>ECMAScript规范是实现ECMAScript的一组需求;如果您想在ECMAScript实现或引擎(如Firefox中的SpiderMonkey或Chrome中的V8)中实现符合标准的语言特性，那么它是非常有用的。</p>
+<p>ECMAScript 规范是实现 ECMAScript 的一组需求;如果您想在 ECMAScript 实现或引擎 (如 Firefox 中的 SpiderMonkey 或 Chrome 中的 V8) 中实现符合标准的语言特性，那么它是非常有用的。</p>
 
-<p>ECMAScript文档不是用来帮助脚本程序员的;使用JavaScript文档获取关于编写脚本的信息。</p>
+<p>ECMAScript 文档不是用来帮助脚本程序员的;使用 JavaScript 文档获取关于编写脚本的信息。</p>
 
-<p>ECMAScript规范使用了JavaScript程序员可能不熟悉的术语和语法。尽管ECMAScript中对语言的描述可能有所不同，但语言本身保持不变。JavaScript支持ECMAScript规范中列出的所有功能。</p>
+<p>ECMAScript 规范使用了 JavaScript 程序员可能不熟悉的术语和语法。尽管 ECMAScript 中对语言的描述可能有所不同，但语言本身保持不变。JavaScript 支持 ECMAScript 规范中列出的所有功能。</p>
 
-<p>JavaScript文档描述了适合JavaScript程序员的语言方面。</p>
+<p>JavaScript 文档描述了适合 JavaScript 程序员的语言方面。</p>
 
 <h2 id="JavaScript_入门">JavaScript 入门</h2>
 
 <p>开始使用 JavaScript 很容易，你只需要一个现代 Web 浏览器。这篇教程包含了一些只在最新版本的火狐浏览器上才有的功能，所以建议大家使用最新版本的火狐浏览器。</p>
 
-<p>火狐内置了两款非常棒的工具用来实验 JavaScript：浏览器控制台和代码草稿纸。</p>
+<p>火狐浏览器内置的 Web 控制台非常适合学习 JavaScript,Web 控制台包含两个输入模式——单行模式、多行模式。</p>
 
-<h3 id="Web_控制台（Web_Console）">Web 控制台（Web Console）</h3>
+<h3 id="单行模式">单行模式</h3>
 
-<p><a href="/zh-CN/docs//Tools/Web_Console">Web 控制台</a> 不仅可以展示当前已加载页面的信息，还包含一个可以在当前页面执行Javascript表达式的 <a href="/zh-CN/docs/Tools/Web_Console#The_command_line_interpreter">命令行。</a></p>
+<p><a href="/zh-CN/docs//Tools/Web_Console">Web 控制台</a> 不仅可以展示当前已加载页面的信息，还包含一个可以在当前页面执行 Javascript 表达式的 <a href="/zh-CN/docs/Tools/Web_Console#The_command_line_interpreter">命令行。</a></p>
 
-<p>在火狐浏览器菜单栏的 “工具" =&gt; "Web开发者" =&gt; "Web控制台" 可以打开控制台( 在Windows和Linux上<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> ，Mac上<kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>K</kbd>) ，它会如期出现在浏览器窗口的底部。如图，最下一行就是可以执行输入的命令行，面板上可以显示执行结果：</p>
+<p>在火狐浏览器菜单栏的 “工具" =&gt; "浏览器工具" =&gt; "Web 开发者工具"( 在 Windows 和 Linux 上<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> ，Mac 上<kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>K</kbd>)，选择"Web 开发者工具栏"的控制台选项卡，它会如期出现在浏览器窗口的底部。如图，最下一行就是可以执行输入的命令行，面板上可以显示执行结果：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7363/web-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img src="2019-04-04_00-15-29.png"></p>
 
-<p>控制台的工作方式与eval完全相同：返回最后输入的表达式。为了简单起见，可以想象每次输入到控制台的东西实际上都被 console.log 所包围。</p>
+<p>控制台的工作方式与 eval 完全相同：返回最后输入的表达式。为了简单起见，可以想象每次输入到控制台的东西实际上都被 console.log 所包围。</p>
 
-<pre class="notranslate">function greetMe(yourName) { alert('Hello ' + yourName); } <code>console.log(eval('3 + 5'));</code></pre>
+<pre class="brush: js">console.log(eval('3 + 5'))</pre>
 
-<h3 id="代码草稿纸（Scratchpad）">代码草稿纸（Scratchpad）</h3>
+<h3 id="多行模式">多行模式</h3>
 
-<p>Web控制台 对于执行单行 JS 命令十分便捷，虽然你也可以执行多行命令，但是在控制台操作并不方便。除此之外，使用控制台你无法保存你的代码片段。因此对于更为复杂的代码片段，<a href="/zh-CN/docs/Tools/Scratchpad">Scratchpad（代码草稿纸）</a> 是一个更好的工具。</p>
-
-<p>从 “Web开发者” 菜单（在火狐浏览器的主菜单下）中选择 “代码草稿纸” 来打开（<kbd>Shift</kbd>+<kbd>F4</kbd>）。它是一个拥有独立窗口的编辑器，你可以用来编辑和在浏览器中执行 JavaScript。你也可以将代码保存到本地磁盘，或者从本地载入。</p>
-
-<p>如果你选择显示，草稿纸中的代码会在浏览器中执行，并在内容后面以注释的形式插入返回的结果：</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/7365/scratchpad.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Web 控制台的单行模式非常适合用来测试单个的 JavaScript 表达式，对于复杂的 JavaScript 表达式或者一定规模的代码块就显得力不从心了。这正是<a href="https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode">多行模式</a>要解决的！</p>
 
 <h3 id="Hello_world">Hello world</h3>
 
-<p>学习JavaScript 的第一步，打开浏览器的代码草稿纸尝试编写你的第一个 JavaScript 版本的 “Hello world” 程序。</p>
+<p>让我们用 Web 控制台的多行模式来写一个“Hello World"程序吧！JavaScript code:</p>
 
-<pre class="brush: js notranslate">function greetMe(user) {
-  alert('Hi ' + user);
-}
+<pre class="brush: js">
+(function(){
+  "use strict";
+  function greetMe(yourName) {
+    alert('Hello ' + yourName);
+  }
+    
+  greetMe('World');
+})();
+  </pre>
 
-greetMe('Alice'); // 'Hi Alice'
-</pre>
+<p>输入完成后，按下<kbd>Cmd</kbd>+<kbd>Enter</kbd>或者<kbd>Ctrl</kbd>+<kbd>Enter</kbd>(或者单击运行按钮) 就可以在浏览器中看到执行结果了！</p>
 
-<p>在 Scratchpad（代码草稿纸）中选择要执行的代码，然后点击“运行(Ctrl+R)”就可以在浏览器中看到选中代码的执行结果。</p>
+<p>在接下来的章节里，我们将向你介绍 JavaScript 的语法以及语言特性，届时你将可以使用它编写更加复杂的程序。</p>
 
-<p>在接下来的章节里，该指南将介绍 JavaScript 的语法以及语言特性，届时你将可以使用它编写更加复杂的程序。</p>
+<p>但是现在请记住，始终将<code>(function(){"use strict"; </code>添加到你的代码之前，始终将<code>})();</code>添加到你的代码之后。<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>和<a href="/zh-CN/docs/Glossary/IIFE">IIFE</a>这两篇文章详细解释了它们的作用。现在关于它们的作用你只要知道以下两点：</p>
+
+<ol>
+  <li>防止 JavaScript 的语义影响初学者</li>
+  <li>防止控制台中的代码片段之间发生意料之外的交互</li>
+</ol>
 
 <p>{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</p>

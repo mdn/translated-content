@@ -22,9 +22,10 @@ of active locales is:
 - `pt-BR`
 - `ru`
 - `zh` (`zh-CN` and `zh-TW`)
+- `es`
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, and `l10n-zh` in this repo’s
+`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es` in this repo’s
 [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
@@ -94,7 +95,7 @@ Now you need to fork and clone both the
    (the `.env` file will be created for you if it does not already exist.)
 
 1. Now you’ve got this set up, enter the command `yarn start` to begin the local
-   testing server running at `localhost:5000`.
+   testing server running at `localhost:5042`.
 
 ### Working in the translated-content repo
 
@@ -104,7 +105,7 @@ then:
 1. Create a new branch to make your changes in.
 
 1. Switch to your new branch and make the changes you want to make. You can keep
-   going back to `localhost:5000/<your_locale>` (e.g. `localhost:5000/fr` for
+   going back to `localhost:5042/<your_locale>` (e.g. `localhost:5042/fr` for
    French) to test your changes and make sure the content looks how you want it
    to look.
 

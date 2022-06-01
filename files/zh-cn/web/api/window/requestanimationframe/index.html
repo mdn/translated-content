@@ -17,12 +17,12 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <div class="note"><strong>注意：若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用<code>window.requestAnimationFrame()</code></strong></div>
 
-<p>当你准备更新动画时你应该调用此方法。这将使浏览器在下一次重绘之前调用你传入给该方法的动画函数(即你的回调函数)。回调函数执行次数通常是每秒60次，但在大多数遵循W3C建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数相匹配。为了提高性能和电池寿命，因此在大多数浏览器里，当<code>requestAnimationFrame()</code> 运行在后台标签页或者隐藏的{{ HTMLElement("iframe") }} 里时，<code>requestAnimationFrame()</code> 会被暂停调用以提升性能和电池寿命。</p>
+<p>当你准备更新动画时你应该调用此方法。这将使浏览器在下一次重绘之前调用你传入给该方法的动画函数 (即你的回调函数)。回调函数执行次数通常是每秒 60 次，但在大多数遵循 W3C 建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数相匹配。为了提高性能和电池寿命，因此在大多数浏览器里，当<code>requestAnimationFrame()</code> 运行在后台标签页或者隐藏的{{ HTMLElement("iframe") }} 里时，<code>requestAnimationFrame()</code> 会被暂停调用以提升性能和电池寿命。</p>
 
-<p>回调函数会被传入{{domxref("DOMHighResTimeStamp")}}参数，{{domxref("DOMHighResTimeStamp")}}指示当前被 <code>requestAnimationFrame()</code> 排序的回调函数被触发的时间。在同一个帧中的多个回调函数，它们每一个都会接受到一个相同的时间戳，即使在计算上一个回调函数的工作负载期间已经消耗了一些时间。该时间戳是一个十进制数，单位毫秒，最小精度为1ms(1000μs)。</p>
+<p>回调函数会被传入{{domxref("DOMHighResTimeStamp")}}参数，{{domxref("DOMHighResTimeStamp")}}指示当前被 <code>requestAnimationFrame()</code> 排序的回调函数被触发的时间。在同一个帧中的多个回调函数，它们每一个都会接受到一个相同的时间戳，即使在计算上一个回调函数的工作负载期间已经消耗了一些时间。该时间戳是一个十进制数，单位毫秒，最小精度为 1ms(1000μs)。</p>
 
 <div class="blockIndicator warning">
-<p>请确保总是使用第一个参数(或其它获得当前时间的方法)计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。</p>
+<p>请确保总是使用第一个参数 (或其它获得当前时间的方法) 计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
@@ -34,7 +34,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>下一次重绘之前更新动画帧所调用的函数(即上面所说的回调函数)。该回调函数会被传入{{domxref("DOMHighResTimeStamp")}}参数，该参数与{{domxref('performance.now()')}}的返回值相同，它表示<code>requestAnimationFrame()</code> 开始去执行回调函数的时刻。</dd>
+ <dd>下一次重绘之前更新动画帧所调用的函数 (即上面所说的回调函数)。该回调函数会被传入{{domxref("DOMHighResTimeStamp")}}参数，该参数与{{domxref('performance.now()')}}的返回值相同，它表示<code>requestAnimationFrame()</code> 开始去执行回调函数的时刻。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -51,7 +51,7 @@ function step(timestamp) {
     start = timestamp;
   const elapsed = timestamp - start;
 
-  //这里使用`Math.min()`确保元素刚好停在200px的位置。
+  //这里使用`Math.min()`确保元素刚好停在 200px 的位置。
   element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
 
   if (elapsed &lt; 2000) { // 在两秒后停止动画

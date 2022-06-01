@@ -19,7 +19,7 @@ Renvoie une référence vers la fenêtre qui a ouvert la fenêtre courante.
 
 ### Exemple
 
-     if window.opener != indexWin {
+     if window.opener&nbsp;!= indexWin {
          referToTop(window.opener);
      }
 

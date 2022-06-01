@@ -1,0 +1,49 @@
+---
+title: EventListener
+slug: Web/API/EventTarget/addEventListener
+tags:
+  - API
+  - DOM
+  - DOM Events
+translation_of: Web/API/EventListener
+original_slug: Web/API/EventListener
+---
+<p>{{APIRef("DOM Events")}}</p>
+
+<h2 id="Method_overview" name="Method_overview">Methodenübersicht</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>void <code><a href="#handleEvent()">handleEvent</a></code> (in Event event);</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methoden</h2>
+
+<h3 id="handleEvent()" name="handleEvent()">handleEvent()</h3>
+
+<p>Diese Methode wird immer aufgerufen, wenn ein Event auftritt, welche im <code>EventListener</code> Interface registriert wurden.</p>
+
+<pre class="eval">void handleEvent(
+  in Event event
+);
+</pre>
+
+<h5 id="Parameters" name="Parameters">Parameter</h5>
+
+<dl>
+ <dt><code>event</code></dt>
+ <dd>Das DOM-{{ domxref("Event") }} das zu registrieren ist.</dd>
+</dl>
+
+<h3 id="Remarks" name="Remarks">Anmerkungen</h3>
+
+<p>Da das Interface mit dem <code><span class="nowiki">[function]</span></code> Flag gekennzeichnet ist, implementieren alle JavaScript-Funktionen dieses automatisch. Das Aufrufen von <a href="#handleevent">handleEvent</a> einer solchen Implementierung ruft automatisch diese Funktion auf.</p>
+
+<h2 id="See_also" name="See_also">Siehe auch</h2>
+
+<ul>
+ <li>{{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}</li>
+</ul>

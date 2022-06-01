@@ -1,5 +1,5 @@
 ---
-title: async函数
+title: async 函数
 slug: Web/JavaScript/Reference/Statements/async_function
 tags:
   - JavaScript
@@ -11,19 +11,17 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>async函数是使用<code>async</code>关键字声明的函数。 async函数是{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}构造函数的实例， 并且其中允许使用<code>await</code>关键字。<code>async</code>和<code>await</code>关键字让我们可以用一种更简洁的方式写出基于{{jsxref("Promise")}}的异步行为，而无需刻意地链式调用<code>promise</code>。</p>
+<p>async 函数是使用<code>async</code>关键字声明的函数。 async 函数是{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}构造函数的实例， 并且其中允许使用<code>await</code>关键字。<code>async</code>和<code>await</code>关键字让我们可以用一种更简洁的方式写出基于{{jsxref("Promise")}}的异步行为，而无需刻意地链式调用<code>promise</code>。</p>
 
 <div class="noinclude">
-<p>async函数还可以被{{jsxref("Operators/async_function", "作为表达式", "", 1)}}来定义。</p>
+<p>async 函数还可以被{{jsxref("Operators/async_function", "作为表达式", "", 1)}}来定义。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
 
-<p class="hidden">该交互式demo源文件存储于Github仓库中。如果希望为此交互式项目做出贡献,请 clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 项目并用pull形式向我们的原始仓库发出请求。</p>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
+<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
 <em>    statements </em>
 }
 </pre>
@@ -33,90 +31,83 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 <dl>
  <dt><code>name</code></dt>
  <dd>函数名称。</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>要传递给函数的参数的名称。</dd>
-</dl>
-
-<dl>
  <dt><code>statements</code></dt>
  <dd>包含函数主体的表达式。可以使用<code>await</code>机制。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dd>一个{{jsxref("Promise")}}，这个promise要么会通过一个由async函数返回的值被解决，要么会通过一个从async函数中抛出的（或其中没有被捕获到的）异常被拒绝。</dd>
 </dl>
+
+<h3 id="返回值">返回值</h3>
+<p>一个{{jsxref("Promise")}}，这个 promise 要么会通过一个由 async 函数返回的值被解决，要么会通过一个从 async 函数中抛出的（或其中没有被捕获到的）异常被拒绝。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>async函数可能包含0个或者多个{{jsxref("Operators/await", "await")}}表达式。await表达式会暂停整个async函数的执行进程并出让其控制权，只有当其等待的基于promise的异步操作被兑现或被拒绝之后才会恢复进程。promise的解决值会被当作该await表达式的返回值。使用<code>async</code> / <code>await</code>关键字就可以在异步代码中使用普通的<code>try</code> / <code>catch</code>代码块。</p>
+<p>async 函数可能包含 0 个或者多个{{jsxref("Operators/await", "await")}}表达式。await 表达式会暂停整个 async 函数的执行进程并出让其控制权，只有当其等待的基于 promise 的异步操作被兑现或被拒绝之后才会恢复进程。promise 的解决值会被当作该 await 表达式的返回值。使用<code>async</code> / <code>await</code>关键字就可以在异步代码中使用普通的<code>try</code> / <code>catch</code>代码块。</p>
 
 <div class="note">
-<p><code>await</code>关键字只在async函数内有效。如果你在async函数体之外使用它，就会抛出语法错误 {{jsxref("SyntaxError")}} 。</p>
+<p><strong>备注：</strong><code>await</code>关键字只在 async 函数内有效。如果你在 async 函数体之外使用它，就会抛出语法错误 {{jsxref("SyntaxError")}} 。</p>
 </div>
 
 <div class="note">
-<p><code>async</code>/<code>await</code>的目的为了简化使用基于promise的API时所需的语法。<code>async</code>/<code>await</code>的行为就好像搭配使用了生成器和promise。</p>
+<p><strong>备注：</strong><code>async</code>/<code>await</code>的目的为了简化使用基于 promise 的 API 时所需的语法。<code>async</code>/<code>await</code>的行为就好像搭配使用了生成器和 promise。</p>
 </div>
 
-<p>async函数一定会返回一个promise对象。如果一个async函数的返回值看起来不是promise，那么它将会被隐式地包装在一个promise中。</p>
+<p>async 函数一定会返回一个 promise 对象。如果一个 async 函数的返回值看起来不是 promise，那么它将会被隐式地包装在一个 promise 中。</p>
 
-<p>例如，如下代码:</p>
+<p>例如，如下代码：</p>
 
-<pre class="syntaxbox notranslate">async function <var>foo</var>() {
+<pre class="syntaxbox">async function <var>foo</var>() {
    <var>return 1</var>
 }
 </pre>
 
-<p>等价于:</p>
+<p>等价于：</p>
 
-<pre class="syntaxbox notranslate">function <var>foo</var>() {
+<pre class="syntaxbox">function <var>foo</var>() {
    <var>return Promise.resolve(1)</var>
 }
 </pre>
 
-<p>async函数的函数体可以被看作是由0个或者多个await表达式分割开来的。从第一行代码直到（并包括）第一个await表达式（如果有的话）都是同步运行的。这样的话，一个不含await表达式的async函数是会同步运行的。然而，如果函数体内有一个await表达式，async函数就一定会异步执行。</p>
+<p>async 函数的函数体可以被看作是由 0 个或者多个 await 表达式分割开来的。从第一行代码直到（并包括）第一个 await 表达式（如果有的话）都是同步运行的。这样的话，一个不含 await 表达式的 async 函数是会同步运行的。然而，如果函数体内有一个 await 表达式，async 函数就一定会异步执行。</p>
 
 <p>例如：</p>
 
-<pre class="syntaxbox notranslate">async function <var>foo</var>() {
+<pre class="syntaxbox">async function <var>foo</var>() {
    <var>await 1</var>
 }
 </pre>
 
 <p>等价于</p>
 
-<pre class="syntaxbox notranslate">function <var>foo</var>() {
+<pre class="syntaxbox">function <var>foo</var>() {
    <var>return Promise.resolve(1).then(() =&gt; undefined)</var>
 }
 </pre>
 
-<p>在await表达式之后的代码可以被认为是存在在链式调用的then回调中，多个await表达式都将加入链式调用的then回调中，返回值将作为最后一个then回调的返回值。</p>
+<p>在 await 表达式之后的代码可以被认为是存在在链式调用的 then 回调中，多个 await 表达式都将加入链式调用的 then 回调中，返回值将作为最后一个 then 回调的返回值。</p>
 
-<p>在接下来的例子中，我们将使用await执行两次promise，整个<code>foo</code>函数的执行将会被分为三个阶段。</p>
+<p>在接下来的例子中，我们将使用 await 执行两次 promise，整个<code>foo</code>函数的执行将会被分为三个阶段。</p>
 
 <ol>
- <li><code>foo</code>函数的第一行将会同步执行，await将会等待promise的结束。然后暂停通过<code>foo</code>的进程，并将控制权交还给调用<code>foo</code>的函数。</li>
- <li>一段时间后，当第一个promise完结的时候，控制权将重新回到foo函数内。示例中将会将<code>1</code>（promise状态为fulfilled）作为结果返回给await表达式的左边即<code>result1</code>。接下来函数会继续进行，到达第二个await区域，此时<code>foo</code>函数的进程将再次被暂停。</li>
- <li>一段时间后，同样当第二个promise完结的时候，<code>result2</code>将被赋值为<code>2</code>，之后函数将会正常同步执行，将默认返回<code>undefined</code> 。</li>
+ <li><code>foo</code>函数的第一行将会同步执行，await 将会等待 promise 的结束。然后暂停通过<code>foo</code>的进程，并将控制权交还给调用<code>foo</code>的函数。</li>
+ <li>一段时间后，当第一个 promise 完结的时候，控制权将重新回到 foo 函数内。示例中将会将<code>1</code>（promise 状态为 fulfilled）作为结果返回给 await 表达式的左边即<code>result1</code>。接下来函数会继续进行，到达第二个 await 区域，此时<code>foo</code>函数的进程将再次被暂停。</li>
+ <li>一段时间后，同样当第二个 promise 完结的时候，<code>result2</code>将被赋值为<code>2</code>，之后函数将会正常同步执行，将默认返回<code>undefined</code> 。</li>
 </ol>
 
-<pre class="notranslate">async function <var>foo</var>() {
+<pre>async function <var>foo</var>() {
    const result1 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1')))
 </var>   const result2 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('2')))</var>
 }
 foo()</pre>
 
-<p>注意：promise链不是一次就构建好的，相反，promise链是分阶段构造的，因此在处理异步函数时必须注意对错误函数的处理。</p>
+<p>注意：promise 链不是一次就构建好的，相反，promise 链是分阶段构造的，因此在处理异步函数时必须注意对错误函数的处理。</p>
 
-<p>例如，在下面的代码中，在promise链上配置了<code>.catch</code>处理程序，将抛出未处理的promise错误。这是因为<code>p2</code>返回的结果不会被await处理。</p>
+<p>例如，在下面的代码中，在 promise 链上配置了<code>.catch</code>处理程序，将抛出未处理的 promise 错误。这是因为<code>p2</code>返回的结果不会被 await 处理。</p>
 
-<pre class="notranslate">async function <var>foo</var>() {
+<pre>async function <var>foo</var>() {
    const p1 = <var>new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1'), 1000))
 </var>   const p2 = <var>new Promise((_,reject) =&gt; setTimeout(() =&gt; reject('2'), 500))
-   const results = [await p1, await p2] // 不推荐使用这种方式，请使用 Promise.all或者Promise.allSettled </var>
+   const results = [await p1, await p2] // 不推荐使用这种方式，请使用 Promise.all 或者 Promise.allSettled </var>
 }
 foo().catch(() =&gt; {}) // 捕捉所有的错误...</pre>
 
@@ -126,7 +117,7 @@ foo().catch(() =&gt; {}) // 捕捉所有的错误...</pre>
 
 <h3 id="简单例子">简单例子</h3>
 
-<pre class="brush: js notranslate">var resolveAfter2Seconds = function() {
+<pre class="brush: js">var resolveAfter2Seconds = function() {
   console.log("starting slow promise");
   return new Promise(resolve =&gt; {
     setTimeout(function() {
@@ -208,12 +199,13 @@ setTimeout(parallelPromise, 13000); // same as parallel
 </pre>
 
 <div class="note">
+<p><strong>备注：</strong></p>
 <h4 id="await_and_parallelism并行"><code>await</code> and parallelism(并行)</h4>
 
-<p>在<code>sequentialStart</code>中，程序在第一个<code>await</code>停留了2秒，然后又在第二个<code>await</code>停留了1秒。直到第一个计时器结束后，第二个计时器才被创建。程序需要3秒执行完毕。</p>
+<p>在<code>sequentialStart</code>中，程序在第一个<code>await</code>停留了 2 秒，然后又在第二个<code>await</code>停留了 1 秒。直到第一个计时器结束后，第二个计时器才被创建。程序需要 3 秒执行完毕。</p>
 
 <p><br>
- 在 <code>concurrentStart</code>中，两个计时器被同时创建，然后执行<code>await</code>。这两个计时器同时运行，这意味着程序完成运行只需要2秒，而不是3秒,即最慢的计时器的时间。</p>
+ 在 <code>concurrentStart</code>中，两个计时器被同时创建，然后执行<code>await</code>。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。</p>
 
 <p>但是 <code>await </code>仍旧是顺序执行的，第二个 <code>await</code> 还是得等待第一个执行完。在这个例子中，这使得先运行结束的输出出现在最慢的输出之后。</p>
 
@@ -221,24 +213,25 @@ setTimeout(parallelPromise, 13000); // same as parallel
 </div>
 
 <div class="warning">
-<h4 id="asyncawait和Promisethen对比以及错误处理"><code>async</code>/<code>await和</code>Promise#then对比以及错误处理</h4>
+<p><strong>警告：</strong></p>
+<h4 id="asyncawait和Promisethen对比以及错误处理"><code>async</code>/<code>await 和</code>Promise#then 对比以及错误处理</h4>
 
-<p>大多数async函数也可以使用Promises编写。但是，在错误处理方面，async函数更容易捕获异常错误</p>
+<p>大多数 async 函数也可以使用 Promises 编写。但是，在错误处理方面，async 函数更容易捕获异常错误</p>
 
-<p>上面例子中的<code>concurrentStart</code>函数和<code>concurrentPromise</code>函数在功能上都是等效的。在<code>concurrentStart</code>函数中，如果任一<code>await</code>ed调用失败，它将自动捕获异常，async函数执行中断，并通过隐式返回Promise将错误传递给调用者。</p>
+<p>上面例子中的<code>concurrentStart</code>函数和<code>concurrentPromise</code>函数在功能上都是等效的。在<code>concurrentStart</code>函数中，如果任一<code>await</code>ed 调用失败，它将自动捕获异常，async 函数执行中断，并通过隐式返回 Promise 将错误传递给调用者。</p>
 
-<p>在Promise例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的<code>Promise</code>。在<code>concurrentPromise</code>函数中，这意味着它从<code>Promise.all([]).then()</code>返回一个Promise。事实上，在此示例的先前版本忘记了这样做！</p>
+<p>在 Promise 例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的<code>Promise</code>。在<code>concurrentPromise</code>函数中，这意味着它从<code>Promise.all([]).then()</code>返回一个 Promise。事实上，在此示例的先前版本忘记了这样做！</p>
 
-<p>但是，async函数仍有可能然可能错误地忽略错误。<br>
- 以<code>parallel</code> async函数为例。 如果它没有等待<code>await</code>（或返回）<code>Promise.all([])</code>调用的结果，则不会传播任何错误。<br>
+<p>但是，async 函数仍有可能然可能错误地忽略错误。<br>
+ 以<code>parallel</code> async 函数为例。 如果它没有等待<code>await</code>（或返回）<code>Promise.all([])</code>调用的结果，则不会传播任何错误。<br>
  虽然<code>parallelPromise</code>函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于<code>return </code><code>Promise.all([])</code>处理方式。</p>
 </div>
 
-<h3 id="使用async函数重写_promise_链"><code><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="background-color: #333333;">使用</span></font></code>async函数重写 promise 链</h3>
+<h3 id="使用async函数重写_promise_链">使用 async 函数重写 promise 链</h3>
 
 <p>返回 {{jsxref("Promise")}}的 API 将会产生一个 promise 链，它将函数肢解成许多部分。例如下面的代码：</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js">function getProcessedData(url) {
   return downloadData(url) // 返回一个 promise 对象
     .catch(e =&gt; {
       return downloadFallbackData(url)  // 返回一个 promise 对象
@@ -248,9 +241,9 @@ setTimeout(parallelPromise, 13000); // same as parallel
     });
 }</pre>
 
-<p>可以重写为单个async函数：</p>
+<p>可以重写为单个 async 函数：</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js">async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -263,14 +256,14 @@ setTimeout(parallelPromise, 13000); // same as parallel
 
 <p>注意，在上述示例中，<code>return</code> 语句中没有 <code>await</code> 操作符，因为 <code>async function</code> 的返回值将被隐式地传递给 <code>{{jsxref("Promise.resolve")}}</code>。</p>
 
-<div class="blockIndicator note">
-<p><strong><code>return await promiseValue;</code> 与 <code>return promiseValue;的比较</code></strong></p>
+<div class="note">
+<p><strong>备注：</strong></p>
 
-<p>返回值<code>隐式的传递给</code>{{jsxref("Promise.resolve")}}，并不意味着<code>return await promiseValue;和return promiseValue;</code>在功能上相同。</p>
+<p>返回值<code>隐式的传递给</code>{{jsxref("Promise.resolve")}}，并不意味着<code>return await promiseValue;和 return promiseValue;</code>在功能上相同。</p>
 
-<p>看下下面重写的上面代码，在<code>processDataInWorker</code>抛出异常时返回了null：</p>
+<p>看下下面重写的上面代码，在<code>processDataInWorker</code>抛出异常时返回了 null：</p>
 
-<pre class="notranslate"><code>async function getProcessedData(url) {
+<pre><code>async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -284,7 +277,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
   }
 }</code></pre>
 
-<p>简单地写上<code>return processDataInworker(v);将导致在processDataInWorker(v)</code>出错时function返回值为{{jsxref("Promise")}}<code>而不是</code>返回null。<code>return foo;</code>和<code>return await foo;</code>，有一些细微的差异:<code>return foo;</code>不管<code>foo</code>是promise还是rejects都将会直接返回<code>foo。相反地，</code>如果<code>foo</code>是一个{{jsxref("Promise")}}，<code>return await foo;</code>将等待<code>foo</code>执行(resolve)或拒绝(reject)，如果是拒绝，将会在返回前抛出异常。</p>
+<p>简单地写上<code>return processDataInworker(v);将导致在 processDataInWorker(v)</code>出错时 function 返回值为{{jsxref("Promise")}}<code>而不是</code>返回 null。<code>return foo;</code>和<code>return await foo;</code>，有一些细微的差异：<code>return foo;</code>不管<code>foo</code>是 promise 还是 rejects 都将会直接返回<code>foo。相反地，</code>如果<code>foo</code>是一个{{jsxref("Promise")}}，<code>return await foo;</code>将等待<code>foo</code>执行 (resolve) 或拒绝 (reject)，如果是拒绝，将会在返回前抛出异常。</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -301,7 +294,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
   <tr>
    <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td>初始定义于ES2017.</td>
+   <td>初始定义于 ES2017.</td>
   </tr>
   <tr>
    <td>{{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}</td>

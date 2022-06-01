@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillText
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">void <var><em>ctx</em>.fillText(text, x, y [, maxWidth]);</var>
+<pre class="syntaxbox">void <var><em>ctx</em>.fillText(text, x, y [, maxWidth]);</var>
 </pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -38,12 +38,12 @@ translation_of: Web/API/CanvasRenderingContext2D/fillText
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[5] notranslate">var canvas = document.getElementById("canvas");
+<pre class="brush: js; highlight:[5]">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.font = "48px serif";
@@ -55,7 +55,7 @@ ctx.fillText("Hello world", 50, 100);
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -65,7 +65,7 @@ ctx.font = "48px serif";
 ctx.fillText("Hello world", 50, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -95,26 +95,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">
-    <p>Спецификация</p>
-   </th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-filltext", "CanvasRenderingContext2D.fillText")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.fillText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

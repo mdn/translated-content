@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</div>
 
-<p class="summary">This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.</p>
+<p>This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.</p>
 
 <h2 id="Array_object"><code>Array</code> object</h2>
 
@@ -36,8 +36,8 @@ var arr = [];
 arr.length = arrayLength;
 </pre>
 
-<div class="note">
-<p><strong>Note :</strong> in the above code, <code>arrayLength</code> must be a <code>Number</code>. Otherwise, an array with a single element (the provided value) will be created. Calling <code>arr.length</code> will return <code>arrayLength</code>, but the array actually contains empty (undefined) elements. Running a {{jsxref("Statements/for...in","for...in")}} loop on the array will return none of the array's elements.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> in the above code, <code>arrayLength</code> must be a <code>Number</code>. Otherwise, an array with a single element (the provided value) will be created. Calling <code>arr.length</code> will return <code>arrayLength</code>, but the array actually contains empty (undefined) elements. Running a {{jsxref("Statements/for...in","for...in")}} loop on the array will return none of the array's elements.</p>
 </div>
 
 <p>In addition to a newly defined variable as shown above, arrays can also be assigned as a property of a new or an existing object:</p>
@@ -79,8 +79,8 @@ emp[1] = 'Phil Lesh';
 emp[2] = 'August West';
 </pre>
 
-<div class="note">
-<p><strong>Note :</strong> if you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> if you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.</p>
 </div>
 
 <pre class="brush: js">var arr = [];
@@ -104,8 +104,8 @@ var myArray = ['Mango', 'Apple', 'Orange'];
 
 <p>You then refer to the first element of the array as <code>myArray[0]</code> and the second element of the array as <code>myArray[1]</code>. The index of the elements begins with zero.</p>
 
-<div class="note">
-<p><strong>Note :</strong> the array operator (square brackets) is also used for accessing the array's properties (arrays are also objects in JavaScript). For example,</p>
+<div class="notecard note">
+<p><strong>Note:</strong> the array operator (square brackets) is also used for accessing the array's properties (arrays are also objects in JavaScript). For example,</p>
 </div>
 
 <pre class="brush: js">var arr = ['one', 'two', 'three'];
@@ -433,7 +433,7 @@ Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <p>To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into <strong>buffers</strong> and <strong>views</strong>. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a context — that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.</p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png"></p>
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 

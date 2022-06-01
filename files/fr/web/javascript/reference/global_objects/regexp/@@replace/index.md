@@ -18,7 +18,9 @@ La méthode **`[@@replace]()`** remplace toutes ou certaines correspondances d'u
 
 ## Syntaxe
 
-    regexp[Symbol.replace](str, newSubStr|function)
+```js
+regexp[Symbol.replace](str, newSubStr|function)
+```
 
 ### Paramètres
 
@@ -91,7 +93,7 @@ console.log(newstr); // ###34567
 | Spécification                                                                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -12,7 +12,7 @@ translation_of: Web/API/Notification/permission
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propriété en lecture seule **`permission`** de l'interface {{domxref ("Notification")}} indique l'autorisation actuelle accordée par l'utilisateur à l'origine actuelle pour afficher des notifications.
+La propriété en lecture seule **`permission`** de l'interface {{domxref ("Notification")}} indique l'autorisation actuelle accordée par l'utilisateur à l'origine actuelle pour afficher des notifications.
 
 ## Syntaxe
 

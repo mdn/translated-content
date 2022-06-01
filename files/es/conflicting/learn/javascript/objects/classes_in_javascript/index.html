@@ -1,0 +1,308 @@
+---
+title: JavaScript orientado a objetos para principiantes
+slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+tags:
+  - Aprender
+  - Artículo
+  - Constructor
+  - Crear
+  - Create
+  - JSOO
+  - JavaScript
+  - OOJS
+  - OOP
+  - Object
+  - Objeto
+  - Orientado a Objeto
+  - Principiante
+  - Programación orientada a objetos
+  - instance
+  - instanciar
+  - l10n:priority
+translation_of: Learn/JavaScript/Objects/Object-oriented_JS
+original_slug: Learn/JavaScript/Objects/Object-oriented_JS
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</div>
+
+<p class="summary">Con lo básico fuera del camino, nos enfocaremos en Javascript Orientado a Objetos (JSOO) — este artículo presenta una descripción básica de la teoría de la Programación Orientada a Objetos (POO), luego explora cómo Javascript emula classes de objetos via funciones constructoras, y cómo crea instancias de objetos.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisitos:</th>
+   <td>Conocimientos básicos de computación, entendimiento básico de HTML y CSS, familiaridad con las bases de Javascript (ver <a href="/es/docs/Learn/JavaScript/First_steps">Primeros pasos con JavaScript</a> y <a href="/es/docs/Learn/JavaScript/Building_blocks">Bloques de construcción JavaScript</a>) y las bases de JSOO (ver <a href="/es/docs/Learn/JavaScript/Objects/Basics">Introducción a objetos</a>).</td>
+  </tr>
+  <tr>
+   <th scope="row">Objetivo:</th>
+   <td>
+    <p>Entender la teoría base de la programación orientada a objetos, como se relaciona esta con JavaScript ("todo es un objeto"), y como crear constructores e instacias de objetos.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Programacion_Orientada_a_Objetos—_lo_básico">Programacion Orientada a Objetos— lo básico</h2>
+
+<p>Para empezar, daremos una descripción simple y de alto nivel acerca de lo que es la Programación Orientada a Objetos (POO). Decimos simple, porque la POO puede volverse complicada rápidamente, y darte un tratamiento completo ahora, probablemente podría confundirte más que ayudar. La idea básica de la POO es que usamos objetos para modelar cosas del mundo real que queremos representar en nuestros programas, y/o proveemos una simple manera para acceder a la funcionalidad que, de otra manera, sería difícil o imposible de usar.</p>
+
+<p>Los objetos pueden contener información y código relacionados, los cuales representan información acerca de lo que estás tratando de modelar, y la funcionalidad o comportamiento que deseas que tenga.  Los datos de un Objeto (y frecuentemente, también las funciones) se pueden almacenar ordenadamente (la palabra oficial es <strong>encapsular</strong>) dentro del paquete de un objeto (al que se puede asignar un nombre específico, llamado a veces <strong>espacio de nombres</strong>), haciéndolo fácil de estructurar y acceder; los objetos también se usan comúnmente como almacenes de datos que se pueden enviar fácilmente a través de la red.</p>
+
+<h3 id="Definiendo_una_plantilla_de_objeto">Definiendo una plantilla de objeto</h3>
+
+<p>Vamos a considerar un sencillo programa que muestra información sobre estudiantes y profesores en una escuela. Aquí daremos un vistazo a la POO (Programación Orientada a Objetos) en general, no en el contexto de algún lenguaje de programación específico.</p>
+
+<p>Para empezar, podríamos volver a ver al objeto <code>Persona</code> de nuestro <a href="/es/docs/Learn/JavaScript/Objects/Basics">artículo de primeros objetos</a>, que define los datos generales y funcionalidades de una persona. Hay muchas cosas que podrías saber acerca de una persona (su dirección, estatura, tamaño de calzado, perfil de ADN, número de pasaporte, rasgos significativos de su personalidad...), pero, en este caso, solo estamos interesados en mostrar su nombre, edad, género e intereses, además de una pequeña introducción sobre este individuo basada en los datos anteriores. También queremos que sea capaz de saludar. </p>
+
+<p>Esto es conocido como <strong>abstracción</strong> —  crear un modelo simple de algo complejo que represente sus aspectos más importantes y que sea fácil de manipular para el propósito de nuestro programa.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13889/person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
+
+<p>En algunos lenguajes de POO, esta definición de tipo de objeto se la llama <strong>class </strong>(JavaScript utiliza diferentes mecanismos y terminologías, como verás a continuación) — esto no es en realidad un objeto, en vez de esto es un modelo que define las características que un objeto debería tener.</p>
+
+<h3 id="Creando_objetos">Creando objetos</h3>
+
+<p>Partiendo de nuestra clase, podemos crear <strong>instancias de objetos</strong> — objetos que contienen los datos y funcionalidades definidas en la clase original. Teniendo a nuestra clase <code>Persona</code>, ahora podemos crear gente con características más específicas: </p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png" style="display: block; height: 702px; margin: 0px auto; width: 695px;"></p>
+
+<p>Cuando una instancia del objeto es creada a partir de una clase, se ejecuta <strong>la función constructora </strong>(constructor en inglés) de la clase para crearla. El proceso de crear una instancia del objeto desde una clase se llama <strong>instanciación</strong>.</p>
+
+<h3 id="Clases_especializadas">Clases especializadas</h3>
+
+<p>En este caso nosotros no queremos personas genericas — queremos docentes y estudiantes, que son los dos tipos más específicos de personas. En POO, podemos crear nuevas clases basadas en otras clases, estas nuevas <strong>clases secundarias</strong> se pueden hacer para  <strong>heredar</strong> los datos y código de su <strong>clase primaria</strong>, de modo que pueden reutilizar la funcionalidad común a todos los tipos de objetos en lugar de tener que duplicarla. Cuando la funcionalidad difiere entre clases, puedes definir funciones especializadas directamente en ellas según sea necesario.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+
+<p>Esto es realmente útil, los profesores y los estudiantes comparten muchas características comunes como el nombre, el género y la edad, por lo que es conveniente tener que definir esas características solo una vez. También puedes definir la misma característica por separado en diferentes clases, ya que cada definición de esa característica estará en un espacio de nombres diferente. Por ejemplo, el saludo de un estudiante puede tener la forma "Yo, soy [Nombre]" (por ejemplo, Yo, soy Sam), mientras que un profesor puede usar algo más formal, como "Hola, mi nombre es [Prefix] [lastName], y enseño [Asunto] ". (Por ejemplo, Hola, mi nombre es Sr. Griffiths, y yo enseño Química).</p>
+
+<div class="note">
+<p><strong>Nota:  </strong>la palabra elegante para la capacidad de múltiples tipos de objetos de implementar la misma funcionalidad es <strong>polimorfismo. </strong>Por si acaso te preguntabas.</p>
+</div>
+
+<p>Ahora puedes crear instancias de objetos de las clases "hijo". Por ejemplo:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+
+<p>En el resto del articulo, comenzaremos a ver como podemos practicar la teoría de POO en JavaScript.</p>
+
+<h2 id="Constructores_e_instancias_de_objetos">Constructores e instancias de objetos</h2>
+
+<p>Algunas personas sostienen que JavaScript no es un verdadero lenguaje orientado a objetos — por ejemplo, su enunciado <code><a href="/es/docs/Web/JavaScript/Reference/Statements/class">class</a></code> es sólo azúcar sintáctica sobre la herencia prototípica existente y no es una <code>class</code> en el sentido tradicional. JavaScript, utiliza funciones especiales llamadas funciones constructoras para definir objetos y sus características. Son útiles porque a menudo te encontrarás con situaciones en las que no sabes cuántos objetos crearás; los constructores proporcionan los medios para crear tantos objetos como necesites de una manera efectiva, adjuntando datos y funciones a ellos según sea necesario.</p>
+
+<p>Cuando se crea una nueva instancia del objeto a partir de una función constructora, su funcionalidad central (tal como se define en su prototipo, que exploraremos en el <a href="/es/docs/Learn/JavaScript/Objects/Object_prototypes">artículo Prototipos</a> de objetos) no se copia en el nuevo objeto como lenguajes OO "clásicos", sino que la funcionalidad está vinculada a través de una cadena de referencia llamada cadena prototipo. Así que esto no es una verdadera instanciación, estrictamente hablando, JavaScript usa un mecanismo diferente para compartir funcionalidad entre objetos.</p>
+
+<div class="note">
+<p><strong>Nota: </strong>no ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.</p>
+</div>
+
+<p>Exploremos la creación de clases a través de constructores y la creación de instancias de objetos a partir de ellas en JavaScript. En primer lugar, nos gustaría que hicieras una nueva copia local del archivo <code>oojs.html</code> que vimos en nuestro primer artículo de Objetos.</p>
+
+<h3 id="Un_ejemplo_simple">Un ejemplo simple</h3>
+
+<ol>
+ <li>Comencemos por ver cómo puedes definir una persona con una funcion normal. Agrega esta funcion dentro del elemento <code>script</code>:
+
+  <pre class="brush: js notranslate">function createNewPerson(name) {
+  var obj = {};
+  obj.name = name;
+  obj.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+  return obj;
+}</pre>
+ </li>
+ <li>Ahora puedes crear una nueva persona llamando a esta funcion — prueba con las siguientes lineas en la consola Javascript de tu navegador:
+  <pre class="brush: js notranslate">var salva = createNewPerson('Salva');
+salva.name;
+salva.greeting();</pre>
+  Esto funciona bastante bien, pero es un poco largo; si sabemos que queremos crear un objeto, ¿por qué necesitamos crear explícitamente un nuevo objeto vacío y devolverlo? Afortunadamente, JavaScript nos proporciona un práctico acceso directo, en forma de funciones constructoras — ¡hagamos una ahora!</li>
+ <li>Reemplaza tu función anterior por la siguiente:
+  <pre class="brush: js notranslate">function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}</pre>
+ </li>
+</ol>
+
+<p>La función constructora es la versión de JavaScript de una clase. Notarás que tiene todas las características que esperas en una función, aunque no devuelve nada o crea explícitamente un objeto — básicamente sólo define propiedades y métodos. Verás que la palabra clave <code>this</code> se está usando aquí también — es básicamente decir que cuando se crea una de estas instancias de objeto, la propiedad <code>name</code> del objeto será igual al valor del nombre pasado a la llamada del constructor, y el método <code>greeting()</code> usará también el valor del nombre pasado a la llamada del constructor.</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Un nombre de función constructora generalmente comienza con una letra mayúscula — esta convención se utiliza para hacer que las funciones constructoras sean más fáciles de reconocer en el código.</p>
+</div>
+
+<p>Entonces, ¿cómo llamamos a un constructor para crear algunos objetos?</p>
+
+<ol>
+ <li>Agrega las siguientes líneas debajo de tu código anterior:
+  <pre class="brush: js notranslate">var person1 = new Person('Bob');
+var person2 = new Person('Sarah');</pre>
+ </li>
+ <li>Guarda el código y vuelve a cargarlo en el navegador, e intenta ingresar las siguientes líneas en la consola Javascript :
+  <pre class="brush: js notranslate">person1.name
+person1.greeting()
+person2.name
+person2.greeting()</pre>
+ </li>
+</ol>
+
+<p>¡Guaw! Ahora veras que tenemos dos nuevos objetos, cada uno de los cuales está almacenado en un espacio de nombres diferente: para acceder a sus propiedades y métodos, debes llamarlos como <code>person1</code> o  <code>person2</code>; están cuidadosamente empaquetados para que no entren en conflicto con otras funciones. Sin embargo, tienen disponible la misma propiedad name y el método <code>greeting()</code>. Ten en cuenta que están utilizando su propio <code>name</code> que se les asignó cuando se crearon; esta es una razón por la cual es muy importante usar <code>this</code>, para que usen sus propios valores, y no algún otro valor.</p>
+
+<p>Veamos nuevamente las llamadas del constructor:</p>
+
+<pre class="brush: js notranslate">var person1 = new Person('Bob');
+var person2 = new Person('Sarah');</pre>
+
+<p>En cada caso, la  palabra clave <code>new</code> se usa para indicarle al navegador que queremos crear una nueva instancia del objeto, seguida del nombre de la función con sus parámetros requeridos entre paréntesis, y el resultado se almacena en una variable — muy similar a cómo se llama a una función estándar. Cada instancia se crea de acuerdo con esta definición:</p>
+
+<pre class="brush: js notranslate">function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}</pre>
+
+<p>Una vez creados los nuevos objetos, las variables <code>person1</code> y <code>person2</code> contienen los siguientes objetos:</p>
+
+<pre class="brush: js notranslate">{
+  name: 'Bob',
+  greeting: function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}
+
+{
+  name: 'Sarah',
+  greeting: function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}</pre>
+
+<p>Ten en cuenta que cuando llamamos a nuestra función constructora, estamos definiendo <code>greeting()</code> cada vez, lo cual no es lo ideal. Para evitar esto, podemos definir funciones en el prototipo, que veremos más adelante.</p>
+
+<h3 id="Creando_nuestro_constructor_final">Creando nuestro constructor final</h3>
+
+<p>El ejercicio que vimos anteriormente fue solo un ejemplo simple para comenzar. Ahora crearemos nuestra función <code>constructor Person()</code> final.</p>
+
+<ol>
+ <li>Elimina el código que insertaste hasta ahora y agrega este constructor de reemplazo; este es exactamente el mismo que el ejemplo simple del principio, con un poco más de complejidad:
+  <pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+  this.name = {
+    'first': first,
+    'last' : last
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+  this.bio = function() {
+    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  };
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+  };
+}</pre>
+ </li>
+ <li>Ahora, agrega la siguiente línea para crear una instancia del objeto:
+  <pre class="brush: js notranslate">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+ </li>
+</ol>
+
+<p>Ahora verás que puedes acceder a las propiedades y métodos justo como lo hiciste anteriormente — intenta esto en tu consola JS:</p>
+
+<pre class="brush: js notranslate">person1['age']
+person1.interests[1]
+person1.bio()
+// etc.</pre>
+
+<div class="note">
+<p><strong>Nota</strong>: Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html">oojs-class-finished.html</a> (también lo puedes ver <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html">corriendo en vivo</a>).</p>
+</div>
+
+<h3 id="Ejercicios_adicionales">Ejercicios adicionales</h3>
+
+<p>Para empezar, intenta añadir un par de líneas de creación de objetos propias, y trata de obtener y asignar valores a los miembros de las instancias del objeto.</p>
+
+<p>Además, hay un par de problemas con nuestro método <code>bio()</code> — la salida siempre incluye el pronombre "He", incluso para personas de otros géneros. Y <code>bio</code> solamente incluye dos intereses, sin importar la cantidad que hay en el arreglo <code>interests</code>. ¿Podrías corregir esto en la definición de la clase (constructor)? Puedes poner cualquier código dentro de un constructor (probablemente necesites algunos condicionales y un bucle). Piensa como se deben estructurar las declaraciones dependiendo del género, y de la cantidad de intereses.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Si estás atascado, hay una <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">respuesta en nuestro repositorio de GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">see it live</a>) — igualmente ¡intentea resolverla primero!</p>
+</div>
+
+<h2 id="Otras_formas_de_crear_instancias_de_objetos">Otras formas de crear instancias de objetos</h2>
+
+<p>Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — <a href="/es/docs/Learn/JavaScript/Objects/Basics#Object_basics">declarando un objeto literal</a>, y usando una función constructora (ver arriba).</p>
+
+<p>Esto tiene sentido, pero hay otras formas — se muestran aquí para que te vayas familiarizando en caso de encontrarte con ellas.</p>
+
+<h3 id="El_constructor_Object">El constructor Object()</h3>
+
+<p>Antes que nada, puedes usar el constructor <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object()</a></code> para crear un nuevo objeto. Si, incluso objetos genéricos tienen un constructor que genera un objeto vacío.</p>
+
+<ol>
+ <li>Intenta ingresar este código en la consola JavaScript de tu navegador:
+  <pre class="brush: js notranslate">var person1 = new Object();</pre>
+ </li>
+ <li>Esto guarda un objeto vacío en la variable <code>person1</code>. Luego pueded agregar propiedades y métodos a este objeto usando la notación de punto (.) o de corchetes (['']); prueba estos ejemplos en tu consola:
+  <pre class="brush: js notranslate">person1.name = 'Chris';
+person1['age'] = 38;
+person1.greeting = function() {
+  alert('Hi! I\'m ' + this.name + '.');
+};</pre>
+ </li>
+ <li>También puedes pasar un objeto literal como parámetro al constructor <code>Object()</code>, para precargarlo con propiedades/métodos. Prueba esto en tu consola:
+  <pre class="brush: js notranslate">var person1 = new Object({
+  name: 'Chris',
+  age: 38,
+  greeting: function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+});</pre>
+ </li>
+</ol>
+
+<h3 id="Usando_el_método_create">Usando el método create()</h3>
+
+<p>Los constructores te pueden ayudar a ordenar tu código — puedes crear constructores en un lugar, y luego crear instancias cuando sean necesarias.</p>
+
+<p>Sin embargo, algunas personas prefieren crear instancias de objetos sin crear antes constructores, especialmente si van a crear solamente pocas instancias de un objeto.</p>
+
+<p>JavaScript tiene un método llamado <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> que permite hacer esto. Con este método puedes crear un nuevo objeto basado en cualquier otro objeto existente.</p>
+
+<ol>
+ <li>Con tu ejercicio de la sección anterior cargado en el navegador, prueba esto en tu consola JavaScript
+  <pre class="brush: js notranslate">var person2 = Object.create(person1);</pre>
+ </li>
+ <li>Y ahora prueba esto:
+  <pre class="brush: js notranslate">person2.name
+person2.greeting()</pre>
+ </li>
+</ol>
+
+<p>Verás que <code>person2</code> fue creado basado en <code>person1 </code>— tiene las mismas propiedades y métodos.</p>
+
+<p>Una limitación del método <code>create()</code> es que no está soportado por el navegador IE8. Por lo que los constructores serán más efectivos sin necesitas soportar navegadores antiguos.</p>
+
+<p>Más tarde, exploraremos en detalle los efectos de <code>create()</code>.</p>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>Este artículo provee una visión simplificada de la teoría de la orientación a objetos — esta no es toda la historia, pero te da una idea de con que estamos lidiando aquí. Adicionalmente, empezamos a ver como JavaScript está relacionado y difiere de la orientación a objetos "clásica", cómo usamos funciones constructoras para implementar clases en JavaScript, y diferentes formas de generar instancias de objetos.</p>
+
+<p>En el próximo artículo, exploraremos los prototipos de objeto JavaScript.</p>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</p>
+
+<h2 id="En_este_modulo">En este modulo</h2>
+
+<ul>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/Basics">Objetos básicos</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/Object-oriented_JS">JavaScript orientedo a objetos para principiantes</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/Object_prototypes">Prototipos de Objetos</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/Inheritance">Herencia en JavaScript</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/JSON">Trabajando con datos JSON</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/Object_building_practice">Práctica de construcción de objetos</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Agregar funciones a nuestro demo de pelotas que rebotan</a></li>
+</ul>

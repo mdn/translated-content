@@ -14,7 +14,7 @@ L'interface **`Comment`** représente des annotations textuelles au sein du bali
 
 ## Propriétés
 
-_Cette interface ne possède pas de propriétés spécifiques, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
+_Cette interface ne possède pas de propriétés spécifiques, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
 
 ## Constructeur
 
@@ -23,7 +23,7 @@ _Cette interface ne possède pas de propriétés spécifiques, mais en hérite 
 
 ## Méthodes
 
-_Cette interface ne possède pas de méthode spécifique, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
+_Cette interface ne possède pas de méthode spécifique, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
 
 ## Spécifications
 

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">class ClassWithPrivateField {
+<pre >class ClassWithPrivateField {
   #privateField
 }
 
@@ -35,7 +35,7 @@ class ClassWithPrivateStaticField {
 
 <p>static 메소드에서만 static 변수들을 호출할 수 있다는 제약은 그대로 유지된다.</p>
 
-<pre class="notranslate">class ClassWithPrivateStaticField {
+<pre >class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -52,7 +52,7 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
 <p>이는 <code>this</code> 를 사용함에 있어 예상치 못한 동작을 야기할 수 있다.</p>
 
-<pre class="notranslate">class BaseClassWithPrivateStaticField {
+<pre >class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -77,7 +77,7 @@ console.assert(error instanceof TypeError)</pre>
 
 <p>캡슐화(encapsulation) 는 언어로부터 강제된다(enforced by the language). 즉, scope 밖에서 <code>#</code> 이름에 접근하는 것은 syntax error 이다.</p>
 
-<pre class="notranslate">class ClassWithPrivateField {
+<pre >class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -97,7 +97,7 @@ instance.#privateField === 42 // Syntax error</pre>
 
 <p>private static 메소드는 generator, async 그리고 async generator 함수가 될 수 있다.</p>
 
-<pre class="notranslate">class ClassWithPrivateStaticMethod {
+<pre >class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
     return 42
   }
@@ -116,7 +116,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);</pre>
 
 <p>이는 <code>this</code> 를 사용할 때 예상치 못한 동작을 발생시킬 수 있다. (이는 <code>this</code> binding rule 이 적용되기 때문이다.) 다음 예시에서 <code>Derived.publicStaticMethod2()</code> 를 호출할 때, <code>this</code> 는 class <code>Derived</code> (<code>Base</code> 가 아니라) 를 가리킨다. </p>
 
-<pre class="notranslate">class Base {
+<pre >class Base {
   static #privateStaticMethod() {
     return 42;
   }
@@ -137,7 +137,7 @@ console.log(Derived.publicStaticMethod2()); // TypeError</pre>
 
 <p>private 인스턴스 메소드는 private 인스턴스 필드와는 다르게 class 인스턴스로부터 접근 가능하다.</p>
 
-<pre class="notranslate">class ClassWithPrivateMethod {
+<pre >class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -153,7 +153,7 @@ console.log(instance.getPrivateMessage())
 
 <p>private 인스턴스 메소드는 generator, async 그리고 async generator 함수가 될 수 있다. private getter 와 setter 또한 가능하다:</p>
 
-<pre class="notranslate">class ClassWithPrivateAccessor {
+<pre >class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {

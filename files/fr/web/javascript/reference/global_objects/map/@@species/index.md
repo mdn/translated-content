@@ -16,7 +16,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 
 ## Syntaxe
 
-    Map[Symbol.species]
+```js
+Map[Symbol.species]
+```
 
 ## Description
 
@@ -45,7 +47,7 @@ class MaMap extends Map {
 | Spécification                                                                                        | Statut                       | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-get-map-@@species', 'get Map [ @@species ]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

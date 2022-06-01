@@ -3,20 +3,20 @@ title: image
 slug: Web/SVG/Element/image
 tags:
   - SVG
-  - SVG图形
+  - SVG 图形
   - 元素
   - 参考
 translation_of: Web/SVG/Element/image
 ---
 <div>{{SVGRef}}</div>
 
-<p>SVG文档中的SVG元素包含图像信息。它表现为图像文件或者其他SVG文件。</p>
+<p>SVG 文档中的 SVG 元素包含图像信息。它表现为图像文件或者其他 SVG 文件。</p>
 
-<p>SVG图像格式转换软件支持JPEG、PNG格式，是否支持动图GIF不明确。</p>
+<p>SVG 图像格式转换软件支持 JPEG、PNG 格式，是否支持动图 GIF 不明确。</p>
 
-<p>SVG文件是这样的一种图像：不被当做外部资源加载，不可以用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:visited">:visited</a> 样式，不能有交互。使用动态SVG元素，可以用<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">&lt;use&gt;</a>引入外部的URL。使用SVG文件并添加scripts在里面，可以用<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 放在 <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject">&lt;foreignObject&gt;</a>中。</p>
+<p>SVG 文件是这样的一种图像：不被当做外部资源加载，不可以用 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:visited">:visited</a> 样式，不能有交互。使用动态 SVG 元素，可以用<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">&lt;use&gt;</a>引入外部的 URL。使用 SVG 文件并添加 scripts 在里面，可以用<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 放在 <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject">&lt;foreignObject&gt;</a>中。</p>
 
-<p>注意：HTML规范中定义&lt;image&gt;和&lt;img&gt;在解析时是等效的。这种规范只适用于SVG文件或SVG区块内。</p>
+<p>注意：HTML 规范中定义&lt;image&gt;和&lt;img&gt;在解析时是等效的。这种规范只适用于 SVG 文件或 SVG 区块内。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/SVG/Element/image
  <li><a href="/en/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
  <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">核心属性</a> »</li>
  <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Xlink属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
  <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">外观属性</a> »</li>
  <li>{{ SVGAttr("class") }}</li>
  <li>{{ SVGAttr("style") }}</li>
@@ -43,19 +43,19 @@ translation_of: Web/SVG/Element/image
 <ul>
  <li>{{ SVGAttr("x") }}：图像水平方向上到原点的距离</li>
  <li>{{ SVGAttr("y") }}：图像竖直方向上到原点的距离</li>
- <li>{{ SVGAttr("width") }}：图像宽度。和HTML的&lt;img&gt;不同，该属性是必须的</li>
- <li>{{ SVGAttr("height") }}：图像高度。和HTML的&lt;img&gt;不同，该属性是必须的</li>
- <li>{{ SVGAttr("xlink:href") }}：图像的URL指向</li>
+ <li>{{ SVGAttr("width") }}：图像宽度。和 HTML 的 &lt;img&gt; 不同，该属性是必须的</li>
+ <li>{{ SVGAttr("height") }}：图像高度。和 HTML 的 &lt;img&gt; 不同，该属性是必须的</li>
+ <li>{{ SVGAttr("href") }} 或 {{ SVGAttr("xlink:href") }}：图像的 URL 指向</li>
  <li>{{ SVGAttr("preserveAspectRatio") }}：控制图像比例</li>
 </ul>
 
-<h2 id="DOM接口">DOM接口</h2>
+<h2 id="DOM_接口">DOM 接口</h2>
 
 <p>该元素实现<code><a href="/en/DOM/SVGImageElement" title="en/DOM/SVGImageElement">SVGImageElement</a></code> 接口。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>在SVG对象中基本呈现PNG图像:</p>
+<p>在 SVG 对象中基本呈现 PNG 图像：</p>
 
 <pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
      xmlns="http://www.w3.org/2000/svg"
@@ -92,52 +92,4 @@ translation_of: Web/SVG/Element/image
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop('1.8') }}</td>
-   <td>{{ CompatIE('9.0') }}</td>
-   <td>{{ CompatOpera('8.0') }}</td>
-   <td>{{ CompatSafari('3.0.4') }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatAndroid('3.0') }}</td>
-   <td>{{ CompatGeckoMobile('1.8') }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatSafari('3.0.4') }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>该表格基于<a href="/en/SVG/Compatibility_sources" title="en/SVG/Compatibility sources">这些资源</a>。</p>
+{{Compat("svg.elements.image")}}

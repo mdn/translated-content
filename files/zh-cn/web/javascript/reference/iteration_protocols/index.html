@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
   <tr>
    <td><code>next</code></td>
    <td>
-    <p>一个无参数函数，返回一个应当拥有以下两个属性的对象：</p>
+    <p>一个无参数的或者可以接受一个参数的函数，返回一个应当拥有以下两个属性的对象：</p>
 
     <dl>
      <dt><code>done</code>（boolean）</dt>
@@ -84,7 +84,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <p>这样做允许一个迭代器能被各种需要可迭代对象的语法所使用。因此，很少会只实现迭代器协议，而不实现可迭代协议。</p>
 
-<pre class="brush: js example-good notranslate"><code>var myIterator = {
+<pre class="brush: js example-good"><code>var myIterator = {
     next: function() {
         // ...
     },
@@ -96,13 +96,13 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <p>{{jsxref("String")}} 是一个内置的可迭代对象：</p>
 
-<pre class="brush: js notranslate">let someString = "hi";
+<pre class="brush: js">let someString = "hi";
 typeof someString[Symbol.iterator];          // "function"
 </pre>
 
 <p><code>String</code> 的默认迭代器会依次返回该字符串的各码点（code point）：</p>
 
-<pre class="brush: js notranslate">let iterator = someString[Symbol.iterator]();
+<pre class="brush: js">let iterator = someString[Symbol.iterator]();
 iterator + "";                               // "[object String Iterator]"
 
 iterator.next();                             // { value: "h", done: false }
@@ -111,11 +111,11 @@ iterator.next();                             // { value: undefined, done: true }
 
 <p>一些内置的语法结构——比如{{jsxref("Operators/Spread_operator", "展开语法")}}——其内部实现也使用了同样的迭代协议：</p>
 
-<pre class="brush: js notranslate">[...someString]                              // ["h", "i"]</pre>
+<pre class="brush: js">[...someString]                              // ["h", "i"]</pre>
 
 <p>我们可以通过提供自己的 <code>@@iterator</code> 方法，重新定义迭代行为：</p>
 
-<pre class="brush: js notranslate">// 必须构造 String 对象以避免字符串字面量 auto-boxing
+<pre class="brush: js">// 必须构造 String 对象以避免字符串字面量 auto-boxing
 var someString = new String("hi");
 someString[Symbol.iterator] = function() {
   return { // 只返回一次元素，字符串 "bye"，的迭代器对象
@@ -134,7 +134,7 @@ someString[Symbol.iterator] = function() {
 
 <p>注意重新定义的 <code>@@iterator</code> 方法是如何影响内置语法结构的行为的：</p>
 
-<pre class="brush: js notranslate">[...someString];                              // ["bye"]
+<pre class="brush: js">[...someString];                              // ["bye"]
 someString + "";                              // "hi"
 </pre>
 
@@ -146,9 +146,9 @@ someString + "";                              // "hi"
 
 <h3 id="自定义可迭代对象">自定义可迭代对象</h3>
 
-<p>我们可以实现一个自己的可迭代对象，就像这样:</p>
+<p>我们可以实现一个自己的可迭代对象，就像这样：</p>
 
-<pre class="brush: js notranslate">var myIterable = {};
+<pre class="brush: js">var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
@@ -168,7 +168,7 @@ myIterable[Symbol.iterator] = function* () {
  <li>{{jsxref("WeakSet", "new WeakSet([<var>iterable</var>])")}}</li>
 </ul>
 
-<pre class="notranslate">new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2); // "b"
+<pre>new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2); // "b"
 
 let myObj = {};
 
@@ -200,7 +200,7 @@ new WeakSet(function* () {
 
 <p>一些语句和表达式需要可迭代对象，比如 {{jsxref("Statements/for...of", "for...of")}} 循环、{{jsxref("Operators/Spread_syntax", "展开语法")}}、{{jsxref("Operators/yield*", "yield*")}}，和{{jsxref("Operators/Destructuring_assignment", "解构赋值")}}。</p>
 
-<pre class="brush: js notranslate">for(let value of ["a", "b", "c"]){
+<pre class="brush: js">for(let value of ["a", "b", "c"]){
     console.log(value);
 }
 // "a"
@@ -226,7 +226,7 @@ a // "a"
 
 <p>使用这样的可迭代对象很可能会导致如下的运行时（runtime）异常，或者不可预料的表现：</p>
 
-<pre class="brush: js example-bad notranslate">var nonWellFormedIterable = {}
+<pre class="brush: js example-bad">var nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
 </pre>
@@ -235,7 +235,7 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 
 <h3 id="简单迭代器">简单迭代器</h3>
 
-<pre class="brush: js notranslate">function makeIterator(array) {
+<pre class="brush: js">function makeIterator(array) {
     let nextIndex = 0;
     return {
        next: function () {
@@ -258,7 +258,7 @@ console.log(it.next().done);  // true
 
 <h3 id="无穷迭代器">无穷迭代器</h3>
 
-<pre class="brush: js notranslate">function idMaker() {
+<pre class="brush: js">function idMaker() {
     let index = 0;
     return {
        next: function() {
@@ -272,15 +272,15 @@ console.log(it.next().done);  // true
 
 let it = idMaker();
 
-console.log(it.next().value); // '0'
-console.log(it.next().value); // '1'
-console.log(it.next().value); // '2'
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
+console.log(it.next().value); // 2
 // ...
 </pre>
 
 <h3 id="使用生成器">使用生成器</h3>
 
-<pre class="brush: js notranslate">function* makeSimpleGenerator(array) {
+<pre class="brush: js">function* makeSimpleGenerator(array) {
     let nextIndex = 0;
 
     while(nextIndex &lt; array.length) {
@@ -305,15 +305,15 @@ function* idMaker() {
 
 let gen = idMaker();
 
-console.log(gen.next().value); // '0'
-console.log(gen.next().value); // '1'
-console.log(gen.next().value); // '2'
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
 // ...
 </pre>
 
 <h3 id="ES2015_类_class_中的迭代器">ES2015 类 class 中的迭代器</h3>
 
-<pre class="brush: js notranslate">class SimpleClass {
+<pre class="brush: js">class SimpleClass {
   constructor(data) {
     this.data = data
   }
@@ -339,34 +339,34 @@ console.log(gen.next().value); // '2'
 const simple = new SimpleClass([1,2,3,4,5])
 
 for (const val of simple) {
-  console.log(val)   //'1' '2' '3' '4' '5'
+  console.log(val)   // 1 2 3 4 5
 }
 </pre>
 
 <h2 id="生成器对象到底是一个迭代器，还是一个可迭代对象？">生成器对象到底是一个迭代器，还是一个可迭代对象？</h2>
 
-<p>{{jsxref("Generator", "生成器")}}对象既是迭代器，也是可迭代对象:</p>
+<p>{{jsxref("Generator", "生成器")}}对象既是迭代器，也是可迭代对象：</p>
 
-<pre class="brush: js notranslate">let aGeneratorObject = function* (){
+<pre class="brush: js">let aGeneratorObject = function* (){
     yield 1;
     yield 2;
     yield 3;
 }();
 
 typeof aGeneratorObject.next;
-// 返回"function", 因为有一个next方法，所以这是一个迭代器
+// 返回"function", 因为有一个 next 方法，所以这是一个迭代器
 
 typeof aGeneratorObject[Symbol.iterator];
-// 返回"function", 因为有一个@@iterator方法，所以这是一个可迭代对象
+// 返回"function", 因为有一个 @@iterator 方法，所以这是一个可迭代对象
 
 aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
-// 返回true, 因为@@iterator方法返回自身（即迭代器），所以这是一个格式良好的可迭代对象
+// 返回 true，因为 @@iterator 方法返回自身（即迭代器），所以这是一个格式良好的可迭代对象
 
 [...aGeneratorObject];
-// 返回[1, 2, 3]
+// 返回 [1, 2, 3]
 
 console.log(Symbol.iterator in aGeneratorObject)
-// 返回true, 因为@@iterator方法是aGeneratorObject的一个属性</pre>
+// 返回 true，因为 @@iterator 方法是 aGeneratorObject 的一个属性</pre>
 
 <h2 id="规范">规范</h2>
 

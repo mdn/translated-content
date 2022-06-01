@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/isPointInPath
 ---
 <div>{{APIRef}}</div>
 
-<p><code style="font-style: normal;"><strong>CanvasRenderingContext2D</strong></code><strong><code>.isPointInPath()</code></strong>是 Canvas 2D API 用于判断在当前路径中是否包含检测点的方法<font face="Courier New, Andale Mono, monospace"><strong>。</strong></font></p>
+<p><code style="font-style: normal;"><strong>CanvasRenderingContext2D</strong></code><strong><code>.isPointInPath()</code></strong>是 Canvas 2D API 用于判断在当前路径中是否包含检测点的方法<strong>。</strong></p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,9 +20,9 @@ boolean <var><em>ctx</em>.isPointInPath(path, x, y, fillRule);</var></var></var>
 
 <dl>
  <dt>x</dt>
- <dd>检测点的X坐标</dd>
+ <dd>检测点的 X 坐标</dd>
  <dt>y</dt>
- <dd>检测点的Y坐标</dd>
+ <dd>检测点的 Y 坐标</dd>
  <dt><code>fillRule</code></dt>
  <dd>用来决定点在路径内还是在路径外的算法。<br>
  允许的值：
@@ -39,7 +39,7 @@ boolean <var><em>ctx</em>.isPointInPath(path, x, y, fillRule);</var></var></var>
 
 <dl>
  <dt>{{jsxref("Boolean")}}</dt>
- <dd>一个Boolean值，当检测点包含在当前或指定的路径内，返回 true；否则返回 false。</dd>
+ <dd>一个 Boolean 值，当检测点包含在当前或指定的路径内，返回 true；否则返回 false。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -63,7 +63,7 @@ ctx.stroke();
 console.log(ctx.isPointInPath(10, 10)); // true
 </pre>
 
-<p>修改下面的代码， 在线查看 canvas的变化并在你的 <a href="/en-US/docs/Tools/Browser_Console">控制台</a> 中观察日志信息：</p>
+<p>修改下面的代码，在线查看 canvas 的变化并在你的 <a href="/en-US/docs/Tools/Browser_Console">控制台</a> 中观察日志信息：</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -109,95 +109,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ispointinpath", "CanvasRenderingContext2D.isPointInPath")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Path parameter</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop(31) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Path parameter</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile(31) }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Compatibility_注解">Compatibility 注解</h3>
-
-<ul>
- <li>在 Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4)之前，这个方法是错误的，在和路径进行比较前，该方法不会根据当前的变形矩阵增加指定点的坐标。现在，该方法可以正确执行，甚至上下文进行旋转、缩放或其他方式的变形。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.isPointInPath")}}
 
 <h2 id="参见">参见</h2>
 

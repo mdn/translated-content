@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p><strong><code>String</code></strong> 全域物件為字串的構造函數，或是一個字符序列。</p>
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <p>字串文字採用下列形式：</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <pre>String(thing)</pre>
 
-<h3 id="Parameters" name="Parameters">參數</h3>
+<h3 id="Parameters">參數</h3>
 
 <dl>
  <dt><code>thing</code></dt>
@@ -105,8 +105,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 <dl>
 </dl>
 
-<div class="note">
-<p>和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。</p>
 </div>
 
 <dl>
@@ -130,11 +130,11 @@ otherwise my code is unreadable.";</code></pre>
 
 <p>這兩個方法都會建立相同的字串內容。</p>
 
-<h2 id="Description" name="Description">說明</h2>
+<h2 id="Description">說明</h2>
 
 <p>字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ 或 += 字串運算元</a> 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。</p>
 
-<h3 id="Character_access" name="Character_access">存取字元</h3>
+<h3 id="Character_access">存取字元</h3>
 
 <p>有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：</p>
 
@@ -148,7 +148,7 @@ otherwise my code is unreadable.";</code></pre>
 
 <p>對於存取字元使用的括號表達式，沒辦法去刪除或指派一個值給這些屬性。 這些屬性既非可寫的，也非可設定的。(參見 {{jsxref("Object.defineProperty")}})</p>
 
-<h3 id="Comparing_strings" name="Comparing_strings">比較字串</h3>
+<h3 id="Comparing_strings">比較字串</h3>
 
 <p>C 語言的開發者有 <code>strcmp()</code> 函式可以用來比較字串。 在 JavaScript 中，你只能用<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">小於和大於運算子</a>：</p>
 
@@ -192,18 +192,16 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 <pre class="brush: js">console.log(eval(s2.valueOf())); // 回傳數字 4
 </pre>
 
-<div class="note"><strong>注意：</strong> 對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章<a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>。</div>
+<div class="notecard note"><p><strong>備註：</strong>對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章<a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>。</p></div>
 
-<h2 id="Properties" name="Properties">屬性</h2>
+<h2 id="Properties">屬性</h2>
 
 <dl>
  <dt>{{jsxref("String.prototype")}}</dt>
  <dd>能讓字串物件增加屬性。</dd>
 </dl>
 
-<div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
-
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{jsxref("String.fromCharCode()")}}</dt>
@@ -212,12 +210,10 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
  <dd>利用編碼位置的序列建立並回傳一個字串。</dd>
 </dl>
 
-<div>{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint")}}</div>
-
 <h2 id="String_通用方法"><code>String</code> 通用方法</h2>
 
-<div class="warning">
-<p>字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。</p>
+<div class="notecard warning">
+<p><strong>警告：</strong>字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。</p>
 </div>
 
 <p>The <code>String </code>instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:</p>
@@ -226,9 +222,9 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 alert(String.replace(num, /5/, '2'));
 </pre>
 
-<p class="brush: js"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
 
-<p class="brush: js">The following is a shim to provide support to non-supporting browsers:</p>
+<p>The following is a shim to provide support to non-supporting browsers:</p>
 
 <pre class="brush: js">/*globals define*/
 // Assumes all supplied String instance methods already present
@@ -261,7 +257,7 @@ alert(String.replace(num, /5/, '2'));
     }
 }());</pre>
 
-<h2 id="String_instances" name="String_instances"><code>String</code> instances</h2>
+<h2 id="String_instances"><code>String</code> instances</h2>
 
 <h3 id="Properties_2">Properties</h3>
 

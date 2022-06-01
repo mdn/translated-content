@@ -24,7 +24,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 <h2 id="方法">方法</h2>
 
 <dl>
- <dt><span class="hidden"> </span></dt>
  <dt>{{jsxref("Atomics.add()")}}</dt>
  <dd>将指定位置上的数组元素与给定的值相加，并返回相加前该元素的值。</dd>
  <dt><strong>{{jsxref("Atomics.and()")}}</strong></dt>
@@ -55,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 <h3 id="使用_Atomics">使用 Atomics</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 ta[0];
@@ -102,19 +101,19 @@ Atomics.load(ta, 0); // 4
 
 <p>给定一个共享的 <code>Int32Array</code>：</p>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 </pre>
 
-<p>读取线程正在休眠并位置0上等待。只要该位置应为0，它就不会继续。但是，一旦写入线程存储了新值，写入线程将通知它并返回新值（123）。</p>
+<p>读取线程正在休眠并位置 0 上等待。只要该位置应为 0，它就不会继续。但是，一旦写入线程存储了新值，写入线程将通知它并返回新值（123）。</p>
 
-<pre class="brush: js notranslate">Atomics.wait(int32, 0, 0);
+<pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123
 </pre>
 
 <p>写入线程存储一个新值并再写入完成时通知等待线程：</p>
 
-<pre class="brush: js notranslate">console.log(int32[0]); // 0;
+<pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
 Atomics.notify(int32, 0, 1);</pre>
 

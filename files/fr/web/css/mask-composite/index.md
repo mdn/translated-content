@@ -1,16 +1,12 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/mask-composite
+browser-compat: css.properties.mask-composite
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-La propriété **`mask-composite`** permet d'effectuer une opération de composition entre le masque situé sur la couche de l'élément et le masque présent en dessous.
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-composite`** permet d'effectuer une opération de composition entre le masque situé sur la couche de l'élément et le masque présent en dessous.
 
 ```css
 /* Valeurs avec un mot-clé*/
@@ -22,6 +18,7 @@ mask-composite: exclude;
 /* Valeurs globales */
 mask-composite: inherit;
 mask-composite: initial;
+mask-composite: revert;
 mask-composite: unset;
 ```
 
@@ -40,59 +37,30 @@ La couche du masque de l'élément est appelée _source_ et les couches inférie
 - `intersect`
   - : Les endroits de la source qui chevauchent la destination prennent le pas sur la destination.
 - `exclude`
-  - : Les régions de la source et de la destination qui ne se chevauchent pas sont combinées.The non-overlapping regions of source and destination are combined.
+  - : Les régions de la source et de la destination qui ne se chevauchent pas sont combinées.
 
-### Syntaxe formelle
-
-{{csssyntax}}
-
-## Exemples
-
-### CSS
-
-```css
-#masked {
-  width: 100px;
-  height: 100px;
-  background-color: #8cffa0;
-  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg),
-                      url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg),
-              url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-size: 100% 100%;
-  -webkit-mask-composite: add;
-  mask-composite: add; /* peut-être modifiée dans la démo */
-}
-```
-
-```html hidden
-<div id="masked">
-</div>
-<select id="compositeMode">
-  <option value="add">add</option>
-  <option value="subtract">subtract</option>
-  <option value="intersect">intersect</option>
-  <option value="exclude">exclude</option>
-</select>
-```
-
-```js hidden
-var clipBox = document.getElementById("compositeMode");
-clipBox.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskClip = evt.target.value;
-});
-```
-
-{{EmbedLiveSample("Exemples", "200px", "200px")}}
-
-## Spécifications
-
-| Spécification                                                                            | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Masks", "#the-mask-composite", "mask-composite")}} | {{Spec2("CSS Masks")}} | Définition initiale |
+## Définition formelle
 
 {{cssinfo}}
 
+## Syntaxe formelle
+
+{{csssyntax}}}
+
+## Exemples
+
+### Composer des couches de masques de façon additive
+
+{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}
+
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-composite")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)

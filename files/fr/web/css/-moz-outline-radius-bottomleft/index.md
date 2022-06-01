@@ -10,7 +10,7 @@ translation_of: Web/CSS/-moz-outline-radius-bottomleft
 ---
 {{Non-standard_header}}{{CSSRef}}
 
-Dans les applications Mozilla, la propriété **`-moz-outline-radius-`\*\***`bottomleft`\*\* définit l'arrondi du coin inférieur gauche du contour.
+Dans les applications Mozilla, la propriété **`-moz-outline-radius-bottomleft`** définit l'arrondi du coin inférieur gauche du contour.
 
 ## Exemples
 

@@ -7,7 +7,9 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/response
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
+{{APIRef('XMLHttpRequest')}}
+
+La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
 
 <table class="standard-table">
   <tbody>
@@ -48,7 +50,6 @@ translation_of: Web/API/XMLHttpRequest/response
           Used by Firefox to allow retrieving partial {{domxref("Blob")}}
           data from progress events. This lets your progress event handler start
           processing data while it's still being received.
-          {{gecko_minversion_inline("12.0")}}
         </p>
       </td>
     </tr>
@@ -68,7 +69,6 @@ translation_of: Web/API/XMLHttpRequest/response
         </p>
         <p>
           This mode currently only works in Firefox.
-          {{gecko_minversion_inline("9.0")}}
         </p>
       </td>
     </tr>
@@ -90,7 +90,6 @@ translation_of: Web/API/XMLHttpRequest/response
         </p>
         <p>
           This mode currently only works in Firefox.
-          {{gecko_minversion_inline("9.0")}}
         </p>
       </td>
     </tr>
@@ -107,7 +106,7 @@ translation_of: Web/API/XMLHttpRequest/response
   </tbody>
 </table>
 
-> **Note :** À partir de Gecko 11.0 {{geckoRelease("11.0")}} et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
+> **Note :** À partir de Gecko 11.0 {{geckoRelease("11.0")}} et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
 
 ## Example
 
@@ -115,16 +114,16 @@ translation_of: Web/API/XMLHttpRequest/response
 var url = 'somePage.html'; // une page locale
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      console.log(xhr.response); // Par défault une DOMString
-    }
-  }
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      console.log(xhr.response); // Par défault une DOMString
+    }
+  }
 
   xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.send('');
 }
 ```
 

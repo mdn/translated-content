@@ -35,7 +35,7 @@ Dans l'exemple qui suit, on affiche les éléments en utilisant leur taille natu
 
 ### L'espace distribué au sein des éléments
 
-On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés  {{cssxref("flex")}} afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
+On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés  {{cssxref("flex")}} afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
 
 Si on souhaite que tous les éléments de la barre aient la même largeur, on utilisera `flex: auto` qui correspond à la notation raccourcie de `flex: 1 1 auto` — tous les objets grandissent et rétrécissent de la même façon à partir d'une taille de base automatique. Cela signifie que le plus grand élément occupera plus d'espace.
 
@@ -106,7 +106,7 @@ On peut également permettre aux deux côtés de grandir/rétrécir proportionne
 }
 ```
 
-On pourrait aussi utiliser différents coefficients {{cssxref("flex-grow")}} pour chaque côté. Utiliser `flex: 1` pour le côté avec l'image et `flex: 3` pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base `flex-basis`  `0` et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de `flex-grow`. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
+On pourrait aussi utiliser différents coefficients {{cssxref("flex-grow")}} pour chaque côté. Utiliser `flex: 1` pour le côté avec l'image et `flex: 3` pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base `flex-basis`  `0` et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de `flex-grow`. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
 
 ```css
 .media .content {
@@ -127,7 +127,7 @@ Si on souhaite échanger la position de l'image dans l'objet média pour l'affic
 
 ## Les contrôles de formulaire
 
-Les boîtes flexibles s'avèrent particulièrement utiles losqu'on met en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément {{htmlelement("input")}} associé à un élément  {{htmlelement("button")}} (par exemple un formulaire de recherche ou un champ où on souhaite qu'un visiteur saisisse une adresse électronique).
+Les boîtes flexibles s'avèrent particulièrement utiles losqu'on met en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément {{htmlelement("input")}} associé à un élément  {{htmlelement("button")}} (par exemple un formulaire de recherche ou un champ où on souhaite qu'un visiteur saisisse une adresse électronique).
 
 Les boîtes flexibles facilitent la construction de tels motifs. Dans l'exemple suivant, on enveloppe l'élément `<button>` et l'élément `<input>` dans un conteneur auquel on ajoute une bordure et pour lequel on a `display: flex`. On utilise ensuite les propriétés flexibles afin de permettre à l'élément `<input>` de grandir et de conserver la même taille pour le bouton. On a donc une paire d'éléments pour laquelle la zone de saisie s'ajuste en fonction de l'espace disponible.
 

@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><strong>条件（三元）运算符</strong>是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式A将会执行；表达式A后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式B将会执行。本运算符经常作为 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> 语句的简捷形式来使用。</p>
+<p><strong>条件（三元）运算符</strong>是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式 A 将会执行；表达式 A 后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式 B 将会执行。本运算符经常作为 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> 语句的简捷形式来使用。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}</div>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 <h2 id="描述">描述</h2>
 
 <p>除了 <code>false</code>，可能的假值表达式还有：<code>null</code> 、<code>NaN</code> 、
- <code>0</code> 、空字符串（ <code>""</code> ）、和 <code>undefined</code> 。如果 <code><var>condition</var></code> 是以上中的任何一个, 那么条件表达式的结果就是 <code>exprIfFalse</code> 表达式执行的结果。</p>
+ <code>0</code> 、空字符串（ <code>""</code> ）、和 <code>undefined</code> 。如果 <code><var>condition</var></code> 是以上中的任何一个，那么条件表达式的结果就是 <code>exprIfFalse</code> 表达式执行的结果。</p>
 
 <p>一个简单的例子：</p>
 
@@ -52,13 +52,13 @@ console.log(greeting({name: 'Alice'}));  // "Howdy, Alice"
 console.log(greeting(null));             // "Howdy, stranger"
 </pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note:</strong> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">The optional chaining operator</a> 设计用来处理这种使用场景。在本文档写成的时候 (2019.01)，这个运算符还处于实验阶段并且没有实现。</p>
 </div>
 
 <h3 id="条件链">条件链</h3>
 
-<p>这个三元操作符是右结合的，也就是说你可以像这样把它链接起来， 和 <code>if … else if … else if … else</code> 链类似:</p>
+<p>这个三元操作符是右结合的，也就是说你可以像这样把它链接起来， 和 <code>if … else if … else if … else</code> 链类似：</p>
 <pre class="brush: js">function example(…) {
     return condition1 ? value1
          : condition2 ? value2

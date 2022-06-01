@@ -5,14 +5,14 @@ translation_of: Web/Progressive_web_apps/App_structure
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}</div>
 
-<p class="summary">现在，我们已经知道了 PWA 背后的原理， 让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 这个应用开始：为什么它要这样构建？这样做又有什么好处？</p>
+<p>现在，我们已经知道了 PWA 背后的原理， 让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 这个应用开始：为什么它要这样构建？这样做又有什么好处？</p>
 
 <h2 id="应用架构">应用架构</h2>
 
 <p>渲染网站主要有两种方法 - 在服务器上或在客户端上。它们都有其优点和缺点，你可以适当地混合使用这两种方法</p>
 
 <ul>
- <li>服务器端渲染（SSR）的意思是在服务器上渲染网页，因此首次加载会更快，但是在不同页面之间导航都需要下载新的HTML内容。它的跨浏览器兼容性良好，但代价是页间加载时间延长，也就是总体感知上的性能降低：每加载一个页面，都需要一个服务器请求往返的时间。</li>
+ <li>服务器端渲染（SSR）的意思是在服务器上渲染网页，因此首次加载会更快，但是在不同页面之间导航都需要下载新的 HTML 内容。它的跨浏览器兼容性良好，但代价是页间加载时间延长，也就是总体感知上的性能降低：每加载一个页面，都需要一个服务器请求往返的时间。</li>
  <li>客户端渲染（CSR）允许在导航到不同页面时几乎立即在浏览器中更新网站，但在开始时需要更多的初始下载和客户端上的额外渲染。 首次访问时网站速度较慢，但后续访问速度要快得多。</li>
 </ul>
 
@@ -30,13 +30,13 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <h3 id="我为什么要用它？">我为什么要用它？</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">这种架构允许网站从 PWA 功能中获益最多：它可以缓存</span> <span title="">App Shell</span> <span class="alt-edited">并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如</span></span><a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏幕</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">或</span></span><a href="/en-US/docs/Web/API/Push_API">推送通知</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。</span></span></p>
+<p>这种架构允许网站从 PWA 功能中获益最多：它可以缓存 App Shell 并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如<a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏幕</a>或<a href="/en-US/docs/Web/API/Push_API">推送通知</a>。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。</p>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">在不妥协 web 优势的前提下，网站感觉就像一个原生应用，交互及时、性能可靠。</span></span></p>
+<p>在不妥协 web 优势的前提下，网站感觉就像一个原生应用，交互及时、性能可靠。</p>
 
 <h3 id="可链接、渐进式和响应式">可链接、渐进式和响应式</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。</span> <span title="">app shell 方案允许网站：</span></span></p>
+<p>记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。 app shell 方案允许网站：</p>
 
 <ul>
  <li>可链接（Linkable）：即使行为类似于原生应用，它仍然是一个网站：您可以点击页面内的链接，也可以通过发送 URL 的方式分享网站给别人。</li>
@@ -52,13 +52,13 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>Streams API 则允许开发人员直接访问来自服务器的数据流。如果您想对数据执行操作（例如给视频添加过滤器），不再需要等待所有数据流下载并转换为 blob（或者别的），而是可以立即开始。它提供精细的粒度控制，将数据流启动、与另一个流链接、取消、查错等等。</p>
 
-<p>从理论上讲，数据流是更好的模型，但也更复杂。在撰写本文时（2018年3月），Streams API 的制订仍在进行，并且在任何主流浏览器都不完全可用。当它可用时，它将是提供内容的最快方式，在性能上会有巨大的好处。</p>
+<p>从理论上讲，数据流是更好的模型，但也更复杂。在撰写本文时（2018 年 3 月），Streams API 的制订仍在进行，并且在任何主流浏览器都不完全可用。当它可用时，它将是提供内容的最快方式，在性能上会有巨大的好处。</p>
 
 <p>有关可用实例和更多信息，请参阅 <a href="/zh-CN/docs/Web/API/Streams_API">Streams API 文档</a>。</p>
 
 <h2 id="示例应用的结构">示例应用的结构</h2>
 
-<p><a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 这个网站的结构比较简单：它包含一个HTML页面（index.heml）、一个CSS样式表（style.css）、一些图片、JS 脚本和字体。它的文件结构如下所示：</p>
+<p><a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 这个网站的结构比较简单：它包含一个 HTML 页面（index.html）、一个 CSS 样式表（style.css）、一些图片、JS 脚本和字体。它的文件结构如下所示：</p>
 
 <p><img alt="Folder structure of js13kPWA." src="https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 320px;"></p>
 
@@ -103,7 +103,7 @@ translation_of: Web/Progressive_web_apps/App_structure
 <p>{{htmlelement("head")}} 一节包含一些基本信息，例如标题、描述、CSS 链接、描述文件、游戏内容的 JS 文件，以及 app.js，也就是我们这个 JavaScript 应用程序的入口点。{{htmlelement("body")}} 标签分为 {{htmlelement("header")}}（包含一张带链接的图片）、{{htmlelement("main")}} 页面主体（有标题、描述和放置内容的区域），以及 {{htmlelement("footer")}}（包含版权信息和链接）。</p>
 </p>
 
-<p>这个应用的唯一功能就是列出 js13kGames 2017 年比赛中的A-Frame（一个用来构建虚拟现实（VR）应用的网页开发框架，译者注）项目列表。如你所见，这是一个很普通的单页应用，目的是用一个简单的东西来展示 PWA 的真实功能。</p>
+<p>这个应用的唯一功能就是列出 js13kGames 2017 年比赛中的 A-Frame（一个用来构建虚拟现实（VR）应用的网页开发框架，译者注）项目列表。如你所见，这是一个很普通的单页应用，目的是用一个简单的东西来展示 PWA 的真实功能。</p>
 
 <h3 id="CSS_部分">CSS 部分</h3>
 

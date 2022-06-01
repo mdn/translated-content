@@ -88,19 +88,19 @@ original_slug: Web/JavaScript/Guide/정규식/Assertions
   <tr>
    <td><code>x(?!y)</code></td>
    <td>
-    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x"<span> is not followed by </span>"y"<span>.</span> For example, <code>/\d+(?!\.)/</code><span> matches a number only if it is not followed by a decimal point. </span><code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
+    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x" is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;=y)x</code></td>
    <td>
-    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code><span> matches "Sprat" only if it is preceded by "Jack". </span><code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
+    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code> matches "Sprat" only if it is preceded by "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;!y)x</code></td>
    <td>
-    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code><span> matches a number only if it is not preceded by a minus sign. </span><code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
+    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
    </td>
   </tr>
  </tbody>
@@ -110,7 +110,7 @@ original_slug: Web/JavaScript/Guide/정규식/Assertions
 
 <h3 id="General_boundary-type_overview_example">General boundary-type overview example</h3>
 
-<pre class="brush: js notranslate">// Using Regex boundaries to fix buggy string.
+<pre class="brush: js">// Using Regex boundaries to fix buggy string.
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
@@ -135,7 +135,7 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 
 <p>입력 시작시 일치를 위해 <code>^</code>를 사용하십시오. 이 예에서는 <code>/^A/</code> regex로 'A'로 시작하는 결과를 얻습니다. 여기서 <code>^</code>는 한 가지 역할 만합니다. 적절한 결과를 보기위해 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">화살표</a> 함수가있는 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">필터</a> 메소드를 사용합니다.</p>
 
-<pre class="brush: js notranslate">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+<pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Select fruits started with 'A' by /^A/ Regex.
 // Here '^' control symbol used only in one role: Matching begining of an input.
@@ -146,7 +146,7 @@ console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 
 <p>두 번째 예제에서 <code>^</code>는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">그룹</a>에서 사용될 때 부정 또는 보완 문자 세트.</p>
 
-<pre class="brush: js notranslate">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+<pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Selecting fruits that dose not start by 'A' by a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
@@ -160,7 +160,7 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]</
 
 <h3 id="Matching_a_word_boundary">Matching a word boundary</h3>
 
-<pre class="brush: js notranslate">let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
+<pre class="brush: js">let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
 let enEdSelection = fruitsWithDescription.filter(descr =&gt; /(en|ed)\b/.test(descr));
@@ -169,7 +169,7 @@ console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]</pre>
 
 <h3 id="Lookahead_assertion">Lookahead assertion</h3>
 
-<pre class="brush: js notranslate">// JS Lookahead assertion x(?=y)
+<pre class="brush: js">// JS Lookahead assertion x(?=y)
 
 let regex = /First(?= test)/g;
 
@@ -181,16 +181,16 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 
 <h3 id="Basic_negative_lookahead_assertion">Basic negative lookahead assertion</h3>
 
-<p>For example, <code>/\d+(?!\.)/</code><span> matches a number only if it is not followed by a decimal point. </span><code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
+<p>For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
 
-<pre class="brush: js notranslate">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+<pre class="brush: js">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 </pre>
 
 <h3 id="Different_meaning_of_!_combination_usage_in_Assertions_and_Ranges">Different meaning of '?!' combination usage in Assertions and  Ranges </h3>
 
 <p>Different meaning of <code>?!</code> combination usage in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a> <code>/x(?!y)/ </code>and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Ranges</a> <code>[^?!]</code>.</p>
 
-<pre class="brush: js notranslate">let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+<pre class="brush: js">let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
 // Different meaning of '?!' combination usage in Assertions /x(?!y)/ and  Ranges /[^?!]/
 let selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
@@ -202,7 +202,7 @@ console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not wa
 
 <h3 id="Lookbehind_assertion">Lookbehind assertion</h3>
 
-<pre class="brush: js notranslate">let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
+<pre class="brush: js">let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
 
 let ripe_oranges = oranges.filter( fruit =&gt; fruit.match(/(?&lt;=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]

@@ -1,11 +1,6 @@
 ---
 title: Utiliser les animations CSS
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - Reference
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/Animations_CSS/Utiliser_les_animations_CSS
 ---
@@ -95,7 +90,7 @@ her in a languid, sleepy voice.</p>
 
 > **Note :** Pour observer l'animation, il peut être nécessaire de rafraîchir la page ou d'utiliser la vue CodePen/JSFiddle.
 
-{{EmbedLiveSample("Définir_les_étapes_composant_une_animation_(@keyframes)","100%","250")}}
+{{EmbedLiveSample("Utiliser_une_animation_pour_que_le_texte_traverse_la_fenêtre_du_navigateur","100%","250")}}
 
 ### Ajouter une autre étape
 
