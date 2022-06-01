@@ -10056,14 +10056,6 @@
       "hikalium"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/addHitRegion": {
-    "modified": "2020-10-15T21:32:02.085Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "Taken"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/arc": {
     "modified": "2020-10-15T21:38:41.600Z",
     "contributors": [
