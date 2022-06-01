@@ -536,7 +536,7 @@
 /zh-TW/docs/Tools/Web_Console/Split_console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/split_console/index.html
 /zh-TW/docs/Tools/Web_Console/The_command_line_interpreter	https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html
 /zh-TW/docs/Tools/Web_Console/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html
-/zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File/Using_files_from_web_applications
+/zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-TW/docs/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/Ambient_Light_Events	/zh-TW/docs/orphaned/Web/API/Ambient_Light_Events
 /zh-TW/docs/Web/API/AnimationEvent/initAnimationEvent	/zh-TW/docs/Web/API/AnimationEvent/AnimationEvent
@@ -572,6 +572,7 @@
 /zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
 /zh-TW/docs/Web/API/EventListener	/zh-TW/docs/Web/API/EventTarget/addEventListener
+/zh-TW/docs/Web/API/File/Using_files_from_web_applications	/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-TW/docs/Web/API/File/fileName	/zh-TW/docs/Web/API/File/name
 /zh-TW/docs/Web/API/File_Handle_API	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API

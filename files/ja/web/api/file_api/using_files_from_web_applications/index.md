@@ -1,6 +1,6 @@
 ---
 title: ウェブアプリケーションからのファイルの使用
-slug: Web/API/File/Using_files_from_web_applications
+slug: Web/API/File_API/Using_files_from_web_applications
 tags:
   - ファイル
   - HTML5
@@ -9,6 +9,7 @@ tags:
   - ajax アップロード
   - アップロード
 translation_of: Web/API/File/Using_files_from_web_applications
+original_slug: Web/API/File/Using_files_from_web_applications
 ---
 {{APIRef("File API")}}
 
