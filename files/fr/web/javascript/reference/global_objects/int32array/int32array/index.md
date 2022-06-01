@@ -25,7 +25,7 @@ new Int32Array(buffer, decalageOctets, longueur);
 - `longueur`
   - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
 - `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type non [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int16Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non** [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int16Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
 - `object`
   - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
 - `buffer`, `decalageOctets`, `longueur`
@@ -37,28 +37,28 @@ new Int32Array(buffer, decalageOctets, longueur);
 
 ```js
 // À partir d'une longueur
-let int32 = new Int32Array(2);
+const int32 = new Int32Array(2);
 int32[0] = 42;
 console.log(int32[0]); // 42
 console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // À partir d'un tableau
-let arr = new Int32Array([21,31]);
+const arr = new Int32Array([21,31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
-let x = new Int32Array([21, 31]);
-let y = new Int32Array(x);
+const x = new Int32Array([21, 31]);
+const y = new Int32Array(x);
 console.log(y[0]); // 21
 
 // À partir d'un ArrayBuffer
-let buffer = new ArrayBuffer(16);
-let z = new Int32Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(16);
+const z = new Int32Array(buffer, 0, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
-let int32 = new Int32Array(iterable);
+const iterable = function*(){ yield* [1,2,3]; }();
+const int32_from_iterable = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
@@ -75,13 +75,13 @@ let int32 = new Int32Array(iterable);
 À partir d'ECMAScript 2015, le constructeur de `Int32Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Int32Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js example-bad
-let dv = Int32Array([1, 2, 3]);
+const dv = Int32Array([1, 2, 3]);
 // TypeError: calling a builtin Int32Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-let dv = new Int32Array([1, 2, 3]);
+const dv = new Int32Array([1, 2, 3]);
 ```
 
 ## Voir aussi
