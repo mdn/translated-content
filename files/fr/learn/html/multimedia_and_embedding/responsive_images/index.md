@@ -19,7 +19,7 @@ Dans cet article, nous allons préciser le concept d'images adaptatives — imag
         >
         et
         <a
-          href="/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+          href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >comment ajouter des images statiques à une page web</a
         >.
       </td>
