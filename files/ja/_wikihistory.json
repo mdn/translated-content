@@ -14592,20 +14592,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2020-09-26T13:42:56.896Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "imanabu",
-      "uzuworks",
-      "chrisdavidmills",
-      "ethertank",
-      "myakura",
-      "saneyuki_s",
-      "souta"
-    ]
-  },
   "Web/API/File/getAsBinary": {
     "modified": "2019-11-18T15:13:21.722Z",
     "contributors": [
@@ -14857,6 +14843,20 @@
     "modified": "2020-10-15T22:11:54.292Z",
     "contributors": [
       "silverskyvicto"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2020-09-26T13:42:56.896Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "imanabu",
+      "uzuworks",
+      "chrisdavidmills",
+      "ethertank",
+      "myakura",
+      "saneyuki_s",
+      "souta"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {

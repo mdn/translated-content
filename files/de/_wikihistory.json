@@ -2982,17 +2982,6 @@
       "fscholz"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-18T20:49:17.436Z",
-    "contributors": [
-      "Holger.Persch",
-      "MatthiasApsel",
-      "gunnarbittersmann",
-      "chrisdavidmills",
-      "icy",
-      "matschu"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2019-03-23T23:33:48.935Z",
     "contributors": [
@@ -3021,6 +3010,17 @@
     "contributors": [
       "rehne93",
       "Stoffo"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-18T20:49:17.436Z",
+    "contributors": [
+      "Holger.Persch",
+      "MatthiasApsel",
+      "gunnarbittersmann",
+      "chrisdavidmills",
+      "icy",
+      "matschu"
     ]
   },
   "Web/API/FormData": {
