@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createImageData
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createImageData()</code></strong> 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。</p>
+<p><strong><code>CanvasRenderingContext2D.createImageData()</code></strong> 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -74,8 +74,8 @@ console.log(ctx.createImageData(100, 100));
 <ul>
  <li>从 {{geckoRelease("5.0")}}开始：
   <ul>
-   <li>如果矩形小于指定的 1 个像素，<code style="font-style: normal;">createImageData()</code> 会返回图像数据至少 1 个像素值。</li>
-   <li>当调用 <code style="font-style: normal;">createImageData()</code> 指定非限制值时，会抛出<code style="font-style: normal;">NOT_SUPPORTED_ERR</code> exception 异常。</li>
+   <li>如果矩形小于指定的 1 个像素，<code>createImageData()</code> 会返回图像数据至少 1 个像素值。</li>
+   <li>当调用 <code>createImageData()</code> 指定非限制值时，会抛出<code>NOT_SUPPORTED_ERR</code> exception 异常。</li>
    <li><code>createImageData()</code> 根据规定处理负数变量，会围绕对称轴翻转矩形区域。</li>
   </ul>
  </li>
