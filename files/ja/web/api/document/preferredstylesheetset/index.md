@@ -1,47 +1,46 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
   - DOM
   - Document
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - Stylesheets
+  - 非推奨
+browser-compat: api.Document.preferredStyleSheetSet
 translation_of: Web/API/Document/preferredStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}{{Obsolete_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>preferredStyleSheetSet</code></strong> プロパティは、<span class="seosummary">ページ作者によって設定された推奨スタイルシートセットを返します。</span></p>
+**`preferredStyleSheetSet`** プロパティは、ページ作者によって設定された推奨スタイルシートセットを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><var>preferredStyleSheetSet</var> = document.preferredStyleSheetSet
-</pre>
+作者の推奨するスタイルシートセットを示します。これはスタイルシート宣言の順序と HTTP の `Default-Style` ヘッダーから特定されます。
 
-<p>返値である <var>preferredStyleSheetSet</var> は、作者の推奨するスタイルシートセットを示します。これはスタイルシート宣言の順序と HTTP の <code>Default-Style</code> ヘッダーから特定されます。</p>
+作者によって定義された推奨スタイルシートセットがない場合は、空文字列 (`""`) が返されます。
 
-<p>作者によって定義された推奨スタイルシートセットがない場合は、空文字列 (<code>""</code>) が返されます。</p>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js notranslate">if (document.preferredStyleSheetSet) {
+```js
+if (document.preferredStyleSheetSet) {
   console.log("推奨スタイルシート: " + document.preferredStyleSheetSet);
 } else {
   console.log("推奨スタイルシートがありません。");
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.preferredStyleSheetSet")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.lastStyleSheetSet")}}</li>
- <li>{{domxref("document.selectedStyleSheetSet")}}</li>
- <li>{{domxref("document.styleSheetSets")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}
