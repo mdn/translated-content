@@ -16,13 +16,13 @@ except it also accepts BigInts as operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
-## Syntax
+## 語法
 
 ```js
 x ** y
 ```
 
-## Description
+## 簡介
 
 The exponentiation operator is
 right-associative: `a ** b ** c` is equal to
@@ -63,7 +63,7 @@ exponentiation, but JavaScript uses that symbol for the
 NaN ** 2 // NaN
 ```
 
-### Associativity
+### 連續使用
 
 ```js
 2 ** 3 ** 2   // 512
@@ -71,15 +71,15 @@ NaN ** 2 // NaN
 (2 ** 3) ** 2 // 64
 ```
 
-### Usage with unary operators
+### 與一元運算子一同使用
 
-To invert the sign of the result of an exponentiation expression:
+反轉指數運算結果之正負：
 
 ```js
 -(2 ** 2) // -4
 ```
 
-To force the base of an exponentiation expression to be a negative number:
+計算底數為負數的指數運算：
 
 ```js
 (-2) ** 2 // 4
