@@ -4511,12 +4511,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-04-12T12:59:03.189Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2020-10-15T22:11:39.883Z",
     "contributors": [
@@ -4564,6 +4558,12 @@
     "contributors": [
       "fscholz",
       "junho85"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-04-12T12:59:03.189Z",
+    "contributors": [
+      "cs09g"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {

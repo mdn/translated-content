@@ -5,11 +5,11 @@ translation_of: Web/API/Clients/openWindow
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
 
-<p>{{domxref("Clients")}}接口的 <strong><code>openWindow()</code></strong> 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限, <strong><code>openWindow() </code></strong>将抛出 InvalidAccessError.</p>
+<p>{{domxref("Clients")}}接口的 <strong><code>openWindow()</code></strong> 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， <strong><code>openWindow() </code></strong>将抛出 InvalidAccessError.</p>
 
-<p>在Firefox中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口.</p>
+<p>在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。</p>
 
-<p>在Chrome for Android中，该方法可以改为在先前添加到用户主屏幕的 <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Installable">standalone web app</a> 提供的现有浏览上下文中打开URL.</p>
+<p>在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Installable">standalone web app</a> 提供的现有浏览上下文中打开 URL.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,13 +21,13 @@ translation_of: Web/API/Clients/openWindow
 
 <dl>
  <dt><code>url</code></dt>
- <dd>一个 {{domxref("USVString")}} ，表示要在窗口中打开的client的URL。 通常，此值必须是与调用脚本有相同域的URL.</dd>
+ <dd>一个 {{domxref("USVString")}} ，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
 <dl>
- <dd>如果URL来自与服务工作者相同的域，则resolve为 {{domxref("WindowClient")}} 对象的Promise，否则resolve为 {{Glossary("null", "null value")}} .</dd>
+ <dd>如果 URL 来自与服务工作者相同的域，则 resolve 为 {{domxref("WindowClient")}} 对象的 Promise，否则 resolve 为 {{Glossary("null", "null value")}} .</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -57,20 +57,7 @@ onotificationclick = function(event) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

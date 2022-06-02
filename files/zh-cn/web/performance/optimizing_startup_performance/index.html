@@ -7,8 +7,8 @@ tags:
   - 游戏
 translation_of: Web/Performance/Optimizing_startup_performance
 ---
-<div class="summary">
-<p>一个在软件应用开发中经常被忽视的方面—即便在那些专注于性能优化的软件中—就是启动时的表现。你的应用需要花费多长时间启动？当应用加载时是否会卡住用户的设备或浏览器？这会让用户担心你的应用崩溃了，或者哪儿出错了。花时间确保你的应用能够更好地启动总是一个好主意。这篇文章提供了一些技巧和建议来帮助你达成这个目标，不管是在写一个新的应用还是从其他平台向Web移植一个应用。</p>
+<div>
+<p>一个在软件应用开发中经常被忽视的方面—即便在那些专注于性能优化的软件中—就是启动时的表现。你的应用需要花费多长时间启动？当应用加载时是否会卡住用户的设备或浏览器？这会让用户担心你的应用崩溃了，或者哪儿出错了。花时间确保你的应用能够更好地启动总是一个好主意。这篇文章提供了一些技巧和建议来帮助你达成这个目标，不管是在写一个新的应用还是从其他平台向 Web 移植一个应用。</p>
 </div>
 
 <h2 id="更好地启动">更好地启动</h2>
@@ -23,7 +23,7 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <p>如果你从头开始你的项目，通常很容易把所有的东西都写成“正确的方式”，使得代码片段具有合适的异步性。所有纯粹在启动时的计算应该在后台线程中执行，同时使主线程事件的运行时间尽可能缩短。应包含进度指示器，以便用户知道发生了什么以及他们将要等待多久。从理论上来说，无论如何，设计新的应用程序并能很好地启动应该很容易。</p>
 
-<p>但是，另一方面，当您将现有应用程序移植到Web上时，问题会变得棘手。桌面应用程序不需要以异步方式编写，因为通常操作系统会为您处理该问题；或者应用程序当前是唯一正在运行的主要任务，而这具体取决于操作环境。源程序可能有一个主循环，可以被轻松地改成异步操作（通过分别运行每个主循环）；启动通常只是一个持续的整体过程，过程中可能会定期更新进度表。</p>
+<p>但是，另一方面，当您将现有应用程序移植到 Web 上时，问题会变得棘手。桌面应用程序不需要以异步方式编写，因为通常操作系统会为您处理该问题；或者应用程序当前是唯一正在运行的主要任务，而这具体取决于操作环境。源程序可能有一个主循环，可以被轻松地改成异步操作（通过分别运行每个主循环）；启动通常只是一个持续的整体过程，过程中可能会定期更新进度表。</p>
 
 <p>虽然您可以使用 <a href="/zh-CN/docs/Web/API/Web_Workers_API" title="/zh-CN/docs/Web/API/Web_Workers_API">Web workers</a> 异步运行体积巨大，持续时间长的 <a href="/zh-CN/docs/JavaScript" title="/zh-CN/docs/JavaScript">JavaScript</a> 代码块，但还是要给出一个重大警告：workers 不具备访问 <a href="/zh-CN/docs/WebGL" title="/zh-CN/docs/WebGL">WebGL</a> 或音频的能力，亦不能向主线程发送同步消息，所以你甚至不能将这些 API 代理到主线程中。所有的这一切意味着，除非你够轻松地抽取启动过程中的“纯计算”代码块，加入到 workers 中，否则你最后还是得在主线程上运行大部分或全部的启动代码。</p>
 
@@ -35,16 +35,16 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <ul>
  <li>启动时，在需要异步执行的脚本标签上使用 {{ htmlattrxref("defer") }} 或 {{ htmlattrxref("async") }} 属性 。这会允许 HTML 解析器更高效地处理文档。 <a href="/en-US/docs/Games/Techniques/Async_scripts">Async scripts for asm.js</a> 中有更多关于这方面的信息。</li>
- <li>如果你需要解码资源文件（比如，解码JPEG文件并将其转换为原始纹理数据，以便随后在 WebGL 中使用），最好在 workers 里做这件事。</li>
+ <li>如果你需要解码资源文件（比如，解码 JPEG 文件并将其转换为原始纹理数据，以便随后在 WebGL 中使用），最好在 workers 里做这件事。</li>
  <li>当处理浏览器支持的数据格式时（例如，解析图像数据），使用设备或浏览器内置的解码器而不是运行你自己的或者使用 or using one from the original codebase。预先提供的那个基本上一定会快得多，并且能够减小你的应用的启动体积。另外，浏览器可以自动并行化这些解码器的工作。</li>
  <li>所有能并行的数据处理都应该并行化。不要一团接一团地处理数据，如果可能的话，同时处理它们！ </li>
- <li>在你启动的HTML文件中，不要包含不会在关键路径下出现的脚本或样式表。只在需要时加载他们。 </li>
- <li>不要强迫 Web 引擎构建不需要的 DOM，一种简单的“hack”的方式是把你的HTML留在文档里，但是在外层包裹注释。
+ <li>在你启动的 HTML 文件中，不要包含不会在关键路径下出现的脚本或样式表。只在需要时加载他们。 </li>
+ <li>不要强迫 Web 引擎构建不需要的 DOM，一种简单的“hack”的方式是把你的 HTML 留在文档里，但是在外层包裹注释。
   <pre>&lt;div id="foo"&gt;&lt;!--
   &lt;div&gt; ...
 --&gt;&lt;/div&gt;</pre>
  </li>
- <li>当文档的一部分需要被渲染时，加载被注释的HTML
+ <li>当文档的一部分需要被渲染时，加载被注释的 HTML
   <pre>foo.innerHTML = foo.firstChild.nodeValue;</pre>
  </li>
 </ul>
@@ -55,13 +55,13 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <p>一旦初始加载完成，应用的主程序开始运行，有可能你的应用一定会是单线程的，尤其当它是个移植的程序时。尝试改善主程序的启动过程时，最重要的事情是将代码重构为小片段。这些小片段可以在你应用的主循环中通过多个调用在分散的代码段中执行，这样主线程就能处理输入和类似的事件。</p>
 
-<p>Emscripten 提供了一个API 帮助处理这种重构；比如你可以用 <code>emscripten_push_main_loop_blocker()</code> 创建一个函数，在主线程可以继续运行前执行。通过创建一个可以依序调用的函数队列，你可以更轻松地在不阻塞主线程地情况下管理代码的运行。</p>
+<p>Emscripten 提供了一个 API 帮助处理这种重构；比如你可以用 <code>emscripten_push_main_loop_blocker()</code> 创建一个函数，在主线程可以继续运行前执行。通过创建一个可以依序调用的函数队列，你可以更轻松地在不阻塞主线程地情况下管理代码的运行。</p>
 
 <p>但是这留下了不得不重构现有代码，使程序真正这样运行的问题。这可能需要一些时间。</p>
 
 <h3 id="我究竟要异步化到什么程度？">我究竟要异步化到什么程度？</h3>
 
-<p>最好记住大多数浏览器，在你的代码阻塞主线程太长时间——大约10秒左右的时候，就会开始抱怨。理想情况下，你不会在任何地方阻塞那么长时间，但是只要你把时间保持在这之下，就不会有问题。不过要记住，如果有人有个比你更旧更慢的电脑，他们或许会比你经历更长的等待！</p>
+<p>最好记住大多数浏览器，在你的代码阻塞主线程太长时间——大约 10 秒左右的时候，就会开始抱怨。理想情况下，你不会在任何地方阻塞那么长时间，但是只要你把时间保持在这之下，就不会有问题。不过要记住，如果有人有个比你更旧更慢的电脑，他们或许会比你经历更长的等待！</p>
 
 <h2 id="其他建议">其他建议</h2>
 
@@ -70,8 +70,8 @@ translation_of: Web/Performance/Optimizing_startup_performance
 <dl>
  <dt>下载时间</dt>
  <dd>一定要记住用户需要花多少时间下载你游戏的数据。如果你的游戏非常大，很受欢迎，或者需要频繁的重下内容，你应该考虑买个速度越快越好托管服务器。你还应该考虑压缩数据，尽可能缩小其体积。</dd>
- <dt>GPU因素</dt>
- <dd>编译着色器，以及将纹理传输到 GPU 会占用时间，特别是在比较复杂的游戏中。尽管这也会发生在本地(非 Web ) 游戏中，但还是会很恼人。不要不告诉用户游戏实际上还在启动中就这么做。</dd>
+ <dt>GPU 因素</dt>
+ <dd>编译着色器，以及将纹理传输到 GPU 会占用时间，特别是在比较复杂的游戏中。尽管这也会发生在本地 (非 Web ) 游戏中，但还是会很恼人。不要不告诉用户游戏实际上还在启动中就这么做。</dd>
  <dt>数据大小</dt>
  <dd>尽力优化游戏数据的体积，小一些的文件下载和处理都比大文件快。</dd>
  <dt>主观因素</dt>
@@ -90,7 +90,7 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <ul>
  <li>作者: Alon Zakai</li>
- <li>源链接: <a href="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html" title="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html">BananaBread (or any compiled codebase) Startup Experience</a></li>
+ <li>源链接：<a href="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html" title="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html">BananaBread (or any compiled codebase) Startup Experience</a></li>
 </ul>
 </div>
 

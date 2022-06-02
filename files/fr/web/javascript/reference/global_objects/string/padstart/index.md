@@ -17,7 +17,9 @@ La méthode **`padStart()`** permet de compléter la chaîne courante avec une c
 
 ## Syntaxe
 
-    str.padStart(longueurCible [, chaîneComplémentaire])
+```js
+str.padStart(longueurCible [, chaîneComplémentaire])
+```
 
 ### Paramètres
 

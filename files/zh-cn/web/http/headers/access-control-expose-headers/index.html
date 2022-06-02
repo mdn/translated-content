@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 
 <p>响应首部 <strong><code>Access-Control-Expose-Headers</code></strong> 列出了哪些首部可以作为响应的一部分暴露给外部。</p>
 
-<p>默认情况下，只有七种 {{Glossary("Simple response header", "simple response headers")}} （简单响应首部）可以暴露给外部：</p>
+<p>默认情况下，只有七种 {{Glossary("Simple response header", "simple response headers")}}（简单响应首部）可以暴露给外部：</p>
 
 <ul>
  <li>{{HTTPHeader("Cache-Control")}}</li>
@@ -46,7 +46,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 
 <dl>
  <dt>&lt;header-name&gt;</dt>
- <dd>包含0个或多个除 {{Glossary("Simple response header", "simple response headers")}} （简单响应首部）之外的<a href="/en-US/docs/Web/HTTP/Headers">首部名称</a>列表，可以暴露给外部，供页面资源使用。</dd>
+ <dd>包含 0 个或多个除 {{Glossary("Simple response header", "simple response headers")}}（简单响应首部）之外的<a href="/en-US/docs/Web/HTTP/Headers">首部名称</a>列表，可以暴露给外部，供页面资源使用。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -83,7 +83,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 <h2 id="关于兼容性的注意事项">关于兼容性的注意事项</h2>
 
 <ul>
- <li>在最新规范中提出的通配符(*)，尚未被如下浏览器实现：
+ <li>在最新规范中提出的通配符 (*)，尚未被如下浏览器实现：
   <ul>
    <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
    <li>Firefox: {{bug(1309358)}}</li>

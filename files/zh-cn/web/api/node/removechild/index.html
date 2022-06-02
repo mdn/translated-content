@@ -7,7 +7,7 @@ translation_of: Web/API/Node/removeChild
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong>Node.removeChild() </strong>方法从DOM中删除一个子节点。返回删除的节点。</p>
+<p><strong>Node.removeChild() </strong>方法从 DOM 中删除一个子节点。返回删除的节点。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -18,14 +18,14 @@ translation_of: Web/API/Node/removeChild
 <em>element</em>.removeChild(<em>child</em>);</pre>
 
 <ul>
- <li><code>child</code> 是要移除的那个子节点.</li>
- <li><code>node</code> 是<code>child</code>的父节点.</li>
- <li>oldChild保存对删除的子节点的引用. <code>oldChild</code> === <code>child</code>.</li>
+ <li><code>child</code> 是要移除的那个子节点。</li>
+ <li><code>node</code> 是<code>child</code>的父节点。</li>
+ <li>oldChild 保存对删除的子节点的引用。<code>oldChild</code> === <code>child</code>.</li>
 </ul>
 
-<p>被移除的这个子节点仍然存在于内存中,只是没有添加到当前文档的DOM树中,因此,你还可以把这个节点重新添加回文档中,当然,实现要用另外一个变量比如<code>上例中的oldChild</code>来保存这个节点的引用. 如果使用上述语法中的第二种方法, 即没有使用 oldChild 来保存对这个节点的引用, 则认为被移除的节点已经是无用的, 在短时间内将会被<a href="/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a>回收.</p>
+<p>被移除的这个子节点仍然存在于内存中，只是没有添加到当前文档的 DOM 树中，因此，你还可以把这个节点重新添加回文档中，当然，实现要用另外一个变量比如<code>上例中的 oldChild</code>来保存这个节点的引用。如果使用上述语法中的第二种方法，即没有使用 oldChild 来保存对这个节点的引用，则认为被移除的节点已经是无用的，在短时间内将会被<a href="/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a>回收。</p>
 
-<p>如果上例中的<code>child节点</code>不是<code>node</code>节点的子节点,则该方法会抛出异常.</p>
+<p>如果上例中的<code>child 节点</code>不是<code>node</code>节点的子节点，则该方法会抛出异常。</p>
 
 <h2 id="Example" name="Example">示例</h2>
 
@@ -53,20 +53,20 @@ translation_of: Web/API/Node/removeChild
       // Test Case 1: the method in the second call here, throws the exception (1)
 &lt;/script&gt;</code></pre>
 
-<pre>&lt;!--示例HTML代码--&gt;
+<pre>&lt;!--示例 HTML 代码--&gt;
 
 &lt;div id="top" align="center"&gt;
   &lt;div id="nested"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush:js">// 先定位父节点,然后删除其子节点
+<pre class="brush:js">// 先定位父节点，然后删除其子节点
 var d = document.getElementById("top");
 var d_nested = document.getElementById("nested");
 var throwawayNode = d.removeChild(d_nested);
 </pre>
 
-<pre class="brush:js">// 无须定位父节点,通过parentNode属性直接删除自身
+<pre class="brush:js">// 无须定位父节点，通过 parentNode 属性直接删除自身
 var node = document.getElementById("nested");
 if (node.parentNode) {
   node.parentNode.removeChild(node);

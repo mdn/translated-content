@@ -20,11 +20,11 @@ translation_of: Web/API/Window/open
 </code>let <var>windowObjectReference</var> = window.open(<var>strUrl</var>, <var>strWindowName</var>, [<var>strWindowFeatures</var>]);</pre>
 
 <div class="note">
-<p class="syntaxbox" style="font-size: 14px; white-space: normal;"><var>strUrl === </var>要在新打开的窗口中加载的URL。</p>
+<p class="syntaxbox" style="font-size: 14px; white-space: normal;"><var>strUrl === </var>要在新打开的窗口中加载的 URL。</p>
 
 <p class="syntaxbox" style="font-size: 14px; white-space: normal;"><var>strWindowName === </var>新窗口的名称。</p>
 
-<p class="syntaxbox" style="font-size: 14px; white-space: normal;"><var>strWindowFeatures === </var>一个可选参数，列出新窗口的特征(大小，位置，滚动条等)作为一个{{domxref("DOMString")}}。</p>
+<p class="syntaxbox" style="font-size: 14px; white-space: normal;"><var>strWindowFeatures === </var>一个可选参数，列出新窗口的特征 (大小，位置，滚动条等) 作为一个{{domxref("DOMString")}}。</p>
 </div>
 
 <p class="syntaxbox" style="font-size: 14px; white-space: normal;"></p>
@@ -38,7 +38,7 @@ translation_of: Web/API/Window/open
 
 <dl>
  <dt><code>strUrl</code></dt>
- <dd>新窗口需要载入的url地址。<var>strUrl</var>可以是web上的html页面也可以是图片文件或者其他任何浏览器支持的文件格式。</dd>
+ <dd>新窗口需要载入的 url 地址。<var>strUrl</var>可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。</dd>
 </dl>
 
 <dl>
@@ -48,14 +48,14 @@ translation_of: Web/API/Window/open
 
 <dl>
  <dt><code>strWindowFeatures</code></dt>
- <dd>可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性(窗口功能和工具栏) 。 字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的<a href="#Position and size features">位置和尺寸特征</a>。</dd>
+ <dd>可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。 字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的<a href="#Position and size features">位置和尺寸特征</a>。</dd>
 </dl>
 
 <h2 id=".E8.AF.B4.E6.98.8E" name=".E8.AF.B4.E6.98.8E">说明</h2>
 
 <p><code>open()</code> 方法，创建一个新的浏览器窗口对象，如同使用文件菜单中的新窗口命令一样。<var>strUrl</var> 参数指定了该窗口将会打开的地址。如果<var>strUrl</var> 是一个空值，那么打开的窗口将会是带有默认工具栏的空白窗口（加载<code>about:blank</code>）。</p>
 
-<p>注意：调用<code>window.open()</code>方法以后，远程 URL 不会被立即载入，载入过程是异步的。（实际加载这个URL的时间推迟到当前脚本块执行结束之后。窗口的创建和相关资源的加载异步地进行。）</p>
+<p>注意：调用<code>window.open()</code>方法以后，远程 URL 不会被立即载入，载入过程是异步的。（实际加载这个 URL 的时间推迟到当前脚本块执行结束之后。窗口的创建和相关资源的加载异步地进行。）</p>
 
 <h2 id=".E4.BE.8B.E5.AD.90" name=".E4.BE.8B.E5.AD.90">例子</h2>
 
@@ -90,13 +90,13 @@ const openRequestedPopup = () =&gt; {
 
 <p>如果已经存在以 <var>strWindowName</var> 为名称的窗口，则不再打开一个新窗口，而是把 <var>strUrl</var> 加载到这个窗口中。在这种情况下，方法的返回值是这个已经打开的窗口，并忽略参数 <var>strWindowFeatures</var> 。<em>strUrl</em>设为空字符串时，可以在不改变窗口地址的情况下获得一个已经打开的同名窗口的引用。如果要在每次调用 <code>window.open()</code>时都打开一个新窗口，则要把参数 <var>strWindowName</var> 设置为 <code>_blank</code>。</p>
 
-<p><var>strWindowFeatures</var> 是一个可选的字符串，包含了新窗口的一组用逗号分割的特性，在窗口打开之后，就不能用JavaScript改变窗口的功能和工具栏的设置。如果名称是 <var>strWindowName</var> 的窗口不存在并且又没有提供 <var>strWindowFeatures</var> 参数（或者 <var>strWindowFeatures</var> 参数为空字符串），则子窗口以父窗口默认的工具栏渲染。</p>
+<p><var>strWindowFeatures</var> 是一个可选的字符串，包含了新窗口的一组用逗号分割的特性，在窗口打开之后，就不能用 JavaScript 改变窗口的功能和工具栏的设置。如果名称是 <var>strWindowName</var> 的窗口不存在并且又没有提供 <var>strWindowFeatures</var> 参数（或者 <var>strWindowFeatures</var> 参数为空字符串），则子窗口以父窗口默认的工具栏渲染。</p>
 
 <p>如果 <var>strWindowFeatures</var> 参数中没有定义窗口大小，则新窗口的尺寸跟最近渲染的窗口尺寸一样。</p>
 
-<p>如果 <var>strWindowFeatures</var> 参数中没有定义窗口位置，则新窗口显示在最近渲染的窗口的坐标偏移22个像素的位置。这种新窗口偏移量的做法被浏览器开发商广泛地实现（MSIE 6 SP2在默认主题下的偏移量是29个像素），目的是提醒用户注意有新的窗口打开。如果最近使用的窗口是最大化的，则没有这22像素的偏移，新（子）窗口也会被最大化。</p>
+<p>如果 <var>strWindowFeatures</var> 参数中没有定义窗口位置，则新窗口显示在最近渲染的窗口的坐标偏移 22 个像素的位置。这种新窗口偏移量的做法被浏览器开发商广泛地实现（MSIE 6 SP2 在默认主题下的偏移量是 29 个像素），目的是提醒用户注意有新的窗口打开。如果最近使用的窗口是最大化的，则没有这 22 像素的偏移，新（子）窗口也会被最大化。</p>
 
-<p><strong>如果你定义了 <var>strWindowFeatures</var> 参数，那么没有在这个字符串中列出的特性会被禁用或移除</strong> （除了 <var>titlebar</var> 和 <var>close</var> 默认设置为yes）</p>
+<p><strong>如果你定义了 <var>strWindowFeatures</var> 参数，那么没有在这个字符串中列出的特性会被禁用或移除</strong> （除了 <var>titlebar</var> 和 <var>close</var> 默认设置为 yes）</p>
 
 <div class="note">
 <p><strong>提示</strong>: 如果你使用了 <var>strWindowFeatures</var> 参数，那么只需要列出新窗口中启用的特性，其它的特性（除了<em>titlebar</em>和<em>close</em>）将被禁用或移除。</p>

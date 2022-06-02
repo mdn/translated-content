@@ -11,11 +11,11 @@ translation_of: Web/Web_Components/Using_templates_and_slots
 ---
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
-<p class="summary">这篇文章阐述了如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素创建一个可以用来灵活填充 Web组件的 shadow DOM 的模板。</p>
+<p>这篇文章阐述了如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素创建一个可以用来灵活填充 Web 组件的 shadow DOM 的模板。</p>
 
 <h2 id="关于模板_Templates">关于模板 (Templates)</h2>
 
-<p>当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但HTML {{htmlelement("template")}} 元素使它更容易实现(这在现代浏览器中得到了很好的支持)。 此元素及其内容不会在DOM中呈现，但仍可使用JavaScript去引用它。</p>
+<p>当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。 此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。</p>
 
 <p>让我们看一个简单的示例：</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/Web_Components/Using_templates_and_slots
   &lt;p&gt;My paragraph&lt;/p&gt;
 &lt;/template&gt;</pre>
 
-<p>上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到DOM中， 如下面的代码：</p>
+<p>上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中， 如下面的代码：</p>
 
 <pre class="brush: js notranslate">let template = document.getElementById('my-paragraph');
 let templateContent = template.content;
@@ -31,9 +31,9 @@ document.body.appendChild(templateContent);</pre>
 
 <p>虽然是个简单的例子，但您已经可以开始了解它是多么的有用了。</p>
 
-<h2 id="在Web_Components中使用模板">在Web Components中使用模板</h2>
+<h2 id="在Web_Components中使用模板">在 Web Components 中使用模板</h2>
 
-<p>模板(Templates) 本身就是有用的,  而与 web 组件(web component) 一起使用效果更好。我们定义一个 web 组件使用模板作为阴影(shadow) DOＭ 的内容，叫它 <code>&lt;my-paragraph&gt;</code>：</p>
+<p>模板 (Templates) 本身就是有用的，  而与 web 组件 (web component) 一起使用效果更好。我们定义一个 web 组件使用模板作为阴影 (shadow) DOM 的内容，叫它 <code>&lt;my-paragraph&gt;</code>：</p>
 
 <pre class="brush: js notranslate">customElements.define('my-paragraph',
   class extends HTMLElement {
@@ -49,7 +49,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>要注意的关键是我们使用{{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到阴影的根结点上。</p>
 
-<p>因为我们添加了模板的内容到 shadow DOM， 所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 标签里，这些样式信息稍后会封装到自定义的元素中。如果只给它添加到一个标准的DOM中是不起作用的。</p>
+<p>因为我们添加了模板的内容到 shadow DOM， 所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 标签里，这些样式信息稍后会封装到自定义的元素中。如果只给它添加到一个标准的 DOM 中是不起作用的。</p>
 
 <p>比如：</p>
 
@@ -70,23 +70,23 @@ document.body.appendChild(templateContent);</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: 模板在浏览器中的支持情况很好，  Firefox（版本63及以上），Chrome，Opera ,Edge（版本79及以上） 和 Safari 支持 Shadow DOM</p>
+<p><strong>Note</strong>: 模板在浏览器中的支持情况很好，  Firefox（版本 63 及以上），Chrome，Opera ,Edge（版本 79 及以上）和 Safari 支持 Shadow DOM</p>
 </div>
 
-<h2 id="使用槽slots_添加灵活度">使用槽(slots) 添加灵活度</h2>
+<h2 id="使用槽slots_添加灵活度">使用槽 (slots) 添加灵活度</h2>
 
-<p>尽管到这一步已经挺好了，但是元素仍旧不是很灵活. 我们只能在里面放一点文本, 甚至没有普通的 p 标签管用！我们使用 {{htmlelement("slot")}} 让它能在单个实例中通过声明式的语法展示不同的文本。浏览器对这个功能的支持比{{htmlelement("template")}}少，在Chrome 53, Opera 40, Safari 10, 火狐 59 和 Edge 79中支持。</p>
+<p>尽管到这一步已经挺好了，但是元素仍旧不是很灵活。我们只能在里面放一点文本，甚至没有普通的 p 标签管用！我们使用 {{htmlelement("slot")}} 让它能在单个实例中通过声明式的语法展示不同的文本。浏览器对这个功能的支持比{{htmlelement("template")}}少，在 Chrome 53, Opera 40, Safari 10，火狐 59 和 Edge 79 中支持。</p>
 
-<p>插槽由其<code>name</code>属性标识，并且允许您在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何HTML标记片段。</p>
+<p>插槽由其<code>name</code>属性标识，并且允许您在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何 HTML 标记片段。</p>
 
-<p>如果你想添加一个槽到我们的这个例子，我们会将模板的 p 标签改成下面这样:</p>
+<p>如果你想添加一个槽到我们的这个例子，我们会将模板的 p 标签改成下面这样：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;&lt;slot name="my-text"&gt;My default text&lt;/slot&gt;&lt;/p&gt;
 </pre>
 
-<p>如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持slot属性，则<code>&lt;my-paragraph&gt;</code>仅包含后备内容"My default text"。(译者注：此处的意思是使用&lt;my-paragraph&gt;时内部不包裹任何内容时会显示slot 定义好的默认值。具体使用可参考下面)</p>
+<p>如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持 slot 属性，则<code>&lt;my-paragraph&gt;</code>仅包含后备内容"My default text"。(译者注：此处的意思是使用&lt;my-paragraph&gt;时内部不包裹任何内容时会显示 slot 定义好的默认值。具体使用可参考下面)</p>
 
-<p>要定义插槽内容，我们在<code>&lt;my-paragraph&gt;</code>元素内包括一个HTML结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的name属性的值。 和以前一样，它可以是您喜欢的任何东西，例如：</p>
+<p>要定义插槽内容，我们在<code>&lt;my-paragraph&gt;</code>元素内包括一个 HTML 结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。 和以前一样，它可以是您喜欢的任何东西，例如：</p>
 
 <pre class="brush: html notranslate">&lt;my-paragraph&gt;
   &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
@@ -107,7 +107,7 @@ document.body.appendChild(templateContent);</pre>
 <p><strong>Note</strong>: 将能被插入到槽中的元素视为 {{domxref("Slotable")}}; 称已经插入到槽中的元素为 <em>slotted</em>.</p>
 </div>
 
-<p>这就我们普通的例子，你想更深入了解你可以 <a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">在GitHub上查看</a> (也可以看 <a href="https://mdn.github.io/web-components-examples/simple-template/">在线运行</a>)。</p>
+<p>这就我们普通的例子，你想更深入了解你可以 <a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">在 GitHub 上查看</a> (也可以看 <a href="https://mdn.github.io/web-components-examples/simple-template/">在线运行</a>)。</p>
 
 <h2 id="更深入的例子">更深入的例子</h2>
 
@@ -116,11 +116,11 @@ document.body.appendChild(templateContent);</pre>
 <p>下面的一组代码段展示了我们如何联合使用 <code>&lt;slot&gt;</code> 和 <code>&lt;template&gt;</code> 以及一些 JavaScript 去完成：</p>
 
 <ul>
- <li>使用 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽(named slots)</a> 在 <a href="/en-US/docs/Web/API/ShadowRoot">阴影(shadow root)</a> 创建一个 <strong><code>&lt;element-details&gt;</code></strong> 元素。</li>
- <li>将 <strong><code>&lt;element-details&gt;</code></strong> 元素设计成在文档中使用时, 它将它的 <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> 中的内容和该元素内部的内容糅合在一起 —也就是元素内容中的片断被填充到元素的 <a href="/en-US/docs/Web/API/ShadowRoot">阴影(shadow root)</a> 的 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽(named slots)</a> 中。</li>
+ <li>使用 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽 (named slots)</a> 在 <a href="/en-US/docs/Web/API/ShadowRoot">阴影 (shadow root)</a> 创建一个 <strong><code>&lt;element-details&gt;</code></strong> 元素。</li>
+ <li>将 <strong><code>&lt;element-details&gt;</code></strong> 元素设计成在文档中使用时，它将它的 <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> 中的内容和该元素内部的内容糅合在一起 —也就是元素内容中的片断被填充到元素的 <a href="/en-US/docs/Web/API/ShadowRoot">阴影 (shadow root)</a> 的 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽 (named slots)</a> 中。</li>
 </ul>
 
-<p>注意，技术上来讲没有<code>&lt;template&gt;</code> 使用 <code>&lt;slot&gt;</code> 也是可以的。例如，  <code>&lt;slot&gt;</code> 在一个常规的{{HTMLElement("div")}} 标签里，仍然有占位符的特性，就像在 shadow DOM 中一样，这样我们能避免需要先获取模板对象的 <code>content</code> 属性再使用它的麻烦。然而这个特性在向一个 {{HTMLElement("template")}} 元素中添加槽时更加实用, 因为你不会基于一个渲染的元素定义一个模式。</p>
+<p>注意，技术上来讲没有<code>&lt;template&gt;</code> 使用 <code>&lt;slot&gt;</code> 也是可以的。例如，  <code>&lt;slot&gt;</code> 在一个常规的{{HTMLElement("div")}} 标签里，仍然有占位符的特性，就像在 shadow DOM 中一样，这样我们能避免需要先获取模板对象的 <code>content</code> 属性再使用它的麻烦。然而这个特性在向一个 {{HTMLElement("template")}} 元素中添加槽时更加实用，因为你不会基于一个渲染的元素定义一个模式。</p>
 
 <p>另外，就算它还没有渲染，使用{{HTMLElement("template")}}时，作为模板的容器应该语义上应当干净。而且 {{HTMLElement("template")}}   可以直接挂一些对象，如  {{HTMLElement("td")}} ，当加到一个 {{HTMLElement("div")}} 中时会隐藏。</p>
 
@@ -128,9 +128,9 @@ document.body.appendChild(templateContent);</pre>
 <p><strong>Note</strong>: 查看在完整的例子在 <a href="https://github.com/mdn/web-components-examples/tree/master/element-details">element-details</a> ( <a href="https://mdn.github.io/web-components-examples/element-details/">在线运行</a> ).</p>
 </div>
 
-<h3 id="使用槽slot_创建一个模板">使用槽(slot) 创建一个模板</h3>
+<h3 id="使用槽slot_创建一个模板">使用槽 (slot) 创建一个模板</h3>
 
-<p>首先，我们在{{HTMLElement("template")}} 使用  <code>&lt;slot&gt;</code> 标签创建一个"element-details-template"包含一些 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽(named slot)</a>  的 <a href="/en-US/docs/Web/API/DocumentFragment">文档片段(document fragment)</a></p>
+<p>首先，我们在{{HTMLElement("template")}} 使用  <code>&lt;slot&gt;</code> 标签创建一个"element-details-template"包含一些 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽 (named slot)</a>  的 <a href="/en-US/docs/Web/API/DocumentFragment">文档片段 (document fragment)</a></p>
 
 <pre class="brush: html notranslate">&lt;template id="element-details-template"&gt;
   &lt;style&gt;
@@ -163,19 +163,19 @@ document.body.appendChild(templateContent);</pre>
 
 <ul>
  <li>{{HTMLElement("template")}} 标签有一个 {{HTMLElement("style")}} 标签，里面有一些  只能在当前{{HTMLElement("template")}} 的派生中生效的 CSS 样式</li>
- <li>{{HTMLElement("template")}} 用 <code>&lt;slot&gt;</code> 和它的 {{htmlattrxref("name", "slot")}} 属性生成一个 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽(named slots)</a>：
+ <li>{{HTMLElement("template")}} 用 <code>&lt;slot&gt;</code> 和它的 {{htmlattrxref("name", "slot")}} 属性生成一个 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽 (named slots)</a>：
   <ul>
    <li><code>&lt;slot name="element-name"&gt;</code></li>
    <li><code>&lt;slot name="description"&gt;</code></li>
    <li><code>&lt;slot name="attributes"&gt;</code></li>
   </ul>
  </li>
- <li>{{HTMLElement("template")}} 包裹 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽(named slots)</a> 在 {{HTMLElement("details")}} 元素中。</li>
+ <li>{{HTMLElement("template")}} 包裹 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">命名的槽 (named slots)</a> 在 {{HTMLElement("details")}} 元素中。</li>
 </ul>
 
 <h3 id="从&lt;template>_中创建一个新的_&lt;element-details>_对象">从&lt;template&gt; 中创建一个新的 &lt;element-details&gt; 对象</h3>
 
-<p>接下来，我们定义一个新的 <strong><code>&lt;element-details&gt;</code></strong> 元素然后用 {{DOMXref("Element.attachShadow")}} 来将它附着到它的 <a href="/en-US/docs/Web/API/ShadowRoot">阴影(shadow) root</a>, 这个阴影上我们创建了 {{HTMLElement("template")}} 元素。这和我们上面使用的简单例子中的一样。</p>
+<p>接下来，我们定义一个新的 <strong><code>&lt;element-details&gt;</code></strong> 元素然后用 {{DOMXref("Element.attachShadow")}} 来将它附着到它的 <a href="/en-US/docs/Web/API/ShadowRoot">阴影 (shadow) root</a>, 这个阴影上我们创建了 {{HTMLElement("template")}} 元素。这和我们上面使用的简单例子中的一样。</p>
 
 <pre class="brush: js notranslate">customElements.define('element-details',
   class extends HTMLElement {
@@ -218,14 +218,14 @@ document.body.appendChild(templateContent);</pre>
 <p>关于以上代码片段，请注意以下几点：</p>
 
 <ul>
- <li>该代码片段有2个 <strong><code>&lt;element-details&gt;</code> </strong>标签，他们都使用了“slot”属性来引用名为<code>"element-name"</code>和<code>"description"</code>的槽，并把他们都放在根下。</li>
+ <li>该代码片段有 2 个 <strong><code>&lt;element-details&gt;</code> </strong>标签，他们都使用了“slot”属性来引用名为<code>"element-name"</code>和<code>"description"</code>的槽，并把他们都放在根下。</li>
  <li>只有第一个 <strong><code>&lt;element-details&gt;</code></strong> 元素 引用了名为 <code>"attributes"</code> 的槽，而第二个 <code><strong>&lt;element-details</strong>&gt;</code> 标签没有引用名为<code>"attributes"</code>的槽。</li>
  <li>只有第一个 <strong><code>&lt;element-details&gt;</code> </strong>标签中的"dl"使用了名为 <code>"attributes"</code>的槽，他包含子元素："dt"和"dd"元素。</li>
 </ul>
 
 <h3 id="添加一些最终的样式">添加一些最终的样式</h3>
 
-<p>在完成之前，我们在文档中给"dl"和"dt"以及"dd"标签增加一些CSS样式。</p>
+<p>在完成之前，我们在文档中给"dl"和"dt"以及"dd"标签增加一些 CSS 样式。</p>
 
 <pre class="brush: css notranslate">  dl { margin-left: 6px; }
   dt { font-weight: bold; color: #217ac0; font-size: 110% }
@@ -246,9 +246,9 @@ document.body.appendChild(templateContent);</pre>
 <p>关于结果请注意以下几点：</p>
 
 <ul>
- <li>即使 <strong><code>&lt;element-details&gt;</code> </strong>标签并没有直接使用<code>"details"</code>标签元素，但是在渲染的时候使用了<code>"details"</code>标签，是因为shadow root使得他们被填充。</li>
- <li>在渲染出来的<code>"details"</code>标签，<code><strong>&lt;element-details&gt;</strong></code> 标签从根开始填充了相应的命名的槽。换言之，<strong><code>&lt;element-details&gt;</code></strong> 的DOM树和shadow root的内容结合在了一起。</li>
- <li>对于这两个 <code><strong>&lt;element-details&gt;</strong></code> 标签，属性标题会自动的从shadow root中添加到名为<code>"attribute"</code>的插槽的前面。</li>
+ <li>即使 <strong><code>&lt;element-details&gt;</code> </strong>标签并没有直接使用<code>"details"</code>标签元素，但是在渲染的时候使用了<code>"details"</code>标签，是因为 shadow root 使得他们被填充。</li>
+ <li>在渲染出来的<code>"details"</code>标签，<code><strong>&lt;element-details&gt;</strong></code> 标签从根开始填充了相应的命名的槽。换言之，<strong><code>&lt;element-details&gt;</code></strong> 的 DOM 树和 shadow root 的内容结合在了一起。</li>
+ <li>对于这两个 <code><strong>&lt;element-details&gt;</strong></code> 标签，属性标题会自动的从 shadow root 中添加到名为<code>"attribute"</code>的插槽的前面。</li>
  <li>因为第一个 <code><strong>&lt;element-details&gt;</strong></code> 标签的<code>"dl"</code>元素就明确的引用了名为<code>"attributes"</code>的插槽，所以该<code>"dl"</code>元素的内容将会替换该标签中名为<code>"attributes"</code>的插槽。</li>
  <li>因为第二个 <code><strong>&lt;element-details&gt;</strong></code>标签没有引用名为<code>"attributes"</code> 的槽，所以标签内名为<code>"attributes"的</code>插槽的内容将会使用模板中默认的内容。</li>
 </ul>

@@ -16,7 +16,9 @@ La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur 
 
 ## Syntaxe
 
-    ArrayBuffer[Symbol.species]
+```js
+ArrayBuffer[Symbol.species]
+```
 
 ## Description
 

@@ -16,9 +16,11 @@ La méthode **`flatMap()`** permet d'appliquer une fonction à chaque élément 
 
 ## Syntaxe
 
-    var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
-        // return element for new_array
-    }[, thisArg])
+```js
+var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
+    // return element for new_array
+}[, thisArg])
+```
 
 ### Paramètres
 
@@ -76,7 +78,9 @@ tableau1.flatMap(x => x.split(" "));
 
 On notera que la longueur de la liste obtenue avec `flatMap` est différente de la longueur de la liste originale.
 
-    //=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+//=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 
 ## Équivalent
 

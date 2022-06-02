@@ -18,7 +18,9 @@ La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expr
 
 ## Syntaxe
 
-    regexp[Symbol.matchAll](str)
+```js
+regexp[Symbol.matchAll](str)
+```
 
 ### Paramètres
 

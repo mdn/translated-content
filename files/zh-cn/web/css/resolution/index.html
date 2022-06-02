@@ -11,21 +11,21 @@ translation_of: Web/CSS/resolution
 
 <div>分辨率：用于描述<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>中的分辨率的&lt;resolution&gt; CSS<a href="/en-US/docs/Web/CSS/CSS_Types">数据类型</a>表示输出设备的像素密度。</div>
 
-<p>在屏幕上，单位与CSS英寸，厘米或像素有关，而与物理值无关。</p>
+<p>在屏幕上，单位与 CSS 英寸，厘米或像素有关，而与物理值无关。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>&lt;resolution&gt;数据类型由严格为正{{cssxref("&lt;number&gt;")}}组成，后跟下面列出的单位之一。与所有CSS维度一样，单位字面值与数字之间没有空格。</p>
+<p>&lt;resolution&gt;数据类型由严格为正{{cssxref("&lt;number&gt;")}}组成，后跟下面列出的单位之一。与所有 CSS 维度一样，单位字面值与数字之间没有空格。</p>
 
 <h3 id="单位">单位</h3>
 
 <dl>
  <dt><a id="dpi" name="dpi"><code id="dpi">dpi</code></a></dt>
- <dd>表示<a href="https://en.wikipedia.org/wiki/Dots_per_inch">每英寸的点数</a>。屏幕通常每英寸包含72或96个点，但打印文档的dpi通常要大得多。 1英寸是2.54厘米，1dpi≈0.39dpcm。</dd>
+ <dd>表示<a href="https://en.wikipedia.org/wiki/Dots_per_inch">每英寸的点数</a>。屏幕通常每英寸包含 72 或 96 个点，但打印文档的 dpi 通常要大得多。1 英寸是 2.54 厘米，1dpi≈0.39dpcm。</dd>
  <dt><a id="dpcm" name="dpcm"><code id="dpcm">dpcm</code></a></dt>
- <dd><a href="https://en.wikipedia.org/wiki/Dots_per_inch">每厘米上的点数</a>。1英寸是2.54厘米, <code>1dpcm ≈ 2.54dpi</code>.</dd>
+ <dd><a href="https://en.wikipedia.org/wiki/Dots_per_inch">每厘米上的点数</a>。1 英寸是 2.54 厘米，<code>1dpcm ≈ 2.54dpi</code>.</dd>
  <dt><a id="dppx" name="dppx"><code id="dppx">dppx</code></a></dt>
- <dd>表示每个<code><a href="/en-US/docs/Web/CSS/length#px">px</a></code>的点数。 由于CSS px的固定比率为1:96，因此1dppx相当于96dpi。 which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.</dd>
+ <dd>表示每个<code><a href="/en-US/docs/Web/CSS/length#px">px</a></code>的点数。 由于 CSS px 的固定比率为 1:96，因此 1dppx 相当于 96dpi。 which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.</dd>
  <dt><a id="x" name="x"><code>x</code></a></dt>
  <dd> <code>dppx</code> 的别名</dd>
 </dl>
