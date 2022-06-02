@@ -18,14 +18,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <p><br>
  这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="row">准备:</th>
+   <th scope="row">准备：</th>
    <td>熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试的核心概念</a>。</td>
   </tr>
   <tr>
-   <th scope="row">对象:</th>
+   <th scope="row">目标：</th>
    <td>了解跨浏览器测试所涉及的高级概念。</td>
   </tr>
  </tbody>
@@ -37,14 +37,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>可行的替代方案是，尝试确保您的网站适用于最常见的浏览器和设备，然后进行防御性编码，以便为您的网站提供最广泛的支持范围。</p>
 
-<p>防御性编码的实质是一种智能回退措施：如果某个功能或样式在浏览器中不起作用，该网站将将降级为不太令人兴奋的东西，但仍然能提供可接受的用户体验——核心是：虽然网站看起来不那么漂亮，仍然可以访问。</p>
+<p>防御性编码的实质是一种智能回退措施：如果某个功能或样式在浏览器中不起作用，该网站能够将其降级为不太令人兴奋的后备方案，但仍然能提供可接受的用户体验——主要目的是保证网站可以访问，即使它看起来逊色一点。</p>
 
 <p>本章的目的是建立一个供您在测试时参考的浏览器/设备图表。 您可以根据需要将其设置成简单或复杂版本——常见的方法是具有多个等级的支持，例如：</p>
 
 <ol>
- <li>A 级：普通/现代浏览器（仍在广泛使用）：需要彻底测试并提供全面支持。</li>
- <li>B 级：较旧/较少的浏览器 （少数用户还在使用）：测试并提供更基本的体验，以提供对核心信息和服务的完全访问。</li>
- <li>C 级：稀有/未知浏览器 ： 不进行测试，假设网站内容可以显示。 在我们的防御性编码起效的情况下，用户可以访问到网页的全部内容。</li>
+ <li>A 级别：常见/现代浏览器（仍在广泛使用）：需要彻底测试并提供全功能支持。</li>
+ <li>B 级别：较旧/功能少的浏览器（少数用户还在使用）：测试并提供更基础的体验，使得核心内容和服务能够完整访问。</li>
+ <li>C 级别：罕见/未知浏览器：不需要测试，假设网站内容可以显示。在我们的防御性编码起效的情况下，用户可以访问到网页的全部内容。</li>
 </ol>
 
 <p>在以下各节中，我们将以此等级为参考构建支持图表。</p>
@@ -55,103 +55,103 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <h3 id="有根据地假设">有根据地假设</h3>
 
-<p>您可以称之为“假设”或“直觉”。这不是一种准确，科学的方法，但作为具有网络行业经验的人，您至少应该对待测试的一些浏览器有些想法。这将形成一个良好的初级浏览器分级支持系统。</p>
+<p>您可以称之为“假设”或“直觉”。这不是一种准确、科学的方法，但作为具有网络行业经验的人，您应该要清晰地了解您所想测试的一些浏览器，这将形成一个良好的初级浏览器分级支持系统。</p>
 
-<p>例如，如果您居住在西欧或北美，您会发现许多人使用 Windows 和 Mac 的台式机或笔记本电脑，主要浏览器是 Chrome，Firefox，Safari，IE 和 Edge。您可以测试前三个浏览器最近的三个版本，因为它们会定期更新。对于Edge和IE，您应当近期的多个版本。这些浏览器都应该属于A级。</p>
+<p>例如，如果您居住在西欧或北美，您会发现许多人使用 Windows 和 Mac 的台式机或笔记本电脑，常用浏览器是 Chrome，Firefox，Safari，IE 和 Edge。您可以测试前三个浏览器的最新版本，因为它们会定期更新。对于 Edge 和 IE，您应当测试它们近期的几个版本。以上这些浏览器都属于 A 级别。</p>
 
 <div class="note">
 <p><strong>注意：</strong>您一次只能在计算机上安装一个版本的 IE 或 Edge，因此您可能必须使用虚拟机或其他方法来执行所需的测试。稍后请参阅<a href="#虚拟机">虚拟机</a>部分。</p>
 </div>
 
-<p>很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平​​板电脑上测试这些，以确保响应式设计的正常运行。</p>
+<p>很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平​​板电脑上测试它们，以确保响应式设计正常运行。</p>
 
-<p>您也许知道很多人仍然在使用 IE 9。这一版本陈旧而且功能较少，所以让我们把它放在B级别。</p>
+<p>您也许知道很多人仍然在使用 IE 9，它版本老旧而且功能较少，所以我们把它列为 B 级别。</p>
 
-<p>到目前为止，这为我们提供了以下支持级别：</p>
+<p>到目前为止，我们整理了以下浏览器支持级别：</p>
 
 <ol>
- <li>A 级：用于 Windows / Mac 的 Chrome 和 Firefox，用于 Mac 的 Safari，用于 Windows的 Edge 和 IE（每个版本的最后两个版本），用于 iPhone / iPad 的 iOS Safari，用于手机/平板电脑的 Android stock 浏览器（最后两个版本），用于手机和平板电脑上的 Chrome 和适用于 Android 的Firefox（最后两个版本）。</li>
- <li>B 级：适用于 Windows 的 IE 9</li>
- <li>C 级：无</li>
+ <li>A 级别：Windows / Mac 的 Chrome 和 Firefox，Mac 的 Safari，Windows 的 Edge 和 IE（它们的最后两个版本），iPhone / iPad 的 iOS Safari，手机/平板电脑的 Android stock 浏览器（最后两个版本），手机和平板电脑上的 Chrome 和适 Android 的 Firefox（最后两个版本）。</li>
+ <li>B 级别：Windows 的 IE 9</li>
+ <li>C 级别：无</li>
 </ol>
 
-<p>如果您居住在其他地方，或者正在开发其他地方（例如某些国家或地区）的网站，那么您可能会有不同的常用浏览器进行测试。</p>
+<p>如果您居住在其他地方，或者正在开发其他地方（例如某些国家或地区）的网站，那您可能需要对不同的常用浏览器进行测试。</p>
 
 <div class="note">
-<p><strong>注意：</strong>“我老板用Blackberry，所以我们最好确保它看起来很好”也可以是一个有说服力的论点。</p>
+<p><strong>注意：</strong>“我老板用 Blackberry，所以我们最好确保它看起来很好” 也是一个很有说服力的理由。</p>
 </div>
 
-<h3 id="浏览器支持检测">浏览器支持检测</h3>
+<h3 id="浏览器支持检测">浏览器份额统计</h3>
 
-<p>您可以调用的一个有用的措施是浏览器支持统计信息,用于告知您的浏览器测试选项。有许多网站提供此类统计信息,例如:</p>
+<p>有一个很有用的方法来确定您要测试的浏览器的范围，那就是浏览器份额统计数据。有许多网站提供这些统计数据，例如：</p>
 
 <ul>
  <li><a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a></li>
  <li><a href="http://gs.statcounter.com/">Statcounter</a></li>
 </ul>
 
-<p>这些都以北美为中心,并不特别准确,但它们可以让您了解大趋势。</p>
+<p>这些数据都偏向于北美，并不是特别准确，不过它们可以让您了解大致趋势。</p>
 
-<p>例如,让我们转到 <a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a>。您可以看到 Opera 被列为具有小但可见的使用数字,因此,我们也应该将其添加到支持图表中,作为 C 级。</p>
+<p>例如，让我们转到 <a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a>。您可以看到 Opera 的使用人数很少但仍然有人使用，所以我们应该将其作为 C 级别添加到支持图表中。</p>
 
-<p>IE8 被列为重要,但它较老且不再能够。Opera Mini 非常重要,但在运行时运行复杂的 JavaScript 方面,它的能力并不大(有关详细信息,请参阅 <a href="https://dev.opera.com/articles/opera-mini-and-javascript/">Opera Mini and JavaScrip</a>)。我们也应该把它放到B级。</p>
+<p>IE8 被列为重要，但它较老且不再更新。Opera Mini 也很重要，但在运行复杂的 JavaScript 方面，它的能力并不强（有关详细信息，请参阅 <a href="https://dev.opera.com/articles/opera-mini-and-javascript/">Opera Mini and JavaScrip</a>）。我们应该把它放到 B 级别。</p>
 
 <h3 id="使用分析工具">使用分析工具</h3>
 
-<p>更准确的数据源,如果你能得到它,来自像<a href="https://www.google.com/analytics/">Google Analytics</a>这样的分析应用程序。这是一个应用程序,将为您提供准确的统计数据,究竟是什么浏览器的人正在使用浏览您的网站。当然,这依赖于您已经有一个网站使用它,所以它是没有多大的适合全新的网站。</p>
+<p>使用像 <a href="https://www.google.com/analytics/">Google Analytics</a> 这样的分析网站来获取更准确的数据。它能够为您提供诸如人们在用什么浏览器来浏览您的网站这样的精准的统计数据。当然，这需要您已经有一个网站在使用它，所以它不太适合新上线的网站。</p>
 
-<p>但是,分析历史记录可用于查找支持统计信息以影响公司网站的新版本或要添加到现有站点的新功能。如果您有这些可用,它们比上述全球浏览器统计信息更准确。</p>
+<p>但是，析历史记录可用于查找支持统计信息以影响公司网站的新版本或要添加到现有站点的新功能。如果您有这些可用，它们比上述全球浏览器统计信息更准确。</p>
 
 <h4 id="配置Google分析">配置Google分析</h4>
 
 <ol>
- <li>首先,您需要一个谷歌帐户。使用此帐户可登录<a href="https://www.google.com/analytics/">Google Analytics</a>。 </li>
- <li>选择 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> (web))选项,然后单击"注册"按钮。</li>
+ <li>首先，您需要一个谷歌帐户。使用此帐户可登录<a href="https://www.google.com/analytics/">Google Analytics</a>。 </li>
+ <li>选择 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> (web))选项，然后单击"注册"按钮。</li>
  <li>在注册页面中输入您的网站/应用详细信息。这是相当直观的设置;获得正确的最重要的字段是网站 URL。这需要是您的网站/应用的根 URL。</li>
- <li>填写完所有内容后,按"获取跟踪 ID"按钮,然后接受显示的服务条款。</li>
- <li>下一页为您提供一些代码段和其他说明。对于基本网站,您需要做的是复制网站跟踪代码块,并将其粘贴到您要在网站上使用 Google Analytics 跟踪的所有不同页面。您可以在关闭<code>&lt;/body&gt;</code>标记下方,也可以位于其他适当位置,以防止其与应用程序代码混淆。</li>
- <li>将更改上载到开发服务器,或将代码上载到其他任何位置。</li>
+ <li>填写完所有内容后，按"获取跟踪 ID"按钮，然后接受显示的服务条款。</li>
+ <li>下一页为您提供一些代码段和其他说明。对于基本网站，您需要做的是复制网站跟踪代码块，并将其粘贴到您要在网站上使用 Google Analytics 跟踪的所有不同页面。您可以在关闭<code>&lt;/body&gt;</code>标记下方，也可以位于其他适当位置，以防止其与应用程序代码混淆。</li>
+ <li>将更改上载到开发服务器，或将代码上载到其他任何位置。</li>
 </ol>
 
 <p>就是这样！您的网站现在应该准备好开始报告分析数据。</p>
 
 <h4 id="学习分析数据">学习分析数据</h4>
 
-<p>现在,您应该能够返回 <a href="https://analytics.google.com/analytics/web">Analytics Web</a>主页,并开始查看您收集的有关网站的数据(当然,您需要留出一点时间才能真正收集一些数据)。</p>
+<p>现在，您应该能够返回 <a href="https://analytics.google.com/analytics/web">Analytics Web</a>主页，并开始查看您收集的有关网站的数据(当然，您需要留出一点时间才能真正收集一些数据)。</p>
 
-<p>默认情况下,您应该看到报告选项卡,如下所示:</p>
+<p>默认情况下，您应该看到报告选项卡，如下所示：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14081/analytics-reporting.png" style="border-style: solid; border-width: 1px; display: block; height: 386px; margin: 0px auto; width: 700px;"></p>
 
-<p>有大量的数据,你可以看看使用谷歌分析––自定义报告在不同的类别,等等––我们没有时间讨论这一切。 <a href="https://support.google.com/analytics/answer/1008015">Getting started with Analytics</a> 为初学者提供了一些有关报告(以及更多)的有用指导。</p>
+<p>有大量的数据，你可以看看使用谷歌分析––自定义报告在不同的类别，等等––我们没有时间讨论这一切。 <a href="https://support.google.com/analytics/answer/1008015">Getting started with Analytics</a> 为初学者提供了一些有关报告(以及更多)的有用指导。</p>
 
-<p>还应鼓励您查看左侧的不同选项,并查看您可以找到哪些类型的数据。例如,您可以通过从左侧菜单中选择" <em>Audience &gt; Technology &gt; Browser &amp; OS</em>"来了解用户正在使用的浏览器和操作系统。</p>
+<p>还应鼓励您查看左侧的不同选项，并查看您可以找到哪些类型的数据。例如，您可以通过从左侧菜单中选择" <em>Audience &gt; Technology &gt; Browser &amp; OS</em>"来了解用户正在使用的浏览器和操作系统。</p>
 
 <div class="note">
-<p><strong>注意</strong>:使用 Google 分析时,您需要提防误导性偏见,例如"我们没有 Firefox 移动用户"可能会导致您不必为 Firefox 移动提供支持。但是,你不会有任何火狐移动用户,如果该网站被打破在火狐手机摆在首位。</p>
+<p><strong>注意</strong>：使用 Google 分析时，您需要提防误导性偏见，例如"我们没有 Firefox 移动用户"可能会导致您不必为 Firefox 移动提供支持。但是，你不会有任何火狐移动用户，如果该网站被打破在火狐手机摆在首位。</p>
 </div>
 
 <h3 id="其他注意事项">其他注意事项</h3>
 
 <p>您可能还应包括其他注意事项。您绝对应该将辅助功能作为 A 级测试要求(我们将在处理常见辅助功能问题一文中介绍您应该测试的内容)</p>
 
-<p>此外,您可能还有其他注意事项。如果要创建某种公司 Intranet,以便向经理提供销售数据,并且例如,所有经理都提供了 Windows 手机,则可能需要将移动 IE 支持作为优先事项。</p>
+<p>此外，您可能还有其他注意事项。如果要创建某种公司 Intranet,以便向经理提供销售数据,并且例如,所有经理都提供了 Windows 手机,则可能需要将移动 IE 支持作为优先事项。</p>
 
 <h3 id="最终的支持图表">最终的支持图表</h3>
 
-<p>因此,我们的最终支持图表最终将如下所示:</p>
+<p>因此，我们的最终支持图表最终将如下所示：</p>
 
 <ol>
- <li>A 级:适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器(最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本)在手机平板电脑上.通过常见测试的可访问性。</li>
- <li>B 级:IE 8 和 9 用于 Windows,Opera Mini。</li>
- <li>C级:Opera,其他合适的现代浏览器。</li>
+ <li>A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器(最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本)在手机平板电脑上.通过常见测试的可访问性。</li>
+ <li>B 级：IE 8 和 9 用于 Windows，Opera Mini。</li>
+ <li>C 级：Opera，其他合适的现代浏览器。</li>
 </ol>
 
 <h2 id="你想要测试什么？">你想要测试什么？</h2>
 
-<p>当您的代码库有需要测试的新添加项时,在开始测试之前,应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的,也可以是功能性的, 两者结合起来, 成为可用的网站功能。</p>
+<p>当您的代码库有需要测试的新添加项时，在开始测试之前，应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的，也可以是功能性的，两者结合起来，成为可用的网站功能。</p>
 
-<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码 </a>, <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
+<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码</a>，<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14083/sliding-box-demo.png" style="border-style: solid; border-width: 1px; display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
 
@@ -160,7 +160,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <p>A 级和 B 级:</p>
 
 <ul>
- <li>按钮应该由用户的主要控制机制激活,不管它是什么 ––这应该包括鼠标、键盘和触摸</li>
+ <li>按钮应该由用户的主要控制机制激活，不管它是什么 ––这应该包括鼠标、键盘和触摸</li>
  <li>切换按钮应使信息框显示/消失。</li>
  <li>文本应可读。</li>
  <li>使用屏幕阅读器的视障用户应该能够访问文本。</li>
