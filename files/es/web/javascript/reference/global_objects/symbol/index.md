@@ -142,7 +142,7 @@ obj['c'] = 'c'
 obj.d = 'd'
 
 for (let i in obj) {
-   console.log(i)  // logs "c" and "d"
+   console.log(i)  // imprime en registro "c" y "d"
 }
 ```
 
