@@ -1,76 +1,60 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
   - Document
-  - Method
-  - Reference
-  - editor
+  - メソッド
+  - リファレンス
+  - エディター
+  - 非推奨
+browser-compat: api.Document.queryCommandSupported
 translation_of: Web/API/Document/queryCommandSupported
 ---
-<div>{{ApiRef("DOM")}}{{obsolete_header}}</div>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>Document.queryCommandSupported()</code></strong> メソッドは、指定しされたエディターコマンドにブラウザーが対応しているかどうかを報告します。</p>
+**`Document.queryCommandSupported()`** メソッドは、指定しされたエディターコマンドにブラウザーが対応しているかどうかを報告します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>isSupported</var> = document.queryCommandSupported(<var>command</var>);
-</pre>
+```js
+queryCommandSupported(command)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>command</var></code></dt>
- <dd>サポートしているかを調べるコマンド。</dd>
-</dl>
+- `command`
+  - : 対応しているかどうかを調べるコマンドです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{jsxref("Boolean")}} で、コマンドがサポートされていれば <code>true</code>、そうでなければ <code>false</code> を返します。</p>
+論理値で、コマンドに対応していれば `true`、そうでなければ `false` を返します。
 
-<h2 id="Notes" name="Notes">注</h2>
+## 注
 
-<p><code>'paste'</code> コマンドは機能が利用できないときだけでなく、呼び出しスクリプトにそのコマンドを実行するための権限が不足しているときにも <code>false</code> を返します。</p>
+`'paste'` コマンドは機能が利用できないときだけでなく、呼び出しスクリプトにそのコマンドを実行するための権限が不足しているときにも `false` を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush:js notranslate">var flg = document.queryCommandSupported("SelectAll");
+```js
+var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
   // ...何か行う
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/editing/execCommand.html#querycommandsupported()">execCommand</a></td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+この機能は、現在のどの仕様にも含まれていません。標準化される予定もありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Document.adoptNode")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Document.execCommand()")}}</li>
- <li>{{domxref("Document.queryCommandEnabled()")}}</li>
-</ul>
+- {{domxref("Document.execCommand()")}}
+- {{domxref("Document.queryCommandEnabled()")}}
