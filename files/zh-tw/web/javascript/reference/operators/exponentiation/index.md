@@ -49,7 +49,7 @@ immediately before the base number; doing so will cause a SyntaxError.
 
 Note that some programming languages use the caret symbol <kbd>^</kbd> for
 exponentiation, but JavaScript uses that symbol for the
-[bitwise logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
+[bitwise logical XOR operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
 ## 範例
 
@@ -95,12 +95,12 @@ NaN ** 2 // NaN
 
 ## 參見
 
-- [相加運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [相減運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [相除運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [相乘運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [餘數運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [遞增運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [遞減運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [負號運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [正號運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
+- [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
+- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [遞增運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
+- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [正號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)

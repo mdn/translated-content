@@ -45,12 +45,12 @@ x - y
 
 ## 參見
 
-- [相加運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [相除運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [相乘運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [餘數運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [指數運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [遞增運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [遞減運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [負號運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [正號運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
+- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
+- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [遞增運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
+- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [正號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
