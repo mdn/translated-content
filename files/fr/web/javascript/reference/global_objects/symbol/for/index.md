@@ -18,7 +18,9 @@ La méthode **`Symbol.for(clé)`** permet de chercher parmi les symboles existan
 
 ## Syntaxe
 
-    Symbol.for(clé);
+```js
+Symbol.for(clé);
+```
 
 ### Paramètres
 

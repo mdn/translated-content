@@ -18,7 +18,9 @@ La méthode **`Intl.ListFormat.prototype.formatToParts()`** renvoie un tableau (
 
 ## Syntaxe
 
-    Intl.ListFormat.prototype.formatToParts(list)
+```js
+Intl.ListFormat.prototype.formatToParts(list)
+```
 
 ### Paramètres
 

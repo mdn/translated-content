@@ -18,11 +18,15 @@ La méthode **`setMinutes()`** définit les minutes pour la date donnée, selon 
 
 ## Syntaxe
 
-    dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
+```js
+dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setMinutes(valeurMinutes)
+```js
+dateObj.setMinutes(valeurMinutes)
+```
 
 ### Paramètres
 

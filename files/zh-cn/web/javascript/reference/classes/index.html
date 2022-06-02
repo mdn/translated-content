@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <div>{{JsSidebar("Classes")}}</div>
 
-<p>类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS中的类建立在原型上，但也具有某些语法和语义未与ES5类相似语义共享。</p>
+<p>类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。</p>
 
 <h2 id="定义类">定义类</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="提升">提升</h4>
 
-<p><strong>函数声明</strong>和<strong>类声明</strong>之间的一个重要区别在于, 函数声明会{{Glossary("Hoisting", "提升")}}，类声明不会。你首先需要声明你的类，然后再访问它，否则类似以下的代码将抛出{{jsxref("ReferenceError")}}：</p>
+<p><strong>函数声明</strong>和<strong>类声明</strong>之间的一个重要区别在于，函数声明会{{Glossary("Hoisting", "提升")}}，类声明不会。你首先需要声明你的类，然后再访问它，否则类似以下的代码将抛出{{jsxref("ReferenceError")}}：</p>
 
 <pre class="brush: js example-bad">let p = new Rectangle(); // ReferenceError
 
@@ -44,7 +44,7 @@ class Rectangle {}
 
 <h3 id="类表达式">类表达式</h3>
 
-<p><strong>类表达式</strong>是定义类的另一种方法。类表达式可以命名或不命名。命名类表达式的名称是该类体的局部名称。(不过，可以通过类的(而不是一个实例的) {{jsxref("Function.name", "name")}} 属性来检索它)。</p>
+<p><strong>类表达式</strong>是定义类的另一种方法。类表达式可以命名或不命名。命名类表达式的名称是该类体的局部名称。(不过，可以通过类的 (而不是一个实例的) {{jsxref("Function.name", "name")}} 属性来检索它)。</p>
 
 <pre class="brush: js">// 未命名/匿名类
 let Rectangle = class {
@@ -76,7 +76,7 @@ console.log(Rectangle.name);
 
 <h3 id="严格模式">严格模式</h3>
 
-<p>类声明和类表达式的主体都执行在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下。比如，构造函数，静态方法，原型方法，getter和setter都在严格模式下执行。</p>
+<p>类声明和类表达式的主体都执行在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。</p>
 
 <h3 id="构造函数">构造函数</h3>
 
@@ -206,12 +206,12 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 <h3 id="字段声明">字段声明</h3>
 
 <div class="warning">
-<p><strong>警告：</strong>公共和私有字段声明是JavaScript标准委员会<a href="https://tc39.es/">TC39</a>提出的<a href="https://github.com/tc39/proposal-class-fields">实验性功能（第3阶段）</a>。浏览器中的支持是有限的，但是可以通过<a href="https://babeljs.io/">Babel</a>等系统构建后使用此功能。</p>
+<p><strong>警告：</strong>公共和私有字段声明是 JavaScript 标准委员会<a href="https://tc39.es/">TC39</a>提出的<a href="https://github.com/tc39/proposal-class-fields">实验性功能（第 3 阶段）</a>。浏览器中的支持是有限的，但是可以通过<a href="https://babeljs.io/">Babel</a>等系统构建后使用此功能。</p>
 </div>
 
 <h4 id="公有字段声明">公有字段声明</h4>
 
-<p>使用JavaScript字段声明语法，上面的示例可以写成：</p>
+<p>使用 JavaScript 字段声明语法，上面的示例可以写成：</p>
 
 <pre><code>class Rectangle {
   height = 0;
@@ -267,7 +267,7 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 class Dog extends Animal {
   constructor(name) {
-    super(name); // 调用超类构造函数并传入name参数
+    super(name); // 调用超类构造函数并传入 name 参数
   }
 
   speak() {
@@ -314,7 +314,7 @@ class Dog {
   }
 }
 
-Object.setPrototypeOf(Dog.prototype, Animal);// 如果不这样做，在调用speak时会返回TypeError
+Object.setPrototypeOf(Dog.prototype, Animal);// 如果不这样做，在调用 speak 时会返回 TypeError
 
 var d = new Dog('Mitzie');
 d.speak(); // Mitzie makes a noise.</pre>
@@ -364,7 +364,7 @@ class Lion extends Cat {
 
 <p>抽象子类或者 mix-ins 是类的模板。 一个 ECMAScript 类只能有一个单超类，所以想要从工具类来多重继承的行为是不可能的。子类继承的只能是父类提供的功能性。因此，例如，从工具类的多重继承是不可能的。该功能必须由超类提供。</p>
 
-<p>一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在ECMAScript中实现混合：</p>
+<p>一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在 ECMAScript 中实现混合：</p>
 
 <pre class="brush: js">var calculatorMixin = Base =&gt; class extends Base {
   calc() { }
@@ -430,7 +430,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <p>无法重新定义类。尝试这样做会产生一个 <code>SyntaxError</code>.</p>
 
-<p>如果您正在使用Web浏览器（例如Firefox Web控制台， (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>)并且您两次“运行”具有相同名称的类的定义，您将收到一个 <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在Chrome开发者工具中执行类似的操作会给您一个以下信息： <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
+<p>如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
 
 <h2 id="参见">参见</h2>
 

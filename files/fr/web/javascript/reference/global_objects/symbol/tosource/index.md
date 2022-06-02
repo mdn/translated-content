@@ -19,10 +19,9 @@ L'utilisation de cette méthode est généralement interne au moteur JavaScript.
 
 ## Syntaxe
 
-    Symbol.toSource();
-
-    var sym = Symbol();
-    sym.toSource();
+```js
+toSource()
+```
 
 ### Valeur de retour
 

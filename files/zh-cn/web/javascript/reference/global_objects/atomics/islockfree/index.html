@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p>静态方法 <code><strong>Atomics</strong></code><strong><code>.isLockFree()</code></strong> 用于校验是否能够使用原子操作的<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT" title="TypedArray.BYTES_PER_ELEMENT 属性代表了强类型数组中每个元素所占用的字节数。">TypedArray</a></code>的标准字节长度之一. 若该字节长度为可处理的TypedArray标准字节长度之一则返回  <code>true.</code>  TypedArray的标准字节长度参见 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">BYTES_PER_ELEMENT</a></p>
+<p>静态方法 <code><strong>Atomics</strong></code><strong><code>.isLockFree()</code></strong> 用于校验是否能够使用原子操作的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray</a></code> 的标准字节长度之一。若该字节长度为可处理的 TypedArray 标准字节长度之一则返回 <code>true</code>。TypedArray 的标准字节长度参见 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">BYTES_PER_ELEMENT</a></p>
 
 <div>{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}</div>
 
@@ -20,12 +20,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 
 <dl>
  <dt><code>size</code></dt>
- <dd>整形.字节长度,通常为<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT" title="TypedArray.BYTES_PER_ELEMENT 属性代表了强类型数组中每个元素所占用的字节数。"><code>TypedArray.BYTES_PER_ELEMENT</code></a></dd>
+ <dd>整形。字节长度，通常为<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT" title="TypedArray.BYTES_PER_ELEMENT 属性代表了强类型数组中每个元素所占用的字节数。"><code>TypedArray.BYTES_PER_ELEMENT</code></a></dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p> {{jsxref("Boolean")}} 是否为能够使用原子操作的<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT" title="TypedArray.BYTES_PER_ELEMENT 属性代表了强类型数组中每个元素所占用的字节数。">TypedArray</a></code>的标准字节长度之一.</p>
+<p> {{jsxref("Boolean")}} 是否为能够使用原子操作的<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT" title="TypedArray.BYTES_PER_ELEMENT 属性代表了强类型数组中每个元素所占用的字节数。">TypedArray</a></code>的标准字节长度之一。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -37,7 +37,7 @@ Atomics.isLockFree(5); // false
 Atomics.isLockFree(6); // false
 Atomics.isLockFree(7); // false
 Atomics.isLockFree(8); // false
-Atomics.isLockFree(<code>Float64Array.BYTES_PER_ELEMENT</code>); // false,<code>Atomics方法无法处理Float64Array</code></pre>
+Atomics.isLockFree(<code>Float64Array.BYTES_PER_ELEMENT</code>); // false, Atomics 方法无法处理 Float64Array</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

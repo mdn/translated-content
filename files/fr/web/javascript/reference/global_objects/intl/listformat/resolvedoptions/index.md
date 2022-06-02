@@ -18,7 +18,9 @@ La méthode  **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel
 
 ## Syntaxe
 
-    listFormat.resolvedOptions()
+```js
+listFormat.resolvedOptions()
+```
 
 ### Valeur de retour
 
