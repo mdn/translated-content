@@ -129,7 +129,7 @@ Algunas cosas a tener en cuenta cuando se trabaja con la conversión de tipo de 
 - `Symbol("foo") + "bar"` lanza un {{jsxref("TypeError")}} (no se puede convertir Symbol en cadena). Esto impide crear silenciosamente un nuevo nombre de propiedad de cadena a partir de un Symbol, por ejemplo.
 - La conversión ["más segura" `String(sym)`](/es-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) funciona como una llamada a {{jsxref("Symbol.prototype.toString()")}} con Symbols, pero ten en cuenta que `new String(sym)` será lanzado.
 
-### Symbols y for... en la iteración
+### Iteración de Symbols y for...in
 
 Los Symbols no son enumerables en las iteraciones [`for...in`](/es-US/docs/Web/JavaScript/Reference/Statements/for...in). Además, {{jsxref("Object.getOwnPropertyNames()")}} no devolverá las propiedades del objeto Symbol, sin embargo, puede utilizar {{jsxref("Object.getOwnPropertySymbols()")}} para obtenerlas.
 
