@@ -53,12 +53,12 @@ false + false // 0
 
 ## 參見
 
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相減運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [相除運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [相乘運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [餘數運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [指數運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [遞增運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [遞減運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [負號運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [正號運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
