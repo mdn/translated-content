@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Unnamed_function_statement
 
 ## Message
 
-    Syntax Error: Expected identifier (Edge)
-    SyntaxError: function statement requires a name [Firefox]
-    SyntaxError: Unexpected token ( [Chrome]
+```
+Syntax Error: Expected identifier (Edge)
+SyntaxError: function statement requires a name [Firefox]
+SyntaxError: Unexpected token ( [Chrome]
+```
 
 ## Type d'erreur
 

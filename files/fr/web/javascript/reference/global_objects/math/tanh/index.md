@@ -21,7 +21,9 @@ La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre défi
 
 ## Syntaxe
 
-    Math.tanh(x)
+```js
+Math.tanh(x)
+```
 
 ### Paramètres
 

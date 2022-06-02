@@ -8,7 +8,6 @@ browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
 
 Le **constructeur `BigUint64Array()`** permet de créer un nouveau tableau typé [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array) dont les éléments sont des entiers non-signés sur 64 bits, utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0n`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
 
-
 ## Syntaxe
 
 ```js

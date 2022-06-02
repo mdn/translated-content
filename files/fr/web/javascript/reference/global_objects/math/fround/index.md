@@ -18,7 +18,9 @@ La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple
 
 ## Syntaxe
 
-    Math.fround(x)
+```js
+Math.fround(x)
+```
 
 ### Paramètres
 

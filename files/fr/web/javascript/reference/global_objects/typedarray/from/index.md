@@ -18,21 +18,23 @@ La méthode **`TypedArray.from()`** crée un nouvel objet {{jsxref("TypedArray",
 
 ## Syntaxe
 
-    TypedArray.from(source[, mapFn[, thisArg]])
+```js
+TypedArray.from(source[, mapFn[, thisArg]])
+```
 
-    où TypedArray est l'un de :
+où TypedArray est l'un de :
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
-    BigInt64Array
-    BigUint64Array
+- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
+- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
+- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
+- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
+- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+- [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
+- [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
 
 ### Paramètres
 

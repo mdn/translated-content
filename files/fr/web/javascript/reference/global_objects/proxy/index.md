@@ -16,9 +16,9 @@ Un objet `Proxy` permet de créer un objet qui peut être utilisé à la place d
 La création d'un objet `Proxy` se fait avec deux paramètres&nbsp;:
 
 - `cible`
- - : L'objet original devant lequel on veut placer un intermédiaire
+  - : L'objet original devant lequel on veut placer un intermédiaire
 - `gestionnaire`
- - : Un objet qui définit les opérations qui seront interceptées et comment celles-ci seront redéfinies.
+  - : Un objet qui définit les opérations qui seront interceptées et comment celles-ci seront redéfinies.
 
 Dans l'exemple qui suit, on a une cible simple avec deux propriétés et un gestionnaire encore plus simple, sans propriété.
 
@@ -226,7 +226,6 @@ Dans cet exemple, on utilise `Proxy` afin qu'un attribut alterne entre deux él�
 On crée un objet `vue` qui est un proxy pour l'objet avec une `selected`. Le gestionnaire du proxy définit la fonction [`set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
 
 Lorsqu'on affecte un élément HTML à `view.selected`, l'attribut `'aria-selected'` de l'élément est placé à `true`. Si on affecte ensuite un autre élément à `view.selected`, ce nouvel élément aura l'attribut `'aria-selected'` défini à `true` et l'élément précédent verra son attribut `'aria-selected'` automatiquement défini à `false`.
-
 
 ```js
 let vue = new Proxy({

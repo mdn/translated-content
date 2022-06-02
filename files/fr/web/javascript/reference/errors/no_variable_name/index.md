@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/No_variable_name
 
 ## Message
 
-    SyntaxError: missing variable name (Firefox)
-    SyntaxError: Unexpected token = (Chrome)
+```
+SyntaxError: missing variable name (Firefox)
+SyntaxError: Unexpected token = (Chrome)
+```
 
 ## Type d'erreur
 

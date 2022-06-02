@@ -3,7 +3,7 @@ title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
 tags:
   - HTTP
-  - HTTP头部
+  - HTTP 头部
   - 参考
   - 头部
   - 请求头部
@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Headers/Forwarded
 
 <p>其他可用来替换的，已经成为既成标准的首部是 {{HTTPHeader("X-Forwarded-For")}} 、 {{HTTPHeader("X-Forwarded-Host")}} 以及{{HTTPHeader("X-Forwarded-Proto")}} 。</p>
 
-<p>这个消息首部会被用来进行调试和统计，以及生成基于位置的定制化内容，按照设计的目的，它会暴露一定的隐私和敏感信息，比如客户端的IP地址。所以在应用此消息首部的时候，需要将用户的隐私问题考虑在内。</p>
+<p>这个消息首部会被用来进行调试和统计，以及生成基于位置的定制化内容，按照设计的目的，它会暴露一定的隐私和敏感信息，比如客户端的 IP 地址。所以在应用此消息首部的时候，需要将用户的隐私问题考虑在内。</p>
 
 <table class="properties">
  <tbody>
@@ -41,7 +41,7 @@ translation_of: Web/HTTP/Headers/Forwarded
  <dt>&lt;identifier&gt;</dt>
  <dd>一个 identifier 显示了在使用代理的过程中被修改或者丢失的信息。它们可以是以下几种形式：
  <ul>
-  <li>一个IP地址（V4 或 V6，端口号可选，ipv6 地址需要包含在方括号里面，同时用引号括起来），</li>
+  <li>一个 IP 地址（V4 或 V6，端口号可选，ipv6 地址需要包含在方括号里面，同时用引号括起来），</li>
   <li>语意不明的标识符（比如 "_hidden" 或者 "_secret"）,</li>
   <li>或者是 "unknown"，当当前信息实体不可知的时候（但是你依然想要说明请求被进行了转发）。</li>
  </ul>
