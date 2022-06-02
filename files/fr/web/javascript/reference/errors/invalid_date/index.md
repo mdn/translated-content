@@ -12,10 +12,12 @@ original_slug: Web/JavaScript/Reference/Erreurs/Invalid_date
 
 ## Message
 
-    RangeError: invalid date (Edge)
-    RangeError: invalid date (Firefox)
-    RangeError: invalid time value (Chrome)
-    RangeError: Provided date is not in valid range (Chrome)
+```
+RangeError: invalid date (Edge)
+RangeError: invalid date (Firefox)
+RangeError: invalid time value (Chrome)
+RangeError: Provided date is not in valid range (Chrome)
+```
 
 ## Type d'erreur
 

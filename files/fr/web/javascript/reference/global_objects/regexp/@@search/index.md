@@ -19,7 +19,9 @@ La méthode **`[@@search]()`** recherche une correspondance entre une expression
 
 ## Syntaxe
 
-    regexp[Symbol.search](str)
+```js
+regexp[Symbol.search](str)
+```
 
 ### Paramètres
 

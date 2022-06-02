@@ -18,7 +18,9 @@ La méthode **`setDate()`** définit le jour du mois (relatif au début du mois 
 
 ## Syntaxe
 
-    dateObj.setDate(valeurJour)
+```js
+dateObj.setDate(valeurJour)
+```
 
 ### Paramètres
 

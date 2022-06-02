@@ -19,7 +19,9 @@ La méthode **`Object.assign()`** est utilisée afin de copier les valeurs de to
 
 ## Syntaxe
 
-    Object.assign(cible, ...sources)
+```js
+Object.assign(cible, ...sources)
+```
 
 ### Paramètres
 

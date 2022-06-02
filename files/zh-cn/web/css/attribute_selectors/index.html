@@ -12,27 +12,27 @@ translation_of: Web/CSS/Attribute_selectors
 
 <p>CSS <strong>属性选择器</strong>通过已经存在的属性名或属性值匹配元素。</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* 存在title属性的&lt;a&gt; 元素 */
+<pre class="brush: css">/* 存在 title 属性的&lt;a&gt; 元素 */
 a[title] {
   color: purple;
 }
 
-/* 存在href属性并且属性值匹配"https://example.org"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值匹配"https://example.org"的&lt;a&gt; 元素 */
 a[href="https://example.org"] {
   color: green;
 }
 
-/* 存在href属性并且属性值包含"example"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值包含"example"的&lt;a&gt; 元素 */
 a[href*="example"] {
   font-size: 2em;
 }
 
-/* 存在href属性并且属性值结尾是".org"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值结尾是".org"的&lt;a&gt; 元素 */
 a[href$=".org"] {
   font-style: italic;
 }
 
-/* 存在class属性并且属性值包含以空格分隔的"logo"的&lt;a&gt;元素 */
+/* 存在 class 属性并且属性值包含以空格分隔的"logo"的&lt;a&gt;元素 */
 a[class~="logo"] {
   padding: 2px;
 }</pre>
@@ -80,7 +80,7 @@ a[href*="example"] {
   background-color: silver;
 }
 
-/* 包含 "insensitive" 的链接,不区分大小写 */
+/* 包含 "insensitive" 的链接，不区分大小写 */
 a[href*="insensitive" i] {
   color: cyan;
 }
@@ -134,7 +134,7 @@ div[lang|="zh"] {
 }
 
 /* 将所有 `data-lang` 属性的值为 "zh-TW" 的 &lt;div&gt; 元素的文本颜色设为紫色 */
-/* 备注: 和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */
+/* 备注：和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */
 div[data-lang="zh-TW"] {
   color: purple;
 }

@@ -19,7 +19,9 @@ La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet
 
 ## Syntaxe
 
-    maMap.has(clé);
+```js
+maMap.has(clé);
+```
 
 ### Paramètres
 

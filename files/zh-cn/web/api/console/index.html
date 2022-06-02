@@ -14,7 +14,7 @@ translation_of: Web/API/Console
 
 <p><strong><code>Console</code></strong> 对象提供了浏览器控制台调试的接口（如：Firefox 的 <a href="/en-US/docs/Tools/Web_Console">Web Console</a>）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。</p>
 
-<p><code>Console</code> 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为workers中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 <code>console</code> 引用。例：</p>
+<p><code>Console</code> 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 workers 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 <code>console</code> 引用。例：</p>
 
 <pre class="brush: js notranslate">console.log("Failed to open the specified link")</pre>
 
@@ -64,7 +64,7 @@ translation_of: Web/API/Console
  <dt>{{domxref("Console.table()")}}</dt>
  <dd>将列表型的数据打印成表格。</dd>
  <dt>{{domxref("Console.time()")}}</dt>
- <dd>启动一个以入参作为特定名称的<a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Timers">计时器</a>，在显示页面中可同时运行的计时器上限为10,000.</dd>
+ <dd>启动一个以入参作为特定名称的<a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Timers">计时器</a>，在显示页面中可同时运行的计时器上限为 10,000.</dd>
  <dt>{{domxref("Console.timeEnd()")}}</dt>
  <dd>结束特定的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Timers">计时器</a> 并以毫秒打印其从开始到结束所用的时间。</dd>
  <dt>{{domxref("Console.timeLog()")}}</dt>
@@ -93,7 +93,7 @@ translation_of: Web/API/Console
 console.log(someObject);
 </pre>
 
-<p>打印结果类似下面:</p>
+<p>打印结果类似下面：</p>
 
 <pre class="notranslate">[09:27:13.475] ({str:"Some text", id:5})</pre>
 
@@ -125,7 +125,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
   </tr>
   <tr>
    <td><code>%d</code> or <code>%i</code></td>
-   <td>打印整数。支持数字格式化。例如, <code>console.log("Foo %.2d", 1.1)</code> 会输出有先导 0 的两位有效数字: <code>Foo 01</code>。</td>
+   <td>打印整数。支持数字格式化。例如，<code>console.log("Foo %.2d", 1.1)</code> 会输出有先导 0 的两位有效数字: <code>Foo 01</code>。</td>
   </tr>
   <tr>
    <td><code>%s</code></td>
@@ -200,7 +200,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>可以使用嵌套组来把视觉上相关的元素合并，以协助组织你的输出。使用<code>console.group()</code>创建新的嵌套块，或者用<code>console.groupCollapsed()</code> 创建默认折叠的块，这种块需要点击闭合按钮来展开才能读到。</p>
 
-<p>直接调用 <code>console.groupEnd()</code>.就可以退出当前组。比如下面的代码:</p>
+<p>直接调用 <code>console.groupEnd()</code>.就可以退出当前组。比如下面的代码：</p>
 
 <pre class="brush: js notranslate">console.log("This is the outer level");
 console.group();
@@ -214,7 +214,7 @@ console.groupEnd();
 console.debug("Back to the outer level");
 </pre>
 
-<p>执行结果:</p>
+<p>执行结果：</p>
 
 <p><img alt="Demo of nested groups in Firefox console" src="https://mdn.mozillademos.org/files/16911/console_groups_demo.png"></p>
 
@@ -231,13 +231,13 @@ alert("Do a bunch of other stuff...");
 console.timeEnd("answer time");
 </pre>
 
-<p>这段代码将会打印需要用户关闭 alert box 的时间, 打印时间到控制台上，等用户关闭第二个 alert 后，把结束时间打印到控制台。</p>
+<p>这段代码将会打印需要用户关闭 alert box 的时间，打印时间到控制台上，等用户关闭第二个 alert 后，把结束时间打印到控制台。</p>
 
 <p><img alt="timerresult.png" class="default internal" src="https://mdn.mozillademos.org/files/16113/console-timeLog.png" style="border: 1px solid black; height: 102px; margin: 0 auto; width: 318px;"></p>
 
 <p>注意无论在开始还是结束的时候都会打印计时器的名字。</p>
 
-<div class="note"><strong>注意:</strong> 如果使用计时器来记录网络时间请求的话下面的内容很重要。计时器将会报告传输过程的整个时间,而网络面板里显示的时间只计算了请求头部所需要的时间。如果启用了响应体日志记录，那么列出的响应头部和响应体组合的时间应该与在控制台输出中看到的时间相符。</div>
+<div class="note"><strong>注意：</strong> 如果使用计时器来记录网络时间请求的话下面的内容很重要。计时器将会报告传输过程的整个时间，而网络面板里显示的时间只计算了请求头部所需要的时间。如果启用了响应体日志记录，那么列出的响应头部和响应体组合的时间应该与在控制台输出中看到的时间相符。</div>
 
 <h3 id="堆栈跟踪">堆栈跟踪</h3>
 

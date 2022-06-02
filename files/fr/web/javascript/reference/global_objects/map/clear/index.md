@@ -19,7 +19,9 @@ La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
 
 ## Syntaxe
 
-    maMap.clear();
+```js
+maMap.clear();
+```
 
 ### Valeur de retour
 

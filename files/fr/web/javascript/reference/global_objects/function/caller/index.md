@@ -33,11 +33,15 @@ f(2);
 
 Au moment où `stop()` est appelé, la pile sera :
 
-    f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```js
+f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```
 
 Et ceci est vrai :
 
-    stop.caller === g && f.caller === g && g.caller === f
+```js
+stop.caller === g && f.caller === g && g.caller === f
+```
 
 Donc si on essaie d'obtenir la pile de cette façon :
 

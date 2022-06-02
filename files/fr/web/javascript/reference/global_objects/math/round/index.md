@@ -17,7 +17,9 @@ La fonction **`Math.round()`** retourne la valeur d'un nombre arrondi à l'entie
 
 ## Syntaxe
 
-    Math.round(x)
+```js
+Math.round(x)
+```
 
 ### Paramètres
 

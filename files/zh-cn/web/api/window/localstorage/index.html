@@ -15,7 +15,7 @@ translation_of: Web/API/Window/localStorage
 
 <p>应注意，无论数据存储在 <code>localStorage</code> 还是 <code>sessionStorage</code> ，<strong>它们都特定于页面的协议。</strong></p>
 
-<p>另外，<code>localStorage</code> 中的键值对总是以字符串的形式存储。 (需要注意, 和js对象相比, 键值对总是以字符串的形式存储意味着数值类型会自动转化为字符串类型).</p>
+<p>另外，<code>localStorage</code> 中的键值对总是以字符串的形式存储。 (需要注意，和 js 对象相比，键值对总是以字符串的形式存储意味着数值类型会自动转化为字符串类型).</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/Window/localStorage
 
 <dl>
  <dt><code>SecurityError</code></dt>
- <dd>请求违反了一个策略声明，或者源（ origin ）不是 <a href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">一个有效的 scheme/host/port tuple</a> （例如如果origin使用 <code>file:</code> 或者 <code>data:</code> 形式将可能发生）。比如，用户可以有禁用允许对指定的origin存留数据的浏览器配置。</dd>
+ <dd>请求违反了一个策略声明，或者源（ origin ）不是 <a href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">一个有效的 scheme/host/port tuple</a> （例如如果 origin 使用 <code>file:</code> 或者 <code>data:</code> 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -39,17 +39,17 @@ translation_of: Web/API/Window/localStorage
 <pre class="brush: js">localStorage.setItem('myCat', 'Tom');
 </pre>
 
-<p>该语法用于读取 <code>localStorage</code> 项，如下:</p>
+<p>该语法用于读取 <code>localStorage</code> 项，如下：</p>
 
 <pre class="brush: js">let cat = localStorage.getItem('myCat');
 </pre>
 
-<p>该语法用于移除 <code>localStorage</code> 项，如下:</p>
+<p>该语法用于移除 <code>localStorage</code> 项，如下：</p>
 
 <pre class="brush: js">localStorage.removeItem('myCat');
 </pre>
 
-<p>该语法用于移除所有的 <code>localStorage</code> 项，如下:</p>
+<p>该语法用于移除所有的 <code>localStorage</code> 项，如下：</p>
 
 <pre class="brush: js">// 移除所有
 localStorage.clear();

@@ -19,7 +19,9 @@ La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp
 
 ## Syntaxe
 
-    RegExp[Symbol.species]
+```js
+RegExp[Symbol.species]
+```
 
 ## Description
 

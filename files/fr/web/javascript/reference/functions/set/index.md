@@ -17,8 +17,10 @@ La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction q
 
 ## Syntaxe
 
-    {set prop(val) { . . .}}
-    {set [expression](val) { . . .}}
+```js
+{set prop(val) { . . .}}
+{set [expression](val) { . . .}}
+```
 
 ### Paramètres
 
