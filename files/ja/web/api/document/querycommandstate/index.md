@@ -1,87 +1,88 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
-  - Reference
+  - リファレンス
+  - 非推奨
+browser-compat: api.Document.queryCommandState
 translation_of: Web/API/Document/queryCommandState
 ---
-<div>{{ApiRef("DOM")}}{{obsolete_header}}</div>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>queryCommandState()</code></strong> メソッドは、現在の選択範囲に特定の {{domxref("Document.execCommand()")}} コマンドが適用されているかどうかを知らせます。</p>
+**`queryCommandState()`** メソッドは、現在の選択範囲に特定の {{domxref("Document.execCommand()")}} コマンドが適用されているかどうかを知らせます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">queryCommandState(String <var>command</var>)
-</pre>
+```js
+queryCommandState(String command)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p><code><var>command</var></code> は {{domxref("Document.execCommand()")}} のコマンドです。</p>
+`command` は {{domxref("Document.execCommand()")}} のコマンドです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>queryCommandState()</code> は {{jsxref("Boolean")}} 値、または状態が不明な場合は <code>null</code> を返す可能性があります。</p>
+`queryCommandState()` は論理値、または状態が不明な場合は `null` を返す可能性があります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;Select a part of this text!&lt;/div&gt;
-&lt;button onclick="makeBold();"&gt;Test the state of the 'bold' command&lt;/button&gt;
-</pre>
+```html
+<div contenteditable="true">Select a part of this text!</div>
+<button onclick="makeBold();">Test the state of the 'bold' command</button>
 
-<h3 id="JavaScript">JavaScript</h3>
+<hr>
 
-<pre class="brush: js notranslate">function makeBold() {
-  var state = document.queryCommandState("bold");
+<div id="output"></div>
+```
+
+```css hidden
+hr, button {
+  margin: 1rem 0;
+}
+```
+
+### JavaScript
+
+```js
+function makeBold() {
+  const state = document.queryCommandState("bold");
+  let message;
   switch (state) {
     case true:
-      alert("The bold formatting will be removed from the selected text.");
+      message = "The bold formatting will be removed from the selected text.";
       break;
     case false:
-      alert("The selected text will be displayed in bold.");
+      message = "The selected text will be displayed in bold.";
       break;
-    case null:
-      alert("The state of the 'bold' command is indeterminable.");
+    default:
+      message = "The state of the 'bold' command is indeterminable.";
       break;
   }
+  document.querySelector("#output").textContent = `Output: ${message}`;
   document.execCommand('bold');
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example', '100', '180')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/editing/execCommand.html#querycommandstate()">execCommand</a></td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+この機能は、現在のどの仕様にも含まれていません。標準化される予定もありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.queryCommandState")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li>{{domxref("document.designMode")}}</li>
- <li><a href="/ja/docs/Rich-Text_Editing_in_Mozilla">Mozilla のリッチテキスト編集</a></li>
- <li><code>queryCommandState()</code> に関するブラウザーのバグ: <a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe's "Browser Inconsistencies" documentation</a></li>
-</ul>
+- {{domxref("HTMLElement.contentEditable")}}
+- {{domxref("document.designMode")}}
+- `queryCommandState()` に関するブラウザーのバグ: [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate)
