@@ -48,8 +48,6 @@ La sintaxis anterior utilizando la función `Symbol()` no creará un Symbol glob
 
 ### Encontrar las propiedades de los Symbols en los objetos
 
-The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symbols and lets you find Symbol properties on a given object. Note that every object is initialized with no own Symbol properties, so that this array will be empty unless you've set Symbol properties on the object.
-
 El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de Symbols y permite encontrar las propiedades de los Symbols en un objeto determinado. Tenga en cuenta que cada objeto se inicializa sin propiedades Symbol propias, por lo que este array estará vacío a menos que haya establecido propiedades Symbol en el objeto.
 
 ## Constructor
