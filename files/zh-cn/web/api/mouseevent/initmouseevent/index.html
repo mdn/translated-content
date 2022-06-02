@@ -5,7 +5,7 @@ translation_of: Web/API/MouseEvent/initMouseEvent
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header}}</p>
 
-<p><code><strong>MouseEvent.initMouseEvent()</strong></code> 方法用以在鼠标事件创建时(一般用 {{domxref("Document.createEvent()")}}方法创建)初始化其属性的值。</p>
+<p><code><strong>MouseEvent.initMouseEvent()</strong></code> 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。</p>
 
 <p>事件初始化是在事件被{{ domxref("Document.createEvent()") }}方法创建后必需的。这个方法必须在事件被{{ domxref("EventTarget.dispatchEvent()") }}方法发送出来前调用。一旦事件被发送后，它将不再起任何作用。 </p>
 
@@ -32,17 +32,17 @@ translation_of: Web/API/MouseEvent/initMouseEvent
  <dt><em><code>cancelable</code></em></dt>
  <dd>是否可以阻止事件默认行为。取值集合见{{domxref("Event.cancelable")}}。</dd>
  <dt><em><code>view</code></em></dt>
- <dd>事件的AbstractView对象引用，这里其实指向{{domxref("window")}} 对象。取值集合见 {{domxref("UIEvent.view")}}。</dd>
+ <dd>事件的 AbstractView 对象引用，这里其实指向{{domxref("window")}} 对象。取值集合见 {{domxref("UIEvent.view")}}。</dd>
  <dt><em><code>detail</code></em></dt>
  <dd>事件的鼠标点击数量。取值集合见{{domxref("Event.detail")}}。</dd>
  <dt><em><code>screenX</code></em></dt>
- <dd>事件的屏幕的x坐标。取值集合见{{domxref("MouseEvent.screenX")}}。</dd>
+ <dd>事件的屏幕的 x 坐标。取值集合见{{domxref("MouseEvent.screenX")}}。</dd>
  <dt><em><code>screenY</code></em></dt>
- <dd>事件的屏幕的y坐标。取值集合见{{domxref("MouseEvent.screenY")}}。</dd>
+ <dd>事件的屏幕的 y 坐标。取值集合见{{domxref("MouseEvent.screenY")}}。</dd>
  <dt><em><code>clientX</code></em></dt>
- <dd>事件的客户端x坐标。取值集合见{{domxref("MouseEvent.clientX")}}。</dd>
+ <dd>事件的客户端 x 坐标。取值集合见{{domxref("MouseEvent.clientX")}}。</dd>
  <dt><em><code>clientY</code></em></dt>
- <dd>事件的客户端y坐标。取值集合见{{domxref("MouseEvent.clientY")}}。</dd>
+ <dd>事件的客户端 y 坐标。取值集合见{{domxref("MouseEvent.clientY")}}。</dd>
  <dt><em><code>ctrlKey</code></em></dt>
  <dd>事件发生时 <kbd>control</kbd> 键是否被按下。取值集合见{{domxref("MouseEvent.ctrlKey")}}。</dd>
  <dt><em><code>altKey</code></em></dt>
@@ -54,13 +54,13 @@ translation_of: Web/API/MouseEvent/initMouseEvent
  <dt><em><code>button</code></em></dt>
  <dd>鼠标按键值 {{domxref("MouseEvent.button", "button")}}。</dd>
  <dt><em><code>relatedTarget</code></em></dt>
- <dd>事件的<a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget">相关对象</a>。只在某些事件类型有用 (例如 <code>mouseover</code> ?和 <code>mouseout</code>)。其它的传null。</dd>
+ <dd>事件的<a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget">相关对象</a>。只在某些事件类型有用 (例如 <code>mouseover</code> ?和 <code>mouseout</code>)。其它的传 null。</dd>
  <dt>
  <p> </p>
 
- <h2 id="Example" name="Example">?示例</h2>
+ <h2 id="Example" name="Example">示例</h2>
 
- <h3 id="HTML内容">HTML内容</h3>
+ <h3 id="HTML">HTML</h3>
 
  <pre class="brush: html"><code>&lt;div style="background:red;width:180px;padding:10px;"&gt;
  &lt;div id="out"&gt;&lt;/div&gt;
@@ -68,7 +68,7 @@ translation_of: Web/API/MouseEvent/initMouseEvent
 &lt;/div&gt;</code>
 </pre>
 
- <h3 id="JavaScript内容">JavaScript内容</h3>
+ <h3 id="JavaScript">JavaScript</h3>
 
  <pre class="brush: js"><code>document.body.onclick = function(){
  e = arguments[0];

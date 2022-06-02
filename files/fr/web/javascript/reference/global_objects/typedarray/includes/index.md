@@ -20,7 +20,9 @@ La méthode **`includes()`** détermine si un tableau typé possède un certain 
 
 ## Syntaxe
 
-    typedarray.includes(élémentRecherché[, indiceDébut]);
+```js
+typedarray.includes(élémentRecherché[, indiceDébut]);
+```
 
 ### Paramètres
 

@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/in_operator_no_object
 
 ## Message
 
-    TypeError: Invalid operand to 'in' (Edge)
-    TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-    TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
+TypeError: Invalid operand to 'in' (Edge)
+TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
+TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
 
 ## Type d'erreur
 

@@ -17,7 +17,9 @@ La propriété **`length`**, rattachée au prototype de l'objet {{jsxref("WebAss
 
 ## Syntaxe
 
-    table.length;
+```js
+table.length;
+```
 
 ## Exemples
 

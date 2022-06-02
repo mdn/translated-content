@@ -17,7 +17,9 @@ La méthode **`toSource()`** permet de renvoyer une chaîne de caractères repr�
 
 ## Syntaxe
 
-    objetRegExp.toSource()
+```js
+objetRegExp.toSource()
+```
 
 ### Valeur de retour
 

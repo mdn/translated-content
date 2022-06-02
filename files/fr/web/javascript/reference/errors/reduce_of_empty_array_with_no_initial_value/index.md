@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Reduce_of_empty_array_with_no_in
 
 ## Message
 
-    TypeError: reduce of empty array with no initial value
+```
+TypeError: reduce of empty array with no initial value
+```
 
 ## Type d'erreur
 

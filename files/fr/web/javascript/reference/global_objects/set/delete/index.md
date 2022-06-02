@@ -19,7 +19,9 @@ La méthode **`delete()`** permet de retirer un élément donné d'un objet `Set
 
 ## Syntaxe
 
-    monSet.delete(valeur);
+```js
+monSet.delete(valeur);
+```
 
 ### Paramètres
 

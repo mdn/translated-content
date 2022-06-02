@@ -21,11 +21,15 @@ La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, 
 
 Appel direct :
 
-    Date.parse(dateString)
+```js
+Date.parse(dateString)
+```
 
 Appel implicite :
 
-    new Date(dateString)
+```js
+new Date(dateString)
+```
 
 ### Paramètres
 

@@ -80,4 +80,3 @@ try {
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-

@@ -20,7 +20,9 @@ La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.El
 
 ## Syntaxe
 
-    Math.acosh(x)
+```js
+Math.acosh(x)
+```
 
 ### Paramètres
 

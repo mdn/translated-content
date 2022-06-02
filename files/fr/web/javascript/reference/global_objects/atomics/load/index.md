@@ -18,7 +18,9 @@ La méthode statique **`Atomics.load()`** renvoie une valeur située à une posi
 
 ## Syntaxe
 
-    Atomics.load(typedArray, index)
+```js
+Atomics.load(typedArray, index)
+```
 
 ### Paramètres
 

@@ -263,7 +263,7 @@ JavaScript possède une différence importante quant aux autres langages de prog
 
 ## Les opérateurs
 
-Les opérateurs numériques en JavaScript sont `+`, `-`, `*`, `/` et `%` (qui est [l'opérateur de reste, à ne pas confondre avec le « modulo » mathématique](</fr/docs/conflicting/Web/JavaScript/Reference/Operators#remainder_()>)). Les valeurs sont affectées à l'aide de `=` et il existe également des opérateurs d'affectation combinés comme `+=` et `-=`. Ils sont équivalents à `x = x opérateur y`.
+Les opérateurs numériques en JavaScript sont `+`, `-`, `*`, `/` et `%` (qui est [l'opérateur de reste, à ne pas confondre avec le « modulo » mathématique](</fr/docs/Web/JavaScript/Reference/Operators#remainder_()>)). Les valeurs sont affectées à l'aide de `=` et il existe également des opérateurs d'affectation combinés comme `+=` et `-=`. Ils sont équivalents à `x = x opérateur y`.
 
 ```js
 x += 5;
@@ -272,7 +272,7 @@ x = x + 5;
 
 Vous pouvez utiliser `++` et `--` respectivement pour incrémenter et pour décrémenter. Ils peuvent être utilisés comme opérateurs préfixes ou suffixes.
 
-L'[opérateur `+`](/fr/docs/conflicting/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
+L'[opérateur `+`](/fr/docs/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
 
 ```js
 "coucou" + " monde"; // "coucou monde"
@@ -775,7 +775,7 @@ En JavaScript, les fonctions sont également des objets. Il est donc possible de
 
 ## Les objets personnalisés
 
-> **Note :** Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/conflicting/Learn/JavaScript/Objects).
+> **Note :** Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects).
 
 Dans la programmation orientée objet classique, les objets sont des collections de données et de méthodes opérant sur ces données. Imaginons un objet personne avec les champs prénom et nom. Il y a deux manières d'afficher son nom complet : de la façon « prénom nom » ou de la façon « nom prénom ». À l'aide des fonctions et des objets vus précédemment, voici une manière de le faire :
 

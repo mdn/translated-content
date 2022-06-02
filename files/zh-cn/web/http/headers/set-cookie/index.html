@@ -45,25 +45,25 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dt><code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code></dt>
  <dd>一个 cookie 开始于一个名称/值对：
  <ul>
-  <li><code>&lt;cookie-name&gt;</code> 可以是除了控制字符 (CTLs)、空格 (spaces) 或制表符 (tab)之外的任何 US-ASCII 字符。同时不能包含以下分隔字符： ( ) &lt; &gt; @ , ; : \ " /  [ ] ? = { }.</li>
-  <li><code>&lt;cookie-value&gt;</code> 是可选的，如果存在的话，那么需要包含在双引号里面。支持除了控制字符（CTLs）、空格（whitespace）、双引号（double quotes）、逗号（comma）、分号（semicolon）以及反斜线（backslash）之外的任意 US-ASCII 字符。<strong>关于编码</strong>：许多应用会对 cookie 值按照URL编码（URL encoding）规则进行编码，但是按照 RFC 规范，这不是必须的。不过满足规范中对于 &lt;cookie-value&gt; 所允许使用的字符的要求是有用的。</li>
+  <li><code>&lt;cookie-name&gt;</code> 可以是除了控制字符 (CTLs)、空格 (spaces) 或制表符 (tab) 之外的任何 US-ASCII 字符。同时不能包含以下分隔字符： ( ) &lt; &gt; @ , ; : \ " /  [ ] ? = { }.</li>
+  <li><code>&lt;cookie-value&gt;</code> 是可选的，如果存在的话，那么需要包含在双引号里面。支持除了控制字符（CTLs）、空格（whitespace）、双引号（double quotes）、逗号（comma）、分号（semicolon）以及反斜线（backslash）之外的任意 US-ASCII 字符。<strong>关于编码</strong>：许多应用会对 cookie 值按照 URL 编码（URL encoding）规则进行编码，但是按照 RFC 规范，这不是必须的。不过满足规范中对于 &lt;cookie-value&gt; 所允许使用的字符的要求是有用的。</li>
   <li><strong><code>__Secure-</code> 前缀</strong>：以 __Secure- 为前缀的 cookie（其中连接符是前缀的一部分），必须与 secure 属性一同设置，同时必须应用于安全页面（即使用 HTTPS 访问的页面）。</li>
-  <li><strong><code>__Host-</code> 前缀：</strong> 以 __Host- 为前缀的 cookie，必须与 secure 属性一同设置，必须应用于安全页面（即使用 HTTPS 访问的页面），必须不能设置 domain 属性 （也就不会发送给子域），同时 path 属性的值必须为“/”。</li>
+  <li><strong><code>__Host-</code> 前缀：</strong> 以 __Host- 为前缀的 cookie，必须与 secure 属性一同设置，必须应用于安全页面（即使用 HTTPS 访问的页面），必须不能设置 domain 属性（也就不会发送给子域），同时 path 属性的值必须为“/”。</li>
  </ul>
  </dd>
  <dt>Expires=&lt;date&gt; {{optional_inline}}</dt>
  <dd>
- <p>cookie 的最长有效时间，形式为符合 HTTP-date 规范的时间戳。参考 {{HTTPHeader("Date")}} 可以获取详细信息。如果没有设置这个属性，那么表示这是一个<strong>会话期 cookie </strong>。一个会话结束于客户端被关闭时，这意味着会话期 cookie 在彼时会被移除。然而，很多Web浏览器支持会话恢复功能，这个功能可以使浏览器保留所有的tab标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。</p>
+ <p>cookie 的最长有效时间，形式为符合 HTTP-date 规范的时间戳。参考 {{HTTPHeader("Date")}} 可以获取详细信息。如果没有设置这个属性，那么表示这是一个<strong>会话期 cookie </strong>。一个会话结束于客户端被关闭时，这意味着会话期 cookie 在彼时会被移除。然而，很多 Web 浏览器支持会话恢复功能，这个功能可以使浏览器保留所有的 tab 标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。</p>
  </dd>
  <dt>Max-Age=&lt;non-zero-digit&gt; {{optional_inline}}</dt>
- <dd>在 cookie 失效之前需要经过的秒数。秒数为 0 或 -1 将会使 cookie 直接过期。一些老的浏览器（ie6、ie7 和 ie8）不支持这个属性。对于其他浏览器来说，假如二者 （指 <code>Expires</code> 和<code>Max-Age</code>） 均存在，那么 Max-Age 优先级更高。</dd>
+ <dd>在 cookie 失效之前需要经过的秒数。秒数为 0 或 -1 将会使 cookie 直接过期。一些老的浏览器（ie6、ie7 和 ie8）不支持这个属性。对于其他浏览器来说，假如二者（指 <code>Expires</code> 和<code>Max-Age</code>）均存在，那么 Max-Age 优先级更高。</dd>
  <dt>Domain=&lt;domain-value&gt; {{optional_inline}}</dt>
  <dd>指定 cookie 可以送达的主机名。假如没有指定，那么默认值为当前文档访问地址中的主机部分（但是不包含子域名）。与之前的规范不同的是，域名之前的点号会被忽略。假如指定了域名，那么相当于各个子域名也包含在内了。</dd>
  <dt>Path=&lt;path-value&gt; {{optional_inline}}</dt>
  <dd>指定一个 URL 路径，这个路径必须出现在要请求的资源的路径中才可以发送 Cookie 首部。字符  %x2F ("/") 可以解释为文件目录分隔符，此目录的下级目录也满足匹配的条件（例如，如果 path=/docs，那么 "/docs", "/docs/Web/" 或者 "/docs/Web/HTTP" 都满足匹配的条件）。</dd>
  <dt>Secure {{optional_inline}}</dt>
- <dd>一个带有安全属性的 cookie 只有在请求使用SSL和HTTPS协议的时候才会被发送到服务器。然而，保密或敏感信息永远不要在 HTTP cookie 中存储或传输，因为整个机制从本质上来说都是不安全的，比如前述协议并不意味着所有的信息都是经过加密的。
- <p class="note"><strong>注意：</strong>非安全站点（http:）已经不能再在 cookie 中设置 secure 指令了（在Chrome 52+ and Firefox 52+ 中新引入的限制）。</p>
+ <dd>一个带有安全属性的 cookie 只有在请求使用 SSL 和 HTTPS 协议的时候才会被发送到服务器。然而，保密或敏感信息永远不要在 HTTP cookie 中存储或传输，因为整个机制从本质上来说都是不安全的，比如前述协议并不意味着所有的信息都是经过加密的。
+ <p class="note"><strong>注意：</strong>非安全站点（http:）已经不能再在 cookie 中设置 secure 指令了（在 Chrome 52+ and Firefox 52+ 中新引入的限制）。</p>
  </dd>
  <dt>HttpOnly {{optional_inline}}</dt>
  <dd>设置了 HttpOnly 属性的 cookie 不能使用 JavaScript 经由  {{domxref("Document.cookie")}} 属性、{{domxref("XMLHttpRequest")}} 和  {{domxref("Request")}} APIs 进行访问，以防范跨站脚本攻击（{{Glossary("XSS")}}）。</dd>
@@ -97,7 +97,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <h3 id="Cookie_前缀">Cookie 前缀</h3>
 
-<p>名称中包含 __Secure- 或 __Host- 前缀的 cookie，只可以应用在使用了安全连接（HTTPS）的域中，需要同时设置 secure 指令。另外，假如 cookie 以 __Host- 为前缀，那么 path 属性的值必须为 "/" （表示整个站点），且不能含有 domain 属性。对于不支持 cookie 前缀的客户端，无法保证这些附加的条件成立，所以 cookie 总是被接受的。</p>
+<p>名称中包含 __Secure- 或 __Host- 前缀的 cookie，只可以应用在使用了安全连接（HTTPS）的域中，需要同时设置 secure 指令。另外，假如 cookie 以 __Host- 为前缀，那么 path 属性的值必须为 "/"（表示整个站点），且不能含有 domain 属性。对于不支持 cookie 前缀的客户端，无法保证这些附加的条件成立，所以 cookie 总是被接受的。</p>
 
 <pre>// 当响应来自于一个安全域（HTTPS）的时候，二者都可以被客户端接受
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com

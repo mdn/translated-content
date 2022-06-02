@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/addHitRegion
 ---
 <div>{{APIRef}} {{obsolete_header}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.addHitRegion()</code></strong> 是 Canvas 2D API 给位图添加点击区域的方法。 它允许你很容易地实现一个点击区域， 让你触发 DOM 元素的事件， 去探索看不见的画布。</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.addHitRegion()</code></strong> 是 Canvas 2D API 给位图添加点击区域的方法。它允许你很容易地实现一个点击区域，让你触发 DOM 元素的事件， 去探索看不见的画布。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -14,25 +14,25 @@ translation_of: Web/API/CanvasRenderingContext2D/addHitRegion
 
 <h3 id="选项">选项</h3>
 
-<p><code>options</code> 参数是可选的。 当赋值时， {{jsxref("Object")}} 包含以下属性：</p>
+<p><code>options</code> 参数是可选的。当赋值时， {{jsxref("Object")}} 包含以下属性：</p>
 
 <dl>
  <dt><code>path</code></dt>
- <dd>{{domxref("Path2D")}} 对象， 描述点击区的区域范围。 如果不给此属性赋值， 则会使用当前的路径。</dd>
+ <dd>{{domxref("Path2D")}} 对象， 描述点击区的区域范围。如果不给此属性赋值， 则会使用当前的路径。</dd>
  <dt><code>fillRule</code></dt>
  <dd>遵循的填充规则（默认是“nonzero”）。</dd>
  <dt><code>id</code></dt>
- <dd>点击区的ID，在事件中可以引用此ID，就像示例中那样。</dd>
+ <dd>点击区的 ID，在事件中可以引用此 ID，就像示例中那样。</dd>
  <dt><code>parentID</code></dt>
- <dd>父区域的ID，为了光标回退或者辅助工具导航 。</dd>
+ <dd>父区域的 ID，为了光标回退或者辅助工具导航。</dd>
  <dt><code>cursor</code></dt>
- <dd>鼠标移动到点击区时的 {{cssxref("cursor")}}  （默认是 "<code>inherit</code>"）。 继承父点击区域的光标，或者canvas元素的光标。</dd>
+ <dd>鼠标移动到点击区时的 {{cssxref("cursor")}}  （默认是 "<code>inherit</code>"）。 继承父点击区域的光标，或者 canvas 元素的光标。</dd>
  <dt><code>control</code></dt>
- <dd>触发事件的元素（canvas的子孙元素）。 默认为 <code>null。</code></dd>
+ <dd>触发事件的元素（canvas 的子孙元素）。默认为 <code>null。</code></dd>
  <dt><code>label</code></dt>
- <dd>如果没有control属性，文本标签作为辅助工具，用作点击区域的描述。 默认为 <code>null。</code></dd>
+ <dd>如果没有 control 属性，文本标签作为辅助工具，用作点击区域的描述。默认为 <code>null。</code></dd>
  <dt><code>role</code></dt>
- <dd> 如果没有control属性，<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA role</a> 作为辅助工具，决定如何表示点击区域。 默认为 <code>null</code>.</dd>
+ <dd> 如果没有 control 属性，<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA role</a> 作为辅助工具，决定如何表示点击区域。 默认为 <code>null</code>.</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -75,7 +75,7 @@ ctx.arc(100, 110, 50, 0, Math.PI, false);
 ctx.stroke();
 </pre>
 
-<p>修改下面的代码并在线查看canvas的变化（如果你没有看到全部的效果，请查看浏览器兼容性列表。如果你当前的浏览器支持点击区域，你需要激活偏好设置） 。</p>
+<p>修改下面的代码并在线查看 canvas 的变化（如果你没有看到全部的效果，请查看浏览器兼容性列表。如果你当前的浏览器支持点击区域，你需要激活偏好设置）。</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -296,7 +296,7 @@ window.addEventListener("load", drawCanvas);
 
 <ul>
  <li>[1] 此特性需要一个特性标志。 设置 <code>ExperimentalCanvasFeatures</code> 标志为 <code>true</code> 进行启用。</li>
- <li>[2] 此特性需要一个特性偏好设置。在 about:config里面，设置 <code>canvas.hitregions.enabled</code> 为true。</li>
+ <li>[2] 此特性需要一个特性偏好设置。在 about:config 里面，设置 <code>canvas.hitregions.enabled</code> 为 true。</li>
 </ul>
 
 <h2 id="参见">参见</h2>
