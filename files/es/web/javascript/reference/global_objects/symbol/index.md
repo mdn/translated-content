@@ -64,7 +64,7 @@ El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de S
 - {{jsxref("Symbol.hasInstance")}}
   - : Un método que determina si un objeto constructor reconoce un objeto como su instancia. Utilizado por {{jsxref("Operators/instanceof", "instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
-  - : Un valor booleano que indica si un objeto debe ser aplanado a sus elementos de matriz. Utilizado por {{jsxref("Array.prototype.concat()")}}.
+  - : Un valor booleano que indica si un objeto debe ser convertido a sus elementos de matriz. Utilizado por {{jsxref("Array.prototype.concat()")}}.
 - {{jsxref("Symbol.iterator")}}
   - : Un método que devuelve el iterador por defecto de un objeto. Utilizado por [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 - {{jsxref("Symbol.match")}}
