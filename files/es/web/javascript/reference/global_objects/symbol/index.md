@@ -165,7 +165,7 @@ Cuando se utiliza un objeto envolvente de un Symbol como clave de propiedad, est
 let sym = Symbol('foo')
 let obj = {[sym]: 1}
 obj[sym]             // 1
-obj[Object(sym)]     // still 1
+obj[Object(sym)]     // sigue siendo 1
 ```
 
 ## Especificaciones
