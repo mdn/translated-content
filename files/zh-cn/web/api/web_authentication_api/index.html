@@ -5,20 +5,20 @@ translation_of: Web/API/Web_Authentication_API
 ---
 <div>{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}</div>
 
-<p>Web Authentication API 继承自 <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> ，使用公钥密码学使得验证更强壮，不需要SMS文本就能实现无密码验证和安全的双因素验证。</p>
+<p>Web Authentication API 继承自 <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> ，使用公钥密码学使得验证更强壮，不需要 SMS 文本就能实现无密码验证和安全的双因素验证。</p>
 
 <h2 id="Web_authentication_概念和用例">Web authentication 概念和用例</h2>
 
-<p>Web Authentication API（也称作WebAuthn）使用<a href="https://en.wikipedia.org/wiki/Public-key_cryptography">asymmetric (public-key) cryptography</a> （非对称加密）替代密码或 SMS 短信在网站上注册、登录、<a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">second-factor authentication</a>（双因素验证）。 解决了 <a href="https://en.wikipedia.org/wiki/Phishing">phishing</a>（钓鱼）、<a href="https://en.wikipedia.org/wiki/Data_breach">data breaches</a>（数据破坏）、SMS 文本攻击、其它双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。</p>
+<p>Web Authentication API（也称作 WebAuthn）使用<a href="https://en.wikipedia.org/wiki/Public-key_cryptography">asymmetric (public-key) cryptography</a> （非对称加密）替代密码或 SMS 短信在网站上注册、登录、<a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">second-factor authentication</a>（双因素验证）。 解决了 <a href="https://en.wikipedia.org/wiki/Phishing">phishing</a>（钓鱼）、<a href="https://en.wikipedia.org/wiki/Data_breach">data breaches</a>（数据破坏）、SMS 文本攻击、其它双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。</p>
 
-<p>许多网站已实现用户注册账号,登录已有账号的页面, WebAuthn 作为这些页面的替代和补充。类似其他形式的 <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a>（凭据管理API)。Web Authentication API 有两个对应于注册和登录的基本方法：</p>
+<p>许多网站已实现用户注册账号，登录已有账号的页面， WebAuthn 作为这些页面的替代和补充。类似其他形式的 <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a>（凭据管理 API)。Web Authentication API 有两个对应于注册和登录的基本方法：</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/CredentialsContainer/create">navigator.credentials.create()</a> - 当使用publicKey选项时, 创建一个新的凭据, 无论是用于注册新账号还是将新的非对称密钥凭据与已有的账号关联。</li>
- <li><a href="/en-US/docs/Web/API/CredentialsContainer/get">navigator.credentials.get()</a> - 当使用publicKey选项时, 使用一组现有的凭据进行身份验证服务, 无论是用于用户登录还是双因素验证中的一步。</li>
+ <li><a href="/en-US/docs/Web/API/CredentialsContainer/create">navigator.credentials.create()</a> - 当使用 publicKey 选项时，创建一个新的凭据，无论是用于注册新账号还是将新的非对称密钥凭据与已有的账号关联。</li>
+ <li><a href="/en-US/docs/Web/API/CredentialsContainer/get">navigator.credentials.get()</a> - 当使用 publicKey 选项时，使用一组现有的凭据进行身份验证服务，无论是用于用户登录还是双因素验证中的一步。</li>
 </ul>
 
-<p><strong>请注意:</strong> create() 和 get() 都需要在 <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure Context</a>（安全上下文）中执行（例如 - 使用 https 连接，或是使用 localhost），当浏览器不是在安全环境下时它们将不可用。</p>
+<p><strong>请注意：</strong> create() 和 get() 都需要在 <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure Context</a>（安全上下文）中执行（例如 - 使用 https 连接，或是使用 localhost），当浏览器不是在安全环境下时它们将不可用。</p>
 
 <p>在基础实现中，create() 和 get() 会从服务器接收一个大随机数，称为挑战。挑战将由私钥签名并返回给服务器。这可以服务器证明用户拥有身份验证所需要的私钥，与此同时没有任何密码在网络上被传输。</p>
 
@@ -35,14 +35,14 @@ translation_of: Web/API/Web_Authentication_API
 
 <p><img alt="WebAuthn registration component and dataflow diagram" src="https://mdn.mozillademos.org/files/15801/MDN%20Webauthn%20Registration%20(r3).png" style="height: 546px; width: 1118px;"></p>
 
-<p><em>图 1 - WebAuthn注册流程及与各个步骤相关的重要数据。</em></p>
+<p><em>图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。</em></p>
 
 <p>注册步骤如下：</p>
 
 <ol start="0">
  <li><strong>应用程序请求注册</strong> - 应用程序发出注册请求。这个请求的协议和格式不在 WebAuthn 标准的范围内。</li>
  <li><strong>服务器发送挑战、用户信息和依赖方信息 </strong>- 服务器将挑战、用户信息和依赖方信息发送回应用程序。在这里，协议和格式不在 WebAuthn 标准的范围内。通常，这可以是基于 HTTPS 连接的 <a href="https://developer.mozilla.org/en-US/docs/Glossary/REST">REST</a>（可能会使用 <a href="https://developer.mozilla.org/en-US/docs/User:maybe/webidl_mdn/XMLHttpRequest_API">XMLHttpRequest</a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>）API。不过只要在安全连接中，也可以使用 <a href="https://developer.mozilla.org/en-US/docs/Glossary/SOAP">SOAP</a>、<a href="https://tools.ietf.org/html/rfc2549" rel="noopener">RFC 2549</a> 或几乎任何其他协议。从服务器接收到的参数将传递给 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/create">create()</a> ，大部分情况下只需很少修改甚至不需要做任何修改。create() 会返回一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>，并返回包含 {{domxref("AuthenticatorAttestationResponse")}} 的 {{domxref("PublicKeyCredential")}}。<strong>需要注意的是挑战必须是随机的 buffer（至少 16 字节），并且必须在服务器上生成以确保安全。</strong></li>
- <li><strong>浏览器向认证器调用 authenticatorMakeCredential()</strong> - 在浏览器内部，浏览器将验证参数并用默认值补全缺少的参数，然后这些参数会变为 {{domxref("AuthenticatorResponse.clientDataJSON")}}。其中最重要的参数之一是 origin，它是 clientData 的一部分，同时服务器将能在稍后验证它。调用 create() 的参数与clientDataJSON 的 SHA-256 哈希一起传递到身份验证器（只有哈希被发送是因为与认证器的连接可能是低带宽的 NFC 或蓝牙连接，之后认证器只需对哈希签名以确保它不会被篡改）。</li>
+ <li><strong>浏览器向认证器调用 authenticatorMakeCredential()</strong> - 在浏览器内部，浏览器将验证参数并用默认值补全缺少的参数，然后这些参数会变为 {{domxref("AuthenticatorResponse.clientDataJSON")}}。其中最重要的参数之一是 origin，它是 clientData 的一部分，同时服务器将能在稍后验证它。调用 create() 的参数与 clientDataJSON 的 SHA-256 哈希一起传递到身份验证器（只有哈希被发送是因为与认证器的连接可能是低带宽的 NFC 或蓝牙连接，之后认证器只需对哈希签名以确保它不会被篡改）。</li>
  <li><strong>认证器创建新的密钥对和证明</strong> - 在进行下一步之前，认证器通常会以某种形式要求用户确认，如输入 PIN，使用指纹，进行虹膜扫描等，以证明用户在场并同意注册。之后，认证器将创建一个新的非对称密钥对，并安全地存储私钥以供将来验证使用。公钥则将成为证明的一部分，被在制作过程中烧录于认证器内的私钥进行签名。这个私钥会具有可以被验证的证书链。</li>
  <li><strong>认证器将</strong><strong>数据返回浏览器</strong> - 新的公钥、全局唯一的凭证 ID 和其他的证明数据会被返回到浏览器，成为 attestationObject。</li>
  <li><strong>浏览器生成最终的数据，应用程序将响应发送到服务器</strong> - create() 的 Promise 会返回一个 {{domxref("PublicKeyCredential")}}，其中包含全局唯一的证书 ID {{domxref("PublicKeyCredential.rawId")}}  和包含 {{domxref("AuthenticatorResponse.clientDataJSON")}} 的响应 {{domxref("AuthenticatorAttestationResponse")}}。你可以使用任何你喜欢的格式和协议将 {{domxref("PublicKeyCredential")}} 发送回服务器（注意 ArrayBuffer 类型的属性需要使用 base64 或类似编码方式进行编码）</li>
@@ -61,7 +61,7 @@ translation_of: Web/API/Web_Authentication_API
 
 <p><img alt="WebAuthn authentication component and dataflow diagram" src="https://mdn.mozillademos.org/files/15802/MDN%20Webauthn%20Authentication%20(r1).png" style="height: 527px; width: 1067px;"></p>
 
-<p><em>图 2 - WebAuthn验证流程及与各个步骤相关的重要数据。</em></p>
+<p><em>图 2 - WebAuthn 验证流程及与各个步骤相关的重要数据。</em></p>
 
 <ol start="0">
  <li><strong>Application Requests Authentication</strong> - The application makes the initial authentication request. The protocol and format of this request is outside of the scope of WebAuthn.</li>
