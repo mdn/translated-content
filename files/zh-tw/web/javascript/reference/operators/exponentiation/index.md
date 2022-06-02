@@ -10,9 +10,9 @@ browser-compat: javascript.operators.exponentiation
 ---
 {{jsSidebar("Operators")}}
 
-The exponentiation operator (`**`) returns the result of raising the first
-operand to the power of the second operand. It is equivalent to `Math.pow`,
-except it also accepts BigInts as operands.
+指數運算子 (`**`) 會回傳以第一個數字作為底數；第二個數字做為指數的運算結果。
+
+它類同於 `Math.pow`，不一樣的是 `**` 可以用於 BigInts 的計算而 `Math.pow` 不行。
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
