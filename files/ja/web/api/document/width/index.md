@@ -1,57 +1,57 @@
 ---
 title: Document.width
 slug: Web/API/Document/width
+page-type: web-api-instance-property
 tags:
   - API
   - Document
   - HTML DOM
-  - Obsolete
-  - Reference
-  - width
+  - NeedsBrowserAgnosticism
+  - NeedsSpecTable
   - プロパティ
+  - リファレンス
+  - 非推奨
+browser-compat: api.Document.width
 translation_of: Web/API/Document/width
 ---
-<div>{{APIRef("DOM")}} {{Obsolete_header}}</div>
+{{APIRef("DOM")}} {{deprecated_header}}
 
-<div class="note">
-<p><strong>メモ:</strong> {{Gecko("6.0")}} より <code>document.width</code> には対応しなくなりました。代わりに <code>document.body.clientWidth</code> を使用してください。 {{domxref("element.clientWidth")}} を参照して下さい。</p>
-</div>
+> **Note:** {{Gecko("6.0")}} より `document.width` には対応しなくなりました。代わりに `document.body.clientWidth` を使用してください。 {{domxref("element.clientWidth")}} を参照してください。
 
-<p>現在の文書の {{HTMLElement("body")}} 要素の現在の幅をピクセル値で返します。</p>
+現在の文書の {{HTMLElement("body")}} 要素の現在の幅をピクセル値で返します。
 
-<p>Internet Explorer では対応していません。</p>
+Internet Explorer は対応していません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><var>pixels</var> = document.width;
-</pre>
+文書の幅をピクセル単位で表した数値。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">function init() {
+```js
+function init() {
   alert("文書の幅は " + document.width + " ピクセルです。");
 }
-</pre>
+```
 
-<h2 id="Alternatives" name="Alternatives">代替策</h2>
+## 代替策
 
-<pre class="syntaxbox">document.body.clientWidth              /* &lt;body&gt; の幅 */
-document.documentElement.clientWidth   /* &lt;html&gt; の幅 */
-window.innerWidth                      /* window の内寸幅 */
-</pre>
+```js
+document.body.clientWidth              /* <body> の幅 */
+document.documentElement.clientWidth   /* <html> の幅 */
+window.innerWidth                      /* window の幅 */
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.width")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.height")}}</li>
- <li>{{domxref("Element.clientWidth")}}</li>
- <li>{{domxref("Element.scrollWidth")}}</li>
-</ul>
+- {{domxref("document.height")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.scrollWidth")}}
