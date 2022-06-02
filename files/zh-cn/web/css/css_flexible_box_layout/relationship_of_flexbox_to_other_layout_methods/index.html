@@ -12,29 +12,29 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他CSS模块相适应。如果您想学习flexbox，我们将一起找出需要注意的规范和flexbox与一些其他模块不同的原因。</p>
+<p>在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果您想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。</p>
 
 <div class="note">
-<p><strong>注意：CSS 1和CSS 2是一个单一的整体规范，其中所有CSS都定义在一个文档中。随着CSS成为一种功能更加丰富的语言，各个部分有不同的发展速度，如何维护一个庞大的规范就成了问题。因此现在的CSS是模块化的，不同的CSS模块有不同的规范，一起构成了现在的CSS。这些模块之间相互关联，并且处于不同的开发阶段。</strong></p>
+<p><strong>注意：CSS 1 和 CSS 2 是一个单一的整体规范，其中所有 CSS 都定义在一个文档中。随着 CSS 成为一种功能更加丰富的语言，各个部分有不同的发展速度，如何维护一个庞大的规范就成了问题。因此现在的 CSS 是模块化的，不同的 CSS 模块有不同的规范，一起构成了现在的 CSS。这些模块之间相互关联，并且处于不同的开发阶段。</strong></p>
 </div>
 
 <h2 id="box_alignment_模块">box alignment 模块</h2>
 
-<p>许多人开始关注flexbox的最初原因是在flex容器中能够很好的对齐其中的元素。flexbox可以设置在其交叉轴以及主轴上的对齐属性。</p>
+<p>许多人开始关注 flexbox 的最初原因是在 flex 容器中能够很好的对齐其中的元素。flexbox 可以设置在其交叉轴以及主轴上的对齐属性。</p>
 
-<p>这些属性最开始出现在flexbox规范中，现在已经成为<a href="https://www.w3.org/TR/css-align-3/">Box Alignment规范</a>的一部分。 这个规范详细说明了在所有布局中（不仅仅是flexbox）对齐属性是如何起作用的。 对齐属性用于设置元素对齐方式和沿轴的空间分配。</p>
+<p>这些属性最开始出现在 flexbox 规范中，现在已经成为<a href="https://www.w3.org/TR/css-align-3/">Box Alignment 规范</a>的一部分。这个规范详细说明了在所有布局中（不仅仅是 flexbox）对齐属性是如何起作用的。对齐属性用于设置元素对齐方式和沿轴的空间分配。</p>
 
-<p>之所以在flexbox规范和box alignment模块规范中都有对对齐属性的详细描述，是为了确保flexbox规范的完成不会受box alignment模块规范的影响，因为后者需要详细说明所有的布局类型中的对齐方法。flexbox规范中有一条注释指出将来一旦Box Alignment Level 3完成，它将会取代flexbox规范中的相关定义：</p>
+<p>之所以在 flexbox 规范和 box alignment 模块规范中都有对对齐属性的详细描述，是为了确保 flexbox 规范的完成不会受 box alignment 模块规范的影响，因为后者需要详细说明所有的布局类型中的对齐方法。flexbox 规范中有一条注释指出将来一旦 Box Alignment Level 3 完成，它将会取代 flexbox 规范中的相关定义：</p>
 
 <blockquote>
-<p>“注意：虽然对齐属性是在CSS Box Alignment [CSS-ALIGN-3]中定义的，但“ Flexible Box Layout”在此处重现了相关属性的定义，以免形成规范性的依赖关系，而这可能会减慢规范的发展。这些属性仅适用于Flex布局，直到CSS Box Alignment Level 3完成并定义其对其他布局模式的效果；此外，在Box Alignment模块中定义的任何新值都将应用于Flexible Box Layout；换句话说，一旦Box Alignment模块完成，其中的相关定义将取代此处的定义。”</p>
+<p>“注意：虽然对齐属性是在 CSS Box Alignment [CSS-ALIGN-3] 中定义的，但“Flexible Box Layout”在此处重现了相关属性的定义，以免形成规范性的依赖关系，而这可能会减慢规范的发展。这些属性仅适用于 Flex 布局，直到 CSS Box Alignment Level 3 完成并定义其对其他布局模式的效果；此外，在 Box Alignment 模块中定义的任何新值都将应用于 Flexible Box Layout；换句话说，一旦 Box Alignment 模块完成，其中的相关定义将取代此处的定义。”</p>
 </blockquote>
 
-<p>在本系列的后续文章（在flex容器中对齐元素）中，我们将彻底研究Box Alignment属性如何应用于flex元素。</p>
+<p>在本系列的后续文章（在 flex 容器中对齐元素）中，我们将彻底研究 Box Alignment 属性如何应用于 flex 元素。</p>
 
-<h3 id="gap属性">gap属性</h3>
+<h3 id="gap属性">gap 属性</h3>
 
-<p>属性{{cssxref("row-gap")}} 和 {{cssxref("column-gap")}}，其简写为{{cssxref("gap")}}，近期添加到了盒子布局规范中。这些属性（名称为<code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code>）最初定义在CSS网格布局中。但是他们被重命名并移入盒子布局规范。这样的话，所有的布局方法都可以使用这些属性。不过在浏览器实现Flex的这些属性之前只能通过{{cssxref("margin")}} 来控制元素之间的间隙距离。</p>
+<p>属性{{cssxref("row-gap")}} 和 {{cssxref("column-gap")}}，其简写为{{cssxref("gap")}}，近期添加到了盒子布局规范中。这些属性（名称为<code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code>）最初定义在 CSS 网格布局中。但是他们被重命名并移入盒子布局规范。这样的话，所有的布局方法都可以使用这些属性。不过在浏览器实现 Flex 的这些属性之前只能通过{{cssxref("margin")}} 来控制元素之间的间隙距离。</p>
 
 <h2 id="Writing_Modes">Writing Modes</h2>
 

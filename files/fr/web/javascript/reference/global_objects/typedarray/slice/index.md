@@ -21,7 +21,9 @@ La méthode **`slice()`** renvoie une copie superficielle (shallow copy) d'un fr
 
 ## Syntaxe
 
-    typedarray.slice([début[, fin]])
+```js
+typedarray.slice([début[, fin]])
+```
 
 ## Paramètres
 

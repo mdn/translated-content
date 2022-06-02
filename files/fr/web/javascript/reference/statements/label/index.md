@@ -18,8 +18,10 @@ Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec
 
 ## Syntaxe
 
-    label :
-       instruction
+```js
+label :
+    instruction
+```
 
 - `label`
   - : N'importe quel identifiant JavaScript qui n'est pas un mot-clé réservé.

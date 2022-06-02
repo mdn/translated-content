@@ -23,15 +23,15 @@ TypeError: can't access property "prop" of null
 
 <p>{{jsxref("TypeError")}}.</p>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
-<p>访问了 {{jsxref("undefined")}} 或{{jsxref("null")}} 值的属性.</p>
+<p>访问了 {{jsxref("undefined")}} 或{{jsxref("null")}} 值的属性。</p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="无效情形">无效情形</h3>
 
-<pre class="brush: js example-bad">// 对于undefined 以及 null 值， substring 方法无法正常工作
+<pre class="brush: js example-bad">// 对于 undefined 以及 null 值， substring 方法无法正常工作
 var foo = undefined;
 foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
 
@@ -41,10 +41,10 @@ foo.substring(1); // TypeError: x is null, can't access property "substring" of 
 
 <h3 id="解决问题">解决问题</h3>
 
-<p>为了解决<code>undefined</code> 或 <code>null</code> 值的空指针问题，你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 操作符, 比如.</p>
+<p>为了解决<code>undefined</code> 或 <code>null</code> 值的空指针问题，你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 操作符，比如。</p>
 
 <pre class="brush: js">if (typeof foo !== 'undefined') {
-  // 现在已经确认foo已定义，可以进一步操作.
+  // 现在已经确认 foo 已定义，可以进一步操作。
 }</pre>
 
 <h2 id="参考更多">参考更多</h2>

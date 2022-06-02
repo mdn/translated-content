@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称<a href="http://javascript.crockford.com/javascript.html">世界上被人误解最深的编程语言</a>。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。 JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。</p>
 
-<p>我们有必要先从这门语言的历史谈起。在1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用Sun Microsystem的Java语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。</p>
+<p>我们有必要先从这门语言的历史谈起。在 1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用 Sun Microsystem 的 Java 语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。</p>
 
 <p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织）， {{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
 
@@ -21,11 +21,11 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 <p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
 </div>
 
-<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo! 的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a> （注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
+<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a> （注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
 
 <h2 id="概览">概览</h2>
 
-<p>JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>）。JavaScript同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。</p>
+<p>JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。</p>
 
 <p>先从任何编程语言都不可缺少的组成部分——“类型”开始。JavaScript 程序可以修改值（value），这些值都有各自的类型。JavaScript 中的类型包括：</p>
 
@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <h2 id="数字">数字</h2>
 
-<p>根据语言规范，JavaScript 采用“遵循 IEEE 754 标准的双精度 64 位格式”（"double-precision 64-bit format IEEE 754 values"）表示数字。——在JavaScript（除了{{jsxref("BigInt")}}）当中，<strong>并不存在整数/整型(Integer)。</strong>因此在处理如下的场景时候，您一定要小心：</p>
+<p>根据语言规范，JavaScript 采用“遵循 IEEE 754 标准的双精度 64 位格式”（"double-precision 64-bit format IEEE 754 values"）表示数字。——在 JavaScript（除了{{jsxref("BigInt")}}）当中，<strong>并不存在整数/整型 (Integer)。</strong>因此在处理如下的场景时候，您一定要小心：</p>
 
 <pre>console.log(3 / 2);             // 1.5,<em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1
@@ -74,7 +74,7 @@ console.log(Math.floor(3 / 2)); // 1
 <pre class="brush: js">0.1 + 0.2 = 0.30000000000000004
 </pre>
 
-<p>在具体实现时，整数值通常被视为32位整型变量，在个别实现（如某些浏览器）中也以32位整型变量的形式进行存储，直到它被用于执行某些32位整型不支持的操作，这是为了便于进行位操作。</p>
+<p>在具体实现时，整数值通常被视为 32 位整型变量，在个别实现（如某些浏览器）中也以 32 位整型变量的形式进行存储，直到它被用于执行某些 32 位整型不支持的操作，这是为了便于进行位操作。</p>
 
 <p>JavaScript 支持标准的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">算术运算符</a>，包括加法、减法、取模（或取余）等等。还有一个之前没有提及的内置对象 {{jsxref("Math")}}（数学对象），用以处理更多的高级数学函数和常数：</p>
 
@@ -93,7 +93,7 @@ parseInt("010", 10); // 10
 <pre class="brush: js">parseInt("010");  //  8
 parseInt("0x10"); // 16</pre>
 
-<p>这是因为字符串以数字 0 开头，{{jsxref("Global_Objects/parseInt", "parseInt()")}}函数会把这样的字符串视作八进制数字；同理，0x开头的字符串则视为十六进制数字。</p>
+<p>这是因为字符串以数字 0 开头，{{jsxref("Global_Objects/parseInt", "parseInt()")}}函数会把这样的字符串视作八进制数字；同理，0x 开头的字符串则视为十六进制数字。</p>
 
 <p>如果想把一个二进制数字字符串转换成整数值，只要把第二个参数设置为 2 就可以了：</p>
 
@@ -113,7 +113,7 @@ parseInt("0x10"); // 16</pre>
 <pre class="brush: js">parseInt("hello", 10); // NaN
 </pre>
 
-<p>要小心NaN：如果把 <code>NaN</code> 作为参数进行任何数学运算，结果也会是 <code>NaN</code>：</p>
+<p>要小心 NaN：如果把 <code>NaN</code> 作为参数进行任何数学运算，结果也会是 <code>NaN</code>：</p>
 
 <pre class="brush: js">NaN + 5; //NaN
 </pre>
@@ -129,7 +129,7 @@ parseInt("0x10"); // 16</pre>
 -1 / 0; // -Infinity
 </pre>
 
-<p>可以使用内置函数 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a> 来判断一个变量是否是一个有穷数， 如果类型为<code>Infinity</code>, <code>-Infinity</code> 或 <code>NaN则返回false</code>：</p>
+<p>可以使用内置函数 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a> 来判断一个变量是否是一个有穷数， 如果类型为<code>Infinity</code>, <code>-Infinity</code> 或 <code>NaN 则返回 false</code>：</p>
 
 <pre class="brush: js">isFinite(1/0); // false
 isFinite(Infinity); // false
@@ -149,7 +149,7 @@ Number.isFinite("0"); // false</pre>
 
 <h2 id="字符串">字符串</h2>
 
-<p>JavaScript 中的字符串是一串<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode.E7.BC.96.E7.A0.81">Unicode 字符</a>序列。这对于那些需要和多语种网页打交道的开发者来说是个好消息。更准确地说，它们是一串UTF-16编码单元的序列，每一个编码单元由一个 16 位二进制数表示。每一个Unicode字符由一个或两个编码单元来表示。</p>
+<p>JavaScript 中的字符串是一串<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode.E7.BC.96.E7.A0.81">Unicode 字符</a>序列。这对于那些需要和多语种网页打交道的开发者来说是个好消息。更准确地说，它们是一串 UTF-16 编码单元的序列，每一个编码单元由一个 16 位二进制数表示。每一个 Unicode 字符由一个或两个编码单元来表示。</p>
 
 <p>如果想表示一个单独的字符，只需使用长度为 1 的字符串。</p>
 
@@ -218,7 +218,7 @@ var name = "simon";
 
 <p>一个使用  <strong><code>var</code> </strong>声明变量的语句块的例子：</p>
 
-<pre class="brush: js">// myVarVariable在这里 *能* 被引用
+<pre class="brush: js">// myVarVariable 在这里 *能* 被引用
 
 for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
   // myVarVariable 整个函数中都能被引用
@@ -232,7 +232,7 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <h2 id="运算符">运算符</h2>
 
-<p>JavaScript的算术操作符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 和 <code>%</code> ——求余（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#求余_%28%29">与模运算相同</a>）。赋值使用 <code>=</code> 运算符，此外还有一些复合运算符，如 <code>+=</code> 和 <code>-=</code>，它们等价于 <code>x = x <em>operator</em> y</code>。</p>
+<p>JavaScript 的算术操作符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 和 <code>%</code> ——求余（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#求余_%28%29">与模运算相同</a>）。赋值使用 <code>=</code> 运算符，此外还有一些复合运算符，如 <code>+=</code> 和 <code>-=</code>，它们等价于 <code>x = x <em>operator</em> y</code>。</p>
 
 <pre class="brush: js">x += 5; // 等价于 x = x + 5;
 </pre>
@@ -368,7 +368,7 @@ do {
 
 <h2 id="对象">对象</h2>
 
-<p>JavaScript 中的对象，Object，可以简单理解成“名称-值”对（而不是键值对：现在，ES 2015 的映射表（Map），比对象更接近键值对），不难联想 JavaScript 中的对象与下面这些概念类似：</p>
+<p>JavaScript 中的对象，Object，可以简单理解成“名称 - 值”对（而不是键值对：现在，ES 2015 的映射表（Map），比对象更接近键值对），不难联想 JavaScript 中的对象与下面这些概念类似：</p>
 
 <ul>
  <li>Python 中的字典（Dictionary）</li>
@@ -422,19 +422,19 @@ obj["details"]["size"]; // 12
 // 定义一个对象
 var You = new Person('You', 24);
 // 我们创建了一个新的 Person，名称是 "You"
-// ("You" 是第一个参数, 24 是第二个参数..)
+// ("You" 是第一个参数，24 是第二个参数..)
 </pre>
 
 <p>完成创建后，对象属性可以通过如下两种方式进行赋值和访问：</p>
 
-<pre class="brush: js">// 点表示法(dot notation)
+<pre class="brush: js">// 点表示法 (dot notation)
 obj.name = 'Simon';
 var name = obj.name;
 </pre>
 
 <p>和：</p>
 
-<pre class="brush: js">// 括号表示法(bracket notation)
+<pre class="brush: js">// 括号表示法 (bracket notation)
 obj['name'] = 'Simon';
 var name = obj['name'];
 // can use a variable to define a key
@@ -637,7 +637,7 @@ add(2, 3, 4, 5); // 14
 }
 avg(2, 3, 4, 5); // 3.5</pre>
 
-<p>这个就有用多了，但是却有些冗长。为了使代码变短一些，我们可以使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>来替换arguments的使用。在这方法中，我们可以传递任意数量的参数到函数中同时尽量减少我们的代码。这个<strong>剩余参数操作符</strong>在函数中以：<strong>...variable</strong> 的形式被使用，它将包含在调用函数时使用的未捕获整个参数列表到这个变量中。我们同样也可以将 <strong>for</strong> 循环替换为 <strong>for...of </strong> 循环来返回我们变量的值。</p>
+<p>这个就有用多了，但是却有些冗长。为了使代码变短一些，我们可以使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>来替换 arguments 的使用。在这方法中，我们可以传递任意数量的参数到函数中同时尽量减少我们的代码。这个<strong>剩余参数操作符</strong>在函数中以：<strong>...variable</strong> 的形式被使用，它将包含在调用函数时使用的未捕获整个参数列表到这个变量中。我们同样也可以将 <strong>for</strong> 循环替换为 <strong>for...of </strong> 循环来返回我们变量的值。</p>
 
 <pre class="brush: js">function avg(...args) {
   var sum = 0;
@@ -741,7 +741,7 @@ b; // 2
 <p><strong>备注：</strong>关于 JavaScript 中面向对象编程更详细的信息，请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">JavaScript 面向对象简介</a>。</p>
 </div>
 
-<p>在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法：“名 姓（First Last）”或“姓, 名（Last, First）”。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：</p>
+<p>在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法：“名 姓（First Last）”或“姓，名（Last, First）”。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：</p>
 
 <pre class="brush: js">function makePerson(first, last) {
     return {
@@ -836,9 +836,9 @@ Person.prototype.fullNameReversed = function() {
 }
 </pre>
 
-<p><code>Person.prototype</code> 是一个可以被<code>Person</code>的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 <code>Person </code>某个实例（例如上个例子中的s）一个没有定义的属性时，解释器会首先检查这个 <code>Person.prototype</code> 来判断是否存在这样一个属性。所以，任何分配给 <code>Person.prototype</code> 的东西对通过 <code>this</code> 对象构造的实例都是可用的。</p>
+<p><code>Person.prototype</code> 是一个可以被<code>Person</code>的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 <code>Person </code>某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 <code>Person.prototype</code> 来判断是否存在这样一个属性。所以，任何分配给 <code>Person.prototype</code> 的东西对通过 <code>this</code> 对象构造的实例都是可用的。</p>
 
-<p>这个特性功能十分强大，JavaScript 允许你在程序中的任何时候修改原型（prototype）中的一些东西，也就是说你可以在运行时(runtime)给已存在的对象添加额外的方法：</p>
+<p>这个特性功能十分强大，JavaScript 允许你在程序中的任何时候修改原型（prototype）中的一些东西，也就是说你可以在运行时 (runtime) 给已存在的对象添加额外的方法：</p>
 
 <pre class="brush: js">s = new Person("Simon", "Willison");
 s.firstNameCaps();  // TypeError on line 1: s.firstNameCaps is not a function

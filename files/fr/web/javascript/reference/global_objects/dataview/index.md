@@ -9,7 +9,6 @@ browser-compat: javascript.builtins.DataView
 
 La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire des données de différents types numériques dans un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), quel que soit le [«&nbsp;boutisme&nbsp;» (<i lang="en">endianness</i>)](https://fr.wikipedia.org/wiki/Boutisme) de la plateforme.
 
-
 ## Description
 
 ### Le boutisme (<i lang="en">endianness</i>)

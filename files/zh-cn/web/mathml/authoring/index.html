@@ -10,7 +10,7 @@ translation_of: Web/MathML/Authoring
 
 <p>这个页面解释了如何利用 MathML 语言书写数学公式。就像 HTML，MathML 是用标签和属性描述的。当你的文档包含了高级结构比如说列表或表格的时候，HTML 会变得很冗长，但是幸好还有很多来自简单记号法的生成器，“所见即所得”编辑器以及别的内容管理系统可以帮助你编写 Web 网页。</p>
 
-<p>数学公式记号法在结构方面更加复杂，像分数、平方根或者矩阵，很可能需要它们自己的标签。结果是，好的 MathML 编辑工具很重要，我们在下面描述一些工具。值得一说的是，Mozilla MathML 工作小组已经开发出了 <a href="https://github.com/fred-wang/TeXZilla/">TeXZilla</a>，这是一个基于 JavaScript、支持 Unicode 编码的 LaTeX 转 MathML 转换器，is intended to be used in many scenarios described here。当然了，这个列表并不详尽，我们建议你自己去查看 <a href="https://www.w3.org/Math/Software/">W3C MathML软件列表</a>，你可以在那里找到很多别的工具。</p>
+<p>数学公式记号法在结构方面更加复杂，像分数、平方根或者矩阵，很可能需要它们自己的标签。结果是，好的 MathML 编辑工具很重要，我们在下面描述一些工具。值得一说的是，Mozilla MathML 工作小组已经开发出了 <a href="https://github.com/fred-wang/TeXZilla/">TeXZilla</a>，这是一个基于 JavaScript、支持 Unicode 编码的 LaTeX 转 MathML 转换器，is intended to be used in many scenarios described here。当然了，这个列表并不详尽，我们建议你自己去查看 <a href="https://www.w3.org/Math/Software/">W3C MathML 软件列表</a>，你可以在那里找到很多别的工具。</p>
 
 <p>注意，根据设计，MathML 在 HTML5 中是完美整合的，而且你可以使用寻常的 Web 功能，比如说 CSS、DOM、JavaScript 或 SVG。这超出这个文档的范围了，但是任何拥有基础 Web 语言知识的人都能够轻松地学会用 MathML 综合这些功能。请阅读<a href="/en-US/docs/Mozilla/MathML_Project#Sample_MathML_Documents">我们的文档</a>以及 <a href="/zh-CN/docs/Web/MathML">MathML 参考</a>以了解详情。</p>
 
@@ -45,11 +45,11 @@ translation_of: Web/MathML/Authoring
 
 <h4 id="对不支持_MathML_的浏览器的后备计划">对不支持 MathML 的浏览器的后备计划</h4>
 
-<p>不幸的是，一些浏览器不能呈现 MathML 方程式，或者只能有限地支持它。因此，你可能需要使用一个MathML polyfill 以提供一些用于呈现的后备计划。如果你只需要基本的数学公式结构，比如说用在这个 MDN wiki 中的这些，那么，一个小型的 <a href="https://github.com/fred-wang/mathml.css">mathml.css</a> 样式表就足够了。要想使用它，只需要在你的文档中插入一行内容：</p>
+<p>不幸的是，一些浏览器不能呈现 MathML 方程式，或者只能有限地支持它。因此，你可能需要使用一个 MathML polyfill 以提供一些用于呈现的后备计划。如果你只需要基本的数学公式结构，比如说用在这个 MDN wiki 中的这些，那么，一个小型的 <a href="https://github.com/fred-wang/mathml.css">mathml.css</a> 样式表就足够了。要想使用它，只需要在你的文档中插入一行内容：</p>
 
 <pre class="brush: html">&lt;script src="http://fred-wang.github.io/mathml.css/mspace.js"&gt;&lt;/script&gt;</pre>
 
-<p>如果你需要更多复杂的结构，你需要考虑使用更重一些的 <a href="https://www.mathjax.org">MathJax</a> 库作为一个MathML polyfill：</p>
+<p>如果你需要更多复杂的结构，你需要考虑使用更重一些的 <a href="https://www.mathjax.org">MathJax</a> 库作为一个 MathML polyfill：</p>
 
 <pre class="brush: html">&lt;script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
@@ -93,7 +93,7 @@ m|math {
 
 <p>You can then use the <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> rule as usual to provide WOFF fallback for Latin Modern and Latin Modern Math. See this <a href="https://github.com/fred-wang/MathFonts">GitHub repository to get WOFF fonts and sample CSS stylesheets</a> to use on your Web site and check <a href="http://fred-wang.github.io/MathFonts/">its test page</a>.</p>
 
-<h4 id="XML文档中的_MathML（XHTML、EPUB，等等）">XML文档中的 MathML（XHTML、EPUB，等等）</h4>
+<h4 id="XML文档中的_MathML（XHTML、EPUB，等等）">XML 文档中的 MathML（XHTML、EPUB，等等）</h4>
 
 <p>If for some reason you need to use MathML in XML documents, be sure to satisfy the usual requirements: well-formed document, use of correct MIME type, MathML namespace <code>"http://www.w3.org/1998/Math/MathML"</code> on <code>&lt;math&gt;</code> roots. For example, the XHTML version of the previous example looks like this:<br>
   </p>

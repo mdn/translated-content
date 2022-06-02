@@ -18,7 +18,9 @@ La valeur initiale de la propriété @@iterator est le même objet fonction que 
 
 ## Syntaxe
 
-    typedarray[Symbol.iterator]()
+```js
+typedarray[Symbol.iterator]()
+```
 
 ### Valeur de retour
 

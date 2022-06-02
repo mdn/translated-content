@@ -3,13 +3,13 @@ title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
 tags:
   - HTTP
-  - http头
+  - http 头
   - 头
 translation_of: Web/HTTP/Headers/Clear-Site-Data
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p><strong><code>Clear-Site-Data</code></strong> 响应头，表示清除当前请求网站有关的浏览器数据（cookie，存储，缓存）。它让Web开发人员对浏览器本地存储的数据有更多控制能力。</p>
+<p><strong><code>Clear-Site-Data</code></strong> 响应头，表示清除当前请求网站有关的浏览器数据（cookie，存储，缓存）。它让 Web 开发人员对浏览器本地存储的数据有更多控制能力。</p>
 
 <table class="properties">
  <tbody>
@@ -26,7 +26,7 @@ translation_of: Web/HTTP/Headers/Clear-Site-Data
 
 <h2 id="语法">语法</h2>
 
-<p><code>Clear-Site-Data</code>  可以接受一个或多个参数，如果想要清除所有类型的数据，可以使用通配符(<code>"*"</code>) </p>
+<p><code>Clear-Site-Data</code>  可以接受一个或多个参数，如果想要清除所有类型的数据，可以使用通配符 (<code>"*"</code>) </p>
 
 <pre>// 单个参数
 Clear-Site-Data: "cache"
@@ -42,24 +42,24 @@ Clear-Site-Data: "*"
 
 <dl>
  <dt id="cache"><code>"cache"</code></dt>
- <dd>表示服务端希望删除本URL原始响应的本地缓存数据（即 ：浏览器缓存，<a href="/en-US/docs/">请参阅HTTP缓存</a>）。根据浏览器的不同，可能还会清除预渲染页面，脚本缓存，WebGL着色器缓存或地址栏建议等内容。</dd>
+ <dd>表示服务端希望删除本 URL 原始响应的本地缓存数据（即 ：浏览器缓存，<a href="/en-US/docs/">请参阅 HTTP 缓存</a>）。根据浏览器的不同，可能还会清除预渲染页面，脚本缓存，WebGL 着色器缓存或地址栏建议等内容。</dd>
  <dt id="cookies"><code>"cookies"</code></dt>
- <dd>表示服务端希望删除URL响应的所有cookie。 HTTP身份验证凭据也会被清除。会影响整个主域，包括子域。所以https://example.com以及https://stage.example.com的Cookie都会被清除。</dd>
+ <dd>表示服务端希望删除 URL 响应的所有 cookie。 HTTP 身份验证凭据也会被清除。会影响整个主域，包括子域。所以 https://example.com 以及 https://stage.example.com 的 Cookie 都会被清除。</dd>
  <dt id="storage"><code>"storage"</code></dt>
- <dd>表示服务端希望删除URL原响应的所有DOM存储。这包括存储机制，如
+ <dd>表示服务端希望删除 URL 原响应的所有 DOM 存储。这包括存储机制，如
  <ul>
   <li>localStorage (执行 <code>localStorage.clear</code>),</li>
   <li>sessionStorage (执行 <code>sessionStorage.clear</code>),</li>
   <li>IndexedDB (对每个库执行  {{domxref("IDBFactory.deleteDatabase")}}),</li>
   <li>服务注册线程 (对每个服务之注册线程执行 {{domxref("ServiceWorkerRegistration.unregister")}}),</li>
   <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache,</a></li>
-  <li>WebSQL 数据库,</li>
+  <li>WebSQL 数据库，</li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">FileSystem API data</a>,</li>
   <li>Plugin data (Flash via <code><a href="https://wiki.mozilla.org/NPAPI:ClearSiteData">NPP_ClearSiteData</a></code>).</li>
  </ul>
  </dd>
  <dt id="executionContexts"><code>"executionContexts"</code></dt>
- <dd>表示服务端希望浏览器重新加载本请求({{domxref("Location.reload")}}).</dd>
+ <dd>表示服务端希望浏览器重新加载本请求 ({{domxref("Location.reload")}}).</dd>
  <dt><code>"*"</code> (通配符)</dt>
  <dd>表示服务端希望清除原请求响应的所有类型的数据。如果在此头的未来版本中添加了更多数据类型，它们也将被涉及。</dd>
 </dl>
@@ -68,13 +68,13 @@ Clear-Site-Data: "*"
 
 <h3 id="登出">登出</h3>
 
-<p>如果用户退出您的网站或服务，您可能希望删除本地存储的数据。您可以通过在https://example.com/logout的响应头增加Clear-Site-Data，以达到目的：</p>
+<p>如果用户退出您的网站或服务，您可能希望删除本地存储的数据。您可以通过在 https://example.com/logout 的响应头增加 Clear-Site-Data，以达到目的：</p>
 
 <pre>Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"</pre>
 
-<h3 id="清除cookie">清除cookie</h3>
+<h3 id="清除cookie">清除 cookie</h3>
 
-<p>如果它在https://example.com/clear-cookies的响应头中出现，则同一域 https://example.com和所有子域（如https://stage.example.com等）中的所有Cookie，将都被清除。</p>
+<p>如果它在 https://example.com/clear-cookies 的响应头中出现，则同一域 https://example.com 和所有子域（如 https://stage.example.com 等）中的所有 Cookie，将都被清除。</p>
 
 <pre>Clear-Site-Data: "cookies"</pre>
 

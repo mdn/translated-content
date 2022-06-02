@@ -4,26 +4,28 @@ slug: Web/API/Element/blur_event
 translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
-<p>当一个元素失去焦点的时候 blur 事件被触发。它和 <a href="/en-US/docs/Mozilla_event_reference/focusout"><code>focusout</code></a> 事件的主要区别是 focusout 支持冒泡。</p>
+<p>当一个元素失去焦点的时候 blur 事件被触发。它和 <a href="/zh-CN/docs/Mozilla_event_reference/focusout"><code>focusout</code></a> 事件的主要区别是 focusout 支持冒泡。</p>
 
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("FocusEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消默认行为</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">目标对象</dt>
- <dd style="margin: 0 0 0 120px;">元素（Element）</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
+ <dt>规范</dt>
+ <dd><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur">DOM L3</a></dd>
+ <dt>接口</dt>
+ <dd>{{domxref("FocusEvent")}}</dd>
+ <dt>是否冒泡</dt>
+ <dd>否</dd>
+ <dt>可取消默认行为</dt>
+ <dd>否</dd>
+ <dt>目标对象</dt>
+ <dd>元素（Element）</dd>
+ <dt>默认行为</dt>
+ <dd>无</dd>
 </dl>
 
-<p>{{NoteStart}}{{domxref("Document.activeElement")}} 的值随浏览器的不同而不同 ({{bug(452307)}}): IE10把值设为焦点将要移向的对象 , 而Firefox和Chrome 往往把值设为<code>body</code> .{{NoteEnd}}</p>
+<div class="notecard note">
+ <p><strong>备注：</strong>{{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 <code>body</code>。</p>
+</div>
 
 <h2 id="属性">属性</h2>
 

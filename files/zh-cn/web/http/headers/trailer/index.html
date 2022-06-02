@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Headers/Trailer
 <p><strong>Trailer</strong> 是一个响应首部，允许发送方在分块发送的消息后面添加额外的元信息，这些元信息可能是随着消息主体的发送动态生成的，比如消息的完整性校验，消息的数字签名，或者消息经过处理之后的最终状态等。</p>
 
 <div class="note">
-<p>请求首部 {{HTTPHeader("TE")}} 需要设置trailers来允许挂载字段。</p>
+<p>请求首部 {{HTTPHeader("TE")}} 需要设置 trailers 来允许挂载字段。</p>
 </div>
 
 <table class="properties">
@@ -47,7 +47,7 @@ translation_of: Web/HTTP/Headers/Trailer
 
 <h3 id="在分块传输编码中使用挂载（trailer）首部">在分块传输编码中使用挂载（trailer）首部</h3>
 
-<p>在这个例子中, {{HTTPHeader("Expires")}} 首部出现在分块信息的结尾，作为挂载（trailer）首部。</p>
+<p>在这个例子中，{{HTTPHeader("Expires")}} 首部出现在分块信息的结尾，作为挂载（trailer）首部。</p>
 
 <pre>HTTP/1.1 200 OK
 Content-Type: text/plain

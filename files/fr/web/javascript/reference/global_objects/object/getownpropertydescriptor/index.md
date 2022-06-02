@@ -18,7 +18,9 @@ La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la
 
 ## Syntaxe
 
-    Object.getOwnPropertyDescriptor(obj, prop)
+```js
+Object.getOwnPropertyDescriptor(obj, prop)
+```
 
 ### Paramètres
 
