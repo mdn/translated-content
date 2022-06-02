@@ -6,7 +6,7 @@ translation_of: Web/API/AudioDestinationNode/maxChannelCount
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioDestinationNode") }} 接口的<code>maxchannelCount 属性是</code>一个表示物理设备能处理最大通道数的无符号长整型数。</p>
+<p>{{ domxref("AudioDestinationNode") }} 接口的 <code>maxchannelCount</code> 属性是一个表示物理设备能处理最大通道数的无符号长整型数。</p>
 
 <p> {{domxref("AudioNode.channelCount")}} 属性值只能在 0 和这个值 (两端包含) 之间。如果 <code>maxChannelCount</code>为 <code>0</code>,例如在 {{domxref("OfflineAudioContext")}}, 表示音频通道不能被改变。</p>
 </div>
@@ -24,7 +24,7 @@ myDestination.maxChannelCount = 2;
 
 <h2 id="例子">例子</h2>
 
-<p>下面假设了一个简单的音频环境，设置其中 <code>AudioDestinationNode 的</code><code>maxChannelCount 值为</code> 2:</p>
+<p>下面假设了一个简单的音频环境，设置其中 <code>AudioDestinationNode</code> 的 <code>maxChannelCount</code> 值为 2：</p>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
