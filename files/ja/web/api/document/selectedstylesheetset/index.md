@@ -1,48 +1,45 @@
 ---
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
   - DOM
-  - Property
-  - Reference
-  - Stylesheets
+  - プロパティ
+  - リファレンス
+  - スタイルシート
+  - 非推奨
+browser-compat: api.Document.selectedStyleSheetSet
 translation_of: Web/API/Document/selectedStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}{{obsolete_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>selectedStyleSheetSet</code></strong> プロパティは、<span class="seosummary">現在使用中のスタイルシートセットの名前を示します。</span></p>
+**`selectedStyleSheetSet`** プロパティは、現在使用中のスタイルシートセットの名前を示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><var>currentStyleSheetSet</var> = <var>document</var>.selectedStyleSheetSet;
+現在使用中のスタイルシートセットの名前を示します。このプロパティを使用して、現在のスタイルシートセットを設定することもできます。
 
-<var>document</var>.selectedStyleSheet = <var>newStyleSheetSet</var>;
-</pre>
+このプロパティに値を設定することは、 {{domxref("document.enableStyleSheetsForSet()")}} を `currentStyleSheetSet` の値で呼び出し、 `lastStyleSheetSet` の値をその値に設定することに等価です。
 
-<p>返値である <code>currentStyleSheetSet</code> は、現在使用中のスタイルシートセットの名前を示します。このプロパティを使用して、現在のスタイルシートセットを設定することもできます。</p>
+> **Note:** この属性の値は生きています。スタイルシートの `disabled` 属性を変更すると、この属性の値に影響します。
 
-<p>このプロパティに値を設定することは、 {{domxref("document.enableStyleSheetsForSet()")}} を <code>currentStyleSheetSet</code> の値で呼び出し、 <code>lastStyleSheetSet</code> の値をその値に設定することに等価です。</p>
+## 例
 
-<div class="note"><strong>注:</strong> この属性の値は生きています。スタイルシートの <code>disabled</code> 属性を変更すると、この属性の値に影響します。</div>
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js notranslate">console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
+```js
+console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
 
 document.selectedStyleSheetSet = 'Some other style sheet';
-</pre>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.selectedStyleSheetSet")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.lastStyleSheetSet")}}</li>
- <li>{{domxref("document.preferredStyleSheetSet")}}</li>
- <li>{{domxref("document.styleSheetSets")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}
