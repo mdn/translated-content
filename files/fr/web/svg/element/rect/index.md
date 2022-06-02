@@ -63,8 +63,6 @@ Cet élément implémente l'interface [`SVGRectElement`](/fr/DOM/SVGRectElement 
 
 {{Compat("svg.elements.rect")}}
 
-
-
 ## Voir également
 
 - {{ SVGElement("path") }}

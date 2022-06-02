@@ -5,8 +5,8 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 ---
 <div>{{CanvasSidebar}}</div>
 
-<div class="summary">
-<p>通过在一个 canvas （画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。</p>
+<div>
+<p>通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。</p>
 </div>
 
 <p><a class="external" href="/samples/video/chroma-key/index.xhtml" title="https://developer.mozilla.org/editor/fckeditor/core/editor/samples/video/chroma-key/index.xhtml">查看该实例</a>。</p>
@@ -55,7 +55,7 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 <ol>
  <li>这篇文档布置了两个 <a class="internal" href="/en-US/docs/Web/HTML/Element/canvas" title="En/Canvas"><code>canvas</code></a> 元素，分别带着 ID 为 <code>c1</code> 和 <code>c2</code> 的属性。Canvas <code>c1</code> 用于显示原视频的当前帧，而 <code>c2</code> 用于显示执行了色度键控效果后的视频；<code>c2</code> 预先加载将被用于替换视频中绿幕（绿色背景）的静态图像。</li>
- <li>JavaScript 代码从一个名为 <code>main.js</code> 的脚本引入；这个脚本使用 JavaScript 1.8 特性，所以在22行引入脚本时它的 version（版本）是指定的。</li>
+ <li>JavaScript 代码从一个名为 <code>main.js</code> 的脚本引入；这个脚本使用 JavaScript 1.8 特性，所以在 22 行引入脚本时它的 version（版本）是指定的。</li>
  <li>当文档加载时，在 <code>main.js</code> 里的 <code>processor.doLoad()</code> 方法开始执行。</li>
 </ol>
 
@@ -135,15 +135,15 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 <p><img alt="video.png" class="default internal" src="/@api/deki/files/3282/=video.png" style="height: 192px; width: 320px;"></p>
 
-<p>在第2行，视频帧被复制到第一个 canvas 的图形上下文 <code>ctx1</code> 中，并指定了和我们之前保存的值一样的宽度和高度来绘制一半大小的帧。注意这点，你可以简单地把 video 元素放到上下文的 <code>drawImage()</code> 方法当中来绘制当前的视频帧到上下文里。效果如下：</p>
+<p>在第 2 行，视频帧被复制到第一个 canvas 的图形上下文 <code>ctx1</code> 中，并指定了和我们之前保存的值一样的宽度和高度来绘制一半大小的帧。注意这点，你可以简单地把 video 元素放到上下文的 <code>drawImage()</code> 方法当中来绘制当前的视频帧到上下文里。效果如下：</p>
 
 <p><img alt="sourcectx.png" class="default internal" src="/@api/deki/files/3284/=sourcectx.png" style="height: 96px; width: 160px;"></p>
 
-<p>第3行通过在第一个上下文里调用 <code>getImageData()</code> 方法获取到视频当前帧的原始图形数据的拷贝。它提供了原始的32位像素的图像数据使我们可以继续操作。第4行通过用帧的图像数据的总大小除以四来计算图像中的像素数。</p>
+<p>第 3 行通过在第一个上下文里调用 <code>getImageData()</code> 方法获取到视频当前帧的原始图形数据的拷贝。它提供了原始的 32 位像素的图像数据使我们可以继续操作。第 4 行通过用帧的图像数据的总大小除以四来计算图像中的像素数。</p>
 
-<p>从第6行开始 <code>for</code> 循环扫描帧的像素，取出每个像素的红、绿和蓝的值，并和用于检测绿幕的预设的数对比。其中绿幕将用从 <code>foo.png</code> 导入的静态背景图像替换。</p>
+<p>从第 6 行开始 <code>for</code> 循环扫描帧的像素，取出每个像素的红、绿和蓝的值，并和用于检测绿幕的预设的数对比。其中绿幕将用从 <code>foo.png</code> 导入的静态背景图像替换。</p>
 
-<p>每一个（数值）范围内得到的被认为是绿幕一部分的帧图像数据里的像素具有的 alpha 值被替换为零，以表示该像素完全透明。因此，最终的图像里的整个绿幕的区域 100% 透明，于是在13行当它被绘制到目标上下文中时，效果是作为一层遮罩覆于静态背景上面。</p>
+<p>每一个（数值）范围内得到的被认为是绿幕一部分的帧图像数据里的像素具有的 alpha 值被替换为零，以表示该像素完全透明。因此，最终的图像里的整个绿幕的区域 100% 透明，于是在 13 行当它被绘制到目标上下文中时，效果是作为一层遮罩覆于静态背景上面。</p>
 
 <p>形成的图像像这样：</p>
 

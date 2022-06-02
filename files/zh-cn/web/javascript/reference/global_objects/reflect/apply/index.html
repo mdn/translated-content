@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 <div>{{JSRef}}</div>
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> 通过指定的参数列表发起对目标(target)函数的调用。</p>
+<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> 通过指定的参数列表发起对目标 (target) 函数的调用。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}</div>
 
@@ -27,9 +27,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
  <dt>target</dt>
  <dd>目标函数。</dd>
  <dt>thisArgument</dt>
- <dd>target函数调用时绑定的this对象。</dd>
+ <dd>target 函数调用时绑定的 this 对象。</dd>
  <dt>argumentsList</dt>
- <dd>target函数调用时传入的实参列表，该参数应该是一个类数组的对象。</dd>
+ <dd>target 函数调用时传入的实参列表，该参数应该是一个类数组的对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 
 <h2 id="描述">描述</h2>
 
-<p>该方法与ES5中{{jsxref("Function.prototype.apply()")}}方法类似：调用一个方法并且显式地指定 <code>this</code> 变量和参数列表(arguments) ，参数列表可以是数组，或类似数组的对象。</p>
+<p>该方法与 ES5 中{{jsxref("Function.prototype.apply()")}}方法类似：调用一个方法并且显式地指定 <code>this</code> 变量和参数列表 (arguments) ，参数列表可以是数组，或类似数组的对象。</p>
 
 <pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
 
@@ -77,7 +77,7 @@ Reflect.apply("".charAt, "ponies", [3]);
   <tr>
    <td>{{SpecName('ES6', '#sec-reflect.apply', 'Reflect.apply')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>首次定义.</td>
+   <td>首次定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}}</td>

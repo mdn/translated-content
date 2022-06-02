@@ -20,7 +20,9 @@ La méthode **`trim()`** permet de retirer les blancs en début et fin de chaîn
 
 ## Syntaxe
 
-    str.trim()
+```js
+str.trim()
+```
 
 ### Valeur de retour
 

@@ -16,7 +16,9 @@ La méthode **`[@@toPrimitive]()`** permet de convertir un objet `Date` en une v
 
 ## Syntaxe
 
-    Date()[Symbol.toPrimitive](hint);
+```js
+Date()[Symbol.toPrimitive](hint);
+```
 
 ### Valeur de retour
 

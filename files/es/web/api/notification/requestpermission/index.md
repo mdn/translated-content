@@ -97,4 +97,3 @@ Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome
 ## Véase también
 
 - [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-

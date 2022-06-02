@@ -13,7 +13,7 @@ translation_of: Web/API/WebSocket/send
 
 
 
-<p> <strong><code>WebSocket.send()</code></strong> 方法将需要通过 WebSocket 链接传输至服务器的数据排入队列，并根据所需要传输的data bytes的大小来增加 <code>bufferedAmount</code>的值 。若数据无法传输（例如数据需要缓存而缓冲区已满）时，套接字会自行关闭。</p>
+<p> <strong><code>WebSocket.send()</code></strong> 方法将需要通过 WebSocket 链接传输至服务器的数据排入队列，并根据所需要传输的 data bytes 的大小来增加 <code>bufferedAmount</code>的值 。若数据无法传输（例如数据需要缓存而缓冲区已满）时，套接字会自行关闭。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -43,13 +43,13 @@ translation_of: Web/API/WebSocket/send
  <dt><code>INVALID_STATE_ERR</code></dt>
  <dd>当前连接未处于 <code>OPEN</code> 状态。</dd>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd>数据是一个包含未配对代理(unpaired surrogates)的字符串。</dd>
+ <dd>数据是一个包含未配对代理 (unpaired surrogates) 的字符串。</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> Gecko在{{Gecko("6.0")}}中对 <code>send()</code> 方法的实现与规范有些不一致； Gecko 返回一个<code>boolean</code> 来告知当前连接是否依旧处于<code>OPEN </code>状态 (同时也可以使用该返回值来判定数据是否已经被完全缓存或者传输); 这个问题在 {{Gecko("8.0")}}中被修正.</p>
+<p><strong>Note:</strong> Gecko 在{{Gecko("6.0")}}中对 <code>send()</code> 方法的实现与规范有些不一致； Gecko 返回一个<code>boolean</code> 来告知当前连接是否依旧处于<code>OPEN </code>状态 (同时也可以使用该返回值来判定数据是否已经被完全缓存或者传输); 这个问题在 {{Gecko("8.0")}}中被修正。</p>
 
-<p>而 {{Gecko("11.0")}}, 支持 {{jsxref("ArrayBuffer")}} 类型但不支持 {{domxref("Blob")}}类型.</p>
+<p>而 {{Gecko("11.0")}}, 支持 {{jsxref("ArrayBuffer")}} 类型但不支持 {{domxref("Blob")}}类型。</p>
 </div>
 
 <h2 id="规范">规范</h2>

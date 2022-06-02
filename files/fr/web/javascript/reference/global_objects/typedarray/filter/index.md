@@ -20,7 +20,9 @@ La méthode **`filter()`** crée un nouveau tableau qui contient l'ensemble des 
 
 ## Syntaxe
 
-    typedarray.filter(callback[, thisArg])
+```js
+typedarray.filter(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -39,9 +41,9 @@ La méthode `filter()` appelle une fonction `callback` appelée une fois pour ch
 
 `callback` est appelée avec trois arguments :
 
-1.  la valeur de l'élément
-2.  l'indice de l'élément
-3.  le tableau typé courant
+1. la valeur de l'élément
+2. l'indice de l'élément
+3. le tableau typé courant
 
 Si le paramètre `thisArg` est fourni, il sera utilisé comme objet `this` lors de l'appel de la fonction `callback`. Sinon, la valeur `undefined` sera utilisée à la place. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur this au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 

@@ -17,7 +17,9 @@ La propriété globale **`undefined`** représente la valeur `undefined`_._ Cett
 
 ## Syntaxe
 
-    undefined
+```js
+undefined
+```
 
 ## Description
 

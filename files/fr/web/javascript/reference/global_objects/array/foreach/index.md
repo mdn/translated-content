@@ -20,8 +20,10 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque �
 
 ## Syntaxe
 
-    arr.forEach(callback);
-    arr.forEach(callback, thisArg);
+```js
+arr.forEach(callback);
+arr.forEach(callback, thisArg);
+```
 
 ### Paramètres
 

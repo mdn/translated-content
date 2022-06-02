@@ -16,11 +16,13 @@ Le constructeur **`Floa64Array`** permet de représenter un tableau typé dont l
 
 ## Syntaxe
 
-    new Float64Array(); // apparu avec ES2017
-    new Float64Array(longueur);
-    new Float64Array(tableauTypé);
-    new Float64Array(objet);
-    new Float64Array(buffer [, positionOctet [, longueur]]);
+```js
+new Float64Array(); // apparu avec ES2017
+new Float64Array(longueur);
+new Float64Array(tableauTypé);
+new Float64Array(objet);
+new Float64Array(buffer [, positionOctet [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntaxe)_.
 

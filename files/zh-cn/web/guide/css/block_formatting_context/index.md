@@ -18,24 +18,24 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 - 浮动元素（{{ cssxref("float") }} 值不为 `none`）
 - 绝对定位元素（{{ cssxref("position") }} 值为 `absolute` 或 `fixed`）
 - 行内块元素（{{ cssxref("display") }} 值为 `inline-block`）
-- 表格单元格（{{ cssxref("display") }} 值为 `table-cell`，HTML表格单元格默认值）
-- 表格标题（{{ cssxref("display") }} 值为 `table-caption`，HTML表格标题默认值）
+- 表格单元格（{{ cssxref("display") }} 值为 `table-cell`，HTML 表格单元格默认值）
+- 表格标题（{{ cssxref("display") }} 值为 `table-caption`，HTML 表格标题默认值）
 - 匿名表格单元格元素（{{ cssxref("display") }} 值为 `table`、`table-row`、 `table-row-group`、`table-header-group`、`table-footer-group`（分别是 HTML table、tr、tbody、thead、tfoot 的默认值）或 `inline-table`）
 - {{ cssxref("overflow") }} 值不为 `visible`、`clip` 的块元素
 - {{ cssxref("display") }} 值为 `flow-root` 的元素
 - {{ cssxref("contain") }} 值为 `layout`、`content` 或 `paint` 的元素
-- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是[flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container)也不是[table](/zh-CN/docs/Web/CSS/CSS_Table)容器
-- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是[flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container)也不是[table](/zh-CN/docs/Web/CSS/CSS_Table)容器
+- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_Table) 容器
+- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_Table) 容器
 - 多列容器（{{ cssxref("column-count") }} 或 {{ cssxref("column-width") }} 值不为 `auto`，包括`column-count` 为 `1`）
-- `column-span` 值为 `all` 的元素始终会创建一个新的 BFC，即使该元素没有包裹在一个多列容器中([规范变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))
+- `column-span` 值为 `all` 的元素始终会创建一个新的 BFC，即使该元素没有包裹在一个多列容器中 ([规范变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))
 
 格式化上下文影响布局，通常，我们会为定位和清除浮动创建新的 BFC，而不是更改布局，因为它将：
 
 - 包含内部浮动
 - 排除外部浮动
-- 阻止[外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- 阻止 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 
-> **备注：** flex/grid容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的flex/grid格式上下文，除布局之外，它与块格式上下文类似。flex/grid容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
+> **备注：** flex/grid 容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的 flex/grid 格式上下文，除布局之外，它与块格式上下文类似。flex/grid 容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
 
 ## 示例
 

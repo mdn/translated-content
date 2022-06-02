@@ -21,7 +21,7 @@ original_slug: Web/媒体/Autoplay_guide
 <pre class="brush: js notranslate">audioElement.play();
 </pre>
 
-<p dir="ltr" id="tw-target-text">以下网络功能和API可能会受到自动播放阻止的影响：</p>
+<p dir="ltr" id="tw-target-text">以下网络功能和 API 可能会受到自动播放阻止的影响：</p>
 
 <ul>
  <li>The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements</li>
@@ -30,12 +30,12 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>从用户的角度来看，网页或应用程序自动地发出噪音而没有警告可能会令人讨厌、不便或令人反感。因此，浏览器通常仅允许在特定情况下进行自动播放。</p>
 
-<h3 id="Autoplay功能">Autoplay功能</h3>
+<h3 id="Autoplay功能">Autoplay 功能</h3>
 
 <p>据新政策，媒体内容将在满足以下至少一个的条件下自动播放：</p>
 
 <ul>
- <li>音频被静音或其音量设置为0</li>
+ <li>音频被静音或其音量设置为 0</li>
  <li>用户和网页已有交互行为（包括点击、触摸、按下某个键等等）</li>
  <li>网站已被列入白名单；如果浏览器确定用户经常与媒体互动，这可能会自动发生，也可能通过首选项或其他用户界面功能手动发生</li>
  <li>自动播放策略应用到{{HTMLElement("iframe")}}或者其文档上</li>
@@ -46,7 +46,7 @@ original_slug: Web/媒体/Autoplay_guide
 <p>详情，请参阅 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> 和 <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a> 的自动播放政策。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意:</strong> 换句话说，如果在尚无任何用户交互的页面中通过编程方式启动播放，则通常会阻止任何包含音频在内的媒体的播放。</p>
+<p><strong>注意：</strong> 换句话说，如果在尚无任何用户交互的页面中通过编程方式启动播放，则通常会阻止任何包含音频在内的媒体的播放。</p>
 </div>
 
 <h2 id="能自动播放的媒体元素">能自动播放的媒体元素</h2>
@@ -65,7 +65,7 @@ original_slug: Web/媒体/Autoplay_guide
  <li>假设网络性能或带宽没有显着变化，且已收到足够的媒体流并已开始播放，继续播放直至媒体结束而不会中断。</li>
 </ul>
 
-<h4 id="例子1_autoplay属性">例子1: autoplay属性</h4>
+<h4 id="例子1_autoplay属性">例子 1: autoplay 属性</h4>
 
 <p>使用 <code>autoplay</code> 属性的{{HTMLElement("audio")}}元素就像如下：</p>
 
@@ -74,7 +74,7 @@ original_slug: Web/媒体/Autoplay_guide
 &lt;/audio&gt;
 </pre>
 
-<h4 id="例子2：检测自动播放失败">例子2：检测自动播放失败</h4>
+<h4 id="例子2：检测自动播放失败">例子 2：检测自动播放失败</h4>
 
 <p>如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于{{htmlattrxref("autoplay", "audio")}}属性，识别自动播放是否成功开始是很棘手的。自动播放失败时<strong>不会触发</strong>任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。</p>
 

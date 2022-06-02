@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cyclic_object_value
 
 ## Message
 
-    TypeError: cyclic object value (Firefox)
-    TypeError: Converting circular structure to JSON (Chrome and Opera)
-    TypeError: Circular reference in value argument not supported (Edge)
+```
+TypeError: cyclic object value (Firefox)
+TypeError: Converting circular structure to JSON (Chrome and Opera)
+TypeError: Circular reference in value argument not supported (Edge)
+```
 
 ## Type d'erreur
 

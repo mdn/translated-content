@@ -15,7 +15,9 @@ La méthode **`decodeURI()`** permet de décoder un Uniform Resource Identifier 
 
 ## Syntaxe
 
-    decodeURI(encodedURI)
+```js
+decodeURI(encodedURI)
+```
 
 ### Paramètres
 
