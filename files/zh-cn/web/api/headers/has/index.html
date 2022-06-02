@@ -30,7 +30,7 @@ translation_of: Web/API/Headers/has
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>你可以使用{{domxref("Headers.append")}}来向 myHeaders 添加一个头信息，然后使用 <code>has() 方法来测试是否添加成功</code>:</p>
+<p>你可以使用 {{domxref("Headers.append")}} 来向 myHeaders 添加一个头信息，然后使用 <code>has()</code> 方法来测试是否添加成功：</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.has('Content-Type'); // Returns true

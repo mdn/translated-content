@@ -50,7 +50,9 @@ translation_of: Web/API/History_API
 <pre class="brush: js notranslate"> let numberOfEntries = window.history.length;
 </pre>
 
-<div class="note"><strong>注意：</strong> IE 支持传递 URLs 作为参数给 go(); 这在 Gecko 是不标准且不支持的。</div>
+<div class="note">
+ <p><strong>备注：</strong>IE 支持传递 URLs 作为参数给 go()；这在 Gecko 是不标准且不支持的。</p>
+</div>
 
 <h2 id="添加和修改历史记录中的条目">添加和修改历史记录中的条目</h2>
 
@@ -124,7 +126,9 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p><code>replaceState()</code> 的使用场景在于为了响应用户操作，你想要更新状态对象 state 或者当前历史记录的 URL。</p>
 
-<div class="note"><strong>注意：</strong> 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。 从  Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用<a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm">结构化克隆算法</a>。这将会使更多对象可以被安全的传递。</div>
+<div class="note">
+ <p><strong>备注：</strong> 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。 从  Gecko 6.0 {{ geckoRelease("6.0") }} 开始，该对象的序列化将使用<a href="/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">结构化克隆算法</a>。这将会使更多对象可以被安全的传递。</p>
+</div>
 
 <h3 id="replaceState_方法示例">replaceState() 方法示例</h3>
 
