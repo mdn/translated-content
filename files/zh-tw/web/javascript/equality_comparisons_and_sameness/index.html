@@ -54,7 +54,7 @@ console.log(obj === undefined); // false
 
 <p>不同型別的一般相等運作如下表：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="row"></th>
@@ -188,7 +188,7 @@ function attemptMutation(v)
 
 <p>儘管如此，這個思考內建相同運算子的方法，並非是延伸 ES2015 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 方法。 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 不是單純地比雙等號「更寬鬆」或比三等號「更嚴謹」，也不適合將其放在兩者之間（即，比雙等號嚴謹，但較三等號寬鬆）。我們可以從下方的比較表格看到，一切是起源於 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 可以處理 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 的比較運算。要注意的是，如果 <code>Object.is(NaN, NaN)</code> 的運算結果是  <code>false</code> ，我們就可以因為它區分 <code>-0</code> 和 <code>+0</code> 的結果，使用寬鬆和嚴謹的範疇來界定它是比三等號更嚴謹的那一區段。然而，區別 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 的方式並不確實。Unfortunately, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.</p>
 
-<table class="standard-table">
+<table>
  <caption>Sameness Comparisons</caption>
  <thead>
   <tr>
