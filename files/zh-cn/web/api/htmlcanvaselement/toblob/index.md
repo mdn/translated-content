@@ -43,7 +43,7 @@ toBlob(callback, type, quality)
 
 ## 示例
 
-### 将canvas图像转换为文件
+### 将 canvas 图像转换为文件
 
 当一个内容画到 canvas 上时，我们可以将它生成任何一个格式支持的图片文件。比如，下面的代码段获得了 id 为“canvas”的 {{HTMLElement("canvas")}} 元素中的图像，复制成一个 PNG 图，在文档中加入一个新的 {{HTMLElement("img")}} 元素，这个 {{HTMLElement("img")}} 元素的源图就是使用 canvas 创建的那个图像。
 
@@ -64,13 +64,13 @@ canvas.toBlob(function(blob) {
 });
 ```
 
-注意，我们这里创建的是PNG图片；如果在 `toBlob()` 传入第二个参数，就可以指定图片格式。例如，生成JPEG格式的图片：
+注意，我们这里创建的是 PNG 图片；如果在 `toBlob()` 传入第二个参数，就可以指定图片格式。例如，生成 JPEG 格式的图片：
 
 ```js
 canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG at 95% quality
 ```
 
-### 将canvas转换为ico（仅限Mozilla）
+### 将 canvas 转换为 ico（仅限 Mozilla）
 
 使用 `-moz-parse` 来将 canvas 转换为 ico。Windows XP 不支持将 PNG 转为 ico，因此转为 bmp 作为代替。设置下载属性，生成下载链接。下载属性的值将被用来作为文件名。
 
