@@ -17,7 +17,9 @@ La propriété globale **`undefined`** représente la valeur `undefined`_._ Cett
 
 ## Syntaxe
 
-    undefined
+```js
+undefined
+```
 
 ## Description
 
@@ -50,7 +52,7 @@ var x;
 if (x === undefined) {
    // ces instructions seront exécutées
 }
-if (x&nbsp;!== undefined) {
+if (x !== undefined) {
    // ces instructions ne seront pas exécutées
 }
 ```

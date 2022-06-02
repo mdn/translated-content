@@ -1,94 +1,44 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat
+browser-compat: javascript.builtins.Intl.NumberFormat
 ---
 {{JSRef}}
 
-L'objet **`Intl.NumberFormat`** est un constructeur permettant de créer des objets pour formater des nombres en fonction de la locale.
+L'objet **`Intl.NumberFormat`** permet de formater des nombres en fonction de la locale.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
 
-## Syntaxe
+## Constructeur
 
-    new Intl.NumberFormat([locales[, options]])
-    Intl.NumberFormat.call(this[, locales[, options]])
+- [`Intl.NumberFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
+  - : Crée un nouvel objet `NumberFormat`.
 
-### Paramètres
+## Méthodes statiques
 
-- `locales`
+- [`Intl.NumberFormat.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf)
+  - : Renvoie un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
-  - : Paramètre optionnel. Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}. Les clefs d'extensions Unicode suivantes sont autorisées :
+## Méthodes des instances
 
-    - nu
-      - : Le système numérique à utiliser. Parmi les valeurs possibles, on a : `"arab", "arabext", "bali", "beng", "deva", "fullwide", "gujr", "guru", "hanidec", "khmr", "knda", "laoo", "latn", "limb", "mlym", "mong", "mymr", "orya", "tamldec", "telu", "thai", "tibt".`
-
-- `options`
-
-  - : Paramètre optionnel. Un objet avec certaines ou toutes les propriétés suivantes :
-
-    - `localeMatcher`
-      - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Intl","Intl","##Choix_de_la_locale")}}.
-    - `style`
-      - : Le style de formatage. Les valeurs possibles sont `"decimal"` pour l'affichage de nombres simple, `"currency"` pour un affichage en fonction de la devise et `"percent"` pour afficher des pourcentages. La valeur par défaut est `"decimal"`.
-    - `currency`
-      - : La devise à utiliser pour le formatage. Les valeurs possibles sont les codes ISO 4217 pour les devises, tels que `"USD"` pour le dollar américain, `"EUR"` pour l'euro, ou `"CNY"` pour le yuan chinois. Voir la page listant [les codes actuels pour les devises et les fonds](http://www.currency-iso.org/en/home/tables/table-a1.html) (en anglais). Il n'y a pas de valeur par défaut. Si le style choisi avec l'option `style` est "currency", la propriété `currency` doit être définie.
-    - `currencyDisplay`
-      - : La façon d'afficher la devise dans le format courant. Les valeurs possibles sont `"symbol"` qui permet d'utiliser un symbole localisé comme '€', `"code"` qui affichera le code ISO de la devise (voir ci-avant), `"name"`  affichera un nom localisé pour la devise comme `"dollar"`. La valeur par défaut est `"symbol"`.
-    - `useGrouping`
-      - : Cette option indique si on doit utiliser des séparateurs de groupes (comme les séparateurs de milliers ou autres comme lakhs et crores). Les valeurs possibles sont `true` et `false`. La valeur par défaut `true`.
-
-    Les propriétés suivantes peuvent être classées en deux groupes. Dans le premier on aura `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` et dans le second on aura `minimumSignificantDigits` et `maximumSignificantDigits`. S'il existe une option définie pour le second groupe, les options du premier groupe seront ignorées.
-
-    - `minimumIntegerDigits`
-      - : Le nombre minimal de chiffres à utiliser pour la partie entière. Les valeurs possibles sont comprises entre 1 to 21. La valeur par défaut est 1.
-    - `minimumFractionDigits`
-      - : Le nombre minimal de chiffres à utiliser pour la partie fractionnaire. Les valeurs possibles sont comprises entre 0 et 20. Pour les formats `"decimal"` et `"percent"`, la valeur par défaut est 0. La valeur par défaut pour le formatage monétaire (`"currency"`) correspond au nombre de chiffres défini par [la liste de codes de devises ISO 4217](https://www.currency-iso.org/en/home/tables/table-a1.html), si cette valeur n'est pas définie dans cette liste, on aura 2 chiffres.
-    - `maximumFractionDigits`
-      - : Le nombre maximal de chiffres à utiliser pour représenter la partie fractionnaire. Les valeurs possibles sont comprises entre 0 et 20. Pour le format `"decimal"`, la valeur par défaut est le maximum entre 3 et `minimumFractionDigits`. Pour le format monétaire (`"currency"`), la valeur par défaut est le maximum entre  `minimumFractionDigits` et le nombre de chiffres prévus par la liste [ISO 4217 des codes de devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (ou 2 si cette information n'est pas disponible dans cette liste). Pour le format en pourcent, la valeur par défaut est le maximum entre `minimumFractionDigits` et 0.
-    - `minimumSignificantDigits`
-      - : Le nombre minimal de chiffres significatifs à utiliser. Les valeurs possibles sont comprises entre 1 et 21. La valeur par défaut est 1.
-    - `maximumSignificantDigits`
-      - : Le nombre maximal de chiffres significatifs à utiliser. Les valeurs possibles sont comprises entre 1 et 21. La valeur par défaut est `minimumSignificantDigits`.
-
-## Description
-
-### Propriétés
-
-- {{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}
-  - : Permet d'ajouter des propriétés à toutes les instances.
-
-### Méthodes
-
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : Renvoie un tableau des locales supportées parmi les locales données afin d'éviter d'utiliser la locale par défaut de l'environnement.
-
-## Instances de `NumberFormat`
-
-### Propriétés
-
-Les instances de `NumberFormat` héritent des propriétés suivantes grâce à leur prototype :
-
-{{page('fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype','Properties')}}
-
-### Méthods
-
-Les instances de `NumberFormat` héritent des méthodes suivantes grâce à leur prototype :
-
-{{page('fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype','Methods')}}
+- [`Intl.NumberFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format)
+  - : Un accesseur qui formate un nombre en fonction des options de locale et de formatage fournies par l'objet `Intl.NumberFormat` courant.
+- [`Intl.NumberFormat.prototype.formatToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts)
+  - : Renvoie un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'objets représentant les fragments de la chaîne de caractères représentant le nombre et qui peuvent être utilisés pour un formatage spécifique en fonction de la locale.
+- [`Intl.NumberFormat.prototype.formatRange()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)
+  - : Un accesseur qui formate un intervalle de nombres en fonction des options de locale et de formatage fournies par l'objet `Intl.NumberFormat` courant.
+- [`Intl.NumberFormat.prototype.formatRangeToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts)
+  - : Renvoie un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'objets représentant les fragments de la chaîne de caractères représentant l'intervalle numérique et qui peuvent être utilisés pour un formatage spécifique en fonction de la locale.
+- [`Intl.NumberFormat.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions)
+  - : Renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet.
 
 ## Exemples
 
-### Usage simple
+### Utilisation simple
 
-Sans aucune spécification, le résultat sera une chaîne de caractères avec la locale et les options par défaut :
+Sans indiquer de locale ou d'options, le résultat sera une chaîne de caractères avec la locale et les options par défaut&nbsp;:
 
 ```js
 var nombre = 3500;
@@ -99,7 +49,7 @@ console.log(new Intl.NumberFormat().format(nombre));
 
 ### Utiliser `locales`
 
-Cet exemple illustre les variations possibles des formats numériques localisés. Si vous souhaitez que votre application utilise le format de la locale de l'utilisateur, assurez vous de l'indiquer via l'argument `locales` (voire avec d'autres locales de secours) :
+Cet exemple illustre les variations possibles des formats numériques localisés. Si vous souhaitez que votre application utilise le format de la locale de l'utilisateur, assurez vous de l'indiquer via l'argument `locales` (voire avec d'autres locales de secours)&nbsp;:
 
 ```js
 var nombre = 123456.789;
@@ -132,7 +82,7 @@ console.log(new Intl.NumberFormat(["ban", "id"]).format(nombre));
 
 ### Utiliser `options`
 
-Les résultats fournis par `toLocaleString` peuvent être paramétrés grâce à l'argument `options` :
+Les résultats fournis peuvent être paramétrés grâce à l'argument `options`&nbsp;:
 
 ```js
 var nombre = 123456.789;
@@ -150,18 +100,32 @@ console.log(new Intl.NumberFormat("en-IN", {maximumSignificantDigits: 3}).format
 // → 1,23,000
 ```
 
+### Utiliser les options `style` et `unit`
+
+```js
+console.log(new Intl.NumberFormat('pt-PT',  {
+    style: 'unit',
+    unit: 'kilometer-per-hour'
+}).format(50));
+// → 50 km/h
+
+console.log((16).toLocaleString('en-GB', {
+    style: 'unit',
+    unit: 'liter',
+    unitDisplay: 'long'
+}));
+// → 16 litres
+```
+
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat")}}
+{{Compat}}
 
 ## Voir aussi
 
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl','Voir_aussi')}}
+- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [Une prothèse d'émulation pour `Intl.ListFormat` avec la bibliothèque FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)

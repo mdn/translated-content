@@ -1,5 +1,5 @@
 ---
-title: Flexbox的向下支持
+title: Flexbox 的向下支持
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 tags:
   - '@supports'
@@ -15,15 +15,15 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">虽然弹性盒子被各种现代浏览器很好的支持, 但是你或许还会遇到一些问题。在这个文档中，我们将会了解到浏览器支持弹性盒子的情况和一些潜在的问题, 以及处理它们的资源和方法。</p>
+<p>虽然弹性盒子被各种现代浏览器很好的支持，但是你或许还会遇到一些问题。在这个文档中，我们将会了解到浏览器支持弹性盒子的情况和一些潜在的问题，以及处理它们的资源和方法。</p>
 
 <h2 id="弹性盒子的历史">弹性盒子的历史</h2>
 
-<p>与所有CSS标准一样，弹性盒子标准经历了一系列的改动，直到它成为我们现有的候选推荐版本。作为候选推荐，我们不该着重于当下对于该规范的大量变动，尽管历来弹性盒子的迭代情况有所不同。</p>
+<p>与所有 CSS 标准一样，弹性盒子标准经历了一系列的改动，直到它成为我们现有的候选推荐版本。作为候选推荐，我们不该着重于当下对于该规范的大量变动，尽管历来弹性盒子的迭代情况有所不同。</p>
 
 <p>弹性盒子曾在许多浏览器中作为实验功能的方式被实现。当时进行实验性的实现的方式是使用浏览器前缀。这种关于前缀的构思是为了让规范的实现能被测试，并被浏览器工程师和网页开发者等在不和其他实现冲突的情况下浏览。也就是说不再生产代码中使用实验性的实现。然后，前缀最终被用在了生产代码中，结果对实验性规范的不管修改导致了人们需要不断对网站进行对应的修改。</p>
 
-<p>在2009年时，规则看起来很不一样。当时，要创建一个弹性容器你会用<code>display: box</code> ，会有一大堆 <code>box-*</code> 属性，和现在的弹性盒子显然完全不同。</p>
+<p>在 2009 年时，规则看起来很不一样。当时，要创建一个弹性容器你会用<code>display: box</code> ，会有一大堆 <code>box-*</code> 属性，和现在的弹性盒子显然完全不同。</p>
 
 <p>曾有一个<a href="https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">规范的更新</a>将语法换成了 <code>display: flexbox</code> ——这仍旧是浏览器前缀。</p>
 
@@ -33,20 +33,20 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 
 <h2 id="浏览器支持情况">浏览器支持情况</h2>
 
-<p>现代浏览器能够很好的支持flexbox，并且大多数浏览器不需要前缀。2015年，Safari9是最后一个移除前缀的主流浏览器。2个需要注意浏览器兼容的浏览器是：</p>
+<p>现代浏览器能够很好的支持 flexbox，并且大多数浏览器不需要前缀。2015 年，Safari9 是最后一个移除前缀的主流浏览器。2 个需要注意浏览器兼容的浏览器是：</p>
 
 <ul>
- <li>Internet Explorer 10： 使用 <code>-ms-</code> 前缀；</li>
- <li>UC浏览器： 使用 <code>-webkit-</code> 前缀。</li>
+ <li>Internet Explorer 10：使用 <code>-ms-</code> 前缀；</li>
+ <li>UC 浏览器：使用 <code>-webkit-</code> 前缀。</li>
 </ul>
 
-<p>现在，IE11 已经支持display: flex，但是在使用的时候会有一些bug。</p>
+<p>现在，IE11 已经支持 display: flex，但是在使用的时候会有一些 bug。</p>
 
 <h2 id="常见问题">常见问题</h2>
 
-<p>由于经过了发展,flexbox的大多数问题与规范的变更有关，而且事实上我们很多人都试图在生产中环境中使用实验性的规范。 如果您要确保与旧版本的浏览器（尤其是IE10和11）向后兼容，则 <a href="https://github.com/philipwalton/flexbugs">Flexbugs</a> 网站是一个有用的资源。 您将看到许多列出的bug都适用于旧的浏览器版本，并且在当前的浏览器中已修复。 每个错误都有列出的解决方法-可以节省许多时间。</p>
+<p>由于经过了发展，flexbox 的大多数问题与规范的变更有关，而且事实上我们很多人都试图在生产中环境中使用实验性的规范。如果您要确保与旧版本的浏览器（尤其是 IE10 和 11）向后兼容，则 <a href="https://github.com/philipwalton/flexbugs">Flexbugs</a> 网站是一个有用的资源。您将看到许多列出的 bug 都适用于旧的浏览器版本，并且在当前的浏览器中已修复。每个错误都有列出的解决方法 - 可以节省许多时间。</p>
 
-<p>如果你想要支持非常旧的浏览器使用flexbox属性，在CSS中加入：</p>
+<p>如果你想要支持非常旧的浏览器使用 flexbox 属性，在 CSS 中加入：</p>
 
 <pre>.wrapper {
   display: -webkit-box;
@@ -55,7 +55,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
   display: flex;
 }</pre>
 
-<p><a href="https://autoprefixer.github.io/">Autoprefixer Online</a>是查看推荐使用前缀浏览器的有效方式，具体取决于您希望通过浏览器支持返回多少版本。 您还可以从 <a href="https://caniuse.com/#feat=flexbox">Can I Use</a> 中以获取浏览器支持的信息,以便在已经支持的浏览器中删除前缀</p>
+<p><a href="https://autoprefixer.github.io/">Autoprefixer Online</a>是查看推荐使用前缀浏览器的有效方式，具体取决于您希望通过浏览器支持返回多少版本。您还可以从 <a href="https://caniuse.com/#feat=flexbox">Can I Use</a> 中以获取浏览器支持的信息，以便在已经支持的浏览器中删除前缀</p>
 
 <h2 id="有用的向下支持技术">有用的向下支持技术</h2>
 
@@ -79,7 +79,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 
 <p>移除 <code>display: flex</code> 属性来查看该向下支持行为，你将会看见这两个元素之间多出的空白符，这是因为使用 <code>display: inine-block</code> 时会把空白符当成其他行内元素对待。</p>
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">{{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}</span></p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}</p>
 
 <h3 id="display_table-">display: table-<em> </em></h3>
 

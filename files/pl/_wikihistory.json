@@ -2900,6 +2900,24 @@
       "Jan Dudek"
     ]
   },
+  "Web/API/MouseEvent/layerX": {
+    "modified": "2019-03-23T23:41:12.332Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
+  "Web/API/MouseEvent/layerY": {
+    "modified": "2019-03-23T23:41:12.787Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
   "Web/API/MouseEvent/metaKey": {
     "modified": "2019-03-23T23:54:16.778Z",
     "contributors": [
@@ -3526,24 +3544,6 @@
     "contributors": [
       "teoli",
       "AshfaqHossain",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
-  "Web/API/UIEvent/layerX": {
-    "modified": "2019-03-23T23:41:12.332Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
-  "Web/API/UIEvent/layerY": {
-    "modified": "2019-03-23T23:41:12.787Z",
-    "contributors": [
-      "teoli",
-      "jsx",
       "Jan Dudek",
       "Ptak82"
     ]

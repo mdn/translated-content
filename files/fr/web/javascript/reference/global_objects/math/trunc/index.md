@@ -21,7 +21,9 @@ La fonction **`Math.trunc()`** retourne la troncature entière d'un nombre en re
 
 ## Syntaxe
 
-    Math.trunc(x)
+```js
+Math.trunc(x)
+```
 
 ### Paramètres
 

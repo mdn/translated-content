@@ -220,7 +220,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: エクスポートされる項目の名前を変更するために使われる as の文法については、以下の {{anch("Renaming imports and exports")}} セクションで説明します。</p>
+<p><strong>注意</strong>: エクスポートされる項目の名前を変更するために使われる as の文法については、以下の <a href="#renaming_imports_and_exports">Renaming imports and exports</a> セクションで説明します。</p>
 </div>
 
 <h2 id="Avoiding_naming_conflicts" name="Avoiding_naming_conflicts">名前の衝突を避ける</h2>
@@ -407,7 +407,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>ブラウザーで利用できる JavaScript モジュールの最新機能は、動的なモジュールの読み込みです。これにより、全てを最初に読み込んでしまうのではなく、必要が生じたときにのみ動的にモジュールを読み込むことができます。これには明らかなパフォーマンス上の利点があります。どのように動作するのか、読んで見てましょう。</p>
 
-<p>この新しい機能により、<code>import()</code> を関数として実行し、そのときのパラメーターとしてモジュールへのパスを指定することができます。これは次のように <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> を返し、エクスポートにアクセスできるモジュールオブジェクト ({{anch("Creating a module object")}} を参照) を使って fulfilled 状態になります。</p>
+<p>この新しい機能により、<code>import()</code> を関数として実行し、そのときのパラメーターとしてモジュールへのパスを指定することができます。これは次のように <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> を返し、エクスポートにアクセスできるモジュールオブジェクト (<a href="#creating_a_module_object">Creating a module object</a> を参照) を使って fulfilled 状態になります。</p>
 
 <pre class="brush: js; notranslate">import('./modules/myModule.js')
   .then((module) =&gt; {

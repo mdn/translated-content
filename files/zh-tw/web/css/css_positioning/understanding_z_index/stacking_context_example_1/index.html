@@ -3,136 +3,136 @@ title: Stacking context example 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
-<p><font><font>« </font></font><a href="/en/CSS" title="CSS"><font><font>CSS</font></font></a><font><font> « </font></font><a href="/en/CSS/Understanding_z-index" title="了解CSS的z-index"><font><font>理解CSS的z-index</font></font></a></p>
+<p>« <a href="/en/CSS" title="CSS">CSS</a> « <a href="/en/CSS/Understanding_z-index" title="了解CSS的z-index">理解CSS的z-index</a></p>
 
-<h3 id="堆疊環境範例1"><font><font>堆疊環境範例1</font></font></h3>
+<h3 id="堆疊環境範例1">堆疊環境範例1</h3>
 
-<p><font><font>讓我們先從一個基本的例子。</font><font>根堆疊情況下，我們有兩個div（DIV＃1和＃DIV 3），兩種相對定位的，但是如果沒有的z-index屬性。</font><font>裡面DIV＃1有一個絕對定位的div＃2，而在DIV＃3有一個絕對定位的div＃4，雙方沒有的z-index屬性。</font></font></p>
+<p>讓我們先從一個基本的例子。根堆疊情況下，我們有兩個div（DIV＃1和＃DIV 3），兩種相對定位的，但是如果沒有的z-index屬性。裡面DIV＃1有一個絕對定位的div＃2，而在DIV＃3有一個絕對定位的div＃4，雙方沒有的z-index屬性。</p>
 
-<p><font><font>唯一的堆疊上下文是根上下文。</font><font>如果沒有Z-指標，要素依次層疊的發生。</font></font></p>
+<p>唯一的堆疊上下文是根上下文。如果沒有Z-指標，要素依次層疊的發生。</p>
 
 <p><img alt="堆疊環境範例1" class="internal" src="/@api/deki/files/914/=Understanding_zindex_05a.png"></p>
 
-<p><font><font>如果DIV＃2被分配一個正的（非零和非自動）z索引值，它是上述所有其他的DIV呈現。</font></font></p>
+<p>如果DIV＃2被分配一個正的（非零和非自動）z索引值，它是上述所有其他的DIV呈現。</p>
 
 <p><img alt="堆疊環境範例1" class="internal" src="/@api/deki/files/915/=Understanding_zindex_05b.png"></p>
 
-<p><font><font>然後，如果DIV＃4也被分配比DIV＃2的Z指數正z指數越大，它上面的所有其他的DIV DIV，包括2＃呈現。</font></font></p>
+<p>然後，如果DIV＃4也被分配比DIV＃2的Z指數正z指數越大，它上面的所有其他的DIV DIV，包括2＃呈現。</p>
 
 <p><img alt="堆疊環境範例1" class="internal" src="/@api/deki/files/916/=Understanding_zindex_05c.png"></p>
 
-<p><font><font>在最後的例子，你可以看到，DIV＃2和＃DIV 4不兄弟姐妹，因為它們屬於不同的家長在HTML元素的層次結構。</font><font>即便如此，DIV＃4堆疊相的DIV＃2可以通過z索引來控制。</font><font>碰巧的是，由於DIV＃1和＃DIV 3不指定任何的z-index值，他們不創造一個堆疊環境。</font><font>這意味著，所有的內容，包括DIV＃2和DIV＃4屬於相同根堆疊環境。</font></font></p>
+<p>在最後的例子，你可以看到，DIV＃2和＃DIV 4不兄弟姐妹，因為它們屬於不同的家長在HTML元素的層次結構。即便如此，DIV＃4堆疊相的DIV＃2可以通過z索引來控制。碰巧的是，由於DIV＃1和＃DIV 3不指定任何的z-index值，他們不創造一個堆疊環境。這意味著，所有的內容，包括DIV＃2和DIV＃4屬於相同根堆疊環境。</p>
 
-<p><font><font>在堆疊上下文而言，DIV＃1和DIV＃3簡單地同化到根元素，將得到的層次結構如下：</font></font></p>
+<p>在堆疊上下文而言，DIV＃1和DIV＃3簡單地同化到根元素，將得到的層次結構如下：</p>
 
 <ul>
- <li><font><font>根堆疊環境</font></font>
+ <li>根堆疊環境
 
   <ul>
-   <li><font><font>DIV＃2（Z-指數1）</font></font></li>
-   <li><font><font>DIV＃4（Z-指數2）</font></font></li>
+   <li>DIV＃2（Z-指數1）</li>
+   <li>DIV＃4（Z-指數2）</li>
   </ul>
  </li>
 </ul>
 
-<div class="note"><strong><font><font>注：</font></font></strong><font><font> DIV＃1和＃DIV 3不適透亮。</font><font>重要的是要記住，分配的不透明度小於1到定位的元素隱式創建一個疊加的背景下，就像一個加入的z-index值是非常重要的。</font><font>這個例子顯示，當父元素不會創建一個堆疊環境會發生什麼。</font></font></div>
+<div class="note"><strong>注：</strong> DIV＃1和＃DIV 3不適透亮。重要的是要記住，分配的不透明度小於1到定位的元素隱式創建一個疊加的背景下，就像一個加入的z-index值是非常重要的。這個例子顯示，當父元素不會創建一個堆疊環境會發生什麼。</div>
 
-<h3 id="示例源代碼"><strong><font><font>示例源代碼</font></font></strong></h3>
+<h3 id="示例源代碼"><strong>示例源代碼</strong></h3>
 
-<pre class="brush: html"><font><font>&lt;！DOCTYPE HTML PUBLIC“ -  // W3C // DTD XHTML 1.0過渡// EN”</font></font><font><font>
-“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”&gt;</font></font><font><font>
-&lt;HTML&gt;</font></font><font><font>
-&lt;HEAD&gt; &lt;風格類型=“文本/ CSS”&gt;</font></font>
-<font><font>
-DIV {字體：12px的宋體; </font><font>}</font></font>
-<font><font>
-span.bold {字體重量：大膽的; </font><font>}</font></font>
-<font><font>
-＃DIV1，＃{DIV3</font></font><font><font>
-   高度：80px;</font></font><font><font>
-   位置：親屬;</font></font><font><font>
-   邊界：1px的虛線＃669966;</font></font><font><font>
-   背景色：#ccffcc;</font></font><font><font>
-   填充左：5px的;</font></font><font><font>
-}</font></font>
-<font><font>
-＃{DIV2</font></font><font><font>
-   不透明度：0.8;</font></font><font><font>
-   的z-index：1;</font></font><font><font>
-   位置：絕對的;</font></font><font><font>
-   寬度：150像素;</font></font><font><font>
-   高度：200像素;</font></font><font><font>
-   頂：20像素;</font></font><font><font>
-   左：170px;</font></font><font><font>
-   邊界：1px的虛線＃990000;</font></font><font><font>
-   背景色：#ffdddd;</font></font><font><font>
-   文本對齊：中心;</font></font><font><font>
-}</font></font>
-<font><font>
-＃{DIV4</font></font><font><font>
-   不透明度：0.8;</font></font><font><font>
-   的z-index：2;</font></font><font><font>
-   位置：絕對的;</font></font><font><font>
-   寬度：200像素;</font></font><font><font>
-   高度：70px;</font></font><font><font>
-   頂部：65px;</font></font><font><font>
-   左：50像素;</font></font><font><font>
-   邊界：1px的虛線＃000099;</font></font><font><font>
-   背景色：#ddddff;</font></font><font><font>
-   文本對齊：左;</font></font><font><font>
-   填充左：10px的;</font></font><font><font>
-}</font></font>
+<pre class="brush: html">&lt;！DOCTYPE HTML PUBLIC“ -  // W3C // DTD XHTML 1.0過渡// EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt; &lt;風格類型=“文本/ CSS”&gt;
 
-<font><font>
-&lt;/風格&gt; &lt;/ HEAD&gt;</font></font>
-<font><font>
-&lt;BODY&gt;</font></font>
-<font><font>
-&lt;br /&gt;</font></font>
-<font><font>
-&lt;DIV ID =“DIV1”&gt;</font></font><font><font>
-&lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃1 &lt;/ SPAN&gt;</font></font><font><font>
-&lt;br /&gt;位置：親屬;</font></font><font><font>
-   &lt;DIV ID =“DIV2”&gt;</font></font><font><font>
-   &lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃2 &lt;/ SPAN&gt;</font></font><font><font>
-   &lt;br /&gt;位置：絕對的;</font></font><font><font>
-   &lt;br /&gt;的z-index：1;</font></font><font><font>
-   &lt;/ DIV&gt;</font></font><font><font>
-&lt;/ DIV&gt;</font></font>
-<font><font>
-&lt;br /&gt;</font></font>
-<font><font>
-&lt;DIV ID =“DIV3”&gt;</font></font><font><font>
-&lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃3 &lt;/ SPAN&gt;</font></font><font><font>
-&lt;br /&gt;位置：親屬;</font></font><font><font>
-   &lt;DIV ID =“DIV4”&gt;</font></font><font><font>
-   &lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃4 &lt;/ SPAN&gt;</font></font><font><font>
-   &lt;br /&gt;位置：絕對的;</font></font><font><font>
-   &lt;br /&gt;的z-index：2;</font></font><font><font>
-   &lt;/ DIV&gt;</font></font><font><font>
-&lt;/ DIV&gt;</font></font>
-<font><font>
-&lt;/ BODY&gt; &lt;/ HTML&gt;</font></font>
+DIV {字體：12px的宋體; }
+
+span.bold {字體重量：大膽的; }
+
+＃DIV1，＃{DIV3
+   高度：80px;
+   位置：親屬;
+   邊界：1px的虛線＃669966;
+   背景色：#ccffcc;
+   填充左：5px的;
+}
+
+＃{DIV2
+   不透明度：0.8;
+   的z-index：1;
+   位置：絕對的;
+   寬度：150像素;
+   高度：200像素;
+   頂：20像素;
+   左：170px;
+   邊界：1px的虛線＃990000;
+   背景色：#ffdddd;
+   文本對齊：中心;
+}
+
+＃{DIV4
+   不透明度：0.8;
+   的z-index：2;
+   位置：絕對的;
+   寬度：200像素;
+   高度：70px;
+   頂部：65px;
+   左：50像素;
+   邊界：1px的虛線＃000099;
+   背景色：#ddddff;
+   文本對齊：左;
+   填充左：10px的;
+}
+
+
+&lt;/風格&gt; &lt;/ HEAD&gt;
+
+&lt;BODY&gt;
+
+&lt;br /&gt;
+
+&lt;DIV ID =“DIV1”&gt;
+&lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃1 &lt;/ SPAN&gt;
+&lt;br /&gt;位置：親屬;
+   &lt;DIV ID =“DIV2”&gt;
+   &lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃2 &lt;/ SPAN&gt;
+   &lt;br /&gt;位置：絕對的;
+   &lt;br /&gt;的z-index：1;
+   &lt;/ DIV&gt;
+&lt;/ DIV&gt;
+
+&lt;br /&gt;
+
+&lt;DIV ID =“DIV3”&gt;
+&lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃3 &lt;/ SPAN&gt;
+&lt;br /&gt;位置：親屬;
+   &lt;DIV ID =“DIV4”&gt;
+   &lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃4 &lt;/ SPAN&gt;
+   &lt;br /&gt;位置：絕對的;
+   &lt;br /&gt;的z-index：2;
+   &lt;/ DIV&gt;
+&lt;/ DIV&gt;
+
+&lt;/ BODY&gt; &lt;/ HTML&gt;
 </pre>
 
-<h3 id="另請參見"><font><font>另請參見</font></font></h3>
+<h3 id="另請參見">另請參見</h3>
 
 <ul>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="EN / CSS / Understanding_z指數/ Stacking_without_z指數"><font><font>無堆疊的z-index</font></font></a><font><font>  ：默認規則疊加</font></font></li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="EN / CSS / Understanding_z指數/ Stacking_and_float"><font><font>堆疊和浮動</font></font></a><font><font>  ：如何浮動元素的處理方式</font></font></li>
- <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="EN / CSS / Understanding_z指數/ Adding_z指數"><font><font>添加的z-index</font></font></a><font><font>  ：使用的z-index來改變默認的堆疊</font></font></li>
- <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="EN / CSS / Understanding_z指數/ The_stacking_context"><font><font>堆疊背景</font></font></a><font><font>  ：在堆疊環境票據</font></font></li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2" title="EN / CSS / Understanding_z指數/ Stacking_context_example_2"><font><font>堆疊環境例子2</font></font></a><font><font>  ：在所有層面上2級HTML層次，Z指數</font></font></li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="EN / CSS / Understanding_z指數/ Stacking_context_example_3"><font><font>堆疊上下文例3</font></font></a><font><font>  ：3級的HTML等級，在第二級上的z索引</font></font><span id="cke_bm_89E" class="hidden"> </span></li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="EN / CSS / Understanding_z指數/ Stacking_without_z指數">無堆疊的z-index</a>  ：默認規則疊加</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="EN / CSS / Understanding_z指數/ Stacking_and_float">堆疊和浮動</a>  ：如何浮動元素的處理方式</li>
+ <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="EN / CSS / Understanding_z指數/ Adding_z指數">添加的z-index</a>  ：使用的z-index來改變默認的堆疊</li>
+ <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="EN / CSS / Understanding_z指數/ The_stacking_context">堆疊背景</a>  ：在堆疊環境票據</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2" title="EN / CSS / Understanding_z指數/ Stacking_context_example_2">堆疊環境例子2</a>  ：在所有層面上2級HTML層次，Z指數</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="EN / CSS / Understanding_z指數/ Stacking_context_example_3">堆疊上下文例3</a>  ：3級的HTML等級，在第二級上的z索引 </li>
 </ul>
 
 <div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information"><font><font>原始文檔信息</font></font></h3>
+<h3 id="Original_Document_Information" name="Original_Document_Information">原始文檔信息</h3>
 
 <ul>
- <li><font><font>作者（S）：保羅·隆巴迪</font></font></li>
- <li><font><font>這篇文章是我寫的文章在意大利的英譯</font></font><a class="external" href="http://www.yappy.it"><font><font>YappY</font></font></a><font><font>。</font><font>我同意共享下的所有內容正確</font></font><a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/"><font><font>知識共享：署名-相同方式共享許可</font></font></a></li>
- <li><font><font>最後更新日期：2005年7月9日</font></font></li>
+ <li>作者（S）：保羅·隆巴迪</li>
+ <li>這篇文章是我寫的文章在意大利的英譯<a class="external" href="http://www.yappy.it">YappY</a>。我同意共享下的所有內容正確<a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">知識共享：署名-相同方式共享許可</a></li>
+ <li>最後更新日期：2005年7月9日</li>
 </ul>
 </div>
 

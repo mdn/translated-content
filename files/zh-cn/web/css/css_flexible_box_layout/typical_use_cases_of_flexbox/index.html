@@ -1,30 +1,30 @@
 ---
-title: Flexbox典型用例
+title: Flexbox 典型用例
 slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">在这个文档中，我们将看一些常见flexbox的用例—这些都是比其他布局更合理的方法。</p>
+<p>在这个文档中，我们将看一些常见 flexbox 的用例—这些都是比其他布局更合理的方法。</p>
 
-<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>为什么选择flexbox？</strong></span></font></p>
+<p><strong>为什么选择 flexbox？</strong></p>
 
-<p>在浏览器完美支持的环境中，你选择使用flexbox的原因是你希望把一堆元素不是放在这个方向就是那个方向。 因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制他们彼此之间的间距。flexbox就是为此设计的。. 又可以阅读<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">Relationship of Flexbox to other layout methods</a>来了解更多关于flexbox和CSS Grid布局的区别, 在这篇文章里面，我们会讨论flexbox如何运用与CSS整体布局。</p>
+<p>在浏览器完美支持的环境中，你选择使用 flexbox 的原因是你希望把一堆元素不是放在这个方向就是那个方向。 因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制他们彼此之间的间距。flexbox 就是为此设计的。. 又可以阅读<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">Relationship of Flexbox to other layout methods</a>来了解更多关于 flexbox 和 CSS Grid 布局的区别，在这篇文章里面，我们会讨论 flexbox 如何运用与 CSS 整体布局。</p>
 
-<p>在现实中，为了便于对齐，我们通常会选择用Flexbox作为替代品，来完成即使用Grid布局更好的情况。一旦盒子对齐（Box Alignment ）被盒模型所实行，这种情况就会得到改善。在这个教程中，我们会介绍一些会在现在使用flexbox的用例。</p>
+<p>在现实中，为了便于对齐，我们通常会选择用 Flexbox 作为替代品，来完成即使用 Grid 布局更好的情况。一旦盒子对齐（Box Alignment）被盒模型所实行，这种情况就会得到改善。在这个教程中，我们会介绍一些会在现在使用 flexbox 的用例。</p>
 
 <h2 id="导航">导航</h2>
 
 <p>导航的一个常见特征，就是使用水平条的样式去呈现一系列元素。这一模式看起来很简单，但是在 flexbox 出现之前却是很难实现的。 它成为一个最简单的 flexbox 示例，可以被被看成是 flexbox 理想的使用场景。</p>
 
-<p>当我们有一组元素需要水平排列展示，很可能在末尾会多出一些空间。我们需要决定如何去处理这些额外的空间，通常有多种不同的方案。 我们要么在元素外部展示这些空间即使用间距或包裹的方式来分隔开不同元素，要么将空间吸收至元素内部即需要一个方法来允许元素拉伸以占满额外空间。</p>
+<p>当我们有一组元素需要水平排列展示，很可能在末尾会多出一些空间。我们需要决定如何去处理这些额外的空间，通常有多种不同的方案。我们要么在元素外部展示这些空间即使用间距或包裹的方式来分隔开不同元素，要么将空间吸收至元素内部即需要一个方法来允许元素拉伸以占满额外空间。</p>
 
 <h3 id="在元素外部处理空间分布">在元素外部处理空间分布</h3>
 
 <p>为了让多余的空间分布在多个元素之间或周围，我们使用 flexbox 中相应的对齐属性以及 {{cssxref("justify-content")}} 属性。你可以通过 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a flex container</a> 来阅读更多关于这个专门用来处理主轴（main axis）对齐的属性。</p>
 
-<p>在下面的示例中，我们让各元素都展示为其自身的尺寸，通过使用 <code>justify-content: space-between</code> 使元素之间拥有相同的空间。你可以通过 <code>space-around</code> 的值来改变空间分布的方式，在浏览器支持的环境下还可以使用 <code>space-evenly</code>。你也可以使用 <code>flex-start</code> 让空间展示在所有元素末尾。使用 <code>flex-end</code> 让空间展示在所有元素之前,  <code>center</code> 可以剧中所有元素。</p>
+<p>在下面的示例中，我们让各元素都展示为其自身的尺寸，通过使用 <code>justify-content: space-between</code> 使元素之间拥有相同的空间。你可以通过 <code>space-around</code> 的值来改变空间分布的方式，在浏览器支持的环境下还可以使用 <code>space-evenly</code>。你也可以使用 <code>flex-start</code> 让空间展示在所有元素末尾。使用 <code>flex-end</code> 让空间展示在所有元素之前， <code>center</code> 可以剧中所有元素。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation.html", '100%', 550)}}</p>
 
@@ -68,22 +68,22 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 
 <p>媒体对象是网页设计中的常见模式：这种模式下，一侧具有图片或其他元素，另一侧具有文本。理想情况下，媒体对象应该可以翻转：即把图片从左侧移动到右侧。</p>
 
-<p>这种模式随处可见，用于评论、以及其他需要显示图片和描述的地方。使用flexbox可以允许包含图片的媒体对象部分从图片中获取其尺寸调整信息，并对媒体对象的主体进行弹性布局，以占用剩余空间。</p>
+<p>这种模式随处可见，用于评论、以及其他需要显示图片和描述的地方。使用 flexbox 可以允许包含图片的媒体对象部分从图片中获取其尺寸调整信息，并对媒体对象的主体进行弹性布局，以占用剩余空间。</p>
 
-<p>在下面的实例中，您可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到<code>flex-start</code>，然后为<code>.content </code>flex元素设置为<code>flex: 1</code>。与上面的列布局卡片模式一样，启用<code>flex: 1</code>表示此部分卡片可以延伸。</p>
+<p>在下面的实例中，您可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到<code>flex-start</code>，然后为<code>.content </code>flex 元素设置为<code>flex: 1</code>。与上面的列布局卡片模式一样，启用<code>flex: 1</code>表示此部分卡片可以延伸。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}</p>
 
 <p>Some things that you might want to try in this live example relate to the different ways you might want to constrain the media object in your design.</p>
 
-<p>为避免图片过大，可以在为图片添加{{cssxref("max-width")}}。由于媒体对象那一侧使用的是flexbox的初始值，它可以缩小但不会延伸，且其 <code>flex-basis</code> 值是auto。应用于图片的任何{{cssxref("width")}} 或 max-width将会成为flex-basis。</p>
+<p>为避免图片过大，可以在为图片添加{{cssxref("max-width")}}。由于媒体对象那一侧使用的是 flexbox 的初始值，它可以缩小但不会延伸，且其 <code>flex-basis</code> 值是 auto。应用于图片的任何{{cssxref("width")}} 或 max-width 将会成为 flex-basis。</p>
 
 <pre class="brush: css notranslate">.image img {
   max-width: 100px;
 }
 </pre>
 
-<p>你也可以允许双方按比例延伸和缩小。如果将两边都设置为<code>flex: 1</code>，它们从{{cssxref("flex-basis")}}为0增长和缩小，因此最终会得到两个大小相等的列。你可以将内容作为指南，并将其都设置为 <code>flex: auto</code>，这种情况下，它们将从内容的大小或直接应用于弹性元素的任何大小（例如图片的宽度）延伸和缩小。</p>
+<p>你也可以允许双方按比例延伸和缩小。如果将两边都设置为<code>flex: 1</code>，它们从{{cssxref("flex-basis")}}为 0 增长和缩小，因此最终会得到两个大小相等的列。你可以将内容作为指南，并将其都设置为 <code>flex: auto</code>，这种情况下，它们将从内容的大小或直接应用于弹性元素的任何大小（例如图片的宽度）延伸和缩小。</p>
 
 <pre class="brush: css notranslate">.media .content {
   flex: 1;

@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Vary
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Vary</code></strong> 是一个HTTP响应头部信息，它决定了对于未来的一个请求头，应该用一个缓存的回复(response)还是向源服务器请求一个新的回复。它被服务器用来表明在 <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> algorithm（内容协商算法）中选择一个资源代表的时候应该使用哪些头部信息（headers）.</p>
+<p><strong><code>Vary</code></strong> 是一个 HTTP 响应头部信息，它决定了对于未来的一个请求头，应该用一个缓存的回复 (response) 还是向源服务器请求一个新的回复。它被服务器用来表明在 <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> algorithm（内容协商算法）中选择一个资源代表的时候应该使用哪些头部信息（headers）.</p>
 
 <p>在响应状态码为 {{HTTPStatus("304")}} <code>Not Modified</code>  的响应中，也要设置 Vary 首部，而且要与相应的 {{HTTPStatus("200")}} <code>OK</code> 响应设置得一模一样。</p>
 
@@ -34,14 +34,14 @@ Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
  <dt>*</dt>
  <dd>所有的请求都被视为唯一并且非缓存的，使用{{HTTPHeader("Cache-Control")}}<code>: no-store</code>,来实现则更适用，这样用于说明不存储该对象更加清晰。</dd>
  <dt>&lt;header-name&gt;</dt>
- <dd> 逗号分隔的一系列http头部名称，用于确定缓存是否可用。</dd>
+ <dd> 逗号分隔的一系列 http 头部名称，用于确定缓存是否可用。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="动态服务">动态服务</h3>
 
-<p><code><font face="Open Sans, arial, sans-serif">哪种情况下使用 </font>Vary: 对于User-Agent</code> 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。 并可帮助Google和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要<a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a>。</p>
+<p><code>哪种情况下使用 Vary: 对于 User-Agent</code> 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。 并可帮助 Google 和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要<a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a>。</p>
 
 <pre class="notranslate">Vary: User-Agent</pre>
 

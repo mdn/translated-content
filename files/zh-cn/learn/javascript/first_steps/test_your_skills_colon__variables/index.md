@@ -67,7 +67,6 @@ tags:
 
 > **标注：** [下载 任务1 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html)，然后使用你自选的编辑器完成任务。
 
-
 ## 变量 2
 
 本任务中我们希望你将代码中 `myName` 当前保存的值修改为你自己的名字。
@@ -109,7 +108,6 @@ section.appendChild(para);
 {{ EmbedLiveSample('变量 2', '100%', 360, '', '', 'hide-codepen-jsfiddle') }}
 
 > **标注：** [下载 任务2 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html)，然后使用你自选的编辑器完成任务。
-
 
 ## 变量 3
 
@@ -153,6 +151,7 @@ section.appendChild(para2);
   <script class="editable"></script>
   <script src="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/tasks/playable.js"></script>
 ```
+
 {{ EmbedLiveSample('变量 3', '100%', 420, '', '', 'hide-codepen-jsfiddle') }}
 
 > **标注：** [下载 任务3 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html)，然后使用你自选的编辑器完成任务。

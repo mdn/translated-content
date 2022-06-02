@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<p><strong><code>oncontextmenu</code></strong> 是用来设置或获取全局事件({{domxref("GlobalEventHandlers")}})中 上下文菜单事件({{event("contextmenu")}}) 的处理函数({{event("Event_handlers", "event handler")}})。</p>
+<p><strong><code>oncontextmenu</code></strong> 是用来设置或获取全局事件 ({{domxref("GlobalEventHandlers")}}) 中 上下文菜单事件 ({{event("contextmenu")}}) 的处理函数 ({{event("Event_handlers", "event handler")}})。</p>
 
 <p>当在窗口上单击鼠标右键时，通常会触发 <code>contextmenu</code> 事件。 除非阻止默认行为，否则浏览器上下文菜单将被激活。</p>
 
@@ -25,14 +25,14 @@ tags:
 <p><code>functionRef</code> 是一个函数名 或者是一个 <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>。 该函数接收 {{domxref("Event")}} 作为唯一参数。</p>
 
-<p>一次只能将一个 <code>oncontextmenu</code> 处理函数分配给一个对象。 你可能更喜欢使用 {{domxref("EventTarget.addEventListener()")}} 作为替代,
+<p>一次只能将一个 <code>oncontextmenu</code> 处理函数分配给一个对象。 你可能更喜欢使用 {{domxref("EventTarget.addEventListener()")}} 作为替代，
   因为这种方式更加灵活。</p>
 
 <h2 id="Examples">示例</h2>
 
 <h3 id="Disabling_context_menus">禁用上下文菜单</h3>
 
-<p>右键单击通常会显示上下文菜单，但以下片段中将演示如何阻止在浏览器窗口(window)中显示上下文菜单。</p>
+<p>右键单击通常会显示上下文菜单，但以下片段中将演示如何阻止在浏览器窗口 (window) 中显示上下文菜单。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -136,7 +136,7 @@ window.onpointerdown = play;</pre>
 
   <p>{{Compat("api.GlobalEventHandlers.oncontextmenu")}}</p>
 
-  <p>除非阻止默认行为，否则右键单击将激活浏览器上下文菜单。但是, IE8 有一个 bug，如果定义了 <code>contextmenu</code> 处理函数，不会激活上下文菜单。</p>
+  <p>除非阻止默认行为，否则右键单击将激活浏览器上下文菜单。但是，IE8 有一个 bug，如果定义了 <code>contextmenu</code> 处理函数，不会激活上下文菜单。</p>
 </div>
 
 <h2 id="See_also">另请参见</h2>

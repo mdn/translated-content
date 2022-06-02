@@ -12,14 +12,16 @@ L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins
 
 ### Syntaxe
 
-    <xsl:template
-    	match=MOTIF
-    	name=NOM
-    	mode=NOM
-    	priority=NOMBRE>
-    	<xsl:param> [optionnel]
-    	MODÈLE
-    </xsl:template>
+```xml
+<xsl:template
+  match=MOTIF
+  name=NOM
+  mode=NOM
+  priority=NOMBRE>
+  <xsl:param> [optionnel]
+  MODÈLE
+</xsl:template>
+```
 
 ### Attributs obligatoires
 

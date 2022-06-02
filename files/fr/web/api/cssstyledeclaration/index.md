@@ -39,7 +39,7 @@ translation_of: Web/API/CSSStyleDeclaration
   - : Supprime une propriété du bloc de déclaration CSS.
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Modifie une propriété CSS existante ou crée une nouvelle propriété CSS dans le bloc de déclaration.
-- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
   - : Uniquement supporté via getComputedStyle dans Firefox. Retourne la valeur de la propriété en tant que {{domxref("CSSPrimitiveValue")}} ou `null` pour les [propriétés raccourcies](/fr/docs/Web/CSS/Propriétés_raccourcies).
 
 ## Exemple

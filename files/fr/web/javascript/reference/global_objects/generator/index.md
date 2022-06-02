@@ -15,13 +15,15 @@ L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","
 
 ## Syntaxe
 
-    function* gen() {
-      yield 1;
-      yield 2;
-      yield 3;
-    }
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
 
-    var g = gen(); // "Generator { }"
+var g = gen(); // "Generator { }"
+```
 
 ## Méthodes
 

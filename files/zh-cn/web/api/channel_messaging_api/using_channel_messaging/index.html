@@ -13,7 +13,7 @@ original_slug: Web/API/Channel_Messaging_API/使用_channel_messaging
 ---
 <p>{{DefaultAPISidebar("Channel Messaging API")}}</p>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> 可以让运行在不同浏览器上下文中的独立脚本，连接到同一份文档（比如：两个 IFrame, 或者主文档和一个 IFrame, 或者使用同一个 {{domxref("SharedWorker")}} 的两份文档），并直接通信，通过每端一个 port 的双向频道（或管道）在两者之间传递消息。</span></p>
+<p><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> 可以让运行在不同浏览器上下文中的独立脚本，连接到同一份文档（比如：两个 IFrame, 或者主文档和一个 IFrame, 或者使用同一个 {{domxref("SharedWorker")}} 的两份文档），并直接通信，通过每端一个 port 的双向频道（或管道）在两者之间传递消息。</p>
 
 <p>在文本中，我们将探索这项技术的基本用法。</p>
 
@@ -116,7 +116,7 @@ function onMessage(e) {
 }
 </pre>
 
-<p>当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 <code>initPort</code> 函数。它会保存传来的 port, 并且注册了一个 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">onmessage</span></font> 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。</p>
+<p>当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 <code>initPort</code> 函数。它会保存传来的 port, 并且注册了一个 onmessage 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。</p>
 
 <p>当收到从主页面发来的消息时，我们创建一个列表项，并把它插入到这个无序列表中，然后把这个列表项的 {{domxref("Node.textContent","textContent")}} 设置为事件的 <code>data</code> 属性（里面包含真正的消息）。</p>
 
@@ -136,38 +136,17 @@ function onMessage(e) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#channel-messaging', 'Channel messaging')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.MessageChannel")}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
 <h3 id="MessageChannel"><code>MessageChannel</code></h3>
-
-<div>
-
 
 <p>{{Compat("api.MessageChannel", 0)}}</p>
 
 <h3 id="MessagePort"><code>MessagePort</code></h3>
 
-<div>
 <p>{{Compat("api.MessagePort", 0)}}</p>
-</div>
-</div>
-</div>
 
 <h2 id="参见">参见</h2>
 

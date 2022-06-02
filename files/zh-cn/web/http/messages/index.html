@@ -1,5 +1,5 @@
 ---
-title: HTTP消息
+title: HTTP 消息
 slug: Web/HTTP/Messages
 tags:
   - 指南 HTTP
@@ -7,39 +7,39 @@ translation_of: Web/HTTP/Messages
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTTP消息是服务器和客户端之间交换数据的方式。有两种类型的消息︰ 请求（requests）--由客户端发送用来触发一个服务器上的动作；响应（responses）--来自服务器的应答。</p>
+<p>HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息︰ 请求（requests）-- 由客户端发送用来触发一个服务器上的动作；响应（responses）-- 来自服务器的应答。</p>
 
-<p>HTTP消息由采用ASCII编码的多行文本构成。在HTTP/1.1及早期版本中，这些消息通过连接公开地发送。在HTTP/2中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个HTTP帧中。</p>
+<p>HTTP 消息由采用 ASCII 编码的多行文本构成。在 HTTP/1.1 及早期版本中，这些消息通过连接公开地发送。在 HTTP/2 中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个 HTTP 帧中。</p>
 
-<p>Web 开发人员或网站管理员，很少自己手工创建这些原始的HTTP消息︰ 由软件、浏览器、 代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API （用于浏览器）或其他接口提供HTTP消息。</p>
+<p>Web 开发人员或网站管理员，很少自己手工创建这些原始的 HTTP 消息︰ 由软件、浏览器、 代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API（用于浏览器）或其他接口提供 HTTP 消息。</p>
 
 <p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" style="height: 538px; width: 1174px;"></p>
 
-<p>HTTP/2二进制框架机制被设计为不需要改动任何API或配置文件即可应用︰ 它大体上对用户是透明的。</p>
+<p>HTTP/2 二进制框架机制被设计为不需要改动任何 API 或配置文件即可应用︰ 它大体上对用户是透明的。</p>
 
 <div class="textArea" id="destText" style="direction: ltr;">
-<div><span id="ouHighlight__0_3TO0_3">HTTP</span><span id="noHighlight_0.5187132851681917"> </span><span id="ouHighlight__5_12TO5_6">请求</span><span id="ouHighlight__15_17TO7_7">和</span><span id="ouHighlight__19_27TO8_9">响应</span><span id="ouHighlight__28_28TO10_10">具有</span><span id="ouHighlight__36_42TO13_14">相似</span><span id="noHighlight_0.6112710687035254">的</span><span id="ouHighlight__44_52TO16_17">结构，</span><span id="ouHighlight__54_56TO18_18">由以下部分</span><span id="ouHighlight__62_69TO19_20">组成</span><span id="ouHighlight__73_73TO21_21">︰</span></div>
+<div>HTTP 请求和响应具有相似的结构，由以下部分组成︰</div>
 </div>
 
 <ol>
- <li>一行<span class="highlighted" id="ouHighlight__4_13TO0_2">起</span>始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个<span class="highlighted" id="ouHighlight__4_13TO0_2">起</span>始行总是单行的。</li>
- <li>一个可选的HTTP头集合指明请求或描述消息正文。</li>
+ <li>一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。</li>
+ <li>一个可选的 HTTP 头集合指明请求或描述消息正文。</li>
  <li>一个空行指示所有关于请求的元数据已经发送完毕。</li>
- <li>一个可选的包含请求相关数据的正文 (比如HTML表单内容), 或者响应相关的文档。 正文的大小有<span class="highlighted" id="ouHighlight__4_13TO0_2">起</span>始行的HTTP头来指定。</li>
+ <li>一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。 正文的大小有起始行的 HTTP 头来指定。</li>
 </ol>
 
-<p><span class="highlighted" id="ouHighlight__4_13TO0_2">起始行</span><span id="ouHighlight__15_17TO3_3">和</span><span id="noHighlight_0.24094207099483878"> </span><span id="noHighlight_0.20506469395890603"> </span><span id="ouHighlight__39_42TO14_17">HTTP</span><span id="noHighlight_0.7326949190272041"> </span><span id="ouHighlight__44_50TO19_20">消息中的</span><span id="ouHighlight__19_22TO5_8">HTTP</span><span id="noHighlight_0.8511727000124978"> </span><span id="ouHighlight__24_30TO10_11">头</span><span id="ouHighlight__52_73TO21_22">统称</span><span id="ouHighlight__75_76TO23_23">为</span><span id="ouHighlight__94_101TO27_28">请求头</span><span id="ouHighlight__102_102TO29_29">，</span><span id="ouHighlight__104_110TO30_30">而</span><span id="ouHighlight__112_114TO31_31">其</span><span id="ouHighlight__116_122TO32_35">有效负载</span><span id="ouHighlight__124_125TO36_36">被</span><span id="ouHighlight__127_134TO37_38">称为</span><span id="ouHighlight__140_143TO39_40">消息正文</span><span id="noHighlight_0.0840453271452073">。</span></p>
+<p>起始行和  HTTP 消息中的 HTTP 头统称为请求头，而其有效负载被称为消息正文。</p>
 
 <p><img alt="Requests and responses share a common structure in HTTP" src="https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png" style="height: 368px; width: 1239px;"></p>
 
 <h2 id="HTTP_请求">HTTP 请求</h2>
 
-<h3 id="起始行"><span class="highlighted" id="ouHighlight__4_13TO0_2">起始行</span></h3>
+<h3 id="起始行">起始行</h3>
 
-<p>HTTP请求是由客户端发出的消息，用来使服务器执行动作。<em>起始行 (start-line) </em>包含三个元素：</p>
+<p>HTTP 请求是由客户端发出的消息，用来使服务器执行动作。<em>起始行 (start-line) </em>包含三个元素：</p>
 
 <ol>
- <li>一个 <em><a href="/en-US/docs/Web/HTTP/Methods">HTTP 方法</a></em>，一个动词 (像 {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}) 或者一个名词 (像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}), 描述要执行的动作. 例如, <code>GET</code> 表示要获取资源，<code>POST</code> 表示向服务器推送数据 (创建或修改资源, 或者产生要返回的临时文件)。</li>
+ <li>一个 <em><a href="/en-US/docs/Web/HTTP/Methods">HTTP 方法</a></em>，一个动词 (像 {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}) 或者一个名词 (像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}), 描述要执行的动作。例如，<code>GET</code> 表示要获取资源，<code>POST</code> 表示向服务器推送数据 (创建或修改资源，或者产生要返回的临时文件)。</li>
  <li><em>请求目标 (request target)，</em>通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
   <ul>
    <li>一个绝对路径，末尾跟上一个 ' ? ' 和查询字符串。这是最常见的形式，称为 <em>原始形式 (origin form)</em>，被 GET，POST，HEAD 和 OPTIONS 方法所使用。<br>
@@ -47,11 +47,11 @@ translation_of: Web/HTTP/Messages
     GET /background.png HTTP/1.0<br>
     HEAD /test.html?query=alibaba HTTP/1.1<br>
     OPTIONS /anypage.html HTTP/1.0</code></li>
-   <li>一个完整的URL，被称为 <em>绝对形式 (absolute form)</em>，主要在使用 <code>GET</code> 方法连接到代理时使用。<br>
+   <li>一个完整的 URL，被称为 <em>绝对形式 (absolute form)</em>，主要在使用 <code>GET</code> 方法连接到代理时使用。<br>
     <code>GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1</code></li>
    <li>由域名和可选端口（以<code>':'</code>为前缀）组成的 URL 的 authority component，称为 <em>authority form</em>。 仅在使用 <code>CONNECT</code> 建立 HTTP 隧道时才使用。<br>
     <code>CONNECT developer.mozilla.org:80 HTTP/1.1</code></li>
-   <li><em>星号形式 (asterisk form)</em>，一个简单的星号(<code>'*'</code>)，配合 <code>OPTIONS</code> 方法使用，代表整个服务器。<br>
+   <li><em>星号形式 (asterisk form)</em>，一个简单的星号 (<code>'*'</code>)，配合 <code>OPTIONS</code> 方法使用，代表整个服务器。<br>
     <code>OPTIONS * HTTP/1.1</code></li>
   </ul>
  </li>
@@ -66,7 +66,7 @@ translation_of: Web/HTTP/Messages
 
 <ul>
  <li><em>General headers，</em>例如 {{HTTPHeader("Via")}}，适用于整个报文。</li>
- <li><em>Request headers，</em>例如<em> </em>{{HTTPHeader("User-Agent")}}，{{HTTPHeader("Accept-Type")}}，通过进一步的定义(例如 {{HTTPHeader("Accept-Language")}})，或者给定上下文(例如 {{HTTPHeader("Referer")}})，或者进行有条件的限制 (例如 {{HTTPHeader("If-None")}}) 来修改请求。</li>
+ <li><em>Request headers，</em>例如<em> </em>{{HTTPHeader("User-Agent")}}，{{HTTPHeader("Accept-Type")}}，通过进一步的定义 (例如 {{HTTPHeader("Accept-Language")}})，或者给定上下文 (例如 {{HTTPHeader("Referer")}})，或者进行有条件的限制 (例如 {{HTTPHeader("If-None")}}) 来修改请求。</li>
  <li><em>Entity headers，</em>例如 {{HTTPHeader("Content-Length")}}，适用于请求的 body。显然，如果请求中没有任何 body，则不会发送这样的头文件。</li>
 </ul>
 

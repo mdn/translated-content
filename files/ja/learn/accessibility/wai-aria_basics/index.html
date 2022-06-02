@@ -200,7 +200,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>さらに、このサイトは IE8 のような古いブラウザーを使用しているユーザーにとってもアクセス可能となる可能性が高いので、そのために ARIA ロールを含める価値もあります。 そして、もしあなたのサイトが何らかの理由により <code>&lt;div&gt;</code> のみで構成されているなら、必要な意味論を提供するために確実に ARIA ロールを含めるべきです！</p>
 
-<p>改善された検索フォームは、 HTML5 で利用できる意味論以上に ARIA が可能とすることを見せてくれました。 あなたは以下の記事、特に {{anch("Accessibility of non-semantic controls","意味論的でないコントロールのアクセシビリティ")}} のセクションで、より多くの意味論や ARIA のプロパティ/属性が持つ力を見ることがでしょう。 まずは、 ARIA が動的コンテンツの更新をどのように助けるかを見てみましょう。</p>
+<p>改善された検索フォームは、 HTML5 で利用できる意味論以上に ARIA が可能とすることを見せてくれました。 あなたは以下の記事、特に <a href="#accessibility_of_non-semantic_controls">意味論的でないコントロールのアクセシビリティ</a> のセクションで、より多くの意味論や ARIA のプロパティ/属性が持つ力を見ることがでしょう。 まずは、 ARIA が動的コンテンツの更新をどのように助けるかを見てみましょう。</p>
 
 <h3 id="Dynamic_content_updates" name="Dynamic_content_updates">動的なコンテンツの更新</h3>
 
@@ -312,7 +312,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p><strong>注</strong>: この完成した例を、<a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a> においてライブ版で見られます。</p>
 </div>
 
-<p>また、古典的な {{htmlelement("label")}} 要素以上の、ある種の先進的なフォームのラベルづけ技法も、WAI-ARIA によって可能になります。 晴眼者のユーザーに対してラベルを可視にしたくない箇所にラベルを設けるために <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> プロパティを使うことについては、すでに述べました（上記の {{anch("SignpostsLandmarks", "道しるべ/ランドマーク（Signpost/Landmark）")}} のセクションを参照）。 別のプロパティを使う別のラベルづけ技法も、いくつかあります。 例えば、非 <code>&lt;label&gt;</code> 要素をラベルとして指定したいとき、または、同じラベルで複数のフォーム入力欄にラベルづけをしたいときに <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> を使うとか、別の情報をフォーム入力欄に関連づけてその情報も同様に読み上げさせたいときに <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code> を使うとかいったものです。 より詳しくは、WebAIM の <a href="http://webaim.org/techniques/forms/advanced">高度なフォームのラベル付け</a>（英語）の記事を参照してください。</p>
+<p>また、古典的な {{htmlelement("label")}} 要素以上の、ある種の先進的なフォームのラベルづけ技法も、WAI-ARIA によって可能になります。 晴眼者のユーザーに対してラベルを可視にしたくない箇所にラベルを設けるために <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> プロパティを使うことについては、すでに述べました（上記の <a href="#signpostslandmarks">道しるべ/ランドマーク（Signpost/Landmark）</a> のセクションを参照）。 別のプロパティを使う別のラベルづけ技法も、いくつかあります。 例えば、非 <code>&lt;label&gt;</code> 要素をラベルとして指定したいとき、または、同じラベルで複数のフォーム入力欄にラベルづけをしたいときに <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> を使うとか、別の情報をフォーム入力欄に関連づけてその情報も同様に読み上げさせたいときに <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code> を使うとかいったものです。 より詳しくは、WebAIM の <a href="http://webaim.org/techniques/forms/advanced">高度なフォームのラベル付け</a>（英語）の記事を参照してください。</p>
 
 <p>フォーム要素の状態を示すための有用なプロパティやステートは、ほかにもたくさんあります。 例えば、フォーム・フィールドが無効化されていることを示すには、<span class="subtitle"><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> </span>が使えます。 多くのブラウザーは、無効化されたフォーム・フィールドを単に飛ばすだけでしょうし、無効化されたフォーム・フィールドは、スクリーンリーダーに読み上げられることすらないでしょう。 しかし、無効化されたフォーム・フィールドが認識される場合もあるでしょう。 ですから、無効化されている入力欄が実際に無効化されているのだ、とスクリーンリーダーに知らせるために、この（<span class="subtitle"><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code></span> という）属性を含めておくことは、良い考えです。</p>
 
@@ -340,7 +340,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <h4 id="Describing_non-semantic_buttons_as_buttons" name="Describing_non-semantic_buttons_as_buttons">非意味論的なボタンをボタンとして説明する</h4>
 
-<p>この課程の中で既に二、三回、ボタンやリンクやフォーム要素に本来備わったアクセシビリティ（および、ボタンやリンクやフォーム要素の外見を模倣するために他の要素を使うことの背後に隠れた、アクセシビリティの問題）について述べました（HTML アクセシビリティの記事の <a href="/ja/docs/Learn/Accessibility/HTML#UI_controls">UI コントロール</a> と、上記の {{anch("Enhancing_keyboard_accessibility", "キーボードでのアクセシビリティの拡張")}} を参照）。<br>
+<p>この課程の中で既に二、三回、ボタンやリンクやフォーム要素に本来備わったアクセシビリティ（および、ボタンやリンクやフォーム要素の外見を模倣するために他の要素を使うことの背後に隠れた、アクセシビリティの問題）について述べました（HTML アクセシビリティの記事の <a href="/ja/docs/Learn/Accessibility/HTML#UI_controls">UI コントロール</a> と、上記の <a href="#enhancing_keyboard_accessibility">キーボードでのアクセシビリティの拡張</a> を参照）。<br>
  基本的には、多くの場合、<code>tabindex</code> とほんの少しの JavaScript を使えば、それほど問題を生じずにキーボード・アクセシビリティを追加して呼び戻せます。</p>
 
 <p>しかし、スクリーンリーダーについてはどうでしょうか？  スクリーンリーダーはそれでもまだ、そうした要素をボタンとは見なさないことでしょう。 もし <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> の例をスクリーンリーダーで試してみれば、見せかけのボタンは「Click me!, group（クリックしてください！、グループ）」のような語句を使って報告されるでしょうし、それは明らかに混乱を招くものです。</p>

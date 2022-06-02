@@ -5,29 +5,29 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
 <p>{{DefaultAPISidebar("Web Animations")}}</p>
 
-<p class="summary">web动画API可以让我们用JavaScript写动画并且控制动画。本文将通过有趣的demo和教学，以有趣的方式开启您对这片爱丽丝仙境的探索。</p>
+<p>web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本文将通过有趣的 demo 和教学，以有趣的方式开启您对这片爱丽丝仙境的探索。</p>
 
-<h2 id="认识Web动画API">认识Web动画API</h2>
+<h2 id="认识Web动画API">认识 Web 动画 API</h2>
 
-<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web动画API</a>将浏览器动画引擎向开发者打开，并由JavaScript进行操作。这些API被设计成 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>的接口，未来会对这些API做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。</p>
+<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web 动画 API</a>将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。</p>
 
-<p>通过Web动画API，我们可以将交互式动画从样式表移动到JavaScript，将表现与行为分开。 我们不再需要依赖DOM重的技术，如将CSS属性和范围类写入元素来控制播放方向。 与纯粹的声明式CSS不同，JavaScript还允许我们动态地将属性值设置为持续时间。 对于构建自定义动画库和创建交互式动画，Web动画API可能是完成工作的完美工具。 让我们看看它能做什么！</p>
+<p>通过 Web 动画 API，我们可以将交互式动画从样式表移动到 JavaScript，将表现与行为分开。 我们不再需要依赖 DOM 重的技术，如将 CSS 属性和范围类写入元素来控制播放方向。 与纯粹的声明式 CSS 不同，JavaScript 还允许我们动态地将属性值设置为持续时间。 对于构建自定义动画库和创建交互式动画，Web 动画 API 可能是完成工作的完美工具。 让我们看看它能做什么！</p>
 
 <h2 id="浏览器兼容情况">浏览器兼容情况</h2>
 
-<p>默认情况下，Firefox 48+和Chrome 36+中提供了本文中讨论的基本Web动画API功能。 Webkit和Edge已经将API移动到各自的待办事项列表中，但是直到我们看到所有浏览器都有完整的支持，所以有一个便于维护的polyfill（ <a href="https://github.com/web-animations/web-animations-js">handy maintained polyfill</a>）可以测试功能支持，并在必要时添加它。</p>
+<p>默认情况下，Firefox 48+ 和 Chrome 36+ 中提供了本文中讨论的基本 Web 动画 API 功能。 Webkit 和 Edge 已经将 API 移动到各自的待办事项列表中，但是直到我们看到所有浏览器都有完整的支持，所以有一个便于维护的 polyfill（ <a href="https://github.com/web-animations/web-animations-js">handy maintained polyfill</a>）可以测试功能支持，并在必要时添加它。</p>
 
-<h2 id="用web动画API写css动画">用web动画API写css动画</h2>
+<h2 id="用web动画API写css动画">用 web 动画 API 写 css 动画</h2>
 
-<p>学习Web动画API的更为熟悉的方法之一是从大多数网络开发人员开始使用以前的CSS动画。 CSS动画有一个熟悉的语法，很好地分解为演示目的。</p>
+<p>学习 Web 动画 API 的更为熟悉的方法之一是从大多数网络开发人员开始使用以前的 CSS 动画。 CSS 动画有一个熟悉的语法，很好地分解为演示目的。</p>
 
 <h3 id="The_CSS_version">The CSS version</h3>
 
-<p>这是一个用CSS写的滚动动画，显示爱丽丝落下通向仙境的兔子洞(see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
+<p>这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
 
-<p>请注意背景的移动，爱丽丝的旋转，以及她的颜色偏移变化。 本教程我们将仅仅关注爱丽丝。 这是控制爱丽丝动画的简化的CSS：</p>
+<p>请注意背景的移动，爱丽丝的旋转，以及她的颜色偏移变化。 本教程我们将仅仅关注爱丽丝。 这是控制爱丽丝动画的简化的 CSS：</p>
 
 <pre class="brush: css">#alice {
   animation: aliceTumbling infinite 3s linear;
@@ -47,15 +47,15 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   }
 }</pre>
 
-<p>这样可以以恒定的（线性linear）速率在3秒内改变爱丽丝的颜色和变换的旋转，并无限循环。 在 <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> 块中，我们可以看到每个循环（约0.9秒）的30％，Alice的颜色从黑色变为深红色，然后在循环结束时再次返回。</p>
+<p>这样可以以恒定的（线性 linear）速率在 3 秒内改变爱丽丝的颜色和变换的旋转，并无限循环。 在 <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> 块中，我们可以看到每个循环（约 0.9 秒）的 30％，Alice 的颜色从黑色变为深红色，然后在循环结束时再次返回。</p>
 
 <h3 id="Moving_it_to_JavaScript">Moving it to JavaScript</h3>
 
-<p>现在让我们尝试使用Web动画API创建相同的动画。</p>
+<p>现在让我们尝试使用 Web 动画 API 创建相同的动画。</p>
 
 <h4 id="Representing_keyframes">Representing keyframes</h4>
 
-<p>我们首先要做的是创建一个对应于我们的CSS @keyframes块的关键帧对象:</p>
+<p>我们首先要做的是创建一个对应于我们的 CSS @keyframes 块的关键帧对象：</p>
 
 <pre class="brush: js">var aliceTumbling = [
   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
@@ -63,32 +63,32 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
 ];</pre>
 
-<p>这里我们使用一个包含多个对象的数组。 每个对象代表原始CSS中的一个键。 然而，与CSS不同，Web动画API不需要明确地告知每个键出现的动画的百分比。 它将根据您给出的按键数量自动将动画划分为相等的部分。 这意味着具有三个键的关键帧对象将通过动画的每个循环的方式播放中间键，除非另有说明。</p>
+<p>这里我们使用一个包含多个对象的数组。 每个对象代表原始 CSS 中的一个键。 然而，与 CSS 不同，Web 动画 API 不需要明确地告知每个键出现的动画的百分比。 它将根据您给出的按键数量自动将动画划分为相等的部分。 这意味着具有三个键的关键帧对象将通过动画的每个循环的方式播放中间键，除非另有说明。</p>
 
-<p>当我们想要明确地设置一个键与其他键的偏移量时，我们可以直接在对象中指定一个偏移量，并与逗号分隔。 在上面的例子中，为了确保爱丽丝的颜色变化为30％而不是50％，我们给它的偏移量为0.3。</p>
+<p>当我们想要明确地设置一个键与其他键的偏移量时，我们可以直接在对象中指定一个偏移量，并与逗号分隔。 在上面的例子中，为了确保爱丽丝的颜色变化为 30％而不是 50％，我们给它的偏移量为 0.3。</p>
 
-<p>必须至少指定两个关键帧（表示动画序列的开始和结束状态）.如果您的关键帧列表只有一个条目, {{domxref("Element.animate()")}} 将抛出不支持的异常报错.</p>
+<p>必须至少指定两个关键帧（表示动画序列的开始和结束状态）.如果您的关键帧列表只有一个条目，{{domxref("Element.animate()")}} 将抛出不支持的异常报错。</p>
 
 <p>所以要回顾一下，除非你指定一个键上的偏移量，否则键的默认值是等间隔的。 方便吗？</p>
 
 <h4 id="表示时间属性">表示时间属性</h4>
 
-<p>我们还需要创建一个定时属性的对象 (an {{domxref("AnimationEffectTimingProperties")}} object) 对应于爱丽丝动画中的值:</p>
+<p>我们还需要创建一个定时属性的对象 (an {{domxref("AnimationEffectTimingProperties")}} object) 对应于爱丽丝动画中的值：</p>
 
 <pre class="brush: js">var aliceTiming = {
   duration: 3000,
   iterations: Infinity
 }</pre>
 
-<p>你会注意到这里有一些差异，如何在CSS中表示等价的值:</p>
+<p>你会注意到这里有一些差异，如何在 CSS 中表示等价的值：</p>
 
 <ul>
- <li>一个，持续时间是毫秒，而不是秒 - 3000不是3秒.。像{{domxref("WindowTimers.setTimeout()")}} 和{{domxref("Window.requestAnimationFrame()")}}, Web动画API只支持毫秒。</li>
+ <li>一个，持续时间是毫秒，而不是秒 - 3000 不是 3 秒.。像{{domxref("WindowTimers.setTimeout()")}} 和{{domxref("Window.requestAnimationFrame()")}}, Web 动画 API 只支持毫秒。</li>
  <li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
 </ul>
 
 <div class="note">
-<p>CSS 动画中使用的属性值与Web动画中使用的属性值存在一些小的差异。比如,Web动画中不能使用字符串“infinite”，而是使用Javascript的关键字 Infinity。 以及我们用 <code>easing</code> 来代替<code>timing-function</code>。我们不必在这列出<code>easing</code>的值，因为不像在CSS动画里，默认的"<a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a>"是<code>ease</code>。页面动画API的默认easing是<code>linear</code>— 而这就是我们想要的。</p>
+<p>CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。 以及我们用 <code>easing</code> 来代替<code>timing-function</code>。我们不必在这列出<code>easing</code>的值，因为不像在 CSS 动画里，默认的"<a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a>"是<code>ease</code>。页面动画 API 的默认 easing 是<code>linear</code>— 而这就是我们想要的。</p>
 </div>
 
 <h4 id="整合这些特性">整合这些特性</h4>
@@ -102,7 +102,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 <p>And boom: the animation starts playing (see the finished <a href="http://codepen.io/rachelnabors/pen/rxpmJL">version on Codepen</a>).</p>
 
-<p>可以在可以使用CSS动画化的任何DOM元素上调用animate()方法。 它可以用几种方式写成。 我们可以直接像这样传递他们的值，而不是为关键帧和时间属性制作对象:</p>
+<p>可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。 它可以用几种方式写成。 我们可以直接像这样传递他们的值，而不是为关键帧和时间属性制作对象：</p>
 
 <pre class="brush: js">document.getElementById("alice").animate(
   [
@@ -124,9 +124,9 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
     { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
   ], 3000);</pre>
 
-<h2 id="使用play()，pause()，reverse()和playbackRate控制播放">使用play()，pause()，reverse()和playbackRate控制播放</h2>
+<h2 id="使用play()，pause()，reverse()和playbackRate控制播放">使用 play()，pause()，reverse() 和 playbackRate 控制播放</h2>
 
-<p>虽然我们可以使用Web动画API编写CSS动画，其中API真正派上用场的是操纵动画的播放。 Web动画API提供了一些控制播放的有用方法。 让我们来看看在Growing / Shrinking Alice游戏中暂停和播放动画（请查看Codepen的完整代码 <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>）：</p>
+<p>虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。 Web 动画 API 提供了一些控制播放的有用方法。 让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>）：</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
 
@@ -146,11 +146,11 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   duration: aliceChange.effect.timing.duration / 2
 });</pre>
 
-<p>{{domxref("Element.animate()")}} 方法会在调用后立即执行。 为了防止蛋糕在用户有机会点击之前进食自己， 我们调用 {{domxref("Animation.pause()")}} ，如下:</p>
+<p>{{domxref("Element.animate()")}} 方法会在调用后立即执行。 为了防止蛋糕在用户有机会点击之前进食自己， 我们调用 {{domxref("Animation.pause()")}} ，如下：</p>
 
 <pre class="brush: js">nommingCake.pause();</pre>
 
-<p>我们可以运行 {{domxref("Animation.play()")}} 方法:</p>
+<p>我们可以运行 {{domxref("Animation.play()")}} 方法：</p>
 
 <pre class="brush: js">nommingCake.play();</pre>
 
@@ -166,7 +166,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 }</pre>
 
-<p>当用户握住鼠标或者在触摸屏上按住他们的手指在蛋糕上时，我们现在可以调用growAlice来使所有动画发挥作用：</p>
+<p>当用户握住鼠标或者在触摸屏上按住他们的手指在蛋糕上时，我们现在可以调用 growAlice 来使所有动画发挥作用：</p>
 
 <pre class="brush: js">cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);</pre>
@@ -176,13 +176,13 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
 <p>除了暂停和播放，我们可以使用以下动画方法：</p>
 
 <ul>
- <li>{{domxref("Animation.finish()")}} 动画结束.</li>
- <li>{{domxref("Animation.cancel()")}} 终止动画.</li>
+ <li>{{domxref("Animation.finish()")}} 动画结束。</li>
+ <li>{{domxref("Animation.cancel()")}} 终止动画。</li>
  <li>{{domxref("Animation.reverse()")}} 设置动画播放速度</li>
- <li> ({{domxref("Animation.playbackRate")}}到负值，所以它向后运行.</li>
+ <li> ({{domxref("Animation.playbackRate")}}到负值，所以它向后运行。</li>
 </ul>
 
-<p>让我们先来看一下playbackRate - 一个否定的播放速度将导致一个动画反向运行。 当爱丽丝从瓶中喝酒时，她越来越小。 这是因为瓶子将动画的播放速度从1更改为-1：</p>
+<p>让我们先来看一下 playbackRate - 一个否定的播放速度将导致一个动画反向运行。 当爱丽丝从瓶中喝酒时，她越来越小。 这是因为瓶子将动画的播放速度从 1 更改为-1：</p>
 
 <pre class="brush: js">var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
@@ -192,7 +192,7 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
-<p>在<a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>，爱丽丝旅行到一个世界，她必须跑步留在原地 - 运行两倍快速前进！ 在红女王比赛的例子中，爱丽丝和红女王正在跑步，留下来（查看Codepen上的全部代码<a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>）：</p>
+<p>在<a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>，爱丽丝旅行到一个世界，她必须跑步留在原地 - 运行两倍快速前进！ 在红女王比赛的例子中，爱丽丝和红女王正在跑步，留下来（查看 Codepen 上的全部代码<a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>）：</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif" style="display: block; height: 342px; margin-left: auto; margin-right: auto; width: 640px;"></a></p>
 
@@ -207,7 +207,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
 }, 3000);</pre>
 
-<p>但是通过点击或点击来敦促他们使他们通过乘以播放速度来加快速度:</p>
+<p>但是通过点击或点击来敦促他们使他们通过乘以播放速度来加快速度：</p>
 
 <pre class="brush: js">var goFaster = function() {
 
@@ -218,11 +218,11 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);</pre>
 
-<p>背景元素还具有播放时间，当您点击或点击时，它们会受到影响。 当Alice和Red Queen跑两倍的时候会发生什么？ 当你让他们放慢时会发生什么？</p>
+<p>背景元素还具有播放时间，当您点击或点击时，它们会受到影响。 当 Alice 和 Red Queen 跑两倍的时候会发生什么？ 当你让他们放慢时会发生什么？</p>
 
 <h2 id="获取动画信息">获取动画信息</h2>
 
-<p>想象其他方式我们可以使用playbackRate，例如通过让他们减慢整个网站的动画来改善具有前庭障碍的用户的可访问性。 这不可能在CSS中重新计算每个CSS规则的持续时间，但是通过Web动画API，我们可以使用即将到来的（在浏览器中不支持！）{{domxref("document.getAnimations()")}}方法 循环遍历页面上的每个动画，并将它们的播放速度减半：</p>
+<p>想象其他方式我们可以使用 playbackRate，例如通过让他们减慢整个网站的动画来改善具有前庭障碍的用户的可访问性。 这不可能在 CSS 中重新计算每个 CSS 规则的持续时间，但是通过 Web 动画 API，我们可以使用即将到来的（在浏览器中不支持！）{{domxref("document.getAnimations()")}}方法 循环遍历页面上的每个动画，并将它们的播放速度减半：</p>
 
 <pre class="brush: js">document.getAnimations().forEach(
   function (animation) {
@@ -230,13 +230,13 @@ document.addEventListener("touchstart", goFaster);</pre>
   }
 );</pre>
 
-<p>使用Web动画API，您需要更改的只是一个小的属性！</p>
+<p>使用 Web 动画 API，您需要更改的只是一个小的属性！</p>
 
-<p>另一件与CSS动画有关的难点就是创建依赖于其他动画提供的值。 例如，在“成长和收缩爱丽丝”游戏的例子中，您可能会注意到蛋糕的持续时间有些奇怪：</p>
+<p>另一件与 CSS 动画有关的难点就是创建依赖于其他动画提供的值。 例如，在“成长和收缩爱丽丝”游戏的例子中，您可能会注意到蛋糕的持续时间有些奇怪：</p>
 
 <pre class="brush: js">duration: aliceChange.effect.timing.duration / 2</pre>
 
-<p>要了解这里发生了什么，让我们来看看Alice的动画：</p>
+<p>要了解这里发生了什么，让我们来看看 Alice 的动画：</p>
 
 <pre class="brush: js">var aliceChange = document.getElementById('alice').animate(
   [
@@ -248,19 +248,19 @@ document.addEventListener("touchstart", goFaster);</pre>
     fill: 'both'
   });</pre>
 
-<p>爱丽丝的动画让她的尺寸从一半到8秒的两倍。 然后我们暂停她：</p>
+<p>爱丽丝的动画让她的尺寸从一半到 8 秒的两倍。 然后我们暂停她：</p>
 
 <pre class="brush: js">aliceChange.pause();</pre>
 
-<p>如果我们在动画开始时已经把她暂停了，那么她的全部尺寸将从一半开始，就像她已经把整个瓶子都喝完了一样！ 我们想把动画的“播放头”放在中间，所以她已经中途了。 我们可以通过将她的 {{domxref("Animation.currentTime")}}设置为4秒，如下所示：</p>
+<p>如果我们在动画开始时已经把她暂停了，那么她的全部尺寸将从一半开始，就像她已经把整个瓶子都喝完了一样！ 我们想把动画的“播放头”放在中间，所以她已经中途了。 我们可以通过将她的 {{domxref("Animation.currentTime")}}设置为 4 秒，如下所示：</p>
 
 <pre class="brush: js">aliceChange.currentTime = 4000;</pre>
 
-<p>但是在制作这个动画的时候，我们可能会改变爱丽丝的持续时间。 如果我们将动态时间设置为timeTime，那么它不会更好吗？所以我们一次不必再做两个更新？ 我们实际上可以通过引用aliceChange的{{domxref("Animation.effect")}}属性来实现，该属性返回一个包含Alice上所有效果细节的对象：</p>
+<p>但是在制作这个动画的时候，我们可能会改变爱丽丝的持续时间。 如果我们将动态时间设置为 timeTime，那么它不会更好吗？所以我们一次不必再做两个更新？ 我们实际上可以通过引用 aliceChange 的{{domxref("Animation.effect")}}属性来实现，该属性返回一个包含 Alice 上所有效果细节的对象：</p>
 
 <pre class="brush: js">aliceChange.currentTime = aliceChange.effect.timing.duration / 2;</pre>
 
-<p>效果让我们访问动画的关键帧和时间对象 - aliceChange.effect.timing指向Alice的时间对象（其类型为{{domxref("AnimationEffectTimingReadOnly")}}） - 这包含她的{{domxref("AnimationEffectTimingReadOnly.duration")}}。 我们可以将她的持续时间分成两半，以获得她动画时间轴的中点，使她成为正常的高度。 现在，我们可以在任何一个方向扭转和播放动画，使她变小或变大！</p>
+<p>效果让我们访问动画的关键帧和时间对象 - aliceChange.effect.timing 指向 Alice 的时间对象（其类型为{{domxref("AnimationEffectTimingReadOnly")}}）- 这包含她的{{domxref("AnimationEffectTimingReadOnly.duration")}}。 我们可以将她的持续时间分成两半，以获得她动画时间轴的中点，使她成为正常的高度。 现在，我们可以在任何一个方向扭转和播放动画，使她变小或变大！</p>
 
 <p>当设置蛋糕和瓶子的持续时间时，我们可以做同样的事情：</p>
 
@@ -276,7 +276,7 @@ drinking.pause();</pre>
 
 <p>现在，所有三个动画只有一个持续时间，我们可以从一个地方容易地改变。</p>
 
-<p>我们还可以使用Web动画API来确定动画当前的时间。 当你用尽蛋糕吃或者清空瓶子时，游戏就结束了。 哪个角色扮演者取决于爱丽丝在她的动画中有多远，无论她是否变得太大，不能进入小门太小，无法达到打开门的钥匙。 我们可以弄清楚她是否在动画的大端或小端，让她的动画当前时间(<code><a href="/en-US/docs/Web/API/Animation/currentTime">currentTime</a></code>)被她的activeDuration分成：</p>
+<p>我们还可以使用 Web 动画 API 来确定动画当前的时间。 当你用尽蛋糕吃或者清空瓶子时，游戏就结束了。 哪个角色扮演者取决于爱丽丝在她的动画中有多远，无论她是否变得太大，不能进入小门太小，无法达到打开门的钥匙。 我们可以弄清楚她是否在动画的大端或小端，让她的动画当前时间 (<code><a href="/en-US/docs/Web/API/Animation/currentTime">currentTime</a></code>) 被她的 activeDuration 分成：</p>
 
 <pre class="brush: js">var endGame = function() {
 
@@ -312,14 +312,14 @@ drinking.pause();</pre>
 
 <h2 id="Callbacks_and_promises">Callbacks and promises</h2>
 
-<p>CSS动画和转换有自己的事件侦听器，这些也可以通过Web动画API：</p>
+<p>CSS 动画和转换有自己的事件侦听器，这些也可以通过 Web 动画 API：</p>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
  <li><code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code> is the event handler for the <code>cancel</code> event and can be triggers with <code><a href="/en-US/docs/Web/API/Animation/cancel">cancel()</a></code>.</li>
 </ul>
 
-<p>在这里，我们为蛋糕，瓶子和爱丽丝设置回调来触发endGame功能：</p>
+<p>在这里，我们为蛋糕，瓶子和爱丽丝设置回调来触发 endGame 功能：</p>
 
 <pre class="brush: js">// When the cake or runs out...
 nommingCake.onfinish = endGame;
@@ -338,7 +338,7 @@ aliceChange.onfinish = endGame;
 
 <h2 id="结论">结论</h2>
 
-<p>这些是Web动画API的基本功能，其中大部分功能已在最新版本的Firefox和Chrome中得到支持。 到目前为止，您应该准备好在浏览器中“跳下兔子洞”，动画制作动画实验！ 如果您正在使用API并要共享，请尝试使用#WAAPI主题标签。 我们将会观看并且将编写更多的教程来涵盖更多的功能，支持传播！</p>
+<p>这些是 Web 动画 API 的基本功能，其中大部分功能已在最新版本的 Firefox 和 Chrome 中得到支持。 到目前为止，您应该准备好在浏览器中“跳下兔子洞”，动画制作动画实验！ 如果您正在使用 API 并要共享，请尝试使用#WAAPI 主题标签。 我们将会观看并且将编写更多的教程来涵盖更多的功能，支持传播！</p>
 
 <h2 id="See_also">See also</h2>
 

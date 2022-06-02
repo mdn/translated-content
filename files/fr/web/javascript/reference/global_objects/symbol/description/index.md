@@ -18,9 +18,11 @@ La propriété en lecture seule **`description`** est une chaîne de caractères
 
 ## Syntaxe
 
-    Symbol('maDescription').description;
-    Symbol.iterator.description;
-    Symbol.for('toto').description;
+```js
+Symbol('maDescription').description;
+Symbol.iterator.description;
+Symbol.for('toto').description;
+```
 
 ## Description
 

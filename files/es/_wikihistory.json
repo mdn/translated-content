@@ -6235,17 +6235,6 @@
       "AshWilliams"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-24T00:06:11.527Z",
-    "contributors": [
-      "chrisdavidmills",
-      "israelfl",
-      "pacommozilla",
-      "teoli",
-      "mare",
-      "Izel"
-    ]
-  },
   "Web/API/File/lastModifiedDate": {
     "modified": "2019-03-23T22:06:34.338Z",
     "contributors": [
@@ -6313,6 +6302,17 @@
     "modified": "2020-10-15T22:16:53.945Z",
     "contributors": [
       "carlosbulnes"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-24T00:06:11.527Z",
+    "contributors": [
+      "chrisdavidmills",
+      "israelfl",
+      "pacommozilla",
+      "teoli",
+      "mare",
+      "Izel"
     ]
   },
   "Web/API/FormData": {
@@ -13978,7 +13978,7 @@
       "fitojb"
     ]
   },
-  "Web/HTML/Element/input/datetime": {
+  "Web/HTML/Element/input/datetime-local": {
     "modified": "2019-03-23T22:36:20.508Z",
     "contributors": [
       "AngelMunoz",
@@ -14790,7 +14790,7 @@
       "carlosgocereceda"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2019-03-23T22:24:54.977Z",
     "contributors": [
       "Sergio_Gonzalez_Collado",

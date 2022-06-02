@@ -8,7 +8,7 @@ translation_of: Web/API/File_and_Directory_Entries_API
 <p>The File and Directory Entries API는 탐색 및 파일 접근이 가능한 로컬 파일 시스템을 웹상에 시뮬레이션합니다. 이 API를 통해 당신은 읽고, 쓰고, 파일과 디렉토리를 생성할 수 있는 가상의 파일 시스템을 가진 앱을 개발할 수 있을 것입니다.</p>
 
 <div class="note">
-<p>이 API는 아직 표준이 아니기 때문에, 모든 브라우저가 이를 지원하지 않는 다는 점을 유념하십시오. 지원하더라도 일부 기능만을 지원할 수도 있습니다. 자세한 내용은 브라우저 호환성({{anch("Browser compatibility")}}) 항목을 참조하십시오.</p>
+<p>이 API는 아직 표준이 아니기 때문에, 모든 브라우저가 이를 지원하지 않는 다는 점을 유념하십시오. 지원하더라도 일부 기능만을 지원할 수도 있습니다. 자세한 내용은 브라우저 호환성(<a href="#browser_compatibility">Browser compatibility</a>) 항목을 참조하십시오.</p>
 </div>
 
 <p>동기적 혹은 비동기적인 동작 중 어느 쪽을 필요로 하냐에 따라 만들어진 매우 유사한 두 개의 API가 있습니다. 동기식 API는 {{domxref("Worker")}} 내에서 사용될 수 있도록 확장되어 왔으며 당신이 원하는 값을 반환합니다. 비동기식 API는 브라우저의 동작을 방해하지 않지만 함수와 API가 값을 반환하지 않습니다; 그 대신, 당신은 콜백 함수를 이용해 언제든 응답을 처리할 수 있습니다.</p>
@@ -43,7 +43,7 @@ translation_of: Web/API/File_and_Directory_Entries_API
  <dd>{{domxref("FileSystemDirectoryEntry.createReader()")}}를 호출함으로써 만들어지는 인터페이스이며, 디렉토리의 내용물을 읽을 수 있는 기능을 제공합니다.</dd>
  <dt>{{domxref("FileSystemFlags")}}</dt>
  <dd><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a>에서 특정 메소드를 호출할 때 옵션 플래그로 사용되는 값들의 집합을 정의합니다.</dd>
- <dt>{{DOMxRef("FileError")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("FileError")}} {{deprecated_inline}}</dt>
  <dd>비동기 파일 시스템 호출에 의해 발생한 에러를 나타냅니다.</dd>
 </dl>
 
@@ -64,7 +64,7 @@ translation_of: Web/API/File_and_Directory_Entries_API
  <dd>파일 시스템 내의 단일 디렉토리를 나타냅니다.</dd>
  <dt>{{domxref("FileSystemDirectoryReaderSync")}}</dt>
  <dd>{{domxref("FileSystemDirectoryEntrySync.createReader()")}}를 호출함으로써 만들어지는 인터페이스이며, 디렉토리의 내용물을 읽을 수 있는 기능을 제공합니다.</dd>
- <dt>{{DOMxRef("FileException")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("FileException")}} {{deprecated_inline}}</dt>
  <dd>동기 파일 시스템 호출에 의해 발생한 에러를 나타냅니다.</dd>
 </dl>
 

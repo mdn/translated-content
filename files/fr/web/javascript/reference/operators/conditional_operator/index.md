@@ -15,7 +15,9 @@ L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui c
 
 ## Syntaxe
 
-    condition ? exprSiVrai : exprSiFaux
+```js
+condition ? exprSiVrai : exprSiFaux
+```
 
 ### Paramètres
 

@@ -16,11 +16,11 @@ L'interface **`History`** permet de manipuler l'historique de navigation du navi
 
 - {{domxref("History.length")}} {{readOnlyInline}}
   - : Retourne un `Integer` représentant le nombre d'élements dans l'historique de la session, y incluant la page actullement ouverte. Par exemple, pour une page chargée dans un nouvel onglet cette propriété retourne `1`.
-- {{domxref("History.current")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
+- {{domxref("History.current")}} {{readOnlyInline}} {{ non-standard_inline() }} {{deprecated_inline}}
   - : Retourne un {{domxref("DOMString")}} de l‘URL active dans l'historique de navigation. Cette propriété n‘a jamais été rendu disponible au contenu web ni supporté par aucun autre navigateur. Utilisez plutôt {{domxref("Location.href")}}.
-- {{domxref("History.next")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
+- {{domxref("History.next")}} {{readOnlyInline}} {{ non-standard_inline() }} {{deprecated_inline}}
   - : Retourne un {{domxref("DOMString")}} de l‘URL suivante dans l'historique de navigation. Cette propriété n‘a jamais été rendu disponible au contenu web ni supporté par aucun autre navigateur.
-- {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
+- {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{deprecated_inline}}
   - : Retourne un {{domxref("DOMString")}} de l‘URL précédente dans l'historique de navigation.
 - {{domxref("History.state")}} {{readOnlyInline}}
   - : Retourne une value `any` représentant l'état le plus haut de l‘historique de navigation. C‘est une manière de vérifier cet état sans avoir à attendre un évenement {{event("popstate")}}.

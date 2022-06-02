@@ -1,38 +1,36 @@
 ---
-title: Macros
+title: Utiliser les macros
 slug: MDN/Structures/Macros
 translation_of: MDN/Structures/Macros
 ---
 {{MDNSidebar}}
 
-La plate-forme [Kuma](/fr/docs/projet:MDN/Kuma "/fr/docs/projet:MDN/Kuma") sur laquelle MDN travail, fournit un système de macro, [KumaScript](/docs/fr/projet:MDN/Kuma/KumaScript_guide "/docs/fr/projet: MDN/Kuma/KumaScript_guide"), ce qui permet de faire une grande variété de choses automatiquement. Cet article fournit des informations sur la façon d'invoquer les macros MDN dans les articles.
+La plate-forme [Yari](/fr/docs/MDN/Yari) qui est la partie serveur de MDN, fournit un système de macros, [KumaScript](/fr/docs/MDN/Tools/KumaScript), qui permet d'automatiser certaines tâches. Cet article fournit des informations sur la façon d'invoquer les macros MDN dans les articles.
 
-Le [Guide KumaScript](/docs/fr/projet:MDN/Kuma/KumaScript_guide "/fr/docs/projet:MDN/Kuma/KumaScript_guide ") offre un regard en profondeur sur la façon d'utiliser des macros MDN, cette section est plus qu'un bref aperçu. Si vous avez déjà lu la section ci-dessus sur {{SectionOnPage ("/docs/fr/projet:MDN/Contribuer/Editor_guide/Links", "Utiliser les liens macros")}}, vous êtes un peu familiers avec le concept.
+Le [Guide KumaScript](/fr/docs/MDN/Tools/KumaScript) offre un regard en profondeur sur la façon d'utiliser des macros sur MDN, cette section est plus qu'un bref aperçu.
 
-## Comment les macros sont-elle mises en œuvre
+## Comment les macros sont-elles mises en œuvre
 
-Macros sur MDN sont mis en œuvre en utilisant le serveur exécuté [JavaScript](/fr/docs/Web/JavaScript) code, interprété à l'aide de Node.js. En plus de cela, nous avons un certain nombre de bibliothèques, que nous avons mis en place pour fournir des services et des fonctionnalités orientées wiki, les macros interagissent avec la plate-forme wiki et avec son contenu. Si vous voulez en apprendre davantage, consultez le [guide KumaScript](/docs/fr/projet:MDN/Kuma/KumaScript_guide); le [KumaScript reference](/docs/fr/projet:MDN/Kuma/KumaScript_reference) fournit des détails sur les bibliothèques et autres API KumaScript que nous avons mis en œuvre.
+Macros sur MDN sont mis en œuvre en utilisant le serveur exécuté [JavaScript](/fr/docs/Web/JavaScript) code, interprété à l'aide de  [Node.js](https://nodejs.org/). En plus de cela, nous avons implémenté plusieurs bibliothèques qui fournissent des fonctionnalités d'interaction entre les macros, la plateforme et le contenu.
 
 ## Utiliser une macro dans le contenu
 
-Pour réellement utiliser une macro, vous placez simplement l'appel à la macro dans une paire de doubles acolades, avec ses paramètres, le cas échéant, entre parenthèses:
+Pour utiliser une macro, on placera l'appel à la macro dans une paire de doubles accolades, avec ses éventuels paramètres entre parenthèses&nbsp;:
 
-    \{{macroname(parameter-list)}}
+```js
+\{{macroname(liste-parametres)}}
+```
 
-Quelques notes sur les appels de macro:
+Quelques notes sur les appels de macro&nbsp;:
 
-- Les noms de macros sont sensibles à la casse, mais une tentative est faite pour corriger ces erreurs communes; vous pouvez utiliser tout en minuscules, même si le nom de la macro utilise des majuscules en son sein, et vous pouvez débuter par une majuscule une macro dont le nom commence normalement par une lettre minuscule.
+- Les noms de macros sont sensibles à la casse, mais une tentative automatique est effectuée pour corriger ces erreurs communes&nbsp;; vous pouvez utiliser tout en minuscules, même si le nom de la macro utilise des majuscules en son sein, et vous pouvez débuter par une majuscule une macro dont le nom commence normalement par une lettre minuscule.
 - Les paramètres sont séparés par des virgules.
-- Si il n'y a pas de paramètres, vous pouvez laisser les parenthèses ou les enlever; `\{{macroname()}}` et `\{{macroname}}` sont identiques.
+- S'il n'y a pas de paramètres, vous pouvez laisser les parenthèses ou les enlever&nbsp;; `\{{macroname()}}` et `\{{macroname}}` sont équivalents.
 - Les paramètres numériques peuvent être entre guillemets, ou non (cependant, si vous avez un numéro de version avec plusieurs décimales, il doit être entre guillemets).
-- Si vous obtenez des erreurs, consultez votre code attentivement. Si vous ne pouvez toujours pas à comprendre ce qui se passe, voir [Dépannage des erreurs KumaScript](/fr/docs/MDN/Kuma/Troubleshooting_KumaScript_errors).
+- Si vous obtenez des erreurs, consultez votre code attentivement. Si vous ne pouvez toujours pas à comprendre ce qui se passe, voir [Dépannage des erreurs KumaScript](/en-US/docs/MDN/Tools/KumaScript/Troubleshooting).
 
-Les macros sont mis en cache; pour tout ensemble de valeurs d'entrée (les paramètres et les valeurs environnementales telles que l'URL pour laquelle la macro a été exécutée), les résultats sont stockés et réutilisés. Cela signifie que la macro est que effectivement parcourue que lorsque les entrées changent.
+Les macros sont mises en cache&nbsp;; pour tout ensemble de valeurs d'entrée (les paramètres et les valeurs environnementales telles que l'URL pour laquelle la macro a été exécutée), les résultats sont stockés et réutilisés. Cela signifie que la macro uniquement exécutée de nouveau lorsque les paramètres en entrée changent.
 
-> **Note :** Vous pouvez forcer toutes les macros d'une page à être réévalué avec un shift-reload.
+La fonctionnalité fournie par une macro peut être aussi simple que d'insérer un plus grand bloc de texte ou de réutiliser le contenu présent autre part sur MDN, ou aussi complexe que la construction de tout un index du contenu en cherchant dans des parties du site, mettre en forme le résultat, et ajouter des liens.
 
-Les macros peuvent être aussi simple que d'insérer un plus grand bloc de texte ou d'échange dans le contenu d'une autre partie du MDN, ou aussi complexe que la construction de tout un index du contenu en cherchant dans des parties du site, coiffer la sortie, et en ajoutant des liens.
-
-Vous pouvez lire sur nos macros les plus couramment utilisés sur le [couramment utilisés](/fr/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros); aussi, il y a un [la liste complète de toutes les macros](https://developer.mozilla.org/fr/docs/templates) ici. La plupart des macros ont intégré dans la documentation eux, comme des commentaires en haut.
-
-{{EditorGuideQuicklinks}}
+Pour en savoir plus sur les macros les plus couramment utilisées, vous pouvez lire [l'article sur les macros couramment utilisées](/fr/docs/MDN/Structures/Macros/Commonly-used_macros). Vous pouvez également parcourir [la liste exhaustive, et le code source, de toutes les macros](https://github.com/mdn/yari/tree/main/kumascript/macros). Pour la plupart, le code des macros est documenté avec des commentaires en haut du fichier source.

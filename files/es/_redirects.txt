@@ -1546,7 +1546,7 @@
 /es/docs/Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM	/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /es/docs/Usar_gradientes	/es/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /es/docs/Usar_la_Geolocalización	/es/docs/Web/API/Geolocation_API
-/es/docs/Using_files_from_web_applications	/es/docs/Web/API/File/Using_files_from_web_applications
+/es/docs/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Using_geolocation	/es/docs/Web/API/Geolocation_API
 /es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 /es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
@@ -1590,6 +1590,7 @@
 /es/docs/Web/API/EventSource/onopen	/es/docs/Web/API/EventSource/open_event
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
+/es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
 /es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
@@ -1861,6 +1862,7 @@
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
@@ -1935,7 +1937,7 @@
 /es/docs/Web/HTML/Elemento/input/checkbox	/es/docs/Web/HTML/Element/input/checkbox
 /es/docs/Web/HTML/Elemento/input/color	/es/docs/Web/HTML/Element/input/color
 /es/docs/Web/HTML/Elemento/input/date	/es/docs/Web/HTML/Element/input/date
-/es/docs/Web/HTML/Elemento/input/datetime	/es/docs/Web/HTML/Element/input/datetime
+/es/docs/Web/HTML/Elemento/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento/input/email	/es/docs/Web/HTML/Element/input/email
 /es/docs/Web/HTML/Elemento/input/hidden	/es/docs/Web/HTML/Element/input/hidden
 /es/docs/Web/HTML/Elemento/input/number	/es/docs/Web/HTML/Element/input/number
@@ -2014,7 +2016,8 @@
 /es/docs/Web/HTML/microformatos	/es/docs/Web/HTML/microformats
 /es/docs/Web/HTML/Índice	/es/docs/conflicting/Web/HTML
 /es/docs/Web/HTTP/Access_control_CORS	/es/docs/Web/HTTP/CORS
-/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
+/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME	/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /es/docs/Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x	/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x

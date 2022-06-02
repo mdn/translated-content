@@ -12,11 +12,11 @@ translation_of: Web/API/AbortSignal
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p><code><strong>AbortSignal </strong></code>接口表示一个信号对象（ signal object ），它允许您通过 {{domxref("AbortController")}} 对象与DOM请求（如Fetch）进行通信并在需要时将其中止。</p>
+<p><code><strong>AbortSignal </strong></code>接口表示一个信号对象（ signal object ），它允许您通过 {{domxref("AbortController")}} 对象与 DOM 请求（如 Fetch）进行通信并在需要时将其中止。</p>
 
 <h2 id="属性">属性</h2>
 
-<p><em>AbortSignal接口还继承了其父接口{{domxref("EventTarget")}}的属性。</em></p>
+<p><em>AbortSignal 接口还继承了其父接口{{domxref("EventTarget")}}的属性。</em></p>
 
 <dl>
  <dt>{{domxref("AbortSignal.aborted")}} {{readonlyInline}}</dt>
@@ -27,20 +27,20 @@ translation_of: Web/API/AbortSignal
 
 <dl>
  <dt>{{domxref("AbortSignal.onabort")}}</dt>
- <dd>当 {{event("abort_(dom_abort_api)", "abort")}} 事件触发时，即当信号正在与之通信的DOM请求被中止时调用。</dd>
+ <dd>当 {{event("abort_(dom_abort_api)", "abort")}} 事件触发时，即当信号正在与之通信的 DOM 请求被中止时调用。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
-<p><em>AbortSignal接口从其父接口 {{domxref("EventTarget")}} 继承方法。</em></p>
+<p><em>AbortSignal 接口从其父接口 {{domxref("EventTarget")}} 继承方法。</em></p>
 
 <h2 id="示例">示例</h2>
 
-<p>在以下片段中，我们旨在使用Fetch API下载视频。</p>
+<p>在以下片段中，我们旨在使用 Fetch API 下载视频。</p>
 
 <p>我们首先使用{{domxref("AbortController.AbortController", "AbortController()")}}构造函数创建一个控制器，然后使用{{domxref ("AbortController.signal")}}属性。</p>
 
-<p>当获取请求被启动时，我们在请求的选项对象中传递AbortSignal作为一个选项（见下面的{signal}）。 这将信号和控制器与获取请求相关联，并允许我们通过调用{{domxref("AbortController.abort()")}}来中止它，如下面的第二个事件监听器所示。</p>
+<p>当获取请求被启动时，我们在请求的选项对象中传递 AbortSignal 作为一个选项（见下面的{signal}）。 这将信号和控制器与获取请求相关联，并允许我们通过调用{{domxref("AbortController.abort()")}}来中止它，如下面的第二个事件监听器所示。</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
@@ -65,33 +65,20 @@ function fetchVideo() {
 }</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 当调用<code> abort() </code>时，<code>fetch()</code> 会调用 reject，返回一个AbortError。</p>
+<p><strong>注意</strong>: 当调用<code> abort() </code>时，<code>fetch()</code> 会调用 reject，返回一个 AbortError。</p>
 </div>
 
 <div class="warning">
-<p>当前版本Firefox当<code>Promise</code> 含有 <code>DOMException</code> 时，会调用reject。</p>
+<p>当前版本 Firefox 当<code>Promise</code> 含有 <code>DOMException</code> 时，会调用 reject。</p>
 </div>
 
 <p> </p>
 
-<p>你可以在GitHub上找到一个完整的可用示例——请参阅<a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a>（<a href="https://mdn.github.io/dom-examples/abort-api/">实例在这</a>）。</p>
+<p>你可以在 GitHub 上找到一个完整的可用示例——请参阅<a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a>（<a href="https://mdn.github.io/dom-examples/abort-api/">实例在这</a>）。</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -3,7 +3,7 @@ title: Site Compatibility for Firefox 26
 slug: Mozilla/Firefox/Releases/26/Site_Compatibility
 translation_of: Mozilla/Firefox/Releases/26/Site_Compatibility
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ draft() }}</p>
+<div>{{FirefoxSidebar}}</div>
 <p>Firefox 26 <a href="http://www.mozilla.org/en-US/firefox/aurora/">Aurora</a> (pre-Beta) will be released on <time datetime="2013-09-20">September 20, 2013</time>. While it has been developed to maintain compatibility as much as possible, the new version includes some changes affecting backward compatibility aimed at improving interoperability with the other browsers or following the latest Web standards. Here's the list of such changes — hope this helps whenever you test your sites or applications.</p>
 <p><strong>This article only explains the changes that may affect backward compatibility for Websites</strong>. For the other new features and changes, please read the following documents:</p>
 <ul>
@@ -38,7 +38,7 @@ translation_of: Mozilla/Firefox/Releases/26/Site_Compatibility
     <p>Setting the {{ domxref("document.domain") }} property on a page embedded in an {{ HTMLElement("iframe") }} with the <code>sandbox</code> attribute will throw a security error from now on.</p>
   </section>
   <section id="sect6">
-    <h3 id="元素的_id_改变后，旧_id_不再是_window_对象的属性"><code><font face="Georgia, Times, Times New Roman, serif">元素的 </font>id 改变后，旧 id 不再是 window 对象的属性</code></h3>
+    <h3 id="元素的_id_改变后，旧_id_不再是_window_对象的属性"><code>元素的 id 改变后，旧 id 不再是 window 对象的属性</code></h3>
     <ul>
       <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=790601">Bug 790601 – Javascript element should not exist with old id</a></li>
     </ul>

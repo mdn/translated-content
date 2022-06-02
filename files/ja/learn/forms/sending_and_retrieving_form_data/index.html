@@ -224,7 +224,7 @@ if __name__ == "__main__":
 <p>次のように、上記のコードでは 2 つのテンプレートが参照されます。(自分の環境で実行する場合、これらは <code>templates</code> というサブディレクトリにあり、<code>python-example.py</code>ファイルと同じディレクトリにある必要があります)。</p>
 
 <ul>
- <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: 以前に {{anch("The POST method", "POST メソッド")}}の節で見たフォームと同じですが、<code>action</code> が <code>\{{ url_for('hello') }}</code> に設定されています (これは <a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a> テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。<code>url_for('hello')</code> は基本的に、「フォームが送信されたら <code>/hello</code> にリダイレクトしてください」と言っています。)</li>
+ <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: 以前に <a href="#the_post_method">POST メソッド</a>の節で見たフォームと同じですが、<code>action</code> が <code>\{{ url_for('hello') }}</code> に設定されています (これは <a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a> テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。<code>url_for('hello')</code> は基本的に、「フォームが送信されたら <code>/hello</code> にリダイレクトしてください」と言っています。)</li>
  <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html">greeting.html</a>: このテンプレートは、表示時に渡された 2 つの小さいデータを表示する行だけを含みます。<code>/hello</code> の URL が呼び出されるときに実行される、前述の <code>hello()</code> 関数によって行われます。</li>
 </ul>
 

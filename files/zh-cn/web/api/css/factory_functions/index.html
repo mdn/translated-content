@@ -1,9 +1,9 @@
 ---
-title: CSS数字工厂函数
+title: CSS 数字工厂函数
 slug: Web/API/CSS/factory_functions
 translation_of: Web/API/CSS/factory_functions
 ---
-<p>{{SeeCompatTable}}<span class="seoSummary"><strong>CSS numeric factory functions</strong></span>，例如 <code>CSS.em()</code> 和 <code>CSS.turn()</code>，是一组使用传入的数字参数以及所指定的单位（单位名称即所用方法名称）来返回 <span class="seoSummary"><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</a></span> 的方法。这些函数创建新的数字值，与使用 {{domxref('CSSUnitValue.CSSUnitValue()')}} 构造函数相比，没有后者那么冗长。</p>
+<p>{{SeeCompatTable}}<strong>CSS numeric factory functions</strong>，例如 <code>CSS.em()</code> 和 <code>CSS.turn()</code>，是一组使用传入的数字参数以及所指定的单位（单位名称即所用方法名称）来返回 <a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</a> 的方法。这些函数创建新的数字值，与使用 {{domxref('CSSUnitValue.CSSUnitValue()')}} 构造函数相比，没有后者那么冗长。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -64,7 +64,7 @@ console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
 console.log( height.value )  // 50
 console.log( height.unit )   // vmax</pre>
 
-<p>在这个例子中，我们给元素设定 margin 属性值，使用 <code>CSS.px()</code> 函数:</p>
+<p>在这个例子中，我们给元素设定 margin 属性值，使用 <code>CSS.px()</code> 函数：</p>
 
 <pre class="brush: js notranslate">myElement.attributeStyleMap.set('margin', CSS.px(40));
 let currentMargin = myElement.attributeStyleMap.get('margin');
@@ -72,20 +72,7 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM', '#numeric-factory', 'Numeric Factory Functions')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

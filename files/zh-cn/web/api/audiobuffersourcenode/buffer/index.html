@@ -9,9 +9,9 @@ translation_of: Web/API/AudioBufferSourceNode/buffer
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>{{ domxref("AudioBufferSourceNode") }} 接口的<span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'> </span><code style=""><strong style="border-bottom-style: none; border-bottom-width: 0px; border-left-style: none; border-left-width: 0px; border-right-style: none; border-right-width: 0px; border-top-style: none; border-top-width: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">buffer</strong></code><span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'> 属性提供了重复播放音频的能力，该音频使用 </span>{{domxref("AudioBuffer")}} 作为声音文件的来源。</p>
+<p>{{ domxref("AudioBufferSourceNode") }} 接口的 <code style=""><strong style="border-bottom-style: none; border-bottom-width: 0px; border-left-style: none; border-left-width: 0px; border-right-style: none; border-right-width: 0px; border-top-style: none; border-top-width: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">buffer</strong></code> 属性提供了重复播放音频的能力，该音频使用 {{domxref("AudioBuffer")}} 作为声音文件的来源。</p>
 
-<p>如果 <code>buffer</code> 属性的值为 <code>null</code>, 节点会自动生成一个单声道的无声文件（所有采样均为0）。</p>
+<p>如果 <code>buffer</code> 属性的值为 <code>null</code>, 节点会自动生成一个单声道的无声文件（所有采样均为 0）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/AudioBufferSourceNode/buffer
 
 <h3 id="返回值">返回值</h3>
 
-<p>{{domxref("AudioBuffer")}}，<span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>包含了节点将要播放的声音数据</span>。</p>
+<p>{{domxref("AudioBuffer")}}，包含了节点将要播放的声音数据。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -51,22 +51,7 @@ button.onclick = function() {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Audio API", "#widl-AudioBufferSourceNode-buffer", "buffer")}}</td>
-   <td>{{Spec2("Web Audio API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

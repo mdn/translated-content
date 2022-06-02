@@ -2,7 +2,7 @@
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 tags:
-  - ASCII码变成字符串
+  - ASCII 码变成字符串
   - fromCharCode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <p>因为 <code>fromCharCode()</code> 只作用于 16 位的值 (跟 <code>\u</code> 转义序列一样)，为了返回一个补充字符，一个代理对是必须的。例如，<code>String.fromCharCode(0xD83C, 0xDF03)</code> 和 <code>\uD83C\uDF03</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
 
-<p>While there is a mathematical relationship between the supplementary code point value (e.g. <code>0x1F303</code>) and both surrogate values that represent it (e.g., <code>0xD83C</code> and <code>0xDF03</code>), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}} （ES2015 标准下的一个方法）更方便， 这个方法允许你基于真实的码点返回补充字符。例如 <code>String.fromCodePoint(0x1F303)</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
+<p>While there is a mathematical relationship between the supplementary code point value (e.g. <code>0x1F303</code>) and both surrogate values that represent it (e.g., <code>0xD83C</code> and <code>0xDF03</code>), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}}（ES2015 标准下的一个方法）更方便， 这个方法允许你基于真实的码点返回补充字符。例如 <code>String.fromCodePoint(0x1F303)</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
 
 <h2 id="示例">示例</h2>
 

@@ -12,8 +12,6 @@ tags:
   - Web app
 translation_of: Web/Progressive_web_apps
 ---
-{{draft}}
-
 Les **applications Web progressives** utilisent des API Web modernes ainsi qu'une stratégie d'amélioration progressive traditionnelle pour créer des applications Web multiplateformes. Ces applications fonctionnent partout et fournissent quelques fonctionnalités qui donnent à l'expérience utilisateur les mêmes avantages que les applications natives. Cet ensemble de documents explique tout ce qu'il faut savoir sur ces applications.
 
 Pour qu'une application Web soit considérée comme un PWA, techniquement parlant, il devrait présenter les caractéristiques suivantes : [Secure contexts](/fr/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**), un ou plusieurs [Service Workers](/fr/docs/Web/API/Service_Worker_API) et un [fichier manifest](/fr/docs/Web/Manifest).
@@ -43,14 +41,14 @@ Pour savoir comment mettre en œuvre les PWA, lisez notre [guide du développeur
 
 Les guides suivants vous montrent ce qu'il faut faire pour mettre en œuvre une PWA, en examinant un exemple simple et en vous montrant comment tous les éléments fonctionnent.
 
-1.  [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Introduction)
-2.  [Structure progressive des applications web](/fr/docs/Web/Progressive_web_apps/App_structure)
-3.  [Faire travailler les VAP en différé avec les travailleurs des services](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers)
-4.  [Comment rendre les PWA installables](/fr/docs/Web/Progressive_web_apps/Installable_PWAs)
-5.  [Comment rendre les PWA réengageables en utilisant les notifications et le Push](/fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push)
-6.  [Chargement progressif](/fr/docs/Web/Progressive_web_apps/Chargement)
-7.  [Collection de ressources, de codelabs et d'outils dont vous avez besoin pour construire des PWA par l'équipe de pwafire.org](https://pwafire.org)
-8.  [Mise en place de votre environnement de développement d'applications web progressives](https://github.com/pwafire/pwadev-tips)
+1. [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Introduction)
+2. [Structure progressive des applications web](/fr/docs/Web/Progressive_web_apps/App_structure)
+3. [Faire travailler les VAP en différé avec les travailleurs des services](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers)
+4. [Comment rendre les PWA installables](/fr/docs/Web/Progressive_web_apps/Installable_PWAs)
+5. [Comment rendre les PWA réengageables en utilisant les notifications et le Push](/fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push)
+6. [Chargement progressif](/fr/docs/Web/Progressive_web_apps/Chargement)
+7. [Collection de ressources, de codelabs et d'outils dont vous avez besoin pour construire des PWA par l'équipe de pwafire.org](https://pwafire.org)
+8. [Mise en place de votre environnement de développement d'applications web progressives](https://github.com/pwafire/pwadev-tips)
 
 ## Guides technologiques
 

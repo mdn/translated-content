@@ -63,20 +63,20 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 <p>你可以在manifest.json中使用page_action键定义地址栏按钮的属性：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"page_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"browser_style":</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"page_action": {
+  "browser_style": true,
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "Whereami?"
+}</code></pre>
 
 <p>仅default_icon是强制（必需）的。</p>
 
 <p>有两种方式定义地址栏按钮：带popup窗口和无popup窗口。如果你没有指定一个popup，则当用户点击此按钮时，事件被派送到使用<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked">pageAction.onClicked</a>侦听器的扩展：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.pageAction.onClicked.addListener(handleClick);</code></pre>
 
 <p>如果你指定了一个popup，则点击事件不被派送，在用户点击按钮时显示popup。用户可以与popup进行交互，并且当用户点击popup以外区域时，popup自动关闭。参见<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup</a>可获得创建和管理popups更详细内容。</p>
 

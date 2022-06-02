@@ -6,14 +6,14 @@ translation_of: Web/API/IDBObjectStore/put
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p> {{domxref("IDBObjectStore")}} 接口的  <strong><code>put()</code></strong> 方法更新一条给定的数据库记录,如果给出的值不存在,则插入一个新的记录</p>
+<p> {{domxref("IDBObjectStore")}} 接口的  <strong><code>put()</code></strong> 方法更新一条给定的数据库记录，如果给出的值不存在，则插入一个新的记录</p>
 
-<p>它返回一个 {{domxref("IDBRequest")}} 对象,并且在一个单独的线程 ,创建一个值的 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> ,并且把它的值储存在对象仓库(object store)中. 当事务的模式是<code>readwrite时,</code>这个方法用来添加新的记录,或者更新一条对象仓库(object store)中已存在的记录 . 如果记录被成功储存, then a success event is fired on the returned request object with the <code>result</code> set to the key for the stored record, and the <code>transaction</code> set to the transaction in which this object store is opened.</p>
+<p>它返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程 ,创建一个值的 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> ,并且把它的值储存在对象仓库 (object store) 中. 当事务的模式是<code>readwrite 时，</code>这个方法用来添加新的记录，或者更新一条对象仓库 (object store) 中已存在的记录 . 如果记录被成功储存，then a success event is fired on the returned request object with the <code>result</code> set to the key for the stored record, and the <code>transaction</code> set to the transaction in which this object store is opened.</p>
 </div>
 
-<p>put方法是一个插入或更新对象仓库的方法. 参考仅用于插入的方法 {{domxref("IDBObjectStore.add")}} 方法.</p>
+<p>put 方法是一个插入或更新对象仓库的方法。参考仅用于插入的方法 {{domxref("IDBObjectStore.add")}} 方法。</p>
 
-<p>谨记,如果你有一条 {{domxref("cursor","IDBCursor")}} 记录想要更新, 使用{{domxref("IDBCursor.update()")}} 方法更新,比 {{domxref("IDBObjectStore.put()")}} 方法更合适. 这样做可以清楚地表明将更新现有记录，而不是插入新记录.</p>
+<p>谨记，如果你有一条 {{domxref("cursor","IDBCursor")}} 记录想要更新，使用{{domxref("IDBCursor.update()")}} 方法更新，比 {{domxref("IDBObjectStore.put()")}} 方法更合适。这样做可以清楚地表明将更新现有记录，而不是插入新记录。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -26,7 +26,7 @@ var <em>request</em> = <em>objectStore</em>.put(<em>item</em>, <em>key</em>);</p
 
 <dl>
  <dt>item</dt>
- <dd>你想要更新 (或插入)的记录.</dd>
+ <dd>你想要更新 (或插入) 的记录。</dd>
  <dt>key {{optional_inline}}</dt>
  <dd>你想要更新记录的主键 (e.g. from {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have an <code>autoIncrement</code> primary key, therefore the key is not in a field on the record object. In such cases, calling <code>put(item)</code> will always insert a new record, because it doesn't know what existing record you might want to modify.</dd>
 </dl>
@@ -84,14 +84,14 @@ var <em>request</em> = <em>objectStore</em>.put(<em>item</em>, <em>key</em>);</p
 
 <dl>
  <dt>value</dt>
- <dd>被储存的值.</dd>
+ <dd>被储存的值。</dd>
  <dt>key</dt>
- <dd>识别记录的键. 如果没有声明,那么记录键值将为空. 如果对象仓库有一个键生成器(e.g. autoincrement) ,必须传入key来更新对象.</dd>
+ <dd>识别记录的键。如果没有声明，那么记录键值将为空。如果对象仓库有一个键生成器 (e.g. autoincrement) ,必须传入 key 来更新对象。</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example requests a given record title; when that request is successful the <code>onsuccess</code> function gets the associated record from the {{domxref("IDBObjectStore")}} (made available as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates one property of the record, and then puts the updated record back into the object store in another request with <code>put()</code>. For a full working example, see our </span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>The following example requests a given record title; when that request is successful the <code>onsuccess</code> function gets the associated record from the {{domxref("IDBObjectStore")}} (made available as <code>objectStoreTitleRequest.result</code>), updates one property of the record, and then puts the updated record back into the object store in another request with <code>put()</code>. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a>.)</p>
 
 <pre class="brush: js" style="font-size: 14px;">var title = "Walk dog";
 
@@ -111,7 +111,7 @@ objectStoreTitleRequest.onsuccess = function() {
   // Create another request that inserts the item back into the database
   var updateTitleRequest = objectStore.put(data);
 
-  <span style="font-size: 1rem;">// Log the transaction that originated this request</span>
+  // Log the transaction that originated this request
   console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
 
   // When this new request succeeds, run the displayData() function again to update the display
@@ -120,7 +120,7 @@ objectStoreTitleRequest.onsuccess = function() {
   };
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span></h2>
+<h2 id="Specification">Specification</h2>
 
 <table class="standard-table">
  <tbody>

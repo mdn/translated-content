@@ -16,23 +16,23 @@ original_slug: Web/HTTP/策略特征/Using_Feature_Policy
 
 <h3 id="allowlist">allowlist</h3>
 
-<p>allowlist可以使用以下一个或多个值。</p>
+<p>allowlist 可以使用以下一个或多个值。</p>
 
 <ul>
- <li><code>*</code>: 允许在当前文档和所有包含的内容（比如iframes）中使用本特性。</li>
- <li><code>'self'</code>: 允许在当前文档中使用本特性，但在包含的内容（比如iframes）仍使用原值。</li>
- <li><code>'src'</code>: (只在iframe中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的URL和加载iframe用的URL相同，则本特性在iframe中允许，</li>
+ <li><code>*</code>: 允许在当前文档和所有包含的内容（比如 iframes）中使用本特性。</li>
+ <li><code>'self'</code>: 允许在当前文档中使用本特性，但在包含的内容（比如 iframes）仍使用原值。</li>
+ <li><code>'src'</code>: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，</li>
  <li><code>'none'</code>: 从最上层到包含的内容都禁止本特性。</li>
- <li>&lt;origin(s)&gt;: 在特定的源中允许，源URL以空格分割。</li>
+ <li>&lt;origin(s)&gt;: 在特定的源中允许，源 URL 以空格分割。</li>
 </ul>
 
-<p><code>*</code>(在所有源地址启用)<code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">或</span></font>'none'</code>(在所有源地址禁用)只允许单独使用，而<code>'self'</code>和<code>'src'</code>可以与多个源地址一起使用。</p>
+<p><code>*</code>(在所有源地址启用)<code>或'none'</code>(在所有源地址禁用) 只允许单独使用，而<code>'self'</code>和<code>'src'</code>可以与多个源地址一起使用。</p>
 
-<p>所有的特性都有一个如下的默认的allowlist</p>
+<p>所有的特性都有一个如下的默认的 allowlist</p>
 
 <ul>
  <li><code>*</code>: 本特性默认在最上层和包含的内容中（iframes）允许。</li>
- <li><code>'self'</code>: 本特性默认在最上层允许，而包含的内容中（iframes）使用源地址相同设定。也就是说本特性在iframe中不允许跨域访问。</li>
+ <li><code>'self'</code>: 本特性默认在最上层允许，而包含的内容中（iframes）使用源地址相同设定。也就是说本特性在 iframe 中不允许跨域访问。</li>
  <li><code>'none'</code>: 本特性默认在最上层和包含的内容中（iframes）都禁止。</li>
 </ul>
 

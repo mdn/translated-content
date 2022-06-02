@@ -12,7 +12,9 @@ La fonction `substring-before()` retourne retourne la partie d'une cha√Æne donn√
 
 ### Syntaxe
 
-    substring-before( bottedefoin , aiguille )
+```
+substring-before( bottedefoin , aiguille )
+```
 
 ### Arguments
 

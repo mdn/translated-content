@@ -12,13 +12,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/resolvedOptions
 ---
-{{JSRef}}{{Draft}}
+{{JSRef}}
 
 La méthode  **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
 
 ## Syntaxe
 
-    listFormat.resolvedOptions()
+```js
+listFormat.resolvedOptions()
+```
 
 ### Valeur de retour
 

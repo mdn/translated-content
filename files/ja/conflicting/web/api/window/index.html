@@ -1,0 +1,37 @@
+---
+title: Window.mozPaintCount
+slug: conflicting/Web/API/Window
+tags:
+  - API
+  - HTML DOM
+  - NeedsExample
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Window
+  - プロパティ
+  - リファレンス
+translation_of: Web/API/Window/mozPaintCount
+original_slug: Web/API/Window/mozPaintCount
+---
+<div>{{APIRef}} {{gecko_minversion_header("2.0")}}</div>
+
+<p>この window で現在の document が画面に描画された回数を返します。</p>
+
+<h2 id="Syntax" name="Syntax"> 構文</h2>
+
+<pre class="syntaxbox"><code>var <em>paintCount</em> = window.mozPaintCount;</code></pre>
+
+<ul>
+ <li><code><em>paintCount</em></code> は <code>window.mozPaintCount</code> プロパティの値を保存します。</li>
+ <li><code>window.mozPaintCount</code> の値は <code>long long</code> です、そして最初に document が生成された時にはゼロから開始し、 document が描画される度に1増加します。</li>
+</ul>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p><abbr title="World Wide Web Consortium">W3C</abbr> の技術仕様、または勧告の一部ではありません。</p>
+
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+
+
+
+<p>{{Compat("api.Window.mozPaintCount")}}</p>

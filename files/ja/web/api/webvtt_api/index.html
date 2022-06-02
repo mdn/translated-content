@@ -230,7 +230,7 @@ Transcrit par Célestes™
 <pre class="brush: css notranslate">::cue(#\31) { color: lime; }
 ::cue(#crédit\ de\ transcription) { color: red; }</pre>
 
-<p>以下に示すように、キュー内のタイミングの後に位置情報を含めることで、テキストトラックの位置もサポートします（詳細については、{{anch("Cue settings","キュー設定")}}を参照してください）。</p>
+<p>以下に示すように、キュー内のタイミングの後に位置情報を含めることで、テキストトラックの位置もサポートします（詳細については、<a href="#cue_settings">キュー設定</a>を参照してください）。</p>
 
 <pre class="notranslate">WEBVTT
 
@@ -910,6 +910,6 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 
 <p>Firefox 50 より前のバージョンでは、<code>AlignSetting</code> 列挙体（{{domxref("VTTCue.align")}} に指定可能な値を表す）に、<code>"center"</code> ではなく <code>"middle"</code> という値が誤って含まれていました。これは修正されました。</p>
 
-<p>WebVTT は Firefox 24 ではデフォルトの {{pref("media.webvtt.enabled")}} の背後に実装されていましたが、デフォルトでは無効になっています。この設定を <code>true</code> に設定することで有効にできます。WebVTT は Firefox 31 以降ではデフォルトで有効になっていますが、設定を <code>false</code> に設定することで無効にすることができます。</p>
+<p>WebVTT は Firefox 24 ではデフォルトの <code>media.webvtt.enabled</code> の背後に実装されていましたが、デフォルトでは無効になっています。この設定を <code>true</code> に設定することで有効にできます。WebVTT は Firefox 31 以降ではデフォルトで有効になっていますが、設定を <code>false</code> に設定することで無効にすることができます。</p>
 
 <p>Firefox 58 より前のバージョンでは、<code>REGION</code> キーワードは {{domxref("VTTRegion")}} オブジェクトを作成していましたが、使用していませんでした。Firefox 58 は現在 <code>VTTRegion</code> とその使用を完全にサポートしています。ただし、この機能は設定 <code>media.webvtt.regions.enabled</code> の背後でデフォルトで無効になっています。Firefox 58 で領域のサポートを有効にするには、<code>true</code> に設定します。領域は Firefox 59 以降でデフォルトで有効になっています（{{bug(1338030)}} および {{bug(1415805)}} のバグを参照）。</p>

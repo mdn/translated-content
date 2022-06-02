@@ -12,13 +12,13 @@ translation_of: Web/CSS/shape-image-threshold
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>shape-image-threshold</code></strong> 通过设定一个alpha通道的界限值来提取{{cssxref("shape-outside")}} 值为图像的形状。</span></p>
+<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>shape-image-threshold</code></strong> 通过设定一个 alpha 通道的界限值来提取{{cssxref("shape-outside")}} 值为图像的形状。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}</div>
 
 
 
-<p>所有alpha值比这个界限值大的像素都会被当做形状的一部分，以此确定形状的边界。举个例子，界限值为<code>0.5</code>时，形状会包含所有不透明度超过50%的像素。</p>
+<p>所有 alpha 值比这个界限值大的像素都会被当做形状的一部分，以此确定形状的边界。举个例子，界限值为<code>0.5</code>时，形状会包含所有不透明度超过 50% 的像素。</p>
 
 <pre class="brush:css no-line-numbers">/* &lt;number&gt; value */
 shape-image-threshold: 0.7;
@@ -37,7 +37,7 @@ shape-image-threshold: unset;
 
 <dl>
  <dt>{{cssxref("&lt;alpha-value&gt;")}}</dt>
- <dd>设定界限值以从图像中提取形状。形状由所有alpha值比界限值大的像素定义。在0.0（完全透明）到1.0（完全不透明）之外的值会被重置（译者：如，小于0.0的值会被重置成0.0）。</dd>
+ <dd>设定界限值以从图像中提取形状。形状由所有 alpha 值比界限值大的像素定义。在 0.0（完全透明）到 1.0（完全不透明）之外的值会被重置（译者：如，小于 0.0 的值会被重置成 0.0）。</dd>
 </dl>
 
 <h3 id="正式语法">正式语法</h3>
@@ -48,7 +48,7 @@ shape-image-threshold: unset;
 
 <h3 id="Aligning_text_to_a_gradient">Aligning text to a gradient</h3>
 
-<p>这个例子创建了一个{{HTMLElement("div")}}块，其背景是一个渐变图像。<code>shape-outside</code>也定义了一个渐变图像，以此创建一个CSS形状，渐变图像中不透明度至少为20%（即alpha值大于0.2）的像素都是形状的一部分。</p>
+<p>这个例子创建了一个{{HTMLElement("div")}}块，其背景是一个渐变图像。<code>shape-outside</code>也定义了一个渐变图像，以此创建一个 CSS 形状，渐变图像中不透明度至少为 20%（即 alpha 值大于 0.2）的像素都是形状的一部分。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -82,7 +82,7 @@ shape-image-threshold: unset;
 
 <p>在这里，形状由{{cssxref("background-image")}}创建，使用渐变而非图像文件。我们在{{cssxref("shape-outside")}}属性中使用相同的渐变图像创建形状，以此构建浮动区域。</p>
 
-<p>随后值为<code>0.2</code>的<code>shape-image-threshold</code>属性规定渐变中不透明度超过20%的像素才参与构成形状。</p>
+<p>随后值为<code>0.2</code>的<code>shape-image-threshold</code>属性规定渐变中不透明度超过 20% 的像素才参与构成形状。</p>
 
 <h4 id="Result">Result</h4>
 

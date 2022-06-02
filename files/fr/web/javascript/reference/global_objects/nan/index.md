@@ -18,7 +18,9 @@ La propriété globale **`NaN`** est une valeur utilisée pour représenter une 
 
 ## Syntaxe
 
-    NaN
+```js
+NaN
+```
 
 ## Description
 

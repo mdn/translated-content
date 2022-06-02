@@ -16,7 +16,7 @@ translation_of: Web/API/Node/nextSibling
 
 <p> </p>
 
-<p>Gecko内核的浏览器会在源代码中标签内部有空白符的地方插入一个文本结点到文档中.因此,使用诸如 <a href="/zh-CN/docs/Web/API/Node/firstChild" title="Node.firstChild 只读属性返回树中节点的第一个子节点，如果节点是无子节点，则返回 null。"><code>Node.firstChild</code></a> 和 <a href="/zh-CN/docs/Web/API/Node/previousSibling" title="返回当前节点的前一个兄弟节点,没有则返回null."><code>Node.previousSibling</code></a> 之类的方法可能会引用到一个空白符文本节点, 而不是使用者所预期得到的节点.</p>
+<p>Gecko 内核的浏览器会在源代码中标签内部有空白符的地方插入一个文本结点到文档中。因此，使用诸如 <a href="/zh-CN/docs/Web/API/Node/firstChild" title="Node.firstChild 只读属性返回树中节点的第一个子节点，如果节点是无子节点，则返回 null。"><code>Node.firstChild</code></a> 和 <a href="/zh-CN/docs/Web/API/Node/previousSibling" title="返回当前节点的前一个兄弟节点,没有则返回null."><code>Node.previousSibling</code></a> 之类的方法可能会引用到一个空白符文本节点，而不是使用者所预期得到的节点。</p>
 
 <p>详情请参见 <a class="new" href="/zh-CN/docs/Whitespace_in_the_DOM" rel="nofollow">DOM 中的空白符</a> 和<a class="external" href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: 为什么一些文本节点是空的</a>.</p>
 

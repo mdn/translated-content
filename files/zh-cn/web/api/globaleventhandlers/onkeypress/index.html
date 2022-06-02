@@ -10,7 +10,7 @@ translation_of: Web/API/GlobalEventHandlers/onkeypress
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<p><strong>onkeypress</strong> 属性用来获取或设置当前元素的keypress事件的事件处理函数.</p>
+<p><strong>onkeypress</strong> 属性用来获取或设置当前元素的 keypress 事件的事件处理函数。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,9 +29,9 @@ translation_of: Web/API/GlobalEventHandlers/onkeypress
 
 <h2 id="示例">示例</h2>
 
-<h3 id="示例1：通过正则表达式在表单域中过滤数字">示例1：通过正则表达式在表单域中过滤数字</h3>
+<h3 id="示例1：通过正则表达式在表单域中过滤数字">示例 1：通过正则表达式在表单域中过滤数字</h3>
 
-<p>下例演示了 <code>onkeypress </code>事件在一个文本输入框内的用法——将数字输入到表单时过滤输入的内容:</p>
+<p>下例演示了 <code>onkeypress</code> 事件在一个文本输入框内的用法——将数字输入到表单时过滤输入的内容：</p>
 
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -47,14 +47,14 @@ translation_of: Web/API/GlobalEventHandlers/onkeypress
 
 &lt;body&gt;
 &lt;form name="myForm"&gt;
-&lt;p&gt;这个文本框只能输入数字(译者注:不用中文输入法的前提下):
+&lt;p&gt;这个文本框只能输入数字 (译者注：不用中文输入法的前提下):
 &lt;input type="text" name="myInput" onkeypress="return numbersOnly(this, event);" onpaste="return false;" /&gt;&lt;/p&gt;
 &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-<h3 id="示例2：捕获隐藏单词的输入">示例2：捕获隐藏单词的输入</h3>
+<h3 id="示例2：捕获隐藏单词的输入">示例 2：捕获隐藏单词的输入</h3>
 
 <p>以下示例将在用户在页面的任何位置键入单词“exit”后执行某些操作。</p>
 

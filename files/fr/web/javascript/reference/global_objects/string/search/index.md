@@ -19,7 +19,9 @@ La méthode **`search()`** éxecute une recherche dans une chaine de caractères
 
 ## Syntaxe
 
-    str.search(regexp)
+```js
+str.search(regexp)
+```
 
 ### Paramètres
 

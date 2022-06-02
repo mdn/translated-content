@@ -5,9 +5,9 @@ translation_of: Web/API/Cache/put
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">{{domxref("Cache")}} 接口的  <strong><code>put()</code></strong> 方法 允许将键/值对添加到当前的 {{domxref("Cache")}} 对象中.</span></p>
+<p>{{domxref("Cache")}} 接口的  <strong><code>put()</code></strong> 方法 允许将键/值对添加到当前的 {{domxref("Cache")}} 对象中。</p>
 
-<p><span class="seoSummary">通常，你只想 </span>{{domxref("GloblFetch.fetch","fetch()")}} 一个或多个请求，然后直接添加结果到cache中。这种情况下，最好使用 {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}，因为它们是一个或者多个这些操作的便捷方法。</p>
+<p>通常，你只想 {{domxref("GloblFetch.fetch","fetch()")}} 一个或多个请求，然后直接添加结果到 cache 中。这种情况下，最好使用 {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}，因为它们是一个或者多个这些操作的便捷方法。</p>
 
 <pre class="brush: js">fetch(url).then(function(response) {
   if (!response.ok) {
@@ -19,15 +19,15 @@ translation_of: Web/API/Cache/put
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: <code>put()</code> 将覆盖先前存储在匹配请求的cache中的任何键/值对。</p>
+<p><strong>注意</strong>: <code>put()</code> 将覆盖先前存储在匹配请求的 cache 中的任何键/值对。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不会缓存 <code>Response.status</code> 值不在200范围内的响应，而 {{domxref("Cache.put")}} 允许你存储任何请求/响应对。因此，{{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不能用于不透明的响应，而 {{domxref("Cache.put")}} 可以。</p>
+<p><strong>注意</strong>: {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不会缓存 <code>Response.status</code> 值不在 200 范围内的响应，而 {{domxref("Cache.put")}} 允许你存储任何请求/响应对。因此，{{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不能用于不透明的响应，而 {{domxref("Cache.put")}} 可以。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 当响应主体完全写入磁盘时，初始Cache执行 (在 Blink 和 Gecko中) resolve {{domxref("Cache.add")}}、{{domxref("Cache.addAll")}} 和 {{domxref("Cache.put")}} promise.  更新的规范版本中声明：即使响应主体仍在流式传输，一旦条目被记录到数据库中，浏览器就可以 resolve promise.</p>
+<p><strong>注意</strong>: 当响应主体完全写入磁盘时，初始 Cache 执行 (在 Blink 和 Gecko 中) resolve {{domxref("Cache.add")}}、{{domxref("Cache.addAll")}} 和 {{domxref("Cache.put")}} promise.  更新的规范版本中声明：即使响应主体仍在流式传输，一旦条目被记录到数据库中，浏览器就可以 resolve promise.</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -79,20 +79,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

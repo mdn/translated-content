@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Headers/Large-Allocation
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>非标准的<strong><code>Large-Allocation</code></strong> 响应头部是用来告诉浏览器加载该页面可能需要申请大内存. 当前只有Firefox实现该特性，但是对其他浏览器也无损害。</p>
+<p>非标准的<strong><code>Large-Allocation</code></strong> 响应头部是用来告诉浏览器加载该页面可能需要申请大内存。当前只有 Firefox 实现该特性，但是对其他浏览器也无损害。</p>
 
-<p><a href="/en-US/docs/WebAssembly">WebAssembly</a> 或者 asm.js会使用比较大的连续内存空间。例如, 对于一些复杂的游戏， 其申请的空间将会非常大，甚至会达到1GB。<code>Large-Allocation</code> 告诉浏览器其将要加载的页面可能需要申请一个大的连续内存空间，浏览器依据该头部可能会单独启动一个专有的进程用于处理该页面。</p>
+<p><a href="/en-US/docs/WebAssembly">WebAssembly</a> 或者 asm.js 会使用比较大的连续内存空间。例如，对于一些复杂的游戏， 其申请的空间将会非常大，甚至会达到 1GB。<code>Large-Allocation</code> 告诉浏览器其将要加载的页面可能需要申请一个大的连续内存空间，浏览器依据该头部可能会单独启动一个专有的进程用于处理该页面。</p>
 
 <table class="properties">
  <tbody>
@@ -32,9 +32,9 @@ Large-Allocation: &lt;megabytes&gt;
 
 <dl>
  <dt><code>0</code></dt>
- <dd>0 是一个特殊的值,代表给它分配的大小是不确定的(动态允许).</dd>
+ <dd>0 是一个特殊的值，代表给它分配的大小是不确定的 (动态允许).</dd>
  <dt><code>&lt;megabytes&gt;</code></dt>
- <dd>预期需要申请的内存大小，以M为单位</dd>
+ <dd>预期需要申请的内存大小，以 M 为单位</dd>
  <dt></dt>
 </dl>
 
@@ -49,10 +49,10 @@ Large-Allocation: 500
 <p>如果使用不当， <code>Large-Allocation</code> 会抛出警告或者错误信息，你可以在 <a href="/en-US/docs/Tools/Web_Console">web console</a> 查看它们。</p>
 
 <dl>
- <dt>由于<code>Large-Allocation报头存在,这个页面会在一个新的进程处理和加载</code></dt>
+ <dt>由于<code>Large-Allocation 报头存在，这个页面会在一个新的进程处理和加载</code></dt>
  <dd>This message means that the browser saw the <code>Large-Allocation</code> header, and was able to reload the page into a new process which should have more available contiguous memory.</dd>
- <dt> <code>Large-Allocation</code> 报头由于非<code>non-GET请求而直接忽略</code></dt>
- <dd>当一个 {{HTTPMethod("POST")}} 请求用语加载文档, that load cannot currently be redirected into a new process. This error is displayed when loading a document with a <code>Large-Allocation</code> header with a non-GET HTTP method. This could be caused due to the document being loaded by a form submission, for example.</dd>
+ <dt> <code>Large-Allocation</code> 报头由于非<code>non-GET 请求而直接忽略</code></dt>
+ <dd>当一个 {{HTTPMethod("POST")}} 请求用语加载文档，that load cannot currently be redirected into a new process. This error is displayed when loading a document with a <code>Large-Allocation</code> header with a non-GET HTTP method. This could be caused due to the document being loaded by a form submission, for example.</dd>
  <dt>A <code>Large-Allocation</code> header was ignored due to the presence of windows which have a reference to this browsing context through the frame hierarchy or {{domxref("window.opener")}}.</dt>
  <dd>
  <p>This error means that the document was not loaded at the top level of an user-opened or noopener-opened tab or window. It can occur in these situations:</p>
@@ -65,8 +65,8 @@ Large-Allocation: 500
  </dd>
  <dt><code>Large-Allocation</code> 报头由于 文档在加载过程没有被加载而直接忽略</dt>
  <dd>Firefox has moved to a <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess architecture</a>, and this architecture is required in order to support the <code>Large-Allocation</code> header. Some <a href="/en-US/docs/Mozilla/Add-ons/SDK">legacy Addons</a> can prevent Firefox from using this new, faster, multiprocess architecture. If you have one of these Addons installed, then we will continue to use the old single process architecuture for compatibility, and cannot handle the <code>Large-Allocation</code> header.</dd>
- <dt>由于<code>Large-Allocation</code>头部，此页面应将被加载到新进程中, 但是在非Win32平台上禁用此选项。</dt>
- <dd>由于在64位系统里内存碎片不是问题，Firefox只在32位系统支持<code>Large-Allocation</code>头部。如果你运行一个非32位的程序，这类信息就会出现。可以设置about:config里面的"dom.largeAllocation.forceEnable"布尔值来关闭此检查。</dd>
+ <dt>由于<code>Large-Allocation</code>头部，此页面应将被加载到新进程中，但是在非 Win32 平台上禁用此选项。</dt>
+ <dd>由于在 64 位系统里内存碎片不是问题，Firefox 只在 32 位系统支持<code>Large-Allocation</code>头部。如果你运行一个非 32 位的程序，这类信息就会出现。可以设置 about:config 里面的"dom.largeAllocation.forceEnable"布尔值来关闭此检查。</dd>
  <dd></dd>
 </dl>
 

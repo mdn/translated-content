@@ -5,7 +5,7 @@ translation_of: Web/API/Animation/play
 ---
 <div>{{ APIRef("Web Animations") }}{{SeeCompatTable}}</div>
 
-<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>的{{ domxref("Animation") }}接口中的<strong><code>play()</code></strong> 方法 可开始或恢复动画的播放. 如果动画结束，则调用<code>play()</code>重新启动动画，从头开始播放。</p>
+<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>的{{ domxref("Animation") }}接口中的<strong><code>play()</code></strong> 方法 可开始或恢复动画的播放。如果动画结束，则调用<code>play()</code>重新启动动画，从头开始播放。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/Animation/play
 
 <h3 id="参数">参数</h3>
 
-<p>无.</p>
+<p>无。</p>
 
 <h3 id="返回值">返回值</h3>
 
@@ -22,9 +22,9 @@ translation_of: Web/API/Animation/play
 
 <h2 id="例子">例子</h2>
 
-<p>在 <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> 示例中, 单击或点击蛋糕会导致Alice的增长动画 (<code>aliceChange</code>) 播放,导致她体型变大并触发蛋糕的动画。在以下示例中,使用了一个事件监听器来触发两者的动画:</p>
+<p>在 <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (<code>aliceChange</code>) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：</p>
 
-<pre class="brush: js">// 蛋糕拥有其自己的动画:
+<pre class="brush: js">// 蛋糕拥有其自己的动画：
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
@@ -35,7 +35,7 @@ var nommingCake = document.getElementById('eat-me_sprite').animate(
   duration: aliceChange.effect.timing.duration / 2
 });
 
-// 暂停蛋糕的动画,以避免动画立即播放.
+// 暂停蛋糕的动画，以避免动画立即播放。
 nommingCake.pause();
 
 // 该函数会在用户点击时触发
@@ -49,27 +49,14 @@ var growAlice = function() {
 
 }
 
-// 当用户持续按下或点击时, 调用 growAlice 函数使得所有的动画播放.
+// 当用户持续按下或点击时，调用 growAlice 函数使得所有的动画播放。
 cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
 </pre>
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-play', 'play()')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

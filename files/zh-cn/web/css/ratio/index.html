@@ -5,19 +5,19 @@ translation_of: Web/CSS/ratio
 ---
 <div>{{CSSRef}}</div>
 
-<p>       &lt;ratio&gt; CSS数据类型，用于描述媒体查询中的宽高比，表示两个无单位值之间的比例。</p>
+<p>       &lt;ratio&gt; CSS 数据类型，用于描述媒体查询中的宽高比，表示两个无单位值之间的比例。</p>
 
 <h2 id="句法">句法</h2>
 
-<p>       在Media Queries Level 3中，&lt;ratio&gt;数据类型包括一个正数的<a href="/zh-CN/docs/Web/CSS/integer">&lt;integer&gt;</a>值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的<a href="/zh-CN/docs/Web/CSS/integer">&lt;integer&gt;</a>值。斜杠前后的空格是可选的。第一个数字代表宽度，第二个数字代表高度。</p>
+<p>       在 Media Queries Level 3 中，&lt;ratio&gt;数据类型包括一个正数的<a href="/zh-CN/docs/Web/CSS/integer">&lt;integer&gt;</a>值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的<a href="/zh-CN/docs/Web/CSS/integer">&lt;integer&gt;</a>值。斜杠前后的空格是可选的。第一个数字代表宽度，第二个数字代表高度。</p>
 
-<p>       在Media Queries Level 4中，&lt;ratio&gt;数据类型包括一个正数的<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>值。此外，允许使用单个<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>作为值。</p>
+<p>       在 Media Queries Level 4 中，&lt;ratio&gt;数据类型包括一个正数的<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>值。此外，允许使用单个<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>作为值。</p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="在媒体查询中使用">在媒体查询中使用</h3>
 
-<pre class="brush: css notranslate">@media screen和(min-aspect-ratio：16/9){...}</pre>
+<pre class="brush: css notranslate">@media screen and (min-aspect-ratio: 16/9) { ... }</pre>
 
 <h3 id="常见的宽高比">常见的宽高比</h3>
 
@@ -35,7 +35,7 @@ translation_of: Web/CSS/ratio
   <tr>
    <td><img alt="Ratio4_3.png" class="default internal" src="/@api/deki/files/5714/=Ratio4_3.png"></td>
    <td><code>4/3</code></td>
-   <td>在20传统电视制式<span style="font-size: 13.3333px;">格式</span>。</td>
+   <td>在 20 传统电视制式格式。</td>
   </tr>
   <tr>
    <td><img alt="Ratio16_9.png" src="/@api/deki/files/5711/=Ratio16_9.png"></td>
@@ -46,7 +46,7 @@ translation_of: Web/CSS/ratio
    <td><img alt="Ratio1_1.85.png" src="/@api/deki/files/5712/=Ratio1_1.85.png"></td>
    <td><code>185/100</code>= <code>91/50</code><br>
     <em>(不允许非整数除数和除数)</em></td>
-   <td>自20世纪60年代以来最常见的电影格式。</td>
+   <td>自 20 世纪 60 年代以来最常见的电影格式。</td>
   </tr>
   <tr>
    <td><img alt="Ratio1_2.39.png" src="/@api/deki/files/5713/=Ratio1_2.39.png"></td>

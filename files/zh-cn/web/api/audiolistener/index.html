@@ -5,7 +5,7 @@ translation_of: Web/API/AudioListener
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p><code>AudioListener</code> 接口代表了人听音乐场景时声音的位置和方向, 和用于<a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">音频空间化</a>。 所有{{domxref("PannerNode")}} 相对于 <code>AudioListener</code> 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里.</p>
+<p><code>AudioListener</code> 接口代表了人听音乐场景时声音的位置和方向，和用于<a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">音频空间化</a>。 所有{{domxref("PannerNode")}} 相对于 <code>AudioListener</code> 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。</p>
 
 <p>特别需要注意的是一个环境中只能有一个收听者而且这不是{{domxref("AudioNode")}}.</p>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/AudioListener
 <h2 id="Properties">Properties</h2>
 
 <div class="note">
-<p>position,forward和up值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 <code>AudioListener.positionX</code> ，设置相同属性时可以通过使用 <code>AudioListener.positionX.value</code> 来完成。 这就是为什么他们不被标记为只读， 这在规范的接口定义中就是这么说的.</p>
+<p>position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 <code>AudioListener.positionX</code> ，设置相同属性时可以通过使用 <code>AudioListener.positionX.value</code> 来完成。 这就是为什么他们不被标记为只读， 这在规范的接口定义中就是这么说的。</p>
 </div>
 
 <dl>
@@ -55,9 +55,9 @@ translation_of: Web/API/AudioListener
 
 <dl>
  <dt>{{domxref("AudioListener.dopplerFactor")}} {{obsolete_inline}}</dt>
- <dd>一个Double值，表示在呈现 <a href="http://en.wikipedia.org/wiki/Doppler_effect">多普勒效应</a> 时要使用的音高偏移量。</dd>
+ <dd>一个 Double 值，表示在呈现 <a href="http://en.wikipedia.org/wiki/Doppler_effect">多普勒效应</a> 时要使用的音高偏移量。</dd>
  <dt>{{domxref("AudioListener.speedOfSound")}} {{obsolete_inline}}</dt>
- <dd>一个Double值代表了声音的速度，以米每秒的单位计算。</dd>
+ <dd>一个 Double 值代表了声音的速度，以米每秒的单位计算。</dd>
 </dl>
 
 <p>In a previous version of the specification, the <code>dopplerFactor</code> and <code>speedOfSound</code> properties and the <code>setPosition()</code> method could be used to control the doppler effect applied to {{domxref("AudioBufferSourceNode")}}s connected downstream — these would be pitched up and down according to the relative speed of the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}. These features had a number of problems:</p>
@@ -81,20 +81,7 @@ translation_of: Web/API/AudioListener
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#audiolistener', 'AudioListener')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

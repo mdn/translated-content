@@ -9,10 +9,10 @@ translation_of: Web/API/MouseEvent/button
 
 <p>这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。</p>
 
-<p>用户可能会改变鼠标按键的配置，因此当一个事件的<strong><code>MouseEvent.button</code></strong>值为0时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。</p>
+<p>用户可能会改变鼠标按键的配置，因此当一个事件的<strong><code>MouseEvent.button</code></strong>值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。</p>
 
 <div class="note">
-<p><strong>注意：</strong>{{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和MouseEvent.button属性弄混淆了。</p>
+<p><strong>注意：</strong>{{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 MouseEvent.button 属性弄混淆了。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -26,7 +26,7 @@ translation_of: Web/API/MouseEvent/button
 
 <ul>
  <li>
-  <p><code>0</code>：主按键，通常指鼠标左键或默认值（译者注：如document.getElementById('a').click()这样触发就会是默认值）</p>
+  <p><code>0</code>：主按键，通常指鼠标左键或默认值（译者注：如 document.getElementById('a').click() 这样触发就会是默认值）</p>
  </li>
  <li><code>1</code>：辅助按键，通常指鼠标滚轮中键</li>
  <li><code>2</code>：次按键，通常指鼠标右键</li>

@@ -51,14 +51,14 @@ translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 <p>有时，根据上下文，术语有几个含义。 要解决歧义，您必须遵循以下准则：</p>
 
 <ul>
- <li>该术语的主页面必须是一个包含了 {{TemplateLink("GlossaryDisambiguation")}} 宏的消歧页面；</li>
+ <li>该术语的主页面必须是一个包含了 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs"><code>GlossaryDisambiguation</code></a> 宏的消歧页面；</li>
  <li>该术语具有定义给定上下文的术语的子页面。</li>
 </ul>
 
-<p>我们以一个例子来说明。<em>signature</em> 条目在至少三种不同的语境中具有不同的含义： <em>安全</em>、<em>函数 </em>和 <em>电子邮件</em>。</p>
+<p>我们以一个例子来说明。<em>signature</em> 条目在至少三种不同的语境中具有不同的含义： <em>安全</em>、<em>函数 </em>和 <em>电子邮件</em>。</p>
 
 <ol>
- <li><a href="/zh-CN/docs/Glossary/Signature">Glossary/Signature</a> 页面是使用了 {{TemplateLink("GlossaryDisambiguation")}} 宏的消歧页面；</li>
+ <li><a href="/zh-CN/docs/Glossary/Signature">Glossary/Signature</a> 页面是使用了 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs"><code>GlossaryDisambiguation</code></a> 宏的消歧页面；</li>
  <li><a href="/zh-CN/docs/Glossary/Signature/Security">Glossary/Signature/Security</a> 页面是定义安全上下文中签名的条目页面；</li>
  <li><a href="/zh-CN/docs/Glossary/Signature/Function">Glossary/Signature/Function</a> 页面是定义函数签名的条目页面；</li>
  <li><a href="/zh-CN/docs/Glossary/Signature/Email">Glossary/Signature/Email</a> 页面是定义电子邮件签名的条目页面。</li>
@@ -66,7 +66,7 @@ translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 
 <h2 id="如何使用_Glossary_宏">如何使用 \{{Glossary}} 宏</h2>
 
-<p>当人们可以在另一个文档访问到词汇的定义，而无需他们从正在阅读的内容进行跳转阅读词汇定义时，词汇表是最好用的。因此，我们敦促您随时使用 {{TemplateLink("Glossary")}} 宏将词汇链接到词汇表：</p>
+<p>当人们可以在另一个文档访问到词汇的定义，而无需他们从正在阅读的内容进行跳转阅读词汇定义时，词汇表是最好用的。因此，我们敦促您随时使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs"><code>Glossary</code></a> 宏将词汇链接到词汇表：</p>
 
 <table class="standard-table">
  <thead>

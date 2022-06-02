@@ -13,13 +13,13 @@ browser-compat: javascript.builtins.Map
 ---
 {{JSRef}}
 
-**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为一个键或一个值。
+**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
 ## 描述
 
-一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。 
+一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。
 
 ### 键的相等
 
@@ -46,7 +46,7 @@ browser-compat: javascript.builtins.Map
       <th scope="row">意外的键</th>
       <td><code>Map</code> 默认情况不包含任何键。只包含显式插入的键。</td>
       <td>
-        <p>一个 <code>Object</code> 有一个原型, 原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
+        <p>一个 <code>Object</code> 有一个原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
         <div class="notecard note">
           <p><strong>备注：</strong>虽然从 ES5 开始可以用 {{jsxref("Object.create", "Object.create(null)")}} 来创建一个没有原型的对象，但是这种用法不太常见。</p>
         </div>
@@ -60,7 +60,7 @@ browser-compat: javascript.builtins.Map
     <tr>
       <th scope="row">键的顺序</th>
       <td>
-        <p><code>Map</code> 中的 key 是有序的。因此，当迭代的时候，一个 <code>Map</code> 对象以插入的顺序返回键值。</p>
+        <p><code>Map</code> 中的键是有序的。因此，当迭代的时候，一个 <code>Map</code> 对象以插入的顺序返回键值。</p>
       </td>
       <td>
         <p>虽然 <code>Object</code> 的键目前是有序的，但并不总是这样，而且这个顺序是复杂的。因此，最好不要依赖属性的顺序。</p>
@@ -194,7 +194,7 @@ console.log(contacts.size) // 1
 - {{jsxref("Map.prototype.clear()")}}
   - : 移除 `Map` 对象中所有的键值对。
 - {{jsxref("Map.delete", "Map.prototype.delete(<var>key</var>)")}}
-  - : 移除 `Map` 对象中指定的键值对，如果键值对存在，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `Map.prototype.has(key)` 将返回 `false`。
+  - : 移除 `Map` 对象中指定的键值对，如果键值对存在并成功被移除，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `Map.prototype.has(key)` 将返回 `false`。
 - {{jsxref("Map.get", "Map.prototype.get(<var>key</var>)")}}
   - : 返回与 `key` 关联的值，若不存在关联的值，则返回 `undefined`。
 - {{jsxref("Map.has", "Map.prototype.has(<var>key</var>)")}}
@@ -205,7 +205,7 @@ console.log(contacts.size) // 1
 ### 迭代方法
 
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。 
+  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.keys()")}}
   - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的**键**，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.values()")}}
@@ -229,25 +229,25 @@ const keyFunc = function() {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
-myMap.set(keyObj, "和键keyObj关联的值");
-myMap.set(keyFunc, "和键keyFunc关联的值");
+myMap.set(keyObj, "和键 keyObj 关联的值");
+myMap.set(keyFunc, "和键 keyFunc 关联的值");
 
 myMap.size; // 3
 
 // 读取值
 myMap.get(keyString);    // "和键'a string'关联的值"
-myMap.get(keyObj);       // "和键keyObj关联的值"
-myMap.get(keyFunc);      // "和键keyFunc关联的值"
+myMap.get(keyObj);       // "和键 keyObj 关联的值"
+myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
 
 myMap.get('a string');   // "和键'a string'关联的值"
-                         // 因为keyString === 'a string'
-myMap.get({});           // undefined, 因为keyObj !== {}
-myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}
+                         // 因为 keyString === 'a string'
+myMap.get({});           // undefined，因为 keyObj !== {}
+myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
 ```
 
 ### 将 NaN 作为 Map 的键
 
-`NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但下面的例子表明，`NaN` 作为 Map 的键来说是没有区别的：
+`NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但是因为所有的 `NaN` 的值都是无法区分的，所以下面的例子成立：
 
 ```js
 const myMap = new Map()
@@ -347,7 +347,7 @@ console.log(original === clone); // false. 浅比较 不为同一个对象的引
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 
 ```js
-cosnt first = new Map([
+const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],

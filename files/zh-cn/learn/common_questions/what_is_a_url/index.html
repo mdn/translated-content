@@ -3,7 +3,7 @@ title: 什么是URL？
 slug: Learn/Common_questions/What_is_a_URL
 translation_of: Learn/Common_questions/What_is_a_URL
 ---
-<div class="summary">
+<div>
 <p>本文讨论了统一资源定位符(URL)，并解释了他们是什么，以及如何被构建的。</p>
 </div>
 
@@ -22,7 +22,7 @@ translation_of: Learn/Common_questions/What_is_a_URL
 
 <h2 id="概述">概述</h2>
 
-<p><span class="seoSummary">和 {{Glossary("Hypertext")}} 以及 {{Glossary("HTTP")}} 一样，<strong><dfn>URL </dfn></strong><dfn>是 Web 中的一个核心概念。它是</dfn>{{Glossary("Browser","浏览器")}}<dfn>用来检索 web 上公布的任何资源的机制。</dfn></span></p>
+<p>和 {{Glossary("Hypertext")}} 以及 {{Glossary("HTTP")}} 一样，<strong><dfn>URL </dfn></strong><dfn>是 Web 中的一个核心概念。它是</dfn>{{Glossary("Browser","浏览器")}}<dfn>用来检索 web 上公布的任何资源的机制。</dfn></p>
 
 <p><strong>URL 代表着是统一资源定位符（</strong><em>Uniform Resource Locator</em><strong>）</strong>。URL 无非就是一个给定的独特资源在 Web 上的地址。理论上说，每个有效的 URL 都指向一个唯一的资源。这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等。而在实际中，也有一些例外，最常见的情况就是一个 URL 指向了不存在的或是被移动过的资源。由于通过 URL 呈现的资源和 URL 本身由 Web 服务器处理，因此 web 服务器的拥有者需要认真地维护资源以及与它关联的URL。</p>
 
@@ -48,7 +48,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <dl>
  <dt><img alt="Protocol" src="https://mdn.mozillademos.org/files/15766/mdn-url-protocol@x2_update.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>http</code> 是协议。它表明了浏览器必须使用何种协议。它通常都是HTTP协议或是HTTP协议的安全版，即HTTPS。Web需要它们二者之一，但浏览器也知道如何处理其他协议，比如<code>mailto:（打开邮件客户端）或者<font face="Open Sans, Arial, sans-serif"> </font></code><code>ftp:（处理文件传输），所以当你看到这些协议时，不必惊讶。</code></dd>
+ <dd><code>http</code> 是协议。它表明了浏览器必须使用何种协议。它通常都是HTTP协议或是HTTP协议的安全版，即HTTPS。Web需要它们二者之一，但浏览器也知道如何处理其他协议，比如<code>mailto:（打开邮件客户端）或者 </code><code>ftp:（处理文件传输），所以当你看到这些协议时，不必惊讶。</code></dd>
  <dt><img alt="Domaine Name" src="https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png" style="height: 70px; width: 440px;"></dt>
  <dd><code>www.example.com</code> 是域名。 它表明正在请求哪个Web服务器。或者，可以直接使用{{Glossary("IP address")}}, 但是因为它不太方便，所以它不经常在网络上使用。.</dd>
  <dt><img alt="Port" src="https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png" style="height: 70px; width: 440px;"></dt>

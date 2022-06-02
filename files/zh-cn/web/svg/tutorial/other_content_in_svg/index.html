@@ -1,5 +1,5 @@
 ---
-title: 其它SVG内容
+title: 其它 SVG 内容
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 tags:
   - SVG
@@ -8,13 +8,13 @@ translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}</p>
 
-<p>除了图形化原件，如矩形和圆形之外，SVG还提供了一些元素用来在图片中嵌入别的类型的内容。</p>
+<p>除了图形化原件，如矩形和圆形之外，SVG 还提供了一些元素用来在图片中嵌入别的类型的内容。</p>
 
 <h3 id="嵌入光栅图像">嵌入光栅图像</h3>
 
-<p>很像在HTML中的<code>img</code>元素，SVG有一个<code>image</code>元素，用于同样的目的。你可以利用它嵌入任意光栅（以及矢量）图像。它的规格要求应用至少支持PNG、JPG和SVG格式文件。</p>
+<p>很像在 HTML 中的<code>img</code>元素，SVG 有一个<code>image</code>元素，用于同样的目的。你可以利用它嵌入任意光栅（以及矢量）图像。它的规格要求应用至少支持 PNG、JPG 和 SVG 格式文件。</p>
 
-<p>嵌入的图像变成一个普通的SVG元素。这意味着，你可以在其内容上用剪切、遮罩、滤镜、旋转以及其它SVG工具：</p>
+<p>嵌入的图像变成一个普通的 SVG 元素。这意味着，你可以在其内容上用剪切、遮罩、滤镜、旋转以及其它 SVG 工具：</p>
 
 <pre class="brush: html">&lt;svg version="1.1"
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -39,14 +39,14 @@ translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 
 <p>{{ EmbedLiveSample('Embedding_raster_images','220','220','/files/16567/rotate-image-demo.png') }}</p>
 
-<h3 id="嵌入任意XML">嵌入任意XML</h3>
+<h3 id="嵌入任意XML">嵌入任意 XML</h3>
 
-<p>因为SVG是一个XML应用，所以你<strong>总是</strong>可以在SVG文档的任何位置嵌入任意XML。但是你没有必要定义周围的SVG需要怎样反作用于这个内容。实际上，在一个遵从的浏览者中，根本没有反作用的方法，数据将简单被忽略。因此特地在SVG中添加了{{ SVGElement("foreignObject") }} 元素。它的唯一的目的是作为其它标记的容器和SVG样式属性的载体（更突出的<code>width</code>和<code>height</code>用来定义该对象占用的空间。）。</p>
+<p>因为 SVG 是一个 XML 应用，所以你<strong>总是</strong>可以在 SVG 文档的任何位置嵌入任意 XML。但是你没有必要定义周围的 SVG 需要怎样反作用于这个内容。实际上，在一个遵从的浏览者中，根本没有反作用的方法，数据将简单被忽略。因此特地在 SVG 中添加了{{ SVGElement("foreignObject") }} 元素。它的唯一的目的是作为其它标记的容器和 SVG 样式属性的载体（更突出的<code>width</code>和<code>height</code>用来定义该对象占用的空间。）。</p>
 
-<p>foreignObject元素是一个好办法，用来在SVG中嵌入XHTML。如果你有更长的文本，该HTML布局比SVG <code>text</code>元素更适合。另一个经常被引用的用例是用MathML写的方程式。对于SVG的科学应用，它是连接两个世界的一个很好的办法。</p>
+<p>foreignObject 元素是一个好办法，用来在 SVG 中嵌入 XHTML。如果你有更长的文本，该 HTML 布局比 SVG <code>text</code>元素更适合。另一个经常被引用的用例是用 MathML 写的方程式。对于 SVG 的科学应用，它是连接两个世界的一个很好的办法。</p>
 
-<div class="note">注意：请记住，<code>foreignObject</code>元素的内容是能被浏览器加工的。一个独立的SVG浏览器不太可能呈现HTML或MathML。</div>
+<div class="note">注意：请记住，<code>foreignObject</code>元素的内容是能被浏览器加工的。一个独立的 SVG 浏览器不太可能呈现 HTML 或 MathML。</div>
 
-<p>因为<code>foreignObject</code>是一个SVG元素，所以你可以像用图像那样，使用任何SVG的精华，它将被应用到它的内容。</p>
+<p>因为<code>foreignObject</code>是一个 SVG 元素，所以你可以像用图像那样，使用任何 SVG 的精华，它将被应用到它的内容。</p>
 
 <p>{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}</p>

@@ -3,31 +3,31 @@ title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 translation_of: Web/API/DataTransferItem/webkitGetAsEntry
 ---
-<p><font><font>如果由文件描述的项目</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem" title="DataTransferItem对象表示一个拖动数据项。 在拖动操作期间，每个拖动事件都有一个dataTransfer属性，该属性包含拖动数据项列表。 列表中的每个项目都是DataTransferItem对象。"><code>DataTransferItem</code></a><font><font>是文件，则</font></font><code>webkitGetAsEntry()</code><font><font>返回</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry" title="File System API的FileSystemFileEntry接口表示文件系统中的文件。 它提供了描述文件属性的属性，以及file()方法，该方法创建了一个可用于读取文件的File对象。"><code>FileSystemFileEntry</code></a><font><font>或</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryEntry" title="File和Directory Entries API的FileSystemDirectoryEntry接口表示文件系统中的目录。 它提供的方法可以访问和操作目录中的文件，以及访问目录中的条目。"><code>FileSystemDirectoryEntry</code></a><font><font>表示它。</font><font>如果该项不是文件，</font></font><code>null</code><font><font>则返回。</font></font></p>
+<p>如果由文件描述的项目<a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem" title="DataTransferItem对象表示一个拖动数据项。 在拖动操作期间，每个拖动事件都有一个dataTransfer属性，该属性包含拖动数据项列表。 列表中的每个项目都是DataTransferItem对象。"><code>DataTransferItem</code></a>是文件，则<code>webkitGetAsEntry()</code>返回<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry" title="File System API的FileSystemFileEntry接口表示文件系统中的文件。 它提供了描述文件属性的属性，以及file()方法，该方法创建了一个可用于读取文件的File对象。"><code>FileSystemFileEntry</code></a>或<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryEntry" title="File和Directory Entries API的FileSystemDirectoryEntry接口表示文件系统中的目录。 它提供的方法可以访问和操作目录中的文件，以及访问目录中的条目。"><code>FileSystemDirectoryEntry</code></a>表示它。如果该项不是文件，<code>null</code>则返回。</p>
 
 <div class="note">
-<p><font><font>此功能</font></font><code>webkitGetAsEntry()</code><font><font>在此时非包含Firefox的非WebKit浏览器中</font><font>实现</font><font>; </font><font>它可能会</font></font><code>getAsEntry()</code><font><font>在以后</font><font>简单地重命名</font><font>，所以你应该进行防御性编码，寻找两者。</font></font></p>
+<p>此功能<code>webkitGetAsEntry()</code>在此时非包含 Firefox 的非 WebKit 浏览器中实现; 它可能会<code>getAsEntry()</code>在以后简单地重命名，所以你应该进行防御性编码，寻找两者。</p>
 </div>
 
-<h2 id="语法"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#Syntax"><font><font>语法</font></font></a></h2>
+<h2 id="语法"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#Syntax">语法</a></h2>
 
-<pre class="syntaxbox"><em><font><font>DataTransferItem</font></font></em><font><font>.webkitGetAsEntry();</font></font></pre>
+<pre class="syntaxbox"><em>DataTransferItem</em>.webkitGetAsEntry();</pre>
 
-<h3 class="syntaxbox" id="参数"><font><font>参数</font></font></h3>
+<h3 class="syntaxbox" id="参数">参数</h3>
 
-<p><font><font>没有。</font></font></p>
+<p>没有。</p>
 
-<h3 id="返回值"><font><font>返回值</font></font></h3>
+<h3 id="返回值">返回值</h3>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry" title="File和Directory Entries API的FileSystemEntry接口表示文件系统中的单个。 该条目可以是文件或目录（目录由DirectoryEntry接口表示）。 它包括处理文件的方法 - 包括复制，移动，删除和读取文件 - 以及它指向的文件的信息 - 包括文件名及其从根到条目的路径。"><code>FileSystemEntry</code></a><font><font>基于</font><font>A </font><font>的对象描述被删除的项目。</font><font>这将是</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry" title="File System API的FileSystemFileEntry接口表示文件系统中的文件。 它提供了描述文件属性的属性，以及file()方法，该方法创建了一个可用于读取文件的File对象。"><code>FileSystemFileEntry</code></a><font><font>或</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryEntry" title="File和Directory Entries API的FileSystemDirectoryEntry接口表示文件系统中的目录。 它提供的方法可以访问和操作目录中的文件，以及访问目录中的条目。"><code>FileSystemDirectoryEntry</code></a><font><font>。</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry" title="File和Directory Entries API的FileSystemEntry接口表示文件系统中的单个。 该条目可以是文件或目录（目录由DirectoryEntry接口表示）。 它包括处理文件的方法 - 包括复制，移动，删除和读取文件 - 以及它指向的文件的信息 - 包括文件名及其从根到条目的路径。"><code>FileSystemEntry</code></a>基于 A 的对象描述被删除的项目。这将是<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry" title="File System API的FileSystemFileEntry接口表示文件系统中的文件。 它提供了描述文件属性的属性，以及file()方法，该方法创建了一个可用于读取文件的File对象。"><code>FileSystemFileEntry</code></a>或<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryEntry" title="File和Directory Entries API的FileSystemDirectoryEntry接口表示文件系统中的目录。 它提供的方法可以访问和操作目录中的文件，以及访问目录中的条目。"><code>FileSystemDirectoryEntry</code></a>。</p>
 
-<h2 id="Example" name="Example"><font><font>示例</font></font></h2>
+<h2 id="Example" name="Example">示例</h2>
 
-<p><font><font>在此示例中，创建了一个放置区域，该放置区域</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/drop" title="/en-US/docs/Web/Events/drop">drop</a></code><font><font>通过扫描已删除的文件和目录</font><font>来响应</font><font>事件</font><font>，从而</font><font>输出分层目录列表。</font></font></p>
+<p>在此示例中，创建了一个放置区域，该放置区域<code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/drop" title="/en-US/docs/Web/Events/drop">drop</a></code>通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。</p>
 
-<h3 id="HTML内容"><font><font>HTML内容</font></font></h3>
+<h3 id="HTML内容">HTML 内容</h3>
 
-<p><font><font>HTML建立了放置区本身，它是</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="HTML Content Division元素（&lt;div>）是流内容的通用容器。 在使用CSS设置样式之前，它对内容或布局没有影响。"><code>&lt;div&gt;</code></a><font><font>具有ID </font><font>的</font><font>元素</font></font><code>"dropzone"</code><font><font>，以及</font><font>带有ID </font><font>的无序列表元素</font></font><code>"listing"</code><font><font>。</font></font></p>
+<p>HTML 建立了放置区本身，它是<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="HTML Content Division元素（&lt;div>）是流内容的通用容器。 在使用CSS设置样式之前，它对内容或布局没有影响。"><code>&lt;div&gt;</code></a>具有 ID 的元素<code>"dropzone"</code>，以及带有 ID 的无序列表元素<code>"listing"</code>。</p>
 
 <pre><code>&lt;p&gt;Drag files and/or directories to the box below!&lt;/p&gt;
 
@@ -42,9 +42,9 @@ translation_of: Web/API/DataTransferItem/webkitGetAsEntry
 &lt;ul id="listing"&gt;
 &lt;/ul&gt;</code></pre>
 
-<h3 id="CSS内容"><font><font>CSS内容</font></font></h3>
+<h3 id="CSS内容">CSS 内容</h3>
 
-<p><font><font>此处显示示例使用的样式。</font></font></p>
+<p>此处显示示例使用的样式。</p>
 
 <pre><code>#dropzone {
   text-align: center;
@@ -70,12 +70,12 @@ body {
   font: 14px "Arial", sans-serif;
 }</code></pre>
 
-<h3 id="JavaScript内容"><font><font>JavaScript内容</font></font></h3>
+<h3 id="JavaScript内容">JavaScript 内容</h3>
 
-<p><font><font>首先，让我们看一下递归</font></font><code>scanFiles()</code><font><font>函数。</font><font>该函数将</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry" title="File和Directory Entries API的FileSystemEntry接口表示文件系统中的单个。 该条目可以是文件或目录（目录由DirectoryEntry接口表示）。 它包括处理文件的方法 - 包括复制，移动，删除和读取文件 - 以及它指向的文件的信息 - 包括文件名及其从根到条目的路径。"><code>FileSystemEntry</code></a><font><font>表示要扫描和处理的文件系统中的条目（</font></font><code>item</code><font><font>参数）和插入内容列表（</font></font><code>container</code><font><font>参数）</font><font>的元素</font><font>作为输入</font><font>。</font></font></p>
+<p>首先，让我们看一下递归<code>scanFiles()</code>函数。该函数将<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry" title="File和Directory Entries API的FileSystemEntry接口表示文件系统中的单个。 该条目可以是文件或目录（目录由DirectoryEntry接口表示）。 它包括处理文件的方法 - 包括复制，移动，删除和读取文件 - 以及它指向的文件的信息 - 包括文件名及其从根到条目的路径。"><code>FileSystemEntry</code></a>表示要扫描和处理的文件系统中的条目（<code>item</code>参数）和插入内容列表（<code>container</code>参数）的元素作为输入。</p>
 
 <div class="blockIndicator note">
-<p><font><font>请注意，要读取目录中的所有文件，</font></font><code>readEntries</code><font><font>需要重复调​​用，直到它返回一个空数组。</font><font>在基于Chromium的浏览器中，以下示例仅返回最多100个条目。</font></font></p>
+<p>请注意，要读取目录中的所有文件，<code>readEntries</code>需要重复调​​用，直到它返回一个空数组。在基于 Chromium 的浏览器中，以下示例仅返回最多 100 个条目。</p>
 </div>
 
 <pre class="brush: js">let dropzone = document.getElementById("dropzone");
@@ -99,20 +99,20 @@ function scanFiles(item, container) {
 }
 </pre>
 
-<p><code>scanFiles()</code><font><font>首先创建一个新</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" title="HTML &lt;li>元素用于表示列表中的项目。"><code>&lt;li&gt;</code></a><font><font>元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。</font><font>容器在此示例中始终是列表元素，您很快就会看到。</font></font></p>
+<p><code>scanFiles()</code>首先创建一个新<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" title="HTML &lt;li>元素用于表示列表中的项目。"><code>&lt;li&gt;</code></a>元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，您很快就会看到。</p>
 
-<p><font><font>一旦当前项目在列表中，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/isDirectory" title="如果条目表示目录（意味着它是FileSystemDirectoryEntry），则FileSystemEntry接口的只读isDirectory属性为true，如果不是，则为false。"><code>isDirectory</code></a><font><font>就会检查</font><font>项目的</font><font>属性。</font><font>如果该项目是目录，我们需要递归到该目录。</font><font>第一步是创建一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryReader" title="File和Directory Entries API的FileSystemDirectoryReader接口允许您访问表示目录中每个条目的基于FileEntry的对象（通常为FileSystemFileEntry或FileSystemDirectoryEntry）。"><code>FileSystemDirectoryReader</code></a><font><font>to来处理获取目录的内容。</font><font>这是通过调用item的</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryEntry/createReader" title="FileSystemDirectoryEntry接口的方法createReader（）返回一个FileSystemDirectoryReader对象，该对象可用于读取目录中的条目。"><code>createReader()</code></a><font><font>方法完成的。</font><font>然后</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" title="HTML &lt;ul>元素表示无序的项目列表，通常呈现为项目符号列表。"><code>&lt;ul&gt;</code></a><font><font>创建</font><font>一个new </font><font>并将其附加到父列表; </font><font>这将包含列表层次结构中下一级别的目录内容。</font></font></p>
+<p>一旦当前项目在列表中，<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry/isDirectory" title="如果条目表示目录（意味着它是FileSystemDirectoryEntry），则FileSystemEntry接口的只读isDirectory属性为true，如果不是，则为false。"><code>isDirectory</code></a>就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryReader" title="File和Directory Entries API的FileSystemDirectoryReader接口允许您访问表示目录中每个条目的基于FileEntry的对象（通常为FileSystemFileEntry或FileSystemDirectoryEntry）。"><code>FileSystemDirectoryReader</code></a>to 来处理获取目录的内容。这是通过调用 item 的<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryEntry/createReader" title="FileSystemDirectoryEntry接口的方法createReader（）返回一个FileSystemDirectoryReader对象，该对象可用于读取目录中的条目。"><code>createReader()</code></a>方法完成的。然后<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" title="HTML &lt;ul>元素表示无序的项目列表，通常呈现为项目符号列表。"><code>&lt;ul&gt;</code></a>创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。</p>
 
-<p><font><font>之后，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryReader/readEntries" title="FileSystemDirectoryReader接口的readEntries（）方法检索正在读取的目录中的目录条目，并将它们以数组形式传递给提供的回调函数。"><code>directoryReader.readEntries()</code></a><font><font>调用读取目录中的所有条目。</font><font>反过来，这些都被传递到递归调用</font></font><code>scanFiles()</code><font><font>以处理它们。</font><font>其中任何文件都只是插入到列表中; </font><font>将任何目录插入到列表中，并在下面添加列表层次结构的新级别，依此类推。</font></font></p>
+<p>之后，<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryReader/readEntries" title="FileSystemDirectoryReader接口的readEntries（）方法检索正在读取的目录中的目录条目，并将它们以数组形式传递给提供的回调函数。"><code>directoryReader.readEntries()</code></a>调用读取目录中的所有条目。反过来，这些都被传递到递归调用<code>scanFiles()</code>以处理它们。其中任何文件都只是插入到列表中; 将任何目录插入到列表中，并在下面添加列表层次结构的新级别，依此类推。</p>
 
-<p><font><font>然后是事件处理程序。</font><font>首先，我们阻止</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragover" title="/en-US/docs/Web/Events/dragover">dragover</a></code><font><font>事件由默认处理程序处理，以便我们的drop区域可以接收drop：</font></font></p>
+<p>然后是事件处理程序。首先，我们阻止<code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragover" title="/en-US/docs/Web/Events/dragover">dragover</a></code>事件由默认处理程序处理，以便我们的 drop 区域可以接收 drop：</p>
 
 <pre class="brush: js">dropzone.addEventListener("dragover", function(event) {
     event.preventDefault();
 }, false);
 </pre>
 
-<p><font><font>当然，关闭所有事件的事件处理程序是事件的处理程序</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/drop" title="/en-US/docs/Web/Events/drop">drop</a></code><font><font>：</font></font></p>
+<p>当然，关闭所有事件的事件处理程序是事件的处理程序<code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/drop" title="/en-US/docs/Web/Events/drop">drop</a></code>：</p>
 
 <pre class="brush: js">dropzone.addEventListener("drop", function(event) {
   let items = event.dataTransfer.items;
@@ -129,13 +129,13 @@ function scanFiles(item, container) {
   }
 }, false);</pre>
 
-<p><font><font>这将获取</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem" title="DataTransferItem对象表示一个拖动数据项。 在拖动操作期间，每个拖动事件都有一个dataTransfer属性，该属性包含拖动数据项列表。 列表中的每个项目都是DataTransferItem对象。"><code>DataTransferItem</code></a><font><font>表示从中删除的项目</font><font>的</font><font>对象</font><font>列表</font></font><code>event.dataTransfer.items</code><font><font>。</font><font>然后我们打电话</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault" title="Event接口的preventDefault（）方法告诉用户代理，如果事件没有得到明确处理，则不应该像通常那样采取默认操作。"><code>Event.preventDefault()</code></a><font><font>来防止事件在完成后被进一步处理。</font></font></p>
+<p>这将获取<a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem" title="DataTransferItem对象表示一个拖动数据项。 在拖动操作期间，每个拖动事件都有一个dataTransfer属性，该属性包含拖动数据项列表。 列表中的每个项目都是DataTransferItem对象。"><code>DataTransferItem</code></a>表示从中删除的项目的对象列表<code>event.dataTransfer.items</code>。然后我们打电话<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault" title="Event接口的preventDefault（）方法告诉用户代理，如果事件没有得到明确处理，则不应该像通常那样采取默认操作。"><code>Event.preventDefault()</code></a>来防止事件在完成后被进一步处理。</p>
 
-<p><font><font>现在是时候开始构建列表了。</font><font>首先，通过设置</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" title="Element属性innerHTML获取或设置元素中包含的HTML或XML标记。"><code>listing.innerHTML</code></a><font><font>为空</font><font>来清空列表</font><font>。</font><font>这使我们</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Ul" rel="nofollow" title="关于这方面的文件尚未写入;  请考虑贡献！"><code>ul</code></a><font><font>开始插入目录条目为</font><font>空</font><font>。</font></font></p>
+<p>现在是时候开始构建列表了。首先，通过设置<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" title="Element属性innerHTML获取或设置元素中包含的HTML或XML标记。"><code>listing.innerHTML</code></a>为空来清空列表。这使我们<a href="https://developer.mozilla.org/en-US/docs/Web/API/Ul" rel="nofollow" title="关于这方面的文件尚未写入;  请考虑贡献！"><code>ul</code></a>开始插入目录条目为空。</p>
 
-<p><font><font>然后我们遍历已删除项目列表中的项目。</font><font>对于每一个，我们调用它的</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry" title="如果DataTransferItem描述的项是文件，webkitGetAsEntry（）将返回表示它的FileSystemFileEntry或FileSystemDirectoryEntry。 如果该项不是文件，则返回null。"><code>webkitGetAsEntry()</code></a><font><font>方法来获得</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry" title="File和Directory Entries API的FileSystemEntry接口表示文件系统中的单个。 该条目可以是文件或目录（目录由DirectoryEntry接口表示）。 它包括处理文件的方法 - 包括复制，移动，删除和读取文件 - 以及它指向的文件的信息 - 包括文件名及其从根到条目的路径。"><code>FileSystemEntry</code></a><font><font>表示文件。</font><font>如果成功，我们会调用</font></font><code>scanFiles()</code><font><font>处理项目 - 如果它只是一个文件，或者添加它，如果它是一个目录，则将其添加到列表中。</font></font></p>
+<p>然后我们遍历已删除项目列表中的项目。对于每一个，我们调用它的<a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry" title="如果DataTransferItem描述的项是文件，webkitGetAsEntry（）将返回表示它的FileSystemFileEntry或FileSystemDirectoryEntry。 如果该项不是文件，则返回null。"><code>webkitGetAsEntry()</code></a>方法来获得<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntry" title="File和Directory Entries API的FileSystemEntry接口表示文件系统中的单个。 该条目可以是文件或目录（目录由DirectoryEntry接口表示）。 它包括处理文件的方法 - 包括复制，移动，删除和读取文件 - 以及它指向的文件的信息 - 包括文件名及其从根到条目的路径。"><code>FileSystemEntry</code></a>表示文件。如果成功，我们会调用<code>scanFiles()</code>处理项目 - 如果它只是一个文件，或者添加它，如果它是一个目录，则将其添加到列表中。</p>
 
-<h3 id="结果"><font><font>结果</font></font></h3>
+<h3 id="结果">结果</h3>
 
 <p>你可以通过下面的尝试看看它是如何工作的。 找到一些文件和目录并将其拖入，然后查看生成的输出。</p>
 
@@ -155,23 +155,23 @@ function scanFiles(item, container) {
   <tr>
    <td>{{ SpecName("File System API", "#dom-datatransferitem-webkitgetasentry", "webkitGetAsEntry()") }}</td>
    <td>{{ Spec2("File System API") }}</td>
-   <td><font><font>初始规格。</font></font></td>
+   <td>初始规格。</td>
   </tr>
  </tbody>
 </table>
 
-<p><font><font>此API没有官方的W3C或WHATWG规范。</font></font></p>
+<p>此 API 没有官方的 W3C 或 WHATWG 规范。</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<p><font><font>{{COMPAT("api.DataTransferItem.webkitGetAsEntry")}}</font></font></p>
+<p>{{COMPAT("api.DataTransferItem.webkitGetAsEntry")}}</p>
 
-<h2 id="也可以看看"><font><font>也可以看看</font></font></h2>
+<h2 id="也可以看看">也可以看看</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API"><font><font>文件和目录条目API</font></font></a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction"><font><font>文件系统API简介</font></font></a></li>
- <li><font><font>{{domxref("DataTransferItem")}}</font></font></li>
- <li><font><font>{{domxref("FileSystemEntry")}}，{{domxref("FileSystemFileEntry")}}和{{domxref("FileSystemDirectoryEntry")}}</font></font></li>
- <li><font><font>活动：{{event("dragover")}}和{{event("drop")}}</font></font></li>
+ <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">文件和目录条目 API</a></li>
+ <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">文件系统 API 简介</a></li>
+ <li>{{domxref("DataTransferItem")}}</li>
+ <li>{{domxref("FileSystemEntry")}}，{{domxref("FileSystemFileEntry")}}和{{domxref("FileSystemDirectoryEntry")}}</li>
+ <li>活动：{{event("dragover")}}和{{event("drop")}}</li>
 </ul>

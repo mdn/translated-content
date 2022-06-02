@@ -7,12 +7,12 @@ translation_of: Web/API/console/assert
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>如果断言为false，则将一个错误消息写入控制台。如果断言是 <code>true</code>，没有任何反应。</p>
+<p>如果断言为 false，则将一个错误消息写入控制台。如果断言是 <code>true</code>，没有任何反应。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <div>
-<p><code>console.assert()</code>方法在Node.js中的实现和浏览器中可用的<code>console.assert()</code>方法实现是不同的。在浏览器中当<code>console.assert()</code>方法接受到一个值为假断言的时候，会向控制台输出传入的内容，但是并不会中断代码的执行，而在Node.js v10.0.0之前，一个值为假的断言也将会导致一个<code>AssertionError</code>被抛出，使得代码执行被打断。v10.0.0修复了此差异，所以现在<code>console.assert()</code>在Node 和浏览器中执行行为相同 。</p>
+<p><code>console.assert()</code>方法在 Node.js 中的实现和浏览器中可用的<code>console.assert()</code>方法实现是不同的。在浏览器中当<code>console.assert()</code>方法接受到一个值为假断言的时候，会向控制台输出传入的内容，但是并不会中断代码的执行，而在 Node.js v10.0.0 之前，一个值为假的断言也将会导致一个<code>AssertionError</code>被抛出，使得代码执行被打断。v10.0.0 修复了此差异，所以现在<code>console.assert()</code>在 Node 和浏览器中执行行为相同。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -24,27 +24,27 @@ console.assert(<em>assertion</em>, <em>msg</em> [, <em>subst1</em>, ..., <em>sub
 
 <dl>
  <dt><code>assertion</code></dt>
- <dd>一个布尔表达式。如果assertion为假，消息将会被输出到控制台之中。</dd>
+ <dd>一个布尔表达式。如果 assertion 为假，消息将会被输出到控制台之中。</dd>
  <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>被用来输出的Javascript对象列表，最后输出的字符串是各个对象依次拼接的结果。</dd>
+ <dd>被用来输出的 Javascript 对象列表，最后输出的字符串是各个对象依次拼接的结果。</dd>
  <dt><code>msg</code></dt>
- <dd>一个包含零个或多个子串的Javascript字符串。</dd>
+ <dd>一个包含零个或多个子串的 Javascript 字符串。</dd>
  <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>各个消息作为字串的Javascript对象。这个参数可以让你能够控制输出的格式。</dd>
+ <dd>各个消息作为字串的 Javascript 对象。这个参数可以让你能够控制输出的格式。</dd>
 </dl>
 
 <h2 id="案例">案例</h2>
 
-<p>下面的代码示例演示了JavaScript对象的使用:</p>
+<p>下面的代码示例演示了 JavaScript 对象的使用：</p>
 
 <pre class="brush: js">const errorMsg = 'the # is not even';
 for (let number = 2; number &lt;= 5; number += 1) {
     console.log('the # is ' + number);
     console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // 或者使用 ES2015 对象简写:
+    // 或者使用 ES2015 对象简写：
     // console.assert(number % 2 === 0, {number, errorMsg});
 }
-// 输出:
+// 输出：
 // the # is 2
 // the # is 3
 // Assertion failed: {number: 3, errorMsg: "the # is not even"}
@@ -52,12 +52,12 @@ for (let number = 2; number &lt;= 5; number += 1) {
 // the # is 5
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}</pre>
 
-<p>请注意, 你可以在大多数浏览器中使用 console.log 进行格式化输出</p>
+<p>请注意， 你可以在大多数浏览器中使用 console.log 进行格式化输出</p>
 
 <pre class="brush: js">console.log('the word is %s try number %d', 'foo', 123);
-// 输出: the word is foo try number 123</pre>
+// 输出：the word is foo try number 123</pre>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">但是 </span></font>console.assert</code> 在不同浏览器中可能获得不同的效果:</p>
+<p><code>但是 console.assert</code> 在不同浏览器中可能获得不同的效果：</p>
 
 <pre class="brush: js">console.assert(false, 'the word is %s', 'foo');
 // correct output in Node (e.g. v8.10.0) and some browsers
@@ -71,26 +71,11 @@ for (let number = 2; number &lt;= 5; number += 1) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consoleassertexpression-object", "console.assert()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("api.Console.assert")}}</p>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

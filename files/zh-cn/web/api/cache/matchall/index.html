@@ -16,7 +16,7 @@ translation_of: Web/API/Cache/matchAll
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 {{jsxref("Promise")}}，resolve为 {{domxref("Cache")}} 对象中所有匹配请求的数组。</p>
+<p>一个 {{jsxref("Promise")}}，resolve 为 {{domxref("Cache")}} 对象中所有匹配请求的数组。</p>
 
 <div class="note">
 <p><strong>注意</strong>: {{domxref("Cache.match()")}} 基本上与<code>Cache.matchAll()</code> 相同，除了它 resolve 为 <code>response[0]</code> (即第一个匹配响应) 而不是 <code>response</code> (数组中所有匹配的响应)。</p>
@@ -26,13 +26,13 @@ translation_of: Web/API/Cache/matchAll
 
 <dl>
  <dt>request {{optional_inline}}</dt>
- <dd>{{domxref("Cache")}} 中你尝试查找的The {{domxref("Request")}} . 如果忽略这一参数，你将获取到cache中所有 <code>response</code> 的副本。</dd>
+ <dd>{{domxref("Cache")}} 中你尝试查找的 The {{domxref("Request")}} . 如果忽略这一参数，你将获取到 cache 中所有 <code>response</code> 的副本。</dd>
  <dt>options {{optional_inline}}</dt>
- <dd>一个选项对象，允许你为 <code>match</code> 操作中要做的匹配设置特定控制选项。可用选项包括:
+ <dd>一个选项对象，允许你为 <code>match</code> 操作中要做的匹配设置特定控制选项。可用选项包括：
  <ul>
-  <li><code>ignoreSearch</code>: 一个 {{domxref("Boolean")}} 值用来设置匹配操作是否忽略url中的query部分。如果该参数设置为 <code>true</code> ，那么 <code>http://foo.com/?value=bar</code> 中的 <code>?value=bar</code> 部分就会在匹配中被忽略. 该选项默认为 <code>false</code>。</li>
+  <li><code>ignoreSearch</code>: 一个 {{domxref("Boolean")}} 值用来设置匹配操作是否忽略 url 中的 query 部分。如果该参数设置为 <code>true</code> ，那么 <code>http://foo.com/?value=bar</code> 中的 <code>?value=bar</code> 部分就会在匹配中被忽略。该选项默认为 <code>false</code>。</li>
   <li><code>ignoreMethod</code>: 一个 {{domxref("Boolean")}} 值，如果设置为 <code>true</code>在匹配时就不会验证 {{domxref("Request")}} 对象的<code>http</code> 方法 (通常只允许是 <code>GET</code> 或 <code>HEAD</code> 。) 该参数默认值为 <code>false</code>。</li>
-  <li><code>ignoreVary</code>: 一个 {{domxref("Boolean")}} 值，该值如果为 <code>true</code> 则匹配时不进行 <code>VARY</code> 部分的匹配。例如，如果一个URL匹配，此时无论{{domxref("Response")}}对象是否包含<code>VARY</code>头部，都会认为是成功匹配。该参数默认为 <code>false</code>。</li>
+  <li><code>ignoreVary</code>: 一个 {{domxref("Boolean")}} 值，该值如果为 <code>true</code> 则匹配时不进行 <code>VARY</code> 部分的匹配。例如，如果一个 URL 匹配，此时无论{{domxref("Response")}}对象是否包含<code>VARY</code>头部，都会认为是成功匹配。该参数默认为 <code>false</code>。</li>
   <li><code>cacheName</code>: 一个 {{domxref("DOMString")}} ，代表一个具体的要被搜索的缓存。注意该选项被<strong><code>Cache.matchAll()</code></strong>方法忽略。</li>
  </ul>
  </dd>
@@ -50,20 +50,7 @@ translation_of: Web/API/Cache/matchAll
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-matchall', 'Cache: matchAll')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
