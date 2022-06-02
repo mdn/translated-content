@@ -42,7 +42,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
   }
   requestAnimationFrame(render);</pre>
 
-<p>该代码用于  <code>requestAnimationFrame</code> 要求浏览器在每一帧上调用函数“<code>render</code>”。<code>requestAnimationFrame</code> 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算<code>deltaTime</code> 自渲染最后一帧以来的秒数  。在 drawscene 的结尾，我们添加了要更新的代码 <code>squareRotation.</code></p>
+<p>该代码用于 <code>requestAnimationFrame</code> 要求浏览器在每一帧上调用函数“<code>render</code>”。<code>requestAnimationFrame</code> 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算 <code>deltaTime</code> 自渲染最后一帧以来的秒数。在 drawscene 的结尾，我们添加了要更新的代码 <code>squareRotation</code>。</p>
 
 <pre class="brush: js"><code>  squareRotation += deltaTime;</code></pre>
 
