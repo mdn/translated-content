@@ -4753,13 +4753,6 @@
       "Beterraba"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-23T23:36:41.452Z",
-    "contributors": [
-      "chrisdavidmills",
-      "FelipeFonseca"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2019-03-23T22:14:37.211Z",
     "contributors": [
@@ -4816,6 +4809,13 @@
     "modified": "2019-03-23T22:15:55.068Z",
     "contributors": [
       "fellypsantos"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-23T23:36:41.452Z",
+    "contributors": [
+      "chrisdavidmills",
+      "FelipeFonseca"
     ]
   },
   "Web/API/FormData": {

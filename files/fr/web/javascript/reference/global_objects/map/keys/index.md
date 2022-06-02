@@ -19,7 +19,9 @@ La méthode **`keys()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/G
 
 ## Syntaxe
 
-    maMap.keys()
+```js
+maMap.keys()
+```
 
 ### Valeur de retour
 

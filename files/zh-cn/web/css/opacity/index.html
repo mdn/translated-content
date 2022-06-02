@@ -7,11 +7,11 @@ translation_of: Web/CSS/opacity
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p>opacity属性指定了一个元素的<strong>不透明度</strong>。换言之，opacity属性指定了一个元素后面的背景的被覆盖程度。</p>
+<p>opacity 属性指定了一个元素的<strong>不透明度</strong>。换言之，opacity 属性指定了一个元素后面的背景的被覆盖程度。</p>
 
-<p>当opacity属性的值应用于某个元素上时，是把这个元素（包括它的内容）当成一个整体看待，即使这个值没有被子元素继承。因此，一个元素和它包含的子元素都会具有和元素背景相同的透明度，哪怕这个元素和它的子元素有不同的opacity属性值。</p>
+<p>当 opacity 属性的值应用于某个元素上时，是把这个元素（包括它的内容）当成一个整体看待，即使这个值没有被子元素继承。因此，一个元素和它包含的子元素都会具有和元素背景相同的透明度，哪怕这个元素和它的子元素有不同的 opacity 属性值。</p>
 
-<p>使用opacity属性，当属性值不为1时，会把元素放置在一个新的<a href="/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">层叠上下文</a>中。</p>
+<p>使用 opacity 属性，当属性值不为 1 时，会把元素放置在一个新的<a href="/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">层叠上下文</a>中。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -35,7 +35,7 @@ opacity: inherit;
 
 <dl>
  <dt><code>&lt;number&gt;</code></dt>
- <dd> {{cssxref("&lt;number&gt;")}} 是一个0.0到1.0范围内的数字值,这个数值既包含也代表通道的透明度，也就是alpha通道的值。任何一个溢出这个取值区间的值，尽管有效，但会被解析为在取值范围内最靠近它的值。
+ <dd> {{cssxref("&lt;number&gt;")}} 是一个 0.0 到 1.0 范围内的数字值，这个数值既包含也代表通道的透明度，也就是 alpha 通道的值。任何一个溢出这个取值区间的值，尽管有效，但会被解析为在取值范围内最靠近它的值。
  <table class="standard-table">
   <tbody>
    <tr>
@@ -47,12 +47,12 @@ opacity: inherit;
     <td>元素完全透明 (即元素不可见).</td>
    </tr>
    <tr>
-    <td>任何一个位于0.0-1.0之间的 {{cssxref("&lt;number&gt;")}}</td>
+    <td>任何一个位于 0.0-1.0 之间的 {{cssxref("&lt;number&gt;")}}</td>
     <td>元素半透明 (即元素后面的背景可见).</td>
    </tr>
    <tr>
     <td><code>1</code></td>
-    <td>元素完全不透明(即元素后面的背景不可见).</td>
+    <td>元素完全不透明 (即元素后面的背景不可见).</td>
    </tr>
   </tbody>
  </table>
@@ -86,7 +86,7 @@ opacity: inherit;
 
 <pre class="syntaxbox language-html notranslate">{{EmbedLiveSample('Basic_example', '640', '64')}}</pre>
 
-<h3 id="Different_opacity_with_hover" name="Different_opacity_with_hover">:hover时opacity的不同</h3>
+<h3 id="Different_opacity_with_hover" name="Different_opacity_with_hover">:hover 时 opacity 的不同</h3>
 
 <pre class="brush: css notranslate">img.opacity {
   opacity: 1;
@@ -138,13 +138,13 @@ img.opacity:hover {
 <div id="compat-mobile"></div>
 
 <ul>
- <li><strong>历史:</strong> 在 Mozilla 1.7 (Firefox 0.9)版本 之前，“<code>-moz-opacity</code>”<code> 属性一直以一种非标准的方式在使用。在</code>Firefox 0.9版本中 ，这种行为得到了改变，这个属性被重命名为opacity。从那以后，<code>-moz-opacity属性仅作为opacity属性的别名而存在。</code></li>
+ <li><strong>历史：</strong> 在 Mozilla 1.7 (Firefox 0.9) 版本 之前，“<code>-moz-opacity</code>”<code> 属性一直以一种非标准的方式在使用。在</code>Firefox 0.9 版本中 ，这种行为得到了改变，这个属性被重命名为 opacity。从那以后，<code>-moz-opacity属性仅作为opacity属性的别名而存在。</code></li>
  <li>Gecko 1.9.1 (Firefox 3.5) 以后的版本不再支持<code> -moz-opacity属性 和 Javascript中的MozOpacity属性（Gecko13中删除），到目前为止，你应该使用opacity属性。</code></li>
- <li>在9.0版本之前，Internet Explore浏览器不支持opacity属性, 它宁愿使用私有滤镜代替。.</li>
+ <li>在 9.0 版本之前，Internet Explore 浏览器不支持 opacity 属性，它宁愿使用私有滤镜代替。.</li>
  <li>IE4 —IE9 支持下面的扩展形式： <code>progid:DXImageTransform.Microsoft.Alpha(Opacity=xx)</code>.</li>
- <li>IE8引入了与“fliter滤镜”同义的"-ms-filter" 属性。在IE10中不再支持这两个属性。</li>
- <li>和“<code>-moz-opacity</code>” 属性相似, "<code>-khtml-opacity"从2004年年初</code> (Safari 1.2发布)，<code>已经不再受到支持。</code><br>
-  Konqueror 从来不支持 <code>-khtml-opacity</code> 属性，从第四版开始，它一直支持opacity属性。</li>
+ <li>IE8 引入了与“fliter 滤镜”同义的"-ms-filter" 属性。在 IE10 中不再支持这两个属性。</li>
+ <li>和“<code>-moz-opacity</code>”属性相似，"<code>-khtml-opacity"从2004年年初</code> (Safari 1.2 发布)，<code>已经不再受到支持。</code><br>
+  Konqueror 从来不支持 <code>-khtml-opacity</code> 属性，从第四版开始，它一直支持 opacity 属性。</li>
 </ul>
 
 <h2 id="See_also" name="See_also">阅读更多</h2>

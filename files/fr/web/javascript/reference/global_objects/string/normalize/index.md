@@ -20,7 +20,9 @@ La méthode **`normalize()`** permet de renvoyer la forme normalisée Unicode d'
 
 ## Syntaxe
 
-    str.normalize([form]);
+```js
+str.normalize([form]);
+```
 
 ### Paramètres
 

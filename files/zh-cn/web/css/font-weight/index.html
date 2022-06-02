@@ -10,7 +10,7 @@ translation_of: Web/CSS/font-weight
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p> {{Cssxref("font-weight")}} <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性指定了字体的粗细程度。 一些字体只提供 <code>normal</code> 和 <code>bold</code> 两种值。</p>
+<p> {{Cssxref("font-weight")}} <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性指定了字体的粗细程度。一些字体只提供 <code>normal</code> 和 <code>bold</code> 两种值。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/font-weight.html")}}</div>
 
@@ -165,9 +165,9 @@ window.addEventListener('load', function () {
  <dt><code>normal</code></dt>
  <dd>正常粗细。与<code>400等值。</code></dd>
  <dt><code>bold</code></dt>
- <dd> 加粗。 与<code>700等值。</code></dd>
+ <dd> 加粗。与<code>700等值。</code></dd>
  <dt><code>lighter</code></dt>
- <dd>比从父元素继承来的值更细(处在字体可行的粗细值范围内)。</dd>
+ <dd>比从父元素继承来的值更细 (处在字体可行的粗细值范围内)。</dd>
  <dt><code>bolder</code></dt>
  <dd>比从父元素继承来的值更粗 (处在字体可行的粗细值范围内)。</dd>
  <dt><code>&lt;number&gt;</code></dt>
@@ -187,8 +187,8 @@ window.addEventListener('load', function () {
    <li>如果未找到匹配项，按<strong>升序</strong>查找大于<code>500</code>的可用权重。</li>
   </ul>
  </li>
- <li>如果指定值小于<code>400</code>，按<strong>降序</strong>查找小于指定值的可用权重。 如果未找到匹配项，按<strong>升序</strong>查找大于指定值的可用权重（先尽可能的小，再尽可能的大）。</li>
- <li>如果指定值大于<code>500</code>，按<strong>升序</strong>查找大于指定值的可用权重。 如果未找到匹配项，按<strong>降序</strong>查找小于指定值的可用权重（先尽可能的大，再尽可能的小）。</li>
+ <li>如果指定值小于<code>400</code>，按<strong>降序</strong>查找小于指定值的可用权重。如果未找到匹配项，按<strong>升序</strong>查找大于指定值的可用权重（先尽可能的小，再尽可能的大）。</li>
+ <li>如果指定值大于<code>500</code>，按<strong>升序</strong>查找大于指定值的可用权重。如果未找到匹配项，按<strong>降序</strong>查找小于指定值的可用权重（先尽可能的大，再尽可能的小）。</li>
 </ul>
 
 <p>以上策略意味着，如果一个字体只有 <code>normal</code> 和 <code>bold</code> 两种粗细值选择，指定粗细值为 <code>100-500</code> 时，实际渲染时将使用 <code>normal</code>，指定粗细值为 <code>600-900</code> 时，实际渲染时将使用 <code>bold</code> 。</p>
@@ -281,7 +281,7 @@ window.addEventListener('load', function () {
 
 <h3 id="插值规律">插值规律</h3>
 
-<p><code>font-weight</code> 数值采取离散式定义（使用 100 的整倍数）。数值为实数，非 100 的整数倍的值将被四舍五入转换为 100 的整倍数，遇到 *50 时，将向上转换，如 150 将转换为 200 。</p>
+<p><code>font-weight</code> 数值采取离散式定义（使用 100 的整倍数）。数值为实数，非 100 的整数倍的值将被四舍五入转换为 100 的整倍数，遇到 *50 时，将向上转换，如 150 将转换为 200。</p>
 
 <h3 id="正式的语法">正式的语法</h3>
 

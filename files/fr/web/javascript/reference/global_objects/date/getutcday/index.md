@@ -18,7 +18,9 @@ La méthode **`getUTCDay()`** renvoie le jour de la semaine pour la date renseig
 
 ## Syntaxe
 
-    dateObj.getUTCDay()
+```js
+dateObj.getUTCDay()
+```
 
 ### Valeur de retour
 

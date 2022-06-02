@@ -18,7 +18,9 @@ La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des p
 
 ## Syntaxe
 
-    Object.values(obj)
+```js
+Object.values(obj)
+```
 
 ### Paramètres
 

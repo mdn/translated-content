@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 
 <h2 id="Summary">概览</h2>
 
-<p>废弃的 <code><strong>escape()</strong></code> 方法生成新的由十六进制转义序列替换的字符串. 使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 代替.</p>
+<p>废弃的 <code><strong>escape()</strong></code> 方法生成新的由十六进制转义序列替换的字符串。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 代替。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -21,14 +21,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 
 <dl>
  <dt><code>str</code></dt>
- <dd>待编码的字符串.</dd>
+ <dd>待编码的字符串。</dd>
 </dl>
 
 <h2 id="Description">描述</h2>
 
-<p><code>escape</code> 函数是全局对象的属性. 特色字符如: @*_+-./ 被排除在外.</p>
+<p><code>escape</code> 函数是全局对象的属性。特色字符如：<code>@*_+-./</code> 被排除在外。</p>
 
-<p>字符的16进制格式值,当该值小于等于0xFF时,用一个2位转义序列: %xx 表示. 大于的话则使用4位序列:%<strong>u</strong>xxxx 表示.</p>
+<p>字符的 16 进制格式值，当该值小于等于 0xFF 时，用一个 2 位转义序列: <code>%xx</code> 表示。大于的话则使用 4 位序列：%<strong>u</strong>xxxx 表示。</p>
 
 <h2 id="示例">示例</h2>
 

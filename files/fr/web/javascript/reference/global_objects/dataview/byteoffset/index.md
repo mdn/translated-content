@@ -19,7 +19,9 @@ La propriété **`byteOffset`** est un accesseur représentant le décalage, exp
 
 ## Syntaxe
 
-    dataview.byteOffset
+```js
+dataview.byteOffset
+```
 
 ## Description
 

@@ -12,12 +12,14 @@ original_slug: Web/JavaScript/Reference/Erreurs/Precision_range
 
 ## Message
 
-    RangeError: The number of fractional digits is out of range (Edge)
-    RangeError: The precision is out of range (Edge)
-    RangeError: precision {0} out of range (Firefox)
-    RangeError: toExponential() argument must be between 0 and 20 (Chrome)
-    RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
-    RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
+```
+RangeError: The number of fractional digits is out of range (Edge)
+RangeError: The precision is out of range (Edge)
+RangeError: precision {0} out of range (Firefox)
+RangeError: toExponential() argument must be between 0 and 20 (Chrome)
+RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
+RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
+```
 
 ## Type d'erreur
 

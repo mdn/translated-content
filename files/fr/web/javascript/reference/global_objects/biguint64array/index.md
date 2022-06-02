@@ -17,11 +17,13 @@ Le tableau typé **`BigUint64Array`** permet de représenter un tableau d'entier
 
 ## Syntaxe
 
-    new BigUint64Array();
-    new BigUint64Array(longueur);
-    new BigUint64Array(tableauTypé);
-    new BigUint64Array(objet);
-    new BigUint64Array(tampon [, décalage [, longueur]]);
+```js
+new BigUint64Array();
+new BigUint64Array(longueur);
+new BigUint64Array(tableauTypé);
+new BigUint64Array(objet);
+new BigUint64Array(tampon [, décalage [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
 

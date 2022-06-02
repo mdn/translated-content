@@ -11,9 +11,9 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>响应首部 <strong><code>Access-Control-Allow-Headers</code></strong> 用于 {{glossary("preflight request")}} （预检请求）中，列出了将会在正式请求的 {{HTTPHeader("Access-Control-Request-Headers")}} 字段中出现的首部信息。</p>
+<p>响应首部 <strong><code>Access-Control-Allow-Headers</code></strong> 用于 {{glossary("preflight request")}}（预检请求）中，列出了将会在正式请求的 {{HTTPHeader("Access-Control-Request-Headers")}} 字段中出现的首部信息。</p>
 
-<p>简单首部，如 {{glossary("simple header", "simple headers")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Type")}} （只限于解析后的值为 <code>application/x-www-form-urlencoded、</code><code>multipart/form-data </code>或 <code>text/plain 三种MIME类型（不包括参数）），它们始终是被支持的，不需要在这个首部特意列出。</code></p>
+<p>简单首部，如 {{glossary("simple header", "simple headers")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Type")}}（只限于解析后的值为 <code>application/x-www-form-urlencoded、</code><code>multipart/form-data </code>或 <code>text/plain 三种 MIME 类型（不包括参数）），它们始终是被支持的，不需要在这个首部特意列出。</code></p>
 
 <p>如果请求中含有 {{HTTPHeader("Access-Control-Request-Headers")}} 字段，那么这个首部是必要的。</p>
 
@@ -42,17 +42,17 @@ Access-Control-Allow-Headers: *</pre>
  <dd>可支持的请求首部名字。请求头会列出所有支持的首部列表，用逗号隔开。</dd>
 </dl>
 
-<p>注意以下这些特定的首部是一直允许的：{{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} （但只在其值属于 MIME 类型 <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> 或 <code>text/plain</code>中的一种时）。这些被称作{{Glossary("simple headers")}}，你无需特意声明它们。</p>
+<p>注意以下这些特定的首部是一直允许的：{{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}（但只在其值属于 MIME 类型 <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> 或 <code>text/plain</code>中的一种时）。这些被称作{{Glossary("simple headers")}}，你无需特意声明它们。</p>
 
 <p><strong><code>*</code> (wildcard)</strong></p>
 
-<p>对于没有凭据的请求（没有HTTP cookie或HTTP认证信息的请求），值“ <code>*</code>”仅作为特殊的通配符值。 在具有凭据的请求中，它被视为没有特殊语义的文字标头名称“ *”。 请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。</p>
+<p>对于没有凭据的请求（没有 HTTP cookie 或 HTTP 认证信息的请求），值“ <code>*</code>”仅作为特殊的通配符值。 在具有凭据的请求中，它被视为没有特殊语义的文字标头名称“ *”。 请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="自定义的请求头">自定义的请求头</h3>
 
-<p>下面是 <code>Access-Control-Allow-Headers</code> 标头的一个示例。 它表明，除了CORS安全清单列出的请求标头外，对服务器的CORS请求还支持名为X-Custom-Header的自定义标头。</p>
+<p>下面是 <code>Access-Control-Allow-Headers</code> 标头的一个示例。 它表明，除了 CORS 安全清单列出的请求标头外，对服务器的 CORS 请求还支持名为 X-Custom-Header 的自定义标头。</p>
 
 <pre class="notranslate"><code>Access-Control-Allow-Headers: X-Custom-Header</code></pre>
 
@@ -112,7 +112,7 @@ Access-Control-Max-Age: 86400</code></pre>
 <h2 id="有关兼容性的注意事项">有关兼容性的注意事项</h2>
 
 <ul>
- <li>在最新规范中提出的通配符(*)，尚未被如下浏览器实现：
+ <li>在最新规范中提出的通配符 (*)，尚未被如下浏览器实现：
   <ul>
    <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
    <li>Firefox: {{bug(1309358)}}</li>

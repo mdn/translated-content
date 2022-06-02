@@ -19,7 +19,9 @@ La méthode **`getInt32()`** permet de lire un entier signé sur 32 bits (type _
 
 ## Syntaxe
 
-    dataview.getInt32(positionOctet [, littleEndian])
+```js
+dataview.getInt32(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 
