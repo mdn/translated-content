@@ -333,7 +333,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators","Decremento sufijo","#incremento_y_decremento", 1)}}
+        {{jsxref("Operators","Decremento prefijo","#incremento_y_decremento", 1)}}
       </td>
       <td><code>-- …</code></td>
     </tr>
