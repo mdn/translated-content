@@ -1,34 +1,33 @@
 ---
 title: Document.xmlVersion
 slug: Web/API/Document/xmlVersion
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
   - DOM リファレンス
-  - Document
-  - Obsolete
-  - Reference
   - プロパティ
+  - リファレンス
+  - 非推奨
+browser-compat: api.Document.xmlVersion
 translation_of: Web/API/Document/xmlVersion
 ---
-<div>{{APIRef("DOM")}}{{obsolete_header("10.0")}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>XML 宣言 (例えば <code>&lt;?xml version="1.0"?&gt;</code>) で指定されたバージョン番号を返し、宣言がなければ "<code>1.0</code>" を返します。</p>
+XML 宣言（例えば `<?xml version="1.0"?>`）で指定されたバージョン番号を返し、宣言がなければ "1.0" を返します。
 
-<p>この属性は常に 1.0 を返していたので、本当は有用ではなく、 DOM Level 4 で削除されました。同様に、 Firefox 10 はもう実装していません。以前の主な使用法は、文書が HTML ではなく XML として表示するかどうかを検出するためでした。これは、小文字で要素を作成し、すべて大文字に変換されるかどうかを確認することによって検出することができます (文書が XML ではない HTML モードの場合)。</p>
+この属性は常に 1.0 を返していたので、本当は有用ではなく、 DOM Level 4 で削除されました。同様に、 Firefox 10 はもう実装していません。以前の主な使用法は、文書が HTML ではなく XML として表示するかどうかを検出するためでした。これは、（文書が XML ではない HTML モードの場合）小文字で要素を作成し、すべて大文字に変換されるかどうかを確認することによって検出することができます。
 
-<pre class="brush: js">if (document.createElement("foo").tagName == "FOO") {
+```js
+if (document.createElement("foo").tagName == "FOO") {
   /* 文書は XML ではない */
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-version" rel="freelink">http://www.w3.org/TR/DOM-Level-3-Cor...ument3-version</a></li>
- <li>{{spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD")}} で削除されています。</li>
-</ul>
+この機能は、現在のどの仕様にも含まれていません。標準化される予定もありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("api.Document.xmlVersion")}}</div>
+{{Compat}}
