@@ -9,20 +9,19 @@ browser-compat: javascript.operators.addition
 ---
 {{jsSidebar("Operators")}}
 
-The addition operator (`+`) produces the sum of numeric operands or string
-concatenation.
+相加運算子 (`+`) 用來處理數字的相加或是進行字串的串聯。
 
 {{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
 
-## Syntax
+## 語法
 
 ```js
 x + y
 ```
 
-## Examples
+## 範例
 
-### Numeric addition
+### 數字相加
 
 ```js
 // Number + Number -> addition
@@ -33,7 +32,7 @@ true + 1 // 2
 false + false // 0
 ```
 
-### String concatenation
+### 字串串聯
 
 ```js
 // String + String -> concatenation
@@ -44,15 +43,15 @@ false + false // 0
 'foo' + false // "foofalse"
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
 - [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
