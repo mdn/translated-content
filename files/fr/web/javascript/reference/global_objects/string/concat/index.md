@@ -18,7 +18,9 @@ La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîn
 
 ## Syntaxe
 
-    str.concat(string2[, string3, ..., stringN])
+```js
+str.concat(string2[, string3, ..., stringN])
+```
 
 ### Paramètres
 

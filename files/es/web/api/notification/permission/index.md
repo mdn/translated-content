@@ -74,4 +74,3 @@ function notifyMe() {
 - [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - [API de Permisos](/es/docs/Web/API/Permissions_API)
 - [Usando la API de Permisos](/es/docs/Web/API/Permissions_API/Using_the_Permissions_API)
-- 

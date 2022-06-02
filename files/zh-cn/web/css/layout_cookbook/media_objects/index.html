@@ -1,5 +1,5 @@
 ---
-title: '指南: 媒体对象'
+title: '指南：媒体对象'
 slug: Web/CSS/Layout_cookbook/Media_objects
 tags:
   - 媒体对象
@@ -12,7 +12,7 @@ original_slug: Web/CSS/Layout_cookbook/媒体对象
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">媒体对象是web上随处可见的一种模式。它由<a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nicole Sullivan</a>命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇facebook帖子或者tweet。</p>
+<p>媒体对象是 web 上随处可见的一种模式。它由<a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nicole Sullivan</a>命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇 facebook 帖子或者 tweet。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16112/media-object.png"></p>
 
@@ -40,17 +40,17 @@ original_slug: Web/CSS/Layout_cookbook/媒体对象
 
 <p>我选择使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid Layout</a>实现媒体对象，因为它可以让我在我需要的时候控制两个维度的布局。这意味着当我们有一个页脚（footer）的时候，上面的内容很短，页脚可以被推到媒体对象的底部。</p>
 
-<p>另一个使用网格布局（Grid Layout）的原因是为了可以使用{{cssxref("fit-content")}}图片的追踪（track）大小。通过使用 最大尺寸是200像素的<code>fit-content</code> ，当我们有一个小图片比如icon的时候，track仅仅得到和image的尺寸一样的大小（<code>max-content</code> 大小）。如果图片更大，track在200像素的时候停止增长，因为图片应用了{{cssxref("max-width ")}}为100%。同样，它会缩小以适应列内部的尺寸。</p>
+<p>另一个使用网格布局（Grid Layout）的原因是为了可以使用{{cssxref("fit-content")}}图片的追踪（track）大小。通过使用 最大尺寸是 200 像素的<code>fit-content</code> ，当我们有一个小图片比如 icon 的时候，track 仅仅得到和 image 的尺寸一样的大小（<code>max-content</code> 大小）。如果图片更大，track 在 200 像素的时候停止增长，因为图片应用了{{cssxref("max-width ")}}为 100%。同样，它会缩小以适应列内部的尺寸。</p>
 
-<p>通过使用{{cssxref("grid-template-areas")}} 来实现布局，我可以看到CSS中的这个模式。我定义我的网格，其并且设置最大宽度（max-width）为500像素，因此在较小的设备上媒体对象会被堆叠起来。</p>
+<p>通过使用{{cssxref("grid-template-areas")}} 来实现布局，我可以看到 CSS 中的这个模式。我定义我的网格，其并且设置最大宽度（max-width）为 500 像素，因此在较小的设备上媒体对象会被堆叠起来。</p>
 
 <p>模式的一个选项是翻转它将图片切换到另一边——这通过添加<code>media-flip</code> 类来实现，它定义了一个翻转的网格模板所以布局被镜像了。</p>
 
-<p>当我们在另一个媒体对象之中嵌套一个媒体对象，我么你需要将它放到常规布局的第二个track中，当翻转时放到第一个track中</p>
+<p>当我们在另一个媒体对象之中嵌套一个媒体对象，我么你需要将它放到常规布局的第二个 track 中，当翻转时放到第一个 track 中</p>
 
 <h2 id="回退方案">回退方案</h2>
 
-<p>对于这种模式有很多种可能的回退方案，取决于你希望支持的浏览器。一个比较号的方案是将图片浮动到左边，并且为盒子添加clearfix来确保它包含浮动元素。</p>
+<p>对于这种模式有很多种可能的回退方案，取决于你希望支持的浏览器。一个比较号的方案是将图片浮动到左边，并且为盒子添加 clearfix 来确保它包含浮动元素。</p>
 
 <p class="codepen">{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}</p>
 
@@ -60,9 +60,9 @@ original_slug: Web/CSS/Layout_cookbook/媒体对象
 
 <p>一旦浮动元素成为网格项，浮动将不再被应用到网格上，因此你不需要做任何特殊的事情来清楚浮动。</p>
 
-<p>你需要做的事情是移除应用到这些items的任何边界，以及我们在一个网格上下文中不需要的任何宽度（在网格中我们有{{cssxref("gap")}}属性来控制它，并且track控制了尺寸）。</p>
+<p>你需要做的事情是移除应用到这些 items 的任何边界，以及我们在一个网格上下文中不需要的任何宽度（在网格中我们有{{cssxref("gap")}}属性来控制它，并且 track 控制了尺寸）。</p>
 
-<h2 id="MDN上相关的资源">MDN上相关的资源</h2>
+<h2 id="MDN上相关的资源">MDN 上相关的资源</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
@@ -76,7 +76,6 @@ original_slug: Web/CSS/Layout_cookbook/媒体对象
 
 <p>.各种各样的布局方法有不同的浏览器支持。查看下面的图表得到属性的基本支持的细节。</p>
 
-<p>这个页面中的兼容性表格由结构数据生成。如果你想对数据做贡献，请查看 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并且给我们发送一个pull request。</p>
 
 <h4 id="grid-template-areas">grid-template-areas</h4>
 

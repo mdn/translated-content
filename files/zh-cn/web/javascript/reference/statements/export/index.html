@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Statements/export
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>在创建JavaScript模块时，<code><strong>export</strong></code> 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用import进行导入时，这些绑定值只能被导入模块所读取，但在export导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。</p>
+<p>在创建 JavaScript 模块时，<code><strong>export</strong></code> 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。</p>
 
-<p>无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。 export语句不能用在嵌入式脚本中。</p>
+<p>无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。 export 语句不能用在嵌入式脚本中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -66,7 +66,7 @@ export { default } from …;</pre>
 <pre class="brush: js">// 导出事先定义的特性
 export { myFunction, myVariable };
 
-// 导出单个特性（可以导出var，let，
+// 导出单个特性（可以导出 var，let，
 //const,function,class）
 export let myVariable = Math.sqrt(2);
 export function myFunction() { ... };</pre>
@@ -118,7 +118,7 @@ export { function1, function2 };
 <p>但这里的 <code>function1</code> 和 <code>function2</code> 在当前模块中变得不可用。</p>
 
 <div class="note">
-<p><strong>备注：</strong>尽管与import等效，但以下语法在语法上无效：</p>
+<p><strong>备注：</strong>尽管与 import 等效，但以下语法在语法上无效：</p>
 </div>
 
 <pre class="brush: js">import DefaultExport from 'bar.js'; // 有效的

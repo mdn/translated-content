@@ -157,7 +157,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
  <li><code>ft-end</code></li>
 </ul>
 
-<p>下图中可以看到被命名的网格线，注意，有些线有2个名字，比如 <code>sd-end</code> 和  <code>main-start</code> 指的是同一条线。</p>
+<p>下图中可以看到被命名的网格线，注意，有些线有 2 个名字，比如 <code>sd-end</code> 和  <code>main-start</code> 指的是同一条线。</p>
 
 <p><img alt="An image showing the implicit line names created by our grid areas." src="https://mdn.mozillademos.org/files/14699/5_multiple_lines_from_areas.png" style="height: 396px; width: 1140px;"></p>
 
@@ -262,14 +262,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
       grid-template-columns: repeat(12, [col-start] 1fr);
 }</pre>
 
-<p>网格创建好之后，就可以在其中定位项目了。我们有多条名为 <code>col-start</code> 的线，如果有一个项目位于 <code>col-start</code> 之后，就是指命名为 <code>col-start</code> 的第一条线，也就是指最左边那条线。如果要引用其他的同名线，就要加上序号。比如要定位项目从名为 col-start 的第1条线开始，到第5条线结束，应该这样写：</p>
+<p>网格创建好之后，就可以在其中定位项目了。我们有多条名为 <code>col-start</code> 的线，如果有一个项目位于 <code>col-start</code> 之后，就是指命名为 <code>col-start</code> 的第一条线，也就是指最左边那条线。如果要引用其他的同名线，就要加上序号。比如要定位项目从名为 col-start 的第 1 条线开始，到第 5 条线结束，应该这样写：</p>
 
 <pre class="brush: css">.item1 {
   grid-column: col-start / col-start 5
 }
 </pre>
 
-<p>此处也可以使用 <code>span</code> 关键字。比如下一个项目的位置从名为 <code>col-start</code> 的第7条线开始，跨越3条线。</p>
+<p>此处也可以使用 <code>span</code> 关键字。比如下一个项目的位置从名为 <code>col-start</code> 的第 7 条线开始，跨越 3 条线。</p>
 
 <pre class="brush: css">.item2 {
   grid-column: col-start 7 / span 3;
@@ -429,8 +429,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 <section id="Quick_links">
 <ol>
  <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS参考</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS网格布局</a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 参考</strong></a></li>
+ <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
  <li data-default-state="open"><a href="#"><strong>指南</strong></a>
   <ol>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
@@ -441,8 +441,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">网格布局中的自动定位</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的盒模型对齐</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS网格布局和可及性</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS网格布局和渐进增强</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和可及性</a></li>
+   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局和渐进增强</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></li>
   </ol>
  </li>

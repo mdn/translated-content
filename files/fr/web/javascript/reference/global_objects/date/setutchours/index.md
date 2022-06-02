@@ -18,7 +18,9 @@ La méthode **`setUTCHours()`** définit les heures pour la date, selon UTC, et 
 
 ## Syntaxe
 
-    dateObj.setUTCHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```js
+dateObj.setUTCHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```
 
 ### Paramètres
 

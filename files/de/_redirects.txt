@@ -425,7 +425,8 @@
 /de/docs/Web/API/Element.querySelector	/de/docs/Web/API/Element/querySelector
 /de/docs/Web/API/EventListener	/de/docs/Web/API/EventTarget/addEventListener
 /de/docs/Web/API/File/Typ	/de/docs/Web/API/File/type
-/de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
+/de/docs/Web/API/File/Using_files_from_web_applications	/de/docs/Web/API/File_API/Using_files_from_web_applications
+/de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File_API/Using_files_from_web_applications
 /de/docs/Web/API/File/fileName	/de/docs/conflicting/Web/API/File/name
 /de/docs/Web/API/File/fileSize	/de/docs/Web/API/Blob/size
 /de/docs/Web/API/FileReader/onload	/de/docs/Web/API/FileReader/load_event
@@ -825,5 +826,5 @@
 /de/docs/Werkzeuge	/de/docs/Tools
 /de/docs/XML_Einführung	/de/docs/Web/XML/XML_introduction
 /de/docs/XSLT	/de/docs/Web/XSLT
-/de/docs/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
+/de/docs/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File_API/Using_files_from_web_applications
 /de/docs/en	/en-US/

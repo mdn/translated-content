@@ -18,7 +18,9 @@ La méthode **`Promise.all()`** renvoie une promesse ({{jsxref("Promise")}}) qui
 
 ## Syntaxe
 
-    Promise.all(iterable);
+```js
+Promise.all(iterable);
+```
 
 ### Paramètres
 

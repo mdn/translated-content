@@ -23,7 +23,7 @@ translation_of: Web/CSS/position
  <li><strong>粘性定位元素</strong><strong style="line-height: 1.5;">（</strong><strong>stickily positioned element</strong><strong style="line-height: 1.5;">）</strong>是<a href="/zh-CN/docs/Web/CSS/computed_value" style="line-height: 1.5;">计算后</a>位置属性为 <code>sticky</code> 的元素。</li>
 </ul>
 
-<p>大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为auto的绝对定位元素，按其内容大小调整尺寸。但是，被绝对定位的元素可以通过指定{{Cssxref("top")}}和{{Cssxref("bottom")}} ，保留{{Cssxref("height")}}未指定（即<code>auto</code>），来填充可用的垂直空间。它们同样可以通过指定{{Cssxref("left")}} 和 {{Cssxref("right")}}并将{{Cssxref("width")}} 指定为<code>auto</code>来填充可用的水平空间。</p>
+<p>大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为 auto 的绝对定位元素，按其内容大小调整尺寸。但是，被绝对定位的元素可以通过指定{{Cssxref("top")}}和{{Cssxref("bottom")}} ，保留{{Cssxref("height")}}未指定（即<code>auto</code>），来填充可用的垂直空间。它们同样可以通过指定{{Cssxref("left")}} 和 {{Cssxref("right")}}并将{{Cssxref("width")}} 指定为<code>auto</code>来填充可用的水平空间。</p>
 
 <p>除了刚刚描述的情况（绝对定位元素填充可用空间）：</p>
 
@@ -51,8 +51,8 @@ translation_of: Web/CSS/position
 
 <dl>
  <dt><code>sticky</code></dt>
- <dd>元素根据正常文档流进行定位，然后相对它的<em>最近滚动祖先（nearest scrolling ancestor）</em>和 <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> (最近块级祖先 nearest block-level ancestor)，包括table-related元素，基于<code>top</code>, <code>right</code>, <code>bottom</code>, 和 <code>left</code>的值进行偏移。偏移值不会影响任何其他元素的位置。</dd>
- <dd>该值总是创建一个新的<a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">层叠上下文（stacking context</a>）。注意，一个sticky元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的<code>overflow</code> 是 <code>hidden</code>, <code>scroll</code>, <code>auto</code>, 或 <code>overlay</code>时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见<a href="https://github.com/w3c/csswg-drafts/issues/865">Github issue on W3C CSSWG</a>）。</dd>
+ <dd>元素根据正常文档流进行定位，然后相对它的<em>最近滚动祖先（nearest scrolling ancestor）</em>和 <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> (最近块级祖先 nearest block-level ancestor)，包括 table-related 元素，基于<code>top</code>, <code>right</code>, <code>bottom</code>, 和 <code>left</code>的值进行偏移。偏移值不会影响任何其他元素的位置。</dd>
+ <dd>该值总是创建一个新的<a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">层叠上下文（stacking context</a>）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的<code>overflow</code> 是 <code>hidden</code>, <code>scroll</code>, <code>auto</code>, 或 <code>overlay</code>时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见<a href="https://github.com/w3c/csswg-drafts/issues/865">Github issue on W3C CSSWG</a>）。</dd>
 </dl>
 
 <h3 id="常见语法" style="font-size: 1.71428571428571rem;">常见语法</h3>
@@ -94,7 +94,7 @@ translation_of: Web/CSS/position
 
 <h3 id="Absolute_positioning" name="Absolute_positioning">绝对定位</h3>
 
-<p>相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其它元素时，绝对定位元素不占据空间。绝对定位元素相对于<em>最近的非 <code>static</code> 祖先元素</em>定位。当这样的祖先元素不存在时，则相对于ICB（inital container block, 初始包含块）。例子不严谨，待修正<s>下面的示例中，"Three" 元素不存在应用了定位的祖先元素，因此该元素相对于紧邻的祖先（iframe 中的 &lt;body&gt; 元素）绝对定位。</s></p>
+<p>相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其它元素时，绝对定位元素不占据空间。绝对定位元素相对于<em>最近的非 <code>static</code> 祖先元素</em>定位。当这样的祖先元素不存在时，则相对于 ICB（inital container block, 初始包含块）。例子不严谨，待修正<s>下面的示例中，"Three" 元素不存在应用了定位的祖先元素，因此该元素相对于紧邻的祖先（iframe 中的 &lt;body&gt; 元素）绝对定位。</s></p>
 
 <h4 id="HTML_内容">HTML 内容</h4>
 

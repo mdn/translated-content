@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20</pre>
 
-<p>下面的方法使用 {{jsxref("Global_Objects/Function/apply", "apply")}} 方法寻找一个数值数组中的最大元素。<code>getMaxOfArray([1,2,3])</code> 等价于 <code>Math.max(1, 2, 3)</code>，但是你可以使用 <code>getMaxOfArray</code> ()作用于任意长度的数组上。</p>
+<p>下面的方法使用 {{jsxref("Global_Objects/Function/apply", "apply")}} 方法寻找一个数值数组中的最大元素。<code>getMaxOfArray([1,2,3])</code> 等价于 <code>Math.max(1, 2, 3)</code>，但是你可以使用 <code>getMaxOfArray()</code> 作用于任意长度的数组上。</p>
 
 <pre class="brush:js">function getMaxOfArray(numArray) {
     return Math.max.apply(null, numArray);

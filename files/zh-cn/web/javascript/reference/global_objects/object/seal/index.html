@@ -69,7 +69,7 @@ Object.defineProperty(obj, 'foo', {
   get: function() { return 'g'; }
 }); // throws a TypeError
 
-// 除了属性值以外的任何变化，都会失败.
+// 除了属性值以外的任何变化，都会失败。
 obj.quaxxor = 'the friendly duck';
 // 添加属性将会失败
 delete obj.foo;
@@ -83,17 +83,17 @@ function fail() {
 }
 fail();
 
-// 通过Object.defineProperty添加属性将会报错
+// 通过 Object.defineProperty 添加属性将会报错
 Object.defineProperty(obj, 'ohai', {
   value: 17
 }); // throws a TypeError
 Object.defineProperty(obj, 'foo', {
   value: 'eit'
-}); // 通过Object.defineProperty修改属性值</pre>
+}); // 通过 Object.defineProperty 修改属性值</pre>
 
 <h2 id="注意">注意</h2>
 
-<p>在ES5中，如果这个方法的参数不是一个（原始）对象，那么它将导致{{jsxref("TypeError")}}。在ES2015中，非对象参数将被视为已被密封的普通对象，会直接返回它。</p>
+<p>在 ES5 中，如果这个方法的参数不是一个（原始）对象，那么它将导致{{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为已被密封的普通对象，会直接返回它。</p>
 
 <pre class="brush: js">Object.seal(1);
 // TypeError: 1 is not an object (ES5 code)
