@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/detachShader
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong>WebGLRenderingContext.detachShader()</strong>  方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器 （{{domxref("WebGLShader")}} ） .</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong>WebGLRenderingContext.detachShader()</strong>  方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/WebGLRenderingContext/detachShader
 
 <dl>
  <dt><code>program</code></dt>
- <dd>一个 {{domxref("WebGLProgram")}} 对象.</dd>
+ <dd>一个 {{domxref("WebGLProgram")}} 对象。</dd>
  <dt><code>shader</code></dt>
  <dd>一个顶点或者片元着色器 {{domxref("WebGLShader")}}.</dd>
 </dl>
@@ -45,7 +45,7 @@ translation_of: Web/API/WebGLRenderingContext/detachShader
 
 <h2 id="例子">例子</h2>
 
-<h3 id="使用detachShader方法分离一个顶点或片元着色器">使用detachShader方法分离一个顶点或片元着色器</h3>
+<h3 id="使用detachShader方法分离一个顶点或片元着色器">使用 detachShader 方法分离一个顶点或片元着色器</h3>
 
 <pre>//顶点着色器
     var vertexShader = gl.createShader(gl.VERTEX_SHADER);
@@ -53,7 +53,7 @@ translation_of: Web/API/WebGLRenderingContext/detachShader
     gl.compileShader(vertexShader);
     //片元着色器
     var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);//创建 WebGLShader。
-    gl.shaderSource(fragmentShader, fragmentSrc); //fragmentSrc设置一个 WebGLShader 的源码。
+    gl.shaderSource(fragmentShader, fragmentSrc); //fragmentSrc 设置一个 WebGLShader 的源码。
     gl.compileShader(fragmentShader);
 
     //WebGLProgram
@@ -61,7 +61,7 @@ translation_of: Web/API/WebGLRenderingContext/detachShader
     gl.attachShader(program, vertexShader); //往 WebGLProgram 添加一个片段或者顶点着色器。
     gl.attachShader(program, fragmentShader);
     gl.linkProgram(program);//链接给入的 WebGLProgram 对象
-    gl.detachShader(program, vertexShader); //从一个WebGLProgram中分离一个先前附加的片段或者顶点着色器;
+    gl.detachShader(program, vertexShader); //从一个 WebGLProgram 中分离一个先前附加的片段或者顶点着色器;
     gl.detachShader(program, fragmentShader);
     gl.deleteShader(vertexShader);
     gl.deleteShader(fragmentShader);
