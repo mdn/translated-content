@@ -7401,25 +7401,6 @@
       "MuradAz"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2020-11-17T16:11:16.608Z",
-    "contributors": [
-      "Zarin417",
-      "grebenyukov",
-      "Sc4ramouche",
-      "glowlh",
-      "vovanx",
-      "jeetiss",
-      "pottsnoc",
-      "chrisdavidmills",
-      "Coshrurnina",
-      "13af",
-      "Sub-hero",
-      "L-st",
-      "nirta",
-      "Lambrusco.pro"
-    ]
-  },
   "Web/API/File/getAsDataURL": {
     "modified": "2019-03-23T22:18:17.148Z",
     "contributors": [
@@ -7492,6 +7473,25 @@
     "modified": "2020-10-15T22:19:35.805Z",
     "contributors": [
       "emision"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2020-11-17T16:11:16.608Z",
+    "contributors": [
+      "Zarin417",
+      "grebenyukov",
+      "Sc4ramouche",
+      "glowlh",
+      "vovanx",
+      "jeetiss",
+      "pottsnoc",
+      "chrisdavidmills",
+      "Coshrurnina",
+      "13af",
+      "Sub-hero",
+      "L-st",
+      "nirta",
+      "Lambrusco.pro"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {

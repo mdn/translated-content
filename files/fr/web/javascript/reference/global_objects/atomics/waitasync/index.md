@@ -69,7 +69,7 @@ Atomics.notify(int32, 0);
 Si la résolution ne founit pas `value: "ok"`, cela signifie que&nbsp;:
 
 - La valeur située à cet emplacement de la mémoire partagée n'était pas la valeur attendue (`"not-equal"`)
-- Ou que la durée d'attente a expiré (`"time-out"`). 
+- Ou que la durée d'attente a expiré (`"time-out"`).
 
 ## Spécifications
 

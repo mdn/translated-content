@@ -17,7 +17,9 @@ La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argume
 
 ## Syntaxe
 
-    parseInt(string, base);
+```js
+parseInt(string, base);
+```
 
 ### Paramètres
 

@@ -19,7 +19,9 @@ La fonction **`Math.expm1()`** renvoie `e^x` - 1, avec `x` l'argument donné et 
 
 ## Syntaxe
 
-    Math.expm1(x)
+```js
+Math.expm1(x)
+```
 
 ### Paramètres
 

@@ -13,10 +13,10 @@ translation_of: Web/API/KeyboardEvent/initKeyEvent
 
 <p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
 
-<p>KeyboardEvent.initKeyEvent方法用于初始化使用{{domxref("document.createEvent")}}("KeyboardEvent")创建的事件的值。 以这种方式初始化的事件必须使用{{domxref("document.createEvent")}}("KeyboardEvent")方法创建。 在调度之前，必须调用initKeyEvent来设置事件。</p>
+<p>KeyboardEvent.initKeyEvent 方法用于初始化使用{{domxref("document.createEvent")}}("KeyboardEvent") 创建的事件的值。 以这种方式初始化的事件必须使用{{domxref("document.createEvent")}}("KeyboardEvent") 方法创建。 在调度之前，必须调用 initKeyEvent 来设置事件。</p>
 
 <p><strong>不要再使用这个方法，而是使用{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}构造函数。</strong><br>
- 该方法基于{{SpecName("DOM2 Events")}}的早期草案，并在基于Gecko的浏览器中实现; 其他浏览器基于{{SpecName("DOM3 Events")}}的早期草稿实现{{domxref("KeyboardEvent.initKeyboardEvent")}}。 将现代构造函数结构视为构建事件的唯一跨浏览器方式。</p>
+ 该方法基于{{SpecName("DOM2 Events")}}的早期草案，并在基于 Gecko 的浏览器中实现; 其他浏览器基于{{SpecName("DOM3 Events")}}的早期草稿实现{{domxref("KeyboardEvent.initKeyboardEvent")}}。 将现代构造函数结构视为构建事件的唯一跨浏览器方式。</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -41,13 +41,13 @@ translation_of: Web/API/KeyboardEvent/initKeyEvent
  <dt><em><code>altKeyArg</code></em></dt>
  <dd><em><code>如果要生成的虚拟键是包含</code></em><kbd>Alt</kbd><em><code>键的键的组合，则为{{jsxref("Boolean")}}。</code></em></dd>
  <dt><em><code>shiftKeyArg</code></em></dt>
- <dd>A {{jsxref("Boolean")}}如果要生成的虚拟键是包含<kbd>Shift</kbd>键的键组合，则返回true。</dd>
+ <dd>A {{jsxref("Boolean")}}如果要生成的虚拟键是包含<kbd>Shift</kbd>键的键组合，则返回 true。</dd>
  <dt><em><code>metaKeyArg</code></em></dt>
- <dd><em><code>是{{jsxref("Boolean")}}如果要生成的虚拟键是包含</code></em><kbd>Meta</kbd><em><code>键的键的组合，则为true。</code></em></dd>
+ <dd><em><code>是{{jsxref("Boolean")}}如果要生成的虚拟键是包含</code></em><kbd>Meta</kbd><em><code>键的键的组合，则为 true。</code></em></dd>
  <dt><em><code>keyCodeArg</code></em></dt>
- <dd>是一个无符号长整型，表示被按下的键的虚拟键码值，否则为0.请参阅{{domxref("KeyboardEvent.keyCode")}}以获取键码列表。</dd>
+ <dd>是一个无符号长整型，表示被按下的键的虚拟键码值，否则为 0.请参阅{{domxref("KeyboardEvent.keyCode")}}以获取键码列表。</dd>
  <dt><em><code>charCodeArg</code></em></dt>
- <dd>是一个无符号长整型，表示与按下的键相关的Unicode字符，否则为0。</dd>
+ <dd>是一个无符号长整型，表示与按下的键相关的 Unicode 字符，否则为 0。</dd>
 </dl>
 
 <h2 id="Example" name="Example">Example</h2>
@@ -70,9 +70,9 @@ document.getElementById('blah').dispatchEvent(event);
 
 <h2 id="Specification" name="Specification">Specification</h2>
 
-<p>键盘事件的这种实现基于DOM 2事件早期版本中的关键事件规范，后来从该规范中删除。</p>
+<p>键盘事件的这种实现基于 DOM 2 事件早期版本中的关键事件规范，后来从该规范中删除。</p>
 
-<p>initKeyEvent是DOM Level 3事件的当前Gecko等价物（最初起草并且不推荐使用{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} {{domxref("Keyboard.initKeyboardEvent()")}}方法与以下参数：</p>
+<p>initKeyEvent 是 DOM Level 3 事件的当前 Gecko 等价物（最初起草并且不推荐使用{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} {{domxref("Keyboard.initKeyboardEvent()")}}方法与以下参数：</p>
 
 <pre>typeArg of type DOMString
 canBubbleArg of type boolean

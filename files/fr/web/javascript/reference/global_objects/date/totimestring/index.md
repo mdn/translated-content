@@ -18,7 +18,9 @@ La méthode **`toTimeString()`**renvoie la partie « heure » de l'objet `Date` 
 
 ## Syntaxe
 
-    dateObj.toTimeString()
+```js
+dateObj.toTimeString()
+```
 
 ### Valeur de retour
 

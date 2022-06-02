@@ -7,17 +7,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 
 <p></p>
 
-<p>2017年春天，我们第一次看到像 Grid 这样的核心规范几乎同时发布于像FireFox，Chrome，Opera，Safari 和 Edge 等各大浏览器中，可虽然常用浏览器的支持意味着我们中的大部分人将很快看到大多数用户拥有 Grid Layout 支持，但也有一些旧的或不支持的浏览器需要应对。 在本指南中，我们将介绍各种支持策略。</p>
+<p>2017 年春天，我们第一次看到像 Grid 这样的核心规范几乎同时发布于像 FireFox，Chrome，Opera，Safari 和 Edge 等各大浏览器中，可虽然常用浏览器的支持意味着我们中的大部分人将很快看到大多数用户拥有 Grid Layout 支持，但也有一些旧的或不支持的浏览器需要应对。在本指南中，我们将介绍各种支持策略。</p>
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>除了在Internet Explorer中，CSS Grid Layout在Safari，Chrome，Opera，Firefox和Edge中都没有前缀。 对这些指南中详述的所有属性和值的支持可跨浏览器进行互操作。 这意味着如果您在Firefox中编写一些网格布局代码，它应该在Chrome中以相同的方式工作。 这不再是实验规范，您可以安全地在生产环境中使用它。.</p>
+<p>除了在 Internet Explorer 中，CSS Grid Layout 在 Safari，Chrome，Opera，Firefox 和 Edge 中都没有前缀。对这些指南中详述的所有属性和值的支持可跨浏览器进行互操作。这意味着如果您在 Firefox 中编写一些网格布局代码，它应该在 Chrome 中以相同的方式工作。这不再是实验规范，您可以安全地在生产环境中使用它。.</p>
 
-<h2 id="IE和Edge">IE和Edge</h2>
+<h2 id="IE和Edge">IE 和 Edge</h2>
 
-<p>应当谨记CSS网格布局在IE上实现的最早版本是IE10。这个早期规范并没有包含最新规范的所有属性和可用值。即使是相同的属性和相同的值，在IE10中的实现和现行的规范也有很大差异。早期规范也是Edge15之前实现的网格布局的版本。</p>
+<p>应当谨记 CSS 网格布局在 IE 上实现的最早版本是 IE10。这个早期规范并没有包含最新规范的所有属性和可用值。即使是相同的属性和相同的值，在 IE10 中的实现和现行的规范也有很大差异。早期规范也是 Edge15 之前实现的网格布局的版本。</p>
 
-<p>IE/Edge(≤15)版本的规范带有<code>-ms</code>前缀，IE/Edge(≤15)上实现的属性如下：</p>
+<p>IE/Edge(≤15)版本的规范带有<code>-ms</code>前缀，IE/Edge(≤15) 上实现的属性如下：</p>
 
 <ul>
  <li>{{cssxref("grid-template-columns")}} 变成 <code>-ms-grid-columns</code></li>
@@ -28,19 +28,19 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
  <li>{{cssxref("justify-self")}} 变成 <code>-ms-grid-column-align</code></li>
 </ul>
 
-<p>IE版本另有一些在新版规范中非必须的属性<code>-ms-grid-column-span</code>和<code>-ms-grid-row-span</code>。这个版本不包含自动定位能力和网格模板区域。从IE10到Edge15的版本，使用<code>-ms</code>属性可以实现一些简单的网格布局。由于这些属性包含厂商前缀，它们在任何支持最新规范使用无前缀属性的浏览器上将无法生效。</p>
+<p>IE 版本另有一些在新版规范中非必须的属性<code>-ms-grid-column-span</code>和<code>-ms-grid-row-span</code>。这个版本不包含自动定位能力和网格模板区域。从 IE10 到 Edge15 的版本，使用<code>-ms</code>属性可以实现一些简单的网格布局。由于这些属性包含厂商前缀，它们在任何支持最新规范使用无前缀属性的浏览器上将无法生效。</p>
 
-<h3 id="Autoprefixer对网格布局的支持">Autoprefixer对网格布局的支持</h3>
+<h3 id="Autoprefixer对网格布局的支持">Autoprefixer 对网格布局的支持</h3>
 
 <p>流行的<em><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></em>更新之后已经能够支持<code>-ms-</code>网格布局版本。网格前缀默认是禁用的，你可以通过<code>grid: true</code>选项启用它。</p>
 
 <pre class="notranslate">autoprefixer({ grid: 'autoplace' })</pre>
 
-<p>Grid网格前缀被默认禁用是因为存在一些属性不能添加前缀。</p>
+<p>Grid 网格前缀被默认禁用是因为存在一些属性不能添加前缀。</p>
 
-<h2 id="我的布局使用CSS网格布局安全吗？">我的布局使用CSS网格布局安全吗？</h2>
+<h2 id="我的布局使用CSS网格布局安全吗？">我的布局使用 CSS 网格布局安全吗？</h2>
 
-<p>无论使用任何前端技术， 是否使用CSS网格布局都取决于网站访问者通常使用的浏览器。如果他们更多地使用最新版本地Firefox，Chrome，Opera和Safari，那么在这些浏览器更新之后开始使用CSS网格就很有意义了。但是如果你的站点服务于一个更旧浏览器绑定的超市，那目前就没有必要。然而，我的建议是不要根据过去浏览器中新规范的推出方式来进行假设。CSS网格布局是不同的，这取决它已经处于开发阶段的时间，和不同浏览器厂商为了确保所发布的内容对所有人都能以相同方式工作所做的工作。</p>
+<p>无论使用任何前端技术， 是否使用 CSS 网格布局都取决于网站访问者通常使用的浏览器。如果他们更多地使用最新版本地 Firefox，Chrome，Opera 和 Safari，那么在这些浏览器更新之后开始使用 CSS 网格就很有意义了。但是如果你的站点服务于一个更旧浏览器绑定的超市，那目前就没有必要。然而，我的建议是不要根据过去浏览器中新规范的推出方式来进行假设。CSS 网格布局是不同的，这取决它已经处于开发阶段的时间，和不同浏览器厂商为了确保所发布的内容对所有人都能以相同方式工作所做的工作。</p>
 
 <h2 id="Starting_to_use_Grid_in_production">Starting to use Grid in production</h2>
 

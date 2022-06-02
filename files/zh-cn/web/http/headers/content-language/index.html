@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Headers/Content-Language
 ---
 <div> </div>
 
-<p><strong><code>Content-Language</code></strong> 是一个 {{Glossary("entity header")}} （实体消息首部），用来说明访问者希望采用的语言或语言组合，这样的话用户就可以根据自己偏好的语言来定制不同的内容。</p>
+<p><strong><code>Content-Language</code></strong> 是一个 {{Glossary("entity header")}}（实体消息首部），用来说明访问者希望采用的语言或语言组合，这样的话用户就可以根据自己偏好的语言来定制不同的内容。</p>
 
 <p>举个例子，假如设置了这样一条消息首部（ "<code>Content-Language: de-DE</code>" ），那么说明这份文件是为说德语的人提供的（当然这并不意味着文件本身就是用德语写的。比如，它可能是为说德语的人开设的英语教程的一部分，也就是用英语写的）。</p>
 
@@ -46,29 +46,29 @@ Content-Language: de-DE, en-CA
 
 <dl>
  <dt><code>language-tag</code></dt>
- <dd>多个语言标签需要用逗号隔开。每一个语言标签都是由一个或多个不区分大小写的子标签构成的，子标签之间用连字号 ("-", %x2D)隔开。通常情况下，一个语言标签是由标识一个大的语言家族的主语言子标签（例如"en" = English），以及后面可选的用来缩小语言范围使更确切的一系列子标签（"en-CA" 表示在加拿大范围使用的英语的变种）构成的。</dd>
+ <dd>多个语言标签需要用逗号隔开。每一个语言标签都是由一个或多个不区分大小写的子标签构成的，子标签之间用连字号 ("-", %x2D) 隔开。通常情况下，一个语言标签是由标识一个大的语言家族的主语言子标签（例如"en" = English），以及后面可选的用来缩小语言范围使更确切的一系列子标签（"en-CA" 表示在加拿大范围使用的英语的变种）构成的。</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意:</strong> 语言标签在 <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a>中被正式定义，它使用的<a href="https://en.wikipedia.org/wiki/Language_code">语言代码</a>依赖于 <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> 标准(通常为 <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code list</a>) 。</p>
+<p><strong>注意：</strong> 语言标签在 <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a>中被正式定义，它使用的<a href="https://en.wikipedia.org/wiki/Language_code">语言代码</a>依赖于 <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> 标准 (通常为 <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code list</a>) 。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="声明文档的书写语言">声明文档的书写语言</h3>
 
-<p>全局的 <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> 属性使用在HTML元素去表达全部的 <a href="/en-US/docs/Web/HTML">HTML</a>文档或者部分的语言。</p>
+<p>全局的 <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> 属性使用在 HTML 元素去表达全部的 <a href="/en-US/docs/Web/HTML">HTML</a>文档或者部分的语言。</p>
 
 <pre class="brush: html">&lt;html lang="de"&gt;</pre>
 
-<p>不要使用这个meta元素去声明文档语言:</p>
+<p>不要使用这个 meta 元素去声明文档语言：</p>
 
 <pre class="brush: html example-bad">&lt;!-- /!\ This is bad practice --&gt;
 &lt;meta http-equiv="content-language" content="de"&gt;</pre>
 
 <h3 id="为资源指定目标访问者">为资源指定目标访问者</h3>
 
-<p><code>Content-Language</code> 请求头用于指定<strong>页面的目标受众，</strong>并且可以指明当前页面存在多种语言.</p>
+<p><code>Content-Language</code> 请求头用于指定<strong>页面的目标受众，</strong>并且可以指明当前页面存在多种语言。</p>
 
 <pre>Content-Language: de, en</pre>
 

@@ -10,9 +10,9 @@ translation_of: Web/API/Document_Object_Model
 ---
 <p>{{DefaultAPISidebar("DOM")}}</p>
 
-<p><strong>文档对象模型 (<em>DOM)</em></strong> 将 web 页面与到脚本或编程语言连接起来。通常是指  JavaScript，但将 HTML、SVG 或 XML 文档建模为对象并不是 JavaScript 语言的一部分。DOM模型用一个逻辑树来表示一个文档，树的每个分支的终点都是一个节点(node)，每个节点都包含着对象(objects)。DOM的方法(methods)让你可以用特定方式操作这个树，用这些方法你可以改变文档的结构、样式或者内容。节点可以关联上事件处理器，一旦某一事件被触发了，那些事件处理器就会被执行。</p>
+<p><strong>文档对象模型 (<em>DOM)</em></strong> 将 web 页面与到脚本或编程语言连接起来。通常是指  JavaScript，但将 HTML、SVG 或 XML 文档建模为对象并不是 JavaScript 语言的一部分。DOM 模型用一个逻辑树来表示一个文档，树的每个分支的终点都是一个节点 (node)，每个节点都包含着对象 (objects)。DOM 的方法 (methods) 让你可以用特定方式操作这个树，用这些方法你可以改变文档的结构、样式或者内容。节点可以关联上事件处理器，一旦某一事件被触发了，那些事件处理器就会被执行。</p>
 
-<p>这里还有一篇关于DOM的 <a href="/zh-CN/docs/Web/API/Document_Object_Model/Introduction">介绍</a> 。</p>
+<p>这里还有一篇关于 DOM 的 <a href="/zh-CN/docs/Web/API/Document_Object_Model/Introduction">介绍</a> 。</p>
 
 <h2 id="DOM_接口" style="margin-bottom: 20px; line-height: 30px;">DOM 接口</h2>
 
@@ -60,7 +60,7 @@ translation_of: Web/API/Document_Object_Model
 
 <h2 id="过时的_DOM_接口" style="margin-bottom: 20px; line-height: 30px;">过时的 DOM 接口</h2>
 
-<p>DOM模型已经被高度简化了。为此，以下出现在DOM level 3或更早的规范里的接口已经被移除了。  现在不是非常确定是否有一些会被重新引进，但是当前应该把它们看作废弃的，应当避免使用:</p>
+<p>DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更早的规范里的接口已经被移除了。  现在不是非常确定是否有一些会被重新引进，但是当前应该把它们看作废弃的，应当避免使用：</p>
 
 <div class="index">
 <ul>
@@ -88,7 +88,7 @@ translation_of: Web/API/Document_Object_Model
 
 <p>{{domxref("HTMLDocument")}} 接口描述了包含 HTML 的文档。注意：HTML 规范也继承了{{domxref("Document")}} 接口。</p>
 
-<p>一个 <code>HTMLDocument</code> 对象还可以访问浏览器的各种功能：例如使用 {{domxref("Window")}} 接口来绘制的标签或窗口，与之关联的样式 {{domxref("window.style", "Style")}}（通常是CSS），浏览器相对于上下文的历史记录 {{domxref("window.history", "History")}}，以及文档内的选区 {{domxref("Selection")}} 等。</p>
+<p>一个 <code>HTMLDocument</code> 对象还可以访问浏览器的各种功能：例如使用 {{domxref("Window")}} 接口来绘制的标签或窗口，与之关联的样式 {{domxref("window.style", "Style")}}（通常是 CSS），浏览器相对于上下文的历史记录 {{domxref("window.history", "History")}}，以及文档内的选区 {{domxref("Selection")}} 等。</p>
 
 <h3 id="HTML_元素接口" style="line-height: 24px; letter-spacing: normal;">HTML 元素接口</h3>
 
@@ -295,7 +295,7 @@ translation_of: Web/API/Document_Object_Model
 <p>Here are the DOM API for data types used in the definitions of SVG properties and attributes.</p>
 
 <div class="note">
-<p><strong>注意:</strong> Starting in {{Gecko("5.0")}},the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.</p>
+<p><strong>注意：</strong> Starting in {{Gecko("5.0")}},the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.</p>
 </div>
 
 <h4 id="Static_type" style="line-height: 18px; letter-spacing: normal;">Static type</h4>

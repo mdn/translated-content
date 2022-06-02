@@ -111,7 +111,6 @@ El CSS define tres clases. La primera, `standard-box`, se aplica a ambos cuadros
 
 Después de eso vienen las clases `horizontal` y `vertical`, que añaden la propiedad {{cssxref("writing-mode")}} al cuadro, con el valor `horizontal-tb` o `vertical-rl` dependiendo de qué clase se utiliza.
 
-
 ```css
 .standard-box {
   padding: 4px;

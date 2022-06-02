@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_bracket_after_list
 
 ## Message
 
-    SyntaxError: missing ] after element list
+```
+SyntaxError: missing ] after element list
+```
 
 ## Type d'erreur
 

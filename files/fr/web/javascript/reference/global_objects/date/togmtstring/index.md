@@ -19,7 +19,9 @@ La méthode **`toGMTString()`** convertit une date en une chaîne de caractères
 
 ## Syntaxe
 
-    dateObj.toGMTString()
+```js
+dateObj.toGMTString()
+```
 
 ### Valeur de retour
 
