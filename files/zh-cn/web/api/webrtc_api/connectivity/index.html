@@ -60,11 +60,11 @@ translation_of: Web/API/WebRTC_API/Connectivity
 
 <p><strong>当前描述</strong>(由 {{domxref("RTCPeerConnection.currentLocalDescription")}} 和 {{domxref("RTCPeerConnection.currentRemoteDescription")}} 属性返回 ) 表示连接实际使用的描述。 这是双方已经完全同意使用的最新连接。</p>
 
-<p><strong>待定的描述</strong>(由 {{domxref("RTCPeerConnection.pendingLocalDescription")}} 和 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} 返回 ) 表示当 分别调用 setLocalDescription( ) 或 setRemoteDescription( )。</p>
+<p><strong>待定的描述</strong>(由 {{domxref("RTCPeerConnection.pendingLocalDescription")}} 和 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} 返回 ) 表示当 分别调用 setLocalDescription() 或 setRemoteDescription()。</p>
 
 <p>当读取描述 ( {{domxref("RTCPeerConnection.localDescription")}} 和 {{domxref("RTCPeerConnection.remoteDescription")}} ) 返回时，返回的值是 pendingLocalDescription / pendingRemoteDescription 的值，如果有待处理的描述 ( 也就是说，待处理描述不为 null ); 否则，返回当前描述 (currentLocalDescription / currentRemoteDescription )。</p>
 
-<p>通过调用 setLocalDescription( ) 或 setRemoteDescription( ) 更改描述时，将指定的描述设置为待定描述，WebRTC 层开始评估是否可以接受。 一旦建议的描述已经达成一致，currentLocalDescription 或 currentRemoteDescription 的值将更改为待处理描述，并且待处理的描述再次设置为 null，表示没有待处理的描述。</p>
+<p>通过调用 setLocalDescription() 或 setRemoteDescription() 更改描述时，将指定的描述设置为待定描述，WebRTC 层开始评估是否可以接受。 一旦建议的描述已经达成一致，currentLocalDescription 或 currentRemoteDescription 的值将更改为待处理描述，并且待处理的描述再次设置为 null，表示没有待处理的描述。</p>
 
 <div class="note">
 <p>pendingLocalDescription 不仅包含正在考虑的提议或答案，而且自从提议或应答以来已经收集到的任何本地 ICE 候选人都被创建。 类似地，pendingRemoteDescription 包括通过调用 {{domxref("RTCPeerConnection.addIceCandidate()")}} 提供的任何远程 ICE 候选。</p>
