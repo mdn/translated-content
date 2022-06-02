@@ -20,7 +20,9 @@ La méthode **`getBigUint64()`** permet de lire un entier non signé sur 64 bits
 
 ## Syntaxe
 
-    dataview.getBigUint64(positionOctet [, littleEndian])
+```js
+dataview.getBigUint64(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

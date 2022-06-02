@@ -50,7 +50,7 @@ myFunc();</pre>
 
 <p>第一眼看上去，也许不能直观地看出这段代码能够正常运行。在一些编程语言中，一个函数中的局部变量仅存在于此函数的执行期间。一旦 <code>makeFunc()</code> 执行完毕，你可能会认为 <code>name</code> 变量将不能再被访问。然而，因为代码仍按预期运行，所以在 JavaScript 中情况显然与此不同。</p>
 
-<p>原因在于，JavaScript中的函数会形成了闭包。 <em>闭包</em>是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。在本例子中，<code>myFunc</code> 是执行 <code>makeFunc</code> 时创建的 <code>displayName</code> 函数实例的引用。<code>displayName</code> 的实例维持了一个对它的词法环境（变量 <code>name</code> 存在于其中）的引用。因此，当 <code>myFunc</code> 被调用时，变量 <code>name</code> 仍然可用，其值 <code>Mozilla</code> 就被传递到<code>alert</code>中。</p>
+<p>原因在于，JavaScript 中的函数会形成了闭包。 <em>闭包</em>是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。在本例子中，<code>myFunc</code> 是执行 <code>makeFunc</code> 时创建的 <code>displayName</code> 函数实例的引用。<code>displayName</code> 的实例维持了一个对它的词法环境（变量 <code>name</code> 存在于其中）的引用。因此，当 <code>myFunc</code> 被调用时，变量 <code>name</code> 仍然可用，其值 <code>Mozilla</code> 就被传递到<code>alert</code>中。</p>
 
 <p>下面是一个更有意思的示例 — 一个 <code>makeAdder</code> 函数：</p>
 
@@ -245,7 +245,7 @@ setupHelp();
 
 <p>运行这段代码后，您会发现它没有达到想要的效果。无论焦点在哪个<code>input</code>上，显示的都是关于年龄的信息。</p>
 
-<p>原因是赋值给 <code>onfocus</code> 的是闭包。这些闭包是由他们的函数定义和在 <code>setupHelp</code> 作用域中捕获的环境所组成的。这三个闭包在循环中被创建，但他们共享了同一个词法作用域，在这个作用域中存在一个变量item。这是因为变量<code>item</code>使用var进行声明，由于变量提升，所以具有函数作用域。当<code>onfocus</code>的回调执行时，<code>item.help</code>的值被决定。由于循环在事件触发之前早已执行完毕，变量对象<code>item</code>（被三个闭包所共享）已经指向了<code>helpText</code>的最后一项。</p>
+<p>原因是赋值给 <code>onfocus</code> 的是闭包。这些闭包是由他们的函数定义和在 <code>setupHelp</code> 作用域中捕获的环境所组成的。这三个闭包在循环中被创建，但他们共享了同一个词法作用域，在这个作用域中存在一个变量 item。这是因为变量<code>item</code>使用 var 进行声明，由于变量提升，所以具有函数作用域。当<code>onfocus</code>的回调执行时，<code>item.help</code>的值被决定。由于循环在事件触发之前早已执行完毕，变量对象<code>item</code>（被三个闭包所共享）已经指向了<code>helpText</code>的最后一项。</p>
 
 <p>解决这个问题的一种方案是使用更多的闭包：特别是使用前面所述的函数工厂：</p>
 
@@ -298,13 +298,13 @@ function setupHelp() {
        document.getElementById(item.id).onfocus = function() {
          showHelp(item.help);
        }
-    })(); // 马上把当前循环项的item与事件回调相关联起来
+    })(); // 马上把当前循环项的 item 与事件回调相关联起来
   }
 }
 
 setupHelp();</pre>
 
-<p>如果不想使用过多的闭包，你可以用ES2015引入的let关键词：</p>
+<p>如果不想使用过多的闭包，你可以用 ES2015 引入的 let 关键词：</p>
 
 <pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;

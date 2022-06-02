@@ -16,8 +16,10 @@ La propriété non-standard **`lastMatch`** est une propriété statique en lect
 
 ## Syntaxe
 
-    RegExp.lastMatch
-    RegExp['$&']
+```js
+RegExp.lastMatch
+RegExp['$&']
+```
 
 ## Description
 

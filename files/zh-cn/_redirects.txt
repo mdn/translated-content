@@ -1285,7 +1285,7 @@
 /zh-CN/docs/Transforming_XML_with_XSLT	/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT
 /zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /zh-CN/docs/Updating_extensions_for_Firefox_3	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
-/zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File/Using_files_from_web_applications
+/zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
@@ -1422,6 +1422,7 @@
 /zh-CN/docs/Web/API/File.getAsText	/zh-CN/docs/Web/API/File/getAsText
 /zh-CN/docs/Web/API/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
 /zh-CN/docs/Web/API/File.name	/zh-CN/docs/Web/API/File/name
+/zh-CN/docs/Web/API/File/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/conflicting/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e

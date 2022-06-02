@@ -19,7 +19,9 @@ La méthode **`delete()`** permet de retirer un élément donné d'un objet `Wea
 
 ## Syntaxe
 
-    ws.delete(valeur);
+```js
+ws.delete(valeur);
+```
 
 ### Paramètre
 

@@ -19,7 +19,9 @@ La méthode **`setInt8()`** permet d'enregister un entier signé sur 8 bits à l
 
 ## Syntaxe
 
-    dataview.setInt8(positionOctet, valeur)
+```js
+dataview.setInt8(positionOctet, valeur)
+```
 
 ### Paramètres
 

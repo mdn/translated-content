@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_colon_after_property_id
 
 ## Message
 
-    SyntaxError: Expected ':' (Edge)
-    SyntaxError: missing : after property id (Firefox)
+```
+SyntaxError: Expected ':' (Edge)
+SyntaxError: missing : after property id (Firefox)
+```
 
 ## Type d'erreur
 

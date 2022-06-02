@@ -34,23 +34,29 @@ Remarquez dans la formule ci-dessus que les valeurs de la matrice noyau sont app
 
 Pour illustrer, supposons que l'on ait une image en entrée, de 5x5 pixels, dont les valeurs de couleur pour l'un des canaux de couleur sont les suivantes:
 
-    0    20  40 235 235
-    100 120 140 235 235
-    200 220 240 235 235
-    225 225 255 255 255
-    225 225 255 255 255
+```
+0    20  40 235 235
+100 120 140 235 235
+200 220 240 235 235
+225 225 255 255 255
+225 225 255 255 255
+```
 
 et que l'on définit un noyau de convolution de 3x3 comme ceci:
 
-    1 2 3
-    4 5 6
-    7 8 9
+```
+1 2 3
+4 5 6
+7 8 9
+```
 
 Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs `divisor`, `targetX` et `targetY`, alors la valeur de couleur résultante sera :
 
-    (9*  0 + 8* 20 + 7* 40 +
-     6*100 + 5*120 + 4*140 +
-     3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
+```
+(9*  0 + 8* 20 + 7* 40 +
+ 6*100 + 5*120 + 4*140 +
+ 3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
+```
 
 ## Contexte d'utilisation
 

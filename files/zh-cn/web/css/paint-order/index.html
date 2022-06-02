@@ -5,7 +5,7 @@ translation_of: Web/CSS/paint-order
 ---
 <div>{{CSSRef}}{{seecompattable}}</div>
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>  <strong><code>paint-order</code></strong>  属性可以让你控制文本区域和图形绘制的填充和绘制（和markers）的顺序</p>
+<p><a href="/en-US/docs/Web/CSS">CSS</a>  <strong><code>paint-order</code></strong>  属性可以让你控制文本区域和图形绘制的填充和绘制（和 markers）的顺序</p>
 
 <h2 id="语法">语法</h2>
 
@@ -13,11 +13,11 @@ translation_of: Web/CSS/paint-order
 paint-order: normal;
 
 /* 单一属性 */
-paint-order: stroke; /* 先描边, 然后填充,markers*/
-paint-order: markers; /* 先绘制markers, 然后填充，描边 */
+paint-order: stroke; /* 先描边，然后填充，markers*/
+paint-order: markers; /* 先绘制 markers, 然后填充，描边 */
 
 /* 多属性 */
-paint-order: stroke fill; /* 先描边，然后填充，然后markers */
+paint-order: stroke fill; /* 先描边，然后填充，然后 markers */
 paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 
 </pre>
@@ -27,7 +27,7 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 <p>当只指定一个值的时候，这个值将会被首先渲染，然后剩下的两个值将会以默认顺序渲染，当只指定两个值的时候，这两个值会以指定的顺序渲染，接着渲染剩下的未指定的那个。</p>
 
 <div class="note">
-<p>注意：在这个属性的值当中，markers 只有当在绘制SVG图形时引用了 <code>marker-*</code>属性（例如 <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>）和 <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> 元素才能进行控制。他们不适用于HTML文本，所以，这样的话，你只能决定  <code>stroke</code> 和 <code>fill </code>的顺序。</p>
+<p>注意：在这个属性的值当中，markers 只有当在绘制 SVG 图形时引用了 <code>marker-*</code>属性（例如 <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>）和 <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> 元素才能进行控制。他们不适用于 HTML 文本，所以，这样的话，你只能决定  <code>stroke</code> 和 <code>fill </code>的顺序。</p>
 </div>
 
 <h3 id="属性值">属性值</h3>

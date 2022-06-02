@@ -262,7 +262,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 products.browsers = 'Firefox';  // 如果不小心传入了一个字符串
-console.log(products.browsers); // ['Firefox'] &lt;- 也没问题, 得到的依旧是一个数组
+console.log(products.browsers); // ['Firefox'] &lt;- 也没问题，得到的依旧是一个数组
 
 products.latestBrowser = 'Chrome';
 console.log(products.browsers);      // ['Firefox', 'Chrome']
@@ -331,7 +331,7 @@ console.log(products.number); // 3
 
 <h3 id="一个完整的_traps_列表示例">一个完整的 <code>traps</code> 列表示例</h3>
 
-<p>出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 <a href="/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">发布在 document.cookie页面上的“小型框架”</a>创建的<code>docCookies</code>全局对象。</p>
+<p>出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 <a href="/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">发布在 document.cookie 页面上的“小型框架”</a>创建的<code>docCookies</code>全局对象。</p>
 
 <pre class="brush: js">/*
   var docCookies = ... get the "docCookies" object here:

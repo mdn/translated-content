@@ -17,7 +17,9 @@ La méthode **`[@@toPrimitive]()`** permet de convertir un objet symbole en une 
 
 ## Syntaxe
 
-    Symbol()[Symbol.toPrimitive](hint);
+```js
+Symbol()[Symbol.toPrimitive](hint);
+```
 
 ### Valeur de retour
 

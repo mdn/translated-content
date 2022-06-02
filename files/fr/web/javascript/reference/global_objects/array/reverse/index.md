@@ -18,7 +18,9 @@ La méthode **`reverse()`** transpose les éléments d'un tableau&nbsp;: le prem
 
 ## Syntaxe
 
-    arr.reverse()
+```js
+arr.reverse()
+```
 
 ### Valeur de retour
 
