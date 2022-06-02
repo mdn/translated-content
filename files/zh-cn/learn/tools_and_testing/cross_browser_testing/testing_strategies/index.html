@@ -18,14 +18,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <p><br>
  这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">准备：</th>
    <td>熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试的核心概念</a>。</td>
   </tr>
   <tr>
-   <th scope="row">对象：</th>
+   <th scope="row">目标：</th>
    <td>了解跨浏览器测试所涉及的高级概念。</td>
   </tr>
  </tbody>
@@ -44,7 +44,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <ol>
  <li>A 级别：常见/现代浏览器（仍在广泛使用）：需要彻底测试并提供全功能支持。</li>
  <li>B 级别：较旧/功能少的浏览器（少数用户还在使用）：测试并提供更基础的体验，使得核心内容和服务能够完整访问。</li>
- <li>C 级别：罕见/未知浏览器：不需要测试，假设网站内容可以显示。 在我们的防御性编码起效的情况下，用户可以访问到网页的全部内容。</li>
+ <li>C 级别：罕见/未知浏览器：不需要测试，假设网站内容可以显示。在我们的防御性编码起效的情况下，用户可以访问到网页的全部内容。</li>
 </ol>
 
 <p>在以下各节中，我们将以此等级为参考构建支持图表。</p>
@@ -144,14 +144,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <ol>
  <li>A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器(最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本)在手机平板电脑上.通过常见测试的可访问性。</li>
  <li>B 级：IE 8 和 9 用于 Windows，Opera Mini。</li>
- <li>C 级： Opera，其他合适的现代浏览器。</li>
+ <li>C 级：Opera，其他合适的现代浏览器。</li>
 </ol>
 
 <h2 id="你想要测试什么？">你想要测试什么？</h2>
 
 <p>当您的代码库有需要测试的新添加项时，在开始测试之前，应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的，也可以是功能性的，两者结合起来，成为可用的网站功能。</p>
 
-<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码 </a>，<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
+<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码</a>，<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14083/sliding-box-demo.png" style="border-style: solid; border-width: 1px; display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
 
