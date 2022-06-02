@@ -3,10 +3,10 @@ title: Examples
 slug: Web/API/Document_Object_Model/Examples
 tags:
   - DOM
-  - DOM参考
+  - DOM 参考
 translation_of: Web/API/Document_Object_Model/Examples
 ---
-<p>本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通API ，技巧以及JavaScript模式来操作文档对象。</p>
+<p>本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。</p>
 
 <h2 id="Example_1:_height_and_width" name="Example_1:_height_and_width">示例 1: 高度和宽度</h2>
 
@@ -97,7 +97,7 @@ function setBorderWidth(width) {
 
 <h2 id="Example_3:_Manipulating_Styles" name="Example_3:_Manipulating_Styles">示例 3: 操作样式</h2>
 
-<p>在下面这个简单的例子中，使用的element(DOM元素)的style对象即对象的 CSS 样式属性来获取一个HTML段落元素的一些基本样式属性，DOM 可以检索和设置CSS 样式。在本例中，你可以直接控制单个样式属性。在下一个的例子里（见例4），你可以使用stylesheets对象(样式表)及其cssRules对象改变整个文档的样式。</p>
+<p>在下面这个简单的例子中，使用的 element(DOM 元素) 的 style 对象即对象的 CSS 样式属性来获取一个 HTML 段落元素的一些基本样式属性，DOM 可以检索和设置 CSS 样式。在本例中，你可以直接控制单个样式属性。在下一个的例子里（见例 4），你可以使用 stylesheets 对象 (样式表) 及其 cssRules 对象改变整个文档的样式。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -127,7 +127,7 @@ function changeText() {
 
 <h2 id="Example_4:_Using_Stylesheets" name="Example_4:_Using_Stylesheets">示例 4: 使用样式表</h2>
 
-<p>styleSheets是document对象的一个属性，返回的是载入文档的样式列表。你可以通过styleSheets、style和CSSRule对象来获取样式表和每条样式规则，下面的例子把所有的样式规则中的选择器文本（字符串）打印到控制台中。</p>
+<p>styleSheets 是 document 对象的一个属性，返回的是载入文档的样式列表。你可以通过 styleSheets、style 和 CSSRule 对象来获取样式表和每条样式规则，下面的例子把所有的样式规则中的选择器文本（字符串）打印到控制台中。</p>
 
 <pre>ss = document.styleSheets;
 
@@ -263,7 +263,7 @@ function cStyles() {
 
 <p>这个例子使用 DOM 方法来显示{{domxref("window.onload")}} {{domxref("event")}}对象的属性及其在 table 中的值。这个方法也展示一个有用的技术即使用了{{jsxref("Statements/for...in", "for...in")}} 循环来遍历一个对象的属性，以得到他们的值。</p>
 
-<p>不同浏览器之间事件对象的属性有很大不同，<a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">W3C DOM2事件规范</a>规定了事件的标准属性，然而，许多浏览器都大大扩展了这些。</p>
+<p>不同浏览器之间事件对象的属性有很大不同，<a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">W3C DOM2 事件规范</a>规定了事件的标准属性，然而，许多浏览器都大大扩展了这些。</p>
 
 <p>将下面的代码放到一个空白的文本文件，并将其加载到各种浏览器，你一定会对各种浏览器之间的不一致（事件属性的名称及其数量）感到惊讶。你可能还喜欢在这个页面加入一些元素，并调用不同的事件处理函数。</p>
 
@@ -329,7 +329,7 @@ window.onload = function(event){
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_8:_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">示例 8: 使用 DOM Table 接口(Interface)</h2>
+<h2 id="Example_8:_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">示例 8: 使用 DOM Table 接口 (Interface)</h2>
 
 <p>DOM HTMLTableElement 接口提供了一些方便的方法用于创建和操作表。两种常用的方法是{{domxref("HTMLTableElement.insertRow")}}和{{domxref("tableRow.insertCell")}}。</p>
 

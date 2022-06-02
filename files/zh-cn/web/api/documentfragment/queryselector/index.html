@@ -19,7 +19,7 @@ translation_of: Web/API/DocumentFragment/querySelector
 
 <dl>
  <dt><em>selectors </em></dt>
- <dd>为一个 {{domxref("DOMString")}} ，其包含一个或多个CSS选择器，多个选择器用逗号隔开。</dd>
+ <dd>为一个 {{domxref("DOMString")}}，其包含一个或多个 CSS 选择器，多个选择器用逗号隔开。</dd>
 </dl>
 
 <h2 id="Example" name="Example">例子</h2>
@@ -33,16 +33,16 @@ translation_of: Web/API/DocumentFragment/querySelector
 
 <h3 id="CSS_语法和方法的参数问题">CSS 语法和方法的参数问题</h3>
 
-<p>传递给 <code>querySelector</code> 的字符串参数遵循 CSS 语法。如果 ID 或选择器不符合 CSS 语法(比如使用了半角分号和空格)，必须使用双反斜杠对字符做转义。</p>
+<p>传递给 <code>querySelector</code> 的字符串参数遵循 CSS 语法。如果 ID 或选择器不符合 CSS 语法 (比如使用了半角分号和空格)，必须使用双反斜杠对字符做转义。</p>
 
 <pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
 &lt;div id="foo:bar"&gt;&lt;/div&gt;
 
 &lt;script&gt;
 document.querySelector('#foo\bar')    // 啥也不匹配
-document.querySelector('#foo\\\\bar') // 第一个DIV
+document.querySelector('#foo\\\\bar') // 第一个 DIV
 document.querySelector('#foo:bar')     // 啥也不匹配
-document.querySelector('#foo\\:bar')   // 第二个DIV
+document.querySelector('#foo\\:bar')   // 第二个 DIV
 &lt;/script&gt;
 </pre>
 
