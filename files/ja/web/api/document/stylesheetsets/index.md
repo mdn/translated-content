@@ -1,57 +1,57 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
   - DOM
-  - Property
-  - Reference
-  - Stylesheets
+  - プロパティ
+  - リファレンス
+  - スタイルシート
+  - 非推奨
+browser-compat: api.Document.styleSheetSets
 translation_of: Web/API/Document/styleSheetSets
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}{{obsolete_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>styleSheetSets</code></strong> プロパティは読み取り専用で、<span class="seosummary">現在有効なすべてのスタイルシートセットの生きたリストを返します。</span></p>
+**`styleSheetSets`** プロパティは読み取り専用で、現在有効なすべてのスタイルシートセットの生きたリストを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>sets</var> = <var>document</var>.styleSheetSets;
-</pre>
+利用可能なスタイルシートセットのリストです。
 
-<p>返値である <code>sets</code> は、利用可能なスタイルシートセットのリストです。</p>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+"sheetList" という ID を持つ {{HTMLElement("ul")}} （リスト）要素がある場合、次のようなコードで、利用可能なすべてのスタイルシートセットの名前を入力することができます。
 
-<p>以下のようなコードで、 "sheetList" という ID を持った{{HTMLElement("ul")}} (リスト) 要素に対し、すべての有効なスタイルシートセットの名前を挙げることができます。</p>
+```js
+const list = document.getElementById('sheetList');
+const sheets = document.styleSheetSets;
 
-<pre class="brush:js notranslate">let list = document.getElementById('sheetList');
-let sheets = document.styleSheetSets;
+list.textContent = '';
 
-list.innerHTML = '';
+for (let i = 0; i < sheets.length; i++) {
+  const item = document.createElement('li');
 
-for (let i = 0; i &lt; sheets.length; i++) {
-  let item = document.createElement('li');
-
-  item.innerHTML = sheets[i];
+  item.textContent = sheets[i];
   list.appendChild(item);
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">注</h2>
+## 注
 
-<p>有効なスタイルシートセットのリストは、その文書に有効なすべてのスタイルシートを {{domxref("document.styleSheets")}} 属性で並べられている順に列挙し、題名を持つそれぞれのスタイルシートの <code>title</code> をリストに追加することによって構築されます。重複するものは (大文字小文字を区別する比較を使用して) リストから削除されます。</p>
+有効なスタイルシートセットのリストは、その文書に有効なすべてのスタイルシートを {{domxref("Document.styleSheets")}} 属性で並べられている順に列挙し、題名を持つそれぞれのスタイルシートの `title` をリストに追加することによって構築されます。重複するものは（大文字小文字を区別する比較を使用して）リストから削除されます。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.styleSheetSets")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Stylesheet")}}</li>
- <li>{{domxref("document.styleSheets")}}</li>
- <li>{{domxref("document.lastStyleSheetSet")}}</li>
- <li>{{domxref("document.preferredStyleSheetSet")}}</li>
- <li>{{domxref("document.selectedStyleSheetSet")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("Stylesheet")}}
+- {{domxref("Document.styleSheets")}}
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}
