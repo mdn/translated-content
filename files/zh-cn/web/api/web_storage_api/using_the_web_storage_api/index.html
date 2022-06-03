@@ -3,13 +3,13 @@ title: 使用 Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
-<div class="summary">
+<div>
 <p>Web Storage API 提供了存储机制，通过该机制，浏览器可以安全地存储键值对，比使用 cookie 更加直观。这篇文章一步一步讲解如何使用这项简单的技术。</p>
 </div>
 
 <h2 id="基本概念">基本概念</h2>
 
-<p>存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用  {{domxref("Storage.getItem()")}} 和  {{domxref("Storage.setItem()")}} 方法 。这三行都设置了（相同的）colorSetting条目：</p>
+<p>存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用  {{domxref("Storage.getItem()")}} 和  {{domxref("Storage.setItem()")}} 方法 。这三行都设置了（相同的）colorSetting 条目：</p>
 
 <pre>localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
@@ -32,9 +32,9 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <h3 id="测试可用性">测试可用性</h3>
 
-<p>支持 localStorage 的浏览器将在窗口对象上具有一个名为 localStorage 的属性。但是，仅断言该属性存在可能会引发异常。如果 localStorage 确实存在，则仍然不能保证 localStorage 实际可用，因为各种浏览器都提供了禁用 localStorage 的设置。因此，浏览器可能支持localStorage，但不适用于页面上的脚本。</p>
+<p>支持 localStorage 的浏览器将在窗口对象上具有一个名为 localStorage 的属性。但是，仅断言该属性存在可能会引发异常。如果 localStorage 确实存在，则仍然不能保证 localStorage 实际可用，因为各种浏览器都提供了禁用 localStorage 的设置。因此，浏览器可能支持 localStorage，但不适用于页面上的脚本。</p>
 
-<p>例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的l ocalStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。</p>
+<p>例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的 l ocalStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。</p>
 
 <p>这是一个检测 localStorage 是否同时受支持和可用的函数：</p>
 
@@ -199,7 +199,7 @@ imageForm.onchange = populateStorage;</pre>
 <p>各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 <a class="external external-icon" href="http://dev-test.nemikor.com/web-storage/support-test/" title="http://dev-test.nemikor.com/web-storage/support-test/">detailed rundown of all the storage capacities for various browsers</a>。</p>
 
 <div class="note">
-<p><strong>笔记：</strong>从ios 5.1后，Safari移动存储本地存储的数据在缓存文件夹，这样在系统空间不足的情况下，方便系统自动清理。</p>
+<p><strong>笔记：</strong>从 ios 5.1 后，Safari 移动存储本地存储的数据在缓存文件夹，这样在系统空间不足的情况下，方便系统自动清理。</p>
 </div>
 
 <h2 id="相关链接">相关链接</h2>

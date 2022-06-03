@@ -18,7 +18,9 @@ La méthode **`toExponential()`** renvoie une chaîne de caractères, représent
 
 ## Syntaxe
 
-    numObj.toExponential([nbChiffresDécimaux])
+```js
+numObj.toExponential([nbChiffresDécimaux])
+```
 
 ### Paramètre
 

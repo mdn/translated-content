@@ -7,7 +7,7 @@ translation_of: Web/API/Document/importNode
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p>将外部文档的一个节点拷贝一份,然后可以把这个拷贝的节点插入到当前文档中.</p>
+<p>将外部文档的一个节点拷贝一份，然后可以把这个拷贝的节点插入到当前文档中。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -16,17 +16,17 @@ translation_of: Web/API/Document/importNode
 
 <dl>
  <dt><code>node</code></dt>
- <dd>导入当前文档的新节点. 新节点的 <code><a href="/zh-cn/DOM/Node.parentNode" title="zh-cn/DOM/Node.parentNode">parentNode</a></code> 是 <code>null</code>, 因为它还没有插入当前文档的文档树中,属于游离状态.</dd>
+ <dd>导入当前文档的新节点。新节点的 <code><a href="/zh-cn/DOM/Node.parentNode" title="zh-cn/DOM/Node.parentNode">parentNode</a></code> 是 <code>null</code>, 因为它还没有插入当前文档的文档树中，属于游离状态。</dd>
  <dt><code>externalNode</code></dt>
- <dd>将要从外部文档导入的节点.</dd>
+ <dd>将要从外部文档导入的节点。</dd>
  <dt><code>deep</code> {{ optional_inline() }}</dt>
- <dd>一个布尔值,表明是否要导入节点的后代节点.</dd>
+ <dd>一个布尔值，表明是否要导入节点的后代节点。</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意:</strong> 在DOM4规范中 (实现于Gecko 10.0 {{ geckoRelease("10.0") }}) ,<code>deep</code> 是个可选的参数. 如果省略不写,则使用默认值 <code>true</code>, 表示深度克隆. 如果你想使用浅克隆,则传入false参数.</p>
+<p><strong>注意：</strong> 在 DOM4 规范中 (实现于 Gecko 10.0 {{ geckoRelease("10.0") }}) ,<code>deep</code> 是个可选的参数。如果省略不写，则使用默认值 <code>true</code>, 表示深度克隆。如果你想使用浅克隆，则传入 false 参数。</p>
 
-<p>在没有实现DOM4的浏览器中, 这个参数不可以省略.</p>
+<p>在没有实现 DOM4 的浏览器中，这个参数不可以省略。</p>
 </div>
 
 <h2 id="Example" name="Example">例子</h2>
@@ -39,13 +39,13 @@ document.getElementById("container").appendChild(newNode);
 
 <h2 id="Notes" name="Notes">备注</h2>
 
-<p>源节点不会从外部文档中删除,被导入的节点是源节点的一个拷贝.</p>
+<p>源节点不会从外部文档中删除，被导入的节点是源节点的一个拷贝。</p>
 
 <p> </p>
 
-<p>将外部文档的节点插入当前文档之前,你必须使用 <a href="/zh-CN/docs/Web/API/Document/importNode" title="将外部文档的一个节点拷贝一份,然后可以把这个拷贝的节点插入到当前文档中."><code>document.importNode()</code></a> 从外部文档导入源节点,或者使用 <a href="/zh-CN/docs/Web/API/Document/adoptNode" title="从其他的document文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的ownerDocument 属性会变成当前的document文档。 之后你可以把这个节点插入到当前文档中。"><code>document.adoptNode()</code></a>导入源节点, 想要了解更多的 <a href="/zh-CN/docs/Web/API/Node/ownerDocument" title="Node.ownerDocument 只读属性会返回当前节点的顶层的 document 对象。"><code>Node.ownerDocument</code></a> 问题,请参考 <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+<p>将外部文档的节点插入当前文档之前，你必须使用 <a href="/zh-CN/docs/Web/API/Document/importNode" title="将外部文档的一个节点拷贝一份,然后可以把这个拷贝的节点插入到当前文档中."><code>document.importNode()</code></a> 从外部文档导入源节点，或者使用 <a href="/zh-CN/docs/Web/API/Document/adoptNode" title="从其他的document文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的ownerDocument 属性会变成当前的document文档。 之后你可以把这个节点插入到当前文档中。"><code>document.adoptNode()</code></a>导入源节点，想要了解更多的 <a href="/zh-CN/docs/Web/API/Node/ownerDocument" title="Node.ownerDocument 只读属性会返回当前节点的顶层的 document 对象。"><code>Node.ownerDocument</code></a> 问题，请参考 <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
-<p>即使你不执行导入动作,就执行插入外部文档中的节点.Firefox目前也不会报错(如果严格按标准执行,很多已有的网站都无法正常运行). 我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码.</p>
+<p>即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行). 我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。</p>
 
 <p> </p>
 

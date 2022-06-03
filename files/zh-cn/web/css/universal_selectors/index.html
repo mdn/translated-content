@@ -11,9 +11,9 @@ translation_of: Web/CSS/Universal_selectors
 
 <h2 id="概述">概述</h2>
 
-<p>在CSS中,一个星号(<code>*</code>)就是一个通配选择器.它可以匹配任意类型的HTML元素.在配合其他简单选择器的时候,省略掉通配选择器会有同样的效果.比如,<code>*.warning</code> 和<code>.warning</code> 的效果完全相同.</p>
+<p>在 CSS 中，一个星号 (<code>*</code>) 就是一个通配选择器。它可以匹配任意类型的 HTML 元素。在配合其他简单选择器的时候，省略掉通配选择器会有同样的效果。比如，<code>*.warning</code> 和<code>.warning</code> 的效果完全相同。</p>
 
-<p>在CSS3中,星号(<code>*</code>)可以和命名空间组合使用:</p>
+<p>在 CSS3 中，星号 (<code>*</code>) 可以和命名空间组合使用：</p>
 
 <ul>
  <li><code>ns|*</code> - 会匹配<code>ns</code>命名空间下的所有元素</li>
@@ -28,7 +28,7 @@ translation_of: Web/CSS/Universal_selectors
 *#maincontent {border: 1px solid blue;}
 </pre>
 
-<p>上面的CSS作用于下面的HTML:</p>
+<p>上面的 CSS 作用于下面的 HTML:</p>
 
 <pre class="brush: html">&lt;p class="warning"&gt;
   &lt;span lang="en-us"&gt;A green span&lt;/span&gt; in a red paragraph.
@@ -38,13 +38,13 @@ translation_of: Web/CSS/Universal_selectors
 &lt;/p&gt;
 </pre>
 
-<p>则会产生这样的效果:</p>
+<p>则会产生这样的效果：</p>
 
 <p>A green span in a red paragraph.</p>
 
 <p style="border: 1px solid blue;">A red span in a green paragraph (with a border.)</p>
 
-<div class="note">注: 笔者不推荐使用通配选择器,因为它是<a class="external" href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/">性能最低的一个CSS选择器</a>.</div>
+<div class="note">注：笔者不推荐使用通配选择器，因为它是<a class="external" href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/">性能最低的一个 CSS 选择器</a>.</div>
 
 <h2 id="规范">规范</h2>
 

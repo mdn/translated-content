@@ -18,7 +18,9 @@ La méthode statique **`Reflect.getPrototypeOf()`** est semblable à la méthode
 
 ## Syntaxe
 
-    Reflect.getPrototypeOf(cible)
+```js
+Reflect.getPrototypeOf(cible)
+```
 
 ### Paramètres
 

@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <h3 id="使用_call_方法调用父构造函数">使用 <code>call</code> 方法调用父构造函数</h3>
 
-<p>在一个子构造函数中，你可以通过调用父构造函数的 <code>call</code> 方法来实现继承，类似于 <code>Java</code> 中的写法。下例中，使用 <code>Food</code> 和 <code>Toy </code>构造函数创建的对象实例都会拥有在 <code>Product</code> 构造函数中添加的 <code>name</code> 属性和 <code>price</code> 属性,但 <code>category</code> 属性是在各自的构造函数中定义的。</p>
+<p>在一个子构造函数中，你可以通过调用父构造函数的 <code>call</code> 方法来实现继承，类似于 <code>Java</code> 中的写法。下例中，使用 <code>Food</code> 和 <code>Toy </code>构造函数创建的对象实例都会拥有在 <code>Product</code> 构造函数中添加的 <code>name</code> 属性和 <code>price</code> 属性，但 <code>category</code> 属性是在各自的构造函数中定义的。</p>
 
 <pre class="brush: js">function Product(name, price) {
   this.name = name;

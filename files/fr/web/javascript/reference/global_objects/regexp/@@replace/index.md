@@ -18,7 +18,9 @@ La méthode **`[@@replace]()`** remplace toutes ou certaines correspondances d'u
 
 ## Syntaxe
 
-    regexp[Symbol.replace](str, newSubStr|function)
+```js
+regexp[Symbol.replace](str, newSubStr|function)
+```
 
 ### Paramètres
 

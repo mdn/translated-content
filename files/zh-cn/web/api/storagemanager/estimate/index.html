@@ -5,7 +5,7 @@ translation_of: Web/API/StorageManager/estimate
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}</p>
 
-<p><strong><code>estimate()</code></strong>方法是{{domxref("StorageManager")}}的一个接口，用于估算某一个域名（或一个站点）下Storage Manager的总存储空间和已经使用了的存储空间。此方法为一个异步方法，如果此方法可用，那么其返回一个结果为resolved的{{jsxref("Promise")}}对象。resolved接收的参数是一个带有已使用数据存储空间和总可用总存储空间的{{domxref("StorageEstimate")}}对象。</p>
+<p><strong><code>estimate()</code></strong>方法是{{domxref("StorageManager")}}的一个接口，用于估算某一个域名（或一个站点）下 Storage Manager 的总存储空间和已经使用了的存储空间。此方法为一个异步方法，如果此方法可用，那么其返回一个结果为 resolved 的{{jsxref("Promise")}}对象。resolved 接收的参数是一个带有已使用数据存储空间和总可用总存储空间的{{domxref("StorageEstimate")}}对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/StorageManager/estimate
 
 <h3 id="返回值">返回值</h3>
 
-<p>{{domxref('StorageEstimate')}}类型的状态为resolved的{{jsxref('Promise')}}</p>
+<p>{{domxref('StorageEstimate')}}类型的状态为 resolved 的{{jsxref('Promise')}}</p>
 
 <p>此数据包含了此应用（或域名）可用的存储空间（{{domxref("StorageEstimate.quota")}}）和目前已经使用了的存储空间（{{domxref("StorageEstimate.usage")}}）。</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/StorageManager/estimate
 
 <h2 id="Example" name="Example">示例</h2>
 
-<p>在这个示例中，我们使用estimate()得到目前所使用的存储空间占全部存储空间的百分比。</p>
+<p>在这个示例中，我们使用 estimate() 得到目前所使用的存储空间占全部存储空间的百分比。</p>
 
 <h3 id="HTML_内容">HTML 内容</h3>
 

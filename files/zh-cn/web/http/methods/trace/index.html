@@ -7,9 +7,9 @@ translation_of: Web/HTTP/Methods/TRACE
 
 <p><strong>HTTP <code>TRACE</code> 方法</strong> 实现沿通向目标资源的路径的消息环回（loop-back）测试 ，提供了一种实用的 debug 机制。</p>
 
-<p>请求的最终接收者应当原样反射（reflect）它接收到的消息，除了以下字段部分，作为一个{{httpheader("Content-Type")}} 为 <code>message/http</code>  的200（OK）响应的消息的主体（body）返回给客户端 。</p>
+<p>请求的最终接收者应当原样反射（reflect）它接收到的消息，除了以下字段部分，作为一个{{httpheader("Content-Type")}} 为 <code>message/http</code>  的 200（OK）响应的消息的主体（body）返回给客户端 。</p>
 
-<p>最终接收者是指初始（origin）服务器，或者第一个接收到 {{httpheader("Max-Forwards")}} 值为 0的请求的服务器。</p>
+<p>最终接收者是指初始（origin）服务器，或者第一个接收到 {{httpheader("Max-Forwards")}} 值为 0 的请求的服务器。</p>
 
 <table class="properties">
  <tbody>

@@ -18,7 +18,9 @@ La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tablea
 
 ## Syntaxe
 
-    arr.push(élément1, ..., élémentN)
+```js
+arr.push(élément1, ..., élémentN)
+```
 
 ### Paramètres
 

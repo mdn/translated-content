@@ -27,7 +27,7 @@ domRect = element.getBoundingClientRect();
 
 <p><img alt="DOMRect 示例图" src="https://mdn.mozillademos.org/files/15087/rect.png" style="float: right; height: 300px; width: 300px;">空边框盒（译者注：没有内容的边框）会被忽略。如果所有的元素边框都是空边框，那么这个矩形给该元素返回的 <code>width</code>、<code>height</code> 值为 0，<code>left</code>、<code>top</code> 值为第一个 CSS 盒子（按内容顺序）的 top-left 值。</p>
 
-<p>当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top和left属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果你需要获得相对于整个网页左上角定位的属性值，那么只要给top、left属性值加上当前的滚动位置（通过 window.scrollX 和 window.scrollY），这样就可以获取与当前的滚动位置无关的值。</p>
+<p>当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top 和 left 属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果你需要获得相对于整个网页左上角定位的属性值，那么只要给 top、left 属性值加上当前的滚动位置（通过 window.scrollX 和 window.scrollY），这样就可以获取与当前的滚动位置无关的值。</p>
 
 ### 跨浏览器兼容
 
@@ -91,11 +91,11 @@ for (var key in rect) {
 
 ### 备注
 
-<p>该API返回的 <code>DOMRect</code> 对象在现代浏览器中可以被修改。而对于返回值为 <code>DOMRectReadOnly</code> 的旧版本，返回值并不能被修改。在IE和Edge浏览器中，无法向他们返回的 <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx"><code>ClientRect</code></a> 对象添加缺失的属性，对象可以防止 <code>x</code> 和 <code>y</code> 的回填。</p>
+<p>该 API 返回的 <code>DOMRect</code> 对象在现代浏览器中可以被修改。而对于返回值为 <code>DOMRectReadOnly</code> 的旧版本，返回值并不能被修改。在 IE 和 Edge 浏览器中，无法向他们返回的 <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx"><code>ClientRect</code></a> 对象添加缺失的属性，对象可以防止 <code>x</code> 和 <code>y</code> 的回填。</p>
 
 <p>由于兼容性问题（见下文），尽量仅使用 <code>left</code>, <code>top</code>, <code>right</code>, 和 <code>bottom</code>.属性是最安全的。</p>
 
-<p>返回的 <code>DOMRect</code>对象中的属性不是自己的属性。 当使用<code>in</code> 和 <code>for...in</code> 运算符时能成功查找到返回的属性，但使用其他API（例如Object.keys（））查找时将失败。 而且，ES2015和更高版本的功能（如Object.assign（）和对象rest/spread）将无法复制返回的属性。</p>
+<p>返回的 <code>DOMRect</code>对象中的属性不是自己的属性。 当使用<code>in</code> 和 <code>for...in</code> 运算符时能成功查找到返回的属性，但使用其他 API（例如 Object.keys（））查找时将失败。 而且，ES2015 和更高版本的功能（如 Object.assign（）和对象 rest/spread）将无法复制返回的属性。</p>
 
 <pre class="brush: js notranslate">rect = elt.getBoundingClientRect()
 // The result in emptyObj is {}

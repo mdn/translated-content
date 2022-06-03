@@ -19,7 +19,9 @@ La fonction **`Math.log()`** renvoie le logarithme naturel (aussi appelé logari
 
 ## Syntaxe
 
-    Math.log(x)
+```js
+Math.log(x)
+```
 
 ### Paramètres
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
 <div>{{JSRef}}</div>
 
-<p>静态的Atomics.store（）方法将给定的值存储在数组中的指定位置，并返回该值。.</p>
+<p>静态的 Atomics.store() 方法将给定的值存储在数组中的指定位置，并返回该值。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/atomics-store.html")}}</div>
 
@@ -20,23 +20,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 
 <dl>
  <dt><code>typedArray</code></dt>
- <dd>一个指定类型的shared数组. 类型为 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}其中一个.</dd>
+ <dd>一个指定类型的 shared 数组。类型为 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}其中一个。</dd>
  <dt><code>index</code></dt>
- <dd>typedArray中用来存储value的位置.</dd>
+ <dd>typedArray 中用来存储 value 的位置。</dd>
  <dt><code>value</code></dt>
- <dd>要存储的数字.</dd>
+ <dd>要存储的数字。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>被存储的值.</p>
+<p>被存储的值。</p>
 
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>抛出一个{{jsxref("TypeError")}}异常, 如果 <code>typedArray</code> 不是上述给定的类型之一.</li>
- <li>抛出一个{{jsxref("TypeError")}}异常, 如果 <code>typedArray</code> 不是一个指定类型的shared类型数组.</li>
- <li>抛出一个{{jsxref("RangeError")}}异常, 如果 <code>index</code> 在 <code>typedArray</code>中越界了。</li>
+ <li>抛出一个{{jsxref("TypeError")}}异常，如果 <code>typedArray</code> 不是上述给定的类型之一。</li>
+ <li>抛出一个{{jsxref("TypeError")}}异常，如果 <code>typedArray</code> 不是一个指定类型的 shared 类型数组。</li>
+ <li>抛出一个{{jsxref("RangeError")}}异常，如果 <code>index</code> 在 <code>typedArray</code>中越界了。</li>
 </ul>
 
 <h2 id="示例">示例</h2>

@@ -17,7 +17,9 @@ La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affich
 
 ## Syntaxe
 
-    str.bold()
+```js
+str.bold()
+```
 
 ### Valeur de retour
 

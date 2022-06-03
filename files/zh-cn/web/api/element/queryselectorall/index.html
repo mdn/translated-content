@@ -5,10 +5,10 @@ translation_of: Web/API/Element/querySelectorAll
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>返回一个non-live的<code><a href="NodeList" title="zh-cn/DOM/NodeList">NodeList</a></code>, 它包含所有元素的非活动节点，该元素来自与其匹配指定的CSS选择器组的元素。(基础元素本身不包括，即使它匹配。)</p>
+<p>返回一个 non-live 的<code><a href="NodeList" title="zh-cn/DOM/NodeList">NodeList</a></code>, 它包含所有元素的非活动节点，该元素来自与其匹配指定的 CSS 选择器组的元素。(基础元素本身不包括，即使它匹配。)</p>
 
 <div class="note">
-<p>注意：该API的定义已被移动到 {{domxref("ParentNode")}} 接口。</p>
+<p>注意：该 API 的定义已被移动到 {{domxref("ParentNode")}} 接口。</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
@@ -19,9 +19,9 @@ translation_of: Web/API/Element/querySelectorAll
 <p>其中</p>
 
 <ul>
- <li><code>elementList</code>会是一个non-live的<code><a href="NodeList" title="zh-cn/DOM/NodeList">NodeList</a></code>对象.</li>
- <li><code>baseElement是一个</code><a href="/zh-CN/docs/DOM/element" title="DOM/element">元素</a>对象.</li>
- <li><code>selectors</code>是一组CSS选择器.</li>
+ <li><code>elementList</code>会是一个 non-live 的<code><a href="NodeList" title="zh-cn/DOM/NodeList">NodeList</a></code>对象。</li>
+ <li><code>baseElement 是一个</code><a href="/zh-CN/docs/DOM/element" title="DOM/element">元素</a>对象。</li>
+ <li><code>selectors</code>是一组 CSS 选择器。</li>
 </ul>
 
 <h2 id="Example" name="Example">示例</h2>
@@ -45,29 +45,29 @@ const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`
 // const refs = [...document.querySelectorAll(`[class~="funnel-chart-percent"]`)];
 </pre>
 
-<p>下面的例子返回了HTML文档中的<code>body</code>元素的所有<code><code>p</code>后代</code>元素:</p>
+<p>下面的例子返回了 HTML 文档中的<code>body</code>元素的所有<code><code>p</code>后代</code>元素：</p>
 
 <pre class="brush: js">var matches = document.body.querySelectorAll('p');
 </pre>
 
-<p>下面的例子返回了<code>id</code>为<code>'test</code>'的元素的所有<code>class属性</code>为'<code>highlighted</code>'的所有div后代元素的<code>p</code>子元素:</p>
+<p>下面的例子返回了<code>id</code>为<code>'test</code>'的元素的所有<code>class 属性</code>为'<code>highlighted</code>'的所有 div 后代元素的<code>p</code>子元素：</p>
 
 <pre class="brush:js">var el = document.querySelector('#test');
 var matches = el.querySelectorAll('div.highlighted &gt; p');
 </pre>
 
-<p>下面的例子返回了el元素的后代元素中所有拥有<code>data-src</code>属性的<code>iframe</code>元素:</p>
+<p>下面的例子返回了 el 元素的后代元素中所有拥有<code>data-src</code>属性的<code>iframe</code>元素：</p>
 
 <pre class="brush: js">var matches = el.querySelectorAll('iframe[data-src]');
 </pre>
 
 <h2 id="Notes" name="Notes">附注</h2>
 
-<p>如果指定的CSS选择器不合法,则会抛出一个<code>SYNTAX_ERR</code> 异常.</p>
+<p>如果指定的 CSS 选择器不合法，则会抛出一个<code>SYNTAX_ERR</code> 异常。</p>
 
-<p>返回值是一个<code>NodeList</code>对象,所以不推荐使用 for...in去遍历它(会遍历出其他无关属性)</p>
+<p>返回值是一个<code>NodeList</code>对象，所以不推荐使用 for...in 去遍历它 (会遍历出其他无关属性)</p>
 
-<p>想要在它身上使用数组方法,必须先把它转换为真正的数组.</p>
+<p>想要在它身上使用数组方法，必须先把它转换为真正的数组。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -76,7 +76,7 @@ var matches = el.querySelectorAll('div.highlighted &gt; p');
 <h2 id="Specification" name="Specification">规范</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/selectors-api/">选择器API</a></li>
+ <li><a href="http://www.w3.org/TR/selectors-api/">选择器 API</a></li>
 </ul>
 
 <h2 id="See_also" name="See_also">相关链接</h2>

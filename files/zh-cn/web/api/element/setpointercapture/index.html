@@ -11,13 +11,13 @@ translation_of: Web/API/Element/setPointerCapture
 
 <p>{{domxref("Element")}}接口的<strong><code>setPointerCapture()</code></strong> 方法用于将特定元素指定为未来指针事件的捕获目标。指针的后续事件将以捕获元素为目标，直到捕获被释放（通过{{domxref("Element.releasePointerCapture()")}}）。</p>
 
-<div class="note">一旦设置了pointer capture,  {{event("pointerover")}}, {{event("pointerout")}} {{event("pointerenter")}}, 和{{event("pointerleave")}}  事件将不会被触发，直到越过设置了capture的元素的边界。这是因为其他元素将不能再作为pointer事件的目标了。这会影响到这些事件在其他元素上的触发。</div>
+<div class="note">一旦设置了 pointer capture,  {{event("pointerover")}}, {{event("pointerout")}} {{event("pointerenter")}}, 和{{event("pointerleave")}}  事件将不会被触发，直到越过设置了 capture 的元素的边界。这是因为其他元素将不能再作为 pointer 事件的目标了。这会影响到这些事件在其他元素上的触发。</div>
 
 <div>
 <h3 id="指针捕获概述">指针捕获概述</h3>
 </div>
 
-<div>指针捕获允许一个特定的指针事件({{domxref("PointerEvent")}}) 事件从一个事件触发时候的目标重定位到另一个目标上。这个功能可以确保一个元素可以持续的接收到一个pointer事件，即使这个事件的触发点已经移出了这个元素（比如，在滚动的时候）。</div>
+<div>指针捕获允许一个特定的指针事件 ({{domxref("PointerEvent")}}) 事件从一个事件触发时候的目标重定位到另一个目标上。这个功能可以确保一个元素可以持续的接收到一个 pointer 事件，即使这个事件的触发点已经移出了这个元素（比如，在滚动的时候）。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Element/setPointerCapture
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回void。如果<code>pointerId</code>不匹配任何当前活动的指针事件，将抛出{{domxref("DOMException")}}。</p>
+<p>返回 void。如果<code>pointerId</code>不匹配任何当前活动的指针事件，将抛出{{domxref("DOMException")}}。</p>
 
 <h2 id="示例">示例</h2>
 

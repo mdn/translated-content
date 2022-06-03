@@ -11,7 +11,7 @@ translation_of: Web/API/URL/createObjectURL
 ---
 <div>{{ApiRef("URL")}}</div>
 
-<p><strong><code>URL.createObjectURL()</code></strong> 静态方法会创建一个 {{domxref("DOMString")}}，其中包含一个表示参数中给出的对象的URL。这个 URL 的生命周期和创建它的窗口中的 {{domxref("document")}} 绑定。这个新的URL 对象表示指定的 {{domxref("File")}} 对象或 {{domxref("Blob")}} 对象。</p>
+<p><strong><code>URL.createObjectURL()</code></strong> 静态方法会创建一个 {{domxref("DOMString")}}，其中包含一个表示参数中给出的对象的 URL。这个 URL 的生命周期和创建它的窗口中的 {{domxref("document")}} 绑定。这个新的 URL 对象表示指定的 {{domxref("File")}} 对象或 {{domxref("Blob")}} 对象。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -33,11 +33,11 @@ translation_of: Web/API/URL/createObjectURL
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个{{domxref("DOMString")}}包含了一个对象URL，该URL可用于指定源 <code>object</code>的内容。</p>
+<p>一个{{domxref("DOMString")}}包含了一个对象 URL，该 URL 可用于指定源 <code>object</code>的内容。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>查看<a href="/zh-CN/docs/Using_files_from_web_applications#Example.3A_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">使用对象URL显示图片</a>.</p>
+<p>查看<a href="/zh-CN/docs/Using_files_from_web_applications#Example.3A_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">使用对象 URL 显示图片</a>.</p>
 
 <h2 id="Notes" name="Notes">附注</h2>
 
@@ -47,9 +47,9 @@ translation_of: Web/API/URL/createObjectURL
 
 <p>浏览器在 document 卸载的时候，会自动释放它们，但是为了获得最佳性能和内存使用状况，你应该在安全的时机主动释放掉它们。</p>
 
-<h3 id="使用相对URLs作为媒体流">使用相对URLs作为媒体流</h3>
+<h3 id="使用相对URLs作为媒体流">使用相对 URLs 作为媒体流</h3>
 
-<p>在旧版本的媒体资源规范中，添加流作为{{HTMLElement("video")}}元素需要创建一个关于 {{domxref("MediaStream")}}的对象URL。现已没必要这样做了，浏览器已经移除了该操作的支持。</p>
+<p>在旧版本的媒体资源规范中，添加流作为{{HTMLElement("video")}}元素需要创建一个关于 {{domxref("MediaStream")}}的对象 URL。现已没必要这样做了，浏览器已经移除了该操作的支持。</p>
 
 <div class="blockIndicator warning">
 <p>重要：如果你为了去添加流作为媒体元素，而仍旧使用着依赖{{domxref("URL.createObjectURL", "createObjectURL()")}} 的代码，你需要更新的代码，仅需要设定{{domxref("HTMLMediaElement.srcObject", "srcObject")}} 到`<code>MediaStream</code> `即可。</p>
@@ -90,7 +90,7 @@ translation_of: Web/API/URL/createObjectURL
 <h2 id="See_also" name="See_also">相关链接</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Using_files_from_web_applications" title="Using files from web applications">在web应用程序中使用文件</a></li>
+ <li><a href="/zh-CN/docs/Using_files_from_web_applications" title="Using files from web applications">在 web 应用程序中使用文件</a></li>
  <li><a href="/en-US/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">Using object URLs to display images</a></li>
  <li>{{domxref("URL.revokeObjectURL()")}}</li>
  <li>{{domxref("HTMLMediaElement.srcObject")}}</li>
