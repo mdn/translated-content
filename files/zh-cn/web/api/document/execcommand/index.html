@@ -10,7 +10,7 @@ translation_of: Web/API/Document/execCommand
 ---
 <div>{{ApiRef("DOM")}}{{Obsolete_header}}</div>
 
-<p id="当一个HTML文档切换到设计模式_designMode时，文档对象暴露_execCommand_方法，该方法允许运行命令来操纵可编辑区域的内容。大多数命令影响文档的选择（粗体，斜体等），而其他命令插入新元素（添加链接）或影响整行（缩进）。当使用contentEditable时，调用_execCommand()_将影响当前活动的可编辑元素">当一个HTML文档切换到设计模式时，<code>document</code>暴露 <strong><code>execCommand</code> </strong>方法，该方法允许运行命令来操纵<a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">可编辑内容区域</a>的元素。</p>
+<p id="当一个HTML文档切换到设计模式_designMode时，文档对象暴露_execCommand_方法，该方法允许运行命令来操纵可编辑区域的内容。大多数命令影响文档的选择（粗体，斜体等），而其他命令插入新元素（添加链接）或影响整行（缩进）。当使用contentEditable时，调用_execCommand()_将影响当前活动的可编辑元素">当一个 HTML 文档切换到设计模式时，<code>document</code>暴露 <strong><code>execCommand</code> </strong>方法，该方法允许运行命令来操纵<a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">可编辑内容区域</a>的元素。</p>
 
 <p>大多数命令影响<code>document</code>的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">selection</a>（粗体，斜体等），当其他命令插入新元素（添加链接）或影响整行（缩进）。当使用<code>contentEditable</code>时，调用 <code>execCommand()</code> 将影响当前活动的可编辑元素。</p>
 
@@ -35,70 +35,70 @@ translation_of: Web/API/Document/execCommand
  <dt><code>aShowDefaultUI</code></dt>
  <dd>一个 {{jsxref("Boolean")}}， 是否展示用户界面，一般为 false。Mozilla 没有实现。</dd>
  <dt><code>aValueArgument</code></dt>
- <dd>一些命令（例如insertImage）需要额外的参数（insertImage需要提供插入image的url），默认为null。</dd>
+ <dd>一些命令（例如 insertImage）需要额外的参数（insertImage 需要提供插入 image 的 url），默认为 null。</dd>
 </dl>
 
 <h3 id="命令">命令</h3>
 
 <dl>
  <dt><code>backColor</code></dt>
- <dd>修改文档的背景颜色。在styleWithCss模式下，则只影响容器元素的背景颜色。这需要一个{{cssxref("&lt;color&gt;")}} 类型的字符串值作为参数传入。注意，IE浏览器用这个设置文字的背景颜色。</dd>
+ <dd>修改文档的背景颜色。在 styleWithCss 模式下，则只影响容器元素的背景颜色。这需要一个{{cssxref("&lt;color&gt;")}} 类型的字符串值作为参数传入。注意，IE 浏览器用这个设置文字的背景颜色。</dd>
  <dt><code>bold</code></dt>
- <dd>开启或关闭选中文字或插入点的粗体字效果。IE浏览器使用 {{HTMLElement("strong")}}标签，而不是{{HTMLElement("b")}}标签。</dd>
+ <dd>开启或关闭选中文字或插入点的粗体字效果。IE 浏览器使用 {{HTMLElement("strong")}}标签，而不是{{HTMLElement("b")}}标签。</dd>
  <dt><code>ClearAuthenticationCache</code></dt>
  <dd>清除缓存中的所有身份验证凭据。</dd>
  <dt><code>contentReadOnly</code></dt>
- <dd>通过传入一个布尔类型的参数来使能文档内容的可编辑性。(IE浏览器不支持)</dd>
+ <dd>通过传入一个布尔类型的参数来使能文档内容的可编辑性。(IE 浏览器不支持)</dd>
  <dt><code>copy</code></dt>
  <dd>拷贝当前选中内容到剪贴板。启用这个功能的条件因浏览器不同而不同，而且不同时期，其启用条件也不尽相同。使用之前请检查浏览器兼容表，以确定是否可用。</dd>
  <dt><code>createLink</code></dt>
- <dd>将选中内容创建为一个锚链接。这个命令需要一个<code>href</code>URI字符串作为参数值传入。URI必须包含至少一个字符，例如一个空格。（浏览器会创建一个空链接）</dd>
+ <dd>将选中内容创建为一个锚链接。这个命令需要一个<code>href</code>URI 字符串作为参数值传入。URI 必须包含至少一个字符，例如一个空格。（浏览器会创建一个空链接）</dd>
  <dt><code>cut</code></dt>
  <dd> 剪贴当前选中的文字并复制到剪贴板。启用这个功能的条件因浏览器不同而不同，而且不同时期，其启用条件也不尽相同。使用之前请检查浏览器兼容表，以确定是否可用。</dd>
  <dt><code>decreaseFontSize</code></dt>
- <dd> 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE浏览器不支持)</dd>
+ <dd> 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE 浏览器不支持)</dd>
  <dt><code>defaultParagraphSeparator</code></dt>
  <dd>更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅<a href="/zh-CN/docs/Web/Guide/HTML/Content_Editable#Differences_in_markup_generation">标记生成的差异</a>。</dd>
  <dt><code>delete</code></dt>
- <dd>删除选中部分.</dd>
+ <dd>删除选中部分。</dd>
  <dt><code>enableAbsolutePositionEditor</code></dt>
- <dd>启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能({{bug(1449564)}})。</dd>
+ <dd>启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ({{bug(1449564)}})。</dd>
  <dt><code>enableInlineTableEditing</code></dt>
- <dd>启用或禁用表格行和列插入和删除控件。(IE浏览器不支持)</dd>
+ <dd>启用或禁用表格行和列插入和删除控件。(IE 浏览器不支持)</dd>
  <dt><code>enableObjectResizing</code></dt>
- <dd>启用或禁用图像和其他对象的大小可调整大小手柄。(IE浏览器不支持)</dd>
+ <dd>启用或禁用图像和其他对象的大小可调整大小手柄。(IE 浏览器不支持)</dd>
  <dt><code>fontName</code></dt>
- <dd>在插入点或者选中文字部分修改字体名称. 需要提供一个字体名称字符串 (例如："Arial")作为参数。</dd>
+ <dd>在插入点或者选中文字部分修改字体名称。需要提供一个字体名称字符串 (例如："Arial") 作为参数。</dd>
  <dt><code>fontSize</code></dt>
- <dd>在插入点或者选中文字部分修改字体大小. 需要提供一个HTML字体尺寸 (1-7) 作为参数。</dd>
+ <dd>在插入点或者选中文字部分修改字体大小。需要提供一个 HTML 字体尺寸 (1-7) 作为参数。</dd>
  <dt><code>foreColor</code></dt>
- <dd>在插入点或者选中文字部分修改字体颜色. 需要提供一个颜色值字符串作为参数。</dd>
+ <dd>在插入点或者选中文字部分修改字体颜色。需要提供一个颜色值字符串作为参数。</dd>
  <dt><code>formatBlock</code></dt>
- <dd>添加一个HTML块式标签在包含当前选择的行, 如果已经存在了，更换包含该行的块元素 (在 Firefox中, BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用(例如. "H1", "P", "DL", "BLOCKQUOTE"). (IE浏览器仅仅支持标题标签 H1 - H6, ADDRESS, 和 PRE,使用时还必须包含标签分隔符 &lt; &gt;, 例如 "&lt;H1&gt;".)</dd>
+ <dd>添加一个 HTML 块式标签在包含当前选择的行，如果已经存在了，更换包含该行的块元素 (在 Firefox 中，BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用 (例如. "H1", "P", "DL", "BLOCKQUOTE"). (IE 浏览器仅仅支持标题标签 H1 - H6, ADDRESS，和 PRE，使用时还必须包含标签分隔符 &lt; &gt;, 例如 "&lt;H1&gt;".)</dd>
  <dt><code>forwardDelete</code></dt>
  <dd>删除光标所在位置的字符。 和按下删除键一样。</dd>
  <dt><code>heading</code></dt>
- <dd>添加一个标题标签在光标处或者所选文字上。 需要提供标签名称字符串作为参数 (例如. "H1", "H6"). (IE 和 Safari不支持)</dd>
+ <dd>添加一个标题标签在光标处或者所选文字上。 需要提供标签名称字符串作为参数 (例如. "H1", "H6"). (IE 和 Safari 不支持)</dd>
  <dt><code>hiliteColor</code></dt>
- <dd>更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。 UseCSS 必须开启此功能。(IE浏览器不支持)</dd>
+ <dd>更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。 UseCSS 必须开启此功能。(IE 浏览器不支持)</dd>
  <dt><code>increaseFontSize</code></dt>
- <dd>在选择或插入点周围添加一个BIG标签。(IE浏览器不支持)</dd>
+ <dd>在选择或插入点周围添加一个 BIG 标签。(IE 浏览器不支持)</dd>
  <dt><code>indent</code></dt>
- <dd>缩进选择或插入点所在的行， 在 Firefox 中, 如果选择多行，但是这些行存在不同级别的缩进, 只有缩进最少的行被缩进。</dd>
+ <dd>缩进选择或插入点所在的行， 在 Firefox 中，如果选择多行，但是这些行存在不同级别的缩进，只有缩进最少的行被缩进。</dd>
  <dt><code>insertBrOnReturn</code></dt>
- <dd>控制当按下Enter键时，是插入 br 标签还是把当前块元素变成两个。(IE浏览器不支持)</dd>
+ <dd>控制当按下 Enter 键时，是插入 br 标签还是把当前块元素变成两个。(IE 浏览器不支持)</dd>
  <dt><code>insertHorizontalRule</code></dt>
  <dd>在插入点插入一个水平线（删除选中的部分）</dd>
  <dt><code>insertHTML</code></dt>
- <dd>在插入点插入一个HTML字符串（删除选中的部分）。需要一个个HTML字符串作为参数。(IE浏览器不支持)</dd>
+ <dd>在插入点插入一个 HTML 字符串（删除选中的部分）。需要一个个 HTML 字符串作为参数。(IE 浏览器不支持)</dd>
  <dt><code>insertImage</code></dt>
- <dd>在插入点插入一张图片（删除选中的部分）。需要一个 URL 字符串作为参数。这个 URL 图片地址至少包含一个字符。空白字符也可以（IE会创建一个链接其值为null）</dd>
+ <dd>在插入点插入一张图片（删除选中的部分）。需要一个 URL 字符串作为参数。这个 URL 图片地址至少包含一个字符。空白字符也可以（IE 会创建一个链接其值为 null）</dd>
  <dt><code>insertOrderedList</code></dt>
  <dd>在插入点或者选中文字上创建一个有序列表</dd>
  <dt><code>insertUnorderedList</code></dt>
  <dd>在插入点或者选中文字上创建一个无序列表。</dd>
  <dt><code>insertParagraph</code></dt>
- <dd>在选择或当前行周围插入一个段落。(IE会在插入点插入一个段落并删除选中的部分.)</dd>
+ <dd>在选择或当前行周围插入一个段落。(IE 会在插入点插入一个段落并删除选中的部分.)</dd>
  <dt><code>insertText</code></dt>
  <dd>在光标插入位置插入文本内容或者覆盖所选的文本内容。</dd>
  <dt><code>italic</code></dt>
@@ -134,12 +134,12 @@ translation_of: Web/API/Document/execCommand
  <dt><code>unlink</code></dt>
  <dd>去除所选的锚链接的&lt;a&gt;标签</dd>
  <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
- <dd>切换使用 HTML tags 还是 CSS 来生成标记. 要求一个布尔值 true/false 作为参数。注: 这个属性是逻辑上的倒退 (例如. use false to use CSS, true to use HTML).(IE不支持)<br>
+ <dd>切换使用 HTML tags 还是 CSS 来生成标记。要求一个布尔值 true/false 作为参数。注：这个属性是逻辑上的倒退 (例如. use false to use CSS, true to use HTML).(IE 不支持)<br>
  该属性已经废弃，使用 styleWithCSS 代替。</dd>
  <dt><code>styleWithCSS</code></dt>
- <dd>用这个取代 useCSS 命令。 参数如预期的那样工作, i.e. true modifies/generates 风格的标记属性, false 生成格式化元素。</dd>
+ <dd>用这个取代 useCSS 命令。 参数如预期的那样工作，i.e. true modifies/generates 风格的标记属性，false 生成格式化元素。</dd>
  <dt><code>AutoUrlDetect</code></dt>
- <dd>更改浏览器自动链接行为（仅IE浏览器支持）</dd>
+ <dd>更改浏览器自动链接行为（仅 IE 浏览器支持）</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
