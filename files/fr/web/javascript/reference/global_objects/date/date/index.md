@@ -31,46 +31,46 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 Il existe quatre formes basiques pour utiliser le constructeur `Date()`&nbsp;:
 
-1.  #### Sans paramètre
+#### Sans paramètre
 
-    Lorsqu'aucun paramètre n'est fourni, le nouvel objet `Date` ainsi créé représente la date et heure courante du moment de l'instanciation.
+Lorsqu'aucun paramètre n'est fourni, le nouvel objet `Date` ainsi créé représente la date et heure courante du moment de l'instanciation.
 
-2.  #### Une valeur temporelle ou un horodatage numérique
+#### Une valeur temporelle ou un horodatage numérique
 
-    - `value`
-      - : Une valeur entière qui représente le nombre de millisecondes depuis le premier janvier 1970 00:00:00 UTC (l'epoch ECMAScript est équivalente à l'epoch UNIX) et pour laquelle les secondes intercalaires sont ignorées. On gardera à l'esprit que la plupart des [fonctions d'horodatage UNIX](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) sont précises à la seconde la plus proche.
+- `value`
+  - : Une valeur entière qui représente le nombre de millisecondes depuis le premier janvier 1970 00:00:00 UTC (l'epoch ECMAScript est équivalente à l'epoch UNIX) et pour laquelle les secondes intercalaires sont ignorées. On gardera à l'esprit que la plupart des [fonctions d'horodatage UNIX](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) sont précises à la seconde la plus proche.
 
-3.  #### Chaîne d'horodatage
+#### Chaîne d'horodatage
 
-    - `dateString`
-      - : Une chaîne de caractères qui représente une date, selon le format reconnu par la méthode [`Date.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) qui sont [conformes à la RFC 2822 IETF sur les horodatages](https://datatracker.ietf.org/doc/html/rfc2822#page-14) ou selon [le format ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
-        > **Note :** Analyser des chaînes de caractères représentant des dates en utilisant le constructeur `Date` (ou `Date.parse()`, qui fonctionne de la même façon) est _fortement déconseillé_ en raison des différences et incohérences entre les différents navigateurs.
-        >
-        > - La prise en charge des chaînes de caractères de format [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) repose uniquement sur une convention.
-        > - La prise en charge des formats ISO 8601 diffère en ce que les chaînes décrivant uniquement des dates (ex. `"1970-01-01"`) sont considérées comme UTC et pas comme locales.
+- `dateString`
+  - : Une chaîne de caractères qui représente une date, selon le format reconnu par la méthode [`Date.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) qui sont [conformes à la RFC 2822 IETF sur les horodatages](https://datatracker.ietf.org/doc/html/rfc2822#page-14) ou selon [le format ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
+    > **Note :** Analyser des chaînes de caractères représentant des dates en utilisant le constructeur `Date` (ou `Date.parse()`, qui fonctionne de la même façon) est _fortement déconseillé_ en raison des différences et incohérences entre les différents navigateurs.
+    >
+    > - La prise en charge des chaînes de caractères de format [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) repose uniquement sur une convention.
+    > - La prise en charge des formats ISO 8601 diffère en ce que les chaînes décrivant uniquement des dates (ex. `"1970-01-01"`) sont considérées comme UTC et pas comme locales.
 
-4.  #### Valeurs pour les composantes individuelles de la date et de l'heure
+#### Valeurs pour les composantes individuelles de la date et de l'heure
 
-    Soient au moins une année et un mois, cette forme de `Date()` renvoie un objet `Date` dont les valeurs des composantes (année, mois, jour, heure, minute, seconde, et milliseconde) proviennent des paramètres suivants. Chaque champ manquant prendra la valeur la plus basse possible (soit `1` pour le paramètre `day` et `0` pour les autres). Les valeurs des paramètres sont évaluées selon le fuseau horaire local et pas UTC.
+Soient au moins une année et un mois, cette forme de `Date()` renvoie un objet `Date` dont les valeurs des composantes (année, mois, jour, heure, minute, seconde, et milliseconde) proviennent des paramètres suivants. Chaque champ manquant prendra la valeur la plus basse possible (soit `1` pour le paramètre `day` et `0` pour les autres). Les valeurs des paramètres sont évaluées selon le fuseau horaire local et pas UTC.
 
-    - `year`
+- `year`
 
-      - : Une valeur entière représentant l'année.
+  - : Une valeur entière représentant l'année.
 
-        Les valeurs de `0` à `99` correspondent aux années `1900` à `1999`. Les autres valeurs correspondent aux années avec cette valeur. Voir [l'exemple](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#les_années_sur_deux_chiffres_correspondent_à_la_période_1900_–_1999).
+    Les valeurs de `0` à `99` correspondent aux années `1900` à `1999`. Les autres valeurs correspondent aux années avec cette valeur. Voir [l'exemple](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#les_années_sur_deux_chiffres_correspondent_à_la_période_1900_–_1999).
 
-    - `monthIndex`
-      - : Une valeur entière représentant le mois, en commençant à `0` pour janvier, jusqu'à `11` pour décembre. Si une valeur supérieure à `11` est utilisée, les mois supplémentaires sont ajoutés à la date. Ainsi, `new Date(1990, 12, 1)` renverra une date représentant le premier janvier 1991.
-    - `day` {{optional_inline}}
-      - : Une valeur entière pour le jour du mois. La valeur par défaut est `1`.
-    - `hours` {{optional_inline}}
-      - : Une valeur entière entre `0` et `23`, représentant l'heure du jour. La valeur par défaut est `0`.
-    - `minutes` {{optional_inline}}
-      - : Une valeur entière représentant le nombre de minutes écoulées dans l'heure. La valeur par défaut est `0`.
-    - `seconds` {{optional_inline}}
-      - : Une valeur entière représentant le nombre de secondes écoulées dans la minute. La valeur par défaut est `0`.
-    - `milliseconds` {{optional_inline}}
-      - : Une valeur entière représentant le nombre de millisecondes écoulées dans la seconde. La valeur par défaut est `0`.
+- `monthIndex`
+  - : Une valeur entière représentant le mois, en commençant à `0` pour janvier, jusqu'à `11` pour décembre. Si une valeur supérieure à `11` est utilisée, les mois supplémentaires sont ajoutés à la date. Ainsi, `new Date(1990, 12, 1)` renverra une date représentant le premier janvier 1991.
+- `day` {{optional_inline}}
+  - : Une valeur entière pour le jour du mois. La valeur par défaut est `1`.
+- `hours` {{optional_inline}}
+  - : Une valeur entière entre `0` et `23`, représentant l'heure du jour. La valeur par défaut est `0`.
+- `minutes` {{optional_inline}}
+  - : Une valeur entière représentant le nombre de minutes écoulées dans l'heure. La valeur par défaut est `0`.
+- `seconds` {{optional_inline}}
+  - : Une valeur entière représentant le nombre de secondes écoulées dans la minute. La valeur par défaut est `0`.
+- `milliseconds` {{optional_inline}}
+  - : Une valeur entière représentant le nombre de millisecondes écoulées dans la seconde. La valeur par défaut est `0`.
 
 ### Valeur de retour
 

@@ -14,7 +14,9 @@ Les manifestes font partie d'un ensemble de technologies appelées les [applicat
 
 Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (_link_) dans l'entête (_head_) de votre document :
 
-    <link rel="manifest" href="/manifest.webmanifest">
+```html
+<link rel="manifest" href="/manifest.webmanifest">
+```
 
 ## Exemple de manifeste
 

@@ -8,24 +8,24 @@ translation_of: Web/API/CanvasRenderingContext2D
 ---
 <p>{{APIRef}}</p>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code>接口是Canvas API的一部分，可为{{HTMLElement("canvas")}}元素的绘图表面提供2D渲染上下文。 它用于绘制形状，文本，图像和其他对象。</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code>接口是 Canvas API 的一部分，可为{{HTMLElement("canvas")}}元素的绘图表面提供 2D 渲染上下文。它用于绘制形状，文本，图像和其他对象。</p>
 
-<p>请参阅侧边栏和下方的界面属性和方法。 <a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial" title="Canvas tutorial">Canvas教程</a>提供了更多的信息，例子和资源。</p>
+<p>请参阅侧边栏和下方的界面属性和方法。 <a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial" title="Canvas tutorial">Canvas 教程</a>提供了更多的信息，例子和资源。</p>
 
 <h2 id="基础示例">基础示例</h2>
 
-<p>要获得<code>CanvasRenderingContext2D</code> 实例，您必须首先具有HTML <code>&lt;canvas&gt;</code>元素才能使用：</p>
+<p>要获得<code>CanvasRenderingContext2D</code> 实例，您必须首先具有 HTML <code>&lt;canvas&gt;</code>元素才能使用：</p>
 
 <pre class="brush: html notranslate">&lt;canvas id="my-house" width="300" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>要获取画布的2D渲染上下文，请在<code>&lt;canvas&gt;</code>元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}}，并提供<code>'2d'</code>作为参数：</p>
+<p>要获取画布的 2D 渲染上下文，请在<code>&lt;canvas&gt;</code>元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}}，并提供<code>'2d'</code>作为参数：</p>
 
 <pre class="brush: js notranslate">const canvas = document.getElementById('my-house');
 const ctx = canvas.getContext('2d');
 </pre>
 
-<p>有了上下文，您就可以绘制任何喜欢的东西。 此代码绘制了一个房子：</p>
+<p>有了上下文，您就可以绘制任何喜欢的东西。此代码绘制了一个房子：</p>
 
 <pre class="brush: js notranslate">// Set line width
 ctx.lineWidth = 10;
@@ -45,7 +45,7 @@ ctx.closePath();
 ctx.stroke();
 </pre>
 
-<p>生成的图形如下所示:</p>
+<p>生成的图形如下所示：</p>
 
 <div class="hidden">
 <h2 id="Basic_example">Basic_example</h2>
@@ -83,7 +83,7 @@ ctx.stroke();</pre>
 
 <h2 id="绘制矩形" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">绘制矩形</h2>
 
-<p>以下是3个绘制矩形位图的方法。</p>
+<p>以下是 3 个绘制矩形位图的方法。</p>
 
 <p><strong>{{domxref("CanvasRenderingContext2D.clearRect()")}}</strong></p>
 
@@ -97,13 +97,13 @@ ctx.stroke();</pre>
 
 <h2 id="绘制文本" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">绘制文本</h2>
 
-<p>下面是绘制文本的方法。 参见 {{domxref("TextMetrics")}} 对象获取文本属性。</p>
+<p>下面是绘制文本的方法。参见 {{domxref("TextMetrics")}} 对象获取文本属性。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillText()")}}</dt>
- <dd>在(x,y)位置绘制（填充）文本。</dd>
+ <dd>在 (x,y) 位置绘制（填充）文本。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeText()")}}</dt>
- <dd>在(x,y)位置绘制（描边）文本。</dd>
+ <dd>在 (x,y) 位置绘制（描边）文本。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.measureText()")}}</dt>
  <dd>返回 {{domxref("TextMetrics")}} 对象。</dd>
 </dl>
@@ -116,7 +116,7 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.lineWidth")}}</dt>
  <dd>线的宽度。默认 <code>1.0</code></dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineCap")}}</dt>
- <dd>线末端的类型。 允许的值： <code>butt</code> (默认), <code>round</code>, <code>square</code>.</dd>
+ <dd>线末端的类型。允许的值： <code>butt</code> (默认), <code>round</code>, <code>square</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineJoin")}}</dt>
  <dd>定义两线相交拐点的类型。允许的值：<code style="font-style: normal;">round</code>, <code style="font-style: normal;">bevel</code>, <code style="font-style: normal;">miter</code>(默认)。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.miterLimit")}}</dt>
@@ -135,11 +135,11 @@ ctx.stroke();</pre>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.font")}}</dt>
- <dd>字体设置。 默认值 <code>10px sans-serif。</code></dd>
+ <dd>字体设置。默认值 <code>10px sans-serif。</code></dd>
  <dt>{{domxref("CanvasRenderingContext2D.textAlign")}}</dt>
- <dd>文本对齐设置。 允许的值： <code>start</code> (默认), <code>end</code>, <code>left</code>, <code>right</code> 或 <code>center</code>.</dd>
+ <dd>文本对齐设置。允许的值： <code>start</code> (默认), <code>end</code>, <code>left</code>, <code>right</code> 或 <code>center</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textBaseline")}}</dt>
- <dd>基线对齐设置。 允许的值： <code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code> (默认),<code>ideographic</code>, <code>bottom</code>.</dd>
+ <dd>基线对齐设置。允许的值： <code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code> (默认),<code>ideographic</code>, <code>bottom</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.direction")}}</dt>
  <dd>文本的方向。 允许的值： <code>ltr, rtl</code>, <code>inherit</code> (默认).</dd>
 </dl>
@@ -150,7 +150,7 @@ ctx.stroke();</pre>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle")}}</dt>
- <dd>图形内部的颜色和样式。 默认 <code>#000</code> (黑色).</dd>
+ <dd>图形内部的颜色和样式。默认 <code>#000</code> (黑色).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</dt>
  <dd>图形边线的颜色和样式。 默认 <code>#000</code> (黑色).</dd>
 </dl>
@@ -163,20 +163,20 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</dt>
  <dd>创建一个沿着参数坐标指定的线的放射性性渐变。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.createPattern()")}}</dt>
- <dd>使用指定的图片 (a {{domxref("CanvasImageSource")}})创建图案。通过 repetition 变量指定的方向上重复源图片。此方法返回 {{domxref("CanvasPattern")}}对象。</dd>
+ <dd>使用指定的图片 (a {{domxref("CanvasImageSource")}}) 创建图案。通过 repetition 变量指定的方向上重复源图片。此方法返回 {{domxref("CanvasPattern")}}对象。</dd>
 </dl>
 
 <h2 id="阴影" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">阴影</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur")}}</dt>
- <dd>描述模糊效果。 默认 <code>0</code></dd>
+ <dd>描述模糊效果。默认 <code>0</code></dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor")}}</dt>
- <dd>阴影的颜色。 默认fully-transparent black.</dd>
+ <dd>阴影的颜色。 默认 fully-transparent black.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX")}}</dt>
- <dd>阴影水平方向的偏移量。 默认 0.</dd>
+ <dd>阴影水平方向的偏移量。默认 0.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY")}}</dt>
- <dd>阴影垂直方向的偏移量。 默认 0.</dd>
+ <dd>阴影垂直方向的偏移量。默认 0.</dd>
 </dl>
 
 <h2 id="路径" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">路径</h2>
@@ -189,17 +189,17 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.closePath()")}}</dt>
  <dd>使笔点返回到当前子路径的起始点。它尝试从当前点到起始点绘制一条直线。如果图形已经是封闭的或者只有一个点，那么此方法不会做任何操作。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.moveTo()")}}</dt>
- <dd>将一个新的子路径的起始点移动到(x，y)坐标。</dd>
+ <dd>将一个新的子路径的起始点移动到 (x，y) 坐标。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineTo()")}}</dt>
- <dd>使用直线连接子路径的最后的点到x,y坐标。</dd>
+ <dd>使用直线连接子路径的最后的点到 x,y 坐标。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}</dt>
- <dd>添加一个3次贝赛尔曲线路径。该方法需要三个点。 第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 <code style="font-style: normal;">moveTo()</code> 进行修改。</dd>
+ <dd>添加一个 3 次贝赛尔曲线路径。该方法需要三个点。 第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 <code style="font-style: normal;">moveTo()</code> 进行修改。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}</dt>
- <dd>添加一个2次贝赛尔曲线路径。</dd>
+ <dd>添加一个 2 次贝赛尔曲线路径。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arc()")}}</dt>
  <dd>绘制一段圆弧路径， 圆弧路径的圆心在 <em>(x, y)</em> 位置，半径为<em> r</em> ，根据<em>anticlockwise</em> （默认为顺时针）指定的方向从 <em>startAngle</em> 开始绘制，到 <em>endAngle</em> 结束。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arcTo()")}}</dt>
- <dd>根据控制点和半径绘制圆弧路径，使用当前的描点(前一个moveTo或lineTo等函数的止点)。根据当前描点与给定的控制点1连接的直线，和控制点1与控制点2连接的直线，作为使用指定半径的圆的<strong>切线</strong>，画出两条切线之间的弧线路径。</dd>
+ <dd>根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的<strong>切线</strong>，画出两条切线之间的弧线路径。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}</dt>
  <dd>添加一个椭圆路径，椭圆的圆心在（x,y）位置，半径分别是<em>radiusX</em> 和 <em>radiusY</em> ，按照<em>anticlockwise</em> （默认顺时针）指定的方向，从 <em>startAngle </em> 开始绘制，到 <em>endAngle</em> 结束。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.rect()")}}</dt>
@@ -218,7 +218,7 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}</dt>
  <dd>将当前或给定的路径滚动到窗口。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.clip()")}}</dt>
- <dd>从当前路径创建一个剪切路径。在  <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">clip() </strong>调用之后，绘制的所有信息只会出现在剪切路径内部。例如： 参见 Canvas教程中的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">剪切路径</a> 。</dd>
+ <dd>从当前路径创建一个剪切路径。在  <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">clip() </strong>调用之后，绘制的所有信息只会出现在剪切路径内部。例如：参见 Canvas 教程中的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">剪切路径</a> 。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInPath()")}}</dt>
  <dd>判断当前路径是否包含检测点。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}</dt>
@@ -235,7 +235,7 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.rotate()")}}</dt>
  <dd>在变换矩阵中增加旋转，角度变量表示一个顺时针旋转角度并且用弧度表示。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.scale()")}}</dt>
- <dd>根据 x 水平方向和 y 垂直方向，为canvas 单位添加缩放变换。</dd>
+ <dd>根据 x 水平方向和 y 垂直方向，为 canvas 单位添加缩放变换。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.translate()")}}</dt>
  <dd>通过在网格中移动 canvas 和 canvas 原点 x 水平方向、原点 y 垂直方向，添加平移变换</dd>
  <dt>{{domxref("CanvasRenderingContext2D.transform()")}}</dt>
@@ -270,7 +270,7 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.createImageData()")}}</dt>
  <dd>使用指定的尺寸，创建一个新的、空白的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.getImageData()")}}</dt>
- <dd>返回一个 {{domxref("ImageData")}} 对象，用来描述canvas区域隐含的像素数据，这个区域通过矩形表示，起始点为<em>(sx, sy)、</em>宽为<em>sw、</em>高为<em>sh</em>。</dd>
+ <dd>返回一个 {{domxref("ImageData")}} 对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为<em>(sx, sy)、</em>宽为<em>sw、</em>高为<em>sh</em>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.putImageData()")}}</dt>
  <dd>将数据从已有的 {{domxref("ImageData")}} 绘制到位图上。 如果提供了脏矩形，只能绘制矩形的像素。 </dd>
 </dl>
@@ -358,9 +358,9 @@ ctx.stroke();</pre>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitBackingStorePixelRatio</code></dt>
  <dd>关于 canvas 元素可支持存储的大小。参见 <a href="http://www.html5rocks.com/en/tutorials/canvas/hidpi/">High DPI Canvas</a>。</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitGetImageDataHD</code></dt>
- <dd>原本打算支持存储 HD ，但是从 canvas 规范中删除了。</dd>
+ <dd>原本打算支持存储 HD，但是从 canvas 规范中删除了。</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitPutImageDataHD</code></dt>
- <dd>原本打算支持存储 HD ，但是从 canvas 规范中删除了。</dd>
+ <dd>原本打算支持存储 HD，但是从 canvas 规范中删除了。</dd>
 </dl>
 
 <dl>
@@ -377,11 +377,11 @@ ctx.stroke();</pre>
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransform</code></dt>
- <dd>设置或获取当前的变换矩阵， 参见{{domxref("CanvasRenderingContext2D.currentTransform")}}.</dd>
+ <dd>设置或获取当前的变换矩阵，参见{{domxref("CanvasRenderingContext2D.currentTransform")}}.</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransformInverse</code></dt>
  <dd>设置或获取当前翻转的变换矩阵。</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozFillRule</code></dt>
- <dd>应用的 <a class="external external-icon" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t" title="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">填充规则</a> 。 必须是 <code>evenodd</code> 或者 <code>nonzero</code> (默认)。</dd>
+ <dd>应用的 <a class="external external-icon" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t" title="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">填充规则</a> 。必须是 <code>evenodd</code> 或者 <code>nonzero</code> (默认)。</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
  <dd>参见 {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.</dd>
  <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozDash</code></dt>
@@ -391,9 +391,9 @@ ctx.stroke();</pre>
  <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozTextStyle</code></dt>
  <dd>在 Gecko 1.9 中引入， 不赞成使用的 {{domxref("CanvasRenderingContext2D.font")}} 属性。</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozDrawText()</code></dt>
- <dd>这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。 使用 {{domxref("CanvasRenderingContext2D.strokeText()")}} 或者 {{domxref("CanvasRenderingContext2D.fillText()")}} 替代。</dd>
+ <dd>这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。使用 {{domxref("CanvasRenderingContext2D.strokeText()")}} 或者 {{domxref("CanvasRenderingContext2D.fillText()")}} 替代。</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozMeasureText()</code></dt>
- <dd>这个方法在 Gecko 1.9 中引入， 从 Gecko 7.0. 开始未实现。 使用 {{domxref("CanvasRenderingContext2D.measureText()")}} 替代。</dd>
+ <dd>这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始未实现。使用 {{domxref("CanvasRenderingContext2D.measureText()")}} 替代。</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozPathText()</code></dt>
  <dd>这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}}<code>CanvasRenderingContext2D.mozTextAlongPath()</code></dt>

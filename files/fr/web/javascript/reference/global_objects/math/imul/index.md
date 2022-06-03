@@ -18,7 +18,9 @@ La fonction **`Math.imul()`** renvoie le résultat de la multiplication de deux 
 
 ## Syntaxe
 
-    Math.imul(a, b)
+```js
+Math.imul(a, b)
+```
 
 ### Paramètres
 

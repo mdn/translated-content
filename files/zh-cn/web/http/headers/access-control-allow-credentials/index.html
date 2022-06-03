@@ -11,13 +11,13 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Access-Control-Allow-Credentials</code></strong> 响应头表示是否可以将对请求的响应暴露给页面。返回true则可以，其他值均不可以。</p>
+<p><strong><code>Access-Control-Allow-Credentials</code></strong> 响应头表示是否可以将对请求的响应暴露给页面。返回 true 则可以，其他值均不可以。</p>
 
-<p>Credentials可以是 cookies, authorization headers 或 TLS client certificates。</p>
+<p>Credentials 可以是 cookies, authorization headers 或 TLS client certificates。</p>
 
-<p>当作为对预检请求的响应的一部分时，这能表示是否真正的请求可以使用credentials。注意简单的{{HTTPMethod("GET")}} 请求没有预检，所以若一个对资源的请求带了credentials，如果这个响应头没有随资源返回，响应就会被浏览器忽视，不会返回到web内容。</p>
+<p>当作为对预检请求的响应的一部分时，这能表示是否真正的请求可以使用 credentials。注意简单的{{HTTPMethod("GET")}} 请求没有预检，所以若一个对资源的请求带了 credentials，如果这个响应头没有随资源返回，响应就会被浏览器忽视，不会返回到 web 内容。</p>
 
-<p><code>Access-Control-Allow-Credentials</code> 头 工作中与{{domxref("XMLHttpRequest.withCredentials")}} 或Fetch API中的{{domxref("Request.Request()", "Request()")}} 构造器中的<code>credentials</code> 选项结合使用。Credentials必须在前后端都被配置（即the <code>Access-Control-Allow-Credentials</code> header 和 XHR 或Fetch request中都要配置）才能使带credentials的CORS请求成功。</p>
+<p><code>Access-Control-Allow-Credentials</code> 头 工作中与{{domxref("XMLHttpRequest.withCredentials")}} 或 Fetch API 中的{{domxref("Request.Request()", "Request()")}} 构造器中的<code>credentials</code> 选项结合使用。Credentials 必须在前后端都被配置（即 the <code>Access-Control-Allow-Credentials</code> header 和 XHR 或 Fetch request 中都要配置）才能使带 credentials 的 CORS 请求成功。</p>
 
 <table class="properties">
  <tbody>
@@ -41,23 +41,23 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 
 <dl>
  <dt>true</dt>
- <dd>这个头的唯一有效值（区分大小写）。如果不需要credentials，相比将其设为false，请直接忽视这个头。</dd>
+ <dd>这个头的唯一有效值（区分大小写）。如果不需要 credentials，相比将其设为 false，请直接忽视这个头。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>允许credentials:</p>
+<p>允许 credentials:</p>
 
 <pre>Access-Control-Allow-Credentials: true</pre>
 
-<p>使用带credentials的 <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> ：</p>
+<p>使用带 credentials 的 <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> ：</p>
 
 <pre class="brush: js">var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);</pre>
 
-<p>使用带credentials的 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> ：</p>
+<p>使用带 credentials 的 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> ：</p>
 
 <pre class="brush: js">fetch(url, {
   credentials: 'include'

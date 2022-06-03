@@ -18,7 +18,9 @@ La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un e
 
 ## Syntaxe
 
-    Atomics.store(typedArray, index, valeur)
+```js
+Atomics.store(typedArray, index, valeur)
+```
 
 ### Paramètres
 

@@ -20,7 +20,9 @@ La fonction **`Math.atanh()`** renvoie l'arc tangente hyperbolique d'un nombre :
 
 ## Syntaxe
 
-    Math.atanh(x)
+```js
+Math.atanh(x)
+```
 
 ### Paramètres
 

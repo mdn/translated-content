@@ -12,8 +12,8 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</div>
 
-<div class="summary">
-<p>在<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">之前的例子</a>里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 <code>globalCompositeOperation</code> 属性来改变这种状况。此外, <code>clip</code>属性允许我们隐藏不想看到的部分图形。</p>
+<div>
+<p>在<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">之前的例子</a>里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 <code>globalCompositeOperation</code> 属性来改变这种状况。此外，<code>clip</code>属性允许我们隐藏不想看到的部分图形。</p>
 </div>
 
 <h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
@@ -22,7 +22,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}</dt>
- <dd>这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识12种遮盖方式的字符串。</dd>
+ <dd>这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。</dd>
 </dl>
 
 <p>查看下面<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example">Compositing 示例</a>的代码。</p>
@@ -105,7 +105,7 @@ function drawStar(ctx,r){
 
 <p>首先，我画了一个与 canvas 一样大小的黑色方形作为背景，然后移动原点至中心点。然后用 <code>clip</code> 方法创建一个弧形的裁切路径。裁切路径也属于 canvas 状态的一部分，可以被保存起来。如果我们在创建新裁切路径时想保留原来的裁切路径，我们需要做的就是保存一下 canvas 的状态。</p>
 
-<p>裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。</p>
+<p>裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。</p>
 
 <p>{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}</p>
 

@@ -3561,7 +3561,7 @@
 /fr/docs/Useful_CSS_tips/Color_and_Background	/fr/docs/Web/CSS/color_value
 /fr/docs/Useful_CSS_tips/Links	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/Useful_CSS_tips/Tables	/fr/docs/Web/CSS/border-collapse
-/fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File/Using_files_from_web_applications
+/fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File_API/Using_files_from_web_applications
 /fr/docs/Using_geolocation	/fr/docs/Web/API/Geolocation_API
 /fr/docs/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Utilisation_daudio_et_video_dans_Firefox	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
@@ -3776,6 +3776,7 @@
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
 /fr/docs/Web/API/EventTarget/fireEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
+/fr/docs/Web/API/File/Using_files_from_web_applications	/fr/docs/Web/API/File_API/Using_files_from_web_applications
 /fr/docs/Web/API/File/fileName	/fr/docs/Web/API/File/name
 /fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList

@@ -1,15 +1,15 @@
 ---
-title: Flex项排序
+title: Flex 项排序
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。 在本文中，我们将介绍使用 Flexbox 时如何更改内容的视觉顺序。 我们还将从可访问性的角度考虑重新排序项目的影响。</p>
+<p>Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。在本文中，我们将介绍使用 Flexbox 时如何更改内容的视觉顺序。我们还将从可访问性的角度考虑重新排序项目的影响。</p>
 
 <h2 id="反转项目的显示">反转项目的显示</h2>
 
-<p>{{cssxref("flex-direction")}} 属性有如下四个值:</p>
+<p>{{cssxref("flex-direction")}} 属性有如下四个值：</p>
 
 <ul>
  <li><code>row</code></li>
@@ -34,37 +34,37 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="https://mdn.mozillademos.org/files/15647/order-rtl.png" style="display: flex; height: 302px; margin: 0px auto; width: 528px;"></p>
 
-<p>这看起来似乎是一种以相反顺序显示事物的简洁方式，但是您应该注意，这些项目只以相反顺序显示。 在这个问题上，规范说明如下:</p>
+<p>这看起来似乎是一种以相反顺序显示事物的简洁方式，但是您应该注意，这些项目只以相反顺序显示。在这个问题上，规范说明如下：</p>
 
 <blockquote>
-<p>“注意：Flex布局的重新排序功能仅会影响视觉渲染，保留语音顺序和基于源顺序的导航。 这使作者能够操纵视觉呈现，同时保持非CSS UA和线性模型（例如语音和顺序导航）的原始顺序不变。” - <a href="https://www.w3.org/TR/css-flexbox-1/#flow-order">Ordering and Orientation</a></p>
+<p>“注意：Flex 布局的重新排序功能仅会影响视觉渲染，保留语音顺序和基于源顺序的导航。这使作者能够操纵视觉呈现，同时保持非 CSS UA 和线性模型（例如语音和顺序导航）的原始顺序不变。” - <a href="https://www.w3.org/TR/css-flexbox-1/#flow-order">Ordering and Orientation</a></p>
 </blockquote>
 
 <p>如果你的项目是链接或者用户可以选择的其他元素，那么选项卡的顺序就是这些项目在文档源中出现的顺序，而不是你的视觉顺序。</p>
 
-<p>如果使用反向值或以其他方式重新排序项，则应考虑是否实际需要更改源中的逻辑顺序。 该规范继续警告不要使用重新排序来修复源代码中的问题:</p>
+<p>如果使用反向值或以其他方式重新排序项，则应考虑是否实际需要更改源中的逻辑顺序。该规范继续警告不要使用重新排序来修复源代码中的问题：</p>
 
 <blockquote>
-<p>“作者不得使用flex-flow / flex-direction的顺序或反向值来代替正确的源顺序，因为这会破坏文档的可访问性。<em>” </em></p>
+<p>“作者不得使用 flex-flow / flex-direction 的顺序或反向值来代替正确的源顺序，因为这会破坏文档的可访问性。<em>” </em></p>
 </blockquote>
 
 <div class="note">
-<p><strong>注意</strong>: 近几年来，Firefox出现了一个错误，即它会尝试遵循视​​觉顺序而不是源顺序，从而使其行为与其他浏览器不同。 现在，此问题已得到解决。 您应始终将源顺序作为文档的逻辑顺序，因为所有最新的用户代理都将遵循该规范并遵循该规范。</p>
+<p><strong>注意</strong>: 近几年来，Firefox 出现了一个错误，即它会尝试遵循视​​觉顺序而不是源顺序，从而使其行为与其他浏览器不同。现在，此问题已得到解决。您应始终将源顺序作为文档的逻辑顺序，因为所有最新的用户代理都将遵循该规范并遵循该规范。</p>
 </div>
 
-<p>在下面的实时示例中，我添加了一种焦点样式，以便当您从一个链接到另一个标签时，可以看到突出显示的样式。 如果使用<code>flex-direction</code>更改顺序，则可以看到制表符顺序如何继续遵循源中列出的项目的顺序。</p>
+<p>在下面的实时示例中，我添加了一种焦点样式，以便当您从一个链接到另一个标签时，可以看到突出显示的样式。如果使用<code>flex-direction</code>更改顺序，则可以看到制表符顺序如何继续遵循源中列出的项目的顺序。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}</p>
 
-<p>与更改<code>flex-direction</code>的值不会更改项目导航到的顺序相同，更改此值不会更改绘制顺序。 它仅是项目的视觉反转。</p>
+<p>与更改<code>flex-direction</code>的值不会更改项目导航到的顺序相同，更改此值不会更改绘制顺序。它仅是项目的视觉反转。</p>
 
 <h2 id="order_属性"><code>order</code> 属性</h2>
 
 <p>除了颠倒显示弹性项目的顺序之外，您还可以使用{{cssxref("order")}} 属性指定单个项目并更改其在视觉顺序中的显示位置。.</p>
 
-<p><code>order</code>属性旨在按顺序排列项目。 这意味着为项目分配了代表其组的整数。 然后，按照该整数（最低的值）首先按照视觉顺序放置项目。 如果多个项目具有相同的整数值，则在该组中按照源顺序对项目进行布局。</p>
+<p><code>order</code>属性旨在按顺序排列项目。这意味着为项目分配了代表其组的整数。然后，按照该整数（最低的值）首先按照视觉顺序放置项目。如果多个项目具有相同的整数值，则在该组中按照源顺序对项目进行布局。</p>
 
-<p>例如，我有5个弹性条目，并按如下所示分配<code>order</code>值：</p>
+<p>例如，我有 5 个弹性条目，并按如下所示分配<code>order</code>值：</p>
 
 <ul>
  <li>Source item 1: <code>order: 2</code></li>
@@ -86,31 +86,31 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p><img alt="Items have a number showing their source order which has been rearranged." src="https://mdn.mozillademos.org/files/15653/order-property.png" style="display: flex; height: 100px; margin: 0px auto; width: 634px;"></p>
 
-<p>您可以在下面的实时示例中使用这些值，并查看如何更改顺序。 另外，尝试将<code>flex-direction</code>更改为<code>row-reverse</code>，看看会发生什么—切换了起始行，以便从相反的一侧开始排序。</p>
+<p>您可以在下面的实时示例中使用这些值，并查看如何更改顺序。另外，尝试将<code>flex-direction</code>更改为<code>row-reverse</code>，看看会发生什么—切换了起始行，以便从相反的一侧开始排序。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}</p>
 
 <p>弹性项目默认 <code>order</code> 值为 <code>0</code>, 因此整数值大于 0 的项目，将会显示在那些未指定 <code>order</code> 值的项目之后。</p>
 
-<p>您还可以按顺序使用负值，这很有用。 如果要先显示一个项目，并保持所有其他项目的顺序不变，则可以将该项目的顺序设为<code>-1</code>。 由于该值小于0，因此始终会首先显示该项目。</p>
+<p>您还可以按顺序使用负值，这很有用。如果要先显示一个项目，并保持所有其他项目的顺序不变，则可以将该项目的顺序设为<code>-1</code>。由于该值小于 0，因此始终会首先显示该项目。</p>
 
-<p>在下面的实时代码示例中，我使用Flexbox布置了项目。 通过更改在HTML中为其分配了类<code>active</code>，您可以更改首先显示的项目，您可以更改首先显示哪个项目，因此在布局顶部变为全宽，而在其下方显示其他项目。</p>
+<p>在下面的实时代码示例中，我使用 Flexbox 布置了项目。通过更改在 HTML 中为其分配了类<code>active</code>，您可以更改首先显示的项目，您可以更改首先显示哪个项目，因此在布局顶部变为全宽，而在其下方显示其他项目。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}</p>
 
-<p>这些项目以规范中描述的顺序修改的文档顺序显示。 在显示项目之前，将考虑order属性的值。</p>
+<p>这些项目以规范中描述的顺序修改的文档顺序显示。在显示项目之前，将考虑 order 属性的值。</p>
 
 <p>Order 还会更改项目的绘制顺序; 对于<code>order</code>较低的项目将首先绘制，对于<code>order</code>值较高的项目将随后绘制。</p>
 
 <section id="sect1">
 <article>
-<h2 id="order属性和可访问性">order属性和可访问性</h2>
+<h2 id="order属性和可访问性">order 属性和可访问性</h2>
 </article>
 </section>
 
-<p>使用order属性对于可访问性具有与使用<code>flex-direction</code>更改方向完全相同的含义。 使用<code>order</code>可以更改项目的绘制顺序和外观。 它不会更改项目的顺序导航顺序。 因此，如果用户在项目之间切换，他们可能会发现自己以非常混乱的方式在布局中跳跃。</p>
+<p>使用 order 属性对于可访问性具有与使用<code>flex-direction</code>更改方向完全相同的含义。使用<code>order</code>可以更改项目的绘制顺序和外观。它不会更改项目的顺序导航顺序。因此，如果用户在项目之间切换，他们可能会发现自己以非常混乱的方式在布局中跳跃。</p>
 
-<p>通过浏览此页面上的任何实时示例，您可以了解订单如何给不使用某种指点设备的任何人带来奇怪的体验。 要了解有关视觉顺序和逻辑顺序的这种分离以及它为可访问性带来的一些潜在问题的更多信息，请参见以下资源。</p>
+<p>通过浏览此页面上的任何实时示例，您可以了解订单如何给不使用某种指点设备的任何人带来奇怪的体验。要了解有关视觉顺序和逻辑顺序的这种分离以及它为可访问性带来的一些潜在问题的更多信息，请参见以下资源。</p>
 
 <ul>
  <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox and the keyboard navigation disconnect</a></li>
@@ -118,20 +118,20 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
  <li><a href="https://alastairc.ac/2017/06/the-responsive-order-conflict">The Responsive Order Conflict for Keyboard Focus</a></li>
 </ul>
 
-<h2 id="order使用示例">order使用示例</h2>
+<h2 id="order使用示例">order 使用示例</h2>
 
-<p>有时在某些地方，弹性项目的逻辑顺序和可视顺序与视觉顺序是分开的，这很有帮助。 仔细使用<code>order</code>属性可以使一些有用的通用模式易于实现。</p>
+<p>有时在某些地方，弹性项目的逻辑顺序和可视顺序与视觉顺序是分开的，这很有帮助。仔细使用<code>order</code>属性可以使一些有用的通用模式易于实现。</p>
 
-<p>您可能有一个设计，也许是显示新闻的卡片。 新闻项的标题是突出显示的关键内容，并且如果用户在标题之间使用键盘制表符按键（tab）以查找要阅读的内容，则可能是用户可能会跳转到的元素。 该卡还带有日期； 我们要创建的最终设计就是这样。</p>
+<p>您可能有一个设计，也许是显示新闻的卡片。新闻项的标题是突出显示的关键内容，并且如果用户在标题之间使用键盘制表符按键（tab）以查找要阅读的内容，则可能是用户可能会跳转到的元素。该卡还带有日期；我们要创建的最终设计就是这样。</p>
 
 <p><img alt="A design component with a date, then heading and then content." src="https://mdn.mozillademos.org/files/15648/order-card.png" style="height: 400px; width: 618px;"></p>
 
-<p>视觉上，日期显示在源中标题上方。 但是，如果卡是由屏幕阅读器读出的，则我希望标题先公布，然后再公布日期。 我们可以使用<code>order</code>属性来做到这一点。</p>
+<p>视觉上，日期显示在源中标题上方。但是，如果卡是由屏幕阅读器读出的，则我希望标题先公布，然后再公布日期。我们可以使用<code>order</code>属性来做到这一点。</p>
 
 <p>The card is going to be our flex container, with <code>flex-direction</code> set to column. I then give the date an <code>order</code> of <code>-1</code>. This pulls it up above the heading.</p>
 
-<p>该卡将成为我们的伸缩容器，<code>flex-direction</code>设置为column。 然后，我将日期定为<code>-1</code>。 这将其拉到标题上方。</p>
+<p>该卡将成为我们的伸缩容器，<code>flex-direction</code>设置为 column。然后，我将日期定为<code>-1</code>。这将其拉到标题上方。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}</p>
 
-<p>这些小的调整是<code>order</code>属性有意义的情况。 保持逻辑顺序为文档的阅读和制表符顺序，并以最易于访问和结构化的方式进行维护。 然后使用<code>order</code>进行纯粹的视觉设计调整。 这样做时，请注意不要重新排序在用户四处浏览时可能由键盘访问的项目。 尤其是在使用较新的布局方法时，应确保浏览器测试包括仅使用键盘而不是鼠标或触摸屏来测试站点。 您将快速查看您的开发选择是否使绕过内容变得困难。</p>
+<p>这些小的调整是<code>order</code>属性有意义的情况。保持逻辑顺序为文档的阅读和制表符顺序，并以最易于访问和结构化的方式进行维护。然后使用<code>order</code>进行纯粹的视觉设计调整。这样做时，请注意不要重新排序在用户四处浏览时可能由键盘访问的项目。尤其是在使用较新的布局方法时，应确保浏览器测试包括仅使用键盘而不是鼠标或触摸屏来测试站点。您将快速查看您的开发选择是否使绕过内容变得困难。</p>

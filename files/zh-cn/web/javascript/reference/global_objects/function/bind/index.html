@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h3 id="创建绑定函数">创建绑定函数</h3>
 
-<p><code>bind()</code> 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 <strong><code>this</code></strong> 值。JavaScript新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 <code>this</code> 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：</p>
+<p><code>bind()</code> 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 <strong><code>this</code></strong> 值。JavaScript 新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 <code>this</code> 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：</p>
 
 <pre class="brush: js">this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
 var module = {
@@ -118,7 +118,7 @@ var result3 = addThirtySeven(5, 10);
 
 <h3 id="配合_setTimeout">配合 <code>setTimeout</code></h3>
 
-<p>在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，<code>this</code> 关键字会指向 {{ domxref("window") }} （或 <code>global</code>）对象。当类的方法中需要 <code>this</code> 指向类的实例时，你可能需要显式地把 <code>this</code> 绑定到回调函数，就不会丢失该实例的引用。</p>
+<p>在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，<code>this</code> 关键字会指向 {{ domxref("window") }}（或 <code>global</code>）对象。当类的方法中需要 <code>this</code> 指向类的实例时，你可能需要显式地把 <code>this</code> 绑定到回调函数，就不会丢失该实例的引用。</p>
 
 <pre class="brush: js"><code>function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
@@ -135,7 +135,7 @@ LateBloomer.prototype.declare = function() {
 };
 
 var flower = new LateBloomer();
-flower.bloom();  // 一秒钟后, 调用 'declare' 方法</code></pre>
+flower.bloom();  // 一秒钟后，调用 'declare' 方法</code></pre>
 
 <h3 id="作为构造函数使用的绑定函数">作为构造函数使用的绑定函数</h3>
 
@@ -182,7 +182,7 @@ new YAxisPoint(17, 42) instanceof Point; // true</pre>
 // 这个例子可以直接在你的 JavaScript 控制台运行
 
 // 仍然能作为一个普通函数来调用
-// （即使通常来说这个不是被期望发生的）
+//（即使通常来说这个不是被期望发生的）
 YAxisPoint(13);
 
 emptyObj.x + ',' + emptyObj.y;   //  '0,13'

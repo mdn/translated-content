@@ -10,7 +10,7 @@ translation_of: Web/API/DOMImplementation
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<p><code style="font-style: normal; line-height: 1.5;"><strong>DOMImplementation</strong></code> 接口代表了一个对象，这个对象提供了不依赖于任何document的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得</p>
+<p><code style="font-style: normal; line-height: 1.5;"><strong>DOMImplementation</strong></code> 接口代表了一个对象，这个对象提供了不依赖于任何 document 的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得</p>
 
 <h2 id="属性">属性</h2>
 
@@ -22,13 +22,13 @@ translation_of: Web/API/DOMImplementation
 
 <dl>
  <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
- <dd>创建并返回一个 {{domxref("XMLDocument")}}对象.</dd>
+ <dd>创建并返回一个 {{domxref("XMLDocument")}}对象。</dd>
  <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
- <dd>创建并返回一个 {{domxref("DocumentType")}}对象.</dd>
+ <dd>创建并返回一个 {{domxref("DocumentType")}}对象。</dd>
  <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
- <dd>创建并返回一个 {{domxref("Document")}}对象.</dd>
+ <dd>创建并返回一个 {{domxref("Document")}}对象。</dd>
  <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了SVG相关的查询，它总是返回 <code>true</code>。旧浏览器的行为非常不一致</dd>
+ <dd>返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了 SVG 相关的查询，它总是返回 <code>true</code>。旧浏览器的行为非常不一致</dd>
  <dd>Returns a {{domxref("Boolean")}} indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns <code>true</code>. Old browsers are very inconsistent in their behavior.</dd>
 </dl>
 

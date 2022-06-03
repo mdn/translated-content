@@ -17,7 +17,9 @@ La valeur **`null`** est un littéral JavaScript représentant la nullité au se
 
 ## Syntaxe
 
-    null
+```js
+null
+```
 
 ## Description
 

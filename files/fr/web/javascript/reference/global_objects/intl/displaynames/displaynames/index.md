@@ -16,7 +16,9 @@ Le constructeur **`Intl.DisplayNames()`** crée des objets qui permettent de fou
 
 ## Syntaxe
 
-    new Intl.DisplayNames([langues[, options]])
+```js
+new Intl.DisplayNames([langues[, options]])
+```
 
 ### Paramètres
 
