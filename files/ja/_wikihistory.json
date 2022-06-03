@@ -9153,19 +9153,6 @@
       "jsx"
     ]
   },
-  "Tools/Firefox_OS_1.1_Simulator": {
-    "modified": "2020-07-16T22:35:57.805Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
-  "Tools/Firefox_OS_Simulator_clone": {
-    "modified": "2020-07-16T22:36:23.044Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Tools/JSON_viewer": {
     "modified": "2020-07-16T22:36:31.583Z",
     "contributors": [
