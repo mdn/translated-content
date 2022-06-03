@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 ## 出発点
 
-この評価をスタートするためには、ローカル PC の新しいディレクトリーに最新記事から [index-finished.htm](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css)、[main-finshed.js](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) をコピーします。
+この評価をスタートするためには、ローカル PC の新しいディレクトリーに最新記事から [index-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css)、[main-finshed.js](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) をコピーします。
 
 または、評価のために、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) を使うことができます。これらのオンラインエディターに HTML、CSS や JavaScript を貼り付けることができます。もしあなたが使用しているオンラインエディターが、別々の JavaScript/CSS のパネルを持っていない場合は、HTML内の `<script>`/`<style>` 要素を使って、インラインで書くことができます。
 
@@ -69,7 +69,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 `Ball` クラスは `extends` を使用して `Shape` から派生させる必要があります。 `Ball` のコンストラクターは以下のようになります。
 
-- 引数として、 `x`, `y`, `velX`, `velY`, `size`, `color` を渡します。
+- 引数として、 `x`, `y`, `velX`, `velY`, `size`, `color` を受け取ります。
 - `super()` を使用して `Shape` コンストラクタを呼び出し、 `x`、`y`、`velX`、`velY` の各引数を渡します。
 - 与えられたパラメータから `color` と `size` のプロパティを初期化します。
 
