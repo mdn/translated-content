@@ -1,11 +1,11 @@
 ---
-title: DOM中的空白符
+title: DOM 中的空白符
 slug: Web/API/Document_Object_Model/Whitespace
 translation_of: Web/API/Document_Object_Model/Whitespace
 ---
 <h4 id=".E5.95.8F.E9.A1.8C.E8.AA.AA.E6.98.8E" name=".E5.95.8F.E9.A1.8C.E8.AA.AA.E6.98.8E">问题说明</h4>
 
-<p><a href="zh_tw/DOM">DOM</a> 中的空白符会让处理节点结构时增加不少麻烦。在Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 <a href="zh_tw/CSS">CSS</a> 里的 <code>white-space: pre</code> 也才能发挥作用。 如此一来就表示：</p>
+<p><a href="zh_tw/DOM">DOM</a> 中的空白符会让处理节点结构时增加不少麻烦。在 Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 <a href="zh_tw/CSS">CSS</a> 里的 <code>white-space: pre</code> 也才能发挥作用。 如此一来就表示：</p>
 
 <ul>
  <li>有些空白符会自成一个文本节点。</li>
@@ -38,10 +38,10 @@ translation_of: Web/API/Document_Object_Model/Whitespace
 
 <pre>/**
  * 以下所谓的“空白符”代表：
- *  "\t" TAB \u0009 （制表符）
- *  "\n" LF  \u000A （换行符）
- *  "\r" CR  \u000D （回车符）
- *  " "  SPC \u0020 （真正的空格符）
+ *  "\t" TAB \u0009（制表符）
+ *  "\n" LF  \u000A（换行符）
+ *  "\r" CR  \u000D（回车符）
+ *  " "  SPC \u0020（真正的空格符）
  *
  * 不包括 JavaScript 的“\s”，因为那代表如不断行字符等其他字符。
  */
@@ -76,7 +76,7 @@ function is_ignorable( nod )
 
 /**
  * 此为会跳过空白符节点及注释节点的 |previousSibling| 函数
- * （ |previousSibling| 是 DOM 节点的特性值，为该节点的前一个节点。）
+ *（ |previousSibling| 是 DOM 节点的特性值，为该节点的前一个节点。）
  *
  * @参数   sib  节点。
  * @传回值      有两种可能：
@@ -109,7 +109,7 @@ function node_after( sib )
 
 /**
  * 此为会跳过空白符节点及注释节点的 |lastChild| 函数
- * （ lastChild| 是 DOM 节点的特性值，为该节点之中最后一个子节点。）
+ *（ lastChild| 是 DOM 节点的特性值，为该节点之中最后一个子节点。）
  *
  * @参数   par  节点。
  * @传回值      有两种可能：

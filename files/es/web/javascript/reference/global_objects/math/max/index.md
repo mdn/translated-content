@@ -25,7 +25,7 @@ Math.max(valor0, valor1, /* ... ,*/ valorN)
 
 ### Valor retornado
 
-El mayor de los números dados. Si uno o más de los parámetros no puede ser convertido a 
+El mayor de los números dados. Si uno o más de los parámetros no puede ser convertido a
 un número, retorna {{jsxref("NaN")}}. El resultado es
 \-{{jsxref("Infinity")}} si no se proveen parámetros.
 
@@ -52,7 +52,7 @@ Math.max(-10, 20);  //  20
 
 ### Obteniendo el elemento máximo de un arreglo
 
-Se puede usar {{jsxref("Array.prototype.reduce", "Array.reduce()")}} para encontrar el 
+Se puede usar {{jsxref("Array.prototype.reduce", "Array.reduce()")}} para encontrar el
 elemento máximo en un arreglo numérico, comparando cada valor:
 
 ```js

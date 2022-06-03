@@ -19,10 +19,10 @@ translation_of: Web/API/Document/createNodeIterator
 
 <dl>
  <dt><code>root</code></dt>
- <dd> {{ domxref("NodeIterator") }}遍历起始处的根节点。</dd>
+ <dd>{{ domxref("NodeIterator") }}遍历起始处的根节点。</dd>
  <dt><code>whatToShow</code> {{ optional_inline() }}</dt>
  <dd>是一个可选的无符号长整型（<code>unsigned long</code>）， 是由节点过滤器（<code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 <code>0xFFFFFFFF</code> ，代表 <code>SHOW_ALL</code> 常量。
- <table class="standard-table">
+ <table>
   <tbody>
    <tr>
     <td class="header">常量</td>
@@ -124,21 +124,7 @@ while (currentNode = nodeIterator.nextNode()) {
 
 <h2 id="Specification" name="Specification">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createnodeiterator', 'document.createNodeIterator')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

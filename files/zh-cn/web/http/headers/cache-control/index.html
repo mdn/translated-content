@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Headers/Cache-Control
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><code> <strong>Cache-Control</strong></code> 通用消息头字段，被用于在http请求和响应中，通过指定指令来实现缓存机制。缓存指令是单向的，这意味着在请求中设置的指令，不一定被包含在响应中。</p>
+<p><code> <strong>Cache-Control</strong></code> 通用消息头字段，被用于在 http 请求和响应中，通过指定指令来实现缓存机制。缓存指令是单向的，这意味着在请求中设置的指令，不一定被包含在响应中。</p>
 
 <table class="properties">
  <tbody>
@@ -40,7 +40,7 @@ translation_of: Web/HTTP/Headers/Cache-Control
 
 <h3 id="缓存请求指令">缓存请求指令</h3>
 
-<p>客户端可以在HTTP请求中使用的标准 Cache-Control 指令。</p>
+<p>客户端可以在 HTTP 请求中使用的标准 Cache-Control 指令。</p>
 
 <pre class="syntaxbox">Cache-Control: max-age=&lt;seconds&gt;
 Cache-Control: max-stale[=&lt;seconds&gt;]
@@ -68,7 +68,7 @@ Cache-control: s-maxage=&lt;seconds&gt;
 
 <h3 id="扩展Cache-Control指令"> 扩展<code>Cache-Control</code>指令</h3>
 
-<p>拓展缓存指令不是核心HTTP缓存标准文档的一部分，使用前请注意检查<a href="#浏览器兼容性">兼容性</a>！</p>
+<p>拓展缓存指令不是核心 HTTP 缓存标准文档的一部分，使用前请注意检查<a href="#浏览器兼容性">兼容性</a>！</p>
 
 <pre class="syntaxbox">Cache-control: immutable
 Cache-control: stale-while-revalidate=&lt;seconds&gt;
@@ -85,7 +85,7 @@ Cache-control: stale-if-error=&lt;seconds&gt;
  <dt><code>private</code></dt>
  <dd>表明响应只能被单个用户缓存，不能作为共享缓存（即代理服务器不能缓存它）。私有缓存可以缓存响应内容，比如：对应用户的本地浏览器。</dd>
  <dt><code>no-cache</code></dt>
- <dd>在发布缓存副本之前，强制要求缓存把请求提交给原始服务器进行验证(协商缓存验证)。</dd>
+ <dd>在发布缓存副本之前，强制要求缓存把请求提交给原始服务器进行验证 (协商缓存验证)。</dd>
  <dt><code>no-store</code></dt>
  <dd>缓存不应存储有关客户端请求或服务器响应的任何内容，即不使用任何缓存。</dd>
 </dl>
@@ -94,9 +94,9 @@ Cache-control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dt><code>max-age=&lt;seconds&gt;</code></dt>
- <dd>设置缓存存储的最大周期，超过这个时间缓存被认为过期(单位秒)。与<code>Expires</code>相反，时间是相对于请求的时间。</dd>
+ <dd>设置缓存存储的最大周期，超过这个时间缓存被认为过期 (单位秒)。与<code>Expires</code>相反，时间是相对于请求的时间。</dd>
  <dt><code>s-maxage=&lt;seconds&gt;</code></dt>
- <dd>覆盖<code>max-age</code>或者<code>Expires</code>头，但是仅适用于共享缓存(比如各个代理)，私有缓存会忽略它。</dd>
+ <dd>覆盖<code>max-age</code>或者<code>Expires</code>头，但是仅适用于共享缓存 (比如各个代理)，私有缓存会忽略它。</dd>
  <dt><code>max-stale[=&lt;seconds&gt;]</code></dt>
  <dd>表明客户端愿意接收一个已经过期的资源。可以设置一个可选的秒数，表示响应不能已经过时超过该给定的时间。</dd>
  <dt><code>min-fresh=&lt;seconds&gt;</code></dt>
@@ -113,16 +113,16 @@ Cache-control: stale-if-error=&lt;seconds&gt;
  <dt><code>must-revalidate</code></dt>
  <dd>一旦资源过期（比如已经超过<code>max-age</code>），在成功向原始服务器验证之前，缓存不能用该资源响应后续请求。</dd>
  <dt><code>proxy-revalidate</code></dt>
- <dd>与must-revalidate作用相同，但它仅适用于共享缓存（例如代理），并被私有缓存忽略。</dd>
+ <dd>与 must-revalidate 作用相同，但它仅适用于共享缓存（例如代理），并被私有缓存忽略。</dd>
  <dt><code>immutable</code> {{experimental_inline}}</dt>
- <dd>表示响应正文不会随时间而改变。资源（如果未过期）在服务器上不发生改变，因此客户端不应发送重新验证请求头（例如<code>If-None-Match</code>或I<code>f-Modified-Since</code>）来检查更新，即使用户显式地刷新页面。在Firefox中，immutable只能被用在 <code>https://</code> transactions. 有关更多信息，请参阅<a href="http://bitsup.blogspot.de/2016/05/cache-control-immutable.html">这里</a>。</dd>
+ <dd>表示响应正文不会随时间而改变。资源（如果未过期）在服务器上不发生改变，因此客户端不应发送重新验证请求头（例如<code>If-None-Match</code>或 I<code>f-Modified-Since</code>）来检查更新，即使用户显式地刷新页面。在 Firefox 中，immutable 只能被用在 <code>https://</code> transactions. 有关更多信息，请参阅<a href="http://bitsup.blogspot.de/2016/05/cache-control-immutable.html">这里</a>。</dd>
 </dl>
 
 <h3 id="其他">其他</h3>
 
 <dl>
  <dt><code>no-transform</code></dt>
- <dd>不得对资源进行转换或转变。<code>Content-Encoding</code>、<code>Content-Range</code>、<code>Content-Type</code>等HTTP头不能由代理修改。例如，非透明代理或者如<a href="https://support.google.com/webmasters/answer/6211428?hl=en">Google's Light Mode</a>可能对图像格式进行转换，以便节省缓存空间或者减少缓慢链路上的流量。<code>no-transform</code>指令不允许这样做。</dd>
+ <dd>不得对资源进行转换或转变。<code>Content-Encoding</code>、<code>Content-Range</code>、<code>Content-Type</code>等 HTTP 头不能由代理修改。例如，非透明代理或者如<a href="https://support.google.com/webmasters/answer/6211428?hl=en">Google's Light Mode</a>可能对图像格式进行转换，以便节省缓存空间或者减少缓慢链路上的流量。<code>no-transform</code>指令不允许这样做。</dd>
  <dt><code>only-if-cached</code></dt>
  <dd>表明客户端只接受已缓存的响应，并且不要向原始服务器检查是否有更新的拷贝。</dd>
 </dl>
@@ -138,7 +138,7 @@ Cache-control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="缓存静态资源">缓存静态资源</h3>
 
-<p>对于应用程序中不会改变的文件，你通常可以在发送响应头前添加积极缓存。这包括例如由应用程序提供的静态文件，例如图像，CSS文件和JavaScript文件。另请参阅Expires标题。</p>
+<p>对于应用程序中不会改变的文件，你通常可以在发送响应头前添加积极缓存。这包括例如由应用程序提供的静态文件，例如图像，CSS 文件和 JavaScript 文件。另请参阅 Expires 标题。</p>
 
 <pre>Cache-Control:public, max-age=31536000</pre>
 

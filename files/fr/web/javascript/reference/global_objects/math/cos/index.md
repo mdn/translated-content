@@ -17,7 +17,9 @@ La fonction **`Math.cos()`** retourne le [cosinus](https://fr.wikipedia.org/wiki
 
 ## Syntaxe
 
-    Math.cos(x)
+```js
+Math.cos(x)
+```
 
 ### Paramètres
 

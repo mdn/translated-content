@@ -18,7 +18,9 @@ La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère 
 
 ## Syntaxe
 
-    str.charAt(index)
+```js
+str.charAt(index)
+```
 
 ### Paramètres
 

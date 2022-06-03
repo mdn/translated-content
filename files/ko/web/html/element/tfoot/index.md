@@ -130,8 +130,9 @@ browser-compat: html.elements.tfoot
 
 ## 같이 보기
 
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties and pseudo-classes that may be specially useful to style the `<tfoot>` element:
+- 테이블과 관련된 다른 HTML 요소들: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}.
+- `<tfoot>` 요소에 스타일을 지정할 때 특히 유용할 CSS 속성과 가상 클래스들:
 
-  - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
-  - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.
+  - 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스.
+  - '.'같은 동일한 문자에 모든 셀 내용을 정렬할 때 사용하는 {{cssxref("text-align")}} 속성.
+

@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_initializer_in_const
 
 ## Message
 
-    SyntaxError: Const must be initalized (Edge)
-    SyntaxError: missing = in const declaration (Firefox)
-    SyntaxError: Missing initializer in const declaration (Chrome)
+```
+SyntaxError: Const must be initalized (Edge)
+SyntaxError: missing = in const declaration (Firefox)
+SyntaxError: Missing initializer in const declaration (Chrome)
+```
 
 ## Type d'erreur
 

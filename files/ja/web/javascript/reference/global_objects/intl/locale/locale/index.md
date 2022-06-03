@@ -7,7 +7,7 @@ tags:
   - Intl
   - JavaScript
   - ロケール
-  - Reference
+  - リファレンス
 browser-compat: javascript.builtins.Intl.Locale.Locale
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ---
@@ -51,11 +51,6 @@ let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(locale.hourCycle); // Prints "h12"
 ```
 
-## ポリフィル
-
-[formatjs Intl.Locale
-polyfill](https://formatjs.io/docs/polyfills/intl-locale)
-
 ## 仕様書
 
 {{Specifications}}
@@ -68,3 +63,5 @@ polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 
 - {{jsxref("Intl.Collator")}}
 - [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [FormatJS における `Intl.Locale` のポリフィル](https://formatjs.io/docs/polyfills/intl-locale)
+

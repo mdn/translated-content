@@ -6,19 +6,19 @@ original_slug: Web/CSS/max()
 ---
 <div>{{CSSRef}}</div>
 
-<p><code><strong>max</strong></code><strong><code>()</code></strong> 这个CSS函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . <code>max()</code> 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。</p>
+<p><code><strong>max</strong></code><strong><code>()</code></strong> 这个 CSS 函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . <code>max()</code> 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。</p>
 
 <pre class="brush: css; no-line-numbers notranslate">/* property: max(expression [, expression]) */
 width: max(10vw, 4em, 80px);
 </pre>
 
-<p>在上面这个例子中，宽度最小会是80px，除非视图宽度大于800px或者是一个em比20px宽。简单来说，最小宽度是80px。你也可以认为max()的值提供了一个属性最小可能的值。</p>
+<p>在上面这个例子中，宽度最小会是 80px，除非视图宽度大于 800px 或者是一个 em 比 20px 宽。简单来说，最小宽度是 80px。你也可以认为 max() 的值提供了一个属性最小可能的值。</p>
 
 <h2 id="语法">语法</h2>
 
 <p><code>max()</code> 方法接受一个或多个用逗号分隔的表达式作为他的参数，数值最大的表达式的值将会作为指定的属性的值。</p>
 
-<p>表达式可以是数学运算 (可在 {{CSSxRef("calc", "calc()")}} 了解更多信息), 直接数值, 或者是其他表达式，例如attr()，这将会计算成一个合法的参数类型（例如 {{CSSxRef("&lt;length&gt;")}}），也可以是嵌套的  {{CSSxRef("min", "min()")}} 和 <code>max()</code> 函数.</p>
+<p>表达式可以是数学运算 (可在 {{CSSxRef("calc", "calc()")}} 了解更多信息), 直接数值，或者是其他表达式，例如 attr()，这将会计算成一个合法的参数类型（例如 {{CSSxRef("&lt;length&gt;")}}），也可以是嵌套的  {{CSSxRef("min", "min()")}} 和 <code>max()</code> 函数。</p>
 
 <p>你可以使用你的表达式中分别使用不同的单位。需要时，你也可以使用小括号来设定运算顺序。</p>
 

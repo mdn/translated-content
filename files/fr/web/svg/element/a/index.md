@@ -62,8 +62,6 @@ svgns|a:hover, svgns|a:active {
 
 ## Attributs
 
-
-
 ### Attributs globaux
 
 - [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "SVG/Attribute#Core")

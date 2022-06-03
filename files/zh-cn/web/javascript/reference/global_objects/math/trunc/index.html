@@ -55,7 +55,7 @@ Math.trunc()         // NaN</pre>
 
 		return (v - v % 1) || (v &lt; 0 ? -0 : v === 0 ? v : 0);
 
-		// 返回:
+		// 返回：
 		//  0        -&gt;  0
 		// -0        -&gt; -0
 		//  0.2      -&gt;  0
@@ -70,7 +70,7 @@ Math.trunc()         // NaN</pre>
 }</code>
 </pre>
 
-<p>或:</p>
+<p>或：</p>
 
 <pre><code>if (!Math.trunc) {
 	Math.trunc = function(v) {

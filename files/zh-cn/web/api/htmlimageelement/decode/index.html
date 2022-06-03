@@ -6,7 +6,7 @@ translation_of: Web/API/HTMLImageElement/decode
 <div>
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>{{domxref("HTMLImageElement")}} 接口的 <strong><code>decode()</code></strong> 方法返回一个当图片解码后可安全用于附加到 DOM 上时 resolves 的 {{jsxref("Promise")}} 对象。 这可用于在将图片附加到一个 DOM 中的元素（或作为一个新元素加入 DOM 中）之前启动加载，所以在将图像添加到 DOM 时可以立即渲染图像。这反过来，防止了将图像加入DOM后图像的加载造成下一帧渲染的延迟。</p>
+<p>{{domxref("HTMLImageElement")}} 接口的 <strong><code>decode()</code></strong> 方法返回一个当图片解码后可安全用于附加到 DOM 上时 resolves 的 {{jsxref("Promise")}} 对象。 这可用于在将图片附加到一个 DOM 中的元素（或作为一个新元素加入 DOM 中）之前启动加载，所以在将图像添加到 DOM 时可以立即渲染图像。这反过来，防止了将图像加入 DOM 后图像的加载造成下一帧渲染的延迟。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -15,11 +15,11 @@ translation_of: Web/API/HTMLImageElement/decode
 
 <h3 id="参数">参数</h3>
 
-<p>无.</p>
+<p>无。</p>
 
 <h3 id="返回">返回</h3>
 
-<p>一个一旦数据准备好可供使用时resolve的promise对象.</p>
+<p>一个一旦数据准备好可供使用时 resolve 的 promise 对象。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/HTMLImageElement/decode
 
 <h2 id="使用提示">使用提示</h2>
 
-<p>一个 <code>decode()</code> 的潜在用例：当在加载一个非常大的图片时（例如，一个在线相册），你可以在加载初期提供一个低分辨率的缩略图，之后通过实例化一个 {{domxref("HTMLImageElement")}} 将该图像替换为一个全分辨率图像，设置其 source 为全分辨率图像URL，使用 <code>decode()</code> 获取一旦全分辨率图像准备好被使用时 resolved 的 promise 对象。这时你可以使用当前可用的全分辨率图像替换之前的低分辨率图像。</p>
+<p>一个 <code>decode()</code> 的潜在用例：当在加载一个非常大的图片时（例如，一个在线相册），你可以在加载初期提供一个低分辨率的缩略图，之后通过实例化一个 {{domxref("HTMLImageElement")}} 将该图像替换为一个全分辨率图像，设置其 source 为全分辨率图像 URL，使用 <code>decode()</code> 获取一旦全分辨率图像准备好被使用时 resolved 的 promise 对象。这时你可以使用当前可用的全分辨率图像替换之前的低分辨率图像。</p>
 
 <h2 id="例子">例子</h2>
 

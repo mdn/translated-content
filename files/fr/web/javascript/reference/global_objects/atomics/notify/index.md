@@ -18,7 +18,9 @@ La méthode statique **`Atomics.notify()`** permet de réveiller des agents dorm
 
 ## Syntaxe
 
-    Atomics.notify(typedArray, index, count)
+```js
+Atomics.notify(typedArray, index, count)
+```
 
 ### Paramètres
 

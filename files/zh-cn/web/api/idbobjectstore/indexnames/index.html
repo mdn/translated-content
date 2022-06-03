@@ -29,7 +29,7 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
-  // 将打开数据库的结果存储在db变量中
+  // 将打开数据库的结果存储在 db 变量中
   // 下面经常用到这个
   db = this.result;
 
@@ -38,7 +38,7 @@ DBOpenRequest.onsuccess = function(event) {
 };
 
 function addData() {
-  // 创建一个新对象以准备插入到IDB中
+  // 创建一个新对象以准备插入到 IDB 中
   var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // 打开读/写数据库事务，准备添加数据
