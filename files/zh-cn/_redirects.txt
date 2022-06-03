@@ -317,7 +317,7 @@
 /zh-CN/docs/DOM/console.trace	/zh-CN/docs/Web/API/Console/trace
 /zh-CN/docs/DOM/document	/zh-CN/docs/Web/API/Document
 /zh-CN/docs/DOM/document.URL	/zh-CN/docs/Web/API/Document/URL
-/zh-CN/docs/DOM/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/zh-CN/docs/DOM/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/DOM/document.anchors	/zh-CN/docs/Web/API/Document/anchors
 /zh-CN/docs/DOM/document.applets	/zh-CN/docs/Web/API/Document/applets
 /zh-CN/docs/DOM/document.async	/zh-CN/docs/Web/API/XMLDocument/async
@@ -510,7 +510,6 @@
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window/openDialog
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/conflicting/Web/API/Window/beforeunload_event
-/zh-CN/docs/Download_Mozilla_Source_Code	/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives
 /zh-CN/docs/Enumerability_and_ownership_of_properties	/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /zh-CN/docs/Firefox_12_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/12
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
@@ -1766,7 +1765,7 @@
 /zh-CN/docs/Web/API/console.time	/zh-CN/docs/Web/API/Console/time
 /zh-CN/docs/Web/API/console.trace	/zh-CN/docs/Web/API/Console/trace
 /zh-CN/docs/Web/API/document.URL	/zh-CN/docs/Web/API/Document/URL
-/zh-CN/docs/Web/API/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/zh-CN/docs/Web/API/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/document.anchors	/zh-CN/docs/Web/API/Document/anchors
 /zh-CN/docs/Web/API/document.applets	/zh-CN/docs/Web/API/Document/applets
 /zh-CN/docs/Web/API/document.async	/zh-CN/docs/Web/API/XMLDocument/async
