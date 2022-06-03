@@ -12,7 +12,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 <p>{{CSSRef}} {{SeeCompattable}}</p>
 
-<p><strong>CSS transitions </strong>提供了一种在更改CSS属性时控制动画速度的方法。 其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。</p>
+<p><strong>CSS transitions </strong>提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。</p>
 
 <p>通常将两个状态之间的过渡称为<strong>隐式过渡（implicit transitions）</strong>，因为开始与结束之间的状态由浏览器决定。</p>
 
@@ -20,24 +20,24 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 <p>CSS transitions 可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay），持续多久 (设置 duration) 以及如何动画 (定义<em>timing function</em>，比如匀速地或先快后慢)。</p>
 
-<div class="note"><strong>Note:</strong> transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如Firefox 15 及之前版本, Opera 12 及之前版本)。详情见本页底部的兼容性表格。</div>
+<div class="note"><strong>Note:</strong> transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit 的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如 Firefox 15 及之前版本，Opera 12 及之前版本)。详情见本页底部的兼容性表格。</div>
 
-<h2 id="哪些_CSS_属性可以动画">哪些 CSS 属性可以动画?</h2>
+<h2 id="哪些_CSS_属性可以动画">哪些 CSS 属性可以动画？</h2>
 
 <p>网页制作者可以定义哪个属性以哪种方式动画，这样能制作出复杂的过渡。因为有些属性动画无意义，所以 <a href="/zh-CN/docs/CSS/CSS_animated_properties" title="/en-US/docs/">可动画属性列表</a> 是一个有限集合。</p>
 
 <div class="note">Note: 可动画的属性集将有变动，开发者应关注。</div>
 
-<p class="note">auto 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit的，没有这么严格限制。在 <code>auto</code> 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。</p>
+<p class="note">auto 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit 的，没有这么严格限制。在 <code>auto</code> 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。</p>
 
-<p class="note">同时应当留意这种情形，在插入元素（如 <code>.appendChild()</code>）或改变属性 <code>display: none</code> 后立即使用过渡, 元素将视为没有开始状态，始终处于结束状态。简单的解决办法，改变属性前用 <code>window.setTimeout()</code> 延迟几毫秒。</p>
+<p class="note">同时应当留意这种情形，在插入元素（如 <code>.appendChild()</code>）或改变属性 <code>display: none</code> 后立即使用过渡，元素将视为没有开始状态，始终处于结束状态。简单的解决办法，改变属性前用 <code>window.setTimeout()</code> 延迟几毫秒。</p>
 
 <h2 id="多个属性一起动画示例">多个属性一起动画示例</h2>
 
 <h3 id="HTML_内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;body&gt;
-    &lt;p&gt;盒子的多个属性一起动画: width, height, background-color, transform. 将光标悬停在盒子上查看动画。&lt;/p&gt;
+    &lt;p&gt;盒子的多个属性一起动画：width, height, background-color, transform. 将光标悬停在盒子上查看动画。&lt;/p&gt;
     &lt;div class="box"&gt;&lt;/div&gt;
 &lt;/body&gt;</pre>
 
@@ -897,7 +897,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 <h2 id="当属性值列表长度不一致时">当属性值列表长度不一致时</h2>
 
-<p>以 {{ cssxref("transition-property") }} 的值列表长度为标准，如果某个属性值列表长度短于它的，则重复其值以长度一致， 例如:</p>
+<p>以 {{ cssxref("transition-property") }} 的值列表长度为标准，如果某个属性值列表长度短于它的，则重复其值以长度一致，例如：</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left, top, height;
@@ -905,21 +905,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 </pre>
 
-<p>将按下面这样处理:</p>
+<p>将按下面这样处理：</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left, top, height;
   transition-duration: 3s, 5s, 3s, 5s;
 }</pre>
 
-<p>类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。 例如:</p>
+<p>类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。 例如：</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left;
   transition-duration: 3s, 5s, 2s, 1s;
 }</pre>
 
-<p>将按下面这样处理:</p>
+<p>将按下面这样处理：</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left;
@@ -998,13 +998,13 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 <h2 id="transition_让_JavaScript_效果更平滑">transition 让 JavaScript 效果更平滑</h2>
 
-<p>transition 是非常好的工具，可以让 JavaScript 效果平滑而不用修改 JavaScript。 看下面例子。</p>
+<p>transition 是非常好的工具，可以让 JavaScript 效果平滑而不用修改 JavaScript。看下面例子。</p>
 
 <pre class="brush: html">&lt;p&gt;随便点击某处来移动球&lt;/p&gt;
 &lt;div id="foo"&gt;&lt;/div&gt;
 </pre>
 
-<p>使用 JavaScript 将球移动到一个位置 ：</p>
+<p>使用 JavaScript 将球移动到一个位置：</p>
 
 <pre class="brush: js">var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
@@ -1013,7 +1013,7 @@ document.addEventListener('click', function(ev){
 },false);
 </pre>
 
-<p>使用CSS 来平滑移动，只用简单地添加一个过渡 :</p>
+<p>使用 CSS 来平滑移动，只用简单地添加一个过渡 :</p>
 
 <pre class="brush: css">p {
   padding-left: 60px;

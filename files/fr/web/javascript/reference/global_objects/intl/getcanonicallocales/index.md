@@ -18,7 +18,9 @@ La méthode **`Intl.getCanonicalLocales()`** renvoie un tableau contenant les no
 
 ## Syntaxe
 
-    Intl.getCanonicalLocales(locales)
+```js
+Intl.getCanonicalLocales(locales)
+```
 
 ### Paramètres
 

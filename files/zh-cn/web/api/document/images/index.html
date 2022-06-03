@@ -5,7 +5,7 @@ translation_of: Web/API/Document/images
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>{{domxref("Document")}} 接口的只读属性images返回当前文档中所有 <a href="/zh-cn/DOM/Image" title="zh-cn/DOM/Image">image</a> 元素的集合.</p>
+<p>{{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 <a href="/zh-cn/DOM/Image" title="zh-cn/DOM/Image">image</a> 元素的集合。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -13,11 +13,11 @@ translation_of: Web/API/Document/images
 
 <h3 id="值">值</h3>
 
-<p>一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有images元素实时的列表。 集合中的每条代表了一个单image元素的{{domxref("HTMLImageElement")}}</p>
+<p>一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。 集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}</p>
 
 <h2 id="备注">备注</h2>
 
-<p>你可以在返回的结果中使用JavaScript 数组符号('[]'，译注)，或者{{domxref("HTMLCollection.item", "item()")}} 方法去获取集合中的每个元素。下面方法是等价的：</p>
+<p>你可以在返回的结果中使用 JavaScript 数组符号 ('[]'，译注)，或者{{domxref("HTMLCollection.item", "item()")}} 方法去获取集合中的每个元素。下面方法是等价的：</p>
 
 <pre class="brush: js">firstImage = imageCollection.item(0);
 
@@ -30,33 +30,13 @@ firstImage = imageCollection[0];</pre>
 <pre class="brush: js">var ilist = document.images;
 for(var i = 0; i &lt; ilist.length; i++) {
     if(ilist[i].src == "banner.gif") {
-         // 发现了banner图片
+         // 发现了 banner 图片
     }
 }</pre>
 
 <h2 id="Specifications" name="Specifications">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-images', 'Document.images')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-90379117', 'Document.images')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

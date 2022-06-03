@@ -14,7 +14,7 @@ original_slug: Web/Events/icecandidate
 
 <h3 id="分享新的源">分享新的源</h3>
 
-<p><code>触发icecandidate</code>事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的{{domxref("RTCPeerConnection")}}。其他{{domxref("RTCPeerConnection")}}通过{{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}方法将新{{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；</p>
+<p>触发 <code>icecandidate</code> 事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的 {{domxref("RTCPeerConnection")}}。其他 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将新{{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；</p>
 
 <pre>rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {

@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <pre class="brush: js">// 下面代码是语法格式，不能直接运行，
 // TypedArray 关键字需要替换为底部列出的构造函数。
-new TypedArray(); // ES2017中新增
+new TypedArray(); // ES2017 中新增
 new <em>TypedArray</em>(length);
 new <em>TypedArray</em>(typedArray);
 new <em>TypedArray</em>(object);
@@ -58,7 +58,7 @@ Float64Array();</pre>
 
 <p>ECMAScript 2015 定义了一个 <em><code>TypeArray</code></em> 构造器作为所有的类型化数组构造器（<code>Int8Array</code>, <code>Int16Array</code> 等）的原型（<code>[[Prototype]]</code>）。该构造器并不会直接暴露出来：即没有全局的 <code>%TypedArray%</code> 和 <code>TypeArray</code> 属性，只能通过使用类似于 <code>Object.getPrototypeOf(Int8Array.prototype</code>) 的方式直接访问。所有的类型化数组构造器都会继承 <code>%</code><code>TypeArray%</code> 构造器函数的公共属性和方法。此外，所有的类型化数组的原型（如 <code>Int8Array.prototype</code>）都以 <code>%TypeArray%.prototype</code> 作为原型。</p>
 
-<p><code>%TypedArray%</code> 构造器自身不是特别有用，直接调用或使用 <code>new</code> 表达式实例化都会抛出一个{{jsxref("TypeError")}} 异常，除非在支持子类化（subclassing）创建对象的 JS 引擎下运行。但直到现在还没有这样的 JS 引擎出现。因此 <code>%TypeArray%</code> 仅仅在对所有的类型化数组构造器（<code>Int8Array</code> 等）的方法和属性进行 polyfill 的时候比较有用.</p>
+<p><code>%TypedArray%</code> 构造器自身不是特别有用，直接调用或使用 <code>new</code> 表达式实例化都会抛出一个{{jsxref("TypeError")}} 异常，除非在支持子类化（subclassing）创建对象的 JS 引擎下运行。但直到现在还没有这样的 JS 引擎出现。因此 <code>%TypeArray%</code> 仅仅在对所有的类型化数组构造器（<code>Int8Array</code> 等）的方法和属性进行 polyfill 的时候比较有用。</p>
 
 <p>当创建一个 <code>TypedArray</code> 实例（如 <code>Int8Array</code>）时，一个数组缓冲区将被创建在内存中，如果一个 <code>ArrayBuffer</code> 对象被当作参数传给构造函数，那么将使用传入的 <code>ArrayBuffer</code> 代替（即缓冲区被创建到 <code>ArrayBuffer</code> 中）。缓冲区的地址被存储在实例的内部属性中，并且所有 <code>%TypedArray%.prototype</code>上的方法，例如 <code>set value</code> 和 <code>get value</code> 等，都会在这个数组缓冲区上进行操作。</p>
 
@@ -94,7 +94,7 @@ Int8Array.prototype.foo = "bar";
   <tr>
    <th scope="col">类型</th>
    <th scope="col">单个元素值的范围</th>
-   <th scope="col">大小(bytes)</th>
+   <th scope="col">大小 (bytes)</th>
    <th scope="col">描述</th>
    <th scope="col">Web IDL 类型</th>
    <th scope="col">C 语言中的等价类型</th>
@@ -213,9 +213,9 @@ Int8Array.prototype.foo = "bar";
 
 <dl>
  <dt>{{jsxref("TypedArray.from()")}}</dt>
- <dd>使用类数组(array-like)或迭代对象创建一个新的类型化数组.参见 {{jsxref("Array.from()")}}.</dd>
+ <dd>使用类数组 (array-like) 或迭代对象创建一个新的类型化数组。参见 {{jsxref("Array.from()")}}.</dd>
  <dt>{{jsxref("TypedArray.of()")}}</dt>
- <dd>通过可变数量的参数创建新的类型化数组.参见 {{jsxref("Array.of()")}}.</dd>
+ <dd>通过可变数量的参数创建新的类型化数组。参见 {{jsxref("Array.of()")}}.</dd>
 </dl>
 
 <h2 id="TypedArray_原型">TypedArray 原型</h2>
@@ -256,7 +256,7 @@ for (var k in typedArrayTypes)
 
 <h2 id="兼容性注意事项">兼容性注意事项</h2>
 
-<p>从ECMAScript 2015 (ES6) 开始，<code>TypedArray</code> 构造函数使用的时候必须要使用 <code>new</code> 操作符，否则会抛出 {{jsxref("TypeError")}} 异常。</p>
+<p>从 ECMAScript 2015 (ES6) 开始，<code>TypedArray</code> 构造函数使用的时候必须要使用 <code>new</code> 操作符，否则会抛出 {{jsxref("TypeError")}} 异常。</p>
 
 <pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor </pre>

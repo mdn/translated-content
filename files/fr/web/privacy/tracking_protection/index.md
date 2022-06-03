@@ -16,7 +16,9 @@ Si le contenu bloqué fait partie intégrante de la page, les utilisatrices et u
 
 Lorsque Firefox bloque du contenu, on aura un message de ce type enregistré dans la Console web :
 
-    La ressource située à "http://telle/adresse/" a été bloqué parce que la protection contre le pistage est activée.
+```
+La ressource située à "http://telle/adresse/" a été bloqué parce que la protection contre le pistage est activée.
+```
 
 Notez qu'avec Firefox pour Android, vous pouvez accéder aux résultats de la console en utilisant un débogueur distant.
 

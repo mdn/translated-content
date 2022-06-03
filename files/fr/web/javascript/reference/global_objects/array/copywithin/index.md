@@ -20,9 +20,11 @@ La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_)
 
 ## Syntaxe
 
-    arr.copyWithin(cible)
-    arr.copyWithin(cible, début)
-    arr.copyWithin(cible, début, fin)
+```js
+arr.copyWithin(cible)
+arr.copyWithin(cible, début)
+arr.copyWithin(cible, début, fin)
+```
 
 ### Paramètres
 

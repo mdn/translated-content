@@ -14592,20 +14592,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2020-09-26T13:42:56.896Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "imanabu",
-      "uzuworks",
-      "chrisdavidmills",
-      "ethertank",
-      "myakura",
-      "saneyuki_s",
-      "souta"
-    ]
-  },
   "Web/API/File/getAsBinary": {
     "modified": "2019-11-18T15:13:21.722Z",
     "contributors": [
@@ -14672,12 +14658,6 @@
   },
   "Web/API/File/webkitRelativePath": {
     "modified": "2020-10-15T22:11:44.308Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "Web/API/FileError": {
-    "modified": "2020-10-15T22:11:49.645Z",
     "contributors": [
       "silverskyvicto"
     ]
@@ -14863,6 +14843,20 @@
     "modified": "2020-10-15T22:11:54.292Z",
     "contributors": [
       "silverskyvicto"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2020-09-26T13:42:56.896Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "imanabu",
+      "uzuworks",
+      "chrisdavidmills",
+      "ethertank",
+      "myakura",
+      "saneyuki_s",
+      "souta"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {
@@ -24032,16 +24026,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Window/home": {
-    "modified": "2020-10-15T21:16:24.433Z",
-    "contributors": [
-      "YujiSoftware",
-      "teoli",
-      "jsx",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:43:14.616Z",
     "contributors": [
@@ -24586,14 +24570,6 @@
     "contributors": [
       "Uemmra3",
       "yyss"
-    ]
-  },
-  "Web/API/Window/setCursor": {
-    "modified": "2019-03-23T23:29:45.573Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "ethertank"
     ]
   },
   "Web/API/Window/showModalDialog": {
@@ -25879,12 +25855,6 @@
   },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute": {
     "modified": "2019-03-18T21:23:09.833Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-03-18T21:11:33.822Z",
     "contributors": [
       "Wind1808"
     ]
@@ -48403,16 +48373,6 @@
       "mfuji09"
     ]
   },
-  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
-    "modified": "2020-05-24T03:45:53.652Z",
-    "contributors": [
-      "mfuji09",
-      "teoli",
-      "siokoshou",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
     "contributors": [
@@ -48548,13 +48508,6 @@
       "silverskyvicto"
     ]
   },
-  "orphaned/Building_a_Mozilla_Distribution": {
-    "modified": "2019-03-23T23:49:07.062Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "orphaned/Code_snippets/Toolbar": {
     "modified": "2019-03-23T23:46:21.932Z",
     "contributors": [
@@ -48622,13 +48575,6 @@
       "RobinEgg"
     ]
   },
-  "orphaned/Mozilla_Modules_and_Module_Ownership": {
-    "modified": "2019-01-16T15:50:48.596Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": [
@@ -48678,14 +48624,6 @@
       "Kohei",
       "Mgjbot",
       "Taken"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector/DOM_Inspector_FAQ": {
-    "modified": "2020-07-16T22:36:25.610Z",
-    "contributors": [
-      "wbamberg",
-      "Kohei",
-      "Mgjbot"
     ]
   },
   "orphaned/Tools/Add-ons/DOM_Inspector/Internals": {
@@ -49228,15 +49166,6 @@
       "Marsf"
     ]
   },
-  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2020-01-19T16:30:15.396Z",
-    "contributors": [
-      "mfuji09",
-      "teoli",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-08-09T13:53:14.893Z",
     "contributors": [
@@ -49544,12 +49473,6 @@
     "contributors": [
       "fscholz",
       "ethertank"
-    ]
-  },
-  "orphaned/ant_script_to_assemble_an_extension": {
-    "modified": "2019-08-11T02:17:04.841Z",
-    "contributors": [
-      "Marsf"
     ]
   },
   "orphaned/reftest_opportunities_files": {

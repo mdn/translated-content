@@ -16,7 +16,9 @@ L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans
 
 ## Syntaxe
 
-     ( )
+```js
+( )
+```
 
 ## Description
 

@@ -5,7 +5,7 @@ translation_of: Web/CSS/aspect-ratio
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>aspect-ratio</code></strong>  <a href="/en-US/docs/CSS">CSS</a> 属性为box容器规定了一个<strong>期待的纵横比</strong>，这个纵横比可以用来计算自动尺寸以及为其他布局函数服务。</p>
+<p><strong><code>aspect-ratio</code></strong>  <a href="/en-US/docs/CSS">CSS</a> 属性为 box 容器规定了一个<strong>期待的纵横比</strong>，这个纵横比可以用来计算自动尺寸以及为其他布局函数服务。</p>
 
 <pre class="brush:css no-line-numbers notranslate">aspect-ratio: 1 / 1;
 
@@ -19,7 +19,7 @@ aspect-ratio: unset;
 
 <dl>
  <dt>{{cssxref("&lt;auto&gt;")}}</dt>
- <dd>具有固有宽高比的替换元素将使用该宽高比，否则该内容框没有首选的宽高比。 涉及固有宽高比的尺寸计算始终与内容框尺寸一起使用。</dd>
+ <dd>具有固有宽高比的替换元素将使用该宽高比，否则该内容框没有首选的宽高比。涉及固有宽高比的尺寸计算始终与内容框尺寸一起使用。</dd>
  <dt>{{cssxref("&lt;ratio&gt;")}}</dt>
  <dd>内容框首选的宽高比是通过 <code>width</code> / <code>height</code> 定义的。当为内容框定义 <code>box-sizing</code> 之后，尺寸的计算就可以通过指定宽高比来实现。</dd>
 </dl>
@@ -42,7 +42,7 @@ aspect-ratio: 16 / 9;
 
 <h2 id="将宽度和高度关联到宽高比">将宽度和高度关联到宽高比</h2>
 
-<p>浏览器内部已经为替换的元素和其他接受 <code>width</code> 和 <code>height</code> 的元素添加了 <code>aspect-ratio</code>。这些可以在浏览器的UA样式表中看到。</p>
+<p>浏览器内部已经为替换的元素和其他接受 <code>width</code> 和 <code>height</code> 的元素添加了 <code>aspect-ratio</code>。这些可以在浏览器的 UA 样式表中看到。</p>
 
 <p>在 Firefox 中，内部样式表看起来如下：</p>
 
@@ -50,7 +50,7 @@ aspect-ratio: 16 / 9;
   aspect-ratio: attr(width) / attr(height);
 }</pre>
 
-<p>您可以在 <a href="https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/">为图片设置宽高仍然重要gain</a> 一文中了解更多与这个功能有关的内容。</p>
+<p>您可以在 <a href="https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/">为图片设置宽高仍然重要 gain</a> 一文中了解更多与这个功能有关的内容。</p>
 
 <h2 id="规范">规范</h2>
 

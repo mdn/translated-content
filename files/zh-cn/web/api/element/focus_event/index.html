@@ -4,7 +4,7 @@ slug: Web/API/Element/focus_event
 translation_of: Web/API/Element/focus_event
 original_slug: Web/Events/focus
 ---
-<p>focus事件在元素获取焦点时触发. 这个事件和 <a href="/en-US/docs/Mozilla_event_reference/focusin"><code>focusin</code></a> 最大的区别仅仅在于后者会事件冒泡.</p>
+<p>focus 事件在元素获取焦点时触发。这个事件和 <a href="/en-US/docs/Mozilla_event_reference/focusin"><code>focusin</code></a> 最大的区别仅仅在于后者会事件冒泡。</p>
 
 <h2 id="基本信息">基本信息</h2>
 
@@ -20,10 +20,10 @@ original_slug: Web/Events/focus
  <dt style="float: left; text-align: right; width: 120px;">事件目标</dt>
  <dd style="margin: 0 0 0 120px;">Element</dd>
  <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">无.</dd>
+ <dd style="margin: 0 0 0 120px;">无。</dd>
 </dl>
 
-<div class="note">注释: 这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})</div>
+<div class="note">注释：这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})</div>
 
 <h2 id="属性">属性</h2>
 
@@ -66,7 +66,7 @@ original_slug: Web/Events/focus
 
 <h2 id="事件委托">事件委托</h2>
 
-<p>此事件有两个可以实现事件委托的方法 : 通过在支持的浏览器上使用 <code>focusin</code> 事件 (除了Firefox之外的所有浏览器), 或者通过设置 <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a> 的参数"useCapture" 值为true:</p>
+<p>此事件有两个可以实现事件委托的方法 : 通过在支持的浏览器上使用 <code>focusin</code> 事件 (除了 Firefox 之外的所有浏览器), 或者通过设置 <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a> 的参数"useCapture" 值为 true:</p>
 
 <p>{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}</p>
 

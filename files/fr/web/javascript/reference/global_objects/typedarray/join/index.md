@@ -20,7 +20,9 @@ La méthode **`join()`** fusionne l'ensemble des éléments d'un tableau en une 
 
 ## Syntaxe
 
-    typedarray.join([séparateur = ',']);
+```js
+typedarray.join([séparateur = ',']);
+```
 
 ### Paramètres
 

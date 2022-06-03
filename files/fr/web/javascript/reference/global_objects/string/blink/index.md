@@ -20,7 +20,9 @@ La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui a
 
 ## Syntaxe
 
-    str.blink()
+```js
+str.blink()
+```
 
 ### Valeur de retour
 

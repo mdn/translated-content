@@ -19,7 +19,9 @@ La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `S
 
 ## Syntaxe
 
-    monSet.clear();
+```js
+monSet.clear();
+```
 
 ### Valeur de retour
 

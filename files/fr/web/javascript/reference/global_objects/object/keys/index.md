@@ -19,7 +19,9 @@ La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propri
 
 ## Syntaxe
 
-    Object.keys(obj)
+```js
+Object.keys(obj)
+```
 
 ### Paramètres
 

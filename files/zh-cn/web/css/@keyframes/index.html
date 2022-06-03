@@ -9,7 +9,7 @@ translation_of: Web/CSS/@keyframes
 ---
 <div>{{CSSRef}}</div>
 
-<p>关键帧 <strong><code>@keyframes</code></strong> <a href="/zh-CN/docs/Web/CSS/At-rule">at-rule</a> 规则通过在动画序列中定义关键帧（或waypoints）的样式来控制CSS动画序列中的中间步骤。和 <a href="/zh-CN/docs/Web/CSS/CSS_Transitions">转换 transition</a> 相比，关键帧 keyframes 可以控制动画序列的中间步骤。</p>
+<p>关键帧 <strong><code>@keyframes</code></strong> <a href="/zh-CN/docs/Web/CSS/At-rule">at-rule</a> 规则通过在动画序列中定义关键帧（或 waypoints）的样式来控制 CSS 动画序列中的中间步骤。和 <a href="/zh-CN/docs/Web/CSS/CSS_Transitions">转换 transition</a> 相比，关键帧 keyframes 可以控制动画序列的中间步骤。</p>
 
 <pre class="brush: css no-line-numbers notranslate"><code>@keyframes slidein {
   from {
@@ -21,9 +21,9 @@ translation_of: Web/CSS/@keyframes
   }
 }</code></pre>
 
-<p>JavaScript 可以通过 CSS对象模型的 {{domxref("CSSKeyframesRule")}} 接口来访问 <code>@keyframes</code>。</p>
+<p>JavaScript 可以通过 CSS 对象模型的 {{domxref("CSSKeyframesRule")}} 接口来访问 <code>@keyframes</code>。</p>
 
-<p>要使用关键帧, 先创建一个带名称的 <code>@keyframes</code> 规则，以便后续使用 {{ cssxref("animation-name") }} 属性将动画同其关键帧声明匹配。每个 <code>@keyframes</code> 规则包含多个关键帧，也就是一段样式块语句，每个关键帧有一个百分比值作为名称，代表在动画进行中，在哪个阶段触发这个帧所包含的样式。</p>
+<p>要使用关键帧，先创建一个带名称的 <code>@keyframes</code> 规则，以便后续使用 {{ cssxref("animation-name") }} 属性将动画同其关键帧声明匹配。每个 <code>@keyframes</code> 规则包含多个关键帧，也就是一段样式块语句，每个关键帧有一个百分比值作为名称，代表在动画进行中，在哪个阶段触发这个帧所包含的样式。</p>
 
 <p>可以按任意顺序列出关键帧百分比；它们将按照其应该发生的顺序来处理。</p>
 
@@ -35,9 +35,9 @@ translation_of: Web/CSS/@keyframes
 
 <h3 id="重复定义">重复定义</h3>
 
-<p>如果多个关键帧使用同一个名称，以最后一次定义的为准。 <code>@keyframes</code> 不存在层叠样式(cascade)的情况，所以动画在一个时刻（阶段）只会使用一个的关键帧的数据。</p>
+<p>如果多个关键帧使用同一个名称，以最后一次定义的为准。 <code>@keyframes</code> 不存在层叠样式 (cascade) 的情况，所以动画在一个时刻（阶段）只会使用一个的关键帧的数据。</p>
 
-<p>如果一个@keyframes 内的关键帧的百分比存在重复的情况，则@keyframes规则中该百分比的所有关键帧都将用于该帧。如果多个关键帧指定了相同的百分比值，则@keyframes规则内是可以使用层叠样式的。</p>
+<p>如果一个 @keyframes 内的关键帧的百分比存在重复的情况，则 @keyframes 规则中该百分比的所有关键帧都将用于该帧。如果多个关键帧指定了相同的百分比值，则 @keyframes 规则内是可以使用层叠样式的。</p>
 
 <h3 id="属性个数不定">属性个数不定</h3>
 
