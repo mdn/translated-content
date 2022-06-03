@@ -2964,7 +2964,7 @@
 /ja/docs/Tools/DevToolsAPI	https://firefox-source-docs.mozilla.org/devtools-user/devtoolsapi/index.html
 /ja/docs/Tools/DevToolsColors	https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html
 /ja/docs/Tools/Eyedropper	https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html
-/ja/docs/Tools/Index	/ja/docs/conflicting/Tools
+/ja/docs/Tools/Index	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Tools/JSON_viewer	https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html
 /ja/docs/Tools/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html
 /ja/docs/Tools/Measure_a_portion_of_the_page	https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html
