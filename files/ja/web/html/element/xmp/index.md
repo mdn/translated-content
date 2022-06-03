@@ -2,51 +2,46 @@
 title: <xmp>
 slug: Web/HTML/Element/xmp
 tags:
-  - Element
+  - 要素
   - HTML
-  - Obsolete
-  - Reference
-  - Web
+  - 非推奨
+  - リファレンス
+  - ウェブ
+browser-compat: html.elements.xmp
 translation_of: Web/HTML/Element/xmp
 ---
-<div>{{ Obsolete_header() }}</div>
 
-<h2 id="Summary" name="Summary">概要</h2>
+{{deprecated_header}}
 
-<p><em>xmp (Example) 要素</em> (<code>&lt;xmp&gt;</code>) は、その開始タグから終了タグまでの間の HTML タグを HTML として解釈せず、等幅フォントでレンダリングします。HTML2 はこれが 1 行当たり 80 文字を表示するのに充分な幅でレンダリングするよう推奨しています。</p>
+## 概要
 
-<div class="note"><strong>注意:</strong>この要素は使用しないで下さい
+**`<xmp>`** は [HTML](/ja/docs/Web/HTML) の要素で、その開始タグから終了タグまでの間のタグを HTML として解釈せず、等幅フォントでレンダリングします。 HTML2 仕様書では、これを 1 行当たり 80 文字を表示するのに充分な幅でレンダリングするよう推奨しています。
 
-<ul>
- <li>HTML3.2 から非推奨要素となっており、また一貫した実装も存在しません。そして HTML5 仕様からは完全に削除されています。</li>
- <li>改行コードの反映など、同等のレンダリングのためには {{ HTMLElement("pre") }} 要素、「コードの表示」というセマンティクスを表す意図であれば {{ HTMLElement("code") }} 要素で実現可能です。それらを使用する場合、HTML タグとして解釈されないように 「<code>&lt;</code>」は「<code>&amp;lt;</code>」、「<code>&gt;</code>」は「<code>&amp;gt;</code>」というようにエスケープして記述する必要があります。</li>
- <li>等幅フォントでの表示は <a href="/ja/docs/CSS" title="CSS">CSS</a> の {{ cssxref("font-family") }} プロパティを使用し、値として <code>monospace</code> を指定することで実現可能です。</li>
-</ul>
-</div>
+> **Note:** この要素は使用しないでください。
+>
+> - HTML3.2 から非推奨要素となっており、また一貫した実装も存在しません。そして HTML5 の言語からは完全に削除されています。
+> - 代わりに {{HTMLElement("pre")}} 要素か、意味的に適切であれば {{HTMLElement("code")}} 要素を使用してください。なお、マークアップとして解釈されないようにするには、 '`<`' の文字を '`&lt;`' としてエスケープする必要があります。
+> - あらゆる要素で等幅フォントを使用することができます。 [CSS](/en-US/docs/Web/CSS) のスタイルで `monospace` を {{cssxref("font-family")}} プロパティの一般的なフォントの値として使用してください。
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素は、すべての要素が持つ <a href="/ja/docs/HTML/global_attributes" rel="internal">グローバル属性</a> 以外の属性を持ちません。</p>
+この要素は、すべての要素が持つ[グローバル属性](/ja/docs/HTML/global_attributes)以外の属性を持ちません。
 
-<h2 id="DOM_interface" name="DOM_interface">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p>この要素は {{domxref('HTMLElement')}} インターフェイスを実装しています。</p>
+この要素は {{domxref('HTMLElement')}} インターフェイスを実装しています。
 
-<div class="note">
-<p><strong>実装メモ: </strong> Gecko 1.9.2 まで（Firefox）はこの要素に対し{{domxref('HTMLSpanElement')}} を実装しています。</p>
-</div>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("html.elements.xmp")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+- 代替となり得る要素: {{ HTMLElement("pre") }} 要素、 {{ HTMLElement("code") }} 要素
+- {{HTMLElement("plaintext")}} 要素と {{ HTMLElement("listing") }} 要素も廃止となっています。
 
-<ul>
- <li>代替となり得る要素: {{ HTMLElement("pre") }} 要素、 {{ HTMLElement("code") }} 要素</li>
- <li>{{ HTMLElement("xmp") }} とほぼ同等の {{ HTMLElement("plaintext") }} 要素と {{ HTMLElement("listing") }} 要素も廃止となっています。</li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
