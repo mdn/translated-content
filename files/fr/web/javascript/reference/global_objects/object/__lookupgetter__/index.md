@@ -17,7 +17,9 @@ La méthode **`__lookupGetter__`** renvoie la fonction liée comme accesseur d'u
 
 ## Syntaxe
 
-    obj.__lookupGetter__(sprop)
+```js
+obj.__lookupGetter__(sprop)
+```
 
 ### Paramètres
 

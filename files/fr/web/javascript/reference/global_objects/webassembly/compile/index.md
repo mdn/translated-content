@@ -16,7 +16,9 @@ La méthode **`WebAssembly.compile()`**, permet de compiler un module ({{jsxref(
 
 ## Syntaxe
 
-    Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```js
+Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```
 
 ### Paramètres
 

@@ -18,7 +18,9 @@ La méthode **`getMonth()`** retourne le mois de la date renseignée d'après l'
 
 ## Syntaxe
 
-    dateObj.getMonth()
+```js
+dateObj.getMonth()
+```
 
 ### Valeur de retour
 

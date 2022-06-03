@@ -11,7 +11,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/For-each-in_loops_are_deprecated
 
 ## Message
 
-    Warning: JavaScript 1.6's for-each-in loops are deprecated; consider using ES6 for-of instead
+```
+Warning: JavaScript 1.6's for-each-in loops are deprecated; consider using ES6 for-of instead
+```
 
 ## Type d'erreur
 

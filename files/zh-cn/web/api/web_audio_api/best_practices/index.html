@@ -11,21 +11,21 @@ original_slug: Web/API/Web_Audio_API/最佳实践
 ---
 <div>{{apiref("Web Audio API")}}</div>
 
-<p class="summary">在创意编程中（creative coding）没有严格的对错之分。 只要你充分考虑安全性、性能和accessibility，你可以用自己的办法来编写代码。在这篇文章中，我们会分享一些最佳实践——包含使用Web Audio API的指导、小知识和小技巧。</p>
+<p>在创意编程中（creative coding）没有严格的对错之分。 只要你充分考虑安全性、性能和 accessibility，你可以用自己的办法来编写代码。在这篇文章中，我们会分享一些最佳实践——包含使用 Web Audio API 的指导、小知识和小技巧。</p>
 
 <h2 id="加载声音声音文件">加载声音/声音文件</h2>
 
-<p>使用Web Audio API加载声音的主要方式有四种，你可能会对于应当使用哪种方式有些困惑。</p>
+<p>使用 Web Audio API 加载声音的主要方式有四种，你可能会对于应当使用哪种方式有些困惑。</p>
 
-<p>在从文件中加载声音时，你可能会采取从{{domxref("HTMLMediaElement")}} (即  {{htmlelement("audio")}} 或{{htmlelement("video")}} )中抓取的方式，或提取文件并将其解码到缓冲区。两种工作方式都是合理的，然而，在处理全长音轨时，前一种方法会更加常见。而后一种方法更常见于处理更短的（例如样本）的音轨。</p>
+<p>在从文件中加载声音时，你可能会采取从{{domxref("HTMLMediaElement")}} (即  {{htmlelement("audio")}} 或{{htmlelement("video")}} ) 中抓取的方式，或提取文件并将其解码到缓冲区。两种工作方式都是合理的，然而，在处理全长音轨时，前一种方法会更加常见。而后一种方法更常见于处理更短的（例如样本）的音轨。</p>
 
-<p>多媒体类HTML元素有开箱即用的媒体流支持。音频会在浏览器判断可以在播放完成之前加载文件的剩余部分时进行播放(when the browser determines it can load the rest of the file before playing finishes.)。你可以在<a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API tutorial</a>这篇文档中看到一个把多媒体类HTML元素与Web Audio API结合使用的例子。</p>
+<p>多媒体类 HTML 元素有开箱即用的媒体流支持。音频会在浏览器判断可以在播放完成之前加载文件的剩余部分时进行播放 (when the browser determines it can load the rest of the file before playing finishes.)。你可以在<a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API tutorial</a>这篇文档中看到一个把多媒体类 HTML 元素与 Web Audio API 结合使用的例子。</p>
 
-<p>如果你使用缓冲节点(buffer node)来加载音频，你将会有更多的控制权。虽然你需要请求这个文件，然后等待它加载完成(<a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample">我们的这篇进阶文章中的这一节</a>介绍了一个好办法)。但是，随后您可以直接访问数据，这意味着你能进行更精确，更精确的操作。</p>
+<p>如果你使用缓冲节点 (buffer node) 来加载音频，你将会有更多的控制权。虽然你需要请求这个文件，然后等待它加载完成 (<a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample">我们的这篇进阶文章中的这一节</a>介绍了一个好办法)。但是，随后您可以直接访问数据，这意味着你能进行更精确，更精确的操作。</p>
 
-<p>对于来自用户的摄像头或麦克风的音频，你可以考虑通过<a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a>和{{domxref("MediaStreamAudioSourceNode")}}接口来访问。这在与WebRTC协作以及你想录制或分析音频的场合下很管用。</p>
+<p>对于来自用户的摄像头或麦克风的音频，你可以考虑通过<a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a>和{{domxref("MediaStreamAudioSourceNode")}}接口来访问。这在与 WebRTC 协作以及你想录制或分析音频的场合下很管用。</p>
 
-<p>最后一个要介绍的方法时如何生成声音。这可以通过{{domxref("OscillatorNode")}}和创建一个缓冲区(buffer)然后向其中填充你的数据来完成。你可以在<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">这篇指导你如何创建自己的乐器的文章</a>中学习到用这两个工具创建声音的知识。</p>
+<p>最后一个要介绍的方法时如何生成声音。这可以通过{{domxref("OscillatorNode")}}和创建一个缓冲区 (buffer) 然后向其中填充你的数据来完成。你可以在<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">这篇指导你如何创建自己的乐器的文章</a>中学习到用这两个工具创建声音的知识。</p>
 
 <h2 id="Cross_browser_legacy_support">Cross browser &amp; legacy support</h2>
 
@@ -47,13 +47,13 @@ original_slug: Web/API/Web_Audio_API/最佳实践
 <p>"Create or resume context from inside a user gesture".</p>
 </blockquote>
 
-<p>这在实践中意味着什么呢？user gesture可以解释为用户触发的事件（一般来说，是<code>click</code>事件）。浏览器厂商判定不应该允许Web Audio上下文自动播放音频，而应该由用户开始播放。这是因为自动播放音频非常烦人且令人讨厌。那么，我们该如何处理(handle)呢？</p>
+<p>这在实践中意味着什么呢？user gesture 可以解释为用户触发的事件（一般来说，是<code>click</code>事件）。浏览器厂商判定不应该允许 Web Audio 上下文自动播放音频，而应该由用户开始播放。这是因为自动播放音频非常烦人且令人讨厌。那么，我们该如何处理 (handle) 呢？</p>
 
-<p>无论是offline还是online，当你创建了一个音频上下文(audio context)，它会有一个内部状态(<code>state</code>)，这个状态有<code>暂停(suspend)、播放(running)、关闭(closed)</code>三种可能。</p>
+<p>无论是 offline 还是 online，当你创建了一个音频上下文 (audio context)，它会有一个内部状态 (<code>state</code>)，这个状态有<code>暂停 (suspend)、播放 (running)、关闭 (closed)</code>三种可能。</p>
 
 <p>(When you create an audio context (either offline or online) it is created with a <code>state</code>, which can be <code>suspended</code>, <code>running</code>, or <code>closed</code>.)</p>
 
-<p>例如，在使用 {{domxref("AudioContext")}}时，如果你在<code>click</code>事件中创建了音频上下文，它的内部状态应该会被自动设置成<code>播放(running)</code>。这里有一个在<code>click</code>事件中创建音频上下文简单的例子：</p>
+<p>例如，在使用 {{domxref("AudioContext")}}时，如果你在<code>click</code>事件中创建了音频上下文，它的内部状态应该会被自动设置成<code>播放 (running)</code>。这里有一个在<code>click</code>事件中创建音频上下文简单的例子：</p>
 
 <pre class="brush: js">const button = document.querySelector('button');
 button.addEventListener('click', function() {
@@ -61,7 +61,7 @@ button.addEventListener('click', function() {
 }, false);
 </pre>
 
-<p>如果你在用户动作之外创建上下文(create the context outside of a user gesture)，它的内部状态会被设置为<code>暂停(suspend)</code>。这里我们可以同样用click事件的例子。我们会检查这个上下文的状态，并且启动它。如果它是<code>暂停(suspend)</code>的状态，使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/resume">resume()</a></code>方法来恢复。</p>
+<p>如果你在用户动作之外创建上下文 (create the context outside of a user gesture)，它的内部状态会被设置为<code>暂停 (suspend)</code>。这里我们可以同样用 click 事件的例子。我们会检查这个上下文的状态，并且启动它。如果它是<code>暂停 (suspend)</code>的状态，使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/resume">resume()</a></code>方法来恢复。</p>
 
 <pre class="brush: js">const audioCtx = new AudioContext();
 const button = document.querySelector('button');

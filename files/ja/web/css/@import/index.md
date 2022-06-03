@@ -34,7 +34,7 @@ translation_of: Web/CSS/@import
 
 ## 解説
 
-インポートされたルールは、 {{CSSxRef("@charset")}} を除く他の種類のルールよりも優先されます。これは[入れ子になるステートメント](/ja/docs/Web/CSS/Syntax#nested_statements)ではないので、 `@import` は[条件付きアットルールグループ](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中で使うことはできません。
+ルールのインポートは、 {{CSSxRef("@charset")}} を除く他のすべての種類のルールよりも先で行わなければなりません。 `@import` ルールは[入れ子になるステートメント](/ja/docs/Web/CSS/Syntax#nested_statements)ではないので、 [条件付きアットルールグループ](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中で使うことはできません。
 
 {{glossary("user agent", "ユーザーエージェント")}}は未知のメディアタイプのリソースを受け取ることを拒否することができるので、特定のメディアに依存した `@import` ルールを指定することができます。これらの条件付きインポートは、 URL の後でカンマ区切りの[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)で指定します。メディアクエリーがないと、インポートは無条件で行われます。メディアに `all` を指定しても同じ効果になります。
 

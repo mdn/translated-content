@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLElement/offsetWidth
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><code><strong>HTMLElement.offsetWidth</strong></code> 是一个只读属性，返回一个元素的布局宽度。一个典型的（译者注：各浏览器的offsetWidth可能有所不同）offsetWidth是测量包含元素的边框(border)、水平线上的内边距(padding)、竖直方向滚动条(scrollbar)（如果存在的话）、以及CSS设置的宽度(width)的值。</p>
+<p><code><strong>HTMLElement.offsetWidth</strong></code> 是一个只读属性，返回一个元素的布局宽度。一个典型的（译者注：各浏览器的 offsetWidth 可能有所不同）offsetWidth 是测量包含元素的边框 (border)、水平线上的内边距 (padding)、竖直方向滚动条 (scrollbar)（如果存在的话）、以及 CSS 设置的宽度 (width) 的值。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLElement/offsetWidth
 <p><code>intElemOffsetWidth</code> is a variable storing an integer corresponding to the <code>offsetWidth</code> pixel value of the element. <code>offsetWidth</code> 是一个只读属性。</p>
 
 <div class="note">
-<p>这个属性将会 round(四舍五入)为一个整数。如果你想要一个fractional(小数)值,请使用{{ domxref("element.getBoundingClientRect()") }}.</p>
+<p><strong>备注：</strong>这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
 <h2 id="示例">示例</h2>
@@ -48,7 +48,7 @@ translation_of: Web/API/HTMLElement/offsetWidth
 
 <h3 id="备注">备注</h3>
 
-<p><code>offsetWidth</code> 是一个 <abbr>DHTML</abbr> 对象模型中的属性，由微软 IE 浏览器首次引入。有时候它也可以称为一个元素的物理或图形尺寸，或者 border-box（译者注：即 CSS3中的 border-box 模型）的宽度。</p>
+<p><code>offsetWidth</code> 是一个 <abbr>DHTML</abbr> 对象模型中的属性，由微软 IE 浏览器首次引入。有时候它也可以称为一个元素的物理或图形尺寸，或者 border-box（译者注：即 CSS3 中的 border-box 模型）的宽度。</p>
 
 <h2 id="参见">参见</h2>
 

@@ -23,7 +23,9 @@ La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un
 
 ## Syntaxe
 
-    relativeTimeFormat.resolvedOptions()
+```js
+relativeTimeFormat.resolvedOptions()
+```
 
 ### Valeur de retour
 

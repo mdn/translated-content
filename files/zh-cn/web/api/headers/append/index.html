@@ -8,11 +8,11 @@ translation_of: Web/API/Headers/append
 ---
 <p>{{APIRef("Fetch")}}</p>
 
-<p>在一个<code>Headers</code>对象内部，{{domxref("Headers")}}接口的<strong><code>append()</code></strong>方法可以追加一个新值到已存在的headers上，或者新增一个原本不存在的header。</p>
+<p>在一个<code>Headers</code>对象内部，{{domxref("Headers")}}接口的<strong><code>append()</code></strong>方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。</p>
 
-<p>{{domxref("Headers.set")}} 和 <code>append()</code> 两者之间的不同之处在于当指定header是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而<code>append()</code>会追加到值序列的尾部。</p>
+<p>{{domxref("Headers.set")}} 和 <code>append()</code> 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而<code>append()</code>会追加到值序列的尾部。</p>
 
-<p>因为安全性原因，一些headers仅受用户代理控制。包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
+<p>因为安全性原因，一些 headers 仅受用户代理控制。包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -22,9 +22,9 @@ translation_of: Web/API/Headers/append
 
 <dl>
  <dt><em>name</em></dt>
- <dd>要追加给Headers对象的HTTP header名称.</dd>
+ <dd>要追加给 Headers 对象的 HTTP header 名称。</dd>
  <dt><em>value</em></dt>
- <dd>要追加给Headers对象的HTTP header值.</dd>
+ <dd>要追加给 Headers 对象的 HTTP header 值。</dd>
 </dl>
 
 <h3 id="返回">返回</h3>
@@ -33,17 +33,17 @@ translation_of: Web/API/Headers/append
 
 <h2 id="例程">例程</h2>
 
-<p>创建一个空的Headers对象:</p>
+<p>创建一个空的 Headers 对象：</p>
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>可以通过append()方法添加header:</p>
+<p>可以通过 append() 方法添加 header:</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 </pre>
 
-<p>如果指定header不存在, <code>append()</code>将会添加这个header并赋值 . 如果指定header已存在并允许有多个值, <code>append()</code>将会把指定值添加到值队列的末尾。</p>
+<p>如果指定 header 不存在，<code>append()</code>将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，<code>append()</code>将会把指定值添加到值队列的末尾。</p>
 
 <pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');

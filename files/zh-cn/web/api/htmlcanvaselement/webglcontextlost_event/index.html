@@ -8,7 +8,7 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 
 
 <div>
-<p>如果浏览器检测到与 {{domxref("WebGLRenderingContext")}}对象关联的图形缓冲区已丢失,则会触发<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的<code><strong>webglcontextlost</strong></code><strong> </strong>事件.</p>
+<p>如果浏览器检测到与 {{domxref("WebGLRenderingContext")}}对象关联的图形缓冲区已丢失，则会触发<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的<code><strong>webglcontextlost</strong></code><strong> </strong>事件。</p>
 </div>
 
 <table class="properties">
@@ -34,7 +34,7 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 
 <h2 id="例子">例子</h2>
 
-<p>在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下,您可以模拟 <code>webglcontextlost</code> 事件:</p>
+<p>在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下，您可以模拟 <code>webglcontextlost</code> 事件：</p>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
@@ -43,7 +43,7 @@ canvas.addEventListener('webglcontextlost', (event) =&gt; {
   console.log(event);
 });
 
-//WEBGL_lose_context是webgl是属于 WebGLAPI 的一个扩展API，它提供一组方法用来模拟一个 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLRenderingContext">W</a>ebGLRenderingContext</code> 上下文的丢失和恢复。
+//WEBGL_lose_context 是 webgl 是属于 WebGLAPI 的一个扩展 API，它提供一组方法用来模拟一个 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLRenderingContext">W</a>ebGLRenderingContext</code> 上下文的丢失和恢复。
 gl.getExtension('WEBGL_lose_context').loseContext();
 
 // "webglcontextlost" event is logged.</pre>

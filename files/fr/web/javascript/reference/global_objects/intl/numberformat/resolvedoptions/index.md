@@ -21,7 +21,9 @@ La méthode **`Intl.NumberFormat.prototype.resolvedOptions()`** renvoie un nouve
 
 ## Syntaxe
 
-    numberFormat.resolvedOptions()
+```js
+numberFormat.resolvedOptions()
+```
 
 ### Valeur de retour
 
