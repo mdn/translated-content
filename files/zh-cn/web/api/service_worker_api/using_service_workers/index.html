@@ -84,7 +84,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
   console.log(err);
 });</pre>
 
-<p>在上面第一个例子中，我们必须等待 myFunction( ) 执行完成，并返回 value 值，在此之前，后续其它的代码无法执行。在第二个例子中，myFunction( ) 返回一个 promise 对象，下面的代码可以继续执行。当 promise 成功 resolves 后，then( ) 中的函数会异步地执行。<br>
+<p>在上面第一个例子中，我们必须等待 myFunction() 执行完成，并返回 value 值，在此之前，后续其它的代码无法执行。在第二个例子中，myFunction() 返回一个 promise 对象，下面的代码可以继续执行。当 promise 成功 resolves 后，then() 中的函数会异步地执行。<br>
  <br>
  现在来举下实际的例子 — 如果我们想动态地加载图片，而且要在图片下载完成后再展示到页面上，要怎么实现呢？这是一个比较常见的场景，但是实现起来会有点麻烦。我们可以使用 .onload 事件处理程序，来实现图片的加载完成后再展示。但是如果图片的 onload 事件发生在我们监听这个事件之前呢？我们可以使用 .complete 来解决这个问题，但是仍然不够简洁，如果是多个图片该怎么处理呢？并且，这种方法仍然是同步的操作，会阻塞主线程。<br>
  <br>
