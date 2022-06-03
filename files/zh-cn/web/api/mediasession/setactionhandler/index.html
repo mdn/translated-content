@@ -5,7 +5,7 @@ translation_of: Web/API/MediaSession/setActionHandler
 ---
 <p>{{APIRef("Media Session API")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("MediaSession")}} 接口的属性 <strong><code>setActionHandler()</code></strong> 为media session动作设置一个监听器。这些动作让网页程序在用户操作设备的内置物理或屏上媒体控制项时收到消息，例如播放、停止或搜寻按钮。</p>
+<p>{{domxref("MediaSession")}} 接口的属性 <strong><code>setActionHandler()</code></strong> 为 media session 动作设置一个监听器。这些动作让网页程序在用户操作设备的内置物理或屏上媒体控制项时收到消息，例如播放、停止或搜寻按钮。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/MediaSession/setActionHandler
 
 <h2 id="示例">示例</h2>
 
-<p>下面的示例创建一个新的media session并且为它添加监听器（不做任何事情）。</p>
+<p>下面的示例创建一个新的 media session 并且为它添加监听器（不做任何事情）。</p>
 
 <pre class="brush: js">if ('mediaSession' in navigator){
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -63,7 +63,7 @@ navigator.mediaSession.setActionHandler('seekforward', evt =&gt; {
                                audio.duration);
 });</pre>
 
-<p>要移除一个监听器，将它设为null。</p>
+<p>要移除一个监听器，将它设为 null。</p>
 
 <pre class="brush: js">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
 

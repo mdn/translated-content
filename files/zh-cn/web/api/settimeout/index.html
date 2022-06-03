@@ -23,17 +23,17 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 
 <dl>
  <dt><code>function</code></dt>
- <dd>{{jsxref("function")}} 是你想要在到期时间(<code>delay</code>毫秒)之后执行的<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function">函数</a>。</dd>
+ <dd>{{jsxref("function")}} 是你想要在到期时间 (<code>delay</code>毫秒) 之后执行的<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function">函数</a>。</dd>
  <dt><code>code</code></dt>
- <dd>这是一个可选语法，你可以使用字符串而不是{{jsxref("function")}} ，在<code>delay</code>毫秒之后编译和执行字符串 (使用该语法是<strong>不推荐的,</strong> 原因和使用 {{jsxref("Global_Objects/eval", "eval()")}}一样，有安全风险)。</dd>
+ <dd>这是一个可选语法，你可以使用字符串而不是{{jsxref("function")}} ，在<code>delay</code>毫秒之后编译和执行字符串 (使用该语法是<strong>不推荐的，</strong> 原因和使用 {{jsxref("Global_Objects/eval", "eval()")}}一样，有安全风险)。</dd>
  <dt><code>delay</code> {{optional_inline}}</dt>
- <dd>延迟的毫秒数 (一秒等于1000毫秒)，函数的调用会在该延迟之后发生。如果省略该参数，delay取默认值0，意味着“马上”执行，或者尽快执行。不管是哪种情况，实际的延迟时间可能会比期待的(delay毫秒数) 值长，原因请查看<a href="#实际延时比设定值更久的原因：最小延迟时间">实际延时比设定值更久的原因：最小延迟时间</a>。</dd>
+ <dd>延迟的毫秒数 (一秒等于 1000 毫秒)，函数的调用会在该延迟之后发生。如果省略该参数，delay 取默认值 0，意味着“马上”执行，或者尽快执行。不管是哪种情况，实际的延迟时间可能会比期待的 (delay 毫秒数) 值长，原因请查看<a href="#实际延时比设定值更久的原因：最小延迟时间">实际延时比设定值更久的原因：最小延迟时间</a>。</dd>
  <dt><code>arg1, ..., argN</code> {{optional_inline}}</dt>
  <dd>附加参数，一旦定时器到期，它们会作为参数传递给{{jsxref("function")}} </dd>
 </dl>
 
 <div class="note">
-<p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数(第一种语法)。如果你想要在IE中达到同样的功能,你必须使用一种兼容代码 (查看  <a href="#兼容旧环境（polyfill）">兼容旧环境（polyfill）</a> 一段).</p>
+<p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数 (第一种语法)。如果你想要在 IE 中达到同样的功能，你必须使用一种兼容代码 (查看  <a href="#兼容旧环境（polyfill）">兼容旧环境（polyfill）</a> 一段).</p>
 </div>
 
 <h3 id="Examples" name="Examples">返回值</h3>
@@ -42,7 +42,7 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 
 <p>需要注意的是<code>setTimeout()</code>和{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}共用一个编号池，技术上，<code>clearTimeout()</code>和 {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} 可以互换。但是，为了避免混淆，不要混用取消定时函数。</p>
 
-<p>在同一个对象上（一个window或者worker），<code>setTimeout()</code>或者<code>setInterval()</code>在后续的调用不会重用同一个定时器编号。但是不同的对象使用独立的编号池。</p>
+<p>在同一个对象上（一个 window 或者 worker），<code>setTimeout()</code>或者<code>setInterval()</code>在后续的调用不会重用同一个定时器编号。但是不同的对象使用独立的编号池。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -111,11 +111,11 @@ function clearAlert() {
 
 <p>{{EmbedLiveSample('例子')}}</p>
 
-<p>也可参考 <a href="/en-US/docs/DOM/window.clearTimeout#Example" title="en-US/docs/DOM/window.clearTimeout#Example"><code>clearTimeout()</code> </a>示例.</p>
+<p>也可参考 <a href="/en-US/docs/DOM/window.clearTimeout#Example" title="en-US/docs/DOM/window.clearTimeout#Example"><code>clearTimeout()</code> </a>示例。</p>
 
 <h2 id="兼容旧环境（polyfill）">兼容旧环境（polyfill）</h2>
 
-<p>如果你需要向你的回调函数内传递一个或多个参数, 而且还需要兼容那些不支持传递额外参数(不管使用<code>setTimeout()</code> 或者 <code>setInterval()</code>)的浏览器时(比如，IE9及更早的版本), 你可以引入下面的兼容代码来支持向定时器函数传参。将以下代码添加到你代码的最上面：</p>
+<p>如果你需要向你的回调函数内传递一个或多个参数，而且还需要兼容那些不支持传递额外参数 (不管使用<code>setTimeout()</code> 或者 <code>setInterval()</code>) 的浏览器时 (比如，IE9 及更早的版本), 你可以引入下面的兼容代码来支持向定时器函数传参。将以下代码添加到你代码的最上面：</p>
 
 <pre class="brush: js notranslate">/*\
 |*|
@@ -163,9 +163,9 @@ function clearAlert() {
   }, 0, 'test');
 }())</pre>
 
-<h3 id="针对IE的解决方法">针对IE的解决方法</h3>
+<h3 id="针对IE的解决方法">针对 IE 的解决方法</h3>
 
-<p>如果你需要单独的针对IE9及之前浏览器的 hack 写法，你可以使用 JavaScript 条件注释：</p>
+<p>如果你需要单独的针对 IE9 及之前浏览器的 hack 写法，你可以使用 JavaScript 条件注释：</p>
 
 <pre class="brush: js notranslate">/*@cc_on
   // conditional IE &lt; 9 only fix
@@ -234,17 +234,17 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 
 <h2 id="关于this的问题">关于"<code>this</code>"的问题</h2>
 
-<p>当你向 <code>setTimeout()</code> (或者其他函数)传递一个函数时,该函数中的<code>this</code>指向跟你的期望可能不同，这个问题在 <a href="/en-US/docs/JavaScript/Reference/Operators/this#Method_binding" title="en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding">JavaScript reference</a> 中进行了详细解释.</p>
+<p>当你向 <code>setTimeout()</code> (或者其他函数) 传递一个函数时，该函数中的<code>this</code>指向跟你的期望可能不同，这个问题在 <a href="/en-US/docs/JavaScript/Reference/Operators/this#Method_binding" title="en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding">JavaScript reference</a> 中进行了详细解释。</p>
 
 <h3 id="解释">解释</h3>
 
-<p>由<code>setTimeout()</code>调用的代码运行在与所在函数完全分离的执行环境上。这会导致，这些代码中包含的 <code>this</code> 关键字在非严格模式会指向 <code>window</code> (或全局)对象，严格模式下为 undefined，这和所期望的<code>this</code>的值是不一样的。</p>
+<p>由<code>setTimeout()</code>调用的代码运行在与所在函数完全分离的执行环境上。这会导致，这些代码中包含的 <code>this</code> 关键字在非严格模式会指向 <code>window</code> (或全局) 对象，严格模式下为 undefined，这和所期望的<code>this</code>的值是不一样的。</p>
 
 <div class="note">
 <p>备注：即使是在严格模式下，<code>setTimeout()</code>的回调函数里面的<code>this</code>仍然默认指向<code>window</code>对象， 并不是<code>undefined</code>。</p>
 </div>
 
-<p>查看下面的例子:</p>
+<p>查看下面的例子：</p>
 
 <pre class="brush: js notranslate">let myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
@@ -259,7 +259,7 @@ myArray.myMethod(1); // prints "one"</pre>
 <pre class="brush: js notranslate">setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds</pre>
 
-<p><code>myArray.myMethod</code>函数传递给 <code>setTimeout</code>，到了定时时间，<code>this</code>没有指向，默认指向<code>window</code>对象。并且没有方法把 <code>thisArg</code> 传递给<code>setTimeout</code>，正如Array方法的<code>forEach</code>，<code>reduce</code>等。下面的例子表示使用<code>call</code>方法设置<code>this</code>也没用。</p>
+<p><code>myArray.myMethod</code>函数传递给 <code>setTimeout</code>，到了定时时间，<code>this</code>没有指向，默认指向<code>window</code>对象。并且没有方法把 <code>thisArg</code> 传递给<code>setTimeout</code>，正如 Array 方法的<code>forEach</code>，<code>reduce</code>等。下面的例子表示使用<code>call</code>方法设置<code>this</code>也没用。</p>
 
 <pre class="brush: js notranslate">setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error</pre>
@@ -296,9 +296,9 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note"><strong>备注:</strong> 这两个替换也让 IE支持了符合 HTML5 标准的定时器函数。所以也能作为一个 polyfills。查看 <a href="#Callback_arguments">Callback arguments</a> 一段.</div>
+<div class="note"><strong>备注：</strong> 这两个替换也让 IE 支持了符合 HTML5 标准的定时器函数。所以也能作为一个 polyfills。查看 <a href="#Callback_arguments">Callback arguments</a> 一段。</div>
 
-<p>新特性检测:</p>
+<p>新特性检测：</p>
 
 <pre class="brush: js notranslate">let myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
@@ -335,7 +335,7 @@ setTimeout(myBoundMethod, 1500, "1"); // prints "one" after 1.5 seconds
 
 <h3 id="传递字符串字面量">传递字符串字面量</h3>
 
-<p>向<code>setTimeout()</code>传递一个字符串而不是函数会遭受到与使用<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval">eval</a></code>一样的风险.</p>
+<p>向<code>setTimeout()</code>传递一个字符串而不是函数会遭受到与使用<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval">eval</a></code>一样的风险。</p>
 
 <pre class="brush: js notranslate">// 推荐
 window.setTimeout(function() {
@@ -347,50 +347,50 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 </pre>
 
-<p>字符串会在全局作用域内被解释执行，所以当<code>setTimeout()</code>函数执行完毕后，字符串中的变量不可用.</p>
+<p>字符串会在全局作用域内被解释执行，所以当<code>setTimeout()</code>函数执行完毕后，字符串中的变量不可用。</p>
 
 <h3 id="实际延时比设定值更久的原因：最小延迟时间">实际延时比设定值更久的原因：最小延迟时间</h3>
 
-<p>有很多因素会导致setTimeout的回调函数执行比设定的预期值更久，本节将讨论最常见的原因。</p>
+<p>有很多因素会导致 setTimeout 的回调函数执行比设定的预期值更久，本节将讨论最常见的原因。</p>
 
 <h4 id="最小延时_>4ms">最小延时 &gt;=4ms</h4>
 
-<p>在浏览器中，<code>setTimeout()/</code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} 的每调用一次定时器的最小间隔是4ms，这通常是由于函数嵌套导致（嵌套层级达到一定深度），或者是由于已经执行的setInterval的回调函数阻塞导致的。例如：</p>
+<p>在浏览器中，<code>setTimeout()/</code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} 的每调用一次定时器的最小间隔是 4ms，这通常是由于函数嵌套导致（嵌套层级达到一定深度），或者是由于已经执行的 setInterval 的回调函数阻塞导致的。例如：</p>
 
 <pre class="brush: js notranslate" id="ct-0"><code>function cb() { f(); setTimeout(cb, 0); }
 setTimeout(cb, 0);</code></pre>
 
 <pre class="brush: js notranslate"><code>setInterval(f, 0);</code></pre>
 
-<p>在Chrome 和 Firefox中， 定时器的第5次调用被阻塞了；在Safari是在第6次；Edge是在第3次。Gecko 从这个版本 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>开始对 <code>setInterval()</code> 开始采用这样的机制（<code>setTimeout()</code>已经实现，具体请参考以下内容)。</p>
+<p>在 Chrome 和 Firefox 中， 定时器的第 5 次调用被阻塞了；在 Safari 是在第 6 次；Edge 是在第 3 次。Gecko 从这个版本 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>开始对 <code>setInterval()</code> 开始采用这样的机制（<code>setTimeout()</code>已经实现，具体请参考以下内容)。</p>
 
-<p>一直以来，不同浏览器中出现这种最小延迟的情况有所不同（例如Firefox） - 从其他地方调用了setInterval( )，或者在嵌套函数调用setTimeout( ) 时（嵌套级别达到特定深度时），都会出现超时延迟。</p>
+<p>一直以来，不同浏览器中出现这种最小延迟的情况有所不同（例如 Firefox）- 从其他地方调用了 setInterval( )，或者在嵌套函数调用 setTimeout( ) 时（嵌套级别达到特定深度时），都会出现超时延迟。</p>
 
-<p>如果想在浏览器中实现0ms延时的定时器，你可以参考<a href="http://dbaron.org/log/20100309-faster-timeouts">这里</a>所说的{domxref("window.postMessage()")}}</p>
+<p>如果想在浏览器中实现 0ms 延时的定时器，你可以参考<a href="http://dbaron.org/log/20100309-faster-timeouts">这里</a>所说的{domxref("window.postMessage()")}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: 最小延时, <code>DOM_MIN_TIMEOUT_VALUE</code>, 是4ms  (但在Firefox中通常是是存储在 <code>dom.min_timeout_value </code>这个变量中), <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> 的第5层.</p>
+<p><strong>Note</strong>: 最小延时， <code>DOM_MIN_TIMEOUT_VALUE</code>, 是 4ms  (但在 Firefox 中通常是是存储在 <code>dom.min_timeout_value </code>这个变量中), <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> 的第 5 层。</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 4 ms 是在  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">HTML5 spec </a> 中精确的，并且在2010年及以后的跨浏览器中保持了一致，这个数值比 {{geckoRelease("5.0")}}规定的嵌套函数的最小延时10ms更为精确。</p>
+<p><strong>Note</strong>: 4 ms 是在  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">HTML5 spec </a> 中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 {{geckoRelease("5.0")}}规定的嵌套函数的最小延时 10ms 更为精确。</p>
 </div>
 
-<h4 id="未被激活的tabs的定时最小延迟>1000ms">未被激活的tabs的定时最小延迟&gt;=1000ms</h4>
+<h4 id="未被激活的tabs的定时最小延迟>1000ms">未被激活的 tabs 的定时最小延迟&gt;=1000ms</h4>
 
-<p>为了优化后台tab的加载损耗（以及降低耗电量），在未被激活的tab中定时器的最小延时限制为1S(1000ms)。</p>
+<p>为了优化后台 tab 的加载损耗（以及降低耗电量），在未被激活的 tab 中定时器的最小延时限制为 1S(1000ms)。</p>
 
-<p>Firefox 从version 5 (see {{bug(633421)}}开始采取这种机制，1000ms的间隔值可以通过 <code>dom.min_background_timeout_value</code> 改变。Chrome 从 version 11 (<a href="http://crbug.com/66078">crbug.com/66078</a>)开始采用。</p>
+<p>Firefox 从 version 5 (see {{bug(633421)}}开始采取这种机制，1000ms 的间隔值可以通过 <code>dom.min_background_timeout_value</code> 改变。Chrome 从 version 11 (<a href="http://crbug.com/66078">crbug.com/66078</a>) 开始采用。</p>
 
-<p>Android 版的Firefox对未被激活的后台tabs的使用了15min的最小延迟间隔时间 ，并且这些tabs也能完全不被加载。</p>
+<p>Android 版的 Firefox 对未被激活的后台 tabs 的使用了 15min 的最小延迟间隔时间 ，并且这些 tabs 也能完全不被加载。</p>
 
 <div class="note">
-<p>当 Web Audio API {{domxref("AudioContext")}} 正在被用来播放音频的时候，Firefox 50不会再限制后台tabs的加载。 后续的Firefox 51 版本修正了这个问题，即使在没有音频播放的情况下，也不再限制后台tabs的加载。这个解决了一些软件应用在后台tabs中播放基于文本的音频( note-based) 时，无法去同步音频和画面的问题。</p>
+<p>当 Web Audio API {{domxref("AudioContext")}} 正在被用来播放音频的时候，Firefox 50 不会再限制后台 tabs 的加载。 后续的 Firefox 51 版本修正了这个问题，即使在没有音频播放的情况下，也不再限制后台 tabs 的加载。这个解决了一些软件应用在后台 tabs 中播放基于文本的音频 ( note-based) 时，无法去同步音频和画面的问题。</p>
 </div>
 
 <h4 id="追踪型脚本的最小延时限制">追踪型脚本的最小延时限制</h4>
 
-<p>从Firefox 55版本开始，追踪型脚本（例如 谷歌分析，或者其他的一些被Firefox 的 <a href="https://wiki.mozilla.org/Security/Tracking_protection#Lists">TP lists</a> 识别为追踪型脚本的 外链URL脚本）是重点限制加载的对象。在当前正在使用的页面中，这个节流限制的延时依然是4ms。但是在后台tabs中，这个最小延时限制是10000ms（10s）,这个限制会在文档第一次加载后的30s后生效。</p>
+<p>从 Firefox 55 版本开始，追踪型脚本（例如 谷歌分析，或者其他的一些被 Firefox 的 <a href="https://wiki.mozilla.org/Security/Tracking_protection#Lists">TP lists</a> 识别为追踪型脚本的 外链 URL 脚本）是重点限制加载的对象。在当前正在使用的页面中，这个节流限制的延时依然是 4ms。但是在后台 tabs 中，这个最小延时限制是 10000ms（10s）,这个限制会在文档第一次加载后的 30s 后生效。</p>
 
 <p>控制这些行为的属性包含以下这些：</p>
 
@@ -410,26 +410,26 @@ setTimeout(cb, 0);</code></pre>
 setTimeout(foo, 0);
 console.log('After setTimeout');</code></pre>
 
-<p>会在控制台输出:</p>
+<p>会在控制台输出：</p>
 
 <pre class="notranslate"><code>After setTimeout
 foo has been called</code></pre>
 
-<p>出现这个结果的原因是，尽管<code>setTimeout</code> 以0ms的延迟来调用函数，但这个任务已经被放入了队列中并且等待下一次执行；并不是立即执行；队列中的等待函数被调用之前，当前代码必须全部运行完毕，因此这里运行结果并非预想的那样。</p>
+<p>出现这个结果的原因是，尽管<code>setTimeout</code> 以 0ms 的延迟来调用函数，但这个任务已经被放入了队列中并且等待下一次执行；并不是立即执行；队列中的等待函数被调用之前，当前代码必须全部运行完毕，因此这里运行结果并非预想的那样。</p>
 
-<h3 id="WebExtension_Background_pages和定时器">WebExtension Background pages和定时器</h3>
+<h3 id="WebExtension_Background_pages和定时器">WebExtension Background pages 和定时器</h3>
 
-<p>在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtension</a> 中 background pages，timers工作不正常。这主要因为background pages实际上，并不是一次性全部加载：如果浏览器没有使用它，就不加载，如果需要就恢复。这对于WebExtension是透明的，但是有些事件(包括JS的timers)不会在不加载/恢复循环中执行，所以WebExtension中建议使用alarms。更详细的细节在<a href="https://developer.chrome.com/extensions/background_migration">合并到事件驱动后台脚本</a>。</p>
+<p>在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtension</a> 中 background pages，timers 工作不正常。这主要因为 background pages 实际上，并不是一次性全部加载：如果浏览器没有使用它，就不加载，如果需要就恢复。这对于 WebExtension 是透明的，但是有些事件 (包括 JS 的 timers) 不会在不加载/恢复循环中执行，所以 WebExtension 中建议使用 alarms。更详细的细节在<a href="https://developer.chrome.com/extensions/background_migration">合并到事件驱动后台脚本</a>。</p>
 
-<p>在本文写作的时候，只有Chrome展示了如上的特性 — Firefox没有未加载/恢复循环的行为，所以timers仍然可以工作。但是，仍然建议不要在WebExtension中使用timers:</p>
+<p>在本文写作的时候，只有 Chrome 展示了如上的特性 — Firefox 没有未加载/恢复循环的行为，所以 timers 仍然可以工作。但是，仍然建议不要在 WebExtension 中使用 timers:</p>
 
-<p>1.兼容Chorme。</p>
+<p>1.兼容 Chorme。</p>
 
 <p>2.未来行为的改变会引起问题。</p>
 
 <h3 id="最大延时值">最大延时值</h3>
 
-<p>包括 IE,  Chrome, Safari, Firefox 在内的浏览器其内部以32位带符号整数存储延时。这就会导致如果一个延时(delay)大于 2147483647 毫秒 (大约24.8 天)时就会溢出，导致定时器将会被立即执行。</p>
+<p>包括 IE,  Chrome, Safari, Firefox 在内的浏览器其内部以 32 位带符号整数存储延时。这就会导致如果一个延时 (delay) 大于 2147483647 毫秒 (大约 24.8 天) 时就会溢出，导致定时器将会被立即执行。</p>
 
 <h2 id="规范">规范</h2>
 

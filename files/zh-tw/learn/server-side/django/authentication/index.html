@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到您的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面 - 分為用戶與員工兩種不同頁面。</p>
+<p>在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到您的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面 - 分為用戶與員工兩種不同頁面。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -466,7 +466,7 @@ class MyView(LoginRequiredMixin, View):
 
 <pre class="brush: python notranslate">from datetime import date</pre>
 
-<p class="brush: python">現在，在<code>BookInstance</code>類中添加以下屬性定義：</p>
+<p>現在，在<code>BookInstance</code>類中添加以下屬性定義：</p>
 
 <pre class="brush: python notranslate">@property
 def is_overdue(self):

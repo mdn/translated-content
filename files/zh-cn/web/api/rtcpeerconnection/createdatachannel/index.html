@@ -5,9 +5,9 @@ translation_of: Web/API/RTCPeerConnection/createDataChannel
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("RTCPeerConnection")}} 的 <code>createDataChannel()</code> 方法创建一个可以发送任意数据的数据通道(data channel)。常用于后台传输内容, 例如: 图像, 文件传输, 聊天文字, 游戏数据更新包, 等等。</p>
+<p>{{domxref("RTCPeerConnection")}} 的 <code>createDataChannel()</code> 方法创建一个可以发送任意数据的数据通道 (data channel)。常用于后台传输内容，例如: 图像，文件传输，聊天文字，游戏数据更新包，等等。</p>
 
-<p>基于某个连接创建第一个data channel时, 会通过发送一个{{event("negotiationneeded")}} event来开始重新谈判(renegotiation)。</p>
+<p>基于某个连接创建第一个 data channel 时，会通过发送一个{{event("negotiationneeded")}} event 来开始重新谈判 (renegotiation)。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,16 +19,16 @@ translation_of: Web/API/RTCPeerConnection/createDataChannel
  <dt><code>label</code></dt>
  <dd>一个便于理解的通道名. 该字符串不能长于 65,535 <em>字节</em>.</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
- <dd>提供data channel设置的一个 <a href="#RTCDataChannelInit_dictionary"><code>RTCDataChannelInit</code> dictionary</a> </dd>
+ <dd>提供 data channel 设置的一个 <a href="#RTCDataChannelInit_dictionary"><code>RTCDataChannelInit</code> dictionary</a> </dd>
 </dl>
 
 <h3 id="RTCDataChannelInit_dictionary">RTCDataChannelInit dictionary</h3>
 
-<p><code>RTCDataChannelInit</code> 字典提供以下字段, 用以构造可选的options参数来设置data channel以满足你的需求:</p>
+<p><code>RTCDataChannelInit</code> 字典提供以下字段，用以构造可选的 options 参数来设置 data channel 以满足你的需求：</p>
 
 <dl>
  <dt><code>ordered</code> {{optional_inline}}</dt>
- <dd>表示通过 {{domxref("RTCDataChannel")}} 的信息的到达顺序需要和发送顺序一致(<code>true</code>), 或者到达顺序不需要和发送顺序一致 (<code>false</code>). <strong>默认: <code>true</code>.</strong></dd>
+ <dd>表示通过 {{domxref("RTCDataChannel")}} 的信息的到达顺序需要和发送顺序一致 (<code>true</code>), 或者到达顺序不需要和发送顺序一致 (<code>false</code>). <strong>默认：<code>true</code>.</strong></dd>
  <dt><strong><code>maxPacketLifeTime</code> {{optional_inline}}</strong></dt>
  <dd>The maximum number of milliseconds that attempts to transfer a message may take in unreliable mode. While this value is a 16-bit unsigned number, each user agent may clamp it to whatever maximum it deems appropriate. <strong>Default: <code>null</code>.</strong></dd>
  <dt><code>maxRetransmits</code> {{optional_inline}}</dt>

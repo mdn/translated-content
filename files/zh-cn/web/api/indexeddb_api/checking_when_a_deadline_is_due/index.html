@@ -5,9 +5,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
 <div>{{DefaultAPISidebar("IndexedDB")}}</div>
 
-<div class="summary">
-<p>在本文中，我们将看一个复杂的示例，该示例涉及根据IndexedDB存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与Date对象的当前时间和日期。</p>
-</div>
+<p>在本文中，我们将看一个复杂的示例，该示例涉及根据 IndexedDB 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 Date 对象的当前时间和日期。</p>
 
 <p><img alt="A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks" src="https://mdn.mozillademos.org/files/6319/to-do-app.png" style="float: left; height: 569px; margin-bottom: 20px; margin-right: 20px; width: 320px;"></p>
 
@@ -21,17 +19,17 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 
 <h3 id="Recording_the_date_information">Recording the date information</h3>
 
-<p>为了在移动设备上提供合理的用户体验，并减少歧义，我决定创建一个HTML表单:</p>
+<p>为了在移动设备上提供合理的用户体验，并减少歧义，我决定创建一个 HTML 表单：</p>
 
 <p><img alt="The form of the to-do app, containing fields to fill in a task title, and minute, hour, day, month and year values for the deadline." src="https://mdn.mozillademos.org/files/6321/to-do-app-form2.png" style="float: left; height: 311px; margin-bottom: 20px; margin-right: 40px; width: 288px;"></p>
 
 <ul>
  <li>用于输入待办事项列表标题的文本输入。这是用户输入中最不可避免的一点。</li>
  <li>Number inputs for the hour and minute parts of the deadline. On browsers that support <code>type="number"</code>, you get a nice little up and down arrow number picker. On mobile platforms you tend to get a numeric keypad for entering data, which is helpful. On others you just get a standard text input, which is okay.</li>
- <li>{{HTMLElement("select")}} 是用于输入截止日期的日期，月份和年份的元素。因为这些值对于用户来说是最模糊的（7，星期日，太阳？04,4，4月，4月？2013，'13，13？），我认为最好的解决方案是给他们一个选择，这也为移动用户节省了恼人的打字。日期记录为月份的数字天数，月份记录为完整月份名称，年份记录为完整的四位数年份数字</li>
+ <li>{{HTMLElement("select")}} 是用于输入截止日期的日期，月份和年份的元素。因为这些值对于用户来说是最模糊的（7，星期日，太阳？04,4，4 月，4 月？2013，'13，13？），我认为最好的解决方案是给他们一个选择，这也为移动用户节省了恼人的打字。日期记录为月份的数字天数，月份记录为完整月份名称，年份记录为完整的四位数年份数字</li>
 </ul>
 
-<p>当我们点击submit按钮是, 将会运行函数 <code>addData()</code> , 示例:</p>
+<p>当我们点击 submit 按钮是，将会运行函数 <code>addData()</code> , 示例：</p>
 
 <pre class="brush: js">function addData(e) {
   e.preventDefault();
@@ -148,7 +146,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
           alert('Incorrect month entered in database.');
       }</pre>
 
-<p>我们要做的第一件事是将我们存储在数据库中的月份名称转换为JavaScript将理解的月份号码。如前所述，JavaScript Date对象将月份值创建为0到11之间的数字。   </p>
+<p>我们要做的第一件事是将我们存储在数据库中的月份名称转换为 JavaScript 将理解的月份号码。如前所述，JavaScript Date 对象将月份值创建为 0 到 11 之间的数字。   </p>
 
 <pre class="brush: js">      if(+(cursor.value.hours) == hourCheck &amp;&amp;
          +(cursor.value.minutes) == minuteCheck &amp;&amp;
@@ -199,7 +197,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
   }
 }</pre>
 
-<p>该函数的最后一行将光标移开，这导致上述截止日期检查机制为存储在IndexedDB中的下一个任务运行。</p>
+<p>该函数的最后一行将光标移开，这导致上述截止日期检查机制为存储在 IndexedDB 中的下一个任务运行。</p>
 
 <h3 id="Keep_on_checking!">Keep on checking!</h3>
 

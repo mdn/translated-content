@@ -19,7 +19,9 @@ La méthode **`delete()`** retire un élément donné de l'objet {{jsxref("WeakM
 
 ## Syntaxe
 
-    wm.delete(clé);
+```js
+wm.delete(clé);
+```
 
 ### Paramètre
 

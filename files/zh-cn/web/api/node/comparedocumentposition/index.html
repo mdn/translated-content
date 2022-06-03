@@ -34,22 +34,22 @@ translation_of: Web/API/Node/compareDocumentPosition
   <tr>
    <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
    <td>2</td>
-   <td>otherNode在node之前</td>
+   <td>otherNode 在 node 之前</td>
   </tr>
   <tr>
    <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
    <td>4</td>
-   <td>otherNode在node之后</td>
+   <td>otherNode 在 node 之后</td>
   </tr>
   <tr>
    <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
    <td>8</td>
-   <td>otherNode包含node</td>
+   <td>otherNode 包含 node</td>
   </tr>
   <tr>
    <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
    <td>16</td>
-   <td>otherNode被node包含</td>
+   <td>otherNode 被 node 包含</td>
   </tr>
   <tr>
    <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
@@ -86,7 +86,7 @@ if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOL
 </pre>
 
 <div class="note">
-<p><strong>注:</strong> 因为<code>compareDocumentPosition</code>返回的是一个位掩码,所以必须再使用<a href="/zh-CN/docs/JavaScript/Reference/Operators/Bitwise_Operators" title="/zh-CN/docs/Core_JavaScript_1.5_Guide/Operators/Bitwise_Operators">按位与运算符</a>才能得到有意义的值.</p>
+<p><strong>注：</strong> 因为<code>compareDocumentPosition</code>返回的是一个位掩码，所以必须再使用<a href="/zh-CN/docs/JavaScript/Reference/Operators/Bitwise_Operators" title="/zh-CN/docs/Core_JavaScript_1.5_Guide/Operators/Bitwise_Operators">按位与运算符</a>才能得到有意义的值。</p>
 </div>
 
 <p>注意第一条语句使用了带有参数 0 的 {{domxref("NodeList.item()")}} 方法，它和 getElementsByTagName('head')[0] 是一样的。</p>

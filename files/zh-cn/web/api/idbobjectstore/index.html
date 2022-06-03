@@ -11,7 +11,7 @@ translation_of: Web/API/IDBObjectStore
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p> <a href="https://developer.mozilla.org/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a>  的 <strong><code>IDBObjectStore </code></strong>接口表示数据库中的 一个 <a href="https://developer.mozilla.org/en/IndexedDB#gloss_object_store" title="en/IndexedDB#gloss object store">对象库(object store)</a> 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。</p>
+<p> <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a>  的 <strong><code>IDBObjectStore </code></strong>接口表示数据库中的 一个 <a href="https://developer.mozilla.org/en/IndexedDB#gloss_object_store" title="en/IndexedDB#gloss object store">对象库 (object store)</a> 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -73,7 +73,7 @@ translation_of: Web/API/IDBObjectStore
   <tr>
    <td id="attr_keyPath"><code>keyPath</code></td>
    <td><code>readonly </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code></td>
-   <td>表中的<a href="https://developer.mozilla.org/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">键路径</a>，如果该属性为null，每次操作表时必须提供一个键名。</td>
+   <td>表中的<a href="https://developer.mozilla.org/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">键路径</a>，如果该属性为 null，每次操作表时必须提供一个键名。</td>
   </tr>
   <tr>
    <td id="attr_name"><code>name</code></td>
@@ -97,11 +97,11 @@ translation_of: Web/API/IDBObjectStore
 
 <h3 id="add">add()</h3>
 
-<p>返回一个IDBRequest对象，并且在新线程中克隆一个值，该值存储在表中。</p>
+<p>返回一个 IDBRequest 对象，并且在新线程中克隆一个值，该值存储在表中。</p>
 
-<p>想知道是否成功添加数据，可以在事务的complete事件中进行监听，而不是success，因为事务在success事件之后还有可能失败。</p>
+<p>想知道是否成功添加数据，可以在事务的 complete 事件中进行监听，而不是 success，因为事务在 success 事件之后还有可能失败。</p>
 
-<p>add方法只能插入数据。如果以key参数作为某记录的关键字，并且该条记录已存在，则其所返回的请求对象会产生ConstrainError错误。</p>
+<p>add 方法只能插入数据。如果以 key 参数作为某记录的关键字，并且该条记录已存在，则其所返回的请求对象会产生 ConstrainError 错误。</p>
 
 <pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#add" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#add">add</a> (in any value, in optional any key) raises (<a href="/En/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/DOM/DOMException">DOMException</a>);</pre>
 
@@ -111,7 +111,7 @@ translation_of: Web/API/IDBObjectStore
  <dt>value</dt>
  <dd>被存储的值。</dd>
  <dt>key</dt>
- <dd>标识某条记录的键，如果不指定，它会被设为null。</dd>
+ <dd>标识某条记录的键，如果不指定，它会被设为 null。</dd>
 </dl>
 
 <h5 id="返回">返回</h5>
@@ -123,7 +123,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h5 id="异常">异常</h5>
 
-<p>该方法会抛出DOMError类型的DOMException异常。</p>
+<p>该方法会抛出 DOMError 类型的 DOMException 异常。</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -167,7 +167,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h3 id="clear">clear()</h3>
 
-<p>创建并立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象, 并且在一个单独的线程中清除这个对象存储. 清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。</p>
+<p>创建并立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并且在一个单独的线程中清除这个对象存储。清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。</p>
 
 <pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#clear" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#clear">clear</a> () raises (<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
@@ -175,12 +175,12 @@ translation_of: Web/API/IDBObjectStore
 
 <dl>
  <dt><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a></dt>
- <dd>返回一个request对象，在其上触发与操作相关的事件。</dd>
+ <dd>返回一个 request 对象，在其上触发与操作相关的事件。</dd>
 </dl>
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>此方法可能会引发domException，其中domError的类型如下：</p>
+<p>此方法可能会引发 domException，其中 domError 的类型如下：</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -203,7 +203,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h3 id="count">count()</h3>
 
-<p>立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并在新线程中计算符合条件的对象的数量，该方法的参数可以是键，或键范围（key range）。在 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象中，source属性就是IDBObjectStore对象，result属性持有计算后的数量值。如果参数非法将会抛出异常。</p>
+<p>立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并在新线程中计算符合条件的对象的数量，该方法的参数可以是键，或键范围（key range）。在 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象中，source 属性就是 IDBObjectStore 对象，result 属性持有计算后的数量值。如果参数非法将会抛出异常。</p>
 
 <pre><code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="/en/IndexedDB/IDBObjectStore#count" title="en/IndexedDB/IDBObjectStore#count">count</a> (in optional any key) raises</code><code style="font-size: 14px; color: rgb(51, 51, 51);">(<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></pre>
 
@@ -240,12 +240,12 @@ translation_of: Web/API/IDBObjectStore
   <tr>
    <td>DataError</td>
    <td>
-    <p>key参数非法</p>
+    <p>key 参数非法</p>
    </td>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">InvalidStateError</code></td>
-   <td>IDBObjectStore对象已被删除</td>
+   <td>IDBObjectStore 对象已被删除</td>
   </tr>
  </tbody>
 </table>
@@ -255,7 +255,7 @@ translation_of: Web/API/IDBObjectStore
 <dl>
 </dl>
 
-<p>创建并返回新的IDBIndex对象，该方法只能从versionchange事务模式的回调方法中被调用。</p>
+<p>创建并返回新的 IDBIndex 对象，该方法只能从 versionchange 事务模式的回调方法中被调用。</p>
 
 <pre><code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en/IndexedDB/IDBIndex" title="en/IndexedDB/IDBIndex">IDBIndex</a> <a href="#createIndex" title="#createIndex">createIndex</a>  (in <a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a> name, in </code><code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code style="font-size: 14px; color: rgb(51, 51, 51);"> keyPath, in optional boolean unique) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></pre>
 

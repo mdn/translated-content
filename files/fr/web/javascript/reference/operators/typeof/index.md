@@ -189,6 +189,7 @@ Bien que la spécification requière que les objets exotiques aient des types di
 ## Spécifications
 
 {{Specifications}}
+
 ## Compatibilité des navigateurs
 
 {{Compat}}

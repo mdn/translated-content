@@ -21,7 +21,9 @@ La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel ob
 
 ## Syntaxe
 
-    collator.resolvedOptions()
+```js
+collator.resolvedOptions()
+```
 
 ### Valeur de retour
 

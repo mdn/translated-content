@@ -18,7 +18,9 @@ La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/f
 
 ## Syntaxe
 
-    Reflect.has(cible, cléPropriété)
+```js
+Reflect.has(cible, cléPropriété)
+```
 
 ### Paramètres
 

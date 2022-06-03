@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
 <p>HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 <code><strong>form</strong></code><strong><code>-action</code></strong> 指令能够限定当前页面中表单的提交地址。</p>
 
 <div class="warning">
-<p>在表单提交之后， <code>form-action</code> 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63会阻止重定向，而Firefox 57则不会）。</p>
+<p>在表单提交之后， <code>form-action</code> 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63 会阻止重定向，而 Firefox 57 则不会）。</p>
 </div>
 
 <table class="properties">
@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
   </tr>
   <tr>
    <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>No. 未设定时允许任何值.</td>
+   <td>No. 未设定时允许任何值。</td>
   </tr>
  </tbody>
 </table>
@@ -38,23 +38,23 @@ Content-Security-Policy: form-action &lt;source&gt; &lt;source&gt;;
 
 <h2 id="示例">示例</h2>
 
-<h3 id="meta标签配置">meta标签配置</h3>
+<h3 id="meta标签配置">meta 标签配置</h3>
 
 <pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="form-action 'none'"&gt;</pre>
 
-<h3 id="Apache服务器配置">Apache服务器配置</h3>
+<h3 id="Apache服务器配置">Apache 服务器配置</h3>
 
 <pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
 Header set Content-Security-Policy "form-action 'none';
 &lt;/IfModule&gt;</pre>
 
-<h3 id="Nginx配置">Nginx配置</h3>
+<h3 id="Nginx配置">Nginx 配置</h3>
 
 <pre class="brush: bash">add_header Content-Security-Policy "form-action 'none';"</pre>
 
 <h3 id="反例">反例</h3>
 
-<p>将 {{HTMLElement("form")}} 元素的action设置为内联 JavaScript 会违反CSP规则。</p>
+<p>将 {{HTMLElement("form")}} 元素的 action 设置为内联 JavaScript 会违反 CSP 规则。</p>
 
 <pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="form-action 'none'"&gt;
 

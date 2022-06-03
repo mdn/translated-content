@@ -32,7 +32,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 
 <h3 id="别名">别名</h3>
 
-<p>为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为<code>trimEnd</code>。 但是，出于Web兼容性原因，<code>trimRight</code>仍然是<code>trimEnd</code>的别名。 在某些引擎中，这意味着：</p>
+<p>为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为<code>trimEnd</code>。 但是，出于 Web 兼容性原因，<code>trimRight</code>仍然是<code>trimEnd</code>的别名。 在某些引擎中，这意味着：</p>
 
 <pre class="brush: js"><code>String.prototype.trimRight.name === "trimEnd";</code>
 </pre>
@@ -47,7 +47,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 
 alert(str.length); // 8
 
-str = str.trimRight();  // 或写成str = str.trimEnd();
+str = str.trimRight();  // 或写成 str = str.trimEnd();
 console.log(str.length); // 6
 console.log(str);       // '   foo'
 </pre>
