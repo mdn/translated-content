@@ -21,7 +21,7 @@ ARIA 属性用于修改可访问性树中定义的元素的状态和属性。
 
 ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
-1. ### 小部件（weiget）特性
+1. ### 小部件（widget）特性
 
    - [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
    - [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
