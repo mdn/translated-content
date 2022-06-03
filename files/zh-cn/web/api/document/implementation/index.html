@@ -25,11 +25,11 @@ alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
 // alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 </pre>
 
-<p>可以在<a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2" style="line-height: 1.5;">一致性章节</a>中查看可用的一系列DOM2级模型名称（例如：Core, HTML, XML等等）。</p>
+<p>可以在<a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2">一致性章节</a>中查看可用的一系列 DOM2 级模型名称（例如：Core, HTML, XML 等等）。</p>
 
 <h2 id="说明">说明</h2>
 
-<p>W3C的DOM1级建议值规定了一种检测浏览器对某个DOM模型是否支持的方法——<code>hasFeature方法</code>（请参考上边的例子以及这篇文章 <a href="http://www.w3.org/2003/02/06-dom-support.html">What does your user agent claim to support?</a>）。如果它可用的话，那么<code>DOMImplementation接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，</code><code>DOMImplementation接口包含一个</code><code>createDocumentType方法，它可以为实例管理的文档创建对应的DTD文档定义。</code></p>
+<p>W3C 的 DOM1 级建议值规定了一种检测浏览器对某个DOM模型是否支持的方法——<code>hasFeature</code> 方法（请参考上边的例子以及这篇文章 <a href="http://www.w3.org/2003/02/06-dom-support.html">What does your user agent claim to support?</a>）。如果它可用的话，那么 <code>DOMImplementation</code> 接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，<code>DOMImplementation</code> 接口包含一个 <code>createDocumentType</code> 方法，它可以为实例管理的文档创建对应的 DTD 文档定义。</p>
 
 <h2 id="方法">方法</h2>
 <table>
@@ -78,5 +78,5 @@ alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
 <h2 id="Gecko引擎的特别说明">Gecko引擎的特别说明</h2>
 
 <ul>
- <li>从Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回true。</li>
+ <li>从 Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。</li>
 </ul>

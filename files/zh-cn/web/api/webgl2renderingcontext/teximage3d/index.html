@@ -5,7 +5,7 @@ translation_of: Web/API/WebGL2RenderingContext/texImage3D
 ---
 <div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.texImage3D()</code></strong>方法指定一个3d（three-dimensional）纹理贴图。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.texImage3D()</code></strong>方法指定一个 3d（three-dimensional）纹理贴图。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -26,20 +26,20 @@ void <var>gl</var>.texImage3D(target, level, internalformat, width, height, dept
  <dt><code>target</code></dt>
  <dd> {{domxref("GLenum")}}指定绑定纹理图像类型。可能值：
  <ul>
-  <li><code>gl.TEXTURE_3D</code>: 一个3D贴图</li>
-  <li><code>gl.TEXTURE_2D_ARRAY</code>: 一个2D数组贴图</li>
+  <li><code>gl.TEXTURE_3D</code>: 一个 3D 贴图</li>
+  <li><code>gl.TEXTURE_2D_ARRAY</code>: 一个 2D 数组贴图</li>
  </ul>
  </dd>
  <dt><code>level</code></dt>
- <dd>{{domxref("GLint")}}指定细节等级。level0是基础图片等级， n是第n个mipmap纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl的Mipmapping技术要求顶层图像的行和列的维数均为2的幂）</dd>
+ <dd>{{domxref("GLint")}}指定细节等级。level0 是基础图片等级， n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）</dd>
  <dt><code>internalformat</code></dt>
  <dd>{{domxref("GLint")}}指定贴图的颜色组成，可能值为：
  <ul>
-  <li><code>gl.ALPHA</code>: 忽略红色，绿色，蓝色分量值只读取alpha信息。</li>
-  <li><code>gl.RGB</code>: 忽略alpha信息，读取红绿蓝分量</li>
-  <li><code>gl.RGBA</code>: 从颜色缓冲（colorBuffer）读取红色，绿色，蓝色和alpha分量</li>
-  <li><code>gl.LUMINANCE</code>:每个颜色组件都是亮度组件，alpha值为1.0.</li>
-  <li><code>gl.LUMINANCE_ALPHA</code>:每个组件都是亮度/alpha 组件（component） .</li>
+  <li><code>gl.ALPHA</code>: 忽略红色，绿色，蓝色分量值只读取 alpha 信息。</li>
+  <li><code>gl.RGB</code>: 忽略 alpha 信息，读取红绿蓝分量</li>
+  <li><code>gl.RGBA</code>: 从颜色缓冲（colorBuffer）读取红色，绿色，蓝色和 alpha 分量</li>
+  <li><code>gl.LUMINANCE</code>:每个颜色组件都是亮度组件，alpha 值为 1.0.</li>
+  <li><code>gl.LUMINANCE_ALPHA</code>:每个组件都是亮度/alpha 组件（component）.</li>
   <li><code>gl.R8</code></li>
   <li><code>gl.R16F</code></li>
   <li><code>gl.</code>R32F</li>
@@ -72,17 +72,17 @@ void <var>gl</var>.texImage3D(target, level, internalformat, width, height, dept
  <dt><code>depth</code></dt>
  <dd>{{domxref("GLsizei")}} 指定纹理的深度信息</dd>
  <dt><code>border</code></dt>
- <dd>{{domxref("GLint")}}指定边框宽度，必须为0</dd>
+ <dd>{{domxref("GLint")}}指定边框宽度，必须为 0</dd>
  <dt><code>format</code></dt>
  <dd>{{domxref("GLenum")}}制定纹素的版本。正确的 <code>内部格式</code> 组合被列举在 <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE">这个列表</a>。</dd>
  <dt><code>type</code></dt>
  <dd>A {{domxref("GLenum")}}指定纹素的数据类型，可能值：
  <ul>
-  <li><code>gl.UNSIGNED_BYTE</code>: 每个<code>gl.RGBA</code>对应8个字节</li>
+  <li><code>gl.UNSIGNED_BYTE</code>: 每个<code>gl.RGBA</code>对应 8 个字节</li>
   <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 红色占五个字节，绿色占六个字节，蓝色占五个字节</li>
   <li><code>gl.UNSIGNED_SHORT_4_4_4_4</code>: 红色占四个字节，绿色占 四 个字节，蓝色占 四 个字节</li>
-  <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code>:红色占五个字节，绿色占五个字节，蓝色占五个字节，alpha占一个字节</li>
-  <li><code>gl.BYTE </code>（这些属性的信息原文中均未提到，但是在webgl1中出现过，可以适当参考webgl1文献）</li>
+  <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code>:红色占五个字节，绿色占五个字节，蓝色占五个字节，alpha 占一个字节</li>
+  <li><code>gl.BYTE </code>（这些属性的信息原文中均未提到，但是在 webgl1 中出现过，可以适当参考 webgl1 文献）</li>
   <li><code>gl.UNSIGNED_SHORT</code></li>
   <li><code>gl.SHORT</code></li>
   <li><code>gl.UNSIGNED_INT</code></li>

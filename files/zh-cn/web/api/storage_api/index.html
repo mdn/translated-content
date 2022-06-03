@@ -32,7 +32,7 @@ translation_of: Web/API/Storage_API
 
 <h2 id="站点存储单元">站点存储单元</h2>
 
-<p>由存储标准描述并使用存储API进行交互的站点存储系统，由每个 {{Glossary("origin")}} 的单个<strong>站点存储单元</strong>（<strong>site storage unit</strong>）组成。实际上，每个Web站点或Web应用程序都有自己的存储单元，用于存储数据。下图显示了一个站点存储池，其中包含三个存储单元，显示了存储单元如何可以在其中存储不同的数据类型，并且可能具有不同的配额（最大存储限制）。</p>
+<p>由存储标准描述并使用存储 API 进行交互的站点存储系统，由每个 {{Glossary("origin")}} 的单个<strong>站点存储单元</strong>（<strong>site storage unit</strong>）组成。实际上，每个 Web 站点或 Web 应用程序都有自己的存储单元，用于存储数据。下图显示了一个站点存储池，其中包含三个存储单元，显示了存储单元如何可以在其中存储不同的数据类型，并且可能具有不同的配额（最大存储限制）。</p>
 
 <p><img alt="A diagram showing how the site storage pool consists of multiple storage units that contain data from various APIs as well as possible unused space left before the quota is reached." src="https://mdn.mozillademos.org/files/14379/StorageUnits.png" style="height: 412px; width: 600px;"></p>
 
@@ -59,13 +59,13 @@ translation_of: Web/API/Storage_API
 
 <h2 id="数据持久性与清理">数据持久性与清理</h2>
 
-<p>如果站点或应用程序具有 “<strong>永久存储（<code>persistent-storage</code>）</strong>” 功能权限，则可以使用 {{domxref("StorageManager.persist()")}} 方法来请求将其 box 设为持久的。由于使用特性或其他度量，用户代理还可以决定使站点的存储单元持久化。“持久存储”功能的与权限相关的标志、算法和类型都设置为权限的标准默认值，只是整个源位置的权限状态必须相同，并且如果未“授予”权限状态（无论出于何种原因，访问持久性存储功能被拒绝），源站点存储单元的box模式总是“尽力”。</p>
+<p>如果站点或应用程序具有 “<strong>永久存储（<code>persistent-storage</code>）</strong>” 功能权限，则可以使用 {{domxref("StorageManager.persist()")}} 方法来请求将其 box 设为持久的。由于使用特性或其他度量，用户代理还可以决定使站点的存储单元持久化。“持久存储”功能的与权限相关的标志、算法和类型都设置为权限的标准默认值，只是整个源位置的权限状态必须相同，并且如果未“授予”权限状态（无论出于何种原因，访问持久性存储功能被拒绝），源站点存储单元的 box 模式总是“尽力”。</p>
 
 <div class="note">
 <p><strong>注意</strong>：请参考 <a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">使用 Permissions API</a> 以了解更多关于申请与管理权限的信息。</p>
 </div>
 
-<p>当清除站点存储单元时，源站的框被视为单个实体；如果用户代理需要清除它并且用户批准，则清除整个数据存储，而不是提供某种仅从单个api清除数据的方法。</p>
+<p>当清除站点存储单元时，源站的框被视为单个实体；如果用户代理需要清除它并且用户批准，则清除整个数据存储，而不是提供某种仅从单个 api 清除数据的方法。</p>
 
 <p><br>
  如果一个框被标记为 “持久（<code>persistent</code>）” ，那么如果没有数据的源代码本身或用户明确地这样做，用户代理将不会清除内容。这包括用户选择“清除缓存”或“清除最近的历史记录”选项等场景。将特别要求用户具有删除永久性站点存储单元的权限。</p>

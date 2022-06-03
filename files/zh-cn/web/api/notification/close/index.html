@@ -23,7 +23,7 @@ translation_of: Web/API/Notification/close
 
 <h2 id="Examples">Examples</h2>
 
-<p>以下是 <a href="https://github.com/mdn/emogotchi">Emogotchi 示例</a>（<a href="http://mdn.github.io/emogotchi/">在线演示</a>）中的一段代码 ，定义了一个简单的函数spawnNotification，当spawnNotification被调用时会创建一个对象并生成一个新的Notification。在函数的最后，它在{{domxref("WindowTimers.setTimeout","setTimeout()")}} 中调用了close()函数来实现在4s后关闭Notification（有些浏览器会自动关闭弹出的Notification，但有些不是，例如Chrome,Opera）。还要注意bind()的使用，来确保close()方法绑定到Notification的实例上。</p>
+<p>以下是 <a href="https://github.com/mdn/emogotchi">Emogotchi 示例</a>（<a href="http://mdn.github.io/emogotchi/">在线演示</a>）中的一段代码 ，定义了一个简单的函数 spawnNotification，当 spawnNotification 被调用时会创建一个对象并生成一个新的 Notification。在函数的最后，它在{{domxref("WindowTimers.setTimeout","setTimeout()")}} 中调用了 close() 函数来实现在 4s 后关闭 Notification（有些浏览器会自动关闭弹出的 Notification，但有些不是，例如 Chrome,Opera）。还要注意 bind() 的使用，来确保 close() 方法绑定到 Notification 的实例上。</p>
 
 <pre class="brush: js">function spawnNotification(theBody,theIcon,theTitle) {
   var options = {

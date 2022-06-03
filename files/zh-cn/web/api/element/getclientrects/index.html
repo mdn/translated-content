@@ -18,19 +18,19 @@ translation_of: Web/API/Element/getClientRects
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回值是ClientRect对象集合，该对象是与该元素相关的CSS边框。每个ClientRect对象包含一组描述该边框的只读属性——left、top、right和bottom，单位为像素，这些属性值是相对于视口的top-left的。即使当表格的标题在表格的边框外面，该标题仍会被计算在内。</p>
+<p>返回值是 ClientRect 对象集合，该对象是与该元素相关的 CSS 边框。每个 ClientRect 对象包含一组描述该边框的只读属性——left、top、right 和 bottom，单位为像素，这些属性值是相对于视口的 top-left 的。即使当表格的标题在表格的边框外面，该标题仍会被计算在内。</p>
 
-<p>起初，微软打算让这个方法给文本的每一行都返回一个TextRectangle，但是，CSSOM工作草案规定它应该给每个边框返回一个ClientRect。因此，对于行内元素这两个定义是相同的，但是对于块级元素，Mozilla只会返回一个矩形。（译者注：对于行内元素，元素内部的每一行都会有一个边框；对于块级元素，如果里面没有其他元素，一整块元素只有一个边框）。</p>
+<p>起初，微软打算让这个方法给文本的每一行都返回一个 TextRectangle，但是，CSSOM 工作草案规定它应该给每个边框返回一个 ClientRect。因此，对于行内元素这两个定义是相同的，但是对于块级元素，Mozilla 只会返回一个矩形。（译者注：对于行内元素，元素内部的每一行都会有一个边框；对于块级元素，如果里面没有其他元素，一整块元素只有一个边框）。</p>
 
-<p>{{ fx_minversion_note(3.5, "FireFox 3.5给TextRectangle对象添加了width和height属性") }}</p>
+<p>{{ fx_minversion_note(3.5, "FireFox 3.5 给 TextRectangle 对象添加了 width 和 height 属性") }}</p>
 
 <p>当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作。</p>
 
 <p>返回的矩形不包括任何可能超出元素范围的子元素的边界。</p>
 
-<p>对于HTML AREA元素、自身不做任何渲染的SVG元素、display：none元素和不直接渲染出来的任何元素，都将会返回一个空列表。</p>
+<p>对于 HTML AREA 元素、自身不做任何渲染的 SVG 元素、display：none 元素和不直接渲染出来的任何元素，都将会返回一个空列表。</p>
 
-<p>具有空边框的CSS盒子也会返回矩形，此时left、top、right和bottom坐标仍旧有意义。</p>
+<p>具有空边框的 CSS 盒子也会返回矩形，此时 left、top、right 和 bottom 坐标仍旧有意义。</p>
 
 <p>小数级别的像素偏移是有可能的。</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/Element/getClientRects
 
 <h3 id="HTML">HTML</h3>
 
-<p>.举例1：HTML创建了三段带有 <code>&lt;span&gt;</code> 的段落 <code>&lt;p&gt;</code> 并放入 <code>&lt;div&gt;</code> 中。在第二个段落 <code>&lt;p&gt;</code> 上绘制了客户矩形。在第三个段落 <code>&lt;p&gt;</code> 的 <code>&lt;span&gt;</code> 元素上绘制了客户矩形。</p>
+<p>.举例 1：HTML 创建了三段带有 <code>&lt;span&gt;</code> 的段落 <code>&lt;p&gt;</code> 并放入 <code>&lt;div&gt;</code> 中。在第二个段落 <code>&lt;p&gt;</code> 上绘制了客户矩形。在第三个段落 <code>&lt;p&gt;</code> 的 <code>&lt;span&gt;</code> 元素上绘制了客户矩形。</p>
 
 <pre class="brush: html">&lt;h3&gt;A paragraph with a span inside&lt;/h3&gt;
 &lt;p&gt;Both the span and the paragraph have a border set. The
@@ -68,7 +68,7 @@ translation_of: Web/API/Element/getClientRects
   &lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>Example 2: 举例2：HTML 创建了3个有序列表。在第二个列表的 ol 上绘制了客户矩形，在第三个列表的 li 上绘制了客户矩形。</p>
+<p>Example 2: 举例 2：HTML 创建了 3 个有序列表。在第二个列表的 ol 上绘制了客户矩形，在第三个列表的 li 上绘制了客户矩形。</p>
 
 <pre class="brush: html" style="font-size: 14px;">&lt;h3&gt;A list&lt;/h3&gt;
 &lt;p&gt;Note that the border box doesn't include the number, so neither do the client rects.&lt;/p&gt;
@@ -97,7 +97,7 @@ translation_of: Web/API/Element/getClientRects
  &lt;/ol&gt;
 &lt;/div&gt;</pre>
 
-<p>举例3：HTML 创建了两个带有标题的表。第二个表上绘制了客户矩形。</p>
+<p>举例 3：HTML 创建了两个带有标题的表。第二个表上绘制了客户矩形。</p>
 
 <pre class="brush: html" style="font-size: 14px;">&lt;h3&gt;A table with a caption&lt;/h3&gt;
 &lt;p&gt;Although the table's border box doesn't include the caption, the client rects do include the caption.&lt;/p&gt;
@@ -148,11 +148,11 @@ span, li, th, td {
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>JavaScript 代码为所有带有“widthClientRectsOverlay”样式的元素绘制了ClientRects。</p>
+<p>JavaScript 代码为所有带有“widthClientRectsOverlay”样式的元素绘制了 ClientRects。</p>
 
 <pre class="brush: js">function addClientRectsOverlay(elt) {
     // 为了使边框宽度与矩形宽度一致，这里给每个客户矩形上方绝对定位一个 div。
-    // 注意:如果用户改变大小或者缩放，绘图将会重绘。
+    // 注意：如果用户改变大小或者缩放，绘图将会重绘。
 
     var rects = elt.getClientRects();
     for (var i = 0; i != rects.length; i++) {

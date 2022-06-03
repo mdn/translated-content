@@ -14,7 +14,7 @@ browser-compat: api.Element.prepend
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>Element.prepend</code></strong> 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是HTML代码）。</p>
+<p><strong><code>Element.prepend</code></strong> 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是 HTML 代码）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -69,7 +69,7 @@ console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pr
 
 <h3 id="Element.prepend_is_unscopable"><code>Element.prepend()</code> is unscopable</h3>
 
-<p><code>prepend()不能在with语句内使用，详情参考</code>{{jsxref("Symbol.unscopables")}}。</p>
+<p><code>prepend() 不能在 with 语句内使用，详情参考</code>{{jsxref("Symbol.unscopables")}}。</p>
 
 <pre class="brush: js">var parent = document.createElement("div");
 
@@ -80,7 +80,7 @@ with(parent) {
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>使用下面的代码在IE9或更高版本中模拟<code>prepend()</code>方法：</p>
+<p>使用下面的代码在 IE9 或更高版本中模拟<code>prepend()</code>方法：</p>
 
 <pre class="brush: js">// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
 (function (arr) {
