@@ -5,7 +5,7 @@ translation_of: Web/API/Element/wheel_event
 ---
 <p>当滚动鼠标滚轮或操作其它类似输入设备时会触发<strong>滚轮事件</strong>。滚轮事件替换了已被弃用的非标准{{domxref("mousewheel")}}事件。</p>
 
-<div class="note"><strong>注意事项：</strong> 请勿想当然依据滚轮方向（即该事件的各delta属性值）来推断文档内容的滚动方向，因标准未定义滚轮事件具体会引发什么样的行为，引发的行为实际上是各浏览器自行定义的。即便滚轮事件引发了文档内容的滚动行为，也不表示滚轮方向和文档内容的滚动方向一定相同。因而通过该滚轮事件获知文档内容滚动方向的方法并不可靠。要获取文档内容的滚动方向，可在文档内容滚动事件（{{event("scroll")}}）中监视{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}二值变化情况，即可推断出滚动方向了。</div>
+<div class="note"><strong>注意事项：</strong> 请勿想当然依据滚轮方向（即该事件的各 delta 属性值）来推断文档内容的滚动方向，因标准未定义滚轮事件具体会引发什么样的行为，引发的行为实际上是各浏览器自行定义的。即便滚轮事件引发了文档内容的滚动行为，也不表示滚轮方向和文档内容的滚动方向一定相同。因而通过该滚轮事件获知文档内容滚动方向的方法并不可靠。要获取文档内容的滚动方向，可在文档内容滚动事件（{{event("scroll")}}）中监视{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}二值变化情况，即可推断出滚动方向了。</div>
 
 <h2 id="概要">概要</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Element/wheel_event
  <dt style="float: left; text-align: right; width: 120px;">目标元素</dt>
  <dd style="margin: 0 0 0 120px;">defaultView, Document, Element</dd>
  <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">滚动, 历史记录切换, 或者放大／缩小.</dd>
+ <dd style="margin: 0 0 0 120px;">滚动，历史记录切换，或者放大／缩小。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -105,8 +105,8 @@ translation_of: Web/API/Element/wheel_event
 
     // detect available wheel event
     support = "onwheel" in document.createElement("div") ? "wheel" : // 各个厂商的高版本浏览器都支持"wheel"
-              document.onmousewheel !== undefined ? "mousewheel" : // Webkit 和 IE一定支持"mousewheel"
-              "DOMMouseScroll"; // 低版本firefox
+              document.onmousewheel !== undefined ? "mousewheel" : // Webkit 和 IE 一定支持"mousewheel"
+              "DOMMouseScroll"; // 低版本 firefox
 
     window.addWheelListener = function( elem, callback, useCapture ) {
         _addWheelListener( elem, support, callback, useCapture );
@@ -158,15 +158,15 @@ translation_of: Web/API/Element/wheel_event
 
 <h3 id="滚轮事件和其它的鼠标滚动事件">滚轮事件和其它的鼠标滚动事件</h3>
 
-<p>如果一个用户真实操作触发的滚轮事件没有被处理, 这会触发一个 <code>DOMMouseScroll</code> 事件和一个 <code>MozMousePixelScroll</code> 事件以向下兼容. 它们的属性值由滚轮事件delta值和最近的ancestor clipped元素计算出。(i.e., <a href="/en-US/CSS/overflow" title="en-US/CSS/overflow"><code>overflow</code></a> 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止, 将什么都不会发生。</p>
+<p>如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 <code>DOMMouseScroll</code> 事件和一个 <code>MozMousePixelScroll</code> 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., <a href="/en-US/CSS/overflow" title="en-US/CSS/overflow"><code>overflow</code></a> 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。</p>
 
-<p>以下为事件顺序:</p>
+<p>以下为事件顺序：</p>
 
 <ol>
- <li>滚轮事件处于默认事件组 (web应用和浏览器插件都可以处理这个组的事件)</li>
- <li>当连续滚轮事件 deltaY 的值累计大于1或小于－1时，<code>竖直方向的 DOMMouseScroll</code> 事件既属于默认事件组也属于系统事件组</li>
+ <li>滚轮事件处于默认事件组 (web 应用和浏览器插件都可以处理这个组的事件)</li>
+ <li>当连续滚轮事件 deltaY 的值累计大于 1 或小于－1 时，<code>竖直方向的 DOMMouseScroll</code> 事件既属于默认事件组也属于系统事件组</li>
  <li>当最近的滚轮事件的 deltaY 值非零时，两个事件组都包含竖直方向的 MozMousePixelScroll 事件</li>
- <li>当连续滚轮事件 deltaX 的值累计大于1或小于－1时，两个事件组都包含水平<code>方向的 DOMMouseScroll</code> 事件</li>
+ <li>当连续滚轮事件 deltaX 的值累计大于 1 或小于－1 时，两个事件组都包含水平<code>方向的 DOMMouseScroll</code> 事件</li>
  <li>当最近的滚轮事件的 deltaX 值非零时，两个事件组都包含水平方向的 MozMousePixelScroll 事件</li>
  <li>一个滚轮事件处于系统事件组 (只有浏览器插件可以处理这个组的事件)</li>
 </ol>
@@ -227,17 +227,17 @@ translation_of: Web/API/Element/wheel_event
  </tbody>
 </table>
 
-<p>如果一个浏览器插件需要知道剩余事件是否被web内容所处理，它可以使用第6个滚轮事件判断，详细内容请查阅系统事件组 <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService" title="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService"><code>nsIEventListenerService</code></a> 的文档。</p>
+<p>如果一个浏览器插件需要知道剩余事件是否被 web 内容所处理，它可以使用第 6 个滚轮事件判断，详细内容请查阅系统事件组 <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService" title="/en-US/docs/XPCOM_Interface_Reference/nsIEventListenerService"><code>nsIEventListenerService</code></a> 的文档。</p>
 
-<p>通过设置用户偏好可以修改delta值和默认行为 (<a href="https://wiki.mozilla.org/Gecko:Mouse_Wheel_Scrolling#Preferences_for_customizing_delta_values_and_default_action" title="/en-US/docs/HTML/Element/details">details</a>)， 因此开发者不应该期望在处理这个事件后发生特殊的行为。</p>
+<p>通过设置用户偏好可以修改 delta 值和默认行为 (<a href="https://wiki.mozilla.org/Gecko:Mouse_Wheel_Scrolling#Preferences_for_customizing_delta_values_and_default_action" title="/en-US/docs/HTML/Element/details">details</a>)， 因此开发者不应该期望在处理这个事件后发生特殊的行为。</p>
 
 <h3 id="delta_值">delta 值</h3>
 
-<p>delta 值并不代表默认情况下的实际滚动值，如果用户在滚动滚轮时按住其他键，可能会产生其他行为，比如在浏览记录中前进／回退，或者放大／缩小网页内容。 此外，滚动过程中被滚动的元素不一定是目标元素，滚轮事件的目标元素是由事件触发时光标所在位置计算出的。 That event may not only not be the one actually being scrolled, 甚至都不可滚动。</p>
+<p>delta 值并不代表默认情况下的实际滚动值，如果用户在滚动滚轮时按住其他键，可能会产生其他行为，比如在浏览记录中前进／回退，或者放大／缩小网页内容。 此外，滚动过程中被滚动的元素不一定是目标元素，滚轮事件的目标元素是由事件触发时光标所在位置计算出的。 That event may not only not be the one actually being scrolled，甚至都不可滚动。</p>
 
 <h3 id="deltaMode_值">deltaMode 值</h3>
 
-<p>在 Windows 下, 以下三个原生事件造成了 DOM 滚轮事件。</p>
+<p>在 Windows 下，以下三个原生事件造成了 DOM 滚轮事件。</p>
 
 <dl>
  <dt>WM_MOUSEWHEEL (竖直方向的滚动事件)</dt>
@@ -248,7 +248,7 @@ translation_of: Web/API/Element/wheel_event
  <dd><code>deltaMode </code>值总是 <code>DOM_DELTA_PIXEL。</code>但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件， WM_GESTURE 事件通常被平板电脑使用。</dd>
 </dl>
 
-<p>在 Mac 下 deltaMode 值由设备决定. 如果设备支持高分辨率像素级滚动, <code>deltaMode </code>值就是典型的 <code>DOM_DELTA_PIXEL</code>. 然而用户可以通过加前缀<code>"mousewheel.enable_pixel_scrolling"</code>将其改变为 <code>DOM_DELTA_LINE</code> 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 <code>DOM_DELTA_LINE</code>.</p>
+<p>在 Mac 下 deltaMode 值由设备决定。如果设备支持高分辨率像素级滚动，<code>deltaMode </code>值就是典型的 <code>DOM_DELTA_PIXEL</code>. 然而用户可以通过加前缀<code>"mousewheel.enable_pixel_scrolling"</code>将其改变为 <code>DOM_DELTA_LINE</code> 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 <code>DOM_DELTA_LINE</code>.</p>
 
 <p><code>在其它平台下， deltaMode 值总是 DOM_DELTA_LINE</code>.</p>
 

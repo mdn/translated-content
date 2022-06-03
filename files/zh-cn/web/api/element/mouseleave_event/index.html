@@ -17,8 +17,8 @@ translation_of: Web/API/Element/mouseleave_event
    <td><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5911/=mouseout.png"></td>
   </tr>
   <tr>
-   <td>当离开它们时，一个<code>mouseleave</code>事件被发送到层次结构的每个元素。当指针从文本移动到这里表示的最外面的div之外的区域时，这里4个事件会发送到层次结构的四个元素。</td>
-   <td>一个单一的鼠标事件<code>mouseout</code>被发送到DOM树最深的元素，然后它冒泡层次，直到它被处理程序取消或到达根。</td>
+   <td>当离开它们时，一个<code>mouseleave</code>事件被发送到层次结构的每个元素。当指针从文本移动到这里表示的最外面的 div 之外的区域时，这里 4 个事件会发送到层次结构的四个元素。</td>
+   <td>一个单一的鼠标事件<code>mouseout</code>被发送到 DOM 树最深的元素，然后它冒泡层次，直到它被处理程序取消或到达根。</td>
   </tr>
  </tbody>
 </table>
@@ -56,7 +56,7 @@ translation_of: Web/API/Element/mouseleave_event
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>事件目标（DOM树中最顶端的目标）。</td>
+   <td>事件目标（DOM 树中最顶端的目标）。</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
@@ -91,64 +91,64 @@ translation_of: Web/API/Element/mouseleave_event
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td><code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件: 互补事件的目标(详情查看<a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>)。</td>
+   <td><code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件：互补事件的目标 (详情查看<a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>)。</td>
   </tr>
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>全局（屏幕）坐标中鼠标指针的X坐标。</td>
+   <td>全局（屏幕）坐标中鼠标指针的 X 坐标。</td>
   </tr>
   <tr>
    <td><code>screenY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>全局（屏幕）坐标中鼠标指针的Y坐标。</td>
+   <td>全局（屏幕）坐标中鼠标指针的 Y 坐标。</td>
   </tr>
   <tr>
    <td><code>clientX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针在本地（DOM内容）坐标中的X坐标。</td>
+   <td>鼠标指针在本地（DOM 内容）坐标中的 X 坐标。</td>
   </tr>
   <tr>
    <td><code>clientY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针在本地（DOM内容）坐标中的Y坐标。</td>
+   <td>鼠标指针在本地（DOM 内容）坐标中的 Y 坐标。</td>
   </tr>
   <tr>
    <td><code>button</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>这总是为0，因为没有按钮按下触发这个事件（鼠标移动触发的事件）。</td>
+   <td>这总是为 0，因为没有按钮按下触发这个事件（鼠标移动触发的事件）。</td>
   </tr>
   <tr>
    <td><code>buttons</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>当鼠标事件被触发时按下按键：左按键= 1，右按键= 2，中（轮）按键= 4，第四按键（通常为“浏览器后退”按键）= 8，第五按键（通常为“浏览器前进“按键）= 16。如果按下两个或更多按键，则返回值的逻辑和。例如，如果按下左按键和右按键，返回3（= 1 | 2）。<a href="/en-US/docs/Web/API/MouseEvent">更多信息</a>。</td>
+   <td>当鼠标事件被触发时按下按键：左按键= 1，右按键= 2，中（轮）按键= 4，第四按键（通常为“浏览器后退”按键）= 8，第五按键（通常为“浏览器前进“按键）= 16。如果按下两个或更多按键，则返回值的逻辑和。例如，如果按下左按键和右按键，返回 3（= 1 | 2）。<a href="/en-US/docs/Web/API/MouseEvent">更多信息</a>。</td>
   </tr>
   <tr>
    <td><code>mozPressure</code> {{readonlyInline}}</td>
    <td>float</td>
-   <td>生成事件时施加到触摸或tabdevice的压力量;此值介于0.0（最小压力）和1.0（最大压力）之间。</td>
+   <td>生成事件时施加到触摸或 tabdevice 的压力量;此值介于 0.0（最小压力）和 1.0（最大压力）之间。</td>
   </tr>
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
    <td>
-    <p>当事件触发时，Ctrl键是被按下的，则为<code>true</code> ，否则为<code>false</code></p>
+    <p>当事件触发时，Ctrl 键是被按下的，则为<code>true</code> ，否则为<code>false</code></p>
    </td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件触发时，shift键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
+   <td>当事件触发时，shift 键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件触发时，alt键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
+   <td>当事件触发时，alt 键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件触发时，meta键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
+   <td>当事件触发时，meta 键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
   </tr>
  </tbody>
 </table>

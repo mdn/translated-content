@@ -10,7 +10,7 @@ translation_of: Web/API/Element/scrollLeft
 
 <p><strong><code>Element.scrollLeft</code></strong> 属性可以读取或设置元素滚动条到元素左边的距离。</p>
 
-<p>注意如果这个元素的内容排列方向（{{cssxref("direction")}}） 是<code>rtl</code> (right-to-left) ，那么滚动条会位于最右侧（内容开始处），并且<code>scrollLeft</code>值为0。此时，当你从右到左拖动滚动条时，scrollLeft会从0变为负数。</p>
+<p>注意如果这个元素的内容排列方向（{{cssxref("direction")}}）是<code>rtl</code> (right-to-left) ，那么滚动条会位于最右侧（内容开始处），并且<code>scrollLeft</code>值为 0。此时，当你从右到左拖动滚动条时，scrollLeft 会从 0 变为负数。</p>
 
 <div class="blockIndicator warning">
 <p>在使用显示比例缩放的系统上，<code>scrollLeft</code> 可能会是一个小数。</p>
@@ -31,8 +31,8 @@ var <var>sLeft</var> = <var>element</var>.scrollLeft;
 <p><code>scrollLeft</code> 可以是任意整数，然而：</p>
 
 <ul>
- <li>如果元素不能滚动（比如：元素没有溢出），那么<code>scrollLeft</code> 的值是0。</li>
- <li>如果给<code>scrollLeft</code> 设置的值小于0，那么<code>scrollLeft</code> 的值将变为0。</li>
+ <li>如果元素不能滚动（比如：元素没有溢出），那么<code>scrollLeft</code> 的值是 0。</li>
+ <li>如果给<code>scrollLeft</code> 设置的值小于 0，那么<code>scrollLeft</code> 的值将变为 0。</li>
  <li>如果给<code>scrollLeft</code> 设置的值大于元素内容最大宽度，那么<code>scrollLeft</code> 的值将被设为元素最大宽度。</li>
 </ul>
 

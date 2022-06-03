@@ -16,14 +16,14 @@ translation_of: Web/API/Element/mouseenter_event
 
 <div style="-moz-column-width: 455px; -webkit-column-width: 455px; column-width: 455px; border: solid 1px; padding: 5px; margin-bottom: 10px;">
 <div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
-(mouseenter事件)触发时，会向层次结构的每个元素发送一个mouseenter事件。当指针到达文本时，此处将4个事件发送到层次结构的四个元素。
+(mouseenter 事件) 触发时，会向层次结构的每个元素发送一个 mouseenter 事件。当指针到达文本时，此处将 4 个事件发送到层次结构的四个元素。
 
 <div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
-一个单独的mouseover事件被发送到DOM树的最深层元素，然后它将层次结构向上冒泡，直到它被处理程序取消或到达根目录。</div>
+一个单独的 mouseover 事件被发送到 DOM 树的最深层元素，然后它将层次结构向上冒泡，直到它被处理程序取消或到达根目录。</div>
 
-<p>对于深层次结构，发送的 *mouseover* 事件数量可能非常大并且会导致严重的性能问题。在这种情况下，最好是监听 *mouseenter* 事件。（可使用chrome开发者工具选项卡中的Performance进行性能测试）</p>
+<p>对于深层次结构，发送的 *mouseover* 事件数量可能非常大并且会导致严重的性能问题。在这种情况下，最好是监听 *mouseenter* 事件。（可使用 chrome 开发者工具选项卡中的 Performance 进行性能测试）</p>
 
-<p>结合其对称事件, <code>mouseleave</code>, mouseenter DOM事件的行为方式与CSS  {{cssxref(':hover')}} 伪类非常相似。.</p>
+<p>结合其对称事件，<code>mouseleave</code>, mouseenter DOM 事件的行为方式与 CSS  {{cssxref(':hover')}} 伪类非常相似。.</p>
 
 <h2 id="General_info">General info</h2>
 
@@ -58,12 +58,12 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>事件(event)目标（DOM树中最顶层的目标）。</td>
+   <td>事件 (event) 目标（DOM 树中最顶层的目标）。</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>事件(event)类型.</td>
+   <td>事件 (event) 类型。</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
@@ -78,7 +78,7 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>view</code> {{readonlyInline}}</td>
    <td>{{domxref("WindowProxy")}}</td>
-   <td>{{domxref("document.defaultView")}} (document的 <code>window</code> )</td>
+   <td>{{domxref("document.defaultView")}} (document 的 <code>window</code> )</td>
   </tr>
   <tr>
    <td><code>detail</code> {{readonlyInline}}</td>
@@ -98,32 +98,32 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针相对于屏幕的X轴坐标</td>
+   <td>鼠标指针相对于屏幕的 X 轴坐标</td>
   </tr>
   <tr>
    <td><code>screenY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针相对于屏幕的Y轴坐标</td>
+   <td>鼠标指针相对于屏幕的 Y 轴坐标</td>
   </tr>
   <tr>
    <td><code>clientX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针相对于DOM元素的X轴坐标</td>
+   <td>鼠标指针相对于 DOM 元素的 X 轴坐标</td>
   </tr>
   <tr>
    <td><code>clientY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针相对于DOM元素的Y轴坐标</td>
+   <td>鼠标指针相对于 DOM 元素的 Y 轴坐标</td>
   </tr>
   <tr>
    <td><code>button</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>始终为0，因为没有按钮会触发这个事件 (mouse movement事件干的).</td>
+   <td>始终为 0，因为没有按钮会触发这个事件 (mouse movement 事件干的).</td>
   </tr>
   <tr>
    <td><code>buttons</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>表明当事件触发时鼠标上按下的键: 左键=1, 右键=2, 中键 (鼠标滚轮) =4, 第四个按钮 (通常是 “浏览器返回上一个页面”按钮)=8, 第五个按钮 (通常是“浏览器向前导航”按钮)=16. 如果很多按钮同时按下, 那就返回这些值的逻辑计算值. 比如，当左键和右键同时按下时返回3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">了解更多</a>.</td>
+   <td>表明当事件触发时鼠标上按下的键：左键=1，右键=2，中键 (鼠标滚轮) =4，第四个按钮 (通常是 “浏览器返回上一个页面”按钮)=8，第五个按钮 (通常是“浏览器向前导航”按钮)=16. 如果很多按钮同时按下，那就返回这些值的逻辑计算值。比如，当左键和右键同时按下时返回 3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">了解更多</a>.</td>
   </tr>
   <tr>
    <td><code>mozPressure</code> {{readonlyInline}}</td>
@@ -133,31 +133,31 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着ctrl键. <code>false</code> 反之.</td>
+   <td><code>true</code> 代表当事件触发时按着 ctrl 键。<code>false</code> 反之。</td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着shift键. <code>false</code> 反之.</td>
+   <td><code>true</code> 代表当事件触发时按着 shift 键。<code>false</code> 反之。</td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着alt键. <code>false</code> 反之.</td>
+   <td><code>true</code> 代表当事件触发时按着 alt 键。<code>false</code> 反之。</td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着meta键 (???) <code>false</code> 反之.</td>
+   <td><code>true</code> 代表当事件触发时按着 meta 键 (???) <code>false</code> 反之。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>鼠标悬停( <a href="/en-US/docs/Web/Events/mouseover#Example"><code>mouseover</code> </a>)文档中有一个示例说明了mouseover和mouseenter之间的区别。</p>
+<p>鼠标悬停 ( <a href="/en-US/docs/Web/Events/mouseover#Example"><code>mouseover</code> </a>) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。</p>
 
-<p>以下示例说明如何使用mouseover模拟mouseenter事件的事件委派原则。</p>
+<p>以下示例说明如何使用 mouseover 模拟 mouseenter 事件的事件委派原则。</p>
 
 <pre class="brush: html">&lt;ul id="test"&gt;
   &lt;li&gt;
