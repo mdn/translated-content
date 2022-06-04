@@ -48,7 +48,7 @@ try {
 
 ```js
 try {
-  throw new TypeError('Coucou', "unFichier.js", 10);
+  throw new TypeError('Coucou', 'unFichier.js', 10);
 } catch (e) {
   console.log(e instanceof TypeError);  // true
   console.log(e.message);               // "Coucou"
