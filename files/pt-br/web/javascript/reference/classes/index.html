@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h2 id="Definindo_classes">Definindo classes</h2>
 
-<p>As Classes são, de fato, "funções especiais", e, assim como você pode definir <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">"function expressions"</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">"function declarations"</a>, a sintaxe de uma classe possui dois componentes: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">"class expressions</a>" e  <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">"class declarations"</a>.</p>
+<p>As Classes são, de fato, "funções especiais", e, assim como você pode definir <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">"function expressions"</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">"function declarations"</a>, a sintaxe de uma classe possui dois componentes: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">"class expressions</a>" e <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">"class declarations"</a>.</p>
 
 <h3 id="Declarando_classes">Declarando classes</h3>
 
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="Uso_antes_da_declaração_Hoisting_-_Tradução_Literal_Lançamento">Uso antes da declaração (Hoisting - Tradução Literal: Lançamento)</h4>
 
-<p>Uma diferença importante entre <strong>declarações de funções</strong> das <strong>declarações de classes</strong>, é que  declararações de  funções são {{Glossary("Hoisting", "hoisted")}} e declarações de classes não são. Primeiramente deve declarar sua classe para só então acessá-la, pois do contrário o código a seguir irá lançar uma exceção: {{jsxref("ReferenceError")}}:</p>
+<p>Uma diferença importante entre <strong>declarações de funções</strong> das <strong>declarações de classes</strong>, é que declararações de funções são {{Glossary("Hoisting", "hoisted")}} e declarações de classes não são. Primeiramente deve declarar sua classe para só então acessá-la, pois do contrário o código a seguir irá lançar uma exceção: {{jsxref("ReferenceError")}}:</p>
 
 <pre class="brush: js example-bad">const p = new Retangulo(); // Erro de referência (ReferenceError)
 
@@ -71,7 +71,7 @@ let Retangulo = class Retangulo {
 
 <h3 id="Construtor">Construtor</h3>
 
-<p>O método <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a></code> é um tipo especial de método para criar e iniciar um objeto criado pela classe. Só pode existir um método especial com o nome "constructor" dentro da classe. Um erro de sintáxe {{jsxref("SyntaxError")}} será lançado se a classe possui mais do que uma ocorrência do método <code>constructor</code>.</p>
+<p>O método <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a></code> é um tipo especial de método para criar e iniciar um objeto criado pela classe. Só pode existir um método especial com o nome "constructor" dentro da classe. Um erro de sintaxe {{jsxref("SyntaxError")}} será lançado se a classe possui mais do que uma ocorrência do método <code>constructor</code>.</p>
 
 <p>Um construtor pode usar a palavra-chave <code>super</code> para chamar o construtor de uma classe pai.</p>
 
@@ -127,7 +127,7 @@ console.log(Ponto.distancia(p1, p2));</pre>
 
 <p>Quando um método estático ou protótipo é chamado sem um objeto "this" configurado (ou com "this" como boolean, string, number, undefined ou null), então o valor "this" será <strong><code>undefined</code></strong> dentro da função chamada. Autoboxing não vai acontecer. O comportamento será o mesmo mesmo se escrevemos o código no modo não-estrito.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">class</span> <span class="class-name token">Animal</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">class</span> <span class="class-name token">Animal</span> <span class="punctuation token">{</span>
   falar<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
     <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
   <span class="punctuation token">}</span>
@@ -147,7 +147,7 @@ Animal.comer(); // class Animal
 
 <p>Se escrevemos o código acima usando classes baseadas em função tradicional, então o autoboxing acontecerá com base no valor de "this" para o qual a função foi chamada.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">Animal</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">}</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">Animal</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">}</span>
 
 Animal<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>falar <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
