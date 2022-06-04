@@ -1,33 +1,37 @@
 ---
-title: '<nobr>: 無改行文字列要素（廃止）'
+title: '<nobr>: 無改行文字列要素'
 slug: Web/HTML/Element/nobr
 tags:
-  - Element
+  - 要素
   - HTML
   - Non-standard
-  - Obsolete
-  - Reference
-  - Web
+  - 非推奨
+  - リファレンス
+  - ウェブ
   - nobr
+browser-compat: html.elements.nobr
 translation_of: Web/HTML/Element/nobr
 ---
-<div>{{HTMLRef}}{{Non-standard_Header}}{{Obsolete_Header}}</div>
 
-<p>標準外かつ廃止された HTML の <code>&lt;nobr&gt;</code> 要素は、その内包する文字列の自動改行を無効化します。行内におさまらない文字列は、領域からはみ出てレンダリングされるか、スクロールバーを伴って表示されます。</p>
+{{HTMLRef}}{{Non-standard_Header}}{{deprecated_header}}
 
-<div class="blockIndicator warning">
-<p>この要素は標準の要素であったことは<em>なく</em>、広く実装されていませんので、使用するべきではありません。代わりに、 CSS プロパティの {{Cssxref("white-space")}} を次のように使用してください。</p>
-</div>
+**`<nobr>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内包する文字列の自動改行を無効化します。行内に収まらない文字列は、領域からはみ出てレンダリングされるか、スクロールバーを伴って表示されます。
 
-<pre class="brush: html notranslate">&lt;span style="white-space: nowrap;"&gt;改行を伴わない長い行&lt;/span&gt;</pre>
+> **Warning:** この要素は標準の要素であったことは<em>なく</em>、広く実装されていませんので、使用するべきではありません。代わりに、 CSS プロパティの {{CSSxRef("white-space")}} を次のように使用してください。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```html
+<span style="white-space: nowrap;">Long line with no breaks</span>
+```
 
-<div>{{Compat("html.elements.nobr")}}</div>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>{{CSSxRef("white-space")}}</li>
- <li>{{CSSxRef("overflow")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{CSSxRef("white-space")}}
+- {{CSSxRef("overflow")}}
