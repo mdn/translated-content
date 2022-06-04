@@ -1,59 +1,66 @@
 ---
-title: '<center>: 文字列の中央揃え要素 (廃止)'
+title: '<center>: 文字列の中央揃え要素'
 slug: Web/HTML/Element/center
 tags:
-  - Deprecated
-  - Element
+  - 要素
   - HTML
-  - Reference
-  - Web
+  - 非推奨
+  - リファレンス
+  - テキスト
+  - テキスト配置
+  - ウェブ
+  - 配置
+  - center
+browser-compat: html.elements.center
 translation_of: Web/HTML/Element/center
 ---
-<div>{{obsolete_header()}}</div>
 
-<p><span class="seoSummary">廃止済みの <strong>HTML の中央揃え要素</strong> (<strong><code>&lt;center&gt;</code></strong>) は、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する<a href="/ja/docs/Web/HTML/Block-level_elements" title="HTML/Block-level_elements">ブロックレベル要素</a>です。</span>コンテナーはふつう {{HTMLElement("body")}} ですが、必ずしもそうとは限りません。</p>
+{{deprecated_header}}
 
-<p>このタグは HTML 4 (及び XHTML 1) で非推奨要素に指定され、 <a href="/ja/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a> の {{Cssxref("text-align")}} プロパティを {{HTMLElement("div")}} 要素に適用するか、それぞれの {{HTMLElement("p")}} 要素に適用する方式が採用されました。ブロックを中央揃えするには、別な CSS プロパティである {{Cssxref("margin-left")}} および {{Cssxref("margin-right")}} など用いて、値を <code>auto</code> に設定してください（または、 {{Cssxref("margin")}} を <code>0 auto</code> に設定してください）。</p>
+**`<center>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)です。コンテナーはふつう {{HTMLElement("body")}} ですが、必ずしもそうとは限りません。
 
-<h2 id="DOM_Interface" name="DOM_Interface">DOM インタフェース</h2>
+このタグは HTML 4 (および XHTML 1) で非推奨要素に指定され、 [CSS](/ja/docs/Web/CSS) の {{Cssxref("text-align")}} プロパティを {{HTMLElement("div")}} 要素に適用するか、それぞれの {{HTMLElement("p")}} 要素に適用する方式が採用されました。ブロックを中央揃えするには、別な CSS プロパティである {{Cssxref("margin-left")}} および {{Cssxref("margin-right")}} など用いて、値を `auto` に設定してください（または、 {{Cssxref("margin")}} を `0 auto` に設定してください）。
 
-<p>この要素は {{domxref("HTMLElement")}} インタフェースを実装しています。</p>
+## DOM インタフェース
 
-<div class="note">
-<p><strong>実装メモ: </strong>Gecko 1.9.2 以前 (Firefox) は、この要素に {{domxref("HTMLSpanElement")}} インタフェースを実装しています。</p>
-</div>
+この要素は {{domxref("HTMLElement")}} インタフェースを実装しています。
 
-<h2 id="Example_1" name="Example_1">例1</h2>
+## 例 1
 
-<pre class="brush: html">&lt;center&gt;This text will be centered.
-&lt;p&gt;So will this paragraph.&lt;/p&gt;&lt;/center&gt;
-</pre>
+```html
+<center>This text will be centered.
+<p>So will this paragraph.</p></center>
+```
 
-<h2 id="Example_2" name="Example_2">例2 （CSSでの方法）</h2>
+## 例 2 （CSS での方法）
 
-<pre class="brush: html">&lt;div style="text-align:center"&gt;This text will be centered.
-&lt;p&gt;So will this paragraph.&lt;/p&gt;&lt;/div&gt;
-</pre>
+```html
+<div style="text-align:center">This text will be centered.
+<p>So will this paragraph.</p></div>
+```
 
-<h3 id="Example_3" name="Example_3">例3 （CSSでの方法）</h3>
+## 例 3 （CSS での方法）
 
-<pre class="brush: html">&lt;p style="text-align:center"&gt;This line will be centered.&lt;br&gt;
-And so will this line.&lt;/p&gt;
-</pre>
+```html
+<p style="text-align:center">This line will be centered.<br>
+And so will this line.</p>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p>{{Cssxref("text-align")}}<code>:center</code> を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その<em>コンテンツ</em>を中央揃えにしますが、コンテンツの寸法はどれも変更されません。</p>
+{{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## 仕様書
 
-<p>{{Compat("html.elements.center")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{Cssxref("text-align")}}</li>
- <li>{{Cssxref("display")}}</li>
-</ul>
+{{Compat}}
 
-<div>{{HTMLRef}}</div>
+## 関連情報
+
+- {{Cssxref("text-align")}}
+- {{Cssxref("display")}}
+
+{{HTMLRef}}
