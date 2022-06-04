@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/putImageData
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.putImageData()</code></strong> 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。 如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。</p>
+<p><strong><code>CanvasRenderingContext2D.putImageData()</code></strong> 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -47,7 +47,7 @@ void <var><em>ctx</em>.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidt
 
 <h3 id="理解putImageData">理解<code>putImageData</code></h3>
 
-<p>通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解putImageData的执行算法. 获取更多信息，参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">使用Canvas控制像素</a> 和 {{domxref("ImageData")}} 对象。</p>
+<p>通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解 putImageData 的执行算法。获取更多信息，参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">使用 Canvas 控制像素</a> 和 {{domxref("ImageData")}} 对象。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -159,79 +159,11 @@ function putImageData(ctx, imageData, dx, dy,
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-putimagedata", "CanvasRenderingContext2D.putImageData")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="兼容性注解">兼容性注解</h3>
-
-<ul>
- <li>从 Gecko 10.0 {{ geckoRelease("10.0") }}开始，给任何参数设置非限定性的值并调用 <code>putImageData()</code> 将会被忽略，而不是抛出异常。</li>
- <li>为了遵循说明，从 Gecko 16.0 {{geckoRelease("16.0")}}开始，使用无效的变量数量调用该方法（只有3个或7个数的变量是有效的）， 将会抛出一个错误 ({{bug(762657)}})。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.putImageData")}}
 
 <h2 id="参见">参见</h2>
 

@@ -11,9 +11,9 @@ translation_of: Web/API/Element/slot
 ---
 <p>{{APIRef("Shadow DOM")}}</p>
 
-<p>{{domxref("Element")}}接口的<strong><code>slot</code></strong>属性会返回已插入元素所在的Shadow DOM slot的名称。</p>
+<p>{{domxref("Element")}}接口的<strong><code>slot</code></strong>属性会返回已插入元素所在的 Shadow DOM slot 的名称。</p>
 
-<p>Slot是存在于<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">web component</a>内部的占位符，用户可以通过slot属性在web component的内部插入自定义的标记文本。（详见<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a>）</p>
+<p>Slot 是存在于<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">web component</a>内部的占位符，用户可以通过 slot 属性在 web component 的内部插入自定义的标记文本。（详见<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a>）</p>
 
 <h2 id="语法">语法</h2>
 
@@ -27,15 +27,15 @@ translation_of: Web/API/Element/slot
 
 <h2 id="示例">示例</h2>
 
-<p>在示例 <a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">simple-template example</a> (<a href="https://mdn.github.io/web-components-examples/simple-template/">在线查看</a>)中，我们创建了一个简单的自定义元素叫做 <code>&lt;my-paragraph&gt;</code> ，并为它添加了shadow root，然后使用一个包含以 <code>my-text</code>为名称的slot的template来填充它。</p>
+<p>在示例 <a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">simple-template example</a> (<a href="https://mdn.github.io/web-components-examples/simple-template/">在线查看</a>) 中，我们创建了一个简单的自定义元素叫做 <code>&lt;my-paragraph&gt;</code> ，并为它添加了 shadow root，然后使用一个包含以 <code>my-text</code>为名称的 slot 的 template 来填充它。</p>
 
-<p>当 <code>&lt;my-paragraph&gt;</code> 在文档中被使用时，slot标签中的内容会被填充到拥有<code>slot="my-text"</code>属性的元素之中，我们称这种元素为slotable element。（事实上可以看作是拥有slot属性的元素被填充到了template中有<code>&lt;slot&gt;</code>标签存在的地方）请看下面的示例：</p>
+<p>当 <code>&lt;my-paragraph&gt;</code> 在文档中被使用时，slot 标签中的内容会被填充到拥有<code>slot="my-text"</code>属性的元素之中，我们称这种元素为 slotable element。（事实上可以看作是拥有 slot 属性的元素被填充到了 template 中有<code>&lt;slot&gt;</code>标签存在的地方）请看下面的示例：</p>
 
 <pre class="brush: js">&lt;my-paragraph&gt;
   &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
 &lt;/my-paragraph&gt;</pre>
 
-<p>在Javascript代码中我们获取到上面代码中的span的引用，然后将对应的 <code>&lt;slot&gt;</code> 元素的引用的名称打印在控制台中。</p>
+<p>在 Javascript 代码中我们获取到上面代码中的 span 的引用，然后将对应的 <code>&lt;slot&gt;</code> 元素的引用的名称打印在控制台中。</p>
 
 <pre class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
 console.log(slottedSpan.slot); // logs 'my-text'

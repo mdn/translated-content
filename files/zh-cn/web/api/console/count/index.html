@@ -5,15 +5,15 @@ translation_of: Web/API/Console/count
 ---
 <div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
 
-<p>输出 count() 被调用的次数。此函数接受一个可选参数 <code>label。</code></p>
+<p>输出 count() 被调用的次数。此函数接受一个可选参数 <code>label</code>。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>如果有 <code>label</code>，此函数输出为那个指定的 <code>label 和</code> count() 被调用的次数。</p>
+<p>如果有 <code>label</code>，此函数输出为那个指定的 <code>label</code> 和 count() 被调用的次数。</p>
 
-<p>如果 <code>label </code>被忽略，此函数输出 count() 在其所处位置上被调用的次数。</p>
+<p>如果 <code>label</code> 被忽略，此函数输出 count() 在其所处位置上被调用的次数。</p>
 
-<p>例如，下面的代码:</p>
+<p>例如，下面的代码：</p>
 
 <pre class="brush: js">var user = "";
 
@@ -29,7 +29,7 @@ greet();
 greet();
 console.count();</pre>
 
-<p>Console 的输出如下:</p>
+<p>Console 的输出如下：</p>
 
 <pre class="eval">"&lt;no label&gt;: 1"
 "&lt;no label&gt;: 2"
@@ -39,7 +39,7 @@ console.count();</pre>
 
 <p>注意最后一行的日志输出：在 11 行对 count() 的单独调用是被当作一个独立事件来处理的。</p>
 
-<p>如果把变量 <code>user </code>当作<code> label 参数传给前面调用的 count()，把字符串 "alice" 传给后面调用的 count()：</code></p>
+<p>如果把变量 <code>user</code> 当作 <code>label</code> 参数传给前面调用的 <code>count()</code>，把字符串 "alice" 传给后面调用的 <code>count()</code>：</p>
 
 <pre class="brush: js">var user = "";
 
@@ -55,14 +55,14 @@ greet();
 greet();
 console.count("alice");</pre>
 
-<p>可以看到输出如下:</p>
+<p>可以看到输出如下：</p>
 
 <pre class="eval">"bob: 1"
 "alice: 1"
 "alice: 2"
 "alice: 3"</pre>
 
-<p>现在可以基于不同的 <code>label</code> 值维护不同的数值。由于 11 行的 <code>label 匹配了两次 user 的值，因此它不会被当作独立的事件。</code></p>
+<p>现在可以基于不同的 <code>label</code> 值维护不同的数值。由于 11 行的 <code>label</code> 匹配了两次 <code>user</code> 的值，因此它不会被当作独立的事件。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -75,95 +75,12 @@ console.count("alice");</pre>
  <dt><code>label</code></dt>
 </dl>
 
-<p>    字符串，如果有，count() 输出此给定的 <code>label 及其</code>被调用的次数。</p>
+<p>字符串，如果有，count() 输出此给定的 <code>label</code> 及其被调用的次数。</p>
 
-<p><strong style="color: #4d4e53; font-size: 2.143rem; font-weight: 700; letter-spacing: -1px;">规范</strong></p>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consolecountlabel", "console.count()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("30.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("38.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("30.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("38.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.console.count")}}

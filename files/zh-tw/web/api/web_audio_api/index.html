@@ -4,13 +4,21 @@ slug: Web/API/Web_Audio_API
 translation_of: Web/API/Web_Audio_API
 ---
 <p>{{SeeCompatTable}}</p>
+
 <p><img alt="Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs." src="https://mdn.mozillademos.org/files/5183/WebAudioGenerics.png" style="width: 338px; height: 349px; float: left;"><strong>Web Audio API</strong> 可於 Web App 或網頁上操作並播放音訊檔案。</p>
+
 <p>Web Audio API 是根據模組化路由 (Modular routing) 的概念所設計。所謂的模組化路由，即是以<strong>「音訊節點</strong><strong> (Audio nodes)</strong><strong>」</strong>執行基本的音訊作業<strong>，</strong>節點又互相連接而構成「音訊路由圖 (Audio routing graphs)」。在同一環境 (Audio context) 內，又可支援數個音源與多樣的聲道配置。此模組化設計可提供更高的靈活度，並能建立複雜的音訊函式與動態效果。</p>
+
 <p>音訊節點均透過其輸出與輸入而相互連結。各個輸入/輸出均具備數個<strong>聲道</strong><strong> (Channel)</strong><strong>，以構成特定的音訊配置。但目前已可支援單聲道、立體聲、四聲道、</strong>5.1 聲道等配置，並支援其他的離散配置。</p>
+
 <p>音訊有多種來源。可能由特定的音訊節點 (如震盪器、自訂函式，甚或簡易的資料陣列) 直接在 JavaScript 中產生。音源除了可連至 HTML 媒體元素 (如 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="The HTML &lt;video> element is used to embed video content in an HTML or XHTML document."><code>&lt;video&gt;</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" title="The HTML &lt;audio> element is used to represents sound content in documents. Added as part of HTML5, it may contain several audio sources, represented using the src attribute or the &lt;source> element; the browser will choose the most suitable one. Fallback c"><code>&lt;audio&gt;</code></a>)，亦可能來自於 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> 的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks, like video or audio tracks."><code>MediaStream</code></a> (本端裝置的相機或遠方電腦)。</p>
+
 <p>特定音訊事件發生的時間點，均達到極高的精確度與極低的潛時，因此亦可用以詳細定義鼓類機器或音序器 (Sequencer) 所需的事件。</p>
+
 <p>Web Audio API 亦可控制音訊的空間定位 (Spatialized) 作業：透過 source-listener 模型架構的系統，進而控制所要使用的左右相位 (Panning<em>，</em>聲音放置於左右喇叭之間形成的立體音場中，以產生出空間感) 模<em>型</em>，進而自動處理因距離遠近所產生的衰減，或是由於音源/聽者移動所發生的都卜勒移頻 (Doppler shift)。</p>
+
 <h2 id="參考">參考</h2>
+
 <div class="index">
  <ul>
   <li>{{domxref("AnalyserNode")}}</li>
@@ -41,10 +49,11 @@ translation_of: Web/API/Web_Audio_API
   <li>{{domxref("PannerNode")}}</li>
   <li>{{domxref("ScriptProcessorNode")}}</li>
   <li>{{domxref("WaveShaperNode")}}</li>
-  <li> </li>
  </ul>
 </div>
+
 <h2 id="線上教學">線上教學</h2>
+
 <ul>
  <li>使用 Web Audio API</li>
  <li><a href="http://www.html5rocks.com/tutorials/webaudio/intro/" title="http://www.html5rocks.com/tutorials/webaudio/intro/">Getting Started with the Web Audio API</a> (僅說明 WebKit-only 的非標準建置)</li>
@@ -52,68 +61,11 @@ translation_of: Web/API/Web_Audio_API
  <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/" title="http://www.html5rocks.com/tutorials/webaudio/games/">以 Web Audio API 開發遊戲音訊</a></li>
  <li><a href="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">將 webkitAudioContext 程式碼移植為標準的 AudioContext</a></li>
 </ul>
+
 <h2 id="規格">規格</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+
+{{Specifications}}
+
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
-<div>
- {{CompatibilityTable}}</div>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari (WebKit)</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>14 {{property_prefix("webkit")}}</td>
-    <td>23</td>
-    <td>{{CompatNo}}</td>
-    <td>15 {{property_prefix("webkit")}}</td>
-    <td>6 {{property_prefix("webkit")}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Chrome</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Phone</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatNo}}</td>
-    <td>28 {{property_prefix("webkit")}}</td>
-    <td>{{CompatNo}}</td>
-    <td>{{CompatNo}}</td>
-    <td>{{CompatNo}}</td>
-    <td>6 {{property_prefix("webkit")}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<p> </p>
+
+{{Compat("api.AudioContext", 0)}}

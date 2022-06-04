@@ -11,11 +11,11 @@ translation_of: Web/API/FileReader
 ---
 <p>{{APIRef("File API")}}</p>
 
-<p><code><strong>FileReader</strong></code> 对象允许Web应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。</p>
+<p><code><strong>FileReader</strong></code> 对象允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。</p>
 
-<p>其中File对象可以是来自用户在一个{{ HTMLElement("input") }}元素上选择文件后返回的{{ domxref("FileList") }}对象,也可以来自拖放操作生成的 <a href="/zh-CN/docs/Web/API/DataTransfer" title="En/DragDrop/DataTransfer"><code>DataTransfer</code></a>对象,还可以是来自在一个{{ domxref("HTMLCanvasElement") }}上执行<code>mozGetAsFile()</code>方法后返回结果。</p>
+<p>其中 File 对象可以是来自用户在一个{{ HTMLElement("input") }}元素上选择文件后返回的{{ domxref("FileList") }}对象，也可以来自拖放操作生成的 <a href="/zh-CN/docs/Web/API/DataTransfer" title="En/DragDrop/DataTransfer"><code>DataTransfer</code></a>对象，还可以是来自在一个{{ domxref("HTMLCanvasElement") }}上执行<code>mozGetAsFile()</code>方法后返回结果。</p>
 
-<p>重要提示： FileReader仅用于以安全的方式从用户（远程）系统读取文件内容 它不能用于从文件系统中按路径名简单地读取文件。 要在JavaScript中按路径名读取文件，应使用标准Ajax解决方案进行服务器端文件读取，如果读取跨域，则使用CORS权限。</p>
+<p>重要提示： FileReader 仅用于以安全的方式从用户（远程）系统读取文件内容 它不能用于从文件系统中按路径名简单地读取文件。要在 JavaScript 中按路径名读取文件，应使用标准 Ajax 解决方案进行服务器端文件读取，如果读取跨域，则使用 CORS 权限。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/FileReader
  <dd>返回一个新构造的<code>FileReader</code>。</dd>
 </dl>
 
-<p>有关详细信息和示例，请参阅<a href="/zh-CN/Using_files_from_web_applications" title="en/Using files from web applications">如何在web应用程序中使用文件</a>。</p>
+<p>有关详细信息和示例，请参阅<a href="/zh-CN/Using_files_from_web_applications" title="en/Using files from web applications">如何在 web 应用程序中使用文件</a>。</p>
 
 <h2 id="Method_overview" name="Method_overview">属性</h2>
 
@@ -45,17 +45,17 @@ translation_of: Web/API/FileReader
    <tr>
     <td><code>EMPTY</code></td>
     <td><code>0</code></td>
-    <td>还没有加载任何数据.</td>
+    <td>还没有加载任何数据。</td>
    </tr>
    <tr>
     <td><code>LOADING</code></td>
     <td><code>1</code></td>
-    <td>数据正在被加载.</td>
+    <td>数据正在被加载。</td>
    </tr>
    <tr>
     <td><code>DONE</code></td>
     <td><code>2</code></td>
-    <td>已完成全部的读取请求.</td>
+    <td>已完成全部的读取请求。</td>
    </tr>
   </tbody>
  </table>
@@ -90,12 +90,12 @@ translation_of: Web/API/FileReader
 <dl>
  <dt>{{domxref("FileReader.abort()")}}</dt>
  <dd>中止读取操作。在返回时，<code>readyState</code>属性为<code>DONE</code>。</dd>
- <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{gecko_minversion_inline("7.0")}}</dt>
- <dd>开始读取指定的 {{domxref("Blob")}}中的内容, 一旦完成, result 属性中保存的将是被读取文件的 {{domxref("ArrayBuffer")}} 数据对象.</dd>
+ <dt>{{domxref("FileReader.readAsArrayBuffer()")}}</dt>
+ <dd>开始读取指定的 {{domxref("Blob")}}中的内容，一旦完成，result 属性中保存的将是被读取文件的 {{domxref("ArrayBuffer")}} 数据对象。</dd>
  <dt>{{domxref("FileReader.readAsBinaryString()")}} {{non-standard_inline}}</dt>
  <dd>开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，<code>result</code>属性中将包含所读取文件的原始二进制数据。</dd>
  <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>
- <dd>开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，<code>result</code>属性中将包含一个<code>data:</code> URL格式的Base64字符串以表示所读取文件的内容。</dd>
+ <dd>开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，<code>result</code>属性中将包含一个<code>data:</code> URL 格式的 Base64 字符串以表示所读取文件的内容。</dd>
  <dt>{{domxref("FileReader.readAsText()")}}</dt>
  <dd>开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，<code>result</code>属性中将包含一个字符串以表示所读取的文件内容。</dd>
 </dl>
@@ -119,102 +119,12 @@ translation_of: Web/API/FileReader
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[1]</sup></td>
-   <td>7</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>12.02<sup>[2]</sup></td>
-   <td>6.0</td>
-  </tr>
-  <tr>
-   <td>Support in Web Workers</td>
-   <td>{{CompatGeckoDesktop(46)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>error</code> property uses {{domxref("DOMException")}}, not {{domxref("DOMError")}}</td>
-   <td>{{CompatGeckoDesktop(58)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>32</td>
-   <td>3</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>6.1</td>
-  </tr>
-  <tr>
-   <td>Support in Web Workers</td>
-   <td>{{CompatGeckoMobile(46)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>error</code> property uses {{domxref("DOMException")}}, not {{domxref("DOMError")}}</td>
-   <td>{{CompatGeckoMobile(58)}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Prior to Gecko 2.0 beta 7 (Firefox 4.0 beta 7), all {{domxref("Blob")}} parameters below were {{domxref("File")}} parameters; this has since been updated to match the specification correctly. Prior to Gecko 13.0 {{geckoRelease("13.0")}} the <code>FileReader.error</code> property returned a {{domxref("FileError")}} object. This interface has been removed and <code>FileReader.error</code> is now returning the {{domxref("DOMError")}} object as defined in the latest FileAPI draft.</p>
-
-<p>[2] Opera has <a href="http://www.opera.com/docs/specs/presto28/file/">partial support</a> in 11.1.</p>
+{{Compat("api.FileReader")}}
 
 <h2 id="See_also" name="See_also">相关链接</h2>
 
 <ul>
- <li><a href="/zh-CN/Using_files_from_web_applications" title="en/Using files from web applications">如何在web应用程序中使用文件</a></li>
+ <li><a href="/zh-CN/Using_files_from_web_applications" title="en/Using files from web applications">如何在 web 应用程序中使用文件</a></li>
  <li>{{domxref("File")}}</li>
  <li>{{domxref("Blob")}}</li>
 </ul>

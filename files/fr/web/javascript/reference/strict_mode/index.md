@@ -14,9 +14,9 @@ Le mode strict de [ECMAScript 5](https://www.ecma-international.org/publications
 
 Le mode strict apporte quelques changements à la sémantique « normale » de JavaScript:
 
-1.  Le mode strict élimine quelques erreurs silencieuses de JavaScript en les changeant en erreurs explicites (une exception sera levée).
-2.  Le mode strict corrige les erreurs qui font qu'autrement il est difficile pour les moteurs JavaScript d'effectuer des optimisations. Le code sera donc exécuté plus rapidement en mode strict, sans changer une seule ligne si cela n'est pas nécessaire.
-3.  Le mode strict interdit les mot-clés susceptibles d'être définis dans les futures versions de ECMAScript.
+1. Le mode strict élimine quelques erreurs silencieuses de JavaScript en les changeant en erreurs explicites (une exception sera levée).
+2. Le mode strict corrige les erreurs qui font qu'autrement il est difficile pour les moteurs JavaScript d'effectuer des optimisations. Le code sera donc exécuté plus rapidement en mode strict, sans changer une seule ligne si cela n'est pas nécessaire.
+3. Le mode strict interdit les mot-clés susceptibles d'être définis dans les futures versions de ECMAScript.
 
 Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict) pour plus de détails quant à la migration d'une base de code non-stricte vers une base de code compatible avec le mode strict.
 
@@ -331,7 +331,7 @@ function fun(static) { 'use strict'; } // !!!
 
 Deux défauts liés à Mozilla Firefox : tout d'abord si votre code est en JavaScript 1.7 ou supérieur (par exemple pour du code qui concerne le chrome dans les extensions ou lorsqu'on utilise les balises `<script type="">`) et qu'il est en mode strict, `let` et `yield` fonctionnent de la façon dont ils fonctionnaient originellement au sein de Firefox. En revanche, pour du code strict utilisé sur une page web et chargé avec `<script src="">` ou `<script>...</script>`, on ne pourra pas utiliser `let`/`yield` comme identifiants. Ensuite, bien qu'ES5 réserve les mots-clés `class`, `enum`, `export`, `extends`, `import`, et `super` pour le mode strict et le mode non strict, les versions antérieures à Firefox 5 ne réservaient ces mots-clés que pour le mode strict.
 
-Deuxièmement, [le mode strict interdit les déclarations de fonctions qui ne sont pas au niveau le plus haut d'un script ou d'une fonction](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En mode normal, il est possible de déclarer une fonction n'importe où avec une déclaration de fonction (voir {{jsxref("Instructions/function","function")}}). Ceci ne fait pas partie de la spécification ECMAScript et est donc une extension. [Le mode strict interdit cela](https://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls), ce qui permet de lever toute ambiguité par rapport aux futures spécifications ECMAScript sur cette fonctionnalité.  On notera que les instructions de fonctions écrites en dehors du plus haut niveau sont autorisées avec ES2015 :
+Deuxièmement, [le mode strict interdit les déclarations de fonctions qui ne sont pas au niveau le plus haut d'un script ou d'une fonction](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En mode normal, il est possible de déclarer une fonction n'importe où avec une déclaration de fonction (voir {{jsxref("Instructions/function","function")}}). Ceci ne fait pas partie de la spécification ECMAScript et est donc une extension. [Le mode strict interdit cela](https://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls), ce qui permet de lever toute ambiguité par rapport aux futures spécifications ECMAScript sur cette fonctionnalité.  On notera que les instructions de fonctions écrites en dehors du plus haut niveau sont autorisées avec ES2015 :
 
 ```js
 "use strict";

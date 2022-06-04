@@ -5,23 +5,23 @@ tags:
   - dbclick
 translation_of: Web/API/Element/dblclick_event
 ---
-<p>在单个元素上单击两次鼠标的指针设备按钮 (通常是小鼠的主按钮) 时, 将触发 <code>dblclick</code> 事件。</p>
+<p>在单个元素上单击两次鼠标的指针设备按钮 (通常是小鼠的主按钮) 时，将触发 <code>dblclick</code> 事件。</p>
 
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-dbclick">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("MouseEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">是</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消默认行为</dt>
- <dd style="margin: 0 0 0 120px;">是</dd>
- <dt style="float: left; text-align: right; width: 120px;">目标对象</dt>
- <dd style="margin: 0 0 0 120px;">元素（Element）</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">多种：开始 drag/drop 操作；开始文本选择、开始滚动或移动操作（若支持该操作时，可与鼠标中键协同） </dd>
+ <dt>规范</dt>
+ <dd><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-dbclick">DOM L3</a></dd>
+ <dt>接口</dt>
+ <dd>{{domxref("MouseEvent")}}</dd>
+ <dt>是否冒泡</dt>
+ <dd>是</dd>
+ <dt>可取消默认行为</dt>
+ <dd>是</dd>
+ <dt>目标对象</dt>
+ <dd>元素（Element）</dd>
+ <dt>默认行为</dt>
+ <dd>多种：开始 drag/drop 操作；开始文本选择、开始滚动或移动操作（若支持该操作时，可与鼠标中键协同） </dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -38,12 +38,12 @@ translation_of: Web/API/Element/dblclick_event
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td><a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></td>
-   <td>事件对象 (位于DOM树最上面的元素).</td>
+   <td>事件对象 (位于 DOM 树最上面的元素).</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
    <td><a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></td>
-   <td>事件类型.</td>
+   <td>事件类型。</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
@@ -68,144 +68,74 @@ translation_of: Web/API/Element/dblclick_event
   <tr>
    <td><code>currentTarget</code> {{readonlyInline}}</td>
    <td>EventTarget</td>
-   <td>被事件监听触发的节点.</td>
+   <td>被事件监听触发的节点。</td>
   </tr>
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
    <td>EventTarget</td>
-   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和<code>mouseleave</code> 事件: 值为与其互补的事件(比如<code>mouseenter</code> 就为<code>mouseleave</code>). 否则为<code>null</code>.</td>
+   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和<code>mouseleave</code> 事件：值为与其互补的事件 (比如<code>mouseenter</code> 就为<code>mouseleave</code>). 否则为<code>null</code>.</td>
   </tr>
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的屏幕x轴坐标.</td>
+   <td>点击事件发生时鼠标对应的屏幕 x 轴坐标。</td>
   </tr>
   <tr>
    <td><code>screenY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的屏幕y轴坐标.</td>
+   <td>点击事件发生时鼠标对应的屏幕 y 轴坐标。</td>
   </tr>
   <tr>
    <td><code>clientX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的浏览器窗口的x轴坐标.</td>
+   <td>点击事件发生时鼠标对应的浏览器窗口的 x 轴坐标。</td>
   </tr>
   <tr>
    <td><code>clientY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的浏览器窗口的y轴坐标.</td>
+   <td>点击事件发生时鼠标对应的浏览器窗口的 y 轴坐标。</td>
   </tr>
   <tr>
    <td><code>button</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>点击时按下的鼠标按钮: 左键=0, 中间按钮=1 (如果实现的话), 右键=2. 对于配置为左手使用按钮的操作被反转的鼠标，这些值从右向左读取。</td>
+   <td>点击时按下的鼠标按钮：左键=0，中间按钮=1 (如果实现的话), 右键=2. 对于配置为左手使用按钮的操作被反转的鼠标，这些值从右向左读取。</td>
   </tr>
   <tr>
    <td><code>buttons</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>当鼠标事件被触发时按钮的buttons: 左键=1, 右键=2, 中间按钮=4, 第四个按钮(通常是"返回")=8,第五个按钮(通常是"前进")=16.若有两个或以上的按钮按下,返回以逻辑或运算形成的合并值.例如左键右键同时按下就返回 3 (=1 | 2). <a href="/zh-CN/docs/Web/API/MouseEvent">更多信息</a>.</td>
+   <td>当鼠标事件被触发时按钮的 buttons: 左键=1，右键=2，中间按钮=4，第四个按钮 (通常是"返回")=8，第五个按钮 (通常是"前进")=16.若有两个或以上的按钮按下，返回以逻辑或运算形成的合并值。例如左键右键同时按下就返回 3 (=1 | 2). <a href="/zh-CN/docs/Web/API/MouseEvent">更多信息</a>.</td>
   </tr>
   <tr>
    <td><code>mozPressure</code> {{readonlyInline}}</td>
    <td>float</td>
-   <td>压力应用于接触或tabdevice时生成的事件的数量；该值介于0（最小压力）和1（最大压力）。</td>
+   <td>压力应用于接触或 tabdevice 时生成的事件的数量；该值介于 0（最小压力）和 1（最大压力）。</td>
   </tr>
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时ctrl按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 ctrl 按键被按下时为 true，否则为 false。</td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时shift按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 shift 按键被按下时为 true，否则为 false。</td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时alt按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 alt 按键被按下时为 true，否则为 false。</td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时meta按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 meta 按键被按下时为 true，否则为 false。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>On disabled form elements</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>On disabled form elements</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]只在{{HTMLElement("textarea")}} 以及某些{{HTMLElement("input")}} 元素上有效.</p>
+{{Compat("api.Element.dblclick_event")}}
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -6,13 +6,13 @@ translation_of: Web/API/ReadableStreamDefaultReader
 <p>{{APIRef("Streams")}}{{SeeCompatTable}}</p>
 
 <p><br>
- <span class="seoSummary"> <a href="/en-US/docs/Web/API/Streams_API">Streams API</a></span> 的 <strong>ReadableStreamDefaultReader </strong>的接口 表示一个可被用于读取来自网络提供的流数据(例如 fetch 请求)的默认读取器</p>
+  <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> 的 <strong>ReadableStreamDefaultReader </strong>的接口 表示一个可被用于读取来自网络提供的流数据 (例如 fetch 请求) 的默认读取器</p>
 
 <h2 id="构造方法">构造方法</h2>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader" title="ReadableStreamDefaultReader（）构造函数创建并返回一个ReadableStreamDefaultReader（）对象实例。"><code>ReadableStreamDefaultReader()</code></a></dt>
- <dd>创建 和 返回 一个 <code>ReadableStreamDefaultReader()</code> 对象实例.</dd>
+ <dd>创建 和 返回 一个 <code>ReadableStreamDefaultReader()</code> 对象实例。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -20,25 +20,25 @@ translation_of: Web/API/ReadableStreamDefaultReader
 <dl>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/closed" title="ReadableStream接口的封闭getter属性返回一个承诺，如果流关闭或读取器的锁被释放，则返回承诺;如果流错误则拒绝。"><code>ReadableStreamDefaultReader.closed</code></a><br>
     </dt>
- <dd>允许你编写 当stream结束时 执行的代码 . 如果这个stream变成关闭状态或者 reader 的锁(lock)被释放 则返回一个状态是 fulfills的 promise,如果这个stream 报错则返回rejects的promise.</dd>
+ <dd>允许你编写 当 stream 结束时 执行的代码 . 如果这个 stream 变成关闭状态或者 reader 的锁 (lock) 被释放 则返回一个状态是 fulfills 的 promise，如果这个 stream 报错则返回 rejects 的 promise.</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/cancel" title="ReadableStreamDefaultReader接口的cancel（）方法取消流，表示消费者对流中兴趣的丧失。 所提供的理由参数将被提供给潜在的来源，可能会或可能不会使用它。"><code>ReadableStreamDefaultReader.cancel()</code></a></dt>
- <dd>取消这个 stream, 表示对这个stream失去了兴趣. 提供的参数将传递给源source, 可能会也可能不会用到这些参数.</dd>
+ <dd>取消这个 stream，表示对这个 stream 失去了兴趣。提供的参数将传递给源 source，可能会也可能不会用到这些参数。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/read" title="ReadableStreamDefaultReader接口的read（）方法返回一个承诺，提供对流内部队列中下一个块的访问。"><code>ReadableStreamDefaultReader.read()</code></a></dt>
- <dd>返回一个promise,提供对stream内部队列中下一个块(chunk)访问的promise.</dd>
+ <dd>返回一个 promise，提供对 stream 内部队列中下一个块 (chunk) 访问的 promise.</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStreamDefaultReader/releaseLock" title="ReadableStreamDefaultReader接口的releaseLock（）方法释放读取器对流的锁定。"><code>ReadableStreamDefaultReader.releaseLock()</code></a></dt>
- <dd>释放读取这个stream的锁.</dd>
+ <dd>释放读取这个 stream 的锁。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>在下面的例子中, {{domxref("Response")}} 被创建为流 <font><font>HTML片段 fetched 来自其他源.</font></font></p>
+<p>在下面的例子中，{{domxref("Response")}} 被创建为流 HTML 片段 fetched 来自其他源。</p>
 
-<p>它展示了一个 {{domxref("ReadableStream")}} 和一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Uint8Array" title="有关这方面的文件尚未编写;  请考虑贡献！"><code>Uint8Array</code></a>组合使用的例子.</p>
+<p>它展示了一个 {{domxref("ReadableStream")}} 和一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Uint8Array" title="有关这方面的文件尚未编写;  请考虑贡献！"><code>Uint8Array</code></a>组合使用的例子。</p>
 
 <pre class="brush: js">fetch("https://www.example.org/").then((response) =&gt; {
   const reader = response.body.getReader();
@@ -68,7 +68,7 @@ translation_of: Web/API/ReadableStreamDefaultReader
 });
 </pre>
 
-<h2 id="产品规格"><font><font>产品规格</font></font></h2>
+<h2 id="产品规格">产品规格</h2>
 
 <table class="standard-table">
  <tbody>
@@ -87,58 +87,4 @@ translation_of: Web/API/ReadableStreamDefaultReader
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>{{CompatChrome(52.0)}}</p>
-   </td>
-   <td>{{CompatGeckoDesktop("57.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatOpera(39)}}</p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(39)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.ReadableStreamDefaultReader")}}

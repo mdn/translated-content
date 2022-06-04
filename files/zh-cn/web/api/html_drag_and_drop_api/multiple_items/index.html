@@ -6,13 +6,13 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 <p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
 
 <div class="overheadIndicator nonStandard nonStandardHeader">
-<p><strong>重要:</strong><br>
+<p><strong>重要：</strong><br>
  所有带有 <strong>moz</strong> 前缀的属性和方法（例如 <strong>mozSetDataAt() </strong>）都是 Gecko 浏览器引擎所特有的接口。这些接口只能在基于 Gecko 引擎的浏览器上使用。</p>
 </div>
 
 <p>Mozilla 提供了一些额外的非标准方法来支持多个元素的拖拽。这些方法中映射了 {{domxref("DataTransfer.types","types")}} 属性以及 {{domxref("DataTransfer.getData","getData()")}}，{{domxref("DataTransfer.setData","setData()")}} 和 {{domxref("DataTransfer.clearData","clearData()")}} 方法。不过，这些方法可以接受额外的参数来指定需要获取、修改或是移除的元素的下标。</p>
 
-<p class="note">本文中描述的拖拽过程均使用 {{domxref("DataTransfer")}} 接口。该过程不会使用 {{domxref("DataTransferItem")}} 接口，也不会使用 {{domxref("DataTransferItemList")}} 接口。</p>
+<p>本文中描述的拖拽过程均使用 {{domxref("DataTransfer")}} 接口。该过程不会使用 {{domxref("DataTransferItem")}} 接口，也不会使用 {{domxref("DataTransferItemList")}} 接口。</p>
 
 <h2 id="基于索引的添加和获取">基于索引的添加和获取</h2>
 
@@ -30,7 +30,7 @@ dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 <pre class="notranslate">event.dataTransfer.mozClearDataAt("text/plain", 1);
 </pre>
 
-<p class="note">注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：</p>
+<p>注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：</p>
 
 <pre class="notranslate">var dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
@@ -50,7 +50,7 @@ dt.mozSetDataAt("text/plain",    "URL3", 2);
 dt.mozClearDataAt("text/plain", 1);
 </pre>
 
-<p>当你移除了第二个元素中的所有数据项时，第二个元素就会被整个移除，原来的第三个元素变成了新的第二个元素，索引也相应变成了2。</p>
+<p>当你移除了第二个元素中的所有数据项时，第二个元素就会被整个移除，原来的第三个元素变成了新的第二个元素，索引也相应变成了 2。</p>
 
 <pre class="notranslate">// [item1] data=URL1, index=0
 // [item2] data=URL3, index=1
@@ -75,7 +75,7 @@ dt.mozClearDataAt("text/plain", 1);
 }
 </pre>
 
-<p>如果你想知道指定的类型在某个元素上是否存在，你可以使用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} 方法。与{{domxref("DataTransfer.types","types")}} 属性类似，它返回元素的数据类型列表。访问 {{domxref("DataTransfer.types","types ")}} 属性就相当于取索引为0的元素的数据类型列表。</p>
+<p>如果你想知道指定的类型在某个元素上是否存在，你可以使用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} 方法。与{{domxref("DataTransfer.types","types")}} 属性类似，它返回元素的数据类型列表。访问 {{domxref("DataTransfer.types","types ")}} 属性就相当于取索引为 0 的元素的数据类型列表。</p>
 
 <pre class="notranslate">var types = event.dataTransfer.mozTypesAt(1);
 </pre>
@@ -87,7 +87,7 @@ dt.mozClearDataAt("text/plain", 1);
 <pre class="notranslate">dt.mozSetDataAt("application/x-moz-file", file, 0);
 </pre>
 
-<p>通过使用这个方法，你可以传输任意的对象，尽管你可能不需要支持多元素的拖拽，但还是应该传入0当作索引。</p>
+<p>通过使用这个方法，你可以传输任意的对象，尽管你可能不需要支持多元素的拖拽，但还是应该传入 0 当作索引。</p>
 
 <p>同样的，你将需要使用 {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} 方法来获取这个文件对象或是任何其他对象。如果你使用 {{domxref("DataTransfer.getData","getData()")}} 方法，非字符类型数据将可能会使你得到一个空字符串。不过一些简单类型，像数字，是可以被转换成字符串的，所以在这种情况下使用 {{domxref("DataTransfer.getData","getData()")}} 是安全的。</p>
 

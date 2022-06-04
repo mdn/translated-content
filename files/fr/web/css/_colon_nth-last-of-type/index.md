@@ -32,7 +32,7 @@ La pseudo-classe `nth-last-of-type` prend un seul argument qui représente le mo
 
 ## Exemples
 
-Ici, on souhaite mettre en avant le deuxième élément {{HTMLElement("span")}} en partant de la fin :
+Ici, on souhaite mettre en avant le deuxième élément {{HTMLElement("span")}} en partant de la fin&nbsp;:
 
 ### CSS
 

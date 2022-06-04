@@ -10,11 +10,11 @@ translation_of: Web/API/Range/startOffset
 ---
 <p>{{ ApiRef("Range") }}</p>
 
-<p><code><strong>Range.startOffset</strong></code> <span style="line-height: 1.5;">是一个只读属性，</span>用于返回一个表示<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">Range</code><span style="line-height: 1.5;"> 在 </span><code style="font-style: normal; line-height: 1.5;">startContainer</code><span style="line-height: 1.5;"> 中的起始位置的数字。</span></p>
+<p><code><strong>Range.startOffset</strong></code> 是一个只读属性，用于返回一个表示 <code style="font-style: normal; line-height: 1.5;">Range</code> 在 <code style="font-style: normal; line-height: 1.5;">startContainer</code> 中的起始位置的数字。</p>
 
-<p>如果 <code>startContainer</code> 是一个文本（{{domxref("Text")}}）、注释（{{domxref("Comment")}}）或者CDATA区块（{{domxref("CDATASection")}}）节点，那么返回的偏移量是从<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">startContainer</code><span style="line-height: 1.5;"> 开始到 </span><span style="line-height: 1.5;">{{domxref("Range")}} 的</span><span style="line-height: 1.5;">边界点的字符数量</span><span style="line-height: 1.5;">。对于其他的节点类型，</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">startOffset</code><span style="line-height: 1.5;"> 返回</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">startContainer</code><span style="line-height: 1.5;"> 到边界点的子节点数量。</span></p>
+<p>如果 <code>startContainer</code> 是一个文本（{{domxref("Text")}}）、注释（{{domxref("Comment")}}）或者 CDATA 区块（{{domxref("CDATASection")}}）节点，那么返回的偏移量是从 <code style="font-style: normal; line-height: 1.5;">startContainer</code> 开始到 {{domxref("Range")}} 的边界点的字符数量。对于其他的节点类型， <code style="font-style: normal; line-height: 1.5;">startOffset</code> 返回 <code style="font-style: normal; line-height: 1.5;">startContainer</code> 到边界点的子节点数量。</p>
 
-<p><span style="line-height: 1.5;">可使用{{domxref("Range.setStart")}} 方法</span>改变<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">Range</code><span style="line-height: 1.5;"> </span>的<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">startOffset</code><span style="line-height: 1.5;"> 位置。</span></p>
+<p>可使用{{domxref("Range.setStart")}} 方法改变 <code style="font-style: normal; line-height: 1.5;">Range</code> 的 <code style="font-style: normal; line-height: 1.5;">startOffset</code> 位置。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 

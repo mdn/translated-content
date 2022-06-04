@@ -5,65 +5,18 @@ translation_of: Web/API/Document/scripts
 ---
 <p>{{ ApiRef() }}</p>
 <h3 id="Summary" name="Summary">概述</h3>
-<p>返回一个{{ domxref("HTMLCollection") }}对象,包含了当前文档中所有{{ HTMLElement("script") }}元素的集合.</p>
+<p>返回一个{{ domxref("HTMLCollection") }}对象，包含了当前文档中所有{{ HTMLElement("script") }}元素的集合。</p>
 <h3 id="Syntax" name="Syntax">语法</h3>
 <pre class="eval"><code>var <em>scriptList</em></code> = document.scripts;
 </pre>
-<p><code>scriptList是一个</code>{{ domxref("HTMLCollection") }}对象.你可以像使用数组一样通过索引来获取其中包含的{{ HTMLElement("script") }}元素.</p>
+<p><code>scriptList</code> 是一个 {{ domxref("HTMLCollection") }} 对象。你可以像使用数组一样通过索引来获取其中包含的 {{ HTMLElement("script") }} 元素。</p>
 <h3 id="例子">例子</h3>
-<p>下例演示了如何查看当前页面是否包含有{{ HTMLElement("script") }}元素.</p>
+<p>下例演示了如何查看当前页面是否包含有{{ HTMLElement("script") }}元素。</p>
 <pre class="brush: js">var scripts = document.scripts;
 
 if (scripts.length) {
-  alert("该页面存在script标签!");
+  alert("该页面存在 script 标签！");
 }
 </pre>
 <h3 id="Specification" name="Specification">浏览器兼容性</h3>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatGeckoDesktop("9.0") }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatGeckoMobile("9.0") }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h3 id="Specification" name="Specification">规范</h3>
-<p>{{ spec("http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts") }}</p>
-<p>{{ languages( {"en": "en/DOM/Document.scripts" } ) }}</p>
+{{Compat("api.Document.scripts")}}

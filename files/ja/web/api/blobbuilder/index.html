@@ -5,7 +5,7 @@ translation_of: Web/API/BlobBuilder
 ---
 <p>{{APIRef("File API")}}{{ obsolete_header}}</p>
 
-<p><code>BlobBuilder</code> インターフェースは、{{domxref("Blob")}} オブジェクトを構築する簡単な方法を提供します。単に <code>BlobBuilder</code> を作成し、 {{manch("append")}} メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら {{manch("getBlob")}} メソッドを呼んで、あなたがビルダに送り込んだデータの {{domxref("Blob")}} を取得してください。</p>
+<p><code>BlobBuilder</code> インターフェースは、{{domxref("Blob")}} オブジェクトを構築する簡単な方法を提供します。単に <code>BlobBuilder</code> を作成し、 <a href="#append">append</a> メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら <a href="#getblob">getBlob</a> メソッドを呼んで、あなたがビルダに送り込んだデータの {{domxref("Blob")}} を取得してください。</p>
 
 <div class="note"><strong>注記:</strong> <code>BlobBuilder</code> インターフェースは非推奨です。新しく導入された {{domxref('Blob')}} コンストラクタを使用してください。</div>
 
@@ -63,7 +63,7 @@ void append(
 
 <h3 id="getBlob">getBlob()</h3>
 
-<p>{{manch("append")}} メソッドで渡したデータから生成される {{domxref("Blob")}} オブジェクトを返します。</p>
+<p><a href="#append">append</a> メソッドで渡したデータから生成される {{domxref("Blob")}} オブジェクトを返します。</p>
 
 <pre class="syntaxbox notranslate">Blob getBlob(
   in DOMString contentType {{optional_inline}}
@@ -79,7 +79,7 @@ void append(
 
 <h6 id="戻り値">戻り値</h6>
 
-<p><code>BlobBuilder</code> が生成されてから {{manch("append")}} によって渡された全てのデータを含む {{domxref("Blob")}} オブジェクト。またこのメソッドにより <code>BlobBuilder</code> はリセットされ、次の {{manch("append")}} メソッド呼び出しでは、新しいの空のblobをスタートすることができます。</p>
+<p><code>BlobBuilder</code> が生成されてから <a href="#append">append</a> によって渡された全てのデータを含む {{domxref("Blob")}} オブジェクト。またこのメソッドにより <code>BlobBuilder</code> はリセットされ、次の <a href="#append">append</a> メソッド呼び出しでは、新しいの空のblobをスタートすることができます。</p>
 
 <h3 id="getFile_non-standard_inline">getFile() {{non-standard_inline}}</h3>
 

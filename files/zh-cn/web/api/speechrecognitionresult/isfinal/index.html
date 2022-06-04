@@ -11,7 +11,7 @@ translation_of: Web/API/SpeechRecognitionResult/isFinal
 ---
 <p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
 
-<p>{{domxref("SpeechRecognitionResult")}} 接口的<code><strong>isFinal</strong></code>只读属性是一个布尔值, 如果值是<code>true</code>, 则表示这是最后一次返回的结果 (语音识别结束)。如果为<code>false</code>, 表示识别尚未结束, 这只是一个临时的数据, 有可能会在稍后更新。</p>
+<p>{{domxref("SpeechRecognitionResult")}} 接口的<code><strong>isFinal</strong></code>只读属性是一个布尔值，如果值是<code>true</code>, 则表示这是最后一次返回的结果 (语音识别结束)。如果为<code>false</code>, 表示识别尚未结束，这只是一个临时的数据，有可能会在稍后更新。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,12 +25,12 @@ translation_of: Web/API/SpeechRecognitionResult/isFinal
 
 <pre class="brush: js">recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
-  // SpeechRecognitionResultList 对象包含 SpeechRecognitionResult 对象.
-  // 它有一个getter，所以它可以像数组一样被访问
-  // 第一个[0]返回 SpeechRecognitionResult 的第0个下标.
+  // SpeechRecognitionResultList 对象包含 SpeechRecognitionResult 对象。
+  // 它有一个 getter，所以它可以像数组一样被访问
+  // 第一个 [0] 返回 SpeechRecognitionResult 的第 0 个下标。
   // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects that contain individual results.
-  // 这些也有getter，因此可以像数组一样访问它们。
-  // 第二个[0]返回 SpeechRecognitionAlternative 所在的第0个下标。
+  // 这些也有 getter，因此可以像数组一样访问它们。
+  // 第二个 [0] 返回 SpeechRecognitionAlternative 所在的第 0 个下标。
   // 然后我们返回的记录属性 SpeechRecognitionAlternative 对象
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
@@ -58,79 +58,7 @@ translation_of: Web/API/SpeechRecognitionResult/isFinal
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(33)}} <sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(44)}} <sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>2.5</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>[1] 语音识别接口目前是Chrome的前缀, 所以你需要对接口进行添加适当的前缀, 比如, <code>webkitSpeechRecognition</code>; 同时, 你还需要一个来Web服务器来为代码 (API) 服务, 以便识别工作.</li>
- <li>[2] 可以通过 <a>about:config</a>(注意, 不同的浏览器会有不同的配置, 比如 chrome 中是 about:flag ) 中 <code>media.webspeech.recognition.enable</code> 标记来启动, 尽管目前的语音识别功能在桌面版 Firefox 浏览器中无法使用 — 一旦解决了所需的内部权限, 它将很快被正确地暴露出来。</li>
-</ul>
-
-<h3 id="Firefox_OS_权限">Firefox OS 权限</h3>
-
-<p>要在应用程序中使用语音识别，您需要在您的清单中指定以下<a href="/zh-CN/Apps/Build/Manifest">权限</a>:</p>
-
-<pre class="brush: json">"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}</pre>
-
-<p>你还需要一个有特权的应用程序，所以你也需要把它包含在内:</p>
-
-<pre class="brush: json">  "type": "privileged"</pre>
+{{Compat("api.SpeechRecognitionResult.isFinal")}}
 
 <h2 id="相关链接">相关链接</h2>
 

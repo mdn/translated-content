@@ -18,7 +18,9 @@ La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuff
 
 ## Syntaxe
 
-    typedArray.buffer
+```js
+typedArray.buffer
+```
 
 ## Description
 
@@ -37,7 +39,7 @@ uint16.buffer; // ArrayBuffer { byteLength: 8 }
 | Spécification                                                                                                                    | Statut                       | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

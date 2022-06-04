@@ -17,7 +17,9 @@ La méthode **`Object.getOwnPropertyDescriptors()`** renvoie l'ensemble des desc
 
 ## Syntaxe
 
-    Object.getOwnPropertyDescriptors(obj)
+```js
+Object.getOwnPropertyDescriptors(obj)
+```
 
 ### Paramètres
 
@@ -84,7 +86,7 @@ subclass.prototype = Object.create(
 
 | Spécification                                                                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ESDraft')}} |                      |
 | {{SpecName('ES2017', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ES2017')}}     | Définition initiale. |
 
 ## Compatibilité des navigateurs

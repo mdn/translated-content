@@ -79,7 +79,7 @@ L'élément **`<caption>`** définit la légende (ou le titre) d'un tableau.
 
 ## Attributs
 
-On peut utiliser[ les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
 ### Attributs obsolètes
 

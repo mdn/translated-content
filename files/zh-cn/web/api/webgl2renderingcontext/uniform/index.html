@@ -5,11 +5,11 @@ translation_of: Web/API/WebGL2RenderingContext/uniform
 ---
 <div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的<strong><code>WebGL2RenderingContext.uniform[1234][uif][v]()</code></strong> 方法提供了uniform（es）变量的详细值</p>
+<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的<strong><code>WebGL2RenderingContext.uniform[1234][uif][v]()</code></strong> 方法提供了 uniform（es）变量的详细值</p>
 
 <div class="note">
-<p><code>ui</code> <em>意为无符号整数</em>, <code>i</code> <em>意为整数, </em><code>f</code> <em>意为浮点数</em>, 并且 <code>v</code> <em>意为矢量.</em><br>
- 并不是所有的组合都是有效的: <code>u</code> 不能是 <code>f</code>的组合。详见下方语法表格。用 正则表达式概括语法: <code>uniform[1234](u?i|f)v?</code></p>
+<p><code>ui</code> <em>意为无符号整数</em>, <code>i</code> <em>意为整数，</em><code>f</code> <em>意为浮点数</em>, 并且 <code>v</code> <em>意为矢量。</em><br>
+ 并不是所有的组合都是有效的：<code>u</code> 不能是 <code>f</code>的组合。详见下方语法表格。用 正则表达式概括语法：<code>uniform[1234](u?i|f)v?</code></p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -36,11 +36,11 @@ void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
 
 <dl>
  <dt>location</dt>
- <dd>一个 {{domxref("WebGLUniformLocation")}} 对象包含了本地uniform属性的修改。</dd>
+ <dd>一个 {{domxref("WebGLUniformLocation")}} 对象包含了本地 uniform 属性的修改。</dd>
  <dt><code>value, v0, v1, v2, v3</code></dt>
- <dd>一个新的值被应用到uniform变量当中。合理情况：
+ <dd>一个新的值被应用到 uniform 变量当中。合理情况：
  <ul>
-  <li>{{jsxref("Number")}} 如果是无符号整数值 (则用 <code>ui</code>方法),如果是整数值 (则用 <code>i</code>方法), 如果是浮点数(则用<code>f</code>方法).</li>
+  <li>{{jsxref("Number")}} 如果是无符号整数值 (则用 <code>ui</code>方法),如果是整数值 (则用 <code>i</code>方法), 如果是浮点数 (则用<code>f</code>方法).</li>
   <li> {{jsxref("Uint32Array")}} 用于无符号整数向量（矢量）方法 (则用<code>uiv</code>方法).</li>
  </ul>
  </dd>
@@ -57,17 +57,17 @@ void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
   <tr>
    <th scope="col">详述</th>
    <th scope="col">状态</th>
-   <th scope="col">用法(Comment)</th>
+   <th scope="col">用法 (Comment)</th>
   </tr>
   <tr>
    <td>{{SpecName('WebGL2', "#3.7.8", "uniform")}}</td>
    <td>{{Spec2('WebGL2')}}</td>
-   <td>WebGL的初始定义.</td>
+   <td>WebGL 的初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 3.0', "glUniform.xhtml", "glUniform")}}</td>
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td>OpenGL API的手册页（类似）.</td>
+   <td>OpenGL API 的手册页（类似）.</td>
   </tr>
  </tbody>
 </table>

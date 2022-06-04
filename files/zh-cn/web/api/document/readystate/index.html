@@ -13,7 +13,7 @@ tags:
   - 属性
 translation_of: Web/API/Document/readyState
 ---
-<p>{{APIRef("DOM")}}{{ gecko_minversion_header("1.9.2") }}</p>
+<p>{{APIRef("DOM")}}</p>
 
 <p><strong><code>Document.readyState</code> </strong>属性描述了{{ domxref("document") }} 的加载状态。</p>
 
@@ -45,14 +45,14 @@ translation_of: Web/API/Document/readyState
     // 表示文档还在加载中，即处于“正在加载”状态。
     break;
   case "interactive":
-    // 文档已经结束了“正在加载”状态，DOM元素可以被访问。
+    // 文档已经结束了“正在加载”状态，DOM 元素可以被访问。
     // 但是像图像，样式表和框架等资源依然还在加载。
     var span = document.createElement("span");
     span.textContent = "A &lt;span&gt; element.";
     document.body.appendChild(span);
     break;
   case "complete":
-    // 页面所有内容都已被完全加载.
+    // 页面所有内容都已被完全加载。
     let CSS_rule = document.styleSheets[0].cssRules[0].cssText;
     console.log(`The first CSS rule is: ${CSS_rule }`);
     break;
@@ -76,7 +76,7 @@ document.onreadystatechange = function () {
   }
 }</pre>
 
-<h3 id="在_DOMContentLoaded_之前使用_readystatechange_作为事件处理程序以插入或修改DOM">在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改DOM</h3>
+<h3 id="在_DOMContentLoaded_之前使用_readystatechange_作为事件处理程序以插入或修改DOM">在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM</h3>
 
 <pre>document.addEventListener('readystatechange', event =&gt; {
   if (event.target.readyState === 'interactive') {

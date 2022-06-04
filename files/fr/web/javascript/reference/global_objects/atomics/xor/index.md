@@ -18,7 +18,9 @@ La méthode statique **`Atomics.xor()`** calcule le résultat d'un OU exclusif (
 
 ## Syntaxe
 
-    Atomics.xor(typedArray, index, valeur)
+```js
+Atomics.xor(typedArray, index, valeur)
+```
 
 ### Paramètres
 
@@ -35,7 +37,7 @@ L'ancienne valeur située à cet emplacement du tableau (`typedArray[index]`).
 
 ### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 
@@ -52,10 +54,12 @@ L'opération binaire OU exclusif (XOR) renvoie 1 si `a` et `b` sont différents.
 
 Par exemple, le calcul d'un OU exclusif binaire entre 5 et 1 (`5 ^ 1`) renvoie `0100`, qui correspond à 4 en notation décimale.
 
-    5  0101
-    1  0001
-       ----
-    4  0100
+```
+5  0101
+1  0001
+   ----
+4  0100
+```
 
 ## Exemples
 

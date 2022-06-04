@@ -20,7 +20,9 @@ La méthode **`join()`** fusionne l'ensemble des éléments d'un tableau en une 
 
 ## Syntaxe
 
-    typedarray.join([séparateur = ',']);
+```js
+typedarray.join([séparateur = ',']);
+```
 
 ### Paramètres
 
@@ -60,7 +62,7 @@ Mieux vaut ne pas ajouter de prothèses pour `TypedArray.prototype` si le moteur
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

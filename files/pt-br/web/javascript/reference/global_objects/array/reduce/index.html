@@ -40,9 +40,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
  <dd>Função que é executada em cada valor no array (exceto no primeiro, se nenhum <font face="Consolas, Liberation Mono, Courier, monospace"><code>valorInicial</code></font> for passado); recebe quatro argumentos:</dd>
 </dl>
 
-<p><strong><font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font></strong></p>
+<dl>
+ <dt><code>acumulador</code></dt>
+ <dd>É o valor inicial (ou o valor do callback anterior). Este valor inicia com o <font face="Consolas, Liberation Mono, Courier, monospace"><code>valorInicial</code></font> e será retornado na última iteração.</dd>
+</dl>
 
-<p>Opcional. O índice do elemento atual que está sendo processado no array. Começa a partir do index <code>0</code> se um <font face="Consolas, Liberation Mono, Courier, monospace"><code>valorInicial</code> </font>for fornecido. Do contrário, começa do index <code>1</code>.</p>
+<dl>
+ <dt><code>valorAtual</code></dt>
+ <dd>Opcional. O índice do elemento atual que está sendo processado no array. Começa a partir do index <code>0</code> se um <font face="Consolas, Liberation Mono, Courier, monospace"><code>valorInicial</code> </font>for fornecido. Do contrário, começa do index <code>1</code>.</dd>
+</dl>
 
 <dl>
  <dt><code>valorInicial</code></dt>

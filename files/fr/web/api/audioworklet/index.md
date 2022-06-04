@@ -25,7 +25,7 @@ L'accès à distance d'`AudioWorklet` du contexte audio se fait par la propriét
 
 ## Propriétés
 
-*L'interface `AudioWorklet` *ne définit pas de propriétés propres, mais hérite des propriétés de _{{domxref("Worklet")}}._
+*L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérite des propriétés de [`Worklet`](/fr/docs/Web/API/Worklet).*
 
 ## Méthodes
 
@@ -33,7 +33,7 @@ Cette interface hérite des méthodes de *{{domxref('Worklet')}}. L'interface `A
 
 ## Evénements
 
-L'*`AudioWorklet` *n'a pas d'événements auxquels il répond*.*
+*L'interface `AudioWorklet` n'a pas d'évènements auxquels elle répond.*
 
 ## Exemples
 

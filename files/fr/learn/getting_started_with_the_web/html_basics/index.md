@@ -18,7 +18,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_HTML
 
 ## Qu'est-ce que HTML, réellement ?
 
-HTML n'est pas un langage de programmation. C'est un _langage de balises_ qui définit la structure de votre contenu. HTML se compose d'une série d'**{{Glossary("element", "éléments")}}**, utilisés pour entourer, ou envelopper, les diverses parties du contenu pour les faire apparaître ou agir d'une certaine façon. Les {{Glossary("tag", "balises")}} entourantes peuvent être rendues par un mot ou une image lien hypertexte vers quelque chose d'autre, un texte en italique, une police plus grande ou plus petite, et ainsi de suite. Par exemple, avec la ligne de contenu suivante :
+HTML n'est pas un langage de programmation. C'est un _langage de balises_ qui définit la structure de votre contenu. HTML se compose d'une série d'**{{Glossary("element", "éléments")}}**, utilisés pour entourer, ou envelopper, les diverses parties du contenu pour les faire apparaître ou agir d'une certaine façon. Les {{Glossary("tag", "balises")}} entourantes peuvent être rendues par un mot ou une image lien hypertexte vers quelque chose d'autre, un texte en italique, une police plus grande ou plus petite, et ainsi de suite. Par exemple, avec la ligne de contenu suivante :
 
     Mon chat est très grincheux
 
@@ -55,19 +55,19 @@ Un attribut doit toujours avoir :
 
 ### Imbriquer des éléments
 
-Vous pouvez placer des éléments au sein d'autres éléments, c'est ce qu'on appelle l'**imbrication**. Par exemple, si vous souhaitez montrer que votre chat est **très** grincheux, vous pouvez placer le mot « très » dans un élement {{htmlelement("strong")}}, signifiant que le mot sera fortement mis en relief :
+Vous pouvez placer des éléments au sein d'autres éléments, c'est ce qu'on appelle l'**imbrication**. Par exemple, si vous souhaitez montrer que votre chat est **très** grincheux, vous pouvez placer le mot « très » dans un élement {{htmlelement("strong")}}, signifiant que le mot sera fortement mis en relief&nbsp;:
 
 ```html example-good
 <p>Mon chat est <strong>très</strong> grincheux.</p>
 ```
 
-Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l'exemple précédent, on ouvre l'élément {{htmlelement("p")}}, puis l'élément {{htmlelement("strong")}}. Nous devrons donc fermer l'élément {{htmlelement("strong")}} d'abord, puis l'élement {{htmlelement("p")}}. Le code suivant est incorrect :
+Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l'exemple précédent, on ouvre l'élément {{htmlelement("p")}}, puis l'élément {{htmlelement("strong")}}. Nous devrons donc fermer l'élément {{htmlelement("strong")}} d'abord, puis l'élement {{htmlelement("p")}}. Le code suivant est incorrect&nbsp;:
 
 ```html example-bad
 <p>Mon chat est <strong>très grincheux.</p></strong>
 ```
 
-Les éléments doivent être ouverts et fermés correctement de façon à ce qu'ils soient clairement à l'intérieur ou à l'extérieur les uns des autres. S'ils se chevauchent, le navigateur essaiera de choisir la meilleure option, qui ne sera peut-être pas ce que vous vouliez dire et pourrait conduire à des résultats inattendus. Donc ne le faites pas !
+Les éléments doivent être ouverts et fermés correctement de façon à ce qu'ils soient clairement à l'intérieur ou à l'extérieur les uns des autres. S'ils se chevauchent, le navigateur essaiera de choisir la meilleure option, qui ne sera peut-être pas ce que vous vouliez dire et pourrait conduire à des résultats inattendus. Donc ne le faites pas&nbsp;!
 
 ### Les éléments vides
 
@@ -103,7 +103,7 @@ Cet exemple contient :
 - `<head></head>` — l'élément `<head>`. Cet élément est utilisé comme un container pour toutes les choses qui font partie de la page HTML mais qui ne sont pas du contenu affiché. C'est dans cet élément qu'on mettra des {{Glossary("keyword", "mots-clés")}}, une description de la page qui apparaîtra sur les moteurs de recherche, les liens vers les fichiers CSS à utiliser pour la mise en forme, les déclarations des jeux de caractères à utiliser et ainsi de suite.
 - `<body></body>` — l'élément {{htmlelement("body")}}. Cet élément est celui qui contient _tout_ le contenu que vous souhaitez afficher pour qu'il soit vu par les visiteurs : cela peut être du texte, des images, des vidéos, des jeux, des pistes audio jouables, et ainsi de suite.
 - `<meta charset="utf-8">` — Cet élément définit le jeu de caractères qui devrait être utilisé pour le document et indique que c'est utf-8. utf-8 regroupe l'ensemble des caractères connus utilisés dans les différents langages humains. Généralement, utf-8 permet de gérer n'importe quel texte que vous pourriez utiliser sur la page. Il n'y a pas de raison de ne pas le définir, et il permet d'éviter certains problèmes plus tard.
-- `<title></title>` — L'élément {{htmlelement("title")}} définit le titre de votre page. C'est ce titre qui apparaîtra sur l'onglet lorsque la page sera chargée. C'est également ce titre qui sera utilisé pour décrire la page lorsque vous la placez dans vos marques-pages.
+- `<title></title>` — L'élément {{htmlelement("title")}} définit le titre de votre page. C'est ce titre qui apparaîtra sur l'onglet lorsque la page sera chargée. C'est également ce titre qui sera utilisé pour décrire la page lorsque vous la placez dans vos marques-pages.
 
 ## Images
 
@@ -115,7 +115,7 @@ Regardons à nouveau l'élément image :
 
 Comme on l'a vu auparavant, cet élément permet d'intégrer une image dans la page, à l'endroit où l'élément apparaît. L'image utilisée est définie via l'attribut `src` (pour source) qui contient le chemin vers le fichier de l'image.
 
-Nous avons aussi utilisé l'attribut `alt` (pour **alt**ernatif). Il contient un texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image, car :
+Nous avons aussi utilisé l'attribut `alt` (pour **alt**ernatif). Il contient un texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image, car&nbsp;:
 
 1.  ils sont mal-voyants. Les utilisateurs handicapés visuellement utilisent souvent des outils nommés lecteurs d'écrans pour lire le texte de cet attribut ;
 2.  quelque chose s'est mal passé et l'image n'a pas pu être affichée. Par exemple, modifiez volontairement le chemin dans votre attribut `src` et faites qu'il soit incorrect. Si vous enregistrez et rechargez la page, vous verrez quelque chose comme ceci à la place de l'image :
@@ -209,7 +209,7 @@ Les liens sont très importants, ce sont eux qui font que le web est une **_toil
     <a href="https://www.mozilla.org/fr/about/manifesto/">Manifeste Mozilla</a>
     ```
 
-Attention à ne pas oublier la partie avec `https://` ou `http://` qui représente le _protocole_ utilisé, au début de l'adresse. Une fois que vous avez créé un lien, testez votre page et cliquez dessus pour vous assurer qu'il fonctionne correctement.
+Attention à ne pas oublier la partie avec `https://` ou `http://` qui représente le _protocole_ utilisé, au début de l'adresse. Une fois que vous avez créé un lien, testez votre page et cliquez dessus pour vous assurer qu'il fonctionne correctement.
 
 > **Note :** `href` peut sembler un peu étrange à première vue. Une explication sur l'origine du nom pourra vous aider à mieux vous en souvenir : href correspond à <i lang="en">**h**ypertext **ref**erence</i> en anglais, ce qui signifie « référence hypertexte » en français.
 
@@ -230,7 +230,7 @@ Dans cet article, nous n'avons fait qu'effleurer la surface de HTML. Pour en app
 ## Dans ce module
 
 - [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web ?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
+- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
 - [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
 - [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
 - [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)

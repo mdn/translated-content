@@ -95,11 +95,11 @@ La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;
   En passant elle prit sur un rayon un pot de
   confiture portant cette étiquette,
   <span class="confiture">
-    « MARMELADE D’ORANGES. »
+    «&nbsp;MARMELADE D’ORANGES.&nbsp;»
   </span>
-  Mais, à son grand regret, le pot était vide :
+  Mais, à son grand regret, le pot était vide&nbsp;:
   elle n’osait le laisser tomber dans la crainte
-  de tuer quelqu’un ; aussi s’arrangea-t-elle de
+  de tuer quelqu’un&nbsp;; aussi s’arrangea-t-elle de
   manière à le déposer en passant dans une
   des armoires.
 </p>
@@ -117,7 +117,7 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 - [Contrôleur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3  | W3C Understanding WCAG 2.0 ](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_[(en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- _[Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Spécifications
 

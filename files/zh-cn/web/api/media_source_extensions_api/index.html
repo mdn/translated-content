@@ -5,7 +5,7 @@ translation_of: Web/API/Media_Source_Extensions_API
 ---
 <p>{{DefaultAPISidebar("Media Source Extensions")}}{{ SeeCompatTable() }}</p>
 
-<p>媒体源扩展 API（MSE） 提供了实现无插件且基于 Web 的流媒体的功能。使用 MSE，媒体串流能够通过 JavaScript 创建，并且能通过使用 {{htmlelement("audio")}} 和 {{htmlelement("video")}} 元素进行播放。</p>
+<p>媒体源扩展 API（MSE）提供了实现无插件且基于 Web 的流媒体的功能。使用 MSE，媒体串流能够通过 JavaScript 创建，并且能通过使用 {{htmlelement("audio")}} 和 {{htmlelement("video")}} 元素进行播放。</p>
 
 <h2 id="概念和用法">概念和用法</h2>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/Media_Source_Extensions_API
 
 <h3 id="MSE_标准">MSE 标准</h3>
 
-<p>媒体源扩展（MSE）实现后，情况就不一样了。MSE 使我们可以把通常的单个媒体文件的 <code>src</code> 值替换成引用 <code>MediaSource</code> 对象（一个包含即将播放的媒体文件的准备状态等信息的容器），以及引用多个 <code>SourceBuffer</code> 对象（代表多个组成整个串流的不同媒体块）的元素。MSE 让我们能够根据内容获取的大小和频率，或是内存占用详情（例如什么时候缓存被回收），进行更加精准地控制。 <span class="short_text" id="result_box" lang="zh-CN"><span>它是</span></span><span class="short_text" lang="zh-CN"><span>基于它可扩展的 API 建立自适应比特率流客户端（例如DASH 或 </span></span>HLS<span class="short_text" lang="zh-CN"><span> 的客户端）的基础。</span></span></p>
+<p>媒体源扩展（MSE）实现后，情况就不一样了。MSE 使我们可以把通常的单个媒体文件的 <code>src</code> 值替换成引用 <code>MediaSource</code> 对象（一个包含即将播放的媒体文件的准备状态等信息的容器），以及引用多个 <code>SourceBuffer</code> 对象（代表多个组成整个串流的不同媒体块）的元素。MSE 让我们能够根据内容获取的大小和频率，或是内存占用详情（例如什么时候缓存被回收），进行更加精准地控制。 它是基于它可扩展的 API 建立自适应比特率流客户端（例如 DASH 或 HLS 的客户端）的基础。</p>
 
 <p>在现代浏览器中创造能兼容 MSE 的媒体（assets）非常费时费力，还要消耗大量计算机资源和能源。此外，还须使用外部实用程序将内容转换成合适的格式。虽然浏览器支持兼容 MSE 的各种媒体容器，但采用 H.264 视频编码、AAC 音频编码和 MP4 容器的格式是非常常见的，且一定兼容。MSE 同时还提供了一个 API，用于运行时检测容器和编解码是否受支持。</p>
 
@@ -23,9 +23,9 @@ translation_of: Web/API/Media_Source_Extensions_API
 
 <p>DASH（Dynamic Adaptive Streaming over HTTP ）是一个规范了自适应内容应当如何被获取的协议。它实际上是建立在 MSE 顶部的一个层，用来构建自适应比特率串流客户端。虽然已经有一个类似的协议了（例如 HTTP 串流直播（HLS）），但 DASH 有最好的跨平台兼容性，这就是我们在这里介绍它的原因。</p>
 
-<p><span class="short_text" id="result_box" lang="zh-CN"><span>DASH 将大量逻辑从网络协议中移出到客户端应用程序逻辑中，使用更简单的 HTTP 协议获取文件。</span></span> <span id="result_box" lang="zh-CN"><span>这样就可以用一个简单的静态文件服务器来支持 DASH，这对CDN也很友好。</span></span><span id="result_box" lang="zh-CN"><span>这与之前的流传输解决方案形成鲜明对比，那些流解决方案需要昂贵的许可证来获得非标准的客户端/服务器协议才能实现。</span></span></p>
+<p>DASH 将大量逻辑从网络协议中移出到客户端应用程序逻辑中，使用更简单的 HTTP 协议获取文件。 这样就可以用一个简单的静态文件服务器来支持 DASH，这对 CDN 也很友好。这与之前的流传输解决方案形成鲜明对比，那些流解决方案需要昂贵的许可证来获得非标准的客户端/服务器协议才能实现。</p>
 
-<p><span id="result_box" lang="zh-CN"><span>DASH 的两个最常见的用例涉及“点播”或“直播”观看内容。点播功能让开发者有时间把媒体文件转码出多种不同的分辨率质量。</span></span></p>
+<p>DASH 的两个最常见的用例涉及“点播”或“直播”观看内容。点播功能让开发者有时间把媒体文件转码出多种不同的分辨率质量。</p>
 
 <p>实时处理内容会引入由转码和播发带来的延迟。因此 DASH 并不适用于类似 <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 的即时通讯。但它可以支持比 WebRTC 更多的客户端连接。</p>
 
@@ -73,69 +73,14 @@ translation_of: Web/API/Media_Source_Extensions_API
   <tr>
    <td>{{SpecName('Media Source Extensions')}}</td>
    <td>{{Spec2('Media Source Extensions')}}</td>
-   <td><span class="short_text" id="result_box" lang="zh-CN"><span>初始定义。</span></span></td>
+   <td>初始定义。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>23</td>
-   <td>{{CompatGeckoDesktop("25.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("42.0")}}</td>
-   <td>11<sup>[2]</sup></td>
-   <td>15</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>4.4.4</td>
-   <td>
-    <p>{{CompatNo}}</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>11</td>
-   <td>30</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在将 <code>about:config </code>中的首选项 <code>media.mediasource.enabled</code> 切换到 <code>true</code> 后才可支持。此外，这一版本的 Firefox 仅支持白名单内的网站，例如 YouTube、Netflix 以及其他流行的流媒体网站。此白名单在 Firefox 42+ 被移除，媒体源扩展默认被启用，且支持所有网站。</p>
-
-<p>[2] 只针对 Windows 8+。</p>
+{{Compat("api.MediaSource", 0)}}
 
 <h2 id="参见">参见</h2>
 

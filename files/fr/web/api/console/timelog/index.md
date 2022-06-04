@@ -15,7 +15,7 @@ translation_of: Web/API/Console/timeLog
 
 Affiche dans la console la valeur actuelle d'un timer précédemment appelé par {{domxref("console.time()")}}
 
-Voir [Timers](/en-US/docs/Web/API/console#Timers) dans la documentation pour des exemples et plus de détails
+Voir [Timers](/en-US/docs/Web/API/console#Timers) dans la documentation pour des exemples et plus de détails
 
 {{AvailableInWorkers}}
 
@@ -34,7 +34,7 @@ Si aucun label n'est inclus
 
     default: 1042ms
 
-Si un `label` est inclus:
+Si un `label` est inclus:
 
     timer name: 1242ms
 
@@ -60,7 +60,7 @@ Le résultat de l'exemple ci-dessus montre le temps qu'a mis l'utilisateur à fe
 
 ![](timer_output.png)
 
-Notez que le nom du timer est à la fois affiché lorsque la valeur est affichée par `timeLog()` et lorsque le timer est arrêté
+Notez que le nom du timer est à la fois affiché lorsque la valeur est affichée par `timeLog()` et lorsque le timer est arrêté
 
 ## Spécifications
 

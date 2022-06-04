@@ -3,7 +3,7 @@ title: MediaStream API
 slug: Web/API/Media_Streams_API
 tags:
   - 媒体
-  - 媒体流API
+  - 媒体流 API
   - 视频
   - 语音
   - 进一步的
@@ -12,19 +12,19 @@ translation_of: Web/API/Media_Streams_API
 ---
 <p>{{SeeCompatTable}}</p>
 
-<p>媒体流处理API（通常被称为媒体流API或流API）是描述音频或视频数据流的 <a href="/zh-CN/docs/WebRTC">WebRTC</a> 的一部分，处理它们的方法，与数据类型相关的约束，成功和错误 当异步使用数据时的回调以及在处理期间触发的事件。</p>
+<p>媒体流处理 API（通常被称为媒体流 API 或流 API）是描述音频或视频数据流的 <a href="/zh-CN/docs/WebRTC">WebRTC</a> 的一部分，处理它们的方法，与数据类型相关的约束，成功和错误 当异步使用数据时的回调以及在处理期间触发的事件。</p>
 
 <h2 id="基本概念">基本概念</h2>
 
-<p>这个API是基于操纵一个 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStream </span></font>对象代表音频或视频相关数据的流量。 通常一个 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStream</span></font>是作为一个简单的URL string 它可以用来引用存储在DOM中的数据 {{domxref("File")}}, 或者一个 {{domxref("Blob")}} 对象建立 {{domxref("window.URL.createObjectURL()")}}, <a href="https://developer.mozilla.org/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video">如视频所描述的</a>。</p>
+<p>这个 API 是基于操纵一个 MediaStream 对象代表音频或视频相关数据的流量。 通常一个 MediaStream 是作为一个简单的 URL string 它可以用来引用存储在 DOM 中的数据 {{domxref("File")}}, 或者一个 {{domxref("Blob")}} 对象建立 {{domxref("window.URL.createObjectURL()")}}, <a href="https://developer.mozilla.org/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video">如视频所描述的</a>。</p>
 
-<p>一个 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStream </span></font>包含零个或更多的 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStreamTrack </span></font>对象，代表着各种的声轨和视频轨。 每一个 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStreamTrack</span></font> 可能有一个或更多的通道。这个通道代表着媒体流的最小单元，比如一个音频信号对应着一个对应的扬声器，像是在立体声音轨中的左通道或右通道。</p>
+<p>一个 MediaStream 包含零个或更多的 MediaStreamTrack 对象，代表着各种的声轨和视频轨。 每一个 MediaStreamTrack 可能有一个或更多的通道。这个通道代表着媒体流的最小单元，比如一个音频信号对应着一个对应的扬声器，像是在立体声音轨中的左通道或右通道。</p>
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStream</span></font> 对象有着单一的输入和输出。由 <code><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia()</a></code> 创建的 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">MediaStream</span></font> 对象是在本地借助用户相机和麦克风的源输入。非本地的 <code>MediaStream</code> 代表了一个媒体元素, 像是{{HTMLElement("video")}} 元素或是 {{HTMLElement("audio")}}元素， 一般是源自网络的流，并通过 WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API" title="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或使用 <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> 获得{{domxref("MediaStreamAudioSourceNode")}} 元素。<code>MediaStream</code> 对象的输出能链接到一个<strong>用户。</strong> 它可以是一个媒体元素, 像是 <code>&lt;audio&gt;</code> 或者 <code>&lt;video&gt;</code>， the WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API" title="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或是 <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}。</p>
+<p>MediaStream 对象有着单一的输入和输出。由 <code><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia()</a></code> 创建的 MediaStream 对象是在本地借助用户相机和麦克风的源输入。非本地的 <code>MediaStream</code> 代表了一个媒体元素，像是{{HTMLElement("video")}} 元素或是 {{HTMLElement("audio")}}元素， 一般是源自网络的流，并通过 WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API" title="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或使用 <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> 获得{{domxref("MediaStreamAudioSourceNode")}} 元素。<code>MediaStream</code> 对象的输出能链接到一个<strong>用户。</strong> 它可以是一个媒体元素，像是 <code>&lt;audio&gt;</code> 或者 <code>&lt;video&gt;</code>， the WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API" title="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或是 <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}。</p>
 
 <h2 id="参考">参考</h2>
 
-<p>在这些参考文章中，您将找到构成Media Capture和Streams API的每个接口和事件需要了解的基本信息。</p>
+<p>在这些参考文章中，您将找到构成 Media Capture 和 Streams API 的每个接口和事件需要了解的基本信息。</p>
 
 <div class="index">
 <ul>
@@ -54,62 +54,7 @@ translation_of: Web/API/Media_Streams_API
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<p>{{Compat("api.MediaStream")}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera </th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Stream API </td>
-   <td>21{{ property_prefix("webkit") }} </td>
-   <td>nightly 18{{ property_prefix("moz") }} </td>
-   <td>{{ CompatUnknown() }} </td>
-   <td>12</td>
-   <td>{{ CompatUnknown() }} </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Stream API </td>
-   <td>{{ CompatNo() }} </td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }} </td>
-   <td>{{ CompatNo() }} </td>
-   <td>{{ CompatNo() }} </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>当前已经支持在Chrome,欧朋，和Firefox Nightly 18 浏览器使用WenRTC获取相机功能 。在Firefox Nightly 中启用WebRTC 需要你在配置中进行设置：</p>
-
-<ul>
- <li>在地址栏中输入"about:config" ，在需要改变的地方设置为是</li>
- <li>找到 "media.navigator.enabled" 的然后设置为true</li>
-</ul>
+{{Compat("api.MediaStream")}}
 
 <h2 id="See_Also">See Also</h2>
 

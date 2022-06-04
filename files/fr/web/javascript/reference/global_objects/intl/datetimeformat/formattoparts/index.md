@@ -19,7 +19,9 @@ La méthode **`Intl.DateTimeFormat.prototype.formatToParts()`** permet de mettre
 
 ## Syntaxe
 
-    Intl.DateTimeFormat.prototype.formatToParts(date)
+```js
+Intl.DateTimeFormat.prototype.formatToParts(date)
+```
 
 ### Paramètres
 

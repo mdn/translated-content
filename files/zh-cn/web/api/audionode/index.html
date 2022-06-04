@@ -5,11 +5,11 @@ translation_of: Web/API/AudioNode
 ---
 <div>{{ APIRef("Web Audio API") }} {{SeeCompatTable}}</div>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/5081/WebAudioBasics.png" style="float: left; height: 260px; margin: 10px; width: 355px;"><strong><code>AudioNode</code></strong><strong> </strong>接口是一个处理音频的通用模块, 比如一个音频源 (e.g. 一个 HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} 元素), 一个音频地址或者一个中间处理模块 (e.g. 一个过滤器如 {{domxref("BiquadFilterNode")}}, 或一个音量控制器如 {{domxref("GainNode")}}).</p>
+<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/5081/WebAudioBasics.png"><strong><code>AudioNode</code></strong><strong> </strong>接口是一个处理音频的通用模块，比如一个音频源 (e.g. 一个 HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} 元素), 一个音频地址或者一个中间处理模块 (e.g. 一个过滤器如 {{domxref("BiquadFilterNode")}}, 或一个音量控制器如 {{domxref("GainNode")}}).</p>
 
-<p><code>一个AudioNode</code> 既有输入也有输出。输入与输出都有一定数量的通道。<em>只有一个输出而没有输入的</em> <code>AudioNode</code> 叫做音频源。</p>
+<p><code>一个 AudioNode</code> 既有输入也有输出。输入与输出都有一定数量的通道。<em>只有一个输出而没有输入的</em> <code>AudioNode</code> 叫做音频源。</p>
 
-<p>处理多个 <code>AudioNode</code> 时，一般来说, 一个模块读取它的输入，做一些处理。后输出新生成的结果。</p>
+<p>处理多个 <code>AudioNode</code> 时，一般来说，一个模块读取它的输入，做一些处理。后输出新生成的结果。</p>
 
 <p>不同的模块可以连接在一起构建一个处理图。 这样一个处理图包含 {{domxref("AudioContext")}}。 每个 <code>AudioNode</code> 只有一个这样的上下文。</p>
 
@@ -24,12 +24,12 @@ translation_of: Web/API/AudioNode
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>返回这个node需要的输入数量. Source nodes are defined as nodes having a <code>numberOfInputs</code> attributes with a value of <code>0</code>.</dd>
+ <dd>返回这个 node 需要的输入数量. Source nodes are defined as nodes having a <code>numberOfInputs</code> attributes with a value of <code>0</code>.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
- <dd>返回这个node的输出数量. Destination nodes, like <code>AudioDestinationNode</code>, have a value of <code>0</code> for this attribute.</dd>
+ <dd>返回这个 node 的输出数量. Destination nodes, like <code>AudioDestinationNode</code>, have a value of <code>0</code> for this attribute.</dd>
 </dl>
 
 <dl>
@@ -40,7 +40,7 @@ translation_of: Web/API/AudioNode
 <dl>
  <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
  <dd>Represents an enumerated value describing the way channels must be matched between the inputs and the outputs. Possible values are:
- <table class="standard-table">
+ <table>
   <thead>
    <tr>
     <th scope="col">Value</th>
@@ -70,7 +70,7 @@ translation_of: Web/API/AudioNode
  <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
  <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how the up-mixing and the down-mixing will happen.<br>
  The possible values are <code>"speakers"</code> or <code>"discrete"</code>. In the case of <code>"speakers"</code>, the ordering of the channels have the following meaning, and the channels are often represented by a standard abbreviation:
- <table class="standard-table">
+ <table>
   <tbody>
    <tr>
     <td><em>Mono</em></td>
@@ -101,7 +101,7 @@ translation_of: Web/API/AudioNode
  </table>
  When the amount of channels doesn't match between an input and an output, up- or down-mixing happens according the following rules:
 
- <table class="standard-table">
+ <table>
   <thead>
    <tr>
     <th scope="row">Interpretation</th>
@@ -282,86 +282,7 @@ translation_of: Web/API/AudioNode
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>channelCount</code> <code>channelCountMode</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} (?)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>connect</code><code>(AudioParam)</code></td>
-   <td>{{CompatNo}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>channelCount</code><br>
-    <code>channelCountMode</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} (?)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>connect</code><code>(AudioParam)</code></td>
-   <td>{{CompatNo}}</td>
-   <td>Activated on Nightly only</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioNode")}}
 
 <h2 id="相关内容">相关内容</h2>
 

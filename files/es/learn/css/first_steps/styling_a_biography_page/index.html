@@ -1,0 +1,101 @@
+---
+title: Usa tu nuevo conocimiento
+slug: Learn/CSS/First_steps/Styling_a_biography_page
+tags:
+  - Aprendizaje
+  - CSS
+  - Principiante
+translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
+original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
+---
+<p>{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+
+<p class="summary">Con las cosas que has aprendido en las últimas lecciones, puedes darle formato a documentos de texto simple utilizando CSS para agregar tu propio estilo a ellos. Esta evaluación te da una posibilidad de hacer eso.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerrequisitos:</th>
+   <td>Antes de intentar esta evaluación, deberías haber trabajado a través del módulo de CSS básico, y también comprender HTML básico (estudia la <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introducción a HTML</a>).</td>
+  </tr>
+  <tr>
+   <th scope="row">Objetivo:</th>
+   <td>Utilizar algún CSS y probar conocimiento recién adquirido.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Punto_de_partida">Punto de partida</h2>
+
+<p>Puedes trabajar en el editor en vivo más abajo, o puedes descargar el punto de partida para trabajar con tu propio editor. Esta es una página HTML, con el inicio del CSS en el <code>&lt;head&gt;</code> del documento. Si prefieres, puedes mover este CSS a un archivo separado cuando crees el ejemplo en tu computador. Alternativamente, puedes usar una herramienta en línea como <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>, o <a href="https://glitch.com/" rel="noopener">Glitch</a> para trabajar en las tareas.</p>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Si te atascas, pide ayuda — mira la sección <a class="external external-icon" href="/es/docs/Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces#Evaluaci%C3%B3n_o_ayuda_adicional" rel="noopener">Evaluación o ayuda adicional</a> al final de esta página.</p>
+</div>
+
+<h2 id="Trabajando_con_CSS">Trabajando con CSS</h2>
+
+<p>Los siguientes ejemplos muestran una biografía, que ha sido estilizada usando CSS. Las propiedades CSS que se han utilizado son las siguientes - cada una enlaza a su página de propiedades en MDN, que te entregará más ejemplos de su uso:</p>
+
+<ul>
+ <li>{{cssxref("font-family")}}</li>
+ <li>{{cssxref("color")}}</li>
+ <li>{{cssxref("border-bottom")}}</li>
+ <li>{{cssxref("font-weight")}}</li>
+ <li>{{cssxref("font-size")}}</li>
+ <li>{{cssxref("text-decoration")}}</li>
+</ul>
+
+<p>Se ha usado una mezcla de selectores, elementos de estilo como <code>&lt;h1&gt;</code> y <code>&lt;h2&gt;</code>, y también una clase para el título del trabajo.</p>
+
+<p>Usa CSS para cambiar el aspecto de esta biografía, cambiando los valores de las propiedades iniciales.</p>
+
+<ol>
+ <li>Coloca en rosado el nivel <code>&lt;h1&gt;</code>, usando el color CSS <code>hotpink</code>.</li>
+ <li>Da al encabezado un {{cssxref("border-bottom")}} de 10px con puntos (<code>dotted</code>), que use el color CSS <code>purple</code>.</li>
+ <li>Coloca en cursiva el <code>&lt;h2&gt;</code>.</li>
+ <li>Al <code>ul</code> utilizado para los detalles de contacto un  {{cssxref("background-color")}}  <code>#eeeeee</code>, y un {{cssxref("border")}} de <code>5px solid purple</code>. Usa algo de {{cssxref("padding")}} para empujar el texto lejos del borde.</li>
+ <li>Cambia los enlaces a verde cuando pase el cursor sobre ellos.</li>
+</ol>
+
+<p>Deberías conseguir algo parecido a esta página:</p>
+
+<p><img alt="Screenshot of how the example should look after completing the assessment." src="https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png" style="height: 1199px; width: 1104px;"></p>
+
+<p>Posteriormente intenta buscar algunas propiedades no mencionadas en esta página en la <a href="/en-US/docs/Web/CSS/Reference">referencia de CSS de MDN</a> y ¡arriésgate!.</p>
+
+<p>Recuerda que no existen respuestas equivocadas acá - En esta etapa en tu aprendizaje puedes tener un poco de diversión.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}} </p>
+
+<h2 id="Evaluación_o_ayuda_adicional">Evaluación o ayuda adicional</h2>
+
+<p>Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:</p>
+
+<ol>
+ <li>Pon tu trabajo en un editor en línea con capacidad de compartir como <a class="external external-icon" href="https://codepen.io/" rel="noopener">CodePen</a>, <a class="external external-icon" href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>, o <a class="external external-icon" href="https://glitch.com/" rel="noopener">Glitch</a>.</li>
+ <li>Escribe una publicación solicitando evaluacion y/o ayuda en el <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Tu publicación debería incluir:
+  <ul>
+   <li>Un título descriptivo como "Requiero evaluacion para Primeros pasos en CSS".</li>
+   <li>Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.</li>
+   <li>Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un  editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica  - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.</li>
+   <li>Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="¿Qué_sigue">¿Qué sigue?</h2>
+
+<p>Felicitaciones por completar este primer modulo!. Deberías tener un buen entendimiento general de CSS, y ser capaz de comprender bastante de los que está sucediendo en una hoja de estilo. En el módulo siguiente, <a href="/en-US/docs/Learn/CSS/Building_blocks">bloques de construccion CSS</a>, revisaremos en profundidad algunas áreas clave.</p>
+
+<p>{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+
+<h2 id="En_este_módulo">En este módulo</h2>
+
+<ol>
+ <li><a href="/es/docs/Web/CSS/Como_iniciar/Que_es_CSS">¿Qué es CSS?</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/Comenzando_CSS">Empezando con CSS</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/Como_se_estructura_CSS">Cómo se estructura el CSS</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/Como_funciona_CSS">Cómo funciona CSS</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Usa tu nuevo conocimiento</a></li>
+</ol>

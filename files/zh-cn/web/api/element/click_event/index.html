@@ -24,7 +24,7 @@ translation_of: Web/API/Element/click_event
 
 <h2 id="属性">属性</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">属性</th>
@@ -36,12 +36,12 @@ translation_of: Web/API/Element/click_event
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td><a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></td>
-   <td>事件对象 (位于DOM树最上面的元素).</td>
+   <td>事件对象 (位于 DOM 树最上面的元素).</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
    <td><a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></td>
-   <td>事件类型.</td>
+   <td>事件类型。</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
@@ -66,67 +66,67 @@ translation_of: Web/API/Element/click_event
   <tr>
    <td><code>currentTarget</code> {{readonlyInline}}</td>
    <td>EventTarget</td>
-   <td>被事件监听触发的节点.</td>
+   <td>被事件监听触发的节点。</td>
   </tr>
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
    <td>EventTarget</td>
-   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和<code>mouseleave</code> 事件: 值为与其互补的事件(比如<code>mouseenter</code> 就为<code>mouseleave</code>). 否则为<code>null</code>.</td>
+   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和<code>mouseleave</code> 事件：值为与其互补的事件 (比如<code>mouseenter</code> 就为<code>mouseleave</code>). 否则为<code>null</code>.</td>
   </tr>
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的屏幕x轴坐标.</td>
+   <td>点击事件发生时鼠标对应的屏幕 x 轴坐标。</td>
   </tr>
   <tr>
    <td><code>screenY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的屏幕y轴坐标.</td>
+   <td>点击事件发生时鼠标对应的屏幕 y 轴坐标。</td>
   </tr>
   <tr>
    <td><code>clientX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的浏览器窗口的x轴坐标.</td>
+   <td>点击事件发生时鼠标对应的浏览器窗口的 x 轴坐标。</td>
   </tr>
   <tr>
    <td><code>clientY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>点击事件发生时鼠标对应的浏览器窗口的y轴坐标.</td>
+   <td>点击事件发生时鼠标对应的浏览器窗口的 y 轴坐标。</td>
   </tr>
   <tr>
    <td><code>button</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>点击时按下的鼠标按钮: 左键=0, 中间按钮=1 (如果实现的话), 右键=2. 对于配置为左手使用按钮的操作被反转的鼠标，这些值从右向左读取。</td>
+   <td>点击时按下的鼠标按钮：左键=0，中间按钮=1 (如果实现的话), 右键=2. 对于配置为左手使用按钮的操作被反转的鼠标，这些值从右向左读取。</td>
   </tr>
   <tr>
    <td><code>buttons</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>当鼠标事件被触发时按钮的buttons: 左键=1, 右键=2, 中间按钮=4, 第四个按钮(通常是"返回")=8,第五个按钮(通常是"前进")=16.若有两个或以上的按钮按下,返回以逻辑或运算形成的合并值.例如左键右键同时按下就返回 3 (=1 | 2). <a href="/zh-CN/docs/Web/API/MouseEvent">更多信息</a>.</td>
+   <td>当鼠标事件被触发时按钮的 buttons: 左键=1，右键=2，中间按钮=4，第四个按钮 (通常是"返回")=8，第五个按钮 (通常是"前进")=16.若有两个或以上的按钮按下，返回以逻辑或运算形成的合并值。例如左键右键同时按下就返回 3 (=1 | 2). <a href="/zh-CN/docs/Web/API/MouseEvent">更多信息</a>.</td>
   </tr>
   <tr>
    <td><code>mozPressure</code> {{readonlyInline}}</td>
    <td>float</td>
-   <td>压力应用于接触或tabdevice时生成的事件的数量；该值介于0（最小压力）和1（最大压力）。</td>
+   <td>压力应用于接触或 tabdevice 时生成的事件的数量；该值介于 0（最小压力）和 1（最大压力）。</td>
   </tr>
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时ctrl按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 ctrl 按键被按下时为 true，否则为 false。</td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时shift按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 shift 按键被按下时为 true，否则为 false。</td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时alt按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 alt 按键被按下时为 true，否则为 false。</td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件被触发时meta按键被按下时为true，否则为false。</td>
+   <td>当事件被触发时 meta 按键被按下时为 true，否则为 false。</td>
   </tr>
  </tbody>
 </table>
@@ -137,7 +137,7 @@ translation_of: Web/API/Element/click_event
 
 &lt;script&gt;
   document.getElementById("test").addEventListener("click", function( event ) {
-    // 在被点击的div内显示当前被点击次数
+    // 在被点击的 div 内显示当前被点击次数
     event.target.textContent = "click count: " + event.detail;
   }, false);
 &lt;/script&gt;
@@ -147,111 +147,52 @@ translation_of: Web/API/Element/click_event
 
 <h3 id="Internet_Explorer">Internet Explorer</h3>
 
-<p>Internet Explorer 8 &amp; 9存在一个漏洞，具有经{{cssxref("background-color")}}样式计算为<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a>的元素覆盖在其它元素顶端时，不会收到<code>click</code>事件。取而代之，所有<code>click</code>事件将被触发于其底下的元素。参见<a href="http://jsfiddle.net/YUKma/show/">this live example</a>样例。</p>
+<p>Internet Explorer 8 &amp; 9 存在一个漏洞，具有经{{cssxref("background-color")}}样式计算为<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a>的元素覆盖在其它元素顶端时，不会收到<code>click</code>事件。取而代之，所有<code>click</code>事件将被触发于其底下的元素。参见<a href="http://jsfiddle.net/YUKma/show/">this live example</a>样例。</p>
 
 <p>已知会触发此漏洞的情景：</p>
 
 <ul>
- <li>仅对于IE9：
+ <li>仅对于 IE9：
   <ul>
    <li>设置<code>{{cssxref("background-color")}}: <a href="/en-US/docs/Web/CSS/color_value#rgba()">rgba</a>(0,0,0,0)</code></li>
    <li>设置<code>{{cssxref("opacity")}}: 0</code> 并且明确指定{{cssxref("background-color")}}而不是<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
   </ul>
  </li>
- <li>对于IE8和IE9：设置<code><a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a>: alpha(opacity=0);</code>并且明确指定{{cssxref("background-color")}}而不是<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
+ <li>对于 IE8 和 IE9：设置<code><a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a>: alpha(opacity=0);</code>并且明确指定{{cssxref("background-color")}}而不是<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
 </ul>
 
-<h3 id="Safari手机版">Safari手机版</h3>
+<h3 id="Safari手机版">Safari 手机版</h3>
 
-<p>safari手机版会有一个bug，当点击事件不是绑定在交互式的元素上（比如说HTML的div），并且也没有直接的事件监听器绑定在他们自身。可以戳 <a href="http://jsfiddle.net/cvrhulu/k9t0sdnf/show/">链接</a> 查看演示。也可以看 <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari 的可点击元素</a> 和 <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">点击元素的定义</a>.</p>
+<p>safari 手机版会有一个 bug，当点击事件不是绑定在交互式的元素上（比如说 HTML 的 div），并且也没有直接的事件监听器绑定在他们自身。可以戳 <a href="http://jsfiddle.net/cvrhulu/k9t0sdnf/show/">链接</a> 查看演示。也可以看 <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari 的可点击元素</a> 和 <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">点击元素的定义</a>.</p>
 
 <p>解决方法如下：</p>
 
 <ul>
- <li>为其元素或者祖先元素，添加cursor: pointer的样式，使元素具有交互式点击</li>
- <li>为需要交互式点击的元素添加<code>onclick="void(0)"的属性，但并不包括body元素</code></li>
- <li><code>使用可点击元素如&lt;a&gt;,代替不可交互式元素如div</code></li>
- <li>不使用click的事件委托。</li>
+ <li>为其元素或者祖先元素，添加 cursor: pointer 的样式，使元素具有交互式点击</li>
+ <li>为需要交互式点击的元素添加<code>onclick="void(0)"的属性，但并不包括 body 元素</code></li>
+ <li><code>使用可点击元素如&lt;a&gt;,代替不可交互式元素如 div</code></li>
+ <li>不使用 click 的事件委托。</li>
 </ul>
 
-<p>Safari 手机版里，以下元素不会受到上述bug的影响：</p>
+<p>Safari 手机版里，以下元素不会受到上述 bug 的影响：</p>
 
 <ul>
- <li>&lt;a&gt; 需要href链接</li>
- <li>&lt;area&gt; 需要href</li>
+ <li>&lt;a&gt; 需要 href 链接</li>
+ <li>&lt;area&gt; 需要 href</li>
  <li>&lt;button&gt;</li>
  <li>&lt;img&gt;</li>
  <li>&lt;input&gt;</li>
- <li>&lt;label&gt; 需要与form控制器连接</li>
- <li>这份清单并不完整，你可以帮助MDN做扩展</li>
+ <li>&lt;label&gt; 需要与 form 控制器连接</li>
+ <li>这份清单并不完整，你可以帮助 MDN 做扩展</li>
 </ul>
 
-<p>{{CompatibilityTable}}</p>
+<h2 id="规范">规范</h2>
 
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>On disabled form elements</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>On disabled form elements</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>[1]只在{{HTMLElement("textarea")}} 以及某些{{HTMLElement("input")}} 元素上有效.</p>
-
-<p>[2] Internet Explorer 只在{{HTMLElement("input")}}的<code>checkbox</code>或<code>radio</code>元素双击时才会引发<code>click</code>事件.</p>
+{{Compat("api.Element.click_event")}}
 
 <h2 id="相关链接">相关链接</h2>
 

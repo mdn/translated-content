@@ -15,7 +15,7 @@ var binaryType = aWebSocket.binaryType;
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) ayant l'une de ces deux valeurs :
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) ayant l'une de ces deux valeurs&nbsp;:
 
 - `"blob"`
   - : Utilise des objets [`Blob`](/fr/docs/Web/API/Blob) pour les données binaires. Il s'agit de la valeur par défaut.

@@ -6,7 +6,7 @@ translation_of: Web/API/IDBCursor/key
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p><strong>key</strong>是只读属性，返回在游标中的位置。如果游标在范围之外，这个值会被置为undefined。游标的key可以是任何数据类型。</p>
+<p><strong>key</strong>是只读属性，返回在游标中的位置。如果游标在范围之外，这个值会被置为 undefined。游标的 key 可以是任何数据类型。</p>
 
 <p>{{AvailableInWorkers}}</p>
 </div>
@@ -21,11 +21,11 @@ translation_of: Web/API/IDBCursor/key
 
 <h2 id="示例">示例</h2>
 
-<p>在该示例中，我们创建一个事务，检索一个存储对象，然后使用游标遍历所有存储在object store 中的记录。遍历的过程中，我们把类似（相簿标题，这是我们的键key），游标的key打印出来。</p>
+<p>在该示例中，我们创建一个事务，检索一个存储对象，然后使用游标遍历所有存储在 object store 中的记录。遍历的过程中，我们把类似（相簿标题，这是我们的键 key），游标的 key 打印出来。</p>
 
-<p>我们可以不根据游标的key来选取数据；我们可以抓取所有。还要注意，在循环的每个迭代中，您可以使用cursor.value.foo从当前记录下获取数据。完整示例，请看<span style="line-height: 1.5;"><a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>我们可以不根据游标的 key 来选取数据；我们可以抓取所有。还要注意，在循环的每个迭代中，您可以使用 cursor.value.foo 从当前记录下获取数据。完整示例，请看<a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a>.)</p>
 
-<pre style="font-size: 14px;"><span style="line-height: 1.5;">function displayData() {</span>
+<pre style="font-size: 14px;">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -68,118 +68,7 @@ translation_of: Web/API/IDBCursor/key
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>23{{property_prefix("webkit")}}<br>
-    24</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10 {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}}</td>
-   <td>10, partial</td>
-   <td>15</td>
-   <td>7.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Binary keys</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("51.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Indexed Database 2.0</td>
-   <td>{{CompatChrome(58)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>10</td>
-   <td>22</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Binary keys</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("51.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Indexed Database 2.0</td>
-   <td>{{CompatChrome(58)}}</td>
-   <td>{{CompatChrome(58)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.IDBCursor.key")}}
 
 <h2 id="相关链接">相关链接</h2>
 

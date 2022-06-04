@@ -15,11 +15,11 @@ translation_of: Web/API/HTMLElement/offsetHeight
 
 <p> <strong><code>HTMLElement.offsetHeight</code></strong> 是一个只读属性，它返回该元素的像素高度，高度包含该元素的垂直内边距和边框，且是一个整数。</p>
 
-<p><span style="background-color: #fbfcfe; color: #333333; font-family: arial; line-height: 24px;">通常，元素的offsetHeight是一种元素CSS高度的衡量标准，包括元素的边框、内边距和元素的水平滚动条（如果存在且渲染的话），不包含:before或:after等伪类元素的高度。</span></p>
+<p>通常，元素的 offsetHeight 是一种元素 CSS 高度的衡量标准，包括元素的边框、内边距和元素的水平滚动条（如果存在且渲染的话），不包含:before 或:after 等伪类元素的高度。</p>
 
-<p><span style="background-color: #fbfcfe; color: #333333; font-family: arial; line-height: 24px;">对于文档的body对象，它包括代替元素的CSS高度线性总含量高。</span>浮动元素的向下延伸内容高度是被忽略的。 </p>
+<p>对于文档的 body 对象，它包括代替元素的 CSS 高度线性总含量高。浮动元素的向下延伸内容高度是被忽略的。 </p>
 
-<p>如果元素被隐藏（例如 元素或者元素的祖先之一的元素的style.display被设置为none），则返回0</p>
+<p>如果元素被隐藏（例如 元素或者元素的祖先之一的元素的 style.display 被设置为 none），则返回 0</p>
 
 <div class="note">
 <p>这个属性值会被四舍五入为整数值，如果你需要一个浮点数值，请用 {{ domxref("element.getBoundingClientRect()") }}.</p>
@@ -30,13 +30,13 @@ translation_of: Web/API/HTMLElement/offsetHeight
 <pre class="eval">var <em>intElemOffsetHeight</em> = document.getElementById(<em>id_attribute_value</em>).offsetHeight;
 </pre>
 
-<p><em>intElemOffsetHeight</em><span style="background-color: #fbfcfe; color: #333333; font-family: arial; line-height: 24px;">是一个变量存储对应元素的</span>offsetHeight<span style="background-color: #fbfcfe; color: #333333; font-family: arial; line-height: 24px;">像素的整数值。</span>offsetHeight<span style="background-color: #fbfcfe; color: #333333; font-family: arial; line-height: 24px;">属性是只读的。</span></p>
+<p><em>intElemOffsetHeight</em>是一个变量存储对应元素的 offsetHeight 像素的整数值。offsetHeight 属性是只读的。</p>
 
 <h2 id="Example" name="Example">示例</h2>
 
 <p><img alt="Image:Dimensions-offset.png" src="https://developer.mozilla.org/@api/deki/files/186/=Dimensions-offset.png"></p>
 
-<p>上面的图片中显示了scollbar和窗口高度的offsetHeight.但是不能滚动的元素可能会有一个很大的高度值，大于可以看见的内容。这些元素原则上是被包含在滚动元素之中的。所以，这些不能滚动的元素可能会因为scrollTop的值会被完全隐藏或者部分隐藏；</p>
+<p>上面的图片中显示了 scollbar 和窗口高度的 offsetHeight.但是不能滚动的元素可能会有一个很大的高度值，大于可以看见的内容。这些元素原则上是被包含在滚动元素之中的。所以，这些不能滚动的元素可能会因为 scrollTop 的值会被完全隐藏或者部分隐藏；</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 
@@ -59,7 +59,7 @@ translation_of: Web/API/HTMLElement/offsetHeight
 
 <h3 id="Notes" name="Notes">备注</h3>
 
-<p><span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">offsetHeight 是一个DOM属性，由MSIE首次提出。</span><span style="background-color: #fbfcfe; color: #333333; font-family: arial; line-height: 24px;">它有时被称为一个元素的物理/图形的尺寸，或是一个元素的边界框（border-box）的高度。</span></p>
+<p>offsetHeight 是一个 DOM 属性，由 MSIE 首次提出。它有时被称为一个元素的物理/图形的尺寸，或是一个元素的边界框（border-box）的高度。</p>
 
 <h2 id="See_Also" name="See_Also">浏览器兼容性</h2>
 

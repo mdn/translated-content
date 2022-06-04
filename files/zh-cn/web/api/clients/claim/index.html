@@ -5,9 +5,9 @@ translation_of: Web/API/Clients/claim
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Worker Clients")}}</p>
 
-<p><span class="seoSummary">{{domxref("Clients")}} 接口的  <strong><code>claim()</code></strong> 方法允许一个激活的 service worker 将自己设置为其 {{domxref("ServiceWorkerRegistration.scope", "scope")}} 内所有</span>clients 的<span class="seoSummary">{{domxref("ServiceWorkerContainer.controller", "controller")}} . 这会在由此service worker 控制的任何 clients 中触发 {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}}  上的  "<code>controllerchange</code>"  事件.</span></p>
+<p>{{domxref("Clients")}} 接口的  <strong><code>claim()</code></strong> 方法允许一个激活的 service worker 将自己设置为其 {{domxref("ServiceWorkerRegistration.scope", "scope")}} 内所有 clients 的{{domxref("ServiceWorkerContainer.controller", "controller")}} . 这会在由此 service worker 控制的任何 clients 中触发 {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}}  上的  "<code>controllerchange</code>"  事件。</p>
 
-<p>当一个 service worker 被初始注册时，页面在下次加载之前不会使用它。 <code>claim()</code> 方法会立即控制这些页面。请注意，这会导致 service worker 控制通过网络定期加载的页面，或者可能通过不同的 service worker 加载.</p>
+<p>当一个 service worker 被初始注册时，页面在下次加载之前不会使用它。 <code>claim()</code> 方法会立即控制这些页面。请注意，这会导致 service worker 控制通过网络定期加载的页面，或者可能通过不同的 service worker 加载。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,20 +32,7 @@ translation_of: Web/API/Clients/claim
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients-claim', 'claim()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

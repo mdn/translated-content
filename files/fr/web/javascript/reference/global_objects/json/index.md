@@ -40,53 +40,55 @@ eval(code); // provoque une SyntaxError pour les anciens moteurs
 
 ## Syntaxe complète
 
-    JSON = null
-        ou true ou false
-        ou NombreJSON
-        ou ChaîneJSON
-        ou ObjetJSON
-        ou TableauJSON
+```
+JSON = null
+    ou true ou false
+    ou NombreJSON
+    ou ChaîneJSON
+    ou ObjetJSON
+    ou TableauJSON
 
-    NombreJSON = - NombrePositif
-              ou NombrePositif
-    NombrePositif = NombreDécimal
-                  ou NombreDécimal . Chiffres
-                  ou NombreDécimal . Chiffres PartiExposant
-                  ou NombreDécimal PartiExposant
-    NombreDécimal = 0
-                 ou UnÀNeuf Chiffres
-    PartiExposant = e Exposant
-                ou E Exposant
-    Exposant = Chiffres
-            ou + Chiffres
-            ou - Chiffres
-    Chiffres = Chiffre
-          ou Chiffres Chiffre
-    Chiffre = 0 à 9
-    UnÀNeuf = 1 à 9
+NombreJSON = - NombrePositif
+          ou NombrePositif
+NombrePositif = NombreDécimal
+              ou NombreDécimal . Chiffres
+              ou NombreDécimal . Chiffres PartiExposant
+              ou NombreDécimal PartiExposant
+NombreDécimal = 0
+              ou UnÀNeuf Chiffres
+PartiExposant = e Exposant
+            ou E Exposant
+Exposant = Chiffres
+        ou + Chiffres
+        ou - Chiffres
+Chiffres = Chiffre
+      ou Chiffres Chiffre
+Chiffre = 0 à 9
+UnÀNeuf = 1 à 9
 
-    ChaîneJSON = ""
-              ou " ChaîneCaractères "
-    ChaîneCaractères = ChaîneCaractère
-                    ou ChaîneCaractères ChaîneCaractère
-    ChaîneCaractère = un caractère
-                      sauf " ou \ ou U+0000 à U+001F
-                   ou SéquenceÉchappement
-    SéquenceÉchappement = \" ou \/ ou \\ ou \b ou \f ou \n ou \r ou \t
-                  ou \u ChifreHexadécimal ChifreHexadécimal ChifreHexadécimal ChifreHexadécimal
-    ChifreHexadécimal = 0 à 9
-            ou A à F
-            ou a à f
+ChaîneJSON = ""
+          ou " ChaîneCaractères "
+ChaîneCaractères = ChaîneCaractère
+                ou ChaîneCaractères ChaîneCaractère
+ChaîneCaractère = un caractère
+                  sauf " ou \ ou U+0000 à U+001F
+                ou SéquenceÉchappement
+SéquenceÉchappement = \" ou \/ ou \\ ou \b ou \f ou \n ou \r ou \t
+              ou \u ChifreHexadécimal ChifreHexadécimal ChifreHexadécimal ChifreHexadécimal
+ChifreHexadécimal = 0 à 9
+        ou A à F
+        ou a à f
 
-    ObjetJSON = { }
-              ou { Membres }
-    Membres = ChaîneJSON : JSON
-           ou Membres , ChaîneJSON : JSON
+ObjetJSON = { }
+          ou { Membres }
+Membres = ChaîneJSON : JSON
+        ou Membres , ChaîneJSON : JSON
 
-    TableauJSON = [ ]
-             ou [ ÉlémentsTableau ]
-    ÉlémentsTableau = JSON
-                 ou ÉlémentsTableau , JSON
+TableauJSON = [ ]
+          ou [ ÉlémentsTableau ]
+ÉlémentsTableau = JSON
+              ou ÉlémentsTableau , JSON
+```
 
 Des espaces blancs insignifiants peuvent être présents n’importe où sauf dans un `JSONNumber` (les nombres ne doivent pas contenir d’espaces blancs) ou dans un `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). Les caractères tabulation ([U+0009](https://unicode-table.com/en/0009/)), retour chariot ([U+000D](https://unicode-table.com/en/000D/)), saut de ligne ([U+000A](https://unicode-table.com/en/000A/)), and espace ([U+0020](https://unicode-table.com/en/0020/)) sont les seuls caractères blancs valides.
 
@@ -116,6 +118,6 @@ Des espaces blancs insignifiants peuvent être présents n’importe où sauf da
 
   - [JSON Compare](http://jsoncompare.org/) qui permet de comparer deux JSON
   - [JSON Beautifier](http://jsonbeautifier.org/) qui permet de visualiser et d'éditer un fichier JSON
-  - [JSON Parser](https://jsonparser.org/) qui permet de formatter une chaîne JSON
-  - [JSON Formatter](https://extendsclass.com/json-validator.html) qui permet de formatter et échapper une chaîne JSON
-  - [JSON Validator](https://tools.learningcontainer.com/json-validator/) qui permet de valider une chaîne JSON
+  - [JSON Parser](https://jsonparser.org/) qui permet de formatter une chaîne JSON
+  - [JSON Formatter](https://extendsclass.com/json-validator.html) qui permet de formatter et échapper une chaîne JSON
+  - [JSON Validator](https://tools.learningcontainer.com/json-validator/) qui permet de valider une chaîne JSON

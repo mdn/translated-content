@@ -5,7 +5,7 @@ translation_of: Web/API/Fullscreen_API
 ---
 <p>{{DefaultAPISidebar("Fullscreen API")}}</p>
 
-<p class="summary">全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。</p>
+<p>全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。</p>
 
 <div class="note">目前並非所有瀏覽器均使用 API 的沒有前綴的版本。請查閱有關前綴以及名稱差異的表格（您也可以使用 Fscreen 來提供跨瀏覽器 API 存取）。</div>
 
@@ -61,7 +61,7 @@ if (elem.requestFullscreen) {
 
 <h2 id="離開全螢幕模式">離開全螢幕模式</h2>
 
-<p>使用者永遠可以自行離開全螢幕模式，詳見 {{ anch("Things your users want to know") }}。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。</p>
+<p>使用者永遠可以自行離開全螢幕模式，詳見 <a href="#things_your_users_want_to_know">Things your users want to know</a>。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。</p>
 
 <h2 id="其他資訊">其他資訊</h2>
 
@@ -133,78 +133,26 @@ if (elem.requestFullscreen) {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器兼容性</h2>
 
-<p>Although  Gecko , Trident, and WebKit implement a draft of this API, there are some subtle differences. This document doesn't necessarily try to call them all into focus. The article will be revised as the spec and implementations fall closer into alignment with one another.</p>
+<h3>Document.fullscreen</h3>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.Document.fullscreen")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>15 {{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoDesktop("9.0") }} {{ property_prefix("-moz") }}</td>
-   <td>11 {{ property_prefix("-ms") }}</td>
-   <td>12.10</td>
-   <td>5.0 {{ property_prefix("-webkit") }}</td>
-  </tr>
-  <tr>
-   <td><code>fullscreenEnabled</code></td>
-   <td>20 {{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoDesktop("10.0") }} {{ property_prefix("-moz") }}</td>
-   <td>11 {{ property_prefix("-ms") }}</td>
-   <td>12.10</td>
-   <td>5.1 {{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3>Document.fullscreenElement</h3>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>28 {{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoMobile("9.0") }}{{ property_prefix("-moz") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>fullscreenEnabled</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>28 {{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoMobile("10.0") }} {{ property_prefix("moz") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.fullscreenElement")}}
 
-<h3 id="Gecko_notes">Gecko notes</h3>
+<h3>Document.fullscreenEnabled</h3>
 
-<p>Although this API was introduced in Gecko 9.0 {{ geckoRelease("9.0") }}, it's not enabled by default in that release. To enable it, set the <code>full-screen-api.enabled</code> preference to <code>true</code>. The API is enabled by default in Gecko 10.0 {{ geckoRelease("10.0") }}. In Gecko all the API is spelt "fullScreen".</p>
+{{Compat("api.Document.fullscreenEnabled")}}
+
+<h3>Document.exitFullscreen</h3>
+
+{{Compat("api.Document.exitFullscreen")}}
+
+<h3>Element.requestFullscreen</h3>
+
+{{Compat("api.Element.requestFullscreen")}}
+
 
 <h2 id="Specification" name="Specification">規範</h2>
 

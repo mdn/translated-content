@@ -9,7 +9,7 @@ tags:
   - 总览
 translation_of: Web/Events
 ---
-<p>发送DOM事件是为了将发生的相关事情通知代码。每个事件都是继承自{{DOMxRef("Event")}} 接口的对象，可以包括自定义的成员属性及函数用于获取事件发生时相关的更多信息。事件可以表示任何从基本的用户交互、到发生在渲染模型自动通知的任何事情。</p>
+<p>发送 DOM 事件是为了将发生的相关事情通知代码。每个事件都是继承自{{DOMxRef("Event")}} 接口的对象，可以包括自定义的成员属性及函数用于获取事件发生时相关的更多信息。事件可以表示任何从基本的用户交互、到发生在渲染模型自动通知的任何事情。</p>
 
 <p>本文提供了一个可以发送的事件的列表；一些是官方标准中的标准事件，另一些则是在特定浏览器内部使用的事件；例如，列出的 Mozilla 特定事件，使<a href="/zh-CN/docs/Mozilla/Add-ons">附加组件</a>可以借助它们与浏览器进行交互。</p>
 
@@ -191,11 +191,11 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("transitioncancel")}}</td>
-   <td>CSS过渡被取消</td>
+   <td>CSS 过渡被取消</td>
   </tr>
   <tr>
    <td>{{Event("transitionend")}}</td>
-   <td>CSS过渡已经完成</td>
+   <td>CSS 过渡已经完成</td>
   </tr>
   <tr>
    <td>{{Event("transitionrun")}}</td>
@@ -453,7 +453,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("dragstart")}}</td>
-   <td>用户开始拖动HTML元素或选中的文本</td>
+   <td>用户开始拖动 HTML 元素或选中的文本</td>
   </tr>
   <tr>
    <td>{{Event("dragleave")}}</td>
@@ -461,7 +461,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("dragover")}}</td>
-   <td>被拖动的元素或文本选区正在有效释放目标上被拖动 （在此过程中持续触发，每350ms触发一次）</td>
+   <td>被拖动的元素或文本选区正在有效释放目标上被拖动（在此过程中持续触发，每 350ms 触发一次）</td>
   </tr>
   <tr>
    <td>{{Event("drop")}}</td>
@@ -610,7 +610,7 @@ translation_of: Web/Events
 
 <h3 id="存储事件">存储事件</h3>
 
-<p>{{Event("change")}} (see {{anch("Non-standard events")}})<br>
+<p>{{Event("change")}} (参见 <a href="#非标准事件">非标准事件</a>)<br>
  {{Event("storage")}}</p>
 
 <h3 id="更新事件">更新事件</h3>
@@ -788,7 +788,7 @@ translation_of: Web/Events
  {{Event("stksessionend")}}<br>
  {{Event("cardstatechange")}}</p>
 
-<h3 id="短信和USSD事件">短信和USSD事件</h3>
+<h3 id="短信和USSD事件">短信和 USSD 事件</h3>
 
 <p>{{Event("delivered")}}<br>
  {{Event("received")}}<br>
@@ -809,7 +809,7 @@ translation_of: Web/Events
  {{Event("mozbrowsershowmodalprompt")}}<br>
  {{Event("mozbrowsertitlechange")}}</p>
 
-<h3 id="DOM变异事件">DOM变异事件</h3>
+<h3 id="DOM变异事件">DOM 变异事件</h3>
 
 <p><code><a href="/zh-CN/docs/DOM/Mutation_events">DOMAttributeNameChanged</a></code><br>
  <code><a href="/zh-CN/docs/DOM/Mutation_events">DOMAttrModified</a></code><br>
@@ -844,7 +844,7 @@ translation_of: Web/Events
 
 <h2 id="标准事件">标准事件</h2>
 
-<p>这些事件在官方Web规范中定义，并且应在各个浏览器中通用。 每个事件都和代表事件接收方的对象（由此您可以查到每个事件提供的数据），定义这个事件的标准或标准链接会一起列出。</p>
+<p>这些事件在官方 Web 规范中定义，并且应在各个浏览器中通用。 每个事件都和代表事件接收方的对象（由此您可以查到每个事件提供的数据），定义这个事件的标准或标准链接会一起列出。</p>
 
 <div style="overflow: auto;">
 <table class="standard-table">
@@ -867,7 +867,7 @@ translation_of: Web/Events
    <td><code><a href="/zh-CN/docs/Web/Reference/Events/abort_(ProgressEvent)">abort</a></code></td>
    <td>{{DOMxRef("ProgressEvent")}}</td>
    <td><a href="http://www.w3.org/TR/progress-events/">Progress</a>and<a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-abort">XMLHttpRequest</a></td>
-   <td>Progress被终止(不是error造成的)</td>
+   <td>Progress 被终止 (不是 error 造成的)</td>
   </tr>
   <tr>
    <td><code><a href="/zh-CN/docs/Web/Reference/Events/abort_indexedDB">abort</a></code></td>
@@ -1256,7 +1256,7 @@ translation_of: Web/Events
   <tr>
    <td>{{Event("error")}}</td>
    <td>{{DOMxRef("ProgressEvent")}}</td>
-   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> and </span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-error">XMLHttpRequest</a></td>
+   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-error">XMLHttpRequest</a></td>
    <td>Progression has failed.</td>
   </tr>
   <tr>
@@ -1308,13 +1308,13 @@ translation_of: Web/Events
    <td>An element is about to lose focus (bubbles).</td>
   </tr>
   <tr>
-   <td>{{Event("fullscreenchange")}}{{gecko_minversion_inline("9")}}</td>
+   <td>{{Event("fullscreenchange")}}</td>
    <td>{{DOMxRef("Event")}}</td>
    <td><a href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api">Full Screen</a></td>
    <td>An element was turned to fullscreen mode or back to normal mode.</td>
   </tr>
   <tr>
-   <td>{{Event("fullscreenerror")}}{{gecko_minversion_inline("9")}}</td>
+   <td>{{Event("fullscreenerror")}}</td>
    <td>{{DOMxRef("Event")}}</td>
    <td><a href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api">Full Screen</a></td>
    <td>It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied.</td>
@@ -1400,7 +1400,7 @@ translation_of: Web/Events
   <tr>
    <td><code><a href="/zh-CN/docs/Web/Reference/Events/load_(ProgressEvent)">load</a></code></td>
    <td>{{DOMxRef("ProgressEvent")}}</td>
-   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-load">XMLHttpRequest</a></td>
+   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-load">XMLHttpRequest</a></td>
    <td>Progression has been successful.</td>
   </tr>
   <tr>
@@ -1418,13 +1418,13 @@ translation_of: Web/Events
   <tr>
    <td>{{Event("loadend")}}</td>
    <td>{{DOMxRef("ProgressEvent")}}</td>
-   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadend">XMLHttpRequest</a></td>
+   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadend">XMLHttpRequest</a></td>
    <td>Progress has stopped (after "error", "abort" or "load" have been dispatched).</td>
   </tr>
   <tr>
    <td>{{Event("loadstart")}}</td>
    <td>{{DOMxRef("ProgressEvent")}}</td>
-   <td><a href="http://www.w3.org/TR/progress-events/">Progress </a><span>and </span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadstart">XMLHttpRequest</a></td>
+   <td><a href="http://www.w3.org/TR/progress-events/">Progress </a>and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadstart">XMLHttpRequest</a></td>
    <td>Progress has begun.</td>
   </tr>
   <tr>
@@ -1521,7 +1521,7 @@ translation_of: Web/Events
    <td>{{Event("notificationclick")}}</td>
    <td>{{DOMxRef("NotificationEvent")}} {{Experimental_Inline}}</td>
    <td>{{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclick','onnotificationclick')}}</td>
-   <td>A system notification<span style="line-height: 19.0909080505371px;"> spawned by {{DOMxRef("ServiceWorkerRegistration.showNotification()")}} has been clicked.</span></td>
+   <td>A system notification spawned by {{DOMxRef("ServiceWorkerRegistration.showNotification()")}} has been clicked.</td>
   </tr>
   <tr>
    <td>{{Event("offline")}}</td>
@@ -1664,7 +1664,7 @@ translation_of: Web/Events
   <tr>
    <td>{{Event("progress")}}</td>
    <td>{{DOMxRef("ProgressEvent")}}</td>
-   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-progress">XMLHttpRequest</a></td>
+   <td><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-progress">XMLHttpRequest</a></td>
    <td>In progress.</td>
   </tr>
   <tr>
@@ -1688,7 +1688,7 @@ translation_of: Web/Events
   <tr>
    <td>{{Event("readystatechange")}}</td>
    <td>{{DOMxRef("Event")}}</td>
-   <td><span>HTML5 <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-readystatechange">XMLHttpRequest</a></td>
+   <td>HTML5 and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-readystatechange">XMLHttpRequest</a></td>
    <td>The readyState attribute of a document has changed.</td>
   </tr>
   <tr>

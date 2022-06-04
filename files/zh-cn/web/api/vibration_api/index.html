@@ -7,11 +7,11 @@ translation_of: Web/API/Vibration_API
 ---
 <p>{{DefaultAPISidebar("Vibration API")}}</p>
 
-<p class="summary">大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API为Web应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。</p>
+<p>大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API 为 Web 应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。</p>
 
 <h2 id="振动描述">振动描述</h2>
 
-<p>振动被抽象成【开-关】脉冲的模式，且可以具有变化的长度。?参数可以是单个整数，表示持续振动的毫秒数 (ms)；或可由多个整数组成的数组，达到振动和暂停循环的效果。只要单一 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate" title="/en-US/docs/Web/API/window.navigator.vibrate"><code>window.navigator.vibrate()</code></a> 函式即可控制振动。</p>
+<p>振动被抽象成【开 - 关】脉冲的模式，且可以具有变化的长度。?参数可以是单个整数，表示持续振动的毫秒数 (ms)；或可由多个整数组成的数组，达到振动和暂停循环的效果。只要单一 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate" title="/en-US/docs/Web/API/window.navigator.vibrate"><code>window.navigator.vibrate()</code></a> 函式即可控制振动。</p>
 
 <h3 id="一个单次振动">一个单次振动</h3>
 
@@ -25,22 +25,22 @@ window.navigator.vibrate([200]);
 
 <h3 id="振动模式"><strong>振动模式</strong></h3>
 
-<p>一组数值描述了设备振动并且不振动的交替时间段。数组中的每个值都将转换成一个整数，然后交替解释为设备应该振动的毫秒数和不振动的毫秒数。例如:</p>
+<p>一组数值描述了设备振动并且不振动的交替时间段。数组中的每个值都将转换成一个整数，然后交替解释为设备应该振动的毫秒数和不振动的毫秒数。例如：</p>
 
 <pre class="brush: js">window.navigator.vibrate([200, 100, 200]);
 </pre>
 
-<p>这会使设备振动200 ms，然后暂停100 ms，然后再次振动设备200 ms。</p>
+<p>这会使设备振动 200 ms，然后暂停 100 ms，然后再次振动设备 200 ms。</p>
 
 <p>您可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个； 值得注意的是，由于振动在每个振动周期结束时自动停止，因此您不必提供最后一个值去暂停，换句话说，数组长度只需要设置奇数个。</p>
 
 <h3 id="停止振动">停止振动</h3>
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">当调用</font> <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate" title="/en-US/docs/Web/API/window.navigator.vibrate"><code>window.navigator.vibrate()</code></a><code> 的参数为「0」、空白?数组，或?数组全为「0」时，即可取消目前?进行中的振动。</code></p>
+<p>当调用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate" title="/en-US/docs/Web/API/window.navigator.vibrate"><code>window.navigator.vibrate()</code></a><code> 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。</code></p>
 
 <h3 id="持续振动">持续振动</h3>
 
-<p>一些基于setInterval和clearInterval操作将允许您创建持续的振动：</p>
+<p>一些基于 setInterval 和 clearInterval 操作将允许您创建持续的振动：</p>
 
 <pre class="brush: js">var vibrateInterval;
 
@@ -87,54 +87,7 @@ function startPeristentVibrate(duration, interval) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}</td>
-   <td>11.0 {{property_prefix("moz")}}<br>
-    16</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}</td>
-   <td>11.0 {{property_prefix("moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Navigator.vibrate")}}
 
 <h2 id="也可以参考">也可以参考</h2>
 

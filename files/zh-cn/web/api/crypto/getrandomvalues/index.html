@@ -30,9 +30,10 @@ original_slug: Web/API/RandomSource/getRandomValues
 
 <h3 id="异常事件">异常事件</h3>
 
-<ul>
- <li>如果请求的长度超过 65536 字节，则异常事件 {{domxref("DOMException")}} {{exception("QuotaExceededError")}} 被抛出。</li>
-</ul>
+<dl>
+ <dt><code>QuotaExceededError</code> {{domxref("DOMException")}}</dt>
+ <dd>如果请求的长度超过 65536 字节，则抛出该异常。</dd>
+</dl>
 
 <h2 id="例子">例子</h2>
 
@@ -49,20 +50,7 @@ for (var i = 0; i &lt; array.length; i++) {
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

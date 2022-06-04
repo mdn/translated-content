@@ -5,7 +5,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 ---
 {{GamesSidebar}}
 
-Une scène 3D  dans un jeu - même la plus simple - contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir réellement, des lumières et des matériaux pour amelioré son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three, notamment la configuration d'un environnement de développement, la structuration du code HTML nécessaire, les objets fondamentaux de Three et la manière de créer une démonstration de base.
+Une scène 3D dans un jeu - même la plus simple - contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir réellement, des lumières et des matériaux pour amelioré son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three, notamment la configuration d'un environnement de développement, la structuration du code HTML nécessaire, les objets fondamentaux de Three et la manière de créer une démonstration de base.
 
 > **Note :** Nous avons choisi Three car il s'agit de l'une des bibliothèques WebGL les plus populaires, et il est facile de commencer. Nous n'essayons pas de dire que c'est mieux que toute autre bibliothèque WebGL disponible, et vous devriez vous sentir libre d'essayer une autre bibliothèque, comme CopperLicht, GLGE ou PlayCanvas
 
@@ -54,9 +54,9 @@ avant de poursuivre copier se code dans un fichier nommé index.html.
 
 ## Renderer ou Moteur de rendue
 
-un Moteur de rendue est un outil qui affiche les scénes directement dans votre navigateur.Il existe plusieur moteur different :WebGL est la valeur par défaut, vous pouvez utilisercanvas,SVG,CSS et DOM . ils différent dans la façons dont il gere le  rendu. Malgres leurs differences , l experience utilisateur sera la meme.
+un Moteur de rendue est un outil qui affiche les scénes directement dans votre navigateur.Il existe plusieur moteur different :WebGL est la valeur par défaut, vous pouvez utilisercanvas,SVG,CSS et DOM . ils différent dans la façons dont il gere le rendu. Malgres leurs differences , l experience utilisateur sera la meme.
 
-Grace à cette approche, une solution de secour peut etre  utilisée , si une technologie n'est pas prise en charge par le navigatueur.
+Grace à cette approche, une solution de secour peut etre utilisée , si une technologie n'est pas prise en charge par le navigatueur.
 
 ```js
 var renderer = new THREE.WebGLRenderer({antialias:true});
@@ -103,7 +103,7 @@ Vous devez expérimenter ces valeurs et voir comment elles changent ce que vous 
 
 ## Rendu de la scene
 
-Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effetué le rendu. Notre fonction render () fera ce travail, avec un peu d'aide de requestAnimationFrame (), ce qui fait que la scène sera  restituée sur chaque image:
+Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effetué le rendu. Notre fonction render () fera ce travail, avec un peu d'aide de requestAnimationFrame (), ce qui fait que la scène sera restituée sur chaque image:
 
 ```js
 function render() {
@@ -157,7 +157,7 @@ We've now created a cube, using the geometry and material defined earlier. The l
 scene.add(cube);
 ```
 
-If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face.  Again, adding our code below the previous:
+If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face.  Again, adding our code below the previous:
 
 ```js
 cube.rotation.set(0.4, 0.2, 0);
@@ -181,7 +181,7 @@ Now we will add more shapes to the scene, and explore other shapes, materials, l
 cube.position.x = -25;
 ```
 
-Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
+Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
 
 ```js
 var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
@@ -224,7 +224,7 @@ This looks a little boring though. In a game, something is usually happening. We
 
 ## Animation
 
-We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
+We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
 
 ### Rotation
 
@@ -251,7 +251,7 @@ t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 ```
 
-We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1,  negative values might render out torus in unexpected way. In this case it looks black half the time.
+We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1,  negative values might render out torus in unexpected way. In this case it looks black half the time.
 
 Now, onto movement.
 

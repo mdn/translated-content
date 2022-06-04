@@ -18,7 +18,9 @@ La méthode statique **`Reflect.getPrototypeOf()`** est semblable à la méthode
 
 ## Syntaxe
 
-    Reflect.getPrototypeOf(cible)
+```js
+Reflect.getPrototypeOf(cible)
+```
 
 ### Paramètres
 
@@ -73,7 +75,7 @@ Reflect.getPrototypeOf(Object('toto')); // String.prototype
 | Spécification                                                                                                | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

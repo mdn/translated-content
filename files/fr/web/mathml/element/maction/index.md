@@ -20,7 +20,7 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
     - `toggle` : Quand il y a un clic sur la sous-expression, la mise en forme des sous-expressions sélectionnées change. Ainsi chaque clic augmente la valeur de `selection`.
       La syntaxe est la suivante : `<maction actiontype="toggle" selection="entier-positif" > expression1 expression2 expressionN </maction>`.
     - `tooltip` : Lorsque la souris passe au-dessus de l'_expression_, une info-bulle est affichée à proximité de l'expression.
-      La syntaxe est la suivante :` <maction actiontype="tooltip"> expression message </maction>.`
+      La syntaxe est la suivante : `<maction actiontype="tooltip"> expression message </maction>.`
 
 - class, id, style
   - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
@@ -84,9 +84,11 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
 - Avant Gecko 9.0 {{ geckoRelease("9.0") }} la valeur `restyle` (non-standard) était supportée pour l'attribut `actiontype`. Cette valeur a été retirée.
 - Avant Gecko 14.0 {{ geckoRelease("14.0") }} le type d'action `statusline` utilisait une syntaxe non-standard (voir ci-dessous). Cela a été résolu afin de respecter la spécification MathML.
 
-      <maction actiontype="statusline#(message)">
-      (expression)
-      </maction>
+  ```html
+  <maction actiontype="statusline#(message)">
+    (expression)
+  </maction>
+  ```
 
 - Gecko 15.0 {{geckoRelease("15.0")}} ne prend en compte l'attribut `selection` seulement s'il est utilisé avec le type d'action `toggle`.
 - À partir de Gecko 16.0 {{geckoRelease("16.0")}} l'attribut `selection` est également pris en compte lorsqu'un `actiontype` inconnu est spécifié. Si un `actiontype` n'est pas spécifié (il est vide) ou que l'attribut `selection` est invalide, cela entraînera une erreur de balisage MathML (« invalid-markup »).

@@ -11,7 +11,7 @@ translation_of: Web/API/KeyboardEvent/code
 
 <p>当您想要根据输入设备上的物理位置处理键而不是与这些键相关联的字符时，此属性非常有用;这在编写代码来处理游戏输入时尤为常见，这些游戏使用键盘上的键来模拟类似游戏板的环境。但请注意，您无法使用 <code>KeyboardEvent.code</code>报告的值来确定击键生成的字符，因为键码的名称可能与按键上打印的实际字符或按下键时计算机生成的字符不匹配。</p>
 
-<p>例如，QWERTY布局键盘上的“<kbd>q</kbd>”键返回的<code>code</code>是“<code>KeyQ</code>”，但Dvorak键盘上的“<kbd>'</kbd>”键和AZERTY键盘上的“<kbd>a</kbd>”键也返回的相同<code>code</code>值。这使得如果用户没有使用预期的键盘布局，则无法使用<code>code</code>值来确定用户按键的名称。</p>
+<p>例如，QWERTY 布局键盘上的“<kbd>q</kbd>”键返回的<code>code</code>是“<code>KeyQ</code>”，但 Dvorak 键盘上的“<kbd>'</kbd>”键和 AZERTY 键盘上的“<kbd>a</kbd>”键也返回的相同<code>code</code>值。这使得如果用户没有使用预期的键盘布局，则无法使用<code>code</code>值来确定用户按键的名称。</p>
 
 <div>
 <p>要确定哪个字符与键事件对应，请改用{{domxref("KeyboardEvent.key")}}属性。</p>
@@ -1493,7 +1493,7 @@ let spaceship = document.getElementById("spaceship");
  <thead>
   <tr>
    <th scope="row">Virtual keycode</th>
-   <th colspan="1" rowspan="1" scope="col">Gecko {{gecko_minversion_inline("32.0")}}</th>
+   <th colspan="1" rowspan="1" scope="col">Gecko (32)</th>
    <th rowspan="1" scope="col">Chromium (48)</th>
   </tr>
  </thead>
@@ -2085,7 +2085,7 @@ let spaceship = document.getElementById("spaceship");
  <thead>
   <tr>
    <th scope="row">scancode (hardware_keycode)</th>
-   <th scope="col">Gecko {{gecko_minversion_inline("32.0")}}</th>
+   <th scope="col">Gecko (32)</th>
    <th scope="col">Chromium (44)</th>
   </tr>
  </thead>
@@ -2722,47 +2722,47 @@ let spaceship = document.getElementById("spaceship");
   </tr>
   <tr>
    <th scope="row"><code>0x0089</code></th>
-   <td style="background-color: rgb(255, 255, 204);">"Again" {{gecko_minversion_inline("38.0")}}</td>
+   <td style="background-color: rgb(255, 255, 204);">"Again"</td>
    <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008A</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Props"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td style="background-color: rgb(255, 255, 204);"><code>"Props"</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008B</code></th>
-   <td><code>"Undo"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Undo"</code></td>
    <td><code>"Undo"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008C</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Select"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td style="background-color: rgb(255, 255, 204);"><code>"Select"</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008D</code></th>
-   <td><code>"Copy"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Copy"</code></td>
    <td><code>"Copy"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008E</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Open"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td style="background-color: rgb(255, 255, 204);"><code>"Open"</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008F</code></th>
-   <td><code>"Paste"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Paste"</code></td>
    <td><code>"Paste"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0090</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Find"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td style="background-color: rgb(255, 255, 204);"><code>"Find"</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0091</code></th>
-   <td><code>"Cut"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Cut"</code></td>
    <td><code>"Cut"</code></td>
   </tr>
   <tr>
@@ -3006,7 +3006,7 @@ let spaceship = document.getElementById("spaceship");
  <thead>
   <tr>
    <th scope="row">scancode</th>
-   <th scope="col">Gecko {{gecko_minversion_inline("32.0")}}</th>
+   <th scope="col">Gecko (32)</th>
   </tr>
  </thead>
  <tbody>
@@ -3586,39 +3586,39 @@ let spaceship = document.getElementById("spaceship");
   </tr>
   <tr>
    <th scope="row"><code>0x0081</code></th>
-   <td>"Again" {{gecko_minversion_inline("38.0")}}</td>
+   <td>"Again"</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0082</code></th>
-   <td><code>"Props"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Props"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0083</code></th>
-   <td><code>"Undo"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Undo"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0084</code></th>
-   <td><code>"Select"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Select"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0085</code></th>
-   <td><code>"Copy"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Copy"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0086</code></th>
-   <td><code>"Open"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Open"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0087</code></th>
-   <td><code>"Paste"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Paste"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0088</code></th>
-   <td><code>"Find"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Find"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0089</code></th>
-   <td><code>"Cut"</code> {{gecko_minversion_inline("38.0")}}</td>
+   <td><code>"Cut"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x008A</code></th>

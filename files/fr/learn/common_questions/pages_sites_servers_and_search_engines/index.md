@@ -11,7 +11,7 @@ Dans cet article, nous démystifions plusieurs notions liées au Web : page web,
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable comprendre
         <a href="/fr/docs/Learn/Common_questions/How_does_the_Internet_work"
@@ -20,7 +20,7 @@ Dans cet article, nous démystifions plusieurs notions liées au Web : page web,
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Être capable de décrire les différences entre une page web, un site web,
         un serveur web et un moteur de recherche.

@@ -27,7 +27,7 @@ translation_of: Web/API/GlobalEventHandlers/onauxclick
 
 <h2 id="Example" name="Example">示例</h2>
 
-<p>在这个例子中我们定义了两个事件处理函数：<code>onclick</code> 和 <code>onauxclick</code>。前者改变按钮背景的颜色，而后者改变按钮前景（文本）的颜色。您可以通过使用多按钮鼠标尝试演示来查看这两种功能(<a href="https://mdn.github.io/dom-examples/auxclick/">see it live on GitHub</a>; also <a href="https://github.com/mdn/dom-examples/blob/master/auxclick/index.html">see the source code</a>)。</p>
+<p>在这个例子中我们定义了两个事件处理函数：<code>onclick</code> 和 <code>onauxclick</code>。前者改变按钮背景的颜色，而后者改变按钮前景（文本）的颜色。您可以通过使用多按钮鼠标尝试演示来查看这两种功能 (<a href="https://mdn.github.io/dom-examples/auxclick/">see it live on GitHub</a>; also <a href="https://github.com/mdn/dom-examples/blob/master/auxclick/index.html">see the source code</a>)。</p>
 
 <pre class="brush: js">var button = document.querySelector('button');
 var html = document.querySelector('html');
@@ -62,54 +62,4 @@ button.onauxclick = function() {
 
 <h2 id="Browser_Compatibility">Browser Compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.GlobalEventHandlers.onauxclick")}}

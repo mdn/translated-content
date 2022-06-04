@@ -17,7 +17,9 @@ La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affich
 
 ## Syntaxe
 
-    str.bold()
+```js
+str.bold()
+```
 
 ### Valeur de retour
 
@@ -25,7 +27,7 @@ Une chaîne de caractères représentant un élément HTML {{HTMLElement("b")}}.
 
 ## Description
 
-La méthode `bold()` place la chaine de caractères dans une balise `<b>` :
+La méthode `bold()` place la chaine de caractères dans une balise `<b>`&nbsp;:
 `"<b>str</b>`"
 
 ## Exemples

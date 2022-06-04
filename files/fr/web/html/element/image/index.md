@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/image
 ---
-{{HTMLRef}}{{obsolete_header}}{{non-standard_header}}
+{{HTMLRef}}{{deprecated_header}}{{non-standard_header}}
 
 L'élément HTML **`<image>`** est un élément obsolète, remplacé depuis longtemps par l'élément standard {{HTMLElement("img")}}.
 

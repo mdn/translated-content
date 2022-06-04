@@ -171,7 +171,7 @@ Si on sait qu'aucun des éléments ne vaut `false` dans un contexte booléen (pa
 ```js
 let divs = document.getElementsByTagName('div');
 for (let i = 0, div; div = divs[i]; i++) {
-  /* On effectue un traitement sur les  div */
+  /* On effectue un traitement sur les div */
 }
 ```
 

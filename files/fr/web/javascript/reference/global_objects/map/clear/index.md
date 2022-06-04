@@ -13,13 +13,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
 {{JSRef}}
 
-La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
+La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
 ## Syntaxe
 
-    maMap.clear();
+```js
+maMap.clear();
+```
 
 ### Valeur de retour
 

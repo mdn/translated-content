@@ -25,17 +25,17 @@ translation_of: Web/API/Selection/modify
 
 <dl>
  <dt><em>alter</em></dt>
- <dd>改变类型. 传入<code>"move"来移动光标位置，或者</code><code>"extend"来扩展当前选区。</code></dd>
+ <dd>改变类型。传入<code>"move"来移动光标位置，或者</code><code>"extend"来扩展当前选区。</code></dd>
  <dt><em>direction</em></dt>
- <dd>调整选区的方向。你可以传入<code>"forward"<font face="Open Sans, Arial, sans-serif">或</font></code><code>"backward"来根据选区内容的语言书写方向来调整。或者使用"left"或"right"来指明一个明确的调整方向。</code></dd>
+ <dd>调整选区的方向。你可以传入<code>"forward"或</code><code>"backward"来根据选区内容的语言书写方向来调整。或者使用"left"或"right"来指明一个明确的调整方向。</code></dd>
  <dt><em>granularity</em></dt>
- <dd>调整的距离颗粒度。可选值有<code>"character"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"word"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"sentence"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"line"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"paragraph"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"lineboundary"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"sentenceboundary"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"paragraphboundary"<font face="Open Sans, Arial, sans-serif">、</font></code><code>"documentboundary"。</code></dd>
+ <dd>调整的距离颗粒度。可选值有<code>"character"、</code><code>"word"、</code><code>"sentence"、</code><code>"line"、</code><code>"paragraph"、</code><code>"lineboundary"、</code><code>"sentenceboundary"、</code><code>"paragraphboundary"、</code><code>"documentboundary"。</code></dd>
 </dl>
 
-<div class="note"><strong>注意:</strong> Gecko <strong>不支持</strong> <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>, <code>"paragraphboundary"和</code><code>"documentboundary"</code>. Webkit和Blink 支持。</div>
+<div class="note"><strong>注意：</strong> Gecko <strong>不支持</strong> <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>, <code>"paragraphboundary"和</code><code>"documentboundary"</code>. Webkit 和 Blink 支持。</div>
 
 <div class="note">
-<p><strong>注意:</strong> 从{{Gecko("5.0")}}开始，不管是不是浏览器的默认行为，<code>"word"颗粒度不再包括</code>单词后面的空格。这让这个行为变得更加稳定，这也和之前的Webkit保持一致，然而不幸的是他们最近修改了这个默认行为。</p>
+<p><strong>注意：</strong> 从{{Gecko("5.0")}}开始，不管是不是浏览器的默认行为，<code>"word"颗粒度不再包括</code>单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -52,58 +52,10 @@ selection.modify("extend", "forward", "word");
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>平台</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>支持最低版本</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}§</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>平台</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>支持最低版本</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(2)}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Selection.modify")}}
 
 <h2 id="See_also" name="See_also">相关链接</h2>
 
 <ul>
- <li>{{domxref("Selection")}}，本方法所属的接口.</li>
+ <li>{{domxref("Selection")}}，本方法所属的接口。</li>
 </ul>

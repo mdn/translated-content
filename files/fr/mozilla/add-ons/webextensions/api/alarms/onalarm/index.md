@@ -51,7 +51,7 @@ Voici un exemple illustrant ce qui se produit quand l'alarme se déclenche
 
 ```js
 function handleAlarm(alarmInfo) {
-  console.log("L'alarme " + alarmInfo.name + " s'est déclenchée");
+  console.log("L'alarme " + alarmInfo.name + " s'est déclenchée");
 }
 
 browser.alarms.onAlarm.addListener(handleAlarm);

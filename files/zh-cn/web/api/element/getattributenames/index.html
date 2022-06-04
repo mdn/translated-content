@@ -7,9 +7,9 @@ translation_of: Web/API/Element/getAttributeNames
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary"><code>Element.getAttributeNames()</code> 返回一个</span>{{jsxref("Array")}}<span class="seoSummary">，该数组包含指定元素（Element）的所有属性名称，如果该元素不包含任何属性，则返回一个空数组。</span></p>
+<p><code>Element.getAttributeNames()</code> 返回一个{{jsxref("Array")}}，该数组包含指定元素（Element）的所有属性名称，如果该元素不包含任何属性，则返回一个空数组。</p>
 
-<p>将 <code>getAttributeNames()</code> 与 {{domxref("Element.getAttribute","getAttribute()")}} 组合使用， 是一种有效替代 {{domxref("Element.attributes")}} 的使用方法.</p>
+<p>将 <code>getAttributeNames()</code> 与 {{domxref("Element.getAttribute","getAttribute()")}} 组合使用， 是一种有效替代 {{domxref("Element.attributes")}} 的使用方法。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Element/getAttributeNames
 
 <h2 id="Example" name="Example">例子</h2>
 
-<pre class="brush:js">// 遍历elements的元素
+<pre class="brush:js">// 遍历 elements 的元素
 for(let name of element.getAttributeNames())
 {
 	let value = element.getAttribute(name);
@@ -45,54 +45,4 @@ for(let name of element.getAttributeNames())
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(61)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(48)}}</td>
-   <td>{{CompatSafari(9)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(61)}}</td>
-   <td>{{CompatChrome(61)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(48)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.getAttributeNames")}}

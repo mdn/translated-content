@@ -9,7 +9,7 @@ translation_of: Web/API/Element/className
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p><strong>className</strong> 获取或设置指定元素的class属性的值。</p>
+<p><strong>className</strong> 获取或设置指定元素的 class 属性的值。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Element/className
 <var>elementNodeReference</var>.className = <var>cName</var>;</pre>
 
 <ul>
- <li><var>cName</var>是一个字符串变量,表示当前元素的<code>class</code>属性的值,可以是由空格分隔的多个<code>class</code>属性值.</li>
+ <li><var>cName</var>是一个字符串变量，表示当前元素的<code>class</code>属性的值，可以是由空格分隔的多个<code>class</code>属性值。</li>
 </ul>
 
 <h2 id="Example" name="Example">示例</h2>
@@ -26,14 +26,14 @@ translation_of: Web/API/Element/className
 <pre class="brush: js">let elm = document.getElementById("div1");
 
 if (elm.className == "fixed") {
-  // 跳过class属性为特定值的元素
+  // 跳过 class 属性为特定值的元素
   goNextElement();
 }</pre>
 
 <h2 id="Notes" name="Notes">注释</h2>
 
 <div class="note">
-<p>使用名称<code>className</code>而不是<code>class</code>作为属性名,是因为"class" 在JavaScript中是个保留字.</p>
+<p>使用名称<code>className</code>而不是<code>class</code>作为属性名，是因为"class" 在 JavaScript 中是个保留字。</p>
 </div>
 
 <h2 id="Specification" name="Specification">规范</h2>
@@ -69,55 +69,7 @@ if (elm.className == "fixed") {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("api.Element.className")}}
 
 <h2 id="相关链接">相关链接</h2>
 

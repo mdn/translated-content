@@ -7,7 +7,7 @@ original_slug: Web/API/AudioContext/destination
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }}的<code>destination属性返回一个</code>{{ domxref("AudioDestinationNode") }}表示context中所有音频（节点）的最终目标节点，一般是音频渲染设备，比如扬声器。</p>
+<p>{{ domxref("AudioContext") }}的<code>destination属性返回一个</code>{{ domxref("AudioDestinationNode") }}表示 context 中所有音频（节点）的最终目标节点，一般是音频渲染设备，比如扬声器。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -22,7 +22,7 @@ gainNode.connect(audioCtx.destination);</pre>
 <h2 id="例子">例子</h2>
 
 <div class="note">
-<p><strong>注意</strong>：想要完整的例子，可以去看看<a href="https://github.com/mdn/">MDN Github repo</a>的DEMO，比如<a href="https://github.com/mdn/panner-node">panner-node</a></p>
+<p><strong>注意</strong>：想要完整的例子，可以去看看<a href="https://github.com/mdn/">MDN Github repo</a>的 DEMO，比如<a href="https://github.com/mdn/panner-node">panner-node</a></p>
 </div>
 
 <pre class="brush: js;highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -38,75 +38,11 @@ gainNode.connect(audioCtx.destination);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-destination', 'destination')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.destination")}}
 
 <h2 id="另见">另见</h2>
 

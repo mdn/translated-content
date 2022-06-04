@@ -22,12 +22,12 @@ translation_of: Web/API/MediaRecorder/isTypeSupported
 
 <dl>
  <dt><code>mimeType</code></dt>
- <dd>需要检查的MIME 格式</dd>
+ <dd>需要检查的 MIME 格式</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果 {{domxref("MediaRecorder")}} 在浏览器上的具体实现能够支持指定MIME类型的 {{domxref("Blob")}} 对象就返回true. 如果没有足够的资源来支持录制和编码任务,最终录制依然会失败. 如果返回结果是false, 用户的浏览器就无法录制指定的格式.</p>
+<p>如果 {{domxref("MediaRecorder")}} 在浏览器上的具体实现能够支持指定 MIME 类型的 {{domxref("Blob")}} 对象就返回 true. 如果没有足够的资源来支持录制和编码任务，最终录制依然会失败。如果返回结果是 false，用户的浏览器就无法录制指定的格式。</p>
 
 <h2 id="Example">Example</h2>
 
@@ -63,59 +63,7 @@ for (var i in types) {
 
 <h2 id="浏览器的支持情况">浏览器的支持情况</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>名称</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>ibenompatChrome(47.0)}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>名称</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(47)}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(47.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaRecorder.isTypeSupported")}}
 
 <h2 id="看过这个的用户还浏览了以下内容：">看过这个的用户还浏览了以下内容：</h2>
 

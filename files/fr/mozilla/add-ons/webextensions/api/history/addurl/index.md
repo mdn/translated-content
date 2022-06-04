@@ -40,7 +40,7 @@ var addingUrl = browser.history.addUrl(
     - `transition`{{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Décrit comment le navigateur a navigué vers la page à cette occasion. Si ce n'est pas fourni, un type de transition de "lien" sera enregistré.
     - `visitTime`{{optional_inline}}
-      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une  [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
+      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une  [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
 
 ### Valeur retournée
 
@@ -75,7 +75,7 @@ var addingUrl = browser.history.addUrl({url: "https://example.org/"});
 addingUrl.then(onAdded);
 ```
 
-Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
+Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
 
 ```js
 const DAY = 24 * 60* 60 * 1000;

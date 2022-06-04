@@ -13,8 +13,8 @@ translation_of: MDN/Contribute/Howto/Write_an_API_reference
 ---
 <div>{{MDNSidebar}}</div>
 
-<div class="summary">
-<p><span class="seoSummary">This guide takes you through all you need to know to write an API reference on MDN.</span></p>
+<div>
+<p>This guide takes you through all you need to know to write an API reference on MDN.</p>
 </div>
 
 <h2 id="Getting_prepared">Getting prepared</h2>
@@ -75,7 +75,7 @@ translation_of: MDN/Contribute/Howto/Write_an_API_reference
 
 <p>Note that most API have a special sidebar with quicklinks. This sidebar lists all interfaces, and possibly tutorials and related API.</p>
 
-<h4 id="Interfaces">Interfaces</h4>
+<h4 id="Interface_pages">Interface pages</h4>
 
 <p>Each interface will have its own page too. It will describe the purpose of the interface and lists all constructors, methods, and properties. The title of the page will be the name of the interface (always starting with an uppercase letter), its slug, the interface name, will be at the top level of the API reference (<a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a>)</p>
 
@@ -187,7 +187,7 @@ translation_of: MDN/Contribute/Howto/Write_an_API_reference
  </li>
 </ul>
 
-<p>Each interface in the list has a separate page created for it as a subpage of https://developer.mozilla.org/en-US/docs/Web/API; for example, the document for {{domxref("AudioContext")}} would be located at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each {{anch("Interface pages", "interface page")}} explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("AudioContext.currentTime")}} is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.</p>
+<p>Each interface in the list has a separate page created for it as a subpage of https://developer.mozilla.org/en-US/docs/Web/API; for example, the document for {{domxref("AudioContext")}} would be located at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each <a href="#interface_pages">interface page</a> explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("AudioContext.currentTime")}} is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.</p>
 
 <p>For example, given the list above, the {{domxref("AudioContext")}} interface is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext</p>
 
@@ -199,7 +199,7 @@ translation_of: MDN/Contribute/Howto/Write_an_API_reference
  <li>Go to <a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a> and, making sure you are logged in, select the <em>Cog icon &gt; New sub-page</em>. You should now be in an editor for a new page.</li>
  <li>Enter the title as the API name as defined by the spec, plus "API". So for example "Web Audio API", "IndexedDB API", or "MediaRecorder API".</li>
  <li>The Slug should be auto-filled, with underscores in the place of spaces. If it isn't, correct it.</li>
- <li>Enter some dummy content into the large content area, such as "TBD" or "Content", then click <em>Save Changes</em>. Or just soar right on into the section {{anch("Overview page")}} and start filling out the real content right away.</li>
+ <li>Enter some dummy content into the large content area, such as "TBD" or "Content", then click <em>Save Changes</em>. Or just soar right on into the section <a href="#overview_page">Overview page</a> and start filling out the real content right away.</li>
 </ol>
 
 <p>Your landing page now exists! Now all you have to do is fill it in, which is discussed in the next section.</p>
@@ -243,7 +243,7 @@ translation_of: MDN/Contribute/Howto/Write_an_API_reference
   </ul>
  </li>
  <li><strong>Description</strong>: the first paragraph of the interface page should provide  a  short concise description of the interface's overarching purpose.  You may also want to include a couple more paragraphs if any additional description is required. Note that if the interface defines a mixin, you shouldn't use the term "Interface" to describe it, but mixin instead — it isn't really a standalone interface as such, but a mixin that adds functionality to multiple other interfaces. Similarly, if the interface is actually a dictionary, you should use that term instead of "interface".</li>
- <li><strong>Inheritance diagram:</strong> Use the {{TemplateLink("InheritanceDiagram")}} macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use \{{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.</li>
+ <li><strong>Inheritance diagram:</strong> Use the <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs"><code>InheritanceDiagram</code></a> macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use \{{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.</li>
  <li>
   <p><strong>List of properties, List of methods</strong>: These sections should be titled  "Properties" and "Methods", and provide links (using the \{{domxref}} macro) to a reference  page for each property/method of that interface, along with a description of what  each one does. These should be marked up using description/definition  lists, which can be created using the  "Definition List", "Definition  Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \{{domxref}} macro" section for a quicker way to create links to other pages.<br>
    <br>

@@ -27,5 +27,5 @@ Cette propriété ne renvoie rien s'il n'y a aucune légende pour le tableau.
 
 ### Spécification
 
-- [DOM Level 2 HTML : caption](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
+- [DOM Level 2 HTML&nbsp;: caption](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
 - [Interface HTMLTableCaptionElement](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-12035137) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-12035137))

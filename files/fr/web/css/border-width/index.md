@@ -126,7 +126,7 @@ La propriété `border-width` peut être définie avec une, deux, trois ou quatr
 }
 
 p {
-  width: auto;
+  width: auto;
   margin: 0.25em;
   padding: 0.25em;
 }

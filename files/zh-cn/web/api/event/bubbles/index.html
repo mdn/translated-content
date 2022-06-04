@@ -5,17 +5,17 @@ translation_of: Web/API/Event/bubbles
 ---
 <p>{{ ApiRef() }}</p>
 <h3 id="Summary" name="Summary">概述</h3>
-<p>返回一个布尔值,表明当前事件是否会向DOM树上层元素冒泡.</p>
+<p>返回一个布尔值，表明当前事件是否会向 DOM 树上层元素冒泡。</p>
 <h3 id="语法">语法</h3>
 <pre><em>var bool</em> = event.bubbles;
 </pre>
 <h3 id="Notes" name="Notes">备注</h3>
-<p>一些特定的事件类型会冒泡.这时,该事件对象的<code>bubbles</code>属性为<code>true</code>. 你可以检查该属性的值来判断一个事件对象是否冒泡.</p>
+<p>一些特定的事件类型会冒泡。这时，该事件对象的<code>bubbles</code>属性为<code>true</code>. 你可以检查该属性的值来判断一个事件对象是否冒泡。</p>
 <h3 id="Example" name="Example">例子</h3>
 <pre class="brush: js"> function goInput(e) {
   // 检查事件对象是否冒泡
   if (!e.bubbles) {
-     // 如果不冒泡,则手动传递事件
+     // 如果不冒泡，则手动传递事件
      passItOn(e);
   }
   // 如果冒泡的话
@@ -24,4 +24,3 @@ translation_of: Web/API/Event/bubbles
 </pre>
 <h3 id="规范">规范</h3>
 <p><a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-event-bubbles" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-event-bubbles">event.bubbles</a></p>
-<p>{{ languages( { "es": "es/DOM/event.bubbles", "ja": "ja/DOM/event.bubbles", "pl": "pl/DOM/event.bubbles" , "zh-cn": "zh-cn/DOM/event.bubbles" } ) }}</p>

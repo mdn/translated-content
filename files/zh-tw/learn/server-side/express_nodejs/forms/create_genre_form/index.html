@@ -13,73 +13,73 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 
 <p>打開 <strong>/controllers/genreController.js</strong>，並在文件頂部添加以下幾行：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> <span class="punctuation token">{</span> body<span class="punctuation token">,</span>validationResult <span class="punctuation token">}</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'express-validator/check'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> <span class="punctuation token">{</span> sanitizeBody <span class="punctuation token">}</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'express-validator/filter'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—get_route"><span class="highlight-span">Controller—get route</span></h2>
+<h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
 
 <p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This simply renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display Genre create form on GET.</span>
-exports<span class="punctuation token">.</span>genre_create_get <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'genre_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Create Genre'</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display Genre create form on GET.
+exports.genre_create_get = function(req, res, next) {
+    res.render('genre_form', { title: 'Create Genre' });
+};</code></pre>
 
-<h2 class="highlight-spanned" id="Controller—post_route"><span class="highlight-span">Controller—post route</span></h2>
+<h2 class="highlight-spanned" id="Controller—post_route">Controller—post route</h2>
 
 <p>Find the exported <code>genre_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Handle Genre create on POST.</span>
-exports<span class="punctuation token">.</span>genre_create_post <span class="operator token">=</span>  <span class="punctuation token">[</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Handle Genre create on POST.
+exports.genre_create_post =  [
 
-    <span class="comment token">// Validate that the name field is not empty.</span>
-    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'name'</span><span class="punctuation token">,</span> <span class="string token">'Genre name required'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    // Validate that the name field is not empty.
+    body('name', 'Genre name required').isLength({ min: 1 }).trim(),
 
-    <span class="comment token">// Sanitize (trim and escape) the name field.</span>
-    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'name'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    // Sanitize (trim and escape) the name field.
+    sanitizeBody('name').trim().escape(),
 
-    <span class="comment token">// Process request after validation and sanitization.</span>
-    <span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
+    // Process request after validation and sanitization.
+    (req, res, next) =&gt; {
 
-        <span class="comment token">// Extract the validation errors from a request.</span>
-        <span class="keyword token">const</span> errors <span class="operator token">=</span> <span class="function token">validationResult</span><span class="punctuation token">(</span>req<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        // Extract the validation errors from a request.
+        const errors = validationResult(req);
 
-        <span class="comment token">// Create a genre object with escaped and trimmed data.</span>
-        <span class="keyword token">var</span> genre <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Genre</span><span class="punctuation token">(</span>
-          <span class="punctuation token">{</span> name<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>name <span class="punctuation token">}</span>
-        <span class="punctuation token">)</span><span class="punctuation token">;</span>
+        // Create a genre object with escaped and trimmed data.
+        var genre = new Genre(
+          { name: req.body.name }
+        );
 
 
-        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>errors<span class="punctuation token">.</span><span class="function token">isEmpty</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            <span class="comment token">// There are errors. Render the form again with sanitized values/error messages.</span>
-            res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'genre_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Create Genre'</span><span class="punctuation token">,</span> genre<span class="punctuation token">:</span> genre<span class="punctuation token">,</span> errors<span class="punctuation token">:</span> errors<span class="punctuation token">.</span><span class="function token">array</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="keyword token">return</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span>
-        <span class="keyword token">else</span> <span class="punctuation token">{</span>
-            <span class="comment token">// Data from form is valid.</span>
-            <span class="comment token">// Check if Genre with same name already exists.</span>
-            Genre<span class="punctuation token">.</span><span class="function token">findOne</span><span class="punctuation token">(</span><span class="punctuation token">{</span> <span class="string token">'name'</span><span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>name <span class="punctuation token">}</span><span class="punctuation token">)</span>
-                <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span> <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> found_genre<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                     <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+        if (!errors.isEmpty()) {
+            // There are errors. Render the form again with sanitized values/error messages.
+            res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+        return;
+        }
+        else {
+            // Data from form is valid.
+            // Check if Genre with same name already exists.
+            Genre.findOne({ 'name': req.body.name })
+                .exec( function(err, found_genre) {
+                     if (err) { return next(err); }
 
-                     <span class="keyword token">if</span> <span class="punctuation token">(</span>found_genre<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                         <span class="comment token">// Genre exists, redirect to its detail page.</span>
-                         res<span class="punctuation token">.</span><span class="function token">redirect</span><span class="punctuation token">(</span>found_genre<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-                     <span class="punctuation token">}</span>
-                     <span class="keyword token">else</span> <span class="punctuation token">{</span>
+                     if (found_genre) {
+                         // Genre exists, redirect to its detail page.
+                         res.redirect(found_genre.url);
+                     }
+                     else {
 
-                         genre<span class="punctuation token">.</span><span class="function token">save</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                           <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-                           <span class="comment token">// Genre saved. Redirect to genre detail page.</span>
-                           res<span class="punctuation token">.</span><span class="function token">redirect</span><span class="punctuation token">(</span>genre<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-                         <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+                         genre.save(function (err) {
+                           if (err) { return next(err); }
+                           // Genre saved. Redirect to genre detail page.
+                           res.redirect(genre.url);
+                         });
 
-                     <span class="punctuation token">}</span>
+                     }
 
-                 <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
+                 });
+        }
+    }
+];</code></pre>
 
 <p>The first thing to note is that instead of being a single middleware function (with arguments <code>(req, res, next)</code>) the controller specifies an <em>array</em> of middleware functions. The array is passed to the router function and each method is called in order.</p>
 
@@ -92,11 +92,11 @@ exports<span class="punctuation token">.</span>genre_create_post <span class="op
 
 <p>The first method in the array defines a validator (<code>body</code>) to check that the <em>name</em> field is not empty (calling <code>trim()</code> to remove any trailing/leading whitespace before performing the validation). The  second method in the array (<code>sanitizeBody()</code>) creates a sanitizer to <code>trim()</code> the <em>name</em> field and <code>escape()</code> any dangerous  HTML characters.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Validate that the name field is not empty.</span>
-<span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'name'</span><span class="punctuation token">,</span> <span class="string token">'Genre name required'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Validate that the name field is not empty.
+body('name', 'Genre name required').isLength({ min: 1 }).trim(),
 
-<span class="comment token">// Sanitize (trim and escape) the name field.</span>
-<span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'name'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span></code></pre>
+// Sanitize (trim and escape) the name field.
+sanitizeBody('name').trim().escape(),</code></pre>
 
 <ul>
 </ul>
@@ -107,55 +107,55 @@ exports<span class="punctuation token">.</span>genre_create_post <span class="op
 
 <p>After specifying the validators and sanitizers we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (<code>errors.array()</code>).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Process request after validation and sanitization.</span>
-<span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Process request after validation and sanitization.
+(req, res, next) =&gt; {
 
-    <span class="comment token">// Extract the validation errors from a request.</span>
-    <span class="keyword token">const</span> errors <span class="operator token">=</span> <span class="function token">validationResult</span><span class="punctuation token">(</span>req<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    <span class="comment token">// Create a genre object with escaped and trimmed data.</span>
-    <span class="keyword token">var</span> genre <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Genre</span><span class="punctuation token">(</span>
-      <span class="punctuation token">{</span> name<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>name <span class="punctuation token">}</span>
-    <span class="punctuation token">)</span><span class="punctuation token">;</span>
+    // Create a genre object with escaped and trimmed data.
+    var genre = new Genre(
+      { name: req.body.name }
+    );
 
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>errors<span class="punctuation token">.</span><span class="function token">isEmpty</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="comment token">// There are errors. Render the form again with sanitized values/error messages.</span>
-        res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'genre_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Create Genre'</span><span class="punctuation token">,</span> genre<span class="punctuation token">:</span> genre<span class="punctuation token">,</span> errors<span class="punctuation token">:</span> errors<span class="punctuation token">.</span><span class="function token">array</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">return</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">else</span> <span class="punctuation token">{</span>
-        <span class="comment token">// Data from form is valid.</span>
-        <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="operator token">&lt;</span>save the result<span class="operator token">&gt;</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+    if (!errors.isEmpty()) {
+        // There are errors. Render the form again with sanitized values/error messages.
+        res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+    return;
+    }
+    else {
+        // Data from form is valid.
+        ... &lt;save the result&gt; ...
+    }
+}</code></pre>
 
 <p>If the genre name data is valid then we check if a <code>Genre</code> with the same name already exists (as we don't want to create duplicates). If it does we redirect to the existing genre's detail page. If not, we save the new <code>Genre</code> and redirect to its detail page.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Check if Genre with same name already exists.</span>
-Genre<span class="punctuation token">.</span><span class="function token">findOne</span><span class="punctuation token">(</span><span class="punctuation token">{</span> <span class="string token">'name'</span><span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>name <span class="punctuation token">}</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span> <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> found_genre<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-        <span class="keyword token">if</span> <span class="punctuation token">(</span>found_genre<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-            <span class="comment token">// Genre exists, redirect to its detail page.</span>
-            res<span class="punctuation token">.</span><span class="function token">redirect</span><span class="punctuation token">(</span>found_genre<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-            <span class="punctuation token">}</span>
-        <span class="keyword token">else</span> <span class="punctuation token">{</span>
-            genre<span class="punctuation token">.</span><span class="function token">save</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-                <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-                    <span class="comment token">// Genre saved. Redirect to genre detail page.</span>
-                    res<span class="punctuation token">.</span><span class="function token">redirect</span><span class="punctuation token">(</span>genre<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-                <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Check if Genre with same name already exists.
+Genre.findOne({ 'name': req.body.name })
+    .exec( function(err, found_genre) {
+    if (err) { return next(err); }
+        if (found_genre) {
+            // Genre exists, redirect to its detail page.
+            res.redirect(found_genre.url);
+            }
+        else {
+            genre.save(function (err) {
+                if (err) { return next(err); }
+                    // Genre saved. Redirect to genre detail page.
+                    res.redirect(genre.url);
+                });
+        }
+});</code></pre>
 
 <p>This same pattern is used in all our post controllers: we run validators, then sanitisers,  then check for errors and either re-render the form with error information or save the data. </p>
 
-<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
+<h2 class="highlight-spanned" id="View">View</h2>
 
 <p>The same view is rendered in both the <code>GET</code> and <code>POST</code> controllers/routes when we create a new <code>Genre</code> (and later on it is also used when we <em>update</em> a <code>Genre</code>). In the <code>GET</code> case the form is empty and we just pass a title variable. In the <code>POST</code> case the user has previously entered invalid data—in the <code>genre</code> variable we pass back a sanitized version of the entered data and in the <code>errors</code> variable we pass back an array of error messages.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'genre_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Create Genre'</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'genre_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Create Genre'</span><span class="punctuation token">,</span> genre<span class="punctuation token">:</span> genre<span class="punctuation token">,</span> errors<span class="punctuation token">:</span> errors<span class="punctuation token">.</span><span class="function token">array</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">res.render('genre_form', { title: 'Create Genre'});
+res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});</code></pre>
 
 <p>Create <strong>/views/genre_form.pug</strong> and copy in the text below.</p>
 
@@ -187,7 +187,7 @@ block content
 <p><strong>Note:</strong> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.</p>
 </div>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
+<h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre </em>link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
 
@@ -285,7 +285,7 @@ block content
     <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%; text-shadow: rgb(0, 0, 0) 0px 0px 1px, rgb(0, 0, 0) 0px 0px 2px, rgb(0, 0, 0) 0px 0px 3px, rgb(0, 0, 0) 0px 0px 4px, rgb(0, 0, 0) 0px 0px 5px !important;" title="Show Translator's button 3 second(s)"> </div>
    </td>
    <td><a class="SL_options" title="Show options">Options</a> : <a class="SL_options" title="Translation History">History</a> : <a class="SL_options" title="ImTranslator Feedback">Feedback</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Make a small contribution">Donate</a></td>
-   <td><span id="SL_Balloon_Close" title="Close">Close</span></td>
+   <td>Close</td>
   </tr>
  </tbody>
 </table>

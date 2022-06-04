@@ -15,12 +15,12 @@ translation_of: Web/API/History/go
 
 <dl>
  <dt><code>delta</code> {{optional_inline}}</dt>
- <dd>相对于当前页面你要去往历史页面的位置。负值表示向后移动，正值表示向前移动。因此，例如：<code>history.go(2)</code>向前移动两页，<code>history.go(-2)</code>则向后移动两页。如果未向该函数传参或<code>delta</code>相等于0，则该函数与调用<code>location.reload()</code>具有相同的效果。</dd>
+ <dd>相对于当前页面你要去往历史页面的位置。负值表示向后移动，正值表示向前移动。因此，例如：<code>history.go(2)</code>向前移动两页，<code>history.go(-2)</code>则向后移动两页。如果未向该函数传参或<code>delta</code>相等于 0，则该函数与调用<code>location.reload()</code>具有相同的效果。</dd>
  <dt>
  <div class="blockIndicator note">
  <p>译者注：</p>
 
- <p>相等于0是采用宽松相等进行比较的。另外，JavaScript值古怪的隐式转换在这里也是可用的。</p>
+ <p>相等于 0 是采用宽松相等进行比较的。另外，JavaScript 值古怪的隐式转换在这里也是可用的。</p>
  </div>
  </dt>
 </dl>
@@ -29,11 +29,11 @@ translation_of: Web/API/History/go
 
 <p>向后移动一页（等价于调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/back" title="The back method moves back one page in the session history. If there is no previous page, this method call does nothing."><code>back()</code></a>）：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">window<span class="punctuation token">.</span>history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">window.history.go(-1)</code></pre>
 
 <p>向前移动一页，就像调用了<a href="https://developer.mozilla.org/en-US/docs/Web/API/History/forward" title="Moves forward one page in the session history. It has the same effect as calling history.go() with a delta parameter of 1."><code>forward()</code>：</a></p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">window<span class="punctuation token">.</span>history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">window.history.go(1)</code></pre>
 
 <p>向前移动两页：</p>
 

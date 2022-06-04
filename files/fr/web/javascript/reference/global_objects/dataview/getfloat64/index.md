@@ -19,7 +19,9 @@ La méthode **`getFloat64()`** permet de lire un entier signé sur 64 bits (type
 
 ## Syntaxe
 
-    dataview.getFloat64(positionOctet [, littleEndian])
+```js
+dataview.getFloat64(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 
@@ -57,7 +59,7 @@ dataview.getFloat64(0); // 0
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

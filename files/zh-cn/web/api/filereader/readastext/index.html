@@ -7,9 +7,9 @@ translation_of: Web/API/FileReader/readAsText
 
 <div> </div>
 
-<p><code>readAsText</code> 方法可以将 <a href="/zh-CN/docs/Web/API/Blob">Blob</a> 或者 <a href="/zh-CN/docs/Web/API/File">File</a><a href="/zh-CN/docs/MDN/Doc_status/API/File_API"> </a>对象转根据特殊的编码格式转化为内容(字符串形式)</p>
+<p><code>readAsText</code> 方法可以将 <a href="/zh-CN/docs/Web/API/Blob">Blob</a> 或者 <a href="/zh-CN/docs/Web/API/File">File</a><a href="/zh-CN/docs/MDN/Doc_status/API/File_API"> </a>对象转根据特殊的编码格式转化为内容 (字符串形式)</p>
 
-<p>这个方法是异步的，也就是说，只有当执行完成后才能够查看到结果，如果直接查看是无结果的，并返回undefined</p>
+<p>这个方法是异步的，也就是说，只有当执行完成后才能够查看到结果，如果直接查看是无结果的，并返回 undefined</p>
 
 <p>也就是说必须要挂载 实例下的 onload 或 onloadend 的方法处理转化后的结果</p>
 
@@ -47,61 +47,7 @@ translation_of: Web/API/FileReader/readAsText
 
 <h2 id="兼容性">兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[1]</sup></td>
-   <td>7</td>
-   <td>10<sup>[2]</sup></td>
-   <td>12.02<sup>[3]</sup></td>
-   <td>6.0.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>32</td>
-   <td>3</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>6.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
-
-<p>[1] 在 Gecko 2.0 beta 7 (Firefox 4.0 beta 7) 之前,所有 <a href="/zh-CN/docs/Web/API/File">File</a> 类型,都是<a href="/zh-CN/docs/Web/API/Blob"> Blob</a>类型的一个子集,这已经正确的被纳入到规范里了.在 Gecko 13.0 之前,如果我们错误的传参会导致 FileReader 返回一个<a href="/zh-CN/docs/Web/API/FileError">FileError</a>对象.而<a href="/zh-CN/docs/Web/API/FileError">FileError</a> 这个实例已经从FileReader 规范中被移除了.而在最新的FileAPI 草稿中定义的错误处理机制是返回一个 <a href="/en-US/docs/Web/API/DOMError">DOMError</a> 对象.</p>
-
-<p>[2] IE9 采用的是 <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.实现编码格式化</p>
-
-<p>[3] 在Opera11.1 版本中只是被<a href="http://www.opera.com/docs/specs/presto28/file/">部分支持</a></p>
+{{Compat("api.FileReader.readAsText")}}
 
 <h2 id="其他文档">其他文档 </h2>
 

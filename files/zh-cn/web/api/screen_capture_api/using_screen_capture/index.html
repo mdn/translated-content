@@ -1,5 +1,5 @@
 ---
-title: 使用屏幕捕获API
+title: 使用屏幕捕获 API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 tags:
   - API
@@ -8,9 +8,9 @@ tags:
 translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 ---
-<p>{{DefaultAPISidebar("使用屏幕捕获API")}}</p>
+<p>{{DefaultAPISidebar("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">在这篇文章中，我们将研究如何使用屏幕捕获API和它的{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}方法来捕获部分或全部屏幕进行流媒体传输，通过<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>录制或分享。</span></p>
+<p>在这篇文章中，我们将研究如何使用屏幕捕获 API 和它的{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}方法来捕获部分或全部屏幕进行流媒体传输，通过<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>录制或分享。</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> It may be useful to note that recent versions of the <a href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js shim</a> include implementations of <code>getDisplayMedia()</code> to enable screen sharing on browsers that support it but do not implement the current standard API. This works with at least Chrome, Edge, and Firefox.</p>
@@ -21,7 +21,7 @@ original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 <p>Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents.</p>
 
 <figure>
-<figcaption><strong><em>开始屏幕捕捉: 使用<code>async</code>/<code>await</code> 风格</em></strong></figcaption>
+<figcaption><strong><em>开始屏幕捕捉：使用<code>async</code>/<code>await</code> 风格</em></strong></figcaption>
 
 <pre class="brush: js notranslate">async function startCapture(displayMediaOptions) {
   let captureStream = null;
@@ -37,7 +37,7 @@ original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 <p>You can write this code either using an asynchronous function and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.</p>
 
 <figure>
-<figcaption><strong><em>开始屏幕捕获: 使用<code>Promise</code> 风格</em></strong>
+<figcaption><strong><em>开始屏幕捕获：使用<code>Promise</code> 风格</em></strong>
 
 <pre class="brush: js notranslate">function startCapture(displayMediaOptions) {
  let captureStream = null;
@@ -48,7 +48,7 @@ original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 
 <p>Either way, the {{Glossary("user agent")}} responds by presenting a user interface that prompts the user to choose the screen area to share. Both of these implementations of <code>startCapture()</code> return the {{domxref("MediaStream")}} containing the captured display imagery.</p>
 
-<p>See {{anch("Options and constraints")}}, below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.</p>
+<p>See <a href="#options_and_constraints">Options and constraints</a>, below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.</p>
 
 <figure>
 <figcaption><strong><em>Example of a window allowing the user to select a display surface to capture</em></strong></figcaption>
@@ -56,7 +56,7 @@ original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 <p><a href="https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png" style="height: 520px; width: 619px;"></a></p>
 </figure>
 
-<p>You can then use the captured stream, <code>captureStream</code>, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.</p>
+<p>You can then use the captured stream, <code>captureStream</code>, for anything that accepts a stream as input. The <a href="#示例">examples</a> below show a few ways to make use of the stream.</p>
 
 <h3 id="Visible_vs_logical_display_surfaces">Visible vs logical display surfaces</h3>
 

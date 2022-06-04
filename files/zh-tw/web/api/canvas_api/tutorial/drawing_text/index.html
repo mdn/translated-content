@@ -5,8 +5,6 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
 
-<p>{{ gecko_minversion_header("1.9") }}</p>
-
 <p><code><a href="/en/HTML/Canvas" title="en/HTML/Canvas">canvas</a></code>元素支援在<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#text-0" title="http://www.whatwg.org/specs/web-apps/current-work/#text">標準 HTML 5 特色</a>以及少許實驗性的Mozilla方法和功能上繪製文字。</p>
 
 <p>文字可以包括任何Unicode字元，即使用那些超出“基本多文種平面”的字元也可以。</p>
@@ -15,13 +13,13 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 
 <h2 id="Method_overview" name="Method_overview">方法概述</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
-   <td><code>void <a class="internal" href="/en/Drawing_text_using_a_canvas#fillText()" title="en/Drawing text using a canvas#fillText()">fillText</a>(in <a class="internal" href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a> text, in float x, in float y, [optional] in float maxWidth);</code> {{ gecko_minversion_inline("1.9.1") }}</td>
+   <td><code>void <a class="internal" href="/en/Drawing_text_using_a_canvas#fillText()" title="en/Drawing text using a canvas#fillText()">fillText</a>(in <a class="internal" href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a> text, in float x, in float y, [optional] in float maxWidth);</code></td>
   </tr>
   <tr>
-   <td><a class="internal" href="/nsIDOMTextMetrics" title="nsIDOMTextMetrics"><span style="font-family: monospace;">nsIDOMTextMetrics</span></a><code> <a class="internal" href="/en/Drawing_text_using_a_canvas#measureText()" title="en/Drawing text using a canvas#measureText()">measureText</a>(in DOMString textToMeasure);</code> {{ gecko_minversion_inline("1.9.1") }}</td>
+   <td><a class="internal" href="/nsIDOMTextMetrics" title="nsIDOMTextMetrics">nsIDOMTextMetrics</a><code> <a class="internal" href="/en/Drawing_text_using_a_canvas#measureText()" title="en/Drawing text using a canvas#measureText()">measureText</a>(in DOMString textToMeasure);</code></td>
   </tr>
   <tr>
    <td><code>void <a href="#mozDrawText.28.29">mozDrawText</a>(in DOMString textToDraw); {{ deprecated_inline() }}</code></td>
@@ -36,7 +34,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
    <td><code>void <a href="#mozTextAlongPath.28.29">mozTextAlongPath</a>(in DOMString textToDraw, in boolean stroke);</code></td>
   </tr>
   <tr>
-   <td><code>void <a class="internal" href="/en/Drawing_text_using_a_canvas#strokeText()" title="en/Drawing text using a canvas#strokeText()">strokeText</a>(in DOMString text, in float x, in float y, [optional] in float maxWidth);</code> {{ gecko_minversion_inline("1.9.1") }}</td>
+   <td><code>void <a class="internal" href="/en/Drawing_text_using_a_canvas#strokeText()" title="en/Drawing text using a canvas#strokeText()">strokeText</a>(in DOMString text, in float x, in float y, [optional] in float maxWidth);</code></td>
   </tr>
  </tbody>
 </table>
@@ -45,7 +43,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 
 <h2 id="Attributes" name="Attributes">屬性</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td class="header">屬性</td>
@@ -53,7 +51,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
    <td class="header">描述</td>
   </tr>
   <tr>
-   <td><code>font</code> {{ gecko_minversion_inline("1.9.1") }}</td>
+   <td><code>font</code></td>
    <td><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code></td>
    <td>
     <p>當前的文字樣式被用在繪製文字。該字串使用和 <a href="/en/CSS/font" title="en/CSS/font">CSS font</a>（樣式表字型）相同的語法。要改變繪製文字的樣式，只要簡單的改變它的屬性值即可，就像下面展示的，預設的字型是10px（像素） sans-serif（字型名稱）</p>
@@ -72,7 +70,7 @@ ctx.font = "20pt Arial";</pre>
    </td>
   </tr>
   <tr>
-   <td><code>textAlign</code> {{ gecko_minversion_inline("1.9.1") }}</td>
+   <td><code>textAlign</code></td>
    <td><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code></td>
    <td>
     <p>當前繪製文字所使用的文字對齊方式。  可使用的值：</p>
@@ -94,7 +92,7 @@ ctx.font = "20pt Arial";</pre>
    </td>
   </tr>
   <tr>
-   <td><code>textBaseline</code> {{ gecko_minversion_inline("1.9.1") }}</td>
+   <td><code>textBaseline</code></td>
    <td><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code></td>
    <td>
     <p>當前繪製文字的基線位置  可使用的值：</p>
@@ -334,64 +332,4 @@ ctx.stroke()
  <li>所有的繪圖都使用即時變化來完成。</li>
 </ul>
 
-<h2 id="Additional_examples" name="Additional_examples">其它範例</h2>
 
-<ul>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=273497">繞著路徑繪製外框文字</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=273498">沿著路徑繪製</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=273499">動畫文字繞圓移動</a>.</li>
-</ul>
-
-<h1 id="瀏覽器兼容性">瀏覽器兼容性</h1>
-
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1+</td>
-   <td>3.5+</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>9.0</td>
-   <td>11.0</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-
-<p> </p>

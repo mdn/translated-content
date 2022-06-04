@@ -29,10 +29,10 @@ Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 ```html
 <math>
 
-  <msub>
-    <mi>X</mi>
-    <mn>1</mn>
-  </msub>
+  <msub>
+    <mi>X</mi>
+    <mn>1</mn>
+  </msub>
 
 </math>
 ```
@@ -50,7 +50,7 @@ Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
 ## Notes spécifiques à Gecko
 
-- À partir de Gecko 26.0 {{geckoRelease("26")}} il ne sera bientôt plus possible d'utiliser `<none/>` comme un élément enfant. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application ` of the ``superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
+- À partir de Gecko 26.0 {{geckoRelease("26")}} il ne sera bientôt plus possible d'utiliser `<none/>` comme un élément enfant. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of the `superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
 
 ## Voir aussi
 

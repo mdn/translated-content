@@ -10,7 +10,7 @@ tags:
   - 多媒体设备
   - 屏幕
   - 屏幕捕捉
-  - 屏幕捕捉API
+  - 屏幕捕捉 API
   - 捕捉
   - 方法
   - 显示
@@ -22,7 +22,7 @@ translation_of: Web/API/MediaDevices/getDisplayMedia
 
 <p>这个 {{domxref("MediaDevices")}}  接口的 <code><strong>getDisplayMedia() 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个</strong></code>  {{domxref("MediaStream")}} 里. 然后，这个媒体流可以通过使用 <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> 被记录或者作为<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 会话的一部分被传输。</p>
 
-<p>去 <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a> 查找更多详情和例子.</p>
+<p>去 <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a> 查找更多详情和例子。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -41,18 +41,18 @@ translation_of: Web/API/MediaDevices/getDisplayMedia
 <p>一个被解析为 {{domxref("MediaStream")}} 的 {{jsxref("Promise")}}，其中包含一个视频轨道。视频轨道的内容来自用户选择的屏幕区域以及一个可选的音频轨道。</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> 浏览器对音频的支持程度各不相同，既取决于是否支持，也取决于音频源. 点击 {{anch("Browser compatibility", "compatibility table")}} 来查看各个浏览器的支持性.</p>
+<p><strong>Note:</strong> 浏览器对音频的支持程度各不相同，既取决于是否支持，也取决于音频源。点击 <a href="#浏览器兼容性">浏览器兼容性</a> 来查看各个浏览器的支持性。</p>
 </div>
 
 <h3 id="异常">异常</h3>
 
-<p>来自返回的promise的拒绝是通过将{{domxref("DOMException")}}错误对象传递给promise的失败处理程序来进行的。可能的错误是：</p>
+<p>来自返回的 promise 的拒绝是通过将{{domxref("DOMException")}}错误对象传递给 promise 的失败处理程序来进行的。可能的错误是：</p>
 
 <dl>
  <dt><code>AbortError</code> ［中止错误］</dt>
  <dd>发生了与以下任何其他异常不匹配的错误或故障。</dd>
  <dt><code>InvalidStateError</code> ［拒绝错误］</dt>
- <dd>调用 <code>getDisplayMedia()</code> 的context中的 {{domxref("document")}} 不是完全激活的; 例如，也许它不是最前面的标签。</dd>
+ <dd>调用 <code>getDisplayMedia()</code> 的 context 中的 {{domxref("document")}} 不是完全激活的; 例如，也许它不是最前面的标签。</dd>
  <dt><code>NotAllowedError</code> ［拒绝错误］</dt>
  <dd>用户拒绝授予访问屏幕区域的权限，或者不允许当前浏览实例访问屏幕共享。</dd>
  <dt><code>NotFoundError</code> ［找不到错误］</dt>
@@ -80,7 +80,7 @@ translation_of: Web/API/MediaDevices/getDisplayMedia
   return captureStream;
 }</pre>
 
-<p>这里使用 {{jsxref("await")}} 来进行异步等待 <code>getDisplayMedia()</code>来进行 {{domxref("MediaStream")}}解析，其中包含指定选项所请求的显示内容。 之后，流被返回给调用者以供其使用，可能是使用 {{domxref("RTCPeerConnection.addTrack()")}}添加到WebRTC调用来从流中添加视频轨道。</p>
+<p>这里使用 {{jsxref("await")}} 来进行异步等待 <code>getDisplayMedia()</code>来进行 {{domxref("MediaStream")}}解析，其中包含指定选项所请求的显示内容。 之后，流被返回给调用者以供其使用，可能是使用 {{domxref("RTCPeerConnection.addTrack()")}}添加到 WebRTC 调用来从流中添加视频轨道。</p>
 
 <h2 id="规范">规范</h2>
 

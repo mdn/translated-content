@@ -52,11 +52,11 @@ Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changeme
 ## Changements pour les add-ons et les développeurs Mozilla
 
 - L'interface nsIDOMParserJS n'existe plus ({{bug(816410)}}). Voir [nsIDOMParser](/fr/docs/nsIDOMParser) pour des alternatives.
-- Préférences de contenu : L'interface {{interface("nsIContentPrefService")}} est désormais obsolète et l'API asynchrone de stockage {{interface("nsIContentPrefService2")}} a été implémentée.
+- Préférences de contenu : L'interface `nsIContentPrefService` est désormais obsolète et l'API asynchrone de stockage `nsIContentPrefService2` a été implémentée.
 
 ## Voir également
 
-- [Notes de version de Firefox 20](http://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
+- [Notes de version de Firefox 20](http://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
 - [Site Compatibility for Firefox 20](/fr/docs/Site_Compatibility_for_Firefox_20)
 
 ### Anciennes versions

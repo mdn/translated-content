@@ -24,12 +24,12 @@ Les articles ci-dessous vous permettront de vous familiariser avec ces technolog
 - [Dessiner avec les canvas](/fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas)
   - : Un guide d'introduction pour utiliser l'élément pour dessiner en 2D.
 - [SVG](/fr/docs/SVG)
-  - : Scalable Vector Graphics (SVG) vous permet d'utiliser des lignes, courbes et  d'autres figures géométriques pour dessiner. Les images SVG n'étant pas des images matricielles, elles permettent de faire des images redimensionnables sans limite.
+  - : Scalable Vector Graphics (SVG) vous permet d'utiliser des lignes, courbes et d'autres figures géométriques pour dessiner. Les images SVG n'étant pas des images matricielles, elles permettent de faire des images redimensionnables sans limite.
 
 ## Graphismes 3D
 
 - [WebGL](/fr/docs/WebGL)
-  - : Un guide pour débuter avec WebGL l'API  graphique 3D, pour le Web. Cette technologie vous permettra d'utiliser le standard OpenGL ES pour du contenu Web.
+  - : Un guide pour débuter avec WebGL l'API graphique 3D, pour le Web. Cette technologie vous permettra d'utiliser le standard OpenGL ES pour du contenu Web.
 
 ## Video
 

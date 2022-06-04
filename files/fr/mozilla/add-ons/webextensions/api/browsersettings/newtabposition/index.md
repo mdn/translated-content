@@ -23,10 +23,10 @@ Ce code définit la valeur à "afterCurrent" puis enregistre la nouvelle valeur 
 
 ```js
 async function setAfterCurrent() {
-  let result = await browser.browserSettings.newTabPosition.set({value: "afterCurrent"});
-  console.log(`Result: ${result}`);
-  let newValue = await browser.browserSettings.newTabPosition.get({});
-  console.log(`New value: ${newValue.value}`);
+  let result = await browser.browserSettings.newTabPosition.set({value: "afterCurrent"});
+  console.log(`Result: ${result}`);
+  let newValue = await browser.browserSettings.newTabPosition.get({});
+  console.log(`New value: ${newValue.value}`);
 }
 ```
 

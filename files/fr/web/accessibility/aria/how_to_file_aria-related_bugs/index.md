@@ -46,7 +46,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
           >commentaires, questions et retours Window-Eyes </a
         >(email)
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>
@@ -69,7 +69,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
     <tr>
       <td><a href="/User:orca.clock">Orca</a></td>
       <td><a href="/fr/DOM/File">Déposer un bug Orca</a></td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1" rowspan="5">Navigateurs</td>
@@ -79,7 +79,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
           >Déposer un bug WebKit.org</a
         >
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Google Chrome</td>
@@ -88,7 +88,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
           >Déposer un bug Chromium</a
         >
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td><p>Microsoft Internet Explorer</p></td>
@@ -134,7 +134,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
     <tr>
       <td>Google Web Toolkit (GWT)</td>
       <td><a href="/fr/DOM/File">Déposer un bug GWT</a></td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Yahoo User Interface</td>

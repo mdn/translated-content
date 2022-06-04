@@ -11,13 +11,13 @@ translation_of: Web/API/HTMLButtonElement
 ---
 {{APIRef("HTML DOM")}}
 
-L'interface   **`HTMLButtonElement`**  fournit des propriétés et des méthodes (au-delà de l'interface d'objet {{HTMLElement ("button")}} dont elle dispose également par héritage) pour manipuler la présentation et la présentation des éléments de bouton.
+L'interface   **`HTMLButtonElement`**  fournit des propriétés et des méthodes (au-delà de l'interface d'objet {{HTMLElement ("button")}} dont elle dispose également par héritage) pour manipuler la présentation et la présentation des éléments de bouton.
 
 {{InheritanceDiagram(600, 120)}}
 
 ## Propriétés
 
-Hérite des propriétés de son parent,  *{{domxref("HTMLElement")}}.*
+Hérite des propriétés de son parent,  *{{domxref("HTMLElement")}}.*
 
 - {{domxref("HTMLButtonElement.accessKey")}}
   - : Est un {{domxref ("DOMString")}} indiquant la touche de clavier à caractère unique permettant d'accéder au bouton.
@@ -45,7 +45,7 @@ Hérite des propriétés de son parent,  *{{domxref("HTMLElement")}}.*
 - {{domxref("HTMLButtonElement.name")}}
   - : Est un {{domxref ("DOMString")}} représentant le nom de l'objet lorsqu'il est soumis avec un formulaire. {{HTMLVersionInline (5)}} Si spécifié, il ne doit pas s'agir d'une chaîne vide.
 - {{domxref("HTMLButtonElement.tabIndex")}}
-  - : Est un  `long` qui représente la position de cet élément dans l'ordre de tabulation .
+  - : Est un  `long` qui représente la position de cet élément dans l'ordre de tabulation .
 - {{domxref("HTMLButtonElement.type")}}
 
   - : : Est un {{domxref ("DOMString")}} indiquant le comportement du bouton. C'est un attribut énuméré avec les valeurs possibles suivantes:
@@ -62,7 +62,7 @@ Hérite des propriétés de son parent,  *{{domxref("HTMLElement")}}.*
 - {{domxref("HTMLButtonElement.value")}}
   - : Est un {{domxref ("DOMString")}} représentant la valeur de contrôle de formulaire actuelle du bouton.
 - {{domxref("HTMLButtonElement.willValidate")}} {{readonlyInline}}
-  - : Est un {{domxref ("Boolean")}} indiquant si le bouton est candidat à la validation de contrainte. Il est  `false` si des conditions l'empêchent de valider la contrainte .
+  - : Est un {{domxref ("Boolean")}} indiquant si le bouton est candidat à la validation de contrainte. Il est  `false` si des conditions l'empêchent de valider la contrainte .
 
 ## Les méthodes
 
@@ -98,9 +98,9 @@ Avec un navigateur basé sur Gecko, utilisez la pseudo-classe {{cssxref (": - mo
 
 | Spécification                                                                                                | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#the-button-element", "HTMLButtonElement")}} | {{Spec2('HTML WHATWG')}} | L'attribut suivant a été ajouté : `menu`. L'attribut  `type` peut prendre une valeur supplémentaire , `"menu"`.                                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', "forms.html#the-button-element", "HTMLButtonElement")}}     | {{Spec2('HTML5 W3C')}}     | Les attributs  `tabindex` et `accesskey`,  sont maintenant définis sur {{domxref("HTMLElement")}}. Les attributs suivants ont été ajoutés : `autofocus`, `formAction`, `formEnctype`, `formMethod`, `formNoValidate`, `formTarget`, `labels`, `validity`, `validationMessage`, and `willValidate`. Les méthodes suivantes ont été ajoutées : `checkValidity()`, `setCustomValidity()`. The `type` attribute is no more read-only. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-34812697', 'HTMLButtonElement')}}             | {{Spec2('DOM2 HTML')}}     | Aucun changement de  {{SpecName("DOM1")}}.                                                                                                                                                                                                                                                                                                                                                                                          |
+| {{SpecName('HTML WHATWG', "forms.html#the-button-element", "HTMLButtonElement")}} | {{Spec2('HTML WHATWG')}} | L'attribut suivant a été ajouté : `menu`. L'attribut  `type` peut prendre une valeur supplémentaire , `"menu"`.                                                                                                                                                                                                                                                                                                                             |
+| {{SpecName('HTML5 W3C', "forms.html#the-button-element", "HTMLButtonElement")}}     | {{Spec2('HTML5 W3C')}}     | Les attributs  `tabindex` et `accesskey`,  sont maintenant définis sur {{domxref("HTMLElement")}}. Les attributs suivants ont été ajoutés : `autofocus`, `formAction`, `formEnctype`, `formMethod`, `formNoValidate`, `formTarget`, `labels`, `validity`, `validationMessage`, and `willValidate`. Les méthodes suivantes ont été ajoutées : `checkValidity()`, `setCustomValidity()`. The `type` attribute is no more read-only. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-34812697', 'HTMLButtonElement')}}             | {{Spec2('DOM2 HTML')}}     | Aucun changement de  {{SpecName("DOM1")}}.                                                                                                                                                                                                                                                                                                                                                                                          |
 | {{SpecName('DOM1', 'level-one-html.html#ID-34812697', 'HTMLButtonElement')}}         | {{Spec2('DOM1')}}         | . Définition initiale                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Compatibilité des navigateurs

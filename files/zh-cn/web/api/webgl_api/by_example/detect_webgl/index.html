@@ -1,25 +1,23 @@
 ---
-title: 检测WebGL
+title: 检测 WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 translation_of: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
-
 <p>{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}</p>
 
 <div id="detect-webgl">
-<div class="summary">
+<div>
 <p>这个例子演示了如何通过渲染上下文来检测{{Glossary("WebGL")}}，并将结果报告给用户。</p>
 </div>
 
 <p>{{EmbedLiveSample("detect-webgl-source",660,150)}}</p>
 
 <div id="detect-webgl-intro">
-<h3 id="WebGL特性检测">WebGL特性检测</h3>
+<h3 id="WebGL特性检测">WebGL 特性检测</h3>
 
-<p>在第一个例子中，我们将检查浏览器是否支持{{Glossary("WebGL")}}。为此，我们将尝试从{{domxref("HTMLCanvasElement","canvas")}}元素获取{{domxref("WebGLRenderingContext","WebGL渲染的上下文","",1)}} 。{{domxref("WebGLRenderingContext","WebGL渲染的上下文", "", 1)}}是一个接口，通过它你可以设置和查询绘图器的状态，发送数据到WebGL，执行绘制命令。</p>
+<p>在第一个例子中，我们将检查浏览器是否支持{{Glossary("WebGL")}}。为此，我们将尝试从{{domxref("HTMLCanvasElement","canvas")}}元素获取{{domxref("WebGLRenderingContext","WebGL 渲染的上下文","",1)}} 。{{domxref("WebGLRenderingContext","WebGL 渲染的上下文", "", 1)}}是一个接口，通过它你可以设置和查询绘图器的状态，发送数据到 WebGL，执行绘制命令。</p>
 
-<p>在单个上下文接口中保存绘图器的状态并不是{{Glossary("WebGL")}}独有的。这在其他绘图技术里也是存在的{{Glossary("API")}},比如{{domxref("CanvasRenderingContext2D","2D渲染上下文的canvas", "", 1)}}。然而，您可以调整的属性和变量对于每个{{Glossary("API")}}来说都是不同的。</p>
+<p>在单个上下文接口中保存绘图器的状态并不是{{Glossary("WebGL")}}独有的。这在其他绘图技术里也是存在的{{Glossary("API")}},比如{{domxref("CanvasRenderingContext2D","2D 渲染上下文的 canvas", "", 1)}}。然而，您可以调整的属性和变量对于每个{{Glossary("API")}}来说都是不同的。</p>
 </div>
 
 <div id="detect-webgl-source">

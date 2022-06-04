@@ -5,9 +5,9 @@ translation_of: Web/API/FetchEvent/respondWith
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("FetchEvent")}} 接口的 <strong><code>respondWith()</code></strong> 方法旨在包裹代码，这些代码为来自受控页面的request生成自定义的response。这些代码通过返回一个 {{domxref("Response")}} 、 <a class="external external-icon" href="http://fetch.spec.whatwg.org/#concept-network-error">network error</a> 或者 <code><a class="external external-icon" href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a>的方式</code>resolve。</p>
+<p>{{domxref("FetchEvent")}} 接口的 <strong><code>respondWith()</code></strong> 方法旨在包裹代码，这些代码为来自受控页面的 request 生成自定义的 response。这些代码通过返回一个 {{domxref("Response")}} 、 <a class="external external-icon" href="http://fetch.spec.whatwg.org/#concept-network-error">network error</a> 或者 <code><a class="external external-icon" href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a>的方式</code>resolve。</p>
 
-<p>有关跨域内容污染的渲染端安全检测与 {{domxref("Response")}} 体的透明度（或者不透明度）相关联，而不是URL。如果request是一个顶级的导航，而返回值是一个类型属性不透明的 {{domxref("Response")}}（即不透明响应体），一个 <a class="external external-icon" href="http://fetch.spec.whatwg.org/#concept-network-error">network error</a> 将被返回给 <code><a class="external external-icon" href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a>。所有成功（非网络错误）响</code>应的最终URL是请求的URL。</p>
+<p>有关跨域内容污染的渲染端安全检测与 {{domxref("Response")}} 体的透明度（或者不透明度）相关联，而不是 URL。如果 request 是一个顶级的导航，而返回值是一个类型属性不透明的 {{domxref("Response")}}（即不透明响应体），一个 <a href="https://fetch.spec.whatwg.org/#concept-network-error">network error</a> 将被返回给 <a href="https://fetch.spec.whatwg.org/#concept-fetch"><code>Fetch</code></a>。所有成功（非网络错误）响应的最终 URL 是请求的 URL。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,9 +25,9 @@ translation_of: Web/API/FetchEvent/respondWith
 
 <h2 id="示例">示例</h2>
 
-<p>该代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker fetch sample</a> (<a class="external external-icon" href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch sample live</a>)。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} 事件处理程序侦听 {{event("fetch")}} 事件。当触发时，{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith(any value)")}} 返回一个promise给受控页面。该promise在 {{domxref("Cache")}} 对象中查询第一个匹配URL请求。如果没有发现匹配项，该代码将转而从网络获取响应。</p>
+<p>该代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker fetch sample</a> (<a class="external external-icon" href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch sample live</a>)。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} 事件处理程序侦听 {{event("fetch")}} 事件。当触发时，{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith(any value)")}} 返回一个 promise 给受控页面。该 promise 在 {{domxref("Cache")}} 对象中查询第一个匹配 URL 请求。如果没有发现匹配项，该代码将转而从网络获取响应。</p>
 
-<p>该代码也处理从 {{domxref("ServiceWorkerGlobalScope.fetch")}} 操作中抛出的异常。请注意，HTTP错误响应（例如404）不会触发异常。 它将返回具有相应错误代码集的正常响应对象。</p>
+<p>该代码也处理从 {{domxref("ServiceWorkerGlobalScope.fetch")}} 操作中抛出的异常。请注意，HTTP 错误响应（例如 404）不会触发异常。它将返回具有相应错误代码集的正常响应对象。</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
@@ -73,61 +73,7 @@ translation_of: Web/API/FetchEvent/respondWith
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(44.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.FetchEvent.respondWith")}}
 
 <h2 id="请参见">请参见</h2>
 

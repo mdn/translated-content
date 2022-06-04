@@ -5,22 +5,22 @@ translation_of: Web/API/Notifications_API
 ---
 <p>{{DefaultAPISidebar("Web Notifications")}}</p>
 
-<p class="summary"><span class="tlid-translation translation" lang="zh-TW"><span title="">Notifications API允許網頁控制向終端用戶顯示系統通知</span></span> — 它在網頁瀏覽器的視圖之外，因此使用者切換顯示卡或移至不同的應用程式也能顯示。此 API 設計為在相容於不同平台與現有的通知系統相容。</p>
+<p>Notifications API允許網頁控制向終端用戶顯示系統通知 — 它在網頁瀏覽器的視圖之外，因此使用者切換顯示卡或移至不同的應用程式也能顯示。此 API 設計為在相容於不同平台與現有的通知系統相容。</p>
 
 <h2 id="概念與使用方法">概念與使用方法</h2>
 
-<p><span class="tlid-translation translation" lang="zh-TW"><span title="">在受到支持的平台上，顯示系統通知通常涉及兩件事。</span></span> <span class="tlid-translation translation" lang="zh-TW"><span title="">首先，用戶需要授予當前的來源權限才能顯示系統通知，</span></span><span class="tlid-translation translation" lang="zh-TW"><span title="">通常在應用程式或網站初始化完成後</span></span>使用{{domxref("Notification.requestPermission()")}} 方法。</p>
+<p>在受到支持的平台上，顯示系統通知通常涉及兩件事。 首先，用戶需要授予當前的來源權限才能顯示系統通知，通常在應用程式或網站初始化完成後使用{{domxref("Notification.requestPermission()")}} 方法。</p>
 
 <pre class="brush: js">btn.addEventListener('click', function() {
   let promise = Notification.requestPermission();
   // wait for permission
 })</pre>
 
-<p>這不僅是最佳實踐 — <span class="tlid-translation translation" lang="zh-TW"><span title="">您不應向用戶發送他們不同意的通知，並且在未來瀏覽器將明確禁止沒有響應用戶請求允許通知對話框的通知。Firefox 72 開始已遵循這項約定。使用此方法將產生一個請求對話框，如下所示：</span></span></p>
+<p>這不僅是最佳實踐 — 您不應向用戶發送他們不同意的通知，並且在未來瀏覽器將明確禁止沒有響應用戶請求允許通知對話框的通知。Firefox 72 開始已遵循這項約定。使用此方法將產生一個請求對話框，如下所示：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10819/notification-bubble.png" style="display: block; height: 205px; margin: 0 auto; width: 453px;"></p>
 
-<p><span class="tlid-translation translation" lang="zh-TW"><span title="">用戶可以從此處選擇允許、屏蔽來自此來源的通知，也可以不做選擇。</span> <span title="">一旦選定，該設置通常將在當前會話中保持不變。</span></span></p>
+<p>用戶可以從此處選擇允許、屏蔽來自此來源的通知，也可以不做選擇。 一旦選定，該設置通常將在當前會話中保持不變。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 從 Firefox 44 開始，Notifications 和 <a href="/en-US/docs/Web/API/Push_API">Push</a> 的權限已合併。如果授予通知權限則推送也將被啟用。</p>
@@ -30,10 +30,10 @@ translation_of: Web/API/Notifications_API
 
 <p>{{AvailableInWorkers}}</p>
 
-<p><span class="tlid-translation translation" lang="zh-TW"><span title="">另外，Notifications API規範指定了</span></span> <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> <span class="tlid-translation translation" lang="zh-TW"><span title="">的許多附加功能，以允許服務人員觸發通知。</span></span></p>
+<p>另外，Notifications API規範指定了 <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> 的許多附加功能，以允許服務人員觸發通知。</p>
 
 <div class="note">
-<p><strong>注意</strong>: <span class="tlid-translation translation" lang="zh-TW"><span title="">要了解有關在自己的應用程序中使用通知的更多信息，請閱讀</span></span> <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a>。</p>
+<p><strong>注意</strong>: 要了解有關在自己的應用程序中使用通知的更多信息，請閱讀 <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a>。</p>
 </div>
 
 <h2 id="Notifications_介面">Notifications 介面</h2>
@@ -47,141 +47,20 @@ translation_of: Web/API/Notifications_API
 
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration")}}</dt>
- <dd>包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} <span class="tlid-translation translation" lang="zh-TW"><span title="">用於控制通知顯示的方法。</span></span></dd>
+ <dd>包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 用於控制通知顯示的方法。</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope")}}</dt>
- <dd>包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} <span class="tlid-translation translation" lang="zh-TW"><span title="">點擊通知時觸發自定義函數的處理程序。</span></span></dd>
+ <dd>包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} 點擊通知時觸發自定義函數的處理程序。</dd>
  <dt>{{domxref("NotificationEvent")}}</dt>
- <dd>基於 {{domxref("ExtendableEvent")}} <span class="tlid-translation translation" lang="zh-TW"><span title="">的特定類型的事件對象，它表示已觸發的通知。</span></span></dd>
+ <dd>基於 {{domxref("ExtendableEvent")}} 的特定類型的事件對象，它表示已觸發的通知。</dd>
 </dl>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
-    22</td>
-   <td>{{CompatGeckoDesktop("2.0")}}{{property_prefix("moz")}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>6<sup>[3]</sup></td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Service worker additions</td>
-   <td>
-    <p>{{CompatChrome(42.0)}}</p>
-   </td>
-   <td>{{CompatGeckoDesktop("42.0")}}<sup>[4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>{{CompatGeckoMobile(2.0)}}{{property_prefix("moz")}}<sup>[2]</sup><br>
-    {{CompatGeckoMobile(22.0)}}</td>
-   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
-    1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Service worker additions</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(42.0)}}<sup>[4]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Before Chrome 22, the support for notification followed an <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">old prefixed version of the specification</a> and used the {{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} object to instantiate a new notification. Before Chrome 32, {{domxref("Notification.permission")}} was not supported.</p>
-
-<p>[2] Prior to Firefox 22 (Firefox OS &lt;1.2), the instantiation of a new notification was done with the {{domxref("window.navigator.mozNotification", "navigator.mozNotification")}} object through its <code>createNotification()</code> method. In addition, the Notification was displayed when calling the <code>show()</code> method and supported only the <code>click</code> and <code>close</code> events (Nick Desaulniers wrote a <a href="https://github.com/nickdesaulniers/fxos-irc/blob/master/js/notification.js">Notification shim</a> to cover both newer and older implementations.)</p>
-
-<p>[3] Safari started to support notification with Safari 6, but only on Mac OSX 10.8+ (Mountain Lion).</p>
-
-<p>[4] Firefox 42 has shipped with web notifications from Service Workers disabled.</p>
+{{Compat("api.Notification")}}
 
 <h2 id="Firefox_OS_permissions">Firefox OS permissions</h2>
 

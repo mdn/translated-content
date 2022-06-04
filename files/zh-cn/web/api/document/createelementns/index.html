@@ -10,9 +10,9 @@ translation_of: Web/API/Document/createElementNS
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>创建一个具有指定的命名空间URI和限定名称的元素。</p>
+<p>创建一个具有指定的命名空间 URI 和限定名称的元素。</p>
 
-<p>要创建一个元素而不指定命名空间URI，请使用  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createElement" title="createElement">createElement</a> 方法。</p>
+<p>要创建一个元素而不指定命名空间 URI，请使用  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createElement" title="createElement">createElement</a> 方法。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -24,11 +24,11 @@ translation_of: Web/API/Document/createElementNS
 
 <dl>
  <dt><code>namespaceURI</code></dt>
- <dd>指定与元素相关联的<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">命名空间URI</a>的字符串。创建的元素的<a href="/zh-CN/docs/Web/API/Node/namespaceURI">namespaceURI</a>属性使用namespaceURI的值进行初始化。 参见<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's">有效的命名空间URL</a>。</dd>
+ <dd>指定与元素相关联的<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">命名空间 URI</a>的字符串。创建的元素的<a href="/zh-CN/docs/Web/API/Node/namespaceURI">namespaceURI</a>属性使用 namespaceURI 的值进行初始化。 参见<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's">有效的命名空间 URL</a>。</dd>
  <dt><code>qualifiedName</code></dt>
- <dd>指定要创建的元素的类型的字符串。 创建的元素的<a href="/zh-CN/docs/DOM/element.nodeName">nodeName</a>属性使用qualifiedName的值进行初始化。</dd>
- <dt><code>options</code><span class="inlineIndicator optional optionalInline">可选的</span></dt>
- <dd>一个可选的包含单个属性的ElementCreationOptions对象，其值是预先使用customElements.define()定义的自定义元素的标签名称。为了向后兼容<a href="https://www.w3.org/TR/custom-elements/">自定义元素规范</a>的早期版本，一些浏览器允许您在此使用字符串替代对象，其中字符串的值是自定义元素的标签名称。有关如何使用此参数的详情，请参阅<a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">原生HTML元素</a>。</dd>
+ <dd>指定要创建的元素的类型的字符串。 创建的元素的<a href="/zh-CN/docs/DOM/element.nodeName">nodeName</a>属性使用 qualifiedName 的值进行初始化。</dd>
+ <dt><code>options</code>可选的</dt>
+ <dd>一个可选的包含单个属性的 ElementCreationOptions 对象，其值是预先使用 customElements.define() 定义的自定义元素的标签名称。为了向后兼容<a href="https://www.w3.org/TR/custom-elements/">自定义元素规范</a>的早期版本，一些浏览器允许您在此使用字符串替代对象，其中字符串的值是自定义元素的标签名称。有关如何使用此参数的详情，请参阅<a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">原生 HTML 元素</a>。</dd>
  <dd>新元素将被赋予一个属性，其值是自定义元素的标签名称。 自定义元素是实验中的功能，目前仅在某些浏览器中可用。</dd>
 </dl>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Document/createElementNS
 
 <p>新<a href="/zh-CN/docs/Web/API/Element">元素</a>。</p>
 
-<h2 id="Example" name="Example">有效的命名空间URI</h2>
+<h2 id="Example" name="Example">有效的命名空间 URI</h2>
 
 <ul>
  <li>HTML - 参阅 <code>http://www.w3.org/1999/xhtml</code></li>
@@ -47,7 +47,7 @@ translation_of: Web/API/Document/createElementNS
 
 <h2 id="Example" name="Example">示例</h2>
 
-<p>在<a href="/zh-CN/docs/XHTML">XHTML</a>命名空间中创建一个新的&lt;div&gt;元素并将其添加到vbox的结尾处。虽然这不是一个非常有用的<a href="/zh-CN/docs/XUL">XUL</a>文档，它演示了在单个文档中使用来自两个不同命名空间的元素：</p>
+<p>在<a href="/zh-CN/docs/XHTML">XHTML</a>命名空间中创建一个新的&lt;div&gt;元素并将其添加到 vbox 的结尾处。虽然这不是一个非常有用的<a href="/zh-CN/docs/XUL">XUL</a>文档，它演示了在单个文档中使用来自两个不同命名空间的元素：</p>
 
 <pre class="brush:xml">&lt;?xml version="1.0"?&gt;
 &lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
@@ -63,7 +63,7 @@ translation_of: Web/API/Document/createElementNS
  function init(){
    container = document.getElementById("ContainerBox");
    newdiv = document.createElementNS("http://www.w3.org/1999/xhtml","div");
-   txtnode = document.createTextNode("这是使用createElementNS和createTextNode动态构造的文本，然后使用appendChild插入到文档中。");
+   txtnode = document.createTextNode("这是使用 createElementNS 和 createTextNode 动态构造的文本，然后使用 appendChild 插入到文档中。");
    newdiv.appendChild(txtnode);
    container.appendChild(newdiv);
  }
@@ -80,94 +80,16 @@ translation_of: Web/API/Document/createElementNS
 </pre>
 
 <div class="note">
-<p>上面给出的示例中使用了在XHTML文档中不推荐的内联脚本。这个特定的示例实际上是一个嵌入XHTML的XUL文档，然而，仍然建议适用。</p>
+<p>上面给出的示例中使用了在 XHTML 文档中不推荐的内联脚本。这个特定的示例实际上是一个嵌入 XHTML 的 XUL 文档，然而，仍然建议适用。</p>
 </div>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>options</code> argument</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(50)}}<sup>[2][3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]在本规范的早期版本中，此参数只是一个字符串，其值是自定义元素的标签名称。为了向后兼容性，Chrome同时接受这两种格式。</p>
-
-<p>[2] 参阅[1]：像Chrome一样，Firefox从51版开始在这里接受一个字符串而不是一个对象。但是在版本50中，选项必须是对象。</p>
-
-<p>[3] 要在Firefox中实验自定义元素，必须将dom.webcomponents.enabled和dom.webcomponents.customelements.enabled首选项设置为true。</p>
+{{Compat("api.Document.createElementNS")}}
 
 <h2 id="See_also" name="See_also">相关链接</h2>
 

@@ -9,7 +9,7 @@ translation_of: Web/API/Window/innerHeight
 
 <p>浏览器窗口的视口（viewport）高度（以像素为单位）；如果有水平滚动条，也包括滚动条高度。</p>
 
-<div class="note"><strong>Note:</strong> If you use {{ifmethod("nsIDOMWindowUtils", "setCSSViewport")}} to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
+<div class="note"><strong>Note:</strong> If you use <code>nsIDOMWindowUtils.setCSSViewport()</code> to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Window/innerHeight
 
 <h2 id="Notes" name="Notes">备注</h2>
 
-<p>任何窗口对象，如<font face="Courier New, Andale Mono, monospace"> </font>{{domxref("window")}}、frame、frameset 或 secondary window 都支持 <code>innerHeight</code> 属性。</p>
+<p>任何窗口对象，如 {{domxref("window")}}、frame、frameset 或 secondary window 都支持 <code>innerHeight</code> 属性。</p>
 
 <p>有一个<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7" title="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7">算法</a>用来获取不包括水平滚动条的视口高度。</p>
 
@@ -34,13 +34,13 @@ translation_of: Web/API/Window/innerHeight
 <pre class="brush:js">var intFrameHeight = window.innerHeight; // or
 
 var intFrameHeight = self.innerHeight;
-// 返回frameset里面的frame视口的高度
+// 返回 frameset 里面的 frame 视口的高度
 
 var intFramesetHeight = parent.innerHeight;
-// 返回上一级frameset的视口的高度
+// 返回上一级 frameset 的视口的高度
 
 var intOuterFramesetHeight = top.innerHeight;
-// 返回最外部frameset的视口的高度
+// 返回最外部 frameset 的视口的高度
 </pre>
 
 <p>{{todo("link to an interactive demo here")}}</p>
@@ -57,57 +57,7 @@ var intOuterFramesetHeight = top.innerHeight;
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>9</td>
-   <td>9</td>
-   <td>3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1</td>
-   <td>{{CompatGeckoMobile(1.0)}}</td>
-   <td>9</td>
-   <td>9</td>
-   <td>3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko_note" name="Gecko_note">Gecko 备注</h3>
-
-<p>从 Firefox 4 到 Firefox 24，该属性有 bug，而且某种情况下，会在页面加载前给出一个错误的值，查看 {{bug(641188)}}。</p>
+{{Compat("api.Window.innerHeight")}}
 
 <h2 id="Standards_information" name="Standards_information">标准相关信息</h2>
 

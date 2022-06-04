@@ -12,13 +12,13 @@ translation_of: Web/API/Selection/rangeCount
 </div>
 </div>
 
-<p>The <strong><code>Selection.rangeCount</code></strong>是一个返回选区(selection)中range对象数量的只读属性。</p>
+<p>The <strong><code>Selection.rangeCount</code></strong>是一个返回选区 (selection) 中 range 对象数量的只读属性。</p>
 
-<p>在网页使用者点击一个加载完毕的新打开的页面之前，<strong>rangeCount</strong><font face="Consolas, Liberation Mono, Courier, monospace">的值是0</font>。在使用者点击页面之后，<font face="Consolas, Liberation Mono, Courier, monospace">rangeCount的值变为1，即使并没有可视的选区(selection)。</font></p>
+<p>在网页使用者点击一个加载完毕的新打开的页面之前，<strong>rangeCount</strong>的值是 0。在使用者点击页面之后，rangeCount 的值变为 1，即使并没有可视的选区 (selection)。</p>
 
-<p>使用者一般情况下在一次只能选择一个range ，所以通常情况下<strong>rangeCount属性</strong>的值总为1。脚本(如javascript)可以使选区包含多个range。</p>
+<p>使用者一般情况下在一次只能选择一个 range ，所以通常情况下<strong>rangeCount 属性</strong>的值总为 1。脚本 (如 javascript) 可以使选区包含多个 range。</p>
 
-<p>Gecko 浏览器允许跨表格单元格获得多个选区(此处可能翻译不准). Firefox allows to select multiple ranges in the document by using Ctrl+click (unless the click within an element with display: table-cell).</p>
+<p>Gecko 浏览器允许跨表格单元格获得多个选区 (此处可能翻译不准). Firefox allows to select multiple ranges in the document by using Ctrl+click (unless the click within an element with display: table-cell).</p>
 
 <h2 id="Syntax" name="Syntax">用法</h2>
 
@@ -27,12 +27,12 @@ translation_of: Web/API/Selection/rangeCount
 
 <h2 id="例子">例子</h2>
 
-<p>下面这个例子会每隔一秒显示一次rangeCount的值。在浏览器中选择文本，然后看看他的改变。</p>
+<p>下面这个例子会每隔一秒显示一次 rangeCount 的值。在浏览器中选择文本，然后看看他的改变。</p>
 
 <h3 id="HTML_Content">HTML Content</h3>
 
-<pre class="brush: html">//打开控制台看看selection中有多少range对象。
-//在Gecko浏览器，当你用鼠标在表格单元格中拖动的同时按住Ctrl，你可以选择多个range。
+<pre class="brush: html">//打开控制台看看 selection 中有多少 range 对象。
+//在 Gecko 浏览器，当你用鼠标在表格单元格中拖动的同时按住 Ctrl，你可以选择多个 range。
 
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;a.1&lt;td&gt;a.2
@@ -72,55 +72,7 @@ translation_of: Web/API/Selection/rangeCount
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Selection.rangeCount")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

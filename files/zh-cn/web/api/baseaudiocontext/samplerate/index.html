@@ -7,7 +7,7 @@ original_slug: Web/API/AudioContext/sampleRate
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }}的<code>sampleRate属性</code>返回一个浮点数表示采样率（每秒采样数）， 同一个AudioContext中的所有节点采样率相同，所以不支持采样率转换。</p>
+<p>{{domxref("AudioContext")}} 的 <code>sampleRate</code> 属性返回一个浮点数表示采样率（每秒采样数），同一个 AudioContext 中的所有节点采样率相同，所以不支持采样率转换。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -22,7 +22,7 @@ var mySampleRate = audioCtx.sampleRate;</pre>
 <h2 id="例子">例子</h2>
 
 <div class="note">
-<p><strong>注意：</strong>想要完整的Web Audio实例，可以查看<a href="https://github.com/mdn/" style="font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">MDN Github repo</a>上的Web Audio Demo，比如<a href="https://github.com/mdn/panner-node">panner-node</a>。不妨试试在浏览器控制台输入<code>audioCtx.sampleRate</code></p>
+<p><strong>注意：</strong>想要完整的 Web Audio 实例，可以查看<a href="https://github.com/mdn/" style="font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">MDN Github repo</a>上的 Web Audio Demo，比如<a href="https://github.com/mdn/panner-node">panner-node</a>。不妨试试在浏览器控制台输入<code>audioCtx.sampleRate</code></p>
 </div>
 
 <pre class="brush: js;highlight[8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -36,75 +36,11 @@ console.log(audioCtx.sampleRate);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-sampleRate', 'sampleRate')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.sampleRate")}}
 
 <h2 id="另见">另见</h2>
 

@@ -16,18 +16,18 @@ translation_of: Web/API/CacheStorage/has
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个 {{jsxref("Promise")}} 对象，缓存存在时resolve的布尔值为 <code>true</code> 否则为 <code>false</code> 。</p>
+<p>返回一个 {{jsxref("Promise")}} 对象，缓存存在时 resolve 的布尔值为 <code>true</code> 否则为 <code>false</code> 。</p>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt>cacheName</dt>
- <dd>一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象name的 {{domxref("DOMString")}}.</dd>
+ <dd>一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.</dd>
 </dl>
 
 <h2 id="例子" style="line-height: 30px; font-size: 2.14285714285714rem;">例子</h2>
 
-<p>在下面的例子中首先检测是否有名为 v1 的缓存存在， 如果存在我们会向其添加内容,，如果不存在我们会做些对应的初始化动作。</p>
+<p>在下面的例子中首先检测是否有名为 v1 的缓存存在， 如果存在我们会向其添加内容，，如果不存在我们会做些对应的初始化动作。</p>
 
 <pre class="brush: js">caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
@@ -43,78 +43,11 @@ translation_of: Web/API/CacheStorage/has
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">附加信息</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(44)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) 在 <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)被默认禁用。</p>
+{{Compat("api.CacheStorage.has")}}
 
 <h2 id="参考">参考</h2>
 

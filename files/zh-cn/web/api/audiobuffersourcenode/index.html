@@ -5,13 +5,11 @@ translation_of: Web/API/AudioBufferSourceNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<div class="summary">
-<p><span class="seoSummary"><strong><code>AudioBufferSourceNode</code></strong><strong> </strong>接口继承自</span>{{domxref("AudioScheduledSourceNode")}} <span class="seoSummary">,表现为一个音频源，它包含了一些写在内存中的音频数据，通常储存在一个ArrayBuffer对象中。在处理有严格的时间精确度要求的回放的情形下它尤其有用。比如播放那些需要满足一个指定节奏的声音或者那些储存在内存而不是硬盘或者来自网络的声音。为了播放那些有时间精确度需求但来自网络的流文件或者来自硬盘，则使用</span>{{domxref("AudioWorkletNode")}}来实现回放。</p>
+<p><strong><code>AudioBufferSourceNode</code></strong> 接口继承自 {{domxref("AudioScheduledSourceNode")}}，表现为一个音频源，它包含了一些写在内存中的音频数据，通常储存在一个 ArrayBuffer 对象中。在处理有严格的时间精确度要求的回放的情形下它尤其有用。比如播放那些需要满足一个指定节奏的声音或者那些储存在内存而不是硬盘或者来自网络的声音。为了播放那些有时间精确度需求但来自网络的流文件或者来自硬盘，则使用 {{domxref("AudioWorkletNode")}} 来实现回放。</p>
 
 <p>{{InheritanceDiagram}}</p>
-</div>
 
-<p><code>AudioBufferSourceNode</code> 没有输入却有一个输出，其通道数与其 {{domxref("AudioBufferSourceNode.buffer", "buffer")}} 属性所指定的 <code>AudioBuffer</code> 相同。如果没有设置 buffer，也就是说 <code>buffer</code> 属性是 <code>null</code> 的话，输出将包含一个无声的单通道（每个采样点均为0）。</p>
+<p><code>AudioBufferSourceNode</code> 没有输入却有一个输出，其通道数与其 {{domxref("AudioBufferSourceNode.buffer", "buffer")}} 属性所指定的 <code>AudioBuffer</code> 相同。如果没有设置 buffer，也就是说 <code>buffer</code> 属性是 <code>null</code> 的话，输出将包含一个无声的单通道（每个采样点均为 0）。</p>
 
 <p>一个 {{domxref("AudioBufferSourceNode")}} 只能被播放一次，也就是说，每次调用 {{domxref("AudioScheduledSourceNode.start", "start()")}} 之后，如果还想再播放一遍同样的声音，那么就需要再创建一个 <code>AudioBufferSourceNode</code>。庆幸的是，创建该节点的代价并不大，并且想要多次播放声音的话，实际上 <code>AudioBuffer</code> 也可以被重用。事实上，你可以用一种“阅后即焚”的方式来使用这些节点：创建节点，调用 <code>start()</code> 开始播放声音，然后，你甚至不需要再保留这个节点的引用了。声音播放完成之后，垃圾收集器会找个恰当的时机回收资源。</p>
 
@@ -43,7 +41,7 @@ translation_of: Web/API/AudioBufferSourceNode
 
 <dl>
  <dt>{{domxref("AudioBufferSourceNode.buffer")}}</dt>
- <dd>是一个 {{domxref("AudioBuffer")}} 它定义了要播放的音频，当设置它的值为0时，它会定义一个静默的单通道。</dd>
+ <dd>是一个 {{domxref("AudioBuffer")}} 它定义了要播放的音频，当设置它的值为 0 时，它会定义一个静默的单通道。</dd>
  <dt>{{domxref("AudioBufferSourceNode.detune")}}</dt>
  <dd>Is a <a href="/zh-CN/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing detuning of oscillation in <a href="http://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>. Its default value is <code>0</code>.</dd>
  <dt>{{domxref("AudioBufferSourceNode.loop")}}</dt>
@@ -76,10 +74,10 @@ translation_of: Web/API/AudioBufferSourceNode
 
 <h2 id="例子">例子</h2>
 
-<p>在这个例子中, 我们将会创建一个2秒的缓冲器,并用白噪音填充它, 然后通过{{domxref("AudioBufferSourceNode")}}来播放它.  注释里说明了它的功能.</p>
+<p>在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{domxref("AudioBufferSourceNode")}}来播放它.  注释里说明了它的功能。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 你可以 <a class="external external-icon" href="http://mdn.github.io/audio-buffer/">查看在线演示</a> 或 <a class="external external-icon" href="https://github.com/mdn/audio-buffer">查看源代码</a>.</p>
+<p><strong>注意</strong>: 你可以 <a class="external external-icon" href="http://mdn.github.io/audio-buffer/">查看在线演示</a> 或 <a class="external external-icon" href="https://github.com/mdn/audio-buffer">查看源代码</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -123,100 +121,16 @@ button.onclick = function() {
 }</pre>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面.</p>
+<p><strong>注意</strong>: 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面。</p>
 </div>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audiobuffersourcenode-interface', 'AudioBufferSourceNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("23.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td><code>detune</code> property</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("40.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoMobile("25.0")}}</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td><code>detune</code> property</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] As of Chrome 42.0 setting AudioBufferSourceNode.buffer more than once is deprecated. A deprecation message is displayed if the buffer attribute is assigned more than once.</p>
+{{Compat("api.AudioBufferSourceNode")}}
 
 <h2 id="相关页面">相关页面</h2>
 

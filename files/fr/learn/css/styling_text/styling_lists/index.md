@@ -362,7 +362,7 @@ reset.addEventListener("click", function() {
 
 solution.addEventListener("click", function() {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}';
+  cssInput.value = 'ul {\n list-style-type: square;\n}\n\nul li, ol li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}';
   drawOutput();
 });
 

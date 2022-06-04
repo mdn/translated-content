@@ -12,7 +12,7 @@ translation_of: Web/API/MutationObserver/MutationObserver
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">DOM 规范中的 <code>MutationObserver()</code> 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。</span>MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。</p>
+<p>DOM 规范中的 <code>MutationObserver()</code> 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,8 +21,8 @@ translation_of: Web/API/MutationObserver/MutationObserver
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><code><span class="hidden"> </span><span class="hidden"> </span>callback</code></dt>
- <dd>一个回调函数，每当被指定的节点或子树以及配置项有Dom变动时会被调用。回调函数拥有两个参数：一个是描述所有被触发改动的 {{domxref("MutationRecord")}} 对象数组，另一个是调用该函数的<code>MutationObserver</code> 对象。参见下方的{{anch("Example", "示例")}}了解更多细节<span class="hidden"> </span><span class="hidden"> </span></dd>
+ <dt><code>callback</code></dt>
+ <dd>一个回调函数，每当被指定的节点或子树以及配置项有 DOM 变动时会被调用。回调函数拥有两个参数：一个是描述所有被触发改动的 {{domxref("MutationRecord")}} 对象数组，另一个是调用该函数的 <code>MutationObserver</code> 对象。参见下方的<a href="#示例">示例</a>了解更多细节</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -31,7 +31,7 @@ translation_of: Web/API/MutationObserver/MutationObserver
 
 <h2 id="示例">示例</h2>
 
-<p>这个例子简单地创建了一个新的 <code>MutationObserver</code> ，监视一个节点及其全部子节点树的添加、移除元素，以及任何属性变化的事件。</p>
+<p>这个例子简单地创建了一个新的 <code>MutationObserver</code>，监视一个节点及其全部子节点树的添加、移除元素，以及任何属性变化的事件。</p>
 
 <h3 id="回调函数">回调函数</h3>
 
@@ -69,7 +69,7 @@ var observerOptions = {
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);</pre>
 
-<p>使用 ID <code>someElement</code> 来获取目标节点树。 <code>observerOptions</code> 中设定了观察者的选项，通过设定 <code>childList</code> 和 <code>attributes</code> 为 <code>true</code> 来获取所需信息。</p>
+<p>使用 ID <code>someElement</code> 来获取目标节点树。<code>observerOptions</code> 中设定了观察者的选项，通过设定 <code>childList</code> 和 <code>attributes</code> 为 <code>true</code> 来获取所需信息。</p>
 
 <p>当 observer 实例化时，指定 <code>callback()</code> 函数。之后指定目标节点与记录选项，我们开始观察使用 <code>observe()</code> 指定的 DOM 节点。</p>
 

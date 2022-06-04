@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/rp
 ---
 {{HTMLRef}}
 
-L'élément HTML **`<rp>` **est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.
+L'élément HTML **`<rp>`** est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.
 
 Les annotations Ruby permettent d'afficher la prononciation des caractères d'Asie orientale, notamment lors de l'usage de caractères furigana Japonais ou bopomofo Taïwanais.
 
@@ -117,8 +117,8 @@ body {
 
 | Spécification                                                                                                    | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

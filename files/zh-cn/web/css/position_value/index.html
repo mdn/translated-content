@@ -7,7 +7,7 @@ translation_of: Web/CSS/position_value
 
 <h2 id="概要">概要</h2>
 
-<p><code>&lt;position&gt;</code> <a href="/en/CSS" title="CSS">CSS</a>  数据类型表示用于设置相对于框的位置的2D空间中的坐标。</p>
+<p><code>&lt;position&gt;</code> <a href="/en/CSS" title="CSS">CSS</a>  数据类型表示用于设置相对于框的位置的 2D 空间中的坐标。</p>
 
 <p><img alt="" src="/files/3797/position_type.png" style="float: left; height: 208px; width: 306px;">特定坐标可以由具有特定偏移的两个关键字给出。关键字表示元素框的一条边或两条边之间的中心线：左，右，上，下或中心 (其表示左边缘和右边缘之间的中心，或者顶部边缘或底部边缘之间的中心，这取决于上下文).</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/CSS/position_value
 
 <p> <code>&lt;position&gt;</code> 值表述的最终位置并不需要位于元素的盒子中。</p>
 
-<p>如果仅指定单个偏移量，它将指定x轴坐标。当只有单个偏移量或关键字被指定时，对于另个轴的值将被假定为“center”。</p>
+<p>如果仅指定单个偏移量，它将指定 x 轴坐标。当只有单个偏移量或关键字被指定时，对于另个轴的值将被假定为“center”。</p>
 
 <h2 id="补间" style="">补间</h2>
 
@@ -81,84 +81,6 @@ translation_of: Web/CSS/position_value
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>4.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Combination of a keyword and a {{cssxref("&lt;length&gt;")}}, or {{cssxref("&lt;percentage&gt;")}}</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>4.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Four-value syntax (support for offset from any edge) {{ experimental_inline() }}</td>
-   <td>{{ CompatNo() }} {{ webkitbug("37514") }}</td>
-   <td>{{ CompatGeckoDesktop("13.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>10.5</td>
-   <td>{{ CompatNo() }} {{ webkitbug("37514") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Combination of a keyword and a {{cssxref("&lt;length&gt;")}}, or {{cssxref("&lt;percentage&gt;")}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Four-value syntax (support for offset from any edge) {{ experimental_inline() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("13.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.types.position")}}
 
 <h2 id="sect1"> </h2>

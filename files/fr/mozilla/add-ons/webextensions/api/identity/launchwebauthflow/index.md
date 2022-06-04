@@ -23,7 +23,7 @@ Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fou
 
 Notez que si aucune authentification ou autorisation n'est nécessaire, cette fonction se terminera silencieusement, sans interaction de l'utilisateur.
 
-Cette fonction prend également un paramètre facultatif `interactif`: si cette valeur est omise ou définie sur false, le flux est forcé de se terminer en mode silencieux. Dans ce cas, si l'utilisateur doit s'authentifier ou autoriser, l'opération échouera tout simplement.
+Cette fonction prend également un paramètre facultatif `interactif`: si cette valeur est omise ou définie sur false, le flux est forcé de se terminer en mode silencieux. Dans ce cas, si l'utilisateur doit s'authentifier ou autoriser, l'opération échouera tout simplement.
 
 Cette fonction renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise): si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.
 
@@ -76,7 +76,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'
 
 ## Exemples
 
-Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
+Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
 
 ```js
 function validate(redirectURL) {

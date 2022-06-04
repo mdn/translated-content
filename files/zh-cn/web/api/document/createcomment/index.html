@@ -5,14 +5,14 @@ translation_of: Web/API/Document/createComment
 ---
 <p>{{ ApiRef() }}</p>
 <h3 id="Summary" name="Summary">概述</h3>
-<p><code>createComment()</code> 方法用来创建并返回一个注释节点.</p>
+<p><code>createComment()</code> 方法用来创建并返回一个注释节点。</p>
 <h3 id="Syntax" name="Syntax">语法</h3>
 <pre class="eval"><em>var commentNode</em> = document.createComment(data)
 </pre>
 <h3 id="Parameters" name="Parameters">参数</h3>
 <ul>
- <li><code>commentNode</code> 是一个注释节点.</li>
- <li><code>data</code> 是一个字符串,包含了注释的内容.</li>
+ <li><code>commentNode</code> 是一个注释节点。</li>
+ <li><code>data</code> 是一个字符串，包含了注释的内容。</li>
 </ul>
 <h3 id="Example" name="Example">例子</h3>
 <pre>var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml")
@@ -26,8 +26,7 @@ alert(new XMLSerializer().serializeToString(docu));
 </pre>
 <h3 id="Notes" name="Notes">备注</h3>
 <ul>
- <li>如果data字符串包含了 "--" ,则会抛出 <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code>异常,这种情况需要对"--" 字符串进行转义.</li>
+ <li>如果 data 字符串包含了 "--" ,则会抛出 <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code>异常，这种情况需要对"--" 字符串进行转义。</li>
 </ul>
 <h3 id="Specification" name="Specification">规范</h3>
 <p><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment">createComment</a></p>
-<p>{{ languages( {"en": "en/DOM/document.createComment" } ) }}</p>

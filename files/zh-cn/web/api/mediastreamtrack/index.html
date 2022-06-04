@@ -7,32 +7,32 @@ translation_of: Web/API/MediaStreamTrack
 
 <h2 id="摘要">摘要</h2>
 
-<p><strong><code>MediaStreamTrack接口在User Agent中表示一段媒体源，比如音轨或视频。</code></strong></p>
+<p><strong><code>MediaStreamTrack</code></strong> 接口在 User Agent 中表示一段媒体源，比如音轨或视频。</p>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("MediaStreamTrack.enabled")}}</dt>
- <dd>布尔值，为true时表示轨道有效，并且可以被渲染。为false时表示轨道失效，只能被渲染为静音或黑屏。如果该轨道连接中断，该值还是可以被改变但不会有任何效果了。</dd>
+ <dd>布尔值，为 true 时表示轨道有效，并且可以被渲染。为 false 时表示轨道失效，只能被渲染为静音或黑屏。如果该轨道连接中断，该值还是可以被改变但不会有任何效果了。</dd>
  <dt>{{domxref("MediaStreamTrack.id")}} {{readonlyInline}}</dt>
- <dd>返回一个由浏览器产生的{{domxref("DOMString")}}类型的GUID值，作为这个轨道的唯一标识值。</dd>
+ <dd>返回一个由浏览器产生的{{domxref("DOMString")}}类型的 GUID 值，作为这个轨道的唯一标识值。</dd>
  <dt>{{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}</dt>
  <dd>返回一个{{domxref("DOMString")}}类型的值。如果为“audio”表示轨道为音频轨道，为“video”则为视频轨道。如果该轨道从它的源上分离，这个值也不会改变。</dd>
  <dt>{{domxref("MediaStreamTrack.label")}} {{readonlyInline}}</dt>
  <dd>返回一个{{domxref("DOMString")}}类型。内容为一个用户代理指定的标签，来标识该轨道的来源，比如“internal microphone”。该字符串可以为空，并且在没有源与这个轨道连接的情况下会一直为空。当该轨道从它的源上分离时，这个值也不会改变。</dd>
  <dt>{{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}</dt>
- <dd>返回一个布尔类型的值，为true时表示轨道是静音，其它为false。</dd>
+ <dd>返回一个布尔类型的值，为 true 时表示轨道是静音，其它为 false。</dd>
  <dt>{{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}</dt>
- <dd>返回一个布尔类型的值，为true时表示该轨道是只读的，比如视频文件源或一个被设置为不能修改的摄像头源，或则为false。</dd>
+ <dd>返回一个布尔类型的值，为 true 时表示该轨道是只读的，比如视频文件源或一个被设置为不能修改的摄像头源，或则为 false。</dd>
  <dt>{{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}</dt>
  <dd>返回枚举类型的值，表示轨道的当前状态。该枚举值为以下中的一个：
  <ul>
-  <li>"live"表示当前输入已经连接并且在尽力提供实时数据。在这种情况下，输出数据可以通过操作MediaStreamTrack.enabled属性进行开关。</li>
+  <li>"live"表示当前输入已经连接并且在尽力提供实时数据。在这种情况下，输出数据可以通过操作 MediaStreamTrack.enabled 属性进行开关。</li>
   <li>“ended”表示这个输出连接没有更多的数据了，而且也不会提供更多的数据了。</li>
  </ul>
  </dd>
  <dt>{{domxref("MediaStreamTrack.remote")}} {{readonlyInline}}</dt>
- <dd>返回布尔值类型，当为true时表示数据是通过{{domxref("RTCPeerConnection")}}提供的，否则为false。</dd>
+ <dd>返回布尔值类型，当为 true 时表示数据是通过{{domxref("RTCPeerConnection")}}提供的，否则为 false。</dd>
 </dl>
 
 <h3 id="事件处理">事件处理</h3>
@@ -86,93 +86,7 @@ translation_of: Web/API/MediaStreamTrack
 
 <h2 id="浏览器支持情况">浏览器支持情况</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>stop()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(34)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>muted</code>, <code>onmuted</code>, <code>onunmuted</code>, <code>readonly</code>, <code>readyState</code>, <code>remote</code>, <code>onstarted</code>, <code>onended</code>, <code>onoverconstrained</code>, <code>appendConstraint()</code>, <code>applyConstraints()</code>, <code>constraints()</code>, <code>getConstraints()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>
-    <table class="compat-table">
-     <tbody>
-      <tr>
-       <td><code>stop()</code></td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(34)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>muted</code>, <code>onmuted</code>, <code>onunmuted</code>, <code>readonly</code>, <code>readyState</code>, <code>remote</code>, <code>onstarted</code>, <code>onended</code>, <code>onoverconstrained</code>, <code>appendConstraint()</code>, <code>applyConstraints()</code>, <code>constraints()</code>, <code>getConstraints()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaStreamTrack")}}
 
 <h2 id="相关内容">相关内容</h2>
 

@@ -57,7 +57,7 @@ if (elem.requestFullscreen) {
 
 <h2 id="Saliendo_del_modo_de_pantalla_completa">Saliendo del modo de pantalla completa</h2>
 
-<p>El usuario siempre tendrá la habilidad de salir del modo de pantalla completa por su propia cuenta; véase {{ anch("Things_your_users_want_to_know", "Cosas que los usuarios querrán saber") }}. Incluso se puede hacer programáticamente, llamando al método {{domxref("exitFullscreen()")}}.</p>
+<p>El usuario siempre tendrá la habilidad de salir del modo de pantalla completa por su propia cuenta; véase <a href="#things_your_users_want_to_know">Cosas que los usuarios querrán saber</a>. Incluso se puede hacer programáticamente, llamando al método {{domxref("exitFullscreen()")}}.</p>
 
 <h2 id="Otra_información">Otra información</h2>
 
@@ -206,84 +206,25 @@ if (elem.requestFullscreen) {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<p>All browsers implement this APIs. Nevertheless some implement it with prefixed names we slightly different spelling: e.g. instead of <code>requestFullscreen()</code>, there is a <code>MozRequestFullScreen()</code>.</p>
+<h3><code>Document.fullscreen</code></h3>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.Document.fullscreen")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>15 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("9.0") }} {{ property_prefix("-moz") }}<br>
-    {{CompatGeckoDesktop("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>11 {{ property_prefix("-ms") }}</td>
-   <td>12.10</td>
-   <td>5.0 {{ property_prefix("-webkit") }}</td>
-  </tr>
-  <tr>
-   <td><code>fullscreenEnabled</code></td>
-   <td>20 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("10.0") }} {{ property_prefix("-moz") }}<br>
-    {{CompatGeckoDesktop("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>11 {{ property_prefix("-ms") }}</td>
-   <td>12.10</td>
-   <td>5.1 {{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3><code>Document.fullscreenElement</code></h3>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>28 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("9.0") }}{{ property_prefix("-moz") }}<br>
-    {{CompatGeckoMobile("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>fullscreenEnabled</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>28 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("10.0") }} {{ property_prefix("moz") }}<br>
-    {{CompatGeckoMobile("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.fullscreenElement")}}
+
+<h3><code>Document.fullscreenEnabled</code></h3>
+
+{{Compat("api.Document.fullscreenEnabled")}}
+
+<h3><code>Document.exitFullscreen</code></h3>
+
+{{Compat("api.Document.exitFullscreen")}}
+
+<h3><code>Element.requestFullscreen</code></h3>
+
+{{Compat("api.Element.requestFullscreen")}}
 
 <h2 id="Véase_también">Véase también</h2>
 

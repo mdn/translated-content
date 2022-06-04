@@ -19,7 +19,7 @@ Un AudioBufferSourceNode n'a pas d'entrée et il comporte une unique sortie, don
 
 Un {{domxref("AudioBufferSourceNode")}} ne peut être joué qu'une seule fois; autrement dit un seul appel à la fonction `AudioBufferSourceNode.start()` est autorisé. Pour rejouer le son, il faut créer un nouvel `AudioBufferSourceNode`. Heureusement ces noeuds ne demandent pas beaucoup de ressource, et les véritables `AudioBuffer`s peuvent être réutilisés. On dit que les `AudioBufferSourceNode`s doivent être utilisés en mode "one shot": une fois que la lecture est lancée, toutes les références peuvent être supprimées, et elles seront collectées par le ramasse-miette automatiquement quand la lecture des sons sera terminée.
 
-Plusieurs appels à la fonction `AudioBufferSourceNode.stop()` sont autorisés. Le dernier appel remplace le précédent, à condition que le `AudioBufferSourceNode `n'ait pas déjà atteint la fin du buffer.
+Plusieurs appels à la fonction `AudioBufferSourceNode.stop()` sont autorisés. Le dernier appel remplace le précédent, à condition que le `AudioBufferSourceNode` n'ait pas déjà atteint la fin du buffer.
 
 ![L'objet AudioBufferSourceNode prend le contenu d'un AudioBuffer et le convertit en audio](webaudioaudiobuffersourcenode.png)
 
@@ -52,7 +52,7 @@ _Hérite des propriétés de son parent, {{domxref("AudioNode")}}._
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : {{domxref ("AudioBuffer")}} qui définit la ressource à jouer; lorsqu'il a la valeur NULL, définit un canal unique silencieux (dans lequel chaque échantillon vaut 0.0).
 - {{domxref("AudioBufferSourceNode.detune")}}
-  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
+  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
 - {{domxref("AudioBufferSourceNode.loop")}}
   - : Attribut booléen indiquant si la ressource doit être lue de nouveau lorsque la fin de l'{{domxref ("AudioBuffer")}} est atteinte. Sa valeur par défaut est `false`.
 - {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}

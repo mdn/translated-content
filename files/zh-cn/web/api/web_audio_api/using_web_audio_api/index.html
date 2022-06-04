@@ -1,5 +1,5 @@
 ---
-title: Web Audio API的运用
+title: Web Audio API 的运用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 tags:
   - API
@@ -10,14 +10,14 @@ tags:
   - 网络
 translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
-<div class="summary">
+<div>
 <p>让我们来看看 <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> 入门。我们将简要介绍一些概念，然后学习一个简单的允许我们加载音轨，播放暂停，改变音量和立体声声像的音箱例子。</p>
 </div>
 
 <div>
-<p>Web Audio API并不会取代&lt;audio&gt;音频元素，倒不如说它是&lt;audio&gt;的补充更好，就好比如&lt;canvas&gt;与&lt;img&gt;共存的关系。你使用来实现音频的方式取决于你的使用情况。如果你只是想控制一个简单的音轨的播放，&lt;audio&gt;或许是一个更好更快的选择。如果你想实现更多复杂的音频处理，以及播放，Web Audio API提供了更多的优势以及控制。</p>
+<p>Web Audio API 并不会取代&lt;audio&gt;音频元素，倒不如说它是&lt;audio&gt;的补充更好，就好比如&lt;canvas&gt;与&lt;img&gt;共存的关系。你使用来实现音频的方式取决于你的使用情况。如果你只是想控制一个简单的音轨的播放，&lt;audio&gt;或许是一个更好更快的选择。如果你想实现更多复杂的音频处理，以及播放，Web Audio API 提供了更多的优势以及控制。</p>
 
-<p>Web Audio API的一个强大之处在于，它没有任何严格的声音呼叫控制。比如说，在同一时间它没有呼叫32或64的声音的限制。如果你的处理器性能好的话，同一时间播放1000多的声音不卡顿也是有可能的。这充分显示真正的进步，要知道几年前中高频的声卡仅能处理小部分的负载。</p>
+<p>Web Audio API 的一个强大之处在于，它没有任何严格的声音呼叫控制。比如说，在同一时间它没有呼叫 32 或 64 的声音的限制。如果你的处理器性能好的话，同一时间播放 1000 多的声音不卡顿也是有可能的。这充分显示真正的进步，要知道几年前中高频的声卡仅能处理小部分的负载。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -28,11 +28,11 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 <p>注意带有播放按钮的复古磁带卡座，及用于改变音量和立体声声像的平移滑块。我们可以使其更复杂，但这是该阶段进行简单学习的理想选择。</p>
 
-<p>查看最终demo代码<a href="https://codepen.io/Rumyra/pen/qyMzqN/"> here on Codepen</a>，或者在 <a href="https://github.com/mdn/webaudio-examples/tree/master/audio-basics">GitHub查看源代码on GitHub</a>。</p>
+<p>查看最终 demo 代码<a href="https://codepen.io/Rumyra/pen/qyMzqN/"> here on Codepen</a>，或者在 <a href="https://github.com/mdn/webaudio-examples/tree/master/audio-basics">GitHub 查看源代码 on GitHub</a>。</p>
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>现代浏览器的 Web Audio API 对的大多数功能都有很好的支持。API有很多的功能，因此要获得更准确的信息，你必须检查每个参考页面底部的浏览器兼容表。</p>
+<p>现代浏览器的 Web Audio API 对的大多数功能都有很好的支持。API 有很多的功能，因此要获得更准确的信息，你必须检查每个参考页面底部的浏览器兼容表。</p>
 
 <h2 id="音频图">音频图</h2>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 <h2 id="音频上下文">音频上下文</h2>
 
-<p>为了能通过Web Audio API执行任何操作，我们需要创建音频上下文实例。这能让我们访问API所有的特性和功能。</p>
+<p>为了能通过 Web Audio API 执行任何操作，我们需要创建音频上下文实例。这能让我们访问 API 所有的特性和功能。</p>
 
 <pre class="brush: js"><code>// for legacy browsers
 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -60,7 +60,7 @@ const audioContext = new AudioContext();</code>
 
 <h2 id="加载声音">加载声音</h2>
 
-<p>现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。 此外，为了便于访问，我们可以在在DOM中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。</p>
+<p>现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。 此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。</p>
 
 <pre class="brush: js"><code>&lt;audio src="myCoolTrack.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;</code>
 </pre>
@@ -69,7 +69,7 @@ const audioContext = new AudioContext();</code>
 <p><strong>注意</strong>：如果你要加载的声音文件保留在其他域中，则需要使用  <code>crossorigin </code>属性；查看 <a href="/en-US/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a> 取得更多信息。</p>
 </div>
 
-<p>为了使用 Web Audio API的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:</p>
+<p>为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:</p>
 
 <pre class="brush: js"><code>// get the audio element
 const audioElement = document.querySelector('audio');
@@ -79,16 +79,16 @@ const track = audioContext.createMediaElementSource(audioElement);</code>
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>：上面的 <code>&lt;audio&gt;</code> 元素在DOM中代表了一个{{domxref("HTMLMediaElement")}} 类型的对象，拥有其自身的一组功能。这一切都将保持不变。我们只是让Web Audio API能够访问到声音。</p>
+<p><strong>注意</strong>：上面的 <code>&lt;audio&gt;</code> 元素在 DOM 中代表了一个{{domxref("HTMLMediaElement")}} 类型的对象，拥有其自身的一组功能。这一切都将保持不变。我们只是让 Web Audio API 能够访问到声音。</p>
 </div>
 
 <h2 id="控制声音">控制声音</h2>
 
 <p>当在网页上播放声音时，让用户能控制它是很重要的。根据使用场景，有无数的选项可用，但这我们将提供播放/暂停声音，改变音轨音量及从左到右平移声音的功能。</p>
 
-<p>通过JavaScript代码控制声音会受到浏览器的自动播放策略的影响(autoplay support policies)，因此在未经用户（或白名单）许可的情况下脚本对声音的控制会被阻止。浏览器的自动播放策略通常要求显式权限或者用户与页面产生互动后，才允许脚本触发音频播放。</p>
+<p>通过 JavaScript 代码控制声音会受到浏览器的自动播放策略的影响 (autoplay support policies)，因此在未经用户（或白名单）许可的情况下脚本对声音的控制会被阻止。浏览器的自动播放策略通常要求显式权限或者用户与页面产生互动后，才允许脚本触发音频播放。</p>
 
-<p>这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致可访问性问题。你可以在文章 <a href="/en-US/docs/Web/Media/Autoplay_guide">媒体与Web音频API自动播放指南</a> 了解更多相关信息。</p>
+<p>这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致可访问性问题。你可以在文章 <a href="/en-US/docs/Web/Media/Autoplay_guide">媒体与 Web 音频 API 自动播放指南</a> 了解更多相关信息。</p>
 
 <p>因为我们的脚本正响应用户输入（例如，点击播放按钮）进行播放音频，我们状态良好且应该没有自动播放阻止的问题。所以，让我们看看我们的播放和暂停功能。我们有一个当音频播放时变为暂停按钮的播放按钮：</p>
 
@@ -99,7 +99,7 @@ const track = audioContext.createMediaElementSource(audioElement);</code>
 
 <p>在我们可以播放音频前我们需要将我们的音频图从音频源/输入节点连接到目的地。</p>
 
-<p>我们已经通过把音频元素传入API生成一个输入节点。在大多数情况下，你不需要生成一个输出节点，你只需要将其他节点连接到可以为你处理这种情况的 {{domxref("BaseAudioContext.destination")}}：</p>
+<p>我们已经通过把音频元素传入 API 生成一个输入节点。在大多数情况下，你不需要生成一个输出节点，你只需要将其他节点连接到可以为你处理这种情况的 {{domxref("BaseAudioContext.destination")}}：</p>
 
 <pre class="brush: js"><code>track.connect(audioContext.destination);</code>
 </pre>
@@ -139,21 +139,21 @@ playButton.addEventListener('click', function() {
 }, false);</code>
 </pre>
 
-<h2 id="关于Web_Audio编辑器">关于Web Audio编辑器</h2>
+<h2 id="关于Web_Audio编辑器">关于 Web Audio 编辑器</h2>
 
-<p>Firefox有一个名为 <a href="/en-US/docs/Tools/Web_Audio_Editor">Web Audio editor</a> 的工具。在其上运行音频图的任何页面上，你可以打开开发者工具，使用 Web Audio选项卡查看音频图，可查看每个节点的可用属性，并可以修改这些属性来查看会有什么效果。</p>
+<p>Firefox 有一个名为 <a href="/en-US/docs/Tools/Web_Audio_Editor">Web Audio editor</a> 的工具。在其上运行音频图的任何页面上，你可以打开开发者工具，使用 Web Audio 选项卡查看音频图，可查看每个节点的可用属性，并可以修改这些属性来查看会有什么效果。</p>
 
 <p><img alt="The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination" src="https://mdn.mozillademos.org/files/16198/web-audio-editor.png"></p>
 
 <div class="note">
-<p><strong>注意</strong>：Web Audio编辑器默认不是开启的，你需要打开 Firefox developer tools 设置，选中Default Developer Tools部分中的Web Audio复选框来显示它。</p>
+<p><strong>注意</strong>：Web Audio 编辑器默认不是开启的，你需要打开 Firefox developer tools 设置，选中 Default Developer Tools 部分中的 Web Audio 复选框来显示它。</p>
 </div>
 
 <h2 id="修改声音">修改声音</h2>
 
-<p>让我们深入研究一些基本的修改节点以改变我们的声音。这就是Web Audio API真正开始派上用场的地方。首先，让我们改变音量。这可以通过  {{domxref("GainNode")}} 实现，它表示我们的声波有多大。</p>
+<p>让我们深入研究一些基本的修改节点以改变我们的声音。这就是 Web Audio API 真正开始派上用场的地方。首先，让我们改变音量。这可以通过  {{domxref("GainNode")}} 实现，它表示我们的声波有多大。</p>
 
-<p>使用 Web Audio API 可以通过2个方法创建节点。你可以使用上下文本身的工厂方法（例如， <code>audioContext.createGain()</code> ）或者通过节点的构造函数（例如， <code>new GainNode()</code> ），我们将使用工厂方法：</p>
+<p>使用 Web Audio API 可以通过 2 个方法创建节点。你可以使用上下文本身的工厂方法（例如， <code>audioContext.createGain()</code> ）或者通过节点的构造函数（例如， <code>new GainNode()</code> ），我们将使用工厂方法：</p>
 
 <pre class="brush: js"><code>const gainNode = audioContext.createGain();</code>
 </pre>
@@ -167,7 +167,7 @@ playButton.addEventListener('click', function() {
 
 <p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="https://mdn.mozillademos.org/files/16196/graph2.jpg"></p>
 
-<p>默认增益为1；这使当前音量保持不变。增益可以设置的最小值约-3.4，最大约3.4。这里我们将允许音箱增益可以设置到2（2倍的原音量）和降低到0（这可以有效的静音）。</p>
+<p>默认增益为 1；这使当前音量保持不变。增益可以设置的最小值约<code>-3.4028235E38</code>，最大约<code>3.4028235E38</code>。这里我们将允许音箱增益可以设置到 2（2 倍的原音量）和降低到 0（这可以有效的静音）。</p>
 
 <p>让我们给用户这样的控制 — 我们将会使用 <a href="/en-US/docs/Web/HTML/Element/input/range">range input</a> ：</p>
 
@@ -175,7 +175,7 @@ playButton.addEventListener('click', function() {
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>：范围输入(Range Input)是更新音频节点值非常方便的输入类型。你可以指定特定的范围值同时直接将它们作为音频参数一起使用。</p>
+<p><strong>注意</strong>：范围输入 (Range Input) 是更新音频节点值非常方便的输入类型。你可以指定特定的范围值同时直接将它们作为音频参数一起使用。</p>
 </div>
 
 <p>所以当用户更改输入节点值时，获取此输入值并更新增益值：</p>
@@ -200,7 +200,7 @@ volumeControl.addEventListener('input', function() {
 <p>如果用户拥有立体声功能，可用 {{domxref("StereoPannerNode")}} 节点改变左右扬声器的平衡。</p>
 
 <div class="note">
-<p><strong>注意</strong>： <code>StereoPannerNode</code> 用于你只想从左到右进行立体声平移的简单情况。还有一个  {{domxref("PannerNode")}}， 它允许对3D空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和3D应用程序中生成小鸟飞过头顶或者来自用户身后的声音。</p>
+<p><strong>注意</strong>： <code>StereoPannerNode</code> 用于你只想从左到右进行立体声平移的简单情况。还有一个  {{domxref("PannerNode")}}， 它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。</p>
 </div>
 
 <p>为了使其可视化，我们将使我们的音频图如下：</p>
@@ -217,12 +217,12 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);</code>
 <p><strong>注意</strong>：目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。</p>
 </div>
 
-<p>这里我们的范围从-1（最左边）和1（最右边）。再次让我们使用范围类型的input来改变这个参数:</p>
+<p>这里我们的范围从-1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：</p>
 
 <pre class="brush: js"><code>&lt;input type="range" id="panner" min="-1" max="1" value="0" step="0.01"&gt;</code>
 </pre>
 
-<p>与我们之前一样，我们使用来自这个input的值来调整我们的panner的值：</p>
+<p>与我们之前一样，我们使用来自这个 input 的值来调整我们的 panner 的值：</p>
 
 <pre class="brush: js"><code>const pannerControl = document.querySelector('#panner');
 
@@ -236,23 +236,23 @@ pannerControl.addEventListener('input', function() {
 <pre class="brush: js"><code>track.connect(gainNode).connect(panner).connect(audioContext.destination);</code>
 </pre>
 
-<p>剩下要做的就是试试这个应用程序：<a href="https://codepen.io/Rumyra/pen/qyMzqN/">查看Codepen上的最终演示</a>。</p>
+<p>剩下要做的就是试试这个应用程序：<a href="https://codepen.io/Rumyra/pen/qyMzqN/">查看 Codepen 上的最终演示</a>。</p>
 
 <h2 id="摘要">摘要</h2>
 
 <p>好的，我们拥有一个音箱播放我们的“磁带”，我们可以调整音量和立体声声像，给我们提供了一个相当基本的工作音频图表。</p>
 
-<p>这构成了开始向你的网站或Web应用添加音频所需的很少的几个基础知识。Web Audio API还有很多功能，但一旦你掌握了节点的概念及将音频节点图联系在一起，我们可以继续研究更加复杂的功能。</p>
+<p>这构成了开始向你的网站或 Web 应用添加音频所需的很少的几个基础知识。Web Audio API 还有很多功能，但一旦你掌握了节点的概念及将音频节点图联系在一起，我们可以继续研究更加复杂的功能。</p>
 
 <h2 id="更多例子">更多例子</h2>
 
-<p>还有其他示例可以了解有关Web Audio API的更多信息。</p>
+<p>还有其他示例可以了解有关 Web Audio API 的更多信息。</p>
 
-<p> <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-matic</a> 是一个有趣的语音操纵器和音频可视化web应用程序，允许你选择不同的效果和可视化。该应用程序相当初级，但它演示了同时使用多个 Web Audio API特性（<a href="https://mdn.github.io/voice-change-o-matic/">运行 Voice-change-O-matic live</a>）。</p>
+<p> <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-matic</a> 是一个有趣的语音操纵器和音频可视化 web 应用程序，允许你选择不同的效果和可视化。该应用程序相当初级，但它演示了同时使用多个 Web Audio API 特性（<a href="https://mdn.github.io/voice-change-o-matic/">运行 Voice-change-O-matic live</a>）。</p>
 
 <p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="https://mdn.mozillademos.org/files/7921/voice-change-o-matic.png" style="display: block; height: 500px; margin: 0px auto; width: 640px;"></p>
 
-<p>另一个专门用于演示 Web Audio API的例子是 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>， 一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（<a href="https://github.com/mdn/violent-theremin">查看Violent Theremin 源代码</a>）</p>
+<p>另一个专门用于演示 Web Audio API 的例子是 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>， 一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（<a href="https://github.com/mdn/violent-theremin">查看 Violent Theremin 源代码</a>）</p>
 
 <p><img alt="A page full of rainbow colours, with two buttons labeled Clear screen and mute. " src="https://mdn.mozillademos.org/files/7919/violent-theremin.png" style="display: block; height: 458px; margin: 0px auto; width: 640px;"></p>
 
@@ -266,70 +266,70 @@ pannerControl.addEventListener('input', function() {
 <p><strong>注释</strong>: 很多的代码碎片来自于这个例子 <a href="https://github.com/mdn/violent-theremin">Violent Theremin example</a>.</p>
 </div>
 
-<p>Web Audio API包含在音频上下文的处理音频操作，以及已被设计允许模块化路由。基本音频操作可通过音频节点进行，这些节点连接在一起，组成一个音频的路由表。多个音源——带有不同类型的频道配置——甚至可以被一个上下文支持。这个模块设计提供了创造带有动态效果的复杂音频功能的灵活性。</p>
+<p>Web Audio API 包含在音频上下文的处理音频操作，以及已被设计允许模块化路由。基本音频操作可通过音频节点进行，这些节点连接在一起，组成一个音频的路由表。多个音源——带有不同类型的频道配置——甚至可以被一个上下文支持。这个模块设计提供了创造带有动态效果的复杂音频功能的灵活性。</p>
 
-<p>音频节点通过输入与输出进行连接，形成一个链，从一个或多个源出发，通过一个或更多的节点，最终到输出终端（你也可以不提供输出终端，换句话说，如果只是想使一些音频数据可视化）。一个简单经典的web  Audio的工作流程如下：</p>
+<p>音频节点通过输入与输出进行连接，形成一个链，从一个或多个源出发，通过一个或更多的节点，最终到输出终端（你也可以不提供输出终端，换句话说，如果只是想使一些音频数据可视化）。一个简单经典的 web  Audio 的工作流程如下：</p>
 
-<p>1. 构建音频上下文AudioContext对象；</p>
+<p>1. 构建音频上下文 AudioContext 对象；</p>
 
-<p>2. 在AudioContext对象内，构建音源，比如&lt;audio&gt;，oscillator，stream</p>
+<p>2. 在 AudioContext 对象内，构建音源，比如&lt;audio&gt;，oscillator，stream</p>
 
-<p>3. 构建效果节点effectNode，比如混响，双二阶滤波器，声相，压限器</p>
+<p>3. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器</p>
 
 <p>4. 选择最终的音频目的地，比如说你的系统扬声器</p>
 
 <p>5. 连接源到效果，效果到输出终端</p>
 
-<h3 id="构建AudioContext对象">构建AudioContext对象</h3>
+<h3 id="构建AudioContext对象">构建 AudioContext 对象</h3>
 
-<p>首先，你需要构建一个AudioContext实例，来创建一个音频图。最简单的方法就像这样：</p>
+<p>首先，你需要构建一个 AudioContext 实例，来创建一个音频图。最简单的方法就像这样：</p>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
 </pre>
 
 <div class="note">
-<p><strong>注释</strong>: 同样一个文档是可以存在多个audioContext对象的，但是比较浪费。</p>
+<p><strong>注释</strong>: 同样一个文档是可以存在多个 audioContext 对象的，但是比较浪费。</p>
 </div>
 
-<p>然而，提供一个版本前缀对于webkit/Blink浏览器是很重要的，对于Firefox(桌面版/手机版/OS版)是不需要的。如下：</p>
+<p>然而，提供一个版本前缀对于 webkit/Blink 浏览器是很重要的，对于 Firefox(桌面版/手机版/OS 版) 是不需要的。如下：</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 </pre>
 
 <div class="note">
-<p><strong>注释</strong>:当创建一个新的conText对象时，如果你不提示window对象，Safari会无效。</p>
+<p><strong>注释</strong>:当创建一个新的 conText 对象时，如果你不提示 window 对象，Safari 会无效。</p>
 </div>
 
-<h3 id="创建AudioSource">创建AudioSource</h3>
+<h3 id="创建AudioSource">创建 AudioSource</h3>
 
-<p>现在我们有了AudioContext，可以用这个来做很多事。第一件我们需要做的事是玩音乐。音频可以来自于多样的地方：</p>
+<p>现在我们有了 AudioContext，可以用这个来做很多事。第一件我们需要做的事是玩音乐。音频可以来自于多样的地方：</p>
 
 <ul>
- <li>通过JavaScript直接生成一个音频节点比如oscillator. 一个 {{ domxref("OscillatorNode") }}是利用{{ domxref("AudioContext.createOscillator") }} 方法来构建。</li>
- <li>从原PCM数据构建: AudioContext有解密被支持的音频格式的多种方法。 看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.</li>
- <li>来自于HTML音频元素例如 {{HTMLElement("video")}} 或者{{HTMLElement("audio")}}: 可以看 {{ domxref("AudioContext.createMediaElementSource()") }}.</li>
- <li>直接来自于 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风. 可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.</li>
+ <li>通过 JavaScript 直接生成一个音频节点比如 oscillator. 一个 {{ domxref("OscillatorNode") }}是利用{{ domxref("AudioContext.createOscillator") }} 方法来构建。</li>
+ <li>从原 PCM 数据构建: AudioContext 有解密被支持的音频格式的多种方法。 看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.</li>
+ <li>来自于 HTML 音频元素例如 {{HTMLElement("video")}} 或者{{HTMLElement("audio")}}: 可以看 {{ domxref("AudioContext.createMediaElementSource()") }}.</li>
+ <li>直接来自于 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风。可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.</li>
 </ul>
 
-<p>对于这些特殊的例子，我们将会为我们的源构建一个 oscillator来提供简单的音调，以及gain node来控制音频音量：</p>
+<p>对于这些特殊的例子，我们将会为我们的源构建一个 oscillator 来提供简单的音调，以及 gain node 来控制音频音量：</p>
 
 <pre class="brush: js">var oscillator = audioCtx.createOscillator();
 var gainNode = audioCtx.createGain();
 </pre>
 
 <div class="note">
-<p><strong>注释</strong>: 为了直接播放一个音乐文件，你通常通过XHR来加载文件，通过Buffer来解码，创建BufferSource. 看这个 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68">例子来自于 Voice-change-O-matic</a>.</p>
+<p><strong>注释</strong>: 为了直接播放一个音乐文件，你通常通过 XHR 来加载文件，通过 Buffer 来解码，创建 BufferSource. 看这个 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68">例子来自于 Voice-change-O-matic</a>.</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注释：</strong></span> Scott Michaud 已经写了一个有用的库来加载和解码一个或多个音频实例, 被称为 <a href="https://github.com/ScottMichaud/AudioSampleLoader">AudioSampleLoader</a>. 这个可以帮助简化XHR/buffering的处理操作。</p>
+<p><strong>注释：</strong> Scott Michaud 已经写了一个有用的库来加载和解码一个或多个音频实例，被称为 <a href="https://github.com/ScottMichaud/AudioSampleLoader">AudioSampleLoader</a>. 这个可以帮助简化 XHR/buffering 的处理操作。</p>
 </div>
 
 <h3 id="连接输入输出">连接输入输出</h3>
 
 <p>为了通过你的扬声器来实际输出音质，你需要将它们连接起来。这个被称为节点连接方法，节点来自于很多可获得的不同节点类型。你想要连接的节点都提供了这个方法。</p>
 
-<p>你的设备的默认输出结构（通常是你的设备扬声器），通过{{ domxref("AudioContext.destination") }}来允许进入。为了连接oscillator，gain node以及输出端，如以下运用：</p>
+<p>你的设备的默认输出结构（通常是你的设备扬声器），通过{{ domxref("AudioContext.destination") }}来允许进入。为了连接 oscillator，gain node 以及输出端，如以下运用：</p>
 
 <pre class="brush: js">oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
@@ -348,22 +348,22 @@ gainNode.connect(audioCtx.destination);
 
 <p>这个将会创造一个如下音频节点图：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png" style="display: block; height: 563px; margin: 0px auto; width: 232px;">你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如gain node。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png" style="display: block; height: 563px; margin: 0px auto; width: 232px;">你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。</p>
 
 <div class="note">
-<p><strong>注释</strong>:Firefox32以上版本已有完整的firefox开发者工具包括 <a href="/en-US/docs/Tools/Web_Audio_Editor">Web Audio Editor</a>, 一个对测试web audio 表的bug非常有用的东西.</p>
+<p><strong>注释</strong>:Firefox32 以上版本已有完整的 firefox 开发者工具包括 <a href="/en-US/docs/Tools/Web_Audio_Editor">Web Audio Editor</a>, 一个对测试 web audio 表的 bug 非常有用的东西。</p>
 </div>
 
 <h3 id="播放音乐及设置音调">播放音乐及设置音调</h3>
 
-<p>现在audio节点图已经建立，我们可以设置属性值及调用音频节点的方法来调节想要的音效。在这个简单的例子，我们可以设置特殊的音调，以赫兹为单位，设置为特殊类型，以及指示音乐播放：</p>
+<p>现在 audio 节点图已经建立，我们可以设置属性值及调用音频节点的方法来调节想要的音效。在这个简单的例子，我们可以设置特殊的音调，以赫兹为单位，设置为特殊类型，以及指示音乐播放：</p>
 
 <pre class="brush: js">oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = 2500; // value in hertz
 oscillator.start();
 </pre>
 
-<p>在我们的 Violent Theremin例子，设定了一个最大gain以及frequency（频率）值：</p>
+<p>在我们的 Violent Theremin 例子，设定了一个最大 gain 以及 frequency（频率）值：</p>
 
 <pre class="brush: js">var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
@@ -383,7 +383,7 @@ oscillator.start();
 gainNode.gain.value = initialVol;
 </pre>
 
-<p>然后我们设置了一个frequency的新的值，以及设置每个时间鼠标的移动，基于目前的鼠标坐标值作为frequency和gain的最大值百分比。</p>
+<p>然后我们设置了一个 frequency 的新的值，以及设置每个时间鼠标的移动，基于目前的鼠标坐标值作为 frequency 和 gain 的最大值百分比。</p>
 
 <pre class="brush: js">// Mouse pointer coordinates
 
@@ -406,9 +406,9 @@ function updatePage(e) {
 }
 </pre>
 
-<h3 id="简单的canvas可视化">简单的canvas可视化</h3>
+<h3 id="简单的canvas可视化">简单的 canvas 可视化</h3>
 
-<p>每次鼠标的移动，canvasDraw()方法会被调用，鼠标停留的位置会画出一个多圆圈组成的小簇，它的大小以及颜色会基于frequency/gain的值。</p>
+<p>每次鼠标的移动，canvasDraw() 方法会被调用，鼠标停留的位置会画出一个多圆圈组成的小簇，它的大小以及颜色会基于 frequency/gain 的值。</p>
 
 <pre class="brush: js">function random(number1,number2) {
   var randomNo = number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
@@ -437,9 +437,9 @@ function canvasDraw() {
   }
 }</pre>
 
-<h3 id="theremin的静音">theremin的静音</h3>
+<h3 id="theremin的静音">theremin 的静音</h3>
 
-<p>当静音按钮点击，以下方法会被调用，disconnect方法，将切断gain node与destination节点的链接，有效阻止了节点图的链接，所以没有声音会被产生。再次点击效果相反。</p>
+<p>当静音按钮点击，以下方法会被调用，disconnect 方法，将切断 gain node 与 destination 节点的链接，有效阻止了节点图的链接，所以没有声音会被产生。再次点击效果相反。</p>
 
 <pre class="brush: js">var mute = document.querySelector('.mute');
 
@@ -458,7 +458,7 @@ mute.onclick = function() {
 
 <h2 id="其他节点选择">其他节点选择</h2>
 
-<p>这里有许多通过Web Audio API来构建的节点，一个好消息就是，总体来说，正如我们所见，他们用同一种方法工作：构建节点，连接到图表的另一个节点，然后处理节点属性以及方法来作用于你想要的音源。</p>
+<p>这里有许多通过 Web Audio API 来构建的节点，一个好消息就是，总体来说，正如我们所见，他们用同一种方法工作：构建节点，连接到图表的另一个节点，然后处理节点属性以及方法来作用于你想要的音源。</p>
 
 <p>我们并不希望通过所有可获得的效果等；你可以在{{ domxref("Web_Audio_API") }}不同的参考接口找到如何使用每一个的详述。我们现在来浏览下不同的设置。</p>
 
@@ -469,7 +469,7 @@ mute.onclick = function() {
 <pre class="brush: js">var distortion = audioCtx.createWaveShaper();
 </pre>
 
-<p>这个对象一定会数学化的定义wave shape，一个被应用于基础声音波来创造扭曲的效果。这些波并不好被计算，最好的开始方法是搜索web算法。比如，我们可以从 <a href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack Overflow</a> 找到：</p>
+<p>这个对象一定会数学化的定义 wave shape，一个被应用于基础声音波来创造扭曲的效果。这些波并不好被计算，最好的开始方法是搜索 web 算法。比如，我们可以从 <a href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack Overflow</a> 找到：</p>
 
 <pre class="brush: js">function makeDistortionCurve(amount) {
   var k = typeof amount === 'number' ? amount : 50,
@@ -486,7 +486,7 @@ mute.onclick = function() {
 };
 </pre>
 
-<p>在 Voice-change-O-matic 的演示中, 我们连接到audio图表上的ditortion节点，当需要的时候可以运用：</p>
+<p>在 Voice-change-O-matic 的演示中，我们连接到 audio 图表上的 ditortion 节点，当需要的时候可以运用：</p>
 
 <pre class="brush: js">source.connect(analyser);
 analyser.connect(distortion);
@@ -499,20 +499,20 @@ distortion.curve = makeDistortionCurve(400);
 
 <h3 id="Biquad_filter">Biquad filter</h3>
 
-<p>biquad filter 拥有很多可选择的方法, 通过 {{ domxref("AudioContext.createBiquadFilter") }} 方法来构建:</p>
+<p>biquad filter 拥有很多可选择的方法，通过 {{ domxref("AudioContext.createBiquadFilter") }} 方法来构建：</p>
 
 <pre class="brush: js">var biquadFilter = audioCtx.createBiquadFilter();
 </pre>
 
-<p>在Voice-change-o-matic的演示中，运用的制定选项是“lowshelf”过滤器，它提供了低音的基本增幅方法：</p>
+<p>在 Voice-change-o-matic 的演示中，运用的制定选项是“lowshelf”过滤器，它提供了低音的基本增幅方法：</p>
 
 <pre class="brush: js">biquadFilter.type = "lowshelf";
 biquadFilter.frequency.value = 1000;
 biquadFilter.gain.value = 25;
 </pre>
 
-<p>我们在这里详述了过滤器的类型，频率值，增幅值。在lowshelf过滤器情况，所有的指定频率拥有25分贝的增幅值。</p>
+<p>我们在这里详述了过滤器的类型，频率值，增幅值。在 lowshelf 过滤器情况，所有的指定频率拥有 25 分贝的增幅值。</p>
 
-<h2 id="Web_Audio_API的其他"> Web Audio API的其他</h2>
+<h2 id="Web_Audio_API的其他"> Web Audio API 的其他</h2>
 
-<p>Web Audio API 可以做不仅仅音频可视化及专业化（如panning）的事情。我们将会在之后的文章涉及其他的更多内容。</p>
+<p>Web Audio API 可以做不仅仅音频可视化及专业化（如 panning）的事情。我们将会在之后的文章涉及其他的更多内容。</p>

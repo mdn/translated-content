@@ -19,7 +19,9 @@ La méthode **`Object.isFrozen()`**permet de déterminer si un objet est {{jsxre
 
 ## Syntaxe
 
-    Object.isFrozen(obj)
+```js
+Object.isFrozen(obj)
+```
 
 ### Paramètres
 
@@ -135,8 +137,8 @@ Object.isFrozen(1);
 | Spécification                                                                            | État                         | Commentaires                                           |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
 | {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée par JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}         |                                                        |
-| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ESDraft')}} |                                                        |
+| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}         |                                                        |
+| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ESDraft')}} |                                                        |
 
 ## Compatibilité des navigateurs
 

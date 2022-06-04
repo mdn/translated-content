@@ -24,10 +24,12 @@ Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexi
 
 ## Syntaxe
 
-    obj?.prop
-    obj?.[expr]
-    arr?.[index]
-    func?.(args)
+```js
+obj?.prop
+obj?.[expr]
+arr?.[index]
+func?.(args)
+```
 
 ## Description
 
@@ -41,7 +43,7 @@ let nestedProp = obj.premier && obj.premier.second;
 
 La valeur de `obj.premier` est confirmée comme n'étant pas `null` (ni `undefined`) avant que d'accéder à la valeur de `obj.premier.second`. Ceci prévient l'erreur qui pourrait survenir si vous accédiez simplement `obj.premier.second` directement sans vérifier `obj.premier`.
 
-Avec l'opérateur de chaînage optionnel (`?.`), vous n'avez pas besoin de vérifier explicitement et de court-circuiter la vérification selon l'état de `obj.premier` avant que d'accéder à `obj.premier.second` :
+Avec l'opérateur de chaînage optionnel (`?.`), vous n'avez pas besoin de vérifier explicitement et de court-circuiter la vérification selon l'état de `obj.premier` avant que d'accéder à `obj.premier.second`&nbsp;:
 
 ```js
 let nestedProp = obj.premier?.second;
@@ -66,7 +68,7 @@ Utiliser le chaînage optionnel avec les appels de fonction entraîne le retour 
 let result = uneInterface.uneMéthode?.();
 ```
 
-> **Note :** S'il est une propriété qui porte ce nom et qui n'est pas une fonction, utiliser `?.` jètera aussi une exception {{jsxref("TypeError")}} (` x.y`` is not a function  `).
+> **Note :** S'il est une propriété qui porte ce nom et qui n'est pas une fonction, utiliser `?.` jètera aussi une exception {{jsxref("TypeError")}} (`x.y is not a function`).
 
 #### Réaliser des fonctions de rappel optionnelles ou des écouteurs d'évènements
 
@@ -108,12 +110,16 @@ let nestedProp = obj?.['propName'];
 
 ### Chaînage optionnel invalide depuis le côté gauche d'une affectation
 
-    let objet = {};
-    objet?.propriété = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+```js
+let objet = {};
+objet?.propriété = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+```
 
-### Accès aux éléments de tableau avec le chaînage optionnel
+### Accès aux éléments de tableau avec le chaînage optionnel
 
-    let élément = arr?.[42];
+```js
+let élément = arr?.[42];
+```
 
 ## Exemples
 
@@ -159,16 +165,18 @@ let villeDuClient = client.details?.adresse?.ville;
 let durée = vacations.trip?.getTime?.();
 ```
 
-### Combinaison avec l'opérateur de coalescence des nuls (Nullish coalescing operator)
+### Combinaison avec l'opérateur de coalescence des nuls (Nullish coalescing operator)
 
 L'{{JSxRef("Opérateurs/Nullish_coalescing_operator", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}} peut être utilisé après un chaînage optionnel afin de construire une valeur par défaut quand aucune n'a été trouvée :
 
-    let client = {
-      nom: "Carl",
-      details: { age: 82 }
-    };
-    const villeDuClient = client?.ville ?? "Ville Inconnue";
-    console.log(villeDuClient); // Ville inconnue
+```js
+let client = {
+  nom: "Carl",
+  details: { age: 82 }
+};
+const villeDuClient = client?.ville ?? "Ville Inconnue";
+console.log(villeDuClient); // Ville inconnue
+```
 
 ## Spécifications
 

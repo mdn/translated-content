@@ -9,7 +9,7 @@ translation_of: Web/API/Worker/postMessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>{{domxref("Worker")}} 接口的 <code><strong>postMessage()</strong></code>方法向worker的内部作用域发送一个消息。这接受单个参数，这是要发送给worker的数据。数据可以是由<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">结构化克隆</a>算法处理的任何值或JavaScript对象，其包括循环引用。</p>
+<p>{{domxref("Worker")}} 接口的 <code><strong>postMessage()</strong></code>方法向 worker 的内部作用域发送一个消息。这接受单个参数，这是要发送给 worker 的数据。数据可以是由<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">结构化克隆</a>算法处理的任何值或 JavaScript 对象，其包括循环引用。</p>
 
 <p>工作者可以使用 {{domxref("DedicatedWorkerGlobalScope.postMessage")}}  方法将信息发送回生成它的线程。</p>
 
@@ -23,8 +23,8 @@ translation_of: Web/API/Worker/postMessage
  <dt><em>aMessage</em></dt>
  <dd>The object to deliver to the worker; this will be in the data field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> algorithm, which includes cyclical references.</dd>
  <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd>一个可选的{{domxref("Transferable")}}对象的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">数组</a>，用于传递所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），并且只有在它被发送到的worker中可用。</dd>
- <dd>可转移对象是如{{domxref("ArrayBuffer")}}，{{domxref("MessagePort")}}或{{domxref("ImageBitmap")}}的实例对象。transferList数组中不可传入null。</dd>
+ <dd>一个可选的{{domxref("Transferable")}}对象的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">数组</a>，用于传递所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），并且只有在它被发送到的 worker 中可用。</dd>
+ <dd>可转移对象是如{{domxref("ArrayBuffer")}}，{{domxref("MessagePort")}}或{{domxref("ImageBitmap")}}的实例对象。transferList 数组中不可传入 null。</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -33,7 +33,7 @@ translation_of: Web/API/Worker/postMessage
 
 <h2 id="Example">Example</h2>
 
-<p>以下代码显示了如何使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个Worker对象。当两个表单输入(<code>first</code>和<code>second)</code>中的其中一个的输入值改变时， {{event("change")}} 事件将调用<code>postMessage()</code>把两个input的值发送给当前worker。</p>
+<p>以下代码显示了如何使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入 (<code>first</code>和<code>second)</code>中的其中一个的输入值改变时， {{event("change")}} 事件将调用<code>postMessage()</code>把两个 input 的值发送给当前 worker。</p>
 
 <pre class="brush: js">var myWorker = new Worker('worker.js');
 
@@ -151,57 +151,7 @@ from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2</
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0 [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0 [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Internet Explorer does not support {{domxref("Transferable")}} objects.</p>
+{{Compat("api.Worker.postMessage")}}
 
 <h2 id="See_also">See also</h2>
 

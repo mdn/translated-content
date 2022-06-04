@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasGradient/addColorStop
 ---
 <div>{{APIRef("Canvas")}}</div>
 
-<p><code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong> 方法添加一个由<strong><code>偏移值</code></strong>和<strong><code>颜色值</code></strong>指定的断点到渐变。如果偏移值不在<code>0</code>到<code>1</code>之间，将抛出<code>INDEX_SIZE_ERR</code>错误，如果颜色值不能被解析为有效的CSS颜色值 {{cssxref("&lt;color&gt;")}}，将抛出<code>SYNTAX_ERR</code>错误。</p>
+<p><code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong> 方法添加一个由<strong><code>偏移值</code></strong>和<strong><code>颜色值</code></strong>指定的断点到渐变。如果偏移值不在<code>0</code>到<code>1</code>之间，将抛出<code>INDEX_SIZE_ERR</code>错误，如果颜色值不能被解析为有效的 CSS 颜色值 {{cssxref("&lt;color&gt;")}}，将抛出<code>SYNTAX_ERR</code>错误。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/CanvasGradient/addColorStop
  <dt>offset</dt>
  <dd><code>0</code>到<code>1</code>之间的值，超出范围将抛出<code>INDEX_SIZE_ERR</code>错误</dd>
  <dt>color</dt>
- <dd>CSS颜色值 {{cssxref("&lt;color&gt;")}}。如果颜色值不能被解析为有效的CSS颜色值 <code>&lt;color&gt;</code>，将抛出<code>SYNTAX_ERR</code>错误。</dd>
+ <dd>CSS 颜色值 {{cssxref("&lt;color&gt;")}}。如果颜色值不能被解析为有效的 CSS 颜色值 <code>&lt;color&gt;</code>，将抛出<code>SYNTAX_ERR</code>错误。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -43,7 +43,7 @@ ctx.fillStyle = gradient;
 ctx.fillRect(10,10,200,100);
 </pre>
 
-<p>编辑以下代码可看到画布变化:</p>
+<p>编辑以下代码可看到画布变化：</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -91,77 +91,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">标准</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Canvas 2D Context W3C', "#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CanvasGradient.addColorStop")}}
 
 <h2 id="请参阅">请参阅</h2>
 

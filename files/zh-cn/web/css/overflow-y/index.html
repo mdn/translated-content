@@ -9,7 +9,7 @@ translation_of: Web/CSS/overflow-y
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p>当一个块级元素（div元素、p元素之类的）的内容在垂直方向发生溢出时，</p>
+<p>当一个块级元素（div 元素、p 元素之类的）的内容在垂直方向发生溢出时，</p>
 
 <p><a href="/zh-CN/docs/Web/CSS">CSS</a>属性<code>overflow-y </code>决定如何处理溢出的内容。</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/CSS/overflow-y
 
 <h2 id="Syntax" name="Syntax">Syntax[语法]</h2>
 
-<pre>/* 在当前css选择器元素下, 元素内容在垂直方向上溢出时 */
+<pre>/* 在当前 css 选择器元素下，元素内容在垂直方向上溢出时 */
 
 /* overflow-y 属性 可选值 */
 
@@ -47,14 +47,14 @@ overflow-y: unset; /*未设置*/
 
 <dl>
  <dt><code>clip</code> {{experimental_inline}}</dt>
- <dd>像 <code>hidden</code> 一样，内容被剪切到元素的填充框中。 <code>clip</code> 和 <code>hidden</code> 的区别是 <code>clip</code> 还禁止所有滚动，包括程序性滚动（programmatic scrolling）。包含框不再是滚动容器，并且不会启动新的格式设置上下文。 如果要启动新的格式设置上下文，可以使用 {{cssxref("display", "display: flow-root", "#flow-root")}} 。</dd>
+ <dd>像 <code>hidden</code> 一样，内容被剪切到元素的填充框中。 <code>clip</code> 和 <code>hidden</code> 的区别是 <code>clip</code> 还禁止所有滚动，包括程序性滚动（programmatic scrolling）。包含框不再是滚动容器，并且不会启动新的格式设置上下文。如果要启动新的格式设置上下文，可以使用 {{cssxref("display", "display: flow-root", "#flow-root")}} 。</dd>
 </dl>
 
 <dl>
  <dt><code>scroll</code></dt>
  <dd>桌面浏览器总是显示滚动条，无论内容是否发生溢出。这可以避免滚动条的显示与消失所导致的元素尺寸不确定的问题。而打印机可能会打印溢出的内容。</dd>
  <dt><code>auto</code></dt>
- <dd>取决于浏览器本身。当内容发生溢出时，桌面浏览器如Firefox会显示滚动条。</dd>
+ <dd>取决于浏览器本身。当内容发生溢出时，桌面浏览器如 Firefox 会显示滚动条。</dd>
  <dt>
  <h3 id="Formal_syntax正式语法">Formal syntax[正式语法]</h3>
 
@@ -85,7 +85,7 @@ overflow-y: unset; /*未设置*/
     &lt;/div&gt;
   &lt;/li&gt;
 
-  &lt;li&gt;&lt;code&gt;overflow-y:auto&lt;/code&gt; — 在大多数浏览器中, &lt;code&gt;auto&lt;/code&gt; 效果等于 &lt;code&gt;scroll&lt;/code&gt;
+  &lt;li&gt;&lt;code&gt;overflow-y:auto&lt;/code&gt; — 在大多数浏览器中，&lt;code&gt;auto&lt;/code&gt; 效果等于 &lt;code&gt;scroll&lt;/code&gt;
   &lt;div id="div4"&gt;
     歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
     &lt;/div&gt;
@@ -101,7 +101,7 @@ overflow-y: unset; /*未设置*/
 #div2,
 #div3,
 #div4 {
-  border: 1px solid black; /*元素边框 1px宽 黑边*/
+  border: 1px solid black; /*元素边框 1px 宽 黑边*/
   width:  280px;
   height: 120px;
 }
@@ -142,60 +142,10 @@ overflow-y: unset; /*未设置*/
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.5")}}</td>
-   <td>5.0 [*]</td>
-   <td>9.5</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[*] IE8 引入了属性<code>-ms-overflow-y</code>，作用与<code>overflow-y</code>相同。不要使用前缀<code>-ms-</code>。</p>
+{{Compat("css.properties.overflow-y")}}
 
 <h2 id="See_also" name="See_also">参见</h2>
 
 <ul>
- <li>相关CSS属性: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
+ <li>相关 CSS 属性：{{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
 </ul>

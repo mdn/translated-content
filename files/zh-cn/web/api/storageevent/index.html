@@ -7,14 +7,14 @@ translation_of: Web/API/StorageEvent
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p>当前页面使用的storage被其他页面修改时会触发StorageEvent事件. </p>
+<p>当前页面使用的 storage 被其他页面修改时会触发 StorageEvent 事件. </p>
 
-<p>[译者：事件在同一个域下的不同页面之间触发，即在A页面注册了storge的监听处理，只有在跟A同域名下的B页面操作storage对象，A页面才会被触发storage事件] </p>
+<p>[译者：事件在同一个域下的不同页面之间触发，即在 A 页面注册了 storge 的监听处理，只有在跟 A 同域名下的 B 页面操作 storage 对象，A 页面才会被触发 storage 事件] </p>
 
 <p>{{InheritanceDiagram}}</p>
 
 <div class="note">
-<p><strong>Note:</strong> 尽管这个事件已经早在 {{ Gecko("2.0") }}时就已存在,但是并不符合规范. 老的事件模型直到 {{ interface("nsIDOMStorageEventObsolete") }} 确定才被表现出来.</p>
+<p><strong>Note:</strong> 尽管这个事件已经早在 {{ Gecko("2.0") }}时就已存在，但是并不符合规范。老的事件模型直到 <code>nsIDOMStorageEventObsolete</code> 确定才被表现出来。</p>
 </div>
 
 <h2 id="方法描述">方法描述</h2>
@@ -43,12 +43,12 @@ translation_of: Web/API/StorageEvent
   <tr>
    <td><code>key</code></td>
    <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
-   <td>该属性代表被修改的键值。当被<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">clear()</span></font>方法清除之后该属性值为<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">null</span></font>。<strong>（只读）</strong></td>
+   <td>该属性代表被修改的键值。当被 clear() 方法清除之后该属性值为 null。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>newValue</code></td>
    <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
-   <td>该属性代表修改后的新值。当被<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">clear()</span></font>方法清理后或者该键值对被移除，<code>newValue</code> 的值为 <code>null</code> 。<strong>（只读）</strong></td>
+   <td>该属性代表修改后的新值。当被 clear() 方法清理后或者该键值对被移除，<code>newValue</code> 的值为 <code>null</code> 。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>oldValue</code></td>
@@ -57,14 +57,14 @@ translation_of: Web/API/StorageEvent
   </tr>
   <tr>
    <td><code>storageArea</code></td>
-   <td><code>{{ Interface("nsIDOMStorage") }}</code></td>
-   <td>被操作的storage对象。<strong>（只读）</strong></td>
+   <td><code>nsIDOMStorage</code></td>
+   <td>被操作的 storage 对象。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
    <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
    <td>
-    <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">key</span></font> 发生改变的对象所在文档的URL地址。<strong>（只读）</strong></p>
+    <p>key 发生改变的对象所在文档的 URL 地址。<strong>（只读）</strong></p>
    </td>
   </tr>
  </tbody>
@@ -74,7 +74,7 @@ translation_of: Web/API/StorageEvent
 
 <h3 id="initStorageEvent()" name="initStorageEvent()">initStorageEvent()</h3>
 
-<p>类似DOM中的初始化事件，即初始化新创建的Storage对象的属性。</p>
+<p>类似 DOM 中的初始化事件，即初始化新创建的 Storage 对象的属性。</p>
 
 <pre class="eval" dir="rtl">void initStorageEvent(
   in DOMString typeArg,
@@ -92,7 +92,7 @@ translation_of: Web/API/StorageEvent
  <dt><code>typeArg</code></dt>
  <dd>事件名</dd>
  <dt><code>canBubbleArg</code></dt>
- <dd>布尔值，代表是否可以通过dom冒泡</dd>
+ <dd>布尔值，代表是否可以通过 dom 冒泡</dd>
  <dt><code>cancelableArg</code></dt>
  <dd>布尔值，代表是否可以注销事件</dd>
  <dt><code>keyArg</code></dt>
@@ -102,9 +102,9 @@ translation_of: Web/API/StorageEvent
  <dt><code>newValueArg</code></dt>
  <dd>新值</dd>
  <dt><code>urlArg</code></dt>
- <dd>事件初始化时页面的url</dd>
+ <dd>事件初始化时页面的 url</dd>
  <dt><code>storageAreaArg</code></dt>
- <dd> 发生在哪个storage对象上</dd>
+ <dd> 发生在哪个 storage 对象上</dd>
 </dl>
 
 <h2 id="See_also" name="See_also">参阅</h2>

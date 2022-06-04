@@ -17,9 +17,9 @@ translation_of: Web/CSS/text-overflow
 
 <p>一般在容器的极限处进行截断。如果想在裁剪处显示空白符，可以使用 (<code>''</code>).</p>
 
-<p>这个属性只对那些在块级元素溢出的内容有效，但是必须要与块级元素内联(inline)方向一致（举个反例：内容在盒子的下方溢出。此时就不会生效）。文本可能在以下情况下溢出：当其因为某种原因而无法换行(例子：设置了"white-space:nowrap")，或者一个单词因为太长而不能合理地被安置(fit)。</p>
+<p>这个属性只对那些在块级元素溢出的内容有效，但是必须要与块级元素内联 (inline) 方向一致（举个反例：内容在盒子的下方溢出。此时就不会生效）。文本可能在以下情况下溢出：当其因为某种原因而无法换行 (例子：设置了"white-space:nowrap")，或者一个单词因为太长而不能合理地被安置 (fit)。</p>
 
-<p>这个属性并不会强制“溢出”事件的发生，因此为了能让"text-overflow"能够生效，程序员们必须要在元素上添加几个额外的属性，比如"将{{cssxref("overflow")}} 设置为hidden"。</p>
+<p>这个属性并不会强制“溢出”事件的发生，因此为了能让"text-overflow"能够生效，程序员们必须要在元素上添加几个额外的属性，比如"将{{cssxref("overflow")}} 设置为 hidden"。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -53,7 +53,7 @@ text-overflow: unset;</code></pre>
  <dt><code>clip</code></dt>
  <dd><strong>此为默认值。</strong>这个关键字的意思是"在内容区域的极限处截断文本"，因此在字符的中间可能会发生截断。如果你的目标浏览器支持 <code>text-overflow: ''</code>，为了能在两个字符过渡处截断，你可以使用一个空字符串值 (<code>''</code>) 作为 <code>text-overflow</code> 属性的值。</dd>
  <dt><code>ellipsis</code></dt>
- <dd>这个关键字的意思是“用一个省略号 (<code>'…'</code>, <code>U+2026 HORIZONTAL ELLIPSIS</code>)来表示被截断的文本”。这个省略号被添加在内容区域中，因此会减少显示的文本。如果空间太小到连省略号都容纳不下，那么这个省略号也会被截断。</dd>
+ <dd>这个关键字的意思是“用一个省略号 (<code>'…'</code>, <code>U+2026 HORIZONTAL ELLIPSIS</code>) 来表示被截断的文本”。这个省略号被添加在内容区域中，因此会减少显示的文本。如果空间太小到连省略号都容纳不下，那么这个省略号也会被截断。</dd>
  <dt><code>&lt;string&gt;</code> {{ experimental_inline() }}</dt>
  <dd>{{cssxref("&lt;string&gt;")}}用来表示被截断的文本。字符串内容将被添加在内容区域中，所以会减少显示出的文本。如果空间太小到连省略号都容纳不下，那么这个字符串也会被截断。</dd>
 </dl>
@@ -304,136 +304,11 @@ text-overflow: unset;</code></pre>
  </tbody>
 </table>
 
-<p>此接口的较早版本曾经被纳入候选名单。 但由于需要对某些尚未列出的风险点进行删除工作，因此该规范已降级到“工作草案”。所以说浏览器无前缀地实现此属性，但其却不在CR状态。</p>
+<p>此接口的较早版本曾经被纳入候选名单。但由于需要对某些尚未列出的风险点进行删除工作，因此该规范已降级到“工作草案”。所以说浏览器无前缀地实现此属性，但其却不在 CR 状态。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0 (312.3)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("7.0")}}<sup>[1]</sup></td>
-   <td>6.0<sup>[2]</sup></td>
-   <td>9{{property_prefix("-o")}}<sup>[3]</sup><br>
-    11.0</td>
-   <td>1.3 (312.3)</td>
-  </tr>
-  <tr>
-   <td>Two-value syntax {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>String value {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>fade</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>fade()</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Two-value syntax {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>String value {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>fade</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>fade()</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] 从 Gecko 10.0 {{geckoRelease("10.0")}} 起，修正了text-overflow属性在行内溢出的块级元素两端都溢出的显示效果，早前的版本如果仅仅使用一个属性(比如说<code>text-overflow:ellipsis;</code>)，可能会导致块级元素文本两端都会变为省略号，而不是仅仅期望的仅仅在文本末尾显示省略号。</p>
-
-<p>[2] IE 8 提供了带有浏览器前缀的版本， <code>-ms-text-overflow</code>，和text-overflow作用相同。但是并不推荐这样使用。</p>
-
-<p>[3] Opera 9 和 10 要求带有浏览器前缀 <code>-o-text-overflow</code>。</p>
+{{Compat("css.properties.text-overflow")}}
 
 <h2 id="另见">另见</h2>
 
@@ -441,4 +316,4 @@ text-overflow: unset;</code></pre>
  <li>Related CSS properties: {{cssxref("overflow")}}, {{cssxref("white-space")}}</li>
 </ul>
 
-<p>(69.2017.4.4,多多包涵)</p>
+<p>(69.2017.4.4，多多包涵)</p>

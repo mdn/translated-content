@@ -51,7 +51,7 @@ translation_of: Web/API/UIEvent
  <dt>{{domxref("UIEvent.view")}}{{readonlyinline}}</dt>
  <dd>返回一个包含了产生该事件的视图的 {{domxref("WindowProxy")}} 。</dd>
  <dt>{{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}} </dt>
- <dd>返回一个对应（键盘）按下的数字类型的 <code>keyCode</code> ，或者一个字母数字键按下时的字符码(<code>charCode</code>)。</dd>
+ <dd>返回一个对应（键盘）按下的数字类型的 <code>keyCode</code> ，或者一个字母数字键按下时的字符码 (<code>charCode</code>)。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -63,7 +63,7 @@ translation_of: Web/API/UIEvent
  <dd>初始化一个 <code>UIEvent</code> 对象。如果事件已经被分派，这个方法什么都不做。</dd>
 </dl>
 
-<h2 class="editable" id="规范"><span>规范</span></h2>
+<h2 class="editable" id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -92,99 +92,9 @@ translation_of: Web/API/UIEvent
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat("api.UIEvent")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>UIEvent()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(11)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelBubble</code> defined on Event</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>UIEvent()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(11)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelBubble</code> defined on Event</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] From Firefox 52, this property is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.</p>
-
-<p>[2] The {{domxref("UIEvent.isChar", "isChar")}} property has never been supported by any browser but Firefox, and even on Firefox it's never worked except on Mac OSX. For that reason, it's been removed in Firefox 55 to align with other browsers.</p>
-
-<h2 class="editable" id="相关链接"><span>相关链接</span></h2>
+<h2 class="editable" id="相关链接">相关链接</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>

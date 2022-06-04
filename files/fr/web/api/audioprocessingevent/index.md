@@ -32,7 +32,7 @@ _La liste ci-dessous inclut les propriétés héritées de son parent, {{domxref
 
 | Spécification                                                                                                        | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

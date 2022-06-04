@@ -4,13 +4,11 @@ slug: Web/API/Element/nextElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
-<p>{{ gecko_minversion_header("1.9.1") }}</p>
-
 <p>{{ ApiRef() }}</p>
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p><strong><span style="font-family: Verdana,Tahoma,sans-serif;">nextElementSibling</span></strong> 返回当前元素在其父元素的子元素节点中的后一个元素节点,如果该元素已经是最后一个元素节点,则返回<code>null,</code>该属性是只读的.</p>
+<p><strong>nextElementSibling</strong> 返回当前元素在其父元素的子元素节点中的后一个元素节点，如果该元素已经是最后一个元素节点，则返回<code>null,</code>该属性是只读的。</p>
 
 <h2 id="Syntax_and_values" name="Syntax_and_values">语法</h2>
 
@@ -33,7 +31,7 @@ original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 &lt;/script&gt;
 </pre>
 
-<p>上面的例子会输出以下内容:</p>
+<p>上面的例子会输出以下内容：</p>
 
 <pre>Siblings of div-01
 
@@ -46,7 +44,7 @@ original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 
 <h2 id="Internet_Explorer_8_支持补丁">Internet Explorer 8 支持补丁</h2>
 
-<p>该属性不支持IE9之前的版本, 下面的代码片段可以增进对IE8的支持:</p>
+<p>该属性不支持 IE9 之前的版本，下面的代码片段可以增进对 IE8 的支持：</p>
 
 <pre><code>// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
 if(!("nextElementSibling" in document.documentElement)){
@@ -61,7 +59,7 @@ if(!("nextElementSibling" in document.documentElement)){
 }</code>
 </pre>
 
-<h2 id="Internet_Explorer_9_和_Safari支持补丁">Internet Explorer 9+ 和 Safari支持补丁</h2>
+<h2 id="Internet_Explorer_9_和_Safari支持补丁">Internet Explorer 9+ 和 Safari 支持补丁</h2>
 
 <pre><code>// Source: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
 (function (arr) {
@@ -88,71 +86,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 <h2 id="Specification" name="Specification" style="line-height: 30px; font-size: 2.14286rem;">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support (on {{domxref("Element")}})</td>
-   <td>4</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>9.8</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>Support on {{domxref("CharacterData")}}</td>
-   <td>29.0</td>
-   <td>{{CompatGeckoDesktop("25")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>16.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support (on {{domxref("Element")}})</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.8</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Support on {{domxref("CharacterData")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>16.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="sect1"> </h3>
+{{Compat("api.Element.nextElementSibling")}}
 
 <h2 id="相关链接">相关链接</h2>
 
@@ -164,5 +98,3 @@ if(!("nextElementSibling" in document.documentElement)){
  <li><a class="internal" href="/zh-cn/DOM/Element.lastElementChild" title="zh-cn/DOM/Element.lastElementChild"><code>lastElementChild</code></a></li>
  <li><a class="internal" href="/zh-cn/DOM/Element.previousElementSibling" title="zh-cn/DOM/Element.previousElementSibling"><code>previousElementSibling</code></a></li>
 </ul>
-
-<p>{{ languages( {"en": "en/DOM/element.nextElementSibling" } ) }}</p>

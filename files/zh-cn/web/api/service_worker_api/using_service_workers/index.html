@@ -11,7 +11,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 <p>{{ServiceWorkerSidebar}}</p>
 
-<div class="summary">
+<div>
 <p>本文是关于使用 service workers 的教程，包括讲解 service worker 的基本架构、怎么注册一个 service worker、一个新  service worker 的 install 及 activation 过程、怎么更新 service worker 还有它的缓存控制和自定义响应，这一切都在一个简单的离线的应用程序中。</p>
 </div>
 
@@ -19,13 +19,13 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <p>有一个困扰 web 用户多年的难题——丢失网络连接。即使是世界上最好的 web app，如果下载不了它，也是非常糟糕的体验。如今虽然已经有很多种技术去尝试着解决这一问题。而随着<a href="https://developer.mozilla.org/en-US/Apps/Build/Offline">离线</a>页面的出现，一些问题已经得到了解决。但是，最重要的问题是，仍然没有一个好的统筹机制对资源缓存和自定义的网络请求进行控制。<br>
  <br>
- 之前的尝试 — AppCache — 看起来是个不错的方法，因为它可以很容易地指定需要离线缓存的资源。但是，它假定你使用时会遵循诸多规则，如果你不严格遵循这些规则，它会把你的APP搞得一团糟。关于APPCache的更多详情，请看Jake Archibald的文章： <a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a>.</p>
+ 之前的尝试 — AppCache — 看起来是个不错的方法，因为它可以很容易地指定需要离线缓存的资源。但是，它假定你使用时会遵循诸多规则，如果你不严格遵循这些规则，它会把你的 APP 搞得一团糟。关于 APPCache 的更多详情，请看 Jake Archibald 的文章： <a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a>.</p>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注意</strong></span>:  从Firefox44起，当使用 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> 来提供离线页面支持时，会提示一个警告消息，来建议开发者使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> 来实现离线页面。({{bug("1204581")}}.)</p>
+<p><strong>注意</strong>:  从 Firefox44 起，当使用 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> 来提供离线页面支持时，会提示一个警告消息，来建议开发者使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> 来实现离线页面。({{bug("1204581")}}.)</p>
 </div>
 
-<p>Service worker 最终要去解决这些问题。虽然 Service Worker 的语法比 AppCache 更加复杂，但是你可以使用 JavaScript 更加精细地控制 AppCache 的静默行为。有了它，你可以解决目前离线应用的问题，同时也可以做更多的事。 Service Worker 可以使你的应用先访问本地缓存资源，所以在离线状态时，在没有通过网络接收到更多的数据前，仍可以提供基本的功能（一般称之为 <a href="http://offlinefirst.org/">Offline First</a>）。这是原生APP 本来就支持的功能，这也是相比于 web app，原生 app 更受青睐的主要原因。</p>
+<p>Service worker 最终要去解决这些问题。虽然 Service Worker 的语法比 AppCache 更加复杂，但是你可以使用 JavaScript 更加精细地控制 AppCache 的静默行为。有了它，你可以解决目前离线应用的问题，同时也可以做更多的事。 Service Worker 可以使你的应用先访问本地缓存资源，所以在离线状态时，在没有通过网络接收到更多的数据前，仍可以提供基本的功能（一般称之为 <a href="http://offlinefirst.org/">Offline First</a>）。这是原生 APP 本来就支持的功能，这也是相比于 web app，原生 app 更受青睐的主要原因。</p>
 
 <h2 id="使用前的设置">使用前的设置</h2>
 
@@ -33,11 +33,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <ul>
  <li><strong>Firefox Nightly</strong>: 访问 <code>about:config</code> 并设置 <code>dom.serviceWorkers.enabled</code> 的值为 true; 重启浏览器；</li>
- <li><strong>Chrome Canary</strong>: 访问 <code>chrome://flags</code> 并开启 <code>experimental-web-platform-features</code>; 重启浏览器 (注意：有些特性在Chrome中没有默认开放支持)；</li>
+ <li><strong>Chrome Canary</strong>: 访问 <code>chrome://flags</code> 并开启 <code>experimental-web-platform-features</code>; 重启浏览器 (注意：有些特性在 Chrome 中没有默认开放支持)；</li>
  <li><strong>Opera</strong>: 访问 <code>opera://flags</code> 并开启<code> ServiceWorker 的支持</code>; 重启浏览器。 </li>
 </ul>
 
-<p>另外，你需要通过 HTTPS 来访问你的页面 — 出于安全原因，Service Workers 要求必须在 HTTPS 下才能运行。Github 是个用来测试的好地方，因为它就支持HTTPS。为了便于本地开发，<code>localhost</code> 也被浏览器认为是安全源。</p>
+<p>另外，你需要通过 HTTPS 来访问你的页面 — 出于安全原因，Service Workers 要求必须在 HTTPS 下才能运行。Github 是个用来测试的好地方，因为它就支持 HTTPS。为了便于本地开发，<code>localhost</code> 也被浏览器认为是安全源。</p>
 
 <h2 id="基本架构">基本架构</h2>
 
@@ -47,9 +47,9 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
  <li>service worker URL 通过 {{domxref("serviceWorkerContainer.register()")}} 来获取和注册。</li>
  <li>如果注册成功，service worker 就在 {{domxref("ServiceWorkerGlobalScope") }} 环境中运行； 这是一个特殊类型的 worker 上下文运行环境，与主运行线程（执行脚本）相独立，同时也没有访问 DOM 的能力。</li>
  <li>service worker 现在可以处理事件了。</li>
- <li>受 service worker 控制的页面打开后会尝试去安装 service worker。最先发送给 service worker 的事件是安装事件(在这个事件里可以开始进行填充 IndexDB和缓存站点资源)。这个流程同原生 APP 或者 Firefox OS APP 是一样的 — 让所有资源可离线访问。</li>
+ <li>受 service worker 控制的页面打开后会尝试去安装 service worker。最先发送给 service worker 的事件是安装事件 (在这个事件里可以开始进行填充 IndexDB 和缓存站点资源)。这个流程同原生 APP 或者 Firefox OS APP 是一样的 — 让所有资源可离线访问。</li>
  <li>当 <code>oninstall</code> 事件的处理程序执行完毕后，可以认为 service worker 安装完成了。</li>
- <li>下一步是激活。当 service worker 安装完成后，会接收到一个激活事件(activate event)。 <code>onactivate</code> 主要用途是清理先前版本的 service worker 脚本中使用的资源。</li>
+ <li>下一步是激活。当 service worker 安装完成后，会接收到一个激活事件 (activate event)。 <code>onactivate</code> 主要用途是清理先前版本的 service worker 脚本中使用的资源。</li>
  <li>Service Worker 现在可以控制页面了，但仅是在 <code>register()</code>  成功后的打开的页面。也就是说，页面起始于有没有 service worker ，且在页面的接下来生命周期内维持这个状态。所以，页面不得不重新加载以让 service worker 获得完全的控制。</li>
 </ol>
 
@@ -63,9 +63,9 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> 是一种非常适用于异步操作的机制，一个操作依赖于另一个操作的成功执行。这是 service worker 的核心工作机制。<br>
  <br>
- Promises 可以做很多事情。但现在，你只需要知道，如果有什么返回了一个promise，你可以在后面加上 <code>.then()</code> 来传入成功和失败的回调函数。或者，你可以在后面加上 <code>.catch() </code>如果你想添加一个操作失败的回调函数。</p>
+ Promises 可以做很多事情。但现在，你只需要知道，如果有什么返回了一个 promise，你可以在后面加上 <code>.then()</code> 来传入成功和失败的回调函数。或者，你可以在后面加上 <code>.catch() </code>如果你想添加一个操作失败的回调函数。</p>
 
-<p>接下来，让我们对比一下传统的同步回调结构，和异步promise结构，两者在功能上是等效的：</p>
+<p>接下来，让我们对比一下传统的同步回调结构，和异步 promise 结构，两者在功能上是等效的：</p>
 
 <h4 id="同步">同步</h4>
 
@@ -84,13 +84,13 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
   console.log(err);
 });</pre>
 
-<p>在上面第一个例子中，我们必须等待 myFunction( ) 执行完成，并返回 value值，在此之前，后续其它的代码无法执行。在第二个例子中，myFunction( ) 返回一个promise对象，下面的代码可以继续执行。当promise成功resolves后，then( ) 中的函数会异步地执行。<br>
+<p>在上面第一个例子中，我们必须等待 myFunction() 执行完成，并返回 value 值，在此之前，后续其它的代码无法执行。在第二个例子中，myFunction() 返回一个 promise 对象，下面的代码可以继续执行。当 promise 成功 resolves 后，then() 中的函数会异步地执行。<br>
  <br>
- 现在来举下实际的例子 — 如果我们想动态地加载图片，而且要在图片下载完成后再展示到页面上，要怎么实现呢？这是一个比较常见的场景，但是实现起来会有点麻烦。我们可以使用 .onload 事件处理程序，来实现图片的加载完成后再展示。但是如果图片的 onload事件发生在我们监听这个事件之前呢？我们可以使用 .complete来解决这个问题，但是仍然不够简洁，如果是多个图片该怎么处理呢？并且，这种方法仍然是同步的操作，会阻塞主线程。<br>
+ 现在来举下实际的例子 — 如果我们想动态地加载图片，而且要在图片下载完成后再展示到页面上，要怎么实现呢？这是一个比较常见的场景，但是实现起来会有点麻烦。我们可以使用 .onload 事件处理程序，来实现图片的加载完成后再展示。但是如果图片的 onload 事件发生在我们监听这个事件之前呢？我们可以使用 .complete 来解决这个问题，但是仍然不够简洁，如果是多个图片该怎么处理呢？并且，这种方法仍然是同步的操作，会阻塞主线程。<br>
  <br>
- 相比于以上方法，我们可以使用 promise 来实现。(可以看我们的 <a href="https://github.com/mdn/promises-test">Promises test</a> 示例源码, <a href="https://mdn.github.io/promises-test/">look at it running live</a>.)</p>
+ 相比于以上方法，我们可以使用 promise 来实现。(可以看我们的 <a href="https://github.com/mdn/promises-test">Promises test</a> 示例源码， <a href="https://mdn.github.io/promises-test/">look at it running live</a>.)</p>
 
-<p>{{note("service worker在实际使用中，会使用 caching 和 onfetch 等异步操作，而不是使用老旧的 XMLHttpRequest API。这里的例子使用 XMLHttpRequest API只是为了让你能将注意力集中于理解 Promise上。")}}</p>
+<p>{{note("service worker 在实际使用中，会使用 caching 和 onfetch 等异步操作，而不是使用老旧的 XMLHttpRequest API。这里的例子使用 XMLHttpRequest API 只是为了让你能将注意力集中于理解 Promise 上。")}}</p>
 
 <pre class="brush: js notranslate">function imgLoad(url) {
   return new Promise(function(resolve, reject) {
@@ -114,9 +114,9 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
   });
 }</pre>
 
-<p>我们使用 Promise( ) 构造函数返回了一个新的promise对象，构造函数接收一个回调函数作为参数。这个回调函数包含两个参数，第一个为成功执行(resolve)的回调函数，第二个为执行失败(reject)的回调函数。我们将这两个回调函数在对应的时机执行。在这个例子中，resolve会在请求返回状态码200的时候执行，reject会在请求返回码为非200的时候执行。上面代码的其余部分基本都是XHR的相关操作，现在不需要过多关注。</p>
+<p>我们使用 Promise( ) 构造函数返回了一个新的 promise 对象，构造函数接收一个回调函数作为参数。这个回调函数包含两个参数，第一个为成功执行 (resolve) 的回调函数，第二个为执行失败 (reject) 的回调函数。我们将这两个回调函数在对应的时机执行。在这个例子中，resolve 会在请求返回状态码 200 的时候执行，reject 会在请求返回码为非 200 的时候执行。上面代码的其余部分基本都是 XHR 的相关操作，现在不需要过多关注。</p>
 
-<p>当我们调用 imgLoad( ) 函数时，传入要加载的图片url作为参数。然后，后面的代码与同步方式会有点不同：</p>
+<p>当我们调用 imgLoad( ) 函数时，传入要加载的图片 url 作为参数。然后，后面的代码与同步方式会有点不同：</p>
 
 <pre class="brush: js notranslate">var body = document.querySelector('body');
 var myImage = new Image();
@@ -129,17 +129,17 @@ imgLoad('myLittleVader.jpg').then(function(response) {
   console.log(Error);
 });</pre>
 
-<p>在函数调用后面，我们串联了 promise 的 then() 方法。then() 接受两个函数 —— 第一个函数在 promise 成功执行的情况下执行，而第二个函数则在 promise 执行失败情况下执行。当执行成功时，在 myImage 中显示图片，并追加到 body 里面(它的参数就是传递给 promise 的 resolve 方法的 request.response )；当执行失败时，在控制台返回一个错误。</p>
+<p>在函数调用后面，我们串联了 promise 的 then() 方法。then() 接受两个函数 —— 第一个函数在 promise 成功执行的情况下执行，而第二个函数则在 promise 执行失败情况下执行。当执行成功时，在 myImage 中显示图片，并追加到 body 里面 (它的参数就是传递给 promise 的 resolve 方法的 request.response )；当执行失败时，在控制台返回一个错误。</p>
 
 <p>这些都是异步的。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 你可以链式调用 promise,比如:<br>
+<p><strong>注意</strong>: 你可以链式调用 promise，比如：<br>
  <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 你可以阅读 Jake Archibald 的精彩的文章  <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a> 了解更多关于 promise 的内容</p>
+<p><strong>注意</strong>: 你可以阅读 Jake Archibald 的精彩的文章  <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a> 了解更多关于 promise 的内容</p>
 </div>
 
 <h2 id="Service_workers_demo">Service workers demo</h2>
@@ -148,12 +148,12 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  <img alt="" src="https://mdn.mozillademos.org/files/8243/demo-screenshot.png" style="display: block; height: 410px; margin: 0px auto; width: 480px;"><br>
  <br>
  <br>
- 你可以查看 <a href="https://github.com/mdn/sw-test/">Github上的源码</a>， 也可以查看 <a href="https://mdn.github.io/sw-test/">在线示例</a>。有一点需要我们重点关注的是 promise （查看 <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js 22-47行</a>），这是一个你上面读到的 <a href="https://github.com/mdn/promises-test">Promises test demo</a> 里的一个修改版，它们有以下不同： </p>
+ 你可以查看 <a href="https://github.com/mdn/sw-test/">Github 上的源码</a>， 也可以查看 <a href="https://mdn.github.io/sw-test/">在线示例</a>。有一点需要我们重点关注的是 promise（查看 <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js 22-47 行</a>），这是一个你上面读到的 <a href="https://github.com/mdn/promises-test">Promises test demo</a> 里的一个修改版，它们有以下不同： </p>
 
 <ol>
- <li>原始的版本里，我们只传了一个我们想加载的图片的 URL 。在这个版本里，我们传了一个包含单个图片所有数据的 JSON （查看 <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>） 。这是因为每一个 promise reslove 的所有数据必须传给promise，因为它是异步的。如果你只传了 url ，那么当你 <code>for</code> 循环被遍历的时候你试图分别访问其他项，将不会有效的，因为 promise 的 resolve 不会和遍历（这个是同步的过程）同时完成。</li>
+ <li>原始的版本里，我们只传了一个我们想加载的图片的 URL 。在这个版本里，我们传了一个包含单个图片所有数据的 JSON（查看 <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>）。这是因为每一个 promise reslove 的所有数据必须传给 promise，因为它是异步的。如果你只传了 url ，那么当你 <code>for</code> 循环被遍历的时候你试图分别访问其他项，将不会有效的，因为 promise 的 resolve 不会和遍历（这个是同步的过程）同时完成。</li>
  <li>我们实际上用数组 resolve 了这些 promise，因为我们想让得到加载完的图片 blob 和 图片的名字、credit 和 alt 文本（查看 <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34">app.js  31-34 行</a>）。Promises 只能 resolve 单个参数，所以你想 resolve 多个值的话，你需要用数组或对象。</li>
- <li> 为了访问 promise resolved  的值，我们接着通过 then 函数进行获取（<a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64">app.js 60-64行</a>），这个有点古怪，但这就是 promise 工作的方式。</li>
+ <li> 为了访问 promise resolved  的值，我们接着通过 then 函数进行获取（<a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64">app.js 60-64 行</a>），这个有点古怪，但这就是 promise 工作的方式。</li>
 </ol>
 
 <h2 id="现在来谈谈_Service_workers">现在来谈谈 Service workers</h2>
@@ -176,22 +176,22 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <ol>
  <li>外面的代码块做了一个特性检查，在注册之前确保 service worker 是支持的。</li>
- <li>接着，我们使用 {{domxref("ServiceWorkerContainer.register()") }} 函数来注册站点的 service worker，service worker 只是一个驻留在我们的 app 内的一个 JavaScript 文件 (注意，这个文件的url 是相对于 origin， 而不是相对于引用它的那个 JS 文件)。</li>
- <li> <code>scope</code> 参数是选填的，可以被用来指定你想让 service worker 控制的内容的子目录。在这个例子例，我们指定了 <code>'/sw-test/'</code>，表示 app 的 origin 下的所有内容。如果你留空的话，默认值也是这个值， 我们在指定只是作为例子。</li>
+ <li>接着，我们使用 {{domxref("ServiceWorkerContainer.register()") }} 函数来注册站点的 service worker，service worker 只是一个驻留在我们的 app 内的一个 JavaScript 文件 (注意，这个文件的 url 是相对于 origin， 而不是相对于引用它的那个 JS 文件)。</li>
+ <li> <code>scope</code> 参数是选填的，可以被用来指定你想让 service worker 控制的内容的子目录。在这个例子里，我们指定了 <code>'/sw-test/'</code>，表示 app 的 origin 下的所有内容。如果你留空的话，默认值也是这个值， 我们在指定只是作为例子。</li>
  <li><code>.then()</code> 函数链式调用我们的 promise，当 promise resolve 的时候，里面的代码就会执行。</li>
  <li>最后面我们链了一个 <code>.catch()</code> 函数，当 promise rejected 才会执行。</li>
 </ol>
 
 <p>这就注册了一个 service worker，它工作在 worker context，所以没有访问 DOM 的权限。在正常的页面之外运行 service worker 的代码来控制它们的加载。</p>
 
-<p>单个 service worker 可以控制很多页面。每个你的 scope 里的页面加载完的时候，安装在页面的 service worker 可以控制它。牢记你需要小心 service worker 脚本里的全局变量： 每个页面不会有自己独有的worker。</p>
+<p>单个 service worker 可以控制很多页面。每个你的 scope 里的页面加载完的时候，安装在页面的 service worker 可以控制它。牢记你需要小心 service worker 脚本里的全局变量： 每个页面不会有自己独有的 worker。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 你的 service worker 函数像一个代理服务器一样，允许你修改请求和响应，用他们的缓存替代它们等等。</p>
+<p><strong>注意</strong>: 你的 service worker 函数像一个代理服务器一样，允许你修改请求和响应，用他们的缓存替代它们等等。</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 关于 service workers 一个很棒的事情就是，如果你用像上面一样的浏览器特性检测方式检测发现浏览器并不支持SW，你还是可以正常地在线使用页面。与此同时，如果你在一个页面上同时使用 AppCache 和 SW , 不支持 SW 但是支持 AppCache  的浏览器，可以使用 AppCache，如果都支持的话，则会采用 SW</p>
+<p><strong>注意</strong>: 关于 service workers 一个很棒的事情就是，如果你用像上面一样的浏览器特性检测方式检测发现浏览器并不支持 SW，你还是可以正常地在线使用页面。与此同时，如果你在一个页面上同时使用 AppCache 和 SW , 不支持 SW 但是支持 AppCache  的浏览器，可以使用 AppCache，如果都支持的话，则会采用 SW</p>
 </div>
 
 <h4 id="为什么我的_service_worker_注册失败了？">为什么我的 service worker 注册失败了？</h4>
@@ -200,8 +200,8 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <ol>
  <li>你没有在 HTTPS 下运行你的程序</li>
- <li>service worker文件的地址没有写对— 需要相对于 origin , 而不是 app 的根目录。在我们的例子例， service worker 是在 <code>https://mdn.github.io/sw-test/sw.js</code><font face="Open Sans, Arial, sans-serif">，app 的根目录是 </font><code>https://mdn.github.io/sw-test/</code>。应该写成 <code>/sw-test/sw.js</code> 而非 <code>/sw.js</code>.</li>
- <li> service worker 在不同的 origin 而不是你的app的，这是不被允许的。</li>
+ <li>service worker 文件的地址没有写对— 需要相对于 origin , 而不是 app 的根目录。在我们的例子例， service worker 是在 <code>https://mdn.github.io/sw-test/sw.js</code>，app 的根目录是 <code>https://mdn.github.io/sw-test/</code>。应该写成 <code>/sw-test/sw.js</code> 而非 <code>/sw.js</code>.</li>
+ <li> service worker 在不同的 origin 而不是你的 app 的，这是不被允许的。</li>
 </ol>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12630/important-notes.png" style="display: block; height: 277px; margin: 0px auto; width: 574px;"></p>
@@ -211,7 +211,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 <ul>
  <li>service worker 只能抓取在 service worker scope 里从客户端发出的请求。</li>
  <li>最大的 scope 是 service worker 所在的地址</li>
- <li>如果你的 service worker 被激活在一个有 <code>Service-Worker-Allowed</code> header 的客户端，你可以为service worker 指定一个最大的 scope 的列表。</li>
+ <li>如果你的 service worker 被激活在一个有 <code>Service-Worker-Allowed</code> header 的客户端，你可以为 service worker 指定一个最大的 scope 的列表。</li>
  <li>在 Firefox, Service Worker APIs 在用户在 <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a> 下会被隐藏而且无法使用。</li>
 </ul>
 
@@ -219,10 +219,10 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>在你的 service worker 注册之后，浏览器会尝试为你的页面或站点安装并激活它。 <br>
  <br>
- <code>install</code> 事件会在注册完成之后触发。<code>install</code> 事件一般是被用来填充你的浏览器的离线缓存能力。为了达成这个目的，我们使用了 Service Worker 的新的标志性的存储 API — {{domxref("cache")}} — 一个 service worker 上的全局对象，它使我们可以存储网络响应发来的资源，并且根据它们的请求来生成key。这个 API 和浏览器的标准的缓存工作原理很相似，但是是特定你的域的。它会一直持久存在，直到你告诉它不再存储，你拥有全部的控制权。</p>
+ <code>install</code> 事件会在注册完成之后触发。<code>install</code> 事件一般是被用来填充你的浏览器的离线缓存能力。为了达成这个目的，我们使用了 Service Worker 的新的标志性的存储 API — {{domxref("cache")}} — 一个 service worker 上的全局对象，它使我们可以存储网络响应发来的资源，并且根据它们的请求来生成 key。这个 API 和浏览器的标准的缓存工作原理很相似，但是是特定你的域的。它会一直持久存在，直到你告诉它不再存储，你拥有全部的控制权。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>:  Cache API  并不被每个浏览器支持。（查看 {{anch("Browser support")}}  部分了解更多信息。） 如果你现在就想使用它，可以考虑采用一个 polyfill，比如  <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google topeka demo</a>，或者把你的资源存储在 <a href="/zh-CN/docs/Glossary/IndexedDB">IndexedDB</a> 中。</p>
+<p><strong>注意</strong>: Cache API 并不被每个浏览器支持。（查看 <a href="#browser_support">Browser support</a> 部分了解更多信息。） 如果你现在就想使用它，可以考虑采用一个 polyfill，比如  <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google topeka demo</a>，或者把你的资源存储在 <a href="/zh-CN/docs/Glossary/IndexedDB">IndexedDB</a> 中。</p>
 </div>
 
 <p>让我们从一个代码示例来开始这个部分——这是 <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">这是我们的 service worker 里的第一块代码</a> ：</p>
@@ -247,18 +247,18 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 });</pre>
 
 <ol>
- <li>这里我们 新增了一个 <code>install</code> 事件监听器，接着在事件上接了一个{{domxref("ExtendableEvent.waitUntil()") }}  方法——这会确保Service Worker 不会在 <code>waitUntil()</code> 里面的代码执行完毕之前安装完成。</li>
+ <li>这里我们 新增了一个 <code>install</code> 事件监听器，接着在事件上接了一个{{domxref("ExtendableEvent.waitUntil()") }}  方法——这会确保 Service Worker 不会在 <code>waitUntil()</code> 里面的代码执行完毕之前安装完成。</li>
  <li>在 <code>waitUntil()</code> 内，我们使用了 <a href="/en-US/docs/Web/API/CacheStorage/open"><code>caches.open()</code></a> 方法来创建了一个叫做 <code>v1</code> 的新的缓存，将会是我们的站点资源缓存的第一个版本。它返回了一个创建缓存的 promise，当它 resolved 的时候，我们接着会调用在创建的缓存示例上的一个方法  <code>addAll()</code>，这个方法的参数是一个由一组相对于 origin 的 URL 组成的数组，这些 URL 就是你想缓存的资源的列表。</li>
  <li>如果 promise 被 rejected，安装就会失败，这个 worker 不会做任何事情。这也是可以的，因为你可以修复你的代码，在下次注册发生的时候，又可以进行尝试。</li>
- <li>当安装成功完成之后， service worker 就会激活。在第一次你的 service worker 注册／激活时，这并不会有什么不同。但是当  service worker 更新 (稍后查看 {{anch("Updating your service worker") }} 部分) 的时候 ，就不太一样了。</li>
+ <li>当安装成功完成之后， service worker 就会激活。在第一次你的 service worker 注册／激活时，这并不会有什么不同。但是当  service worker 更新 (稍后查看 <a href="#更新你的_service_worker">更新你的 service worker</a> 部分) 的时候 ，就不太一样了。</li>
 </ol>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: <a href="/zh-CN/docs/Web/API/Storage/LocalStorage">localStorage</a> 跟  service worker 的 cache 工作原理很类似，但是它是同步的，所以不允许在  service workers 内使用。</p>
+<p><strong>注意</strong>: <a href="/zh-CN/docs/Web/API/Storage/LocalStorage">localStorage</a> 跟  service worker 的 cache 工作原理很类似，但是它是同步的，所以不允许在  service workers 内使用。</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: <a href="/zh-CN/docs/Glossary/IndexedDB">IndexedDB</a> 可以在  service worker 内做数据存储。</p>
+<p><strong>注意</strong>: <a href="/zh-CN/docs/Glossary/IndexedDB">IndexedDB</a> 可以在  service worker 内做数据存储。</p>
 </div>
 
 <h3 id="自定义请求的响应">自定义请求的响应</h3>
@@ -286,9 +286,9 @@ imgLoad('myLittleVader.jpg').then(function(response) {
   );
 });</pre>
 
-<p><code>caches.match(event.request)</code> 允许我们对网络请求的资源和 cache 里可获取的资源进行匹配，查看是否缓存中有相应的资源。这个匹配通过 url 和 vary header进行，就像正常的 http 请求一样。</p>
+<p><code>caches.match(event.request)</code> 允许我们对网络请求的资源和 cache 里可获取的资源进行匹配，查看是否缓存中有相应的资源。这个匹配通过 url 和 vary header 进行，就像正常的 http 请求一样。</p>
 
-<p>让我们看看我们在定义我们的方法时的一些其他的选项 （查看 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API documentation</a> 了解更多有关 {{domxref("Request")}} 和 {{domxref("Response")}} 对象的更多信息。）</p>
+<p>让我们看看我们在定义我们的方法时的一些其他的选项（查看 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API documentation</a> 了解更多有关 {{domxref("Request")}} 和 {{domxref("Response")}} 对象的更多信息。）</p>
 
 <ol>
  <li>
@@ -297,7 +297,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
   <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
  </li>
  <li>
-  <p><font face="Open Sans, Arial, sans-serif">下面这个更复杂点的 </font><code>Response</code> 展示了你可以在你的响应里选择性的传一系列 header，来模仿标准的 HTTP 响应 header。这里我们只告诉浏览器我们虚假的响应的 content type：</p>
+  <p>下面这个更复杂点的 <code>Response</code> 展示了你可以在你的响应里选择性的传一系列 header，来模仿标准的 HTTP 响应 header。这里我们只告诉浏览器我们虚假的响应的 content type：</p>
 
   <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
@@ -337,7 +337,7 @@ event.request.body</pre>
   );
 });</code></pre>
 
-<p>如果 promise reject了， catch() 函数会执行默认的网络请求，意味着在网络可用的时候可以直接像服务器请求资源。</p>
+<p>如果 promise reject 了， catch() 函数会执行默认的网络请求，意味着在网络可用的时候可以直接像服务器请求资源。</p>
 
 <p>如果我们足够聪明的话，我们就不会只是从服务器请求资源，而且还会把请求到的资源保存到缓存中，以便将来离线时所用！这意味着如果其他额外的图片被加入到  Star Wars 图库里，我们的 app 会自动抓取它们。下面就是这个诀窍：</p>
 
@@ -377,7 +377,7 @@ event.request.body</pre>
 
 <p>因为只有新图片会失败，我们已经选择了回退的图片，一切都依赖我们之前看到的  <code>install</code>  事件侦听器中的安装过程。</p>
 
-<p><strong>更新你的 service worker</strong></p>
+<h2 id="更新你的_service_worker">更新你的 service worker</h2>
 
 <p>如果你的 service worker 已经被安装，但是刷新页面时有一个新版本的可用，新版的 service worker 会在后台安装，但是还没激活。当不再有任何已加载的页面在使用旧版的 service worker 的时候，新版本才会激活。一旦再也没有更多的这样已加载的页面，新的 service worker 就会被激活。</p>
 

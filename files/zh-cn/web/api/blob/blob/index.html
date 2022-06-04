@@ -5,7 +5,7 @@ translation_of: Web/API/Blob/Blob
 ---
 <p>{{APIRef("File API")}}</p>
 
-<p><code><strong>Blob()</strong></code> 构造函数返回一个新的 {{domxref("Blob")}} 对象。 blob的内容由参数数组中给出的值的串联组成。</p>
+<p><code><strong>Blob()</strong></code> 构造函数返回一个新的 {{domxref("Blob")}} 对象。blob 的内容由参数数组中给出的值的串联组成。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,104 +15,27 @@ translation_of: Web/API/Blob/Blob
 <h3 id="参数">参数</h3>
 
 <ul>
- <li><em>array</em> 是一个由{{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}} 等对象构成的 {{jsxref("Array")}} ，或者其他类似对象的混合体，它将会被放进 {{domxref("Blob")}}。DOMStrings会被编码为UTF-8。</li>
+ <li><em>array</em> 是一个由{{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}} 等对象构成的 {{jsxref("Array")}} ，或者其他类似对象的混合体，它将会被放进 {{domxref("Blob")}}。DOMStrings 会被编码为 UTF-8。</li>
  <li><em>option</em><em>s</em> 是一个可选的<code>BlobPropertyBag</code>字典，它可能会指定如下两个属性：
   <ul>
-   <li><code>type</code>，默认值为 <code>""</code>，它代表了将会被放入到blob中的数组内容的MIME类型。</li>
-   <li><code>endings</code>，默认值为<code>"transparent"</code>，用于指定包含行结束符<code>\n</code>的字符串如何被写入。 它是以下两个值中的一个： <code>"native"</code>，代表行结束符会被更改为适合宿主操作系统文件系统的换行符，或者 <code>"transparent"</code>，代表会保持blob中保存的结束符不变 {{non-standard_inline}}</li>
+   <li><code>type</code>，默认值为 <code>""</code>，它代表了将会被放入到 blob 中的数组内容的 MIME 类型。</li>
+   <li><code>endings</code>，默认值为<code>"transparent"</code>，用于指定包含行结束符<code>\n</code>的字符串如何被写入。 它是以下两个值中的一个： <code>"native"</code>，代表行结束符会被更改为适合宿主操作系统文件系统的换行符，或者 <code>"transparent"</code>，代表会保持 blob 中保存的结束符不变 {{non-standard_inline}}</li>
   </ul>
  </li>
 </ul>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js  language-js">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // 一个包含DOMString的数组
+<pre class="brush: js  language-js">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // 一个包含 DOMString 的数组
 var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // 得到 blob</pre>
 
 <h2 id="Specification" name="Specification">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#constructorBlob', 'Blob()')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>20</td>
-   <td>{{CompatGeckoDesktop("13.0")}} [1]</td>
-   <td>10</td>
-   <td>12.10</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>in Workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("14.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>in Workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("14.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox16之前，如果第二个参数被设置为<code>null</code>或者<code>undefined</code>，会导致错误，不会自动设置为空字典。</p>
+{{Compat("api.Blob.Blob")}}
 
 <h2 id="参见">参见</h2>
 

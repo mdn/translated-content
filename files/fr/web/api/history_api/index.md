@@ -54,15 +54,13 @@ Vous pouvez déterminer le nombre de pages de l'historique en accédant à la va
 var numberOfEntries = window.history.length;
 ```
 
-> **Note :** Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
+> **Note :** Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
 
 ## Ajouter et modifier des entrées de l'historique
 
-{{ gecko_minversion_header("2") }}
-
 HTML5 a introduit les méthodes [history.pushState()](</fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_pushState()>) et [history.replaceState()](</fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_replaceState()>), qui permettent, respectivement, d'ajouter et de modifier des entrées de l'historique. Ces méthodes fonctionnent conjointement avec l'événement [onpopstate](/fr/docs/Web/API/WindowEventHandlers/onpopstate).
 
-L'utilisation de `history.pushState()` change le référent créé habituellement dans l'en-tête HTTP pour les objets [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est `this` au moment de la création de l'objet [`XMLHttpRequest`](/en/DOM/XMLHttpRequest).
+L'utilisation de `history.pushState()` change le référent créé habituellement dans l'en-tête HTTP pour les objets [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est `this` au moment de la création de l'objet [`XMLHttpRequest`](/en/DOM/XMLHttpRequest).
 
 ### Exemple de la méthode pushState()
 
@@ -75,7 +73,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 Cela va provoquer l'apparition dans la barre de navigation de http\://mozilla.org/bar.html, mais ne provoquera pas le chargement effectif de `bar.html` ni même le test d'existence de `bar.html`.
 
-Supposons à présent que l'utilisateur accède à la page http\://google.com, puis clique sur l'icône "Recul". La barre de navigation va alors afficher http\://mozilla.org/bar.html, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
+Supposons à présent que l'utilisateur accède à la page http\://google.com, puis clique sur l'icône "Recul". La barre de navigation va alors afficher http\://mozilla.org/bar.html, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
 
 Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en http\://mozilla.org/foo.html et le document va recevoir un autre événement `popstate`, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement `popstate`.
 
@@ -88,11 +86,11 @@ Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer
 - **title** (**_titre_)** — Firefox, pour l'instant, ignore ce paramètre, bien qu'il puisse être utilisé plus tard. Afin de prévenir les changements futurs de cette méthode, il serait prudent de fournir ici, en paramètre, une chaîne vide. Vous pourriez aussi donner un titre court à l'état vers lequel vous vous dirigez.
 - **URL** — L'URL de la nouvelle entrée de l'historique est donnée par ce paramètre. Il convient de préciser que le navigateur n'essaiera pas de charger la page pointée par cette URL après un appel à `pushState()`, mais il se peut qu'il tente de le faire plus tard, par exemple, lorsque l'utilisateur relancera son navigateur. Il n'est pas nécessaire que la nouvelle URL soit absolue ; si elle est relative, ce sera par rapport à l'URL courante. La nouvelle URL doit avoir la même origine (domaine) que l'URL courante ; dans le cas contraire, `pushState()` génèrera une exception. Ce paramètre est optionnel ; s'il n'est pas spécifié, sa valeur par défaut est l'URL de la page courante.
 
-> **Note :** Dans Gecko 2.0 {{ geckoRelease("2.0") }} jusqu'à Gecko 5.0 {{ geckoRelease("5.0") }}, l'objet fourni est sérialisé en utilisant JSON. À partir de  Gecko 6.0 {{ geckoRelease("6.0") }}, l'objet est sérialisé à l'aide de[ "structured clone algorithm"](/en/DOM/The_structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
+> **Note :** Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
 
 On peut assimiler l'appel à `pushState()` à l'affectation `window.location = "#foo"`, en cela que l'un comme l'autre auront pour effet de créer et déclencher une autre entrée de l'historique associée au document courant. Mais `pushState()` a quelques avantages :
 
-- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient  au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
+- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
 - Vous n'êtes pas contraint de modifier l'URL si vous ne le voulez pas. Par contre, affecter `window.location = "#foo";` crée une nouvelle entrée de l'historique seulement si le hash courant n'est pas `#foo`.
 - Vous pouvez associer des données quelconques avec votre nouvelle entrée de l'historique. Avec l'approche basée sur le hash, il est nécessaire de coder toute donnée pertinente en une chaîne courte.
 
@@ -108,7 +106,7 @@ Dans d'autres documents, elle crée un élément avec l'URI d'espace de nom `nul
 
 `replaceState()` est particulièrement utile si vous désirez mettre à jour l'objet état ou l'URL de l'entrée courante de l'historique en réponse à une action de l'utilisateur.
 
-> **Note :** Dans Gecko 2.0 {{ geckoRelease("2.0") }} jusqu'à Gecko 5.0 {{ geckoRelease("5.0") }}, l'objet transmis est sérialisé avec JSON. À partir de  Gecko 6.0 {{ geckoRelease("6.0") }}, l'objet est sérialisé à l'aide de[ "structured clone algorithm"](/en/DOM/The_structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
+> **Note :** Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
 
 ### Exemple de la méthode replaceState()
 
@@ -131,13 +129,13 @@ Supposons maintenant que l'utilisateur accède à http\://www\.microsoft.com, pu
 
 ### L'événement popstate
 
-Un événement `popstate` est envoyé à la fenêtre chaque fois que l'entrée active de l'historique change. Si l'entrée de l'historique activée a été créée par un appel à `replaceState`, la propriété `state `de l'événement `popstate` contient une copie de l'objet état  de l'entrée de l'historique.
+Un évènement `popstate` est envoyé à la fenêtre chaque fois que l'entrée active de l'historique change. Si l'entrée de l'historique activée a été créée par un appel à `replaceState`, la propriété `state` de l'évènement `popstate` contient une copie de l'objet état de l'entrée de l'historique.
 
 Voir {{ domxref("window.onpopstate") }} pour un exemple d'utilisation.
 
 ### Lire l'état courant
 
-Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement  onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
+Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
 
 Vous pouvez lire l'état de l'entrée courante de l'historique sans devoir attendre un événement `popstate` en utilisant la propriété `history.state` comme ceci :
 

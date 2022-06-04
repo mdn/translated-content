@@ -9,8 +9,6 @@ tags:
   - Web Development
 translation_of: Web/Security/Securing_your_site
 ---
-<p>{{ draft() }}</p>
-
 <p>你可以采取一些措施来确保你的网站安全。本文提供了各种建议，以及提供更多有用信息的其他文章的链接。</p>
 
 <div class="note"><strong>Note:</strong> This article is a work in progress, and is neither complete nor does following its suggestions guarantee your site will be fully secure.</div>
@@ -19,30 +17,30 @@ translation_of: Web/Security/Securing_your_site
 
 <dl>
  <dt><a href="/en/How_to_Turn_Off_Form_Autocompletion" title="en/How to Turn Off Form Autocompletion">如何关闭表单的自动完成功能</a></dt>
- <dd>在Gecko中表单字段支持自动完成功能; 因此他们的值可以被记住，并且在下一次用户访问你的网站时自动被填充. 对于某些特定类型的数据, 你可能希望禁止这个功能.</dd>
- <dt><a href="/en/CSS/Privacy_and_the_:visited_selector" title="en/CSS/Privacy and the :visited selector">隐私和:visited选择器</a></dt>
- <dd>这篇文章讨论对于<code>getComputedStyle()</code>方法的改动, 消除恶意站点获取用户浏览历史的能力.</dd>
+ <dd>在 Gecko 中表单字段支持自动完成功能; 因此他们的值可以被记住，并且在下一次用户访问你的网站时自动被填充。对于某些特定类型的数据，你可能希望禁止这个功能。</dd>
+ <dt><a href="/en/CSS/Privacy_and_the_:visited_selector" title="en/CSS/Privacy and the :visited selector">隐私和:visited 选择器</a></dt>
+ <dd>这篇文章讨论对于<code>getComputedStyle()</code>方法的改动，消除恶意站点获取用户浏览历史的能力。</dd>
 </dl>
 
 <h2 id="内容安全">内容安全</h2>
 
 <dl>
  <dt><a href="/en/Properly_Configuring_Server_MIME_Types" title="en/Properly Configuring Server MIME Types">正确配置服务器的 MIME 类型</a></dt>
- <dd>不正确的 MIME 类型有几种方式可以对您的站点造成潜在的安全问题. 这篇文章解释了其中的几种方式, 并且向您展示如何配置您的服务器，以让它使用正确的 MIME 类型提供文件服务.</dd>
+ <dd>不正确的 MIME 类型有几种方式可以对您的站点造成潜在的安全问题。这篇文章解释了其中的几种方式，并且向您展示如何配置您的服务器，以让它使用正确的 MIME 类型提供文件服务。</dd>
  <dt><a href="/en/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></dt>
- <dd><code>Strict-Transport-Security:</code>  这个HTTP头允许站点只能使用 HTTPS。</dd>
+ <dd><code>Strict-Transport-Security:</code>  这个 HTTP 头允许站点只能使用 HTTPS。</dd>
  <dt><a href="/En/HTTP_access_control" title="En/HTTP access control">HTTP 访问控制</a></dt>
- <dd><span class="tlid-translation translation" lang="zh-CN"><span title="">跨源资源共享标准提供了一种指定可从其他域加载的内容的方法。</span> <span title="">您可以使用它来防止您的网站被不正当地使用;</span> <span title="">此外，您可以使用它来建立明确允许其他站点使用的资源。</span></span></dd>
+ <dd>跨源资源共享标准提供了一种指定可从其他域加载的内容的方法。 您可以使用它来防止您的网站被不正当地使用; 此外，您可以使用它来建立明确允许其他站点使用的资源。</dd>
  <dt><a href="/en/Security/CSP" title="en/Security/CSP">内容安全策略</a></dt>
- <dd>一种附加的安全层，有助于检测和减轻某些类型的攻击，包括跨站脚本(XSS) 以及数据注入攻击。 <span class="tlid-translation translation" lang="zh-CN"><span title="">这些攻击用于从数据窃取到站点破坏或恶意软件分发的所有内容。</span></span></dd>
+ <dd>一种附加的安全层，有助于检测和减轻某些类型的攻击，包括跨站脚本 (XSS) 以及数据注入攻击。 这些攻击用于从数据窃取到站点破坏或恶意软件分发的所有内容。</dd>
  <dt><a href="/en-US/docs/Web/HTTP/X-Frame-Options" title="en/The X-FRAME-OPTIONS response header">X-Frame-Options 响应头</a></dt>
  <dd>
- <p><code>X-Frame-Options:</code>该<a href="/en/HTTP" title="en/HTTP">HTTP</a> <span class="tlid-translation translation" lang="zh-CN">响应头可用于指示是否应允许浏览器在{{HTMLElement("frame")}}中呈现页面。站点可以通过确保其内容未嵌入到其他站点中来避免点击劫持攻击。</span></p>
+ <p><code>X-Frame-Options:</code>该<a href="/en/HTTP" title="en/HTTP">HTTP</a> 响应头可用于指示是否应允许浏览器在{{HTMLElement("frame")}}中呈现页面。站点可以通过确保其内容未嵌入到其他站点中来避免点击劫持攻击。</p>
  </dd>
 </dl>
 
 <h2 id="另外参考">另外参考</h2>
 
 <ul>
- <li><a class="external" href="http://www.owasp.org/">开放Web应用程序安全项目 (OWASP)</a></li>
+ <li><a class="external" href="http://www.owasp.org/">开放 Web 应用程序安全项目 (OWASP)</a></li>
 </ul>

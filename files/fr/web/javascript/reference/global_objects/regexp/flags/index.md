@@ -49,7 +49,7 @@ if (RegExp.prototype.flags === undefined) {
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

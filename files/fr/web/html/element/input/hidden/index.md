@@ -35,7 +35,7 @@ En complément des attributs communs à l'ensemble des éléments `<input>`, les
 
 | Attribut               | Description                                                                                                                                                                                                                                                       |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("name")}}` | À l'instar de l'ensemble des champs de saisie, ce sera le nom auquel associer la donnée lors de l'envoi du formulaire. Si la valeur spéciale `"_charset_"` est utilisée pour cet attribut, la valeur du champ sera l'encodage utilisé pour l'envoi du formulaire. |
+| [`name`](#name) | À l'instar de l'ensemble des champs de saisie, ce sera le nom auquel associer la donnée lors de l'envoi du formulaire. Si la valeur spéciale `"_charset_"` est utilisée pour cet attribut, la valeur du champ sera l'encodage utilisé pour l'envoi du formulaire. |
 
 ### {{htmlattrdef("name")}}
 
@@ -55,7 +55,7 @@ Un usage fréquent de ces éléments est de garder un registre des données qui 
 
 Ici, lors de la deuxième étape, on peut récupérer l'identifiant de l'enregistrement et le placer dans un champ caché du formulaire. Lorsque le formulaire est envoyé à l'étape 3, l'identifiant est automatiquement envoyé au serveur avec le contenu. L'identifiant permet alors au serveur de connaître l'enregistrement de la base de données qui doit être mis à jour.
 
-Pour un exemple complet, voir la section {{anch("Exemples")}} ci-après.
+Pour un exemple complet, voir la section [Exemples](#exemples) ci-après.
 
 ### Contribuer à la sécurité d'un site web
 
@@ -154,7 +154,7 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente la valeur de la donnée masquée qu'on souhaite envoyer au

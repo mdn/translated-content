@@ -23,9 +23,9 @@ Les valeurs par défaut de ces propriétés peuvent varier selon les navigateurs
 - `networkPredictionEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `true`, le navigateur tente d'accélérer la navigation Web avec la pré-résolution des entrées DNS, le pré-chargement des sites (en utilisant, par exemple, `<link rel='prefetch' ...>`), et en ouvrant de manière préemptive les connexions TCP et SSL aux serveurs.
 - `peerConnectionEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `false`, l'interface[`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) est désactivée. Notez que  [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) n'est pas affectée par ce paramètre.
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `false`, l'interface[`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) est désactivée. Notez que  [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) n'est pas affectée par ce paramètre.
 - `webRTCIPHandlingPolicy`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est une chaîne de caractères. Ce paramètre permet  aux utilisateurs de spécifier les compromissions de performance / confidentialité des médias qui affectent la façon dont le trafic  WebRTC sera acheminé et la quantité d'informations d'adresse locale exposées. Il peut prendre l'une des valeurs suivantes :
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est une chaîne de caractères. Ce paramètre permet aux utilisateurs de spécifier les compromissions de performance / confidentialité des médias qui affectent la façon dont le trafic WebRTC sera acheminé et la quantité d'informations d'adresse locale exposées. Il peut prendre l'une des valeurs suivantes :
     `"default" "default_public_and_private_interfaces" "default_public_interface_only" "disable_non_proxied_udp"`
 
 ## Compatibilité du navigateur

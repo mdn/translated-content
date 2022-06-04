@@ -11,13 +11,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/clear
 ---
-{{JSRef}} {{obsolete_header}}
+{{JSRef}}{{deprecated_header}}
 
 La méthode **`clear()`** permettait de retirer tous les éléments d'un objet `WeakMap` mais celle-ci ne fait plus partie d'ECMAScript.
 
 ## Syntaxe
 
-    wm.clear();
+```js
+wm.clear();
+```
 
 ## Exemples
 

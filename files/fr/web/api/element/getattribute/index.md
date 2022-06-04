@@ -12,7 +12,7 @@ translation_of: Web/API/Element/getAttribute
 ---
 {{APIRef("DOM")}}
 
-`getAttribute` renvoie la valeur d'un attribut donné de l'élément spécifié. Si l'attribut n'existe pas, la valeur renvoyée sera soit `null` soit `""` (une chaine vide) ; voir {{ Anch("Notes") }} pour plus de détails.
+`getAttribute` renvoie la valeur d'un attribut donné de l'élément spécifié. Si l'attribut n'existe pas, la valeur renvoyée sera soit `null` soit `""` (une chaine vide)&nbsp;; voir la section [Attributs inexistants](#attributs_inexistants) pour plus de détails.
 
 ## Syntaxe
 
@@ -37,7 +37,7 @@ Exemple de JavaScript :
     const attributID = div1.getAttribute("id");
     //=> "div1"
 
-    cont alignement = div1.getAttribute("align");
+    const alignement = div1.getAttribute("align");
     //=> null
 
 ## Description

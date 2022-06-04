@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLImageElement/loading
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">{{domxref("HTMLImageElement")}} 的<code><strong>loading</strong></code>属性为一个字符串，它的值会提示 {{Glossary("用户代理")}} 告诉浏览器不在{{Glossary("可视视口")}}内的图片该如何加载。这样一来，通过推迟图片加载仅让其在需要的时候加载而非页面初始载入时立刻加载，优化了页面的载入。</span> </p>
+<p>{{domxref("HTMLImageElement")}} 的<code><strong>loading</strong></code>属性为一个字符串，它的值会提示 {{Glossary("用户代理")}} 告诉浏览器不在{{Glossary("可视视口")}}内的图片该如何加载。这样一来，通过推迟图片加载仅让其在需要的时候加载而非页面初始载入时立刻加载，优化了页面的载入。 </p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,20 +17,20 @@ translation_of: Web/API/HTMLImageElement/loading
 
 <h3 id="值">值</h3>
 
-<p>{{domxref("DOMString")}} 提示用户代理该如何最佳规划图片加载来优化页面性能。可能的值有:</p>
+<p>{{domxref("DOMString")}} 提示用户代理该如何最佳规划图片加载来优化页面性能。可能的值有：</p>
 
 <dl>
  <dt><code>eager</code></dt>
- <dd>默认行为, <code>eager</code> 告诉浏览器当处理 <code>&lt;img&gt;</code> 标签时立即加载图片。</dd>
+ <dd>默认行为， <code>eager</code> 告诉浏览器当处理 <code>&lt;img&gt;</code> 标签时立即加载图片。</dd>
  <dt><code>lazy</code></dt>
- <dd>告诉用户代理推迟图片加载直到浏览器认为其需要立即加载时才去加载。例如，如果用户正在往下滚动页面，值为 <code>lazy</code> 会导致图片仅在马上要出现在 {{Glossary("可视视口")}}中时开始加载.</dd>
+ <dd>告诉用户代理推迟图片加载直到浏览器认为其需要立即加载时才去加载。例如，如果用户正在往下滚动页面，值为 <code>lazy</code> 会导致图片仅在马上要出现在 {{Glossary("可视视口")}}中时开始加载。</dd>
 </dl>
 
 <h2 id="使用说明">使用说明</h2>
 
-<h3 id="load事件的时机">load事件的时机</h3>
+<h3 id="load事件的时机">load 事件的时机</h3>
 
-<p>  {{domxref("Window.load_event","load")}} 事件在文档被完整的处理完成时触发。当图片使用立即加载(默认值)时，文档中的所有图片都会在 <code>load</code> 事件触发前载入。</p>
+<p>  {{domxref("Window.load_event","load")}} 事件在文档被完整的处理完成时触发。当图片使用立即加载 (默认值) 时，文档中的所有图片都会在 <code>load</code> 事件触发前载入。</p>
 
 <p>当 <code>loading</code> 值设为 <code>lazy</code> 时，图片不再会在请求，下载，处理的时间内推迟 <code>load</code> 事件触发。</p>
 

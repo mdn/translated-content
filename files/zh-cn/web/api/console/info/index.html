@@ -5,7 +5,7 @@ translation_of: Web/API/Console/info
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>向web控制台输出一个通知信息。仅在Firefox，web控制台的日志中的项目旁边会显示一个小的‘I‘图标</p>
+<p>向 web 控制台输出一个通知信息。仅在 Firefox，web 控制台的日志中的项目旁边会显示一个小的‘I‘图标</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -19,133 +19,23 @@ console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 
 <dl>
  <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>要输出的JavaScript对象列表。对象obj1,obj2,...列出顺序和输出顺序一致。</dd>
+ <dd>要输出的 JavaScript 对象列表。对象 obj1,obj2,...列出顺序和输出顺序一致。</dd>
  <dt><code>msg</code></dt>
- <dd>JavaScript字符串。可包含零个或多个替换字符串。</dd>
+ <dd>JavaScript 字符串。可包含零个或多个替换字符串。</dd>
  <dt><code>subst1</code> ... <code>substN</code></dt>
 </dl>
 
-<p>     用于替换msg内的替换字符串的JavaScript对象。 可以对输出的格式进行额外的控制。</p>
+<p>     用于替换 msg 内的替换字符串的 JavaScript 对象。可以对输出的格式进行额外的控制。</p>
 
 <p>查看更多细节可访问 {{domxref("console")}} 文件内的<a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting t</a><a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">ext to the console</a></p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#info", "console.info()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>初次定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>8</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>替换字符串</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>信息标志</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>在 Web Worker 中可用</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("38.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>替换字符串</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>在 Web Worker 中可用</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("38.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.console.info")}}
 
 <h2 id="参见">参见</h2>
 

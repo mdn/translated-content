@@ -7,7 +7,7 @@ original_slug: Web/API/AudioContext/createConvolver
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }}的方法<code>createConvolver()能创建一个</code>{{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 <a href="http://webaudio.github.io/web-audio-api/#background-3">Convolution规范定义</a> 中查看更多信息。</p>
+<p>{{ domxref("AudioContext") }}的方法<code>createConvolver()能创建一个</code>{{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 <a href="http://webaudio.github.io/web-audio-api/#background-3">Convolution 规范定义</a> 中查看更多信息。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -21,9 +21,9 @@ var convolver = audioCtx.createConvolver();</pre>
 
 <h2 id="Examples" name="Examples">例子</h2>
 
-<p>下面的例子展示了一个 AudioContext 创建一个 混响器节点 的基本使用方法。基本前提是你创建一个包含声音样本的 AudioBuffer 用作混响环境 (称之为<em>脉冲响应</em>,) 和在混响器中应用。 下面的例子使用了一个简短的示例音乐厅人群效果,所以混响效果应用深度和回声。</p>
+<p>下面的例子展示了一个 AudioContext 创建一个 混响器节点 的基本使用方法。基本前提是你创建一个包含声音样本的 AudioBuffer 用作混响环境 (称之为<em>脉冲响应</em>,) 和在混响器中应用。 下面的例子使用了一个简短的示例音乐厅人群效果，所以混响效果应用深度和回声。</p>
 
-<p>更多完整例子请查看<a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic demo</a> (中<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">app.js的</a>代码)。</p>
+<p>更多完整例子请查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic demo</a> (中 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">app.js</a> 的代码)。</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();
@@ -55,75 +55,11 @@ convolver.buffer = concertHallBuffer;</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createConvolver-ConvolverNode', 'createConvolver()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createConvolver")}}
 
 <h2 id="另见">另见</h2>
 

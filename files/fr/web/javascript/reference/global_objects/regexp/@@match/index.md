@@ -19,7 +19,9 @@ La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues
 
 ## Syntaxe
 
-    regexp[Symbol.match](str)
+```js
+regexp[Symbol.match](str)
+```
 
 ### Paramètres
 
@@ -85,7 +87,7 @@ console.log(résultat.group(3)); // 02
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

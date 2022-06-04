@@ -11,7 +11,7 @@ translation_of: Web/CSS/:nth-of-type
 ---
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** correspond à des éléments d'un type donné, en fonction de leur position au sein d'un groupe de frères et sœurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** correspond à des éléments d'un type donné, en fonction de leur position au sein d'un groupe de frères et sœurs.
 
 ```css
 /* Sélectionne chaque élément de type <p> dont

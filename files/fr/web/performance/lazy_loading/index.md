@@ -21,10 +21,10 @@ Le chargement différé peut être appliqué sur de multiples ressources et avec
 
 #### Division du code
 
-Le code JavaScript, CSS et HTML peuvent être divisés en petits morceaux. Cela permet de n'envoyer que la portion de code nécessaire à l'affichage sur l'écran de l'internaute, et donc d'améliorer les temps de chargement. Le reste sera chargé sur demande. Deux systèmes sont possibles :
+Le code JavaScript, CSS et HTML peuvent être divisés en petits morceaux. Cela permet de n'envoyer que la portion de code nécessaire à l'affichage sur l'écran de l'internaute, et donc d'améliorer les temps de chargement. Le reste sera chargé sur demande. Deux systèmes sont possibles&nbsp;:
 
-- division par points d'entrée : séparation du code en différents points d'entrée au sein de l'application ;
-- division dynamique : séparation du code où des déclarations [`import()`](/fr/docs/Web/JavaScript/Reference/Statements/import) dynamiques sont utilisées.
+- division par points d'entrée&nbsp;: séparation du code en différents points d'entrée au sein de l'application&nbsp;;
+- division dynamique&nbsp;: séparation du code où des déclarations [`import()`](/fr/docs/Web/JavaScript/Reference/Statements/import) dynamiques sont utilisées.
 
 ### JavaScript
 
@@ -34,7 +34,7 @@ Toute balise `<script>` utilisant `type="module"` sera traitée comme un [module
 
 ### CSS
 
-Par défaut, les fichiers CSS sont traités comme des ressources [bloquant le rendu](/fr/docs/Web/Performance/Critical_rendering_path), donc le navigateur n'affichera aucun contenu traité tant que le [CSSOM (pour <i lang="en">CSS Object Model</i>)](/fr/docs/Web/API/CSS_Object_Model) est construit. Les fichiers CSS doivent être légers, délivrés aussi rapidement que possible, et l'utilisation des types de médias et des requêtes média est conseillé pour ne pas bloquer le rendu :
+Par défaut, les fichiers CSS sont traités comme des ressources [bloquant le rendu](/fr/docs/Web/Performance/Critical_rendering_path), donc le navigateur n'affichera aucun contenu traité tant que le [CSSOM (pour <i lang="en">CSS Object Model</i>)](/fr/docs/Web/API/CSS_Object_Model) est construit. Les fichiers CSS doivent être légers, délivrés aussi rapidement que possible, et l'utilisation des types de médias et des requêtes média est conseillé pour ne pas bloquer le rendu&nbsp;:
 
 ```html
 <link href="style.css"    rel="stylesheet" media="all">
@@ -71,7 +71,7 @@ Vous pouvez déterminer si une image donnée a terminé son chargement en examin
 
 #### Polyfill
 
-Pour ajouter la prise en charge de l'attribut `loading` sur les vieux navigateurs qui ne sont pas compatibles, vous pouvez utiliser le polyfill suivant : [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
+Pour ajouter la prise en charge de l'attribut `loading` sur les vieux navigateurs qui ne sont pas compatibles, vous pouvez utiliser le polyfill suivant&nbsp;: [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
 #### API Intersection Observer
 
@@ -79,7 +79,7 @@ Pour ajouter la prise en charge de l'attribut `loading` sur les vieux navigateur
 
 #### Gestionnaires d'évènements
 
-Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quelques options :
+Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quelques options&nbsp;:
 
 - [polyfill pour l'API <i lang="en">Intersection observer</i>](https://github.com/w3c/IntersectionObserver)
 

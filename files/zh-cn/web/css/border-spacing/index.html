@@ -9,7 +9,7 @@ translation_of: Web/CSS/border-spacing
 
 <p><code>border-spacing</code> 属性指定相邻单元格边框之间的距离（只适用于 <a href="/zh-CN/docs/Web/CSS/border-collapse" title="zh-CN/docs/Web/CSS/border-collapse">边框分离模式</a> ）。相当于 HTML 中的 <code>cellspacing</code> 属性，但是第二个可选的值可以用来设置不同于水平间距的垂直间距。</p>
 
-<p><code>border-spacing</code> 值也适用于表格的外层边框上，即表格的边框和第一行的、第一列的、最后一行的、最后一列的单元格之间的间距是由表格相应的（水平的或垂直的） 边框间距（border-spacing）和相应的（上，右，下或左）内边距之和。</p>
+<p><code>border-spacing</code> 值也适用于表格的外层边框上，即表格的边框和第一行的、第一列的、最后一行的、最后一列的单元格之间的间距是由表格相应的（水平的或垂直的）边框间距（border-spacing）和相应的（上，右，下或左）内边距之和。</p>
 
 <p>该属性只适用于 {{ Cssxref("border-collapse") }} 值是 <code>separate</code> 的时候。</p>
 
@@ -73,50 +73,4 @@ border-spacing: unset;</code></pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>8.0</td>
-   <td>4.0</td>
-   <td>1.0 (85)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.border-spacing")}}

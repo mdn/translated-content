@@ -7,10 +7,10 @@ translation_of: Web/API/GlobalEventHandlers
 <div>{{ ApiRef("HTML DOM") }}</div>
 </div>
 
-<p><strong><code>GlobalEventHandlers</code></strong> 描述了一系列web worker的事件接口 {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, 或 {{domxref("WorkerGlobalScope")}}。这里面的每一个接口都可以添加更多的事件句柄。</p>
+<p><strong><code>GlobalEventHandlers</code></strong> 描述了一系列 web worker 的事件接口 {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, 或 {{domxref("WorkerGlobalScope")}}。这里面的每一个接口都可以添加更多的事件句柄。</p>
 
 <div class="blockIndicator note">
-<p>Note:<code>GlobalEventHandlers</code> 是一个混入对象(mixin)而不是一个真正的接口，所以无法创建直接基于<code>GlobalEventHandlers</code> 的对象。</p>
+<p>Note:<code>GlobalEventHandlers</code> 是一个混入对象 (mixin) 而不是一个真正的接口，所以无法创建直接基于<code>GlobalEventHandlers</code> 的对象。</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -19,15 +19,15 @@ translation_of: Web/API/GlobalEventHandlers
 
 <h3 id="Event_handlers">Event handlers</h3>
 
-<p>这些事件定义在 {{domxref("GlobalEventHandlers")}} 中, 并被混入和实现在{{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}上，任意html元素、document对象，window对象上均可以使用它提供的属性， 即时是全局的{{domxref("WorkerGlobalScope")}}。</p>
+<p>这些事件定义在 {{domxref("GlobalEventHandlers")}} 中，并被混入和实现在{{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}上，任意 html 元素、document 对象，window 对象上均可以使用它提供的属性， 即时是全局的{{domxref("WorkerGlobalScope")}}。</p>
 
 <dl>
  <dt>{{domxref("GlobalEventHandlers.onabort")}}</dt>
  <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当停止{{event("abort")}} 事件触发时会被调用。</dd>
  <dt>{{domxref("GlobalEventHandlers.onanimationcancel")}} {{Non-standard_inline}}</dt>
- <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画取消{{event("animationcancel")}}事件触发时被调用，这表示某个正在执行的CSS动画被取消了。</dd>
+ <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画取消{{event("animationcancel")}}事件触发时被调用，这表示某个正在执行的 CSS 动画被取消了。</dd>
  <dt>{{domxref("GlobalEventHandlers.onanimationend")}} {{Non-standard_inline}}</dt>
- <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画播放完成{{event("animationend")}} 事件触发时被调用，这表示某个CSS动画已经播放完成了。</dd>
+ <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画播放完成{{event("animationend")}} 事件触发时被调用，这表示某个 CSS 动画已经播放完成了。</dd>
  <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
  <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当失去焦点 {{event("blur")}} 事件触发时会被调用。</dd>
  <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
@@ -210,277 +210,7 @@ translation_of: Web/API/GlobalEventHandlers
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>oncanplay</code>, <code>oncanplaythrough</code>, <code>ondurationchange</code>, <code>onemptied</code>, <code>onended</code>, <code>onloadeddata</code>, <code>onloadedmetadata</code>, <code>onloadstart</code>, <code>onpause</code>, <code>onplay</code>, <code>onplaying</code>, <code>onprogress</code>, <code>onratechange</code>, <code>onseeked</code>, <code>onseeking</code>, <code>onstalled</code>, <code>ontimeupdate</code>, <code>onvolumechange</code>, <code>onwaiting</code></td>
-   <td>{{CompatGeckoDesktop(1.9.1)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onsuspend</code></td>
-   <td>{{CompatGeckoDesktop(1.9.2)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ondrag</code>, <code>ondragend</code>, <code>ondragenter</code>, <code>ondragleave</code>, <code>ondragover</code>, <code>ondragstart</code>, <code>ondrop</code></td>
-   <td>{{CompatGeckoDesktop(1.9.1)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onmouseenter</code>, <code>onmouseleave</code></td>
-   <td>{{CompatGeckoDesktop(10)}}</td>
-   <td>30.0</td>
-   <td>5.5</td>
-   <td>17</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ondragexit</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>oncancel</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onclose</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>oncuechange</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ondragexit</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onmousewheel</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onsort</code> {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onmozfullscreenchange</code>, <code>onmozfullscreenerror</code> {{non-standard_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>onpointerlockchange</code>, <code>onpointerlockerror</code></td>
-   <td>{{CompatGeckoDesktop(10)}} as <code>onmozpointerlockchange</code>, <code>onmozpointerlockerror</code></td>
-   <td>{{CompatVersionUnknown}} as <code>onwebkitpointerlockchange</code>, <code>onwebkitpointerlockerror</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onpointercancel</code>, <code>onpointerdown</code>, <code>onpointerup</code>, <code>onpointermove</code>, <code>onpointerout</code>, <code>onpointerover</code>, <code>onpointerenter</code>, <code>onpointerleave</code>, <code>ongotpointercapture</code>, <code>onlostpointercapture</code></td>
-   <td>{{CompatVersionUnknown}} behind the <code>dom.w3c_pointer_events.enabled</code> pref (disabled by default)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ondrag</code>, <code>ondragend</code>, <code>ondragenter</code>, <code>ondragleave</code>, <code>ondragover</code>, <code>ondragstart</code>, <code>ondrop</code></td>
-   <td>{{CompatGeckoMobile(1.9.1)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>oncanplay</code>, <code>oncanplaythrough</code>, <code>ondurationchange</code>, <code>onemptied</code>, <code>onended</code>, <code>onloadeddata</code>, <code>onloadedmetadata</code>, <code>onloadstart</code>, <code>onpause</code>, <code>onplay</code>, <code>onplaying</code>, <code>onprogress</code>, <code>onratechange</code>, <code>onseeked</code>, <code>onseeking</code>, <code>onstalled</code>, <code>ontimeupdate</code>, <code>onvolumechange</code>, <code>onwaiting</code></td>
-   <td>{{CompatGeckoMobile(1.9.1)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onmouseenter</code>, <code>onmouseleave</code></td>
-   <td>{{CompatGeckoMobile(10)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onsuspend</code></td>
-   <td>{{CompatGeckoMobile(1.9.2)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ondragexit</code></td>
-   <td>{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>oncancel</code></td>
-   <td>{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onclose</code></td>
-   <td>{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>oncuechange</code></td>
-   <td>{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ondragexit</code></td>
-   <td>{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onmousewheel</code></td>
-   <td>{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onsort</code></td>
-   <td>{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onmozfullscreenchange</code>, <code>onmozfullscreenerror</code> {{non-standard_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>onpointerlockchange</code>, <code>onpointerlockerror</code></td>
-   <td>{{CompatGeckoMobile(10)}} as <code>onmozpointerlockchange</code>, <code>onmozpointerlockerror</code></td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>onpointercancel</code>, <code>onpointerdown</code>, <code>onpointerup</code>, <code>onpointermove</code>, <code>onpointerout</code>, <code>onpointerover</code>, <code>onpointerenter</code>, <code>onpointerleave</code>, <code>ongotpointercapture</code>, <code>onlostpointercapture</code></td>
-   <td>{{CompatVersionUnknown}} behind the <code>dom.w3c_pointer_events.enabled</code> pref (disabled by default)</td>
-   <td rowspan="1">{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.GlobalEventHandlers")}}
 
 <h2 id="See_also">See also</h2>
 

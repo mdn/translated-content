@@ -10,7 +10,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Combinateurs
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
-Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, car ils combinent différents sélecteurs de façon à leur donner une relation utile et l'emplacement du contenu dans le document.
+Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, car ils combinent différents sélecteurs de façon à leur donner une relation utile et l'emplacement du contenu dans le document.
 
 <table class="standard-table">
   <tbody>
@@ -25,7 +25,7 @@ Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, ca
         <a
           href="/fr/docs/https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >gestion des fichiers</a
-        >, les bases du HTML (voir <a
+        >, les bases du HTML (voir <a
           href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >), et une idée du fonctionnement du CSS (voir
@@ -65,7 +65,7 @@ Le combinateur enfant (`>`) est placé entre deux sélecteurs CSS. Il correspond
 article > p
 ```
 
-Dans cet exemple suivant, nous avons une liste non ordonnée, imbriquée à l'intérieur de laquelle se trouve une liste ordonnée. Nous utilisons le combinateur enfant pour sélectionner uniquement les éléments `<li>` qui sont un enfant direct d'un `<ul>`, et leur ai donné une bordure supérieure.
+Dans cet exemple suivant, nous avons une liste non ordonnée, imbriquée à l'intérieur de laquelle se trouve une liste ordonnée. Nous utilisons le combinateur enfant pour sélectionner uniquement les éléments `<li>` qui sont un enfant direct d'un `<ul>`, et leur ai donné une bordure supérieure.
 
 si vous supprimez le `>` qui désigne cela comme un combinateur enfant, vous vous retrouvez avec un sélecteur descendant et tous les éléments `<li>` auront une bordure rouge.
 
@@ -85,9 +85,9 @@ Si vous insérez un autre élément tel qu'un `<h2>` entre le `<h1>` et le `<p>`
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
 
-## Combinateur général de frères
+## Combinateur général de frères
 
-Si vous souhaitez sélectionner les frères d'un élément même s'ils ne sont pas directement adjacents, vous pouvez utiliser le combinateur général de frères (`~`). Pour sélectionner tous les éléments `<img>` qui viennent n'importe où après les éléments `<p>`, nous ferions ceci:
+Si vous souhaitez sélectionner les frères d'un élément même s'ils ne sont pas directement adjacents, vous pouvez utiliser le combinateur général de frères (`~`). Pour sélectionner tous les éléments `<img>` qui viennent n'importe où après les éléments `<p>`, nous ferions ceci:
 
 ```css
 p ~ img
@@ -111,11 +111,11 @@ Il est souvent préférable de créer une classe simple et de l'appliquer à l'�
 
 ## Testez vos compétences!
 
-Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes? Vous pouvez trouver d'autres tests pour vérifier que vous avez conservé ces informations avant de continuer - voir [Test your skills: Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks).
+Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes? Vous pouvez trouver d'autres tests pour vérifier que vous avez conservé ces informations avant de continuer - voir [Test your skills: Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks).
 
 ## Passer à la suite
 
-Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite).
+Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
@@ -138,4 +138,4 @@ Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous 
 9.  [Images, média, et élements de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mise en page de tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
 11. [Débogage CSS](/fr/docs/Apprendre/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+12. [Organiser votre CSS](/fr/docs/https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)

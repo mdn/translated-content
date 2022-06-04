@@ -17,7 +17,7 @@ translation_of: Web/API/MediaStream_Recording_API
 ---
 <div>{{DefaultAPISidebar("MediaStream Recording")}}</div>
 
-<div><span class="seoSummary"><strong>MediaStream Recording API </strong>有时简称为<em>Media Recording API</em> 或者 <em>MediaRecorder API</em>, 与 <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> 和 <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> 密切相关. MediaStream Recording API 使得捕获通过 {{domxref("MediaStream")}} 或者{{domxref("HTMLMediaElement")}} 对象产生的用于分析、加工或者保存到硬盘的数据成为可能. 它也非常容易让人们使用.</span></div>
+<div><strong>MediaStream Recording API </strong>有时简称为<em>Media Recording API</em> 或者 <em>MediaRecorder API</em>, 与 <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> 和 <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> 密切相关. MediaStream Recording API 使得捕获通过 {{domxref("MediaStream")}} 或者{{domxref("HTMLMediaElement")}} 对象产生的用于分析、加工或者保存到硬盘的数据成为可能。它也非常容易让人们使用。</div>
 
 <h2 id="基本概念">基本概念</h2>
 
@@ -25,25 +25,25 @@ translation_of: Web/API/MediaStream_Recording_API
 
 <h3 id="录制过程概述">录制过程概述</h3>
 
-<p>记录一个流的过程是非常容易的:</p>
+<p>记录一个流的过程是非常容易的：</p>
 
 <ol>
- <li>建立一个 {{domxref("MediaStream")}}或者{{domxref("HTMLMediaElement")}} (以 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的形式) 来充当媒体数据的源.</li>
- <li>创建一个 {{domxref("MediaRecorder")}} 对象, 指定源以及任何有需求的的选项 (比如容器的 MIME 类型或它轨道所需的比特率).</li>
- <li>给 {{event("dataavailable")}} 事件设置{{domxref("MediaRecorder.ondataavailable")}} 事件处理函数; 会在数据可利用时候调用.</li>
- <li>一旦媒体源播放，你已经准备好录制，使用 {{domxref("MediaRecorder.start()")}} 开始录制.</li>
- <li>{{event("dataavailable")}} 事件处理函数正如你所愿的在每次数据准备好时调用; 这个事件有一个值为包含媒体数据的{{domxref("Blob")}} 类型的 <code>data</code> 属性. 你可以强制 <code>dataavailable</code> 事件发生, 因此会给你传递最新的声音以至于可以让你过滤、保存或者做一些其他的事情。</li>
- <li>当源媒体停止播放时候，录制自动结束.</li>
+ <li>建立一个 {{domxref("MediaStream")}}或者{{domxref("HTMLMediaElement")}} (以 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的形式) 来充当媒体数据的源。</li>
+ <li>创建一个 {{domxref("MediaRecorder")}} 对象，指定源以及任何有需求的的选项 (比如容器的 MIME 类型或它轨道所需的比特率).</li>
+ <li>给 {{event("dataavailable")}} 事件设置{{domxref("MediaRecorder.ondataavailable")}} 事件处理函数; 会在数据可利用时候调用。</li>
+ <li>一旦媒体源播放，你已经准备好录制，使用 {{domxref("MediaRecorder.start()")}} 开始录制。</li>
+ <li>{{event("dataavailable")}} 事件处理函数正如你所愿的在每次数据准备好时调用; 这个事件有一个值为包含媒体数据的{{domxref("Blob")}} 类型的 <code>data</code> 属性。你可以强制 <code>dataavailable</code> 事件发生，因此会给你传递最新的声音以至于可以让你过滤、保存或者做一些其他的事情。</li>
+ <li>当源媒体停止播放时候，录制自动结束。</li>
  <li>你可以随时结束录制通过使用 {{domxref("MediaRecorder.stop()")}}.</li>
 </ol>
 
 <div class="note">
-<p><strong>注意:</strong> 单单使用包含已经录制好媒体切片的{{domxref("Blob")}}s 将大可不能单独播放. 媒体在重放之前需要重新组装 .</p>
+<p><strong>注意：</strong> 单单使用包含已经录制好媒体切片的{{domxref("Blob")}}s 将大可不能单独播放。媒体在重放之前需要重新组装 .</p>
 </div>
 
-<p>如果在录制过程中出错, {{event("error")}} 事件将会传给<code>MediaRecorder</code>. 你可以设置{{domxref("MediaRecorder.onerror", "onerror")}}去监听 <code>error</code> 事件.</p>
+<p>如果在录制过程中出错，{{event("error")}} 事件将会传给<code>MediaRecorder</code>. 你可以设置{{domxref("MediaRecorder.onerror", "onerror")}}去监听 <code>error</code> 事件。</p>
 
-<p>例子中，我们使用Canvas 作为{{domxref("MediaStream")}}的源，在9秒后停止录音.</p>
+<p>例子中，我们使用 Canvas 作为{{domxref("MediaStream")}}的源，在 9 秒后停止录音。</p>
 
 <pre class="brush: js notranslate">var canvas = document.querySelector("canvas");
 
@@ -90,15 +90,15 @@ setTimeout(event =&gt; {
 
 <h3 id="检查_and_控制记录器的状态">检查 and 控制记录器的状态</h3>
 
-<p>你也可以使用 <code>MediaRecorder</code> 对象的属性去决定录制过程的状态, 用 {{domxref("MediaRecorder.pause", "pause()")}} 和 {{domxref("MediaRecorder.resume", "resume()")}} 方法暂停或者继续媒体源的录制.</p>
+<p>你也可以使用 <code>MediaRecorder</code> 对象的属性去决定录制过程的状态，用 {{domxref("MediaRecorder.pause", "pause()")}} 和 {{domxref("MediaRecorder.resume", "resume()")}} 方法暂停或者继续媒体源的录制。</p>
 
-<p>如果你需要检查一个特殊的MIME类型是否被支持，使用{{domxref("MediaRecorder.isTypeSupported()")}}.</p>
+<p>如果你需要检查一个特殊的 MIME 类型是否被支持，使用{{domxref("MediaRecorder.isTypeSupported()")}}.</p>
 
 <h3 id="检查潜在的输入源">检查潜在的输入源</h3>
 
-<p>如果你的目标是记录摄像头或麦克风输入,您可能希望在构建 <code>MediaRecorder</code> 之前检查可用的输入设备. 这时，你需要调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} 来得到可使用的媒体设备. 你可以检查此列表，发现潜在的设备，甚至在有需要的时候过滤掉设备.</p>
+<p>如果你的目标是记录摄像头或麦克风输入，您可能希望在构建 <code>MediaRecorder</code> 之前检查可用的输入设备。这时，你需要调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} 来得到可使用的媒体设备。你可以检查此列表，发现潜在的设备，甚至在有需要的时候过滤掉设备。</p>
 
-<p>在这块代码中, <code>enumerateDevices()</code> 被用来检查可利用的设备,找到那些音频输入设备, 创建{{HTMLElement("option")}} 元素，之后添加到{{HTMLElement("select")}}元素，代表输入源选择器 .</p>
+<p>在这块代码中，<code>enumerateDevices()</code> 被用来检查可利用的设备，找到那些音频输入设备，创建{{HTMLElement("option")}} 元素，之后添加到{{HTMLElement("select")}}元素，代表输入源选择器 .</p>
 
 <pre class="brush: js notranslate">navigator.mediaDevices.enumerateDevices()
 .then(function(devices) {
@@ -117,7 +117,7 @@ setTimeout(event =&gt; {
 
 <h3 id="更多信息">更多信息</h3>
 
-<p>更多关于MediaStream Recording API 的使用, 查看 <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a>, 这个显示了如何使用API来记录音频剪辑. 另一篇文章, <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a>, 介绍了如何从 {{HTMLElement("audio")}} 或{{HTMLElement("video")}} 元素 接收信息流和如何使用接收到的信息流（这个案例中，接收、存到硬盘）。 </p>
+<p>更多关于 MediaStream Recording API 的使用，查看 <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a>, 这个显示了如何使用 API 来记录音频剪辑。另一篇文章，<a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a>, 介绍了如何从 {{HTMLElement("audio")}} 或{{HTMLElement("video")}} 元素 接收信息流和如何使用接收到的信息流（这个案例中，接收、存到硬盘）。 </p>
 
 <h2 id="参考">参考</h2>
 
@@ -149,67 +149,7 @@ setTimeout(event =&gt; {
 
 <h2 id="浏览器支持情况">浏览器支持情况</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Microsoft Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(47.0)}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(47.0)}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}</td>
-   <td>1.3<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(47.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The initial Firefox OS implementation only supported audio recording.</p>
-
-<p>[2] To use {{domxref("MediaRecorder")}} in Chrome 47 and 48, enable <strong>experimental Web Platform features</strong> from the <code>chrome://flags</code> page.</p>
-
-<p>[3] Audio recording works in Chrome 49 and above; Chrome 47 and 48 only support video recording.</p>
+{{Compat("api.MediaRecorder")}}
 
 <h2 id="参阅">参阅</h2>
 

@@ -37,9 +37,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 
 <p>{{jsxref("BigInt")}} 对象重写 {{jsxref("Object")}} 对象的 <code>toString()</code> 方法；它不继承 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref( "BigInt")}} 对象，<code>toString()</code> 方法返回指定基数中对象的字符串表示形式。</p>
 
-<p><code>toString()</code> 方法解析其第一个参数，并尝试返回指定基数(base)的字符串表示形式。对于大于 10 的参数，使用字母表中的字母表示大于 9 的数字。例如，对于十六进制数（以16为基数），使用 a 到 f。</p>
+<p><code>toString()</code> 方法解析其第一个参数，并尝试返回指定基数 (base) 的字符串表示形式。对于大于 10 的参数，使用字母表中的字母表示大于 9 的数字。例如，对于十六进制数（以 16 为基数），使用 a 到 f。</p>
 
-<p>如果未指定基数，则假定首选基数为10。</p>
+<p>如果未指定基数，则假定首选基数为 10。</p>
 
 <p>如果 <code>bigIntObj</code> 为负，则保留符号。即使基数是 2，情况也是如此；返回的字符串是 <code>bigIntObj</code> 的正二进制表示，前面是一个 <code>-</code> 符号，而不是 <code>bigIntObj</code> 的两个补码。</p>
 
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 
 <h3 id="Negative-zero_BigInt">Negative-zero <code>BigInt</code></h3>
 
-<p>没有负零 <code>BigInt</code>，因为整数中没有负零。<code>-0.0</code> 是一个 IEEE 浮点概念，只出现在JavaScript {{jsxref("Number")}} 类型中。</p>
+<p>没有负零 <code>BigInt</code>，因为整数中没有负零。<code>-0.0</code> 是一个 IEEE 浮点概念，只出现在 JavaScript {{jsxref("Number")}} 类型中。</p>
 
 <pre class="brush: js">(-0n).toString();      // '0'
 BigInt(-0).toString(); // '0'</pre>

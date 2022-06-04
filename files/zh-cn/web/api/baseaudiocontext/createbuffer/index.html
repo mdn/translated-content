@@ -11,10 +11,10 @@ original_slug: Web/API/AudioContext/createBuffer
 ---
 <p>音频环境{{ domxref("AudioContext") }} 接口的 <code>createBuffer() 方法用于新建一个空</code>白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。</p>
 
-<p>更多关于音频片段(Audio Buffer)的细节，请参考{{ domxref("AudioBuffer") }}页面。</p>
+<p>更多关于音频片段 (Audio Buffer) 的细节，请参考{{ domxref("AudioBuffer") }}页面。</p>
 
 <div class="note">
-<p><strong>注意：</strong> <code>createBuffer()</code> 曾被用于接收压缩后的音频数据，并返回被解码的音频，但是这项功能现在已经被移除，因为所有的解码工作应当在主线程中被完成，<code>createBuffer()</code> 阻塞了其他代码的执行。异步方法 <code>decodeAudioData()</code> 能够完成相同的工作 —— 传入一个压缩过的音频（如MP3格式的文件），并直接返回一个可以通过 {{ domxref("AudioBufferSourceNode") }} 播放的 {{ domxref("AudioBuffer") }} 。因此播放诸如MP3等格式的压缩音频时，你应当使用 <code>decodeAudioData() 方法。</code></p>
+<p><strong>注意：</strong> <code>createBuffer()</code> 曾被用于接收压缩后的音频数据，并返回被解码的音频，但是这项功能现在已经被移除，因为所有的解码工作应当在主线程中被完成，<code>createBuffer()</code> 阻塞了其他代码的执行。异步方法 <code>decodeAudioData()</code> 能够完成相同的工作 —— 传入一个压缩过的音频（如 MP3 格式的文件），并直接返回一个可以通过 {{ domxref("AudioBufferSourceNode") }} 播放的 {{ domxref("AudioBuffer") }} 。因此播放诸如 MP3 等格式的压缩音频时，你应当使用 <code>decodeAudioData() 方法。</code></p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -30,12 +30,12 @@ original_slug: Web/API/AudioContext/createBuffer
 <dl>
  <dt>numOfChannels</dt>
  <dd>一个定义了 buffer 中包含的声频通道数量的整数。<br>
- 一个标准的实现必须包含至少32个声频通道。</dd>
+ 一个标准的实现必须包含至少 32 个声频通道。</dd>
  <dt> </dt>
  <dt>length</dt>
  <dd>一个代表 buffer 中的样本帧数的整数。</dd>
  <dt>sampleRate</dt>
- <dd>线性音频样本的采样率，即每一秒包含的关键帧的个数。实现过程中必须支持 22050～96000的采样率。</dd>
+ <dd>线性音频样本的采样率，即每一秒包含的关键帧的个数。实现过程中必须支持 22050～96000 的采样率。</dd>
 </dl>
 
 <p> </p>
@@ -51,18 +51,18 @@ original_slug: Web/API/AudioContext/createBuffer
 <pre class="brush: js">var audioCtx = new AudioContext();
 var buffer = audioCtx.createBuffer(2, 22050, 44100);</pre>
 
-<p>如果你这样调用，你将会得到一个立体声（两个声道）的音频片段(Buffer)，当它在一个频率为44100赫兹（这是目前大部分声卡处理声音的频率）的音频环境({{ domxref("AudioContext") }})中播放的时候，会持续0.5秒：22050帧 / 44100赫兹 = 0.5 秒。</p>
+<p>如果你这样调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境 ({{ domxref("AudioContext") }}) 中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。</p>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
 var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
 
-<p>如果你这样调用，你将会得到一个单声道的音频片段(Buffer)，当它在一个频率为44100赫兹的音频环境({{ domxref("AudioContext") }})中播放的时候，将会被自动按照44100赫兹*重采样*（因此也会转化为44100赫兹的片段），并持续1秒：44100帧 / 44100赫兹 = 1秒。</p>
+<p>如果你这样调用，你将会得到一个单声道的音频片段 (Buffer)，当它在一个频率为 44100 赫兹的音频环境 ({{ domxref("AudioContext") }}) 中播放的时候，将会被自动按照 44100 赫兹*重采样*（因此也会转化为 44100 赫兹的片段），并持续 1 秒：44100 帧 / 44100 赫兹 = 1 秒。</p>
 
 <div class="note">
-<p><strong>注意：</strong> <font face="Consolas, Liberation Mono, Courier, monospace">音频重采样与图片的缩放非常类似：比如你有一个</font>16 x 16的图像，但是你想把它填充到一个32 x 32大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个低品质的图像（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它能缩放原图像，并且缩放后的图像占用空间比相同大小的普通图像要小。重采样的音频原理相同——你能节省一些空间，但由此你也无法得到高频率的声音（高音区）。</p>
+<p><strong>注意：</strong> 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个低品质的图像（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它能缩放原图像，并且缩放后的图像占用空间比相同大小的普通图像要小。重采样的音频原理相同——你能节省一些空间，但由此你也无法得到高频率的声音（高音区）。</p>
 </div>
 
-<p>现在让我们来看一个更加复杂的示例，我们将创建一个时长2秒的音频片段，并用白噪声填充它，之后通过一个 音频片段源节点({{ domxref("AudioBufferSourceNode") }}) 播放。代码中的注释应该能充分解释发生了什么。你可以 <a href="http://mdn.github.io/audio-buffer/">在线演示</a> ，或者 <a href="https://github.com/mdn/audio-buffer">查看源代码</a> 。</p>
+<p>现在让我们来看一个更加复杂的示例，我们将创建一个时长 2 秒的音频片段，并用白噪声填充它，之后通过一个 音频片段源节点 ({{ domxref("AudioBufferSourceNode") }}) 播放。代码中的注释应该能充分解释发生了什么。你可以 <a href="http://mdn.github.io/audio-buffer/">在线演示</a> ，或者 <a href="https://github.com/mdn/audio-buffer">查看源代码</a> 。</p>
 
 <pre class="brush: js;highlight[13]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
@@ -73,7 +73,7 @@ pre.innerHTML = myScript.innerHTML;
 
 // 立体声
 var channels = 2;
-// 创建一个 采样率与音频环境(AudioContext)相同的 时长2秒的 音频片段。
+// 创建一个 采样率与音频环境 (AudioContext) 相同的 时长 2 秒的 音频片段。
 var frameCount = audioCtx.sampleRate * 2.0;
 
 var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
@@ -82,7 +82,7 @@ button.onclick = function() {
   // 使用白噪声填充;
   // 就是 -1.0 到 1.0 之间的随机数
   for (var channel = 0; channel &lt; channels; channel++) {
-   // 这允许我们读取实际音频片段(AudioBuffer)中包含的数据
+   // 这允许我们读取实际音频片段 (AudioBuffer) 中包含的数据
    var nowBuffering = myArrayBuffer.getChannelData(channel);
    for (var i = 0; i &lt; frameCount; i++) {
      // Math.random() is in [0; 1.0]
@@ -91,13 +91,13 @@ button.onclick = function() {
    }
   }
 
-  // 获取一个 音频片段源节点(AudioBufferSourceNode)。
+  // 获取一个 音频片段源节点 (AudioBufferSourceNode)。
   // 当我们想播放音频片段时，我们会用到这个源节点。
   var source = audioCtx.createBufferSource();
-  // 把刚才生成的片段加入到 音频片段源节点(AudioBufferSourceNode)。
+  // 把刚才生成的片段加入到 音频片段源节点 (AudioBufferSourceNode)。
   source.buffer = myArrayBuffer;
-  // 把 音频片段源节点(AudioBufferSourceNode) 连接到
-  // 音频环境(AudioContext) 的终节点，这样我们就能听到声音了。
+  // 把 音频片段源节点 (AudioBufferSourceNode) 连接到
+  // 音频环境 (AudioContext) 的终节点，这样我们就能听到声音了。
   source.connect(audioCtx.destination);
   // 开始播放声源
   source.start();
@@ -105,75 +105,11 @@ button.onclick = function() {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">现状</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createBuffer-AudioBuffer-unsigned-long-numberOfChannels-unsigned-long-length-float-sampleRate', 'createBuffer()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0 {{property_prefix("webkit")}}<br>
-    22</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createBuffer")}}
 
 <h2 id="相关链接">相关链接</h2>
 

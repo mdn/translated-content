@@ -34,7 +34,7 @@ Cette propriété peut avoir une des 3 valeurs suivantes :
 
 Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale "The Intl.Locale constructor is a standard built-in property of the Intl object.") prend comme premier argument une chaîne de caractères qui décrit la locale. On peut allonger cette chaîne avec certaines valeurs afin de l'affiner.
 
-Dans la [spécification Unicode sur les clés des extensions](https://www.unicode.org/reports/tr35/), `caseFirst` correspond à la clé` kf`. `kf`. Il est possible d'ajouter des extensions à la chaîne identifiant la locale en la concaténant à `-u` puis en concaténant la clé de l'extension qu'on souhaite préciser (ici `-kf`) puis en ajoutant enfin la valeur pour cette extension (ici `upper`) :
+Dans la [spécification Unicode sur les clés des extensions](https://www.unicode.org/reports/tr35/), `caseFirst` correspond à la clé `kf`. `kf`. Il est possible d'ajouter des extensions à la chaîne identifiant la locale en la concaténant à `-u` puis en concaténant la clé de l'extension qu'on souhaite préciser (ici `-kf`) puis en ajoutant enfin la valeur pour cette extension (ici `upper`) :
 
 ```js
 let caseFirstStr = new Intl.Locale("fr-Latn-FR-u-kf-upper");

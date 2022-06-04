@@ -11,7 +11,7 @@ translation_of: Web/API/Window/scrollX
 <pre class="syntaxbox">var x = window.scrollX;</pre>
 <h3 id="Parameters" name="Parameters">参数</h3>
 <ul>
- <li><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">x</span></font> 为该文档从左侧开始滚动的像素值。</li>
+ <li>x 为该文档从左侧开始滚动的像素值。</li>
 </ul>
 <h2 id="Example" name="Example">示例</h2>
 <pre class="brush:js">// 如果 scrollX 大于 400，则把文档重新滚动到左上角。
@@ -19,7 +19,7 @@ if (window.scrollX &gt; 400) {
   window.scroll(0,0);
 }</pre>
 <h2 id="Notes" name="Notes">备注</h2>
-<p><code style="font-size: 14px;">pageXOffset</code><span style="line-height: 1.572;"> 属性是 </span><code style="font-size: 14px;">scrollX</code><span style="line-height: 1.572;"> 属性的别名：</span></p>
+<p><code style="font-size: 14px;">pageXOffset</code> 属性是 <code style="font-size: 14px;">scrollX</code> 属性的别名：</p>
 <pre>window.pageXOffset == window.scrollX; // 总是 true</pre>
 <p>为了跨浏览器兼容性，请使用 <code>window.pageXOffset</code> 代替 <code>window.scrollX</code>。另外，旧版本的 IE（&lt;9）两个属性都不支持，必须通过其他的非标准属性来解决此问题。完整的兼容性代码如下：</p>
 <pre class="brush:js">var x = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;

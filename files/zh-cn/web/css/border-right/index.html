@@ -9,7 +9,7 @@ translation_of: Web/CSS/border-right
 ---
 <div>{{CSSRef}}</div>
 
-<p>CSS属性 <strong>border-<code>right</code></strong> 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border" title="CSS的border属性是一个用于设置各种单独的边界属性的简写属性。border可以用于设置一个或多个以下属性的值： border-width, border-style, border-color。"><code>border</code></a>。</p>
+<p>CSS 属性 <strong>border-<code>right</code></strong> 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border" title="CSS的border属性是一个用于设置各种单独的边界属性的简写属性。border可以用于设置一个或多个以下属性的值： border-width, border-style, border-color。"><code>border</code></a>。</p>
 
 <pre class="brush:css no-line-numbers">border-right: 1px;
 border-right: 2px dotted;
@@ -17,7 +17,7 @@ border-right: medium dashed green;
 </pre>
 
 <div class="note">
-<p>和CSS所有的缩写属性一样，border-<code>right</code> 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......</p>
+<p>和 CSS 所有的缩写属性一样，border-<code>right</code> 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......</p>
 
 <pre class="brush:css">border-right-style: dotted;
 border-right: thick green;
@@ -29,7 +29,7 @@ border-right: thick green;
   border-right: none thick green;
 </pre>
 
-<p> ......并且在 border-<code>right</code> 之前定义的 {{ Cssxref("border-right-style") }} 的值也会被覆盖。由于{{ Cssxref("border-right-style") }} 的默认值是 none, border-style的最终结果就是没有边框。</p>
+<p> ......并且在 border-<code>right</code> 之前定义的 {{ Cssxref("border-right-style") }} 的值也会被覆盖。由于{{ Cssxref("border-right-style") }} 的默认值是 none, border-style 的最终结果就是没有边框。</p>
 </div>
 
 <p>{{cssinfo}}</p>
@@ -102,54 +102,4 @@ border-right: thick green;
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.border-right")}}

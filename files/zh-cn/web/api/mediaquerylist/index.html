@@ -5,9 +5,9 @@ translation_of: Web/API/MediaQueryList
 ---
 <div>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</div>
 
-<p>一个<code>MediaQueryList</code>对象在一个{{ domxref("document") }}上维持着一系列的<a href="/zh-CN/docs/CSS/Media_queries" title="CSS/Media queries">媒体查询</a>，并负责处理当媒体查询在其document上发生变化时向监听器进行通知的发送。</p>
+<p>一个<code>MediaQueryList</code>对象在一个{{ domxref("document") }}上维持着一系列的<a href="/zh-CN/docs/CSS/Media_queries" title="CSS/Media queries">媒体查询</a>，并负责处理当媒体查询在其 document 上发生变化时向监听器进行通知的发送。</p>
 
-<p>如果你需要以编程方式来检测一个document上的媒体查询的值的变化，这个<code>MediaQueryList</code>对象使得通过观察其document而检测它的媒体查询的值的变化成为可能，而不是周期性地对这些媒体查询的值进行检查。</p>
+<p>如果你需要以编程方式来检测一个 document 上的媒体查询的值的变化，这个<code>MediaQueryList</code>对象使得通过观察其 document 而检测它的媒体查询的值的变化成为可能，而不是周期性地对这些媒体查询的值进行检查。</p>
 
 <h2 id="Method_overview" name="Method_overview">方法概述</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/MediaQueryList
   <tr>
    <td><code>matches</code></td>
    <td><code>boolean</code></td>
-   <td><code>如果当前</code>{{ domxref("document") }}匹配该媒体查询列表则其值为true；反之其值为false。<strong>只读。</strong></td>
+   <td><code>如果当前</code>{{ domxref("document") }}匹配该媒体查询列表则其值为 true；反之其值为 false。<strong>只读。</strong></td>
   </tr>
   <tr>
    <td><code>media</code></td>
@@ -54,7 +54,7 @@ translation_of: Web/API/MediaQueryList
   MediaQueryListListener listener
 );</pre>
 
-<h4 id="Parameter_(for_addListener_method)" name="Parameter_(for_addListener_method)">参数 ( 针对addListener方法)</h4>
+<h4 id="Parameter_(for_addListener_method)" name="Parameter_(for_addListener_method)">参数 ( 针对 addListener 方法)</h4>
 
 <dl>
  <dt><code>listener</code></dt>
@@ -69,7 +69,7 @@ translation_of: Web/API/MediaQueryList
   MediaQueryListListener listener
 );</pre>
 
-<h4 id="Parameter_(for_removeListener_method)" name="Parameter_(for_removeListener_method)">参数 (针对removeListener方法)</h4>
+<h4 id="Parameter_(for_removeListener_method)" name="Parameter_(for_removeListener_method)">参数 (针对 removeListener 方法)</h4>
 
 <dl>
  <dt><code>listener</code></dt>
@@ -78,64 +78,18 @@ translation_of: Web/API/MediaQueryList
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器通用性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("6.0") }}</td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaQueryList")}}
 
 <h2 id="Specification" name="Specification">详述</h2>
 
 <ul>
- <li><a class="external" href="http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface" title="http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface">CSSOM视图模型: MediaQueryList接口</a></li>
+ <li><a class="external" href="http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface" title="http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface">CSSOM 视图模型: MediaQueryList 接口</a></li>
 </ul>
 
 <h2 id="See_also" name="See_also">请参阅</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/CSS/Media_queries" title="CSS/Media queries">CSS媒体查询</a></li>
+ <li><a href="/zh-CN/docs/CSS/Media_queries" title="CSS/Media queries">CSS 媒体查询</a></li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/DOM/Using_media_queries_from_code" title="CSS/Using media queries from code">通过代码使用媒体查询</a></li>
  <li>{{ domxref("window.matchMedia()") }}</li>
  <li>{{ domxref("MediaQueryListListener") }}</li>

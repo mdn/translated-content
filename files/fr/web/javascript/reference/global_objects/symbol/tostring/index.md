@@ -19,7 +19,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 
 ## Syntaxe
 
-    Symbol().toString();
+```js
+Symbol().toString();
+```
 
 ### Valeur de retour
 
@@ -54,7 +56,7 @@ Symbol.for("toto").toString() // "Symbol(toto)"
 | Spécification                                                                                                        | État                         | Commentaires        |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

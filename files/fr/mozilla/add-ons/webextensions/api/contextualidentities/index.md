@@ -7,9 +7,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
 {{AddonSidebar}}
 
-Travailler avec des identités contextuelles : lister, créer, supprimer et mettre à jour des identités contextuelles.
+Travailler avec des identités contextuelles&nbsp;: lister, créer, supprimer et mettre à jour des identités contextuelles.
 
-Les « identités contextuelles », également appelées « conteneurs », sont des fonctions de navigation qui répondent à l’idée que les utilisateurs assument plusieurs identités lorsqu’ils naviguent sur le web, et souhaitent maintenir une certaine séparation entre ces identités. Par exemple, un utilisateur peut considérer que son « identité de travail » est distincte de son « identité personnelle » et ne veut pas partager les cookies entre ces deux contextes.
+Les «&nbsp;identités contextuelles », également appelées « conteneurs », sont des fonctions de navigation qui répondent à l’idée que les utilisateurs assument plusieurs identités lorsqu’ils naviguent sur le web, et souhaitent maintenir une certaine séparation entre ces identités. Par exemple, un utilisateur peut considérer que son « identité de travail&nbsp;» est distincte de son «&nbsp;identité personnelle&nbsp;» et ne veut pas partager les cookies entre ces deux contextes.
 
 Avec la fonctionnalité d’identités contextuelles, chaque identité contextuelle a un nom, une couleur et une icône. De nouveaux onglets peuvent être assignés à une identité et le nom, l’icône et la couleur apparaîtront dans la barre d’adresse. En interne, chaque identité possède son propre magasin de cookies qui n’est pas partagé avec d’autres onglets…
 
@@ -17,7 +17,7 @@ Avec la fonctionnalité d’identités contextuelles, chaque identité contextue
 
 Avant Firefox 57, l’API `contextualIdentities` n’était disponible que si la fonctionnalité d’identités contextuelles était activée. Si une extension essayait d’utiliser l’API `contextualIdentities` sans activer la fonctionnalité, les appels de méthode résolvaient leurs promesses avec `false`.
 
-À partir de Firefox 57, si une extension utilisant l’API  `contextualIdentities` est installée, la fonctionnalité d’identités contextuelles est automatiquement activée. Notez cependant qu’il est toujours possible pour l’utilisateur de désactiver la fonctionnalité en utilisant la préférence « privacy.userContext.enabled ». Si cela se produit, les appels de méthode `contextualIdentities` rejetteront leurs promesses avec un message d’erreur.
+À partir de Firefox 57, si une extension utilisant l’API  `contextualIdentities` est installée, la fonctionnalité d’identités contextuelles est automatiquement activée. Notez cependant qu’il est toujours possible pour l’utilisateur de désactiver la fonctionnalité en utilisant la préférence «&nbsp;privacy.userContext.enabled&nbsp;». Si cela se produit, les appels de méthode `contextualIdentities` rejetteront leurs promesses avec un message d’erreur.
 
 Pour plus d’informations sur les identités contextuelles, consultez [ce guide](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers).
 

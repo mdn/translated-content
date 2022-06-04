@@ -11,9 +11,9 @@ translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
 <p>{{ ApiRef("Device Orientation Events") }}</p>
 
-<p><span id="result_box" lang="zh-CN"><span>accelerationIncludingGravity属性返回设备的加速度的记录，单位为<a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">米每秒平方（m / s2）</a>。</span><span>与已移除重力加速度的{{domxref("DeviceMotionEvent.acceleration")}}不同，此值是由用户引起的设备的加速度和由重力加速度的总和。</span></span></p>
+<p>accelerationIncludingGravity 属性返回设备的加速度的记录，单位为<a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">米每秒平方（m / s2）</a>。与已移除重力加速度的{{domxref("DeviceMotionEvent.acceleration")}}不同，此值是由用户引起的设备的加速度和由重力加速度的总和。</p>
 
-<p><span id="result_box" lang="zh-CN"><span>此值通常不如{{domxref("DeviceMotionEvent.acceleration")}}实用，但是在部分不能自动从加速度数据中移除重力加速度的设备（例如没有</span><span>陀螺仪的设备</span></span><span lang="zh-CN"><span>），是唯一可用值。</span></span></p>
+<p>此值通常不如{{domxref("DeviceMotionEvent.acceleration")}}实用，但是在部分不能自动从加速度数据中移除重力加速度的设备（例如没有陀螺仪的设备），是唯一可用值。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -26,85 +26,20 @@ translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 
 <dl>
  <dt><code>x</code></dt>
- <dd><span class="short_text" id="result_box" lang="zh-CN"><span>表示x轴（西到东）上的加速度</span></span></dd>
+ <dd>表示 x 轴（西到东）上的加速度</dd>
  <dt><code>y</code></dt>
- <dd><span class="short_text" id="result_box" lang="zh-CN"><span>表示y轴（南到北</span></span><span class="short_text" lang="zh-CN"><span>）上的加速度</span></span></dd>
+ <dd>表示 y 轴（南到北）上的加速度</dd>
  <dt><code>z</code></dt>
- <dd><span class="short_text" id="result_box" lang="zh-CN"><span>表示z轴（下到上）上的加速度</span></span></dd>
+ <dd>表示 z 轴（下到上）上的加速度</dd>
 </dl>
 
 <h2 id="说明">说明</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性"><span class="short_text" id="result_box" lang="zh-CN"><span>浏览器兼容性</span></span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("6")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("6")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.DeviceMotionEvent.accelerationIncludingGravity")}}
 
 <h2 id="推荐浏览">推荐浏览</h2>
 

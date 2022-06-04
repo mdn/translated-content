@@ -7,14 +7,12 @@ translation_of: Web/API/Web_Animations_API
 ---
 <p>{{DefaultAPISidebar("Web Animations")}}{{ SeeCompatTable() }}</p>
 
-<div class="summary">
-<p><strong>Web Animations API </strong>允许同步和定时更改网页的呈现, 即DOM元素的动画。它通过组合两个模型来实现：时序模型 和 动画模型。</p>
-</div>
+<p><strong>Web Animations API </strong>允许同步和定时更改网页的呈现，即 DOM 元素的动画。它通过组合两个模型来实现：时序模型和动画模型。</p>
 
 <h2 id="概念和用法">概念和用法</h2>
 
 <dl>
- <dd>Web Animations API 为浏览器和开发人员提供了一种用于描述DOM元素的动画的通用语言。要获得有关API背后的概念以及如何使用它的更多信息，请阅读<a href="/zh-CN/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">使用Web Amimations API</a>。</dd>
+ <dd>Web Animations API 为浏览器和开发人员提供了一种用于描述 DOM 元素的动画的通用语言。要获得有关 API 背后的概念以及如何使用它的更多信息，请阅读<a href="/zh-CN/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">使用 Web Amimations API</a>。</dd>
 </dl>
 
 <h2 id="网页动画接口">网页动画接口</h2>
@@ -60,9 +58,9 @@ translation_of: Web/API/Web_Animations_API
 <dl>
 </dl>
 
-<h2 id="Web动画只读接口">Web动画只读接口</h2>
+<h2 id="Web动画只读接口">Web 动画只读接口</h2>
 
-<p>规格中包括以下接口，用于定义在多个其他位置使用的功能。 你不会在Web开发工作中直接使用这些接口，但他们能帮助库或框架作者了解这些接口如何工作，使他们的库的实现可以更有效，或者浏览器工程师寻找一个比规范提供的内容更容易的参考。</p>
+<p>规格中包括以下接口，用于定义在多个其他位置使用的功能。 你不会在 Web 开发工作中直接使用这些接口，但他们能帮助库或框架作者了解这些接口如何工作，使他们的库的实现可以更有效，或者浏览器工程师寻找一个比规范提供的内容更容易的参考。</p>
 
 <dl>
  <dt>{{domxref("AnimationEffectTimingReadOnly")}}</dt>
@@ -90,67 +88,7 @@ translation_of: Web/API/Web_Animations_API
  </tbody>
 </table>
 
-<h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support (Element.animate())</td>
-   <td>{{ CompatChrome(36.0) }}<br>
-     </td>
-   <td>{{ CompatGeckoDesktop(48)}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{ CompatGeckoMobile(48) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatChrome(42.0) }}</td>
-  </tr>
- </tbody>
-</table>
-[1] 仅在Firefox 52 Nightly和Dev版本中启用。在测试版/发布版中关闭。</div>
-
-<p> </p>
 
 <h2 id="相关内容">相关内容</h2>
 

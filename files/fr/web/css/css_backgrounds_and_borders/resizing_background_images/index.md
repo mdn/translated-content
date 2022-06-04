@@ -11,11 +11,11 @@ original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 {{CSSRef}}
 
-La propriété CSS {{cssxref("background-size")}} permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer un carrelage de l'image à sa pleine grandeur. Il est ainsi possible d'agrandir ou de rapetisser l'image.
+La propriété CSS {{cssxref("background-size")}} permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer un carrelage de l'image à sa pleine grandeur. Il est ainsi possible d'agrandir ou de rapetisser l'image.
 
 ## Carreler une image de grande taille
 
-Prenons une image de grande taille (par exemple l'ancien logo de Firefox en 2485x2340px). On souhaite la carreler en quatre copies de 300x300 px, comme dans l'image suivante.
+Prenons une image de grande taille (par exemple l'ancien logo de Firefox en 2485x2340px). On souhaite la carreler en quatre copies de 300x300 px, comme dans l'image suivante.
 
 ![](logo-quantum.9c5e96634f92.png)
 
@@ -33,11 +33,11 @@ On peut utiliser la feuille de style CSS suivante pour obtenir l'effet voulu :
 }
 ```
 
-On notera que, dans l'exemple précédent, une seule valeur avait été précisée pour {{cssxref("background-size")}} : 150 px. Dans ce cas, cette valeur est utilisée pour la largeur et la hauteur est alors fixée à `auto`.
+On notera que, dans l'exemple précédent, une seule valeur avait été précisée pour {{cssxref("background-size")}} : 150 px. Dans ce cas, cette valeur est utilisée pour la largeur et la hauteur est alors fixée à `auto`.
 
 ## Étirer une image
 
-Il est aussi possible de spécifier, respectivement, la largeur et la hauteur de l'image, comme dans l'exemple suivant, où la taille de l'image est imposée à 300x150 px.
+Il est aussi possible de spécifier, respectivement, la largeur et la hauteur de l'image, comme dans l'exemple suivant, où la taille de l'image est imposée à 300x150 px.
 
 ```css
 background-size: 300px 150px;
@@ -69,13 +69,13 @@ On remarque que la feuille de style utilisée est identique à la précédente, 
 
 ## Valeurs spéciales : `contain` et `cover`
 
-En plus de {{cssxref("&lt;length&gt;")}}, la propriété CSS {{cssxref("background-size")}} permet d'employer deux autres valeurs : `contain` et `cover`.
+En plus de {{cssxref("&lt;length&gt;")}}, la propriété CSS {{cssxref("background-size")}} permet d'employer deux autres valeurs : `contain` et `cover`.
 
 ### `contain`
 
 La valeur `contain` spécifie les dimensions de l'image d'arrière-plan de manière à ce que sa largeur et sa hauteur soient aussi grandes que possible, tout en conservant l'image à l'intérieur de son élément conteneur. Ainsi, l'image ne peut déborder de son élément conteneur.
 
-Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur `contain` en action (Votre navigateur doit supporter la mise à l'échelle d'images d'arrière-plan).
+Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur `contain` en action (Votre navigateur doit supporter la mise à l'échelle d'images d'arrière-plan).
 
 {{EmbedLiveSample("contain", "100%", "220")}}
 

@@ -151,7 +151,7 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères sur sept caractères qui indique la couleur (cf.
         {{cssxref("&lt;color&gt;")}}) en notation hexadécimale (en

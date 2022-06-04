@@ -19,104 +19,32 @@ translation_of: Web/API/MediaSource/activeSourceBuffers
 
 <p>以下的片段基於 Nick Desaulniers 所編纂的簡單範例（<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">觀看實際演示</a>，或者<a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下載原始碼</a> 以利更進一步研究。）</p>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> sourceOpen <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
- <span class="comment token"> //console.log(this.readyState); // open
-</span>  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="function token">fetchAB<span class="punctuation token">(</span></span>assetURL<span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>buf<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    sourceBuffer<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'updateend'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      mediaSource<span class="punctuation token">.</span><span class="function token">endOfStream<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;
+<pre class="brush: js  language-js"><code class="language-js">function sourceOpen (_) {
+  //console.log(this.readyState); // open
+  var mediaSource = this;
+  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, function (buf) {
+    sourceBuffer.addEventListener('updateend', function (_) {
+      mediaSource.endOfStream();
       console.log(mediaSource.activeSourceBuffers);
       // will contain the source buffer that was added above,
-      // as it is selected for playing in the video player</span>
-      video<span class="punctuation token">.</span><span class="function token">play<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-     <span class="comment token"> //console.log(mediaSource.readyState); // ended
-</span>    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    sourceBuffer<span class="punctuation token">.</span><span class="function token">appendBuffer<span class="punctuation token">(</span></span>buf<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;
+      // as it is selected for playing in the video player
+      video.play();
+      //console.log(mediaSource.readyState); // ended
+    });
+    sourceBuffer.appendBuffer(buf);
+  });
+};
 
-...</span></code></pre>
+...</code></pre>
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規格</th>
-   <th scope="col">狀態</th>
-   <th scope="col">注釋</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#widl-MediaSource-activeSourceBuffers', 'activeSourceBuffers')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="相容性表格">相容性表格</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>23</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("42.0")}}</td>
-   <td>11<sup>[2]</sup></td>
-   <td>15</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4.4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>
-    <p>{{CompatNo}}</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>11</td>
-   <td>30</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在切換 about:config 偏好設定 media.mediasource.enabled 為 true 時可以使用。此外，支援只限於白名單內的網站，如：YouTube, Netflix, 以及其他熱門的串流網站。白名單已經被移除且 Media Source Extensions 在 42+ 對所有網站已預設為啟用。</p>
-
-<p>[2] 只在 Windows 8+ 上有效。</p>
+{{Compat("api.MediaSource.activeSourceBuffers")}}
 
 <h2 id="相關資料">相關資料</h2>
 

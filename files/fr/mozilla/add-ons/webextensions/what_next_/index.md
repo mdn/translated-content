@@ -10,7 +10,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/que_faire_ensuite
 ---
 {{AddonSidebar}}
 
-Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses  qui vous aides à en faire une.
+Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses qui vous aides à en faire une.
 
 Vous pouvez trouver plus d'informations sur de nombreux sujets abordés sur cette page sur [l'atelier d'extension](https://extensionworkshop.com), un site web dédié à vous aider à écrire, tester, publier et distribuer des extensions pour Firefox.
 
@@ -18,7 +18,7 @@ Vous pouvez trouver plus d'informations sur de nombreux sujets abordés sur cett
 
 Vous n'avez pas besoin d'outils spéciaux de développement ou de création d'environnement pour créer des extensions de navigateur : il est tout à fait possible de créer de superbes extensions de navigateur avec un simple éditeur de texte. Cependant, vous avez peut-être développé pour le Web et avez un ensemble d'outils et un environnement que vous souhaitez réutiliser. Si vous le faites, vous devez être conscient de certaines choses.
 
-Si vous utilisez des outils de minimisation ou d'obscurcissement pour fournir votre code final, vous devez fournir votre code source au [processus de révision AMO](#The_review_process). De plus, les outils que vous utilisez — minification, obscurcissement et construction — doivent être open source (ou offrir une utilisation gratuite illimitée) et être disponible pour fonctionner sur l'ordinateur de l'utilisateur  (Windows, Mac, ou Linux). Malheureusement, nos réviseurs ne peuvent pas travailler avec des outils commerciaux ou basés sur le Web.
+Si vous utilisez des outils de minimisation ou d'obscurcissement pour fournir votre code final, vous devez fournir votre code source au [processus de révision AMO](#The_review_process). De plus, les outils que vous utilisez — minification, obscurcissement et construction — doivent être open source (ou offrir une utilisation gratuite illimitée) et être disponible pour fonctionner sur l'ordinateur de l'utilisateur  (Windows, Mac, ou Linux). Malheureusement, nos réviseurs ne peuvent pas travailler avec des outils commerciaux ou basés sur le Web.
 
 [En savoir plus sur les outils de développement sur l'atelier d'extensions](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 
@@ -28,7 +28,7 @@ Les bibliothèques tierces sont un excellent moyen d'ajouter rapidement des fonc
 
 [En savoir plus sur la soumission du code source sur l'atelier d'extensions](https://extensionworkshop.com/documentation/publish/source-code-submission/)
 
-## L'accord de distribution des modules complémentaires de   Firefox
+## L'accord de distribution des modules complémentaires de   Firefox
 
 Les extensions de navigateur doivent être signées pour être installées dans les réalisations ou versions bêta de Firefox. La signature a lieu dans addons.mozilla.org (AMO) et est soumise aux termes et conditions du contrat de distribution de Firefox Add-on. L'objectif de l'accord est de garantir que les utilisateurs de Firefox aient accès à des modules complémentaires de qualité et bien supportés qui améliorent l'expérience de Firefox.
 
@@ -46,7 +46,7 @@ Lorsqu'une extension de navigateur est soumise à la signature, elle fait l'obje
 
 Si vous choisissez de lister l'extension de votre navigateur sur AMO, votre extension pourrait figurer sur le site Web d'AMO, dans le gestionnaire de modules complémentaires du navigateur Firefox ou ailleurs sur un site Web de Mozilla. Nous avons compilé une liste de directives sur la manière dont les extensions sont sélectionnées pour être mises en avant. En suivant ces directives, vous donnez à votre extension les meilleures chances d'être sélectionnée.
 
-[En savoir plus sur la  façon de faire figurer vos modules complémentaires dans l'atelier d'extension](https://extensionworkshop.com/documentation/publish/recommended-extensions/)
+[En savoir plus sur la façon de faire figurer vos modules complémentaires dans l'atelier d'extension](https://extensionworkshop.com/documentation/publish/recommended-extensions/)
 
 ## Continuez votre expérience d'apprentissage
 

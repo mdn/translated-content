@@ -9,10 +9,10 @@ translation_of: 'Web/CSS/:default'
 
 <p>该选择器可以在 {{htmlelement("button")}}, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, 以及 {{htmlelement("option")}} 上使用。</p>
 
-<pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* Selects any default &lt;input&gt; */</span>
-<span class="selector token">input<span class="pseudo-class token">:default</span> </span><span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> lime<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: css no-line-numbers  language-css"><code class="language-css">/* Selects any default &lt;input&gt; */
+input:default {
+  background-color: lime;
+}</code></pre>
 
 <p>允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 <code>:default</code> 伪类表示。例如，您可以在一组复选框之间设置默认复选框。</p>
 
@@ -69,7 +69,7 @@ input:default + label {
   <tr>
    <td>{{SpecName('HTML5 W3C', '#selector-default', ':default')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>定义了HTML语义和规范验证</td>
+   <td>定义了 HTML 语义和规范验证</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}}</td>
@@ -86,50 +86,4 @@ input:default + label {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>10.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.0</td>
-   <td>5.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.0</td>
-   <td>5.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.default")}}

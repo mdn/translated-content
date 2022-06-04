@@ -5,7 +5,7 @@ translation_of: Web/CSS/all
 ---
 {{CSSRef}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) **`all`** permet de réinitialiser toutes les propriétés, à l'exception de {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}, avec leurs valeurs initiales, héritées ou qui proviennent d'une autre feuille de style.
+La [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) **`all`** permet de réinitialiser toutes les propriétés, à l'exception de {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}, avec leurs valeurs initiales, héritées ou qui proviennent d'une autre feuille de style.
 
 {{EmbedInteractiveExample("pages/css/all.html")}}
 

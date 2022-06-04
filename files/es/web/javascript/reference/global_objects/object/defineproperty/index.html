@@ -332,77 +332,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatChrome("5")}} (versiones previas sin testear)</td>
-   <td>{{CompatIE("9")}} ({{CompatIE("8")}}, pero solo con objetos DOM y con muchos comportamientos no estándares  <a href="#Internet_Explorer_8_specific_notes">See below</a>.)</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5.1")}} ({{CompatSafari("5")}}, but not on DOM objects)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatIE("9")}} and above</td>
-   <td>{{CompatOperaMobile("11.50")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Based on <a class="external" href="http://kangax.github.com/es5-compat-table/">Kangax's compat tables</a>.</p>
-
-<h3 id="Redefining_the_length_property_of_an_Array_object" name="Redefining_the_length_property_of_an_Array_object">Redefining the <code>length</code> property of an <code>Array</code> object</h3>
-
-<p>It is possible to redefine the {{jsxref("Array.length", "length")}} property of arrays, subject to the usual redefinition restrictions. (The {{jsxref("Array.length", "length")}} property is initially non-configurable, non-enumerable, and writable. Thus on an unaltered array it is possible to change the {{jsxref("Array.length", "length")}} property's value, or to make it non-writable. It is not allowed to change its enumerability or configurability, or if it is non-writable to change its value or writability.) However, not all browsers permit this redefinition.</p>
-
-<p>Firefox 4 through 22 will throw a {{jsxref("Global_Objects/TypeError", "TypeError")}} on any attempt whatsoever (whether permitted or not) to redefine the {{jsxref("Array.length", "length")}} property of an array.</p>
-
-<p>Versions of Chrome which implement <code>Object.defineProperty()</code> in some circumstances ignore a length value different from the array's current {{jsxref("Array.length", "length")}} property. In some circumstances changing writability seems to silently not work (and not throw an exception). Also, relatedly, some array-mutating methods like {{jsxref("Array.prototype.push")}} don't respect a non-writable length.</p>
-
-<p>Versions of Safari which implement <code>Object.defineProperty()</code> ignore a <code>length</code> value different from the array's current {{jsxref("Array.length", "length")}} property, and attempts to change writability execute without error but do not actually change the property's writability.</p>
-
-<p>Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you <em>can</em> rely on it, <a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">there's really no good reason to do so</a>.</p>
-
-<h3 id="Particularidades_de_Internet_Explorer_8">Particularidades de Internet Explorer 8</h3>
-
-<p>El método <code>Object.defineProperty()</code> de Internet Explorer <a href="http://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx">sólo puede ser usado en objetos del DOM.</a> Algunas explicaciones al respecto:</p>
-
-<ul>
- <li>Intentar usar <code>Object.defineProperty()</code> en objetos nativos produce un error.</li>
- <li>Hay que definir un valor para todos los atributos de una propiedad: <code>true, true, true</code> para descriptores de datos y <code>true</code> para configurables, <code>false</code> para el descriptor de acceso   <code>enumerable</code>.(?) Cualquier intento de proporcionar otro valor(?) lanzará un error.</li>
- <li>Para reconfirurar una propiedad primero hay que eliminarla. Si no se elimina, la propiedad no cambia aunque se intente modificar.</li>
-</ul>
+{{Compat("javascript.builtins.Object.defineProperty")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

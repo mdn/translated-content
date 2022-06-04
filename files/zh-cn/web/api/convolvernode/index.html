@@ -43,7 +43,7 @@ translation_of: Web/API/ConvolverNode
 
 <dl>
  <dt>{{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}</dt>
- <dd>创建一个新的 <span><code>ConvolverNode</code></span> 对象实例。</dd>
+ <dd>创建一个新的 <code>ConvolverNode</code> 对象实例。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -52,9 +52,9 @@ translation_of: Web/API/ConvolverNode
 
 <dl>
  <dt>{{domxref("ConvolverNode.buffer")}}</dt>
- <dd>一个被 <span><code>ConvolverNode</code></span> 用来产生混响效果的单声道、立体声或四声道的音频缓冲器，包含了(可能是多声道)脉冲反应(IR)。</dd>
+ <dd>一个被 <code>ConvolverNode</code> 用来产生混响效果的单声道、立体声或四声道的音频缓冲器，包含了 (可能是多声道) 脉冲反应 (IR)。</dd>
  <dt>{{domxref("ConvolverNode.normalize")}}</dt>
- <dd><span>布尔值，在设置缓冲区属性时，可绝定是否对来自 <code>buffer</code> 的脉冲反应按等功率归一化进行缩放。</span></dd>
+ <dd>布尔值，在设置缓冲区属性时，可绝定是否对来自 <code>buffer</code> 的脉冲反应按等功率归一化进行缩放。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -66,7 +66,7 @@ translation_of: Web/API/ConvolverNode
 <p>下面的示例展示了 AudioContext 创建卷积节点的基础用法。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 你需要找到一个脉冲反应来完成下面的示例。可查看 <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">此处</a> 的实例.</p>
+<p><strong>注意</strong>: 你需要找到一个脉冲反应来完成下面的示例。可查看 <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">此处</a> 的实例。</p>
 </div>
 
 <pre class="brush: js notranslate">let audioCtx = new window.AudioContext();
@@ -93,20 +93,7 @@ reverb.connect(audioCtx.destination);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#ConvolverNode', 'ConvolverNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

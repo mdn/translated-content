@@ -5,7 +5,7 @@ translation_of: Web/API/Text/wholeText
 ---
 <p>{{ apiref("DOM") }}</p>
 
-<p><font><font>该</font></font><strong><code>Text.wholeText</code></strong><font><font>只读属性返回</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Text" title="文本界面表示元素或属性的文本内容。 如果一个元素在其内容中没有标记，则它有一个实现包含元素文本的Text的单个子元素。 但是，如果元素包含标记，则将其解析为形成子元素的信息项和文本节点。"><code>Text</code></a><font><font>逻辑上相邻的节点的所有文本。</font></font><font><font>文本按文档顺序连接。</font><font>这允许指定任何文本节点并获取所有相邻文本作为单个字符串。</font></font></p>
+<p>该<strong><code>Text.wholeText</code></strong>只读属性返回<a href="https://developer.mozilla.org/en-US/docs/Web/API/Text" title="文本界面表示元素或属性的文本内容。 如果一个元素在其内容中没有标记，则它有一个实现包含元素文本的Text的单个子元素。 但是，如果元素包含标记，则将其解析为形成子元素的信息项和文本节点。"><code>Text</code></a>逻辑上相邻的节点的所有文本。文本按文档顺序连接。这允许指定任何文本节点并获取所有相邻文本作为单个字符串。</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Text/wholeText
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
-<p>有时候使用whole-text 功能同时使用<code>Node.textContent</code> 或长期支持的 {{domxref("Element.innerHTML")}}; 可以得到更好的处理。如果你需要处理一个元素内的混合内容, 正如本文所介绍的, <code>wholeText</code> 和 <span class="internal"><code>replaceWholeText()</code></span> 是有用的。</p>
+<p>有时候使用whole-text 功能同时使用<code>Node.textContent</code> 或长期支持的 {{domxref("Element.innerHTML")}}; 可以得到更好的处理。如果你需要处理一个元素内的混合内容, 正如本文所介绍的, <code>wholeText</code> 和 <code>replaceWholeText()</code> 是有用的。</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -82,57 +82,7 @@ translation_of: Web/API/Text/wholeText
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Text.wholeText")}}
 
 <h2 id="See_also">See also</h2>
 

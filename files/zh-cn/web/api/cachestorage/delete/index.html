@@ -5,7 +5,7 @@ translation_of: Web/API/CacheStorage/delete
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("CacheStorage")}} 接口的 <code><strong>delete</strong></code><strong><code>()</code></strong> 方法查找匹配 <code>cacheName</code> 的 {{domxref("Cache")}} 对象，如果找到，则删除 {{domxref("Cache")}} 对象并返回一个resolve为true的 {{jsxref("Promise")}} . 如果未找到 {{domxref("Cache")}} 对象，则返回 <code>false</code>.</p>
+<p>{{domxref("CacheStorage")}} 接口的 <code><strong>delete</strong></code><strong><code>()</code></strong> 方法查找匹配 <code>cacheName</code> 的 {{domxref("Cache")}} 对象，如果找到，则删除 {{domxref("Cache")}} 对象并返回一个 resolve 为 true 的 {{jsxref("Promise")}} . 如果未找到 {{domxref("Cache")}} 对象，则返回 <code>false</code>.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/CacheStorage/delete
 
 <h3 id="Returns">Returns</h3>
 
-<p>如果找到 {{domxref("Cache")}} 对象，删除它，返回一个resolve为 <code>true</code> 的 {{jsxref("Promise")}} ，否则，返回 <code>false</code> .</p>
+<p>如果找到 {{domxref("Cache")}} 对象，删除它，返回一个 resolve 为 <code>true</code> 的 {{jsxref("Promise")}} ，否则，返回 <code>false</code> .</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/CacheStorage/delete
 
 <h2 id="实例" style="line-height: 30px; font-size: 2.14285714285714rem;">实例</h2>
 
-<p>在此代码片段中，我们等待一个activate事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 块，其在一个新的 service worker 被激活前清除所有旧的、未使用的cache. 这里我们有一个白名单，其中包含我们想要保留的cache的name. 我们使用 {{domxref("CacheStorage.keys")}} 返回 {{domxref("CacheStorage")}} 对象中cache的键，然后检查每个键值，以查看它是否在白名单中。如果没有，我们使用 <code>delete()</code> 删除它。</p>
+<p>在此代码片段中，我们等待一个 activate 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 块，其在一个新的 service worker 被激活前清除所有旧的、未使用的 cache. 这里我们有一个白名单，其中包含我们想要保留的 cache 的 name. 我们使用 {{domxref("CacheStorage.keys")}} 返回 {{domxref("CacheStorage")}} 对象中 cache 的键，然后检查每个键值，以查看它是否在白名单中。如果没有，我们使用 <code>delete()</code> 删除它。</p>
 
 <pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
@@ -45,76 +45,11 @@ translation_of: Web/API/CacheStorage/delete
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoDesktop(44)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.CacheStorage.delete")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -25,7 +25,7 @@ var request = objectStore.get(cle);
 ## Renvoie
 
 - Une {{domxref("IDBRequest","requête")}}
-  - : La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie en cas de succès,  un clone structuré de la valeur de l'enregistrement correspondant à la clé ou du premier correspondant à l'intervalle de clé.
+  - : La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie en cas de succès,  un clone structuré de la valeur de l'enregistrement correspondant à la clé ou du premier correspondant à l'intervalle de clé.
 
 ## Exceptions
 
@@ -40,7 +40,7 @@ var request = objectStore.get(cle);
 
 Dans le code suivant , on ouvre une {{domxref("IDBTransaction","transaction")}} sur la {{domxref("IDBDatabase","connexion")}} à la base de données, pour avoir l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet dans lequel on veut retrouver la valeur d'un enregistrement.
 
-La méthode **`get() `**sert à retrouver la valeur de l'enregistrement dont la clé est `Walk dog` dans magasin d'objets _`toDoList`_
+La méthode **`get()`** sert à retrouver la valeur de l'enregistrement dont la clé est `Walk dog` dans le magasin d'objets _`toDoList`_.
 
 ```js
 // ouvre la connexion à la base de données
@@ -93,7 +93,7 @@ function deleteData() {
 
 | Spécification                                                                                                | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

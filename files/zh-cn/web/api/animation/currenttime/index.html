@@ -7,9 +7,9 @@ translation_of: Web/API/Animation/currentTime
 ---
 <p>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</p>
 
-<p>Animation.currentTime属性返回或设置动画的当前时间值（以毫秒为单位），无论动画正在运行还是已暂停。</p>
+<p>Animation.currentTime 属性返回或设置动画的当前时间值（以毫秒为单位），无论动画正在运行还是已暂停。</p>
 
-<p>如果动画缺少{{domxref("AnimationTimeline", "timeline")}}，处于非活动状态或尚未播放，则当前时间返回值为null。</p>
+<p>如果动画缺少{{domxref("AnimationTimeline", "timeline")}}，处于非活动状态或尚未播放，则当前时间返回值为 null。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,15 +18,15 @@ element.currentTime =<em> someValue;</em></pre>
 
 <h3 id="值">值</h3>
 
-<p>表示当前时间的数字（以毫秒为单位），或为null。</p>
+<p>表示当前时间的数字（以毫秒为单位），或为 null。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>在<a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Drink Me/Eat Me game</a>中，爱丽丝的高度是可变动的，所以它可以从小到大或从大到小。 在游戏开始时，通过将她的动画的currentTime设置为她的keyframeEffect的持续时间的一半让她的高度设置在两个极端之间：</p>
+<p>在<a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Drink Me/Eat Me game</a>中，爱丽丝的高度是可变动的，所以它可以从小到大或从大到小。 在游戏开始时，通过将她的动画的 currentTime 设置为她的 keyframeEffect 的持续时间的一半让她的高度设置在两个极端之间：</p>
 
 <pre class="brush: js">aliceChange<strong>.currentTime</strong> = aliceChange.effect.timing.duration / 2;</pre>
 
-<p>寻求动画的50％标记的更通用的方法：</p>
+<p>寻求动画的 50％标记的更通用的方法：</p>
 
 <pre class="brush: js">animation.currentTime =
   animation.effect.getComputedTiming().delay +
@@ -34,76 +34,11 @@ element.currentTime =<em> someValue;</em></pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-currenttime', 'currentTime')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoDesktop(48)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoMobile(48)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
+{{Compat("api.Animation.currentTime")}}
 
 <h2 id="相关内容" style="line-height: 30px; font-size: 2.14285714285714rem;">相关内容</h2>
 

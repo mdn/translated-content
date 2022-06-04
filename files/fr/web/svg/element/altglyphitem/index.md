@@ -9,7 +9,7 @@ translation_of: Web/SVG/Element/altGlyphItem
 ---
 {{SVGRef}}{{deprecated_header}}
 
-L'élément `altGlyphItem fournit un ensemble de candidats pour la substitution de glyphes par l'élément `{{ SVGElement("altGlyph") }}.
+L'élément `altGlyphItem` fournit un ensemble de candidats pour la substitution de glyphes par l'élément {{ SVGElement("altGlyph") }}.
 
 ## Contexte d'utilisation
 
@@ -30,8 +30,6 @@ _Aucun_
 ## Interface DOM
 
 Cet élément implémente l'interface [`SVGAltGlyphItemElement`](/fr/docs/Web/API/SVGAltGlyphItemElement "en/DOM/SVGAltGlyphElement").
-
-
 
 ## Voir également
 

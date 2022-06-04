@@ -7,7 +7,7 @@ tags:
 translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide
 ---
-C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces. 
+C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.
 Une page web optimisé prévoit non seulement un site plus réactif, mais aussi de réduire la charge sur vos serveurs Web et votre connexion Internet. Cela peut être crucial pour les gros sites ou des sites qui ont un pic de trafic dans des circonstances exceptionnelles (telles que les Unes des journaux fracassantes). De plus, Google en tient compte pour son classement.
 
 ### Réduire le poids de la page
@@ -22,11 +22,11 @@ Téléchargez le html d'abords, puis le CSS et le JavaScript nécessaires à son
 
 ### Réduisez le nombre de fichiers
 
-Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP ](/en/HTTP "https://developer.mozilla.org/en/HTTP")nécessaire pour télécharger une page.
+Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP](/en/HTTP "https://developer.mozilla.org/en/HTTP") nécessaire pour télécharger une page.
 
 - Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](http://css-tricks.com/examples/ButtonMaker/).
 - Compressez vos images (éviter les .png). Vous pouvez pour cela utiliser [Gimp](http://www.gimp.org/) ou [Imagemagik](http://www.imagemagick.org/script/index.php).
-- Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
+- Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
 
 Les videos sont diffusées progressivement depuis le serveur, elles ne ralentisseent donc pas le chargement de votre page.
 
@@ -43,8 +43,8 @@ En particulier pour les pages qui sont générées dynamiquement, une petite rec
 Plus d'informations:
 
 1. [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-   2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-   3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+   2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+   3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
 
 ### Réduire le nombre de scripts en ligne
 
@@ -54,18 +54,18 @@ Les scripts intégrés peut être coûteux pour le chargement de la page, puisqu
 
 L'utilisation de CSS modernes réduit la quantité de balisage, et peut réduire la nécessité de "spacer" les images, en termes de disposition, et peut très souvent remplacer des images de texte stylisé - qui "coutent" beaucoup plus que l'équivalent texte-et-CSS.
 Utiliser des balises valides a d'autres avantages. Tout d'abord, les navigateurs n'ont pas besoin d'effectuer de corrections d'erreurs lors de l'analyse du code HTML.
-En outre, la validité du balisage permet la libre utilisation d'autres outils qui peuvent pré-traiter vos pages web. Par exemple, [HTML Tidy](http://tidy.sourceforge.net/)  peut supprimer des espaces blancs et des balises facultatives, mais il refusera de s'exécuter sur une page avec des erreurs de balisage graves.
+En outre, la validité du balisage permet la libre utilisation d'autres outils qui peuvent pré-traiter vos pages web. Par exemple, [HTML Tidy](http://tidy.sourceforge.net/) peut supprimer des espaces blancs et des balises facultatives, mais il refusera de s'exécuter sur une page avec des erreurs de balisage graves.
 
 ### Segmentez votre contenu
 
 Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt que des \<table> très imbriquée comme dans l'exemple suivant:
 
     <TABLE>
-      <TABLE>
-        <TABLE>
-              ...
-        </TABLE>
-      </TABLE>
+      <TABLE>
+        <TABLE>
+              ...
+        </TABLE>
+      </TABLE>
     </TABLE>
 
 Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
@@ -79,7 +79,7 @@ Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
 Si le navigateur peut immédiatement déterminer la hauteur et/ou la largeur de vos images et tableaux, il sera capable d'afficher une page web sans avoir à refondre le contenu. Cela n'augmente pas seulement la vitesse d'affichage de la page, mais aussi à empêcher les changements gênants dans la disposition d'une page lors du chargement. Pour cette raison, la hauteur et la largeur doit être spécifié pour les images, chaque fois que possible.
 Les tableaux doivent utiliser le sélecteur CSS selector:property combination:
 
-      table-layout: fixed;
+      table-layout: fixed;
 
 et doit spécifier la largeur des colonnes en utilisant le COL et les balises html COLGROUP.
 

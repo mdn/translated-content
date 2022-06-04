@@ -12,14 +12,16 @@ L'élément `<xsl:if>` regroupe un attribut test et un modèle. Si le test renvo
 
 ### Syntaxe
 
-    <xsl:if test=EXPRESSION>
-    	MODÈLE
-    </xsl:if>
+```xml
+<xsl:if test=EXPRESSION>
+  MODÈLE
+</xsl:if>
+```
 
 ### Attribut obligatoire
 
 - `test`
-  - : Contient une expression XPath qui peut être évaluée (en utilisant les règles définies pour `boolean( )` si nécessaire) en une valeur booléenne. Si la valeur est `true`, le modèle est appliqué ; dans le cas contraire, aucune action n'est exécutée.
+  - : Contient une expression XPath qui peut être évaluée (en utilisant les règles définies pour `boolean( )` si nécessaire) en une valeur booléenne. Si la valeur est `true`, le modèle est appliqué&nbsp;; dans le cas contraire, aucune action n'est exécutée.
 
 ### Attributs optionnels
 

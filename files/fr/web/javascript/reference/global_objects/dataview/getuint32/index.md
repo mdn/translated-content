@@ -19,7 +19,9 @@ La méthode **`getUint32()`** permet de lire un entier non-signé sur 32 bits (t
 
 ## Syntaxe
 
-    dataview.getUint32(positionOctet [, littleEndian])
+```js
+dataview.getUint32(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 
@@ -57,7 +59,7 @@ dataview.getUint32(1); // 0
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.getuint32', 'DataView.prototype.getUint32')}}     | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint32', 'DataView.prototype.getUint32')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint32', 'DataView.prototype.getUint32')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

@@ -5,7 +5,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 ---
 <p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
 
-<p><span class="seoSummary">HTML 拖放介面能讓網頁應用程式於 Firefox 及其他瀏覽器中使用拖放功能。</span>舉例來說，使用者可以利用此功能以滑鼠選擇<em>可拖曳（draggable）</em>元素，拖曳至一個<em>可放置（droppable）</em>元素上，並放開滑鼠按鍵來放置此元素。在拖曳操作時，一個半透明的<em>可拖曳（draggable）</em>元素會跟隨著滑鼠游標。</p>
+<p>HTML 拖放介面能讓網頁應用程式於 Firefox 及其他瀏覽器中使用拖放功能。舉例來說，使用者可以利用此功能以滑鼠選擇<em>可拖曳（draggable）</em>元素，拖曳至一個<em>可放置（droppable）</em>元素上，並放開滑鼠按鍵來放置此元素。在拖曳操作時，一個半透明的<em>可拖曳（draggable）</em>元素會跟隨著滑鼠游標。</p>
 
 <p>對於網站、擴充套件以及 XUL 應用程式來說，你可以自定義能成為<em>可拖曳（draggable）</em>的元素類型、<em>可拖曳（draggable）</em>元素產生的回鐀類型，以及<em>可放置（droppable）</em>的元素。</p>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>所有的<a href="/zh-TW/docs/Web/API/DragEvent#Event_types">拖曳事件類型</a>都有相關的<a href="/zh-TW/docs/Web/API/DragEvent#GlobalEventHandlers">通用事件處理器</a>（global event handler）。每一種拖曳事件類型及拖曳通用事件處理器屬性都有說明此事件的參考文件。以下的表格提供了每一種事件的簡要說明，以及參考文件的連結。</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="col">事件</th>
@@ -67,13 +67,13 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
  </tbody>
 </table>
 
-<p class="note">注意：<code>dragstart</code> 與 <code>dragend</code> 事件，在把檔案從作業系統拖放到瀏覽器時，並不會觸發。</p>
+<p>注意：<code>dragstart</code> 與 <code>dragend</code> 事件，在把檔案從作業系統拖放到瀏覽器時，並不會觸發。</p>
 
 <h2 id="介面">介面</h2>
 
 <p>HTML 拖放介面有 {{domxref("DragEvent")}}、{{domxref("DataTransfer")}}、{{domxref("DataTransferItem")}} 以及 {{domxref("DataTransferItemList")}}。</p>
 
-<p>{{domxref("DragEvent")}} 介面擁有一個建構式及一個屬性－{{domxref("DragEvent.dataTransfer","dataTransfer")}} 屬性為一個 {{domxref("DataTransfer")}} 物件。{{domxref("DataTransfer")}} 物件包含了拖放事件的狀態，如正在進行的拖放事件類型（例如 <code>copy</code> 或 <code>move</code>）、拖放中的資料（一或多個項目）以及每一個<em>拖放項目（drag item）</em>的檔案類型（MIME type）。{{domxref("DataTransfer")}} 物件也擁有加入及移除拖放資料項目的方法。{{domxref("DragEvent")}} 與 {{domxref("DataTransfer")}} 介面應該是唯一須要加至應用程式中的 HTML 拖放功能。另外，請留意 Firefox 支援了一些 {{anch("Gecko specific interfaces","Gecko-specific 擴充")}}予 {{domxref("DataTransfer")}} 物件使用，雖然這些擴充只能在 Firefox 上作用。</p>
+<p>{{domxref("DragEvent")}} 介面擁有一個建構式及一個屬性－{{domxref("DragEvent.dataTransfer","dataTransfer")}} 屬性為一個 {{domxref("DataTransfer")}} 物件。{{domxref("DataTransfer")}} 物件包含了拖放事件的狀態，如正在進行的拖放事件類型（例如 <code>copy</code> 或 <code>move</code>）、拖放中的資料（一或多個項目）以及每一個<em>拖放項目（drag item）</em>的檔案類型（MIME type）。{{domxref("DataTransfer")}} 物件也擁有加入及移除拖放資料項目的方法。{{domxref("DragEvent")}} 與 {{domxref("DataTransfer")}} 介面應該是唯一須要加至應用程式中的 HTML 拖放功能。另外，請留意 Firefox 支援了一些 <a href="#gecko-specific_interfaces">Gecko-specific 擴充</a>予 {{domxref("DataTransfer")}} 物件使用，雖然這些擴充只能在 Firefox 上作用。</p>
 
 <p>每個 {{domxref("DataTransfer")}} 物件都包含了 {{domxref("DataTransfer.items","items")}} 屬性。此屬性乃 {{domxref("DataTransferItem")}} 物件的 {{domxref("DataTransferItemList","list")}}。而每個 {{domxref("DataTransferItem")}} 物件，則代表著一個<em>拖放單元</em>，每個拖放單元則擁有代表該資料<em>種類</em>的 {{domxref("DataTransferItem.kind","kind")}} 屬性（<code>string</code> 或 <code>file</code>）、還有表示該單元檔案類型（如 MIME）的{{domxref("DataTransferItem.type","type")}} 屬性。另外，{{domxref("DataTransferItem")}} 物件能取得拖放單元的資料。</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>{{domxref("DataTransfer")}} 與 {{domxref("DataTransferItem")}} 介面的最大不同，就是前者使用同步的 {{domxref("DataTransfer.getData","getData()")}} 方法訪問拖放單元的資料；後者則使用非同步的 {{domxref("DataTransferItem.getAsString","getAsString()")}} 方法訪問。</p>
 
-<p class="note">注意：{{domxref("DragEvent")}} 與 {{domxref("DataTransfer")}} 介面受廣泛的桌面瀏覽器支援。但只有少數瀏覽器支援 {{domxref("DataTransferItem")}} 與 {{domxref("DataTransferItemList")}} 介面。請參見 {{anch("Interoperability")}} 以取得有關拖放功能互通性的資訊。</p>
+<p>注意：{{domxref("DragEvent")}} 與 {{domxref("DataTransfer")}} 介面受廣泛的桌面瀏覽器支援。但只有少數瀏覽器支援 {{domxref("DataTransferItem")}} 與 {{domxref("DataTransferItemList")}} 介面。請參見 <a href="#interoperability">Interoperability</a> 以取得有關拖放功能互通性的資訊。</p>
 
 <h3 id="Gecko-specific_interfaces">Gecko-specific interfaces</h3>
 
@@ -237,6 +237,10 @@ function drop_handler(ev) {
  <li>Dragging and dropping files; All browsers: <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
  <li>A parking project using the Drag and Drop API: <a href="https://park.glitch.me/">https://park.glitch.me/</a> (You can edit <a href="https://glitch.com/edit/#!/park">here</a>)</li>
 </ul>
+
+<h2 id="規範">規範</h2>
+
+{{Specifications}}
 
 <h2 id="See_also" name="See_also">參見</h2>
 

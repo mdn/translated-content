@@ -16,13 +16,13 @@ translation_of: Web/API/Client
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
 
-<p><code>Client</code> 接口表示一个可执行的上下文，如{{domxref("Worker")}}或{{domxref("SharedWorker")}}。{{domxref("Window")}} 客户端由更具体的{{domxref("WindowClient")}}表示。 你可以从{{domxref("Clients.matchAll","Clients.matchAll()")}} 和{{domxref("Clients.get","Clients.get()")}}等方法获取<code>Client</code>/<code>WindowClient</code>对象。</p>
+<p><code>Client</code> 接口表示一个可执行的上下文，如{{domxref("Worker")}}或{{domxref("SharedWorker")}}。{{domxref("Window")}} 客户端由更具体的{{domxref("WindowClient")}}表示。你可以从{{domxref("Clients.matchAll","Clients.matchAll()")}} 和{{domxref("Clients.get","Clients.get()")}}等方法获取<code>Client</code>/<code>WindowClient</code>对象。</p>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
  <dt>{{domxref("Client.postMessage()")}}</dt>
- <dd>向client发送一条消息。</dd>
+ <dd>向 client 发送一条消息。</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -33,7 +33,7 @@ translation_of: Web/API/Client
  <dt>{{domxref("Client.type")}} {{readonlyInline}}</dt>
  <dd>客户端的类型，字符串形式。可能是"<code>window"</code>, "<code>worker"</code>, 或 "<code>sharedworker"。</code></dd>
  <dt>{{domxref("Client.url")}} {{readonlyInline}}</dt>
- <dd>客户端的URL，字符串形式。</dd>
+ <dd>客户端的 URL，字符串形式。</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
@@ -55,77 +55,12 @@ translation_of: Web/API/Client
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(27)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>type</code> property</td>
-   <td>{{CompatChrome(60)}}</td>
-   <td>{{ CompatGeckoDesktop("54.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(47)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(27)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>type</code> property</td>
-   <td>{{CompatChrome(60)}}</td>
-   <td>{{CompatChrome(60)}}</td>
-   <td>{{ CompatGeckoMobile("54.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(47)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<ul>
- <li>[1] Service workers (and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</li>
-</ul>
+{{Compat("api.Client")}}
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service Workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker准备好了么?</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker 准备好了么？</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
 </ul>

@@ -34,7 +34,7 @@ if (tOLeft &gt; 5) {
 }
 </pre>
 
-<p>这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的span标签的边界。</p>
+<p>这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的 span 标签的边界。</p>
 
 <p><img alt="Image:offsetLeft.jpg" class="internal" src="/@api/deki/files/790/=OffsetLeft.jpg"></p>
 
@@ -52,15 +52,15 @@ if (tOLeft &gt; 5) {
   var box = document.getElementById("box");
   var long = document.getElementById("long");
   //
-  // long.offsetLeft这个值就是span的offsetLeft.
-  // long.offsetParent 返回的是body（在chrome浏览器中测试）
-  // 如果id为long的span元素的父元素div，设置了position属性值，只要不为static,那么long.offsetParent就是div
+  // long.offsetLeft 这个值就是 span 的 offsetLeft.
+  // long.offsetParent 返回的是 body（在 chrome 浏览器中测试）
+  // 如果 id 为 long 的 span 元素的父元素 div，设置了 position 属性值，只要不为 static，那么 long.offsetParent 就是 div
 
   box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
   box.style.top = long.offsetTop + document.body.scrollTop + "px";
   box.style.width = long.offsetWidth + "px";
-  box.style.height = long.offsetHeight<span style="line-height: normal;"> + "px"</span><span style="line-height: normal;">;
-</span><span style="line-height: normal;">&lt;/script&gt; </span></pre>
+  box.style.height = long.offsetHeight + "px";
+&lt;/script&gt; </pre>
 
 <h2 id="Specification" name="Specification">规范</h2>
 
@@ -83,63 +83,7 @@ if (tOLeft &gt; 5) {
 
 <h2 id="Compatibility" name="Compatibility">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>根据规范，如果元素被隐藏（此元素的 style.display 或任何祖先为“none”），或者如果元素本身的 style.position 设置为“fixed”，则此属性将在Webkit上返回null 。</p>
-
-<p>在 Internet Explorer (9) 上如果元素的 <code>style.position</code> 是 <code>"fixed"，则该属性为 null </code>(样式 <code>display:none</code> 不会影响。)</p>
+{{Compat("api.HTMLElement.offsetLeft")}}
 
 <h2 id="See_also" name="See_also">相关链接</h2>
 

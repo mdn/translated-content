@@ -16,7 +16,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 <div>{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">歡迎來到 MDN 的 JavaScript 初學者課程！我們將在這個章節綜觀 JavaScript ，回答一些像是「它什麼？」和「可以使用它作什麼？」之的問題，並確保你了解 JavaScript 的特性。</p>
+<p>歡迎來到 MDN 的 JavaScript 初學者課程！我們將在這個章節綜觀 JavaScript ，回答一些像是「它什麼？」和「可以使用它作什麼？」之的問題，並確保你了解 JavaScript 的特性。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -209,19 +209,19 @@ function updateName() {
 &lt;/script&gt;</pre>
  </li>
  <li>現在，我們將在我們的 {{htmlelement("script")}} 元素中加入一些 JavaScript 程式，讓網頁能做些有趣的事，接者在「// JavaScript 將放在這裡」那行後面：
-  <pre class="brush: js line-numbers language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"DOMContentLoaded"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">let</span> para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'You clicked the button!'</span><span class="punctuation token">;</span>
-    document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>para<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+  <pre class="brush: js line-numbers language-js notranslate"><code class="language-js">document.addEventListener("DOMContentLoaded", function() {
+  function createParagraph() {
+    let para = document.createElement('p');
+    para.textContent = 'You clicked the button!';
+    document.body.appendChild(para);
+  }
 
-  <span class="keyword token">const</span> buttons <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">'button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  const buttons = document.querySelectorAll('button');
 
-  <span class="keyword token">for</span><span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> buttons<span class="punctuation token">.</span>length <span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    buttons<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> createParagraph<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  for(let i = 0; i &lt; buttons.length ; i++) {
+    buttons[i].addEventListener('click', createParagraph);
+  }
+});</code></pre>
  </li>
  <li>儲存你的檔案並且重新整理網頁，現在你會發現每次點擊按鈕，都會在下方產生一個新的文字段落。</li>
 </ol>
@@ -244,17 +244,17 @@ function updateName() {
   <pre class="brush: html notranslate">&lt;script src="script.js" async&gt;&lt;/script&gt;</pre>
  </li>
  <li>在 <code>script.js</code> 中，加入下面的程式碼：
-  <pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'You clicked the button!'</span><span class="punctuation token">;</span>
-  document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>para<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  <pre class="brush: js line-numbers language-js notranslate"><code class="language-js">function createParagraph() {
+  let para = document.createElement('p');
+  para.textContent = 'You clicked the button!';
+  document.body.appendChild(para);
+}
 
-<span class="keyword token">const</span> buttons <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">'button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+const buttons = document.querySelectorAll('button');
 
-<span class="keyword token">for</span><span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> buttons<span class="punctuation token">.</span>length <span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  buttons<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> createParagraph<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+for(let i = 0; i &lt; buttons.length ; i++) {
+  buttons[i].addEventListener('click', createParagraph);
+}</code></pre>
  </li>
  <li>儲存檔案並在你的瀏覽器執行重新整理，你應該會看到一樣的結果！雖然是一樣的結果，但現在我們是由外部的檔案來引入 JavaScript 程式。就組織程式碼，讓程式可以在多個 HTML 間重複被使用而言，這通常是好的作法。另外，因為少了一大堆程式碼在裡頭，也能夠讓 HTML 檔案更容易被閱讀。</li>
 </ol>
@@ -305,15 +305,15 @@ for (var i = 0; i &lt; buttons.length ; i++) {
 
 <p>在內部程式的範例中，你可以看到以下這樣結構的程式碼：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"DOMContentLoaded"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="operator token">...</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">document.addEventListener("DOMContentLoaded", function() {
+  ...
+});</code></pre>
 
 <p>這是一個事件偵聽器，它偵聽瀏覽器的「DOMContentLoaded」事件，它是在 HTML body 部分已經完全載入與解析發出。區塊內（... 的部分）的 JavaScript 直到事件被發出後才會執行，這樣子問題就被避開了。（你將會在這個課程中<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks/Events">學習到什麼是事件</a>）</p>
 
 <p>在外部程式的範例中，我們使用比較現代的 JavaScript 特性來解決這個問題，<code>defer</code> 屬性，它告訴瀏覽器碰到這種 <code>&lt;script&gt;</code> 標籤時，繼續下載後面其他的 HTML 內容。</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="operator token">&lt;</span>script src<span class="operator token">=</span><span class="string token">"script.js"</span> defer<span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>script<span class="operator token">&gt;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
 
 <p>在這個例子中，腳本（JavaScript 程式）與 HTML 會同時載入，所以程式將正確地執行。</p>
 
@@ -331,11 +331,11 @@ for (var i = 0; i &lt; buttons.length ; i++) {
 
 <p>例如你有以下的 <code>script</code> 元素</p>
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">async</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>js/vendor/jquery.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers language-html notranslate"><code class="language-html">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">async</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>js/script2.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+&lt;script async src="js/script2.js"&gt;&lt;/script&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">async</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>js/script3.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;script async src="js/script3.js"&gt;&lt;/script&gt;</code></pre>
 
 <p>你不能將元素的順序視為腳本載入順序。 <code>jquery.js</code> 可能會在 <code>script2.js</code> 與 <code>script3.js</code> 的之前或之後載入，在這個情況下，在腳本中依賴 <code>jquery</code> 的函數將會發生錯誤，因為被執行到的時候 <code>jquery</code> 還沒被定義（載入且解析完畢）。</p>
 
@@ -343,11 +343,11 @@ for (var i = 0; i &lt; buttons.length ; i++) {
 
 <p>使用 <code>defer</code> 屬性（如下所示）所載入的腳本，會在腳本與內容都下載完成後，依照出現順序被執行。</p>
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">defer</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>js/vendor/jquery.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers language-html notranslate"><code class="language-html">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">defer</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>js/script2.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+&lt;script defer src="js/script2.js"&gt;&lt;/script&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">defer</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>js/script3.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;script defer src="js/script3.js"&gt;&lt;/script&gt;</code></pre>
 
 <p>全部具有 <code>defer</code> 屬性的腳本會依據出現的順序載入。因此在第二個範例中，我們可以肯定 <code>jquery.js</code> 會在 <code>script2.js</code> 與 <code>script3.js</code> 之前被載入， <code>script2.js</code> 會在 <code>script3.js</code> 之前載入。在網頁的所有內容被載入完成之前，它是不會被執行的。當你的程式依賴著某些元素存在時（如：要調整頁面上一到多個元素），這個屬性很有用。</p>
 

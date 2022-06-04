@@ -5,14 +5,14 @@ translation_of: Web/API/AnalyserNode/smoothingTimeConstant
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>{{ domxref("AnalyserNode") }} 接口的 <strong><code>smoothingTimeConstant</code></strong> 属性是一个双精度浮点型(double)的值, 表示最后一个分析帧的平均常数. 它基本上是当前缓冲区和AnalyserNode处理的最后一个缓冲区之间的平均值, 并导致在值变化时随着时间推移得到一个更平滑的集合.</p>
+<p>{{ domxref("AnalyserNode") }} 接口的 <strong><code>smoothingTimeConstant</code></strong> 属性是一个双精度浮点型 (double) 的值， 表示最后一个分析帧的平均常数。它基本上是当前缓冲区和 AnalyserNode 处理的最后一个缓冲区之间的平均值，并导致在值变化时随着时间推移得到一个更平滑的集合。</p>
 
-<p><code>smoothingTimeConstant 属性的默认值为</code> <code>0.8</code>; 值的范围必须在 <code>0</code> ~ <code>1</code> 之间. 如果设置为0, 则不进行平均, 而值为1意味着 "在计算值时重叠上一个缓冲区和当前缓冲区相当多", 它基本上平滑了 {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} 调用的变化.</p>
+<p><code>smoothingTimeConstant 属性的默认值为</code> <code>0.8</code>; 值的范围必须在 <code>0</code> ~ <code>1</code> 之间。如果设置为 0，则不进行平均，而值为 1 意味着 "在计算值时重叠上一个缓冲区和当前缓冲区相当多", 它基本上平滑了 {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} 调用的变化。</p>
 
-<p>在技术术语中, 我们应用一个 <a href="http://webaudio.github.io/web-audio-api/#blackman-window">布莱克曼窗</a> 并随着时间推移去平滑值. 大部分情况下, 默认值是较好的.</p>
+<p>在技术术语中，我们应用一个 <a href="http://webaudio.github.io/web-audio-api/#blackman-window">布莱克曼窗</a> 并随着时间推移去平滑值。大部分情况下，默认值是较好的。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>:  如果设置了 0~1 范围外的值, 将会抛出异常<code>INDEX_SIZE_ERR</code>.</p>
+<p><strong>注意</strong>:  如果设置了 0~1 范围外的值，将会抛出异常<code>INDEX_SIZE_ERR</code>.</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -24,15 +24,15 @@ analyser.smoothingTimeConstant = 1;
 
 <h3 id="值类型">值类型</h3>
 
-<p>双精度浮点型(double).</p>
+<p>双精度浮点型 (double).</p>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子展示了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext" title="AudioContext接口表示由音频模块连接而成的音频处理图，每个模块对应一个AudioNode。AudioContext可以控制它所包含的节点的创建，以及音频处理、解码操作的执行。做任何事情之前都要先创建AudioContext对象，因为一切都发生在这个环境之中。"><code>AudioContext</code></a> 创建一个 <code>AnalyserNode</code>, 然后用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame" title="window.requestAnimationFrame()这个方法是用来在页面重绘之前，通知浏览器调用一个指定的函数，以满足开发者操作动画的需求。这个方法接受一个函数为参，该函数会在重绘前调用。"><code>requestAnimationFrame</code></a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas" title="&lt;canvas>元素可被用来通过脚本（通常是JavaScript）绘制图形。比如,它可以被用来绘制图形,制作图片集合,甚至用来实现动画效果。你可以(也应该)在元素标签内写入可提供替代的的代码内容，这些内容将会在在旧的、不支持&lt;canvas>元素的浏览器或是禁用了JavaScript的浏览器内渲染并展现。"><code>&lt;canvas&gt;</code></a> 去反复收集当前音频的频率数据, 并绘制为一个柱状风格的输出(频谱).</p>
+<p>下面的例子展示了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext" title="AudioContext接口表示由音频模块连接而成的音频处理图，每个模块对应一个AudioNode。AudioContext可以控制它所包含的节点的创建，以及音频处理、解码操作的执行。做任何事情之前都要先创建AudioContext对象，因为一切都发生在这个环境之中。"><code>AudioContext</code></a> 创建一个 <code>AnalyserNode</code>, 然后用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame" title="window.requestAnimationFrame()这个方法是用来在页面重绘之前，通知浏览器调用一个指定的函数，以满足开发者操作动画的需求。这个方法接受一个函数为参，该函数会在重绘前调用。"><code>requestAnimationFrame</code></a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas" title="&lt;canvas>元素可被用来通过脚本（通常是JavaScript）绘制图形。比如,它可以被用来绘制图形,制作图片集合,甚至用来实现动画效果。你可以(也应该)在元素标签内写入可提供替代的的代码内容，这些内容将会在在旧的、不支持&lt;canvas>元素的浏览器或是禁用了JavaScript的浏览器内渲染并展现。"><code>&lt;canvas&gt;</code></a> 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).</p>
 
-<p>更多的例子/信息, 查看 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128行~205行</a>).</p>
+<p>更多的例子/信息，查看 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
 
-<p><code>如果你对 smoothingTimeConstant()</code> 的效果好奇, 可以尝试克隆上面的例子并设置 "<code>analyser.smoothingTimeConstant = 0;"</code> 代替. 你会发现值的变化更加快速.</p>
+<p><code>如果你对 smoothingTimeConstant()</code> 的效果好奇，可以尝试克隆上面的例子并设置 "<code>analyser.smoothingTimeConstant = 0;"</code> 代替。你会发现值的变化更加快速。</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -75,75 +75,11 @@ draw();</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AnalyserNode-smoothingTimeConstant', 'smoothingTimeConstant')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AnalyserNode.smoothingTimeConstant")}}
 
 <h2 id="相关内容">相关内容</h2>
 

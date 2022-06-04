@@ -104,8 +104,8 @@ function displayDataByIndex() {
 
 | Spécification                                                                                            | État                             | Commentaires |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbindex-count", "count()")}}                         | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbindex-count", "count()")}}                         | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 

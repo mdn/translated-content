@@ -5,15 +5,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>
 
-<p id="網格(Grid)">網格(Grid)</p>
+<p>網格(Grid)</p>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">在開始繪圖前，我們必須先了解畫布 (canvas) 網格，或著是說座標空間。在前一頁教學中的 HTML 範本有一個寬150 pixels (像素)、高150 pixels 的畫布。如右圖，你在畫布預設網格上繪圖，網格上 1 單位相當於畫布上 1 pixel，網格的原點 (座標 (0, 0) ) 坐落於左上角，所有元素定位皆相對於此左上角原點，所以藍色方塊的位置為從左往右推 x pixels、從上往下推 y pixels (亦即座標 (x, y) )。現在我們先專注在預設設定上，之後我們會看到如何轉換原點位置、旋轉網格以及縮放網格。</p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
 
 <h2 id="畫矩形">畫矩形</h2>
 
@@ -173,7 +167,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 <p>移除moveTo()便可以看到線條連結起來。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 有關arc()，請參照下方 {{anch("Arcs")}} .</p>
+<p><strong>Note:</strong> 有關arc()，請參照下方<a href="#弧形">弧形</a>。</p>
 </div>
 
 <h3 id="線條">線條</h3>
@@ -290,7 +284,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h3 id="貝茲曲線(Bezier_curve)與二次曲線(quadratic_curve)">貝茲曲線(Bezier curve)與二次曲線(quadratic curve)</h3>
 
-<p>二次與三次<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" title="http://en.wikipedia.org/wiki/B%C3%A9zier_curve"><span class="external">貝茲曲線(Bézier curves</span>)</a>是另一種可用來構成複雜有機圖形的路徑。</p>
+<p>二次與三次<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" title="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">貝茲曲線(Bézier curves)</a>是另一種可用來構成複雜有機圖形的路徑。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}</dt>

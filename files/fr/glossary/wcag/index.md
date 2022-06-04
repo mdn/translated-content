@@ -15,9 +15,9 @@ WCAG 2.0, qui a replacé WCAG 1.0, a été publié en tant que recommandation W3
 
 WCAG utilise trois niveaux d'accessibilité :
 
-- Priorité 1 : Les développeurs web **doivent** satisfaire ces conditions, sinon il sera impossible à un ou plusieurs groupes d'accéder au contenu du web. Atteindre ce niveau est désigné par A.
-- Priorité 2 : Les développeurs web **devraient** satisfaire ces conditions, sinon certains groupes éprouveront des difficultés à accéder au contenu du web. Atteindre ce niveau est désigné par AA ou double A.
-- Priorité 3 : Les développeurs web **peuvent** satisfaire ces conditions dans le but de faciliter l'accès au web pour certains groupes. Atteindre ce niveau est désigné par AAA ou triple A.
+- Priorité 1 : Les développeurs web **doivent** satisfaire ces conditions, sinon il sera impossible à un ou plusieurs groupes d'accéder au contenu du web. Atteindre ce niveau est désigné par A.
+- Priorité 2 : Les développeurs web **devraient** satisfaire ces conditions, sinon certains groupes éprouveront des difficultés à accéder au contenu du web. Atteindre ce niveau est désigné par AA ou double A.
+- Priorité 3 : Les développeurs web **peuvent** satisfaire ces conditions dans le but de faciliter l'accès au web pour certains groupes. Atteindre ce niveau est désigné par AAA ou triple A.
 
 ## Pour approfondir
 

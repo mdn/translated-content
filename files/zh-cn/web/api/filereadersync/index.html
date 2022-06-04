@@ -10,23 +10,23 @@ translation_of: Web/API/FileReaderSync
 
 <p><code>FileReaderSync</code>接口允许以同步的方式读取<code>File</code>或<code>Blob</code>对象中的内容。</p>
 
-<p>该接口只在<a href="/zh-cn/DOM/Worker" title="Worker">workers</a>里<a href="/zh-cn/DOM/Worker/Functions_available_to_workers" title="https://developer.mozilla.org/zh-cn/DOM/Worker/Functions_available_to_workers">可用</a>,因为在主线程里进行同步I/O操作可能会阻塞用户界面。</p>
+<p>该接口只在<a href="/zh-cn/DOM/Worker" title="Worker">workers</a>里<a href="/zh-cn/DOM/Worker/Functions_available_to_workers" title="https://developer.mozilla.org/zh-cn/DOM/Worker/Functions_available_to_workers">可用</a>,因为在主线程里进行同步 I/O 操作可能会阻塞用户界面。</p>
 
 <h2 id="Method_overview" name="Method_overview">方法概述</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>ArrayBuffer <a href="https://developer.mozilla.org/en/DOM/FileReaderSync#readAsArrayBuffer()" title="en/DOM/FileReaderSync#readAsArrayBuffer()">readAsArrayBuffer</a>(Blob blob);</code>{{ gecko_minversion_inline("8.0") }}</td>
+   <td><code>ArrayBuffer <a href="https://developer.mozilla.org/en/DOM/FileReaderSync#readAsArrayBuffer()" title="en/DOM/FileReaderSync#readAsArrayBuffer()">readAsArrayBuffer</a>(Blob blob);</code></td>
   </tr>
   <tr>
-   <td><code>DOMString <a href="/zh-cn/DOM/FileReaderSync#readAsBinaryString()" title="zh-cn/DOM/FileReaderSync#readAsBinaryString()">readAsBinaryString</a>(Blob blob);</code>{{ gecko_minversion_inline("8.0") }}</td>
+   <td><code>DOMString <a href="/zh-cn/DOM/FileReaderSync#readAsBinaryString()" title="zh-cn/DOM/FileReaderSync#readAsBinaryString()">readAsBinaryString</a>(Blob blob);</code></td>
   </tr>
   <tr>
-   <td><code>DOMString</code><code> </code><code><a href="/zh-cn/DOM/FileReaderSync#readAsText()" title="zh-cn/DOM/FileReaderSync#readAsText()">readAsText</a></code><code>(Blob blob, optional DOMString encoding);</code>{{ gecko_minversion_inline("8.0") }}</td>
+   <td><code>DOMString</code><code> </code><code><a href="/zh-cn/DOM/FileReaderSync#readAsText()" title="zh-cn/DOM/FileReaderSync#readAsText()">readAsText</a></code><code>(Blob blob, optional DOMString encoding);</code></td>
   </tr>
   <tr>
-   <td><code>DOMString <a href="/zh-cn/DOM/FileReaderSync#readAsDataURL()" title="zh-cn/DOM/FileReaderSync#readAsDataURL()">readAsDataURL</a>(Blob blob);</code>{{ gecko_minversion_inline("8.0") }}</td>
+   <td><code>DOMString <a href="/zh-cn/DOM/FileReaderSync#readAsDataURL()" title="zh-cn/DOM/FileReaderSync#readAsDataURL()">readAsDataURL</a>(Blob blob);</code></td>
   </tr>
  </tbody>
 </table>
@@ -39,7 +39,7 @@ translation_of: Web/API/FileReaderSync
 
 <h3 id="readAsArrayBuffer()">readAsArrayBuffer()</h3>
 
-<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象中的内容。当读取完毕后，返回一个 <code><a href="../JavaScript_typed_arrays/ArrayBuffer" rel="internal" title="/zh-cn/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误,则会抛出相关的异常。</p>
+<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象中的内容。当读取完毕后，返回一个 <code><a href="../JavaScript_typed_arrays/ArrayBuffer" rel="internal" title="/zh-cn/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
 
 <pre class="eval">ArrayBuffer readAsArrayBuffer(
   in Blob blob
@@ -50,22 +50,22 @@ translation_of: Web/API/FileReaderSync
 
 <dl>
  <dt><code>blob</code></dt>
- <dd>将要被读取内容的<code><a href="Blob" rel="custom">Blob</a></code> 或 <code><a href="File" rel="custom">File</a></code> 对象.</dd>
+ <dd>将要被读取内容的<code><a href="Blob" rel="custom">Blob</a></code> 或 <code><a href="File" rel="custom">File</a></code> 对象。</dd>
 </dl>
 
 <h4 id="返回值">返回值</h4>
 
-<p>一个 <code><a href="../JavaScript_typed_arrays/ArrayBuffer" rel="internal" title="/zh-cn/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 对象,包含了被读取文件的内容.</p>
+<p>一个 <code><a href="../JavaScript_typed_arrays/ArrayBuffer" rel="internal" title="/zh-cn/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 对象，包含了被读取文件的内容。</p>
 
 <h4 id="异常">异常</h4>
 
-<p>该方法可能引发下述异常:</p>
+<p>该方法可能引发下述异常：</p>
 
 <dl>
  <dt><code>NotFoundError</code></dt>
- <dd>当<code><a href="Blob" rel="custom">Blob</a></code>或<code><a href="File" rel="custom">File</a></code>对象指代的资源无法找到时,触发该异常.比如,该资源已被删除的情况下.</dd>
+ <dd>当<code><a href="Blob" rel="custom">Blob</a></code>或<code><a href="File" rel="custom">File</a></code>对象指代的资源无法找到时，触发该异常。比如，该资源已被删除的情况下。</dd>
  <dt><code>SecurityError</code></dt>
- <dd>当检测到下述几种问题情形时触发该异常:
+ <dd>当检测到下述几种问题情形时触发该异常：
  <ul style="margin-left: 40px;">
   <li>资源已被第三方修改；</li>
   <li>同时在进行多个读取操作；</li>
@@ -75,14 +75,14 @@ translation_of: Web/API/FileReaderSync
  <dt><code>NotReadableError</code></dt>
  <dd>当资源由于权限问题不能被读取时触发该异常。比如并发锁。</dd>
  <dt><code>EncodingError</code></dt>
- <dd>当资源是一个data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
+ <dd>当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
 </dl>
 
 <h3 id="readAsBinaryString()_deprecated_inline()">readAsBinaryString() {{ deprecated_inline() }}</h3>
 
-<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象的内容。当读取完毕后，返回一个<a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的二进制数据.如果在读取过程中发生了错误,则会抛出相关的异常。</p>
+<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象的内容。当读取完毕后，返回一个<a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的二进制数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
 
-<div class="note"><strong>注意</strong> <strong>:</strong>该方法已被废弃，应该使用<code>readAsArrayBuffer()</code>来替代.</div>
+<div class="note"><strong>注意</strong> <strong>:</strong>该方法已被废弃，应该使用<code>readAsArrayBuffer()</code>来替代。</div>
 
 <pre class="eval">String readAsBinaryString(
   in Blob blob
@@ -93,12 +93,12 @@ translation_of: Web/API/FileReaderSync
 
 <dl>
  <dt><code>blob</code></dt>
- <dd>将要被读取内容的<code><a href="Blob" rel="custom">Blob</a></code> 或 <code><a href="File" rel="custom">File</a></code> 对象.</dd>
+ <dd>将要被读取内容的<code><a href="Blob" rel="custom">Blob</a></code> 或 <code><a href="File" rel="custom">File</a></code> 对象。</dd>
 </dl>
 
 <h4 id="返回值_2">返回值</h4>
 
-<p><code>一个</code><a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象,包含了从资源中读取的二进制数据.</p>
+<p><code>一个</code><a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，包含了从资源中读取的二进制数据。</p>
 
 <h4 class="editable" id="异常_2">异常</h4>
 
@@ -118,12 +118,12 @@ translation_of: Web/API/FileReaderSync
  <dt><code>NotReadableError</code></dt>
  <dd>当资源由于权限问题不能被读取时触发该异常（比如并发锁）。</dd>
  <dt><code>EncodingError</code></dt>
- <dd>当资源是一个data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
+ <dd>当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
 </dl>
 
 <h3 id="readAsText()">readAsText()</h3>
 
-<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象的内容。当读取完毕后，返回一个<a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的内容数据。可选参数 <strong><code>encoding</code></strong> 用来表示文件的编码类型，如果省略该参数,则该方法会使用一些算法自动检测文件的编码类型.如果在读取过程中发生了错误,则会抛出相关的异常。</p>
+<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象的内容。当读取完毕后，返回一个<a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的内容数据。可选参数 <strong><code>encoding</code></strong> 用来表示文件的编码类型，如果省略该参数，则该方法会使用一些算法自动检测文件的编码类型。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
 
 <pre class="eval">String readAsText(
   in Blob blob,
@@ -137,7 +137,7 @@ translation_of: Web/API/FileReaderSync
  <dt><code>blob</code></dt>
  <dd>将要被读取内容的<code><a href="Blob" rel="custom">Blob</a></code> 或 <code><a href="File" rel="custom">File</a></code> 对象。</dd>
  <dt><code>encoding</code></dt>
- <dd>可选参数,表示被读取文件的编码类型, 比如<strong>GBK</strong> 或者 <strong>UTF-8。</strong></dd>
+ <dd>可选参数，表示被读取文件的编码类型，比如<strong>GBK</strong> 或者 <strong>UTF-8。</strong></dd>
 </dl>
 
 <h4 id="返回值_3">返回值</h4>
@@ -163,9 +163,9 @@ translation_of: Web/API/FileReaderSync
  <dd>当资源由于权限问题不能被读取时触发该异常（比如并发锁）。</dd>
 </dl>
 
-<h3 class="editable" id="readAsDataURL()"><span>readAsDataURL()</span></h3>
+<h3 class="editable" id="readAsDataURL()">readAsDataURL()</h3>
 
-<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象的内容。当读取完毕后，返回一个Data URL格式的<a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
+<p>该方法可以读取指定的 <code><a href="Blob" rel="custom">Blob</a></code> 或者 <code><a href="File" rel="custom">File</a></code>对象的内容。当读取完毕后，返回一个 Data URL 格式的<a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。</p>
 
 <pre class="eval">String readAsDataURL(
   in Blob file
@@ -173,7 +173,7 @@ translation_of: Web/API/FileReaderSync
 </pre>
 
 <div id="section_5">
-<h4 class="editable" id="参数_4"><span>参数</span></h4>
+<h4 class="editable" id="参数_4">参数</h4>
 
 <dl>
  <dt><code>blob</code></dt>
@@ -182,9 +182,9 @@ translation_of: Web/API/FileReaderSync
 </div>
 
 <div id="section_6">
-<h4 class="editable" id="返回值_4"><span>返回值</span></h4>
+<h4 class="editable" id="返回值_4">返回值</h4>
 
-<p><code>一个</code><a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，data URL格式，包含了被读取文件的内容。</p>
+<p><code>一个</code><a href="/zh-cn/DOM/DOMString" title="DOMString"><code>DOMString</code></a>对象，data URL 格式，包含了被读取文件的内容。</p>
 </div>
 
 <h4 class="editable" id="异常_4">异常</h4>
@@ -199,13 +199,13 @@ translation_of: Web/API/FileReaderSync
  <ul style="margin-left: 40px;">
   <li>资源已被第三方修改；</li>
   <li>同时在进行多个读取操作；</li>
-  <li>资源的安全级别过高,不允许浏览器进行操作（比如系统文件）。</li>
+  <li>资源的安全级别过高，不允许浏览器进行操作（比如系统文件）。</li>
  </ul>
  </dd>
  <dt><code>NotReadableError</code></dt>
  <dd>当资源由于权限问题不能被读取时触发该异常（比如并发锁）。</dd>
  <dt><code>EncodingError</code></dt>
- <dd>当资源是一个data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
+ <dd>当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

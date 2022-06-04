@@ -15,13 +15,13 @@ translation_of: Web/API/File_and_Directory_Entries_API
 <p>文件与目录条目 API 模拟一个 web 应用可以导航和访问的本地文件系统。你在虚拟的沙箱文件系统中可以开发一个读、写、创建文件或者目录的应用。</p>
 
 <div class="note">
-<p>因为这是一个非标准 API，它的规范目前还没有在标准的轨道上，所以要记住，并不是所有的浏览器都实现了它，而且那些实现了的浏览器可能只实现了它的一小部分。有关详细信息，请查看{{anch("浏览器兼容性")}}部分。</p>
+<p>因为这是一个非标准 API，它的规范目前还没有在标准的轨道上，所以要记住，并不是所有的浏览器都实现了它，而且那些实现了的浏览器可能只实现了它的一小部分。有关详细信息，请查看<a href="#浏览器兼容性">浏览器兼容性</a>部分。</p>
 </div>
 
-<p>根据您希望的是异步行为还是同步行为，存在两个非常相似的 API。同步 API 可在 {{domxref("Worker")}} 中使用，并将返回所需的值。异步 API 不会阻塞和函数，API不会返回值;相反，您将需要提供一个回调函数，以便在响应到达时处理它。</p>
+<p>根据您希望的是异步行为还是同步行为，存在两个非常相似的 API。同步 API 可在 {{domxref("Worker")}} 中使用，并将返回所需的值。异步 API 不会阻塞和函数，API 不会返回值;相反，您将需要提供一个回调函数，以便在响应到达时处理它。</p>
 
 <div class="warning">
-<p>Firefox 实现的文件与目录条目 API 非常有限；不支持创建文件。仅用于访问用户在 file {{HTMLElement("input")}} 元素中选择的文件(也请参阅 {{domxref("HTMLInputElement")}} 中选择的文件)，或使用拖放将文件或目录提供给 Web 站点或应用程序时。Firefox 也没有实现同步 API。仔细检查您使用的 API 的任何部分的浏览器兼容性，并查看 Firefox 中文件与目录条目 API 支持的更多细节。</p>
+<p>Firefox 实现的文件与目录条目 API 非常有限；不支持创建文件。仅用于访问用户在 file {{HTMLElement("input")}} 元素中选择的文件 (也请参阅 {{domxref("HTMLInputElement")}} 中选择的文件)，或使用拖放将文件或目录提供给 Web 站点或应用程序时。Firefox 也没有实现同步 API。仔细检查您使用的 API 的任何部分的浏览器兼容性，并查看 Firefox 中文件与目录条目 API 支持的更多细节。</p>
 </div>
 
 <h2 id="访问文件系统">访问文件系统</h2>
@@ -35,7 +35,7 @@ translation_of: Web/API/File_and_Directory_Entries_API
 
 <h2 id="异步_API">异步 API</h2>
 
-<p>大多数操作都应该使用异步API，以防止在主线程上使用文件系统访问时阻塞整个浏览器。它包括以下接口:</p>
+<p>大多数操作都应该使用异步 API，以防止在主线程上使用文件系统访问时阻塞整个浏览器。它包括以下接口：</p>
 
 <dl>
  <dt>{{domxref("FileSystem")}}</dt>
@@ -49,14 +49,14 @@ translation_of: Web/API/File_and_Directory_Entries_API
  <dt>{{domxref("FileSystemDirectoryReader")}}</dt>
  <dd>该接口通过调用 {{domxref("FileSystemDirectoryEntry.createReader()")}} 创建，提供了允许读取目录内容的功能。</dd>
  <dt>{{domxref("FileSystemFlags")}}</dt>
- <dd>定义一组值，这些值用于在调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">文件和目录API</a>中的某些方法时指定选项标志。</dd>
+ <dd>定义一组值，这些值用于在调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">文件和目录 API</a>中的某些方法时指定选项标志。</dd>
  <dt>{{DOMxRef("FileError")}} {{Obsolete_Inline}}</dt>
  <dd>表示由异步文件系统调用生成的错误。</dd>
 </dl>
 
 <p>还有两个全局函数（目前不属于规范的一部分，仅在 Google Chrome 中被实现）。它们在 {{domxref("Window")}} 对象上可用，并在{{domxref("LocalFileSystem")}}: <code>requestFileSystem()</code> 和 <code>resolveLocalFileSystemURL()</code> 中实现。</p>
 
-<h2 id="同步API">同步API</h2>
+<h2 id="同步API">同步 API</h2>
 
 <p>同步 API 应该只用于 {{domxref("Worker")}} 中；在执行完毕前，这些调用会阻塞运行，并且只会简单地返回结果，而不是使用回调。在主线程上使用它们会阻塞整个浏览器，这很不明智。否则，下面的接口将镜像来自异步 API 的接口。</p>
 

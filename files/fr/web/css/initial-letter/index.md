@@ -61,7 +61,7 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ```html
 <p class="exemple">
-  Un grand rosier se trouvait à l’entrée du jardin ;
+  Un grand rosier se trouvait à l’entrée du jardin&nbsp;;
   les roses qu’il portait étaient blanches, mais trois
   jardiniers étaient en train de les peindre en rouge.
 </p>

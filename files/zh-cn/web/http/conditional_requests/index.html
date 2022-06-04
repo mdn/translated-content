@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Conditional_requests
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p class="summary">在 HTTP 协议中有一个“<strong>条件式请求</strong>”的概念，在这类请求中，请求的结果，甚至请求成功的状态，都会随着验证器与受影响资源的比较结果的变化而变化。这类请求可以用来验证缓存的有效性，省去不必要的控制手段，以及验证文件的完整性，例如在断点续传的场景下或者在上传或者修改服务器端的文件的时候避免更新丢失问题。</p>
+<p>在 HTTP 协议中有一个“<strong>条件式请求</strong>”的概念，在这类请求中，请求的结果，甚至请求成功的状态，都会随着验证器与受影响资源的比较结果的变化而变化。这类请求可以用来验证缓存的有效性，省去不必要的控制手段，以及验证文件的完整性，例如在断点续传的场景下或者在上传或者修改服务器端的文件的时候避免更新丢失问题。</p>
 
 <h2 id="基本原理">基本原理</h2>
 
@@ -52,19 +52,19 @@ translation_of: Web/HTTP/Conditional_requests
 
 <h2 id="条件首部">条件首部</h2>
 
-<p><span><span>一些被称为条件首部的 HTTP 首部，可以引发条件请求。它们是：</span></span></p>
+<p>一些被称为条件首部的 HTTP 首部，可以引发条件请求。它们是：</p>
 
 <dl>
  <dt>{{HTTPHeader("If-Match")}}</dt>
- <dd><span><span>如果远端资源的实体标签与</span></span><span><span>在</span></span> {{HTTPHeader("ETag")}} <span><span>这</span></span><span><span>个首部中列出的值相同的话，表示条件匹配成功。默认地，除非实体标签带有 'W/' 前缀，否者它将会执行强验证。</span></span></dd>
+ <dd>如果远端资源的实体标签与在 {{HTTPHeader("ETag")}} 这个首部中列出的值相同的话，表示条件匹配成功。默认地，除非实体标签带有 'W/' 前缀，否者它将会执行强验证。</dd>
  <dt>{{HTTPHeader("If-None-Match")}}</dt>
- <dd><span><span>如果远端资源的实体标签与在</span></span> {{HTTPHeader("ETag")}} <span><span>这个首部中列出的值都不相同的话，表示条件匹配成功。默认地，除非实体标签带有 'W/' 前缀，否者它将会执行强验证。</span></span></dd>
+ <dd>如果远端资源的实体标签与在 {{HTTPHeader("ETag")}} 这个首部中列出的值都不相同的话，表示条件匹配成功。默认地，除非实体标签带有 'W/' 前缀，否者它将会执行强验证。</dd>
  <dt>{{HTTPHeader("If-Modified-Since")}}</dt>
- <dd><span><span>如果远端资源的</span></span> {{HTTPHeader("Last-Modified")}} <span><span>首部标识的日期比在该首部中列出的值要更晚，表示条件匹配成功。</span></span></dd>
+ <dd>如果远端资源的 {{HTTPHeader("Last-Modified")}} 首部标识的日期比在该首部中列出的值要更晚，表示条件匹配成功。</dd>
  <dt>{{HTTPHeader("If-Unmodified-Since")}}</dt>
- <dd><span><span>如果远端资源的</span></span> HTTPHeader("Last-Modified")}} <span><span>首部标识的日期比在该首部中列出的值要更早或相同，表示条件匹配成功。</span></span></dd>
+ <dd>如果远端资源的 HTTPHeader("Last-Modified")}} 首部标识的日期比在该首部中列出的值要更早或相同，表示条件匹配成功。</dd>
  <dt>{{HTTPHeader("If-Range")}}</dt>
- <dd><span><span>与</span></span> {{HTTPHeader("If-Match")}} <span><span>或</span></span>  {{HTTPHeader("If-Unmodified-Since")}} 相似<span><span>，但是只能含有一个实体标签或者日期值。如果匹配失败，则条件请求宣告失败，此时将不会返回</span></span> {{HTTPStatus("206")}} <code>Partial Content</code> <span><span>响应码，而是返回</span></span> {{HTTPStatus("200")}} <code>OK</code> <span><span>响应码，以及完整的资源。</span></span></dd>
+ <dd>与 {{HTTPHeader("If-Match")}} 或  {{HTTPHeader("If-Unmodified-Since")}} 相似，但是只能含有一个实体标签或者日期值。如果匹配失败，则条件请求宣告失败，此时将不会返回 {{HTTPStatus("206")}} <code>Partial Content</code> 响应码，而是返回 {{HTTPStatus("200")}} <code>OK</code> 响应码，以及完整的资源。</dd>
 </dl>
 
 <h2 id="应用场景">应用场景</h2>
@@ -79,11 +79,11 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p>只要缓存未失效，就不会发起任何请求。但是一旦失效——主要是由 {{HTTPHeader("Cache-Control")}} 首部控制——客户端就不会采用缓存值而是发起条件式请求。验证器的值会用作 {{HTTPHeader("If-Modified-Since")}} 和 {{HTTPHeader("If-Match")}} 首部字段的参数。</p>
 
-<p><span><span>假如资源未发生变化，服务器就返回状态码为 </span></span> {{HTTPStatus("304")}} <code>Not Modified</code>  的响应。<span><span>这样相当于对缓存资源进行了刷新，而客户端则采用被缓存的资源。尽管这里有一次请求/响应往返会消耗一定的资源，但是这样做比将整个资源通过网络再传输一遍更高效。</span></span></p>
+<p>假如资源未发生变化，服务器就返回状态码为  {{HTTPStatus("304")}} <code>Not Modified</code>  的响应。这样相当于对缓存资源进行了刷新，而客户端则采用被缓存的资源。尽管这里有一次请求/响应往返会消耗一定的资源，但是这样做比将整个资源通过网络再传输一遍更高效。</p>
 
 <p><img alt="With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same." src="https://mdn.mozillademos.org/files/13731/HTTPCache2.png" style="height: 265px; width: 741px;"></p>
 
-<p><span><span>假如资源发生了变化，服务器就直接返回</span></span> {{HTTPStatus("200")}}<code> OK</code> <span><span>响应码，连同新版本的资源，就像是没有应用条件式请求一样；客户端则采用新版本资源（并将其缓存起来）。</span></span></p>
+<p>假如资源发生了变化，服务器就直接返回 {{HTTPStatus("200")}}<code> OK</code> 响应码，连同新版本的资源，就像是没有应用条件式请求一样；客户端则采用新版本资源（并将其缓存起来）。</p>
 
 <p><img alt="In the case where the resource was changed, it is sent back as if the request wasn't conditional." src="https://mdn.mozillademos.org/files/13733/HTTPCache3.png"></p>
 
@@ -137,7 +137,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p><img alt="Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it." src="https://mdn.mozillademos.org/files/13753/HTTPFirst.png" style="height: 311px; width: 895px;"></p>
 
-<p><code>If-None-Match</code> 首部只可应用于兼容 HTTP/1.1 （及后续版本）的服务器。假如不确定所访问的服务器是否兼容，需要首先向要访问的资源发送一次 {{HTTPMethod("HEAD")}} 请求来进行确认。</p>
+<p><code>If-None-Match</code> 首部只可应用于兼容 HTTP/1.1（及后续版本）的服务器。假如不确定所访问的服务器是否兼容，需要首先向要访问的资源发送一次 {{HTTPMethod("HEAD")}} 请求来进行确认。</p>
 
 <h2 id="结语">结语</h2>
 

@@ -182,7 +182,7 @@ Maintenant nous devons capturer la photo en utilisant le canvas. Nous assignons 
   }, false);
 ```
 
-Dans cette fonction nous re-assignons la taille du canvas à la taille de la vidéo, ce qui l'efface,  et nous obtenons une image de la vidéo que nous copions sur le canvas. Ensuite nous devons transformer les données du canvas en une URI de données avec un entête PNG, et positionner l'attribut src de la photo à cette URL.
+Dans cette fonction nous re-assignons la taille du canvas à la taille de la vidéo, ce qui l'efface,  et nous obtenons une image de la vidéo que nous copions sur le canvas. Ensuite nous devons transformer les données du canvas en une URI de données avec un entête PNG, et positionner l'attribut src de la photo à cette URL.
 
 ```js
   function takepicture() {

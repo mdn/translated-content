@@ -5,9 +5,9 @@ translation_of: Web/API/UIEvent/isChar
 ---
 <p>{{ ApiRef() }}</p>
 <div class="warning">
- <strong>警告:</strong> 不要使用该属性,该属性有一个已知的bug,就是它始终返回<code>false</code>,从不返回<code>true</code>.查看<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=312552" title="https://bugzilla.mozilla.org/show_bug.cgi?id=312552">https://bugzilla.mozilla.org/show_bug.cgi?id=312552</a></div>
+ <strong>警告：</strong> 不要使用该属性，该属性有一个已知的 bug，就是它始终返回<code>false</code>,从不返回<code>true</code>.查看<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=312552" title="https://bugzilla.mozilla.org/show_bug.cgi?id=312552">https://bugzilla.mozilla.org/show_bug.cgi?id=312552</a></div>
 <h3 id="Summary" name="Summary">概述</h3>
-<p>返回一个布尔值,表明该事件是否是由一个字符按键触发的.</p>
+<p>返回一个布尔值，表明该事件是否是由一个字符按键触发的。</p>
 <h3 id="Syntax" name="Syntax">语法</h3>
 <pre class="eval">bool = event.isChar
 </pre>
@@ -17,7 +17,6 @@ translation_of: Web/API/UIEvent/isChar
  }
 </pre>
 <h3 id="Notes" name="Notes">备注</h3>
-<p>一些常用的组合键可能会触发键盘事件,但是不会产生任何字符(例如:CTRL + ALT + ?).在这种情况下,isChar返回false.isChar常用于判断用户在一个文本输入框内输入的是否为一个字符.</p>
+<p>一些常用的组合键可能会触发键盘事件，但是不会产生任何字符 (例如:CTRL + ALT + ?).在这种情况下，isChar 返回 false.isChar 常用于判断用户在一个文本输入框内输入的是否为一个字符。</p>
 <h3 id="Specification" name="Specification">规范</h3>
 <p>不属于任何公开的规范</p>
-<p>{{ languages( {"pl": "pl/DOM/event.isChar","en": "en/DOM/event.isChar" } ) }}</p>

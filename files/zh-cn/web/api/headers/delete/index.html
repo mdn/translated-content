@@ -5,20 +5,20 @@ translation_of: Web/API/Headers/delete
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
 
-<p><strong><code>delete()</code></strong> 方法可以从Headers对象中删除指定header.</p>
+<p><strong><code>delete()</code></strong> 方法可以从 Headers 对象中删除指定 header.</p>
 
-<p>下列原因将会导致该方法抛出一个<span style="line-height: 19.0909080505371px;">{{jsxref("TypeError")}}:</span></p>
+<p>下列原因将会导致该方法抛出一个{{jsxref("TypeError")}}:</p>
 
 <ul>
- <li><span style="line-height: 19.0909080505371px;">header名在HTTP header中是不存在的.</span></li>
- <li><span style="line-height: 19.0909080505371px;"><span style="line-height: 19.0909080505371px;">header被锁定了.<span style="line-height: 19.0909080505371px;"><span style="line-height: 19.0909080505371px;">​</span></span></span></span></li>
+ <li>header 名在 HTTP header 中是不存在的。</li>
+ <li>header 被锁定了.​</li>
 </ul>
 
 <div class="note">
-<p style="line-height: 19.0909080505371px;"><strong>Note:</strong>出于安全原因, 部分头信息只能被用户代理控制. 这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p><strong>Note:</strong>出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
 </div>
 
-<p style="line-height: 19.0909080505371px;"><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Syntax</strong></p>
+<p><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Syntax</strong></p>
 
 <pre class="brush: js">myHeaders.delete(name);</pre>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Headers/delete
 
 <dl>
  <dt><em>name</em></dt>
- <dd>需删除的HTTP header名称.</dd>
+ <dd>需删除的 HTTP header 名称。</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -35,17 +35,17 @@ translation_of: Web/API/Headers/delete
 
 <h2 id="Example">Example</h2>
 
-<p>创建一个空的Headers对象:</p>
+<p>创建一个空的 Headers 对象：</p>
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>可以通过append()方法添加header:</p>
+<p>可以通过 append() 方法添加 header:</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 </pre>
 
-<p>可以通过delete()方法删除已有header:</p>
+<p>可以通过 delete() 方法删除已有 header:</p>
 
 <pre class="brush: js">myHeaders.delete('Content-Type');
 myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
@@ -69,63 +69,7 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref<br>
-     </td>
-   <td>{{ CompatGeckoDesktop(39)}}<br>
-    34 behind pref</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers.delete")}}
 
 <h2 id="See_also">See also</h2>
 

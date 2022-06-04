@@ -1,60 +1,50 @@
 ---
 title: BatteryManager
 slug: Web/API/BatteryManager
-tags:
-  - Mobile
-  - batterie
-  - gestion
-  - niveau
 translation_of: Web/API/BatteryManager
+browser-compat: api.BatteryManager
 ---
-{{ApiRef()}}
+{{APIRef()}}
 
-## Sommaire
+L'interface `BatteryManager` fournit des moyens pour obtenir des informations sur le niveau de charge de la batterie du système. La méthode [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery) renvoie un objet `Promise` dont la valeur de résolution est une interface `BatteryManager`.
 
-L'interface `BatteryManager `fournit des moyens pour obtenir des informations sur le niveau de charge de la batterie du système.
-
-La propriété {{domxref ("window.navigator.battery", "navigator.battery")}} retourne une instance de l'interface `BatteryManager `que vous pouvez utiliser pour interagir avec l'API d'état de la batterie.
+{{InheritanceDiagram}}
 
 ## Propriétés
 
-- {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
-  - : Un Boolean indiquant si oui ou non la batterie est actuellement en cours de charge.
-- {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
-  - : Un nombre qui représente le temps restant en secondes jusqu'à ce que la batterie soit complètement chargée, ou 0 si la batterie est complètement chargée.
-- {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
+- [`BatteryManager.charging`](/fr/docs/Web/API/BatteryManager/charging) {{ReadOnlyInline}}
+  - : Une valeur booléenne indiquant si la batterie est actuellement en cours de charge.
+- [`BatteryManager.chargingTime`](/fr/docs/Web/API/BatteryManager/chargingTime) {{ReadOnlyInline}}
+  - : Un nombre qui représente le temps restant en secondes jusqu'à ce que la batterie soit complètement chargée, ou `0` si la batterie est complètement chargée.
+- [`BatteryManager.dischargingTime`](/fr/docs/Web/API/BatteryManager/dischargingTime) {{ReadOnlyInline}}
   - : Un nombre qui représente le temps restant en secondes jusqu'à ce que la batterie soit complètement déchargée et le système suspendu.
-- {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
-  - : Un nombre qui représente le niveau de charge de la batterie du système adapté à une valeur comprise entre 0.0 et 1.0.
-
-### Gestionnaires d'Evenements
-
-- {{domxref("BatteryManager.onchargingchange")}}
-  - : Un gestionnaire pour le changement de la présence ou non du chargeur.
-- {{domxref("BatteryManager.onchargingtimechange")}}
-  - : Un gestionnaire pour la mise à jour du temps de charge
-- {{domxref("BatteryManager.ondischargingtimechange")}}
-  - : Un gestionnaire pour la mise à jour du temps de décharge
-- {{domxref("BatteryManager.onlevelchange")}}
-  - : Un gestionnaire pour la mise à jour pour les changement du niveau de batterie
+- [`BatteryManager.level`](/fr/docs/Web/API/BatteryManager/level) {{ReadOnlyInline}}
+  - : Un nombre qui représente le niveau de charge de la batterie du système adapté à une valeur comprise entre `0.0` et `1.0`.
 
 ## Méthodes
 
-Hérite de {{domxref("EventTarget")}}:
+*`BatteryManager` hérite des méthodes de son interface parente&nbsp;:* [`EventTarget`](/fr/docs/Web/API/EventTarget).
 
-{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
+## Évènements
+
+- [`chargingchange`](/fr/docs/Web/API/BatteryManager/chargingchange_event)
+  - : Se déclenche lorsque l'état de charge de la batterie (la propriété [`charging`](/fr/docs/Web/API/BatteryManager/charging)) est mis à jour.
+- [`chargingtimechange`](/fr/docs/Web/API/BatteryManager/chargingtimechange_event)
+  - : Se déclenche lorsque le temps de recharge de la batterie (la propriété [`chargingTime`](/fr/docs/Web/API/BatteryManager/chargingTime)) est mis à jour.
+- [`dischargingtimechange`](/fr/docs/Web/API/BatteryManager/dischargingtimechange_event)
+  - : Se déclenche lorsque le temps de décharge de la batterie (la propriété [`dischargingTime`](/fr/docs/Web/API/BatteryManager/dischargingTime)) est mis à jour.
+- [`levelchange`](/fr/docs/Web/API/BatteryManager/levelchange_event)
+  - : Se déclenche lorsque le niveau de charge de la batterie (la propriété [`level`](/fr/docs/Web/API/BatteryManager/level)) est mis à jour.
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire            |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Battery API')}} | {{Spec2('Battery API')}} | Spécification initale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BatteryManager")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ domxref("navigator.getBattery","navigator.getBattery") }}
-- La [Battery Status API](/en-US/docs/WebAPI/Battery_Status)
+- [L'API <i lang="en">Battery Status</i>](/fr/docs/Web/API/Battery_Status_API)
+- [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery)

@@ -20,7 +20,9 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet fonctio
 
 ## Syntaxe
 
-    monSet[Symbol.iterator]
+```js
+monSet[Symbol.iterator]
+```
 
 ### Valeur de retour
 
@@ -61,7 +63,7 @@ for (const v of monSet) {
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

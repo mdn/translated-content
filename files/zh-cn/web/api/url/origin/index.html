@@ -5,12 +5,12 @@ translation_of: Web/API/URL/origin
 ---
 <p>{{APIRef("URL API")}}</p>
 
-<p><code><strong>URL</strong></code><strong><code>.origin</code></strong> 是一个只读属性，返回一个 {{domxref("USVString")}} 类型值，包含 URL 源经过 Unicode 序列化之后的值, 也就是：</p>
+<p><strong><code>URL.origin</code></strong> 是一个只读属性，返回一个 {{domxref("USVString")}} 类型值，包含 URL 源经过 Unicode 序列化之后的值，也就是：</p>
 
 <ul>
- <li>对于使用 <code>http</code> 或者 <code>https</code> 协议的 URL, 返回协议名, 然后是 <code>'://'</code>, 然后是域, 然后是 <code>':'</code>, 最后是端口号 (默认端口是 <code>80</code> 和 <code>443</code>);</li>
- <li>对于使用 <code>file:</code> 协议的 URL, 返回值因浏览器而异;</li>
- <li>对于使用 <code>blob:</code> 协议的 URL, 返回值是 <code>blob:</code> 后跟随的源地址. 例如 <code>"blob:https://mozilla.org"</code> 将会返回 <code>"https://mozilla.org".</code></li>
+ <li>对于使用 <code>http</code> 或者 <code>https</code> 协议的 URL, 返回协议名，然后是 <code>'://'</code>, 然后是域，然后是 <code>':'</code>, 最后是端口号 (默认端口是 <code>80</code> 和 <code>443</code>);</li>
+ <li>对于使用 <code>file:</code> 协议的 URL，返回值因浏览器而异;</li>
+ <li>对于使用 <code>blob:</code> 协议的 URL，返回值是 <code>blob:</code> 后跟随的源地址。例如 <code>"blob:https://mozilla.org"</code> 将会返回 <code>"https://mozilla.org".</code></li>
 </ul>
 
 <p>{{AvailableInWorkers}}</p>
@@ -45,65 +45,7 @@ translation_of: Web/API/URL/origin
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>{{CompatGeckoDesktop("26.0")}} [2][3]</td>
-   <td>{{CompatNo}} [1]</td>
-   <td><span style="font-size: 12px; line-height: 16.3636360168457px;">{{CompatNo}}</span> [1]</td>
-   <td>{{CompatNo}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>{{CompatGeckoMobile("26.0")}} [2][3]</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>{{CompatNo}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Though not grouped in a single abstract interface, this method is directly available on the interfaces that implement it, if this interface is supported.</p>
-
-<p>[2] From Gecko 26 to Gecko 44, this property was on the <code>URLUtils</code> mixin. It has been moves either on the <code>HTMLHyperlinkElementUtils</code> mixin, or directly on the interface.</p>
-
-<p>[3] Before Gecko 49, results for URL using the <code>blob</code> scheme incorrectly returned <code>null</code>.</p>
+{{Compat("api.URL.origin")}}
 
 <h2 id="See_also">See also</h2>
 

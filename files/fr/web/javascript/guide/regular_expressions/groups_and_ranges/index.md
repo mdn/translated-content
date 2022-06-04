@@ -46,7 +46,7 @@ Les groupes et intervalles permettent de représenter des groupes ou des interva
         pas considérés comme spéciaux au sein d'un ensemble et n'ont donc pas
         besoin d'être échappés. Il est possible de donner un ensemble sur un
         intervalle de caractères en utilisant un tiret (-), comme le montre
-        l'exemple qui suit.<br /><br />Le motif <code>[a-d]</code>,  aura les
+        l'exemple qui suit.<br /><br />Le motif <code>[a-d]</code>,  aura les
         mêmes correspondances que <code>[abcd]</code>, correspondant au 'b' de
         "bulle" et au 'c' de "ciel". Les motifis <code>/[a-z.]+/ </code>et
         <code>/[\w.]+/</code> correspondront pour la chaîne entirère :

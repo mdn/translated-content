@@ -6,7 +6,7 @@ original_slug: Web/Events/transitionend
 ---
 <div>{{APIRef}}</div>
 
-<p><code>transitionend</code> 事件会在 <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> 结束后触发. 当transition完成前移除transition时，比如移除css的{{cssxref("transition-property")}} 属性，事件将不会被触发.如在transition完成前设置  {{cssxref("display")}} 为"<code>none"</code>，事件同样不会被触发。</p>
+<p><code>transitionend</code> 事件会在 <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> 结束后触发。当 transition 完成前移除 transition 时，比如移除 css 的{{cssxref("transition-property")}} 属性，事件将不会被触发。如在 transition 完成前设置  {{cssxref("display")}} 为"<code>none"</code>，事件同样不会被触发。</p>
 
 <table class="properties">
  <tbody>
@@ -29,13 +29,13 @@ original_slug: Web/Events/transitionend
  </tbody>
 </table>
 
-<p><code>transitionend</code> 事件是双向触发的 - 当完成到转换状态的过渡，以及完全恢复到默认或非转换状态时都会触发。 如果没有过渡延迟或持续时间，即两者的值都为0s或者都未声明， 则不发生过渡，并且任何过渡事件都不会触发。如果触发了 <code>transitioncancel</code> 事件，则<code>transitionend</code> 事件不会触发。</p>
+<p><code>transitionend</code> 事件是双向触发的 - 当完成到转换状态的过渡，以及完全恢复到默认或非转换状态时都会触发。 如果没有过渡延迟或持续时间，即两者的值都为 0s 或者都未声明， 则不发生过渡，并且任何过渡事件都不会触发。如果触发了 <code>transitioncancel</code> 事件，则<code>transitionend</code> 事件不会触发。</p>
 
 <h2 id="例">例</h2>
 
 <pre class="brush: js">/*
- * 在指定的元素上监听transitionend事件, 例如#slidingMenu
- * 然后指定一个函数, 例如 showMessage()
+ * 在指定的元素上监听 transitionend 事件，例如#slidingMenu
+ * 然后指定一个函数，例如 showMessage()
  */
 function showMessage() {
     console.log('Transition 已完成');
@@ -66,64 +66,7 @@ element.addEventListener("transitionend", showMessage, false);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0<sup>[1]</sup><br>
-    36</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>10.5<sup>[2]</sup><br>
-    12<br>
-    12.10<br>
-    23</td>
-   <td>3.2<sup>[1]</sup><br>
-    7.0.6</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10<sup>[2]</sup><br>
-    12<br>
-    12.10</td>
-   <td>3.2<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Chrome 1.0, Android 2.1 与 WebKit 3.2 上实现 <code>webkitTransitionEnd</code>. Chrome 36 与 WebKit 7.0.6 上请使用标准事件 <code>transitionend</code>.</p>
-
-<p>[2] 在 Opera 10.5 上实现<code>oTransitionEnd</code>，从版本12开始实现 <code>otransitionend，</code> 从版本12.10开始实现 <code>transitionend.</code></p>
+{{Compat("api.HTMLElement.transitionend_event")}}
 
 <h2 id="参考">参考</h2>
 

@@ -19,7 +19,7 @@ Les graphiques vectoriels sont les images adaptatives par excellence : légères
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable savoir comment
         <a href="/fr/Apprendre/HTML/Write_a_simple_page_in_HTML"
@@ -32,7 +32,7 @@ Les graphiques vectoriels sont les images adaptatives par excellence : légères
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>Apprendre comment intégrer une image SVG dans une page web.</td>
     </tr>
   </tbody>
@@ -52,7 +52,7 @@ Il est possible de coder le SVG à la main grâce à un éditeur de texte. En re
 
 > **Note :** Sous Inkscape, préférez le format « SVG simple » pour sauvegarder vos fichiers, cela permet d'économiser de l'espace. Pour plus d'informations sur la préparation, lire [cet article qui décrit comment préparer des fichiers SVG pour les utiliser sur le Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
-## La méthode rapide : {{htmlelement("img")}}
+## La méthode rapide&nbsp;: {{htmlelement("img")}}
 
 Vous pouvez simplement faire référence à un fichier SVG au sein de l'élément {{htmlelement("img")}}, comme vous l'auriez fait avec une image matricielle. Il faudra utiliser l'attribut `height` ou `width` (voire les deux si le fichier SVG ne possède pas de ratio inhérent). Si ce n'est pas déjà fait, vous pouvez [lire ce tutoriel sur `<img>`](/fr/Apprendre/HTML/Comment/Ajouter_des_images_à_une_page_web).
 
@@ -66,7 +66,7 @@ Vous pouvez simplement faire référence à un fichier SVG au sein de l'élémen
 
 ### Avantages
 
-- Rapide à mettre en œuvre, syntaxe très proche avec les images matricielles, texte alternatif disponible.
+- Rapide à mettre en œuvre, syntaxe très proche avec les images matricielles, texte alternatif disponible.
 - Il est également possible de créer des hyperliens en plaçant l'élément `<img>` dans un élément {{htmlelement("a")}}.
 
 ### Inconvénients

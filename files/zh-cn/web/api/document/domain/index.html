@@ -11,7 +11,7 @@ tags:
   - 跨域
 translation_of: Web/API/Document/domain
 ---
-<div>{{ApiRef}}</div>
+<div>{{ApiRef}}{{Deprecated_Header}}</div>
 
 <p>{{domxref("Document")}} 接口的 <strong><code>domain</code></strong> 属性获取/设置当前文档的原始域部分，常用于<a href="/en-US/docs/Web/Security/Same-origin_policy">同源策略</a>。</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Document/domain
 
 <h3 id="值">值</h3>
 
-<p>当前文档来源的域部分.</p>
+<p>当前文档来源的域部分。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -32,9 +32,9 @@ translation_of: Web/API/Document/domain
  <dt>安全错误</dt>
  <dd>已尝试在以下情况之一下设置域：
  <ul>
-  <li>文件在html中的iframe元素里</li>
+  <li>文件在 html 中的 iframe 元素里</li>
   <li>该文件没有参考上下文</li>
-  <li>该文档的有效域为null</li>
+  <li>该文档的有效域为 null</li>
   <li>给定值不等于文档的有效域（或者它不是该域的可注册域后缀）</li>
   <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}}一启用</li>
  </ul>
@@ -45,13 +45,13 @@ translation_of: Web/API/Document/domain
 
 <h3 id="获取域名">获取域名</h3>
 
-<p>对于URI http://developer.mozilla.org/en-US/docs/Web，此示例将currentDomain设置为字符串“ developer.mozilla.org”。</p>
+<p>对于 URI http://developer.mozilla.org/en-US/docs/Web，此示例将 currentDomain 设置为字符串“ developer.mozilla.org”。</p>
 
 <pre class="brush:js">var currentDomain = document.domain;</pre>
 
 <h3 id="关闭窗口">关闭窗口</h3>
 
-<p>如果文档（例如www.example.xxx/good.html）的域为“ www.example.xxx”，则本示例将尝试关闭窗口。</p>
+<p>如果文档（例如 www.example.xxx/good.html）的域为“ www.example.xxx”，则本示例将尝试关闭窗口。</p>
 
 <pre class="brush:js">var badDomain = "www.example.xxx";
 
@@ -63,22 +63,7 @@ if (document.domain == badDomain) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -92,7 +77,7 @@ if (document.domain == badDomain) {
 
 <p>在<a href="/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29">根域名</a>范围内，Mozilla 允许你把 domain 属性的值设置为它的上一级域。例如，在 developer.mozilla.org 域内，可以把 domain 设置为 "mozilla.org" 但不能设置为 "mozilla.com" 或者"org"。</p>
 
-<p>Mozilla 会区分 <code>document.domain</code> 属性 <strong>从没有被设定过值 </strong>和 <strong>被显示的设定为跟该文档的 URL 的 domain 一致的值</strong>，尽管这两种状况下，该属性会返回同样的值。两个文档，只有在 <code>document.domain</code> 都被设定为同一个值，表明他们打算协作；或者都没有设定 <code>document.domain</code> 属性并且URL的域是一致的 (<a href="https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003">如何判断一致</a>)，这两种条件下，一个文档才可以去访问另一个文档。如果没有这个特殊的策略，每一个站点都会成为他的子域的 XSS 攻击的对象（例如，<a class="link-https" href="https://bugzilla.mozilla.org" rel="freelink">https://bugzilla.mozilla.org</a> 可以被来自 <a class="link-https" href="https://bug*.bugzilla.mozilla.org" rel="freelink">https://bug*.bugzilla.mozilla.org</a> 站点的 bug 附件攻击）。</p>
+<p>Mozilla 会区分 <code>document.domain</code> 属性 <strong>从没有被设定过值 </strong>和 <strong>被显示的设定为跟该文档的 URL 的 domain 一致的值</strong>，尽管这两种状况下，该属性会返回同样的值。两个文档，只有在 <code>document.domain</code> 都被设定为同一个值，表明他们打算协作；或者都没有设定 <code>document.domain</code> 属性并且 URL 的域是一致的 (<a href="https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003">如何判断一致</a>)，这两种条件下，一个文档才可以去访问另一个文档。如果没有这个特殊的策略，每一个站点都会成为他的子域的 XSS 攻击的对象（例如，<a class="link-https" href="https://bugzilla.mozilla.org" rel="freelink">https://bugzilla.mozilla.org</a> 可以被来自 <a class="link-https" href="https://bug*.bugzilla.mozilla.org" rel="freelink">https://bug*.bugzilla.mozilla.org</a> 站点的 bug 附件攻击）。</p>
 
 <h2 id="参见">参见</h2>
 

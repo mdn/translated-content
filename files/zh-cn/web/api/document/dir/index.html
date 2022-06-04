@@ -5,9 +5,9 @@ translation_of: Web/API/Document/dir
 ---
 <p>{{ApiRef("")}}</p>
 
-<p>Document.dir的本质是DOMString，代表了文档的文字朝向，是从左到右(默认)还是从右到左。</p>
+<p>Document.dir 的本质是 DOMString，代表了文档的文字朝向，是从左到右 (默认) 还是从右到左。</p>
 
-<p>'rtl'(right to left)代表从右到左，'ltr'(left to right)代表从左到右。</p>
+<p>'rtl'(right to left) 代表从右到左，'ltr'(left to right) 代表从左到右。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -22,74 +22,11 @@ document.dir = "rtl";
 
 <h2 id="Specifications" name="Specifications">说明</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">评论</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "dom.html#the-dir-attribute:dom-dir", "Document.dir")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Firefox 23之前， <code>Document.dir属性返回</code> "ltr" 无论在根元素{{htmlelement("html")}} 的dir属性上如何设置。 并且如果在文档标签<code>&lt;html&gt;上设置了方向</code>, <code>Document.dir在改变时不会生效</code>(虽然随后检索<code>Document.dir属性发现他的确改变了</code>)。 但是, 如果这个属性没有被设置在标签 <code>&lt;html&gt;</code> 上并且改变的该属性状态， 无论是页面可是区域的改变还是<code>Document.dir属性的改变都会正确的反映这一变化。</code></p>
+{{Compat("api.Document.dir")}}
 
 <h2 id="参见">参见</h2>
 

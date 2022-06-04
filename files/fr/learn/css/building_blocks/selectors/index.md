@@ -11,7 +11,7 @@ Dans {{Glossary("CSS")}}, les sélecteurs sont utilisés pour cibler les éléme
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions de base en l'informatique,
         <a
@@ -28,7 +28,7 @@ Dans {{Glossary("CSS")}}, les sélecteurs sont utilisés pour cibler les éléme
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Voir dans les détails comment les sélecteurs CSS fonctionnent.</td>
     </tr>
   </tbody>

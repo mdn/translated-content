@@ -7,7 +7,7 @@ translation_of: Web/API/Window/getComputedStyle
 
 ## Résumé
 
-`La méthode window.getComputedStyle() `donne la  [valeur calculée finale](/en/CSS/used_value) de toutes les propriétés CSS sur un élément.
+La méthode `window.getComputedStyle()` donne la valeur calculée finale de toutes les propriétés CSS sur un élément.
 
 ## Syntaxe
 
@@ -28,7 +28,7 @@ La valeur de retour `style` est un objet [`CSSStyleDeclaration`](/en/DOM/CSSStyl
 var elem1 = document.getElementById("elemId");
 var style = window.getComputedStyle(elem1, null);
 
-// Ce qui équivaut à :
+// Ce qui équivaut à&nbsp;:
 // var style = document.defaultView.getComputedStyle(elem1, null);
 ```
 

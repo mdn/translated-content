@@ -9,7 +9,7 @@ tags:
   - Renference
 translation_of: Web/API/DOMTokenList
 ---
-<p>{{APIRef}}{{ gecko_minversion_header("1.9.2") }}</p>
+<p>{{APIRef}}</p>
 
 <p><code><strong>DOMTokenList</strong></code> 接口表示一组空格分隔的标记（tokens）。如由 {{ domxref("Element.classList") }}、{{domxref("HTMLLinkElement.relList")}}、{{domxref("HTMLAnchorElement.relList")}} 或 {{domxref("HTMLAreaElement.relList")}} 返回的一组值。它和 JavaScript {{jsxref("Array")}} 对象一样，索引从 0 开始。<code>DOMTokenList</code> 总是区分大小写（case-sensitive）。</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/DOMTokenList
  <dt>{{domxref("DOMTokenList.toggle()", "DOMTokenList.toggle(<var>token</var> [, <var>force</var>])")}}</dt>
  <dd>从 DOMTokenList 字符串中移除标记字串（<code><em>token</em></code>），并返回 <code>false</code>。如果传入的字串（<code><em>token</em></code>）不存在，则将其添加进去，并返回 <code>true</code> 。<code><em>force</em></code><em> </em>是一个可选的布尔值，如果传入 <code>true</code> ，且传入的 <em><code>token</code> </em>不存在，则将其添加进去并返回 <code>true</code> ，若传入的 <em><code>token</code> </em>存在，则直接返回 <code>true</code> ；反之，如果传入 <code>false</code> ，则移除存在的 <code><em>token</em></code><em> ，</em>并返回 <code>false</code> ，如 <code><em>token</em></code> 不存在则直接返回 <code>false</code> 。</dd>
  <dt>{{domxref("DOMTokenList.entries()")}}</dt>
- <dd>返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}） ，以遍历这个对象中的所有键值对。</dd>
+ <dd>返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}），以遍历这个对象中的所有键值对。</dd>
  <dt>{{domxref("DOMTokenList.forEach()", "DOMTokenList.forEach(<var>callback</var> [, <var>thisArg</var>])")}}</dt>
  <dd>为每个 <code>DOMTokenList</code> 中的元素都调用一次传入的 <code><var>callback</var></code><var> </var>函数 。</dd>
  <dt>{{domxref("DOMTokenList.keys()")}}</dt>
@@ -51,7 +51,7 @@ translation_of: Web/API/DOMTokenList
 
 <h2 id="示例">示例</h2>
 
-<p>在下面这个简单的例子中，我们使用 {{domxref("Element.classList")}} 获取了 {{htmlelement("p")}} 元素的class列表，也就是一个<code>DOMTokenList</code> ，再使用 {{domxref("DOMTokenList.add()")}} 添加了一个class，然后更新 <code>&lt;p&gt;</code> 元素的{{domxref("Node.textContent")}}以显示这个新的 <code>DOMTokenList</code>。</p>
+<p>在下面这个简单的例子中，我们使用 {{domxref("Element.classList")}} 获取了 {{htmlelement("p")}} 元素的 class 列表，也就是一个<code>DOMTokenList</code> ，再使用 {{domxref("DOMTokenList.add()")}} 添加了一个 class，然后更新 <code>&lt;p&gt;</code> 元素的{{domxref("Node.textContent")}}以显示这个新的 <code>DOMTokenList</code>。</p>
 
 <p>HTML:</p>
 
@@ -64,7 +64,7 @@ let classes = para.classList;
 para.classList.add("d");
 para.textContent = `paragraph classList is "${classes}"`;</pre>
 
-<p>输出类似这样:</p>
+<p>输出类似这样：</p>
 
 <p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
 

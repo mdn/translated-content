@@ -5,9 +5,9 @@ tags:
   - 电池 API
 translation_of: Web/API/BatteryManager/charging
 ---
-<pre class="syntaxbox">{{APIRef("Battery API")}}</pre>
+{{APIRef("Battery API")}}
 
-<p>指示设备电池当前是否正在充电的Boolean值</p>
+<p>指示设备电池当前是否正在充电的 Boolean 值</p>
 
 <h2 id="Syntax_句法">Syntax 句法</h2>
 
@@ -17,13 +17,13 @@ translation_of: Web/API/BatteryManager/charging
 
 <h2 id="Example" name="Example">Example 例子</h2>
 
-<h3 id="HTML_Content_（内容）">HTML Content （内容）</h3>
+<h3 id="HTML_Content_（内容）">HTML Content（内容）</h3>
 
 <pre class="brush: html">&lt;div id="charging"&gt;(charging state unknown)&lt;/div&gt;</pre>
 
 <h3 id="JavaScript_内容">JavaScript 内容</h3>
 
-<pre class="brush: js; highlight:[3]">navigator.getBattery().then(function(battery) {
+<pre class="brush: js">navigator.getBattery().then(function(battery) {
 
     var charging = battery.charging;
 
@@ -32,88 +32,15 @@ translation_of: Web/API/BatteryManager/charging
 
 <p>{{ EmbedLiveSample('Example', '100%', 30) }}</p>
 
-<h2 id="Specifications_规格">Specifications 规格</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Battery API")}}</td>
-   <td>{{Spec2("Battery API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility浏览器兼容性CompatibilityTable">Browser compatibility浏览器兼容性<span style="color: #3b3c40; font-size: 14px; font-weight: normal; line-height: 1.5;">{{CompatibilityTable}}</span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoDesktop("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("52")}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoMobile("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoMobile("16")}}<sup>[1]</sup><br>
-    {{CompatGeckoMobile("52")}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}<sup>[2]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Disabled by default in Firefox 10.0, but can be enabled setting the preference <code>dom.battery.enabled</code> to <code>true</code>. Starting with Firefox 11.0, <code>mozBattery</code> is enabled by default. The Battery API is currently supported on Android, Windows, and Linux with UPower installed. Support for MacOS is available starting with Gecko 18.0 {{geckoRelease("18.0")}}. Firefox also provide support for the deprecated {{domxref("navigator.battery")}}.</p>
-
-<p>[2] Values for {{domxref("BatteryManager.chargingTime")}} and {{domxref("BatteryManager.dischargingTime")}} are always equal to <code>Infinity</code>.</p>
-
-<p>[3] From Firefox 52 onwards, the Battery Status API is only available in chrome/privileged code.</p>
-
-<h2 id="See_also_也可以看看">See also 也可以看看</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>{{domxref("BatteryManager")}}</li>

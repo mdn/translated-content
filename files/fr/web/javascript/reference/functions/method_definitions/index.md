@@ -19,22 +19,24 @@ Avec ECMAScript 2015 (ES6), il est possible d'utiliser une notation plus courte 
 
 ## Syntaxe
 
-    var obj = {
-      property( parameters… ) {},
-      *generator( parameters… ) {},
-      async property( parameters… ) {},
-      async* generator( parameters… ) {},
+```js
+var obj = {
+  property( parameters… ) {},
+  *generator( parameters… ) {},
+  async property( parameters… ) {},
+  async* generator( parameters… ) {},
 
-      // avec les noms calculés :
-      [property]( parameters… ) {},
-      *[generator]( parameters… ) {},
-      async [property]( parameters… ) {},
+  // avec les noms calculés :
+  [property]( parameters… ) {},
+  *[generator]( parameters… ) {},
+  async [property]( parameters… ) {},
 
-      // avec la syntaxe pour les accesseurs
-      // mutateurs :
-      get property() {},
-      set property(value) {}
-    };
+  // avec la syntaxe pour les accesseurs
+  // mutateurs :
+  get property() {},
+  set property(value) {}
+};
+```
 
 ## Description
 
@@ -60,7 +62,7 @@ var obj = {
   toto() {
     /* du code */
   },
-  truc() {
+  truc() {
     /* du code */
   }
 };
@@ -192,7 +194,7 @@ console.log(bar.toto2()); // 2
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{SpecName('ES2015', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ES2015')}}     | Définition initiale.                                                                                                                             |
 | {{SpecName('ES2016', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ES2016')}}     | Les méthodes génératrices ne doivent pas implémenter la trappe [[Construct]] et déclencher une exception lorsqu'elles sont utilisées avec `new`. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                                                                                                                                  |
+| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                                                                                                                                  |
 
 ## Compatibilité des navigateurs
 

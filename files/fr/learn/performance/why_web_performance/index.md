@@ -47,7 +47,7 @@ Les performances Web font référence à la rapidité avec laquelle le contenu d
 
 Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Apprendre/a11y). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
 
-À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article,  avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
+À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article,  avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
 
 - Imaginez charger ceci sur un ordinateur de bureau connecté à un réseau de fibre optique. Cela semblerait relativement rapide, et la taille du fichier serait en grande partie sans importance.
 - Imaginez charger ce même site en utilisant des données mobiles connectées sur un iPad de 9 ans tout en vous rendant chez vous en transport en commun. Le même site sera lent à se charger, voir presque inutilisable en fonction de la couverture cellulaire. Vous pourriez abandonner avant la fin du chargement.

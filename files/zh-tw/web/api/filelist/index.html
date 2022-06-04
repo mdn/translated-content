@@ -3,9 +3,9 @@ title: FileList
 slug: Web/API/FileList
 translation_of: Web/API/FileList
 ---
-<div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
+<div>{{APIRef("File API")}}</div>
 
-<p><code>FileList</code> 型別物件通常來自 HTML {{HTMLElement("input")}} 元素 {{domxref("Document_Object_Model", "DOM")}} 物件的 <code>files</code> 屬性（{{Glossary("property/JavaScript", "property")}}）。你可以操作 <code>FileList</code> 物件來存取使用者透過 <code>&lt;input type="file"&gt;</code> 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 {{domxref("DataTransfer")}} 物件的更多使用細節）。</p>
+<p><code>FileList</code> 型別物件通常來自 HTML {{HTMLElement("input")}} 元素 {{domxref("Document_Object_Model", "DOM")}} 物件的 <code>files</code> 屬性（{{Glossary("property/JavaScript", "property")}}）。你可以操作 <code>FileList</code> 物件來存取使用者透過 <code>&lt;input type="file"&gt;</code> 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 {{domxref("DataTransfer")}} 物件的更多使用細節）。</p>
 
 <div class="note">
 <p><strong>註：</strong>在 {{Gecko("1.9.2")}} 之前，{{HTMLElement("input")}} 元素只支援一次選取一個檔案，這代表了 <code>FileList</code> 只能夠包含一個 <code>File</code> 物件。從 {{Gecko("1.9.2")}} 開始，假如 <code>&lt;input&gt;</code> 元素的 <code>multiple</code> 屬性（attribute）為 true，則 FileList 就可能會包含多個檔案。</p>
@@ -25,7 +25,7 @@ translation_of: Web/API/FileList
 
 <h2 id="Method_overview" name="Method_overview">方法概觀</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><code>File <a href="#item ()">item</a>(index);</code></td>
@@ -35,7 +35,7 @@ translation_of: Web/API/FileList
 
 <h2 id="Attributes" name="Attributes">屬性</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td class="header">屬性名稱</td>

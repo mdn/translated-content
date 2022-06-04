@@ -60,7 +60,7 @@ La page d'accueil de la BBC, par exemple, contient un nombre important de liens 
 
 ## Anatomie d'un lien
 
-Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. {{anch("Liens de niveau bloc")}}) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
+Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. [Liens de niveau bloc](#liens_de_niveau_bloc)) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
 
 ```html
 <p>Je suis en train de créer un lien à
@@ -100,7 +100,7 @@ C'est l'heure de l'apprentissage actif : veuillez créer un document HTML avec u
 
 ### Liens de niveau bloc
 
-Comme mentionné précédemment, vous pouvez transformer à peu près tout contenu en un lien, même des [éléments bloc ](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#éléments_bloc_ou_en_ligne). Si vous avez une image que vous voulez transformer en lien, vous avez juste à mettre l'image entre les balises `<a></a>`.
+Comme mentionné précédemment, vous pouvez transformer à peu près tout contenu en un lien, même des [éléments bloc](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#éléments_bloc_ou_en_ligne). Si vous avez une image que vous voulez transformer en lien, vous avez juste à mettre l'image entre les balises `<a></a>`.
 
 ```html
 <a href="https://www.mozilla.org/fr/">
@@ -201,7 +201,7 @@ Regardons un exemple particulier :
 </a></p>
 ```
 
-**Mauvais** texte de lien&nbsp;: [Cliquer ici ](https://firefox.com/)pour télécharger Firefox
+**Mauvais** texte de lien&nbsp;: [Cliquer ici](https://firefox.com/) pour télécharger Firefox
 
 ```html
 <p><a href="https://firefox.com/">
@@ -215,7 +215,7 @@ Autres conseils :
 - Ne répétez pas l'URL dans le texte du lien — les URL sont moches, et elles le sont encore plus à entendre quand un lecteur d'écran les épèle.
 - Ne dites pas « lien » ou « liens vers... » dans le texte du lien, ce n'est que du rabâchage. Les lecteurs d'écran indiquent aux gens qu'il y a un lien. Les utilisateurs visuels verront aussi qu'il y a un lien, du fait que les liens sont généralement de couleur différente et soulignés (de façon générale, cette convention tacite ne devrait pas être trahie, car les utilisateurs y sont très habitués).
 - Faites que vos étiquettes de lien soient aussi courtes que possible : les liens longs agacent particulièrement les utilisateurs de lecteurs d'écran, qui doivent en écouter la lecture entière.
-- Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents. Afficher une liste de liens hors contexte peut poser problème aux utilisateurs de lecteurs d'écran : ainsi plusieurs liens tous étiquetés « cliquez ici », « cliquez ici », « cliquez ici » seront source de confusion.
+- Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents. Afficher une liste de liens hors contexte peut poser problème aux utilisateurs de lecteurs d'écran&nbsp;: ainsi plusieurs liens tous étiquetés « cliquez ici », « cliquez ici », « cliquez ici » seront source de confusion.
 
 ### Utilisez des liens relatifs partout où c'est possible
 

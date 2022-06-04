@@ -10,7 +10,7 @@ translation_of: Web/API/WebVR_API
 ---
 <div>{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p class="summary"><strong>WebVR API 能为虚拟现实设备的渲染提供支持 — 例如像Oculus Rift或者</strong>HTC Vive <strong>这样的头戴式设备与 Web apps 的连接。它能让开发者将位置和动作信息转换成3D场景中的运动。基于这项技术能产生很多有趣的应用, 比如虚拟的产品展示，可交互的培训课程，以及超强沉浸感的第一人称游戏。</strong></p>
+<p><strong>WebVR API 能为虚拟现实设备的渲染提供支持 — 例如像 Oculus Rift 或者</strong>HTC Vive <strong>这样的头戴式设备与 Web apps 的连接。它能让开发者将位置和动作信息转换成 3D 场景中的运动。基于这项技术能产生很多有趣的应用，比如虚拟的产品展示，可交互的培训课程，以及超强沉浸感的第一人称游戏。</strong></p>
 
 <h2 id="概念及使用方法">概念及使用方法</h2>
 
@@ -20,27 +20,27 @@ translation_of: Web/API/WebVR_API
 
 <p>Any VR devices attached to your computer will be returned by the {{domxref("Navigator.getVRDevices()")}} method. This returns an array of objects to represent the attached devices, which inherit from the general {{domxref("VRDevice")}} object — generally a head mounted display will have two devices — the head mounted display itself, represented by {{domxref("HMDVRDevice")}}, and a position sensor camera that keeps track of your head position, represented by {{domxref("PositionSensorVRDevice")}}.</p>
 
-<p><strong>连接到电脑的所有VR设备都将由 {{domxref("Navigator.getVRDevices()")}} 方法返回。 这个方法将返回一个包含了所有已连接设备的对象数组，每个设备对应一个对象， 该对象继承自 {{domxref("VRDevice")}}  — 通常一个头显将包含两个设备 — 头显自身由 {{domxref("HMDVRDevice")}} 表示， 和一个跟踪头部位置的位置捕捉传感器，由 {{domxref("PositionSensorVRDevice")}} 表示。</strong></p>
+<p><strong>连接到电脑的所有 VR 设备都将由 {{domxref("Navigator.getVRDevices()")}} 方法返回。 这个方法将返回一个包含了所有已连接设备的对象数组，每个设备对应一个对象， 该对象继承自 {{domxref("VRDevice")}}  — 通常一个头显将包含两个设备 — 头显自身由 {{domxref("HMDVRDevice")}} 表示， 和一个跟踪头部位置的位置捕捉传感器，由 {{domxref("PositionSensorVRDevice")}} 表示。</strong></p>
 
 <p>The {{domxref("PositionSensorVRDevice")}} object contains the {{domxref("PositionSensorVRDevice.getState","getState()")}} method, which returns a {{domxref("VRPositionState")}} object — this represents the sensor’s state at a given timestamp, and includes properties containing useful data such as current velocity, acceleration, and orientation, useful for updating the rendering of a scene on each frame according to the movement of the VR head mounted display.</p>
 
-<p><strong>{{domxref("PositionSensorVRDevice")}} 对象有一个 {{domxref("PositionSensorVRDevice.getState","getState()")}} 方法, 该方法返回一个{{domxref("VRPositionState")}} 对象 — 这个对象代表位置传感器在指定时刻的状态，包含了一些十分有用的信息，例如速度、加速度以及运动方向，可用于根据头部运动刷新画面显示。</strong></p>
+<p><strong>{{domxref("PositionSensorVRDevice")}} 对象有一个 {{domxref("PositionSensorVRDevice.getState","getState()")}} 方法，该方法返回一个{{domxref("VRPositionState")}} 对象 — 这个对象代表位置传感器在指定时刻的状态，包含了一些十分有用的信息，例如速度、加速度以及运动方向，可用于根据头部运动刷新画面显示。</strong></p>
 
 <p>The {{domxref("HMDVRDevice.getEyeParameters()")}} method returns a {{domxref("VREyeParameters")}} object, which can be used to return field of view information — how much of the scene the head mounted display can see. The {{domxref("VREyeParameters.currentFieldOfView")}} returns a {{domxref("VRFieldOfView")}} object that contains 4 angles describing the current view from a center point. You can also change the field of view using {{domxref("HMDVRDevice.setFieldOfView()")}}.</p>
 
-<p><strong>{{domxref("HMDVRDevice.getEyeParameters()")}} 方法返回一个 {{domxref("VREyeParameters")}} 对象, 可用于获取显示区域的信息 — 头显可以看到多少画面。 {{domxref("VREyeParameters.currentFieldOfView")}} 返回一个 {{domxref("VRFieldOfView")}} 对象 ，该对象包含了4个角度信息来描述当前的显示区域. 你可以用 {{domxref("HMDVRDevice.setFieldOfView()")}} 来改变当前的显示区域。</strong></p>
+<p><strong>{{domxref("HMDVRDevice.getEyeParameters()")}} 方法返回一个 {{domxref("VREyeParameters")}} 对象，可用于获取显示区域的信息 — 头显可以看到多少画面。 {{domxref("VREyeParameters.currentFieldOfView")}} 返回一个 {{domxref("VRFieldOfView")}} 对象 ，该对象包含了 4 个角度信息来描述当前的显示区域。你可以用 {{domxref("HMDVRDevice.setFieldOfView()")}} 来改变当前的显示区域。</strong></p>
 
 <p> </p>
 
 <div class="note">
 <p><strong>Note</strong>: To find out more about using these interfaces in your own app, read <a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a>. To learn more about the basic concepts behind VR, read <a href="/en-US/docs/Web/API/WebVR_API/WebVR_concepts">WebVR concepts</a>.</p>
 
-<p><u><strong>注释：</strong>: 要了解更多关于如何在你的应用程序中使用这些接口，请阅读文章<a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a>. 要学习更多关于VR技术背后的基础概念，请阅读文章 <a href="/en-US/docs/Web/API/WebVR_API/WebVR_concepts">WebVR concepts</a>.</u></p>
+<p><u><strong>注释：</strong>: 要了解更多关于如何在你的应用程序中使用这些接口，请阅读文章<a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a>. 要学习更多关于 VR 技术背后的基础概念，请阅读文章 <a href="/en-US/docs/Web/API/WebVR_API/WebVR_concepts">WebVR concepts</a>.</u></p>
 </div>
 
 <h3 id="Using_controllers_Combining_WebVR_with_the_Gamepad_API">Using controllers: Combining WebVR with the Gamepad API </h3>
 
-<h3 id="使用控制器：将WebVR与Gamepad_API相结合">使用控制器：将WebVR与Gamepad API相结合</h3>
+<h3 id="使用控制器：将WebVR与Gamepad_API相结合">使用控制器：将 WebVR 与 Gamepad API 相结合</h3>
 
 <p>Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more.</p>
 
@@ -49,33 +49,33 @@ translation_of: Web/API/WebVR_API
 <p> </p>
 </div>
 
-<h2 id="WebVR接口">WebVR接口</h2>
+<h2 id="WebVR接口">WebVR 接口</h2>
 
 <dl>
  <dt>{{domxref("Navigator.getVRDevices")}}</dt>
  <dd>Returns a promise that resolves to an array of objects representing the VR devices attached to the computer.<br>
- <strong>返回一个Promise对象，并通过resolve方式返回参数，参数为链接到电脑的VR设备数组。</strong></dd>
+ <strong>返回一个 Promise 对象，并通过 resolve 方式返回参数，参数为链接到电脑的 VR 设备数组。</strong></dd>
  <dt>{{domxref("VRDevice")}}</dt>
  <dd>A generic VR device, includes information such as device IDs and descriptions. Inherited by <code>HMDVRDevice</code> and <code>PositionSensorVRDevice</code>.<br>
- <strong>返回一个包括了VR设备IDs，描述等信息的类。HMDVRDevice 和 PositionSensorVRDevice 继承了 VRDevice。</strong></dd>
+ <strong>返回一个包括了 VR 设备 IDs，描述等信息的类。HMDVRDevice 和 PositionSensorVRDevice 继承了 VRDevice。</strong></dd>
  <dt>{{domxref("HMDVRDevice")}}</dt>
  <dd>Represents a head mounted display, providing access to information about each eye, and the current field of view.<br>
- <strong>头戴设备。提供设备双眼、当前FOV（field of view）信息。</strong></dd>
+ <strong>头戴设备。提供设备双眼、当前 FOV（field of view）信息。</strong></dd>
  <dt>{{domxref("PositionSensorVRDevice")}}</dt>
  <dd>Represents the position sensor for the VR hardware, allowing access to information such as position and orientation.<br>
- <strong>VR设备的位置传感器。获取位置、方向信息。</strong></dd>
+ <strong>VR 设备的位置传感器。获取位置、方向信息。</strong></dd>
  <dt>{{domxref("VRPose")}}</dt>
  <dd>Represents the position state at a given timestamp (which includes orientation, position, velocity, and acceleration.)<br>
  <strong>根据一个时间戳返回包括（方向、位置、速度、加速度）的状态。</strong></dd>
  <dt>{{domxref("VREyeParameters")}}</dt>
  <dd>Provides access to all the information required to correctly render a scene for each given eye, including field of view information.<br>
- <strong>给双眼提供正确渲染场景的所有信息，包括FOV。</strong></dd>
+ <strong>给双眼提供正确渲染场景的所有信息，包括 FOV。</strong></dd>
  <dt>{{domxref("VRFieldOfView")}}</dt>
  <dd>Represents a field of view defined by 4 different degree values describing the view from a center point.<br>
- <strong>返回以视窗的中心点为基点的，表示FOV的4个角度值（downDegrees, leftDegrees, rightDegrees, upDegrees）。</strong></dd>
+ <strong>返回以视窗的中心点为基点的，表示 FOV 的 4 个角度值（downDegrees, leftDegrees, rightDegrees, upDegrees）。</strong></dd>
  <dt>{{domxref("VRFieldOfViewReadOnly")}}</dt>
  <dd>Contains the raw definition for the degree value properties required to define a field of view. Inherited by <code>VRFieldOfView</code>.<br>
- <strong>定义一个FOV必须的角度属性。VRFieldOfView 继承了 VRFieldOfViewReadOnly。</strong></dd>
+ <strong>定义一个 FOV 必须的角度属性。VRFieldOfView 继承了 VRFieldOfViewReadOnly。</strong></dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -84,14 +84,14 @@ translation_of: Web/API/WebVR_API
 
 <p>You can find a number of examples at these Github repos:</p>
 
-<p><strong>你可以在Github的协议中找到一系列的案例：</strong></p>
+<p><strong>你可以在 Github 的协议中找到一系列的案例：</strong></p>
 
 <ul>
  <li><a href="https://github.com/mdn/webvr-tests">mdn/webvr-tests</a>: Simple demos built to illiustrate basic feature usage.</li>
- <li><strong><a href="https://github.com/mdn/webvr-tests">mdn/webvr-tests</a>: 简单构建的demos用于阐明基本的使用方法。</strong></li>
+ <li><strong><a href="https://github.com/mdn/webvr-tests">mdn/webvr-tests</a>: 简单构建的 demos 用于阐明基本的使用方法。</strong></li>
  <li> </li>
  <li><a href="https://github.com/MozVR/">MozVR team</a>: More advanced demos, the WebVR spec source, and more!</li>
- <li><strong><a href="https://github.com/MozVR/">MozVR team</a>: 更多复杂的demos,关于WebVR特别的资源，以及更多的内容！</strong></li>
+ <li><strong><a href="https://github.com/MozVR/">MozVR team</a>: 更多复杂的 demos，关于 WebVR 特别的资源，以及更多的内容！</strong></li>
  <li><strong>【K】</strong></li>
 </ul>
 
@@ -126,86 +126,23 @@ translation_of: Web/API/WebVR_API
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<p><strong>【K】</strong></p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(39)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(39)}}<sup>[2]</sup><br>
-    {{CompatGeckoMobile(44)}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>[1] The support in Chrome is currently experimental. To find information on Chrome's WebVR implementation status including supporting builds, check out <a href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a> by Brandon Jones.</li>
- <li><strong>[1]在谷歌浏览器中的支持目前尚处于实验阶段。要查找谷歌WebVR的执行状况的相关信息，包括相关技术支持的建设情况，请查看<a href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">将VR带进Chrome</a> 作者：Brandon Jones.</strong></li>
- <li> </li>
- <li>[2] The support for this feature is currently disabled by default in Firefox. To enable WebVR support in Firefox Nightly/Developer Edition, you can go to <code>about:config</code> and enable the <code>dom.vr*</code> prefs. A better option however is to install the <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a>, which does this for you and sets up other necessary parts of the <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">environment</a>.</li>
- <li>[2] <strong>这项功能的技术支持，目前在火狐的浏览器中并不能被执行。要想使用火狐浏览器Nightly/开发者版本中WebVR的相关功能，你可以选择：配置并提升<code>dom.vr*</code> prefs的优先级. 另一个更好的选择是安装<a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR</a><a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi"> Enabler Add-on</a>, 它能代替你完成这些工作并建立其他运行环境中必需的部分<a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">environment</a>.</strong></li>
- <li>[3] The <code>dom.vr*</code> prefs are enabled by default at this point, in Nightly/Aurora editions.</li>
- <li>[3]<strong> The <code>dom.vr*</code> prefs 在Nightly/Aurora的版本中，目前并不能被执行。</strong></li>
-</ul>
+{{Compat("api.Navigator.getVRDisplays")}}
 
 <h2 id="相关文章">相关文章</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a></li>
- <li><strong>建立WEBVR的运行环境。</strong></li>
+ <li><strong>建立 WEBVR 的运行环境。</strong></li>
  <li><a href="/en-US/docs/Web/API/WebVR_API/WebVR_concepts">WebVR concepts</a></li>
  <li><strong>WEBVR 的相关概念。</strong></li>
  <li><a href="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a></li>
- <li><strong>怎样使用WEBVR API。</strong></li>
+ <li><strong>怎样使用 WEBVR API。</strong></li>
  <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
- <li><strong><a href="http://mozvr.com/">MozVr.com</a> — demos，下载，以及其他的来自MOZILLA VR团队的资源。</strong></li>
+ <li><strong><a href="http://mozvr.com/">MozVr.com</a> — demos，下载，以及其他的来自 MOZILLA VR 团队的资源。</strong></li>
  <li><a href="http://dsmu.me/ConsoleGameOnWeb/">Console Game on Web</a> — a collection of interesting game concept demos, some of which include WebVR.</li>
- <li><strong><a href="http://dsmu.me/ConsoleGameOnWeb/">Console Game on Web</a> — 一系列有趣的概念游戏DEMO的收集，其中有些包括了WEBVR。</strong></li>
+ <li><strong><a href="http://dsmu.me/ConsoleGameOnWeb/">Console Game on Web</a> — 一系列有趣的概念游戏 DEMO 的收集，其中有些包括了 WEBVR。</strong></li>
  <li><a href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> — a very useful starter template for writing WebVR apps into.</li>
- <li><strong><a href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> — 一个当你编写WEBVR APP时，非常有用的用于开始编程的模板。</strong></li>
+ <li><strong><a href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> — 一个当你编写 WEBVR APP 时，非常有用的用于开始编程的模板。</strong></li>
  <li><a href="https://developer.oculus.com/">Oculus Rift homepage</a>   </li>
  <li><strong><a href="https://developer.oculus.com/">Oculus Rift</a> </strong><strong>主页</strong></li>
 </ul>

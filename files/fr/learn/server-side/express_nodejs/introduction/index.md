@@ -13,12 +13,12 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
-Dans ce tout premier article consacré à Express, nous répondons aux questions « Qu'est-ce que Node ? » et « Qu'est-ce que Express ? », et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).
+Dans ce tout premier article consacré à Express, nous répondons aux questions «&nbsp;Qu'est-ce que Node&nbsp;?&nbsp;» et «&nbsp;Qu'est-ce que Express ?&nbsp;», et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Une culture de base en informatique, une compréhension globale de la
         <a href="/fr/docs/Learn/Server-side/First_steps"
@@ -31,7 +31,7 @@ Dans ce tout premier article consacré à Express, nous répondons aux questions
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Devenir familier avec ce qu'est Express et comment il s'intègre dans
         Node, les fonctionnalités qu'il apporte, et les principales étapes pour
@@ -45,7 +45,7 @@ Dans ce tout premier article consacré à Express, nous répondons aux questions
 
 [Node](https://nodejs.org/) (ou plus formellement _Node.js_) est un environnement d'exécution open-source, multi-plateforme, qui permet aux développeuses et développeurs de créer toutes sortes d'applications et d'outils côté serveur en [JavaScript](/fr/docs/Glossary/JavaScript). Cet environnement est destiné à être utilisé en dehors du navigateur (il s'exécute directement sur son ordinateur ou dans le système d'exploitation du serveur). Aussi, Node ne permet pas d'utiliser les API JavaScript liées au navigateur mais des API plus traditionnellement utilisées sur un serveur dont notamment celles pour HTTP ou la manipulation de systèmes de fichier.
 
-Dans une perspective de développement de serveur web, Node présente un certain nombre d'avantages :
+Dans une perspective de développement de serveur web, Node présente un certain nombre d'avantages&nbsp;:
 
 - D'excellentes performances ! Node a été créé pour optimiser le rendement et l'évolution des applications web. Il s'agit d'une bonne solution à de nombreux problèmes de développement web (par exemple, les applications en temps réel).
 - Le code est intégralement écrit en JavaScript ce qui signifie que l'on dépense moins d'énergie à basculer d'un langage à l'autre quand on code côté client et côté serveur.
@@ -117,13 +117,13 @@ Bien qu'Express soit assez minimaliste, des _middlewares_ (fonctions intermédia
 
 > **Note :** Cette flexibilité est à double tranchant. Il y a une multitude de paquets pour résoudre chaque problème mais trouver le bon paquet à utiliser peut vite devenir un défi. Il n'y a pas non plus de « bonne manière » pour structurer une application et beaucoup d'exemples que vous trouverez sur le net ne sont pas optimisés ou montrent seulement une infime partie de ce que vous devez faire pour développer une application web.
 
-## D'où viennent Node et Express ?
+## D'où viennent Node et Express&nbsp;?
 
 À ses débuts en 2009, Node a été publié pour Linux uniquement. Le gestionnaire de paquets NPM est sorti en 2010, et le support natif de Windows fut ajouté en 2012. Ceci est un très court aperçu d'une aventure riche en rebondissements. Allez creuser ça sur [Wikipédia](https://fr.wikipedia.org/wiki/Node.js#Historique) si vous voulez en savoir plus.
 
 Express est sorti pour la première fois en novembre 2010. Vous pouvez consulter la [liste des modifications](https://expressjs.com/en/changelog/4x.html) pour plus d'informations sur la version courante et [GitHub](https://github.com/expressjs/express/blob/master/History.md) pour plus de détails sur l'historique des publications.
 
-## Quelle popularité pour Node et Express ?
+## Quelle popularité pour Node et Express&nbsp;?
 
 La popularité d'un _framework_ web est importante car elle conditionne la maintenance dans le temps et les ressources qu'il est raisonnable de mettre à disposition dans la documentation, les bibliothèques d'extensions et le support technique.
 

@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
 {{AddonSidebar}}
 
-Utilisez l'API topSites pour obtenir un tableau contenant les pages que l'utilisateur a visitées  fréquemment.
+Utilisez l'API topSites pour obtenir un tableau contenant les pages que l'utilisateur a visitées fréquemment.
 
 Les navigateurs maintiennent ceci pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".
 

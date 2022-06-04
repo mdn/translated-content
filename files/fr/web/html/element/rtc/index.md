@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/rtc
 ---
 {{HTMLRef}}
 
-L'élément** `<rtc>` **permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
+L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
 
@@ -96,9 +96,9 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('HTML5.3', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.3')}} |                      |
-| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |                      |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |                      |
+| {{SpecName('HTML5.3', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.3')}} |                      |
+| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |                      |
+| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |                      |
 | {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}} | {{Spec2('HTML5 W3C')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs

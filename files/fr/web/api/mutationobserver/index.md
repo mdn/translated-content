@@ -18,7 +18,7 @@ Le constructeur permettant d’instancier un nouvel observateur de mutations DOM
 #### Paramètres
 
 - `callback`
-  - : Une fonction qui sera appelée à chaque mutation du DOM. L’observateur appellera cette fonction avec deux arguments. Le premier est un tableau d’objets de type {{domxref("MutationRecord")}} ; le second est l’instance de `MutationObserver`.
+  - : Une fonction qui sera appelée à chaque mutation du DOM. L’observateur appellera cette fonction avec deux arguments. Le premier est un tableau d’objets de type {{domxref("MutationRecord")}}&nbsp;; le second est l’instance de `MutationObserver`.
 
 ## Méthodes d’instance
 
@@ -47,7 +47,7 @@ Le constructeur permettant d’instancier un nouvel observateur de mutations DOM
   </tbody>
 </table>
 
-> **Note :** La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
+> **Note :** La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
 
 ### `observe()`
 
@@ -83,7 +83,7 @@ Vide la file des mutations enregistrées du `MutationObserver` et retourne son c
 
 ## `MutationObserverInit`
 
-`MutationObserverInit` est un objet pouvant avoir les propriétés suivantes :
+`MutationObserverInit` est un objet pouvant avoir les propriétés suivantes&nbsp;:
 
 > **Note :** Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l’erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
 
@@ -110,7 +110,7 @@ Vide la file des mutations enregistrées du `MutationObserver` et retourne son c
     <tr>
       <td><code>characterData</code></td>
       <td>
-        <code>true</code> si les mutation de texte du nœud visé sont à observer.
+        <code>true</code> si les mutations de texte du nœud visé sont à observer.
       </td>
     </tr>
     <tr>
@@ -189,7 +189,7 @@ observer.disconnect();
 
 | Spécification                                                                            | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |             |
+| {{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |             |
 
 ## Compatibilité des navigateurs
 

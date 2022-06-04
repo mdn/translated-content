@@ -114,7 +114,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p><code>alt</code> 属性の中にぴったりの何を書きますか?  それは最初の場所に画像がある理由に依存します。言い換えれば、画像が表示されない場合に失うもの。</p>
 
 <ul>
- <li><strong>装飾</strong>。装飾画像に {{anch("CSS background images","CSS 背景画像")}}を使用する必要がありますが、HTML を使用する必要がある場合は空白の <code>alt=""</code> を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは時間を浪費してはなりません。</li>
+ <li><strong>装飾</strong>。装飾画像に <a href="#css_background_images">CSS 背景画像</a>を使用する必要がありますが、HTML を使用する必要がある場合は空白の <code>alt=""</code> を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは時間を浪費してはなりません。</li>
  <li><strong>コンテンツ</strong>。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供する。それよりもっと良いのは、誰もが見ることができる本文の中で提供する。冗長な代替テキストを書き込まないでください。すべての段落がメインコンテンツに2回書かれていると、目に見えるユーザにとってはどれほど迷惑でしょうか?  画像が主たる本文で十分に記述されている場合は、単に <code>alt=""</code> を使用できます。</li>
  <li><strong>リンク</strong>。{{htmlelement("a")}} タグ内に画像を置くと、画像をリンクに変えるためには、依然として<a href="/ja/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording">アクセス可能なリンクテキスト</a>を提供する必要があります。そのような場合は、同じ <code>&lt;a&gt;</code> 要素内に、または画像の <code>alt</code> 属性内に書き込むことができます。</li>
  <li><strong>テキスト</strong>。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、<a href="/ja/docs/Web/CSS/text-shadow">CSS を使用</a>します。しかし、これが避けられない場合は、<code>alt</code> 属性にテキストを与える必要があります。</li>

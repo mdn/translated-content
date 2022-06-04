@@ -14,7 +14,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
         <a href="/fr/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche"
@@ -24,7 +24,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Connaître les logiciels qui sont nécessaires pour créer, éditer, mettre
         en ligne ou consulter un site web.
@@ -43,7 +43,7 @@ Tous les systèmes d'exploitation (ou presque) possèdent par défaut un éditeu
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
 
 ## Aller plus loin
 
@@ -167,7 +167,7 @@ Voici une capture d'écran qui illustre l'allure d'un éditeur de texte avancé 
 
 ### Transférer des fichiers vers un serveur web
 
-Lorsque votre site web est peaufiné, testé et est prêt à être publié, vous devrez téléverser (_uploader_) vos fichiers vers votre serveur web (pour l'achat de l'espace serveur, voir l'article[ combien ça coûte de publier quelque chose sur le Web ?](/fr/docs/Learn/How_much_does_it_cost)). Une fois que vous disposez d'un serveur via votre fournisseur, celui-ci vous enverra les informations d'accès FTP (pour _File Transfer Protocol_ ou protocole de transfert de fichiers), souvent en donnant une URL SFTP, un nom d'utilisateur, un mot de passe et d'autres informations nécessaires à la connexion au serveur. Sachez toutefois que le FTP est une technique vieillissante et que de nouveaux systèmes commencent à devenir populaires, comme [RSync](https://en.wikipedia.org/wiki/Rsync) et [Git/Github](https://help.github.com/articles/using-a-custom-domain-with-github-pages).
+Lorsque votre site web est peaufiné, testé et est prêt à être publié, vous devrez téléverser (_uploader_) vos fichiers vers votre serveur web (pour l'achat de l'espace serveur, voir l'article [combien ça coûte de publier quelque chose sur le Web&nbsp;?](/fr/docs/Learn/How_much_does_it_cost)). Une fois que vous disposez d'un serveur via votre fournisseur, celui-ci vous enverra les informations d'accès FTP (pour _File Transfer Protocol_ ou protocole de transfert de fichiers), souvent en donnant une URL SFTP, un nom d'utilisateur, un mot de passe et d'autres informations nécessaires à la connexion au serveur. Sachez toutefois que le FTP est une technique vieillissante et que de nouveaux systèmes commencent à devenir populaires, comme [RSync](https://en.wikipedia.org/wiki/Rsync) et [Git/Github](https://help.github.com/articles/using-a-custom-domain-with-github-pages).
 
 > **Note :** FTP est par nature non sécurisé. Vous devez toujours vous assurer que votre fournisseur d'hébergement vous autorise à vous connecter de manière sécurisée, c'est-à-dire via SFTP (_Secure_ FTP) ou via RSync avec SSH.
 
@@ -214,7 +214,7 @@ Comme vous le savez sans doute déjà, vous avez besoin d'un navigateur web pour
 - [Microsoft Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
 - [Apple Safari](http://www.apple.com/safari/)
 
-Si votre site s'adresse à un public particulier (par exemple un pays spécifique ou une plate-forme donnée), vous pourrez avoir à tester votre site sur des navigateurs supplémentaires comme [Opera](http://www.opera.com/), [Dolphin](http://dolphin.com/) ou[ UC Browser](http://www.ucweb.com/ucbrowser/).
+Si votre site s'adresse à un public particulier (par exemple un pays spécifique ou une plate-forme donnée), vous pourrez avoir à tester votre site sur des navigateurs supplémentaires comme [Opera](http://www.opera.com/), [Dolphin](http://dolphin.com/) ou [UC Browser](http://www.ucweb.com/ucbrowser/).
 
 Cela se complique quand on réalise que certains navigateurs ne fonctionnent que sur certains systèmes d'exploitation. Apple Safari ne fonctionne que sur iOS et Mac OS, Internet Explorer ne fonctionne que sur Windows, etc. Face à ce problème, mieux vaut tirer parti de services comme [Browsershots](http://browsershots.org/) ou [Browserstack](http://www.browserstack.com/). Browsershots fournit des captures d'écran de votre site, tel qu'il est rendu dans les différents navigateurs. Browserstack vous permet de complètement contrôler des machines virtuelles afin que vous puissiez tester votre site sur les environnements les plus fréquents. Sinon, vous pouvez mettre en place votre propre machine virtuelle mais cela demandera quelques connaissances (si vous choisissez cette option, Microsoft met à disposition, sur [modern.ie](https://modern.ie), une machine virtuelle prête à être utilisée).
 

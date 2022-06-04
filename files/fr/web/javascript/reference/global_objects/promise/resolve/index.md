@@ -20,9 +20,11 @@ La méthode **`Promise.resolve(valeur)`** renvoie un objet {{jsxref("Promise")}}
 
 ## Syntaxe
 
-    Promise.resolve(valeur);
-    Promise.resolve(promesse);
-    Promise.resolve(suivant);
+```js
+Promise.resolve(valeur);
+Promise.resolve(promesse);
+Promise.resolve(suivant);
+```
 
 ### Paramètres
 
@@ -124,7 +126,7 @@ p3.then(function(v) {
 | Spécification                                                                            | État                         | Commentaires                                    |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
 | {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                                 |
+| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                                 |
 
 ## Compatibilité des navigateurs
 

@@ -11,7 +11,7 @@ translation_of: Web/API/Document/body
 <pre class="syntaxbox"><em>var objRef</em> = document.body;
 document.body = <em>objRef;</em></pre>
 <h2 id="Example" name="Example">示例</h2>
-<pre class="brush:js">// 如果HTML结构为&lt;body id="oldBodyElement"&gt;&lt;/body&gt;,则:
+<pre class="brush:js">// 如果 HTML 结构为&lt;body id="oldBodyElement"&gt;&lt;/body&gt;,则：
 alert(document.body.id); // "oldBodyElement"
 
 var aNewBodyElement = document.createElement("body");
@@ -21,8 +21,8 @@ document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
 </pre>
 <h2 id="Notes" name="Notes">介绍</h2>
-<p><code>document.body</code>是包含当前页面内容的元素,对于拥有<code>&lt;body&gt;元素的文档来说</code>,返回的是<code>&lt;body&gt;元素</code>,对于一个拥有<code>&lt;frameset&gt;元素的文档来说,返回的是最外层的</code><code>&lt;frameset&gt;元素</code>.</p>
-<p><code>该属性是可写的</code>,且为该属性赋的值必须是一个<code>&lt;body&gt;元素.</code></p>
+<p><code>document.body</code>是包含当前页面内容的元素，对于拥有<code>&lt;body&gt;元素的文档来说</code>,返回的是<code>&lt;body&gt;元素</code>,对于一个拥有<code>&lt;frameset&gt;元素的文档来说，返回的是最外层的</code><code>&lt;frameset&gt;元素</code>.</p>
+<p><code>该属性是可写的</code>,且为该属性赋的值必须是一个<code>&lt;body&gt;元素。</code></p>
 <h2 id="Specification" name="Specification">规范</h2>
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201">DOM Level 2 HTML: HTMLDocument.body</a></li>

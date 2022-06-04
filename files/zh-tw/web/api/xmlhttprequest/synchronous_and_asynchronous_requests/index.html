@@ -13,7 +13,7 @@ translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 
 <h3 id="範例_send_a_file_to_the_console_log">範例: send a file to the console log</h3>
 
-<p>這是使用非同步<span style="font-family: consolas,monaco,andale mono,monospace;">XMLHttpRequest的基本方式</span></p>
+<p>這是使用非同步XMLHttpRequest的基本方式</p>
 
 <pre class="brush: js">var xhr = new XMLHttpRequest();
 xhr.open("GET", "/bar/foo.txt", true);
@@ -65,7 +65,7 @@ function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */
 loadFile("message.txt", showMessage, "New message!\n\n");
 </pre>
 
-<p>Line 1 declares a function which will pass all arguments after the third to the <font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">callback </span></font>function when the file has been loaded.</p>
+<p>Line 1 declares a function which will pass all arguments after the third to the callback function when the file has been loaded.</p>
 
 <p>Line 4 creates an event handler function object and assigns it to the request's <code>onload</code> attribute.  This handler looks at the request's <code>readyState</code> to see if the transaction is complete in line 5, and if it is, and the HTTP status is 200, calls the callback function.  If an error occurred, an error message is displayed.</p>
 
@@ -188,7 +188,7 @@ if (request.status === 200) {
 
 <p>Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.</p>
 
-<p style="text-align: center;"><img alt="" class="internal" src="/@api/deki/files/6227/=AsyncUnload.jpg" style="height: 359px; width: 467px;"></p>
+<p><img alt="" class="internal" src="/@api/deki/files/6227/=AsyncUnload.jpg" style="height: 359px; width: 467px;"></p>
 
 <p>A possible solution is to make sure that any AJAX requests that you make on unload are make synchronously instead of asynchronously. This will ensure that the page doesn’t finish unloading before the server response comes back.</p>
 
@@ -256,5 +256,3 @@ if (request.status === 200) {
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
  <li><a href="/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a></li>
 </ul>
-
-<p>{{ languages( {"zh-cn": "zh-cn/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" } ) }}</p>

@@ -21,7 +21,9 @@ La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient
 
 ## Syntaxe
 
-    typedArr.values()
+```js
+typedArr.values()
+```
 
 ### Valeur de retour
 
@@ -59,7 +61,7 @@ console.log(eArr.next().value); // 50
 | Spécification                                                                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -18,7 +18,7 @@ translation_of: Web/API/File
 
 <p><strong><code>File</code></strong> 介面提供了檔案的資訊並且允許網頁中的 JavaScript 存取檔案的內容。</p>
 
-<p><code>File</code> 物件通常是從使用者於 {{HTMLElement("input")}} 元素選擇之檔案所回傳的 {{domxref("FileList")}} 物件當中取得，也可以來自<a href="/zh-TW/docs/Web/Guide/HTML/Drag_and_drop">拖放操作</a>所產生的 {{domxref("DataTransfer")}} 物件之中，或是由 {{domxref("HTMLCanvasElement")}} 物件（元素物件）執行 <code>mozGetAsFile()</code> 方法後回傳。在 Gecko 引擎中，有專屬的程式碼能不需使用者操作即建立 <code>File</code> 物件來表示本地端的任一檔案（請參考 {{anch("Implementation notes")}} 以閱讀更多資訊）。</p>
+<p><code>File</code> 物件通常是從使用者於 {{HTMLElement("input")}} 元素選擇之檔案所回傳的 {{domxref("FileList")}} 物件當中取得，也可以來自<a href="/zh-TW/docs/Web/Guide/HTML/Drag_and_drop">拖放操作</a>所產生的 {{domxref("DataTransfer")}} 物件之中，或是由 {{domxref("HTMLCanvasElement")}} 物件（元素物件）執行 <code>mozGetAsFile()</code> 方法後回傳。在 Gecko 引擎中，有專屬的程式碼能不需使用者操作即建立 <code>File</code> 物件來表示本地端的任一檔案（請參考 <a href="#implementation_notes">Implementation notes</a> 以閱讀更多資訊）。</p>
 
 <p><code>File</code> 物件是一種特殊的 {{domxref("Blob")}}，且可被用在任何接受 Blob 物件的地方。特別是 {{domxref("FileReader")}}、{{domxref("URL.createObjectURL()")}}、{{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}} 和 {{domxref("XMLHttpRequest", "", "send()")}} 都能夠同樣接受 <code>Blob</code> 以及 <code>File</code>。</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/File
 <dl>
  <dt>{{domxref("File.lastModified")}} {{readonlyinline}}</dt>
  <dd>回值檔案的最後修改時間，為 UNIX epoch 毫秒（自西元 1970 年一月 1 日零時至今）。</dd>
- <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}} {{gecko_minversion_inline("15.0")}}</dt>
+ <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}}</dt>
  <dd><code>File</code> 物件所代表之檔案的最後修改日期（<code><a href="/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>）。</dd>
  <dt>{{domxref("File.name")}} {{readonlyinline}}</dt>
  <dd><code>File</code> 物件所代表之檔案的名稱。</dd>
@@ -72,20 +72,7 @@ translation_of: Web/API/File
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">備註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>初次定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
@@ -101,8 +88,8 @@ translation_of: Web/API/File
 
 <ul>
  <li>In Gecko, you can use this API from within chrome code. See <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a> for details. To use it from chrome code, JSM and Bootstrap scope, you have to import it using <code><a href="/en-US/docs/Components.utils.importGlobalProperties">Cu.importGlobalProperties</a>(['File']);</code></li>
- <li>Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an {{interface("nsIFile")}} object to the DOM <code>File</code> constructor to specify the file to reference.</li>
- <li>Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the {{interface("nsIDOMFile")}} object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
+ <li>Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an <code>nsIFile</code> object to the DOM <code>File</code> constructor to specify the file to reference.</li>
+ <li>Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the <code>nsIDOMFile</code> object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
   <pre class="syntaxbox">new File(
   Array parts,
   String filename,

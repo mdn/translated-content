@@ -8,35 +8,35 @@ translation_of: Web/API/WebSockets_API
 ---
 <p>{{DefaultAPISidebar("Websockets API")}}</p>
 
-<p><strong>WebSockets</strong> 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此API，您可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。</p>
+<p><strong>WebSockets</strong> 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此 API，您可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。</p>
 
 <h2 id="接口">接口</h2>
 
 <dl>
  <dt><a href="/en-US/docs/Web/API/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a></dt>
- <dd>用于连接WebSocket服务器的主要接口，之后可以在这个连接上发送 和接受数据。</dd>
+ <dd>用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送 和接受数据。</dd>
  <dt><code><a href="/en-US/docs/Web/API/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent">CloseEvent</a></code></dt>
- <dd>连接关闭时WebSocket对象发送的事件。</dd>
+ <dd>连接关闭时 WebSocket 对象发送的事件。</dd>
  <dt><a href="/en-US/docs/Web/API/MessageEvent" title="en/WebSockets/WebSockets reference/MessageEvent"><code>MessageEvent</code></a></dt>
- <dd>当从服务器获取到消息的时候WebSocket对象触发的事件。</dd>
+ <dd>当从服务器获取到消息的时候 WebSocket 对象触发的事件。</dd>
 </dl>
 
 <h2 class="Tools" id="Tools" name="Tools">工具</h2>
 
 <ul>
- <li><a href="https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/">HumbleNet</a>: 一个在浏览器中工作的跨平台网络库。它由一个围绕websocket和WebRTC的C包装器组成，抽象了跨浏览器的差异，方便了为游戏和其它应用程序创建多用户网络功能。</li>
- <li><a href="https://github.com/uWebSockets/uWebSockets">µWebSockets</a>:由<a href="https://isocpp.org/">C++11</a>和<a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a> 实现的高度可扩展的WebSocket服务器和客户端.。</li>
- <li><a href="https://github.com/ClusterWS/ClusterWS">ClusterWS</a>:  轻量级、快速和强大的框架，用于在<a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>.中构建可伸缩的WebSocket应用程序。</li>
- <li><a class="external" href="http://socket.io" title="http://socket.io/">Socket.IO</a>: 一个基于长轮询/WebSocket的<a href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>第三方传输协议。</li>
- <li><a href="http://socketcluster.io/">SocketCluster</a>: 一个用于<a href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>的pub/sub专注于可伸缩 WebSocket框架。</li>
- <li><a href="https://github.com/Worlize/WebSocket-Node" title="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: 一个用 <a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>实现WebSocket服务器API。</li>
- <li><a href="http://www.totaljs.com/">Total.js</a>:一个用<a href="http://www.nodejs.org/">Node.js</a> 实现的的Web应用程序框架（例如:WebSocket聊天）。</li>
- <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: 一个 <a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>的<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</a> (双向连接)和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/">EventSource</a> (单向连接)的服务器和客户端。</li>
- <li><a href="http://signalr.net/">SignalR</a>: SignalR在可用时将隐藏使用WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。</li>
- <li><a href="https://caddyserver.com/docs/websocket">Caddy</a>: 能够将任意命令(stdin/stdout)代理为websocket的web服务器。</li>
- <li><a href="https://github.com/websockets/ws">ws</a>: 一个流行的WebSocket客户端和服务器 <a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>库。</li>
- <li><a href="https://github.com/bigstepinc/jsonrpc-bidirectional">jsonrpc-bidirectional</a>: 易于使用异步RPC库，通过单个WebSocket或RTCDataChannel (WebRTC)连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的JSONRPC和服务器端点。</li>
- <li><a href="https://github.com/elpheria/rpc-websockets">rpc-websockets</a>: JSON-RPC 2.0在websocket上实现Node.js和JavaScript。</li>
+ <li><a href="https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/">HumbleNet</a>: 一个在浏览器中工作的跨平台网络库。它由一个围绕 websocket 和 WebRTC 的 C 包装器组成，抽象了跨浏览器的差异，方便了为游戏和其它应用程序创建多用户网络功能。</li>
+ <li><a href="https://github.com/uWebSockets/uWebSockets">µWebSockets</a>:由<a href="https://isocpp.org/">C++11</a>和<a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a> 实现的高度可扩展的 WebSocket 服务器和客户端.。</li>
+ <li><a href="https://github.com/ClusterWS/ClusterWS">ClusterWS</a>:  轻量级、快速和强大的框架，用于在<a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>.中构建可伸缩的 WebSocket 应用程序。</li>
+ <li><a class="external" href="http://socket.io" title="http://socket.io/">Socket.IO</a>: 一个基于长轮询/WebSocket 的<a href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>第三方传输协议。</li>
+ <li><a href="http://socketcluster.io/">SocketCluster</a>: 一个用于<a href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>的 pub/sub 专注于可伸缩 WebSocket 框架。</li>
+ <li><a href="https://github.com/Worlize/WebSocket-Node" title="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: 一个用 <a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>实现 WebSocket 服务器 API。</li>
+ <li><a href="http://www.totaljs.com/">Total.js</a>:一个用<a href="http://www.nodejs.org/">Node.js</a> 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。</li>
+ <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: 一个 <a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>的<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</a> (双向连接) 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/">EventSource</a> (单向连接) 的服务器和客户端。</li>
+ <li><a href="http://signalr.net/">SignalR</a>: SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。</li>
+ <li><a href="https://caddyserver.com/docs/websocket">Caddy</a>: 能够将任意命令 (stdin/stdout) 代理为 websocket 的 web 服务器。</li>
+ <li><a href="https://github.com/websockets/ws">ws</a>: 一个流行的 WebSocket 客户端和服务器 <a href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>库。</li>
+ <li><a href="https://github.com/bigstepinc/jsonrpc-bidirectional">jsonrpc-bidirectional</a>: 易于使用异步 RPC 库，通过单个 WebSocket 或 RTCDataChannel (WebRTC) 连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的 JSONRPC 和服务器端点。</li>
+ <li><a href="https://github.com/elpheria/rpc-websockets">rpc-websockets</a>: JSON-RPC 2.0 在 websocket 上实现 Node.js 和 JavaScript。</li>
 </ul>
 
 <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">相关话题</h2>
@@ -56,153 +56,4 @@ translation_of: Web/API/WebSockets_API
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Version -76 support {{obsolete_inline}}</td>
-   <td>6</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.00 (disabled)</td>
-   <td>5.0.1</td>
-  </tr>
-  <tr>
-   <td>Protocol version 7 support {{obsolete_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}<br>
-    {{property_prefix("Moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Protocol version 10 support {{obsolete_inline}}</td>
-   <td>14</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("7.0")}}<br>
-    {{property_prefix("Moz")}}</td>
-   <td>HTML5 Labs</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Standard - RFC 6455 Support</td>
-   <td>16</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>10</td>
-   <td>12.10</td>
-   <td>6.0</td>
-  </tr>
-  <tr>
-   <td>Usable in Workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Version -76 support {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Protocol version 7 support {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Protocol version 8 support (IETF draft 10) {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Standard - RFC 6455 Support</td>
-   <td>4.4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>6.0</td>
-  </tr>
-  <tr>
-   <td>Usable in Workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<p>Firefox中的WebSocket支持正在继续跟踪WebSocket规范的发展。Firefox 6实现了底层协议的version 7，而Firefox 7实现了version 8(如IETF draft 10所指定的)。Firefox移动版在Firefox7.0支持WebSocket。</p>
-
-<h4 id="Gecko_6.0">Gecko 6.0</h4>
-
-<p>在Gecko 6.0 {{geckoRelease("6.0")}}之前，一些网站认为<code>WebSocket</code>对象是错误的，意味着<code>WebSocket</code>服务没有前缀，此对象已重命名为<code>MozWebSocket</code>。</p>
-
-<h4 id="Gecko_7.0">Gecko 7.0</h4>
-
-<p>从Gecko 7.0 {{geckoRelease("7.0")}}中开始，<code>network.websocket.max-connections是</code>用于确定每次可以打开的WebSocket连接的最大数量的最大连接首选项。默认值是200。</p>
-
-<h4 id="Gecko_8.0">Gecko 8.0</h4>
-
-<p>从Gecko 8.0 {{geckoRelease("8.0")}}中开始，<code>WebSocket</code>协议的deflate-stream扩展已经被禁用，因为它已经在规范草案中废弃了。这解决了某些站点的不兼容性问题。</p>
-
-<h4 id="Gecko_11.0">Gecko 11.0</h4>
-
-<p>在Gecko 11.0之前，传入和传出消息的大小都限制在16MB。它们现在的大小可能高达 2 GB 。然而，请注意，内存限制(尤其是在移动设备上)使其成为理论上的最大限制，而不是实际的最大限制。实际上，在没有足够内存的设备上，这种大小的传输将会失败。</p>
-
-<p>此外，ArrayBuffer对二进制数据的收发支持已经实现。</p>
-
-<p><br>
- 从Gecko 11.0开始，WebSocket API不需要前缀。</p>
+{{Compat("api.WebSocket")}}

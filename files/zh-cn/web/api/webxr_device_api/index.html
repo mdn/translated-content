@@ -3,34 +3,34 @@ title: WebXR 设备 接口参考
 slug: Web/API/WebXR_Device_API
 translation_of: Web/API/WebXR_Device_API
 ---
-<p><span class="seoSummary"><strong>WebXR</strong> 是一组支持将渲染3D场景用来呈现虚拟世界（虚拟现实，也称作VR）或将图形图像添加到现实世界（增强现实，也称作AR）的标准。</span> <strong>WebXR 设备 API </strong>实现了 WebXR 功能集的核心，管理输出设备的选择，以适当的帧速率将3D场景呈现给所选设备，并管理使用输入控制器创建的运动矢量。</p>
+<p><strong>WebXR</strong> 是一组支持将渲染 3D 场景用来呈现虚拟世界（虚拟现实，也称作 VR）或将图形图像添加到现实世界（增强现实，也称作 AR）的标准。 <strong>WebXR 设备 API </strong>实现了 WebXR 功能集的核心，管理输出设备的选择，以适当的帧速率将 3D 场景呈现给所选设备，并管理使用输入控制器创建的运动矢量。</p>
 
-<p>WebXR-兼容性设备包括沉浸式3D运动和定位跟踪耳机，通过框架覆盖在真实世界场景之上的眼镜，以及手持移动电话，它们通过用摄像机捕捉世界来增强现实，并通过计算机生成的图像增强场景。</p>
+<p>WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框架覆盖在真实世界场景之上的眼镜，以及手持移动电话，它们通过用摄像机捕捉世界来增强现实，并通过计算机生成的图像增强场景。</p>
 
 <p>为了完成这些事情，WebXR 设备 API 提供了以下关键功能：</p>
 
 <ul>
- <li>查找兼容的VR或AR输出设备</li>
- <li>以适当的帧率将3D场景渲染到设备</li>
- <li>（可选）将输出镜像到2D显示器</li>
+ <li>查找兼容的 VR 或 AR 输出设备</li>
+ <li>以适当的帧率将 3D 场景渲染到设备</li>
+ <li>（可选）将输出镜像到 2D 显示器</li>
  <li>创建代表输入控件运动的向量</li>
 </ul>
 
-<p><font>在最基本的层面上，通过计算应用于场景的透视图，以从每个用户的视角呈现场景，从而在3D中呈现场景，考虑到眼睛之间的常规距离，然后渲染场景两次，每只眼睛一次。然后将生成的图像(场景在一个帧上呈现两次，每只眼睛一半)显示给用户。</font></p>
+<p>在最基本的层面上，通过计算应用于场景的透视图，以从每个用户的视角呈现场景，从而在 3D 中呈现场景，考虑到眼睛之间的常规距离，然后渲染场景两次，每只眼睛一次。然后将生成的图像 (场景在一个帧上呈现两次，每只眼睛一半) 显示给用户。</p>
 
-<p><font><font>由于 </font></font><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> <font><font>用于将3D世界渲染到WebXR会话中，因此您首先应该熟悉 WebGL 的一般用法以及3D图形的基本知识。</font><font>您很可能不会直接使用 WebGL API，而是利用在 WebGL 之上构建的框架或库之一来使其使用更加方便。</font><font>其中最流行的是</font></font><a href="https://threejs.org/">three.js</a><font><font>。</font></font></p>
+<p>由于 <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 用于将 3D 世界渲染到 WebXR 会话中，因此您首先应该熟悉 WebGL 的一般用法以及 3D 图形的基本知识。您很可能不会直接使用 WebGL API，而是利用在 WebGL 之上构建的框架或库之一来使其使用更加方便。其中最流行的是<a href="https://threejs.org/">three.js</a>。</p>
 
-<p><font>使用库而不是直接使用WebGL API的一个特殊好处是，库取向于实现虚拟相机函数性的接口。OpenGL（ WebGL 的扩展）不直接提供照相机视图，使用库模拟一个的话可以使您的工作变得非常非常容易，特别是在构建允许在虚拟世界中自由移动的代码时。</font></p>
+<p>使用库而不是直接使用 WebGL API 的一个特殊好处是，库取向于实现虚拟相机函数性的接口。OpenGL（ WebGL 的扩展）不直接提供照相机视图，使用库模拟一个的话可以使您的工作变得非常非常容易，特别是在构建允许在虚拟世界中自由移动的代码时。</p>
 
 <h2 id="重要的健康和安全提示">重要的健康和安全提示</h2>
 
-<p><font><font>因为本质上来说，创建虚拟3D世界的整个过程是一个技巧，它利用了我们对眼睛如何收集光以及大脑如何解释所收集的数据的理解，因此务必要牢记，软件设计师开发人员有责任比平时更加​​小心，以确保结果正确。</font></font></p>
+<p>因为本质上来说，创建虚拟 3D 世界的整个过程是一个技巧，它利用了我们对眼睛如何收集光以及大脑如何解释所收集的数据的理解，因此务必要牢记，软件设计师开发人员有责任比平时更加​​小心，以确保结果正确。</p>
 
-<p><font><font>缺陷，未对准或变形会混淆眼睛和大脑，导致眼睛疼痛或头痛乃至眩晕，头晕或潜在的严重恶心。</font><font>考虑到 VR 护目镜的全部特性，需要特别注意，开发者对可能引起癫痫发作的任何事物都要保持警惕；</font><font>如果它引起困扰，则用户可能无法快速将视线从您呈现的图像上移开。</font></font></p>
+<p>缺陷，未对准或变形会混淆眼睛和大脑，导致眼睛疼痛或头痛乃至眩晕，头晕或潜在的严重恶心。考虑到 VR 护目镜的全部特性，需要特别注意，开发者对可能引起癫痫发作的任何事物都要保持警惕；如果它引起困扰，则用户可能无法快速将视线从您呈现的图像上移开。</p>
 
-<p><font><font>如果您有任何可能对任何用户构成风险的内容，则应提供警告消息。有备无患</font><font>！</font></font></p>
+<p>如果您有任何可能对任何用户构成风险的内容，则应提供警告消息。有备无患！</p>
 
-<h2 id="WebXR_设备API_的概念和用法">WebXR 设备API 的概念和用法</h2>
+<h2 id="WebXR_设备API_的概念和用法">WebXR 设备 API 的概念和用法</h2>
 
 <h3 id="WebXR_AR_and_VR">WebXR: AR and VR</h3>
 
@@ -38,21 +38,21 @@ translation_of: Web/API/WebXR_Device_API
 <figcaption>举例 WebXR 硬件装备</figcaption>
 <img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png"></figure>
 
-<p><font><font>较早的 </font></font><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a><font><font> 仅设计为支持虚拟现实（VR），而WebXR在Web上同时支持VR和增强现实（AR）。</font><font>WebXR增强现实模块增加了对AR功能的支持。</font></font></p>
+<p>较早的 <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> 仅设计为支持虚拟现实（VR），而 WebXR 在 Web 上同时支持 VR 和增强现实（AR）。WebXR 增强现实模块增加了对 AR 功能的支持。</p>
 
 <p><br>
- 典型的XR设备可以具有3或6个自由度，并且有没有外部位置传感器都可以。</p>
+ 典型的 XR 设备可以具有 3 或 6 个自由度，并且有没有外部位置传感器都可以。</p>
 
 <p>该设备还可以包括加速度计，气压计或其他传感器，用于感测用户何时在空间中移动，旋转其头部等。</p>
 
 <h3 id="WebXR_应用程序生命周期">WebXR 应用程序生命周期</h3>
 
-<p>使用WebXR的大多数应用程序将遵循类似的总体设计模式:</p>
+<p>使用 WebXR 的大多数应用程序将遵循类似的总体设计模式：</p>
 
 <ol>
- <li>检查用户的设备和浏览器是否都能够呈现您想要提供的XR体验。
+ <li>检查用户的设备和浏览器是否都能够呈现您想要提供的 XR 体验。
   <ol>
-   <li><font><font>确保 WebXR API 可用；</font><font>如果 </font></font>{{domxref("navigator.xr")}}  <font><font>未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。</font></font></li>
+   <li>确保 WebXR API 可用；如果 {{domxref("navigator.xr")}}  未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。</li>
    <li>调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式: <code>inline</code>, <code>immersive-vr</code>, 或 <code>immersive-ar</code>, 以确定您希望提供的会话类型是否可用。</li>
    <li>如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。</li>
   </ol>
@@ -86,7 +86,7 @@ translation_of: Web/API/WebXR_Device_API
 <ul>
  <li>在用户事件句柄总或者在用户启动 <a href="/en-US/docs/Web/Progressive_web_apps">web 应用</a>中执行的 <code>requestSession()</code> 调用；</li>
  <li>文档是可信赖的，其中的内容是可靠的、及时更新的以及有着重点；</li>
- <li>用户有明确的使用沉浸式 VR 模式的意图，后文中 {{anch("User intent")}} 一节将有详细描述。</li>
+ <li>用户有明确的使用沉浸式 VR 模式的意图，后文中，<a href="#用户意图">用户意图</a>一节将有详细描述。</li>
 </ul>
 
 <p>如果上述三点均满足， <code>requestSession()</code> 返回的 Promise 将被 resolve，新的 {{domxref("XRSession")}} 对象被传入完成时的处理函数中。如果有不满足的情况，将会根据具体场景抛出异常，比如当没有权限进入沉浸式模式情况下， <code>SecurityError</code> 将被抛出。</p>
@@ -101,7 +101,7 @@ translation_of: Web/API/WebXR_Device_API
  <li>如果 <code>requestSession()</code> 调用的发起既不来自用户事件中，也不是在 Web 应用启动时，那该请求将会被驳回，Promise 放返回 <code>false</code>;</li>
  <li>如果发起请求的文档不属于对应的脚本，该请求将被驳回；</li>
  <li>如果发起请求的文档不可信任，该请求会被驳回且 Promise 返回 <code>false</code>。一个可信任文档指的是该文档是活跃的、负责任的且有重点的；</li>
- <li>如果设备无法明确用户开启内联模式的意图，该请求将会被驳回。对{{anch("用户意图", "用户的目的")}}的理解可以是隐性或者显性的。</li>
+ <li>如果设备无法明确用户开启内联模式的意图，该请求将会被驳回。对<a href="#用户意图">用户的目的</a>的理解可以是隐性或者显性的。</li>
 </ul>
 
 <div class="blockIndicator note">

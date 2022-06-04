@@ -14,7 +14,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 ---
 <p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
 
-<p><span class="seoSummary"><strong>HTML 拖放（</strong><strong>Drag and Drop）</strong>接口使应用程序能够在浏览器中使用拖放功能。</span>例如，用户可使用鼠标选择可拖拽（<em>draggable</em>）元素，将元素拖拽到可放置（<em>droppable</em>）元素，并释放鼠标按钮以放置这些元素。拖拽操作期间，会有一个可拖拽元素的半透明快照跟随着鼠标指针。</p>
+<p><strong>HTML 拖放（</strong><strong>Drag and Drop）</strong>接口使应用程序能够在浏览器中使用拖放功能。例如，用户可使用鼠标选择可拖拽（<em>draggable</em>）元素，将元素拖拽到可放置（<em>droppable</em>）元素，并释放鼠标按钮以放置这些元素。拖拽操作期间，会有一个可拖拽元素的半透明快照跟随着鼠标指针。</p>
 
 <p>对于网站、扩展以及 XUL 应用程序，你可以自定义什么元素是可拖拽的、可拖拽元素产生的反馈类型，以及可放置的元素。</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
  <tbody>
   <tr>
    <th scope="col">事件</th>
-   <th scope="col">On型事件处理程序</th>
+   <th scope="col">On 型事件处理程序</th>
    <th scope="col">触发时刻</th>
   </tr>
   <tr>
@@ -63,7 +63,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
   <tr>
    <td>{{event('dragover')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragover','ondragover')}}</td>
-   <td>当元素或选中的文本被拖到一个可释放目标上时触发（每100毫秒触发一次）。</td>
+   <td>当元素或选中的文本被拖到一个可释放目标上时触发（每 100 毫秒触发一次）。</td>
   </tr>
   <tr>
    <td>{{event('dragstart')}}</td>
@@ -78,7 +78,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
  </tbody>
 </table>
 
-<p class="note"><strong>注意：</strong>当从操作系统向浏览器中拖拽文件时，不会触发 <code>dragstart</code> 和<code>dragend</code> 事件。</p>
+<p><strong>注意：</strong>当从操作系统向浏览器中拖拽文件时，不会触发 <code>dragstart</code> 和<code>dragend</code> 事件。</p>
 
 <h2 id="接口">接口</h2>
 
@@ -86,17 +86,17 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>{{domxref("DragEvent")}} 接口有一个构造函数和一个 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，dataTransfer 属性是一个 {{domxref("DataTransfer")}} 对象。</p>
 
-<p>{{domxref("DataTransfer")}} 对象包含了拖拽事件的状态，例如拖拽事件的类型（如拷贝 <code>copy</code> 或者移动 <code>move</code>），拖拽的数据（一个或者多个项）和每个拖拽项的类型（MIME类型）。 {{domxref("DataTransfer")}} 对象也有向拖拽数据中添加或删除项目的方法。</p>
+<p>{{domxref("DataTransfer")}} 对象包含了拖拽事件的状态，例如拖拽事件的类型（如拷贝 <code>copy</code> 或者移动 <code>move</code>），拖拽的数据（一个或者多个项）和每个拖拽项的类型（MIME 类型）。 {{domxref("DataTransfer")}} 对象也有向拖拽数据中添加或删除项目的方法。</p>
 
 <p>给应用程序添加 HTML 拖放功能，{{domxref("DragEvent")}} 和 {{domxref("DataTransfer")}} 接口应该是唯二需要的接口（Firefox 给 {{domxref("DataTransfer")}} 添加了一些 Gecko 专有的扩展功能，但这些扩展只在 Firefox 上可用）。</p>
 
-<p>每个 {{domxref("DataTransfer")}} 都包含一个  {{domxref("DataTransfer.items","items")}} 属性，这个属性是 {{domxref("DataTransferItem")}} 对象的 {{domxref("DataTransferItemList","list")}}。一个 {{domxref("DataTransferItem")}} 代表一个拖拽项目，每个项目都有一个 {{domxref("DataTransferItem.kind","kind")}} 属性（<code>string</code> 或 <code>file</code>） 和一个表示数据项目 MIME 类型的 {{domxref("DataTransferItem.type","type")}} 属性。{{domxref("DataTransferItem")}} 对象也有获取拖拽项目数据的方法。</p>
+<p>每个 {{domxref("DataTransfer")}} 都包含一个  {{domxref("DataTransfer.items","items")}} 属性，这个属性是 {{domxref("DataTransferItem")}} 对象的 {{domxref("DataTransferItemList","list")}}。一个 {{domxref("DataTransferItem")}} 代表一个拖拽项目，每个项目都有一个 {{domxref("DataTransferItem.kind","kind")}} 属性（<code>string</code> 或 <code>file</code>）和一个表示数据项目 MIME 类型的 {{domxref("DataTransferItem.type","type")}} 属性。{{domxref("DataTransferItem")}} 对象也有获取拖拽项目数据的方法。</p>
 
 <p>{{domxref("DataTransferItemList")}} 对象是 {{domxref("DataTransferItem")}} 对象的列表。这个列表对象包含以下方法：向列表中添加拖拽项，从列表中移除拖拽项和清空列表中所有的拖拽项。</p>
 
 <p>{{domxref("DataTransfer")}} 和 {{domxref("DataTransferItem")}} 接口的一个主要的不同是前者使用同步的 {{domxref("DataTransfer.getData","getData()")}} 方法去得到拖拽项的数据，而后者使用异步的 {{domxref("DataTransferItem.getAsString","getAsString()")}} 方法得到拖拽项的数据。</p>
 
-<p class="note">注意: {{domxref("DragEvent")}} 和 {{domxref("DataTransfer")}} 接口是所有桌面浏览器都支持的。但是， {{domxref("DataTransferItem")}} 和{{domxref("DataTransferItemList")}} 接口并不被所有浏览器支持。请移步 {{anch("互操作性")}} 了解更多关于拖拽行为的信息.</p>
+<p>注意: {{domxref("DragEvent")}} 和 {{domxref("DataTransfer")}} 接口是所有桌面浏览器都支持的。但是， {{domxref("DataTransferItem")}} 和{{domxref("DataTransferItemList")}} 接口并不被所有浏览器支持。请移步 <a href="#互操作性">互操作性</a> 了解更多关于拖拽行为的信息。</p>
 
 <h3 id="Gecko_专用接口">Gecko 专用接口</h3>
 
@@ -254,7 +254,7 @@ function drop_handler(ev) {
  <li><a href="http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">使用 <code>DataTransferListItem</code> 接口拷贝和移动元素</a></li>
  <li>拖放文件；仅 Firefox 支持：<a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
  <li>拖放文件；所有浏览器支持：<a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
- <li>使用了拖放API的停车小页面：<a href="https://park.glitch.me/">https://park.glitch.me/</a> （在 <a href="https://glitch.com/edit/#!/park">这里</a> 编辑）</li>
+ <li>使用了拖放 API 的停车小页面：<a href="https://park.glitch.me/">https://park.glitch.me/</a> （在 <a href="https://glitch.com/edit/#!/park">这里</a> 编辑）</li>
 </ul>
 
 <h2 id="规范">规范</h2>
@@ -282,6 +282,6 @@ function drop_handler(ev) {
  <li><a class="internal" href="/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">拖拽操作</a></li>
  <li><a class="internal" href="/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">拖放多个项目</a></li>
  <li><a class="internal" href="/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">推荐拖拽元素类型</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard：HTML5拖放操作</a></li>
- <li><a href="http://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">来自CanIUse的拖放兼容数据</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard：HTML5 拖放操作</a></li>
+ <li><a href="http://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">来自 CanIUse 的拖放兼容数据</a></li>
 </ul>

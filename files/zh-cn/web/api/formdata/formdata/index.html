@@ -19,12 +19,12 @@ translation_of: Web/API/FormData/FormData
 
 <dl>
  <dt><code>form </code>{{optional_inline}}</dt>
- <dd>一个HTML 上的{{HTMLElement("form")}}表单元素——当指定了，这种方式创建的{{domxref("FormData")}}对象会自动将form中的表单值也包含进去，包括文件内容也会被编码之后包含进去。</dd>
+ <dd>一个 HTML 上的{{HTMLElement("form")}}表单元素——当指定了，这种方式创建的{{domxref("FormData")}}对象会自动将 form 中的表单值也包含进去，包括文件内容也会被编码之后包含进去。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的代码将创建一个空的FormData对象:</p>
+<p>下面的代码将创建一个空的 FormData 对象：</p>
 
 <pre class="brush: js">var formData = new FormData(); // 当前为空</pre>
 
@@ -78,100 +78,11 @@ formData = new FormData(myForm);</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>12</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>append with filename</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>available in web workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>12</p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>append with filename</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("39.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
-
-<div class="note">
-<p><strong>注意</strong>: XHR在Android 4.0上FormData的blob数据将发送空内容。</p>
-</div>
+{{Compat("api.FormData.FormData")}}
 
 <h2 id="附注">附注</h2>
 
-<p>在Gecko 7.0 {{geckoRelease("7.0")}}之前, 如果你将{{domxref("Blob")}}作为数据添加到form对象中，文件名就是空的，这可能导致服务器在HTTP头的Content-Disposition中设置的文件名为空而引起错误。 从Gecko 7.0开始, 将会使用"blob"作为Blob数据的文件名。</p>
+<p>在 Gecko 7.0 {{geckoRelease("7.0")}}之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。</p>
 
 <h2 id="相关链接">相关链接</h2>
 

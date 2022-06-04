@@ -7,7 +7,7 @@ translation_of: Web/API/WebGL_API
 ---
 <p>{{WebGLSidebar}}</p>
 
-<p class="summary">WebGL (Web Graphics Library) 是一個透過瀏覽器渲染3D及2D圖像的 JavaScript API ，且不需要安裝任何插件。 WebGL 透過與OpenGL ES 2.0緊密連結的API，將3D圖像帶入HTML5中，並可透過canvas元素呈現於瀏覽器中</p>
+<p>WebGL (Web Graphics Library) 是一個透過瀏覽器渲染3D及2D圖像的 JavaScript API ，且不需要安裝任何插件。 WebGL 透過與OpenGL ES 2.0緊密連結的API，將3D圖像帶入HTML5中，並可透過canvas元素呈現於瀏覽器中</p>
 
 <p>Support for WebGL is present in <a href="/en-US/Firefox" title="Firefox 4 for developers">Firefox</a> 4+, <a href="http://www.google.com/chrome/" title="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/" title="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/" title="http://www.apple.com/fr/safari/">Safari </a>5.1+ 以及 <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie" title="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> 11+; 然而，使用者的 GPU 也必須支援。</p>
 
@@ -64,7 +64,7 @@ translation_of: Web/API/WebGL_API
  <dt><a class="link-https" href="https://github.com/toji/gl-matrix" title="https://github.com/toji/gl-matrix">glMatrix</a></dt>
  <dd>JavaScript Matrix and Vector library for High Performance WebGL apps</dd>
  <dt><a href="http://code.google.com/p/webgl-mjs/" title="http://code.google.com/p/webgl-mjs/">mjs</a></dt>
- <dd><span>A JavaScript vector and matrix math library, optimized for WebGL usage.</span></dd>
+ <dd>A JavaScript vector and matrix math library, optimized for WebGL usage.</dd>
  <dt><a href="http://sylvester.jcoglan.com/" title="http://sylvester.jcoglan.com/">Sylvester</a></dt>
  <dd>An open source library for manipulating vectors and matrices. Not optimized for WebGL but extremely robust.</dd>
  <dt><a href="http://webglplayground.net" title="http://webglplayground.net">WebGL playground</a></dt>
@@ -78,158 +78,13 @@ translation_of: Web/API/WebGL_API
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
+<h3>WebGL 1</h3>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>9</td>
-   <td>11</td>
-   <td>12 (experiment)</td>
-   <td>5.1 (experiment)</td>
-  </tr>
-  <tr>
-   <td><a href="http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt" title="http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt"><code>OES_texture_float</code></a></td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/" title="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a></td>
-   <td>{{CompatGeckoDesktop("10.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/WebGL/Using_Extensions#EXT_texture_filter_anisotropic" title="WebGL/Using_Extensions#EXT_texture_filter_anisotropic"><code>EXT_texture_filter_anisotropic</code></a></td>
-   <td>{{CompatGeckoDesktop("13.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc" title="WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc"><code>WEBGL_compressed_texture_s3tc</code></a></td>
-   <td>{{CompatGeckoDesktop("15.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>drawingBufferWidth</code> and <code>drawingBufferHeight</code> attributes</td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.WebGLRenderingContext", 0)}}
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Chrome for Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>25 (experiment)</td>
-   <td>{{CompatNo}}</td>
-   <td>12 (experiment)</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>drawingBufferWidth</code> and <code>drawingBufferHeight</code> attributes</td>
-   <td>{{CompatGeckoMobile("9.0")}}</td>
-   <td>25</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt" title="http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt"><code>OES_texture_float</code></a></td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-   <td>25</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/" title="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a></td>
-   <td>{{CompatGeckoMobile("10.0")}}</td>
-   <td>25</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/WebGL/Using_Extensions#EXT_texture_filter_anisotropic" title="WebGL/Using_Extensions#EXT_texture_filter_anisotropic"><code>EXT_texture_filter_anisotropic</code></a></td>
-   <td>{{CompatGeckoMobile("13.0")}}</td>
-   <td>25</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>OES_element_index_uint</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>25</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>OES_vertex_array_object</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>25</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc" title="WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc"><code>WEBGL_compressed_texture_s3tc</code></a></td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>25<br>
-    prefixed with <span style="color: #222222; font-family: courier new,monospace; font-size: 12.66px; line-height: normal; white-space: pre-wrap;">WEBKIT_</span></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>WEBKIT_EXT_texture_filter_nisotropic</code></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3>WebGL 2</h3>
+
+{{Compat("api.WebGL2RenderingContext", 0)}}
 
 <h3 id="相容性小記">相容性小記</h3>
 

@@ -32,11 +32,11 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
 
 <h3 id="返回">返回</h3>
 
-<p><span style="line-height: 1.5;">一个 {{domxref("IDBRequest")}} 对象，在该操作对象中触发与此相关的后续事件。</span></p>
+<p>一个 {{domxref("IDBRequest")}} 对象，在该操作对象中触发与此相关的后续事件。</p>
 
 <h3 id="异常">异常</h3>
 
-<p><span style="line-height: 1.5;">这个方法可能导致以下类型中的一个</span> <span style="line-height: 1.5;">{{domxref("DOMException")}}</span> <span style="line-height: 1.5;">:</span></p>
+<p>这个方法可能导致以下类型中的一个 {{domxref("DOMException")}} :</p>
 
 <table class="standard-table">
  <thead>
@@ -55,9 +55,9 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
    <td>当前 {{domxref("IDBObjectStore")}} 事务不可用。</td>
   </tr>
   <tr>
-   <td><code><span style="line-height: normal;">DataError</span></code></td>
+   <td><code>DataError</code></td>
    <td>
-    <p>适用于以下任何条件:</p>
+    <p>适用于以下任何条件：</p>
 
     <ul>
      <li>对象存储使用内联键或者拥有密钥生成器（键生成器），并且提供了键参数。</li>
@@ -89,12 +89,12 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
 
 <h2 id="示例">示例</h2>
 
-<p><span style="line-height: 1.5;">在以下的代码片段中，在我们数据库中打开一个 </span>read/write（读写）事务和使用 <code>add()</code> 方法添加一些数据到存储对象中。<span style="">还要注意附加到事务事件处理程序的函数，这些函数用于报告事务打开成功或失败时的结果。完整的示例代码，请查看我们的</span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;"> To-do Notifications</a><span style="line-height: 1.5;"> 应用</span><span style="">（</span> <a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">在线查看示例</a> <span style="">）。</span></p>
+<p>在以下的代码片段中，在我们数据库中打开一个 read/write（读写）事务和使用 <code>add()</code> 方法添加一些数据到存储对象中。还要注意附加到事务事件处理程序的函数，这些函数用于报告事务打开成功或失败时的结果。完整的示例代码，请查看我们的<a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;"> To-do Notifications</a> 应用（ <a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">在线查看示例</a> ）。</p>
 
 <pre class="brush: js notranslate">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -133,7 +133,7 @@ function addData() {
   };
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span></h2>
+<h2 id="Specification">Specification</h2>
 
 <dl>
 </dl>

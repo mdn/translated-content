@@ -5,11 +5,11 @@ translation_of: Web/API/CanvasGradient
 ---
 <div>{{APIRef("Canvas")}}</div>
 
-<p><code><strong>CanvasGradient</strong></code> 接口表示描述渐变的不透明对象。通过 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} 或 {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} 的返回值得到.</p>
+<p><code><strong>CanvasGradient</strong></code> 接口表示描述渐变的不透明对象。通过 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} 或 {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} 的返回值得到。</p>
 
 <h2 id="属性">属性</h2>
 
-<p><em>不透明对象，没有暴露的属性.</em></p>
+<p><em>不透明对象，没有暴露的属性。</em></p>
 
 <h2 id="方法">方法</h2>
 
@@ -17,84 +17,16 @@ translation_of: Web/API/CanvasGradient
 
 <dl>
  <dt>{{domxref("CanvasGradient.addColorStop()")}}</dt>
- <dd>添加一个由<code>偏移(offset)</code>和颜色(<code>color</code>)定义的断点到渐变中。如果偏移值不在0到1之间，将抛出<code>INDEX_SIZE_ERR错误，如果颜色值不能被解析为有效的</code>CSS颜色值 {{cssxref("&lt;color&gt;")}}<code>，将抛出SYNTAX_ERR</code>错误。</dd>
+ <dd>添加一个由<code>偏移(offset)</code>和颜色 (<code>color</code>) 定义的断点到渐变中。如果偏移值不在 0 到 1 之间，将抛出<code>INDEX_SIZE_ERR错误，如果颜色值不能被解析为有效的</code>CSS 颜色值 {{cssxref("&lt;color&gt;")}}<code>，将抛出SYNTAX_ERR</code>错误。</dd>
 </dl>
 
 <h2 id="Specifications" name="Specifications">标准</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">标准</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>同 {{Spec2('HTML Canvas 2D Context W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Canvas 2D Context W3C', '#canvasgradient', 'CanvasGradient')}}</td>
-   <td>{{Spec2('HTML Canvas 2D Context W3C')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>4.0</td>
-   <td>{{CompatGeckoDesktop("3.6")}} [1]</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("3.6")}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Gecko 5.0 {{geckoRelease("5.0")}} 以前，通过调用<code>addColorStop()</code>添加颜色断点时给定非有限的值，会错误的抛出 <code>SYNTAX_ERR</code> 而不是<code>INDEX_SIZE_ERR</code>。</p>
+{{Compat("api.CanvasGradient")}}
 
 <h2 id="请参考">请参考</h2>
 

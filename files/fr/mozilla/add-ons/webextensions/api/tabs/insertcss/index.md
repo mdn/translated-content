@@ -20,11 +20,11 @@ Injecter du code CSS dans une page web.
 
 Pour utiliser cette API vous devez avoir la permission "[host permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)" ou utiliser la permission "[activeTab permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)".
 
-Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns),  ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.
+Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns),  ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.
 
 > **Note :** Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.
 
-Le CSS inséré peut être retiré à nouveau en appelant  {{WebExtAPIRef("tabs.removeCSS()")}}.
+Le CSS inséré peut être retiré à nouveau en appelant  {{WebExtAPIRef("tabs.removeCSS()")}}.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (sur Firefox seulement).
 

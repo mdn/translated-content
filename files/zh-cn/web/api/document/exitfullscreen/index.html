@@ -7,7 +7,7 @@ translation_of: Web/API/Document/exitFullscreen
 
 <p><code><strong>Document.exitFullscreen()</strong></code> 方法用于让当前文档退出全屏模式（原文表述不准确，详见备注）。调用这个方法会让文档回退到上一个调用{{domxref("Element.requestFullscreen()")}}方法进入全屏模式之前的状态。</p>
 
-<div class="note"><strong>备注:</strong> 如果一个元素A在请求进去全屏模式之前，已经存在其他元素处于全屏状态，当这个元素A退出全屏模式之后，之前的元素仍然处于全屏状态。浏览器内部维护了一个全屏元素栈用于实现这个目的。</div>
+<div class="note"><strong>备注：</strong> 如果一个元素 A 在请求进去全屏模式之前，已经存在其他元素处于全屏状态，当这个元素 A 退出全屏模式之后，之前的元素仍然处于全屏状态。浏览器内部维护了一个全屏元素栈用于实现这个目的。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -25,81 +25,13 @@ document.onclick = function (event) {
   }
 };</pre>
 
-<h2 id="API规格">API规格</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatGeckoDesktop("9.0")}} as <code>mozCancelFullScreen</code><sup>[1]</sup><br>
-    {{CompatGeckoDesktop("47.0")}}<sup>[1]</sup> (behind <code>full-screen-api.unprefix.enabled</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webkit</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatGeckoMobile("9.0")}} as <code>mozCancelFullScreen</code><sup>[1]</sup><br>
-    {{CompatGeckoMobile("47.0")}}<sup>[1]</sup> (behind <code>full-screen-api.unprefix.enabled</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 可通过<code><strong>Document.exitFullscreen()</strong></code>方法让全屏元素栈的栈顶元素退出全屏状态，并让新的栈顶的元素进入全屏状态。此特征在Gecko 11.0 {{geckoRelease("11.0")}}中被实现.</p>
+{{Compat("api.Document.exitFullscreen")}}
 
 <h2 id="参阅">参阅</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/Notification/body
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p> {{domxref("Notification")}} 的只读属性body返回了构造函数{{domxref("Notification")}}实例化时，options所使用的body值。</p>
+<p> {{domxref("Notification")}} 的只读属性 body 返回了构造函数{{domxref("Notification")}}实例化时，options 所使用的 body 值。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Notification/body
 
 <h2 id="示例">示例</h2>
 
-<p>在 <a href="https://mdn.github.io/emogotchi/">Emogotchi demo</a> (<a href="https://github.com/mdn/emogotchi">see source code</a>)中, 我们在激活一个桌面通知时,调用了<code>spawnNotification()</code>函数—函数被传入了指定的参数 body、icon、title , 创建了一个必选对象传入{{domxref("Notification.Notification","Notification()")}} 构造函数创建了一个实例.</p>
+<p>在 <a href="https://mdn.github.io/emogotchi/">Emogotchi demo</a> (<a href="https://github.com/mdn/emogotchi">see source code</a>) 中，我们在激活一个桌面通知时，调用了<code>spawnNotification()</code>函数—函数被传入了指定的参数 body、icon、title , 创建了一个必选对象传入{{domxref("Notification.Notification","Notification()")}} 构造函数创建了一个实例。</p>
 
 <pre class="brush: js">function spawnNotification(theBody,theIcon,theTitle) {
   var options = {
@@ -49,104 +49,7 @@ translation_of: Web/API/Notification/body
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5 {{ property_prefix("webkit") }} (see notes)<br>
-    22</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>{{ CompatNo() }}</td>
-   <td>25</td>
-   <td>6 (see notes)</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>1.0.1 {{ property_prefix("moz") }} (see notes)<br>
-    1.2</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Firefox_OS_备忘">Firefox OS 备忘</h3>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Firefox OS notes")}}</p>
-
-<h3 id="Chrome_备忘">Chrome 备忘</h3>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Chrome notes")}}</p>
-
-<h3 id="Safari_备忘">Safari 备忘</h3>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Safari notes")}}</p>
+{{Compat("api.Notification.body")}}
 
 <h2 id="相关链接">相关链接</h2>
 

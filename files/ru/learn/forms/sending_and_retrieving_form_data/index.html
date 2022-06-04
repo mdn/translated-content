@@ -212,7 +212,7 @@ if __name__ == "__main__":
 <p>Два шаблона из коде выше взаимодействуют так:</p>
 
 <ul>
- <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: Та же форма, что и выше {{anch("The POST method")}} , только с использованием <code>action</code> к  <code>\{{ url_for('hello') }}</code>. (Это <a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a> шаблон, который изначально HTML, но может содержать вызовы Python кода в фигурных скобках, которые запустятся веб-сервером. <code>url_for('hello')</code> буквально говорит: после отправки данных переадресуй их в <code>/hello</code>.)</li>
+ <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: Та же форма, что и выше <a href="#the_post_method">The POST method</a> , только с использованием <code>action</code> к  <code>\{{ url_for('hello') }}</code>. (Это <a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a> шаблон, который изначально HTML, но может содержать вызовы Python кода в фигурных скобках, которые запустятся веб-сервером. <code>url_for('hello')</code> буквально говорит: после отправки данных переадресуй их в <code>/hello</code>.)</li>
  <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html">greeting.html</a>: Этот шаблон просто содержит строку, которая отображает два бита данных, переданных ему при отображении. Это сделано с помощью функции <code>hello()</code>, указанной выше, которая выполняется, когда запрос направляется в <code>/hello</code> URL.</li>
 </ul>
 

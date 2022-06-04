@@ -387,7 +387,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - Obtention des limites des rectangles limites
   - : L'objet [`Range`](/fr/docs/Web/API/Range) a désormais les méthodes [`range.getClientRects()`](/fr/docs/Web/API/Range/getClientRects) et [`range.getBoundingClientRect()`](/fr/docs/Web/API/Range/getBoundingClientRect).
 - Capture des évènements de la souris sur des éléments quelconques
-  - : Ajout du support des APIs `setCapture()` et `releaseCapture()` originaires d'Internet Explorer. Voir [bug 503943](https://bugzilla.mozilla.org/show_bug.cgi?id=503943).
+  - : Ajout du support des APIs `setCapture()` et `releaseCapture()` originaires d'Internet Explorer. Voir [bug 503943](https://bugzilla.mozilla.org/show_bug.cgi?id=503943).
 - [Manipulation de l'historique du navigateur](/fr/docs/DOM/Manipulating_the_browser_history)
   - : L'objet de l'historique déjà existant et disponible via l'objet [`window.history`](/fr/docs/Web/API/Window/history), supporte maintenant les nouvelles méthodes HTML5 `pushState()` et `replaceState()`.
 - [Animations utilisant MozBeforePaint](/fr/docs/DOM/Animations_using_MozBeforePaint)
@@ -499,7 +499,7 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 
 #### Divers changements DOM
 
-- L'enveloppement d'un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) peut maintenant être commandé via l'attribut DOM `wrap`. [bug 41464](https://bugzilla.mozilla.org/show_bug.cgi?id=41464)
+- L'enveloppement d'un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) peut maintenant être commandé via l'attribut DOM `wrap`. [bug 41464](https://bugzilla.mozilla.org/show_bug.cgi?id=41464)
 - Les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) crées avec [`document.createElement()`](/fr/docs/Web/API/Document/createElement) et insérés dans un document, se comportent désormais conformément à la spécification HTML5. Les scripts avec l'attribut `src` s'exécute dès que possible (sasn maintenir la commande) et les scripts sans l'attribut `src` s'exécute de manière simultanée. Pour faire des scripts d'insertion de scripts qui ont l'attribut `src` qui exécute l'ensemble dans l'ordre d'insertion, pour eux `.async=false`.
 - Les objets DOM [`file`](/fr/docs/Web/API/File) proposent désormais la propriété `url`.
 - Support de [FormData](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects) pour XMLHttpRequest.
@@ -507,13 +507,13 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 - La propriété [`document.currentScript`](/fr/docs/Web/API/Document/currentScript) vous permet de déterminer quel script de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) est en cours d'exécution. les nouveaux évènements [`element.onbeforescriptexecute`](/fr/docs/Web/API/Element/onbeforescriptexecute) et [`element.onafterscriptexecute`](/fr/docs/Web/API/Element/onafterscriptexecute) sont déclenchés avant et après l'éxécution d'un élément script.
 - Ajout de la propriété [`mozSourceNode`](/fr/docs/DragDrop/DataTransfer#mozSourceNode) à l'objet [`DragTransfer`](/fr/docs/DragDrop/DataTransfer).
 - Ajout de la méthode [`selection.modify()`](/fr/docs/DOM/Selection/modify) à l'objet [`Selection`](/fr/docs/Web/API/Selection), ce qui vous permet de facilement modifier la sélection de texte courant ou la position du curseur dans une fenêtre de navigateur.
-- Le support de l'objet `window.directories` et de la fonctionnalité `directories` pour [`window.open`](/fr/docs/Web/API/Window/open), qui ne sont plus supportés dans les autres navigateurs, ont été enlevés. Utiliser `personalbar` à la place. [bug 474058](https://bugzilla.mozilla.org/show_bug.cgi?id=474058)
+- Le support de l'objet `window.directories` et de la fonctionnalité `directories` pour [`window.open`](/fr/docs/Web/API/Window/open), qui ne sont plus supportés dans les autres navigateurs, ont été enlevés. Utiliser `personalbar` à la place. [bug 474058](https://bugzilla.mozilla.org/show_bug.cgi?id=474058)
 - La propriété [`event.mozInputSource`](/fr/docs/Web/API/Event/mozInputSource) a été ajoutée à l'interface utilisateur des évènements DOM, cette propriété non-standard vous permet de déterminer le type de l'appareil qui a généré un évènement.
 - L'évènement [`document.onreadystatechange`](/fr/docs/Web/API/Document/onreadystatechange) a été implémenté.
 - La méthode [`document.createElement`](/fr/docs/Web/API/Document/createElement) n'accepte plus `<` et `>` autour du nom de balise en mode quirks.
 - Les méthodes [`element.setCapture()`](/fr/docs/Web/API/Element/setCapture) et [`document.releaseCapture()`](/fr/docs/Web/API/Document/releaseCapture) ont été ajoutées, permettant à des éléments de poursuivre des évènements de la souris, même lorsqu'elle est en dehors de leur zone de suivi normal après que l'évènement `mousedown` soit survenu.
 - La propriété [`window.mozPaintCount`](/fr/docs/Web/API/Window/mozPaintCount) a été ajoutée, elle vous permet de déterminer le nombre de fois q'un document a été peint. Cela est particulièrement utile lors des tests de performance de votre application web.
-- Le signe de la langue a été supprimé de [`window.navigator.appVersion`](/fr/docs/Web/API/Window/navigator/appVersion) et [`window.navigator.userAgent`](/fr/docs/Web/API/Window/navigator/userAgent). Utilisez [`window.navigator.language`](/fr/docs/Web/API/Window/navigator/language) ou [l'en-tête Accept-Language](/fr/docs/HTTP/Content_negotiation) à la place. [bug 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- Le signe de la langue a été supprimé de [`window.navigator.appVersion`](/fr/docs/Web/API/Window/navigator/appVersion) et [`window.navigator.userAgent`](/fr/docs/Web/API/Window/navigator/userAgent). Utilisez [`window.navigator.language`](/fr/docs/Web/API/Window/navigator/language) ou [l'en-tête Accept-Language](/fr/docs/HTTP/Content_negotiation) à la place. [bug 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
 - L'objet [XMLHttpRequest](/fr/docs/XMLHttpRequest) expose maintenant la réponse comme un tableau JavaScript typé et aussi comme une chaîne, en utilisant la propriété, spécifique de Gecko, `mozResponseArrayBuffer`.
 - [Mouse events](/fr/docs/DOM/MouseEvent) inclut maintenant une propriété `mozPressure` indiquant le niveau de pression supporté sur les périphériques d'entrée sensibles à la pression.
 - Les méthodes [`window.URL.createObjectURL()`](/fr/docs/Web/API/Window/URL/createObjectURL) et [`window.URL.revokeObjectURL()`](/fr/docs/Web/API/Window/URL/revokeObjectURL) vous permettent de créer des URLs d'objet qui renvoient à des fichiers locaux.
@@ -535,7 +535,7 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 - [L'en-tête de réponse X-FRAME-OPTIONS](/fr/docs/The_X-FRAME-OPTIONS_response_header)
   - : L'en-tête de réponse X-FRAME-OPTIONS HTTP introduite dans Internet Explorer 8 est désormais supportée par Firefox. Cela permet aux sites d'indiquer si leurs pages peuvent être utilisées dans des frames ou si l'utilisation de la page doit être restreint.
 - Changement de la [chaîne de l'agent utilisateur](/fr/docs/Gecko_user_agent_string_reference)
-  - : C'est un moyen de réduire la quantité et l'entropie des données envoyées dans les requêts HTPP (voir [bug 572650](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)), le niveau de cryptage et le signe de la langue ont été enlevés de la chaîne de l'agent utilisateur.
+  - : C'est un moyen de réduire la quantité et l'entropie des données envoyées dans les requêts HTPP (voir [bug 572650](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)), le niveau de cryptage et le signe de la langue ont été enlevés de la chaîne de l'agent utilisateur.
 
 ### JavaScript
 
@@ -671,7 +671,7 @@ En plus des changements spécifiques référencés ci-dessous, il est important 
 - Les résultats de la requête peuvent maintenant être observés par plusieurs observateurs, et les requêtes peuvent être exécutées de manière asynchrone. Cela signifie qu'il y a eu des changements dans les interfaces [`nsINavHistoryResult`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult), [`nsINavHistoryQueryOptions`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) et [`nsINavHistoryContainerResultNode`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode). De plus, l'interface [`nsINavHistoryResultViewer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer) a été renommée en [`nsINavHistoryResultObserver`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultObserver).
 - De [nouvelles notifications](/fr/docs/Observer_Notifications#Places) ont été ajoutées pour permettre au navigateur de suivre la procédure d'arrêt du service Places de manière plus fiable. Parmi celles-ci, la plupart sont pour un usage interne uniquement, mais la notification `places-connection-closed` est disponible pour savoir quand le service Places a terminé sont processus d'arrêt.
 - Le paramètre de sortie de la taille d'un tableau sur plusieurs méthodes Places est désormais optionnel.
-- Le support de `<menupopup type="places">` a été supprimé. A la place, vous devez créer et remplir un menu avec ds informations Places manuellement, plutôt que de l'avoir fait pour vous. Voir [Displaying Places information using views: Menu view](/fr/docs/Displaying_Places_information_using_views#Menu_view) pour plus de détails.
+- Le support de `<menupopup type="places">` a été supprimé. A la place, vous devez créer et remplir un menu avec ds informations Places manuellement, plutôt que de l'avoir fait pour vous. Voir [Displaying Places information using views: Menu view](/fr/docs/Displaying_Places_information_using_views#Menu_view) pour plus de détails.
 
 ### Changements dans les interfaces
 
@@ -689,7 +689,7 @@ En plus des changements spécifiques référencés ci-dessous, il est important 
 - Les interfaces [`nsIContentView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentView) et [`nsIContentViewManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewManager) ont été ajoutées pour Firefox Mobile. Ils représentent une vue déroulant le contenu dont le contenu est actuellement utilisé par un processus séparé.
 - L'interface [`nsIDiskCacheStreamInternal`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDiskCacheStreamInternal) a été ajoutée.
 - L'interface [`nsIExternalURLHandlerService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExternalURLHandlerService) a été ajoutée.
-- L'interface [`nsISyncJPAKE`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncJPAKE) a été ajoutée. Voir [bug 601645](https://bugzilla.mozilla.org/show_bug.cgi?id=601645).
+- L'interface [`nsISyncJPAKE`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncJPAKE) a été ajoutée. Voir [bug 601645](https://bugzilla.mozilla.org/show_bug.cgi?id=601645).
 
 ### Gestion de la mémoire
 
@@ -716,7 +716,7 @@ En plus des changements spécifiques référencés ci-dessous, il est important 
 - [Bootstrap des extensions](/fr/docs/Extensions/Bootstrapped_extensions)
   - : Vous pouvez désormais créer des extensions qui peuvent être installées, désinstallées et mises à jour sans nécessiter le redémarrage du navigateur.
 - Suppression des plugins par défaut
-  - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. Voir [bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891).
+  - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. Voir [bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891).
 - Extension Manager remplacé par Addon Manager
   - : [`nsIExtensionManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExtensionManager) a été remplacée par [AddonManager](/fr/docs/Addons/Add-on_Manager/AddonManager).
 - Child HWNDs n'est plus utilisé

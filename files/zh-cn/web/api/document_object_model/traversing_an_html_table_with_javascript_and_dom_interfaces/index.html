@@ -1,56 +1,55 @@
 ---
-title: 使用Javascript和DOM Interfaces来处理HTML
+title: 使用 Javascript 和 DOM Interfaces 来处理 HTML
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 tags:
   - DOM
 translation_of: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-original_slug: 使用Javascript和DOM_Interfaces来处理HTML
 ---
 <div style="float: left; width: 912px;">
 <h3 id=".E7.AE.80.E4.BB.8B" name=".E7.AE.80.E4.BB.8B">简介</h3>
 
-<p>本文概述了一些强大的，基本的DOM 1 级别中的方法以及如何在JavaScript中使用它们。你将会如何动态地创建，访问，控制以及移除HTML元素。这里提到的DOM方法，并非是HTML专有的；它们在XML中同样适用。这里所有的示例，在任何全面支持DOM level1 的浏览器里都能正常工作；例如Mozilla浏览器或者其他基于Mozilla的浏览器，像网景公司的下一代导航者（Navigatior）浏览器等。这里的示例代码在IE5中也能正常工作。</p>
+<p>本文概述了一些强大的，基本的 DOM 1 级别中的方法以及如何在 JavaScript 中使用它们。你将会如何动态地创建，访问，控制以及移除 HTML 元素。这里提到的 DOM 方法，并非是 HTML 专有的；它们在 XML 中同样适用。这里所有的示例，在任何全面支持 DOM level1 的浏览器里都能正常工作；例如 Mozilla 浏览器或者其他基于 Mozilla 的浏览器，像网景公司的下一代导航者（Navigatior）浏览器等。这里的示例代码在 IE5 中也能正常工作。</p>
 
-<div class="note">这里所提到的DOM方法是文档对象模型规范（版本一）的核心的一部分。DOM 1版本包括对文档进行访问和处理的方法（DOM 1 核心）和专门为HTML文档定义的方法。</div>
+<div class="note">这里所提到的 DOM 方法是文档对象模型规范（版本一）的核心的一部分。DOM 1 版本包括对文档进行访问和处理的方法（DOM 1 核心）和专门为 HTML 文档定义的方法。</div>
 
-<h3 id="Sample1.html.E6.A6.82.E8.A7.88" name="Sample1.html.E6.A6.82.E8.A7.88">Sample1.html概览</h3>
+<h3 id="Sample1.html.E6.A6.82.E8.A7.88" name="Sample1.html.E6.A6.82.E8.A7.88">Sample1.html 概览</h3>
 
-<p>这段文字是通过一个实例代码来介绍了DOM的。那么我们从下面的HTML示例来开始吧。这段示例使用了DOM1的方法，从JavaScript动态创建了一个HTML表格。它创建了一个包含了四个单元格，并且在每个单元格中含有文本。单元中文字内容是“这个单元式y行x列”，来展示单元格在表格中所处的位置。</p>
+<p>这段文字是通过一个实例代码来介绍了 DOM 的。那么我们从下面的 HTML 示例来开始吧。这段示例使用了 DOM1 的方法，从 JavaScript 动态创建了一个 HTML 表格。它创建了一个包含了四个单元格，并且在每个单元格中含有文本。单元中文字内容是“这个单元式 y 行 x 列”，来展示单元格在表格中所处的位置。</p>
 
 <pre class="notranslate">&lt;head&gt;
 &lt;title&gt;样例代码 - 使用 JavaScript 和 DOM 接口创建一个 HTML 表格&lt;/title&gt;
 &lt;script&gt;
     function start() {
-        // 获得从body的引用
+        // 获得从 body 的引用
         var mybody=document.getElementsByTagName("body").item(0);
-        // 创建一个TABLE的元素
+        // 创建一个 TABLE 的元素
         var mytable = document.createElement("TABLE");
-        // 创建一个TBODY的元素
+        // 创建一个 TBODY 的元素
         var mytablebody = document.createElement("TBODY");
         // 创建所有的单元格
         for(j=0;j&lt;2;j++) {
-            // 创建一个TR元素
+            // 创建一个 TR 元素
           var  mycurrent_row=document.createElement("TR");
             for(i=0;i&lt;2;i++) {
-                // 创建一个TD元素
+                // 创建一个 TD 元素
               var  mycurrent_cell=document.createElement("TD");
                 // 创建一个文本（text）节点
               var  currenttext=document.createTextNode("cell is row "+j+", column "+i);
-                // 将我们创建的这个文本节点添加在TD元素里
+                // 将我们创建的这个文本节点添加在 TD 元素里
                 mycurrent_cell.appendChild(currenttext);
-                // 将TD元素添加在TR里
+                // 将 TD 元素添加在 TR 里
                 mycurrent_row.appendChild(mycurrent_cell);
             }
-            // 将TR元素添加在TBODY里
+            // 将 TR 元素添加在 TBODY 里
             mytablebody.appendChild(mycurrent_row);
         }
-        // 将TBODY元素添加在TABLE里
+        // 将 TBODY 元素添加在 TABLE 里
         mytable.appendChild(mytablebody);
-        // 将TABLE元素添加在BODY里
+        // 将 TABLE 元素添加在 BODY 里
         mybody.appendChild(mytable);
-        // 设置mytable的边界属性border为2
+        // 设置 mytable 的边界属性 border 为 2
         mytable.setAttribute("border","2");
     }
 &lt;/script&gt;
@@ -63,36 +62,36 @@ original_slug: 使用Javascript和DOM_Interfaces来处理HTML
 <p>注意我们创建元素和文本节点的顺序：</p>
 
 <ol>
- <li>首先我们创建了TABLE元素。</li>
- <li>然后，我们创建了TABLE的子元素--TBODY。</li>
- <li>然后，我们使用循环语句创建了TBODY的子元素--TR。</li>
- <li>对于每一个TR元素，我们使用一个循环语句创建它的子元素--TD。</li>
- <li>对于每一个TD元素，我们创建单元格内的文本节点。</li>
+ <li>首先我们创建了 TABLE 元素。</li>
+ <li>然后，我们创建了 TABLE 的子元素--TBODY。</li>
+ <li>然后，我们使用循环语句创建了 TBODY 的子元素--TR。</li>
+ <li>对于每一个 TR 元素，我们使用一个循环语句创建它的子元素--TD。</li>
+ <li>对于每一个 TD 元素，我们创建单元格内的文本节点。</li>
 </ol>
 
-<p>现在，我们创建了TABLE，TBODY，TR，TD等元素，然后创建了文本节点；接下来，我们将每一个对象接在各自的父节点上，使用逆序：</p>
+<p>现在，我们创建了 TABLE，TBODY，TR，TD 等元素，然后创建了文本节点；接下来，我们将每一个对象接在各自的父节点上，使用逆序：</p>
 
 <ol>
- <li>首先，我们将每一个文本节点接在TD元素上
+ <li>首先，我们将每一个文本节点接在 TD 元素上
   <pre class="notranslate">mycurrent_cell.appendChild(currenttext);</pre>
  </li>
- <li>然后，我们将每一个TD元素接在他的父TR元素上。
+ <li>然后，我们将每一个 TD 元素接在他的父 TR 元素上。
   <pre class="notranslate">mycurrent_row.appendChild(mycurrent_cell);</pre>
  </li>
- <li>然后，我们将每一个TR元素接在他们的父TBODY元素上。
+ <li>然后，我们将每一个 TR 元素接在他们的父 TBODY 元素上。
   <pre class="notranslate">mytablebody.appendChild(mycurrent_row);</pre>
  </li>
- <li>下一步,我们将TBODY元素接在他的父TABLE元素上
+ <li>下一步，我们将 TBODY 元素接在他的父 TABLE 元素上
   <pre class="notranslate">mytable.appendChild(mytablebody);</pre>
  </li>
- <li>最后，我们将TABLE元素接在他的父元素BODY上。
+ <li>最后，我们将 TABLE 元素接在他的父元素 BODY 上。
   <pre class="notranslate">mybody.appendChild(mytable);</pre>
  </li>
 </ol>
 
-<p>请记住这个机制。你将会在W3C DOM编程中经常使用它。首先，你从上到下的创建元素；然后你从下向上的将子元素接在他们的父元素上。</p>
+<p>请记住这个机制。你将会在 W3C DOM 编程中经常使用它。首先，你从上到下的创建元素；然后你从下向上的将子元素接在他们的父元素上。</p>
 
-<p>下面是由javascript代码生成的HTML代码：</p>
+<p>下面是由 javascript 代码生成的 HTML 代码：</p>
 
 <pre class="notranslate">...
 &lt;table border="2"&gt;
@@ -104,28 +103,28 @@ original_slug: 使用Javascript和DOM_Interfaces来处理HTML
 ...
 </pre>
 
-<p>下面是由代码生成的TABLE及其子元素的DOM对象树：</p>
+<p>下面是由代码生成的 TABLE 及其子元素的 DOM 对象树：</p>
 
 <p><img alt="Image:sample1-tabledom.jpg" class="internal" src="/@api/deki/files/2677/=Sample1-tabledom.jpg"></p>
 
-<p>你可以只用一些DOM方法来创建这个表格和它内部的子元素。请在脑海中时刻保留你想要创建的数据结构的树之模型，这样有利于更简便的写出必须的代码。在图1的TABLE树中，TABLE有一个子元素TBODY。TBODY有两个子元素。每一个TR又含有两个子元素（TD）。最后，每一个TD有一个子元素--文本节点。</p>
+<p>你可以只用一些 DOM 方法来创建这个表格和它内部的子元素。请在脑海中时刻保留你想要创建的数据结构的树之模型，这样有利于更简便的写出必须的代码。在图 1 的 TABLE 树中，TABLE 有一个子元素 TBODY。TBODY 有两个子元素。每一个 TR 又含有两个子元素（TD）。最后，每一个 TD 有一个子元素 -- 文本节点。</p>
 
-<h3 id=".E5.9F.BA.E6.9C.ACDOM.E6.96.B9.E6.B3.95_-_Sample2.html" name=".E5.9F.BA.E6.9C.ACDOM.E6.96.B9.E6.B3.95_-_Sample2.html">基本DOM方法 - Sample2.html</h3>
+<h3 id=".E5.9F.BA.E6.9C.ACDOM.E6.96.B9.E6.B3.95_-_Sample2.html" name=".E5.9F.BA.E6.9C.ACDOM.E6.96.B9.E6.B3.95_-_Sample2.html">基本 DOM 方法 - Sample2.html</h3>
 
 <p><code>getElementByTagName</code>是文档接口（Document interface）和元素接口（Element interface）的中的方法，所以不管是根文档对象还是所有的元素对象都含有方法<code>getElementByTagName</code>。用来通过它们的标签名称（tag name）来获得某些元素的一系列子元素。你可以使用的方法是：<code><var>element</var>.getElementsByTagName(<var>tagname</var>)</code>。</p>
 
-<p><code>getElementsByTagName</code>返回一个有特定标签名称（tagname）的子元素列表。从这个子元素列表中，你可以通过调用<code>item</code>和你想得到的元素的下标，来获得单个元素。列表中第一个元素的下标是0。上面的方法很简单，但是当你操作一个巨大的数据结构时还是应该小心一些。 OK，我们下一个话题中要继续对我们的表格例子进行修改。下面的示例更加简单，它意图展示一些基础的方法：</p>
+<p><code>getElementsByTagName</code>返回一个有特定标签名称（tagname）的子元素列表。从这个子元素列表中，你可以通过调用<code>item</code>和你想得到的元素的下标，来获得单个元素。列表中第一个元素的下标是 0。上面的方法很简单，但是当你操作一个巨大的数据结构时还是应该小心一些。 OK，我们下一个话题中要继续对我们的表格例子进行修改。下面的示例更加简单，它意图展示一些基础的方法：</p>
 
 <pre class="notranslate">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;样例代码 - 使用 JavaScript 和 DOM 接口操作 HTML 表格&lt;/title&gt;
 &lt;script&gt;
     function start() {
-        // 获得所有的body元素列表（在这里将只有一个）
+        // 获得所有的 body 元素列表（在这里将只有一个）
         myDocumentElements=document.getElementsByTagName("body");
-        // 我们所需要body元素是这个列表的第一个元素
+        // 我们所需要 body 元素是这个列表的第一个元素
         myBody=myDocumentElements.item(0);
-        // 现在，让我们获得body的子元素中所有的p元素
+        // 现在，让我们获得 body 的子元素中所有的 p 元素
         myBodyElements=myBody.getElementsByTagName("p");
         // 我们所需要的是这个列表中的第二个单元元素
         myP=myBodyElements.item(1);
@@ -139,16 +138,16 @@ original_slug: 使用Javascript和DOM_Interfaces来处理HTML
 &lt;/html&gt;
 </pre>
 
-<p>在这个例子中，我们设置变量<code>myP</code>指向DOM对象body中的第二个<code>p</code>元素：</p>
+<p>在这个例子中，我们设置变量<code>myP</code>指向 DOM 对象 body 中的第二个<code>p</code>元素：</p>
 
 <ol>
- <li>首先，我们使用下面的代码获得所有的body元素的列表，因为在任何合法的HTML文档中都只有一个body元素，所以这个列表是只包含一个单元的。
+ <li>首先，我们使用下面的代码获得所有的 body 元素的列表，因为在任何合法的 HTML 文档中都只有一个 body 元素，所以这个列表是只包含一个单元的。
   <pre class="notranslate">document.getElementsByTagName("body")</pre>
  </li>
- <li>下一步，我们取得列表的第一个元素，它本身就会body元素对象。
+ <li>下一步，我们取得列表的第一个元素，它本身就会 body 元素对象。
   <pre class="notranslate">myBody=myDocumentElements.item(0);</pre>
  </li>
- <li>然后，我们通过下面代码获得body的子元素中所有的p元素
+ <li>然后，我们通过下面代码获得 body 的子元素中所有的 p 元素
   <pre class="notranslate">myBodyElements=myBody.getElementsByTagName("p");</pre>
  </li>
  <li>最后，我们从列表中取第二个单元元素。
@@ -158,38 +157,38 @@ original_slug: 使用Javascript和DOM_Interfaces来处理HTML
 
 <p><img alt="Image:sample2a2.jpg" src="https://developer.mozilla.org/@api/deki/files/834/=Sample2a2.jpg"></p>
 
-<p>一旦你取得了HTML元素的DOM对象，你就可以设置它的属性了。比如，如果你希望设置背景色属性，你只需要添加：</p>
+<p>一旦你取得了 HTML 元素的 DOM 对象，你就可以设置它的属性了。比如，如果你希望设置背景色属性，你只需要添加：</p>
 
 <pre class="notranslate">myP.style.background="rgb(255,0,0)";
-// 设置inline的背景色风格
+// 设置 inline 的背景色风格
 
 </pre>
 
-<h4 id=".E4.BD.BF.E7.94.A8document.createTextNode.28...29.E5.88.9B.E5.BB.BA.E6.96.87.E6.9C.AC.E8.8A.82.E7.82.B9" name=".E4.BD.BF.E7.94.A8document.createTextNode.28...29.E5.88.9B.E5.BB.BA.E6.96.87.E6.9C.AC.E8.8A.82.E7.82.B9">使用document.createTextNode(..)创建文本节点</h4>
+<h4 id=".E4.BD.BF.E7.94.A8document.createTextNode.28...29.E5.88.9B.E5.BB.BA.E6.96.87.E6.9C.AC.E8.8A.82.E7.82.B9" name=".E4.BD.BF.E7.94.A8document.createTextNode.28...29.E5.88.9B.E5.BB.BA.E6.96.87.E6.9C.AC.E8.8A.82.E7.82.B9">使用 document.createTextNode(..) 创建文本节点</h4>
 
-<p>使用文档对象来调用一个createTextNode方法并创建你自己的文本节点。你只需要传递文字内容给这个函数。返回的值就是一个展示那个文本节点信息的对象。</p>
+<p>使用文档对象来调用一个 createTextNode 方法并创建你自己的文本节点。你只需要传递文字内容给这个函数。返回的值就是一个展示那个文本节点信息的对象。</p>
 
 <pre class="notranslate">myTextNode=document.createTextNode("world");
 </pre>
 
-<p>这表示你已经创建了一个TEXT——NODE（一个文字片断）类型的节点，并且它的内容是“world”，任何你对myTextNode的引用都指向这个节点对象。如果想将这个文本插入到HTML页面中，你还需要将它作为其他节点元素的子元素。</p>
+<p>这表示你已经创建了一个 TEXT——NODE（一个文字片断）类型的节点，并且它的内容是“world”，任何你对 myTextNode 的引用都指向这个节点对象。如果想将这个文本插入到 HTML 页面中，你还需要将它作为其他节点元素的子元素。</p>
 
-<h4 id=".E4.BD.BF.E7.94.A8appendChild.28...29.E6.8F.92.E5.85.A5.E5.85.83.E7.B4.A0" name=".E4.BD.BF.E7.94.A8appendChild.28...29.E6.8F.92.E5.85.A5.E5.85.83.E7.B4.A0">使用appendChild(..)插入元素</h4>
+<h4 id=".E4.BD.BF.E7.94.A8appendChild.28...29.E6.8F.92.E5.85.A5.E5.85.83.E7.B4.A0" name=".E4.BD.BF.E7.94.A8appendChild.28...29.E6.8F.92.E5.85.A5.E5.85.83.E7.B4.A0">使用 appendChild(..) 插入元素</h4>
 
-<p>那么，通过调用myP.appendChild({{ mediawiki.external('node_element') }})你可以将这个元素设置成为第二个P的一个新的子元素。</p>
+<p>那么，通过调用 myP.appendChild({{ mediawiki.external('node_element') }}) 你可以将这个元素设置成为第二个 P 的一个新的子元素。</p>
 
 <pre class="notranslate">myP.appendChild(myTextNode);
 </pre>
 
-<p>在测试了这个例子之后，我们注意到，hello和world单词被组合在了一个：helloworld。事实上，当你看到HTML页面时，hello和world两个文字节点看起来更像是一个节点。但是请记住它们在文档模型中的形式--是两个节点。第二个节点是一个TEXT_NODE类型的新节点，也是第二个P标签的第二个子元素。下面的图标将在文档树种展示最近创建的文本节点对象。</p>
+<p>在测试了这个例子之后，我们注意到，hello 和 world 单词被组合在了一个：helloworld。事实上，当你看到 HTML 页面时，hello 和 world 两个文字节点看起来更像是一个节点。但是请记住它们在文档模型中的形式 -- 是两个节点。第二个节点是一个 TEXT_NODE 类型的新节点，也是第二个 P 标签的第二个子元素。下面的图标将在文档树种展示最近创建的文本节点对象。</p>
 
 <p><img alt="Image:sample2b2.jpg" src="https://developer.mozilla.org/@api/deki/files/835/=Sample2b2.jpg"></p>
 
-<div class="note">createTextNode 和 appendChild 是在单词hello和world之间设置空格的一个简单方法。另外一个重要的注意事项是：appendChild方法将把新的子节点接在最后一个子节点之后，正如world被加在了hello之后。所以如果你想在hello和world中间添加一个文本节点的话，你应该使用insertBefore而不是appendChild.</div>
+<div class="note">createTextNode 和 appendChild 是在单词 hello 和 world 之间设置空格的一个简单方法。另外一个重要的注意事项是：appendChild 方法将把新的子节点接在最后一个子节点之后，正如 world 被加在了 hello 之后。所以如果你想在 hello 和 world 中间添加一个文本节点的话，你应该使用 insertBefore 而不是 appendChild.</div>
 
-<h4 id=".E4.BD.BF.E7.94.A8.E6.96.87.E6.A1.A3.E5.AF.B9.E8.B1.A1.E5.92.8CcreateElement.28...29.E6.96.B9.E6.B3.95.E5.88.9B.E5.BB.BA.E6.96.B0.E7.9A.84.E5.85.83.E7.B4.A0" name=".E4.BD.BF.E7.94.A8.E6.96.87.E6.A1.A3.E5.AF.B9.E8.B1.A1.E5.92.8CcreateElement.28...29.E6.96.B9.E6.B3.95.E5.88.9B.E5.BB.BA.E6.96.B0.E7.9A.84.E5.85.83.E7.B4.A0">使用文档对象和createElement(..)方法创建新的元素</h4>
+<h4 id=".E4.BD.BF.E7.94.A8.E6.96.87.E6.A1.A3.E5.AF.B9.E8.B1.A1.E5.92.8CcreateElement.28...29.E6.96.B9.E6.B3.95.E5.88.9B.E5.BB.BA.E6.96.B0.E7.9A.84.E5.85.83.E7.B4.A0" name=".E4.BD.BF.E7.94.A8.E6.96.87.E6.A1.A3.E5.AF.B9.E8.B1.A1.E5.92.8CcreateElement.28...29.E6.96.B9.E6.B3.95.E5.88.9B.E5.BB.BA.E6.96.B0.E7.9A.84.E5.85.83.E7.B4.A0">使用文档对象和 createElement(..) 方法创建新的元素</h4>
 
-<p>你可以使用createElement来创建新的HTML元素或者任何其它你想要的元素。比如，如果你想要创建一个新的P作为BODY的子元素，你可以使用前面例子的myBody并给它接上一个新的元素节点。使用 document.createElement("tagname")可以方便的创建一个节点。如下：</p>
+<p>你可以使用 createElement 来创建新的 HTML 元素或者任何其它你想要的元素。比如，如果你想要创建一个新的 P 作为 BODY 的子元素，你可以使用前面例子的 myBody 并给它接上一个新的元素节点。使用 document.createElement("tagname") 可以方便的创建一个节点。如下：</p>
 
 <pre class="notranslate">myNewPTAGnode=document.createElement("p");
 myBody.appendChild(myNewPTAGnode);
@@ -197,14 +196,14 @@ myBody.appendChild(myNewPTAGnode);
 
 <p><img alt="Image:sample2c.jpg" src="https://developer.mozilla.org/@api/deki/files/836/=Sample2c.jpg"></p>
 
-<h4 id=".E4.BD.BF.E7.94.A8removeChild.28...29.E6.96.B9.E6.B3.95.E7.A7.BB.E9.99.A4.E8.8A.82.E7.82.B9" name=".E4.BD.BF.E7.94.A8removeChild.28...29.E6.96.B9.E6.B3.95.E7.A7.BB.E9.99.A4.E8.8A.82.E7.82.B9">使用removeChild(..)方法移除节点</h4>
+<h4 id=".E4.BD.BF.E7.94.A8removeChild.28...29.E6.96.B9.E6.B3.95.E7.A7.BB.E9.99.A4.E8.8A.82.E7.82.B9" name=".E4.BD.BF.E7.94.A8removeChild.28...29.E6.96.B9.E6.B3.95.E7.A7.BB.E9.99.A4.E8.8A.82.E7.82.B9">使用 removeChild(..) 方法移除节点</h4>
 
-<p>每一个节点都可以被移除.下面的一行代码移除了包含在myP(第二个p元素)下面的文本节点world。</p>
+<p>每一个节点都可以被移除。下面的一行代码移除了包含在 myP(第二个 p 元素) 下面的文本节点 world。</p>
 
 <pre class="notranslate">myP.removeChild(myTextNode);
 </pre>
 
-<p>最后你可以将myTextNode（那个包含了world单词的节点）添加给我们最后创建的P元素：</p>
+<p>最后你可以将 myTextNode（那个包含了 world 单词的节点）添加给我们最后创建的 P 元素：</p>
 
 <pre class="notranslate">myNewPTAGnode.appendChild(myTextNode);
 </pre>
@@ -213,58 +212,58 @@ myBody.appendChild(myNewPTAGnode);
 
 <p><img alt="Image:sample2d.jpg" src="https://developer.mozilla.org/@api/deki/files/837/=Sample2d.jpg"></p>
 
-<h3 id=".E5.8A.A8.E6.80.81.E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E8.A1.A8.E6.A0.BC.28.E5.9B.9E.E5.88.B0Sample1.html.29" name=".E5.8A.A8.E6.80.81.E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E8.A1.A8.E6.A0.BC.28.E5.9B.9E.E5.88.B0Sample1.html.29">动态创建一个表格(回到Sample1.html)</h3>
+<h3 id=".E5.8A.A8.E6.80.81.E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E8.A1.A8.E6.A0.BC.28.E5.9B.9E.E5.88.B0Sample1.html.29" name=".E5.8A.A8.E6.80.81.E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E8.A1.A8.E6.A0.BC.28.E5.9B.9E.E5.88.B0Sample1.html.29">动态创建一个表格 (回到 Sample1.html)</h3>
 
-<p>这一段落的剩余部分我们将继续修改我们sample1.html。下面的图展示了我们在示例中创建的表格的对象树的结构。</p>
+<p>这一段落的剩余部分我们将继续修改我们 sample1.html。下面的图展示了我们在示例中创建的表格的对象树的结构。</p>
 
-<h4 id=".E5.A4.8D.E4.B9.A0.E4.B8.80.E4.B8.8BHTML.E8.A1.A8.E6.A0.BC.E7.BB.93.E6.9E.84" name=".E5.A4.8D.E4.B9.A0.E4.B8.80.E4.B8.8BHTML.E8.A1.A8.E6.A0.BC.E7.BB.93.E6.9E.84">复习一下HTML表格结构</h4>
+<h4 id=".E5.A4.8D.E4.B9.A0.E4.B8.80.E4.B8.8BHTML.E8.A1.A8.E6.A0.BC.E7.BB.93.E6.9E.84" name=".E5.A4.8D.E4.B9.A0.E4.B8.80.E4.B8.8BHTML.E8.A1.A8.E6.A0.BC.E7.BB.93.E6.9E.84">复习一下 HTML 表格结构</h4>
 
 <p><img alt="Image:sample1-tabledom.jpg" src="https://developer.mozilla.org/@api/deki/files/833/=Sample1-tabledom.jpg"></p>
 
 <h4 id=".E5.88.9B.E5.BB.BA.E5.85.83.E7.B4.A0.E8.8A.82.E7.82.B9.E5.B9.B6.E5.B0.86.E4.BB.96.E4.BB.AC.E6.8F.92.E5.85.A5.E5.88.B0.E6.96.87.E6.A1.A3.E6.A0.91.E4.B8.AD" name=".E5.88.9B.E5.BB.BA.E5.85.83.E7.B4.A0.E8.8A.82.E7.82.B9.E5.B9.B6.E5.B0.86.E4.BB.96.E4.BB.AC.E6.8F.92.E5.85.A5.E5.88.B0.E6.96.87.E6.A1.A3.E6.A0.91.E4.B8.AD">创建元素节点并将他们插入到文档树中</h4>
 
-<p>sample1.html中创建表格的基本步骤是：</p>
+<p>sample1.html 中创建表格的基本步骤是：</p>
 
 <ul>
- <li>获得body对象（文档对象的第一个元素）</li>
+ <li>获得 body 对象（文档对象的第一个元素）</li>
  <li>创建所有元素。</li>
- <li>最后，根据表格结构（上面图中所示）将每一个孩子节点拼接起来。下面的一段源码是经过修改的sample1.html</li>
+ <li>最后，根据表格结构（上面图中所示）将每一个孩子节点拼接起来。下面的一段源码是经过修改的 sample1.html</li>
 </ul>
 
-<div class="note">在start函数的最后，有一行新代码。使用另一个DOM方法（setAttribute）来设置表格的边界属性。setAttribute有两个参数：属性的名称和属性的值。你可以使用这个方法来设置任意元素的任意属性。</div>
+<div class="note">在 start 函数的最后，有一行新代码。使用另一个 DOM 方法（setAttribute）来设置表格的边界属性。setAttribute 有两个参数：属性的名称和属性的值。你可以使用这个方法来设置任意元素的任意属性。</div>
 
 <pre class="notranslate">&lt;head&gt;
-&lt;title&gt;示例代码 - 使用Javascript和DOM Interfaces来处理HTML&lt;/title&gt;
+&lt;title&gt;示例代码 - 使用 Javascript 和 DOM Interfaces 来处理 HTML&lt;/title&gt;
 &lt;script&gt;
     function start() {
-        // 获得body的引用
+        // 获得 body 的引用
         var mybody=document.getElementsByTagName("body").item(0);
-        // 创建一个标签名称为TABLE的元素
+        // 创建一个标签名称为 TABLE 的元素
         mytable = document.createElement("TABLE");
-        // 创建一个标签名称为在TBODY的元素
+        // 创建一个标签名称为在 TBODY 的元素
         mytablebody = document.createElement("TBODY");
         // 创建所有的单元格
         for(j=0;j&lt;2;j++) {
-            // 创建一个标签名称为在TR的元素
+            // 创建一个标签名称为在 TR 的元素
             mycurrent_row=document.createElement("TR");
             for(i=0;i&lt;2;i++) {
-                // 创建一个标签名称为在TD的元素
+                // 创建一个标签名称为在 TD 的元素
                 mycurrent_cell=document.createElement("TD");
                 // 创建一个文字节点
                 currenttext=document.createTextNode("cell is row "+j+", column "+i);
-                // 将文字节点添加到TD单元格内
+                // 将文字节点添加到 TD 单元格内
                 mycurrent_cell.appendChild(currenttext);
-                // 将TD单元格添加到TR行中
+                // 将 TD 单元格添加到 TR 行中
                 mycurrent_row.appendChild(mycurrent_cell);
             }
-            // 将TR行添加到TBODY中
+            // 将 TR 行添加到 TBODY 中
             mytablebody.appendChild(mycurrent_row);
         }
-        // 将TBODY添加到TABLE中
+        // 将 TBODY 添加到 TABLE 中
         mytable.appendChild(mytablebody);
-        // 将TABLE添加到BODY中
+        // 将 TABLE 添加到 BODY 中
         mybody.appendChild(mytable);
-        // 设置边界属性为2
+        // 设置边界属性为 2
         mytable.setAttribute("border","2");
     }
 &lt;/script&gt;
@@ -274,36 +273,36 @@ myBody.appendChild(myNewPTAGnode);
 &lt;/html&gt;
 </pre>
 
-<h3 id=".E4.BD.BF.E7.94.A8CSS.E5.92.8CDOM.E6.9D.A5.E6.93.8D.E4.BD.9C.E8.A1.A8.E6.A0.BC" name=".E4.BD.BF.E7.94.A8CSS.E5.92.8CDOM.E6.9D.A5.E6.93.8D.E4.BD.9C.E8.A1.A8.E6.A0.BC">使用CSS和DOM来操作表格</h3>
+<h3 id=".E4.BD.BF.E7.94.A8CSS.E5.92.8CDOM.E6.9D.A5.E6.93.8D.E4.BD.9C.E8.A1.A8.E6.A0.BC" name=".E4.BD.BF.E7.94.A8CSS.E5.92.8CDOM.E6.9D.A5.E6.93.8D.E4.BD.9C.E8.A1.A8.E6.A0.BC">使用 CSS 和 DOM 来操作表格</h3>
 
 <h4 id=".E4.BB.8E.E8.A1.A8.E6.A0.BC.E4.B8.AD.E8.8E.B7.E5.BE.97.E4.B8.80.E4.B8.AA.E6.96.87.E5.AD.97.E8.8A.82.E7.82.B9" name=".E4.BB.8E.E8.A1.A8.E6.A0.BC.E4.B8.AD.E8.8E.B7.E5.BE.97.E4.B8.80.E4.B8.AA.E6.96.87.E5.AD.97.E8.8A.82.E7.82.B9">从表格中获得一个文字节点</h4>
 
-<p>示例介绍了两个新的DOM属性。首先，使用childNodes属性来获得mycel的孩子节点列表。childNodes列表包括所有的孩子节点，无论它们的名称或类型是什么。像getElemengByTagName一样，它返回了一个节点列表。不同的是，getElementByTagName只返回指定标签名称的元素。一旦你获得了返回的列表，你可以使用item(x)方法来使用指定的元素。这个例子在表格的第二行第二个单元格中的myceltext中保存了一个文字节点。然后，运行这个例子并观察结果，他创建了一个新的文字节点，这个文字节点的内容是myceltext的值，并且将这个文字节点作为了BODY元素的一个孩子。</p>
+<p>示例介绍了两个新的 DOM 属性。首先，使用 childNodes 属性来获得 mycel 的孩子节点列表。childNodes 列表包括所有的孩子节点，无论它们的名称或类型是什么。像 getElemengByTagName 一样，它返回了一个节点列表。不同的是，getElementByTagName 只返回指定标签名称的元素。一旦你获得了返回的列表，你可以使用 item(x) 方法来使用指定的元素。这个例子在表格的第二行第二个单元格中的 myceltext 中保存了一个文字节点。然后，运行这个例子并观察结果，他创建了一个新的文字节点，这个文字节点的内容是 myceltext 的值，并且将这个文字节点作为了 BODY 元素的一个孩子。</p>
 
-<div class="note">如果你的对象是一个文字节点，你可以使用data属性来回收（retrieve）节点的文字内容</div>
+<div class="note">如果你的对象是一个文字节点，你可以使用 data 属性来回收（retrieve）节点的文字内容</div>
 
 <pre class="notranslate">mybody=document.getElementsByTagName("body").item(0);
 mytable=mybody.getElementsByTagName("table").item(0);
 mytablebody=mytable.getElementsByTagName("tbody").item(0);
 myrow=mytablebody.getElementsByTagName("tr").item(1);
 mycel=myrow.getElementsByTagName("td").item(1);
-// mycel的孩子节点列表的第一个元素
+// mycel 的孩子节点列表的第一个元素
 myceltext=mycel.childNodes.item(0);
-// currenttext的内容是myceltext的内容
+// currenttext 的内容是 myceltext 的内容
 currenttext=document.createTextNode(myceltext.data);
 mybody.appendChild(currenttext);
 </pre>
 
 <h4 id=".E8.8E.B7.E5.BE.97.E4.B8.80.E4.B8.AA.E5.B1.9E.E6.80.A7.E7.9A.84.E5.80.BC" name=".E8.8E.B7.E5.BE.97.E4.B8.80.E4.B8.AA.E5.B1.9E.E6.80.A7.E7.9A.84.E5.80.BC">获得一个属性的值</h4>
 
-<p>在sample1的最后我们在mytable对象上调用了setAttribute。这个调用是用来设置表格的边界属性的。然后是用了getAttribute方法来获得一个属性的值：</p>
+<p>在 sample1 的最后我们在 mytable 对象上调用了 setAttribute。这个调用是用来设置表格的边界属性的。然后是用了 getAttribute 方法来获得一个属性的值：</p>
 
 <pre class="notranslate">mytable.getAttribute("border");
 </pre>
 
 <h4 id=".E9.80.9A.E8.BF.87.E6.94.B9.E5.8F.98.E6.A0.B7.E5.BC.8F.E5.B1.9E.E6.80.A7.E6.9D.A5.E9.9A.90.E8.97.8F.E4.B8.80.E5.88.97" name=".E9.80.9A.E8.BF.87.E6.94.B9.E5.8F.98.E6.A0.B7.E5.BC.8F.E5.B1.9E.E6.80.A7.E6.9D.A5.E9.9A.90.E8.97.8F.E4.B8.80.E5.88.97">通过改变样式属性来隐藏一列</h4>
 
-<p>一旦你在你的javascript变量中保存了一个对象，你就可以直接为它设置样式属性了。下面的代码是修改后的sample1.html，在这里，第二列的每一个单元格都被隐藏了。而且第一列中的每一个单元格改为使用红色背景。注意，样式属性是被直接设置的。</p>
+<p>一旦你在你的 javascript 变量中保存了一个对象，你就可以直接为它设置样式属性了。下面的代码是修改后的 sample1.html，在这里，第二列的每一个单元格都被隐藏了。而且第一列中的每一个单元格改为使用红色背景。注意，样式属性是被直接设置的。</p>
 
 <pre class="notranslate">&lt;html&gt;
 &lt;body onload="start()"&gt;
@@ -320,7 +319,7 @@ mybody.appendChild(currenttext);
                currenttext=document.createTextNode("cell is:"+i+j);
                mycurrent_cell.appendChild(currenttext);
                mycurrent_row.appendChild(mycurrent_cell);
-               // 当column为0时，设置单元格背景色；column为1时隐藏单元格
+               // 当 column 为 0 时，设置单元格背景色；column 为 1 时隐藏单元格
                if(i==0) {
                    mycurrent_cell.style.background="rgb(255,0,0)";
                } else {
@@ -335,6 +334,3 @@ mybody.appendChild(currenttext);
 &lt;/script&gt;
 &lt;/html&gt;
 </pre>
-
-<div class="noinclude"></div>
-{{ languages( { "en": "en/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces", "fr": "fr/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript", "ja": "ja/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces" } ) }}</div>

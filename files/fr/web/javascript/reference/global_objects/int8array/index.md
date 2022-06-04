@@ -17,18 +17,20 @@ Le tableau typé **`Int8Array`** permet de représenter un tableau d'entiers sig
 
 ## Syntaxe
 
-    new Int8Array(); // apparu avec ES2017
-    new Int8Array(length);
-    new Int8Array(typedArray);
-    new Int8Array(object);
-    new Int8Array(buffer [, byteOffset [, length]]);
+```js
+new Int8Array(); // apparu avec ES2017
+new Int8Array(length);
+new Int8Array(typedArray);
+new Int8Array(object);
+new Int8Array(buffer [, byteOffset [, length]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe) _(TypedArray)_.
 
 ## Propriétés
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int8Array`, la propriété vaudra 1.
+  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int8Array`, la propriété vaudra 1.
 - `Int8Array.length`
   - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int8Array.name")}}
@@ -39,7 +41,7 @@ Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [t
 ## Méthodes
 
 - Int8Array.from()
-  - : Crée un nouvel objet `Int8Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
+  - : Crée un nouvel objet `Int8Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
 - Int8Array.of()
   - : Crée un nouvel objet `Int8Array` à partir d'un nombre variable d'arguments. Voir également la page {{jsxref("Array.of()")}}.
 

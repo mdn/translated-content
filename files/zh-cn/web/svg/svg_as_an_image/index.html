@@ -7,36 +7,36 @@ tags:
   - 需要内容
 translation_of: Web/SVG/SVG_as_an_Image
 ---
-<p>SVG图像可以作为一种图片格式用在很多环境中。很多浏览器支持在下列环境中应用SVG图像：</p>
+<p>SVG 图像可以作为一种图片格式用在很多环境中。很多浏览器支持在下列环境中应用 SVG 图像：</p>
 
 <ul>
- <li>HTML的{{HTMLElement("img")}} 元素或 {{HTMLElement("svg")}} 元素</li>
- <li>CSS的{{cssxref("background-image")}}属性</li>
+ <li>HTML 的{{HTMLElement("img")}} 元素或 {{HTMLElement("svg")}} 元素</li>
+ <li>CSS 的{{cssxref("background-image")}}属性</li>
 </ul>
 
-<h2 id="Gecko专有的环境">Gecko专有的环境</h2>
+<h2 id="Gecko专有的环境">Gecko 专有的环境</h2>
 
-<p>另外，Gecko 2.0 {{geckoRelease("2.0")}}引入了在以下环境中支持使用SVG：</p>
+<p>另外，Gecko 2.0 {{geckoRelease("2.0")}}引入了在以下环境中支持使用 SVG：</p>
 
 <ul>
- <li>CSS的{{cssxref("list-style-image")}}属性</li>
- <li>SVG的{{SVGElement("image")}}元素</li>
- <li>SVG的{{SVGElement("feImage")}}元素</li>
- <li>Canvas的<a href="/zh-CN/docs/HTML/Canvas/Tutorial/Using_images#drawImage"><code>drawImage</code></a>函数</li>
+ <li>CSS 的{{cssxref("list-style-image")}}属性</li>
+ <li>SVG 的{{SVGElement("image")}}元素</li>
+ <li>SVG 的{{SVGElement("feImage")}}元素</li>
+ <li>Canvas 的<a href="/zh-CN/docs/HTML/Canvas/Tutorial/Using_images#drawImage"><code>drawImage</code></a>函数</li>
 </ul>
 
 <h3 id="局限">局限</h3>
 
-<p>如果SVG作为一个图像，出于安全目的，Gecko在SVG环境上作了一些限制：</p>
+<p>如果 SVG 作为一个图像，出于安全目的，Gecko 在 SVG 环境上作了一些限制：</p>
 
 <ul>
  <li>禁用了<a href="/zh-CN/docs/JavaScript">JavaScript</a>。</li>
- <li>外部源（比如说：图像、样式表）不能载入，然而行内源可以使用（利用<a href="/zh-CN/docs/DOM/BlobBuilder">BlobBuilder</a>对象URL或者data: URI属性）。</li>
+ <li>外部源（比如说：图像、样式表）不能载入，然而行内源可以使用（利用<a href="/zh-CN/docs/DOM/BlobBuilder">BlobBuilder</a>对象 URL 或者 data: URI 属性）。</li>
  <li>链接的{{cssxref(":visited")}}伪类不能呈现。</li>
  <li>禁用了平台原生的小部件样式（基于操作系统主题）</li>
 </ul>
 
-<p>注意上面的限制是对图像环境专有的；它们不能应用到直接看到的SVG上，也不能应用到嵌入在HTML的{{HTMLElement("iframe")}}元素、{{HTMLElement("object")}}元素和{{HTMLElement("embed")}}元素中的SVG上。</p>
+<p>注意上面的限制是对图像环境专有的；它们不能应用到直接看到的 SVG 上，也不能应用到嵌入在 HTML 的{{HTMLElement("iframe")}}元素、{{HTMLElement("object")}}元素和{{HTMLElement("embed")}}元素中的 SVG 上。</p>
 
 <h2 id="规范文档">规范文档</h2>
 
@@ -52,104 +52,22 @@ translation_of: Web/SVG/SVG_as_an_Image
   <tr>
    <td>{{SpecName("HTML5 W3C", "embedded-content-0.html#the-img-element", "SVG within &lt;img&gt; element")}}</td>
    <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>定义了{{HTMLElement("img")}}元素内部的SVG用法。</td>
+   <td>定义了{{HTMLElement("img")}}元素内部的 SVG 用法。</td>
   </tr>
   <tr>
    <td>{{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}}</td>
    <td>{{Spec2("CSS3 Backgrounds")}}</td>
-   <td>定义了{{cssxref("background-image")}}属性中的SVG的用法。</td>
+   <td>定义了{{cssxref("background-image")}}属性中的 SVG 的用法。</td>
   </tr>
   <tr>
    <td>{{SpecName("SVG and HTML")}}</td>
    <td>{{Spec2("SVG and HTML")}}</td>
-   <td>定义了HTML和XHTML内部的SVG的行内用法。</td>
+   <td>定义了 HTML 和 XHTML 内部的 SVG 的行内用法。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>in HTML {{HTMLElement("img")}}</td>
-   <td>4.0</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>9</td>
-   <td>9.0</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>in CSS background</td>
-   <td>4.0</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>9</td>
-   <td>9.5</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>in other contexts</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>in HTML {{HTMLElement("img")}}</td>
-   <td>3.0</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>in CSS background</td>
-   <td>3.0</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-   <td>3.2<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>in other contexts</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Safari移动浏览器只有在CSS background中实现了对SVG的部分支持</p>
 
 <h2 id="参见">参见</h2>
 

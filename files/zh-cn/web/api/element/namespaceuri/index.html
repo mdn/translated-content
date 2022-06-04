@@ -8,7 +8,7 @@ translation_of: Web/API/Element/namespaceURI
 <p><code><strong>Element.namespaceURI</strong></code> 是一个只读属性，它返回元素的命名空间，若该元素不在命名空间中则返回<code>null</code> .</p>
 
 <div class="note">
-<p>在DOM4之前， 这个 API 在接口 {{domxref("Node")}} 中定义 .</p>
+<p>在 DOM4 之前， 这个 API 在接口 {{domxref("Node")}} 中定义 .</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -17,7 +17,7 @@ translation_of: Web/API/Element/namespaceURI
 
 <h2 id="例子">例子</h2>
 
-<p>在这段代码中，我们检查了元素的{{domxref("localName")}}和<code>namespaceURI</code>。如果 <code>namespaceURI</code> 返回 XUL 命名空间， <code>localName</code> 返回"browser"，于是这个节点被理解为是一个XUL <code>&lt;browser/&gt;</code>。</p>
+<p>在这段代码中，我们检查了元素的{{domxref("localName")}}和<code>namespaceURI</code>。如果 <code>namespaceURI</code> 返回 XUL 命名空间， <code>localName</code> 返回"browser"，于是这个节点被理解为是一个 XUL <code>&lt;browser/&gt;</code>。</p>
 
 <pre class="brush:js">if (element.localName == "browser" &amp;&amp;
     element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
@@ -28,11 +28,11 @@ translation_of: Web/API/Element/namespaceURI
 
 <p>这不是一个计算值，它是基于范围内的名称空间声明检查的名称空间查找的结果。节点命名空间在节点创建时被冻结。</p>
 
-<p>在Firefox 3.5 以及之前的版本， HTML文档中的HTML元素的名称空间URI为 <code>null</code>。 在更早的版本中, 符合HTML5， 它是<code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> 如 XHTML。{{gecko_minversion_inline("1.9.2")}}</p>
+<p>在 Firefox 3.5 以及之前的版本， HTML 文档中的 HTML 元素的名称空间 URI 为 <code>null</code>。 在更早的版本中，符合 HTML5， 它是<code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> 如 XHTML。</p>
 
-<p>您可以使用DOM Level 2方法指定的<code>namespaceURI</code>创建一个元素 <a href="/en-US/docs/Web/API/Document/createElementNS" title="Document.createElementNS">document.createElementNS</a>。</p>
+<p>您可以使用 DOM Level 2 方法指定的<code>namespaceURI</code>创建一个元素 <a href="/en-US/docs/Web/API/Document/createElementNS" title="Document.createElementNS">document.createElementNS</a>。</p>
 
-<p>DOM本身不处理或执行名称空间验证。 它由DOM应用程序完成，以执行任何必要的验证。注意，名称空间前缀一旦与某个特定元素相关联，就不能更改。</p>
+<p>DOM 本身不处理或执行名称空间验证。 它由 DOM 应用程序完成，以执行任何必要的验证。注意，名称空间前缀一旦与某个特定元素相关联，就不能更改。</p>
 
 <h2 id="说明">说明</h2>
 
@@ -55,55 +55,7 @@ translation_of: Web/API/Element/namespaceURI
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>46.0<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 这API 可以预先在 {{domxref("Node")}} API中获得.</p>
+{{Compat("api.Element.namespaceURI")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -27,7 +27,7 @@ var myWorker = new Worker(aURL, options);
   - : Un objet contenant des propriétés pour définir les options. Les propriétés suivantes sont valables:
 
     - `type`: Une {{domxref("DOMString")}} définissant le type de worker à créer. The valeur peuvent être `classic` ou `module`. Si cette prpriété n'est pas définie, la valeur sera `classic`.
-    - `credentials`: Une {{domxref("DOMString")}} définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être _`omit`_, `same-origin` ou *`include`. *Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`.
+    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou *`include`*. *Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`.*
     - `name`: Une {{domxref("DOMString")}} définissant un identifiant pour l'environment du worker {{domxref("DedicatedWorkerGlobalScope")}}, souvent utilisé pour le débogage.
 
 ### Exceptions
@@ -49,7 +49,7 @@ first.onchange = function() {
 }
 ```
 
-Pour un exemple complet, consultez notre [Exemple basique d'un worker dédié ](https://github.com/mdn/simple-web-worker)([lancer le worker dédié](http://mdn.github.io/simple-web-worker/)).
+Pour un exemple complet, consultez notre [exemple basique d'un worker dédié](https://github.com/mdn/simple-web-worker) ([lancer le worker dédié](https://mdn.github.io/simple-web-worker/)).
 
 ## Spécifications
 

@@ -95,7 +95,7 @@ Si on reprend l'exemple avec la grille, on comprend mieux l'effet du changement 
 
 ### Mode d'écriture par défaut
 
-Dans le prochain exemple, la grille possède trois colonnes et deux lignes. Cela signifie qu'il y a trois pistes qui traversent l'axe de bloc. Avec le mode d'écriture par défaut, la grille commence par placer les objets en haut à gauche  en remplissant les trois cellules sur la première ligne avant de passer à la suivante, en formant une nouvelle ligne, etc.
+Dans le prochain exemple, la grille possède trois colonnes et deux lignes. Cela signifie qu'il y a trois pistes qui traversent l'axe de bloc. Avec le mode d'écriture par défaut, la grille commence par placer les objets en haut à gauche en remplissant les trois cellules sur la première ligne avant de passer à la suivante, en formant une nouvelle ligne, etc.
 
 ```css hidden
 * {box-sizing: border-box;}

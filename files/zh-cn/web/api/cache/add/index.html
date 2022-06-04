@@ -5,7 +5,7 @@ translation_of: Web/API/Cache/add
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("Cache")}}接口的 <strong><code>add()</code></strong>方法接受一个URL作为参数，请求参数指定的URL，并将返回的response对象添加到给定的cache中。 <code>add()</code> 方法在功能上等同于以下代码:</p>
+<p>{{domxref("Cache")}}接口的 <strong><code>add()</code></strong>方法接受一个 URL 作为参数，请求参数指定的 URL，并将返回的 response 对象添加到给定的 cache 中。 <code>add()</code> 方法在功能上等同于以下代码：</p>
 
 <pre class="brush: js">fetch(url).then(function (response) {
   if (!response.ok) {
@@ -14,14 +14,14 @@ translation_of: Web/API/Cache/add
   return cache.put(url, response);
 })</pre>
 
-<p>对于更复杂的操作，您可以直接使用{{domxref("Cache.put","Cache.put()")}}这个API。</p>
+<p>对于更复杂的操作，您可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: <code>add()</code> 将会覆盖之前存储在cache中与request匹配的任何key/value对。</p>
+<p><strong>注意</strong>: <code>add()</code> 将会覆盖之前存储在 cache 中与 request 匹配的任何 key/value 对。</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 之前的Cache  (Blink 和 Gecko内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在response结果完全写入缓存后才会resolve当前的promise。更新后的规范版本中一旦条目被记录到数据库就会resolve当前的promise，即使当前response结果还在传输中。</p>
+<p><strong>注意</strong>: 之前的 Cache  (Blink 和 Gecko 内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在 response 结果完全写入缓存后才会 resolve 当前的 promise。更新后的规范版本中一旦条目被记录到数据库就会 resolve 当前的 promise，即使当前 response 结果还在传输中。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -35,16 +35,16 @@ translation_of: Web/API/Cache/add
 
 <dl>
  <dt>request</dt>
- <dd>要添加到cache的request。它可以是一个 {{domxref("Request")}} 对象，也可以是 URL。</dd>
+ <dd>要添加到 cache 的 request。它可以是一个 {{domxref("Request")}} 对象，也可以是 URL。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>void返回值的 {{jsxref("Promise")}} </p>
+<p>void 返回值的 {{jsxref("Promise")}} </p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col"><strong>Exception</strong></th>
@@ -55,9 +55,9 @@ translation_of: Web/API/Cache/add
   <tr>
    <td><code>TypeError</code></td>
    <td>
-    <p>URL的协议不是 <code>http</code> 或 <code>https。</code></p>
+    <p>URL 的协议不是 <code>http</code> 或 <code>https。</code></p>
 
-    <p>请求返回的http状态码不是2xx (不是一个成功的响应) 。这种情况常常发生在请求不成功，或者是一个没有配置CORS的跨域请求（这种情况下返回的状态码永远是0）。</p>
+    <p>请求返回的 http 状态码不是 2xx (不是一个成功的响应) 。这种情况常常发生在请求不成功，或者是一个没有配置 CORS 的跨域请求（这种情况下返回的状态码永远是 0）。</p>
    </td>
   </tr>
  </tbody>
@@ -95,99 +95,7 @@ translation_of: Web/API/Cache/add
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Require HTTPS</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code> if request is not successful</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(47.0)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
-  <tr>
-   <td>Require HTTPS</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code> if request is not successful</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.Cache.add")}}
 
 <h2 id="参见">参见</h2>
 

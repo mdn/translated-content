@@ -30,7 +30,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the base URL. The concept of base URL changes from one language to another; in HTML, it corresponds to the protocol, the domain name and the directory structure, that is all until the last <code>'/'</code>.</dd>
  <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd>(Not available to web content.) The read-only {{ Interface("nsIURI") }} object representing the base URI for the element.</dd>
+ <dd>(Not available to web content.) The read-only <code>nsIURI</code> object representing the base URI for the element.</dd>
  <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
  <dd>Returns a live {{domxref("NodeList")}} containing all the children of this node. {{domxref("NodeList")}} being live means that if the children of the <code>Node</code> change, the {{domxref("NodeList")}} object is automatically updated.</dd>
  <dt>{{domxref("Node.firstChild")}} {{readonlyInline}}</dt>
@@ -42,10 +42,10 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} containing the name of the <code>Node</code>. The structure of the name will differ with the node type. E.g. An {{domxref("HTMLElement")}} will contain the name of the corresponding tag, like <code>'audio'</code> for an {{domxref("HTMLAudioElement")}}, a {{domxref("Text")}} node will have the <code>'#text'</code> string, or a {{domxref("Document")}} node will have the <code>'#document'</code> string.</dd>
  <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}</dt>
- <dd>A {{ Interface("nsIPrincipal") }} representing the node principal.</dd>
+ <dd>A <code>nsIPrincipal</code> representing the node principal.</dd>
  <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
  <dd>Returns an <code>unsigned short</code> representing the type of the node. Possible values are:
- <table class="standard-table">
+ <table>
   <tbody>
    <tr>
     <th scope="col">Name</th>
@@ -129,13 +129,13 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element.
  <div class="note">
- <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+ <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.</p>
  </div>
  </dd>
  <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>The namespace URI of this node, or <code>null</code> if it is no namespace.
  <div class="note">
- <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/" title="Linkification: http://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml/</a></code> namespace in both HTML and XML trees. {{gecko_minversion_inline("1.9.2")}}</p>
+ <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/" title="Linkification: http://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml/</a></code> namespace in both HTML and XML trees.</p>
  </div>
  </dd>
  <dt>{{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}</dt>
@@ -293,237 +293,4 @@ document.body.removeAll();</pre>
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td><code>getFeature()</code>{{obsolete_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}<br>
-    {{CompatNo}}{{CompatGeckoDesktop("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>getUserData()</code>, <code>setUserData()</code> and <code>hasAttributes()</code> {{deprecated_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}<br>
-    {{CompatNo}}{{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>isSameNode()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}<br>
-    Removed in {{CompatGeckoDesktop("10")}}<br>
-    Returned in {{CompatGeckoDesktop("48")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>isSupported()</code> {{obsolete_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>attributes</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}<br>
-    {{CompatNo}}{{CompatGeckoDesktop("22.0")}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>rootNode()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>CompatGeckoDesktop(48)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>namespaceURI</code>, <code>localName</code>, <code>prefix</code> {{obsolete_inline}}</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatNo}}46.0<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatNo}}48.0<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>getRootNode()</code>, and <code>rootNode</code> deprecated</td>
-   <td>{{CompatChrome(54.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td><code>getFeature()</code>{{obsolete_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}<br>
-    {{CompatNo}}{{CompatGeckoDesktop("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>getUserData()</code>, <code>setUserData()</code> and <code>hasAttributes()</code> {{deprecated_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>isSameNode()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatGeckoDesktop("1.0")}}<br>
-     Removed in {{CompatGeckoDesktop("10")}}<br>
-     Returned in {{CompatGeckoDesktop("48")}}</p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>isSupported()</code> {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>attributes</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>rootNode()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(48)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>namespaceURI</code>, <code>localName</code>, <code>prefix</code> {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatNo}}48.0[3]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>getRootNode()</code>, and <code>rootNode</code> deprecated</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(54.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(54.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] WebKit and old versions of Blink incorrectly do not make <code>Node</code> inherit from {{domxref("EventTarget")}}.</p>
-
-<p>[2] In Gecko 22.0 {{geckoRelease("22.0")}} the <code>attributes</code> property was moved to {{domxref("Element")}}.</p>
-
-<p>[3] The properties were moved to the {{domxref("Element")}} and {{domxref("Attr")}} APIs according to the DOM4 standard.</p>
+{{Compat("api.Node")}}

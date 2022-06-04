@@ -21,7 +21,7 @@ var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><em>URL参数</em></dt>
+ <dt><em>URL 参数</em></dt>
  <dd>一个代表了 worker 将执行的脚本 URL 的 {{domxref("DOMString")}}，它必须遵守同源策略。</dd>
  <dt>name {{optional_inline}}</dt>
  <dd>一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。</dd>
@@ -30,7 +30,7 @@ var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
  <dd>
  <ul>
   <li><code>type</code>: 一个制定所创建 worker 类型的 {{domxref("DOMString")}}。可设定的值为 <code>classic</code> 或者 <code>module</code>. 若不指定，默认值为 <code>classic</code>.</li>
-  <li><code>credentials</code>: 一个指定要用于工作程序的凭据类型的  {{domxref("DOMString")}}。 可设定的值为<dfn> <code>omit<font face="Verdana, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code></dfn><code><dfn>same-origin</dfn></code> 或 <dfn><code>include</code>. </dfn>若不指定，<dfn>或者 type 设定为 <code>classic</code>, </dfn>默认值为<dfn> <code>omit</code> （无需凭据）。</dfn></li>
+  <li><code>credentials</code>: 一个指定要用于工作程序的凭据类型的  {{domxref("DOMString")}}。 可设定的值为<dfn> <code>omit、</code></dfn><code><dfn>same-origin</dfn></code> 或 <dfn><code>include</code>. </dfn>若不指定，<dfn>或者 type 设定为 <code>classic</code>, </dfn>默认值为<dfn> <code>omit</code> （无需凭据）。</dfn></li>
   <li><dfn><code>name</code>: </dfn>一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。</li>
  </ul>
  </dd>
@@ -44,7 +44,7 @@ var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
 
 <ul>
  <li><code>SecurityError</code> 当文档不能正常启动 workers 时抛出</li>
- <li><code>NetworkError</code> 如果其中一个脚本的MIME类型是text / csv，image / *，video / *或audio / * 时抛出。类型只应该为 <code>text/javascript</code>。</li>
+ <li><code>NetworkError</code> 如果其中一个脚本的 MIME 类型是 text / csv，image / *，video / *或 audio / * 时抛出。类型只应该为 <code>text/javascript</code>。</li>
  <li><code>SyntaxError</code> 当 <em>URL</em> 不能被解析时抛出</li>
 </ul>
 

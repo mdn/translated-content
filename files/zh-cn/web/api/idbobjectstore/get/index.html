@@ -23,16 +23,16 @@ translation_of: Web/API/IDBObjectStore/get
 
 <dl>
  <dt>key</dt>
- <dd><span style="">标识要检索的记录的键或键范围</span>。</dd>
+ <dd>标识要检索的记录的键或键范围。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p><span style="">触发与此操作相关的后续事件的</span> {{domxref("IDBRequest")}} 对象。</p>
+<p>触发与此操作相关的后续事件的 {{domxref("IDBRequest")}} 对象。</p>
 
-<h3 id="异常"><span style="">异常</span></h3>
+<h3 id="异常">异常</h3>
 
-<p><span style="">此方法可能会引发以下类型之一的</span> <span style="line-height: 1.5;"> {{domxref("DOMException")}} :</span></p>
+<p>此方法可能会引发以下类型之一的  {{domxref("DOMException")}} :</p>
 
 <table class="standard-table">
  <thead>
@@ -43,11 +43,11 @@ translation_of: Web/API/IDBObjectStore/get
  </thead>
  <tbody>
   <tr>
-   <td><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">TransactionInactiveError</span></font></td>
+   <td>TransactionInactiveError</td>
    <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
   </tr>
   <tr>
-   <td><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">DataError</span></font></td>
+   <td>DataError</td>
    <td>
     <p>The key or key range provided contains an invalid key.</p>
    </td>
@@ -62,12 +62,12 @@ translation_of: Web/API/IDBObjectStore/get
 
 <h2 id="例子">例子</h2>
 
-<p>在以下的代码段中，我们在数据库上打开一个“读/写 事务（read/write transaction）”，并使用 <code>get()</code> 从“对象储存（ object store ）”中获取一个特定的记录——一个带有“Walk dog”键的示例记录。一旦检索到这个数据对象，你就可以使用普通的JavaScript更新它，然后使用 {{domxref("IDBObjectStore.put")}} 操作将其放回数据库。有关完整的工作示例，查看我们的 <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>在以下的代码段中，我们在数据库上打开一个“读/写 事务（read/write transaction）”，并使用 <code>get()</code> 从“对象储存（ object store ）”中获取一个特定的记录——一个带有“Walk dog”键的示例记录。一旦检索到这个数据对象，你就可以使用普通的 JavaScript 更新它，然后使用 {{domxref("IDBObjectStore.put")}} 操作将其放回数据库。有关完整的工作示例，查看我们的 <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a>.)</p>
 
 <pre class="brush: js notranslate">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -106,7 +106,7 @@ function getData() {
 
 };</pre>
 
-<h2 id="规范"><span style="font-size: 2.14285714285714rem;">规范</span></h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>

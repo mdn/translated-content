@@ -69,7 +69,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-multiEntry', 'multiEntry')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-multiEntry', 'multiEntry')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -9,8 +9,6 @@ original_slug: Mozilla/Firefox/Versions/19
 ---
 {{FirefoxSidebar}}
 
-{{ draft() }}
-
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
 
 Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont besoin de rédaction](http://beta.elchi3.de/doctracker/#list=fx&version=19.0) et lancez-vous !
@@ -56,14 +54,14 @@ Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philip
 
 ### Changements dans les intefaces
 
-- {{interface("nsIImgLoadingContent")}}
-  - : Le paramètre (aObserver) de la méthode `addObserver()` change de {{interface("imgIDecoderObserver")}} pour {{interface("imgINotificationObserver")}}. La méthode `notify()` de {{interface("imgINotificationObserver")}} n'est pas scriptable, vous devez donc utiliser `createScriptedObserver()` à partir de {{interface("imgITools")}}.
-- {{interface("nsIChannel")}}
+- `nsIImgLoadingContent`
+  - : Le paramètre (aObserver) de la méthode `addObserver()` change de `imgIDecoderObserver` pour `imgINotificationObserver`. La méthode `notify()` de `imgINotificationObserver` n'est pas scriptable, vous devez donc utiliser `createScriptedObserver()` à partir de `imgITools`.
+- `nsIChannel`
   - : La propriété `contentLength` a changée de `long` à `int64_t`
 
 ## A voir également
 
-- [Notes de versions de Firefox 19](http://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
+- [Notes de versions de Firefox 19](http://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
 - [Compatibilité des sites avec Firefox 19](/fr/docs/Site_Compatibility_for_Firefox_19)
 
 ### Anciennes versions

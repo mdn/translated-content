@@ -32,7 +32,7 @@ La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à 
 - `behavior` {{optional_inline}}
   - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
 - `block` {{optional_inline}}
-  - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
+  - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
 - `inline` {{optional_inline}}
   - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
 
@@ -63,4 +63,4 @@ L'élément peut ne pas être aligné complètement avec le haut ou le bas, selo
 
 ## Voir aussi
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}
+- [`Element.scrollIntoViewIfNeeded()`](/fr/docs/Web/API/Element/scrollIntoViewIfNeeded) {{non-standard_inline}}

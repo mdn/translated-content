@@ -51,7 +51,7 @@ console.log(parent.outerHTML);
 
 <h3 id="ChildNode.replaceWith_is_unscopable"><code>ChildNode.replaceWith()</code> is unscopable</h3>
 
-<p><code>replaceWith()</code>的方法并没有作用于with语句. 参考 {{jsxref("Symbol.unscopables")}} 获取更多信息.</p>
+<p><code>replaceWith()</code>的方法并没有作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。</p>
 
 <pre class="brush: js">with(node) {
   replaceWith("foo");
@@ -60,7 +60,7 @@ console.log(parent.outerHTML);
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>你可以在IE9及更高级的浏览器中使用下面的代码向上兼容<code>replaceWith()</code>的方法:</p>
+<p>你可以在 IE9 及更高级的浏览器中使用下面的代码向上兼容<code>replaceWith()</code>的方法：</p>
 
 <pre class="brush: js">(function (arr) {
   arr.forEach(function (item) {

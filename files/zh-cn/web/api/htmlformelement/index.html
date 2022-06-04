@@ -5,11 +5,11 @@ translation_of: Web/API/HTMLFormElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>HTMLFormElement接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。</p>
+<p>HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。</p>
 
 <h2 id="属性">属性</h2>
 
-<p><em>继承自父类的属性, {{domxref("HTMLElement")}}.</em></p>
+<p><em>继承自父类的属性，{{domxref("HTMLElement")}}.</em></p>
 
 <dl>
  <dt>{{domxref("HTMLFormElement.acceptCharset")}}</dt>
@@ -42,11 +42,11 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.checkValidity()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the element's child controls are subject to constraint validation and satify those contraints, <span style="line-height: 1.5;">or </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code style="font-style: normal; line-height: 1.5;">false</code>.</span></dd>
+ <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the element's child controls are subject to constraint validation and satify those contraints, or <code style="font-style: normal; line-height: 1.5;">false</code> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code style="font-style: normal; line-height: 1.5;">false</code>.</dd>
  <dt>{{domxref("HTMLFormElement.item()")}}</dt>
  <dd>Gets the item in the <code>elements</code> collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.</dd>
  <dt>{{domxref("HTMLFormElement.namedItem()")}}</dt>
- <dd>从元素集合中获取 <code>name</code> 或者 <code>id</code> 与指定名称匹配的项，没有匹配项则返回null。您也可以像调用数组那样用圆括号或方括号来指定名称， 而不必显式地调用这个方法。</dd>
+ <dd>从元素集合中获取 <code>name</code> 或者 <code>id</code> 与指定名称匹配的项，没有匹配项则返回 null。您也可以像调用数组那样用圆括号或方括号来指定名称， 而不必显式地调用这个方法。</dd>
  <dt>{{domxref("HTMLFormElement.submit()")}}</dt>
  <dd>Submits the form to the server.</dd>
  <dt>{{domxref("HTMLFormElement.reset()")}}</dt>
@@ -55,7 +55,7 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.reportValidity()")}}</dt>
- <dd>Returns<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">true</code><span style="line-height: 1.5;"> if the element's child controls satisfy their validation constraints. </span><span style="line-height: 1.5;">When</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> is returned, cancelable</span><span style="line-height: 1.5;"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> events are fired for each invalid child and validation problems are reported to the user.</span></dd>
+ <dd>Returns <code style="font-style: normal; line-height: 1.5;">true</code> if the element's child controls satisfy their validation constraints. When <code style="font-style: normal; line-height: 1.5;">false</code> is returned, cancelable <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> events are fired for each invalid child and validation problems are reported to the user.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -211,53 +211,7 @@ function popupSend (oFormElement) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.HTMLFormElement")}}
 
 <h2 id="See_also">See also</h2>
 

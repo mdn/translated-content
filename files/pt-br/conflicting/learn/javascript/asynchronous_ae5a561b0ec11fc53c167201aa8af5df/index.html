@@ -1,0 +1,625 @@
+---
+title: Timeouts e intervalos
+slug: conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
+translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+original_slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}</div>
+
+<p class="summary">Este tutorial é sobre os métodos tradicionais que o JavaScript tem disponíveis para executar códigos assíncronamente depois que um dado período de tempo tenha passado, ou em um intervalo (um número de segundos por segundo), discute suas utilidades e considera seus problemas.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Pré-requisitos:</th>
+   <td>Entendimento básico sobre informáticas e fundamentos do JavaScript.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objetivo:</th>
+   <td>Entender loops e intervalos assíncronos e para o que eles servem.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Introdução">Introdução</h2>
+
+<p>Por um longo tempo, a plataforma web tem oferecido à programadores JavaScript um número de funções que permitem que eles executem código assíncronamente depois de um determinado intervalo de tempo, e executar um bloco de código de modo assíncrono repetidamente até que você o mande parar.</p>
+
+<p>Essas funções são:</p>
+
+<dl>
+ <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code></dt>
+ <dd>Executa um bloco específico uma vez depois de um determinado tempo</dd>
+ <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code></dt>
+ <dd>Executa um bloco específico repetidamente com um intervalo fixo entre cada chamada.</dd>
+ <dt><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code></dt>
+ <dd>Uma versão moderna de <code>setInterval()</code>. Ela executa um  bloc de código específico antes do navegador renderizar a tela novamento, permitindo que seja executada em uma taxa de quadros adequada, independentemente do ambiente em que está sendo executado.</dd>
+</dl>
+
+<p>O código executado por estas funções é executado na main thread (depois do dado intervalo).</p>
+
+<div>
+<p>É importante saber que você pode (e irá) executar outros códigos antes que uma chamada <code>setTimeout()</code> é executada, ou entre iterações de <code>setInterval()</code>. Dependendo de como essas operações são intensas, elas podem atrasar o seu código async ainda mais, já que o código async só é executado depois que a main thread terminar seu processamento (ou seja, quando a fila estiver vazia). Você aprenderá mais sobre isso enquanto fazemos nosso progresso neste artigo.</p>
+</div>
+
+<p>De qualquer forma, essas funções são usadas para executar animações constantes e outros processamentos em um web site ou aplicação. Nas seções a seguir, nós vamos te mostrar como elas podem ser usadas.</p>
+
+<h2 id="setTimeout">setTimeout()</h2>
+
+<p>Como foi dito anteriormente, o <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> executa um bloco de código particular depois que um determinado período de tempo passou. Ele toma os seguintes parâmetros:</p>
+
+<ul>
+ <li>Uma função a ser executada, ou uma referência de uma função definida em outro lugar.</li>
+ <li>Um número representando o intervalo de tempo em milissegundos (1000 milissegundos equivalem a 1 segundo) para esperar antes de executar o código. Se você especificar um valor de 0 (ou simplesmente omitir o valor), a função será executada assim que possível (mas não imediatamente).</li>
+ <li>Zero ou mais valores que representam quaisquer parâmetros que você quiser passar para a função quando ela for executada.</li>
+</ul>
+
+<div class="blockIndicator note">
+<p><strong>NOTA:</strong> O tempos especificafo <strong>não</strong> é o tempo garantido de execução, mas sim o tempo míniimo de execução. As callback que você passa para essas funções não podem ser executadas até que a main thread esteja vazia.</p>
+
+<p>Como consequência, códigos como <code>setTimeout(fn, 0)</code><em> </em>serão executados assim que a fila estiver vazia, <strong>não</strong> imediatamente. Se você executar código como <code>setTimeout(fn, 0)</code> e depois imediatamente executar um loop que conta de 1 a 10 bilhões, sua callback será executada depois de alguns segundos.</p>
+</div>
+
+<p>No exemplo a seguir, o navegador vai esperar dois segundos antes de executar a função anônima, e depois vai mostrar a mensagem de alerta (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">veja aqui</a>, e <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">veja o código</a>):</p>
+
+<pre class="brush: js notranslate">let myGreeting = setTimeout(function() {
+  alert('Hello, Mr. Universe!');
+}, 2000)</pre>
+
+<p>As funções especificadas não tem que  ser anônimas. Você pode dar o nome da função, e até mesmo definir ela em outro lugar e passar uma referência para o timeout <code>setTimeout()</code>. As versões a seguir do código são equivalentes à primeira:</p>
+
+<pre class="brush: js notranslate">// With a named function
+let myGreeting = setTimeout(function sayHi() {
+  alert('Hello, Mr. Universe!');
+}, 2000)
+
+// With a function defined separately
+function sayHi() {
+  alert('Hello Mr. Universe!');
+}
+
+let myGreeting = setTimeout(sayHi, 2000);</pre>
+
+<p>Isso pode ser útil se você tem uma função que precisa ser chamada de um timeout e também em resposta à um evento, por exemplo. Mas também pode servir para manter seu código organizado, especialmente se a callback timetout é mais do que algumas linhas de código.</p>
+
+<p><code>setTimeout()</code> retorna um valor identificador que pode ser usado para se referir ao timeout depois, como em quando você que pará-lo. Veja <a href="#cancelando_timetous">Cancelando timetous</a> (abaixo) e aprenda como fazer isso.</p>
+
+<h3 id="Passando_parâmetros_para_uma_função_setTimeout">Passando parâmetros para uma função setTimeout()</h3>
+
+<p>Quaisquer parâmetros que você quiser passar para a função sendo executada dentro do <code>setTimeout()</code> devem ser passados como parâmetros adicionais no final da lista.</p>
+
+<p>Por exemplo, você pode mudar a função anterior para que ela diga oi para qualquer nome que foi passada para ela:</p>
+
+<pre class="brush: js notranslate">function sayHi(who) {
+  alert(`Hello ${who}!`);
+}</pre>
+
+<p>Agora, você pode passar o nome da pessoa no <code>setTimeout()</code> como um terceiro parâmetro:</p>
+
+<pre class="brush: js notranslate">let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');</pre>
+
+<h3 id="Cancelando_timeouts">Cancelando timeouts</h3>
+
+<p>Finalmente, se um timeout foi criado, você pode cancelá-lo antes que o tempo especificado tenha passado chamando <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout">clearTimeout()</a></code>, passando para o identificador a chamada <code>setTimeout()</code> como um parâmetreo. então para cancelar o timeout acima, você fará isso:</p>
+
+<pre class="brush: js notranslate">clearTimeout(myGreeting);</pre>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Veja <code><a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html">greeter-app.html</a></code> para uma demonstração mais desenvolvida que te permite colocar o nome da pessoa a dizer oi em um formulário, e cancelar a saudação usando um botão separado (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html">veja aqui o código fonte</a>).</p>
+</div>
+
+<h2 id="setInterval">setInterval()</h2>
+
+<p><code>setTimeout()</code> funciona perfeitamento quando você precisa executar algum código depois de um período de tempo. Mas o que acontece quando voc~e precisa executar o código de novo e de novo — por exemplo, no caso de uma animação?</p>
+
+<p>É aí que o <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> entra. Ele funciona de uma maneira muito similar à <code>setTimeout()</code>, exceto que a função que você passar como primeiro parâmetro é executada repetidamente em não menos que um número determinado de milissegundos dado no segundo parâmetro, ao invés de apenas uma vez. Você também pode passar qualquer parâmetro sendo executado como um parâmetro subsequente da chamada de <code>setInterval()</code>.</p>
+
+<p>Vamos dar uma olhada em um exemplo. A função a seguir cria um novo objeto <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a></code>, tira uma string de tempo usando <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString">toLocaleTimeString()</a></code>, e depois a mostra naUI. Em seguida, ela executa a função uma vez por segundo usando <code>setInterval()</code>, criando o efeito de um relógio digital que é atualizado uma vez por segundo (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">veja aqui</a>, e também <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">veja o código</a>):</p>
+
+<pre class="brush: js notranslate">function displayTime() {
+   let date = new Date();
+   let time = date.toLocaleTimeString();
+   document.getElementById('demo').textContent = time;
+}
+
+const createClock = setInterval(displayTime, 1000);</pre>
+
+<p>Assim como o <code>setTimeout()</code>, o <code>setInterval()</code> também retorna um valor identificador que você pode usar depois para cancelar o intervalo.</p>
+
+<h3 id="Cancelando_intervalos">Cancelando intervalos</h3>
+
+<p><code>setInterval()</code> continua sua execução para sempre, a menos que você faça algo sobre isso. Você provavelmente quer um jeito de parar tais tarefas, do contrário você pode acabar com error quando o navegador não puder completar outras versões futuras da tarefa, ou se a animação acabar. Você pode fazer isso do mesmo jeito que você para timeouts — passando o identificador retornado por <code>setInterval()</code> para a função <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">clearInterval()</a></code>:</p>
+
+<pre class="brush: js notranslate">const myInterval = setInterval(myFunction, 2000);
+
+clearInterval(myInterval);</pre>
+
+<h4 id="Aprendizado_ativo_Criando_seu_próprio_cronômetro!">Aprendizado ativo: Criando seu próprio cronômetro!</h4>
+
+<p>Com tudo isso dito, nós temos um desafio para você. Faça uma cópia do nosso exemplo <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">setInterval-clock.html</a></code>, e o modifique para criar seu próprio cronômetro.</p>
+
+<p>Você precisa mostrar um tempo na tela como antes, mas nesse exemplo você vai precisar de:</p>
+
+<ul>
+ <li>Um botão de "início" para fazer o cronômetro começar a contar.</li>
+ <li>Um botão de "parar" para parar ou pausar o tempo.</li>
+ <li>Um botão de "reset" para resetar o tempo em 0.</li>
+ <li>O display do tempo para mostrar o número de segundos passados.</li>
+</ul>
+
+<p>Here's a few hints for you:</p>
+
+<ul>
+ <li>You can structure and style the button markup however you like; just make sure you use semantic HTML, with hooks to allow you to grab the button references using JavaScript.</li>
+ <li>You probably want to create a variable that starts at <code>0</code>, then increments by one every second using a constant loop.</li>
+ <li>It is easier to create this example without using a <code>Date()</code> object, like we've done in our version, but less accurate — you can't guarantee that the callback will fire after exactly <code>1000</code>ms. A more accurate way would be to run <code>startTime = Date.now()</code> to get a timestamp of exactly when the user clicked the start button, and then do <code>Date.now() - startTime</code> to get the number of milliseconds after the start button was clicked.</li>
+ <li>You also want to calculate the number of hours, minutes, and seconds as separate values, and then show them together in a string after each loop iteration. From the second counter, you can work out each of these.</li>
+ <li>How would you calculate them? Have a think about it:
+  <ul>
+   <li>The number of seconds in an hour is <code>3600</code>.</li>
+   <li>The number of minutes will be the amount of seconds left over when all of the hours have been removed, divided by <code>60</code>.</li>
+   <li>The number of seconds will be the amount of seconds left over when all of the minutes have been removed.</li>
+  </ul>
+ </li>
+ <li>You'll want to include a leading zero on your display values if the amount is less than <code>10</code>, so it looks more like a traditional clock/watch.</li>
+ <li>To pause the stopwatch, you'll want to clear the interval. To reset it, you'll want to set the counter back to <code>0</code>, clear the interval, and then immediately update the display.</li>
+ <li>You probably ought to disable the start button after pressing it once, and enable it again after you've stopped/reset it. Otherwise multiple presses of the start button will apply multiple <code>setInterval()</code>s to the clock, leading to wrong behavior.</li>
+</ul>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: If you get stuck, you can <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">find our version here</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">source code</a> also).</p>
+</div>
+
+<h2 id="Coisas_para_se_manter_em_mente_sobre_o_setTimeout_e_o_setInterval">Coisas para se manter em mente sobre o setTimeout() e o setInterval()</h2>
+
+<p>Existem algumas coisinhas que devemos sempre lembrar quando estamos trabalhando com <code>setTimeout()</code> e<code>setInterval()</code>:</p>
+
+<h3 id="Timeouts_recursivos">Timeouts recursivos</h3>
+
+<p>Há outra maneira de usar o  <code>setTimeout()</code>: você pode chamá-lo recusivamnete para executar o mesmo código repetidas vezes, ao invés de usar o <code>setInterval()</code>.</p>
+
+<p>O exemplo abaixo usa um <code>setTimeout()</code> recursivo para executar a função passada a cada <code>100</code> millissegundos:</p>
+
+<pre class="brush: js notranslate">let i = 1;
+
+setTimeout(function run() {
+  console.log(i);
+  i++;
+  setTimeout(run, 100);
+}, 100);</pre>
+
+<p>Compare the above example to the following one — this uses <code>setInterval()</code> to accomplish the same effect:</p>
+
+<pre class="brush: js notranslate">let i = 1;
+
+setInterval(function run() {
+  console.log(i);
+  i++
+}, 100);</pre>
+
+<h4 id="Qual_a_diferença_entre_o_setTimeout_recursivo_e_o_setInterval">Qual a diferença entre o <code>setTimeout()</code> recursivo e o <code>setInterval()</code>?</h4>
+
+<p>A diferença entre as duas versões é bem sútil.</p>
+
+<ul>
+ <li>O <code>setTimeout()</code> recursivo garante que o mesmo intervalo entre as execuções (por exemplo, <code>100</code>ms no exemplo acima). O código será executado, depois esperar <code>100</code> milissegundos antes de fazer isso de novo— então o intervalo será o mesmo, idependente do tempo que o código leva para ser executado.</li>
+ <li>O exemplo usando <code>setInterval()</code> faz as coisas um pouco diferentes.O intervalo escolhido inclui o tempo necessário para executar o código que você deseja executar. Digamos que o código leva <code>40</code> milissegundos de execução — o intervalo acaba levando apenas <code>60</code> milissegundos.</li>
+ <li>Quando usamos o <code>setTimeout()</code> recursivamente, cada iteração pode calcular um delay diferente antes de executar a próxima iteração. Em outras palavras, o valor do segundo parâmetro pode especificar um tempo diferente em milissegundos para esperar antes de rodar o código de novo.</li>
+</ul>
+
+<p>Quando seu código tem o potencial para levar mais tempo do que lhe foi atribuido, é melhor usar o <code>setTimeout()</code> recursivo — isso irá manter o intervalo de tempo constant entre execuções independente do quanto tempo o código levar para ser executado, e você não terá erros.</p>
+
+<h3 id="Timeouts_imediatos">Timeouts imediatos</h3>
+
+<p>Usar zero como o valor para <code>setTimeout()</code> faz a execução da callback ser o mais rápido o possível, mas apenas depois que a main thread for terminada.</p>
+
+<p>Por exemplo, o código abaixo (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/zero-settimeout.html">veja funcionar aqui</a>) mostra um alert que contém um <code>"Hello"</code>, depois um  alert que contém <code>"World"</code> assim que você clicar em OK no primeiro alerta.</p>
+
+<pre class="brush: js notranslate">setTimeout(function() {
+  alert('World');
+}, 0);
+
+alert('Hello');</pre>
+
+<p>Isso pode ser útil em casos onde você quer fazer um bloco de código ser executado assim que a main thread acabar o seu processamento — colocar no loop de eventos async, assim ele vai ser executado logo depois.</p>
+
+<h3 id="Cancelando_com_clearTimeout_ou_clearInterval">Cancelando com clearTimeout() ou clearInterval()</h3>
+
+<p><code>clearTimeout()</code> e <code>clearInterval()</code> usam a mesma lista de entradas para cancelamento. Isso significa que você pode usar os dois para cancelar um <code>setTimeout()</code> ou <code>setInterval()</code>.</p>
+
+<p>Mas mesmo assim, você deve usar o <code>clearTimeout()</code> para entradas <code>setTimeout()</code> e <code>clearInterval()</code> para entradas <code>setInterval()</code>. Isso evita confusões.</p>
+
+<h2 id="requestAnimationFrame">requestAnimationFrame()</h2>
+
+<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> é uma função de loop especializada criada para executar animações com eficiência no navegador. Ela é basicamente a versão moderna de <code>setInterval()</code> — ela executa um bloco de código específico antes que o navegador renove o display, permitindo que uma animação seja executada em um framerate adequado independente do ambiente em que está sendo executada.</p>
+
+<p>Ela foi criada em resposta à problemas ocorridos com <code>setInterval()</code>, que por exemplo não roda em uma taxa de quadros otimizada para o dispositivo, e às vezes diminui os frames, continua a rodar mesmo se a guia não esiver ativa ou se a animação for rolada para fora da página, etc.</p>
+
+<p>(<a href="http://creativejs.com/resources/requestanimationframe/index.html">Leia mais sobre isso em CreativeJS</a>.)</p>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Você pode encontrar exemplos do uso de <code>requestAnimationFrame()</code> em outros lugares do curso — por exemplo em <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a>, e <a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a>.</p>
+</div>
+
+<p>O método toma como argumentos uma callback a  ser invocada antes da renovação. Esse é o padrão geral que você verá usado em:</p>
+
+<pre class="brush: js notranslate">function draw() {
+   // Drawing code goes here
+   requestAnimationFrame(draw);
+}
+
+draw();</pre>
+
+<p>A ideia é definir uma função em que sua animação é atualizada (e.g. seus spritas se movem, a pontuação é atualizada, dados são recarregados, etc). Depois, você inicia o processo. No final do bloco da função você chama  <code>requestAnimationFrame()</code> com a referência da função passada como parâmetro, e isso instrui o navegador a chamar a função de novo na próxima renovação. Isso é executado continuamente, já que o código está chamando <code>requestAnimationFrame()</code> recursivamente.</p>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Se você quer realizar algum tipo de animação na DOM constantemente, <a href="/en-US/docs/Web/CSS/CSS_Animations">Animações CSS</a> são provavelemente mais rápidas. elas são calculadas diretamente pelo código interno do navegador, ao invés de JavaScript.</p>
+
+<p>Se, no entanto, você está fazendo algo mais complexo e envolvendo objetos que não são diretamente assessados da DOM (como <a href="/en-US/docs/Web/API/Canvas_API">2D Canvas API</a> ou objetos <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>), <code>requestAnimationFrame()</code> é a melhor opção na maioria dos casos</p>
+</div>
+
+<h3 id="Qual_a_velocidade_da_sua_animação">Qual a velocidade da sua animação?</h3>
+
+<p>A suavidade da sua animação é diretamente dependente na frame rate da sua animação e é medida em frames per second (fps). The smoothness of your animation is directly dependent on your animation's frame rate and it is measured in frames per second (fps). Quanto maior esse número, mais suave será a sua animação, até certo ponto.</p>
+
+<p>Já que a maioria das tela tem uma taxa de atualização de 60Hz, a frame rate mais rápida que você pode ter é de 60fps quando trabalhando com web browsers. No entanto, mais frames significa mais processamento, o que pode ser causar uma queda de quadros e travamento.</p>
+
+<p>Se você tem um monitos com uma taxa de atualização de 60Hz e você quer atingir 60FPS você tem pelo menos 16.7 milissegundos (<code>1000 / 60</code>) para executar sua animação em cada frame. Isso é um lembrete de que você vai precisar estar atento à quantidade de código que você vai tentar executar em cada iteração do loop de animação.</p>
+
+<p><code>requestAnimationFrame()</code> sempre tenta ficar o mais próximo possível de 60 FPS. Às vezes, isso não é possível — se você tem uma animação bem complexa e você está executando ela em um computador lento, sua frame rate será menor. Em todos os casos, o <code>requestAnimationFrame()</code> sempre vai fazer o melhor que pode com o que ele tem dísponivel.</p>
+
+<h3 id="Como_o_requestAnimationFrame_se_diferencia_de_setInterval_e_setTimeout">Como o requestAnimationFrame() se diferencia de setInterval() e setTimeout()?</h3>
+
+<p>Vamos falar um pouco sobre como o método <code>requestAnimationFrame()</code> se diferencia dos outros métodos vistos anteriormente. Olhando com o código anterior:</p>
+
+<pre class="brush: js notranslate">function draw() {
+   // Drawing code goes here
+   requestAnimationFrame(draw);
+}
+
+draw();</pre>
+
+<p>Vamos ver isso usando o <code>setInterval()</code>:</p>
+
+<pre class="brush: js notranslate">function draw() {
+   // Drawing code goes here
+}
+
+setInterval(draw, 17);</pre>
+
+<p>Como foi dito anteriormente, você não especifica um intervalo de tempo para <code>requestAnimationFrame()</code>. O método se executa o mais rápido e suave o possível nas condições atuais. O navegador também não perde tempo executando uma animação se ela está fora da tela por algum motivo, etc.</p>
+
+<p><code>setInterval()</code>, por outro lado, exige que um  intervalo de tempo seja especificado. Nós chegamos ao valor final de 17 por meio da formula <em>1000 milliseconds / 60Hz</em>, e depois arredondamos o resultado. Arredondar é uma boa ideia; se você tivesse arredondado para baixo, o navegador pode tentar executar a animação mais rápido do que 60  FPS, e não faria nenhuma diferênça na suavidade da animação de qualquer forma. Como foi dito antes, 60Hz é a taxa de atualização padrão.</p>
+
+<h3 id="Incluindo_um_timestamp">Incluindo um timestamp</h3>
+
+<p>A callback passada para a função <code>requestAnimationFrame()</code> pode ser dada um parâmetro támbem: um valor <em>timestamp</em>, que representa o tempo desde que o  <code>requestAnimationFrame()</code> começou a rodar.</p>
+
+<p>Isso é útil, permite que você execute coisas em  um tempo específico e em passo constante, independente do quão rápido ou lento é o seu dispositivo. O padão geral que você usaria se parece um pouco com isso:</p>
+
+<pre class="brush: js notranslate">let startTime = null;
+
+function draw(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+
+   currentTime = timestamp - startTime;
+
+   // Do something based on current time
+
+   requestAnimationFrame(draw);
+}
+
+draw();</pre>
+
+<h3 id="Suporte_do_navegador">Suporte do navegador</h3>
+
+<p><code>requestAnimationFrame()</code> é suportado em navegadores mais recentes do que <code>setInterval()</code>/<code>setTimeout()</code>.  Curiosamente, está disponível no Internet Explorer 10 e além.</p>
+
+<p>Então, você não precisa dar suporte para versões mais velhas do IE, não há poruqe não usar o  <code>requestAnimationFrame()</code>.</p>
+
+<h3 id="Um_exemplo_simples">Um exemplo simples</h3>
+
+<p>Enough with the theory! Let's build your own personal <code>requestAnimationFrame()</code> example. You're going to create a simple "spinner animation"—the kind you might see displayed in an app when it is busy connecting to the server, etc.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: In a real world example, you should probably use CSS animations to run this kind of simple animation. However, this kind of example is very useful to demonstrate <code>requestAnimationFrame()</code> usage, and you'd be more likely to use this kind of technique when doing something more complex such as updating the display of a game on each frame.</p>
+</div>
+
+<ol>
+ <li>
+  <p>Grab a basic HTML template (<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">such as this one</a>).</p>
+ </li>
+ <li>
+  <p>Put an empty {{htmlelement("div")}} element inside the {{htmlelement("body")}}, then add a ↻ character inside it. This is circular arrow character will act as our spinner for this example.</p>
+ </li>
+ <li>
+  <p>Apply the following CSS to the HTML template (in whatever way you prefer). This sets a red background on the page, sets the <code>&lt;body&gt;</code> height to <code>100%</code> of the {{htmlelement("html")}} height, and centers the <code>&lt;div&gt;</code> inside the <code>&lt;body&gt;</code>, horizontally and vertically.</p>
+
+  <pre class="brush: css notranslate">html {
+  background-color: white;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  background-color: red;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  display: inline-block;
+  font-size: 10rem;
+}</pre>
+ </li>
+ <li>
+  <p>Insert a {{htmlelement("script")}} element just above the <code>&lt;/body&gt;</code> tag.</p>
+ </li>
+ <li>
+  <p>Insert the following JavaScript inside your <code>&lt;script&gt;</code> element. Here, you're storing a reference to the <code>&lt;div&gt;</code> inside a constant, setting a <code>rotateCount</code> variable to <code>0</code>, setting an uninitialized variable that will later be used to contain a reference to the <code>requestAnimationFrame()</code> call, and setting a <code>startTime</code> variable to <code>null</code>, which will later be used to store the start time of the <code>requestAnimationFrame()</code>.</p>
+
+  <pre class="brush: js notranslate">const spinner = document.querySelector('div');
+let rotateCount = 0;
+let startTime = null;
+let rAF;
+</pre>
+ </li>
+ <li>
+  <p>Below the previous code, insert a <code>draw()</code> function that will be used to contain our animation code, which includes the <code>timestamp</code> parameter:</p>
+
+  <pre class="brush: js notranslate">function draw(timestamp) {
+
+}</pre>
+ </li>
+ <li>
+  <p>Inside <code>draw()</code>, add the following lines. They will define the start time if it is not defined already (this will only happen on the first loop iteration), and set the <code>rotateCount</code> to a value to rotate the spinner by (the current timestamp, take the starting timestamp, divided by three so it doesn't go too fast):</p>
+
+  <pre class="brush: js notranslate">  if (!startTime) {
+   startTime = timestamp;
+  }
+
+  rotateCount = (timestamp - startTime) / 3;
+</pre>
+ </li>
+ <li>
+  <p>Below the previous line inside <code>draw()</code>, add the following block — this checks to see if the value of <code>rotateCount</code> is above <code>359</code> (e.g. <code>360</code>, a full circle). If so, it sets the value to its modulo of 360 (i.e. the remainder left over when the value is divided by <code>360</code>) so the circle animation can continue uninterrupted, at a sensible, low value. Note that this isn't strictly necessary, but it is easier to work with values of 0–359 degrees than values like <code>"128000 degrees"</code>.</p>
+
+  <pre class="brush: js notranslate">if (rotateCount &gt; 359) {
+  rotateCount %= 360;
+}</pre>
+ </li>
+ <li>Next, below the previous block add the following line to actually rotate the spinner:
+  <pre class="brush: js notranslate">spinner.style.transform = `rotate(${rotateCount}deg)`;</pre>
+ </li>
+ <li>
+  <p>At the very bottom inside the <code>draw()</code> function, insert the following line. This is the key to the whole operation — you are setting the variable defined earlier to an active <code>requestAnimation()</code> call, which takes the <code>draw()</code> function as its parameter. This starts the animation off, constantly running the <code>draw()</code> function at a rate as near 60 FPS as possible.</p>
+
+  <pre class="brush: js notranslate">rAF = requestAnimationFrame(draw);</pre>
+ </li>
+</ol>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: You can find this <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">example live on GitHub</a>. (You can see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">source code</a>, also.)</p>
+</div>
+
+<h3 id="Clearing_a_requestAnimationFrame_call">Clearing a requestAnimationFrame() call</h3>
+
+<p>Clearing a <code>requestAnimationFrame()</code> call can be done by calling the corresponding <code>cancelAnimationFrame()</code> method. (Note that the function name starts with "cancel", not "clear" as with the "set..." methods.) </p>
+
+<p>Just pass it the value returned by the <code>requestAnimationFrame()</code> call to cancel, which you stored in the variable <code>rAF</code>:</p>
+
+<pre class="brush: js notranslate">cancelAnimationFrame(rAF);</pre>
+
+<h3 id="Active_learning_Starting_and_stopping_our_spinner">Active learning: Starting and stopping our spinner</h3>
+
+<p>In this exercise, we'd like you to test out the <code>cancelAnimationFrame()</code> method by taking our previous example and updating it, adding an event listener to start and stop the spinner when the mouse is clicked anywhere on the page.</p>
+
+<p>Some hints:</p>
+
+<ul>
+ <li>A <code>click</code> event handler can be added to most elements, including the document <code>&lt;body&gt;</code>. It makes more sense to put it on the <code>&lt;body&gt;</code> element if you want to maximize the clickable area — the event bubbles up to its child elements.</li>
+ <li>You'll want to add a tracking variable to check whether the spinner is spinning or not, clearing the animation frame if it is, and calling it again if it isn't.</li>
+</ul>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: Try this yourself first; if you get really stuck, check out of our <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">live example</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">source code</a>.</p>
+</div>
+
+<h3 id="Throttling_a_requestAnimationFrame_animation">Throttling a requestAnimationFrame() animation</h3>
+
+<p>One limitation of <code>requestAnimationFrame()</code> is that you can't choose your frame rate. This isn't a problem most of the time, as generally you want your animation to run as smoothly as possible. But what about when you want to create an old school, 8-bit-style animation?</p>
+
+<p>This was a problem, for example, in the Monkey Island-inspired walking animation from our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing Graphics</a> article:</p>
+
+<p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}</p>
+
+<p>In this example, you have to animate both the position of the character on the screen, and the sprite being shown. There are only 6 frames in the sprite's animation. If you showed a different sprite frame for every frame displayed on the screen by <code>requestAnimationFrame()</code>, Guybrush would move his limbs too fast and the animation would look ridiculous. This example therefore throttles the rate at which the sprite cycles its frames using the following code:</p>
+
+<pre class="brush: js notranslate">if (posX % 13 === 0) {
+  if (sprite === 5) {
+    sprite = 0;
+  } else {
+    sprite++;
+  }
+}</pre>
+
+<p>So the code only cycles the sprite once every 13 animation frames.</p>
+
+<p>...Actually, it's about every 6.5 frames, as we update <code>posX</code> (character's position on the screen) by two each frame:</p>
+
+<pre class="brush: js notranslate">if (posX &gt; width/2) {
+  newStartPos = -( (width/2) + 102 );
+  posX = Math.ceil(newStartPos / 13) * 13;
+  console.log(posX);
+} else {
+  posX += 2;
+}</pre>
+
+<p>This is the code that calculates how to update the position in each animation frame.</p>
+
+<p>The method you use to throttle your animation will depend on your particular code. For instance, in the earlier spinner example, you could make it appear to move slower by only increasing <code>rotateCount</code> by one on each frame, instead of two.</p>
+
+<h2 id="Active_learning_a_reaction_game">Active learning: a reaction game</h2>
+
+<p>For the final section of this article, you'll create a 2-player reaction game. The game will have two players, one of whom controls the game using the <kbd>A</kbd> key, and the other with the <kbd>L</kbd> key.</p>
+
+<p>When the <em>Start</em> button is pressed, a spinner like the one we saw earlier is displayed for a random amount of time between 5 and 10 seconds. After that time, a message will appear saying <code>"PLAYERS GO!!"</code> — once this happens, the first player to press their control button will win the game.</p>
+
+<p>{{EmbedGHLiveSample("learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html", '100%', 500)}}</p>
+
+<p>Let's work through this:</p>
+
+<ol>
+ <li>
+  <p>First of all, download the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game-starter.html">starter file for the app</a>. This contains the finished HTML structure and CSS styling, giving us a game board that shows the two players' information (as seen above), but with the spinner and results paragraph displayed on top of one another. You just have to write the JavaScript code.</p>
+ </li>
+ <li>
+  <p>Inside the empty {{htmlelement("script")}} element on your page, start by adding the following lines of code that define some constants and variables you'll need in the rest of the code:</p>
+
+  <pre class="brush: js notranslate">const spinner = document.querySelector('.spinner p');
+const spinnerContainer = document.querySelector('.spinner');
+let rotateCount = 0;
+let startTime = null;
+let rAF;
+const btn = document.querySelector('button');
+const result = document.querySelector('.result');</pre>
+
+  <p>In order, these are:</p>
+
+  <ol>
+   <li>A reference to the spinner, so you can animate it.</li>
+   <li>A reference to the {{htmlelement("div")}} element that contains the spinner, used for showing and hiding it.</li>
+   <li>A rotate count. This determines how much you want to show the spinner rotated on each frame of the animation.</li>
+   <li>A null start time. This will be populated with a start time when the spinner starts spinning.</li>
+   <li>An uninitialized variable to later store the {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} call that animates the spinner.</li>
+   <li>A reference to the Start button.</li>
+   <li>A reference to the results paragraph.</li>
+  </ol>
+ </li>
+ <li>
+  <p>Next, below the previous lines of code, add the following function. It simply takes two numbers and returns a random number between the two. You'll need this to generate a random timeout interval later on.</p>
+
+  <pre class="brush: js notranslate">function random(min,max) {
+  var num = Math.floor(Math.random()*(max-min)) + min;
+  return num;
+}</pre>
+ </li>
+ <li>
+  <p>Next add  the <code>draw()</code> function, which animates the spinner. This is very similar to the version from the simple spinner example, earlier:</p>
+
+  <pre class="brush: js notranslate">function draw(timestamp) {
+  if(!startTime) {
+   startTime = timestamp;
+  }
+
+  rotateCount = (timestamp - startTime) / 3;
+
+  if(rotateCount &gt; 359) {
+    rotateCount %= 360;
+  }
+
+  spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
+  rAF = requestAnimationFrame(draw);
+}</pre>
+ </li>
+ <li>
+  <p>Now it is time to set up the initial state of the app when the page first loads. Add the following two lines, which simply hide the results paragraph and spinner container using <code>display: none;</code>.</p>
+
+  <pre class="brush: js notranslate">result.style.display = 'none';
+spinnerContainer.style.display = 'none';</pre>
+ </li>
+ <li>
+  <p>Next, define a <code>reset()</code> function, which sets the app back to the original state required to start the game again after it has been played. Add the following at the bottom of your code:</p>
+
+  <pre class="brush: js notranslate">function reset() {
+  btn.style.display = 'block';
+  result.textContent = '';
+  result.style.display = 'none';
+}</pre>
+ </li>
+ <li>
+  <p>Okay, enough preparation!  It's time to make the game playable! Add the following block to your code. The <code>start()</code> function calls <code>draw()</code> to start the spinner spinning and display it in the UI, hides the <em>Start</em> button so you can't mess up the game by starting it multiple times concurrently, and runs a <code>setTimeout()</code> call that runs a <code>setEndgame()</code> function after a random interval between 5 and 10 seconds has passed. The following block also adds an event listener to your button to run the <code>start()</code> function when it is clicked.</p>
+
+  <pre class="brush: js notranslate">btn.addEventListener('click', start);
+
+function start() {
+  draw();
+  spinnerContainer.style.display = 'block';
+  btn.style.display = 'none';
+  setTimeout(setEndgame, random(5000,10000));
+}</pre>
+
+  <div class="blockIndicator note">
+  <p><strong>Note</strong>: You'll see this example is calling <code>setTimeout()</code> without storing the return value. (So, not <code>let myTimeout = setTimeout(functionName, interval)</code>.) </p>
+
+  <p>This works just fine, as long as you don't need to clear your interval/timeout at any point. If you do, you'll need to save the returned identifier!</p>
+  </div>
+
+  <p>The net result of the previous code is that when the <em>Start</em> button is pressed, the spinner is shown and the players are made to wait a random amount of time before they are asked to press their button. This last part is handled by the <code>setEndgame()</code> function, which you'll define next.</p>
+ </li>
+ <li>
+  <p>Add the following function to your code next:</p>
+
+  <pre class="brush: js notranslate">function setEndgame() {
+  cancelAnimationFrame(rAF);
+  spinnerContainer.style.display = 'none';
+  result.style.display = 'block';
+  result.textContent = 'PLAYERS GO!!';
+
+  document.addEventListener('keydown', keyHandler);
+
+  function keyHandler(e) {
+    console.log(e.key);
+    if(e.key === 'a') {
+      result.textContent = 'Player 1 won!!';
+    } else if(e.key === 'l') {
+      result.textContent = 'Player 2 won!!';
+    }
+
+    document.removeEventListener('keydown', keyHandler);
+    setTimeout(reset, 5000);
+  };
+}</pre>
+
+  <p>Stepping through this:</p>
+
+  <ol>
+   <li>First, cancel the spinner animation with {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (it is always good to clean up unneeded processes), and hide the spinner container.</li>
+   <li>Next, display the results paragraph and set its text content to "PLAYERS GO!!" to signal to the players that they can now press their button to win.</li>
+   <li>Attach a <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> event listener to the document. When any button is pressed down, the <code>keyHandler()</code> function is run.</li>
+   <li>Inside <code>keyHandler()</code>, the code includes the event object as a parameter (represented by <code>e</code>) — its {{domxref("KeyboardEvent.key", "key")}} property contains the key that was just pressed, and you can use this to respond to specific key presses with specific actions.</li>
+   <li>Log <code>e.key</code> to the console, which is a useful way of finding out the <code>key</code> value of different keys you are pressing.</li>
+   <li>When <code>e.key</code> is "a", display a message to say that Player 1 won, and when <code>e.key</code> is "l", display a message to say Player 2 won. (<strong>Note:</strong> This will only work with lowercase a and l — if an uppercase A or L is submitted (the key plus <kbd>Shift</kbd>), it is counted as a different key!)</li>
+   <li>Regardless of which one of the player control keys was pressed,  remove the <code>keydown</code> event listener using {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} so that once the winning press has happened, no more keyboard input is possible to mess up the final game result. You also use <code>setTimeout()</code> to call <code>reset()</code> after 5 seconds — as explained earlier, this function resets the game back to its original state so that a new game can be started.</li>
+  </ol>
+ </li>
+</ol>
+
+<p>That's it—you're all done!</p>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: If you get stuck, check out <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html">our version of the reaction game</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html">source code</a> also).</p>
+</div>
+
+<h2 id="Conclusion">Conclusion</h2>
+
+<p>So that's it — all the essentials of async loops and intervals covered in one article. You'll find these methods useful in a lot of situations, but take care not to overuse them! Because they still run on the main thread, heavy and intensive callbacks (especially those that manipulate the DOM) can really slow down a page if you're not careful.</p>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}</p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+</ul>

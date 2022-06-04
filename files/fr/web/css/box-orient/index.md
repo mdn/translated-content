@@ -29,7 +29,7 @@ box-orient: initial;
 box-orient: unset;
 ```
 
-Ainsi, les éléments XUL {{XULElem("box")}} et {{XULElem("hbox")}} disposent leurs contenus horizontalement par défaut alors que  {{XULElem("vbox")}} organise son contenu de façon verticale par défaut.
+Ainsi, les éléments XUL {{XULElem("box")}} et {{XULElem("hbox")}} disposent leurs contenus horizontalement par défaut alors que  {{XULElem("vbox")}} organise son contenu de façon verticale par défaut.
 
 Les éléments HTML disposent leurs contenus selon l'axe _inline_ par défaut. Cette propriété CSS ne s'applique qu'aux éléments HTML pour lesquels la propriété {{cssxref("display")}} vaut {{cssxref("box")}} ou {{cssxref("inline-box")}}.
 

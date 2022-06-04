@@ -20,7 +20,9 @@ La méthode **`indexOf()`** renvoie le premier indice (le plus petit) auquel on 
 
 ## Syntaxe
 
-    typedarray.indexOf(élémentRecherché[, indiceDébut = 0])
+```js
+typedarray.indexOf(élémentRecherché[, indiceDébut = 0])
+```
 
 ### Paramètres
 
@@ -53,7 +55,7 @@ uint8.indexOf(2, -3); // 0
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

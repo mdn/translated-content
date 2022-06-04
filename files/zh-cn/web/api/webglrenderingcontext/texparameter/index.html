@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>  的<strong><code>WebGLRenderingContext.texParameter[fi]()</code></strong>方法用于设置纹理参数.</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>  的<strong><code>WebGLRenderingContext.texParameter[fi]()</code></strong>方法用于设置纹理参数。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,22 +17,22 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
 
 <dl>
  <dt>target</dt>
- <dd>{{domxref("GLenum")}} 指定绑定点(目标)。可能的值：</dd>
+ <dd>{{domxref("GLenum")}} 指定绑定点 (目标)。可能的值：</dd>
  <dd>
  <ul>
-  <li><code>gl.TEXTURE_2D</code>: 二维纹理.</li>
-  <li><code>gl.TEXTURE_CUBE_MAP</code>: 立方体纹理.</li>
-  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时,还可以使用以下值
+  <li><code>gl.TEXTURE_2D</code>: 二维纹理。</li>
+  <li><code>gl.TEXTURE_CUBE_MAP</code>: 立方体纹理。</li>
+  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，还可以使用以下值
    <ul>
-    <li><code>gl.TEXTURE_3D</code>: 三维贴图.</li>
-    <li><code>gl.TEXTURE_2D_ARRAY</code>: 二维数组贴图.</li>
+    <li><code>gl.TEXTURE_3D</code>: 三维贴图。</li>
+    <li><code>gl.TEXTURE_2D_ARRAY</code>: 二维数组贴图。</li>
    </ul>
   </li>
  </ul>
  </dd>
 </dl>
 
-<p><code>pname</code> 参数是 {{domxref("Glenum")}}  指定要设置的纹理参数. <code>param</code> 参数是 {{domxref("GLfloat")}} 或 {{domxref("GLint")}} 已指定的 <code>pname</code>参数的值。</p>
+<p><code>pname</code> 参数是 {{domxref("Glenum")}}  指定要设置的纹理参数。<code>param</code> 参数是 {{domxref("GLfloat")}} 或 {{domxref("GLint")}} 已指定的 <code>pname</code>参数的值。</p>
 
 <table class="standard-table">
  <thead>
@@ -72,7 +72,7 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
   <tr>
    <td><code>ext.TEXTURE_MAX_ANISOTROPY_EXT</code></td>
    <td>纹理最大向异性</td>
-   <td> {{domxref("GLfloat")}} 值.</td>
+   <td> {{domxref("GLfloat")}} 值。</td>
   </tr>
   <tr>
    <th colspan="3">Additionally available when using a WebGL 2 context</th>
@@ -80,7 +80,7 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
   <tr>
    <td><code>gl.TEXTURE_BASE_LEVEL</code></td>
    <td>纹理映射等级</td>
-   <td>任何整型值.</td>
+   <td>任何整型值。</td>
   </tr>
   <tr>
    <td><code>gl.TEXTURE_COMPARE_FUNC</code></td>
@@ -95,17 +95,17 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
   <tr>
    <td><code>gl.TEXTURE_MAX_LEVEL</code></td>
    <td>最大纹理映射数组等级</td>
-   <td>任何整型值.</td>
+   <td>任何整型值。</td>
   </tr>
   <tr>
    <td><code>gl.TEXTURE_MAX_LOD</code></td>
    <td>纹理最大细节层次值</td>
-   <td>任何整型值.</td>
+   <td>任何整型值。</td>
   </tr>
   <tr>
    <td><code>gl.TEXTURE_MIN_LOD</code></td>
    <td>纹理最小细节层次值</td>
-   <td>任何浮点型值.</td>
+   <td>任何浮点型值。</td>
   </tr>
   <tr>
    <td><code>gl.TEXTURE_WRAP_R</code></td>
@@ -117,7 +117,7 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>INVALID_ENUM </code>target不是合法的值。</p>
+<p><code>INVALID_ENUM </code>target 不是合法的值。</p>
 
 <p><code>INVALID_OPRATION </code>当前目标上没有绑定纹理对象。</p>
 
@@ -139,22 +139,22 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
   <tr>
    <td>{{SpecName('WebGL', "#5.14.8", "texParameter[fi]")}}</td>
    <td>{{Spec2('WebGL')}}</td>
-   <td>WebGL初始定义.</td>
+   <td>WebGL 初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 2.0', "glTexParameter.xml", "glTexParameter")}}</td>
    <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL ES 2.0 API手册(类似).</td>
+   <td>OpenGL ES 2.0 API 手册 (类似).</td>
   </tr>
   <tr>
    <td>{{SpecName('WebGL2', "#3.7.6", "texParameter[fi]")}}</td>
    <td>{{Spec2('WebGL2')}}</td>
-   <td>WebGL更新定义.</td>
+   <td>WebGL 更新定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 3.0', "glTexParameter.xhtml", "glTexParameter")}}</td>
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td>OpenGL ES 3.0 API手册(类似).</td>
+   <td>OpenGL ES 3.0 API 手册 (类似).</td>
   </tr>
  </tbody>
 </table>

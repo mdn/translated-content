@@ -11,7 +11,7 @@ translation_of: Web/API/Window/confirm
 ---
 <div>{{ApiRef("Window")}}</div>
 
-<p><code><strong>Window.confirm()</strong></code> 方法显示一个具有一个可选消息和两个按钮(确定和取消)的模态对话框 。</p>
+<p><code><strong>Window.confirm()</strong></code> 方法显示一个具有一个可选消息和两个按钮 (确定和取消) 的模态对话框 。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Window/confirm
 
 <ul>
  <li>message 是要在对话框中显示的可选字符串。</li>
- <li>result 是一个布尔值，表示是选择确定还是取消 (true表示OK)。</li>
+ <li>result 是一个布尔值，表示是选择确定还是取消 (true 表示 OK)。</li>
 </ul>
 
 <h2 id="Example" name="Example">示例</h2>
@@ -35,15 +35,15 @@ translation_of: Web/API/Window/confirm
 <p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
   </p>
 
-<h2 id="Notes" name="Notes">注意事项:</h2>
+<h2 id="Notes" name="Notes">注意事项：</h2>
 
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span>对话框是弹出式(modal)的(也即alert样式, 译者注). 直到这个对话框被点击后, 后面的脚本才会运行. 请勿滥用此功能, 这里列出了很多个理由: <a href="http://alistapart.com/article/neveruseawarning">请放弃使用对话框来确认信息</a>.</p>
+<p>The following text is shared between this article, DOM:window.prompt and DOM:window.alert 对话框是弹出式 (modal) 的 (也即 alert 样式，译者注). 直到这个对话框被点击后，后面的脚本才会运行。请勿滥用此功能，这里列出了很多个理由: <a href="http://alistapart.com/article/neveruseawarning">请放弃使用对话框来确认信息</a>.</p>
 
-<p><a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> 的用户(比如Firefox插件开发者)应该使用{{interface("nsIPromptService")}}这个方法.</p>
+<p><a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> 的用户 (比如 Firefox 插件开发者) 应该使用<code>nsIPromptService</code>这个方法。</p>
 
-<p>Chrome浏览器版本 {{CompatChrome(46.0)}} 开始屏蔽内部{{htmlelement("iframe")}}元素, 除非用户在沙箱内开启了<code>allow-modal选项.</code></p>
+<p>Chrome 浏览器版本 {{CompatChrome(46.0)}} 开始屏蔽内部{{htmlelement("iframe")}}元素，除非用户在沙箱内开启了<code>allow-modal 选项。</code></p>
 
-<p>在{{gecko_minversion_inline("23.0")}}内核中, 参数是可选的.</p>
+<p>在 gecko (23) 内核中，参数是可选的。</p>
 
 <h2 id="Specification" name="Specification">兼容性</h2>
 

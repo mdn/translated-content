@@ -14,7 +14,7 @@ translation_of: Web/API/Console/log
 <pre class="eval notranslate">console.log(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN]</em>);
 console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN]</em>);
 console.log('String: %s, Int: %d,Float: %f, Object: %o', str, ints, floats, obj)
-console.log(`temp的值为: ${temp}`)
+console.log(`temp 的值为：${temp}`)
 </pre>
 
 <h2 id="参数">参数</h2>
@@ -23,7 +23,7 @@ console.log(`temp的值为: ${temp}`)
  <dt><code>obj1</code> ... <code>objN</code></dt>
  <dd>一个用于输出的 JavaScript 对象列表。其中每个对象会以字符串的形式按照顺序依次输出到控制台。</dd>
  <dt><code>msg</code></dt>
- <dd>一个JavaScript字符串，其中包含零个或多个替代字符串。</dd>
+ <dd>一个 JavaScript 字符串，其中包含零个或多个替代字符串。</dd>
  <dt><code>subst1</code> ... <code>substN</code></dt>
  <dd>JavaScript 对象，用来依次替换<code>msg</code>中的替代字符串。你可以在替代字符串中指定对象的输出格式。</dd>
 </dl>
@@ -32,82 +32,7 @@ console.log(`temp的值为: ${temp}`)
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本功能</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>8</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>替代字符串</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatChrome(28)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>10<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("38.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本功能</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>替代字符串</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("9.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.console.log")}}
 
 <h2 id="Specification" name="Specification">规范</h2>
 
@@ -120,5 +45,3 @@ console.log(`temp的值为: ${temp}`)
  <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
  <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
 </ul>
-
-<p>{{ languages( {"en": "en/DOM/console.log" } ) }}</p>

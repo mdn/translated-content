@@ -39,9 +39,9 @@ translation_of: Web/EXSLT/regexp/match
 
 <p>A node set of <code>match</code> elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn't a global one, the first match element has the value of the portion of the string matched by the entire regular expression.</p>
 
-<p>例如:</p>
+<p>例如：</p>
 
-<pre class="eval">&lt;xsl:for-each select="regExp:match('<span class="nowiki">http://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>',
+<pre class="eval">&lt;xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
                                    '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
    Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
 &lt;/xsl:for-each&gt;
@@ -49,7 +49,7 @@ translation_of: Web/EXSLT/regexp/match
 
 <p>This code generates the following output:</p>
 
-<pre class="eval">Part 1 = <span class="nowiki">http://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>
+<pre class="eval">Part 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
 Part 2 = http
 Part 3 = developer.mozilla.org
 Part 4 =
@@ -63,7 +63,3 @@ Part 5 = /en/docs/Firefox_3_for_developers
 <h3 id="Gecko_support" name="Gecko_support">Gecko support</h3>
 
 <p>Supported in Gecko 1.9 and later.</p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "es": "es/EXSLT/regexp/match", "fr": "fr/EXSLT/regexp/match" } ) }}</p>

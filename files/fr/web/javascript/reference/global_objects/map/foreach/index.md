@@ -19,7 +19,9 @@ La méthode **`forEach()`** exécute une fonction donnée sur chaque élément c
 
 ## Syntaxe
 
-    maMap.forEach(callback[, thisArg])
+```js
+maMap.forEach(callback[, thisArg])
+```
 
 ### Paramètres
 

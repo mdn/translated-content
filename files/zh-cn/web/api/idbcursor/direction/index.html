@@ -5,12 +5,12 @@ translation_of: Web/API/IDBCursor/direction
 ---
 <p>{{ APIRef("IDBCursor") }}</p>
 <div>
- <p> {{domxref("IDBCursor")}} 的方向属性是一个 {{domxref("DOMString")}} ，表示游标遍历的方向， (比如可以通过 {{domxref("IDBObjectStore.openCursor")}} 设置). 查看下文中 {{anch("Values")}} 章节获取可取值.</p>
+ <p> {{domxref("IDBCursor")}} 的方向属性是一个 {{domxref("DOMString")}} ，表示游标遍历的方向， (比如可以通过 {{domxref("IDBObjectStore.openCursor")}} 设置). 查看下文中<a href="#取值">取值</a>章节获取可取值。</p>
 </div>
 <h2 id="语法">语法</h2>
 <pre class="brush: js" style="font-size: 14px;">cursor.direction;</pre>
 <h3 id="取值">取值</h3>
-<p>用一个字符串(defined by the <a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/default/Overview.html#idl-def-IDBCursorDirection"><code>IDBCursorDirection</code> enum</a>) 表示游标的遍历方向。相关取值如下表所示:</p>
+<p>用一个字符串 (defined by the <a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/default/Overview.html#idl-def-IDBCursorDirection"><code>IDBCursorDirection</code> enum</a>) 表示游标的遍历方向。相关取值如下表所示：</p>
 <table class="standard-table">
  <thead>
   <tr>
@@ -33,7 +33,7 @@ translation_of: Web/API/IDBCursor/direction
   <tr>
    <td><code>prev</code></td>
    <td>
-    <p><span style="line-height: 1.5;">从数据源的最后位置位置开取值</span></p>
+    <p>从数据源的最后位置位置开取值</p>
    </td>
   </tr>
   <tr>
@@ -44,14 +44,14 @@ translation_of: Web/API/IDBCursor/direction
  </tbody>
 </table>
 <h2 id="例子">例子</h2>
-<p><span style="line-height: 1.5;">在这个简单的例子中，我们首先创建一个事物对象，返回一个对象仓库(store), 然后使用邮编遍历整个数据仓库。在每次迭代中我们记录了游标的方向，例如prev（倒序遍历）</span></p>
+<p>在这个简单的例子中，我们首先创建一个事物对象，返回一个对象仓库 (store), 然后使用邮编遍历整个数据仓库。在每次迭代中我们记录了游标的方向，例如 prev（倒序遍历）</p>
 <pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr;">prev</code></pre>
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;">
   </div>
 <div class="note">
- <p><span style="line-height: 1.5;"><strong>注意</strong>：我们不能改变游标的取值，因为这是个只读属性；应该在</span><span style="line-height: 1.5;">{{domxref("IDBObjectStore.openCursor")}}方法调用的第二个参数指定游标遍历的方向；</span></p>
+ <p><strong>注意</strong>：我们不能改变游标的取值，因为这是个只读属性；应该在{{domxref("IDBObjectStore.openCursor")}}方法调用的第二个参数指定游标遍历的方向；</p>
 </div>
-<p><span style="line-height: 1.5;">使用游标遍历数据时，可以不需要我们指定在特定字段选择数据；我们可以直接获取所有数据，同时在每次循环迭代过程当中，我们可以通过cursor.value.foo获取数据，如下是一个完整的游标遍历数据的例子；</span><span style="line-height: 1.5;"> <a class="external external-icon" href="https://github.com/mdn/IDBcursor-example/" style="white-space: pre-line;">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a class="external external-icon" href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5; white-space: pre-line;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>使用游标遍历数据时，可以不需要我们指定在特定字段选择数据；我们可以直接获取所有数据，同时在每次循环迭代过程当中，我们可以通过 cursor.value.foo 获取数据，如下是一个完整的游标遍历数据的例子； <a class="external external-icon" href="https://github.com/mdn/IDBcursor-example/" style="white-space: pre-line;">IDBCursor example</a> (<a class="external external-icon" href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5; white-space: pre-line;">view example live</a>.)</p>
 <pre class="brush: js">function backwards() {
   list.innerHTML = '';
   var transaction = db.transaction(['rushAlbumList'], 'readonly');
@@ -88,55 +88,8 @@ translation_of: Web/API/IDBCursor/direction
 </table>
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 <div>
- {{CompatibilityTable}}</div>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari (WebKit)</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>23{{property_prefix("webkit")}}<br>
-     24</td>
-    <td>10 {{property_prefix("moz")}}<br>
-     {{CompatGeckoDesktop("16.0")}}</td>
-    <td>10, partial</td>
-    <td>15</td>
-    <td>7.1</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>Firefox OS</th>
-    <th>IE Phone</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>4.4</td>
-    <td>{{CompatGeckoMobile("22.0")}}</td>
-    <td>1.0.1</td>
-    <td>10</td>
-    <td>22</td>
-    <td>{{CompatNo}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
+{{Compat("api.IDBCursor.direction")}}
+
 <h2 id="sect1"> </h2>
 <h2 id="参考资料">参考资料</h2>
 <ul>

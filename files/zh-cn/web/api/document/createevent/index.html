@@ -4,7 +4,7 @@ slug: Web/API/Document/createEvent
 translation_of: Web/API/Document/createEvent
 ---
 <div class="warning">
-<p><code>createEvent使用的许多方法</code>, 如 <code>initCustomEvent</code>, 都被废弃了. 请使用 <a href="/zh/docs/Web/API/CustomEvent" title="/en-US/docs/Web/API/CustomEvent">event constructors</a> 来替代.</p>
+<p><code>createEvent</code> 使用的许多方法，如 <code>initCustomEvent</code>，都被废弃了。请使用 <a href="/zh-CN/docs/Web/API/CustomEvent">event constructors</a> 来替代。</p>
 </div>
 
 <div>{{ ApiRef("DOM") }}</div>
@@ -19,8 +19,8 @@ translation_of: Web/API/Document/createEvent
 </pre>
 
 <ul>
- <li><code>event</code> 就是被创建的 <a href="/zh-CN/docs/DOM/event" title="DOM/event">Event</a> 对象.</li>
- <li><code>type</code> 是一个字符串，表示要创建的事件类型。事件类型可能包括<code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, 或者 <code>"HTMLEvents"</code>。请查看 {{Anch("Notes")}} 章节获取详细信息 。</li>
+ <li><code>event</code> 就是被创建的 <a href="/zh-CN/docs/DOM/event" title="DOM/event">Event</a> 对象。</li>
+ <li><code>type</code> 是一个字符串，表示要创建的事件类型。事件类型可能包括<code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, 或者 <code>"HTMLEvents"</code>。请查看 <a href="#notes">Notes</a> 章节获取详细信息 。</li>
 </ul>
 
 <h2 id="Example" name="Example">示例</h2>
@@ -48,7 +48,7 @@ elem.dispatchEvent(event);
 
 <h2 id="Notes" name="Notes">注意</h2>
 
-<p>Event type字符串只能传递事件模块中定义的值给CreateEvent。其中一些事件模块是在DOM事件规范定义的，还有些事在其他规范定义的（如SVG），还有一些是Gecko-specific事件。详情见下表。</p>
+<p>Event type 字符串只能传递事件模块中定义的值给 CreateEvent。其中一些事件模块是在 DOM 事件规范定义的，还有些事在其他规范定义的（如 SVG），还有一些是 Gecko-specific 事件。详情见下表。</p>
 
 <p><em>To-do: 添加事件名称到下表中。</em></p>
 
@@ -56,7 +56,7 @@ elem.dispatchEvent(event);
  <tbody>
   <tr>
    <th>事件模块</th>
-   <th>传递给 <code>createEvent的</code>Event type</th>
+   <th>传递给 <code>createEvent</code> 的 Event type</th>
    <th>事件初始化方法</th>
   </tr>
   <tr style="background-color: #eee;">
@@ -116,7 +116,7 @@ elem.dispatchEvent(event);
    <td><a href="/en-US/docs/DOM/event.initKeyEvent" title="DOM/event.initKeyEvent">event.initKeyEvent</a> (Gecko-specific; the DOM 3 Events working draft uses <code>initKeyboardEvent</code> instead)</td>
   </tr>
   <tr>
-   <td>Custom event module {{gecko_minversion_inline("6.0")}}</td>
+   <td>Custom event module</td>
    <td><code>"CustomEvent"</code></td>
    <td><a href="/en-US/docs/DOM/CustomEvent" title="DOM/event.initKeyEvent">event.initCustomEvent</a></td>
   </tr>
@@ -142,7 +142,7 @@ elem.dispatchEvent(event);
   </tr>
   <tr>
    <td rowspan="4">-</td>
-   <td><code>"MessageEvent"{{Gecko_minversion_inline(1.9)}}</code></td>
+   <td><code>"MessageEvent"</code></td>
    <td><a href="/en-US/docs/DOM/event.initMessageEvent" title="DOM/event.initMessageEvent">event.initMessageEvent</a></td>
   </tr>
   <tr>
@@ -175,7 +175,7 @@ elem.dispatchEvent(event);
  </tbody>
 </table>
 
-<p>有些事件可以使用两种事件类型参数，这是因为DOM Level 3 Events将事件类型参数更改为单数形式，但是仍然支持老的复数形式以向后兼容。</p>
+<p>有些事件可以使用两种事件类型参数，这是因为 DOM Level 3 Events 将事件类型参数更改为单数形式，但是仍然支持老的复数形式以向后兼容。</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 

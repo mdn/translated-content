@@ -14,7 +14,7 @@ Node.js est un environnement {{Glossary("JavaScript")}} multiplateforme qui perm
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "Node.js")}} sur Wikipédia
+- {{Interwiki("wikipedia", "Node.js")}} sur Wikipédia
 - [Site officiel Node.js](https://nodejs.org/)
 
 ### Informations techniques

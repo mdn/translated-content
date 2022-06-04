@@ -7,10 +7,10 @@ translation_of: Web/API/CustomEvent/initCustomEvent
 
 <p><code><strong>CustomEvent.initCustomEvent()</strong></code> 方法初始化了一个 <code>CustomEvent</code> object. 如果该事件已经被分发出去，则不会在初始化过程中重复触发．</p>
 
-<p>这类对象一定是由 {{ domxref("Document.createEvent()") }} 方法创建的. 该方法被分发之前必须通过{{ domxref("EventTarget.dispatchEvent()") }}方法设置．一旦被分发则，则无法被重新设置．</p>
+<p>这类对象一定是由 {{ domxref("Document.createEvent()") }} 方法创建的。该方法被分发之前必须通过{{ domxref("EventTarget.dispatchEvent()") }}方法设置．一旦被分发则，则无法被重新设置．</p>
 
 <div class="note">
-<p><strong>该方法已经作废，不要在新项目中继续使用该方法.</strong></p>
+<p><strong>该方法已经作废，不要在新项目中继续使用该方法。</strong></p>
 
 <p>Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
 </div>
@@ -24,83 +24,22 @@ translation_of: Web/API/CustomEvent/initCustomEvent
 
 <dl>
  <dt><code><em>type</em></code></dt>
- <dd>类型{{domxref("DOMString")}}，事件名称.</dd>
+ <dd>类型{{domxref("DOMString")}}，事件名称。</dd>
  <dt><em><code>canBub</code></em><em><code>ble</code></em></dt>
- <dd>类型{{jsxref("Boolean")}}，事件是否沿着dom树向上冒泡.</dd>
+ <dd>类型{{jsxref("Boolean")}}，事件是否沿着 dom 树向上冒泡。</dd>
  <dt><code><em>cancelable</em></code></dt>
- <dd>类型{{jsxref("Boolean")}}，事件是否可取消.</dd>
+ <dd>类型{{jsxref("Boolean")}}，事件是否可取消。</dd>
  <dt><em><code>deta</code></em><em><code>il</code></em></dt>
- <dd>事件初始化时传入的数据.</dd>
+ <dd>事件初始化时传入的数据。</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-customevent-initcustomevent','CustomEvent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition, but already deprecated in favor of the use of a constructor, {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(6)}}</td>
-   <td>9</td>
-   <td>11</td>
-   <td>5.1 (533.3)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoMobile(6)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CustomEvent.initCustomEvent")}}
 
 <h2 id="See_also">See also</h2>
 

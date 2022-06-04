@@ -8,23 +8,23 @@ tags:
 translation_of: Web/API/Element/copy_event
 original_slug: Web/Events/copy
 ---
-<p>当用户通过浏览器UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>  键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发<code>copy</code>事件。</p>
+<p>当用户通过浏览器 UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>  键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发<code>copy</code>事件。</p>
 
 <h2 id="基本信息">基本信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("ClipboardEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Element")}}：获得焦点的元素（如{{domxref("HTMLElement.contentEditable","contentEditable")}}内容能编辑或者可以选中的元素），或{{HTMLElement("body")}}。</dd>
- <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
- <dd style="margin: 0 0 0 120px;">见下文。</dd>
+ <dt>Specification</dt>
+ <dd><a class="external" href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
+ <dt>Interface</dt>
+ <dd>{{domxref("ClipboardEvent")}}</dd>
+ <dt>Bubbles</dt>
+ <dd>Yes</dd>
+ <dt>Cancelable</dt>
+ <dd>Yes</dd>
+ <dt>Target</dt>
+ <dd>{{domxref("Element")}}：获得焦点的元素（如{{domxref("HTMLElement.contentEditable","contentEditable")}}内容能编辑或者可以选中的元素），或{{HTMLElement("body")}}。</dd>
+ <dt>Default Action</dt>
+ <dd>见下文。</dd>
 </dl>
 
 <p>调用{{domxref("DataTransfer.setData","setData(format, data)")}}可以修改{{domxref("ClipboardEvent.clipboardData")}}事件的默认行为：</p>
@@ -40,7 +40,7 @@ original_slug: Web/Events/copy
 <p>事件的默认行为与事件的来源和事件处理函数相关：</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> copy事件没有默认行为，除非：</li>
+ <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> copy 事件没有默认行为，除非：</li>
  <li>如果默认事件没有取消，就复制到选区（如果有选中内容）到剪切板；</li>
  <li>如果取消了默认事件，但是调用了<code>setData()</code>方法：就复制<code>clipboardData</code>的内容到到剪切板；</li>
  <li>如果取消了默认行为，而且没有调用<code>setData()</code>方法，就没有任何行为。</li>
@@ -48,7 +48,7 @@ original_slug: Web/Events/copy
 
 <h2 id="属性">属性</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Property</th>
@@ -80,77 +80,13 @@ original_slug: Web/Events/copy
  </tbody>
 </table>
 
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>clipboardData</code></td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(22) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>clipboardData</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(22) }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.copy_event")}}
 
 <h2 id="参见">参见</h2>
 

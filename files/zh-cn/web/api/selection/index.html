@@ -17,7 +17,7 @@ translation_of: Web/API/Selection
 
 <p>用户可能从左到右（与文档方向相同）选择文本或从右到左（与文档方向相反）选择文本。<code>anchor</code> 指向用户开始选择的地方，而 <code>focus</code> 指向用户结束选择的地方。如果你使用鼠标选择文本的话，anchor 就指向你按下鼠标键的地方，而 focus 就指向你松开鼠标键的地方。anchor 和 focus 的概念不能与选区的起始位置和终止位置混淆，因为 anchor 指向的位置可能在 focus 指向的位置的前面，也可能在 focus 指向位置的后面，这取决于你选择文本时鼠标移动的方向（也就是按下鼠标键和松开鼠标键的位置）。</p>
 
-<p>Selection 对象所对应的是用户所选择的 {{domxref("range","ranges")}} （区域），俗称拖蓝。默认情况下，该函数只针对一个区域，我们可以这样使用这个函数：</p>
+<p>Selection 对象所对应的是用户所选择的 {{domxref("range","ranges")}}（区域），俗称拖蓝。默认情况下，该函数只针对一个区域，我们可以这样使用这个函数：</p>
 
 <div style="overflow: hidden;">
 <pre class="brush:js">var selObj = window.getSelection();
@@ -25,7 +25,7 @@ var range  = selObj.getRangeAt(0);</pre>
 </div>
 
 <ul>
- <li><code>selObj</code> 被赋予一个 Selection对象</li>
+ <li><code>selObj</code> 被赋予一个 Selection 对象</li>
  <li>
   <p><code>range</code> 被赋予一个 <a href="/en-US/docs/DOM/range" title="DOM/Range">Range</a> 对象</p>
  </li>
@@ -42,20 +42,20 @@ window.alert(selObj); </pre>
 
 <dl>
  <dt>锚点 (anchor)</dt>
- <dd>锚指的是一个选区的起始点（不同于HTML中的锚点链接，译者注）。当我们使用鼠标框选一个区域的时候，锚点就是我们鼠标按下瞬间的那个点。在用户拖动鼠标时，锚点是不会变的。</dd>
+ <dd>锚指的是一个选区的起始点（不同于 HTML 中的锚点链接，译者注）。当我们使用鼠标框选一个区域的时候，锚点就是我们鼠标按下瞬间的那个点。在用户拖动鼠标时，锚点是不会变的。</dd>
  <dt>焦点 (focus)</dt>
  <dd>选区的焦点是该选区的终点，当您用鼠标框选一个选区的时候，焦点是你的鼠标松开瞬间所记录的那个点。随着用户拖动鼠标，焦点的位置会随着改变。</dd>
  <dt>范围 (range)</dt>
- <dd>范围指的是文档中连续的一部分。一个范围包括整个节点，也可以包含节点的一部分，例如文本节点的一部分。用户通常下只能选择一个范围，但是有的时候用户也有可能选择多个范围（例如当用户按下Control按键并框选多个区域时，Chrome中禁止了这个操作，译者注）。“范围”会被作为 {{domxref("Range")}} 对象返回。Range对象也能通过DOM创建、增加、删减。</dd>
+ <dd>范围指的是文档中连续的一部分。一个范围包括整个节点，也可以包含节点的一部分，例如文本节点的一部分。用户通常下只能选择一个范围，但是有的时候用户也有可能选择多个范围（例如当用户按下 Control 按键并框选多个区域时，Chrome 中禁止了这个操作，译者注）。“范围”会被作为 {{domxref("Range")}} 对象返回。Range 对象也能通过 DOM 创建、增加、删减。</dd>
  <dt>可编辑元素 (editing host)</dt>
- <dd>一个用户可编辑的元素（例如一个使用 {{htmlattrxref("contenteditable")}} 的HTML元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 <a href="#Selection_API_在可编辑元素焦点更改方面的行为">开发者笔记</a>。</dd>
+ <dd>一个用户可编辑的元素（例如一个使用 {{htmlattrxref("contenteditable")}} 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 <a href="#Selection_API_在可编辑元素焦点更改方面的行为">开发者笔记</a>。</dd>
 </dl>
 
 <h2 id="Properties" name="Properties">属性</h2>
 
 <dl>
  <dt>{{domxref("Selection/anchorNode","anchorNode")}}{{ReadOnlyInline}}</dt>
- <dd>返回该选区起点所在的<span style="line-height: 1.5;">节点</span><span style="line-height: 1.5;">（{{domxref("Node")}}</span><span style="line-height: 1.5;">）。</span></dd>
+ <dd>返回该选区起点所在的节点（{{domxref("Node")}}）。</dd>
  <dt>{{domxref("Selection/anchorOffset","anchorOffset")}}{{ReadOnlyInline}}</dt>
  <dd>返回一个数字，其表示的是选区起点在 {{domxref("Selection/anchorNode","anchorNode")}} 中的位置偏移量。
  <ol>
@@ -68,7 +68,7 @@ window.alert(selObj); </pre>
  <dt>{{domxref("Selection/focusOffset","focusOffset")}}{{ReadOnlyInline}}</dt>
  <dd>返回一个数字，其表示的是选区终点在 {{domxref("Selection/focusNode","focusNode")}} 中的位置偏移量。
  <ol>
-  <li>如果 <code>focusNode</code> 是文本节点，那么选区末尾未被选中的第一个字，在该文字节点中是第几个字（从0开始计），就返回它。</li>
+  <li>如果 <code>focusNode</code> 是文本节点，那么选区末尾未被选中的第一个字，在该文字节点中是第几个字（从 0 开始计），就返回它。</li>
   <li>如果 <code>focusNode</code> 是一个元素，那么返回的就是在选区末尾之后第一个节点之前的同级节点总数。</li>
  </ol>
  </dd>
@@ -87,7 +87,7 @@ window.alert(selObj); </pre>
  <dd>将当前的选区折叠为一个点。</dd>
  <dt>{{domxref("Selection/extend","extend")}}</dt>
  <dd>将选区的焦点移动到一个特定的位置。</dd>
- <dt>{{domxref("Selection/modify","modify")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Selection/modify","modify")}}</dt>
  <dd>修改当前的选区。</dd>
  <dt>{{domxref("Selection/collapseToStart","collapseToStart")}}</dt>
  <dd>将当前的选区折叠到起始点。</dd>
@@ -104,7 +104,7 @@ window.alert(selObj); </pre>
  <dt>{{domxref("Selection/deleteFromDocument","deleteFromDocument")}}</dt>
  <dd>从页面中删除选区中的内容。</dd>
  <dt>{{domxref("Selection/selectionLanguageChange","selectionLanguageChange")}}</dt>
- <dd>当键盘的朝向发生改变后修改指针的Bidi优先级。</dd>
+ <dd>当键盘的朝向发生改变后修改指针的 Bidi 优先级。</dd>
  <dt>{{domxref("Selection/toString","toString")}}</dt>
  <dd>返回当前选区的纯文本内容。</dd>
  <dt>{{domxref("Selection/containsNode","containsNode")}}</dt>
@@ -143,7 +143,7 @@ var range  = selObj.getRangeAt(0);</code></pre>
 
 <p>选择和输入焦点（由 {{domxref("Document.activeElement")}} 表示）有一个复杂的关系，该关系因浏览器而异。在跨浏览器兼容的代码中，最好分别处理它们。</p>
 
-<p>Safari和Chrome（与Firefox不同）目前在以编程方式修改 <code>Selection</code> 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383">W3C Bug 14383</a> 和 {{WebKitBug("3869")}}）。</p>
+<p>Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 <code>Selection</code> 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383">W3C Bug 14383</a> 和 {{WebKitBug("3869")}}）。</p>
 
 <p>（目前在 WebKit 中，按钮等元素被直接点击不会修改选区，但会将焦点传递，译者注）</p>
 
@@ -159,7 +159,7 @@ var range  = selObj.getRangeAt(0);</code></pre>
  <li>然后焦点（此处应指显示的，译者注）移到可编辑元素。</li>
 </ol>
 
-<p><strong>注意：Selection API方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如{{HTMLElement("a")}}）。</strong></p>
+<p><strong>注意：Selection API 方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如{{HTMLElement("a")}}）。</strong></p>
 
 <p>上述行为适用于使用以下方法产生的选区：</p>
 
@@ -194,9 +194,9 @@ var range  = selObj.getRangeAt(0);</code></pre>
 <h3 id="Gecko_备注">Gecko 备注</h3>
 
 <ul>
- <li>Gecko/Firefox 提供了其他功能，仅适用于Chrome（内置及插件）代码。 这些定义在 {{Interface("nsISelectionPrivate")}} 中。</li>
+ <li>Gecko/Firefox 提供了其他功能，仅适用于 Chrome（内置及插件）代码。这些定义在 <code>nsISelectionPrivate</code> 中。</li>
  <li>Mozilla 实现源代码：{{Source("dom/webidl/Selection.webidl")}}</li>
- <li>在Firefox 29之前，{{domxref("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} 都会暴露在Web内容中。</li>
+ <li>在 Firefox 29 之前，{{domxref("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} 都会暴露在 Web 内容中。</li>
 </ul>
 
 <h2 id="See_also" name="See_also">扩展</h2>
@@ -205,5 +205,5 @@ var range  = selObj.getRangeAt(0);</code></pre>
  <li>{{domxref("window.getSelection")}}，{{domxref("document.getSelection")}}及{{domxref("Range")}}</li>
  <li>HTML5 DOM Range <a class="external" href="http://html5.org/specs/dom-range.html#selection" title="http://html5.org/specs/dom-range.html#selection">Interface Selection</a></li>
  <li><a class="external" href="http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl">IDL definition in Mozilla cross-reference</a></li>
- <li><a href="http://www.zhihu.com/question/20874144">目前 CSS 实现竖排文本较为通用的方式是什么？</a>（页内搜索"Bidi"可了解Bidi优先顺序）</li>
+ <li><a href="http://www.zhihu.com/question/20874144">目前 CSS 实现竖排文本较为通用的方式是什么？</a>（页内搜索"Bidi"可了解 Bidi 优先顺序）</li>
 </ul>

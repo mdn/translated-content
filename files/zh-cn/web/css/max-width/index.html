@@ -7,9 +7,9 @@ translation_of: Web/CSS/max-width
 
 <h2 id="摘要">摘要</h2>
 
-<p>max-width 属性用来给元素设置最大宽度值. 定义了max-width的元素会在达到max-width值之后避免进一步按照width属性设置变大.</p>
+<p>max-width 属性用来给元素设置最大宽度值。定义了 max-width 的元素会在达到 max-width 值之后避免进一步按照 width 属性设置变大。</p>
 
-<p>{{ Cssxref("max-width") }} 会覆盖{{cssxref("width")}}设置, 但 {{ Cssxref("min-width") }}设置会覆盖 {{ Cssxref("max-width") }}.</p>
+<p>{{ Cssxref("max-width") }} 会覆盖{{cssxref("width")}}设置，但 {{ Cssxref("min-width") }}设置会覆盖 {{ Cssxref("max-width") }}.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -40,9 +40,9 @@ max-width: unset;
  <dt><code>none</code></dt>
  <dd>元素未设置最大值</dd>
  <dt><code>&lt;长度&gt;</code></dt>
- <dd>请参阅{{cssxref("&lt;length&gt;")}}所提及的长度单位.</dd>
+ <dd>请参阅{{cssxref("&lt;length&gt;")}}所提及的长度单位。</dd>
  <dt><code>&lt;百分比&gt;</code></dt>
- <dd>以父级块级容器宽度的百分比{{cssxref("&lt;percentage&gt;")}}作为最大宽度.</dd>
+ <dd>以父级块级容器宽度的百分比{{cssxref("&lt;percentage&gt;")}}作为最大宽度。</dd>
  <dt><code>max-content</code>{{experimental_inline()}}</dt>
  <dd>The intrinsic preferred width.</dd>
  <dt><code>min-content</code>{{experimental_inline()}}</dt>
@@ -59,7 +59,7 @@ max-width: unset;
 
 <h2 id="例子">例子</h2>
 
-<p>在下面的例子里,id为"child"的&lt;div&gt;元素设置了width值, 使它的宽度与父元素"parent"相等(100%),但是max-width值限制了它最大宽度只能到150px.</p>
+<p>在下面的例子里，id 为"child"的&lt;div&gt;元素设置了 width 值，使它的宽度与父元素"parent"相等 (100%),但是 max-width 值限制了它最大宽度只能到 150px.</p>
 
 <div id="basic-max-width-demo">
 <pre class="brush: html">&lt;div id="parent"&gt;
@@ -80,7 +80,7 @@ max-width: unset;
 
 <p>{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}</p>
 
-<p>fit-content 值可以用来给元素设置基于其内容大小的宽度:</p>
+<p>fit-content 值可以用来给元素设置基于其内容大小的宽度：</p>
 
 <div id="fit-content-demo">
 <pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
@@ -135,76 +135,7 @@ max-width: unset;
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>7.0</td>
-   <td>4.0</td>
-   <td>2.0.2 (416),<br>
-    buggy before</td>
-  </tr>
-  <tr>
-   <td>applies to <code>&lt;table&gt; </code>[1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td rowspan="1"><code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, and <code>fill-</code><code>available</code> {{ experimental_inline() }}</td>
-   <td>{{ CompatNo() }} [3]</td>
-   <td>{{CompatGeckoDesktop("1.9")}}{{property_prefix("-moz")}} [2]</td>
-   <td rowspan="1">{{ CompatNo() }}</td>
-   <td rowspan="1">{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }} [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] CSS 2.1 explicitly leaves the behavior of <code>max-width</code> with {{ HTMLElement("table") }} undefined. Therefore any behavior is CSS2.1-compliant; newer CSS specifications may define this behavior, so Web developers shouldn't rely on a specific one now.</p>
-
-<p>[2] Gecko experimentally implements the definitions given in CSS3 Basic Box. This one defines <code>available</code> and not <code>fill-available</code>. Also the definition of <code>fit-content</code> is simpler than in CSS3 Sizing.</p>
-
-<p>[3] WebKit implements an earlier proposal for setting the height to an intrinsic height: the keywords <code>intrinsic</code>, instead of <code>max-content</code>, and <code>min-intrinsic</code>, instead of <code>min-content</code> There is no equivalent for <code>fill-available</code> or <code>fit-content</code>.</p>
+{{Compat("css.properties.max-width")}}
 
 <h2 id="参考链接">参考链接</h2>
 

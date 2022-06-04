@@ -12,12 +12,12 @@ translation_of: Web/API/Geolocation
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>Geolocation</strong></code> 接口是一个用来获取设备地理位置的可编程的对象，它可以让Web内容访问到设备的地理位置，这将允许Web应用基于用户的地理位置提供定制的信息。说实话：其实<code><strong>Geolocation</strong></code> 就是用来获取到当前设备的经纬度（位置）</p>
+<p><code><strong>Geolocation</strong></code> 接口是一个用来获取设备地理位置的可编程的对象，它可以让 Web 内容访问到设备的地理位置，这将允许 Web 应用基于用户的地理位置提供定制的信息。说实话：其实<code><strong>Geolocation</strong></code> 就是用来获取到当前设备的经纬度（位置）</p>
 
 <p>带有此接口的对象可以用由 {{domxref("Navigator")}}实现的属性{{domxref("NavigatorGeolocation.geolocation")}} 来获得。  </p>
 
 <div class="note">
-<p><strong>注意：</strong>出于安全考虑，当一个Web页尝试获取地理位置信息时，会请求用户批准地理位置访问权限。要知道每个浏览器都有自己请求用户批准该权限的策略和方法。</p>
+<p><strong>注意：</strong>出于安全考虑，当一个 Web 页尝试获取地理位置信息时，会请求用户批准地理位置访问权限。要知道每个浏览器都有自己请求用户批准该权限的策略和方法。</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -32,9 +32,9 @@ translation_of: Web/API/Geolocation
  <dt>{{domxref("Geolocation.getCurrentPosition()")}}</dt>
  <dd>确定设备的位置并返回一个携带位置信息的<em> </em>{{domxref("Position")}} 对象。</dd>
  <dt>{{domxref("Geolocation.watchPosition()")}}</dt>
- <dd>注册一个位置改变监听器，每当设备位置改变时，返回一个 <code>long</code> 类型的该监听器的ID值。</dd>
+ <dd>注册一个位置改变监听器，每当设备位置改变时，返回一个 <code>long</code> 类型的该监听器的 ID 值。</dd>
  <dt>{{domxref("Geolocation.clearWatch()")}}</dt>
- <dd>取消由 <code>watchPosition()注册的位置监听器。</code></dd>
+ <dd>取消由 <code>watchPosition() 注册的位置监听器。</code></dd>
 </dl>
 
 <h2 id="规范">规范</h2>
@@ -58,57 +58,7 @@ translation_of: Web/API/Geolocation
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>5</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>10.60<br>
-    15.0取消支持<br>
-    16.0重新支持</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatGeckoMobile("4")}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>10.60</td>
-   <td>{{CompatUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Geolocation")}}
 
 <h2 id="参见">参见</h2>
 

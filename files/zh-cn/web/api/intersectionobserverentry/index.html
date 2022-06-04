@@ -5,30 +5,30 @@ translation_of: Web/API/IntersectionObserverEntry
 ---
 <div>{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}</div>
 
-<p><span class="seoSummary"> <code><strong>IntersectionObserverEntry接口</strong></code> (从属于 <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> )描述了目标元素与其根元素容器在某一特定过渡时刻的交叉状态.</span>  <code>IntersectionObserverEntry</code> 的实例作为 <code>entries</code> 参数被传递到一个 {{domxref("IntersectionObserver")}} 的回调函数中; 此外, 这些对象只能通过调用{{domxref("IntersectionObserver.takeRecords()")}} 来获取.</p>
+<p> <code><strong>IntersectionObserverEntry 接口</strong></code> (从属于 <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> ) 描述了目标元素与其根元素容器在某一特定过渡时刻的交叉状态.  <code>IntersectionObserverEntry</code> 的实例作为 <code>entries</code> 参数被传递到一个 {{domxref("IntersectionObserver")}} 的回调函数中; 此外，这些对象只能通过调用{{domxref("IntersectionObserver.takeRecords()")}} 来获取。</p>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}</dt>
- <dd>返回包含目标元素的边界信息的{{domxref("DOMRectReadOnly")}}. 边界的计算方式与  {{domxref("Element.getBoundingClientRect()")}} 相同.</dd>
+ <dd>返回包含目标元素的边界信息的{{domxref("DOMRectReadOnly")}}. 边界的计算方式与  {{domxref("Element.getBoundingClientRect()")}} 相同。</dd>
  <dt>{{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}</dt>
- <dd>返回<code>intersectionRect</code> 与 <code>boundingClientRect</code> 的比例值.</dd>
+ <dd>返回<code>intersectionRect</code> 与 <code>boundingClientRect</code> 的比例值。</dd>
  <dt>{{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}</dt>
- <dd>返回一个 {{domxref("DOMRectReadOnly")}} 用来描述根和目标元素的相交区域.</dd>
+ <dd>返回一个 {{domxref("DOMRectReadOnly")}} 用来描述根和目标元素的相交区域。</dd>
  <dt>{{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}</dt>
- <dd>返回一个布尔值, 如果目标元素与交叉区域观察者对象(intersection observer) 的根相交，则返回 <code>true</code> .如果返回 <code>true</code>, 则 <code>IntersectionObserverEntry</code> 描述了变换到交叉时的状态; 如果返回 <code>false</code>, 那么可以由此判断,变换是从交叉状态到非交叉状态.</dd>
+ <dd>返回一个布尔值，如果目标元素与交叉区域观察者对象 (intersection observer) 的根相交，则返回 <code>true</code> .如果返回 <code>true</code>, 则 <code>IntersectionObserverEntry</code> 描述了变换到交叉时的状态; 如果返回 <code>false</code>, 那么可以由此判断，变换是从交叉状态到非交叉状态。</dd>
  <dt>{{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}</dt>
- <dd>返回一个 {{domxref("DOMRectReadOnly")}} 用来描述交叉区域观察者(intersection observer)中的根.</dd>
+ <dd>返回一个 {{domxref("DOMRectReadOnly")}} 用来描述交叉区域观察者 (intersection observer) 中的根。</dd>
  <dt>{{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}</dt>
  <dd>与根出现相交区域改变的元素 ({{domxref("Element")}}).</dd>
  <dt>{{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}</dt>
- <dd>返回一个记录从 <code>IntersectionObserver</code> 的时间原点(<a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>)到交叉被触发的时间的时间戳({{domxref("DOMHighResTimeStamp")}}).</dd>
+ <dd>返回一个记录从 <code>IntersectionObserver</code> 的时间原点 (<a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>) 到交叉被触发的时间的时间戳 ({{domxref("DOMHighResTimeStamp")}}).</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
-<p><em>此接口没有方法.</em></p>
+<p><em>此接口没有方法。</em></p>
 
 <h2 id="规范">规范</h2>
 

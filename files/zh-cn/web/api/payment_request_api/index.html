@@ -17,20 +17,20 @@ original_slug: Web/API/支付_请求_接口
 ---
 <div>{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}</div>
 
-<p><span class="seoSummary">支付请求API为商家和支付者提供了统一的用户体验。它并非提供一种新的支付方式，而是让用户可以在原有的支付方式中进行选择，并使商家可以获悉用户的支付情况。</span></p>
+<p>支付请求 API 为商家和支付者提供了统一的用户体验。它并非提供一种新的支付方式，而是让用户可以在原有的支付方式中进行选择，并使商家可以获悉用户的支付情况。</p>
 
 <h2 id="支付请求的概念和使用">支付请求的概念和使用</h2>
 
-<p>在网上购物时，使许多用户中止购物车结算的原因都可以被归结为填写支付信息表单时的步骤繁多导致的费时费力。<strong>支付请求API</strong>正是被用以减少支付步骤，逐步彻底消除表单的填写。它的目的是简化结算流程，而实现此目的的方式是通过保存用户相关信息并传送给商家。在理想的情况下，用户将不需要填写HTML表单。</p>
+<p>在网上购物时，使许多用户中止购物车结算的原因都可以被归结为填写支付信息表单时的步骤繁多导致的费时费力。<strong>支付请求 API</strong>正是被用以减少支付步骤，逐步彻底消除表单的填写。它的目的是简化结算流程，而实现此目的的方式是通过保存用户相关信息并传送给商家。在理想的情况下，用户将不需要填写 HTML 表单。</p>
 
-<p>使用支付请求API中“保存卡信息并自动扣款”（使用银行卡支付时）的优点：</p>
+<p>使用支付请求 API 中“保存卡信息并自动扣款”（使用银行卡支付时）的优点：</p>
 
 <ul>
  <li><strong>快捷的购买体验</strong>：用户在浏览器上只需输入一次银行卡信息，之后便可一键对网络上提供的商品和服务进行支付。即使在不同的站点购物，他们也不需要反复填写相同的支付信息。</li>
- <li><strong>跨站点的统一用户体验（仅指支持此API的站点）</strong>：浏览器统一控制支付页面，使定制化内容得以实现。可以定制的内容包括语言的本地化。</li>
+ <li><strong>跨站点的统一用户体验（仅指支持此 API 的站点）</strong>：浏览器统一控制支付页面，使定制化内容得以实现。可以定制的内容包括语言的本地化。</li>
  <li><strong>无障碍体验</strong>：支付页面中的表单元素由浏览器控制，使得键盘输入和屏幕朗读在跨站点时也能以统一的方式工作，且不需要开发者的额外开发。浏览器也可以对支付页面中的字体大小、颜色对比度进行同一调节，使用户在支付过程中获得更加舒适的体验。</li>
  <li><strong>认证管理</strong>：用户可以直接通过浏览器管理自己的信用卡和收件地址，且浏览器可以在不同设备间同步这些“认证信息”。这样，用户就能在购物时灵活地在电脑和移动设备间来回切换。</li>
- <li><strong>统一的异常信息处理</strong>：浏览器可以检查信用卡卡号的有效性，并在卡片已经（或即将）过期时告知用户。浏览器可以通过用户过去的使用习惯和商家的支付规则（例如，“我们只支持Visa或Mastercard”）自动对此次交易使用卡片的选择提出建议。用户还可以自行设置默认/最偏好的卡片。</li>
+ <li><strong>统一的异常信息处理</strong>：浏览器可以检查信用卡卡号的有效性，并在卡片已经（或即将）过期时告知用户。浏览器可以通过用户过去的使用习惯和商家的支付规则（例如，“我们只支持 Visa 或 Mastercard”）自动对此次交易使用卡片的选择提出建议。用户还可以自行设置默认/最偏好的卡片。</li>
 </ul>
 
 <p>当用户在页面上进行操作发起一次支付，比如点击“购买”按钮时，网页会相应地创建一个{{domxref("PaymentRequest")}}对象。<code>PaymentRequest</code>对象允许网页与用户代理交互，传送用户输入的用以交易的信息。</p>
@@ -38,7 +38,7 @@ original_slug: Web/API/支付_请求_接口
 <p>你可以在<a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a>中查看完整指南。</p>
 
 <div class="note">
-<p><strong>注意</strong>：此API只有在设置了{{htmlattrxref("allowpaymentrequest","iframe")}}属性时才支持{{htmlelement("iframe")}}元素的跨域使用。</p>
+<p><strong>注意</strong>：此 API 只有在设置了{{htmlattrxref("allowpaymentrequest","iframe")}}属性时才支持{{htmlelement("iframe")}}元素的跨域使用。</p>
 </div>
 
 <h2 id="接口">接口</h2>
@@ -57,7 +57,7 @@ original_slug: Web/API/支付_请求_接口
  <dt>{{domxref('PaymentResponse')}}</dt>
  <dd>一个对象，当用户选择了一种支付方式并同意发起交易请求后被返回。</dd>
  <dt>{{domxref('MerchantValidationEvent')}}</dt>
- <dd>代表浏览器要求商家（网站）证实自身被允许使用某种特定的支付回调函数（例如，注册了对Apply Pay支付方式的使用）的事件。</dd>
+ <dd>代表浏览器要求商家（网站）证实自身被允许使用某种特定的支付回调函数（例如，注册了对 Apply Pay 支付方式的使用）的事件。</dd>
 </dl>
 
 <dl>
@@ -109,7 +109,7 @@ original_slug: Web/API/支付_请求_接口
   <tr>
    <td>{{SpecName('Payment Method Identifiers')}}</td>
    <td>{{Spec2('Payment Method Identifiers')}}</td>
-   <td>定义支付方式的识别码和认证方式。对于某些适用的场景，通过W3C进行铸币和注册。</td>
+   <td>定义支付方式的识别码和认证方式。对于某些适用的场景，通过 W3C 进行铸币和注册。</td>
   </tr>
  </tbody>
 </table>

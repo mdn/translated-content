@@ -24,7 +24,7 @@ original_slug: Server-sent_events/EventSource/EventSource
  <dt><code>configuration</code> {{optional_inline}}</dt>
  <dd>为配置新连接提供选项。可选项是：
  <ul>
-  <li><code>withCredentials</code>，默认为 <code>false</code>，指示 CORS 是否应包含凭据( credentials )。</li>
+  <li><code>withCredentials</code>，默认为 <code>false</code>，指示 CORS 是否应包含凭据 ( credentials )。</li>
  </ul>
  </dd>
 </dl>
@@ -79,69 +79,7 @@ evtSource.onmessage = function(e) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td> Basic support</td>
-   <td>9</td>
-   <td>{{ CompatGeckoDesktop("6.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>11</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>CORS support (<code>withCredentials</code>)</td>
-   <td>26</td>
-   <td>{{ CompatGeckoDesktop("11.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatAndroid("4.4") }}</td>
-   <td>{{ CompatGeckoMobile("6.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>CORS support (<code>withCredentials</code>)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("11.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.EventSource.EventSource")}}
 
 <h2 id="相关链接">相关链接</h2>
 

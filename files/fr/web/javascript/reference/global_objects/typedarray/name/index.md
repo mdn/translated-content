@@ -18,7 +18,9 @@ La propriété **`TypedArray.name`** est une chaîne de caractères représentan
 
 ## Syntaxe
 
-    TypedArray.name;
+```js
+TypedArray.name;
+```
 
 ## Description
 
@@ -43,7 +45,7 @@ Float64Array.name;      // "Float64Array"
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

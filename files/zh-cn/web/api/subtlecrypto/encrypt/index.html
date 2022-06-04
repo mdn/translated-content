@@ -19,10 +19,10 @@ translation_of: Web/API/SubtleCrypto/encrypt
 <h3 id="参数">参数</h3>
 
 <ul>
- <li><em><code>algo</code></em> 是一个使用加密函数的对象或者 {{domxref("DOMString")}}，后者是 <code>{"name": algo}</code> 的缩写。支持的值是:
+ <li><em><code>algo</code></em> 是一个使用加密函数的对象或者 {{domxref("DOMString")}}，后者是 <code>{"name": algo}</code> 的缩写。支持的值是：
 
   <ul>
-   <li><code>{"name": "AES-CBC", iv}</code> <code><em>iv</em></code> 是具有16个随机字节的 {{jsxref("ArrayBuffer")}} 或 {{jsxref("ArrayBufferView")}}  (这些应该由 {{domxref("RandomSource.getRandomValues()")}} 生成)。</li>
+   <li><code>{"name": "AES-CBC", iv}</code> <code><em>iv</em></code> 是具有 16 个随机字节的 {{jsxref("ArrayBuffer")}} 或 {{jsxref("ArrayBufferView")}}  (这些应该由 {{domxref("RandomSource.getRandomValues()")}} 生成)。</li>
    <li><code>{"name": "AES-CTR", counter, length}</code></li>
    <li><code>{"name": "AES-GCM", iv, additionalData, tagLength}</code> (<em><code>additionalData</code></em> 和 <code><em>tagLength</em></code> 是可选的)</li>
    <li><code>{"name": "RSA-OAEP", label}</code> (<code><em>label</em></code> 是可选的)</li>
@@ -35,7 +35,7 @@ translation_of: Web/API/SubtleCrypto/encrypt
 <h3 id="返回值">返回值</h3>
 
 <ul>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">返回值是一个 </font>{{jsxref("Promise")}} 对象，返回一个由 {{glossary("cleartext")}} 加密生成的 {{glossary("ciphertext")}} 的 {{jsxref("ArrayBuffer")}}。</li>
+ <li>返回值是一个 {{jsxref("Promise")}} 对象，返回一个由 {{glossary("cleartext")}} 加密生成的 {{glossary("ciphertext")}} 的 {{jsxref("ArrayBuffer")}}。</li>
 </ul>
 
 <h3 id="异常">异常</h3>

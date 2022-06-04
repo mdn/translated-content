@@ -2,7 +2,7 @@
 title: <number>
 slug: Web/CSS/number
 tags:
-  - CSS数据类型
+  - CSS 数据类型
   - 布局
 translation_of: Web/CSS/number
 ---
@@ -10,11 +10,11 @@ translation_of: Web/CSS/number
 
 <h2 id="Summary" name="Summary">语法</h2>
 
-<p><code>&lt;数字&gt;</code> <a href="/en-US/docs/CSS" title="CSS">CSS</a> 数据类型代表一个数字，可为整数或小数。它的语法扩展了{{cssxref("&lt;integer&gt;")}}的数据值。要表示一个小数则加上小数部分 -- “."后跟一或多为十进制数字--到任何{{cssxref("&lt;integer&gt;")}}数据值。像{{cssxref("&lt;integer&gt;")}}数据类型一样，<span style="font-family: consolas,monaco,andale mono,monospace;">&lt;number&gt;没有任何单位，并不是一个CSS尺寸。</span></p>
+<p><code>&lt;数字&gt;</code> <a href="/en-US/docs/CSS" title="CSS">CSS</a> 数据类型代表一个数字，可为整数或小数。它的语法扩展了{{cssxref("&lt;integer&gt;")}}的数据值。要表示一个小数则加上小数部分 -- “."后跟一或多为十进制数字--到任何{{cssxref("&lt;integer&gt;")}}数据值。像{{cssxref("&lt;integer&gt;")}}数据类型一样，&lt;number&gt;没有任何单位，并不是一个 CSS 尺寸。</p>
 
 <h2 id="Interpolation" name="Interpolation">插值</h2>
 
-<p> <code>&lt;number&gt;</code> CSS数据类型的值可以被插值，用于动画。这种情况下，它们的插值是浮点实数。插值的速度取决于动画的 <a href="/en-US/docs/CSS/timing-function" title="timing-function">timing function</a>。</p>
+<p> <code>&lt;number&gt;</code> CSS 数据类型的值可以被插值，用于动画。这种情况下，它们的插值是浮点实数。插值的速度取决于动画的 <a href="/en-US/docs/CSS/timing-function" title="timing-function">timing function</a>。</p>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
@@ -25,13 +25,13 @@ translation_of: Web/CSS/number
 -456.8      负非整 &lt;数字&gt;
 0.0         零
 +0.0        带正号的零
--0.0        带负号的零(尽管奇怪，但合法)
+-0.0        带负号的零 (尽管奇怪，但合法)
 .60         点前的数字可以省略
-<span style="line-height: normal;">10e3        科学计数法</span>
+10e3        科学计数法
 -3.4e-2     科学计数法最复杂的情况
 </pre>
 
-<p>非法值示例:</p>
+<p>非法值示例：</p>
 
 <pre class="notranslate">12.         点后需有数字
 +-12.2      只能有一个符号
@@ -52,7 +52,7 @@ translation_of: Web/CSS/number
   <tr>
    <td>{{SpecName('CSS3 Values', '#numbers', '&lt;number&gt;')}}</td>
    <td>{{Spec2('CSS3 Values')}}</td>
-   <td>与CSS Level 2 (Revision 1)没有明显变化</td>
+   <td>与 CSS Level 2 (Revision 1) 没有明显变化</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;number&gt;')}}</td>
@@ -69,61 +69,7 @@ translation_of: Web/CSS/number
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>basic</td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>&lt;=5.0</td>
-   <td>yes</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Scientific notation</td>
-   <td>?</td>
-   <td>29</td>
-   <td>11</td>
-   <td>?</td>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>yes</td>
-   <td>yes</td>
-   <td>yes</td>
-   <td>yes</td>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.types.number")}}
 
 <h2 id="See_also" name="See_also">参见</h2>
 

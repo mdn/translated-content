@@ -12,7 +12,7 @@ Dans les articles précédents, nous avons abordé les APIs qui nous aident à f
 
 ## Première visualisation signifiante
 
-Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible  — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
+Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible  — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
 
 Ceci peut être réalisé grâce au chargement progressif — également appelé [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading). Tout ceci consiste en retardant autant que possible le plus de ressources que possible (HTML, CSS, JavaScript), et ne charger immédiatement que celles qui sont réellement nécessaire pour la toute première expérience.
 
@@ -32,7 +32,7 @@ Pour corriger ça, nous pouvons, par exemple, ajouter `defer` aux fichiers JavaS
 <script src="app.js" defer></script>
 ```
 
-Ils seront téléchargés et exécutés _après_ que le document lui-même a été analys"si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers css et leur ajouter des types de media:
+Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
 
 ```html
 <link rel="stylesheet" href="style.css">
@@ -144,7 +144,7 @@ Rappelez-vous qu'il y a de nombreuses façons d'optimiser les temps de chargemen
 
 Nous ne le ferons pas car l'application elle-même dépend de JavaScript — sans lui, la liste des jeux ne sera même pas chargée et le code du Service Worker ne s'exécutera pas.
 
-Nous pourrions réécrire le processus de chargement  pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
+Nous pourrions réécrire le processus de chargement pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
 
 ## Conclusion
 
@@ -154,7 +154,7 @@ Rappelez-vous de ce que nous avons dit concernant l'approche d'amélioration pro
 
 ## Dernières réflexions
 
-C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA, ](/fr/docs/Web/Progressive_web_apps/App_structure)[la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://serviceworke.rs/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
+C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA](/fr/docs/Web/Progressive_web_apps/App_structure), [la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://serviceworke.rs/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
 
 N'hésitez pas à faire des essais avec le code, à améliorer votre application existante avec des des fonctionnalités PWA ou à bâtir quelque chose d'entièrement nouveau de vous même. Les PWAs amènent un énorme avantage sur les applications web classiques.
 

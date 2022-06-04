@@ -6,7 +6,7 @@ translation_of: Web/API/AudioBuffer/copyFromChannel
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p><span class="seoSummary">{{ domxref("AudioBuffer") }}接口的copyFromChannel方法将样本从AudioBuffer的指定通道复制到目标数组中</span></p>
+<p>{{ domxref("AudioBuffer") }}接口的 copyFromChannel 方法将样本从 AudioBuffer 的指定通道复制到目标数组中</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -19,9 +19,9 @@ translation_of: Web/API/AudioBuffer/copyFromChannel
  <dt><em>destination</em></dt>
  <dd>将通道数据复制到的{{domxref("Float32Array")}}</dd>
  <dt><em>channelNumber</em></dt>
- <dd>当前AudioBuffer的通道号，用于复制通道数据。键入channelNumber大于或等于{{domxref("AudioBuffer.numberOfChannels")}}，将会抛出<code>INDEX_SIZE_ERR</code> 的错误</dd>
+ <dd>当前 AudioBuffer 的通道号，用于复制通道数据。键入 channelNumber 大于或等于{{domxref("AudioBuffer.numberOfChannels")}}，将会抛出<code>INDEX_SIZE_ERR</code> 的错误</dd>
  <dt><em>startInChannel</em> {{optional_inline}}</dt>
- <dd>用于复制数据的可选偏移量。假如<em>startInChannel比</em>{{domxref("AudioBuffer.length")}}大，将会抛出<code>INDEX_SIZE_ERR</code> 的错误</dd>
+ <dd>用于复制数据的可选偏移量。假如<em>startInChannel 比</em>{{domxref("AudioBuffer.length")}}大，将会抛出<code>INDEX_SIZE_ERR</code> 的错误</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -33,102 +33,11 @@ myArrayBuffer.copyFromChannel(anotherArray,1,0);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-copyFromChannel-void-Float32Array-destination-long-channelNumber-unsigned-long-startInChannel', 'copyFromChannel')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(14.0)}} {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(27)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Unprefixed</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(27)}}</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(28.0)}} {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Unprefixed</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioBuffer.copyFromChannel")}}
 
 <h2 id="See_also">See also</h2>
 

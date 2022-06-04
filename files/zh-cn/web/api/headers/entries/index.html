@@ -5,10 +5,10 @@ translation_of: Web/API/Headers/entries
 ---
 <p>{{APIRef}}{{SeeCompatTable}}</p>
 
-<p><code><strong>Headers.entries()</strong></code> 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回Headers对象中所有的键值对. </p>
+<p><code><strong>Headers.entries()</strong></code> 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对. </p>
 
 <div class="note">
-<p><strong>Note</strong>: 这个方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>中是可用的.</p>
+<p><strong>备注：</strong>这个方法在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a>中是可用的。</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -32,7 +32,7 @@ for (var pair of myHeaders.entries()) {
 }
 </pre>
 
-<p>返回结果:</p>
+<p>返回结果：</p>
 
 <pre>content-type: text/xml
 vary: Accept-Language</pre>
@@ -56,57 +56,7 @@ vary: Accept-Language</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers.entries")}}
 
 <h2 id="See_also">See also</h2>
 

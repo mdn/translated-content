@@ -16,14 +16,14 @@ translation_of: Web/API/Selection/removeRange
    <code>range</code></i>
  </dt>
  <dd>
-  Range对象将从选区当中移除。</dd>
+  Range 对象将从选区当中移除。</dd>
 </dl>
 <h3 id="Examples" name="Examples">Examples</h3>
-<pre class="eval">/* 通过设计一段js代码，我们可以获得多个区域，
- * 这段代码可以移除除了第一个<span style="font-size: 1rem;">区域</span><span style="font-size: 1rem;">之外的所有</span><span style="font-size: 1rem;">区域</span><span style="font-size: 1rem;">。
-</span><span style="font-size: 1rem;"> * （此代码在Chrome中不生效，因为Chrome当中只能
+<pre class="eval">/* 通过设计一段 js 代码，我们可以获得多个区域，
+ * 这段代码可以移除除了第一个区域之外的所有区域。
+ *（此代码在 Chrome 中不生效，因为 Chrome 当中只能
  * 选择一个选区，哎我为什么要在 Mozilla 的网站上
- * 说这个？译者注）*/</span>
+ * 说这个？译者注）*/
 
 s = window.getSelection();
 if(s.rangeCount &gt; 1) {
@@ -32,6 +32,3 @@ if(s.rangeCount &gt; 1) {
  }
 }
 </pre>
-<div class="noinclude">
-  </div>
-<p>{{ languages( { "es": "es/DOM/Selection/removeRange", "it": "it/DOM/Selection/removeRange", "pl": "pl/DOM/Selection/removeRange" } ) }}</p>

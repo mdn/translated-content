@@ -10,7 +10,7 @@ translation_of: Web/API/Node/cloneNode
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p><strong><code>Node.cloneNode() </code></strong>方法返回调用该方法的节点的一个副本.</p>
+<p><strong><code>Node.cloneNode()</code></strong> 方法返回调用该方法的节点的一个副本。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/Node/cloneNode
  <dt><code>dupNode</code></dt>
  <dd>克隆生成的副本节点</dd>
  <dt><code>deep</code> {{optional_inline}}</dt>
- <dd>是否采用深度克隆<code>,如果为true,</code>则该节点的所有后代节点也都会被克隆,如果为<code>false,则只克隆该节点本身.</code></dd>
+ <dd>是否采用深度克隆，如果为 <code>true</code>，则该节点的所有后代节点也都会被克隆，如果为 <code>false</code>，则只克隆该节点本身。</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意:</strong> 在 DOM4 规范中(实现于Gecko 13.0{{geckoRelease("13.0")}})，<code>deep</code>是一个可选参数。如果省略的话，<font face="consolas, Liberation Mono, courier, monospace">参数的</font>默认值为 <code>true，</code>也就是说默认是深度克隆。如果想使用浅克隆, 你需要将该参数设置为 <code>false。</code></p>
+<p><strong>注意：</strong> 在 DOM4 规范中 (实现于 Gecko 13.0{{geckoRelease("13.0")}})，<code>deep</code>是一个可选参数。如果省略的话，参数的默认值为 <code>true，</code>也就是说默认是深度克隆。如果想使用浅克隆，你需要将该参数设置为 <code>false。</code></p>
 
 <p>在最新的规范里，该方法的行为已经改变了，其默认值变成了 false。虽然该参数仍旧是可选的，但是你必须要为该方法设置 deep 参数，无论是为了向前还是向后兼容考虑。假如开发者没设置参数的话，Gecko 28.0 {{geckoRelease(28)}}) 版本的控制台会发出警告。从 Gecko 29.0 {{geckoRelease(29)}}) 开始该方法默认为浅复制而不是深度复制。</p>
 </div>
@@ -40,19 +40,19 @@ var p_prime = p.cloneNode(true);
 
 <h2 id="Notes" name="Notes">附注</h2>
 
-<p>克隆一个元素节点会拷贝它所有的属性以及属性值,当然也就包括了属性上绑定的事件(比如<code>onclick="alert(1)"</code>),但不会拷贝那些使用<a href="/zh-CN/docs/DOM/element.addEventListener" title="/zh-CN/docs/DOM/element.addEventListener"><code>addEventListener()</code></a>方法或者<code>node.onclick = fn</code>这种用JavaScript动态绑定的事件.</p>
+<p>克隆一个元素节点会拷贝它所有的属性以及属性值，当然也就包括了属性上绑定的事件 (比如<code>onclick="alert(1)"</code>),但不会拷贝那些使用<a href="/zh-CN/docs/DOM/element.addEventListener" title="/zh-CN/docs/DOM/element.addEventListener"><code>addEventListener()</code></a>方法或者<code>node.onclick = fn</code>这种用 JavaScript 动态绑定的事件。</p>
 
-<p>在使用{{domxref("Node.appendChild()")}}或其他类似的方法将拷贝的节点添加到文档中之前,那个拷贝节点并不属于当前文档树的一部分,也就是说,它没有父节点.</p>
+<p>在使用{{domxref("Node.appendChild()")}}或其他类似的方法将拷贝的节点添加到文档中之前，那个拷贝节点并不属于当前文档树的一部分，也就是说，它没有父节点。</p>
 
-<p>如果<code>deep</code>参数设为<code>false</code>,则不克隆它的任何子节点.该节点所包含的所有文本也不会被克隆,因为文本本身也是一个或多个的{{domxref("Text")}}节点.</p>
+<p>如果<code>deep</code>参数设为<code>false</code>,则不克隆它的任何子节点。该节点所包含的所有文本也不会被克隆，因为文本本身也是一个或多个的{{domxref("Text")}}节点。</p>
 
-<p>如果<code>deep</code>参数设为<code>true</code>,则会复制整棵DOM子树(包括那些可能存在的{{domxref("Text")}}子节点).对于空结点(例如{{HTMLElement("img")}}和{{HTMLElement("input")}}元素),<code>则deep</code>参数无论设为<code>true</code>还是设为<code>false,</code>都没有关系,但是仍然需要为它指定一个值.</p>
+<p>如果<code>deep</code>参数设为<code>true</code>,则会复制整棵 DOM 子树 (包括那些可能存在的{{domxref("Text")}}子节点).对于空结点 (例如{{HTMLElement("img")}}和{{HTMLElement("input")}}元素),<code>则 deep</code>参数无论设为<code>true</code>还是设为<code>false,</code>都没有关系，但是仍然需要为它指定一个值。</p>
 
-<div class="warning">注意:为了防止一个文档中出现两个ID重复的元素,使用<code>cloneNode()方法克隆的节点在需要时应该指定另外一个与原ID值不同的ID</code></div>
+<div class="warning">注意：为了防止一个文档中出现两个 ID 重复的元素，使用<code>cloneNode() 方法克隆的节点在需要时应该指定另外一个与原 ID 值不同的 ID</code></div>
 
-<p>如果原始节点设置了ID，并且克隆节点会被插入到相同的文档中，那么应该更新克隆节点的ID以保证唯一性。name属性可能也需要进行修改，取决于你是否希望有相同名称的节点存在于文档中。</p>
+<p>如果原始节点设置了 ID，并且克隆节点会被插入到相同的文档中，那么应该更新克隆节点的 ID 以保证唯一性。name 属性可能也需要进行修改，取决于你是否希望有相同名称的节点存在于文档中。</p>
 
-<p>想要克隆一个节点来添加到另外一个文档中,请使用{{domxref("Document.importNode()")}}代替本方法.</p>
+<p>想要克隆一个节点来添加到另外一个文档中，请使用{{domxref("Document.importNode()")}}代替本方法。</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -85,81 +85,4 @@ var p_prime = p.cloneNode(true);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>deep</code> as an optional parameter</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("13.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>deep</code> as an optional parameter</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Default value for the <code>deep</code> parameter is <code>false</code>.</p>
+{{Compat("api.Node.cloneNode")}}

@@ -11,12 +11,12 @@ translation_of: 'Web/CSS/:nth-child'
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p><strong><code>:nth-child(an+b)</code></strong> 这个 <a href="/en-US/docs/CSS/Pseudo-classes">CSS 伪类</a>首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从1开始排序，选择的结果为CSS伪类:nth-child括号中表达式（an+b）匹配到的元素集合（n=0，1，2，3...）。示例：</p>
+<p><strong><code>:nth-child(an+b)</code></strong> 这个 <a href="/en-US/docs/CSS/Pseudo-classes">CSS 伪类</a>首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从 1 开始排序，选择的结果为 CSS 伪类:nth-child 括号中表达式（an+b）匹配到的元素集合（n=0，1，2，3...）。示例：</p>
 
 <ul>
  <li><code>0n+3</code> 或简单的 <code>3</code> 匹配第三个元素。</li>
  <li><code>1n+0</code> 或简单的 <code>n</code> 匹配每个元素。（兼容性提醒：在 Android 浏览器 4.3 以下的版本 <code>n</code> 和 <code>1n</code> 的匹配方式不一致。<code>1n</code> 和 <code>1n+0</code> 是一致的，可根据喜好任选其一来使用。）</li>
- <li><code>2n+0</code> 或简单的 <code>2n</code> 匹配位置为 2、4、6、8...的元素（n=0时，2n+0=0，第0个元素不存在，因为是从1开始排序)。你可以使用关键字 <strong><code>even</code></strong> 来替换此表达式。</li>
+ <li><code>2n+0</code> 或简单的 <code>2n</code> 匹配位置为 2、4、6、8...的元素（n=0 时，2n+0=0，第 0 个元素不存在，因为是从 1 开始排序)。你可以使用关键字 <strong><code>even</code></strong> 来替换此表达式。</li>
  <li><code>2n+1</code> 匹配位置为 1、3、5、7...的元素。你可以使用关键字 <strong><code>odd</code></strong> 来替换此表达式。</li>
  <li><code>3n+4</code> 匹配位置为 4、7、10、13...的元素。</li>
 </ul>
@@ -33,19 +33,19 @@ translation_of: 'Web/CSS/:nth-child'
 
 <dl>
  <dt><code>tr:nth-child(2n+1)</code></dt>
- <dd>表示HTML表格中的奇数行。</dd>
+ <dd>表示 HTML 表格中的奇数行。</dd>
  <dt><code>tr:nth-child(odd)</code></dt>
- <dd>表示HTML表格中的奇数行。</dd>
+ <dd>表示 HTML 表格中的奇数行。</dd>
  <dt><code>tr:nth-child(2n)</code></dt>
- <dd>表示HTML表格中的偶数行。</dd>
+ <dd>表示 HTML 表格中的偶数行。</dd>
  <dt><code>tr:nth-child(even)</code></dt>
- <dd>表示HTML表格中的偶数行。</dd>
+ <dd>表示 HTML 表格中的偶数行。</dd>
  <dt><code>span:nth-child(0n+1)</code></dt>
- <dd>表示子元素中第一个且为span的元素，与 <span style="background-color: #ffffff; color: #4d4e53; font-family: open sans,arial,sans-serif; font-size: 14px; line-height: 21px;">{{Cssxref(":first-child")}} </span>选择器作用相同。</dd>
+ <dd>表示子元素中第一个且为 span 的元素，与 {{Cssxref(":first-child")}} 选择器作用相同。</dd>
  <dt><code>span:nth-child(1)</code></dt>
- <dd>表示父元素中子元素为第一的并且名字为span的标签被选中</dd>
+ <dd>表示父元素中子元素为第一的并且名字为 span 的标签被选中</dd>
  <dt><code>span:nth-child(-n+3)</code></dt>
- <dd>匹配前三个子元素中的span元素。</dd>
+ <dd>匹配前三个子元素中的 span 元素。</dd>
 </dl>
 
 <h3 id="Detailed_example">Detailed example</h3>
@@ -156,53 +156,7 @@ div em {
 
 <h2 id="兼容性">兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>3.1<span style="font-size: 14px; line-height: 1.5;"> </span></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.nth-child")}}
 
 <h2 id="注意">注意</h2>
 

@@ -3,16 +3,16 @@ title: Secure contexts
 slug: Web/Security/Secure_Contexts
 translation_of: Web/Security/Secure_Contexts
 ---
-<p><span class="seoSummary"><strong>安全上下文</strong>是 <code>Window</code> 与 <code>Worker</code> 中的概念</span>满足了最低标准的身份验证和机密性<span class="seoSummary">.</span> 许多Web APIs的访问仅能在安全上下文中. 安全上下文的主要目标是防止 {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} 强大的APIs被坏人利用.</p>
+<p><strong>安全上下文</strong>是 <code>Window</code> 与 <code>Worker</code> 中的概念满足了最低标准的身份验证和机密性。许多 Web APIs 的访问仅能在安全上下文中. 安全上下文的主要目标是防止 {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} 强大的 APIs 被坏人利用。</p>
 
-<h2 id="为什么要限制某些功能">为什么要限制某些功能?</h2>
+<h2 id="为什么要限制某些功能">为什么要限制某些功能？</h2>
 
-<p>有些APIs是非常强大的, 能给攻击者更强的能力以及更多的操作:</p>
+<p>有些 APIs 是非常强大的，能给攻击者更强的能力以及更多的操作：</p>
 
 <ul>
- <li>侵犯用户隐私.</li>
- <li>获得对用户计算机的低级访问权限.</li>
- <li>获得对数据的访问权限，例如用户凭证.</li>
+ <li>侵犯用户隐私。</li>
+ <li>获得对用户计算机的低级访问权限。</li>
+ <li>获得对数据的访问权限，例如用户凭证。</li>
 </ul>
 
 <h2 id="When_is_a_context_considered_secure">When is a context considered secure?</h2>

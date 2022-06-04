@@ -1,0 +1,56 @@
+---
+title: WindowEventHandlers.onafterprint
+slug: conflicting/Web/API/Window/afterprint_event
+tags:
+  - API
+  - DOM
+  - Event Handler
+  - HTML DOM
+  - Property
+  - Reference
+  - WindowEventHandlers
+  - printing
+translation_of: Web/API/WindowEventHandlers/onafterprint
+original_slug: Web/API/WindowEventHandlers/onafterprint
+---
+<div>{{ApiRef}}</div>
+
+<p><span class="seoSummary">{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onafterprint</code></strong> プロパティは、現在のウィンドウの {{event("afterprint")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、ユーザーが印刷した後や、ユーザーが印刷ダイアログで中止した場合に発生します。</span></p>
+
+<p>{{event("beforeprint")}} イベントと <code>afterprint</code> イベントを使用すると、印刷を開始する前にページでコンテンツを変更し（例えば、バナーを削除するなど）、印刷の完了後にそれらの変更を元に戻すことができます。 一般に、<code><a href="/ja/docs/Web/CSS/@media#メディア種別">@media print</a></code> CSS @-規則の使用を好むはずですが、場合によってはこれらのイベントを使用する必要があるかもしれません。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">window.addEventListener("afterprint", function(event) { ... });
+window.onafterprint = function(event) { ... };</pre>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-window-onafterprint', 'onafterprint')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("api.WindowEventHandlers.onafterprint")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Window.print()")}}</li>
+ <li>{{domxref("WindowEventHandlers.onbeforeprint")}}</li>
+ <li><a href="/ja/docs/Web/Guide/Printing">印刷</a></li>
+</ul>

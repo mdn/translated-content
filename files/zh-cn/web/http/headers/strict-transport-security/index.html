@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTTP/Headers/Strict-Transport-Security
 original_slug: Web/HTTP/HTTP_Strict_Transport_Security
 ---
-<div><code><strong> HTTP Strict Transport Security</strong></code>（通常简称为{{Glossary("HSTS")}}）是一个安全功能，它告诉浏览器只能通过HTTPS访问当前资源，而不是<a href="/en/HTTP" title="en/HTTP">HTTP</a>。</div>
+<div><code><strong> HTTP Strict Transport Security</strong></code>（通常简称为{{Glossary("HSTS")}}）是一个安全功能，它告诉浏览器只能通过 HTTPS 访问当前资源，而不是<a href="/en/HTTP" title="en/HTTP">HTTP</a>。</div>
 
 <table class="properties">
  <tbody>
@@ -36,40 +36,40 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 
 <dl>
  <dt><code>max-age=&lt;expire-time&gt;</code></dt>
- <dd>设置在浏览器收到这个请求后的&lt;expire-time&gt;秒的时间内凡是访问这个域名下的请求都使用HTTPS请求。</dd>
+ <dd>设置在浏览器收到这个请求后的&lt;expire-time&gt;秒的时间内凡是访问这个域名下的请求都使用 HTTPS 请求。</dd>
  <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
  <dd>如果这个可选的参数被指定，那么说明此规则也适用于该网站的所有子域名。</dd>
  <dt><code>preload</code> {{optional_inline}}</dt>
- <dd>查看 {{anch("预加载 HSTS")}} 获得详情。不是标准的一部分。</dd>
+ <dd>查看 <a href="#预加载_hsts">预加载 HSTS</a> 获得详情。不是标准的一部分。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<p>一个网站接受一个HTTP的请求，然后跳转到HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入http://foo.com或者直接foo.com。</p>
+<p>一个网站接受一个 HTTP 的请求，然后跳转到 HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入 http://foo.com 或者直接 foo.com。</p>
 
 <p>这样存在中间人攻击潜在威胁，跳转过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。</p>
 
-<p>网站通过HTTP Strict Transport Security通知浏览器，这个网站禁止使用HTTP方式加载，浏览器应该自动把所有尝试使用HTTP的请求自动替换为HTTPS请求。</p>
+<p>网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。</p>
 
 <div class="note">
-<p><strong>注意:</strong> <code>Strict-Transport-Security</code> 在通过 HTTP 访问时会被浏览器<strong>忽略;</strong> 因为攻击者可以通过中间人攻击的方式在连接中修改、注入或删除它.  只有在你的网站通过HTTPS访问并且没有证书错误时, 浏览器才认为你的网站支持HTTPS 然后使用 <code>Strict-Transport-Security</code> 的值 .</p>
+<p><strong>注意：</strong> <code>Strict-Transport-Security</code> 在通过 HTTP 访问时会被浏览器<strong>忽略;</strong> 因为攻击者可以通过中间人攻击的方式在连接中修改、注入或删除它.  只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS 然后使用 <code>Strict-Transport-Security</code> 的值 .</p>
 </div>
 
 <h3 id="浏览器如何处理">浏览器如何处理</h3>
 
-<p>你的网站第一次通过HTTPS请求，服务器响应<code>Strict-Transport-Security</code> 头，浏览器记录下这些信息，然后后面尝试访问这个网站的请求都会自动把HTTP替换为HTTPS。</p>
+<p>你的网站第一次通过 HTTPS 请求，服务器响应<code>Strict-Transport-Security</code> 头，浏览器记录下这些信息，然后后面尝试访问这个网站的请求都会自动把 HTTP 替换为 HTTPS。</p>
 
-<p>当HSTS头设置的过期时间到了，后面通过HTTP的访问恢复到正常模式，不会再自动跳转到HTTPS。</p>
+<p>当 HSTS 头设置的过期时间到了，后面通过 HTTP 的访问恢复到正常模式，不会再自动跳转到 HTTPS。</p>
 
-<p>每次浏览器接收到Strict-Transport-Security头，它都会更新这个网站的过期时间，所以网站可以刷新这些信息，防止过期发生。</p>
+<p>每次浏览器接收到 Strict-Transport-Security 头，它都会更新这个网站的过期时间，所以网站可以刷新这些信息，防止过期发生。</p>
 
-<p>Chrome、Firefox等浏览器里，当您尝试访问该域名下的内容时，会产生一个307 Internal Redirect（内部跳转），自动跳转到HTTPS请求。</p>
+<p>Chrome、Firefox 等浏览器里，当您尝试访问该域名下的内容时，会产生一个 307 Internal Redirect（内部跳转），自动跳转到 HTTPS 请求。</p>
 
 <h3 id="示例场景">示例场景</h3>
 
-<p>你连接到一个免费WiFi接入点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的WiFi实际上是黑客的笔记本热点，他们拦截了你最初的HTTP请求，然后跳转到一个你银行网站一模一样的钓鱼网站。 现在，你的隐私数据暴露给黑客了。</p>
+<p>你连接到一个免费 WiFi 接入点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 WiFi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后跳转到一个你银行网站一模一样的钓鱼网站。 现在，你的隐私数据暴露给黑客了。</p>
 
-<p>Strict Transport Security解决了这个问题；只要你通过HTTPS请求访问银行网站，并且银行网站配置好<span style="line-height: 1.5;">Strict Transport Security，你的浏览器知道自动使用HTTPS请求，这可以阻止黑客的中间人攻击的把戏。</span></p>
+<p>Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求访问银行网站，并且银行网站配置好 Strict Transport Security，你的浏览器知道自动使用 HTTPS 请求，这可以阻止黑客的中间人攻击的把戏。</p>
 
 <h2 id="预加载_HSTS">预加载 HSTS</h2>
 

@@ -66,7 +66,7 @@ On peut définir un style de répétition (`<repeat-style>`) différent pour cha
 ```css
 .exempletrois {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
-  -webkit-mask-repeat-y: repeat, space;
+  -webkit-mask-repeat-y: repeat, space;
 }
 ```
 

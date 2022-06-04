@@ -6,11 +6,11 @@ original_slug: Web/API/Intersection_Observer_API/点观察者API的时序元素�
 ---
 <div>{{APIRef("Intersection Observer API")}}</div>
 
-<div>交叉点观察者API使得当感兴趣的元素或多或少被共享祖先节点或元素遮蔽时，可以方便地异步通知，包括 {{domxref("Document")}}本身。</div>
+<div>交叉点观察者 API 使得当感兴趣的元素或多或少被共享祖先节点或元素遮蔽时，可以方便地异步通知，包括 {{domxref("Document")}}本身。</div>
 
 <div> </div>
 
-<p>The Intersection Observer API makes it easy to be asynchronously notified when elements of interest become more or less obscured by a shared ancestor node or element, including the {{domxref("Document")}} itself. <span class="seoSummary">In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the Intersection Observer API to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.</span></p>
+<p>The Intersection Observer API makes it easy to be asynchronously notified when elements of interest become more or less obscured by a shared ancestor node or element, including the {{domxref("Document")}} itself. In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the Intersection Observer API to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.</p>
 
 <p>Although many aspects of this example will not match real world usage (in particular, the articles all have the same text and aren't loaded from a database, and there are just a handful of simple text-only ads that are selected from an array), this should provide enough understanding of the API to quickly learn how to apply the Intersection Observer API to your own site.</p>
 
@@ -302,7 +302,7 @@ function startup() {
 
 <h3 id="Handling_periodic_actions">Handling periodic actions</h3>
 
-<p>Our interval handler, <code>handleRefreshInterval()</code>, is called about once per second courtesy of the call to {{domxref("WindowOrGlobalScope.setInterval", "setInterval")}} made in the <code>startup()</code> function {{anch("Setting up", "described above")}}. Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.</p>
+<p>Our interval handler, <code>handleRefreshInterval()</code>, is called about once per second courtesy of the call to {{domxref("WindowOrGlobalScope.setInterval", "setInterval")}} made in the <code>startup()</code> function <a href="#setting_up">described above</a>. Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.</p>
 
 <pre class="brush: js">function handleRefreshInterval() {
   let redrawList = [];
@@ -333,7 +333,7 @@ function startup() {
 
 <h3 id="Updating_an_ad's_visibility_timer">Updating an ad's visibility timer</h3>
 
-<p>Previously (see {{anch("Handling document visibility changes")}} and {{anch("Handling periodic actions")}}), we've seen that when we need to update an ad's "total visible time" counter, we call a function named <code>updateAdTimer()</code> to do so. This function takes as an input an ad's {{domxref("HTMLDivElement")}} object. Here it is:</p>
+<p>Previously (see <a href="#handling_document_visibility_changes">Handling document visibility changes</a> and <a href="#handling_periodic_actions">Handling periodic actions</a>), we've seen that when we need to update an ad's "total visible time" counter, we call a function named <code>updateAdTimer()</code> to do so. This function takes as an input an ad's {{domxref("HTMLDivElement")}} object. Here it is:</p>
 
 <pre class="brush: js">function updateAdTimer(adBox) {
   let lastStarted = adBox.dataset.lastViewStarted;
@@ -382,7 +382,7 @@ function startup() {
 
 <h3 id="Building_the_page_contents">Building the page contents</h3>
 
-<p>The <code>buildContents()</code> function is called by the {{anch("Setting up", "startup code")}} to select and insert into the document the articles and ads to be presented:</p>
+<p>The <code>buildContents()</code> function is called by the <a href="#setting_up">startup code</a> to select and insert into the document the articles and ads to be presented:</p>
 
 <pre class="brush: js">let loremIpsum = "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
@@ -525,11 +525,11 @@ function buildContents() {
 
 <p>Finally, we set the ID of the <code>&lt;div&gt;</code> which will show the timer we'll present in the ad to show how long it's been visible, giving it the class <code>"timer"</code>. The initial text is set to "0:00", to represent the starting time of 0 minutes and 0 seconds, and it's appended to the ad.</p>
 
-<p>If we're not replacing an existing ad, we need to append the element to the content area of the page using {{domxref("Node.appendChild", "Document.appendChild()")}}. If we're replacing an ad, it's already there, with its contents replaced with the new ad's. Then we call the {{domxref("IntersectionObserver.observe", "observe()")}} method on our Intersection Observer, <code>adObserver</code>, to start watching the ad for changes to its intersection with the viewport. From now on, any time the ad becomes 100% obscured or even a single pixel becomes visible, or the ad passes through 75% visible in one way or another, the {{anch("Handling intersection changes", "observer's callback")}} is executed.</p>
+<p>If we're not replacing an existing ad, we need to append the element to the content area of the page using {{domxref("Node.appendChild", "Document.appendChild()")}}. If we're replacing an ad, it's already there, with its contents replaced with the new ad's. Then we call the {{domxref("IntersectionObserver.observe", "observe()")}} method on our Intersection Observer, <code>adObserver</code>, to start watching the ad for changes to its intersection with the viewport. From now on, any time the ad becomes 100% obscured or even a single pixel becomes visible, or the ad passes through 75% visible in one way or another, the <a href="#handling_intersection_changes">observer's callback</a> is executed.</p>
 
 <h3 id="Replacing_an_existing_ad">Replacing an existing ad</h3>
 
-<p>Our {{anch("Handling intersection changes", "observer's callback")}} keeps an eye out for ads which become 100% obscured and have a total visible time of at least one minute. When that happens, the <code>replaceAd()</code> function is called with that ad's element as an input, so that the old ad can be replaced with a new one.</p>
+<p>Our <a href="#handling_intersection_changes">observer's callback</a> keeps an eye out for ads which become 100% obscured and have a total visible time of at least one minute. When that happens, the <code>replaceAd()</code> function is called with that ad's element as an input, so that the old ad can be replaced with a new one.</p>
 
 <pre class="brush: js">function replaceAd(adBox) {
   let visibleTime;
@@ -544,7 +544,7 @@ function buildContents() {
 
 <p><code>replaceAd()</code> begins by calling <code>updateAdTimer()</code> on the existing ad, to ensure that its timer is up-to-date. This ensures that when we read its <code>totalViewTime</code>, we see the exact final value for how long the ad was visible to the user. We then report that data; in this case, by logging it to console, but in the real world, you'd submit the information to an ad service's API or save it into a database.</p>
 
-<p>Then we load a new ad by calling <code>{{anch("Creating an ad", "loadRandomAd()")}}</code>, specifying the ad to be replaced as an input parameter. As we saw previously, <code>loadRandomAd()</code> will replace an existing ad with content and data corresponding to a new ad, if you specify an existing ad's element as an input parameter.</p>
+<p>Then we load a new ad by calling <code><a href="#creating_an_ad">loadRandomAd()</a></code>, specifying the ad to be replaced as an input parameter. As we saw previously, <code>loadRandomAd()</code> will replace an existing ad with content and data corresponding to a new ad, if you specify an existing ad's element as an input parameter.</p>
 
 <p>The new ad's element object is returned to the caller in case it's needed.</p>
 </div>

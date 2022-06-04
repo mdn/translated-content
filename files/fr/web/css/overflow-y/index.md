@@ -117,7 +117,7 @@ La propriété `overflow-y` est définie avec un des mots-clés définis ci-apr�
 
 | Spécification                                                                            | État                                 | Commentaires |
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y')}} | {{Spec2('CSS3 Overflow')}} |              |
+| {{SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y')}} | {{Spec2('CSS3 Overflow')}} |              |
 
 {{cssinfo}}
 

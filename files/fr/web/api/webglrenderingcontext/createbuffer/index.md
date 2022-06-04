@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/createBuffer
 ---
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.createBuffer() `**de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) crée et initialise un {{domxref ("WebGLBuffer")}} stockant des données telles que des sommets ou des couleurs.
+La méthode **`WebGLRenderingContext.createBuffer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) crée et initialise un [`WebGLBuffer`](/fr/docs/Web/API/WebGLBuffer) stockant des données telles que des sommets ou des couleurs.
 
 ## Syntaxe
 

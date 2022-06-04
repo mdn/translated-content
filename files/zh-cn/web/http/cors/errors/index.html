@@ -10,43 +10,43 @@ translation_of: Web/HTTP/CORS/Errors
 <div> </div>
 
 <div class="hidden">
-<p class="syntaxbox"><span class="seoSummary"><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing</a> ({{Glossary("CORS")}}) 是一种允许服务器放宽同源策略的标准。 这用于明确允许一些跨源请求，同时拒绝其他请求。 例如，如果站点提供外界嵌入的服务，则可能需要放宽同源策略（<a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>）。 设置这样的CORS配置并不一定容易，并且可能存在一些挑战。 在这些页面中，我们将研究一些常见的CORS错误消息以及如何解决它们。</span></p>
+<p class="syntaxbox"><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing</a> ({{Glossary("CORS")}}) 是一种允许服务器放宽同源策略的标准。 这用于明确允许一些跨源请求，同时拒绝其他请求。 例如，如果站点提供外界嵌入的服务，则可能需要放宽同源策略（<a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>）。 设置这样的 CORS 配置并不一定容易，并且可能存在一些挑战。 在这些页面中，我们将研究一些常见的 CORS 错误消息以及如何解决它们。</p>
 </div>
 
-<p>如果未正确设置CORS配置，浏览器控制台将显示错误，例如<code>"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"（</code>跨源请求已阻止：同源策略禁止在某些站点上读取远程资源”），表示请求因违反CORS安全性而被阻止规则。 但这可能不一定是设置错误。 因为用户的Web应用程序和远程外部服务可能故意禁止该请求。如果要使端点可用，则需要进行一些调试才能成功。</p>
+<p>如果未正确设置 CORS 配置，浏览器控制台将显示错误，例如<code>"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"（</code>跨源请求已阻止：同源策略禁止在某些站点上读取远程资源”），表示请求因违反 CORS 安全性而被阻止规则。 但这可能不一定是设置错误。 因为用户的 Web 应用程序和远程外部服务可能故意禁止该请求。如果要使端点可用，则需要进行一些调试才能成功。</p>
 
 <h2 id="确定问题">确定问题</h2>
 
-<p>要了解CORS配置的基本问题，您需要找出哪个请求有问题以及原因。步骤如下：</p>
+<p>要了解 CORS 配置的基本问题，您需要找出哪个请求有问题以及原因。步骤如下：</p>
 
 <p> </p>
 
 <ol>
  <li> 打开有问题的网站并打开开发者工具（<a href="/en-US/docs/Tools">Developer Tools</a>）。</li>
- <li> 尝试重现失败的事务并检查控制台（ <a href="/en-US/docs/Tools/Web_Console">console</a>）是否看到CORS违规错误消息。它可能看起来像这样：</li>
+ <li> 尝试重现失败的事务并检查控制台（ <a href="/en-US/docs/Tools/Web_Console">console</a>）是否看到 CORS 违规错误消息。它可能看起来像这样：</li>
 </ol>
 
 <p><img alt="Firefox console showing CORS error" src="https://mdn.mozillademos.org/files/16050/cors-error2.png"></p>
 
 <p>错误消息的文本将类似于以下内容：</p>
 
-<pre>Cross<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">-Origin Request Blocked: The Same Origin Policy disallows
+<pre>Cross-Origin Request Blocked: The Same Origin Policy disallows
 reading the remote resource at <em>https://some-url-here</em>. (<em>Reason:
-additional information here</em>).</span></span></span></pre>
+additional information here</em>).</pre>
 
 <div class="note">
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><strong>注意：出于安全原因，JavaScript代码无法给出有关CORS请求出错的详细信息。 所有代码都知道发生了错误。 确定具体问题的唯一方法是查看浏览器的控制台以获取详细信息。</strong></span></span></span></p>
+<p><strong>注意：出于安全原因，JavaScript 代码无法给出有关 CORS 请求出错的详细信息。 所有代码都知道发生了错误。 确定具体问题的唯一方法是查看浏览器的控制台以获取详细信息。</strong></p>
 </div>
 
-<h2 id="CORS错误信息">CORS错误信息</h2>
+<h2 id="CORS错误信息">CORS 错误信息</h2>
 
-<p>当请求因CORS失败时，Firefox的控制台会在其控制台中显示消息。 错误文本的一部分是“原因”消息，它提供了对出错的更深入的了解。 消息的原因如下： </p>
+<p>当请求因 CORS 失败时，Firefox 的控制台会在其控制台中显示消息。 错误文本的一部分是“原因”消息，它提供了对出错的更深入的了解。 消息的原因如下： </p>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDisabled">原因：CROS被禁用</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed">原因：CROS请求未成功</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded">原因：CROS头字段“Origin”未被添加</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed">原因：CORS不允许请求外部重定向</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDisabled">原因：CORS 被禁用</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed">原因：CORS 请求未成功</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded">原因：CORS 头字段“Origin”未被添加</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed">原因：CORS 不允许请求外部重定向</a></li>
  <li><a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp">Reason: CORS request not http</a></li>
  <li><a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin">Reason: CORS header ‘Access-Control-Allow-Origin’ missing</a></li>
  <li><a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin">Reason: CORS header ‘Access-Control-Allow-Origin’ does not match ‘xyz’</a></li>

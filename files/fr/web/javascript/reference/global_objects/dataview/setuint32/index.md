@@ -19,7 +19,9 @@ La méthode **`setUint32()`** permet d'enregister un entier non-signé sur 32 bi
 
 ## Syntaxe
 
-    dataview.setUint32(positionOctet, valeur [, littleEndian])
+```js
+dataview.setUint32(positionOctet, valeur [, littleEndian])
+```
 
 ### Paramètres
 
@@ -56,7 +58,7 @@ dataview.getUint32(1); // 3
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015 (ES6).           |
 | {{SpecName('ES2015', '#sec-dataview.prototype.setuint32', 'DataView.prototype.setUint32')}}     | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint32', 'DataView.prototype.setUint32')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint32', 'DataView.prototype.setUint32')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

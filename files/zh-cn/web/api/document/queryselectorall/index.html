@@ -23,7 +23,7 @@ translation_of: Web/API/Document/querySelectorAll
 <p>返回与指定的选择器组匹配的文档中的元素列表 (使用深度优先的先序遍历文档的节点)。返回的对象是 {{domxref("NodeList")}} 。</p>
 
 <div class="note">
-<p>注意：此方法基于{{domxref("ParentNode")}} mixin的{{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 实现。</p>
+<p>注意：此方法基于{{domxref("ParentNode")}} mixin 的{{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 实现。</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,7 +39,7 @@ translation_of: Web/API/Document/querySelectorAll
 </dl>
 
 <div class="note">
-<p><strong>注意：</strong> 必须使用反斜杠字符转义不属于标准CSS语法的字符。 由于JavaScript也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。 有关详细信息，请参阅 {{anch("Escaping special characters")}}</p>
+<p><strong>注意：</strong> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。 由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅<a href="/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符">转义特殊字符</a></p>
 </div>
 
 <h3 id="返回值">返回值</h3>
@@ -47,7 +47,7 @@ translation_of: Web/API/Document/querySelectorAll
 <p>一个静态 {{domxref("NodeList")}}，包含一个与至少一个指定选择器匹配的元素的{{domxref("Element")}}对象，或者在没有匹配的情况下为空{{domxref("NodeList")}}</p>
 
 <div class="note">
-<p><strong>注意：</strong> 如果<code>selectors</code>参数中包含 <a href="/en-US/docs/Web/CSS/Pseudo-elements">CSS伪元素</a>，则返回的列表始终为空。</p>
+<p><strong>注意：</strong> 如果<code>selectors</code>参数中包含 <a href="/en-US/docs/Web/CSS/Pseudo-elements">CSS 伪元素</a>，则返回的列表始终为空。</p>
 </div>
 
 <h3 id="另外">另外</h3>
@@ -65,12 +65,12 @@ translation_of: Web/API/Document/querySelectorAll
 
 <pre class="brush: js">var matches = document.querySelectorAll("p");</pre>
 
-<p>此示例返回文档中所有{{HTMLElement("div")}}元素的列表，其中class包含"<code>note</code>"或"<code>alert</code>"：</p>
+<p>此示例返回文档中所有{{HTMLElement("div")}}元素的列表，其中 class 包含"<code>note</code>"或"<code>alert</code>"：</p>
 
 <pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
 </pre>
 
-<p>在这里，我们得到一个<code>&lt;p&gt;</code>元素的列表，其直接父元素是一个class为<code>"highlighted"</code>的{{domxref("div")}}，并且位于ID为<code>"test"</code>的容器内。</p>
+<p>在这里，我们得到一个<code>&lt;p&gt;</code>元素的列表，其直接父元素是一个 class 为<code>"highlighted"</code>的{{domxref("div")}}，并且位于 ID 为<code>"test"</code>的容器内。</p>
 
 <pre class="brush: js">var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
@@ -79,14 +79,14 @@ var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
 
 <pre class="brush: js">var matches = document.querySelectorAll("iframe[data-src]");</pre>
 
-<p>这里，属性选择器用于返回ID为<code>"userlist"</code>的列表中包含值为<code>"1"</code>的<code>"data-active"</code>属性的元素</p>
+<p>这里，属性选择器用于返回 ID 为<code>"userlist"</code>的列表中包含值为<code>"1"</code>的<code>"data-active"</code>属性的元素</p>
 
 <pre class="brush: js">var container = document.querySelector("#userlist");
 var matches = container.querySelectorAll("li[data-active='1']");</pre>
 
 <h3 id="访问匹配项">访问匹配项</h3>
 
-<p>一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。 如果数组为空（即，其<code>length</code>属性为0），则找不到匹配项。</p>
+<p>一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。 如果数组为空（即，其<code>length</code>属性为 0），则找不到匹配项。</p>
 
 <p>否则，您只需使用标准数组方法来访问列表的内容。 您可以使用任何常见的循环语句，例如：</p>
 
@@ -98,11 +98,11 @@ highlightedItems.forEach(function(userItem) {
 
 <h2 id="用户备注">用户备注</h2>
 
-<p><code>querySelectorAll()</code> 的行为与大多数常见的JavaScript DOM库不同，这可能会导致意外结果。</p>
+<p><code>querySelectorAll()</code> 的行为与大多数常见的 JavaScript DOM 库不同，这可能会导致意外结果。</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>考虑这个HTML及其三个嵌套的{{HTMLElement("div")}}块</p>
+<p>考虑这个 HTML 及其三个嵌套的{{HTMLElement("div")}}块</p>
 
 <pre class="brush: html">&lt;div class="outer"&gt;
   &lt;div class="select"&gt;
@@ -129,45 +129,11 @@ inner.length; // 0
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Living standard</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("Selectors API Level 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 1")}}</td>
-   <td>Original definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
 <p>{{Compat("api.Document.querySelectorAll")}}</p>
-</div>
 
 <h2 id="相关连接">相关连接</h2>
 
@@ -181,5 +147,3 @@ inner.length; // 0
  <li>{{domxref("ParentNode.querySelector()")}} and {{domxref("ParentNode.querySelectorAll()")}}</li>
  <li><a href="/en-US/docs/Code_snippets/QuerySelector" title="Code_snippets/QuerySelector">Code snippets for <code>querySelector()</code></a></li>
 </ul>
-
-<p>{{ languages( { "en": "en/DOM/Document.querySelectorAll"} ) }}</p>

@@ -10,7 +10,7 @@ translation_of: Web/API/FileSystem
 <p><strong><code>FileSystem </code></strong><code>實作文件和目錄介面，描述一個檔案系統。在任何檔案系統上，這個物件包含</code> {{domxref("FileSystemEntry.filesystem", "filesystem")}}的特性。某些網頁瀏覽器提供額外的API去創建和管理檔案系統，如Google Chrome的{{domxref("LocalFileSystem.requestFileSystem", "requestFileSystem()")}}函式。</p>
 
 <div class="note">
-<p>此介面並非標準API, 代表規格並未依造標準制定, 因此必須注意並非所有網頁瀏覽器都有實作此介面, 有實作的網頁瀏覽器可能只有實作一小部分. 請在{{anch("Browser compatibility")}} 查看更多細節.</p>
+<p>此介面並非標準API, 代表規格並未依造標準制定, 因此必須注意並非所有網頁瀏覽器都有實作此介面, 有實作的網頁瀏覽器可能只有實作一小部分. 請在<a href="#browser_compatibility">Browser compatibility</a> 查看更多細節.</p>
 </div>
 
 <h2 id="基礎概念">基礎概念</h2>
@@ -33,80 +33,13 @@ translation_of: Web/API/FileSystem
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File System API')}}</td>
-   <td>{{Spec2('File System API')}}</td>
-   <td>Draft of proposed API</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>This API has no official W3C or WHATWG specification.</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Microsoft Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoDesktop(50) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>0.16{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoMobile(50) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Microsoft Edge 使用 <code>WebKitFileSystem 名稱實作</code>, 且只被用在 drag-and-drop scenarios 透過 {{domxref("DataTransferItem.webkitGetAsEntry()")}} 函式. 此函式不被使用在文件和目錄選擇的面板( 如當你以{{domxref("HTMLInputElement.webkitdirectory")}} 標籤使用 {{HTMLElement("input")}} 物件</p>
+{{Compat("api.FileSystem")}}
 
 <h2 id="參見">參見</h2>
 

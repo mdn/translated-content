@@ -16,7 +16,9 @@ La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en rem
 
 ## Syntaxe
 
-    encodeURI(URI)
+```js
+encodeURI(URI)
+```
 
 ### Paramètres
 
@@ -31,7 +33,9 @@ Une nouvelle chaîne de caractères représentant un URI, encodé, à partir de 
 
 `encodeURI()` échappe tous les caractères sauf ceux-ci :
 
-    A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+```
+A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+```
 
 `encodeURI()` est différente de {{jsxref("encodeURIComponent")}}. Par exemple :
 
@@ -49,7 +53,7 @@ console.log(encodeURIComponent(set2)); // -_.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (l'espace est encodé en %20)
 ```
 
-Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère *surrogate* (demi-codet) qui ne fait pas partie d'une paire :
+Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère *surrogate* (demi-codet) qui ne fait pas partie d'une paire :
 
 ```js
 // On a une paire de codets surrogate
@@ -64,7 +68,7 @@ console.log(encodeURI('\uD800'));
 console.log(encodeURI('\uDFFF'));
 ```
 
-`encodeURI()` ne permet pas de former des requêtes HTTP GET ou POST (par exemple avec {{domxref("XMLHTTPRequest")}}) car "&", "+" et "=" ne sont pas encodés et sont traités comme des caractères spéciaux (toutefois, la méthode. {{jsxref("encodeURIComponent")}} pourra être utilisée pour encoder ces caractères).
+`encodeURI()` ne permet pas de former des requêtes HTTP GET ou POST (par exemple avec {{domxref("XMLHTTPRequest")}}) car "&", "+" et "=" ne sont pas encodés et sont traités comme des caractères spéciaux (toutefois, la méthode. {{jsxref("encodeURIComponent")}} pourra être utilisée pour encoder ces caractères).
 
 Si on souhaite suivre la [RFC3986](http://tools.ietf.org/html/rfc3986) qui concerne les URL et qui rend les crochets réservés (pour IPv6) (il ne faut donc plus encoder ces caractères lorsqu'ils font partie d'une URL (notamment pour la partie représentant l'hôte), on pourra utiliser le fragment de code suivant :
 

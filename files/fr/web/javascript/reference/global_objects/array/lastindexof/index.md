@@ -20,8 +20,10 @@ La méthode **`lastIndexOf()`** permet de renvoyer le dernier indice pour lequel
 
 ## Syntaxe
 
-    arr.lastIndexOf(élémentRecherché)
-    arr.lastIndexOf(élémentRecherché, indexDébut)
+```js
+arr.lastIndexOf(élémentRecherché)
+arr.lastIndexOf(élémentRecherché, indexDébut)
+```
 
 ### Paramètres
 

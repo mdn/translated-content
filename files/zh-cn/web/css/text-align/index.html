@@ -2,7 +2,7 @@
 title: text-align
 slug: Web/CSS/text-align
 tags:
-  - CSS文字
+  - CSS 文字
   - 参考
   - 属性
   - 布局
@@ -10,7 +10,7 @@ translation_of: Web/CSS/text-align
 ---
 <div>{{CSSRef}}</div>
 
-<p><code>text-align</code> CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。<code>text-align</code> 并不控制块元素自己的对齐，只控制它的行内内容的对齐。</p>
+<p><code>text-align</code> CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。<code>text-align</code> 并不控制块元素自己的对齐，只控制它的行内内容的对齐。</p>
 
 <pre class="brush: css notranslate">/* Keyword values */
 text-align: left;
@@ -150,7 +150,7 @@ p {
 
 <h2 id="语法" style="margin-bottom: 20px; line-height: 30px;">语法</h2>
 
-<p>text-align属性指定为从以下值列表中选择的单个关键字。</p>
+<p>text-align 属性指定为从以下值列表中选择的单个关键字。</p>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px;"></div>
 
@@ -196,9 +196,9 @@ p {
  <dt><code>justify</code></dt>
  <dd>文字向两侧对齐，对最后一行无效。</dd>
  <dt><code>justify-all</code></dt>
- <dd>和justify一致，但是强制使最后一行两端对齐。</dd>
+ <dd>和 justify 一致，但是强制使最后一行两端对齐。</dd>
  <dt><code>match-parent</code> {{experimental_inline}}</dt>
- <dd><font face="Open Sans, sans-serif">和</font><code>inherit</code>类似，区别在于<code>start</code>和<code>end</code>的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的<code>left</code>或<code>right</code>。</dd>
+ <dd>和<code>inherit</code>类似，区别在于<code>start</code>和<code>end</code>的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的<code>left</code>或<code>right</code>。</dd>
 </dl>
 
 <h3 id="指示语法" style="line-height: 24px;">指示语法</h3>
@@ -228,7 +228,7 @@ some more inline content...</div>
 
 <h3 id="备注">备注</h3>
 
-<p id=".E5.B1.85.E4.B8.AD.E4.B8.80.E4.B8.AA.E5.9D.97.E5.85.83.E7.B4.A0.E4.B8.94.E4.B8.8D.E5.B1.85.E4.B8.AD.E5.AE.83.E7.9A.84.E5.86.85.E8.81.94.E5.86.85.E5.AE.B9.E7.9A.84.E6.A0.87.E5.87.86.E5.85.BC.E5.AE.B9.E7.9A.84.E6.96.B9.E6.B3.95.E6.98.AF.E5.B0.86.E5.AE.83.E7.9A.84.E5.B7.A6.E3.80.81.E5.8F.B3margin.E8.AE.BE.E4.B8.BAauto.2C_.E4.BE.8B.E5.A6.82.EF.BC.9A"><span style="font-size: 14px; line-height: 1.5;">居中一个块元素且不居中它的行内内容的标准兼容的方法是将它的左、右</span><code style="line-height: 1.5; font-size: 14px; font-style: normal;">margin设为</code><span style="font-size: 14px; line-height: 1.5;">auto, 例如：</span></p>
+<p id=".E5.B1.85.E4.B8.AD.E4.B8.80.E4.B8.AA.E5.9D.97.E5.85.83.E7.B4.A0.E4.B8.94.E4.B8.8D.E5.B1.85.E4.B8.AD.E5.AE.83.E7.9A.84.E5.86.85.E8.81.94.E5.86.85.E5.AE.B9.E7.9A.84.E6.A0.87.E5.87.86.E5.85.BC.E5.AE.B9.E7.9A.84.E6.96.B9.E6.B3.95.E6.98.AF.E5.B0.86.E5.AE.83.E7.9A.84.E5.B7.A6.E3.80.81.E5.8F.B3margin.E8.AE.BE.E4.B8.BAauto.2C_.E4.BE.8B.E5.A6.82.EF.BC.9A">居中一个块元素且不居中它的行内内容的标准兼容的方法是将它的左、右<code style="line-height: 1.5; font-size: 14px; font-style: normal;">margin 设为</code>auto，例如：</p>
 
 <p><code>margin:auto;</code> 或<code>margin:0 auto;</code> 或<code>margin-left:auto; margin-right:auto;</code></p>
 
@@ -331,7 +331,7 @@ some more inline content...</div>
   <tr>
    <td>{{SpecName('CSS3 Text', '#text-align', 'visibility')}}</td>
    <td>{{Spec2('CSS3 Text')}}</td>
-   <td>添加了<code>start</code>和<code>end关键字</code> keyword. Changed the unnamed initial value to <code>start</code> (which it was). Added the {{cssxref("&lt;string&gt;")}} value, the <code>match-parent</code> value and the <code>start end</code> double value.</td>
+   <td>添加了<code>start</code>和<code>end 关键字</code> keyword. Changed the unnamed initial value to <code>start</code> (which it was). Added the {{cssxref("&lt;string&gt;")}} value, the <code>match-parent</code> value and the <code>start end</code> double value.</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}</td>
@@ -348,142 +348,7 @@ some more inline content...</div>
 
 <h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support (<code>left</code>, <code>right</code>, <code>center</code> and <code>justify</code>)</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>3.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Block alignment values {{non-standard_inline}}</td>
-   <td>1.0{{property_prefix("-webkit")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}{{property_prefix("-moz")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>1.0 (85){{property_prefix("-khtml")}}<br>
-    1.3 (312){{property_prefix("-webkit")}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>start</code> {{experimental_inline}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>end</code> {{experimental_inline}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>match-parent</code>{{experimental_inline}}</td>
-   <td>16</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("40")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Block alignment values {{non-standard_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>start</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>end</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>match-parent</code>{{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("40")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>true</code>(non-standard syntax){{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] Both WebKit and Gecko supports a prefixed version of <code>left</code>, <code>center</code>, and <code>right</code>, that applies not only to inline content but also to block elements. This is used to implement the legacy {{htmlattrxref("align", "td")}} attributes on some table-related element. Do not use these on production Web sites.</p>
+{{Compat("css.properties.text-align")}}
 
 <h2 id="参见" style="margin-bottom: 20px; line-height: 30px;">参见</h2>
 

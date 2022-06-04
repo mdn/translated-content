@@ -9,7 +9,7 @@ translation_of: Web/Events
 ---
 <p>事件為一些有趣事情，發生後會被傳出以通知code。每個事件被表示為一個根據{{domxref("Event")}}所定義的物件，且可能會有額外自訂欄位與(或)函式來描述發生了什麼事。事件可以表示從使用者互動到自動通知等渲染model所有的事情。</p>
 
-<p><span class="seoSummary">Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions used to get additional information about what happened.</span> Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.</p>
+<p>Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions used to get additional information about what happened. Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.</p>
 
 <p>This article offers a list of events that can be sent; some are standard events defined in official specifications, while others are events used internally by specific browsers; for example, Mozilla-specific events are listed so that <a href="/zh-TW/docs/Mozilla/Add-ons">add-ons</a> can use them to interact with the browser.no</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/Events
    <td>A transaction has been aborted.</td>
   </tr>
   <tr>
-   <td>{{event("afterprint")}} {{gecko_minversion_inline("6")}}</td>
+   <td>{{event("afterprint")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/html5/webappapis.html#printing">HTML5</a></td>
    <td>The associated document has started printing or the print preview has been closed.</td>
@@ -74,7 +74,7 @@ translation_of: Web/Events
    <td>The input buffer of a {{domxref("ScriptProcessorNode")}} is ready to be processed.</td>
   </tr>
   <tr>
-   <td>{{event("beforeprint")}} {{gecko_minversion_inline("6")}}</td>
+   <td>{{event("beforeprint")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/html5/webappapis.html#printing">HTML5</a></td>
    <td>The associated document is about to be printed or previewed for printing.</td>
@@ -430,7 +430,7 @@ translation_of: Web/Events
   <tr>
    <td>{{event("error")}}</td>
    <td>{{domxref("ProgressEvent")}}</td>
-   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> and </span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-error">XMLHttpRequest</a></td>
+   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-error">XMLHttpRequest</a></td>
    <td>Progression has failed.</td>
   </tr>
   <tr>
@@ -550,7 +550,7 @@ translation_of: Web/Events
   <tr>
    <td><code><a href="/zh-TW/docs/Web/Reference/Events/load_(ProgressEvent)">load</a></code></td>
    <td>{{domxref("ProgressEvent")}}</td>
-   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-load">XMLHttpRequest</a></td>
+   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-load">XMLHttpRequest</a></td>
    <td>Progression has been successful.</td>
   </tr>
   <tr>
@@ -568,13 +568,13 @@ translation_of: Web/Events
   <tr>
    <td>{{event("loadend")}}</td>
    <td>{{domxref("ProgressEvent")}}</td>
-   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadend">XMLHttpRequest</a></td>
+   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadend">XMLHttpRequest</a></td>
    <td>Progress has stopped (after "error", "abort" or "load" have been dispatched).</td>
   </tr>
   <tr>
    <td>{{event("loadstart")}}</td>
    <td>{{domxref("ProgressEvent")}}</td>
-   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress </a><span>and </span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadstart">XMLHttpRequest</a></td>
+   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress </a>and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadstart">XMLHttpRequest</a></td>
    <td>Progress has begun.</td>
   </tr>
   <tr>
@@ -742,7 +742,7 @@ translation_of: Web/Events
   <tr>
    <td>{{event("progress")}}</td>
    <td>{{domxref("ProgressEvent")}}</td>
-   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a><span> <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-progress">XMLHttpRequest</a></td>
+   <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/progress-events/">Progress</a> and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-progress">XMLHttpRequest</a></td>
    <td>In progress.</td>
   </tr>
   <tr>
@@ -760,7 +760,7 @@ translation_of: Web/Events
   <tr>
    <td>{{event("readystatechange")}}</td>
    <td>{{domxref("Event")}}</td>
-   <td style="white-space: nowrap;"><span>HTML5 <span>and </span></span><a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-readystatechange">XMLHttpRequest</a></td>
+   <td style="white-space: nowrap;">HTML5 and <a href="http://www.w3.org/TR/XMLHttpRequest/#event-xhr-readystatechange">XMLHttpRequest</a></td>
    <td>The readyState attribute of a document has changed.</td>
   </tr>
   <tr>
@@ -986,7 +986,7 @@ translation_of: Web/Events
    <td>Playback has stopped because of a temporary lack of data.</td>
   </tr>
   <tr>
-   <td>{{event("wheel")}} {{gecko_minversion_inline("17")}}</td>
+   <td>{{event("wheel")}}</td>
    <td>{{domxref("WheelEvent")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-wheel">DOM L3</a></td>
    <td>A wheel button of a pointing device is rotated in any direction.</td>
@@ -1878,7 +1878,7 @@ translation_of: Web/Events
 
 <h3 id="Storage_events">Storage events</h3>
 
-<p>{{event("change")}} (see {{anch("Non-standard events")}}), {{event("storage")}}</p>
+<p>{{event("change")}} (see <a href="#非標準事件">Non-standard events</a>), {{event("storage")}}</p>
 
 <h3 id="SVG_事件">SVG 事件</h3>
 

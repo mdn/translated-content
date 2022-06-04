@@ -38,7 +38,7 @@ Les liens suivants pointent vers des solutions aux problèmes courants que vous 
 - [Comment contrôler le contenu débordant](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_d%C3%A9passements)
 - [Comment contrôler la partie des boîtes CSS dessinées au-dessus de l'arrière-plan](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#L%27arri%C3%A8re-plan)
 - [Comment définir _"inline_", _"block"_ et _"inline-block"_ ?](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_types_de_bo%C3%AEte)
-- [Comment créer des boîtes fantaisies ](/fr/Apprendre/CSS/Comment/Cr%C3%A9er_de_belles_bo%C3%AEtes) (lire aussi le module [Styles pour boites](/fr/docs/Learn/CSS/Styling_boxes), généralités).
+- [Comment créer des boîtes fantaisies](/fr/Apprendre/CSS/Comment/Cr%C3%A9er_de_belles_bo%C3%AEtes) (lire aussi le module [Styles pour boites](/fr/docs/Learn/CSS/Styling_boxes), généralités).
 - [Comment utiliser `background-clip` pour contrôler combien de boîtes sont impactées par l'image de fond-d'écran](/fr/Apprendre/CSS/Comment/Cr%C3%A9er_de_belles_bo%C3%AEtes#Les_arri%C3%A8re-plans)
 - [Comment changer complètement le modèle de boîte en utilisant `box-sizing`](/fr/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)
 - [Comment contrôler l'arrière-plan](/fr/docs/Learn/CSS/Styling_boxes/Backgrounds)

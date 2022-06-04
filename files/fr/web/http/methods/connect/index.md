@@ -40,7 +40,7 @@ Par exemple, la méthode `CONNECT` peut être utilisée pour accéder à des sit
     </tr>
     <tr>
       <th scope="row">
-        Autorisée dans les 
+        Autorisée dans les
         <a
           href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
           >formulaires HTML</a

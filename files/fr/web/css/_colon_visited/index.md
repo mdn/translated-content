@@ -17,13 +17,13 @@ a:visited {
 }
 ```
 
-Cette mise en forme peut être écrasée par toute autre pseudo-classe liée aux liens ({{cssxref(":link")}}, {{cssxref(":hover")}}, et {{cssxref(":active")}}) qui apparaîtrait dans les règles CSS suivantes. Il est donc important de bien ordonner les pseudo-classes pour une bonne mise en forme : `:visited` doit être utilisée après une règle basée sur `:link`, mais avant les autres  (`:link` — `:visited` — `:hover` — `:active`).
+Cette mise en forme peut être écrasée par toute autre pseudo-classe liée aux liens ({{cssxref(":link")}}, {{cssxref(":hover")}}, et {{cssxref(":active")}}) qui apparaîtrait dans les règles CSS suivantes. Il est donc important de bien ordonner les pseudo-classes pour une bonne mise en forme : `:visited` doit être utilisée après une règle basée sur `:link`, mais avant les autres  (`:link` — `:visited` — `:hover` — `:active`).
 
 ## Restrictions
 
 Pour des raisons de vie privée, les navigateurs limitent les propriétés qui peuvent être appliquées à cette pseudo-classe :
 
-- Les propriétés CSS autorisées sont  {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("outline-color")}}, {{cssxref("column-rule-color")}}
+- Les propriétés CSS autorisées sont  {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("outline-color")}}, {{cssxref("column-rule-color")}}
 - Les attributs SVG autorisés sont {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}.
 - La composante alpha sera ignorée : la composante alpha d'un lien non-visité est utilisé à la place (sauf quand l'opacité est `0`, dans ce cas, toute la couleur est ignorée, ainsi que celle de la règle non-visité).
 - Bien qu'on puisse modifier la couleur d'un lien, la méthode {{domxref("window.getComputedStyle")}} mentira et indiquera toujours la valeur de la couleur de la règle pour les liens non-visités.

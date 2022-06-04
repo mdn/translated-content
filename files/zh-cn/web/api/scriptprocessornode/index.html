@@ -6,16 +6,16 @@ translation_of: Web/API/ScriptProcessorNode
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div class="note">
-<p><strong>注意：</strong>这个特性在2014年8月29日发布的Web Audio API规范中已经标记为不推荐，将很快会被<a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>代替.</p>
+<p><strong>注意：</strong>这个特性在 2014 年 8 月 29 日发布的 Web Audio API 规范中已经标记为不推荐，将很快会被<a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>代替。</p>
 </div>
 
 <div>
-<p><code>ScriptProcessorNode</code> 接口允许使用JavaScript生成、处理、分析音频. 它是一个 {{domxref("AudioNode")}}， 连接着两个缓冲区音频处理模块, 其中一个缓冲区包含输入音频数据，另外一个包含处理后的输出音频数据. 实现了 {{domxref("AudioProcessingEvent")}} 接口的一个事件，每当输入缓冲区有新的数据时，事件将被发送到该对象，并且事件将在数据填充到输出缓冲区后结束.</p>
+<p><code>ScriptProcessorNode</code> 接口允许使用 JavaScript 生成、处理、分析音频。它是一个 {{domxref("AudioNode")}}， 连接着两个缓冲区音频处理模块，其中一个缓冲区包含输入音频数据，另外一个包含处理后的输出音频数据。实现了 {{domxref("AudioProcessingEvent")}} 接口的一个事件，每当输入缓冲区有新的数据时，事件将被发送到该对象，并且事件将在数据填充到输出缓冲区后结束。</p>
 </div>
 
 <p><img alt="The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode." src="https://mdn.mozillademos.org/files/5157/WebAudioScriptProcessingNode.png" style="display: block; height: 174px; margin: 0px auto; width: 306px;"></p>
 
-<p>输入和输出缓冲区大小在创建时定义, 当 {{domxref("AudioContext.createScriptProcessor()")}} 方法被调用时 (都是由 {{domxref("AudioContext.createScriptProcessor()")}}的 <code>bufferSize</code> 参数定义). 缓冲区大小必须是在 <code>256</code> 到 <code>16384</code> 之间的 2 的次幂, 为 <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code> 或者 <code>16384</code>. Small numbers lower the <em>latency</em>, but large number may be necessary to avoid audio breakup and glitches.</p>
+<p>输入和输出缓冲区大小在创建时定义，当 {{domxref("AudioContext.createScriptProcessor()")}} 方法被调用时 (都是由 {{domxref("AudioContext.createScriptProcessor()")}}的 <code>bufferSize</code> 参数定义). 缓冲区大小必须是在 <code>256</code> 到 <code>16384</code> 之间的 2 的次幂， 为 <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code> 或者 <code>16384</code>. Small numbers lower the <em>latency</em>, but large number may be necessary to avoid audio breakup and glitches.</p>
 
 <p>If the buffer size is not defined, which is recommended, the browser will pick one that its heuristic deems appropriate.</p>
 
@@ -46,11 +46,11 @@ translation_of: Web/API/ScriptProcessorNode
 
 <h2 id="属性">属性</h2>
 
-<p><em>从上一级继承属性, </em><em>{{domxref("AudioNode")}}</em>.</p>
+<p><em>从上一级继承属性，</em><em>{{domxref("AudioNode")}}</em>.</p>
 
 <dl>
  <dt>{{domxref("ScriptProcessorNode.bufferSize")}} {{readonlyInline}}</dt>
- <dd>返回一个表示输入和输出缓冲区大小的整数. 它的值可以是在<code>256</code>–<code>16384</code> 之间的 2 的次幂.</dd>
+ <dd>返回一个表示输入和输出缓冲区大小的整数。它的值可以是在<code>256</code>–<code>16384</code> 之间的 2 的次幂。</dd>
 </dl>
 
 <h3 id="事件句柄">事件句柄</h3>
@@ -87,62 +87,7 @@ translation_of: Web/API/ScriptProcessorNode
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(25)}}</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.ScriptProcessorNode")}}
 
 <h2 id="See_also">See also</h2>
 

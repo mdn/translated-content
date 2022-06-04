@@ -5,11 +5,11 @@ translation_of: Web/API/Selection/focusNode
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
-<p><strong><code>Selection.focusNode</code></strong><code>是只读的</code><strong><code>，</code></strong><font><font>返回所选内容的结束位置部分所属的节点</font></font>.</p>
+<p><strong><code>Selection.focusNode</code></strong> 是只读的，返回所选内容的结束位置部分所属的节点。</p>
 
-<p>用户可能会从左到右(按文字方向) 或从右到左 (按文字相反方向)进行选择. focusNode就是用户选择时最后停下来所处的元素节点. 当你同时按下shift键和任何一个方向键来改变选择时，你就能看到：选择的结束位置在移动, 但是选择的锚点-起始位置不会改变.</p>
+<p>用户可能会从左到右 (按文字方向) 或从右到左 (按文字相反方向) 进行选择。focusNode 就是用户选择时最后停下来所处的元素节点。当你同时按下 shift 键和任何一个方向键来改变选择时，你就能看到：选择的结束位置在移动，但是选择的锚点 - 起始位置不会改变。</p>
 
-<h2 id="Syntax" name="Syntax"><font><font>语法</font></font></h2>
+<h2 id="Syntax" name="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>node</em> =<em> sel</em>.focusNode
 </pre>
@@ -38,58 +38,10 @@ translation_of: Web/API/Selection/focusNode
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基础特性支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础特性支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Selection.focusNode")}}
 
 <h2 id="See_also" name="See_also">参考</h2>
 
 <ul>
- <li>{{domxref("Selection")}}, Selection接口规范.</li>
+ <li>{{domxref("Selection")}}, Selection 接口规范。</li>
 </ul>

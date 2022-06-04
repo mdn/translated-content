@@ -5,11 +5,11 @@ translation_of: Web/API/CSSSupportsRule
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>该 <strong><code>CSSSupportsRule</code></strong> 接口描述了代表一个 CSS 对象{{cssxref("@supports")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. 它实现了 {{domxref("CSSConditionRule")}} 接口, 因此 {{domxref("CSSRule指定规则")}} 和{{domxref("CSSGroupingRule")}} 用一个类型值接口 <code>12</code> (<code>CSSRule.SUPPORTS_RULE</code>).</p>
+<p>该 <strong><code>CSSSupportsRule</code></strong> 接口描述了代表一个 CSS 对象{{cssxref("@supports")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. 它实现了 {{domxref("CSSConditionRule")}} 接口，因此 {{domxref("CSSRule 指定规则")}} 和{{domxref("CSSGroupingRule")}} 用一个类型值接口 <code>12</code> (<code>CSSRule.SUPPORTS_RULE</code>).</p>
 
 <h2 id="句法">句法</h2>
 
-<p>该语法使用所描述的<a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 格式.</p>
+<p>该语法使用所描述的<a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 格式。</p>
 
 <pre class="syntaxbox">接口 CSSSupportsRule : CSSConditionRule {
 }
@@ -17,84 +17,19 @@ translation_of: Web/API/CSSSupportsRule
 
 <h2 id="性能">性能</h2>
 
-<p>作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule指定规则")}} and和一{{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> 还实现了，这些接口的属性。它没有特定的属性</p>
+<p>作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule 指定规则")}} and 和一{{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> 还实现了，这些接口的属性。它没有特定的属性</p>
 
 <h2 id="方法">方法</h2>
 
-<p>作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule指定规则")}}和{{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> 也实现了这个接口的方法。他没有具体属性的方法</p>
+<p>作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule 指定规则")}}和{{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> 也实现了这个接口的方法。他没有具体属性的方法</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#the-csssupportsrule-interface', 'CSSSupportsRule') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="游览器兼容性">游览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("17")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("17")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 作为前叠这规则是没有意义的 <code>CSSSupportsRule</code> 只支持，如果用户可以通过设置配置的值i<code>layout.css.supports-rule.enable</code> 的真实.</p>
-
-<p>从Firefox 17到 Firefox 19 在内, <code>CSSSupportsRule</code> 直接来自 <code>CSSRule</code> 的方法和属性定义在 <code>CSSConditionRule</code>现在的水平，在 <code>CSSSupportsRule</code>定义.该规范草案改变了，并已更新了 Firefox 20 was updated.</p>
+{{Compat("api.CSSSupportsRule")}}
 
 <h2 id="See_also">See also</h2>
 

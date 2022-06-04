@@ -16,7 +16,9 @@ L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction
 
 ## Syntaxe
 
-    break [label];
+```js
+break [label];
+```
 
 - `label` {{optional_inline}}
   - : Un identifiant optionnel associé avec l'étiquette (_label_) de l'instruction. Si l'instruction à terminer n'est pas une boucle ou une instruction {{jsxref("Instructions/switch", "switch")}}, ce paramètre est nécessaire.
@@ -115,9 +117,9 @@ bloc_1: {
 | ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------- |
 | {{SpecName('ES1')}}                                                                 | {{Spec2('ES1')}}         | Définition initiale. Version non étiquetée. |
 | {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Version étiquetée ajoutée.                  |
-| {{SpecName('ES5.1', '#sec-12.8', 'instruction break')}}                 | {{Spec2('ES5.1')}}     |                                             |
-| {{SpecName('ES6', '#sec-break-statement', 'instruction break')}}     | {{Spec2('ES6')}}         |                                             |
-| {{SpecName('ESDraft', '#sec-break-statement', 'Break statement')}} | {{Spec2('ESDraft')}} |                                             |
+| {{SpecName('ES5.1', '#sec-12.8', 'instruction break')}}                 | {{Spec2('ES5.1')}}     |                                             |
+| {{SpecName('ES6', '#sec-break-statement', 'instruction break')}}     | {{Spec2('ES6')}}         |                                             |
+| {{SpecName('ESDraft', '#sec-break-statement', 'Break statement')}} | {{Spec2('ESDraft')}} |                                             |
 
 ## Compatibilité des navigateurs
 

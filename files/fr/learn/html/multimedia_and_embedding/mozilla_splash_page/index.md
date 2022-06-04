@@ -35,7 +35,7 @@ Dans cette partie, nous testerons vos connaissances des quelques techniques abor
 
 Pour démarrer cette étude, vous devez aller chercher toutes les images et l'HTML disponibles dans le répertoire [mdn-splash-page-start](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/) sur github. Mettez le contenu du fichier [index.html](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/index.html) dans un fichier appelé `index.html` sur votre disque dur local, dans un nouveau répertoire. Puis copiez [pattern.png](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) dans le même dossier (clic droit sur l'image pour le menu des options).
 
-Allez dans le répertoire [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) chercher les différentes images et faites la même chose; vous aurez peut-être à les enregistrer dans un nouveau dossier pour l'instant, au cas où vous auriez besoin d'en manipuler certaines en utilisant un éditeur graphique avant de pouvoir les utiliser.
+Allez dans le répertoire [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) chercher les différentes images et faites la même chose; vous aurez peut-être à les enregistrer dans un nouveau dossier pour l'instant, au cas où vous auriez besoin d'en manipuler certaines en utilisant un éditeur graphique avant de pouvoir les utiliser.
 
 > **Note :** le fichier HTML en exemple contient un bon nombre de CSS, pour styliser la page. Vous n'avez pas besoin de modifier le CSS, juste l'HTML dans l'élément {{htmlelement("body")}} — tant que vous insérez les bonnes balises, le style sera cohérent.
 
@@ -51,7 +51,7 @@ Avec votre éditeur d'images favori, créez des versions de 400 et 120 px de lar
 - `firefox-addons.jpg`
 - `mozilla-dinosaur-head.png`
 
-Donnez-leur des noms similaires comme :  `firefoxlogo400.png` et `firefoxlogo120.png`.
+Donnez-leur des noms similaires comme :  `firefoxlogo400.png` et `firefoxlogo120.png`.
 
 Continuons avec `mdn.svg`, ces images seront vos icônes pour lier aux ressources externes, contenues dans l'espace`further-info`. Vous ferez aussi un lien vers le logo firefox dans l'en-tête du site. Réservez toutes ces copies dans le même dossier que l'`index.html`.
 
@@ -65,7 +65,7 @@ A l'intèrieur de l'élément {{htmlelement("header")}} , ajoutez un élément {
 
 ### Ajouter une vidéo dans le contenu principal de l'article
 
-Dans l'élément {{htmlelement("article")}}  (juste en-dessous de la balise d'ouverture), intégrez la vidéo YouTube trouvée ici : <https://www.youtube.com/watch?v=ojcNcvb1olg>, en utilisant les outils YouTube appropriés pour générer le code. La vidéo devra faire 400px de large.
+Dans l'élément {{htmlelement("article")}}  (juste en-dessous de la balise d'ouverture), intégrez la vidéo YouTube trouvée ici : <https://www.youtube.com/watch?v=ojcNcvb1olg>, en utilisant les outils YouTube appropriés pour générer le code. La vidéo devra faire 400px de large.
 
 ### Ajouter des images adaptatives aux liens vers les ressources externes
 
@@ -91,7 +91,7 @@ La capture d'écran suivante montre à quoi devrait ressembler la page d'accueil
 
 ## Évaluation
 
-Si vous suivez cette étude en faisant partie d'un programme de cours organisé, vous devriez pouvoir montrer votre travail à votre professeur/mentor pour une correction. Si vous apprenez seul, alors vous pourrez obtenir des informations et des corrections en demandant sur le  [fil de discussion concernant cet exercice](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — On ne gagne rien en trichant !
+Si vous suivez cette étude en faisant partie d'un programme de cours organisé, vous devriez pouvoir montrer votre travail à votre professeur/mentor pour une correction. Si vous apprenez seul, alors vous pourrez obtenir des informations et des corrections en demandant sur le  [fil de discussion concernant cet exercice](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — On ne gagne rien en trichant !
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

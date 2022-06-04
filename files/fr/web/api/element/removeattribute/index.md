@@ -1,41 +1,46 @@
 ---
-title: element.removeAttribute
+title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthodes
-  - Suppression
+browser-compat: api.Element.removeAttribute
 translation_of: Web/API/Element/removeAttribute
 ---
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`removeAttribute` supprime un attribut de l'élément spécifié.
+La méthode **`removeAttribute()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut ayant le nom indiqué de l'élément.
 
 ## Syntaxe
 
-    element.removeAttribute(nomAttribut);
+```js
+element.removeAttribute(nomAttribut);
+```
 
-- `nomAttribut` est une chaîne de caractères représentant le nom de l'attribut à enlever de l'_element_ .
+### Paramètres
 
-## Exemple
+- `nomAttribut`
+  - : Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
 
-    // avant : <div id="div1" align="left" width="200">
-    document.getElementById("div1").removeAttribute("align");
-    // maintenant : <div id="div1" width="200">
+### Valeur de retour
 
-## Notes
+`undefined`.
 
-Il vaut mieux utiliser `removeAttribute` plutôt que de définir la valeur de l'attribut à `null` avec [setAttribute](fr/DOM/element.setAttribute).
+## Notes d'utilisation
 
-Tenter d'effacer un attribut que l'élément ne possède pas ne provoque aucune exception.
-
-`removeAttribute` ne renvoie rien, donc vous ne pouvez supprimer plusieurs attributs par enchaînement de cette méthode.
+`removeAttribute()` devrait être utilisée plutôt que de passer la valeur de l'attribut à `null` (que ce soit directement ou en appelant [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute). De nombreux attributs ne fonctionneront pas comme espéré si on les passe à `null`.
 
 {{ DOMAttributeMethods() }}
 
-## Spécification
+## Exemple
 
-- [DOM Level 2 Core : removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-6D6AC0F9) (non normative)
+```js
+// Si initialement on a : <div id="div1" align="left" width="200px">
+document.getElementById("div1").removeAttribute("align");
+// Après on aura : <div id="div1" width="200px">
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

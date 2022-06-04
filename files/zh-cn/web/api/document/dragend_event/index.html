@@ -9,7 +9,7 @@ tags:
   - 参考
 translation_of: Web/API/Document/dragend_event
 ---
-<div>拖放事件在拖放操作结束时触发(通过释放鼠标按钮或单击escape键)。</div>
+<div>拖放事件在拖放操作结束时触发 (通过释放鼠标按钮或单击 escape 键)。</div>
 
 <h2 id="基本信息">基本信息</h2>
 
@@ -87,7 +87,7 @@ translation_of: Web/API/Document/dragend_event
   <tr>
    <td><code>currentTarget</code> {{readonlyInline}}</td>
    <td>EventTarget</td>
-   <td>绑定事件监听的DOM结点</td>
+   <td>绑定事件监听的 DOM 结点</td>
   </tr>
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
@@ -133,32 +133,32 @@ translation_of: Web/API/Document/dragend_event
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
    <td>
-    <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">当事件触发的时候，如果<strong>Ctrl</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></span></font></p>
+    <p>当事件触发的时候，如果<strong>Ctrl</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></p>
    </td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
    <td>
-    <p><font face="consolas, Liberation Mono, courier, monospace">当事件触发的时候，如果<strong>Shift</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></font></p>
+    <p>当事件触发的时候，如果<strong>Shift</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></p>
    </td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><font face="consolas, Liberation Mono, courier, monospace">当事件触发的时候，如果<strong>Alt</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></font></td>
+   <td>当事件触发的时候，如果<strong>Alt</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><font face="consolas, Liberation Mono, courier, monospace">当事件触发的时候，如果<strong>M</strong><strong>eta</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></font></td>
+   <td>当事件触发的时候，如果<strong>M</strong><strong>eta</strong>键是按下的，这个值就是<strong>true</strong>,否则就是<strong>false</strong></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="示例：dropzone">示例：dropzone</h2>
 
-<p id="Example">{{page('/zh-CN/docs/Web/Events/dragstart', '示例：dropzone')}}</p>
+<p>{{page('/zh-CN/docs/Web/Events/dragstart', '示例：dropzone')}}</p>
 
 <h2 id="规范">规范</h2>
 
@@ -184,61 +184,7 @@ translation_of: Web/API/Document/dragend_event
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[1]</sup></td>
-   <td>10</td>
-   <td>12</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatIE("10")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] In Gecko, <code>dragend</code> is not dispatched if the source node is moved or removed during the drag (e.g. on <code>drop</code> or <code>dragover</code>). See {{bug("460801")}}.</p>
+{{Compat("api.Document.dragend_event")}}
 
 <h2 id="相关">相关</h2>
 

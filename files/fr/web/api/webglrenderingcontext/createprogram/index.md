@@ -23,11 +23,11 @@ Aucun.
 
 ### Valeur retournée
 
-Un objet {{domxref("WebGLProgram")}} qui est une combinaison de deux {{domxref("WebGLShader")}}s compilés, constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ceux-ci sont ensuite liés en un programme utilisable.
+Un objet {{domxref("WebGLProgram")}} qui est une combinaison de deux {{domxref("WebGLShader")}}s compilés, constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ceux-ci sont ensuite liés en un programme utilisable.
 
 ## Exemples
 
-### Création d'un programme WebGL
+### Création d'un programme WebGL
 
 ```js
 var programme = gl.createProgram();
@@ -44,7 +44,7 @@ if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
 }
 ```
 
-Voir {{domxref ("WebGLShader")}} pour plus d'informations sur la création du `shaderDeSommet` et du `shaderDeFragment` dans l'exemple ci-dessus.
+Voir {{domxref ("WebGLShader")}} pour plus d'informations sur la création du `shaderDeSommet` et du `shaderDeFragment` dans l'exemple ci-dessus.
 
 ## Spécifications
 

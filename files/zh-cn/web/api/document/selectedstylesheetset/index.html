@@ -3,7 +3,7 @@ title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 translation_of: Web/API/Document/selectedStyleSheetSet
 ---
-<p>{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}</p>
+<p>{{ APIRef("DOM") }}</p>
 
 <p>表示当前使用的样式表集合的名称</p>
 
@@ -15,11 +15,11 @@ document.selectedStyleSheet = <em>newStyleSheetSet</em>
 
 </pre>
 
-<p>返回时，currentStyleSheetSet表示当前使用的样式表集合的名称。 你也可以使用这个属性设置当前样式表集。</p>
+<p>返回时，currentStyleSheetSet 表示当前使用的样式表集合的名称。 你也可以使用这个属性设置当前样式表集。</p>
 
-<p>设置这个属性的值相当于用<code>currentStyleSheetSet的值</code>调用 {{ domxref("document.enableStyleSheetsForSet()") }}，然后将<code>lastStyleSheetSet</code> 的值设置为该值。</p>
+<p>设置这个属性的值相当于用<code>currentStyleSheetSet 的值</code>调用 {{ domxref("document.enableStyleSheetsForSet()") }}，然后将<code>lastStyleSheetSet</code> 的值设置为该值。</p>
 
-<div class="note"><strong>注意:</strong> 这个属性的值是实时的，直接更改样式表中的<code>disabled</code>属性将会影响这个属性的值.</div>
+<div class="note"><strong>注意：</strong> 这个属性的值是实时的，直接更改样式表中的<code>disabled</code>属性将会影响这个属性的值。</div>
 
 <h2 id="Example" name="Example">示例</h2>
 
@@ -28,7 +28,7 @@ document.selectedStyleSheet = <em>newStyleSheetSet</em>
 document.selectedStyleSheetSet = "Some other style sheet";
 </pre>
 
-<div class="note"><strong>注意:</strong> 这个例子会帮助你理解设置<code>selectedStyleSheetSet</code> 的值和调用{{ domxref("document.enableStyleSheetsForSet()") }}之间行为的差异.</div>
+<div class="note"><strong>注意：</strong> 这个例子会帮助你理解设置<code>selectedStyleSheetSet</code> 的值和调用{{ domxref("document.enableStyleSheetsForSet()") }}之间行为的差异。</div>
 
 <h2 id="See_also" name="See_also">参看</h2>
 

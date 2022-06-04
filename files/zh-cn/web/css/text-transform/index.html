@@ -11,9 +11,9 @@ translation_of: Web/CSS/text-transform
 
 <h2 id="概要"><strong>概要</strong></h2>
 
-<p><strong>text-transform</strong> CSS属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。</p>
+<p><strong>text-transform</strong> CSS 属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。</p>
 
-<p>text-transform属性考虑特定于语言的案例映射规则，如：</p>
+<p>text-transform 属性考虑特定于语言的案例映射规则，如：</p>
 
 <ul>
  <li>
@@ -39,7 +39,7 @@ translation_of: Web/CSS/text-transform
  <li>in Gaelic (<code>ga</code>), a prefix letter remains in lowercase when the base initial is capitalised, so in this example the <code>h-</code> should not be capitalized: <code>text-transform: uppercase</code> will change <code>Meud na h-aplacaid</code> to <code>MEUD NA H-APLACAID</code> which violates the locale orthographic rules, as it ought to be <code>MEUD NA h-APLACAID.</code></li>
 </ul>
 
-<p>语言由 lang HTML属性或 <code>xml:lang</code>  XML属性定义。</p>
+<p>语言由 lang HTML 属性或 <code>xml:lang</code>  XML 属性定义。</p>
 
 <p>对于这些特定情况的支持因浏览器而异，因此请检查<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform$edit#Browser_compatibility">浏览器兼容性表</a>。 </p>
 
@@ -64,7 +64,7 @@ text-transform: unset;</code></pre>
 <dl>
  <dt><code>capitalize</code></dt>
  <dd>
- <p>这个关键字强制每个单词的首字母转换为大写。其他的字符保留不变（它们写在元素里的文本保留原始大小写）。字母是Unicode字符集或者数字里定义的字符 {{experimental_inline}}；因此单词开头的任何标点符号或者特殊符号将会被忽略。</p>
+ <p>这个关键字强制每个单词的首字母转换为大写。其他的字符保留不变（它们写在元素里的文本保留原始大小写）。字母是 Unicode 字符集或者数字里定义的字符 {{experimental_inline}}；因此单词开头的任何标点符号或者特殊符号将会被忽略。</p>
 
  <p>Authors should not expect <code>capitalize</code> to follow language-specific titlecasing conventions (such as skipping articles in English).</p>
  </dd>
@@ -124,7 +124,7 @@ strong { float: right; }</code></pre>
 
 <p>{{ EmbedLiveSample('capitalize_(Punctuation)', '100%', '100px') }}</p>
 
-<h3 id="capitalize_(Symbols)" name="capitalize_(Symbols)">首字母大写(符号)</h3>
+<h3 id="capitalize_(Symbols)" name="capitalize_(Symbols)">首字母大写 (符号)</h3>
 
 <pre>&lt;p&gt;Initial String &lt;strong&gt;<code>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: capitalize <code>&lt;strong&gt;</code>&lt;span&gt;<code>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>&lt;/p&gt;</pre>
 
@@ -137,7 +137,7 @@ strong { float: right; }</code></pre>
 
 <p>{{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}</p>
 
-<h3 id="capitalize_(Dutch_ij_digraph)" name="capitalize_(Dutch_ij_digraph)">首字母大写 (荷兰ij有向图)</h3>
+<h3 id="capitalize_(Dutch_ij_digraph)" name="capitalize_(Dutch_ij_digraph)">首字母大写 (荷兰 ij 有向图)</h3>
 
 <pre>&lt;p&gt;Initial String &lt;strong lang="nl"&gt;<code>The Dutch word: "ijsland" starts with a digraph.</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: capitalize <code>&lt;strong&gt;</code>&lt;span lang="nl"&gt;<code>The Dutch word: "ijsland" starts with a digraph.</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
 
@@ -163,7 +163,7 @@ strong { float: right; }</code></pre>
 
 <p>{{ EmbedLiveSample('uppercase_(General)', '100%', '100px') }}</p>
 
-<h3 id="uppercase_(Greek_Vowels)" name="uppercase_(Greek_Vowels)">大写字母(希腊元音)</h3>
+<h3 id="uppercase_(Greek_Vowels)" name="uppercase_(Greek_Vowels)">大写字母 (希腊元音)</h3>
 
 <pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</code><code>&lt;/strong&gt; &lt;/p&gt;</code>&lt;p&gt;text-transform: uppercase <code>&lt;strong&gt;</code>&lt;span&gt;<code>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
 
@@ -253,182 +253,4 @@ strong { width: 100%; float: right; }</code></pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性 </h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>capitalize</code>(CSS3 version)</td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("14")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td><code>full-size-kana</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>full-width</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("19")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>ß</code> → <code>SS</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>i</code> → <code>İ</code> and <code>ı</code>→ <code>I</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("14")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Dutch <code>IJ</code>digraph</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("14")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Greek accented letters</td>
-   <td>30</td>
-   <td>{{CompatGeckoDesktop("15")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>Σ</code> → <code>σ</code> or word-final <code>ς</code></td>
-   <td>30</td>
-   <td>{{CompatGeckoDesktop("14")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6.0</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile("1")}}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>capitalize</code>(CSS3 version)</td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoMobile("14")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td><code>full-size-kana</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>full-width</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("19")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>ß</code> → <code>SS</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("1")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>i</code> → <code>İ</code> and <code>ı</code>→ <code>I</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Dutch <code>IJ</code>digraph</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Greek accented letters</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>Σ</code> → <code>σ</code> or word-final <code>ς</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] The <code>capitalize</code> keyword was under-specified in CSS 1 and CSS 2.1. There were differences between browsers in the way the first letter was calculated (Firefox considered - and _ as letters, but not the others. Both Webkit and Gecko incorrectly considered letter-based symbols like <code>ⓐ</code> to be real letters. Internet Explorer 9 was the closest to the CSS 2 definition, but with some weird cases). By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The <code>capitalize</code> line in the browser compatibility table contains the version the different engines started to support this now precisely defined behavior.</p>
-
-<p> </p>
-
-<p>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////</p>
-
-<p> </p>
+{{Compat("css.properties.text-transform")}}

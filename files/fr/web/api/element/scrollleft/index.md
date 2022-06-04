@@ -22,7 +22,7 @@ _sLeft_ est un entier représentant le nombre de pixels dont _element_ a été d
     // Définit le nombre de pixels défilés
     element.scrollLeft = 10;
 
-**scrollLeft** peut être n'importe quelle valeur entière, cependant :
+**scrollLeft** peut être n'importe quelle valeur entière, cependant&nbsp;:
 
 - Si l'élément ne peut pas défiler (par exemple parce qu'il ne déborde pas), `scrollLeft` est mis à 0.
 - S'il reçoit une valeur inférieure à 0, `scrollLeft` est mis à 0.

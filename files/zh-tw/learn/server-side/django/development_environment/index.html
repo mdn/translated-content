@@ -7,17 +7,17 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}</div>
 
-<p class="summary"><font><font>現在，你知道什麼是Django。</font></font><font><font>那麼我們將向你展示如何在Windows，Linux（Ubuntu）和Mac OSX上設置和測試Django開發環境—無論你常用哪種操作系統，本文應該都能讓你開始開發Django應用程序。</font></font></p>
+<p>現在，你知道什麼是Django。那麼我們將向你展示如何在Windows，Linux（Ubuntu）和Mac OSX上設置和測試Django開發環境—無論你常用哪種操作系統，本文應該都能讓你開始開發Django應用程序。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">先備知識:</th>
-   <td><font>知道如何打開終端或命令行。</font><font>了解如何在計算機的操作系統上安裝軟件包。</font></td>
+   <td>知道如何打開終端或命令行。了解如何在計算機的操作系統上安裝軟件包。</td>
   </tr>
   <tr>
    <th scope="row">目標:</th>
-   <td><span style='background-color: #ffe8d4; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>在你的計算機操作系統上運行Django（2.0）開發環境。</span></td>
+   <td>在你的計算機操作系統上運行Django（2.0）開發環境。</td>
   </tr>
  </tbody>
 </table>
@@ -34,31 +34,31 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>還有其他外部工具, 它們構成了開發環境的一部分, 我們將不再贅述。這些包括 文本編輯器 <a href="/en-US/docs/Learn/Common_questions/Available_text_editors">text editor</a> 或編輯代碼的 IDE，以及像 <a href="https://git-scm.com/">Git </a>這樣的源代碼控制管理工具，用於安全地管理不同版本的代碼。我們假設你已經安裝了一個文本編輯器。</p>
 
-<h3 id="什麼是Django設置選項"><span class="highlight-span" style="background-color: #333333; border: 0px; color: #ffffff; font-style: normal !important; font-weight: 400; line-height: 1.25; margin: 0px; padding: 0px 4px 0px 40px;"><font><font>什麼是Django設置選項?</font></font></span></h3>
+<h3 id="什麼是Django設置選項">什麼是Django設置選項?</h3>
 
-<p><font>Django 如何在安裝和配置方面非常靈活。</font><font>Django可以：</font></p>
+<p>Django 如何在安裝和配置方面非常靈活。Django可以：</p>
 
 <ul>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>安裝在不同的操作系統上。</font></font></li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>可以一起使用Python 3 和Python 2.</font></font></li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>通過Python包索引（PyPi）安裝，和在許多情況下主機的包管理器應用程序。</font></font></li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>配置為使用幾個數據庫之一，可能需要單獨安裝和配置。</font></font></li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>運行在主系統Python環境中或在單獨的Python虛擬環境中運行。</font></font></li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">安裝在不同的操作系統上。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">可以一起使用Python 3 和Python 2.</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">通過Python包索引（PyPi）安裝，和在許多情況下主機的包管理器應用程序。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">配置為使用幾個數據庫之一，可能需要單獨安裝和配置。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">運行在主系統Python環境中或在單獨的Python虛擬環境中運行。</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>每個選項都需要略微不同的配置和設置。</font><font>以下小節解釋了你的一些選擇。</font><font>對於本文的其餘部分，我們將介紹Django在少見的操作系統上的設置，考量該模塊的其餘部分。</font></font></p>
+<p>每個選項都需要略微不同的配置和設置。以下小節解釋了你的一些選擇。對於本文的其餘部分，我們將介紹Django在少見的操作系統上的設置，考量該模塊的其餘部分。</p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>注意</font></font></strong><font><font>: 其他可能的安裝選項在官方Django文檔中介紹。</font></font><a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83#furtherreading" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212);'><font><font>相應文件點擊這裡</font></font></a><font><font>。</font></font></p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong>: 其他可能的安裝選項在官方Django文檔中介紹。<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83#furtherreading" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212);'>相應文件點擊這裡</a>。</p>
 </div>
 
-<h4 id="支持哪些操作系統" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>支持哪些操作系統?</font></font></h4>
+<h4 id="支持哪些操作系統" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>支持哪些操作系統?</h4>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>幾乎任何可以運行Python編程語言的機器可以運行Django 網絡應用程序：Windows，Mac OSX，Linux/Unix，Solaris，僅舉幾例。</font><font>幾乎任何計算機都應該在開發過程中運行Django所需的性能。</font></font></p>
+<p>幾乎任何可以運行Python編程語言的機器可以運行Django 網絡應用程序：Windows，Mac OSX，Linux/Unix，Solaris，僅舉幾例。幾乎任何計算機都應該在開發過程中運行Django所需的性能。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>在本文中。</font><font>我們將提供Windows，Mac OS X 和Linux/Unix的說明。</font></font></p>
+<p>在本文中。我們將提供Windows，Mac OS X 和Linux/Unix的說明。</p>
 
-<h4 id="你應該使用什麼版本的Python" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>你應該使用什麼版本的Python?</font></font></h4>
+<h4 id="你應該使用什麼版本的Python" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>你應該使用什麼版本的Python?</h4>
 
 <p>我們建議您使用最新版本 - 在編寫本文時，這是Python 3.7。</p>
 
@@ -68,29 +68,29 @@ translation_of: Learn/Server-side/Django/development_environment
 <p><strong>注意</strong>: Python 2.7不能與Django 2.0一起使用（Django 1.11.x系列是最後一個支持Python 2.7的系列）。</p>
 </div>
 
-<h4 id="我們在哪裡下載Django" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>我們在哪裡下載Django?</font></font></h4>
+<h4 id="我們在哪裡下載Django" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>我們在哪裡下載Django?</h4>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>有三個地方可以下載Django:</font></font></p>
+<p>有三個地方可以下載Django:</p>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Python包含庫(PyPi),使用</font></font><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><font><font>pip</font></font></strong><font><font>工具.這是獲取最新穩定版本的Django的最佳方式.</font></font></li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>使用計算機軟件包管理器中的版本。</font><font>與操作系統捆綁在一起的Django的分發提供了一種熟悉的安裝機制。</font><font>請注意，打包版本可能相當舊，只能安裝到系統Python 環境中（可能不是你想要的）。</font></font></li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>可以從源代碼獲取並安裝的最新版本的Python。</font><font>這不是推薦給初學者，但是當你準備好開始貢獻給Django本身的時候，它是必需的。</font></font></li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">Python包含庫(PyPi),使用<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">pip</strong>工具.這是獲取最新穩定版本的Django的最佳方式.</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">使用計算機軟件包管理器中的版本。與操作系統捆綁在一起的Django的分發提供了一種熟悉的安裝機制。請注意，打包版本可能相當舊，只能安裝到系統Python 環境中（可能不是你想要的）。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">可以從源代碼獲取並安裝的最新版本的Python。這不是推薦給初學者，但是當你準備好開始貢獻給Django本身的時候，它是必需的。</li>
 </ul>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>本文介紹如何從PyPi安裝Django，從獲得最新的穩定版本。</font></font></p>
+<p>本文介紹如何從PyPi安裝Django，從獲得最新的穩定版本。</p>
 
-<h4 id="哪個數據庫" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>哪個數據庫?</font></font></h4>
+<h4 id="哪個數據庫" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>哪個數據庫?</h4>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>Django支持四個主要數據庫（PostgreSQL，MySQL，Oracle和SQLite），還有一些社區庫，可以為其他流行的SQL和NOSQL數據庫，提供不同級別的支持。</font><font>我們建議你為生產和開發，選擇相同的數據庫（儘管Django使用其對象關係映射器（ORM）抽像出許多數據庫差異，但是仍然存在可以避免的</font></font><a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/databases/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;"><font><font>潛在問題</font></font></a><font><font><span> </span>).</font></font></p>
+<p>Django支持四個主要數據庫（PostgreSQL，MySQL，Oracle和SQLite），還有一些社區庫，可以為其他流行的SQL和NOSQL數據庫，提供不同級別的支持。我們建議你為生產和開發，選擇相同的數據庫（儘管Django使用其對象關係映射器（ORM）抽像出許多數據庫差異，但是仍然存在可以避免的<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/databases/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">潛在問題</a> ).</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>對於本文（和本模塊的大部分），我們將使用將數據存放在文件中的SQLite數據庫。</font><font>SQLite旨在用作輕量級數據庫，不能支持高級並發。</font><font>然而，這確實是唯讀的應用程序的絕佳選擇。</font></font></p>
+<p>對於本文（和本模塊的大部分），我們將使用將數據存放在文件中的SQLite數據庫。SQLite旨在用作輕量級數據庫，不能支持高級並發。然而，這確實是唯讀的應用程序的絕佳選擇。</p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>注意</font></font></strong><font><font><span> </span>:當你使用標準工具（django-admin）啟動你的網站項目時，Django將默認配置為使用SQLite。</font><font>用來入門，這是一個很好的選擇，因為它不需要額外的配置和設置。</font></font></p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :當你使用標準工具（django-admin）啟動你的網站項目時，Django將默認配置為使用SQLite。用來入門，這是一個很好的選擇，因為它不需要額外的配置和設置。</p>
 </div>
 
-<h4 id="安裝到整個本機系統還是Python虛擬環境中" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>安裝到整個本機系統還是Python虛擬環境中?</font></font></h4>
+<h4 id="安裝到整個本機系統還是Python虛擬環境中" style='font-style: normal; line-height: 1.2; margin: 30px 0px 20px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 1.375rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>安裝到整個本機系統還是Python虛擬環境中?</h4>
 
 <p>安裝Python3時，您將獲得一個由所有Python3代碼共享的單一全局環境。雖然您可以在環境中，安裝任何您喜歡的Python軟件包，但您一次只能安裝每個軟件包的一個特定版本。</p>
 
@@ -106,81 +106,81 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <h2 id="安裝_Python_3">安裝 Python 3</h2>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>為了使用Django，你需要安裝Python3.同樣你需要</font></font><a class="external external-icon" href="https://pypi.python.org/pypi" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;"><font><font>Python包管理工具</font></font></a><font><font><span> </span>  —<span> </span></font></font><em><font><font>pip3</font></font></em><font><font><span> </span>—用來管理(安裝，更新和刪除)Django和其他Python應用程序使用的Python軟件包／庫。</font></font></p>
+<p>為了使用Django，你需要安裝Python3.同樣你需要<a class="external external-icon" href="https://pypi.python.org/pypi" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">Python包管理工具</a>   — <em>pip3</em> —用來管理(安裝，更新和刪除)Django和其他Python應用程序使用的Python軟件包／庫。</p>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>本書簡要說明如何根據需要檢查什麼版本，並根據需要安裝新版本，適用於</font></font><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><font><font>Ubuntu Linux 16.04, Mac OS X, and Windows 10。</font></font></strong></p>
+<p>本書簡要說明如何根據需要檢查什麼版本，並根據需要安裝新版本，適用於<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Ubuntu Linux 16.04, Mac OS X, and Windows 10。</strong></p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>注意</font></font></strong><font><font><span> </span>:根據你的平台,您還可以從操作系統自己的軟件包管理器或其他機制安裝Python / pip。</font><font>對於大多數平台，您可以從</font></font><a class="external external-icon" href="https://www.python.org/downloads/" rel="noopener" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; background-color: rgb(255, 243, 212);'><font><font>https://www.python.org/downloads/</font></font></a><font><font>下載所需的安裝文件，並使用適當的平台特定方法進行安裝。</font></font></p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :根據你的平台,您還可以從操作系統自己的軟件包管理器或其他機制安裝Python / pip。對於大多數平台，您可以從<a class="external external-icon" href="https://www.python.org/downloads/" rel="noopener" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; background-color: rgb(255, 243, 212);'>https://www.python.org/downloads/</a>下載所需的安裝文件，並使用適當的平台特定方法進行安裝。</p>
 </div>
 
 <h3 id="Ubuntu_18.04">Ubuntu 18.04</h3>
 
 <p>Ubuntu Linux 18.04 LTS默認包含Python 3.6.5。您可以通過在bash終端中運行以下命令來確認：</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- Python 3.6.5</span></pre>
+<pre class="brush: bash">python3 -V
+ Python 3.6.5</pre>
 
-<p><font><font>然而，在默認情況下，為Python 3（包括Django）安裝軟件包的Python包管理工具</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>不可用。</font><font>你</font></font></strong><font><font>可以使用以下方式將</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>pip3</font></font></strong><font><font>安裝在</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>bash</font></font></strong><font><font>終端</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>：</font></font></strong></p>
+<p>然而，在默認情況下，為Python 3（包括Django）安裝軟件包的Python包管理工具<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>不可用。你</strong>可以使用以下方式將<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>pip3</strong>安裝在<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>bash</strong>終端<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>：</strong></p>
 
 <pre class="brush: bash">sudo apt install python3-pip
 </pre>
 
 <h3 id="macOS_X">macOS X</h3>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Mac OS X "El Capitan" 不包括Python 3.你可以通過在bash終端中運行一下命令來確認：</span></p>
+<p>Mac OS X "El Capitan" 不包括Python 3.你可以通過在bash終端中運行一下命令來確認：</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- </span>-bash: python3: command not found</pre>
+<pre class="brush: bash">python3 -V
+ -bash: python3: command not found</pre>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>你可以輕鬆從</font></font><a class="external external-icon" href="https://www.python.org/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;"><font><font>python.org</font></font></a><font><font>安裝Python 3（以及pip3工具）:</font></font></p>
+<p>你可以輕鬆從<a class="external external-icon" href="https://www.python.org/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">python.org</a>安裝Python 3（以及pip3工具）:</p>
 
 <ol style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; list-style-type: decimal; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>下載所需的安裝程序:</font></font>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">下載所需的安裝程序:
 
   <ol style="font-style: normal !important; margin: 0px; padding: 6px 0px 0px 40px; border: 0px; list-style-type: decimal; max-width: 42rem;">
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>點擊</font></font><a class="external external-icon" href="https://www.python.org/downloads/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;"><font><font>https://www.python.org/downloads/</font></font></a></li>
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>選擇</font></font><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><font><font>Download Python 3.7.0</font></font></strong><font><font>按鈕(確切的版本號可能不同).</font></font></li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">點擊<a class="external external-icon" href="https://www.python.org/downloads/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">https://www.python.org/downloads/</a></li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">選擇<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Download Python 3.7.0</strong>按鈕(確切的版本號可能不同).</li>
   </ol>
  </li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>使用Finder找到文件，然後雙擊包文件。</font><font>遵循安裝提示。</font></font><br>
-  <font><font>（一般能拖拽就拖拽）</font></font></li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">使用Finder找到文件，然後雙擊包文件。遵循安裝提示。<br>
+  （一般能拖拽就拖拽）</li>
 </ol>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>你現在可以檢查Pyhon 3來確認成功安裝，如下所示:</font></font></p>
+<p>你現在可以檢查Pyhon 3來確認成功安裝，如下所示:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- Python 3.7.0</span>
+<pre class="brush: bash">python3 -V
+ Python 3.7.0
 </pre>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>你也可以通過列出可用的軟件包來檢查pip3是否安裝:</span></p>
+<p>你也可以通過列出可用的軟件包來檢查pip3是否安裝:</p>
 
 <pre class="brush: bash">pip3 list</pre>
 
 <h3 id="Windows_10">Windows 10</h3>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>windows默認不安裝,但你可以從</font></font><a class="external external-icon" href="https://www.python.org/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;"><font><font>python.org</font></font></a><font><font>輕鬆安裝它（以及pip3工具）：</font></font></p>
+<p>windows默認不安裝,但你可以從<a class="external external-icon" href="https://www.python.org/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">python.org</a>輕鬆安裝它（以及pip3工具）：</p>
 
 <ol style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; list-style-type: decimal; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>下載所需版本:</font></font>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">下載所需版本:
 
   <ol style="font-style: normal !important; margin: 0px; padding: 6px 0px 0px 40px; border: 0px; list-style-type: decimal; max-width: 42rem;">
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>點擊</font></font><a class="external external-icon" href="https://www.python.org/downloads/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;"><font><font>https://www.python.org/downloads/</font></font></a></li>
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>選擇</font></font><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;"><font><font>Download Python 3.7.0 </font></font></strong><font><font>按鈕(確切的版本號可能不同).</font></font></li>
-   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>通過雙擊下載的文件並按照提示安裝Python</font></font></li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">點擊<a class="external external-icon" href="https://www.python.org/downloads/" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">https://www.python.org/downloads/</a></li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">選擇<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">Download Python 3.7.0 </strong>按鈕(確切的版本號可能不同).</li>
+   <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">通過雙擊下載的文件並按照提示安裝Python</li>
   </ol>
  </li>
 </ol>
 
-<p style='font-style: normal; margin: 0px 0px 24px; padding: 0px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'><font><font>你可以通過在命令提示符中輸入以下文本來驗證是否安裝了Python:</font></font></p>
+<p>你可以通過在命令提示符中輸入以下文本來驗證是否安裝了Python:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">py -3 -V
- Python 3.7.0</span>
+<pre class="brush: bash">py -3 -V
+ Python 3.7.0
 </pre>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>默認情況下，Windows安裝程序包含pip3（python包管理器，你可以列出安裝的軟件包）:</span></p>
+<p>默認情況下，Windows安裝程序包含pip3（python包管理器，你可以列出安裝的軟件包）:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">pip3 list</span>
+<pre class="brush: bash">pip3 list
 </pre>
 
 <div class="note">
@@ -329,7 +329,7 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 <pre class="brush: bash">pip3 install django
 </pre>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>您可以通過運行以下命令來測試Django是否安裝（這只是測試Python可以找到Django模塊）：</span></p>
+<p>您可以通過運行以下命令來測試Django是否安裝（這只是測試Python可以找到Django模塊）：</p>
 
 <pre class="brush: bash"># Linux/macOS X
 python3 -m django --version
@@ -347,23 +347,23 @@ py -3 -m django --version
 在Windows中，Python 3腳本通過在命令前面加上<code>py -3</code>來啟動，儘管這可能會因具體安裝而異。如果遇到任何命令問題，請嘗試省略<code>-3</code>修飾符。在Linux / macOS X中，命令是<code>python3</code>。</div>
 
 <div class="warning">
-<p><font>重要提示：本教程的其餘部分，使用Linux命令來調用Python 3（python3）。</font><font>如果您在Windows上工作，只需將此前綴替換為：<code> py -3</code></font></p>
+<p>重要提示：本教程的其餘部分，使用Linux命令來調用Python 3（python3）。如果您在Windows上工作，只需將此前綴替換為：<code> py -3</code></p>
 </div>
 
-<h2 id="測試你的安裝"><font><font>測試你的安裝</font></font></h2>
+<h2 id="測試你的安裝">測試你的安裝</h2>
 
-<p><font><font>上面的測試可以工作，但它不是很有趣。</font><font>一個更有趣的測試是創建一個骨架項目並看到它工作。</font><font>要做到這一點，先在你的命令提示符/終端導航到你想存儲你</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>Django</font></font></strong><font><font>應用程序的位置。</font><font>為您的測試站點創建一個文件夾並瀏覽它。</font></font></p>
+<p>上面的測試可以工作，但它不是很有趣。一個更有趣的測試是創建一個骨架項目並看到它工作。要做到這一點，先在你的命令提示符/終端導航到你想存儲你<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>Django</strong>應用程序的位置。為您的測試站點創建一個文件夾並瀏覽它。</p>
 
 <pre class="brush: bash">mkdir django_test
 cd django_test
 </pre>
 
-<p><font><font>然後，您可以使用<strong>django-admin</strong>工具創建一個名為“<span> </span></font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>mytestsite</font></font></strong><font><font><span> </span>”的新骨架站點，如圖所示。</font><font>創建網站後，您可以導航到文件夾，您將在其中找到管理項目的主要腳本，名為</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>manage.py</font></font></strong><font><font>。</font></font></p>
+<p>然後，您可以使用<strong>django-admin</strong>工具創建一個名為“ <strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>mytestsite</strong> ”的新骨架站點，如圖所示。創建網站後，您可以導航到文件夾，您將在其中找到管理項目的主要腳本，名為<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>manage.py</strong>。</p>
 
 <pre class="brush: bash">django-admin startproject mytestsite
 cd mytestsite</pre>
 
-<p><font><font>我們可以使用</font></font><strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'><font><font>manage.py</font></font></strong><font><font>和 </font></font><code>runserver </code><font><font>命令，從此文件夾內運行開發Web服務器，如圖所示。</font></font></p>
+<p>我們可以使用<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>manage.py</strong>和 <code>runserver </code>命令，從此文件夾內運行開發Web服務器，如圖所示。</p>
 
 <pre class="brush: bash">$ python3 manage.py runserver
 Performing system checks...
@@ -383,7 +383,7 @@ Quit the server with CONTROL-C.
 <p><strong>注意</strong>: 以上命令顯示Linux / macOS X命令。此時您可以忽略有關“14個未應用的遷移”的警告！（"14 unapplied migration(s)" ）</p>
 </div>
 
-<p><font>一旦服務器運行，您可以通過導航到本地Web瀏覽器上的以下URL來查看該站點：<code>http://127.0.0.1:8000/</code>。</font><font>你應該看到一個如下所示的網站：</font></p>
+<p>一旦服務器運行，您可以通過導航到本地Web瀏覽器上的以下URL來查看該站點：<code>http://127.0.0.1:8000/</code>。你應該看到一個如下所示的網站：</p>
 
 <p><img alt="Django Skeleton App Homepage" src="https://mdn.mozillademos.org/files/15728/Django_Skeleton_Website_Homepage.png"></p>
 

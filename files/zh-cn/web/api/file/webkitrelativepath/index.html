@@ -42,7 +42,7 @@ translation_of: Web/API/File/webkitRelativePath
 
 <p>{{ EmbedLiveSample('Example') }}</p>
 
-<p>特别提醒：假设文件路径是 C:\f1\f2\f3\file.txt, 用户选择的是f1 文件夹，则Chrome、Firefox、Edge 都能正确返回  f2/f3/file.txt值。而国产的QQ浏览器、360浏览器、UC浏览器、搜狗浏览器都只能返回 f3/file.txt。也就是国产浏览器调用webkitRelativePath返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。</p>
+<p>特别提醒：假设文件路径是 C:\f1\f2\f3\file.txt, 用户选择的是 f1 文件夹，则 Chrome、Firefox、Edge 都能正确返回  f2/f3/file.txt 值。而国产的 QQ 浏览器、360 浏览器、UC 浏览器、搜狗浏览器都只能返回 f3/file.txt。也就是国产浏览器调用webkitRelativePath返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -67,55 +67,7 @@ translation_of: Web/API/File/webkitRelativePath
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13 {{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoDesktop(49) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>0.16 {{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoMobile(49) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.File.webkitRelativePath")}}
 
 <h2 id="另见">另见</h2>
 

@@ -7,7 +7,7 @@ translation_of: Web/API/Cache/addAll
 
 <h2 id="概要">概要</h2>
 
-<p>{{domxref("Cache")}} 接口的 <strong><code>addAll()</code></strong> 方法接受一个URL数组，检索它们，并将生成的response对象添加到给定的缓存中。 在检索期间创建的request对象成为存储的response操作的key。</p>
+<p>{{domxref("Cache")}} 接口的 <strong><code>addAll()</code></strong> 方法接受一个 URL 数组，检索它们，并将生成的 response 对象添加到给定的缓存中。 在检索期间创建的 request 对象成为存储的 response 操作的 key。</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>addAll()</code> will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting <code>put()</code> operation would overwrite a previous cache entry created by the same <code>addAll()</code> method.</p>
@@ -28,7 +28,7 @@ translation_of: Web/API/Cache/addAll
 
 <dl>
  <dt>requests</dt>
- <dd>要获取并添加到缓存的字符串URL数组。</dd>
+ <dd>要获取并添加到缓存的字符串 URL 数组。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -37,7 +37,7 @@ translation_of: Web/API/Cache/addAll
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col"><strong>Exception</strong></th>
@@ -56,9 +56,9 @@ translation_of: Web/API/Cache/addAll
  </tbody>
 </table>
 
-<h2 id="示例"><span style="font-size: 30px;">示例</span></h2>
+<h2 id="示例">示例</h2>
 
-<p>此代码块等待一个 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装进程。 包括调用 {{domxref("CacheStorage.open")}} 创建一个新的cache，然后使用 <code>addAll()</code> 添加一系列资源。</p>
+<p>此代码块等待一个 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装进程。 包括调用 {{domxref("CacheStorage.open")}} 创建一个新的 cache，然后使用 <code>addAll()</code> 添加一系列资源。</p>
 
 <pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
@@ -99,99 +99,7 @@ translation_of: Web/API/Cache/addAll
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Require HTTPS</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code> if request is not successful</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(47.0)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
-  <tr>
-   <td>Require HTTPS</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code> if request is not successful</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.Cache.addAll")}}
 
 <h2 id="参见">参见</h2>
 

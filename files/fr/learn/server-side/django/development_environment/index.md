@@ -152,7 +152,7 @@ pip3 list
 
 ### Windows 10
 
-Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer (ainsi que l'outil _pip3_) sur[ python.org](https://www.python.org/):
+Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/)&nbsp;:
 
 1.  Téléchargez l'installeur requis :
 
@@ -203,7 +203,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note :** Les variables `VIRTUALENVWRAPPER_PYTHON` et `VIRTUALENVWRAPPER_VIRTUALENV_ARGS `pointent vers l'emplacement d'installation par défaut de Python3, et `source /usr/local/bin/virtualenvwrapper.sh` pointe vers l'emplacement par défaut du script `virtualenvwrapper.sh`. Si le _virtualenv_ ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).
+> **Note :** Les variables `VIRTUALENVWRAPPER_PYTHON` et `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` pointent vers l'emplacement d'installation par défaut de Python3, et `source /usr/local/bin/virtualenvwrapper.sh` pointe vers l'emplacement par défaut du script `virtualenvwrapper.sh`. Si le _virtualenv_ ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).
 >
 > Vous pourrez trouver les bons emplacements de votre système en utilisant les commandes `which virtualenvwrapper.sh` et `which python3`.
 
@@ -338,7 +338,7 @@ py -3 -m django --version
 > py -m django --version
 > ```
 >
-> Dans Windows, les scripts _Python 3_ sont exécutés en préfixant la commande avec `py -3`, bien que ceci puisse varier suivant votre installation. Essayer en enlevant le modificateur `-3 `si vous rencontrez un problème avec la commande. Dans Linux/macOS, la commande est `python3.`
+> Dans Windows, les scripts _Python 3_ sont exécutés en préfixant la commande avec `py -3`, bien que ceci puisse varier suivant votre installation. Essayer en enlevant le modificateur `-3` si vous rencontrez un problème avec la commande. Dans Linux/macOS, la commande est `python3.`
 
 > **Attention :** Le reste de ce **module** utilise les commandes _Linux_ pour invoquer Python 3 (`python3`) . . Si vous travaillez sous _Windows_ , remplacez simplement ce préfixe avec : `py -3`
 

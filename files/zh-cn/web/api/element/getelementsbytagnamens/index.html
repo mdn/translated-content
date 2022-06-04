@@ -5,22 +5,22 @@ translation_of: Web/API/Element/getElementsByTagNameNS
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>Element.getElementsByTagNameNS()</strong></code> 方法返回在指定命名空间内带有指定名称的动态HTML元素集合（而不是快照），搜索范围限定于指定元素的后代，类似于{{Domxref("Document.getElementsByTagNameNS")}}。</p>
+<p><code><strong>Element.getElementsByTagNameNS()</strong></code> 方法返回在指定命名空间内带有指定名称的动态 HTML 元素集合（而不是快照），搜索范围限定于指定元素的后代，类似于{{Domxref("Document.getElementsByTagNameNS")}}。</p>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox"><var>elements</var> = <var>element</var>.getElementsByTagNameNS(<var>namespaceURI</var>, <var>localName</var>)</pre>
 
 <ul>
- <li><code>elements</code> 是匹配元素的动态HTML元素集合{{domxref("HTMLCollection")}}，其顺序为遍历树时匹配元素出现的先后。</li>
+ <li><code>elements</code> 是匹配元素的动态 HTML 元素集合{{domxref("HTMLCollection")}}，其顺序为遍历树时匹配元素出现的先后。</li>
  <li><code>element</code> 是查找的起始结点，查找范围为该元素的后代，并且不包含该元素自身。</li>
- <li><code>namespaceURI </code>是所要查询的元素的命名空间URL (参考 {{domxref("Node.namespaceURI")}}). 举个例子，如果你想查找的是XHTML元素，你应该使用XHTML的命名空间URL，<span class="nowiki"><code>http://www.w3.org/1999/xhtml。</code></span></li>
+ <li><code>namespaceURI </code>是所要查询的元素的命名空间 URL (参考 {{domxref("Node.namespaceURI")}}). 举个例子，如果你想查找的是 XHTML 元素，你应该使用 XHTML 的命名空间 URL，<code>http://www.w3.org/1999/xhtml。</code></li>
  <li><code>localName </code>是所要查询的元素的名称。其中特殊字符 "*" 代表所有元素 (参考 {{domxref("Node.localName")}}).</li>
 </ul>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush:js">// 检查一个XHTML文档中表格的单元格的对齐方式。
+<pre class="brush:js">// 检查一个 XHTML 文档中表格的单元格的对齐方式。
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
 
@@ -60,69 +60,4 @@ for (var i = 0; i &lt; cells.length; i++) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>5.5</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>getElementsByTagName("*")</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>6.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Initially, this method was returning a {{domxref("NodeList")}}; it was then changed to reflects the spec change.</p>
-
-<p>[2] The behavior of <code>element.getElementsByTagNameNS</code> changed between Firefox 3.5 and Firefox 3.6. In Firefox 3.5 and before, this function would automatically case-fold any queries so that a search for "foo" would match "Foo" or "foo". In Firefox 3.6 and later this function is now case-sensitive so that a query for "foo" will only match "foo" and not "Foo". For more background on this, please see the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=542185#c5">comment from Henri Sivonen about the change</a>. You can also look at the <a href="/en-US/docs/Case_Sensitivity_in_class_and_id_Names" title="Case Sensitivity in class and id Names">relevant part of the standard, which states which parts of the API are case-sensitive and which parts aren't</a>.</p>
-
-<p>Prior to Firefox 19, this method was returning a {{domxref("NodeList")}}; it was then changed to reflects the spec change.</p>
+{{Compat("api.Element.getElementsByTagNameNS")}}

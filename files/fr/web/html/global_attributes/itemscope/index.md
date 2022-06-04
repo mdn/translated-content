@@ -189,8 +189,8 @@ Directions: <br>
 
 | Spécification                                                                                    | État                                 | Commentaires |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemscope", "itemscope")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}} | {{Spec2('HTML WHATWG')}}     |              |
+| {{SpecName('HTML Microdata', "#dfn-itemscope", "itemscope")}}                 | {{Spec2('HTML Microdata')}} |              |
+| {{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}} | {{Spec2('HTML WHATWG')}}     |              |
 
 ## Compatibilité des navigateurs
 

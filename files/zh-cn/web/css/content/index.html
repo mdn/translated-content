@@ -11,7 +11,7 @@ translation_of: Web/CSS/content
 
 <h2 id="概要">概要</h2>
 
-<p>CSS的 <code>content</code> CSS 属性用于在元素的  {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用<code style="font-style: normal; line-height: 1.5;">content</code><span style="line-height: 1.5;"> 属性插入的内容都是匿名的</span><em><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element" style="text-decoration: underline;" title="CSS/Replaced_element">可替换元素</a>。</em></p>
+<p>CSS 的 <code>content</code> CSS 属性用于在元素的  {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用<code style="font-style: normal; line-height: 1.5;">content</code> 属性插入的内容都是匿名的<em><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element" style="text-decoration: underline;" title="CSS/Replaced_element">可替换元素</a>。</em></p>
 
 <p>{{cssinfo}}</p>
 
@@ -47,11 +47,11 @@ content: inherit
  <dt>&lt;string&gt;</dt>
  <dd>文本内容</dd>
  <dt>&lt;uri&gt;<code> url()</code></dt>
- <dd>URI值会指定一个外部资源（比如图片）。如果该资源或图片不能显示，它就会被忽略或显示一些占位（比如无图片标志）。</dd>
+ <dd>URI 值会指定一个外部资源（比如图片）。如果该资源或图片不能显示，它就会被忽略或显示一些占位（比如无图片标志）。</dd>
  <dt>&lt;counter&gt;</dt>
- <dd>计数器可以指定两种不同的函数：<code>counter()</code> 或 <code>counters()</code>。前面一个有两种形式：<code>counter(name) </code>或<code> counter(name,style)</code> 。产生的内容是该伪类元素指定名称的最小范围的计数；格式由style指定（默认是'decimal'——十进制数字）。后一个函数同样也有两种形式：<code>counters(name,string)</code> 或 <code>counters(name,string,style)</code> 。The generated text is the value of all counters with the given name in scope at this pseudo-element, from outermost to innermost separated by the specified string. The counters are rendered in the indicated style ('decimal' by default). See the section on automatic counters and numbering for more information. The name must not be 'none', 'inherit' or 'initial'. Such a name causes the declaration to be ignored.</dd>
+ <dd>计数器可以指定两种不同的函数：<code>counter()</code> 或 <code>counters()</code>。前面一个有两种形式：<code>counter(name) </code>或<code> counter(name,style)</code> 。产生的内容是该伪类元素指定名称的最小范围的计数；格式由 style 指定（默认是'decimal'——十进制数字）。后一个函数同样也有两种形式：<code>counters(name,string)</code> 或 <code>counters(name,string,style)</code> 。The generated text is the value of all counters with the given name in scope at this pseudo-element, from outermost to innermost separated by the specified string. The counters are rendered in the indicated style ('decimal' by default). See the section on automatic counters and numbering for more information. The name must not be 'none', 'inherit' or 'initial'. Such a name causes the declaration to be ignored.</dd>
  <dt><code>attr(X)</code></dt>
- <dd>将元素的X属性以字符串形式返回。如果该元素没有 X 属性，则返回一个空字符串。区分大小写的属性返回值依赖文挡的语言设定。</dd>
+ <dd>将元素的 X 属性以字符串形式返回。如果该元素没有 X 属性，则返回一个空字符串。区分大小写的属性返回值依赖文挡的语言设定。</dd>
  <dt><code>open-quote</code> | <code>close-quote</code></dt>
  <dd>这些值会被 {{ cssxref("quotes") }} 中定义的字符串替换。</dd>
  <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
@@ -92,7 +92,7 @@ h1::before  { content: "Chapter "; }</pre>
 
 <p>{{ EmbedLiveSample('代码举例_-_标题和引号', 460, 100) }}</p>
 
-<h3 id="代码举例_-_link前面加一个icon">代码举例 - link前面加一个icon</h3>
+<h3 id="代码举例_link_前面加一个_icon">代码举例 - link 前面加一个 icon</h3>
 
 <h4 id="HTML_2">HTML </h4>
 
@@ -108,7 +108,7 @@ h1::before  { content: "Chapter "; }</pre>
 
 <h4 id="输出_2">输出</h4>
 
-<p>{{ EmbedLiveSample('代码举例_-_link前面加一个icon', 200, 60) }}</p>
+<p>{{ EmbedLiveSample('代码举例_link_前面加一个_icon', 200, 60) }}</p>
 
 <h3 id="代码举例_-_自定义列表后面加加文字">代码举例 - 自定义列表后面加加文字</h3>
 
@@ -229,61 +229,7 @@ li {
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>8.0</td>
-   <td>4.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>url()</code> support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>8.0</td>
-   <td>7.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>8.0</td>
-   <td>9.5</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.content")}}
 
 <h2 id="sect1"> </h2>
 

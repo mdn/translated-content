@@ -3,98 +3,42 @@ title: load()
 slug: Web/API/MediaKeySession/load
 translation_of: Web/API/MediaKeySession/load
 ---
-<div><font><font>{{APIRef("EncryptedMediaExtensions")}} {{SeeCompatTable}}</font></font></div>
+<div>{{APIRef("EncryptedMediaExtensions")}} {{SeeCompatTable}}</div>
 
-<p><font><font>该</font></font><code>MediaKeySession.load()</code><font><font>方法返回一个{{jsxref("Promise")}}，它在加载指定的会话对象的数据后解析为一个布尔值。</font></font></p>
+<p>该<code>MediaKeySession.load()</code>方法返回一个{{jsxref("Promise")}}，它在加载指定的会话对象的数据后解析为一个布尔值。</p>
 
-<h2 id="句法"><font><font>句法</font></font></h2>
+<h2 id="句法">句法</h2>
 
-<pre class="syntaxbox"><var><font><font>mediaKeySession .load(</font></font></var><var><font><font>sessionId)</font></font></var><font><var><font>.then(</font></var><font>function(</font></font><var><font><font>booleanValue</font></font></var><font><font>){...});</font></font></pre>
+<pre class="syntaxbox"><var>mediaKeySession .load(</var><var>sessionId)</var><var>.then(</var>function(<var>booleanValue</var>){...});</pre>
 
-<h3 id="参数"><font><font>参数</font></font></h3>
+<h3 id="参数">参数</h3>
 
 <dl>
- <dt><font><font>的sessionId</font></font></dt>
- <dd><font><font>由当前媒体对象及其相关键或许可证的内容解析模块生成的唯一字符串。</font></font></dd>
+ <dt>sessionId</dt>
+ <dd>由当前媒体对象及其相关键或许可证的内容解析模块生成的唯一字符串。</dd>
 </dl>
 
-<h3 id="返回值"><font><font>返回值</font></font></h3>
+<h3 id="返回值">返回值</h3>
 
-<p><font><font>一个{{jsxref("Promise")}}解析为一个布尔值，指示加载是成功还是失败。</font></font></p>
+<p>一个{{jsxref("Promise")}}解析为一个布尔值，指示加载是成功还是失败。</p>
 
-<h2 id="产品规格"><font><font>产品规格</font></font></h2>
+<h2 id="产品规格">产品规格</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font><font>规范</font></font></th>
-   <th scope="col"><font><font>状态</font></font></th>
-   <th scope="col"><font><font>评论</font></font></th>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><font><font>{{SpecName('EME','＃widl-MediaKeySession-load-Promise-boolean - DOMString-sessionId','load()')}}</font></font></td>
-   <td><font><font>{{Spec2('EME')}}</font></font></td>
-   <td><font><font>初始定义</font></font></td>
+   <td>{{SpecName('EME','＃widl-MediaKeySession-load-Promise-boolean - DOMString-sessionId','load()')}}</td>
+   <td>{{Spec2('EME')}}</td>
+   <td>初始定义</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容"><font><font>浏览器兼容</font></font></h2>
+<h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div><font><font>{{CompatibilityTable}}</font></font></div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><font><font>特征</font></font></th>
-   <th><font><font>铬</font></font></th>
-   <th><font><font>边缘</font></font></th>
-   <th><font><font>Firefox(Gecko)</font></font></th>
-   <th><font><font>IE浏览器</font></font></th>
-   <th><font><font>歌剧</font></font></th>
-   <th><font><font>Safari(WebKit)</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>基本支持</font></font></td>
-   <td><font><font>{{CompatChrome(42.0)}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><font><font>特征</font></font></th>
-   <th><font><font>Android的</font></font></th>
-   <th><font><font>Android Webview</font></font></th>
-   <th><font><font>边缘</font></font></th>
-   <th><font><font>Firefox Mobile(Gecko)</font></font></th>
-   <th><font><font>Firefox操作系统</font></font></th>
-   <th><font><font>IE Mobile</font></font></th>
-   <th><font><font>歌剧手机</font></font></th>
-   <th><font><font>Safari手机</font></font></th>
-   <th><font><font>适用于Android的Chrome</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>基本支持</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatChrome(43.0)}}</font></font></td>
-   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatChrome(42.0)}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaKeySession.load")}}

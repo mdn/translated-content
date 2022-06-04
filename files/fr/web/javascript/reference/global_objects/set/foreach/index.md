@@ -19,7 +19,9 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois po
 
 ## Syntaxe
 
-    monSet.forEach(callback[, thisArg])
+```js
+monSet.forEach(callback[, thisArg])
+```
 
 ### Valeur de retour
 
@@ -79,7 +81,7 @@ new Set(["toto", "truc", undefined]).forEach(logSetElements);
 | Spécification                                                                                            | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

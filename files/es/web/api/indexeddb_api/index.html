@@ -58,75 +58,7 @@ translation_of: Web/API/IndexedDB_API
 
 <p>Un claro ejemplo para lo que IndexedDB puede ser utilizado en la web, es el ejemplo de Marco Castelluccio, ganador del DevDerby IndexedDB Mozilla. La demostración ganadora fue <a href="/en-US/demos/detail/elibri" title="https://developer.mozilla.org/en-US/demos/detail/elibri">eLibri</a>, una biblioteca y una aplicación de lectura de libros electrónicos.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de los navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>API asíncrono</td>
-   <td>
-    <p>24.0<br>
-     11.0 {{ property_prefix("webkit") }}</p>
-   </td>
-   <td>
-    <p>{{ CompatGeckoDesktop("16.0") }}<br>
-     {{ CompatGeckoDesktop("2.0") }} {{ property_prefix("moz") }}</p>
-   </td>
-   <td>10 {{ property_prefix("ms") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>API síncrono<br>
-    (usado por <a href="/en-US/docs/DOM/Using_web_workers" title="https://developer.mozilla.org/en-US/docs/Using_web_workers">WebWorkers</a>)</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}<br>
-    Vea {{ bug(701634) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>API síncrono</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("6.0") }} {{ property_prefix("moz") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Para otra matriz de compatibilidad, vea también: <a href="http://caniuse.com/indexeddb">Cuándo puedo usar IndexedDB</a></p>
-
-<p>También existe la posibilidad de usar IndexedDB en <a href="http://caniuse.com/sql-storage"> navegadores que soportan WebSQL</a> por el uso de <a href="https://github.com/axemclion/IndexedDBShim">IndexedDB Polyfill</a>.</p>
 
 <h2 id="Ver_también">Ver también</h2>
 

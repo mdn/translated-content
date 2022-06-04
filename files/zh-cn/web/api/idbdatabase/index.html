@@ -16,63 +16,63 @@ translation_of: Web/API/IDBDatabase
 </div>
 
 <div class="note">
-<p><strong>注意</strong>:在IndexedDB中所做的所有事情总是发生在<a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">事务</a>的上下文中，表示与数据库中的数据的交互。IndexedDB中的所有对象——包括对象存储、索引和游标——都与特定事务绑定。因此，在事务之外您不能执行命令、访问数据或打开任何东西。</p>
+<p><strong>注意</strong>:在 IndexedDB 中所做的所有事情总是发生在<a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">事务</a>的上下文中，表示与数据库中的数据的交互。IndexedDB 中的所有对象——包括对象存储、索引和游标——都与特定事务绑定。因此，在事务之外您不能执行命令、访问数据或打开任何东西。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>：请注意，从Firefox 40开始，IndexedDB事务具有宽松的持久性保证以提高性能（请参阅<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener" title="FIXED: Switch IndexedDB transactions to be non-durable by default">bug 1112702</a>）以前在<code>readwrite</code>事务中<a class="new" href="/zh-CN/docs/Web/API/IDBTransaction/oncomplete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.oncomplete</code></a>被触发只有当所有数据都保证已刷新到磁盘时。在Firefox 40+中，<code>complete</code>事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该<code>complete</code>因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。<font>如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以<code>complete</code>通过使用实验（非标准）<code>readwriteflush</code>模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅<a class="new" href="/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction</code></a>）。</font></p>
+<p><strong>注意</strong>：请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener" title="FIXED: Switch IndexedDB transactions to be non-durable by default">bug 1112702</a>）以前在<code>readwrite</code>事务中<a class="new" href="/zh-CN/docs/Web/API/IDBTransaction/oncomplete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.oncomplete</code></a>被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，<code>complete</code>事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该<code>complete</code>因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以<code>complete</code>通过使用实验（非标准）<code>readwriteflush</code>模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅<a class="new" href="/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction</code></a>）。</p>
 </div>
 
-<h2 id="方法"><font>方法</font></h2>
+<h2 id="方法">方法</h2>
 
-<p><font>继承自: <a href="/en-US/docs/DOM/EventTarget">EventTarget</a></font></p>
+<p>继承自：<a href="/en-US/docs/DOM/EventTarget">EventTarget</a></p>
 
 <dl>
- <dt><font>{{domxref("IDBDatabase.close()")}}</font></dt>
- <dd><font>在一个单独的线程中关闭数据库连接并立即返回。</font></dd>
- <dt><font>{{domxref("IDBDatabase.createObjectStore()")}}</font></dt>
- <dd><font>创建并返回一个新的 object store 或者 index。</font></dd>
- <dt><font>{{domxref("IDBDatabase.deleteObjectStore()")}}</font></dt>
- <dd><font>根据给定的名字，删除在当前连接的数据库中的 object store 和 相关的索引。 </font></dd>
- <dt><font>{{domxref("IDBDatabase.transaction()")}}</font></dt>
- <dd><font>立即返回一个包含{{domxref("IDBTransaction.objectStore")}} 方法的 transaction 对象。你可以用这个对象来操作object store。这个操作是在一个单独的线程中执行的。</font></dd>
+ <dt>{{domxref("IDBDatabase.close()")}}</dt>
+ <dd>在一个单独的线程中关闭数据库连接并立即返回。</dd>
+ <dt>{{domxref("IDBDatabase.createObjectStore()")}}</dt>
+ <dd>创建并返回一个新的 object store 或者 index。</dd>
+ <dt>{{domxref("IDBDatabase.deleteObjectStore()")}}</dt>
+ <dd>根据给定的名字，删除在当前连接的数据库中的 object store 和 相关的索引。 </dd>
+ <dt>{{domxref("IDBDatabase.transaction()")}}</dt>
+ <dd>立即返回一个包含{{domxref("IDBTransaction.objectStore")}} 方法的 transaction 对象。你可以用这个对象来操作 object store。这个操作是在一个单独的线程中执行的。</dd>
 </dl>
 
-<h2 id="属性"><font>属性</font></h2>
+<h2 id="属性">属性</h2>
 
 <dl>
- <dt><font>{{domxref("IDBDatabase.name")}} {{readonlyInline}}</font></dt>
- <dd><font>{{ domxref("DOMString") }}类型，当前连接数据库名  。</font></dd>
- <dt><font>{{domxref("IDBDatabase.version")}} {{readonlyInline}}</font></dt>
- <dd><font><a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit </a>整型数，当前连接数据库的版本 。当数据第一次被创建时，这个属性是一个空的字符串。 </font></dd>
- <dt><font>{{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</font></dt>
- <dd><font>{{ domxref("DOMStringList") }}类型，当前连接连接数据库中所有的object store 名字列表。</font></dd>
+ <dt>{{domxref("IDBDatabase.name")}} {{readonlyInline}}</dt>
+ <dd>{{ domxref("DOMString") }}类型，当前连接数据库名  。</dd>
+ <dt>{{domxref("IDBDatabase.version")}} {{readonlyInline}}</dt>
+ <dd><a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit </a>整型数，当前连接数据库的版本 。当数据第一次被创建时，这个属性是一个空的字符串。 </dd>
+ <dt>{{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</dt>
+ <dd>{{ domxref("DOMStringList") }}类型，当前连接连接数据库中所有的 object store 名字列表。</dd>
 </dl>
 
-<h3 id="Event_handlers"><font>Event handlers</font></h3>
+<h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
- <dt><font>{{domxref("IDBDatabase.onabort")}}</font></dt>
- <dd><font>在中断数据库访问时触发。</font></dd>
- <dt><font>{{domxref("IDBDatabase.onerror")}}</font></dt>
- <dd><font>当访问数据库失败时触发。</font></dd>
- <dt><font>{{domxref("IDBDatabase.onversionchange")}}</font></dt>
+ <dt>{{domxref("IDBDatabase.onabort")}}</dt>
+ <dd>在中断数据库访问时触发。</dd>
+ <dt>{{domxref("IDBDatabase.onerror")}}</dt>
+ <dd>当访问数据库失败时触发。</dd>
+ <dt>{{domxref("IDBDatabase.onversionchange")}}</dt>
  <dd>
- <p><font>当数据库结构发生更改时触发</font></p>
+ <p>当数据库结构发生更改时触发</p>
 
- <p><font>({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或</font>在其他地方请求<font><code> </code>{{domxref("IDBFactory.deleteDatabase")}} 时（</font>最可能在同一台计算机上的另一个窗口/选项卡中<font>）</font>这与版本更改事务（请参阅参考资料<font>{{domxref("IDBVersionChangeEvent")}})</font>不同，但它是相关的。</p>
+ <p>({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或在其他地方请求<code> </code>{{domxref("IDBFactory.deleteDatabase")}} 时（最可能在同一台计算机上的另一个窗口/选项卡中）这与版本更改事务（请参阅参考资料{{domxref("IDBVersionChangeEvent")}}) 不同，但它是相关的。</p>
  </dd>
 </dl>
 
-<h2 id="example" name="example"><font>示例</font></h2>
+<h2 id="example" name="example">示例</h2>
 
-<p><font>在下面的代码中, 异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件, 如果触发了upgrade事件就需要创建一个新的object store  ({{ domxref("IDBdatabase") }})。如果想看完整的例子, 可以使用 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> 应用(<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</font></p>
+<p>在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store  ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> 应用 (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js;highlight:[13,24,26,27,28,32] notranslate"><font>
+<pre class="brush: js;highlight:[13,24,26,27,28,32] notranslate">
 // 我们先打开一个数据库
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-  // 当数据库打开出错/成功时，以下两个事件处理程序将分别对IDBDatabase对象进行下一步操作
+  // 当数据库打开出错/成功时，以下两个事件处理程序将分别对 IDBDatabase 对象进行下一步操作
   DBOpenRequest.onerror = function(event) {
     note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
   };
@@ -80,14 +80,14 @@ translation_of: Web/API/IDBDatabase
   DBOpenRequest.onsuccess = function(event) {
     note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
-    // 将打开数据库的结果存储在db变量中，该变量将在后面的代码中被频繁使用
+    // 将打开数据库的结果存储在 db 变量中，该变量将在后面的代码中被频繁使用
     db = DBOpenRequest.result;
 
-    // 运行displayData()方法，用IDB中已经存在的所有待办事项列表数据填充到任务列表中
+    // 运行 displayData() 方法，用 IDB 中已经存在的所有待办事项列表数据填充到任务列表中
     displayData();
   };
 
-  // 当试图打开一个尚未被创建的数据库，或者试图连接一个数据库还没被创立的版本时，onupgradeneeded事件会被触发
+  // 当试图打开一个尚未被创建的数据库，或者试图连接一个数据库还没被创立的版本时，onupgradeneeded 事件会被触发
 
   DBOpenRequest.onupgradeneeded = function(event) {
     var db = event.target.result;
@@ -96,11 +96,11 @@ translation_of: Web/API/IDBDatabase
       note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
     };
 
-    // 使用IDBDatabase.createObjectStore方法，可创建一个对象存储区
+    // 使用 IDBDatabase.createObjectStore 方法，可创建一个对象存储区
 
     var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
-    // 定义objectStore将包含哪些数据项
+    // 定义 objectStore 将包含哪些数据项
 
     objectStore.createIndex("hours", "hours", { unique: false });
     objectStore.createIndex("minutes", "minutes", { unique: false });
@@ -111,115 +111,44 @@ translation_of: Web/API/IDBDatabase
     objectStore.createIndex("notified", "notified", { unique: false });
 
     note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
-  };</font></pre>
+  };</pre>
 
-<p><font>下一行打开数据库上的事务，然后打开一个对象存储，然后我们可以在其中操作数据。</font></p>
+<p>下一行打开数据库上的事务，然后打开一个对象存储，然后我们可以在其中操作数据。</p>
 
-<pre class="brush: js notranslate"><font>
-    var objectStore = db.transaction('toDoList').objectStore('toDoList'); </font></pre>
+<pre class="brush: js notranslate">
+    var objectStore = db.transaction('toDoList').objectStore('toDoList'); </pre>
 
-<h2 id="规范"><font>规范</font></h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font>Specification</font></th>
-   <th scope="col"><font>Status</font></th>
-   <th scope="col"><font>Comment</font></th>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><font>{{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}}</font></td>
-   <td><font>{{Spec2('IndexedDB')}}</font></td>
-   <td><font> </font></td>
+   <td>{{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}}</td>
+   <td>{{Spec2('IndexedDB')}}</td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility"><font>浏览器兼容性</font></h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<div><font>{{CompatibilityTable}}</font></div>
+{{Compat("api.IDBDatabase")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><font>Feature</font></th>
-   <th><font>Chrome</font></th>
-   <th><font>Firefox (Gecko)</font></th>
-   <th><font>Internet Explorer</font></th>
-   <th><font>Opera</font></th>
-   <th><font>Safari (WebKit)</font></th>
-  </tr>
-  <tr>
-   <td><font>Basic support</font></td>
-   <td><font>23{{property_prefix("webkit")}}<br>
-    24</font></td>
-   <td><font>10 {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}}</font></td>
-   <td><font>10, partial</font></td>
-   <td><font>15</font></td>
-   <td><font>7.1</font></td>
-  </tr>
-  <tr>
-   <td><font>Available in workers</font></td>
-   <td><font>{{CompatVersionUnknown}}</font></td>
-   <td><font>{{CompatGeckoMobile("37.0")}}</font></td>
-   <td><font>{{CompatUnknown}}</font></td>
-   <td><font>{{CompatVersionUnknown}}</font></td>
-   <td><font>{{CompatUnknown}}</font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><font>Feature</font></th>
-   <th><font>Android</font></th>
-   <th><font>Firefox Mobile (Gecko)</font></th>
-   <th><font>Firefox OS</font></th>
-   <th><font>IE Phone</font></th>
-   <th><font>Opera Mobile</font></th>
-   <th><font>Safari Mobile</font></th>
-  </tr>
-  <tr>
-   <td><font>Basic support</font></td>
-   <td><font>4.4</font></td>
-   <td><font>{{CompatGeckoMobile("22.0")}}</font></td>
-   <td><font>1.0.1</font></td>
-   <td><font>10</font></td>
-   <td><font>22</font></td>
-   <td><font>8</font></td>
-  </tr>
-  <tr>
-   <td><font>Available in workers</font></td>
-   <td><font>{{CompatVersionUnknown}}</font></td>
-   <td><font>{{CompatGeckoMobile("37.0")}}</font></td>
-   <td><font>{{CompatVersionUnknown}}</font></td>
-   <td><font>{{CompatUnknown}}</font></td>
-   <td><font>{{CompatVersionUnknown}}</font></td>
-   <td><font>{{CompatUnknown}}</font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="warning">
-<p><font>Be careful in Chrome as it still implements the old specification along with the new one. Similarly it still has the prefixed <code>webkitIndexedDB</code> property even if the unprefixed <code>indexedDB</code> is present.</font></p>
-</div>
-
-<h2 id="See_also"><font>See also</font></h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
- <li><font><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></font></li>
- <li><font>Starting transactions: {{domxref("IDBDatabase")}}</font></li>
- <li><font>Using transactions: {{domxref("IDBTransaction")}}</font></li>
- <li><font>Setting a range of keys: {{domxref("IDBKeyRange")}}</font></li>
- <li><font>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</font></li>
- <li><font>Using cursors: {{domxref("IDBCursor")}}</font></li>
- <li><font>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</font></li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+ <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+ <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+ <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+ <li>Using cursors: {{domxref("IDBCursor")}}</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>
 
-<p><font> </font></p>
+<p> </p>

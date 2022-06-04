@@ -9,7 +9,7 @@ translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
 
 ```css
 /* Cible un élément dont l'identifiant      */
@@ -82,9 +82,9 @@ La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas
 ```html
 <p><a href="#newcomment">Ajouter un commentaire</a></p>
 <div id="newcomment">
-  <form>
-  <p>Saisir un commentaire :<br />
-  <textarea></textarea></p>
+  <form>
+  <p>Saisir un commentaire :<br />
+  <textarea></textarea></p>
   </form>
 </div>
 ```

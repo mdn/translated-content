@@ -13,9 +13,9 @@ translation_of: Web/API/MutationObserver/observe
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">{{domxref("MutationObserver")}}的 <code><strong>observe()</strong></code> 方法配置了 <code>MutationObserver</code> 对象的回调方法以开始接收与给定选项匹配的DOM变化的通知。</span>根据配置，观察者会观察 DOM 树中的单个 {{domxref("Node")}}，也可能会观察被指定节点的部分或者所有的子孙节点。</p>
+<p>{{domxref("MutationObserver")}} 的 <code><strong>observe()</strong></code> 方法配置了 <code>MutationObserver</code> 对象的回调方法以开始接收与给定选项匹配的 DOM 变化的通知。根据配置，观察者会观察 DOM 树中的单个 {{domxref("Node")}}，也可能会观察被指定节点的部分或者所有的子孙节点。</p>
 
-<p>要停止 <code>MutationObserver</code>（以便不再触发它的回调方法），需要调用{{domxref("MutationObserver.disconnect()")}}方法。</p>
+<p>要停止 <code>MutationObserver</code>（以便不再触发它的回调方法），需要调用 {{domxref("MutationObserver.disconnect()")}} 方法。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -26,9 +26,9 @@ translation_of: Web/API/MutationObserver/observe
 
 <dl>
  <dt><code>target</code></dt>
- <dd>DOM树中的一个要观察变化的DOM {{domxref("Node")}} (可能是一个{{domxref("Element")}}) , 或者是被观察的子节点树的根节点。</dd>
+ <dd>DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
- <dd>一个可选的{{domxref("MutationObserverInit")}} 对象，此对象的配置项描述了DOM的哪些变化应该提供给当前观察者的<code>callback</code>。</dd>
+ <dd>一个可选的 {{domxref("MutationObserverInit")}} 对象，此对象的配置项描述了 DOM 的哪些变化应该提供给当前观察者的 <code>callback</code>。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -39,7 +39,7 @@ translation_of: Web/API/MutationObserver/observe
 
 <dl>
  <dt><code>TypeError</code></dt>
- <dd>以下任一情况都会抛出异常:
+ <dd>以下任一情况都会抛出异常：
  <ul>
   <li>配置选项使得实际上不会监视任何内容（例如，如果 {{domxref("MutationObserverInit.childList")}}，{{domxref("MutationObserverInit.attributes")}} 和 {{domxref("MutationObserverInit.characterData")}} 都为 <code>false</code>）。</li>
   <li><code>attributes</code> 选项为 <code>false</code>（表示不监视属性更改）但是<code>attributeOldValue</code> 为 <code>true</code> 并且/或者 <code>attributeFilter</code> 配置存在。</li>
@@ -61,15 +61,15 @@ translation_of: Web/API/MutationObserver/observe
 
 <h3 id="当节点断开连接时继续观察节点">当节点断开连接时继续观察节点</h3>
 
-<p><code>MutationObserver</code> 旨在让您能够随着时间的推移观察所需的节点集，即使这些节点之间的直接连接被切断。如果你开始观察节点的子树，并且该子树的一部分被分离并移动到DOM中的其他位置，你将继续观察分离的节点段，接收与节点从原始子树分离之前相同的回调。</p>
+<p><code>MutationObserver</code> 旨在让您能够随着时间的推移观察所需的节点集，即使这些节点之间的直接连接被切断。如果你开始观察节点的子树，并且该子树的一部分被分离并移动到 DOM 中的其他位置，你将继续观察分离的节点段，接收与节点从原始子树分离之前相同的回调。</p>
 
 <p>换句话说，在你收到有关节点从被观察子树中拆分的通知之前，你将收到有关该拆分子树及其节点的更改的通知。这可以防止你丢失在切断连接之后以及在你有机会专门开始观察已移动的节点或子树之前发生的变化。</p>
 
-<p>这意味着理论上如果你跟踪描述发生的变化的{{domxref("MutationRecord")}}对象，你就可以“撤销”这些改动，将DOM恢复到初始状态。</p>
+<p>这意味着理论上如果你跟踪描述发生的变化的 {{domxref("MutationRecord")}} 对象，你就可以 “撤销” 这些改动，将 DOM 恢复到初始状态。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>在此例子中，将为你演示如何在实例 {{domxref("MutationObserver")}} 中调用<strong><code>observe()</code> </strong>方法，一旦设置后，会传给他一个目标元素和一个 {{domxref("MutationObserverInit")}} 配置对象。</p>
+<p>在此例子中，将为你演示如何在实例 {{domxref("MutationObserver")}} 中调用 <strong><code>observe()</code></strong> 方法，一旦设置后，会传给他一个目标元素和一个 {{domxref("MutationObserverInit")}} 配置对象。</p>
 
 <pre class="brush: js">// 得到要观察的元素
 var elementToObserve = document.querySelector("#targetElementId");

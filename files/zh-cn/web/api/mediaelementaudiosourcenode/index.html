@@ -6,10 +6,10 @@ translation_of: Web/API/MediaElementAudioSourceNode
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p><code>MediaElementAudioSourceNode</code> 接口代表着某个由HTML5 {{ htmlelement("audio") }} 或 {{ htmlelement("video") }} 元素所组成的音频源.该接口作为扮演音源的 {{domxref("AudioNode")}} 节点.</p>
+<p><code>MediaElementAudioSourceNode</code> 接口代表着某个由 HTML5 {{ htmlelement("audio") }} 或 {{ htmlelement("video") }} 元素所组成的音频源。该接口作为扮演音源的 {{domxref("AudioNode")}} 节点。</p>
 </div>
 
-<p><code>MediaElementSourceNode</code> 没有输入,只有一个输出,其由使用{{domxref("AudioContext.createMediaElementSource")}}方法创建.输出的频道数目与节点创建时引用音频 {{domxref("HTMLMediaElement")}}  的频道数目一致,或当 {{domxref("HTMLMediaElement")}} 无音频时,频道数目为 1.</p>
+<p><code>MediaElementSourceNode</code> 没有输入，只有一个输出，其由使用{{domxref("AudioContext.createMediaElementSource")}}方法创建。输出的频道数目与节点创建时引用音频 {{domxref("HTMLMediaElement")}}  的频道数目一致，或当 {{domxref("HTMLMediaElement")}} 无音频时，频道数目为 1.</p>
 
 <table class="properties">
  <tbody>
@@ -23,7 +23,7 @@ translation_of: Web/API/MediaElementAudioSourceNode
   </tr>
   <tr>
    <th scope="row">频道数</th>
-   <td>由被传递给{{domxref("AudioContext.createMediaElementSource")}}的{{domxref("HTMLMediaElement")}}内的音频定义.</td>
+   <td>由被传递给{{domxref("AudioContext.createMediaElementSource")}}的{{domxref("HTMLMediaElement")}}内的音频定义。</td>
   </tr>
  </tbody>
 </table>
@@ -32,16 +32,16 @@ translation_of: Web/API/MediaElementAudioSourceNode
 
 <dl>
  <dt>{{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode()")}}</dt>
- <dd>创建一个新的 <code>MediaElementAudioSourceNode</code> 实例.</dd>
+ <dd>创建一个新的 <code>MediaElementAudioSourceNode</code> 实例。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
-<p><em>集成其父类属性, </em><em>{{domxref("AudioNode")}}</em>.</p>
+<p><em>集成其父类属性，</em><em>{{domxref("AudioNode")}}</em>.</p>
 
 <h2 id="方法">方法</h2>
 
-<p><em>集成其父类方法, {{domxref("AudioNode")}}</em>.</p>
+<p><em>集成其父类方法，{{domxref("AudioNode")}}</em>.</p>
 
 <h2 id="示例">示例</h2>
 
@@ -66,79 +66,7 @@ translation_of: Web/API/MediaElementAudioSourceNode
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Constructor</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(25)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Constructor</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaElementAudioSourceNode")}}
 
 <h2 id="相关页面">相关页面</h2>
 

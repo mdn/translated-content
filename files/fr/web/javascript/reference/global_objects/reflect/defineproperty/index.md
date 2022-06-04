@@ -18,7 +18,9 @@ La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("O
 
 ## Syntaxe
 
-    Reflect.defineProperty(cible, cléPropriété, attributs)
+```js
+Reflect.defineProperty(cible, cléPropriété, attributs)
+```
 
 ### Paramètres
 
@@ -68,7 +70,7 @@ if (Reflect.defineProperty(cible, propriété, attributs)) {
 | Spécification                                                                                                | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

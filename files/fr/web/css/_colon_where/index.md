@@ -31,5 +31,5 @@ La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} est la suivante :
 
 ## Voir aussi
 
-- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
+- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
 - [Les composants web](/fr/docs/Web/Web_Components)

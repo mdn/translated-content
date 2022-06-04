@@ -5,7 +5,7 @@ translation_of: Web/API/Performance/clearMarks
 ---
 <div>{{APIRef("User Timing API")}}</div>
 
-<p><strong><code>clearMarks()</code></strong> 这个方法可以从浏览器的performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。</p>
+<p><strong><code>clearMarks()</code></strong> 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。</p>
 
 <h2 id="用法">用法</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Performance/clearMarks
 
 <dl>
  <dt>name {{optional_inline}}</dt>
- <dd>{{domxref("DOMString")}} 表示时间戳的名字,如果没有提供这个参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。</dd>
+ <dd>{{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数， 则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -36,7 +36,7 @@ translation_of: Web/API/Performance/clearMarks
     console.log("performance.clearMarks Not supported");
     return;
   }
-  //移除所有标记了此名称的peformance entry
+  //移除所有标记了此名称的 peformance entry
   performance.clearMarks(name);
 }
 function clear_all_marks() {
@@ -44,7 +44,7 @@ function clear_all_marks() {
     console.log("performance.clearMarks Not supported");
     return;
   }
-  //从performance 缓冲区中移除所有标记的performance entry
+  //从 performance 缓冲区中移除所有标记的 performance entry
   performance.clearMarks();
 }
 </pre>
@@ -73,60 +73,4 @@ function clear_all_marks() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>41</td>
-   <td>10</td>
-   <td>33</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>42</td>
-   <td>42</td>
-   <td>10</td>
-   <td>33</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Performance.clearMarks")}}

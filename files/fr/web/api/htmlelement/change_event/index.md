@@ -33,7 +33,7 @@ L'événement **change** est déclenché pour les éléments {{HTMLElement("inpu
 En fonction du type d'élément de formulaire modifié et de la manière dont l'utilisateur interagit avec cet élément, l'événement **change** se déclenche à un moment différent :
 
 - Quand l'élément est activé (en cliquant ou en utilisant le clavier) pour `<input type="radio">` et `<input type="checkbox">`_(case à cocher_).
-- Quand l'utilisateur réalise le changement de manière explicite (par exemple, en sélectionnant une valeur venant d'un {{HTMLElement("select")}} d'un menu déroulant avec le clic d'une souris, en sélectionnant une date d'un "date picker" _(sélecteur de date)_ pour `<input type="date">`, en sélectionnant un fichier d'un "file picker" _(sélecteur de fichier)_ pour `<input type="file">`, etc.).
+- Quand l'utilisateur réalise le changement de manière explicite (par exemple, en sélectionnant une valeur venant d'un {{HTMLElement("select")}} d'un menu déroulant avec le clic d'une souris, en sélectionnant une date d'un "date picker" _(sélecteur de date)_ pour `<input type="date">`, en sélectionnant un fichier d'un "file picker" _(sélecteur de fichier)_ pour `<input type="file">`, etc.).
 - Quand l'élément perd le focus après que sa valeur a été changée, mais pas validée (par exemple, après l'édition d'une valeur de {{HTMLElement("textarea")}} ou `<input type="text">`).
 
 Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'événement **change** doit être déclenché pour certains types d'interactions. Par exemple, la navigation avec le clavier dans les éléments {{HTMLElement("select")}} ne déclenche jamais l'événement dans Gecko jusqu'à ce que l'utilisateur appuie sur la touche Entrée ou déplace le focus en dehors du \<select> (voir {{bug("126379")}}).
@@ -44,7 +44,7 @@ Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'év�
 
 ### L'élément \<select>
 
-Le code suivant gère l'événement **change** sur {{HTMLElement("select")}} en appellant la fonction `changeEventHandler() `dans` l'attribut onchange. Il lit la valeur de la cible de l'événement et la montre dans une alerte.`
+Le code suivant gère l'évènement **change** sur [`<select>`](/fr/docs/Web/HTML/Element/select) en appelant la fonction `changeEventHandler()` dans l'attribut `onchange`. Il lit la valeur de la cible de l'évènement et la montre dans une alerte.
 
 #### HTML
 

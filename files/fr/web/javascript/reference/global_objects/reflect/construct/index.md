@@ -18,7 +18,9 @@ La méthode statique **`Reflect.construct()`** agit comme l'opérateur [`new`](/
 
 ## Syntaxe
 
-    Reflect.construct(cible, listeArguments[, newCible])
+```js
+Reflect.construct(cible, listeArguments[, newCible])
+```
 
 ### Paramètres
 

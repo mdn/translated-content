@@ -3,12 +3,12 @@ title: Headers()
 slug: Web/API/Headers/Headers
 tags:
   - Headers
-  - Headers构造函数
+  - Headers 构造函数
 translation_of: Web/API/Headers/Headers
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
 
-<p><code>使用<strong>Headers()</strong></code> 构造方法创建一个新的{{domxref("Headers")}} 对象.</p>
+<p><code>使用<strong>Headers()</strong></code> 构造方法创建一个新的{{domxref("Headers")}} 对象。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,22 +23,22 @@ translation_of: Web/API/Headers/Headers
 
 <h2 id="Example">Example</h2>
 
-<p>创建一个空的 <code>Headers</code> 对象:</p>
+<p>创建一个空的 <code>Headers</code> 对象：</p>
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>你可以使用{{domxref("Headers.append")}}方法添加一个header并赋值:</p>
+<p>你可以使用{{domxref("Headers.append")}}方法添加一个 header 并赋值：</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 </pre>
 
-<p>或者你可以在Headers对象创建时添加多个header. 在下面的示例中我们创建了一个新的{{domxref("Headers")}} 对象, 并通过Headers构造函数中init属性来添加多个header:</p>
+<p>或者你可以在 Headers 对象创建时添加多个 header. 在下面的示例中我们创建了一个新的{{domxref("Headers")}} 对象，并通过 Headers 构造函数中 init 属性来添加多个 header:</p>
 
 <pre class="brush: js">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
 var myHeaders = new Headers(httpHeaders);</pre>
 
-<p><code><font face="Open Sans, Arial, sans-serif">你可以通过init属性将一个已存在的</font>Headers对象来创建另一个新的Headers对象</code>:</p>
+<p><code>你可以通过 init 属性将一个已存在的 Headers 对象来创建另一个新的 Headers 对象</code>:</p>
 
 <pre class="brush: js">var secondHeadersObj = new Headers(myHeaders);
 secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object</pre>
@@ -62,63 +62,7 @@ secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inheri
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref<br>
-     </td>
-   <td>{{ CompatGeckoDesktop(39)}}<br>
-    34 behind pref</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers.Headers")}}
 
 <h2 id="See_also">See also</h2>
 

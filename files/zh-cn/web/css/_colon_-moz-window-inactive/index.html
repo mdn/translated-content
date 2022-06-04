@@ -5,23 +5,23 @@ translation_of: 'Web/CSS/:-moz-window-inactive'
 ---
 <div>{{CSSRef}}{{Non-standard_header}}</div>
 
-<p><font><font>在</font><a href="/en-US/docs/Web/CSS"><font>CSS </font></a><a href="/en-US/docs/Web/CSS/Pseudo-classes"><font>伪类</font></a><font>是</font><a href="/en-US/docs/Web/CSS/Mozilla_Extensions"><font>Mozilla的扩展</font></a><font>匹配任何元素，而它在非活动窗口。</font></font><strong><code>:-moz-window-inactive</code></strong></p>
+<p>在<a href="/en-US/docs/Web/CSS">CSS </a><a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a>是<a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla 的扩展</a>匹配任何元素，而它在非活动窗口。<strong><code>:-moz-window-inactive</code></strong></p>
 
-<p><code>:-moz-window-inactive</code><font><font> 也在内容HTML文档中工作。</font></font></p>
+<p><code>:-moz-window-inactive</code> 也在内容 HTML 文档中工作。</p>
 
-<div class="note"><strong><font><font>注意：</font></font></strong><font><font>在添加此伪类之前，通过</font></font><code>active="true"</code><font><font>在顶级XUL chrome窗口上</font><font>设置attribute（</font><font>）</font><font>来实现为背景窗口提供不同样式</font><font>。</font><font>该属性不再使用。</font></font></div>
+<div class="note"><strong>注意：</strong>在添加此伪类之前，通过<code>active="true"</code>在顶级 XUL chrome 窗口上设置 attribute（）来实现为背景窗口提供不同样式。该属性不再使用。</div>
 
-<h2 id="示例"><font><font>示例</font></font></h2>
+<h2 id="示例">示例</h2>
 
-<p><font><font>此示例根据窗口是否处于活动状态来改变框背景的外观。</font></font></p>
+<p>此示例根据窗口是否处于活动状态来改变框背景的外观。</p>
 
-<h3 id="HTML"><font><font>HTML</font></font></h3>
+<h3 id="HTML">HTML</h3>
 
-<pre class="brush: html"><font><font>&lt;div id=“mybox”&gt;</font></font><font><font>
-  &lt;p&gt;这是一个盒子！&lt;/p&gt;</font></font><font><font>
-&lt;/div&gt;</font></font></pre>
+<pre class="brush: html">&lt;div id=“mybox”&gt;
+  &lt;p&gt;这是一个盒子！&lt;/p&gt;
+&lt;/div&gt;</pre>
 
-<h3 id="CSS"><font><font>CSS</font></font></h3>
+<h3 id="CSS">CSS</h3>
 
 <pre><code>#mybox {
   background: linear-gradient(to bottom, yellow, cyan);
@@ -33,70 +33,16 @@ translation_of: 'Web/CSS/:-moz-window-inactive'
   background: cyan;
 }</code></pre>
 
-<h3 id="Link_to_section结果"><a class="local-anchor" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-window-inactive$edit#Result"><span>Link to section</span></a>结果</h3>
+<h3 id="Link_to_section结果"><a class="local-anchor" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-window-inactive$edit#Result">Link to section</a>结果</h3>
 
 <p>{{EmbedLiveSample('Example', 220, 220)}}</p>
 
-<p><font><font>您可以将其视为</font></font>{{LiveSampleLink('Example', 'live sample here')}}<font><font>。</font></font></p>
+<p>您可以将其视为{{LiveSampleLink('Example', 'live sample here')}}。</p>
 
-<h2 id="产品规格"><font><font>产品规格</font></font></h2>
+<h2 id="产品规格">产品规格</h2>
 
-<p><font><font>不属于任何规范。</font><font>这是专门针对Gecko的专有伪类。</font></font></p>
+<p>不属于任何规范。这是专门针对 Gecko 的专有伪类。</p>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(2)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Implemented in {{bug("508482")}}.</p>
+{{Compat("css.selectors.-moz-window-inactive")}}

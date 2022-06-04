@@ -5,7 +5,7 @@ translation_of: Web/API/Request/headers
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>{{domxref("Request")}}接口的只读属性  <strong><code>headers</code></strong> 包含与当前请求关联的{{domxref("Headers")}}对象.</p>
+<p>{{domxref("Request")}}接口的只读属性  <strong><code>headers</code></strong> 包含与当前请求关联的{{domxref("Headers")}}对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -13,16 +13,16 @@ translation_of: Web/API/Request/headers
 
 <h3 id="值">值</h3>
 
-<p>一个 {{domxref("Headers")}} 对象.</p>
+<p>一个 {{domxref("Headers")}} 对象。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>在下面的代码段中，我们使用 {{domxref("Request.Request()")}} 构造函数（为获取与脚本处于同一目录的图片文件）创建新请求，然后将请求headers保存到变量中:</p>
+<p>在下面的代码段中，我们使用 {{domxref("Request.Request()")}} 构造函数（为获取与脚本处于同一目录的图片文件）创建新请求，然后将请求 headers 保存到变量中：</p>
 
 <pre class="brush: js">var myRequest = new Request('flowers.jpg');
 var myHeaders = myRequest.headers; // Headers {}</pre>
 
-<p>使用 {{domxref("Headers.append")}} 向 {{domxref("Headers")}} 对象中添加header；然后，使用第二个init参数创建一个新的 <code>Request</code> ，同时，传递headers作为一个init选项:</p>
+<p>使用 {{domxref("Headers.append")}} 向 {{domxref("Headers")}} 对象中添加 header；然后，使用第二个 init 参数创建一个新的 <code>Request</code> ，同时，传递 headers 作为一个 init 选项：</p>
 
 <pre class="brush: js">var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -142,7 +142,7 @@ myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'</
     <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Show Translator's button 3 second(s)"> </div>
    </td>
    <td><a class="SL_options" title="Show options">Options</a> : <a class="SL_options" title="Translation History">History</a> : <a class="SL_options" title="ImTranslator Feedback">Feedback</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Make a small contribution">Donate</a></td>
-   <td><span id="SL_Balloon_Close" title="Close">Close</span></td>
+   <td>Close</td>
   </tr>
  </tbody>
 </table>

@@ -9,9 +9,9 @@ translation_of: Web/API/HTMLCanvasElement/height
 </div>
 </div>
 
-<p><strong><code><span>HTMLCanvasElement.height</span></code></strong> 属性是一个正<code>整数</code> ，使用了{{HTMLElement("canvas")}} 元素的HTML 属性{{htmlattrxref("height", "canvas")}}来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时， 将使用<code>150</code>作为它的默认值。</p>
+<p><strong><code>HTMLCanvasElement.height</code></strong> 属性是一个正<code>整数</code> ，使用了{{HTMLElement("canvas")}} 元素的 HTML 属性{{htmlattrxref("height", "canvas")}}来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时， 将使用<code>150</code>作为它的默认值。</p>
 
-<p>控制canvas元素大小的属性有两个，这是其中一个，还有一个是{{domxref("HTMLCanvasElement.width")}}。</p>
+<p>控制 canvas 元素大小的属性有两个，这是其中一个，还有一个是{{domxref("HTMLCanvasElement.width")}}。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/HTMLCanvasElement/height
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>可以通过以下代码获得这个canvas元素的高度：</p>
+<p>可以通过以下代码获得这个 canvas 元素的高度：</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 console.log(canvas.height); // 300
@@ -61,63 +61,11 @@ console.log(canvas.height); // 300
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(4) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("1.9.2") }}</td>
-   <td>{{ CompatIE(9) }}</td>
-   <td>{{ CompatOpera(9) }}</td>
-   <td>{{ CompatSafari(3.1) }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.HTMLCanvasElement.height")}}
 
 <h2 id="See_Also" name="See_Also">其他</h2>
 
 <ul>
- <li>定义的接口, {{domxref("HTMLCanvasElement")}}.</li>
- <li>另一个控制canvas大小的属性, {{domxref("HTMLCanvasElement.width")}}.</li>
+ <li>定义的接口，{{domxref("HTMLCanvasElement")}}.</li>
+ <li>另一个控制 canvas 大小的属性，{{domxref("HTMLCanvasElement.width")}}.</li>
 </ul>

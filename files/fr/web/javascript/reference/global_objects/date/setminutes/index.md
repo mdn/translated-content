@@ -18,11 +18,15 @@ La méthode **`setMinutes()`** définit les minutes pour la date donnée, selon 
 
 ## Syntaxe
 
-    dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
+```js
+dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setMinutes(valeurMinutes)
+```js
+dateObj.setMinutes(valeurMinutes)
+```
 
 ### Paramètres
 
@@ -57,9 +61,9 @@ leGrandJour.setMinutes(45);
 | Spécification                                                                                                        | État                         | Commentaires                                          |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.32', 'Date.prototype.setMinutes')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.9.5.32', 'Date.prototype.setMinutes')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

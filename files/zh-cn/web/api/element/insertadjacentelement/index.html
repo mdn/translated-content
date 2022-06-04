@@ -20,19 +20,19 @@ translation_of: Web/API/Element/insertAdjacentElement
  <dt>position</dt>
  <dd>A {{domxref("DOMString")}} 表示相对于该元素的位置；必须是以下字符串之一：
  <ul>
-  <li><code style="color: red;">'beforebegin'</code>: 在该元素本身的前面.</li>
-  <li><code style="color: green;">'afterbegin'</code>:只在该元素当中, 在该元素第一个子孩子前面.</li>
-  <li><code style="color: blue;">'beforeend'</code>:只在该元素当中, 在该元素最后一个子孩子后面.</li>
-  <li><code style="color: magenta;">'afterend'</code>: 在该元素本身的后面.</li>
+  <li><code style="color: red;">'beforebegin'</code>: 在该元素本身的前面。</li>
+  <li><code style="color: green;">'afterbegin'</code>:只在该元素当中，在该元素第一个子孩子前面。</li>
+  <li><code style="color: blue;">'beforeend'</code>:只在该元素当中，在该元素最后一个子孩子后面。</li>
+  <li><code style="color: magenta;">'afterend'</code>: 在该元素本身的后面。</li>
  </ul>
  </dd>
  <dt>element</dt>
- <dd>要插入到树中的元素.</dd>
+ <dd>要插入到树中的元素。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>插入的元素，插入失败则返回null.</p>
+<p>插入的元素，插入失败则返回 null.</p>
 
 <h3 id="异常">异常</h3>
 
@@ -65,7 +65,7 @@ foo
 <code style="font-weight: bold;">&lt;/p&gt;</code>
 &lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-<div class="note"><strong>注:</strong> 当节点处于DOM树中而且有一个父元素的时候 <code>beforebegin</code> 和 <code>afterend操作才能起作用。</code></div>
+<div class="note"><strong>注：</strong> 当节点处于 DOM 树中而且有一个父元素的时候 <code>beforebegin</code> 和 <code>afterend 操作才能起作用。</code></div>
 
 <h2 id="Example" name="Example">例子</h2>
 
@@ -83,7 +83,7 @@ afterBtn.addEventListener('click', function() {
   setListener(tempDiv);
 });</pre>
 
-<p>看看我们在 Github （也可以参考 <a href="https://github.com/mdn/insert-adjacent/blob/master/insertAdjacentElement.html">源码</a>）上的 <a href="http://mdn.github.io/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> 演示。在一个容器当中我们有一组{{htmlelement("div")}} 元素。 点击其中一个div时，这个容器会处于选中状态，然后你就可以按下<em>Insert before</em> 或<em>Insert after</em> 按钮通过 <code>insertAdjacentElement()方法</code>来把一个新的divs 插入到选中的元素前面或者后面。</p>
+<p>看看我们在 Github（也可以参考 <a href="https://github.com/mdn/insert-adjacent/blob/master/insertAdjacentElement.html">源码</a>）上的 <a href="http://mdn.github.io/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> 演示。在一个容器当中我们有一组{{htmlelement("div")}} 元素。 点击其中一个 div 时，这个容器会处于选中状态，然后你就可以按下<em>Insert before</em> 或<em>Insert after</em> 按钮通过 <code>insertAdjacentElement() 方法</code>来把一个新的 divs 插入到选中的元素前面或者后面。</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 
@@ -106,53 +106,7 @@ afterBtn.addEventListener('click', function() {
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("48.0") }}</td>
-   <td>8</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("48.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.insertAdjacentElement")}}
 
 <h2 id="参见">参见</h2>
 

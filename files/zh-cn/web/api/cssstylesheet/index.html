@@ -14,7 +14,7 @@ translation_of: Web/API/CSSStyleSheet
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p><span class="seoSummary"><strong><code>CSSStyleSheet</code></strong> <span>接口</span>代表一个 <a href="/zh-CN/docs/Web/CSS">CSS</a> 样式表，并允许检查和编辑样式表中的规则列表。</span>它从父类型 {{domxref("StyleSheet")}} 继承属性和方法。</p>
+<p><strong><code>CSSStyleSheet</code></strong> 接口代表一个 <a href="/zh-CN/docs/Web/CSS">CSS</a> 样式表，并允许检查和编辑样式表中的规则列表。它从父类型 {{domxref("StyleSheet")}} 继承属性和方法。</p>
 
 <p>一个 CSS 样式表包含了一组表示规则的 {{domxref("CSSRule")}} 对象。每条 CSS 规则可以通过与之相关联的对象进行操作，这些规则被包含在 {{domxref("CSSRuleList")}} 内，可以通过样式表的 {{domxref("CSSStyleSheet.cssRules", "cssRules")}} 属性获取。</p>
 
@@ -27,14 +27,14 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>另一条规则可能是一条“@”规则（<em>at-rule</em>），例如  {{cssxref("@import")}} 或 {{cssxref("@media")}} 等等。</p>
 
-<p>在{{anch("说明")}}部分中查看 <code>CSSStyleSheet</code> 对象的多种获取方式。</p>
+<p>在<a href="#说明">说明</a>部分中查看 <code>CSSStyleSheet</code> 对象的多种获取方式。</p>
 
 <h2 id="属性">属性</h2>
 
 <p>继承自 <em>{{domxref("StyleSheet")}}。</em></p>
 
 <dl>
- <dt id="cssRules">{{domxref("CSSStyleSheet.cssRules", "cssRules")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("CSSStyleSheet.cssRules", "cssRules")}} {{ReadOnlyInline}}</dt>
  <dd>
  <p>返回一个实时的 {{domxref("CSSRuleList")}}，其中包含组成样式表的 {{domxref("CSSRule")}} 对象的一个最新列表。</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/CSSStyleSheet
 
  <p>使用<code>CSSStyleSheet</code> 的 {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} 和 {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} 方法以在 <code>cssRules</code> 中添加或移除规则。</p>
  </dd>
- <dt id="ownerRule">{{domxref("CSSStyleSheet.ownerRule", "ownerRule")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("CSSStyleSheet.ownerRule", "ownerRule")}} {{ReadOnlyInline}}</dt>
  <dd>如果一个样式表示通过{{cssxref("@import")}} 规则引入文档，那么 <code>ownerRule</code> 属性会返回相应的{{domxref("CSSImportRule")}}对象，否则返回 <code>null</code>。</dd>
 </dl>
 
@@ -53,9 +53,9 @@ translation_of: Web/API/CSSStyleSheet
 <p>继承自 <em>{{domxref("StyleSheet")}}。</em></p>
 
 <dl>
- <dt id="deleteRule">{{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}</dt>
  <dd>从样式表中删除特定位置的一条规则。</dd>
- <dt id="insertRule">{{domxref("CSSStyleSheet.insertRule", "insertRule()")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.insertRule", "insertRule()")}}</dt>
  <dd>向样式表的特定位置插入一条新规则，需要提供新规则的完整文本。</dd>
 </dl>
 
@@ -89,7 +89,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>一个样式表最多与一个{{domxref("Document")}}链接，即所应用的那个{{domxref("Document")}}（除非{{domxref("StyleSheet.disabled", "disabled")}}）。一个特定文档的 <code>CSSStyleSheet</code> 对象列表可用 {{domxref("document.styleSheets")}} 属性获取。一个特定的样式表也可以通过其所在对象（<code>Node</code> 或 <code>CSSImportRule</code>）获取，如果有的话。</p>
 
-<p>在文档的样式表加载时，一个 <code>CSSStyleSheet</code> 对象由浏览器自动创建并插入至文档的{{domxref("Document.styleSheets")}}列表中。由于样式表列表不能直接修改，我们没有什么有效的手段取手动创建一个新的 <code>CSSStyleSheet</code> 对象（不过<a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>很快会来到web平台，而且Blink早已支持）。需要创建新的样式表就直接在文档中插入{{HTMLElement("style")}} 或 {{HTMLElement("link")}} 元素吧。</p>
+<p>在文档的样式表加载时，一个 <code>CSSStyleSheet</code> 对象由浏览器自动创建并插入至文档的{{domxref("Document.styleSheets")}}列表中。由于样式表列表不能直接修改，我们没有什么有效的手段取手动创建一个新的 <code>CSSStyleSheet</code> 对象（不过<a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>很快会来到 web 平台，而且 Blink 早已支持）。需要创建新的样式表就直接在文档中插入{{HTMLElement("style")}} 或 {{HTMLElement("link")}} 元素吧。</p>
 
 <p>以下是将样式表链接到文档的一些方式（可能不完整）：</p>
 
@@ -101,7 +101,7 @@ translation_of: Web/API/CSSStyleSheet
     styleSheets</code> 列表中</th>
    <th scope="col">获取样式表对象所在的元素/规则</th>
    <th scope="col">所在对象的接口</th>
-   <th scope="col">从所在对象获取CSSStyleSheet对象</th>
+   <th scope="col">从所在对象获取 CSSStyleSheet 对象</th>
   </tr>
  </thead>
  <tbody>
@@ -115,7 +115,7 @@ translation_of: Web/API/CSSStyleSheet
    <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
   </tr>
   <tr>
-   <td>使用CSS {{cssxref("@import")}} 从其他样式表导入并应用到文档的规则</td>
+   <td>使用 CSS {{cssxref("@import")}} 从其他样式表导入并应用到文档的规则</td>
    <td>是</td>
    <td>{{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}</td>
    <td>{{domxref("CSSImportRule")}}</td>
@@ -129,7 +129,7 @@ translation_of: Web/API/CSSStyleSheet
    <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
   </tr>
   <tr>
-   <td>HTTP链接头部</td>
+   <td>HTTP 链接头部</td>
    <td>是</td>
    <td><em>N/A</em></td>
    <td>N/A</td>

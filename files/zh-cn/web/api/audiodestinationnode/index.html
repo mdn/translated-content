@@ -8,10 +8,10 @@ translation_of: Web/API/AudioDestinationNode
 <div>
 <p><code>AudioDestinationNode</code>接口表示音频图形在特定情况下的最终输出地址 - 通常为扬声器。当使用<code>OfflineAudioContext</code>时为音频记录节点。</p>
 
-<p><span style="line-height: 1.5;">AudioDestinationNode没有输出（因为它就是输出，它存在于视频图标中后AudioNode不能被链接），有一个输入。输入信道的数量必须是0至maxChannelCount之间的值或是一个异常。</span></p>
+<p>AudioDestinationNode 没有输出（因为它就是输出，它存在于视频图标中后 AudioNode 不能被链接），有一个输入。输入信道的数量必须是 0 至 maxChannelCount 之间的值或是一个异常。</p>
 </div>
 
-<p><code>AudioDestinationNode可以通过</code>{{domxref("AudioContext.destination")}}属性来查看。</p>
+<p><code>AudioDestinationNode</code> 可以通过 {{domxref("AudioContext.destination")}} 属性来查看。</p>
 
 <table class="properties">
  <tbody>
@@ -53,86 +53,22 @@ translation_of: Web/API/AudioDestinationNode
 
 <h2 id="例子">例子</h2>
 
-<p> <code>AudioDestinationNode 不需要使用复杂的设置</code> — 在默认情况下只是简单的代表使用者系统的输出 (例如他们的扬声器)，这样你就可以使用几行代码来与内置音频图标挂钩:</p>
+<p> <code>AudioDestinationNode 不需要使用复杂的设置</code> — 在默认情况下只是简单的代表使用者系统的输出 (例如他们的扬声器)，这样你就可以使用几行代码来与内置音频图标挂钩：</p>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);</pre>
 
-<p>更多的例子，请查看MDN Web Audio示例，例如<a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> 或者 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
+<p>更多的例子，请查看 MDN Web Audio 示例，例如<a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> 或者 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audiodestinationnode-interface', 'AudioDestinationNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>23</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>25</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioDestinationNode")}}
 
 <h2 id="其他">其他</h2>
 

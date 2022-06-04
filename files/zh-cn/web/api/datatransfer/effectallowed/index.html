@@ -5,7 +5,7 @@ translation_of: Web/API/DataTransfer/effectAllowed
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p><strong><code>DataTransfer.effectAllowed</code></strong> 属性指定拖放操作所允许的一个效果。<em>copy</em> 操作用于指示被拖动的数据将从当前位置复制到放置位置。<em>move操作用于指定被拖动的数据将被移动。 link</em>操作用于指示将在源和放置位置之间创建某种形式的关系或连接。</p>
+<p><strong><code>DataTransfer.effectAllowed</code></strong> 属性指定拖放操作所允许的一个效果。<em>copy</em> 操作用于指示被拖动的数据将从当前位置复制到放置位置。<em>move 操作用于指定被拖动的数据将被移动。 link</em>操作用于指示将在源和放置位置之间创建某种形式的关系或连接。</p>
 
 <p>应该在{{event("dragstart")}}事件中设置此属性，以便为拖动源设置所需的拖动效果。在 {{event("dragenter")}} 和{{event("dragover")}} 事件处理程序中，该属性将设置为在{{event("dragstart")}} 事件期间分配的任何值，因此，可以使用<code>effectAllowed</code>来确定允许哪个效果。</p>
 
@@ -69,8 +69,8 @@ translation_of: Web/API/DataTransfer/effectAllowed
 &lt;script&gt;
 function dragstart_handler(ev) {
  console.log("dragStart: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
- <code>// 将这个元素的id添加到drag载荷中，
- // 以便drop事件知道将哪个元素添加到其树中。</code>
+ <code>// 将这个元素的 id 添加到 drag 载荷中，
+ // 以便 drop 事件知道将哪个元素添加到其树中。</code>
  ev.dataTransfer.setData("text", ev.target.id);
  ev.dataTransfer.effectAllowed = "move";
 }
@@ -78,7 +78,7 @@ function dragstart_handler(ev) {
 function drop_handler(ev) {
  console.log("drop: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
  ev.preventDefault();
- <code>// 得到目标的id并且将移动的元素添加到目标DOM中</code>
+ <code>// 得到目标的 id 并且将移动的元素添加到目标 DOM 中</code>
  var data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
@@ -103,86 +103,11 @@ function dragover_handler(ev) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-effectallowed", "effectAllowed")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-effectallowed", "effectAllowed")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.5</td>
-   <td>10</td>
-   <td>12</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatIE("10")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.DataTransfer.effectAllowed")}}
 
 <h2 id="参考链接">参考链接</h2>
 

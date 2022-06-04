@@ -132,7 +132,7 @@ function afficheDonnee() {
 
 | Spécification                                                                | État                         | Commentaires |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

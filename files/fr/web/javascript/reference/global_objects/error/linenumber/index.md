@@ -29,7 +29,7 @@ console.log(e.lineNumber) // 2
 
 ```js
 window.addEventListener("error", function (e) {
- console.log(e.lineNumber); //5
+ console.log(e.lineNumber); //5
 });
 var e = new Error('Ne peut pas lire la donnée');
 throw e;

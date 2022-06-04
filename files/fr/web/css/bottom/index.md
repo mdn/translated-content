@@ -11,7 +11,7 @@ translation_of: Web/CSS/bottom
 
 La propriété **`bottom`** contribue à la définition de l'emplacement vertical des [éléments positionnés](/fr/docs/Web/CSS/position). Elle n'a aucun effet pour les éléments non-positionnés.
 
-{{EmbedInteractiveExample("pages/css/bottom.html")}}Pour les **éléments positionnés de façon absolue**, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} vaut `absolute` ou `fixed`, la propriété `bottom` définit la distance entre le bord bas de la marge de l'élément et le bord bas du bloc qui contient l'élément.
+{{EmbedInteractiveExample("pages/css/bottom.html")}}Pour les **éléments positionnés de façon absolue**, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} vaut `absolute` ou `fixed`, la propriété `bottom` définit la distance entre le bord bas de la marge de l'élément et le bord bas du bloc qui contient l'élément.
 
 Pour les **éléments positionnés de façon relative**, c'est-à-dire ceux dont la valeur de propriété {{cssxref("position")}} est `relative`, la propriété `bottom` définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.
 

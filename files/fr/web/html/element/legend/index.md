@@ -91,7 +91,7 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 | Spécification                                                                                            | État                             | Commentaires                      |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------- |
 | {{SpecName("HTML WHATWG", "forms.html#the-legend-element", "&lt;legend&gt;")}} | {{Spec2("HTML WHATWG")}} | Définition de l'élément `legend`. |
-| {{SpecName("HTML5 W3C", "forms.html#the-legend-element", "&lt;legend&gt;")}}     | {{Spec2("HTML5 W3C")}}     |                                   |
+| {{SpecName("HTML5 W3C", "forms.html#the-legend-element", "&lt;legend&gt;")}}     | {{Spec2("HTML5 W3C")}}     |                                   |
 | {{SpecName("HTML4.01", "interact/forms.html#h-17.10", "&lt;legend&gt;")}}         | {{Spec2("HTML4.01")}}     | Définition initiale.              |
 
 ## Compatibilité des navigateurs

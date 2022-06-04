@@ -7,11 +7,11 @@ translation_of: Web/CSS/margin-left
 
 <h2 id="Summary" name="Summary">Summary</h2>
 
-<p><img alt="Area on which CSS margin-left apply" src="/files/4039/margin-left.svg" style="border-style: solid; border-width: 1px; float: left; margin-bottom: 2em; margin-right: 1em;"><span class="seoSummary"><strong><code>margin-left</code></strong>  属性 设置与元素相关联的盒子模型的左外边距。这个值可以为负值。</span></p>
+<p><img alt="Area on which CSS margin-left apply" src="/files/4039/margin-left.svg" style="border-style: solid; border-width: 1px; float: left; margin-bottom: 2em; margin-right: 1em;"><strong><code>margin-left</code></strong>  属性 设置与元素相关联的盒子模型的左外边距。这个值可以为负值。</p>
 
-<p><span class="seoSummary">竖直排列相邻的两个盒子模型的外边距会重叠 <em><a href="/en-US/docs/CSS/margin_collapsing" title="/en-US/docs/CSS/margin_collapsing">margin collapsing</a>。</em></span></p>
+<p>竖直排列相邻的两个盒子模型的外边距会重叠 <em><a href="/en-US/docs/CSS/margin_collapsing" title="/en-US/docs/CSS/margin_collapsing">margin collapsing</a>。</em></p>
 
-<p><span class="seoSummary">在长度(width)被约束这种极少情况下，( <code>即当所有的宽度，左边界，边界，填充内容区域和边缘都被定义</code>), 左边界<code>会被忽略，</code>如果被制定为auto值，会有相同的计算值。</span></p>
+<p>在长度 (width) 被约束这种极少情况下，( <code>即当所有的宽度，左边界，边界，填充内容区域和边缘都被定义</code>), 左边界<code>会被忽略，</code>如果被制定为 auto 值，会有相同的计算值。</p>
 
 <p>{{cssinfo()}}</p>
 
@@ -35,11 +35,11 @@ margin-left: unset;
 
 <dl>
  <dt><code>&lt;length&gt;</code></dt>
- <dd>一个固定宽度 {{cssxref("&lt;length&gt;")}} 值 : 可以是一个绝对宽度, e.g. in <code>px</code>, 也可以是个相对宽度, e.g. in <code>em</code>, 或者相对视窗的大小, e.g. in <code>vh</code>.</dd>
+ <dd>一个固定宽度 {{cssxref("&lt;length&gt;")}} 值 : 可以是一个绝对宽度，e.g. in <code>px</code>, 也可以是个相对宽度，e.g. in <code>em</code>, 或者相对视窗的大小，e.g. in <code>vh</code>.</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
  <dd>百分比值 {{cssxref("&lt;percentage&gt;")}} 最近的块容器的宽度 <em>width</em> .</dd>
  <dt><code>auto</code></dt>
- <dd>auto关键词表示在当前布局模式下，浏览器根据接收的左边距自动计算出外边距。如果有几组margin-left和margin-right 设置为auto，那么最后计算的空间分布，会根据display，float，position属性，自动生成以下几种情况：
+ <dd>auto 关键词表示在当前布局模式下，浏览器根据接收的左边距自动计算出外边距。如果有几组 margin-left 和 margin-right 设置为 auto，那么最后计算的空间分布，会根据 display，float，position 属性，自动生成以下几种情况：
  <table class="standard-table">
   <thead>
    <tr>
@@ -91,7 +91,7 @@ margin-left: unset;
     <th><em>any</em></th>
     <th><em>any</em></th>
     <td>
-     <p>在水平方向上有空余空间的情况下，空余的空间会被平均分给水平方向上写有margin-left:auto属性的元素的外边距</p>
+     <p>在水平方向上有空余空间的情况下，空余的空间会被平均分给水平方向上写有 margin-left:auto 属性的元素的外边距</p>
     </td>
     <td>Flexbox layout mode</td>
    </tr>
@@ -152,58 +152,4 @@ margin-left: unset;
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable()}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>3.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>auto</code> value</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>6.0 (strict mode)</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile("1")}}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.margin-left")}}

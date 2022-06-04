@@ -5,9 +5,9 @@ translation_of: Web/API/Notification/data
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p><code>data</code> 只读属性是 {{domxref("Notification")}} 的接口，当它作为构造函数的option可选项之一时，返回结构化的Notification的data数据。</p>
+<p><code>data</code> 只读属性是 {{domxref("Notification")}} 的接口，当它作为构造函数的 option 可选项之一时，返回结构化的 Notification 的 data 数据。</p>
 
-<p>当你创建Notification时，notification使用的数据可以使任意类型。</p>
+<p>当你创建 Notification 时，notification 使用的数据可以使任意类型。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -15,10 +15,10 @@ translation_of: Web/API/Notification/data
 
 <p>https://dassur.ma/things/deep-copy/ </p>
 
-<p>博客作者认为目前（参考）最快的object克隆、复制方式。</p>
+<p>博客作者认为目前（参考）最快的 object 克隆、复制方式。</p>
 
-<pre style="color: #f8f8f2; background-color: #272822;"><code class="language-js"><span style="color: #66d9ef;">function</span> <span style="color: #a6e22e;">structuralClone</span>(<span style="color: #a6e22e;">obj</span>) {
-  <span style="color: #66d9ef;">return</span> <span style="color: #66d9ef;">new</span> <span style="color: #a6e22e;">Notification</span>(<span style="color: #e6db74;">''</span>, {<span style="color: #a6e22e;">data</span><span style="color: #f92672;">:</span> <span style="color: #a6e22e;">obj</span>, <span style="color: #a6e22e;">silent</span><span style="color: #f92672;">:</span> <span style="color: #66d9ef;">true</span>}).<span style="color: #a6e22e;">data</span>;
+<pre style="color: #f8f8f2; background-color: #272822;"><code class="language-js">function structuralClone(obj) {
+  return new Notification('', {data: obj, silent: true}).data;
 }</code></pre>
 
 <h2 id="Syntax" name="Syntax">Syntax 表达式</h2>
@@ -32,7 +32,7 @@ translation_of: Web/API/Notification/data
 
 <h2 id="Examples_例子">Examples 例子</h2>
 
-<p>产生一个 notification; <code>简单的options</code> 作为构造参数, 将会触发以option为构造参数的 <code>Notification()</code> .</p>
+<p>产生一个 notification; 简单的 <code>options</code> 作为构造参数，将会触发以 option 为构造参数的 <code>Notification()</code>。</p>
 
 <pre class="brush: js">var options = {
   body: 'Do you like my body?',
@@ -62,101 +62,7 @@ n.data // should return 'I like peas.'</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatOpera(34)}}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatChrome(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(34)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Secure contexts only</td>
-   <td>{{CompatChrome(62)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(49)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatOperaMobile(34)}}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(34)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Secure contexts only</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(62)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(49)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Notification.data")}}
 
 <h2 id="See_also">See also</h2>
 

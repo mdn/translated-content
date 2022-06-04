@@ -52,17 +52,17 @@ translation_of: Web/API/Event/preventDefault
 
 <h4 id="结果">结果</h4>
 
-<p>你可以看到如下的行为:</p>
+<p>你可以看到如下的行为：</p>
 
 <p>{{EmbedLiveSample("Blocking_default_click_handling")}}</p>
 
 <h3 id="Stopping_keystrokes_from_reaching_an_edit_field" name="Stopping_keystrokes_from_reaching_an_edit_field">在编辑域中阻止按键</h3>
 
-<p>下面的这个例子说明了如何使用<code>preventDefault()</code>在文本编辑域中阻止有效的文本输入。如今，你通常可以使用<a href="/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">原生的HTML表单验证</a>来代替。</p>
+<p>下面的这个例子说明了如何使用<code>preventDefault()</code>在文本编辑域中阻止有效的文本输入。如今，你通常可以使用<a href="/zh-CN/docs/Learn/HTML/Forms/Data_form_validation">原生的 HTML 表单验证</a>来代替。</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<p>表单:</p>
+<p>表单：</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
   &lt;p&gt;Please enter your name using lowercase letters only.&lt;/p&gt;
@@ -74,7 +74,7 @@ translation_of: Web/API/Event/preventDefault
 
 <h4 id="CSS">CSS</h4>
 
-<p>当用户按下一个有效按键的时候，我们就给这个warning box 加上一些样式：</p>
+<p>当用户按下一个有效按键的时候，我们就给这个 warning box 加上一些样式：</p>
 
 <pre class="brush: css">.warning {
   border: 2px solid #f39389;
@@ -87,7 +87,7 @@ translation_of: Web/API/Event/preventDefault
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>这里是相关的JavaScript代码。首先，监听{{event("keypress")}}事件：</p>
+<p>这里是相关的 JavaScript 代码。首先，监听{{event("keypress")}}事件：</p>
 
 <pre class="brush: js"><code>var myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);</code></pre>
@@ -131,15 +131,15 @@ function displayWarning(msg) {
 
 <h4 id="结果_2">结果</h4>
 
-<p>这里就是代码的执行结果:</p>
+<p>这里就是代码的执行结果：</p>
 
 <p>{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}</p>
 
-<h2 id="备注"><font><font>备注</font></font></h2>
+<h2 id="备注">备注</h2>
 
 <p>在事件流的任何阶段调用<code>preventDefault()</code>都会取消事件，这意味着任何通常被该实现触发并作为结果的默认行为都不会发生。</p>
 
-<p>你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持cancelable的事件调用<code>preventDefault()</code>将没有效果。</p>
+<p>你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用<code>preventDefault()</code>将没有效果。</p>
 
 <h2 id="Specifications" name="Specifications">规范</h2>
 

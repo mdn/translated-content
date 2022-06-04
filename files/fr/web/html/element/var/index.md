@@ -141,8 +141,8 @@ var {
 
 | Spécification                                                                                                        | État                             | Commentaires |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

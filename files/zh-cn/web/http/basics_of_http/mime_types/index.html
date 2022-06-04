@@ -5,7 +5,7 @@ tags:
   - Content-Type
   - HTTP
   - MIME Types
-  - MIME类型
+  - MIME 类型
   - Meta
 translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
@@ -13,10 +13,10 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <p><strong>媒体类型</strong>（通常称为 <strong>Multipurpose Internet Mail Extensions </strong>或<strong> MIME </strong>类型<strong> </strong>）是一种标准，用来表示文档、文件或字节流的性质和格式。它在<a href="https://tools.ietf.org/html/rfc6838">IETF RFC 6838</a>中进行了定义和标准化。</p>
 
-<p>互联网号码分配机构（<a href="https://www.iana.org/">IANA</a>）是负责跟踪所有官方MIME类型的官方机构，您可以在<a href="https://www.iana.org/assignments/media-types/media-types.xhtml">媒体类型</a>页面中找到最新的完整列表。</p>
+<p>互联网号码分配机构（<a href="https://www.iana.org/">IANA</a>）是负责跟踪所有官方 MIME 类型的官方机构，您可以在<a href="https://www.iana.org/assignments/media-types/media-types.xhtml">媒体类型</a>页面中找到最新的完整列表。</p>
 
 <div class="blockIndicator warning">
-<p><strong>重要：</strong>浏览器通常使用MIME类型（而不是文件扩展名）来确定如何处理URL，因此Web服务器在响应头中添加正确的MIME类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。</p>
+<p><strong>重要：</strong>浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理 URL，因此 Web 服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -25,9 +25,9 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <pre class="syntaxbox notranslate">type/subtype</pre>
 
-<p>MIME的组成结构非常简单；由类型与子类型两个字符串中间用<code>'/'</code>分隔而组成。不允许空格存在。<em>type </em>表示可以被分多个子类的独立类别。<em>subtype 表示细分后的每个类型。</em></p>
+<p>MIME 的组成结构非常简单；由类型与子类型两个字符串中间用<code>'/'</code>分隔而组成。不允许空格存在。<em>type </em>表示可以被分多个子类的独立类别。<em>subtype 表示细分后的每个类型。</em></p>
 
-<p>MIME类型对大小写不敏感，但是传统写法都是小写。</p>
+<p>MIME 类型对大小写不敏感，但是传统写法都是小写。</p>
 
 <h3 id="独立类型">独立类型</h3>
 
@@ -64,7 +64,7 @@ application/octet-stream
   </tr>
   <tr>
    <td><code>image</code></td>
-   <td>表明是某种图像。不包括视频，但是动态图（比如动态gif）也使用image类型</td>
+   <td>表明是某种图像。不包括视频，但是动态图（比如动态 gif）也使用 image 类型</td>
    <td><code>image/gif</code>, <code>image/png</code>, <code>image/jpeg</code>, <code>image/bmp</code>, <code>image/webp</code>, <code>image/x-icon</code>, <code>image/vnd.microsoft.icon</code></td>
   </tr>
   <tr>
@@ -87,36 +87,36 @@ application/octet-stream
  </tbody>
 </table>
 
-<p>对于text文件类型若没有特定的subtype，就使用 <code>text/plain</code>。类似的，二进制文件没有特定或已知的 subtype，即使用 <code>application/octet-stream</code>。</p>
+<p>对于 text 文件类型若没有特定的 subtype，就使用 <code>text/plain</code>。类似的，二进制文件没有特定或已知的 subtype，即使用 <code>application/octet-stream</code>。</p>
 
 <h3 id="Multipart_类型">Multipart 类型</h3>
 
 <pre class="syntaxbox notranslate">multipart/form-data
 multipart/byteranges</pre>
 
-<p><em>Multipart</em> 类型表示细分领域的文件类型的种类，经常对应不同的 MIME 类型。这是<em>复合</em>文件的一种表现方式。<code>multipart/form-data</code> 可用于联系 <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a> 和 {{HTTPMethod("POST")}} 方法，此外 <code>multipart/byteranges</code>使用状态码{{HTTPStatus("206")}} <code>Partial Content</code>来发送整个文件的子集，而HTTP对不能处理的复合文件使用特殊的方式：将信息直接传送给浏览器（这时可能会建立一个“另存为”窗口，但是却不知道如何去显示内联文件。）</p>
+<p><em>Multipart</em> 类型表示细分领域的文件类型的种类，经常对应不同的 MIME 类型。这是<em>复合</em>文件的一种表现方式。<code>multipart/form-data</code> 可用于联系 <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a> 和 {{HTTPMethod("POST")}} 方法，此外 <code>multipart/byteranges</code>使用状态码{{HTTPStatus("206")}} <code>Partial Content</code>来发送整个文件的子集，而 HTTP 对不能处理的复合文件使用特殊的方式：将信息直接传送给浏览器（这时可能会建立一个“另存为”窗口，但是却不知道如何去显示内联文件。）</p>
 
-<h2 id="重要的MIME类型">重要的MIME类型</h2>
+<h2 id="重要的MIME类型">重要的 MIME 类型</h2>
 
 <h3 id="applicationoctet-stream">application/octet-stream</h3>
 
-<p>这是应用程序文件的默认值。意思是 <em>未知的应用程序文件 ，</em>浏览器一般不会自动执行或询问执行。浏览器会像对待 设置了HTTP头{{HTTPHeader("Content-Disposition")}} 值为 <code>attachment</code> 的文件一样来对待这类文件。</p>
+<p>这是应用程序文件的默认值。意思是 <em>未知的应用程序文件 ，</em>浏览器一般不会自动执行或询问执行。浏览器会像对待 设置了 HTTP 头{{HTTPHeader("Content-Disposition")}} 值为 <code>attachment</code> 的文件一样来对待这类文件。</p>
 
 <h3 id="textplain">text/plain</h3>
 
 <p>文本文件默认值。即使它<em>意味着未知的文本文件</em>，但浏览器认为是可以直接展示的。</p>
 
 <div class="note">
-<p><code>text/plain</code>并不是意味着某种文本数据。如果浏览器想要一个文本文件的明确类型，浏览器并不会考虑他们是否匹配。比如说，如果通过一个表明是下载CSS文件的{{HTMLElement("link")}}链接下载了一个 <code>text/plain</code> 文件。如果提供的信息是text/plain，浏览器并不会认出这是有效的CSS文件。CSS类型需要使用text/css。</p>
+<p><code>text/plain</code>并不是意味着某种文本数据。如果浏览器想要一个文本文件的明确类型，浏览器并不会考虑他们是否匹配。比如说，如果通过一个表明是下载 CSS 文件的{{HTMLElement("link")}}链接下载了一个 <code>text/plain</code> 文件。如果提供的信息是 text/plain，浏览器并不会认出这是有效的 CSS 文件。CSS 类型需要使用 text/css。</p>
 </div>
 
 <h3 id="textcss">text/css</h3>
 
-<p>在网页中要被解析为CSS的任何CSS文件必须指定MIME为<code>text/css</code>。通常，服务器不识别以.css为后缀的文件的MIME类型，而是将其以MIME为<code>text/plain</code> 或 <code>application/octet-stream</code> 来发送给浏览器：在这种情况下，大多数浏览器不识别其为CSS文件，直接忽略掉。特别要注意为CSS文件提供正确的MIME类型。</p>
+<p>在网页中要被解析为 CSS 的任何 CSS 文件必须指定 MIME 为<code>text/css</code>。通常，服务器不识别以.css 为后缀的文件的 MIME 类型，而是将其以 MIME 为<code>text/plain</code> 或 <code>application/octet-stream</code> 来发送给浏览器：在这种情况下，大多数浏览器不识别其为 CSS 文件，直接忽略掉。特别要注意为 CSS 文件提供正确的 MIME 类型。</p>
 
 <h3 id="texthtml">text/html</h3>
 
-<p>所有的HTML内容都应该使用这种类型。XHTML的其他MIME类型（如<code>application/xml+html</code>）现在基本不再使用（HTML5统一了这些格式）。</p>
+<p>所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如<code>application/xml+html</code>）现在基本不再使用（HTML5 统一了这些格式）。</p>
 
 <div class="note">
 <p><strong>Note:</strong> You still need to use <code>application/xml</code> or <code>application/xhtml+xml</code> if you intend to make use of XML’s strict parsing rules, use <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CDATASection">&lt;![CDATA[…]]&gt;</a></code> or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as <code>text/html</code>’s parsing semantics are subtly incompatible with those of <code>application/xml</code>.</p>
@@ -155,7 +155,7 @@ multipart/byteranges</pre>
 
 <h3 id="图片类型">图片类型</h3>
 
-<p>只有一小部分图片类型是被广泛支持的，Web安全的，可随时在Web页面中使用的：</p>
+<p>只有一小部分图片类型是被广泛支持的，Web 安全的，可随时在 Web 页面中使用的：</p>
 
 <table class="standard-table">
  <thead>
@@ -167,7 +167,7 @@ multipart/byteranges</pre>
  <tbody>
   <tr>
    <td><code>image/gif</code></td>
-   <td>GIF 图片 (无损耗压缩方面被PNG所替代)</td>
+   <td>GIF 图片 (无损耗压缩方面被 PNG 所替代)</td>
   </tr>
   <tr>
    <td><code>image/jpeg</code></td>
@@ -179,25 +179,25 @@ multipart/byteranges</pre>
   </tr>
   <tr>
    <td><code>image/svg+xml</code></td>
-   <td>SVG图片 (矢量图)</td>
+   <td>SVG 图片 (矢量图)</td>
   </tr>
  </tbody>
 </table>
 
 <p>此处的类型划分有一定的争议，有人认为此处应该增加 WebP（<code>image/webp</code>），但是每个新增的图片类型都会增加代码的数量，这会带来一些新的安全问题，所以浏览器供应商对于添加类型非常小心。</p>
 
-<p>另外的一些图片种类可以在Web文档中找到。比如很多浏览器支持 <em>icon 类型的图标作为</em> favicons或者类似的图标，并且浏览器在MIME类型中的 <code>image/x-icon</code> 支持ICO图像。</p>
+<p>另外的一些图片种类可以在 Web 文档中找到。比如很多浏览器支持 <em>icon 类型的图标作为</em> favicons 或者类似的图标，并且浏览器在 MIME 类型中的 <code>image/x-icon</code> 支持 ICO 图像。</p>
 
 <dl>
  <dt id="Image_types-Footnote_1">Footnote 1</dt>
- <dd>尽管 <code>image/vnd.microsoft.icon</code> <a href="https://www.iana.org/assignments/media-types/image/vnd.microsoft.icon">在ANA注册</a>, 它仍然不被广泛支持，<code>image/x-icon</code> 被作为替代品使用。</dd>
+ <dd>尽管 <code>image/vnd.microsoft.icon</code> <a href="https://www.iana.org/assignments/media-types/image/vnd.microsoft.icon">在 ANA 注册</a>, 它仍然不被广泛支持，<code>image/x-icon</code> 被作为替代品使用。</dd>
 </dl>
 
 <h3 id="音频与视频类型">音频与视频类型</h3>
 
-<p>HTML并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("video")}}元素所支持的文件类型，所以在web上使用的只有相对较小的一组类型。<a href="/en-US/docs/Web/HTML/Supported_media_formats"> </a>文章 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a> 解释了可以被使用的解码器或视频文件格式。</p>
+<p>HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("video")}}元素所支持的文件类型，所以在 web 上使用的只有相对较小的一组类型。<a href="/en-US/docs/Web/HTML/Supported_media_formats"> </a>文章 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a> 解释了可以被使用的解码器或视频文件格式。</p>
 
-<p>在web环境最常用的视频文件的格式，是以下这些这些文件类型：</p>
+<p>在 web 环境最常用的视频文件的格式，是以下这些这些文件类型：</p>
 
 <table class="standard-table">
  <thead>
@@ -212,7 +212,7 @@ multipart/byteranges</pre>
     <code>audio/wav</code><br>
     <code>audio/x-wav</code><br>
     <code>audio/x-pn-wav</code></td>
-   <td>音频流媒体文件。一般支持PCM音频编码 (WAVE codec "1") ，其他解码器有限支持（如果有的话）。</td>
+   <td>音频流媒体文件。一般支持 PCM 音频编码 (WAVE codec "1") ，其他解码器有限支持（如果有的话）。</td>
   </tr>
   <tr>
    <td><code>audio/webm</code></td>
@@ -220,19 +220,19 @@ multipart/byteranges</pre>
   </tr>
   <tr>
    <td><code>video/webm</code></td>
-   <td>采用WebM视频文件格式的音视频文件。VP8 和 VP9是其最常用的视频解码器。Vorbis 和 Opus 是其最常用的音频解码器。 </td>
+   <td>采用 WebM 视频文件格式的音视频文件。VP8 和 VP9 是其最常用的视频解码器。Vorbis 和 Opus 是其最常用的音频解码器。 </td>
   </tr>
   <tr>
    <td><code>audio/ogg</code></td>
-   <td>采用OGG多媒体文件格式的音频文件。 Vorbis 是这个多媒体文件格式最常用的音频解码器。</td>
+   <td>采用 OGG 多媒体文件格式的音频文件。 Vorbis 是这个多媒体文件格式最常用的音频解码器。</td>
   </tr>
   <tr>
    <td><code>video/ogg</code></td>
-   <td>采用OGG多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为Vorbis 。</td>
+   <td>采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis 。</td>
   </tr>
   <tr>
    <td><code>application/ogg</code></td>
-   <td>采用OGG多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为Vorbis 。</td>
+   <td>采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis 。</td>
   </tr>
   <tr>
    <td><code>application/json</code></td>
@@ -245,7 +245,7 @@ multipart/byteranges</pre>
 
 <h3 id="multipartform-data">multipart/form-data</h3>
 
-<p><code>multipart/form-data</code> 可用于<a href="/en-US/docs/Web/Guide/HTML/Forms">HTML表单</a>从浏览器发送信息给服务器。作为多部分文档格式，它由边界线（一个由<code>'--'</code>开始的字符串）划分出的不同部分组成。每一部分有自己的实体，以及自己的 HTTP 请求头，{{HTTPHeader("Content-Disposition")}}和 {{HTTPHeader("Content-Type")}} 用于文件上传领域，最常用的 ({{HTTPHeader("Content-Length")}} 因为边界线作为分隔符而被忽略）。</p>
+<p><code>multipart/form-data</code> 可用于<a href="/en-US/docs/Web/Guide/HTML/Forms">HTML 表单</a>从浏览器发送信息给服务器。作为多部分文档格式，它由边界线（一个由<code>'--'</code>开始的字符串）划分出的不同部分组成。每一部分有自己的实体，以及自己的 HTTP 请求头，{{HTTPHeader("Content-Disposition")}}和 {{HTTPHeader("Content-Type")}} 用于文件上传领域，最常用的 ({{HTTPHeader("Content-Length")}} 因为边界线作为分隔符而被忽略）。</p>
 
 <pre class="syntaxbox notranslate">Content-Type: multipart/form-data; boundary=aBoundaryString
 (other headers associated with the multipart document as a whole)
@@ -265,7 +265,7 @@ Content-Disposition: form-data; name="myField"
 
 </pre>
 
-<p>如下所示的表单:</p>
+<p>如下所示的表单：</p>
 
 <pre class="brush: html notranslate">&lt;form action="http://localhost:8000/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="myTextField"&gt;
@@ -274,7 +274,7 @@ Content-Disposition: form-data; name="myField"
   &lt;button&gt;Send the file&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>会发送这样的请求:</p>
+<p>会发送这样的请求：</p>
 
 <pre class="notranslate">POST / HTTP/1.1
 Host: localhost:8000
@@ -306,7 +306,7 @@ Simple file.
 
 <h3 id="multipartbyteranges">multipart/byteranges</h3>
 
-<p><code>multipart/byteranges</code> 用于把部分的响应报文发送回浏览器。当发送状态码{{HTTPStatus("206")}}<code>Partial Content</code> 时，这个MIME类型用于指出这个文件由若干部分组成，每一个都有其请求范围。就像其他很多类型{{HTTPHeader("Content-Type")}}使用分隔符来制定分界线。每一个不同的部分都有{{HTTPHeader("Content-Type")}}这样的HTTP头来说明文件的实际类型，以及 {{HTTPHeader("Content-Range")}}来说明其范围。</p>
+<p><code>multipart/byteranges</code> 用于把部分的响应报文发送回浏览器。当发送状态码{{HTTPStatus("206")}}<code>Partial Content</code> 时，这个 MIME 类型用于指出这个文件由若干部分组成，每一个都有其请求范围。就像其他很多类型{{HTTPHeader("Content-Type")}}使用分隔符来制定分界线。每一个不同的部分都有{{HTTPHeader("Content-Type")}}这样的 HTTP 头来说明文件的实际类型，以及 {{HTTPHeader("Content-Range")}}来说明其范围。</p>
 
 <pre class="notranslate"><code>HTTP/1.1 206 Partial Content
 Accept-Ranges: bytes
@@ -329,33 +329,33 @@ Content-Range: bytes 300-400/1270
         font-family: "Open Sans", "Helvetica
 --3d6b6a416f9b5--</code></pre>
 
-<h2 id="设置正确的MIME类型的重要性">设置正确的MIME类型的重要性</h2>
+<h2 id="设置正确的MIME类型的重要性">设置正确的 MIME 类型的重要性</h2>
 
-<p>很多web服务器使用默认的 <code>application/octet-stream</code> 来发送未知类型。出于一些安全原因，对于这些资源浏览器不允许设置一些自定义默认操作，导致用户必须存储到本地以使用。常见的导致服务器配置错误的文件类型如下所示：</p>
+<p>很多 web 服务器使用默认的 <code>application/octet-stream</code> 来发送未知类型。出于一些安全原因，对于这些资源浏览器不允许设置一些自定义默认操作，导致用户必须存储到本地以使用。常见的导致服务器配置错误的文件类型如下所示：</p>
 
 <ul>
  <li>
-  <p>RAR编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这这种情况服务器将发送 <code>application/x-rar-compressed</code> 作为MIME类型，用户不会将其定义为有用的默认操作。</p>
+  <p>RAR 编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这种情况服务器将发送 <code>application/x-rar-compressed</code> 作为 MIME 类型，用户不会将其定义为有用的默认操作。</p>
  </li>
  <li>
-  <p>音频或视频文件。只有正确设置了MIME类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。 可参照  <a href="https://developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements">use the correct type for audio and video</a>。</p>
+  <p>音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。 可参照  <a href="https://developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements">use the correct type for audio and video</a>。</p>
  </li>
  <li>
-  <p>专有文件类型。是专有文件时需要特别注意。使用 <code>application/octet-stream</code> 作为特殊处理是不被允许的：对于一般的MIME类型浏览器不允许定义默认行为（比如“在Word中打开”）</p>
+  <p>专有文件类型。是专有文件时需要特别注意。使用 <code>application/octet-stream</code> 作为特殊处理是不被允许的：对于一般的 MIME 类型浏览器不允许定义默认行为（比如“在 Word 中打开”）</p>
  </li>
 </ul>
 
 <h2 id="MIME_嗅探">MIME 嗅探</h2>
 
-<p>在缺失 MIME 类型或客户端认为文件设置了错误的 MIME 类型时，浏览器可能会通过查看资源来进行MIME嗅探。每一个浏览器在不同的情况下会执行不同的操作。因为这个操作会有一些安全问题，有的 MIME 类型表示可执行内容而有些是不可执行内容。浏览器可以通过请求头 {{HTTPHeader("Content-Type")}} 来设置 {{HTTPHeader("X-Content-Type-Options")}} 以阻止MIME嗅探。</p>
+<p>在缺失 MIME 类型或客户端认为文件设置了错误的 MIME 类型时，浏览器可能会通过查看资源来进行 MIME 嗅探。每一个浏览器在不同的情况下会执行不同的操作。因为这个操作会有一些安全问题，有的 MIME 类型表示可执行内容而有些是不可执行内容。浏览器可以通过请求头 {{HTTPHeader("Content-Type")}} 来设置 {{HTTPHeader("X-Content-Type-Options")}} 以阻止 MIME 嗅探。</p>
 
 <h2 id="其他传送文件类型的方法">其他传送文件类型的方法</h2>
 
-<p>MIME类型不是传达文档类型信息的唯一方式：</p>
+<p>MIME 类型不是传达文档类型信息的唯一方式：</p>
 
 <ul>
- <li>有时会使用名称后缀，特别是在Microsoft Windows系统上。并非所有的操作系统都认为这些后缀是有意义的（特别是Linux和Mac OS），并且像外部MIME类型一样，不能保证它们是正确的。</li>
- <li>魔术数字。不同类型的文件的语法通过查看结构来允许文件类型推断。例如，每个GIF文件以47 49 46 38十六进制值[GIF89]或89 50 4E 47 [.PNG]的PNG文件开头。 并非所有类型的文件都有幻数，所以这也不是100％可靠的方式。</li>
+ <li>有时会使用名称后缀，特别是在 Microsoft Windows 系统上。并非所有的操作系统都认为这些后缀是有意义的（特别是 Linux 和 Mac OS），并且像外部 MIME 类型一样，不能保证它们是正确的。</li>
+ <li>魔术数字。不同类型的文件的语法通过查看结构来允许文件类型推断。例如，每个 GIF 文件以 47 49 46 38 十六进制值 [GIF89] 或 89 50 4E 47 [.PNG] 的 PNG 文件开头。 并非所有类型的文件都有幻数，所以这也不是 100％可靠的方式。</li>
 </ul>
 
 <h2 id="其他">其他</h2>

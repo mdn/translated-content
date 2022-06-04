@@ -12,7 +12,9 @@ La fonction `last` retourne un nombre égal à la taille du contexte dans le con
 
 ### Syntaxe
 
-    last()
+```
+last()
+```
 
 ### Retour
 
