@@ -6,9 +6,9 @@ original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 ---
 <p>{{DefaultAPISidebar("Touch Events")}}</p>
 
-<p>{{domxref("Touch_events","touch")}} 接口使得应用可以提高触屏设备上的用户体验。然而，现在绝大多数的web内容都是为鼠标操作而设计的。因此，即使浏览器支持触屏，也必须要模拟(emulate)鼠标事件，这样即使是那些只能接受鼠标输入的内容，也不需要进行额外修改就可以正常工作。</p>
+<p>{{domxref("Touch_events","touch")}} 接口使得应用可以提高触屏设备上的用户体验。然而，现在绝大多数的 web 内容都是为鼠标操作而设计的。因此，即使浏览器支持触屏，也必须要模拟 (emulate) 鼠标事件，这样即使是那些只能接受鼠标输入的内容，也不需要进行额外修改就可以正常工作。</p>
 
-<p>理想状态下，一个基于触屏的应用不需要去明确指定鼠标输入。然而，由于浏览器必须要模拟(emulate)鼠标事件，很有可能有一些特定的交互问题需要去处理。下面列出了这些交互的细节 ，并指导应用开发者该如何去处理它们。</p>
+<p>理想状态下，一个基于触屏的应用不需要去明确指定鼠标输入。然而，由于浏览器必须要模拟 (emulate) 鼠标事件，很有可能有一些特定的交互问题需要去处理。下面列出了这些交互的细节，并指导应用开发者该如何去处理它们。</p>
 
 <h2 id="事件触发">事件触发</h2>
 
@@ -41,7 +41,7 @@ function process_touchmove(ev) {
  <li><code>click</code></li>
 </ul>
 
-<p>如果 {{event("touchstart")}}, {{event("touchmove")}} 或者 {{event("touchend")}} 在触摸的过程中触发了touchcancel事件，后面的鼠标事件将不会被触发，由此产生的事件序列只是:</p>
+<p>如果 {{event("touchstart")}}, {{event("touchmove")}} 或者 {{event("touchend")}} 在触摸的过程中触发了 touchcancel 事件，后面的鼠标事件将不会被触发，由此产生的事件序列只是：</p>
 
 <ul>
  <li><code>touchstart</code></li>

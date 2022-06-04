@@ -20,16 +20,16 @@ original_slug: Web/API/NodeFilter/acceptNode
   </tr>
   <tr>
    <td><code>NodeFilter.FILTER_REJECT</code></td>
-   <td>当一个节点应被拒绝时由 {{ domxref("NodeFilter.acceptNode()") }} 返回 。被拒绝访问节点的子节点无法通过{{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 对象访问。该值可认为是“越过该节点及其子节点” 。</td>
+   <td>当一个节点应被拒绝时由 {{ domxref("NodeFilter.acceptNode()") }} 返回。被拒绝访问节点的子节点无法通过{{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 对象访问。该值可认为是“越过该节点及其子节点” 。</td>
   </tr>
   <tr>
    <td><code>NodeFilter.FILTER_SKIP</code></td>
-   <td>当一个节点应被 {{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 对象越过时由 {{ domxref("NodeFilter.acceptNode()") }} 返回 。其子节点依然可被访问到。该值可认为是“越过该节点但不包括其子节点”。</td>
+   <td>当一个节点应被 {{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 对象越过时由 {{ domxref("NodeFilter.acceptNode()") }} 返回。其子节点依然可被访问到。该值可认为是“越过该节点但不包括其子节点”。</td>
   </tr>
  </tbody>
 </table>
 
-<p>该函数如需要TreeWalker访问节点则需返回 <code>NodeFilter.FILTER_ACCEPT，<font face="Open Sans, arial, sans-serif">如果需要忽略节点及其子节点则需返回</font></code><code>NodeFilter.FILTER_REJECT，除此之外还可以返回</code> <code>NodeFilter.FILTER_SKIP。</code></p>
+<p>该函数如需要 TreeWalker 访问节点则需返回 <code>NodeFilter.FILTER_ACCEPT，<font face="Open Sans, arial, sans-serif">如果需要忽略节点及其子节点则需返回</font></code><code>NodeFilter.FILTER_REJECT，除此之外还可以返回</code> <code>NodeFilter.FILTER_SKIP。</code></p>
 
 <p>浏览器没有提供该方法的对象实现。如果用户需要，应实现一个包含<code>acceptNode()方法的对象，用于</code> {{domxref("TreeWalker")}} 或 {{domxref("NodeIterator")}} 对象使用。</p>
 
@@ -54,7 +54,7 @@ original_slug: Web/API/NodeFilter/acceptNode
   // 只需要文本节点
   NodeFilter.SHOW_TEXT,
 
-  // 一个包含用于NodeFilter的accpetNode方法的对象
+  // 一个包含用于 NodeFilter 的 accpetNode 方法的对象
     { acceptNode: function(node) {
       // 一段用于判明是否需要解释、拒绝或越过节点的逻辑
       // 在本例中，仅需要接受不包含空白内容的节点
