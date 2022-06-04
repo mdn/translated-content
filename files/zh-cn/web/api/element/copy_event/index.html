@@ -13,18 +13,18 @@ original_slug: Web/Events/copy
 <h2 id="基本信息">基本信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("ClipboardEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Element")}}：获得焦点的元素（如{{domxref("HTMLElement.contentEditable","contentEditable")}}内容能编辑或者可以选中的元素），或{{HTMLElement("body")}}。</dd>
- <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
- <dd style="margin: 0 0 0 120px;">见下文。</dd>
+ <dt>Specification</dt>
+ <dd><a class="external" href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
+ <dt>Interface</dt>
+ <dd>{{domxref("ClipboardEvent")}}</dd>
+ <dt>Bubbles</dt>
+ <dd>Yes</dd>
+ <dt>Cancelable</dt>
+ <dd>Yes</dd>
+ <dt>Target</dt>
+ <dd>{{domxref("Element")}}：获得焦点的元素（如{{domxref("HTMLElement.contentEditable","contentEditable")}}内容能编辑或者可以选中的元素），或{{HTMLElement("body")}}。</dd>
+ <dt>Default Action</dt>
+ <dd>见下文。</dd>
 </dl>
 
 <p>调用{{domxref("DataTransfer.setData","setData(format, data)")}}可以修改{{domxref("ClipboardEvent.clipboardData")}}事件的默认行为：</p>
