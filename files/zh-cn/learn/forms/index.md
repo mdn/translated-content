@@ -1,5 +1,5 @@
 ---
-title: HTML表单指南
+title: HTML 表单指南
 slug: Learn/Forms
 tags:
   - Beginner
@@ -53,7 +53,7 @@ translation_of: Learn/Forms
 ## 表单样式指南
 
 - [HTML 表单样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-  - : 本文介绍了使用CSS的样式表单，包括您可能需要了解的基本样式任务的所有基础知识。
+  - : 本文介绍了使用 CSS 的样式表单，包括您可能需要了解的基本样式任务的所有基础知识。
 - [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
   - : 在这里，我们将看到一些更高级的表单样式技术，这些技术需要在处理一些更难以设置样式的元素时使用。
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
@@ -73,7 +73,7 @@ translation_of: Learn/Forms
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : 在某些情况下，原生表单部件无法提供您需要的东西，例如，由于样式或功能。在这种情况下，您可能需要使用原生 HTML 构建自己的表单小部件。本文将说明您是如何做到这一点的，以及在实际案例研究中需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)。）
+  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅 [使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : 最后一篇文章提供了一个方便的参考，让您可以确定 CSS 属性与表单元素的兼容性关系。
 

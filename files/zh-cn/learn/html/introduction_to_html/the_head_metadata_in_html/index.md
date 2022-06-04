@@ -1,5 +1,5 @@
 ---
-title: <head>标签里有什么? Metadata-HTML中的元数据
+title: <head>标签里有什么？Metadata-HTML 中的元数据
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 tags:
   - Beginner
@@ -104,7 +104,7 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 
 ![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
-> **备注：** 一些浏览器（比如Chrome）会自动修正错误的编码，所以取决于你所使用的浏览器，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的潜在问题。
+> **备注：** 一些浏览器（比如 Chrome）会自动修正错误的编码，所以取决于你所使用的浏览器，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的潜在问题。
 
 ### 实践操作：体验字符编码
 
@@ -118,7 +118,7 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 
 许多 `<meta>` 元素包含了 `name` 和 `content` 属性：
 
-- `name` 指定了meta 元素的类型；说明该元素包含了什么类型的信息。
+- `name` 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。
 - `content` 指定了实际的元数据内容。
 
 这两个 meta 元素对于定义你的页面的作者和提供页面的简要描述是很有用的。让我们看一个例子：
@@ -245,7 +245,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 2. 使用浏览器和文字编辑器同时打开你的 HTML 文件。
 3. 根据上面的信息，添加 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素到你的 HTML 文件中，这样你的 HTML 就可以应用 CSS 和 JavaScript 了。
 
-如果按照上述步骤正确地执行, 当你保存 HTML 文件并重新刷新浏览器的话，你会发现页面已经变样了：
+如果按照上述步骤正确地执行，当你保存 HTML 文件并重新刷新浏览器的话，你会发现页面已经变样了：
 
 ![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
@@ -281,7 +281,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 ## 本章目录
 
 - [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [\<head>标签里有什么? Metadata-HTML中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [\<head>标签里有什么？Metadata-HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [高阶文字排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

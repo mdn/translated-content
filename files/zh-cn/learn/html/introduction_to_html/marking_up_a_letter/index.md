@@ -33,7 +33,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 开始测验之前，请先下载[信件的原始文本](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)和 [CSS 代码](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt)。然后用文本编辑器（用 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 等在线编辑工具亦可）创建一个新的 `.html` 文件来进行测验。
 
-> **备注：** 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
+> **备注：** 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的 [评估或进一步帮助](#评估或进一步帮助)。
 
 ## 项目概要
 
@@ -42,9 +42,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ### 块/结构语义
 
 - 你应该使用适当的结构来构造整体文档，包括 doctype、{{htmlelement("html")}}、{{htmlelement("head")}} 和 {{htmlelement("body")}} 元素。
-- 除下面提到的几点之外，这封信应该被标记成有着段落和标题的结构。 这封信有 1 个顶级标题（“Re:”那行）和 3 个二级标题。
+- 除下面提到的几点之外，这封信应该被标记成有着段落和标题的结构。这封信有 1 个顶级标题（“Re:”那行）和 3 个二级标题。
 - 使用适当类型的列表标记该学期的开学时间（the semester start dates）、学习科目（study subjects）和异域舞蹈（exotic dances）。
-- 两个地址应该放在 {{htmlelement("address")}} 元素下. 每行的地址应该放在新的一行而不是新的段落。
+- 两个地址应该放在 {{htmlelement("address")}} 元素下。每行的地址应该放在新的一行而不是新的段落。
 
 ### 内联语义
 
@@ -65,7 +65,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 ## 提示和技巧
 
-- 使用 [W3C HTML 验证器](https://validator.w3.org/)来验证 HTML，验证通过有额外加分。
+- 使用 [W3C HTML 验证器](https://validator.w3.org/) 来验证 HTML，验证通过有额外加分。
 - 完成这个测验不需要任何 CSS 知识，只需把现成的 CSS 放到 HTML 元素里就好。
 
 ## 示例

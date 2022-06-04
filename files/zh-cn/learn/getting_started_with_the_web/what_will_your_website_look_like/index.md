@@ -16,7 +16,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
-*设计网站外观?* 在为网站编写代码之前必须进行规划和设计工作，包括“网站提供什么信息？”、“想要什么字体和颜色？”、“网站是做什么的？”
+*设计网站外观？* 在为网站编写代码之前必须进行规划和设计工作，包括“网站提供什么信息？”、“想要什么字体和颜色？”、“网站是做什么的？”
 
 ## 第一步：计划
 
@@ -59,7 +59,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 访问 [Google 图像搜索](https://www.google.com/imghp?gws_rd=ssl) 来搜索合适的图片。
 
 1. 当找到你想要的图像时，点击该图像以获得其放大的视图。
-2. 右键单击图像（Mac上为 Ctrl + 单击），选择*将图像另存为...*，并选择一个安全的地方来保存你的图像。或者，从浏览器地址栏中复制图片的网址，以便以后使用。
+2. 右键单击图像（Mac 上为 Ctrl + 单击），选择*将图像另存为...*，并选择一个安全的地方来保存你的图像。或者，从浏览器地址栏中复制图片的网址，以便以后使用。
 
 ![](updated-google-images.png)
 

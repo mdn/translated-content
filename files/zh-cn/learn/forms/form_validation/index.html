@@ -31,7 +31,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
  <li>“该字段是必填的”（该字段不能留空）</li>
  <li>“请输入你的电话号码，它的格式是：xxx-xxxx”（它要求你输入的数据格式为三个数字接一个横杠，然后再接着是四个数字）</li>
  <li>“请输入一个合法的邮箱地址”（如果你输入的数据不符合“somebody@example.com“的邮箱格式）</li>
- <li>“你的密码长度应该是8至30位的，并且至少应该包含一个大写字母、一个符号以及一个数字”</li>
+ <li>“你的密码长度应该是 8 至 30 位的，并且至少应该包含一个大写字母、一个符号以及一个数字”</li>
 </ul>
 
 <p>这就是<strong>表单校验</strong> —— 当你向 Web 应用输入数据时，应用会验证你输入的数据是否是正确的。如果验证通过，应用允许提交这些数据到服务器并储存到数据库中（通常情况下），如果验证未通过，则 Web 应用会提示你有错误的数据，并且一般都会明确的告诉你错误发生在哪里。表单校验可以通过许多不同的方式实现。</p>
@@ -51,7 +51,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 </ul>
 
 <div class="blockIndicator warning">
-<p>警告： 永远不要相信从客户端传递到服务器的数据。 即使您的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。</p>
+<p>警告：永远不要相信从客户端传递到服务器的数据。即使您的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。</p>
 </div>
 
 <h3 id="不同类型的表单数据校验">不同类型的表单数据校验</h3>
@@ -63,7 +63,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
   <ul>
    <li><strong>JavaScript</strong> 校验，这是可以完全自定义的实现方式；</li>
-   <li>HTML5 <strong>内置校验</strong>，这不需要 JavaScript ，而且性能更好，但是不能像JavaScript那样可自定义。</li>
+   <li>HTML5 <strong>内置校验</strong>，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。</li>
   </ul>
  </li>
  <li><strong>服务器端校验</strong>则是发生在浏览器提交数据并被服务器端程序接收之后 —— 通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今<a href="/zh-CN/docs/learn/Server-side/First_steps/Web_frameworks">所有的服务端框架</a>都提供了数据<strong>校验</strong>与<strong>清洁</strong>功能（让数据更安全）。</li>
@@ -79,7 +79,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 <ul>
  <li>该元素将可以通过 CSS 伪类 {{cssxref(":valid")}} 进行特殊的样式化；</li>
- <li>如果用户尝试提交表单，如果没有其它的控制来阻止该操作（比如JavaScript即可阻止提交），那么该表单的数据会被提交。</li>
+ <li>如果用户尝试提交表单，如果没有其它的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。</li>
 </ul>
 
 <p>如果一个元素未校验通过：</p>
@@ -91,9 +91,9 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 <h3 id="input_元素的校验约束_—_starting_simple">input 元素的校验约束 — starting simple</h3>
 
-<p>在这一节，我们将会看到一些用于{{HTMLElement("input")}}元素校验的HTML5的特性。</p>
+<p>在这一节，我们将会看到一些用于{{HTMLElement("input")}}元素校验的 HTML5 的特性。</p>
 
-<p>让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的input。 这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的label，还有一个 submit {{htmlelement("button")}}。你可以在GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>找到源码，在线例子如下:</p>
+<p>让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。 这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>找到源码，在线例子如下：</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -119,9 +119,9 @@ input:valid {
 
 <h3 id="required_属性">required 属性</h3>
 
-<p>最简单的HTML5校验功能是 {{htmlattrxref("required", "input")}}属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。 当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。</p>
+<p>最简单的 HTML5 校验功能是 {{htmlattrxref("required", "input")}}属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。</p>
 
-<p>添加一个 <code>required</code> 属性到你的 input 元素, 如下所示:</p>
+<p>添加一个 <code>required</code> 属性到你的 input 元素，如下所示：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
@@ -139,13 +139,13 @@ input:valid {
   border: 2px solid black;
 }</pre>
 
-<p>以上样式效果为：在校验失败时 输入框会有一个亮红色的虚线边框, 在校验通过时会有一个更微妙的黑色边框。在以下示例中尝试新的行为：</p>
+<p>以上样式效果为：在校验失败时 输入框会有一个亮红色的虚线边框，在校验通过时会有一个更微妙的黑色边框。在以下示例中尝试新的行为：</p>
 
 <p>{{EmbedLiveSample("required_属性", "100%", 50)}}</p>
 
 <h3 id="使用正则表达式校验">使用正则表达式校验</h3>
 
-<p>另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性, 以 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> 作为 value 值. 正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其它的用途。</p>
+<p>另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性，以 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其它的用途。</p>
 
 <p>正则表达式相当复杂，我们不打算在本文中详尽地教你。</p>
 
@@ -154,33 +154,33 @@ input:valid {
 <ul>
  <li><code>a</code> — 匹配一个字符<code>a</code>(不能匹配 <code>b</code>,  <code>aa</code>等等.)</li>
  <li><code>abc</code> — 匹配 <code>a</code>, 其次 <code>b</code>, 最后  <code>c</code>.</li>
- <li><code>a*</code> — 匹配0个或者多个字符 <code>a</code> (<code>+</code> 代表至少匹配一个或者多个).</li>
+ <li><code>a*</code> — 匹配 0 个或者多个字符 <code>a</code> (<code>+</code> 代表至少匹配一个或者多个).</li>
  <li><code>[^a]</code> — 匹配一个字符，但它<strong>不能</strong>是<code>a</code>.</li>
  <li><code>a|b</code> — 匹配一个字符 <code>a</code> 或者 <code>b</code>.</li>
  <li><code>[abc]</code> — 匹配一个字符，它可以是<code>a</code>,<code>b</code>或<code>c</code>.</li>
  <li><code>[^abc]</code> — 匹配一个字符，但它<strong>不可以</strong>是<code>a</code>,<code>b</code>或<code>c</code>.</li>
- <li><code>[a-z]</code> — 匹配字符范围 <code>a-z</code>且全部小写  (你可以使用 <code>[A-Za-z]</code> 涵盖大小写, 或 <code>[A-Z]</code> 来限制必须大写).</li>
- <li><code>a.c</code> — 匹配字符 <code>a</code>,中间匹配任意一个字符,最后匹配字符<code> c</code>.</li>
- <li><code>a{5}</code> — 匹配字符 <code>a</code>五次.</li>
- <li><code>a{5,7}</code> — 匹配字符 <code>a</code>五到七次,不能多或者少.</li>
+ <li><code>[a-z]</code> — 匹配字符范围 <code>a-z</code>且全部小写  (你可以使用 <code>[A-Za-z]</code> 涵盖大小写，或 <code>[A-Z]</code> 来限制必须大写).</li>
+ <li><code>a.c</code> — 匹配字符 <code>a</code>,中间匹配任意一个字符，最后匹配字符<code> c</code>.</li>
+ <li><code>a{5}</code> — 匹配字符 <code>a</code>五次。</li>
+ <li><code>a{5,7}</code> — 匹配字符 <code>a</code>五到七次，不能多或者少。</li>
 </ul>
 
-<p>你也可以在这些表达式中使用数字和其他字符, 例如:</p>
+<p>你也可以在这些表达式中使用数字和其他字符，例如：</p>
 
 <ul>
- <li><code>[ -]</code> — 匹配一个空格或者虚线.</li>
- <li><code>[0-9]</code> — 匹配数字范围0~9.</li>
+ <li><code>[ -]</code> — 匹配一个空格或者虚线。</li>
+ <li><code>[0-9]</code> — 匹配数字范围 0~9.</li>
 </ul>
 
-<p>你可以任意地组合这些，你可以任意指定不同的部分:</p>
+<p>你可以任意地组合这些，你可以任意指定不同的部分：</p>
 
 <ul>
- <li><code>[Ll].*k</code> — 匹配一个大写<code>L</code>或者小写的<code>l</code>, 之后匹配0个或多个任意类型的字符, 最后匹配一个小写字母 k.</li>
- <li><code>[A-Z][A-Za-z' -]+</code> — 一个大写字母后面跟着匹配一个及以上的大小写字母或者中划线或者撇号或者空格. 这个可以用于校验英语会话中城市或城镇名, 但这需要首字母以大写开头,不包括其他字符，例如来自英国的Manchester, Ashton-under-lyne, 以及Bishop's Stortford等.</li>
- <li><code>[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}</code> — 简单的匹配一个美国内的电话号码 — 三个数字 0<code>-</code>9, 后面跟着一个空格或者中划线, 之后匹配三个数字 0<code>-</code>9, 再跟着一个空格或者中划线, 最后跟着四个数字 0<code>-</code>9. 但实际情况可能更加复杂,因为有些人会给号码加上括号什么的,这里的表达式只是用来做一个简单的演示.</li>
+ <li><code>[Ll].*k</code> — 匹配一个大写<code>L</code>或者小写的<code>l</code>, 之后匹配 0 个或多个任意类型的字符，最后匹配一个小写字母 k.</li>
+ <li><code>[A-Z][A-Za-z' -]+</code> — 一个大写字母后面跟着匹配一个及以上的大小写字母或者中划线或者撇号或者空格。这个可以用于校验英语会话中城市或城镇名，但这需要首字母以大写开头，不包括其他字符，例如来自英国的 Manchester, Ashton-under-lyne, 以及 Bishop's Stortford 等。</li>
+ <li><code>[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}</code> — 简单的匹配一个美国内的电话号码 — 三个数字 0<code>-</code>9, 后面跟着一个空格或者中划线，之后匹配三个数字 0<code>-</code>9, 再跟着一个空格或者中划线，最后跟着四个数字 0<code>-</code>9. 但实际情况可能更加复杂，因为有些人会给号码加上括号什么的，这里的表达式只是用来做一个简单的演示。</li>
 </ul>
 
-<p>不管怎么说, 让我们来实现这些例子 — 更新你的html文档表单增加一个 <code>pattern</code> 属性, 如下:</p>
+<p>不管怎么说，让我们来实现这些例子 — 更新你的 html 文档表单增加一个 <code>pattern</code> 属性，如下：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
@@ -200,27 +200,27 @@ input:valid {
 
 <p>{{EmbedLiveSample("使用正则表达式校验", "100%", 50)}}</p>
 
-<p>这个例子中, 该 {{HTMLElement("input")}} 元素接受两个值中的一个: 字符串 "banana" 或者字符串"cherry".</p>
+<p>这个例子中，该 {{HTMLElement("input")}} 元素接受两个值中的一个：字符串 "banana" 或者字符串"cherry".</p>
 
-<p>在这个基础上, 尝试把<code>pattern</code> 属性内部的表达式改变成上面的几个例子, 然后看看这些表达式如何影响您可以输入的值以使输入值有效. 尝试写一些你自己设计的,看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义.</p>
+<p>在这个基础上，尝试把<code>pattern</code> 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响您可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 一些 {{HTMLElement("input")}} 元素类型不需要{{htmlattrxref("pattern","input")}} 属性进行校验. 指定特定 <code>email</code> 类型 就会使用匹配电子邮件格式的正则表达式来校验(如果有 {{htmlattrxref("multiple","input")}} 属性请用逗号来分割多个邮箱). 进一步来说, 字段 <code>url</code> 类型则会自动校验输入的是否为一个合法的链接.</p>
+<p><strong>注意：</strong> 一些 {{HTMLElement("input")}} 元素类型不需要{{htmlattrxref("pattern","input")}} 属性进行校验。指定特定 <code>email</code> 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 {{htmlattrxref("multiple","input")}} 属性请用逗号来分割多个邮箱). 进一步来说，字段 <code>url</code> 类型则会自动校验输入的是否为一个合法的链接。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 该 {{HTMLElement("textarea")}} 元素不支持{{htmlattrxref("pattern","input")}} 属性.</p>
+<p><strong>注意</strong>: 该 {{HTMLElement("textarea")}} 元素不支持{{htmlattrxref("pattern","input")}} 属性。</p>
 </div>
 
 <h3 id="限制输入的长度">限制输入的长度</h3>
 
-<p>所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用{{htmlattrxref("minlength","input")}} 和 {{htmlattrxref("maxlength","input")}} 属性来限制长度. 如果输入的字段长度小于 {{htmlattrxref("minlength","input")}} 的值或大于 {{htmlattrxref("maxlength","input")}} 值则无效. 浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。</p>
+<p>所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用{{htmlattrxref("minlength","input")}} 和 {{htmlattrxref("maxlength","input")}} 属性来限制长度。如果输入的字段长度小于 {{htmlattrxref("minlength","input")}} 的值或大于 {{htmlattrxref("maxlength","input")}} 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。</p>
 
-<p>在数字条目中 (i.e. <code>&lt;input type="number"&gt;</code>), 该 {{htmlattrxref("min","input")}} 和 {{htmlattrxref("max","input")}} 属性同样提供校验约束.如果字段的值小于{{htmlattrxref("min","input")}} 属性的值或大于 {{htmlattrxref("max","input")}} 属性的值,该字段则无效.</p>
+<p>在数字条目中 (i.e. <code>&lt;input type="number"&gt;</code>), 该 {{htmlattrxref("min","input")}} 和 {{htmlattrxref("max","input")}} 属性同样提供校验约束。如果字段的值小于{{htmlattrxref("min","input")}} 属性的值或大于 {{htmlattrxref("max","input")}} 属性的值，该字段则无效。</p>
 
-<p>让我来看看另外一个例子. 创建一个 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> 文件副本.</p>
+<p>让我来看看另外一个例子。创建一个 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> 文件副本。</p>
 
-<p>现在删除 <code>&lt;body&gt;</code> 元素中的内容, 替换成下面的代码:</p>
+<p>现在删除 <code>&lt;body&gt;</code> 元素中的内容，替换成下面的代码：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -237,8 +237,8 @@ input:valid {
 &lt;/form&gt;</pre>
 
 <ul>
- <li>这里我们看到 <code>text</code> 条目的属性<code>minlength</code> 和 <code>maxlength</code> 都为6 — 这 banana 和 cherry的长度都为6. 输入少于这个长度的字符显示无效, 大多浏览器不能输入超过该限制的长度的字符.</li>
- <li>我们同时也能让 <code>number</code> 条目数值限制在 <code>min</code> 为 1 和 一个 <code>max</code> 为 10 中 — 输入超出范围则显示无效, 并且您将无法使用递增/递减箭头将该值改变到此范围之外。</li>
+ <li>这里我们看到 <code>text</code> 条目的属性<code>minlength</code> 和 <code>maxlength</code> 都为 6 — 这 banana 和 cherry 的长度都为 6. 输入少于这个长度的字符显示无效，大多浏览器不能输入超过该限制的长度的字符。</li>
+ <li>我们同时也能让 <code>number</code> 条目数值限制在 <code>min</code> 为 1 和 一个 <code>max</code> 为 10 中 — 输入超出范围则显示无效，并且您将无法使用递增/递减箭头将该值改变到此范围之外。</li>
 </ul>
 
 <div class="hidden">
@@ -255,17 +255,17 @@ div {
 }</pre>
 </div>
 
-<p>这里是运行的例子:</p>
+<p>这里是运行的例子：</p>
 
 <p>{{EmbedLiveSample("限制输入的长度", "100%", 70)}}</p>
 
 <div class="note">
-<p><strong>注意</strong>: <code>&lt;input type="number"&gt;</code> (或者其他类型, 像 <code>range</code>) 也可以获取到一个{{htmlattrxref("step", "input")}} 属性, 指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).</p>
+<p><strong>注意</strong>: <code>&lt;input type="number"&gt;</code> (或者其他类型，像 <code>range</code>) 也可以获取到一个{{htmlattrxref("step", "input")}} 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).</p>
 </div>
 
 <h3 id="完整的例子">完整的例子</h3>
 
-<p>这里就是一个完整的展示 HTML 中使用校验属性的例子:</p>
+<p>这里就是一个完整的展示 HTML 中使用校验属性的例子：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
@@ -277,8 +277,8 @@ div {
   &lt;/p&gt;
   &lt;p&gt;
     &lt;label for="n1"&gt;How old are you?&lt;/label&gt;
-    &lt;!-- 这里的pattern属性可以用作不支持number类input浏览器的备用方法
-         请注意当与数字输入框一起使用时，支持pattern属性的浏览器会使它沉默失效。
+    &lt;!-- 这里的 pattern 属性可以用作不支持 number 类 input 浏览器的备用方法
+         请注意当与数字输入框一起使用时，支持 pattern 属性的浏览器会使它沉默失效。
          它仅仅是在这里用作备用 --&gt;
     &lt;input type="number" min="12" max="120" step="1" id="n1" name="age"
            pattern="\d+"&gt;
@@ -330,7 +330,7 @@ input[type=email],
 input[type=number],
 textarea,
 fieldset {
-/* 需要在基于WebKit的浏览器上对表单元素进行恰当的样式设置 */
+/* 需要在基于 WebKit 的浏览器上对表单元素进行恰当的样式设置 */
   -webkit-appearance: none;
 
   width : 100%;
@@ -356,13 +356,13 @@ input:focus:invalid {
 
 <h3 id="自定义错误信息">自定义错误信息</h3>
 
-<p>正如我们上面所看到的例子, 每次我们提交无效的表单数据时, 浏览器总会显示错误信息. 但是显示的信息取决于你所使用的浏览器.</p>
+<p>正如我们上面所看到的例子，每次我们提交无效的表单数据时，浏览器总会显示错误信息。但是显示的信息取决于你所使用的浏览器。</p>
 
-<p>这些自动生成的错误有两个缺点:</p>
+<p>这些自动生成的错误有两个缺点：</p>
 
 <ul>
- <li>没有标准可以让 CSS 来改变他们的界面外观.</li>
- <li>这依赖于他们使用的浏览器环境, 意味着你可能在这种语言的页面里得到另一种语言的错误提示.</li>
+ <li>没有标准可以让 CSS 来改变他们的界面外观。</li>
+ <li>这依赖于他们使用的浏览器环境，意味着你可能在这种语言的页面里得到另一种语言的错误提示。</li>
 </ul>
 
 <table>
@@ -389,9 +389,9 @@ input:focus:invalid {
  </tbody>
 </table>
 
-<p>要自定义这些消息的外观和文本, 你必须使用 JavaScript; 不能使用 HTML 和 CSS 来改变.</p>
+<p>要自定义这些消息的外观和文本，你必须使用 JavaScript; 不能使用 HTML 和 CSS 来改变。</p>
 
-<p>HTML5 提供 <a href="http://www.w3.org/TR/html5/forms.html#the-constraint-validation-api" rel="external">constraint validation API</a> 来检测和自定义表单元素的状态. 除此之外,他可以改变错误信息的文本. 让我们快速的看一个例子:</p>
+<p>HTML5 提供 <a href="http://www.w3.org/TR/html5/forms.html#the-constraint-validation-api" rel="external">constraint validation API</a> 来检测和自定义表单元素的状态。除此之外，他可以改变错误信息的文本。让我们快速的看一个例子：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="mail"&gt;I would like you to provide me an e-mail&lt;/label&gt;
@@ -399,7 +399,7 @@ input:focus:invalid {
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>在JavaScript 中, 你调用 <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()" title="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> 方法:</p>
+<p>在 JavaScript 中，你调用 <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()" title="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> 方法：</p>
 
 <pre class="brush: js">var email = document.getElementById("mail");
 
@@ -413,13 +413,13 @@ email.addEventListener("input", function (event) {
 
 <p>{{EmbedLiveSample("自定义错误信息", "100%", 50)}}</p>
 
-<h2 id="使用_JavaScript校验表单"> 使用 JavaScript校验表单</h2>
+<h2 id="使用_JavaScript校验表单"> 使用 JavaScript 校验表单</h2>
 
-<p>如果你想控制原生错误信息的界面外观，或者你想处理不支持HTML内置表单校验的浏览器，则必须使用 Javascript。</p>
+<p>如果你想控制原生错误信息的界面外观，或者你想处理不支持 HTML 内置表单校验的浏览器，则必须使用 Javascript。</p>
 
 <h3 id="约束校验的_API">约束校验的 API</h3>
 
-<p>越来越多的浏览器支持限制校验API，并且这逐渐变得可靠。这些 API 由成组的方法和属性构成，可在特定的表单元素接口上调用：</p>
+<p>越来越多的浏览器支持限制校验 API，并且这逐渐变得可靠。这些 API 由成组的方法和属性构成，可在特定的表单元素接口上调用：</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></li>
@@ -523,7 +523,7 @@ email.addEventListener("input", function (event) {
   </tr>
   <tr>
    <td>{{domxref("HTMLFormElement.reportValidity()")}}</td>
-   <td>如果元素或它的子元素控件符合校验的限制，返回 <code>true</code> . 当返回为 <code>false</code> 时, 对每个无效元素可撤销 {{event("invalid")}} 事件会被唤起并且校验错误会报告给用户 。</td>
+   <td>如果元素或它的子元素控件符合校验的限制，返回 <code>true</code> . 当返回为 <code>false</code> 时，对每个无效元素可撤销 {{event("invalid")}} 事件会被唤起并且校验错误会报告给用户。</td>
   </tr>
   <tr>
    <td>
@@ -553,7 +553,7 @@ email.addEventListener("input", function (event) {
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>这个简单的表单使用 {{htmlattrxref("novalidate","form")}} 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。</p>
+<p>这个简单的表单使用 {{htmlattrxref("novalidate","form")}} 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。</p>
 
 <p><a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions" title="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。</p>
 
@@ -653,21 +653,21 @@ form.addEventListener("submit", function (event) {
 
 <p>{{EmbedLiveSample("使用约束校验_API_的例子", "100%", 130)}}</p>
 
-<p>约束校验 API 为您提供了一个强大的工具来处理表单校验，让您可以对用户界面进行远超过仅仅使用 HTML 和 CSS所能得到的控制。</p>
+<p>约束校验 API 为您提供了一个强大的工具来处理表单校验，让您可以对用户界面进行远超过仅仅使用 HTML 和 CSS 所能得到的控制。</p>
 
 <h3 id="不使用内建_API_时的表单校验">不使用内建 API 时的表单校验</h3>
 
-<p>有时，例如使用旧版浏览器或<a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">自定义小部件</a>，您将无法（或不希望）使用约束校验API。 在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。 校验表单比起真实数据校验更像是一个用户界面问题。</p>
+<p>有时，例如使用旧版浏览器或<a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">自定义小部件</a>，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。</p>
 
 <p>要校验表单，您必须问自己几个问题：</p>
 
 <dl>
  <dt>我应该进行什么样的校验？</dt>
- <dd>你需要确定如何校验你的数据：字符串操作，类型转换，正则表达式等。这取决于你。 只要记住，表单数据一般都是文本，并总是以字符串形式提供给脚本。</dd>
- <dt>如果表单校验失败，我该怎么办?</dt>
- <dd>这显然是一个 UI 问题。 您必须决定表单的行为方式：表单是否发送数据？ 是否突出显示错误的字段？是否显示错误消息？</dd>
- <dt>如何帮助用户纠正无效数据?</dt>
- <dd>为了减少用户的挫折感，提供尽可能多的有用的信息是非常重要的，以便引导他们纠正他们的输入。 您应该提供前期建议，以便他们知道预期的输入是什么以及明确的错误消息。 如果您想深入了解表单校验用户界面要求，那么您应该阅读一些有用的文章：
+ <dd>你需要确定如何校验你的数据：字符串操作，类型转换，正则表达式等。这取决于你。只要记住，表单数据一般都是文本，并总是以字符串形式提供给脚本。</dd>
+ <dt>如果表单校验失败，我该怎么办？</dt>
+ <dd>这显然是一个 UI 问题。您必须决定表单的行为方式：表单是否发送数据？是否突出显示错误的字段？是否显示错误消息？</dd>
+ <dt>如何帮助用户纠正无效数据？</dt>
+ <dd>为了减少用户的挫折感，提供尽可能多的有用的信息是非常重要的，以便引导他们纠正他们的输入。您应该提供前期建议，以便他们知道预期的输入是什么以及明确的错误消息。如果您想深入了解表单校验用户界面要求，那么您应该阅读一些有用的文章：
  <ul>
   <li>SmashingMagazine: <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Form-Field Validation: The Errors-Only Approach</a></li>
   <li>SmashingMagazine: <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Web Form Validation: Best Practices and Tutorials</a></li>
@@ -677,7 +677,7 @@ form.addEventListener("submit", function (event) {
  </dd>
 </dl>
 
-<h4 id="不使用约束校验API_的例子">不使用约束校验API 的例子</h4>
+<h4 id="不使用约束校验API_的例子">不使用约束校验 API 的例子</h4>
 
 <p>为了说明这一点，让我们重构一下前面的例子，以便它可以在旧版浏览器中使用：</p>
 
@@ -694,11 +694,11 @@ form.addEventListener("submit", function (event) {
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。 请注意，<a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> 是与 HTML5 无关的独立规范。</p>
+<p>正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，<a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> 是与 HTML5 无关的独立规范。</p>
 
 <h5 id="CSS_2">CSS</h5>
 
-<p>同样的，CSS也不需要太多的改动， 我们只需将 {{cssxref(":invalid")}} 伪类变成真实的类，并避免使用不适用于 Internet Explorer 6 的属性选择器。</p>
+<p>同样的，CSS 也不需要太多的改动，我们只需将 {{cssxref(":invalid")}} 伪类变成真实的类，并避免使用不适用于 Internet Explorer 6 的属性选择器。</p>
 
 <pre class="brush: css">/* 仅为了使示例更好看 */
 body {
@@ -792,7 +792,7 @@ function addEvent(element, event, callback) {
 };
 
 // 现在我们可以重构字段的约束校验了
-// 由于不使用 CSS 伪类, 我们必须明确地设置 valid 或 invalid 类到 email 字段上
+// 由于不使用 CSS 伪类，我们必须明确地设置 valid 或 invalid 类到 email 字段上
 addEvent(window, "load", function () {
   // 在这里验证字段是否为空（请记住，该字段不是必需的）
   // 如果非空，检查它的内容格式是不是合格的 e-mail 地址
@@ -831,11 +831,11 @@ addEvent(form, "submit", function () {
   }
 });</pre>
 
-<p>该结果如下:</p>
+<p>该结果如下：</p>
 
 <p>{{EmbedLiveSample("不使用内建_API_时的表单校验", "100%", 130)}}</p>
 
-<p>正如你所看到的，建立自己的校验系统并不难。 困难的部分是使其足够通用，以跨平台和任何形式使用它可以创建。 有许多库可用于执行表单校验; 你应该毫不犹豫地使用它们。 这里有一些例子：</p>
+<p>正如你所看到的，建立自己的校验系统并不难。困难的部分是使其足够通用，以跨平台和任何形式使用它可以创建。有许多库可用于执行表单校验; 你应该毫不犹豫地使用它们。这里有一些例子：</p>
 
 <ul>
  <li>独立的库（原生 Javascript 实现）：
@@ -843,7 +843,7 @@ addEvent(form, "submit", function () {
    <li><a href="http://rickharrison.github.com/validate.js/" rel="external">Validate.js</a></li>
   </ul>
  </li>
- <li>jQuery 插件:
+ <li>jQuery 插件：
   <ul>
    <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" rel="external">Validation</a></li>
    <li><a href="http://unwrongest.com/projects/valid8/" rel="external">Valid8</a> </li>
@@ -853,7 +853,7 @@ addEvent(form, "submit", function () {
 
 <h4 id="远程校验">远程校验</h4>
 
-<p>在某些情况下，执行一些远程校验可能很有用。 当用户输入的数据与存储在应用程序服务器端的附加数据绑定时，这种校验是必要的。 一个应用实例就是注册表单，在这里你需要一个用户名。 为了避免重复，执行一个 AJAX 请求来检查用户名的可用性，要比让先用户发送数据，然后因为表单重复了返回错误信息要好得多。</p>
+<p>在某些情况下，执行一些远程校验可能很有用。当用户输入的数据与存储在应用程序服务器端的附加数据绑定时，这种校验是必要的。一个应用实例就是注册表单，在这里你需要一个用户名。为了避免重复，执行一个 AJAX 请求来检查用户名的可用性，要比让先用户发送数据，然后因为表单重复了返回错误信息要好得多。</p>
 
 <p>执行这样的校验需要采取一些预防措施：</p>
 
@@ -864,7 +864,7 @@ addEvent(form, "submit", function () {
 
 <h2 id="结论">结论</h2>
 
-<p>表单校验并不需要复杂的 JavaScript，但它需要对用户的仔细考虑。 一定要记住帮助您的用户更正他提供的数据。 为此，请务必：</p>
+<p>表单校验并不需要复杂的 JavaScript，但它需要对用户的仔细考虑。一定要记住帮助您的用户更正他提供的数据。为此，请务必：</p>
 
 <ul>
  <li>显示明确的错误消息。</li>
