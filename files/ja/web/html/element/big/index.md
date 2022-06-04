@@ -2,83 +2,87 @@
 title: '<big>: 大きめの文字列要素'
 slug: Web/HTML/Element/big
 tags:
-  - Element
+  - 要素
   - HTML
-  - Obsolete
-  - Reference
-  - Web
+  - 非推奨
+  - リファレンス
+  - ウェブ
+browser-compat: html.elements.big
 translation_of: Web/HTML/Element/big
 ---
-<div>{{obsolete_header}}</div>
 
-<p><span class="seoSummary">廃止された <strong>HTML の Big 要素</strong> (<code>&lt;big&gt;</code>) は、内包するテキストを周りの文字列よりも1段階大きいフォントの大きさで描画します（例えば <code>medium</code> が <code>large</code> になります）。</span>大きさはブラウザーの最大フォントの大きさに制限されます。</p>
+{{deprecated_header}}
 
-<div class="note">
-<p><strong>使用上の注意:</strong> この要素は純粋に視覚的なものでしたので、 <a href="/ja/docs/Web/Guide/HTML/HTML5" title="Web/Guide/HTML/HTML5">HTML5</a> では削除され、もう使用するべきではありません。ウェブ開発者は CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを調整してください。</p>
-</div>
+**`<big>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素で、内包するテキストを周りの文字列よりも1段階大きいフォントの大きさで描画します（例えば `medium` が `large` になります）。大きさはブラウザーの最大フォントの大きさに制限されます。
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+> **Warning:** この要素は仕様書から削除され、もう使用するべきではありません。ウェブ開発者は CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを調整してください。
 
-<p>この要素は、すべての要素で共通の <a href="/ja/docs/HTML/global_attributes" title="HTML/global attributes">グローバル属性</a> 以外には属性を持ちません。</p>
+## 属性
 
-<h2 id="Examples" name="Examples">例</h2>
+この要素は、すべての要素で共通の[グローバル属性](/ja/docs/HTML/global_attributes)以外の属性はありません。
 
-<p>ここでは <code>&lt;big&gt;</code> を使って表示する例と、その後で現在の CSS の文法で代用して同じ結果を得る方法を示します。</p>
+## 例
 
-<h3 id="Using_&lt;big>" name="Using_&lt;big>"><code>&lt;big&gt;</code> の使用</h3>
+ここでは `<big>` を使って表示する例と、その後で現在の CSS の文法で代用して同じ結果を得る方法を示します。
 
-<div id="Using_big">
-<p>This example uses the obsolete <code>&lt;big&gt;</code> element to increase the size of some text.</p>
+### big の使用
 
-<h4 id="HTML">HTML</h4>
+この例は、廃止された `<big>` 要素を使用して、一部のテキストの大きさを拡大します。
 
-<pre class="brush: html">&lt;p&gt;
-  This is the first sentence. &lt;big&gt;This whole
-  sentence is in bigger letters.&lt;/big&gt;
-&lt;/p&gt;</pre>
-</div>
+#### HTML
 
-<h4 id="Result" name="Result">結果</h4>
+```html
+<p>
+  This is the first sentence. <big>This whole
+  sentence is in bigger letters.</big>
+</p>
+```
 
-<p>{{EmbedLiveSample("Using_big", 640, 60)}}</p>
+#### 結果
 
-<h3 id="Using_CSS_font-size" name="Using_CSS_font-size">CSS の <code>font-size</code> の使用</h3>
+{{EmbedLiveSample("Using_big", 640, 60)}}
 
-<p>この例では CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを1レベル大きくしています。</p>
+### CSS の `font-size` の使用
 
-<h4 id="CSS">CSS</h4>
+この例では CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを 1 レベル大きくしています。
 
-<pre class="brush: css">.bigger {
+#### CSS
+
+```css
+.bigger {
   font-size: larger;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  This is the first sentence. &lt;span class="bigger"&gt;This whole
-  sentence is in bigger letters.&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  This is the first sentence. <span class="bigger">This whole
+  sentence is in bigger letters.</span>
+</p>
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Using_CSS_font-size", 640, 60)}}</p>
+{{EmbedLiveSample("Using_CSS_font-size", 640, 60)}}
 
-<h2 id="DOM_interface" name="DOM_interface">DOM インターフェイス</h2>
+## DOM インターフェイス
 
-<p>この要素は {{domxref('HTMLElement')}} インターフェイスを提供します。</p>
+この要素は {{domxref('HTMLElement')}} インターフェイスを実装しています。
 
-<div class="note"><strong>実装メモ: </strong>Gecko 1.9.2 までのバージョンは、この要素に {{domxref('HTMLSpanElement')}} インターフェイスを実装しています。</div>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+{{Specifications}}
 
-<p>{{Compat("html.elements.big")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>CSS: {{cssxref("font-size")}}, {{cssxref("font")}}</li>
- <li>HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}</li>
- <li>HTML 4.01 仕様書: <a class="external" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">Font Styles</a></li>
-</ul>
+## 関連情報
 
-<div>{{HTMLRef}}</div>
+- CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
+- HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
+- HTML 4.01 仕様書: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+
+{{HTMLRef}}
