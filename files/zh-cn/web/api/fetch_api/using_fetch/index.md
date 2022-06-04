@@ -22,7 +22,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 
 - 当接收到一个代表错误的 HTTP 状态码时，从 `fetch()` 返回的 Promise **不会被标记为 reject**，即使响应的 HTTP 状态码是 404 或 500。相反，它会将 Promise 状态标记为 resolve（如果响应的 HTTP 状态码不在 200 - 299 的范围内，则设置 resolve 返回值的 {{domxref("Response/ok", "ok")}} 属性为 false），仅当网络故障时或请求被阻止时，才会标记为 reject。
-- `fetch` **不会发送跨域 cookies**，除非你使用了 _credentials_ 的 [初始化选项](/zh-CN/docs/Web/API/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585) 以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
+- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585) 以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
 
 一个基本的 fetch 请求设置起来很简单。看看下面的代码：
 
@@ -369,7 +369,7 @@ fetch(myRequest)
 你会用到的最常见的 response 属性有：
 
 - {{domxref("Response.status")}} — 整数（默认值为 200）为 response 的状态码。
-- {{domxref("Response.statusText")}} — 字符串（默认值为 ""），该值与 HTTP 状态码消息对应。注意：HTTP/2 [不支持](https://fetch.spec.whatwg.org/#concept-response-status-message) 状态消息
+- {{domxref("Response.statusText")}} — 字符串（默认值为 ""），该值与 HTTP 状态码消息对应。注意：HTTP/2 [不支持](https://fetch.spec.whatwg.org/#concept-response-status-message)状态消息
 - {{domxref("Response.ok")}} — 如上所示，该属性是来检查 response 的状态是否在 200 - 299（包括 200 和 299）这个范围内。该属性返回一个布尔值。
 
 它的实例也可用通过 JavaScript 来创建，但只有在 {{domxref("Service_Worker_API", "ServiceWorkers")}} 中使用 {{domxref("FetchEvent.respondWith","respondWith()")}} 方法并提供了一个自定义的 response 来接受 request 时才真正有用：
