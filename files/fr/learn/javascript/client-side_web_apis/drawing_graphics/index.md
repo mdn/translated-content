@@ -352,7 +352,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
 3. On peut alors essayer d'intégrer l'image avec la méthode `drawImage()`, mais il faut d'abord s'assurer que le fichier de l'image a bien été chargé, sinon le dessin échouera. Pour cela, on peut utiliser l'évènement `load` qui est uniquement déclenché après que le chargement de l'image est terminé. Ajoutez le bloc qui suit après les instructions précédentes&nbsp;:
 
     ```js
-    image.addEventListener('load', () => ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175));
+    image.addEventListener('load', () => ctx.drawImage(image, 20, 20));
     ```
 
     Si vous chargez l'exemple dans votre navigateur, vous devriez désormais voir l'image apparaître dans le canevas.
