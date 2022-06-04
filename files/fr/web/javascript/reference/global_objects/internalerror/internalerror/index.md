@@ -4,9 +4,9 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 browser-compat: javascript.builtins.InternalError.InternalError
 ---
-{{JSRef}} {{non-standard_header}}
+{{JSRef}}{{non-standard_header}}
 
-Le constructeur **`InternalError()`** permet de créer une erreur qui s'est produite à l'intérieur du moteur JavaScript, comme "**InternalError**: too much recursion".
+Le constructeur **`InternalError()`** permet de créer une erreur qui s'est produite à l'intérieur du moteur JavaScript, comme «&nbsp;**InternalError**: too much recursion&nbsp;».
 
 ## Syntaxe
 
@@ -31,7 +31,7 @@ new InternalError(message, nomFichier, numeroLigne)
 ### Créer une nouvelle exception `InternalError`
 
 ```js
-new InternalError("Échec du moteur");
+new InternalError('Échec du moteur');
 ```
 
 ## Spécifications
