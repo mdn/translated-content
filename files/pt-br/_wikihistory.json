@@ -4970,12 +4970,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:28:55.671Z",
-    "contributors": [
-      "cezaraugusto"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onblur": {
     "modified": "2019-03-23T22:28:57.111Z",
     "contributors": [
@@ -16042,6 +16036,12 @@
       "teoli",
       "khalid32",
       "Leeehandro"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/abort_event": {
+    "modified": "2019-03-23T22:28:55.671Z",
+    "contributors": [
+      "cezaraugusto"
     ]
   },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {

@@ -1,6 +1,6 @@
 ---
 title: GlobalEventHandlers.onabort
-slug: Web/API/GlobalEventHandlers/onabort
+slug: conflicting/Web/API/HTMLMediaElement/abort_event
 tags:
   - API
   - NeedContent
@@ -8,6 +8,7 @@ tags:
   - Reference
   - Window
 translation_of: Web/API/GlobalEventHandlers/onabort
+original_slug: Web/API/GlobalEventHandlers/onabort
 ---
 {{ ApiRef("HTML DOM") }}
 

@@ -1452,6 +1452,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onscroll	/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll
 /zh-CN/docs/Web/API/GlobalEventHandlers.onselect	/zh-CN/docs/Web/API/GlobalEventHandlers/onselect
 /zh-CN/docs/Web/API/GlobalEventHandlers.onsubmit	/zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit
+/zh-CN/docs/Web/API/GlobalEventHandlers/onabort	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange

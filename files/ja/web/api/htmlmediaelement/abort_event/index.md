@@ -1,6 +1,6 @@
 ---
 title: GlobalEventHandlers.onabort
-slug: Web/API/GlobalEventHandlers/onabort
+slug: Web/API/HTMLMediaElement/abort_event
 tags:
   - API
   - イベントハンドラー
@@ -11,8 +11,9 @@ tags:
   - プロパティ
   - リファレンス
   - Window
-browser-compat: api.GlobalEventHandlers.onabort
 translation_of: Web/API/GlobalEventHandlers/onabort
+original_slug: Web/API/GlobalEventHandlers/onabort
+browser-compat: api.GlobalEventHandlers.onabort
 ---
 {{ApiRef("HTML DOM")}}
 

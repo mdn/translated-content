@@ -7779,13 +7779,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:08:50.066Z",
-    "contributors": [
-      "12kb",
-      "FlowerDeLuce"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onanimationcancel": {
     "modified": "2019-03-23T22:08:48.963Z",
     "contributors": [
@@ -23603,12 +23596,10 @@
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
-    "modified": "2019-04-30T14:17:57.211Z",
+    "modified": "2019-03-23T22:08:50.066Z",
     "contributors": [
-      "wbamberg",
-      "Corba",
-      "fscholz",
-      "e-omo"
+      "12kb",
+      "FlowerDeLuce"
     ]
   },
   "conflicting/Web/API/Node": {

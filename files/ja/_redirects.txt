@@ -1514,7 +1514,7 @@
 /ja/docs/DOM/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/DOM/window.navigator.vendor-redirect-1	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/DOM/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
-/ja/docs/DOM/window.onabort	/ja/docs/Web/API/GlobalEventHandlers/onabort
+/ja/docs/DOM/window.onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/DOM/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/DOM/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
@@ -1733,7 +1733,7 @@
 /ja/docs/DOM:window.navigator.userAgent	/ja/docs/Web/API/Navigator/userAgent
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/DOM:window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
-/ja/docs/DOM:window.onabort	/ja/docs/Web/API/GlobalEventHandlers/onabort
+/ja/docs/DOM:window.onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/DOM:window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/DOM:window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM:window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
@@ -3124,6 +3124,7 @@
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
 /ja/docs/Web/API/Geolocation/Using_geolocation	/ja/docs/Web/API/Geolocation_API
+/ja/docs/Web/API/GlobalEventHandlers/onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
@@ -3621,7 +3622,7 @@
 /ja/docs/Web/API/window.navigator.userAgent	/ja/docs/Web/API/Navigator/userAgent
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
-/ja/docs/Web/API/window.onabort	/ja/docs/Web/API/GlobalEventHandlers/onabort
+/ja/docs/Web/API/window.onabort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/API/window.onbeforeunload	/ja/docs/conflicting/Web/API/Window/beforeunload_event
 /ja/docs/Web/API/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange

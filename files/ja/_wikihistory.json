@@ -15189,15 +15189,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T23:49:40.263Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onblur": {
     "modified": "2020-10-15T21:36:49.995Z",
     "contributors": [
@@ -16487,9 +16478,12 @@
     ]
   },
   "Web/API/HTMLMediaElement/abort_event": {
-    "modified": "2020-10-15T22:16:17.784Z",
+    "modified": "2019-03-23T23:49:40.263Z",
     "contributors": [
-      "mfuji09"
+      "teoli",
+      "khalid32",
+      "ethertank",
+      "Potappo"
     ]
   },
   "Web/API/HTMLMediaElement/audioTracks": {
