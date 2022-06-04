@@ -14,7 +14,7 @@ Web 技术文档和代码中含有大量的术语和缩写。本术语表给出�
 
 ## 为本表作贡献
 
-> **备注：** 编辑术语表是一项永无止境的工作，你可以[添加新的条目](/zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)或改进、完善现有条目。
+> **备注：** 编辑术语表是一项永无止境的工作，你可以 [添加新的条目](/zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) 或改进、完善现有条目。
 
 <section id="Quick_links">
  <ol>
