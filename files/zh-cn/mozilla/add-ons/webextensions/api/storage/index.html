@@ -13,11 +13,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 
 
-<p>此存储系统API基于 <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, 并有少许不同。</p>
+<p>此存储系统 API 基于 <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, 并有少许不同。</p>
 
-<p>为了使用该API，您需要在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>文件包含"storage"<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。</p>
+<p>为了使用该 API，您需要在<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>文件包含"storage"<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。</p>
 
-<p>虽然此API类似于{{domxref("Window.localStorage")}}，但仍建议您不要在插件中使用<code>Window.localStorage。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用</code> localStorage API存储的数据一并清除。而使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a>API存储的数据将会恰当保留。</code></p>
+<p>虽然此 API 类似于{{domxref("Window.localStorage")}}，但仍建议您不要在插件中使用<code>Window.localStorage。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用</code> localStorage API 存储的数据一并清除。而使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a>API存储的数据将会恰当保留。</code></p>
 
 <h2 id="类型">类型</h2>
 
@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <h2 id="属性">属性</h2>
 
-<p>storage有3个属性，每一个代表不同的存储区域。</p>
+<p>storage 有 3 个属性，每一个代表不同的存储区域。</p>
 
 <dl>
  <dt>{{WebExtAPIRef("storage.sync")}}</dt>
@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <dl>
  <dt>{{WebExtAPIRef("storage.onChanged")}}</dt>
- <dd>当storage有数据变化时，此事件将被触发。</dd>
+ <dd>当 storage 有数据变化时，此事件将被触发。</dd>
 </dl>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
@@ -53,22 +53,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 <p>{{Compat("webextensions.api.storage")}}</p>
 
 <div class="hidden note">
-<p>"Chrome不兼容"这部分来源于 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> 使用<a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+<p>"Chrome 不兼容"这部分来源于 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> 使用<a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
 
 <p>如果需要更新这部分，请编辑 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, 然后刷新页面即可看见所做更改。</p>
 </div>
 
-<h3 id="在Edge中的不兼容">在Edge中的不兼容</h3>
+<h3 id="在Edge中的不兼容">在 Edge 中的不兼容</h3>
 
-<p>Promises在Edge中不被支持，使用callbacks代替。</p>
+<p>Promises 在 Edge 中不被支持，使用 callbacks 代替。</p>
 
 <p>{{WebExtExamples("h2")}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 
-<p>这个API基于Chromium的 <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> API. 这篇文档也来源于Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a>.</p>
+<p>这个 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> API. 这篇文档也来源于 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a>.</p>
 
-<p>Microsoft Edge的适配数据由Microsoft Corporation提供并且被包含在Creative Commons Attribution 3.0 United States License许可证下.</p>
+<p>Microsoft Edge 的适配数据由 Microsoft Corporation 提供并且被包含在 Creative Commons Attribution 3.0 United States License 许可证下。</p>
 </div>
 
 <div class="hidden">
