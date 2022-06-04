@@ -26,7 +26,7 @@ new Uint16Array(buffer, decalageOctets, longueur);
 - `longueur`
   - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
 - `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type non [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non** [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
 - `object`
   - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
 - `buffer`, `decalageOctets`, `longueur`
@@ -39,13 +39,13 @@ new Uint16Array(buffer, decalageOctets, longueur);
 À partir d'ECMAScript 2015, le constructeur de `Uint16Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Uint16Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js example-bad
-let dv = Uint16Array([1, 2, 3]);
+const dv = Uint16Array([1, 2, 3]);
 // TypeError: calling a builtin Uint16Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-let dv = new Uint16Array([1, 2, 3]);
+const dv = new Uint16Array([1, 2, 3]);
 ```
 
 ## Exemples
@@ -54,28 +54,28 @@ let dv = new Uint16Array([1, 2, 3]);
 
 ```js
 // À partir d'une longueur
-let uint16 = new Uint16Array(2);
+const uint16 = new Uint16Array(2);
 uint16[0] = 42;
 console.log(uint16[0]); // 42
 console.log(uint16.length); // 2
 console.log(uint16.BYTES_PER_ELEMENT); // 2
 
 // À partir d'un tableau
-let arr = new Uint16Array([21,31]);
+const arr = new Uint16Array([21,31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
-let x = new Uint16Array([21, 31]);
-let y = new Uint16Array(x);
+const x = new Uint16Array([21, 31]);
+const y = new Uint16Array(x);
 console.log(y[0]); // 21
 
 // À partir d'un ArrayBuffer
-let buffer = new ArrayBuffer(8);
-let z = new Uint16Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(8);
+const z = new Uint16Array(buffer, 0, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
-let uint16 = new Uint16Array(iterable);
+const iterable = function*(){ yield* [1,2,3]; }();
+const uint16_from_iterable = new Uint16Array(iterable);
 // Uint16Array[1, 2, 3]
 ```
 
