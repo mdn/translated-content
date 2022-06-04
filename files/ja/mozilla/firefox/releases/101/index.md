@@ -38,7 +38,7 @@ tags:
 
 - [`DOMException`](/ja/docs/Web/API/DOMException) が {{Glossary("シリアライズ可能なオブジェクト")}} になりました。{{domxref("structuredClone()")}} でクローンを作ることや、{{domxref("Worker.postMessage()", "postMessage()")}} を使用して [workers](/ja/docs/Web/API/Worker) との間でコピーすることができます ({{bug(1561357)}})。
 
-- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で) 送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
+- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
   0 は有効なフレームレートの値ですが、Firefox は "フレームレート制限なし" と解釈しますので注意してください。
   詳しくは {{bug(1611957)}} をご覧ください。
 
