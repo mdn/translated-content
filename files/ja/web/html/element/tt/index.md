@@ -1,141 +1,132 @@
 ---
-title: '<tt>: テレタイプテキスト要素 (廃止)'
+title: '<tt>: テレタイプテキスト要素'
 slug: Web/HTML/Element/tt
 tags:
-  - Element
+  - 要素
   - HTML
   - Monospace
   - Monotype
   - Non-proportional Type
-  - Obsolete
-  - Reference
+  - 非推奨
+  - リファレンス
   - Teletype
   - Teletype Text
-  - Web
+  - ウェブ
   - font-family
   - tt
+browser-compat: html.elements.tt
 translation_of: Web/HTML/Element/tt
 ---
-<div>{{HTMLRef}}{{obsolete_header}}</div>
 
-<p><span class="seoSummary">廃止された <strong>HTML テレタイプテキスト要素</strong> (<strong><code>&lt;tt&gt;</code></strong>) は、{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントで表示される行内文字列を生成します。</span>この要素は、テレタイプ、テキスト専用画面、ラインプリンターのような等幅の表示装置で表示されるテキストとしてスタイルを設定しようとするものです。</p>
+{{HTMLRef}}{{deprecated_header}}
 
-<p><strong>等幅フォント</strong> や <strong>モノスペースフォント</strong> は交換可能で同じ意味を持っています。これらは文字の幅がすべて同じピクセル数のフォントを説明する言葉です。</p>
+**`<tt>`** は [HTML](/ja/docs/Web/HTML) は、{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントで表示される行内文字列を生成します。この要素は、テレタイプ、テキスト専用画面、ラインプリンターのような等幅の表示装置で表示されるテキストとしてスタイルを設定しようとするものです。
 
-<p>しかし、この要素は廃止されました。等幅フォントで表現する必要がある行内テキストには、より意味的に役立つ {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}}, {{HTMLElement("var")}} 要素を使用するか、中身を独自のブロックとして表現する場合は {{HTMLElement("pre")}} タグを使用してください。</p>
+**等幅フォント** や **モノスペースフォント** は交換可能で同じ意味を持っています。これらは文字の幅がすべて同じピクセル数のフォントを説明する言葉です。
 
-<div class="note">使用する場面に適切な意味的要素がない場合（例えば、一部のコンテンツを等幅フォントで表示する必要がある場合）は、 {{ HTMLElement("span") }} 要素を使用し、 CSS を使用して好きに整形することを検討してください。 {{cssxref("font-family")}} プロパティは始めるのにいいところです。</div>
+しかし、この要素は廃止されました。等幅フォントで表現する必要がある行内テキストには、より意味的に役立つ {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}}, {{HTMLElement("var")}} 要素を使用するか、中身を独自のブロックとして表現する場合は {{HTMLElement("pre")}} タグを使用してください。
+
+> **Note:** 使用する場面に適切な意味的要素がない場合（例えば、一部のコンテンツを等幅フォントで表示する必要がある場合）は、 {{ HTMLElement("span") }} 要素を使用し、 CSS を使用して好きに整形することを検討してください。 {{cssxref("font-family")}} プロパティは始めるのにいいところです。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>すべて</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
+### 基本的な例
 
-<p>この例では、 <code>&lt;tt&gt;</code> を使ってターミナルアプリケーションに入力したり出力したりしたテキストを表示します。</p>
+この例では、 `<tt>` を使って、ターミナルアプリケーションに入力したり出力したりしたテキストを表示します。
 
-<pre class="brush:html notranslate">&lt;p&gt;Enter the following at the telnet command prompt: &lt;code&gt;set localecho&lt;/code&gt;&lt;br /&gt;
+```html
+<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
 
-The telnet client should display: &lt;tt&gt;Local Echo is on&lt;/tt&gt;&lt;/p&gt;
-</pre>
+The telnet client should display: <tt>Local Echo is on</tt></p>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Basic_example", 650, 80)}}</p>
+{{EmbedLiveSample("Basic_example", 650, 80)}}
 
-<h3 id="Overriding_the_default_font" name="Overriding_the_default_font">既定のフォントの上書き</h3>
+### 既定のフォントの上書き
 
-<p>行う必要はありませんが、ブラウザーが許可していれば、ブラウザーの既定のフォントを上書きすることができます。 CSS を使用します。</p>
+行う必要はありませんが、ブラウザーが許可していれば、ブラウザーの既定のフォントを上書きすることができます。 CSS を使用します。
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">tt {
+```css
+tt {
   font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
                monospace;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Enter the following at the telnet command prompt: &lt;code&gt;set localecho&lt;/code&gt;&lt;br /&gt;
+```html
+<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
 
-The telnet client should display: &lt;tt&gt;Local Echo is on&lt;/tt&gt;&lt;/p&gt;</pre>
+The telnet client should display: <tt>Local Echo is on</tt></p>
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Overriding_the_default_font", 650, 80)}}</p>
+{{EmbedLiveSample("Overriding_the_default_font", 650, 80)}}
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<p>既定では <code>&lt;tt&gt;</code> 要素はブラウザーの既定の等幅フォントを使って表示されます。前述の <a href="#overriding_the_default_font">Overriding the default font</a> にある通り、 CSS で <code>tt</code> セレクターを使用した規則を作成することで、これを上書きすることができます。</p>
+既定では `<tt>` 要素はブラウザーの既定の等幅フォントを使って表示されます。前述の[既定のフォントの上書き](#既定のフォントの上書き)にある通り、 CSS で `tt セレクターを使用した規則を作成することで、これを上書きすることができます。
 
-<div class="note">
-<p>既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。</p>
-</div>
+> **Note:** 既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
 
-<p>この要素は HTML 4.01 では公式には非推奨にされませんでしたが、使用は避けて意味的要素や CSS を使用するとされていました。 <code>&lt;tt&gt;</code> 要素は HTML 5 で廃止されました。</p>
+この要素は HTML 4.01 では公式には非推奨にされませんでしたが、使用は避けて意味的要素や CSS を使用するとされていました。 `<tt>` 要素は HTML 5 で廃止されました。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'obsolete.html#elementdef-tt', '&lt;tt&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;tt&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.tt")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>意味的な {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} 要素</li>
- <li>{{HTMLElement("pre")}} 要素: 整形済みテキストブロックを表示する要素</li>
-</ul>
+- 意味的な {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} 要素
+- {{HTMLElement("pre")}} 要素: 整形済みテキストブロックを表示する要素
