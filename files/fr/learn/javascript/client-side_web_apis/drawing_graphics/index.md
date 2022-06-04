@@ -23,7 +23,7 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
 
 ## Les graphismes sur le Web
 
-Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img) puis ensuite avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
+Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
 
 Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn/CSS) et [JavaScript](/fr/docs/Learn/JavaScript) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
 
@@ -65,7 +65,7 @@ Bien entendu, le message utilisé ci-avant n'aide pas vraiment celle ou celui qu
 
 Commençons par créer notre propre canevas sur lequel on dessinera quelques expérimentations.
 
-1. Pour commencer, effectuez une copie locale du répertoire[`0_canvas_start`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start). Celui-ci contient trois fichiers&nbsp;:
+1. Pour commencer, effectuez une copie locale du répertoire [`0_canvas_start`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start). Celui-ci contient trois fichiers&nbsp;:
     - "index.html"
     - "script.js"
     - "style.css"
@@ -77,7 +77,7 @@ Commençons par créer notre propre canevas sur lequel on dessinera quelques exp
     </canvas>
     ```
 
-    On ajoute une classe (avec l'attribut `class`) à l'élément `<canvas>` afin qu'il soit plus facile de le sélectionner si on a plusieurs canevas sur la page. Les attributs `width` et `height` sont absents pour le moment (vous pouvez les remttre si vous voulez, mais nous les définirons avec JavaScript dans une section suivante). Les canevas sans largeur ou hauteur explicite sont dessinés par défaut avec une largeur de 300 pixels et une hauteur de 150 pixels.
+    On ajoute une classe (avec l'attribut `class`) à l'élément `<canvas>` afin qu'il soit plus facile de le sélectionner si on a plusieurs canevas sur la page. Les attributs `width` et `height` sont absents pour le moment (vous pouvez les remettre si vous voulez, mais nous les définirons avec JavaScript dans une section suivante). Les canevas sans largeur ou hauteur explicite sont dessinés par défaut avec une largeur de 300 pixels et une hauteur de 150 pixels.
 
 3. Ouvrez ensuite le fichier `script.js` et ajoutez les lignes de JavaScript suivantes&nbsp;:
 
@@ -114,7 +114,7 @@ ctx.fillStyle = 'rgb(0, 0, 0)';
 ctx.fillRect(0, 0, width, height);
 ```
 
-Ici, on définit une couleur de remplissage en utilisant la propriété [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) du contexte (cette propriété utilise [des valeurs de couleur](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), comme les propriétés CSS), puis on dessine une rectangle qui couvre toute la zone du canevas avec la méthode [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect) (dont les deux premiers paramètres sont les coordonnées du coin supérieur gauche du rectangle et dont les deux derniers sont la largeur et la hauteur voulues pour le rectangle, on utilise ici les variables `width` et `height` qui sont bien utiles)&nbsp;!
+Ici, on définit une couleur de remplissage en utilisant la propriété [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) du contexte (cette propriété utilise [des valeurs de couleur](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), comme les propriétés CSS), puis on dessine un rectangle qui couvre toute la zone du canevas avec la méthode [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect) (dont les deux premiers paramètres sont les coordonnées du coin supérieur gauche du rectangle et dont les deux derniers sont la largeur et la hauteur voulues pour le rectangle, on utilise ici les variables `width` et `height` qui sont bien utiles)&nbsp;!
 
 Notre modèle de base est désormais terminé, passons à la suite.
 
@@ -169,7 +169,7 @@ Jusqu'à présent, nous avons vu comment dessiner des rectangles pleins, mais il
     ctx.strokeRect(25, 25, 175, 200);
     ```
 
-2. La largeur par défaut d'un trait mesure 1 pixel. On peut l'ajuster avec la valeur de la propriété [`lineWidth`](/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth) qui est un nombre indiquant le nombre de pixels pour la largeur du trait. Pour en voir l'effet, ajoutez la ligne suivante entre les deux lignes précédents&nbsp;:
+2. La largeur par défaut d'un trait mesure 1 pixel. On peut l'ajuster avec la valeur de la propriété [`lineWidth`](/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth) qui est un nombre indiquant le nombre de pixels pour la largeur du trait. Pour en voir l'effet, ajoutez la ligne suivante entre les deux lignes précédentes&nbsp;:
 
     ```js
     ctx.lineWidth = 5;
@@ -287,8 +287,8 @@ Dessinons maintenant un cercle dans le canevas. Pour cela, on utilisera la méth
 
     La structure est similaire ici, avec toutefois deux différences&nbsp;:
 
-    - Le dernier paramètre `arc()` vaut `true`, ce qui signifie que l'angle est dessiné dans le sens inverse des aiguilles d'une montre, donc, même si l'angle commence à -45 degrés et finit à 45 degré, on dessine un arc qui couvre les 270 degrés en dehors de ces deux valeurs. Si vous changez le paramètre de `true` à `false` puis réexécutez le code, vous verrez alors une portion de 90 degrés être dessinée.
-    - Avant d'appeler `fill()`, on dessiner une ligne jusqu'au centre du cercle. Cela permet d'obtenir une forme ressemblant à un Pac-Man. Si vous retirez l'instruction pour cette ligne (essayez&nbsp;!), vous obtiendrez seulement le cercle qui a été tronqué sur la droite entre le point de départ de l'angle et le point d'arrivée. Cela permet de voir que si on remplit un chemin incomplet (c'est-à-dire un chemin pour lesquels les points qui le composent ne se rejoignent pas), le navigateur remplira une ligne droite entre le point de départ et le point d'arrrivée puis remplira la forme ainsi créée.
+    - Le dernier paramètre `arc()` vaut `true`, ce qui signifie que l'angle est dessiné dans le sens inverse des aiguilles d'une montre, donc, même si l'angle commence à -45 degrés et finit à 45 degrés, on dessine un arc qui couvre les 270 degrés en dehors de ces deux valeurs. Si vous changez le paramètre de `true` à `false` puis réexécutez le code, vous verrez alors une portion de 90 degrés être dessinée.
+    - Avant d'appeler `fill()`, on dessine une ligne jusqu'au centre du cercle. Cela permet d'obtenir une forme ressemblant à un Pac-Man. Si vous retirez l'instruction pour cette ligne (essayez&nbsp;!), vous obtiendrez seulement le cercle qui a été tronqué sur la droite entre le point de départ de l'angle et le point d'arrivée. Cela permet de voir que si on remplit un chemin incomplet (c'est-à-dire un chemin pour lesquels les points qui le composent ne se rejoignent pas), le navigateur remplira une ligne droite entre le point de départ et le point d'arrivée puis remplira la forme ainsi créée.
 
 Et voilà pour cette section. Votre exemple final devrait ressembler à ceci&nbsp;:
 
@@ -367,7 +367,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
     - Les deuxième et troisième paramètres définissent les coordonnées du coin supérieur gauche de la zone à découper de l'image, relativement au coin supérieur gauche de l'image. Tout ce qui est situé à gauche du deuxième paramètre ou au dessus du troisième paramètre dans l'image ne sera pas dessiné.
     - Les quatrième et cinquième paramètres définissent la largeur et la hauteur de la zone à rogner de l'image.
     - Les sixième et septième paramètres définissent les coordonnées où placer le coin supérieur gauche de l'image dans le canevas, relativement au coin supérieur gauche de ce dernier.
-    - Les huitième et neuvième paramètres définissent la largeur et la hauteur selon lesquelles dessiner l'image rognée. Ici, nous avons utilisé les mêmes dimensions que la portions rognées, mais on pourrait utiliser des valeurs différentes (et alors avoir une image aux proportions déformées).
+    - Les huitième et neuvième paramètres définissent la largeur et la hauteur selon lesquelles dessiner l'image rognée. Ici, nous avons utilisé les mêmes dimensions que la portion rognée, mais on pourrait utiliser des valeurs différentes (et alors avoir une image aux proportions déformées).
 
 Le résultat final de cet exemple devrait ressembler à&nbsp;:
 
@@ -385,8 +385,8 @@ L'utilisation des boucles consiste à exécuter des commandes sur le canevas au 
 
 Construisons un exemple simple pour illustrer ce concept.
 
-1. Reprenez une copie de notre modèle vierge (voir le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin) puis ouvrez le dans l'éditeur de code.
-2. Ajoutez les lignes suivantes à la suite du code JavaScript. Ce fragement de code contient une nouvelle méthode&nbsp;: [`translate()`](/fr/docs/Web/API/CanvasRenderingContext2D/translate), qui déplace l'origine du repère du canevas&nbsp;:
+1. Reprenez une copie de notre modèle vierge (voir le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin) puis ouvrez-le dans l'éditeur de code.
+2. Ajoutez les lignes suivantes à la suite du code JavaScript. Ce fragment de code contient une nouvelle méthode&nbsp;: [`translate()`](/fr/docs/Web/API/CanvasRenderingContext2D/translate), qui déplace l'origine du repère du canevas&nbsp;:
 
     ```js
     ctx.translate(width/2, height/2);
@@ -434,14 +434,14 @@ Construisons un exemple simple pour illustrer ce concept.
 
     À chaque itération&nbsp;:
 
-    - On définit `fillStyle` avec une teinte de violet légèrement transparent, qui change selon la valeur de `length`. Vous le verrez ensuite, la la longueur portée par la variable `length` diminue à chaque itération. L'effet ainsi obtenu est que la couleur devient de plus en plus vive à chaque itération.
+    - On définit `fillStyle` avec une teinte de violet légèrement transparent, qui change selon la valeur de `length`. Vous le verrez ensuite, la longueur portée par la variable `length` diminue à chaque itération. L'effet ainsi obtenu est que la couleur devient de plus en plus vive à chaque itération.
     - On commence un chemin.
     - On déplace le pinceau aux coordonnées `(moveOffset, moveOffset)`. La variable `moveOffset` définit jusqu'où on veut se déplacer à chaque dessin.
     - On dessine une ligne jusqu'aux coordonnées `(moveOffset+length, moveOffset)`. On obtient donc une ligne de longueur `length` parallèle à l'axe horizontal.
     - On calcule une hauteur pour le triangle, comme dans l'exemple précédent.
     - On dessine une ligne vers la pointe inférieure du triangle puis une autre qui revient au point de départ du triangle.
     - On appelle la méthode `fill()` afin de remplir le triangle.
-    - On met à jour les variables qui décrivent la séquence de triangles afin de pouvoir dessiner le prochain. On décrémente la valeur de la variable `length` de 1, afin que les triangles soient de plus en plus petit et on augmente légèrement `moveOffset` afin que chaque triangle soit dessiné un peu plus loin. Enfin, on utiilise une nouvelle fonction [`rotate()`](/fr/docs/Web/API/CanvasRenderingContext2D/rotate) qui permet de faire tourner l'ensemble du canevas&nbsp;! On applique une rotation de 5 degrés avant de dessiner le prochain triangle.
+    - On met à jour les variables qui décrivent la séquence de triangles afin de pouvoir dessiner le prochain. On décrémente la valeur de la variable `length` de 1, afin que les triangles soient de plus en plus petits et on augmente légèrement `moveOffset` afin que chaque triangle soit dessiné un peu plus loin. Enfin, on utilise une nouvelle fonction [`rotate()`](/fr/docs/Web/API/CanvasRenderingContext2D/rotate) qui permet de faire tourner l'ensemble du canevas&nbsp;! On applique une rotation de 5 degrés avant de dessiner le prochain triangle.
 
 Et voilà&nbsp;! L'exemple terminé devrait ressembler à ceci&nbsp;:
 
@@ -504,7 +504,7 @@ En général, exécuter une animation sur un canevas consistera à suivre ces é
 
 Créons maintenant notre propre animation en recréant un personnage d'un ancien jeu vidéo qui avancera le long de l'écran.
 
-1. Repartez du modèle initial vierge (vous pouvez utiliser le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin) et ouvrez le dans votre éditeur.
+1. Repartez du modèle initial vierge (vous pouvez utiliser le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin) et ouvrez-le dans votre éditeur.
 2. À la suite du JavaScript, ajoutez la ligne suivante pour que l'origine soit située au centre de l'écran&nbsp;:
 
     ```js
@@ -530,7 +530,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
 
     ![](walk-right.png)
 
-    Cette image contient six exemplaires du personnages (des <i lang="en">sprites</i>) qui sont les six images formant la séquence d'animation de marche (chacune mesurant 102 pixels de large sur 148 pixels de haut). Pour afficher chaque dessin séparément, il faut utiliser `drawImage()` en rognant l'image totale afin d'en obtenir une seule portion (comme nous l'avons vu dans l'exemple plus tôt avec le logo de Firefox). La coordonnée horizontale à laquelle effectuer la découpe devra être un multiple de 102 et la coordonnée verticale de la découpe sera toujours 0. La taille de chaque fragment découpé sera ainsi toujours 102 pixels par 148 pixels.
+    Cette image contient six exemplaires du personnage (des <i lang="en">sprites</i>) qui sont les six images formant la séquence d'animation de marche (chacune mesurant 102 pixels de large sur 148 pixels de haut). Pour afficher chaque dessin séparément, il faut utiliser `drawImage()` en rognant l'image totale afin d'en obtenir une seule portion (comme nous l'avons vu dans l'exemple plus tôt avec le logo de Firefox). La coordonnée horizontale à laquelle effectuer la découpe devra être un multiple de 102 et la coordonnée verticale de la découpe sera toujours 0. La taille de chaque fragment découpé sera ainsi toujours 102 pixels par 148 pixels.
 
 5. Ajoutez ensuite une fonction `draw()` vide à la fin du code, qu'on remplira ensuite&nbsp;:
 
@@ -563,32 +563,32 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
 8. Nous allons maintenant modifier la valeur de la variable `sprite` à chaque itération, ou plutôt, après certaines itérations. Ajoutez le bloc qui suit dans le corps de la fonction `draw()`&nbsp;:
 
     ```js
-      if (posX % 13 === 0) {
-        if (sprite === 5) {
-          sprite = 0;
-        } else {
-          sprite++;
-        }
+    if (posX % 13 === 0) {
+      if (sprite === 5) {
+        sprite = 0;
+      } else {
+        sprite++;
       }
+    }
     ```
 
-    On enveloppe le bloc dans une instruction conditionnelle `if (posX % 13 === 0) { ... }`. On utilise ici [l'opérateur de reste (`%`)](/fr/docs/Web/JavaScript/Reference/Operators/Remainder) qui vérifie si la valeur de `posX` peut être divisée par 13 sans reste. Si c'est le cas, on passe au prochain <i lang="en">sprite</i> en incrémentant la valeur de `sprite` (et en revenant à 0 lorsqu'on a fini d'utiliser le cinquième). En pratique, cela revient à mettre à jour le <i lang="en">sprite</i> toutes les 13 itérations, soit environ 5 image par secondes (`requestAnimationFrame()` déclenchant l'animation, si possible, à 60 images par seconde). Ici, on choisit délibérément de diminuer la fréquence d'image, car on a seulement 6 <i lang="en">sprites</i> à manipuler. Si on affichait chacun pour 1/60e de seconde, notre personnage irait beaucoup trop vite&nbsp;!
+    On enveloppe le bloc dans une instruction conditionnelle `if (posX % 13 === 0) { … }`. On utilise ici [l'opérateur de reste (`%`)](/fr/docs/Web/JavaScript/Reference/Operators/Remainder) qui vérifie si la valeur de `posX` peut être divisée par 13 sans reste. Si c'est le cas, on passe au prochain <i lang="en">sprite</i> en incrémentant la valeur de `sprite` (et en revenant à 0 lorsqu'on a fini d'utiliser le cinquième). En pratique, cela revient à mettre à jour le <i lang="en">sprite</i> toutes les 13 itérations, soit environ 5 image par secondes (`requestAnimationFrame()` déclenchant l'animation, si possible, à 60 images par seconde). Ici, on choisit délibérément de diminuer la fréquence d'image, car on a seulement 6 <i lang="en">sprites</i> à manipuler. Si on affichait chacun pour 1/60e de seconde, notre personnage irait beaucoup trop vite&nbsp;!
 
-    Dans le bloc interne, on utilise une instruction [`if ... else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) afin de vérifier si la valeur de `sprite` est à 5 (c'est dans ce cas le dernier, car ils sont numérotés de 0 à 5). Si on montre déjà la dernière image de notre série, on réinitialise `sprite` à 0, sinon, on l'incrémente de 1.
+    Dans le bloc interne, on utilise une instruction [`if…else`](/fr/docs/Web/JavaScript/Reference/Statements/if…else) afin de vérifier si la valeur de `sprite` est à 5 (c'est dans ce cas le dernier, car ils sont numérotés de 0 à 5). Si on montre déjà la dernière image de notre série, on réinitialise `sprite` à 0, sinon, on l'incrémente de 1.
 
 9. Ensuite, il nous faut modifier la valeur de `posX` pour chaque itération. Ajoutez le code qui suit après le reste.
 
     ```js
-      if(posX > width/2) {
-        let newStartPos = -((width/2) + 102);
-        posX = Math.ceil(newStartPos);
-        console.log(posX);
-      } else {
-        posX += 2;
-      }
+    if(posX > width/2) {
+      let newStartPos = -((width/2) + 102);
+      posX = Math.ceil(newStartPos);
+      console.log(posX);
+    } else {
+      posX += 2;
+    }
     ```
 
-    On utilise une autre instruction `if ... else` pour tester si `posX` est devenue supérieure à `width/2`, signifiant alors que notre personnage a atteint le bord droit de l'écran. Dans ce cas, on calcule une position qui replace le personnage au bord gauche de l'écran.
+    On utilise une autre instruction `if…else` pour tester si `posX` est devenue supérieure à `width/2`, signifiant alors que notre personnage a atteint le bord droit de l'écran. Dans ce cas, on calcule une position qui replace le personnage au bord gauche de l'écran.
 
     Si le personnage n'a pas dépassé le bord droit de l'écran, on incrémente `posX` de 2, ce qui a pour effet de le déplacer légèrement à droite pour la prochaine itération.
 
@@ -639,7 +639,7 @@ clearBtn.addEventListener('click', () => {
 });
 ```
 
-La boucle de dessin est plutôt simple. Si le bouton de la souris est enclenché (donc que `pressed` vaut `true`), on dessine une cercle avec une couleur de remplissage correspondant à la valeur fournie par le sélecteur de couleurs et un rayon égal à la valeur saisie dans le contrôle d'intervalle. On doit dessiner le cercle 85 pixels plus haut que la mesure car la mesure verticale du curseur est prise par rapport à la zone d'affichage de la page tandis que le dessin se fait par rapport au bord haut du canevas, qui démarre en dessous de la barre d'outils qui mesure 85 pixels. Si on dessinait uniquement avec `curY` comme ordonnée, le cercle apparaîtrait 85 pixels sous la position de la souris.
+La boucle de dessin est plutôt simple. Si le bouton de la souris est enclenché (donc que `pressed` vaut `true`), on dessine un cercle avec une couleur de remplissage correspondant à la valeur fournie par le sélecteur de couleurs et un rayon égal à la valeur saisie dans le contrôle d'intervalle. On doit dessiner le cercle 85 pixels plus haut que la mesure car la mesure verticale du curseur est prise par rapport à la zone d'affichage de la page tandis que le dessin se fait par rapport au bord haut du canevas, qui démarre en dessous de la barre d'outils qui mesure 85 pixels. Si on dessinait uniquement avec `curY` comme ordonnée, le cercle apparaîtrait 85 pixels sous la position de la souris.
 
 ```js
 function draw() {
@@ -668,7 +668,7 @@ WebGL est basé sur [OpenGL](/fr/docs/Glossary/OpenGL) (<i lang="en">Open Graphi
 
 En raison de cette complexité, la plupart des personnes qui écrivent du code pour des graphismes en 3D utilisent une bibliothèque JavaScript tierce comme [Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), ou [Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). La plupart fonctionnent de façon similaire et offrent des fonctionnalités pour créer des formes primitives et sur mesure, positionner des caméras et un éclairage, recouvrir des surfaces avec des textures et plus encore. Ces bibliothèques gèrent WebGL pour vous et vous permettent de travailler à un plus haut niveau.
 
-En contrepartie, oui, il faut apprendre à manipuler un nouvel outil (ici un outil tier), mais cela simplifie la tâche plutôt que d'écrire des instructions WebGL brutes.
+En contrepartie, oui, il faut apprendre à manipuler un nouvel outil (ici un outil tiers), mais cela simplifie la tâche plutôt que d'écrire des instructions WebGL brutes.
 
 ### Recréer notre cube
 
@@ -739,11 +739,11 @@ Prenons un exemple simple pour créer quelque chose avec une bibliothèque WebGL
     Il y a plus de lignes à expliciter ici. Allons-y par étape&nbsp;:
 
     - On commence par créer une variable globale `cube` pour y accéder puis tout endroit du code.
-    - Ensuite, on crée un nouvel objet [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader), puis on appelle la méthode `load()` de celui-ci. `load()` prend ici deux paramètres (elle peut en prendre plus)&nbsp;: la texture à charger (il s'agit de notre fichier PNG) et la fonction a exécuter lorsque la texture a été chargée.
+    - Ensuite, on crée un nouvel objet [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader), puis on appelle la méthode `load()` de celui-ci. `load()` prend ici deux paramètres (elle peut en prendre plus)&nbsp;: la texture à charger (il s'agit de notre fichier PNG) et la fonction à exécuter lorsque la texture a été chargée.
     - Dans cette fonction, on utilise les propriétés de l'objet [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) afin d'indiquer qu'on veut une répétition en 2 x 2 de l'image autour des faces du cube. Ensuite, on crée un nouvel objet [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) et un nouvel objet [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) qu'on combine dans un objet [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) pour créer notre cube. Généralement, un objet a besoin d'une géométrie (sa forme) et d'un matériau (ce à quoi ressemble sa surface).
     - Enfin, on ajoute notre cube à la scène et on appelle la fonction `draw()` pour lancer l'animation.
 
-8. Avant d'implémenter cette fonction `draw()`, nous allons ajouter certaines lumières à la scène afin d'éclairer l'ensemble. Ajoutez le fragment de code suivantau script&nbsp;:
+8. Avant d'implémenter cette fonction `draw()`, nous allons ajouter certaines lumières à la scène afin d'éclairer l'ensemble. Ajoutez le fragment de code suivant au script&nbsp;:
 
     ```js
     const light = new THREE.AmbientLight('rgb(255,255,255)'); // une lumière blanche douce
@@ -788,20 +788,20 @@ Avec ce tutoriel, vous devriez avoir une bonne idée des notions de base en prog
 Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de choses à apprendre sur ce sujet. Les articles qui suivent pourront vous aider à approfondir.
 
 - [Tutoriels sur le canevas](/fr/docs/Web/API/Canvas_API/Tutorial)
- - : Une série de tutoriels détaillés qui explique ce qu'il faut connaître sur le canevas en deux dimensions, avec bien plus de détails que cet article. Une lecture essentielle.
+  - : Une série de tutoriels détaillés qui explique ce qu'il faut connaître sur le canevas en deux dimensions, avec bien plus de détails que cet article. Une lecture essentielle.
 - [Tutoriels WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) 
-  — : Une série de tutoriels qui enseigne les bases de la programmation en WebGL brut.
+  - : Une série de tutoriels qui enseigne les bases de la programmation en WebGL brut.
 - [Construire une démo simple avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
-  — : Un tutoriel de base pour la bibliothèque Three.js. Il y a également des guides équivalents pour [PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) ou [Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js).
+  - : Un tutoriel de base pour la bibliothèque Three.js. Il y a également des guides équivalents pour [PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) ou [Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js).
 - [Développement de jeux vidéo](/fr/docs/Games)
-  — : La page d'accueil MDN pour le développement de jeux vidéo sur le Web. Cette section contient des tutoriels et techniques très utiles et liés au canevas en 2D ou 3D. Voir l'option Techniques et tutoriels dans le menu.
+  - : La page d'accueil MDN pour le développement de jeux vidéo sur le Web. Cette section contient des tutoriels et techniques très utiles et liés au canevas en 2D ou 3D. Voir l'option Techniques dans le menu à gauche sur cette page.
 
 ## Exemples
 
 - [Thérémine violent](https://github.com/mdn/violent-theremin)
- — : Cet exemple utilise l'API Web Audio afin de générer des sons et un canevas afin de visualiser ces sons.
+  - : Cet exemple utilise l'API Web Audio afin de générer des sons et un canevas afin de visualiser ces sons.
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)
- — : Cet exemple utilise un canevas afin de visualiser les données audio de l'API Web Audio en temps réel.
+  - : Cet exemple utilise un canevas afin de visualiser les données audio de l'API Web Audio en temps réel.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
