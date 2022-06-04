@@ -50,10 +50,10 @@ translation_of: Web/API/Fullscreen_API
 
 <dl>
  <dt>{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</dt>
- <dd><code>fullscreenElement</code> 属性提供了当前在 DOM （或者 shadow DOM）里被展示为全屏模式的 {{DOMxRef("Element")}}，如果这个值为 <code>null</code>，文档不处于全屏模式。</dd>
+ <dd><code>fullscreenElement</code> 属性提供了当前在 DOM（或者 shadow DOM）里被展示为全屏模式的 {{DOMxRef("Element")}}，如果这个值为 <code>null</code>，文档不处于全屏模式。</dd>
  <dt></dt>
  <dt>{{DOMxRef("Document.fullscreenEnabled")}}</dt>
- <dd><code>fullscreenEnabled</code> 属性提供了启用全屏模式的可能性。当它的值是 <code>false</code> 的时候，表示全屏模式不可用（可能的原因有 <code>"fullscreen"</code> 特性不被允许，或全屏模式不被支持等 ）。</dd>
+ <dd><code>fullscreenEnabled</code> 属性提供了启用全屏模式的可能性。当它的值是 <code>false</code> 的时候，表示全屏模式不可用（可能的原因有 <code>"fullscreen"</code> 特性不被允许，或全屏模式不被支持等）。</dd>
 </dl>
 
 <h3 id="事件处理程序">事件处理程序</h3>
@@ -61,7 +61,7 @@ translation_of: Web/API/Fullscreen_API
 <p>Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和关闭，以及在全屏和窗口模式之间切换过程中发生的错误。<em>{{DOMxRef("Document")}} </em>和 <em> {{DOMxRef("Element")}} </em>接口提供了这些事件的事件处理函数。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>这些事件处理函数特性不可以当成 HTML 内容属性来使用。 换句话说，你无法在 HTML 内容中为 {{Event("fullscreenchange")}} 和 {{Event("fullscreenerror")}} 指定事件处理程序，你必须通过  JavaScript 代码添加它们。</p>
+<p><strong>注意：</strong>这些事件处理函数特性不可以当成 HTML 内容属性来使用。换句话说，你无法在 HTML 内容中为 {{Event("fullscreenchange")}} 和 {{Event("fullscreenerror")}} 指定事件处理程序，你必须通过  JavaScript 代码添加它们。</p>
 </div>
 
 <h4 id="Document_上的事件处理程序">Document 上的事件处理程序</h4>
@@ -117,7 +117,7 @@ translation_of: Web/API/Fullscreen_API
 
 <p>全屏模式可由功能策略（ <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>）控制。全屏模式功能由字符串“full screen”标识，默认的允许列表值为“self”，这意味着在顶级文档上下文 以及 从与顶级文档相同的源加载的嵌套上下文中允许使用全屏模式。</p>
 
-<p>请参阅使用功能策略（<a href="/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy"> Feature Policy</a> ）以了解有关使用功能策略控制对API的访问的更多信息。</p>
+<p>请参阅使用功能策略（<a href="/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy"> Feature Policy</a> ）以了解有关使用功能策略控制对 API 的访问的更多信息。</p>
 
 <h2 id="Things_your_users_want_to_know" name="Things_your_users_want_to_know">使用说明</h2>
 
@@ -177,14 +177,14 @@ translation_of: Web/API/Fullscreen_API
   <tr>
    <td>{{SpecName("Fullscreen")}}</td>
    <td>{{Spec2("Fullscreen")}}</td>
-   <td>初始版本.</td>
+   <td>初始版本。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<p>所有的浏览器都实现了这个API。然而一些带有前缀的实现在拼写上略微有些差别；例如，不同于 <code>requestFullscreen()</code>，存在一个 <code>MozRequestFullScreen()</code>。</p>
+<p>所有的浏览器都实现了这个 API。然而一些带有前缀的实现在拼写上略微有些差别；例如，不同于 <code>requestFullscreen()</code>，存在一个 <code>MozRequestFullScreen()</code>。</p>
 
 <p>{{Compat("api.Document.fullscreen")}}</p>
 
