@@ -44,9 +44,9 @@ browser-compat: api.KeyboardEvent
   </caption>
   <thead>
     <tr>
-      <th scope="col">Constant</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
+      <th scope="col">상수</th>
+      <th scope="col">값</th>
+      <th scope="col">설명</th>
     </tr>
   </thead>
   <tbody>
@@ -113,7 +113,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
   - : 이벤트가 일어난 키의 물리적인 코드 값을 문자열로 반환합니다.
 
-    > **참고:** 이는 사용자의 키보드 레이아웃을 무시하므로, 사용자가 QWERTY 키보드의 "Y" 위치의 키를 누르면, 사용자가 QWERTZ 키보드(사용자는 "Y" 대신 "Z"값을 기대함) 또는 Dvorak 키보드(사용자는 "Y" 대신 "F"값을 기대함)를 사용하더라도 항상 "KeyY" 값을 리턴합니다. 만약 사용자에게 맞는 키 값을 보여주길 원한다면, {{domxref("Keyboard.getLayoutMap()")}}를 사용하세요.
+    > **경고:** 이는 사용자의 키보드 레이아웃을 무시하므로, 사용자가 QWERTY 키보드의 "Y" 위치의 키를 누르면, 사용자가 QWERTZ 키보드(사용자는 "Y" 대신 "Z"값을 기대함) 또는 Dvorak 키보드(사용자는 "Y" 대신 "F"값을 기대함)를 사용하더라도 항상 "KeyY" 값을 리턴합니다. 만약 사용자에게 맞는 키 값을 보여주길 원한다면, {{domxref("Keyboard.getLayoutMap()")}}를 사용하세요.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
@@ -121,7 +121,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
 
-  - : 키 이벤트가 `compositionstart`와 `compositionend` 사이에서 발생했다면 `true` 를 반환합니다.
+  - : 키 이벤트가 `compositionstart`이후에 그리고 `compositionend` 이전에 발생했다면 `true` 를 반환합니다.
 
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
   - : 이벤트가 일어난 키의 키 값을 나타내는 문자열을 반환합니다.
