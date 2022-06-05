@@ -1,32 +1,77 @@
 ---
-title: element.onkeydown
+title: GlobalEventHandlers.onkeydown
 slug: Web/API/GlobalEventHandlers/onkeydown
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onkeydown
+browser-compat: api.GlobalEventHandlers.onkeydown
 ---
-{{ ApiRef() }}
+{{ApiRef("HTML DOM")}}
 
-### Résumé
+La propriété **`onkeydown`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`keydown`](/fr/docs/Web/API/Document/keydown_event).
 
-La propriété **onkeydown** définit et renvoie le gestionnaire d'évènement `keydown` de l'élément courant.
+L'évènement `keydown` est déclenché lorsque l'utilisatrice ou l'utilisateur appuie sur une touche du clavier.
 
-### Syntaxe
+## Syntaxe
 
-    code de gestion de l'évènement = element.onkeydown
+```js
+cible.onkeydown = refFunction;
+```
 
-### Notes
+### Value
 
-L'évènement `keydown` se déclenche lorsque qu'une touche du clavier est enfoncée.
+`refFunction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`KeyboardEvent`](/fr/docs/Web/API/KeyboardEvent) comme unique argument.
 
-À différencier de [onkeypress](/fr/DOM/element.onkeypress) qui se déclenche lorsque qu'une touche du clavier est pressée. (La nuance se situe dans le fait que `onkeydown` se produit avant `onkeypress` même s'ils se produisent quasiment au même instant)
+## Exemple
 
-### Voir aussi
+Cet exemple affiche la valeur de [`KeyboardEvent.code`](/fr/docs/Web/API/KeyboardEvent/code) à chaque fois qu'on appuie sur une touche à l'intérieur de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input).
 
-[onkeypress](/fr/DOM/element.onkeypress) [onkeyup](/fr/DOM/element.onkeyup)
+### HTML
 
-### Spécification
+```html
+<input>
+<p id="log"></p>
+```
 
-{{ DOM0() }}
+### JavaScript
+
+```js
+const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.onkeydown = logKey;
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+### Notes de compatibilité
+
+Depuis Firefox 65, les évènements [`keyup`](/fr/docs/Web/API/Document/keyup_event) et [`keydown`](/fr/docs/Web/API/Document/keydown_event) sont désormais déclenchés pendant la composition IME afin d'améliorer la compatibilité entre les navigateurs pour les locuteurs de langues asiatiques (CJKT) (voir [le bug 354358](https://bugzilla.mozilla.org/show_bug.cgi?id=354358)). Pour ignorer les évènements `keydown` qui font partie d'une composition, on pourra écrire quelque chose d'analogue au fragment qui suit (229 est une valeur spéciale de `keyCode` relative à un évènement qui a été traité par un IME)&nbsp;:
+
+```js
+eventTarget.addEventListener("keydown", event => {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // faire quelque chose
+});
+```
+
+## Voir aussi
+
+- L'évènement [`keydown`](/fr/docs/Web/API/Document/keydown_event)
+- Les gestionnaires d'évènements associés
+  - [`GlobalEventHandlers.onkeypress`](/fr/docs/Web/API/GlobalEventHandlers/onkeypress)
+  - [`GlobalEventHandlers.onkeyup`](/fr/docs/Web/API/GlobalEventHandlers/onkeyup)

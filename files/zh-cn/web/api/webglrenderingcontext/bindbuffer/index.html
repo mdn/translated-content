@@ -4,12 +4,12 @@ slug: Web/API/WebGLRenderingContext/bindBuffer
 tags:
   - WebGL
   - WebGLRenderingContext
-  - 绑定Buffer
+  - 绑定 Buffer
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的WebGLRenderingContext.bindBuffer()方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,18 +20,18 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 
 <dl>
  <dt>target</dt>
- <dd> {{domxref("GLenum")}} 指定绑定点(target)。 可能的值：
+ <dd> {{domxref("GLenum")}} 指定绑定点 (target)。 可能的值：
  <ul>
-  <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
-  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的Buffer。</li>
+  <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
+  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的 Buffer。</li>
   <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以使用以下值：
    <ul>
-    <li><code>gl.COPY_READ_BUFFER</code>: 从一个Buffer对象复制到另一个Buffer对象。</li>
-    <li><code>gl.COPY_WRITE_BUFFER</code>: 从一个Buffer对象复制到另一个Buffer对象。</li>
+    <li><code>gl.COPY_READ_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
+    <li><code>gl.COPY_WRITE_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
     <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: Buffer for transform feedback operations.</li>
-    <li><code>gl.UNIFORM_BUFFER</code>: 用于存储统一块的Buffer。</li>
-    <li><code>gl.PIXEL_PACK_BUFFER</code>: 用于像素传输操作的Buffer。</li>
-    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: 用于像素传输操作的Buffer。</li>
+    <li><code>gl.UNIFORM_BUFFER</code>: 用于存储统一块的 Buffer。</li>
+    <li><code>gl.PIXEL_PACK_BUFFER</code>: 用于像素传输操作的 Buffer。</li>
+    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: 用于像素传输操作的 Buffer。</li>
    </ul>
   </li>
  </ul>
@@ -48,7 +48,7 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 
 <p>只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。 尝试将缓冲区绑定到另一个目标将引发 <code>INVALID_OPERATION</code> 错误，并且当前的缓冲区绑定将保持不变。</p>
 
-<p>一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定,尝试这样做将生成 <code>INVALID_OPERATION</code> 错误,并且当前绑定将保持不变。</p>
+<p>一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 <code>INVALID_OPERATION</code> 错误，并且当前绑定将保持不变。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -63,7 +63,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 
 <h3 id="获取当前绑定">获取当前绑定</h3>
 
-<p>要检查当前的缓冲区绑定，请查询ARRAY_BUFFER_BINDING和ELEMENT_ARRAY_BUFFER_BINDING常量。</p>
+<p>要检查当前的缓冲区绑定，请查询 ARRAY_BUFFER_BINDING 和 ELEMENT_ARRAY_BUFFER_BINDING 常量。</p>
 
 <pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);

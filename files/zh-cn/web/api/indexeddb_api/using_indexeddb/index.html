@@ -39,7 +39,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 
 <h3 id="使用实验版本的_IndexedDB">使用实验版本的 IndexedDB</h3>
 
-<p>如果你希望在仍旧使用前缀的浏览器中测试你的代码, 可以使用下列代码:  </p>
+<p>如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码:  </p>
 
 <pre class="brush: js">// In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
@@ -49,7 +49,7 @@ window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || 
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
 // (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)</pre>
 
-<p>要注意的是使用前缀的实现可能会有问题，或者是实现的并不完整，也可能遵循的还是旧版的规范。因此不建议在生产环境中使用。我们更倾向于明确的不支持某一浏览器，而不是声称支持但是实际运行中却出问题:</p>
+<p>要注意的是使用前缀的实现可能会有问题，或者是实现的并不完整，也可能遵循的还是旧版的规范。因此不建议在生产环境中使用。我们更倾向于明确的不支持某一浏览器，而不是声称支持但是实际运行中却出问题：</p>
 
 <pre class="brush: js">if (!window.indexedDB) {
     window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.")
@@ -58,7 +58,7 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 
 <h3 id="打开数据库">打开数据库</h3>
 
-<p>我们像下面这样开始整个过程:</p>
+<p>我们像下面这样开始整个过程：</p>
 
 <pre class="brush: js">// 打开我们的数据库
 var request = window.indexedDB.open("MyTestDatabase");
@@ -86,7 +86,7 @@ request.onsuccess = function(event) {
   // Do something with request.result!
 };</pre>
 
-<p><code>onsuccess()</code> 和 <code>onerror()</code> 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成<code> "success"</code> 的 DOM 事件）会被触发，<code>request</code> 会作为它的 <code>target</code>。 一旦它被触发的话，相关 <code>request</code> 的 <code>onsuccess()</code> 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即<code> type</code> 属性被设置成 <code>"error"</code> 的 DOM 事件） 会在 request 上被触发。这将会触发使用 error 事件作为参数的 <code><code>onerror()</code></code> 方法。</p>
+<p><code>onsuccess()</code> 和 <code>onerror()</code> 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成<code> "success"</code> 的 DOM 事件）会被触发，<code>request</code> 会作为它的 <code>target</code>。 一旦它被触发的话，相关 <code>request</code> 的 <code>onsuccess()</code> 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即<code> type</code> 属性被设置成 <code>"error"</code> 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 <code><code>onerror()</code></code> 方法。</p>
 
 <p>IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 <a href="/en/IndexedDB#Storage_limits" title="https://developer.mozilla.org/en/IndexedDB#Storage_limits">存储限制</a>）。  </p>
 
@@ -138,7 +138,7 @@ request.onupgradeneeded = function(event) {
 
 <p>如果 <code>onupgradeneeded </code>事件成功执行完成，打开数据库请求的 <code>onsuccess</code> 处理函数会被触发。</p>
 
-<p>WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及 IE 10+同样支持。其他和更旧的实现没有实现当前版本的规范，因此还不支持 <code>indexedDB.open(name, version).onupgradeneeded</code> 签名。有关如何在较旧 Webkit/Blink 上升级数据库版本的更多信息，请参见 <a href="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase 参考文档</a>。</p>
+<p>WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及 IE 10+ 同样支持。其他和更旧的实现没有实现当前版本的规范，因此还不支持 <code>indexedDB.open(name, version).onupgradeneeded</code> 签名。有关如何在较旧 Webkit/Blink 上升级数据库版本的更多信息，请参见 <a href="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase 参考文档</a>。</p>
 
 <h3 id="构建数据库">构建数据库</h3>
 
@@ -154,7 +154,7 @@ request.onupgradeneeded = function(event) {
      (<code>keyPath</code>)</p>
    </th>
    <th scope="col">
-    <p>键生成器(<code>autoIncrement</code>)</p>
+    <p>键生成器 (<code>autoIncrement</code>)</p>
    </th>
    <th scope="col">描述</th>
   </tr>
@@ -289,14 +289,14 @@ request.onupgradeneeded = function (event) {
 
 <h3 id="向数据库中增加数据">向数据库中增加数据</h3>
 
-<p>如果你刚刚创建了一个数据库，你可能想往里面写点东西。看起来会像下面这样:</p>
+<p>如果你刚刚创建了一个数据库，你可能想往里面写点东西。看起来会像下面这样：</p>
 
 <pre class="brush: js">var transaction = db.transaction(["customers"], "readwrite");
-// 注意: 旧的实验性接口实现使用了常量 IDBTransaction.READ_WRITE 而不是 "readwrite"。
+// 注意：旧的实验性接口实现使用了常量 IDBTransaction.READ_WRITE 而不是 "readwrite"。
 // 如果你想支持这样旧版本的实现，你只要这样写就可以了：
 // var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);</pre>
 
-<p><code>transaction()</code> 方法接受两个参数（一个是可选的）并返回一个事务对象。第一个参数是事务希望跨越的对象存储空间的列表。如果你希望事务能够跨越所有的对象存储空间你可以传入一个空数组，但请不要这样做，因为标准规定传入一个空数组会导致一个InvalidAccessError（可以<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/transaction">使用</a>属性<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames">db.objectStoreNames</a>）。如果你没有为第二个参数指定任何内容，你得到的是只读事务。如果你想写入数据，你需要传入 <code>"readwrite"</code> 标识。</p>
+<p><code>transaction()</code> 方法接受两个参数（一个是可选的）并返回一个事务对象。第一个参数是事务希望跨越的对象存储空间的列表。如果你希望事务能够跨越所有的对象存储空间你可以传入一个空数组，但请不要这样做，因为标准规定传入一个空数组会导致一个 InvalidAccessError（可以<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBDatabase/transaction">使用</a>属性<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames">db.objectStoreNames</a>）。如果你没有为第二个参数指定任何内容，你得到的是只读事务。如果你想写入数据，你需要传入 <code>"readwrite"</code> 标识。</p>
 
 <p>现在我们已经有了一个事务，我们需要理解它的生命周期。事务和事件循环的联系非常密切。如果你创建了一个事务但是并没有使用它就返回给事件循环，那么事务将会失活。保持事务活跃的唯一方法就是在其上构建一个请求。当请求完成时你将会得到一个 DOM 事件，并且，假设请求成功了，你将会有另外一个机会在回调中来延长这个事务。如果你没有延长事务就返回到了事件循环，那么事务将会变得不活跃，依此类推。只要还有待处理的请求事务就会保持活跃。事务生命周期真的很简单但是可能需要一点时间你才能对它变得习惯。还有就是来几个例子也会有所帮助。如果你开始看到 <code>TRANSACTION_INACTIVE_ERR</code> 错误代码，那么你已经把某些事情搞乱了。</p>
 
@@ -342,7 +342,7 @@ request.onsuccess = function(event) {
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
-  // 错误处理!
+  // 错误处理！
 };
 request.onsuccess = function(event) {
   // 对 request.result 做些操作！
@@ -439,14 +439,14 @@ objectStore.openCursor().onsuccess = function(event) {
   alert("Got all customers: " + event.target.result);
 };</code></pre>
 
-<p>查看游标的 <code>value</code> 属性会带来性能消耗，因为对象是被懒生成的。当你使用 <code>getAll()</code> ，浏览器必须一次创建所有的对象。如果你仅仅想检索m键，那么使用游标将比使用 <code>getAll()</code> 高效得多。当然如果你想获取一个由对象仓库中所有对象组成的数组，请使用 <code>getAll()</code>。</p>
+<p>查看游标的 <code>value</code> 属性会带来性能消耗，因为对象是被懒生成的。当你使用 <code>getAll()</code> ，浏览器必须一次创建所有的对象。如果你仅仅想检索 m 键，那么使用游标将比使用 <code>getAll()</code> 高效得多。当然如果你想获取一个由对象仓库中所有对象组成的数组，请使用 <code>getAll()</code>。</p>
 </div>
 
 <h3 id="使用索引">使用索引</h3>
 
 <p>使用 SSN 作为键来存储客户数据是合理的，因为 SSN 唯一地标识了一个个体（对隐私来说这是否是一个好的想法是另外一个话题，不在本文的讨论范围内）。如果你想要通过姓名来查找一个客户，那么，你将需要在数据库中迭代所有的 SSN 直到你找到正确的那个。以这种方式来查找将会非常的慢，相反你可以使用索引。</p>
 
-<pre class="brush: js">// 首先，确定你已经在 request.onupgradeneeded 中创建了索引:
+<pre class="brush: js">// 首先，确定你已经在 request.onupgradeneeded 中创建了索引：
 // objectStore.createIndex("name", "name");
 // 否则你将得到 DOMException。
 
@@ -463,7 +463,7 @@ index.get("Donna").onsuccess = function(event) {
 <pre class="brush: js">index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    // cursor.key 是一个 name, 就像 "Bill", 然后 cursor.value 是整个对象。
+    // cursor.key 是一个 name，就像 "Bill", 然后 cursor.value 是整个对象。
     alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
     cursor.continue();
   }
@@ -472,7 +472,7 @@ index.get("Donna").onsuccess = function(event) {
 index.openKeyCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    // cursor.key 是一个 name, 就像 "Bill", 然后 cursor.value 是那个 SSN。
+    // cursor.key 是一个 name，就像 "Bill", 然后 cursor.value 是那个 SSN。
     // 没有办法可以得到存储对象的其余部分。
     alert("Name: " + cursor.key + ", SSN: " + cursor.value);
     cursor.continue();

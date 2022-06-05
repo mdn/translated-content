@@ -11,9 +11,9 @@ translation_of: Web/API/DocumentFragment
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p><strong><code>DocumentFragment</code>，文档片段</strong>接口，一个没有父对象的最小文档对象。它被作为一个轻量版的 {{domxref("Document")}} 使用，就像标准的document一样，存储由节点（nodes）组成的文档结构。与document相比，最大的区别是DocumentFragment 不是真实 DOM 树的一部分，它的变化不会触发 DOM 树的{{Glossary("reflow", "重新渲染")}}，且不会导致性能等问题。</p>
+<p><strong><code>DocumentFragment</code>，文档片段</strong>接口，一个没有父对象的最小文档对象。它被作为一个轻量版的 {{domxref("Document")}} 使用，就像标准的 document 一样，存储由节点（nodes）组成的文档结构。与 document 相比，最大的区别是 DocumentFragment 不是真实 DOM 树的一部分，它的变化不会触发 DOM 树的{{Glossary("reflow", "重新渲染")}}，且不会导致性能等问题。</p>
 
-<p>最常用的方法是使用文档片段作为参数（例如，任何 {{domxref("Node")}} 接口类似 {{domxref("Node.appendChild")}} 和 {{domxref("Node.insertBefore")}} 的方法），这种情况下被添加（append）或被插入（inserted）的是片段的所有子节点, 而非片段本身。因为所有的节点会被一次插入到文档中，而这个操作仅发生一个重渲染的操作，而不是每个节点分别被插入到文档中，因为后者会发生多次重渲染的操作。</p>
+<p>最常用的方法是使用文档片段作为参数（例如，任何 {{domxref("Node")}} 接口类似 {{domxref("Node.appendChild")}} 和 {{domxref("Node.insertBefore")}} 的方法），这种情况下被添加（append）或被插入（inserted）的是片段的所有子节点，而非片段本身。因为所有的节点会被一次插入到文档中，而这个操作仅发生一个重渲染的操作，而不是每个节点分别被插入到文档中，因为后者会发生多次重渲染的操作。</p>
 
 <p>该接口在 Web 组件（Web components）中也非常有用：{{HTMLElement("template")}} 元素在其 {{domxref("HTMLTemplateElement.content")}} 属性中包含了一个 <code>DocumentFragment</code>。</p>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/DocumentFragment
 
 <dl>
  <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回一个实时（live） {{domxref("HTMLCollection")}} ，包含所有属于 <code>DocumentFragment</code> 的{{domxref("Element","元素")}}类型的子对象。</dd>
+ <dd>返回一个实时（live）{{domxref("HTMLCollection")}}，包含所有属于 <code>DocumentFragment</code> 的{{domxref("Element","元素")}}类型的子对象。</dd>
  <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
  <dd>返回 <code>DocumentFragment</code> 的第一个 {{domxref("Element")}} 类型的子对象，如果没有则返回 <code>null</code> 。</dd>
  <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
@@ -51,7 +51,7 @@ translation_of: Web/API/DocumentFragment
  <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
  <dd>返回在<code>DocumentFragment</code>中所有的符合指定选择器的<code>Element</code>节点组成的<code>NodeList</code>数组。</dd>
  <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
- <dd>返回在<code>DocumentFragment</code>中以文档顺序排列的第一个符合指定ID选择器的<code>Element</code>节点。与<code>Document.getElementById()</code>作用相同。</dd>
+ <dd>返回在<code>DocumentFragment</code>中以文档顺序排列的第一个符合指定 ID 选择器的<code>Element</code>节点。与<code>Document.getElementById()</code>作用相同。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -83,42 +83,7 @@ list.appendChild(fragment);
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </tbody>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>添加了构建函数和对 {{domxref("ParentNode")}} 的实现。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>添加 <code>querySelector()</code> 和 <code>querySelectorAll()</code> 方法。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>和 {{SpecName('DOM2 Core')}} 一样</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>和 {{SpecName('DOM1')}} 一样</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>最初的定义。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

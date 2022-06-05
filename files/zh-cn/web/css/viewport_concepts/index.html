@@ -9,7 +9,7 @@ translation_of: Web/CSS/Viewport_concepts
 
 <h2 id="什么是_viewport">什么是 viewport ?</h2>
 
-<p>视口 (viewport) 代表当前可见的计算机图形区域。在 Web 浏览器术语中，通常与浏览器窗口相同，但不包括浏览器的 UI， 菜单栏等——即指你正在浏览的文档的那一部分。</p>
+<p>视口 (viewport) 代表当前可见的计算机图形区域。在 Web 浏览器术语中，通常与浏览器窗口相同，但不包括浏览器的 UI，菜单栏等——即指你正在浏览的文档的那一部分。</p>
 
 <p>文档，比如这篇文章，可能会非常长。你的 viewport 就是你现在所能见到的所有事物。值得注意的是“什么是视口区域”这个问题，页面中的一些导航菜单也包括在其中。Viewport 的大小取决于屏幕的大小，无论浏览器是否处于全屏模式，是否被用户缩放了。Viewport 外的区域，比如这个文档的<em> See Also</em> 部分，可能需要滚动到其所在的区域才会出现在屏幕上。</p>
 
@@ -35,19 +35,19 @@ window.innerHeight /* 800 */
 window.outerHeight /* 900 */
 </pre>
 
-<p>下面是一些帮助你查询查询 viewport 大小和其它类似的长度属性的 DOM 属性:</p>
+<p>下面是一些帮助你查询查询 viewport 大小和其它类似的长度属性的 DOM 属性：</p>
 
 <ul>
- <li>文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">CSS pixels</a> 单位表示的内部宽度, 包括其 padding (不包括 borders, margins 或垂直滚动条，如果有的话）。<strong>这就是 viewport 的宽度</strong>。</li>
+ <li>文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">CSS pixels</a> 单位表示的内部宽度，包括其 padding (不包括 borders, margins 或垂直滚动条，如果有的话）。<strong>这就是 viewport 的宽度</strong>。</li>
  <li>{{DOMxRef("Window.innerWidth")}} 是用 CSS pixels 单位表示的浏览器窗口 viewport 宽度，包括垂直滚动条，如果渲染了的话。</li>
  <li>{{DOMxRef("Window.outerWidth")}} 是指包括了浏览器外边框的窗口宽度。</li>
 </ul>
 
-<p>在实测中，<code>innerWidth</code> 和 <code>outerWidth</code> 是相同的，但是 <code>outerHeight</code> 比 <code>innerHeight</code> 高100px。这是因为 <code>outerHeight</code> 的测量包括浏览器框架在内，包括了地址栏和书签栏总共 100px 的高度，而浏览器没有左右边框。</p>
+<p>在实测中，<code>innerWidth</code> 和 <code>outerWidth</code> 是相同的，但是 <code>outerHeight</code> 比 <code>innerHeight</code> 高 100px。这是因为 <code>outerHeight</code> 的测量包括浏览器框架在内，包括了地址栏和书签栏总共 100px 的高度，而浏览器没有左右边框。</p>
 
 <p><code>innerHeight</code> 和 <code>innerWidth</code> 所组成的区域通常被认为是<strong>布局视口 (layout viewport)</strong>。浏览器的框架不被认为是 viewport 的一部分。</p>
 
-<p>当缩放时， Firefox 和 Chrome 对 <code>innerWidth</code> 和 <code>clientWidth</code> 给出了新的 CSS 像素大小。浏览器对 <code>outerWidth</code> 和 <code>outerHeight</code> 的返回值有差异。Firefox 返回了缩放后的 CSS 像素值，Chrome 返回了默认的像素值：</p>
+<p>当缩放时，Firefox 和 Chrome 对 <code>innerWidth</code> 和 <code>clientWidth</code> 给出了新的 CSS 像素大小。浏览器对 <code>outerWidth</code> 和 <code>outerHeight</code> 的返回值有差异。Firefox 返回了缩放后的 CSS 像素值，Chrome 返回了默认的像素值：</p>
 
 <pre class="brush: js">document.documentElement.clientWidth /* 800 */
 window.innerWidth /* 800 */
@@ -75,7 +75,7 @@ body &gt; footer {
 
 <p>Web 浏览器包含两个 viewport，<strong>布局视口 (layout viewport)</strong> 和<strong>视觉视口 (visual viewport)</strong>。visual viewport 指当前浏览器中可见的部分，并且可以变化。当使用触屏双指缩放，当动态键盘在手机上弹出的时候，或者之前隐藏的地址栏变得可见的时候，visual viewport 缩小了，但是 layout viewport 却保持不变。</p>
 
-<p>我们上面说到的固定的头部和尾部，固定在 layout viewport 的底部和顶部，所以当 visual viewport 缩小的时候,头部和尾部仍保留在视觉中。当你缩放页面时，布局视口可能不能被全部看到。如果你放大布局视口的中间部分，内容将在四个方向上扩展。如果你有一个固定的头部和底部，它们依然固定在布局视口的顶部和底部，因此它们可能会在设备屏幕的底部和顶部不可见-视觉视口。视觉视口是布局视口当前的可见部分如果你向下滚动，视觉视口的内容就会改变，并布局视口的底部就会滚动到可视区域。</p>
+<p>我们上面说到的固定的头部和尾部，固定在 layout viewport 的底部和顶部，所以当 visual viewport 缩小的时候，头部和尾部仍保留在视觉中。当你缩放页面时，布局视口可能不能被全部看到。如果你放大布局视口的中间部分，内容将在四个方向上扩展。如果你有一个固定的头部和底部，它们依然固定在布局视口的顶部和底部，因此它们可能会在设备屏幕的底部和顶部不可见 - 视觉视口。视觉视口是布局视口当前的可见部分如果你向下滚动，视觉视口的内容就会改变，并布局视口的底部就会滚动到可视区域。</p>
 
 <p>视觉视口是屏幕的可视部分，不包括屏幕键盘，缩放外的区域。视觉视口要么跟布局视口相同，要么更小</p>
 
@@ -83,15 +83,15 @@ body &gt; footer {
 
 <h3 id="CSS">CSS</h3>
 
-<p>在上面描述的布局视口 (layout viewport) 和视觉视口 (visual viewport) 不是您将遇到的唯一视口。 在布局视口中完全或部分显示的任何子视口都被视为可视视口。</p>
+<p>在上面描述的布局视口 (layout viewport) 和视觉视口 (visual viewport) 不是您将遇到的唯一视口。在布局视口中完全或部分显示的任何子视口都被视为可视视口。</p>
 
-<p>我们通常认为宽度和高度的媒体查询是相对于浏览器窗口的宽度和高度而言的。 它们实际上是相对于视口的，即主文档（document）中的窗口（window对象），但它也是嵌套浏览上下文（如对象，iframe和SVG）中元素父级的本身的大小。 在CSS中，我们也有基于视口大小的长度单位。 1vh 单位是 1% 布局视口的高度，vw 单位与此类似。</p>
+<p>我们通常认为宽度和高度的媒体查询是相对于浏览器窗口的宽度和高度而言的。它们实际上是相对于视口的，即主文档（document）中的窗口（window 对象），但它也是嵌套浏览上下文（如对象，iframe 和 SVG）中元素父级的本身的大小。在 CSS 中，我们也有基于视口大小的长度单位。1vh 单位是 1% 布局视口的高度，vw 单位与此类似。</p>
 
 <h4 id="&lt;iframe>"><code>&lt;iframe&gt;</code></h4>
 
 <p>对于一个 <code>iframe</code> 来说，视觉视口是其内部高度和宽度的大小而不是其父文档的大小。你可以为其高度和宽度设置任意数值，但过大的值可能会使 <code>iframe</code> 部分内容超出视口导致超出部分不可见。</p>
 
-<p>在 CSS 中，可以使用相对于视口的长度单位 <code>vh</code> 和 <code>vw</code>。 1vh 意味着值为视口高度的 1%，同理 1vw 即值为视口宽度的 1%。</p>
+<p>在 CSS 中，可以使用相对于视口的长度单位 <code>vh</code> 和 <code>vw</code>。1vh 意味着值为视口高度的 1%，同理 1vw 即值为视口宽度的 1%。</p>
 
 <p>需要注意的是，当你在 CSS 中使用 <code>vw</code> 和 <code>vh</code> 设置 <code>iframe</code> 的样式时，1vh 表示的是 <code>iframe</code> 高度的 1%，但 1vw 表示的则是 document 宽度的 1%。</p>
 
@@ -132,7 +132,7 @@ body &gt; footer {
 
 <p>如使用 {{htmlelement("img")}} ，通过设置 src 指向 SVG 文件时，SVG 的外部容器，或者说包裹着 SVG 的元素就是这个 img。如果在这个外部容器上应用了 width 属性，则对应的视口就是这个属性的值，而不是整个文档的视口宽度。</p>
 
-<p>如果把上面的 CSS 媒体查询样式添加到 SVG 文件中去，当 SVG 容器的宽度在 400 - 500 px时，将应用该 CSS 样式。</p>
+<p>如果把上面的 CSS 媒体查询样式添加到 SVG 文件中去，当 SVG 容器的宽度在 400 - 500 px 时，将应用该 CSS 样式。</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 

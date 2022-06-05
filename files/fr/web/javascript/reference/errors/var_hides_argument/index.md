@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Var_hides_argument
 
 ## Message
 
-    TypeError: variable "x" redeclares argument (Firefox)
+```
+TypeError: variable "x" redeclares argument (Firefox)
+```
 
 ## Type d'erreur
 

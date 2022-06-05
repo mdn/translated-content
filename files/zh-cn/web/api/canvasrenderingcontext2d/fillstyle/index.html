@@ -8,7 +8,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillStyle</code></strong> 是Canvas 2D API 使用内部方式描述颜色和样式的属性。默认值是 <code>#000</code> （黑色）。</p>
+<p><strong><code>CanvasRenderingContext2D.fillStyle</code></strong> 是 Canvas 2D API 使用内部方式描述颜色和样式的属性。默认值是 <code>#000</code> （黑色）。</p>
 
 <p>参见  <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 
 <dl>
  <dt><code>color</code></dt>
- <dd>{{domxref("DOMString")}} 字符串，被转换成 CSS {{cssxref("&lt;color&gt;")}} 颜色值.</dd>
+ <dd>{{domxref("DOMString")}} 字符串，被转换成 CSS {{cssxref("&lt;color&gt;")}} 颜色值。</dd>
  <dt><code>gradient</code></dt>
- <dd>{{domxref("CanvasGradient")}} 对象 （线性渐变或者放射性渐变）.</dd>
+ <dd>{{domxref("CanvasGradient")}} 对象（线性渐变或者放射性渐变）.</dd>
  <dt><code>pattern</code></dt>
- <dd>{{domxref("CanvasPattern")}} 对象 （可重复图像）。</dd>
+ <dd>{{domxref("CanvasPattern")}} 对象（可重复图像）。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -50,7 +50,7 @@ ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 </pre>
 
-<p>修改下面的代码并在线查看canvas的变化：</p>
+<p>修改下面的代码并在线查看 canvas 的变化：</p>
 
 <div class="hidden">
 <h6 id="Playable_code" name="Playable_code">Playable code</h6>
@@ -95,7 +95,7 @@ window.addEventListener("load", drawCanvas);
 
 <h3 id="fillStyle_使用_for_循环的例子"><code>fillStyle</code> 使用 <code>for</code> 循环的例子</h3>
 
-<p>在这个例子中， 我们使用两个 <code>for</code> 循环绘制一个矩形表格，每个单元格都有不同的颜色。 最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的RGB颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。</p>
+<p>在这个例子中， 我们使用两个 <code>for</code> 循环绘制一个矩形表格，每个单元格都有不同的颜色。 最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
@@ -143,9 +143,9 @@ setFillColor(c, m, y, k, a);
 <ul>
  <li><a href="/zh-CN/docs/Web/API/Canvas_API">Canvas API</a></li>
  <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
- <li>此属性使用的值:
+ <li>此属性使用的值：
   <ul>
-   <li>{{cssxref("&lt;color&gt;")}} CSS数据类型</li>
+   <li>{{cssxref("&lt;color&gt;")}} CSS 数据类型</li>
    <li>{{domxref("CanvasGradient")}} 对象</li>
    <li>{{domxref("CanvasPattern")}} 对象</li>
   </ul>
