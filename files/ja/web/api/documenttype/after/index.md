@@ -1,62 +1,62 @@
 ---
 title: DocumentType.after()
 slug: Web/API/DocumentType/after
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
-  - Method
-  - Node
-  - Reference
+  - メソッド
+  - ノード
+  - リファレンス
 browser-compat: api.DocumentType.after
 translation_of: Web/API/DocumentType/after
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>DocumentType.after()</strong></code> は、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの <code>DocumentType</code> の親ノードの子リストの、この<code>DocumentType</code> の直後に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。</p>
+**`DocumentType.after()`** は、一連の {{domxref("Node")}} または文字列をこの `DocumentType` の親ノードの子リストの、この `DocumentType` の直後に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">
-after(... nodes)
-</pre>
+```js
+after(param1)
+after(param1, param2)
+after(param1, param2, /* ... ,*/ paramN)
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。</dd>
-</dl>
+- `param1`, …, `paramN`
+  - : 挿入する一連の {{domxref("Node")}} オブジェクト、または文字列です。
 
-<h3 id="Exceptions">例外</h3>
+### 返値
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: ノードを階層内の指定の位置に挿入できません。</li>
-</ul>
+なし ({{jsxref("undefined")}})。
 
-<h2 id="Examples">例</h2>
+### 例外
 
-<h3></h3>
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : ノードが階層内の指定の位置の挿入できなかった場合に発生します。
 
-<pre class="brush: js">
+## 例
+
+```js
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
 docType.after(document.createElement('html'));
 
 myDoc.childNodes;
-// NodeList [&lt;!DOCTYPE html&gt;, &lt;html&gt;]
-</pre>
+// NodeList [<!DOCTYPE html>, <html>]
+```
 
-<h2 id="Specification">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("DocumentType.before()")}}</li>
-</ul>
+- {{domxref("DocumentType.before()")}}
