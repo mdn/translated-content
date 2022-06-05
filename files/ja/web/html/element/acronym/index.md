@@ -2,78 +2,58 @@
 title: <acronym>
 slug: Web/HTML/Element/acronym
 tags:
-  - Element
+  - 要素
   - HTML
-  - 'HTML:Flow content'
-  - Obsolete
-  - Reference
-  - Web
+  - HTML:フローコンテンツ
+  - 非推奨
+  - リファレンス
+  - ウェブ
+browser-compat: html.elements.acronym
 translation_of: Web/HTML/Element/acronym
 ---
-<div>{{obsolete_header}}</div>
 
-<h2 id="Summary" name="Summary">概要</h2>
+{{deprecated_header}}
 
-<p>HTML の頭字語要素 (<code>&lt;acronym&gt;</code>) は、頭字語または略語の単語を構成する文字の並びを明示することができます。</p>
+## 概要
 
-<div class="note">
-<p><strong>使用上の注意:</strong> この要素は HTML5 にて廃止されており、使用するべきではありません。代わりに {{HTMLElement("abbr")}} 要素を使用してください。</p>
-</div>
+**`<acronym>`** は [HTML](/ja/docs/Web/HTML) の要素で、頭字語または略語の単語を構成する文字の並びを明示することができます。
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+> **Warning:** この要素は使用しないでください。代わりに {{HTMLElement("abbr")}} 要素を使用してください。
 
-<p>この要素は、全ての要素に共通の<a class="new " href="/ja/docs/HTML/global_attributes" rel="internal" title="HTML/global attributes">グローバル属性</a>のみを持ちます。</p>
+## 属性
 
-<h2 id="DOM_Interface" name="DOM_Interface">DOM インターフェイス</h2>
+この要素は、全ての要素に共通の[グローバル属性](/ja/docs/HTML/Global_attributes)のみがあります。
 
-<p>この要素は {{domxref('HTMLElement')}} インターフェイスを提供します。</p>
+## DOM インターフェイス
 
-<div class="note"><strong>実装上の注意: </strong> Gecko 1.9.2 まで、 Firefox はこの要素に {{domxref('HTMLSpanElement')}} インターフェイスを実装していました。</div>
+この要素は {{domxref('HTMLElement')}} インターフェイスを提供します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:html notranslate">&lt;p&gt;The &lt;acronym title="World Wide Web"&gt;WWW&lt;/acronym&gt; is only a component of the Internet.&lt;/p&gt;
-</pre>
+```html
+<p>The <acronym title="World Wide Web">WWW</acronym> is only a component of the Internet.</p>
+```
 
-<h2 id="Default_styling" name="Default_styling">既定のスタイル</h2>
+## 既定のスタイル
 
-<p>このタグの目的は単に作者の利便性のためのものであり、ブラウザーによって既定のスタイルは様々です。</p>
+このタグの目的は単に作者の利便性のためのものであり、ブラウザーによって既定のスタイルは様々です。
 
-<ul>
- <li>Internet Explorer などの一部のブラウザーでは、この要素に {{HTMLElement("span")}} 要素と異なるスタイル付けは行いません。</li>
- <li>Opera、Firefox、Chrome などでは、この要素の内容に点線の下線が付きます。</li>
- <li>ブラウザーによっては点線の下線を引くだけでなく、スモールキャップスにします。このスタイルを抑制するには、 CSS で {{cssxref('font-variant')}}<code>: none</code> などをつけます。</li>
-</ul>
+- Internet Explorer などの一部のブラウザーでは、この要素に {{HTMLElement("span")}} 要素と異なるスタイル付けは行いません。
+- Opera、Firefox、Chrome などでは、この要素の内容に点線の下線が付きます。
+- ブラウザーによっては点線の下線を引くだけでなく、スモールキャップスにします。このスタイルを抑制するには、 CSS で {{cssxref('font-variant')}}`: none` などをつけます。
 
-<p>よって、ウェブの作者は大体既定のスタイルに依存しないことが強く推奨されます。</p>
+従って、この要素に明確にスタイルを与えるか、ブラウザー間の違いを気にしないようにするかする必要があります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#edef-ACRONYM', '&lt;acronym&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.acronym")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>HTML の {{htmlelement("abbr")}} 要素</li>
-</ul>
+- HTML の {{HTMLElement("abbr")}} 要素
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
