@@ -1,53 +1,53 @@
 ---
-title: 文件系统API的基本概念
+title: 文件系统 API 的基本概念
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 translation_of: Web/API/File_and_Directory_Entries_API/Introduction
 original_slug: WebGuide/API/File_System/Introduction
 ---
 <p>本文是对<a href="https://developer.mozilla.org/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="https://developer.mozilla.org/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic_Concepts_About_the_Filesystem_API</a>一文的译文。</p>
 
-<p>文件系统API（File System API）模拟网络应用程序可以导航到的本地文件系统。你可以开发应用在一个沙盒的虚拟文件系统中读、写、创建以及索引文件。</p>
+<p>文件系统 API（File System API）模拟网络应用程序可以导航到的本地文件系统。你可以开发应用在一个沙盒的虚拟文件系统中读、写、创建以及索引文件。</p>
 
-<p>该文件系统API与其他相关的API交互。它基于文件写入API（File Writer API），而后者又基于文件API（File API）。每一个API都具有不同的功能。这些API对于网络应用而言是一个巨大的进化飞跃，使得它们能够缓存和处理大量级的数据。</p>
+<p>该文件系统 API 与其他相关的 API 交互。它基于文件写入 API（File Writer API），而后者又基于文件 API（File API）。每一个 API 都具有不同的功能。这些 API 对于网络应用而言是一个巨大的进化飞跃，使得它们能够缓存和处理大量级的数据。</p>
 
 <h2 id="关于这篇文档">关于这篇文档</h2>
 
-<p>这篇介绍讨论了文件系统API中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 <a href="#concepts">关键概念</a>. 它也描述了一些<a href="#restrictions">限制</a>，如果你忽略了它们将额能产生安全错误。关于该API中使用的更多术语，查看<a href="#definitions">定义</a>部分. </p>
+<p>这篇介绍讨论了文件系统 API 中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 <a href="#concepts">关键概念</a>. 它也描述了一些<a href="#restrictions">限制</a>，如果你忽略了它们将额能产生安全错误。关于该 API 中使用的更多术语，查看<a href="#definitions">定义</a>部分. </p>
 
-<p>关于文件系统API的引用文献部分，查看<a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">引用</a> 的登陆页及其子页.</p>
+<p>关于文件系统 API 的引用文献部分，查看<a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">引用</a> 的登陆页及其子页。</p>
 
-<p>该规范仍然在定义中并可能会变更.</p>
+<p>该规范仍然在定义中并可能会变更。</p>
 
 <h2 id="概要">概要</h2>
 
-<p>文件系统API包括<a href="/en/DOM/File_API/File_System_API#Asynchronous_APIs" title="en/DOM/File_API/File_System_API#Asynchronous_APIs">异步</a>和<a href="/en/DOM/File_API/File_System_API#Synchronous_APIs" title="en/DOM/File_API/File_System_API#Synchronous_APIs">同步</a>两种接口。异步API可以应用于当你不想操作锁定UI的情况。另一方面，同步API允许简单的程序模型，但它必须和<a href="/En/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">WebWorkers一起使用</a>. </p>
+<p>文件系统 API 包括<a href="/en/DOM/File_API/File_System_API#Asynchronous_APIs" title="en/DOM/File_API/File_System_API#Asynchronous_APIs">异步</a>和<a href="/en/DOM/File_API/File_System_API#Synchronous_APIs" title="en/DOM/File_API/File_System_API#Synchronous_APIs">同步</a>两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和<a href="/En/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">WebWorkers 一起使用</a>. </p>
 
-<h3 id="该API的用途">该API的用途</h3>
+<h3 id="该API的用途">该 API 的用途</h3>
 
-<p>文件系统API的重要性体现在以下方面：</p>
+<p>文件系统 API 的重要性体现在以下方面：</p>
 
 <ul>
  <li>它允许应用拥有涉及二进制大对象（blob）的线下和存储的特性。</li>
  <li>它能通过在后台预取资源并本地缓存从而优化应用的表现。</li>
  <li>它使你网络应用的用户能够直接编辑本地文件目录中的二进制文件。</li>
- <li>它提供了一种你的用户已经熟悉的存储API，正如他们所习惯的文件系统。</li>
+ <li>它提供了一种你的用户已经熟悉的存储 API，正如他们所习惯的文件系统。</li>
 </ul>
 
-<p>关于你用该api能够创建的特性示例，查看 <a href="/#samples" title="#samples">使用示例</a> 部分.  </p>
+<p>关于你用该 api 能够创建的特性示例，查看 <a href="/#samples" title="#samples">使用示例</a> 部分。 </p>
 
-<h3 id="文件系统API和其他存储API">文件系统API和其他存储API</h3>
+<h3 id="文件系统API和其他存储API">文件系统 API 和其他存储 API</h3>
 
-<p>文件系统API是一些其他存储API，例如 <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL(已于2010年9月18日起弃用)，以及AppCache等的替代品。该API对于那些处理blob的应用而言是一种更好的选择，因为：</p>
+<p>文件系统 API 是一些其他存储 API，例如 <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL(已于 2010 年 9 月 18 日起弃用)，以及 AppCache 等的替代品。该 API 对于那些处理 blob 的应用而言是一种更好的选择，因为：</p>
 
 <ul>
- <li>文件系统API提供客户端存储以应对不在数据库中存储的应用场景。如果你需要大型可变的数据块，比数据库而言它就是一种更有效率的存储解决方案。</li>
- <li>尽 管Firefox支持IndexedDB的blob存储，但是目前Chrome并非如此（Chrome仍然在对IndexedDB的blob存储做实现支 持开发中）。如果你的应用面向Chrome并且你需要存储blobs, 那么文件系统API和App Cache将是你唯一的选择。然而，AppCache存储并不是本地可变的，并且不支持细粒度的客户端管理。</li>
- <li>在Chrome中，你可以使用文件系统API和配额管理API <a class="external" href="http://code.google.com/chrome/whitepapers/storage.html" title="http://code.google.com/chrome/whitepapers/storage.html">Quota Management API</a>, 后者允许你请求更多的存储以及管理你的存储配额。</li>
+ <li>文件系统 API 提供客户端存储以应对不在数据库中存储的应用场景。如果你需要大型可变的数据块，比数据库而言它就是一种更有效率的存储解决方案。</li>
+ <li>尽 管 Firefox 支持 IndexedDB 的 blob 存储，但是目前 Chrome 并非如此（Chrome 仍然在对 IndexedDB 的 blob 存储做实现支 持开发中）。如果你的应用面向 Chrome 并且你需要存储 blobs, 那么文件系统 API 和 App Cache 将是你唯一的选择。然而，AppCache 存储并不是本地可变的，并且不支持细粒度的客户端管理。</li>
+ <li>在 Chrome 中，你可以使用文件系统 API 和配额管理 API <a class="external" href="http://code.google.com/chrome/whitepapers/storage.html" title="http://code.google.com/chrome/whitepapers/storage.html">Quota Management API</a>, 后者允许你请求更多的存储以及管理你的存储配额。</li>
 </ul>
 
 <h3 id="示例使用场景">示例使用场景</h3>
 
-<p>下面是关于你可以如何使用文件系统API的几个示例：</p>
+<p>下面是关于你可以如何使用文件系统 API 的几个示例：</p>
 
 <ul>
  <li>有上传器的应用
@@ -64,13 +64,13 @@ original_slug: WebGuide/API/File_System/Introduction
  </li>
  <li>音频或照片编辑器使用线下访问或本地缓存（有助于表现和速度）
   <ul>
-   <li>应用可以分段写入文件（例如只覆盖ID3/EXIF标签而不是整个文件）。</li>
+   <li>应用可以分段写入文件（例如只覆盖 ID3/EXIF 标签而不是整个文件）。</li>
   </ul>
  </li>
  <li>线下视频浏览
   <ul>
    <li>应用可以下载大文件（&gt;1GB）用于以后浏览。</li>
-   <li>应用可以访问只下载了部分的文件（因此你可以查看你的DVD的第一章，即使应用仍在下载剩余部分，或者当你需要取赶火车而没有完成下载时）。</li>
+   <li>应用可以访问只下载了部分的文件（因此你可以查看你的 DVD 的第一章，即使应用仍在下载剩余部分，或者当你需要取赶火车而没有完成下载时）。</li>
   </ul>
  </li>
  <li>线下网络邮件客户端
@@ -83,25 +83,25 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <h2 id="主要概念">主要概念</h2>
 
-<p>在开始使用文件系统API之前，你需要理解几个概念：</p>
+<p>在开始使用文件系统 API 之前，你需要理解几个概念：</p>
 
 <ul>
- <li><a href="#virtual">文件系统API是一个文件系统的虚拟表现形式</a></li>
- <li><a href="#storage">文件系统API可以使用不同的存储类型</a></li>
+ <li><a href="#virtual">文件系统 API 是一个文件系统的虚拟表现形式</a></li>
+ <li><a href="#storage">文件系统 API 可以使用不同的存储类型</a></li>
  <li><a href="#quota">浏览器限定存储的配额</a></li>
- <li><a href="#versions">文件系统API拥有异步和同步两种版本</a></li>
- <li><a href="#errorcallbacks">当使用异步API时，务必使用错误回调</a></li>
- <li><a href="#interfaces">文件系统API与其他API交互</a></li>
- <li><a href="#case">文件系统API区分大小写</a></li>
+ <li><a href="#versions">文件系统 API 拥有异步和同步两种版本</a></li>
+ <li><a href="#errorcallbacks">当使用异步 API 时，务必使用错误回调</a></li>
+ <li><a href="#interfaces">文件系统 API 与其他 API 交互</a></li>
+ <li><a href="#case">文件系统 API 区分大小写</a></li>
 </ul>
 
-<h3 id="文件系统API是一个文件系统的虚拟表现形式">文件系统API是一个文件系统的虚拟表现形式</h3>
+<h3 id="文件系统API是一个文件系统的虚拟表现形式">文件系统 API 是一个文件系统的虚拟表现形式</h3>
 
-<p>该API不会使你能够访问本地文件系统，该沙盒也并不是文件系统的一部分。相反，它是一个虚拟的文件系统，对于网络应用而言它就像是一个成熟的文件系统。它不需要在浏览器之外与本地文件系统产生任何关系。</p>
+<p>该 API 不会使你能够访问本地文件系统，该沙盒也并不是文件系统的一部分。相反，它是一个虚拟的文件系统，对于网络应用而言它就像是一个成熟的文件系统。它不需要在浏览器之外与本地文件系统产生任何关系。</p>
 
-<p>这 就意味着，一个网络应用和一个桌面应用不能在同时共享同一个文件。该API不能使你的网络应用脱离浏览器接触到文件，而桌面应用可以。然而，你可以从一个 网络应用中导出一个文件到桌面应用。例如，你可以使用文件API，创建blob, 重定向一个iframe指向该blob, 并调用下载管理器。</p>
+<p>这 就意味着，一个网络应用和一个桌面应用不能在同时共享同一个文件。该 API 不能使你的网络应用脱离浏览器接触到文件，而桌面应用可以。然而，你可以从一个 网络应用中导出一个文件到桌面应用。例如，你可以使用文件 API，创建 blob, 重定向一个 iframe 指向该 blob, 并调用下载管理器。</p>
 
-<h3 id="文件系统API可以使用不同的存储类型">文件系统API可以使用不同的存储类型</h3>
+<h3 id="文件系统API可以使用不同的存储类型">文件系统 API 可以使用不同的存储类型</h3>
 
 <p>一个应用可能需要临时或固定的存储。临时存储相对容易获得，因为浏览器已经提供了；但它是受到限制并可能在空间耗尽时被浏览器删除。另一方面，固定存储可以为你提供更大的空间并只能被用户删除，但它需要用户获得你的许可。</p>
 
@@ -111,38 +111,38 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <p>为了防止一个网络应用占用整个磁盘，浏览器可能会给每一个应用限定配额并分配存储。</p>
 
-<p>存储空间如何分配以及你可以如何管理存储是浏览器的特性，因此你需要查阅浏览器各自的文档。例如，Google Chrome在规范中允许超过5MB的临时存储并支持配额管理API. 了解更多关于Chrome的实现，查看<a class="external" href="http://code.google.com/chrome/whitepapers/storage.html">管理HTML5线下存储</a>.</p>
+<p>存储空间如何分配以及你可以如何管理存储是浏览器的特性，因此你需要查阅浏览器各自的文档。例如，Google Chrome 在规范中允许超过 5MB 的临时存储并支持配额管理 API. 了解更多关于 Chrome 的实现，查看<a class="external" href="http://code.google.com/chrome/whitepapers/storage.html">管理 HTML5 线下存储</a>.</p>
 
-<h3 id="文件系统API拥有异步和同步两种版本">文件系统API拥有异步和同步两种版本</h3>
+<h3 id="文件系统API拥有异步和同步两种版本">文件系统 API 拥有异步和同步两种版本</h3>
 
-<p>文件系统API拥有异步和同步两种版本。两种版本的API提供相同的功能和特性。事实上，它们基本相同，除了几个不同点以外。</p>
+<p>文件系统 API 拥有异步和同步两种版本。两种版本的 API 提供相同的功能和特性。事实上，它们基本相同，除了几个不同点以外。</p>
 
 <ul>
- <li><strong>WebWorkers.</strong> 异步的API可以在文档或<a href="/En/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">WebWorkers</a> 上下文中使用, 而同步API只能用于WebWorkers. </li>
- <li><strong>Callbacks</strong>. 异步API不会将数据作为返回值；作为替代，你需要传递一个回调函数。你在操作中发送请求，并在回调时得到通知。相反，同步API不使用回调函数，因为API方法返回值。</li>
- <li><strong>异步和同步API的全局方法</strong>. 异步API拥有这些全局方法：<code>requestFileSystem()</code> 和 <code>resolveLocalFileSystemURL()</code>. 这些方法同时是window对象和worker全局作用域的成员。另一方面，同步API使用如下方法：<code>requestFileSystemSync()</code> 和 <code>resolveLocalFileSystemSyncURL()</code>. 这些同步方法只是worker全局作用域的成员，而非window对象的。</li>
+ <li><strong>WebWorkers.</strong> 异步的 API 可以在文档或<a href="/En/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">WebWorkers</a> 上下文中使用，而同步 API 只能用于 WebWorkers. </li>
+ <li><strong>Callbacks</strong>. 异步 API 不会将数据作为返回值；作为替代，你需要传递一个回调函数。你在操作中发送请求，并在回调时得到通知。相反，同步 API 不使用回调函数，因为 API 方法返回值。</li>
+ <li><strong>异步和同步 API 的全局方法</strong>. 异步 API 拥有这些全局方法：<code>requestFileSystem()</code> 和 <code>resolveLocalFileSystemURL()</code>. 这些方法同时是 window 对象和 worker 全局作用域的成员。另一方面，同步 API 使用如下方法：<code>requestFileSystemSync()</code> 和 <code>resolveLocalFileSystemSyncURL()</code>. 这些同步方法只是 worker 全局作用域的成员，而非 window 对象的。</li>
 </ul>
 
-<p>对于一些任务而言同步API可能更简单一些。它直接的，顺序编程的模块可以让代码更易于阅读。其缺点在于它必须与Web Worker交互，而后者有一些限制。</p>
+<p>对于一些任务而言同步 API 可能更简单一些。它直接的，顺序编程的模块可以让代码更易于阅读。其缺点在于它必须与 Web Worker 交互，而后者有一些限制。</p>
 
-<h3 id="当使用异步API时，务必使用错误回调">当使用异步API时，务必使用错误回调</h3>
+<h3 id="当使用异步API时，务必使用错误回调">当使用异步 API 时，务必使用错误回调</h3>
 
-<p>当使用异步API时，务必总是使用错误回调。虽然对于相关的方法而言错误回调是可选参数，但是明智的做法是把它们当成必选的。至少，通过处理错误得到的错误信息，你可以知道发生了什么。</p>
+<p>当使用异步 API 时，务必总是使用错误回调。虽然对于相关的方法而言错误回调是可选参数，但是明智的做法是把它们当成必选的。至少，通过处理错误得到的错误信息，你可以知道发生了什么。</p>
 
-<h3 id="文件系统API与其他API交互">文件系统API与其他API交互</h3>
+<h3 id="文件系统API与其他API交互">文件系统 API 与其他 API 交互</h3>
 
-<p>文件系统API被设计用于在网络平台上与其他API以及元素交互。例如，你可能使用到如下内容之一：</p>
+<p>文件系统 API 被设计用于在网络平台上与其他 API 以及元素交互。例如，你可能使用到如下内容之一：</p>
 
 <ul>
- <li>XMLHttpRequest（例如传递file和blob对象的send()方法）</li>
+ <li>XMLHttpRequest（例如传递 file 和 blob 对象的 send() 方法）</li>
  <li>Drag &amp; Drop API</li>
- <li>Web Workers (对于同步版的文件系统API)</li>
- <li><code>input</code> 元素(用于从该元素编程得到文件列表)</li>
+ <li>Web Workers (对于同步版的文件系统 API)</li>
+ <li><code>input</code> 元素 (用于从该元素编程得到文件列表)</li>
 </ul>
 
-<h3 id="文件系统API区分大小写">文件系统API区分大小写</h3>
+<h3 id="文件系统API区分大小写">文件系统 API 区分大小写</h3>
 
-<div>文件系统API区分大小写并保留大小写。</div>
+<div>文件系统 API 区分大小写并保留大小写。</div>
 
 <p> </p>
 
@@ -151,41 +151,41 @@ original_slug: WebGuide/API/File_System/Introduction
 <p>出于安全的原因，浏览器对于文件的访问施加了一些限制。如果你忽略它们，将会产生安全错误。</p>
 
 <ul>
- <li><a href="#origin">文件系统API坚持同源策略</a></li>
- <li><a href="#execute">文件系统API不允许创建或重命名可执行文件</a></li>
+ <li><a href="#origin">文件系统 API 坚持同源策略</a></li>
+ <li><a href="#execute">文件系统 API 不允许创建或重命名可执行文件</a></li>
  <li><a href="#sandbox">文件系统是沙盒的</a></li>
- <li><a href="#file">不能通过file://来运行你的应用</a></li>
+ <li><a href="#file">不能通过 file://来运行你的应用</a></li>
 </ul>
 
-<h3 id="文件系统API坚持同源策略">文件系统API坚持同源策略</h3>
+<h3 id="文件系统API坚持同源策略">文件系统 API 坚持同源策略</h3>
 
-<p>一个源是脚本执行的文档的URL的域，应用层协议和端口。每一个源拥有它自己关联的一组文件系统</p>
+<p>一个源是脚本执行的文档的 URL 的域，应用层协议和端口。每一个源拥有它自己关联的一组文件系统</p>
 
 <p>文件系统上作出的安全限定阻止应用访问不同源的数据。这保护了私有数据以防被访问或删除。例如，当一个应用或页面在<a href="http://www.example.com/app/" title="http://www.example.com/app/">http://www.example.com/app/</a>上时，它能访问位于<a href="http://www.example.com/dir/" title="http://www.example.com/dir/">http://www.example.com/dir/</a>上的文件，因为它们拥有相同的源，它不能得到位于<a href="http://www.example.com:8080/dir/" title="http://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> （不同端口）或<a href="https://www.example.com/dir/" title="https://www.example.com/dir/">https://www.example.com/dir/</a> （不同协议）上的文件。</p>
 
-<h3 id="文件系统API不允许创建或重命名可执行文件">文件系统API不允许创建或重命名可执行文件</h3>
+<h3 id="文件系统API不允许创建或重命名可执行文件">文件系统 API 不允许创建或重命名可执行文件</h3>
 
-<p>为防止恶意的应用运行可执行文件，你不能在文件系统API的沙盒中创建可执行文件。</p>
+<p>为防止恶意的应用运行可执行文件，你不能在文件系统 API 的沙盒中创建可执行文件。</p>
 
 <h3 id="文件系统是沙盒的">文件系统是沙盒的</h3>
 
 <p>因为文件系统是沙盒的，一个网络应用不能访问另一个应用的文件。你也不能读写用户硬盘中任意文件夹中的文件。</p>
 
-<h3 id="不能通过file来运行你的应用">不能通过file://来运行你的应用</h3>
+<h3 id="不能通过file来运行你的应用">不能通过 file://来运行你的应用</h3>
 
-<p>你不能在本地通过file://来运行你的应用。如果你那么做了，浏览器将抛出错误，或者你的应用会静默地失败。这一限制也同样针对许多其他的文件API，包括BlobBuilder和FileReader。</p>
+<p>你不能在本地通过 file://来运行你的应用。如果你那么做了，浏览器将抛出错误，或者你的应用会静默地失败。这一限制也同样针对许多其他的文件 API，包括 BlobBuilder 和 FileReader。</p>
 
-<p>出于测试的目的，你可以在Chrome中通过在启动时添加<code>--allow-file-access-from-files参数来绕开这一限制，这一参数仅用于这个目的。</code></p>
+<p>出于测试的目的，你可以在 Chrome 中通过在启动时添加<code>--allow-file-access-from-files参数来绕开这一限制，这一参数仅用于这个目的。</code></p>
 
 <h2 id="定义">定义</h2>
 
-<p>这一部分定义和解释了文件系统API中使用的术语.</p>
+<p>这一部分定义和解释了文件系统 API 中使用的术语。</p>
 
 <dl>
  <dt><a>blob</a></dt>
- <dd>代表二进制大对象。一个blob是存储在单一对象中的一组二进制数据。这是在网络应用中引用二进制数据的通用方法。一个blob可以是一个图片或音频文件。</dd>
+ <dd>代表二进制大对象。一个 blob 是存储在单一对象中的一组二进制数据。这是在网络应用中引用二进制数据的通用方法。一个 blob 可以是一个图片或音频文件。</dd>
  <dt><a>Blob</a></dt>
- <dd>Blob（以大写B开头的）是一个不可变的数据结构，这意味着一个blob引用的二进制数据不能被直接修改。这使得当Blobs传入到异步API时它们的行为将是可预见的。</dd>
+ <dd>Blob（以大写 B 开头的）是一个不可变的数据结构，这意味着一个 blob 引用的二进制数据不能被直接修改。这使得当 Blobs 传入到异步 API 时它们的行为将是可预见的。</dd>
  <dt><a>persistent storage</a> | 固定存储</dt>
  <dd>固定存储是一种在浏览器中长期存在的的存储，除非用户永久删除它或应用删除它。</dd>
  <dt><a>temporary storage | 临时存储</a></dt>
@@ -198,7 +198,7 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <p>引用: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API Reference</a></p>
 
-<p>相关文档:</p>
+<p>相关文档：</p>
 
 <ul>
  <li><a class="external" href="http://www.html5rocks.com/en/tutorials/file/filesystem/" title="http://www.html5rocks.com/en/tutorials/file/filesystem/">Exploring the FileSystem APIs</a></li>

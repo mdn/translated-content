@@ -9,12 +9,12 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>只读属性 <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> 返回一个 {{domxref("RTCSessionDescription")}} 对象，该对象描述了 自上次 {{domxref("RTCPeerConnection")}} 完成协商与连接到远程端后，最近一次成功协商的连接的本地端。原文（describing the local end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer）。也包括自RTCSessionDescription所代表的offer或anwser首次实例化以来，ICE代理可能已经生成的任何ICE候选人的列表。</p>
+<p>只读属性 <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> 返回一个 {{domxref("RTCSessionDescription")}} 对象，该对象描述了 自上次 {{domxref("RTCPeerConnection")}} 完成协商与连接到远程端后，最近一次成功协商的连接的本地端。原文（describing the local end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer）。也包括自 RTCSessionDescription 所代表的 offer 或 anwser 首次实例化以来，ICE 代理可能已经生成的任何 ICE 候选人的列表。</p>
 
 <p>若想改变 <code>currentLocalDescription</code> ，则调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 。这将会触发引发该值被设置的一系列事件。 如果希望详细了解策略与机制，查阅 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。</p>
 
 <div class="note">
-<p>与 {{domxref("RTCPeerConnection.localDescription")}} 不同， 这个值代表了当前连接的本地端的事实当前状态； <code>localDescription</code> 也许指明了一个当前正在切换中的连接的description。</p>
+<p>与 {{domxref("RTCPeerConnection.localDescription")}} 不同， 这个值代表了当前连接的本地端的事实当前状态； <code>localDescription</code> 也许指明了一个当前正在切换中的连接的 description。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -23,11 +23,11 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 
 <h3 id="返回值">返回值</h3>
 
-<p>连接本地端的当前description描述，如果成功设置了一个。否则返回null。</p>
+<p>连接本地端的当前 description 描述，如果成功设置了一个。否则返回 null。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>本例子查看 <code>currentLocalDescription</code> 并且显示了包含 {{domxref("RTCSessionDescription")}} 对象的 <code>type</code> 与 <code>sdp</code> 字段的alert。</p>
+<p>本例子查看 <code>currentLocalDescription</code> 并且显示了包含 {{domxref("RTCSessionDescription")}} 对象的 <code>type</code> 与 <code>sdp</code> 字段的 alert。</p>
 
 <pre class="brush: js notranslate">var pc = new RTCPeerConnection();
 …

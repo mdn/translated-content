@@ -156,7 +156,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 
 <p><code>&lt;script&gt;</code> 包含组件中所有的非显示逻辑，最重要的是， <code>&lt;script&gt;</code> 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个对象会被处理和转换（包含 template 模板）成为一个有 <code>render()</code> 函数的 Vue 组件。</p>
 
-<p dir="ltr" id="tw-target-text">对于 <code>App.vue</code>，我们的默认导出将组件的名称设置为 <code>app</code> ，并通过将 <code>HelloWorld</code> 组件添加到 <code>components</code> 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此您需要将其导入并注册到使用它们的每个组件文件中。这对于拆包 / tree shaking（译者注：一种减小包体积优化方式）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。</p>
+<p>对于 <code>App.vue</code>，我们的默认导出将组件的名称设置为 <code>app</code> ，并通过将 <code>HelloWorld</code> 组件添加到 <code>components</code> 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此您需要将其导入并注册到使用它们的每个组件文件中。这对于拆包 / tree shaking（译者注：一种减小包体积优化方式）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。</p>
 
 <pre class="brush: js notranslate">import HelloWorld from './components/HelloWorld.vue';
 
@@ -182,7 +182,7 @@ export default {
 
 <p>Vue CLI 带有内置的开发服务器。这样一来，您就可以在本地运行您的应用程序，这样就可以轻松对其进行测试，而无需自己配置服务器。 CLI 会以 npm 脚本的形式将 <code>serve</code> 命令添加到项目的 <code>package.json </code>文件中，因此您可以轻松地运行它。</p>
 
-<p dir="ltr" id="tw-target-text">在您的终端中，尝试运行 <code>npm run serve</code>（或者如果希望使用 yarn ，则运行 <code>yarn serve</code> ）。您的终端应输出类似以下内容的内容：</p>
+<p>在您的终端中，尝试运行 <code>npm run serve</code>（或者如果希望使用 yarn ，则运行 <code>yarn serve</code> ）。您的终端应输出类似以下内容的内容：</p>
 
 <pre class="notranslate">INFO  Starting development server...
 98% after emitting CopyPlugin
@@ -240,9 +240,9 @@ export default {
 
 <p>让我们在这里暂时告一段落。我们已经了解了 Vue 背后的一些想法，为示例应用程序创建了一些脚手架，使其可以运行，检查并进行了一些初步更改。</p>
 
-<p dir="ltr">在不进行基本介绍的情况下，我们现在将进一步研究并构建示例应用程序，这是一个基本的任务清单应用程序，它允许我们存储项目列表，完成后将其选中，并按所有、已完成和未完成待办事项来过滤。</p>
+<p>在不进行基本介绍的情况下，我们现在将进一步研究并构建示例应用程序，这是一个基本的任务清单应用程序，它允许我们存储项目列表，完成后将其选中，并按所有、已完成和未完成待办事项来过滤。</p>
 
-<p dir="ltr">在下一篇文章中，我们将构建第一个自定义组件，并研究一些重要概念，例如将 prop 传递到其中和保存其 data 状态。</p>
+<p>在下一篇文章中，我们将构建第一个自定义组件，并研究一些重要概念，例如将 prop 传递到其中和保存其 data 状态。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 

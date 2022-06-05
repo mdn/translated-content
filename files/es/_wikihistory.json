@@ -6235,17 +6235,6 @@
       "AshWilliams"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-24T00:06:11.527Z",
-    "contributors": [
-      "chrisdavidmills",
-      "israelfl",
-      "pacommozilla",
-      "teoli",
-      "mare",
-      "Izel"
-    ]
-  },
   "Web/API/File/lastModifiedDate": {
     "modified": "2019-03-23T22:06:34.338Z",
     "contributors": [
@@ -6313,6 +6302,17 @@
     "modified": "2020-10-15T22:16:53.945Z",
     "contributors": [
       "carlosbulnes"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-24T00:06:11.527Z",
+    "contributors": [
+      "chrisdavidmills",
+      "israelfl",
+      "pacommozilla",
+      "teoli",
+      "mare",
+      "Izel"
     ]
   },
   "Web/API/FormData": {

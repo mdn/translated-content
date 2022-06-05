@@ -20,10 +20,10 @@ translation_of: Web/CSS/length
 
 <h2 id="语法">语法</h2>
 
-<p><code>&lt;length&gt;</code> 数据类型由一个 {{cssxref("&lt;number&gt;")}} 和一个长度单位构成。 与所有 CSS 维度一样，单位的字面值与数字之间没有空格。 数字为 <code>0</code> 时，长度单位是可选的。</p>
+<p><code>&lt;length&gt;</code> 数据类型由一个 {{cssxref("&lt;number&gt;")}} 和一个长度单位构成。与所有 CSS 维度一样，单位的字面值与数字之间没有空格。数字为 <code>0</code> 时，长度单位是可选的。</p>
 
 <blockquote>
-<p>有些属性支持使用负数的长度值, 而有些不支持</p>
+<p>有些属性支持使用负数的长度值，而有些不支持</p>
 </blockquote>
 
 <h3 id="单位">单位</h3>
@@ -37,7 +37,7 @@ translation_of: Web/CSS/length
 <p>字体的相对长度指的是根据一个特定字符的大小或当前字符所在元素的父元素所定义的字符大小来定义长度值。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 这些相对单位, 尤其是 em 和 rem, 经常被用于满足即使用户更改字体大小，也可以保持页面的垂直阅读节奏可拓展布局中</p>
+<p><strong>注意：</strong> 这些相对单位，尤其是 em 和 rem, 经常被用于满足即使用户更改字体大小，也可以保持页面的垂直阅读节奏可拓展布局中</p>
 </div>
 
 <dl>
@@ -45,9 +45,9 @@ translation_of: Web/CSS/length
  <dd>表示元素字体 {{Cssxref("font")}} 的“上限高度”（cap height，大写字母的标称高度（nominal height））。</dd>
  <dt><code><a name="ch">ch</a></code></dt>
  <dd>
- <p>这一单位代表元素所用字体 {{Cssxref("font")}} 中“0”这一字形的宽度（"0"，Unicode字符U+0030），更准确地说，是“0”这一字形的预测尺寸（advance measure）。</p>
+ <p>这一单位代表元素所用字体 {{Cssxref("font")}} 中“0”这一字形的宽度（"0"，Unicode 字符 U+0030），更准确地说，是“0”这一字形的预测尺寸（advance measure）。</p>
 
- <p>如果无法确定“ 0”字形的大小，则必须假定其宽为 <code>0.5em</code>，高为 <code>1em</code>。</p>
+ <p>如果无法确定“0”字形的大小，则必须假定其宽为 <code>0.5em</code>，高为 <code>1em</code>。</p>
  </dd>
  <dt><code><a name="em">em</a></code></dt>
  <dd>相对长度单位，这个单位表示元素的 {{Cssxref("font-size")}} 的计算值。如果用在{{ Cssxref("font-size") }} 属性本身，它则表示元素<em>继承</em>的 <code>font-size</code> 值。</dd>
@@ -58,12 +58,12 @@ translation_of: Web/CSS/length
  <dt><code><a id="lh" name="lh">lh</a></code> {{experimental_inline}}</dt>
  <dd>等于使用它的元素的 {{Cssxref("line-height")}} 属性的计算值，转换为绝对长度。</dd>
  <dt><code><a name="rem">rem</a></code></dt>
- <dd>这个单位代表根元素（通常为{{HTMLElement("html")}} 元素）的 {{Cssxref("font-size")}} 大小。当用在根元素的 {{Cssxref("font-size")}} 上面时 ，它代表了它的初始值。</dd>
+ <dd>这个单位代表根元素（通常为{{HTMLElement("html")}} 元素）的 {{Cssxref("font-size")}} 大小。当用在根元素的 {{Cssxref("font-size")}} 上面时，它代表了它的初始值。</dd>
  <dt><code>rlh</code> {{experimental_inline}}</dt>
- <dd>等于根元素行高 {{Cssxref("line-height")}} 的计算值。当用于设置根元素的行高 {{Cssxref("line-height")}} 或是字体大小 {{Cssxref("font-size")}} 时，该rlh指的是根元素行高 {{Cssxref("line-height")}} 或字体大小 {{Cssxref("font-size")}} 的初始值。</dd>
+ <dd>等于根元素行高 {{Cssxref("line-height")}} 的计算值。当用于设置根元素的行高 {{Cssxref("line-height")}} 或是字体大小 {{Cssxref("font-size")}} 时，该 rlh 指的是根元素行高 {{Cssxref("line-height")}} 或字体大小 {{Cssxref("font-size")}} 的初始值。</dd>
 </dl>
 
-<h5 id="视口Viewport比例的长度">视口(Viewport)比例的长度</h5>
+<h5 id="视口Viewport比例的长度">视口 (Viewport) 比例的长度</h5>
 
 <p>视口百分比长度定义相对于 {{glossary("viewport")}} 的大小的 <code>&lt;length&gt;</code> 值，即文档的可见部分。视口长度在 {{cssxref("@page")}} 声明块中无效。</p>
 
@@ -88,10 +88,10 @@ translation_of: Web/CSS/length
 
 <p>对于低 dpi 设备，单位 px 表示物理参考像素;其他单位是相对于它定义的。因此，1 in 定义为 96px，等于 72pt。此定义的后果是，在此类设备上，以英寸（in）、厘米（cm）或 毫米（mm）表示的尺寸不需要与同名的物理单位的大小相匹配。<br>
  <br>
- 对于高 dpi 设备，英寸（in）、厘米（cm）和毫米（mm）与物理设备相同。因此，px 单位是相对于它们定义的 （1/96 of 1 inch）。</p>
+ 对于高 dpi 设备，英寸（in）、厘米（cm）和毫米（mm）与物理设备相同。因此，px 单位是相对于它们定义的（1/96 of 1 inch）。</p>
 
 <div class="note">
-<p><strong>注意：</strong>很多用户选择增加用户代理 {{glossary("user agent")}} 的字体大小以提高文本可读性。因为绝对长度是固定值, 无法根据用户的设置进行缩放, 因此会降低页面友好性，因此在设置字体大小 <code>font-size</code> 相关的长度值时，最好优先选择使用相对长度单位，比如 <code>em</code> 或 <code>rem</code>。</p>
+<p><strong>注意：</strong>很多用户选择增加用户代理 {{glossary("user agent")}} 的字体大小以提高文本可读性。因为绝对长度是固定值，无法根据用户的设置进行缩放，因此会降低页面友好性，因此在设置字体大小 <code>font-size</code> 相关的长度值时，最好优先选择使用相对长度单位，比如 <code>em</code> 或 <code>rem</code>。</p>
 
 <p><strong>译者注：</strong>一些浏览器还支持设置最低字体大小。常见的最低字体大小限制为 9px 到 12px，</p>
 </div>

@@ -11,7 +11,7 @@ original_slug: Web/API/notification/Using_Web_Notifications
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此API的基础知识。</p>
+<p><a href="/zh-CN/docs/Web/API/Notifications_API">Notifications API</a> 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -21,7 +21,7 @@ original_slug: Web/API/notification/Using_Web_Notifications
 
 <p><img src="https://mdn.mozillademos.org/files/10961/mac-notification.png"></p>
 
-<p>系统通知系统当然会因平台和浏览器而异，但无需担心，通知API被编写为通用的，足以与大多数系统通知系统兼容。</p>
+<p>系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 被编写为通用的，足以与大多数系统通知系统兼容。</p>
 
 <p>Web Notifications API 使页面可以发出通知，通知将被显示在页面之外的系统层面上（通常使用操作系统的标准通知机制，但是在不同的平台和浏览器上的表现会有差异）。这个功能使  web 应用可以向用户发送信息，即使应用处于空闲状态。最明显的用例之一是一个网页版电子邮件应用程序，每当用户收到了一封新的电子邮件都需要通知用户，即使用户正在使用另一个应用程序。</p>
 
@@ -70,7 +70,7 @@ original_slug: Web/API/notification/Using_Web_Notifications
 });</pre>
 
 <div class="note">
-<p><strong>注：</strong>Chrome 不允许你在 <code>load</code> 事件处理中调用 {{domxref("Notification.requestPermission()")}} （参见 <a href="https://code.google.com/p/chromium/issues/detail?id=274284" title="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>）。</p>
+<p><strong>注：</strong>Chrome 不允许你在 <code>load</code> 事件处理中调用 {{domxref("Notification.requestPermission()")}}（参见 <a href="https://code.google.com/p/chromium/issues/detail?id=274284" title="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>）。</p>
 </div>
 
 <h3 id="Notification_API_的清单权限">Notification API 的清单权限</h3>
@@ -91,7 +91,7 @@ original_slug: Web/API/notification/Using_Web_Notifications
 
 <p>创建通知很简单，只需要用 {{domxref("Notification")}} 构造方法。这个构造函数需要一个用来显示在通知内的标题以及一些用来增强通知的选项，例如 {{domxref("Notification.icon","icon")}} 或文本 {{domxref("Notification.body","body")}}。</p>
 
-<p>一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有4个事件被触发：</p>
+<p>一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有 4 个事件被触发：</p>
 
 <dl>
  <dt>{{event("show")}}</dt>
@@ -107,7 +107,7 @@ original_slug: Web/API/notification/Using_Web_Notifications
 <p>这些事件可以通过事件处理跟踪 {{domxref("Notification.onshow","onshow")}}、{{domxref("Notification.onclick","onclick")}}、{{domxref("Notification.onclose","onclose")}} 和 {{domxref("Notification.onerror","onerror")}}。因为 {{domxref("Notification")}} 同样继承自 {{domxref("EventTarget")}}，因此可以对它调用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。</p>
 
 <div class="note">
-<p><strong>注：</strong>Firefox 和 Safari 会在一定时间后自动关闭通知（大约4秒）。这也会发生在操作系统层面。</p>
+<p><strong>注：</strong>Firefox 和 Safari 会在一定时间后自动关闭通知（大约 4 秒）。这也会发生在操作系统层面。</p>
 
 <p>当然你也可以通过代码做到，调用 {{domxref("Notification.close()")}} 方法，就像下面的代码一样：</p>
 
@@ -208,7 +208,7 @@ n.onshow = function () {
   var button = document.getElementsByTagName('button')[0];
 
   button.addEventListener('click', function () {
-    // 如果用户同意接收通知，我们就尝试发送10条通知
+    // 如果用户同意接收通知，我们就尝试发送 10 条通知
     if (window.Notification &amp;&amp; Notification.permission === "granted") {
       for (var i = 0; i &lt; 10; i++) {
         // 感谢标记，我们应该只看到内容为 "Hi! 9" 的通知

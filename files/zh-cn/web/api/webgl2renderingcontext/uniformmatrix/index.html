@@ -5,7 +5,7 @@ translation_of: Web/API/WebGL2RenderingContext/uniformMatrix
 ---
 <div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
 
-<div><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API </a>的<strong><code>WebGL2RenderingContext.uniformMatrix[234]x[234]fv()</code></strong>  方法向uniform变量中传入指定的矩阵值。</div>
+<div><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API </a>的<strong><code>WebGL2RenderingContext.uniformMatrix[234]x[234]fv()</code></strong>  方法向 uniform 变量中传入指定的矩阵值。</div>
 
 <div class="note">
 <p>这个方法不用 <code>2x2</code>, <code>3x3</code>, 和 <code>4x4</code> 版本 . 他们通常用<code>2</code>, <code>3</code>, 和<code>4</code>, 分别表示，详见下方语法。</p>
@@ -28,11 +28,11 @@ void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional
 
 <dl>
  <dt>location</dt>
- <dd>一个包含想要修改的uniform变量的{{domxref("WebGLUniformLocation")}} 对象</dd>
+ <dd>一个包含想要修改的 uniform 变量的{{domxref("WebGLUniformLocation")}} 对象</dd>
  <dt>transpose</dt>
- <dd>一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。 在webgl中必须为<code>false</code>。</dd>
+ <dd>一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。 在 webgl 中必须为<code>false</code>。</dd>
  <dt>data</dt>
- <dd>一个包含方阵中浮点数的类数组对象(TypeArray) {{jsxref("Float32Array")}}。</dd>
+ <dd>一个包含方阵中浮点数的类数组对象 (TypeArray) {{jsxref("Float32Array")}}。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>

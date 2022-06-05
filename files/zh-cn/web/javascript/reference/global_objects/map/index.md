@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Map
 ---
 {{JSRef}}
 
-**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为一个键或一个值。
+**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
@@ -60,7 +60,7 @@ browser-compat: javascript.builtins.Map
     <tr>
       <th scope="row">键的顺序</th>
       <td>
-        <p><code>Map</code> 中的 key 是有序的。因此，当迭代的时候，一个 <code>Map</code> 对象以插入的顺序返回键值。</p>
+        <p><code>Map</code> 中的键是有序的。因此，当迭代的时候，一个 <code>Map</code> 对象以插入的顺序返回键值。</p>
       </td>
       <td>
         <p>虽然 <code>Object</code> 的键目前是有序的，但并不总是这样，而且这个顺序是复杂的。因此，最好不要依赖属性的顺序。</p>
@@ -194,7 +194,7 @@ console.log(contacts.size) // 1
 - {{jsxref("Map.prototype.clear()")}}
   - : 移除 `Map` 对象中所有的键值对。
 - {{jsxref("Map.delete", "Map.prototype.delete(<var>key</var>)")}}
-  - : 移除 `Map` 对象中指定的键值对，如果键值对存在，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `Map.prototype.has(key)` 将返回 `false`。
+  - : 移除 `Map` 对象中指定的键值对，如果键值对存在并成功被移除，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `Map.prototype.has(key)` 将返回 `false`。
 - {{jsxref("Map.get", "Map.prototype.get(<var>key</var>)")}}
   - : 返回与 `key` 关联的值，若不存在关联的值，则返回 `undefined`。
 - {{jsxref("Map.has", "Map.prototype.has(<var>key</var>)")}}
@@ -247,7 +247,7 @@ myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
 
 ### 将 NaN 作为 Map 的键
 
-`NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但下面的例子表明，`NaN` 作为 Map 的键来说是没有区别的：
+`NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但是因为所有的 `NaN` 的值都是无法区分的，所以下面的例子成立：
 
 ```js
 const myMap = new Map()

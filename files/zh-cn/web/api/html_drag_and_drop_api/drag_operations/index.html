@@ -15,7 +15,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>本文描述了拖放操作中发生的步骤。</p>
 
-<p class="note">本文档中描述的拖动操作使用 {{domxref("DataTransfer")}} 接口。本文档不使用 {{domxref("DataTransferItem")}} 接口和 {{domxref("DataTransferItemList")}} 接口。</p>
+<p>本文档中描述的拖动操作使用 {{domxref("DataTransfer")}} 接口。本文档不使用 {{domxref("DataTransferItem")}} 接口和 {{domxref("DataTransferItemList")}} 接口。</p>
 
 <h2 id="draggableattribute" name="draggableattribute">可拖拽（<code>draggable</code>）属性</h2>
 
@@ -299,7 +299,7 @@ function doDragOver(event) {
 
 <h2 id="dragend" name="dragend">完成拖拽</h2>
 
-<p>一旦拖拽完成，<code>{{event("dragend")}}</code> 事件会在拖拽源头（即触发 <code>{{event("dragstart")}}</code> 的元素）上发生。无论拖拽是成功[1]还是被取消，这个事件都会被触发。然而，你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来决定执行什么放置操作。</p>
+<p>一旦拖拽完成，<code>{{event("dragend")}}</code> 事件会在拖拽源头（即触发 <code>{{event("dragstart")}}</code> 的元素）上发生。无论拖拽是成功还是被取消，这个事件都会被触发。然而，你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来决定执行什么放置操作。</p>
 
 <p>如果在<code>{{event("dragend")}}</code> 事件中，{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性值为 <code>none</code>，则拖拽会被取消。否则，这个属性会规定需要执行什么操作。源头元素可使用这个信息以在拖拽操作完成后从原来的位置移除被拖拽的项目。{{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} 属性会在用户取消拖拽（按下 Esc 键）时设置为 true，在拖拽因为其他原因如无效放置目标等被取消时，或拖拽成功时，则设置为 false。</p>
 

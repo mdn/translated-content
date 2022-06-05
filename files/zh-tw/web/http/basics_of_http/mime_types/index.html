@@ -66,7 +66,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <h4 id="Multipart_types">Multipart types</h4>
 
-<p id="sect1"><strong>Multipart</strong> types indicate a category of document broken into pieces, often with different MIME types; they can also be used — especially in email scenarios — to represent multiple, separate files which are all part of the same transaction. They represent a <strong>composite document</strong>.</p>
+<p><strong>Multipart</strong> types indicate a category of document broken into pieces, often with different MIME types; they can also be used — especially in email scenarios — to represent multiple, separate files which are all part of the same transaction. They represent a <strong>composite document</strong>.</p>
 
 <p>With the exception of <code>multipart/form-data</code>, used in the {{HTTPMethod("POST")}} method of <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>, and <code>multipart/byteranges</code>, used with {{HTTPStatus("206")}} <code>Partial Content</code> to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely show a "Save As" window if it doesn't know how to display the document).</p>
 
