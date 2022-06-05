@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 <pre class="brush: js">Symbol("foo") + "bar";
 // TypeError: Can't convert symbol to string
 Symbol("foo").toString() + "bar"
-// "Symbol(foo)bar"，就相当于下面的:
+// "Symbol(foo)bar"，就相当于下面的：
 Object(Symbol("foo")).toString() + "bar"
 // "Symbol(foo)bar"
 </pre>

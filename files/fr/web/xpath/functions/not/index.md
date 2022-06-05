@@ -12,7 +12,9 @@ La fonction `not` évalue une expression booléenne et retourne la valeur oppos�
 
 ### Syntaxe
 
-    not( expression )
+```
+not( expression )
+```
 
 ### Arguments
 

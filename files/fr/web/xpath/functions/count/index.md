@@ -12,7 +12,9 @@ La fonction `count` compte le nombre de nœuds dans un ensemble de nœuds et ret
 
 ### Syntaxe
 
-    count( ensemble-de-nœuds )
+```
+count( ensemble-de-nœuds )
+```
 
 ### Arguments
 

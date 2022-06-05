@@ -40,7 +40,7 @@ Object.assign(target, ...sources)
 
 `Object.assign` 方法只会拷贝源对象 _可枚举的_ 和 _自身的_ 属性到目标对象。该方法使用源对象的 `[[Get]]` 和目标对象的 `[[Set]]`，它会调用 [getters](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setters](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含 getters，这可能使其不适合将新属性合并到原型中。
 
-为了将属性定义（包括其可枚举性）复制到原型，应使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}}，基本类型 {{jsxref("Global_Objects/String", "String")}} 和 {{jsxref("Symbol")}} 的属性会被复制.
+为了将属性定义（包括其可枚举性）复制到原型，应使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}}，基本类型 {{jsxref("Global_Objects/String", "String")}} 和 {{jsxref("Symbol")}} 的属性会被复制。
 
 如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前添加了任何属性，则会修改 `target` 对象（译者注：换句话说，`Object.assign()` 没有“回滚”之前赋值的概念，它是一个尽力而为、可能只会完成部分复制的方法）。
 
@@ -58,7 +58,7 @@ console.log(copy); // { a: 1 }
 
 ### 深拷贝问题
 
-针对[深拷贝](/en-US/docs/Glossary/Deep_copy), 需要使用其他办法, 因为 `Object.assign()` 只复制属性值。
+针对[深拷贝](/zh-CN/docs/Glossary/Deep_copy), 需要使用其他办法，因为 `Object.assign()` 只复制属性值。
 
 假如源对象是一个对象的引用，它仅仅会复制其引用值。
 

@@ -137,7 +137,6 @@ original_slug: MDN/Structures/Macros/Custom_macros
   - 通过编号，[`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) 宏可以指向 bugzilla.mozilla.org 站内相应的 bug，`\{{Bug(123456)}}` 会指向 {{Bug(123456)}}。
   - 类似的，[`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) 宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，`\{{WebkitBug(31277)}}` 会指向 {{WebkitBug(31277)}}。
 
-
 ### 多页面间的导航栏
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs)，需要的两个参数是相应文章的 Wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
@@ -153,7 +152,6 @@ original_slug: MDN/Structures/Macros/Custom_macros
 ## 添加侧边栏
 
 一些有海量子条目的主题，比如技术参考、指南、教程等，通常需要一个单独的主页面提供导航。对于这些主题中的页面，顶部的面包屑导航就显得比较简陋，下面这些模板，可以在页面的左侧，生成对应主题的侧边导航栏。
-
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) 生成 CSS 参考页面的侧边栏。
 - [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) 生成 HTML 参考页面的侧边栏。

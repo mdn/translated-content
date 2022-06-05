@@ -22373,12 +22373,6 @@
       "FEhaoxinjie"
     ]
   },
-  "Web/API/Window/mozPaintCount": {
-    "modified": "2019-03-23T22:35:06.349Z",
-    "contributors": [
-      "Qcui"
-    ]
-  },
   "Web/API/Window/name": {
     "modified": "2020-10-15T21:29:36.392Z",
     "contributors": [
@@ -46539,6 +46533,12 @@
       "teoli",
       "AshfaqHossain",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Window_6e431ebabeaed587e8dfd0ccc4543b75": {
+    "modified": "2019-03-23T22:35:06.349Z",
+    "contributors": [
+      "Qcui"
     ]
   },
   "conflicting/Web/API/Worker/message_event": {
