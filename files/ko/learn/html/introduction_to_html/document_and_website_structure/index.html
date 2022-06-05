@@ -47,27 +47,27 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 <p>위에 보이는 간단한 예제는 아름답지는 않습니다. 하지만 전형적인 웹사이트 레이아웃을 보여주기에는 모자람이 없는 예제입니다. 어떤 웹사이트는 Column이 더 있을 수 있고, 더 복잡할 수 있습니다 하지만 아이디어가 있고 적절한 CSS를 활용한다면, 모든 요소를 활용하여 section별로 구분하여 당신이 원하는 모양으로 만들 수 있습니다. 하지만 이를 논의하기 전에, 우리는 semantic을 고려해서 (요소의 의미를 고려해서) <strong>요소를 적재적소에 사용해야 합니다</strong>.</p>
 
-<p>This is because visuals don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?</p>
+<p>이유는 시각 장애인과 관련이 있습니다. 시각 장애인에게는 색상,글꼴이 중요하지 않습니다. 화면이 전체 스토리를 말해주지 않기 때문입니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Colorblind people represent around <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">8% of the world population</a>. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 million such people in the world</a>, while the total population was <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">around 7 billion</a>.)</p>
+<p><strong>참고</strong>: 색맹은 세계 인구의<a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">8% 를 차지 합니다</a>. 시각 장애인은 세계 인구의 약 4-5%를 차지합니다 (2012년에는 <a href="https://en.wikipedia.org/wiki/Visual_impairment">전 세계적으로 2억 8,500만명</a>), 총 인구는 <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">70억 이었습니다</a>.)</p>
 </div>
 
-<p>In your HTML code, you can mark up sections of content based on their <em>functionality</em> — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of <a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure">consequences of not using the right element structure and semantics for the right job</a>.</p>
+<p>HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습니다. 위에서 설명한 콘텐츠 섹션을 나타내는 요소를 명확하게 사용할 수 있으며 스크린리더와 같은 보조 기술은 이러한 요소를 인식하고 "기본 탐색 찾기" 또는 "주요 콘텐츠 찾기" 과정의 앞부분에서 언급했듯이 올바른 작업에 올바른 요소 구조와 의미 체계를 사용하지 않으면 여러 가지 올바르지 않은 결과가 발생합니다.</a>.</p>
 
-<p>To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:</p>
+<p>이러한 시맨틱 마크업을 구현하기 위해 HTML은 이러한 섹션을 나타내는 데 사용할 수 있는 전용 태그를 제공합니다. 예시:</p>
 
 <ul>
  <li><strong>header: </strong>{{htmlelement("header")}}.</li>
  <li><strong>navigation bar: </strong>{{htmlelement("nav")}}.</li>
- <li><strong>main content: </strong>{{htmlelement("main")}}, with various content subsections represented by {{HTMLElement("article")}}, {{htmlelement("section")}}, and {{htmlelement("div")}} elements.</li>
- <li><strong>sidebar: </strong>{{htmlelement("aside")}}; often placed inside {{htmlelement("main")}}.</li>
+ <li><strong>main content: </strong>{{htmlelement("main")}}, {{HTMLElement("article")}}, {{htmlelement("section")}},{{htmlelement("div")}} 의 다양한 하위 섹션이 있습니다.</li>
+ <li><strong>sidebar: </strong>{{htmlelement("aside")}}; 종종 {{htmlelement("main")}}안에 위치합니다.</li>
  <li><strong>footer: </strong>{{htmlelement("footer")}}.</li>
 </ul>
 
-<h3 id="Active_learning_exploring_the_code_for_our_example">Active learning: exploring the code for our example</h3>
+<h3 id="Active_learning_exploring_the_code_for_our_example">능동적 학습: 예제 코드 탐색</h3>
 
-<p>Our example seen above is represented by the following code (you can also <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html">find the example in our Github repo</a>). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.</p>
+<p>위에서 본 예제는 다음 코드로 표시됩니다(<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html ">Github 리포지토리에서 예제를 찾아보세요</a>). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -153,11 +153,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>Take some time to look over the code and understand it — the comments inside the code should also help you to understand it. We aren't asking you to do much else in this article, because the key to understanding document layout is writing a sound HTML structure, and then laying it out with CSS. We'll wait for this until you start to study CSS layout as part of the CSS topic.</p>
+<p>코드를 살펴보고 이해하세요. 코드 내부의 주석도 코드를 이해하는 데 도움이 될 것입니다. 문서 레이아웃을 이해하는 열쇠는 건전한 HTML 구조를 작성한 다음 CSS로 레이아웃하는 것이기 때문에 이 기사에서 다른 많은 작업을 요구하지 않습니다. CSS 주제의 일부로 CSS 레이아웃을 연구하기 시작할 때까지 기다리겠습니다.</p>
 
 <h2 id="HTML_레이아웃_요소의_세부_사항">HTML 레이아웃 요소의 세부 사항</h2>
 
-<p>It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our <a href="/en-US/docs/Web/HTML/Element">HTML element reference</a>. For now, these are the main definitions that you should try to understand:</p>
+<p>모든 HTML 섹션 요소의 전반적인 의미를 자세히 이해하는 것이 좋습니다. 이것은 웹 개발에 대한 더 많은 경험을 얻기 시작하면서 점차적으로 작업하게 될 것입니다. HTML 요소 참조를 읽으면 많은 세부 정보를 찾을 수 있습니다. 지금으로서는 다음과 같은 주요 정의를 이해하려고 노력해야 합니다:</p>
 
 <ul>
  <li>{{HTMLElement('main')}} 는 그 <em>페이지에 독자적인</em> 컨텐츠입니다<em>. </em>Use <code>&lt;main&gt;</code> only <em>once </em>per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.</li>
@@ -169,11 +169,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
  <li>{{HTMLElement('footer')}} represents a group of end content for a page.</li>
 </ul>
 
-<h3 id="Non-semantic_wrappers">Non-semantic wrappers</h3>
+<h3 id="Non-semantic_wrappers">의미 없는 래퍼</h3>
 
-<p>Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable {{htmlattrxref('class')}} attribute, to provide some kind of label for them so they can be easily targeted.</p>
+<p>때로는 일부 항목을 함께 그룹화하거나 일부 콘텐츠를 래핑하는 데 이상적인 의미론적 요소를 찾을 수 없는 상황이 발생합니다. 때로는 요소 집합을 그룹화하여 일부 요소가 있는 단일 엔터티로 모든 요소에 영향을 미치기를 원할 수 있습니다.{{glossary("CSS")}} 또는  {{glossary("JavaScript")}}. 이와 같은 경우 HTML은 다음을 제공합니다. {{HTMLElement("div")}} 과 {{HTMLElement("span")}} 엘리먼트. 당신은 적합하게 이것들을 사용해야 합니다 {{htmlattrxref('class')}}속성은 쉽게 타겟팅할 수 있도록 일종의 레이블을 제공합니다.</p>
 
-<p>{{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:</p>
+<p>{{HTMLElement("span")}} 엘리먼트는 내용을 감싸는 더 나은 의미 체계 텍스트 요소가 생각나지 않거나 특정 의미를 추가하고 싶지 않은 경우에만 사용해야 하는 인라인 비의미적 요소입니다. For example:</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
 him as he staggered through the door &lt;span class="editor-note"&gt;[Editor's note: At this point in the
@@ -197,37 +197,37 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
   &lt;p&gt;Total cost: $237.89&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>This isn't really an <code>&lt;aside&gt;</code>, as it doesn't necessarily relate to the main content of the page (you want it viewable from anywhere.) It doesn't even particularly warrant using a  <code>&lt;section&gt;</code>, as it isn't part of the main content of the page. So a <code>&lt;div&gt;</code> is fine in this case. We've included a heading as a signpost to aid screenreader users in finding it.</p>
+<p>이것은 페이지의 주요 콘텐츠와 반드시 관련이 있는 것은 아니기 때문에 실제로 <aside>가 아닙니다(어디서나 볼 수 있기를 원합니다.) 그것은 일부가 아니기 때문에 <code>&lt;section&gt;</code>을 사용하는 것을 특별히 보증하지도 않습니다. 페이지의 주요 내용입니다. 따라서 이 경우 <code>&lt;div&gt;</code>가 좋습니다. 스크린리더 사용자가 쉽게 찾을 수 있도록 푯말로 제목을 포함했습니다.</p>
 
 <div class="warning">
-<p><strong>Warning</strong>: Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.</p>
+<p><strong>경고</strong>: Div는 사용하기 너무 편리해서 너무 많이 사용하기 쉽습니다. 의미론적 가치가 없기 때문에 HTML 코드를 어지럽힐 뿐입니다. 더 나은 의미론적 솔루션이 없을 때만 사용하도록 주의하고 사용을 최소로 줄이십시오. 그렇지 않으면 문서를 업데이트하고 유지 관리하는 데 어려움을 겪을 수 있습니다.</p>
 </div>
 
 <h3 id="Line_breaks_and_horizontal_rules">Line breaks and horizontal rules</h3>
 
-<p>Two elements that you'll use occasionally and will want to know about are {{htmlelement("br")}} and {{htmlelement("hr")}}:</p>
+<p>줄바꿈에 사용하는 두 가지 요소는 다음과 같습니다. {{htmlelement("br")}} and {{htmlelement("hr")}}:</p>
 
-<p><code>&lt;br&gt;</code> creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. For example:</p>
+<p><code>&lt;br&gt;</code> 단락에 줄 바꿈을 만듭니다. 우편 주소나 시와 같이 일련의 고정된 짧은 줄을 원하는 상황에서 단단한 구조를 강제하는 유일한 방법입니다. For example:</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;There once was a girl called Nell&lt;br&gt;
 Who loved to write HTML&lt;br&gt;
 But her structure was bad, her semantics were sad&lt;br&gt;
 and her markup didn't read very well.&lt;/p&gt;</pre>
 
-<p>Without the <code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML">HTML ignores most whitespace</a>); with them in the code, the markup renders like this:</p>
+<p><code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML">HTML ignores most whitespace</a>); with them in the code, the markup renders like this:</p>
 
 <p>There once was a girl called Nell<br>
  Who loved to write HTML<br>
  But her structure was bad, her semantics were sad<br>
  and her markup didn't read very well.</p>
 
-<p><code>&lt;hr&gt;</code> elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just look like a horizontal line. As an example:</p>
+<p><code>&lt;hr&gt;</code> 요소는 텍스트의 주제 변경(예: 주제 또는 장면의 변경)을 나타내는 문서에 수평선을 만듭니다. 시각적으로 수평선처럼 보입니다. As an example:</p>
 
 <pre class="notranslate">&lt;p&gt;Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Meanwhile, Harry was sitting at home, staring at his royalty statement and pondering when the next spin off series would come out, when an enchanted distress letter flew through his window and landed in his lap. He read it hasily, and lept to his feet; "better get back to work then", he mused.&lt;/p&gt;</pre>
 
-<p>Would render like this:</p>
+<p>다음과 같이 렌더링 할 것입니다:</p>
 
 <p>Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.</p>
 
@@ -236,7 +236,7 @@ and her markup didn't read very well.&lt;/p&gt;</pre>
 
 <h2 id="간단한_웹사이트_계획하기">간단한 웹사이트 계획하기</h2>
 
-<p>Once you've planned out the content of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages this can be fairly simple, and fun!</p>
+<p>간단한 웹페이지의 콘텐츠를 계획했다면 다음 논리적 단계는 최고의 사용자 경험을 위해 전체 웹사이트에 어떤 콘텐츠를 넣고 싶은지, 어떤 페이지가 필요한지, 어떻게 정렬하고 서로 연결해야 하는지 알아내는 것입니다. 이를 {{glossary("Information architecture")}}라고 합니다. 크고 복잡한 웹 사이트에서는 이 프로세스에 많은 계획이 포함될 수 있지만 몇 페이지로 된 간단한 웹 사이트에서는 상당히 간단하고 재미있을 수 있습니다!</p>
 
 <ol>
  <li>몇 요소들은 대부분의 페이지에 공통적으로 적용될 것이란 걸 명심하세요 — 네비게이션 메뉴나 footer 컨텐츠처럼. 예를 들어 비즈니스를 위한 페이지라면, 당신의 연락처를 각각의 페이지의 footer에 보이도록 하는 것은 좋은 생각입니다. 모든 페이지에 공통적으로 포함하고 싶은 것을 적어보세요.<img alt="the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy" src="https://mdn.mozillademos.org/files/12423/common-features.png" style="border-style: solid; border-width: 1px; display: block; height: 375px; margin: 0px auto; width: 600px;"></li>
@@ -246,17 +246,17 @@ and her markup didn't read very well.&lt;/p&gt;</pre>
  <li>이제 대략적인 사이트맵을 그려보세요 - 사이트의 각 페이지를 동그라미로 지정하고, 각 페이지 간 동작 흐름을 보여주기 위해 선을 그으세요. 홈페이지는 아마 가운데에 있고, 모두는 아니어도 대부분에 연결될 것 입니다; 작은 사이트 안의 대부분의 페이지는, 비록 예외는 있겠지만, 메인 네비게이션에서 사용할 수 있어야 합니다. 당신은 아마 이것들이 어떻게 보여져야 할지에 대한 설명도 적고 싶을 것입니다. <img alt="A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page" src="https://mdn.mozillademos.org/files/12427/site-map.png" style="border-style: solid; border-width: 1px; display: block; height: 872px; margin: 0px auto; width: 600px;"></li>
 </ol>
 
-<h3 id="Active_learning_create_your_own_sitemap">Active learning: create your own sitemap</h3>
+<h3 id="Active_learning_create_your_own_sitemap">능동적인 학습: 나만의 사이트맵 만들기</h3>
 
-<p>Try carrying out the above exercise for a website of your own creation. What would you like to make a site about?</p>
+<p>무엇에 대한 사이트를 만들고 싶습니까? 자신이 만든 웹사이트에 대해 위의 예를 수행해 보십시오.</p>
 
 <div class="note">
 <p><strong>Note</strong>: 작업물을 어딘가에 저장하세요; 나중에 필요할 수 도 있습니다.</p>
 </div>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">요약</h2>
 
-<p>At this point you should have a better idea about how to structure a web page/site. In the last article of this module, we'll study how to debug HTML.</p>
+<p>이 시점에서 웹 페이지/사이트를 구성하는 방법에 대해 더 잘 알고 있어야 합니다. 이 모듈의 마지막 기사에서는 HTML을 디버그하는 방법을 연구할 것입니다.</p>
 
 <h2 id="See_also">See also</h2>
 
