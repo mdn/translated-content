@@ -16,45 +16,40 @@ tags:
 translation_of: Learn/JavaScript/Asynchronous
 original_slug: learn/JavaScript/异步
 ---
+{{LearnSidebar}}
 
+在这个模块，我们将查看{{Glossary("asynchronous", "异步")}} {{Glossary("JavaScript")}}，异步为什么很重要，以及怎样使用异步来有效处理潜在的阻塞操作，比如从服务器上获取资源。
 
-<div>{{LearnSidebar}}</div>
+> **标注：**
+>
+> #### 想成为一名前端工程师？
+>
+> 我们汇总了一门课程，其中包含你实现目标所需要的所有基本信息。
+>
+> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
 
+## 预备知识
 
+异步 JavaScript 是一个相当高级的话题，建议你先完成 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)和[创建JavaScript代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks) 两个模块的学习后再来学习。
 
-<p>在这个模块，我们将查看 {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}，异步为什么很重要，以及怎样使用异步来有效处理潜在的阻塞操作，比如从服务器上获取资源。</p>
+> **备注：** 如果你工作在一个无权创建自己文件的电脑/平板/其他设备上，你需要在一个在线编程工具上试验 （大多数）代码示例，如 [JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com).
 
-<h2 id="预备知识">预备知识</h2>
+## 指南
 
-<p>异步JavaScript 是一个相当高级的话题，建议你先完成( <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a> 和 <a href="/en-US/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks</a>) 两个模块的学习后再来学习。</p>
+- [介绍异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - : 在这篇文章中我们将介绍 **同步编程** 和 **异步编程** 是什么，为什么我们总是需要异步编程技术，异步函数过去是怎样在 JavaScript 上实现的，以及这些方式的问题有哪些。
+- [如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
+  - : 我们将在这里介绍 Promise 并向你展示如何使用基于 Promise 的 API。我们也会介绍 `async` 和 `await` 关键字。
+- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+  - : 本文概述了如何实现一个我们自己的基于 Promise 的 API。
+- [介绍 Worker](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - : Worker 使你能够在独立的线程中运行任务来保持你的主要代码的可响应性。在这篇文章中我们将把一个长时间运行的同步函数重写为使用 Worker 的示例。
 
-<p>如果你还不熟悉异步编程的概念，请从 <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">通用异步编程概念</a>开始. 如果熟悉的话，可以直接从<a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">介绍异步JavaScript</a> 开始.</p>
+## 测验
 
-<div class="note">
-<p><strong>Note</strong>: 如果在当前阅读本文档而使用的电子设备（电脑/平板/其他）上，你没有权限生成自己的文件，你可以使用 <a href="http://jsbin.com/">JSBin</a> or <a href="https://glitch.com/">Glitch</a> 在线编程工具来尝试文章里面的代码示例</p>
-</div>
+- [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+  - : 这个测验要求您使用 Promise 来播放一组特定序列的动画。
 
-<h2 id="指南">指南</h2>
+## 参见
 
-<dl>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">一般异步编程概念</a></dt>
- <dd>
- <p>浏览 异步相关的重要概念，在浏览器和JS里面的应用，学习本模块其他文章之前，你应该理解这些基本的概念。</p>
- </dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">介绍异步JS</a></dt>
- <dd>这篇文章简单概括同步JS遇到的问题，首次提到一些不同的异步JS技术，他们是如何解决同步JS的问题</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Loops_and_intervals">合作异步JS：Timeouts and intervals</a></dt>
- <dd>在这里介绍JS传统的异步方法：在一段时间后运行 或者 在设定时间周期反复运行，看看这些技术如何使用，有什么内在的问题.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">优雅的处理异步操作：Promises</a></dt>
- <dd>Promises 是JS一个相对比较新的特性，你可以使用它来延迟一些操作直到前面的代码已经返回结果。对于时间上顺序完成的一系列操作，这个真的有用。本文展示promises 如何工作，使用WebAPIs何处会见到它, 最重要的：怎样写你自己的promises.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">让异步编程简单: async and await</a></dt>
- <dd>Promises 有点复杂, 所以现代的浏览器都实现了 <code>async</code> 函数和 <code>await</code> 操作符 —--前者允许标准函数隐式地和 promises 工作, 后者可以在<code>async</code> 函数里面使用，等待promises运行结束，函数再继续运行。</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">选择正确的方法</a></dt>
- <dd>结束本模块之前，回顾一下已经讨论的编程技术和特性：什么时候用哪个。有推荐，也有常见的陷阱提醒。</dd>
-</dl>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="https://eloquentjavascript.net/11_async.html">Asynchronous Programming</a> from the fantastic <a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> online book by Marijn Haverbeke.</li>
-</ul>
+- 由 Marijn Haverbeke 编写的电子书籍 [Eloquent JavaScript](https://eloquentjavascript.net/) 中的 [异步编程](https://eloquentjavascript.net/11_async.html)。
