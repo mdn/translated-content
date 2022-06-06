@@ -1,49 +1,55 @@
 ---
 title: DocumentType.remove()
 slug: Web/API/DocumentType/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DocumentType
   - DOM
-  - Method
+  - メソッド
 browser-compat: api.DocumentType.remove
 translation_of: Web/API/DocumentType/remove
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>DocumentType.remove()</strong></code> は文書の文書型宣言 (<code>doctype</code>) を削除します。</p>
+**`DocumentType.remove()`** は文書の文書型宣言 (`doctype`) を削除します。
 
-<div class="note">
-  <h4>注</h4>
-  <p>文書の文書型宣言を削除すると、レンダリングモードが後方互換 (<a href="/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks</a>) モードに設定されます。
-    これはやめてください。意図的に後方互換モードを想定してデザインしても、何の役にも立ちません。古いインターネットエクスプローラーブラウザーで問題を回避する必要がある場合は、<a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments">条件付きコメント</a>などの回避策を検討してください。</p>
-</div>
+> **Note:** 文書の文書型宣言を削除すると、レンダリングモードが後方互換 ([quirks](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) モードに設定されます。
+> これはやめてください。意図的に後方互換モードを想定してデザインしても、何の役にも立ちません。
+> 古いインターネットエクスプローラーのブラウザーで問題を回避する必要がある場合は、[条件付きコメント](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments)などの回避策を検討してください。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">remove()</pre>
+```js
+remove()
+```
 
-<h2 id="Example">例</h2>
+### 引数
 
-<h3 id="Using_remove"><code>remove()</code> の使用</h3>
+なし。
 
-<pre class="brush: js">
-document.doctype; // "&lt;!DOCTYPE html&gt;'
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+### `remove()` の使用
+
+```js
+document.doctype; // "<!DOCTYPE html>'
 document.doctype.remove();
 document.doctype; // null
-</pre>
+```
 
-
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Document.doctype")}}</li>
-</ul>
+- {{domxref("Document.doctype")}}
