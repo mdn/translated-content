@@ -12,9 +12,9 @@ translation_of: Web/API/WritableStream
 ---
 {{APIRef("Streams")}}
 
-[流操作 API](/zh-CN/docs/Web/API/Streams_API)的 **`WritableStream`** 接口为将流数据写入目的地（称为 sink）提供了一个标准的抽象概念。该对象带有内置的背压和队列。
+[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStream`** 接口为将流数据写入目的地（称为 sink）提供了一个标准的抽象概念。该对象带有内置的背压和队列。
 
-`WritableStream` 是一个 {{glossary("Transferable objects","transferable object")}}。
+`WritableStream` 是一个{{glossary("Transferable objects","可转移对象")}}。
 
 ## 构造函数
 
@@ -29,15 +29,15 @@ translation_of: Web/API/WritableStream
 ## 方法
 
 - {{domxref("WritableStream.abort()")}}
-  - : 中止流，表示生产者不能再成功地写入流并且将立刻移至一个错误状态，并丢弃所有已排入的数据。
+  - : 中止流，使得生产者不能再成功向流写入数据（会立刻返回一个错误状态），并丢弃所有已入队的数据。
 - {{domxref("WritableStream.close()")}}
   - : 关闭流。
 - {{domxref("WritableStream.getWriter()")}}
-  - : 返回 {{domxref("WritableStreamDefaultWriter")}} 新实例并且将流锁定到该实例。当流被锁定时，直到这个流被释放之前，不能获取其他 writer。
+  - : 返回一个新的 {{domxref("WritableStreamDefaultWriter")}} 实例并且将流锁定到该实例。当流被锁定时，直到这个流被释放之前，不能获取其他 writer。
 
 ## 示例
 
-下面的例子说明了这个接口的几个特征。它展示了使用自定义 sink 和 API 提供的排队策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个块写入流。最后，`write()` 和 `close()` 返回 promise，该 promise 由处理后的块和流是否成功决定。
+下面的例子说明了这个接口的几个功能。它展示了使用自定义 sink 和 API 提供的排队策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个块写入流。最后，`write()` 和 `close()` 返回 promise，该 promise 由处理后的块和流是否成功决定。
 
 ```js
 const list = document.querySelector('ul');
