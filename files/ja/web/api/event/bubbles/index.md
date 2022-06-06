@@ -11,7 +11,7 @@ tags:
   - Propagation
   - Property
   - Read-only
-  - Reference
+  - リファレンス
   - bubbles
   - プロパティ
   - 読取専用
@@ -19,10 +19,10 @@ translation_of: Web/API/Event/bubbles
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p><code><strong>bubbles</strong></code> は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM をバブリングするかしないかを示します。</p>
+`**bubbles**` は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM をバブリングするかしないかを示します。
 
 <div class="note">
-<p><strong>メモ</strong>: バブリングについての詳細は、<a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">イベントのバブリングとキャプチャ</a>を参照してください。</p>
+**メモ**: バブリングについての詳細は、<a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">イベントのバブリングとキャプチャ</a>を参照してください。
 </div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
@@ -31,7 +31,7 @@ translation_of: Web/API/Event/bubbles
 
 <h3 id="Value" name="Value">値</h3>
 
-<p><code>bool</code> は<code>true</code> か <code>false</code>であり、イベントがバブリングするものかどうかを示しています。</p>
+`bool` は`true` か `false`であり、イベントがバブリングするものかどうかを示しています。
 
 <h2 id="Example" name="Example">例</h2>
 
@@ -48,7 +48,7 @@ translation_of: Web/API/Event/bubbles
 </pre>
 
 <div class="note">
-<p><strong>メモ</strong>: 一部のイベントだけがバブリングします。バブリングするイベントでは、このプロパティが <code>true</code> に設定されています。イベントがバブリングするかどうかを確認するためにこのプロパティを使用することができます。</p>
+**メモ**: 一部のイベントだけがバブリングします。バブリングするイベントでは、このプロパティが `true` に設定されています。イベントがバブリングするかどうかを確認するためにこのプロパティを使用することができます。
 </div>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
@@ -77,7 +77,7 @@ translation_of: Web/API/Event/bubbles
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.Event.bubbles")}}</p>
+{{Compat("api.Event.bubbles")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

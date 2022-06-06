@@ -9,13 +9,13 @@ tags:
   - Property
 translation_of: Web/API/Event/currentTarget
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>イベントは DOM を横断するので、イベントの現在のターゲットを識別します。イベントが発生した要素を特定する <code>event.target</code> とは対照的に、常にイベントハンドラがアタッチされた要素を参照します。</p>
+イベントは DOM を横断するので、イベントの現在のターゲットを識別します。イベントが発生した要素を特定する `event.target` とは対照的に、常にイベントハンドラがアタッチされた要素を参照します。
 
 <h2 id="例">例</h2>
 
-<p><code>event.currentTarget</code> は、同じイベントハンドラを複数の要素にアタッチしているときに使用すると興味深いです。</p>
+`event.currentTarget` は、同じイベントハンドラを複数の要素にアタッチしているときに使用すると興味深いです。
 
 <pre class="brush: js">function hide(e){
   e.currentTarget.style.visibility = "hidden";
@@ -50,8 +50,8 @@ for(var i = 0; i &lt; ps.length; i++){
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-<p>{{Compat("api.Event.currentTarget")}}</p>
+{{Compat("api.Event.currentTarget")}}
 
 <h2 id="関連項目">関連項目</h2>
 
-<p><a href="/ja/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></p>
+<a href="/ja/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a>

@@ -7,16 +7,16 @@ tags:
   - Event
   - Property
   - Read-only
-  - Reference
+  - リファレンス
   - プロパティ
   - 読取専用
 translation_of: Web/API/Event/type
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>type</code></strong> は {{domxref("Event")}} インターフェイスの読取専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は <code>click</code>, <code>load</code>, <code>error</code> のような特定のイベントを参照するためによく使用されます。</p>
+**`type`** は {{domxref("Event")}} インターフェイスの読取専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `click`, `load`, `error` のような特定のイベントを参照するためによく使用されます。
 
-<p>利用可能なイベント種別の一覧は、<a href="/ja/docs/Web/Events">イベントリファレンス</a>をご覧ください。</p>
+利用可能なイベント種別の一覧は、<a href="/ja/docs/Web/Events">イベントリファレンス</a>をご覧ください。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/Event/type
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{domxref("Event")}} の種別を表す {{domxref("DOMString")}}。</p>
+{{domxref("Event")}} の種別を表す {{domxref("DOMString")}}。
 
 <h2 id="Example" name="Example">例</h2>
 
-<p>この例は、キーボードのキーを押すか、マウスボタンをクリックするとイベント種別をログに出力します。</p>
+この例は、キーボードのキーを押すか、マウスボタンをクリックするとイベント種別をログに出力します。
 
 <h3 id="HTML">HTML</h3>
 
@@ -55,7 +55,7 @@ document.addEventListener('click', getEventType, false);     // third</pre>
 
 <h3 id="Result" name="Result">結果</h3>
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -83,7 +83,7 @@ document.addEventListener('click', getEventType, false);     // third</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.Event.type")}}</p>
+{{Compat("api.Event.type")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

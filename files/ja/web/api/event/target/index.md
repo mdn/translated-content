@@ -6,14 +6,14 @@ tags:
   - DOM
   - Event
   - Property
-  - Reference
+  - リファレンス
   - delegation
   - target
 translation_of: Web/API/Event/target
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>イベントを発生させたオブジェクトへの参照です。 イベントハンドラーがバブリング、またはキャプチャフェーズの間に呼び出されたとき、{{domxref("event.currentTarget")}} とは異なります。</p>
+イベントを発生させたオブジェクトへの参照です。 イベントハンドラーがバブリング、またはキャプチャフェーズの間に呼び出されたとき、{{domxref("event.currentTarget")}} とは異なります。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Event/target
 
 <h2 id="Example" name="Example">例</h2>
 
-<p><code>event.target</code> プロパティは、<strong>イベントデリゲーション</strong>を実装するために使用できます。</p>
+`event.target` プロパティは、**イベントデリゲーション**を実装するために使用できます。
 
 <pre><code>// リストを作ります
 var ul = document.createElement('ul');
@@ -44,11 +44,11 @@ ul.addEventListener('click', hide, false);</code>
 
 </pre>
 
-<p> </p>
+ 
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
-<p> </p>
+ 
 
 <table class="standard-table">
  <tbody>
@@ -77,11 +77,11 @@ ul.addEventListener('click', hide, false);</code>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-<p>{{Compat("api.Event.target")}}</p>
+{{Compat("api.Event.target")}}
 
 <h2 id="Compatibility_notes" name="Compatibility_notes">互換性のための注記</h2>
 
-<p>IE 6-8 では、イベントモデルが異なります。イベントリスナーは、非標準の {{domxref('EventTarget.attachEvent')}} メソッドでアタッチされます。このモデルでは、イベントオブジェクトは <code>target</code> プロパティの代わりに、{{domxref('Event.srcElement')}} プロパティを持っており、意味的には <code>event.target</code> と同じです。</p>
+IE 6-8 では、イベントモデルが異なります。イベントリスナーは、非標準の {{domxref('EventTarget.attachEvent')}} メソッドでアタッチされます。このモデルでは、イベントオブジェクトは `target` プロパティの代わりに、{{domxref('Event.srcElement')}} プロパティを持っており、意味的には `event.target` と同じです。
 
 <pre class="brush: js">function hide(e) {
   // IE6-8 をサポート

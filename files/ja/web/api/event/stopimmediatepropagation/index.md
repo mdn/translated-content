@@ -5,7 +5,7 @@ translation_of: Web/API/Event/stopImmediatePropagation
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>同じイベントを受け取る他のリスナーの呼び出しを防ぎます。</p>
+同じイベントを受け取る他のリスナーの呼び出しを防ぎます。
 
 <h2 id="構文">構文</h2>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/Event/stopImmediatePropagation
 
 <h2 id="注記">注記</h2>
 
-<p>複数のリスナーが同じ種類のイベントの同じ要素に追加されていた場合、リスナーは追加された順に順番に呼び出されます。けれど、呼び出しの途中で <code>event.stopImmediatePropagation()</code> が呼ばれた場合には、残りのリスナーは呼ばれなくなります。</p>
+複数のリスナーが同じ種類のイベントの同じ要素に追加されていた場合、リスナーは追加された順に順番に呼び出されます。けれど、呼び出しの途中で `event.stopImmediatePropagation()` が呼ばれた場合には、残りのリスナーは呼ばれなくなります。
 
 <h2 id="仕様">仕様</h2>
 
@@ -42,4 +42,4 @@ translation_of: Web/API/Event/stopImmediatePropagation
 
 <h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-<p>{{Compat("api.Event.stopImmediatePropagation")}}</p>
+{{Compat("api.Event.stopImmediatePropagation")}}
