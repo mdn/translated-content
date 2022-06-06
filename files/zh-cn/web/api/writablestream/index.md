@@ -37,7 +37,7 @@ translation_of: Web/API/WritableStream
 
 ## 示例
 
-下面的例子说明了这个接口的几个特征。它展示了使用自定义 sink 和 API 提供的排队策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个块写入流。最后， `write()` 和 `close()` 返回 promise，该 promise 由处理后的块和流是否成功决定。
+下面的例子说明了这个接口的几个特征。它展示了使用自定义 sink 和 API 提供的排队策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个块写入流。最后，`write()` 和 `close()` 返回 promise，该 promise 由处理后的块和流是否成功决定。
 
 ```js
 const list = document.querySelector('ul');
@@ -121,6 +121,6 @@ sendMessage("Hello, world.", writableStream);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
