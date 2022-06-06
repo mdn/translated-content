@@ -17,7 +17,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}</p>
 
 <div>
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser教程</a> 16 的<strong>第15步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html">Gamedev-Phaser-Content-Kit / demos / lesson15.html</a>完成本课程后找到源代码</p>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 15 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html">Gamedev-Phaser-Content-Kit / demos / lesson15.html</a>完成本课程后找到源代码</p>
 </div>
 
 <p>而不是立即开始游戏，我们可以通过添加他们可以按的开始按钮将该决定留给玩家。我们来调查如何做到这一点。</p>
@@ -30,16 +30,16 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 var startButton;
 </pre>
 
-<h2 id="加载按钮spritesheet">加载按钮spritesheet</h2>
+<h2 id="加载按钮spritesheet">加载按钮 spritesheet</h2>
 
-<p>我们可以加载按钮spritesheet与我们加载球的摆动动画相同的方式。将以下内容添加到<code>preload()</code>函数底部：</p>
+<p>我们可以加载按钮 spritesheet 与我们加载球的摆动动画相同的方式。将以下内容添加到<code>preload()</code>函数底部：</p>
 
 <pre class="brush: js">game.load.spritesheet('button', 'img/button.png', 120, 40);
 </pre>
 
-<p>单个按钮框架宽120像素，高40像素。</p>
+<p>单个按钮框架宽 120 像素，高 40 像素。</p>
 
-<p>您还需要<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png">从Github抓取按钮spritesheet</a>，并将其保存在您的<code>/img</code>目录中。</p>
+<p>您还需要<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png">从 Github 抓取按钮 spritesheet</a>，并将其保存在您的<code>/img</code>目录中。</p>
 
 <h2 id="将按钮添加到游戏中">将按钮添加到游戏中</h2>
 
@@ -52,7 +52,7 @@ startButton.anchor.set(0.5);
 <p>该<code>button()</code>方法的参数如下：</p>
 
 <ul>
- <li>按钮的x和y坐标</li>
+ <li>按钮的 x 和 y 坐标</li>
  <li>要显示按钮的图形资产的名称</li>
  <li>按下按钮时将执行的回调函数</li>
  <li><code>this</code>指定执行上下文的引用</li>
