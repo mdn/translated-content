@@ -1,57 +1,57 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - Gecko
-  - NeedsBrowserCompatibility
-  - Property
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.Event.currentTarget
 translation_of: Web/API/Event/currentTarget
 ---
 {{APIRef("DOM")}}
 
-イベントは DOM を横断するので、イベントの現在のターゲットを識別します。イベントが発生した要素を特定する `event.target` とは対照的に、常にイベントハンドラがアタッチされた要素を参照します。
+**`currentTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM を走査する際の、イベントの現在のターゲットを特定します。これは常にイベントハンドラーが装着されている要素を指し、 {{domxref("Event.target")}} とは対照的に、イベントが発生した要素やその子孫である可能性のある要素を特定します。
 
-<h2 id="例">例</h2>
+## 値
 
-`event.currentTarget` は、同じイベントハンドラを複数の要素にアタッチしているときに使用すると興味深いです。
+{{domxref("EventTarget")}} で、現在のイベントハンドラーが装着されているオブジェクトを表します。
 
-<pre class="brush: js">function hide(e){
-  e.currentTarget.style.visibility = "hidden";
+## 例
+
+`Event.currentTarget` は、複数の要素に同じイベントハンドラーを割り当てるときに使用すると面白いです。
+
+```js
+function hide(e){
+  e.currentTarget.style.visibility = 'hidden';
+  console.log(e.currentTarget);
   // この関数がイベントハンドラとして使用されるとき： this === e.currentTarget
 }
 
 var ps = document.getElementsByTagName('p');
 
-for(var i = 0; i &lt; ps.length; i++){
+for(var i = 0; i < ps.length; i++){
+  // console: print the clicked <p> element
   ps[i].addEventListener('click', hide, false);
 }
+// console: print <body>
+document.body.addEventListener('click', hide, false);
 
 // 周辺をクリックすると段落が消えます。
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+> **Note:** イベント処理中**だけ** `event.currentTarget` の値は利用可能です。
+> もし {{DOMxRef("console.log()")}} で `event` オブジェクトを変数に格納し、コンソールで `currentTarget` キーを探すと、その値は `null` となります。<br/>
+> `console.log(event.currentTarget)` を使ってコンソールで表示するか、 [`debugger`](/ja/docs/Web/JavaScript/Reference/Statements/debugger) 文を使ってコードの実行を一時停止し、 `event.currentTarget` の値を表示させる必要があります。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>状態</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+{{Specifications}}
 
-{{Compat("api.Event.currentTarget")}}
+## ブラウザーの互換性
 
-<h2 id="関連項目">関連項目</h2>
+{{Compat}}
 
-<a href="/ja/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a>
+## 関連情報
+
+- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
