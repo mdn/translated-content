@@ -1,76 +1,63 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
+page-type: web-api-constructor
 tags:
-  - API
-  - Constructor
-  - DOM
-  - Event
-  - リファレンス
   - コンストラクター
+  - リファレンス
+browser-compat: api.Event.Event
 translation_of: Web/API/Event/Event
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-`**Event()**` コンストラクターは、新しい {{domxref("Event")}} を生成します。
+**`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/Events/Creating_and_triggering_events)することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">new Event(<var>typeArg</var>[, <var>eventInit</var>]);</pre>
+```js
+new Event(type)
+new Event(type, options)
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
-- `<var>typeArg</var>`
-  - : {{domxref("DOMString")}} で、イベントの名前を表します。
-- `<var>eventInit</var>` {{optional_inline}}
- <dd>`EventInit` 辞書で、以下のフィールドを持ちます。
- <ul>
-  <li>`bubbles`: {{jsxref("Boolean")}} で、イベントがバブリングするかどうかを示します。既定値は `false` です。</li>
-  <li>`cancelable`: {{jsxref("Boolean")}} で、イベントがキャンセル可能かどうかを示します。既定値は `false` です。</li>
-  <li>`composed`: {{jsxref("Boolean")}} で、イベントがシャドウルートの外のリスナーに伝わるかどうかを示します (詳しくは {{domxref("Event.composed")}} を参照してください)。既定値は `false` です。</li>
- </ul>
- </dd>
-</dl>
+- `type`
+  - : 文字列で、イベントの名前を表します。
+- `options` {{optional_inline}}
+  - : 以下のプロパティを持ったオブジェクトです。
+    - `bubbles`
+      - : 論理値で、イベントがバブリングするかどうかを示します。既定値は `false` です。
+    - `cancelable`
+      - : 論理値で、イベントがキャンセル可能かどうかを示します。既定値は `false` です。
+    - `composed`
+      - : 論理値で、イベントがシャドウルートの外のリスナーに伝わるかどうかを示します（詳しくは {{domxref("Event.composed")}} を参照してください）。既定値は `false` です。
 
-<h2 id="Example" name="Example">例</h2>
+### 返値
 
-<pre class="brush: js">// create a look event that bubbles up and cannot be canceled
+新しい {{domxref("Event")}} オブジェクトです。
 
-var evt = new Event("look", {"bubbles":true, "cancelable":false});
+## 例
+
+```js
+// create a look event that bubbles up and cannot be canceled
+
+const evt = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(evt);
 
 // event can be dispatched from any element, not only the document
 myDiv.dispatchEvent(evt);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-event-event','Event()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("api.Event.Event")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Event")}}</li>
- <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
- <li><a href="/ja/docs/Web/Guide/Events/Creating_and_triggering_events">イベントの作成とトリガー</a></li>
-</ul>
+- {{domxref("Event")}}
+- {{domxref("EventTarget.dispatchEvent()")}}
+- [イベントの作成とトリガー](/ja/docs/Web/Events/Creating_and_triggering_events)
