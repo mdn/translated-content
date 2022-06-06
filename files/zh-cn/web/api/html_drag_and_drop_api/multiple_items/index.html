@@ -12,7 +12,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 
 <p>Mozilla 提供了一些额外的非标准方法来支持多个元素的拖拽。这些方法中映射了 {{domxref("DataTransfer.types","types")}} 属性以及 {{domxref("DataTransfer.getData","getData()")}}，{{domxref("DataTransfer.setData","setData()")}} 和 {{domxref("DataTransfer.clearData","clearData()")}} 方法。不过，这些方法可以接受额外的参数来指定需要获取、修改或是移除的元素的下标。</p>
 
-<p class="note">本文中描述的拖拽过程均使用 {{domxref("DataTransfer")}} 接口。该过程不会使用 {{domxref("DataTransferItem")}} 接口，也不会使用 {{domxref("DataTransferItemList")}} 接口。</p>
+<p>本文中描述的拖拽过程均使用 {{domxref("DataTransfer")}} 接口。该过程不会使用 {{domxref("DataTransferItem")}} 接口，也不会使用 {{domxref("DataTransferItemList")}} 接口。</p>
 
 <h2 id="基于索引的添加和获取">基于索引的添加和获取</h2>
 
@@ -30,7 +30,7 @@ dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 <pre class="notranslate">event.dataTransfer.mozClearDataAt("text/plain", 1);
 </pre>
 
-<p class="note">注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：</p>
+<p>注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：</p>
 
 <pre class="notranslate">var dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
