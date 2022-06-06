@@ -1,43 +1,37 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - Read-only
   - プロパティ
-  - 読取専用
+  - 読み取り専用
+browser-compat: api.Event.defaultPrevented
 translation_of: Web/API/Event/defaultPrevented
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-`**defaultPrevented**` は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。
+**`defaultPrevented`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、論理値で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。
 
-<div class="note">**メモ:** 標準外かつ非推奨の `getPreventDefault()` メソッドの代わりに、これを使用してください (see {{ bug(691151) }})。</div>
+## 値
 
-<h2 id="構文">構文</h2>
+論理値で、 `true` は既定の{{glossary("user agent", "ユーザーエージェント")}}の動作が抑制されたことを、 `false` はそうではないことを表しています。
 
-<pre class="brush: js">var <em>defaultWasPrevented</em> = <em>event</em>.defaultPrevented;</pre>
+## 例
 
-<h3 id="Value" name="Value">値</h3>
+この例は 2 つの {{htmlElement("a")}} 要素のリンクを訪れる試みをログ出力します。 JavaScript は 2 番目のリンクの動作を抑制するために使用しています。
 
-{{jsxref("Boolean")}} で、 `true` は既定の{{glossary("user agent", "ユーザーエージェント")}}の操作が抑制されたことを、 `false` はそうではないことを表しています。
+### HTML
 
-<h2 id="Example" name="Example">例</h2>
+```html
+<p><a id="link1" href="#link1">Visit link 1</a></p>
+<p><a id="link2" href="#link2">Try to visit link 2</a> (you can't)</p>
+<p id="log"></p>
+```
 
-この例は2つの {{htmlElement("a")}} 要素のリンクを訪れる試みをログ出力します。 JavaScript は2番目のリンクの動作を抑制するために使用しています。
+### JavaScript
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;p&gt;&lt;a id="link1" href="#link1"&gt;Visit link 1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a id="link2" href="#link2"&gt;Try to visit link 2&lt;/a&gt; (you can't)&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">function stopLink(event) {
+```js
+function stopLink(event) {
   event.preventDefault();
 }
 
@@ -56,31 +50,17 @@ function logClick(event) {
 
 const a = document.getElementById('link2');
 a.addEventListener('click', stopLink);
-document.addEventListener('click', logClick);</pre>
+document.addEventListener('click', logClick);
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
 {{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Compat}}
