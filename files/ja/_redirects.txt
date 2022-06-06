@@ -3229,6 +3229,7 @@
 /ja/docs/Web/API/FileReader/onload	/ja/docs/conflicting/Web/API/FileReader/load_event
 /ja/docs/Web/API/FileSystemEntrySync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
 /ja/docs/Web/API/File_Handle_API	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition

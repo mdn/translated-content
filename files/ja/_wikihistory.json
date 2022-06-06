@@ -13976,12 +13976,6 @@
       "eltociear"
     ]
   },
-  "Web/API/FormDataEntryValue": {
-    "modified": "2019-04-26T23:54:27.353Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/Frame_Timing_API": {
     "modified": "2019-06-07T11:58:30.872Z",
     "contributors": [
@@ -47053,6 +47047,12 @@
     "modified": "2020-10-15T22:19:51.434Z",
     "contributors": [
       "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/API/FormData": {
+    "modified": "2019-04-26T23:54:27.353Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
