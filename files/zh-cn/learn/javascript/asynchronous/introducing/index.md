@@ -1,273 +1,303 @@
 ---
-title: 异步JavaScript简介
+title: 异步 JavaScript 简介
 slug: Learn/JavaScript/Asynchronous/Introducing
 translation_of: Learn/JavaScript/Asynchronous/Introducing
 original_slug: learn/JavaScript/异步/简介
 ---
-<div>{{LearnSidebar}}</div>
 
-<div>{{PreviousMenuNext("Learn/JavaScript/异步/概念", "Learn/JavaScript/异步/Timeouts_and_intervals", "Learn/JavaScript/异步")}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
-<p>在本文中，我们简要回顾一下与同步JavaScript相关的问题，首次介绍你将遇到的一些不同的异步技术，并展示如何使用这些技术解决问题。</p>
+在本文中，我们将解释什么是异步编程，为什么我们需要它，并简要讨论 JavaScript 历史上异步函数是怎样被实现的。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">预备条件:</th>
-   <td>基本的计算机素养，以及对JavaScript 基础知识的较好的理解。</td>
-  </tr>
-  <tr>
-   <th scope="row">目标:</th>
-   <td>熟悉什么是异步JavaScript，与同步JavaScript 的区别，以及使用场合。</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">预备知识：</th>
+      <td>
+        基本的计算机素养，以及对 JavaScript 基础知识的一定了解，包括函数和事件处理程序。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>
+        熟悉异步 JavaScript 的概念，了解它与同步 JavaScript 的不同，以及我们需要它的原因。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="同步JavaScript">同步JavaScript</h2>
+异步编程技术使你的程序可以在执行一个可能长期运行的任务的同时继续对其他事件做出反应而不必等待任务完成。与此同时，你的程序也将在任务完成后显示结果。
 
-<p>要理解什么是<strong>{{Glossary("异步")}}</strong> JavaScript ，我们应该从确切理解<strong>{{Glossary("同步")}}</strong> JavaScript 开始。本节回顾我们在上一篇文章中看到的一些信息。</p>
+浏览器提供的许多功能（尤其是最有趣的那一部分）可能需要很长的时间来完成，因此需要异步完成，例如：
 
-<p>前面学的很多知识基本上都是同步的 — 运行代码，然后浏览器尽快返回结果。先看一个简单的例子 (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html">运行它</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html">这是源码</a>)：</p>
+- 使用 {{domxref("fetch", "fetch()")}} 发起 HTTP 请求
+- 使用 {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}} 访问用户的摄像头和麦克风
+- 使用 {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}} 请求用户选择文件以供访问
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
-btn.addEventListener('click', () =&gt; {
-  alert('You clicked me!');
+因此，即使你可能不需要经常*实现*自己的异步函数，你也很可能需要*正确使用*它们。
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
-  document.body.appendChild(pElem);
+在这篇文章中，我们将从同步函数长时间运行时存在的问题开始，并以此进一步认识异步编程的必要性。
+
+## 同步编程
+
+观察下面的代码:
+
+```js
+const name = 'Miriam';
+const greeting = `Hello, my name is ${name}!`;
+console.log(greeting);
+// "Hello, my name is Miriam!"
+```
+
+这段代码:
+
+1. 声明了一个叫做 `name` 的字符串常量
+2. 声明了另一个叫做 `greeting` 的字符串常量（并使用了 `name` 常量的值）
+3. 将 `greeting` 常量输出到 JavaScript 控制台中。
+
+我们应该注意的是，实际上浏览器是按照我们书写代码的顺序一行一行地执行程序的。浏览器会等待代码的解析和工作，在上一行完成后才会执行下一行。这样做是很有必要的，因为每一行新的代码都是建立在前面代码的基础之上的。
+
+这也使得它成为一个**同步程序**。
+
+事实上，调用函数的时候也是同步的，就像这样：
+
+```js
+function makeGreeting(name) {
+  return `Hello, my name is ${name}!`;
+}
+const name = 'Miriam';
+const greeting = makeGreeting(name);
+console.log(greeting);
+// "Hello, my name is Miriam!"
+```
+
+在这里 `makeGreeting()` 就是一个**同步函数**，因为在函数返回之前，调用者必须等待函数完成其工作。
+
+### 一个耗时的同步函数
+
+如果同步函数需要很长的时间怎么办？
+
+当用户点击“生成素数”按钮时，这个程序将使用一种非常低效的算法生成一些大素数。你可以控制要生成的素数数量，这也会影响操作需要的时间。
+
+```html
+<label for="quota">素数个数：</label>
+<input type="text" id="quota" name="quota" value="1000000">
+
+<button id="generate">生成素数</button>
+<button id="reload">重载</button>
+
+<div id="output"></div>
+```
+
+```js
+function generatePrimes(quota) {
+  function isPrime(n) {
+    for (let c = 2; c <= Math.sqrt(n); ++c) {
+      if (n % c === 0) {
+          return false;
+       }
+    }
+    return true;
+  }
+  const primes = [];
+  const maximum = 1000000;
+  while (primes.length < quota) {
+    const candidate = Math.floor(Math.random() * (maximum + 1));
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
+document.querySelector('#generate').addEventListener('click', () => {
+  const quota = document.querySelector('#quota').value;
+  const primes = generatePrimes(quota);
+  document.querySelector('#output').textContent = `完成！已生成素数${quota}个。`;
 });
-</pre>
+document.querySelector('#reload').addEventListener('click', () => {
+  document.location.reload()
+});
+```
 
-<p>这段代码, 一行一行的顺序执行：</p>
+{{EmbedLiveSample("一个耗时的同步函数", 600, 120)}}
 
-<ol>
- <li>先取得一个在DOM里面的 {{htmlelement("button")}} 引用。</li>
- <li>点击按钮的时候，添加一个 <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> 事件监听器:
-  <ol>
-   <li><code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> 消息出现。</li>
-   <li>一旦alert 结束，创建一个{{htmlelement("p")}} 元素。</li>
-   <li>给它的文本内容赋值。</li>
-   <li>最后，把这个段落放进网页。</li>
-  </ol>
- </li>
-</ol>
+试着点击“生成素数”按钮。在程序显示“完成！”信息之前可能需要几秒钟（取决于你的电脑性能）。
 
-<p>每一个操作在执行的时候，其他任何事情都没有发生 — 网页的渲染暂停. 因为前篇文章提到过 <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_is_single_threaded">JavaScript is single threaded</a>. 任何时候只能做一件事情, 只有一个主线程，其他的事情都阻塞了，直到前面的操作完成。</p>
+### 耗时同步函数的问题
 
-<p>所以上面的例子，点击了按钮以后，段落不会创建，直到在alert消息框中点击ok，段落才会出现，你可以自己试试：</p>
+接下来的示例和上一个一样，不过我们增加了一个文本框供你输入。这一次，试着点击“生成素数”，然后在文本框中输入。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;button&gt;Click me&lt;/button&gt;</pre>
-</div>
+你会发现，当我们的 `generatePrimes()` 函数运行时，我们的程序完全没有反应：用户不能输入任何东西，也不能点击任何东西，或做任何其他事情。
 
-<p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
+```html hidden
+<label for="quota">素数个数</label>
+<input type="text" id="quota" name="quota" value="1000000">
+<button id="generate">生成素数</button>
+<button id="reload">重载</button>
+<textarea id="user-input" rows="5" cols="62">
+点击“生成素数”按钮后试着在这里输入
+</textarea>
+<div id="output"></div>
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 这很重要请记住，<code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>在演示阻塞效果的时候非常有用，但是在正式代码里面，它就是一个噩梦。</p>
-</div>
+```css hidden
+textarea {
+  display: block;
+  margin: 1rem 0;
+}
+```
 
-<h2 id="异步JavaScript">异步JavaScript</h2>
+```js hidden
+function generatePrimes(quota) {
+  function isPrime(n) {
+    for (let c = 2; c <= Math.sqrt(n); ++c) {
+      if (n % c === 0) {
+          return false;
+       }
+    }
+    return true;
+  }
+  const primes = [];
+  const maximum = 1000000;
+  while (primes.length < quota) {
+    const candidate = Math.floor(Math.random() * (maximum + 1));
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
+document.querySelector('#generate').addEventListener('click', () => {
+  const quota = document.querySelector('#quota').value;
+  const primes = generatePrimes(quota);
+  document.querySelector('#output').textContent = `完成！已生成素数${quota}个。`;
+});
+document.querySelector('#reload').addEventListener('click', () => {
+  document.querySelector('#user-input').value = '点击“生成素数”按钮后试着在这里输入';
+  document.location.reload();
+});
+```
 
-<p>就前面提到的种种原因（比如，和阻塞相关）很多网页API特性使用异步代码，特别是从外部的设备上获取资源，譬如，从网络获取文件，访问数据库，从网络摄像头获得视频流，或者向VR头罩广播图像。</p>
+{{EmbedLiveSample("耗时同步函数的问题", 600, 200)}}
 
-<p>为什么使用异步代码这么难？看一个例子，当你从服务器获取一个图像，通常你不可能立马就得到，这需要时间，虽然现在的网络很快。这意味着下面的伪代码可能不能正常工作：</p>
+这就是耗时的同步函数的基本问题。在这里我们想要的是一种方法，以让我们的程序可以：
 
-<pre class="brush: js notranslate">var response = fetch('myImage.png');
-var blob = response.blob();
-// display your image blob in the UI somehow</pre>
+- 通过调用一个函数来启动一个长期运行的操作
+- 让函数开始操作并立即返回，这样我们的程序就可以保持对其他事件做出反应的能力
+- 当操作最终完成时，通知我们操作的结果。
 
-<p>因为你不知道下载图片会多久，所以第二行代码执行的时候可能报错（可能间歇的，也可能每次）因为图像还没有就绪。取代的方法就是，代码必须等到 <code>response</code> 返回才能继续往下执行。</p>
+这就是异步函数为我们提供的能力，本模块的其余部分将解释它们是如何在 JavaScript 中实现的。
 
-<p>在JavaScript代码中，你经常会遇到两种异步编程风格：老派callbacks，新派promise。下面就来分别介绍。</p>
+## 事件处理程序
 
-<h2 id="异步callbacks">异步callbacks</h2>
+我们刚才看到的对异步函数的描述可能会让你想起事件处理程序，这么想是对的。事件处理程序实际上就是异步编程的一种形式：你提供的函数（事件处理程序）将在事件发生时被调用（而不是立即被调用）。如果“事件”是“异步操作已经完成”，那么你就可以看到事件如何被用来通知调用者异步函数调用的结果的。
 
-<p>异步callbacks 其实就是函数，只不过是作为参数传递给那些在后台执行的其他函数. 当那些后台运行的代码结束，就调用callbacks函数，通知你工作已经完成，或者其他有趣的事情发生了。使用callbacks 有一点老套，在一些老派但经常使用的API里面，你会经常看到这种风格。</p>
+一些早期的异步 API 正是以这种方式来使用事件的。{{domxref("XMLHttpRequest")}} API 可以让你用 JavaScript 向远程服务器发起 HTTP 请求。由于这样的操作可能需要很长的时间，所以它被设计成异步 API，你可以通过给 `XMLHttpRequest` 对象附加事件监听器来让程序在请求进展和最终完成时获得通知。
 
-<p>举个例子，异步callback 就是{{domxref("EventTarget.addEventListener", "addEventListener()")}}第二个参数（前面的例子）：</p>
+下面的例子展示了这样的操作。点击“点击发起请求”按钮来发送一个请求。我们将创建一个新的 {{domxref("XMLHttpRequest")}} 并监听它的 {{domxref("XMLHttpRequest/loadend_event", "loadend")}} 事件。而我们的事件处理程序则会在控制台中输出一个“完成！”的消息和请求的状态代码。
 
-<pre class="brush: js notranslate">btn.addEventListener('click', () =&gt; {
-  alert('You clicked me!');
+我们在添加了事件监听器后发送请求。注意，在这之后，我们仍然可以在控制台中输出“请求已发起”，也就是说，我们的程序可以在请求进行的同时继续运行，而我们的事件处理程序将在请求完成时被调用。
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
-  document.body.appendChild(pElem);
-});</pre>
+```html
+<button id="xhr">点击发起请求</button>
+<button id="reload">重载</button>
 
-<p>第一个参数是侦听的事件类型，第二个就是事件发生时调用的回调函数。.</p>
+<pre readonly class="event-log"></pre>
+```
 
-<p>当我们把回调函数作为一个参数传递给另一个函数时，仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
+```css hidden
+pre {
+  display: block;
+  margin: 1rem 0;
+}
+```
 
-<p>你可以自己写一个容易的，包含回调函数的函数。来看另外一个例子，用 <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">运行它</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">源代码</a>) 加载资源：</p>
-
-<pre class="brush: js notranslate">function loadAsset(url, type, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.responseType = type;
-
-  xhr.onload = function() {
-    callback(xhr.response);
-  };
-
+```js
+const log = document.querySelector('.event-log');
+document.querySelector('#xhr').addEventListener('click', () => {
+  log.textContent = '';
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('loadend', () => {
+    log.textContent = `${log.textContent}完成！状态码：${xhr.status}`;
+  });
+  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
   xhr.send();
-}
-
-function displayImage(blob) {
-  let objectURL = URL.createObjectURL(blob);
-
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}
-
-loadAsset('coffee.jpg', 'blob', displayImage);</pre>
-
-<p>创建 <code>displayImage()</code> 函数，简单的把blob传递给它，生成objectURL，然后再生成一个image元素，把objectURL作为image的源地址，最后显示这张图片。  然后，我们创建 <code>loadAsset()</code> 函数，把URL，type，和回调函数同时都作为参数。函数用 <code>XMLHttpRequest</code> (通常缩写 "XHR") 获取给定URL的资源，在获得资源响应后再把响应作为参数传递给回调函数去处理。 (使用 <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> 事件处理) ，有点烧脑，是不是？！</p>
-
-<p>回调函数用途广泛 — 他们不仅仅可以用来控制函数的执行顺序和函数之间的数据传递，还可以根据环境的不同，将数据传递给不同的函数，所以对下载好的资源，你可以采用不同的操作来处理，譬如 <code>processJSON()</code>, <code>displayText()</code>, 等等。</p>
-
-<p>请注意，不是所有的回调函数都是异步的 — 有一些是同步的。一个例子就是使用 {{jsxref("Array.prototype.forEach()")}} 来遍历数组 (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html">运行</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html">源代码</a>):</p>
-
-<pre class="brush: js notranslate">const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
-
-gods.forEach(function (eachName, index){
-  console.log(index + '. ' + eachName);
-});</pre>
-
-<p>在这个例子中，我们遍历一个希腊神的数组，并在控制台中打印索引和值。<code>forEach()</code> 需要的参数是一个回调函数，回调函数本身带有两个参数，数组元素和索引值。它无需等待任何事情，立即运行。</p>
-
-<h2 id="Promises">Promises</h2>
-
-<p>Promises 是新派的异步代码，现代的web APIs经常用到。 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> API就是一个很好的例子, 它基本上就是一个现代版的，更高效的 {{domxref("XMLHttpRequest")}}。看个例子，来自于文章 <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a> ：</p>
-
-<pre class="brush: js notranslate">fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  products = json;
-  initialize();
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});</pre>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 在GitHub上有完整的代码 (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">see the source here</a>, and also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">see it running live</a>)。</p>
-</div>
-
-<p>这里<code>fetch</code><code>()</code> 只需要一个参数— 资源的网络 URL — 返回一个 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>. promise 是表示异步操作完成或失败的对象。可以说，它代表了一种中间状态。 本质上，这是浏览器说“我保证尽快给您答复”的方式，因此得名“promise”。</p>
-
-<p>这个概念需要练习来适应;它感觉有点像运行中的{{interwiki("wikipedia", "薛定谔猫")}}。这两种可能的结果都还没有发生，因此fetch操作目前正在等待浏览器试图在将来某个时候完成该操作的结果。然后我们有三个代码块链接到fetch()的末尾：</p>
-
-<ul>
- <li>两个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 块。两者都包含一个回调函数，如果前一个操作成功，该函数将运行，并且每个回调都接收前一个成功操作的结果作为输入，因此您可以继续对它执行其他操作。每个 <code>.then()</code>块返回另一个promise，这意味着可以将多个<code>.then()</code>块链接到另一个块上，这样就可以依次执行多个异步操作。</li>
- <li>如果其中任何一个<code>then()</code>块失败，则在末尾运行<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code>块——与同步<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>类似，<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code>提供了一个错误对象，可用来报告发生的错误类型。但是请注意，同步<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>不能与promise一起工作，尽管它可以与<a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>一起工作，稍后您将了解到这一点。</li>
-</ul>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 在本模块稍后的部分中，你将学习更多关于promise的内容，所以如果你还没有完全理解这些promise，请不要担心。</p>
-</div>
-
-<h3 id="事件队列">事件队列</h3>
-
-<p>像promise这样的异步操作被放入事件队列中，事件队列在主线程完成处理后运行，这样它们就不会阻止后续JavaScript代码的运行。排队操作将尽快完成，然后将结果返回到JavaScript环境。</p>
-
-<h3 id="Promises_对比_callbacks">Promises 对比 callbacks</h3>
-
-<p>promises与旧式callbacks有一些相似之处。它们本质上是一个返回的对象，您可以将回调函数附加到该对象上，而不必将回调作为参数传递给另一个函数。</p>
-
-<p>然而，<code>Promise</code>是专门为异步操作而设计的，与旧式回调相比具有许多优点:</p>
-
-<ul>
- <li>您可以使用多个then()操作将多个异步操作链接在一起，并将其中一个操作的结果作为输入传递给下一个操作。这种链接方式对回调来说要难得多，会使回调以混乱的“末日金字塔”告终。 (也称为<a href="http://callbackhell.com/">回调地狱</a>)。</li>
- <li><code>Promise</code>总是严格按照它们放置在事件队列中的顺序调用。</li>
- <li>错误处理要好得多——所有的错误都由块末尾的一个.catch()块处理，而不是在“金字塔”的每一层单独处理。</li>
-</ul>
-
-<h2 id="异步代码的本质">异步代码的本质</h2>
-
-<p>让我们研究一个示例，它进一步说明了异步代码的本质，展示了当我们不完全了解代码执行顺序以及将异步代码视为同步代码时可能发生的问题。下面的示例与我们之前看到的非常相似( <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html">运行它</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">源代码</a>)。一个不同之处在于，我们包含了许多{{domxref("console.log()")}}语句，以展示代码将在其中执行的顺序。</p>
-
-<pre class="brush: js notranslate">console.log ('Starting');
-let image;
-
-fetch('coffee.jpg').then((response) =&gt; {
-  console.log('It worked :)')
-  return response.blob();
-}).then((myBlob) =&gt; {
-  let objectURL = URL.createObjectURL(myBlob);
-  image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch((error) =&gt; {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
+  log.textContent = `${log.textContent}请求已发起\n`;});
+document.querySelector('#reload').addEventListener('click', () => {
+  log.textContent = '';
+  document.location.reload();
 });
+```
 
-console.log ('All done!');</pre>
+{{EmbedLiveSample("事件处理程序", 600, 120)}}
 
-<p>浏览器将会执行代码，看见第一个<code>console.log()</code> 输出(<code>Starting</code>) ，然后创建<code>image</code> 变量。</p>
+这就像我们在以前的模块中遇到的[事件处理程序](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)，只是这次的事件不是像点击按钮那样的用户行为，而是某个对象的状态变化。
 
-<p>然后，它将移动到下一行并开始执行<code>fetch()</code>块，但是，因为<code>fetch()</code>是异步执行的，没有阻塞，所以在<code>promise</code>相关代码之后程序继续执行，从而到达最后的<code>console.log()</code>语句(<code>All done</code>!)并将其输出到控制台。</p>
+## 回调
 
-<p>只有当<code>fetch()</code> 块完成运行返回结果给<code>.then()</code> ，我们才最后看到第二个<code>console.log()</code> 消息 (<code>It worked ;)</code>) . 所以 这些消息 可能以 和你预期不同的顺序出现：</p>
+事件处理程序是一种特殊类型的回调函数。而回调函数则是一个被传递到另一个函数中的会在适当的时候被调用的函数。正如我们刚刚所看到的：回调函数曾经是 JavaScript 中实现异步函数的主要方式。
 
-<ul>
- <li>Starting</li>
- <li>All done!</li>
- <li>It worked :)</li>
-</ul>
+然而，当回调函数本身需要调用其他同样接受回调函数的函数时，基于回调的代码会变得难以理解。当你需要执行一些分解成一系列异步函数的操作时，这将变得十分常见。例如下面这种情况：
 
-<p>如果你感到疑惑，考虑下面这个小例子：</p>
+```js
+function doStep1(init) {
+  return init + 1;
+}
+function doStep2(init) {
+  return init + 2;
+}
+function doStep3(init) {
+  return init + 3;
+}
+function doOperation() {
+  let result = 0;
+  result = doStep1(result);
+  result = doStep2(result);
+  result = doStep3(result);
+  console.log(`结果：${result}`);
+}
+doOperation();
+```
 
-<pre class="brush: js notranslate">console.log("registering click handler");
+现在我们有一个被分成三步的操作，每一步都依赖于上一步。在这个例子中，第一步给输入的数据加1，第二步加2，第三步加3。从输入0开始，最终结果是6（0+1+2+3）。作为同步代码，这很容易理解。但是如果我们用回调来实现这些步骤呢？
 
-button.addEventListener('click', () =&gt; {
-  console.log("get click");
-});
+```js
+function doStep1(init, callback) {
+  const result = init + 1;
+  callback(result);
+}
+function doStep2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
+function doStep3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
+function doOperation() {
+  doStep1(0, result1 => {
+    doStep2(result1, result2 => {
+      doStep3(result2, result3 => {
+        console.log(`结果：${result3}`);
+      });
+    });
+  });
+}
+doOperation();
+```
 
-console.log("all done");</pre>
+因为必须在回调函数中调用回调函数，我们就得到了这个深度嵌套的 `doOperation()` 函数，这就更难阅读和调试了。在一些地方这被称为“回调地狱”或“厄运金字塔”（因为缩进看起来像一个金字塔的侧面）。
 
-<p>这在行为上非常相似——第一个和第三个<code>console.log()</code>消息将立即显示，但是第二个消息将被阻塞，直到有人单击鼠标按钮。前面的示例以相同的方式工作，只是在这种情况下，第二个消息在<code>promise</code>链上被阻塞，直到获取资源后再显示在屏幕上，而不是单击。</p>
+面对这样的嵌套回调，处理错误也会变得非常困难：你必须在“金字塔”的每一级处理错误，而不是在最高一级一次完成错误处理。
 
-<p>要查看实际情况，请尝试获取<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">示例</a>的本地副本，并将第三个<code>console.log()</code>调用更改为以下命令：</p>
+由于以上这些原因，大多数现代异步 API 都不使用回调。事实上，JavaScript 中异步编程的基础是 {{jsxref("Promise")}}，这也是我们下一篇文章要讲述的主题。
 
-<pre class="brush: js notranslate">console.log ('All done! ' + image.src + 'displayed.');</pre>
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
-<p>此时控制台将会报错，而不会显示第三个 <code>console.log</code> 的信息：</p>
+## 本章目录
 
-<pre class="notranslate">TypeError: image is undefined; can't access its "src" property</pre>
-
-<p>这是因为：浏览器运行第三个<code>console.log()</code>的时候，<code>fetch()</code> 语句块还没有完成，因此<code>image</code>还没有赋值。</p>
-
-<h2 id="主动学习：把代码全部异步化">主动学习：把代码全部异步化</h2>
-
-<p>要修复有问题的<code>fetch()</code>示例并使三个<code>console.log()</code>语句按期望的顺序出现，还可以让第三个<code>console.log()</code>语句异步运行。这可以通过将它移动到另一个<code>then()</code>块中来实现，然后将它链接到第二个<code>then()</code>块的末尾，或者简单地将它移动到第二个<code>then()</code>块中。现在就试试。</p>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 如果你困住了，你可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">在这里找到答案</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">这里运行</a>)。在后面的文章：<a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">用Promises优雅的异步编程</a>, 你将会发现更多信息。</p>
-</div>
-
-<h2 id="小结">小结</h2>
-
-<p>在最基本的形式中，JavaScript是一种同步的、阻塞的、单线程的语言，在这种语言中，一次只能执行一个操作。但web浏览器定义了函数和API，允许我们当某些事件发生时不是按照同步方式，而是异步地调用函数(比如，时间的推移，用户通过鼠标的交互，或者获取网络数据)。这意味着您的代码可以同时做几件事情，而不需要停止或阻塞主线程。</p>
-
-<p>异步还是同步执行代码，取决于我们要做什么。</p>
-
-<p>有些时候，我们希望事情能够立即加载并发生。例如，当将一些用户定义的样式应用到一个页面时，您希望这些样式能够尽快被应用。</p>
-
-<p>但是，如果我们正在运行一个需要时间的操作，比如查询数据库并使用结果填充模板，那么最好将该操作从主线程中移开使用异步完成任务。随着时间的推移，您将了解何时选择异步技术比选择同步技术更有意义。</p>
-
-<ul>
-</ul>
-
-<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}</p>
-
-<h2 id="模块大纲">模块大纲</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">通用异步编程概念</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">异步JavaScript简介</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">合作异步JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">使用Promises优雅地异步编程</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">使用 async 和 await 使异步编程更容易</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">选择正确的方法</a></li>
-</ul>
+- **异步 JavaScript 简介**
+- [如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
+- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [测验：序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
