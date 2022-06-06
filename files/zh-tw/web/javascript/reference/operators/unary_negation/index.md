@@ -1,5 +1,5 @@
 ---
-title: Unary negation (-)
+title: 一元負號運算子 (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 tags:
   - JavaScript
@@ -14,15 +14,15 @@ The unary negation operator (`-`) precedes its operand and negates it.
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
 
-## Syntax
+## 語法
 
 ```js
 -x
 ```
 
-## Examples
+## 範例
 
-### Negating numbers
+### 轉換數字
 
 ```js
 const x = 3;
@@ -32,9 +32,9 @@ const y = -x;
 // x = 3
 ```
 
-### Negating non-numbers
+### 轉換非數字
 
-The unary negation operator can convert a non-number into a number.
+一元負號運算子可以將非數字轉為數字。
 
 ```js
 const x = "4";
@@ -43,15 +43,15 @@ const y = -x;
 // y = -4
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 - [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)

@@ -1,5 +1,5 @@
 ---
-title: Unary plus (+)
+title: 一元正號運算子 (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 tags:
   - JavaScript
@@ -15,13 +15,13 @@ operand but attempts to convert it into a number, if it isn't already.
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
 
-## Syntax
+## 語法
 
 ```js
 +x
 ```
 
-## Description
+## 詳細說明
 
 Although unary negation (`-`) also can convert non-numbers, unary plus is
 the fastest and preferred way of converting something into a number, because it does not
@@ -32,9 +32,9 @@ integers and floats, as well as the non-string values `true`,
 not for hex). Using the operator on BigInt values throws a TypeError. If it cannot parse
 a particular value, it will evaluate to {{jsxref("NaN")}}.
 
-## Examples
+## 範例
 
-### Usage with numbers
+### 使用於數字
 
 ```js
 const x = 1;
@@ -46,7 +46,7 @@ console.log(+y);
 // -1
 ```
 
-### Usage with non-numbers
+### 使用於非數字上
 
 ```js
 +true  // 1
@@ -56,15 +56,15 @@ console.log(+y);
 +1n    // throws TypeError: Cannot convert BigInt value to number
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 - [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
