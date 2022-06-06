@@ -36,7 +36,7 @@ Infinity * 0         // NaN
 Infinity * Infinity  // Infinity
 ```
 
-### Multiplication with non-numbers
+### 乘以非數字
 
 ```js
 'foo' * 2 // NaN
