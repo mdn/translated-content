@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="介绍一个例子">介绍一个例子</h2>
 
-<p>为了演示模块的使用，我们创建了一个 <a href="https://github.com/mdn/js-examples/tree/master/modules">simple set of examples</a> ，你可以在 Github 上找到。这个例子演示了一个简单的模块的集合用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制 (并记录有关的信息) 不同形状。</p>
+<p>为了演示模块的使用，我们创建了一个 <a href="https://github.com/mdn/js-examples/tree/master/module-examples">simple set of examples</a> ，你可以在 Github 上找到。这个例子演示了一个简单的模块的集合用来在 web 页面上创建了一个 {{htmlelement("canvas")}} 标签，在 canvas 上绘制 (并记录有关的信息) 不同形状。</p>
 
 <p>这的确有点简单，但是保持足够简单能够清晰地演示模块。</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="基本的示例文件的结构">基本的示例文件的结构</h2>
 
-<p>在我们的第一个例子 (see <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) 文件结构如下：</p>
+<p>在我们的第一个例子 (see <a href="https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules">basic-modules</a>) 文件结构如下：</p>
 
 <pre>index.html
 main.mjs
@@ -149,7 +149,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre>./modules/square.mjs</pre>
 
-<p>你可以在 <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.mjs</a></code> 中看到这些。</p>
+<p>你可以在 <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.mjs</a></code> 中看到这些。</p>
 
 <div class="note">
 <p><strong>备注：</strong>在一些模块系统中你可以忽略文件扩展名（比如 <code>'/model/squre'</code>）。这在原生 JavaScript 模块系统中不工作。<del>此外，记住你需要包含最前面的正斜杠。</del> （修订版 1889482）</p>
@@ -246,7 +246,7 @@ export { function1, function2 };
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from '/modules/module.mjs';</pre>
 
-<p>让我们看一个真实的例子。在我们的 <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">重命名</a> 目录中，您将看到与上一个示例中相同的模块系统，除了我们添加了 <code>circle.mjs</code> 和 <code>triangle.mjs</code> 模块以绘制和报告圆和三角形。</p>
+<p>让我们看一个真实的例子。在我们的 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/renaming">重命名</a> 目录中，您将看到与上一个示例中相同的模块系统，除了我们添加了 <code>circle.mjs</code> 和 <code>triangle.mjs</code> 模块以绘制和报告圆和三角形。</p>
 
 <p>在每个模块中，我们都有 <code>export</code> 相同名称的功能，因此每个模块底部都有相同的导出语句：</p>
 
@@ -302,7 +302,7 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
 Module.function2()
 etc.</pre>
 
-<p>再次，让我们看一个真实的例子。如果您转到我们的 <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a> 目录，您将再次看到相同的示例，但利用上述的新语法进行重写。在模块中，导出都是以下简单形式：</p>
+<p>再次，让我们看一个真实的例子。如果您转到我们的 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-objects">module-objects</a> 目录，您将再次看到相同的示例，但利用上述的新语法进行重写。在模块中，导出都是以下简单形式：</p>
 
 <pre class="brush: js">export { name, draw, reportArea, reportPerimeter };</pre>
 
@@ -326,7 +326,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>正如我们之前提到的那样，您还可以导出和导入类；这是避免代码冲突的另一种选择，如果您已经以面向对象的方式编写了模块代码，那么它尤其有用。</p>
 
-<p>您可以在我们的 <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> 目录中看到使用 ES 类重写的形状绘制模块的示例。 例如，<code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.mjs</a></code> 文件现在包含单个类中的所有功能：</p>
+<p>您可以在我们的 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/classes">classes</a> 目录中看到使用 ES 类重写的形状绘制模块的示例。 例如，<code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js">square.mjs</a></code> 文件现在包含单个类中的所有功能：</p>
 
 <pre class="brush: js">class Square {
   constructor(ctx, listId, length, x, y, color) {
@@ -344,7 +344,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <pre class="brush: js">export { Square };</pre>
 
-<p>在 <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.mjs</a></code> 中，我们像这样导入它：</p>
+<p>在 <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js">main.mjs</a></code> 中，我们像这样导入它：</p>
 
 <pre class="brush: js">import { Square } from './modules/square.mjs';</pre>
 
@@ -366,7 +366,7 @@ export { name } from 'x.mjs'</pre>
 <p><strong>备注：</strong>这实际上是导入后跟导出的简写，即“我导入模块 <code>x.mjs</code>，然后重新导出部分或全部导出”。</p>
 </div>
 
-<p>有关示例，请参阅我们的 <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>。 在这个例子中（基于我们之前的类示例），我们有一个名为 <code>shapes.mjs</code> 的额外模块，它将 <code>circle.mjs</code>，<code>square.mjs</code> 和 <code>riangle.mjs</code> 中的所有功能聚合在一起。 我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。 所以模块结构现在是这样的：</p>
+<p>有关示例，请参阅我们的 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation">module-aggregation</a>。 在这个例子中（基于我们之前的类示例），我们有一个名为 <code>shapes.mjs</code> 的额外模块，它将 <code>circle.mjs</code>，<code>square.mjs</code> 和 <code>riangle.mjs</code> 中的所有功能聚合在一起。 我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。 所以模块结构现在是这样的：</p>
 
 <pre>modules/
   canvas.mjs
@@ -380,7 +380,7 @@ export { name } from 'x.mjs'</pre>
 
 <pre class="brush: js">export { Square };</pre>
 
-<p>接下来是聚合部分。 在 <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.mjs</a></code> 里面，我们包括以下几行：</p>
+<p>接下来是聚合部分。 在 <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js">shapes.mjs</a></code> 里面，我们包括以下几行：</p>
 
 <pre class="brush: js">export { Square } from '/js-examples/modules/module-aggregation/modules/shapes/square.mjs';
 export { Triangle } from '/js-examples/modules/module-aggregation/modules/shapes/triangle.mjs';
@@ -417,9 +417,9 @@ import { Triangle } from './modules/triangle.mjs';</pre>
     // Do something with the module.
   });</pre>
 
-<p>我们来看一个例子。在 <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮 -- “圆形”，“方形”和“三角形” -- 按下时，动态加载所需的模块，然后使用它来绘制相关的形状。</p>
+<p>我们来看一个例子。在 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports">dynamic-module-imports</a> 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮 -- “圆形”，“方形”和“三角形” -- 按下时，动态加载所需的模块，然后使用它来绘制相关的形状。</p>
 
-<p>在这个例子中，我们只对 <a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a> 和 <a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.js">main.mjs</a> 文件进行了更改 -- 模块导出保持与以前相同。</p>
+<p>在这个例子中，我们只对 <a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html">index.html</a> 和 <a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js">main.mjs</a> 文件进行了更改 -- 模块导出保持与以前相同。</p>
 
 <p>在<code>main.mjs</code>中，我们使用<code><a href="/en-US/docs/Web/API/Document/querySelector">document.querySelector()</a></code>调用获取了对每个按钮的引用，例如：</p>
 

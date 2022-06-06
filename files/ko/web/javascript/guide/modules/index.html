@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Introducing_an_example">Introducing an example</h2>
 
-<p>모듈 사용법을 설명하기 위해 Github에 <a href="https://github.com/mdn/js-examples/tree/master/modules">간단한 예제 모음</a>을 만들었습니다. 이 예제들은 웹 페이지에 {{htmlelement("canvas")}} 요소(element)를 만들고, 캔버스에 다양한 도형을 그리고, 그린것에 대한 정보를 보고하는 간단한 모듈 집합입니다.</p>
+<p>모듈 사용법을 설명하기 위해 Github에 <a href="https://github.com/mdn/js-examples/tree/master/module-examples">간단한 예제 모음</a>을 만들었습니다. 이 예제들은 웹 페이지에 {{htmlelement("canvas")}} 요소(element)를 만들고, 캔버스에 다양한 도형을 그리고, 그린것에 대한 정보를 보고하는 간단한 모듈 집합입니다.</p>
 
 <p>이것들은 매우 사소한 것이지만, 모듈을 명확하게 설명하기 의해 의도적으로 단순하게 유지중입니다.</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Basic_example_structure">Basic example structure</h2>
 
-<p>첫 번째 예제(<a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>)를 보면 다음과 같은 파일 구조가 있습니다.</p>
+<p>첫 번째 예제(<a href="https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules">basic-modules</a>)를 보면 다음과 같은 파일 구조가 있습니다.</p>
 
 <pre>index.html
 main.js
@@ -103,7 +103,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre class="brush: js">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 문(statement)을 사용하고, 가져올 목록을 쉼표로 구분하여 나열한 뒤 괄호로 묶습니다. 그 뒤에는 from을 쓰고 모듈 파일의 경로를 작성합니다. (사이트 루트에 연관된 경로로, 우리의 <code>basic-modules</code> 예제는 <code>/js-examples/modules/basic-modules</code> 입니다) <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>에서 이러한 코드를 볼 수 있습니다.</p>
+<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 문(statement)을 사용하고, 가져올 목록을 쉼표로 구분하여 나열한 뒤 괄호로 묶습니다. 그 뒤에는 from을 쓰고 모듈 파일의 경로를 작성합니다. (사이트 루트에 연관된 경로로, 우리의 <code>basic-modules</code> 예제는 <code>/js-examples/modules/basic-modules</code> 입니다) <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.js</a></code>에서 이러한 코드를 볼 수 있습니다.</p>
 
 <p>그러나 우리는 경로를 조금 다르게 작성했습니다. 우리는 "현재 위치"를 의미하는 점(.) 구문을 사용하고 있으며, 그 다음에 찾고자하는 파일의 경로를 뒤에 써 줍니다. 이것은 상대적으로 전체 상대 경로를 작성하는 것보다 훨씬 빠르며, URL이 더 짧아 지므로 사이트 계층 구조의 다른 위치로 이동하더라도 이 예제가 계속 작동합니다.</p>
 
@@ -115,7 +115,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre><code>./modules/square.js</code></pre>
 
-<p><code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>에서 이러한 코드를 볼 수 있습니다.</p>
+<p><code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.js</a></code>에서 이러한 코드를 볼 수 있습니다.</p>
 
 <div class="blockIndicator note">
 <p><strong>주의</strong>: 일부 모듈 시스템에서는 파일 확장명을 생략할 수 있습니다. (예: <code>'/modules/square'</code>). 이것은 네이티브 자바스크립트에서는 작동하지 않습니다. 또한 앞에 슬래시를 포함해야 합니다.</p>
@@ -214,7 +214,7 @@ export { function1, function2 };
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';</pre>
 
-<p>실제 사례를 살펴보겠습니다. <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a> 디렉토리에서 원과 삼각형을 그리고 보고하기 위해 <code>circle.js</code> 와 <code>triangle.js</code> 모듈을 추가한다는 점만 제외하면, 앞의 예와 동일한 모듈 시스템을 볼 수 있습니다.</p>
+<p>실제 사례를 살펴보겠습니다. <a href="https://github.com/mdn/js-examples/tree/master/module-examples/renaming">renaming</a> 디렉토리에서 원과 삼각형을 그리고 보고하기 위해 <code>circle.js</code> 와 <code>triangle.js</code> 모듈을 추가한다는 점만 제외하면, 앞의 예와 동일한 모듈 시스템을 볼 수 있습니다.</p>
 
 <p>이 모듈듈 각각에는 내부적으로 동일한 이름의 기능이 있습니다. 따라서 각각 하단에 동일한 export 문(statement)이 있습니다.</p>
 
@@ -270,7 +270,7 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
 Module.function2()
 etc.</pre>
 
-<p>다시 한 번 실제 사례를 살펴보겠습니다. <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a> 디렉토리로 가면 같은 예제를 볼 수 있지만, 새로운 구문을 이용하기 위해 다시 작성합니다. 모듈에서 export는 모두 다음과 같은 간단한 형식으로 이루어집니다.</p>
+<p>다시 한 번 실제 사례를 살펴보겠습니다. <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-objects">module-objects</a> 디렉토리로 가면 같은 예제를 볼 수 있지만, 새로운 구문을 이용하기 위해 다시 작성합니다. 모듈에서 export는 모두 다음과 같은 간단한 형식으로 이루어집니다.</p>
 
 <pre class="brush: js">export { name, draw, reportArea, reportPerimeter };</pre>
 
@@ -294,7 +294,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>이전에 암시 했듯이 class를 export하거나 import 할 수도 있습니다. 이것은 코드에서 충돌을 피하기 위한 또 다른 옵션으로, 모듈 코드가 이미 객체 지향 스타일로 작성된 경우에 특히 유용합니다.</p>
 
-<p>우리의 <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> 디렉토리에서 ES 클래스로 다시 작성된 도형 그리기 모듈의 예를 볼 수 있습니다. 예를들어 <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> 파일에는 모든 기능이 단일 클래스에 포함되어 있습니다.</p>
+<p>우리의 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/classes">classes</a> 디렉토리에서 ES 클래스로 다시 작성된 도형 그리기 모듈의 예를 볼 수 있습니다. 예를들어 <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js">square.js</a></code> 파일에는 모든 기능이 단일 클래스에 포함되어 있습니다.</p>
 
 <pre class="brush: js">class Square {
   constructor(ctx, listId, length, x, y, color) {
@@ -312,7 +312,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <pre class="brush: js">export { Square };</pre>
 
-<p><code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code> 에서 우리는 다음과 같이 import 합니다.</p>
+<p><code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js">main.js</a></code> 에서 우리는 다음과 같이 import 합니다.</p>
 
 <pre class="brush: js">import { Square } from './modules/square.js';</pre>
 
@@ -334,7 +334,7 @@ export { name } from 'x.js'</pre>
 <p><strong>주의</strong>: 이것은 실제로 import 의 줄임말이고, 그 뒤에 export가 옵니다. 예를들면, "나는 모듈 <code>x.js</code>를 가져온 다음, 일부 또는 전부를 export 하겠다" 라는 뜻입니다.</p>
 </div>
 
-<p>예를들어 <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a> 디렉토리를 참조하겠습니다. 이 예제에서는 이전 클래스 예제를 기반으로 <code>circle.js</code>, <code>square.js</code>, <code>triangle.js</code> 의 모든 기능을 함께 모으는 <code>shapes.js</code>라는 추가 모듈이 있습니다. 또한 우리는 <code>shapes</code> 모듈 디렉토리 안에 있는 서브 디렉토리 내에서 서브 모듈을 이동 시켰습니다. 이제 모듈 구조는 다음과 같습니다.</p>
+<p>예를들어 <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation">module-aggregation</a> 디렉토리를 참조하겠습니다. 이 예제에서는 이전 클래스 예제를 기반으로 <code>circle.js</code>, <code>square.js</code>, <code>triangle.js</code> 의 모든 기능을 함께 모으는 <code>shapes.js</code>라는 추가 모듈이 있습니다. 또한 우리는 <code>shapes</code> 모듈 디렉토리 안에 있는 서브 디렉토리 내에서 서브 모듈을 이동 시켰습니다. 이제 모듈 구조는 다음과 같습니다.</p>
 
 <pre>modules/
   canvas.js
@@ -348,7 +348,7 @@ export { name } from 'x.js'</pre>
 
 <pre class="brush: js">export { Square };</pre>
 
-<p>다음은 집합(aggregation) 부분입니다. <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code> 안에는 다음과 같은 내용이 포함되어 있습니다.</p>
+<p>다음은 집합(aggregation) 부분입니다. <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js">shapes.js</a></code> 안에는 다음과 같은 내용이 포함되어 있습니다.</p>
 
 <pre class="brush: js">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
@@ -381,9 +381,9 @@ import { Triangle } from './modules/triangle.js';</pre>
     // Do something with the module.
   });</pre>
 
-<p>예제를 보겠습니다. In the <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> 디렉토리에는 classes 예제를 기반으로 한 또 다른 예제가 있습니다. 이번에는 예제가 로딩될 때 캔버스에 아무것도 그리지 않습니다. 대신 우리는 세 개의 버튼("Circle", "Square", "Triangle")이 포함되어 있습니다. 이 버튼을 누르면 필요한 모듈을 동적으로 불러온 다음, 이를 사용하여 연관된 도형을 그립니다.</p>
+<p>예제를 보겠습니다. In the <a href="https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports">dynamic-module-imports</a> 디렉토리에는 classes 예제를 기반으로 한 또 다른 예제가 있습니다. 이번에는 예제가 로딩될 때 캔버스에 아무것도 그리지 않습니다. 대신 우리는 세 개의 버튼("Circle", "Square", "Triangle")이 포함되어 있습니다. 이 버튼을 누르면 필요한 모듈을 동적으로 불러온 다음, 이를 사용하여 연관된 도형을 그립니다.</p>
 
-<p>이 예제에서 우리는 <a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a> 파일과 <a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.js">main.js</a> 파일만 변경했습니다. 모듈 export는 이전과 동일하게 유지됩니다.</p>
+<p>이 예제에서 우리는 <a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html">index.html</a> 파일과 <a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js">main.js</a> 파일만 변경했습니다. 모듈 export는 이전과 동일하게 유지됩니다.</p>
 
 <p><code>main.js</code> 에서 <code><a href="/en-US/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 를 사용하여 각 버튼에 대한 참조를 가져왔습니다. 예를들면 다음과 같습니다.</p>
 
