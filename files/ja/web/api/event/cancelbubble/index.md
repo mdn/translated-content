@@ -1,41 +1,37 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
+page-type: web-api-instance-property
+tags:
+  - プロパティ
+  - リファレンス
+  - 非推奨
+browser-compat: api.Event.cancelBubble
 translation_of: Web/API/Event/cancelBubble
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-The `**Event.cancelBubble**` property は過去の経緯上、{{domxref("Event.stopPropagation()")}}の別名です。トリガーとしたevent handlerから終了する前に、これに`true`に設定すると、発生イベントを親要素に伝播(propagation)させません。
+**`cancelBubble`** は {{domxref("Event")}} インターフェイスのプロパティで、非推奨です。代わりに替わりに {{domxref("Event.stopPropagation()")}} を使用してください。
+イベントハンドラーから戻る前にこの値を `true` に設定すると、イベントの伝播を防ぐことができます。それ以降の実装では、この値を `false` に設定しても何も起こりません。
+詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
-<h2 id="Syntax" name="Syntax">文法</h2>
+## 値
 
-<pre class="syntaxbox">event.cancelBubble = <em>bool;</em>
-<em>var bool</em> = event.cancelBubble;</pre>
+論理値です。 `true` の値は、イベントがこれ以上伝播しないことを意味します。
 
-<h2 id="使用例">使用例</h2>
+## 例
 
-<pre>elem.onclick = function(e) {
- // do cool things here
-  e.cancelBubble = true;
-}</pre>
+```js
+elem.onclick = function(event) {
+  // Do cool things here
+  event.cancelBubble = true;
+}
+```
 
-<h2 id="詳細情報">詳細情報</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">詳細</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancellBubble')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ_互換性">ブラウザ 互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("api.Event.cancelBubble")}}
+{{Compat}}
