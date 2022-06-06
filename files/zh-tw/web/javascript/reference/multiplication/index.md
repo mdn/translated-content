@@ -1,5 +1,5 @@
 ---
-title: Multiplication (*)
+title: 相乘運算子 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
 tags:
   - JavaScript
@@ -10,26 +10,26 @@ browser-compat: javascript.operators.multiplication
 ---
 {{jsSidebar("Operators")}}
 
-The multiplication operator (`*`) produces the product of the operands.
+相乘運算子 (`*`) 是用來取得兩個運算元的乘積。
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
 
-## Syntax
+## 語法
 
 ```js
 x * y
 ```
 
-## Examples
+## 範例
 
-### Multiplication using numbers
+### 乘以數字
 
 ```js
  2 * 2      // 4
 -2 * 2     // -4
 ```
 
-### Multiplication with Infinity
+### 乘以無限（Infinity）
 
 ```js
 Infinity * 0         // NaN
