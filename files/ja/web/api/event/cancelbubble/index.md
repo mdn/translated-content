@@ -3,9 +3,9 @@ title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
 translation_of: Web/API/Event/cancelBubble
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>Event.cancelBubble</strong></code> property は過去の経緯上、{{domxref("Event.stopPropagation()")}}の別名です。トリガーとしたevent handlerから終了する前に、これに<code>true</code>に設定すると、発生イベントを親要素に伝播(propagation)させません。</p>
+The `**Event.cancelBubble**` property は過去の経緯上、{{domxref("Event.stopPropagation()")}}の別名です。トリガーとしたevent handlerから終了する前に、これに`true`に設定すると、発生イベントを親要素に伝播(propagation)させません。
 
 <h2 id="Syntax" name="Syntax">文法</h2>
 
@@ -38,4 +38,4 @@ translation_of: Web/API/Event/cancelBubble
 
 <h2 id="ブラウザ_互換性">ブラウザ 互換性</h2>
 
-<p>{{Compat("api.Event.cancelBubble")}}</p>
+{{Compat("api.Event.cancelBubble")}}

@@ -7,7 +7,7 @@ tags:
   - Event
   - Method
   - Propagation
-  - Reference
+  - リファレンス
   - actions
   - default
   - stopPropagation
@@ -15,7 +15,7 @@ translation_of: Web/API/Event/stopPropagation
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>stopPropagation()</code></strong>は {{domxref("Event")}} インターフェイスのメソッドで、現在のイベントのキャプチャリングまたはバブリングの過程におけるこれ以上の伝播を抑止します。ただし、デフォルトの動作の発生を防ぐことはできません。例えば、リンクのクリックはまだ処理されています。これらの動作を停止したい場合は、{{domxref("Event.preventDefault", "preventDefault()")}} メソッドを参照してください。</p>
+**`stopPropagation()`**は {{domxref("Event")}} インターフェイスのメソッドで、現在のイベントのキャプチャリングまたはバブリングの過程におけるこれ以上の伝播を抑止します。ただし、デフォルトの動作の発生を防ぐことはできません。例えば、リンクのクリックはまだ処理されています。これらの動作を停止したい場合は、{{domxref("Event.preventDefault", "preventDefault()")}} メソッドを参照してください。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -23,15 +23,15 @@ translation_of: Web/API/Event/stopPropagation
 
 <h3 id="Parameters" name="Parameters">引数</h3>
 
-<p>なし</p>
+なし
 
 <h3 id="Return_value" name="Return_value">戻り値</h3>
 
-<p><code>undefined</code></p>
+`undefined`
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>このメソッドと DOM におけるイベントの伝播のより詳しい例については、<a href="/ja/docs/Web/API/Document_Object_Model/Examples#Example_5.3A_Event_Propagation">イベントの伝播の例 5</a> を参照してください</p>
+このメソッドと DOM におけるイベントの伝播のより詳しい例については、<a href="/ja/docs/Web/API/Document_Object_Model/Examples#Example_5.3A_Event_Propagation">イベントの伝播の例 5</a> を参照してください
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -64,7 +64,7 @@ translation_of: Web/API/Event/stopPropagation
 
 
 
-<p>{{Compat("api.Event.stopPropagation")}}</p>
+{{Compat("api.Event.stopPropagation")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

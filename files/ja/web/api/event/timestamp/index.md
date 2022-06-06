@@ -6,16 +6,16 @@ tags:
   - DOM
   - Event
   - Property
-  - Reference
+  - リファレンス
   - timeStamp
 translation_of: Web/API/Event/timeStamp
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>イベントが発生した時刻 (ミリ秒単位) を表します。</p>
+イベントが発生した時刻 (ミリ秒単位) を表します。
 
 <div class="note">
-<p><strong>注記:</strong> このプロパティは、イベントシステムが個々のイベント向けにサポートしている場合に限り動作します。</p>
+**注記:** このプロパティは、イベントシステムが個々のイベント向けにサポートしている場合に限り動作します。
 </div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
@@ -25,9 +25,9 @@ translation_of: Web/API/Event/timeStamp
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>この値は、現在のドキュメントの生成からイベントが作成された時点までの時間（ミリ秒単位）です。</p>
+この値は、現在のドキュメントの生成からイベントが作成された時点までの時間（ミリ秒単位）です。
 
-<p>新しい実装では、5 マイクロ秒（0.005 ms = 0.005 ミリ秒）精度の {{domxref("DOMHighResTimeStamp")}} です。古い実装では、1 ミリ秒精度の {{domxref("DOMTimeStamp")}} です。</p>
+新しい実装では、5 マイクロ秒（0.005 ms = 0.005 ミリ秒）精度の {{domxref("DOMHighResTimeStamp")}} です。古い実装では、1 ミリ秒精度の {{domxref("DOMTimeStamp")}} です。
 
 <h2 id="Example" name="Example">例</h2>
 
@@ -49,7 +49,7 @@ document.body.addEventListener("keypress", getTime);</pre>
 
 <h3 id="Result" name="Result">表示結果</h3>
 
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
+{{EmbedLiveSample("Example", "100%", 100)}}
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -82,4 +82,4 @@ document.body.addEventListener("keypress", getTime);</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-<p>{{Compat("api.Event.timeStamp")}}</p>
+{{Compat("api.Event.timeStamp")}}

@@ -6,13 +6,13 @@ tags:
   - Constructor
   - DOM
   - Event
-  - Reference
+  - リファレンス
   - コンストラクター
 translation_of: Web/API/Event/Event
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>Event()</strong></code> コンストラクターは、新しい {{domxref("Event")}} を生成します。</p>
+`**Event()**` コンストラクターは、新しい {{domxref("Event")}} を生成します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -21,14 +21,14 @@ translation_of: Web/API/Event/Event
 <h3 id="Values" name="Values">値</h3>
 
 <dl>
- <dt><code><var>typeArg</var></code></dt>
- <dd>{{domxref("DOMString")}} で、イベントの名前を表します。</dd>
- <dt><code><var>eventInit</var></code> {{optional_inline}}</dt>
- <dd><code>EventInit</code> 辞書で、以下のフィールドを持ちます。
+- `<var>typeArg</var>`
+  - : {{domxref("DOMString")}} で、イベントの名前を表します。
+- `<var>eventInit</var>` {{optional_inline}}
+ <dd>`EventInit` 辞書で、以下のフィールドを持ちます。
  <ul>
-  <li><code>bubbles</code>: {{jsxref("Boolean")}} で、イベントがバブリングするかどうかを示します。既定値は <code>false</code> です。</li>
-  <li><code>cancelable</code>: {{jsxref("Boolean")}} で、イベントがキャンセル可能かどうかを示します。既定値は <code>false</code> です。</li>
-  <li><code>composed</code>: {{jsxref("Boolean")}} で、イベントがシャドウルートの外のリスナーに伝わるかどうかを示します (詳しくは {{domxref("Event.composed")}} を参照してください)。既定値は <code>false</code> です。</li>
+  <li>`bubbles`: {{jsxref("Boolean")}} で、イベントがバブリングするかどうかを示します。既定値は `false` です。</li>
+  <li>`cancelable`: {{jsxref("Boolean")}} で、イベントがキャンセル可能かどうかを示します。既定値は `false` です。</li>
+  <li>`composed`: {{jsxref("Boolean")}} で、イベントがシャドウルートの外のリスナーに伝わるかどうかを示します (詳しくは {{domxref("Event.composed")}} を参照してください)。既定値は `false` です。</li>
  </ul>
  </dd>
 </dl>
@@ -65,7 +65,7 @@ myDiv.dispatchEvent(evt);
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.Event.Event")}}</p>
+{{Compat("api.Event.Event")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

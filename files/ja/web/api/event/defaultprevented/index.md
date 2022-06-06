@@ -13,9 +13,9 @@ translation_of: Web/API/Event/defaultPrevented
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p><code><strong>defaultPrevented</strong></code> は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。</p>
+`**defaultPrevented**` は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Boolean")}} で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。
 
-<div class="note"><strong>メモ:</strong> 標準外かつ非推奨の <code>getPreventDefault()</code> メソッドの代わりに、これを使用してください (see {{ bug(691151) }})。</div>
+<div class="note">**メモ:** 標準外かつ非推奨の `getPreventDefault()` メソッドの代わりに、これを使用してください (see {{ bug(691151) }})。</div>
 
 <h2 id="構文">構文</h2>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/Event/defaultPrevented
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>{{jsxref("Boolean")}} で、 <code>true</code> は既定の{{glossary("user agent", "ユーザーエージェント")}}の操作が抑制されたことを、 <code>false</code> はそうではないことを表しています。</p>
+{{jsxref("Boolean")}} で、 `true` は既定の{{glossary("user agent", "ユーザーエージェント")}}の操作が抑制されたことを、 `false` はそうではないことを表しています。
 
 <h2 id="Example" name="Example">例</h2>
 
-<p>この例は2つの {{htmlElement("a")}} 要素のリンクを訪れる試みをログ出力します。 JavaScript は2番目のリンクの動作を抑制するために使用しています。</p>
+この例は2つの {{htmlElement("a")}} 要素のリンクを訪れる試みをログ出力します。 JavaScript は2番目のリンクの動作を抑制するために使用しています。
 
 <h3 id="HTML">HTML</h3>
 
@@ -60,7 +60,7 @@ document.addEventListener('click', logClick);</pre>
 
 <h3 id="結果">結果</h3>
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -83,4 +83,4 @@ document.addEventListener('click', logClick);</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("api.Event.defaultPrevented")}}</p>
+{{Compat("api.Event.defaultPrevented")}}
