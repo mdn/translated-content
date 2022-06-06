@@ -24,32 +24,26 @@ x ** y
 
 ## 簡介
 
-The exponentiation operator is
-right-associative: `a ** b ** c` is equal to
+指數運算子是 right-associative： 
+`a ** b ** c` 相當於
 `a ** (b ** c)`.
 
-In most languages, such as PHP, Python, and others that have an exponentiation operator
-(`**`), the exponentiation operator is defined to have a higher precedence
-than unary operators, such as unary `+` and unary `-`, but there
-are a few exceptions. For example, in Bash, the `**` operator is defined to
-have a lower precedence than unary operators.
+在絕大多數的程式語言，例如 PHP、Python……等等，指數運算的優先順序比一元運算子（ `+` 或 `-` ）較高。但並非所有程式語言均是如此。
 
-In JavaScript, it is impossible to write an ambiguous exponentiation expression. That
-is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
-immediately before the base number; doing so will cause a SyntaxError.
-
+舉例來說，在 Bash， `**` 的優先順序就低於一元運算子。
+ 
+在 Javascript，模棱兩可的求冪運算式。說得清楚一點，`+/-/~/!/delete/void/typeof` 這類一元運算子均不能置於底數之前，否則會出現 `SyntaxError`。
+ 
 ```js
 -2 ** 2;
-// 4 in Bash, -4 in other languages.
-// This is invalid in JavaScript, as the operation is ambiguous.
+// 在 Bash 的結果為 4；其他語言則為 -4
+// 在 JavaScript 則是被視為語意不明。
 
 -(2 ** 2);
-// -4 in JavaScript and the author's intention is unambiguous.
+// 在 Javascript 就會得出 -4。這種寫法的語意就很明確
 ```
 
-Note that some programming languages use the caret symbol <kbd>^</kbd> for
-exponentiation, but JavaScript uses that symbol for the
-[bitwise logical XOR operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
+注意，在部分語言之中，指數運算採用插入符號 <kbd>^</kbd> ，但是在 Javascript ，<kbd>^</kbd> 則是用於[XOR 位元邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
 ## 範例
 
