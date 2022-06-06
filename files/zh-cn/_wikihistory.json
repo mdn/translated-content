@@ -13204,16 +13204,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:38:34.243Z",
-    "contributors": [
-      "Bayes",
-      "joaner",
-      "AutumnFish",
-      "liuhe",
-      "zhangqiong"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onanimationcancel": {
     "modified": "2019-03-23T22:20:43.530Z",
     "contributors": [
@@ -46180,13 +46170,13 @@
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
-    "modified": "2019-04-30T14:23:21.618Z",
+    "modified": "2019-03-23T22:38:34.243Z",
     "contributors": [
-      "wbamberg",
-      "hhxxhg",
-      "fscholz",
-      "xgqfrms-GitHub",
-      "m2mbob"
+      "Bayes",
+      "joaner",
+      "AutumnFish",
+      "liuhe",
+      "zhangqiong"
     ]
   },
   "conflicting/Web/API/Headers/get": {

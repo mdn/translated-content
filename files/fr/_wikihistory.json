@@ -14995,13 +14995,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:29:18.151Z",
-    "contributors": [
-      "NemoNobobyPersonne",
-      "Dwaaren"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onauxclick": {
     "modified": "2020-10-15T22:33:47.986Z",
     "contributors": [
@@ -41152,11 +41145,10 @@
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
-    "modified": "2019-04-30T14:03:20.605Z",
+    "modified": "2019-03-23T22:29:18.151Z",
     "contributors": [
-      "wbamberg",
-      "fscholz",
-      "Kalwyn"
+      "NemoNobobyPersonne",
+      "Dwaaren"
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/ended_event": {

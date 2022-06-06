@@ -3783,6 +3783,7 @@
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IDBFileRequest/lockedFile
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalFetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
