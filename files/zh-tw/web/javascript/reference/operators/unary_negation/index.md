@@ -10,7 +10,7 @@ browser-compat: javascript.operators.unary_negation
 ---
 {{jsSidebar("Operators")}}
 
-The unary negation operator (`-`) precedes its operand and negates it.
+一元負號運算子 (`-`) 置於運算元之前，並將運算元轉為其負值。
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
 
@@ -53,12 +53,12 @@ const y = -x;
 
 ## 參見
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
+- [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division) 
+- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [正號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)

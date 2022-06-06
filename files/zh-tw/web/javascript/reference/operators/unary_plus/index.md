@@ -10,8 +10,7 @@ browser-compat: javascript.operators.unary_plus
 ---
 {{jsSidebar("Operators")}}
 
-The unary plus operator (`+`) precedes its operand and evaluates to its
-operand but attempts to convert it into a number, if it isn't already.
+一元正號運算子 (`+`) 置於運算元之前並取其數值。如果可以，亦會將之轉為數字。
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
 
@@ -23,14 +22,17 @@ operand but attempts to convert it into a number, if it isn't already.
 
 ## 詳細說明
 
-Although unary negation (`-`) also can convert non-numbers, unary plus is
-the fastest and preferred way of converting something into a number, because it does not
-perform any other operations on the number. It can convert string representations of
-integers and floats, as well as the non-string values `true`,
-`false`, and `null`. Integers in both decimal and hexadecimal
-(`0x`-prefixed) formats are supported. Negative numbers are supported (though
-not for hex). Using the operator on BigInt values throws a TypeError. If it cannot parse
-a particular value, it will evaluate to {{jsxref("NaN")}}.
+一元負號運算子 (`-`) 也可以轉換非數字，但正號運算子卻是將運算元轉換為數字的最快和首選方法。
+
+它不會對該運算元進行任何其他操作。
+
+它可以將字串轉為整數和浮點數（如果字串值符合）；亦可使用在非字串的運算元，例如 `true`、`false`、`null`。 
+
+正號運算子支持十進制和十六進制整數（`0x`前綴）、負數（雖然不適用於十六進制）格式。 
+
+若用於 BigInt 類型的值，會觸發 TypeError。 
+
+如果無法解析值，它會回傳 {{jsxref("NaN")}}。
 
 ## 範例
 
@@ -66,12 +68,12 @@ console.log(+y);
 
 ## 參見
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
+- [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division) 
+- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation) 
