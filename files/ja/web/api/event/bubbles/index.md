@@ -1,41 +1,28 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
+page-type: web-api-instance-property
 tags:
-  - API
-  - Bubbling
-  - DOM
-  - DOM Events
-  - Event
-  - Event Handling
-  - Propagation
-  - Property
-  - Read-only
-  - リファレンス
-  - bubbles
   - プロパティ
-  - 読取専用
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.Event.bubbles
 translation_of: Web/API/Event/bubbles
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-`**bubbles**` は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM をバブリングするかしないかを示します。
+**`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。
 
-<div class="note">
-**メモ**: バブリングについての詳細は、<a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">イベントのバブリングとキャプチャ</a>を参照してください。
-</div>
+> **Note:** バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="brush: js">var <em>doesItBubble</em> = <em>event</em>.bubbles;</pre>
+論理値で、このイベントが DOM ツリーをバブリングするのであれば `true` です。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-`bool` は`true` か `false`であり、イベントがバブリングするものかどうかを示しています。
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js">function handleInput(e) {
+```js
+function handleInput(e) {
   // Checks whether the event bubbles and ...
   if (!e.bubbles) {
     // ... passes the event along if does not
@@ -45,44 +32,18 @@ translation_of: Web/API/Event/bubbles
   // Already bubbling
   doOutput(e);
 }
-</pre>
+```
 
-<div class="note">
-**メモ**: 一部のイベントだけがバブリングします。バブリングするイベントでは、このプロパティが `true` に設定されています。イベントがバブリングするかどうかを確認するためにこのプロパティを使用することができます。
-</div>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-bubbles', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-canBubble', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-{{Compat("api.Event.bubbles")}}
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("Event.stopPropagation", "stopPropagation()")}} はイベントのバブリングを停止します</li>
- <li>{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} は同じイベントが DOM 内の同じ水準で他のリスナーを呼び出すことを抑止します</li>
- <li>{{domxref("Event.preventDefault", "preventDefault()")}} は拡散を続けることを許可しますが、ブラウザーがイベントを扱うためのリスナーがない既定のアクションを実行することを許可しません</li>
-</ul>
+- {{domxref("Event.stopPropagation", "stopPropagation()")}} はイベントのバブリングを停止します
+- {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} は同じイベントが DOM 内の同じ水準で他のリスナーを呼び出すことを抑止します
+- {{domxref("Event.preventDefault", "preventDefault()")}} は拡散を続けることを許可しますが、ブラウザーがイベントを扱うためのリスナーがない既定のアクションを実行することを許可しません
