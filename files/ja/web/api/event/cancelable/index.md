@@ -1,43 +1,38 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Event
-  - Property
-  - Read-only
-  - リファレンス
-  - イベント
   - プロパティ
   - 読み取り専用
+  - リファレンス
+browser-compat: api.Event.cancelable
 translation_of: Web/API/Event/cancelable
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<span class="seoSummary">The **<dfn>`cancelable`</dfn>** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントがキャンセル可能かどうか、イベントが発生しないように抑止することができるかを示します。</span>イベントがキャンセルでき<em>ない</em>場合、 `cancelable` プロパティは `false` となり、イベントが発生することをイベントリスナーが抑止することができないことを示します。
+**`cancelable`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントがキャンセル可能かどうか、イベントが発生しないように抑止することができるかを示します。
 
-複数の種類のイベントを扱うイベントリスナーは、 {{domxref("event.preventDefault", "preventDefault()")}} メソッドを呼び出す前に `cancelable` をチェックしたほうが良いかもしれません。
+イベントがキャンセルでき*ない*場合、 `cancelable` プロパティは `false` となり、イベントが発生することをイベントリスナーが抑止することができないことを示します。
 
-ブラウザーネイティブのイベントのうち、キャンセル可能なもののほとんどは、ユーザーのページとの対話の結果から発生したものです。 {{domxref("Element/click_event", "click")}}, {{domxref("Document/scroll_event", "scroll")}}, {{domxref("Window/beforeunload_event", "beforeunload")}} の各イベントをキャンセルすると、それぞれユーザーが何かをクリックすること、ページをスクロールすること、他のページに移動することをそれぞれ抑止することができます。
+ブラウザーネイティブのイベントのうち、キャンセル可能なもののほとんどは、ユーザーのページとの対話の結果から発生したものです。 {{domxref("Element/click_event", "click")}}, {{domxref("Document/wheel_event", "wheel")}}, {{domxref("Window/beforeunload_event", "beforeunload")}} の各イベントをキャンセルすると、それぞれユーザーが何かをクリックすること、ページをスクロールすること、他のページに移動することをそれぞれ抑止することができます。
 
-その他の JavaScript によって作成された<a href="/ja/docs/Web/API/Event/Event">カスタムイベント</a>は、作成時にキャンセル可能であるかどうかを制御します。
+その他の JavaScript によって作成された[カスタムイベント](/ja/docs/Web/API/Event/Event)は、作成時にキャンセル可能であるかどうかを制御します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+イベントをキャンセルするには、そのイベントに対して {{domxref("event.preventDefault", "preventDefault()")}} メソッドを呼び出してください。これにより、実装はイベントに関連付けられた既定のアクションを実行しないようになります。
 
-<pre class="syntaxbox"><var>bool</var> = <em>event</em>.cancelable;
-</pre>
+複数の種類のイベントを処理するイベントリスナーは、 {{domxref("event.preventDefault", "preventDefault()")}} メソッドを呼び出す前に `cancelable` をチェックしたほうがいいかもしれません。
 
-<h3 id="Value" name="Value">値</h3>
+## 値
 
-結果は {{domxref("Boolean")}} で、イベントがキャンセル可能であれば `true` です。
+論理値で、イベントがキャンセル可能であれば `true` です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-例えば、ブラウザーベンダーは {{domxref("Document/wheel_event", "wheel")}} イベントが、<a href="https://github.com/WICG/interventions/issues/33" rel="external">最初にリスナーが呼び出されたとき</a>のみキャンセル可能にしようと提案しています。 — その後の `wheel` イベントはキャンセルできません。
+例えば、ブラウザーベンダーは {{domxref("Document/wheel_event", "wheel")}} イベントが、[最初にリスナーが呼び出されたとき](https://github.com/WICG/interventions/issues/33)のみキャンセル可能にしようと提案しています。 — その後の `wheel` イベントはキャンセルできません。
 
-<pre class="brush:js">function preventScrollWheel(event) {
+```js
+function preventScrollWheel(event) {
   if (typeof event.cancelable !== 'boolean' || event.cancelable) {
     // The event can be canceled, so we do so.
     event.preventDefault();
@@ -50,38 +45,12 @@ translation_of: Web/API/Event/cancelable
 }
 
 document.addEventListener('wheel', preventScrollWheel);
-</pre>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## 仕様書
 
-イベントがキャンセル可能か不可能かは、イベントが初期化されたときに決定されます。
+{{Specifications}}
 
-イベントをキャンセルするには、イベントの {{domxref("event.preventDefault", "preventDefault()")}} メソッドを呼び出してください。これはイベントに関連付けられた既定の動作を実行する実装を維持します。
+## ブラウザーの互換性
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-{{Compat("api.Event.cancelable")}}
+{{Compat}}
