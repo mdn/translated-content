@@ -1,139 +1,51 @@
 ---
-title: File and Directory Entries API
+title: ファイルとディレクトリー項目 API
 slug: Web/API/File_and_Directory_Entries_API
+page-type: web-api-overview
 tags:
   - API
-  - File System API
-  - File and Directory Entries API
-  - Files
-  - NeedsTranslation
-  - Non-standard
-  - Overview
-  - Reference
-  - TopicStub
+  - ファイルとディレクトリー項目 API
+  - ファイル
+  - 概要
+  - リファレンス
+browser-compat: api.FileSystem
 translation_of: Web/API/File_and_Directory_Entries_API
 ---
-<p>{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}</p>
+{{DefaultAPISidebar("File and Directory Entries API")}}
 
-<p>The File and Directory Entries API simulates a local file system that web apps can navigate within and access files in. You can develop apps which read, write, and create files and/or directories in a virtual, sandboxed file system.</p>
+ファイルとディレクトリー項目 API (File and Directory Entries API) は、ウェブアプリケーションが移動してファイルにアクセスできるローカルファイルシステムをシミュレートします。サンドボックス化された仮想的なファイルシステムで、ファイルやディレクトリーの読み書きや作成を行うアプリを開発することができます。
 
-<div class="note">
-<p>Because this is a non-standard API, whose specification is not currently on a standards track, it's important to keep in mind that not all browsers implement it, and those that do may implement only small portions of it. Check the <a href="#browser_compatibility">Browser compatibility</a> section for details.</p>
-</div>
+## ファイルシステムへのアクセス権の取得
 
-<p>Two very similar APIs exist depending on whether you desire asynchronous or synchronous behavior. The synchronous API is indended to be used inside a {{domxref("Worker")}} and will return the values you desire. The asynchronous API will not block and functions and the API will not return values; instead, you will need to supply a callback function to handle the response whenever it arrives.</p>
+仕様の現在の草案で定義されているファイルシステムへのアクセスを取得する方法は 2 つあります。
 
-<div class="warning">
-<p>The Firefox implementation of the File and Directory Entries API is very limited; there is no support for creating files. Only for accessing files which are selected by the user in a file {{HTMLElement("input")}} element (see {{domxref("HTMLInputElement")}} as well) or when a file or directory is provided to the Web site or app using <a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API">drag and drop</a>. Firefox also does not implement the synchronous API. Check the browser compatibility for any part of the API you use carefully, and see <a href="/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">File and Directory Entries API support in Firefox</a> for more details.</p>
-</div>
+- ドラッグ＆ドロップで {{domxref("HTMLElement/drop_event", "drop")}} イベントを扱う際、 {{domxref("DataTransferItem.webkitGetAsEntry()")}} を呼び出すとドロップされたアイテムの {{domxref("FileSystemEntry")}} を取得することができます。結果が `null` でなかった場合、これはドロップされたファイルまたはディレクトリーであり、ファイルシステム呼び出しを使用して取り扱うことができます。
+- {{domxref("HTMLInputElement.webkitEntries")}} プロパティでは、現在選択されているファイルの {{domxref("FileSystemFileEntry")}} オブジェクトにアクセスすることができますが、これはファイル選択へドラッグ＆ドロップされた場合に限られます（{{bug(1326031)}}）。 {{domxref("HTMLInputElement.webkitdirectory")}} が `true` である場合、 {{HTMLElement("input")}} 要素はディレクトリーピッカーとなり、それぞれの選択されたディレクトリーの {{domxref("FileSystemDirectoryEntry")}} オブジェクトを取得できます。
 
-<h2 id="Getting_access_to_a_file_system">Getting access to a file system</h2>
+## インターフェイス
 
-<p>There are two ways to get access to file systems defined in the current specification draft:</p>
+ファイルとディレクトリー項目 API には以下のインターフェイスがあります。
 
-<ul>
- <li>When handling a {{event("drop")}} event for drag and drop, you can call {{domxref("DataTransferItem.webkitGetAsEntry()")}} to get the {{domxref("FileSystemEntry")}} for a dropped item. If the result isn't <code>null</code>, then it's a dropped file or directory, and you can use file system calls to work with it.</li>
- <li>The {{domxref("HTMLInputElement.webkitEntries")}} property lets you access the {{domxref("FileSystemFileEntry")}} objects for the currently selected files, but only if they are dragged-and-dropped onto the file chooser ({{bug(1326031)}}). If {{domxref("HTMLInputElement.webkitdirectory")}} is <code>true</code>, the {{HTMLElement("input")}} element is instead a directory picker, and you get {{domxref("FileSystemDirectoryEntry")}} objects for each selected directory.</li>
-</ul>
+- {{domxref("FileSystem")}}
+  - : ファイルシステムを表します。
+- {{domxref("FileSystemEntry")}}
+  - : ファイルシステムにおける単一の項目を表現する基本インターフェイス。ファイルやディレクトリーを表現する他のインターフェイスによって実装される。
+- {{domxref("FileSystemFileEntry")}}
+  - : ファイルシステム内の単一のファイルを表します。
+- {{domxref("FileSystemDirectoryEntry")}}
+  - : ファイルシステム内の単一のディレクトリーを表します。
+- {{domxref("FileSystemDirectoryReader")}}
+  - : {{domxref("FileSystemDirectoryEntry.createReader()")}} を呼び出すことで生成され、このインターフェイスはディレクトリーの内容を読み取る機能を提供します。
 
-<h2 id="Asynchronous_API">Asynchronous API</h2>
+## 仕様書
 
-<p>The asynchronous API should be used for most operations, to prevent file system accesses from blocking the entire browser if used on the main thread. It includes the following interfaces:</p>
+{{Specifications}}
 
-<dl>
- <dt>{{domxref("FileSystem")}}</dt>
- <dd>Represents a file system.</dd>
- <dt>{{domxref("FileSystemEntry")}}</dt>
- <dd>The basic interface representing a single entry in a file system. This is implemented by other interfaces which represent files or directories.</dd>
- <dt>{{domxref("FileSystemFileEntry")}}</dt>
- <dd>Represents a single file in a file system.</dd>
- <dt>{{domxref("FileSystemDirectoryEntry")}}</dt>
- <dd>Represents a single directory in a file system.</dd>
- <dt>{{domxref("FileSystemDirectoryReader")}}</dt>
- <dd>Created by calling {{domxref("FileSystemDirectoryEntry.createReader()")}}, this interface provides the functionality which lets you read the contents of a directory.</dd>
- <dt>{{domxref("FileSystemFlags")}}</dt>
- <dd>Defines a set of values which are used when specifying option flags when calling certain methods in the <a href="/ja/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a>.</dd>
- <dt>{{DOMxRef("FileError")}} {{Obsolete_Inline}}</dt>
- <dd>Represents an error which is generated by asynchronous file system calls.</dd>
-</dl>
+## ブラウザーの互換性
 
-<p>There are also two global functions (which are not part of the specification at this time and are implemented only by Google Chrome). They're available on the {{domxref("Window")}} object and implemented in {{domxref("LocalFileSystem")}}: <code>requestFileSystem()</code> and <code>resolveLocalFileSystemURL()</code>.</p>
+{{Compat}}
 
-<h2 id="Synchronous_API">Synchronous API</h2>
+## 関連情報
 
-<p>The synchronous API is should only be used in {{domxref("Worker")}}s; these calls block until they're finished executing, and simply return the results instead of using callbacks. Using them on the main thread will block the browser, which is naughty. The interfaces below otherwise mirror the ones from the asynchronous API.</p>
-
-<dl>
- <dt>{{domxref("FileSystemSync")}}</dt>
- <dd>Represents a file system.</dd>
- <dt>{{domxref("FileSystemEntrySync")}}</dt>
- <dd>The basic interface representing a single entry in a file system. This is implemented by other interfaces which represent files or directories.</dd>
- <dt>{{domxref("FileSystemFileEntrySync")}}</dt>
- <dd>Represents a single file in a file system.</dd>
- <dt>{{domxref("FileSystemDirectoryEntrySync")}}</dt>
- <dd>Represents a single directory in a file system.</dd>
- <dt>{{domxref("FileSystemDirectoryReaderSync")}}</dt>
- <dd>Created by calling {{domxref("FileSystemDirectoryEntrySync.createReader()")}}, this interface provides the functionality which lets you read the contents of a directory.</dd>
- <dt>{{DOMxRef("FileException")}} {{Obsolete_Inline}}</dt>
- <dd>Represents an error which is generated by synchronous file system calls.</dd>
-</dl>
-
-<p>There are also two global functions (which are not part of the specification at this time and are implemented only by Google Chrome). They're available on the {{domxref("Worker")}} object and implemented in {{domxref("LocalFileSystemSync")}}: <code>requestFileSystemSync()</code> and <code>resolveLocalFileSystemSyncURL()</code>.</p>
-
-<h2 id="Other_Interfaces">Other Interfaces</h2>
-
-<dl>
- <dt>{{domxref("LocalFileSystem")}}</dt>
- <dd>Gives you access to a sandboxed file system.</dd>
- <dt>{{domxref("LocalFileSystemSync")}}</dt>
- <dt> </dt>
- <dt>{{domxref("LockedFile")}}</dt>
- <dd>Provides tools to deal with a given file with all the necessary locks.</dd>
- <dt>{{domxref("Metadata")}}{{experimental_inline}}</dt>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File System API')}}</td>
-   <td>{{Spec2('File System API')}}</td>
-   <td>Draft of proposed API</td>
-  </tr>
- </tbody>
-</table>
-
-<p>This API has no official W3C or WHATWG specification.</p>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div>
-<h3 id="FileSystem"><code>FileSystem</code></h3>
-
-<div>
-
-
-<p>{{Compat("api.FileSystem", 0)}}</p>
-
-<h3 id="FileSystemSync_property"><code>FileSystemSync</code> property</h3>
-
-<div>
-<p>{{Compat("api.FileSystemSync", 0)}}</p>
-</div>
-</div>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</a></li>
- <li><a href="/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">File and Directory Entries API support in Firefox</a></li>
-</ul>
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の Firefox での対応](/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
