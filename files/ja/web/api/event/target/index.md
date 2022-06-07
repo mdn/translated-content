@@ -1,97 +1,55 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - Event
-  - Property
+  - プロパティ
   - リファレンス
-  - delegation
-  - target
+  - 読み取り専用
+browser-compat: api.Event.target
 translation_of: Web/API/Event/target
 ---
 {{ApiRef("DOM")}}
 
-イベントを発生させたオブジェクトへの参照です。 イベントハンドラーがバブリング、またはキャプチャフェーズの間に呼び出されたとき、{{domxref("event.currentTarget")}} とは異なります。
+**`target`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが配信されたオブジェクトへの参照です。これは、イベントのバブリングまたはキャプチャ段階でイベントハンドラーが呼び出されたときの {{domxref("Event.currentTarget")}} とは異なります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox">theTarget = event.target</pre>
+関連する {{domxref("EventTarget")}} です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
 `event.target` プロパティは、**イベントデリゲーション**を実装するために使用できます。
 
-<pre><code>// リストを作ります
-var ul = document.createElement('ul');
+```js
+// リストの作成
+const ul = document.createElement('ul');
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+const li1 = document.createElement('li');
+const li2 = document.createElement('li');
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
-  // e.target はクリックされた &lt;li&gt; 要素を参照します
-  // これはコンテキスト内の親 &lt;ul&gt; を参照する e.currentTarget とは異なります
-  e.target.style.visibility = 'hidden';
+function hide(evt) {
+  // evt.target はクリックされた <li> 要素を参照しています。
+  // これはこのコンテキストで親である <ul> を参照している evt.currentTarget とは異なります。
+  evt.target.style.visibility = 'hidden';
 }
 
 // リストにリスナーを接続します
-// &lt;li&gt; がクリックされた時に発火します
-ul.addEventListener('click', hide, false);</code>
+// <li> がクリックされた時に発行されます。
+ul.addEventListener('click', hide, false);
+```
 
-</pre>
+## 仕様書
 
- 
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## ブラウザーの互換性
 
- 
+{{Compat}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様</th>
-   <th>状態</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
-
-{{Compat("api.Event.target")}}
-
-<h2 id="Compatibility_notes" name="Compatibility_notes">互換性のための注記</h2>
-
-IE 6-8 では、イベントモデルが異なります。イベントリスナーは、非標準の {{domxref('EventTarget.attachEvent')}} メソッドでアタッチされます。このモデルでは、イベントオブジェクトは `target` プロパティの代わりに、{{domxref('Event.srcElement')}} プロパティを持っており、意味的には `event.target` と同じです。
-
-<pre class="brush: js">function hide(e) {
-  // IE6-8 をサポート
-  var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
-}
-</pre>
-
-<h2 id="See_also" name="See_also">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Event/Comparison_of_Event_Targets">イベントターゲットの比較</a></li>
-</ul>
+- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
