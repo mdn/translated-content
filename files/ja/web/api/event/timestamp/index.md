@@ -1,85 +1,77 @@
 ---
-title: event.timeStamp
+title: Event.timeStamp
 slug: Web/API/Event/timeStamp
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - Event
-  - Property
+  - プロパティ
   - リファレンス
-  - timeStamp
+  - 読み取り専用
+browser-compat: api.Event.timeStamp
 translation_of: Web/API/Event/timeStamp
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-イベントが発生した時刻 (ミリ秒単位) を表します。
+**`timeStamp`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが作成された時刻（ミリ秒単位）を返します。
 
-<div class="note">
-**注記:** このプロパティは、イベントシステムが個々のイベント向けにサポートしている場合に限り動作します。
-</div>
+## 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+この値は、時間の起点からイベントが作成されるまでの経過ミリ秒数です。グローバルオブジェクトが {{domxref("Window")}} である場合、ユーザーがリンクをクリックした瞬間、または文書の読み込みを開始したスクリプトが時間の起点となります。ワーカーでは、時間の起点はワーカーが作成された瞬間となります。
 
-<pre class="syntaxbox notranslate"><var>event</var>.timeStamp
-</pre>
+値は、 5 マイクロ秒（0.005 ミリ秒）精度の {{domxref("DOMHighResTimeStamp")}} ですが、フィンガープリンティングを防ぐために[精度が落とされています](#時間精度の低下)。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-この値は、現在のドキュメントの生成からイベントが作成された時点までの時間（ミリ秒単位）です。
+### HTML
 
-新しい実装では、5 マイクロ秒（0.005 ms = 0.005 ミリ秒）精度の {{domxref("DOMHighResTimeStamp")}} です。古い実装では、1 ミリ秒精度の {{domxref("DOMTimeStamp")}} です。
+```html
+<p>
+  この iframe にフォーカスを設定していずれかのキーを押下すると、 keypress イベントの現在のタイムスタンプを取得します。
+</p>
+<p>timeStamp: <span id="time">-</span></p>
+```
 
-<h2 id="Example" name="Example">例</h2>
+### JavaScript
 
-<h3 id="HTML_content" name="HTML_content">HTML コンテンツ</h3>
-
-<pre class="brush: html notranslate">&lt;p&gt;
-  この iframe にフォーカスを設定していずれかのキーを押下すると、
-  keypress イベントの現在のタイムスタンプを取得します。
-&lt;/p&gt;
-&lt;p&gt;タイムスタンプ: &lt;span id="time"&gt;-&lt;/span&gt;&lt;/p&gt;</pre>
-
-<h3 id="JavaScript_content" name="JavaScript_content">JavaScript コンテンツ</h3>
-
-<pre class="brush: js notranslate">function getTime(event) {
+```js
+function getTime(event) {
   var time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
-document.body.addEventListener("keypress", getTime);</pre>
+document.body.addEventListener("keypress", getTime);
+```
 
-<h3 id="Result" name="Result">表示結果</h3>
+### 結果
 
 {{EmbedLiveSample("Example", "100%", 100)}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 時間精度の低下
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-timestamp", "Event.timeStamp")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-timestamp", "Event.timeStamp")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-timeStamp", "Event.timeStamp")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+タイミング攻撃やフィンガープリントに対する保護を提供するために、 `Event.timeStamp` の精度はブラウザーの設定によって丸められていることがあります。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+Firefox では、 `privacy.reduceTimerPrecision` 環境設定が既定で有効になっており、既定値は 2 ミリ秒になっています。
 
-{{Compat("api.Event.timeStamp")}}
+```js
+// Firefox 60 では時間の精度が低下します。
+event.timeStamp;
+// 1519211809934
+// 1519211810362
+// 1519211811670
+// ...
+
+// `privacy.resistFingerprinting` を有効にすると、時間の精度が低下します。
+event.timeStamp;
+// 1519129853500
+// 1519129858900
+// 1519129864400
+// ...
+```
+
+Firefox では、 `privacy.resistFingerprinting` も有効にすると、精度は 100 ミリ秒または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のうち大きい方になります。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
