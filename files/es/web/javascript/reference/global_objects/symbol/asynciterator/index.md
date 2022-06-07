@@ -5,7 +5,7 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
 ---
 {{JSRef}}
 
-El símbolo conocido **`Symbol.asyncIterator`** especifica el AsyncIterator por defecto para un objeto. Si se establece esta propiedad en un objeto, es un iterable asíncrono y puede utilizarse en un bucle [`for await...of`](/es-US/docs/Web/JavaScript/Reference/Statements/for-await...of).
+El símbolo conocido **`Symbol.asyncIterator`** especifica el AsyncIterator por defecto para un objeto. Si se establece esta propiedad en un objeto, es un iterable asíncrono y puede utilizarse en un bucle [`for await...of`](/es/docs/Web/JavaScript/Reference/Statements/for-await...of).
 
 ## Descripción
 
