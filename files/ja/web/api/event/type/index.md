@@ -1,93 +1,65 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
+page-type: web-api-instance-property
 tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - Read-only
-  - リファレンス
   - プロパティ
-  - 読取専用
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.Event.type
 translation_of: Web/API/Event/type
 ---
 {{APIRef}}
 
-**`type`** は {{domxref("Event")}} インターフェイスの読取専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `click`, `load`, `error` のような特定のイベントを参照するためによく使用されます。
+**`type`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `click`, `load`, `error` のような特定のイベントを参照するためによく使用されます。
 
-利用可能なイベント種別の一覧は、<a href="/ja/docs/Web/Events">イベントリファレンス</a>をご覧ください。
+## 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+{{domxref("Event")}} の種別を表す文字列です。
 
-<pre class="syntaxbox notranslate">let eventType = <var>event</var>.type;
-</pre>
-
-<h3 id="Value" name="Value">値</h3>
-
-{{domxref("Event")}} の種別を表す {{domxref("DOMString")}}。
-
-<h2 id="Example" name="Example">例</h2>
+## 例
 
 この例は、キーボードのキーを押すか、マウスボタンをクリックするとイベント種別をログに出力します。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;キーを押すか、マウスをクリックしてください。&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>キーを押すか、マウスをクリックしてください。</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">function getEventType(event) {
+```js
+function getEventType(event) {
   const log = document.getElementById('log');
   log.innerText = event.type + '\n' + log.innerText;
 }
 
-// Keyboard events
+// キーボードイベント
 document.addEventListener('keydown', getEventType, false);  // first
 document.addEventListener('keypress', getEventType, false); // second
 document.addEventListener('keyup', getEventType, false);    // third
 
-// Mouse events
+// マウスイベント
 document.addEventListener('mousedown', getEventType, false); // first
 document.addEventListener('mouseup', getEventType, false);   // second
-document.addEventListener('click', getEventType, false);     // third</pre>
+document.addEventListener('click', getEventType, false);     // third
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
 {{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-type', 'Event.type')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-type', 'Event.type')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("api.Event.type")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ domxref("EventTarget.addEventListener()") }}</li>
- <li>{{ domxref("EventTarget.removeEventListener()") }}</li>
-</ul>
+- {{ domxref("EventTarget.addEventListener()") }}
+- {{ domxref("EventTarget.removeEventListener()") }}
