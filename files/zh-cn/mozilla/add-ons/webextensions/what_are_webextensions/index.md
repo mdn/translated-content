@@ -7,7 +7,7 @@ tags:
 ---
 {{AddonSidebar}}
 
-> **备注：** 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习 [扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用 [参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference) 去构建你的扩展。访问 [扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) 学习关于浏览器扩展工作流，测试，发布的更多内容。
+> **备注：** 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
 
 扩展为浏览器添加了特性与功能。它通过我们所熟悉的 web 技术-HTML，CSS 还有 JavaScript 来创建。扩展可以利用与 JavaScript 相同的网页 API，但是扩展也可以访问它自己专有的 JavaScript API。这意味着，和在网页里编码相比，在扩展中你可以做到更多的事情。以下是其中你可以做到的一些事情：
 
@@ -17,7 +17,7 @@ tags:
 
 示例：[亚马逊助手](https://addons.mozilla.org/zh-CN/firefox/addon/amazon-browser-bar/)，[OneNote Web Clipper](https://addons.mozilla.org/zh-CN/firefox/addon/onenote-clipper/)，[Grammarly for Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/grammarly-1/)
 
-**让用户展现他们的个性**: 浏览器扩展可以操控网页的内容；例如，让用户在每个他们访问的页面上添加最喜欢的 logo 或者图片作为背景。扩展也可以让用户更新 Firefox 的界面，就想独立的 [主题扩展](https://extensionworkshop.com/documentation/themes/) 一样。
+**让用户展现他们的个性**: 浏览器扩展可以操控网页的内容；例如，让用户在每个他们访问的页面上添加最喜欢的 logo 或者图片作为背景。扩展也可以让用户更新 Firefox 的界面，就想独立的[主题扩展](https://extensionworkshop.com/documentation/themes/)一样。
 
 ![](myweb_new_tab_add_on.png)
 
@@ -53,6 +53,6 @@ Firefox 扩展使用 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensi
 
 ## 接下来呢？
 
-- 在 [你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) 中轻松的开发一个简单的扩展。
-- 在 [扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) 中了解一个扩展的结构。
-- 在 [示例扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples) 中尝试一些示例扩展。
+- 在[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)中轻松的开发一个简单的扩展。
+- 在[扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)中了解一个扩展的结构。
+- 在[示例扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)中尝试一些示例扩展。
