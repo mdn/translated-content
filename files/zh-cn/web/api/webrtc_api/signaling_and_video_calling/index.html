@@ -447,11 +447,11 @@ function invite(evt) {
   .catch(handleGetUserMediaError);
 }</code></pre>
 
-<p class="brush: js">此代码与我们在<a href="#开始通话的交互">开始通话的交互</a>中在 <code>invite()</code> 函数中所做的非常相似。它首先使用 <code>createPeerConnection()</code> 函数创建和配置{{domxref("RTCPeerConnection")}} 。然后，它从收到的 <code>"video-offer"</code> 消息中获取 SDP 请求，并使用它创建一个表示调用方会话描述的新 {{domxref("RTCSessionDescription")}} 对象。</p>
+<p>此代码与我们在<a href="#开始通话的交互">开始通话的交互</a>中在 <code>invite()</code> 函数中所做的非常相似。它首先使用 <code>createPeerConnection()</code> 函数创建和配置{{domxref("RTCPeerConnection")}} 。然后，它从收到的 <code>"video-offer"</code> 消息中获取 SDP 请求，并使用它创建一个表示调用方会话描述的新 {{domxref("RTCSessionDescription")}} 对象。</p>
 
-<p class="brush: js">然后将该会话描述传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}。这将把接收到的请求建立为连接的远程（调用方）端的描述。如果成功，promise 成功处理程序（在 then() 子句中）将使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}，将磁道添加到连接，以此类推，如前面在 <code>invite()</code>中看到的那样。</p>
+<p>然后将该会话描述传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}。这将把接收到的请求建立为连接的远程（调用方）端的描述。如果成功，promise 成功处理程序（在 then() 子句中）将使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}，将磁道添加到连接，以此类推，如前面在 <code>invite()</code>中看到的那样。</p>
 
-<p class="brush: js">一旦使用 {{domxref("RTCPeerConnection.createAnswer", "myPeerConnection.createAnswer()")}} 创建了应答，通过调用{{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}} 连接本地端的描述被设置为应答的 SDP，则通过信令服务器将应答发送给调用者，让他们知道应答是什么。</p>
+<p>一旦使用 {{domxref("RTCPeerConnection.createAnswer", "myPeerConnection.createAnswer()")}} 创建了应答，通过调用{{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}} 连接本地端的描述被设置为应答的 SDP，则通过信令服务器将应答发送给调用者，让他们知道应答是什么。</p>
 
 <p>捕捉到的任何错误都会被传递给 <code>handleGetUserMediaError()</code>，详见 <a href="#处理_getusermedia()_错误">处理 getUserMedia() 错误</a> 。</p>
 
