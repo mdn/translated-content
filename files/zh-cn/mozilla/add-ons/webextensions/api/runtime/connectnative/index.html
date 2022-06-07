@@ -7,23 +7,23 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>该方法能够把附加组件和用户计算机上的一个本地应用程序相连接.</div>
+<div>该方法能够把附加组件和用户计算机上的一个本地应用程序相连接。</div>
 
 <div> </div>
 
-<div>同时我们需要本地应用程序的名称作为参数. 当启动本地应用程序的时候会返回一个{{WebExtAPIRef("runtime.Port")}} 对象给调用者.</div>
+<div>同时我们需要本地应用程序的名称作为参数。当启动本地应用程序的时候会返回一个{{WebExtAPIRef("runtime.Port")}} 对象给调用者。</div>
 
 <div> </div>
 
-<div>之后可以通过该对象的 Port.onMessage() 和 Port.postMessage()方法来和本地应用程序进行信息交互.</div>
+<div>之后可以通过该对象的 Port.onMessage() 和 Port.postMessage() 方法来和本地应用程序进行信息交互。</div>
 
 <div> </div>
 
-<div>本地应用程序会一直运行直到退出, 除非调用了 <code>Port.disconnect()</code>方法, 亦或创建该Port对象的页面被摧毁了. 一旦Port对象断开连接, 浏览器会给该进程几秒的时间以便安全优雅的退出和释放, 之后如果发现该进程没退出的话就直接暴力干掉.</div>
+<div>本地应用程序会一直运行直到退出，除非调用了 <code>Port.disconnect()</code>方法，亦或创建该 Port 对象的页面被摧毁了。一旦 Port 对象断开连接，浏览器会给该进程几秒的时间以便安全优雅的退出和释放，之后如果发现该进程没退出的话就直接暴力干掉。</div>
 
 <div> </div>
 
-<p>更多信息, 请查看 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
+<p>更多信息，请查看 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -36,12 +36,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 
 <dl>
  <dt><code>application</code></dt>
- <dd><code>值类型为string</code>. 该参数的值为要连接的本地应用程序的名称. 必须要跟 <a href="/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a> 中的"name"特性的值一致.</dd>
+ <dd><code>值类型为string</code>. 该参数的值为要连接的本地应用程序的名称。必须要跟 <a href="/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a> 中的"name"特性的值一致。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>是一个 {{WebExtAPIRef('runtime.Port')}} 对象. 该对象是用来跟本地应用程序进行消息交互的.</p>
+<p>是一个 {{WebExtAPIRef('runtime.Port')}} 对象。该对象是用来跟本地应用程序进行消息交互的。</p>
 
 <h2 id="浏览器的兼容性">浏览器的兼容性</h2>
 
@@ -49,22 +49,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 
 <h2 id="示例">示例</h2>
 
-<p>本示例中连接了本地应用程序"ping_pong"并且启动了监听以便接收消息. 当用户单击浏览器上的操作按钮时它会发送一个本地应用程序的消息:</p>
+<p>本示例中连接了本地应用程序"ping_pong"并且启动了监听以便接收消息。当用户单击浏览器上的操作按钮时它会发送一个本地应用程序的消息：</p>
 
 <pre class="brush: js">/*
-启动时, 连接"ping_pong"本地应用程序.
+启动时，连接"ping_pong"本地应用程序。
 */
 var port = <code class="language-js">browser</code>.runtime.connectNative("ping_pong");
 
 /*
-监听(接收)来自"ping_pong"本地应用程序的消息.
+监听 (接收) 来自"ping_pong"本地应用程序的消息。
 */
 port.onMessage.addListener((response) =&gt; {
   console.log("Received: " + response);
 });
 
 /*
-当浏览器上的单击操作被触发时, 发送一个消息给本地应用程序.
+当浏览器上的单击操作被触发时，发送一个消息给本地应用程序。
 */
 <code class="language-js">browser</code>.browserAction.onClicked.addListener(() =&gt; {
   console.log("Sending:  ping");
@@ -77,7 +77,7 @@ port.onMessage.addListener((response) =&gt; {
 
 <p>该 API 是基于 Chromium 的 <a href="https://developer.chrome.com/extensions/runtime#method-connectNative"><code>chrome.runtime</code></a> API. 本文档采自 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a>.</p>
 
-<p>Microsoft Edge 的兼容性数据由微软公司提供, 并被列入以下许可证 Creative Commons Attribution 3.0 United States License.</p>
+<p>Microsoft Edge 的兼容性数据由微软公司提供，并被列入以下许可证 Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">

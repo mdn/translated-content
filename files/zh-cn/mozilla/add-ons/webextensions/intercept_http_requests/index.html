@@ -1,5 +1,5 @@
 ---
-title: 拦截HTTP请求
+title: 拦截 HTTP 请求
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 tags:
   - Add-ons
@@ -9,12 +9,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>使用 {{WebExtAPIRef("webRequest")}} API可以拦截HTTP请求。该API允许开发者植入一个侦听器用以侦听各个阶段的HTTP请求。在侦听器中，你能：</p>
+<p>使用 {{WebExtAPIRef("webRequest")}} API 可以拦截 HTTP 请求。该 API 允许开发者植入一个侦听器用以侦听各个阶段的 HTTP 请求。在侦听器中，你能：</p>
 
 <ul>
- <li>获取请求及其返回的header和body</li>
+ <li>获取请求及其返回的 header 和 body</li>
  <li>取消或重定向请求</li>
- <li>修改请求及其返回的header</li>
+ <li>修改请求及其返回的 header</li>
 </ul>
 
 <p>本文将探究<code>webRequest</code>模型的三种用法：</p>
@@ -22,12 +22,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 <ul>
  <li>登陆请求的构造</li>
  <li>重定向请求</li>
- <li>修改请求的header</li>
+ <li>修改请求的 header</li>
 </ul>
 
 <h2 id="记录请求的_URL">记录请求的 URL</h2>
 
-<p>新建一个名为<code>“</code>requests<code>”</code>的目录，在其中新建一个名为<code>“</code>manifest.json<code>”</code>的文件，文件包含如下 内容 ：</p>
+<p>新建一个名为<code>“</code>requests<code>”</code>的目录，在其中新建一个名为<code>“</code>manifest.json<code>”</code>的文件，文件包含如下 内容：</p>
 
 <pre class="brush: json">{
   "description": "Demonstrating webRequests",
@@ -58,15 +58,15 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 </pre>
 
-<p>这里我们在请求开始之前用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}调用<code>logURL()</code>函数。<code>logURL()</code><code>函数</code>抓取从事件对象发出的请求中的URL，然后将其打印到浏览器的控制台窗口中。<a href="/en-US/Add-ons/WebExtensions/Match_patterns">参数</a><code>{urls: ["&lt;all_urls&gt;"]}</code>表示拦截发往所有URL的HTTP请求。</p>
+<p>这里我们在请求开始之前用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}调用<code>logURL()</code>函数。<code>logURL()</code><code>函数</code>抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。<a href="/en-US/Add-ons/WebExtensions/Match_patterns">参数</a><code>{urls: ["&lt;all_urls&gt;"]}</code>表示拦截发往所有 URL 的 HTTP 请求。</p>
 
-<p>测试方法是：<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">安装该WebExtension</a>， <a href="/en-US/docs/Tools/Browser_Console">打开浏览器的控制台</a>，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的URL：</p>
+<p>测试方法是：<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">安装该 WebExtension</a>， <a href="/en-US/docs/Tools/Browser_Console">打开浏览器的控制台</a>，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的 URL：</p>
 
 <p>{{EmbedYouTube("X3rMgkRkB1Q")}}</p>
 
 <h2 id="重定向请求">重定向请求</h2>
 
-<p>现在让我们用<code>webRequest</code>来重定向HTTP请求。首先将manifest.json文件内容替换如下：</p>
+<p>现在让我们用<code>webRequest</code>来重定向 HTTP 请求。首先将 manifest.json 文件内容替换如下：</p>
 
 <pre class="brush: json">{
 
@@ -106,13 +106,13 @@ chrome.webRequest.onBeforeRequest.addListener(
   ["blocking"]
 );</pre>
 
-<p>此外在请求构造出来之前我们用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}事件侦听器来实现URL替换。侦听器将会用<code>redirectUrl</code>指定的内容替换原有的URL。</p>
+<p>此外在请求构造出来之前我们用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}事件侦听器来实现 URL 替换。侦听器将会用<code>redirectUrl</code>指定的内容替换原有的 URL。</p>
 
-<p>这次我们不拦截所有的请求：<code>{urls:[pattern], types:["image"]}</code>选项告诉浏览器必须同时满足如下两点的请求才会被拦截：(1)在<code>“</code> https://mdn.mozillademos.org/<code>”</code>之下的URL； (2)图片资源。该功能的更多说明参见{{WebExtAPIRef("webRequest.RequestFilter")}}。</p>
+<p>这次我们不拦截所有的请求：<code>{urls:[pattern], types:["image"]}</code>选项告诉浏览器必须同时满足如下两点的请求才会被拦截：(1) 在<code>“</code> https://mdn.mozillademos.org/<code>”</code>之下的 URL； (2) 图片资源。该功能的更多说明参见{{WebExtAPIRef("webRequest.RequestFilter")}}。</p>
 
 <p>刚才我们忽略了<code>“blocking</code><code>”</code>选项。要修改请求<code>就要用到“blocking</code><code>”</code>选项，该选项让侦听器函数阻塞住发往网络请求，浏览器将会等待侦听器返回才会继续处理。阅读{{WebExtAPIRef("webRequest.onBeforeRequest")}}以了解更多有关<code>“blocking</code> <code>”</code>的细节。.</p>
 
-<p>测试时打开MDN上的一个包含诸多图片的页面（如<a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a> ），重新加载<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">WebExtension</a>，然后重新加载这个页面：</p>
+<p>测试时打开 MDN 上的一个包含诸多图片的页面（如<a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a> ），重新加载<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">WebExtension</a>，然后重新加载这个页面：</p>
 
 <p>{{EmbedYouTube("ix5RrXGr0wA")}}</p>
 
@@ -122,7 +122,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 <p>"manifest.json" 可以与上一个例子相同。</p>
 
-<p>修改"background.js" 如下:</p>
+<p>修改"background.js" 如下：</p>
 
 <pre class="brush: js">var targetPage = "http://useragentstring.com/*";
 
@@ -145,11 +145,11 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 <p>在请求报头被发送前，我们使用 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 事件监听器来运行一个函数。</p>
 
-<p>只有在向匹配的URL格式的网页发送请求时，这个监听函数才会运行。 还需注意的是，我们再次使用了<code>"blocking"</code>选项。我们还使用了<code>"requestHeaders"</code>选项，使监听器可以传递我们希望的请求报头数组。了解更多{{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}的信息。</p>
+<p>只有在向匹配的 URL 格式的网页发送请求时，这个监听函数才会运行。还需注意的是，我们再次使用了<code>"blocking"</code>选项。我们还使用了<code>"requestHeaders"</code>选项，使监听器可以传递我们希望的请求报头数组。了解更多{{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}的信息。</p>
 
-<p>侦听函数在请求报头数组中寻找 "User-Agent" 报头，用<code>ua</code>变量替换它的值，然后返回修改后的报头数组 。现在这个修改后的数组会被发送到服务器。</p>
+<p>侦听函数在请求报头数组中寻找 "User-Agent" 报头，用<code>ua</code>变量替换它的值，然后返回修改后的报头数组。现在这个修改后的数组会被发送到服务器。</p>
 
-<p>要测试它,先打开 <a href="http://useragentstring.com/">useragentstring.com</a>网址，检查标识浏览器是否为火狐浏览器 。然后加载附加组件， 刷新网址，再次检查标识浏览器，你会发现火狐浏览器被定义为 Opera了：</p>
+<p>要测试它，先打开 <a href="http://useragentstring.com/">useragentstring.com</a>网址，检查标识浏览器是否为火狐浏览器。然后加载附加组件，刷新网址，再次检查标识浏览器，你会发现火狐浏览器被定义为 Opera 了：</p>
 
 <p>{{EmbedYouTube("SrSNS1-FIx0")}}</p>
 
