@@ -1,45 +1,29 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
+page-type: web-api-instance-method
+tags:
+  - メソッド
+  - リファレンス
+browser-compat: api.Event.stopImmediatePropagation
 translation_of: Web/API/Event/stopImmediatePropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-同じイベントを受け取る他のリスナーの呼び出しを防ぎます。
+**`stopImmediatePropagation()`** は {{domxref("Event")}} インターフェイスのメソッドで、呼び出されている同じイベントの他のリスナーを抑止します。
 
-<h2 id="構文">構文</h2>
+同じイベントタイプで複数のリスナーが同じ要素に装着されている場合、追加された順番に呼び出されます。もし、そのような呼び出しの最中に `stopImmediatePropagation()` が呼び出された場合、残りのリスナーは呼び出されなくなります。
 
-<pre class="eval"><em>event</em>.stopImmediatePropagation();
-</pre>
+## 構文
 
-<h2 id="注記">注記</h2>
+```js
+event.stopImmediatePropagation();
+```
 
-複数のリスナーが同じ種類のイベントの同じ要素に追加されていた場合、リスナーは追加された順に順番に呼び出されます。けれど、呼び出しの途中で `event.stopImmediatePropagation()` が呼ばれた場合には、残りのリスナーは呼ばれなくなります。
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
-
-{{Compat("api.Event.stopImmediatePropagation")}}
+{{Compat}}
