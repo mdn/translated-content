@@ -23765,14 +23765,14 @@
       "Sheppy"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute": {
+  "Web/Accessibility/ARIA/Attributes/aria-hidden": {
     "modified": "2019-10-31T22:25:58.797Z",
     "contributors": [
       "YoMiao",
       "civerzhang"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
+  "Web/Accessibility/ARIA/Attributes/aria-label": {
     "modified": "2019-03-23T23:19:53.211Z",
     "contributors": [
       "fjh352",
@@ -23780,7 +23780,7 @@
       "princetoad@gmail.com"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute": {
+  "Web/Accessibility/ARIA/Attributes/aria-labelledby": {
     "modified": "2019-03-23T22:54:23.298Z",
     "contributors": [
       "ldwformat"

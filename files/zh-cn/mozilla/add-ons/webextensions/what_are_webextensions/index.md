@@ -1,5 +1,5 @@
 ---
-title: 扩展是什么?
+title: 扩展是什么？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 tags:
   - Extensions
@@ -27,7 +27,7 @@ tags:
 
 ![](ublock_origin_add_on.png)
 
-示例: [uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/zh-CN/firefox/addon/reader/), 和 [Toolbox for Google Play Store™](https://addons.mozilla.org/zh-CN/firefox/addon/toolbox-google-play-store/)
+示例：[uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/zh-CN/firefox/addon/reader/), 和 [Toolbox for Google Play Store™](https://addons.mozilla.org/zh-CN/firefox/addon/toolbox-google-play-store/)
 
 **添加工具和新的浏览特性**: 给任务面板添加新特性，或者从 URL 地址，超链接，或者页面文字生成二维码。有了灵活的界面选项和 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 的能力，你可以很容易的向浏览器添加新的特性。并且，你可以改善几乎任何网站的特性和功能，而不必是你自己的网站。
 
@@ -39,19 +39,19 @@ Examples: [Swimlanes for Trello](https://addons.mozilla.org/zh-CN/firefox/addon/
 
 ![](asteroids_in_popup_add_on_.png)
 
-示例: [Asteroids in Popup](https://addons.mozilla.org/zh-CN/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/zh-CN/firefox/addon/solitaire-card-game-new-tab/), 和 [2048 Prime](https://addons.mozilla.org/zh-CN/firefox/addon/2048-prime/).
+示例：[Asteroids in Popup](https://addons.mozilla.org/zh-CN/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/zh-CN/firefox/addon/solitaire-card-game-new-tab/), 和 [2048 Prime](https://addons.mozilla.org/zh-CN/firefox/addon/2048-prime/).
 
 **添加开发工具**: 你可以为你的业务提供网站开发工具或者开发一个有用的技术或者你想分享的网站开发方法。无论如何，你可以通过在开发者工具栏上添加一个新的标签来增强内置的 Firefox 开发者工具。
 
 ![](axe_developer_tools_add_on.png)
 
-示例: [Web Developer](https://addons.mozilla.org/zh-CN/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/), 和 [aXe Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/axe-devtools/)
+示例：[Web Developer](https://addons.mozilla.org/zh-CN/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/), 和 [aXe Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/axe-devtools/)
 
 Firefox 扩展使用 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)来构建，这是一种用以开发扩展的跨浏览器系统。在很大程度上，它与 Google Chrome 和 Opera 所支持的[扩展 API](https://developer.chrome.com/extensions) 兼容。在大多数情况下，为这些浏览器缩写的扩展只需要少量[修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 和 Microsoft Edge 上运行。这些 API 也完全兼容[多进程 Firefox](/zh-CN/docs/Mozilla/Firefox/Multiprocess_Firefox)。
 
 如果你有想法或者问题，或者在[迁移就的附加组件到 WebExtensions APIs](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension)时需要帮助，可以在 [dev-addons 邮件列表](https://mail.mozilla.org/listinfo/dev-addons)或者 [Matrix](https://chat.mozilla.org/#/room/#addons:mozilla.org) 上的 [Add-ones room](https://wiki.mozilla.org/Matrix) 与我们联系。
 
-## 接下来呢?
+## 接下来呢？
 
 - 在[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)中轻松的开发一个简单的扩展。
 - 在[扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)中了解一个扩展的结构。

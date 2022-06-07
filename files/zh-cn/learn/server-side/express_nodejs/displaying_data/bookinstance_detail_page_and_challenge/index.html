@@ -11,7 +11,7 @@ translation_of: >-
 
 <h3 id="控制器">控制器</h3>
 
-<p>打开 <strong>/controllers/bookinstanceController.js</strong>. ，找到exported <code>bookinstance_detail()</code> 控制器方法，并替换以下代码。</p>
+<p>打开 <strong>/controllers/bookinstanceController.js</strong>，找到 exported <code>bookinstance_detail()</code> 控制器方法，并替换以下代码。</p>
 
 <pre class="brush: js">// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, next) {
@@ -32,7 +32,7 @@ exports.bookinstance_detail = function(req, res, next) {
 };
 </pre>
 
-<p>该方法使用从URL（使用路由）中提取的特定书本实例的ID，调用<code>BookInstance.findById()</code>，并通过请求参数（<code style="font-style: normal; font-weight: normal;">req.params.id</code>），在控制器中访问。然后调用<code>populate()</code>来获取相关<code>Book</code>的详细信息。</p>
+<p>该方法使用从 URL（使用路由）中提取的特定书本实例的 ID，调用<code>BookInstance.findById()</code>，并通过请求参数（<code style="font-style: normal; font-weight: normal;">req.params.id</code>），在控制器中访问。然后调用<code>populate()</code>来获取相关<code>Book</code>的详细信息。</p>
 
 <h3 id="视图">视图</h3>
 
@@ -62,7 +62,7 @@ block content
 
 <p>本模组中的所有东西，都在先前的章节演示过了。</p>
 
-<h3 id="它看起來像是">它看起來像是?</h3>
+<h3 id="它看起來像是">它看起來像是？</h3>
 
 <p>运行本应用，并打开浏览器访问 <a href="http://localhost:3000/">http://localhost:3000/</a>。选择 All book-instances 连结，然后选择其中一本。如果每个东西都设定正确了，你的网站看起来应该像是底下的截图。</p>
 
@@ -70,10 +70,10 @@ block content
 
 <h2 id="自我挑战">自我挑战</h2>
 
-<p>目前，我们网站上显示的大多数日期，都使用默认的 JavaScript 格式（例如 <em>Tue Dec 06 2016 15:49:58 GMT+1100</em>（AUS东部夏令时间）。本文的挑战，是改善作者<code>Author</code>生命周期日期显示的外观信息（死亡/出生日期）和BookInstance详细信息页面，使用格式：December 6th, 2016。</p>
+<p>目前，我们网站上显示的大多数日期，都使用默认的 JavaScript 格式（例如 <em>Tue Dec 06 2016 15:49:58 GMT+1100</em>（AUS 东部夏令时间）。本文的挑战，是改善作者<code>Author</code>生命周期日期显示的外观信息（死亡/出生日期）和 BookInstance 详细信息页面，使用格式：December 6th, 2016。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 您可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到<code>Author</code>模型，并使用<a href="https://www.npmjs.com/package/moment">moment</a>来设置日期字符串的格式）。</p>
+<p><strong>注意：</strong> 您可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到<code>Author</code>模型，并使用<a href="https://www.npmjs.com/package/moment">moment</a>来设置日期字符串的格式）。</p>
 </div>
 
 <p>这一挑战的要求：</p>
