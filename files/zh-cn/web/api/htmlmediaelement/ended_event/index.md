@@ -1,99 +1,110 @@
 ---
-title: 'HTMLMediaElement: ended'
+title: 'HTMLMediaElement: ended 事件'
 slug: Web/API/HTMLMediaElement/ended_event
 translation_of: Web/API/HTMLMediaElement/ended_event
 ---
-<p>如果 playback 或者 streaming 达到了媒体的未尾或者没有更多可用的数据，将会引发一个<code>ended</code>事件。</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p>这个事件将会发生在三个相关但独立的上下文中：</p>
+`ended` 事件会在媒体回放或者媒体流因达到了媒体的未尾或者没有更多可用的数据而停止时被触发。
 
-<ul>
- <li>Elements based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} and {{HTMLElement("video")}}) fire <code>ended</code> when playback of the media reaches the end of the media.</li>
- <li>Media streams' tracks, which are based on the {{domxref("MediaStreamTrack")}} interface, fire <code>ended</code> when the track's source permanently stops sending data on the stream. There are various ways this can happen, including:
-  <ul>
-   <li>There is no more data left to send.</li>
-   <li>The user revoked the permissions needed for the data to be sent.</li>
-   <li>The hardware generating the source data has been removed or ejected.</li>
-   <li>A remote peer has permanently stopped sending data; pausing media <em>does not</em> generate an <code>ended</code> event.</li>
-  </ul>
- </li>
- <li>一个<a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>节点停止了播放。这可能是由于它到达了之前设置好的终止时间点，也可能是已播放完了整个音频，或者是已播放完了 buffer 中的数据。另见{{domxref("AudioScheduledSourceNode")}}。</li>
-</ul>
+该事件会在回放或媒体文件播放结束时，在{{domxref("HTMLMediaElement", "媒体元素")}}（{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}）上触发。
 
-<h2 id="General_info">General info</h2>
-
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended">HTML5 media</a>, <a href="https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended">Media Capture and Streams</a> and <a href="https://webaudio.github.io/web-audio-api/">Web Audio API</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Event")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消的</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认操作</dt>
- <dd style="margin: 0 0 0 120px;">无。</dd>
-</dl>
-
-<div class="note">
-<p>While this event is defined in more than one specification, at this time they specify this event identically, so we have documented them as if they were one. If at some point that changes, the documentation will be revised.</p>
-</div>
-
-<h2 id="Properties">Properties</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">是否冒泡</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">是否可取消</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">接口</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">目标</th>
+      <td>元素</td>
+    </tr>
+    <tr>
+      <th scope="row">默认行为</th>
+      <td>无</td>
+    </tr>
+    <tr>
+      <th scope="row">事件处理器属性</th>
+      <td>{{domxref("GlobalEventHandlers.onended")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Related_Events">Related Events</h2>
+> **备注：** 该事件也在 [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
 
-<ul>
- <li>{{event("playing")}}</li>
- <li>{{event("waiting")}}</li>
- <li>{{event("seeking")}}</li>
- <li>{{event("seeked")}}</li>
- <li>{{event("ended")}}</li>
- <li>{{event("loadedmetadata")}}</li>
- <li>{{event("loadeddata")}}</li>
- <li>{{event("canplay")}}</li>
- <li>{{event("canplaythrough")}}</li>
- <li>{{event("durationchange")}}</li>
- <li>{{event("timeupdate")}}</li>
- <li>{{event("play")}}</li>
- <li>{{event("pause")}}</li>
- <li>{{event("ratechange")}}</li>
- <li>{{event("volumechange")}}</li>
- <li>{{event("suspend")}}</li>
- <li>{{event("emptied")}}</li>
- <li>{{event("stalled")}}</li>
-</ul>
+## 示例
+
+以下示例展示了如何为媒体元素的 `ended` 事件添加一个事件监听器，以在该事件触发时发送一条消息。
+
+使用 `addEventListener()`：
+
+```js
+const video = document.querySelector('video');
+
+video.addEventListener('ended', (event) => {
+  console.log('Video stopped either because 1) it was over, ' +
+      'or 2) no further data is available.');
+});
+```
+
+使用 `onended` 事件处理器属性：
+
+```js
+const video = document.querySelector('video');
+
+video.onended = (event) => {
+  console.log('Video stopped either because 1) it was over, ' +
+      'or 2) no further data is available.');
+};
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 相关事件
+
+- 媒体元素 {{domxref("HTMLMediaElement.playing_event", 'playing')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.ended_event", 'ended')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.play_event", 'play')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.pause_event", 'pause')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} 事件
+- 媒体元素 {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} 事件
+
+## 参见
+
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
+- [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API)
+
+  - [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API)[: ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
+
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+
+  - [Web audio API: ended 事件](/zh-CN/docs/Web/API/AudioScheduledSourceNode/ended_event)
