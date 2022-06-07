@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.String.substr
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
-{{JSRef}}
+{{JSRef}} {{deprecated_header}}
 
 **`substr()`** メソッドは、文字列の一部を、指定した位置から後方向に指定した文字数だけ返します。
 
