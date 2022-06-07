@@ -1,111 +1,122 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
+page-type: web-api-instance-method
 tags:
-  - API
-  - DOM
-  - Event
-  - Method
-  - リファレンス
-  - イベント
   - メソッド
+  - リファレンス
+browser-compat: api.Event.preventDefault
 translation_of: Web/API/Event/preventDefault
 ---
-<div>{{apiref("DOM")}}</div>
+{{apiref("DOM")}}
 
-<span class="seoSummary">{{domxref("Event")}} インターフェースの **`preventDefault()`** メソッドは、{{Glossary("user agent", "ユーザーエージェント")}}に、イベントが明示的に処理されない場合にその既定のアクションを通常どおりに行うべきではないことを伝えます。</span>このイベントは通常、イベントリスナーの1つが {{domxref("Event.stopPropagation", "stopPropagation()")}} または {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} を呼び出し、いずれかが一度に伝播を終了しない限り、伝播し続けます。
+**`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。
 
-以下にある通り、`**preventDefault()**` をキャンセル不可のイベントのために呼び出すと、例えば {{domxref("EventTarget.dispatchEvent()")}} を`cancelable: true` の指定なく呼び出した場合、効果がありません。
+このイベントは通常、イベントリスナーの 1 つが {{domxref("Event.stopPropagation", "stopPropagation()")}} または {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} を呼び出し、いずれかが一度に伝播を終了しない限り、伝播し続けます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+後述のように、 **`preventDefault()`** を {{domxref("EventTarget.dispatchEvent()")}} によってディスパッチされたイベントのようなキャンセルできないイベントに対して、 `cancelable: true` を指定せずに呼び出しても何も効果がありません。
 
-<pre class="syntaxbox notranslate"><em>event</em>.preventDefault();
-</pre>
+## 構文
 
-<h2 id="Example" name="Example">例</h2>
+```js
+event.preventDefault();
+```
 
-<h3 id="Blocking_default_click_handling" name="Blocking_default_click_handling">既定のクリック処理のブロック</h3>
+## 例
+
+### 既定のクリック処理のブロック
 
 チェックボックスのクリック時、既定の動作ではチェックボックスが切り替わります。この既定の動作を止める方法を以下に示します。
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! &lt;code&gt;preventDefault()&lt;/code&gt; won't let you check this!&lt;br&gt;";
+```js
+document.querySelector("#id-checkbox").addEventListener("click", function(event) {
+         document.getElementById("output-box").innerHTML += "ごめん！ <code>preventDefault()</code> がチェックさせません！<br>";
          event.preventDefault();
-}, false);</pre>
+}, false);
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Please click on the checkbox control.&lt;/p&gt;
+```html
+<p>チェックボックスコントロールをクリックしてください。</p>
 
-&lt;form&gt;
-  &lt;label for="id-checkbox"&gt;Checkbox:&lt;/label&gt;
-  &lt;input type="checkbox" id="id-checkbox"/&gt;
-&lt;/form&gt;
+<form>
+  <label for="id-checkbox">チェックボックス:</label>
+  <input type="checkbox" id="id-checkbox"/>
+</form>
 
-&lt;div id="output-box"&gt;&lt;/div&gt;</pre>
+<div id="output-box"></div>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
 {{EmbedLiveSample("Blocking_default_click_handling")}}
 
-<h3 id="Stopping_keystrokes_from_reaching_an_edit_field" name="Stopping_keystrokes_from_reaching_an_edit_field">キーストロークが編集フィールドに到達するのを止める</h3>
+### キーストロークが編集フィールドに到達するのを止める
 
-次の例は無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、<a href="/ja/docs/Learn/HTML/Forms/Form_validation">ネイティブの HTML フォーム検証</a>を代わりに使用する必要があります。
+次の例は、無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、[ネイティブの HTML フォーム検証](/ja/docs/Learn/Forms/Form_validation)を代わりに使用してください。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
 こちらがフォームです。
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
-  &lt;p&gt;Please enter your name using lowercase letters only.&lt;/p&gt;
+```html
+<div class="container">
+  <p>名前を小文字のみで入力してください。</p>
 
-  &lt;form&gt;
-    &lt;input type="text" id="my-textbox"&gt;
-  &lt;/form&gt;
-&lt;/div&gt;</pre>
+  <form>
+    <input type="text" id="my-textbox">
+  </form>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
 ユーザが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
 
-<pre class="brush: css notranslate">.warning {
+```css
+.warning {
   border: 2px solid #f39389;
   border-radius: 2px;
   padding: 10px;
   position: absolute;
   background-color: #fbd8d4;
   color: #3b3c40;
-}</pre>
+}
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
 そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keypress_event", "keypress")}} イベントを待ち受けします。
 
-<pre class="brush: js notranslate">var myTextbox = document.getElementById('my-textbox');
+```js
+var myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);
-</pre>
+```
 
 `checkName()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
 
-<pre class="brush: js notranslate">function checkName(evt) {
+```js
+function checkName(evt) {
   var charCode = evt.charCode;
   if (charCode != 0) {
-    if (charCode &lt; 97 || charCode &gt; 122) {
+    if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only."
+        "小文字のみを使用してください。"
         + "\n" + "charCode: " + charCode + "\n"
       );
     }
   }
 }
-</pre>
+```
 
-`displayWarning()` 関数は問題の通知を表示します。これはエレガントな機能ではありませんが、この例の目的のために仕事をしています：
+`displayWarning()` 関数は、問題発生の通知を表示します。これはエレガントな関数ではありませんが、この例の目的には十分です。
 
-<pre class="brush: js notranslate">var warningTimeout;
+```js
+var warningTimeout;
 var warningBox = document.createElement("div");
 warningBox.className = "warning";
 
@@ -123,42 +134,23 @@ function displayWarning(msg) {
       warningBox.parentNode.removeChild(warningBox);
       warningTimeout = -1;
     }, 2000);
-}</pre>
+}
+```
 
-<h4 id="結果">結果</h4>
+#### 結果
 
 {{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}
 
-<h2 id="Notes" name="Notes">注記</h2>
+## メモ
 
-イベントフローのいずれかの段階でイベントをキャンセルする途中で `preventDefault()` を呼び出すと、通常はブラウザの実装によって処理される既定のアクションが動作しなくなり、結果としてイベントが発生しなくなります。
+イベントフローのいずれかの段階でイベントをキャンセルする途中で `preventDefault()` を呼び出すと、通常はブラウザーの実装によって処理される既定のアクションが動作しなくなり、結果としてイベントが発生しなくなります。
 
-イベントがキャンセル可能かどうかは {{domxref("event.cancelable")}} を使って確認できます。キャンセル不可能なイベントに対して `preventDefault()` を呼び出しても効果はありません。
+イベントがキャンセル可能かどうかは {{domxref("event.cancelable")}} を使って確認できます。キャンセル不可のイベントに対して `preventDefault()` を呼び出しても効果はありません。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-preventdefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-preventDefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("api.Event.preventDefault")}}
+{{Compat}}
