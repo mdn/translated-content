@@ -12,7 +12,7 @@ translation_of: Glossary/Document_directive
 ---
 **{{Glossary("CSP")}} の文書ディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、ポリシーが適用される文書または[ワーカー](/ja/docs/Web/API/Web_Workers_API)環境のプロパティを管理します。
 
-文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。
+文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されることはありません。
 
 完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#document_directives)を参照してください。
 
