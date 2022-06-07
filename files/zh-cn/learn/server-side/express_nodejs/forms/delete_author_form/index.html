@@ -5,7 +5,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
 <p>此子文档显示，如何定义页面以删除<code>Author</code>对象。</p>
 
-<p>正如<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms#form_design">表单设计</a>部分所讨论的那样，我们的策略是，只允许删除 “未被其他对象引用” 的对象（在这种情况下，这意味着如果作者<code>Author</code>被一本书<code>Book</code>引用，我们将不允许删除作者）。在实现方面，这意味着，表单需要在删除作者之前，先确认没有关联的书籍。如果存在关联的书籍，则应显示它们，并说明在删除<code>Author</code>对象之前，必须删除它们。</p>
+<p>正如<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms#form_design">表单设计</a>部分所讨论的那样，我们的策略是，只允许删除“未被其他对象引用”的对象（在这种情况下，这意味着如果作者<code>Author</code>被一本书<code>Book</code>引用，我们将不允许删除作者）。在实现方面，这意味着，表单需要在删除作者之前，先确认没有关联的书籍。如果存在关联的书籍，则应显示它们，并说明在删除<code>Author</code>对象之前，必须删除它们。</p>
 
 <h2 class="highlight-spanned" id="控制器—get_路由">控制器—get 路由</h2>
 
@@ -32,10 +32,10 @@ exports.author_delete_get = function(req, res, next) {
 
 };</code></pre>
 
-<p>控制器从URL参数（<code>req.params.id</code>）中，获取要删除的<code>Author</code>实例的 id。它使用<code>async.parallel()</code> 方法，并行获取作者记录和所有相关书本。当两个操作都完成后，它将呈现<code><strong>author_delete</strong></code><strong>.pug</strong>视图，为<code>title</code>、<code>author</code>、和 <code>author_books</code>传递变量。</p>
+<p>控制器从 URL 参数（<code>req.params.id</code>）中，获取要删除的<code>Author</code>实例的 id。它使用<code>async.parallel()</code> 方法，并行获取作者记录和所有相关书本。当两个操作都完成后，它将呈现<code><strong>author_delete</strong></code><strong>.pug</strong>视图，为<code>title</code>、<code>author</code>、和 <code>author_books</code>传递变量。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 如果<code>findById()</code>返回“没有结果”，则作者不在数据库中。在这种情况下，没有什么可以删除，所以我们立即呈现所有作者的列表。</p>
+<p><strong>注意：</strong> 如果<code>findById()</code>返回“没有结果”，则作者不在数据库中。在这种情况下，没有什么可以删除，所以我们立即呈现所有作者的列表。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">}, function(err, results) {
     if (err) { return next(err); }
@@ -77,10 +77,10 @@ exports.author_delete_post = function(req, res, next) {
     });
 };</code></pre>
 
-<p>首先，我们验证是否已提供id（这是通过表单主体参数发送的，而不是使用URL中的版本）。然后我们以与<code>GET</code>路由相同的方式，获得作者及其相关书本。如果没有书本，那么我们删除作者对象，并重定向到所有作者的列表。如果还有书本，那么我们只需重新呈现表格，传递作者和要删除的书本列表。</p>
+<p>首先，我们验证是否已提供 id（这是通过表单主体参数发送的，而不是使用 URL 中的版本）。然后我们以与<code>GET</code>路由相同的方式，获得作者及其相关书本。如果没有书本，那么我们删除作者对象，并重定向到所有作者的列表。如果还有书本，那么我们只需重新呈现表格，传递作者和要删除的书本列表。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 我们可以检查对<code>findById()</code>的调用，是否返回任何结果，如果没有，则立即呈现所有作者的列表。为简洁起见，我们将代码保留在上面（如果找不到id，它仍会返回作者列表，但这将在<code>findByIdAndRemove()</code>之后发生）。</p>
+<p><strong>注意：</strong> 我们可以检查对<code>findById()</code>的调用，是否返回任何结果，如果没有，则立即呈现所有作者的列表。为简洁起见，我们将代码保留在上面（如果找不到 id，它仍会返回作者列表，但这将在<code>findByIdAndRemove()</code>之后发生）。</p>
 </div>
 
 <h2 class="highlight-spanned" id="视图">视图</h2>
@@ -120,7 +120,7 @@ block content
 
 <ul>
  <li>如果存在与作者相关联的书本，则该页面列出书本，并说明在删除该作者<code>Author</code>之前，必须删除这些书籍。</li>
- <li>如果没有书本，则页面会显示确认提示。如果单击“删除”<strong>Delete</strong>按钮，则会在<code>POST</code>请求中，将作者ID发送到服务器，并且将删除该作者的记录。</li>
+ <li>如果没有书本，则页面会显示确认提示。如果单击“删除”<strong>Delete</strong>按钮，则会在<code>POST</code>请求中，将作者 ID 发送到服务器，并且将删除该作者的记录。</li>
 </ul>
 
 <h2 class="highlight-spanned" id="加入一个删除控制器">加入一个删除控制器</h2>
@@ -128,7 +128,7 @@ block content
 <p>接下来，我们将向 Author 详细视图添加 <strong>Delete </strong>控件（详细信息页面是删除记录的好地方）。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 在完整实现中，控件将仅对授权用户可见。但是在这个时间点上，我们还没有一个授权系统！</p>
+<p><strong>注意：</strong> 在完整实现中，控件将仅对授权用户可见。但是在这个时间点上，我们还没有一个授权系统！</p>
 </div>
 
 <p>打开<strong> author_detail.pug</strong> 视图，并在底部添加以下行。</p>
@@ -141,7 +141,7 @@ p
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png" style="border-style: solid; border-width: 1px; display: block; height: 202px; margin: 0px auto; width: 500px;"></p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行应用程序，并将浏览器打开，到<a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。然后选择所有作者链接<em> All authors</em>，然后选择一个特定作者。最后选择删除作者链接 <em>Delete</em> author。</p>
 
@@ -154,12 +154,12 @@ p
 <p><img alt="" src="https://mdn.mozillademos.org/files/14496/LocalLibary_Express_Author_Delete_WithBooks.png" style="border-style: solid; border-width: 1px; display: block; height: 327px; margin: 0px auto; width: 500px;"></p>
 
 <div class="note">
-<p><strong>注意:</strong> 其他删除对象的页面，可以用相同的方式实现。我们把它留下，作为挑战。</p>
+<p><strong>注意：</strong> 其他删除对象的页面，可以用相同的方式实现。我们把它留下，作为挑战。</p>
 </div>
 
 <h2 id="下一步">下一步</h2>
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></li>
- <li>继续教程 6 子文档的下一步: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">更新书本表单</a></li>
+ <li>继续教程 6 子文档的下一步：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">更新书本表单</a></li>
 </ul>

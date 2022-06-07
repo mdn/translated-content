@@ -48,15 +48,15 @@ block content
   else
     li There are no books.</code></pre>
 
-<p>這个视图扩展了 <strong>layout.pug</strong> 基本模板，并覆盖了名为 '<strong>content</strong>' 的區块 <code>block</code> 。它显示我们从控制器传入的标题<code>title</code>（通过<code>render()</code>方法），然后使用<code>each</code>-<code>in</code>-<code>else</code>语法，遍历<code>book_list</code>变量。为每本图书创建一个列表项，以显示书名，并作为书的详细信息页面的链接，后面跟着作者姓名。如果<code>book_list</code>中没有书，则执行<code>else</code>子句，并显示文字 “没有书” 'There are no books.'。</p>
+<p>這个视图扩展了 <strong>layout.pug</strong> 基本模板，并覆盖了名为 '<strong>content</strong>' 的區块 <code>block</code> 。它显示我们从控制器传入的标题<code>title</code>（通过<code>render()</code>方法），然后使用<code>each</code>-<code>in</code>-<code>else</code>语法，遍历<code>book_list</code>变量。为每本图书创建一个列表项，以显示书名，并作为书的详细信息页面的链接，后面跟着作者姓名。如果<code>book_list</code>中没有书，则执行<code>else</code>子句，并显示文字“没有书” 'There are no books.'。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 我们使用 <code>book.url</code> ，为每本书提供详细记录链接（我们已经实现了此路由，但尚未实现此页面）。这是 <code>Book </code>模型的一个虚拟属性，它使用模型实例的 <code>_id </code>字段，生成唯一的URL路径。</p>
+<p><strong>注意：</strong> 我们使用 <code>book.url</code> ，为每本书提供详细记录链接（我们已经实现了此路由，但尚未实现此页面）。这是 <code>Book </code>模型的一个虚拟属性，它使用模型实例的 <code>_id </code>字段，生成唯一的 URL 路径。</p>
 </div>
 
 <p>在这里，我們感兴趣的是，每本书被定义为两行，第二行使用管道（上面高亮显示）。这种方法是必要的，因为如果作者姓名位于上一行，那么它将成为超链接的一部分。</p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用 (参见 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">测试路由</a> 有相关的命令) ，并打开你的浏览器，访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。然后选择 所有书本 连结。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。</p>
 
@@ -66,5 +66,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page">书本实例列表页面</a></li>
+ <li>继续教程 5 下个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page">书本实例列表页面</a></li>
 </ul>

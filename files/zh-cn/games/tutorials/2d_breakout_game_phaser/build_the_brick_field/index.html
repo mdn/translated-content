@@ -16,10 +16,10 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}</p>
 
 <div>
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser教程</a> 16 的<strong>第9步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html">Gamedev-Phaser-Content-Kit / demos / lesson09.html</a>完成本课后，您可以找到源代码。</p>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 9 步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html">Gamedev-Phaser-Content-Kit / demos / lesson09.html</a>完成本课后，您可以找到源代码。</p>
 </div>
 
-<p>建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用Phaser还是比纯JavaScript更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。</p>
+<p>建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用 Phaser 还是比纯 JavaScript 更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。</p>
 
 <h2 id="定义新变量">定义新变量</h2>
 
@@ -42,7 +42,7 @@ var brickInfo;
 }
 </pre>
 
-<p>您还需要<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png">从Github抓取砖图像</a>并将其保存在您的<code>/img</code>目录中。</p>
+<p>您还需要<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png">从 Github 抓取砖图像</a>并将其保存在您的<code>/img</code>目录中。</p>
 
 <h2 id="画砖">画砖</h2>
 
@@ -104,9 +104,9 @@ var brickInfo;
 }
 </pre>
 
-<p>在这里，我们循环遍历行和列，创建新的砖块并将其放在屏幕上。新创建的砖块为Arcade物理引擎启用，它的身体被设置为不可移动（所以当球被击中时它不会移动），我们还将锚点放在中间并添加砖到集团。</p>
+<p>在这里，我们循环遍历行和列，创建新的砖块并将其放在屏幕上。新创建的砖块为 Arcade 物理引擎启用，它的身体被设置为不可移动（所以当球被击中时它不会移动），我们还将锚点放在中间并添加砖到集团。</p>
 
-<p>目前的问题是，我们在一个地方绘制所有的砖，坐标（0,0）。我们需要做的是将每个砖块绘制在自己的x和y位置。更新<code>brickX</code>和<code>brickY</code>行如下：</p>
+<p>目前的问题是，我们在一个地方绘制所有的砖，坐标（0,0）。我们需要做的是将每个砖块绘制在自己的 x 和 y 位置。更新<code>brickX</code>和<code>brickY</code>行如下：</p>
 
 <pre class="brush: js">var brickX = (r*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
 var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
@@ -114,7 +114,7 @@ var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 
 <p>每个<code>brickX</code>位置都是<code>brickInfo.width</code>加<code>brickInfo.padding</code>号乘以行号<code>r</code>，加上<code>brickInfo.offset.left</code>; 用于所述逻辑<code>brickY</code>是不同之处在于它使用的值列号相同<code>c</code>，<code>brickInfo.height</code>和<code>brickInfo.offset.top</code>。现在每个砖都可以放置在正确的位置，每个砖块之间填充，并从左侧和顶部画布边缘偏移绘制。</p>
 
-<h2 id="检查initBricks（）代码">检查initBricks（）代码</h2>
+<h2 id="检查initbricks_代码">检查 initBricks() 代码</h2>
 
 <p>这是功能的完整代码<code>initBricks()</code>：</p>
 
