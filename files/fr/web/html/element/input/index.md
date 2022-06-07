@@ -540,194 +540,123 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
 
     L'évènement `search` est soumis à des limites de fréquence propres à chaque implémentation.
 - `orient` {{non-standard_inline}}
-  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter), cet attribut définit l'orientation de la piste du curseur. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
-
+  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter), cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement).
 - `results` {{non-standard_inline}}
-
-  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the [`<input>`](/fr/docs/Web/HTML/Element/input) element's natively-provided drop-down menu of previous search queries.
-
-    The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
-
+  - : Uniquement pris en charge par Safari, cet attribut est une valeur numérique qui permet de surcharger le nombre de résultats à afficher dans la liste des suggestions de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) à partir des requêtes précédentes. Sa valeur doit être un nombre positif. Si aucune valeur n'est indiquée ou qu'une valeur invalide est fournie, c'est le nombre d'options maximum par défaut du navigateur qui est utilisé.
 - `webkitdirectory` {{non-standard_inline}}
+  - : Un attribut booléen qui, lorsqu'il est présent, indique que seuls les répertoires peuvent être sélectionnés via le sélecteur de fichier. Voir [`HTMLInputElement.webkitdirectory`](/fr/docs/Web/API/HTMLInputElement/webkitdirectory) pour plus de détails et d'exemples. Bien qu'originalement implémenté uniquement par les navigateurs WebKit, `webkitdirectory` est également utilisable avec Microsoft Edge et Firefox 50 (ou ultérieur). Toutefois, malgré cette prise en charge assez large, il n'est toujours pas standard et ne devrait pas être utilisé à moins qu'il n'y ait aucune autre alternative.
 
-  - : The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See [`HTMLInputElement.webkitdirectory`](/fr/docs/Web/API/HTMLInputElement/webkitdirectory) for additional details and examples.
+## Méthodes
 
-    Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
-
-## Methods
-
-The following methods are provided by the [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) interface which represents `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces, [`HTMLElement`](/fr/docs/Web/API/HTMLElement), [`Element`](/fr/docs/Web/API/Element), [`Node`](/fr/docs/Web/API/Node), and [`EventTarget`](/fr/docs/Web/API/EventTarget).
+Les méthodes suivantes sont fournies par l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui représente les éléments `<input>` dans le DOM. Les méthodes des interfaces parentes [`HTMLElement`](/fr/docs/Web/API/HTMLElement), [`Element`](/fr/docs/Web/API/Element), [`Node`](/fr/docs/Web/API/Node), et [`EventTarget`](/fr/docs/Web/API/EventTarget) sont également disponibles.
 
 - [`checkValidity()`](/fr/docs/Web/API/HTMLInputElement/checkValidity)
-  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false` and fires an [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) event at the element.
+  - : Renvoie `true` si la valeur de l'élément respecte les conditions de validité, `false` sinon et, dans ce dernier cas, déclenche un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sur l'élément.
 - [`reportValidity()`](/fr/docs/Web/API/HTMLInputElement/reportValidity)
-  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`, fires an [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) event at the element, and (if the event isn't canceled) reports the problem to the user.
+  - : Renvoie `true` si la valeur de l'élément respecte les conditions de validité, `false` sinon et, dans ce dernier cas, déclenche un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sur l'élément et, si l'évènement n'est pas annulé, rapporte ce problème à l'utilisatrice ou l'utilisateur.
 - [`select()`](/fr/docs/Web/API/HTMLInputElement/select)
-  - : Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.
+  - : Sélectionne tout le contenu de l'élément `<input>` sous réserve que son contenu soit sélectionnable. Pour les éléments qui n'ont pas de contenu texte qui puisse être sélectionné (par exemple un sélecteur de couleur ou un calendrier), cette méthode n'a pas d'effet.
 - [`setCustomValidity()`](/fr/docs/Web/API/HTMLInputElement/setCustomValidity)
-  - : Sets a custom message to display if the input element's value isn't valid.
+  - : Définit un message particulier à afficher si la valeur de l'élément n'est pas valide.
 - [`setRangeText()`](/fr/docs/Web/API/HTMLInputElement/setRangeText)
-  - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
+  - : Modifie le contenu de la valeur entre deux positions de caractères par une nouvelle chaîne de caractères. Un paramètre `selectMode` permet de contrôler la façon dont le contenu existant est affecté.
 - [`setSelectionRange()`](/fr/docs/Web/API/HTMLInputElement/setSelectionRange)
-  - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+  - : Sélectionne un intervalle de caractères dans un champ texte. Cette méthode n'a pas d'effet pour les champs qui ne sont pas des champs texte.
 - [`stepDown()`](/fr/docs/Web/API/HTMLInputElement/stepDown)
-  - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
+  - : Décrémente la valeur d'un champ numérique d'un nombre indiqué d'unités (1 par défaut).
 - [`stepUp()`](/fr/docs/Web/API/HTMLInputElement/stepUp)
-  - : Increments the value of a numeric input by one or by the specified number of units.
+  - : Incrément la valeur d'un champ numérique d'un nombre indiqué d'unités (1 par défaut).
 
 ## CSS
 
-Inputs, being replaced elements, have a few features not applicable to non form elements. There are CSS selectors that can specifically target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors. There are some properties that are especially useful as well.
+Les champs de formulaire sont des éléments remplacés et disposent de quelques fonctionnalités qui ne sont pas applicables aux éléments qui ne sont pas des éléments de formulaire. Certains sélecteurs CSS permettent de cibler spécifiquement les contrôles en fonction de l'interface utilisateur&nbsp;: ce sont les pseudo-classes d'interface utilisateur. Un élément `<input>` peut également être ciblé via son type grâce aux sélecteurs d'attribut. Certaines propriétés CSS sont également utiles pour ces éléments.
 
-### UI pseudo-classes
+### Pseudo-classes d'interface utilisateur
 
 <table class="no-markdown">
-  <caption>
-    Captions super relevant to the
-    <code>&#x3C;input></code>
-    element:
-  </caption>
+  <caption>Pseudo-classes pertinentes pour l'élément <code>&lt;input&gt;</code></caption>
   <thead>
     <tr>
-      <th>Pseudo-class</th>
+      <th>Pseudo-classe</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>[`:enabled`](/fr/docs/Web/CSS/:enabled)</td>
-      <td>
-        Any currently enabled element that can be activated (selected, clicked
-        on, typed into, etc.) or accept focus and also has a disabled state, in
-        which it can't be activated or accept focus.
+      <td><a href="/fr/docs/Web/CSS/:enabled"><code>:enabled</code></a></td>
+      <td>S'applique à tout élément actif (qui peut faire l'objet d'une sélection de texte, d'un clic, d'une saisie de texte, etc.) ou accepter le focus.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:disabled"><code>:disabled</code></a></td>
+      <td>S'applique à tout élément désactivé (dont le texte ne peut pas être sélectionné, qui ne peut pas recevoir de clic ou de saisie de texte) ou qui ne peut pas recevoir le focus.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:read-only"><code>:read-only</code></a></td>
+      <td>S'applique aux éléments qui ne peuvent pas être édités par l'utilisatrice ou l'utilisateur.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:read-write"><code>:read-write</code></a></td>
+      <td>S'applique aux éléments éditables.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:placeholder-shown"><code>:placeholder-shown</code></a></td>
+      <td>S'applique aux éléments qui affichent actuellement le texte fourni par l'attribut <a href="#placeholder"><code>placeholder</code></a>, y compris les éléments <code>&lt;input&gt;</code> et <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> avec un attribut <code>placeholder</code> présent mais sans valeur pour le moment.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:default"><code>:default</code></a></td>
+      <td>S'applique aux éléments de formulaire qui sont les options par défaut parmi les groupes d'éléments associés entre eux. Correspond aux éléments <a href="/fr/docs/Web/HTML/Element/input/checkbox"><code>&lt;input type="checkbox"&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/input/radio"><code>&lt;input type="radio"&gt;</code></a> qui sont cochés/sélectionnés au chargement de la page.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:checked"><code>checked</code></a></td>
+      <td>S'applique aux éléments <a href="/fr/docs/Web/HTML/Element/input/checkbox"><code>&lt;input type="checkbox"&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/input/radio"><code>&lt;input type="radio"&gt;</code></a> qui sont actuellement cochés (et à l'élément <a href="/fr/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a> sélectionné d'un élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>).</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:indeterminate"><code>:indeterminate</code></a></td>
+      <td>S'applique aux éléments <a href="/fr/docs/Web/HTML/Element/input/checkbox"><code>&lt;input type="checkbox"&gt;</code></a> dont la propriété <code>indeterminate</code> est fixée à <code>true</code> en JavaScript, aux éléments <a href="/fr/docs/Web/HTML/Element/input/radio"><code>&lt;input type="radio"&gt;</code></a> lorsque tous les boutons radio d'un groupe sous décochés, et aux éléments <a href="/fr/docs/Web/HTML/Element/progress"><code>&lt;progress&gt;</code></a> dans un état indéterminé.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:valid"><code>:valid</code></a></td>
+      <td>S'applique aux contrôles de formulaire concernés par les contraintes de validation et qui sont actuellement valides.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a></td>
+      <td>S'applique aux contrôles de formulaire concernés par les contraintes de validation et qui sont actuellement invalides. Cible un contrôle de formulaire dont les valeurs ne respectent pas les contraintes imposées par ses attributs comme <a href="#required"><code>required</code></a>, <a href="#pattern"><code>pattern</code></a>, <a href="#step"><code>step</code></a>, et <a href="#max"><code>max</code></a>.</td>
+    </tr>
+    <tr>
+      <td><a href="/fr/docs/Web/CSS/:in-range"><code>:in-range</code></a></td>
+      <td>S'applique aux champs non vides dont la valeur actuelle est située dans les limites d'intervalle définies par les attributs <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> et suit le pas décrit par l'attribut <a href="#step"><code>step</code></a>.
       </td>
     </tr>
     <tr>
-      <td>[`:disabled`](/fr/docs/Web/CSS/:disabled)</td>
-      <td>
-        Any currently disabled element that has an enabled state, meaning it
-        otherwise could be activated (selected, clicked on, typed into, etc.) or
-        accept focus were it not disabled.
-      </td>
+      <td><a href="/fr/docs/Web/CSS/:out-of-range"><code>:out-of-range</code></a></td>
+      <td>S'applique aux champs non vides dont la valeur actuelle est située en dehors des limites d'intervalle définies par les attributs  <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> ou qui ne respecte pas la contrainte de granularité dictée par l'attribut <a href="#step"><code>step</code></a>.</td>
     </tr>
     <tr>
-      <td>[`:read-only`](/fr/docs/Web/CSS/:read-only)</td>
-      <td>Element not editable by the user</td>
+      <td><a href="/fr/docs/Web/CSS/:required"><code>:required</code></a></td>
+      <td>S'applique aux éléments <code>&lt;input&gt;</code>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> qui ont l'attribut <a href="#required"><code>required</code></a>. Seuls les éléments qui peuvent effectivement être obligatoires sont ciblés. Utiliser l'attribut <a href="#required"><code>required</code></a> sur un élément qui ne peut pas devneir obligatoire n'aura aucun effet.</td>
     </tr>
     <tr>
-      <td>[`:read-write`](/fr/docs/Web/CSS/:read-write)</td>
-      <td>Element that is editable by the user.</td>
+      <td><a href="/fr/docs/Web/CSS/:optional"><code>:optional</code></a></td>
+      <td>S'applique aux éléments <code>&lt;input&gt;</code>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> qui n'ont pas l'attribut <a href="#required"><code>required</code></a>. Les éléments qui ne peuvent pas être obligatoires ne sont pas ciblés.</td>
     </tr>
     <tr>
-      <td>[`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown)</td>
-      <td>
-        Element that is currently displaying <a href="#placeholder"><code>placeholder</code> text</a>,
-        including <code>&#x3C;input></code> and [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as of yet, no value.
-      </td>
+      <td><a href="/fr/docs/Web/CSS/:blank"><code>:blank</code></a></td>
+      <td>S'applique aux éléments <code>&lt;input&gt;</code> ou <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> qui n'ont pas de valeur actuellement.</td>
     </tr>
     <tr>
-      <td>[`:default`](/fr/docs/Web/CSS/:default)</td>
-      <td>
-        Form elements that are the default in a group of related elements.
-        Matches {{HTMLElement("input/checkbox", "checkbox")}} and
-        {{HTMLElement("input/radio", "radio")}} input types that
-        were checked on page load or render.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:checked`](/fr/docs/Web/CSS/:checked)</td>
-      <td>
-        Matches {{HTMLElement("input/checkbox", "checkbox")}} and
-        {{HTMLElement("input/radio", "radio")}} input types that
-        are currently checked (and the ([`<option>`](/fr/docs/Web/HTML/Element/option) in a
-        [`<select>`](/fr/docs/Web/HTML/Element/select) that is currently selected).
-      </td>
-    </tr>
-    <tr>
-      <td>[`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)</td>
-      <td>
-        {{HTMLElement("input/checkbox", "checkbox")}} elements
-        whose indeterminate property is set to true by JavaScript,
-        {{HTMLElement("input/radio", "radio")}} elements, when all
-        radio buttons with the same name value in the form are unchecked, and
-        [`<progress>`](/fr/docs/Web/HTML/Element/progress) elements in an indeterminate state
-      </td>
-    </tr>
-    <tr>
-      <td>[`:valid`](/fr/docs/Web/CSS/:valid)</td>
-      <td>
-        Form controls that can have constraint validation applied and are
-        currently valid.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:invalid`](/fr/docs/Web/CSS/:invalid)</td>
-      <td>
-        Form controls that have constraint validation applied and are currently
-        not valid. Matches a form control whose value doesn't match the
-        constraints set on it by it's attributes, such as
-        <a href="#required"><code>required</code></a>,
-        <a href="#pattern"><code>pattern</code></a>,
-        <a href="#step"><code>step</code></a> and <a href="#max"><code>max</code></a>.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:in-range`](/fr/docs/Web/CSS/:in-range)</td>
-      <td>
-        A non-empty input whose current value is within the range limits
-        specified by the <a href="#min"><code>min</code></a> and <a href="#max"><code>max</code></a> attributes and the <a href="#step"><code>step</code></a>.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:out-of-range`](/fr/docs/Web/CSS/:out-of-range)</td>
-      <td>
-        A non-empty input whose current value is NOT within the range limits
-        specified by the <a href="#min"><code>min</code></a>
-        and <a href="#max"><code>max</code></a> attributes or
-        does not adhere to the <a href="#step"><code>step</code></a> constraint.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:required`](/fr/docs/Web/CSS/:required)</td>
-      <td>
-        <code>&#x3C;input></code>, [`<select>`](/fr/docs/Web/HTML/Element/select), or [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) element that has the <a href="#required"><code>required</code></a> attribute set on it.
-        Only matches elements that can be required.
-        The attribute included on a non-requirable element will not make for a match.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:optional`](/fr/docs/Web/CSS/:optional)</td>
-      <td>
-        <code>&#x3C;input></code>, [`<select>`](/fr/docs/Web/HTML/Element/select), or
-        [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) element that does NOT have the <a href="#required"><code>required</code></a> attribute set on it.
-        Does not match elements that can't be required.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:blank`](/fr/docs/Web/CSS/:blank)</td>
-      <td>
-        <code>&#x3C;input></code> and [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) elements that currently have no value.
-      </td>
-    </tr>
-    <tr>
-      <td>[`:user-invalid`](/fr/docs/Web/CSS/:user-invalid)</td>
-      <td>
-        Similar to <code>:invalid</code>, but is activated on blur. Matches
-        invalid input but only after the user interaction, such as by focusing
-        on the control, leaving the control, or attempting to submit the form
-        containing the invalid control.
-      </td>
+      <td><a href="/fr/docs/Web/CSS/:user-invalid"><code>:user-invalid</code></a></td>
+      <td>Semblable à <code>:invalid</code>, mais ne s'applique aux champs invalides qu'après une interaction utilisateur (par exemple le passage du focus, la sortie du contrôle ou une tentative d'envoi du formulaire avec le contrôle invalide).</td>
     </tr>
   </tbody>
 </table>
 
-#### Pseudo-classes example
+#### Exemple d'utilisation des pseudo-classes
 
-We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the [`color`](/fr/docs/Web/CSS/color) and [`font-weight`](/fr/docs/Web/CSS/font-weight) of the [`<label>`](/fr/docs/Web/HTML/Element/label) that comes immediately after a checked input. We haven't applied any styles if the `input` is not checked.
+On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/color) et [`font-weight`](/fr/docs/Web/CSS/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
 
 ```html hidden
 <input id="checkboxInput" type="checkbox">
-<label for="checkboxInput">Toggle the checkbox on and off</label>
+<label for="checkboxInput">Activer/désactiver la case à cocher</label>
 ```
 
 ```css
@@ -737,26 +666,26 @@ input:checked + label {
 }
 ```
 
-{{EmbedLiveSample('Pseudo-classes_example', 500, 80)}}
+{{EmbedLiveSample('', 500, 80)}}
 
-### Attribute selectors
+### Sélecteurs d'attribut
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.
+Il est possible de cibler différents types de contrôles en fonction de la valeur de leur attribut [`type`](#type) grâce aux [sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). Les sélecteurs d'attribut CSS permettent de cibler des éléments en fonction de la présence ou de la valeur d'un attribut donné.
 
 ```css
-/* matches a password input */
+/* Cible un champ de saisie d'un mot de passe */
 input[type="password"] {}
 
-/* matches a form control whose valid values are limited to a range of values*/
+/* Cible un contrôle de formulaire dont l'intervalle des valeurs valides est délimité par attributs */
 input[min][max] {}
 
-/* matches a form control with a pattern attribute */
- input[pattern] {}
+/* Cible un contrôle de formulaire utilisant un attribut pattern */
+input[pattern] {}
 ```
 
-### ::placeholder
+### `::placeholder`
 
-By default, the appearance of placeholder text is a translucent or light gray. The [`::placeholder`](/fr/docs/Web/CSS/::placeholder) pseudo-element is the input's [`placeholder` text](#placeholder). It can be styled with a limited subset of CSS properties.
+Par défaut, l'affichage du texte de l'attribut [`placeholder`](#placeholder) se fait en transparence ou avec un gris clair. Le pseudo-élément [`::placeholder`](/fr/docs/Web/CSS/::placeholder) permet de cibler le texte de cet attribut et peut être mis en forme avec un sous-ensemble de propriétés CSS.
 
 ```css
 ::placeholder {
@@ -764,24 +693,24 @@ By default, the appearance of placeholder text is a translucent or light gray. T
 }
 ```
 
-Only the subset of CSS properties that apply to the [`::first-line`](/fr/docs/Web/CSS/::first-line) pseudo-element can be used in a rule using `::placeholder` in its selector.
+Seul le sous-ensemble des propriétés CSS qui s'appliquent au pseudo-élément [`::first-line`](/fr/docs/Web/CSS/::first-line) peuvent être utilisées dans une règle qui utilise `::placeholder` comme sélecteur.
 
-### appearance
+### `appearance`
 
-The [`appearance`](/fr/docs/Web/CSS/appearance) property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
+La propriété [`appearance`](/fr/docs/Web/CSS/appearance) permet d'afficher presque tous les éléments en utilisant le style natif fourni par le thème du système d'exploitation, ou de retirer ce style natif si on utilise la valeur `none`.
 
-You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="radio"] {appearance: checkbox;}`, but don't.
+En théorie, on peut donc faire ressembler un élément `<div>` à un bouton radio grâce à `div {appearance: radio;}` ou faire ressembler un bouton radio à une case à cocher avec `[type="radio"] {appearance: checkbox;}`. En réalité, il s'agit de mauvaises pratiques, à éviter donc.
 
-Setting `appearance: none` removes platform native borders, but not functionality.
+Utiliser `appearance: none` permettra de retirer les bordures liées à la plateforme mais pas les fonctionnalités.
 
-### caret-color
+### `caret-color`
 
-A property specific to text entry-related elements is the CSS [`caret-color`](/fr/docs/Web/CSS/caret-color) property, which lets you set the color used to draw the text input caret:
+[`caret-color`](/fr/docs/Web/CSS/caret-color) est une propriété qui s'applique aux éléments permettant de saisir du texte et qui permet de personnaliser la couleur du curseur de saisie&nbsp;:
 
 #### HTML
 
 ```html
-<label for="textInput">Note the red caret:</label>
+<label for="textInput">Vous noterez le curseur rouge:</label>
 <input id="textInput" class="custom" size="32">
 ```
 
@@ -794,33 +723,33 @@ input.custom {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample('caret-color', 500, 80)}}
+{{EmbedLiveSample('', 500, 80)}}
 
-### object-position and object-fit
+### `object-position` et `object-fit`
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/fr/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit) properties
+Dans certains cas (le plus souvent pour les champs non-texte et les interfaces spécialisées), l'élément `<input>` est un [élément remplacé](/fr/docs/Web/CSS/Replaced_element). Lorsque c'est le cas, la taille et la position de l'élément au sein de son cadre peuvent être ajustées grâce aux propriétés CSS [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit).
 
-### Styling
+### Mise en forme
 
-For more information about adding color to elements in HTML, see:
+Pour plus d'informations sur l'ajout de couleurs aux éléments HTML, voir&nbsp;:
 
-- [Applying color to HTML elements using CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color).
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color).
 
-Also see:
+Voir également&nbsp;:
 
-- [Styling HTML forms](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/fr/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Mettre en forme les formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
+- [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
 
-## Additional features
+## Fonctionnalités supplémentaires
 
-### Labels
+### Libellés
 
-Labels are needed to associate assistive text with an `<input>`. The [`<label>`](/fr/docs/Web/HTML/Element/label) element provides explanatory information about a form field that is _always_ appropriate (aside from any layout concerns you have). It's never a bad idea to use a `<label>` to explain what should be entered into an `<input>` or [`<textarea>`](/fr/docs/Web/HTML/Element/textarea).
+Les libellés permettent d'associer les textes explicatifs aux éléments `<input>`. Utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/label) pour fournir des informations explicatives quant à un champ de formulaire est _toujours_ une bonne chose (quel que soit le sujet de mise en forme qui vient après). Ce n'est jamais une mauvaise idée que d'utiliser un élément `<label>` pour expliquer ce qui doit être saisi dans un élément `<input>` ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea).
 
-#### Associated labels
+#### Rattachement des libellés
 
 The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/fr/docs/Web/HTML/Element/label#for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
 
