@@ -121,7 +121,7 @@ Par exemple, si la taille de notre colonne cible est de 60 pixels et que le cont
 }
 ```
 
-Cette approche se retrouve aujourd'hui à de nombreux endroits sur le Web, et elle est documentée ici dans la section sur la mise en page de notre article sur [Méthodes de mises en page traditionnelles](/fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods). Cette approche se retrouve aujourd'hui à de nombreux endroits sur le Web, et elle est documentée ici dans la section sur la mise en page de notre article sur les méthodes de mise en page héritées. Il est probable que vous rencontrerez des sites web utilisant cette approche dans votre travail, donc il est utile de la comprendre, même si vous ne construiriez pas un site moderne en utilisant une grille flexible basée sur le flottement.
+Cette approche se retrouve aujourd'hui à de nombreux endroits sur le Web, et elle est documentée dans notre article sur les [méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Il est probable que vous rencontrerez des sites web utilisant cette approche dans votre travail, donc il est utile de la comprendre, même si vous ne construiriez pas un site moderne en utilisant une grille flexible basée sur le flottement.
 
 L'exemple suivant montre une conception simple et responsive en utilisant des médias queries et une grille flexible. Sur des écrans étroits, la mise en page affiche les boîtes entassées les unes sur les autres :
 

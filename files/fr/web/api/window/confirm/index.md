@@ -1,41 +1,60 @@
 ---
-title: window.confirm
+title: Window.confirm()
 slug: Web/API/Window/confirm
-tags:
-  - DOM
-  - DOM_0
 translation_of: Web/API/Window/confirm
+browser-compat: api.Window.confirm
 ---
 {{ApiRef("Window")}}
 
-### Résumé
+`window.confirm()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel et d'attendre que la personne confirme ou annule la boîte de dialogue.
 
-Affiche un dialogue modal avec un message et deux boutons, OK et Annuler.
+Sous certaines conditions, par exemple au changement d'onglet, le navigateur pourra ne pas afficher la boîte de dialogue ou ne pas attendre la confirmation ou l'annulation.
 
-### Syntaxe
+## Syntaxe
 
-    resultat = window.confirm(message);
+```js
+confirm(message)
+```
 
-- `message` est la chaîne contenant le texte à afficher dans le dialogue.
-- `resultat` est une valeur booléenne indiquant si OK ou Annuler a été sélectionné (`true` signifie OK).
+### Paramètres
 
-### Exemple
+- `message`
+  - : Une chaîne de caractères qu'on souhaite afficher dans la boîte de dialogue de confirmation.
 
-    if (window.confirm("Une nouvelle fenêtre va s'ouvrir.")) {
-        window.open("fenetre.html", "Nouvelle fenêtre", "");
-    }
+### Valeur de retour
 
-### Notes
+Un booléen qui indique si l'option «&nbsp;OK&nbsp;» (`true`) ou «&nbsp;Annuler&nbsp;» (`false`) a été sélectionnée. Si le navigateur ignore les boîtes de dialogue, la valeur renvoyée est toujours `false`.
 
-Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
+## Exemples
 
-Les applications utilisant le chrome (par exemple les extensions) devront plutôt utiliser les méthodes de [nsIPromptService](fr/NsIPromptService).
+```js
+if (window.confirm("Do you really want to leave?")) {
+  window.open("exit.html", "Thanks for Visiting!");
+}
+```
 
-### Spécification
+Créera le résultat suivant&nbsp;:
 
-{{ DOM0() }}
+![Confirmation dans Firefox](firefoxcomfirmdialog_zpsf00ec381.png)
 
-### Voir aussi
+## Notes
 
-- [alert](/fr/docs/DOM/window.alert)
-- [prompt](/fr/docs/DOM/window.prompt)
+Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au reste de l'interface utilisateur du programme, à moins que la boîte de dialogue soit fermée. Aussi, il ne faut pas abuser de cette fonction.
+
+Il y a également d'autres raisons [d'éviter les boîtes de dialogue pour demander une confirmation](https://alistapart.com/article/neveruseawarning/).
+
+Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des demandes de confirmation.
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- [`window.alert()`](/fr/docs/Web/API/Window/alert)
+- [`window.prompt()`](/fr/docs/Web/API/Window/prompt)

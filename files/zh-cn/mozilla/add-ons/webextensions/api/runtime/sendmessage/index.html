@@ -13,7 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <p> </p>
 
-<p>如果发送给其他扩展，则将参数 <code>extensionId</code> 设置为其他扩展的ID。其他扩展的 {{WebExtAPIRef('runtime.onMessageExternal')}} 将会被触发。</p>
+<p>如果发送给其他扩展，则将参数 <code>extensionId</code> 设置为其他扩展的 ID。其他扩展的 {{WebExtAPIRef('runtime.onMessageExternal')}} 将会被触发。</p>
 
 <p>此接口不能给 content script 发消息，如果要给 content script 发消息，请使用 {{WebExtAPIRef('tabs.sendMessage')}}。</p>
 
@@ -32,10 +32,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <dl>
  <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. 若你想要发给不同的扩展，这里传入接收方的扩展ID。The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json, then <code>extensionId</code> should have this value. Otherwise it should be have the ID that was generated for the intended recipient.</dd>
+ <dd><code>string</code>. 若你想要发给不同的扩展，这里传入接收方的扩展 ID。The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json, then <code>extensionId</code> should have this value. Otherwise it should be have the ID that was generated for the intended recipient.</dd>
  <dd>若此省略此参数，则发送给自己的扩展。</dd>
  <dt><code>message</code></dt>
- <dd><code>any</code>. 任何可以序列化成JSON的东西。</dd>
+ <dd><code>any</code>. 任何可以序列化成 JSON 的东西。</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
  <dd><code>object</code>.
  <dl class="reference-values">
@@ -47,33 +47,33 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
  </dd>
 </dl>
 
-<p>根据给出的参数不同，API遵循如下规则：</p>
+<p>根据给出的参数不同，API 遵循如下规则：</p>
 
 <ul>
- <li><strong>只有1个参数：</strong>将会被当做 message 发送给自己的扩展。</li>
- <li><strong>有2个参数：</strong>
+ <li><strong>只有 1 个参数：</strong>将会被当做 message 发送给自己的扩展。</li>
+ <li><strong>有 2 个参数：</strong>
   <ul>
    <li>若第二个参数符合下面的规则，将会被当做 <code>(message, options)</code>，将消息发送给自己的扩展：
     <ol>
-     <li>一个合法的配置对象（也就是说这个对象只包含options参数支持的属性）</li>
+     <li>一个合法的配置对象（也就是说这个对象只包含 options 参数支持的属性）</li>
      <li>null</li>
      <li>undefined</li>
     </ol>
    </li>
-   <li>否则，将会被当做 <code>(extensionId, message)。</code>消息将会给发送给 <code>extensionId</code> 指定ID的扩展</li>
+   <li>否则，将会被当做 <code>(extensionId, message)。</code>消息将会给发送给 <code>extensionId</code> 指定 ID 的扩展</li>
   </ul>
  </li>
- <li><strong>有3个参数：</strong>将会被当做 <code>(extensionId, message, options)</code>. 消息将会给发送给 <code>extensionId</code> 指定ID的扩展</li>
+ <li><strong>有 3 个参数：</strong>将会被当做 <code>(extensionId, message, options)</code>. 消息将会给发送给 <code>extensionId</code> 指定 ID 的扩展</li>
 </ul>
 
 <div class="note">
-<p>在Firefox 55之前，只给出2个参数时，规则会有所不同：<br>
+<p>在 Firefox 55 之前，只给出 2 个参数时，规则会有所不同：<br>
  Under the old rules, if the first argument was a string, it was treated as the <code>extensionId</code>, with the message as the second argument. This meant that if you called <code>sendMessage()</code> with arguments like <code>("my-message", {})</code>, then it would send an empty message to the extension identified by "my-message". Under the new rules, with these arguments you would send the message "my-message" internally, with an empty options object.</p>
 </div>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>返回一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。若接收方响应，Promise将会变为 fulfilled 并且返回接收方响应的JSON对象（数字、字符串、数组、true/false都是合法的JSON对象）。否则，Promise会变为 fulfilled 但是不返回任何参数。如果发生了连接错误，Promise将会变为 rejected 并返回一个错误消息。</p>
+<p>返回一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。若接收方响应，Promise 将会变为 fulfilled 并且返回接收方响应的 JSON 对象（数字、字符串、数组、true/false 都是合法的 JSON 对象）。否则，Promise 会变为 fulfilled 但是不返回任何参数。如果发生了连接错误，Promise 将会变为 rejected 并返回一个错误消息。</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
