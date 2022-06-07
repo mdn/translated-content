@@ -8,7 +8,7 @@ tags:
   - Reference
   - Streams
   - WritableStream
-translation_of: Web/API/WritableStream
+translation_of: Web/API/WritableStream/WritableStream
 ---
 {{APIRef("Streams")}}
 
