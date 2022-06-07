@@ -28,7 +28,7 @@ new WritableStream(underlyingSink, queuingStrategy)
   - : 一个包含定义了构造流行为方法和属性的对象。underlyingSource 包括：
 
     - `start(controller)` {{optional_inline}}
-      - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。传递给这个方法的controller是一个 {{domxref("WritableStreamDefaultController")}}。开发人员可以使用此方法在设立期间控制流。
+      - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。传递给这个方法的controller是一个 {{domxref("WritableStreamDefaultController")}}。开发人员可以使用此方法在设置期间控制流。
     - `write(chunk, controller)` {{optional_inline}}
       - : 这个方法，也是由开发人员定义，当一个新的数据块(由 `chunk` 参数中指定)准备好写入底层 sink 时，将调用该方法。它可以返回一个 promise 来表示写入操作的成功或者失败。传递给此方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}，当提交了更多的块进行写入时，开发人员可以使用它来控制流。只有在先前已经写入成功后才会调用该方法，并且永远不会在流关闭或者中止后调用（见下文）。
     - `close(controller)` {{optional_inline}}
