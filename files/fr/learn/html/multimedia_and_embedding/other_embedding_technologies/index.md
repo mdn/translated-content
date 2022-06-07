@@ -1,5 +1,5 @@
 ---
-title: Des objets aux «&nbsp;iframe&nbsp;» — autres techniques d'intégration
+title: Des objets aux iframes — autres techniques d'intégration
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 tags:
   - Apprentissage

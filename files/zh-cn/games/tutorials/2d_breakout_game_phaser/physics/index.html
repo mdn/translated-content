@@ -17,21 +17,21 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Physics
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>
 
 <div>
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser教程</a> 16 的<strong>第5步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit / demos / lesson05.html</a>完成本课程后找到源代码</p>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 5 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit / demos / lesson05.html</a>完成本课程后找到源代码</p>
 </div>
 
-<p>为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向您介绍Phaser中的可用内容，以及演示典型的简单设置。</p>
+<p>为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向您介绍 Phaser 中的可用内容，以及演示典型的简单设置。</p>
 
 <h2 id="添加物理效果">添加物理效果</h2>
 
-<p>Phaser与三个不同的物理引擎（Arcade Physics，P2和Ninja Physics）捆绑在一起，第四个选项Box2D可作为商业插件使用。对于像我们这样的简单游戏，我们可以使用Arcade Physics引擎。我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。</p>
+<p>Phaser 与三个不同的物理引擎（Arcade Physics，P2 和 Ninja Physics）捆绑在一起，第四个选项 Box2D 可作为商业插件使用。对于像我们这样的简单游戏，我们可以使用 Arcade Physics 引擎。我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。</p>
 
-<p>首先，让我们在游戏中初始化Arcade Physics引擎。<code>physics.startSystem()</code>在<code>create</code>函数开头添加方法（使其成为函数内的第一行），如下所示：</p>
+<p>首先，让我们在游戏中初始化 Arcade Physics 引擎。<code>physics.startSystem()</code>在<code>create</code>函数开头添加方法（使其成为函数内的第一行），如下所示：</p>
 
 <pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
 </pre>
 
-<p>接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser对象物理不启用。在<code>create()</code>函数底部添加以下行：</p>
+<p>接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser 对象物理不启用。在<code>create()</code>函数底部添加以下行：</p>
 
 <pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
 </pre>

@@ -8,7 +8,7 @@ tags:
   - 边缘情况
 translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
-<p>本文解释了在fetch时发生的边缘情况（以及潜在的其他APIs展示相同类型的资源检索行为）。当从“iframe”发起包含相对url的跨源fetch时，相对url用于针对当前全局位置而不是iframe的位置进行解析。</p>
+<p>本文解释了在 fetch 时发生的边缘情况（以及潜在的其他 APIs 展示相同类型的资源检索行为）。当从“iframe”发起包含相对 url 的跨源 fetch 时，相对 url 用于针对当前全局位置而不是 iframe 的位置进行解析。</p>
 
 <h2 id="边缘情况">边缘情况</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 <ul>
  <li>需要一个同源的 iframe</li>
  <li>该同源 iframe 需要具有不同基址位置</li>
- <li>必须使用跨全局的 fetch 函数, 例如. <code>frame.contentWindow.fetch()</code></li>
+ <li>必须使用跨全局的 fetch 函数，例如。<code>frame.contentWindow.fetch()</code></li>
  <li>传递给 fetch 函数的是相对 URL</li>
 </ul>
 
