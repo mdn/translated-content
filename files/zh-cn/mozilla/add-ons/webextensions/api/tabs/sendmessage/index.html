@@ -5,9 +5,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>从background scripts中发送单个消息 (or other privileged scripts, such as popup scripts or options page scripts) 到任何content scripts that belong to the extension and are running in the specified tab.</p>
+<p>从 background scripts 中发送单个消息 (or other privileged scripts, such as popup scripts or options page scripts) 到任何 content scripts that belong to the extension and are running in the specified tab.</p>
 
-<p>这个消息将被content scripts中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 <code>sendResponse</code> 这个方法发送一个response到background scripts。</p>
+<p>这个消息将被 content scripts 中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 <code>sendResponse</code> 这个方法发送一个 response 到 background scripts。</p>
 
 <p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 

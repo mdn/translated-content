@@ -5,7 +5,7 @@ translation_of: Web/API/PromiseRejectionEvent/promise
 ---
 <div>{{APIRef("HTML DOM") }}</div>
 
-<p> {{domxref("PromiseRejectionEvent")}}事件对象的<code><strong>promise</strong></code>属性是只读的，表明Promise被reject的原因。您可以通过检查{{domxref("PromiseRejectionEvent.reason")}}来了解Promise为什么被reject。</p>
+<p> {{domxref("PromiseRejectionEvent")}}事件对象的<code><strong>promise</strong></code>属性是只读的，表明 Promise 被 reject 的原因。您可以通过检查{{domxref("PromiseRejectionEvent.reason")}}来了解 Promise 为什么被 reject。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -13,13 +13,13 @@ translation_of: Web/API/PromiseRejectionEvent/promise
 
 <h3 id="Value">Value</h3>
 
-<p>一个被reject的，并且错误未被处理的{{jsxref("Promise")}} </p>
+<p>一个被 reject 的，并且错误未被处理的{{jsxref("Promise")}} </p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>下面的例子监听了未被处理的promise，如果{{domxref("PromiseRejectionEvent.reason", "reason")}} 是一个对象，并且其<code>code</code>属性包含了一段文本“Module not read.”，一个空闲的回调函数被声明，当任务执行错误时会进行重试</p>
+<p>下面的例子监听了未被处理的 promise，如果{{domxref("PromiseRejectionEvent.reason", "reason")}} 是一个对象，并且其<code>code</code>属性包含了一段文本“Module not read.”，一个空闲的回调函数被声明，当任务执行错误时会进行重试</p>
 
-<p>{{domxref("event.preventDefault()")}} 用来表明该promise已被处理</p>
+<p>{{domxref("event.preventDefault()")}} 用来表明该 promise 已被处理</p>
 
 <pre class="brush: js">window.onunhandledrejection = function(event) {
   if (event.reason.code &amp;&amp; event.reason.code == "Module not ready") {

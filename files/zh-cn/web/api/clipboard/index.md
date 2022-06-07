@@ -24,13 +24,13 @@ translation_of: Web/API/Clipboard
 
 如果用户没有适时使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `"clipboard-read"` 或 `"clipboard-write"` 权限，调用 `Clipboard` 对象的方法不会成功。
 
-> **备注：** 实际上，现在浏览器对于访问剪贴板权限的索取各有不同，在章节的[剪贴板可用性](#剪贴板可用性)部分查看更多细节。
+> **备注：** 实际上，现在浏览器对于访问剪贴板权限的索取各有不同，在章节的 [剪贴板可用性](#剪贴板可用性) 部分查看更多细节。
 
 所有 Clipboard API 的方法都是异步的；它们返回一个 {{jsxref("Promise")}} 对象，在剪贴板访问完成后被兑现。如果剪贴板访问被拒绝，promise 也会被拒绝。
 
-> **备注：** **剪贴板**是用于短期数据储存或转移的数据缓存区，数据转移可以发生在文档和应用程序之间。剪贴板常常实现为一个匿名的、临时的 [数据缓存](https://zh.wikipedia.org/wiki/緩衝器)，有时也叫做粘贴缓存，可由绝大部分位于已定义[应用程序接口](https://zh.wikipedia.org/wiki/应用程序接口)的环境中的程序访问。
+> **备注：** **剪贴板**是用于短期数据储存或转移的数据缓存区，数据转移可以发生在文档和应用程序之间。剪贴板常常实现为一个匿名的、临时的 [数据缓存](https://zh.wikipedia.org/wiki/緩衝器)，有时也叫做粘贴缓存，可由绝大部分位于已定义 [应用程序接口](https://zh.wikipedia.org/wiki/应用程序接口) 的环境中的程序访问。
 >
-> 一个典型的应用程序常通过将[用户输入](https://zh.wikipedia.org/wiki/I/O)（如：[快捷键](https://zh.wikipedia.org/wiki/快捷键)、[菜单选择](https://zh.wikipedia.org/wiki/選單)等）映射到一些需要访问剪贴板的功能接口上。
+> 一个典型的应用程序常通过将 [用户输入](https://zh.wikipedia.org/wiki/I/O)（如：[快捷键](https://zh.wikipedia.org/wiki/快捷键)、[菜单选择](https://zh.wikipedia.org/wiki/選單) 等）映射到一些需要访问剪贴板的功能接口上。
 
 ## 方法
 

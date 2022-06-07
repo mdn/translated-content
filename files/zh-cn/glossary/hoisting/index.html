@@ -8,7 +8,7 @@ tags:
   - 术语表
 translation_of: Glossary/Hoisting
 ---
-<p>变量提升（Hoisting）被认为是， Javascript中执行上下文 （特别是创建和执行阶段）工作方式的一种认识。在 <a href="http://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a> 之前的JavaScript文档中找不到变量提升（Hoisting）这个词。不过，需要注意的是，开始时，这个概念可能比较难理解，甚至恼人。</p>
+<p>变量提升（Hoisting）被认为是，Javascript 中执行上下文（特别是创建和执行阶段）工作方式的一种认识。在 <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a> 之前的 JavaScript 文档中找不到变量提升（Hoisting）这个词。不过，需要注意的是，开始时，这个概念可能比较难理解，甚至恼人。</p>
 
 <p>例如，从概念的字面意义上说，“变量提升”意味着变量和函数的声明会在物理层面移动到代码的最前面，但这么说并不准确。实际上变量和函数声明在代码里的位置是不会动的，而是在编译阶段被放入内存中。</p>
 
@@ -28,7 +28,7 @@ function catName(name) {
 catName("Tigger");
 
 /*
-以上代码的执行结果是: "我的猫名叫 Tigger"
+以上代码的执行结果是："我的猫名叫 Tigger"
 */
 
 </pre>
@@ -46,7 +46,7 @@ function catName(name) {
 }
 
 /*
-代码执行的结果是: "我的猫名叫 Chloe"
+代码执行的结果是："我的猫名叫 Chloe"
 */
 
 </pre>
@@ -55,7 +55,7 @@ function catName(name) {
 
 <p>变量提升也适用于其他数据类型和变量。变量可以在声明之前进行初始化和使用。但是如果没有初始化，就不能使用它们。</p>
 
-<p>译者注： 函数和变量相比，会被优先提升。这意味着函数会被提升到更靠前的位置。</p>
+<p>译者注：函数和变量相比，会被优先提升。这意味着函数会被提升到更靠前的位置。</p>
 
 <h3 id="只有声明被提升">只有声明被提升</h3>
 

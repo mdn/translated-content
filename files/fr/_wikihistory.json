@@ -14677,21 +14677,6 @@
       "mekal"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-08-27T03:14:59.087Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Copen",
-      "jmh",
-      "Mr21",
-      "vava",
-      "m2c",
-      "Goofy",
-      "LoeWzukW",
-      "jean_pierre"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2019-03-18T21:38:44.194Z",
     "contributors": [
@@ -14770,6 +14755,21 @@
     "modified": "2019-03-18T21:38:33.597Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-08-27T03:14:59.087Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Copen",
+      "jmh",
+      "Mr21",
+      "vava",
+      "m2c",
+      "Goofy",
+      "LoeWzukW",
+      "jean_pierre"
     ]
   },
   "Web/API/File_and_Directory_Entries_API": {
@@ -14993,13 +14993,6 @@
     "contributors": [
       "loella16",
       "fscholz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:29:18.151Z",
-    "contributors": [
-      "NemoNobobyPersonne",
-      "Dwaaren"
     ]
   },
   "Web/API/GlobalEventHandlers/onauxclick": {
@@ -41152,11 +41145,10 @@
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
-    "modified": "2019-04-30T14:03:20.605Z",
+    "modified": "2019-03-23T22:29:18.151Z",
     "contributors": [
-      "wbamberg",
-      "fscholz",
-      "Kalwyn"
+      "NemoNobobyPersonne",
+      "Dwaaren"
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/ended_event": {

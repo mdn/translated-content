@@ -8,11 +8,11 @@ translation_of: Web/API/WebGL_API/Basic_2D_animation_example
 <div>{{WebGLSidebar}}</div>
 
 <div id="live-sample">
-<p>在这个WebGL示例中，我们创建一个画布，并在其中使用WebGL渲染旋转正方形。我们用来表示场景的坐标系与画布的坐标系相同。也就是说，（0, 0）这个坐标在左上角，右下角是坐标在（600, 460）。</p>
+<p>在这个 WebGL 示例中，我们创建一个画布，并在其中使用 WebGL 渲染旋转正方形。我们用来表示场景的坐标系与画布的坐标系相同。也就是说，（0, 0）这个坐标在左上角，右下角是坐标在（600, 460）。</p>
 
 <h2 id="Vertex_shader">Vertex shader</h2>
 
-<p>首先，让我们看一下顶点着色器。它的工作如同以往，是将我们用于场景的坐标转换为剪贴空间的坐标（即系统中的（0，0）位于上下文的中心，每个轴从-1.0扩展到1.0，而不管上下文的实际大小）。</p>
+<p>首先，让我们看一下顶点着色器。它的工作如同以往，是将我们用于场景的坐标转换为剪贴空间的坐标（即系统中的（0，0）位于上下文的中心，每个轴从-1.0 扩展到 1.0，而不管上下文的实际大小）。</p>
 
 <pre class="brush: html">&lt;script id="vertex-shader" type="x-shader/x-vertex"&gt;
   attribute vec2 aVertexPosition;
@@ -32,7 +32,7 @@ translation_of: Web/API/WebGL_API/Basic_2D_animation_example
   }
 &lt;/script&gt;</pre>
 
-<p dir="ltr" id="tw-target-text">主程序与我们共享属性aVertexPosition，它是顶点在其使用的任何坐标系中的位置。我们需要转换这些值，以便位置的两个组件都在-1.0到1.0的范围内。通过乘以基于上下文宽高比的缩放因子，可以很容易地完成此操作。我们很快就会看到这个计算。</p>
+<p>主程序与我们共享属性 aVertexPosition，它是顶点在其使用的任何坐标系中的位置。我们需要转换这些值，以便位置的两个组件都在-1.0 到 1.0 的范围内。通过乘以基于上下文宽高比的缩放因子，可以很容易地完成此操作。我们很快就会看到这个计算。</p>
 
 <p>我们也可以通过一次变换来旋转这个图形。 The rotated position of the vertex is computed by applying the rotation vector, found in the uniform <code>uRotationVector</code>, that's been computed by the JavaScript code.</p>
 

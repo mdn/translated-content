@@ -5,7 +5,7 @@ translation_of: Web/API/DOMImplementation/createDocument
 ---
 <p>{{ApiRef("DOM")}}</p>
 
-<p><strong><code>DOMImplementation.createDocument()</code>方法创建并返回一个</strong> {{domxref("XMLDocument")}}对象.</p>
+<p><strong><code>DOMImplementation.createDocument()</code>方法创建并返回一个</strong> {{domxref("XMLDocument")}}对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/DOMImplementation/createDocument
 
 <dl>
  <dt><em>namespaceURI</em></dt>
- <dd>被创建的{{domxref("DOMString")}} 文档的namespace URI 是namespace URI ,如果文档不属于任何namespace URI 就为<code>null</code>.</dd>
+ <dd>被创建的{{domxref("DOMString")}} 文档的 namespace URI 是 namespace URI ,如果文档不属于任何 namespace URI 就为<code>null</code>.</dd>
 </dl>
 
 <dl>
@@ -25,7 +25,7 @@ translation_of: Web/API/DOMImplementation/createDocument
 
 <dl>
  <dt><em>documentType </em>{{optional_inline}}</dt>
- <dd>文档的 <code><a class="internal" href="/En/DOM/DocumentType" title="En/DOM/DocumentType">DocumentType</a> </code>默认为null.</dd>
+ <dd>文档的 <code><a class="internal" href="/En/DOM/DocumentType" title="En/DOM/DocumentType">DocumentType</a> </code>默认为 null.</dd>
 </dl>
 
 <ul>
@@ -42,33 +42,7 @@ alert(doc.getElementById('abc')); // [object HTMLBodyElement]
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-createdocument', 'DOMImplementation.createDocument')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}[现时标准]</td>
-   <td>
-    <p>将<code>createDocument()</code> 的返回类型从 {{domxref("Document")}} 修改为{{domxref("XMLDocument")}}.<br>
-     <code>createDocument()</code>的第三个参数,文档类型,现在是可选的,默认为<code>null</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#Level-2-Core-DOM-createDocument', 'DOMImplementation.createDocument')}}</td>
-   <td>{{Spec2('DOM3 Core')}}[过时]</td>
-   <td>自{{SpecName("DOM2 Core")}}无改变</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#Level-2-Core-DOM-createDocument', 'DOMImplementation.createDocument')}}</td>
-   <td>{{Spec2('DOM2 Core')}}[过时]</td>
-   <td>初始定义.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
@@ -77,5 +51,5 @@ alert(doc.getElementById('abc')); // [object HTMLBodyElement]
 <h2 id="另请参见">另请参见</h2>
 
 <ul>
- <li>归属它的 {{domxref("DOMImplementation")}} 接口.</li>
+ <li>归属它的 {{domxref("DOMImplementation")}} 接口。</li>
 </ul>

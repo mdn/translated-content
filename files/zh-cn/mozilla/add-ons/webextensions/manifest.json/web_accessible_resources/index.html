@@ -35,11 +35,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p>举个例子，<a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">Beastify example extension</a> 将用户选择的野兽图片来替换网页，这些图片与应用是经过合并打包的。该应用添加 <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code>，其 <code>src</code> 指向图片，这样就使选中的图片可见了。网页要载入图片的话，这些图片就必须可经访问。</p>
 
-<p>通过 <code>web_accessible_resources</code>， 你列出资源，让它们可经网页访问。这些资源路径相对于 manifest.json 文件.</p>
+<p>通过 <code>web_accessible_resources</code>，你列出资源，让它们可经网页访问。这些资源路径相对于 manifest.json 文件。</p>
 
 <p>注意，这其中不必包括 content scripts。</p>
 
-<p>如果你的应用要用 {{WebExtAPIRef("webRequest")}} 来重定向公共 URL(如 HTTPS) 到一个该应用中的页面, 那么应用必须将该页面列入<code>web_accessible_resources</code>。</p>
+<p>如果你的应用要用 {{WebExtAPIRef("webRequest")}} 来重定向公共 URL(如 HTTPS) 到一个该应用中的页面，那么应用必须将该页面列入<code>web_accessible_resources</code>。</p>
 
 <h3 id="使用_web_accessible_resources">使用 web_accessible_resources</h3>
 

@@ -1,5 +1,5 @@
 ---
-title: 用WebGL让目标动起来
+title: 用 WebGL 让目标动起来
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 tags:
   - WebGL
@@ -24,7 +24,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
               squareRotation,   // amount to rotate in radians
               [0, 0, 1]);       // axis to rotate around</pre>
 
-<p>这会将modelViewMatrix的当前值<code>squareRotation</code>绕Z轴旋转。</p>
+<p>这会将 modelViewMatrix 的当前值<code>squareRotation</code>绕 Z 轴旋转。</p>
 
 <p>要进行动画制作，我们需要添加<code>squareRotation</code>随时间更改值的代码。为此，我们可以创建一个新变量来跟踪上次动画播放的时间（我们称之为<code>then</code>），然后将以下代码添加到主函数的末尾</p>
 
@@ -42,9 +42,9 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
   }
   requestAnimationFrame(render);</pre>
 
-<p>该代码用于  <code>requestAnimationFrame</code> 要求浏览器在每一帧上调用函数“<code>render</code>”。<code>requestAnimationFrame</code> 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算<code>deltaTime</code> 自渲染最后一帧以来的秒数  。在drawscene的结尾，我们添加了要更新的代码 <code>squareRotation.</code></p>
+<p>该代码用于 <code>requestAnimationFrame</code> 要求浏览器在每一帧上调用函数“<code>render</code>”。<code>requestAnimationFrame</code> 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算 <code>deltaTime</code> 自渲染最后一帧以来的秒数。在 drawscene 的结尾，我们添加了要更新的代码 <code>squareRotation</code>。</p>
 
-<pre class="brush: js"><code>  squareRotation += deltaTime;</code></pre>
+<pre class="brush: js">squareRotation += deltaTime;</pre>
 
 <p>该代码使用自上次我们更新值以来所经过的时间<code>squareRotation</code>来确定旋转正方形的距离。</p>
 

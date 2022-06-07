@@ -1546,7 +1546,7 @@
 /es/docs/Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM	/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /es/docs/Usar_gradientes	/es/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /es/docs/Usar_la_Geolocalización	/es/docs/Web/API/Geolocation_API
-/es/docs/Using_files_from_web_applications	/es/docs/Web/API/File/Using_files_from_web_applications
+/es/docs/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Using_geolocation	/es/docs/Web/API/Geolocation_API
 /es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 /es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
@@ -1590,6 +1590,7 @@
 /es/docs/Web/API/EventSource/onopen	/es/docs/Web/API/EventSource/open_event
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
+/es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
 /es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation

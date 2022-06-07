@@ -41,7 +41,7 @@ getReader(mode)
 
 ## 示例
 
-下面是个简单的例子, 在读取 `ReadableStream` 前，使用 `getReader()` 创建一个 {{domxref("ReadableStreamDefaultReader")}}。（查看全部代码：[Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。按顺序读取每个块，并传递给 UI, 当整个流被读取完毕后, 从递归方法中退出，并在 UI 的另一部分输出整个流。
+下面是个简单的例子，在读取 `ReadableStream` 前，使用 `getReader()` 创建一个 {{domxref("ReadableStreamDefaultReader")}}。（查看全部代码：[Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。按顺序读取每个块，并传递给 UI，当整个流被读取完毕后，从递归方法中退出，并在 UI 的另一部分输出整个流。
 
 ```js
 function fetchStream() {
