@@ -12,7 +12,7 @@ translation_of: Web/API/WritableStream
 ---
 {{APIRef("Streams")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStream`** 接口为将流数据写入目的地（称为 sink）提供了一个标准的抽象概念。该对象带有内置的背压和队列。
+[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStream`** 接口为将流数据写入目的地（称为 sink）提供了一个标准的抽象。该对象带有内置的背压和队列。
 
 `WritableStream` 是一个{{glossary("Transferable objects","可转移对象")}}。
 
@@ -37,7 +37,7 @@ translation_of: Web/API/WritableStream
 
 ## 示例
 
-下面的例子说明了这个接口的几个功能。它展示了使用自定义 sink 和 API 提供的排队策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个块写入流。最后，`write()` 和 `close()` 返回 promise，该 promise 由处理后的块和流是否成功决定。
+下面的例子说明了这个接口的几个功能。它展示了使用自定义 sink 和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
 
 ```js
 const list = document.querySelector('ul');
@@ -107,9 +107,9 @@ sendMessage("Hello, world.", writableStream);
 
 ### 背压
 
-由于 API 中支持[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#backpressure)，其在代码中的执行可能不太明显。为了明白背压是如何执行的，请查看三件事情:
+由于 API 支持[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#backpressure)的方式（其在代码中的实现）可能不太明显。要了解背压是如何实现的，请注意以下三点:
 
-- 在创建计数策略（第 35 行）时设置的 `highWaterMark` 属性，用于设置 `WritableStream` 实例操作单个 `write()` 时处理的最大数据量。在该示例中，它是可以发送到 `defaultWriter.write()` 的最大数据量（第 11 行）。
+- 为创建计数策略（第 35 行）而设置的 `highWaterMark` 属性，其用于设置 `WritableStream` 实例处理单个 `write()` 操作时可接受的最大数据量。在该示例中，它是可以传递给 `defaultWriter.write()` 的最大数据量（第 11 行）。
 - `defaultWriter.ready` 属性返回一个当 sink（`WritableStream` 构造函数的第一个属性）完成写入数据时兑现的 promise。数据源可以写入更多的数据（第 9 行）或者调用 `close()`（第 24 行）。过早调用 close() 会阻止数据写入。这就是示例调用 `defaultWriter.ready` 两次的原因（第 9 行和第 22 行）。
 - sink 的 `write()` 方法（第 40 行）返回的 {{jsxref("Promise")}} 告诉 `WritableStream` 和它的 writer 何时去兑现 `defaultWriter.ready`。
 
