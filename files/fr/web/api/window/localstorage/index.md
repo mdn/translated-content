@@ -47,13 +47,13 @@ localStorage.setItem('monChat', 'Tom');
 La syntaxe pour la lecture de l'article `localStorage` est la suivante :
 
 ```js
-var cat = localStorage.getItem('myCat');
+var cat = localStorage.getItem('monChat');
 ```
 
 La syntaxe pour la suppression de l'élément `localStorage` est la suivante :
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem('monChat');
 ```
 
 La syntaxe pour supprimer tous les éléments de `localStorage` est la suivante :
