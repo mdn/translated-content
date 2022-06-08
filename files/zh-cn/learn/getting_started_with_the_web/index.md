@@ -18,13 +18,13 @@ translation_of: Learn/Getting_started_with_the_web
 
 ## 你的第一个网站
 
-创建一个专业的网站需要大量的工作，所以如果你是 Web 开发的新手，我们鼓励你从小事做起。你不可能立马再建一个Facebook，但做一个自己的简单网站并不难，我们将由此开始。
+创建一个专业的网站需要大量的工作，所以如果你是 Web 开发的新手，我们鼓励你从小事做起。你不可能立马再建一个 Facebook，但做一个自己的简单网站并不难，我们将由此开始。
 
-通过阅读下面列出的文章，你将从零开始获得你的第一个在线网页。让我们开始吧!
+通过阅读下面列出的文章，你将从零开始获得你的第一个在线网页。让我们开始吧！
 
 ### 安装基本软件
 
-说到建设网站的工具，有很多可供选择的。如果你初入门径，你可能会被外面的一系列代码编辑器、框架和测试工具所迷惑。在[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中, 我们将逐步向你展示如何安装你需要的软件，以开始基本的 Web 开发。
+说到建设网站的工具，有很多可供选择的。如果你初入门径，你可能会被外面的一系列代码编辑器、框架和测试工具所迷惑。在[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中，我们将逐步向你展示如何安装你需要的软件，以开始基本的 Web 开发。
 
 ### 你的网站会是什么样子？
 
@@ -36,7 +36,7 @@ translation_of: Learn/Getting_started_with_the_web
 
 ### HTML 基础知识
 
-超文本标记语言（HTML）是你用来组织你的网络内容，并赋予它意义和目的的代码。例如，我的内容是一组段落还是一个要点列表？我的页面上是否插入了图片？我有一个数据表吗？在你的接受能力之内，[HTML 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)提供了足够的信息，使你熟悉 HTML 。
+超文本标记语言（HTML）是你用来组织你的网络内容，并赋予它意义和目的的代码。例如，我的内容是一组段落还是一个要点列表？我的页面上是否插入了图片？我有一个数据表吗？在你的接受能力之内，[HTML 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)提供了足够的信息，使你熟悉 HTML。
 
 ### CSS 基础知识
 
@@ -44,7 +44,7 @@ translation_of: Learn/Getting_started_with_the_web
 
 ### JavaScript 基础知识
 
-JavaScript是一种编程语言，你用它来给你的网站添加交互功能。例如游戏、当按钮被按下或数据被输入表格时发生的事情、动态造型效果、动画等。[JavaScript 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)让你了解这种令人兴奋的语言的可能性，以及如何开始使用。
+JavaScript 是一种编程语言，你用它来给你的网站添加交互功能。例如游戏、当按钮被按下或数据被输入表格时发生的事情、动态造型效果、动画等。[JavaScript 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)让你了解这种令人兴奋的语言的可能性，以及如何开始使用。
 
 ### 发布你的网站
 

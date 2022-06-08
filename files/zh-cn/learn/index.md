@@ -10,7 +10,7 @@ tags:
   - 前端
   - 启程
   - 学习
-  - 学习Web开发
+  - 学习 Web 开发
   - 索引
   - 网站
 translation_of: Learn
@@ -38,11 +38,11 @@ translation_of: Learn
 - 有一定基础
   - : 如果你已经具备了一定的开发知识，下一步就是深入学习 {{glossary("HTML")}} 和 {{glossary("CSS")}}。先学习 [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)，再学习 [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)。
 - 学习脚本编写
-  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过[JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)和[服务端编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)开始学习。
+  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过 [JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)和[服务端编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)开始学习。
 - 框架与工具
   - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习[前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及[网站服务端编程](/zh-CN/docs/Learn/Server-side)了。
 
-> **备注：** 可在 [词汇表](/zh-CN/docs/Glossary) 中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在 [常见问题](/zh-CN/docs/Learn/Common_questions) 寻找答案。
+> **备注：** 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
 
 ## 涵盖的主题
 
