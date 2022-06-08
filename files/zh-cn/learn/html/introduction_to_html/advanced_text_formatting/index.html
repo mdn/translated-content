@@ -14,7 +14,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p>HTML中有许多其他元素可以用于格式化文本，我们没有在<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理基础</a>中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。</p>
+<p>HTML 中有许多其他元素可以用于格式化文本，我们没有在<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理基础</a>中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -40,7 +40,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 旁白
 戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</pre>
 
-<p>描述列表使用与其他列表类型不同的闭合标签— {{htmlelement("dl")}}; 此外，每一项都用 {{htmlelement("dt")}} (description term) 元素闭合。每个描述都用 {{htmlelement("dd")}} (description definition) 元素闭合。让我们来完成下面的标记例子:</p>
+<p>描述列表使用与其他列表类型不同的闭合标签— {{htmlelement("dl")}}; 此外，每一项都用 {{htmlelement("dt")}} (description term) 元素闭合。每个描述都用 {{htmlelement("dd")}} (description definition) 元素闭合。让我们来完成下面的标记例子：</p>
 
 <pre class="brush: html notranslate">&lt;dl&gt;
   &lt;dt&gt;内心独白&lt;/dt&gt;
@@ -51,7 +51,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
     &lt;dd&gt;戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。&lt;/dd&gt;
 &lt;/dl&gt;</pre>
 
-<p>浏览器的默认样式会在<strong>描述列表的描述部分</strong>（description definition）和<strong>描述术语</strong>（description terms）之间产生缩进。MDN非常严密地遵循这一惯例，同时也鼓励关于术语的其他更多的定义（but also embolden the terms for extra definition）。</p>
+<p>浏览器的默认样式会在<strong>描述列表的描述部分</strong>（description definition）和<strong>描述术语</strong>（description terms）之间产生缩进。MDN 非常严密地遵循这一惯例，同时也鼓励关于术语的其他更多的定义（but also embolden the terms for extra definition）。</p>
 
 <p>下面是前述代码的显示结果：</p>
 
@@ -72,7 +72,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
  <dd>写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。</dd>
 </dl>
 
-<h3 id="主动学习_标记一组定义">主动学习: 标记一组定义</h3>
+<h3 id="主动学习_标记一组定义">主动学习：标记一组定义</h3>
 
 <p>现在是时候尝试一下描述列表了; 在输入区域的原始文本里添加相应的元素，使得它在输出区域是以描述列表的形式出现。如果你喜欢，你也可以使用你自己的描述术语和描述。</p>
 
@@ -198,11 +198,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <h2 id="引用">引用</h2>
 
-<p>HTML也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。</p>
+<p>HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。</p>
 
 <h3 id="块引用">块引用</h3>
 
-<p>如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用{{htmlelement("blockquote")}}元素包裹起来表示，并且在{{htmlattrxref("cite","blockquote")}}属性里用URL来指向引用的资源。例如，下面的例子就是引用的MDN的<code>&lt;blockquote&gt;</code>元素页面：</p>
+<p>如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用{{htmlelement("blockquote")}}元素包裹起来表示，并且在{{htmlattrxref("cite","blockquote")}}属性里用 URL 来指向引用的资源。例如，下面的例子就是引用的 MDN 的<code>&lt;blockquote&gt;</code>元素页面：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
 Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
@@ -214,7 +214,7 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
   Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
 &lt;/blockquote&gt;</pre>
 
-<p>浏览器在渲染块引用时默认会增加缩进，作为引用的一个指示符；MDN是这样做的，但是也增加了额外的样式：</p>
+<p>浏览器在渲染块引用时默认会增加缩进，作为引用的一个指示符；MDN 是这样做的，但是也增加了额外的样式：</p>
 
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
 <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
@@ -222,7 +222,7 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 
 <h3 id="行内引用">行内引用</h3>
 
-<p>行内元素用同样的方式工作，除了使用{{htmlelement("q")}}元素。例如，下面的标记包含了从MDN<code>&lt;q&gt;</code>页面的引用：</p>
+<p>行内元素用同样的方式工作，除了使用{{htmlelement("q")}}元素。例如，下面的标记包含了从 MDN<code>&lt;q&gt;</code>页面的引用：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
 for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;
@@ -383,7 +383,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <h2 id="缩略语">缩略语</h2>
 
-<p>另一个你在web上看到的相当常见的元素是{{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释（包含在{{htmlattrxref("title")}}属性中）。让我们看看下面两个例子：</p>
+<p>另一个你在 web 上看到的相当常见的元素是{{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释（包含在{{htmlattrxref("title")}}属性中）。让我们看看下面两个例子：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;我们使用 &lt;abbr title="超文本标记语言（Hyper text Markup Language）"&gt;HTML&lt;/abbr&gt; 来组织网页文档。&lt;/p&gt;
 
@@ -397,7 +397,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 <p>第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 还有另一个元素&lt;acronym&gt;，它基本上与&lt;abbr&gt;相同，专门用于首字母缩略词而不是缩略语。 然而，这已经被废弃了 - 它在浏览器的支持中不如&lt;abbr&gt;，并且具有类似的功能，所以没有意义。 只需使用&lt;abbr&gt;。</p>
+<p><strong>Note</strong>: 还有另一个元素&lt;acronym&gt;，它基本上与&lt;abbr&gt;相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如&lt;abbr&gt;，并且具有类似的功能，所以没有意义。只需使用&lt;abbr&gt;。</p>
 </div>
 
 <h3 id="主动学习：标记一个缩略语">主动学习：标记一个缩略语</h3>
@@ -508,13 +508,13 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <h2 id="标记联系方式">标记联系方式</h2>
 
-<p>HTML有个用于标记联系方式的元素——{{htmlelement("address")}}。它仅仅包含你的联系方式，例如：</p>
+<p>HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。它仅仅包含你的联系方式，例如：</p>
 
 <pre class="brush: html notranslate">&lt;address&gt;
   &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
 &lt;/address&gt;</pre>
 
-<p>但要记住的一点是，<code>&lt;address&gt;</code>元素是为了标记编写HTML文档的人的联系方式，而不是任何其他的内容。因此，如果这是Chris写的文档，上面的内容将会很好。注意，下面的内容也是可以的：</p>
+<p>但要记住的一点是，<code>&lt;address&gt;</code>元素是为了标记编写 HTML 文档的人的联系方式，而不是任何其他的内容。因此，如果这是 Chris 写的文档，上面的内容将会很好。注意，下面的内容也是可以的：</p>
 
 <pre class="brush: html notranslate">&lt;address&gt;
   &lt;p&gt;Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
@@ -536,7 +536,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <h2 id="展示计算机代码">展示计算机代码</h2>
 
-<p>有大量的HTML元素可以来标记计算机代码：</p>
+<p>有大量的 HTML 元素可以来标记计算机代码：</p>
 
 <ul>
  <li>{{htmlelement("code")}}: 用于标记计算机通用代码。</li>
@@ -574,7 +574,7 @@ para.onclick = function() {
 
 <p>HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlelement("time")}} 元素。例如：</p>
 
-<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;2016年1月20日&lt;/time&gt;</pre>
+<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;2016 年 1 月 20 日&lt;/time&gt;</pre>
 
 <p>为什么需要这样做？因为世界上有许多种书写日期的格式，上边的日期可能被写成：</p>
 
@@ -586,7 +586,7 @@ para.onclick = function() {
  <li>06/20/16</li>
  <li>The 20th of next month</li>
  <li>20e Janvier 2016</li>
- <li>2016年1月20日</li>
+ <li>2016 年 1 月 20 日</li>
  <li>And so on</li>
 </ul>
 

@@ -1,5 +1,5 @@
 ---
-title: 如何构造HTML表单
+title: 如何构造 HTML 表单
 slug: Learn/Forms/How_to_structure_a_web_form
 translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
@@ -13,39 +13,39 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的计算机能力, 和基本的 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">对HTML的理解</a>。</td>
+   <th scope="row">前提条件：</th>
+   <td>基本的计算机能力，和基本的 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a>。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>要理解如何构造HTML表单并赋予它们语义，以便它们是可用的和可访问的。</td>
+   <th scope="row">目标：</th>
+   <td>要理解如何构造 HTML 表单并赋予它们语义，以便它们是可用的和可访问的。</td>
   </tr>
  </tbody>
 </table>
 
-<p>HTML表单的灵活性使它们成为HTML中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建HTML表单时使用正确的结构将有助于确保表单可用性和可访问性。</p>
+<p>HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和可访问性。</p>
 
 <h2 id="&lt;form>_元素"> &lt;form&gt; 元素</h2>
 
-<p> {{HTMLElement("form")}} 元素按照一定的格式定义了表单和确定表单行为的属性。当您想要创建一个HTML表单时，都必须从这个元素开始，然后把所有内容都放在里面。许多辅助技术或浏览器插件可以发现{{HTMLElement("form")}}元素并实现特殊的钩子，使它们更易于使用。 </p>
+<p> {{HTMLElement("form")}} 元素按照一定的格式定义了表单和确定表单行为的属性。当您想要创建一个 HTML 表单时，都必须从这个元素开始，然后把所有内容都放在里面。许多辅助技术或浏览器插件可以发现{{HTMLElement("form")}}元素并实现特殊的钩子，使它们更易于使用。 </p>
 
 <p>我们早在之前的文章中就遇见过它了。</p>
 
-<div class="note"><strong>注意:</strong> 严格禁止在一个表单内嵌套另一个表单。嵌套会使表单的行为不可预知，而这取决于正在使用的浏览器。</div>
+<div class="note"><strong>注意：</strong> 严格禁止在一个表单内嵌套另一个表单。嵌套会使表单的行为不可预知，而这取决于正在使用的浏览器。</div>
 
-<p>请注意，在{{HTMLElement("form")}}元素之外使用表单小部件是可以的，但是如果您这样做了，那么表单小部件与任何表单都没有任何关系。这样的小部件可以在表单之外使用，但是您应该对于这些小部件有特别的计划，因为它们自己什么也不做。您将不得不使用JavaScript定制他们的行为。</p>
+<p>请注意，在{{HTMLElement("form")}}元素之外使用表单小部件是可以的，但是如果您这样做了，那么表单小部件与任何表单都没有任何关系。这样的小部件可以在表单之外使用，但是您应该对于这些小部件有特别的计划，因为它们自己什么也不做。您将不得不使用 JavaScript 定制他们的行为。</p>
 
 <div class="note">
-<p><strong>注意</strong>: HTML5在HTML表单元素中引入<code>form</code>属性。它让您显式地将元素与表单绑定在一起，即使元素不在{{ HTMLElement("form") }}中。不幸的是，就目前而言，跨浏览器对这个特性的实现还不足以使用。</p>
+<p><strong>注意</strong>: HTML5 在 HTML 表单元素中引入<code>form</code>属性。它让您显式地将元素与表单绑定在一起，即使元素不在{{ HTMLElement("form") }}中。不幸的是，就目前而言，跨浏览器对这个特性的实现还不足以使用。</p>
 </div>
 
 <h2 id="&lt;fieldset>_和_&lt;legend>_元素"> &lt;fieldset&gt; 和 &lt;legend&gt; 元素</h2>
 
 <p>{{HTMLElement("fieldset")}}元素是一种方便的用于创建具有相同目的的小部件组的方式，出于样式和语义目的。 你可以在<code>&lt;fieldset&gt;</code>开口标签后加上一个 {{HTMLElement("legend")}}元素来给{{HTMLElement("fieldset")}} 标上标签。 {{HTMLElement("legend")}}的文本内容正式地描述了{{HTMLElement("fieldset")}}里所含有部件的用途。</p>
 
-<p>许多辅助技术将使用{{HTMLElement("legend")}} 元素，就好像它是相应的 {{HTMLElement("fieldset")}} 元素里每个部件的标签的一部分。例如，在说出每个小部件的标签之前，像<a href="http://www.freedomscientific.com/products/fs/jaws-product-page.asp" rel="external">Jaws</a>或<a href="http://www.nvda-project.org/" rel="external">NVDA</a>这样的屏幕阅读器会朗读出legend的内容。</p>
+<p>许多辅助技术将使用{{HTMLElement("legend")}} 元素，就好像它是相应的 {{HTMLElement("fieldset")}} 元素里每个部件的标签的一部分。例如，在说出每个小部件的标签之前，像<a href="http://www.freedomscientific.com/products/fs/jaws-product-page.asp" rel="external">Jaws</a>或<a href="http://www.nvda-project.org/" rel="external">NVDA</a>这样的屏幕阅读器会朗读出 legend 的内容。</p>
 
-<p>这里有一个小例子:</p>
+<p>这里有一个小例子：</p>
 
 <pre class="brush:html;">&lt;form&gt;
   &lt;fieldset&gt;
@@ -71,17 +71,17 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>当阅读上述表格时，屏幕阅读器将会读第一个小部件“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。</p>
 
-<p>本例中的用例是最重要的。每当您有一组单选按钮时，您应该将它们嵌套在{{HTMLElement("fieldset")}}元素中。还有其他用例，一般来说，{{HTMLElement("fieldset")}}元素也可以用来对表单进行分段。理想情况下，长表单应该在拆分为多个页面，但是如果表单很长，却必须在单个页面上，那么将以不同的关联关系划分的分段，分别放在不同的fieldset里，可以提高可用性。</p>
+<p>本例中的用例是最重要的。每当您有一组单选按钮时，您应该将它们嵌套在{{HTMLElement("fieldset")}}元素中。还有其他用例，一般来说，{{HTMLElement("fieldset")}}元素也可以用来对表单进行分段。理想情况下，长表单应该在拆分为多个页面，但是如果表单很长，却必须在单个页面上，那么将以不同的关联关系划分的分段，分别放在不同的 fieldset 里，可以提高可用性。</p>
 
 <p>因为它对辅助技术的影响， {{HTMLElement("fieldset")}} 元素是构建可访问表单的关键元素之一。无论如何，你有责任不去滥用它。如果可能，每次构建表单时，尝试侦听<a href="https://www.nvaccess.org/download/" title="屏幕阅读器">屏幕阅读器</a>如何解释它。如果听起来很奇怪，试着改进表单结构。</p>
 
 <h2 id="&lt;label>_元素"> &lt;label&gt; 元素</h2>
 
-<p>正如我们在前一篇文章中看到的， {{HTMLElement("label")}} 元素是为HTML表单小部件定义标签的正式方法。如果你想构建可访问的表单，这是最重要的元素——当实现的恰当时，屏幕阅读器会连同有关的说明和表单元素的标签一起朗读。以我们在上一篇文章中看到的例子为例:</p>
+<p>正如我们在前一篇文章中看到的， {{HTMLElement("label")}} 元素是为 HTML 表单小部件定义标签的正式方法。如果你想构建可访问的表单，这是最重要的元素——当实现的恰当时，屏幕阅读器会连同有关的说明和表单元素的标签一起朗读。以我们在上一篇文章中看到的例子为例：</p>
 
 <pre class="brush: html">&lt;label for="name"&gt;Name:&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</pre>
 
-<p><code>&lt;label&gt;</code> 标签与 <code>&lt;input&gt;</code> 通过他们各自的<code>for</code> 属性和 <code>id</code> 属性正确相关联（label的for属性和它对应的小部件的id属性），这样，屏幕阅读器会读出诸如“Name, edit text”之类的东西。</p>
+<p><code>&lt;label&gt;</code> 标签与 <code>&lt;input&gt;</code> 通过他们各自的<code>for</code> 属性和 <code>id</code> 属性正确相关联（label 的 for 属性和它对应的小部件的 id 属性），这样，屏幕阅读器会读出诸如“Name, edit text”之类的东西。</p>
 
 <p>如果标签没有正确设置，屏幕阅读器只会读出“Edit text blank”之类的东西，这样会没什么帮助。</p>
 
@@ -93,7 +93,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>尽管可以这样做，但人们认为设置<code>for</code>属性才是最好的做法，因为一些辅助技术不理解标签和小部件之间的隐式关系。</p>
 
-<h3 id="标签也可点击!">标签也可点击!</h3>
+<h3 id="标签也可点击!">标签也可点击！</h3>
 
 <p>正确设置标签的另一个好处是可以在所有浏览器中单击标签来激活相应的小部件。这对于像文本输入这样的例子很有用，这样你可以通过点击标签，和点击输入区效果一样，来聚焦于它，这对于单选按钮和复选框尤其有用——这种控件的可点击区域可能非常小，设置标签来使它们可点击区域变大是非常有用的。</p>
 
@@ -153,32 +153,32 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>：你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在VoiceOver上测试的（NVDA的行为也类似）。我们也乐于听听你的试验结果。</p>
+<p><strong>注意</strong>：你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以在 GitHub 上看到 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html">required-labels.html</a> (你也可以看<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html">预览版</a>)。不要运行2个或3个未注释版本的示例—— 如果您有多个标签和多个输入相同的ID，那么屏幕阅读器肯定会感到困惑！</p>
+<p><strong>注意</strong>: 你可以在 GitHub 上看到 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html">required-labels.html</a> (你也可以看<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html">预览版</a>)。不要运行 2 个或 3 个未注释版本的示例—— 如果您有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！</p>
 </div>
 
-<h2 id="用于表单的通用HTML结构">用于表单的通用HTML结构</h2>
+<h2 id="用于表单的通用HTML结构">用于表单的通用 HTML 结构</h2>
 
-<p>除了特定于HTML表单的结构之外，还应该记住表单同样是HTML。这意味着您可以使用HTML的所有强大功能来构造一个HTML表单。</p>
+<p>除了特定于 HTML 表单的结构之外，还应该记住表单同样是 HTML。这意味着您可以使用 HTML 的所有强大功能来构造一个 HTML 表单。</p>
 
-<p>正如您在示例中可以看到的，用{{HTMLElement("div")}}元素包装标签和它的小部件是很常见的做法。{{HTMLElement("p")}}元素也经常被使用，HTML列表也是如此（后者在构造多个复选框或单选按钮时最为常见）。</p>
+<p>正如您在示例中可以看到的，用{{HTMLElement("div")}}元素包装标签和它的小部件是很常见的做法。{{HTMLElement("p")}}元素也经常被使用，HTML 列表也是如此（后者在构造多个复选框或单选按钮时最为常见）。</p>
 
-<p>除了{{HTMLElement("fieldset")}}元素之外，使用HTML标题（例如，{{htmlelement("h1")}}、{{htmlelement("h2")}}）和分段（如{{htmlelement("section")}}）来构造一个复杂的表单也是一种常见的做法。</p>
+<p>除了{{HTMLElement("fieldset")}}元素之外，使用 HTML 标题（例如，{{htmlelement("h1")}}、{{htmlelement("h2")}}）和分段（如{{htmlelement("section")}}）来构造一个复杂的表单也是一种常见的做法。</p>
 
 <p>最重要的是，你要找到一种你觉得很舒服的风格去码代码，而且它也能带来可访问的、可用的形式。</p>
 
 <p>它包含了从功能上划分开并分别包含在{{htmlelement("section")}}元素中的部分，以及一个{{htmlelement("fieldset")}}来包含单选按钮。</p>
 
-<h3 id="自主学习构建一个表单结构">自主学习:构建一个表单结构</h3>
+<h3 id="自主学习构建一个表单结构">自主学习：构建一个表单结构</h3>
 
 <p>让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">原生表单小部件</a>）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。</p>
 
 <ol>
- <li>在开始之前，在计算机上的一个新目录中，创建一个<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">空白模板文件</a>和<a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css">我们的支付表单的CSS样式</a>的本地副本。</li>
- <li>首先，通过添加下面这行代码到你的HTML{{htmlelement("head")}}使你的HTML应用CSS。
+ <li>在开始之前，在计算机上的一个新目录中，创建一个<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">空白模板文件</a>和<a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css">我们的支付表单的 CSS 样式</a>的本地副本。</li>
+ <li>首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。
   <pre class="brush: html">&lt;link href="payment-form.css" rel="stylesheet"&gt;</pre>
  </li>
  <li>接下来，通过添加外部{{htmlelement("form")}}元素来开始一张表单：
@@ -186,11 +186,11 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 &lt;/form&gt;</pre>
  </li>
- <li>在 <code>&lt;form&gt;</code> 标签内，以添加一个标题和段落开始，告诉用户必需的字段是如何标记的:
+ <li>在 <code>&lt;form&gt;</code> 标签内，以添加一个标题和段落开始，告诉用户必需的字段是如何标记的：
   <pre class="brush: html">&lt;h1&gt;Payment form&lt;/h1&gt;
 &lt;p&gt;Required fields are followed by &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
  </li>
- <li>接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中({{htmlelement("li")}}))元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中:
+ <li>接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
   <pre>&lt;section&gt;
     &lt;h2&gt;Contact information&lt;/h2&gt;
     &lt;fieldset&gt;
@@ -239,7 +239,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
     &lt;/p&gt;
 &lt;/section&gt;</pre>
  </li>
- <li>现在，我们将转到表单的第二个<code>&lt;section&gt;</code>——支付信息。在这里，我们有三个不同的小部件以及它们的标签，每个都包含在一个<code>&lt;p&gt;</code>中。第一个是选择信用卡类型的下拉菜单({{htmlelement("select")}})。第二个是输入一个信用卡号的类型编号的 <code>&lt;input&gt;</code> 元素。最后一个是输入<code>date</code>类型的<code>&lt;input&gt;</code> 元素，用来输入卡片的过期日期（这将在支持的浏览器中出现一个日期选择器小部件，并在非支持的浏览器中回退到普通的文本输入）。同样，在之前的代码后面输入以下内容：
+ <li>现在，我们将转到表单的第二个<code>&lt;section&gt;</code>——支付信息。在这里，我们有三个不同的小部件以及它们的标签，每个都包含在一个<code>&lt;p&gt;</code>中。第一个是选择信用卡类型的下拉菜单 ({{htmlelement("select")}})。第二个是输入一个信用卡号的类型编号的 <code>&lt;input&gt;</code> 元素。最后一个是输入<code>date</code>类型的<code>&lt;input&gt;</code> 元素，用来输入卡片的过期日期（这将在支持的浏览器中出现一个日期选择器小部件，并在非支持的浏览器中回退到普通的文本输入）。同样，在之前的代码后面输入以下内容：
   <pre class="brush: html">&lt;section&gt;
     &lt;h2&gt;Payment information&lt;/h2&gt;
     &lt;p&gt;
@@ -269,18 +269,18 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
     &lt;/p&gt;
 &lt;/section&gt;</pre>
  </li>
- <li>我们要添加的最后一个部分要简单得多，它只包含了一个<code>submit</code>类型的 {{htmlelement("button")}} ，用于提交表单数据。现在把这个添加到你的表单的底部:
+ <li>我们要添加的最后一个部分要简单得多，它只包含了一个<code>submit</code>类型的 {{htmlelement("button")}} ，用于提交表单数据。现在把这个添加到你的表单的底部：
   <pre class="brush: html">&lt;p&gt; &lt;button type="submit"&gt;Validate the payment&lt;/button&gt; &lt;/p&gt;</pre>
  </li>
 </ol>
 
-<p>您可以在下面看到已完成的表单 (你可以在Github上看到<a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html">源码</a>和<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html">预览版</a>）：</p>
+<p>您可以在下面看到已完成的表单 (你可以在 Github 上看到<a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html">源码</a>和<a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html">预览版</a>）：</p>
 
 <p>{{EmbedLiveSample("a_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}</p>
 
 <h2 id="总结">总结</h2>
 
-<p>现在，您已经具备了正确地构造HTML表单所需的所有知识;下一篇文章将深入介绍各种不同类型的表单小部件，您将希望从用户那里收集信息。</p>
+<p>现在，您已经具备了正确地构造 HTML 表单所需的所有知识;下一篇文章将深入介绍各种不同类型的表单小部件，您将希望从用户那里收集信息。</p>
 
 <h2 id="另见">另见</h2>
 

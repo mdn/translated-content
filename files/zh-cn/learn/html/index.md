@@ -1,5 +1,5 @@
 ---
-title: 学习 HTML ：指南与教程
+title: 学习 HTML：指南与教程
 slug: Learn/HTML
 tags:
   - HTML
@@ -33,7 +33,7 @@ translation_of: Learn/HTML
 在学习了 HTML 之后，你就可以继续学习其他进阶主题了，例如：
 
 - [CSS](/zh-CN/docs/Learn/CSS)，以及如何用它装饰 HTML (例如：更改你的文本字号和字体，添加边框和阴影，将你的页面设计成多栏布局，添加动画和其他视觉效果。)
-- [JavaScript](/zh-CN/docs/Learn/JavaScript)，以及如何用它为网页添加动态功能(例如：找到并在地图上绘制出你的地址，触发按钮时让 UI 元素显示或消失，将用户的数据本地储存在他们的电脑里等等。))
+- [JavaScript](/zh-CN/docs/Learn/JavaScript)，以及如何用它为网页添加动态功能（例如：找到并在地图上绘制出你的地址，触发按钮时让 UI 元素显示或消失，将用户的数据本地储存在他们的电脑里等等。）
 
 ## 模块
 

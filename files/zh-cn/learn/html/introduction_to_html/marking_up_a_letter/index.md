@@ -42,9 +42,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ### 块/结构语义
 
 - 你应该使用适当的结构来构造整体文档，包括 doctype、{{htmlelement("html")}}、{{htmlelement("head")}} 和 {{htmlelement("body")}} 元素。
-- 除下面提到的几点之外，这封信应该被标记成有着段落和标题的结构。 这封信有 1 个顶级标题（“Re:”那行）和 3 个二级标题。
+- 除下面提到的几点之外，这封信应该被标记成有着段落和标题的结构。这封信有 1 个顶级标题（“Re:”那行）和 3 个二级标题。
 - 使用适当类型的列表标记该学期的开学时间（the semester start dates）、学习科目（study subjects）和异域舞蹈（exotic dances）。
-- 两个地址应该放在 {{htmlelement("address")}} 元素下. 每行的地址应该放在新的一行而不是新的段落。
+- 两个地址应该放在 {{htmlelement("address")}} 元素下。每行的地址应该放在新的一行而不是新的段落。
 
 ### 内联语义
 

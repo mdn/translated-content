@@ -1,5 +1,5 @@
 ---
-title: JavaScript基础
+title: JavaScript 基础
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
 tags:
   - JavaScript
@@ -19,14 +19,14 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 
 <h2 id="JavaScript_到底是什么？">JavaScript 到底是什么？</h2>
 
-<p>{{Glossary("JavaScript")}}（缩写：JS）是一门完备的 {{Glossary("Dynamic programming language", "动态编程语言")}}。当应用于 {{Glossary("HTML")}} 文档时，可为网站提供动态交互特性。由布兰登·艾克（ Brendan Eich，Mozilla 项目、Mozilla 基金会和 Mozilla 公司的联合创始人）发明。</p>
+<p>{{Glossary("JavaScript")}}（缩写：JS）是一门完备的 {{Glossary("Dynamic programming language", "动态编程语言")}}。当应用于 {{Glossary("HTML")}} 文档时，可为网站提供动态交互特性。由布兰登·艾克（Brendan Eich，Mozilla 项目、Mozilla 基金会和 Mozilla 公司的联合创始人）发明。</p>
 
 <p>JavaScript 的应用场合极其广泛，简单到幻灯片、照片库、浮动布局和响应按钮点击，复杂到游戏、2D/3D 动画、大型数据库驱动程序等等。</p>
 
 <p>JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心编写了大量实用工具，可以使 开发工作事半功倍。其中包括：</p>
 
 <ul>
- <li>浏览器应用程序接口（{{Glossary("API","API")}}）—— 浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成3D 图像与音频样本等等。</li>
+ <li>浏览器应用程序接口（{{Glossary("API","API")}}）—— 浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成 3D 图像与音频样本等等。</li>
  <li>第三方 API —— 让开发者可以在自己的站点中整合其它内容提供者（Twitter、Facebook 等）提供的功能。</li>
  <li>第三方框架和库 —— 用来快速构建网站和应用。</li>
 </ul>
@@ -39,7 +39,7 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 
 <p>读到这里你一定很激动，诚然 —— JavaScript 是最振奋人心的 Web 技术之一，而且在娴熟驾驭之后，你的网站在功能和创新力上将达到一个新的维度。</p>
 
-<p>然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个 “Hello world!” 示例（<a href="https://zh.wikipedia.org/wiki/Hello_World">一切始于 Hello World</a>）。</p>
+<p>然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个“Hello world!”示例（<a href="https://zh.wikipedia.org/wiki/Hello_World">一切始于 Hello World</a>）。</p>
 
 <div class="warning">
 <p><strong>重要：</strong>如果你没有完成之前的课程实践，可下载 <a href="https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip">上一章节示例的压缩包</a> 并在本地解压作出发点。</p>
@@ -58,16 +58,16 @@ myHeading.textContent = 'Hello world!';</pre>
  <li>最后，保存 HTML 和 JavaScript 文件，用浏览器打开 <code>index.html</code>。可以看到如下内容：<img alt="" src="https://mdn.mozillademos.org/files/9543/hello-world.png" style="display: block; height: 236px; margin: 0px auto; width: 806px;"></li>
 </ol>
 
-<div class="note"><strong>注：</strong>我们将 {{htmlelement("script")}} 放在HTML文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML页面的底部附近通常是最好的策略。</div>
+<div class="note"><strong>注：</strong>我们将 {{htmlelement("script")}} 放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略。</div>
 
 <h3 id="发生了什么？">发生了什么？</h3>
 
-<p>JavaScript 把页面的标题改成了 “Hello world!” 。首先用 <code>{{domxref("Document.querySelector", "querySelector()")}}</code> 函数获取标题的引用，并把它储存在 <code>myHeading</code> 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。</p>
+<p>JavaScript 把页面的标题改成了“Hello world!” 。首先用 <code>{{domxref("Document.querySelector", "querySelector()")}}</code> 函数获取标题的引用，并把它储存在 <code>myHeading</code> 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。</p>
 
-<p>之后，把 <code>myHeading</code> 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为 “Hello world!” 。</p>
+<p>之后，把 <code>myHeading</code> 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为“Hello world!” 。</p>
 
 <div class="note">
-<p><strong>注：</strong>上面用到的两个函数都来自 <a href="/zh-CN/docs/Web/API/Document_Object_Model">文档对象模型 (DOM) API</a>， 均用于控制文档。</p>
+<p><strong>注：</strong>上面用到的两个函数都来自 <a href="/zh-CN/docs/Web/API/Document_Object_Model">文档对象模型 (DOM) API</a>，均用于控制文档。</p>
 </div>
 
 <h2 id="JavaScript_快速入门">JavaScript 快速入门</h2>
@@ -75,7 +75,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>我们来学习一些 JavaScript 的核心特性，从而更好地理解它的运行机制。学习这些知识很有意义，因为这些原理普遍适用于所有编程语言，掌握好它们，可以做到融会贯通。</p>
 
 <div class="warning">
-<p><strong>重要：</strong>学习本节时，请尝试将示例代码输入到 JavaScript 控制台里看看会发生什么。 JavaScript 控制台的更多信息请查看 <a href="/zh-CN/Learn/Discover_browser_developer_tools">浏览器开发者工具</a>。</p>
+<p><strong>重要：</strong>学习本节时，请尝试将示例代码输入到 JavaScript 控制台里看看会发生什么。JavaScript 控制台的更多信息请查看 <a href="/zh-CN/Learn/Discover_browser_developer_tools">浏览器开发者工具</a>。</p>
 </div>
 
 <h3 id="变量（Variable）">变量（Variable）</h3>
@@ -256,7 +256,7 @@ if (iceCream === 'chocolate') {
   alert('但是巧克力才是我的最爱呀……');
 }</pre>
 
-<p><code>if ( ... )</code> 中的表达式进行测试，用（上文所提到的）等于运算符来比较变量 <code>iceCream</code> 与字符串 <code>'chocolate'</code> 是否相等。 如果返回 <code>true</code>，则运行第一个代码块；如果返回 <code>false</code>，则跳过第一块直接运行 <code>else</code> 之后的第二个代码块。</p>
+<p><code>if ( ... )</code> 中的表达式进行测试，用（上文所提到的）等于运算符来比较变量 <code>iceCream</code> 与字符串 <code>'chocolate'</code> 是否相等。如果返回 <code>true</code>，则运行第一个代码块；如果返回 <code>false</code>，则跳过第一块直接运行 <code>else</code> 之后的第二个代码块。</p>
 
 <h3 id="函数（Function）">函数（Function）</h3>
 
@@ -296,7 +296,7 @@ multiply(0.5, 3);</pre>
 
 <h3 id="事件">事件</h3>
 
-<p>事件能为网页添加真实的交互能力。它可以捕捉浏览器操作并运行一些代码做为响应。最简单的事件是 <a href="/zh-CN/docs/Web/Events/click">点击事件</a>，鼠标的点击操作会触发该事件。 可尝试将下面的代码输入到控制台，然后点击页面的任意位置：</p>
+<p>事件能为网页添加真实的交互能力。它可以捕捉浏览器操作并运行一些代码做为响应。最简单的事件是 <a href="/zh-CN/docs/Web/Events/click">点击事件</a>，鼠标的点击操作会触发该事件。可尝试将下面的代码输入到控制台，然后点击页面的任意位置：</p>
 
 <pre class="brush: js notranslate">document.querySelector('html').onclick = function() {
     alert('别戳我，我怕疼。');
@@ -346,7 +346,7 @@ myImage.onclick = function() {
 
 <ol>
  <li>获取这张图片的 <code>src</code> 属性值。</li>
- <li>用一个条件句来判断 <code>src</code> 的值是否等于原始图像的路径:
+ <li>用一个条件句来判断 <code>src</code> 的值是否等于原始图像的路径：
   <ol>
    <li>如果是，则将 <code>src</code> 的值改为第二张图片的路径，并在 {{htmlelement("img")}} 内加载该图片。</li>
    <li>如果不是（意味着它已经修改过）, 则把 <code>src</code> 的值重新设置为原始图片的路径，即原始状态。</li>
@@ -359,7 +359,7 @@ myImage.onclick = function() {
 <p>下面来添加另一段代码，在用户初次进入站点时将网页的标题改成一段个性化欢迎信息（即在标题中添加用户的名字）。名字信息会由 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage API</a> 保存下来，即使用户关闭页面之后再重新打开，仍可得到之前的信息。还会添加一个选项，可以根据需要改变用户名字以更新欢迎信息。</p>
 
 <ol>
- <li>打开 <code>index.html</code>， 在 {{htmlelement("script")}} 标签<u><strong>前</strong></u>添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
+ <li>打开 <code>index.html</code>，在 {{htmlelement("script")}} 标签<u><strong>前</strong></u>添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
 
   <pre class="brush: html notranslate">&lt;button&gt;切换用户&lt;/button&gt;</pre>
  </li>
@@ -373,7 +373,7 @@ let myHeading = document.querySelector('h1');</pre>
   localStorage.setItem('name', myName);
   myHeading.textContent = 'Mozilla 酷毙了，' + myName;
 }</pre>
-  该函数首先调用了 <a href="/zh-CN/docs/Web/API/Window.prompt"><code>prompt()</code></a> 函数， 与 <code>alert()</code> 类似会弹出一个对话框。但是这里需要用户输入数据，并在确定后将数据存储在 <code>myName</code> 变量里。接下来将调用 <code><a href="/zh-CN/docs/Web/API/Window/localStorage">localStorage</a></code> API ，它可以将数据存储在浏览器中供后续获取。这里用 <code>localStorage</code> 的 <code>setItem()</code> 函数来创建一个<code>'name'</code> 数据项，并把 <code>myName</code> 变量复制给它。最后将 <code>textContent</code> 属性设置为一个欢迎字符串加上这个新设置的名字。</li>
+  该函数首先调用了 <a href="/zh-CN/docs/Web/API/Window.prompt"><code>prompt()</code></a> 函数，与 <code>alert()</code> 类似会弹出一个对话框。但是这里需要用户输入数据，并在确定后将数据存储在 <code>myName</code> 变量里。接下来将调用 <code><a href="/zh-CN/docs/Web/API/Window/localStorage">localStorage</a></code> API，它可以将数据存储在浏览器中供后续获取。这里用 <code>localStorage</code> 的 <code>setItem()</code> 函数来创建一个<code>'name'</code> 数据项，并把 <code>myName</code> 变量复制给它。最后将 <code>textContent</code> 属性设置为一个欢迎字符串加上这个新设置的名字。</li>
  <li>接下来，添加以下的 <code>if ... else</code> 块。我们可以称之为初始化代码，因为它在页面初次读取时进行构造工作：
   <pre class="brush: html notranslate">if(!localStorage.getItem('name')) {
   setUserName();
@@ -389,11 +389,11 @@ let myHeading = document.querySelector('h1');</pre>
  </li>
 </ol>
 
-<p>第一次访问网页时，页面将询问用户名并发出一段个性化的信息。可随时点击按钮来改变用户名 。告诉你一个额外的福利，因为用户名是保存在 <code>localStorage</code> 里的，网页关闭后也不会丢失，所以重新打开浏览器时所设置的名字信息将依然存在:)</p>
+<p>第一次访问网页时，页面将询问用户名并发出一段个性化的信息。可随时点击按钮来改变用户名。告诉你一个额外的福利，因为用户名是保存在 <code>localStorage</code> 里的，网页关闭后也不会丢失，所以重新打开浏览器时所设置的名字信息将依然存在:)</p>
 
 <h3 id="用户名为_null">用户名为 null?</h3>
 
-<p>运行示例代码，弹出输入用户名的对话框，试着按下 <kbd>取消</kbd> 按钮。此时标题会显示为 “Mozilla 酷毙了，null”。这是因为取消提示对话框后值将设置为 <code>null</code>，这是 JavaScript 中的一个特殊值，表示引用不存在。</p>
+<p>运行示例代码，弹出输入用户名的对话框，试着按下 <kbd>取消</kbd> 按钮。此时标题会显示为“Mozilla 酷毙了，null”。这是因为取消提示对话框后值将设置为 <code>null</code>，这是 JavaScript 中的一个特殊值，表示引用不存在。</p>
 
 <p>也可以不输入任何名字直接按 <kbd>确认</kbd>，你的标题会显示为“Mozilla 酷毙了，”，原因么显而易见。</p>
 
@@ -413,7 +413,7 @@ let myHeading = document.querySelector('h1');</pre>
 
 <h2 id="小结">小结</h2>
 
-<p>如果你按部就班完成本文的实践，那么最终可以得到以下页面 （可以 <a href="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-scripted/">查看我们的版本</a>）：</p>
+<p>如果你按部就班完成本文的实践，那么最终可以得到以下页面（可以 <a href="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-scripted/">查看我们的版本</a>）：</p>
 
 <p><img alt="测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。" src="https://mdn.mozillademos.org/files/16484/beginner-site-scripted.png" style="display: block; margin: 0px auto;"></p>
 
