@@ -29,7 +29,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
   </thead>
   <tbody>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/button"><code>button</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/button"><code>button</code></a></td>
       <td>Un bouton sans comportement défini qui affiche la valeur de l'attribut <a href="#value"><code>value</code></a> qui est vide par défaut.
       </td>
       <td id="examplebutton">
@@ -39,7 +39,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/checkbox"><code>checkbox</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/checkbox"><code>checkbox</code></a></td>
       <td>Une case à cocher qui permet de sélectionner/déselectionner une valeur.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
@@ -48,7 +48,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/color"><code>color</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/color"><code>color</code></a></td>
       <td>Un contrôle qui permet de définir une couleur, cela ouvre un sélecteur de couleur dans les navigateurs qui le prennent en charge.</td>
       <td id="examplecolor">
         <pre class="brush: html hidden">
@@ -57,7 +57,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/date"><code>date</code></a></td>
       <td>Un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année mais sans heure), cela ouvre un sélecteur de date ou des roues numériques pour la sélection du jour/mois/année dans les navigateurs qui le prennent en charge.
       </td>
       <td id="exampledate">
@@ -67,7 +67,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/datetime-local"><code>datetime-local</code></a>
+      <td><a href="/fr/docs/Web/HTML/Element/input/datetime-local"><code>datetime-local</code></a>
       </td>
       <td>Un contrôle qui permet de saisir une date et une heure (sans fuseau horaire), cela ouvre un sélecteur de date ou des roues numériques pour la sélection de la date et de l'heure dans les navigateurs qui le prennent en charge.
       </td>
@@ -78,7 +78,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/email"><code>email</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/email"><code>email</code></a></td>
       <td>
         Un champ qui permet de saisir une adresse éléctronique, il ressemble à un champ de type <code>text</code>, mais possède des fonctionnalités de validation et l'adaptation du clavier pour les navigateurs et appareils qui ont des claviers dynamiques.
       </td>
@@ -99,7 +99,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/hidden"><code>hidden</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/hidden"><code>hidden</code></a></td>
       <td>Un contrôle qui n'est pas affiché mais dont la valeur est envoyée au serveur. Il y a un exemple dans la colonne à côté, mais il est caché&nbsp;!
       </td>
       <td id="examplehidden">
@@ -119,7 +119,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/month"><code>month</code></a></td>
       <td>Un contrôle qui permet de saisir un mois et une année (sans fuseau horaire).</td>
       <td id="examplemonth">
         <pre class="brush: html hidden">
@@ -128,7 +128,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/number"><code>number</code></a></td>
       <td>Un contrôle qui permet de saisir un nombre, affichant des curseurs pour augmenter/réduire la valeur et disposant d'une validation par défaut lorsqu'elle est prise en charge. Un clavier numérique est affiché pour certains appareils avec des claviers dynamiques.</td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
@@ -137,7 +137,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/password"><code>password</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/password"><code>password</code></a></td>
       <td>Un champ texte sur une seule ligne dont la valeur est masquée et qui affichera une alerte si le site n'est pas sécurisé.</td>
       <td id="examplepassword">
         <pre class="brush: html hidden">
@@ -146,7 +146,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/radio"><code>radio</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/radio"><code>radio</code></a></td>
       <td>Un bouton radio qui permet de sélectionner une seule valeur parmi un groupe de différentes valeurs portant le même attribut <a href="#name"><code>name</code></a>.</td>
       <td id="exampleradio">
         <pre class="brush: html hidden">
@@ -156,7 +156,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/range"><code>range</code></a></td>
       <td>Un contrôle qui permet de saisir un nombre dont la valeur exacte n'est pas importante. Le contrôle qui s'affiche est une jauge horizontale avec la valeur par défaut placée au milieu. On l'utilise avecc les attributs <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> pour définir un intervalle des valeurs acceptables.</td>
       <td id="examplerange">
         <pre class="brush: html hidden">
@@ -165,7 +165,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/reset"><code>reset</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/reset"><code>reset</code></a></td>
       <td>Un bouton qui réinitialise le contenu du formulaire avec les valeurs par défaut. Ce type d'élément n'est pas recommandé.</td>
       <td id="examplereset">
         <pre class="brush: html hidden">
@@ -175,7 +175,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/search"><code>search</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/search"><code>search</code></a></td>
       <td>Un champ texte sur une ligne pour des termes de recherche. Les sauts de ligne sont automatiquement retirés. Le contrôle peut disposer d'une icône permettant de réinitialiser le champ. Une icône de recherche est affichée à la place de la touche <kdb>Entrée</kbd>/ pour certains appareils avec des claviers dynamiques.</td>
       <td id="examplesearch">
         <pre class="brush: html hidden">
@@ -193,7 +193,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/tel"><code>tel</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/tel"><code>tel</code></a></td>
       <td>Un contrôle pour saisir un numéro de téléphone, qui affiche un clavier téléphonique pour certains appareils avec des claviers dynamiques.
       </td>
       <td id="exampletel">
@@ -203,7 +203,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/text"><code>text</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/text"><code>text</code></a></td>
       <td>La valeur par défaut de <code>type</code>. Un champ texte sur une seule ligne. Les sauts de ligne sont automatiquement retirés.</td>
       <td id="exampletext">
         <pre class="brush: html hidden">
@@ -213,7 +213,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/time"><code>time</code></a></td>
       <td>Un contrôle pour saisir une valeur temporelle sans fuseau horaire.</td>
       <td id="exampletime">
         <pre class="brush: html hidden">
@@ -222,7 +222,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/url"><code>url</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/url"><code>url</code></a></td>
       <td>Un champ permettant de saisir une URL. Ce contrôle ressemble à un champ de type <code>text</code>, mais dispose de paramètres de validation et d'un clavier adapté pour les navigateurs et appareils qui le prennent en charge et qui ont un clavier dynamique.
       </td>
       <td id="exampleurl">
@@ -233,7 +233,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/week"><code>week</code></a></td>
       <td>Un contrôle permettant de saisir une date représentée par un numéro de semaine et une année (sans indication de fuseau horaire).</td>
       <td id="exampleweek">
         <pre class="brush: html hidden">
@@ -245,7 +245,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       <th colspan="3">Valeurs obsolètes</th>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/datetime"><code>datetime</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/datetime"><code>datetime</code></a></td>
       <td>{{deprecated_inline}} Un contrôle pour saisir une date et une heure selon un fuseau horaire UTC.</td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
@@ -281,8 +281,8 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`formmethod`](#formmethod)         | `image`, `submit`                          | La méthode HTTP à utiliser pour envoyer le formulaire                                                                            |
 | [`formnovalidate`](#formnovalidate) | `image`, `submit`                          | Surcharge la validation du contrôle dictée par le formulaire pour l'envoi de ce dernier                                          |
 | [`formtarget`](#formtarget)         | `image`, `submit`                          | Le contexte de navigation à utiliser pour l'envoi du formulaire                                                                  |
-| [`height`](#height)                 | `image`                                    | Analogue à l'attribut `height` attribute de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), la hauteur de l'image            |
-| [`list`](#list)                     | presque tous                               | La valeur de l'attribut `id` de l'élément [`<datalist>`](/fr/docs/Web/Element/datalist) fournissant les options d'autocomplétion |
+| [`height`](#height)                 | `image`                                    | Analogue à l'attribut `height` attribute de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la hauteur de l'image            |
+| [`list`](#list)                     | presque tous                               | La valeur de l'attribut `id` de l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournissant les options d'autocomplétion |
 | [`max`](#max)                       | types numériques                           | La valeur maximale                                                                                                               |
 | [`maxlength`](#maxlength)           | `password`, `search`, `tel`, `text`, `url` | La longueur maximale (en nombre de caractères) de l'attribut `value`                                                             |
 | [`min`](#min)                       | types numériques                           | La valeur minimale                                                                                                               |
@@ -294,11 +294,11 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`readonly`](#readonly)             | presque tous                               | Un booléen indiquant que la valeur n'est pas éditable                                                                            |
 | [`required`](#required)             | presque tous                               | Un booléen indiquant que la valeur est requise ou que le contrôle doit être coché avant de pouvoir envoyer le formulaire         |
 | [`size`](#size)                     | `email`, `password`, `tel`, `text`, `url`  | La taille du contrôle                                                                                                            |
-| [`src`](#src)                       | `image`                                    | Analogue à l'attribut `src` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), indique l'emplacement de l'image              |
+| [`src`](#src)                       | `image`                                    | Analogue à l'attribut `src` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), indique l'emplacement de l'image              |
 | [`step`](#step)                     | types numériques                           | Un incrément pour les valeurs valides                                                                                            |
 | [`type`](#type)                     | tous                                       | Le type de contrôle de formulaire                                                                                                |
 | [`value`](#value)                   | tous                                       | La valeur initiale du contrôle                                                                                                   |
-| [`width`](#width)                   | `image`                                    | Analogue à l'attribut `width` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), la largeur de l'image                       |
+| [`width`](#width)                   | `image`                                    | Analogue à l'attribut `width` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la largeur de l'image                       |
 
 Certains attributs non-standard supplémentaires sont listés après les descriptions des attributs standard.
 
@@ -348,7 +348,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     > **Note :** Bien que cela ne soit pas nécessaire selon la spécification, par défaut, Firefox [fera persister l'état désactivé obtenu dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>` même après des rechargements de la page. C'est l'attribut [`autocomplete`](#autocomplete) qui contrôle cette fonctionnalité.
 - `form`
-  - : Une chaîne de caractères qui indique l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel le contrôle est associé (on parle de son **formulaire propriétaire**). La valeur de la chaîne de caractères, si elle est présente, doit correspondre à la valeur d'un identifiant (l'attribut [`id`](#id)) d'un élément `<form>` du même document. Si cet attribut n'est pas défini, l'élément `<input>` est associé au formulaire qui le contient le plus proche, s'il existe.
+  - : Une chaîne de caractères qui indique l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel le contrôle est associé (on parle de son **formulaire propriétaire**). La valeur de la chaîne de caractères, si elle est présente, doit correspondre à la valeur d'un identifiant (l'attribut [`id`](#id)) d'un élément `<form>` du même document. Si cet attribut n'est pas défini, l'élément `<input>` est associé au formulaire qui le contient le plus proche, s'il existe.
 
     L'attribut `form` permet ainsi de placer un champ n'importe où dans le document tout en l'associant à un formulaire du document situé autre part.
 
@@ -366,7 +366,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `height`
   - : Uniquement valide pour le type `image`, cet attribut indique la hauteur de l'image à afficher sur un outon d'envoi graphique. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/Input/image).
 - `id`
-  - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément [`<label>`](/fr/docs/Web/HTML/Element/label) pour relier le libellé au champ correspondant. Voir [`<label>`](/fr/docs/Web/HTML/Element/label).
+  - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) pour relier le libellé au champ correspondant. Voir [`<label>`](/fr/docs/Web/HTML/Element/Label).
 - `inputmode`
   - : Un attribut universel, valide pour tous les éléments, qui fournit une indication au navigateur quant au type de clavier virtuel à utiliser pour l'édition de l'élément ou de son contenu. Les valeurs possibles sont `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, et `search`.
 - `list`
@@ -386,19 +386,19 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `maxlength`
   - : Cet attribut est valide pour les types `text`, `search`, `url`, `tel`, `email`, et `password`, il définit le nombre maximal de caractères (exprimé en nombre de codets UTF-16) qu'il est possible de saisir dans le champ. La valeur de cet attribut doit être un entier positif. Si aucune valeur de `maxlength` n'est indiquée ou qu'une valeur invalide est fournie, le champ n'a pas de longueur maximale. La valeur de cet attribut doit être supérieure ou égale à celle de `minlength`.
 
-    Le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) si longueur du texte saisi est supérieure à `maxlength` comme nombre de codets UTF-16. Par défaut, les navigateurs empêchent de saisir plus de caractères que ce qui est permis par l'attribut `maxlength`. Voir [la validation côté client](#la_validation_côté_client) pour plus d'information.
+    Le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) si longueur du texte saisi est supérieure à `maxlength` comme nombre de codets UTF-16. Par défaut, les navigateurs empêchent de saisir plus de caractères que ce qui est permis par l'attribut `maxlength`. Voir [la validation côté client](#validation_c%C3%B4t%C3%A9_client) pour plus d'information.
 - `min`
   - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la valeur la plus faible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément est inférieure à la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'a pas de valeur minimale.
 
-    Cette valeur doit être inférieure ou égale à la valeur fournie par l'attribut `max`. Si l'attribut `min` est présent mais sans valeur ou avec une valeur invalide, aucune contrainte de minimum n'est appliquée. Si l'attribut `min` est valide et que la valeur saisie dans le contrôle est inférieure à celle de cet attribut, la validation des contraintes empêchera l'envoi du formulaire. Voir [la validation côté client](#la_validation_côté_client) pour plus d'information.
+    Cette valeur doit être inférieure ou égale à la valeur fournie par l'attribut `max`. Si l'attribut `min` est présent mais sans valeur ou avec une valeur invalide, aucune contrainte de minimum n'est appliquée. Si l'attribut `min` est valide et que la valeur saisie dans le contrôle est inférieure à celle de cet attribut, la validation des contraintes empêchera l'envoi du formulaire. Voir [la validation côté client](#validation_c%C3%B4t%C3%A9_client) pour plus d'information.
 
     Il existe un cas particulier pour les types de données périodiques (comme les dates ou les heures), où la valeur de `max` peut être inférieure à celle de `min`, pour avoir par exemple un intervalle de temps entre 10 heures du soir et 4 heures du matin.
 - `minlength`
   - : Cet attribut est valide pour les types `text`, `search`, `url`, `tel`, `email`, et `password`, il définit le nombre minimal de caractères (exprimé en nombre de codets UTF-16) qu'il est possible de saisir dans le champ. La valeur de cet attribut doit être un entier positif inférieur ou égal à celle de `maxlength`. Si cet attribut est absent ou qu'une valeur invalide est indiquée, le champ n'aura pas de longueur minimale.
 
-    Le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) si longueur du texte saisi est inférieure à `minlength` comme nombre de codets UTF-16. Voir [la validation côté client](#la_validation_côté_client) pour plus d'information.
+    Le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) si longueur du texte saisi est inférieure à `minlength` comme nombre de codets UTF-16. Voir [la validation côté client](#validation_c%C3%B4t%C3%A9_client) pour plus d'information.
 - `multiple`
-  - : Un attribut booléen qui, lorsqu'il est présent, permet de saisir plusieurs adresses électroniques séparées par des virgules ou de sélectionne plusieurs fichiers si le contrôle est de type `file`. Voir les page détaillées sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file) et [`<input type="email">`](/fr/docs/Web/HTML/Element/Input/email).
+  - : Un attribut booléen qui, lorsqu'il est présent, permet de saisir plusieurs adresses électroniques séparées par des virgules ou de sélectionne plusieurs fichiers si le contrôle est de type `file`. Voir les page détaillées sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file) et [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email).
 - `name`
   - : Une chaîne de caractères qui fourni le nom associé au contrôle. Le nom est envoyé avec la valeur du contrôle lors de l'envoi du formulaire.
 
@@ -406,7 +406,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     Il existe deux cas spéciaux&nbsp;:
 
-    1. `_charset_`&nbsp;: Si cette valeur est utilisée comme nom pour un élément `<input>` de type [`hidden`]((/fr/docs/Web/HTML/Element/Input/hidden), la valeur du champ est automatiquement renseignée par [l'agent utilisateur](/fr/docs/Glossary/User_agent) et porte l'encodage de caractères utilisé pour l'envoi du formulaire.
+    1. `_charset_`&nbsp;: Si cette valeur est utilisée comme nom pour un élément `<input>` de type [`hidden`]((/fr/docs/Web/HTML/Element/input/hidden), la valeur du champ est automatiquement renseignée par [l'agent utilisateur](/fr/docs/Glossary/User_agent) et porte l'encodage de caractères utilisé pour l'envoi du formulaire.
     2. `isindex`&nbsp;: Pour des raisons historiques, le nom [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) n'est pas autorisé.
 
     L'attribut `name` possède un comportement particulier pour les boutons radio.
@@ -436,7 +436,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     > **Note :** En utilisant l'attribut `pattern`, il faut également informer l'utilisatrice ou l'utilisateur quant au format attendu, en ajoutant un texte explicatif à proximité. On peut aussi inclure un attribut [`title`](#title) pour expliquer les contraintes à respecter&nbsp;: la plupart des navigateurs afficheront le titre sous la forme d'une bulle d'information. Attention, une explication visible est nécessaire pour une accessibilité correcte, la bulle d'information fournie par `title` n'est qu'une amélioration secondaire.
 
-    Voir [la validation côté client](#la_validation_côté_client) pour plus d'information.
+    Voir [la validation côté client](#validation_c%C3%B4t%C3%A9_client) pour plus d'information.
 - `placeholder`
   - : Cet attribut est une chaîne de caractères qui fournit une brève indication quant au type d'information attendu dans le champ. Sa valeur devrait être un mot ou une courte phrase qui indique le type de données attendu plutôt qu'une explication ou une consigne. Le texte de cet attribut _ne doit pas_ inclure de retour chariot ou de saut de ligne. Ainsi, si un champ est destiné à la saisie d'un prénom et que le libellé est «&nbsp;Prénom&nbsp;», une valeur appropriée pour cet attribut pourra être `"ex. Mustafa"`.
 
@@ -448,7 +448,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `required`
   - : Un attribut booléen qui, lorsqu'il est présent, indique qu'une valeur doit être saisie avant que le formulaire puisse être envoyé. Cet attribut est pris en charge pour les types de contrôle `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, et `file`.
 
-    Voir [la validation côté-client](#validation_côté-client) et [l'attribut HTML `required`](/fr/docs/Web/HTML/Attributes/required) pour plus d'informations.
+    Voir [la validation côté-client](#validation_c%C3%B4t%C3%A9_client) et [l'attribut HTML `required`](/fr/docs/Web/HTML/Attributes/required) pour plus d'informations.
 - `size`
   - : Cet attribut est uniquement valide pour les types de contrôle `email`, `password`, `tel`, `url` et `text`. Il indique la largeur visible pour le contrôle. D'une certaine façon, il crée un résultat analogue à l'application de la propriété CSS `width`. L'unité de cette valeur dépend du type de contrôle. Pour les champs de type `password` et `text`, il s'agit du nombre de caractères (équivalent à l'unité `em`) et la valeur par défaut vaut `20`. Pour les autres types de champs, la valeur est exprimée en pixels. La largeur définie avec la feuille de style CSS aura la priorité sur cet attribut.
 - `src`
@@ -459,7 +459,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     S'il n'est pas explicitement inclus&nbsp;:
 
     - Pour les types `number` et `range`, sa valeur par défaut sera 1.
-    - Pour les types temporels, la valeur par défaut de `step` dépend du type. Voir les pages individuelles pour plus de détails&nbsp;: [`date`](/fr/docs/Web/HTML/Element/Input/date#step), [`datetime-local`](/fr/docs/Web/HTML/Element/Input/datetime-local#step), [`month`](/fr/docs/Web/HTML/Element/Input/month#step), [`time`](/fr/docs/Web/HTML/Element/Input/time#step), et [`week`](/fr/docs/Web/HTML/Element/Input/week#step).
+    - Pour les types temporels, la valeur par défaut de `step` dépend du type. Voir les pages individuelles pour plus de détails&nbsp;: [`date`](/fr/docs/Web/HTML/Element/input/date#step), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local#step), [`month`](/fr/docs/Web/HTML/Element/input/month#step), [`time`](/fr/docs/Web/HTML/Element/input/time#step), et [`week`](/fr/docs/Web/HTML/Element/input/week#step).
 
     La valeur de cet attribut doit être un nombre positif (entier ou décimal) ou la valeur spéciale `any` (cette dernière indiquant qu'il n'y a pas de contrainte de granularité et que toute valeur est autorisée (les contraintes imposées par [`min`](#min) et [`max`](#max) s'appliquent toujours)).
 
@@ -469,15 +469,15 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     > **Note :** Lorsque la donnée saisie ne respecte pas l'incrément, la valeur est considérée comme invalide pour la validation des contraintes et l'élément sera ciblé par la pseudo-classe `:invalid`.
 
-    Voir [la validation côté client](#la_validation_côté_client) pour plus d'information.
+    Voir [la validation côté client](#validation_c%C3%B4t%C3%A9_client) pour plus d'information.
 - `tabindex`
   - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un entier qui indique si l'élément peut prendre le focus et s'il devrait participer à la navigation séquentielle au clavier. Comme tous les types d'élément `<input>`, sauf ceux masqués, peuvent prendre le focus, cet attribut ne devrait pas être utilisé sur les contrôles de formulaire, car cela nécessiterait de gérer l'ordre du focus pour tous les éléments du document, au risque de dégradé l'utilisabilité et l'accessibilité si cela était fait de façon incorrecte.
 - `title`
-  - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un texte fournissant des informations à propos de l'élément auquel il appartient. Une telle information est généralement (mais pas nécessairement) affichée sous la forme d'une bulle d'information. `title` ne devrait pas être utilisé comme méthode principale pour expliquer le rôle d'un contrôle de formulaire. Il faut plutôt utiliser l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) avec un attribut `for` dont la valeur correspond à la valeur de l'attribut [`id`](#id) du champs de formulaire. Voir [Libellés](#libellés) ci-après.
+  - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un texte fournissant des informations à propos de l'élément auquel il appartient. Une telle information est généralement (mais pas nécessairement) affichée sous la forme d'une bulle d'information. `title` ne devrait pas être utilisé comme méthode principale pour expliquer le rôle d'un contrôle de formulaire. Il faut plutôt utiliser l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) avec un attribut `for` dont la valeur correspond à la valeur de l'attribut [`id`](#id) du champs de formulaire. Voir [la section sur les libellés](#libellés) ci-après.
 - `type`
   - : Une chaîne de caractères qui indique le type de contrôle à afficher. On utilisera par exemple la valeur `checkbox` pour afficher une case à cocher. Si cet attribut est absent (ou qu'une valeur inconnue est utilisée), ce sera un champ de type `text` qui sera utilisé, permettant de saisir un texte dans le contrôle de formulaire.
 
-    Les valeurs autorisées pour cet attribut sont listées dans la section [Types de champ](#types_de_champ) ci-avant.
+    Les valeurs autorisées pour cet attribut sont listées dans [la section sur les types de champ](#les_diff%C3%A9rents_types_de_champs_input) ci-avant.
 - `value`
   - : La valeur du contrôle. Lorsque cette valeur est fournie dans le document HTML, il s'agit de la valeur initiale, qui peut ensuite être récupérée et éventuellement modifiée avec JavaScript via la propriété du DOM correspondante&nbsp; [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement). Cet attribut est toujours optionnel en théorie, mais peut être considéré comme obligatoire en pratique pour les types de champ `checkbox`, `radio`, et `hidden`.
 - `width`
@@ -534,15 +534,15 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
     - `off`
       - : La correction automatique et les substitutions de texte sont désactivées.
 - `incremental` {{non-standard_inline}}
-  - : Cet attribut booléen est une extension de WebKit et Blink (présent donc dans les navigateurs Safari, Opera, Chrome, etc.) qui indique, s'il est présent, que le champ doit être traité comme un champ de recherche dynamique. Lorsque la personne édite la valeur du champ, l'agent utilisateur envoie des évènements [`search`](/fr/Web/API/HTMLInputElement/search_event) à l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui représente le champ de recherche. Cela permet de gérer, via du code, la mise à jour des résultats de recherche en temps réel lors de l'édition.
+  - : Cet attribut booléen est une extension de WebKit et Blink (présent donc dans les navigateurs Safari, Opera, Chrome, etc.) qui indique, s'il est présent, que le champ doit être traité comme un champ de recherche dynamique. Lorsque la personne édite la valeur du champ, l'agent utilisateur envoie des évènements [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) à l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui représente le champ de recherche. Cela permet de gérer, via du code, la mise à jour des résultats de recherche en temps réel lors de l'édition.
 
-    Si `incremental` n'est pas indiqué, l'évènement [`search`](/fr/Web/API/HTMLInputElement/search_event) est uniquement envoyé lorsque la personne initie explicitement une recherche, c'est-à-dire en appuyant sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ.
+    Si `incremental` n'est pas indiqué, l'évènement [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) est uniquement envoyé lorsque la personne initie explicitement une recherche, c'est-à-dire en appuyant sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ.
 
     L'évènement `search` est soumis à des limites de fréquence propres à chaque implémentation.
 - `orient` {{non-standard_inline}}
-  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter), cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement).
+  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments [`<progress>`](/fr/docs/Web/HTML/Element/Progress) et [`<meter>`](/fr/docs/Web/HTML/Element/Meter), cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement).
 - `results` {{non-standard_inline}}
-  - : Uniquement pris en charge par Safari, cet attribut est une valeur numérique qui permet de surcharger le nombre de résultats à afficher dans la liste des suggestions de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) à partir des requêtes précédentes. Sa valeur doit être un nombre positif. Si aucune valeur n'est indiquée ou qu'une valeur invalide est fournie, c'est le nombre d'options maximum par défaut du navigateur qui est utilisé.
+  - : Uniquement pris en charge par Safari, cet attribut est une valeur numérique qui permet de surcharger le nombre de résultats à afficher dans la liste des suggestions de l'élément `<input>` à partir des requêtes précédentes. Sa valeur doit être un nombre positif. Si aucune valeur n'est indiquée ou qu'une valeur invalide est fournie, c'est le nombre d'options maximum par défaut du navigateur qui est utilisé.
 - `webkitdirectory` {{non-standard_inline}}
   - : Un attribut booléen qui, lorsqu'il est présent, indique que seuls les répertoires peuvent être sélectionnés via le sélecteur de fichier. Voir [`HTMLInputElement.webkitdirectory`](/fr/docs/Web/API/HTMLInputElement/webkitdirectory) pour plus de détails et d'exemples. Bien qu'originalement implémenté uniquement par les navigateurs WebKit, `webkitdirectory` est également utilisable avec Microsoft Edge et Firefox 50 (ou ultérieur). Toutefois, malgré cette prise en charge assez large, il n'est toujours pas standard et ne devrait pas être utilisé à moins qu'il n'y ait aucune autre alternative.
 
@@ -600,7 +600,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:placeholder-shown"><code>:placeholder-shown</code></a></td>
-      <td>S'applique aux éléments qui affichent actuellement le texte fourni par l'attribut <a href="#placeholder"><code>placeholder</code></a>, y compris les éléments <code>&lt;input&gt;</code> et <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> avec un attribut <code>placeholder</code> présent mais sans valeur pour le moment.</td>
+      <td>S'applique aux éléments qui affichent actuellement le texte fourni par l'attribut <a href="#placeholder"><code>placeholder</code></a>, y compris les éléments <code>&lt;input&gt;</code> et <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> avec un attribut <code>placeholder</code> présent mais sans valeur pour le moment.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:default"><code>:default</code></a></td>
@@ -612,7 +612,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:indeterminate"><code>:indeterminate</code></a></td>
-      <td>S'applique aux éléments <a href="/fr/docs/Web/HTML/Element/input/checkbox"><code>&lt;input type="checkbox"&gt;</code></a> dont la propriété <code>indeterminate</code> est fixée à <code>true</code> en JavaScript, aux éléments <a href="/fr/docs/Web/HTML/Element/input/radio"><code>&lt;input type="radio"&gt;</code></a> lorsque tous les boutons radio d'un groupe sous décochés, et aux éléments <a href="/fr/docs/Web/HTML/Element/progress"><code>&lt;progress&gt;</code></a> dans un état indéterminé.</td>
+      <td>S'applique aux éléments <a href="/fr/docs/Web/HTML/Element/input/checkbox"><code>&lt;input type="checkbox"&gt;</code></a> dont la propriété <code>indeterminate</code> est fixée à <code>true</code> en JavaScript, aux éléments <a href="/fr/docs/Web/HTML/Element/input/radio"><code>&lt;input type="radio"&gt;</code></a> lorsque tous les boutons radio d'un groupe sous décochés, et aux éléments <a href="/fr/docs/Web/HTML/Element/Progress"><code>&lt;progress&gt;</code></a> dans un état indéterminé.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:valid"><code>:valid</code></a></td>
@@ -633,15 +633,15 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:required"><code>:required</code></a></td>
-      <td>S'applique aux éléments <code>&lt;input&gt;</code>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> qui ont l'attribut <a href="#required"><code>required</code></a>. Seuls les éléments qui peuvent effectivement être obligatoires sont ciblés. Utiliser l'attribut <a href="#required"><code>required</code></a> sur un élément qui ne peut pas devneir obligatoire n'aura aucun effet.</td>
+      <td>S'applique aux éléments <code>&lt;input&gt;</code>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> qui ont l'attribut <a href="#required"><code>required</code></a>. Seuls les éléments qui peuvent effectivement être obligatoires sont ciblés. Utiliser l'attribut <a href="#required"><code>required</code></a> sur un élément qui ne peut pas devneir obligatoire n'aura aucun effet.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:optional"><code>:optional</code></a></td>
-      <td>S'applique aux éléments <code>&lt;input&gt;</code>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> qui n'ont pas l'attribut <a href="#required"><code>required</code></a>. Les éléments qui ne peuvent pas être obligatoires ne sont pas ciblés.</td>
+      <td>S'applique aux éléments <code>&lt;input&gt;</code>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> qui n'ont pas l'attribut <a href="#required"><code>required</code></a>. Les éléments qui ne peuvent pas être obligatoires ne sont pas ciblés.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:blank"><code>:blank</code></a></td>
-      <td>S'applique aux éléments <code>&lt;input&gt;</code> ou <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> qui n'ont pas de valeur actuellement.</td>
+      <td>S'applique aux éléments <code>&lt;input&gt;</code> ou <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> qui n'ont pas de valeur actuellement.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:user-invalid"><code>:user-invalid</code></a></td>
@@ -652,7 +652,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
 
 #### Exemple d'utilisation des pseudo-classes
 
-On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/color) et [`font-weight`](/fr/docs/Web/CSS/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
+On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/color) et [`font-weight`](/fr/docs/Web/CSS/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
 
 ```html hidden
 <input id="checkboxInput" type="checkbox">
@@ -710,7 +710,7 @@ Utiliser `appearance: none` permettra de retirer les bordures liées à la plate
 #### HTML
 
 ```html
-<label for="textInput">Vous noterez le curseur rouge:</label>
+<label for="textInput">Vous noterez le curseur rouge :</label>
 <input id="textInput" class="custom" size="32">
 ```
 
@@ -747,134 +747,115 @@ Voir également&nbsp;:
 
 ### Libellés
 
-Les libellés permettent d'associer les textes explicatifs aux éléments `<input>`. Utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/label) pour fournir des informations explicatives quant à un champ de formulaire est _toujours_ une bonne chose (quel que soit le sujet de mise en forme qui vient après). Ce n'est jamais une mauvaise idée que d'utiliser un élément `<label>` pour expliquer ce qui doit être saisi dans un élément `<input>` ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea).
+Les libellés permettent d'associer les textes explicatifs aux éléments `<input>`. Utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) pour fournir des informations explicatives quant à un champ de formulaire est _toujours_ une bonne chose (quel que soit le sujet de mise en forme qui vient après). Ce n'est jamais une mauvaise idée que d'utiliser un élément `<label>` pour expliquer ce qui doit être saisi dans un élément `<input>` ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea).
 
 #### Rattachement des libellés
 
-The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/fr/docs/Web/HTML/Element/label#for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
+Le rattachement sémantique entre les éléments `<input>` et `<label>` est utile aux outils d'assistance comme les lecteurs d'écran. En les associant grâce à l'attribut [`for`](/fr/docs/Web/HTML/Element/Label#for) des éléments `<label>`, on lie le libellé au contrôle de formulaire d'une façon qui permet aux lecteurs d'écran de décrire les champs du formulaire plus précisément.
 
-It does not suffice to have plain text adjacent to the `<input>` element. Rather, usability and accessibility requires the inclusion of either implicit or explicit [`<label>`](/fr/docs/Web/HTML/Element/label):
+Il ne suffit pas d'avoir un texte normal à côté de l'élément `<input>`. Pour l'utilisabilité et l'accessibilité, on associera un libellé avec [`<label>`](/fr/docs/Web/HTML/Element/Label) de façon implicite ou explicite&nbsp;:
 
 ```html
 <!-- inaccessible -->
-<p>Enter your name: <input id="name" type="text" size="30"></p>
+<p>Veuillez saisir votre nom : <input id="name" type="text" size="30"></p>
 
-<!-- implicit label -->
-<p><label>Enter your name: <input id="name" type="text" size="30"></label></p>
+<!-- libellé implicite -->
+<p><label>Veuillez saisir votre nom : <input id="name" type="text" size="30"></label></p>
 
-<!-- explicit label -->
-<p><label for="name">Enter your name: </label><input id="name" type="text" size="30"></p>
+<!-- libellé explicite -->
+<p><label for="name">Veuillez saisir votre nom : </label><input id="name" type="text" size="30"></p>
 ```
 
-The first example is inaccessible: no relationship exists between the prompt and the `<input>` element.
+Le premier exemple est inaccessible&nbsp; il n'y a aucune relation entre la consigne de saisie et l'élément `<input>`.
 
-In addition to an accessible name, the label provides a larger 'hit' area for mouse and touch screen users to click on or touch. By pairing a `<label>` with an `<input>`, clicking on either one will focus the `<input>`. If you use plain text to "label" your input, this won't happen. Having the prompt part of the activation area for the input is helpful for people with motor control conditions.
+En plus d'un nom accessible, un élément `<label>` permet d'agrandir la zone d'interaction à la souris ou via la surface tactile sur laquelle on peut cliquer/toucher. En associant un élément `<label>` avec un élément `<input>`, si on clique sur l'un des deux, cela passera le focus au contrôle porté par l'élément `<input>`. Si on utilise du texte simple plutôt qu'un élément sémantique, on n'aura pas ces bénéfices. Agrandir la zone d'activation du contrôle aide les personnes avec un handicap moteur.
 
-As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web—and by extension your website—practically guarantees that some of your site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret your forms very differently from you without clear and properly-presented labels.
+En développant sur le Web, il est important de ne pas présupposer que tout le monde connaît tout sur le Web. La diversité des personnes qui utilisent le Web, et donc votre site ou application, garantit à coup sûr que quelqu'un d'autre peut interpréter un formulaire différemment si ce dernier ne contient pas de libellés clairs et bien associés.
 
-#### Placeholders are not accessible
+#### Les textes d'indications (`placeholder`) ne sont pas accessibles
 
-The [`placeholder`](#placeholder) attribute lets you specify text that appears within the `<input>` element's content area itself when it is empty. The placeholder should never be required to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to provide a hint as to what an inputted value should look like, not an explanation or prompt.
+L'attribut [`placeholder`](#placeholder) permet d'indiquer un texte qui apparaît dans la zone du contenu de l'élément `<input>` lorsqu'il est vide. Ce texte indicatif ne devrait jamais être strictement nécessaire à la compréhension du formulaire. Il ne s'agit pas d'un libellé et on ne devrait pas utiliser cet attribut comme un remplacement d'un libellé. `placeholder` permet de fournir une indication de ce à quoi la valeur à saisir devrait ressembler, il ne s'agit ni d'une explication ni d'une consigne.
 
-Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
+Le texte fourni par `placeholder` n'est pas accessible pour les lecteurs d'écran et dès que la personne saisit une valeur, ou si le contrôle a déjà une valeur, il disparaît. Les navigateurs qui ont une fonctionnalité de traduction automatique pourraient ignorer les attributs lors de la traduction, ce qui signifie que `placeholder` pourrait ne pas être traduit.
 
-> **Note:** Don't use the [`placeholder`](#placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the [`<label>`](/fr/docs/Web/HTML/Element/label) element.
+> **Note :** Évitez d'utiliser [`placeholder`](#placeholder) si vous pouvez. Pour ajouter un libellé sur un élément `<input>`, on utilisera l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label).
 
-### Client-side validation
+### Validation côté client
 
-> **Warning:** Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/fr/docs/Web/HTTP/Status/400) if the format is invalid.
+> **Attention :** La validation côté client est utile mais _ne garantit pas_ que le serveur reçoit des données valides. Si les données doivent respecter un format donné, il faudra _toujours_ les vérifier côté serveur et renvoyer [une réponse HTTP `400`](/fr/docs/Web/HTTP/Status/400) si le format est invalide.
 
-In addition to using CSS to style inputs based on the [`:valid`](/fr/docs/Web/CSS/:valid) or [`:invalid`](/fr/docs/Web/CSS/:invalid) UI states based on the current state of each input, as noted in the [UI pseudo-classes](#ui_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
+En complément des pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) qui permettent de cibler les contrôles selon leur état de validité, le navigateur fournit une validation côté client pour chaque tentative d'envoi du formulaire. À l'envoi du formulaire, si un des contrôles échoue à respecter les contraintes, les navigateurs qui implémentent cette fonctionnalité afficheront un message d'erreur sur le premier contrôle du formulaire qui est invalide, le message pouvant être un message par défaut selon le type d'erreur ou un message choisi par le site.
 
-Some input types and other attributes place limits on what values are valid for a given input. For example, `<input type="number" min="2" max="10" step="2">` means only the number 2, 4, 6, 8, or 10 are valid. Several errors could occur, including a `rangeUnderflow` error if the value is less than 2, `rangeOverflow` if greater than 10, `stepMismatch` if the value is a number between 2 and 10, but not an even integer (does not match the requirements of the `step` attribute), or `typeMismatch` if the value is not a number.
+Certains types de champ et attributs imposent des limites aux valeurs possibles pour un champ donné. Ainsi, `<input type="number" min="2" max="10" step="2">` signifiera que seuls les nombres 2, 4, 6, 8, et 10 sont valides. Plusieurs erreurs de validation peuvent se produire ici, `rangeUnderflow` si la valeur est inférieure à 2, `rangeOverflow` si elle est supérieure à 10, `stepMismatch` si la valeur est comprise entre 2 et 10, mais n'est pas un entier pair (autrement dit, la contrainte imposée par `step` n'est pas respectée), ou `typeMismatch` si la valeur n'est pas un nombre.
 
-For the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather than ending), it's possible for the values of the [`max`](#max) and [`min`](#min) properties to be reversed, which indicates that the range of permitted values starts at `min`, wraps around to the lowest possible value, then continues on until `max` is reached. This is particularly useful for dates and times, such as when you want to allow the range to be from 8 PM to 8 AM:
+Pour les types de champ dont le domaine des valeurs possibles est périodique (autrement dit après avoir atteint la plus grande valeur, on revient à la plus petite), il est possible d'avoir des valeurs d'attribut [`max`](#max) inférieures à celles de [`min`](#min). Cela est particulièrement utile pour les dates et les heures, par exemple pour autoriser les heures entre 8h du soir et 8h du matin&nbsp;:
 
 ```html
 <input type="time" min="20:00" max="08:00" name="overnight">
 ```
 
-Specific attributes and their values can lead to a specific error [`ValidityState`](/fr/docs/Web/API/ValidityState):
+Certains attributs et valeurs peuvent causer une erreur [`ValidityState`](/fr/docs/Web/API/ValidityState) spécifique&nbsp;:
 
 <table class="no-markdown">
-  <caption>
-    Validity object errors depend on the [`<input>`](/fr/docs/Web/HTML/Element/input)
-    attributes and their values:
-  </caption>
+  <caption>Objets d'erreur de validité selon les attributs <code>&lt;input&gt;</code> et leurs valeurs</caption>
   <thead>
     <tr>
-      <th scope="col">Attribute</th>
-      <th scope="col">Relevant property</th>
+      <th scope="col">Attribut</th>
+      <th scope="col">Propriété correspondante</th>
       <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><a href="#max"><code>max</code></a></td>
-      <td>[`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow)</td>
-      <td>
-        Occurs when the value is greater than the maximum value as defined by
-        the <code>max</code> attribute
-      </td>
+      <td><a href="/fr/docs/Web/API/validityState/rangeOverflow"><code>validityState.rangeOverflow</code></a></td>
+      <td>Se produit lorsque la valeur est supérieure à la valeur maximale définie par l'attribut <code>max</code>.</td>
     </tr>
     <tr>
       <td><a href="#maxlength"><code>maxlength</code></a></td>
-      <td>[`validityState.tooLong`](/fr/docs/Web/API/validityState/tooLong)</td>
-      <td>
-        Occurs when the number of characters is greater than the number allowed by the <code>maxlength</code> property
-      </td>
+      <td><a href="/fr/docs/Web/API/validityState/tooLong"><code>validityState.tooLong</code></a></td>
+      <td>Se produit lorsque le nombre de caractères du champ est supérieur à la valeur définie par l'attribut <code>maxlength</code>.</td>
     </tr>
     <tr>
       <td><a href="#min"><code>min</code></a></td>
-      <td>[`validityState.rangeUnderflow`](/fr/docs/Web/API/validityState/rangeUnderflow)</td>
-      <td>
-        Occurs when the value is less than the minimum value as defined by the <code>min</code> attribute
-      </td>
+      <td><a href="/fr/docs/Web/API/validityState/rangeUnderflow"><code>validityState.rangeUnderflow</code></a></td>
+      <td>Se produit lorsque la valeur est inférieure à la valeur minimale définie par l'attribut <code>min</code>.</td>
     </tr>
     <tr>
       <td><a href="#maxlength"><code>maxlength</code></a></td>
-      <td>[`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort)</td>
-      <td>
-        Occurs when the number of characters is less than the number required by the <code>minlength</code> property
-      </td>
+      <td><a href="/fr/docs/Web/API/validityState/tooShort"><code>validityState.tooShort</code></a></td>
+      <td>Se produit lorsque le nombre de caractères du champ est inférieur à la valeur définie par l'attribut <code>minlength</code>.</td>
     </tr>
     <tr>
       <td><a href="#pattern"><code>pattern</code></a></td>
-      <td>[`validityState.patternMismatch`](/fr/docs/Web/API/validityState/patternMismatch)</td>
-      <td>
-        Occurs when a pattern attribute is included with a valid regular expression and the <code>value</code> does not match it.
-      </td>
+      <td><a href="/fr/docs/Web/API/validityState/patternMismatch"><code>validityState.patternMismatch</code></a></td>
+      <td>Se produit lorsque l'attribut <code>pattern</code> contient une expression rationnelle valide et que la valeur du champ ne respecte pas celle-ci.</td>
     </tr>
     <tr>
       <td><a href="#required"><code>required</code></a></td>
-      <td>[`validityState.valueMissing`](/fr/docs/Web/API/validityState/valueMissing)</td>
-      <td>
-        Occurs when the <code>required</code> attribute is present but the value is <code>null</code> or radio or checkbox is not checked.
+      <td><a href="/fr/docs/Web/API/validityState/valueMissing"><code>validityState.valueMissing</code></a></td>
+      <td>Se produit lorsque l'attribut <code>required</code> est présent et mais sa valeur est <code>null</code> ou que le bouton radio ou la case à cocher n'est pas sélectionné.
       </td>
     </tr>
     <tr>
       <td><a href="#step"><code>step</code></a></td>
-      <td>[`validityState.stepMismatch`](/fr/docs/Web/API/validityState/stepMismatch)</td>
-      <td>
-        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on<code> type="number"</code>
-        is step is not included. <code>step="any"</code> will never throw this error.
+      <td><a href="/fr/docs/Web/API/validityState/stepMismatch"><code>validityState.stepMismatch</code></a></td>
+      <td>Se produit lorsque la valeur ne respecte pas l'incrément imposé par l'attribut <code>step</code>. L'incrément par défaut vaut <code>1</code>, ce qui signifie que seules les valeurs entières sont valides pour le type <code>number</code> si <code>step</code> est absent. Utiliser <code>step="any"</code> empêchera de déclencher cette erreur.
       </td>
     </tr>
     <tr>
       <td><a href="#type"><code>type</code></a></td>
-      <td>[`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch)</td>
-      <td>
-        Occurs when the value is not of the correct type, for example a email does not contain an <code>@</code> or a url doesn't contain a protocol.
-      </td>
+      <td><a href="/fr/docs/Web/API/validityState/typeMismatch"><code>validityState.typeMismatch</code></a></td>
+      <td>Se produit lorsque la valeur ne correspond pas au type, par exemple si une adresse électronique ne contient pas le caractère <code>@</code> ou si une URL ne contient pas de protocole.</td>
     </tr>
   </tbody>
 </table>
 
-If a form control doesn't have the `required` attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `required`, and empty string will not lead to an error.
+Si un contrôle de formulaire n'a pas d'attribut `required`, n'a aucune valeur, ou s'il a une chaîne de caractères de vide comme valeur, il n'est pas invalide. Même si les attributs précédents sont présents, exception faite de `required`, une chaîne de caractères vide ne causera pas d'erreur.
 
-We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the user if there is a mistake when the form is submitted.
+On peut définir des limites sur les valeurs acceptables et les navigateurs qui implémentent les fonctionnalités de validation effectueront un contrôle nativement en alertant la personne qu'il y a un problème lors de l'envoi du formulaire.
 
-In addition to the errors described in the table above, the `validityState` interface contains the `badInput`, `valid`, and `customError` boolean readonly properties. The validity object includes:
+En plus des erreurs décrites dans le tableau qui précède, l'interface `validityState` contient les propriétés booléennes en lecture seule `badInput`, `valid`, et `customError`. Cet objet possède les propriétés suivantes&nbsp;:
 
 - [`validityState.valueMissing`](/fr/docs/Web/API/validityState/valueMissing)
 - [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch)
@@ -888,42 +869,42 @@ In addition to the errors described in the table above, the `validityState` inte
 - [`validityState.valid`](/fr/docs/Web/API/validityState/valid)
 - [`validityState.customError`](/fr/docs/Web/API/validityState/customError)
 
-For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
+Pour chacune de ces propriétés booléennes, une valeur à `true` indique que la raison de validation correspondante peut avoir échoué, exception faite de la propriété `valid` qui, si elle vaut `true`, indique que la valeur de l'élément respecte l'ensemble des contraintes.
 
-If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or `null`), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, `valid` will be true, and the form can be submitted.
+S'il y a une erreur, les navigateurs qui prennent en charge la validation avertiront la personne et empêcheront l'envoi du formulaire. Attention à un point&nbsp;: si un message d'erreur personnalisé a une valeur équivalente à `true` (toute valeur qui n'est ni la chaîne vide ni `null`), la formulaire ne pourra pas être envoyé. S'il n'y a pas de message d'erreur personnalisé et qu'aucune des propriétés précédentes ne vaut `true` à part `valid`, le formulaire pourra être envoyé.
 
 ```js
 function validate(input) {
   let validityState_object = input.validity;
   if(validityState_object.valueMissing) {
-     input.setCustomValidity('A value is required');
+     input.setCustomValidity('Une valeur est nécessaire.');
   } else if (validityState_object.rangeUnderflow) {
-    input.setCustomValidity('Your value is too low');
+    input.setCustomValidity('La valeur est trop basse.');
   } else if (validityState_object.rangeOverflow) {
-    input.setCustomValidity('Your value is too high');
+    input.setCustomValidity('La valeur est trop haute.');
   } else {
     input.setCustomValidity('');
   }
 }
 ```
 
-The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is `null`.
+La dernière ligne, qui utilise la chaîne vide comme valeur pour le message d'erreur est essentielle. Si la personne fait une erreur et que la validité est définie, le formulaire ne pourra être envoyé, même si toutes les valeurs sont valides, jusqu'à ce que le message soit `null`.
 
-#### Custom validation error example
+#### Exemple de message d'erreur de validation sur mesure
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint validation features](/fr/docs/Web/API/Constraint_validation#constraint_validation_interfaces) available on `<input>` (and related) elements. Take the following form:
+Si vous souhaitez afficher un message d'erreur spécifique lorsqu'un champ est invalide, vous devrez utiliser [les fonctionnalités relatives à la validation des contraintes](/fr/docs/Web/API/Constraint_validation#constraint_validation_interfaces) disponible sur les éléments `<input>` (entre autres). Prenons le formulaire suivant&nbsp;:
 
 ```html
 <form>
-  <label for="name">Enter username (upper and lowercase letters): </label>
+  <label for="name">Veuillez saisir un nom d'utilisateur (avec des lettres en minuscules ou majuscules) : </label>
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
-  <button>Submit</button>
+  <button>Envoyer</button>
 </form>
 ```
 
-The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the `pattern`.
+Les fonctionnalités HTML de base pour la validation des formulaire permettront d'afficher un message d'erreur par défaut si on tente de soumettre le formulaire sans valeur ou avec une valeur qui ne respecte pas le motif de l'expression rationnelle indiquée avec `pattern`.
 
-If you wanted to instead display custom error messages, you could use JavaScript like the following:
+Si on souhaite afficher un message d'erreur spécifique, on pourra utiliser JavaScript comme suit&nbsp;:
 
 ```js
 const nameInput = document.querySelector('input');
@@ -935,237 +916,177 @@ nameInput.addEventListener('input', () => {
 
 nameInput.addEventListener('invalid', () => {
   if(nameInput.value === '') {
-    nameInput.setCustomValidity('Enter your username!');
+    nameInput.setCustomValidity(`Veuillez saisir un nom d'utilisateur non vide !`);
   } else {
-    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+    nameInput.setCustomValidity(`Un nom d'utilisateur ne peut contenir que des lettres en minuscules ou majuscules. Essayez à nouveau.`);
   }
 });
 ```
 
-The example renders like so:
+L'exemple ainsi construit produira le résultat suivant&nbsp;:
 
-{{EmbedLiveSample('Custom_validation_error_example')}}
+{{EmbedLiveSample('')}}
 
-In brief:
+En résumé&nbsp;:
 
-- We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
-- As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
+- On vérifie l'état de validité du champ chaque fois que sa valeur est modifiée en exécutant la méthode `checkValidity()` lors de l'évènement `input` via le gestionnaire d'évènement.
+- Si la valeur est invalide, un évènement `invalid` est déclenché et la fonction indiquée sur le gestionnaire d'évènement pour `invalid` est exécutée. Au sein de cette fonction, on détermine si la valeur est invalide parce qu'elle est vide ou parce qu'elle ne correspond pas au motif imposé en distinguant le cas avec un bloc `if()` et en adaptant le message d'erreur selon le cas de figure.
+- Ainsi, si la valeur du champ est invalide lorsqu'on clique sur le bouton d'envoi, un des messages spécifiques est affiché.
+- Si la valeur est valide, le formulaire est envoyé sans problème. Pour cela, il faut annuler la vérification de validité spécifique en appelant `setCustomValidity()` avec une chaîne de caractères vide. C'est ce qu'on fait à chaque fois qu'un évènement `input` est déclenché. Sans ça, si une validité spécifique avait précédemment été définie, le champ serait toujours considéré comme invalide, même si la valeur courante était valide lors de l'envoi.
 
-> **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
+> **Note :** On veillera à toujours valider les contraintes côté client et côté serveur. La validation des contraintes du navigateur ne se substitue pas à la vérification côté serveur. En effet, des valeurs invalides peuvent toujours être envoyées par des navigateurs obsolètes ou par des acteurs malveillants.
 
-> **Note:** Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).
+> **Note :** Firefox, jusqu'à la version 66, implémentait une propriété non-standard `x-moz-errormessage` qui permettait de paramétrer de tels messages d'erreur spécifiques. Cette propriété a été retirée (voir [le bug 1513890](https://bugzilla.mozilla.org/show_bug.cgi?id=1513890)).
 
-### Localization
+### Localisation
 
-The allowed inputs for certain `<input>` types depend on the locale. In some locales, 1,000.00 is a valid number, while in other locales the valid way to enter this number is 1.000,00.
+Les valeurs autorisées à la saisie pour certains types d'`<input>` dépendent de la locale. En effet, pour certaines locales 1,000.00 représente un nombre valide tandis qu'il faudrait saisir 1000,00 dans d'autres locales.
 
-Firefox uses the following heuristics to determine the locale to validate the user's input (at least for `type="number"`):
+Firefox utilise les heuristiques suivantes pour déterminer la locale selon laquelle valider la saisie (au moins pour `type="number"`)&nbsp;:
 
-- Try the language specified by a `lang`/`xml:lang` attribute on the element or any of its parents.
-- Try the language specified by any `Content-Language` HTTP header. Or,
-- If none specified, use the browser's locale.
+- Tente d'utiliser la langue indiquée par l'attribut `lang`/`xml:lang` sur l'élément ou l'un de ses parents,
+- Sinon, utilise la langue indiquée par l'en-tête HTTP `Content-Language`,
+- Sinon, utilise la locale du navigateur.
 
-### Technical summary
+### Résumé technique
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
-      </th>
+      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
-        <code>hidden</code>, then labelable element, palpable content.
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_associé_aux_formulaires">contenu associé aux formulaires&nbsp;: listé, participant à l'envoi du formulaire, réinitialisable</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasét">contenu phrasé</a>. Si l'attribut <a href="#type"><code>type</code></a> ne vaut pas <code>hidden</code>, il s'agit d'un élément étiquetable et d'un <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <th scope="row">Contenu autorisé</th>
+      <td>Aucun, il s'agit d'un <a href="/fr/docs/Glossary/Empty_element">élément vide</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Tag omission</th>
-      <td>Must have a start tag and must not have an end tag.</td>
+      <th scope="row">Omission de balises</th>
+      <td>Cet élément doit avoir une balise ouvrante et pas de balise fermante.</td>
     </tr>
     <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
-      </td>
+      <th scope="row">Parents autorisés</th>
+      <td>Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasét">contenu phrasé</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">Rôle ARIA implicite</th>
       <td>
         <ul>
           <li>
-            <code>type=button</code>:
-            <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code>type=button</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=checkbox</code>:
-            <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>
+            <code>type=checkbox</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>
           </li>
           <li>
             <code>type=email</code>
             <ul>
-              <li>
-                with no <code>list</code> attribute:
-                <code
-                  ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
-              </li>
-              <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
-              </li>
+              <li>Sans attribut <code>list</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+              <li>Avec un attribut <code>list</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#combobox">combobox</a></code></li>
             </ul>
           </li>
           <li>
-            <code>type=image</code>:
-            <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code>type=image</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=number</code>: {{ARIARole("spinbutton")}}
+            <code>type=number</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#spinbutton">spinbutton</a></code>
           </li>
-          <li><code>type=radio</code>: {{ARIARole("radio")}}</li>
-          <li><code>type=range</code>: {{ARIARole("slider")}}</li>
+          <li><code>type=radio</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#radio">radio</a></code></li>
+          <li><code>type=range</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#slider">slider</a></code></li>
           <li>
-            <code>type=reset</code>:
-            <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code>type=reset</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=search</code>
             <ul>
-              <li>
-                with no <code>list</code> attribute: {{ARIARole("searchbox")}}
-              </li>
-              <li>
-                with <code>list</code> attribute:{{ARIARole("combobox")}}
-              </li>
+              <li>Sans attribut <code>list</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#searchbox">searchbox</a></code></li>
+              <li>Avec un attribut <code>list</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#combobox">combobox</a></code></li>
             </ul>
           </li>
           <li>
-            <code>type=submit</code>:
-            <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code>type=submit</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=tel</code>
             <ul>
-              <li>
-                with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
-              </li>
-              <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
-              </li>
+              <li>Sans attribut <code>list</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+              <li>Avec un attribut <code>list</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#combobox">combobox</a></code></li>
             </ul>
           </li>
           <li>
             <code>type=text</code>
             <ul>
-              <li>
-                with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
-              </li>
-              <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
-              </li>
+              <li>Sans attribut <code>list</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+              <li>Avec un attribut <code>list</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#combobox">combobox</a></code></li>
             </ul>
           </li>
           <li>
             <code>type=url</code>
             <ul>
-              <li>
-                with no <code>list</code> attribute:
-                <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a ></code>
-              </li>
-              <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
-              </li>
+              <li>Sans attribut <code>list</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></li>
+              <li>Avec un attribut <code>list</code>&nbsp;: <code><a href="https://w3c.github.io/aria/#combobox">combobox</a></code></li>
             </ul>
           </li>
           <li>
-            <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+            <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>&nbsp;: <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">pas de rôle correspondant</a>
           </li>
         </ul>
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted ARIA roles</th>
+      <th scope="row">Rôles ARIA autorisés</th>
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("option")}}, {{ARIARole("radio")}},
-            {{ARIARole("switch")}}, {{ARIARole("tab")}}
+            <code>type=button</code>&nbsp;: <a href="https://w3c.github.io/aria/#link"><code>link</code></a>, <a href="https://w3c.github.io/aria/#menuitem"><code>menuitem</code></a>, <a href="https://w3c.github.io/aria/#menuitemcheckbox"><code>menuitemcheckbox</code></a>, <a href="https://w3c.github.io/aria/#menuitemradio"><code>menuitemradio</code></a>, <a href="https://w3c.github.io/aria/#option"><code>option</code></a>, <a href="https://w3c.github.io/aria/#radio"><code>radio</code></a>, <a href="https://w3c.github.io/aria/#switch"><code>switch</code></a>, <a href="https://w3c.github.io/aria/#tab"><code>tab</code></a>
           </li>
           <li>
-            <code>type=checkbox</code>: {{ARIARole("button")}} when used
-            with <code>aria-pressed</code>,
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("option")}}, {{ARIARole("switch")}}
+            <code>type=checkbox</code>&nbsp;: <a href="https://w3c.github.io/aria/#button"><code>button</code></a> lorsqu'utilisé avec <code>aria-pressed</code>, <a href="https://w3c.github.io/aria/#menuitemcheckbox"><code>menuitemcheckbox</code></a>, <a href="https://w3c.github.io/aria/#option"><code>option</code></a>, <a href="https://w3c.github.io/aria/#option"><code>option</code></a>
           </li>
           <li>
-            <code>type=image</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("radio")}}, {{ARIARole("switch")}}
+            <code>type=image</code>: <a href="https://w3c.github.io/aria/#link"><code>link</code></a>, <a href="https://w3c.github.io/aria/#menuitem"><code>menuitem</code></a>, <a href="https://w3c.github.io/aria/#menuitemcheckbox"><code>menuitemcheckbox</code></a>, <a href="https://w3c.github.io/aria/#menuitemradio"><code>menuitemradio</code></a>, <a href="https://w3c.github.io/aria/#radio"><code>radio</code></a>, <a href="https://w3c.github.io/aria/#option"><code>option</code></a>
           </li>
           <li>
-            <code>type=radio</code>: {{ARIARole("menuitemradio")}}
+            <code>type=radio</code>: <a href="https://w3c.github.io/aria/#menuitemradio"><code>menuitemradio</code></a>
           </li>
           <li>
-            <code>type=text</code> with no <code>list</code> attribute:
-            {{ARIARole("combobox")}}, {{ARIARole("searchbox")}},
-            {{ARIARole("spinbutton")}}
+            <code>type=text</code> sans attribut <code>list</code>&nbsp;: <a href="https://w3c.github.io/aria/#combobox"><code>combobox</code></a>, <a href="https://w3c.github.io/aria/#searchbox"><code>searchbox</code></a>, <a href="https://w3c.github.io/aria/#spinbutton"><code>spinbutton</code></a>
           </li>
           <li>
-            <code>type=color|date|datetime-local|email|file|hidden|</code>
-              <code>month|number|password|range|reset|search|submit|tel|url|week</code>
-            or <code>text</code> with <code>list</code> attribute: no
-            <code>role</code> permitted
+            <code>type=color|date|datetime-local|email|file|hidden|month|number|password|range|reset|search|submit|tel|url|week</code> ou <code>text</code> avec un attribut <code>list</code>&nbsp;: aucun rôle autorisé
           </li>
         </ul>
       </td>
     </tr>
     <tr>
-      <th scope="row">DOM interface</th>
-      <td>[`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)</td>
+      <th scope="row">Interface du DOM correspondante</th>
+      <td><a href="/fr/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code></a></td>
     </tr>
   </tbody>
 </table>
 
-## Accessibility concerns
+## Accessibilité
 
-### Labels
+### Libellés
 
-When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
+Lorsqu'on ajoute des champs de formulaire sur une page, le minimum, en termes d'accessibilité, consiste à ajouter des libellés correspondants avec des éléments `<label>`. Cela permet aux outils d'assistance d'indiquer le rôle du champ. De plus, cliquer ou toucher le libellé permettra de passer le focus au contrôle de formulaire correspondant. Cela améliore l'accessibilité et l'utilisabilité pour les personnes voyantes, en augmentant la zone d'interaction possible pour activer le contrôle du formulaire au clic ou au toucher. C'est notamment utile (voire nécessaire) pour les boutons radios et les cases à cocher dont la surface est faible. Pour plus d'informations sur les libellés en général, voir [la section sur les libellés](#libellés).
 
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+Dans l'exemple qui suit, on illustre comment associer un élément `<label>` avec un élément `<input>`. Le lien se fait avec la valeur l'attribut `id` de l'élément `<input>` qui est réutilisée comme valeur pour l'attribut `for` de l'élément `<label>`.
 
 ```html
-<label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas">
+<label for="ptipois">Est-ce que vous aimez les petits pois ?</label>
+<input type="checkbox" name="petitspois" id="ptipois">
 ```
 
-### Size
+### Dimensionnement
 
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+Les éléments interactifs d'une page web, tels que les champs de formulaire, doivent fournir une zone d'interaction suffisamment large pour qu'il soit facile de les activer. Cela aide les personnes avec des handicaps moteurs et aussi les personnes qui utilisent des dispositifs de pointage peu précis comme les doigts ou un stylet. Une surface interactive minimale de of 44×44 [pixels CSS](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) est recommandée.
 
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
+- [Comprendre le critère de réussite 2.5.5&nbsp;: taille de la cible | Guide du W3C pour la compréhension de WCAG 2.1 (en anglais)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Taille de la ciblet 2.5.5, billet de blog d'Adrian Roselli (en anglais)](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Test rapide&nbsp;: cibles suffisamment grande - le projet A11Y (en anglais)](https://www.a11yproject.com/posts/large-touch-targets/)
 
 ## Spécifications
 
