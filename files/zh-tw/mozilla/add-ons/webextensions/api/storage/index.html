@@ -11,20 +11,20 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <p>讓套件可以存讀資料以及監聽儲存項目的更動。</p>
 
-<p>儲存系統基於 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>，有一些不同，包括：</p>
+<p>儲存系統基於 <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>，有一些不同，包括：</p>
 
 <ul>
  <li>非同步</li>
  <li>值的作用域在套件而不是某個特定的網域（後端的所有腳本與內容腳本都可用同樣的鍵值）。</li>
- <li>儲存的值可以是任何的 JSON-ifiable 值而並非只能是 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>。這包括了： <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">陣列</a></code>、<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">物件</a></code>。但只有在內容可以被以JSON表示的時候，這表示不包含DOM節點。你不需要特地把值轉爲JSON <code>Strings</code>來儲存它們，它們在內部就是以JSON來表示的。</li>
+ <li>儲存的值可以是任何的 JSON-ifiable 值而並非只能是 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>。這包括了： <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">陣列</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">物件</a></code>。但只有在內容可以被以JSON表示的時候，這表示不包含DOM節點。你不需要特地把值轉爲JSON <code>Strings</code>來儲存它們，它們在內部就是以JSON來表示的。</li>
  <li>同一個API呼叫中可以設置或取得複數鍵值。</li>
 </ul>
 
-<p>要使用這個 API 你必須在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 裡面加入 "storage" 的<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">權限</a>。</p>
+<p>要使用這個 API 你必須在 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 裡面加入 "storage" 的<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">權限</a>。</p>
 
 <p>每個套件都有自己的儲存空間，它們可以被切分爲不同種類的儲存。</p>
 
-<p>雖然這個 API 與{{domxref("Window.localStorage")}}很相似，建議你不要在套件裡使用 <code>Window.localStorage</code> 儲存套件相關資料。Firefox 在用戶由於隱私問題清除歷史記錄與資料時會清除 localStorage API 儲存的資料，而 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> API 儲存的則會留著。</p>
+<p>雖然這個 API 與{{domxref("Window.localStorage")}}很相似，建議你不要在套件裡使用 <code>Window.localStorage</code> 儲存套件相關資料。Firefox 在用戶由於隱私問題清除歷史記錄與資料時會清除 localStorage API 儲存的資料，而 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> API 儲存的則會留著。</p>
 
 <div class="note">儲存空間不會被加密，所以你不應該把它們用來儲存用戶的機密資料。</div>
 

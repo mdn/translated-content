@@ -22,7 +22,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 &lt;/svg&gt;
 </pre>
 
-<p>複製這段程式碼，在一個文件裡貼上，給該文件起名為demo1.svg，然後用Firefox打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點<a class="external" href="https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml" title="https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml">這裡</a>)</p>
+<p>複製這段程式碼，在一個文件裡貼上，給該文件起名為demo1.svg，然後用Firefox打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點<a href="/@api/deki/files/4571/=svgdemo1.xml">這裡</a>)</p>
 
 <p><img alt="svgdemo1.png" class="default internal" src="/@api/deki/files/4928/=svgdemo1.png"></p>
 
@@ -34,7 +34,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
   <ul>
    <li>不使用類似(X)HTML的文檔聲明，因為基於SVG的DTD會造成很多問題，弊大於利。</li>
    <li>為了明確SVG版本，<code>version</code> 和 baseProfile 兩個屬性必須要寫</li>
-   <li>作為XML方言，SVG必須始終绑定正確的命名空間（xmlns属性）。更多資訊，請參考<a href="/en/SVG/Namespaces_Crash_Course" title="en/SVG/Namespaces_Crash_Course">命名空間速成班頁面</a></li>
+   <li>作為XML方言，SVG必須始終绑定正確的命名空間（xmlns属性）。更多資訊，請參考<a href="/en/SVG/Namespaces_Crash_Course">命名空間速成班頁面</a></li>
   </ul>
  </li>
  <li>畫一個覆蓋整個圖形的矩形 ，將背景設為红色</li>
@@ -59,8 +59,8 @@ translation_of: Web/SVG/Tutorial/Getting_Started
    <li><code>理論上，<code>img</code>元素也可以用来引入SVG，但是Firefox 4.0之前的版本不支持這一功能。</code></li>
    <li><code>最後，SVG可以用JavaScript動態創建，並且注入到HTML DOM裡面。這樣做的好處是，對於不支持SVG的瀏覽器，可以啟用其它替代技術。</code></li>
   </ul>
-  <code> 這是一個深入探討該主題的<a href="/en/SVG_In_HTML_Introduction" title="en/svg in html introduction">專題頁面</a>。 </code></li>
- <li><code>SVG如何處理大小和單位，將在<a href="/en/SVG/Tutorial/Positions" title="en/SVG/Tutorial/Positions">下一頁</a>進行解釋。</code></li>
+  <code> 這是一個深入探討該主題的<a href="/en/SVG_In_HTML_Introduction">專題頁面</a>。 </code></li>
+ <li><code>SVG如何處理大小和單位，將在<a href="/en/SVG/Tutorial/Positions">下一頁</a>進行解釋。</code></li>
 </ul>
 
 <h3 id="SVG_File_Types" name="SVG_File_Types"><code>SVG文件的類型</code></h3>
@@ -82,7 +82,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 Content-Encoding: gzip
 </code></pre>
 
-<p><code>你可以通過一些網站來檢查你的服務器是否使用了正确的響應端，比如 <a class="external" href="http://web-sniffer.net/">web-sniffer.net</a>，提交一個SVG文件的URL，看一下響應端是什麼。如果你的服務器在響應裡没能返回上面的内容，那麼你應該聯繫一下您的主機服務商。如果他們不提供相關的配置服務，你也可以自動動手，具體方法可以查閱SVG wiki的 <a class="external" href="http://svg-whiz.com/wiki/index.php?title=Server_Configuration">服務器配置頁面</a>。</code></p>
+<p><code>你可以通過一些網站來檢查你的服務器是否使用了正确的響應端，比如 <a href="http://web-sniffer.net/">web-sniffer.net</a>，提交一個SVG文件的URL，看一下響應端是什麼。如果你的服務器在響應裡没能返回上面的内容，那麼你應該聯繫一下您的主機服務商。如果他們不提供相關的配置服務，你也可以自動動手，具體方法可以查閱SVG wiki的 <a href="http://svg-whiz.com/wiki/index.php?title=Server_Configuration">服務器配置頁面</a>。</code></p>
 
 <p><code>服務器配置錯誤是SVG加載失敗的主要原因，所以一定要確認你的配置。如果你没有給SVG文件配置正確的服務器響應端，Firefox將會以文本的方式展示文件的標記和編碼内容，甚至要求用户選擇一个應用程序打開它。</code></p>
 

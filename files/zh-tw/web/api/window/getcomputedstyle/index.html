@@ -81,11 +81,11 @@ var style = window.getComputedStyle(elem1, null);
 
 <h2 id="defaultView"><code>defaultView</code></h2>
 
-<p>In many code samples online, <code>getComputedStyle</code> is used from the <code>document.defaultView</code> object. In nearly all cases, this is needless, as <code>getComputedStyle</code> exists on the <code>window</code> object as well. It's likely the defaultView pattern was some combination of (1) folks not wanting to write a spec for window and (2) making an API that was also usable in Java. However, there is <a class="link-https" href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183" title="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">a single case</a> where the <code>defaultView</code>'s method must be used: when using Firefox 3.6 to access framed styles.</p>
+<p>In many code samples online, <code>getComputedStyle</code> is used from the <code>document.defaultView</code> object. In nearly all cases, this is needless, as <code>getComputedStyle</code> exists on the <code>window</code> object as well. It's likely the defaultView pattern was some combination of (1) folks not wanting to write a spec for window and (2) making an API that was also usable in Java. However, there is <a href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">a single case</a> where the <code>defaultView</code>'s method must be used: when using Firefox 3.6 to access framed styles.</p>
 
 <h2 id="Use_with_pseudo-elements">Use with pseudo-elements</h2>
 
-<p>getComputedStyle can pull style info from pseudo-elements (for example, <code>::after</code>, <code>::before</code>, <code>::marker</code>, <code>::line-marker</code>—see <a class="external" href="http://dev.w3.org/csswg/css3-content/#pseudo-elements">spec</a> here).</p>
+<p>getComputedStyle can pull style info from pseudo-elements (for example, <code>::after</code>, <code>::before</code>, <code>::marker</code>, <code>::line-marker</code>—see <a href="http://dev.w3.org/csswg/css3-content/#pseudo-elements">spec</a> here).</p>
 
 <pre class="brush: html">&lt;style&gt;
  h3::after {
@@ -107,7 +107,7 @@ var style = window.getComputedStyle(elem1, null);
 
 <p>The values returned by <code>getComputedStyle</code> are known as {{cssxref("resolved_value", "resolved values")}}. These are usually the same as the CSS 2.1 {{cssxref("computed_value","computed values")}}, but for some older properties like <code>width</code>, <code>height</code> or <code>padding</code>, they are instead the {{cssxref("used_value","used values")}}. Originally, CSS 2.0 defined the computed values to be the "ready to be used" final values of properties after cascading and inheritance, but CSS 2.1 redefined computed values as pre-layout, and used values as post-layout. For CSS 2.0 properties, the <code>getComputedStyle</code> function returns the old meaning of computed values, now called <strong>used values</strong>. An example of difference between pre- and post-layout values includes the resolution of percentages that represent the width or the height of an element (also known as its layout), as those will be replaced by their pixel equivalent only in the used value case.</p>
 
-<p>The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <a class="external" href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> and <a class="external" href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/</a> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by <code>getComputedStyle</code>.</p>
+<p>The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <a href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> and <a href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/</a> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by <code>getComputedStyle</code>.</p>
 
 <p>During a CSS transition, <code>getComputedStyle</code> returns the original property value in Firefox, but the final property value in WebKit.</p>
 
@@ -120,8 +120,8 @@ var style = window.getComputedStyle(elem1, null);
 <h2 id="規範">規範</h2>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>
- <li><a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle" title="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSS Object Model specification</a></li>
+ <li><a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>
+ <li><a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSS Object Model specification</a></li>
 </ul>
 
 <h2 id="See_also" name="See_also">參見</h2>

@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <h3 id="令人困惑的特殊狀況行為">令人困惑的特殊狀況行為</h3>
 
-<p>從最早的 <code>isNaN</code> 函式版本規範始，其針對非數值之行為，不斷教人困惑至極。當 <code>isNaN</code> 函式的參數並非<a href="http://es5.github.com/#x8.5" title="http://es5.github.com/#x8.5">數字</a>型別時，此值會先強制轉換到數字。該值接著會測定此值是否為 {{jsxref("NaN")}}。因此，當被強制轉換的非數字，給出了有效的非 NaN 值（經典案例為空的字串與布林原始值：它們在強制轉換時，會給予數字結果 0 或 1）時，會回傳不如預期的「false」值：以空的字串為例，它很明顯地「非數字」。這段教人糾結的點，乃出於「非數字」術語的「數字」一詞、由 IEEE-754 浮點值定義之事實而來。這個函式要解釋為「當這個值，被強制轉換為數值時，它還是 IEEE-754 的『非數字』值嗎？」的答案。</p>
+<p>從最早的 <code>isNaN</code> 函式版本規範始，其針對非數值之行為，不斷教人困惑至極。當 <code>isNaN</code> 函式的參數並非<a href="http://es5.github.com/#x8.5">數字</a>型別時，此值會先強制轉換到數字。該值接著會測定此值是否為 {{jsxref("NaN")}}。因此，當被強制轉換的非數字，給出了有效的非 NaN 值（經典案例為空的字串與布林原始值：它們在強制轉換時，會給予數字結果 0 或 1）時，會回傳不如預期的「false」值：以空的字串為例，它很明顯地「非數字」。這段教人糾結的點，乃出於「非數字」術語的「數字」一詞、由 IEEE-754 浮點值定義之事實而來。這個函式要解釋為「當這個值，被強制轉換為數值時，它還是 IEEE-754 的『非數字』值嗎？」的答案。</p>
 
 <p>最新的 ECMAScript（ES2015）版本導入了 {{jsxref("Number.isNaN()")}} 函式。儘管 <code>Number.isNaN</code> 的 <code>NaN</code> 依舊維持了數字上的意義、而不是簡單的「非數字」，<code>Number.isNaN(x)</code> 在偵測 <code>x</code> 為 <code>NaN</code> 與否時比較可靠。另外，如果在缺少 <code>Number.isNaN</code> 的情況下，通過表達式<code>(x != x)</code> 來檢測變量<code>x</code>是否是NaN會更加的可靠。</p>
 

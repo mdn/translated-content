@@ -139,7 +139,7 @@ if (request.status === 200) {
 
 <h3 id="Example_Synchronous_HTTP_request_from_a_Worker">Example: Synchronous HTTP request from a <code>Worker</code></h3>
 
-<p>One of the few cases in which a synchronous request does not usually block execution is the use of <code>XMLHttpRequest</code> within a <code><a href="/en/DOM/Worker" title="/en/DOM/Worker">Worker</a></code>.</p>
+<p>One of the few cases in which a synchronous request does not usually block execution is the use of <code>XMLHttpRequest</code> within a <code><a href="/en/DOM/Worker">Worker</a></code>.</p>
 
 <p><code><strong>example.html</strong></code> (the main page):</p>
 
@@ -161,12 +161,12 @@ if (request.status === 200) {
 &lt;/html&gt;
 </pre>
 
-<p><code><strong>myFile.txt</strong></code> (the target of the synchronous <code><a href="/en/DOM/XMLHttpRequest" title="/en/XMLHttpRequest">XMLHttpRequest</a></code> invocation):</p>
+<p><code><strong>myFile.txt</strong></code> (the target of the synchronous <code><a href="/en/DOM/XMLHttpRequest">XMLHttpRequest</a></code> invocation):</p>
 
 <pre>Hello World!!
 </pre>
 
-<p><code><strong>myTask.js</strong></code> (the <code><a href="/en/DOM/Worker" title="/en/DOM/Worker">Worker</a></code>):</p>
+<p><code><strong>myTask.js</strong></code> (the <code><a href="/en/DOM/Worker">Worker</a></code>):</p>
 
 <pre class="brush: js">self.onmessage = function (event) {
   if (event.data === "Hello") {
@@ -180,11 +180,11 @@ if (request.status === 200) {
 
 <div class="note"><strong>Note:</strong> The effect, because of the use of the <code>Worker</code>, is however asynchronous.</div>
 
-<p>It could be useful in order to interact in background with the server or to preload some content. See <a class="internal" href="/En/DOM/Using_web_workers" title="en/Using DOM workers">Using web workers</a> for examples and details.</p>
+<p>It could be useful in order to interact in background with the server or to preload some content. See <a href="/En/DOM/Using_web_workers">Using web workers</a> for examples and details.</p>
 
 <h3 id="Irreplaceability_of_the_synchronous_use">Irreplaceability of the synchronous use</h3>
 
-<p>There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the <a class="internal" href="/en/DOM/window.onunload" title="en/DOM/window.onunload"><code>window.onunload</code></a> and <a class="internal" href="/en/DOM/window.onbeforeunload" title="en/DOM/window.onbeforeunload"><code>window.onbeforeunload</code></a> events (<a class="internal" href="#XMLHttpRequests_being_stopped" title="en/XMLHttpRequest/Using_XMLHttpRequest#XMLHttpRequests_being_stopped">see also below</a>).</p>
+<p>There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the <a href="/en/DOM/window.onunload"><code>window.onunload</code></a> and <a href="/en/DOM/window.onbeforeunload"><code>window.onbeforeunload</code></a> events (<a href="#XMLHttpRequests_being_stopped">see also below</a>).</p>
 
 <p>Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.</p>
 
@@ -252,7 +252,7 @@ if (request.status === 200) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest" title="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a></li>
+ <li><a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
+ <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href="/en-US/docs/AJAX">AJAX</a></li>
 </ul>

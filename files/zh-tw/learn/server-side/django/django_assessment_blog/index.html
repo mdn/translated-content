@@ -274,7 +274,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  </li>
 </ol>
 
-<p>We briefly talked about passing a context to the template in a class-based view in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
+<p>We briefly talked about passing a context to the template in a class-based view in the <a href="/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
 
 <pre class="brush: python">class SomeView(generic.ListView):
     ...

@@ -39,7 +39,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">為每個應用分配url。</li>
 </ol>
 
-<p>為  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px;">locallibrary</a>  這個項目創建的網站文件夾和它的工程文件夾都命名為<em>locallibrary</em>。我們只創建一個名為<em>catalog</em>的應用。最高層的項目文件結構如下所示：</p>
+<p>為  <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">locallibrary</a>  這個項目創建的網站文件夾和它的工程文件夾都命名為<em>locallibrary</em>。我們只創建一個名為<em>catalog</em>的應用。最高層的項目文件結構如下所示：</p>
 
 <pre class="brush: bash"><em>locallibrary/         # Website folder</em>
     <strong>manage.py         </strong># Script to run Django tools for this project (created using django-admin)
@@ -117,7 +117,7 @@ cd locallibrary</pre>
 
 <ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">一個<em>migration</em>文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">__init__.py</strong> —一個空文件，Django/Python會將這個文件作為<a class="external external-icon" href="https://docs.python.org/3/tutorial/modules.html#packages" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">Python套件包</a>並允許你在項目的其他部分使用它。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">__init__.py</strong> —一個空文件，Django/Python會將這個文件作為<a href="https://docs.python.org/3/tutorial/modules.html#packages">Python套件包</a>並允許你在項目的其他部分使用它。</li>
 </ul>
 
 <div class="note">
@@ -143,12 +143,12 @@ cd locallibrary</pre>
 <p>新的這行，詳細說明了應用配置文件在( <code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>CatalogConfig</code>) <strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>/locallibrary/catalog/apps.py</strong>  裡，當你創建應用時就完成了這個過程。</p>
 
 <div class="note">
-<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :注意到<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>INSTALLED_APPS已经有许多其他的应用了</code> (還有 <code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>MIDDLEWARE</code>,在settings的下面)。這些應用為   <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212);'>Django administration site</a>  提供了支持和許多功能(包括會話，認證系統等)。</p>
+<p><strong style='background-color: #fff3d4; border: 0px; color: #333333; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>注意</strong> :注意到<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>INSTALLED_APPS已经有许多其他的应用了</code> (還有 <code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>MIDDLEWARE</code>,在settings的下面)。這些應用為   <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a>  提供了支持和許多功能(包括會話，認證系統等)。</p>
 </div>
 
 <h2 id="配置資料庫">配置資料庫</h2>
 
-<p>現在可以為項目配置資料庫了——為了避免性能上的差異，最好在生產和開發中使用同一種資料庫。你可以在<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/settings/#databases" rel="noopener" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line;">資料庫</a>  裡找到不同的設置方法(Django文檔)。 </p>
+<p>現在可以為項目配置資料庫了——為了避免性能上的差異，最好在生產和開發中使用同一種資料庫。你可以在<a href="https://docs.djangoproject.com/en/1.10/ref/settings/#databases">資料庫</a>  裡找到不同的設置方法(Django文檔)。 </p>
 
 <p>在這個項目裡，我們使用SQLite。因為在展示用的數據庫中，我們不會有很多並發存取的行為。同時，也因為SQLite不需要額外的配置工作。你可以在<strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">settings.py</strong>裡看到這個數據庫怎樣配置的。（更多信息如下所示）</p>
 
@@ -164,7 +164,7 @@ cd locallibrary</pre>
 
 <h2 id="其他項目設置">其他項目設置</h2>
 
-<p>settings.py裡還包括其他的一些設置，現在只需要改變<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE" rel="noopener" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; background-color: rgb(255, 255, 255);'>時區</a> —改為和標準<a class="external external-icon" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" rel="noopener" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; background-color: rgb(255, 255, 255);'>tz時區數據表</a>  裡的字符串相同就可以了（數據表裡的TZ列有你想要的時區）。把<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>TIME_ZONE</code>的值改為你的時區，比如</p>
+<p>settings.py裡還包括其他的一些設置，現在只需要改變<a href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE">時區</a> —改為和標準<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">tz時區數據表</a>  裡的字符串相同就可以了（數據表裡的TZ列有你想要的時區）。把<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>TIME_ZONE</code>的值改為你的時區，比如</p>
 
 <pre class="brush: python">TIME_ZONE = 'Asia/Taipei'</pre>
 
@@ -309,7 +309,7 @@ python3 manage.py migrate
 <p>在開發期間，你首先要使用開發網頁服務器，然後用你本機的瀏覽器觀看，來測試你的網站。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（<a class="external external-icon" href="https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver" rel="noopener" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line; font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif; font-size: 18px; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; background-color: rgb(255, 243, 212);'>django-admin and manage.py: runserver</a>）(Django docs).</p>
+<p><strong>注意</strong>: 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（<a href="https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>）(Django docs).</p>
 </div>
 
 <p>通過如下<code>runserver</code>命令，運行開發網頁服務器。（同樣的要在<strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>manage.py</strong>的目錄）</p>
@@ -325,7 +325,7 @@ python3 manage.py migrate
  Quit the server with CTRL-BREAK.
 </pre>
 
-<p>一旦服務器運行，你可以用你的瀏覽器導航到<a class="external external-icon" href="http://127.0.0.1:8000/" rel="noopener" style='font-style: normal; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px; white-space: pre-line; font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; background-color: rgb(255, 255, 255);'>http://127.0.0.1:8000/</a> 查看。你應該會看到一個錯誤頁面，如下。</p>
+<p>一旦服務器運行，你可以用你的瀏覽器導航到<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> 查看。你應該會看到一個錯誤頁面，如下。</p>
 
 <p><img alt="Django Debug page for Django 2.0" src="https://mdn.mozillademos.org/files/15729/django_404_debug_page.png"></p>
 
@@ -354,7 +354,7 @@ python3 manage.py migrate
 
 <p>你現在已經創建了一個完整的骨架網站項目，你可以繼續加入網址、模型、視圖、和模版。</p>
 
-<p>現在，<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-style: normal !important; text-decoration: none; color: rgb(63, 135, 166); margin: 0px; padding: 0px; border: 0px;">Local Library website</a>的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。</p>
+<p>現在，<a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。</p>
 
 <h2 id="參見">參見</h2>
 
