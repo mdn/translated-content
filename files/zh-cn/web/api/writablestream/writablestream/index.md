@@ -12,7 +12,7 @@ translation_of: Web/API/WritableStream/WritableStream
 ---
 {{APIRef("Streams")}}
 
- **`WritableStream()`** 构造函数创造一个新的 {{domxref("WritableStream")}} 对象实例。
+**`WritableStream()`** 构造函数创建一个新的 {{domxref("WritableStream")}} 对象实例。
 
 ## 语法
 
@@ -25,7 +25,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 
 - `underlyingSink` {{optional_inline}}
 
-  - : 一个包含定义了构造流行为方法和属性的对象。underlyingSource 包括：
+  - : 一个包含方法和属性的对象，这些方法和属性定义了如何构造流实例的行为。underlyingSource 包括：
 
     - `start(controller)` {{optional_inline}}
       - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。传递给这个方法的controller是一个 {{domxref("WritableStreamDefaultController")}}。开发人员可以使用此方法在设置期间控制流。
@@ -41,9 +41,9 @@ new WritableStream(underlyingSink, queuingStrategy)
     - `highWaterMark`
       - : 非负整数 - 这定义了在应用背压之前可以包含在内部队列中的块的总数。
     - `size(chunk)`
-      - : 包含参数chunk 的方法 - 这表示每个块使用的大小（以字节为单位）。
+      - : 包含参数 chunk 的方法 - 这表示每个块使用的大小（以字节为单位）。
 
-    > **备注:**你可以定义一个自己的 `queuingStrategy`，或者为这个对象值使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例。如果没有提供 `queuingStrategy`，则使用的默认值与 `CountQueuingStrategy` 相同，其 highWaterMark 为 1。
+    > **备注:** 你可以定义一个自己的 `queuingStrategy`，或者为这个对象值使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例。如果没有提供 `queuingStrategy`，则使用的默认值与 `CountQueuingStrategy` 相同，其 highWaterMark 为 1。
 
 ### 返回值
 
