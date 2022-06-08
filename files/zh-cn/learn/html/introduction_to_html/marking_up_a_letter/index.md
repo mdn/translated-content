@@ -33,7 +33,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 开始测验之前，请先下载[信件的原始文本](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)和 [CSS 代码](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt)。然后用文本编辑器（用 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 等在线编辑工具亦可）创建一个新的 `.html` 文件来进行测验。
 
-> **备注：** 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的 [评估或进一步帮助](#评估或进一步帮助)。
+> **备注：** 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
 
 ## 项目概要
 
@@ -65,7 +65,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 ## 提示和技巧
 
-- 使用 [W3C HTML 验证器](https://validator.w3.org/) 来验证 HTML，验证通过有额外加分。
+- 使用 [W3C HTML 验证器](https://validator.w3.org/)来验证 HTML，验证通过有额外加分。
 - 完成这个测验不需要任何 CSS 知识，只需把现成的 CSS 放到 HTML 元素里就好。
 
 ## 示例

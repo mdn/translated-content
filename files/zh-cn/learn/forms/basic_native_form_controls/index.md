@@ -28,7 +28,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 - 常见的输入（input）类型元素：{{HTMLelement('input/button', 'button')}}、{{HTMLelement('input/checkbox', 'checkbox')}}、{{HTMLelement('input/file', 'file')}}、{{HTMLelement('input/hidden', 'hidden')}}、{{HTMLelement('input/image', 'image')}}、{{HTMLelement('input/password', 'password')}}、{{HTMLelement('input/radio', 'radio')}}、{{HTMLelement('input/reset', 'reset')}}、{{HTMLelement('input/submit', 'submit')}} 和 {{HTMLelement('input/text', 'text')}}。
 - 所有表单部件共有的一些属性。
 
-> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果您想要更准确的细节，您应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input) 参考。
+> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果您想要更准确的细节，您应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
 
 ## 文本输入框
 
@@ -49,7 +49,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 使用 {{htmlattrxref("type","input")}} 属性值被设置为 `text` 的 {{HTMLElement("input")}} 元素创建一个单行文本框（同样的，如果你不提供 {{htmlattrxref("type","input")}} 属性，该属性将被默认设置为 `text`）。在你指定的 {{htmlattrxref("type","input")}} 属性的值在浏览器中是未知的情况下（比如你指定 `type="date"`，但是浏览器不支持原生日期选择器），属性值也将会回落到 `text`。
 
-> **备注：** 你可以在 Github 上的 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) 找到所有单行文本框类型（你也可以直接看 [预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)）。
+> **备注：** 你可以在 Github 上的 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) 找到所有单行文本框类型（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)）。
 
 这是一个基本的单行文本框示例：
 
@@ -97,7 +97,7 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 
 值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Element/Input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
 
-> **备注：** 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看 [预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
+> **备注：** 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
 
 为了获得最大的可用性和可访问性（无障碍），建议您在 {{htmlelement("fieldset")}} 中包围每个相关项目的列表，并使用 {{htmlelement("legend")}} 提供对列表的全面描述。每个单独的 {{htmlelement("label")}}/{{htmlelement("input")}} 元素都应该包含在它自己的列表项中（或者类似的）。正如在下方示例中显示的。
 
@@ -188,7 +188,7 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 
 > **备注：** `image` input 类型同样被渲染为一个按钮。我们将在后面提到。
 
-> **备注：** 你可以在 Github 上看到 [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html)（你也可以直接看 [预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
+> **备注：** 你可以在 Github 上看到 [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
 
 下面，你可以看到每一种与 `<button>` 对应类型等价的 `<input>` 类型的示例。
 
