@@ -68,12 +68,12 @@ grid-template-rows: unset;
  <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
  <dd>是一个来定义大小范围的属性，大于等于 min 值，并且小于等于 max 值。如果 max 值小于 min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值<code>&lt;flex&gt;</code> ，但最小值则不行。 </dd>
  <dd>
- <p class="note">Note:  该规范在将来可能会允许设置最小值为 <code>flex</code> ，也会调整网格轨道算法 (<a href="https://www.w3.org/TR/css-grid-1/#track-sizing-algorithm">track sizing algorithm</a>) 计算出正确的大小。</p>
+ <p>Note:  该规范在将来可能会允许设置最小值为 <code>flex</code> ，也会调整网格轨道算法 (<a href="https://www.w3.org/TR/css-grid-1/#track-sizing-algorithm">track sizing algorithm</a>) 计算出正确的大小。</p>
  </dd>
  <dt><code>auto</code></dt>
  <dd>如果该网格轨道为最大时，该属性等同于 <code>&lt;max-content&gt;</code> ，为最小时，则等同于 <code>&lt;min-content&gt;</code> 。</dd>
  <dd>
- <p class="note">Note: 网格轨道大小为 <code>auto</code> (且只有为 <code>auto</code> ) 时，才可以被属性{{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。</p>
+ <p>Note: 网格轨道大小为 <code>auto</code> (且只有为 <code>auto</code> ) 时，才可以被属性{{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。</p>
  </dd>
  <dt>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>相当于公式 <code>min(max-content, max(auto, <var>argument</var>))</code>，类似于<code>auto</code> 的计算 (即 <code>minmax(auto, max-content)</code>)，除了网格轨道大小值是确定下来的，否则该值都大于 <code>auto</code> 的最小值。</dd>

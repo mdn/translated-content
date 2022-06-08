@@ -13,13 +13,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
 <p>使用 WebExtensions 获取或设置 cookies, 并且在修改时能够获得通知。</p>
 
-<p>你需要在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 文件中开启“cookies”<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 权限</a>，并且需要对应站点的 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">主机权限</a> 才能设置指定站点的cookie。详细信息查看 <a href="/en-US/Add-ons/WebExtensions/API/cookies#Permissions">cookie 权限</a>.</p>
+<p>你需要在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 文件中开启“cookies”<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 权限</a>，并且需要对应站点的 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">主机权限</a> 才能设置指定站点的 cookie。详细信息查看 <a href="/en-US/Add-ons/WebExtensions/API/cookies#Permissions">cookie 权限</a>.</p>
 
 <h2 id="类型">类型</h2>
 
 <dl>
  <dt>{{WebExtAPIRef("cookies.Cookie")}}</dt>
- <dd>代表一个HTTP cookie的信息。</dd>
+ <dd>代表一个 HTTP cookie 的信息。</dd>
  <dt>{{WebExtAPIRef("cookies.CookieStore")}}</dt>
  <dd>代表一个保存在浏览器中的 cookie。</dd>
  <dt>{{WebExtAPIRef("cookies.OnChangedCause")}}</dt>
@@ -34,64 +34,64 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
  <dt>{{WebExtAPIRef("cookies.getAll()")}}</dt>
  <dd>返回所有符合筛选条件的 cookies。</dd>
  <dt>{{WebExtAPIRef("cookies.set()")}}</dt>
- <dd>根据给定cookie数据设置一个cookie；如果同样的cookie存在讲会覆盖。</dd>
+ <dd>根据给定 cookie 数据设置一个 cookie；如果同样的 cookie 存在讲会覆盖。</dd>
  <dt>{{WebExtAPIRef("cookies.remove()")}}</dt>
- <dd>根据名字删除cookie。</dd>
+ <dd>根据名字删除 cookie。</dd>
  <dt>{{WebExtAPIRef("cookies.getAllCookieStores()")}}</dt>
- <dd>列出所有保存的cookie。</dd>
+ <dd>列出所有保存的 cookie。</dd>
 </dl>
 
 <h2 id="事件句柄">事件句柄</h2>
 
 <dl>
  <dt>{{WebExtAPIRef("cookies.onChanged")}}</dt>
- <dd>当设置或删除cookie时触发。</dd>
+ <dd>当设置或删除 cookie 时触发。</dd>
 </dl>
 
 <h2 id="权限">权限</h2>
 
-<p>为了使用这个API，插件必须在它的manifest中指定"cookies" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 权限</a>，和它想要使用cookie的任何网站的 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host 权限</a> 。插件将能读取或写入host权限中所匹配的URL可以读取或写入的任何cookie。例如：</p>
+<p>为了使用这个 API，插件必须在它的 manifest 中指定"cookies" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 权限</a>，和它想要使用 cookie 的任何网站的 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host 权限</a> 。插件将能读取或写入 host 权限中所匹配的 URL 可以读取或写入的任何 cookie。例如：</p>
 
 <dl>
  <dt><code>http://*.example.com/</code></dt>
  <dd>
- <p>拥有这个host权限的插件将可以：</p>
+ <p>拥有这个 host 权限的插件将可以：</p>
 
  <ul>
-  <li>读取一个<code>www.example.com</code>任意路径下的不安全cookie。</li>
-  <li>写入一个<code>www.example.com</code>任意路径下的不安全cookie。</li>
+  <li>读取一个<code>www.example.com</code>任意路径下的不安全 cookie。</li>
+  <li>写入一个<code>www.example.com</code>任意路径下的不安全 cookie。</li>
  </ul>
 
  <p><em>它不能：</em></p>
 
  <ul>
-  <li>读取<code>www.example.com</code>的安全cookie。</li>
+  <li>读取<code>www.example.com</code>的安全 cookie。</li>
  </ul>
  </dd>
  <dt><code>http://www.example.com/</code></dt>
  <dd>
- <p>拥有这个host权限的插件将可以：</p>
+ <p>拥有这个 host 权限的插件将可以：</p>
 
  <ul>
-  <li>读取 <code>www.example.com</code>任意路径下的不安全cookie。</li>
-  <li>读取 <code>.example.com</code> 任意路径下的不安全cookie。</li>
-  <li>写入 <code>www.example.com</code> 任意路径下的安全和不安全cookie。</li>
-  <li>写入 <code>.example.com</code> 任意路径下的安全和不安全cookie。</li>
+  <li>读取 <code>www.example.com</code>任意路径下的不安全 cookie。</li>
+  <li>读取 <code>.example.com</code> 任意路径下的不安全 cookie。</li>
+  <li>写入 <code>www.example.com</code> 任意路径下的安全和不安全 cookie。</li>
+  <li>写入 <code>.example.com</code> 任意路径下的安全和不安全 cookie。</li>
  </ul>
 
  <p>它不能：</p>
 
  <ul>
-  <li>读取或写入 <code>foo.example.com</code> 的cookie。</li>
-  <li>读取或写入 <code>foo.www.example.com</code> 的cookie。</li>
+  <li>读取或写入 <code>foo.example.com</code> 的 cookie。</li>
+  <li>读取或写入 <code>foo.www.example.com</code> 的 cookie。</li>
  </ul>
  </dd>
  <dt><code>*://*.example.com/</code></dt>
  <dd>
- <p>拥有这个host权限的插件将可以：</p>
+ <p>拥有这个 host 权限的插件将可以：</p>
 
  <ul>
-  <li>读取或写入 <code>www.example.com</code> 任意路径下安全的和不安全的cookie。</li>
+  <li>读取或写入 <code>www.example.com</code> 任意路径下安全的和不安全的 cookie。</li>
  </ul>
  </dd>
 </dl>
@@ -114,7 +114,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
 <div class="note"><strong>Acknowledgements</strong>
 
-<p>这个API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API. 这篇文档来源于Chromium 代码的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> 。</p>
+<p>这个 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API. 这篇文档来源于 Chromium 代码的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> 。</p>
 
 <p>Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License.</p>
 </div>
