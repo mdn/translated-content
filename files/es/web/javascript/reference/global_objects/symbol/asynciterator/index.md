@@ -21,21 +21,21 @@ Puedes definir tu propio iterable asíncrono estableciendo la propiedad `[Symbol
 
 ```js
 const myAsyncIterable = {
-    async* [Symbol.asyncIterator]() {
-        yield "hello";
-        yield "async";
-        yield "iteration!";
-    }
+  async* [Symbol.asyncIterator]() {
+    yield "hello";
+    yield "async";
+    yield "iteration!";
+  }
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // resultado esperado:
-        //    "hello"
-        //    "async"
-        //    "iteration!"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // resultado esperado:
+    //    "hello"
+    //    "async"
+    //    "iteration!"
+  }
 })();
 ```
 
