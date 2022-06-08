@@ -13,16 +13,16 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 <div dir="ltr">{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</div>
 
-<p>欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题 。并使你熟悉 JavaScript 的用途。</p>
+<p>欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题。并使你熟悉 JavaScript 的用途。</p>
 
 <table class="learn-box standard-table" dir="ltr">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
-   <td>计算机基础知识，初步理解 HTML 和 CSS 。</td>
+   <th scope="row">预备知识：</th>
+   <td>计算机基础知识，初步理解 HTML 和 CSS。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>初步了解 JavaScript，包括一些概念、用途、嵌入网站的方法。</td>
   </tr>
  </tbody>
@@ -36,15 +36,15 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 <ul dir="ltr">
  <li>{{glossary("HTML")}}是一种标记语言，用来结构化我们的网页内容并赋予内容含义，例如定义段落、标题和数据表，或在页面中嵌入图片和视频。</li>
- <li>{{glossary("CSS")}} 是一种样式规则语言，可将样式应用于 HTML 内容， 例如设置背景颜色和字体，在多个列中布局内容。</li>
+ <li>{{glossary("CSS")}} 是一种样式规则语言，可将样式应用于 HTML 内容，例如设置背景颜色和字体，在多个列中布局内容。</li>
  <li>{{glossary("JavaScript")}} 是一种脚本语言，可以用来创建动态更新的内容，控制多媒体，制作图像动画，还有很多。（好吧，虽然它不是万能的，但可以通过简短的代码来实现神奇的功能。）</li>
 </ul>
 
-<p>这三层依次建立，秩序井然。以文本标签(text label)的简单示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：</p>
+<p>这三层依次建立，秩序井然。以文本标签 (text label) 的简单示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;玩家1：小明&lt;/p&gt;</pre>
+<pre class="brush: html notranslate">&lt;p&gt;玩家 1：小明&lt;/p&gt;</pre>
 
-<p>玩家1：小明</p>
+<p>玩家 1：小明</p>
 
 <p>然后我们可以为它加一点 CSS 让它更好看：</p>
 
@@ -84,7 +84,7 @@ p {
 }
 &lt;/style&gt;&lt;/head&gt;
 &lt;body&gt;
-&lt;p&gt;玩家1：小明&lt;/p&gt;
+&lt;p&gt;玩家 1：小明&lt;/p&gt;
 &lt;/body&gt;&lt;/html&gt;</pre>
 </div>
 
@@ -98,7 +98,7 @@ para.addEventListener('click', updateName);
 
 function updateName() {
   let name = prompt('输入一个新的名字：');
-  para.textContent = '玩家1：' + name;
+  para.textContent = '玩家 1：' + name;
 }
 </pre>
 
@@ -123,13 +123,13 @@ cursor: pointer;
 }
 &lt;/style&gt;&lt;/head&gt;
 &lt;body&gt;
-&lt;p&gt;玩家1：小明&lt;/p&gt;
+&lt;p&gt;玩家 1：小明&lt;/p&gt;
 &lt;script&gt;
 const para = document.querySelector('p');
 para.addEventListener('click', updateName);
 function updateName() {
   const name = prompt('输入一个新的名字：');
-  para.textContent = '玩家1：' + name;
+  para.textContent = '玩家 1：' + name;
 }
 &lt;/script&gt;
 &lt;/body&gt;&lt;/html&gt;</pre>
@@ -147,7 +147,7 @@ function updateName() {
 
 <ul dir="ltr">
  <li>在变量中储存有用的值。比如上文的示例中，我们请求客户输入一个新名字，然后将其储存到 <code>name</code> 变量中。</li>
- <li>操作一段文本（在编程中称为“字符串”（string））。上文的示例中，我们取字符串 "玩家1："，然后把它和 <code>name</code> 变量连结起来，创造出完整的文本标签，比如："玩家1：小明"。</li>
+ <li>操作一段文本（在编程中称为“字符串”（string））。上文的示例中，我们取字符串 "玩家 1："，然后把它和 <code>name</code> 变量连结起来，创造出完整的文本标签，比如："玩家 1：小明"。</li>
  <li>运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 {{Event("click")}} 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。</li>
  <li>以及更多！</li>
 </ul>
@@ -184,7 +184,7 @@ function updateName() {
 <p><strong>注</strong>：这些 API 较为高级，我们的课程中不会涉及，更多信息请参考：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs">客户端 web API 模块</a>.</p>
 </div>
 
-<p>先稳住！你看到的只是冰山一角。你不可能学一天 JavaScript 就能构建下一个Facebook, 谷歌地图, 或者 Instagram。敬请「牢记初心，砥砺前行」。</p>
+<p>先稳住！你看到的只是冰山一角。你不可能学一天 JavaScript 就能构建下一个 Facebook, 谷歌地图，或者 Instagram。敬请「牢记初心，砥砺前行」。</p>
 
 <h2 dir="ltr" id="JavaScript_在页面上做了什么？">JavaScript 在页面上做了什么？</h2>
 
@@ -196,7 +196,7 @@ function updateName() {
 
 <p>在 HTML 和 CSS 集合组装成一个网页后，浏览器的 JavaScript 引擎将执行 JavaScript 代码。这保证了当 JavaScript 开始运行之前，网页的结构和样式已经就位。</p>
 
-<p>这样很好，因为JavaScript 最普遍的用处是通过 DOM API（见上文）动态修改 HTML 和 CSS 来更新用户界面 （user interface）。如果 JavaScript 在 HTML 和 CSS 就位之前加载运行，就会引发错误。</p>
+<p>这样很好，因为 JavaScript 最普遍的用处是通过 DOM API（见上文）动态修改 HTML 和 CSS 来更新用户界面（user interface）。如果 JavaScript 在 HTML 和 CSS 就位之前加载运行，就会引发错误。</p>
 
 <h3 dir="ltr" id="浏览器安全">浏览器安全</h3>
 
@@ -216,7 +216,7 @@ para.addEventListener('click', updateName);
 
 function updateName() {
   let name = prompt('输入一个新的名字：');
-  para.textContent = '玩家1：' + name;
+  para.textContent = '玩家 1：' + name;
 }</pre>
 
 <p>这里我们选定一个文本段落（第 1 行)，然后给它附上一个事件监听器（第 3 行），使得在它被点击时，<code>updateName()</code> 代码块（code block） （5 – 8 行）便会运行。<code>updateName()</code> （这类可以重复使用的代码块称为“函数”）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。</p>
@@ -229,17 +229,17 @@ function updateName() {
 
 <h3 dir="ltr" id="解释代码_vs_编译代码">解释代码 vs 编译代码</h3>
 
-<p>作为程序员，你或许听说过这两个术语：<strong>解释（</strong><strong>interpret）</strong>和 <strong>编译(compile)</strong>。在解释型语言中，代码自上而下运行，且实时返回运行结果。代码在由浏览器执行前，不需要将其转化为其他形式。代码将直接以文本格式（text form）被接收和处理。</p>
+<p>作为程序员，你或许听说过这两个术语：<strong>解释（</strong><strong>interpret）</strong>和 <strong>编译 (compile)</strong>。在解释型语言中，代码自上而下运行，且实时返回运行结果。代码在由浏览器执行前，不需要将其转化为其他形式。代码将直接以文本格式（text form）被接收和处理。</p>
 
 <p>相对的，编译型语言需要先将代码转化（编译）成另一种形式才能运行。比如 C/C++ 先被编译成汇编语言，然后才能由计算机运行。程序将以二进制的格式运行，这些二进制内容是由程序源代码产生的。</p>
 
-<p>JavaScript 是轻量级解释型语言。浏览器接受到JavaScript代码，并以代码自身的文本格式运行它。技术上，几乎所有 JavaScript 转换器都运用了一种叫做即时编译（just-in-time compiling）的技术；当 JavaScript 源代码被执行时，它会被编译成二进制的格式，使代码运行速度更快。尽管如此，JavaScript 仍然是一门解释型语言，因为编译过程发生在代码运行中，而非之前。</p>
+<p>JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，并以代码自身的文本格式运行它。技术上，几乎所有 JavaScript 转换器都运用了一种叫做即时编译（just-in-time compiling）的技术；当 JavaScript 源代码被执行时，它会被编译成二进制的格式，使代码运行速度更快。尽管如此，JavaScript 仍然是一门解释型语言，因为编译过程发生在代码运行中，而非之前。</p>
 
 <p>两种类型的语言各有优势，这个问题我们暂且不谈。</p>
 
 <h3 dir="ltr" id="服务器端代码_vs_客户端代码">服务器端代码 vs 客户端代码</h3>
 
-<p>你或许还听说过<strong>服务器端（server-side）</strong>和 <strong>客户端（client-side）</strong>代码这两个术语，尤其是在web开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。这就是<strong>客户端 JavaScript</strong>。</p>
+<p>你或许还听说过<strong>服务器端（server-side）</strong>和 <strong>客户端（client-side）</strong>代码这两个术语，尤其是在 web 开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。这就是<strong>客户端 JavaScript</strong>。</p>
 
 <p>而服务器端代码在服务器上运行，接着运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET 以及...... JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的 <a href="/zh-CN/docs/Learn/Server-side">动态网页 - 服务器端编程</a> 主题中找到更多关于服务器端 JavaScript 的知识。</p>
 
@@ -284,7 +284,7 @@ function updateName() {
 </ol>
 
 <div class="note" dir="ltr">
-<p><strong>注</strong>: 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 <code>.html</code> 为扩展名保存到本地了？<code>&lt;/body&gt;</code> 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确 ？ <strong>JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的句法，否则可能会出错。</strong></p>
+<p><strong>注</strong>: 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 <code>.html</code> 为扩展名保存到本地了？<code>&lt;/body&gt;</code> 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确？ <strong>JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的句法，否则可能会出错。</strong></p>
 </div>
 
 <div class="note" dir="ltr">

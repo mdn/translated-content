@@ -143,7 +143,7 @@ textarea {
 // 在 "generate.js" 中创建一个新的 worker
 const worker = new Worker('./generate.js');
 
-// 当用户点击 "Generate primes" 时, 给 worker 发送一条消息。
+// 当用户点击 "Generate primes" 时，给 worker 发送一条消息。
 // 消息中的 command 属性是 "generate", 还包含另外一个属性 "quota"，即要生成的质数。
 document.querySelector('#generate').addEventListener('click', () => {
   const quota = document.querySelector('#quota').value;
@@ -216,7 +216,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 
 `generatePrimes()` 函数与同步版本类似，只不过我们在完成后向主脚本发送一条消息，而不是返回一个值。我们对此使用 {{DOMxRef("dedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} 函数，就像在 worker 中 `addEventListener`是全局函数一样。如我们所见，主脚本正在监听这条消息并且将会在收到消息后更新 DOM。
 
-> **备注：** 要运行此站点，你必须运行一个本地 web 服务器，因为 file:// URLs 不允许加载 workers。参考我们的[设置一个本地测试服务器](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)的指导。完成后，你应该可以点击 "Generate primes" 并且使你的主页面保持响应。
+> **备注：** 要运行此站点，你必须运行一个本地 web 服务器，因为 file:// URLs 不允许加载 workers。参考我们的 [设置一个本地测试服务器](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server) 的指导。完成后，你应该可以点击 "Generate primes" 并且使你的主页面保持响应。
 > 如果你在创建和运行这个样例的过程中有疑问，你可以在 [https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) 查看完成后的版本，并且在 [https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished) 进行在线尝试。
 
 ## 其他类型的 worker
@@ -232,7 +232,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 
 在本文中，我们介绍了 web workers，它使得 web 应用能够离线加载任务到单独的线程中。主线程和 worker 不直接共享任何变量，但是可以通过发送消息来进行通信，这些消息作为 `message` 事件被对方接受。
 
-Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不能访问 DOM， 但是可以作为使主应用程序保持响应的一个有效的方式。
+Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不能访问 DOM，但是可以作为使主应用程序保持响应的一个有效的方式。
 
 ## 参见
 

@@ -1,5 +1,5 @@
 ---
-title: 异步JavaScript
+title: 异步 JavaScript
 slug: Learn/JavaScript/Asynchronous
 tags:
   - JavaScript
@@ -30,7 +30,7 @@ original_slug: learn/JavaScript/异步
 
 ## 预备知识
 
-异步 JavaScript 是一个相当高级的话题，建议你先完成 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)和[创建JavaScript代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks) 两个模块的学习后再来学习。
+异步 JavaScript 是一个相当高级的话题，建议你先完成 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)和[创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks) 两个模块的学习后再来学习。
 
 > **备注：** 如果你工作在一个无权创建自己文件的电脑/平板/其他设备上，你需要在一个在线编程工具上试验（大多数）代码示例，如 [JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com).
 
