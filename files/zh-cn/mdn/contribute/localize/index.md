@@ -8,13 +8,13 @@ tags:
 ---
 {{MDNSidebar}}
 
-2020年12月14日开始，MDN 将运行在基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。新的平台也使 MDN 在许多方面发生了改变，这些变化基本上都对我们的工作有不同程度的改进，不过，在内容本地化的工作方面，变化可能看起来会更激进一些。许多的英语区域外的内容本地化工作被中止了，其中的内容长久未更新或活跃人数太少都是可能的原因。在将来，我们希望有更好的机制，来管理这些内容的本地化工作。
+2020 年 12 月 14 日开始，MDN 将运行在基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。新的平台也使 MDN 在许多方面发生了改变，这些变化基本上都对我们的工作有不同程度的改进，不过，在内容本地化的工作方面，变化可能看起来会更激进一些。许多的英语区域外的内容本地化工作被中止了，其中的内容长久未更新或活跃人数太少都是可能的原因。在将来，我们希望有更好的机制，来管理这些内容的本地化工作。
 
 除了下面列出的地区，所有区域的内容本地化工作都被冻结了，也就意味着这些内容暂时不会开放编辑。所有可接受本地化编辑的内容，都由各自对应的志愿者小组负责管理。
 
 ## 活跃语言
 
-> **备注：** 如果你有意向加入某语言的内容本地化工作，请联系下面这些小组中的成员，也可[尝试寻求帮助](/zh-CN/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)。语言名称后的标识与 [Translated-content Repo](https://github.com/mdn/translated-content) 目录是对应的。
+> **备注：** 如果你有意向加入某语言的内容本地化工作，请联系下面这些小组中的成员，也可 [尝试寻求帮助](/zh-CN/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)。语言名称后的标识与 [Translated-content Repo](https://github.com/mdn/translated-content) 目录是对应的。
 
 ### 巴西葡萄牙语（pt-BR）
 
@@ -51,7 +51,7 @@ tags:
 - 讨论组：[Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
 - 目前的志愿者：[@JuanVqz](https://github.com/JuanVqz)、[@dacalderonp](https://github.com/dacalderonp)、[@lasr21](https://github.com/lasr21)、[@tuxxy](https://github.com/tuxxy)
 
-> **备注：** 如果你想解冻某个语言的内容本地化工作，请先了解[解冻所需要的准备工作](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
+> **备注：** 如果你想解冻某个语言的内容本地化工作，请先了解 [解冻所需要的准备工作](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
 
 ## 参见
 
