@@ -2,8 +2,8 @@
 title: 初识 MDN
 slug: MDN/Contribute/Getting_started
 tags:
-  - MDN元数据
-  - MDN入门
+  - MDN 元数据
+  - MDN 入门
   - 入门
   - 初学者
 translation_of: MDN/Contribute/Getting_started
@@ -36,9 +36,9 @@ MDN（Mozilla Developer Network）是一个开源的资料库，这意味着**�
 
 当你感到无从下手的时候，可以试着去寻求他人的帮助。下面列出了几种供你选择的方法：
 
-- 如果你想和我们通过在线交流的方式，讨论一些关于 MDN 网站的问题, 你可以加入[我们的聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)。多说一句，它使用 [Matrix](https://wiki.mozilla.org/Matrix) 这个很酷的协议。
+- 如果你想和我们通过在线交流的方式，讨论一些关于 MDN 网站的问题，你可以加入 [我们的聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)。多说一句，它使用 [Matrix](https://wiki.mozilla.org/Matrix) 这个很酷的协议。
 - 你也可以向 [mdn-admins@mozilla.org](mailto:mdn-admins@mozilla.org) 发邮件来和我们交流。
-- 如果你在学习 Web 的过程中遇到一些难以解决的代码问题, 你可以在这个[活跃中的论坛](https://discourse.mozilla.org/c/mdn/learn/250)提出你的问题。
+- 如果你在学习 Web 的过程中遇到一些难以解决的代码问题，你可以在这个 [活跃中的论坛](https://discourse.mozilla.org/c/mdn/learn/250) 提出你的问题。
 
 不用担心做得不够完美，其他参与其中的贡献者们将会找出那些你没注意到的错误。
 
@@ -47,6 +47,6 @@ MDN（Mozilla Developer Network）是一个开源的资料库，这意味着**�
 我们希望在你参与到 MDN 之前，有一定的预备知识。如果你对下面列出的名词还不是很熟悉，后面附了一些链接，可以帮助你提高学习效率：
 
 - **Web 技术**：如果你刚刚开始了解 HTML、CSS、JavaScript 等相关知识，你可以试着完成我们的 [Web 开发教程](/zh-CN/docs/Learn)。
-- **开源**：如果你之前从未参与过开源项目，可以读一读[开源项目的基本礼节](/zh-CN/docs/MDN/Contribute/Open_source_etiquette)。
-- **Git 和 GitHub**：如果你对这些工具不是很熟悉，这篇 [GitHub 新手入门](/zh-CN/docs/MDN/Contribute/GitHub_beginners)可以帮到你。
-- **MDN 的仓库结构**：如果你不清楚你需要在哪一个仓库编辑和提交你的内容，你可以了解一下[我们的仓库是如何分类的](/zh-CN/docs/MDN/Contribute/Where_is_everything)。
+- **开源**：如果你之前从未参与过开源项目，可以读一读 [开源项目的基本礼节](/zh-CN/docs/MDN/Contribute/Open_source_etiquette)。
+- **Git 和 GitHub**：如果你对这些工具不是很熟悉，这篇 [GitHub 新手入门](/zh-CN/docs/MDN/Contribute/GitHub_beginners) 可以帮到你。
+- **MDN 的仓库结构**：如果你不清楚你需要在哪一个仓库编辑和提交你的内容，你可以了解一下 [我们的仓库是如何分类的](/zh-CN/docs/MDN/Contribute/Where_is_everything)。
