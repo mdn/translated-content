@@ -14,7 +14,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 <pre class="brush: js line-numbers  language-js"><code class="language-js">// GET catalog home page.
 router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</code></pre>
 
-<p>在 <strong>/controllers/bookController.js</strong> 中，定义回调函数参数(<code>book_controller.index</code>) ：</p>
+<p>在 <strong>/controllers/bookController.js</strong> 中，定义回调函数参数 (<code>book_controller.index</code>) ：</p>
 
 <pre class="brush: js"><code>exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
@@ -25,10 +25,10 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 
 <h2 class="highlight-spanned" id="控制器">控制器</h2>
 
-<p>索引控制器函数需要获取以下有关信息，即数据库中有多少<code>Book</code>，<code>BookInstance</code>，可用的<code>BookInstance</code>，<code>Author</code>和<code>Genre</code>记录，将这些数据渲染到模板中，以创建HTML页面，然后将其返回到HTTP响应中。</p>
+<p>索引控制器函数需要获取以下有关信息，即数据库中有多少<code>Book</code>，<code>BookInstance</code>，可用的<code>BookInstance</code>，<code>Author</code>和<code>Genre</code>记录，将这些数据渲染到模板中，以创建 HTML 页面，然后将其返回到 HTTP 响应中。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 我们使用<code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">使用数据库</a><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">(Mongoose)</a>）中讨论的那样，并且还可以返回 <code>Query</code> ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值<code>null</code>）作为第一个参数，并将记录计数（如果存在错误，则返回null）作为第二个参数。</p>
+<p><strong>Note:</strong> 我们使用<code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">使用数据库</a><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">(Mongoose)</a>）中讨论的那样，并且还可以返回 <code>Query</code> ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值<code>null</code>）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
  // ... do something if there is an err
@@ -44,7 +44,7 @@ exports.index = function(req, res, next) {
  res.send('NOT IMPLEMENTED: Site Home Page');
 }</code></pre>
 
-<p>用以下代码片段替换上面的所有代码。这要做的第一件事，是导入(<code>require()</code>)所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块<em> async</em> 。</p>
+<p>用以下代码片段替换上面的所有代码。这要做的第一件事，是导入 (<code>require()</code>) 所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块<em> async</em> 。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">var Book = require('../models/book');
 var Author = require('../models/author');
@@ -78,10 +78,10 @@ exports.index = function(req, res) {
 
 <p><code>async.parallel()</code> 方法传递一个对象，其中包含用于获取每个模型计数的函数。这些函数都是在同一时间开始的。当这些函数全部完成时，最终回调将与结果参数中的计数（或错误）一起被调用。</p>
 
-<p>成功时，回调函数调用 <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>，指定名为 '<strong>index</strong>' 的视图（模板），以及一个对象包含了要插入其中的数据 （这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。</p>
+<p>成功时，回调函数调用 <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>，指定名为 '<strong>index</strong>' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 上面的<code>async.parallel()</code>裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。</p>
+<p><strong>注意：</strong> 上面的<code>async.parallel()</code>裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。</p>
 </div>
 
 <h2 class="highlight-spanned" id="视图">视图</h2>
@@ -113,12 +113,12 @@ block content
 <p>在动态内容标题下，我们检查从<code>render()</code>函数传入的错误变量，是否已定义。如果是这样，我们列出这个错误。如果不是，我们从<code>data</code>变量中，获取并列出每个模型的副本数量。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 我们没有转义计数值 (i.e. 我们使用 <code>!{}</code> 语法) ，因为计数值已经被计算过了。如果信息是由终端用户提供的，那么我们就会转义該变量，以用于显示。</p>
+<p><strong>注意：</strong> 我们没有转义计数值 (i.e. 我们使用 <code>!{}</code> 语法) ，因为计数值已经被计算过了。如果信息是由终端用户提供的，那么我们就会转义該变量，以用于显示。</p>
 </div>
 
-<h2 class="highlight-spanned" id="它看起来像是">它看起来像是?</h2>
+<h2 class="highlight-spanned" id="它看起来像是">它看起来像是？</h2>
 
-<p>此处，我们应该已经创建了呈现index页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。</p>
+<p>此处，我们应该已经创建了呈现 index 页面，所需要的每样东西。运行本地图书馆应用，并打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。</p>
 
 <p><img alt="Home page - Express Local Library site" src="https://mdn.mozillademos.org/files/14458/LocalLibary_Express_Home.png" style="display: block; height: 440px; margin: 0px auto; width: 1000px;"></p>
 
@@ -130,5 +130,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下個部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">书本列表页面</a></li>
+ <li>继续教程 5 下個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">书本列表页面</a></li>
 </ul>

@@ -46,14 +46,14 @@ block content
 
 <p>如同我们其它的模板，上面视图也依照着同样的模式。</p>
 
-<h2 class="highlight-spanned" id="它看起來像是">它看起來像是?</h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，并打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a> 。然后选择所有作者 All authors 连结。如果每个东西都设定正确了，页面看起来应该像底下的截图。</p>
 
 <p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
 
 <div class="note">
-<p><strong>注意:</strong> 作者生命日期的外观是丑陋的！您可以使用我们用于<code>BookInstance</code> 列表的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">相同方法</a>（将生命周期的虚拟属性，添加到 <code>Author</code> 模型），来改进此方法。</p>
+<p><strong>注意：</strong> 作者生命日期的外观是丑陋的！您可以使用我们用于<code>BookInstance</code> 列表的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">相同方法</a>（将生命周期的虚拟属性，添加到 <code>Author</code> 模型），来改进此方法。</p>
 
 <p>但是，这次缺少日期，除非严格模式生效，否则将忽略对不存在的属性的引用。<code>moment()</code>返回当前时间，并且您不希望将缺少的日期格式化为就像今天一样。</p>
 
@@ -62,7 +62,7 @@ block content
 <p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
 </div>
 
-<h2 id="种类列表页面—自我挑战!Edit">种类列表页面—自我挑战!<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex">Edit</a></h2>
+<h2 id="种类列表页面—自我挑战!Edit">种类列表页面—自我挑战！<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex">Edit</a></h2>
 
 <p>在这个部分，你应该实作你自己的种类列表页面。该页面应显示数据库中所有种类的列表，每个种类都链接到其关联的详细信息页面。预期结果的屏幕截图如下所示。</p>
 
@@ -86,4 +86,4 @@ block content
 
 <p>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></p>
 
-<p>继续教程 5 下一個部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">种类细节页面</a></p>
+<p>继续教程 5 下一個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">种类细节页面</a></p>

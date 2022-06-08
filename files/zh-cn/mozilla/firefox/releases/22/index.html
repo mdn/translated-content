@@ -6,12 +6,12 @@ tags:
   - Firefox 22
 translation_of: Mozilla/Firefox/Releases/22
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Web开发者需要注意的变化">Web开发者需要注意的变化</h2>
+<div>{{FirefoxSidebar}}</div><h2 id="Web开发者需要注意的变化">Web 开发者需要注意的变化</h2>
 
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li>实现了HTML5中的{{HTMLElement("data")}}元素({{bug(839371)}}).</li>
+ <li>实现了 HTML5 中的{{HTMLElement("data")}}元素 ({{bug(839371)}}).</li>
  <li>The HTML5 {{HTMLElement("time")}} element has been implemented ({{bug(629801)}}).</li>
  <li>The <code style="font-style: normal;">range</code> state of the {{HTMLElement("input")}} element (<code style="font-style: normal;">&lt;input type="range"&gt;</code>) has been implemented, behind the preference <code style="font-style: normal;">dom.experimental_forms_range</code>, only enabled by default on Nightly and Aurora channel ({{bug(841948)}}).</li>
  <li>The support for the {{HTMLElement("template")}} element, part of the Web component specification has been implemented ({{bug(818976)}}).</li>
@@ -21,7 +21,7 @@ translation_of: Mozilla/Firefox/Releases/22
 
 <ul>
  <li><a href="http://asmjs.org/spec/latest/">Asm.js </a>optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.</li>
- <li>实现了ES6中的<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>({{bug(846406)}}).</li>
+ <li>实现了 ES6 中的<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>({{bug(846406)}}).</li>
  <li>The new <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a> function has been added ({{bug(839979)}}).</li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).</li>
  <li>The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).</li>
@@ -30,13 +30,13 @@ translation_of: Mozilla/Firefox/Releases/22
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>不再支持<code>XMLHttpRequest中的</code><code>multipart属性和</code><code>multipart/x-mixed-replac</code>响应.这是一个Gecko独有的特性,从来没被标准化过.你可以使用<a href="/en-US/docs/Server-sent_events" title="/en-US/docs/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">Web Sockets</a>或者在progress事件中查看<code>responseText</code>属性的变化来实现同样的效果.</li>
+ <li>不再支持<code>XMLHttpRequest中的</code><code>multipart属性和</code><code>multipart/x-mixed-replac</code>响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用<a href="/en-US/docs/Server-sent_events" title="/en-US/docs/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">Web Sockets</a>或者在 progress 事件中查看<code>responseText</code>属性的变化来实现同样的效果。</li>
  <li>实现了<a href="http://notifications.spec.whatwg.org/">Web Notifications</a> ({{bug(782211)}}).</li>
  <li>{{domxref("XMLHttpRequest/FormData", "FormData")}}对象的<code>append</code>方法现在开始接受第三个参数<code>filename</code>({{bug(690659)}}).</li>
- <li>移除了{{domxref("Node.isSupported")}}方法({{bug(801562)}}).</li>
+ <li>移除了{{domxref("Node.isSupported")}}方法 ({{bug(801562)}}).</li>
  <li>{{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).</li>
  <li>The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).</li>
- <li>实现了Mac OS X中的{{domxref("DeviceLightEvent", "Ambient Light Events")}}后端.</li>
+ <li>实现了 Mac OS X 中的{{domxref("DeviceLightEvent", "Ambient Light Events")}}后端。</li>
  <li>Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface.  {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.</li>
  <li>The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ({{bug("823549")}}).</li>
  <li>The {{domxref("BlobEvent")}} interface has been implemented ({{bug("834165")}}).</li>
@@ -58,10 +58,10 @@ translation_of: Mozilla/Firefox/Releases/22
  <li>Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ({{bug("570896")}}).</li>
 </ul>
 
-<h2 id="附加组件和Mozilla开发者需要注意的变化">附加组件和Mozilla开发者需要注意的变化</h2>
+<h2 id="附加组件和Mozilla开发者需要注意的变化">附加组件和 Mozilla 开发者需要注意的变化</h2>
 
 <ul>
- <li>移除了下面这些方法中的<code>properties</code>参数: <code>nsITreeView.getCellProperties()</code>, <code>nsITreeView.getColumnProperties()</code> and <code>nsITreeView.getRowProperties()</code> methods of <code>nsITreeView</code>. These methods should now return a string of space-separated property names. ({{bug('407956')}})</li>
+ <li>移除了下面这些方法中的<code>properties</code>参数：<code>nsITreeView.getCellProperties()</code>, <code>nsITreeView.getColumnProperties()</code> and <code>nsITreeView.getRowProperties()</code> methods of <code>nsITreeView</code>. These methods should now return a string of space-separated property names. ({{bug('407956')}})</li>
  <li>The <code>inIDOMUtils.getCSSPropertyNames()</code> method has been implemented and will return all supported <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" title="/en-US/docs/CSS/CSS_Reference">CSS property</a> names.</li>
  <li>See <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">here </a>for more changes.</li>
 </ul>

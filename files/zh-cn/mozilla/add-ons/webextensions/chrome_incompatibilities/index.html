@@ -7,9 +7,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>使用WebExtension API构建的扩展旨在与Chrome和Opera扩展兼容：尽可能为这些浏览器编写的扩展应该在Firefox上运行，并且只需进行极少的更改。</p>
+<p>使用 WebExtension API 构建的扩展旨在与 Chrome 和 Opera 扩展兼容：尽可能为这些浏览器编写的扩展应该在 Firefox 上运行，并且只需进行极少的更改。</p>
 
-<p>但是，Firefox目前仅支持Chrome和Opera支持的有限功能和API。 我们正在努力增加更多的支持，但许多功能尚未得到支持，我们可能永远不会支持某些功能。</p>
+<p>但是，Firefox 目前仅支持 Chrome 和 Opera 支持的有限功能和 API。我们正在努力增加更多的支持，但许多功能尚未得到支持，我们可能永远不会支持某些功能。</p>
 
 <h2 id="JavaScript_APIs">JavaScript APIs</h2>
 
@@ -56,9 +56,9 @@ setCookie.then(logCookie, logError);
 
 <h3 id="Firefox_支持_chrome_和_browser_命名空间">Firefox 支持 <code>chrome</code> 和 <code>browser</code> 命名空间</h3>
 
-<p>为了帮助移植，Firefox 的 WebExtension 实现支持 <code>chrome</code> 与回调和 <code>browser</code> 与 promise。这意味着许多 Chrome 扩展无须修改就能在 Firefox 上运行。然而并不是 WebExtension 标准的一部分，也许不会被所有兼容 WebExtension的浏览器支持。</p>
+<p>为了帮助移植，Firefox 的 WebExtension 实现支持 <code>chrome</code> 与回调和 <code>browser</code> 与 promise。这意味着许多 Chrome 扩展无须修改就能在 Firefox 上运行。然而并不是 WebExtension 标准的一部分，也许不会被所有兼容 WebExtension 的浏览器支持。</p>
 
-<p>如果你在编写 WebExtension 时确实要用到 <code>browser</code> 和 promise，我们也开发了polyfill 来保证扩展可以在 Chrome 里运行：<a href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
+<p>如果你在编写 WebExtension 时确实要用到 <code>browser</code> 和 promise，我们也开发了 polyfill 来保证扩展可以在 Chrome 里运行：<a href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
 
 <h3 id="部分受支持的_API">部分受支持的 API</h3>
 
@@ -96,7 +96,7 @@ setCookie.then(logCookie, logError);
 <h4 id="webRequest"><a href="/en-US/Add-ons/WebExtensions/API/webRequest">webRequest</a></h4>
 
 <ul>
- <li>在Firefx中，只有原网址使用 <code>http:</code> <code>或 https:</code> 协议时所请求的重定向才有效。</li>
+ <li>在 Firefx 中，只有原网址使用 <code>http:</code> <code>或 https:</code> 协议时所请求的重定向才有效。</li>
  <li>In Firefox, events are not fired for system requests (for example, extension upgrades or searchbar suggestions). From Firefox 57 onwards, Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
  <li>In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's manifest.json file must contain a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.</li>
 </ul>

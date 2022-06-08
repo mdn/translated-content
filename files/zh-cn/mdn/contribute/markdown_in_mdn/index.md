@@ -9,9 +9,32 @@ translation_of: MDN/Contribute/Markdown_in_MDN
 
 本文介绍了如何使用 Markdown 来编写 MDN 上的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
 
-## 基础：Github风格的Markdown
+## 基础：Github 风格的 Markdown
 
 MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.github.com/gfm/>。这意味着，对于本文中未指定的内容，你可以参考 GFM 规范。而 GFM 又是 CommonMark（[https://spec.commonmark.org/](https://spec.commonmark.org/)）的超集。
+
+## 链接
+
+GFM 规范定义了两种基础的链接类型：
+
+- [内联链接](https://github.github.com/gfm/#inline-link)：在链接显示的文字后面紧跟链接的地址。
+- [引用链接](https://github.github.com/gfm/#reference-link)：链接的目标在当前文档的其它地方定义。
+
+在 MDN 上，我们仅允许使用内联链接。
+
+以下是 MDN 上正确的编写 GFM 链接的方式：
+
+```md example-good
+[Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
+```
+
+以下是 MDN 上错误的编写链接的方式：
+
+```md example-bad
+[Macarons][macaron] are delicious but tricky to make.
+
+[macaron]: https://en.wikipedia.org/wiki/Macaron
+```
 
 ## 示例代码块
 
@@ -30,6 +53,7 @@ MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.g
 在 MDN，你可以使用围栏代码块展现示例代码块。且必须使用信息字符串的第一个单词指定示例代码的语言，这将用于提供代码块的语法高亮。MDN 支持以下的语言词：
 
 - `bash`
+- `batch`
 - `cpp`（对于 C/C++）
 - `css`
 - `html`
@@ -407,7 +431,7 @@ GFM 表格语法的主要限制是：
 
 在这种情况下，最好使用 HTML。
 
-所以我们遵循以下原则：_如果表格的 Markdown 表示将超过150个字符宽度，请使用 HTML 编写_。
+所以我们遵循以下原则：_如果表格的 Markdown 表示将超过 150 个字符宽度，请使用 HTML 编写_。
 
 #### 属性表
 
@@ -467,7 +491,7 @@ GFM 表格语法的主要限制是：
 
 ## 网页摘要
 
-_网页摘要_ 是应用于文章的开头段落——出现在网页 front matter 以及任何 [侧边栏和网页横幅宏](#kumascript) 之后的第一个文本内容。
+*网页摘要*是应用于文章的开头段落——出现在页面元数据（front matter）以及任何[侧边栏和网页横幅宏](#kumascript)之后的第一个文本内容。
 
 此摘要用于搜索引擎优化（SEO），也被一些宏自动包含在网页列表旁。因此，第一段应即简洁又翔实。
 

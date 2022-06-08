@@ -28,9 +28,9 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 <div class="note">Note: 可动画的属性集将有变动，开发者应关注。</div>
 
-<p class="note">auto 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit 的，没有这么严格限制。在 <code>auto</code> 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。</p>
+<p>auto 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit 的，没有这么严格限制。在 <code>auto</code> 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。</p>
 
-<p class="note">同时应当留意这种情形，在插入元素（如 <code>.appendChild()</code>）或改变属性 <code>display: none</code> 后立即使用过渡，元素将视为没有开始状态，始终处于结束状态。简单的解决办法，改变属性前用 <code>window.setTimeout()</code> 延迟几毫秒。</p>
+<p>同时应当留意这种情形，在插入元素（如 <code>.appendChild()</code>）或改变属性 <code>display: none</code> 后立即使用过渡，元素将视为没有开始状态，始终处于结束状态。简单的解决办法，改变属性前用 <code>window.setTimeout()</code> 延迟几毫秒。</p>
 
 <h2 id="多个属性一起动画示例">多个属性一起动画示例</h2>
 
