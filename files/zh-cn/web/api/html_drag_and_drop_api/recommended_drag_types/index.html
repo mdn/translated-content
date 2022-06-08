@@ -25,7 +25,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 
 <p>如果应用和拖动目标不支持其它类型，推荐你使用 <code>text/plain</code> 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。</p>
 
-<p class="note">注：在旧代码中，可能会使用 <code>text/unicode</code> 或者 <code>Text</code> 类型， 这两个与 <code>text/plain</code> 是一样的，并且应该被替换用于存储和提取数据。</p>
+<p>注：在旧代码中，可能会使用 <code>text/unicode</code> 或者 <code>Text</code> 类型， 这两个与 <code>text/plain</code> 是一样的，并且应该被替换用于存储和提取数据。</p>
 
 <h2 id="link" name="link">拖动链接</h2>
 
@@ -38,7 +38,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>As usual, set the <code>text/plain</code> type last as it is less specific than the uri type.</p>
 
-<p class="note">Note: the URL type is <code>ur<strong>i</strong>-list</code> with an 'I', not with an 'L'.</p>
+<p>Note: the URL type is <code>ur<strong>i</strong>-list</code> with an 'I', not with an 'L'.</p>
 
 <p>To drag multiple links, you can also separate each link with a linebreak. A line that begins with a number sign (#) is a comment and should not be considered a valid URL. You can use a comment to indicate the purpose of a link, or to hold the title associated with a link. The <code>text/plain</code> version of the drag data should include all links but should not include the comments.</p>
 

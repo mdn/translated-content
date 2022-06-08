@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML&nbsp;:  dispositions avancées et accessibilité'
+title: 'Tableaux HTML : dispositions avancées et accessibilité'
 slug: Learn/HTML/Tables/Advanced
 tags:
   - Accessibilité

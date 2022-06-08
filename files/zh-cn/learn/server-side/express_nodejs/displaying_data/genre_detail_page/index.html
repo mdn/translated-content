@@ -3,7 +3,7 @@ title: 种类细节页面
 slug: learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
-<p>种类细节页面，需要利用<code>_id</code> 字段值 (自动生成) ，以呈现特定种类实例的信息。此页面应该呈现种类名称，各个种类的所有书本列表(每本书都连结到书本的细节页面)。</p>
+<p>种类细节页面，需要利用<code>_id</code> 字段值 (自动生成) ，以呈现特定种类实例的信息。此页面应该呈现种类名称，各个种类的所有书本列表 (每本书都连结到书本的细节页面)。</p>
 
 <h2 id="控制器">控制器</h2>
 
@@ -45,10 +45,10 @@ exports.genre_detail = function(req, res, next) {
 
 <p>该方法使用<code>async.parallel()</code>，并行查询类型名称及其相关联的书本，并在（如果）两个请求成功完成时，回调呈现页面。</p>
 
-<p>所需种类记录的 ID ，在 URL 的末尾编码，并根据路由定义（<strong>/genre/:id</strong>）自动提取。通过请求参数（<code style="font-style: normal; font-weight: normal;">req.params.id</code><code style="font-style: normal; font-weight: normal;">）</code>在控制器内访问 ID。它在<code style="font-style: normal; font-weight: normal;">Genre.findById()</code>中用于获取当前种类。它还用于获取符合当前种类的所有<code>Book</code>对象，就是在种类字段中具有种类ID的那些 <code>Book.find({ 'genre': req.params.id })</code>。</p>
+<p>所需种类记录的 ID，在 URL 的末尾编码，并根据路由定义（<strong>/genre/:id</strong>）自动提取。通过请求参数（<code style="font-style: normal; font-weight: normal;">req.params.id</code><code style="font-style: normal; font-weight: normal;">）</code>在控制器内访问 ID。它在<code style="font-style: normal; font-weight: normal;">Genre.findById()</code>中用于获取当前种类。它还用于获取符合当前种类的所有<code>Book</code>对象，就是在种类字段中具有种类 ID 的那些 <code>Book.find({ 'genre': req.params.id })</code>。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 如果数据库中不存在该类型（即它可能已被删除），则<code>findById()</code>将成功返回，但没有结果。在这种情况下，我们想要显示一个“未找到”页面，因此我们创建一个<code>Error</code>对象，并将其传递给链中的下一个中间件函数<code>next</code>。</p>
+<p><strong>注意：</strong> 如果数据库中不存在该类型（即它可能已被删除），则<code>findById()</code>将成功返回，但没有结果。在这种情况下，我们想要显示一个“未找到”页面，因此我们创建一个<code>Error</code>对象，并将其传递给链中的下一个中间件函数<code>next</code>。</p>
 
 <pre class="brush: js"><strong>if (results.genre==null) { // No results.
     var err = new Error('Genre not found');
@@ -88,7 +88,7 @@ block content
 
 <p>这个视图跟我们其它的模板非常相似。主要的差别在于，我们不使用 <code>title</code> 传送第一个标题 (虽然它还是用在底层的 <strong>layout.pug</strong> 模板，设定页面的标题)。</p>
 
-<h2 id="它看起來像是">它看起來像是?</h2>
+<h2 id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，并打开浏览器访问 <a href="http://localhost:3000/">http://localhost:3000/</a>。选择 All genres 连结，然后选择其中一个种类 (例如，"Fantasy")。如果每样东西都设定正确了，你的页面看起来应该像底下的截图。</p>
 
@@ -100,7 +100,7 @@ block content
 <pre class="brush: bash">Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 </pre>
 
-<p>这是来自 <strong>req.params.id</strong> 的 mongoose 错误。要解决这个问题，首先需要在<strong> genreController.js</strong> 页面上要求mongoose，如下所示：</p>
+<p>这是来自 <strong>req.params.id</strong> 的 mongoose 错误。要解决这个问题，首先需要在<strong> genreController.js</strong> 页面上要求 mongoose，如下所示：</p>
 
 <pre class="brush: js"> var mongoose = require('mongoose');
 </pre>
@@ -116,5 +116,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page">书本细节页面</a></li>
+ <li>继续教程 5 下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page">书本细节页面</a></li>
 </ul>
