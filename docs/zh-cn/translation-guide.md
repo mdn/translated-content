@@ -38,7 +38,7 @@
 If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/en-US/docs/Learn) tutorials.
 ```
 
-在翻译时，应该将 URI 开头的 `/en-US` 替换为 `/zh-CN`：
+在翻译时，应该将 URL 路径开头的 `/en-US` 替换为 `/zh-CN`：
 
 ```md
 如果你刚刚开始了解 HTML、CSS、JavaScript 等相关知识，你可以试着完成我们的 [Web 开发教程](/zh-CN/docs/Learn)。
