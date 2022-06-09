@@ -28,20 +28,20 @@ new WritableStream(underlyingSink, queuingStrategy)
   - : 一个包含方法和属性的对象，这些方法和属性定义了构造的流的实例的具体行为。`underlyingSource` 包括：
 
     - `start(controller)` {{optional_inline}}
-      - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。传递给这个方法的 `controller` 是一个 {{domxref("WritableStreamDefaultController")}}。开发人员可以使用此方法在设置期间控制流。
+      - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，以表明异步操作成功或失败。传递给这个方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}。开发人员可以在设置时使用它来控制流。
     - `write(chunk, controller)` {{optional_inline}}
-      - : 当一个新的数据块(由 `chunk` 参数中指定)准备好写入底层 sink 时，将调用此方法，该方法也是由开发人员定义。它可以返回一个 promise 来表示写入操作的成功或者失败。传递给这个方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}，当提交了更多的块进行写入时，开发人员可以使用它来控制流。只有在先前已经写入成功后才会调用该方法，并且永远不会在流关闭或者中止后调用（见下文）。
+      - : 当一个新的数据块（指定为 `chunk` 参数传入）准备好写入底层 sink 时，将调用此方法，该方法也由开发人员定义。它可以返回一个 promise 来表示写入操作的成功或者失败。传递给这个方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}，当提交了更多的块进行写入时，开发人员可以使用它来控制流。这个方法仅在上一次写入成功后才会被再次调用，并且永远不会在流关闭或者中止后被调用（见下文）。
     - `close(controller)` {{optional_inline}}
-      - : 如果应用程序发出已完成将块写入流的信号，将调用此方法，该方法也是由开发人员定义。其内容应该完成写入底层 sink，并且释放对它的访问。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。这个方法只有在所有数据排入成功后才会被调用。传递给这个方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}，可用于写入结束时控制流。
+      - : 如果应用程序发出已经完成了所有分块的写入的信号，将调用此方法，该方法也是由开发人员定义。其应该完成向底层 sink 的数据写入，然后释放对它的访问。如果这个过程是异步完成的，它可以返回一个 promise，以表明操作成功或失败。这个方法只有在所有等待的写入操作都成功后才会被调用。传递给这个方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}，可用于写入结束时控制流。
     - `abort(reason)` {{optional_inline}}
-      - : 如果应用程序发出希望立即关闭流并且将其移至错误状态的信号，将调用此方法，该方法也是由开发人员定义。它可以清理任何被占用的资源，就像 `close()` 一样，但是即使写入的数据正在排入，`abort()` 也将被调用——那些块将被丢弃。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。`reason` 参数包含一个字符串，用于指定流被中止的原因。
+      - : 如果应用程序发出希望立即关闭流并且将其移至错误状态的信号，将调用此方法，该方法也是由开发人员定义。它可以清理任何被占用的资源，就像 `close()` 一样，但是即使存在等待的写入操作，`abort()` 也将被调用——那些分块将被丢弃。如果这个过程是异步完成的，它可以返回一个 promise，以表明操作成功或失败。`reason` 参数包含一个字符串，用于指定流被中止的原因。
 
 - `queuingStrategy` {{optional_inline}}
-  - : 一个可选择定义流的排队策略的对象。这需要两个参数：
+  - : 一个可选的定义流的队列策略的对象。这需要两个参数：
     - `highWaterMark`
-      - : 非负整数 - 这定义了在应用背压之前可以包含在内部队列中的块的总数。
+      - : 非负整数——这定义了在应用背压之前可以包含在内部队列中的分块的总数。
     - `size(chunk)`
-      - : 包含参数 chunk 的方法 - 这表示每个块使用的大小（以字节为单位）。
+      - : 包含参数 chunk 的方法——这表示每个分块所需要使用的字节数。
 
     > **备注：** 你可以定义一个自己的 `queuingStrategy`，或者为这个对象值使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例。如果没有提供 `queuingStrategy`，则使用的默认值与 `CountQueuingStrategy` 相同，其 highWaterMark 为 1。
 
