@@ -1,39 +1,47 @@
 ---
 title: HTMLAnchorElement.referrerPolicy
 slug: Web/API/HTMLAnchorElement/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTMLAnchorElement
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - Referrer Policy
+browser-compat: api.HTMLAnchorElement.referrerPolicy
 translation_of: Web/API/HTMLAnchorElement/referrerPolicy
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><code><strong>HTMLAnchorElement</strong></code><strong><code>.referrerPolicy</code></strong> プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("a")}} 要素の HTML {{htmlattrxref("referrerpolicy","a")}} 属性を反映します。</span></p>
+**`HTMLAnchorElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("a")}} 要素の HTML {{htmlattrxref("referrerpolicy","a")}} 属性を反映します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><var>refStr</var> = <var>anchorElt</var>.referrerPolicy;
-<var>anchorElt</var>.referrerPolicy = <var>refStr</var>;</pre>
+文字列で、以下のうちの一つです。
 
-<h3 id="Values" name="Values">値</h3>
+- `no-referrer`
+  - : {{HTTPHeader("Referer")}} ヘッダーは完全に省略されます。リクエストと共に送信されるリファラー情報はありません。
+- `no-referrer-when-downgrade`
+  - : プロトコルのセキュリティレベルが変わらない場合（例: HTTP→HTTP、HTTPS→HTTPS）にはリファラーとして URL を送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しません。
+- `origin`
+  - : どのような場合でも、この文書のオリジンだけをリファラーとして送信します。
+    文書 `https://example.com/page.html` はリファラーとして `https://example.com/` を送ります。
+- `origin-when-cross-origin`
+  - : 同一オリジンリクエストを行う場合は完全な URL を送信し、それ以外の場合は文書のオリジンのみを送信します。
+- `same-origin`
+  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
+- `strict-origin`
+  - : プロトコルのセキュリティレベルが変わらない場合（例: HTTPS→HTTPS）だけ、文書のオリジンをリファラーとして送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しないようにします。
+- `strict-origin-when-cross-origin` (default)
+  - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
+- `unsafe-url`
+  - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します。
+    この設定の影響を慎重に検討してください。
 
-<dl>
- <dd>
- <ul>
-  <li><code>"no-referrer"</code> は、<code>Referer:</code> HTTP ヘッダーが送信されないことを意味します。</li>
-  <li><code>"origin"</code> は、リファラーがページのオリジンであることを意味します。 これはおおよそスキーム、ホスト、ポートです。</li>
-  <li><code>"unsafe-url"</code> は、リファラーにオリジンとパスが含まれることを意味します（ただし、フラグメント、パスワード、またはユーザー名は含まれません）。 このケースは、TLS を使用していてもサードパーティに隠されたパス情報を漏らす可能性があるため、安全ではありません。</li>
- </ul>
- </dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<pre class="brush: js">var elt = document.createElement("a");
+```js
+var elt = document.createElement("a");
 var linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
 elt.href = "https://developer.mozilla.org/en-US/";
@@ -41,35 +49,18 @@ elt.referrerPolicy = "no-referrer";
 
 var div = document.getElementById("divAround");
 div.appendChild(elt); // クリックしても、リンクはリファラーのヘッダーを送信しません。
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerPolicy attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td><code>referrerPolicy</code> プロパティが追加されました。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLAnchorElement.referrerPolicy")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLImageElement.referrerPolicy")}}、{{domxref("HTMLAreaElement.referrerPolicy")}}、{{domxref("HTMLIFrameElement.referrerPolicy")}}。</li>
-</ul>
+- {{domxref("HTMLImageElement.referrerPolicy")}},
+  {{domxref("HTMLAreaElement.referrerPolicy")}},
+  {{domxref("HTMLIFrameElement.referrerPolicy")}}

@@ -1,66 +1,48 @@
 ---
-title: HTMLHyperlinkElementUtils.host
+title: HTMLAnchorElement.host
 slug: Web/API/HTMLAnchorElement/host
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/host
+  - HTMLAnchorElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.host
+translation_of: Web/API/HTMLAnchorElement/host
 original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.host</code></strong>プロパティは、ホストを含む {{domxref("USVString")}} です。 ホストは、<em>ホスト名</em>の後に、URL の<em>ポート</em>が空でない場合、<code>':'</code>、および URL の<em>ポート</em>が続きます。</span></p>
+**`HTMLAnchorElement.host`** プロパティは、ホストを含む文字列です。すなわち、*ホスト名*の後に、 URL の*ポート*が空でない場合は、`':'`、および URL の*ポート*が続きます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.host;
-<em>object.<code>host</code></em> = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">var anchor = document.createElement("a");
+```js
+const anchor = document.createElement("a");
 
-anchor.href = "https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.host"
+anchor.href = "https://developer.mozilla.org/en-US/HTMLAnchorElement"
 anchor.host == "developer.mozilla.org"
 
-anchor.href = "https://developer.mozilla.org:443/en-US/HTMLHyperlinkElementUtils.host"
+anchor.href = "https://developer.mozilla.org:443/en-US/HTMLAnchorElement"
 anchor.host == "developer.mozilla.org"
-// 443 がスキームのデフォルトポートであるため、ポート番号は含まれません
+// The port number is not included because 443 is the scheme's default port
 
-anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLHyperlinkElementUtils.host"
+anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLAnchorElement"
 anchor.host == "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-host', 'HTMLHyperlinkElementUtils.host')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.host")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

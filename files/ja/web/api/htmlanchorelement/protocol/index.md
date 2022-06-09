@@ -1,57 +1,41 @@
 ---
-title: HTMLHyperlinkElementUtils.protocol
+title: HTMLAnchorElement.protocol
 slug: Web/API/HTMLAnchorElement/protocol
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/protocol
+  - HTMLAnchorElement
+  - プロパティ
+browser-compat: api.HTMLAnchorElement.protocol
+translation_of: Web/API/HTMLAnchorElement/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p><span class="seoSummary"><code><strong>HTMLHyperlinkElementUtils</strong></code><strong><code>.protocol</code></strong> プロパティは、最後の <code>':'</code> を含む URL のプロトコルスキームを表す {{domxref("USVString")}} です。</span></p>
+**`HTMLAnchorElement.protocol`** プロパティは、 URL のプロトコルスキームを表す文字列で、最後の `':'` を含みます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.protocol;
-<em>object</em>.protocol = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.protocol"&gt; 要素がドキュメントにあるとします
-var anchor = document.getElementById("myAnchor");
-var result = anchor.protocol; // 戻り値: 'https:'
-</pre>
+### アンカーリンクのプロトコルを取得
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+```js
+// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします。
+const anchor = document.getElementById("myAnchor");
+anchor.protocol; // 'https:' を返す
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-protocol', 'HTMLHyperlinkElementUtils.protocol')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.protocol")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

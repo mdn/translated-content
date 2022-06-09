@@ -1,65 +1,47 @@
 ---
-title: HTMLHyperlinkElementUtils.origin
+title: HTMLAnchorElement.origin
 slug: Web/API/HTMLAnchorElement/origin
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Read-only
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/origin
+  - HTMLAnchorElement
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.origin
+translation_of: Web/API/HTMLAnchorElement/origin
 original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.origin</code></strong> 読み取り専用プロパティは、表現された URL のオリジンの Unicode シリアル化を含む {{domxref("USVString")}} です。</span> それは、</p>
+**`HTMLAnchorElement.origin`** は読み取り専用プロパティで、表現している URL のオリジンを Unicode シリアル化した文字列です。
 
-<ul>
- <li><code>http</code> または <code>https</code> を使用する URL の場合、スキームの後に <code>'://'</code>、ドメイン、<code>':'</code>、ポートの順になります。 （ポート部分は、明示的に指定されていて、それがデフォルトポートでない場合に存在します。 それぞれのデフォルトポートは、<code>80</code> と <code>443</code> です。）</li>
- <li><code>file:</code> スキームを使用する URL の場合、値はブラウザーに依存します。</li>
- <li><code>blob:</code> スキームを使用する URL の場合、<code>blob:</code> に続く URL のオリジンです。 例えば、<code>"blob:https://mozilla.org"</code> では <code>"https://mozilla.org"</code> です。</li>
-</ul>
+すなわち、
 
-<p>{{AvailableInWorkers}}</p>
+- `http` または `https` を使用する URL の場合、スキームの後に `'://'`、ドメイン、`':'`、ポートの順になります。（ポート部分は、明示的に指定されていて、それが既定のポートでない場合に存在します。それぞれの既定のポートは、`80` と `443` です。）
+- `file:` スキームを使用する URL の場合、値はブラウザーに依存します。
+- `blob:` スキームを使用する URL の場合、`blob:` に続く URL のオリジンです。 例えば、`"blob:https://mozilla.org"` では `"https://mozilla.org"` です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.origin;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// このページのオリジンを返します
-var result = window.location.origin; // 戻り値: 'https://developer.mozilla.org'
-</pre>
+```js
+// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします
+const anchor = document.getElementById("myAnchor");
+anchor.origin; // 'https://developer.mozilla.org' を返す
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-origin', 'HTMLHyperlinkElementUtils.origin')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.origin")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

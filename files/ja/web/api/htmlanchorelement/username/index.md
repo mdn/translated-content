@@ -1,58 +1,42 @@
 ---
-title: HTMLHyperlinkElementUtils.username
+title: HTMLAnchorElement.username
 slug: Web/API/HTMLAnchorElement/username
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/username
+  - HTMLAnchorElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.username
+translation_of: Web/API/HTMLAnchorElement/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.username</code></strong> プロパティは、ドメイン名の前に指定されたユーザー名を含む {{domxref("USVString")}} です。</span></p>
+**`HTMLAnchorElement.username`** プロパティは、ドメイン名の前で指定されたユーザー名の入った文字列です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.username;
-<em>object</em>.username = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"&gt; 要素がドキュメントにあるとします
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.username; // 戻り値: 'anonymous'
-</pre>
+### アンカーリンクからユーザー名を取得
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+```js
+// <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+const anchor = document.getElementByID("myAnchor");
+anchor.username; // 'anonymous' を返す
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-username', 'HTMLHyperlinkElementUtils.username')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.username")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

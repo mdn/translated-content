@@ -1,64 +1,53 @@
 ---
-title: HTMLHyperlinkElementUtils.search
+title: HTMLAnchorElement.search
 slug: Web/API/HTMLAnchorElement/search
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/search
+  - HTMLAnchorElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.search
+translation_of: Web/API/HTMLAnchorElement/search
 original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.search</code></strong> プロパティは、<em>クエリー文字列</em>とも呼ばれる検索文字列、つまり <code>'?'</code> とその後に続く URL のパラメーターを含む {{domxref("USVString")}} です。</span></p>
+**`HTMLAnchorElement.search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL の引数の入った文字列です。
 
-<p>最新のブラウザーでは、<code><a href="/ja/docs/Web/API/URLSearchParams/get#Examples">URLSearchParams</a></code> と <code><a href="/ja/docs/Web/API/URL/searchParams#Examples">URL.searchParams</a></code> を提供して、クエリー文字列からパラメーターを簡単に解析できるようにしています。</p>
+最新のブラウザーでは、[`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) と [`URL.searchParams`](/ja/docs/Web/API/URL/searchParams#examples) を提供して、クエリー文字列から引数を簡単に解析できるようにしています。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.search;
-<em>object</em>.search = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">//  &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123"&gt; 要素がドキュメントにあるとします
-var anchor = document.getElementById("myAnchor");
-var queryString = anchor.search; // 戻り値: '?q=123'
+### アンカーリンクから検索文字列を取得
 
-// Further parsing:
+```js
+// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
+const anchor = document.getElementById("myAnchor");
+anchor.search; // '?q=123' を返す
+```
+
+### URLSearchParams を使用した高度な解釈
+
+他にも、 [`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) が使われる場面があります。
+
+```js
 let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q") // 数値の 123 です
-</pre>
+let q = parseInt(params.get("q")); // 数値 123 を返す
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-search', 'HTMLHyperlinkElementUtils.search')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.search")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

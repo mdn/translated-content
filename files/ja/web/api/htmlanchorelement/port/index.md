@@ -1,58 +1,42 @@
 ---
-title: HTMLHyperlinkElementUtils.port
+title: HTMLAnchorElement.port
 slug: Web/API/HTMLAnchorElement/port
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/port
+  - HTMLAnchorElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.port
+translation_of: Web/API/HTMLAnchorElement/port
 original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.port</code></strong> プロパティは、URL のポート番号を含む {{domxref("USVString")}} です。 URL に明示的なポート番号が含まれていない場合は、<code>''</code> に設定されます。</span></p>
+**`HTMLAnchorElement.port`** プロパティは、URL のポート番号が入った文字列です。 URL に明示的にポート番号が含まれていない場合は、`''` に設定されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.port;
-<em>object</em>.port = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// &lt;a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLHyperlinkElementUtils.port"&gt; 要素がドキュメントにあるとします
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.port; // 戻り値: '443'
-</pre>
+### アンカーリンクからポート番号を取得
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+```js
+// <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします。
+const anchor = document.getElementByID("myAnchor");
+anchor.port; // '443' を返す
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-port', 'HTMLHyperlinkElementUtils.port')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.port")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

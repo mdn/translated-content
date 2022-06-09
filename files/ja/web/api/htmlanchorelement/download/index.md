@@ -1,52 +1,31 @@
 ---
 title: HTMLAnchorElement.download
 slug: Web/API/HTMLAnchorElement/download
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - HTMLAnchorElement
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - download
+browser-compat: api.HTMLAnchorElement.download
 translation_of: Web/API/HTMLAnchorElement/download
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><code><strong>HTMLAnchorElement.download</strong></code> プロパティは、リンク先リソースをブラウザーに表示するのではなくダウンロードすることを意図していることを示す {{domxref("DOMString")}} です。 値がある場合は、ローカルファイルシステムのリソースのラベル付けに使用するデフォルトのファイル名を指定します。 基になる OS で名前が有効なファイル名でない場合、ブラウザーはそれを調整します。</span></p>
+**`HTMLAnchorElement.download`** プロパティは、文字列で、リンク先リソースをブラウザーに表示するのではなくダウンロードすることを意図していることを示します。値がある場合は、ローカルファイルシステムのリソースのラベル付けに使用する既定のファイル名を指定します。 基になる OS で名前が有効なファイル名でない場合、ブラウザーはそれを調整します。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この値はダウンロードに使われないかもしれません。 この値により、ダウンロードが行われるかどうかを判別することはできません。</p>
-</div>
+> **Note:** この値はダウンロードに使われないかもしれません。 この値により、ダウンロードが行われるかどうかを判別することはできません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox">var <em>dnload</em> = <em>anchorElt</em>.download;
-<em>anchorElt</em>.download = <em>dnload</em>;
-</pre>
+文字列です。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'links.html#attr-hyperlink-download', 'download')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.HTMLAnchorElement.download")}}</p>
-</div>
+{{Compat}}

@@ -1,57 +1,40 @@
 ---
-title: HTMLHyperlinkElementUtils.hostname
+title: HTMLAnchorElement.hostname
 slug: Web/API/HTMLAnchorElement/hostname
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/hostname
+  - HTMLAnchorElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.hostname
+translation_of: Web/API/HTMLAnchorElement/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.hostname</code></strong> プロパティは、URL のドメインを含む {{domxref("USVString")}} です。</span></p>
+**`HTMLAnchorElement.hostname`** プロパティは、URL のドメインを含む文字列です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.hostname;
-<em>object.</em>hostname = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.hostname"&gt; 要素がドキュメントにあるとします
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.hostname; // 戻り値: 'developer.mozilla.org'</pre>
+```js
+// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書内にあるとします
+const anchor = document.getElementById("myAnchor");
+anchor.hostname; // 'developer.mozilla.org' を返す
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-hostname', 'HTMLHyperlinkElementUtils.hostname')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.hostname")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

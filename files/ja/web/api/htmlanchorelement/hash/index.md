@@ -1,61 +1,51 @@
 ---
-title: HTMLHyperlinkElementUtils.hash
+title: HTMLAnchorElement.hash
 slug: Web/API/HTMLAnchorElement/hash
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/hash
+  - HTMLAnchorElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLAnchorElement.hash
+translation_of: Web/API/HTMLAnchorElement/hash
 original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 ---
-<div>{{ APIRef("URLUtils") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.hash</code></strong> プロパティは、<code>'#'</code> の後に URL のフラグメント識別子が続く {{domxref("USVString")}} を返します。</span></p>
+**`HTMLAnchorElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
 
-<p>フラグメントは<a href="/ja/docs/Glossary/percent-encoding">パーセントデコード</a>されていません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 <code>""</code> が含まれます。</p>
+フラグメントは[パーセントデコード](/ja/docs/Glossary/percent-encoding)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.hash;
-<em>object</em>.hash = <em>string</em>;
-</pre>
+文字列です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html">&lt;a id="myAnchor" href="/en-US/docs/HTMLHyperlinkElementUtils.href#Examples"&gt;Examples&lt;/a&gt;
-&lt;script&gt;
-  var anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // 戻り値は '#Examples'
-&lt;/script&gt;</pre>
+### アンカーリンクからハッシュを取得
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+この HTML があったとします。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-hash', 'HTMLHyperlinkElementUtils.hash')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+```html
+<a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples">Examples</a>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+このようにすると、アンカーのハッシュを取得することができます。
 
+```js
+const anchor = document.getElementById("myAnchor");
+anchor.hash; // returns '#Examples'
+```
 
+## 仕様書
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.hash")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス

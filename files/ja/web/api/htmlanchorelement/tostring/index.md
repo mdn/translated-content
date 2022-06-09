@@ -1,40 +1,52 @@
 ---
-title: HTMLHyperlinkElementUtils.toString()
+title: HTMLAnchorElement.toString()
 slug: Web/API/HTMLAnchorElement/toString
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Location
+  - HTMLAnchorElement
   - Method
   - Stringifier
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/toString
+browser-compat: api.HTMLAnchorElement.toString
+translation_of: Web/API/HTMLAnchorElement/toString
 original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><span class="seoSummary"><strong><code>HTMLHyperlinkElementUtils.toString()</code></strong> 文字列化メソッドは、URL 全体を含む {{domxref("USVString")}} を返します。 これは、{{domxref("HTMLHyperlinkElementUtils.href")}} の読み取り専用バージョンです。</span></p>
+**`HTMLAnchorElement.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、 URL 全体の入った文字列を返します。 これは、 {{domxref("HTMLAnchorElement.href")}} の読み取り専用バージョンです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.toString();</pre>
+```js
+toString()
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+### 引数
 
-<pre class="brush: js">// &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString"&gt; 要素がドキュメントにあるとします
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // 戻り値: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
-</pre>
+なし。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+### 返値
 
+なし ({{jsxref("undefined")}})。
 
+## 例
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.toString")}}</p>
+### アンカー要素で toString を呼び出す
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```js
+// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+const anchor = document.getElementById("myAnchor");
+anchor.toString(); // 'https://developer.mozilla.org/en-US/docs/HTMLAnchorElement' を返す
+```
 
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}} ミックスインに属します。</li>
-</ul>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 所属先の {{domxref("HTMLAnchorElement")}} インターフェイス
