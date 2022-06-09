@@ -10,146 +10,230 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.create()</code></strong> 方法创建一个新对象，使用现有的对象来提供新创建的对象的 __proto__。（请打开浏览器控制台以查看运行结果。）</p>
+**`Object.create()`** 方法用于创建一个新对象，使用现有的对象来作为新创建对象的原型（prototype）。
 
-<div>{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
+```js
+Object.create(proto)
+Object.create(proto, propertiesObject)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>proto</code></dt>
- <dd>新创建对象的原型对象。</dd>
- <dt><code>propertiesObject</code></dt>
- <dd>可选。需要传入一个对象，该对象的属性类型参照{{jsxref("Object.defineProperties()")}}的第二个参数。如果该参数被指定且不为 {{jsxref("undefined")}}，该传入对象的自有可枚举属性 (即其自身定义的属性，而不是其原型链上的枚举属性) 将为新创建的对象添加指定的属性值和对应的属性描述符。</dd>
-</dl>
+- `proto`
+  - : 新创建对象的原型对象。
+- `propertiesObject` {{Optional_inline}}
+  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象的自有可枚举属性（即其自身定义的属性，而不是其原型链上的枚举属性）将为新创建的对象添加指定的属性值和对应的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
 
-<h3 id="Parameters">返回值</h3>
+### 返回值
 
-<p>一个新对象，带着指定的原型对象和属性。</p>
+一个新对象，带着指定的原型对象及其属性。
 
-<h3 id="Description">例外</h3>
+### 异常
 
-<p>如果<code>proto</code>参数不是 {{jsxref("null")}} 或非原始包装对象，则抛出一个 {{jsxref("TypeError")}} 异常。</p>
+`proto` 参数需为
 
-<h2 id="Examples">例子</h2>
+- {{jsxref("null")}} 或
+- 除[基本类型包装对象](/zh-CN/docs/Glossary/Primitive#javascript_中的基本类型包装对象)以外的{{jsxref("Object", "对象")}}
 
-<h3 id="用_object.create_实现类式继承">用 <code>Object.create</code> 实现类式继承</h3>
+如果 `proto` 不是这几类值，则抛出一个 {{jsxref("TypeError")}} 异常。
 
-<p>下面的例子演示了如何使用 <code>Object.create()</code> 来实现类式继承。这是一个所有版本 JavaScript 都支持的单继承。</p>
+## 使用 `null` 原型的对象
 
-<pre class="brush: js">// Shape - 父类 (superclass)
+以 `null` 为原型的对象存在不可预期的行为，因为它未从 `Object.prototype` 继承任何对象方法。特别是在调试时，因为常见的对象属性的转换/检测工具可能会产生错误或丢失信息（特别是在静默模式，会忽略错误的情况下）。
+
+例如，缺少 [`Object.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法通常会使调试变得非常困难：
+
+```js
+const normalObj = {};   // create a normal object
+const nullProtoObj = Object.create(null); // create an object with "null" prototype
+
+console.log("normalObj is: " + normalObj); // shows "normalObj is: [object Object]"
+console.log("nullProtoObj is: " + nullProtoObj); // throws error: Cannot convert object to primitive value
+
+alert(normalObj); // shows [object Object]
+alert(nullProtoObj); // throws error: Cannot convert object to primitive value
+```
+
+其它方法也同样会失败。
+
+```js
+normalObj.valueOf() // shows {}
+nullProtoObj.valueOf() // throws error: nullProtoObj.valueOf is not a function
+
+normalObj.hasOwnProperty("p") // shows "true"
+nullProtoObj.hasOwnProperty("p") // throws error: nullProtoObj.hasOwnProperty is not a function
+
+normalObj.constructor // shows "Object() { [native code] }"
+nullProtoObj.constructor // shows "undefined"
+```
+
+我们可以为以 null 为原型的对象添加 `toString` 方法，类似于这样：
+
+```js
+nullProtoObj.toString = Object.prototype.toString; // since new object lacks toString, add the original generic one back
+
+console.log(nullProtoObj.toString()); // shows "[object Object]"
+console.log("nullProtoObj is: " + nullProtoObj); // shows "nullProtoObj is: [object Object]"
+```
+
+与常规的对象不同，`nullProtoObj` 的 `toString` 方法是这个对象自身的属性，而非继承自对象的原型。这是因为 `nullProtoObj` “没有”原型（`null`）。
+
+在实践中，以 `null` 为原型的对象通常用于作为 [map](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 的替代。因为 `Object.prototype` 原型自有的属性的存在会导致一些错误：
+
+```js
+const ages = { alice: 18, bob: 27 };
+
+function hasPerson(name) {
+  return name in ages;
+}
+
+function getAge(name) {
+  return ages[name];
+}
+
+hasPerson("hasOwnProperty") // true
+getAge("toString") // [Function: toString]
+```
+
+使用以 null 为原型的对象消除了这种潜在的问题，且不会给 `hasPerson` 和 `getAge` 函数引入太多复杂的逻辑：
+
+```js
+const ages = Object.create(null, {
+  alice: { value: 18, enumerable: true },
+  bob: { value: 27, enumerable: true },
+});
+
+hasPerson("hasOwnProperty") // false
+getAge("toString") // undefined
+```
+
+在这种情况下，应谨慎添加任何方法，因为它们可能会与存储的键值对混淆。
+
+令你使用的对象不继承 `Object.prototype` 原型的方法也可以防止原型污染攻击。如果恶意脚本向 `Object.prototype` 添加了一个属性，这个属性将能够被程序中的每一个对象所访问，而以 null 为原型的对象则不受影响。
+
+```js
+const user = {};
+
+// A malicious script:
+Object.prototype.authenticated = true;
+
+// Unexpectedly allowing unauthenticated user to pass through
+if (user.authenticated) {
+  // access confidential data...
+}
+```
+
+## 示例
+
+### 用 `Object.create()` 实现类式继承
+
+下面的例子演示了如何使用 `Object.create()` 来实现类式继承。这是一个所有版本 JavaScript 都支持的单继承。
+
+```js
+// Shape - superclass
 function Shape() {
   this.x = 0;
   this.y = 0;
 }
 
-// 父类的方法
+// superclass method
 Shape.prototype.move = function(x, y) {
   this.x += x;
   this.y += y;
   console.info('Shape moved.');
 };
 
-// Rectangle - 子类 (subclass)
+// Rectangle - subclass
 function Rectangle() {
   Shape.call(this); // call super constructor.
 }
 
-// 子类续承父类
+// subclass extends superclass
 Rectangle.prototype = Object.create(Shape.prototype);
+
+//If you don't set Rectangle.prototype.constructor to Rectangle,
+//it will take the prototype.constructor of Shape (parent).
+//To avoid that, we set the prototype.constructor to Rectangle (child).
 Rectangle.prototype.constructor = Rectangle;
 
-var rect = new Rectangle();
+const rect = new Rectangle();
 
-console.log('Is rect an instance of Rectangle?',
-  rect instanceof Rectangle); // true
-console.log('Is rect an instance of Shape?',
-  rect instanceof Shape); // true
-rect.move(1, 1); // Outputs, 'Shape moved.'</pre>
+console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
+console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
+rect.move(1, 1); // Outputs, 'Shape moved.'
+```
 
-<p>如果你希望能继承到多个对象，则可以使用混入的方式。</p>
+### 使用 `Object.create()` 的 `propertyObject` 参数
 
-<pre class="brush: js">function MyClass() {
-     SuperClass.call(this);
-     OtherSuperClass.call(this);
-}
+```js
+let o;
 
-// 继承一个类
-MyClass.prototype = Object.create(SuperClass.prototype);
-// 混合其它
-Object.assign(MyClass.prototype, OtherSuperClass.prototype);
-// 重新指定 constructor
-MyClass.prototype.constructor = MyClass;
-
-MyClass.prototype.myMethod = function() {
-     // do a thing
-};
-</pre>
-
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a> 会把  <code>OtherSuperClass</code>原型上的函数拷贝到 <code>MyClass</code>原型上，使 MyClass 的所有实例都可用 OtherSuperClass 的方法。Object.assign 是在 ES2015 引入的，且可用<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill"> polyfilled</a>。要支持旧浏览器的话，可用使用 <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a> 或者 <a href="https://lodash.com/docs/#assign">_.assign()</a>。</p>
-
-<h3 id="使用_object.create_的_propertyObject_参数">使用 <code>Object.create</code> 的 <code>propertyObject</code> 参数</h3>
-
-<pre class="brush: js">var o;
-
-// 创建一个原型为 null 的空对象
+// create an object with null as prototype
 o = Object.create(null);
 
-
 o = {};
-// 以字面量方式创建的空对象就相当于：
+// is equivalent to:
 o = Object.create(Object.prototype);
 
-
+// Example where we create an object with a couple of
+// sample properties. (Note that the second parameter
+// maps keys to *property descriptors*.)
 o = Object.create(Object.prototype, {
-  // foo 会成为所创建对象的数据属性
+  // foo is a regular 'value property'
   foo: {
-    writable:true,
-    configurable:true,
-    value: "hello"
-  },
-  // bar 会成为所创建对象的访问器属性
+    writable: true,
+    configurable: true,
+    value: 'hello'
+  },
+  // bar is a getter-and-setter (accessor) property
   bar: {
     configurable: false,
-    get: function() { return 10 },
+    get: function() { return 10; },
     set: function(value) {
-      console.log("Setting `o.bar` to", value);
-    }
+      console.log('Setting `o.bar` to', value);
+    }
+/* with ES2015 Accessors our code can look like this
+    get() { return 10; },
+    set(value) {
+      console.log('Setting `o.bar` to', value);
+    } */
   }
 });
 
-
-function Constructor(){}
+function Constructor() {}
 o = new Constructor();
-// 上面的一句就相当于：
+// is equivalent to:
 o = Object.create(Constructor.prototype);
-// 当然，如果在 Constructor 函数中有一些初始化代码，Object.create 不能执行那些代码
+// Of course, if there is actual initialization code
+// in the Constructor function,
+// the Object.create() cannot reflect it
 
+// Create a new object whose prototype is a new, empty
+// object and add a single property 'p', with value 42.
+o = Object.create({}, { p: { value: 42 } });
 
-// 创建一个以另一个空对象为原型，且拥有一个属性 p 的对象
-o = Object.create({}, { p: { value: 42 } })
+// by default properties ARE NOT writable,
+// enumerable or configurable:
+o.p = 24;
+o.p;
+// 42
 
-// 省略了的属性特性默认为 false，所以属性 p 是不可写，不可枚举，不可配置的：
-o.p = 24
-o.p
-//42
-
-o.q = 12
-for (var prop in o) {
-   console.log(prop)
+o.q = 12;
+for (const prop in o) {
+  console.log(prop);
 }
-//"q"
+// 'q'
 
-delete o.p
-//false
+delete o.p;
+// false
 
-//创建一个可写的，可枚举的，可配置的属性 p
+// to specify an ES3 property
 o2 = Object.create({}, {
   p: {
     value: 42,
@@ -157,67 +241,25 @@ o2 = Object.create({}, {
     enumerable: true,
     configurable: true
   }
-});</pre>
+});
+/* is not equivalent to:
+This will create an object with prototype : {p: 42 }
+o2 = Object.create({p: 42}) */
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## 规范
 
-<p>这个 polyfill 涵盖了主要的应用场景，它创建一个已经选择了原型的新对象，但没有把第二个参数考虑在内。</p>
+{{Specifications}}
 
-<p>请注意，尽管在 ES5 中 <code>Object.create</code>支持设置为<code>[[Prototype]]</code>为<code>null</code>，但因为那些 ECMAScript5 以前版本限制，此 polyfill 无法支持该特性。</p>
+## 浏览器兼容性
 
-<pre class="brush: js">if (typeof Object.create !== "function") {
-    Object.create = function (proto, propertiesObject) {
-        if (typeof proto !== 'object' &amp;&amp; typeof proto !== 'function') {
-            throw new TypeError('Object prototype may only be an Object: ' + proto);
-        } else if (proto === null) {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.");
-        }
+{{Compat}}
 
-        if (typeof propertiesObject !== 'undefined') throw new Error("This browser's implementation of Object.create is a shim and doesn't support a second argument.");
+## 参见
 
-        function F() {}
-        F.prototype = proto;
-
-        return new F();
-    };
-}</pre>
-
-<h2 id="规范">规范</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="浏览器兼容">浏览器兼容</h2>
-
-<p>{{Compat("javascript.builtins.Object.create")}}</p>
-
-<h2 id="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Object.defineProperty")}}</li>
- <li>{{jsxref("Object.defineProperties")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
- <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
-</ul>
+- [Polyfill of `Object.create` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Reflect.construct()")}}
+- John Resig 发布的关于 [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/) 的博客
