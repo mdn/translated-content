@@ -39,7 +39,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 - `queuingStrategy` {{optional_inline}}
   - : 一个可选的定义流的队列策略的对象。这需要两个参数：
     - `highWaterMark`
-      - : 非负整数——这定义了在应用背压之前可以包含在内部队列中的分块的总数。
+      - : 非负整数——这定义了在应用背压之前可以包含在内部队列中的分块的最大数量。
     - `size(chunk)`
       - : 包含参数 chunk 的方法——这表示每个分块所需要使用的字节数。
 
