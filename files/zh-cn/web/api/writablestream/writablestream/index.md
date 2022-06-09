@@ -25,7 +25,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 
 - `underlyingSink` {{optional_inline}}
 
-  - : 一个包含方法和属性的对象，这些方法和属性定义了构造的流的实例的具体行为。`underlyingSource` 包括：
+  - : 一个包含方法和属性的对象，这些方法和属性定义了构造的流的实例的具体行为。`underlyingSource` 可以包括：
 
     - `start(controller)` {{optional_inline}}
       - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，以表明异步操作成功或失败。传递给这个方法的 `controller` 参数是一个 {{domxref("WritableStreamDefaultController")}}。开发人员可以在设置时使用它来控制流。
