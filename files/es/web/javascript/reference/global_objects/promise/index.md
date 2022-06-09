@@ -68,12 +68,12 @@ Usando {{JSxRef("Functions/Arrow_functions", "Expresiones de funciones de flecha
 
 ```js
 promise1
-.then(value => { return value + ' y barra'; })
-.then(value => { return value + ' y barra de nuevo'; })
-.then(value => { return value + ' y de nuevo'; })
-.then(value => { return value + ' y de nuevo'; })
-.then(value => { console.log(value) })
-.catch(err => { console.log(err) });
+  .then(value => { return value + ' y barra'; })
+  .then(value => { return value + ' y barra de nuevo'; })
+  .then(value => { return value + ' y de nuevo'; })
+  .then(value => { return value + ' y de nuevo'; })
+  .then(value => { console.log(value) })
+  .catch(err => { console.log(err) });
 ```
 
 La condición de terminación de una promesa determina el estado "establecido" de la próxima promesa en la cadena. Un estado "resuelto" indica una finalización exitosa de la promesa, mientras que un estado "rechazado" indica una falta de éxito. El valor de retorno de cada promesa resuelta en la cadena se pasa al siguiente `.then()`, mientras que el motivo del rechazo se pasa a la siguiente función de manejo de rechazo en la cadena.
