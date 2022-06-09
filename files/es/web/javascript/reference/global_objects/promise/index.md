@@ -58,10 +58,10 @@ Manejar una promesa rechazada en cada `.then()` tiene consecuencias más adelant
 
 ```js
 myPromise
-.then(handleResolvedA)
-.then(handleResolvedB)
-.then(handleResolvedC)
-.catch(handleRejectedAny);
+  .then(handleResolvedA)
+  .then(handleResolvedB)
+  .then(handleResolvedC)
+  .catch(handleRejectedAny);
 ```
 
 Usando {{JSxRef("Functions/Arrow_functions", "Expresiones de funciones de flecha", "", 1)}} para las funciones de devolución de llamada, una implementación de una cadena de promesa podría verse así:
