@@ -93,10 +93,10 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 
 对于链接文字和非链接文字部分，同样适用此规则：
 
-- 正确：```它指向一个[示例](#示例)```
-- 错误：```它指向一个 [示例](#示例)```
-- 正确：```指向 [MDN 开发者文档](https://developer.mozilla.org/)的链接```
-- 错误：```指向[MDN开发者文档](https://developer.mozilla.org/)的链接```
+- 正确：`它指向一个[示例](#示例)`
+- 错误：`它指向一个 [示例](#示例)`
+- 正确：`指向 [MDN 开发者文档](https://developer.mozilla.org/)的链接`
+- 错误：`指向[MDN开发者文档](https://developer.mozilla.org/)的链接`
 
 请注意，数字与中文之间也请保留空格：
 
@@ -107,7 +107,7 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 
 英文文档中，对于较长的段落，会通过断行的形式截断，以方便维护文档。但在 Markdown 中，断行会引入空格，在简体中文翻译中，我们有如下约定：
 
-- 在段落不是特别长的情况下（120 个字符以内），请不要断行。
+- 在段落不是特别长的情况下（200 个字符以内），请不要断行。
 - 若段落过长，也请在中文与拉丁语系文字、数字之间，或是句子末尾断行。
 
 例如：
@@ -138,3 +138,14 @@ Like this.
 - 宜：应用程序接口（API）
 - 不宜：应用程序接口（APIs）
 - 不宜：应用程序接口们（APIs）
+
+### 常用标题
+
+英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，我们作如下约定：
+
+| 英文 | 简体中文翻译 |
+| --- | ---------- |
+| Browser compatibility | 浏览器兼容性 |
+| Examples | 示例 |
+| See also | 参见 |
+| Specifications | 规范 |
