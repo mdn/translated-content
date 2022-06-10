@@ -13,7 +13,7 @@ translation_of: Web/API/WritableStream/getWriter
 ---
 {{APIRef("Streams")}}
 
-{{domxref("WritableStream")}} 接口的 **`getWriter()`** 方法返回一个新的 {{domxref("WritableStreamDefaultWriter")}} 实例并且将流锁定到该实例。当流被锁定时，知道这个流被释放之前，不能获取其他 writer。
+{{domxref("WritableStream")}} 接口的 **`getWriter()`** 方法返回一个新的 {{domxref("WritableStreamDefaultWriter")}} 实例并且将流锁定到该实例。当流被锁定时，直到这个流被释放之前，不能获取其他 writer。
 
 ## 语法
 
