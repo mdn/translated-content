@@ -1,149 +1,96 @@
 ---
 title: FileList
 slug: Web/API/FileList
+page-type: web-api-interface
+tags:
+  - API
+  - File API
+  - Files
+browser-compat: api.FileList
 translation_of: Web/API/FileList
 ---
-{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}
+{{APIRef("File API")}}
 
-이 타입의 객체는 HTML {{HTMLElement("input")}} 엘리먼트의 `files` 속성으로부터 반환됩니다; 이는 `<input type="file">` 엘리먼트로 선택된 파일의 리스트에 접근하도록 합니다. 또한 드래그 앤 드랍 API를 사용할 때 웹 컨텐트에 드랍된 파일의 리스트에도 사용됩니다; 이 사용에 대한 자세한 내용은 [`DataTransfer`](/en-US/docs/DragDrop/DataTransfer "DragDrop/DataTransfer") 객체를 보십시오.
+**`FileList`** 유형의 객체는 HTML {{htmlelement("input")}} 요소의 `files` 속성이나 [Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API)의 {{domxref("DataTransfer")}}에서 가져올 수 있으며, `<input type="file">` 요소로 선택했거나 웹 콘텐츠 위에 끌어다 놓은 파일 목록에 대한 접근을 제공합니다.
 
-> **참고:** {{Gecko("1.9.2")}} 이전에는, input 엘리먼트는 한번에 하나의 선택된 파일만 지원되었습니다, 이는 FileList가 하나의 파일만을 포함했음을 의미합니다. {{Gecko("1.9.2")}}를 시작으로, input 엘리먼트의 multiple 속성이 true이면, FileList는 복수의 파일을 포함할 수 있습니다.
-
-<h2 id="Using_the_file_list" name="Using_the_file_list">파일 리스트 사용</h2>
-
-모든 `<input>` 엘리먼트 노드는 이 리스트의 항목에 접근하도록 허용하는 `files` 배열을 가지고 있습니다. 예를 들어, HTML이 다음의 파일 입력을 포함한다면:
+모든 `<input>` 요소 노드에는 `FileList`를 반환하는 `files` 특성이 있어서 파일의 목록에 접근할 수 있습니다. 예를 들어, 다음과 같은 HTML 코드를 가정하면,
 
 ```html
 <input id="fileItem" type="file">
 ```
 
-다음 코드 행은 노드의 파일 목록에있는 첫 번째 파일을 File 객체로 가져옵니다.
+아래 코드로 노드의 파일 리스트에서 첫 번째 항목을 [`File`](/ko/docs/Web/API/File) 객체로 가져올 수 있습니다.
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+const file = document.getElementById('fileItem').files[0];
 ```
 
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+## 속성
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code>File <a href="#item ()">item</a>(index);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{DOMxRef("FileList/length", "length")}}{{ReadOnlyInline}}
+  - : 리스트가 포함한 파일의 수를 나타내는 읽기 전용 값입니다.
 
-<h2 id="Attributes" name="Attributes">Properties</h2>
+## 메서드
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Attribute</td>
-      <td class="header">Type</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>length</code></td>
-      <td><code>integer</code></td>
-      <td>목록에있는 파일의 수를 나타내는 읽기 전용 값.</td>
-    </tr>
-  </tbody>
-</table>
+- {{DOMxRef("FileList/item", "item()")}}{{ReadOnlyInline}}
+  - : 파일 리스트에서 지정한 인덱스에 위치한 파일을 나타내는 {{domxref("File")}} 객체를 반환합니다.
 
-<h2 id="Methods" name="Methods">Methods</h2>
+## 예제
 
-<h3 id="item()" name="item()">item()</h3>
+### 파일 이름 기록하기
 
-파일리스트의 지정된 인덱스에있는 파일을 나타내는 File 객체를 리턴합니다.
+이 예제에서는 사용자가 선택한 파일들의 이름을 기록합니다.
 
-```js
-File item(
-  index
-);
-```
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
-- `index`
-  - : 리스트로부터 받은 파일의 인덱스로, 0부터 시작합니다.
-
-<h6 id="Return_value" name="Return_value">Return value</h6>
-
-요청된 파일을 나타내는 [`File`](/en-US/docs/DOM/File "DOM/File") 입니다.
-
-<h2 id="Example" name="Example">예시</h2>
-
-이 예시는 `input` 엘리먼트를 사용하여 사용자에 의해 선택된 모든 파일을 순회합니다:
-
-```js
-// fileInput is an HTML input element: <input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
-
-// files is a FileList object (similar to NodeList)
-var files = fileInput.files;
-var file;
-
-// loop through files
-for (var i = 0; i < files.length; i++) {
-
-    // get item
-    file = files.item(i);
-    //or
-    file = files[i];
-
-    alert(file.name);
-}
-```
-
-완전한 코드는 다음과 같습니다.
+#### HTML
 
 ```html
-<!DOCTYPE HTML>
-<html>
-<head>
-</head>
-<body>
-<!--multiple is set to allow multiple files to be selected-->
-
+<!--'multiple'을 지정해서 여러 파일의 선택을 허용-->
 <input id="myfiles" multiple type="file">
-
-</body>
-
-<script>
-
-var pullfiles=function(){
-    // love the query selector
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // cache files.length
-    var fl = files.length;
-    var i = 0;
-
-    while ( i < fl) {
-        // localize file var in the loop
-        var file = files[i];
-        alert(file.name);
-        i++;
-    }
-}
-
-// set the input element onchange to call pullfiles
-document.querySelector("#myfiles").onchange=pullfiles;
-
-//a.t
-</script>
-
-</html>
+<div class="output"></div>
 ```
 
-<h2 id="Specification" name="Specification">명세</h2>
+#### CSS
 
-- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
+```css
+.output {
+  overflow: scroll;
+  margin: 1rem 0;
+  height: 200px;
+}
+```
 
-<h2 id="See_also" name="See_also">See also</h2>
+#### JavaScript
 
-- [Using files from web applications](/en-US/docs/Using_files_from_web_applications "Using files from web applications")
-- [`File`](/en-US/docs/DOM/File "DOM/File")
-- [`FileReader`](/en-US/docs/DOM/FileReader "DOM/FileReader")
+```js
+const output = document.querySelector('.output');
+const myFiles = document.querySelector("#myfiles");
+
+function logFilenames(){
+  const fileInput = document.querySelector("#myfiles");
+  const files = fileInput.files;
+  const fileListLength = files.length;
+  for (let i = 0; i < fileListLength; i++) {
+    output.innerText = `${output.innerText}\n${files.item(i).name}`;
+  }
+}
+
+myFiles.addEventListener("change", logFilenames);
+```
+
+#### 결과
+
+{{EmbedLiveSample("파일 이름 기록하기")}}
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [`File`](/ko/docs/Web/API/File)
+- [`FileReader`](/ko/docs/Web/API/FileReader)
