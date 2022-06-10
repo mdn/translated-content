@@ -17,11 +17,11 @@ browser-compat: css.properties.border-color
 ---
 {{CSSRef}}
 
-**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用來綜合設定四邊框線的顏色。
+**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
 
 {{EmbedInteractiveExample("pages/css/border-color.html")}}
 
-**`border-color`**雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}；能因應文字書寫方向改變框線相對位置（the writing mode-aware）的屬性如：{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}}，也可達成相同功能。
+border-color 雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}；能因應文字書寫方向改變框線相對位置（the writing mode-aware）的屬性如：{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}}，也可達成分別指定的功能。
 
 關於更多邊框色彩的設定說明，請見{{SectionOnPage("/zh-TW/docs/Web/HTML/Applying_color", "borders")}}。
 
@@ -57,17 +57,17 @@ border-color: revert-layer;
 border-color: unset;
 ```
 
-`border-color` 屬性質可設定一到四個輸入值。
+`border-color` 屬性值可設定一到四個輸入值。
 
-- 一個值：將這顏色一次指定給**全部四個邊**。
-- 兩個值：依顏色順序分別指定給：**上下邊**、**左右邊**。
-- 三個值：依顏色順序分別指定給：**上邊框**、**左右邊**、**下邊框**。
-- 四個值：依顏色順序，沿邊框順時鐘方向的排列順序，分別指定給：**上邊框**、**右邊框**、**下邊框**、**左邊框**，。
+- 一個值：將單一顏色指定給**全部四個邊**。
+- 兩個值：依顏色排列順序分別指定給：**上下邊**、**左右邊**。
+- 三個值：依顏色排列順序分別指定給：**上邊框**、**左右邊**、**下邊框**。
+- 四個值：依顏色排列順序，沿邊框順時鐘方向，分別指定給：**上邊框**、**右邊框**、**下邊框**、**左邊框**。
 
 ### Values 屬性值
 
 - {{CSSxRef("&lt;color&gt;")}}
-  - : 指定框線的顏色。
+  - : 定義框線的顏色。
 
 ## Formal definition 語法定義
 
@@ -79,7 +79,7 @@ border-color: unset;
 
 ## 實際範例
 
-### 完整的border-color使用範例
+### 完整的border-color簡寫使用範例
 
 #### HTML
 
@@ -137,6 +137,7 @@ border-color: unset;
   border-color: red cyan black gold;
 }
 
+/* 設定每個div的邊框與樣式 */
 /* Set width and style for all divs */
 div {
   border: solid 0.3em;
@@ -151,11 +152,11 @@ ul {
 }
 ```
 
-#### Result 成果展示
+#### Result 成果
 
 {{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
 
-## Specifications 語法規範
+## Specifications 規範文件
 
 {{Specifications}}
 
@@ -169,4 +170,4 @@ ul {
 - 其他框線屬性：{{CSSxRef("border-width")}}、{{CSSxRef("border-style")}}
 - 資料型態 {{CSSxRef("&lt;color&gt;")}}
 - 其他顏色相關屬性：{{CSSxRef("color")}}、{{CSSxRef("background-color")}}、{{CSSxRef("outline-color")}}、{{CSSxRef("text-decoration-color")}}、{{CSSxRef("text-emphasis-color")}}、{{CSSxRef("text-shadow")}}、{{CSSxRef("caret-color")}}、{{CSSxRef("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color)
+- [以CSS指定HTML元件的顏色](/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color)
