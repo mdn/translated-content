@@ -2,38 +2,91 @@
 title: operador delete
 slug: Web/JavaScript/Reference/Operators/delete
 translation_of: Web/JavaScript/Reference/Operators/delete
-original_slug: Web/JavaScript/Referencia/Operadores/delete
 ---
-<div>
-<div>{{jsSidebar("Operators")}}</div>
-</div>
+{{jsSidebar("Operators")}}
 
-<h2 id="Resumen">Resumen</h2>
+El **operador `delete`** de JavaScript remueve una propiedad de un objeto; si no se
+mantienen más referencias a la misma propiedad, eventualmente se libera automáticamente.
 
-<p>El operador <code>delete</code>  elimina una propiedad de un objeto.</p>
+{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Syntax
 
-<pre class="syntaxbox">delete expresión </pre>
+```js
+delete expresion
+```
 
-<p>donde la <em>expresión</em> debe evaluar una referencia de la propiedad, por ejemplo:</p>
+Donde la `expresion` debe ser una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), p. ej.:
 
-<pre class="syntaxbox">delete <em>objeto.propiedad</em>
-delete <em>objeto</em>['<em>propiedad</em>']
-</pre>
+```js
+delete objeto.propiedad
+delete objeto['propiedad']
+```
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>objeto</code></dt>
- <dd>El nombre de un objeto, o una expresión que evalua a un objeto.</dd>
- <dt><code>propiedad</code></dt>
- <dd>La propiedad a eliminar.</dd>
-</dl>
+- `objeto`
+  - : El nombre de un objeto, o una expresión que evalúa a un objeto.
+- `propiedad`
+  - : La propiedad a eliminar.
 
-<h3 id="Returns" name="Returns">Retorno</h3>
+### Valor de retorno
 
-<p>En <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">modo estricto</a> arroja una excepción si la propiedad no es configurable (retorna <code>false</code> en modo no estricto). Retorna <code>true</code> en cualquier otro caso.</p>
+`true` para todos los casos excepto cuando la propiedad es una propiedad {{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}}, en cuyo caso, se retorna `false` en modo no estricto.
+
+## Descripción
+
+Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de programación como 
+[delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), el operador `delete` no tiene **nada** que ver con liberar memoria.
+La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Memory_Management) para más detalles.
+
+El operador **`delete`** remueve una propiedad dada de un objeto.
+En caso de que la supresión sea exitosa, retornará `true`, en otro caso
+se retornará `false`.
+
+Sin embargo, es importante considerar los siguientes escenarios:
+
+- Si la propiedad que está intentando eliminar no existe, `delete`
+  no tendrá ningún efecto y retornará `true`.
+
+- If the property which you are trying to delete does not exist, `delete`
+  will not have any effect and will return `true`.
+- If a property with the same name exists on the object's prototype chain, then,
+  after deletion, the object will use the property from the prototype chain (in
+  other words, `delete` only has an effect on own properties).
+- Any property declared with {{jsxref("Statements/var","var")}} cannot be deleted
+  from the global scope or from a function's scope.
+
+  - As such, `delete` cannot delete any functions in the global
+    scope (whether this is part from a function definition or a function
+    expression).
+  - Functions which are part of an object (apart from the global scope) can be
+    deleted with `delete`.
+
+- Any property declared with {{jsxref("Statements/let","let")}} or
+  {{jsxref("Statements/const","const")}} cannot be deleted from the scope within
+  which they were defined.
+- Non-configurable properties cannot be removed. This includes properties of
+  built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}},
+  {{jsxref("Object")}} and properties that are created as non-configurable with
+  methods like {{jsxref("Object.defineProperty()")}}.
+
+The following snippet gives a simple example:
+
+```js
+var Employee = {
+  age: 28,
+  name: 'abc',
+  designation: 'developer'
+}
+
+console.log(delete Employee.name);   // returns true
+console.log(delete Employee.age);    // returns true
+
+// When trying to delete a property that does
+// not exist, true is returned
+console.log(delete Employee.salary); // returns true
+```
 
 <h2 id="Description" name="Description">Descripción</h2>
 
