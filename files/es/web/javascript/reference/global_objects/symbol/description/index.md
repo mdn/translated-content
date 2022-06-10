@@ -15,7 +15,7 @@ Los objetos {{JSxRef("Symbol")}} pueden ser creados con una descripción opciona
 
 ## Ejemplos
 
-### Uso de descripción
+### Uso de description
 
 ```js
 Symbol('desc').toString();   // "Symbol(desc)"
