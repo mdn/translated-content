@@ -176,7 +176,7 @@ const greeting = "I'm a bad example";
 ##### 标注
 
 ```plain
-> **标注：** **This is how you write a callout**.
+> **标注：** **This is how you write a callout.**
 >
 > It can have multiple paragaphs.
 ```
