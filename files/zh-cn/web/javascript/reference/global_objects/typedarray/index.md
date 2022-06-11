@@ -1,6 +1,6 @@
 ---
 title: ArrayBufferView
-slug: Web/API/ArrayBufferView
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 tags:
   - API
   - Interface
@@ -8,6 +8,7 @@ tags:
   - Reference
   - Typed Arrays
 translation_of: Web/API/ArrayBufferView
+original_slug: Web/API/ArrayBufferView
 ---
 {{APIRef}}
 
