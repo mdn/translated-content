@@ -44,6 +44,20 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 如果你刚刚开始了解 HTML、CSS、JavaScript 等相关知识，你可以试着完成我们的 [Web 开发教程](/zh-CN/docs/Learn)。
 ```
 
+还需特别注意路径中带有片段标识（fragment）的，请同步更新片段标识为本地化文档中指定标题的 ID（若不清楚标题和 ID 之间的转换规则，可以在浏览器的开发者工具中查找对应标题的 ID）。
+
+例如，对于以下链接：
+
+```md
+Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_sample_macros).
+```
+
+请对应中文文档，更新其片段标识：
+
+```md
+参考：[运行实例宏](/zh-CN/docs/MDN/Structures/Live_samples#运行实例宏)。
+```
+
 > 请注意，无论指向的本地化文档是否存在，都请让链接指向本地化文档。yari 平台可以在指向本地化文档的链接不存在的情况下，自动将对应的链接回落到英文版本的链接。
 
 ## 中文翻译的常见问题
@@ -52,7 +66,7 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 
 ### 标点符号
 
-除了代码中使用的符号以及一些特殊情况外，请将半角（英文）符号替换成全角（中文）符号。
+除了代码中使用的符号以及一些特殊情况外，请将英文（半角）符号替换成中文（大部分为全角）符号。
 
 > 但请注意，请不要使用**全角数字**（特殊情况除外）。
 
@@ -69,14 +83,19 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 - 宜：a、b 和 c
 - 不宜：a，b，和 c
 
-#### 常见全/半角标点
+#### 常见中/英文标点
 
-| 名称 | 全角 | 半角 |
+| 名称 | 中文 | 英文 |
 | ---- | --- | ---- |
 | 括号 | （） | ()   |
 | 冒号 | ：   | :    |
 | 引号 | “”   | ""   |
 | 破折号 | —— | -- 、 — |
+
+简体中文标点符号参考资源：
+
+- [教育部《标点符号用法》](https://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091548267.pdf)
+- [维基百科：标点符号](https://zh.wikipedia.org/zh-cn/标点符号)
 
 ### 中文和拉丁语系文字间加空格
 
