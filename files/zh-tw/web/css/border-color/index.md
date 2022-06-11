@@ -14,6 +14,7 @@ tags:
   - colors
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
+translation_of: Web/CSS/border-color
 ---
 {{CSSRef}}
 
@@ -154,7 +155,7 @@ ul {
 
 #### 成果
 
-{{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
+{{EmbedLiveSample("完整的border-color簡寫使用", 600, 700)}}
 
 ## 規範
 
