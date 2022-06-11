@@ -90,7 +90,7 @@ translation_of: Web/API/Service_Worker_API
 - {{DOMxRef("CacheStorage")}} {{Experimental_Inline}}
   - : {{DOMxRef("Cache")}} オブジェクトのストレージです。これは {{DOMxRef("ServiceWorker")}} がアクセスできるすべての名前付きキャッシュのへの目録を提供し、文字列の名前から対応する {{DOMxRef("Cache")}} へのマップを保持します。
 - {{DOMxRef("Client")}} {{Experimental_Inline}}
-  - : サービスワーカークライアントのスコープを表します。サービスワーカークライアントは、ブラウザーーコンテキスト内の文書または {{DOMxRef("SharedWorker")}} であり、アクティブワーカーによって制御されています。
+  - : サービスワーカークライアントのスコープを表します。サービスワーカークライアントは、ブラウザーコンテキスト内の文書または {{DOMxRef("SharedWorker")}} であり、アクティブワーカーによって制御されています。
 - {{DOMxRef("Clients")}} {{Experimental_Inline}}
   - : {{DOMxRef("Client")}} オブジェクトのリストのためのコンテナーであり、現在のオリジンにある有効化されたサービスワーカークライアントにアクセスする主な方法です。
 - {{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}
