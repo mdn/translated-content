@@ -13,7 +13,7 @@ El símbolo conocido como **`Symbol.hasInstance`** se utiliza para determinar si
 
 ### Comportamiento de instanceof personalizado
 
-Podrías implementar tu comportamiento personalizado de `instanceof` así, por ejemplo:
+Podrías personalizar el comportamiento de `instanceof` de la siguiente manera, por ejemplo:
 
 ```js
 class MyArray {
