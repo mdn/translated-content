@@ -1292,6 +1292,7 @@
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
 /zh-CN/docs/Web/API/Animation/oncancel	/zh-CN/docs/Web/API/Animation/cancel_event
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+/zh-CN/docs/Web/API/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/API/AudioContext/createAnalyser	/zh-CN/docs/Web/API/BaseAudioContext/createAnalyser
 /zh-CN/docs/Web/API/AudioContext/createBiquadFilter	/zh-CN/docs/Web/API/BaseAudioContext/createBiquadFilter
 /zh-CN/docs/Web/API/AudioContext/createBuffer	/zh-CN/docs/Web/API/BaseAudioContext/createBuffer
