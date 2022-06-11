@@ -27,7 +27,7 @@ translation_of: Web/API/WritableStreamDefaultController
 ## 方法
 
 - {{domxref("WritableStreamDefaultController.error()")}}
-  - : 导致未来任何与关联流交互都会出错。
+  - : 导致未来任何与关联的流的交互都会出错。
 
 ## 示例
 
