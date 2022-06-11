@@ -8,9 +8,9 @@ translation_of: Web/API/XMLHttpRequest/open
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.open()</strong> 方法初始化一个请求。该方法要从JavaScript代码使用；从原生代码初始化一个请求，使用<code><a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#openRequest()">openRequest()</a></code>替代。</p>
+<p><strong>XMLHttpRequest.open()</strong> 方法初始化一个请求。该方法要从 JavaScript 代码使用；从原生代码初始化一个请求，使用 <code><a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#openRequest()">openRequest()</a></code> 替代。</p>
 
-<div class="note"><strong>注意：</strong>为已激活的请求调用此方法（<code>open()</code>或<code>openRequest()</code>已被调用）相当于调用<code>abort()</code>。</div>
+<div class="note"><strong>注意：</strong>为已激活的请求调用此方法（<code>open()</code>或<code>openRequest()</code> 已被调用）相当于调用<code>abort()</code>。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -24,17 +24,17 @@ xhrReq.open(<var>method</var>,<var> url</var>,<var> async</var>,<var> user</var>
 
 <dl>
  <dt><code>method</code></dt>
- <dd>要使用的HTTP方法，比如「GET」、「POST」、「PUT」、「DELETE」、等。对于非HTTP(S) URL被忽略。</dd>
+  <dd>要使用的 HTTP 方法，比如 <code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>DELETE</code>、等。对于非 HTTP(S) URL 被忽略。</dd>
  <dt><code>url</code></dt>
- <dd>一个{{domxref("DOMString")}}表示要向其发送请求的URL。</dd>
+ <dd>一个 {{domxref("DOMString")}} 表示要向其发送请求的 URL。</dd>
  <dt><code>async</code> {{optional_inline}}</dt>
- <dd>一个可选的布尔参数，表示是否异步执行操作，默认为<code>true</code>。如果值为<code>false</code>，<code>send()</code>方法直到收到答复前不会返回。如果<code>true</code>，已完成事务的通知可供事件监听器使用。如果<code>multipart</code>属性为<code>true</code>则这个必须为<code>true</code>，否则将引发异常。
- <div class="note"><strong>注意：</strong>主线程上的同步请求很容易破坏用户体验，应该避免；实际上，许多浏览器已完全弃用主线程上的同步XHR支持。在 {{domxref("Worker")}}中允许同步请求</div>
+ <dd>一个可选的布尔参数，表示是否异步执行操作，默认为 <code>true</code>。如果值为 <code>false</code>，<code>send()</code> 方法直到收到答复前不会返回。如果 <code>true</code>，已完成事务的通知可供事件监听器使用。如果 <code>multipart</code> 属性为 <code>true</code> 则这个必须为 <code>true</code>，否则将引发异常。
+ <div class="note"><strong>注意：</strong>主线程上的同步请求很容易破坏用户体验，应该避免；实际上，许多浏览器已完全弃用主线程上的同步 XHR 支持。在 {{domxref("Worker")}} 中允许同步请求</div>
  </dd>
  <dt><code>user</code> {{optional_inline}}</dt>
- <dd>可选的用户名用于认证用途；默认为<code>null</code>。</dd>
+ <dd>可选的用户名用于认证用途；默认为 <code>null</code>。</dd>
  <dt><code>password</code> {{optional_inline}}</dt>
- <dd>可选的密码用于认证用途，默认为<code>null</code>。</dd>
+ <dd>可选的密码用于认证用途，默认为 <code>null</code>。</dd>
 </dl>
 
 <h2 id="规格">规格</h2>
@@ -56,58 +56,7 @@ xhrReq.open(<var>method</var>,<var> url</var>,<var> async</var>,<var> user</var>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{ CompatVersionUnknown}}</td>
-   <td>{{CompatIe('5')}}<sup>[1]</sup><br>
-    {{CompatIe('7')}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari('1.2')}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 该特性通过ActiveXObject()实现。Internet Explorer从7开始实现了标准的XMLHttpRequest。</p>
+{{Compat("api.XMLHttpRequest.open")}}
 
 <h2 id="参见">参见</h2>
 

@@ -15,18 +15,18 @@ translation_of: Web/API/DataTransferItem
  <dt>{{domxref("DataTransferItem.kind")}} {{readonlyInline}}</dt>
  <dd>拖拽项的种类，<code>string</code> 或是 <code>file。</code></dd>
  <dt>{{domxref("DataTransferItem.type")}} {{readonlyInline}}</dt>
- <dd>拖拽项的类型，一般是一个MIME 类型.</dd>
+ <dd>拖拽项的类型，一般是一个 MIME 类型。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("DataTransferItem.getAsFile()")}}</dt>
- <dd>返回一个关联拖拽项的 {{domxref("File")}} 对象 （当拖拽项不是一个文件时返回 null）。</dd>
+ <dd>返回一个关联拖拽项的 {{domxref("File")}} 对象（当拖拽项不是一个文件时返回 null）。</dd>
  <dt>{{domxref("DataTransferItem.getAsString()")}}</dt>
  <dd>使用拖拽项的字符串作为参数执行指定回调函数。</dd>
  <dt>{{domxref("DataTransferItem.webkitGetAsEntry()")}} {{Non-standard_inline}}</dt>
- <dd>返回一个基于 {{domxref("FileSystemEntry")}} 的对象来表示文件系统中选中的项目。通常是返回一个{{domxref("FileSystemFileEntry")}} 或是 {{domxref("FileSystemDirectoryEntry")}} 对象.</dd>
+ <dd>返回一个基于 {{domxref("FileSystemEntry")}} 的对象来表示文件系统中选中的项目。通常是返回一个{{domxref("FileSystemFileEntry")}} 或是 {{domxref("FileSystemDirectoryEntry")}} 对象。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -35,87 +35,8 @@ translation_of: Web/API/DataTransferItem
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#datatransferitem','DataTransferItem')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初始定义</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#datatransferitem','DataTransferItem')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>W3C snapshot of WHATWG</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System API', '#dom-datatransferitem-webkitgetasentry', 'DataTransferItem.webkitGetAsEntry()')}}</td>
-   <td>{{Spec2('File System API')}}</td>
-   <td><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> 中定义了<code>webkitGetAsEntry()</code></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(50)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(50)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.DataTransferItem")}}

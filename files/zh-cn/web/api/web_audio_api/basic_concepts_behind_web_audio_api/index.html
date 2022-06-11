@@ -9,19 +9,17 @@ tags:
   - 网页音频接口
 translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
-<div class="summary">
-<p><span class="seoSummary">这篇文章解释了 网页音频接口(Web Audio API) 运作过程中的部分音频处理概念。本文并不会将你变为一名音频处理大师，但它可以给你足够的背景知识来理解 网页音频接口 的运行原理，并能让你在使用它时做出更好的决策。</span></p>
-</div>
+<p>这篇文章解释了 网页音频接口 (Web Audio API) 运作过程中的部分音频处理概念。本文并不会将你变为一名音频处理大师，但它可以给你足够的背景知识来理解 网页音频接口 的运行原理，并能让你在使用它时做出更好的决策。</p>
 
 <h2 id="音频节点：模块化连接">音频节点：模块化连接</h2>
 
-<p>网页音频接口(Web Audio API) 主要在 <strong>音频环境(audio context)</strong> 中进行音频处理，它也允许模块间的连接。基本的音频处理在 <strong>音频节点(audio node)</strong> 当中进行，这些节点连接在一起形成了 <strong>音频导向图(audio routing graph)</strong>。多个声源，甚至包含不同种类的声道，都可以在一个音频环境中进行处理。这种模块化的设计使得人们在创建复杂多变的声音特效时可以更加灵活。</p>
+<p>网页音频接口 (Web Audio API) 主要在 <strong>音频环境 (audio context)</strong> 中进行音频处理，它也允许模块间的连接。基本的音频处理在 <strong>音频节点 (audio node)</strong> 当中进行，这些节点连接在一起形成了 <strong>音频导向图 (audio routing graph)</strong>。多个声源，甚至包含不同种类的声道，都可以在一个音频环境中进行处理。这种模块化的设计使得人们在创建复杂多变的声音特效时可以更加灵活。</p>
 
 <p>音频节点可以通过各自的输入与输出相连，形成一个 从一个或多个声源开始，经过处理节点，终止于末节点 的链式结构（有时你不需要末节点，比如你只是想数字化处理某些音频数据的时候）。一个简单、典型的网页音频接口的操作流程可以是这样的：</p>
 
 <ol>
  <li>创建一个音频环境</li>
- <li>在音频环境中，创建声源——例如{{HTMLElement("audio")}} 标签，振动发声器(oscillator)，音频流</li>
+ <li>在音频环境中，创建声源——例如{{HTMLElement("audio")}} 标签，振动发声器 (oscillator)，音频流</li>
  <li>创建特效节点——例如混响，双二阶滤波，声相控制，音频振幅压缩</li>
  <li>选择音频的终点——例如系统的扬声器</li>
  <li>连接声源和特效，以及特效和终点。</li>
@@ -50,13 +48,13 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 <h2 id="音频片段：帧，样本和声道">音频片段：帧，样本和声道</h2>
 
-<p>一个 音频片段({{ domxref("AudioBuffer") }}) 会包含几个组成参数：一个或几个声道（1代表<em>单声道</em>，2代表<em>立体声</em>等等），一个长度（代表片段中采样帧的数目）和一个采样率（是每秒钟采样帧的个数）。</p>
+<p>一个 音频片段 ({{ domxref("AudioBuffer") }}) 会包含几个组成参数：一个或几个声道（1 代表<em>单声道</em>，2 代表<em>立体声</em>等等），一个长度（代表片段中采样帧的数目）和一个采样率（是每秒钟采样帧的个数）。</p>
 
-<p>每个样本点都是一个 代表着该音频流在特定时间特定声道上的数值的 单精度浮点数。一个帧，或者一个采样帧是由一组在特定时间上的所有声道的样本点组成的——即所有声道在同一时间的样本点（<em>立体声</em>有2个，<em>5.1</em>有6个，等等，每个帧包含的样本点个数和声道数相同）。</p>
+<p>每个样本点都是一个 代表着该音频流在特定时间特定声道上的数值的 单精度浮点数。一个帧，或者一个采样帧是由一组在特定时间上的所有声道的样本点组成的——即所有声道在同一时间的样本点（<em>立体声</em>有 2 个，<em>5.1</em>有 6 个，等等，每个帧包含的样本点个数和声道数相同）。</p>
 
-<p>采样率就是一秒钟内获取帧的个数，单位是赫兹(Hz)。采样率越高，音频效果越好。</p>
+<p>采样率就是一秒钟内获取帧的个数，单位是赫兹 (Hz)。采样率越高，音频效果越好。</p>
 
-<p>现在让我们来看一下通道，一个单声道和一个立体声的音频片段，每个都是1秒钟，播放频率（采样率）为44100赫兹：</p>
+<p>现在让我们来看一下通道，一个单声道和一个立体声的音频片段，每个都是 1 秒钟，播放频率（采样率）为 44100 赫兹：</p>
 
 <ul>
  <li>单声道片段会有 44100 个样本点和 44100 个帧。长度属性为 44100 。</li>
@@ -77,36 +75,36 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 var buffer = context.createBuffer(2, 22050, 44100);
 </pre>
 
-<p>如果你使用上面的方法调用，你将会得到一个立体声（两个声道）的音频片段(Buffer)，当它在一个频率为44100赫兹（这是目前大部分声卡处理声音的频率）的音频环境中播放的时候，会持续0.5秒：22050帧 / 44100赫兹 = 0.5 秒。</p>
+<p>如果你使用上面的方法调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在 <a href="https://zh.wikipedia.org/zh-cn/數位音訊" title="Digital audio">数字音频</a> 中，<strong>44,100 <a href="https://wikipedia.org/wiki/Hertz" title="Hertz">赫兹</a></strong> （有时也写作 <strong>44.1 kHz</strong>）是一个常见的 <a href="https://wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">取样频率</a>。 为什么选取44.1kHz呢？首先，因为 <a href="https://wikipedia.org/wiki/Hearing_range" title="Hearing range">人耳的接收频率</a> 大约在 20 Hz 到 20,000 Hz 之间，根据 <a href="https://zh.wikipedia.org/wiki/采样定理" title="Nyquist–Shannon sampling theorem">采样定理</a>，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz （即 40kHz）。不仅如此，在采样之前信号还必须通过 <a href="https://zh.wikipedia.org/zh-cn/低通滤波器" title="Low-pass filter">低通滤波器</a> ，否则 会发生<a href="https://zh.wikipedia.org/zh-cn/混疊" title="Aliasing">混叠</a>现象，一个理想低通滤波器会完全留下低于20kHz的信号（且没有使它衰减）并完美阻拦一切高于20kHz的信号，而事实上 <a href="https://wikipedia.org/wiki/Transition_band" title="Transition band">过度频带（英文）</a>总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 <a href="https://zh.wikipedia.org/zh-cn/抗混疊濾波器" title="Anti-aliasing filter">抗混叠滤波器</a> 才越容易。因此我们选取44.1kHz允许我们有2.05kHz的空间预留给过度频带。</p>
+<p><strong>注意：</strong> 在 <a href="https://zh.wikipedia.org/zh-cn/數位音訊" title="Digital audio">数字音频</a> 中，<strong>44,100 <a href="https://wikipedia.org/wiki/Hertz" title="Hertz">赫兹</a></strong> （有时也写作 <strong>44.1 kHz</strong>）是一个常见的 <a href="https://wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">取样频率</a>。 为什么选取 44.1kHz 呢？首先，因为 <a href="https://wikipedia.org/wiki/Hearing_range" title="Hearing range">人耳的接收频率</a> 大约在 20 Hz 到 20,000 Hz 之间，根据 <a href="https://zh.wikipedia.org/wiki/采样定理" title="Nyquist–Shannon sampling theorem">采样定理</a>，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过 <a href="https://zh.wikipedia.org/zh-cn/低通滤波器" title="Low-pass filter">低通滤波器</a> ，否则 会发生<a href="https://zh.wikipedia.org/zh-cn/混疊" title="Aliasing">混叠</a>现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上 <a href="https://wikipedia.org/wiki/Transition_band" title="Transition band">过度频带（英文）</a>总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 <a href="https://zh.wikipedia.org/zh-cn/抗混疊濾波器" title="Anti-aliasing filter">抗混叠滤波器</a> 才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。</p>
 </div>
 
 <pre class="brush: js">var context = new AudioContext();
 var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
-<p>如果你这样调用，你将会得到一个单声道的音频片段(Buffer)，当它在一个频率为44100赫兹的音频环境中播放的时候，将会被自动按照44100赫兹*重采样*（因此也会转化为44100赫兹的片段），并持续1秒：44100帧 / 44100赫兹 = 1秒。</p>
+<p>如果你这样调用，你将会得到一个单声道的音频片段 (Buffer)，当它在一个频率为 44100 赫兹的音频环境中播放的时候，将会被自动按照 44100 赫兹*重采样*（因此也会转化为 44100 赫兹的片段），并持续 1 秒：44100 帧 / 44100 赫兹 = 1 秒。</p>
 
 <div class="note">
-<p><strong>注意：</strong> <font face="Consolas, Liberation Mono, Courier, monospace">音频重采样与图片的缩放非常类似：比如你有一个</font>16 x 16的图像，但是你想把它填充到一个32 x 32大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个较低品质的（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它却是能将原图形缩放，并且缩放后的图像占用空间比相同大小的普通图像要小。重新采样的音频道理相同——你会节约一些空间，但事实上你无法产出高频率的声音（高音区）。</p>
+<p><strong>注意：</strong> 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个较低品质的（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它却是能将原图形缩放，并且缩放后的图像占用空间比相同大小的普通图像要小。重新采样的音频道理相同——你会节约一些空间，但事实上你无法产出高频率的声音（高音区）。</p>
 </div>
 
 <h3 id="分离式与交错式音频片段">分离式与交错式音频片段</h3>
 
-<p>网页音频接口使用了分离式的片段储存方式：左(L)右(R)声道像这样存储：</p>
+<p>网页音频接口使用了分离式的片段储存方式：左 (L) 右 (R) 声道像这样存储：</p>
 
-<pre>LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR （对于一个有16帧的音频片段）</pre>
+<pre>LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR（对于一个有 16 帧的音频片段）</pre>
 
 <p>这种储存方式在音频处理中非常常见：这种方式允许对每个声道单独处理。</p>
 
 <p>另一种储存方式是使用交错式的片段储存方式：</p>
 
-<pre>LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR （对于一个有16帧的音频片段）</pre>
+<pre>LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）</pre>
 
-<p>这种方式在存储以及播放音频等不需要音频加工的操作中非常常见，例如一个解码后的MP3流媒体。<br>
+<p>这种方式在存储以及播放音频等不需要音频加工的操作中非常常见，例如一个解码后的 MP3 流媒体。<br>
  <br>
- 在开发者接触到的网页音频接口中<u><strong>只有</strong></u>分离式音频片段，因为它主要用于音频加工。在处理过程中它使用分离式，但是当它传送到声卡中用于播放时，音频片段会被转化为交错式。反过来，当MP3被解码时，初始状态它是交错式的，但是他会被转化成分离式以用于音频加工。</p>
+ 在开发者接触到的网页音频接口中<u><strong>只有</strong></u>分离式音频片段，因为它主要用于音频加工。在处理过程中它使用分离式，但是当它传送到声卡中用于播放时，音频片段会被转化为交错式。反过来，当 MP3 被解码时，初始状态它是交错式的，但是他会被转化成分离式以用于音频加工。</p>
 
 <h2 id="声道">声道</h2>
 
@@ -170,7 +168,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="row">混频方式(Interpretation)</th>
+   <th scope="row">混频方式 (Interpretation)</th>
    <th scope="col">输入声道模式</th>
    <th scope="col">输出声道模式</th>
    <th scope="col">混频详细规则</th>
@@ -190,18 +188,18 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
    <td><code>2</code><br>
     <em>（立体声）</em></td>
    <td><em>从单声道到立体声的向上混频。</em><br>
-    唯一的输入声道（M）会被同时用于立体声的两个声道（L和R）。<br>
+    唯一的输入声道（M）会被同时用于立体声的两个声道（L 和 R）。<br>
     <code>output.L = input.M<br>
     output.R = input.M</code></td>
   </tr>
   <tr>
    <td><code>1</code><br>
     <em>（单声道）</em></td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">4</font><br>
+   <td>4<br>
     <em>（四声道）</em></td>
    <td><em>从单声道到四声道的向上混频。</em><br>
-    唯一的输入声道（M）会被同时用于非环绕声的两个声道（L和R）。<br>
-    环绕声道（SL和SR）将为静音。<br>
+    唯一的输入声道（M）会被同时用于非环绕声的两个声道（L 和 R）。<br>
+    环绕声道（SL 和 SR）将为静音。<br>
     <code>output.L = input.M<br>
     output.R = input.M<br>
     output.SL = 0<br>
@@ -210,10 +208,10 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>1</code><br>
     <em>（单声道）</em></td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">6</font><br>
+   <td>6<br>
     <em>（5.1）</em></td>
    <td>
-    <p><em>从单声道到5.1的向上混频。</em><br>
+    <p><em>从单声道到 5.1 的向上混频。</em><br>
      唯一的输入声道（M）会被同时用于中央声道（C）。<br>
      其余所有声道（L，R，LFE，SL，SR）都将保持静音。<br>
      <code>output.L = 0<br>
@@ -230,17 +228,17 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
    <td><code>1</code><br>
     <em>（单声道）</em></td>
    <td><em>从立体声到单声道的向下混频。</em><br>
-    两个输入声道（L和R）将会被均等的合并到唯一的输出声道（M）当中。<br>
+    两个输入声道（L 和 R）将会被均等的合并到唯一的输出声道（M）当中。<br>
     <code>output.M = 0.5 * (input.L + input.R)</code></td>
   </tr>
   <tr>
    <td><code>2</code><br>
     <em>（立体声）</em></td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">4</font><br>
+   <td>4<br>
     <em>（四声道）</em></td>
    <td><em>从立体声到四声道的向上混频。</em><br>
-    输入的左右声道（L和R）分别对应输出的非环绕左右声道（L和R）。<br>
-    环绕左右声道（SL和SR）将保持静音。<br>
+    输入的左右声道（L 和 R）分别对应输出的非环绕左右声道（L 和 R）。<br>
+    环绕左右声道（SL 和 SR）将保持静音。<br>
     <code>output.L = input.L<br>
     output.R = input.R<br>
     output.SL = 0<br>
@@ -249,11 +247,11 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>2</code><br>
     <em>（立体声）</em></td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">6</font><br>
+   <td>6<br>
     <em>（5.1）</em></td>
-   <td><em>从立体声到5.1的向上混频。</em><br>
-    输入的左右声道（L和R）分别对应输出的非环绕左右声道（L和R）。<br>
-    其余所有输出声道（C，SL，SR和LFE）将保持静音。<br>
+   <td><em>从立体声到 5.1 的向上混频。</em><br>
+    输入的左右声道（L 和 R）分别对应输出的非环绕左右声道（L 和 R）。<br>
+    其余所有输出声道（C，SL，SR 和 LFE）将保持静音。<br>
     <code>output.L = input.L<br>
     output.R = input.R<br>
     output.C = 0<br>
@@ -262,33 +260,33 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
     output.SR = 0</code></td>
   </tr>
   <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">4</font><br>
+   <td>4<br>
     <em>（四声道）</em></td>
    <td><code>1</code><br>
     <em>（单声道）</em></td>
    <td><em>从四声道到单声道的向下混频。</em><br>
-    四个输入声道（L，R，SL和SR）将会被均等的合并到唯一的输出声道（M）当中。<br>
+    四个输入声道（L，R，SL 和 SR）将会被均等的合并到唯一的输出声道（M）当中。<br>
     <code>output.M = 0.25 * (input.L + input.R + </code><code>input.SL + input.SR</code><code>)</code></td>
   </tr>
   <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">4</font><br>
+   <td>4<br>
     <em>（四声道）</em></td>
    <td><code>2</code><br>
     <em>（立体声）</em></td>
    <td><em>从四声道到立体声的向下混频。</em><br>
-    两个输入左声道（L和SL）将会被均等的合并到输出的左声道（L）当中。<br>
-    相似的，两个输入右声道（R和SR）将会被均等的合并到输出的右声道（R）当中。<br>
+    两个输入左声道（L 和 SL）将会被均等的合并到输出的左声道（L）当中。<br>
+    相似的，两个输入右声道（R 和 SR）将会被均等的合并到输出的右声道（R）当中。<br>
     <code>output.L = 0.5 * (input.L + input.SL</code><code>)</code><br>
     <code>output.R = 0.5 * (input.R + input.SR</code><code>)</code></td>
   </tr>
   <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">4</font><br>
+   <td>4<br>
     <em>（四声道）</em></td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">6</font><br>
+   <td>6<br>
     <em>（5.1）</em></td>
-   <td><em>从四声道到5.1的向上混频。</em><br>
-    四个输入声道（L，R，SL和SR）将会分别进入它们对应的输出声道（L，R，SL和SR）当中。<br>
-    其余输出声道（C和LFE）将保持静音。<br>
+   <td><em>从四声道到 5.1 的向上混频。</em><br>
+    四个输入声道（L，R，SL 和 SR）将会分别进入它们对应的输出声道（L，R，SL 和 SR）当中。<br>
+    其余输出声道（C 和 LFE）将保持静音。<br>
     <code>output.L = input.L<br>
     output.R = input.R<br>
     output.C = 0<br>
@@ -297,38 +295,38 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
     output.SR = input.SR</code></td>
   </tr>
   <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">6</font><br>
+   <td>6<br>
     <em>（5.1）</em></td>
    <td><code>1</code><br>
     <em>（单声道）</em></td>
-   <td><em>从5.1到单声道的向下混频。</em><br>
+   <td><em>从 5.1 到单声道的向下混频。</em><br>
     输入的低音炮声道（LFE）将会被抛弃。<br>
     其余声道按不同权值混合到唯一的输出声道（M）：<br>
-    输入的中央声道（C）权值为1，<br>
-    输入的非环绕侧声道（L和R）有所减弱，权值为<code>√2/2（即1/√2</code>，<code>约等于0.7071）</code>，<br>
-    输入的环绕声道（SL和SR）进一步衰减，权值为0.5。<br>
+    输入的中央声道（C）权值为 1，<br>
+    输入的非环绕侧声道（L 和 R）有所减弱，权值为<code>√2/2（即 1/√2</code>，<code>约等于 0.7071）</code>，<br>
+    输入的环绕声道（SL 和 SR）进一步衰减，权值为 0.5。<br>
     <code>output.M = 0.7071 * (input.L + input.R) + input.C + 0.5 * (input.SL + input.SR)</code></td>
   </tr>
   <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">6</font><br>
+   <td>6<br>
     <em>（5.1）</em></td>
    <td><code>2</code><br>
     <em>（立体声）</em></td>
-   <td><em>从5.1到立体声的向下混频。</em><br>
+   <td><em>从 5.1 到立体声的向下混频。</em><br>
     输入的低音炮声道（LFE）将会被抛弃。<br>
-    对于每侧的输出声道（L或R）：由输入的中央声道（C）先与同侧环绕声道（SL或SR）混合，加权（权值为<code>√2/2</code>）后与输入的同侧非环绕声道（L或R）混合得到。<br>
+    对于每侧的输出声道（L 或 R）：由输入的中央声道（C）先与同侧环绕声道（SL 或 SR）混合，加权（权值为<code>√2/2</code>）后与输入的同侧非环绕声道（L 或 R）混合得到。<br>
     <code>output.L = input.L + 0.7071 * (input.C + input.SL)<br>
     output.R = input.R + 0.7071 * (input.C + input.SR)</code></td>
   </tr>
   <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">6</font><br>
+   <td>6<br>
     <em>（5.1）</em></td>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">4</font><br>
+   <td>4<br>
     <em>（四声道）</em></td>
-   <td><em>从5.1到四声道的向下混频。</em><br>
+   <td><em>从 5.1 到四声道的向下混频。</em><br>
     输入的低音炮声道（LFE）将会被抛弃。<br>
-    对于每侧的输出声道（L或R）：由输入的中央声道（C）加权（权值为√2/2）后，与输入的同侧非环绕声道（L或R）混合后得到。<br>
-    对于每侧的输出环绕声道（SL或SR）：由同侧输入环绕声道（SL或SR）会不经改变直接传入。<br>
+    对于每侧的输出声道（L 或 R）：由输入的中央声道（C）加权（权值为√2/2）后，与输入的同侧非环绕声道（L 或 R）混合后得到。<br>
+    对于每侧的输出环绕声道（SL 或 SR）：由同侧输入环绕声道（SL 或 SR）会不经改变直接传入。<br>
     <code>output.L = input.L + 0.7071 * input.C<br>
     output.R = input.R + 0.7071 * input.C<br>
     <code>output.SL = input.SL<br>
@@ -340,7 +338,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
     <p>非标准的声道配置输入将会被按照 <code>channelInterpretation</code> 属性设置为 <code>discrete</code> 时的情况处理。</p>
 
     <div class="note">
-    <p>W3C规范中明确指出允许未来定义新的声道配置标准，因此未来在浏览器中使用此项的输出结果可能与现在不相同。</p>
+    <p>W3C 规范中明确指出允许未来定义新的声道配置标准，因此未来在浏览器中使用此项的输出结果可能与现在不相同。</p>
     </div>
    </td>
   </tr>
@@ -351,18 +349,18 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
     <p>（离散声道）</p>
    </th>
    <td rowspan="1">任意<br>
-    （x个声道）</td>
+    （x 个声道）</td>
    <td rowspan="1">任意<br>
-    （y个声道）<br>
+    （y 个声道）<br>
     其中<code>x&lt;y</code></td>
    <td><em>向上混频离散的声道。</em><br>
     根据相应的频道序号，将输入声道一对一的填入到输出声道中。对于没有输入声道能够对应的，该输出声道将保持静音。</td>
   </tr>
   <tr>
    <td rowspan="1">任意<br>
-    （x个声道）</td>
+    （x 个声道）</td>
    <td rowspan="1">任意<br>
-    （y个声道）<br>
+    （y 个声道）<br>
     其中<code>x&gt;y</code></td>
    <td><em>向下混频离散的声道。</em><br>
     根据相应的频道序号，将输入声道一对一的填入到输出声道中。对于没有输出声道能够对应的，该输入声道将被抛弃。</td>
@@ -385,18 +383,18 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <dl>
  <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
- <dd>返回一个{{domxref("Uint8Array")}} 无符号字节数组(unsigned byte array)，其中包含传递到此音频节点声音的实时频率数据。</dd>
+ <dd>返回一个{{domxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时频率数据。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
  <dd>返回一个{{domxref("Float32Array")}} 数组，其中包含传递到此音频节点声音的实时波形，时间数据。</dd>
  <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>
- <dd>返回一个{{domxref("Uint8Array")}} 无符号字节数组(unsigned byte array)，其中包含传递到此音频节点声音的实时波形，时间数据。</dd>
+ <dd>返回一个{{domxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时波形，时间数据。</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意：</strong> 更多信息可以参考我们的这篇文章：<a href="/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">基于Web Audio API实现音频可视化效果</a> 。</p>
+<p><strong>注意：</strong> 更多信息可以参考我们的这篇文章：<a href="/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">基于 Web Audio API 实现音频可视化效果</a> 。</p>
 </div>
 
 <h2 id="空间位置化">空间位置化</h2>

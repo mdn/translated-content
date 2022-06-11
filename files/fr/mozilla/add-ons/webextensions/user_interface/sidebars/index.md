@@ -19,7 +19,7 @@ Le navigateur peut inclure un certain nombre de barrières intégrées. Par exem
 
 Comme un popup d'action du navigateur, le contenu de la barre latérale est spécifié comme un document HTML. Lorsque l'utilisateur ouvre la barre latérale, son document de la barre latérale est chargé dans chaque fenêtre ouverte du navigateur. Chaque fenêtre possède sa propre instance du document. Lorsque de nouvelles fenêtres sont ouvertes, elles obtiennent également leurs propres documents de barre latérale.
 
-Un document pour un onglet particulier peut être défini en utilisant la fonction {{WebExtAPIRef("sidebarAction.setPanel()")}}. Une barre latérale peut comprendre quelle fenêtre elle appartient à l'utilisation de l'API  {{WebExtAPIRef("windows.getCurrent()")}} :
+Un document pour un onglet particulier peut être défini en utilisant la fonction {{WebExtAPIRef("sidebarAction.setPanel()")}}. Une barre latérale peut comprendre quelle fenêtre elle appartient à l'utilisation de l'API  {{WebExtAPIRef("windows.getCurrent()")}} :
 
 ```js
 // sidebar.js
@@ -30,7 +30,7 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) => {
 
 Ceci est utile si une barre latérale veut afficher différents contenus pour différentes fenêtres. Par exemple, regardez l'[exemple "annotate-page"](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
 
-Les documents de la barre latérale ont accès au même priviléges que les API JavaScript d'arrière-plan et les scripts contextuels. Ils peuvent accéder directement à la page de fond en utilisant {{WebExtAPIRef("runtime.getBackgroundPage()")}}, et peuvent interagir avec des scripts de contenu ou des applications natives à l'aide d'API de messagerie comme {{WebExtAPIRef("tabs.sendMessage()")}} et  {{WebExtAPIRef("runtime.sendNativeMessage()")}}.
+Les documents de la barre latérale ont accès au même priviléges que les API JavaScript d'arrière-plan et les scripts contextuels. Ils peuvent accéder directement à la page de fond en utilisant {{WebExtAPIRef("runtime.getBackgroundPage()")}}, et peuvent interagir avec des scripts de contenu ou des applications natives à l'aide d'API de messagerie comme {{WebExtAPIRef("tabs.sendMessage()")}} et  {{WebExtAPIRef("runtime.sendNativeMessage()")}}.
 
 Les documents de la barre latérale sont déchargés lorsque leur fenêtre de navigateur est fermée ou lorsque l'utilisateur ferme la barre latérale. Cela signifie que, contrairement aux pages de fond, les documents de la barre latérale ne restent pas chargés tout le temps, mais contrairement aux popups d'action du navigateur, ils restent chargés pendant que l'utilisateur interagit avec les pages Web.
 
@@ -38,7 +38,7 @@ Lorsqu'une extension est installée comme une barre latérale, sa barre latéral
 
 ## Spécification des barres latérales
 
-Pour spécifier une barre latérale, définissez le document par défaut avec la clé du manifest.json  [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), à côté d'un titre et d'une icône par défaut :
+Pour spécifier une barre latérale, définissez le document par défaut avec la clé du manifest.json  [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), à côté d'un titre et d'une icône par défaut :
 
 ```json
 "sidebar_action": {

@@ -15,7 +15,7 @@ translation_of: Web/API/Node/insertBefore
 
 <p><code><strong>Node.insertBefore()</strong></code> 方法在参考节点之前插入一个拥有指定父节点的子节点。如果给定的子节点是对文档中现有节点的引用，<code>insertBefore()</code> 会将其从当前位置移动到新位置（在将节点附加到其他节点之前，不需要从其父节点删除该节点）。</p>
 
-<p>这意味着一个节点不能同时位于文档的两个点中。因此，如果节点已经有父节点，则首先删除该节点，然后将其插入到新位置。在将节点追加到新父节点之前，可以使用 {{domxref("Node.cloneNode()")}} 复制节点。注意，使用 <code>cloneNode()</code> 创建的节点副本不会自动与原始节点保持同步。</p>
+<p>这意味着一个节点不能同时位于文档的两个点中。因此，如果被插入节点已经有父节点，则首先删除该节点，然后将其插入到新位置。若要保留已在文档中的被插入节点，在将该节点追加到新父节点之前，可以使用 {{domxref("Node.cloneNode()")}} 复制节点。注意，使用 <code>cloneNode()</code> 创建的节点副本不会自动与原始节点保持同步。</p>
 
 <p>如果引用节点为 <code>null</code>，则将指定的节点添加到指定父节点的子节点列表的末尾。</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/Node/insertBefore
 </pre>
 
 <ul>
- <li><code>insertedNode</code> 被插入节点(newNode)</li>
+ <li><code>insertedNode</code> 被插入节点 (newNode)</li>
  <li><code>parentNode</code> 新插入节点的父节点</li>
  <li><code>newNode</code> 用于插入的节点</li>
  <li><code>referenceNode</code> <code>newNode</code> 将要插在这个节点之前</li>
@@ -69,7 +69,7 @@ parentDiv.insertBefore(newNode, sp2); //隐式转换到节点类型
 //实验二结束
 
 //实验三：<em>referenceNode 为字符类型的 </em>"undefined"
-var sp2 = "undefined"; //不存在id为"childElement"的<em>referenceNode</em>
+var sp2 = "undefined"; //不存在 id 为"childElement"的<em>referenceNode</em>
 parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 //实验三结束
 &lt;/script&gt;
@@ -90,7 +90,7 @@ var sp2 = document.getElementById("childElement");
 //获得父节点的引用
 var parentDiv = sp2.parentNode;
 
-//在DOM中在sp2之前插入一个新元素
+//在 DOM 中在 sp2 之前插入一个新元素
 parentDiv.insertBefore(sp1, sp2);
 &lt;/script&gt;
 </pre>

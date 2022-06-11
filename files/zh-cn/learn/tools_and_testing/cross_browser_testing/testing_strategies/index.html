@@ -15,17 +15,17 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary"><br>
+<p><br>
  这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="row">准备:</th>
+   <th scope="row">准备：</th>
    <td>熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试的核心概念</a>。</td>
   </tr>
   <tr>
-   <th scope="row">对象:</th>
+   <th scope="row">目标：</th>
    <td>了解跨浏览器测试所涉及的高级概念。</td>
   </tr>
  </tbody>
@@ -37,14 +37,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>可行的替代方案是，尝试确保您的网站适用于最常见的浏览器和设备，然后进行防御性编码，以便为您的网站提供最广泛的支持范围。</p>
 
-<p>防御性编码的实质是一种智能回退措施：如果某个功能或样式在浏览器中不起作用，该网站将将降级为不太令人兴奋的东西，但仍然能提供可接受的用户体验——核心是：虽然网站看起来不那么漂亮，仍然可以访问。</p>
+<p>防御性编码的实质是一种智能回退措施：如果某个功能或样式在浏览器中不起作用，该网站能够将其降级为不太令人兴奋的后备方案，但仍然能提供可接受的用户体验——主要目的是保证网站可以访问，即使它看起来逊色一点。</p>
 
-<p>本章的目的是建立一个供您在测试时参考的浏览器/设备图表。 您可以根据需要将其设置成简单或复杂版本——常见的方法是具有多个等级的支持，例如：</p>
+<p>本章的目的是建立一个供您在测试时参考的浏览器/设备图表。您可以根据需要将其设置成简单或复杂版本——常见的方法是具有多个等级的支持，例如：</p>
 
 <ol>
- <li>A 级：普通/现代浏览器（仍在广泛使用）：需要彻底测试并提供全面支持。</li>
- <li>B 级：较旧/较少的浏览器 （少数用户还在使用）：测试并提供更基本的体验，以提供对核心信息和服务的完全访问。</li>
- <li>C 级：稀有/未知浏览器 ： 不进行测试，假设网站内容可以显示。 在我们的防御性编码起效的情况下，用户可以访问到网页的全部内容。</li>
+ <li>A 级别：常见/现代浏览器（仍在广泛使用）：需要彻底测试并提供全功能支持。</li>
+ <li>B 级别：较旧/功能少的浏览器（少数用户还在使用）：测试并提供更基础的体验，使得核心内容和服务能够完整访问。</li>
+ <li>C 级别：罕见/未知浏览器：不需要测试，假设网站内容可以显示。在我们的防御性编码起效的情况下，用户可以访问到网页的全部内容。</li>
 </ol>
 
 <p>在以下各节中，我们将以此等级为参考构建支持图表。</p>
@@ -55,191 +55,191 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <h3 id="有根据地假设">有根据地假设</h3>
 
-<p>您可以称之为“假设”或“直觉”。这不是一种准确，科学的方法，但作为具有网络行业经验的人，您至少应该对待测试的一些浏览器有些想法。这将形成一个良好的初级浏览器分级支持系统。</p>
+<p>您可以称之为“假设”或“直觉”。这不是一种准确、科学的方法，但作为具有网络行业经验的人，您应该要清晰地了解您所想测试的一些浏览器，这将形成一个良好的初级浏览器分级支持系统。</p>
 
-<p>例如，如果您居住在西欧或北美，您会发现许多人使用 Windows 和 Mac 的台式机或笔记本电脑，主要浏览器是 Chrome，Firefox，Safari，IE 和 Edge。您可以测试前三个浏览器最近的三个版本，因为它们会定期更新。对于Edge和IE，您应当近期的多个版本。这些浏览器都应该属于A级。</p>
+<p>例如，如果您居住在西欧或北美，您会发现许多人使用 Windows 和 Mac 的台式机或笔记本电脑，常用浏览器是 Chrome，Firefox，Safari，IE 和 Edge。您可以测试前三个浏览器的最新版本，因为它们会定期更新。对于 Edge 和 IE，您应当测试它们近期的几个版本。以上这些浏览器都属于 A 级别。</p>
 
 <div class="note">
-<p><strong>注意：</strong>您一次只能在计算机上安装一个版本的 IE 或 Edge，因此您可能必须使用虚拟机或其他方法来执行所需的测试。稍后请参阅虚拟机部分{{anch("Virtual machines")}}。</p>
+<p><strong>注意：</strong>您一次只能在计算机上安装一个版本的 IE 或 Edge，因此您可能必须使用虚拟机或其他方法来执行所需的测试。稍后请参阅<a href="#虚拟机">虚拟机</a>部分。</p>
 </div>
 
-<p>很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平​​板电脑上测试这些，以确保响应式设计的正常运行。</p>
+<p>很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平​​板电脑上测试它们，以确保响应式设计正常运行。</p>
 
-<p>您也许知道很多人仍然在使用 IE 9。这一版本陈旧而且功能较少，所以让我们把它放在B级别。</p>
+<p>您也许知道很多人仍然在使用 IE 9，它版本老旧而且功能较少，所以我们把它列为 B 级别。</p>
 
-<p>到目前为止，这为我们提供了以下支持级别：</p>
+<p>到目前为止，我们整理了以下浏览器支持级别：</p>
 
 <ol>
- <li>A 级：用于 Windows / Mac 的 Chrome 和 Firefox，用于 Mac 的 Safari，用于 Windows的 Edge 和 IE（每个版本的最后两个版本），用于 iPhone / iPad 的 iOS Safari，用于手机/平板电脑的 Android stock 浏览器（最后两个版本），用于手机和平板电脑上的 Chrome 和适用于 Android 的Firefox（最后两个版本）。</li>
- <li>B 级：适用于 Windows 的 IE 9</li>
- <li>C 级：无</li>
+ <li>A 级别：Windows / Mac 的 Chrome 和 Firefox，Mac 的 Safari，Windows 的 Edge 和 IE（它们的最后两个版本），iPhone / iPad 的 iOS Safari，手机/平板电脑的 Android stock 浏览器（最后两个版本），手机和平板电脑上的 Chrome 和适 Android 的 Firefox（最后两个版本）。</li>
+ <li>B 级别：Windows 的 IE 9</li>
+ <li>C 级别：无</li>
 </ol>
 
-<p>如果您居住在其他地方，或者正在开发其他地方（例如某些国家或地区）的网站，那么您可能会有不同的常用浏览器进行测试。</p>
+<p>如果您居住在其他地方，或者正在开发其他地方（例如某些国家或地区）的网站，那您可能需要对不同的常用浏览器进行测试。</p>
 
 <div class="note">
-<p><strong>注意：</strong>“我老板用Blackberry，所以我们最好确保它看起来很好”也可以是一个有说服力的论点。</p>
+<p><strong>注意：</strong>“我老板用 Blackberry，所以我们最好确保它看起来很好”也是一个很有说服力的理由。</p>
 </div>
 
-<h3 id="浏览器支持检测">浏览器支持检测</h3>
+<h3 id="浏览器支持检测">浏览器份额统计</h3>
 
-<p>您可以调用的一个有用的措施是浏览器支持统计信息,用于告知您的浏览器测试选项。有许多网站提供此类统计信息,例如:</p>
+<p>有一个很有用的方法来确定您要测试的浏览器的范围，那就是浏览器份额统计数据。有许多网站提供这些统计数据，例如：</p>
 
 <ul>
  <li><a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a></li>
  <li><a href="http://gs.statcounter.com/">Statcounter</a></li>
 </ul>
 
-<p>这些都以北美为中心,并不特别准确,但它们可以让您了解大趋势。</p>
+<p>这些数据都偏向于北美，并不是特别准确，不过它们可以让您了解大致趋势。</p>
 
-<p>例如,让我们转到 <a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a>。您可以看到 Opera 被列为具有小但可见的使用数字,因此,我们也应该将其添加到支持图表中,作为 C 级。</p>
+<p>例如，让我们转到 <a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a>。您可以看到 Opera 的使用人数很少但仍然有人使用，所以我们应该将其作为 C 级别添加到支持图表中。</p>
 
-<p>IE8 被列为重要,但它较老且不再能够。Opera Mini 非常重要,但在运行时运行复杂的 JavaScript 方面,它的能力并不大(有关详细信息,请参阅 <a href="https://dev.opera.com/articles/opera-mini-and-javascript/">Opera Mini and JavaScrip</a>)。我们也应该把它放到B级。</p>
+<p>IE8 被列为重要，但它较老且不再更新。Opera Mini 也很重要，但在运行复杂的 JavaScript 方面，它的能力并不强（有关详细信息，请参阅 <a href="https://dev.opera.com/articles/opera-mini-and-javascript/">Opera Mini and JavaScrip</a>）。我们应该把它放到 B 级别。</p>
 
 <h3 id="使用分析工具">使用分析工具</h3>
 
-<p>更准确的数据源,如果你能得到它,来自像<a href="https://www.google.com/analytics/">Google Analytics</a>这样的分析应用程序。这是一个应用程序,将为您提供准确的统计数据,究竟是什么浏览器的人正在使用浏览您的网站。当然,这依赖于您已经有一个网站使用它,所以它是没有多大的适合全新的网站。</p>
+<p>使用像 <a href="https://www.google.com/analytics/">Google Analytics</a> 这样的分析网站来获取更准确的数据。它能够为您提供诸如人们在用什么浏览器来浏览您的网站这样的精准的统计数据。当然，这需要您已经有一个网站在使用它，所以它不太适合新上线的网站。</p>
 
-<p>但是,分析历史记录可用于查找支持统计信息以影响公司网站的新版本或要添加到现有站点的新功能。如果您有这些可用,它们比上述全球浏览器统计信息更准确。</p>
+<p>但是，析历史记录可用于查找支持统计信息以影响公司网站的新版本或要添加到现有站点的新功能。如果您有这些可用，它们比上述全球浏览器统计信息更准确。</p>
 
-<h4 id="配置Google分析">配置Google分析</h4>
+<h4 id="配置Google分析">配置 Google 分析</h4>
 
 <ol>
- <li>首先,您需要一个谷歌帐户。使用此帐户可登录<a href="https://www.google.com/analytics/">Google Analytics</a>。 </li>
- <li>选择 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> (web))选项,然后单击"注册"按钮。</li>
+ <li>首先，您需要一个谷歌帐户。使用此帐户可登录<a href="https://www.google.com/analytics/">Google Analytics</a>。 </li>
+ <li>选择 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> (web)) 选项，然后单击"注册"按钮。</li>
  <li>在注册页面中输入您的网站/应用详细信息。这是相当直观的设置;获得正确的最重要的字段是网站 URL。这需要是您的网站/应用的根 URL。</li>
- <li>填写完所有内容后,按"获取跟踪 ID"按钮,然后接受显示的服务条款。</li>
- <li>下一页为您提供一些代码段和其他说明。对于基本网站,您需要做的是复制网站跟踪代码块,并将其粘贴到您要在网站上使用 Google Analytics 跟踪的所有不同页面。您可以在关闭<code>&lt;/body&gt;</code>标记下方,也可以位于其他适当位置,以防止其与应用程序代码混淆。</li>
- <li>将更改上载到开发服务器,或将代码上载到其他任何位置。</li>
+ <li>填写完所有内容后，按"获取跟踪 ID"按钮，然后接受显示的服务条款。</li>
+ <li>下一页为您提供一些代码段和其他说明。对于基本网站，您需要做的是复制网站跟踪代码块，并将其粘贴到您要在网站上使用 Google Analytics 跟踪的所有不同页面。您可以在关闭<code>&lt;/body&gt;</code>标记下方，也可以位于其他适当位置，以防止其与应用程序代码混淆。</li>
+ <li>将更改上载到开发服务器，或将代码上载到其他任何位置。</li>
 </ol>
 
 <p>就是这样！您的网站现在应该准备好开始报告分析数据。</p>
 
 <h4 id="学习分析数据">学习分析数据</h4>
 
-<p>现在,您应该能够返回 <a href="https://analytics.google.com/analytics/web">Analytics Web</a>主页,并开始查看您收集的有关网站的数据(当然,您需要留出一点时间才能真正收集一些数据)。</p>
+<p>现在，您应该能够返回 <a href="https://analytics.google.com/analytics/web">Analytics Web</a>主页，并开始查看您收集的有关网站的数据 (当然，您需要留出一点时间才能真正收集一些数据)。</p>
 
-<p>默认情况下,您应该看到报告选项卡,如下所示:</p>
+<p>默认情况下，您应该看到报告选项卡，如下所示：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14081/analytics-reporting.png" style="border-style: solid; border-width: 1px; display: block; height: 386px; margin: 0px auto; width: 700px;"></p>
 
-<p>有大量的数据,你可以看看使用谷歌分析––自定义报告在不同的类别,等等––我们没有时间讨论这一切。 <a href="https://support.google.com/analytics/answer/1008015">Getting started with Analytics</a> 为初学者提供了一些有关报告(以及更多)的有用指导。</p>
+<p>有大量的数据，你可以看看使用谷歌分析––自定义报告在不同的类别，等等––我们没有时间讨论这一切。 <a href="https://support.google.com/analytics/answer/1008015">Getting started with Analytics</a> 为初学者提供了一些有关报告 (以及更多) 的有用指导。</p>
 
-<p>还应鼓励您查看左侧的不同选项,并查看您可以找到哪些类型的数据。例如,您可以通过从左侧菜单中选择" <em>Audience &gt; Technology &gt; Browser &amp; OS</em>"来了解用户正在使用的浏览器和操作系统。</p>
+<p>还应鼓励您查看左侧的不同选项，并查看您可以找到哪些类型的数据。例如，您可以通过从左侧菜单中选择" <em>Audience &gt; Technology &gt; Browser &amp; OS</em>"来了解用户正在使用的浏览器和操作系统。</p>
 
 <div class="note">
-<p><strong>注意</strong>:使用 Google 分析时,您需要提防误导性偏见,例如"我们没有 Firefox 移动用户"可能会导致您不必为 Firefox 移动提供支持。但是,你不会有任何火狐移动用户,如果该网站被打破在火狐手机摆在首位。</p>
+<p><strong>注意</strong>：使用 Google 分析时，您需要提防误导性偏见，例如"我们没有 Firefox 移动用户"可能会导致您不必为 Firefox 移动提供支持。但是，你不会有任何火狐移动用户，如果该网站被打破在火狐手机摆在首位。</p>
 </div>
 
 <h3 id="其他注意事项">其他注意事项</h3>
 
-<p>您可能还应包括其他注意事项。您绝对应该将辅助功能作为 A 级测试要求(我们将在处理常见辅助功能问题一文中介绍您应该测试的内容)</p>
+<p>您可能还应包括其他注意事项。您绝对应该将辅助功能作为 A 级测试要求 (我们将在处理常见辅助功能问题一文中介绍您应该测试的内容)</p>
 
-<p>此外,您可能还有其他注意事项。如果要创建某种公司 Intranet,以便向经理提供销售数据,并且例如,所有经理都提供了 Windows 手机,则可能需要将移动 IE 支持作为优先事项。</p>
+<p>此外，您可能还有其他注意事项。如果要创建某种公司 Intranet，以便向经理提供销售数据，并且例如，所有经理都提供了 Windows 手机，则可能需要将移动 IE 支持作为优先事项。</p>
 
 <h3 id="最终的支持图表">最终的支持图表</h3>
 
-<p>因此,我们的最终支持图表最终将如下所示:</p>
+<p>因此，我们的最终支持图表最终将如下所示：</p>
 
 <ol>
- <li>A 级:适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器(最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本)在手机平板电脑上.通过常见测试的可访问性。</li>
- <li>B 级:IE 8 和 9 用于 Windows,Opera Mini。</li>
- <li>C级:Opera,其他合适的现代浏览器。</li>
+ <li>A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器 (最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本) 在手机平板电脑上。通过常见测试的可访问性。</li>
+ <li>B 级：IE 8 和 9 用于 Windows，Opera Mini。</li>
+ <li>C 级：Opera，其他合适的现代浏览器。</li>
 </ol>
 
 <h2 id="你想要测试什么？">你想要测试什么？</h2>
 
-<p>当您的代码库有需要测试的新添加项时,在开始测试之前,应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的,也可以是功能性的, 两者结合起来, 成为可用的网站功能。</p>
+<p>当您的代码库有需要测试的新添加项时，在开始测试之前，应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的，也可以是功能性的，两者结合起来，成为可用的网站功能。</p>
 
-<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码 </a>, <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
+<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码</a>，<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14083/sliding-box-demo.png" style="border-style: solid; border-width: 1px; display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
 
-<p>此功能的测试标准可以这样编写:</p>
+<p>此功能的测试标准可以这样编写：</p>
 
-<p>A 级和 B 级:</p>
+<p>A 级和 B 级：</p>
 
 <ul>
- <li>按钮应该由用户的主要控制机制激活,不管它是什么 ––这应该包括鼠标、键盘和触摸</li>
+ <li>按钮应该由用户的主要控制机制激活，不管它是什么 ––这应该包括鼠标、键盘和触摸</li>
  <li>切换按钮应使信息框显示/消失。</li>
  <li>文本应可读。</li>
  <li>使用屏幕阅读器的视障用户应该能够访问文本。</li>
 </ul>
 
-<p>A 级:</p>
+<p>A 级：</p>
 
 <ul>
  <li>信息框在出现/消失时应平滑地动画。</li>
  <li>渐变和文本阴影应显示为增强框的外观。</li>
 </ul>
 
-<p>You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).您可能会从示例中的文本中注意到它在 IE8 中不起作用 ––根据我们的支持图表,这是一个问题,您必须处理这个问题,如果浏览器不采用其他方式,则可能使用功能检测库以不同的方式实现功能（如果浏览器不支持 CSS 转换的话）(请参阅实现功能检测,稍后将在本课程中)。</p>
+<p>You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).您可能会从示例中的文本中注意到它在 IE8 中不起作用 ––根据我们的支持图表，这是一个问题，您必须处理这个问题，如果浏览器不采用其他方式，则可能使用功能检测库以不同的方式实现功能（如果浏览器不支持 CSS 转换的话）(请参阅实现功能检测，稍后将在本课程中)。</p>
 
-<p>您可能还注意到,该按钮仅使用键盘无法使用, 这也需要纠正。也许我们可以使用一些JavaScript来实现一个键盘控件的切换,或者完全使用一些其他的方法?</p>
+<p>您可能还注意到，该按钮仅使用键盘无法使用，这也需要纠正。也许我们可以使用一些 JavaScript 来实现一个键盘控件的切换，或者完全使用一些其他的方法？</p>
 
-<p>这些测试条件很有用,因为:</p>
+<p>这些测试条件很有用，因为：</p>
 
 <ul>
- <li>当您执行测试时,它们会为您提供一组要遵循的步骤。</li>
- <li>在执行测试时,可以轻松地将它们转换为用户组要遵循的指令集(e.g. "try to active the button using your mouse, and then the keyboard...")–– 请参阅下面的 {{anch("User testing")}}。</li>
- <li>它们还可以为编写自动测试提供基础。如果您确切知道要测试的内容以及成功条件是什么(请参阅使用自动化工具自动执行浏览器测试,请稍后在系列中)编写此类测试。</li>
+ <li>当您执行测试时，它们会为您提供一组要遵循的步骤。</li>
+ <li>在执行测试时，可以轻松地将它们转换为用户组要遵循的指令集 (e.g. "try to active the button using your mouse, and then the keyboard...")–– 请参阅下面的 <a href="#用户测试">用户测试</a>。</li>
+ <li>它们还可以为编写自动测试提供基础。如果您确切知道要测试的内容以及成功条件是什么 (请参阅使用自动化工具自动执行浏览器测试，请稍后在系列中) 编写此类测试。</li>
 </ul>
 
 <h2 id="建立一个测试实验室">建立一个测试实验室</h2>
 
-<p>执行浏览器测试的一个选项是自己进行测试。为此,您可能需要使用实际物理设备和模拟环境的组合(使用仿真器或虚拟机)。</p>
+<p>执行浏览器测试的一个选项是自己进行测试。为此，您可能需要使用实际物理设备和模拟环境的组合 (使用仿真器或虚拟机)。</p>
 
 <h3 id="真实设备">真实设备</h3>
 
-<p>通常最好让一个实际的设备运行您要测试的浏览器 , 这在行为和整体用户体验方面提供了最高的准确性。对于合理的低级设备实验室,您可能需要以下内容:</p>
+<p>通常最好让一个实际的设备运行您要测试的浏览器 , 这在行为和整体用户体验方面提供了最高的准确性。对于合理的低级设备实验室，您可能需要以下内容：</p>
 
 <ul>
- <li>Mac,安装了您需要测试的浏览器,包括火狐、Chrome、Opera 和 Safari。</li>
- <li>安装了需要测试的浏览器的 Windows 电脑,其中可能包括Edge (or IE), Chrome, Firefox和 Opera。</li>
- <li>更高规格的Android手机和平板电脑,安装了浏览器,你需要测试 - 这可能包括Chrome,火狐,和Opera Mini的Android,以及原来的Android stock浏览器。</li>
- <li>更高规格的 iOS 手机和平板电脑,并安装了您需要测试的浏览器 , 这可能包括 iOS Safari,以及适用于 iOS 的 Chrome、Firefox 和 Opera Mini。</li>
+ <li>Mac，安装了您需要测试的浏览器，包括火狐、Chrome、Opera 和 Safari。</li>
+ <li>安装了需要测试的浏览器的 Windows 电脑，其中可能包括 Edge (or IE), Chrome, Firefox 和 Opera。</li>
+ <li>更高规格的 Android 手机和平板电脑，安装了浏览器，你需要测试 - 这可能包括 Chrome，火狐，和 Opera Mini 的 Android，以及原来的 Android stock 浏览器。</li>
+ <li>更高规格的 iOS 手机和平板电脑，并安装了您需要测试的浏览器 , 这可能包括 iOS Safari，以及适用于 iOS 的 Chrome、Firefox 和 Opera Mini。</li>
 </ul>
 
-<p>如果可以获取这些选项,则以下是不错的选项:</p>
+<p>如果可以获取这些选项，则以下是不错的选项：</p>
 
 <ul>
- <li>可用的Linux PC ,以防您需要测试特定于 Linux 版本的浏览器的错误。Linux用户只使用火狐、Opera 和 Chrome。如果只有一台计算机可用,则可以考虑在单独的分区上创建运行 Linux 和 Windows 的双引导计算机。Ubuntu 的安装程序使设置起来非常简单;有关此帮助,请参阅<a href="https://help.ubuntu.com/community/WindowsDualBoot">WindowsDualBoot</a>。</li>
- <li>几个低规格的移动设备,因此您可以测试低功率处理器上的动画等功能的性能。</li>
+ <li>可用的 Linux PC ,以防您需要测试特定于 Linux 版本的浏览器的错误。Linux 用户只使用火狐、Opera 和 Chrome。如果只有一台计算机可用，则可以考虑在单独的分区上创建运行 Linux 和 Windows 的双引导计算机。Ubuntu 的安装程序使设置起来非常简单;有关此帮助，请参阅<a href="https://help.ubuntu.com/community/WindowsDualBoot">WindowsDualBoot</a>。</li>
+ <li>几个低规格的移动设备，因此您可以测试低功率处理器上的动画等功能的性能。</li>
 </ul>
 
-<p>您的主工作计算机也可以用于安装其他工具以用于特定目的,例如辅助功能审核工具、屏幕阅读器和仿真器/虚拟机。</p>
+<p>您的主工作计算机也可以用于安装其他工具以用于特定目的，例如辅助功能审核工具、屏幕阅读器和仿真器/虚拟机。</p>
 
-<p>一些大型公司拥有设备实验室,这些实验室库存了大量不同的设备,使开发人员能够在非常具体的浏览器/设备组合上查找 Bug。较小的公司和个人通常负担不起如此复杂的实验室,因此倾向于使用较小的实验室、仿真器、虚拟机和商业测试应用程序。</p>
+<p>一些大型公司拥有设备实验室，这些实验室库存了大量不同的设备，使开发人员能够在非常具体的浏览器/设备组合上查找 Bug。较小的公司和个人通常负担不起如此复杂的实验室，因此倾向于使用较小的实验室、仿真器、虚拟机和商业测试应用程序。</p>
 
 <p>我们将介绍下面的其他选项。</p>
 
 <div class="note">
-<p><strong>注意</strong>:已做出一些努力用来创建可公开访问的设备实验室, 请参阅 <a href="https://opendevicelab.com/">Open Device Labs</a>。</p>
+<p><strong>注意</strong>:已做出一些努力用来创建可公开访问的设备实验室，请参阅 <a href="https://opendevicelab.com/">Open Device Labs</a>。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>:我们还需要考虑辅助功能 — 可以在计算机上安装许多有用的工具,以方便辅助功能测试,但我们将在本课程的后面部分介绍"处理常见辅助功能问题"一文中的工具。</p>
+<p><strong>注意</strong>:我们还需要考虑辅助功能 — 可以在计算机上安装许多有用的工具，以方便辅助功能测试，但我们将在本课程的后面部分介绍"处理常见辅助功能问题"一文中的工具。</p>
 </div>
 
 <h3 id="模拟器">模拟器</h3>
 
-<p>仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序,允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。</p>
+<p>仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。</p>
 
-<p>仿真器可能与测试设备条件一样简单。例如,如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计,则可以使用 Firefox 的<a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>。 Safari 也有类似的模式,可以通过访问 “<em>Safari &gt; 首选项”</em>和"显示开发"菜单,然后选择"开发"&amp;gt;"输入响应式设计模式"来启用。  Chrome 也有类似的功能:设备模式(请参阅<a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>)。</p>
+<p>仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的<a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>。Safari 也有类似的模式，可以通过访问“<em>Safari &gt; 首选项”</em>和"显示开发"菜单，然后选择"开发"&amp;gt;"输入响应式设计模式"来启用。  Chrome 也有类似的功能：设备模式 (请参阅<a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>)。</p>
 
-<p>不过,您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示:</p>
+<p>不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：</p>
 
 <ul>
- <li>用于开发Android应用程序的官方<a href="https://developer.android.com/studio/">Android Studio IDE</a>对于仅测试Google Chrome或旧版Android浏览器上的网站来说有点沉重，但它确实附带了一个强大的<a href="https://developer.android.com/studio/run/emulator.html">emulator</a>。如果你想要更轻巧的东西，<a href="http://leapdroid.com/">LeapDroid</a>是Windows的一个很好的选择，<a href="http://www.andyroid.net/">Andy</a> 是一个合理的选择，可以在Windows和Mac上运行。</li>
- <li>Apple提供了一个名为<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html">Simulator</a> 的应用程序，它运行在<a href="https://developer.apple.com/xcode/">XCode</a>开发环境之上，并模拟iPad / iPhone / Apple Watch / Apple TV。这包括本机iOS Safari浏览器。不幸的是，这只能在Mac上运行。</li>
+ <li>用于开发 Android 应用程序的官方<a href="https://developer.android.com/studio/">Android Studio IDE</a>对于仅测试 Google Chrome 或旧版 Android 浏览器上的网站来说有点沉重，但它确实附带了一个强大的<a href="https://developer.android.com/studio/run/emulator.html">emulator</a>。如果你想要更轻巧的东西，<a href="http://leapdroid.com/">LeapDroid</a>是 Windows 的一个很好的选择，<a href="http://www.andyroid.net/">Andy</a> 是一个合理的选择，可以在 Windows 和 Mac 上运行。</li>
+ <li>Apple 提供了一个名为<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html">Simulator</a> 的应用程序，它运行在<a href="https://developer.apple.com/xcode/">XCode</a>开发环境之上，并模拟 iPad / iPhone / Apple Watch / Apple TV。这包括本机 iOS Safari 浏览器。不幸的是，这只能在 Mac 上运行。</li>
 </ul>
 
 <p>您也经常可以为其他移动设备环境找到模拟器，例如：</p>
 
 <ul>
- <li><a href="https://developer.blackberry.com/develop/simulator/">Blackberry</a> （适用于Windows，Mac OSX和Linux的模拟器）。</li>
+ <li><a href="https://developer.blackberry.com/develop/simulator/">Blackberry</a> （适用于 Windows，Mac OSX 和 Linux 的模拟器）。</li>
  <li>如果要进行测试，可以单独模拟<a href="https://dev.opera.com/articles/installing-opera-mini-on-your-computer/">Opera Mini</a>。</li>
- <li>适用于Windows Mobile操作系统的仿真器：请参阅<a href="https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx">Windows Phone Emulator for Windows Phone 8</a> 和<a href="https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator">Test with the Microsoft Emulator for Windows 10 Mobile</a>（这些仅适用于Windows）。</li>
+ <li>适用于 Windows Mobile 操作系统的仿真器：请参阅<a href="https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx">Windows Phone Emulator for Windows Phone 8</a> 和<a href="https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator">Test with the Microsoft Emulator for Windows 10 Mobile</a>（这些仅适用于 Windows）。</li>
 </ul>
 
 <div class="note">
@@ -251,13 +251,13 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <p>虚拟机是在台式计算机上运行的应用程序，允许您运行整个操作系统的仿真，每个操作系统都划分在自己的虚拟硬盘驱动器中（通常由主机硬盘上存在的单个大文件表示）。有许多流行的虚拟机应用程序可用，例如<a href="www.parallels.com/">Parallels</a>，<a href="http://www.vmware.com/">VMWare</a>和<a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a>;我们个人喜欢后者，因为它是免费的。</p>
 
 <div class="note">
-<p><strong>注意</strong>：您需要可用的大容量硬盘空间来运行虚拟机模拟;模拟的每个操作系统都会占用大量内存。您可能倾向于为每次安装选择所需的硬盘空间;你也可能会试图侥幸使用10GB空间，但会被建议使用50GB空间或更多，以便让操作系统运行可靠。大多数虚拟机应用程序提供的一个很好的选择是创建一个动态分配（<strong>dynamically allocated）</strong>的硬盘驱动器，它会随着需要的增长和缩小而动态改变。</p>
+<p><strong>注意</strong>：您需要可用的大容量硬盘空间来运行虚拟机模拟;模拟的每个操作系统都会占用大量内存。您可能倾向于为每次安装选择所需的硬盘空间;你也可能会试图侥幸使用 10GB 空间，但会被建议使用 50GB 空间或更多，以便让操作系统运行可靠。大多数虚拟机应用程序提供的一个很好的选择是创建一个动态分配（<strong>dynamically allocated）</strong>的硬盘驱动器，它会随着需要的增长和缩小而动态改变。</p>
 </div>
 
 <p>要使用虚拟盒，您需要：</p>
 
 <ol>
- <li>获取要模拟的操作系统的安装程序磁盘或映像（例如ISO文件）。 Virtual Box无法提供这些;大多数，如Windows操作系统，是无法自由分发的商业产品。</li>
+ <li>获取要模拟的操作系统的安装程序磁盘或映像（例如 ISO 文件）。Virtual Box 无法提供这些;大多数，如 Windows 操作系统，是无法自由分发的商业产品。</li>
  <li><a href="https://www.virtualbox.org/wiki/Downloads">下载</a>适用于您的操作系统的相应安装程序并进行安装。</li>
  <li>打开应用程序;您将看到如下视图： <img alt="" src="https://mdn.mozillademos.org/files/14089/virtualbox.png" style="display: block; height: 512px; margin: 0px auto; width: 700px;"></li>
  <li>要创建新虚拟机，请按左上角的“新建”按钮。</li>
@@ -265,14 +265,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
   <ol>
    <li>为新虚拟机提供名称</li>
    <li>选择要在其上安装的操作系统和版本</li>
-   <li>设置应分配多少RAM（我们建议使用2048MB或2GB）</li>
+   <li>设置应分配多少 RAM（我们建议使用 2048MB 或 2GB）</li>
    <li>创建虚拟硬盘（在包含立即创建虚拟硬盘，VDI（虚拟磁盘映像）和动态分配的三个对话框中选择默认选项）。</li>
-   <li>选择虚拟硬盘的文件位置和大小（选择一个合理的名称和位置来保留它，并且大小指定大约50GB，或者您可以轻松指定）。</li>
+   <li>选择虚拟硬盘的文件位置和大小（选择一个合理的名称和位置来保留它，并且大小指定大约 50GB，或者您可以轻松指定）。</li>
   </ol>
  </li>
 </ol>
 
-<p>现在，新的虚拟框应出现在Virtual Box UI主窗口的左侧菜单中。此时，您可以双击它以打开虚拟机––它将开始启动虚拟机，但它还没有安装操作系统。此时，您需要将对话框指向安装程序映像/磁盘，它将运行在虚拟机上安装它的步骤，就像它是真正的计算机一样。</p>
+<p>现在，新的虚拟框应出现在 Virtual Box UI 主窗口的左侧菜单中。此时，您可以双击它以打开虚拟机––它将开始启动虚拟机，但它还没有安装操作系统。此时，您需要将对话框指向安装程序映像/磁盘，它将运行在虚拟机上安装它的步骤，就像它是真正的计算机一样。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14085/virtualbox-installer.png" style="display: block; margin: 0 auto;"></p>
 
@@ -286,7 +286,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>您需要像处理任何实际安装一样处理此虚拟操作系统安装 - 例如，安装要测试的浏览器，安装防病毒程序以保护其免受病毒侵害。</p>
 
-<p>拥有多个虚拟机非常有用，特别是对于Windows IE / Edge测试 - 在Windows上，您无法并排安装多个版本的默认浏览器，因此您可能需要构建一个虚拟机库来处理根据需要进行不同测试，例如：</p>
+<p>拥有多个虚拟机非常有用，特别是对于 Windows IE / Edge 测试 - 在 Windows 上，您无法并排安装多个版本的默认浏览器，因此您可能需要构建一个虚拟机库来处理根据需要进行不同测试，例如：</p>
 
 <ul>
  <li>Windows 10 with Edge 14</li>
@@ -300,7 +300,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>：虚拟机的另一个好处是虚拟磁盘映像是相当独立的。如果您正在团队中工作，则可以创建一个虚拟磁盘映像，然后复制并传递它。如果它是许可产品，只需确保您拥有运行所有Windows副本或正在运行的任何其他副本所需的许可证。</p>
+<p><strong>注意</strong>：虚拟机的另一个好处是虚拟磁盘映像是相当独立的。如果您正在团队中工作，则可以创建一个虚拟磁盘映像，然后复制并传递它。如果它是许可产品，只需确保您拥有运行所有 Windows 副本或正在运行的任何其他副本所需的许可证。</p>
 </div>
 
 <h3 id="自动化和商业应用">自动化和商业应用</h3>
@@ -315,7 +315,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>在我们继续之前，我们将通过谈论用户测试来完成本文––如果您有一个愿意用户组来测试您的新功能，这可能是一个很好的选择。请记住，这可以像你希望的那样廉价又有效––你的用户群可以是一群朋友，一群同事，或一群无偿或有偿志愿者，这取决于你是否有钱花在测试上。</p>
 
-<p>通常，您可以让用户在某种开发服务器上查看包含新功能的页面或视图，这样您就不会在完成之前放置最终站点或更改。你应该让他们按照一些步骤报告他们得到的结果。提供一组步骤（有时称为脚本）非常有用，这样您就可以获得与您尝试测试的内容相关的更可靠的结果。我们在上面的{{anch("What are you going to test")}} 部分中提到了这一点––很容易将其中详述的测试标准转换为要遵循的步骤。例如，以下内容适用于有视力的用户：</p>
+<p>通常，您可以让用户在某种开发服务器上查看包含新功能的页面或视图，这样您就不会在完成之前放置最终站点或更改。你应该让他们按照一些步骤报告他们得到的结果。提供一组步骤（有时称为脚本）非常有用，这样您就可以获得与您尝试测试的内容相关的更可靠的结果。我们在上面的 <a href="#你想要测试什么？">你想要测试什么</a> 部分中提到了这一点––很容易将其中详述的测试标准转换为要遵循的步骤。例如，以下内容适用于有视力的用户：</p>
 
 <ul>
  <li>在台式计算机上使用鼠标单击问号按钮几次。刷新浏览器窗口。</li>
@@ -330,7 +330,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <ul>
  <li>尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他此类操作，并在该配置文件中运行测试（例如，请参阅<a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">Use the Profile Manager to create and remove Firefox profiles</a>和<a href="https://support.google.com/chrome/answer/2364824">Share Chrome with others or add personas</a>）</li>
- <li>在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox中的<a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">Private Browsing</a>，Chrome中的<a href="https://support.google.com/chrome/answer/95464">Incognito Mode</a>），因此不会保存cookie和临时文件等内容。</li>
+ <li>在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox 中的<a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">Private Browsing</a>，Chrome 中的<a href="https://support.google.com/chrome/answer/95464">Incognito Mode</a>），因此不会保存 cookie 和临时文件等内容。</li>
 </ul>
 
 <p>这些步骤旨在确保您正在测试的浏览器尽可能“纯粹（pure）”，即没有安装任何可能影响测试结果的内容。</p>
@@ -347,20 +347,20 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>阅读本文后，您现在应该知道如何识别目标受众/目标浏览器列表，然后在该列表上有效地执行跨浏览器测试。</p>
 
-<p>接下来，我们将把注意力转向测试可能发现的实际代码问题，从HTML和CSS开始。</p>
+<p>接下来，我们将把注意力转向测试可能发现的实际代码问题，从 HTML 和 CSS 开始。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
 
 
 
-<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>本章内容</strong></span></font></p>
+<p><strong>本章内容</strong></p>
 
 <p>
  </p><ul>
   <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试简介</a></li>
   <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">进行测试的策略</a></li>
-  <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">处理常见的HTML和CSS问题</a></li>
-  <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">处理常见的JavaScript问题</a></li>
+  <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">处理常见的 HTML 和 CSS 问题</a></li>
+  <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">处理常见的 JavaScript 问题</a></li>
   <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">处理常见的辅助功能问题</a></li>
   <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">执行特性检测</a></li>
   <li><a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">自动化测试简介</a></li>

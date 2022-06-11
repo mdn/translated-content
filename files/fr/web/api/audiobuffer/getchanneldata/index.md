@@ -76,7 +76,7 @@ bouton.onclick = function() {
 
 | Spécification                                                                                                                                                | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-getChannelData-Float32Array-unsigned-long-channel', 'getChannelData')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-getChannelData-Float32Array-unsigned-long-channel', 'getChannelData')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

@@ -15,7 +15,7 @@ translation_of: Web/API/File
 
 <p>The <strong><code>File</code></strong> interface provides information about files and allows JavaScript in a web page to access their content.</p>
 
-<p><code>File</code> objects are generally retrieved from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{domxref("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{domxref("HTMLCanvasElement")}}. In Gecko, privileged code can create <code>File</code> objects representing any local file without user interaction (see {{anch("Implementation notes")}} for more information.)</p>
+<p><code>File</code> objects are generally retrieved from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{domxref("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{domxref("HTMLCanvasElement")}}. In Gecko, privileged code can create <code>File</code> objects representing any local file without user interaction (see <a href="#implementation_notes">Implementation notes</a> for more information.)</p>
 
 <p>A <code>File</code> object is a specific kind of a {{domxref("Blob")}}, and can be used in any context that a Blob can. In particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, and {{domxref("XMLHttpRequest", "", "send()")}} accept both <code>Blob</code>s and <code>File</code>s.</p>
 
@@ -92,8 +92,8 @@ translation_of: Web/API/File
 
 <ul>
  <li>In Gecko, you can use this API from within chrome code. See <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a> for details. To use it from chrome code, JSM, and Bootstrap scope, you have to import it using <code><a href="/en-US/docs/Components.utils.importGlobalProperties">Cu.importGlobalProperties</a>(['File']);</code></li>
- <li>Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an {{interface("nsIFile")}} object to the DOM <code>File</code> constructor to specify the file to reference.</li>
- <li>Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the {{interface("nsIDOMFile")}} object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
+ <li>Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an <code>nsIFile</code> object to the DOM <code>File</code> constructor to specify the file to reference.</li>
+ <li>Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the <code>nsIDOMFile</code> object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
   <pre class="syntaxbox">new File(
   Array parts,
   String filename,

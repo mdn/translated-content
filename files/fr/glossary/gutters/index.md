@@ -8,7 +8,7 @@ original_slug: Glossaire/Gutters
 
 ## Exemple
 
-Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et `20px` entre les pistes de lignes.
+Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et `20px` entre les pistes de lignes.
 
 ```css hidden
 * {box-sizing: border-box;}

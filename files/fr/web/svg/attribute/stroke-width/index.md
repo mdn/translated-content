@@ -46,7 +46,7 @@ html,body,svg { height:100% }
       <td>
         <strong
           ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        > |
+        > |
         <strong
           ><a href="/docs/Web/SVG/Content_type#Percentage"
             >&#x3C;percentage></a
@@ -65,7 +65,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note :** SVG2 introduit les valeurs en pourcentage pour `stroke-width`, Cependant, ce n'est pas souvent pris en charge pour le moment (_voir {{anch('Compatibilité des navigateurs')}} ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> **Note :** SVG2 introduit les valeurs en pourcentage pour `stroke-width`, Cependant, ce n'est pas souvent pris en charge pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
 Une valeur en pourcentage est toujours calculée en tant que pourcentage de la longueur diagonale {{SVGAttr('viewBox')}} normalisée.
 

@@ -33,7 +33,7 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
  <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
  <dd>若該標頭被聲明，則瀏覽器應該將強制使用HTTPS的狀態套用至該域名的所有子域。</dd>
  <dt><code>preload</code> {{optional_inline}}</dt>
- <dd>參考 {{anch("Preloading Strict Transport Security")}}。 此非規範的一部份。</dd>
+ <dd>參考 <a href="#preloading_strict_transport_security">Preloading Strict Transport Security</a>。 此非規範的一部份。</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -56,7 +56,7 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 
 <p>在 HSTS 標頭所指定的時間過期後，瀏覽器將不會自動將 HTTP 轉為 HTTPS。</p>
 
-<p><span class="tlid-translation translation" lang="zh-TW"><span title="">無論何時將Strict-Transport-Security標頭傳遞到瀏覽器，它都會更新該網站的到期時間，因此網站可以更新此一訊息並防止該聲明到期。</span> <span title="">如果有必要停用嚴格傳輸安全性，則將max-age設置為0（使用 HTTPS 連接）將立即使Strict-Transport-Security標頭過期，從而允許使用 HTTP 訪問。</span></span></p>
+<p>無論何時將Strict-Transport-Security標頭傳遞到瀏覽器，它都會更新該網站的到期時間，因此網站可以更新此一訊息並防止該聲明到期。 如果有必要停用嚴格傳輸安全性，則將max-age設置為0（使用 HTTPS 連接）將立即使Strict-Transport-Security標頭過期，從而允許使用 HTTP 訪問。</p>
 
 <h2 id="Preloading_Strict_Transport_Security">Preloading Strict Transport Security</h2>
 
@@ -75,22 +75,7 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HSTS')}}</td>
-   <td>{{Spec2('HSTS')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

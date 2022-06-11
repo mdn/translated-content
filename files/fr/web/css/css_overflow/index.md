@@ -32,9 +32,9 @@ L'exempel interactif suivant illustre comment la modification de la valeur de la
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("block-overflow")}} {{experimental_inline}}
-- {{CSSxRef("line-clamp")}} {{experimental_inline}}
-- {{CSSxRef("max-lines")}} {{experimental_inline}}
+- {{CSSxRef("block-overflow")}} {{experimental_inline}}
+- {{CSSxRef("line-clamp")}} {{experimental_inline}}
+- {{CSSxRef("max-lines")}} {{experimental_inline}}
 - {{CSSxRef("continue")}} {{experimental_inline}}
 
 ### Propriétés spécifiques

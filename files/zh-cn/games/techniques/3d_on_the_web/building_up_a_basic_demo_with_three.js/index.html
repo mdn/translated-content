@@ -3,26 +3,26 @@ title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
-<div>{{GamesSidebar}}</div><p class="summary">游戏中一个典型的3D场景(最简单的那种)  包含标准的物品比如在坐标轴中的形状, 一个实际可看到他们的摄像机, 灯光和材质让其看起来不错, 动画使其生动等等.<strong> Three.js</strong>, 和其他3D库一样, 提供内置的helper 函数来帮助你尽可能快地实现通用的3D功能 . 在这篇文章我们会带你了解使用Three的基本知识, 包含设置开发者环境, 必要的HTML结构, Three.js对象基础, 以及如何创建一个基本的demo.</p>
+<div>{{GamesSidebar}}</div><p>游戏中一个典型的 3D 场景 (最简单的那种)  包含标准的物品比如在坐标轴中的形状，一个实际可看到他们的摄像机，灯光和材质让其看起来不错，动画使其生动等等。<strong> Three.js</strong>, 和其他 3D 库一样，提供内置的 helper 函数来帮助你尽可能快地实现通用的 3D 功能 . 在这篇文章我们会带你了解使用 Three 的基本知识，包含设置开发者环境，必要的 HTML 结构，Three.js 对象基础，以及如何创建一个基本的 demo.</p>
 
 <div class="note">
-<p><strong>注意</strong>: 我们选择Three.js因为它是最流行的<a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 库之一, 并且很容易上手. 我们不会介绍任何其他更好的WebGL库, 你可以自由选择其他库做尝试, 比如 <a href="http://www.ambiera.com/copperlicht/index.html">CopperLicht</a>, <a href="http://www.glge.org/">GLGE</a>, <a href="http://osgjs.org/">OSG.js</a>, <a href="https://code.google.com/p/o3d/">O3D</a>, 或者其他你喜欢的库.</p>
+<p><strong>注意</strong>: 我们选择 Three.js 因为它是最流行的<a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 库之一，并且很容易上手。我们不会介绍任何其他更好的 WebGL 库，你可以自由选择其他库做尝试，比如 <a href="http://www.ambiera.com/copperlicht/index.html">CopperLicht</a>, <a href="http://www.glge.org/">GLGE</a>, <a href="http://osgjs.org/">OSG.js</a>, <a href="https://code.google.com/p/o3d/">O3D</a>, 或者其他你喜欢的库。</p>
 </div>
 
 <h2 id="环境设置">环境设置</h2>
 
-<p>开始用 Three.js, 你不需要准备太多, 只需:</p>
+<p>开始用 Three.js, 你不需要准备太多，只需：</p>
 
 <ul>
- <li>确保使用的支持 <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 的现代浏览器, 例如最新版的Firefox 或 Chrome.</li>
- <li>创建一个目录保存例子.</li>
- <li>复制最新的压缩版<a href="http://threejs.org/build/three.min.js"> Three.js</a> 到你的目录.</li>
- <li>用单独的浏览器tab打开 <a href="http://threejs.org/docs/">Three.js </a>文档 — 对应参考很有用.</li>
+ <li>确保使用的支持 <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> 的现代浏览器，例如最新版的 Firefox 或 Chrome.</li>
+ <li>创建一个目录保存例子。</li>
+ <li>复制最新的压缩版<a href="http://threejs.org/build/three.min.js"> Three.js</a> 到你的目录。</li>
+ <li>用单独的浏览器 tab 打开 <a href="http://threejs.org/docs/">Three.js </a>文档 — 对应参考很有用。</li>
 </ul>
 
 <h2 id="HTML_结构">HTML 结构</h2>
 
-<p>这是将用到的HTML结构.</p>
+<p>这是将用到的 HTML 结构。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -74,7 +74,7 @@ document.body.appendChild(renderer.domElement);
 
 <h2 id="摄像机">摄像机</h2>
 
-<p>我们有渲染场景，但是我们仍然需要一个摄像机来观察场景-想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：</p>
+<p>我们有渲染场景，但是我们仍然需要一个摄像机来观察场景 - 想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：</p>
 
 <pre class="brush: js">var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
 camera.position.z = 50;

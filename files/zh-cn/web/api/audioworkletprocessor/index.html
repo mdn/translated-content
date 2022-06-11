@@ -5,11 +5,11 @@ translation_of: Web/API/AudioWorkletProcessor
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>的 <strong><code>AudioWorkletProcessor</code></strong> 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上. 同时, 一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上.</p>
+<p><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>的 <strong><code>AudioWorkletProcessor</code></strong> 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
-<div class="note"><code>AudioWorkletProcessor</code> 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此您可以执行自定义的初始化过程——详细信息请参见构造函数页面。</div>
+<div class="note"><code>AudioWorkletProcessor</code> 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此您可以执行自定义的初始化过程——详细信息请参见构造函数页面。</div>
 
 <dl>
  <dt>{{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}</dt>
@@ -20,12 +20,12 @@ translation_of: Web/API/AudioWorkletProcessor
 
 <dl>
  <dt>{{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}</dt>
- <dd>返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。 另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用.</dd>
+ <dd>返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。 另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
-<p><em><code>AudioWorkletProcessor</code> 接口没有定义任何自己的方法。但是, 您必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法, 用以处理音频流。</em></p>
+<p><em><code>AudioWorkletProcessor</code> 接口没有定义任何自己的方法。但是，您必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法，用以处理音频流。</em></p>
 
 <h2 id="事件">事件</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/AudioWorkletProcessor
 
 <h3 id="Deriving_classes">Deriving classes</h3>
 
-<p>要自定义音频处理代码， 你必须从<code>AudioWorkletProcessor</code> 接口派生一个类. 这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法. 该方法将被每个含有128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数. 您可以使用输入和 音频参数值去填充输出数组, 这是默认的用于使输出静音。</p>
+<p>要自定义音频处理代码， 你必须从<code>AudioWorkletProcessor</code> 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。您可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。</p>
 
 <p>Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a <em>static getter</em> on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the <code>AudioWorkletNode</code>.</p>
 
@@ -47,7 +47,7 @@ translation_of: Web/API/AudioWorkletProcessor
 
 <ol>
  <li>创建一个独立的文件;</li>
- <li>在这个文件中:
+ <li>在这个文件中：
   <ol>
    <li>Extend the <code>AudioWorkletProcessor</code> class (see <a href="#Deriving_classes">"Deriving classes" section</a>) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;</li>
    <li>Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;</li>
@@ -90,20 +90,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#audioworkletprocessor', 'AudioWorkletProcessor')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -21,8 +21,8 @@ Cette page contient une liste des modifications de [Firefox 1.5](fr/Firefox_1.5)
 - [Modifications XUL pour Firefox 1.5](fr/Modifications_XUL_pour_Firefox_1.5)
 - [XPCNativeWrapper](fr/XPCNativeWrapper) sont activés par défaut et leurs comportements diffèrent légèrement par rapport à 1.0.x
 - Une méthode plus simple [d'enregistrement chrome](fr/Enregistrement_chrome) rend obsolète contents.rdf
-- Pour les menus contextuels avec overlay : la fonction `gContextMenu.linkURL()` a été renommée en `gContextMenu.getLinkURL()` et `linkURL` est maintenant une propriété. Pour l'utiliser de manière rétrocompatible :
-  url = 'getLinkURL' in gContextMenu ? gContextMenu.getLinkURL() : gContextMenu.linkURL();
+- Pour les menus contextuels avec overlay&nbsp;: la fonction `gContextMenu.linkURL()` a été renommée en `gContextMenu.getLinkURL()` et `linkURL` est maintenant une propriété. Pour l'utiliser de manière rétrocompatible&nbsp;:
+  url = 'getLinkURL' in gContextMenu&nbsp;? gContextMenu.getLinkURL()&nbsp;: gContextMenu.linkURL();
 
 ### Autres informations
 

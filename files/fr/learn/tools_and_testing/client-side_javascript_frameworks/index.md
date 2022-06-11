@@ -20,7 +20,7 @@ Dans cet ensemble d'articles, nous chercherons à vous donner un point de dépar
 
 - Pourquoi devrais-je utiliser un framework ? Quels problèmes résolvent-ils pour moi ?
 - Quelles questions devrais-je me poser pour choisir un framework ? Ai-je au moins besoin d'un framework ?
-- Quelles fonctionnalités proposent les frameworks ? Comment fonctionnent-ils en général et comment diffèrent leurs  implantations de ces fonctionnalités ?
+- Quelles fonctionnalités proposent les frameworks ? Comment fonctionnent-ils en général et comment diffèrent leurs implantations de ces fonctionnalités ?
 - Comment se rapportent-ils au JavaScript "vanilla" ou à l'HTML ?
 
 Après ceci, nous vous fournirons quelques tutoriels couvrant les notions fondamentales de certains des principaux frameworks afin de vous fournir suffisamment de contexte et de familiarité pour commencer à approfondir par vous-même. Nous voulons que vous puissiez progresser et en apprendre plus sur les frameworks de manière pragmatique sans oublier les bonnes pratiques fondamentales du web telles que l'accessibilité.
@@ -123,7 +123,7 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 <!---->
 
 - [2. Commencer notre application todolist avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - : Maintenant que nous avons compris les bases du fonctionnement  de Svelte, nous pouvons commencer à construirer application démonstrative : une liste de tâches. Dans cet article, nous verrons d'abord les fonctionnalités attendues dans notre application, puis nous créerons un composant Todos.svelte et mettrons en place un HTML statique et du CSS, prêts pour commencer le développement des fonctionnalités de notre application de liste de tâches avec laquelle nous continuerons dans les articles suivants.
+  - : Maintenant que nous avons compris les bases du fonctionnement de Svelte, nous pouvons commencer à construirer application démonstrative : une liste de tâches. Dans cet article, nous verrons d'abord les fonctionnalités attendues dans notre application, puis nous créerons un composant Todos.svelte et mettrons en place un HTML statique et du CSS, prêts pour commencer le développement des fonctionnalités de notre application de liste de tâches avec laquelle nous continuerons dans les articles suivants.
 - [3. Comportements dynamiques dans Svelte : travailler avec les variables et les propriétés](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
   - : Maintenant que nous avons HTML et notre CSS, nous pouvons commencer le développement des fonctionnalités attendues pour notre application de liste de tâches Svelte. Dans cet article, nous utiliserons des variables et propriétés pour rendre notre application dynamique, nous permettant d'ajouter et de supprimer des tâches, de les marquer comme terminées et de les filter par état.
 - [4. Diviser notre application Svelte en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)

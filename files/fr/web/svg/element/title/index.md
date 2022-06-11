@@ -24,7 +24,7 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") »
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -32,9 +32,9 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 _(Aucun)_
 
-## Interface DOM
+## Interface DOM
 
-Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTitleElement "en/DOM/SVGTitleElement").
+Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTitleElement "en/DOM/SVGTitleElement").
 
 ## Exemple
 
@@ -52,7 +52,7 @@ Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGT
 
 | Spécification                                                                                                | Statut                   | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |                     |
 | {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;title&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
 ## Compatibilité des navigateurs

@@ -3,23 +3,21 @@ title: CSS performance optimization
 slug: Learn/Performance/CSS
 translation_of: Learn/Performance/CSS
 ---
-<p>{{draft}}</p>
-
-<p>页面在样式没有渲染完毕的情况下被绘制，在样式渲染完毕后又被刷新，这大概是很糟糕的用户体验。因此，除非浏览器知道当前不需要 该 CSS，否则 该 CSS将阻止渲染。浏览器只会在下载 CSS 和构建 CSSOM之后绘制页面。浏览器遵循特定的渲染路径：绘制 paint 仅在布局 layout之后进行，布局 layout 则在创建渲染树 render tree 之后进行，创建渲染树则需要在DOM和CSSOM 树解析完成后进行。为了优化CSSOM的构造，请删除不必要的样式，对 CSS 进行最小化，压缩和缓存，并将页面加载时不需要的CSS拆分为其他文件，以减少CSS渲染阻塞。</p>
+<p>页面在样式没有渲染完毕的情况下被绘制，在样式渲染完毕后又被刷新，这大概是很糟糕的用户体验。因此，除非浏览器知道当前不需要 该 CSS，否则 该 CSS 将阻止渲染。浏览器只会在下载 CSS 和构建 CSSOM 之后绘制页面。浏览器遵循特定的渲染路径：绘制 paint 仅在布局 layout 之后进行，布局 layout 则在创建渲染树 render tree 之后进行，创建渲染树则需要在 DOM 和 CSSOM 树解析完成后进行。为了优化 CSSOM 的构造，请删除不必要的样式，对 CSS 进行最小化，压缩和缓存，并将页面加载时不需要的 CSS 拆分为其他文件，以减少 CSS 渲染阻塞。</p>
 
 <h3 id="阻塞渲染优化">阻塞渲染优化</h3>
 
-<p>CSS 可以使用媒体查询将样式应用在特定条件下。媒体查询对于响应式 Web 设计非常重要，可以帮助我们优化关键渲染路径。浏览器会阻塞渲染，直到它解析完全部的样式，但不会阻塞渲染它认为不会使用的样式，例如打印样式表。通过基于媒体查询将CSS分成多个文件，可以防止在下载未使用的CSS期间阻止渲染。为了创建非阻塞 CSS 链接，将不会立即使用的样式（例如打印样式）移动到单独的文件中，将 <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> 添加到 HTML 中，并添加媒体查询，在这种情况下说明它是打印样式表。</p>
+<p>CSS 可以使用媒体查询将样式应用在特定条件下。媒体查询对于响应式 Web 设计非常重要，可以帮助我们优化关键渲染路径。浏览器会阻塞渲染，直到它解析完全部的样式，但不会阻塞渲染它认为不会使用的样式，例如打印样式表。通过基于媒体查询将 CSS 分成多个文件，可以防止在下载未使用的 CSS 期间阻止渲染。为了创建非阻塞 CSS 链接，将不会立即使用的样式（例如打印样式）移动到单独的文件中，将 <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> 添加到 HTML 中，并添加媒体查询，在这种情况下说明它是打印样式表。</p>
 
 <pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt; &lt;!-- blocking --&gt;
 &lt;link rel="stylesheet" href="print.css" media="print"&gt; &lt;!-- not blocking --&gt;
 &lt;link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"&gt; &lt;!-- not blocking on large screens --&gt;</pre>
 
-<p>默认情况下，浏览器假设每个指定的样式表都是阻塞渲染的。通过添加 media属性附加媒体查询，告诉浏览器何时应用样式表。当浏览器看到一个它知道只会用于特定场景的样式表时，它仍会下载样式，但不会阻塞渲染。通过将 CSS 分成多个文件，主要的 阻塞渲染 文件（本例中为 <code>styles.css</code>）的大小变得更小，从而减少了渲染被阻塞的时间。</p>
+<p>默认情况下，浏览器假设每个指定的样式表都是阻塞渲染的。通过添加 media 属性附加媒体查询，告诉浏览器何时应用样式表。当浏览器看到一个它知道只会用于特定场景的样式表时，它仍会下载样式，但不会阻塞渲染。通过将 CSS 分成多个文件，主要的 阻塞渲染 文件（本例中为 <code>styles.css</code>）的大小变得更小，从而减少了渲染被阻塞的时间。</p>
 
-<h3 id="在GPU_上呈现动画">在GPU 上呈现动画</h3>
+<h3 id="在GPU_上呈现动画">在 GPU 上呈现动画</h3>
 
-<p>浏览器针对处理CSS动画和不会很好地触发重排（因此也导致重新绘制）的动画属性进行了优化。为了提高性能，可以将被动画化的节点从主线程移到GPU上。将导致合成的属性包括 3D transforms (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code>，etc.)，animating transform 和 <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>，<code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code>，和 <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>。一些元素，例如 <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>，也位于各自的图层上。 将元素提升为图层（也称为合成）时，动画转换属性将在GPU中完成，从而改善性能，尤其是在移动设备上。</p>
+<p>浏览器针对处理 CSS 动画和不会很好地触发重排（因此也导致重新绘制）的动画属性进行了优化。为了提高性能，可以将被动画化的节点从主线程移到 GPU 上。将导致合成的属性包括 3D transforms (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code>，etc.)，animating transform 和 <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>，<code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code>，和 <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>。一些元素，例如 <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>，也位于各自的图层上。 将元素提升为图层（也称为合成）时，动画转换属性将在 GPU 中完成，从而改善性能，尤其是在移动设备上。</p>
 
 <h3 id="will-change_属性"><code>will-change</code> 属性</h3>
 
@@ -41,4 +39,4 @@ translation_of: Learn/Performance/CSS
 
 <h3 id="contain_属性"><code>contain</code> 属性</h3>
 
-<p>CSS的 <code>contain</code>属性允许作者指示元素及其内容尽可能独立于文档树的其余部分。 这允许浏览器针对DOM的有限区域而不是整个页面重新计算布局，样式，绘画，大小或它们的任意组合。</p>
+<p>CSS 的 <code>contain</code>属性允许作者指示元素及其内容尽可能独立于文档树的其余部分。这允许浏览器针对 DOM 的有限区域而不是整个页面重新计算布局，样式，绘画，大小或它们的任意组合。</p>

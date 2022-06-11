@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition
 ---
 {{jsSidebar("Operators")}}
 
-La **syntaxe de décomposition** permet d'étendre un itérable (par exemple une expression de tableau ou une chaîne de caractères) en lieu et place de plusieurs arguments (pour les appels de fonctions) ou de plusieurs éléments (pour les littéraux de tableaux) ou de paires clés-valeurs (pour les littéraux d'objets).
+La **syntaxe de décomposition** permet d'étendre un itérable (par exemple une expression de tableau ou une chaîne de caractères) en lieu et place de plusieurs arguments (pour les appels de fonctions) ou de plusieurs éléments (pour les littéraux de tableaux) ou de paires clés-valeurs (pour les littéraux d'objets).
 
 {{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
@@ -20,15 +20,21 @@ La **syntaxe de décomposition** permet d'étendre un itérable (par exemple un
 
 Pour l'utilisation de la décomposition dans les appels de fonction :
 
-    f(...objetIterable);
+```js
+f(...objetIterable);
+```
 
 Pour les littéraux de tableaux :
 
-    [...objetIterable, 4, 5, 6]
+```js
+[...objetIterable, 4, 5, 6]
+```
 
 Pour les littéraux objets (nouvelle fonctionnalité pour ECMAScript, actuellement en proposition de niveau 4, finalisée) :
 
-    let objClone = { ...obj };
+```js
+let objClone = { ...obj };
+```
 
 ## Exemples
 
@@ -124,7 +130,7 @@ console.log(arr2); // [1, 2, 3, 4]
 console.log(arr);  // [1, 2, 3] (inchangé)
 ```
 
-> **Note :** Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l’exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
+> **Note :** Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l’exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
 
 ```js
 var a = [[1], [2], [3]];

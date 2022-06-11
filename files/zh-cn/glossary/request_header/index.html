@@ -7,9 +7,9 @@ tags:
 translation_of: Glossary/Request_header
 original_slug: Glossary/请求头
 ---
-<p><strong>请求头</strong>是 {{glossary("header", "HTTP 头")}}的一种，它可在 HTTP 请求中使用，并且和请求主体无关 。某些请求头如 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language", "Accept-*")}}、 {{HTTPHeader("If-Modified-Since", "If-*")}} 允许执行条件请求。某些请求头如：{{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} 和 {{HTTPHeader("Referer")}} 描述了请求本身以确保服务端能返回正确的响应。</p>
+<p><strong>请求头</strong>是 {{glossary("header", "HTTP 头")}}的一种，它可在 HTTP 请求中使用，并且和请求主体无关。某些请求头如 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language", "Accept-*")}}、 {{HTTPHeader("If-Modified-Since", "If-*")}} 允许执行条件请求。某些请求头如：{{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} 和 {{HTTPHeader("Referer")}} 描述了请求本身以确保服务端能返回正确的响应。</p>
 
-<p>并非所有出现在请求中的 HTTP 首部都属于请求头，例如在 {{HTTPMethod("POST")}} 请求中经常出现的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Length" title="Content-Length 是一个实体消息首部，用来指明发送给接收方的消息主体的大小，即用十进制数字表示的八位元组的数目。"><code>Content-Length</code></a> 实际上是一个代表请求主体大小的 <a href="https://developer.mozilla.org/en-US/docs/Glossary/entity_header" title="entity header: An entity header is an HTTP header describing the content of the body of the message. Entity headers are used in both, HTTP requests and responses. Headers like Content-Length, Content-Language, Content-Encoding are entity headers.">entity header</a>，虽然你也可以把它叫做请求头。</p>
+<p>并非所有出现在请求中的 HTTP 首部都属于请求头，例如在 {{HTTPMethod("POST")}} 请求中经常出现的 <a href="/zh-CN/docs/Web/HTTP/Headers/Content-Length"><code>Content-Length</code></a> 实际上是一个代表请求主体大小的 <a href="/zh-CN/docs/Glossary/entity_header">entity header</a>，虽然你也可以把它叫做请求头。</p>
 
 <p>此外，CORS 定义了一个叫做 {{glossary('simple header', 'simple headers')}} 的集合，它是请求头集合的一个子集。如果某次请求是只包含 {{glossary('simple header', 'simple header')}} 的话，则被认为是简单请求，不会触发请求预检（{{glossary("preflight request", "preflight")}}）。</p>
 

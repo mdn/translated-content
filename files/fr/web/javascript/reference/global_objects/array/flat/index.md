@@ -16,7 +16,9 @@ La méthode **`flat()`** permet de créer un nouveau tableau contenant les élé
 
 ## Syntaxe
 
-    var nouveauTableau = monTableau.flat([profondeur]);
+```js
+var nouveauTableau = monTableau.flat([profondeur]);
+```
 
 ### Paramètres
 
@@ -72,7 +74,7 @@ arr.reduce((acc, val) => acc.concat(val), []);
 const flat = arr => [].concat(...arr);
 ```
 
-### `reduce` + `concat` + `isArray` + récursivité
+### `reduce` + `concat` + `isArray` + récursivité
 
 ```js
 var arr = [1, 2, [3, 4, [5, 6]]];

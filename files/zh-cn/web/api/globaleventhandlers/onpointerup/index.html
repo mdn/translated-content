@@ -5,7 +5,7 @@ translation_of: Web/API/GlobalEventHandlers/onpointerup
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><code>pointerup</code>是一个全局的事件处理函数.</p>
+<p><code>pointerup</code>是一个全局的事件处理函数。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,17 +16,17 @@ translation_of: Web/API/GlobalEventHandlers/onpointerup
 
 <dl>
  <dt><code>upHandler</code></dt>
- <dd>返回 <code>targetElement</code> 元素的<code>pointerup</code>事件处理函数.</dd>
+ <dd>返回 <code>targetElement</code> 元素的<code>pointerup</code>事件处理函数。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>如下是两种设置元素<code>pointerup</code>事件处理函数的方法.</p>
+<p>如下是两种设置元素<code>pointerup</code>事件处理函数的方法。</p>
 
 <pre class="brush: js">&lt;html&gt;
 &lt;script&gt;
 function upHandler(ev) {
- // 这里添加元素的pointup事件处理函数
+ // 这里添加元素的 pointup 事件处理函数
 }
 function init() {
  var el=document.getElementById("target1");
@@ -64,61 +64,7 @@ function init() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("35")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(59)}}</td>
-   <td>10 {{property_prefix("-ms")}}<br>
-    11</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome("35")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoMobile("29")}}<sup>[2]</sup></td>
-   <td>10 {{property_prefix("-ms")}}<br>
-    11</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This was implemented in <a href="http://crbug.com/248918">bug 248918</a>.</p>
-
-<p>[2] Supported behind the preference <code>dom.w3c_pointer_events.enabled</code>, defaulting to <code>false</code>.</p>
+{{Compat("api.GlobalEventHandlers.onpointerup")}}
 
 <h2 id="相关链接">相关链接</h2>
 

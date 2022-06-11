@@ -18,7 +18,9 @@ La méthode **`Symbol.keyFor(sym)`** permet de récupérer la clé d'un symbole 
 
 ## Syntaxe
 
-    Symbol.keyFor(sym);
+```js
+Symbol.keyFor(sym);
+```
 
 ### Paramètres
 
@@ -48,7 +50,7 @@ Symbol.keyFor(Symbol.iterator); // undefined
 | Spécification                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.keyfor', 'Symbol.keyFor')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

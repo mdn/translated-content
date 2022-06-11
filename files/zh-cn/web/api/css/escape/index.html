@@ -10,7 +10,7 @@ translation_of: Web/API/CSS/escape
 ---
 <p>{{APIRef("CSSOM")}}{{SeeCompatTable}}</p>
 
-<p> <code><strong>CSS.escape()</strong></code> 静态方法返回 {{domxref("DOMString")}} 包含作为参数传递的转义字符串，主要用作CSS选择器的一部分。</p>
+<p> <code><strong>CSS.escape()</strong></code> 静态方法返回 {{domxref("DOMString")}} 包含作为参数传递的转义字符串，主要用作 CSS 选择器的一部分。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -31,12 +31,12 @@ translation_of: Web/API/CSS/escape
 <pre class="brush: js">CSS.escape(".foo#bar")        // "\.foo\#bar"
 CSS.escape("()[]{}")          // "\(\)\[\]\\{\\}"
 CSS.escape('--a')             // "--a"
-CSS.escape(0)                 // "\30 ",  Unicode代码点“0”是30
-CSS.escape('\0')              // "\ufffd",  Unicode替换字符 </pre>
+CSS.escape(0)                 // "\30 ",  Unicode 代码点“0”是 30
+CSS.escape('\0')              // "\ufffd",  Unicode 替换字符 </pre>
 
 <h3 id="在上下文使用">在上下文使用</h3>
 
-<p>要转义一个字符串作为选择器使用， <code>escape()</code>方法可以用于:</p>
+<p>要转义一个字符串作为选择器使用， <code>escape()</code>方法可以用于：</p>
 
 <pre class="brush: js">var element = document.querySelector('#' + CSS.escape(id) + ' &gt; img');</pre>
 
@@ -46,76 +46,11 @@ CSS.escape('\0')              // "\ufffd",  Unicode替换字符 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">格式</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-css.escape()-method', 'CSS.escape()')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatGeckoDesktop("31")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatGeckoMobile("31")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox 32做了一些小的修改，以符合规范和CSS语法的发展。标识符现在可以以' -- '开始，第二个破折号不能被转义。另外供应商标识符也不会被更改。</p>
+{{Compat("api.CSS.escape")}}
 
 <h2 id="参见">参见</h2>
 

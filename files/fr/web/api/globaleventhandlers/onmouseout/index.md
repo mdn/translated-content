@@ -1,26 +1,59 @@
 ---
-title: element.onmouseout
+title: GlobalEventHandlers.onmouseout
 slug: Web/API/GlobalEventHandlers/onmouseout
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onmouseout
+browser-compat: api.GlobalEventHandlers.onmouseout
 ---
-{{ ApiRef() }}
+{{ApiRef("HTML DOM")}}
 
-### Résumé
+La propriété **`onmouseout`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`mouseout`](/fr/docs/Web/API/Element/mouseout_event).
 
-La propriété **onmouseout** renvoie le code de gestion de l'évènement `mouseout` (sortie du pointeur de la souris) pour l'élément courant.
+Un évènement `mouseout` est déclenché lorsque la souris quitte un élément. Par exemple, si la souris se déplace en dehors d'une image d'une page web, l'évènement `mouseout` est déclenché pour cet élément d'image.
 
-### Syntaxe
+## Syntaxe
 
-    code de gestion de l'évènement = element.onmouseout
+```js
+cible.onmouseout = refFonction;
+```
 
-### Notes
+### Valeur
 
-L'évènement `mouseout` se déclenche lorsque le pointeur de la souris quitte un élément (par exemple lorsque le pointeur sort d'une image sur une page web, cet évènement se déclenche pour l'élément `image` correspondant).
+`refFonction`est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`MouseEvent`](/fr/docs/Web/API/MouseEvent) comme unique argument.
 
-### Spécification
+## Exemple
 
-{{ DOM0() }}
+Cet exemple ajoute des gestionnaires d'évènements `onmouseout` et `onmouseover` sur un paragraphe. Essayez de déplacer votre souris sur le paragraphe et en dehors.
+
+### HTML
+
+```html
+<p>Testez votre souris ici !</p>
+```
+
+### JavaScript
+
+```js
+const p = document.querySelector('p');
+p.onmouseover = logMouseOver;
+p.onmouseout = logMouseOut;
+
+function logMouseOver() {
+  p.textContent = 'évènement mouseover détecté';
+}
+
+function logMouseOut() {
+  p.textContent = 'évènement mouseout détecté';
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

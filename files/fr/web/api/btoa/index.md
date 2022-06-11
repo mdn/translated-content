@@ -18,7 +18,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 
 La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.
 
-> **Note :** étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir {{anch("Chaînes Unicode")}} pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
+> **Note :** étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir [Chaînes Unicode](#chaînes_unicode) pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
 
 ## Syntaxe
 
@@ -27,11 +27,11 @@ La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en
 ### Paramètres
 
 - `chaineAEncoder`
-  - : Une chaîne dont les caractères représentent chacun un octet unique de données binaires à encoder en ASCII.
+  - : Une chaîne dont les caractères représentent chacun un octet unique de données binaires à encoder en ASCII.
 
 ### Valeur retournée
 
-Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
+Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
 
 ### Exceptions
 
@@ -42,15 +42,15 @@ Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
 
 ## Notes
 
-Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
+Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
 
 `btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
 
 ## Chaînes Unicode
 
-Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode engendrera une exception `InvalidCharacterError`.
+Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode engendrera une exception `InvalidCharacterError`.
 
-Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html) :
+Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html)&nbsp;:
 
     // Chaîne ucs-2 en ascii encodé en base64
     function uena(chn) {
@@ -67,16 +67,16 @@ Une option est d'échapper tous les caractères étendus, de telle sorte que la 
     uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
     aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
 
-Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/D%C3%A9coder_encoder_en_base64).
+Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/D%C3%A9coder_encoder_en_base64).
 
 ## Spécifications
 
 | Spécification                                                                                                            | Statut                           | Commentaire                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
 | {{SpecName('HTML WHATWG', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                     | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le dernier instantané, {{SpecName("HTML5.1")}}.                                                      |
 | {{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                         | {{Spec2('HTML5.1')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.                                                                 |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
+| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
 
 ## Compatibilité des navigateurs
 

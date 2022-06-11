@@ -8,22 +8,22 @@ tags:
   - 文件
 translation_of: Web/API/FileList
 ---
-<div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
+<div>{{APIRef("File API")}}</div>
 
 <p>一个 FileList 对象通常来自于一个 HTML {{HTMLElement("input")}} 元素的 <code>files</code> 属性，你可以通过这个对象访问到用户所选择的文件。该类型的对象还有可能来自用户的拖放操作，查看 <a href="/zh-CN/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> 对象了解详情。</p>
 
 <div class="geckoVersionNote">
-<p>在 Gecko 1.9.2 之前,通过 <code>input</code> 元素，每次只能选择一个文件，这意味着该 <code>input</code> 元素的 <code>files</code> 属性上的 FileList 对象无论如何都只能包含一个文件。从Gecko 1.9.2 开始，如果一个 <code>input</code> 元素拥有 <code>multiple</code> 属性，则可以用它来选择多个文件。</p>
+<p>在 Gecko 1.9.2 之前，通过 <code>input</code> 元素，每次只能选择一个文件，这意味着该 <code>input</code> 元素的 <code>files</code> 属性上的 FileList 对象无论如何都只能包含一个文件。从 Gecko 1.9.2 开始，如果一个 <code>input</code> 元素拥有 <code>multiple</code> 属性，则可以用它来选择多个文件。</p>
 </div>
 
 <h2 id="使用_FileList">使用 FileList</h2>
 
-<p>所有type属性(attribute)为file的 <code>&lt;input&gt;</code> 元素都有一个files属性(property),用来存储用户所选择的文件. 例如:</p>
+<p>所有 type 属性 (attribute) 为 file 的 <code>&lt;input&gt;</code> 元素都有一个 files 属性 (property),用来存储用户所选择的文件。例如：</p>
 
 <pre class="eval">&lt;input id="fileItem" type="file"&gt;
 </pre>
 
-<p>下面的一行代码演示如何获取到一个FileList对象中的第一个文件(<a href="/zh-CN/docs/Web/API/File" title="zh-cn/DOM/File"><code>File</code></a> 对象):</p>
+<p>下面的一行代码演示如何获取到一个 FileList 对象中的第一个文件 (<a href="/zh-CN/docs/Web/API/File" title="zh-cn/DOM/File"><code>File</code></a> 对象):</p>
 
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
@@ -50,7 +50,7 @@ translation_of: Web/API/FileList
   <tr>
    <td><code>length</code></td>
    <td><code>integer</code></td>
-   <td>一个只读的整数值,用来返回列表中的文件数量。</td>
+   <td>一个只读的整数值，用来返回列表中的文件数量。</td>
   </tr>
  </tbody>
 </table>
@@ -81,10 +81,10 @@ translation_of: Web/API/FileList
 
 <p>这个例子迭代了用户通过一个 <code>input</code> 元素选择的多个文件：</p>
 
-<pre class="brush:js">// fileInput 是一个 HTML input 元素: &lt;input type="file" id="myfileinput" multiple&gt;
+<pre class="brush:js">// fileInput 是一个 HTML input 元素：&lt;input type="file" id="myfileinput" multiple&gt;
 var fileInput = document.getElementById("myfileinput");
 
-// files 是一个 FileList 对象(类似于NodeList对象)
+// files 是一个 FileList 对象 (类似于 NodeList 对象)
 var files = fileInput.files;
 var file;
 

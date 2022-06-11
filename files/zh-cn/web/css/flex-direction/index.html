@@ -5,7 +5,7 @@ translation_of: Web/CSS/flex-direction
 ---
 <p>{{ CSSRef("CSS Flexible Boxes") }}</p>
 
-<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <code><strong>flex-direction</strong></code> 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向(正方向或反方向)。</p>
+<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <code><strong>flex-direction</strong></code> 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。</p>
 
 <pre><code>/* The direction text is laid out in a line */
 flex-direction: row;
@@ -24,25 +24,25 @@ flex-direction: inherit;
 flex-direction: initial;
 flex-direction: unset;</code></pre>
 
-<p>请注意，值 <code>row</code> 和 <code>row-reverse</code> 受 flex 容器的方向性的影响。 如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。</p>
+<p>请注意，值 <code>row</code> 和 <code>row-reverse</code> 受 flex 容器的方向性的影响。如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。</p>
 
 <p>{{cssinfo}}</p>
 
-<p>查看 <a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a> 以了解更多的属性和信息.</p>
+<p>查看 <a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a> 以了解更多的属性和信息。</p>
 
 <h2 id="语法">语法</h2>
 
 <h3 id="取值">取值</h3>
 
-<p>接受以下取值:</p>
+<p>接受以下取值：</p>
 
 <dl>
  <dt><code>row</code></dt>
- <dd>flex容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。</dd>
+ <dd>flex 容器的主轴被定义为与文本方向相同。主轴起点和主轴终点与内容方向相同。</dd>
  <dt><code>row-reverse</code></dt>
- <dd>表现和row相同，但是置换了主轴起点和主轴终点</dd>
+ <dd>表现和 row 相同，但是置换了主轴起点和主轴终点</dd>
  <dt><code>column</code></dt>
- <dd>flex容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同</dd>
+ <dd>flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同</dd>
  <dt><code>column-reverse</code></dt>
  <dd>表现和<code>column</code>相同，但是置换了主轴起点和主轴终点</dd>
  <dt>
@@ -126,65 +126,7 @@ flex-direction: unset;</code></pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("18.0")}} (behind a pref) <sup><a href="#bc1">[1]</a> <a href="#bc2">[2]</a></sup><br>
-    {{CompatGeckoDesktop("20.0")}} <sup><a href="#bc2">[2]</a></sup></td>
-   <td>21.0{{ property_prefix("-webkit") }}</td>
-   <td>
-    <p>10 {{ property_prefix("-ms") }}<br>
-     11</p>
-   </td>
-   <td>12.10</td>
-   <td>
-    <p>7 {{ property_prefix("-webkit") }}</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>12.10</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><sup><a name="bc1">[1]</a></sup> 要激活Firefox 18和19的flexbox支持，用户必须将about：config首选项“layout.css.flexbox.enabled”更改为true。</p>
-
-<p><sup><a name="bc2">[2]</a></sup> 从Firefox 28开始支持多行flexbox。</p>
-
-<p>除了无前缀的支持外，Gecko 48.0{{geckoRelease("48.0")}}由于web兼容性原因，在首选项“layout.css.prefixes.webkit”之后增加了-webkit前缀版本的支持，默认设为false。 由于Gecko 49.0 {{geckoRelease("49.0")}}，首选项默认为true。</p>
+{{Compat("css.properties.flex-direction")}}
 
 <h2 id="参考">参考</h2>
 

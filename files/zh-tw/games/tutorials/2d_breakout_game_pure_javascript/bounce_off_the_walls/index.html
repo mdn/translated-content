@@ -3,15 +3,15 @@ title: 讓球碰到牆壁後反彈
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}</p>
 
-<div class="summary">
+<div>
 <p>這是 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第三步 你可以在以下的連結中查看原始碼<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html">Gamedev-Canvas-workshop/lesson3.html</a>.</p>
 </div>
 
-<p><span class="seoSummary">很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</span></p>
+<p>很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection">later</a> ) 使球可以再碰到邊緣時反彈.</p>
 
 <h2 id="簡單的碰撞偵測">簡單的碰撞偵測</h2>
 
@@ -25,7 +25,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 
 <pre class="brush: js">ctx.arc(x, y, ballRadius, 0, Math.PI*2);</pre>
 
-<h2 id="從頂部和底部反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><font><font><font><font>從頂部和底部反彈</font></font></font></font></h2>
+<h2 id="從頂部和底部反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>從頂部和底部反彈</h2>
 
 <p>總共有四面牆壁會與球發生碰撞 — 首先處理上方的牆壁，我們在每個影格檢查球是否有接觸到 Canvas 上方壁面 —如果是的話，我們將扭轉球的運動，所以它將開始在相反的方向移動，並保持在可見邊界。記住坐標係從左上角開始，我們可以得到這樣的東西：</p>
 
@@ -33,26 +33,26 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
     dy = -dy;
 }</pre>
 
-<p style='margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(77, 78, 83); font-family: "Open Sans", Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><font><font>如果球位置的Y值低於零，改變Y軸上的運動的方向，通過設置它等於本身，扭轉。</font><font>如果球是向上移動的速度為每幀的2個像素，現在它將移動“了”的速度為- 2像素，這實際上等於在每幀的2個像素的速度向下移動。</font></font></p>
+<p>如果球位置的Y值低於零，改變Y軸上的運動的方向，通過設置它等於本身，扭轉。如果球是向上移動的速度為每幀的2個像素，現在它將移動“了”的速度為- 2像素，這實際上等於在每幀的2個像素的速度向下移動。</p>
 
-<p style='margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(77, 78, 83); font-family: "Open Sans", Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><font><font>上面的代碼將處理球反彈的頂部邊緣，所以現在讓我們想想下邊緣：</font></font></p>
+<p>上面的代碼將處理球反彈的頂部邊緣，所以現在讓我們想想下邊緣：</p>
 
 <pre class="brush: js">if(y + dy &gt; canvas.height) {
     dy = -dy;
 }</pre>
 
-<p><font><font>如果球的Y位置大於畫布的高度（請記住，我們計算從左上角的Y值，所以頂部邊緣開始在0和底部邊緣是在480像素，畫布的高度），然後通過反轉的Y軸運動的底部邊緣，如前。</font></font><br>
- <font><font>我們可以將這兩個語句為一個節省代碼冗長：</font></font></p>
+<p>如果球的Y位置大於畫布的高度（請記住，我們計算從左上角的Y值，所以頂部邊緣開始在0和底部邊緣是在480像素，畫布的高度），然後通過反轉的Y軸運動的底部邊緣，如前。<br>
+ 我們可以將這兩個語句為一個節省代碼冗長：</p>
 
 <pre class="brush: js">if(y + dy &gt; canvas.height || y + dy &lt; 0) {
     dy = -dy;
 }</pre>
 
-<p><span style='background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: "Open Sans",Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;'>如果兩個語句中的一個是真的，則反轉球的運動。</span></p>
+<p>如果兩個語句中的一個是真的，則反轉球的運動。</p>
 
-<h2 id="從左邊和右邊反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><strong style="border: 0px; margin: 0px; padding: 0px;"><font><font>從左邊和右邊反彈</font></font></strong></h2>
+<h2 id="從左邊和右邊反彈" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><strong style="border: 0px; margin: 0px; padding: 0px;">從左邊和右邊反彈</strong></h2>
 
-<p><font>我們有頂部和底部邊緣覆蓋，所以讓我們想想左，右的。</font><font>它實際上是非常相似的，你所要做的就是重複X而不是Y的陳述：</font></p>
+<p>我們有頂部和底部邊緣覆蓋，所以讓我們想想左，右的。它實際上是非常相似的，你所要做的就是重複X而不是Y的陳述：</p>
 
 <pre class="brush: js">if(x + dx &gt; canvas.width || x + dx &lt; 0) {
     dx = -dx;
@@ -62,9 +62,9 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
     dy = -dy;
 }</pre>
 
-<p><span style='background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: "Open Sans",Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;'>在這一點上你應該插入上面的代碼塊到draw()功能，在關閉括號。</span></p>
+<p>在這一點上你應該插入上面的代碼塊到draw()功能，在關閉括號。</p>
 
-<h2 id="球不斷地消失在牆上！" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'><font><font>球不斷地消失在牆上！</font></font></h2>
+<h2 id="球不斷地消失在牆上！" style='margin: 0px 0px 12px; padding: 0px; border: 0px; word-wrap: break-word; font-family: "Open Sans", Arial, sans-serif; font-weight: 700; line-height: 1; font-size: 2.143rem; letter-spacing: -1px; color: rgb(77, 78, 83); font-style: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255);'>球不斷地消失在牆上！</h2>
 
 <p>測試你的代碼在這一點上，你會留下深刻的印象-現在我們有一個球，反彈了所有四個邊緣的畫布！然而，我們有另一個問題-當球擊中每一個牆，它下沉到它略有改變方向：</p>
 
@@ -79,11 +79,11 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
     dy = -dy;
 }</pre>
 
-<p><font>當球的中心與牆的邊緣之間的距離與球的半徑完全相同時，它會改變運動方向。從邊緣減去一個半徑的寬度以及添加到另一個方向給我們在碰撞檢測在中球彈回牆壁的印象。</font></p>
+<p>當球的中心與牆的邊緣之間的距離與球的半徑完全相同時，它會改變運動方向。從邊緣減去一個半徑的寬度以及添加到另一個方向給我們在碰撞檢測在中球彈回牆壁的印象。</p>
 
 <h2 id="比較你的程式碼">比較你的程式碼</h2>
 
-<p><span style='background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: "Open Sans",Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;'>讓我們用剛剛所學的再次檢查完成的程式碼，並把玩一下：</span></p>
+<p>讓我們用剛剛所學的再次檢查完成的程式碼，並把玩一下：</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}</p>
 

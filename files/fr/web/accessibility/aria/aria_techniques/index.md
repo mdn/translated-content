@@ -97,7 +97,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 - [aria-valuenow](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow)
 - [aria-valuetext](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext)
 
-#### Attributs de zones « live »
+#### Attributs de zones « live&nbsp;»
 
 - aria-live
 - aria-relevant

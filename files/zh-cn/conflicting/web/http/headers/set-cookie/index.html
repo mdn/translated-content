@@ -1,0 +1,71 @@
+---
+title: Set-Cookie2
+slug: conflicting/Web/HTTP/Headers/Set-Cookie
+tags:
+  - 废止
+  - 首部
+translation_of: Web/HTTP/Headers/Set-Cookie2
+original_slug: Web/HTTP/Headers/Set-Cookie2
+---
+<div>{{HTTPSidebar}} {{obsolete_header}}</div>
+
+<p><strong><code>Set-Cookie2</code></strong> 是一个响应首部，已废弃使用。它被服务器用来向客户端发送 cookie 数据，但是已经在协议中被标记为不赞成使用了。请使用 {{HTTPHeader("Set-Cookie")}}  将其代替。</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Comment=&lt;value&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; CommentURL=&lt;http-url&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Discard
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Max-Age=&lt;non-zero-digit&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Path=&lt;path-value&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Port=&lt;port-number&gt;
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Secure
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Version=&lt;version-number&gt;
+
+// Multiple directives are also possible, for example:
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;; Secure
+
+// Multiple cookies are seperated by a comma
+Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;, &lt;cookie-name&gt;=&lt;cookie-value&gt;, ...
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+  <tr>
+   <td>{{RFC("2965", "Set-Cookie2")}}</td>
+   <td>Historic specification of HTTP State Management Mechanism, obsoleted by {{RFC("6265")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("http.headers.Set-Cookie2")}}</p>
+
+<h2 id="相关内容">相关内容</h2>
+
+<ul>
+ <li>{{HTTPHeader("Set-Cookie")}}</li>
+ <li>{{domxref("Document.cookie")}}</li>
+</ul>

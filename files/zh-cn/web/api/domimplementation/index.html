@@ -10,7 +10,7 @@ translation_of: Web/API/DOMImplementation
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<p><code style="font-style: normal; line-height: 1.5;"><strong>DOMImplementation</strong></code><span style="line-height: 1.5;"> 接口代表了一个对象，这个对象提供了不依赖于任何document的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得</span></p>
+<p><code style="font-style: normal; line-height: 1.5;"><strong>DOMImplementation</strong></code> 接口代表了一个对象，这个对象提供了不依赖于任何 document 的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得</p>
 
 <h2 id="属性">属性</h2>
 
@@ -22,165 +22,23 @@ translation_of: Web/API/DOMImplementation
 
 <dl>
  <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
- <dd>创建并返回一个 {{domxref("XMLDocument")}}对象.</dd>
+ <dd>创建并返回一个 {{domxref("XMLDocument")}}对象。</dd>
  <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
- <dd>创建并返回一个 {{domxref("DocumentType")}}对象.</dd>
+ <dd>创建并返回一个 {{domxref("DocumentType")}}对象。</dd>
  <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
- <dd>创建并返回一个 {{domxref("Document")}}对象.</dd>
+ <dd>创建并返回一个 {{domxref("Document")}}对象。</dd>
  <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了SVG相关的查询，它总是返回 <code>true</code>。旧浏览器的行为非常不一致</dd>
+ <dd>返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了 SVG 相关的查询，它总是返回 <code>true</code>。旧浏览器的行为非常不一致</dd>
  <dd>Returns a {{domxref("Boolean")}} indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns <code>true</code>. Old browsers are very inconsistent in their behavior.</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the <code>getFeature()</code> method.<br>
-    Added the <code>createHTMLDocument()</code> method.<br>
-    Modified the return type of <code>createDocument()</code> from {{domxref("Document")}} to {{domxref("XMLDocument")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added the <code>getFeature()</code> method (never implemented by any user agent).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Added the <code>createDocument()</code> and <code>createDocumentType()</code> methods.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>6.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>createHTMLDocument()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>createDocument()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>hasFeature()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}} [1]</td>
-   <td>6.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>createDocumentType()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>createHTMLDocument()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>createDocument()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>hasFeature()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>createDocumentType()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Since Gecko 19, <code>hasFeature()</code> mostly returns <code>true</code>.</p>
+{{Compat("api.DOMImplementation")}}
 
 <h2 id="See_also">See also</h2>
 

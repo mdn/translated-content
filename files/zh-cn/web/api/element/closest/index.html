@@ -34,9 +34,10 @@ translation_of: Web/API/Element/closest
 
 <h3 id="异常">异常</h3>
 
-<ul>
- <li>如果传入的选择器不合法，则抛出 {{exception("SyntaxError")}} 异常。</li>
-</ul>
+<dl>
+ <dt><code>SyntaxError</code> {{domxref("DOMException")}}</dt>
+ <dd>如果选择器不合法，则抛出该异常。</dd>
+</dl>
 
 <h2 id="示例">示例</h2>
 
@@ -68,7 +69,7 @@ var r4 = el.closest(":not(div)");
 
 <h2 id="Polyfill" name="Polyfill">兼容</h2>
 
-<p>部分浏览器并不支持<code>Element.closest()</code>，但却支持了<code>element.matches()</code>（或拥有私有前缀，如IE9+），一个polyfill案例：</p>
+<p>部分浏览器并不支持<code>Element.closest()</code>，但却支持了<code>element.matches()</code>（或拥有私有前缀，如 IE9+），一个 polyfill 案例：</p>
 
 <pre class="brush: js">if (!Element.prototype.matches)
     Element.prototype.matches = Element.prototype.msMatchesSelector ||
@@ -85,7 +86,7 @@ if (!Element.prototype.closest)
         return null;
     };</pre>
 
-<p>然而，如果你需要兼容到IE8，那么随后这个polyfill将会非常缓慢地运行到结束。并且，IE8只支持CSS2.1的选择器，并且使网页运行非常缓慢。</p>
+<p>然而，如果你需要兼容到 IE8，那么随后这个 polyfill 将会非常缓慢地运行到结束。并且，IE8 只支持 CSS2.1 的选择器，并且使网页运行非常缓慢。</p>
 
 <pre class="brush: js">if (window.Element &amp;&amp; !Element.prototype.closest) {
     Element.prototype.closest =
@@ -104,20 +105,7 @@ if (!Element.prototype.closest)
 
 <h2 id="Specification" name="Specification">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
@@ -132,7 +120,7 @@ if (!Element.prototype.closest)
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>{{domxref("Element")}} 接口.</li>
+ <li>{{domxref("Element")}} 接口。</li>
  <li>
   <div class="syntaxbox"><a href="/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors">选择器语法</a></div>
  </li>

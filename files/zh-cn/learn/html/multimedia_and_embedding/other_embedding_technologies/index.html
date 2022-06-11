@@ -1,5 +1,5 @@
 ---
-title: 从对象到iframe - 其他嵌入技术
+title: 从对象到 iframe - 其他嵌入技术
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
@@ -8,53 +8,53 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<p class="summary"><font>到目前为止，您应该掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让您在网页中嵌入各种内容类型的元素：</font> {{htmlelement("iframe")}}, {{htmlelement("embed")}} 和{{htmlelement("object")}} 元素。<code>&lt;iframe&gt;</code><font><font>用</font></font>于嵌入其他网页，另外两个元素则允许您嵌入PDF，SVG，甚至Flash — 一种正在被淘汰的技术，但您仍然会时不时的看到它。</p>
+<p>到目前为止，您应该掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让您在网页中嵌入各种内容类型的元素： {{htmlelement("iframe")}}, {{htmlelement("embed")}} 和{{htmlelement("object")}} 元素。<code>&lt;iframe&gt;</code>用于嵌入其他网页，另外两个元素则允许您嵌入 PDF，SVG，甚至 Flash — 一种正在被淘汰的技术，但您仍然会时不时的看到它。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td><font><font>基</font></font>本的计算机知识，<a href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>，<a href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a> 的基本知识，熟悉HTML基础知识（阅读 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）以及本模块中以前的文章<font><font>。</font></font></td>
+   <td>基本的计算机知识，<a href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>，<a href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a> 的基本知识，熟悉 HTML 基础知识（阅读 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）以及本模块中以前的文章。</td>
   </tr>
   <tr>
    <th scope="row">学习目标：</th>
-   <td><font><font>要了解如何使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" title="HTML &lt;object>元素表示外部资源，可以将其视为图像，嵌套浏览上下文或要由插件处理的资源。">&lt;object&gt;</a><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffe8d4;">、</span></font></code></font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a><font><font>以及</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a><font><font>在网页中嵌入部件，例如</font></font><font><font>Flash电影或其他网页。</font></font></td>
+   <td>要了解如何使用<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" title="HTML &lt;object>元素表示外部资源，可以将其视为图像，嵌套浏览上下文或要由插件处理的资源。">&lt;object&gt;</a>、</code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a>以及<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a>在网页中嵌入部件，例如 Flash 电影或其他网页。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="嵌入的简史"><font><font>嵌入的简史</font></font></h2>
+<h2 id="嵌入的简史">嵌入的简史</h2>
 
-<p><font><font>很久以前，很流行在网络上使用</font></font><strong><font><font>框架</font></font></strong><font><font>创建网站 — 网站的一小部分存储于单独的HTML页面中</font><font>。</font><font>这些被嵌入在一个称为</font></font><strong><font><font>框架集</font></font></strong><font><font>的主文档中</font><font>，它允许您指定每个框架能够填充在屏幕上的区域，非常像调整表格的列和行的大小。</font><font>这些做法在90年代中期至90年代后期被认为是比较酷的，有证据表明，将网页分解成较小的块，这样有利于下载速度 —</font></font>尤其是在那时网络连接速度太慢的情况下更为明显<font><font>。</font><font>然而，这些技术有很多问题，随着网络速度越来越快，这些技术带来的问题远超过它们带来的积极因素，所以你再也看不到它们被使用了。</font></font></p>
+<p>很久以前，很流行在网络上使用<strong>框架</strong>创建网站 — 网站的一小部分存储于单独的 HTML 页面中。这些被嵌入在一个称为<strong>框架集</strong>的主文档中，它允许您指定每个框架能够填充在屏幕上的区域，非常像调整表格的列和行的大小。这些做法在 90 年代中期至 90 年代后期被认为是比较酷的，有证据表明，将网页分解成较小的块，这样有利于下载速度 —尤其是在那时网络连接速度太慢的情况下更为明显。然而，这些技术有很多问题，随着网络速度越来越快，这些技术带来的问题远超过它们带来的积极因素，所以你再也看不到它们被使用了。</p>
 
-<p><font><font>一小段时间之后（20世纪90年代末，21世纪初），插件技术变得非常受欢迎，例如</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/Java"><font><font>Java Applet</font></font></a><font><font>和</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/Adobe_Flash"><font><font>Flash</font></font></a><font><font> — 这些技术允许网络开发者将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过HTML单独实现。</font><font>嵌入这些技术是通过诸如</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" title="HTML &lt;object>元素表示外部资源，可以将其视为图像，嵌套浏览上下文或要由插件处理的资源。"><code>&lt;object&gt;</code></a><font><font>和较少使用</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;cke:embed>&lt;/cke:embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a><font><font>的</font><font>元素来实现的</font><font>，当时</font></font><font><font>它们非常有用。</font><font>由于许多问题，包括可访问性、安全性、文件大小等，它们已经过时了; </font><font>如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。</font></font></p>
+<p>一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术变得非常受欢迎，例如<a href="https://developer.mozilla.org/en-US/docs/Glossary/Java">Java Applet</a>和<a href="https://developer.mozilla.org/en-US/docs/Glossary/Adobe_Flash">Flash</a> — 这些技术允许网络开发者将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过 HTML 单独实现。嵌入这些技术是通过诸如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" title="HTML &lt;object>元素表示外部资源，可以将其视为图像，嵌套浏览上下文或要由插件处理的资源。"><code>&lt;object&gt;</code></a>和较少使用<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;cke:embed>&lt;/cke:embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a>的元素来实现的，当时它们非常有用。由于许多问题，包括可访问性、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。</p>
 
-<p><font><font>最后，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a><font><font>元素出现了（连同其他嵌入内容的方式，如</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a><font><font>，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a><font><font>等），它提供了一种将整个web页嵌入到另一个网页的方法，看起来就像那个web页是另一个网页的一个</font></font>{{htmlelement("img")}}或其他元素一样。{{htmlelement("iframe")}}现在经常被使用<font><font>。</font></font></p>
+<p>最后，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a>元素出现了（连同其他嵌入内容的方式，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a>等），它提供了一种将整个 web 页嵌入到另一个网页的方法，看起来就像那个 web 页是另一个网页的一个{{htmlelement("img")}}或其他元素一样。{{htmlelement("iframe")}}现在经常被使用。</p>
 
-<p><font><font>了解完历史之后，让我们继续往下看以了解如何使用它们。</font></font></p>
+<p>了解完历史之后，让我们继续往下看以了解如何使用它们。</p>
 
-<h2 id="自主学习：嵌入类型的使用"><font><font>自主学习：嵌入类型的使用</font></font></h2>
+<h2 id="自主学习：嵌入类型的使用">自主学习：嵌入类型的使用</h2>
 
-<p><font><font>在这篇文章中，我们将直接进入自主学习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉</font></font><a href="https://www.youtube.com/"><font><font>Youtube</font></font></a><font><font>，但很多人不了解它所提供的一些分享功能。让我们来看看Youtube如何让我们通过</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a><font><font>在页面中嵌入喜欢的视频</font></font><font><font>。</font></font></p>
-
-<ol>
- <li><font><font>首先，去Youtube找一个喜欢的视频。</font></font></li>
- <li><font><font>在视频下方，您会看到一个</font></font><em><font><font>共享</font></font></em><font><font>按钮 - 点击查看共享选项。</font></font></li>
- <li><font><font>选择“ </font></font><em><font><font>嵌入”</font></font></em><font><font>选项卡，您将得到一些</font></font><code>&lt;iframe&gt;</code><font><font>代码 - 复制一下。</font></font></li>
- <li><font><font>粘贴到</font><font>下面</font><font>的</font></font><em><font><font>输入</font></font></em><font><font>框里，看看</font></font><em><font><font>输出</font></font></em><font><font>结果是什么</font><font>。</font></font></li>
-</ol>
-
-<p><font><font>此外，您还可以试试</font><font>在示例中</font><font>嵌入</font></font><a href="https://www.google.com/maps/"><font><font>Google地图</font></font></a><font><font>：</font></font></p>
+<p>在这篇文章中，我们将直接进入自主学习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉<a href="https://www.youtube.com/">Youtube</a>，但很多人不了解它所提供的一些分享功能。让我们来看看 Youtube 如何让我们通过<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a>在页面中嵌入喜欢的视频。</p>
 
 <ol>
- <li><font><font>去Google地图找一个喜欢的地图。</font></font></li>
- <li><font><font>点击UI左上角的“汉堡菜单”（三条水平线）。</font></font></li>
- <li><font><font>选择</font></font><em><font><font>共享或嵌入地图</font></font></em><font><font>选项。</font></font></li>
- <li><font><font>选择嵌入地图选项，这将给你一些</font></font><code>&lt;iframe&gt;</code><font><font>代码 - 复制一下。</font></font></li>
- <li><font><font>粘贴到下面</font><font>的</font></font><em><font><font>输入</font></font></em><font><font>框，看看</font></font><em><font><font>输出</font></font></em><font><font>结果是什么</font><font>。</font></font></li>
+ <li>首先，去 Youtube 找一个喜欢的视频。</li>
+ <li>在视频下方，您会看到一个<em>共享</em>按钮 - 点击查看共享选项。</li>
+ <li>选择“ <em>嵌入”</em>选项卡，您将得到一些<code>&lt;iframe&gt;</code>代码 - 复制一下。</li>
+ <li>粘贴到下面的<em>输入</em>框里，看看<em>输出</em>结果是什么。</li>
 </ol>
 
-<p>如果你犯了某些错误，你可以点击<em>Reset按钮以重置编辑器。</em>如果你确实被卡住了， 按下Show <em>solution按钮以借鉴答案。</em></p>
+<p>此外，您还可以试试在示例中嵌入<a href="https://www.google.com/maps/">Google 地图</a>：</p>
+
+<ol>
+ <li>去 Google 地图找一个喜欢的地图。</li>
+ <li>点击 UI 左上角的“汉堡菜单”（三条水平线）。</li>
+ <li>选择<em>共享或嵌入地图</em>选项。</li>
+ <li>选择嵌入地图选项，这将给你一些<code>&lt;iframe&gt;</code>代码 - 复制一下。</li>
+ <li>粘贴到下面的<em>输入</em>框，看看<em>输出</em>结果是什么。</li>
+</ol>
+
+<p>如果你犯了某些错误，你可以点击<em>Reset 按钮以重置编辑器。</em>如果你确实被卡住了， 按下 Show <em>solution 按钮以借鉴答案。</em></p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -64,11 +64,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="Iframe详解"><font><font>Iframe详解</font></font></h2>
+<h2 id="Iframe详解">Iframe 详解</h2>
 
-<p><font><font>是不是很简单又有趣呢？</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a><font><font>元素旨在允许您将其他Web文档嵌入到当前文档中。</font><font>这很适合将第三方内容嵌入您的网站，您可能无法直接控制，也不希望实现自己的版本 - 例如来自在线视频提供商的视频，</font></font><a href="https://disqus.com/"><font><font>Disqus</font></font></a><font><font>等评论系统</font><font>，在线地图提供商，广告横幅等。您通过本课程使用的实时可编辑示例就是使用</font></font><code>&lt;iframe&gt;</code><font><font> </font><font>实现的</font><font>。</font></font></p>
+<p>是不是很简单又有趣呢？<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a>元素旨在允许您将其他 Web 文档嵌入到当前文档中。这很适合将第三方内容嵌入您的网站，您可能无法直接控制，也不希望实现自己的版本 - 例如来自在线视频提供商的视频，<a href="https://disqus.com/">Disqus</a>等评论系统，在线地图提供商，广告横幅等。您通过本课程使用的实时可编辑示例就是使用<code>&lt;iframe&gt;</code> 实现的。</p>
 
-<p><font><font>我</font></font><font><font>们会在后面提到，关于</font></font><code>&lt;iframe&gt;</code><font><font>有一些严重的</font></font>{{anch("安全隐患")}}<font><font>需要考虑</font></font><font><font>，但这并不意味着你不应该在你的网站上使用它们 — 它只需要一些知识和仔细地思考。让我们更详细地探索这些代码。假设您想在其中一个网页上加入MDN词汇表，您可以尝试以下方式：</font></font></p>
+<p>我们会在后面提到，关于<code>&lt;iframe&gt;</code>有一些严重的<a href="#安全隐患">安全隐患</a>需要考虑，但这并不意味着你不应该在你的网站上使用它们 — 它只需要一些知识和仔细地思考。让我们更详细地探索这些代码。假设您想在其中一个网页上加入 MDN 词汇表，您可以尝试以下方式：</p>
 
 <pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
@@ -79,98 +79,98 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
 &lt;/iframe&gt;
 </pre>
 
-<p><font><font>此示例包括使用以下所需的</font></font><code>&lt;iframe&gt;</code><font><font>基本要素：</font></font></p>
+<p>此示例包括使用以下所需的<code>&lt;iframe&gt;</code>基本要素：</p>
 
 <dl>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-allowfullscreen">allowfullscreen</a></code></dt>
- <dd><font><font>如果设置，</font></font><code>&lt;iframe&gt;</code><font><font>则可以通过</font></font><a href="/zh-CN/docs/Web/API/Fullscreen_API"><font><font>全屏API</font></font></a><font><font>设置为全屏模式</font><font>（稍微超出本文的范围）。</font></font></dd>
+ <dd>如果设置，<code>&lt;iframe&gt;</code>则可以通过<a href="/zh-CN/docs/Web/API/Fullscreen_API">全屏 API</a>设置为全屏模式（稍微超出本文的范围）。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-frameborder">frameborder</a></code></dt>
- <dd><font><font>如果设置为1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。</font><font>0删除边框。不推荐这样设置</font><font>，因为</font><font>在</font><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" title="CSS：CSS（Cascading Style Sheets）是一种声明式语言，用于控制浏览器中网页的外观。"><font>CSS中</font></a><font>可以更好地实现相同的效果</font><font>。</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" title="边框CSS属性是用于一次设置所有单个边框属性值的缩写属性：border-width，border-style和border-color。 与所有速记属性一样，未指定的任何单个值都将设置为其对应的初始值。 重要的是，边框不能用于指定border-image的自定义值，而是将其设置为其初始值，即none。"><code>border</code></a><code>: none;</code></dd>
+ <dd>如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在<a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" title="CSS：CSS（Cascading Style Sheets）是一种声明式语言，用于控制浏览器中网页的外观。">CSS 中</a>可以更好地实现相同的效果。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" title="边框CSS属性是用于一次设置所有单个边框属性值的缩写属性：border-width，border-style和border-color。 与所有速记属性一样，未指定的任何单个值都将设置为其对应的初始值。 重要的是，边框不能用于指定border-image的自定义值，而是将其设置为其初始值，即none。"><code>border</code></a><code>: none;</code></dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-src">src</a></code></dt>
- <dd><font><font>该属性与</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a><font><font>/</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" title="HTML &lt;img>元素表示文档中的图像。">&lt;img&gt;</a></code><font><font>一样包</font></font><font><font>含指向要嵌入文档的URL路径。</font></font></dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-width">width</a></code><font><font> 和 </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-height">height</a></code></dt>
- <dd><font><font>这些属性指定您想要的iframe的宽度和高度。</font></font></dd>
+ <dd>该属性与<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a>/<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" title="HTML &lt;img>元素表示文档中的图像。">&lt;img&gt;</a></code>一样包含指向要嵌入文档的 URL 路径。</dd>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-width">width</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-height">height</a></code></dt>
+ <dd>这些属性指定您想要的 iframe 的宽度和高度。</dd>
 </dl>
 
 <dl>
  <dt>备选内容</dt>
- <dd><font><font>与</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a><font><font>等其</font></font><font><font>他类似元素相同</font></font><font><font>，您可以在</font></font><code>&lt;iframe&gt;&lt;/iframe&gt;</code><font><font>标签</font><font>之间包含备选内容，</font><font>如果浏览器不支持</font></font><code>&lt;iframe&gt;</code><font><font>，将会显示备选内容，</font></font><font><font>这种情况下，我们已经添加了一个到该页面的链接。现在</font><font>您几乎不可能遇到任何不支持</font></font><code>&lt;iframe&gt;</code><font><font>的</font><font>浏览器</font><font>。</font></font></dd>
+ <dd>与<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a>等其他类似元素相同，您可以在<code>&lt;iframe&gt;&lt;/iframe&gt;</code>标签之间包含备选内容，如果浏览器不支持<code>&lt;iframe&gt;</code>，将会显示备选内容，这种情况下，我们已经添加了一个到该页面的链接。现在您几乎不可能遇到任何不支持<code>&lt;iframe&gt;</code>的浏览器。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code></dt>
- <dd><font><font>该属性需要在已经支持其他</font></font><code>&lt;iframe&gt;</code><font><font>功能（例如IE 10及更高版本）但</font><font>稍微更现代的浏览器上才能工作，该属性可以</font><font>提高安全性设置; </font><font>我们将在下一节中更加详细地谈到。</font></font></dd>
+ <dd>该属性需要在已经支持其他<code>&lt;iframe&gt;</code>功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置; 我们将在下一节中更加详细地谈到。</dd>
 </dl>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：为了提高速度，</font></font><font><font>在主内容完成加载后</font><font>，使用JavaScript设置iframe的</font><font><code>src</code>属性</font><font>是个好主意</font><font>。</font><font>这使您的页面可以更快地被使用，并减少您的官方页面加载时间（重要的</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" title="SEO：SEO（搜索引擎优化）是使网站在搜索结果中更加可见的过程，也称为提高搜索排名。"><font><font>SEO</font></font></a><font><font>指标）。</font></font></p>
+<p><strong>注意</strong>：为了提高速度，在主内容完成加载后，使用 JavaScript 设置 iframe 的<code>src</code>属性是个好主意。这使您的页面可以更快地被使用，并减少您的官方页面加载时间（重要的<a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" title="SEO：SEO（搜索引擎优化）是使网站在搜索结果中更加可见的过程，也称为提高搜索排名。">SEO</a>指标）。</p>
 </div>
 
-<h3 id="安全隐患"><font><font>安全隐患</font></font></h3>
+<h3 id="安全隐患">安全隐患</h3>
 
-<p><font><font>以上我们提到了安全问题 - 现在我们来详细介绍一下这一点。</font><font>我们并不期望您第一次就能完全理解所有内容; 我们只想让您意识到这一问题，在您更有经验并开始考虑在您的实验和工作中</font><font>使用</font></font><code>&lt;iframe&gt;</code><font><font>时为你提供参考</font><font>。</font><font>此外，没有必要害怕和不使用</font></font><code>&lt;iframe&gt;</code><font><font>—你只需要谨慎一点。继续看下去吧</font><font>...</font></font></p>
+<p>以上我们提到了安全问题 - 现在我们来详细介绍一下这一点。我们并不期望您第一次就能完全理解所有内容; 我们只想让您意识到这一问题，在您更有经验并开始考虑在您的实验和工作中使用<code>&lt;iframe&gt;</code>时为你提供参考。此外，没有必要害怕和不使用<code>&lt;iframe&gt;</code>—你只需要谨慎一点。继续看下去吧...</p>
 
-<p><font><font>浏览器制造商和Web开发人员了解到</font><font>网络上的坏人（通常被称为</font><strong><font>黑客</font></strong><font>，或更准确地说是</font><strong><font>破解者</font></strong><font>）</font><font>，如果他们试图恶意修改您的网页或欺骗人们进行不想做的事情时常把iframe作为共同的攻击目标（官方术语：</font></font><strong><font><font>攻击向量</font></font></strong><font><font>），例如显示用户名和密码等敏感信息。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，使</font></font><code>&lt;iframe&gt;</code><font><font>更加安全，这有些最佳方案值得我们考虑 - 我们将在下面介绍其中的一些。</font></font></p>
+<p>浏览器制造商和 Web 开发人员了解到网络上的坏人（通常被称为<strong>黑客</strong>，或更准确地说是<strong>破解者</strong>），如果他们试图恶意修改您的网页或欺骗人们进行不想做的事情时常把 iframe 作为共同的攻击目标（官方术语：<strong>攻击向量</strong>），例如显示用户名和密码等敏感信息。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，使<code>&lt;iframe&gt;</code>更加安全，这有些最佳方案值得我们考虑 - 我们将在下面介绍其中的一些。</p>
 
 <div class="note">
-<p><a href="https://en.wikipedia.org/wiki/Clickjacking" title="点击劫持"><font><font>单击劫持</font></font></a><font><font>是一种常见的iframe攻击，黑客将隐藏的iframe嵌入到您的文档中（或将您的文档嵌入到他们自己的恶意网站），并使用它来捕获用户的交互。</font><font>这是误导用户或窃取敏感数据的常见方式。</font></font></p>
+<p><a href="https://en.wikipedia.org/wiki/Clickjacking" title="点击劫持">单击劫持</a>是一种常见的 iframe 攻击，黑客将隐藏的 iframe 嵌入到您的文档中（或将您的文档嵌入到他们自己的恶意网站），并使用它来捕获用户的交互。这是误导用户或窃取敏感数据的常见方式。</p>
 </div>
 
-<p><font><font>一个快速的例子 — 尝试在浏览器中加载上面的例子 - 你也可以</font></font><a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html"><font><font>在Github上找到它</font></font></a><font><font>（</font></font><a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html"><font><font>参见源代码</font></font></a><font><font>）。你将不会看到任何内容，但如果你点击</font></font><font><font><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>中的<em>控制台</em></font></font><font><font>，你会看到一条消息，告诉你为什么没有显示内容。</font><font>在Firefox中，您会</font></font><em><font><font>被告知：“X-Frame-Options拒绝加载https://developer.mozilla.org/en-US/docs/Glossary”</font></font></em><font><font>。</font><font>这是因为构建MDN的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到</font></font><code>&lt;iframe&gt;</code><font><font>的设置（请参阅</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#配置CSP指令"><font><font>配置CSP指令</font></font></a><font><font>）这是有必要的 — 整个MDN页面被嵌入在其他页面中没有多大意义，除非您想要将其嵌入到您的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。</font><font>此外，如果每个人都这样做，所有额外的带宽将花费Mozilla很多资金。</font></font></p>
+<p>一个快速的例子 — 尝试在浏览器中加载上面的例子 - 你也可以<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">在 Github 上找到它</a>（<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">参见源代码</a>）。你将不会看到任何内容，但如果你点击<a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>中的<em>控制台</em>，你会看到一条消息，告诉你为什么没有显示内容。在 Firefox 中，您会<em>被告知：“X-Frame-Options 拒绝加载 https://developer.mozilla.org/en-US/docs/Glossary”</em>。这是因为构建 MDN 的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到<code>&lt;iframe&gt;</code>的设置（请参阅<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#配置CSP指令">配置 CSP 指令</a>）这是有必要的 — 整个 MDN 页面被嵌入在其他页面中没有多大意义，除非您想要将其嵌入到您的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla 很多资金。</p>
 
-<h4 id="只有在必要时嵌入"><font><font>只有在必要时嵌入</font></font></h4>
+<h4 id="只有在必要时嵌入">只有在必要时嵌入</h4>
 
-<p><font><font>有时嵌入第三方内容（例如YouTube视频和地图）是有意义的，但如果您只在完全需要时嵌入第三方内容，您可以省去很多麻烦。</font><font>网络安全的一个很好的经验法则是</font></font><em><font><font>“你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。”</font></font></em></p>
+<p>有时嵌入第三方内容（例如 YouTube 视频和地图）是有意义的，但如果您只在完全需要时嵌入第三方内容，您可以省去很多麻烦。网络安全的一个很好的经验法则是<em>“你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。”</em></p>
 
 <div>
 <p>除了安全问题，你还应该意识到知识产权问题。无论在线内容还是离线内容，绝大部分内容都是有版权的，甚至是一些你没想到有版权的内容（例如，<a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。</p>
 
-<p>如果内容获得许可，你必须遵守许可条款。例如，MDN上的内容是<a href="/zh-CN/docs/MDN/About#%E7%89%88%E6%9D%83%E5%92%8C%E8%AE%B8%E5%8F%AF">在CC-BY-SA下许可的</a>，这意味着，如果你要引用我们的内容，就必须<a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">用适当的方式注明来源</a>，即使你对内容做了实质性的修改。</p>
+<p>如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是<a href="/zh-CN/docs/MDN/About#%E7%89%88%E6%9D%83%E5%92%8C%E8%AE%B8%E5%8F%AF">在 CC-BY-SA 下许可的</a>，这意味着，如果你要引用我们的内容，就必须<a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">用适当的方式注明来源</a>，即使你对内容做了实质性的修改。</p>
 </div>
 
 <h4 id="使用_HTTPS">使用 HTTPS</h4>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTPS" title="HTTPS：HTTPS（HTTP Secure）是HTTP协议的加密版本。 它通常使用SSL或TLS来加密客户端和服务器之间的所有通信。 这种安全连接允许客户端安全地与服务器交换敏感数据，例如用于银行活动或在线购物。"><font><font>HTTPS</font></font></a><font><font>是</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" title="HTTP：HTTP（超文本传输​​协议）是启用Web上文件传输的基本协议。 HTTP是文本的（所有的通信都是以纯文本形式进行的）和无状态的（没有通信知道以前的通信）。"><font><font>HTTP</font></font></a><font><font>的加密版本</font><font>。</font><font>您应该尽可能使用HTTPS为您的网站提供服务：</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTPS" title="HTTPS：HTTPS（HTTP Secure）是HTTP协议的加密版本。 它通常使用SSL或TLS来加密客户端和服务器之间的所有通信。 这种安全连接允许客户端安全地与服务器交换敏感数据，例如用于银行活动或在线购物。">HTTPS</a>是<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" title="HTTP：HTTP（超文本传输​​协议）是启用Web上文件传输的基本协议。 HTTP是文本的（所有的通信都是以纯文本形式进行的）和无状态的（没有通信知道以前的通信）。">HTTP</a>的加密版本。您应该尽可能使用 HTTPS 为您的网站提供服务：</p>
 
 <ol>
- <li><font><font>HTTPS减少了远程内容在传输过程中被篡改的机会，</font></font></li>
- <li><font><font>HTTPS防止嵌入式内容访问您的父文档中的内容，反之亦然。</font></font></li>
+ <li>HTTPS 减少了远程内容在传输过程中被篡改的机会，</li>
+ <li>HTTPS 防止嵌入式内容访问您的父文档中的内容，反之亦然。</li>
 </ol>
 
-<p><font><font>使用HTTPS需要一个安全证书，这可能是昂贵的（尽管</font></font><a href="https://letsencrypt.org/">Let's Encrypt</a>让这件<font><font>事变得更容易），如果你没有，可以使用HTTP来为你的父文档提供服务。</font><font>但是，由于HTTPS的第二个好处，</font></font><em><font><font>无论成本如何，您绝对不能使用HTTP嵌入第三方内容</font></font></em><font><font>（在最好的情况下，您的用户的Web浏览器会给他们一个可怕的警告）。所有有声望的公司，例如Google Maps或Youtube，当您嵌入内容时，</font></font><code>&lt;iframe&gt;</code><font><font>将通过HTTPS提供 - 查看</font></font><code>&lt;iframe&gt;</code> <code>src</code><font><font>属性内的URL。</font></font></p>
+<p>使用 HTTPS 需要一个安全证书，这可能是昂贵的（尽管<a href="https://letsencrypt.org/">Let's Encrypt</a>让这件事变得更容易），如果你没有，可以使用 HTTP 来为你的父文档提供服务。但是，由于 HTTPS 的第二个好处，<em>无论成本如何，您绝对不能使用 HTTP 嵌入第三方内容</em>（在最好的情况下，您的用户的 Web 浏览器会给他们一个可怕的警告）。所有有声望的公司，例如 Google Maps 或 Youtube，当您嵌入内容时，<code>&lt;iframe&gt;</code>将通过 HTTPS 提供 - 查看<code>&lt;iframe&gt;</code> <code>src</code>属性内的 URL。</p>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：</font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Using_Github_pages"><font><font>Github页面</font></font></a><font><font>允许默认情况下通过HTTPS提供内容，因此对托管内容很有用。</font><font>如果您正在使用不同的托管，并且不确定，请向您的托管服务商询问。</font></font></p>
+<p><strong>注意</strong>：<a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Using_Github_pages">Github 页面</a>允许默认情况下通过 HTTPS 提供内容，因此对托管内容很有用。如果您正在使用不同的托管，并且不确定，请向您的托管服务商询问。</p>
 </div>
 
-<h4 id="始终使用sandbox属性"><font><font>始终使用</font></font><code>sandbox</code><font><font>属性</font></font></h4>
+<h4 id="始终使用sandbox属性">始终使用<code>sandbox</code>属性</h4>
 
-<p>想尽可能减少攻击者在你的网站上做坏事的机会，那么你应该给嵌入的内容仅能完成自己工作的权限<em><font><font>。</font></font></em><font><font>当然，这也适用于你自己的内容。一个允许包含在其里的代码以适当的方式执行或者用于测试</font><font>，但不能对其他代码库（意外或恶意）造成任何损害的容器称为</font></font><a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)"><font><font>沙盒</font></font></a><font><font>。</font></font></p>
+<p>想尽可能减少攻击者在你的网站上做坏事的机会，那么你应该给嵌入的内容仅能完成自己工作的权限<em>。</em>当然，这也适用于你自己的内容。一个允许包含在其里的代码以适当的方式执行或者用于测试，但不能对其他代码库（意外或恶意）造成任何损害的容器称为<a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)">沙盒</a>。</p>
 
-<p><font><font>未沙盒化(Unsandboxed)内容可以做得太多（执行JavaScript，提交表单，弹出窗口等）默认情况下，您应该使用没有参数的<code>sandbox</code></font><font>属性</font><font>来强制执行所有可用的限制</font><font>，如我们前面的示例所示。</font></font></p>
+<p>未沙盒化 (Unsandboxed) 内容可以做得太多（执行 JavaScript，提交表单，弹出窗口等）默认情况下，您应该使用没有参数的<code>sandbox</code>属性来强制执行所有可用的限制，如我们前面的示例所示。</p>
 
-<p><font><font>如果绝对需要，您可以逐个添加权限（</font></font><code>sandbox=""</code><font><font>属性值内） - 请参阅</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code><font><font>所有可用选项</font><font>的</font><font>参考条目。</font><font>其中重要的一点是，你</font></font><em><font><font>永远不</font></font></em><font><font>应该</font></font><font><font>同时添加</font></font><code>allow-scripts</code><font><font>和</font></font><code>allow-same-origin</code><font><font>到你的</font></font><code>sandbox</code><font><font>属性中-</font></font>在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用JavaScript完全关闭沙盒。</p>
+<p>如果绝对需要，您可以逐个添加权限（<code>sandbox=""</code>属性值内） - 请参阅<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>所有可用选项的参考条目。其中重要的一点是，你<em>永远不</em>应该同时添加<code>allow-scripts</code>和<code>allow-same-origin</code>到你的<code>sandbox</code>属性中 - 在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用 JavaScript 完全关闭沙盒。</p>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：</font></font>如果攻击者可以欺骗人们直接访问恶意内容（在iframe之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的<a href="https://developer.mozilla.org/en-US/docs/Glossary/domain">域</a>向您的主站点提供的。</p>
+<p><strong>注意</strong>：如果攻击者可以欺骗人们直接访问恶意内容（在 iframe 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的<a href="https://developer.mozilla.org/en-US/docs/Glossary/domain">域</a>向您的主站点提供的。</p>
 </div>
 
-<h4 id="配置CSP指令"><font><font>配置CSP指令</font></font></h4>
+<h4 id="配置CSP指令">配置 CSP 指令</h4>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSP" title="CSP：CSP（内容安全策略）用于检测和减轻某些类型的网站相关攻击，如XSS和数据注入。"><font><font>CSP</font></font></a><font><font>代表</font></font><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP"><font><font>内容安全策略</font></font></a></strong><font><font>，它提供</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives"><font><font>一组HTTP标头</font></font></a><font><font>（由web服务器发送时与元数据一起发送的元数据），旨在提高HTML文档的安全性。</font><font>在</font></font><code>&lt;iframe&gt;</code>s<font><font>安全性方面</font></font><font><font>，您可以</font></font><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options"><font><font>将服务器配置为发送适当的</font></font><code>X-Frame-Options</code><font><font>  标题。</font></font></a></em><font><font>这样做可以防止其他网站在其网页中嵌入您的内容（这将导致</font></font><a href="https://en.wikipedia.org/wiki/clickjacking" title="点击劫持"><font><font>点击</font></font></a><font><font>和一系列其他攻击），正如我们之前看到的那样，MDN开发人员已经做了这些工作。</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSP" title="CSP：CSP（内容安全策略）用于检测和减轻某些类型的网站相关攻击，如XSS和数据注入。">CSP</a>代表<strong><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">内容安全策略</a></strong>，它提供<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives">一组 HTTP 标头</a>（由 web 服务器发送时与元数据一起发送的元数据），旨在提高 HTML 文档的安全性。在<code>&lt;iframe&gt;</code>的安全性方面，您可以<em><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options">将服务器配置为发送适当的<code>X-Frame-Options</code>  标题。</a></em>这样做可以防止其他网站在其网页中嵌入您的内容（这将导致<a href="https://en.wikipedia.org/wiki/clickjacking" title="点击劫持">点击</a>和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。</p>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：您可以阅读Frederik Braun的帖子</font></font><font><font><a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">在X-Frame-Options安全性头上</a>来</font></font><font><font>获取有关此主题的更多背景信息。</font><font>显然，在这篇文章中已经解释得很清楚了。</font></font></p>
+<p><strong>注意</strong>：您可以阅读 Frederik Braun 的帖子<a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">在 X-Frame-Options 安全性头上</a>来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。</p>
 </div>
 
-<h2 id="&lt;embed>和&lt;object>元素"><font><font>&lt;embed&gt;和&lt;object&gt;元素</font></font></h2>
+<h2 id="&lt;embed>和&lt;object>元素">&lt;embed&gt;和&lt;object&gt;元素</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a><font><font>和</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" title="HTML &lt;object>元素表示外部资源，可以将其视为图像，嵌套浏览上下文或要由插件处理的资源。">&lt;object&gt;</a></code><font><font>元素</font></font><font><font>的功能不同于</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。">&lt;iframe&gt;</a></code>—— 这<font><font>些元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像Java小程序和Flash，PDF（可在浏览器中显示为一个PDF插件）这样的插件技术，甚至像视频，SVG和图像的内容！</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a>和<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" title="HTML &lt;object>元素表示外部资源，可以将其视为图像，嵌套浏览上下文或要由插件处理的资源。">&lt;object&gt;</a></code>元素的功能不同于<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="HTML &lt;iframe>元素表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。 在HTML 4.01中，文档可能包含一个头部和一个主体或头部和框架集，但不包括主体和框架集。 但是，一个&lt;iframe>可以在普通文档正文中使用。 每个浏览上下文都有自己的会话历史和活动文档。 包含嵌入内容的浏览上下文称为父浏览上下文。 顶级浏览上下文（没有父级）通常是浏览器窗口。">&lt;iframe&gt;</a></code>—— 这些元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像 Java 小程序和 Flash，PDF（可在浏览器中显示为一个 PDF 插件）这样的插件技术，甚至像视频，SVG 和图像的内容！</p>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：</font></font><strong><font><font>插件</font></font></strong><font><font>是一种对浏览器原生无法读取的内容提供访问权限的软件。</font></font></p>
+<p><strong>注意</strong>：<strong>插件</strong>是一种对浏览器原生无法读取的内容提供访问权限的软件。</p>
 </div>
 
-<p><font><font>然而，您不太可能使用这些元素 - Applet几年来一直没有被使用；由于许多原因，Flash不再受欢迎（见</font><font>下面的</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_case_against_plugins"><font><font>插件案例</font></font></a><font><font>）；PDF更倾向于被链接而不是被嵌入；其他内容，如图像和视频都有更优秀、更容易元素来处理。插件和这些嵌入方法真的是一种传统技术，我们提及它们主要是为了以防您在某些情况下遇到问题，比如内部网或企业项目等。</font></font></p>
+<p>然而，您不太可能使用这些元素 - Applet 几年来一直没有被使用；由于许多原因，Flash 不再受欢迎（见下面的<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_case_against_plugins">插件案例</a>）；PDF 更倾向于被链接而不是被嵌入；其他内容，如图像和视频都有更优秀、更容易元素来处理。插件和这些嵌入方法真的是一种传统技术，我们提及它们主要是为了以防您在某些情况下遇到问题，比如内部网或企业项目等。</p>
 
-<p><font><font>如果您发现自己需要嵌入插件内容，那么您至少需要一些这样的信息：</font></font></p>
+<p>如果您发现自己需要嵌入插件内容，那么您至少需要一些这样的信息：</p>
 
 <table class="standard-table">
  <thead>
@@ -182,17 +182,17 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
  </thead>
  <tbody>
   <tr>
-   <td><font>嵌入内容的</font><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" title="URL: Uniform Resource Locator (URL) is a text string specifying where a resource can be found on the Internet."><font>网址</font></a></td>
+   <td>嵌入内容的<a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" title="URL: Uniform Resource Locator (URL) is a text string specifying where a resource can be found on the Internet.">网址</a></td>
    <td>{{htmlattrxref('src','embed')}}</td>
    <td>{{htmlattrxref('data','object')}}</td>
   </tr>
   <tr>
-   <td><font><font>嵌入内容的</font></font><em><font><font>准确</font></font></em><a href="https://developer.mozilla.org/en-US/docs/Glossary/MIME_type" title="媒体类型：MIME类型（现在称为“媒体类型”，有时也称为“内容类型”）是与指示文件类型的文件一起发送的字符串（例如，声音文件可能标记为音频/ ogg，或一个图像文件图像/ png）。 它的作用与传统上在Windows上的文件扩展名相同。"><font><font>媒体类型</font></font></a></td>
+   <td>嵌入内容的<em>准确</em><a href="https://developer.mozilla.org/en-US/docs/Glossary/MIME_type" title="媒体类型：MIME类型（现在称为“媒体类型”，有时也称为“内容类型”）是与指示文件类型的文件一起发送的字符串（例如，声音文件可能标记为音频/ ogg，或一个图像文件图像/ png）。 它的作用与传统上在Windows上的文件扩展名相同。">媒体类型</a></td>
    <td>{{htmlattrxref('type','embed')}}</td>
    <td>{{htmlattrxref('type','object')}}</td>
   </tr>
   <tr>
-   <td><font><font>由插件控制的框的高度和宽度（以CSS像素为单位）</font></font></td>
+   <td>由插件控制的框的高度和宽度（以 CSS 像素为单位）</td>
    <td>{{htmlattrxref('height','embed')}}<br>
     {{htmlattrxref('width','embed')}}</td>
    <td>{{htmlattrxref('height','object')}}<br>
@@ -200,22 +200,22 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
   </tr>
   <tr>
    <td>名称和值，将插件作为参数提供</td>
-   <td>具有这些名称和值的ad hoc属性</td>
-   <td><font><font>单标签</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" title="HTML &lt;param>元素定义了一个&lt;object>元素的参数。"><code>&lt;param&gt;</code></a><font><font>元素，包含在内</font></font><code>&lt;object&gt;</code></td>
+   <td>具有这些名称和值的 ad hoc 属性</td>
+   <td>单标签<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" title="HTML &lt;param>元素定义了一个&lt;object>元素的参数。"><code>&lt;param&gt;</code></a>元素，包含在内<code>&lt;object&gt;</code></td>
   </tr>
   <tr>
-   <td>独立的HTML内容作为不可用资源的回退</td>
-   <td><font><font>不支持（</font></font><code>&lt;noembed&gt;</code><font><font>已过时）</font></font></td>
-   <td><font><font>包含在</font><font>元素</font></font><code>&lt;object&gt;</code><font><font>之后</font></font><code>&lt;param&gt;</code></td>
+   <td>独立的 HTML 内容作为不可用资源的回退</td>
+   <td>不支持（<code>&lt;noembed&gt;</code>已过时）</td>
+   <td>包含在元素<code>&lt;object&gt;</code>之后<code>&lt;param&gt;</code></td>
   </tr>
  </tbody>
 </table>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：</font></font><code>&lt;object&gt;</code><font><font>需要</font></font><code>data</code><font><font>属性，</font></font><code>type</code><font><font>属性或两者。</font><font>如果您同时使用这两个，您也可以使用该</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-typemustmatch">typemustmatch</a></code><font><font>属性（仅在Firefox中实现，在本文中）。</font></font><code>typemustmatch</code><font><font>保持嵌入文件不运行，除非</font></font><code>type</code><font><font>属性提供正确的媒体类型。</font></font><code>typemustmatch</code><font><font>因此，当您嵌入来自不同</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/origin" title="来源：Web内容的起源由方案（协议），主机（域）和用于访问它的URL的端口定义。 只有当方案，主机和端口都匹配时，两个对象具有相同的原点。"><font><font>来源的</font></font></a><font><font>内容</font><font>（可以防止攻击者通过插件运行任意脚本）</font><font>时，可以赋予重要的安全优势</font><font>。</font></font></p>
+<p><strong>注意</strong>：<code>&lt;object&gt;</code>需要<code>data</code>属性，<code>type</code>属性或两者。如果您同时使用这两个，您也可以使用该<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-typemustmatch">typemustmatch</a></code>属性（仅在 Firefox 中实现，在本文中）。<code>typemustmatch</code>保持嵌入文件不运行，除非<code>type</code>属性提供正确的媒体类型。<code>typemustmatch</code>因此，当您嵌入来自不同<a href="https://developer.mozilla.org/en-US/docs/Glossary/origin" title="来源：Web内容的起源由方案（协议），主机（域）和用于访问它的URL的端口定义。 只有当方案，主机和端口都匹配时，两个对象具有相同的原点。">来源的</a>内容（可以防止攻击者通过插件运行任意脚本）时，可以赋予重要的安全优势。</p>
 </div>
 
-<p><font><font>下面是一个使用该</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a><font><font>元素嵌入Flash影片</font><font>的示例</font><font>（请参阅</font><font>此处的</font></font><a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html"><font><font>Github</font></font></a><font><font>，并</font></font><a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html"><font><font>检查源代码</font></font></a><font><font>）：</font></font></p>
+<p>下面是一个使用该<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" title="HTML &lt;embed>元素表示外部应用程序或交互式内容（换句话说，插件）的集成点。"><code>&lt;embed&gt;</code></a>元素嵌入 Flash 影片的示例（请参阅此处的<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">Github</a>，并<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">检查源代码</a>）：</p>
 
 <pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
@@ -223,33 +223,33 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他嵌入技术
        allowFullScreen="false" type="application/x-shockwave-flash"
        pluginspage="http://www.macromedia.com/go/getflashplayer"&gt;</pre>
 
-<p><font><font>很可怕，不是吗 。</font><font>Adobe Flash工具生成的HTML往往更糟糕，使用</font><font>嵌入</font></font><code>&lt;object&gt;</code><font><font>元素的</font></font><code>&lt;embed&gt;</code><font><font>元素来覆盖所有的基础（查看一个例子）。甚至有一段时间，Flash被成功地用作HTML5视频的备用内容，但是这种情况越来越被认为是不必要的。</font></font></p>
+<p>很可怕，不是吗。Adobe Flash 工具生成的 HTML 往往更糟糕，使用嵌入<code>&lt;object&gt;</code>元素的<code>&lt;embed&gt;</code>元素来覆盖所有的基础（查看一个例子）。甚至有一段时间，Flash 被成功地用作 HTML5 视频的备用内容，但是这种情况越来越被认为是不必要的。</p>
 
-<p><font><font>现在来看一个</font></font><code>&lt;object&gt;</code><font><font>将PDF嵌入一个页面的例子</font></font><font><font>（参见</font><a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html"><font>实例</font></a><font>和</font></font><a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html"><font><font>源代码</font></font></a><font><font>）：</font></font></p>
+<p>现在来看一个<code>&lt;object&gt;</code>将 PDF 嵌入一个页面的例子（参见<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">实例</a>和<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">源代码</a>）：</p>
 
 <pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
         width="800" height="1200" typemustmatch&gt;
   &lt;p&gt;You don't have a PDF plugin, but you can &lt;a href="myfile.pdf"&gt;download the PDF file.&lt;/a&gt;&lt;/p&gt;
 &lt;/object&gt;</pre>
 
-<p><font><font>PDF是纸与数据之间重要的阶梯，但它们</font></font><a href="http://webaim.org/techniques/acrobat/acrobat">在可访问性上有些问题</a><font><a href="http://webaim.org/techniques/acrobat/acrobat"><font>，</font></a><font>并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。</font></font></p>
+<p>PDF 是纸与数据之间重要的阶梯，但它们<a href="http://webaim.org/techniques/acrobat/acrobat">在可访问性上有些问题</a><a href="http://webaim.org/techniques/acrobat/acrobat">，</a>并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。</p>
 
-<h3 id="针对插件的情况"><font><font>针对插件的情况</font></font></h3>
+<h3 id="针对插件的情况">针对插件的情况</h3>
 
-<p><font><font>以前，插件在网络上是不可或缺的。还记得</font><font>你必须安装Adobe Flash Player才能在线观看电影的日子吗？并且你还会不断地收到关于更新Flash Player和Java运行环境的烦人警报。Web技术已经变得更加强大，那些日子已经结束了。对于大多数应用程序，现在是停止依赖插件传播内容，开始利用Web技术的时候了。</font></font></p>
+<p>以前，插件在网络上是不可或缺的。还记得你必须安装 Adobe Flash Player 才能在线观看电影的日子吗？并且你还会不断地收到关于更新 Flash Player 和 Java 运行环境的烦人警报。Web 技术已经变得更加强大，那些日子已经结束了。对于大多数应用程序，现在是停止依赖插件传播内容，开始利用 Web 技术的时候了。</p>
 
 <ul>
- <li><strong><font><font>扩大你对大家的影响力。</font></font></strong><font><font>每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。</font><font>由于Web在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。</font></font></li>
- <li><strong><font><font>从</font><font>Flash和其他插件附带</font><font>的</font></font><a href="http://webaim.org/techniques/flash/"><font><font>额外的可访问性问题</font></font></a><font><font>中</font>摆脱<font>。</font></font></strong></li>
- <li><strong><font><font>避免额外的安全隐患。</font></font></strong><font><font>即使经过无数次补丁</font></font><a href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53"><font><font>，</font></font></a><font><font> Adobe Flash也是</font><a href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53"><font>非常不安全的</font></a><font>。</font><font>2015年，Facebook的首席安全官Alex Stamos甚至</font></font><a href="http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso"><font><font>要求Adobe停止Flash。</font></font></a></li>
+ <li><strong>扩大你对大家的影响力。</strong>每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。由于 Web 在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。</li>
+ <li><strong>从 Flash 和其他插件附带的<a href="http://webaim.org/techniques/flash/">额外的可访问性问题</a>中摆脱。</strong></li>
+ <li><strong>避免额外的安全隐患。</strong>即使经过无数次补丁<a href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">，</a> Adobe Flash 也是<a href="http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">非常不安全的</a>。2015 年，Facebook 的首席安全官 Alex Stamos 甚至<a href="http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso">要求 Adobe 停止 Flash。</a></li>
 </ul>
 
-<p><font><font>那你该怎么办？</font><font>如果您需要交互性，HTML和</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript" title="JavaScript：JavaScript（JS）是一种编程语言，主要用于客户端来动态地脚本化网页，但也常常是服务器端的。"><font><font>JavaScript</font></font></a><font><font>可以轻松地为您完成工作，而不需要Java小程序或过时的ActiveX / BHO技术。</font><font>您可以使用</font></font><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><font><font>HTML5视频</font></font></a><font><font>来满足媒体需求，</font><font>矢量图形</font></font><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web"><font><font>SVG</font></font></a><font><font>，以及</font><font>复杂图像和动画</font></font><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial"><font><font>画布</font></font></a><font><font>。</font></font><a href="https://plus.google.com/+PeterElst/posts/P5t4pFhptvp"><font><font>彼得·埃尔斯特（Peter Elst）几年前已经提到</font></font></a><font><font>，对于工作Adobe Flash极少是正确的工具，除了专门的游戏和商业应用。对于ActiveX，即使微软的</font></font><a href="https://developer.mozilla.org/en-US/docs/Glossary/Microsoft_Edge" title="Edge：Microsoft Edge是一种免费的图形Web浏览器，与Microsoft Windows捆绑在一起，由Microsoft自2014年开始。最初称为Spartan，Edge取代了长期以来的Microsoft浏览器Internet Explorer。"><font><font>Edge</font></font></a><font><font>浏览器也不再支持。</font></font></p>
+<p>那你该怎么办？如果您需要交互性，HTML 和<a href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript" title="JavaScript：JavaScript（JS）是一种编程语言，主要用于客户端来动态地脚本化网页，但也常常是服务器端的。">JavaScript</a>可以轻松地为您完成工作，而不需要 Java 小程序或过时的 ActiveX / BHO 技术。您可以使用<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">HTML5 视频</a>来满足媒体需求，矢量图形<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">SVG</a>，以及复杂图像和动画<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial">画布</a>。<a href="https://plus.google.com/+PeterElst/posts/P5t4pFhptvp">彼得·埃尔斯特（Peter Elst）几年前已经提到</a>，对于工作 Adobe Flash 极少是正确的工具，除了专门的游戏和商业应用。对于 ActiveX，即使微软的<a href="https://developer.mozilla.org/en-US/docs/Glossary/Microsoft_Edge" title="Edge：Microsoft Edge是一种免费的图形Web浏览器，与Microsoft Windows捆绑在一起，由Microsoft自2014年开始。最初称为Spartan，Edge取代了长期以来的Microsoft浏览器Internet Explorer。">Edge</a>浏览器也不再支持。</p>
 
 <h2 id="总结">总结</h2>
 
-<p><font><font>在Web文档中嵌入其他内容这一主题可以很快变得非常复杂，因此在本文中，我们尝试以一种简单而熟悉的方式来介绍它，这种介绍方式将立即显示出相关性，同时仍暗示了一些涉及更高级功能的技术。刚开始，除了嵌入第三方内容（如地图和视频），您不太可能在网页上使用到嵌入技术。当你变得更有经验时，你可能会开始为他们找到更多的用途。</font></font></p>
+<p>在 Web 文档中嵌入其他内容这一主题可以很快变得非常复杂，因此在本文中，我们尝试以一种简单而熟悉的方式来介绍它，这种介绍方式将立即显示出相关性，同时仍暗示了一些涉及更高级功能的技术。刚开始，除了嵌入第三方内容（如地图和视频），您不太可能在网页上使用到嵌入技术。当你变得更有经验时，你可能会开始为他们找到更多的用途。</p>
 
-<p><font><font>除了我们在这里讨论的那些外，还有许多涉及嵌入外部内容的技术。我们看到了一些在前面的文章中出现的，如</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a><font><font>，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" title="HTML &lt;audio>元素用于在文档中嵌入声音内容。 它可能包含一个或多个音频源，使用src属性或&lt;source>元素表示：浏览器将选择最合适的一个。 它也可以是流媒体的目的地，使用MediaStream。"><code>&lt;audio&gt;</code></a><font><font>和</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" title="HTML &lt;img>元素表示文档中的图像。"><code>&lt;img&gt;</code></a><font><font>，但还有其它的有待关注，如  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a><font><font>用于JavaScript生成的2D和3D图形，</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg" title="关于此的文件尚未写入;  请考虑贡献！">&lt;svg&gt;</a></code>用于<font><font>嵌入矢量图形</font></font><font><font>。</font><font>我们将在此学习模块的下一篇文章中学习</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/SVG"><font><font>SVG</font></font></a><font><font>。</font></font></p>
+<p>除了我们在这里讨论的那些外，还有许多涉及嵌入外部内容的技术。我们看到了一些在前面的文章中出现的，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="使用HTML &lt;video>元素将视频内容嵌入到文档中。"><code>&lt;video&gt;</code></a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" title="HTML &lt;audio>元素用于在文档中嵌入声音内容。 它可能包含一个或多个音频源，使用src属性或&lt;source>元素表示：浏览器将选择最合适的一个。 它也可以是流媒体的目的地，使用MediaStream。"><code>&lt;audio&gt;</code></a>和<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" title="HTML &lt;img>元素表示文档中的图像。"><code>&lt;img&gt;</code></a>，但还有其它的有待关注，如  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a>用于 JavaScript 生成的 2D 和 3D 图形，<code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg" title="关于此的文件尚未写入;  请考虑贡献！">&lt;svg&gt;</a></code>用于嵌入矢量图形。我们将在此学习模块的下一篇文章中学习<a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a>。</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}</p>

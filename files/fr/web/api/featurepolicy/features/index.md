@@ -37,7 +37,7 @@ const fonctionnalitésSupportées = featurePolicy.features()
 
 // Affiche chaque directive dans la console
 for (const directive of fonctionnalitésSupportées)
-  console.log(directive)
+  console.log(directive)
 ```
 
 ## Spécification

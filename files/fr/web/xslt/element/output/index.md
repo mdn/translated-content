@@ -12,17 +12,19 @@ L'élément `<xsl:output>` contrôle les caractéristiques du document de sortie
 
 ### Syntaxe
 
-    <xsl:output
-    	method="xml" | "html" | "text"
-    	version=CHAÎNE
-    	encoding=CHAÎNE
-    	omit-xml-declaration="yes" | "no"
-    	standalone="yes" | "no"
-    	doctype-public=CHAÎNE
-    	doctype-system=CHAÎNE
-    	cdata-section-elements=LISTE-DE-NOMS
-    	indent="yes" | "no"
-    	media-type=CHAÎNE  />
+```xml
+<xsl:output
+  method="xml" | "html" | "text"
+  version=CHAÎNE
+  encoding=CHAÎNE
+  omit-xml-declaration="yes" | "no"
+  standalone="yes" | "no"
+  doctype-public=CHAÎNE
+  doctype-system=CHAÎNE
+  cdata-section-elements=LISTE-DE-NOMS
+  indent="yes" | "no"
+  media-type=CHAÎNE />
+```
 
 ### Attributs obligatoires
 

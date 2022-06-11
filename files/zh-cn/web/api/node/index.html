@@ -12,7 +12,7 @@ translation_of: Web/API/Node
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary"><strong><code>Node</code></strong> 是一个接口，各种类型的 DOM API 对象会从这个接口继承。它允许我们使用相似的方式对待这些不同类型的对象；比如, 继承同一组方法，或者用同样的方式测试。</span></p>
+<p><strong><code>Node</code></strong> 是一个接口，各种类型的 DOM API 对象会从这个接口继承。它允许我们使用相似的方式对待这些不同类型的对象；比如，继承同一组方法，或者用同样的方式测试。</p>
 
 <p>以下接口都从 <code>Node</code> 继承其方法和属性：</p>
 
@@ -28,18 +28,18 @@ translation_of: Web/API/Node
 
 <dl>
  <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
- <dd>返回一个表示base URL的{{DOMxRef("DOMString")}}。不同语言中的base URL的概念都不一样。 在HTML中，base URL表示协议和域名，以及一直到最后一个'/'之前的文件目录。</dd>
+ <dd>返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。 在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。</dd>
 </dl>
 
 <dl>
  <dt>{{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}}</dt>
- <dd>(不适用于网页内容) 只读的 {{ Interface("nsIURI") }} 对象表示元素的base URI.</dd>
+ <dd>(不适用于网页内容) 只读的 <code>nsIURI</code> 对象表示元素的 base URI.</dd>
  <dt>{{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}</dt>
  <dd>返回一个包含了该节点所有子节点的实时的{{DOMxRef("NodeList")}}。{{DOMxRef("NodeList")}} 是动态变化的。如果该节点的子节点发生了变化，{{DOMxRef("NodeList")}}对象就会自动更新。 </dd>
  <dt>{{DOMxRef("Node.firstChild")}} {{ReadonlyInline}}</dt>
  <dd>返回该节点的第一个子节点{{DOMxRef("Node")}}，如果该节点没有子节点则返回<code>null</code>。</dd>
  <dt>{{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}</dt>
- <dd>返回一个布尔值用来检测该节点是否已连接(直接或者间接)到一个上下文对象上，比如通常DOM情况下的{{DOMxRef("Document")}}对象，或者在shadow DOM情况下的{{DOMxRef("ShadowRoot")}}对象。</dd>
+ <dd>返回一个布尔值用来检测该节点是否已连接 (直接或者间接) 到一个上下文对象上，比如通常 DOM 情况下的{{DOMxRef("Document")}}对象，或者在 shadow DOM 情况下的{{DOMxRef("ShadowRoot")}}对象。</dd>
  <dt>{{DOMxRef("Node.lastChild")}} {{ReadonlyInline}}</dt>
  <dd>返回该节点的最后一个子节点{{DOMxRef("Node")}}，如果该节点没有子节点则返回<code>null</code>。</dd>
  <dt>{{DOMxRef("Node.nextSibling")}} {{ReadonlyInline}}</dt>
@@ -108,13 +108,13 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.nodeValue")}}</dt>
  <dd>返回或设置当前节点的值。</dd>
  <dt>{{DOMxRef("Node.ownerDocument")}} {{readonlyInline}}</dt>
- <dd>返回这个元素属于的 {{DOMxRef("Document")}}对象 。 如果没有Document对象与之关联，返回null。</dd>
+ <dd>返回这个元素属于的 {{DOMxRef("Document")}}对象 。 如果没有 Document 对象与之关联，返回 null。</dd>
  <dt>{{DOMxRef("Node.parentNode")}} {{readonlyInline}}</dt>
- <dd>返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回null。</dd>
+ <dd>返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回 null。</dd>
  <dt>{{DOMxRef("Node.parentElement")}} {{readonlyInline}}</dt>
- <dd>返回一个当前节点的父节点 {{DOMxRef("Element")}} 。 如果当前节点没有父节点或者说父节点不是一个元素({{DOMxRef("Element")}}), 这个属性返回null。</dd>
+ <dd>返回一个当前节点的父节点 {{DOMxRef("Element")}} 。 如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。</dd>
  <dt>{{DOMxRef("Node.previousSibling")}} {{readonlyInline}}</dt>
- <dd>返回一个当前节点同辈的前一个节点( {{DOMxRef("Node")}}) ，或者返回null（如果不存在这样的一个节点的话）。</dd>
+ <dd>返回一个当前节点同辈的前一个节点 ( {{DOMxRef("Node")}}) ，或者返回 null（如果不存在这样的一个节点的话）。</dd>
  <dt>{{DOMxRef("Node.textContent")}}</dt>
  <dd>返回或设置一个元素内所有子节点及其后代的文本内容。</dd>
 </dl>
@@ -125,21 +125,21 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>返回一个表示元素名称的本土化表示方法的 {{DOMxRef("DOMString")}} 。
  <div class="blockIndicator note">
- <p><strong>Note:</strong> 在Firefox 3.5以及更早的版本中, HTML 元素的 localName 属性的返回值都是大写的（XHTML 例外）。在后续版本中，这种情况就不存在了。无论是 HTML 还是 XHTML 中，均返回小写的 localName。</p>
+ <p><strong>Note:</strong> 在 Firefox 3.5 以及更早的版本中，HTML 元素的 localName 属性的返回值都是大写的（XHTML 例外）。在后续版本中，这种情况就不存在了。无论是 HTML 还是 XHTML 中，均返回小写的 localName。</p>
  </div>
  </dd>
  <dt>{{DOMxRef("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>该节点命名空间的<code>URL</code>，如果没有命名空间则为<code>null</code>。
  <div class="blockIndicator note">
- <p><strong>Note:</strong> 在Firefox 3.5以及更早的版本中, HTML 的元素都没有命名空间. 而在最新的版本中, 无论是 HTML 还是 XML 文档树 ，所有元素的命名空间统一为 <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>。</p>
+ <p><strong>Note:</strong> 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树 ，所有元素的命名空间统一为 <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>。</p>
  </div>
  </dd>
  <dt>{{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}</dt>
- <dd>返回节点优先级 {{Interface("nsIPrincipal")}} 。</dd>
+ <dd>返回节点优先级 <code>nsIPrincipal</code> 。</dd>
  <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
  <dd>返回一个节点命名空间的前缀 {{DOMxRef("DOMString")}} , 当前缀不存在时返回 <code>null</code> 。</dd>
  <dt>{{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>返回一个DOM 树中顶层节点的  {{DOMxRef("Node")}} 对象，如果顶层节点不DOM 树中，则返回当前节点。该属性已被 {{DOMxRef("Node.getRootNode()")}} 方法所代替。</dd>
+ <dd>返回一个 DOM 树中顶层节点的  {{DOMxRef("Node")}} 对象，如果顶层节点不 DOM 树中，则返回当前节点。该属性已被 {{DOMxRef("Node.getRootNode()")}} 方法所代替。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -157,7 +157,7 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.contains()")}}</dt>
  <dd>返回一个 {{jsxref("Boolean")}} 布尔值，来表示传入的节点是否为该节点的后代节点。</dd>
  <dt>{{DOMxRef("Node.getRootNode()")}}</dt>
- <dd>返回上下文对象的根节点。如果shadow root节点存在的话，也可以在返回的节点中包含它。</dd>
+ <dd>返回上下文对象的根节点。如果 shadow root 节点存在的话，也可以在返回的节点中包含它。</dd>
  <dt>{{DOMxRef("Node.hasChildNodes()")}}</dt>
  <dd>返回一个{{jsxref("Boolean")}} 布尔值，来表示该元素是否包含有子节点。</dd>
  <dt>{{DOMxRef("Node.insertBefore()")}}</dt>
@@ -256,7 +256,7 @@ removeAllChildren(document.body);</pre>
 
 <h4 id="使用示例_2">使用示例</h4>
 
-<p>下述例子会打印出ID为 <code>"box"</code> 的 <code>&lt;div&gt;</code> 标签内的所有 <code>&lt;span&gt;</code> 标签的 <a href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> 属性：</p>
+<p>下述例子会打印出 ID 为 <code>"box"</code> 的 <code>&lt;div&gt;</code> 标签内的所有 <code>&lt;span&gt;</code> 标签的 <a href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> 属性：</p>
 
 <pre class="brush: html; notranslate">&lt;div id="box"&gt;
 	&lt;span&gt;Foo&lt;/span&gt;
@@ -333,28 +333,28 @@ console.log(mistakes);
   <tr>
    <td>{{SpecName("DOM WHATWG", "#interface-node", "Node")}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>增加了以下方法: <code>getRootNode()</code></td>
+   <td>增加了以下方法：<code>getRootNode()</code></td>
   </tr>
   <tr>
    <td>{{SpecName("DOM4", "#interface-node", "Node")}}</td>
    <td>{{Spec2("DOM4")}}</td>
-   <td>移除了以下属性: <code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, 和 <code>localName</code>.<br>
-    移除了以下方法: <code>isSupported()</code>, <code>hasAttributes()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData()</code>.</td>
+   <td>移除了以下属性：<code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, 和 <code>localName</code>.<br>
+    移除了以下方法：<code>isSupported()</code>, <code>hasAttributes()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData()</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName("DOM3 Core", "core.html#ID-1950641247", "Node")}}</td>
    <td>{{Spec2("DOM3 Core")}}</td>
-   <td><code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, 和 <code>appendChild()</code> 方法在{{DOMxRef("Document")}} 上调用时遇到特定错误时会抛出一个新的异常(<code>NOT_SUPPORTED_ERR</code>)。<br>
+   <td><code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, 和 <code>appendChild()</code> 方法在{{DOMxRef("Document")}} 上调用时遇到特定错误时会抛出一个新的异常 (<code>NOT_SUPPORTED_ERR</code>)。<br>
     <code>normalize()</code> 方法已被修改，使得当设定特定的 {{DOMxRef("DOMConfiguration")}}  属性时， {{DOMxRef("Text")}} 节点也能被正确整理。<br>
-    添加以下方法: <code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
-    添加以下属性: <code>baseURI</code> 和 <code>textContent</code>.</td>
+    添加以下方法：<code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
+    添加以下属性：<code>baseURI</code> 和 <code>textContent</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 Core", "core.html#ID-1950641247", "Node")}}</td>
    <td>{{Spec2("DOM2 Core")}}</td>
    <td>修改 <code>ownerDocument</code> 属性，当访问 {{DOMxRef("DocumentFragment")}} 子节点的 <code>ownerDocument</code> 属性也会返回 null。<br>
-    添加下列属性: <code>namespaceURI</code>, <code>prefix</code>, 和 <code>localName</code>.<br>
-    添加下列方法: <code>normalize()</code>, <code>isSupported()</code> 和 <code>hasAttributes()</code>.</td>
+    添加下列属性：<code>namespaceURI</code>, <code>prefix</code>, 和 <code>localName</code>.<br>
+    添加下列方法：<code>normalize()</code>, <code>isSupported()</code> 和 <code>hasAttributes()</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName("DOM1", "level-one-core.html#ID-1950641247", "Node")}}</td>

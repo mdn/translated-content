@@ -22,7 +22,7 @@ Renvoie le type MIME dans lequel le document est rendu. Il peut provenir d'en-t�
 
 ## Notes
 
-La  propriété n'est pas affectée par les balises META.
+La propriété n'est pas affectée par les balises META.
 
 ## Spécifications
 

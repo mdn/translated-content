@@ -7,7 +7,7 @@ original_slug: Web/API/AudioContext/createScriptProcessor
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }} 接口的<code>createScriptProcessor()</code> 方法创建一个{{domxref("ScriptProcessorNode")}} 用于通过JavaScript直接处理音频.</p>
+<p>{{ domxref("AudioContext") }} 接口的<code>createScriptProcessor()</code> 方法创建一个{{domxref("ScriptProcessorNode")}} 用于通过 JavaScript 直接处理音频。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -19,20 +19,20 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 
 <dl>
  <dt><code>bufferSize</code></dt>
- <dd>缓冲区大小，以样本帧为单位。具体来讲，缓冲区大小必须是下面这些值当中的某一个: 256, 512, 1024, 2048, 4096, 8192, 16384. 如果不传，或者参数为0，则取当前环境最合适的缓冲区大小, 取值为2的幂次方的一个常数，在该node的整个生命周期中都不变.</dd>
- <dd>该取值控制着<code>audioprocess事件被分派的频率，以及每一次调用多少样本帧被处理</code>. 较低bufferSzie将导致一定的延迟。较高的bufferSzie就要注意避免音频的崩溃和故障。推荐作者不要给定具体的缓冲区大小，让系统自己选一个好的值来平衡延迟和音频质量。</dd>
+ <dd>缓冲区大小，以样本帧为单位。具体来讲，缓冲区大小必须是下面这些值当中的某一个：256, 512, 1024, 2048, 4096, 8192, 16384. 如果不传，或者参数为 0，则取当前环境最合适的缓冲区大小，取值为 2 的幂次方的一个常数，在该 node 的整个生命周期中都不变。</dd>
+ <dd>该取值控制着<code>audioprocess事件被分派的频率，以及每一次调用多少样本帧被处理</code>. 较低 bufferSzie 将导致一定的延迟。较高的 bufferSzie 就要注意避免音频的崩溃和故障。推荐作者不要给定具体的缓冲区大小，让系统自己选一个好的值来平衡延迟和音频质量。</dd>
  <dt><code>numberOfInputChannels</code></dt>
- <dd>值为整数，用于指定输入node的声道的数量，默认值是2，最高能取32.</dd>
+ <dd>值为整数，用于指定输入 node 的声道的数量，默认值是 2，最高能取 32.</dd>
  <dt><code>numberOfOutputChannels</code></dt>
- <dd>值为整数，用于指定输出node的声道的数量，默认值是2，最高能取32.</dd>
+ <dd>值为整数，用于指定输出 node 的声道的数量，默认值是 2，最高能取 32.</dd>
 </dl>
 
 <div class="warning">
-<p><span style="font-size: 14px;"><strong>重要</strong></span>: Webkit (version 31)要求调用这个方法的时候必须传入一个有效的bufferSize .</p>
+<p><strong>重要</strong>: Webkit (version 31) 要求调用这个方法的时候必须传入一个有效的 bufferSize .</p>
 </div>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: <code>numberOfInputChannels<font face="Open Sans, Arial, sans-serif">和</font></code><code>numberOfOutputChannels的值不能同时为0，二者同时为0是无效的</code></p>
+<p><strong>注意</strong>: <code>numberOfInputChannels和</code><code>numberOfOutputChannels的值不能同时为0，二者同时为0是无效的</code></p>
 </div>
 
 <h3 id="Description" name="Description">返回</h3>
@@ -41,10 +41,10 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 
 <h2 id="示例">示例</h2>
 
-<p><code><font face="Open Sans, Arial, sans-serif">下面的例子展示了一个</font>ScriptProcessorNode的基本用法，数据源取自</code> {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放(其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，<code>scriptNode.onaudioprocess方法<font face="Open Sans, Arial, sans-serif">关联</font></code><code>audioProcessingEvent</code> ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。</p>
+<p><code>下面的例子展示了一个ScriptProcessorNode的基本用法，数据源取自</code> {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，<code>scriptNode.onaudioprocess方法关联</code><code>audioProcessingEvent</code> ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意</strong></span>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
+<p><strong>注意</strong>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
 </div>
 
 <pre class="brush: js">var myScript = document.querySelector('script');
@@ -136,62 +136,7 @@ source.onended = function() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createScriptProcessor")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -18,7 +18,9 @@ La méthode **`Number.parseInt()`** analyse et convertit une chaine de caractèr
 
 ## Syntaxe
 
-    Number.parseInt(chaîne [, base])
+```js
+Number.parseInt(chaîne [, base])
+```
 
 ### Paramètres
 
@@ -54,7 +56,7 @@ if(Number.parseInt === undefined) {
 | Spécification                                                                            | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

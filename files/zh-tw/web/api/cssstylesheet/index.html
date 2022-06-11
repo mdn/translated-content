@@ -15,19 +15,19 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>A style sheet consists of <em>{{domxref("CSSRule", "rules", "", 1)}}</em>, such as <em>{{domxref("CSSStyleRule", "style rules", "", 1)}}</em><em> </em>("<code>h1,h2 { font-size: 16pt }"</code>), various <em>at-rules</em> (<code>@import</code>, <code>@media</code>, ...), etc. This interface lets you inspect and modify the list of rules in the stylesheet.</p>
 
-<p>See the {{anch("Notes")}} section for the various ways a CSSStyleSheet object can be obtained.</p>
+<p>See the <a href="#notes">Notes</a> section for the various ways a CSSStyleSheet object can be obtained.</p>
 
 <h2 id="Properties">Properties</h2>
 
 <p><em>Inherits properties from its parent, {{domxref("StyleSheet")}}.</em></p>
 
 <dl>
- <dt id="cssRules">{{domxref("CSSStyleSheet.cssRules")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.cssRules")}}</dt>
  <dd>Returns a live {{domxref("CSSRuleList")}}, listing the {{domxref("CSSRule")}} objects in the style sheet.<br>
  This is normally used to access individual rules like this:<br>
  <code>   styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code><br>
  To add or remove items in <code>cssRules</code>, use the <code>CSSStyleSheet</code>'s <code>deleteRule()</code> and <code>insertRule()</code> methods, described below.</dd>
- <dt id="ownerRule">{{domxref("CSSStyleSheet.ownerRule")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.ownerRule")}}</dt>
  <dd>If this style sheet is imported into the document using an {{cssxref("@import")}} rule, the <code>ownerRule</code> property will return that {{domxref("CSSImportRule")}}, otherwise it returns <code>null</code>.</dd>
 </dl>
 
@@ -36,9 +36,9 @@ translation_of: Web/API/CSSStyleSheet
 <p><em>Inherits methods from its parent, {{domxref("Stylesheet")}}.</em></p>
 
 <dl>
- <dt id="deleteRule">{{domxref("CSSStyleSheet.deleteRule()")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.deleteRule()")}}</dt>
  <dd>Deletes a rule at the specified position from the style sheet.</dd>
- <dt id="insertRule">{{domxref("CSSStyleSheet.insertRule()")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.insertRule()")}}</dt>
  <dd>Inserts a new rule at the specified position in the style sheet, given the textual representation of the rule.</dd>
 </dl>
 
@@ -52,7 +52,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>A (possibly incomplete) list of ways a style sheet can be associated with a document follows:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Reason for the style sheet to be associated with the document</th>
@@ -128,57 +128,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CSSStyleSheet")}}
 
 <h2 id="See_also">See also</h2>
 

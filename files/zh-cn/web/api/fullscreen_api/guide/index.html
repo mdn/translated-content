@@ -16,7 +16,7 @@ original_slug: Web/API/Fullscreen_API/指南
 ---
 <div>{{DefaultAPISidebar("Fullscreen API")}}</div>
 
-<p><span class="seoSummary">本文主要说明如何使用全屏API将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。</span></p>
+<p>本文主要说明如何使用全屏 API 将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。</p>
 
 <h2 id="激活全屏模式">激活全屏模式</h2>
 
@@ -41,7 +41,7 @@ if (elem.requestFullscreen) {
 
 <h3 id="显示差异">显示差异</h3>
 
-<p>值得留意的是，目前 Gecko 和 WebKit 的实现之间的关键差异：Gecko 自动为元素添加了CSS规则，使其拉伸以填满屏幕： "<code>width: 100%; height: 100%</code>"。WebKit 没有这样做，相反地，它将全屏元素居中，不改变大小，而屏幕的其他部分为黑色。为了在 Webkit 中获得相同的全屏行为，你需要自行为元素添加 CSS "<code>width: 100%; height: 100%;</code>"：</p>
+<p>值得留意的是，目前 Gecko 和 WebKit 的实现之间的关键差异：Gecko 自动为元素添加了 CSS 规则，使其拉伸以填满屏幕： "<code>width: 100%; height: 100%</code>"。WebKit 没有这样做，相反地，它将全屏元素居中，不改变大小，而屏幕的其他部分为黑色。为了在 Webkit 中获得相同的全屏行为，你需要自行为元素添加 CSS "<code>width: 100%; height: 100%;</code>"：</p>
 
 <pre class="brush: css">#myvideo:-webkit-full-screen {
   width: 100%;
@@ -49,7 +49,7 @@ if (elem.requestFullscreen) {
 }
 </pre>
 
-<p>另一方面, 如果你尝试在在 Gecko 上模拟 WebKit 的行为，你需要把你想要呈现的元素放在另一个实际调整为全屏幕的元素中， 并使用 CSS 规则调整内部的元素，从而达到你想要的样式。</p>
+<p>另一方面，如果你尝试在在 Gecko 上模拟 WebKit 的行为，你需要把你想要呈现的元素放在另一个实际调整为全屏幕的元素中， 并使用 CSS 规则调整内部的元素，从而达到你想要的样式。</p>
 
 <h3 id="通知">通知</h3>
 
@@ -67,11 +67,11 @@ if (elem.requestFullscreen) {
 
 <p> </p>
 
-<p>用户总是可以自行退出全屏模式；详见 {{Anch("Things your users want to know")}}。你也可以以编程方式通过调用 {{DOMxRef("Document.exitFullscreen()")}} 方法来做到这点。</p>
+<p>用户总是可以自行退出全屏模式；详见 <a href="#things_your_users_want_to_know">Things your users want to know</a>。你也可以以编程方式通过调用 {{DOMxRef("Document.exitFullscreen()")}} 方法来做到这点。</p>
 
 <h2 id="其他信息">其他信息</h2>
 
-<p>{{DOMxRef("Document")}} 提供了一些额外的信息， 在开发全屏网络应用时会很有用：</p>
+<p>{{DOMxRef("Document")}} 提供了一些额外的信息，在开发全屏网络应用时会很有用：</p>
 
 <dl>
  <dt>{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</dt>
@@ -82,7 +82,7 @@ if (elem.requestFullscreen) {
 
 <h2 id="Things_your_users_want_to_know" name="Things_your_users_want_to_know">你的用户想了解的信息</h2>
 
-<p>你可能想确保使你的用户得知他可以按 <kbd>ESC</kbd>  键(或 <kbd>F11</kbd>) 退出全屏模式。</p>
+<p>你可能想确保使你的用户得知他可以按 <kbd>ESC</kbd>  键 (或 <kbd>F11</kbd>) 退出全屏模式。</p>
 
 <p>此外，当处在全屏模式中，浏览其他页面、切换标签页、或者切换到其他应用 (例如使用 <kbd>Alt</kbd>-<kbd>Tab</kbd>)  也会导致退出全屏模式。</p>
 
@@ -117,7 +117,7 @@ if (elem.requestFullscreen) {
   }
 }</pre>
 
-<p>这段代码首先检查 {{DOMxRef("document")}} 的<code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用{{DOMxRef("element.requestFullscreen()")}}，可以切换到全屏模式。</p>
+<p>这段代码首先检查 {{DOMxRef("document")}} 的<code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms、</code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用{{DOMxRef("element.requestFullscreen()")}}，可以切换到全屏模式。</p>
 
 <p>如果全屏模式已经激活 (<code>fullscreenElement</code> 不为 <code>null</code>)，我们可以调用 {{DOMxRef("document.exitFullscreen()")}}（或其前缀化的版本，这取决于你使用的浏览器）。</p>
 
@@ -127,7 +127,7 @@ if (elem.requestFullscreen) {
 <p><strong>注意：</strong>现在，只有 Firefox 64 和 Chrome 71 支持无前缀。</p>
 </div>
 
-<p>目前并不是所有的浏览器都实现了 API 的无前缀版本（你可以使用 <a href="https://github.com/rafrex/fscreen">Fscreen</a> 获取跨浏览器全屏API），这里有一份表格总结了前缀和它们之间的命名区别：</p>
+<p>目前并不是所有的浏览器都实现了 API 的无前缀版本（你可以使用 <a href="https://github.com/rafrex/fscreen">Fscreen</a> 获取跨浏览器全屏 API），这里有一份表格总结了前缀和它们之间的命名区别：</p>
 
 <table class="standard-table">
  <thead>

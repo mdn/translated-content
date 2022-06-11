@@ -15,7 +15,7 @@ translation_of: Web/API/RTCSessionDescription
 
 <dl>
  <dt>{{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}</dt>
- <dd><code>{{anch("RTCSdpType")}}</code> 会话描述类型的原型枚举。</dd>
+ <dd><code><a href="#rtcsdptype">RTCSdpType</a></code> 会话描述类型的原型枚举。</dd>
 </dl>
 
 <dl>
@@ -39,7 +39,7 @@ translation_of: Web/API/RTCSessionDescription
  <tbody>
   <tr>
    <td><code>answer</code></td>
-   <td>SDP协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。 换言之，此会话描述描述了商定的配置，并将被发送以完成协商。.</td>
+   <td>SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。 换言之，此会话描述描述了商定的配置，并将被发送以完成协商。.</td>
   </tr>
   <tr>
    <td><code>offer</code></td>
@@ -62,12 +62,12 @@ translation_of: Web/API/RTCSessionDescription
 
 <dl>
  <dt>{{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}</dt>
- <dd>该构造函数返回一个新的<code>RTCSessionDescription对象</code>。参数是 <code>RTCSessionDescriptionInit</code> 字典包含包含分配这两个属性的值。</dd>
+ <dd>该构造函数返回一个新的 <code>RTCSessionDescription</code> 对象。参数是 <code>RTCSessionDescriptionInit</code> 字典包含包含分配这两个属性的值。</dd>
  <dt>{{domxref("RTCSessionDescription.toJSON()")}}</dt>
- <dd>返回一个{{Glossary("JSON")}} 描述对象. 该对象包含两个值, {{domxref("RTCSessionDescription.type", "type")}} 和{{domxref("RTCSessionDescription.sdp", "sdp")}}。</dd>
+ <dd>返回一个{{Glossary("JSON")}} 描述对象。该对象包含两个值，{{domxref("RTCSessionDescription.type", "type")}} 和{{domxref("RTCSessionDescription.sdp", "sdp")}}。</dd>
 </dl>
 
-<h2 id="Example">Example<span id="cke_bm_72C" class="hidden"> </span></h2>
+<h2 id="Example">Example </h2>
 
 <pre class="brush: js">signalingChannel.onmessage = function (evt) {
     if (!pc)
@@ -105,59 +105,7 @@ translation_of: Web/API/RTCSessionDescription
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown }} {{property_prefix("-moz")}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.RTCSessionDescription")}}
 
 <h2 id="See_also">See also</h2>
 

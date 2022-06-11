@@ -3,12 +3,16 @@ title: CanvasPattern
 slug: Web/API/CanvasPattern
 translation_of: Web/API/CanvasPattern
 ---
-<div>
- {{APIRef("Canvas")}}</div>
-<p><code><strong>CanvasPattern</strong></code> 接口表示描述一个模板（基于image, canvas或video）的不透明对象，通过 {{domxref("CanvasRenderingContext2D.createPattern()")}} 方法创建.</p>
+<div>{{APIRef("Canvas")}}</div>
+
+<p><code><strong>CanvasPattern</strong></code> 接口表示描述一个模板（基于 image, canvas 或 video）的不透明对象，通过 {{domxref("CanvasRenderingContext2D.createPattern()")}} 方法创建。</p>
+
 <h2 id="属性">属性</h2>
+
 <p><em>非透明对象，没有暴露出属性</em></p>
+
 <h2 id="方法">方法</h2>
+
 <p><em>没有继承来的方法</em></p>
 <dl>
  <dt>
@@ -16,93 +20,18 @@ translation_of: Web/API/CanvasPattern
  <dd>
   应用 {{domxref("SVGMatrix")}} 对模板做线性变换</dd>
 </dl>
+
 <h2 id="Specifications" name="Specifications">标准</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">标准</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-canvas-element.html#canvaspattern", "CanvasPattern")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>新增 <code>setTransform()</code> 方法</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Canvas 2D Context W3C', '#canvaspattern', 'CanvasPattern')}}</td>
-   <td>{{Spec2('HTML Canvas 2D Context W3C')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+
+{{Specifications}}
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<div>
- {{CompatibilityTable}}</div>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>功能</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>基本的支持</td>
-    <td>4.0</td>
-    <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-    <td>9.0</td>
-    <td>9.0</td>
-    <td>3.1</td>
-   </tr>
-   <tr>
-    <td><code>setTransform()</code>{{experimental_inline}}</td>
-    <td>{{CompatNo}}</td>
-    <td>{{CompatGeckoDesktop("33")}}</td>
-    <td>{{CompatUnknown}}</td>
-    <td>{{CompatNo}}</td>
-    <td>{{CompatUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>功能</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>基本的支持</td>
-    <td>2.1</td>
-    <td>{{CompatGeckoMobile("1.9.2")}}</td>
-    <td>{{CompatUnknown}}</td>
-    <td>10.0</td>
-    <td>3.2</td>
-   </tr>
-   <tr>
-    <td><code>setTransform()</code>{{experimental_inline}}</td>
-    <td>{{CompatUnknown}}</td>
-    <td>{{CompatGeckoMobile("33")}}</td>
-    <td>{{CompatUnknown}}</td>
-    <td>{{CompatUnknown}}</td>
-    <td>{{CompatUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="查看相关">查看相关</h2>
+
+{{Compat("api.CanvasPattern")}}
+
+<h2 id="参见">参见</h2>
+
 <ul>
  <li>{{domxref("CanvasRenderingContext2D.createPattern()")}}</li>
- <li>{{HTMLElement("canvas")}} 元素及和canvas相关接口 {{domxref("HTMLCanvasElement")}}</li>
+ <li>{{HTMLElement("canvas")}} 元素及和 canvas 相关接口 {{domxref("HTMLCanvasElement")}}</li>
 </ul>

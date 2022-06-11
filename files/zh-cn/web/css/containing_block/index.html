@@ -17,9 +17,9 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 <p>{{cssref}}</p>
 
-<p class="summary" dir="ltr">一个元素的尺寸和位置经常受其<strong>包含块(containing block)</strong>的影响。大多数情况下，包含块就是这个元素最近的祖先<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块元素</a>的<a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">内容区</a>，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。</p>
+<p>一个元素的尺寸和位置经常受其<strong>包含块 (containing block)</strong>的影响。大多数情况下，包含块就是这个元素最近的祖先<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块元素</a>的<a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">内容区</a>，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。</p>
 
-<p dir="ltr">当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：</p>
+<p>当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：</p>
 
 <ol dir="ltr" start="1">
  <li>内容区</li>
@@ -30,22 +30,22 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 
 <p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
 
-<p dir="ltr">许多开发者认为一个元素的包含块就是他的父元素的内容区。但事实并非如此。接下来让我们来看看，确定元素包含块的因素都有哪些。</p>
+<p>许多开发者认为一个元素的包含块就是他的父元素的内容区。但事实并非如此。接下来让我们来看看，确定元素包含块的因素都有哪些。</p>
 
 <h2 dir="ltr" id="包含块的影响">包含块的影响</h2>
 
-<p dir="ltr">在学习如何确定元素包含块之前，先了解一下它的重要性。</p>
+<p>在学习如何确定元素包含块之前，先了解一下它的重要性。</p>
 
-<p dir="ltr">元素的尺寸及位置，常常会受它的包含块所影响。对于一些属性，例如 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}，绝对定位元素的偏移值 （比如 {{cssxref("position")}} 被设置为 <code>absolute</code> 或 <code>fixed</code>），当我们对其赋予百分比值时，这些值的计算值，就是通过元素的包含块计算得来。</p>
+<p>元素的尺寸及位置，常常会受它的包含块所影响。对于一些属性，例如 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}，绝对定位元素的偏移值（比如 {{cssxref("position")}} 被设置为 <code>absolute</code> 或 <code>fixed</code>），当我们对其赋予百分比值时，这些值的计算值，就是通过元素的包含块计算得来。</p>
 
 <h2 dir="ltr" id="确定包含块">确定包含块</h2>
 
-<p dir="ltr">确定一个元素的包含块的过程完全依赖于这个元素的 {{cssxref("position")}} 属性：</p>
+<p>确定一个元素的包含块的过程完全依赖于这个元素的 {{cssxref("position")}} 属性：</p>
 
 <ol dir="ltr" start="1">
- <li>如果 position 属性为 <code><strong>static</strong></code> 、<strong> </strong><code><strong>relative</strong></code><strong> 或 <code>sticky</code></strong>，包含块可能由它的最近的祖先<strong>块元素</strong>（比如说inline-block, block 或 list-item元素）的内容区的边缘组成，也可能会建立格式化上下文(比如说 a table container, flex container, grid container, 或者是 the block container 自身)。</li>
+ <li>如果 position 属性为 <code><strong>static</strong></code> 、<strong> </strong><code><strong>relative</strong></code><strong> 或 <code>sticky</code></strong>，包含块可能由它的最近的祖先<strong>块元素</strong>（比如说 inline-block, block 或 list-item 元素）的内容区的边缘组成，也可能会建立格式化上下文 (比如说 a table container, flex container, grid container, 或者是 the block container 自身)。</li>
  <li>如果 position 属性为 <code><strong>absolute</strong></code> ，包含块就是由它的最近的 position 的值不是 <code>static</code> （也就是值为<code>fixed</code>, <code>absolute</code>, <code>relative</code> 或 <code>sticky</code>）的祖先元素的内边距区的边缘组成。</li>
- <li>如果 position 属性是 <strong><code>fixed</code></strong>，在连续媒体的情况下(continuous media)包含块是 {{glossary("viewport")}} ,在分页媒体(paged media)下的情况下包含块是分页区域(page area)。</li>
+ <li>如果 position 属性是 <strong><code>fixed</code></strong>，在连续媒体的情况下 (continuous media) 包含块是 {{glossary("viewport")}} ,在分页媒体 (paged media) 下的情况下包含块是分页区域 (page area)。</li>
  <li>如果 position 属性是 <code><strong>absolute</strong></code> 或 <code><strong>fixed</strong></code>，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
   <ol start="1">
    <li> {{cssxref("transform")}} 或 {{cssxref("perspective")}}<strong> </strong>的值不是 <code>none</code></li>
@@ -57,21 +57,21 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 </ol>
 
 <div class="note">
-<p dir="ltr"><strong>注意: </strong>根元素(&lt;html&gt;)所在的包含块是一个被称为<strong>初始包含块</strong>的矩形。他的尺寸是视口 viewport (for continuous media) 或分页媒体 page media (for paged media).</p>
+<p><strong>注意：</strong>根元素 (&lt;html&gt;) 所在的包含块是一个被称为<strong>初始包含块</strong>的矩形。他的尺寸是视口 viewport (for continuous media) 或分页媒体 page media (for paged media).</p>
 </div>
 
 <h2 dir="ltr" id="根据包含块计算百分值">根据包含块计算百分值</h2>
 
-<p dir="ltr">如上所述，如果某些属性被赋予一个百分值的话，它的计算值是由这个元素的包含块计算而来的。这些属性包括盒模型属性和偏移属性：</p>
+<p>如上所述，如果某些属性被赋予一个百分值的话，它的计算值是由这个元素的包含块计算而来的。这些属性包括盒模型属性和偏移属性：</p>
 
 <ol dir="ltr" start="1">
- <li>要计算 {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 中的百分值，是通过包含块的 <code>height</code><strong> </strong>的值。如果包含块的 <code>height</code> 值会根据它的内容变化，而且包含块的 <code>position</code> 属性的值被赋予 <code>relative</code> 或 <code>static</code> ，那么，这些值的计算值为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">auto</span></font>。</li>
+ <li>要计算 {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 中的百分值，是通过包含块的 <code>height</code><strong> </strong>的值。如果包含块的 <code>height</code> 值会根据它的内容变化，而且包含块的 <code>position</code> 属性的值被赋予 <code>relative</code> 或 <code>static</code> ，那么，这些值的计算值为 auto。</li>
  <li>要计算 {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 这些属性由包含块的 <code>width</code> 属性的值来计算它的百分值。</li>
 </ol>
 
 <h2 dir="ltr" id="示例">示例</h2>
 
-<p dir="ltr">接下来的示例，都使用如下 HTML 代码:</p>
+<p>接下来的示例，都使用如下 HTML 代码：</p>
 
 <pre class="brush: html notranslate" dir="ltr">&lt;body&gt;
   &lt;section&gt;
@@ -79,7 +79,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
   &lt;/section&gt;
 &lt;/body&gt;</pre>
 
-<p class="brush: html" dir="ltr">下面的示例，只有 CSS 不同。</p>
+<p>下面的示例，只有 CSS 不同。</p>
 
 <h3 id="Example_1">Example 1</h3>
 
@@ -225,7 +225,7 @@ p {
 
 <h3 id="Example_5">Example 5</h3>
 
-<p>这个示例中，P 元素的 <code>position</code> 为 <code>absolute</code>，所以它的包含块是 <code>&lt;section&gt;</code>，也就是距离它最近的一个 <code>transform</code> 值不为 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">none</span></font> 的父元素。</p>
+<p>这个示例中，P 元素的 <code>position</code> 为 <code>absolute</code>，所以它的包含块是 <code>&lt;section&gt;</code>，也就是距离它最近的一个 <code>transform</code> 值不为 none 的父元素。</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate" dir="ltr">&lt;body&gt;

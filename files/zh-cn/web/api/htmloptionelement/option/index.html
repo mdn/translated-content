@@ -7,40 +7,40 @@ tags:
   - HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement/Option
 ---
-<p><font><font>{{APIRef("HTML DOM")}}</font></font></p>
+<p>{{APIRef("HTML DOM")}}</p>
 
-<p><font><font>用于创建{{domxref("HTMLOptionElement")}}的构造函数。</font></font></p>
+<p>用于创建{{domxref("HTMLOptionElement")}}的构造函数。</p>
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px;"><font><font>句法</font></font></h2>
+<h2 id="Syntax" name="Syntax" style="line-height: 30px;">句法</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;"><code>var o</code><font><font>ptionElementReference</font></font><code> = new Option(text, value, defaultSelected, selected);</code></pre>
+<pre class="syntaxbox" style="font-size: 14px;"><code>var o</code>ptionElementReference<code> = new Option(text, value, defaultSelected, selected);</code></pre>
 
-<h3 id="Return_value_and_parameters" name="Return_value_and_parameters" style="line-height: 30px;"><font><font>参数</font></font></h3>
+<h3 id="Return_value_and_parameters" name="Return_value_and_parameters" style="line-height: 30px;">参数</h3>
 
 <dl>
- <dt><font><font>文字{{optional_inline}}</font></font></dt>
- <dd><font><font>表示元素内容的{{domxref("DOMString")}}，即显示的文本。</font><font>如果没有指定，则使用默认值""(空字符串)。</font></font></dd>
- <dt><font><font>值{{optional_inline}}</font></font></dt>
- <dd><font><font>表示{{domxref("HTMLOptionElement")}}的值的{{domxref("DOMString")}}，即</font></font><code>value</code><font><font>等价的{{htmlelement("option")}} </font><font>的</font><font>属性。</font><font>如果未指定，则将文本的值用作值，例如，将表单提交给服务器时，相关联的{{htmlelement("select")}}元素的值。</font></font></dd>
- <dt><font><font>defaultSelected {{optional_inline}}</font></font></dt>
- <dd><font><font>设置{{htmlattrxref("selected", "option")}}属性值的{{domxref("Boolean")}}，也就是说这个{{htmlelement("option")}}是默认值当第一次加载页面时，在{{htmlelement("select")}}元素中选择。</font><font>如果没有指定，</font></font><code>false</code><font><font>则使用</font><font>默认值</font><font>。</font><font>请注意，</font></font><code>true</code><font><font> 如果选项尚未被选中</font><font>，则该值</font><font>不会将选项设置为选中状态。 </font></font></dd>
- <dt><font><font>选中{{optional_inline}}</font></font></dt>
- <dd><font><font>A {{domxref("Boolean")}}设置选项的选择状态; </font><font>默认是</font></font><code>false</code><font><font>(未选中)。</font><font>如果省略，即使</font></font><code>defaultSelected</code><font><font>参数是</font></font><code>true</code><font><font>，该选项没有被选中。</font></font></dd>
+ <dt>文字{{optional_inline}}</dt>
+ <dd>表示元素内容的{{domxref("DOMString")}}，即显示的文本。如果没有指定，则使用默认值""(空字符串)。</dd>
+ <dt>值{{optional_inline}}</dt>
+ <dd>表示{{domxref("HTMLOptionElement")}}的值的{{domxref("DOMString")}}，即<code>value</code>等价的{{htmlelement("option")}} 的属性。如果未指定，则将文本的值用作值，例如，将表单提交给服务器时，相关联的{{htmlelement("select")}}元素的值。</dd>
+ <dt>defaultSelected {{optional_inline}}</dt>
+ <dd>设置{{htmlattrxref("selected", "option")}}属性值的{{domxref("Boolean")}}，也就是说这个{{htmlelement("option")}}是默认值当第一次加载页面时，在{{htmlelement("select")}}元素中选择。如果没有指定，<code>false</code>则使用默认值。请注意，<code>true</code> 如果选项尚未被选中，则该值不会将选项设置为选中状态。 </dd>
+ <dt>选中{{optional_inline}}</dt>
+ <dd>A {{domxref("Boolean")}}设置选项的选择状态; 默认是<code>false</code>(未选中)。如果省略，即使<code>defaultSelected</code>参数是<code>true</code>，该选项没有被选中。</dd>
 </dl>
 
-<h2 id="规范" style="line-height: 30px;"><font><font>规范</font></font></h2>
+<h2 id="规范" style="line-height: 30px;">规范</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font><font>规范</font></font></th>
-   <th scope="col"><font><font>状态</font></font></th>
-   <th scope="col"><font><font>评论</font></font></th>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><a class="external external-icon" href="http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option" hreflang="en" lang="en"><font><font>HTML5 </font></font><br>
-    <small lang="en-US"><font><font>该规范中"选项"的定义。</font></font></small></a></td>
-   <td><span class="spec-REC"><font><font>建议</font></font></span></td>
+   <td><a class="external external-icon" href="http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option" hreflang="en" lang="en">HTML5 <br>
+    <small lang="en-US">该规范中"选项"的定义。</small></a></td>
+   <td>建议</td>
    <td> </td>
   </tr>
  </tbody>

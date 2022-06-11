@@ -8,7 +8,7 @@ translation_of: Web/API/HTMLMediaElement/srcObject
 <p>{{domxref("HTMLMediaElement")}} 接口的 <strong><code>srcObject</code></strong> 属性设定或返回一个对象，这个对象提供了一个与{{domxref("HTMLMediaElement")}}关联的媒体源，这个对象通常是 {{domxref("MediaStream")}} ，但根据规范可以是 {{domxref("MediaSource")}}， {{domxref("Blob")}} 或者 {{domxref("File")}}。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 截至 2020 年 3 月, 只有Safari 支持设置 <code>MediaStream</code>  之外的对象。在其他浏览器跟上之前, 对<code>MediaSource</code>, <code>Blob</code> 和 <code>File</code>, 请考虑返回创建具有{domxref("URL.createObjectURL()")}} 的 URL， 并将其赋值给{{domxref("HTMLMediaElement.src")}} 有关示例，请参阅下文。</p>
+<p><strong>备注：</strong> 截至 2020 年 3 月，只有 Safari 支持设置 <code>MediaStream</code>  之外的对象。在其他浏览器跟上之前，对<code>MediaSource</code>, <code>Blob</code> 和 <code>File</code>, 请考虑返回创建具有{domxref("URL.createObjectURL()")}} 的 URL， 并将其赋值给{{domxref("HTMLMediaElement.src")}} 有关示例，请参阅下文。</p>
 </div>
 
 
@@ -42,61 +42,4 @@ translation_of: Web/API/HTMLMediaElement/srcObject
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(52.0)}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1][2]</sup><br>
-    {{CompatGeckoDesktop("42.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>39<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(52.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>39</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(52.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 目前只有 {domxref("MediaStream")}} 对象是支持的。 {domxref("MediaSource")}} ， {{domxref("Blob")}} 和 {{domxref("File")}} 对象尚待支持，并会抛出一个类型错误（TypeError）。</p>
-
-<p>[2] Firefox 的早期版本通过非标准化的名称 <code>mozSrcObject 来实现。</code></p>
+{{Compat("api.HTMLMediaElement.srcObject")}}

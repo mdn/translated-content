@@ -12,7 +12,7 @@ translation_of: Web/API/Node/isEqualNode
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p> <code><strong>Node.isEqualNode() </strong></code>方法可以判断两个节点是否相等。当两个节点的类型相同，定义特征(defining characteristics)相同（对元素来说，即 id，孩子节点的数量等等），属性一致等，这两个节点就是相等的。一些具体的数据指出：多数时候的比较是根据节点的类型来的。</p>
+<p> <code><strong>Node.isEqualNode() </strong></code>方法可以判断两个节点是否相等。当两个节点的类型相同，定义特征 (defining characteristics) 相同（对元素来说，即 id，孩子节点的数量等等），属性一致等，这两个节点就是相等的。一些具体的数据指出：多数时候的比较是根据节点的类型来的。</p>
 
 <h3 id="语法">语法</h3>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Node/isEqualNode
 </pre>
 
 <ul>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">otherNode: </font>比较是否相等的节点.</li>
+ <li>otherNode: 比较是否相等的节点。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -69,53 +69,7 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Node.isEqualNode")}}
 
 <h2 id="相关链接">相关链接</h2>
 

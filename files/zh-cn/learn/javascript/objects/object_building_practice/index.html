@@ -14,16 +14,16 @@ translation_of: Learn/JavaScript/Objects/Object_building_practice
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">在前面的文章中，我们学习了 JavaScript 的面向对象理论和基本的语法知识，为之后的学习建立了良好的基础。这篇文章中我们将进行一次实战演练，通过构造 JavaScript 对象得到生动有趣的成果！</p>
+<p>在前面的文章中，我们学习了 JavaScript 的面向对象理论和基本的语法知识，为之后的学习建立了良好的基础。这篇文章中我们将进行一次实战演练，通过构造 JavaScript 对象得到生动有趣的成果！</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
-   <td>基本的计算机知识，了解HTML与CSS的基本概念，熟悉JavaScript基本知识 （请参阅 <a href="/zh-CN/docs/Learn/JavaScript/First_steps">入门</a> 和 <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">构建块结构</a>）和面向对象的JavaScript （OOJS） 基础 （请参阅 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics">对象基础</a>）。</td>
+   <th scope="row">预备知识：</th>
+   <td>基本的计算机知识，了解 HTML 与 CSS 的基本概念，熟悉 JavaScript 基本知识（请参阅 <a href="/zh-CN/docs/Learn/JavaScript/First_steps">入门</a> 和 <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">构建块结构</a>）和面向对象的 JavaScript（OOJS）基础（请参阅 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics">对象基础</a>）。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>练习使用对象，在真实环境中应用面向对象开发技术。</td>
   </tr>
  </tbody>
@@ -176,7 +176,7 @@ loop();
 
 <p>{{ EmbedLiveSample('Bouncing_balls', '100%', 480, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>这个实例将会利用 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Canvas API</a> 来在屏幕上画小球, 还会用到 <a href="/zh-CN/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a> API 来使整个画面动起来 —— 我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方 （也就是碰撞检测）。</p>
+<p>这个实例将会利用 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Canvas API</a> 来在屏幕上画小球，还会用到 <a href="/zh-CN/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a> API 来使整个画面动起来 —— 我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。</p>
 
 <h2 id="让我们开始吧">让我们开始吧</h2>
 
@@ -197,11 +197,11 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;</pre>
 
-<p>这个脚本使用变量代指了 <code>&lt;canvas&gt;</code> 元素, 然后对其调用 <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> 从而我们获得一个开始画画的环境。存储以上操作结果的变量（<code>ctx</code>）是一个对象，直接代指画布上的一块允许我们绘制 2D 图形的区域。</p>
+<p>这个脚本使用变量代指了 <code>&lt;canvas&gt;</code> 元素，然后对其调用 <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> 从而我们获得一个开始画画的环境。存储以上操作结果的变量（<code>ctx</code>）是一个对象，直接代指画布上的一块允许我们绘制 2D 图形的区域。</p>
 
 <p>接下来，我们设置 <code>width</code> 和 <code>height</code> 变量，并且让画布元素的宽和高（分别使用 <code>canvas.width</code> 和 <code>canvas.height</code> 表示）等于浏览器的宽和高（也就是网页显示的区域 — 可以从 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}参数获得）。</p>
 
-<p>你会看到我们在这里串联了多个赋值表达式在一起,这样能更快地设置变量——这是完全正确的。</p>
+<p>你会看到我们在这里串联了多个赋值表达式在一起，这样能更快地设置变量——这是完全正确的。</p>
 
 <p>原始脚本最后的部分如下：</p>
 
@@ -234,7 +234,7 @@ function randomColor() {
 <p>这个构造器中定义了每个小球需要的参数：</p>
 
 <ul>
- <li><code>x</code> 和 <code>y</code> 坐标 —— 小球在屏幕上最开始时候的坐标。坐标的范围从 0 （左上角）到浏览器视口的宽和高（右下角）。</li>
+ <li><code>x</code> 和 <code>y</code> 坐标 —— 小球在屏幕上最开始时候的坐标。坐标的范围从 0（左上角）到浏览器视口的宽和高（右下角）。</li>
  <li>水平和竖直速度（<code>velX</code> 和 <code>velY</code>）—— 我们会给每个小球一个水平和竖直速度。实际上，当我们让这些球开始运动时候，每过一帧都会给小球的 <code>x</code> 和 <code>y</code> 坐标加一次这些值。</li>
  <li><code>color</code> —— 每一个小球会有自己的颜色。</li>
  <li><code>size</code> —— 每一个小球会有自己的大小 — 也就是小球的半径，以像素为单位。</li>
@@ -310,22 +310,22 @@ testBall.draw()</pre>
   this.y += this.velY;
 }</pre>
 
-<p>函数的前四个部分用来检查小球是否碰到画布的边缘。如果碰到，我们反转小球的速度方向来让它向反方向移动。就比如说，如果小球正向上移动 （正 <code>velY</code>），然后垂直速度发生改变，小球就向下移动 （负 <code>velY</code>）。</p>
+<p>函数的前四个部分用来检查小球是否碰到画布的边缘。如果碰到，我们反转小球的速度方向来让它向反方向移动。就比如说，如果小球正向上移动（正 <code>velY</code>），然后垂直速度发生改变，小球就向下移动（负 <code>velY</code>）。</p>
 
 <p>在这四部分中，我们：</p>
 
 <ul>
  <li>检查小球的 <code>x</code> 坐标是否大于画布的宽度（小球会从右边缘离开）。</li>
- <li>检查小球的 <code>x</code> 坐标是否小于0（小球会从左边缘离开）。</li>
+ <li>检查小球的 <code>x</code> 坐标是否小于 0（小球会从左边缘离开）。</li>
  <li>检查小球的 <code>y</code> 坐标是否大于画布的高度（小球会从下边缘离开）。</li>
- <li>检查小球的 <code>y</code> 坐标是否小于0（小球会从上边缘离开）。</li>
+ <li>检查小球的 <code>y</code> 坐标是否小于 0（小球会从上边缘离开）。</li>
 </ul>
 
 <p>在每种情况下，我们都会加上小球的半径，因为 <code>x</code>/<code>y</code> 坐标是小球中心的坐标，我们希望小球在其边界接触浏览器窗口的边界时反弹，而不是小球的一部分都不见了再返回。</p>
 
 <p>最后两行，我们将 <code>velX</code> 的值加到 <code>x</code> 的坐标上，将 <code>velY</code> 的值加到 <code>y</code> 坐标上 —— 每次调用这个方法的时候小球就移动这么多。</p>
 
-<p>暂时先这样做； 让我们继续做一些动画！</p>
+<p>暂时先这样做；让我们继续做一些动画！</p>
 
 <h2 id="让球动起来">让球动起来 </h2>
 
@@ -387,7 +387,7 @@ while (balls.length &lt; 25) {
 <p>现在会更加有趣，给我们的项目加上碰撞检测，从而小球会知道他们正在撞击其他的球。</p>
 
 <ol>
- <li>首先在 <code>update()</code> 方法后添加以下方法 （即 <code>Ball.prototype.update</code> 的下面）。
+ <li>首先在 <code>update()</code> 方法后添加以下方法（即 <code>Ball.prototype.update</code> 的下面）。
 
   <pre class="brush: js">Ball.prototype.collisionDetect = function() {
   for (let j = 0; j &lt; balls.length; j++) {
@@ -424,19 +424,19 @@ while (balls.length &lt; 25) {
 
 <h2 id="概要">概要</h2>
 
-<p>我们希望你玩得开心，编写出你自己的随机弹跳球的例子，在整个程序中使用各种对象和面向对象的技术！ 在你实际运用对象中能提供一些有用的帮助。</p>
+<p>我们希望你玩得开心，编写出你自己的随机弹跳球的例子，在整个程序中使用各种对象和面向对象的技术！在你实际运用对象中能提供一些有用的帮助。</p>
 
 <p>对象文章就到这里了。现在剩下的就是在下一节的对象评估中测试你的技能。</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> —— 2D canvas 初学者指南.</li>
+ <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> —— 2D canvas 初学者指南。</li>
  <li><a href="/zh-CN/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></li>
  <li><a href="zh-CN/docs/Games/Techniques/2D_collision_detection">2D 碰撞检测</a></li>
  <li><a href="/zh-CN/docs/Games/Techniques/3D_collision_detection">3D 碰撞检测</a></li>
- <li><a href="/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">纯 JavaScript 编写的 2D 消除游戏</a> —— 一个很好的2D游戏开发初学者教程.</li>
- <li><a href="/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser">Phaser 编写的 2D 消除游戏</a> —— JavaScript游戏库构建2D游戏的基础知识。</li>
+ <li><a href="/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">纯 JavaScript 编写的 2D 消除游戏</a> —— 一个很好的 2D 游戏开发初学者教程。</li>
+ <li><a href="/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser">Phaser 编写的 2D 消除游戏</a> —— JavaScript 游戏库构建 2D 游戏的基础知识。</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</p>

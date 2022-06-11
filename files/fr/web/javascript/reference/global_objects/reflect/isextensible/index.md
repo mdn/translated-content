@@ -18,7 +18,9 @@ La méthode statique **`Reflect.isExtensible()`** permet de déterminer si un ob
 
 ## Syntaxe
 
-    Reflect.isExtensible(cible)
+```js
+Reflect.isExtensible(cible)
+```
 
 ### Paramètres
 
@@ -80,7 +82,7 @@ Object.isExtensible(1);
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

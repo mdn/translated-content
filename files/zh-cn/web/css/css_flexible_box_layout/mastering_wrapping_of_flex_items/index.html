@@ -12,13 +12,13 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Flexbox被设计为一维的布局工具，这意味着在处理元素布局方式时只能设计为行或者设计为列— 两者不能兼顾。然而Flex拥有一种将flex元素包围在新的一行内的特性，创建一个新的行如果设置了{{cssxref("flex-direction")}} 为 <code>row</code> 以及创建新的一列如果设置了 <code>flex-direction</code> 为 <code>column</code>。在这篇教程中，我将解释这个特性的内部工作原理，以及它设计的目的是什么和在什么情况下要使用 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> 而不是 flexbox.</p>
+<p>Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方式时只能设计为行或者设计为列— 两者不能兼顾。然而 Flex 拥有一种将 flex 元素包围在新的一行内的特性，创建一个新的行如果设置了{{cssxref("flex-direction")}} 为 <code>row</code> 以及创建新的一列如果设置了 <code>flex-direction</code> 为 <code>column</code>。在这篇教程中，我将解释这个特性的内部工作原理，以及它设计的目的是什么和在什么情况下要使用 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> 而不是 flexbox.</p>
 
 <h2 id="把物件包装起来">把物件包装起来</h2>
 
 <p>{{cssxref("flex-wrap")}} 属性的初始值是<code>nowrap</code>。这就意味着如果你有一组的对其容器而言太宽的弹性物件，它们就会溢出。如果你想要一旦它们变得太宽就换行，你必须给 <code>flex-wrap</code> 属性添加<code>wrap</code>值，或者，用<code>row wrap</code> 或 <code>column wrap</code> 值作用于{{cssxref("flex-flow")}}的速写。</p>
 
-<p><span>物件接着就会在容器内换行。在接下来的例子里，我有10个</span><code>160px</code><span>的</span><code>flex-basis</code><span>物</span><span>件，它们都具备伸展</span><span>和收缩能力。一旦第一行达到了没有足够空间放置额外160像素物件的点，一个新的弹性行就会被建立，一直这样直到所有的物件被放置。因为物件可以伸展，它们会扩展大于160像素从而完整地填充一行。如果在最后一行只有1个物件，它就将拉长了充满整行。</span></p>
+<p>物件接着就会在容器内换行。在接下来的例子里，我有 10 个<code>160px</code>的<code>flex-basis</code>物件，它们都具备伸展和收缩能力。一旦第一行达到了没有足够空间放置额外 160 像素物件的点，一个新的弹性行就会被建立，一直这样直到所有的物件被放置。因为物件可以伸展，它们会扩展大于 160 像素从而完整地填充一行。如果在最后一行只有 1 个物件，它就将拉长了充满整行。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 <h2 id="包装和弹性方向">包装和弹性方向</h2>
 
-<p>当结合 <code>flex-direction</code> 属性，包装就如您所期待的方式工作。如果 <code>flex-direction</code> 被设置成 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">row-reverse</span></font> 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。</p>
+<p>当结合 <code>flex-direction</code> 属性，包装就如您所期待的方式工作。如果 <code>flex-direction</code> 被设置成 row-reverse 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 <p>弹性盒子中并没有方法告诉一行里的物件和上一行里的物件对齐——每个弹性行表现得就像一个新的弹性容器。它在主要坐标轴上处理空间分布。如果只有一个物件，并且这个物件允许伸展，他就会填充坐标轴，就好像你有一个单物件的弹性容器。</p>
 
-<p>如果你想在二维方向上布局，那么你很可能想要网格布局。我们可以比较我们上面的行换行例子和CSS网格版本的布局来看一下区别。一下实时的例子使用CSS网格布局来构建一个布局，它具有至少160像素的列的布局，在所有列之间分配额外的空间。</p>
+<p>如果你想在二维方向上布局，那么你很可能想要网格布局。我们可以比较我们上面的行换行例子和 CSS 网格版本的布局来看一下区别。一下实时的例子使用 CSS 网格布局来构建一个布局，它具有至少 160 像素的列的布局，在所有列之间分配额外的空间。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 <h2 id="在物件之间建立间隔">在物件之间建立间隔</h2>
 
-<p>当包装弹性物件的时候，间隔它们的需要很可能被提出。在当下我们还没有任何针对弹性盒子的<a href="https://www.w3.org/TR/css-align-3/">块对齐模块</a>间隔属性的实现。在未来我们将能够对弹性盒子简单的使用 <code>row-gap</code> 和 <code>column-gap</code> 就如我们在CSS网格里做的。当下你会需要使用边距来达成这个要求。</p>
+<p>当包装弹性物件的时候，间隔它们的需要很可能被提出。在当下我们还没有任何针对弹性盒子的<a href="https://www.w3.org/TR/css-align-3/">块对齐模块</a>间隔属性的实现。在未来我们将能够对弹性盒子简单的使用 <code>row-gap</code> 和 <code>column-gap</code> 就如我们在 CSS 网格里做的。当下你会需要使用边距来达成这个要求。</p>
 
 <p>你可以从下面一个实时的例子里看到，为了建立间隔并且不在容器的边缘建立间隔，我们需要在弹性容器自身上使用负边距。弹性容器的任何一条边移入第二个包装从而使得负边距可以将包装的元素拉回来。</p>
 
@@ -68,18 +68,18 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 <h2 id="折叠物件">折叠物件</h2>
 
-<p>弹性盒子标准详述了如果一个弹性物件在物件上被设置了 <code>visibility: collapse</code> 时应当发生什么。参见对于{{cssxref("visibility")}}属性的MDN文档。这份标准描述了如下的表现：</p>
+<p>弹性盒子标准详述了如果一个弹性物件在物件上被设置了 <code>visibility: collapse</code> 时应当发生什么。参见对于{{cssxref("visibility")}}属性的 MDN 文档。这份标准描述了如下的表现：</p>
 
 <blockquote>
-<p>“定义可见性：在一个弹性物件上的折叠导致它成为一个折叠弹性物件，在一个表行或者表列制造一个类似于visibility:collapse的效果：折叠弹性物件整个地从渲染中移除，但在底层保留了一个“支撑”从而保持了弹性行的跨界尺寸的稳定。因此，如果一个弹性容器仅包含一个弹性行，动态地折叠或者展开物件可能改变弹性容器的主尺寸，但是这样确保了跨界尺寸上没有影响以及不会导致页面其余的布局“晃动”。动态行包装在折叠后会被重做的，所以，包含多行的弹性容器的跨界尺寸是可能变化的。” - <a href="https://www.w3.org/TR/css-flexbox-1/#visibility-collapse">折叠物件</a></p>
+<p>“定义可见性：在一个弹性物件上的折叠导致它成为一个折叠弹性物件，在一个表行或者表列制造一个类似于 visibility:collapse 的效果：折叠弹性物件整个地从渲染中移除，但在底层保留了一个“支撑”从而保持了弹性行的跨界尺寸的稳定。因此，如果一个弹性容器仅包含一个弹性行，动态地折叠或者展开物件可能改变弹性容器的主尺寸，但是这样确保了跨界尺寸上没有影响以及不会导致页面其余的布局“晃动”。动态行包装在折叠后会被重做的，所以，包含多行的弹性容器的跨界尺寸是可能变化的。” - <a href="https://www.w3.org/TR/css-flexbox-1/#visibility-collapse">折叠物件</a></p>
 </blockquote>
 
-<p>如果你想要针对弹性物件使用JavaScript来显示和隐藏内容的例子，这样的表现是很有用的。这个标准里的例子演示了一个这样的模式。</p>
+<p>如果你想要针对弹性物件使用 JavaScript 来显示和隐藏内容的例子，这样的表现是很有用的。这个标准里的例子演示了一个这样的模式。</p>
 
-<p>在下面的实时例子里，我有一个非包装的弹性容器。第三个物件相比其他的有跟多的内容被设置 <code>visibility: collaps</code> 并且因此弹性盒子会保持一个高度的结构来满足显示物件的需要。如果你从CSS里移除<code>visibility: collapse</code> 或是将值改变为 <code>visible</code>，你会看到物件消失了并且空间在非包装的物件之间重新分配；弹性容器的高度不应该改变。</p>
+<p>在下面的实时例子里，我有一个非包装的弹性容器。第三个物件相比其他的有跟多的内容被设置 <code>visibility: collaps</code> 并且因此弹性盒子会保持一个高度的结构来满足显示物件的需要。如果你从 CSS 里移除<code>visibility: collapse</code> 或是将值改变为 <code>visible</code>，你会看到物件消失了并且空间在非包装的物件之间重新分配；弹性容器的高度不应该改变。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 对下面的两个例子使用Firefox浏览器，因为Chrome和Safari会把折叠处理为隐藏。</p>
+<p><strong>注意</strong>: 对下面的两个例子使用 Firefox 浏览器，因为 Chrome 和 Safari 会把折叠处理为隐藏。</p>
 </div>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}</p>

@@ -22,7 +22,7 @@ translation_of: Web/API/PerformanceObserver/observe
 
 <dl>
  <dt><em>options</em></dt>
- <dd>一个只装了单个键值对的对象，该键值对的键名规定为 <code>entryTypes</code>。<code>entryTypes</code> 的取值要求如下:</dd>
+ <dd>一个只装了单个键值对的对象，该键值对的键名规定为 <code>entryTypes</code>。<code>entryTypes</code> 的取值要求如下：</dd>
 </dl>
 
 <ul>
@@ -38,25 +38,25 @@ translation_of: Web/API/PerformanceObserver/observe
 
 <pre class="brush: js">/* 写法一 */
 
-//直接往PerformanceObserver()入参匿名回调函数，成功new了一个PerformanceObserver类的，名为observer的对象
+//直接往 PerformanceObserver() 入参匿名回调函数，成功 new 了一个 PerformanceObserver 类的，名为 observer 的对象
 var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
   for (var i=0; i &lt; entries.length; i++) {
     //处理 “mark” 和 “frame” 事件
   }
 });
-//调用observer对象的observe()方法
+//调用 observer 对象的 observe() 方法
 observer.observe({entryTypes: ["mark", "frame"]});
 
 /* 写法二 */
 
-//预先声明回调函数perf_observer
+//预先声明回调函数 perf_observer
 function perf_observer(list, observer) {
   //处理 “measure” 事件
 }
-//再将其传入PerformanceObserver()，成功new了一个PerformanceObserver类的，名为observer2的对象
+//再将其传入 PerformanceObserver()，成功 new 了一个 PerformanceObserver 类的，名为 observer2 的对象
 var observer2 = new PerformanceObserver(perf_observer);
-//调用observer2对象的observe()方法
+//调用 observer2 对象的 observe() 方法
 observer2.observe({entryTypes: ["measure"]});
 </pre>
 
@@ -79,56 +79,4 @@ observer2.observe({entryTypes: ["measure"]});
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(52.0)}}</td>
-   <td>{{CompatGeckoDesktop(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("39")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>{{CompatOperaMobile(39)}}</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(52.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.PerformanceObserver.observe")}}

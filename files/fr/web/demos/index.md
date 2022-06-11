@@ -28,8 +28,8 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 - [Canvas ash1](https://glimr.rubyforge.org/cake/demos/canvas_ash.html)
 - [Canvas ash2](https://glimr.rubyforge.org/cake/demos/canvas_ash2.html)
 - [Canvas ash8](https://glimr.rubyforge.org/cake/demos/canvas_ash8.html)
-- [3D on 2D Canvas](https://gyu.que.jp/jscloth/)
-- [miniPaint - Image editor ](https://viliusle.github.io/miniPaint/)([source code](https://github.com/viliusle/miniPaint))
+- [3D on 2D Canvas](https://gyu.que.jp/jscloth/)
+- [miniPaint - Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 
 ### SVG
 
@@ -42,7 +42,7 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 - [Blobular](https://www.themaninblue.com/experiment/Blobular/) (interactif)
 - [Vidéo embarquées dans SVG](https://www.double.co.nz/video_test/video.svg) (ou utiliser le [téléchargement local](https://www.double.co.nz/video_test/video_svg.tar.bz2))
 - [Summer HTML image map creator](https://summerstyle.github.io/summer/) ([code source](https://github.com/summerstyle/summer))
-- [démo firefox developer édition SVG/CSS ](https://s.codepen.io/SoftwareRVG/debug/JRJZVW)conçu par Rober Villar de chez Software RVG ([code source](https://github.com/SoftwareRVG/mde_design/blob/master/css_svg_dev)) ([mode debug](https://s.codepen.io/SoftwareRVG/debug/JRJZVW))
+- [démo firefox developer édition SVG/CSS](https://s.codepen.io/SoftwareRVG/debug/JRJZVW) conçu par Rober Villar de chez Software RVG ([code source](https://github.com/SoftwareRVG/mde_design/blob/master/css_svg_dev)) ([mode debug](https://s.codepen.io/SoftwareRVG/debug/JRJZVW))
 
 ### Vidéos
 
@@ -76,8 +76,8 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 
 ## CSS
 
-- [logo flottant " mozilla " CSS  développé par Rober Villar , de chez Software RVG. ](https://s.codepen.io/SoftwareRVG/debug/OXkOWj)(mode debug)
-- [logo flottant " mozilla " CSS développé par Rober Villar , from Software RVG. ](https://codepen.io/SoftwareRVG/pen/OXkOWj/)(code source)
+- [logo flottant "mozilla" CSS développé par Rober Villar, de chez Software RVG.](https://s.codepen.io/SoftwareRVG/debug/OXkOWj) (mode debug)
+- [logo flottant "mozilla" CSS développé par Rober Villar, from Software RVG.](https://codepen.io/SoftwareRVG/pen/OXkOWj/) (code source)
 - [Conception de Formulaire de Contact Bootstrap](https://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
 - [Paperfold](https://felixniklas.com/paperfold/)
 - [CSS Blockout](https://ondras.github.io/blockout/)
@@ -99,7 +99,7 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 
 ## HTML
 
-- [Zen Photon Garden ](https://zenphoton.com)([code source](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](https://zenphoton.com) ([code source](https://github.com/scanlime/zenphoton))
 - [HTMl Meta Tags For SMO](https://webdeveloperbareilly.in/blog/smo/html-meta-tags-for-social-media-optimization.html)
 
 ## APIs Web

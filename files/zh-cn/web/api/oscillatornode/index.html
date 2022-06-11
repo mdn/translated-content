@@ -38,7 +38,7 @@ translation_of: Web/API/OscillatorNode
 
 <dl>
  <dt>{{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}</dt>
- <dd>创建一个OscillatorNode对象的示例, 为node{{anch("properties")}}提供可选的一个定义默认值的对象.  如果默认值可接受,你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法.</dd>
+ <dd>创建一个 OscillatorNode 对象的示例，为 node<a href="#属性">属性</a>提供可选的一个定义默认值的对象.  如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -47,12 +47,12 @@ translation_of: Web/API/OscillatorNode
 
 <dl>
  <dt>{{domxref("OscillatorNode.frequency")}}</dt>
- <dd>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 对象的属性代表了振动的频率（单位为赫兹hertz） (虽然返回的<code>AudioParam 是只读的，但是它所表示的值是可以修改的</code>)。 默认值是 440 Hz (基本的中A音高).</dd>
+ <dd>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 对象的属性代表了振动的频率（单位为赫兹 hertz） (虽然返回的<code>AudioParam 是只读的，但是它所表示的值是可以修改的</code>)。 默认值是 440 Hz (基本的中 A 音高).</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("OscillatorNode.detune")}}</dt>
- <dd>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 对象的属性代表振动的音高微调（单位是cent音分）  (虽然返回的<code>AudioParam 是只读的，但是它所表示的值是可以修改的</code>).。默认值是0。</dd>
+ <dd>一个 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} 对象的属性代表振动的音高微调（单位是 cent 音分） (虽然返回的<code>AudioParam 是只读的，但是它所表示的值是可以修改的</code>).。默认值是 0。</dd>
 </dl>
 
 <dl>
@@ -62,7 +62,7 @@ translation_of: Web/API/OscillatorNode
 
 <h2 id="方法">方法</h2>
 
-<p><em>继承自父级, </em><em>{{domxref("AudioScheduledSourceNode")}}</em>, 自有方法如下:</p>
+<p><em>继承自父级， </em><em>{{domxref("AudioScheduledSourceNode")}}</em>, 自有方法如下：</p>
 
 <dl>
  <dt>{{domxref("OscillatorNode.setPeriodicWave()")}}</dt>
@@ -103,85 +103,7 @@ oscillator.start();</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>25</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.OscillatorNode")}}
 
 <h2 id="See_also">See also</h2>
 

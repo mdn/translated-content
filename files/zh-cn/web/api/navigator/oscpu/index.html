@@ -7,7 +7,7 @@ translation_of: Web/API/Navigator/oscpu
 
 <h3 id="Summary" name="Summary">概述</h3>
 
-<p>返回一个字符串,代表当前所使用的操作系统类型.</p>
+<p>返回一个字符串，代表当前所使用的操作系统类型。</p>
 
 <h3 id="Syntax" name="Syntax">语法</h3>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/Navigator/oscpu
 </pre>
 
 <ul>
- <li><code>oscpuInfo</code> 会有下面几种类型.</li>
+ <li><code>oscpuInfo</code> 会有下面几种类型。</li>
 </ul>
 
 <table class="fullwidth-table">
@@ -54,11 +54,11 @@ translation_of: Web/API/Navigator/oscpu
   </tr>
   <tr>
    <td>Linux 64-bit (32-bit build)</td>
-   <td>命令'uname -s'的输出加上 "i686 on x86_64"</td>
+   <td>命令 <code>uname -s</code> 的输出加上 "i686 on x86_64"</td>
   </tr>
   <tr>
    <td>Linux</td>
-   <td>命令'uname -sm'的输出</td>
+   <td>命令 <code>uname -sm</code> 的输出</td>
   </tr>
  </tbody>
 </table>
@@ -70,15 +70,13 @@ translation_of: Web/API/Navigator/oscpu
 <pre class="brush: js">function osInfo() {
   alert(window.navigator.oscpu);
 }
-// 可能返回:"Windows NT 6.1",表示windows 7
+// 可能返回:"Windows NT 6.1",表示 windows 7
 </pre>
 
 <h3 id="Notes" name="Notes">备注</h3>
 
-<p>在普通网页中,如果about:config中存在<code>general.oscpu.override项,则</code>该属性的值会返回about:config中<code>general.oscpu.override项的值.</code> 在特权代码中 (chrome上下文或者拥有"UniversalBrowserRead"特权的网页中),返回的还是真实的操作系统类型.(译者注:语句:netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead ")用来激活所在网页的UniversalBrowserRead特权.)</p>
+<p>在普通网页中，如果 about:config 中存在<code>general.oscpu.override</code> 项，则该属性的值会返回 about:config 中 <code>general.oscpu.override</code> 项的值。在特权代码中 (Chrome 上下文或者拥有 "UniversalBrowserRead" 特权的网页中)，返回的还是真实的操作系统类型。(译者注：语句：netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead") 用来激活所在网页的 UniversalBrowserRead 特权。)</p>
 
 <h3 id="Specification" name="Specification">规范</h3>
 
 <p>{{ DOM0() }}</p>
-
-<p>{{ languages( { "ja": "ja/DOM/window.navigator.oscpu", "en": "en/DOM/window.navigator.oscpu", "pl": "pl/DOM/window.navigator.oscpu" } ) }}</p>

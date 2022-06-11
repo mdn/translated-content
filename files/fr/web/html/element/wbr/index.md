@@ -20,7 +20,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Notes
 
-- Sur les pages encodées en UTF-8, `<wbr>` se comporte comme le point de code ` U+200B`` ZERO-WIDTH SPACE  `, il se comporte notamment comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre bidirectionnel (cf. {{Glossary("BiDi")}}. Autrement dit : `<div dir=rtl>123,<wbr>456</div>` sera affiché comme `123,456` et non comme `456,123` lorsqu'il n'y a pas de saut de ligne.
+- Sur les pages encodées en UTF-8, `<wbr>` se comporte comme le point de code `U+200B ZERO-WIDTH SPACE`, il se comporte notamment comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre bidirectionnel (cf. {{Glossary("BiDi")}}. Autrement dit : `<div dir=rtl>123,<wbr>456</div>` sera affiché comme `123,456` et non comme `456,123` lorsqu'il n'y a pas de saut de ligne.
 - Pour la même raison, l'élément `< wbr >` n'introduit pas de trait d'union à la fin de ligne. Pour avoir ce caractère, il faudra utiliser l'entité (`& shy;`) (_soft-hyphen_).
 - Cet élément a été initialement implémenté par Internet Explorer 5.5 et est défini officiellement dans la spécification HTML5.
 

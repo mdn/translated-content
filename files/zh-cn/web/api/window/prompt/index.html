@@ -22,26 +22,26 @@ translation_of: Web/API/Window/prompt
 
 <h3 id="Example" name="Example">例子</h3>
 
-<pre class="eval">var sign = prompt("<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你是什么星座的</span></span>?");
+<pre class="eval">var sign = prompt("你是什么星座的？");
 if (sign == "天蝎座"){
-   alert("哇! 我也是天蝎座的耶!");
+   alert("哇！我也是天蝎座的耶！");
 }
-// 有多种使用prompt方法的方式
+// 有多种使用 prompt 方法的方式
 var sign = window.prompt(); // 打开空的提示窗口
 var sign = prompt();       // 打开空的提示窗口
-var sign = window.prompt('<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗</span></span>?'); // 打开显示提示文本为"<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗?</span></span>"的提示窗口
-var sign = window.prompt('<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗</span></span>?','是的'); // 打开显示提示文本为"<span class="long_text short_text" id="result_box" lang="zh-CN"><span>你</span><span>觉得很幸运吗</span></span>?"并且输入框默认值为"是的"的提示窗口
+var sign = window.prompt('你觉得很幸运吗？'); // 打开显示提示文本为"你觉得很幸运吗？"的提示窗口
+var sign = window.prompt('你觉得很幸运吗？','是的'); // 打开显示提示文本为"你觉得很幸运吗？"并且输入框默认值为"是的"的提示窗口
 </pre>
 
-<p><span class="long_text" id="result_box" lang="zh-CN"><span>当用户点击</span><span>"确定"按钮</span><span>后，文本</span><span>输入框中的文字被</span><span>返回。</span><span>如果文本输入框中为空</span><span>,</span><span>则返回一个空字符串。</span><span>如果用户点击</span><span>"取消"按钮，</span><span>则返回null。</span></span></p>
+<p>当用户点击"确定"按钮后，文本输入框中的文字被返回。如果文本输入框中为空，则返回一个空字符串。如果用户点击"取消"按钮，则返回 null。</p>
 
 <h3 id="Notes" name="Notes">注意</h3>
 
-<div>一个prompt对话框,包含一个单行文本框，一个“取消”按钮，一个“确定”按钮,在对话框关闭时，返回用户输入到文本框内的值(可能为空)。<br>
+<div>一个 prompt 对话框，包含一个单行文本框，一个“取消”按钮，一个“确定”按钮，在对话框关闭时，返回用户输入到文本框内的值 (可能为空)。<br>
 <br>
-prompt和alert以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在content上下文，Firefox 4 以上版本使用非模态的对话框)。</div>
+prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。</div>
 
-<div>Chrome上下文执行的脚本(例如扩展开发)应该使用XPCOM <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService" title="zh-cn/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a>  来替代window.prompt。</div>
+<div>Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService" title="zh-cn/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a>  来替代 window.prompt。</div>
 
 <h3 id="Specification" name="Specification">规范</h3>
 
@@ -50,5 +50,3 @@ prompt和alert以及类似的对话框都是模态窗口，它们会阻止用户
 <h3 id="See_also" name="See_also">相关链接</h3>
 
 <p><a href="/zh-cn/DOM/window.alert" title="zh-cn/DOM/window.alert">alert</a>, <a href="/zh-cn/DOM/window.confirm" title="zh-cn/DOM/window.confirm">confirm</a></p>
-
-<p>{{ languages( { "fr": "fr/DOM/window.prompt", "ja": "ja/DOM/window.prompt", "pl": "pl/DOM/window.prompt", "en": "en/DOM/window.prompt" } ) }}</p>

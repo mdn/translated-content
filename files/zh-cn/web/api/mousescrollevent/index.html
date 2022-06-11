@@ -5,9 +5,9 @@ translation_of: Web/API/MouseScrollEvent
 ---
 <p>{{APIRef("DOM Events")}}{{ non-standard_header() }}{{deprecated_header}}</p>
 
-<p><code>MouseScrollEvent</code>事件对象代表了当用户在滚动鼠标滚轮或操作其他类似的输入设备时触发的事件.</p>
+<p><code>MouseScrollEvent</code> 事件对象代表了当用户在滚动鼠标滚轮或操作其他类似的输入设备时触发的事件。</p>
 
-<p>要优先使用标准化过的<a href="WheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent">WheelEvent</a>来代替该陈旧的事件对象.</p>
+<p>要优先使用标准化过的 <a href="WheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent">WheelEvent</a> 来代替该陈旧的事件对象。</p>
 
 <h2 id="方法概述">方法概述</h2>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/MouseScrollEvent
   <tr>
    <td><code>axis</code></td>
    <td><code>long</code></td>
-   <td>表明鼠标滚轮滚动的方向. <strong>只读.</strong></td>
+   <td>表明鼠标滚轮滚动的方向（<strong>只读</strong>）</td>
   </tr>
  </tbody>
 </table>
@@ -66,7 +66,7 @@ translation_of: Web/API/MouseScrollEvent
 
 <h3 id="initMouseScrollEvent()">initMouseScrollEvent()</h3>
 
-<p>查看 <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29" title="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29">nsIDOMMouseScrollEvent::initMouseScrollEvent()</a>.</p>
+<p>查看 <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29" title="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29">nsIDOMMouseScrollEvent::initMouseScrollEvent()</a>。</p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">滚轮相关事件对比</h2>
 
@@ -82,13 +82,13 @@ translation_of: Web/API/MouseScrollEvent
    <td><a href="../../../zh-CN/docs/DOM/DOM_event_reference/mousewheel" title="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel">mousewheel</a></td>
    <td><a href="../../../zh-CN/docs/DOM/MouseWheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/MouseWheelEvent">MouseWheelEvent</a></td>
    <td>非标准</td>
-   <td>只有Firefox不支持</td>
+   <td>只有 Firefox 不支持</td>
   </tr>
   <tr>
    <td><a class="new" href="../../../zh-CN/docs/DOM/DOM_event_reference/DOMMouseScroll" title="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/DOMMouseScroll">DOMMouseScroll</a></td>
    <td><a class="new" href="../../../zh-CN/docs/DOM/MouseScrollEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/MouseScrollEvent">MouseScrollEvent</a></td>
    <td>非标准</td>
-   <td>只有Firefox支持</td>
+   <td>只有 Firefox 支持</td>
   </tr>
   <tr>
    <td><a class="new" href="../../../zh-CN/docs/DOM/DOM_event_reference/wheel">wheel</a></td>
@@ -101,59 +101,13 @@ translation_of: Web/API/MouseScrollEvent
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("1.9.1") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MouseScrollEvent")}}
 
 <h2 class="note" id="相关链接">相关链接</h2>
 
 <ul>
  <li><code>DOMMouseScroll</code></li>
  <li><code>MozMousePixelScroll</code></li>
- <li>非Gecko浏览器中的非标准的鼠标滚轮事件对象: {{ domxref("MouseWheelEvent") }}</li>
- <li>被标准化的鼠标滚轮事件对象: {{ domxref("WheelEvent") }}</li>
+ <li>非 Gecko 浏览器中的非标准的鼠标滚轮事件对象：{{ domxref("MouseWheelEvent") }}</li>
+ <li>被标准化的鼠标滚轮事件对象：{{ domxref("WheelEvent") }}</li>
 </ul>

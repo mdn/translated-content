@@ -5,7 +5,7 @@ translation_of: Web/API/MessageChannel/port1
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>{{domxref("MessageChannel")}} 的只读属性 <code><strong>port1 </strong>返回消息通道的第一个端口</code>, 此端口连接到源上下文通道。</p>
+<p>{{domxref("MessageChannel")}} 的只读属性 <code><strong>port1</strong></code> 返回消息通道的第一个端口，此端口连接到源上下文通道。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -15,11 +15,11 @@ translation_of: Web/API/MessageChannel/port1
 
 <h3 id="Value">Value</h3>
 
-<p>一个 {{domxref("MessagePort")}} 对象, 通道的第一个端口，此端口连接到源上下文通道。</p>
+<p>一个 {{domxref("MessagePort")}} 对象，通道的第一个端口，此端口连接到源上下文通道。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>在以下代码块中，您可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}构造函数创建的新通道。当{{HTMLElement("iframe")}}加载完毕，我们使用{{domxref("MessagePort.postMessage")}}方法把一条消息和{{domxref("MessageChannel.port2")}}传递给{{HTMLElement("iframe")}}。handleMessage处理程序将会从&lt;iframe&gt;中（使用{{domxref("MessagePort.onmessage")}}监听事件）接收到信息，将数据其放入一个段落。handleMessage 方法关联到 port1用于监听收到的消息。</p>
+<p>在以下代码块中，您可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新通道。当 {{HTMLElement("iframe")}} 加载完毕，我们使用 {{domxref("MessagePort.postMessage")}} 方法把一条消息和 {{domxref("MessageChannel.port2")}} 传递给 {{HTMLElement("iframe")}}。handleMessage 处理程序将会从 &lt;iframe&gt; 中（使用 {{domxref("MessagePort.onmessage")}} 监听事件）接收到信息，将数据其放入一个段落。handleMessage 方法关联到 port1 用于监听收到的消息。</p>
 
 <pre class="brush: js;highlight[13]">var channel = new MessageChannel();
 var para = document.querySelector('p');
@@ -39,7 +39,7 @@ function handleMessage(e) {
 }
 </pre>
 
-<p>一个完整的运行示例，可以在Github上查看 <a class="external external-icon" href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a>  (<a class="external external-icon" href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>).</p>
+<p>一个完整的运行示例，可以在 GitHub 上查看 <a class="external external-icon" href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a>  (<a class="external external-icon" href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>).</p>
 
 <h2 id="规范">规范</h2>
 
@@ -65,81 +65,7 @@ function handleMessage(e) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0</td>
-   <td>11.5</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MessageChannel.port1")}}
 
 <h2 id="参考">参考</h2>
 

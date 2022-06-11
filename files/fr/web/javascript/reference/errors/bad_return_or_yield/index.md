@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Bad_return_or_yield
 
 ## Message
 
-    SyntaxError: 'return' statement outside of function (Edge)
-    SyntaxError: return not in function (Firefox)
-    SyntaxError: yield not in function (Firefox)
+```
+SyntaxError: 'return' statement outside of function (Edge)
+SyntaxError: return not in function (Firefox)
+SyntaxError: yield not in function (Firefox)
+```
 
 ## Type d'erreur
 
@@ -40,7 +42,7 @@ var encouragement = function(score) {
 // SyntaxError: return not in function
 ```
 
-À première vue, les accolades semblent correctes mais en regardant de plus près, on voit qu'il manque une accolade ouvrante ("{") après la première instruction `if`. La version correcte serait :
+À première vue, les accolades semblent correctes mais en regardant de plus près, on voit qu'il manque une accolade ouvrante ("{") après la première instruction `if`. La version correcte serait :
 
 ```js example-good
 var encouragement = function(score) {

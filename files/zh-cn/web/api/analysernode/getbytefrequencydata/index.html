@@ -6,9 +6,9 @@ translation_of: Web/API/AnalyserNode/getByteFrequencyData
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AnalyserNode") }}接口的<strong><code>getByteFrequencyData()</code></strong>方法将当前频率数据复制到传入的Uint8Array（无符号字节数组）中。</p>
+<p>{{ domxref("AnalyserNode") }}接口的<strong><code>getByteFrequencyData()</code></strong>方法将当前频率数据复制到传入的 Uint8Array（无符号字节数组）中。</p>
 
-<p>如果数组的长度小于 {{domxref("AnalyserNode.frequencyBinCount")}}, 那么Analyser多出的元素会被删除. 如果是大于, 那么数组多余的元素会被忽略.</p>
+<p>如果数组的长度小于 {{domxref("AnalyserNode.frequencyBinCount")}}, 那么 Analyser 多出的元素会被删除。如果是大于，那么数组多余的元素会被忽略。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -25,9 +25,9 @@ analyser.getByteFrequencyData(dataArray); // 调用 getByteFrequencyData 方法�
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的频率数据, 并绘制为一个柱状风格的输出(频谱).</p>
+<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).</p>
 
-<p>更多的例子/信息, 查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128行~205行</a>).</p>
+<p>更多的例子/信息，查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -69,80 +69,16 @@ draw();</pre>
 
 <dl>
  <dt>array (数组)</dt>
- <dd>必须为{{domxref("Uint8Array")}}, 频域数据将复制到该数组内.</dd>
+ <dd>必须为{{domxref("Uint8Array")}}, 频域数据将复制到该数组内。</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AnalyserNode-getByteFrequencyData-void-Uint8Array-array', 'getByteFrequencyData()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AnalyserNode.getByteFrequencyData")}}
 
 <h2 id="相关内容">相关内容</h2>
 

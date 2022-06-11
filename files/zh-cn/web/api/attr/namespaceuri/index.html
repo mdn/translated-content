@@ -5,10 +5,10 @@ translation_of: Web/API/Attr/namespaceURI
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>Attr.namespaceURI</strong></code> 只读属性返回属性的命名空间URI，如果该元素不在命名空间中，则返回null。</p>
+<p><code><strong>Attr.namespaceURI</strong></code> 只读属性返回属性的命名空间 URI，如果该元素不在命名空间中，则返回 null。</p>
 
 <div class="note">
-<p>在DOM4之前，该API是在 {{domxref("Node")}} 中定义的。</p>
+<p>在 DOM4 之前，该 API 是在 {{domxref("Node")}} 中定义的。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -17,7 +17,7 @@ translation_of: Web/API/Attr/namespaceURI
 
 <h2 id="例子">例子</h2>
 
-<p>在这个片段中，正在检查一个属性的 {{domxref("localName")}} 和 <code>namespaceURI</code>. 如果 <code>namespaceURI </code>返回XUL命名空间，并且localName返回 "browser"，则该节点被理解为XUL  <code>&lt;browser/&gt;</code>。</p>
+<p>在这个片段中，正在检查一个属性的 {{domxref("localName")}} 和 <code>namespaceURI</code>。如果 <code>namespaceURI</code> 返回 XUL 命名空间，并且 localName 返回 "browser"，则该节点被理解为 XUL <code>&lt;browser/&gt;</code>。</p>
 
 <pre class="brush:js">if (attribute.localName == "value" &amp;&amp;
     attribute.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
@@ -27,89 +27,26 @@ translation_of: Web/API/Attr/namespaceURI
 <h2 id="笔记">笔记</h2>
 
 <p>这不是基于对范围中的命名空间声明的检查的命名空间查找的结果的计算值。<br>
- 属性的命名空间URI在属性创建时被冻结。</p>
+ 属性的命名空间 URI 在属性创建时被冻结。</p>
 
-<p>在Firefox 3.5及更早版本中，HTML文档中HTML属性的命名空间URI为null。<br>
- 在后来的版本中，遵照HTML5，就像在XHTML中一样是<code><a class="external" href="https://www.w3.org/1999/xhtml" rel="freelink">https://www.w3.org/1999/xhtml</a></code>{{gecko_minversion_inline("1.9.2")}}</p>
+<p>在 Firefox 3.5 及更早版本中，HTML 文档中 HTML 属性的命名空间 URI 为 null。<br>
+ 在后来的版本中，遵照 HTML5，就像在 XHTML 中一样是<code><a class="external" href="https://www.w3.org/1999/xhtml" rel="freelink">https://www.w3.org/1999/xhtml</a></code></p>
 
-<p>您可以使用DOM Level 2方法 {{domxref("Element.setAttributeNS")}}创建具有指定namespaceURI的属性。</p>
+<p>您可以使用 DOM Level 2 方法 {{domxref("Element.setAttributeNS")}}创建具有指定 namespaceURI 的属性。</p>
 
-<p>根据 <a class="external" href="https://www.w3.org/TR/xml-names11/">Namespaces in XML</a> 规范, 属性不会从其附加的元素继承其命名空间。<br>
+<p>根据 <a class="external" href="https://www.w3.org/TR/xml-names11/">Namespaces in XML</a> 规范，属性不会从其附加的元素继承其命名空间。<br>
  如果一个属性没有明确地给出一个命名空间，它没有命名空间。</p>
 
-<p>DOM本身不处理或强制命名空间验证。 DOM应用程序需要做任何必要的验证。<br>
+<p>DOM 本身不处理或强制命名空间验证。 DOM 应用程序需要做任何必要的验证。<br>
  还要注意，一旦与特定节点相关联，命名空间前缀将无法更改。</p>
 
 <h2 id="规格">规格</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规格</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特征</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>46.0<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特征</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 此API以前在 {{domxref("Node")}} API上可用。</p>
+{{Compat("api.Attr.namespaceURI")}}
 
 <h2 id="其他文章">其他文章</h2>
 

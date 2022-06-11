@@ -7,7 +7,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">Manually running tests on several browsers and devices, several times per day, can get tedious, and time consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as, Sauce Labs and Browser Stack.</p>
+<p>Manually running tests on several browsers and devices, several times per day, can get tedious, and time consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as, Sauce Labs and Browser Stack.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -45,16 +45,16 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 <h3 id="Setting_up_Node_and_npm">Setting up Node and npm</h3>
 
-<p>很多工具都是基于 {{Glossary("Node.js")}},所以你需要从 <a href="https://nodejs.org/">nodejs.org</a>安装它:</p>
+<p>很多工具都是基于 {{Glossary("Node.js")}},所以你需要从 <a href="https://nodejs.org/">nodejs.org</a>安装它：</p>
 
 <ol>
- <li>从上面的网站下载适合你系统的安装软件。 （如果你已经安装了Node和npm，跳到步骤4）</li>
- <li>像其它软件那样正常安装。注意Node来源于 <a href="https://www.npmjs.com/">Node Package Manager</a> (npm)，它使你能更快地安装包、同它人分享你的包，并在你的工程上运行有用的脚本。</li>
- <li>安装结束后，运行下列命令查看Node和npm的版本，检测node是否正确安装好 :
+ <li>从上面的网站下载适合你系统的安装软件。 （如果你已经安装了 Node 和 npm，跳到步骤 4）</li>
+ <li>像其它软件那样正常安装。注意 Node 来源于 <a href="https://www.npmjs.com/">Node Package Manager</a> (npm)，它使你能更快地安装包、同它人分享你的包，并在你的工程上运行有用的脚本。</li>
+ <li>安装结束后，运行下列命令查看 Node 和 npm 的版本，检测 node 是否正确安装好 :
   <pre class="brush: bash">node -v
 npm -v</pre>
  </li>
- <li>安装 Node/npm 后，还应将其更新到最新的版本。 更新Node最有效可靠的方式是从它的网站（链接见上）下载一个最新的安装包进行安装。 而更新npm，可以在你的命令行终端运行如下命令:
+ <li>安装 Node/npm 后，还应将其更新到最新的版本。 更新 Node 最有效可靠的方式是从它的网站（链接见上）下载一个最新的安装包进行安装。而更新 npm，可以在你的命令行终端运行如下命令：
   <pre class="brush: bash">npm install npm@latest -g</pre>
  </li>
 </ol>
@@ -68,18 +68,18 @@ npm -v</pre>
 <p>举例如下，首先创建一个测试目录，以免在测试的过程中产生任何错误。</p>
 
 <ol>
- <li>使用文件管理UI在合适的地方创建一个新的目录，或在命令行下定位到你想要创建目录的地方，执行如下命令：
+ <li>使用文件管理 UI 在合适的地方创建一个新的目录，或在命令行下定位到你想要创建目录的地方，执行如下命令：
   <pre class="brush: bash">mkdir node-test</pre>
  </li>
- <li>要使这个目录成为一个npm工程, 你需要进入目录下然后初始化它：
+ <li>要使这个目录成为一个 npm 工程，你需要进入目录下然后初始化它：
   <pre class="brush: bash">cd node-test
 npm init</pre>
  </li>
- <li>第2步执行后你会看到要回答一些问题，这是建立工程需要获取的信息。现在你可以先选择使用默认值。</li>
- <li>所有问题回答完成后，你还需要确定信息是否OK。输入yes或者直接回车，npm就会在你的目录下生成一个package.json文件。</li>
+ <li>第 2 步执行后你会看到要回答一些问题，这是建立工程需要获取的信息。现在你可以先选择使用默认值。</li>
+ <li>所有问题回答完成后，你还需要确定信息是否 OK。输入 yes 或者直接回车，npm 就会在你的目录下生成一个 package.json 文件。</li>
 </ol>
 
-<p>这是一个工程的基本配置文件。你可以后续对它进行修改，现在，它的内容是这样的:</p>
+<p>这是一个工程的基本配置文件。你可以后续对它进行修改，现在，它的内容是这样的：</p>
 
 <pre class="brush: json">{
   "name": "node-test",
@@ -145,7 +145,7 @@ gulp.task('default', function() {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -204,12 +204,12 @@ var csslint = require('gulp-csslint');</pre>
 <ol>
  <li>Install using the following lines:
   <pre class="editor editor-colors">npm install --save-dev gulp-babel babel-preset-es2015
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
   <pre class="editor editor-colors">var babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>var</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+var jshint = require('gulp-jshint');
 </pre>
  </li>
  <li class="line">Add the following test to the bottom of <code>gulpfile.js</code>:
@@ -281,7 +281,7 @@ var csslint = require('gulp-csslint');</pre>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
 
-<h4 id="Sauce_Labs入门">Sauce Labs入门</h4>
+<h4 id="Sauce_Labs入门">Sauce Labs 入门</h4>
 
 <p>Let's get started with a Sauce Labs Trial.</p>
 
@@ -325,7 +325,7 @@ var csslint = require('gulp-csslint');</pre>
 <p>Let's have a brief look at how we'd access the API using Node.js and <a href="https://github.com/danjenkins/node-saucelabs">node-saucelabs</a>.</p>
 
 <ol>
- <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
+ <li>First, set up a new npm project to test this out, as detailed in <a href="#setting_up_node_and_npm">Setting up Node and npm</a>. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
  <li>Install the Node Sauce Labs wrapper using the following command:
   <pre>npm install saucelabs</pre>
  </li>
@@ -371,7 +371,7 @@ myAccount.getAccountDetails(function (err, res) {
 
 <h3 id="BrowserStack">BrowserStack</h3>
 
-<h4 id="BrowserStack入门">BrowserStack入门</h4>
+<h4 id="BrowserStack入门">BrowserStack 入门</h4>
 
 <p>Let's get started with a BrowserStack Trial.</p>
 
@@ -431,7 +431,7 @@ myAccount.getAccountDetails(function (err, res) {
  <li><em>Screenshots</em>: Enter a URL, choose the browsers/devices/platforms you are interested in, then press <em>Generate screenshots</em> — Browserstack will take screenshots of your site in all those different browsers then make them available to you to view and download.</li>
 </ul>
 
-<h4 id="高级_BrowserStack_API">高级: BrowserStack API</h4>
+<h4 id="高级_BrowserStack_API">高级：BrowserStack API</h4>
 
 <p>BrowserStack also has a <a href="https://www.browserstack.com/automate/rest-api">restful API</a> that allows you to programmatically retrieve details of your account plan, sessions, builds, etc.</p>
 
@@ -440,7 +440,7 @@ myAccount.getAccountDetails(function (err, res) {
 <p>Let's have a brief look at how we'd access the API using Node.js.</p>
 
 <ol>
- <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>bstack-test</code> for example.</li>
+ <li>First, set up a new npm project to test this out, as detailed in <a href="#setting_up_node_and_npm">Setting up Node and npm</a>. Use a different directory name than before, like <code>bstack-test</code> for example.</li>
  <li>Create a new file inside your project root called <code>call_bstack.js</code>. give it the following contents:
   <pre class="brush: js">var request = require("request");
 
@@ -589,7 +589,7 @@ function getSessionDetails(session){
 	*/
 }</pre>
 
-<h4 id="高级_自动化测试">高级: 自动化测试</h4>
+<h4 id="高级_自动化测试">高级：自动化测试</h4>
 
 <p>We'll cover actually running automated BrowserStack tests in the next article.</p>
 

@@ -4,7 +4,7 @@ slug: Web/API/Element/getElementsByClassName
 translation_of: Web/API/Element/getElementsByClassName
 ---
 <p>{{APIRef}}</p>
-<p><strong><code>Element.getElementsByClassName()</code></strong> 方法返回一个即时更新的（live） {{domxref("HTMLCollection")}}，包含了所有拥有指定 class 的子元素。当在 document 对象上调用此方法时，会检索整个文档，包括根元素。</p>
+<p><strong><code>Element.getElementsByClassName()</code></strong> 方法返回一个即时更新的（live）{{domxref("HTMLCollection")}}，包含了所有拥有指定 class 的子元素。当在 document 对象上调用此方法时，会检索整个文档，包括根元素。</p>
 <p>相似地，{{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} 方法会在整个文档上执行；它返回指定拥有指定 class 名称的 document 根节点的后代元素。</p>
 <h2 id="Syntax" name="Syntax">语法</h2>
 <pre class="syntaxbox"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
@@ -14,11 +14,11 @@ translation_of: Web/API/Element/getElementsByClassName
  <li><em>element</em> 是文档中的任一 {{domxref("Element")}}。</li>
 </ul>
 <h2 id="Examples" name="Examples">例子</h2>
-<p>获取所有包含class名称为 test 的元素：</p>
+<p>获取所有包含 class 名称为 test 的元素：</p>
 <pre class="brush: js">element.getElementsByClassName('test');</pre>
-<p>获取所有包含 <code>red</code> 和 <code>test</code> class名的元素：</p>
+<p>获取所有包含 <code>red</code> 和 <code>test</code> class 名的元素：</p>
 <pre class="brush: js">element.getElementsByClassName('red test');</pre>
-<p>获取 <code>id</code> 为 <code>main</code> 的元素的所有包含一个 <code>test</code> class名的后代元素：</p>
+<p>获取 <code>id</code> 为 <code>main</code> 的元素的所有包含一个 <code>test</code> class 名的后代元素：</p>
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 <p>可以在任何 {{domxref("HTMLCollection")}} 上面使用 {{jsxref("Array.prototype")}} 的方法，要把 <code>HTMLCollection</code> 作为该方法的上下文对象（this）。下例，查找类名为 <code>test</code> 的元素中的所有 {{HTMLElement("div")}} 元素：</p>
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
@@ -41,49 +41,4 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
  </tbody>
 </table>
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }} [1]</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }} [1]</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<p>[1] Prior to Firefox 19, this method was returning a {{domxref("NodeList")}}; it was then changed to reflects the change in the spec.</p>
+{{Compat("api.Element.getElementsByClassName")}}

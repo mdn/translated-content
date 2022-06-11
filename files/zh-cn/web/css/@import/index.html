@@ -10,9 +10,9 @@ translation_of: Web/CSS/@import
 
 <h2 id="概述">概述</h2>
 
-<p><strong><code>@import </code></strong><a href="/en-US/docs/Web/CSS">CSS</a><a href="/en-US/docs/Web/CSS/At-rule">@规则</a>，用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外; 因为它不是一个<a href="/zh-CN/docs/Web/CSS/Syntax#nested_statements">嵌套语句</a>，@import不能在<a href="/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules">条件组的规则</a>中使用。</p>
+<p><strong><code>@import </code></strong><a href="/en-US/docs/Web/CSS">CSS</a><a href="/en-US/docs/Web/CSS/At-rule">@规则</a>，用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外; 因为它不是一个<a href="/zh-CN/docs/Web/CSS/Syntax#nested_statements">嵌套语句</a>，@import 不能在<a href="/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules">条件组的规则</a>中使用。</p>
 
-<p>因此，用户代理可以避免为不支持的媒体类型检索资源，作者可以指定依赖媒体的@import规则。这些条件导入在URI之后指定逗号分隔的<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a>。在没有任何媒体查询的情况下，导入是无条件的。指定所有的媒体具有相同的效果。</p>
+<p>因此，用户代理可以避免为不支持的媒体类型检索资源，作者可以指定依赖媒体的 @import 规则。这些条件导入在 URI 之后指定逗号分隔的<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a>。在没有任何媒体查询的情况下，导入是无条件的。指定所有的媒体具有相同的效果。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,13 +20,13 @@ translation_of: Web/CSS/@import
 @import <em>url</em> <em>list-of-media-queries</em>;
 </pre>
 
-<p>其中:</p>
+<p>其中：</p>
 
 <dl>
- <dt style="margin: 0 40px;"><em>url</em></dt>
- <dd style="margin: 0 40px;">是一个表示要引入资源位置的 {{cssxref("&lt;string&gt;")}} 或者 {{cssxref("&lt;uri&gt;")}} 。 这个 URL 可以是绝对路径或者相对路径。 要注意的是这个 URL 不需要指明一个文件； 可以只指明包名，然后合适的文件会被自动选择 (e.g. <strong>chrome://communicator/skin/</strong>). <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL">See here</a> 了解更多。</dd>
- <dt style="margin: 0 40px;"><em>list-of-media-queries</em></dt>
- <dd style="margin: 0 40px;">是一个逗号分隔的 <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a> 条件列表，决定通过URL引入的 CSS 规则 在什么条件下应用。如果浏览器不支持列表中的任何一条媒体查询条件，就不会引入URL指明的CSS文件。</dd>
+ <dt><em>url</em></dt>
+ <dd>是一个表示要引入资源位置的 {{cssxref("&lt;string&gt;")}} 或者 {{cssxref("&lt;uri&gt;")}} 。 这个 URL 可以是绝对路径或者相对路径。 要注意的是这个 URL 不需要指明一个文件； 可以只指明包名，然后合适的文件会被自动选择 (e.g. <strong>chrome://communicator/skin/</strong>). <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL">See here</a> 了解更多。</dd>
+ <dt><em>list-of-media-queries</em></dt>
+ <dd>是一个逗号分隔的 <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a> 条件列表，决定通过 URL 引入的 CSS 规则 在什么条件下应用。如果浏览器不支持列表中的任何一条媒体查询条件，就不会引入 URL 指明的 CSS 文件。</dd>
 </dl>
 
 <h2 id="正规语法">正规语法</h2>
@@ -62,8 +62,8 @@ translation_of: Web/CSS/@import
   <tr>
    <td>{{SpecName('CSS2.1', 'cascade.html#at-import', '@import')}}</td>
    <td>{{Spec2('CSS2.1')}}</td>
-   <td>支持用{{cssxref("&lt;string&gt;")}}直接表示样式表的url，<br>
-    并要求<code>@import</code>规则必须在CSS文档的开头。</td>
+   <td>支持用{{cssxref("&lt;string&gt;")}}直接表示样式表的 url，<br>
+    并要求<code>@import</code>规则必须在 CSS 文档的开头。</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS1', '#the-cascade', '@import')}}</td>
@@ -75,50 +75,4 @@ translation_of: Web/CSS/@import
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5.5</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5.5</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.at-rules.import")}}

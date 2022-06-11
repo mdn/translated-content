@@ -17,29 +17,29 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">在本模块的最后一篇文章中, 我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。 现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。</p>
+<p>在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。 现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
+   <th scope="row">前提：</th>
    <td>基本的电脑知识，对 HTML、CSS 语法有基础的理解，能理解什么是 JavaScript。</td>
   </tr>
   <tr>
-   <th scope="row">目的:</th>
+   <th scope="row">目的：</th>
    <td>理解什么是数组，和如何在 JavaScript 中操作数组。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="数组是什么">数组是什么?</h2>
+<h2 id="数组是什么">数组是什么？</h2>
 
-<p>数组通常被描述为“像列表一样的对象”; 简单来说，数组是一个包含了多个值的对象。数组对象可以存储在变量中，并且能用和其他任何类型的值完全相同的方式处理，区别在于我们可以单独访问列表中的每个值，并使用列表执行一些有用和高效的操作，如循环 - 它对数组中的每个元素都执行相同的操作。 也许我们有一系列产品和价格存储在一个数组中，我们想循环遍历所有这些产品，并将它们打印在发票上，同时将所有产品的价格统计在一起，然后将总价格打印在底部。<br>
+<p>数组通常被描述为“像列表一样的对象”; 简单来说，数组是一个包含了多个值的对象。数组对象可以存储在变量中，并且能用和其他任何类型的值完全相同的方式处理，区别在于我们可以单独访问列表中的每个值，并使用列表执行一些有用和高效的操作，如循环 - 它对数组中的每个元素都执行相同的操作。也许我们有一系列产品和价格存储在一个数组中，我们想循环遍历所有这些产品，并将它们打印在发票上，同时将所有产品的价格统计在一起，然后将总价格打印在底部。<br>
   </p>
 
-<p>如果我们没有数组，我们必须将每个产品存储在一个单独的变量中，然后调用打印的代码，并为每个产品单独添加。 花费的时间要长得多，效率很低，而且也容易出错。 如果我们有 10 个产品需要添加发票，那就只是有点麻烦而已，但是 100 个，或者 1000 个呢？ 我们稍后将在文章中使用这个例子。</p>
+<p>如果我们没有数组，我们必须将每个产品存储在一个单独的变量中，然后调用打印的代码，并为每个产品单独添加。花费的时间要长得多，效率很低，而且也容易出错。如果我们有 10 个产品需要添加发票，那就只是有点麻烦而已，但是 100 个，或者 1000 个呢？我们稍后将在文章中使用这个例子。</p>
 
-<p>像以前的文章一样，我们通过在 JavaScript 控制台中输入一些示例来了解数组的基础知识。 我们在下面提供了一个（您也可以在单独的选项卡或窗口中打开此控制台，或者如果您愿意，请使用<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器的开发者工具控制台</a>）。</p>
+<p>像以前的文章一样，我们通过在 JavaScript 控制台中输入一些示例来了解数组的基础知识。我们在下面提供了一个（您也可以在单独的选项卡或窗口中打开此控制台，或者如果您愿意，请使用<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器的开发者工具控制台</a>）。</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -158,11 +158,11 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 <p>数组由方括号构成，其中包含用逗号分隔的元素列表。</p>
 
 <ol>
- <li>假设我们想在一个数组中存储一个购物清单 - 我们会做一些像下面这样的事情。 在您的控制台中输入以下行：
+ <li>假设我们想在一个数组中存储一个购物清单 - 我们会做一些像下面这样的事情。在您的控制台中输入以下行：
   <pre class="brush: js">let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
 shopping;</pre>
  </li>
- <li>在这种情况下，数组中的每个项目都是一个字符串，但请记住，您可以将任何类型的元素存储在数组中 - 字符串，数字，对象，另一个变量，甚至另一个数组。 您也可以混合和匹配项目类型 - 它们并不都是数字，字符串等。尝试下面这些：
+ <li>在这种情况下，数组中的每个项目都是一个字符串，但请记住，您可以将任何类型的元素存储在数组中 - 字符串，数字，对象，另一个变量，甚至另一个数组。您也可以混合和匹配项目类型 - 它们并不都是数字，字符串等。尝试下面这些：
   <pre class="brush: js">let sequence = [1, 1, 2, 3, 5, 8, 13];
 let random = ['tree', 795, [0, 1, 2]];</pre>
  </li>
@@ -178,7 +178,7 @@ let random = ['tree', 795, [0, 1, 2]];</pre>
   <pre class="brush: js">shopping[0];
 // returns "bread"</pre>
  </li>
- <li>您还可以简单地为单个数组元素提供新值来修改数组中的元素。 例如：
+ <li>您还可以简单地为单个数组元素提供新值来修改数组中的元素。例如：
   <pre class="brush: js">shopping[0] = 'tahini';
 shopping;
 // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
@@ -186,21 +186,21 @@ shopping;
   <div class="note"><strong>Note</strong>: 我们以前说过，但还是提醒一下 —— 电脑从 0 开始计数！</div>
  </li>
  <li>
-  <p>请注意，数组中包含数组的话称之为多维数组。 您可以通过将两组方括号链接在一起来访问数组内的另一个数组。 例如，要访问数组内部的一个项目，即 <code>random</code> 数组中的第三个项目（参见上一节），我们可以这样做：</p>
+  <p>请注意，数组中包含数组的话称之为多维数组。您可以通过将两组方括号链接在一起来访问数组内的另一个数组。例如，要访问数组内部的一个项目，即 <code>random</code> 数组中的第三个项目（参见上一节），我们可以这样做：</p>
 
   <pre class="brush: js">random[2][2];</pre>
  </li>
- <li>在继续之前，尝试对您的数组示例进行一些修改。 玩一玩，看看哪些有效，哪些无效。</li>
+ <li>在继续之前，尝试对您的数组示例进行一些修改。玩一玩，看看哪些有效，哪些无效。</li>
 </ol>
 
 <h3 id="获取数组长度">获取数组长度</h3>
 
-<p>你可以通过使用 {{jsxref("Array.prototype.length","length")}} 属性获取数组的长度（数组中有多少项元素），这与查找字符串的长度（以字符为单位）完全相同 。 尝试以下代码：</p>
+<p>你可以通过使用 {{jsxref("Array.prototype.length","length")}} 属性获取数组的长度（数组中有多少项元素），这与查找字符串的长度（以字符为单位）完全相同。尝试以下代码：</p>
 
 <pre class="brush: js">sequence.length;
 // should return 7</pre>
 
-<p>虽然 length 属性也有其他用途，但最常用于循环（循环遍历数组中的所有项）。 例如：</p>
+<p>虽然 length 属性也有其他用途，但最常用于循环（循环遍历数组中的所有项）。例如：</p>
 
 <pre class="brush: js">let sequence = [1, 1, 2, 3, 5, 8, 13];
 for (let i = 0; i &lt; sequence.length; i++) {
@@ -211,7 +211,7 @@ for (let i = 0; i &lt; sequence.length; i++) {
 
 <ol>
  <li>在数组中的元素编号 0 开始循环。</li>
- <li>在元素编号等于数组长度的时候停止循环。 这适用于任何长度的数组，但在这种情况下，它将在编号 7 的时候终止循环（这很好，因为我们希望最后一位元素的编号是 6）。</li>
+ <li>在元素编号等于数组长度的时候停止循环。这适用于任何长度的数组，但在这种情况下，它将在编号 7 的时候终止循环（这很好，因为我们希望最后一位元素的编号是 6）。</li>
  <li>对于每个元素，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log">console.log()</a> 将其打印到浏览器控制台。</li>
 </ol>
 
@@ -221,14 +221,14 @@ for (let i = 0; i &lt; sequence.length; i++) {
 
 <h3 id="字符串和数组之间的转换">字符串和数组之间的转换</h3>
 
-<p>通常，您会看到一个包含在一个长长的字符串中的原始数据，您可能希望将有用的项目分成更有用的表单，然后对它们进行处理，例如将它们显示在数据表中。 为此，我们可以使用 {{jsxref("String.prototype.split()","split()")}} 方法。 在其最简单的形式中，这需要一个参数，您要将字符串分隔的字符，并返回分隔符之间的子串，作为数组中的项。</p>
+<p>通常，您会看到一个包含在一个长长的字符串中的原始数据，您可能希望将有用的项目分成更有用的表单，然后对它们进行处理，例如将它们显示在数据表中。为此，我们可以使用 {{jsxref("String.prototype.split()","split()")}} 方法。在其最简单的形式中，这需要一个参数，您要将字符串分隔的字符，并返回分隔符之间的子串，作为数组中的项。</p>
 
 <div class="note">
 <p><strong>Note</strong>:  好吧，从技术上讲，这是一个字符串方法，而不是一个数组方法，但是我们把它放在数组中，因为它在这里很合适。</p>
 </div>
 
 <ol>
- <li>我们来玩一下这个方法，看看它是如何工作的。 首先，在控制台中创建一个字符串：
+ <li>我们来玩一下这个方法，看看它是如何工作的。首先，在控制台中创建一个字符串：
   <pre class="brush: js">let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';</pre>
  </li>
  <li>现在我们用每个逗号分隔它：
@@ -241,11 +241,11 @@ myArray[0]; // the first item in the array
 myArray[1]; // the second item in the array
 myArray[myArray.length-1]; // the last item in the array</pre>
  </li>
- <li>您也可以使用 {{jsxref("Array.prototype.join()","join()")}} 方法进行相反的操作。 尝试以下：
+ <li>您也可以使用 {{jsxref("Array.prototype.join()","join()")}} 方法进行相反的操作。尝试以下：
   <pre class="brush: js">let myNewString = myArray.join(',');
 myNewString;</pre>
  </li>
- <li>将数组转换为字符串的另一种方法是使用 {{jsxref("Array.prototype.toString()","toString()")}} 方法。 <code>toString()</code> 可以比 <code>join()</code> 更简单，因为它不需要一个参数，但更有限制。 使用 <code>join()</code> 可以指定不同的分隔符（尝试使用与逗号不同的字符运行步骤4）。
+ <li>将数组转换为字符串的另一种方法是使用 {{jsxref("Array.prototype.toString()","toString()")}} 方法。 <code>toString()</code> 可以比 <code>join()</code> 更简单，因为它不需要一个参数，但更有限制。使用 <code>join()</code> 可以指定不同的分隔符（尝试使用与逗号不同的字符运行步骤 4）。
   <pre class="brush: js">let dogNames = ["Rocket","Flash","Bella","Slugger"];
 dogNames.toString(); //Rocket,Flash,Bella,Slugger</pre>
  </li>
@@ -253,14 +253,14 @@ dogNames.toString(); //Rocket,Flash,Bella,Slugger</pre>
 
 <h3 id="添加和删除数组项">添加和删除数组项</h3>
 
-<p>我们还没有涵盖添加和删除数组元素，现在让我们来看看。 我们将使用在上一节中最后提到的  <code>myArray</code> 数组。 如果您尚未遵循该部分，请先在控制台中创建数组：</p>
+<p>我们还没有涵盖添加和删除数组元素，现在让我们来看看。我们将使用在上一节中最后提到的  <code>myArray</code> 数组。如果您尚未遵循该部分，请先在控制台中创建数组：</p>
 
 <pre class="brush: js">let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];</pre>
 
 <p>首先，要在数组末尾添加或删除一个项目，我们可以使用  {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}}。</p>
 
 <ol>
- <li>让我们先使用 <code>push()</code> —— 注意，你需要添加一个或多个要添加到数组末尾的元素。 尝试下面的代码：
+ <li>让我们先使用 <code>push()</code> —— 注意，你需要添加一个或多个要添加到数组末尾的元素。尝试下面的代码：
 
   <pre class="brush: js">myArray.push('Cardiff');
 myArray;
@@ -268,15 +268,15 @@ myArray.push('Bradford', 'Brighton');
 myArray;
 </pre>
  </li>
- <li>当方法调用完成时，将返回数组的新长度。 如果要将新数组长度存储在变量中。例如：
+ <li>当方法调用完成时，将返回数组的新长度。如果要将新数组长度存储在变量中。例如：
   <pre class="brush: js">var newLength = myArray.push('Bristol');
 myArray;
 newLength;</pre>
  </li>
- <li>从数组中删除最后一个元素的话直接使用 <code>pop()</code> 就可以。 例如：
+ <li>从数组中删除最后一个元素的话直接使用 <code>pop()</code> 就可以。例如：
   <pre class="brush: js">myArray.pop();</pre>
  </li>
- <li>当方法调用完成时，将返回已删除的项目。 你也可以这样做：
+ <li>当方法调用完成时，将返回已删除的项目。你也可以这样做：
   <pre class="brush: js">let removedItem = myArray.pop();
 myArray;
 removedItem;</pre>
@@ -286,7 +286,7 @@ removedItem;</pre>
 <p>{{jsxref("Array.prototype.unshift()","unshift()")}} 和 {{jsxref("Array.prototype.shift()","shift()")}} 从功能上与 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 完全相同，只是它们分别作用于数组的开始，而不是结尾。</p>
 
 <ol>
- <li><font face="Open Sans, arial, sans-serif">首先 </font><code>unshift()</code> ——尝试一下这个命令：
+ <li>首先 <code>unshift()</code> ——尝试一下这个命令：
 
   <pre class="brush: js">myArray.unshift('Edinburgh');
 myArray;</pre>
@@ -300,15 +300,15 @@ removedItem;</pre>
 
 <h2 id="积极学习：打印这些产品">积极学习：打印这些产品</h2>
 
-<p>我们回到前面描述的例子 —— 打印出发票上的产品名称和价格，然后计算总价格并将其印在底部。 在下面的可编辑示例中，包含数字的注释 —— 每个注释标记都是您必须向代码添加内容的地方。 它们如下：</p>
+<p>我们回到前面描述的例子 —— 打印出发票上的产品名称和价格，然后计算总价格并将其印在底部。在下面的可编辑示例中，包含数字的注释 —— 每个注释标记都是您必须向代码添加内容的地方。它们如下：</p>
 
 <ol>
- <li>在 <code>// number 1</code> 注释下面是一些字符串，每个字符串包含一个产品名称和一个冒号分隔的价格。 我们希望您将其转换为一个数组，并将其存储在名为 <code>products</code> 的数组中。</li>
- <li>与 <code>// number 2</code> 注释同一行的是 for 循环的开头。 在这行中，我们目前有 <code>i &lt;= 0</code>，这是一个条件测试，导致 <a href="/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash#循环（Loop）">for循环</a> 立即停止，因为它说“当 <code>i</code> 不再小于或等于0”时停止，而 <code>i</code> 从0开始。 我们希望您使用条件测试来替换它，当 <code>i</code> 不再小于 <code>products</code> 数组的长度时，该条件测试会停止循环。</li>
- <li>就在 <code>// number 3</code> 注释的下方，我们希望您编写一行代码，将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，一个只包含该价格。 如果您不确定如何执行此操作，请参阅<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">有用的字符串方法</a>文章以获得一些帮助，甚至更好的看看本文中的{{anch("转换字符串和数组")}}部分。</li>
- <li>作为上述代码行的一部分，您还需要将价格从字符串转换为数字。 如果你不记得如何做，请查看<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Strings#创建一个字符串">第一个字符串</a>文章。</li>
- <li>有一个名为 <code>total</code> 的变量被创建，并在代码的顶部赋值为 0。 在循环内（在 <code>// number 4</code> 注释下面），我们希望您添加一行，将当前项目价格添加到循环中的迭代变量，以便在代码结尾处将正确的总数打印到发票上。 您可能需要一个赋值运算符来执行此操作。</li>
- <li>我们希望您改变 <code>// number 5</code> 注释的行，以便使  <code>itemText</code> 变量等于“当前项目名称 - $ 当前项目价格”，例如“Shoes - $ 23.99”，以此将每个项目的正确信息都印在发票上。 这只是简单的字符串连接，您应该对此很熟悉。</li>
+ <li>在 <code>// number 1</code> 注释下面是一些字符串，每个字符串包含一个产品名称和一个冒号分隔的价格。我们希望您将其转换为一个数组，并将其存储在名为 <code>products</code> 的数组中。</li>
+ <li>与 <code>// number 2</code> 注释同一行的是 for 循环的开头。在这行中，我们目前有 <code>i &lt;= 0</code>，这是一个条件测试，导致 <a href="/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash#循环（Loop）">for 循环</a> 立即停止，因为它说“当 <code>i</code> 不再小于或等于 0”时停止，而 <code>i</code> 从 0 开始。我们希望您使用条件测试来替换它，当 <code>i</code> 不再小于 <code>products</code> 数组的长度时，该条件测试会停止循环。</li>
+ <li>就在 <code>// number 3</code> 注释的下方，我们希望您编写一行代码，将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，一个只包含该价格。如果您不确定如何执行此操作，请参阅<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">有用的字符串方法</a>文章以获得一些帮助，甚至更好的看看本文中的<a href="#字符串和数组之间的转换">字符串和数组之间的转换</a>部分。</li>
+ <li>作为上述代码行的一部分，您还需要将价格从字符串转换为数字。如果你不记得如何做，请查看<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Strings#创建一个字符串">第一个字符串</a>文章。</li>
+ <li>有一个名为 <code>total</code> 的变量被创建，并在代码的顶部赋值为 0。在循环内（在 <code>// number 4</code> 注释下面），我们希望您添加一行，将当前项目价格添加到循环中的迭代变量，以便在代码结尾处将正确的总数打印到发票上。您可能需要一个赋值运算符来执行此操作。</li>
+ <li>我们希望您改变 <code>// number 5</code> 注释的行，以便使  <code>itemText</code> 变量等于“当前项目名称 - $ 当前项目价格”，例如“Shoes - $ 23.99”，以此将每个项目的正确信息都印在发票上。这只是简单的字符串连接，您应该对此很熟悉。</li>
 </ol>
 
 <div class="hidden">
@@ -387,20 +387,20 @@ window.addEventListener('load', updateCode);
 
 <p>{{ EmbedLiveSample('Playable_code', '100%', 600) }}</p>
 
-<h2 id="积极学习：前5个搜索">积极学习：前5个搜索</h2>
+<h2 id="积极学习：前5个搜索">积极学习：前 5 个搜索</h2>
 
-<p>当您在 Web 程序中维护当前活动元素的记录时，{{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 是不错的方法。 例如，在动画场景中，您可能会有一系列表示当前显示的背景图像的对象，并且由于性能或混乱原因，您可能只需要一次显示 50 个。 当创建新对象并将其添加到数组中时，可以从数组中删除较旧的对象以保持所需的数量。</p>
+<p>当您在 Web 程序中维护当前活动元素的记录时，{{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 是不错的方法。例如，在动画场景中，您可能会有一系列表示当前显示的背景图像的对象，并且由于性能或混乱原因，您可能只需要一次显示 50 个。当创建新对象并将其添加到数组中时，可以从数组中删除较旧的对象以保持所需的数量。</p>
 
-<p>在这个例子中，我们将展示一种更简单的使用方法 - 在这里我们给你一个假的搜索网站，一个搜索框。 这个想法是，当在搜索框中输入时，列表中会显示5个先前的搜索字词。 当列表项目数量超过 5 时，每当新项目被添加到顶部时，最后一个项目开始被删除，因此总是显示5个以前的搜索字词。</p>
+<p>在这个例子中，我们将展示一种更简单的使用方法 - 在这里我们给你一个假的搜索网站，一个搜索框。这个想法是，当在搜索框中输入时，列表中会显示 5 个先前的搜索字词。当列表项目数量超过 5 时，每当新项目被添加到顶部时，最后一个项目开始被删除，因此总是显示 5 个以前的搜索字词。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 在真正的搜索应用中，您可能可以点击先前的搜索字词返回上一次搜索，并显示实际的搜索结果！ 我们现在只是保持简单的逻辑。</p>
+<p><strong>Note</strong>: 在真正的搜索应用中，您可能可以点击先前的搜索字词返回上一次搜索，并显示实际的搜索结果！我们现在只是保持简单的逻辑。</p>
 </div>
 
 <p>要完成该应用程序，我们需要您：</p>
 
 <ol>
- <li>在 <code>//number 1</code> 注释下面添加一行，将输入到搜索框中的当前值添加到数组的开头。 这可以使用 <code>searchInput.value</code> 检索。</li>
+ <li>在 <code>//number 1</code> 注释下面添加一行，将输入到搜索框中的当前值添加到数组的开头。这可以使用 <code>searchInput.value</code> 检索。</li>
  <li>在 <code>// number 2</code> 注释下方添加一行，该行删除数组末尾的当前值。</li>
 </ol>
 
@@ -492,7 +492,7 @@ window.addEventListener('load', updateCode);
 
 <h2 id="总结">总结</h2>
 
-<p>阅读本文后，我们相信您会明白数组是很有用的; 你会看到它们在 JavaScript 中随处可见，通常与循环相关，以便对数组中的每个元素做同样的事情。 我们将教你所有有用的基础知识，了解下一个模块中的循环，但现在你应该给自己鼓掌，并稍加休息; 您已经完成了本单元中的所有文章！</p>
+<p>阅读本文后，我们相信您会明白数组是很有用的; 你会看到它们在 JavaScript 中随处可见，通常与循环相关，以便对数组中的每个元素做同样的事情。我们将教你所有有用的基础知识，了解下一个模块中的循环，但现在你应该给自己鼓掌，并稍加休息; 您已经完成了本单元中的所有文章！</p>
 
 <p>唯一需要做的就是通过这个模块的评估，这将测试你对之前的文章的理解。</p>
 

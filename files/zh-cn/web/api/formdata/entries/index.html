@@ -5,10 +5,10 @@ translation_of: Web/API/FormData/entries
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>The <code><strong>FormData.entries()</strong></code> 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象 ，此对象可以遍历访问FormData中的键值对。其中键值对的key是一个 {{domxref("USVString")}} 对象；value是一个 {{domxref("USVString")}} , 或者 {{domxref("Blob")}}对象。</p>
+<p>The <code><strong>FormData.entries()</strong></code> 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 FormData 中的键值对。其中键值对的 key 是一个 {{domxref("USVString")}} 对象；value 是一个 {{domxref("USVString")}} , 或者 {{domxref("Blob")}}对象。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 此方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 可用.</p>
+<p><strong>Note</strong>: 此方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -32,7 +32,7 @@ for(var pair of formData.entries()) {
 }
 </pre>
 
-<p>执行结果为:</p>
+<p>执行结果为：</p>
 
 <pre>key1, value1
 key2, value2</pre>
@@ -56,80 +56,7 @@ key2, value2</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(50.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
+{{Compat("api.FormData.entries")}}
 
 <h2 id="相关链接">相关链接</h2>
 

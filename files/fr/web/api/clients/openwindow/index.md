@@ -5,7 +5,7 @@ translation_of: Web/API/Clients/openWindow
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-La méthode **`openWindow()`** de l'interface {{domxref("Clients")}} crée un nouveau niveau de contexte de navigation et charge une URL donnée. Si le script d'origine n'a pas la permission d'ouvrir une popup,   **`openWindow()`** lèvera une InvalidAccessError.
+La méthode **`openWindow()`** de l'interface {{domxref("Clients")}} crée un nouveau niveau de contexte de navigation et charge une URL donnée. Si le script d'origine n'a pas la permission d'ouvrir une popup, **`openWindow()`** lèvera une InvalidAccessError.
 
 Dans Firefox, une méthode est authorisée d'ouvrir une popup seulement lorsqu'elle est appelée à la suite d'un click sur une notification.
 
@@ -20,11 +20,11 @@ ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
 ### Paramètres
 
 - `url`
-  - : Une {{domxref("USVString")}} représentant l'URL que le client veut ouvrir dans une nouvelle fenêtre. Généralement, cette valeur doit être une URL de la même  origine que le script d'origine.
+  - : Une {{domxref("USVString")}} représentant l'URL que le client veut ouvrir dans une nouvelle fenêtre. Généralement, cette valeur doit être une URL de la même origine que le script d'origine.
 
 ### Valeur de retour
 
-Une {{jsxref("Promise")}} qui résoud un objet {{domxref("WindowClient")}} si l'URL est de la même origine que le service worker, et {{Glossary("null", "null value")}} sinon.
+Une {{jsxref("Promise")}} qui résoud un objet {{domxref("WindowClient")}} si l'URL est de la même origine que le service worker, et {{Glossary("null", "null value")}} sinon.
 
 ## Exemples
 
@@ -36,7 +36,7 @@ onotificationclick = function(event) {
   clients.matchAll().then(function(clients) {
     for (i = 0; i < clients.length; i++) {
       if (clients[i].url === event.data.url) {
-        // La fenêtre existe, focus dessus.
+        // La fenêtre existe, focus dessus.
         found = true;
         clients[i].focus();
         break;

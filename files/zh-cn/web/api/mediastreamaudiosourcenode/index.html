@@ -9,10 +9,10 @@ translation_of: Web/API/MediaStreamAudioSourceNode
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p><code>MediaStreamAudioSourceNode</code> 接口代表一个音频接口，是<a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (比如一个摄像头或者麦克风)的一部分。是个表现为音频源的{{domxref("AudioNode")}}。</p>
+<p><code>MediaStreamAudioSourceNode</code> 接口代表一个音频接口，是<a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (比如一个摄像头或者麦克风) 的一部分。是个表现为音频源的{{domxref("AudioNode")}}。</p>
 </div>
 
-<p><code>MediaElementSourceNode没有输入，并且只有一个输出。创建之后使用</code> {{domxref("AudioContext.createMediaStreamSource")}}方法。输出通道的数量和{{domxref("AudioMediaStreamTrack")}}的通道数量相同。如果没有有效的媒体流，输出通道就变成一个静音的通道。</p>
+<p><code>MediaElementSourceNode 没有输入，并且只有一个输出。创建之后使用</code> {{domxref("AudioContext.createMediaStreamSource")}}方法。输出通道的数量和{{domxref("AudioMediaStreamTrack")}}的通道数量相同。如果没有有效的媒体流，输出通道就变成一个静音的通道。</p>
 
 <table class="properties">
  <tbody>
@@ -69,79 +69,7 @@ translation_of: Web/API/MediaStreamAudioSourceNode
 
 <h2 id="兼容性">兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Constructor</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Constructor</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaStreamAudioSourceNode")}}
 
 <h2 id="See_also">See also</h2>
 

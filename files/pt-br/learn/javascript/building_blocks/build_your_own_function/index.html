@@ -83,7 +83,7 @@ closeBtn.onclick = function() {
 
 <p>Em seguida, usamos outra função da API do DOM chamada {{domxref("Element.setAttribute()")}} para setar o atributo <code>class</code> atributo no nosso painel com um valor de <code>msgBox</code>. Isso é para facilitar o estilo do elemento — se você olhar para o CSS na página, verá que estamos usando um seletor de classe <code>.msgBox</code> para estilizar a caixa de mensagem e seu conteúdo.</p>
 
-<p>Finalmente, chamamos uma função DOM chamada {{domxref("Node.appendChild()")}} na variável <code>html</code> vque armazenamos anteriormente, que nidifica um elemento dentro do outro como um filho dele. Nós especificamos o painel <code>&lt;div&gt;</code> como o filho que queremos acrescentar dentro do elemento <code>&lt;html&gt;</code> Precisamos fazer isso porque o elemento que criamos não aparecerá na página sozinho — precisamos especificar onde colocá-lo.</p>
+<p>Finalmente, chamamos uma função DOM chamada {{domxref("Node.appendChild()")}} na variável <code>html</code> que armazenamos anteriormente, que nidifica um elemento dentro do outro como um filho dele. Nós especificamos o painel <code>&lt;div&gt;</code> como o filho que queremos acrescentar dentro do elemento <code>&lt;html&gt;</code> Precisamos fazer isso porque o elemento que criamos não aparecerá na página sozinho — precisamos especificar onde colocá-lo.</p>
 
 <pre class="brush: js notranslate">var panel = document.createElement('div');
 panel.setAttribute('class', 'msgBox');

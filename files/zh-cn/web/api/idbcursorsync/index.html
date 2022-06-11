@@ -5,17 +5,17 @@ tags:
   - API
   - NeedsMarkupWork 需求标记
   - 参考
-  - 参考2
+  - 参考 2
   - 实验性
-  - 实验性2
+  - 实验性 2
   - 接口
   - 过时的
 translation_of: Web/API/IDBCursorSync
 ---
-<p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
+<p>{{APIRef("IndexedDB")}} </p>
 
 <div class="warning">
-<p><strong>注意</strong>: 同步IndexedDB API版本 本来计划仅用于<a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, 事实上由于本身存在一些问题已经被移除. 当然，如果Web开发人员有足够的需求，   <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> 的 <code>IDBCursorSync</code>表示用于遍历数据库中多个记录的游标。 你只能设置 一个<code>IDBCursorSync</code> 代表一种游标实例, 但同时可以有无限数量的游标。.此操作在基础索引或对象存储上执行。它使应用程序能够同步处理光标范围内的所有记录。</p>
+<p><strong>注意</strong>: 同步 IndexedDB API 版本 本来计划仅用于<a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, 事实上由于本身存在一些问题已经被移除。当然，如果 Web 开发人员有足够的需求，   <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> 的 <code>IDBCursorSync</code>表示用于遍历数据库中多个记录的游标。 你只能设置 一个<code>IDBCursorSync</code> 代表一种游标实例，但同时可以有无限数量的游标。.此操作在基础索引或对象存储上执行。它使应用程序能够同步处理光标范围内的所有记录。</p>
 </div>
 
 <h2 id="方法概述">方法概述</h2>
@@ -45,31 +45,31 @@ translation_of: Web/API/IDBCursorSync
   <tr>
    <td><a name="attr_count"><code>count</code></a></td>
    <td><code>readonly unsigned long long</code></td>
-   <td>共享当前key的对象总数</td>
+   <td>共享当前 key 的对象总数</td>
   </tr>
   <tr>
    <td><a name="attr_direction"><code>direction</code></a></td>
    <td><code>readonly unsigned short</code></td>
-   <td>游标方向. 查看 《常量》 以获取可能得value.</td>
+   <td>游标方向。查看《常量》以获取可能得 value.</td>
   </tr>
   <tr>
    <td><a name="attr_key"><code>key</code></a></td>
    <td><code>readonly any</code></td>
-   <td>游标位置记录的key.</td>
+   <td>游标位置记录的 key.</td>
   </tr>
   <tr>
    <td><a name="attr_value"><code>value</code></a></td>
    <td><code>any</code></td>
    <td>
-    <p>游标位置记录的value. 使用下面的代码设置这个属性可以增加IDBDatabaseException :</p>
+    <p>游标位置记录的 value. 使用下面的代码设置这个属性可以增加 IDBDatabaseException :</p>
 
     <dl>
      <dt><code><a href="/en/IndexedDB/IDBDatabaseException#DATA_ERR" title="en/IndexedDB/DatabaseException#DATA ERR">DATA_ERR</a></code></dt>
-     <dd>如果潜在的对象存储使用 <a href="/en/IndexedDB#gloss_in-line_key" title="en/IndexedDB#gloss in-line key">in-line keys</a> 并且 在 <a href="/en/IndexedDB#gloss_key_path" title="en/IndexedDB#gloss key path">key path</a> 中的属性不能匹配这个游标的位置key</dd>
+     <dd>如果潜在的对象存储使用 <a href="/en/IndexedDB#gloss_in-line_key" title="en/IndexedDB#gloss in-line key">in-line keys</a> 并且 在 <a href="/en/IndexedDB#gloss_key_path" title="en/IndexedDB#gloss key path">key path</a> 中的属性不能匹配这个游标的位置 key</dd>
      <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR" title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR">NOT_ALLOWED_ERR</a></code></dt>
-     <dd>如果在<code><a href="/en/IndexedDB/IDBObjectStoreSync#const_read_only" title="en/IndexedDB/IDBObjectStoreSync#const read only">READ_ONLY</a></code> 或者 <code><a href="/en/IndexedDB/IDBCursorSync#const_snapshot_read" title="en/IndexedDB/IDBCursorSync#const snapshot read">SNAPSHOT_READ</a></code>模式下，潜在的下标或者对象存储不支持更新这个记录 , 或者由于潜在的index设置为<a href="/en/IndexedDB#gloss_auto-populated" title="en/IndexedDB#gloss auto-populated">auto-populated</a>.某个index记录不能被更新</dd>
+     <dd>如果在<code><a href="/en/IndexedDB/IDBObjectStoreSync#const_read_only" title="en/IndexedDB/IDBObjectStoreSync#const read only">READ_ONLY</a></code> 或者 <code><a href="/en/IndexedDB/IDBCursorSync#const_snapshot_read" title="en/IndexedDB/IDBCursorSync#const snapshot read">SNAPSHOT_READ</a></code>模式下，潜在的下标或者对象存储不支持更新这个记录 , 或者由于潜在的 index 设置为<a href="/en/IndexedDB#gloss_auto-populated" title="en/IndexedDB#gloss auto-populated">auto-populated</a>.某个 index 记录不能被更新</dd>
      <dt><code><a href="/en/IndexedDB/IDBDatabaseException#SERIAL_ERR" title="en/IndexedDB/DatabaseException#SERIAL ERR">SERIAL_ERR</a></code></dt>
-     <dd>如果存储的数据不能被内部结构化克隆算法序列化.</dd>
+     <dd>如果存储的数据不能被内部结构化克隆算法序列化。</dd>
     </dl>
    </td>
   </tr>
@@ -90,22 +90,22 @@ translation_of: Web/API/IDBCursorSync
   <tr>
    <td><a name="const_next"><code>NEXT</code></a></td>
    <td>0</td>
-   <td>游标包含重复，并且其方向单调地key的顺序递增。</td>
+   <td>游标包含重复，并且其方向单调地 key 的顺序递增。</td>
   </tr>
   <tr>
    <td><a name="const_next_no_duplicate"><code>NEXT_NO_DUPLICATE</code></a></td>
    <td>1</td>
-   <td>游标包含不重复, 并且其方向单调地key的顺序递增.</td>
+   <td>游标包含不重复，并且其方向单调地 key 的顺序递增。</td>
   </tr>
   <tr>
    <td><a name="const_prev"><code>PREV</code></a></td>
    <td>2</td>
-   <td>游标包含重复，并且其方向单调地key的顺序递减。</td>
+   <td>游标包含重复，并且其方向单调地 key 的顺序递减。</td>
   </tr>
   <tr>
    <td><a name="const_prev_no_duplicate"><code>PREV_NO_DUPLICATE</code></a></td>
    <td>3</td>
-   <td>游标包含不重复, 并且其方向单调地key的顺序递减.</td>
+   <td>游标包含不重复，并且其方向单调地 key 的顺序递减。</td>
   </tr>
  </tbody>
 </table>
@@ -114,7 +114,7 @@ translation_of: Web/API/IDBCursorSync
 
 <h3 id="continue" name="continue">continue()</h3>
 
-<p>将游标沿其方向前进到其键与可选键参数匹配的项。如果没有指定键，则前进到下一个位置。如果游标已到达其范围的末尾，则返回false，否则返回true。</p>
+<p>将游标沿其方向前进到其键与可选键参数匹配的项。如果没有指定键，则前进到下一个位置。如果游标已到达其范围的末尾，则返回 false，否则返回 true。</p>
 
 <pre>bool continue (
   in optional any key
@@ -125,7 +125,7 @@ translation_of: Web/API/IDBCursorSync
 
 <dl>
  <dt>key</dt>
- <dd>移动光标位置的key。</dd>
+ <dd>移动光标位置的 key。</dd>
 </dl>
 
 <h3 id="remove" name="remove">remove()</h3>

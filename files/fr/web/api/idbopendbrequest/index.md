@@ -13,7 +13,7 @@ translation_of: Web/API/IDBOpenDBRequest
 ---
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux résultats des requêtes permettant d'ouvrir ou  de supprimer des bases de donnée (Effectuée via {{domxref("IDBFactory.open")}} et {{domxref("IDBFactory.deleteDatabase")}}).
+L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux résultats des requêtes permettant d'ouvrir ou de supprimer des bases de donnée (Effectuée via {{domxref("IDBFactory.open")}} et {{domxref("IDBFactory.deleteDatabase")}}).
 
 {{AvailableInWorkers}}
 
@@ -21,7 +21,7 @@ L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux rés
 
 ## Propriétés
 
-_Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}_.
+_Hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}_.
 
 ### Évènements
 
@@ -32,11 +32,11 @@ _Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref(
 
 ## Méthodes
 
-_Pas de méthodes, mais hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}._
+_Pas de méthodes, mais hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}._
 
 ## Exemple
 
-Dans l'exemple ci-dessous,  le gestionnaire `onupgradeneeded` est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir cet exemple réel](http://mdn.github.io/to-do-notifications/))
+Dans l'exemple ci-dessous,  le gestionnaire `onupgradeneeded` est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir cet exemple réel](http://mdn.github.io/to-do-notifications/))
 
 ```js
 var db;
@@ -77,12 +77,12 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   // définit quels éléments de données l'objet de stockage contiendra.
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+  objectStore.createIndex("notified", "notified", { unique: false });
 };
 ```
 
@@ -91,7 +91,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 | Spécification                                                                                        | Statut                           | Commentaire         |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
 | {{SpecName('IndexedDB', '#idl-def-IDBOpenDBRequest', 'IDBOpenDBRequest')}} | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
+| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
 
 ## Compatibilité des navigateurs
 

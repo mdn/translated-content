@@ -15,12 +15,12 @@ translation_of: Web/HTTP/Headers/Accept-Encoding
 
 <ul>
  <li>要发送的数据已经经过压缩，再次进行压缩不会导致被传输的数据量更小。一些图像格式的文件会存在这种情况；</li>
- <li><span>服务器超载，无法承受压缩需求导致的计算开销。通常，如果服务器使用超过80%的计算能力，微软建议不要压缩。</span></li>
+ <li>服务器超载，无法承受压缩需求导致的计算开销。通常，如果服务器使用超过 80% 的计算能力，微软建议不要压缩。</li>
 </ul>
 
 <p>只要 identity —— 表示不需要进行任何编码——没有被明确禁止使用（通过 identity;q=0 指令或是 *;q=0 而没有为 identity 明确指定权重值），则服务器禁止返回表示客户端错误的 {{HTTPStatus("406")}} Not Acceptable 响应。</p>
 
-<div class="note"><strong>注意:</strong>
+<div class="note"><strong>注意：</strong>
 
 <ul>
  <li>
@@ -59,7 +59,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5</pre>
 
 <dl>
  <dt><code>gzip</code></dt>
- <dd>表示采用 <a class="external external-icon" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77) 压缩算法，以及32位CRC校验的编码方式。</dd>
+ <dd>表示采用 <a class="external external-icon" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77) 压缩算法，以及 32 位 CRC 校验的编码方式。</dd>
  <dt><code>compress</code></dt>
  <dd>采用 <a class="external external-icon" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) 压缩算法。</dd>
  <dt><code>deflate</code></dt>

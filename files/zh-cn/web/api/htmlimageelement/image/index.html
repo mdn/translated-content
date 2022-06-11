@@ -24,19 +24,19 @@ translation_of: Web/API/HTMLImageElement/Image
  <dd>图片的高度 (即 {{htmlattrxref("height", "img")}} 属性).</dd>
 </dl>
 
-<h2 id="示例"><span style="line-height: 1.572;">示例</span></h2>
+<h2 id="示例">示例</h2>
 
 <pre class="brush: js">var myImage = new Image(100, 200);
 myImage.src = 'picture.jpg';
 document.body.appendChild(myImage);</pre>
 
-<div>上面的代码相当于在 {{htmlelement("body")}}中定义了下面的HTML:</div>
+<div>上面的代码相当于在 {{htmlelement("body")}}中定义了下面的 HTML:</div>
 
 <pre class="brush: html">&lt;img width="100" height="200" src="picture.jpg"&gt;
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: 无论构造函数中指定的大小是多少，都会加载整个位图. 如果在构造时指定了尺寸信息，那么将会反应在实例的 {{domxref("HTMLImageElement.width")}} 和 {{domxref("HTMLImageElement.height")}} 属性上。图像自身的CSS像素值将会反应在{{domxref("HTMLImageElement.naturalWidth")}} 和 {{domxref("HTMLImageElement.naturalHeight")}}属性。如果没有指定值，那么两个属性的值相同</p>
+<p><strong>Note</strong>: 无论构造函数中指定的大小是多少，都会加载整个位图。如果在构造时指定了尺寸信息，那么将会反应在实例的 {{domxref("HTMLImageElement.width")}} 和 {{domxref("HTMLImageElement.height")}} 属性上。图像自身的 CSS 像素值将会反应在{{domxref("HTMLImageElement.naturalWidth")}} 和 {{domxref("HTMLImageElement.naturalHeight")}}属性。如果没有指定值，那么两个属性的值相同</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -58,54 +58,4 @@ document.body.appendChild(myImage);</pre>
 
 <h2 id="兼容性">兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>支持情况</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>支持情况</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.HTMLImageElement.Image")}}

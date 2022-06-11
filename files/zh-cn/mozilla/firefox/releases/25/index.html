@@ -3,40 +3,40 @@ title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 translation_of: Mozilla/Firefox/Releases/25
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ draft() }}</p>
-<h2 id="Web开发者需要注意的变化">Web开发者需要注意的变化</h2>
+<div>{{FirefoxSidebar}}</div>
+<h2 id="Web开发者需要注意的变化">Web 开发者需要注意的变化</h2>
 <h3 id="CSS">CSS</h3>
 <ul>
   <li>新增了 {{cssxref("background-attachment")}} 属性值 <code>local</code> ({{bug("483446")}}).</li>
-  <li>新增了一个 Mozilla 私有的媒体查询属性: <code><a href="/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-os-version" title="/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-os-version">-moz-os-version</a></code>, 目前该属性只支持 Windows ({{bug("810399")}}).</li>
+  <li>新增了一个 Mozilla 私有的媒体查询属性：<code><a href="/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-os-version" title="/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-os-version">-moz-os-version</a></code>, 目前该属性只支持 Windows ({{bug("810399")}}).</li>
   <li>实现了新的 {{cssxref("-moz-osx-font-smoothing")}} CSS 属性 ({{bug("857142")}})</li>
 </ul>
 <h3 id="HTML">HTML</h3>
 <ul>
-  <li>实现了 {{HTMLElement("iframe")}} 元素的 {{htmlattrxref("srcdoc", "iframe")}} 属性, 可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).</li>
-  <li style="padding: 0px;"><code style="font-style: inherit;">HTMLCanvasElement.toBlob</code> 方法, 当第二个参数指定为 <code style="font-style: inherit; font-size: 14px;">"image/jpeg"</code> 时, 会接受第三个参数, 用来指定 jpeg 图片质量. ({{bug("891884")}}).</li>
+  <li>实现了 {{HTMLElement("iframe")}} 元素的 {{htmlattrxref("srcdoc", "iframe")}} 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).</li>
+  <li style="padding: 0px;"><code style="font-style: inherit;">HTMLCanvasElement.toBlob</code> 方法，当第二个参数指定为 <code style="font-style: inherit; font-size: 14px;">"image/jpeg"</code> 时， 会接受第三个参数，用来指定 jpeg 图片质量。({{bug("891884")}}).</li>
 </ul>
 <h3 id="JavaScript">JavaScript</h3>
-<p>下面都是 <a href="/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla" title="/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 6</a> (Harmony) 中的新特性!</p>
+<p>下面都是 <a href="/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla" title="/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 6</a> (Harmony) 中的新特性！</p>
 <ul>
   <li>实现了 <code>Array.of()</code> 方法 ({{bug("866849")}}).</li>
-  <li>实现了 <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>Number.parseInt()</code> 和 <code>Number.parseFloat()</code> 方法 ({{bug("886949")}})</span></span>.</li>
-  <li style="padding: 0px;">实现了 <span id="summary_alias_container"><code style="font-style: inherit;">Map.prototype.forEach()</code> 和 <code style="font-style: inherit;">Set.prototype.forEach()</code> 方法 ({{bug("866847")}})</span></li>
-  <li>实现了更多的数学函数: <code>Math.log10()</code>, <code>Math.log2()</code>, <code>Math.log1p()</code>, <code>Math.expm1()</code>, <code>Math.cosh()</code>, <code>Math.sinh()</code>, <code>Math.tanh()</code>, <code>Math.acosh()</code>, <code>Math.asinh()</code>, <code>Math.atanh()</code>, <code>Math.hypot()</code>, <code>Math.trunc()</code>, <code>Math.sign()</code> 以及 <code>Math.cbrt()</code> ({{bug("894026")}}).</li>
-  <li>实现了八进制整数字面量写法(比如<code>0o777</code>)和二进制整数字面量写法(比如<code>0b111</code>) ({{bug("717379")}}).</li>
-  <li>实现了 ECMAScript 国际化 API  <span style="color: rgb(68, 68, 68); font-family: arial, sans-serif; font-size: small; line-height: 17.77777862548828px;">—</span><span style="color: rgb(68, 68, 68); font-family: arial, sans-serif; font-size: small; line-height: 17.77777862548828px;">— ECMA 402 </span>({{bug("853301")}})</li>
+  <li>实现了 <code>Number.parseInt()</code> 和 <code>Number.parseFloat()</code> 方法 ({{bug("886949")}}).</li>
+  <li style="padding: 0px;">实现了 <code style="font-style: inherit;">Map.prototype.forEach()</code> 和 <code style="font-style: inherit;">Set.prototype.forEach()</code> 方法 ({{bug("866847")}})</li>
+  <li>实现了更多的数学函数：<code>Math.log10()</code>, <code>Math.log2()</code>, <code>Math.log1p()</code>, <code>Math.expm1()</code>, <code>Math.cosh()</code>, <code>Math.sinh()</code>, <code>Math.tanh()</code>, <code>Math.acosh()</code>, <code>Math.asinh()</code>, <code>Math.atanh()</code>, <code>Math.hypot()</code>, <code>Math.trunc()</code>, <code>Math.sign()</code> 以及 <code>Math.cbrt()</code> ({{bug("894026")}}).</li>
+  <li>实现了八进制整数字面量写法 (比如<code>0o777</code>) 和二进制整数字面量写法 (比如<code>0b111</code>) ({{bug("717379")}}).</li>
+  <li>实现了 ECMAScript 国际化 API  —— ECMA 402 ({{bug("853301")}})</li>
 </ul>
 <h3 id="DOM">DOM</h3>
 <ul>
-  <li>在 Windows 上新增了<code> KeyboardEvent.key</code> 属性对几个与 IME 有关的键盘按键的支持 ({{bug("865565")}}), 查看 <a href="/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win" title="/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win">各按键对应的 key 属性列表</a> 了解详情.</li>
+  <li>在 Windows 上新增了<code> KeyboardEvent.key</code> 属性对几个与 IME 有关的键盘按键的支持 ({{bug("865565")}}), 查看 <a href="/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win" title="/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win">各按键对应的 key 属性列表</a> 了解详情。</li>
   <li>Metrofox 的键盘事件和桌面版实现统一 ({{bug("843236")}}).</li>
-  <li>如果使用 <span style="font-family: monospace;">preventDefault() 阻止了 </span><span style="font-family: monospace;">keydown 事件的默认行为, 则后续的 </span><a href="https://developer.mozilla.org/zh-CN/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event" title="https://developer.mozilla.org/zh-CN/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event"><span style="font-family: monospace;">keypress 事件就不会触发</span></a> ({{bug("501496")}})</li>
-  <li>实现了 {{domxref("HTMLIFrameElement")}} 接口的 <code>srcDoc</code> 属性, 可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).</li>
-  <li>实现了 {{domxref("HTMLTableElement")}} 接口的 <code>createTBody()</code> 方法, 可以用来获取 (创建) 表格的 {{HTMLElement("tbody")}} 子元素 ({{bug("813034")}}).</li>
-  <li>{{domxref("Range.collapse")}} 方法的 <code>toStart</code> 参数变为可选, 且默认值为 <code>false</code> ({{bug("891340")}}).</li>
-  <li><code style="font-size: 14px;">按照最新 DOM 规范, window.Future() <font face="Lucida Grande, Lucida Sans Unicode, DejaVu Sans, Lucida, Arial, Helvetica, sans-serif"><span style="line-height: 21px;">改名为</span></font></code><code style="font-size: 14px;"> window.Promise() </code>({{bug("884279")}}).</li>
-  <li>实现了 <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">document.firstElementChild, </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">document.lastElementChild, </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">document.children, </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">document.childElementCount 以及 </span>DocumentFragment 的 <code>parentNode</code> 等属性<code style="font-size: 14px;"> </code>({{bug("895974")}}).</li>
-  <li style="padding: 0px;"><code style="font-style: inherit;">navigator.geolocation</code> 属性更新以符合最新规范. 它永远不会返回 <code style="font-style: inherit;">null</code>. 当 <code style="font-style: inherit;">geo.enabled</code> 偏好设置为 <code style="font-style: inherit;">false 时</code>, 它会返回 <code style="font-style: inherit;">undefined</code> ({{bug("884921")}}).</li>
+  <li>如果使用 preventDefault() 阻止了 keydown 事件的默认行为，则后续的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event" title="https://developer.mozilla.org/zh-CN/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event">keypress 事件就不会触发</a> ({{bug("501496")}})</li>
+  <li>实现了 {{domxref("HTMLIFrameElement")}} 接口的 <code>srcDoc</code> 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).</li>
+  <li>实现了 {{domxref("HTMLTableElement")}} 接口的 <code>createTBody()</code> 方法，可以用来获取 (创建) 表格的 {{HTMLElement("tbody")}} 子元素 ({{bug("813034")}}).</li>
+  <li>{{domxref("Range.collapse")}} 方法的 <code>toStart</code> 参数变为可选，且默认值为 <code>false</code> ({{bug("891340")}}).</li>
+  <li><code style="font-size: 14px;">按照最新 DOM 规范，window.Future() 改名为</code><code style="font-size: 14px;"> window.Promise() </code>({{bug("884279")}}).</li>
+  <li>实现了 document.firstElementChild, document.lastElementChild, document.children, document.childElementCount 以及 DocumentFragment 的 <code>parentNode</code> 等属性<code style="font-size: 14px;"> </code>({{bug("895974")}}).</li>
+  <li style="padding: 0px;"><code style="font-style: inherit;">navigator.geolocation</code> 属性更新以符合最新规范。它永远不会返回 <code style="font-style: inherit;">null</code>. 当 <code style="font-style: inherit;">geo.enabled</code> 偏好设置为 <code style="font-style: inherit;">false 时</code>, 它会返回 <code style="font-style: inherit;">undefined</code> ({{bug("884921")}}).</li>
   <li style="padding: 0px;">{{domxref("ImageData")}} API 在 {{domxref("Worker")}} 内也可用 ({{bug("845545")}}).</li>
 </ul>
 <h3 id="MathML">MathML</h3>
@@ -44,7 +44,7 @@ translation_of: Mozilla/Firefox/Releases/25
 <h2 id="相关链接">相关链接</h2>
 <ul>
 
-  <li><a href="/zh-CN/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25网站兼容性</a></li>
+  <li><a href="/zh-CN/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25 网站兼容性</a></li>
 </ul>
 <h3 id="更早版本">更早版本</h3>
 <p>{{Firefox_for_developers('24')}}</p>

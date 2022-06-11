@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Malformed_formal_parameter
 
 ## Message
 
-    SyntaxError: Expected {x} (Edge)
-    SyntaxError: malformed formal parameter (Firefox)
+```
+SyntaxError: Expected {x} (Edge)
+SyntaxError: malformed formal parameter (Firefox)
+```
 
 ## Type d'erreur
 
@@ -27,7 +29,7 @@ C'est cette liste d'arguments qui est, pour une certaine raison, invalide. Il s'
 
 ## OK mais pourquoi cette formulation étrange ?
 
-En effet, "Formal parameter" est une manière étrange de dire  « argument de fonction ». Le mot "malformed" (malformé) est utilisé car les ingénieurs travaillant sur Firefox engineers apprécient énormément les romans gothiques du XIXe.
+En effet, "Formal parameter" est une manière étrange de dire  « argument de fonction ». Le mot "malformed" (malformé) est utilisé car les ingénieurs travaillant sur Firefox engineers apprécient énormément les romans gothiques du XIXe.
 
 ## Examples
 

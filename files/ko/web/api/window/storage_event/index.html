@@ -1,0 +1,65 @@
+---
+title: WindowEventHandlers.onstorage
+slug: Web/API/Window/storage_event
+tags:
+  - API
+  - Event Handler
+  - Property
+  - Reference
+  - Web Storage
+  - WindowEventHandlers
+translation_of: Web/API/WindowEventHandlers/onstorage
+original_slug: Web/API/WindowEventHandlers/onstorage
+---
+<div class="syntaxbox">{{APIRef}}</div>
+
+<p>{{domxref("WindowEventHandlers")}} 믹스인의 <strong><code>onstorage</code></strong> 속성은 <code><a href="/ko/docs/Web/API/Window/storage_event">storage</a></code> 이벤트를 처리하는 {{event("Event_handlers", "event handler")}}입니다.</p>
+
+<p><code>storage</code> 이벤트는 다른 문서에서 저장소를 변경했을 때 발생합니다.</p>
+
+<h2 id="구문">구문</h2>
+
+<pre class="syntaxbox notranslate"><em> </em><em>window</em>.onstorage = <em>functionRef</em>;</pre>
+
+<h3 id="값">값</h3>
+
+<p><code>functionRef</code>는 함수 이름 혹은 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">함수 표현식</a>으로, 단일 매개변수로써 {{domxref("StorageEvent")}}를 받습니다.</p>
+
+<h2 id="예제">예제</h2>
+
+<p>다음 예제는 다른 문서에서 저장소 키를 바꿀 때마다 메시지를 기록합니다.</p>
+
+<pre class="brush: js notranslate">window.onstorage = function(e) {
+  console.log('The ' + e.key +
+    ' key has been changed from ' + e.oldValue +
+    ' to ' + e.newValue + '.');
+};</pre>
+
+<h2 id="명세">명세</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-window-onstorage','onstorage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
+
+
+
+<p>{{Compat("api.WindowEventHandlers.onstorage")}}</p>
+
+<h2 id="같이_보기">같이 보기</h2>
+
+<ul>
+ <li><a href="/ko/docs/Web/API/Window/storage_event">Window: <code>storage</code> 이벤트</a></li>
+</ul>

@@ -123,7 +123,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                                                                                            | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openKeyCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openKeyCursor()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-openKeyCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openKeyCursor()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Browser compatibility
 

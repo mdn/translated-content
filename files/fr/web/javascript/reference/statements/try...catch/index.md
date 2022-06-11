@@ -16,19 +16,21 @@ L'instruction **`try...catch`** regroupe des instructions à exécuter et défin
 
 ## Syntaxe
 
-    try {
-       instructions_try
-    }
-    [catch (exception_var_1 if condition_1) { // non-standard
-       instructions_catch_1
-    }]
-    ...
-    [catch (exception_var_2) {
-       instructions_catch_2
-    }]
-    [finally {
-       instructions_finally
-    }]
+```js
+try {
+  instructions_try
+}
+catch (exception_var_1 if condition_1) { // non-standard
+  instructions_catch_1
+}
+…
+catch (exception_var_2) {
+  instructions_catch_2
+}
+finally {
+  instructions_finally
+}
+```
 
 - `instructions_try`
   - : Les instructions qu'on souhaite exécuter.
@@ -45,9 +47,9 @@ L'instruction **`try...catch`** regroupe des instructions à exécuter et défin
 
 L'instruction `try` est composée d'un bloc `try` contenant une ou plusieurs instructions, d'au moins une clause `catch` ou d'une clause `finally` ou des deux. On peut donc avoir les trois formes suivantes pour cette instruction :
 
-1.  `try...catch`
-2.  `try...finally`
-3.  `try...catch...finally`
+1. `try…catch`
+2. `try…finally`
+3. `try…catch…finally`
 
 Une clause `catch` contient les instructions à exécuter si une exception est levée par une instruction du bloc `try`. On souhaite généralement que le bloc `try` se déroule sans problème. Si toutefois une erreur se produit, on veut pouvoir contrôler ce qui se passe et on transmet donc le contrôle au bloc `catch`. Si une instruction contenue dans le bloc `try` (ou une fonction appelée depuis le bloc `try`) renvoie une exception, le contrôle sera immédiatement passé à la clause `catch`. Si aucune exception n'est levée, la clause `catch` ne sera pas utilisée.
 

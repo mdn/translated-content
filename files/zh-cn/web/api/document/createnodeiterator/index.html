@@ -19,10 +19,10 @@ translation_of: Web/API/Document/createNodeIterator
 
 <dl>
  <dt><code>root</code></dt>
- <dd> {{ domxref("NodeIterator") }}遍历起始处的根节点。</dd>
+ <dd>{{ domxref("NodeIterator") }}遍历起始处的根节点。</dd>
  <dt><code>whatToShow</code> {{ optional_inline() }}</dt>
  <dd>是一个可选的无符号长整型（<code>unsigned long</code>）， 是由节点过滤器（<code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 <code>0xFFFFFFFF</code> ，代表 <code>SHOW_ALL</code> 常量。
- <table class="standard-table">
+ <table>
   <tbody>
    <tr>
     <td class="header">常量</td>
@@ -98,12 +98,12 @@ translation_of: Web/API/Document/createNodeIterator
  </table>
  </dd>
  <dt><code>filter</code> {{ optional_inline() }}</dt>
- <dd>是实现 {{ domxref("NodeFilter") }} 接口的对象; 其 <code>acceptNode()</code> 方法会对从根节点开始到子树中的每个节点都调用一次，哪些节点需要进入迭代节点列表等待调用则取决于whatToShow参数（也可以使用一个简单的回调函数代替<code>acceptNode()</code>）。该方法需要返回下列常量之一： <code>NodeFilter.FILTER_ACCEPT</code> ，<code>NodeFilter.FILTER_REJECT</code> 或 <code>NodeFilter.FILTER_SKIP</code>（见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/NodeFilter">NodeFilter</a>），参见{{ anch("示例") }}。</dd>
+ <dd>是实现 {{ domxref("NodeFilter") }} 接口的对象; 其 <code>acceptNode()</code> 方法会对从根节点开始到子树中的每个节点都调用一次，哪些节点需要进入迭代节点列表等待调用则取决于 whatToShow 参数（也可以使用一个简单的回调函数代替<code>acceptNode()</code>）。该方法需要返回下列常量之一： <code>NodeFilter.FILTER_ACCEPT</code> ，<code>NodeFilter.FILTER_REJECT</code> 或 <code>NodeFilter.FILTER_SKIP</code>（见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/NodeFilter">NodeFilter</a>），参见<a href="#示例">示例</a>。</dd>
 </dl>
 
-<div class="note"><strong>注意： </strong>在Gecko12.0{{ geckoRelease("12.0") }}以前，这个方法接收第四个可选的参数（<code>entityReferenceExpansion</code>），这不是DOM4 规范中的一部分，因此被移除了。这个参数表示实体引用节点的子代对于迭代器是否可见。因为浏览器不会创建这样的节点，这个参数没有任何作用。</div>
+<div class="note"><strong>注意： </strong>在 Gecko12.0{{ geckoRelease("12.0") }}以前，这个方法接收第四个可选的参数（<code>entityReferenceExpansion</code>），这不是 DOM4 规范中的一部分，因此被移除了。这个参数表示实体引用节点的子代对于迭代器是否可见。因为浏览器不会创建这样的节点，这个参数没有任何作用。</div>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="示例">示例</h2>
 
 <pre>const nodeIterator = document.createNodeIterator(
     document.body,
@@ -124,21 +124,7 @@ while (currentNode = nodeIterator.nextNode()) {
 
 <h2 id="Specification" name="Specification">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createnodeiterator', 'document.createNodeIterator')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

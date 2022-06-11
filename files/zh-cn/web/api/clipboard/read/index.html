@@ -11,12 +11,12 @@ translation_of: Web/API/Clipboard/read
 ---
 <div>{{APIRef("Clipboard API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>read()</code></strong> method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, delivering the data to the returned {{jsxref("Promise")}} when the promise is resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the <code>read()</code> method can return arbitrary data, such as images.</span></p>
+<p>The <strong><code>read()</code></strong> method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, delivering the data to the returned {{jsxref("Promise")}} when the promise is resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the <code>read()</code> method can return arbitrary data, such as images.</p>
 
 <p>To read from the clipboard, you must first have the <code>"clipboard-read"</code> permission.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The asynchronous Clipboard and <a href="/en-US/docs/Web/API/Permissions_API">Permissions APIs</a> are still in the process of being integrated into most browsers, so they often deviate from the official rules for permissions and the like. Be sure to review the {{anch("Browser compatibility", "compatibility table")}} before using these methods.</p>
+<p><strong>Note:</strong> The asynchronous Clipboard and <a href="/en-US/docs/Web/API/Permissions_API">Permissions APIs</a> are still in the process of being integrated into most browsers, so they often deviate from the official rules for permissions and the like. Be sure to review the <a href="#浏览器兼容性">compatibility table</a> before using these methods.</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -62,20 +62,7 @@ navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API','#h-clipboard-read','read()')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

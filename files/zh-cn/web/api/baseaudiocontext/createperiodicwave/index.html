@@ -6,7 +6,7 @@ translation_of: Web/API/BaseAudioContext/createPeriodicWave
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p><span class="seoSummary">{{ domxref("BaseAudioContext") }} 接口的 <code>createPeriodicWave()</code> 方法用于创建可对 {{ domxref("OscillatorNode") }} 输出进行整形的 {{domxref("PeriodicWave")}}（周期波）。</span></p>
+<p>{{ domxref("BaseAudioContext") }} 接口的 <code>createPeriodicWave()</code> 方法用于创建可对 {{ domxref("OscillatorNode") }} 输出进行整形的 {{domxref("PeriodicWave")}}（周期波）。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -33,7 +33,7 @@ translation_of: Web/API/BaseAudioContext/createPeriodicWave
 </dl>
 
 <div class="note">
-<p>如果使用规范化，生成波形的最大绝对峰值为1。</p>
+<p>如果使用规范化，生成波形的最大绝对峰值为 1。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -63,28 +63,15 @@ osc.stop(2);</pre>
 
 <p>这之所以有用是因为根据定义仅包含基本音调的声音是正弦波。</p>
 
-<p>这里，我们创建一个具有两个值的 <code>PeriodicWave</code> (周期波) 。第一个值是 DC(直流) 偏移，它是振荡器启动的值。0在这里是好的，因为我们想在 [-1.0; 1.0] 范围的中间开始曲线。</p>
+<p>这里，我们创建一个具有两个值的 <code>PeriodicWave</code> (周期波) 。第一个值是 DC(直流) 偏移，它是振荡器启动的值。0 在这里是好的，因为我们想在 [-1.0; 1.0] 范围的中间开始曲线。</p>
 
-<p>第二个值和后续值是正弦和余弦分量。你可以把它看做是傅里叶变换的结果，可以从时域值中获取频域值。这里，使用 <code>createPeriodicWave()</code>，你可以指定频率，浏览器会执行一个逆傅里叶变换，以获得振荡器的时域缓冲。这里，我们只在基础音上设置了一个全音量(1.0)的分量，所以我们得到一个正弦波。</p>
+<p>第二个值和后续值是正弦和余弦分量。你可以把它看做是傅里叶变换的结果，可以从时域值中获取频域值。这里，使用 <code>createPeriodicWave()</code>，你可以指定频率，浏览器会执行一个逆傅里叶变换，以获得振荡器的时域缓冲。这里，我们只在基础音上设置了一个全音量 (1.0) 的分量，所以我们得到一个正弦波。</p>
 
 <p>傅里叶变换系数应该按升序给出 (例如. <math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i}    </annotation></semantics></math>等.) 可以是正的或者是负的。一个简单的手动获取此类系数的方法是使用图形计算器，尽管这不是最好的。</p>
 
 <h2 id="规格">规格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createperiodicwave', 'createPeriodicWave')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

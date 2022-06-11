@@ -35,7 +35,7 @@ Les dimensions et la position d'un élément sont souvent dépendants du bloc en
 
 Le bloc englobant est entièrement déterminé par la valeur de la propriété {{cssxref("position")}} pour l'élément :
 
-- Si la propriété `position` vaut **`static`**, **`relative`** ou **`sticky`**, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec `display` qui vaut `inline-block`, `block` ou `list-item`) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).
+- Si la propriété `position` vaut **`static`**, **`relative`** ou **`sticky`**, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec `display` qui vaut `inline-block`, `block` ou `list-item`) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).
 - Si la propriété `position` vaut **`absolute`**, le bloc englobant est constitué par le bord de la boîte de remplissage (_padding_) de l'ancêtre le plus proche dont la valeur de `position` est différente de `static` (`fixed`, `absolute`, `relative` ou `sticky`).
 - Si la propriété `position` vaut **`fixed`**, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).
 - Si la propriété `position` vaut **`absolute`** ou `fixed`, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :

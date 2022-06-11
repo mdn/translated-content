@@ -13,13 +13,15 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math/expm1
 ---
 {{JSRef}}
 
-La fonction **`Math.expm1()`** renvoie` e^x` - 1, avec `x` l'argument donné et {{jsxref("Objets_globaux/Math/E","e")}} la base du logarithme nepérien.
+La fonction **`Math.expm1()`** renvoie `e^x` - 1, avec `x` l'argument donné et {{jsxref("Objets_globaux/Math/E","e")}} la base du logarithme nepérien.
 
 {{EmbedInteractiveExample("pages/js/math-expm1.html")}}
 
 ## Syntaxe
 
-    Math.expm1(x)
+```js
+Math.expm1(x)
+```
 
 ### Paramètres
 
@@ -32,7 +34,7 @@ Un nombre qui représente `e^x- 1` où `x` est la valeur passée en argument et 
 
 ## Description
 
-`expm1()` étant une méthode statique de `Math`, il faut utiliser `Math.expm1()`et non pas la méthode d'un autre objet qui aurait été créé sur mesure (`Math `n'est pas un constructeur).
+`expm1()` étant une méthode statique de `Math`, il faut utiliser `Math.expm1()`et non pas la méthode d'un autre objet qui aurait été créé sur mesure (`Math` n'est pas un constructeur).
 
 ## Exemple
 
@@ -59,7 +61,7 @@ Math.expm1 = Math.expm1 || function(x) {
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-math.expm1', 'Math.expm1')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

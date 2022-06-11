@@ -7,109 +7,109 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <div>{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">在这第一Django文章中，我们将回答“什么是Django”这个问题，并概述这个网络框架有什么特性。我们将描述主要功能，包括一些高级功能，但我们并不会在本单元中详细介绍。我们还会展示一些Django应用程序的主要构建模块（尽管此时你还没有要测试的开发环境）。</p>
+<p>在这第一 Django 文章中，我们将回答“什么是 Django”这个问题，并概述这个网络框架有什么特性。我们将描述主要功能，包括一些高级功能，但我们并不会在本单元中详细介绍。我们还会展示一些 Django 应用程序的主要构建模块（尽管此时你还没有要测试的开发环境）。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">先决条件:</th>
-   <td>基本的电脑知识. 对 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">服务器端网站编程的一般了解</a>, 特别是 <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">网站中客户端-服务器交互的机制</a>.</td>
+   <th scope="row">先决条件：</th>
+   <td>基本的电脑知识。对 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">服务器端网站编程的一般了解</a>, 特别是 <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">网站中客户端 - 服务器交互的机制</a>.</td>
   </tr>
   <tr>
-   <th scope="row">目的:</th>
-   <td>了解Django是什么，它提供了哪些功能，以及Django应用程序的主要构建块。</td>
+   <th scope="row">目的：</th>
+   <td>了解 Django 是什么，它提供了哪些功能，以及 Django 应用程序的主要构建块。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Django是什么">Django是什么?</h2>
+<h2 id="Django是什么">Django 是什么？</h2>
 
-<p>Django 是一个高级的 Python 网络框架，可以快速开发安全和可维护的网站。由经验丰富的开发者构建，Django负责处理网站开发中麻烦的部分，因此你可以专注于编写应用程序，而无需重新开发。<br>
+<p>Django 是一个高级的 Python 网络框架，可以快速开发安全和可维护的网站。由经验丰富的开发者构建，Django 负责处理网站开发中麻烦的部分，因此你可以专注于编写应用程序，而无需重新开发。<br>
  它是免费和开源的，有活跃繁荣的社区，丰富的文档，以及很多免费和付费的解决方案。</p>
 
-<p>Django 可以使你的应用具有以下优点:</p>
+<p>Django 可以使你的应用具有以下优点：</p>
 
 <dl>
  <dt>完备性</dt>
- <dd>Django遵循“功能完备”的理念，提供开发人员可能想要“开箱即用”的几乎所有功能。因为你需要的一切都是一个”产品“的一部分，它们都可以无缝结合在一起，遵循一致性设计原则，并且具有广泛和<a href="https://docs.djangoproject.com/en/1.10/">最新的文档</a>.</dd>
+ <dd>Django 遵循“功能完备”的理念，提供开发人员可能想要“开箱即用”的几乎所有功能。因为你需要的一切都是一个”产品“的一部分，它们都可以无缝结合在一起，遵循一致性设计原则，并且具有广泛和<a href="https://docs.djangoproject.com/en/1.10/">最新的文档</a>.</dd>
  <dt>通用性</dt>
- <dd>Django 可以（并已经）用于构建几乎任何类型的网站—从内容管理系统和维基，到社交网络和新闻网站。它可以与任何客户端框架一起工作，并且可以提供几乎任何格式（包括 HTML，Rss源，JSON，XML等）的内容。你正在阅读的网站就是基于Django。<br>
+ <dd>Django 可以（并已经）用于构建几乎任何类型的网站—从内容管理系统和维基，到社交网络和新闻网站。它可以与任何客户端框架一起工作，并且可以提供几乎任何格式（包括 HTML，Rss 源，JSON，XML 等）的内容。你正在阅读的网站就是基于 Django。<br>
  <br>
  在内部，尽管它为几乎所有可能需要的功能（例如几个流行的数据库，模版引擎等）提供了选择，但是如果需要，它也可以扩展到使用其他组件。</dd>
  <dt>安全性</dt>
- <dd>Django 帮助开发人员通过提供一个被设计为“做正确的事情”来自动保护网站的框架来避免许多常见的安全错误。例如，Django提供了一种安全的方式来管理用户账户和密码，避免了常见的错误，比如将session放在cookie中这种易受攻击的做法（取而代之的是cookies只包含一个密钥，实际数据存储在数据库中）或直接存储密码而不是密码哈希。<br>
+ <dd>Django 帮助开发人员通过提供一个被设计为“做正确的事情”来自动保护网站的框架来避免许多常见的安全错误。例如，Django 提供了一种安全的方式来管理用户账户和密码，避免了常见的错误，比如将 session 放在 cookie 中这种易受攻击的做法（取而代之的是 cookies 只包含一个密钥，实际数据存储在数据库中）或直接存储密码而不是密码哈希。<br>
  <br>
- 密码哈希是通过<em><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">密码散列函数</a>发送密码而创建的固定长度值。 Django 能通过运行哈希函数来检查输入的密码-就是-将输出的哈希值与存储的哈希值进行比较是否正确。然而由于功能的“单向”性质，即时存储的哈希值受到威胁，攻击者也难以解决原始密码。（但其实有彩虹表-译者观点）</em><br>
+ 密码哈希是通过<em><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">密码散列函数</a>发送密码而创建的固定长度值。Django 能通过运行哈希函数来检查输入的密码 - 就是 - 将输出的哈希值与存储的哈希值进行比较是否正确。然而由于功能的“单向”性质，即时存储的哈希值受到威胁，攻击者也难以解决原始密码。（但其实有彩虹表 - 译者观点）</em><br>
  <br>
- 默认情况下，Django 可以防范许多漏洞，包括SQL注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">网站安全</a> 相关信息，如有兴趣).</dd>
+ 默认情况下，Django 可以防范许多漏洞，包括 SQL 注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">网站安全</a> 相关信息，如有兴趣).</dd>
  <dt>可扩展</dt>
- <dd>Django 使用基于组件的 “<a href="https://en.wikipedia.org/wiki/Shared_nothing_architecture">无共享</a>” 架构 (架构的每一部分独立于其他架构，因此可以根据需要进行替换或更改). 在不用部分之间有明确的分隔意味着它可以通过在任何级别添加硬件来扩展服务：缓存服务器，数据库服务器或应用程序服务器。一些最繁忙的网站已经成功地缩放了Django，以满足他们的需求（例如Instagram和Disqus，仅举两个例子，可自行添加）。</dd>
+ <dd>Django 使用基于组件的“<a href="https://en.wikipedia.org/wiki/Shared_nothing_architecture">无共享</a>”架构 (架构的每一部分独立于其他架构，因此可以根据需要进行替换或更改). 在不用部分之间有明确的分隔意味着它可以通过在任何级别添加硬件来扩展服务：缓存服务器，数据库服务器或应用程序服务器。一些最繁忙的网站已经成功地缩放了 Django，以满足他们的需求（例如 Instagram 和 Disqus，仅举两个例子，可自行添加）。</dd>
  <dt>可维护性</dt>
- <dd>Django 代码编写是遵照设计原则和模式，鼓励创建可维护和可重复使用的代码。特别是它使用了不要重复自己（DRY）原则，所以没有不必要的重复，减少了代码的数量。Django还将相关功能分组到可重用的“应用程序”中，并且在较低级别将相关代码分组或模块（ <a href="/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">模型视图控制器 (MVC)</a> 模式).</dd>
+ <dd>Django 代码编写是遵照设计原则和模式，鼓励创建可维护和可重复使用的代码。特别是它使用了不要重复自己（DRY）原则，所以没有不必要的重复，减少了代码的数量。Django 还将相关功能分组到可重用的“应用程序”中，并且在较低级别将相关代码分组或模块（ <a href="/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">模型视图控制器 (MVC)</a> 模式).</dd>
  <dt>灵活性</dt>
- <dd>Django 是用Python编写的，它在许多平台上运行。这意味着你不受任务特定的服务器平台的限制，并且可以在许多种类的Linux，Windows和Mac OsX 上运行应用程序。此外，Django得到许多网络托管提供商的好评，他们经常提供特定的基础设施和托管Django网站的文档。</dd>
+ <dd>Django 是用 Python 编写的，它在许多平台上运行。这意味着你不受任务特定的服务器平台的限制，并且可以在许多种类的 Linux，Windows 和 Mac OsX 上运行应用程序。此外，Django 得到许多网络托管提供商的好评，他们经常提供特定的基础设施和托管 Django 网站的文档。</dd>
 </dl>
 
-<h2 id="它的出生">它的出生?</h2>
+<h2 id="它的出生">它的出生？</h2>
 
-<p>Django 最初由2003年到2005年间由负责创建和维护报纸网站的网络团队开发。在创建了许多网站后，团队开始考虑并重用许多常见的代码和设计模式。这个共同的代码演变一个通用的网络开发框架，2005年7月被开源“Django”项目。</p>
+<p>Django 最初由 2003 年到 2005 年间由负责创建和维护报纸网站的网络团队开发。在创建了许多网站后，团队开始考虑并重用许多常见的代码和设计模式。这个共同的代码演变一个通用的网络开发框架，2005 年 7 月被开源“Django”项目。</p>
 
-<p>Django 不断发展壮大—从2008年9月的第一个里程碑版本（1.0）到最近发布的（1.11）-（2017）版本。每个版本都添加了新功能和错误修复，从支持新类型的数据库，模版引擎和缓存，到添加“通用”视图函数和类（这减少了开发人员必须编写的代码量）一些编程任务。</p>
+<p>Django 不断发展壮大—从 2008 年 9 月的第一个里程碑版本（1.0）到最近发布的（1.11）-（2017）版本。每个版本都添加了新功能和错误修复，从支持新类型的数据库，模版引擎和缓存，到添加“通用”视图函数和类（这减少了开发人员必须编写的代码量）一些编程任务。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 查看Django网站上<span style="line-height: 1.5;"> <a href="https://docs.djangoproject.com/en/1.10/releases/">发行说明</a>，看看最近版本发生了什么变化，以及Django能做多少工作。</span></p>
+<p><strong>注意</strong>: 查看 Django 网站上 <a href="https://docs.djangoproject.com/en/1.10/releases/">发行说明</a>，看看最近版本发生了什么变化，以及 Django 能做多少工作。</p>
 </div>
 
-<p>Django 现在是一个蓬勃发展的合作开源项目<span style="line-height: 1.5;">，拥有数千个用户和贡献着。虽然它仍然具有反映其起源的一些功能，但Django已经发展成为能够开发任何类型的网站的多功能框架。 </span></p>
+<p>Django 现在是一个蓬勃发展的合作开源项目，拥有数千个用户和贡献者。虽然它仍然具有反映其起源的一些功能，但 Django 已经发展成为能够开发任何类型的网站的多功能框架。 </p>
 
-<h2 id="Django有多受欢迎">Django有多受欢迎?</h2>
+<h2 id="Django有多受欢迎">Django 有多受欢迎？</h2>
 
-<p>服务器端框架的受欢迎程度没有任何可靠和明确的测量（尽管<a href="http://hotframeworks.com/">Hot Frameworks</a>网站 尝试使用诸如计算每个平台的GitHub项目数量和StackOverflow问题的机制来评估流行度）。一个更好的问题是Django是否“足够流行”，以避免不受欢迎的平台的问题。它是否继续发展？如果您需要帮助，可以帮您吗？如果您学习Django，有机会获得付费工作吗？</p>
+<p>服务器端框架的受欢迎程度没有任何可靠和明确的测量（尽管<a href="http://hotframeworks.com/">Hot Frameworks</a>网站 尝试使用诸如计算每个平台的 GitHub 项目数量和 StackOverflow 问题的机制来评估流行度）。一个更好的问题是 Django 是否“足够流行”，以避免不受欢迎的平台的问题。它是否继续发展？如果您需要帮助，可以帮您吗？如果您学习 Django，有机会获得付费工作吗？</p>
 
-<p>基于使用Django的流行网站数量，为代码库贡献的人数以及提供免费和付费支持的人数，那么是的，Django是一个流行的框架！</p>
+<p>基于使用 Django 的流行网站数量，为代码库贡献的人数以及提供免费和付费支持的人数，那么是的，Django 是一个流行的框架！</p>
 
-<p>使用Django的流行网站包括：Disqus，Instagram，骑士基金会，麦克阿瑟基金会，Mozilla，国家地理，开放知识基金会，Pinterest和开放栈（来源：<a href="https://www.djangoproject.com/">Django home page</a>).</p>
+<p>使用 Django 的流行网站包括：Disqus，Instagram，骑士基金会，麦克阿瑟基金会，Mozilla，国家地理，开放知识基金会，Pinterest 和开放栈（来源：<a href="https://www.djangoproject.com/">Django home page</a>).</p>
 
-<h2 id="Django_是特定">Django 是特定?</h2>
+<h2 id="Django_是特定">Django 是特定？</h2>
 
-<p>Web框架通常将自己称为“特定”或“无限制”。</p>
+<p>Web 框架通常将自己称为“特定”或“无限制”。</p>
 
 <p>特定框架是对处理任何特定任务的“正确方法”有意见的框架。他们经常支持特定领域的快速发展（解决特定类型的问题），因为正确的做法是通常被很好地理解和记录在案。然而，他们在解决其主要领域之外的问题时可能不那么灵活，并且倾向于为可以使用哪些组件和方法提供较少的选择。</p>
 
 <p>相比之下，无限制的框架对于将组件粘合在一起以实现目标或甚至应使用哪些组件的最佳方式的限制较少。它们使开发人员更容易使用最合适的工具来完成特定任务，尽管您需要自己查找这些组件。</p>
 
-<p>Django“有点有意义”，因此提供了“两个世界的最佳”。它提供了一组组件来处理大多数Web开发任务和一个（或两个）首选的使用方法。然而，Django的解耦架构意味着您通常可以从多个不同的选项中进行选择，也可以根据需要添加对全新的支持。</p>
+<p>Django“有点有意义”，因此提供了“两个世界的最佳”。它提供了一组组件来处理大多数 Web 开发任务和一个（或两个）首选的使用方法。然而，Django 的解耦架构意味着您通常可以从多个不同的选项中进行选择，也可以根据需要添加对全新的支持。</p>
 
-<h2 id="Django代码是什么样的">Django代码是什么样的?</h2>
+<h2 id="Django代码是什么样的">Django 代码是什么样的？</h2>
 
-<p>在传统的数据驱动网站中，Web应用程序会等待来自Web浏览器（或其他客户端）的 HTTP 请求。当接收到请求时，应用程序根据 URL 和可能的 POST 数据或 GET 数据中的信息确定需要的内容。根据需要，可以从数据库读取或写入信息，或执行满足请求所需的其他任务。然后，该应用程序将返回对Web浏览器的响应，通常通过将检索到的数据插入 HTML模板中的占位符来动态创建用于浏览器显示的 HTML 页面。</p>
+<p>在传统的数据驱动网站中，Web 应用程序会等待来自 Web 浏览器（或其他客户端）的 HTTP 请求。当接收到请求时，应用程序根据 URL 和可能的 POST 数据或 GET 数据中的信息确定需要的内容。根据需要，可以从数据库读取或写入信息，或执行满足请求所需的其他任务。然后，该应用程序将返回对 Web 浏览器的响应，通常通过将检索到的数据插入 HTML 模板中的占位符来动态创建用于浏览器显示的 HTML 页面。</p>
 
 <p>Django 网络应用程序通常将处理每个步骤的代码分组到单独的文件中：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <ul>
- <li><strong>URLs: </strong>虽然可以通过单个功能来处理来自每个URL的请求，但是编写单独的视图函数来处理每个资源是更加可维护的。URL映射器用于根据请求URL将HTTP请求重定向到相应的视图。URL映射器还可以匹配出现在URL中的字符串或数字的特定模式，并将其作为数据传递给视图功能。<br>
+ <li><strong>URLs: </strong>虽然可以通过单个功能来处理来自每个 URL 的请求，但是编写单独的视图函数来处理每个资源是更加可维护的。URL 映射器用于根据请求 URL 将 HTTP 请求重定向到相应的视图。URL 映射器还可以匹配出现在 URL 中的字符串或数字的特定模式，并将其作为数据传递给视图功能。<br>
    </li>
- <li><strong>View:</strong>  视图 是一个请求处理函数，它接收HTTP请求并返回HTTP响应。视图通过模型访问满足请求所需的数据，并将响应的格式委托给  模板。<br>
+ <li><strong>View:</strong>  视图 是一个请求处理函数，它接收 HTTP 请求并返回 HTTP 响应。视图通过模型访问满足请求所需的数据，并将响应的格式委托给  模板。<br>
    </li>
- <li><strong>Models:</strong>  模型 是定义应用程序数据结构的Python对象，并提供在数据库中管理（添加，修改，删除）和查询记录的机制。<br>
+ <li><strong>Models:</strong>  模型 是定义应用程序数据结构的 Python 对象，并提供在数据库中管理（添加，修改，删除）和查询记录的机制。<br>
    </li>
- <li><strong>Templates:</strong> 模板 是定义文件（例如HTML页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用HTML模板，从数据填充它动态地创建一个HTML页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是HTML！</li>
+ <li><strong>Templates:</strong> 模板 是定义文件（例如 HTML 页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用 HTML 模板，从数据填充它动态地创建一个 HTML 页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是 HTML！</li>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: Django将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> 架构有许多相似之处. </p>
+<p><strong>注意</strong>: Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> 架构有许多相似之处. </p>
 </div>
 
 <ul>
 </ul>
 
-<p>以下部分将为您提供Django应用程序的这些主要部分的想法（稍后我们将在进一步详细介绍后，我们将在开发环境中进行更详细的介绍）。</p>
+<p>以下部分将为您提供 Django 应用程序的这些主要部分的想法（稍后我们将在进一步详细介绍后，我们将在开发环境中进行更详细的介绍）。</p>
 
 <h3 id="将请求发送到正确的视图_(urls.py)">将请求发送到正确的视图 (urls.py)</h3>
 
-<p>URL映射器通常存储在名为urls.py的文件中。在下面的示例中，mapper（urlpatterns）定义了特定URL 模式 和相应视图函数之间的映射列表。如果接收到具有与指定模式匹配的URL（例如r'^$'，下面）的HTTP请求，则将调用 相关联的视图功能（例如  views.index）并传递请求。</p>
+<p>URL 映射器通常存储在名为 urls.py 的文件中。在下面的示例中，mapper（urlpatterns）定义了特定 URL 模式 和相应视图函数之间的映射列表。如果接收到具有与指定模式匹配的 URL（例如 r'^$'，下面）的 HTTP 请求，则将调用 相关联的视图功能（例如  views.index）并传递请求。</p>
 
 <pre>urlpatterns = [
     <strong>url(r'^$', views.index),</strong>
@@ -118,20 +118,20 @@ translation_of: Learn/Server-side/Django/Introduction
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 一点点Python:</p>
+<p><strong>注意</strong>: 一点点 Python:</p>
 
 <ul>
- <li>该 <code>urlpatterns</code> 对象的列表url() 功能。在Python中，使用方括号定义列表。项目以逗号分隔，并可能有一个 <a href="https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">可选的逗号</a>. 例如: <code>[item1, item2, item3,]</code>.</li>
- <li>该模式的奇怪的语法称为正则表达式。我们将在后面的文章中讨论这些内容!</li>
- <li>第二个参数 url() 是当模式匹配时，将被调用的另一个函数。符号views.index 表示该函数被调用，index()并且可以在被调用的模块中找到views （即在一个名为views.py的文件中）。</li>
+ <li>该 <code>urlpatterns</code> 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 <a href="https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">可选的逗号</a>. 例如: <code>[item1, item2, item3,]</code>.</li>
+ <li>该模式的奇怪的语法称为正则表达式。我们将在后面的文章中讨论这些内容！</li>
+ <li>第二个参数 url() 是当模式匹配时，将被调用的另一个函数。符号 views.index 表示该函数被调用，index() 并且可以在被调用的模块中找到 views（即在一个名为 views.py 的文件中）。</li>
 </ul>
 </div>
 
 <h3 id="处理请求_(views.py)">处理请求 (views.py)</h3>
 
-<p>视图是Web应用程序的核心，从Web客户端接收HTTP请求并返回HTTP响应。在两者之间，他们编制框架的其他资源来访问数据库，渲染模板等。</p>
+<p>视图是 Web 应用程序的核心，从 Web 客户端接收 HTTP 请求并返回 HTTP 响应。在两者之间，他们编制框架的其他资源来访问数据库，渲染模板等。</p>
 
-<p>下面的例子显示了一个最小的视图功能index()，这可以通过我们的URL映射器在上一节中调用。像所有视图函数一样，它接收一个HttpRequest对象作为参数（request）并返回一个HttpResponse对象。在这种情况下，我们对请求不做任何事情，我们的响应只是返回一个硬编码的字符串。我们会向您显示一个请求，在稍后的部分中会提供更有趣的内容。</p>
+<p>下面的例子显示了一个最小的视图功能 index()，这可以通过我们的 URL 映射器在上一节中调用。像所有视图函数一样，它接收一个 HttpRequest 对象作为参数（request）并返回一个 HttpResponse 对象。在这种情况下，我们对请求不做任何事情，我们的响应只是返回一个硬编码的字符串。我们会向您显示一个请求，在稍后的部分中会提供更有趣的内容。</p>
 
 <pre class="brush: python">## filename: views.py (Django view functions)
 
@@ -145,14 +145,14 @@ def index(request):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 一点点Python:</p>
+<p><strong>注意</strong>: 一点点 Python:</p>
 
 <ul>
- <li><a href="https://docs.python.org/3/tutorial/modules.html">Python 模块</a> 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从django.http模块导入了HttpResponse对象，使我们可以在视图中使用它：<br>
+ <li><a href="https://docs.python.org/3/tutorial/modules.html">Python 模块</a> 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：<br>
   from django.http import HttpResponse。<br>
   还有其他方法可以从模块导入一些或所有对象。</li>
  <li>
-  <p>如上所示，使用<code>def</code>关键字声明函数<strong>，</strong>在函数名称后面的括号中列出命名参数；整行以冒号结尾。注意下一行是否都进行了<strong>缩进</strong>。缩进很重要，因为它指定代码行在该特定块内 (强制缩进是Python的一个关键特征，也是Python代码很容易阅读的一个原因)。</p>
+  <p>如上所示，使用<code>def</code>关键字声明函数<strong>，</strong>在函数名称后面的括号中列出命名参数；整行以冒号结尾。注意下一行是否都进行了<strong>缩进</strong>。缩进很重要，因为它指定代码行在该特定块内 (强制缩进是 Python 的一个关键特征，也是 Python 代码很容易阅读的一个原因)。</p>
  </li>
 </ul>
 </div>
@@ -164,9 +164,9 @@ def index(request):
 
 <h3 id="定义数据模型_(models.py)">定义数据模型 (models.py)</h3>
 
-<p>Django Web应用程序通过被称为模型的Python对象来管理和查询数据。模型定义存储数据的结构，包括字段类型  以及字段可能的最大值，默认值，选择列表选项，文档帮助文本，表单的标签文本等。模型的定义与底层数据库无关 -您可以选择其中一个作为项目设置的一部分。一旦您选择了要使用的数据库，您就不需要直接与之交谈 - 只需编写模型结构和其他代码，Django可以处理与数据库通信的所有辛苦的工作。</p>
+<p>Django Web 应用程序通过被称为模型的 Python 对象来管理和查询数据。模型定义存储数据的结构，包括字段类型  以及字段可能的最大值，默认值，选择列表选项，文档帮助文本，表单的标签文本等。模型的定义与底层数据库无关 -您可以选择其中一个作为项目设置的一部分。一旦您选择了要使用的数据库，您就不需要直接与之交谈 - 只需编写模型结构和其他代码，Django 可以处理与数据库通信的所有辛苦的工作。</p>
 
-<p>下面的代码片段为<strong>Team</strong>对象展示了一个非常简单的Django模型。本<strong>Team</strong>类是从Django的类派生<strong>models.Model</strong>。它将团队名称和团队级别定义为字符字段，并为每个记录指定了要存储的最大字符数。<strong>team_level</strong> 可以是几个值中的一个，因此，我们将其定义为一个选择字段，并在被展示的数据和被储存的数据之间建立映射，并设置一个默认值。</p>
+<p>下面的代码片段为<strong>Team</strong>对象展示了一个非常简单的 Django 模型。本<strong>Team</strong>类是从 Django 的类派生<strong>models.Model</strong>。它将团队名称和团队级别定义为字符字段，并为每个记录指定了要存储的最大字符数。<strong>team_level</strong> 可以是几个值中的一个，因此，我们将其定义为一个选择字段，并在被展示的数据和被储存的数据之间建立映射，并设置一个默认值。</p>
 
 <p> </p>
 
@@ -187,20 +187,20 @@ class Team(models.Model):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: Python小知识:</p>
+<p><strong>注意</strong>: Python 小知识：</p>
 
 <ul>
- <li>Python支持“面向对象编程”，这是一种编程风格，我们将代码组织到对象中，其中包括用于对该对象进行操作的相关数据和功能。对象也可以从其他对象继承／扩展／派生，允许相关对象之间的共同行为被共享。在Python中，我们使用关键字<strong> Class </strong>定义对象的“蓝图”。我们可以根据类中的模型创建类型的多个 特定 实例。</li>
+ <li>Python 支持“面向对象编程”，这是一种编程风格，我们将代码组织到对象中，其中包括用于对该对象进行操作的相关数据和功能。对象也可以从其他对象继承／扩展／派生，允许相关对象之间的共同行为被共享。在 Python 中，我们使用关键字<strong> Class </strong>定义对象的“蓝图”。我们可以根据类中的模型创建类型的多个 特定 实例。</li>
  <li><br>
-  例如，我们有个 <strong>Team</strong> 类，它来自于<strong>Model</strong>类。这意味着它是一个模型，并且将包含模型的所有方法，但是我们也可以给它自己的专门功能。在我们的模型中，我们定义了我们的数据库需要存储我们的数据字段，给出它们的具体名称。Django使用这些定义（包括字段名称）来创建底层数据库。</li>
+  例如，我们有个 <strong>Team</strong> 类，它来自于<strong>Model</strong>类。这意味着它是一个模型，并且将包含模型的所有方法，但是我们也可以给它自己的专门功能。在我们的模型中，我们定义了我们的数据库需要存储我们的数据字段，给出它们的具体名称。Django 使用这些定义（包括字段名称）来创建底层数据库。</li>
 </ul>
 </div>
 
 <h3 id="查询数据_(views.py)">查询数据 (views.py)</h3>
 
-<p>Django模型提供了一个用于搜索数据库的简单查询API。这可以使用不同的标准（例如，精确，不区分大小写，大于等等）来匹配多个字段，并且可以支持复杂语句（例如，您可以在拥有一个团队的<strong> U11 </strong>团队上指定搜索名称以“Fr”开头或以“al”结尾）。</p>
+<p>Django 模型提供了一个用于搜索数据库的简单查询 API。这可以使用不同的标准（例如，精确，不区分大小写，大于等等）来匹配多个字段，并且可以支持复杂语句（例如，您可以在拥有一个团队的<strong> U11 </strong>团队上指定搜索名称以“Fr”开头或以“al”结尾）。</p>
 
-<p>代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的<strong> U09 </strong>团队。粗体显示如何使用模型查询API过滤所有记录，其中该  <strong>team_level</strong> 字段具有正确的文本“<strong>U09</strong>”（请注意，该条件如何filter()作为参数传递给该函数，该字段名称和匹配类型由双下划线： <strong> team_level__exact</strong>）</p>
+<p>代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的<strong> U09 </strong>团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该  <strong>team_level</strong> 字段具有正确的文本“<strong>U09</strong>”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： <strong> team_level__exact</strong>）</p>
 
 <pre class="brush: python">## filename: views.py
 
@@ -216,17 +216,17 @@ def index(request):
 <dl>
 </dl>
 
-<p>此功能使用 <strong>render</strong>() 功能创建 <strong>HttpResponse</strong> 发送回浏览器的功能。这个函数是一个快捷方式；它通过组合指定的HTML模版和一些数据来插入模版（在名为 “<strong>context</strong>” 的变量中提供）来创建一个<strong>HTML</strong>文件。在下一节中，我们将介绍如何在其中插入数据以创建<strong>HTML</strong>。</p>
+<p>此功能使用 <strong>render</strong>() 功能创建 <strong>HttpResponse</strong> 发送回浏览器的功能。这个函数是一个快捷方式；它通过组合指定的 HTML 模版和一些数据来插入模版（在名为“<strong>context</strong>”的变量中提供）来创建一个<strong>HTML</strong>文件。在下一节中，我们将介绍如何在其中插入数据以创建<strong>HTML</strong>。</p>
 
 <h3 id="呈现数据_(HTML_模版)">呈现数据 (HTML 模版)</h3>
 
 <p>模版系统允许你指定输出文档的结构，使用<br>
  占位符<br>
  {% if youngest_teams%}<br>
- 来生成页面时填写的数据。模版通常用于创建HTMl，但也可以创建其他类型的文档。Django支持其原生模版系统和另一种流行的Python库（称为jinja2）开箱即用（如果需要，也可以支持其他系统）。</p>
+ 来生成页面时填写的数据。模版通常用于创建 HTMl，但也可以创建其他类型的文档。Django 支持其原生模版系统和另一种流行的 Python 库（称为 jinja2）开箱即用（如果需要，也可以支持其他系统）。</p>
 
-<p>代码片段显示render()了上一节中函数调用的HTML模版的外观。这个模版已经被写入这样的想法，即它将被访问一个列表变量，<br>
- youngest_teams当它被渲染时</p>
+<p>代码片段显示 render() 了上一节中函数调用的 HTML 模版的外观。这个模版已经被写入这样的想法，即它将被访问一个列表变量，<br>
+ youngest_teams 当它被渲染时</p>
 
 <pre class="brush: python">## filename: best/templates/best/index.html
 
@@ -249,20 +249,20 @@ def index(request):
 
 <h2 id="你还能做什么？">你还能做什么？</h2>
 
-<p>前面的部分显示了几乎每个Web应用程序将使用的主要功能：URL映射，视图，模型和模版。Django提供的其他内容包括：</p>
+<p>前面的部分显示了几乎每个 Web 应用程序将使用的主要功能：URL 映射，视图，模型和模版。Django 提供的其他内容包括：</p>
 
 <ul>
- <li><strong>表单</strong>: HTML 表单用于收集用户数据以便在服务器上进行处理。Django简化了表单创建，验证和处理。</li>
- <li><strong>用户身份验证和权限</strong>: Django包含了一个强大的用户身份验证和权限系统，该系统已经构建了安全性。</li>
- <li><strong>缓存</strong>:  与提供静态内容相比，动态创建内容需要更大的计算强度（也更缓慢）。Django提供灵活的缓存，以便你可以存储所有或部分的页面。如无必要，不会重新呈现网页。</li>
- <li><strong>管理网站</strong>: 当你使用基本骨架创建应用时，就已经默认包含了一个Django管理站点。它十分轻松地创建了一个管理页面，使网站管理员能够创建、编辑和查看站点中的任何数据模型。</li>
- <li><strong>序列化数据</strong>: Django可以轻松地将数据序列化，并支持XML或JSON格式。这会有助于创建一个Web服务（Web服务指数据纯粹为其他应用程序或站点所用，并不会在自己的站点中显示），或是有助于创建一个由客户端代码处理和呈现所有数据的网站。</li>
+ <li><strong>表单</strong>: HTML 表单用于收集用户数据以便在服务器上进行处理。Django 简化了表单创建，验证和处理。</li>
+ <li><strong>用户身份验证和权限</strong>: Django 包含了一个强大的用户身份验证和权限系统，该系统已经构建了安全性。</li>
+ <li><strong>缓存</strong>:  与提供静态内容相比，动态创建内容需要更大的计算强度（也更缓慢）。Django 提供灵活的缓存，以便你可以存储所有或部分的页面。如无必要，不会重新呈现网页。</li>
+ <li><strong>管理网站</strong>: 当你使用基本骨架创建应用时，就已经默认包含了一个 Django 管理站点。它十分轻松地创建了一个管理页面，使网站管理员能够创建、编辑和查看站点中的任何数据模型。</li>
+ <li><strong>序列化数据</strong>: Django 可以轻松地将数据序列化，并支持 XML 或 JSON 格式。这会有助于创建一个 Web 服务（Web 服务指数据纯粹为其他应用程序或站点所用，并不会在自己的站点中显示），或是有助于创建一个由客户端代码处理和呈现所有数据的网站。</li>
 </ul>
 
 <h2 id="概要">概要</h2>
 
-<p>恭喜，您已经完成了Django之旅的第一步！您现在应该了解Django的主要优点，一些关于它的历史，以及Django应用程序的每个主要部分可能是什么样子。您还应该了解Python编程语言的一些内容，包括列表，函数和类的语法。</p>
+<p>恭喜，您已经完成了 Django 之旅的第一步！您现在应该了解 Django 的主要优点，一些关于它的历史，以及 Django 应用程序的每个主要部分可能是什么样子。您还应该了解 Python 编程语言的一些内容，包括列表，函数和类的语法。</p>
 
-<p>您已经看到上面的一些真正的Django代码，但与客户端代码不同，您需要设置一个开发环境来运行它。这是我们的下一步。</p>
+<p>您已经看到上面的一些真正的 Django 代码，但与客户端代码不同，您需要设置一个开发环境来运行它。这是我们的下一步。</p>
 
 <div>{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}</div>

@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLElement/dir
 
 <h3 id="Summary" name="Summary">概述</h3>
 
-<p><code><strong>dir</strong></code>属性用于获取或设置当前元素的元素内容的文本书写方向.</p>
+<p><code><strong>dir</strong></code>属性用于获取或设置当前元素的元素内容的文本书写方向。</p>
 
 <h3 id="Syntax_and_values" name="Syntax_and_values">语法</h3>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/HTMLElement/dir
 elementNodeReference.dir = <var>NewWritingDirection</var>;
 </pre>
 
-<p><code>CurrentWritingDirection</code>是一个字符串,表示当前元素的元素内容的文本书写方向. NewWritingDirection是一个变量,表示当前元素新的文本书写方向.</p>
+<p><code>CurrentWritingDirection</code>是一个字符串，表示当前元素的元素内容的文本书写方向. NewWritingDirection 是一个变量，表示当前元素新的文本书写方向。</p>
 
 <p><strong>dir</strong> 的值可以是<strong><code>ltr</code>, 表示从左到右</strong>, 和<strong><code>rtl</code>, 表示从右到左</strong>.</p>
 
@@ -27,22 +27,20 @@ elementNodeReference.dir = <var>NewWritingDirection</var>;
 
 <pre>var parg = document.getElementById("para1");
 parg.dir = "rtl";
-// 改变一个元素的元素内容的文本书写方向.</pre>
+// 改变一个元素的元素内容的文本书写方向。</pre>
 
 <h3 id="Notes" name="Notes">备注</h3>
 
-<p>元素的文本书写方向是指文本的排列顺序(目的是为了支持其他不同语言的系统). 阿拉伯语和希伯来语是典型的使用 rtl 排列顺序的语言.</p>
+<p>元素的文本书写方向是指文本的排列顺序 (目的是为了支持其他不同语言的系统). 阿拉伯语和希伯来语是典型的使用 rtl 排列顺序的语言。</p>
 
-<p>一个图像文件也可以将<code>dir</code>属性设置为"rtl",这样的话,它的<code>title和</code><code>alt</code>属性文字会按"rtl"顺序来显示.</p>
+<p>一个图像文件也可以将<code>dir</code>属性设置为"rtl",这样的话，它的<code>title 和</code><code>alt</code>属性文字会按"rtl"顺序来显示。</p>
 
-<p>当表格的<code>dir</code>属性设置为"rtl"时, 那么该表格的所有列将从右到左排列.</p>
+<p>当表格的<code>dir</code>属性设置为"rtl"时，那么该表格的所有列将从右到左排列。</p>
 
 <div class="geckoVersionNote">
-<p>在Gecko 7.0 之前, 该属性的返回值不一定都是小写的.从 Gecko 7.0开始, 该属性的返回值全部为小写字母, 这也是规范中所规定的.</p>
+<p>在 Gecko 7.0 之前，该属性的返回值不一定都是小写的。从 Gecko 7.0 开始，该属性的返回值全部为小写字母，这也是规范中所规定的。</p>
 </div>
 
 <h3 id="Specification" name="Specification">规范</h3>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-52460740">W3C DOM Level 2 HTML: dir</a></p>
-
-<p>{{ languages( { "ja": "ja/DOM/element.dir", "fr": "fr/DOM/element.dir", "pl": "pl/DOM/element.dir", "en": "en/DOM/element.dir" } ) }}</p>

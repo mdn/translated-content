@@ -4,88 +4,39 @@ slug: Web/API/Document/location
 translation_of: Web/API/Document/location
 ---
 <p>{{APIRef}}</p>
+
 <p><strong><code>Document.location</code></strong> 是一个只读属性，返回一个 {{domxref("Location")}} 对象，包含有文档的 URL 相关的信息，并提供了改变该 URL 和加载其他 URL 的方法。</p>
+
 <p>尽管 <code>Document.location</code> 是一个只读的 <code>Location</code> 对象，你也能够赋给它一个 {{domxref("DOMString")}}。这意味着你能够赋给 document.location 字符串，大多数情况下像这样使用：<code>document.location = 'http://www.example.com'</code>，也可写为<code>document.location.href = 'http://www.example.com'</code>。</p>
+
 <p>只是想获取字符串形式的 URL，可以使用只读属性 {{domxref("document.URL")}}。</p>
+
 <p>If the current document is not in a browsing context, the returned value is <code>null</code>.</p>
+
 <h2 id="Syntax" name="Syntax">语法</h2>
+
 <pre class="brush: js">locationObj = document.location
 document.location = 'http://www.mozilla.org' // Equivalent to document.location.href = 'http://www.mozilla.org'
 </pre>
+
 <h2 id="Example" name="Example">示例</h2>
+
 <pre class="brush: js">dump(document.location);
 // Prints a string like
 // "http://www.example.com/juicybits.html" to the console
 </pre>
+
 <h2 id="规范">规范</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+
+{{Specifications}}
+
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{CompatibilityTable}}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari (WebKit)</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Phone</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
+
+{{Compat("api.Document.location")}}
+
 <h2 id="相关链接">相关链接</h2>
+
 <ul>
  <li>The interface of the returned value, {{domxref("Location")}}.</li>
  <li>A similar information, but attached to the browsing context, {{domxref("Window.location")}}</li>
 </ul>
-<p> </p>

@@ -19,7 +19,7 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 
 <div>{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！</p>
+<p>本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -39,7 +39,7 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 <p>测验开始之前需要下载并保存 <a class="external external-icon" href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html">index.html</a>、<a class="external external-icon" href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/style.css">style.css</a>、<a class="external external-icon" href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt">raw-text.txt</a>。</p>
 
 <div class="note">
-<p><strong>注：</strong> 你还可以用类似 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> 这些在线编辑器来完成测验。你可以把 HTML、CSS 及 JavaScript 代码复制过去。如果你选的工具没有独立的 JavaScript 版面，可以随时在 HTML 页面中添加 <code>&lt;script&gt;</code> 元素。</p>
+<p><strong>注：</strong> 你还可以用类似 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://glitch.com/">Glitch</a> 这些在线编辑器来完成测验。你可以把 HTML、CSS 及 JavaScript 代码复制过去。如果你选的工具没有独立的 JavaScript 版面，可以随时在 HTML 页面中添加 <code>&lt;script&gt;</code> 元素。</p>
 </div>
 
 <h2 id="项目简介">项目简介</h2>
@@ -163,7 +163,7 @@ function result() {
 
 <p>以下是你的工作。</p>
 
-<p>初始化变量和函数:</p>
+<p>初始化变量和函数：</p>
 
 <ol>
  <li>将刚下载的文本文件中的“1. 定义变量和函数”标题项下所有代码复制粘贴至 main.js 中。此时你就有了三个变量（<code>customName</code> 是对“输入自定义的名字”文本框的引用，<code>randomize</code> 是对“随机生成笑话”按钮的引用，<code>story</code> 是对 HTML 底部的、准备存放笑话的 {{htmlelement("p")}} 元素的引用）和一个函数（<code>randomValueFromArray()</code> 取一个数组作参数，随机返回数组中的一个元素）。</li>
@@ -195,7 +195,7 @@ function result() {
  <li>将 <code>newStory</code> 的值设置为 <code>storyText</code>。声明新变量有必要的，只有这样才能在每次按下按钮后、在函数运行时生成一个新的随机笑话。如果直接操作 <code>storyText</code> 则只能生成一次新故事</li>
  <li>将 <code>xItem</code>、<code>yItem</code> 和 <code>zItem</code> 分别设置为 <code>randomValueFromArray(insertX)</code>、<code>randomValueFromArray(insertY)</code> 和 <code>randomValueFromArray(insertZ)</code>。</li>
  <li>接下来将 <code>newStory</code> 中的占位符（<code>:inserta:</code>、<code>:insertb:</code> 和 <code>:insertc:</code> ）替换为 <code>xItem</code>、<code>yItem</code> 和 <code>zItem</code>。有专用的字符串方法可供使用，并用该方法的返回值为 <code>newStory</code> 赋值。每当按下按钮时，这些占位符都会替换为随机的笑话字符串。再给你一点提示，我们所说的这种方法每次只会将所找到的首个子字符串进行替换，因此该方法对某个占位符需要执行两次。</li>
- <li>在第一个 <code>if</code> 块中再次调用这个字符串替换方法，以使 <code>newStory</code> 字符串中的名字“李雷”替换为变量 <code>name</code> 的值 。这里我们说：“如果 <code>customName</code> 中有值，就把故事里的 “李雷”替换成它。” 如果是汉化版将newStory中的“李雷”替换成 <code>name</code> 的值；</li>
+ <li>在第一个 <code>if</code> 块中再次调用这个字符串替换方法，以使 <code>newStory</code> 字符串中的名字“李雷”替换为变量 <code>name</code> 的值。这里我们说：“如果 <code>customName</code> 中有值，就把故事里的“李雷”替换成它。”如果是汉化版将 newStory 中的“李雷”替换成 <code>name</code> 的值；</li>
  <li>在第二个 <code>if</code> 块中检查 <code>american</code> 单选按钮是否被选中。如果选中，就要将故事中的重量和温度值从公斤和摄氏度转换为磅和华氏度，具体事项如下：
   <ol>
    <li>确定英美单位的转换公式。</li>
@@ -203,7 +203,7 @@ function result() {
    <li>就在上述两个变量的定义下方增加两个字符串置换操作，将“35 摄氏度”替换为 <code>temperature</code> 的值，将“140 公斤”替换为 <code>weight</code> 的值。</li>
   </ol>
  </li>
- <li>最后，在函数倒数第二行，将 <code>story.textContent</code>（程序中显示笑话结果的段落） 赋值为 <code>newStory</code>。</li>
+ <li>最后，在函数倒数第二行，将 <code>story.textContent</code>（程序中显示笑话结果的段落）赋值为 <code>newStory</code>。</li>
 </ol>
 
 <h2 id="提示">提示</h2>
@@ -212,10 +212,10 @@ function result() {
  <li>除了在 HTML 文件中引入这个 JavaScript 文件之外，完全不需要编辑 HTML。</li>
  <li>如果你不确定当前 JavaScript 是否正确添加到了你的 HTML 中，可以尝试暂时删除 JavaScript 文件的所有内容，然后加上一些简单但效果显著的 JavaScript 代码，保存文件并刷新浏览器。下面的示例会让 {{htmlelement("html")}} 背景变为红色，如果 JavaScript 成功加载，那么整个浏览器窗口将变红：</li>
  <li>
-  <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'html'</span><span class="punctuation token">)</span><span class="punctuation token">.</span>style<span class="punctuation token">.</span>backgroundColor <span class="operator token">=</span> <span class="string token">'red'</span><span class="punctuation token">;</span></code></pre>
+  <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document.querySelector('html').style.backgroundColor = 'red';</code></pre>
  </li>
- <li><code class="language-js"><span class="punctuation token"><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round()</a></span></code> 是 Javascript 的内建函数，可取得与传入小数最接近的整数。</li>
- <li>本示例中有三类字符串需要替换。可以多次重复 <code>replace()</code> 方法，也可使用正则表达式。例如：<code>var text = 'I am the biggest lover, I love my love';</code> 或 <code>text.replace(/love/g,'like');</code> 会将所有的“love”替换为“like”。记住,字符串本身是不可修改的!</li>
+ <li><code class="language-js"><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round()</a></code> 是 Javascript 的内建函数，可取得与传入小数最接近的整数。</li>
+ <li>本示例中有三类字符串需要替换。可以多次重复 <code>replace()</code> 方法，也可使用正则表达式。例如：<code>var text = 'I am the biggest lover, I love my love';</code> 或 <code>text.replace(/love/g,'like');</code> 会将所有的“love”替换为“like”。记住，字符串本身是不可修改的！</li>
 </ul>
 
 <h2 id="测验">测验</h2>

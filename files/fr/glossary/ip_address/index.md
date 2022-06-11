@@ -17,4 +17,4 @@ Le terme "Adresse IP" se réfère généralement à des adresses IPv4 sur 32 bit
 
 ### Culture générale
 
-- [Adresse IP](https://fr.wikipedia.org/wiki/Adresse_IP) sur Wikipédia
+- [Adresse IP](https://fr.wikipedia.org/wiki/Adresse_IP) sur Wikipédia

@@ -171,10 +171,10 @@ translation_of: Mozilla/Firefox/Releases/10
 <h3 id="Interface_changes">Interface changes</h3>
 
 <ul>
- <li>The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. <strong>XXX need to <a href="/En/Using_an_External_Spell-checker" title="en/Using_an_External_Spell-checker">update docs</a> on how to actually do this.</strong></li>
- <li>The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.</li>
- <li>The <code>nsIDocumentViewer</code> interface has been merged into {{ interface("nsIContentViewer") }}.</li>
- <li>The {{ interface("nsIURIFixup") }} interface has a new flag, <code>FIXUP_FLAG_USE_UTF8</code>, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.</li>
+ <li>The <code>mozISpellCheckingEngine</code> and <code>nsIEditorSpellCheck</code> interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. <strong>XXX need to <a href="/En/Using_an_External_Spell-checker" title="en/Using_an_External_Spell-checker">update docs</a> on how to actually do this.</strong></li>
+ <li>The <code>nsIBrowserHistory.lastPageVisited</code> attribute has been removed.</li>
+ <li>The <code>nsIDocumentViewer</code> interface has been merged into <code>nsIContentViewer</code>.</li>
+ <li>The <code>nsIURIFixup</code> interface has a new flag, <code>FIXUP_FLAG_USE_UTF8</code>, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.</li>
 </ul>
 
 <h3 id="Plug-in_changes">Plug-in changes</h3>
@@ -205,5 +205,3 @@ translation_of: Mozilla/Firefox/Releases/10
  <li><a href="/en/Firefox_2_for_developers" title="en/Firefox 2 for developers">Firefox 2 for developers</a></li>
  <li><a href="/en/Firefox_1.5_for_developers" title="en/Firefox 1.5 for developers">Firefox 1.5 for developers</a></li>
 </ul>
-
-<p>{{ languages( { "ja": "ja/Firefox_10_for_developers" } ) }}</p>

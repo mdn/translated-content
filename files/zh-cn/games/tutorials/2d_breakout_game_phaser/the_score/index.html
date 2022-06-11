@@ -12,47 +12,47 @@ tags:
   - scoring
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第11步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson11.html</font></a><font>完成本课程后找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 11 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html">Gamedev-Phaser-Content-Kit / demos / lesson11.html</a>完成本课程后找到源代码。</p>
 </div>
 
-<p><font>得分也可以使游戏更有趣 - 你可以尝试击败自己的高分，或者你的朋友。</font><font>在这篇文章中，我们将为我们的游戏添加一个评分系统。</font></p>
+<p>得分也可以使游戏更有趣 - 你可以尝试击败自己的高分，或者你的朋友。在这篇文章中，我们将为我们的游戏添加一个评分系统。</p>
 
-<p><font><font>我们将使用一个单独的变量来存储分数和Phaser的</font></font><code>text()</code><font><font>方法将其打印到屏幕上。</font></font></p>
+<p>我们将使用一个单独的变量来存储分数和 Phaser 的<code>text()</code>方法将其打印到屏幕上。</p>
 
 <h2 id="新变量">新变量</h2>
 
-<p><font><font>在以前定义的之后添加两个新变量：</font></font></p>
+<p>在以前定义的之后添加两个新变量：</p>
 
 <pre class="brush: js">// ...
 var scoreText;
 var score = 0;
 </pre>
 
-<h2 id="将得分文字添加到游戏显示"><font><font>将得分文字添加到游戏显示</font></font></h2>
+<h2 id="将得分文字添加到游戏显示">将得分文字添加到游戏显示</h2>
 
-<p><font><font>现在在</font></font><code>create()</code><font><font>函数</font><font>末尾添加这一行</font><font>：</font></font></p>
+<p>现在在<code>create()</code>函数末尾添加这一行：</p>
 
 <pre class="brush: js">scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
 </pre>
 
-<p><font><font>该</font></font><code>text()</code><font><font>方法可以采用四个参数：</font></font></p>
+<p>该<code>text()</code>方法可以采用四个参数：</p>
 
 <ul>
- <li><font><font>x和y坐标来绘制文本。</font></font></li>
- <li><font><font>将呈现的实际文本。</font></font></li>
- <li><font><font>用于呈现文本的字体样式。</font></font></li>
+ <li>x 和 y 坐标来绘制文本。</li>
+ <li>将呈现的实际文本。</li>
+ <li>用于呈现文本的字体样式。</li>
 </ul>
 
-<p><font><font>最后一个参数与CSS样式非常相似。</font><font>在我们的例子中，乐谱文字将为蓝色，大小为18像素，并使用Arial字体。</font></font></p>
+<p>最后一个参数与 CSS 样式非常相似。在我们的例子中，乐谱文字将为蓝色，大小为 18 像素，并使用 Arial 字体。</p>
 
-<h2 id="当砖块被破坏时更新分数"><font><font>当砖块被破坏时更新分数</font></font></h2>
+<h2 id="当砖块被破坏时更新分数">当砖块被破坏时更新分数</h2>
 
-<p><font><font>每当球击中砖块时，我们将增加点数，更新</font></font><code>scoreText</code><font><font>显示当前得分。</font><font>这可以使用</font></font><code>setText()</code><font><font>方法 - 添加以下两行新</font></font><code>ballHitBrick()</code><font><font>功能：</font></font></p>
+<p>每当球击中砖块时，我们将增加点数，更新<code>scoreText</code>显示当前得分。这可以使用<code>setText()</code>方法 - 添加以下两行新<code>ballHitBrick()</code>功能：</p>
 
 <pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
@@ -61,7 +61,7 @@ var score = 0;
 }
 </pre>
 
-<p><font><font>这是现在 - 重新加载你的，</font></font><code>index.html</code><font><font>并检查得分更新每个砖击。</font></font></p>
+<p>这是现在 - 重新加载你的，<code>index.html</code>并检查得分更新每个砖击。</p>
 
 <h2 id="比较你的代码">比较你的代码</h2>
 
@@ -71,6 +71,6 @@ var score = 0;
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>我们现在有一个得分系统，但是如果你不能赢得，那么玩和保持分数是多少？</font><font>让我们看看我们如何能够增加胜利的状态，让我们</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Win_the_game"><font><font>赢得比赛</font></font></a><font><font>。</font></font></p>
+<p>我们现在有一个得分系统，但是如果你不能赢得，那么玩和保持分数是多少？让我们看看我们如何能够增加胜利的状态，让我们<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Win_the_game">赢得比赛</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}</p>

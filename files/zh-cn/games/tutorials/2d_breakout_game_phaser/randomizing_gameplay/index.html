@@ -11,51 +11,51 @@ tags:
   - Tutorial
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16中的</font><font>第</font></font><strong><font><font>16步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson16.html</font></a><font>完成本课程后找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 中的第<strong>16 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html">Gamedev-Phaser-Content-Kit / demos / lesson16.html</a>完成本课程后找到源代码。</p>
 </div>
 
-<p><font>我们的游戏似乎已经完成了，但是如果你看起来足够近，你会发现球在整个游戏中都以相同的角度从桨上弹起。</font><font>这意味着每个游戏都非常相似。</font><font>为了解决这个问题，提高可玩性，我们应该使反弹角度更加随机，在本文中我们将介绍一下如何。</font></p>
+<p>我们的游戏似乎已经完成了，但是如果你看起来足够近，你会发现球在整个游戏中都以相同的角度从桨上弹起。这意味着每个游戏都非常相似。为了解决这个问题，提高可玩性，我们应该使反弹角度更加随机，在本文中我们将介绍一下如何。</p>
 
-<h2 id="让篮板更随机"><font><font>让篮板更随机</font></font></h2>
+<h2 id="让篮板更随机">让篮板更随机</h2>
 
-<p><font><font>我们可以根据撞击桨的确切位置来改变球的速度，通过</font><font>使用沿着下方的线路运行功能</font><font>来修改</font></font><code>x</code><font><font>速度</font></font><code>ballHitPaddle()</code><font><font>。</font><font>现在添加这一行到您的代码，并尝试。</font></font></p>
+<p>我们可以根据撞击桨的确切位置来改变球的速度，通过使用沿着下方的线路运行功能来修改<code>x</code>速度<code>ballHitPaddle()</code>。现在添加这一行到您的代码，并尝试。</p>
 
 <pre class="brush: js">function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
     ball.body.velocity.x = -1*5*(paddle.x-ball.x);
 }</pre>
 
-<p><font>这有点魔法 - 新的速度越高，桨的中心和球撞到的地方之间的距离就越大。</font><font>此外，方向（左或右）由该值确定 - 如果球击中桨的左侧，则其将向左反弹，而击球右侧将向右反弹。</font><font>最终这样做是因为对某些值进行了一些实验，您可以进行自己的实验，看看会发生什么。</font><font>这当然不是完全随机的，但它确实使游戏玩法变得更加不可预测，因此更有趣。</font></p>
+<p>这有点魔法 - 新的速度越高，桨的中心和球撞到的地方之间的距离就越大。此外，方向（左或右）由该值确定 - 如果球击中桨的左侧，则其将向左反弹，而击球右侧将向右反弹。最终这样做是因为对某些值进行了一些实验，您可以进行自己的实验，看看会发生什么。这当然不是完全随机的，但它确实使游戏玩法变得更加不可预测，因此更有趣。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/3yds5ege/","","400")}}</p>
 
-<h2 id="概要"><font><font>概要</font></font></h2>
+<h2 id="概要">概要</h2>
 
-<p><font>你已经完成了所有的课程 - 恭喜你！</font><font>在这一点上，您将了解到Phaser的基础知识和简单2D游戏背后的逻辑。</font></p>
+<p>你已经完成了所有的课程 - 恭喜你！在这一点上，您将了解到 Phaser 的基础知识和简单 2D 游戏背后的逻辑。</p>
 
-<h3 id="练习跟随"><font><font>练习跟随</font></font></h3>
+<h3 id="练习跟随">练习跟随</h3>
 
-<p><font><font>你可以在游戏中做更多的事情 - 添加任何你觉得最好的东西，使它更有趣和有趣。</font><font>Phaser提供的无数有用的方法的基本介绍。</font><font>以下是关于如何扩展我们的小游戏的一些建议，让您开始：</font></font></p>
+<p>你可以在游戏中做更多的事情 - 添加任何你觉得最好的东西，使它更有趣和有趣。Phaser 提供的无数有用的方法的基本介绍。以下是关于如何扩展我们的小游戏的一些建议，让您开始：</p>
 
 <ul>
- <li><font><font>添加第二个球或桨。</font></font></li>
- <li><font><font>改变每次命中背景的颜色。</font></font></li>
- <li><font><font>更改图像并使用自己的图像。</font></font></li>
- <li><font><font>如果砖块被迅速摧毁，并排排列（或您选择的其他奖金），则可获得额外的奖励积分。</font></font></li>
- <li><font><font>创建不同砖块布局的水平。</font></font></li>
+ <li>添加第二个球或桨。</li>
+ <li>改变每次命中背景的颜色。</li>
+ <li>更改图像并使用自己的图像。</li>
+ <li>如果砖块被迅速摧毁，并排排列（或您选择的其他奖金），则可获得额外的奖励积分。</li>
+ <li>创建不同砖块布局的水平。</li>
 </ul>
 
-<p><font><font>一定要检查越来越多的</font></font><a href="http://examples.phaser.io/"><font><font>示例</font></font></a><font><font>列表</font><font>和</font></font><a href="http://docs.phaser.io/"><font><font>官方文档</font></font></a><font><font>，</font><font>如果您需要任何帮助</font><font>，请访问</font></font><a href="http://www.html5gamedevs.com/forum/14-phaser/"><font><font>HTML5 Gamedevs论坛</font></font></a><font><font>。</font></font></p>
+<p>一定要检查越来越多的<a href="http://examples.phaser.io/">示例</a>列表和<a href="http://docs.phaser.io/">官方文档</a>，如果您需要任何帮助，请访问<a href="http://www.html5gamedevs.com/forum/14-phaser/">HTML5 Gamedevs 论坛</a>。</p>
 
-<p><font><font>您也可以返回</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_breakout_game_Phaser"><font><font>本教程系列的索引页</font></font></a><font><font>。</font></font></p>
+<p>您也可以返回<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_breakout_game_Phaser">本教程系列的索引页</a>。</p>
 
 <p>{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>

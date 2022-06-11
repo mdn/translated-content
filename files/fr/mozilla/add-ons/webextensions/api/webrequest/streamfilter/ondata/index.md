@@ -19,7 +19,7 @@ Un gestionnaire d'événements qui sera appelé à plusieurs reprises lorsque le
 
 ## Exemples
 
-Cet exemple ajoute un écouteur `ondata` qui remplace "Example" dans la réponse par  "WebExtension Example".
+Cet exemple ajoute un écouteur `ondata` qui remplace "Example" dans la réponse par  "WebExtension Example".
 
 Notez que cet exemple ne fonctionne que pour les occurrences de "Example" qui sont entièrement contenues dans un bloc de données, et non celles qui chevauchent deux morceaux (ce qui peut arriver \~0.1% du temps pour les gros documents). De plus, il ne traite que les documents codés UTF-8. Une véritable mise en œuvre de ce projet devrait être plus complexe.
 

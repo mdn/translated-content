@@ -39,7 +39,7 @@ Aucun
 
 ## Exemples
 
-Supposons un  [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
+Supposons un  [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
 
 ```js
 // background.js

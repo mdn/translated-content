@@ -11,7 +11,7 @@ original_slug: Web/Events/DOMContentLoaded
 ---
 <p>当初始的 <strong>HTML </strong>文档被完全加载和解析完成之后，<strong><code>DOMContentLoaded</code> </strong>事件被触发，而无需等待样式表、图像和子框架的完全加载。</p>
 
-<p>模拟的css文件：CSS.php</p>
+<p>模拟的 css 文件：CSS.php</p>
 
 <pre class="notranslate">&lt;?php
 sleep(3);</pre>
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 &lt;/script&gt;</pre>
 
-<p>如果将link置于script之后，就会立即打印。</p>
+<p>如果将 link 置于 script 之后，就会立即打印。</p>
 
 <p>{{Note("同步 JavaScript 会暂停 DOM 的解析。")}}</p>
 
@@ -38,18 +38,18 @@ document.addEventListener('DOMContentLoaded',function(){
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">Event</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">是</dd>
- <dt style="float: left; text-align: right; width: 120px;">能否取消</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">能 (尽管一个简单的事件被指定为不可取消)</dd>
- <dt style="float: left; text-align: right; width: 120px;">目标</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">Document</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0pt 0pt 0pt 120px;">无.</dd>
+ <dt>规范</dt>
+ <dd><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
+ <dt>接口</dt>
+ <dd>Event</dd>
+ <dt>是否冒泡</dt>
+ <dd>是</dd>
+ <dt>能否取消</dt>
+ <dd>能 (尽管一个简单的事件被指定为不可取消)</dd>
+ <dt>目标</dt>
+ <dd>Document</dd>
+ <dt>默认行为</dt>
+ <dd>无。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -66,22 +66,22 @@ document.addEventListener('DOMContentLoaded',function(){
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>产生该事件的对象(DOM树中最顶级的那个对象).</td>
+   <td>产生该事件的对象 (DOM 树中最顶级的那个对象).</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>事件类型.</td>
+   <td>事件类型。</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
    <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否冒泡.</td>
+   <td>该事件是否冒泡。</td>
   </tr>
   <tr>
    <td><code>cancelable</code> {{readonlyInline}}</td>
    <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否可取消默认行为.</td>
+   <td>该事件是否可取消默认行为。</td>
   </tr>
  </tbody>
 </table>
@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 
   for(var i=0; i&lt;1000000000; i++){
-      // </code>这个同步脚本将延迟DOM的解析。
-      // 所以DOMContentLoaded事件稍后将启动。
+      // </code>这个同步脚本将延迟 DOM 的解析。
+      // 所以 DOMContentLoaded 事件稍后将启动。
 <code>  } </code><code>
 &lt;/script&gt;</code></pre>
 
@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <p>{{Compat("api.Window.DOMContentLoaded_event")}}</p>
 
-<p><span>至少从Gecko 1.9.2,Chrome 6,以及Safari 4开始,就已经实现了</span><span>该事件的</span><span>冒泡行为.</span></p>
+<p>至少从 Gecko 1.9.2,Chrome 6，以及 Safari 4 开始，就已经实现了该事件的冒泡行为。</p>
 
 <h3 id="兼容不支持该事件的浏览器">兼容不支持该事件的浏览器</h3>
 
-<p>在IE8中,可以使用<code>readystatechange</code>事件来检测DOM文档是否加载完毕.在更早的IE版本中,可以通过每隔一段时间执行一次<code>document.documentElement.doScroll("left")来检测这一状态，</code>因为这条代码在DOM加载完毕之前执行时会抛出错误(throw an error)。</p>
+<p>在 IE8 中，可以使用<code>readystatechange</code>事件来检测 DOM 文档是否加载完毕。在更早的 IE 版本中，可以通过每隔一段时间执行一次<code>document.documentElement.doScroll("left") 来检测这一状态，</code>因为这条代码在 DOM 加载完毕之前执行时会抛出错误 (throw an error)。</p>
 
-<p>诸如jQuery这样的通用JS库，会提供跨浏览器的方法来检测DOM是否加载完成。也有其他专门实现该功能的脚本:<a href="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js" title="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js">contentloaded.js</a> (只能添一个时间监听函数)以及<a href="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js" title="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js">jquery.documentReady.js</a> (并不依赖jQuery,虽然名字中有jquery).</p>
+<p>诸如 jQuery 这样的通用 JS 库，会提供跨浏览器的方法来检测 DOM 是否加载完成。也有其他专门实现该功能的脚本：<a href="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js" title="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js">contentloaded.js</a> (只能添一个时间监听函数) 以及<a href="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js" title="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js">jquery.documentReady.js</a> (并不依赖 jQuery，虽然名字中有 jquery).</p>
 
 <h2 id="相关事件">相关事件</h2>
 

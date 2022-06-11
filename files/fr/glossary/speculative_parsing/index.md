@@ -29,5 +29,5 @@ L'analyse spéculative du constructeur d'arborescence échoue quand `document.wr
 - n'écrivez pas de balisage infini. `<script>document.write("<div></div");</script>` est mauvais.
 - ne terminez pas votre écriture avec un retour chariot . `<script>document.write("Hello World!\r");</script>` est mauvais. `<script>document.write("Hello World!\n");</script>` est valide.
 - notez que l'écriture de balises équilibrées peut entraîner la déduction d'autres balises de telle manière que l'écriture est finalement déséquilibrée. Par exemple, `<script>document.write("<div></div>");</script>` à l'intérieur de l'élément d'en-tête sera interprété comme `<script>document.write("</head><body><div></div>");</script>` qui est déséquilibré.
-- ne pas formater une partie de tableau. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` est mauvais. Par contre, ` <script>document.write("``<table>``<tr><td>Hello World!</td></tr>``</table>``");</script> ` est valide.
+- ne pas formater une partie de tableau. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` est mauvais. Par contre, ` <script>document.write("``<table>``<tr><td>Hello World!</td></tr>``</table>``");</script> ` est valide.
 - À FAIRE : document.write inclus dans d'autres éléments de formatage.

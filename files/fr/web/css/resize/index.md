@@ -63,7 +63,7 @@ Par défaut, les éléments {{HTMLElement("textarea")}} peuvent être redimensio
 
 ```css
 textarea.exemple {
-  resize: none;
+  resize: none;
 }
 ```
 
@@ -108,7 +108,7 @@ p {
   <p class="redimensionnable">
     Ce paragraphe peut être redimensionné car la propriété
     CSS resize vaut 'both' sur cet élément.
-  </p>
+  </p>
 </div>
 ```
 

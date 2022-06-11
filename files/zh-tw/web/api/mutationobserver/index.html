@@ -27,7 +27,7 @@ translation_of: Web/API/MutationObserver
 
 <h2 id="Instance_methods">Instance methods</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><code>void <a href="#observe()">observe</a>( {{domxref("Node")}} target, <a href="#MutationObserverInit">MutationObserverInit</a> options );</code></td>
@@ -90,7 +90,7 @@ translation_of: Web/API/MutationObserver
 
 <div class="note">NOTE: At the very least, <code>childList</code>, <code>attributes</code>, or <code>characterData</code> must be set to <code>true</code>. Otherwise, "An invalid or illegal string was specified" error is thrown.</div>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td class="header">Property</td>
@@ -131,7 +131,7 @@ translation_of: Web/API/MutationObserver
 
 <p><code>MutationRecord</code> is the object that will be passed to the observer's callback. It has the following properties:</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td class="header">Property</td>
@@ -222,55 +222,4 @@ observer.disconnect();
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>18 {{property_prefix("-webkit")}}<br>
-    26</td>
-   <td>{{CompatGeckoDesktop(14)}}</td>
-   <td>11</td>
-   <td>15</td>
-   <td>6.0 {{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>18 {{property_prefix("-webkit")}}<br>
-    26</td>
-   <td>{{CompatGeckoMobile(14)}}</td>
-   <td>11 (8.1)</td>
-   <td>15</td>
-   <td>6 {{property_prefix("-webkit")}}<br>
-    7</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MutationObserver")}}

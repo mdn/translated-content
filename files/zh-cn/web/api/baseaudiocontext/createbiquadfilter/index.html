@@ -28,7 +28,7 @@ var biquadFilter = audioCtx.createBiquadFilter();</pre>
 
 <h2 id="Example" name="Example">示例</h2>
 
-<p>这个例子展示了一个利用AudioContext 创建四项滤波器节点（ Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的For <a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> 样例 （也可以查看  <a href="https://github.com/mdn/voice-change-o-matic">源码</a> ）.</p>
+<p>这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For <a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> 样例（也可以查看  <a href="https://github.com/mdn/voice-change-o-matic">源码</a> ）.</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -57,79 +57,11 @@ biquadFilter.gain.value = 25;</pre>
 
 <h2 id="规格">规格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createBiquadFilter-BiquadFilterNode', 'createBiquadFilter()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0 {{property_prefix("webkit")}}<br>
-    22</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createBiquadFilter")}}
 
 <h2 id="sect1"> </h2>
 

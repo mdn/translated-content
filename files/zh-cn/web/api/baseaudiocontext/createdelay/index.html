@@ -28,13 +28,13 @@ var synthDelay = audioCtx.createDelay(<em>maxDelayTime</em>);</pre>
 
 <p>A {{domxref("DelayNode")}}. The default {{domxref("DelayNode.delayTime")}} if no parameter is passed to <code>createDelay()</code> is 0 seconds.</p>
 
-<p>以上是原文，大意是返回延时时间，没有设置时默认是0</p>
+<p>以上是原文，大意是返回延时时间，没有设置时默认是 0</p>
 
 <p> </p>
 
 <h2 id="示例">示例</h2>
 
-<p>首先是中文版的简洁的示例，这个例子中 话筒里接收到的声音 会延迟3秒 从音响中播放</p>
+<p>首先是中文版的简洁的示例，这个例子中话筒里接收到的声音会延迟 3 秒从音响中播放。</p>
 
 <pre>window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
 
@@ -133,79 +133,11 @@ synthDelay.delayTime.value = delay1;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createDelay-DelayNode-double-maxDelayTime', 'createDelay()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createDelay")}}
 
 <h2 id="See_also">See also</h2>
 

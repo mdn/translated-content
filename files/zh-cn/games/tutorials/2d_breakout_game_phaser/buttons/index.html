@@ -12,58 +12,58 @@ tags:
   - Tutorial
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第15步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson15.html</font></a><font>完成本课程后找到源代码</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 15 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html">Gamedev-Phaser-Content-Kit / demos / lesson15.html</a>完成本课程后找到源代码</p>
 </div>
 
-<p><font>而不是立即开始游戏，我们可以通过添加他们可以按的开始按钮将该决定留给玩家。</font><font>我们来调查如何做到这一点。</font></p>
+<p>而不是立即开始游戏，我们可以通过添加他们可以按的开始按钮将该决定留给玩家。我们来调查如何做到这一点。</p>
 
-<h2 id="新变量"><font><font>新变量</font></font></h2>
+<h2 id="新变量">新变量</h2>
 
-<p><font>我们需要一个变量来存储表示游戏当前是否正在播放的布尔值，另一个代表我们的按钮。</font><font>将以下行添加到其他变量定义之下：</font></p>
+<p>我们需要一个变量来存储表示游戏当前是否正在播放的布尔值，另一个代表我们的按钮。将以下行添加到其他变量定义之下：</p>
 
 <pre class="brush: js">var playing = false;
 var startButton;
 </pre>
 
-<h2 id="加载按钮spritesheet"><font><font>加载按钮spritesheet</font></font></h2>
+<h2 id="加载按钮spritesheet">加载按钮 spritesheet</h2>
 
-<p><font><font>我们可以加载按钮spritesheet与我们加载球的摆动动画相同的方式。</font><font>将以下内容添加到</font></font><code>preload()</code><font><font>函数</font><font>底部</font><font>：</font></font></p>
+<p>我们可以加载按钮 spritesheet 与我们加载球的摆动动画相同的方式。将以下内容添加到<code>preload()</code>函数底部：</p>
 
 <pre class="brush: js">game.load.spritesheet('button', 'img/button.png', 120, 40);
 </pre>
 
-<p><font><font>单个按钮框架宽120像素，高40像素。</font></font></p>
+<p>单个按钮框架宽 120 像素，高 40 像素。</p>
 
-<p><font><font>您还需要</font></font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png"><font><font>从Github抓取按钮spritesheet</font></font></a><font><font>，并将其保存在您的</font></font><code>/img</code><font><font>目录中。</font></font></p>
+<p>您还需要<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png">从 Github 抓取按钮 spritesheet</a>，并将其保存在您的<code>/img</code>目录中。</p>
 
-<h2 id="将按钮添加到游戏中"><font><font>将按钮添加到游戏中</font></font></h2>
+<h2 id="将按钮添加到游戏中">将按钮添加到游戏中</h2>
 
-<p><font><font>使用该</font></font><code>add.button</code><font><font>方法</font><font>可以将新的按钮添加到游戏中</font><font>。</font><font>将以下行添加到</font></font><code>create()</code><font><font>函数</font><font>的底部</font><font>：</font></font></p>
+<p>使用该<code>add.button</code>方法可以将新的按钮添加到游戏中。将以下行添加到<code>create()</code>函数的底部：</p>
 
 <pre class="brush: js">startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
 startButton.anchor.set(0.5);
 </pre>
 
-<p><font><font>该</font></font><code>button()</code><font><font>方法的参数如下：</font></font></p>
+<p>该<code>button()</code>方法的参数如下：</p>
 
 <ul>
- <li><font><font>按钮的x和y坐标</font></font></li>
- <li><font><font>要显示按钮的图形资产的名称</font></font></li>
- <li><font><font>按下按钮时将执行的回调函数</font></font></li>
- <li><code>this</code><font><font>指定执行上下文的</font><font>引用</font></font></li>
- <li><font><font>将用于</font></font><em><font><font>过度</font></font></em><font><font>，</font></font><em><font><font>超出</font></font></em><font><font>和</font></font><em><font><font>向下</font></font></em><font><font>事件</font><font>的框架</font><font>。</font></font></li>
+ <li>按钮的 x 和 y 坐标</li>
+ <li>要显示按钮的图形资产的名称</li>
+ <li>按下按钮时将执行的回调函数</li>
+ <li><code>this</code>指定执行上下文的引用</li>
+ <li>将用于<em>过度</em>，<em>超出</em>和<em>向下</em>事件的框架。</li>
 </ul>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：超越事件与悬停相同，当指针从按钮中移出时，当按下按钮时，向下移动。</font></font></p>
+<p><strong>注意</strong>：超越事件与悬停相同，当指针从按钮中移出时，当按下按钮时，向下移动。</p>
 </div>
 
-<p><font><font>现在我们需要定义</font></font><code>startGame()</code><font><font>上面代码中引用</font><font>的</font><font>函数：</font></font></p>
+<p>现在我们需要定义<code>startGame()</code>上面代码中引用的函数：</p>
 
 <pre class="brush: js">function startGame() {
     startButton.destroy();
@@ -72,13 +72,13 @@ startButton.anchor.set(0.5);
 }
 </pre>
 
-<p><font><font>当按下按钮时，我们删除按钮，设置球的初始速度并将</font></font><code>playing</code><font><font>变量</font><font>设置</font><font>为</font></font><code>true</code><font><font>。</font></font></p>
+<p>当按下按钮时，我们删除按钮，设置球的初始速度并将<code>playing</code>变量设置为<code>true</code>。</p>
 
-<p><font><font>最后对于这一部分，回到你的</font></font><code>create()</code><font><font>函数，找到</font></font><code>ball.body.velocity.set(150, -150);</code><font><font>一行，并删除它。</font><font>你只需要按下按钮时移动球，而不是之前！</font></font></p>
+<p>最后对于这一部分，回到你的<code>create()</code>函数，找到<code>ball.body.velocity.set(150, -150);</code>一行，并删除它。你只需要按下按钮时移动球，而不是之前！</p>
 
-<h2 id="在游戏开始之前仍然保持桨"><font><font>在游戏开始之前仍然保持桨</font></font></h2>
+<h2 id="在游戏开始之前仍然保持桨">在游戏开始之前仍然保持桨</h2>
 
-<p><font><font>它按预期工作，但是当游戏尚未开始时，我们仍然可以移动桨，这看起来有点愚蠢。</font><font>为了阻止这一点，我们可以利用</font></font><code>playing</code><font><font>变量，使得桨只有在游戏开始时才能移动。</font><font>要做到这一点，调整</font></font><code>update()</code><font><font>功能如下所示：</font></font></p>
+<p>它按预期工作，但是当游戏尚未开始时，我们仍然可以移动桨，这看起来有点愚蠢。为了阻止这一点，我们可以利用<code>playing</code>变量，使得桨只有在游戏开始时才能移动。要做到这一点，调整<code>update()</code>功能如下所示：</p>
 
 <pre class="brush: js">function update() {
     game.physics.arcade.collide(ball, paddle, ballHitPaddle);
@@ -91,14 +91,14 @@ startButton.anchor.set(0.5);
 
 <p>这样一来，在所有的装载和准备之后，但在实际游戏开始之前，桨是不可移动的。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/1rpj71k4/","","400")}}</p>
 
-<h2 id="下一步"><font><font>下一步</font></font></h2>
+<h2 id="下一步">下一步</h2>
 
-<p><font><font>在本系列文章中我们将做的最后一件事情是，通过添加一些</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay"><font><font>随机化</font></font></a><font><font>的方式，球从球上弹起来，</font><font>使游戏更有趣</font><font>。</font></font></p>
+<p>在本系列文章中我们将做的最后一件事情是，通过添加一些<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay">随机化</a>的方式，球从球上弹起来，使游戏更有趣。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}</p>

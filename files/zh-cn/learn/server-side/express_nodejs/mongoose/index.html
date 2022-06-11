@@ -18,7 +18,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 <a href="http://mongoosejs.com/">Mongoose</a> 为 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。</p>
+<p>本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 <a href="http://mongoosejs.com/">Mongoose</a> 为 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -27,7 +27,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
    <td><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express 教程 2: 创建站点骨架</a>，了解数据库基础知识。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>使用 Mongoose 设计建造模型。</td>
   </tr>
  </tbody>
@@ -39,7 +39,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <p>Express 应用支持多款数据库，执行新建（<strong>C</strong>reate）、读取（<strong>R</strong>ead）、更新（<strong>U</strong>pdate）和删除（<strong>D</strong>elete）操作 (CRUD) 操作也有诸多途径。本教程先做一个不完全简介，然后对教程选用的机制进行详细介绍。</p>
 
-<h3 id="我可以使用什么数据库">我可以使用什么数据库?</h3>
+<h3 id="我可以使用什么数据库">我可以使用什么数据库？</h3>
 
 <p>Express 应用可以使用 Node 支持的所有数据库（Express 本身不支持数据库管理的任何具体行为/需求）。有许多 <a href="https://expressjs.com/en/guide/database-integration.html">流行的选择</a>，包括 PostgreSQL、MySQL、Redis、SQLite 和 MongoDB。</p>
 
@@ -47,18 +47,18 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <p>更多信息请参阅：<a href="http://www.expressjs.com.cn/guide/database-integration.html">数据库集成</a>（Express 文档）。</p>
 
-<h3 id="与数据库交互的最佳方式是什么">与数据库交互的最佳方式是什么?</h3>
+<h3 id="与数据库交互的最佳方式是什么">与数据库交互的最佳方式是什么？</h3>
 
 <p>与数据库交互有两种方法：</p>
 
 <ul>
- <li>使用数据库的原生查询语言（例如SQL）</li>
- <li>使用对象数据模型（Object Data Model，简称 ODM）或对象关系模型（Object Relational Model，简称 ORM）。 ODM / ORM 能将网站中的数据表示为 JavaScript 对象，然后将它们映射到底层数据库。一些 ORM 只适用某些特定数据库，还有一些是普遍适用的。</li>
+ <li>使用数据库的原生查询语言（例如 SQL）</li>
+ <li>使用对象数据模型（Object Data Model，简称 ODM）或对象关系模型（Object Relational Model，简称 ORM）。ODM / ORM 能将网站中的数据表示为 JavaScript 对象，然后将它们映射到底层数据库。一些 ORM 只适用某些特定数据库，还有一些是普遍适用的。</li>
 </ul>
 
 <p>使用 SQL 或其它受到支持的查询语言才能达到最佳性能。ODM 通常慢一些，因为在对象和数据库格式之间存在一层用于映射的翻译代码，使它不一定会选用最高性能的数据库查询（尤其是普遍使用级别的 ODM，它必须在各类数据库功能方面做出更大的折衷）。</p>
 
-<p>使用 ORM 的好处是：程序员可以继续用 JavaScript 对象的思维而不用转向数据库语义的思维。 在（同一个或不同网站）使用不同数据库时尤为明显。使用 ORM 还可以更方便地对数据进行验证和检查。</p>
+<p>使用 ORM 的好处是：程序员可以继续用 JavaScript 对象的思维而不用转向数据库语义的思维。在（同一个或不同网站）使用不同数据库时尤为明显。使用 ORM 还可以更方便地对数据进行验证和检查。</p>
 
 <div class="note">
 <p><strong>提示：</strong>使用 ODM / ORM 通常可以降低开发和维护成本！除非你非常熟悉本地查询语言，或者项目对性能要求很高，否则强烈推荐使用 ODM。</p>
@@ -72,9 +72,9 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <ul>
  <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a>：一款为异步工作环境设计的 <a href="https://www.mongodb.org/">MongoDB</a> 对象建模工具。</li>
- <li><a href="https://www.npmjs.com/package/waterline">Waterline</a>：从基于Express 的 <a href="http://sailsjs.com/">Sails</a> 框架中提取的 ORM。它提供了一套统一的 API 来访问众多不同的数据库，其中包括 Redis，mySQL，LDAP，MongoDB 和 Postgres。</li>
+ <li><a href="https://www.npmjs.com/package/waterline">Waterline</a>：从基于 Express 的 <a href="http://sailsjs.com/">Sails</a> 框架中提取的 ORM。它提供了一套统一的 API 来访问众多不同的数据库，其中包括 Redis，mySQL，LDAP，MongoDB 和 Postgres。</li>
  <li><a href="https://www.npmjs.com/package/bookshelf">Bookshelf</a>：同时提供基于 promise 和传统回调两套接口，支持事务处理、渴求式/嵌套渴求式关系加载、多态关联，以及对一对一，一对多和多对多关系。支持 PostgreSQL、MySQL 和 SQLite3。</li>
- <li><a href="https://www.npmjs.com/package/objection">Objection</a>：以尽可能简单的方式使用 SQL 和底层数据库引擎的全部功能（支持SQLite3、Postgres 和 MySQL）。</li>
+ <li><a href="https://www.npmjs.com/package/objection">Objection</a>：以尽可能简单的方式使用 SQL 和底层数据库引擎的全部功能（支持 SQLite3、Postgres 和 MySQL）。</li>
  <li><a href="https://www.npmjs.com/package/sequelize">Sequelize</a>：基于 promise 的 Node.js 版 ORM，它支持 PostgreSQL、MySQL、MariaDB、SQLite 和 MSSQL，并提供可靠的事务支持、关系、复本读取等功能。</li>
  <li><a href="https://node-orm.readthedocs.io/en/latest/">Node ORM2</a>：一款 Node.js 对象关系管理系统。支持 MySQL、SQLite 以及 Progress，可以帮助你用面向对象的方法操作数据库。</li>
  <li><a href="http://1602.github.io/jugglingdb/" rel="nofollow">JugglingDB</a>：一款 Node.js 版跨数据库的 ORM。它为多数流行数据库提供了统一接口，当前支持 MySQL、SQLite3、Postgres、MongoDB、Redis 和 js-memory-storage（自写引擎，仅供测试用）。</li>
@@ -89,7 +89,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p>这种 ODM 和数据库的结合方式在 Node 社区中非常流行，一定程度上是因为文档存储和查询系统与 JSON 十分相似，因此 JavaScript 开发人员会非常熟悉。</p>
 
 <div class="note">
-<p><strong>提示：</strong>使用 Mongoose 无需事先了解 MongoDB，但是部分 <a href="http://mongoosejs.com/docs/guide.html">Mongoose文档</a> 对于熟悉 MongoDB 的朋友会更易于使用和理解。</p>
+<p><strong>提示：</strong>使用 Mongoose 无需事先了解 MongoDB，但是部分 <a href="http://mongoosejs.com/docs/guide.html">Mongoose 文档</a> 对于熟悉 MongoDB 的朋友会更易于使用和理解。</p>
 </div>
 
 <p>下面将介绍如何为 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary 网站</a> 定义和访问 Mongoose 模式和模型。</p>
@@ -128,7 +128,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <h3 id="安装_Mongoose_和_MongoDB">安装 Mongoose 和 MongoDB</h3>
 
-<p>Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在您的项目（<strong>package.json</strong>）中 。请在项目文件夹中运行下面的命令以完成安装：</p>
+<p>Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在您的项目（<strong>package.json</strong>）中。请在项目文件夹中运行下面的命令以完成安装：</p>
 
 <pre class="brush: bash notranslate"><code>$ npm install mongoose</code>
 </pre>
@@ -235,13 +235,13 @@ const SomeModel = mongoose.model('SomeModel', SomeModelSchema);</strong></pre>
 <ul>
  <li><code>ObjectId</code>：表示数据库中某一模型的特定实例。例如，一本书可能会使用它来表示其作者对象。它实际只包含指定对象的唯一 ID（<code>_id</code>） 。可以使用 <code>populate()</code> 方法在需要时提取相关信息。</li>
  <li><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a>：任意模式类型。</li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">[]</font>：对象数组。以在此类模型上执行 JavaScript 数组操作（<code>push</code>、<code>pop</code>、<code>unshift</code>等）。上例中有一个没有指定类型的对象数组和一个 <code>String</code> 对象数组，数组中的对象可以是任意类型的。</li>
+ <li>[]：对象数组。以在此类模型上执行 JavaScript 数组操作（<code>push</code>、<code>pop</code>、<code>unshift</code>等）。上例中有一个没有指定类型的对象数组和一个 <code>String</code> 对象数组，数组中的对象可以是任意类型的。</li>
 </ul>
 
 <p>代码还展示了声明字段的两种方法：</p>
 
 <ul>
- <li>字段名和类型名作为键-值对（就像 <code>name</code>、<code>binary</code> 和 <code>living</code>）。</li>
+ <li>字段名和类型名作为键 - 值对（就像 <code>name</code>、<code>binary</code> 和 <code>living</code>）。</li>
  <li>字段名后跟一个对象，在对象中定义 <code>type</code> 和字段的其它选项，可以是：
   <ul>
    <li>默认值。</li>
@@ -300,7 +300,7 @@ const SomeModel = mongoose.model('SomeModel', SomeModelSchema);</strong></pre>
 
 <h4 id="方法和查询助手">方法和查询助手</h4>
 
-<p>模式支持 <a href="http://mongoosejs.com/docs/guide.html#methods">实例方法</a>、<a href="http://mongoosejs.com/docs/guide.html#statics">静态方法</a> 和 <a href="http://mongoosejs.com/docs/guide.html#query-helpers">查询助手</a>。实例方法和静态方法外表很相似，但有本质区别，实例方法针对特定记录，且可以访问当前对象。查询助手可用于扩展 Mongoose 的 <a href="http://mongoosejs.com/docs/queries.html">链式查询 API</a>（例如，在 <code>find()</code>、<code>findOne()</code> 和 <code>findById()</code> 方法外还可以添加一个 “<code>byName</code>” 查询）。</p>
+<p>模式支持 <a href="http://mongoosejs.com/docs/guide.html#methods">实例方法</a>、<a href="http://mongoosejs.com/docs/guide.html#statics">静态方法</a> 和 <a href="http://mongoosejs.com/docs/guide.html#query-helpers">查询助手</a>。实例方法和静态方法外表很相似，但有本质区别，实例方法针对特定记录，且可以访问当前对象。查询助手可用于扩展 Mongoose 的 <a href="http://mongoosejs.com/docs/queries.html">链式查询 API</a>（例如，在 <code>find()</code>、<code>findOne()</code> 和 <code>findById()</code> 方法外还可以添加一个“<code>byName</code>”查询）。</p>
 
 <h3 id="使用模型">使用模型</h3>
 
@@ -527,7 +527,7 @@ SomeModel.find(callback_function);</code></pre>
 
 <p>我们已经初步了解了 Mongoose 以及设计模型的方法，现在该开始搭建 LocalLibrary 网站了。第一件事就是设置 MongoDB 数据库，来存储图书馆的数据。</p>
 
-<p>本教程将使用 <a href="https://mlab.com/welcome/">mLab</a> 免费版“<a href="https://mlab.com/plans/pricing/">沙盒</a>”云数据库。这一版不适用于生产环境，因为它没有冗余设计，但非常适合进行开发和原型设计。选用它是因为它免费且易于设置，并且 mLab 是一家流行的数据库服务供应商，也是生产环境数据库的理想选择（撰写本文时（2019年1月），国内流行的云数据库解决方案有 <a href="https://www.aliyun.com/product/mongodb?spm=5176.10695662.778269.1.2e5b8cb3Hw9HUr">阿里云</a>、<a href="https://cloud.tencent.com/product/mongodb">腾讯云</a>、<a href="https://cloud.baidu.com/product/mongodb.html">百度云</a> 等）。</p>
+<p>本教程将使用 <a href="https://mlab.com/welcome/">mLab</a> 免费版“<a href="https://mlab.com/plans/pricing/">沙盒</a>”云数据库。这一版不适用于生产环境，因为它没有冗余设计，但非常适合进行开发和原型设计。选用它是因为它免费且易于设置，并且 mLab 是一家流行的数据库服务供应商，也是生产环境数据库的理想选择（撰写本文时（2019 年 1 月），国内流行的云数据库解决方案有 <a href="https://www.aliyun.com/product/mongodb?spm=5176.10695662.778269.1.2e5b8cb3Hw9HUr">阿里云</a>、<a href="https://cloud.tencent.com/product/mongodb">腾讯云</a>、<a href="https://cloud.baidu.com/product/mongodb.html">百度云</a> 等）。</p>
 
 <div class="note">
 <p><strong>注：</strong>也可以下载并安装 <a href="https://www.mongodb.com/download-center">对应系统的安装包</a>，设置本地版 MongoDB 数据库。多数指令和使用云数据库是一样的，除了连接时数据库的 URL。</p>
@@ -680,7 +680,7 @@ module.exports = mongoose.model('Author', AuthorSchema);
 
 <h3 id="藏书模型（Book）">藏书模型（Book）</h3>
 
-<p>将下方的 <code>Book</code> 模式代码复制粘贴至 <strong>./models/book.js</strong> 文件中。大体结构与作者模型相似，有三个字符串字段， 一个用于获取特定藏书记录 URL 的虚拟属性，代码最后对模型进行导出。</p>
+<p>将下方的 <code>Book</code> 模式代码复制粘贴至 <strong>./models/book.js</strong> 文件中。大体结构与作者模型相似，有三个字符串字段，一个用于获取特定藏书记录 URL 的虚拟属性，代码最后对模型进行导出。</p>
 
 <pre class="brush: js notranslate">const mongoose = require('mongoose');
 
@@ -779,7 +779,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
   <div class="note">
   <p><strong>注：</strong>无需深究 <a href="https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a>，它只是为数据库添加一些示例数据。</p>
 
-  <p>译注：针对node.js3.0及以后版本，mlab使用“mongodb+srv://”链接而非“mongodb://”， 请对<a href="https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a>源码酌情修改，否则会报错而添加数据失败。</p>
+  <p>译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对<a href="https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a>源码酌情修改，否则会报错而添加数据失败。</p>
   </div>
  </li>
  <li>在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
@@ -799,7 +799,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 
 <p>本节介绍了数据库和 ORM（Node/Express 环境）的一些知识，以及定义 Mongoose 模式与模型的方法。随后为 LocalLibrary 网站设计并实现了 <code>Book</code>、<code>BookInstance</code>、<code>Author</code>、<code>Genre</code> 模型。</p>
 
-<p>本文最后（使用独立运行的脚本）创建了一些测试实例 。下一节将关注如何创建页面以显示这些对象。</p>
+<p>本文最后（使用独立运行的脚本）创建了一些测试实例。下一节将关注如何创建页面以显示这些对象。</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 

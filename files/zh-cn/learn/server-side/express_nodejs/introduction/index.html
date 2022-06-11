@@ -1,6 +1,6 @@
 ---
 title: Express/Node 入门
-slug: learn/Server-side/Express_Nodejs/Introduction
+slug: Learn/Server-side/Express_Nodejs/Introduction
 tags:
   - Express
   - Node
@@ -15,16 +15,16 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">本节将回答“什么是 Node”以及“什么是 Express”这两个问题，并通过主要特征和构成要件来简要介绍 Express 框架的与众不同之处。（只是目前尚不能用一个开发环境来测试它）</p>
+<p>本节将回答“什么是 Node”以及“什么是 Express”这两个问题，并通过主要特征和构成要件来简要介绍 Express 框架的与众不同之处。（只是目前尚不能用一个开发环境来测试它）</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
-   <td>掌握计算机基础知识。了解 <a href="/zh-CN/docs/learn/Server-side">服务器端编程</a>，特别是 <a href="/zh-CN/docs/learn/Server-side/First_steps/Client-Server_overview">客户-服务器交互机制</a>。</td>
+   <th scope="row">预备知识：</th>
+   <td>掌握计算机基础知识。了解 <a href="/zh-CN/docs/Learn/Server-side">服务器端编程</a>，特别是 <a href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview">客户 - 服务器交互机制</a>。</td>
   </tr>
   <tr>
-   <th scope="row">学习目标:</th>
+   <th scope="row">学习目标：</th>
    <td>熟悉 Express，以及它适配 Node 的方式、具体功能和构成要件。</td>
   </tr>
  </tbody>
@@ -39,7 +39,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 <ul>
  <li>卓越的性能表现！Node 为优化 web 应用的吞吐量和扩展度而生，对常见的 web 开发问题是一套绝佳方案（比如实时 web 应用）。</li>
  <li>代码还是熟悉的老伙伴 JavaScript，这意味着在客户端和服务器端“上下文切换”的时间成本更低。</li>
- <li>与传统的 web 服务器语言（例如 Python、PHP 等）相比，JavaScript 理念更新，语言设计的改进带来了诸多好处。许多其它新近流行的语言也可编译/转换成 JavaScript，所以TypeScript、CoffeeScript、ClojureScript、Scala、LiveScript 等等也可以使用。</li>
+ <li>与传统的 web 服务器语言（例如 Python、PHP 等）相比，JavaScript 理念更新，语言设计的改进带来了诸多好处。许多其它新近流行的语言也可编译/转换成 JavaScript，所以 TypeScript、CoffeeScript、ClojureScript、Scala、LiveScript 等等也可以使用。</li>
  <li>Node 包管理工具（node package manager，NPM）提供了数十万个可重用的工具包。它还提供了一流的依赖解决方案，可实现自动化工具链构建。</li>
  <li>Node.js 是可移植的，可运行于 Microsoft Windows、macOS、Linux、Solaris、FreeBSD、OpenBSD、WebOS 和 NonStop OS。此外，许多 web 主机供应商对其提供了良好支持（包括专用的基础框架和构建 Node 站点的文档）。</li>
  <li>它有一个非常活跃的第三方生态系统和开发者社区，很多人愿意提供帮助。</li>
@@ -83,9 +83,9 @@ console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
  <li>返回终端并输入以下命令：</li>
 </ol>
 
-<pre class="brush: bash"><code>$ node "hello.js"</code></pre>
+<pre class="brush: bash">$ node "hello.js"</pre>
 
-<p>最后，在浏览器地址栏中输入 <code>"http://localhost:8000"</code> 并按回车，可以看到一个大面积空白的网页，左上角有 “Hello World" 字样。</p>
+<p>最后，在浏览器地址栏中输入 <code>"http://localhost:8000"</code> 并按回车，可以看到一个大面积空白的网页，左上角有“Hello World" 字样。</p>
 
 <h2 id="Web_框架">Web 框架</h2>
 
@@ -93,7 +93,7 @@ console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
 
 <h2 id="什么是_Express">什么是 Express?</h2>
 
-<p><a href="http://www.expressjs.com.cn/">Express</a> 是最流行的 Node 框架，是许多其它流行 <a href="http://www.expressjs.com.cn/resources/frameworks.html">Node 框架</a> 的底层库。它提供了以下机制：</p>
+<p><a href="https://www.expressjs.com.cn/">Express</a> 是最流行的 Node 框架，是许多其它流行 <a href="https://www.expressjs.com.cn/resources/frameworks.html">Node 框架</a> 的底层库。它提供了以下机制：</p>
 
 <ul>
  <li>为不同 URL 路径中使用不同 HTTP 动词的请求（路由）编写处理程序。</li>
@@ -102,25 +102,25 @@ console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
  <li>在请求处理管道的任何位置添加额外的请求处理“中间件”。</li>
 </ul>
 
-<p>虽然 Express 本身是极简风格的，但是开发人员通过创建各类兼容的中间件包解决了几乎所有的 web 开发问题。这些库可以实现 cookie、会话、用户登录、URL 参数、<code>POST</code> 数据、安全头等功能。可在 <a href="http://www.expressjs.com.cn/resources/middleware.html">Express 中间件</a> 网页中找到由 Express 团队维护的中间件软件包列表（还有一张流行的第三方软件包列表）。</p>
+<p>虽然 Express 本身是极简风格的，但是开发人员通过创建各类兼容的中间件包解决了几乎所有的 web 开发问题。这些库可以实现 cookie、会话、用户登录、URL 参数、<code>POST</code> 数据、安全头等功能。可在 <a href="https://www.expressjs.com.cn/resources/middleware.html">Express 中间件</a> 网页中找到由 Express 团队维护的中间件软件包列表（还有一张流行的第三方软件包列表）。</p>
 
 <div class="note">
 <p><strong>注：</strong> 这种灵活性是一把双刃剑。虽然有一些中间件包可以解决几乎所有问题或需求，但是挑选合适的包有时也会成为一个挑战。这里构建应用没有“不二法门”，Internet 上许多示例也不是最优的，或者只展示了开发 web 应用所需工作的冰山一角。</p>
 </div>
 
-<h2 id="Node_和_Express_从哪儿来">Node 和 Express 从哪儿来?</h2>
+<h2 id="Node_和_Express_从哪儿来">Node 和 Express 从哪儿来？</h2>
 
-<p>Node 发布于 2009 年，最初版本仅支持 Linux。NPM 包管理器发布于 2010年，并于 2012 年支持 Windows。目前（2019 年 1 月）的 LTS 版本是 Node 10.15.0，最新版本是 Node 11.8.0。这只是沧海一粟，更多历史信息请到 <a href="https://zh.wikipedia.org/wiki/Node.js#%E6%AD%B7%E5%8F%B2">维基百科</a> 探究。</p>
+<p>Node 发布于 2009 年，最初版本仅支持 Linux。NPM 包管理器发布于 2010 年，并于 2012 年支持 Windows。目前（2019 年 1 月）的 LTS 版本是 Node 10.15.0，最新版本是 Node 11.8.0。这只是沧海一粟，更多历史信息请到 <a href="https://zh.wikipedia.org/wiki/Node.js#%E6%AD%B7%E5%8F%B2">维基百科</a> 探究。</p>
 
-<p>Express 发布于 2010 年 11 月，目前 API 的版本为 4.16.4。可以查看 <a href="http://www.expressjs.com.cn/changelog/4x.html#4.16.0">修改记录</a> 来查看当前版本的更新信息，或者访问 <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> 页面来查看更详细的历史发布记录。</p>
+<p>Express 发布于 2010 年 11 月，目前 API 的版本为 4.16.4。可以查看 <a href="https://www.expressjs.com.cn/changelog/4x.html#4.16.0">修改记录</a> 来查看当前版本的更新信息，或者访问 <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> 页面来查看更详细的历史发布记录。</p>
 
-<h2 id="Node_和_Express_有多流行">Node 和 Express 有多流行?</h2>
+<h2 id="Node_和_Express_有多流行">Node 和 Express 有多流行？</h2>
 
 <p>一个 web 框架是否流行是至关重要的，因为这预示着它是否会得到持续维护，是否会有更丰富的文档、插件库和技术支持。</p>
 
-<p>服务器端框架的流行程度不容易量化（尽管有 <a href="http://hotframeworks.com/">Hot Frameworks</a> 这样的网站试图通过计算 GitHub 项目和 StackOverflow 问题的数量等机制来评估框架的流行程度)。可以换个角度思考：Node 和 Express 是否“足够流行”、能够避免冷门平台带来的问题？它们还在持续更新吗？遇到问题时能得到帮助吗？学 Express 能挣钱吗？</p>
+<p>服务器端框架的流行程度不容易量化（尽管有 <a href="https://hotframeworks.com/">Hot Frameworks</a> 这样的网站试图通过计算 GitHub 项目和 StackOverflow 问题的数量等机制来评估框架的流行程度)。可以换个角度思考：Node 和 Express 是否“足够流行”、能够避免冷门平台带来的问题？它们还在持续更新吗？遇到问题时能得到帮助吗？学 Express 能挣钱吗？</p>
 
-<p>基于使用 Express 的 <a href="https://expressjs.com/en/resources/companies-using-express.html">知名企业</a> 的数量、维护代码库的人数、以及提供免费或付费支持的人数来说，Express是一个流行的框架！</p>
+<p>基于使用 Express 的 <a href="https://expressjs.com/en/resources/companies-using-express.html">知名企业</a> 的数量、维护代码库的人数、以及提供免费或付费支持的人数来说，Express 是一个流行的框架！</p>
 
 <h2 id="Express_是固执的吗？">Express 是固执的吗？</h2>
 
@@ -136,16 +136,16 @@ console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
 
 <p>传统的数据驱动型网站中，web 应用是用于等待来自浏览器（或其它客户端）的 HTTP 请求的。当 web 应用收到一个请求时，会根据 URL 的模式，以及 <code>POST</code> 数据和 <code>GET</code> 数据可能包含的信息，来解析请求所需的功能。根据请求的内容，web 应用可能会从数据库读或写一些信息，等等操作来满足请求。随后，web 应用会返回给浏览器一个响应，通常是动态生成一页 HTML，在页面中用所取得的信息填充占位符。</p>
 
-<p>使用 Express 可以调用特定 HTTP 动词（<code>GET</code>, <code>POST</code>, <code>SET</code>等）函数和 URL 模式（“路由”）函数，还可以指定模板（“视图”）引擎的种类、模板文件的位置以及渲染响应所使用的模板。可以使用 Express 中间件来添加对 cookie、会话、用户、获取 <code>POST</code>/<code>GET</code> 参数，等。可以使用Node 支持的任何类型数据库（Express 本身没有定义任何数据库行为）。</p>
+<p>使用 Express 可以调用特定 HTTP 动词（<code>GET</code>, <code>POST</code>, <code>SET</code>等）函数和 URL 模式（“路由”）函数，还可以指定模板（“视图”）引擎的种类、模板文件的位置以及渲染响应所使用的模板。可以使用 Express 中间件来添加对 cookie、会话、用户、获取 <code>POST</code>/<code>GET</code> 参数，等。可以使用 Node 支持的任何类型数据库（Express 本身没有定义任何数据库行为）。</p>
 
 <p>下文将介绍 Express 和 Node 的一些常见知识点。</p>
 
 <h3 id="Helloworld_Express">Helloworld Express</h3>
 
-<p>首先来看 Express 的 <a href="http://www.expressjs.com.cn/starter/hello-world.html">Hello World</a> 的示例（下文将逐行讨论）。</p>
+<p>首先来看 Express 的 <a href="https://www.expressjs.com.cn/starter/hello-world.html">Hello World</a> 的示例（下文将逐行讨论）。</p>
 
 <div class="note">
-<p><strong>提示：</strong>如果你已经安装了 Node 和 Express（或者你已经按照 <a href="/zh-CN/docs/learn/Server-side/Express_Nodejs/development_environment">下一节</a> 中的说明安装好了），可以将此代码保存为 <strong>app.js</strong>，并通过在 bash 中这样运行它：</p>
+<p><strong>提示：</strong>如果你已经安装了 Node 和 Express（或者你已经按照 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">下一节</a> 中的说明安装好了），可以将此代码保存为 <strong>app.js</strong>，并通过在 bash 中这样运行它：</p>
 
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
@@ -158,21 +158,21 @@ const app = express();
 });</strong>
 
 app.listen(3000, () =&gt; {
-  console.log('示例应用正在监听 3000 端口!');
+  console.log('示例应用正在监听 3000 端口 !');
 });
 </pre>
 
-<p>前两行通过 <code>require()</code> 导入 Express 模块，并创建了一个 <a href="http://www.expressjs.com.cn/4x/api.html#app">Express 应用</a>。传统上把这个对象命名为 <code>app</code>，它可以进行路由 HTTP 请求、配置中间件、渲染 HTML 视图、注册模板引擎以及修改 <a href="http://www.expressjs.com.cn/4x/api.html#app.settings.table">应用程序设置</a> 等操作，从而控制应用的行为（例如，环境模式，路由定义是否为区分大小写等）。</p>
+<p>前两行通过 <code>require()</code> 导入 Express 模块，并创建了一个 <a href="https://www.expressjs.com.cn/4x/api.html#app">Express 应用</a>。传统上把这个对象命名为 <code>app</code>，它可以进行路由 HTTP 请求、配置中间件、渲染 HTML 视图、注册模板引擎以及修改 <a href="https://www.expressjs.com.cn/4x/api.html#app.settings.table">应用程序设置</a> 等操作，从而控制应用的行为（例如，环境模式，路由定义是否为区分大小写等）。</p>
 
-<p>代码的中间部分（从 <code>app.get()</code> 开始共三行）是<strong>路由定义</strong>。<code>app.get()</code> 方法指定了一个回调（callback）函数，该函数在每监听到一个关于站点根目录路径（<code>'/'</code>）的 HTTP <code>GET</code> 请求时调用。此回调函数以一个请求和一个响应对象作为参数，并直接调用响应的 <code><a href="http://www.expressjs.com.cn/4x/api.html#res.send">send()</a></code> 来返回字符串“Hello World!”</p>
+<p>代码的中间部分（从 <code>app.get()</code> 开始共三行）是<strong>路由定义</strong>。<code>app.get()</code> 方法指定了一个回调（callback）函数，该函数在每监听到一个关于站点根目录路径（<code>'/'</code>）的 HTTP <code>GET</code> 请求时调用。此回调函数以一个请求和一个响应对象作为参数，并直接调用响应的 <code><a href="https://www.expressjs.com.cn/4x/api.html#res.send">send()</a></code> 来返回字符串“Hello World!”</p>
 
-<p>最后一个代码块在 “3000” 端口上启动服务器，并在控制台打印日志。服务器运行时，可用浏览器访问 <code>localhost:3000</code>，看看响应返回了什么。</p>
+<p>最后一个代码块在“3000”端口上启动服务器，并在控制台打印日志。服务器运行时，可用浏览器访问 <code>localhost:3000</code>，看看响应返回了什么。</p>
 
 <h3 id="导入和创建模块">导入和创建模块</h3>
 
 <p>模块是 JavaScript 库或文件，可以用 Node 的 <code>require()</code> 函数将它们导入其它代码。Express 本身就是一个模块，Express 应用中使用的中间件和数据库也是。</p>
 
-<p>下面的代码以 Express 框架为例展示了如何通过名字来导入模块。首先，调用 <code>require()</code> 函数，用字符串（<code>'express'</code>）指定模块的名字，然后调用返回的对象来创建Express 应用 。然后就可以访问应用对象的属性和函数了。</p>
+<p>下面的代码以 Express 框架为例展示了如何通过名字来导入模块。首先，调用 <code>require()</code> 函数，用字符串（<code>'express'</code>）指定模块的名字，然后调用返回的对象来创建 Express 应用。然后就可以访问应用对象的属性和函数了。</p>
 
 <pre class="brush: js">const express = require('express');
 const app = express();
@@ -208,14 +208,14 @@ console.log('边长为 4 的正方形面积为 ' + square.area(4));</pre>
 };</pre>
 
 <div class="blockIndicator note">
-<p><strong>注：</strong>在一个既定的模块内，可以把 <code>exports</code> 想象成 <code>module.exports</code> 的 <a href="http://nodejs.cn/api/modules.html#modules_exports_shortcut">快捷方式</a>。<code>exports</code> 本质上就是在模块初始化前为 <code>module.exports</code> 的值进行初始化的一个变量。这个值是对一个对象（这里是空对象）的引用。这意味着 <code>exports</code> 与 <code>module.exports</code> 引用了同一个对象，也意味着如果为 <code>exports</code> 赋其它值不会影响到 <code>module.exports</code>。</p>
+<p><strong>注：</strong>在一个既定的模块内，可以把 <code>exports</code> 想象成 <code>module.exports</code> 的 <a href="https://nodejs.cn/api/modules.html#modules_exports_shortcut">快捷方式</a>。<code>exports</code> 本质上就是在模块初始化前为 <code>module.exports</code> 的值进行初始化的一个变量。这个值是对一个对象（这里是空对象）的引用。这意味着 <code>exports</code> 与 <code>module.exports</code> 引用了同一个对象，也意味着如果为 <code>exports</code> 赋其它值不会影响到 <code>module.exports</code>。</p>
 </div>
 
-<p>更多信息请参阅 <a href="http://nodejs.cn/api/modules.html">模块</a>（Node API 文档）。</p>
+<p>更多信息请参阅 <a href="https://nodejs.cn/api/modules.html">模块</a>（Node API 文档）。</p>
 
 <h3 id="使用异步_APIs">使用异步 APIs</h3>
 
-<p>JavaScript 代码在完成那些需要一段时间才能完成的操作时，经常会用异步 API 来取代同步 API 。同步 API 下，每个操作完成后才可以进行下一个操作。例如，下列日志函数是同步的，将按顺序将文本打印到控制台（第一、第二）。</p>
+<p>JavaScript 代码在完成那些需要一段时间才能完成的操作时，经常会用异步 API 来取代同步 API。同步 API 下，每个操作完成后才可以进行下一个操作。例如，下列日志函数是同步的，将按顺序将文本打印到控制台（第一、第二）。</p>
 
 <pre class="brush: js">console.log('第一');
 console.log('第二');
@@ -233,11 +233,11 @@ console.log('第二');</pre>
 <p>有多种方法可以让一个异步 API 通知当前应用它已执行完毕。最常用的是在调用异步 API 时注册一个回调函数，在 API 操作结束后将“回调”之。这也是上面的代码所使用的方法。</p>
 
 <div class="note">
-<p class="brush: html"><strong>提示：</strong>如果有一系列独立的异步操作必须按顺序执行，那么使用回调可能会非常“混乱”，因为这会导致多级嵌套回调。人们通常把这个问题叫做“回调地狱”。缓解这个问题有以下办法：良好的编码实践（参考 <a href="http://callbackhell.com/">http://callbackhell.com/</a>）、使用 <a href="https://www.npmjs.com/package/async">async</a> 等模块、迁移至 ES6 并使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 等特性。</p>
+<p><strong>提示：</strong>如果有一系列独立的异步操作必须按顺序执行，那么使用回调可能会非常“混乱”，因为这会导致多级嵌套回调。人们通常把这个问题叫做“回调地狱”。缓解这个问题有以下办法：良好的编码实践（参考 <a href="http://callbackhell.com/">http://callbackhell.com/</a>）、使用 <a href="https://www.npmjs.com/package/async">async</a> 等模块、迁移至 ES6 并使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 等特性。</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>Node 和 Express 有一个一般性约定，即：使用“错误优先”回调。这个约定要求回调函数的第一个参数是错误值，而后续的参数包含成功数据。以下博文很好的解释了这个方法的有效性：<a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/%C2%A0">以 Node.js 之名：理解错误优先回调</a>（fredkschott.com 英文文章）</p>
+<p><strong>注：</strong>Node 和 Express 有一个一般性约定，即：使用“错误优先”回调。这个约定要求回调函数的第一个参数是错误值，而后续的参数包含成功数据。以下博文很好的解释了这个方法的有效性：<a href="https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/">以 Node.js 之名：理解错误优先回调</a>（fredkschott.com 英文文章）</p>
 </div>
 
 <h3 id="创建路由处理器（Route_handler）">创建路由处理器（Route handler）</h3>
@@ -249,7 +249,7 @@ console.log('第二');</pre>
 });
 </pre>
 
-<p>回调函数将请求和响应对象作为参数。该函数直接调用响应的 <code>send()</code> 以返回字符串“Hello World!”。有 <a href="http://www.expressjs.com.cn/guide/routing.html#response-methods">许多其它响应方法</a> 可以结束请求/响应周期，例如，通过调用 <code>res.json()</code> 来发送JSON 响应、调用 <code>res.sendFile()</code> 来发送文件。</p>
+<p>回调函数将请求和响应对象作为参数。该函数直接调用响应的 <code>send()</code> 以返回字符串“Hello World!”。有 <a href="https://www.expressjs.com.cn/guide/routing.html#response-methods">许多其它响应方法</a> 可以结束请求/响应周期，例如，通过调用 <code>res.json()</code> 来发送 JSON 响应、调用 <code>res.sendFile()</code> 来发送文件。</p>
 
 <div class="note">
 <p><strong>JavaScript 提示</strong>：虽然回调函数的参数命名没有限制，但是当调用回调时，第一个参数将始终是请求，第二个参数将始终是响应。合理的命名它们，在回调体中使用的对象将更容易识别。</p>
@@ -259,7 +259,7 @@ console.log('第二');</pre>
 
 <p><code>checkout()</code>, <code>copy()</code>, <strong><code>delete()</code></strong>, <strong><code>get()</code></strong>, <code>head()</code>, <code>lock()</code>, <code>merge()</code>, <code>mkactivity()</code>, <code>mkcol()</code>, <code>move()</code>, <code>m-search()</code>, <code>notify()</code>, <code>options()</code>, <code>patch()</code>, <strong><code>post()</code></strong>, <code>purge()</code>, <strong><code>put()</code></strong>, <code>report()</code>, <code>search()</code>, <code>subscribe()</code>, <code>trace()</code>, <code>unlock()</code>, <code>unsubscribe()</code>.</p>
 
-<p>有一个特殊的路由方法 <code>app.all()</code>，它可以在响应任意 HTTP 方法时调用。用于在特定路径上为所有请求方法加载中间件函数。以下示例（来自 Express 文档）中的处理程序将在监听到针对 <code>/secret</code> 的任意 HTTP 动词（只要 <a href="http://nodejs.cn/api/http.html#http_http_methods">HTTP 模块</a> 支持）的请求后执行。</p>
+<p>有一个特殊的路由方法 <code>app.all()</code>，它可以在响应任意 HTTP 方法时调用。用于在特定路径上为所有请求方法加载中间件函数。以下示例（来自 Express 文档）中的处理程序将在监听到针对 <code>/secret</code> 的任意 HTTP 动词（只要 <a href="https://nodejs.cn/api/http.html#http_http_methods">HTTP 模块</a> 支持）的请求后执行。</p>
 
 <pre class="brush: js">app.all('/secret', (req, res, next) =&gt; {
   console.log('访问私有文件 ...');
@@ -269,7 +269,7 @@ console.log('第二');</pre>
 
 <p>路由器可以匹配 URL 中特定的字符串模式，并从 URL 中提取一些值作为参数传递给路由处理程序（作为请求对象的属性）。</p>
 
-<p>可以为站点的特定部分提供一组路由处理器（使用公共路由前缀进行组合）。（比如对于一个有 维基（Wiki）内容的站点，可以把所有 Wiki 相关的路由放在同一个文件里，使用路由前缀 <em><code>'/wiki/'</code> </em>访问它们）。在 Express 中可以使用 <a href="http://www.expressjs.com.cn/guide/routing.html#express.Router">express.Router</a> 对象实现。例如，可以把所有维基相关的路由都放在一个 <strong>wiki.js </strong>模块中，然后导出 <code>Router</code> 对象，如下：</p>
+<p>可以为站点的特定部分提供一组路由处理器（使用公共路由前缀进行组合）。（比如对于一个有 维基（Wiki）内容的站点，可以把所有 Wiki 相关的路由放在同一个文件里，使用路由前缀 <em><code>'/wiki/'</code> </em>访问它们）。在 Express 中可以使用 <a href="https://www.expressjs.com.cn/guide/routing.html#express.Router">express.Router</a> 对象实现。例如，可以把所有维基相关的路由都放在一个 <strong>wiki.js </strong>模块中，然后导出 <code>Router</code> 对象，如下：</p>
 
 <pre class="brush: js">// wiki.js - 维基路由模块
 
@@ -300,22 +300,22 @@ module.exports = router;
 app.use('/wiki', wiki);
 </pre>
 
-<p>今后将介绍更多关于路由的信息，特别是关于 <code>Router</code> 的用法，请参见 <a href="/zh-CN/docs/learn/Server-side/Express_Nodejs/routes">路由和控制器</a> 一节。</p>
+<p>今后将介绍更多关于路由的信息，特别是关于 <code>Router</code> 的用法，请参见 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes">路由和控制器</a> 一节。</p>
 
 <h3 id="使用中间件（Middleware）">使用中间件（Middleware）</h3>
 
-<p>中间件在 Express 应用中得到了广泛使用，从提供错误处理静态文件、到压缩 HTTP 响应等等。路由函数可以通过向 HTTP 客户端返回一些响应来结束 HTTP “请求 - 响应”周期，而中间件函数<em>通常是</em>对请求或响应执行某些操作，然后调用“栈”里的下一个函数，可能是其它中间件或路由处理器。中间件的调用顺序由应用开发者决定。</p>
+<p>中间件在 Express 应用中得到了广泛使用，从提供错误处理静态文件、到压缩 HTTP 响应等等。路由函数可以通过向 HTTP 客户端返回一些响应来结束 HTTP“请求 - 响应”周期，而中间件函数<em>通常是</em>对请求或响应执行某些操作，然后调用“栈”里的下一个函数，可能是其它中间件或路由处理器。中间件的调用顺序由应用开发者决定。</p>
 
 <div class="note">
 <p><strong>注：</strong>中间件可以执行任何操作，运行任何代码，更改请求和响应对象，也可以<strong>结束“请求 - 响应”周期</strong>。如果它没有结束循环，则必须调用 <code>next()</code> 将控制传递给下一个中间件函数（否则请求将成为悬挂请求）。</p>
 </div>
 
-<p>大多数应用会使用<strong>第三方</strong>中间件来简化常见的 web 开发任务，比如 cookie、会话、用户身份验证、访问请求 <code>POST</code> 和 JSON 数据，日志记录等。参见 <a href="http://www.expressjs.com.cn/resources/middleware.html" rel="noopener">Express 团队维护的中间件包列表</a>（包含受欢迎的第三方包）。NPM 有提供其它 Express 包。</p>
+<p>大多数应用会使用<strong>第三方</strong>中间件来简化常见的 web 开发任务，比如 cookie、会话、用户身份验证、访问请求 <code>POST</code> 和 JSON 数据，日志记录等。参见 <a href="https://www.expressjs.com.cn/resources/middleware.html" rel="noopener">Express 团队维护的中间件包列表</a>（包含受欢迎的第三方包）。NPM 有提供其它 Express 包。</p>
 
-<p>要使用第三方中间件，首先需要使用 NPM 将其安装到当前应用中。比如，要安装 <a href="http://www.expressjs.com.cn/resources/middleware/morgan.html" rel="noopener">morgan</a> HTTP 请求记录器中间件，可以这样做：</p>
+<p>要使用第三方中间件，首先需要使用 NPM 将其安装到当前应用中。比如，要安装 <a href="https://www.expressjs.com.cn/resources/middleware/morgan.html" rel="noopener">morgan</a> HTTP 请求记录器中间件，可以这样做：</p>
 
-<pre class="brush: bash"><code>$ npm install morgan
-</code></pre>
+<pre class="brush: bash">$ npm install morgan
+</pre>
 
 <p>然后，您可以对 <em>Express 应用对象</em>调用 <code>use()</code> 将该中间件添加到栈：</p>
 
@@ -356,14 +356,14 @@ app.get('/', a_middleware_function);
 app.listen(3000);</pre>
 
 <div class="note">
-<p><strong>JavaScript提示：</strong>上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。</p>
+<p><strong>JavaScript 提示：</strong>上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。</p>
 </div>
 
-<p>请参阅 Express 文档中关于 <a href="http://www.expressjs.com.cn/guide/using-middleware.html" rel="noopener">使用</a> 和 <a href="http://www.expressjs.com.cn/guide/writing-middleware.html" rel="noopener">开发</a> Express 中间件的内容。</p>
+<p>请参阅 Express 文档中关于 <a href="https://www.expressjs.com.cn/guide/using-middleware.html" rel="noopener">使用</a> 和 <a href="https://www.expressjs.com.cn/guide/writing-middleware.html" rel="noopener">开发</a> Express 中间件的内容。</p>
 
 <h3 id="托管静态文件">托管静态文件</h3>
 
-<p>可以使用 <a href="http://www.expressjs.com.cn/4x/api.html#express.static">express.static</a> 中间件来托管静态文件，包括图片、CSS 以及 JavaScript 文件（其实 <code>static()</code> 是 Express 提供的<strong>原生</strong>中间件函数之一）。例如，可以通过下面一行来托管 'public' 文件夹（应位于 Node 调用的同一级）中的文件：</p>
+<p>可以使用 <a href="https://www.expressjs.com.cn/4x/api.html#express.static">express.static</a> 中间件来托管静态文件，包括图片、CSS 以及 JavaScript 文件（其实 <code>static()</code> 是 Express 提供的<strong>原生</strong>中间件函数之一）。例如，可以通过下面一行来托管 'public' 文件夹（应位于 Node 调用的同一级）中的文件：</p>
 
 <pre class="brush: js">app.use(express.static('public'));
 </pre>
@@ -382,7 +382,7 @@ http://localhost:3000/about.html
 app.use(express.static('media'));
 </pre>
 
-<p>还可以为静态 URL 创建一个虚拟的前缀，而不是直接把文件添加到根 URL 里。比如，这里 <a href="http://www.expressjs.com.cn/4x/api.html#app.use">指定了一个装载路径</a>，于是这些文件将通过 '/media' 前缀调用：</p>
+<p>还可以为静态 URL 创建一个虚拟的前缀，而不是直接把文件添加到根 URL 里。比如，这里 <a href="https://www.expressjs.com.cn/4x/api.html#app.use">指定了一个装载路径</a>，于是这些文件将通过 '/media' 前缀调用：</p>
 
 <pre class="brush: js">app.use('/media', express.static('public'));
 </pre>
@@ -394,7 +394,7 @@ http://localhost:3000/media/video/cat.mp4
 http://localhost:3000/media/cry.mp3</code>
 </pre>
 
-<p>更多信息请参阅 Express 文档 <a href="http://www.expressjs.com.cn/starter/static-files.html">托管静态文件</a>。</p>
+<p>更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/starter/static-files.html">托管静态文件</a>。</p>
 
 <h3 id="错误处理">错误处理</h3>
 
@@ -415,10 +415,10 @@ http://localhost:3000/media/cry.mp3</code>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>HTTP404 和其它“错误”状态码不作为错误处理。可使用中间件来自行处理这些状态。更多信息请参阅 Express 文档 <a href="http://www.expressjs.com.cn/starter/faq.html#如何处理-404-响应">FAQ</a>。</p>
+<p><strong>注：</strong>HTTP404 和其它“错误”状态码不作为错误处理。可使用中间件来自行处理这些状态。更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/starter/faq.html#如何处理-404-响应">FAQ</a>。</p>
 </div>
 
-<p>更多信息请参阅 Express 文档 <a href="http://www.expressjs.com.cn/guide/error-handling.html">错误处理</a>。</p>
+<p>更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/guide/error-handling.html">错误处理</a>。</p>
 
 <h3 id="使用数据库">使用数据库</h3>
 
@@ -426,8 +426,8 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>使用数据库前先要用 NPM 来安装驱动程序。比如，要安装流行的 NoSQL 数据库 MongoDB 的驱动程序，可运行以下命令：</p>
 
-<pre class="brush: bash"><code>$ npm install mongodb
-</code></pre>
+<pre class="brush: bash">$ npm install mongodb
+</pre>
 
 <p>数据库可以安装在本地或云端。在 Express 代码中 <code>require()</code> 驱动程序，连接，然后就可以执行增加、读取、更新、删除四种操作（CRUD）。以下示例展示了如何查找 MongoDB 表中 '哺乳动物' 的记录：</p>
 
@@ -449,11 +449,11 @@ MongoClient.connect('mongodb://localhost:27017/animals', (err, client) =&gt; {
 
 <p>还有一种通过“对象关系映射（Object Relational Mapper，简称 ORM）”间接访问数据库的方法。可以把数据定义为“对象”或“模型”，然后由 ORM 根据给定的数据库格式搞定所有映射关系。这种方法对于开发者有一个好处：可以用 JavaScript 对象的思维而无需直接使用数据库语法，同时传进的数据也有现成的检查工具。稍后详细讨论数据库问题。.</p>
 
-<p>更多信息请参阅 Express 文档 <a href="http://www.expressjs.com.cn/guide/database-integration.html">数据库集成</a>。</p>
+<p>更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/guide/database-integration.html">数据库集成</a>。</p>
 
 <h3 id="渲染数据（视图，view）">渲染数据（视图，view）</h3>
 
-<p>模板引擎可为输出文档的结构指定一个模板，在数据处先放置占位符，并于页面生成时填充。模板通常用于生成 HTML，也可以生成其它类型的文档。Express 支持 <a href="https://github.com/expressjs/express/wiki#template-engines">多个版本的模板引擎</a>，可以参阅：<a href="https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/">JavaScript 模板引擎对比评测：Jade、Mustache、Dust与其它</a>。</p>
+<p>模板引擎可为输出文档的结构指定一个模板，在数据处先放置占位符，并于页面生成时填充。模板通常用于生成 HTML，也可以生成其它类型的文档。Express 支持 <a href="https://github.com/expressjs/express/wiki#template-engines">多个版本的模板引擎</a>，可以参阅：<a href="https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/">JavaScript 模板引擎对比评测：Jade、Mustache、Dust 与其它</a>。</p>
 
 <p>在应用设置代码中声明了模板引擎的名称和位置后，Express 可以使用 <code>'views'</code> 和 <code>'view engines'</code> 设置来寻找模板，如下所示（必须事先安装包含模板库的包！）：</p>
 
@@ -467,26 +467,23 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'some_template_engine_name');
 </pre>
 
-<p>模板的外观取决于所使用的引擎。假设一个模板文件名为 "index.&lt;template_extension&gt;"，其中包括数据变量 <code>'title'</code> 和 <code>'message'</code> 的两个占位符，可以在路由处理器函数中调用 <code><a href="http://www.expressjs.com.cn/4x/api.html#res.render">Response.render()</a></code> 来创建并发送 HTML 响应：</p>
+<p>模板的外观取决于所使用的引擎。假设一个模板文件名为 "index.&lt;template_extension&gt;"，其中包括数据变量 <code>'title'</code> 和 <code>'message'</code> 的两个占位符，可以在路由处理器函数中调用 <code><a href="https://www.expressjs.com.cn/4x/api.html#res.render">Response.render()</a></code> 来创建并发送 HTML 响应：</p>
 
 <pre class="brush: js">app.get('/', (req, res) =&gt; {
   res.render('index', { title: '关于狗狗', message: '狗狗很牛！' });
 });</pre>
 
-<p>更多信息请参见 Express 文档 <a href="http://www.expressjs.com.cn/guide/using-template-engines.html">使用模板引擎</a>。</p>
+<p>更多信息请参见 Express 文档 <a href="https://www.expressjs.com.cn/guide/using-template-engines.html">使用模板引擎</a>。</p>
 
 <h3 id="文件结构">文件结构</h3>
 
-<p>Express 不对文件结构和组件的选用做任何约定。路由、视图、静态文件，以及其它应用具体逻辑均可按任意文件结构保存在任意数量的文件中。当然可以让整个 Express 应用保存在单一文件中，但是一般情况下，把应用按功能（比如账户管理、博客、论坛）和架构问题域（比如 <a href="/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC 架构</a> 中的模型、视图、控制器）进行拆分是有意义的。</p>
+<p>Express 不对文件结构和组件的选用做任何约定。路由、视图、静态文件，以及其它应用具体逻辑均可按任意文件结构保存在任意数量的文件中。当然可以让整个 Express 应用保存在单一文件中，但是一般情况下，把应用按功能（比如账户管理、博客、论坛）和架构问题域（比如 <a href="/zh-CN/docs/Glossary/MVC">MVC 架构</a> 中的模型、视图、控制器）进行拆分是有意义的。</p>
 
 <p>后文将使用 <strong>Express 应用生成器 </strong>来创建一个模块化的应用框架，从而可以更方便的扩展出新的 web 应用。</p>
 
-<ul>
-</ul>
-
 <h2 id="小结">小结</h2>
 
-<p>恭喜，你迈出了 Express/Node 旅程的第一步 ！你现在已经了解了 Express 与 Node 的主要优势，并大致了解了 Express 应用的结构 (路由处理器、中间件、错误处理和模板代码)。你还了解到 Express 作为一个高度包容的框架，让你在组织应用结构和库时更自由，更开放！</p>
+<p>恭喜，你迈出了 Express/Node 旅程的第一步！你现在已经了解了 Express 与 Node 的主要优势，并大致了解了 Express 应用的结构 (路由处理器、中间件、错误处理和模板代码)。你还了解到 Express 作为一个高度包容的框架，让你在组织应用结构和库时更自由，更开放！</p>
 
 <p>诚然，Express 是一个非常轻量的 web 应用框架，这是有意为之的，它巨大的裨益和无尽的潜能都来自第三方的库和功能。今后的章节会详细讨论。下一节会讲如何设置 Node 开发环境，之后就能开始 Express 的实战了。</p>
 
@@ -494,23 +491,22 @@ app.set('view engine', 'some_template_engine_name');
 
 <ul>
  <li><a href="https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44">Venkat.R - 管理多版本 Node</a>（英文页面）</li>
- <li><a href="http://nodejs.cn/api/modules.html">模块</a> (Node API 中文文档)</li>
- <li><a href="http://www.expressjs.com.cn/">Express 主页</a> （Express 国内镜像）</li>
- <li><a href="http://www.expressjs.com.cn/starter/basic-routing.html">路由入门</a>（Express 英文文档）</li>
- <li><a href="http://www.expressjs.com.cn/guide/routing.html">路由指南</a> （Express 英文文档）</li>
- <li><a href="http://www.expressjs.com.cn/guide/using-template-engines.html">使用模板引擎</a> （Express 英文文档）</li>
- <li><a href="http://www.expressjs.com.cn/guide/using-middleware.html">使用中间件</a>（Express 英文文档）</li>
- <li><a href="http://www.expressjs.com.cn/guide/writing-middleware.html">开发中间件</a>（Express 英文文档）</li>
- <li><a href="http://www.expressjs.com.cn/guide/database-integration.html">数据库集成</a>（Express 英文文档）</li>
- <li><a href="http://www.expressjs.com.cn/starter/static-files.html">托管静态文件</a> （Express 中文文档）</li>
- <li><a href="http://www.expressjs.com.cn/guide/error-handling.html">错误处理</a> （Express 英文文档）</li>
+ <li><a href="https://nodejs.cn/api/modules.html">模块</a> (Node API 中文文档)</li>
+ <li><a href="https://www.expressjs.com.cn/">Express 主页</a> （Express 国内镜像）</li>
+ <li><a href="https://www.expressjs.com.cn/starter/basic-routing.html">路由入门</a>（Express 英文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/guide/routing.html">路由指南</a> （Express 英文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/guide/using-template-engines.html">使用模板引擎</a> （Express 英文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/guide/using-middleware.html">使用中间件</a>（Express 英文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/guide/writing-middleware.html">开发中间件</a>（Express 英文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/guide/database-integration.html">数据库集成</a>（Express 英文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/starter/static-files.html">托管静态文件</a> （Express 中文文档）</li>
+ <li><a href="https://www.expressjs.com.cn/guide/error-handling.html">错误处理</a> （Express 英文文档）</li>
 </ul>
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
 
 <h2 id="本章目录">本章目录</h2>
 
-<div>
 <ul>
  <li><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node 入门</a></li>
  <li><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">设置 Node（Express）开发环境</a></li>
@@ -522,4 +518,3 @@ app.set('view engine', 'some_template_engine_name');
  <li><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6：使用表单</a></li>
  <li><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment">Express 教程 7：部署至生产环境</a></li>
 </ul>
-</div>

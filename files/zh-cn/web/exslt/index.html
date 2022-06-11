@@ -28,8 +28,8 @@ EXSLT is a set of extensions to <a href="en/XSLT">XSLT</a>. There are a number o
 <p>To use an EXSLT function, you need to declare the namespace the function is in, and then use the appropriate prefix when calling the function. For example, to use the regular expressions package:
 </p>
 <pre class="eval">&lt;xsl:stylesheet version="1.0"
-                xmlns:xsl="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>"
-                xmlns:regexp="<span class="nowiki">http://exslt.org/regular-expressions</span>"&gt;
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:regexp="http://exslt.org/regular-expressions"&gt;
   &lt;xsl:template match="/"&gt;
     ...
     &lt;xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/&gt;
@@ -39,14 +39,14 @@ EXSLT is a set of extensions to <a href="en/XSLT">XSLT</a>. There are a number o
 &lt;/xsl:stylesheet&gt;
 </pre>
 <h3 id="Common" name="Common">Common</h3>
-<p>The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is <code><span class="nowiki">http://exslt.org/common</span></code>.
+<p>The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is <code>http://exslt.org/common</code>.
 </p>
 <h4 id="Functions" name="Functions"> Functions </h4>
 <ul><li> <a href="en/EXSLT/exsl/node-set">exsl:node-set</a>
 </li><li> <a href="en/EXSLT/exsl/object-type">exsl:object-type</a>
 </li></ul>
 <h3 id="Math" name="Math">Math</h3>
-<p>The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is <code><span class="nowiki">http://exslt.org/math</span></code>.
+<p>The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is <code>http://exslt.org/math</code>.
 </p>
 <h4 id="Functions_2" name="Functions_2">Functions</h4>
 <ul><li> <a href="en/EXSLT/math/highest">math:highest</a>
@@ -56,7 +56,7 @@ EXSLT is a set of extensions to <a href="en/XSLT">XSLT</a>. There are a number o
 </li></ul>
 <h3 id="Regular_expressions" name="Regular_expressions">Regular expressions</h3>
 <p>The EXSLT Regular Expressions package provides functions that allow testing, matching, and replacing text using JavaScript style regular expressions.
-</p><p>The EXSLT Regular Expressions namespace is <code><span class="nowiki">http://exslt.org/regular-expressions</span></code>.
+</p><p>The EXSLT Regular Expressions namespace is <code>http://exslt.org/regular-expressions</code>.
 </p>
 <h4 id="Functions_3" name="Functions_3">Functions</h4>
 <ul><li> <a href="en/EXSLT/regexp/match">regexp:match</a>
@@ -64,7 +64,7 @@ EXSLT is a set of extensions to <a href="en/XSLT">XSLT</a>. There are a number o
 </li><li> <a href="en/EXSLT/regexp/test">regexp:test</a>
 </li></ul>
 <h3 id="Sets" name="Sets">Sets</h3>
-<p>The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is <code><span class="nowiki">http://exslt.org/sets</span></code>.
+<p>The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is <code>http://exslt.org/sets</code>.
 </p>
 <h4 id="Functions_4" name="Functions_4">Functions</h4>
 <ul><li> <a href="en/EXSLT/set/difference">set:difference</a>
@@ -75,7 +75,7 @@ EXSLT is a set of extensions to <a href="en/XSLT">XSLT</a>. There are a number o
 </li><li> <a href="en/EXSLT/set/trailing">set:trailing</a>
 </li></ul>
 <h3 id="Strings" name="Strings">Strings</h3>
-<p>The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is <code><span class="nowiki">http://exslt.org/strings</span></code>.
+<p>The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is <code>http://exslt.org/strings</code>.
 </p>
 <h4 id="Functions_5" name="Functions_5">Functions</h4>
 <ul><li> <a href="en/EXSLT/str/concat">str:concat</a>
@@ -87,6 +87,3 @@ EXSLT is a set of extensions to <a href="en/XSLT">XSLT</a>. There are a number o
 </li></ul>
 <p><br>
 </p>
-<div class="noinclude">
-</div>
-{{ languages( { "es": "es/EXSLT", "fr": "fr/EXSLT", "ja": "ja/EXSLT", "pl": "pl/EXSLT" } ) }}

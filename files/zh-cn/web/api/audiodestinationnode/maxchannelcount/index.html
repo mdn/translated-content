@@ -6,9 +6,9 @@ translation_of: Web/API/AudioDestinationNode/maxChannelCount
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioDestinationNode") }} 接口的<code>maxchannelCount属性是</code>一个表示物理设备能处理最大通道数的无符号长整型数。</p>
+<p>{{ domxref("AudioDestinationNode") }} 接口的 <code>maxchannelCount</code> 属性是一个表示物理设备能处理最大通道数的无符号长整型数。</p>
 
-<p> {{domxref("AudioNode.channelCount")}} 属性值只能在 0和这个值 (两端包含)之间。如果 <code>maxChannelCount</code>为 <code>0</code>,例如在 {{domxref("OfflineAudioContext")}}, 表示音频通道不能被改变。</p>
+<p> {{domxref("AudioNode.channelCount")}} 属性值只能在 0 和这个值 (两端包含) 之间。如果 <code>maxChannelCount</code>为 <code>0</code>,例如在 {{domxref("OfflineAudioContext")}}, 表示音频通道不能被改变。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -24,7 +24,7 @@ myDestination.maxChannelCount = 2;
 
 <h2 id="例子">例子</h2>
 
-<p>下面假设了一个简单的音频环境，设置其中 <code>AudioDestinationNode的</code><code>maxChannelCount值为</code> 2:</p>
+<p>下面假设了一个简单的音频环境，设置其中 <code>AudioDestinationNode</code> 的 <code>maxChannelCount</code> 值为 2：</p>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
@@ -32,79 +32,15 @@ source.connect(gainNode);
 audioCtx.destination.maxChannelCount = 2;
 gainNode.connect(audioCtx.destination);</pre>
 
-<p>为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子,如 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> 或者 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
+<p>为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子，如 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> 或者 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioDestinationNode-maxChannelCount', 'maxChannelCount')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioDestinationNode.maxChannelCount")}}
 
 <h2 id="其他">其他</h2>
 

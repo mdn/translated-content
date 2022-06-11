@@ -21,28 +21,28 @@ translation_of: Web/API/Notification/Notification
  <dt><em>title</em></dt>
  <dd>定义一个通知的标题，当它被触发时，它将显示在通知窗口的顶部。</dd>
  <dt><em>options</em> {{optional_inline}}</dt>
- <dd>options对象包含应用于通知的任何自定义设置选项。选项有：
+ <dd>options 对象包含应用于通知的任何自定义设置选项。选项有：
  <ul>
-  <li><code>dir</code>: 显示通知的方向。默认是auto，跟随浏览器语言设置行为，你也可以通过设置ltr和rtl的值来覆盖该行为（虽然大多数浏览器似乎忽略这些设置）</li>
-  <li><code>lang</code>: 通知的语言，如使用代表一个<a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47语言标签</a>的  {{domxref("DOMString")}} 指定的。请参阅Sitepoint <a href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">ISO 2字母语言代码</a>页面，以获得简单的参考。</li>
-  <li>badge: 一个 {{domxref("USVString")}} 包含用于表示通知的图像的URL, 当没有足够的空间来显示通知本身时。</li>
+  <li><code>dir</code>: 显示通知的方向。默认是 auto，跟随浏览器语言设置行为，你也可以通过设置 ltr 和 rtl 的值来覆盖该行为（虽然大多数浏览器似乎忽略这些设置）</li>
+  <li><code>lang</code>: 通知的语言，如使用代表一个<a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47 语言标签</a>的  {{domxref("DOMString")}} 指定的。请参阅 Sitepoint <a href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">ISO 2 字母语言代码</a>页面，以获得简单的参考。</li>
+  <li>badge: 一个 {{domxref("USVString")}} 包含用于表示通知的图像的 URL，当没有足够的空间来显示通知本身时。</li>
   <li><code>body</code>: 一个 {{domxref("DOMString")}} 表示通知的正文，将显示在标题下方。</li>
   <li><code>tag</code>:  一个 {{domxref("DOMString")}} 代表通知的 一个识别标签。</li>
-  <li><code>icon</code>:  一个 {{domxref("USVString")}} 包含要在通知中显示的图标的URL。</li>
-  <li><code>image</code>: 一个 {{domxref("USVSTring")}}包含要在通知中显示的图像的URL。</li>
+  <li><code>icon</code>:  一个 {{domxref("USVString")}} 包含要在通知中显示的图标的 URL。</li>
+  <li><code>image</code>: 一个 {{domxref("USVSTring")}}包含要在通知中显示的图像的 URL。</li>
   <li><code>data</code>: 您想要与通知相关联的任意数据。这可以是任何数据类型。</li>
   <li><code>vibrate</code>: 一个振动模式 <a href="/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns">vibration pattern</a> 设备的振动硬件在通知触发时发出。</li>
-  <li><code>renotify</code>: 一个 {{domxref("Boolean")}} 指定在新通知替换旧通知后是否应通知用户。默认值为false，这意味着它们不会被通知。</li>
-  <li><code>requireInteraction</code>: 表示通知应保持有效，直到用户点击或关闭它，而不是自动关闭。默认值为false。</li>
+  <li><code>renotify</code>: 一个 {{domxref("Boolean")}} 指定在新通知替换旧通知后是否应通知用户。默认值为 false，这意味着它们不会被通知。</li>
+  <li><code>requireInteraction</code>: 表示通知应保持有效，直到用户点击或关闭它，而不是自动关闭。默认值为 false。</li>
  </ul>
 
  <p>以下选项列在最新规范中，但在任何浏览器中都不支持. It is advisable to keep checking back regularly to see if the status of these has updated, and let us know if you find any out of date information.</p>
 
  <ul>
-  <li><code>silent</code>: 一个 {{domxref("Boolean")}} 指明通知是否应该是无声的,即,不需要发出声音或振动，无论设备设置如何。默认值为false，这意味着它不会保持静默。</li>
-  <li><code>sound</code>:一个 {{domxref("USVString")}} 包含通知触发时要播放的音频文件的URL。</li>
-  <li><code>noscreen</code>: 一个 {{domxref("Boolean")}} 指定通知触发是否应启用设备的屏幕。 默认值为false，这意味着它将启用屏幕。</li>
-  <li><code>sticky</code>: 一个 {{domxref("Boolean")}} 指明通知是否应该是“粘”, 即不易被用户清理。默认值为false，这意味着它不会粘。</li>
+  <li><code>silent</code>: 一个 {{domxref("Boolean")}} 指明通知是否应该是无声的，即，不需要发出声音或振动，无论设备设置如何。默认值为 false，这意味着它不会保持静默。</li>
+  <li><code>sound</code>:一个 {{domxref("USVString")}} 包含通知触发时要播放的音频文件的 URL。</li>
+  <li><code>noscreen</code>: 一个 {{domxref("Boolean")}} 指定通知触发是否应启用设备的屏幕。 默认值为 false，这意味着它将启用屏幕。</li>
+  <li><code>sticky</code>: 一个 {{domxref("Boolean")}} 指明通知是否应该是“粘”, 即不易被用户清理。默认值为 false，这意味着它不会粘。</li>
  </ul>
 
  <p> </p>
@@ -81,218 +81,7 @@ translation_of: Web/API/Notification/Notification
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5 {{ property_prefix("webkit") }} (see notes)<br>
-    22</td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>{{ CompatNo() }}</td>
-   <td>25</td>
-   <td>6 (see notes)</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>icon</code> option</td>
-   <td>5 {{ property_prefix("webkit") }} (see notes)<br>
-    22</td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>{{ CompatNo() }}</td>
-   <td>25</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">vibrate</font></td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>requireInteraction</code></td>
-   <td>{{CompatChrome(47.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>32</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>renotify</code></td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>badge</code></td>
-   <td>{{compatChrome(53.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatOpera(39.0)}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>image</code></td>
-   <td>{{compatChrome(55.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatUnknown}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>1.0.1 {{ property_prefix("moz") }} (see notes)<br>
-    1.2</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(41.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>icon option</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.0 {{ property_prefix("moz") }} (see notes)<br>
-    22</td>
-   <td>1.0.1 {{ property_prefix("moz") }} (see notes)<br>
-    1.2</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><font face="Consolas, Liberation Mono, Courier, monospace">vibrate</font></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>32</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatChrome(45.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>requireInteraction</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>renotify</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(50.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>badge</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{compatChrome(53.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatOperaMobile(39.0)}}</td>
-   <td> </td>
-   <td>{{compatChrome(53.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>image</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatUnknown}}</td>
-   <td> </td>
-   <td>{{compatChrome(55.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Firefox_OS_notes">Firefox OS notes</h3>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Firefox OS notes")}}</p>
-
-<h3 id="Chrome_notes">Chrome notes</h3>
-
-<p>Starting in Chrome 49, notifications do not work in incognito mode.</p>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Chrome notes")}}</p>
-
-<h3 id="Safari_notes">Safari notes</h3>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Safari notes")}}</p>
+{{Compat("api.Notification.Notification")}}
 
 <h2 id="See_also">See also</h2>
 

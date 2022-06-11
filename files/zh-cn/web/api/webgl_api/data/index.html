@@ -17,21 +17,21 @@ tags:
   - 需要示例
 translation_of: Web/API/WebGL_API/Data
 ---
-<div>{{WebGLSidebar}}{{draft}}</div>
+<div>{{WebGLSidebar}}</div>
 
-<p>GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部shader访问（取决于数据存储类型），也可能通过站点的Javascript代码进行访问，这取决于变量的特定类型。</p>
+<p>GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部 shader 访问（取决于数据存储类型），也可能通过站点的 Javascript 代码进行访问，这取决于变量的特定类型。</p>
 
 <h2 id="GLSL_数据类型">GLSL 数据类型</h2>
 
-<p>&lt;&lt;关于 基本数据类型, 向量等，参见Khronos WebGL Wiki的文档：<a href="https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)">Data Type (GLSL)</a> &gt;&gt;</p>
+<p>&lt;&lt;关于 基本数据类型，向量等，参见 Khronos WebGL Wiki 的文档：<a href="https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)">Data Type (GLSL)</a> &gt;&gt;</p>
 
 <h2 id="GLSL_变量">GLSL 变量</h2>
 
-<p>GLSL中有三种类型的“变量”或者说数据存储类型。每一种类型都有特定的目标和使用方法：: <strong>{{anch("Attributes", "attributes")}}</strong>、<strong>{{anch("Varyings", "varyings")}}</strong>和<strong>{{anch("Uniforms", "uniforms")}}</strong>.</p>
+<p>GLSL 中有三种类型的“变量”或者说数据存储类型。每一种类型都有特定的目标和使用方法：: <strong><a href="#attributes">attributes</a></strong>、<strong><a href="#varyings">varyings</a></strong>和<strong><a href="#uniforms">uniforms</a></strong>.</p>
 
 <h3 id="Attributes">Attributes</h3>
 
-<p><strong>Attributes</strong> 可以被JavaScript代码操作，也可以在 vertex shader 中被作为变量访问。Attributes 通常被用于存储颜色、纹理坐标以及其他需要在JavaScript代码和 vertex shader 之间互相传递的数据。</p>
+<p><strong>Attributes</strong> 可以被 JavaScript 代码操作，也可以在 vertex shader 中被作为变量访问。Attributes 通常被用于存储颜色、纹理坐标以及其他需要在 JavaScript 代码和 vertex shader 之间互相传递的数据。</p>
 
 <pre class="brush: js notranslate">//init colors
     var vertexColors = [
@@ -70,13 +70,13 @@ fColor = vColor;
 
 <h3 id="Varyings">Varyings</h3>
 
-<p><strong>Varyings</strong> 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递 {{interwiki("wikipedia", "Normal_(geometry)", "normal vector")}} 等在 vertex shader 中计算生成的数据会使用varying。</p>
+<p><strong>Varyings</strong> 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递 {{interwiki("wikipedia", "Normal_(geometry)", "normal vector")}} 等在 vertex shader 中计算生成的数据会使用 varying。</p>
 
 <p>&lt;&lt;how to use&gt;&gt;</p>
 
 <h3 id="Uniforms">Uniforms</h3>
 
-<p><strong>Uniform</strong> 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。 使用uniform设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。</p>
+<p><strong>Uniform</strong> 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。 使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。</p>
 
 <p>&lt;&lt;添加细节&gt;&gt;</p>
 

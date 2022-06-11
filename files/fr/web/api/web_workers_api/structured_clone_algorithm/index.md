@@ -10,7 +10,7 @@ L’algorithme, essentiellement, parcourt tous les champs de l’objet original,
 
 ## Avantages par rapport à JSON
 
-Il y a quelques avantages notables à utiliser l’algorithme de clonage structuré plutôt que JSON :
+Il y a quelques avantages notables à utiliser l’algorithme de clonage structuré plutôt que JSON&nbsp;:
 
 - Le clonage structuré peut copier des objets [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp).
 - Le clonage structuré peut copier des objets {{ domxref("Blob") }}, {{ domxref("File") }} et {{ domxref("FileList") }}.
@@ -19,9 +19,9 @@ Il y a quelques avantages notables à utiliser l’algorithme de clonage structu
 
 ## Ce qui ne marche pas avec le clonage structuré
 
-- Les objets [`Error`](/en/JavaScript/Reference/Global_Objects/Error) et [`Function`](/en/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l’algorithme de clonage structuré ; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
+- Les objets [`Error`](/en/JavaScript/Reference/Global_Objects/Error) et [`Function`](/en/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l’algorithme de clonage structuré&nbsp;; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
 - De la même manière, toute tentative de cloner des nœuds DOM émettra une exception `DATA_CLONE_ERR`.
-- Certains paramètres d’objets ne sont pas préservés :
+- Certains paramètres d’objets ne sont pas préservés&nbsp;:
 
   - Le champ `lastIndex` des objets [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp) n’est pas préservé.
   - Les descripteurs de propriétés, accesseurs et mutateurs (ainsi que les fonctionnalités de métadonnées similaires) ne sont pas copiés. Par exemple, si un objet est marqué en lecture seule _via_ un descripteur de propriété, il sera en lecture et écriture dans le clone, car c’est la condition par défaut.
@@ -32,22 +32,22 @@ Il y a quelques avantages notables à utiliser l’algorithme de clonage structu
 | Type d’objet                                                                        | Notes                                                                                                          |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | [Tous types primitifs](/en-US/docs/Web/JavaScript/Data_structures#Primitive_values) | À l’exception des symboles                                                                                     |
-| Objet [Booléen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)        |                                                                                                                |
-| Objet String                                                                        |                                                                                                                |
-| [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)                    |                                                                                                                |
+| Objet [Booléen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)        |                                                                                                                |
+| Objet String                                                                        |                                                                                                                |
+| [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)                    |                                                                                                                |
 | [RegExp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                | Le champ `lastIndex` n’est pas préservé                                                                        |
-| {{ domxref("Blob") }}                                                        |                                                                                                                |
-| {{ domxref("File") }}                                                        |                                                                                                                |
-| {{ domxref("FileList") }}                                                    |                                                                                                                |
-| [ArrayBuffer](/en-US/docs/Web/API/ArrayBuffer)                                      |                                                                                                                |
+| {{ domxref("Blob") }}                                                        |                                                                                                                |
+| {{ domxref("File") }}                                                        |                                                                                                                |
+| {{ domxref("FileList") }}                                                    |                                                                                                                |
+| [ArrayBuffer](/en-US/docs/Web/API/ArrayBuffer)                                      |                                                                                                                |
 | [ArrayBufferView](/en-US/docs/Web/API/ArrayBufferView)                              | Ce qui implique tous les [tableaux typés](/en-US/docs/Web/JavaScript/Typed_arrays) tels que `Int32Array`, etc. |
-| {{ domxref("ImageData") }}                                                |                                                                                                                |
-| [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)                  |                                                                                                                |
+| {{ domxref("ImageData") }}                                                |                                                                                                                |
+| [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)                  |                                                                                                                |
 | [Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)                | Inclut seulement les objets plats (par ex. depuis un objet littéral)                                           |
-| [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)                      |                                                                                                                |
-| [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)                      |                                                                                                                |
+| [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)                      |                                                                                                                |
+| [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)                      |                                                                                                                |
 
-## Alternative : copie profonde
+## Alternative&nbsp;: copie profonde
 
 Si vous voulez une **copie profonde** d’un objet (c’est-à-dire une copie récursive de toutes les propriétés imbriquées, en parcourant la chaîne des prototypes), vous devez employer une autre approche. Ce qui suit est un exemple possible.
 
@@ -87,7 +87,7 @@ function clone(objectToBeCloned) {
 
 ## Voir aussi
 
-- [Spécification HTML5 : Passage sécurisé de données structurées](http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
+- [Spécification HTML5&nbsp;: Passage sécurisé de données structurées](http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
 - {{ domxref("window.history") }}
 - {{ domxref("window.postMessage()") }}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)

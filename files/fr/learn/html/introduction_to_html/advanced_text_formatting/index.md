@@ -17,7 +17,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
 
-Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article[ Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
+Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
 
 <table class="standard-table">
   <tbody>
@@ -57,7 +57,7 @@ Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser [
     aparté
     Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquement avec le public en vue de produire un effet dramatique ou humoristique. Il s'agit le plus souvent d'un sentiment, d'une pensée secrète ou d'une information sur le contexte.
 
-Les listes descriptives utilisent une enveloppe de balisage différente de celle des autres types de listes — {{htmlelement("dl")}} ; chaque terme est en plus entouré d'un élément {{htmlelement("dt")}} (**d**escription **t**erm) et chaque description d'un élément {{htmlelement("dd")}} (**d**escription **d**efinition). Terminons en balisant l'exemple ci‑dessus :
+Les listes descriptives utilisent une enveloppe de balisage différente de celle des autres types de listes — {{htmlelement("dl")}}&nbsp;; chaque terme est en plus entouré d'un élément {{htmlelement("dt")}} (**d**escription **t**erm) et chaque description d'un élément {{htmlelement("dd")}} (**d**escription **d**efinition). Terminons en balisant l'exemple ci‑dessus :
 
 ```html
 <dl>
@@ -229,7 +229,7 @@ Le HTML possède également des fonctionnalités pour marquer les citations. Le 
 
 ### Blocs de citation
 
-Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut {{htmlattrxref("cite","blockquote")}}. Par exemple, le balisage suivant provient de la page MDN pour l'élément `<blockquote>` :
+Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut {{htmlattrxref("cite","blockquote")}}. Par exemple, le balisage suivant provient de la page MDN pour l'élément `<blockquote>`&nbsp;:
 
 ```html
 <p>L'<strong>Élément HTML <code>&lt;blockquote&gt;</code></strong> (ou <em>Élément HTML bloc
@@ -247,7 +247,7 @@ Pour le changer en bloc de citation, on ferait simplement ceci :
 </blockquote>
 ```
 
-Le navigateur l'affichera par défaut sous forme d'un paragraphe indenté, avec l'indication qu'il s'agit d'une citation ; MDN agit de même et y ajoute un style personnalisé :
+Le navigateur l'affichera par défaut sous forme d'un paragraphe indenté, avec l'indication qu'il s'agit d'une citation&nbsp;; MDN agit de même et y ajoute un style personnalisé&nbsp;:
 
 {{EmbedLiveSample("Blocs_de_citation")}}
 
@@ -262,7 +262,7 @@ Les citations en ligne fonctionnent exactement de la même manière, sauf que l'
 pour de courtes citations ne nécessitant pas un nouvel alinéa</q>.</p>
 ```
 
-Le navigateur l'affichera par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci :
+Le navigateur l'affichera par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci&nbsp;:
 
 {{EmbedLiveSample("Exemple_de_citation_en_ligne")}}
 
@@ -286,18 +286,18 @@ Le contenu de l'attribut {{htmlattrxref("cite","blockquote")}} semble utile, mal
 
 Les citations sont affichées avec un police italique par défaut. Vous pouvez voir l'affichage de ce code dans l'exemple [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html).
 
-### Apprentissage actif : Qui a dit quoi ?
+### Apprentissage actif&nbsp;: Qui a dit quoi&nbsp;?
 
-Il est temps de faire un autre apprentissage actif ! Dans cet exemple, nous souhaiterions que :
+Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous souhaiterions que&nbsp;:
 
 1.  vous marquiez le paragraphe central comme étant une citation comprenant un attribut `cite`.
 2.  une partie du troisième paragraphe soit balisée en tant que citation en ligne, comprenant aussi un attribut `cite`.
 3.  vous incorporiez un élément `<cite>` pour chaque citation
 
-L'origine des citations dont vous aurez besoin se trouvent aux pages :
+L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
 - http\://www\.brainyquote.com/quotes/authors/c/confucius.html pour la citation de Confucius,
-- http\://www\.affirmationsforpositivethinking.com/index.html pour « The Need To Eliminate Negative Self Talk » (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- http\://www\.affirmationsforpositivethinking.com/index.html pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 
@@ -311,9 +311,9 @@ Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant
 <p class="a11y-label">Pressez Esc pour sortir le focus de la Zone de saisie (Tab insère une tabulation).</p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
-<p>Salut et bienvenue sur ma page de motivation. Comme Confucius a dit en son temps :</p>
+<p>Salut et bienvenue sur ma page de motivation. Comme Confucius a dit en son temps&nbsp;:</p>
 <p>La lenteur avec laquelle vous allez n'a pas d'importance tant que vous ne vous arrêtez pas.</p>
-<p>J'aime aussi ce concept de pensée positive « Il est nécessaire d'éliminer le discours négatif sur soi-même » (comme dit dans « Affirmations for Positive Thinking ».)</p>
+<p>J'aime aussi ce concept de pensée positive «&nbsp;Il est nécessaire d'éliminer le discours négatif sur soi-même&nbsp;» (comme dit dans «&nbsp;Affirmations for Positive Thinking&nbsp;».)</p>
 </textarea>
 
 <div class="playable-buttons">
@@ -375,7 +375,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<p>Salut et bienvenue sur ma page de motivation. Comme <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> a dit en son temps :</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>La lenteur avec laquelle vous allez n\'a pas d\'importance tant que vous ne vous arrêtez pas.</p>\n</blockquote>\n\n<p>J\'aime aussi le concept de pensée positive <q cite="http://www.affirmationsforpositivethinking.com/index.htm"> Il est nécessaire d\'éliminer le discours négatif sur soi-même </q> (comme dit dans <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+var htmlSolution = '<p>Salut et bienvenue sur ma page de motivation. Comme <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> a dit en son temps&nbsp;:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>La lenteur avec laquelle vous allez n\'a pas d\'importance tant que vous ne vous arrêtez pas.</p>\n</blockquote>\n\n<p>J\'aime aussi le concept de pensée positive <q cite="http://www.affirmationsforpositivethinking.com/index.htm"> Il est nécessaire d\'éliminer le discours négatif sur soi-même </q> (comme dit dans <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -442,7 +442,7 @@ Je pense que le R. Green l'a fait dans la cuisine avec une tronçonneuse.
 
 > **Note :** Il existe un autre élément, {{htmlelement("acronym")}}, faisant fondamentalement la même chose que `<abbr>`, destiné spécifiquement aux acronymes plutôt qu'aux abréviations. Il est cependant tombé en désuétude — il n'était pas aussi bien pris en charge dans les navigateurs que \<abbr> et sa fonction était si ressemblante qu'on a considéré inutile d'avoir les deux. Il suffit d'utiliser \<abbr> à la place.
 
-### Apprentissage actif : marquer une abréviation
+### Apprentissage actif&nbsp;: marquer une abréviation
 
 Pour cet apprentissage actif, nous aimerions que vous balisiez simplement une abréviation. Vous pouvez utiliser notre élément ci-après ou le remplacer par un de votre cru.
 
@@ -579,7 +579,7 @@ HTML possède l'élément {{htmlelement("address")}} pour baliser des détails d
 </address>
 ```
 
-Une chose à retenir cependant : l'élément {{htmlelement("address")}} est destiné à marquer les coordonnées de la personne ayant écrit le document HTML et non pas _n'importe quelle_ adresse. Donc, ce qui précède ne serait acceptable que si Chris avait écrit le document sur lequel ce balisage apparaît. Notez que serait également acceptable ce qui suit :
+Une chose à retenir cependant&nbsp;: l'élément {{htmlelement("address")}} est destiné à marquer les coordonnées de la personne ayant écrit le document HTML et non pas _n'importe quelle_ adresse. Donc, ce qui précède ne serait acceptable que si Chris avait écrit le document sur lequel ce balisage apparaît. Notez que serait également acceptable ce qui suit&nbsp;:
 
 ```html
 <address>
@@ -597,7 +597,7 @@ Vous devrez parfois utiliser exposants et indices pour marquer des éléments co
 <p>Si x<sup>2</sup> égale 9, x doit valoir 3 ou -3.</p>
 ```
 
-Les sorties produites par ces lignes de code se présentent comme suit :
+Les sorties produites par ces lignes de code se présentent comme suit&nbsp;:
 
 Ma date de naissance est le 1<sup>er</sup> mai 2001.
 
@@ -607,15 +607,15 @@ Si x^2 égale 9, x doit valoir 3 ou -3.
 
 ## Représentation du code informatique
 
-HTML met à votre dispositon un certain nombre d'éléments pour marquer du code informatique :
+HTML met à votre dispositon un certain nombre d'éléments pour marquer du code informatique&nbsp;:
 
-- {{htmlelement("code")}} : pour marquer des parties génériques de code.
-- {{htmlelement("pre")}} : pour conserver les blancs (généralement dans les blocs de code) — si vous indentez ou mettez des blancs en excès dans votre texte, les navigateurs les ignoreront et vous ne les verrez plus dans le rendu de la page. Par contre si vous enveloppez le texte dans des balises \<pre>\</pre>, les blancs seront rendus tels qu'il se présentent dans votre éditeur de texte.
-- {{htmlelement("var")}} : pour marquer spécifiquement les noms de variables.
-- {{htmlelement("kbd")}} : pour marquer les touches de clavier (et autres types d'entrées) à presser sur l'ordinateur.
-- {{htmlelement("samp")}} : pour marquer une sortie de programme.
+- {{htmlelement("code")}}&nbsp;: pour marquer des parties génériques de code.
+- {{htmlelement("pre")}}&nbsp;: pour conserver les blancs (généralement dans les blocs de code) — si vous indentez ou mettez des blancs en excès dans votre texte, les navigateurs les ignoreront et vous ne les verrez plus dans le rendu de la page. Par contre si vous enveloppez le texte dans des balises \<pre>\</pre>, les blancs seront rendus tels qu'il se présentent dans votre éditeur de texte.
+- {{htmlelement("var")}}&nbsp;: pour marquer spécifiquement les noms de variables.
+- {{htmlelement("kbd")}}&nbsp;: pour marquer les touches de clavier (et autres types d'entrées) à presser sur l'ordinateur.
+- {{htmlelement("samp")}}&nbsp;: pour marquer une sortie de programme.
 
-Voyons quelques exemples. Essayez de jouer avec cela (faites une copie de notre fichier exemple [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html)) :
+Voyons quelques exemples. Essayez de jouer avec cela (faites une copie de notre fichier exemple [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html))&nbsp;:
 
 ```html
 <pre><code>var para = document.querySelector('p');
@@ -636,7 +636,7 @@ para.onclick = function() {
 64 bytes from mozilla.org (63.245.208.195): icmp_seq=1 ttl=46 time=191 ms</samp></pre>
 ```
 
-Ce code se présente ainsi :
+Ce code se présente ainsi&nbsp;:
 
 {{ EmbedLiveSample('Représentation_du_code_informatique','100%',300) }}
 
@@ -673,7 +673,7 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 <time datetime="01-20">20 janvier</time>
 <!-- Juste l'heure, heure et minutes -->
 <time datetime="19:30">19h30</time>
-<!-- Vous pouvez aussi mettre les secondes et les millisecondes ! -->
+<!-- Vous pouvez aussi mettre les secondes et les millisecondes&nbsp;! -->
 <time datetime="19:30:01.856">19h30m1,856s</time>
 <!-- Date et heure -->
 <time datetime="2016-01-20T19:30">19h30, le 20 janvier 2016</time>

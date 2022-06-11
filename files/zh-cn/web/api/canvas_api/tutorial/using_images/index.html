@@ -7,12 +7,12 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}</div>
 
-<p>canvas更有意思的一项特性就是图像操作能力。可以用于动态的图像合成或者作为图形的背景，以及游戏界面（Sprites）等等。浏览器支持的任意格式的外部图片都可以使用，比如PNG、GIF或者JPEG。 你甚至可以将同一个页面中其他canvas元素生成的图片作为图片源。</p>
+<p>canvas 更有意思的一项特性就是图像操作能力。可以用于动态的图像合成或者作为图形的背景，以及游戏界面（Sprites）等等。浏览器支持的任意格式的外部图片都可以使用，比如 PNG、GIF 或者 JPEG。你甚至可以将同一个页面中其他 canvas 元素生成的图片作为图片源。</p>
 
-<p><span style="line-height: 1.5;">引入图像到canvas里需要以下两步基本操作：</span></p>
+<p>引入图像到 canvas 里需要以下两步基本操作：</p>
 
 <ol>
- <li>获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个canvas元素的引用作为源，也可以通过提供一个URL的方式来使用图片（参见<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-images/">例子</a>）</li>
+ <li>获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-images/">例子</a>）</li>
  <li>使用<code>drawImage()</code>函数将图片绘制到画布上</li>
 </ol>
 
@@ -20,13 +20,13 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 
 <h2 id="获得需要绘制的图片">获得需要绘制的图片</h2>
 
-<p>canvas的API可以使用下面这些类型中的一种作为图片的源：</p>
+<p>canvas 的 API 可以使用下面这些类型中的一种作为图片的源：</p>
 
 <dl>
  <dt><strong style="font-weight: bold;">{{domxref("HTMLImageElement")}}</strong></dt>
  <dd>这些图片是由<code>Image()函数构造出来的，或者任何的{{HTMLElement("img")}}元素</code></dd>
  <dt><strong style="font-weight: bold; line-height: 1.5;">{{domxref("HTMLVideoElement")}}</strong></dt>
- <dd>用一个HTML的 <span style="line-height: 1.5;">{{HTMLElement("video")}}元素作为你的图片源，可以从视频中抓取当前帧作为一个图像</span></dd>
+ <dd>用一个 HTML 的 {{HTMLElement("video")}}元素作为你的图片源，可以从视频中抓取当前帧作为一个图像</dd>
  <dt><strong style="font-weight: bold;">{{domxref("HTMLCanvasElement")}}</strong></dt>
  <dd>可以使用另一个 {{HTMLElement("canvas")}} 元素作为你的图片源。</dd>
  <dt><strong style="font-weight: bold;">{{domxref("ImageBitmap")}}</strong></dt>
@@ -35,27 +35,27 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 
 <p>这些源统一由 {{domxref("CanvasImageSource")}}类型来引用。</p>
 
-<p>有几种方式可以获取到我们需要在canvas上使用的图片。</p>
+<p>有几种方式可以获取到我们需要在 canvas 上使用的图片。</p>
 
 <h3 id="Using_images_which_are_on_the_same_page" name="Using_images_which_are_on_the_same_page">使用相同页面内的图片</h3>
 
-<p>我们可以通过下列方法的一种来获得与canvas相同页面内的图片的引用：</p>
+<p>我们可以通过下列方法的一种来获得与 canvas 相同页面内的图片的引用：</p>
 
 <ul>
  <li>{{domxref("document.images")}}集合</li>
  <li> {{domxref("document.getElementsByTagName()")}}方法</li>
- <li>如果你知道你想使用的指定图片的ID，你可以用{{domxref("document.getElementById()")}}获得这个图片</li>
+ <li>如果你知道你想使用的指定图片的 ID，你可以用{{domxref("document.getElementById()")}}获得这个图片</li>
 </ul>
 
 <h3 id="Using_other_canvas_elements" name="Using_other_canvas_elements">使用其它域名下的图片</h3>
 
-<p>在 {{domxref("HTMLImageElement")}}上使用<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染canvas，否则，使用这个图片将会<a href="https://developer.mozilla.org/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas">污染canvas</a>。</p>
+<p>在 {{domxref("HTMLImageElement")}}上使用<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会<a href="https://developer.mozilla.org/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas">污染 canvas</a>。</p>
 
 <h3 id="Using_other_canvas_elements" name="Using_other_canvas_elements">使用其它 canvas 元素</h3>
 
-<p><span style="line-height: 1.5;">和引用页面内的图片类似地，用 </span><code style="font-style: normal; line-height: 1.5;"><a href="/en/DOM/document.getElementsByTagName" title="en/DOM/document.getElementsByTagName">document.getElementsByTagName</a> </code><span style="line-height: 1.5;">或 </span><code style="font-style: normal; line-height: 1.5;"><a href="/en/DOM/document.getElementById" title="en/DOM/document.getElementById">document.getElementById</a> </code><span style="line-height: 1.5;">方法来获取其它 canvas 元素。但你引入的应该是已经准备好的 canvas。</span></p>
+<p>和引用页面内的图片类似地，用 <code style="font-style: normal; line-height: 1.5;"><a href="/en/DOM/document.getElementsByTagName" title="en/DOM/document.getElementsByTagName">document.getElementsByTagName</a> </code>或 <code style="font-style: normal; line-height: 1.5;"><a href="/en/DOM/document.getElementById" title="en/DOM/document.getElementById">document.getElementById</a> </code>方法来获取其它 canvas 元素。但你引入的应该是已经准备好的 canvas。</p>
 
-<p><span style="line-height: 1.5;">一个常用的应用就是将第二个canvas作为另一个大的 canvas 的缩略图。</span></p>
+<p>一个常用的应用就是将第二个 canvas 作为另一个大的 canvas 的缩略图。</p>
 
 <h3 id="Creating_an_image_from_scratch" name="Creating_an_image_from_scratch">由零开始创建图像</h3>
 
@@ -67,16 +67,16 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <p>当脚本执行后，图片开始装载。</p>
 
-<p>若调用 <code>drawImage</code> 时，图片没装载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。因此你应该用load事件来保证不会在加载完毕之前使用这个图片：</p>
+<p>若调用 <code>drawImage</code> 时，图片没装载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。因此你应该用 load 事件来保证不会在加载完毕之前使用这个图片：</p>
 
-<pre class="brush: js notranslate">var img = new Image();   // 创建img元素
+<pre class="brush: js notranslate">var img = new Image();   // 创建 img 元素
 img.onload = function(){
-  // 执行drawImage语句
+  // 执行 drawImage 语句
 }
 img.src = 'myImage.png'; // 设置图片源地址
 </pre>
 
-<p><span style="line-height: 1.5;">如果你只用到一张图片的话，这已经够了。但一旦需要不止一张图片，那就需要更加复杂的处理方法，但图片预加载策略超出本教程的范围</span><span style="line-height: 1.5;">。</span></p>
+<p>如果你只用到一张图片的话，这已经够了。但一旦需要不止一张图片，那就需要更加复杂的处理方法，但图片预加载策略超出本教程的范围。</p>
 
 <h3 id="Embedding_an_image_via_data_url" name="Embedding_an_image_via_data:_url">通过 data: url 方式嵌入图像</h3>
 
@@ -89,30 +89,30 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <h3 id="drawImage" name="drawImage">使用视频帧</h3>
 
-<p>你还可以使用{{HTMLElement("video")}} 中的视频帧（即便视频是不可见的）。例如，如果你有一个ID为“myvideo”的{{HTMLElement("video")}} 元素，你可以这样做：</p>
+<p>你还可以使用{{HTMLElement("video")}} 中的视频帧（即便视频是不可见的）。例如，如果你有一个 ID 为“myvideo”的{{HTMLElement("video")}} 元素，你可以这样做：</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; direction: ltr; white-space: normal; text-shadow: none; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; color: inherit; text-shadow: none;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">getMyVideo<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-  <span class="keyword token" style="color: #0077aa;">var</span> canvas <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> document<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getElementById<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'canvas'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-  <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>canvas<span class="punctuation token" style="color: #999999;">.</span>getContext<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-    <span class="keyword token" style="color: #0077aa;">var</span> ctx <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> canvas<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getContext<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'2d'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; direction: ltr; white-space: normal; text-shadow: none; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; color: inherit; text-shadow: none;">function getMyVideo() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
 
-    <span class="keyword token" style="color: #0077aa;">return</span> document<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getElementById<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'myvideo'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-  <span class="punctuation token" style="color: #999999;">}</span>
-<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+    return document.getElementById('myvideo');
+  }
+}</code></pre>
 
-<p>它将为这个视频返回{{domxref("HTMLVideoElement")}}对象，正如我们前面提到的，它可以作为我们的Canvas图片源。</p>
+<p>它将为这个视频返回{{domxref("HTMLVideoElement")}}对象，正如我们前面提到的，它可以作为我们的 Canvas 图片源。</p>
 
 <h2 id="drawImage" name="drawImage">绘制图片</h2>
 
-<p><span style="line-height: 1.5;">一旦获得了源图对象，我们就可以使用 </span><code style="font-style: normal; line-height: 1.5;">drawImage</code><span style="line-height: 1.5;"> 方法将它渲染到 canvas 里。</span><code style="font-style: normal; line-height: 1.5;">drawImage</code><span style="line-height: 1.5;"> 方法有三种形态，下面是最基础的一种。</span></p>
+<p>一旦获得了源图对象，我们就可以使用 <code style="font-style: normal; line-height: 1.5;">drawImage</code> 方法将它渲染到 canvas 里。<code style="font-style: normal; line-height: 1.5;">drawImage</code> 方法有三种形态，下面是最基础的一种。</p>
 
 <dl>
  <dt><strong><code>drawImage(image, x, y)</code></strong></dt>
- <dd><span style="line-height: 1.5;">其中 </span><code style="font-style: normal; line-height: 1.5;">image</code><span style="line-height: 1.5;"> 是 image 或者 canvas 对象，</span><code style="font-style: normal; line-height: 1.5;">x</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">y 是其在目标 canvas 里的起始坐标。</code></dd>
+ <dd>其中 <code style="font-style: normal; line-height: 1.5;">image</code> 是 image 或者 canvas 对象，<code style="font-style: normal; line-height: 1.5;">x</code> 和 <code style="font-style: normal; line-height: 1.5;">y 是其在目标 canvas 里的起始坐标。</code></dd>
 </dl>
 
 <div class="note">
-<p>SVG图像必须在 &lt;svg&gt; 根指定元素的宽度和高度。</p>
+<p>SVG 图像必须在 &lt;svg&gt; 根指定元素的宽度和高度。</p>
 </div>
 
 <h3 id="Example_A_simple_line_graph" name="Example_A_simple_line_graph">例子：一个简单的线图</h3>
@@ -155,10 +155,10 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y, width, height)")}}</dt>
- <dd>这个方法多了2个参数：<code>width</code> 和 <code>height，</code>这两个参数用来控制 当向canvas画入时应该缩放的大小</dd>
+ <dd>这个方法多了 2 个参数：<code>width</code> 和 <code>height，</code>这两个参数用来控制 当向 canvas 画入时应该缩放的大小</dd>
 </dl>
 
-<h3 id="Example_Tiling_an_image" name="Example_Tiling_an_image"><font face="Consolas, Liberation Mono, Courier, monospace">例子：平铺图像</font></h3>
+<h3 id="Example_Tiling_an_image" name="Example_Tiling_an_image">例子：平铺图像</h3>
 
 <p><img alt="" class="internal" src="/@api/deki/files/106/=Canvas_scale_image.png" style="float: right;"></p>
 
@@ -195,18 +195,18 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <h2 id="Slicing" name="Slicing">切片 Slicing</h2>
 
-<p><code>drawImage</code> 方法的第三个也是最后一个变种有8个新参数，用于控制做切片显示的。</p>
+<p><code>drawImage</code> 方法的第三个也是最后一个变种有 8 个新参数，用于控制做切片显示的。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}</dt>
- <dd>第一个参数和其它的是相同的，都是一个图像或者另一个 canvas 的引用。其它8个参数最好是参照右边的图解，前4个是定义图像源的切片位置和大小，后4个则是定义切片的目标显示位置和大小。</dd>
+ <dd>第一个参数和其它的是相同的，都是一个图像或者另一个 canvas 的引用。其它 8 个参数最好是参照右边的图解，前 4 个是定义图像源的切片位置和大小，后 4 个则是定义切片的目标显示位置和大小。</dd>
 </dl>
 
 <p><img alt="" class="internal" src="/@api/deki/files/79/=Canvas_drawimage.jpg" style="float: right;"></p>
 
 <p>切片是个做图像合成的强大工具。假设有一张包含了所有元素的图像，那么你可以用这个方法来合成一个完整图像。例如，你想画一张图表，而手上有一个包含所有必需的文字的 PNG 文件，那么你可以很轻易的根据实际数据的需要来改变最终显示的图表。这方法的另一个好处就是你不需要单独装载每一个图像。</p>
 
-<h3 id="Example_Framing_an_image" name="Example_Framing_an_image"><font face="Consolas, Liberation Mono, Courier, monospace">例子：相框</font></h3>
+<h3 id="Example_Framing_an_image" name="Example_Framing_an_image">例子：相框</h3>
 
 <p><img alt="" class="internal" src="/@api/deki/files/80/=Canvas_drawimage2.jpg" style="float: right;"></p>
 

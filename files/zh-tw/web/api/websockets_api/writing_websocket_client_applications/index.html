@@ -6,8 +6,6 @@ tags:
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
-<p>{{ draft() }}</p>
-
 <p>WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。使用這項技術的 Webapp 可以直接進行即時通訊而不需要不斷對資料更改進行輪詢（polling）。</p>
 
 <div class="note"><strong>注：</strong>當我們的系統架構可以寄存 WebSocket 範例之後，我們會提供聊天／伺服器系統實例的幾個範例。</div>
@@ -55,16 +53,16 @@ WebSocket WebSocket(
 
 <h3 id="範例">範例</h3>
 
-<p>此簡單範例建立了一個新的 WebSocket，連到位於 <code><span class="nowiki">http://www.example.com/socketserver</span></code> 的伺服器。指定的子協定是 "my-custom-protocol"。</p>
+<p>此簡單範例建立了一個新的 WebSocket，連到位於 <code>http://www.example.com/socketserver</code> 的伺服器。指定的子協定是 "my-custom-protocol"。</p>
 
-<pre>var mySocket = new WebSocket("<span class="plain">ws://www.example.com/socketserver</span>", "my-custom-protocol");
+<pre>var mySocket = new WebSocket("ws://www.example.com/socketserver", "my-custom-protocol");
 </pre>
 
 <p>回傳之後，<code>mySocket</code> 的 <code>readyState</code> 會變成 <code>CONNECTING</code>。當連線已可以傳輸資料時 <code>readyState</code> 會變成 <code>OPEN</code>。</p>
 
 <p>要建立一個連線但不指定單一個特定協定，可以指定一個協定構成的陣列：</p>
 
-<pre>var mySocket = new WebSocket("<span class="plain">ws://www.example.com/socketserver</span>", ["protocol1", "protocol2"]);
+<pre>var mySocket = new WebSocket("ws://www.example.com/socketserver", ["protocol1", "protocol2"]);
 </pre>
 
 <p>當連線建立的時候（也就是 <code>readyState</code> 變成而 <code>OPEN</code> 的時候），<code>protocol</code> 屬性會回傳伺服器選擇的協定。</p>
@@ -171,10 +169,3 @@ function sendText() {
 <h2 id="參考資料">參考資料</h2>
 
 <p><a href="https://tools.ietf.org/html/draft-abarth-thewebsocketprotocol-01">IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01</a></p>
-
-<p> </p>
-
-<p>{{ languages ( {"en": "en/WebSockets/Writing_WebSocket_client_applications"} ) }}</p>
-
-<dl>
-</dl>

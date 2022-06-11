@@ -18,7 +18,9 @@ La méthode statique **`Atomics.and()`** calcule un ET binaire avec une valeur d
 
 ## Syntaxe
 
-    Atomics.and(typedArray, index, valeur)
+```js
+Atomics.and(typedArray, index, valeur)
+```
 
 ### Paramètres
 
@@ -35,7 +37,7 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 
 ### Exceptions levée
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 
@@ -52,10 +54,12 @@ Un ET binaire fournit la valeur 1 uniquement si `a` et `b` valent 1. La table de
 
 Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fournira la valeur `0001`, qui correspond à 1 en notation décimale.
 
-    5  0101
-    1  0001
-       ----
-    1  0001
+```
+5  0101
+1  0001
+   ----
+1  0001
+```
 
 ## Exemples
 

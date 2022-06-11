@@ -17,13 +17,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 
 La fonction **`removeFile()`** de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.
 
-Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel  {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut `exists` sera `false`.
+Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel  {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut `exists` sera `false`.
 
-Pour supprimer un fichier de l'historique des téléchargements, vous devez utiliser  {{WebExtAPIRef("downloads.erase()")}}.
+Pour supprimer un fichier de l'historique des téléchargements, vous devez utiliser  {{WebExtAPIRef("downloads.erase()")}}.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-> **Note :** Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler `removeFile()` avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de `removeFile()`, car le navigateur n'aura plus d'enregistrement du téléchargement.
+> **Note :** Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler `removeFile()` avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de `removeFile()`, car le navigateur n'aura plus d'enregistrement du téléchargement.
 
 ## Syntaxe
 
@@ -36,7 +36,7 @@ var removing = browser.downloads.removeFile(
 ### Paramètres
 
 - `downloadId`
-  - : Un `integer` représentant l'identifiant de  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} que vous souhaitez supprimer du disque.
+  - : Un `integer` représentant l'identifiant de  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} que vous souhaitez supprimer du disque.
 
 ### Valeur retournée
 

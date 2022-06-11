@@ -29,7 +29,7 @@ Aucun
 
 ### Valeur retournée
 
-`string`. Le code de langue de l'interface utilisateur du navigateur en tant que  {{WebExtAPIRef("i18n.LanguageCode")}}.
+`string`. Le code de langue de l'interface utilisateur du navigateur en tant que  {{WebExtAPIRef("i18n.LanguageCode")}}.
 
 ## Compatibilité du navigateur
 

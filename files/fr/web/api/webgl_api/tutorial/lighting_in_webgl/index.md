@@ -10,22 +10,22 @@ La première chose à comprendre à propos de WebGL est que contrairement au sta
 
 ## Simuler l'éclairage et les ombres en 3D
 
-Rentrer dans les détails de la théorie derrière la simulation de l'éclairage 3D est assez loin du sujet de cet article mais il vaut mieux en connaitre un minimum le sujet. Au lieu de rentrer dans le vif du sujet ici, jetez un coup d'oeil sur [l'ombrage de Phong](https://fr.wikipedia.org/wiki/Ombrage_de_Phong) sur Wikipédia, qui fourni une bonne vue d'ensemble comme modèle d'éclairage.
+Rentrer dans les détails de la théorie derrière la simulation de l'éclairage 3D est assez loin du sujet de cet article mais il vaut mieux en connaitre un minimum le sujet. Au lieu de rentrer dans le vif du sujet ici, jetez un coup d'oeil sur [l'ombrage de Phong](https://fr.wikipedia.org/wiki/Ombrage_de_Phong) sur Wikipédia, qui fourni une bonne vue d'ensemble comme modèle d'éclairage.
 
 Il y a trois types basiques d'éclairage :
 
-1.  **Ambient light (Lumière Ambiante)** est la lumière qui imprègne, qui se répand sur la scène. Elle n'a pas de direction et s'applique sur toutes les faces de la scène de la même façon.
-2.  **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
-3.  **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
+1.  **Ambient light (Lumière Ambiante)** est la lumière qui imprègne, qui se répand sur la scène. Elle n'a pas de direction et s'applique sur toutes les faces de la scène de la même façon.
+2.  **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
+3.  **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
 
 Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
-Une fois que nous avons appréhendé le concept de source et de réfléction de la lumière, il y a deux choses que nous avons besoin d'implémenter pour nos lumières directionnelles.
+Une fois que nous avons appréhendé le concept de source et de réfléction de la lumière, il y a deux choses que nous avons besoin d'implémenter pour nos lumières directionnelles.
 
 1.  Nous avons besoin d'associer la **surface normale** avec chaque sommet. C'est un vecteur qui est perpendiculaire à la face associé à ce sommet.
 2.  Nous avons besoin de connaître la direction dans laquelle la lumière arrive. Ceci est défini par la direction du vecteur.
 
-Puis nous mettons à jour le vertex shader pour ajuster la couleur de chaque sommet. en prenant en compte la lumière ambiante ainsi que l'effet de la lumière directionnelle donné par l'angle qui rencontre la face du cube. Nous allons voir comment faire avec les shaders.
+Puis nous mettons à jour le vertex shader pour ajuster la couleur de chaque sommet. en prenant en compte la lumière ambiante ainsi que l'effet de la lumière directionnelle donné par l'angle qui rencontre la face du cube. Nous allons voir comment faire avec les shaders.
 
 ## Créer les normales pour les sommets
 
@@ -76,7 +76,7 @@ var vertexNormals = [
 gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
 ```
 
-Ceci doit vous être plutôt familier maintenant. Nous créons un nouveau buffer, on le lie avec le tableau sur lequel nous allons travailler, puis nous allons envoyer l'ensemble de notre tableau au buffer en appelant la méthode `bufferData()`.
+Ceci doit vous être plutôt familier maintenant. Nous créons un nouveau buffer, on le lie avec le tableau sur lequel nous allons travailler, puis nous allons envoyer l'ensemble de notre tableau au buffer en appelant la méthode `bufferData()`.
 
 Ensuite nous allons ajouter le code à la fonction `drawScene()` pour attacher le tableau de normales à l'attribut du shader, comme ça le code du shader y aura accès&nbsp;:
 
@@ -133,11 +133,11 @@ La première chose à faire est de mettre à jour le vertex shader en générant
 </script>
 ```
 
-Une fois que la position du sommet est calculée, et que nous obtenons les coordonnées des texels (tas de pixel pour une texture) correspondant au sommet, nous pouvons travailler sur le calcul de l'ombre de chaque sommet.
+Une fois que la position du sommet est calculée, et que nous obtenons les coordonnées des texels (tas de pixel pour une texture) correspondant au sommet, nous pouvons travailler sur le calcul de l'ombre de chaque sommet.
 
 La première chose que nous allons faire est de transformer la base normale sur la position actuelle et l'orientation du cube, en calculant les normales des sommets par la matrice normale. Nous pouvons alors calculer la quantité d'éclairage qui doit être appliquée au sommet en calculant le produit de la normale transformée et du vecteur directionnel (la direction d'où la lumière vient). Si le résultat est inférieur à zéro, alors on le met à 0. Car une lumière négative n'a pas de sens dans notre cas.
 
-Une fois la quantité de lumière directionnelle calculée, nous pouvons générer la valeur d'éclairage en prenant l'éclairage ambiant et en y ajoutant le produit de la couleur de la lumière directionnelle, et aussi la quantité de la lumière directionnelle à fournir. Comme résultat, nous avons maintenant une valeur RGB qui sera utilisé par le fragment shader pour ajuster la couleur de chaque pixel.
+Une fois la quantité de lumière directionnelle calculée, nous pouvons générer la valeur d'éclairage en prenant l'éclairage ambiant et en y ajoutant le produit de la couleur de la lumière directionnelle, et aussi la quantité de la lumière directionnelle à fournir. Comme résultat, nous avons maintenant une valeur RGB qui sera utilisé par le fragment shader pour ajuster la couleur de chaque pixel.
 
 ### Le fragment shader
 
@@ -158,7 +158,7 @@ Le fragment shader a maintenant besoin d'être mis à jour en prenant en compte 
 </script>
 ```
 
-Ici nous récupérons la couleur de chaque texel (tas de pixel pour une texture) , comme nous avons fait pour l'exemple précédent, mais avant d'ajuster la couleur du fragment, nous multiplions la couleur des pixels par la quantité de lumière, pour appliquer l'effet d'éclairage.
+Ici nous récupérons la couleur de chaque texel (tas de pixel pour une texture) , comme nous avons fait pour l'exemple précédent, mais avant d'ajuster la couleur du fragment, nous multiplions la couleur des pixels par la quantité de lumière, pour appliquer l'effet d'éclairage.
 
 Et c'est tout !
 
@@ -166,11 +166,11 @@ Et c'est tout !
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample7/)
 
 ## Exercices
 
-Évidemment, ceci est un simple exemple, une implémentation basique de calcul de lumière par sommet. Pour aller plus loin, nous voulons implémenter un calcul de lumière par pixel, mais ceci vous mènera dans la bonne direction.
+Évidemment, ceci est un simple exemple, une implémentation basique de calcul de lumière par sommet. Pour aller plus loin, nous voulons implémenter un calcul de lumière par pixel, mais ceci vous mènera dans la bonne direction.
 
 Vous pouvez aussi implémenter avec la direction de source de lumière, la couleur de la source, la distance, etc..
 

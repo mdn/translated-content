@@ -9,10 +9,10 @@ translation_of: Web/API/Element/matches
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>如果元素被指定的选择器字符串选择，<strong><code>Element.matches()</code></strong>  方法返回true; 否则返回false。</p>
+<p>如果元素被指定的选择器字符串选择，<strong><code>Element.matches()</code></strong>  方法返回 true; 否则返回 false。</p>
 
 <div class="warning">
-<p>有一些浏览器使用前缀, 在非标准名称  matchesSelector () 下实现了这个方法!</p>
+<p>有一些浏览器使用前缀，在非标准名称  matchesSelector () 下实现了这个方法！</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/matches
 
 <ul>
  <li><code>result</code> 的值为 <code>true</code> 或 <code>false</code>.</li>
- <li><code>selectorString</code> 是个css选择器字符串.</li>
+ <li><code>selectorString</code> 是个 css 选择器字符串。</li>
 </ul>
 
 <h2 id="Example" name="Example">例子</h2>
@@ -53,18 +53,18 @@ translation_of: Web/API/Element/matches
   &lt;/script&gt;
 </pre>
 
-<p>会显示弹出框,因为"div"选择器可以选择到el元素.</p>
+<p>会显示弹出框，因为"div"选择器可以选择到 el 元素。</p>
 
 <h2 id="异常">异常</h2>
 
 <dl>
- <dt><code>SYNTAX_ERR</code> {{ gecko_minversion_inline("2.0") }}</dt>
- <dd>如果给定的css选择器无效. 在 Gecko 2.0之前,该方法会返回<code>false,2.0之后</code>,会直接抛出异常.</dd>
+ <dt><code>SYNTAX_ERR</code></dt>
+ <dd>如果给定的 css 选择器无效。在 Gecko 2.0 之前，该方法会返回<code>false,2.0 之后</code>,会直接抛出异常。</dd>
 </dl>
 
-<h2 id="替代方案(Polyfill)" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">替代方案(Polyfill)</h2>
+<h2 id="替代方案(Polyfill)" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">替代方案 (Polyfill)</h2>
 
-<p>对于不支持 <code style="font-style: normal;">Element.matches()</code> 或<code><span style="font-family: consolas,monaco,andale mono,monospace;">Element.matchesSelector()，但支持</span></code><span style="font-family: consolas,monaco,andale mono,monospace;">document.querySelectorAll()方法的</span><code><span style="font-family: consolas,monaco,andale mono,monospace;">浏览器，存在以下替代方案</span></code></p>
+<p>对于不支持 <code style="font-style: normal;">Element.matches()</code> 或<code>Element.matchesSelector()，但支持</code>document.querySelectorAll() 方法的<code>浏览器，存在以下替代方案</code></p>
 
 <pre class="brush: js">
 if (!Element.prototype.matches) {
@@ -83,7 +83,7 @@ if (!Element.prototype.matches) {
 }</pre>
 
 <blockquote>
-<p>关于Polyfill的补充:</p>
+<p>关于 Polyfill 的补充：</p>
 
 <ul>
  <li><a href="http://en.wikipedia.org/wiki/Polyfill">Polyfill Wikipedia</a></li>

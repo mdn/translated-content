@@ -3,33 +3,33 @@ title: 3D 碰撞检测
 slug: Games/Techniques/3D_collision_detection
 translation_of: Games/Techniques/3D_collision_detection
 ---
-<div>{{GamesSidebar}}</div><p class="summary">本文介绍了用于在3D环境中实现不同边界体积碰撞检测的技术。 后续文章将讨论特定3D库中的实现。</p>
+<div>{{GamesSidebar}}</div><p>本文介绍了用于在 3D 环境中实现不同边界体积碰撞检测的技术。 后续文章将讨论特定 3D 库中的实现。</p>
 
-<h2 id="Axis-aligned_bounding_boxes（AABB包围盒）">Axis-aligned bounding boxes（<strong>AABB包围盒</strong>）</h2>
+<h2 id="Axis-aligned_bounding_boxes（AABB包围盒）">Axis-aligned bounding boxes（<strong>AABB 包围盒</strong>）</h2>
 
 <p> </p>
 
 <p>在游戏中，为了简化物体之间的碰撞检测运算，通常会对物体创建一个规则的几何外形将其包围。其中，AABB（axis-aligned bounding box）包围盒被称为轴对齐包围盒。</p>
 
-<p>与2D碰撞检测一样，轴对齐包围盒是判断两个物体是否重叠的最快算法，物体被包裹在一个非旋转的（因此轴对齐的）盒中，并检查这些盒在三维坐标空间中的位置，以确定它们是否重叠。</p>
+<p>与 2D 碰撞检测一样，轴对齐包围盒是判断两个物体是否重叠的最快算法，物体被包裹在一个非旋转的（因此轴对齐的）盒中，并检查这些盒在三维坐标空间中的位置，以确定它们是否重叠。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11797/Screen%20Shot%202015-10-16%20at%2015.11.21.png" style="display: block; height: 275px; margin: 0px auto; width: 432px;"></p>
 
-<p>由于性能原因，轴对齐是有一些约束的。两个非旋转的盒子之间是否重叠可以通过逻辑比较进行检查，而旋转的盒子则需要三角运算，这会导致性能下降。如果你有旋转的物体，可以通过修改边框的尺寸，这样盒子仍可以包裹物体，或者选择使用另一种边界几何类型，比如球体(球体旋转，形状不会变)。下图是一个AABB物体旋转，动态调节盒大小适应物体的例子。</p>
+<p>由于性能原因，轴对齐是有一些约束的。两个非旋转的盒子之间是否重叠可以通过逻辑比较进行检查，而旋转的盒子则需要三角运算，这会导致性能下降。如果你有旋转的物体，可以通过修改边框的尺寸，这样盒子仍可以包裹物体，或者选择使用另一种边界几何类型，比如球体 (球体旋转，形状不会变)。下图是一个 AABB 物体旋转，动态调节盒大小适应物体的例子。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11799/rotating_knot.gif" style="display: block; height: 192px; margin: 0px auto; width: 207px;"></p>
 
 <div class="note">
-<p><strong>Note:</strong> 参考<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js">这里</a>，<font><font>使用</font></font><font><font>Three</font></font><font><font>.js进行</font><font>边界体积碰撞检测。</font></font></p>
+<p><strong>Note:</strong> 参考<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js">这里</a>，使用 Three.js 进行边界体积碰撞检测。</p>
 </div>
 
 <h3 id="点与_AABB">点与 AABB</h3>
 
-<p>如果检测到一个点是否在AABB内部就非常简单了 — 我们只需要检查这个点的坐标是否在AABB内; 分别考虑到每种坐标轴. 如果假设  <em>P<sub>x</sub></em>, <em>P<sub>y</sub> 和</em> <em>P<sub>z</sub></em> 是点的坐标,  <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em>, <em>B<sub>minY</sub></em>–<em>B<sub>maxY</sub></em>, 和 <em>B<sub>minZ</sub></em>–<em>B<sub>maxZ</sub></em> 是AABB的每一个坐标轴的范围, 我们可以使用以下公式计算两者之间的碰撞是否发生:</p>
+<p>如果检测到一个点是否在 AABB 内部就非常简单了 — 我们只需要检查这个点的坐标是否在 AABB 内; 分别考虑到每种坐标轴。如果假设  <em>P<sub>x</sub></em>, <em>P<sub>y</sub> 和</em> <em>P<sub>z</sub></em> 是点的坐标， <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em>, <em>B<sub>minY</sub></em>–<em>B<sub>maxY</sub></em>, 和 <em>B<sub>minZ</sub></em>–<em>B<sub>maxZ</sub></em> 是 AABB 的每一个坐标轴的范围，我们可以使用以下公式计算两者之间的碰撞是否发生：</p>
 
 <p><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>y</mi></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>z</mi></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">f(P,B)= (P_x &gt;= B_{minX} \wedge P_x &lt;= B_{maxX}) \wedge (P_y &gt;= B_{minY} \wedge P_y &lt;= B_{maxY}) \wedge (P_z &gt;= B_{minZ} \wedge P_z &lt;= B_{maxZ})</annotation></semantics></math></p>
 
-<p>或者用JavaScript:</p>
+<p>或者用 JavaScript:</p>
 
 <pre class="brush: js">function isPointInsideAABB(point, box) {
   return (point.x &gt;= box.minX &amp;&amp; point.x &lt;= box.maxX) &amp;&amp;
@@ -39,15 +39,15 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <h3 id="AABB_与_AABB">AABB 与 AABB</h3>
 
-<p>检查一个AABB是否和另一个AABB相交类似于检测两个点一样. 我们只需要基于每一条坐标轴并利用盒子的边缘去检测. 下图显示了我们基于 X 轴的检测 — 当然,  <em>A<sub>minX</sub></em>–<em>A<sub>maxX</sub></em> 和 <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em> 会不会重叠?</p>
+<p>检查一个 AABB 是否和另一个 AABB 相交类似于检测两个点一样。我们只需要基于每一条坐标轴并利用盒子的边缘去检测。下图显示了我们基于 X 轴的检测 — 当然， <em>A<sub>minX</sub></em>–<em>A<sub>maxX</sub></em> 和 <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em> 会不会重叠？</p>
 
 <p><img alt="updated version" src="https://mdn.mozillademos.org/files/11813/aabb_test.png" style="display: block; height: 346px; margin: 0px auto; width: 461px;"></p>
 
-<p>在数学上的表示就像这样:</p>
+<p>在数学上的表示就像这样：</p>
 
 <p><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo>∧</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo>∧</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo>∧</mo><msub><mi>A</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">f(A,B) =</annotation></semantics></math></p>
 
-<p>在JavaScript我们可以这样:</p>
+<p>在 JavaScript 我们可以这样：</p>
 
 <pre class="brush: js">function intersect(a, b) {
   return (a.minX &lt;= b.maxX &amp;&amp; a.maxX &gt;= b.minX) &amp;&amp;
@@ -58,20 +58,20 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <h2 id="球体碰撞">球体碰撞</h2>
 
-<p>球体碰撞边缘检测比AABB盒子稍微复杂一点,但他的检测仍相当容易的。球体的主要优势是他们不变的旋转，如果包装实体旋转，边界领域仍将是相同的。他们的主要缺点是,除非他们包装的实体实际上是球形,包装的实体通常不是一个完美的球形(比如用这样的球形包装一个人将导致一些错误,而AABB盒子将更合适)。</p>
+<p>球体碰撞边缘检测比 AABB 盒子稍微复杂一点，但他的检测仍相当容易的。球体的主要优势是他们不变的旋转，如果包装实体旋转，边界领域仍将是相同的。他们的主要缺点是，除非他们包装的实体实际上是球形，包装的实体通常不是一个完美的球形 (比如用这样的球形包装一个人将导致一些错误，而 AABB 盒子将更合适)。</p>
 
 <h3 id="点与球">点与球</h3>
 
-<p>检查是否一个球体包含一个点，我们需要计算点和球体的中心之间的距离。如果这个距离小于或等于球的半径,这个点就在里面。</p>
+<p>检查是否一个球体包含一个点，我们需要计算点和球体的中心之间的距离。如果这个距离小于或等于球的半径，这个点就在里面。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11803/point_vs_sphere.png" style="display: block; height: 262px; margin: 0px auto; width: 385px;"></p>
 
-<p>两个点A和B之间的欧氏距离是<br>
- <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x) ^ 2) + (A_y - B_y)^2 + (A_z - B_z)}</annotation></semantics></math> ,我们的公式指出，球体碰撞检测是:</p>
+<p>两个点 A 和 B 之间的欧氏距离是<br>
+ <math><semantics><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{(A_x - B_x) ^ 2) + (A_y - B_y)^2 + (A_z - B_z)}</annotation></semantics></math> ,我们的公式指出，球体碰撞检测是：</p>
 
 <p><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>S</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub><mo>&gt;=</mo><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>-</mo><msub><mi>S</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>-</mo><msub><mi>S</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>-</mo><msub><mi>S</mi><mi>z</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="TeX">f(P,S) = S_{radius} &gt;= \sqrt{(P_x - S_x)^2 + (P_y - S_y)^2 + (P_z - S_z)^2}</annotation></semantics></math></p>
 
-<p>或者用JavaScript:</p>
+<p>或者用 JavaScript:</p>
 
 <pre class="brush: js">function isPointInsideSphere(point, sphere) {
   // we are using multiplications because is faster than calling Math.pow
@@ -83,7 +83,7 @@ translation_of: Games/Techniques/3D_collision_detection
 </pre>
 
 <div class="note">
-<p>上面的代码有一个平方根,是一个开销昂贵的计算。一个简单的优化,以避免它由半径平方,所以优化方程不涉及<code>distance &lt; sphere.radius * sphere.radius</code>.</p>
+<p>上面的代码有一个平方根，是一个开销昂贵的计算。一个简单的优化，以避免它由半径平方，所以优化方程不涉及<code>distance &lt; sphere.radius * sphere.radius</code>.</p>
 </div>
 
 <h3 id="球体与球体">球体与球体</h3>
@@ -92,11 +92,11 @@ translation_of: Games/Techniques/3D_collision_detection
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11805/sphere_vs_sphere.png" style="display: block; height: 262px; margin: 0px auto; width: 414px;"></p>
 
-<p>在数学上,像这样:</p>
+<p>在数学上，像这样：</p>
 
 <p><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><msqrt><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>-</mo><msub><mi>B</mi><mi>x</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>-</mo><msub><mi>B</mi><mi>y</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>z</mi></msub><mo>-</mo><msub><mi>B</mi><mi>z</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><mo>&lt;=</mo><msub><mi>A</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub><mo>+</mo><msub><mi>B</mi><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi></mrow></msub></mrow><annotation encoding="TeX">f(A,B) = \sqrt{(A_x - B_x)^2 + (A_y - B_y)^2 + (A_z - B_z)^2} &lt;= A_{radius} + B_{radius}</annotation></semantics></math></p>
 
-<p>或者JavaScript:</p>
+<p>或者 JavaScript:</p>
 
 <pre class="brush: js">function intersect(sphere, other) {
   // we are using multiplications because it's faster than calling Math.pow
@@ -106,13 +106,13 @@ translation_of: Games/Techniques/3D_collision_detection
   return distance &lt; (sphere.radius + other.radius); }
 }</pre>
 
-<h3 id="球体与AABB">球体与AABB</h3>
+<h3 id="球体与AABB">球体与 AABB</h3>
 
-<p>测试一个球和一个AABB的碰撞是稍微复杂,但过程仍然简单和快速。一个合乎逻辑的方法是，检查AABB每个顶点,计算每一个点与球的距离。然而这是大材小用了,测试所有的顶点都是不必要的,因为我们可以侥幸计算AABB最近的点(不一定是一个顶点)和球体的中心之间的距离,看看它是小于或等于球体的半径。我们可以通过逼近球体的中心和AABB的距离得到这个值。</p>
+<p>测试一个球和一个 AABB 的碰撞是稍微复杂，但过程仍然简单和快速。一个合乎逻辑的方法是，检查 AABB 每个顶点，计算每一个点与球的距离。然而这是大材小用了，测试所有的顶点都是不必要的，因为我们可以侥幸计算 AABB 最近的点 (不一定是一个顶点) 和球体的中心之间的距离，看看它是小于或等于球体的半径。我们可以通过逼近球体的中心和 AABB 的距离得到这个值。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11837/sphere_vs_aabb.png" style="display: block; height: 282px; margin: 0px auto; width: 377px;"></p>
 
-<p>在 JavaScript, 我们可以像这样子做:</p>
+<p>在 JavaScript, 我们可以像这样子做：</p>
 
 <pre class="brush: js">function intersect(sphere, box) {
   // get box closest point to sphere center by clamping

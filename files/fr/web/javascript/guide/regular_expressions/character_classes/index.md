@@ -9,7 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Classes_de_caractères
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+{{jsSidebar("JavaScript Guide")}}
 
 Les classes de caractères permettent de distinguer différents ensembles de caractères dans les expressions rationnelles (par exemple les chiffres d'une part et les lettres d'autre part).
 
@@ -32,8 +32,8 @@ Les classes de caractères permettent de distinguer différents ensembles de car
           un caractère de saut de ligne.
         </p>
         <p>
-          Ainsi, <code>/.n/</code> correspond à  'un' et 'en' dans "Un baobab
-          nain en cours de  croissance" mais pas à 'nain'.
+          Ainsi, <code>/.n/</code> correspond à  'un' et 'en' dans "Un baobab
+          nain en cours de croissance" mais pas à 'nain'.
         </p>
         <p>
           Si le marqueur <code>s</code> (<em>dotAll</em>) est utilisé, le point
@@ -114,7 +114,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
           >.
         </p>
         <p>
-          Ainsi, <code>/\s\w*/</code> correspond à ' toto' dans "truc toto".
+          Ainsi, <code>/\s\w*/</code> correspond à ' toto' dans "truc toto".
         </p>
       </td>
     </tr>

@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLMediaElement/networkState
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"> <strong><code>HTMLMediaElement.networkState</code></strong> 属性表示在网络上获取媒体的当前状态。</span></p>
+<p> <strong><code>HTMLMediaElement.networkState</code></strong> 属性表示在网络上获取媒体的当前状态。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/HTMLMediaElement/networkState
   <tr>
    <td><code>NETWORK_IDLE</code></td>
    <td>1</td>
-   <td>HTMLMediaElement 是有效的并且已经选择了一个资源,，但是还没有使用网络。</td>
+   <td>HTMLMediaElement 是有效的并且已经选择了一个资源，，但是还没有使用网络。</td>
   </tr>
   <tr>
    <td><code>NETWORK_LOADING</code></td>
@@ -55,7 +55,7 @@ translation_of: Web/API/HTMLMediaElement/networkState
 
 <h2 id="例子">例子</h2>
 
-<p>这个例子监听audio元素以开始播放，然后检查是否仍然在加载数据。</p>
+<p>这个例子监听 audio 元素以开始播放，然后检查是否仍然在加载数据。</p>
 
 <pre class="brush: html">&lt;audio id="example" preload="auto"&gt;
  &lt;source src="sound.ogg" type="audio/ogg" /&gt;
@@ -98,64 +98,10 @@ obj.addEventListener('playing', function() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}} [1]</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]  <code>NETWORK_LOADED</code> 已被移除以与Gecko 2.0的HTML规范一致。{{geckoRelease(2)}}. </p>
+{{Compat("api.HTMLMediaElement.networkState")}}
 
 <h2 id="See_Also" name="See_Also">另见</h2>
 
 <ul>
- <li>定义它的接口, {{domxref("HTMLMediaElement")}}.</li>
+ <li>定义它的接口，{{domxref("HTMLMediaElement")}}.</li>
 </ul>

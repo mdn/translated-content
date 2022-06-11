@@ -15,7 +15,7 @@ translation_of: Web/API/OfflineAudioContext/OfflineAudioContext
 
 <dl>
  <dt>numOfChannels</dt>
- <dd>An integer 代表该缓冲区拥有的声道的数目。该实现需要支持至少32个声道。</dd>
+ <dd>An integer 代表该缓冲区拥有的声道的数目。该实现需要支持至少 32 个声道。</dd>
  <dt>length</dt>
  <dd>代表采样帧缓冲区的大小的整数。</dd>
  <dt>sampleRate</dt>
@@ -30,14 +30,14 @@ translation_of: Web/API/OfflineAudioContext/OfflineAudioContext
 
 <h2 id="例子">例子</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// 定义一个在线或者离线的音频上下文</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// 定义一个在线或者离线的音频上下文
 
-<span class="keyword token">var</span> audioCtx <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">AudioContext</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> offlineCtx <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">OfflineAudioContext</span><span class="punctuation token">(</span><span class="number token">2</span><span class="punctuation token">,</span><span class="number token">44100</span><span class="operator token">*</span><span class="number token">40</span><span class="punctuation token">,</span><span class="number token">44100</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+var audioCtx = new AudioContext();
+var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
 
-source <span class="operator token">=</span> offlineCtx<span class="punctuation token">.</span><span class="function token">createBufferSource</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;
+source = offlineCtx.createBufferSource();
 
-// 更多代码...</span></code>
+// 更多代码...</code>
 </pre>
 
 <div class="note">
@@ -63,58 +63,4 @@ source <span class="operator token">=</span> offlineCtx<span class="punctuation 
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}<br>
-     </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatVersionUnknown}}<br>
-     </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.OfflineAudioContext.OfflineAudioContext")}}

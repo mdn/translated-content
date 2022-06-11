@@ -11,19 +11,19 @@ tags:
   - Tutorial
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/zh-CN/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}</p>
 
-<div class="summary">
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser教程</a>系列的第二课. 在课程完成之后，你可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html">Gamedev-Phaser-Content-Kit/demos/lesson02.html</a>找到源码.</p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a>系列的第二课。在课程完成之后，你可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html">Gamedev-Phaser-Content-Kit/demos/lesson02.html</a>找到源码。</p>
 </div>
 
-<p><font>缩放是指游戏画布如何在不同的屏幕尺寸上进行显示。</font><font>我们可以在预加载阶段自动使游戏规模适合任何屏幕尺寸，之后就可以不用再担心屏幕尺寸的问题了。</font></p>
+<p>缩放是指游戏画布如何在不同的屏幕尺寸上进行显示。我们可以在预加载阶段自动使游戏规模适合任何屏幕尺寸，之后就可以不用再担心屏幕尺寸的问题了。</p>
 
-<h2 id="Phaser中scale对象">Phaser中scale对象</h2>
+<h2 id="Phaser中scale对象">Phaser 中 scale 对象</h2>
 
-<p><font><font>Phaser中</font><font>有一个特殊的</font><font>对象：</font></font><code>scale</code>，<font><font>它包含一些特别的方法和属性。</font><font>让我们来更改一下上一节中创建的的</font></font><code>preload()</code>函数<font><font>：</font></font></p>
+<p>Phaser 中有一个特殊的对象：<code>scale</code>，它包含一些特别的方法和属性。让我们来更改一下上一节中创建的的<code>preload()</code>函数：</p>
 
 <pre class="brush: js">function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -32,21 +32,21 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 }
 </pre>
 
-<p><code>scaleMode</code><font><font> 有几个不同的选项来指定 Canvas 应该如何缩放：</font></font></p>
+<p><code>scaleMode</code> 有几个不同的选项来指定 Canvas 应该如何缩放：</p>
 
 <ul>
  <li><code>NO_SCALE</code> — 不进行任何缩放。</li>
  <li><code>EXACT_FIT</code> — 拉伸，填充屏幕，不保留长宽比。</li>
- <li><code>SHOW_ALL</code> — 等比缩放，填充屏幕，保留长宽比，剩余空间用黑色填充<font>。</font></li>
- <li><code>RESIZE</code> — 动态，每次都会根据屏幕生成画布，所以你需要在游戏运行时动态的放置游戏元素。这是一种进阶的模式<font>。</font></li>
- <li><code>USER_SCALE</code> — 自定义<font>，允许您自己计算大小和比例。这也是一种进阶的模式。</font></li>
+ <li><code>SHOW_ALL</code> — 等比缩放，填充屏幕，保留长宽比，剩余空间用黑色填充。</li>
+ <li><code>RESIZE</code> — 动态，每次都会根据屏幕生成画布，所以你需要在游戏运行时动态的放置游戏元素。这是一种进阶的模式。</li>
+ <li><code>USER_SCALE</code> — 自定义，允许您自己计算大小和比例。这也是一种进阶的模式。</li>
 </ul>
 
-<p><code>preload()</code><font><font>中的其他两行代码</font></font><font><font>负责水平和垂直居中画布，所以它始终以屏幕为中心，无论大小如何。</font></font></p>
+<p><code>preload()</code>中的其他两行代码负责水平和垂直居中画布，所以它始终以屏幕为中心，无论大小如何。</p>
 
-<h2 id="设置背景颜色"><font><font>设置背景颜色</font></font></h2>
+<h2 id="设置背景颜色">设置背景颜色</h2>
 
-<p><font><font>我们还可以给画布设置背景颜色来替代磨人的黑色背景。</font><font>通过更改</font></font><code>stage</code><font><font>对象的</font></font><code>backgroundColor</code><font><font>属性来添加，我们可以使用CSS颜色定义语法进行设置。</font><font>我们在刚才的代码下面添加以下代码：</font></font></p>
+<p>我们还可以给画布设置背景颜色来替代磨人的黑色背景。通过更改<code>stage</code>对象的<code>backgroundColor</code>属性来添加，我们可以使用 CSS 颜色定义语法进行设置。我们在刚才的代码下面添加以下代码：</p>
 
 <pre class="brush: js">game.stage.backgroundColor = '#eee';
 </pre>
@@ -59,6 +59,6 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>现在我们设置了我们游戏的缩放比例，让我们继续第三课，并设计出如何</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen"><font><font>加载资源并将其显示在屏幕上</font></font></a><font><font>。</font></font></p>
+<p>现在我们设置了我们游戏的缩放比例，让我们继续第三课，并设计出如何<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen">加载资源并将其显示在屏幕上</a>。</p>
 
 <p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}</p>

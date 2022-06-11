@@ -7,11 +7,11 @@ translation_of: Web/CSS/background-origin
 
 <h2 id="摘要">摘要</h2>
 
-<p> <code>background-origin</code> 规定了指定背景图片{{cssxref("background-image")}} 属性的原点位置的背景相对区域.</p>
+<p> <code>background-origin</code> 规定了指定背景图片{{cssxref("background-image")}} 属性的原点位置的背景相对区域。</p>
 
-<p>注意：当使用 {{Cssxref("background-attachment")}} 为fixed时，该属性将被忽略不起作用。</p>
+<p>注意：当使用 {{Cssxref("background-attachment")}} 为 fixed 时，该属性将被忽略不起作用。</p>
 
-<div class="note">假如<span style="line-height: 1.5;">{{cssxref("background")}}简写中没有设置该值，那么在 background 简写值后指定</span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">background-origin，那么后面的值就会覆盖简写值，其实说白了，就是后出现的值会覆盖前面的值。</span></div>
+<div class="note">假如{{cssxref("background")}}简写中没有设置该值，那么在 background 简写值后指定 background-origin，那么后面的值就会覆盖简写值，其实说白了，就是后出现的值会覆盖前面的值。</div>
 
 <p>{{cssinfo}}</p>
 
@@ -30,11 +30,11 @@ background-origin: inherit
 
 <dl>
  <dt><code>border-box</code></dt>
- <dd>背景图片的摆放以border区域为参考</dd>
+ <dd>背景图片的摆放以 border 区域为参考</dd>
  <dt><code>padding-box</code></dt>
- <dd>背景图片的摆放以padding区域为参考</dd>
+ <dd>背景图片的摆放以 padding 区域为参考</dd>
  <dt><code>content-box</code></dt>
- <dd>背景图片的摆放以content区域为参考</dd>
+ <dd>背景图片的摆放以 content 区域为参考</dd>
  <dt>
  <h3 id="形式化语法" style="font-size: 1.71428571428571rem;">形式化语法</h3>
  <a class="syntaxbox-help icon-only" href="https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax" lang="en">How to read CSS syntax.</a>
@@ -50,7 +50,7 @@ background-origin: inherit
    padding: 10px;
    background: url('image.jpg');
    background-position: center left;
-   /* 背景将在内容区padding内部填充 */
+   /* 背景将在内容区 padding 内部填充 */
    background-origin: content-box;
 }
 </pre>
@@ -90,80 +90,10 @@ background-origin: inherit
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0 [3]</td>
-   <td>{{CompatGeckoDesktop("2.0")}} [1]</td>
-   <td>9.0 [2]</td>
-   <td>10.5</td>
-   <td>3.0 (522) [3]</td>
-  </tr>
-  <tr>
-   <td><code>content-box</code></td>
-   <td>1.0 [3]</td>
-   <td>{{CompatGeckoDesktop("2.0")}} [1]</td>
-   <td>9.0 [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>3.0 (522) [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>content-box</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko supported, from version 1.1 to version 1.9.2, which corresponds to Firefox 1.0 to 3.6 included, a different, and prefixed, syntax: <code>-moz-background-origin: padding | border</code>.</p>
-
-<p>[2] Internet Explorer up to version 7 behaves as if there was a <code>background-origin: border-box;</code> Internet Explorer 8 behaves as if it were <code>background-origin: padding-box;</code> which is the regular default value.</p>
-
-<p>[3] Webkit also supports the prefixed version of this proprietary, and in that case, in addition to the current keywords, the alternative synonyms: <code>padding</code>, <code>border</code>, and <code>content</code>.</p>
-
-<p>[4] Konqueror 3.5.4 supports<code> -khtml-background-origin</code>.</p>
+{{Compat("css.properties.background-origin")}}
 
 <h2 id="相关文献">相关文献</h2>
 
 <ul>
- <li><a href="https://www.cnblogs.com/shytong/p/5077129.html">【CSS3】background-origin和background-clip的区别</a></li>
+ <li><a href="https://www.cnblogs.com/shytong/p/5077129.html">【CSS3】background-origin 和 background-clip 的区别</a></li>
 </ul>

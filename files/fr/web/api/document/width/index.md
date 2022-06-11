@@ -3,11 +3,11 @@ title: Document.width
 slug: Web/API/Document/width
 translation_of: Web/API/Document/width
 ---
-{{APIRef("DOM")}} {{Obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 > **Note :** À partir de {{Gecko("6.0")}},` document.width `n'est plus pris en charge. Au lieu de cela, utilisez document.body.clientWidth. Voir {{domxref("element.clientWidth")}}.
 
-Renvoie la largeur de l'élément {{HTMLElement("body")}} du document courrent en pixels.
+Renvoie la largeur de l'élément {{HTMLElement("body")}} du document courrent en pixels.
 
 Non pris en charge par Internet Explorer.
 

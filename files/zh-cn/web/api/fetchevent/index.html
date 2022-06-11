@@ -5,10 +5,10 @@ translation_of: Web/API/FetchEvent
 ---
 <p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
 
-<p>使用<code>ServiceWorker</code>技术时,页面的提取动作会在ServiceWorker作用域(<code>ServiceWorkerGlobalScope</code>)中触发fetch事件.</p>
+<p>使用<code>ServiceWorker</code>技术时，页面的提取动作会在 ServiceWorker 作用域 (<code>ServiceWorkerGlobalScope</code>) 中触发 fetch 事件。</p>
 
-<p>使用 {{domxref("ServiceWorkerGlobalScope.onfetch")}}或addEventListener监听.<br>
- 该事件回调会注入<code>FetchEvent</code>参数.它携带了有关请求和结果响应的信息以及方法{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} ,允许我们向受控页面提供任意响应.</p>
+<p>使用 {{domxref("ServiceWorkerGlobalScope.onfetch")}}或 addEventListener 监听。<br>
+ 该事件回调会注入<code>FetchEvent</code>参数。它携带了有关请求和结果响应的信息以及方法{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} ,允许我们向受控页面提供任意响应。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -100,61 +100,7 @@ translation_of: Web/API/FetchEvent
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}[<sup>1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(44.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.FetchEvent")}}
 
 <h2 id="请参见">请参见</h2>
 

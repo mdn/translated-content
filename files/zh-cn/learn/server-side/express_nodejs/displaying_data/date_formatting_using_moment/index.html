@@ -3,15 +3,15 @@ title: 使用 moment 做日期格式化
 slug: learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
-<p>我们模型的日期预设呈现很难看: <em>Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>。在本节中，我们将展示如何更新上一节中的 書本實例 BookInstance 列表页面，以更友好的格式显示<code>due_date</code>字段：December 6th, 2016。</p>
+<p>我们模型的日期预设呈现很难看：<em>Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>。在本节中，我们将展示如何更新上一节中的 書本實例 BookInstance 列表页面，以更友好的格式显示<code>due_date</code>字段：December 6th, 2016。</p>
 
-<p>我们将使用的方法，是在我们的<code>BookInstance</code>模型中，创建一个返回格式化日期的虚拟屬性。我们将使用<a class="external external-icon" href="https://www.npmjs.com/package/moment" rel="noopener">moment</a> 来做实际的格式化，这是一个轻量级JavaScript日期库，用于解析，验证，操作和格式化日期。</p>
+<p>我们将使用的方法，是在我们的<code>BookInstance</code>模型中，创建一个返回格式化日期的虚拟屬性。我们将使用<a class="external external-icon" href="https://www.npmjs.com/package/moment" rel="noopener">moment</a> 来做实际的格式化，这是一个轻量级 JavaScript 日期库，用于解析，验证，操作和格式化日期。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 我们可以直接在 Pug 模板中，使用 <em>moment </em>格式化字符串，或者可以在许多其它地方格式化字符串。使用虚拟属性，可以使我们获得格式化的日期，這与我们当前获取 <code>due_date</code> 的方式完全相同。</p>
+<p><strong>注意：</strong> 我们可以直接在 Pug 模板中，使用 <em>moment </em>格式化字符串，或者可以在许多其它地方格式化字符串。使用虚拟属性，可以使我们获得格式化的日期，這与我们当前获取 <code>due_date</code> 的方式完全相同。</p>
 </div>
 
-<h2 class="highlight-spanned" id="安装_moment">安装<span class="highlight-span"> moment</span></h2>
+<h2 class="highlight-spanned" id="安装_moment">安装 moment</h2>
 
 <p>在项目的根目录，输入下列命令</p>
 
@@ -22,37 +22,37 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 <ol>
  <li>打开<strong> ./models/bookinstance.js</strong>.</li>
  <li>在此页面最上方，引用 moment
-  <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> moment <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'moment'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  <pre class="brush: js line-numbers  language-js"><code class="language-js">var moment = require('moment');</code></pre>
  </li>
 </ol>
 
 <p>在 url 属性后面，加入虚拟属性 <code>due_back_formatted</code> 。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">BookInstanceSchema
-<span class="punctuation token">.</span><span class="function token">virtual</span><span class="punctuation token">(</span><span class="string token">'due_back_formatted'</span><span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> <span class="function token">moment</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>due_back<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'MMMM Do, YYYY'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+.virtual('due_back_formatted')
+.get(function () {
+  return moment(this.due_back).format('MMMM Do, YYYY');
+});</code></pre>
 
 <div class="note">
-<p><strong>注意:</strong> 格式化方法可以使用几乎任何模式显示日期。<a class="external external-icon" href="http://momentjs.com/docs/#/displaying/" rel="noopener">moment文档</a>中，可以找到表示不同日期组件的语法。</p>
+<p><strong>注意：</strong> 格式化方法可以使用几乎任何模式显示日期。<a class="external external-icon" href="http://momentjs.com/docs/#/displaying/" rel="noopener">moment 文档</a>中，可以找到表示不同日期组件的语法。</p>
 </div>
 
-<h2 class="highlight-spanned" id="更新视图"><span class="highlight-span">更新视图</span></h2>
+<h2 class="highlight-spanned" id="更新视图">更新视图</h2>
 
 <p>打开 <strong>/views/bookinstance_list.pug</strong> ，然后用  <code>due_back_formatted</code> 取代 <code>due_back</code> 。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">      <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">!=</span><span class="string token">'Available'</span>
-        <span class="comment token">//span  (Due: #{val.due_back} )</span>
-        span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back_formatted<span class="punctuation token">}</span> <span class="punctuation token">)</span>       </code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">      if val.status!='Available'
+        //span  (Due: #{val.due_back} )
+        span  (Due: #{val.due_back_formatted} )       </code></pre>
 
-<p>这就是本章节的全部了。如果你访问侧边栏的 All book-instances ，你应该会看到所有的归还日期都更吸引人了！</p>
+<p>这就是本章节的全部了。如果你访问侧边栏的 All book-instances，你应该会看到所有的归还日期都更吸引人了！</p>
 
 <h2 id="下一步">下一步</h2>
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下一個部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">作者列表页面、种类列表页面、与自我挑战</a></li>
+ <li>继续教程 5 下一個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">作者列表页面、种类列表页面、与自我挑战</a></li>
 </ul>
 
 <p> </p>

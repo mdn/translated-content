@@ -86,7 +86,6 @@
 - 正確：我們將變數myHeading中innerHTML特性的值設為「Hello, world!」。
 - 不正確：我們將變數myHeading中innerHTML特性的值設為「Hello，world！」。
 
-
 #### 常見錯誤
 
 常見錯誤使用的標點符號（包含但不限於下列的例子）：

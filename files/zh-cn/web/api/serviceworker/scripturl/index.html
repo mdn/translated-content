@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorker/scriptURL
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>作为<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration" title="ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin.">ServiceWorkerRegistration</a>的一部分定义，会返回该ServiceWorker的序列化脚本url</code>. 必须与document注册<code>ServiceWorker的地址同源</code>.</p>
+<p>作为<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration" title="ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin.">ServiceWorkerRegistration</a>的一部分定义，会返回该 ServiceWorker 的序列化脚本 url</code>. 必须与 document 注册<code>ServiceWorker 的地址同源</code>.</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -35,58 +35,4 @@ translation_of: Web/API/ServiceWorker/scriptURL
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.ServiceWorker.scriptURL")}}

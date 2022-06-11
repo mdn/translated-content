@@ -38,7 +38,7 @@ target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</
  <ul>
   <li><code>capture</code>:  {{jsxref("Boolean")}} указывает, что события этого типа будут отправлены зарегистрированному обработчику <code>listener</code> перед отправкой на <code>EventTarget</code>, расположенный ниже в дереве DOM.</li>
   <li><code>once</code>: {{jsxref("Boolean")}} указывает, что обработчик должен быть вызван не более одного раза после добавления. Если <code>true</code>, обработчик автоматически удаляется при вызове.</li>
-  <li><code>passive</code>:  {{jsxref("Boolean")}} указывает, что обработчик никогда не вызовет <code>preventDefault()</code>. Если всё же вызов будет произведён, браузер должен игнорировать его и генерировать консольное предупреждение. Пример {{anch("Улучшение производительности прокрутки с помощью passive true")}}</li>
+  <li><code>passive</code>:  {{jsxref("Boolean")}} указывает, что обработчик никогда не вызовет <code>preventDefault()</code>. Если всё же вызов будет произведён, браузер должен игнорировать его и генерировать консольное предупреждение. Пример <a href="#улучшение_производительности_прокрутки_с_помощью_passive_true">Улучшение производительности прокрутки с помощью passive true</a></li>
   <li>{{non-standard_inline}}<code> mozSystemGroup</code>: {{jsxref("Boolean")}} указывает, что обработчик должен быть добавлен в системную группу. Доступно только в коде, запущенном в XBL или в <a href="https://chrome.google.com/webstore/detail/open-with-firefox/poeacjbaiakjnaepdjgggojcjoajakmd">расширении Chrome</a>.</li>
  </ul>
  </dd>

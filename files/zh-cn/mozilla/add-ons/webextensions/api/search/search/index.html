@@ -7,11 +7,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 
 <p>使用指定的搜索引擎或默认搜索引擎进行搜索。</p>
 
-<p>结果将显示在一个新的选项卡中，或者如果给出了tabId参数，则显示在由此标识的选项卡中。</p>
+<p>结果将显示在一个新的选项卡中，或者如果给出了 tabId 参数，则显示在由此标识的选项卡中。</p>
 
 <p>要在扩展程序中使用此功能，您必须要求<code>"search"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">有明确许可</a>.</p>
 
-<p>获取安装的搜索引擎, 请使用 {{WebExtAPIRef("search.get()")}}.</p>
+<p>获取安装的搜索引擎，请使用 {{WebExtAPIRef("search.get()")}}.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,18 +25,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 <dl class="reference-values">
  <dt><code>searchProperties</code></dt>
  <dd>
- <p><code>object</code>. 拥有以下属性的对象:</p>
+ <p><code>object</code>. 拥有以下属性的对象：</p>
 
  <dl class="reference-values">
   <dt><code>query</code></dt>
   <dd><code>字符串</code>. 进行查询的内容。</dd>
   <dt><code>engine</code>{{optional_inline}}</dt>
   <dd>
-  <p><code>字符串。</code>.搜索引擎的名称。 如果指定的搜索引擎名称不存在，该函数将引发错误。 如果省略此属性，则使用默认的搜索引擎。</p>
+  <p><code>字符串。</code>.搜索引擎的名称。如果指定的搜索引擎名称不存在，该函数将引发错误。如果省略此属性，则使用默认的搜索引擎。</p>
   </dd>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd>
-  <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">整型。</span></font>用于显示搜索结果的选项卡。如果省略此属性，搜索结果将显示在新选项卡中。</p>
+  <p>整型。用于显示搜索结果的选项卡。如果省略此属性，搜索结果将显示在新选项卡中。</p>
   </dd>
  </dl>
  </dd>
@@ -44,7 +44,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 
 <h3 id="返回值">返回值</h3>
 
-<p>无.</p>
+<p>无。</p>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
@@ -52,7 +52,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 
 <h2 id="例子">例子</h2>
 
-<p>使用默认搜索引擎进行搜索。 结果显示在新选项卡中：</p>
+<p>使用默认搜索引擎进行搜索。结果显示在新选项卡中：</p>
 
 <pre class="brush: js no-line-numbers notranslate">function search() {
   browser.search.search({
@@ -63,7 +63,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 browser.browserAction.onClicked.addListener(search);
 </pre>
 
-<p>使用维基百科进行搜索。 结果显示在新选项卡中：</p>
+<p>使用维基百科进行搜索。结果显示在新选项卡中：</p>
 
 <pre class="brush: js no-line-numbers notranslate">function search() {
   browser.search.search({
@@ -75,7 +75,7 @@ browser.browserAction.onClicked.addListener(search);
 browser.browserAction.onClicked.addListener(search);
 </pre>
 
-<p>使用维基百科进行搜索。 结果将显示在活动选项卡中：</p>
+<p>使用维基百科进行搜索。结果将显示在活动选项卡中：</p>
 
 <pre class="brush: js no-line-numbers notranslate">function search(tab) {
   browser.search.search({

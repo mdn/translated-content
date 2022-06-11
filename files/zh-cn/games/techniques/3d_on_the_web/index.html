@@ -14,25 +14,25 @@ translation_of: Games/Techniques/3D_on_the_web
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary">为了web上丰富的游戏体验，一个好武器是webGL， 并呈现在HTML的 {{htmlelement("canvas")}}元素上。WebGL基本上是Web的OpenGL ES 2.0版本 — 作为一个JavaScript API，它提供了能构建丰富的交互式动画和游戏的工具。你可以使用硬件加速的JavaScript 生成和呈现动态3D图像。</p>
+<p>为了 web 上丰富的游戏体验，一个好武器是 webGL，并呈现在 HTML 的 {{htmlelement("canvas")}}元素上。WebGL 基本上是 Web 的 OpenGL ES 2.0 版本 — 作为一个 JavaScript API，它提供了能构建丰富的交互式动画和游戏的工具。你可以使用硬件加速的 JavaScript 生成和呈现动态 3D 图像。</p>
 
 <h2 id="文档和浏览器支持">文档和浏览器支持</h2>
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>项目的文档和规范由<a href="https://www.khronos.org/">Khronos Group维护</a>，而非大部分Web APIs采用的W3C。它很好地支持了现代浏览器甚至是移动手机，由此你无需担心太多。主流浏览器均支持WebGL，你需要关注的仅仅是在你使用的设备上进行优化。</p>
+<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>项目的文档和规范由<a href="https://www.khronos.org/">Khronos Group 维护</a>，而非大部分 Web APIs 采用的 W3C。它很好地支持了现代浏览器甚至是移动手机，由此你无需担心太多。主流浏览器均支持 WebGL，你需要关注的仅仅是在你使用的设备上进行优化。</p>
 
-<p>目前进行的尝试是在不久的将来促成WebGL 2.0版本（基于OpenGL ES 3.0版本）的发布，WebGL 2.0版本将会带来许多改进，并且将会帮助开发者使用现在强大的硬件，为现代Web开发游戏。</p>
+<p>目前进行的尝试是在不久的将来促成 WebGL 2.0 版本（基于 OpenGL ES 3.0 版本）的发布，WebGL 2.0 版本将会带来许多改进，并且将会帮助开发者使用现在强大的硬件，为现代 Web 开发游戏。</p>
 
-<h2 id="对基本3D理论的解释">对基本3D理论的解释</h2>
+<h2 id="对基本3D理论的解释">对基本 3D 理论的解释</h2>
 
-<p>基本3D理论的核心围绕在3D空间的形状呈现上，通过使用坐标系计算出它们的位置。寻找你所要的信息，请参考我们的文章 <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">Explaining basic 3D theory</a> 。</p>
+<p>基本 3D 理论的核心围绕在 3D 空间的形状呈现上，通过使用坐标系计算出它们的位置。寻找你所要的信息，请参考我们的文章 <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">Explaining basic 3D theory</a> 。</p>
 
 <h2 id="预先概念">预先概念</h2>
 
-<p>你可以使用 WebGL 做很多事情。你需要深入了解和学习一些预先的理念——像着色器、碰撞检测或最新的热门话题——Web上的虚拟现实。</p>
+<p>你可以使用 WebGL 做很多事情。你需要深入了解和学习一些预先的理念——像着色器、碰撞检测或最新的热门话题——Web 上的虚拟现实。</p>
 
 <h3 id="着色器">着色器</h3>
 
-<p>值得提及的是着色器，着色器本身就是一个独立的故事。着色器使用GLSL，一个特殊的和C语言相似的 OpenGL 着色语言，但C语言直接通过图像管道执行。</p>
+<p>值得提及的是着色器，着色器本身就是一个独立的故事。着色器使用 GLSL，一个特殊的和 C 语言相似的 OpenGL 着色语言，但 C 语言直接通过图像管道执行。</p>
 
 <h3 id="碰撞检测">碰撞检测</h3>
 
@@ -43,41 +43,41 @@ translation_of: Games/Techniques/3D_on_the_web
  <li><a href="/en-US/docs/Games/Techniques/3D_collision_detection">3D 碰撞检测</a></li>
 </ul>
 
-<h3 id="Web虚拟现实">Web虚拟现实</h3>
+<h3 id="Web虚拟现实">Web 虚拟现实</h3>
 
-<p>虚拟现实这一概念并不新鲜，但由于硬件的进步，它大有席卷网络之势，如<a href="https://www.oculus.com/en-us/rift/">Oculus Rift</a>和（目前实验性的） <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>，它们从VR硬件中捕获信息并使其可在JavaScript中应用。有关的详细信息请阅读 <a href="/en-US/docs/Games/Techniques/3D_on_the_web/WebVR">WebVR-Web 虚拟现实</a>。</p>
+<p>虚拟现实这一概念并不新鲜，但由于硬件的进步，它大有席卷网络之势，如<a href="https://www.oculus.com/en-us/rift/">Oculus Rift</a>和（目前实验性的） <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>，它们从 VR 硬件中捕获信息并使其可在 JavaScript 中应用。有关的详细信息请阅读 <a href="/en-US/docs/Games/Techniques/3D_on_the_web/WebVR">WebVR-Web 虚拟现实</a>。</p>
 
-<p>还有一篇<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">用A-Frame构建基本demo</a>的文章，向您展示了使用<a href="http://aframe.io/">A-Frame</a>框架构建3D环境的虚拟现实是多么的简单。</p>
+<p>还有一篇<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">用 A-Frame 构建基本 demo</a>的文章，向您展示了使用<a href="http://aframe.io/">A-Frame</a>框架构建 3D 环境的虚拟现实是多么的简单。</p>
 
 <h2 id="库和框架的兴起">库和框架的兴起</h2>
 
-<p>编码原生WebGL是相当复杂的，但从长远来看，您需要了解它，如果您的项目变得更加先进（请从参阅我们的<a href="/en-US/docs/Web/API/WebGL_API">WebGL文档</a>开始）。对于现实世界中的项目，您可能还会使用框架来加快开发，并帮助您管理正在处理的项目。使用3D游戏框架还有助于优化性能，因为您使用的工具会处理很多问题，因此您可以专注于构建游戏本身。</p>
+<p>编码原生 WebGL 是相当复杂的，但从长远来看，您需要了解它，如果您的项目变得更加先进（请从参阅我们的<a href="/en-US/docs/Web/API/WebGL_API">WebGL 文档</a>开始）。对于现实世界中的项目，您可能还会使用框架来加快开发，并帮助您管理正在处理的项目。使用 3D 游戏框架还有助于优化性能，因为您使用的工具会处理很多问题，因此您可以专注于构建游戏本身。</p>
 
-<p>最流行的JavaScript 3D库是<a href="http://threejs.org/">Three.js</a>，这是一个多用途工具，它使常见的3D技术更易于实现。还有其他流行的游戏开发库和框架值得检查。<a href="https://aframe.io">A-Frame</a>、<a href="https://playcanvas.com/">PlayCanvas</a>和<a href="http://www.babylonjs.com/">Babylon.js</a>是最容易辨认的，拥有丰富的文档、在线编辑器和活跃的社区。</p>
+<p>最流行的 JavaScript 3D 库是<a href="http://threejs.org/">Three.js</a>，这是一个多用途工具，它使常见的 3D 技术更易于实现。还有其他流行的游戏开发库和框架值得检查。<a href="https://aframe.io">A-Frame</a>、<a href="https://playcanvas.com/">PlayCanvas</a>和<a href="http://www.babylonjs.com/">Babylon.js</a>是最容易辨认的，拥有丰富的文档、在线编辑器和活跃的社区。</p>
 
-<h3 id="使用_A-Frame_搭建一个基础Demo">使用 A-Frame 搭建一个基础Demo</h3>
+<h3 id="使用_A-Frame_搭建一个基础Demo">使用 A-Frame 搭建一个基础 Demo</h3>
 
-<p>A-Frame是一个用于搭建3D和VR体验的Web框架。在内部，它是一个具有已声明的实体组件模式的three.js框架，也就是说我们只需借助HTML即可搭建场景。请参阅<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">Building up a basic demo with A-Frame</a>子页面来了解创建Demo的步骤。</p>
+<p>A-Frame 是一个用于搭建 3D 和 VR 体验的 Web 框架。在内部，它是一个具有已声明的实体组件模式的 three.js 框架，也就是说我们只需借助 HTML 即可搭建场景。请参阅<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">Building up a basic demo with A-Frame</a>子页面来了解创建 Demo 的步骤。</p>
 
-<h3 id="使用_Babylon.js_搭建一个基础Demo">使用 Babylon.js 搭建一个基础Demo</h3>
+<h3 id="使用_Babylon.js_搭建一个基础Demo">使用 Babylon.js 搭建一个基础 Demo</h3>
 
-<p><span class="seosummary">Babylon.js 是最受开发者欢迎的3D游戏引擎之一。与其他任何3D库一样，它提供了内置函数，帮助您更快地实现常见的3D功能。请参阅 <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js">Building up a basic demo with Babylon.js</a>   子页，其中包括建立一个开发环境，构建必要的HTML，以及编写JavaScript代码。</span></p>
+<p>Babylon.js 是最受开发者欢迎的 3D 游戏引擎之一。与其他任何 3D 库一样，它提供了内置函数，帮助您更快地实现常见的 3D 功能。请参阅 <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js">Building up a basic demo with Babylon.js</a>   子页，其中包括建立一个开发环境，构建必要的 HTML，以及编写 JavaScript 代码。</p>
 
-<h3 id="使用_PlayCanvas_搭建一个基础Demo">使用 PlayCanvas  搭建一个基础Demo</h3>
+<h3 id="使用_PlayCanvas_搭建一个基础Demo">使用 PlayCanvas  搭建一个基础 Demo</h3>
 
-<p>PlayCanvas是一个流行的GitHub开源3D WebGL游戏引擎，有在线编辑器和良好的文档。更多详细信息 请参阅<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas">Building up a basic demo with PlayCanvas</a>  ，文章将进一步介绍如何使用PlayCanvas库和联机编辑器搭建例子。</p>
+<p>PlayCanvas 是一个流行的 GitHub 开源 3D WebGL 游戏引擎，有在线编辑器和良好的文档。更多详细信息 请参阅<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas">Building up a basic demo with PlayCanvas</a>  ，文章将进一步介绍如何使用 PlayCanvas 库和联机编辑器搭建例子。</p>
 
-<h3 id="使用_Three.js_搭建一个基础Demo">使用 Three.js  搭建一个基础Demo</h3>
+<h3 id="使用_Three.js_搭建一个基础Demo">使用 Three.js  搭建一个基础 Demo</h3>
 
-<p>Three.js，与任何其他库一样，它给了您一个巨大的便利：不必编写数百行WebGL代码来构建任何有趣的东西，您可以使用内置的helper函数来轻松、快速地完成任务。请参阅 <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> 子页 逐步创建Demo。</p>
+<p>Three.js，与任何其他库一样，它给了您一个巨大的便利：不必编写数百行 WebGL 代码来构建任何有趣的东西，您可以使用内置的 helper 函数来轻松、快速地完成任务。请参阅 <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> 子页 逐步创建 Demo。</p>
 
-<h3 id="使用_Whitestorm.js_搭建一个基础Demo">使用  Whitestorm.js  搭建一个基础Demo</h3>
+<h3 id="使用_Whitestorm.js_搭建一个基础Demo">使用  Whitestorm.js  搭建一个基础 Demo</h3>
 
-<p>Whitestorm.js 是一个基于 <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js</a> 技术上的框架。它的主要区别是内置的物理引擎和插件系统 基于NPM。请参阅  <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js">Building up a basic demo with Whitestorm.js</a>   了解更多信息、教程和例子制作基本的，甚至配合Three.js 制作更复杂的应用程序或游戏.</p>
+<p>Whitestorm.js 是一个基于 <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js</a> 技术上的框架。它的主要区别是内置的物理引擎和插件系统 基于 NPM。请参阅  <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js">Building up a basic demo with Whitestorm.js</a>   了解更多信息、教程和例子制作基本的，甚至配合 Three.js 制作更复杂的应用程序或游戏。</p>
 
 <h3 id="其它工具">其它工具</h3>
 
-<p><a href="http://unity3d.com/">Unity</a> 和 <a href="https://www.unrealengine.com/">Unreal</a> 可以将你的游戏通过 <a href="/en-US/docs/Games/Tools/asm.js">asm.js</a> 输出到WebGL，因此你可以自由地使用这些工具与技术来构建可被输出到Web上的游戏。</p>
+<p><a href="http://unity3d.com/">Unity</a> 和 <a href="https://www.unrealengine.com/">Unreal</a> 可以将你的游戏通过 <a href="/en-US/docs/Games/Tools/asm.js">asm.js</a> 输出到 WebGL，因此你可以自由地使用这些工具与技术来构建可被输出到 Web 上的游戏。</p>
 
 <p><img alt="" src="http://end3r.github.io/MDN-Games-3D/A-Frame/img/shapes.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 

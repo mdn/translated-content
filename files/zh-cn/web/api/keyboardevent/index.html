@@ -94,8 +94,8 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
  <dd>返回一个 {{jsxref("Boolean")}}，如果按键事件产生时， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ）键被按下，则该值为 <code>true</code> 。</dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}}，其code值代表触发事件的物理按键。
- <div class="warning"><strong>警告：</strong>这个属性会忽略用户的键盘布局，所以如果用户在QWERTY布局的键盘上按下“Y”位置（第一行字母按键的中间）的按键时，这个属性会返回“KeyY”，即使用户使用QWERTZ布局的键盘（此时用户输入的就是“Z”，其他属性也会提示“Z”）或Dvorak键盘（此时用户输入的就是“F”）也是如此。</div>
+ <dd>返回一个 {{domxref("DOMString")}}，其 code 值代表触发事件的物理按键。
+ <div class="warning"><strong>警告：</strong>这个属性会忽略用户的键盘布局，所以如果用户在 QWERTY 布局的键盘上按下“Y”位置（第一行字母按键的中间）的按键时，这个属性会返回“KeyY”，即使用户使用 QWERTZ 布局的键盘（此时用户输入的就是“Z”，其他属性也会提示“Z”）或 Dvorak 键盘（此时用户输入的就是“F”）也是如此。</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
  <dd>返回一个 {{jsxref("Boolean")}}，如果按键事件发生时 <kbd>Ctrl</kbd> 键被按下，则该值为 <code>true</code> 。</dd>
@@ -108,7 +108,7 @@ translation_of: Web/API/KeyboardEvent
  <div class="note"><strong>Note:</strong> This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.location")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in {{anch("Keyboard locations")}}.</dd>
+ <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in <a href="#键盘定位">Keyboard locations</a>.</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}</dt>
@@ -175,7 +175,7 @@ translation_of: Web/API/KeyboardEvent
 
 <dl>
  <dt>{{domxref("Document.keypress_event", "keypress")}} {{obsolete_inline}}</dt>
- <dd>通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件(highly device-dependent )且废弃，您不应该使用它</dd>
+ <dd>通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件 (highly device-dependent ) 且废弃，您不应该使用它</dd>
 </dl>
 
 <h2 id="用法说明">用法说明</h2>
@@ -243,7 +243,7 @@ translation_of: Web/API/KeyboardEvent
  <dd>The event behavior depends on the specific platform. It will either behave like Windows or Mac depending on what the native event model does.</dd>
 </dl>
 
-<p class="note"><strong>Note:</strong> Manually firing an event does <em>not</em> generate the default action associated with that event. For example, manually firing a key event does not cause that letter to appear in a focused text input. In the case of UI events, this is important for security reasons, as it prevents scripts from simulating user actions that interact with the browser itself.</p>
+<p><strong>Note:</strong> Manually firing an event does <em>not</em> generate the default action associated with that event. For example, manually firing a key event does not cause that letter to appear in a focused text input. In the case of UI events, this is important for security reasons, as it prevents scripts from simulating user actions that interact with the browser itself.</p>
 
 <h2 id="示例">示例</h2>
 

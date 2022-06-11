@@ -52,9 +52,9 @@ grid-auto-columns: fit-content(20%);
 /* Gestion de plusieurs pistes */
 grid-auto-columns: min-content max-content auto;
 grid-auto-columns: 100px 150px 390px;
-​​​​​​​grid-auto-columns: 10% 33.3%;
+grid-auto-columns: 10% 33.3%;
 grid-auto-columns: 0.5fr 3fr 1fr;
-​​​​​​​grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
 grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 /* Valeurs globales */
@@ -85,7 +85,7 @@ grid-auto-columns: unset;
   - : Cette notation représente la formule `min(max-content, max(auto, argument))` qui est calculée de façon semblable à `auto`, sauf qu'ici, la taille de la piste est écrétée à _argument_ s'i elle est plus grande que le minimum `auto`.
 - `auto`
 
-  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
+  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
     > **Note :** Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
 
@@ -99,7 +99,7 @@ grid-auto-columns: unset;
 
 ```css
 #grid {
-  width: 100px;
+  height: 100px;
   display: grid;
   grid-template-areas: "a a";
   grid-gap: 10px;
@@ -115,15 +115,15 @@ grid-auto-columns: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", "410px", "100px")}}
+{{EmbedLiveSample("Exemples", "410px", "140px")}}
 
 ## Spécifications
 

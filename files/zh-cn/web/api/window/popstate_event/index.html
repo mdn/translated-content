@@ -5,27 +5,27 @@ tags:
   - popstate
 translation_of: Web/API/Window/popstate_event
 ---
-<p>当活动历史记录条目更改时，将触发popstate事件。如果被激活的历史记录条目是通过对history.pushState（）的调用创建的，或者受到对history.replaceState（）的调用的影响，popstate事件的state属性包含历史条目的状态对象的副本。</p>
+<p>当活动历史记录条目更改时，将触发 popstate 事件。如果被激活的历史记录条目是通过对 history.pushState（）的调用创建的，或者受到对 history.replaceState（）的调用的影响，popstate 事件的 state 属性包含历史条目的状态对象的副本。</p>
 
-<p><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">需要注意的是调用<code>history.pushState()</code>或</span></font><code>history.replaceState()</code>不会触发<code>popstate</code>事件。只有在做出浏览器动作时，才会触发该事件，如用户点击浏览器的回退按钮（或者在Javascript代码中调用<code>history.back()</code>或者<code>history.forward()</code>方法）</p>
+<p>需要注意的是调用<code>history.pushState()</code>或<code>history.replaceState()</code>不会触发<code>popstate</code>事件。只有在做出浏览器动作时，才会触发该事件，如用户点击浏览器的回退按钮（或者在 Javascript 代码中调用<code>history.back()</code>或者<code>history.forward()</code>方法）</p>
 
-<p><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">不同的浏览器在加载页面时处理<code>popstate</code>事件的形式存在差异。页面加载时Chrome和Safari通常会触发(</span></font>emit <font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">)<code>popstate</code>事件，但Firefox则不会。</span></font></p>
+<p>不同的浏览器在加载页面时处理<code>popstate</code>事件的形式存在差异。页面加载时 Chrome 和 Safari 通常会触发 (emit )<code>popstate</code>事件，但 Firefox 则不会。</p>
 
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">PopStateEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">是</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">defaultView</dd>
- <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
+ <dt>Specification</dt>
+ <dd><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate">HTML5</a></dd>
+ <dt>Interface</dt>
+ <dd>PopStateEvent</dd>
+ <dt>Bubbles</dt>
+ <dd>是</dd>
+ <dt>Cancelable</dt>
+ <dd>否</dd>
+ <dt>Target</dt>
+ <dd>defaultView</dd>
+ <dt>Default Action</dt>
+ <dd>无</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -69,57 +69,11 @@ translation_of: Web/API/Window/popstate_event
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>Yes</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>10.0</td>
-   <td>Yes</td>
-   <td>limited</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0 (buggy in 2.2 and 2.3)</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>10.0</td>
-   <td>Yes</td>
-   <td>limited</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Window.popstate_event")}}
 
 <h2 id="示例">示例</h2>
 
-<p> 打开<code>http://example.com/example.html页面运行以下代码，</code> 会按预期那样打出log提示。</p>
+<p> 打开<code>http://example.com/example.html 页面运行以下代码，</code> 会按预期那样打出 log 提示。</p>
 
 <pre><code>window.addEventListener('popstate', (event) =&gt; {
   console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
@@ -143,7 +97,7 @@ history.back(); // Logs "location: http://example.com/example.html?page=1, state
 history.back(); // Logs "location: http://example.com/example.html, state: null
 history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}</code></pre>
 
-<p>注意，虽然原始的历史项（<span style="line-height: 1.5;"> </span><code style="font-size: 14px;">http://example.com/example.html所对应的</code><span style="line-height: 1.5;">）没有关联的状态对象（state object），但稍后调用<code>history.back()激活该历史项时，仍会触发popstate事件。</code></span></p>
+<p>注意，虽然原始的历史项（ <code style="font-size: 14px;">http://example.com/example.html 所对应的</code>）没有关联的状态对象（state object），但稍后调用<code>history.back() 激活该历史项时，仍会触发 popstate 事件。</code></p>
 
 <h2 id="相关事件">相关事件</h2>
 

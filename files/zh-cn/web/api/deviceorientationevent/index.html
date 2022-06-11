@@ -5,10 +5,10 @@ translation_of: Web/API/DeviceOrientationEvent
 ---
 <p>{{apiref("Device Orientation Events")}}{{SeeCompatTable}}</p>
 
-<p><code>DeviceOrientationEvent提供给网页开发者当设备（指手机，平板等移动设备）在浏览页面时物理旋转的信息。</code></p>
+<p><code>DeviceOrientationEvent</code> 提供给网页开发者当设备（指手机，平板等移动设备）在浏览页面时物理旋转的信息。</p>
 
 <div class="warning">
-<p><strong>警告:</strong> 当前,火狐浏览器和谷歌浏览器并未能用同一种方式实现，在使用请注意。（见后文） </p>
+<p><strong>警告：</strong> 当前，火狐浏览器和谷歌浏览器并未能用同一种方式实现，在使用请注意。（见后文） </p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -17,12 +17,12 @@ translation_of: Web/API/DeviceOrientationEvent
  <dt>{{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}</dt>
  <dd>用来说明设备是提供的旋转数据是否是绝对定位的布尔值。</dd>
  <dt>{{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}</dt>
- <dd>一个表示设备绕z轴旋转的角度（范围在0-360之间）的数字</dd>
+ <dd>一个表示设备绕 z 轴旋转的角度（范围在 0-360 之间）的数字</dd>
  <dt> </dt>
  <dt>{{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}</dt>
- <dd>一个表示设备绕x轴旋转（范围在－180到180之间）的数字，从前到后的方向为正方向。</dd>
+ <dd>一个表示设备绕 x 轴旋转（范围在－180 到 180 之间）的数字，从前到后的方向为正方向。</dd>
  <dt>{{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}</dt>
- <dd>一个表示设备绕y轴旋转（范围在－90到90之间）的数字，从左向右为正方向。</dd>
+ <dd>一个表示设备绕 y 轴旋转（范围在－90 到 90 之间）的数字，从左向右为正方向。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -33,80 +33,11 @@ translation_of: Web/API/DeviceOrientationEvent
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">草案</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7.0 [1]</td>
-   <td>6 [2]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>6 [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>4.2</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在版本50之前Chrome为该事件提供绝对的值而非相对的值。开发者仍需使用绝对的值，当使用{{domxref("ondeviceorientationabsolute")}} 事件时.</p>
-
-<p>[2] 火狐3.6, 4, and 5支持<a href="/en-US/DOM/MozOrientation">mozOrientation </a>而非标准的 <code>DeviceOrientationEvent</code></p>
+{{Compat("api.DeviceOrientationEvent")}}
 
 <h2 id="参考">参考</h2>
 

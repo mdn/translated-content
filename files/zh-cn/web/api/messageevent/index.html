@@ -21,12 +21,12 @@ translation_of: Web/API/MessageEvent
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">Web sockets</a> (参见 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a> 接口的 <code>onmessage</code> 属性).</li>
  <li>Cross-document messaging (参见 {{domxref("Window.postMessage()")}} 和 {{domxref("Window.onmessage")}}).</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Channel messaging</a> (参见 {{domxref("MessagePort.postMessage()")}} 和{{domxref("MessagePort.onmessage")}}).</li>
- <li>Cross-worker/document messaging (参见上面两个入口, 还有 {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, 等等.)</li>
+ <li>Cross-worker/document messaging (参见上面两个入口，还有 {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, 等等.)</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast channels</a> (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).</li>
  <li>WebRTC data channels (参见 {{domxref("RTCDataChannel.onmessage")}}).</li>
 </ul>
 
-<p>通过这个事件触发的动作被定义为一个函数，该函数作为相关{{event("message")}}事件 (例如使用前文所列的<code>onmessage</code> 处理器)的事件处理器。</p>
+<p>通过这个事件触发的动作被定义为一个函数，该函数作为相关{{event("message")}}事件 (例如使用前文所列的<code>onmessage</code> 处理器) 的事件处理器。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -49,7 +49,7 @@ translation_of: Web/API/MessageEvent
  <dt>{{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}</dt>
  <dd>{{domxref("DOMString")}} representing a unique ID for the event.</dd>
  <dt>{{domxref("MessageEvent.source")}}</dt>
- <dd><code>MessageEventSource</code> (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者.</dd>
+ <dd><code>MessageEventSource</code> (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者。</dd>
  <dt>{{domxref("MessageEvent.ports")}}</dt>
  <dd>{{domxref("MessagePort")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shared work ）发送消息时）。</dd>
 </dl>
@@ -67,45 +67,45 @@ translation_of: Web/API/MessageEvent
 
 <h2 id="示例">示例</h2>
 
-<p>在我们的基础共享线程示例 <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>)中,我们有两个HTML页, 每一页都用简单的js代码去执行简单的计算. 不同的脚本使用同一个worker文件去执行计算 — 它们都可以访问那个worker文件，即使它们（scripts）运行在不同的窗口.</p>
+<p>在我们的基础共享线程示例 <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>) 中，我们有两个 HTML 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 worker 文件去执行计算 — 它们都可以访问那个 worker 文件，即使它们（scripts）运行在不同的窗口。</p>
 
 <p>下面的代码片段展示了使用{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}构造器创建一个 <code>SharedWorker</code>对象。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> myWorker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">SharedWorker</span><span class="punctuation token">(</span><span class="string token">'worker.js'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var myWorker = new SharedWorker('worker.js');</code></pre>
 
-<p>接下来两份脚本通过一个{{domxref("SharedWorker.port")}}方法创建的{{domxref("MessagePort")}}对象访问worker。如果onmessage事件通过addEventListener被绑定，端口可以用<code>start()</code>方法手动开启：</p>
+<p>接下来两份脚本通过一个{{domxref("SharedWorker.port")}}方法创建的{{domxref("MessagePort")}}对象访问 worker。如果 onmessage 事件通过 addEventListener 被绑定，端口可以用<code>start()</code>方法手动开启：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">myWorker.port.start();</code></pre>
 
-<p>当端口被打开，两份脚本各自都可用 <code>port.postMessage()</code> 向worker传消息并用  <code>port.onmessage</code>处理它（worker）传来的消息:</p>
+<p>当端口被打开，两份脚本各自都可用 <code>port.postMessage()</code> 向 worker 传消息并用  <code>port.onmessage</code>处理它（worker）传来的消息：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">first<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message posted to worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">first.onchange = function() {
+  myWorker.port.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
 
-second<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message posted to worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+second.onchange = function() {
+  myWorker.port.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
 
-myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span>onmessage <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  result1<span class="punctuation token">.</span>textContent <span class="operator token">=</span> e<span class="punctuation token">.</span>data<span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message received from worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+myWorker.port.onmessage = function(e) {
+  result1.textContent = e.data;
+  console.log('Message received from worker');
+}</code></pre>
 
-<p>在worker内部我们使用{{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口. 与worker相关联的端口可以在{{event("connect")}}事件的<code>ports</code> 属性中访问到 — 接着我们使用{{domxref("MessagePort")}} <code>start()</code> 方法打开端口,  <code>onmessage</code> 处理器来处理主线程传来的消息。</p>
+<p>在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{event("connect")}} 事件的 <code>ports</code> 属性中访问到 — 接着我们使用 {{domxref("MessagePort")}} <code>start()</code> 方法打开端口，<code>onmessage</code> 处理器来处理主线程传来的消息。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">onconnect <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> port <span class="operator token">=</span> e<span class="punctuation token">.</span>ports<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js"><code class="language-js">onconnect = function(e) {
+  var port = e.ports[0];
 
-  port<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'message'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> workerResult <span class="operator token">=</span> <span class="string token">'Result: '</span> <span class="operator token">+</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">*</span> e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span>workerResult<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  port.addEventListener('message', function(e) {
+    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    port.postMessage(workerResult);
+  });
 
-  port<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Required when using addEventListener. Otherwise called implicitly by onmessage setter.</span>
-<span class="punctuation token">}</span></code></pre>
+  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+}</code></pre>
 
 <h2 id="规范">规范</h2>
 
@@ -129,64 +129,4 @@ myWorker<span class="punctuation token">.</span>port<span class="punctuation tok
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}<sup>[1]</sup></td>
-   <td>9</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari('10.0+')}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>3.0+</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 对于 Gecko 11.0 {{geckoRelease("11.0")}}, Gecko 支持 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> 类型的数据，但不支持 {{domxref("Blob")}} 类型的数据。</p>
-
-<p><strong style="color: #4d4e53; font-size: 2.143rem; font-weight: 700; letter-spacing: -1px;">参见</strong></p>
-
-<ul>
- <li>{{domxref("ExtendableMessageEvent")}}，与此接口类似，但适合用于更灵活的场景。</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket_API">WebSocket API</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+{{Compat("api.MessageEvent")}}

@@ -14,9 +14,7 @@ translation_of: Web/API/Document/registerElement
 <p><strong>Warning: </strong>document.registerElement()                       已經被棄用，建議使用               <a href="/en-US/docs/Web/API/CustomElementRegistry/define">customElements.define()</a>.</p>
 </div>
 
-<p>{{draft}}</p>
-
-<p> <code><strong>document.registerElement()</strong></code>                 可以在瀏覽器中註冊一個新的自訂標籤(元素)and returns a constructor for the new element.</p>
+<p><code><strong>document.registerElement()</strong></code>                 可以在瀏覽器中註冊一個新的自訂標籤(元素)and returns a constructor for the new element.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This is an experimental technology. The browser you use it in must support Web Components. See <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
@@ -56,55 +54,7 @@ mytag.textContent = "I am a my-tag element.";
 
 <h2 id="瀏覽器支援性">瀏覽器支援性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>35</td>
-   <td>31<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4.4</td>
-   <td>31<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This API is implemented behind a preference.</p>
+{{Compat("api.Document.registerElement")}}
 
 <h2 id="也看一下">也看一下</h2>
 

@@ -3,25 +3,25 @@ title: 模板入门
 slug: learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
-<p>模板是一个文字档，定义了一个输出档的结构或者排版，使用定位符号表示，当模板被绘制时，资料将插入到何处（在Express，模板被称为视图）。</p>
+<p>模板是一个文字档，定义了一个输出档的结构或者排版，使用定位符号表示，当模板被绘制时，资料将插入到何处（在 Express，模板被称为视图）。</p>
 
 <h2 id="Express_模板选择">Express 模板选择</h2>
 
-<p>Express 可以与许多不同的<a href="https://expressjs.com/en/guide/using-template-engines.html">模板渲染引擎</a>一起使用。在本教程中，我们使用<a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>（以前称为Jade）作为模板。这是最流行的 Node 模板语言，并且官方将自身描述为 “用于编写HTML，语法干净且空格敏感，受 <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>影响很大”。</p>
+<p>Express 可以与许多不同的<a href="https://expressjs.com/en/guide/using-template-engines.html">模板渲染引擎</a>一起使用。在本教程中，我们使用<a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>（以前称为 Jade）作为模板。这是最流行的 Node 模板语言，并且官方将自身描述为“用于编写 HTML，语法干净且空格敏感，受 <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>影响很大”。</p>
 
-<p>不同的模板语言使用不同的方法，来定义布局和标记数据的占位符 —  一些使用 HTML 来定义布局，而另一些则使用可以编译为 HTML 的不同标记格式。Pug 是第二种类型；它使用 HTML 的表示形式，其中任何行中的第一个单词，通常表示HTML元素，后续行中的缩进，用于表示嵌套在这些元素中的任何内容。结果是一个页面定义直接转换为 HTML，但可以说更简洁，更容易阅读。</p>
+<p>不同的模板语言使用不同的方法，来定义布局和标记数据的占位符 —  一些使用 HTML 来定义布局，而另一些则使用可以编译为 HTML 的不同标记格式。Pug 是第二种类型；它使用 HTML 的表示形式，其中任何行中的第一个单词，通常表示 HTML 元素，后续行中的缩进，用于表示嵌套在这些元素中的任何内容。结果是一个页面定义直接转换为 HTML，但可以说更简洁，更容易阅读。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 使用 Pug 的缺点，是它对缩进和空格敏感（如果在错误的位置添加额外的空格，可能会得到没什么帮助的错误代码）。但是，一旦您的模板到位，它们就很容易阅读和维护。</p>
+<p><strong>注意：</strong> 使用 Pug 的缺点，是它对缩进和空格敏感（如果在错误的位置添加额外的空格，可能会得到没什么帮助的错误代码）。但是，一旦您的模板到位，它们就很容易阅读和维护。</p>
 </div>
 
-<h2 class="highlight-spanned" id="模板组态"><span class="highlight-span">模板</span>组态</h2>
+<h2 class="highlight-spanned" id="模板组态">模板组态</h2>
 
 <p>在我们<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">创建骨架网站</a>时，LocalLibrary 配置为使用 <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>。您应该看到 Pug 模块作为依赖项，包含在网站的 <strong>package.json</strong>文件中，以及 <strong>app.js</strong>文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在<strong> /views</strong>子目录中搜索模板。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'view engine'</span><span class="punctuation token">,</span> <span class="string token">'pug'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// View engine setup.
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');</code></pre>
 
 <p>如果查看 views 目录，您将看到项目默认视图的 .pug 文件。这包括需要用自己的内容替换的主页（<strong>index.pug</strong>）和基本模板（<strong>layout.pug</strong>）的视图。</p>
 
@@ -47,11 +47,11 @@ html(lang="en")
     h1= title
 
     p This is a line with #[em some emphasis] and #[strong strong text] markup.
-    p This line has un-escaped data: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'} and escaped data: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}.
+    p This line has un-escaped data: !{'&lt;em&gt; is emphasised&lt;/em&gt;'} and escaped data: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}.
       | This line follows on.
-    p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title
+    p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title
 
-    <span class="comment token">&lt;!-- You can add HTML comments directly --&gt;</span>
+    &lt;!-- You can add HTML comments directly --&gt;
     // You can add single line JavaScript comments and they are generated to HTML comments
     //- Introducing a single line JavaScript comment with "//-" ensures the comment isn't rendered to HTML
 
@@ -81,20 +81,20 @@ html(lang="en")
  <li><code>meta(name='viewport' content='width=device-width initial-scale=1')</code></li>
 </ul>
 
-<p>所有属性的值都被转义（例如 “<code>&gt;</code>” 等字符转换为 HTML 代码等效项，如“<code>&amp;gt;</code>”），以防止注入 JavaScript 或跨站点脚本攻击。</p>
+<p>所有属性的值都被转义（例如“<code>&gt;</code>”等字符转换为 HTML 代码等效项，如“<code>&amp;gt;</code>”），以防止注入 JavaScript 或跨站点脚本攻击。</p>
 
 <p>如果标记后跟着等号，则以下文本将被视为 JavaScript 表达式。因此，打个比方，在下面的第一行中，<code>h1</code>标记的内容将是标题变量<code>title</code>（在文件中定义，或从 Express 传递到模板中）。在第二行中，段落内容是与标题变量<code>title</code>连接的文本字符串。在这两种情况下，默认行为是转义该行。</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
-p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
+p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
 
 <p>如果标记后面没有等号，则将内容视为纯文本。在纯文本中，您可以使用<code>#{}</code> 和<code>!{}</code>语法，插入转义和非转义数据，如下所示。您还可以在纯文本中添加原始 HTML。</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
-p This line has an un-escaped string: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, an escaped string: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, and escaped variables: #{title}.</code></pre>
+p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
-<p><strong>提示:</strong> 您几乎总是希望转义来自用户的数据（通过<strong><code>#{}</code></strong>语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。</p>
+<p><strong>提示：</strong> 您几乎总是希望转义来自用户的数据（通过<strong><code>#{}</code></strong>语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。</p>
 </div>
 
 <p>您可以在行的开头使用管道（“<strong>|</strong>”）字符来表示“<a href="https://pugjs.org/language/plain-text.html">纯文本</a>”。例如，下面显示的附加文本，将显示在与前一个锚点相同的行上，但不会链接。</p>
@@ -109,17 +109,17 @@ p This line has an un-escaped string: !{'<span class="tag token"><span class="ta
 else
   p A variable named "title" does not exist</code></pre>
 
-<p>以使用<code>each-in</code> 或 <code>while</code>语法执行循环/迭代操作。在下面的代码片段中，我们循环遍历数组，以显示变量列表（注意，使用 'li =' 来评估 “val” ，以作为下面的变量。）迭代的值也可以传递给模板作为变量！</p>
+<p>以使用<code>each-in</code> 或 <code>while</code>语法执行循环/迭代操作。在下面的代码片段中，我们循环遍历数组，以显示变量列表（注意，使用 'li =' 来评估“val” ，以作为下面的变量。）迭代的值也可以传递给模板作为变量！</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">ul
   each val in [1, 2, 3, 4, 5]
     li= val</code></pre>
 
-<p>语法还支持注释（可以在输出中呈现 - 或者不是 - 可自行选择），支持mixins创建可重用的代码块，case语句和许多其他功能。有关更多详细信息，请参阅<a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>文档。</p>
+<p>语法还支持注释（可以在输出中呈现 - 或者不是 - 可自行选择），支持 mixins 创建可重用的代码块，case 语句和许多其他功能。有关更多详细信息，请参阅<a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a>文档。</p>
 
 <h2 class="highlight-spanned" id="扩展模板">扩展模板</h2>
 
-<p>在一个站点中，通常所有页面都有一个共同的结构，包括页首，页脚，导航等的标准HTML标记。比起强迫开发人员在每个页面中复制这个 “样板”的做法，Pug 允许你声明一个基本模板，然后扩展它，只替换每个特定页面不同的地方。</p>
+<p>在一个站点中，通常所有页面都有一个共同的结构，包括页首，页脚，导航等的标准 HTML 标记。比起强迫开发人员在每个页面中复制这个“样板”的做法，Pug 允许你声明一个基本模板，然后扩展它，只替换每个特定页面不同的地方。</p>
 
 <p>例如，在我们的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website">骨架项目</a>中，创建的基本模板 <strong>layout.pug</strong>，如下所示：</p>
 
@@ -131,7 +131,7 @@ html
   body
     block content</code></pre>
 
-<p>块标记<code>block</code>用于标记 “可在派生模板中替换的内容部分“（如果未重新定义块，则使用其在基类中的实现）。</p>
+<p>块标记<code>block</code>用于标记“可在派生模板中替换的内容部分“（如果未重新定义块，则使用其在基类中的实现）。</p>
 
 <p>默认的 <strong>index.pug</strong>（为我们的骨架项目所创建），显示了我们如何覆盖基本模板。<code>extends</code>标记，标识要使用的基本模板，然后我们使用 <code>block <em>section_name</em></code> ，来指示我们将覆盖的部分的新内容。</p>
 
@@ -145,5 +145,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5下一个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">图书馆基本模板</a></li>
+ <li>继续教程 5 下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">图书馆基本模板</a></li>
 </ul>

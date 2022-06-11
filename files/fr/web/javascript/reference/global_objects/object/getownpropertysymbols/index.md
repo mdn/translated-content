@@ -18,7 +18,9 @@ La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant to
 
 ## Syntaxe
 
-    Object.getOwnPropertySymbols(obj)
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
 ### Paramètres
 
@@ -57,7 +59,7 @@ console.log(objectSymboles[0])      // Symbol(a)
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

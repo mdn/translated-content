@@ -7,7 +7,7 @@ translation_of: Web/CSS/font-stretch
 
 <h2 id="Summary">Summary</h2>
 
-<p><span class="seoSummary"><strong><code>font-stretch</code></strong> 属性为字体定义一个正常或经过伸缩变形的字体外观，这个属性并不会通过伸展/缩小而改变字体的几何外形，如{{cssxref("font-feature-settings")}}和{{cssxref("font-variant")}}属性，它仅仅意味着当有多种字体可供选择时，会为字体选择最适合的大小。</span></p>
+<p><strong><code>font-stretch</code></strong> 属性为字体定义一个正常或经过伸缩变形的字体外观，这个属性并不会通过伸展/缩小而改变字体的几何外形，如{{cssxref("font-feature-settings")}}和{{cssxref("font-variant")}}属性，它仅仅意味着当有多种字体可供选择时，会为字体选择最适合的大小。</p>
 
 <p><img alt="The two 'e' belong to the same fonts. One is condensed, the other normal and can be selected by 'font-stretch'." src="/files/4321/Character_in_same_font_but_one_condensed.png" style="display: block; height: 92px; margin: auto; width: 188px;"></p>
 
@@ -45,7 +45,7 @@ font-stretch: unset;
  <dt><code>normal</code></dt>
  <dd>指定默认字体</dd>
  <dt><code>semi-condensed</code>, <code>condensed</code>, <code>extra-condensed</code>, <code>ultra-condensed</code></dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">小于默认字体，其中ultra-condensed是缩的最小的字体</font></dd>
+ <dd>小于默认字体，其中 ultra-condensed 是缩的最小的字体</dd>
  <dt><code>semi-expanded</code>, <code>expanded</code>, <code>extra-expanded</code>, <code>ultra-expanded</code></dt>
  <dd>大于默认字体的值</dd>
 </dl>
@@ -103,54 +103,4 @@ font-stretch: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>48.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("9.0") }}</td>
-   <td>9.0</td>
-   <td>35.0</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("9.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.font-stretch")}}

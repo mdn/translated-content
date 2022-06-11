@@ -13,7 +13,7 @@ translation_of: Web/API/AudioParam
 
 <ul>
  <li id="a-rate">一个 <em>a-rate</em> <code>AudioParam</code> 获取音频信号的每个<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">采样帧</a>的当前音频参数值。</li>
- <li id="k-rate">一个 <em>k-rate</em> <code>AudioParam</code> 对于待处理的整个块使用相同的初始音频参数值，即128个采样帧。</li>
+ <li id="k-rate">一个 <em>k-rate</em> <code>AudioParam</code> 对于待处理的整个块使用相同的初始音频参数值，即 128 个采样帧。</li>
 </ul>
 
 <p>每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 <em>a-rate</em> 或 <em>k-rate</em> 。</p>
@@ -49,7 +49,7 @@ translation_of: Web/API/AudioParam
  <dt>{{domxref("AudioParam.setTargetAtTime()")}}</dt>
  <dd>将开始计划改变 <code>AudioParam 的值</code>。这个改变将从 <code>startTime 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 timeConstant 参数定义，</code>time 参数使以秒作为测量单位的时间。</dd>
  <dt>{{domxref("AudioParam.setValueCurveAtTime()")}}</dt>
- <dd>调整 <code>AudioParam</code> 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔,，从 <code>startTime 时间开始并具有特定的持续时间（duration）。</code> </dd>
+ <dd>调整 <code>AudioParam</code> 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 <code>startTime</code> 时间开始并具有特定的持续时间（duration）。</dd>
  <dt>{{domxref("AudioParam.cancelScheduledValues()")}}</dt>
  <dd>取消全部在 <code>AudioParam 中</code>的未来计划发生的改变。</dd>
  <dt>{{domxref("AudioParam.cancelAndHoldAtTime()")}}</dt>
@@ -79,134 +79,11 @@ biquadFilter.gain.value = 25;</pre>
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audioparam-interface', 'AudioParam')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(14)}} {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(23)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Unprefixed</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>minValue</code> and <code>maxValue</code></td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>39</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelAndHoldAtTime()</code></td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(28)}} {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(25)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Unprefixed</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>minValue</code> and <code>maxValue</code></td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>39</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelAndHoldAtTime()</code></td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioParam")}}
 
 <h2 id="See_also">See also</h2>
 

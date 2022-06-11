@@ -26,7 +26,7 @@ translation_of: Web/CSS/Media_Queries
 - {{HTMLElement("source")}} 要素の {{htmlattrxref("media", "source")}} 属性では、ソースが適用されるメディアを定義します。 (これは {{HTMLElement("picture")}} 要素内でのみ有効です。)
 - {{HTMLElement("style")}} 要素の {{htmlattrxref("media", "style")}} 属性では、スタイルが適用されるメディアを定義します。
 
-### avaScript でのメディアクエリー
+### JavaScript でのメディアクエリー
 
 [JavaScript](/ja/docs/Web/JavaScript) では、ウィンドウがメディアクエリーに合うかどうかをテストするために {{domxref("Window.matchMedia()")}} メソッドを利用することができます。また、 {{domxref("MediaQueryList.addListener()")}} を使用して、クエリーの状態が変更されたときに通知を受け取ることもできます。この機能により、サイトやアプリが端末の設定、方向、状態が変化したときに応答することができます。
 

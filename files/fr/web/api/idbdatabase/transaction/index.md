@@ -176,7 +176,7 @@ var objectStore = transaction.objectStore("toDoList");
 
 | Spécification                                                                                                                                                                                                    | Statut                       | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

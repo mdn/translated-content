@@ -11,7 +11,7 @@ translation_of: Web/API/AudioContext/resume
 
 <p>{{ domxref("AudioContext") }} 的 <code>resume()</code> 方法，恢复之前暂停播放的音频。</p>
 
-<p>如果在{{domxref("OfflineAudioContext")}}上调用，会导致<code>INVALID_STATE_ERR错误。</code></p>
+<p>如果在 {{domxref("OfflineAudioContext")}} 上调用，会导致 <code>INVALID_STATE_ERR</code> 错误。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,11 +21,11 @@ audioCtx.resume().then(function() { ... });
 
 <h3 id="结果">结果</h3>
 
-<p>{{jsxref("Promise")}}成功的话返回空值，返回失败是因为context已经关闭了。</p>
+<p>{{jsxref("Promise")}}成功的话返回空值，返回失败是因为 context 已经关闭了。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>下面的代码是 <a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (<a href="http://mdn.github.io/audiocontext-states/">see it running live</a>)的一部分。当点击暂停／恢复按钮的时候，需要{{domxref("AudioContext.state")}}做判断：如果是运行状态，调用{{domxref("suspend()")}}，如果是暂停状态，调用<code>resume()。每次点击事件成功后，按钮的文字也会随着变成对应的状态</code>。</p>
+<p>下面的代码是 <a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (<a href="http://mdn.github.io/audiocontext-states/">see it running live</a>) 的一部分。当点击暂停／恢复按钮的时候，需要{{domxref("AudioContext.state")}}做判断：如果是运行状态，调用{{domxref("suspend()")}}，如果是暂停状态，调用<code>resume()。每次点击事件成功后，按钮的文字也会随着变成对应的状态</code>。</p>
 
 <pre class="brush: js">susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
@@ -42,74 +42,11 @@ audioCtx.resume().then(function() { ... });
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-resume-Promise-void', 'close()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="兼容性">兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(41.0)}}</td>
-   <td>{{CompatGeckoDesktop(40.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(41.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioContext.resume")}}
 
 <h2 id="参见">参见</h2>
 

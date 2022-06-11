@@ -12,8 +12,10 @@ L'élément `<xsl:key>` déclare une clef nommée qui peut être utilisée dans 
 
 ### Syntaxe
 
-    <xsl:key name=NOM match=EXPRESSION
-    	use=EXPRESSION />
+```xml
+<xsl:key name=NOM match=EXPRESSION
+  use=EXPRESSION />
+```
 
 ### Attributs obligatoires
 

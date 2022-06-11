@@ -38,7 +38,7 @@ translation_of: Web/API/AnalyserNode
 
 <h2 id="继承">继承</h2>
 
-<p>继承自以下父接口:</p>
+<p>继承自以下父接口：</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -54,17 +54,17 @@ translation_of: Web/API/AnalyserNode
 <p><em>继承属性自 </em><em>{{domxref("AudioNode")}}。</em></p>
 
 <dl>
- <dt><span id="cke_bm_91S" class="hidden"> </span>{{domxref("AnalyserNode.fftSize")}}</dt>
- <dd>一个无符号长整形(unsigned long)的值，代表了用于计算频域信号时使用的 FFT (<a href="https://zh.wikipedia.org/zh-cn/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">快速傅里叶变换</a>) 的窗口大小。</dd>
+ <dt> {{domxref("AnalyserNode.fftSize")}}</dt>
+ <dd>一个无符号长整形 (unsigned long) 的值，代表了用于计算频域信号时使用的 FFT (<a href="https://zh.wikipedia.org/zh-cn/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">快速傅里叶变换</a>) 的窗口大小。</dd>
  <dt>{{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}</dt>
- <dd>一个无符号长整形(unsigned long)的值, 值为fftSize的一半。这通常等于将要用于可视化的数据值的数量。</dd>
+ <dd>一个无符号长整形 (unsigned long) 的值，值为 fftSize 的一半。这通常等于将要用于可视化的数据值的数量。</dd>
  <dt>{{domxref("AnalyserNode.minDecibels")}}</dt>
- <dd>是一个双精度值，表示FFT分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用<code>getByteFrequencyData()</code>时结果范围的最小值</dd>
+ <dd>是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用<code>getByteFrequencyData()</code>时结果范围的最小值</dd>
  <dt>{{domxref("AnalyserNode.maxDecibels")}}</dt>
  <dt></dt>
- <dd>是一个双精度值，表示FFT分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用<code>getByteFrequencyData()</code>时结果范围的最大值</dd>
+ <dd>是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用<code>getByteFrequencyData()</code>时结果范围的最大值</dd>
  <dt>{{domxref("AnalyserNode.smoothingTimeConstant")}}</dt>
- <dd>是一个双精度浮点型(double)的值，表示最后一个分析帧的平均常数 — 基本上，它随时间使值之间的过渡更平滑。</dd>
+ <dd>是一个双精度浮点型 (double) 的值，表示最后一个分析帧的平均常数 — 基本上，它随时间使值之间的过渡更平滑。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -96,9 +96,9 @@ translation_of: Web/API/AnalyserNode
 
 <h3 id="基础用法">基础用法</h3>
 
-<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的时域数据, 并绘制为一个示波器风格的输出(频谱).</p>
+<p>下面的例子展示了 {{domxref("AudioContext")}} 创建一个 <code>AnalyserNode</code>, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).</p>
 
-<p>更多的例子/信息, 查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128行~205行</a>).</p>
+<p>更多的例子/信息，查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
 
 <pre class="brush: js">var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -110,7 +110,7 @@ var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
-// 获取ID为 "oscilloscope" 的画布
+// 获取 ID 为 "oscilloscope" 的画布
 var canvas = document.getElementById("oscilloscope");
 var canvasCtx = canvas.getContext("2d");
 
@@ -155,20 +155,7 @@ draw();</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -179,5 +166,5 @@ draw();</pre>
 <h2 id="相关内容">相关内容</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">Web Audio API的运用 </a></li>
+ <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">Web Audio API 的运用</a></li>
 </ul>

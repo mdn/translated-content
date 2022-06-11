@@ -44,7 +44,7 @@ Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le 
 - {{WebExtAPIRef("bookmarks.getSubTree()")}}
   - : Récupère un nombre demandé de favoris récemment ajoutés.
 - {{WebExtAPIRef("bookmarks.getTree()")}}
-  - : Récupère l’intégralité de l’arborescence des marques pages dans un tableau d’objets  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+  - : Récupère l’intégralité de l’arborescence des marques pages dans un tableau d’objets  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
 - {{WebExtAPIRef("bookmarks.move()")}}
   - : Déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} vers un nouvel emplacement dans l’arborescence de marque-pages.
 - {{WebExtAPIRef("bookmarks.remove()")}}

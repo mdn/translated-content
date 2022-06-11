@@ -1,207 +1,207 @@
 ---
-title: 控制Flex子元素在主轴上的比例
+title: 控制 Flex 子元素在主轴上的比例
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 translation_of: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
 <div class="note">
-<p>译者注： 在html中若一个元素的css设置为display: flex， 则这个元素就是flex container , 其子元素为flex item， 若是直译过来就是弹性容器和弹性项目 。 但是译者认为直译过来不好理解， 且不便记忆（就像我们常说TCP而不会说传输控制协议一样）， 因此在此文中， 译者将不会翻译为flex container 和flex item， 而是翻译为flex容器和flex子元素。 同样， 在原文中有些单词（如items, flex-items， container）， 我会根据情况译为flex容器和flex 子元素。请各位读者理解。</p>
+<p>译者注：在 html 中若一个元素的 css 设置为 display: flex，则这个元素就是 flex container , 其子元素为 flex item，若是直译过来就是弹性容器和弹性项目。但是译者认为直译过来不好理解，且不便记忆（就像我们常说 TCP 而不会说传输控制协议一样），因此在此文中，译者将不会翻译为 flex container 和 flex item，而是翻译为 flex 容器和 flex 子元素。 同样，在原文中有些单词（如 items, flex-items，container），我会根据情况译为 flex 容器和 flex 子元素。请各位读者理解。</p>
 
-<p>如果各位读的不舒服， 请阅读原文！</p>
+<p>如果各位读的不舒服，请阅读原文！</p>
 </div>
 
 <p>{{CSSRef}}</p>
 
-<p class="summary">在这篇指南中我们将探索应用于flex子元素的三个属性, 它们能使我们在主轴方向上控制flex子元素的尺寸和伸缩性— {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, 和 {{cssxref("flex-basis")}}. 充分了解这些属性如何与增长和缩小的flex 子元素一起工作是掌握Flex 布局的关键所在.</p>
+<p>在这篇指南中我们将探索应用于 flex 子元素的三个属性，它们能使我们在主轴方向上控制 flex 子元素的尺寸和伸缩性— {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, 和 {{cssxref("flex-basis")}}. 充分了解这些属性如何与增长和缩小的 flex 子元素一起工作是掌握 Flex 布局的关键所在。</p>
 
 <h2 id="预览">预览</h2>
 
-<p>这三个属性控制一个flex子元素的以下几个方面:</p>
+<p>这三个属性控制一个 flex 子元素的以下几个方面：</p>
 
 <ul>
- <li><code>flex-grow</code>: 这个flex子元素得到（伸张）多少positive free space?</li>
- <li><code>flex-shrink</code>: 从这个flex子元素要消除（收缩）多少negative free space?</li>
- <li><code>flex-basis</code>: 在flex子元素未伸张和收缩之前，它的大小是多少?</li>
+ <li><code>flex-grow</code>: 这个 flex 子元素得到（伸张）多少 positive free space?</li>
+ <li><code>flex-shrink</code>: 从这个 flex 子元素要消除（收缩）多少 negative free space?</li>
+ <li><code>flex-basis</code>: 在 flex 子元素未伸张和收缩之前，它的大小是多少？</li>
 </ul>
 
-<p>以上属性通常用一个简写属性{{cssxref("flex")}} 表达. 下面的代码设置 <code>flex-grow</code> 属性值为 <code>2</code>, <code>flex-shrink</code> 属性值为 <code>1</code> ，<code>flex-basis</code> 属性值为<code>auto</code>.</p>
+<p>以上属性通常用一个简写属性{{cssxref("flex")}} 表达。下面的代码设置 <code>flex-grow</code> 属性值为 <code>2</code>, <code>flex-shrink</code> 属性值为 <code>1</code> ，<code>flex-basis</code> 属性值为<code>auto</code>.</p>
 
 <pre><code>.item {
   flex: 2 1 auto;
 }
 </code></pre>
 
-<p>如果你阅读过文章 <a href="Basic_Concepts_of_Flexbox">flex布局的基本概念</a>, 那么你应该已经对这些属性有了初步了解. 为了让你能明白当你在用它们的时候浏览器在做什么， 我们将进一步探讨它们.</p>
+<p>如果你阅读过文章 <a href="Basic_Concepts_of_Flexbox">flex 布局的基本概念</a>, 那么你应该已经对这些属性有了初步了解。为了让你能明白当你在用它们的时候浏览器在做什么，我们将进一步探讨它们。</p>
 
 <h2 id="工作于主轴的重要概念">工作于主轴的重要概念</h2>
 
-<p>在考虑flex属性如何在主轴方向上控制比率之前， 有一些概念值得我们去深究. 这涉及到flex子元素在任何伸缩之前的自然尺寸， 以及自由空间的概念</p>
+<p>在考虑 flex 属性如何在主轴方向上控制比率之前，有一些概念值得我们去深究。这涉及到 flex 子元素在任何伸缩之前的自然尺寸，以及自由空间的概念</p>
 
-<h3 id="Flex子元素的尺寸">Flex子元素的尺寸</h3>
+<h3 id="Flex子元素的尺寸">Flex 子元素的尺寸</h3>
 
-<p>为了计算出有多少可用空间能布局于flex子元素, 浏览器必须知道这个item有多大才能开始. 它是如何解决没有应用于绝对单位的宽度和高度的flex子元素?</p>
+<p>为了计算出有多少可用空间能布局于 flex 子元素，浏览器必须知道这个 item 有多大才能开始。它是如何解决没有应用于绝对单位的宽度和高度的 flex 子元素？</p>
 
-<p>在 <code><a href="/en-US/docs/Web/CSS/width#min-content">min-content</a></code> 和<code><a href="/en-US/docs/Web/CSS/width#max-content">max-content</a></code>  的CSS中有一个概念— 这些关键字定义在<a href="https://drafts.csswg.org/css-sizing-3/#width-height-keywords"> CSS Intrinsic and Extrinsic Sizing Specification</a>, 并且可以用一个 <a href="/en-US/docs/Web/CSS/length">length </a>单位代替.</p>
+<p>在 <code><a href="/en-US/docs/Web/CSS/width#min-content">min-content</a></code> 和<code><a href="/en-US/docs/Web/CSS/width#max-content">max-content</a></code>  的 CSS 中有一个概念— 这些关键字定义在<a href="https://drafts.csswg.org/css-sizing-3/#width-height-keywords"> CSS Intrinsic and Extrinsic Sizing Specification</a>, 并且可以用一个 <a href="/en-US/docs/Web/CSS/length">length </a>单位代替。</p>
 
-<p>例如下面的例子， 我有两段包含一个文本字符串的段落. 第一段设置了<code>min-content</code>的宽度. 在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行, 变得尽可能小且没有溢出. 此之后就是那个字符串的 min-content 大小. 本质上讲, 字符串中最长的单词决定了大小.</p>
+<p>例如下面的例子，我有两段包含一个文本字符串的段落。第一段设置了<code>min-content</code>的宽度。在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行，变得尽可能小且没有溢出。此之后就是那个字符串的 min-content 大小。本质上讲，字符串中最长的单词决定了大小。</p>
 
-<p>第二段设置了 <code>max-content</code>值, 且它和min-content想反. 它会变得尽可能大, 没有自动换行的机会. 如果flex容器太窄， 它就会溢出其自身的盒子.</p>
+<p>第二段设置了 <code>max-content</code>值，且它和 min-content 相反。它会变得尽可能大，没有自动换行的机会。如果 flex 容器太窄，它就会溢出其自身的盒子。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}</p>
 
-<p>如果你的浏览器不支持这些属性， 那这两段会在块流中被渲染为正常流; 下面的截图展示了预期的渲染.</p>
+<p>如果你的浏览器不支持这些属性，那这两段会在块流中被渲染为正常流; 下面的截图展示了预期的渲染。</p>
 
 <p><img alt="The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow." src="https://mdn.mozillademos.org/files/15658/ratios-size.png" style="display: block; height: 558px; margin: 0px auto; width: 1520px;"></p>
 
-<p>记住这种行为，以及 <code>min-content</code> 和<code>max-content</code> 对我们本文后探索 <code>flex-grow</code> 和<code>flex-shrink</code> 的影响.</p>
+<p>记住这种行为，以及 <code>min-content</code> 和<code>max-content</code> 对我们本文后探索 <code>flex-grow</code> 和<code>flex-shrink</code> 的影响。</p>
 
 <h3 id="正负自由空间">正负自由空间</h3>
 
 <div class="note">
-<p>译者注：positive and negative free space 直译过来就是正负空闲空间， 为了读者能良好的阅读下文， 译者先大概说下。</p>
+<p>译者注：positive and negative free space 直译过来就是正负空闲空间，为了读者能良好的阅读下文，译者先大概说下。</p>
 
-<p>Flex 布局中有flex容器和flex子元素， flex子元素包含在flex容器中， 那么当flex子元素在主轴上的尺寸（大小）之和小于flex容器 的尺寸时， flex容器中就会有多余的空间没有被填充， 这些空间就被叫做 <strong>positive free space</strong>。当flex子元素在主轴上的尺寸之和大于flex容器的尺寸时， flex容器的空间就不够用，此时flex子元素的尺寸之和减去flex容器的尺寸（flex 子元素溢出的尺寸）就是<strong>negative free space</strong>, 这个negative free space加上flex容器的尺寸刚好可以容纳flex子元素.</p>
+<p>Flex 布局中有 flex 容器和 flex 子元素，flex 子元素包含在 flex 容器中，那么当 flex 子元素在主轴上的尺寸（大小）之和小于 flex 容器 的尺寸时，flex 容器中就会有多余的空间没有被填充，这些空间就被叫做 <strong>positive free space</strong>。当 flex 子元素在主轴上的尺寸之和大于 flex 容器的尺寸时，flex 容器的空间就不够用，此时 flex 子元素的尺寸之和减去 flex 容器的尺寸（flex 子元素溢出的尺寸）就是<strong>negative free space</strong>, 这个 negative free space 加上 flex 容器的尺寸刚好可以容纳 flex 子元素。</p>
 
-<p>为了不翻译花了， 译者不对<strong>positive</strong> <strong>free space和negative free space</strong>进行翻译，参考翻译是正向自由空间和反向自由空间</p>
+<p>为了不翻译花了，译者不对<strong>positive</strong> <strong>free space 和 negative free space</strong>进行翻译，参考翻译是正向自由空间和反向自由空间</p>
 </div>
 
-<p>去谈论这些属性之前我们需要理解positive free space和negative free space的概念. 当一个flex 容器有positive free space时, 它就有更多的空间用于在flex容器内显示flex子元素. 比如说, 如果我有500px 宽的flex容器, {{cssxref("flex-direction")}} 属性值为 row, 三个100px 宽的flex子元素,  而且我还有200px 的 positive free space, 那么如果我想让它们（positive free space）填充flex容器，它们就可以填充在flex子元素之间.</p>
+<p>去谈论这些属性之前我们需要理解 positive free space 和 negative free space 的概念。当一个 flex 容器有 positive free space 时，它就有更多的空间用于在 flex 容器内显示 flex 子元素。比如说，如果我有 500px 宽的 flex 容器，{{cssxref("flex-direction")}} 属性值为 row, 三个 100px 宽的 flex 子元素， 而且我还有 200px 的 positive free space, 那么如果我想让它们（positive free space）填充 flex 容器，它们就可以填充在 flex 子元素之间。</p>
 
 <p><img alt="Image showing space left over after items have been displayed." src="https://mdn.mozillademos.org/files/15654/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
 
-<p>当flex子元素的自然尺寸加起来比flex容器内的可用空间大时，我们产生了negative free space. 如果我有一个像上面500px 宽的flex容器, 但是三个flex子元素每个都为200px 宽, 我就一共需要600px 宽, 因此我就有了100px的negative free space. 这可以从flex子元素中删除以使其能适应flex容器.</p>
+<p>当 flex 子元素的自然尺寸加起来比 flex 容器内的可用空间大时，我们产生了 negative free space. 如果我有一个像上面 500px 宽的 flex 容器，但是三个 flex 子元素每个都为 200px 宽，我就一共需要 600px 宽，因此我就有了 100px 的 negative free space. 这可以从 flex 子元素中删除以使其能适应 flex 容器。</p>
 
 <p><img alt="The items overflow the container" src="https://mdn.mozillademos.org/files/15655/ratios1.png" style="display: block; height: 198px; margin: 0px auto; width: 634px;"></p>
 
-<p>我们需要理解positive free space 的分配和negative free space 的移除， 这样才能理解flex 属性.</p>
+<p>我们需要理解 positive free space 的分配和 negative free space 的移除，这样才能理解 flex 属性。</p>
 
-<p class="brush: xml">下面的例子我会将属性 {{cssxref("flex-direction")}} 设置为row, 因此flex子元素的尺寸只有来自于它们的宽. 我们通过比较flex子元素和flex container的宽度来计算positive and negative free space. 你同样可以用<code>flex-direction: column</code> 测试每个例子. 主轴变为列后， 你需要比较flex子元素和flex容器 的高度来计算positive and negative free space.</p>
+<p>下面的例子我会将属性 {{cssxref("flex-direction")}} 设置为 row, 因此 flex 子元素的尺寸只有来自于它们的宽。我们通过比较 flex 子元素和 flex container 的宽度来计算 positive and negative free space. 你同样可以用<code>flex-direction: column</code> 测试每个例子。主轴变为列后，你需要比较 flex 子元素和 flex 容器 的高度来计算 positive and negative free space.</p>
 
 <h2 id="flex-basis_属性">flex-basis 属性</h2>
 
-<p>{{cssxref("flex-basis")}} 属性在任何空间分配发生之前初始化flex子元素的尺寸. 此属性的初始值为 <code>auto</code>. 如果 <code>flex-basis</code> 设置为 <code>auto</code> , 浏览器会先检查flex子元素的主尺寸是否设置了绝对值再计算出flex子元素的初始值. 比如说你已经给你的flex子元素设置了200px 的宽，则200px 就是这个flex子元素的 <code>flex-basis</code>.</p>
+<p>{{cssxref("flex-basis")}} 属性在任何空间分配发生之前初始化 flex 子元素的尺寸。此属性的初始值为 <code>auto</code>. 如果 <code>flex-basis</code> 设置为 <code>auto</code> , 浏览器会先检查 flex 子元素的主尺寸是否设置了绝对值再计算出 flex 子元素的初始值。比如说你已经给你的 flex 子元素设置了 200px 的宽，则 200px 就是这个 flex 子元素的 <code>flex-basis</code>.</p>
 
-<p>如果你的flex子元素 为自动调整大小， 则<code>auto</code> 会解析为其内容的大小.  此时你所熟知的min-content和max-content大小会变得有用,  flexbox 会将flex子元素的 <code>max-content</code> 大小作为 <code>flex-basis</code>. 下面的例子可以证明这一点. </p>
+<p>如果你的 flex 子元素 为自动调整大小，则<code>auto</code> 会解析为其内容的大小.  此时你所熟知的 min-content 和 max-content 大小会变得有用，  flexbox 会将 flex 子元素的 <code>max-content</code> 大小作为 <code>flex-basis</code>. 下面的例子可以证明这一点. </p>
 
-<p>在这个例子中我创造了一些列固定的盒子, 它们的 <code>flex-grow</code> 和<code>flex-shrink</code> 都设置为 <code>0</code>. 这里我们看看第一个flex子元素怎么样了 — 它的150px 显示宽度被设置为主尺寸— 即设置<code>flex-basis</code>为150px, 然而另外两个flex子元素 没有设置宽度而是根据它们内容的宽度设置尺寸， </p>
+<p>在这个例子中我创造了一些列固定的盒子，它们的 <code>flex-grow</code> 和<code>flex-shrink</code> 都设置为 <code>0</code>. 这里我们看看第一个 flex 子元素怎么样了 — 它的 150px 显示宽度被设置为主尺寸— 即设置<code>flex-basis</code>为 150px, 然而另外两个 flex 子元素 没有设置宽度而是根据它们内容的宽度设置尺寸， </p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}</p>
 
-<p>除了关键字 <code>auto</code> 以外, 你还可以使用关键字 <code>content</code> 作为 <code>flex-basis</code>的值. 这会导致 <code>flex-basis</code> 根据内容大小设置即使flex子元素 设置了宽度. 这是一个新关键字而且获得浏览器支持的比较少, 但是你还是可以通过设置<code>flex-basis: auto</code>并确保你的flex子元素没有设置宽度来达到相同的效果 , 以便它能自动调整大小.</p>
+<p>除了关键字 <code>auto</code> 以外，你还可以使用关键字 <code>content</code> 作为 <code>flex-basis</code>的值. 这会导致 <code>flex-basis</code> 根据内容大小设置即使 flex 子元素 设置了宽度。这是一个新关键字而且获得浏览器支持的比较少，但是你还是可以通过设置<code>flex-basis: auto</code>并确保你的 flex 子元素没有设置宽度来达到相同的效果 , 以便它能自动调整大小。</p>
 
-<p>空间分配时， 如果你想flexbox 完全忽略flex子元素的尺寸就设置<code>flex-basis</code> 为 <code>0</code>. 这基本上告诉flexbox所有空间都可以抢占，并按比例分享. 随着我们继续关注<code>flex-grow</code>，我们将看到这方面的例子。</p>
+<p>空间分配时，如果你想 flexbox 完全忽略 flex 子元素的尺寸就设置<code>flex-basis</code> 为 <code>0</code>. 这基本上告诉 flexbox 所有空间都可以抢占，并按比例分享。随着我们继续关注<code>flex-grow</code>，我们将看到这方面的例子。</p>
 
 <h2 id="flex-grow_属性">flex-grow 属性</h2>
 
-<p> {{cssxref("flex-grow")}} 属性指定了<strong>flex增长值</strong>, 这决定了当positive free space分配时，flex子元素相对于flex容器中的其余flex子元素的增长程度.</p>
+<p> {{cssxref("flex-grow")}} 属性指定了<strong>flex 增长值</strong>, 这决定了当 positive free space 分配时，flex 子元素相对于 flex 容器中的其余 flex 子元素的增长程度。</p>
 
-<p>如果你所有的flex子元素 设置了相同的<code>flex-grow</code>属性值，那么空间将会在flex子元素 之间平均分配. 如果你想要这种情形，通常你需要使用<code>1</code>作为值，而且如果你喜欢你还可以将它们的<code>flex-grow</code>都 设置为<code>88</code>， 或<code>100</code>， 或<code>1.2</code>  —这只是个比例. 如果flex-grow的值全部相同， 并且在flex容器 中还有positive free space , 那么它（positive free space）就会平均的分配给所有的flex子元素</p>
+<p>如果你所有的 flex 子元素 设置了相同的<code>flex-grow</code>属性值，那么空间将会在 flex 子元素 之间平均分配。如果你想要这种情形，通常你需要使用<code>1</code>作为值，而且如果你喜欢你还可以将它们的<code>flex-grow</code>都 设置为<code>88</code>，或<code>100</code>，或<code>1.2</code>  —这只是个比例。如果 flex-grow 的值全部相同，并且在 flex 容器 中还有 positive free space , 那么它（positive free space）就会平均的分配给所有的 flex 子元素</p>
 
-<h3 id="结合flex-grow_和flex-basis"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="background-color: #333333;">结合</span></font><code>flex-grow</code> 和<code>flex-basis</code></h3>
+<h3 id="结合flex-grow_和flex-basis">结合<code>flex-grow</code> 和<code>flex-basis</code></h3>
 
-<p>根据<code>flex-grow</code>和<code>flex-basis</code>的相互影响， 有些东西会变得迷惑起来. 让我们考虑三个不同内容大小的flex子元素的例子， 应用于下列flex规则:</p>
+<p>根据<code>flex-grow</code>和<code>flex-basis</code>的相互影响，有些东西会变得迷惑起来。让我们考虑三个不同内容大小的 flex 子元素的例子，应用于下列 flex 规则：</p>
 
 <p><code>flex: 1 1 auto;</code></p>
 
-<p>这个例子中设置<code>flex-basis</code>的值为<code>auto</code>且没有设置它们的宽, 因此它们是自动调整大小的. 这意味着flexbox的大小决定于全部flex子元素内容的<code>max-content</code> 大小. 在布局完flex子元素 之后在flex容器中还有一些positive free space， 展示在这幅图片的阴影区域中:</p>
+<p>这个例子中设置<code>flex-basis</code>的值为<code>auto</code>且没有设置它们的宽，因此它们是自动调整大小的。这意味着 flexbox 的大小决定于全部 flex 子元素内容的<code>max-content</code> 大小。在布局完 flex 子元素 之后在 flex 容器中还有一些 positive free space，展示在这幅图片的阴影区域中：</p>
 
 <p><img alt="Images shows the positive free space as a hatched area" src="https://mdn.mozillademos.org/files/15656/ratios2.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
 
-<p>我们使用与内容大小相等的<code>flex-basis</code>，以便从总可用空间（flex容器的宽度）中减去可用分配空间，然后剩余空间在每个flex子元素之间平均分配. 我们比较大的flex子元素最终会变得更大，因为它一开始就有一个比较大的尺寸，即使它与其他flex子元素具有相同数量的分配空间:</p>
+<p>我们使用与内容大小相等的<code>flex-basis</code>，以便从总可用空间（flex 容器的宽度）中减去可用分配空间，然后剩余空间在每个 flex 子元素之间平均分配。我们比较大的 flex 子元素最终会变得更大，因为它一开始就有一个比较大的尺寸，即使它与其他 flex 子元素具有相同数量的分配空间：</p>
 
 <p><img alt="The positive space is distributed between items" src="https://mdn.mozillademos.org/files/15657/ratios3.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
 
-<p>如果你真正想要的是三个同样尺寸的flex子元素，即使它们开始是不同的尺寸，你应该使用这个:</p>
+<p>如果你真正想要的是三个同样尺寸的 flex 子元素，即使它们开始是不同的尺寸，你应该使用这个：</p>
 
 <p><code>flex: 1 1 0;</code></p>
 
-<p>我们要说的是，为了我们的空间分配，flex子元素的尺寸计算值是0--所有空间都用来争夺，并且所有flex子元素具有相同的<code>flex-grow</code> 值，它们（flex子元素）每个都获得相等的空间分配。 最终结果是三个宽度相等的可伸缩 flex子元素.</p>
+<p>我们要说的是，为了我们的空间分配，flex 子元素的尺寸计算值是 0--所有空间都用来争夺，并且所有 flex 子元素具有相同的<code>flex-grow</code> 值，它们（flex 子元素）每个都获得相等的空间分配。最终结果是三个宽度相等的可伸缩 flex 子元素。</p>
 
-<p>尝试在这个现场示例中将<code>flex-grow</code>的值从1更改为0以查看不同的行为:</p>
+<p>尝试在这个现场示例中将<code>flex-grow</code>的值从 1 更改为 0 以查看不同的行为：</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow.html", '100%', 520)}}</p>
 
-<h3 id="flex_items_设置不同的flex-grow值">flex items 设置不同的flex-grow值</h3>
+<h3 id="flex_items_设置不同的flex-grow值">flex items 设置不同的 flex-grow 值</h3>
 
-<p>我们对<code>flex-grow</code>和<code>flex-basis</code>如何工作的理解使我们能够通过分配不同的<code>flex-grow</code>值来进一步控制我们单个flex子元素 大小. 如果我们设置<code>flex-basis</code>值为<code>0</code>则所用空间都可以被分配, 我们可以给每个flex子元素分配不同的<code>flex-grow</code>值.  在下面的示例中， 我会使用下面的值:</p>
+<p>我们对<code>flex-grow</code>和<code>flex-basis</code>如何工作的理解使我们能够通过分配不同的<code>flex-grow</code>值来进一步控制我们单个 flex 子元素 大小。如果我们设置<code>flex-basis</code>值为<code>0</code>则所用空间都可以被分配，我们可以给每个 flex 子元素分配不同的<code>flex-grow</code>值.  在下面的示例中，我会使用下面的值：</p>
 
 <ul>
- <li>设置第一个flex item的<code>flex-grow</code>值为<code>1</code>.</li>
- <li>设置第二个flex item的<code>flex-grow</code>值为<code>1</code>.</li>
- <li>设置第三个flex item的<code>flex-grow</code>值为<code>2</code>.</li>
+ <li>设置第一个 flex item 的<code>flex-grow</code>值为<code>1</code>.</li>
+ <li>设置第二个 flex item 的<code>flex-grow</code>值为<code>1</code>.</li>
+ <li>设置第三个 flex item 的<code>flex-grow</code>值为<code>2</code>.</li>
 </ul>
 
-<p><code>flex-basis</code>值为 <code>0</code> 意味着可用空间会根据设置分配. 我们需要增加flex 增长值, 就需要在flex容器中用positive free space的总大小除以flex-grow值之和, 在这个例子中为4. 我们就可以根据个体值（flex-basis值）分配空间 — 第一个flex子元素得到一个单位 , 第二个flex子元素得到一个单位, 第三个flex子元素得到二个单位. 也就是说第三个flex子元素是第一个和第二个flex item的两倍.</p>
+<p><code>flex-basis</code>值为 <code>0</code> 意味着可用空间会根据设置分配。我们需要增加 flex 增长值，就需要在 flex 容器中用 positive free space 的总大小除以 flex-grow 值之和，在这个例子中为 4. 我们就可以根据个体值（flex-basis 值）分配空间 — 第一个 flex 子元素得到一个单位 , 第二个 flex 子元素得到一个单位，第三个 flex 子元素得到二个单位。也就是说第三个 flex 子元素是第一个和第二个 flex item 的两倍。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow-ratios.html", '100%', 520)}}</p>
 
-<p>记住你要在这里使用正值. 这是一个项目和另一个项目之间的比例. 你还可以使用大的数字，或者小数 — 这取决于你.把上例中分配的值更改为<code>.25</code>，<code>.25</code>和<code>.50</code> 并去测试— 你会得到相同的结果.</p>
+<p>记住你要在这里使用正值。这是一个项目和另一个项目之间的比例。你还可以使用大的数字，或者小数 — 这取决于你。把上例中分配的值更改为<code>.25</code>，<code>.25</code>和<code>.50</code> 并去测试— 你会得到相同的结果。</p>
 
 <h2 id="flex-shrink_属性"><code>flex-shrink</code> 属性</h2>
 
-<p> {{cssxref("flex-shrink")}} 属性指定了<strong>flex 缩小值</strong>, 它确定在分配negative free space时，flex子元素相对于flex容器中其余flex子元素收缩的程度.</p>
+<p> {{cssxref("flex-shrink")}} 属性指定了<strong>flex 缩小值</strong>, 它确定在分配 negative free space 时，flex 子元素相对于 flex 容器中其余 flex 子元素收缩的程度。</p>
 
-<p>该属性用于处理浏览器计算flex子元素的<code>flex-basis</code>值的情形, 并检测它们太大以至于无法适应flex容器. 只要flex-shrink有正值则flex子元素就会收缩以至于它们不会溢出flex容器.</p>
+<p>该属性用于处理浏览器计算 flex 子元素的<code>flex-basis</code>值的情形，并检测它们太大以至于无法适应 flex 容器。只要 flex-shrink 有正值则 flex 子元素就会收缩以至于它们不会溢出 flex 容器。</p>
 
-<p>因此 <code>flex-grow</code> 用于添加可用空间, <code>flex-shrink</code> 减少空间来使盒子适应它们的容器而不溢出.</p>
+<p>因此 <code>flex-grow</code> 用于添加可用空间，<code>flex-shrink</code> 减少空间来使盒子适应它们的容器而不溢出。</p>
 
-<p>下一个示例中我的flex容器有三个flex子元素，我已经给它们每一个（flex子元素）设置了200px的宽度, 并且设置容器(flex容器）500px 宽. 设置<code>flex-shrink</code> 为 <code>0</code> 的flex子元素 不允许收缩以致于它们溢出了盒子.</p>
+<p>下一个示例中我的 flex 容器有三个 flex 子元素，我已经给它们每一个（flex 子元素）设置了 200px 的宽度，并且设置容器 (flex 容器）500px 宽。设置<code>flex-shrink</code> 为 <code>0</code> 的 flex 子元素 不允许收缩以致于它们溢出了盒子。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink.html", '100%', 500)}}</p>
 
-<p>改变 <code>flex-shrink</code> 值为 <code>1</code> 你会发现每个flex子元素 都收缩了同样大小的量, 现在所有flex子元素都适应盒子. 这样做后它们已变得比它们的初始宽度还小.</p>
+<p>改变 <code>flex-shrink</code> 值为 <code>1</code> 你会发现每个 flex 子元素 都收缩了同样大小的量，现在所有 flex 子元素都适应盒子。这样做后它们已变得比它们的初始宽度还小。</p>
 
 <h3 id="结合flex-shrink_和flex-basis">结合<code>flex-shrink</code> 和<code>flex-basis</code></h3>
 
-<p>你可以看见 <code>flex-shrink</code>和<code>flex-grow</code>  工作的一样好. 但是它们有两个原因使它们不完全一样.</p>
+<p>你可以看见 <code>flex-shrink</code>和<code>flex-grow</code>  工作的一样好。但是它们有两个原因使它们不完全一样。</p>
 
-<p>即使它微不足道, 但规范中的定义内容是 <code>flex-shrink</code>不全相同与negative space的一个原因， 正如<code>flex-grow</code>不全相同于positive space一样:</p>
+<p>即使它微不足道，但规范中的定义内容是 <code>flex-shrink</code>不全相同与 negative space 的一个原因，正如<code>flex-grow</code>不全相同于 positive space 一样：</p>
 
 <blockquote>
-<p>“注意: 当分配negative space时，flex基本大小乘以flex增长值. 这会根据flex子元素能够缩小的比例（多少）分配negative space, 其它亦如此.在较大的flex子元素 明显缩小之前， 较小的flex子元素 不会缩小到0.”</p>
+<p>“注意：当分配 negative space 时，flex 基本大小乘以 flex 增长值。这会根据 flex 子元素能够缩小的比例（多少）分配 negative space, 其它亦如此。在较大的 flex 子元素 明显缩小之前，较小的 flex 子元素 不会缩小到 0.”</p>
 </blockquote>
 
-<p>第二个原因是在negative free space消除期间flexbox会阻止小的flex子元素缩小到0. 这些flex子元素会以<code>min-content</code>的大小进行铺设  —这个大小是它们利用任何可以利用的自动断行机会后所变成的.</p>
+<p>第二个原因是在 negative free space 消除期间 flexbox 会阻止小的 flex 子元素缩小到 0. 这些 flex 子元素会以<code>min-content</code>的大小进行铺设  —这个大小是它们利用任何可以利用的自动断行机会后所变成的。</p>
 
-<p>在下面的例子中，在 <code>flex-basis</code> 解析为内容大小的位置你会看到 <code>min-content</code> 的铺设,. 如果你改变flex容器的宽度 — 比如增加到700px 宽 — 再减少flex子元素的宽度, 你会看到前两个flex子元素 将换行, 但是它们绝不会小于<code>min-content</code>的大小. 随着盒子变得越来越小，空间随后从第三个flex子元素 中移除.</p>
+<p>在下面的例子中，在 <code>flex-basis</code> 解析为内容大小的位置你会看到 <code>min-content</code> 的铺设。如果你改变 flex 容器的宽度——比如增加到 700px 宽，再减少 flex 子元素的宽度，你会看到前两个 flex 子元素将换行，但是它们绝不会小于 <code>min-content</code> 的大小。随着盒子变得越来越小，第三个 flex 子元素随后从空间中溢出。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}</p>
 
-<p>在实践中，收缩行为会倾向于给你合理的结果。 你通常不希望自己的内容完全消失，或者文本框比自己的最小内容要小，因此上述规则对于需要缩小以适应容器的内容的合理行为而言是有意义的.</p>
+<p>在实践中，收缩行为会倾向于给你合理的结果。你通常不希望自己的内容完全消失，或者文本框比自己的最小内容要小，因此上述规则对于需要缩小以适应容器的内容的合理行为而言是有意义的。</p>
 
 <h3 id="Giving_items_different_flex-shrink_factors">Giving items different <code>flex-shrink</code> factors</h3>
 
-<p>在 <code>flex-grow</code>值相同的情形下, 你可以给flex子元素 设置不同的 <code>flex-shrink</code> 值. 假如你想让一个flex子元素 比它的兄弟元素收缩的更快或更慢， 或者不在收缩， 这回改变它的默认行为.</p>
+<p>在 <code>flex-grow</code>值相同的情形下，你可以给 flex 子元素 设置不同的 <code>flex-shrink</code> 值。假如你想让一个 flex 子元素 比它的兄弟元素收缩的更快或更慢，或者不再收缩，这会改变它的默认行为。</p>
 
-<p>在下面的示例中第一个flex子元素设置 <code>flex-shrink</code> 的值为1, 第二个为 <code>0</code> (因此它将不会收缩), 第三个为 <code>4</code>. 第三个flex子元素比第一个收缩的更快. 任意设置不懂的值 — 你可以给 <code>flex-grow</code> 使用小数或者大一点的数. 选择对于你来说任意合理的数.</p>
+<p>在下面的示例中第一个 flex 子元素设置 <code>flex-shrink</code> 的值为 1, 第二个为 <code>0</code> (因此它将不会收缩), 第三个为 <code>4</code>. 第三个 flex 子元素比第一个收缩的更快。任意设置不同的值 — 你可以给 <code>flex-grow</code> 使用小数或者大一点的数。选择对于你来说任意合理的数。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-ratios.html", '100%', 570)}}</p>
 
-<h2 id="掌握Flex_items的大小">掌握Flex items的大小</h2>
+<h2 id="掌握Flex_items的大小">掌握 Flex items 的大小</h2>
 
-<p>真正理解flex子元素如何工作的关键是理解有多少东西参与影响flex子元素. 思考以下方面, 哪些是我们在这些指南中已经讨论过了的:</p>
+<p>真正理解 flex 子元素如何工作的关键是理解有多少东西参与影响 flex 子元素。思考以下方面，哪些是我们在这些指南中已经讨论过了的：</p>
 
-<h3 id="什么设置flex_item_的基本大小？">什么设置flex item 的基本大小？</h3>
+<h3 id="什么设置flex_item_的基本大小？">什么设置 flex item 的基本大小？</h3>
 
 <ol>
- <li><code>flex-basis</code>设置为<code>auto</code>吗，这个flex子元素设置了宽度吗？如果设置了, flex子元素的大小将会基于设置的宽度.</li>
- <li><code>flex-basis</code> 设为 <code>auto</code> 还是<code>content</code> (在支持的浏览器中)? 如果是<code>auto</code>, flex子元素的大小为原始大小.</li>
- <li><code>flex-basis</code>是不为<code>0</code>的长度单位吗？如果是这样那这就是flex子元素的大小.</li>
- <li><code>flex-basis</code> 设为 <code>0</code>呢? 如果是这样，则flex子元素的大小不在空间分配计算的考虑之内.</li>
+ <li><code>flex-basis</code>设置为<code>auto</code>吗，这个 flex 子元素设置了宽度吗？如果设置了，flex 子元素的大小将会基于设置的宽度。</li>
+ <li><code>flex-basis</code> 设为 <code>auto</code> 还是<code>content</code> (在支持的浏览器中)? 如果是<code>auto</code>, flex 子元素的大小为原始大小。</li>
+ <li><code>flex-basis</code>是不为<code>0</code>的长度单位吗？如果是这样那这就是 flex 子元素的大小。</li>
+ <li><code>flex-basis</code> 设为 <code>0</code>呢？如果是这样，则 flex 子元素的大小不在空间分配计算的考虑之内。</li>
 </ol>
 
-<h3 id="我们有可用空间吗">我们有可用空间吗?</h3>
+<h3 id="我们有可用空间吗">我们有可用空间吗？</h3>
 
-<p>flex子元素没有positive free space 就不会增长, 没有negative free space 就不会缩小.</p>
+<p>flex 子元素没有 positive free space 就不会增长，没有 negative free space 就不会缩小。</p>
 
 <ol>
- <li>如果我们把所有的flex子元素的宽度相加（如果在列方向工作则为高度），那么总和是否小于flex容器的总宽度（或高度）？ 如果是这样，那么你有 positive free space，并且<code>flex-grow</code>会发挥作用.</li>
- <li>如果我们把所有的flex子元素的宽度相加（如果在列方向工作则为高度），那么总和是否大于flex容器的总宽度（或高度）？ 如果是这样，那么你有negative free space，并且<code>flex-shrink</code>会发挥作用.</li>
+ <li>如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否小于 flex 容器的总宽度（或高度）？如果是这样，那么你有 positive free space，并且<code>flex-grow</code>会发挥作用。</li>
+ <li>如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否大于 flex 容器的总宽度（或高度）？如果是这样，那么你有 negative free space，并且<code>flex-shrink</code>会发挥作用。</li>
 </ol>
 
 <h3 id="分配空间的其他方式">分配空间的其他方式</h3>
 
-<p>如果我们不想空间添加到flex子元素中, 记住你可以在flex容器中使用指南中所描述的对准属性来处理flex子元素之间或者flex子元素周围的空闲空间， 以致可以对齐flex子元素. {{cssxref("justify-content")}} 属性能够在flex子元素之间或flex子元素周围分配空闲空间. 您还可以在flex子元素上使用自动边距(auto margins)来吸收空间并在flex子元素之间创建间距.</p>
+<p>如果我们不想空间添加到 flex 子元素中，记住你可以在 flex 容器中使用指南中所描述的对准属性来处理 flex 子元素之间或者 flex 子元素周围的空闲空间，以致可以对齐 flex 子元素。{{cssxref("justify-content")}} 属性能够在 flex 子元素之间或 flex 子元素周围分配空闲空间。您还可以在 flex 子元素上使用自动边距 (auto margins) 来吸收空间并在 flex 子元素之间创建间距。</p>
 
-<p>随着所有的flex工具的使用，你会发现大多数任务都可以实现，尽管在开始时可能需要一些实验.</p>
+<p>随着所有的 flex 工具的使用，你会发现大多数任务都可以实现，尽管在开始时可能需要一些实验。</p>

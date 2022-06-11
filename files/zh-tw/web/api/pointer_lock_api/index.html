@@ -115,9 +115,9 @@ element.requestPointerLock(); // Standard</pre>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document.pointerLockElement" title="The pointerLockElement property provides the element set as the target for mouse events while the pointer is locked. It is null if lock is pending, pointer is unlocked, or the target is in another document.">pointerLockElement</a> 屬性可確定指標目前是否鎖定了任何元素 (例如進行 Boolean 檢查)。若確實有鎖定的元素，則可取得參考。以下為此二種用法的範例：</p>
 
-<pre class="brush: js"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.pointerLockElement = document.pointerLockElement    ||
+<pre class="brush: js">document.pointerLockElement = document.pointerLockElement    ||
                               document.mozPointerLockElement ||
-                              document.webkitPointerLockElement;</span></span>
+                              document.webkitPointerLockElement;
 
 // 1) Used as a boolean check: are we pointer locked?
 if (!!document.pointerLockElement) {
@@ -174,10 +174,10 @@ document.exitPointerLock();
 
 <p>Pointer lock API 可透過位移屬性而擴充標準的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" title="The DOM MouseEvent interface represents events that occur due to the user interacting with a pointing device (such as a mouse).">MouseEvent</a> 介面。</p>
 
-<pre class="idl"><span class="idlInterface" id="idl-def-MouseEvent">partial interface <span class="idlInterfaceID">MouseEvent</span> {
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a></span>;</span>
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a></span>;</span>
-};</span></pre>
+<pre class="idl">partial interface MouseEvent {
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a>;
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a>;
+};</pre>
 
 <div class="note">位移屬性目前在 Firefox 中的前綴為 <code>.mozMovementX</code> 與 <code>.mozMovementY</code>；在 Chrome 中的前綴為<code>.webkitMovementX</code> 與 <code>.webkitMovementY</code>。</div>
 
@@ -201,82 +201,11 @@ document.exitPointerLock();
 
 <h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Lock')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>Targeting 23{{ property_prefix("webkit") }}*</p>
-
-    <p>See <a class="external" href="http://code.google.com/p/chromium/issues/detail?id=72754" title="http://code.google.com/p/chromium/issues/detail?id=72754">CR/72574</a></p>
-   </td>
-   <td>
-    <p>{{ CompatGeckoDesktop("14.0") }}</p>
-
-    <p>{{bug("633602") }}</p>
-   </td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>* 需啟動 <code>about:flags</code> 中的功能；或以 <code>--enable-pointer-lock</code> 旗標啟動 Chrome。</p>
+{{Compat("api.Element.requestPointerLock")}}
 
 <h2 id="See_also" name="See_also">另可參閱</h2>
 

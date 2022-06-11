@@ -38,7 +38,7 @@ _Hérite des méthodes de son parent, {{domxref("EventTarget")}}, et implémente
 
 ## Exemple
 
-Dans notre  [Exemple basique d'un worker partagé](https://github.com/mdn/simple-shared-worker) ([lancer le worker partagé](http://mdn.github.io/simple-shared-worker/)), nous avons deux pages HTML, qui chacune utilise du code JavaScript pour réaliser un calcul simple. Les différents scripts utilisent le même worker pour effectuer ce calcul — ils peuvent tous les deux y accéder, même si leurs pages s'exécutent à l'intérieur de fenêtres différentes.
+Dans notre  [Exemple basique d'un worker partagé](https://github.com/mdn/simple-shared-worker) ([lancer le worker partagé](http://mdn.github.io/simple-shared-worker/)), nous avons deux pages HTML, qui chacune utilise du code JavaScript pour réaliser un calcul simple. Les différents scripts utilisent le même worker pour effectuer ce calcul — ils peuvent tous les deux y accéder, même si leurs pages s'exécutent à l'intérieur de fenêtres différentes.
 
 L'extrait de code suivant illustre la création d'un objet `SharedWorker` en utilisant le constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Les deux scripts contiennent ceci :
 
@@ -71,7 +71,7 @@ first.onchange = function() {
   }
 ```
 
-Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
+Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
 
 ```js
 onconnect = function(e) {

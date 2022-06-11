@@ -1,0 +1,132 @@
+---
+title: Data URL
+slug: Web/HTTP/Basics_of_HTTP/Data_URLs
+translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
+original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
+---
+<div>{{HTTPSidebar}}</div>
+
+<p><strong>Data URL</strong>, URL имеющий приставку <code>data:</code>, делает возможным встраивание файлов небольшого размера прямо в документ.</p>
+
+<div class="note">
+<p><strong>Заметьте</strong>: современные браузеры обрабатывают Data URL, как неявный уникальный origin, и не заимствуют значение origin из объекта настроек ответственного за навигацию.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<p>Data URL состоит из четырёх сегментов: приставки (<code>data:</code>), <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типа</a>, описывающего  тип данных, дополнительного ключевого слова <code>base64</code> для нетекстовых данных и самой строки данных:</p>
+
+<pre class="syntaxbox">data:[&lt;тип данных&gt;][;base64],&lt;данные&gt;
+</pre>
+
+<p><code>тип данных</code> описывается строкой в формате <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типа</a>, например <code>'image/jpeg'</code> для JPEG файла изображения. При не указывании типа данных, браузер автоматически будет интерпретировать строку данных, как  <code>text/plain;charset=US-ASCII</code></p>
+
+<p>Если данные представляют собой какую-либо текстовую информацию, вы можете просто вставить эту текстовую строку в Data URL (используя соответствующие для типа данных сущности и знаки экранирования). В ином случае вам будет необходимо использовать ключевое слово <code>base64</code> перед вставкой base64-кодированных бинарных данных. Дополнительную информацию о MIME типах вы сможете найти <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">здесь</a> и <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">здесь</a>.</p>
+
+<p>Несколько примеров:</p>
+
+<dl>
+ <dt><code>data:,Hello%2C%20World!</code></dt>
+ <dd>Простые text/plain данные</dd>
+ <dt><code>data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D</code></dt>
+ <dd>base64-кодированная версия примера выше</dd>
+ <dt><code>data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E</code></dt>
+ <dd>HTML строка вида: <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></dd>
+ <dt><code>data:text/html,&lt;script&gt;alert('hi');&lt;/script&gt;</code></dt>
+ <dd>HTML строка, вызывающая JavaScript alert функцию. Заметьте необходимость закрывающего &lt;script&gt; тега.</dd>
+</dl>
+
+<h2 id="Кодирование_данных_в_формат_base64"><strong>Кодирование данных в формат base64</strong></h2>
+
+<p>Base64 относится к группе транспортных кодировок, и позволяет представлять бинарные данные в виде ASCII строк, переводя их в radix-64 представление. Состоя только из ASCII символов, base64 строки являются допустимыми для использования в URL, по этой причине они могут быть использованы и в Data URL.</p>
+
+<h3 id="Кодирование_в_Javascript"><strong>Кодирование в Javascript</strong></h3>
+
+<p>Web API имеет встроенные методы для кодирования и декодирования формата base64: <a href="/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 кодирование и декодирование</a>.</p>
+
+<h3 id="Кодирование_на_Unix_системах"><strong>Кодирование на Unix системах</strong></h3>
+
+<p>На Linux и Mac OS X системах, кодирование файлов или строк в формат Base64 может быть выполнено через программу <code>base64</code> в командной строке (или, в качестве альтернативы, программу <code>uuencode</code> с <code>-m</code> аргументом).</p>
+
+<pre class="brush: bash">echo -n hello|base64
+# выводит в консоль: aGVsbG8=
+
+echo -n hello&gt;a.txt
+base64 a.txt
+# выводит в консоль: aGVsbG8=
+
+base64 a.txt&gt;b.txt
+# записывает в файл b.txt: aGVsbG8=
+</pre>
+
+<h3 id="Кодирование_на_Microsoft_Windows"><strong>Кодирование на Microsoft Windows</strong></h3>
+
+<p>Кодирование на Windows может быть выполнено через powershell или какую-либо другую предназначенную для этого программу. Так же кодирование может быть выполнено и через программу <code>base64</code> (смотрите секцию Кодирование на Unix системах), при условии активированной технологии <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>.</p>
+
+<pre class="syntaxbox">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
+# выводит в консоль: aGVsbG8=
+
+bash -c "echo -n hello`|base64"
+# выводит в консоль: aGVsbG8=
+# обратный апостроф (`) используется здесь для экранирования символа вертикальной черты (|)
+</pre>
+
+<h2 id="Распространённые_проблемы"><strong>Распространённые проблемы</strong></h2>
+
+<p>Эта секция описывает ряд проблем, которые могут возникнуть при использовании Data URL.</p>
+
+<p>Для примера рассмотрим Data URL вида:</p>
+
+<pre>data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
+</pre>
+
+<p>результатом декодирования которого будет HTML строка:</p>
+
+<pre>lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
+</pre>
+
+<dl>
+ <dt>Синтаксис</dt>
+ <dd>Data URL представляет собой простой формат, но даже в нём можно забыть добавить запятую перед сегментом данных или произвести ошибку во время их base64 кодирования.</dd>
+ <dt>Форматирование внутри документа</dt>
+ <dd>Встраивание Data URL по сути является встраиванием файла внутрь файла, и длина его строки может быть намного шире, чем ширина заключающего его документа. Так же, несмотря на то, что использование пробелов считается обычной практикой при форматировании данных, есть вероятность, что у вас возникнут проблемы <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">при их base64 кодировании</a>.</dd>
+ <dt>Ограничения длины</dt>
+ <dd>Хотя Firefox поддерживает Data URL практически неограниченных размеров, каждый отдельный браузер имеет свои ограничения на их длину. Например, Opera 11 ограничивает допустимую длину URL до 65535 символов, что означает ограничение сегмента данных в Data URL до 65529 символов (длина в 65529 символов взята из условия использования только только <code>data:</code> сегмента, без определения MIME типа данных).</dd>
+ <dt>Нехватка возможности обработки ошибок</dt>
+ <dd>Опечатки в определении MIME типа или написания ключевого слова <code>'base64'</code> будут проигнорированы без каких-либо уведомлений об ошибках.</dd>
+ <dt>Отсутствие поддержки строки параметров</dt>
+ <dd>
+ <p>В связи с неопределённостью типа сегмента данных в Data URL, строка параметров (характерные для страницы параметры, представляющиеся в виде <code>&lt;url&gt;?parameter-data</code>), добавленная к сегменту данных будет рассматриваться, как часть этих данных.</p>
+ </dd>
+ <dt>Проблемы с безопасностью</dt>
+ <dd>Несколько проблем с безопасностью (например: фишинг) связаны с Data URL и переходом по ним из корневого контекста документа. Чтобы избавиться от этих проблем, переход по URI, начинающихся со схемы <code>data://</code>, из корневого контекста документа перестал быть возможен в Firefox, начиная с версии 59 (и начиная с версии 58 в Nightly/Beta вариантах браузера). Надеемся, что остальные браузеры так же последуют этому примеру. Для дополнительной информации смотрите <a href="https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/">Blocking Top-Level Navigations to data URLs for Firefox 58</a>.</dd>
+</dl>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Заголовок</th>
+  </tr>
+  <tr>
+   <td>{{RFC("2397")}}</td>
+   <td>The "data" URL scheme</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{compat("http.data-url")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 кодирование и декодирование</a></li>
+ <li>{{domxref("WindowBase64.atob","atob()")}}</li>
+ <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
+ <li><a href="/ru/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
+ <li><a href="/ru/docs/Glossary/URI">URI</a></li>
+</ul>

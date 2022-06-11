@@ -36,9 +36,9 @@ clip: inherit</pre>
 
  <pre style="margin: 0;">rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)      /* 向后兼容语法 */</pre>
  <code>&lt;top&gt;</code> 和 <code>&lt;bottom&gt;</code> 指定相对于盒子<em>上边框边界 </em>的偏移，<code>&lt;right&gt;</code> 和 <code>&lt;left&gt;</code> 指定了相对于盒子<em>左边框边界 </em>的偏移。</dd>
- <dd><code>&lt;top&gt;</code>， <code>&lt;right&gt;</code>， <code>&lt;bottom&gt;</code>， 和 <code>&lt;left&gt;</code> 的值可以是 {{cssxref("&lt;length&gt;")}} 值或 <code>auto</code>。</dd>
+ <dd><code>&lt;top&gt;</code>、<code>&lt;right&gt;</code>、<code>&lt;bottom&gt;</code> 和 <code>&lt;left&gt;</code> 的值可以是 {{cssxref("&lt;length&gt;")}} 值或 <code>auto</code>。</dd>
  <dt><code>auto</code></dt>
- <dd>元素不裁剪(默认值)</dd>
+ <dd>元素不裁剪 (默认值)</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -59,7 +59,7 @@ clip: inherit</pre>
   /* 非标准语法，但是包括火狐与 IE 在内的主要浏览器均支持 */
 }</pre>
 
-<p style="position: relative; border: dotted;"><img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg"> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""></p>
+<p><img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg"> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""></p>
 
 <h2 id="规范">规范</h2>
 
@@ -94,57 +94,7 @@ clip: inherit</pre>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td rowspan="2">Basic support</td>
-   <td rowspan="2">1.0</td>
-   <td rowspan="2">1.0 (1.0)</td>
-   <td>4.0</td>
-   <td rowspan="2">7.0</td>
-   <td rowspan="2">1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>8.0<br>
-    该版本支持逗号语法。</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.clip")}}
 
 <h2 id="See_also">See also</h2>
 

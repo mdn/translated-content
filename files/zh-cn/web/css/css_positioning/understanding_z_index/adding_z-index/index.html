@@ -4,14 +4,14 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 ---
-<p>« <a href="/en/CSS" title="CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index" style="font-size: 14px; line-height: 1.5;" title="Understanding CSS z-index"><span class="title" style="display: inline !important;">理解z-index</span></a></p>
+<p>« <a href="/en/CSS" title="CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index" style="font-size: 14px; line-height: 1.5;" title="Understanding CSS z-index">理解 z-index</a></p>
 <h3 id="使用_cssxref(z-index)">使用 {{ cssxref("z-index") }}</h3>
-<p>在第一个例子 <a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a>中， 我们描述了默认的摆放顺序。 当你需要指定不同的排列顺序时， 只要给元素指定一个z-index的数值就可以了。 </p>
+<p>在第一个例子 <a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a>中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。 </p>
 <p> </p>
-<p><span style="font-size: 14px; line-height: 1.5;">该属性必须是整数(正负均可)， 它体现了元素在z轴的位置。 如果你对z轴体系不了解， 你也可以把它理解成“层叠”， 每个层都有一个顺序数， 顺序数大的层在上面， 小的在下面。 </span></p>
-<p><strong>注意！z-index只对指定了</strong> <a href="/en/CSS/position" title="position">positioned</a><strong>属性的元素有效。</strong></p>
+<p>该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成“层叠”，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。 </p>
+<p><strong>注意！z-index 只对指定了</strong> <a href="/en/CSS/position" title="position">positioned</a><strong>属性的元素有效。</strong></p>
 <ul>
- <li><em>底层: 距离观察者最远</em></li>
+ <li><em>底层：距离观察者最远</em></li>
  <li>...</li>
  <li> -3 层</li>
  <li> -2 层</li>
@@ -21,16 +21,16 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
  <li> 2 层</li>
  <li> 3 层</li>
  <li>...</li>
- <li><em>顶部: 最接近观察者</em></li>
+ <li><em>顶部：最接近观察者</em></li>
 </ul>
 <div class="note">
- <p><strong>注释:</strong></p>
+ <p><strong>注释：</strong></p>
  <ul>
-  <li>当没有指定z-index的时候， 所有元素都在会被渲染在默认层(0层)</li>
-  <li>当多个元素的z-index属性相同的时候(在同一个层里面)，那么将按照 <a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="Stacking without z-index">Stacking without z-index</a> 中描述的规则进行布局。 </li>
+  <li>当没有指定 z-index 的时候，所有元素都在会被渲染在默认层 (0 层)</li>
+  <li>当多个元素的 z-index 属性相同的时候 (在同一个层里面)，那么将按照 <a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="Stacking without z-index">Stacking without z-index</a> 中描述的规则进行布局。 </li>
  </ul>
 </div>
-<p>在下一个例子中， 所有的层都是用z-index进行排序的。 元素div#5 的z-index无效， 因为他没有被指定position属性。 </p>
+<p>在下一个例子中，所有的层都是用 z-index 进行排序的。元素 div#5 的 z-index 无效，因为他没有被指定 position 属性。 </p>
 <p><img alt="Example of stacking rules modified using z-index" class="internal" src="/@api/deki/files/912/=Understanding_zindex_03.png"></p>
 <h3 id="Example_source_code"><strong>Example source code</strong></h3>
 <pre class="brush: html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -156,4 +156,3 @@ span.bold { font-weight: bold; }
   <li>Last Updated Date: July 9th, 2005</li>
  </ul>
 </div>
-<p>{{ languages( { "fr": "fr/CSS/Comprendre_z-index/Ajout_de_z-index" } ) }}</p>

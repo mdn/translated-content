@@ -28,13 +28,13 @@ Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'asse
 - `assertion`
   - : N'importe quelle expression booléenne. Si l'assertion est fausse, le message s'affichera dans la console.
 - `obj1` ... `objN`
-  - : Une liste d'objets javascript à afficher. La représentation textuelle de chacun de ces objets est ajoutée à la suite de la précédente dans l'ordre donné et est ensuite affichée.
+  - : Une liste d'objets javascript à afficher. La représentation textuelle de chacun de ces objets est ajoutée à la suite de la précédente dans l'ordre donné et est ensuite affichée.
 - `msg`
-  - : Une chaîne de caractères javascript contenant zéro ou plus chaîne(s) de caractères de substitution.
+  - : Une chaîne de caractères javascript contenant zéro ou plus chaîne(s) de caractères de substitution.
 - `subst1` ... `substN`
-  - : L'objet javascript avec lequel remplacer les chaînes de substitution dans `msg`. Ceci vous offre plus de contrôle sur ce qui est affiché.
+  - : L'objet javascript avec lequel remplacer les chaînes de substitution dans `msg`. Ceci vous offre plus de contrôle sur ce qui est affiché.
 
-Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
+Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
 
 ## Spécification
 

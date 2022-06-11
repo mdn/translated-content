@@ -74,8 +74,8 @@ Un élément qui décrit un livre :
 
 | Spécification                                                                            | État                                 | Commentaires |
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#items", "itemid")}}                     | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemid", "itemid")}} | {{Spec2('HTML WHATWG')}}     |              |
+| {{SpecName('HTML Microdata', "#items", "itemid")}}                     | {{Spec2('HTML Microdata')}} |              |
+| {{SpecName('HTML WHATWG', "microdata.html#attr-itemid", "itemid")}} | {{Spec2('HTML WHATWG')}}     |              |
 
 ## Compatibilité des navigateurs
 

@@ -14,15 +14,14 @@ translation_of: Web/CSS/background-image
 
 <div>{{EmbedInteractiveExample("pages/css/background-image.html")}}</div>
 
-<p class="hidden">此交互实例的代码被存储于Github仓库. 如果你想对这些交互实例贡献代码, 请clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发起拉取请求.</p>
 
 <p>在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像“最接近用户”。</p>
 
-<p>然后元素的边框 <a href="/cn/CSS/border">border</a> 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在CSS属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。</p>
+<p>然后元素的边框 <a href="/cn/CSS/border">border</a> 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。</p>
 
 <p>如果一个指定的图像无法被绘制 (比如，被指定的 URI 所表示的文件无法被加载)，浏览器会将此情况等同于其值被设为 <code>none</code>。</p>
 
-<div class="note"><strong>注意：</strong> 即使图像是不透明的，背景色在通常情况下并不会被显示，web开发者仍然应该指定 {{cssxref("background-color")}} 属性。如果图像无法被加载—例如，在网络连接断开的情况下—背景色就会被绘制。</div>
+<div class="note"><strong>注意：</strong> 即使图像是不透明的，背景色在通常情况下并不会被显示，web 开发者仍然应该指定 {{cssxref("background-color")}} 属性。如果图像无法被加载—例如，在网络连接断开的情况下—背景色就会被绘制。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -40,7 +39,7 @@ translation_of: Web/CSS/background-image
  <dt><code>none</code></dt>
  <dd>是一个表示无背景图的关键字。</dd>
  <dt><code>&lt;image&gt;</code></dt>
- <dd>{{cssxref("&lt;image&gt;")}} 用来标记将要显示的图片. 支持<a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds">多背景</a>设置，背景之间以逗号隔开.</dd>
+ <dd>{{cssxref("&lt;image&gt;")}} 用来标记将要显示的图片。支持<a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds">多背景</a>设置，背景之间以逗号隔开。</dd>
 </dl>
 
 <h3 id="正规语法">正规语法</h3>
@@ -49,7 +48,7 @@ translation_of: Web/CSS/background-image
 
 <h2 id="Examples" name="Examples">示例</h2>
 
-<p>注意星星图片部分透明且位于猫图片上方.</p>
+<p>注意星星图片部分透明且位于猫图片上方。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -134,15 +133,15 @@ div {
 
 <div>{{Compat("css.properties.background-image")}}</div>
 
-<p>[1] 如果 <code>about:config</code> 中 <code>browser.display.use_document_colors</code>  被设置为 <code>false</code>, 背景图像将不会展示.</p>
+<p>[1] 如果 <code>about:config</code> 中 <code>browser.display.use_document_colors</code>  被设置为 <code>false</code>, 背景图像将不会展示。</p>
 
-<p>[2] 当前的iOS Safari 版本 (5.0) CSS 背景属性对SVG的支持并不完善. iOS Safari (5.0)之前的版本亦是如此.</p>
+<p>[2] 当前的 iOS Safari 版本 (5.0) CSS 背景属性对 SVG 的支持并不完善。iOS Safari (5.0) 之前的版本亦是如此。</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/CSS/CSS_Image_Sprites">Implementing image sprites in CSS</a></li>
  <li>{{HTMLElement("img")}}</li>
- <li>与图像相关的数据类型: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}</li>
- <li>与图像相关的函数: {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}, {{cssxref("_image", "image()")}}, {{cssxref("image-set")}}, {{cssxref("url", "url()")}}</li>
+ <li>与图像相关的数据类型：{{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}</li>
+ <li>与图像相关的函数：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}, {{cssxref("_image", "image()")}}, {{cssxref("image-set")}}, {{cssxref("url", "url()")}}</li>
 </ul>

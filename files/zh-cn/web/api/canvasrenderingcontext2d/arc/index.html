@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arc()</code></strong> 是 Canvas 2D API 绘制圆弧路径的方法。 圆弧路径的圆心在 <em>(x, y)</em> 位置，半径为<em> r</em> ，根据<em>anticlockwise</em> （默认为顺时针）指定的方向从 <em>startAngle</em> 开始绘制，到 <em>endAngle</em> 结束。</p>
+<p><strong><code>CanvasRenderingContext2D.arc()</code></strong> 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 <em>(x, y)</em> 位置，半径为<em> r</em> ，根据<em>anticlockwise</em> （默认为顺时针）指定的方向从 <em>startAngle</em> 开始绘制，到 <em>endAngle</em> 结束。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
  <dt><code>radius</code></dt>
  <dd>圆弧的半径。</dd>
  <dt><code>startAngle</code></dt>
- <dd>圆弧的起始点， x轴方向开始计算，单位以弧度表示。</dd>
+ <dd>圆弧的起始点，x 轴方向开始计算，单位以弧度表示。</dd>
  <dt><code>endAngle</code></dt>
  <dd>圆弧的终点， 单位以弧度表示。</dd>
  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
@@ -135,81 +135,11 @@ for (i=0;i&lt;4;i++){
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
-
-<p>从 Gecko 2.0 {{geckoRelease("2.0")}}开始：</p>
-
-<ul>
- <li><code>anticlockwise</code> 参数是可选的，</li>
- <li>描述了 radius 为负数会抛出 {{domxref("DOMError", "IndexSizeError")}} 错误（“索引或长度为负数，或者超过允许的数值”）。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.arc")}}
 
 <h2 id="参见">参见</h2>
 

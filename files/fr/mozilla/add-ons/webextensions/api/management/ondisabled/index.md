@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont désactivés.
 
 ```js
 browser.management.onDisabled.addListener((info) => {
-  console.log(info.name + " was disabled");
+  console.log(info.name + " was disabled");
 });
 ```
 

@@ -3,14 +3,14 @@ title: Site Compatibility for Firefox 28
 slug: Mozilla/Firefox/Releases/28/Site_Compatibility
 translation_of: Mozilla/Firefox/Releases/28/Site_Compatibility
 ---
-<div>{{FirefoxSidebar}}</div><p><span style="font-size: 30px; font-weight: 700; letter-spacing: -1px; line-height: 30px;">DOM</span></p>
+<div>{{FirefoxSidebar}}</div><p>DOM</p>
 <section id="sect5">
  <section id="sect1">
   <h3 id="navigator.plugins_不再是可枚举的"><code>navigator.plugins</code> 不再是可枚举的</h3>
   <ul>
    <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=757726">Bug 757726 – disallow enumeration of navigator.plugins</a></li>
   </ul>
-  <p>{{ domxref("PluginArray") }} 接口, 通常就是指 {{ domxref("window.navigator.plugins") }} 属性, 现在不再是可以枚举的了. 这么做主要是为了防止网站通过某些技术手段窃取用户隐私. 不过开发人员仍然可以使用 {{ domxref("window.navigator.mimeTypes") }} 接口来判断浏览器支持哪些 MIME 类型. 这一变更可能会给一些已有的代码<a href="https://bugzilla.mozilla.org/showdependencytree.cgi?id=934107">带来兼容性问题</a>.</p>
+  <p>{{ domxref("PluginArray") }} 接口，通常就是指 {{ domxref("window.navigator.plugins") }} 属性，现在不再是可以枚举的了。这么做主要是为了防止网站通过某些技术手段窃取用户隐私。不过开发人员仍然可以使用 {{ domxref("window.navigator.mimeTypes") }} 接口来判断浏览器支持哪些 MIME 类型。这一变更可能会给一些已有的代码<a href="https://bugzilla.mozilla.org/showdependencytree.cgi?id=934107">带来兼容性问题</a>.</p>
  </section>
  <section id="sect2">
   <h3 id="showModalDialog_has_been_deprecated"><code>showModalDialog</code> has been deprecated</h3>

@@ -26,7 +26,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 var clearing = browser.storage.<storageType>.clear()
 ```
 
-`<storageType> `sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
+`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
 
 ### Paramètres
 

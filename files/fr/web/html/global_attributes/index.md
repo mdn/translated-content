@@ -44,7 +44,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `true` ou la chaîne vide : ces valeurs indiquent que l'élément doit pouvoir être édité
     - `false` qui indique que l'élément ne doit pas pouvoir être édité.
 
-- {{htmlattrdef("contextmenu")}}{{obsolete_inline}}
+- {{htmlattrdef("contextmenu")}}{{deprecated_inline}}
   - : La valeur de cet attribut correspond à la valeur de l'attribut {{htmlattrxref("id","menu")}} d'un élément {{HTMLElement("menu")}} qui doit être utilisé comme menu contextuel par cet élément.
 - {{htmlattrdef("data-*")}}
   - : Cette classe d'attribut, appelée « attributs de données personnalisés », permet d'échanger des informations dans un format propriétaire entre le HTML et le DOM afin de pouvoir les manipuler via des langage de scripts. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'ensemble des attribut définis de cette façon.
@@ -88,7 +88,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - {{htmlattrdef("itemref")}}
   - : Les propriétés d'un objet qui ne sont pas les éléments descendants de l'élément courant peuvent être associée via l'attribut `itemscope` contenant une référence vers un `itemref`. `itemref` fournit une liste d'identifiants d'éléments qui correspondent aux propriétés supplémentaires définies autre part dans le document. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - {{htmlattrdef("itemscope")}}
-  - : `itemscope` fonctionne généralement avec `itemtype` afin d'indiquer que le coded HTML contenu dans un bloc donné concerne un objet en particulier. `itemscope` crée l'objet et définit la portée de l'`itemtype` associée. `itemtype` est une URL valide construite à partir d'un vocabulaire (par exemple [schema.org](https://schema.org/)) qui décrit les objets et leurs propriétés. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
+  - : `itemscope` fonctionne généralement avec `itemtype` afin d'indiquer que le coded HTML contenu dans un bloc donné concerne un objet en particulier. `itemscope` crée l'objet et définit la portée de l'`itemtype` associée. `itemtype` est une URL valide construite à partir d'un vocabulaire (par exemple [schema.org](https://schema.org/)) qui décrit les objets et leurs propriétés. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - {{htmlattrdef("itemtype")}}
   - : Cet attribut indique l'URL du vocabulaire utilisé pour définir les propriétés d'un objet. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - {{htmlattrdef("lang")}}

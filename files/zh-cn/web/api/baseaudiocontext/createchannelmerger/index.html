@@ -24,7 +24,7 @@ var merger = audioCtx.createChannelMerger(2);</pre>
 
 <dl>
  <dt>numberOfInputs</dt>
- <dd>通道输入音频流的数量，输出流将包含这个数量的通道。默认值6。</dd>
+ <dd>通道输入音频流的数量，输出流将包含这个数量的通道。默认值 6。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -33,7 +33,7 @@ var merger = audioCtx.createChannelMerger(2);</pre>
 
 <h2 id="（举个）栗（例）子">（举个）栗（例）子</h2>
 
-<p>下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定AudioNode.connect(AudioNode)方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。</p>
+<p>下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定 AudioNode.connect(AudioNode) 方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。</p>
 
 <pre class="brush: js;highlight[7,16,17,24]">var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
@@ -63,79 +63,11 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createChannelMerger-ChannelMergerNode-unsigned-long-numberOfInputs', 'createChannelMerger()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createChannelMerger")}}
 
 <h2 id="相关页面">相关页面</h2>
 

@@ -10,9 +10,9 @@ tags:
 translation_of: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 original_slug: MDN/Contribute/Howto/学习_交互_在线_起步_开始
 ---
-<div>{{MDNSidebar}}</div><p>动态的内容对于学习 Web 来说是重要的。 她能让学习的人更加积极主动。 这可以是练习，实例，任务，评价等等。总之，任何有助于学习理解的东西都行。</p>
+<div>{{MDNSidebar}}</div><p>动态的内容对于学习 Web 来说是重要的。她能让学习的人更加积极主动。这可以是练习，实例，任务，评价等等。总之，任何有助于学习理解的东西都行。</p>
 
-<p>这儿还没有能够直接创建动态的实例内容。但是一些第三方工具可以帮助你创建（如： <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>，<a href="https://codepen.io/">CodePen</a>，<a href="http://dabblet.com/">Dabblet</a>，等），你可以将其链接放在 MDN 文章中。另外，你可以使用 WebMaker 项目的 <a href="https://thimble.mozilla.org/" rel="external">Thimble</a> 来创造更加高级的内容。</p>
+<p>这儿还没有能够直接创建动态的实例内容。但是一些第三方工具可以帮助你创建（如： <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>，<a href="https://codepen.io/">CodePen</a>，<a href="http://dabblet.com/">Dabblet</a>，等），你可以将其链接放在 MDN 文章中。</p>
 
 <p>目前，MDN 虽然没有能够轻易创建动态实例内容的工具。不过，如果你是工程师，可以使用当前 MDN 提供的功能创建自定义的主动学习内容，下面内容将告诉你如何操作。</p>
 
@@ -173,7 +173,7 @@ document.addEventListener('keyup', function () {
 
 <p>前面的例子在你想嵌入主动学习内容时是可行的。不过，如果你想要处理更加复杂的代码，这个 <code>hidden</code> 的 {{HTMLElement('div')}} 就比较麻烦。</p>
 
-<p>另外种方案是将内容写入 MDN 页面，然后嵌入另一个页面中。为此，我们可以使用 {{TemplateLink("EmbedDistLiveSample")}} 替代{{TemplateLink("EmbedLiveSample")}} 。</p>
+<p>另外种方案是将内容写入 MDN 页面，然后嵌入另一个页面中。为此，我们可以使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedDistLiveSample.ejs"><code>EmbedDistLiveSample</code></a> 替代 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs"><code>EmbedLiveSample</code></a>。</p>
 
 <p>我们学习配置这个模拟远程代码嵌入的实例：</p>
 

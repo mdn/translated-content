@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux
 
 Cette partie référence tous les objets natifs standards JavaScript, avec leurs propriétés et méthodes.
 
-Le terme « objets globaux » (ou objets natifs standards) ne doit pas ici être confondu avec l*'objet global*. Ici, « objets globaux » se réfère aux _objets de portée globale_. L'objet global lui-même peut être accédé en utilisant {{jsxref("Opérateurs/L_opérateur_this", "this")}} dans la portée globale (uniquement lorsque [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) n'est pas utilisé, sinon, il renvoie {{jsxref("undefined")}}). En réalité, la portée globale _consiste des_ propriétés de l'objet global (avec ses propriétés héritées, s'il en a).
+Le terme «&nbsp;objets globaux&nbsp;» (ou objets natifs standards) ne doit pas ici être confondu avec l*'objet global*. Ici, «&nbsp;objets globaux&nbsp;» se réfère aux _objets de portée globale_. L'objet global lui-même peut être accédé en utilisant {{jsxref("Opérateurs/L_opérateur_this", "this")}} dans la portée globale (uniquement lorsque [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) n'est pas utilisé, sinon, il renvoie {{jsxref("undefined")}}). En réalité, la portée globale _consiste des_ propriétés de l'objet global (avec ses propriétés héritées, s'il en a).
 
 > **Note :** En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), la portée globale représentée par `this` sera {{jsxref("undefined")}}.
 

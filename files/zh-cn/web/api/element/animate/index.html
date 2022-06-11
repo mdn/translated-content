@@ -2,7 +2,7 @@
 title: Element.animate()
 slug: Web/API/Element/animate
 tags:
-  - js动画
+  - js 动画
   - 动画
   - 动画接口
 translation_of: Web/API/Element/animate
@@ -31,7 +31,7 @@ translation_of: Web/API/Element/animate
  <dd>
  <dl>
   <dt><code>id {{optional_inline}}</code></dt>
-  <dd>在 <code>animate()里可作为唯一标识的属性</code>: 一个用来引用动画的字符串（ <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> ）</dd>
+  <dd>在 <code>animate()</code> 里可作为唯一标识的属性：一个用来引用动画的字符串（ <a href="/zh-CN/docs/Web/API/DOMString"><code>DOMString</code></a> ）</dd>
  </dl>
  {{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}</dd>
 </dl>
@@ -42,10 +42,10 @@ translation_of: Web/API/Element/animate
 
 <dl>
  <dt><code>composite {{optional_inline}} 合成</code></dt>
- <dd>决定动画彼此之间的值如何结合起来, 单独的动画不指定自己的特定复合操作。 默认为 <code>replace</code>.
+ <dd>决定动画彼此之间的值如何结合起来，单独的动画不指定自己的特定复合操作。 默认为 <code>replace</code>.
  <ul>
-  <li><code>add</code> 表示追加影响,每一次连续的迭代建立在前一个的基础上。 比如<code>transform</code>, <code>translateX(-200px)</code> 将不会覆盖 <code>rotate(20deg)</code> 的值，最终结果是 <code>translateX(-200px) rotate(20deg)</code></li>
-  <li><code>accumulate</code> 效果类似但是更智能一些: <code>blur(2)</code> 和<code>blur(5)</code> 的结果为<code>blur(7)</code>, 而不是 <code>blur(2) blur(5)</code></li>
+  <li><code>add</code> 表示追加影响，每一次连续的迭代建立在前一个的基础上。 比如<code>transform</code>, <code>translateX(-200px)</code> 将不会覆盖 <code>rotate(20deg)</code> 的值，最终结果是 <code>translateX(-200px) rotate(20deg)</code></li>
+  <li><code>accumulate</code> 效果类似但是更智能一些：<code>blur(2)</code> 和<code>blur(5)</code> 的结果为<code>blur(7)</code>, 而不是 <code>blur(2) blur(5)</code></li>
   <li><code>replace</code> 新的值将会覆盖掉旧的</li>
  </ul>
  </dd>
@@ -68,7 +68,7 @@ translation_of: Web/API/Element/animate
 
 <h2 id="示例">示例</h2>
 
-<p>在示例 <a href="https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010">Down the Rabbit Hole (with the Web Animation API)</a> 中, 我们用 <code>animate()</code> 来快速创建并运行使 <code>#tunnel</code> 元素无限循环缓慢升起的动画。注意关键帧的对象数组和时间可选项</p>
+<p>在示例 <a href="https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010">Down the Rabbit Hole (with the Web Animation API)</a> 中， 我们用 <code>animate()</code> 来快速创建并运行使 <code>#tunnel</code> 元素无限循环缓慢升起的动画。注意关键帧的对象数组和时间可选项</p>
 
 <pre class="brush: js">document.getElementById("tunnel").animate([
   // keyframes
@@ -83,118 +83,11 @@ translation_of: Web/API/Element/animate
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#the-animatable-interface', 'animate()' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("36")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("48.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>23</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>id</code> option</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("48.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>37</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>composite</code>, <code>iterationComposite</code>, and <code>spacing</code> options</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{ CompatGeckoMobile("48.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>id</code> option</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{ CompatGeckoMobile("48.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>composite</code>, <code>iterationComposite</code>, and <code>spacing</code> options</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.animate")}}
 
 <h2 id="更多">更多</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/DOMException
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><span class="seoSummary"> <code><strong>DOMException</strong></code> 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为<strong>异常</strong>，<strong>exception</strong>）。</span> 这基本上是在 Web API 中如何描述错误情况的</p>
+<p> <code><strong>DOMException</strong></code> 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为<strong>异常</strong>，<strong>exception</strong>）。 这基本上是在 Web API 中如何描述错误情况的</p>
 
 <p>每个异常都有一个名称 <strong>name，</strong>一个采用骆驼式命名法的简短字符串，用于描述识别错误或异常情况。</p>
 
@@ -24,11 +24,11 @@ translation_of: Web/API/DOMException
 
 <dl>
  <dt>{{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}</dt>
- <dd>返回一个 <code>short</code>，包含 {{anch("Error codes", "error code constants")}} 中的一个，或者返回 <code>0</code>，如果没有匹配的话。这个字段由于历史原因被使用。现在不再使用这个新的DOM异常：他们把这个信息放入 {{domxref("DOMException.name")}} 属性。</dd>
+ <dd>返回一个 <code>short</code>，包含错误代码常量中的一个，或者返回 <code>0</code>，如果没有匹配的话。这个字段由于历史原因被使用。现在不再使用这个新的 DOM 异常：他们把这个信息放入 {{domxref("DOMException.name")}} 属性。</dd>
  <dt>{{domxref("DOMException.message")}} {{readOnlyInline}}</dt>
  <dd>返回一个 {{ domxref("DOMString") }} 代表与给定的<a href="/en-US/docs/Web/API/DOMException#Error_names">错误名称</a>有关信息或描述。</dd>
  <dt>{{domxref("DOMException.name")}} {{readOnlyInline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}} 包含与<a href="#Error_names">错误名称</a>相关的字符串.</dd>
+ <dd>返回一个 {{domxref("DOMString")}} 包含与<a href="#Error_names">错误名称</a>相关的字符串。</dd>
 </dl>
 
 <h2 id="错误名称">错误名称</h2>
@@ -61,21 +61,21 @@ translation_of: Web/API/DOMException
  <dt><a id="exception-InvalidModificationError"><code>InvalidModificationError</code></a></dt>
  <dd>对象不能被这种方式修改。 (Legacy code value: <code>13</code> and legacy constant name: <code>INVALID_MODIFICATION_ERR</code>)</dd>
  <dt><a id="exception-NamespaceError"><code>NamespaceError</code></a></dt>
- <dd>操作在XML名称空间是不允许的. (Legacy code value: <code>14</code> and legacy constant name: <code>NAMESPACE_ERR</code>)</dd>
+ <dd>操作在 XML 名称空间是不允许的. (Legacy code value: <code>14</code> and legacy constant name: <code>NAMESPACE_ERR</code>)</dd>
  <dt><a id="exception-InvalidAccessError"><code>InvalidAccessError</code></a></dt>
  <dd>对象不支持此操作或参数 (Legacy code value: <code>15</code> and legacy constant name: <code>INVALID_ACCESS_ERR</code>)</dd>
  <dt><a id="exception-TypeMismatchError"><code>TypeMismatchError</code></a> {{deprecated_inline}}</dt>
- <dd>对象的类型不匹配预期的类型. (Legacy code value: <code>17</code> and legacy constant name: <code>TYPE_MISMATCH_ERR</code>) 这个值已被弃用,  JavaScript {{jsxref("TypeError")}} 异常被提出而不是<code>DOMException</code></dd>
+ <dd>对象的类型不匹配预期的类型. (Legacy code value: <code>17</code> and legacy constant name: <code>TYPE_MISMATCH_ERR</code>) 这个值已被弃用， JavaScript {{jsxref("TypeError")}} 异常被提出而不是<code>DOMException</code></dd>
  <dt><a id="exception-SecurityError"><code>SecurityError</code></a> {{experimental_inline}}</dt>
  <dd>操作不安全。 (Legacy code value: <code>18</code> and legacy constant name: <code>SECURITY_ERR</code>)</dd>
  <dt><a id="exception-NetworkError"><code>NetworkError</code></a> {{experimental_inline}}</dt>
  <dd>网络错误发生. (Legacy code value: <code>19</code> and legacy constant name: <code>NETWORK_ER</code><code>R</code>)</dd>
  <dt><a id="exception-AbortError"><code>AbortError</code></a> {{experimental_inline}}</dt>
- <dd>T操作中止. (Legacy code value: <code>20</code> and legacy constant name: <code>ABORT_ERR</code>)</dd>
+ <dd>T 操作中止. (Legacy code value: <code>20</code> and legacy constant name: <code>ABORT_ERR</code>)</dd>
  <dt><a id="exception-URLMismatchError"><code>URLMismatchError</code></a> {{experimental_inline}}</dt>
- <dd>给定的URL不匹配另一个URL。 (Legacy code value: <code>21</code> and legacy constant name: <code>URL_MISMATCH_ERR</code>)</dd>
+ <dd>给定的 URL 不匹配另一个 URL。 (Legacy code value: <code>21</code> and legacy constant name: <code>URL_MISMATCH_ERR</code>)</dd>
  <dt><a id="exception-QuotaExceededError"><code>QuotaExceededError</code></a> {{experimental_inline}}</dt>
- <dd>给定配额已经超过了(Legacy code value: <code>22</code> and legacy constant name: <code>QUOTA_EXCEEDED_ERR</code>)</dd>
+ <dd>给定配额已经超过了 (Legacy code value: <code>22</code> and legacy constant name: <code>QUOTA_EXCEEDED_ERR</code>)</dd>
  <dt><a id="exception-TimeoutError"><code>TimeoutError</code></a> {{experimental_inline}}</dt>
  <dd>操作超时. (Legacy code value: <code>23</code> and legacy constant name: <code>TIMEOUT_ERR</code>)</dd>
  <dt><a id="exception-InvalidNodeTypeError"><code>InvalidNodeTypeError</code></a> {{experimental_inline}}</dt>
@@ -85,9 +85,9 @@ translation_of: Web/API/DOMException
  <dt><a id="exception-EncodingError"><code>EncodingError</code></a> {{experimental_inline}}</dt>
  <dd>编码或解码操作失败 (没有遗留代码值和常量的名字).</dd>
  <dt><a id="exception-NotReadableError"><code>NotReadableError</code></a> {{experimental_inline}}</dt>
- <dd>输入/输出读操作失败(没有遗留代码值和常量的名字).</dd>
+ <dd>输入/输出读操作失败 (没有遗留代码值和常量的名字).</dd>
  <dt><a id="exception-UnknownError"><code>UnknownError</code></a> {{experimental_inline}}</dt>
- <dd>因未知的瞬态的原因使操作失败(例如 内存不足) (No legacy code value and constant name).</dd>
+ <dd>因未知的瞬态的原因使操作失败 (例如 内存不足) (No legacy code value and constant name).</dd>
  <dt><a id="exception-ConstraintError"><code>ConstraintError</code></a> {{experimental_inline}}</dt>
  <dd>条件没满足而导致事件失败的异常操作 (No legacy code value and constant name).</dd>
  <dt><a id="exception-DataError"><code>DataError</code></a> {{experimental_inline}}</dt>
@@ -97,49 +97,16 @@ translation_of: Web/API/DOMException
  <dt><a id="exception-ReadOnlyError"><code>ReadOnlyError</code></a> {{experimental_inline}}</dt>
  <dd>尝试操作 "readonly" 事件 (No legacy code value and constant name)。</dd>
  <dt><a id="exception-VersionError"><code>VersionError</code></a> {{experimental_inline}}</dt>
- <dd>尝试打开一个比现有版本更低的数据库(No legacy code value and constant name)。</dd>
+ <dd>尝试打开一个比现有版本更低的数据库 (No legacy code value and constant name)。</dd>
  <dt><a id="exception-OperationError"><code>OperationError</code></a> {{experimental_inline}}</dt>
  <dd>因特定操作失败原因而失败 (No legacy code value and constant name).</dd>
  <dt><a id="exception-NotAllowedError"><code>NotAllowedError</code></a> {{experimental_inline}}</dt>
- <dd>&lt;dd请求不被用户代理或当前上下文所在平台允许，可能因为用户拒绝授权 (no="" and="" code="" constant="" dd="" legacy="" name)。&lt;="" value=""&gt; &lt;/dd请求不被用户代理或当前上下文所在平台允许，可能因为用户拒绝授权&gt;</dd>
+ <dd>&lt;dd 请求不被用户代理或当前上下文所在平台允许，可能因为用户拒绝授权 (no="" and="" code="" constant="" dd="" legacy="" name)。&lt;="" value=""&gt; &lt;/dd 请求不被用户代理或当前上下文所在平台允许，可能因为用户拒绝授权&gt;</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', '#idl-DOMException', 'constructor')}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Adds the constructor for the <code>DOMException</code> class. Adds the <code>NotReadableError</code>, <code>UnknownError</code>, <code>ConstraintError</code>, <code>DataError</code>, <code>TransactionInactiveError</code>, <code>ReadOnlyError</code>, <code>VersionError</code>, <code>OperationError</code>, and <code>NotAllowedError</code> values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#exception-domexception', 'DOMException')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Added <code>SECURITY_ERR</code>, <code>NETWORK_ERR</code>, <code>ABORT_ERR</code>, <code>URL_MISMATCH_ERR</code>, <code>QUOTA_EXCEEDED_ERR</code>, <code>TIMEOUT_ERR</code>, <code>INVALID_NODE_TYPE_ERR</code>, and <code>DATA_CLONE_ERR</code>. The property <code>code</code> has been deprecated for exception values. The <code>EncodingError</code> value added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-17189187', 'DOMException')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added of <code>VALIDATION_ERR</code> and <code>TYPE_MISMATCH_ERR</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-17189187', 'DOMException')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Added of <code>INVALID_STATE_ERR</code>, <code>SYNTAX_ERR</code>, <code>INVALID_MODIFICATION_ERR</code>, <code>NAMESPACE_ERR</code>, and <code>INVALID_ACCESS_ERR</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-17189187', 'DOMException')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

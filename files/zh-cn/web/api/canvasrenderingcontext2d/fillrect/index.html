@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillRect()</code></strong> 是Canvas 2D API 绘制填充矩形的方法。当前渲染上下文中的<code>fillStyle</code> 属性决定了对这个矩形对的填充样式。<br>
+<p><strong><code>CanvasRenderingContext2D.fillRect()</code></strong> 是 Canvas 2D API 绘制填充矩形的方法。当前渲染上下文中的<code>fillStyle</code> 属性决定了对这个矩形对的填充样式。<br>
  <br>
  这个方法是直接在画布上绘制填充，并不修改当前路径，所以在这个方法后面调用 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或者{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}方法并不会对这个方法有什么影响。</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<p>下面绘制的矩形左上顶点在(20, 10)，宽高分别是150和100像素。</p>
+<p>下面绘制的矩形左上顶点在 (20, 10)，宽高分别是 150 和 100 像素。</p>
 
 <pre class="notranslate">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -102,72 +102,11 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CanvasRenderingContext2D.fillRect")}}
 
 <h2 id="参见">参见</h2>
 

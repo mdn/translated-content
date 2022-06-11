@@ -12,7 +12,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 <p>从 WebExtension 发送单条消息到 native application。</p>
 
-<p>它需要两个强制的参数：native application 的名字和要发送给它的JSON对象。浏览器将会加载 native application 然后发送这个消息。</p>
+<p>它需要两个强制的参数：native application 的名字和要发送给它的 JSON 对象。浏览器将会加载 native application 然后发送这个消息。</p>
 
 <p>这是一个异步函数，返回一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。native application 发送的第一条消息将被当作<code>sendNativeMessage()</code> 的回复，并且 promise 将这个消息作为参数.。注意你不能使用 {{WebExtAPIRef("runtime.onMessage")}} 从应用获取回复：你必须使用回调函数来替代。</p>
 
@@ -32,14 +32,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 <dl>
  <dt><code>application</code></dt>
- <dd><code>字符串类型。</code>native application的名字。它必须和 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a>中的‘name’字段一致。</dd>
+ <dd><code>字符串类型。</code>native application 的名字。它必须和 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a>中的‘name’字段一致。</dd>
  <dt><code>message</code></dt>
- <dd><code>对象类型。一个将要发送给</code> native application的JSON对象。</dd>
+ <dd><code>对象类型。一个将要发送给</code> native application 的 JSON 对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。如果native application发送了一个回复，它将会填充回复的JSON对象作为参数。否则它不会填充参数。如果在native application连接期间发生了错误，promise将会被一个错误的消息拒绝。</p>
+<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>对象。如果 native application 发送了一个回复，它将会填充回复的 JSON 对象作为参数。否则它不会填充参数。如果在 native application 连接期间发生了错误，promise 将会被一个错误的消息拒绝。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -47,30 +47,30 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 <h2 id="示例">示例</h2>
 
-<p>这是一个 background script ，当使用者点击浏览器的browser action时，它会发送 "ping" 消息到 "ping_pong" 应用并且把回复记录下来：</p>
+<p>这是一个 background script，当使用者点击浏览器的 browser action 时，它会发送 "ping" 消息到 "ping_pong" 应用并且把回复记录下来：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onResponse</span><span class="punctuation token">(</span>response<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">`Received ${</span>response}<span class="punctuation token">`)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function onResponse(response) {
+  console.log(`Received ${response}`);
+}
 
-</span></code>function onError(error) {
+</code>function onError(error) {
   console.log(`Error: ${error}`);
 }<code class="language-js">
 
-<span class="comment token">/*
+/*
 On a click on the browser action, send the app a message.
-*/</span>
-browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Sending:  ping"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  var sending = browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span><span class="function token">sendNativeMessage</span><span class="punctuation token">(</span><span class="string token">"ping_pong"</span><span class="punctuation token">,</span> <span class="string token">"ping"</span><span class="punctuation token">)</span><span class="punctuation token">;
-  sending.then(onResponse, onError);</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+*/
+browser.browserAction.onClicked.addListener(() =&gt; {
+  console.log("Sending:  ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
+  sending.then(onResponse, onError);
+});</code></pre>
 
 <p>{{WebExtExamples}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 
-<p>这个API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/runtime#method-sendNativeMessage"><code>chrome.runtime</code></a> API。 本文来自 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> 。</p>
+<p>这个 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/runtime#method-sendNativeMessage"><code>chrome.runtime</code></a> API。本文来自 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> 。</p>
 
 <p>微软 Edge 的兼容性数据由 Microsoft Corporation 提供，并且包含在这里基于 Creative Commons Attribution 3.0 United States License。</p>
 </div>

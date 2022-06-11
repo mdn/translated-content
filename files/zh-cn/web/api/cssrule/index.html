@@ -10,7 +10,7 @@ translation_of: Web/API/CSSRule
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p><strong><code>CSSRule</code></strong> 接口表示一条 CSS 规则。有几种不同的规则类型，在下面的{{anch("类型常量")}}部分中有悉数列出。</p>
+<p><strong><code>CSSRule</code></strong> 接口表示一条 CSS 规则。有几种不同的规则类型，在下面的<a href="#类型常量">类型常量</a>部分中有悉数列出。</p>
 
 <p><code>CSSRule</code> 接口指定了所有类型的规则的公共属性，而特定类型的规则的专有属性则在这些规则各自类型的、更专用的接口中被指定。</p>
 
@@ -19,21 +19,21 @@ translation_of: Web/API/CSSRule
 <h2 id="所有_CSSRule_实例共有的属性">所有 CSSRule 实例共有的属性</h2>
 
 <dl>
- <dt id="cssText">{{domxref("CSSRule.cssText")}}</dt>
- <dd>返回规则的文本表示. 例如 <code>"h1,h2 { font-size: 16pt }"</code></dd>
- <dt id="parentRule">{{domxref("CSSRule.parentRule")}} {{readonlyinline}}</dt>
- <dd>返回包含规则，否则返回 <code>null</code>。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则, 则其父规则将是该 {{domxref("CSSMediaRule")}}。</dd>
- <dt id="parentStyleSheet">{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("CSSRule.cssText")}}</dt>
+ <dd>返回规则的文本表示。例如 <code>"h1,h2 { font-size: 16pt }"</code></dd>
+ <dt>{{domxref("CSSRule.parentRule")}} {{readonlyinline}}</dt>
+ <dd>返回包含规则，否则返回 <code>null</code>。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则，则其父规则将是该 {{domxref("CSSMediaRule")}}。</dd>
+ <dt>{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
  <dd>返回包含此规则的样式表的 {{domxref("CSSStyleSheet")}} 对象。</dd>
- <dt id="type">{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
- <dd>规则类型，表示 CSS 规则类型 {{anch("类型常量")}} 中的一种类型。</dd>
+ <dt>{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
+ <dd>规则类型，表示 CSS 规则类型 <a href="#类型常量">类型常量</a> 中的一种类型。</dd>
 </dl>
 
 <h2 id="常量">常量</h2>
 
 <h3 id="类型常量">类型常量</h3>
 
-<p><code>CSSRule接口通过一系列整型常量来约束CSSRule的</code>{{domxref("cssRule/type","type")}}取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：</p>
+<p><code>CSSRule 接口通过一系列整型常量来约束 CSSRule 的</code>{{domxref("cssRule/type","type")}}取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：</p>
 
 <table class="standard-table">
  <tbody>

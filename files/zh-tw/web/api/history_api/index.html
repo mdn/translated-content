@@ -52,25 +52,23 @@ translation_of: Web/API/History_API
 
 <h2 id="加入和修改歷史紀錄">加入和修改歷史紀錄</h2>
 
-<p>{{ gecko_minversion_header("2") }}</p>
-
 <p>HTML5 加入了 <a href="/zh-TW/docs/Web/API/History/pushState"><code>history.pushState()</code></a> 和 <a href="/zh-TW/docs/Web/API/History_API#The_replaceState()_method"><code>history.replaceState()</code></a> 方法，讓你可以加入或修改歷史紀錄。這些方法都可以跟 {{ domxref("window.onpopstate") }} 事件一同應用。</p>
 
 <p>使用 <code>history.pushState()</code>後，會改變 <a href="/zh-TW/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> 時 HTTP 標頭中 referrer 的值。referrer 會是創造 <a href="/zh-TW/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> 物件時的當前視窗文件（<code>this</code>）的 URL。</p>
 
 <h3 id="pushState()_方法範例">pushState() 方法範例</h3>
 
-<p>假設 <span class="nowiki">http://mozilla.org/foo.html</span> 執行了下面的 JavaScript：</p>
+<p>假設 http://mozilla.org/foo.html 執行了下面的 JavaScript：</p>
 
 <pre class="brush: js">var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>這會讓網址列顯示 <span class="nowiki">http://mozilla.org/bar.html</span>，但不會讓瀏覽器去載入 <code>bar.html</code>，甚或去檢查 <code>bar.html</code> 存在與否。</p>
+<p>這會讓網址列顯示 http://mozilla.org/bar.html，但不會讓瀏覽器去載入 <code>bar.html</code>，甚或去檢查 <code>bar.html</code> 存在與否。</p>
 
-<p>假設現在使用者瀏覽到 <span class="nowiki">http://google.com</span>，然後點擊上一頁鈕。這時網址列會顯示 <span class="nowiki">http://mozilla.org/bar.html</span>，頁面會獲得 <code>popstate</code> 的事件（<em>state object</em> 會包含一份 <code>stateObj</code> 的副件）。頁面長得跟 <code>foo.html</code> 很像，但是可能在 <code>popstate</code> 事件執行中被修改。</p>
+<p>假設現在使用者瀏覽到 http://google.com，然後點擊上一頁鈕。這時網址列會顯示 http://mozilla.org/bar.html，頁面會獲得 <code>popstate</code> 的事件（<em>state object</em> 會包含一份 <code>stateObj</code> 的副件）。頁面長得跟 <code>foo.html</code> 很像，但是可能在 <code>popstate</code> 事件執行中被修改。</p>
 
-<p>如果我再點一次上一頁鈕， 網址會改變成為 <span class="nowiki">http://mozilla.org/foo.html</span>，且文件會得到另外一個 <code>popstate</code> 事件，此次會包含一個 null state object。同樣的，回上頁鈕不會改變文件的內容，只是文件可能會在 <code>popstate</code> 事件中被手動更新。</p>
+<p>如果我再點一次上一頁鈕， 網址會改變成為 http://mozilla.org/foo.html，且文件會得到另外一個 <code>popstate</code> 事件，此次會包含一個 null state object。同樣的，回上頁鈕不會改變文件的內容，只是文件可能會在 <code>popstate</code> 事件中被手動更新。</p>
 
 <h3 id="pushState()_方法">pushState() 方法</h3>
 
@@ -117,20 +115,20 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h3 id="replaceState()_方法範例">replaceState() 方法範例</h3>
 
-<p>Suppose <span class="nowiki">http://mozilla.org/foo.html</span> executes the following JavaScript:</p>
+<p>Suppose http://mozilla.org/foo.html executes the following JavaScript:</p>
 
 <pre class="brush: js">var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>The explanation of these two lines above can be found at "Example of pushState() method" section. Then suppose <span class="nowiki">http://mozilla.org/bar.html</span> executes the following JavaScript:</p>
+<p>The explanation of these two lines above can be found at "Example of pushState() method" section. Then suppose http://mozilla.org/bar.html executes the following JavaScript:</p>
 
 <pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html");
 </pre>
 
-<p>This will cause the URL bar to display <span class="nowiki">http://mozilla.org/bar2.html</span>, but won't cause the browser to load <code>bar2.html</code> or even check that <code>bar2.html</code> exists.</p>
+<p>This will cause the URL bar to display http://mozilla.org/bar2.html, but won't cause the browser to load <code>bar2.html</code> or even check that <code>bar2.html</code> exists.</p>
 
-<p>Suppose now that the user now navigates to <span class="nowiki">http://www.microsoft.com</span>, then clicks back. At this point, the URL bar will display <span class="nowiki">http://mozilla.org/bar2.html. If the user now clicks back again, the URL bar will display http://mozilla.org/foo.html, and totaly bypass bar.html.</span></p>
+<p>Suppose now that the user now navigates to http://www.microsoft.com, then clicks back. At this point, the URL bar will display http://mozilla.org/bar2.html. If the user now clicks back again, the URL bar will display http://mozilla.org/foo.html, and totaly bypass bar.html.</p>
 
 <h3 id="popstate_事件">popstate 事件</h3>
 
@@ -153,103 +151,8 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#history", "History")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#history", "History")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>replaceState, pushState</td>
-   <td>5</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>10</td>
-   <td>11.50</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td>history.state</td>
-   <td>18</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>10</td>
-   <td>11.50</td>
-   <td>6.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>replaceState, pushState</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>history.state</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><strong style="font-size: 2.143rem; font-weight: 700; letter-spacing: -1px; line-height: 1;">參見</strong></p>
-
-<ul>
- <li>{{ domxref("window.history") }}</li>
- <li>{{ domxref("window.onpopstate") }}</li>
-</ul>
-
-<p>{{ languages( { "ja": "ja/DOM/Manipulating_the_browser_history"} ) }}</p>
+{{Compat("api.History")}}

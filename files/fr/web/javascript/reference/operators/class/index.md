@@ -17,9 +17,11 @@ Une **expression de classe** est un moyen de définir une classe avec ECMASCript
 
 ## Syntaxe
 
-    var MaClasse = class [nomClasse] [extends] {
-      // corps de la classe
-    };
+```js
+const MaClasse = class [nomClasse] [extends autreNomClasse] {
+  // corps de la classe
+};
+```
 
 ## Description
 
@@ -70,9 +72,9 @@ Toto.name;       // "TotoNommé"
 | Spécification                                                                                | État                         | Commentaires        |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                     |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                     |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                     |
+| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                     |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

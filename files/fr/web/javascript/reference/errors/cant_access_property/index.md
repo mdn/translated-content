@@ -12,16 +12,21 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_property
 
 ## Message
 
-    TypeError: Unable to get property {x} of undefined or null reference (Edge)
-    TypeError: can't access property {x} of {y} (Firefox)
-    TypeError: {y} is undefined, can't access property {x} of it (Firefox)
-    TypeError: {y} is null, can't access property {x} of it (Firefox)
+```
+TypeError: Unable to get property {x} of undefined or null reference (Edge)
+TypeError: can't access property {x} of {y} (Firefox)
+TypeError: {y} is undefined, can't access property {x} of it (Firefox)
+TypeError: {y} is null, can't access property {x} of it (Firefox)
+```
 
-    Exemples
-    TypeError: x is undefined, can't access property "prop" of it
-    TypeError: x is null, can't access property "prop" of it
-    TypeError: can't access property "prop" of undefined
-    TypeError: can't access property "prop" of null
+Exemples&nbsp;:
+
+```
+TypeError: x is undefined, can't access property "prop" of it
+TypeError: x is null, can't access property "prop" of it
+TypeError: can't access property "prop" of undefined
+TypeError: can't access property "prop" of null
+```
 
 ## Types d'erreur
 

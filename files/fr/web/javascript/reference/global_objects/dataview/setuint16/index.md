@@ -19,7 +19,9 @@ La méthode **`setUint16()`** permet d'enregister un entier non-signé sur 16 bi
 
 ## Syntaxe
 
-    dataview.setUint16(positionOctet, valeur [, littleEndian])
+```js
+dataview.setUint16(positionOctet, valeur [, littleEndian])
+```
 
 ### Paramètres
 
@@ -56,7 +58,7 @@ dataview.getUint16(1); // 3
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.setuint16', 'DataView.prototype.setUint16')}}     | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint16', 'DataView.prototype.setUint16')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint16', 'DataView.prototype.setUint16')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

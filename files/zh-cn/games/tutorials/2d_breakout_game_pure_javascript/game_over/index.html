@@ -5,15 +5,13 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
-
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>
 
-<div class="summary">
+<div>
 <p>这是 <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>教程的第五章。您可以在完成本课程后在这里<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html">Gamedev-Canvas-workshop/lesson5.html</a>找到源代码。</p>
 </div>
 
-<p><span class="seoSummary">看球从墙上反弹，并能够移动球盘是很有趣的。但除此之外，游戏什么都不做，也没有任何进展或最终目标。 从游戏的角度来看，我们需要一个game over。 失败的逻辑很简单。 如果你的球拍错过了球，并且球到达屏幕的底部边缘，那么游戏就结束了。</span></p>
+<p>看球从墙上反弹，并能够移动球盘是很有趣的。但除此之外，游戏什么都不做，也没有任何进展或最终目标。从游戏的角度来看，我们需要一个 game over。失败的逻辑很简单。如果你的球拍错过了球，并且球到达屏幕的底部边缘，那么游戏就结束了。</p>
 
 <h2 id="实现游戏失败">实现游戏失败</h2>
 
@@ -27,17 +25,17 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
     dy = -dy;
 }</pre>
 
-<p>我们不需要让球从四面墙上反弹，应该只允许三个 - 左，上，右。 击中底部墙将结束游戏。 我们将编辑第二个if代码块，这是一个if else块，当球碰撞到画布的底部边缘时，它会触发我们的“游戏结束”状态。 现在我们将保持简单，显示一条警告消息，并通过重新加载页面重新开始游戏。</p>
+<p>我们不需要让球从四面墙上反弹，应该只允许三个 - 左，上，右。击中底部墙将结束游戏。我们将编辑第二个 if 代码块，这是一个 if else 块，当球碰撞到画布的底部边缘时，它会触发我们的“游戏结束”状态。现在我们将保持简单，显示一条警告消息，并通过重新加载页面重新开始游戏。</p>
 
 <p>第一步，把您最开始使用的 <code>setInterval()</code> 函数</p>
 
 <pre class="brush: js notranslate">setInterval(draw, 10);</pre>
 
-<p>替换成:</p>
+<p>替换成：</p>
 
 <pre class="brush: js notranslate">var interval = setInterval(draw, 10);</pre>
 
-<p>然后将第二个if块替换为以下内容：</p>
+<p>然后将第二个 if 块替换为以下内容：</p>
 
 <pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
     dy = -dy;
@@ -48,7 +46,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <h2 id="让球拍接住球">让球拍接住球</h2>
 
-<p>本课中最后要做的是在球和球拍之间创建一些碰撞检测，以便它可以反弹并返回到游戏区域。 最简单的方法是检查球的中心是否在球拍的左边和右边之间。 再次更新您修改的代码的最后一位（第二个if块），如下所示：</p>
+<p>本课中最后要做的是在球和球拍之间创建一些碰撞检测，以便它可以反弹并返回到游戏区域。最简单的方法是检查球的中心是否在球拍的左边和右边之间。再次更新您修改的代码的最后一位（第二个 if 块），如下所示：</p>
 
 <pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
     dy = -dy;
@@ -62,7 +60,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
     }
 }</pre>
 
-<p>如果球击中画布的底部边缘，我们需要检查它是否碰到球拍。 如果是的话，就像你所期望的那样反弹。 如果没有，那么游戏就像以前一样结束。</p>
+<p>如果球击中画布的底部边缘，我们需要检查它是否碰到球拍。如果是的话，就像你所期望的那样反弹。如果没有，那么游戏就像以前一样结束。</p>
 
 <h2 id="代码对比">代码对比</h2>
 
@@ -76,6 +74,6 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <h2 id="下一步">下一步</h2>
 
-<p>到目前为止，我们的表现相当不错，游戏变得更有趣，并且现在你可以输了！ 但它仍然缺少一些东西。 让我们继续前进到第六章 - <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field">建造砖块</a> - 并创造一些砖块来消灭它们。</p>
+<p>到目前为止，我们的表现相当不错，游戏变得更有趣，并且现在你可以输了！但它仍然缺少一些东西。让我们继续前进到第六章 - <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field">建造砖块</a> - 并创造一些砖块来消灭它们。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>

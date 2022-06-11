@@ -5,7 +5,7 @@ translation_of: Web/HTML/Global_attributes
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<div class="summary">
+<div>
 <p><strong>全域屬性</strong>（Global attributes）是所有 HTML 元素共同的屬性，可以在所有的元素中使用。但在部分的元素上，屬性可能是沒有效果的。</p>
 </div>
 
@@ -22,22 +22,22 @@ translation_of: Web/HTML/Global_attributes
 <h2 id="說明">說明</h2>
 
 <dl>
- <dt id="attr-accesskey"><code><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code></dt>
  <dd>Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.</dd>
- <dt id="attr-class"><code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code></dt>
  <dd>Is a space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the <a href="/en-US/docs/Web/CSS/Class_selectors">class selectors</a> or functions like the method {{domxref("Document.getElementsByClassName()")}}.</dd>
- <dt id="attr-contenteditable"><code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code></dt>
  <dd>Is an enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
  <ul>
   <li><code>true</code> or the <em>empty string</em>, which indicates that the element must be editable;</li>
   <li><code>false</code>, which indicates that the element must not be editable.</li>
  </ul>
  </dd>
- <dt id="attr-contextmenu"><code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code></dt>
  <dd>Is the <code><a href="#attr-id"><strong>id</strong></a></code> of an {{HTMLElement("menu")}} to use as the contextual menu for this element.</dd>
- <dt id="attr-dataset"><code><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></code></dt>
  <dd>Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML">HTML</a> and its <a href="/en-US/docs/Glossary/DOM">DOM</a> representation that may be used by scripts. All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.</dd>
- <dt id="attr-dir"><code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code></dt>
  <dd>Is an enumerated attribute indicating the directionality of the element's text. It can have the following values:
  <ul>
   <li><code>ltr</code>, which means <em>left to right </em>and is to be used for languages that are written from the left to the right (like English);</li>
@@ -45,14 +45,14 @@ translation_of: Web/HTML/Global_attributes
   <li><code>auto</code>, which let the user agent decides. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then apply that directionality to the whole element.</li>
  </ul>
  </dd>
- <dt id="attr-draggable"><code><a href="/en-US/docs/Web/HTML/Global_attributes/draggable">draggable</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/draggable">draggable</a></code> {{experimental_inline}}</dt>
  <dd>Is an enumerated attribute indicating whether the element can be dragged, using the <a href="/en-us/docs/DragDrop/Drag_and_Drop">Drag and Drop API</a>. It can have the following values:
  <ul>
   <li><code>true</code>, which indicates that the element may be dragged</li>
   <li><code>false</code>, which indicates that the element may not be dragged.</li>
  </ul>
  </dd>
- <dt id="attr-dropzone"><code><a href="/en-US/docs/Web/HTML/Global_attributes/dropzone">dropzone</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/dropzone">dropzone</a></code> {{experimental_inline}}</dt>
  <dd>Is an enumerated attribute indicating what types of content can be dropped on an element, using the <a href="/en-US/docs/DragDrop/Drag_and_Drop">Drag and Drop API</a>. It can have the following values:
  <ul>
   <li><code>copy</code>, which indicates that dropping will create a copy of the element that was dragged</li>
@@ -60,9 +60,9 @@ translation_of: Web/HTML/Global_attributes
   <li><code>link</code>, will create a link to the dragged data.</li>
  </ul>
  </dd>
- <dt id="attr-hidden"><code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code></dt>
  <dd>Is a Boolean attribute indicates that the element is not yet, or is no longer, <em>relevant</em>. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.</dd>
- <dt id="attr-id"><code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code></dt>
  <dd>Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).</dd>
 </dl>
 
@@ -71,36 +71,36 @@ translation_of: Web/HTML/Global_attributes
 </div>
 
 <dl>
- <dt id="attr-itemid"><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemid">itemid</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemid">itemid</a></code> {{experimental_inline}}</dt>
  <dd>The unique, global identifier of an item.</dd>
- <dt id="attr-itemprop"><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> {{experimental_inline}}</dt>
  <dd>Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.</dd>
- <dt id="attr-itemref"><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemref">itemref</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemref">itemref</a></code> {{experimental_inline}}</dt>
  <dd>Properties that are not descendants of an element with the <code>itemscope</code> attribute can be associated with the item using an <strong>itemref</strong>. Itemref provides a list of element ids (not <code>itemid</code>s) with additional properties elsewhere in the document.</dd>
- <dt id="attr-itemscope"><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope</a> </code>{{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope</a> </code>{{experimental_inline}}</dt>
  <dd>Itemscope (usually) works along with <a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype </a>to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as <a class="external external-icon" href="https://schema.org/">schema.org</a>) that describes the item and its properties context.</dd>
- <dt id="attr-itemtype"><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype</a></code> {{experimental_inline}}</dt>
  <dd>Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. <a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">Itemscope</a> is used to set the scope of  where in the data structure the vocabulary set by itemtype will be active.</dd>
- <dt id="attr-lang"><code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code></dt>
  <dd>Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defines in the <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a> IETF document. <a href="#attr-xml:lang"><strong>xml:lang</strong></a> has priority over it.</dd>
 </dl>
 
 <dl>
- <dt id="attr-slot"><code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> {{experimental_inline}}</dt>
  <dd>Assigns a slot in a <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> shadow tree to an element: An element with a <code>slot</code> attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{htmlattrxref("name", "slot")}} attribute's value matches that <code>slot</code> attribute's value.</dd>
 </dl>
 
 <dl>
- <dt id="attr-spellcheck"><code><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code> {{experimental_inline}}</dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code> {{experimental_inline}}</dt>
  <dd>Is an enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
  <ul>
   <li><code>true</code>, which indicates that the element should be, if possible, checked for spelling errors;</li>
   <li><code>false</code>, which indicates that the element should not be checked for spelling errors.</li>
  </ul>
  </dd>
- <dt id="attr-style"><code><a href="/en-US/docs/Web/HTML/Global_attributes/style">style</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/style">style</a></code></dt>
  <dd>Contains <a href="/en-US/docs/Web/CSS">CSS</a> styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{HTMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.</dd>
- <dt id="attr-tabindex"><code><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code></dt>
  <dd>Is an integer attribute indicating if the element can take input focus (is <em>focusable</em>), if it should participate to sequential keyboard navigation, and if so, at what position. It can takes several values:
  <ul>
   <li>a <em>negative value</em> means that the element should be focusable, but should not be reachable via sequential keyboard navigation;</li>
@@ -108,9 +108,9 @@ translation_of: Web/HTML/Global_attributes
   <li>a <em>positive value</em> which means should be focusable and reachable via sequential keyboard navigation; its relative order is defined by the value of the attribute: the sequential follow the increasing number of the <a href="#attr-tabindex"><strong>tabindex</strong></a>. If several elements share the same tabindex, their relative order follows their relative position in the document).</li>
  </ul>
  </dd>
- <dt id="attr-title"><code><a href="/en-US/docs/Web/HTML/Global_attributes/title">title</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/title">title</a></code></dt>
  <dd>Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.</dd>
- <dt id="attr-translate"><code><a href="/en-US/docs/Web/HTML/Global_attributes/translate">translate</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/HTML/Global_attributes/translate">translate</a></code></dt>
  <dd>Is an enumerated attribute that is used to specify whether an element's attribute values and the values of it<code>s</code> {{domxref("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
  <ul>
   <li>empty string and <code>"yes"</code>, which indicates that the element will be translated.</li>
@@ -121,351 +121,11 @@ translation_of: Web/HTML/Global_attributes
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>From latest snapshot, {{SpecName('HTML5.1')}}, <code>itemid</code>, <code>itemprop</code>, <code>itemref</code>, <code>itemscope</code>, and <code>itemtype</code> have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName('HTML5 W3C')}}, <code>spellcheck</code>, <code>draggable</code>, and <code>dropzone</code> have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, the concept of global attributes is introduced and the <code>dir</code>, <code>lang</code>, <code>style</code>, <code>id</code>, <code>class</code>, <code>tabindex</code>, <code>accesskey</code>, and <code>title</code> are now true global attributes.<br>
-    <code>xml:lang</code> which was initially part of XHTML, is now also part of HTML.<br>
-    <code>hidden</code>, <code>data-*</code>, <code>contextmenu</code>, <code>contenteditable</code>, and <code>translate</code> have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>There are no global attributes defined. Several attributes that will become global attributes in subsequent specifications are defined on a subset of elements.<br>
-    <code>class</code> and <code>style</code> are supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.<br>
-    <code>dir</code> is supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.<br>
-    <code>id</code> is supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.<br>
-    <code>lang</code> is supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.<br>
-    <code>tabindex</code> is only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.<br>
-    <code>accesskey</code> is only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}} and {{HTMLElement("textarea")}}.<br>
-    <code>title</code> is supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td><code>accesskey</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>class</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contenteditable</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contextmenu</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(9)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>data-*</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("6")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>dir</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>draggable</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.8.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>dropzone</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>hidden</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>id</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>itemid</code>, <code>itemprop</code>, <code>itemref</code>, <code>itemscope</code>, <code>itemtype</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>lang</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>spellcheck</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.8.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>style</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>tabindex</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>title</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td><code>accesskey</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>class</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contenteditable</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contextmenu</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>data-*</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("6")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>dir</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>draggable</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.8.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>dropzone</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>hidden</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>id</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>itemid</code>, <code>itemprop</code>, <code>itemref</code>, <code>itemscope</code>, <code>itemtype</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>lang</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>spellcheck</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.8.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>style</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>tabindex</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>title</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes")}}
 
 <h2 id="參見">參見</h2>
 

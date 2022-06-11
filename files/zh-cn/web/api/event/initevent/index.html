@@ -5,14 +5,14 @@ translation_of: Web/API/Event/initEvent
 ---
 <div>{{ ApiRef("DOM") }}{{deprecated_header}}</div>
 
-<p><strong><code>Event.initEvent()</code></strong> 方法可以用来初始化由{{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例.</p>
+<p><strong><code>Event.initEvent()</code></strong> 方法可以用来初始化由{{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。</p>
 
-<p>用这种方式初始化事件必须是由 {{ domxref("Document.createEvent()") }} 方法创建的实例. 本方法必须在事件被触发之前调用（用{{ domxref("EventTarget.dispatchEvent()") }}调用）.事件 一旦被调用, 便不再做其他任何事.</p>
+<p>用这种方式初始化事件必须是由 {{ domxref("Document.createEvent()") }} 方法创建的实例。本方法必须在事件被触发之前调用（用{{ domxref("EventTarget.dispatchEvent()") }}调用）.事件 一旦被调用，便不再做其他任何事。</p>
 
 <div class="note">
-<p><strong>不建议再使用此方法（方法已经过时deprecated）</strong></p>
+<p><strong>不建议再使用此方法（方法已经过时 deprecated）</strong></p>
 
-<p>可以使用特定的event构造器函数, 比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> .</p>
+<p>可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> .</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
@@ -21,22 +21,22 @@ translation_of: Web/API/Event/initEvent
 
 <dl>
  <dt><em><code>type</code></em></dt>
- <dd>一个 {{domxref("DOMString")}} 类型的字段，定义了事件的类型.</dd>
+ <dd>一个 {{domxref("DOMString")}} 类型的字段，定义了事件的类型。</dd>
  <dt><em><code>bubbles</code></em></dt>
- <dd>一个 {{jsxref("Boolean")}} 值，决定是否事件是否应该向上冒泡. 一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值.</dd>
+ <dd>一个 {{jsxref("Boolean")}} 值，决定是否事件是否应该向上冒泡。一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值。</dd>
  <dt><em><code>cancelable</code></em></dt>
- <dd>一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消. 一旦设置了这个值, 只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值.</dd>
+ <dd>一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。</dd>
 </dl>
 
 <h2 id="Example" name="Example">范例</h2>
 
-<pre><code>// 创建事件.
+<pre><code>// 创建事件。
 var event = document.createEvent('Event');
 </code>
 // 初始化一个点击事件，可以冒泡，无法被取消<code>
 event.initEvent('click', true, false);
 
-// 设置事件监听.
+// 设置事件监听。
 elem.addEventListener('click', function (e) {
   // e.target 就是监听事件目标元素
 }, false);
@@ -69,59 +69,7 @@ elem.dispatchEvent(event);</code>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown()}} [1]</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }} [1]</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing.</p>
+{{Compat("api.Event.initEvent")}}
 
 <h2 id="另见">另见</h2>
 

@@ -5,11 +5,11 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
 ## Introduction
 
-Cet exemple montre comment cérer une serveur d'API WebSocket API utilisant Java d'Oracle.
+Cet exemple montre comment créer un serveur d'API WebSocket API utilisant Java d'Oracle.
 
 Bien que d'autres languages exécutés côté serveur peuvent être utilisés pour créer un serveur de WebSocket, cet exemple utilise Java d'Oracle pour simplifier le code en exemple.
 
-Ce seveur respecte la [RFC 6455](http://tools.ietf.org/html/rfc6455), dont il prend uniquement en charge les connexions depuis Chrome 16, Firefox 11, IE 10 et au delà.
+Ce serveur respecte la [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), dont il prend uniquement en charge les connexions depuis Chrome 16, Firefox 11, IE 10 et au-delà.
 
 ## Premiers pas
 
@@ -20,7 +20,7 @@ WebSockets communique via une connexion [TCP (Transmission Control Protocol)](ht
 Constructeur :
 
 ```java
-ServerSocket(int port)
+ServerSocket(int port)
 ```
 
 Lors de l'instanciation de la classe ServerSocket, celle-ci est liée au numéro de port renseigné par le paramètre _port_.
@@ -58,7 +58,7 @@ Méthodes :
 Méthode :
 
 ```java
-write(byte[] b, int off, int len)
+write(byte[] b, int off, int len)
 ```
 
 En débutant à partir de la position _off_, écrit _`len`_ octets du tableau d'octets fourni.
@@ -68,7 +68,7 @@ En débutant à partir de la position _off_, écrit _`len`_ octets du tableau d'
 Méthodes :
 
 ```java
-read(byte[] b, int off, int len)
+read(byte[] b, int off, int len)
 ```
 
 Reads up to _len_ bytes of data from the input stream into an array of bytes.

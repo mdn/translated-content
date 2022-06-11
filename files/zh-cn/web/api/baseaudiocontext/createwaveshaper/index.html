@@ -6,7 +6,7 @@ original_slug: Web/API/AudioContext/createWaveShaper
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>{{ domxref("AudioContext") }} 接口的createWaveShaper()方法创建了 表示非线性失真的{{ domxref("WaveShaperNode") }}。该节点通常被用来给音频添加失真效果</p>
+<p>{{ domxref("AudioContext") }} 接口的 createWaveShaper() 方法创建了 表示非线性失真的{{ domxref("WaveShaperNode") }}。该节点通常被用来给音频添加失真效果</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,7 +21,7 @@ var distortion = audioCtx.createWaveShaper();</pre>
 
 <p>The following example shows basic usage of an AudioContext to create a wave shaper node. For applied examples/information, check out our <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a><a href="http://mdn.github.io/voice-change-o-matic/"> demo</a> (<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
 
-<p>下面的例子展示了AudioContext创建一个波形整形器节点的基本用法。有关应用示例/信息，请查看我们的<a href="http://mdn.github.io/voice-change-o-matic/">oice-change-O-matic</a><a href="http://mdn.github.io/voice-change-o-matic/"> demo</a>演示（有关代码，请参阅<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">app.js</a>）。</p>
+<p>下面的例子展示了 AudioContext 创建一个波形整形器节点的基本用法。有关应用示例/信息，请查看我们的<a href="http://mdn.github.io/voice-change-o-matic/">oice-change-O-matic</a><a href="http://mdn.github.io/voice-change-o-matic/"> demo</a>演示（有关代码，请参阅<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">app.js</a>）。</p>
 
 <div class="note">
 <p><strong>注</strong>：实现失真曲线并不是简单的事情，你可能需要到处找资料来找到这样的算法。我们在<a href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack Overflow</a>上找到了以下的失真曲线代码</p>
@@ -53,79 +53,11 @@ distortion.oversample = '4x';</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createWaveShaper-WaveShaperNode', 'createWaveShaper()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.BaseAudioContext.createWaveShaper")}}
 
 <h2 id="See_also">See also</h2>
 

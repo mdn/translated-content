@@ -17,7 +17,7 @@ Aucun.
 
 ### Valeur de retour
 
-Une {{jsxref('Promise')}} qui se résoud en un objet qui se conforme au dictionnaire {{domxref('StorageEstimate')}}. Ce dictionnaire contient des estimations de la quantité d’espace disponible à l’origine ou à l’application (dans {{domxref("StorageEstimate.quota")}}), ainsi que la quantité d’espace actuellement utilisé (dans {{domxref("StorageEstimate.usage")}}). Ces nombres ne sont pas exacts ; entre la compression, la dé-duplication, et l’obfuscation pour des raisons de sécurité, ils ne seront pas précis.
+Une {{jsxref('Promise')}} qui se résoud en un objet qui se conforme au dictionnaire {{domxref('StorageEstimate')}}. Ce dictionnaire contient des estimations de la quantité d’espace disponible à l’origine ou à l’application (dans {{domxref("StorageEstimate.quota")}}), ainsi que la quantité d’espace actuellement utilisé (dans {{domxref("StorageEstimate.usage")}}). Ces nombres ne sont pas exacts&nbsp;; entre la compression, la dé-duplication, et l’obfuscation pour des raisons de sécurité, ils ne seront pas précis.
 
 Il est possible de constater que le `quota` varie d’application en application, basé sur des facteurs tels que la fréquence à laquelle l’utilisateur ou l’utilisatrice la visite, des données de popularité de sites bien connus, et ainsi de suite.
 

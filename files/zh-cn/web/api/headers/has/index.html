@@ -5,9 +5,9 @@ translation_of: Web/API/Headers/has
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>{{domxref("Headers")}} 接口的 <strong><code>has()</code></strong>方法返回一个布尔值来声明一个 <code>Headers</code>对象 是否包含特定的头信息.</p>
+<p>{{domxref("Headers")}} 接口的 <strong><code>has()</code></strong>方法返回一个布尔值来声明一个 <code>Headers</code>对象 是否包含特定的头信息。</p>
 
-<p>考虑到安全因素, 一些头信息只能被user agent来管理. 这些头信息包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p>考虑到安全因素，一些头信息只能被 user agent 来管理。这些头信息包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Headers/has
 
 <dl>
  <dt><em>name</em></dt>
- <dd>你要测试的HTTP头字段的名称。如果给出的名称不在HTTP头中，将爬出异常{{jsxref("TypeError")}}。</dd>
+ <dd>你要测试的 HTTP 头字段的名称。如果给出的名称不在 HTTP 头中，将爬出异常{{jsxref("TypeError")}}。</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -26,11 +26,11 @@ translation_of: Web/API/Headers/has
 
 <h2 id="Example">Example</h2>
 
-<p>创建一个空的Headers对象是简单的:</p>
+<p>创建一个空的 Headers 对象是简单的：</p>
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>你可以使用{{domxref("Headers.append")}}来向myHeaders添加一个头信息, 然后使用 <code>has()方法来测试是否添加成功</code>:</p>
+<p>你可以使用 {{domxref("Headers.append")}} 来向 myHeaders 添加一个头信息，然后使用 <code>has()</code> 方法来测试是否添加成功：</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.has('Content-Type'); // Returns true
@@ -56,67 +56,7 @@ myHeaders.has('Accept-Encoding'); // Returns false
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref<br>
-     </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(39)}}<br>
-    34 behind pref</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers.has")}}
 
 <h2 id="See_also">See also</h2>
 

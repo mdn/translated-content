@@ -9,7 +9,7 @@ translation_of: Web/API/Location
 ---
 <p>{{APIRef("URLUtils")}}</p>
 
-<p><strong><code>Location </code></strong>接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。</p>
+<p><strong><code>Location </code></strong>接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的 Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -17,25 +17,25 @@ translation_of: Web/API/Location
 
 <dl>
  <dt>{{domxref("Location.href")}}</dt>
- <dd>包含整个URL的一个{{domxref("DOMString")}}</dd>
+ <dd>包含整个 URL 的一个{{domxref("DOMString")}}</dd>
  <dt>{{domxref("Location.protocol")}}</dt>
- <dd>包含URL对应协议的一个{{domxref("DOMString")}}，最后有一个":"。</dd>
+ <dd>包含 URL 对应协议的一个{{domxref("DOMString")}}，最后有一个":"。</dd>
  <dt>{{domxref("Location.host")}}</dt>
- <dd>包含了域名的一个{{domxref("DOMString")}}，可能在该串最后带有一个":"并跟上URL的端口号。</dd>
+ <dd>包含了域名的一个{{domxref("DOMString")}}，可能在该串最后带有一个":"并跟上 URL 的端口号。</dd>
  <dt>{{domxref("Location.hostname")}}</dt>
- <dd>包含URL域名的一个{{domxref("DOMString")}}。</dd>
+ <dd>包含 URL 域名的一个{{domxref("DOMString")}}。</dd>
  <dt>{{domxref("Location.port")}}</dt>
  <dd>包含端口号的一个{{domxref("DOMString")}}。</dd>
  <dt>{{domxref("Location.pathname")}}</dt>
- <dd>包含URL中路径部分的一个{{domxref("DOMString")}}，开头有一个“<code>/"。</code></dd>
+ <dd>包含 URL 中路径部分的一个{{domxref("DOMString")}}，开头有一个“<code>/"。</code></dd>
  <dt>{{domxref("Location.search")}}</dt>
- <dd> 包含URL参数的一个{{domxref("DOMString")}}，开头有一个<code>“?”</code>。</dd>
+ <dd> 包含 URL 参数的一个{{domxref("DOMString")}}，开头有一个<code>“?”</code>。</dd>
  <dt>{{domxref("Location.hash")}}</dt>
  <dd>包含块标识符的{{domxref("DOMString")}}，开头有一个<code>“#”。</code></dd>
  <dt>{{domxref("Location.username")}}</dt>
- <dd>包含URL中域名前的用户名的一个{{domxref("DOMString")}}。</dd>
+ <dd>包含 URL 中域名前的用户名的一个{{domxref("DOMString")}}。</dd>
  <dt>{{domxref("Location.password")}}</dt>
- <dd>包含URL域名前的密码的一个 {{domxref("DOMString")}}。</dd>
+ <dd>包含 URL 域名前的密码的一个 {{domxref("DOMString")}}。</dd>
  <dt>{{domxref("Location.origin")}} {{readOnlyInline}}</dt>
  <dd>包含页面来源的域名的标准形式{{domxref("DOMString")}}。</dd>
 </dl>
@@ -46,13 +46,13 @@ translation_of: Web/API/Location
 
 <dl>
  <dt>{{domxref("Location.assign()")}}</dt>
- <dd>加载给定URL的内容资源到这个Location对象所关联的对象上。</dd>
+ <dd>加载给定 URL 的内容资源到这个 Location 对象所关联的对象上。</dd>
  <dt>{{domxref("Location.reload()")}}</dt>
- <dd>重新加载来自当前 URL的资源。他有一个特殊的可选参数，类型为 {{domxref("Boolean")}}，该参数为true时会导致该方法引发的刷新一定会从服务器上加载数据。如果是 <code>false</code>或没有制定这个参数，浏览器可能从缓存当中加载页面。</dd>
+ <dd>重新加载来自当前 URL 的资源。他有一个特殊的可选参数，类型为 {{domxref("Boolean")}}，该参数为 true 时会导致该方法引发的刷新一定会从服务器上加载数据。如果是 <code>false</code>或没有制定这个参数，浏览器可能从缓存当中加载页面。</dd>
  <dt>{{domxref("Location.replace()")}}</dt>
- <dd>用给定的URL替换掉当前的资源。与 <code>assign()</code> 方法不同的是用 <code>replace()</code>替换的新页面不会被保存在会话的历史 {{domxref("History")}}中，这意味着用户将不能用后退按钮转到该页面。</dd>
+ <dd>用给定的 URL 替换掉当前的资源。与 <code>assign()</code> 方法不同的是用 <code>replace()</code>替换的新页面不会被保存在会话的历史 {{domxref("History")}}中，这意味着用户将不能用后退按钮转到该页面。</dd>
  <dt>{{domxref("Location.toString()")}}</dt>
- <dd>返回一个{{domxref("DOMString")}}，包含整个URL。 它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改Location的值的。</dd>
+ <dd>返回一个{{domxref("DOMString")}}，包含整个 URL。 它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -96,117 +96,7 @@ console.log(url.origin);    // https://developer.mozilla.org
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>origin</code> on <code>Windows.location</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("21")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>origin</code> on all <code>location</code> objects (but on Workers, that use {{domxref("WorkerLocation")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("26")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>username</code> and <code>password</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("26")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>searchParams</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>origin</code> on <code>Windows.location</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("21")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>origin</code> on all <code>location</code> objects (but on Workers, that use {{domxref("WorkerLocation")}})</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("26")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>username</code> and <code>password</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("26")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>searchParams</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Location")}}
 
 <h2 id="另见">另见</h2>
 

@@ -11,15 +11,17 @@ original_slug: Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_argume
 ---
 {{jsSidebar("Functions")}}
 
-Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
+Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
 
 {{EmbedInteractiveExample("pages/js/functions-default.html")}}
 
 ## Syntaxe
 
-    function [nom]([param1[ = valeurParDéfaut1 ][, ..., paramN[ = valeurParDéfautN ]]]) {
-       instructions
-    }
+```js
+function [nom]([param1[ = valeurParDéfaut1 ][, ..., paramN[ = valeurParDéfautN ]]]) {
+   instructions
+}
+```
 
 ## Description
 

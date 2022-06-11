@@ -44,7 +44,7 @@ Avant de rentrer dans le détail des propriétés, définissons certains concept
 
 Afin de connaître l'espace disponible pour l'organisation des éléments flexibles, le navigateur doit connaître la taille de l'élément. Comment faire lorsque les éléments ne sont pas dimensionnés avec une largeur ou une hauteur exprimée dans une unité de longueur absolue ?
 
-CSS permet d'utiliser les valeurs {{cssxref('width','min-content','#min-content')}} et  {{cssxref('width','max-content','#max-content')}} — ces mots-clés sont définis [dans la spécification CSS pour le dimensionnement intrinsèque et extrinsèque](https://drafts.csswg.org/css-sizing-3/#width-height-keywords) et ces valeurs peuvent être utilisées comme [unité de longueurs](/fr/docs/Web/CSS/length).
+CSS permet d'utiliser les valeurs {{cssxref('width','min-content','#min-content')}} et  {{cssxref('width','max-content','#max-content')}} — ces mots-clés sont définis [dans la spécification CSS pour le dimensionnement intrinsèque et extrinsèque](https://drafts.csswg.org/css-sizing-3/#width-height-keywords) et ces valeurs peuvent être utilisées comme [unité de longueurs](/fr/docs/Web/CSS/length).
 
 Dans l'exemple qui suit, on a deux paragraphes qui contiennent chacun une chaîne de caractères. La largeur du premier paragraphe est `min-content`. Si le navigateur utilisé prend en charge ce mot-clé, on peut voir que le texte passe à la ligne dès que c'est possible, sans dépasser de la boîte. Autrement dit, la longueur `min-content` correspond à la taille du plus grand mot du paragraphe.
 
@@ -74,7 +74,7 @@ Les exemples étudiés par la suite utilisent la propriété {{cssxref("flex-dir
 
 ## La propriété `flex-basis`
 
-La propriété {{cssxref("flex-basis")}} définit la taille initiale de l'élément flexible avant la répartition de l'espace. La valeur initiale de cette propriété est `auto`. Si  `flex-basis` vaut `auto`, le navigateur vérifie si la taille de l'élément est définie de façon absolue et utilise cette valeur pour `flex-basis` (par exemple si on indique dans la feuille de style que l'élément mesure 200 pixels, c'est cette mesure qui sera utilisée comme valeur pour `flex-basis` pour cet élément).
+La propriété {{cssxref("flex-basis")}} définit la taille initiale de l'élément flexible avant la répartition de l'espace. La valeur initiale de cette propriété est `auto`. Si  `flex-basis` vaut `auto`, le navigateur vérifie si la taille de l'élément est définie de façon absolue et utilise cette valeur pour `flex-basis` (par exemple si on indique dans la feuille de style que l'élément mesure 200 pixels, c'est cette mesure qui sera utilisée comme valeur pour `flex-basis` pour cet élément).
 
 Si la taille initiale de l'élément n'est pas définie de façon absolue, `auto` correspondra à la taille déterminée automatique. C'est là qu'on comprend mieux l'utilité de `min-` et `max-content`, car la boîte flexible utilisera `max-content` comme valeur pour `flex-basis`. Dans l'exemple suivant, nous verrons comment en tirer parti.
 
@@ -152,7 +152,7 @@ Le premier, expliqué de façon subtile dans la spécification est la différenc
 
 > “Note : Le coefficient `flex-shrink` est multiplié par la taille de base (`flex-basis`) lors de la distribution de l'espace négatif. Ainsi, l'espace négatif est distribué proportionnellement au rétrécissement possible de l'élément. Autrement dit, un petit élément ne sera pas réduit à une taille nulle avant qu'un plus grand élément n'ait été réduit de façon notable.”
 
-Le second argument s'explique par l'impossibilité de réduire les petits éléments à une taille nulle lors de la suppression de l'espace libre négatif. Les éléments seront au maximum rétrécis jusqu'à obtenir leur taille  `min-content` — c'est-à-dire la taille qu'ils obtiennent s'ils utilisent tous les emplacements de rupture de ligne possibles.
+Le second argument s'explique par l'impossibilité de réduire les petits éléments à une taille nulle lors de la suppression de l'espace libre négatif. Les éléments seront au maximum rétrécis jusqu'à obtenir leur taille  `min-content` — c'est-à-dire la taille qu'ils obtiennent s'ils utilisent tous les emplacements de rupture de ligne possibles.
 
 On peut observer ce seuil avec `min-content` dans l'exemple qui suit où `flex-basis` est résolu avec la taille du contenu. Si on change la largeur du conteneur flexible (en l'augmentant à 700 pixels par exemple) puis en réduisant la largeur de l'élément flexible, on peut voir que les deux premiers objets passent à la ligne. Toutefois, ils ne deviennent pas plus petits que `min-content`. Lorsque la boîte se réduit, l'espace est simplement retiré du troisième élément.
 
@@ -174,10 +174,10 @@ Comprendre le dimensionnement des objets flexibles revient avant tout à compren
 
 ### Quelle est la taille de base de l'objet ?
 
-1.  Si  `flex-basis` vaut `auto` et que l'objet possède une dimension explicitement définie, c'est cette dimension qui sera utilisée.
-2.  Si  `flex-basis` vaut `auto` ou `content` (pour les navigateurs qui prennent en charge cette valeur), c'est la taille du contenu qui déterminera la taille de base de l'élément
+1.  Si  `flex-basis` vaut `auto` et que l'objet possède une dimension explicitement définie, c'est cette dimension qui sera utilisée.
+2.  Si  `flex-basis` vaut `auto` ou `content` (pour les navigateurs qui prennent en charge cette valeur), c'est la taille du contenu qui déterminera la taille de base de l'élément
 3.  Si `flex-basis` est exprimée avec une valeur de longueur non nulle, c'est cette valeur qui sera la taille de base de l'élément.
-4.  Si  `flex-basis` vaut `0`, la taille de l'élément n'est pas pris en compte lors de la répartition de l'espace.
+4.  Si  `flex-basis` vaut `0`, la taille de l'élément n'est pas pris en compte lors de la répartition de l'espace.
 
 ### De l'espace est-il disponible ?
 

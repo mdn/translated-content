@@ -90,7 +90,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
       <td>
         <ul>
           <li>
-            Packager votre extension avec la <a
+            Packager votre extension avec la <a
               href="/fr/Add-ons/WebExtensions/Getting_started_with_web-ext#Packaging_your_extension"
             >
               brique web-ext</a
@@ -141,4 +141,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
 
 \* Ou distribuez votre extension pour le [chargement latéral](/fr/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons), les [applications de bureaux](/fr/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_for_desktop_apps), ou [dans une enteprise](/fr/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise).
 
-**Vous avez une extension que vous souhaitez porter à Firefox?**  Nous fournissons des conseils, des directives et des outils pour vous aider à rendre le portage simple. Pour commencer, visitez [Portage d'une extension Google Chrome](/fr/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension).
+**Vous avez une extension que vous souhaitez porter à Firefox?**  Nous fournissons des conseils, des directives et des outils pour vous aider à rendre le portage simple. Pour commencer, visitez [Portage d'une extension Google Chrome](/fr/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension).

@@ -1,0 +1,123 @@
+---
+title: scale()
+slug: Web/CSS/transform-function/scale
+tags:
+  - CSS Scale
+  - scale()
+  - scaleX()
+  - scaleY()
+translation_of: Web/CSS/transform-function/scale()
+original_slug: Web/CSS/transform-function/scale()
+---
+<div>{{CSSRef}}</div>
+
+<p>La función CSS <code>scale()</code> define una transformación que modifica el tamaño de un elemento en el plano 2D. Debido a que la cantidad de escalado está definida por un vector, puede cambiar el tamaño de la dimensiones horizontal y vertical a diferentes escalas. Su resultado es un dato tipo {cssxref("&lt;transform-function&gt;")}} .</p>
+
+<p><img src="https://mdn.mozillademos.org/files/12115/scale.png" style="height: 325px; width: 392px;"></p>
+
+<p>Esta transformación de escalado se caracteriza por un vector bidimensional. Sus coordenadas definen cuanto escalamiento se realiza en cada dirección. Sí ambas coordenadas son iguales, la escala es uniforme (isotrópica) y la relación de aspecto del elemento se conserva (esta es una transformación homotética).</p>
+
+<p>Cuando un valor de coordenadas está fuera del rango [-1, 1], el elemento crece a lo largo de esa dimensión; cuando está dentro, se encoge. Si es negativo, el resultado es un reflejo de punto en esa dimensión. Un valor de 1 no tiene ningún efecto.</p>
+
+<div class="note">La función scale() solo se escala en 2d. Para escalar en 3D se utiliza la función scale3d() en su lugar.</div>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<p>La función scale () se especifica con uno o dos valores, que representan la cantidad de escala que se aplicará en cada dirección.</p>
+
+<pre class="syntaxbox">scale(<em>sx</em>) scale(<em>sx</em>, <em>sy</em>)
+</pre>
+
+<h2 id="Valores">Valores</h2>
+
+<dl>
+ <dt><em>sx</em></dt>
+ <dd>Es un {{cssxref("&lt;número&gt;")}} representando la abscisa del vector de escala.</dd>
+ <dt><em>sy</em></dt>
+ <dd>Es un {{cssxref("&lt;número&gt;")}} representado la ordenada de la escala del vector.  Si no está presente, su valor por defecto es <em><strong>sx</strong></em>, llevando a una escala uniforme preservando la curva del elemento.</dd>
+</dl>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Coordenadas Cartesianas en ℝ<sup>2</sup></th>
+   <th scope="col">Coordenadas Homogéneas en ℝℙ<sup>2</sup></th>
+   <th scope="col">Coordenadas Cartesianas en ℝ<sup>3</sup></th>
+   <th scope="col">Coordenadas Homogéneas en ℝℙ<sup>3</sup></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>sx</mtd><mtd>0</mtd></mtr> <mtr><mtd>0</mtd><mtd>sy</mtd></mtr> </mtable> </mfenced> </math></td>
+   <td><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+  </tr>
+  <tr>
+   <td><code>[sx 0 0 sy 0 0]</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Escalar_las_dimensiones_X_e_Y_al_mismo_tiempo">Escalar las dimensiones X e Y al mismo tiempo</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html"><code>&lt;div&gt;Normal&lt;/div&gt;
+&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</code></pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css"><code>div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
+}
+
+.scaled {
+  transform: scale(0.7); /* Igual que: scaleX(0.7) scaleY(0.7) */
+  background-color: pink;
+}</code></pre>
+
+<h4 id="Resultado">Resultado</h4>
+
+<p>{{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}</p>
+
+<h3 id="Escalando_dimensiones_X_e_Y_por_separado_y_trasladando_el_origen">Escalando dimensiones <em>X</em> e <em>Y</em> por separado y trasladando el origen</h3>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre><code>&lt;div&gt;Normal&lt;/div&gt;
+&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</code></pre>
+
+<h4 id="CSS_2">CSS</h4>
+
+<pre><code>div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
+}
+
+.scaled {
+  transform: scale(2, 0.5); /* Igual que: scaleX(2) scaleY(0.5) */
+  transform-origin: left;
+  background-color: pink;
+}</code></pre>
+
+<h4 id="Resultado_2">Resultado</h4>
+
+<p>{{EmbedLiveSample("Scaling_X_and_Y_dimensions_separately_and_translating_the_origin", "200", "200")}}</p>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+
+<p>Please see the <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> data type for compatibility info.</p>
+
+<h2 id="También_puede_ver">También puede ver</h2>
+
+<ul>
+ <li>{{cssxref("transform")}}</li>
+ <li>{{cssxref("&lt;transform-function&gt;")}}</li>
+ <li><code><a href="/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</a></code></li>
+</ul>

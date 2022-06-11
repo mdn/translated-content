@@ -1,17 +1,17 @@
 ---
-title: asm.js的异步脚本
+title: asm.js 的异步脚本
 slug: Games/Techniques/Async_scripts
 translation_of: Games/Techniques/Async_scripts
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/zh-CN/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
-<div class="summary">
-<p><span class="seoSummary">每个中型或大型游戏都应编译<a href="https://developer.mozilla.org/en-US/docs/Games/Tools/asm.js">asm.js</a>代码作为异步脚本的一部分，以便浏览器能够最大限度地灵活地优化编译过程。 在Gecko中，异步编译允许JavaScript引擎在游戏加载时缓存主线程的asm.js，并缓存生成的机器代码，这样游戏就不需要在随后的加载中编译（从Firefox 28开始）。 要查看差异，请切换<code>javascript.options.parallel_parsing</code> in <code>about:config</code>.</span></p>
+<div>
+<p>每个中型或大型游戏都应编译<a href="https://developer.mozilla.org/en-US/docs/Games/Tools/asm.js">asm.js</a>代码作为异步脚本的一部分，以便浏览器能够最大限度地灵活地优化编译过程。在 Gecko 中，异步编译允许 JavaScript 引擎在游戏加载时缓存主线程的 asm.js，并缓存生成的机器代码，这样游戏就不需要在随后的加载中编译（从 Firefox 28 开始）。要查看差异，请切换<code>javascript.options.parallel_parsing</code> in <code>about:config</code>.</p>
 </div>
 
 <h2 id="异步执行">异步执行</h2>
 
-<p>获取异步编译非常简单：编写JavaScript时，只需使用<code>async</code>属性即可：</p>
+<p>获取异步编译非常简单：编写 JavaScript 时，只需使用<code>async</code>属性即可：</p>
 
 <pre class="brush: js">&lt;script async src="file.js"&gt;&lt;/script&gt;</pre>
 
@@ -21,11 +21,11 @@ translation_of: Games/Techniques/Async_scripts
 script.src = "file.js";
 document.body.appendChild(script);</pre>
 
-<p>(从脚本中创建的脚本默认为异步。) 默认的HTML shell Emscripten生成后者。</p>
+<p>(从脚本中创建的脚本默认为异步。) 默认的 HTML shell Emscripten 生成后者。</p>
 
-<h2 id="什么时候用async或者不用">什么时候用async或者不用?</h2>
+<h2 id="什么时候用async或者不用">什么时候用 async 或者不用？</h2>
 
-<p>两种常见的情况下是脚本是<strong>非</strong>异步的（由<a href="https://www.w3.org/TR/html5/scripting-1.html">HTML规范</a>定义）</p>
+<p>两种常见的情况下是脚本是<strong>非</strong>异步的（由<a href="https://www.w3.org/TR/html5/scripting-1.html">HTML 规范</a>定义）</p>
 
 <pre class="brush: js">&lt;script async&gt;code&lt;/script&gt;</pre>
 
@@ -37,7 +37,7 @@ document.body.appendChild(script);</pre>
 
 <p>两者都被视为“内联”脚本，阻塞其余所有任务，进行编译，编译完成后立即执行。</p>
 
-<p>如果你的代码是一个JS字符串呢？ 而不是使用eval或innerHTML，这两者都会触发同步编译，您应该使用Blob和URL对象：</p>
+<p>如果你的代码是一个 JS 字符串呢？而不是使用 eval 或 innerHTML，这两者都会触发同步编译，您应该使用 Blob 和 URL 对象：</p>
 
 <pre class="brush: js">var blob = new Blob([codeString]);
 var script = document.createElement('script');

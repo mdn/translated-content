@@ -13,11 +13,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>{{WebExtAPIRef("downloads")}} API 的 <strong><code>download()</code></strong> 函数根据给出的URL和其他首选项下载一个文件。</p>
+<p>{{WebExtAPIRef("downloads")}} API 的 <strong><code>download()</code></strong> 函数根据给出的 URL 和其他首选项下载一个文件。</p>
 
 <ul>
- <li>如果指定的 <code>url</code> 使用HTTP或者HTTPS协议, 那么下载请求将会包含当前为该域名所设置的所有cookie。</li>
- <li>如果<code>filename</code> 和 <code>saveAs</code> 都已经指定，那么将会弹出“保存为” 对话框，并且默认名称显示为<code>filename</code>.</li>
+ <li>如果指定的 <code>url</code> 使用 HTTP 或者 HTTPS 协议，那么下载请求将会包含当前为该域名所设置的所有 cookie。</li>
+ <li>如果<code>filename</code> 和 <code>saveAs</code> 都已经指定，那么将会弹出“保存为”对话框，并且默认名称显示为<code>filename</code>.</li>
 </ul>
 
 <p>这是一个异步函数，其返回值为 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
@@ -37,32 +37,32 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
  <dd>
  <dl class="reference-values">
   <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
-  <dd>一个 <code>boolean</code>，启用后即使遇到HTTP错误仍然继续下载。 例如，可以使用该标志下载服务错误页面。默认值为<code>false</code>. 当设置为以下值时:
+  <dd>一个 <code>boolean</code>，启用后即使遇到 HTTP 错误仍然继续下载。例如，可以使用该标志下载服务错误页面。默认值为<code>false</code>. 当设置为以下值时：
   <ul>
-   <li><code>false</code>,遇到HTTP错误时下载会被取消。</li>
-   <li><code>true</code>, 即使遇到HTTP错误也会继续下载，并且不会弹出HTTP服务错误报告。但是，如果下载失败的原因是文件相关，网络相关，用户相关，或者说其他错误，仍然会报错。<span class="hidden"> </span></li>
+   <li><code>false</code>,遇到 HTTP 错误时下载会被取消。</li>
+   <li><code>true</code>, 即使遇到 HTTP 错误也会继续下载，并且不会弹出 HTTP 服务错误报告。但是，如果下载失败的原因是文件相关，网络相关，用户相关，或者说其他错误，仍然会报错。 </li>
   </ul>
   </dd>
   <dt><code>body</code>{{optional_inline}}</dt>
   <dd>一个 <code>string</code>，代表请求的内容。</dd>
   <dt><code>conflictAction</code>{{optional_inline}}</dt>
-  <dd>一个字符串，表示如果存在命名冲突时你希望进行的操作，字符串内容所代表的类型由 {{WebExtAPIRef('downloads.FilenameConflictAction')}} 定义(未指定时默认为 "uniquify" )。</dd>
+  <dd>一个字符串，表示如果存在命名冲突时你希望进行的操作，字符串内容所代表的类型由 {{WebExtAPIRef('downloads.FilenameConflictAction')}} 定义 (未指定时默认为 "uniquify" )。</dd>
   <dt><code>filename</code>{{optional_inline}}</dt>
-  <dd>一个 <code>string</code> ，表示相对默认保存位置的文件路径——这里提供你希望文件保存的位置，和你想要使用的文件名。绝对路径，空路径，以及包含反向引用的路径 (<code>../</code>) 会导致错误产生。 如果省略，该值将默认为已经提供给下载文件的文件名，并且直接保存到下载文件夹中。</dd>
+  <dd>一个 <code>string</code> ，表示相对默认保存位置的文件路径——这里提供你希望文件保存的位置，和你想要使用的文件名。绝对路径，空路径，以及包含反向引用的路径 (<code>../</code>) 会导致错误产生。如果省略，该值将默认为已经提供给下载文件的文件名，并且直接保存到下载文件夹中。</dd>
   <dt><code>headers</code>{{optional_inline}}</dt>
-  <dd>如果URL使用HTTP或者HTTPS协议, 保存在 <code>array</code> 中的一系列 <code>objects</code> 表示与请求一起发送的额外HTTP请求头。每一个请求头表示为字典对象，包含有关键字 <code>name</code> 还有 <code>value</code>或<code>binaryValue</code>中的一个。 无法指定 <code>XMLHttpRequest</code>和 <code>fetch</code>禁止的请求头，但是 Firefox 70 之后允许使用<code>Referer</code>请求头。尝试使用被禁止的请求头会产生一个错误。</dd>
+  <dd>如果 URL 使用 HTTP 或者 HTTPS 协议，保存在 <code>array</code> 中的一系列 <code>objects</code> 表示与请求一起发送的额外 HTTP 请求头。每一个请求头表示为字典对象，包含有关键字 <code>name</code> 还有 <code>value</code>或<code>binaryValue</code>中的一个。无法指定 <code>XMLHttpRequest</code>和 <code>fetch</code>禁止的请求头，但是 Firefox 70 之后允许使用<code>Referer</code>请求头。尝试使用被禁止的请求头会产生一个错误。</dd>
   <dt><code>incognito</code>{{optional_inline}}</dt>
-  <dd>一个 <code>boolean</code>：如果被设置为 true，那么这次下载会建立一个隐私浏览会话。 这意味着它只会出现在当前打开的任意隐私窗口的下载管理器。</dd>
+  <dd>一个 <code>boolean</code>：如果被设置为 true，那么这次下载会建立一个隐私浏览会话。这意味着它只会出现在当前打开的任意隐私窗口的下载管理器。</dd>
   <dt><code>method</code>{{optional_inline}}</dt>
-  <dd>一个 <code>string</code>，表示<code>url</code>使用HTTP[S] 协议时使用的HTTP方法。其值可能是 "GET" 或 "POST"。</dd>
+  <dd>一个 <code>string</code>，表示<code>url</code>使用 HTTP[S] 协议时使用的 HTTP 方法。其值可能是 "GET" 或 "POST"。</dd>
   <dt><code>saveAs</code>{{optional_inline}}</dt>
   <dd>
-  <p>一个<code>boolean</code> 指定是(<code>true</code>)否(<code>false</code>)提供一个文件选择对话框允许用户选择文件名。.</p>
+  <p>一个<code>boolean</code> 指定是 (<code>true</code>) 否 (<code>false</code>) 提供一个文件选择对话框允许用户选择文件名。.</p>
 
-  <p>如果该选项省略, 浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在about:preferences里为"每次都问您要存到哪" ，或者about:config里 <code>browser.download.useDownloadDir</code> )。</p>
+  <p>如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问您要存到哪" ，或者 about:config 里 <code>browser.download.useDownloadDir</code> )。</p>
 
   <div class="note">
-  <p><strong>Note</strong>: 如果 <code>saveAs</code> 被设置为 <code>true</code>，Firefox for Android 将会引发一个错误。 当 <code>saveAs</code> 为 <code>false</code> 或空时这个参数会被忽略.</p>
+  <p><strong>Note</strong>: 如果 <code>saveAs</code> 被设置为 <code>true</code>，Firefox for Android 将会引发一个错误。当 <code>saveAs</code> 为 <code>false</code> 或空时这个参数会被忽略。</p>
   </div>
   </dd>
   <dt><code>url</code></dt>
@@ -73,9 +73,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. 如果成功开始下载，promise会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 <code>id</code> 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息.</p>
+<p>一个 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 <code>id</code> 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。</p>
 
-<p>如果你使用 <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> 下载由 JavaScript 创建的数据并且之后想要(使用 <a href="/en-US/docs/Web/API/URL/revokeObjectURL">revokeObjectURL</a>)撤销对象链接(并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged">downloads.onChanged</a> 事件来判断是否下载完成。</p>
+<p>如果你使用 <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> 下载由 JavaScript 创建的数据并且之后想要 (使用 <a href="/en-US/docs/Web/API/URL/revokeObjectURL">revokeObjectURL</a>) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged">downloads.onChanged</a> 事件来判断是否下载完成。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -83,7 +83,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <h2 id="例子">例子</h2>
 
-<p>下面这段代码尝试下载一个example文件，同时指定文件名和保存位置，还有 <code>uniquify</code> <code>conflictAction</code> 选项。</p>
+<p>下面这段代码尝试下载一个 example 文件，同时指定文件名和保存位置，还有 <code>uniquify</code> <code>conflictAction</code> 选项。</p>
 
 <pre class="brush: js">function onStartedDownload(id) {
   console.log(`Started downloading: ${id}`);
@@ -107,7 +107,7 @@ downloading.then(onStartedDownload, onFailed);</pre>
 
 <div class="note"><strong>Acknowledgements</strong>
 
-<p>这个 API 基于 Chromium的 <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
+<p>这个 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
 </div>
 
 <div class="hidden">

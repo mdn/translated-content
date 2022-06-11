@@ -63,7 +63,7 @@ translation_of: Web/API/Element/mouseout_event
 
 // 当鼠标移出&lt;ul&gt;元素时，短暂地将列表变成紫色
 test.addEventListener("mouseleave", function( event ) {
-  // 高亮mouseleave的目标
+  // 高亮 mouseleave 的目标
   event.target.style.color = "purple";
 
   // 延迟一秒后重置颜色
@@ -74,10 +74,10 @@ test.addEventListener("mouseleave", function( event ) {
 
 // 当鼠标离开&lt;li&gt;元素时，短暂地将其变成橙色
 test.addEventListener("mouseout", function( event ) {
-  // 高亮mouseout的目标
+  // 高亮 mouseout 的目标
   event.target.style.color = "orange";
 
-  // 延迟500ms后重置颜色
+  // 延迟 500ms 后重置颜色
   setTimeout(function() {
     event.target.style.color = "";
   }, 500);
@@ -85,7 +85,7 @@ test.addEventListener("mouseout", function( event ) {
 
 <h4 id="结果">结果</h4>
 
-<p>{{EmbedLiveSample("mouseout_and_mouseleave", 640, 200)}}</p>
+<p>{{EmbedLiveSample("mouseout_和_mouseleave", 640, 200)}}</p>
 
 <h2 id="规范">规范</h2>
 

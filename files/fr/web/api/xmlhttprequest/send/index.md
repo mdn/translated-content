@@ -17,9 +17,9 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 {{APIRef('XMLHttpRequest')}}
 
-La méthode  {{domxref("XMLHttpRequest")}} **`send()`** envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.
+La méthode  {{domxref("XMLHttpRequest")}} **`send()`** envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.
 
-`send()` accepte un paramètre optionnel qui vous permet de spécifier le corps de la requête; c'est principalement utilisé pour les requêtes comme  {{HTTPMethod("PUT")}}. Si la méthode est {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, le paramètre `body` est ignoré et le corps de la requête est fixé à `null`.
+`send()` accepte un paramètre optionnel qui vous permet de spécifier le corps de la requête; c'est principalement utilisé pour les requêtes comme  {{HTTPMethod("PUT")}}. Si la méthode est {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, le paramètre `body` est ignoré et le corps de la requête est fixé à `null`.
 
 Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, un "header" `Accept` avec le type `"*/*"` (tous types) est envoyé.
 
@@ -39,7 +39,7 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
 
     Si la valeur du corps n'est pas spécifiée, la valeur par défaut `null` est employée.
 
-La meilleure manière d'envoyer du contenu binaire (par exemple dans l'upload de fichiers) est d'utiliser un {{domxref("ArrayBufferView")}} ou  {{domxref("Blob")}} en conjonction avec la méthode `send()`.
+La meilleure manière d'envoyer du contenu binaire (par exemple dans l'upload de fichiers) est d'utiliser un {{domxref("ArrayBufferView")}} ou  {{domxref("Blob")}} en conjonction avec la méthode `send()`.
 
 ### Valeur de retour
 

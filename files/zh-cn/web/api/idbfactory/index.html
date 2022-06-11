@@ -19,10 +19,10 @@ translation_of: Web/API/IDBFactory
  <dt>{{domxref("IDBFactory.cmp")}}</dt>
  <dd>比较两个键的方法并返回一个结果，表明哪个值更大。</dd>
  <dt>
- <h3 id="过时的Methods">过时的Methods</h3>
+ <h3 id="过时的Methods">过时的 Methods</h3>
  </dt>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory.open-obsolete">IDBFactory.open</a></code>, the original version {{ obsolete_inline }}</dt>
- <dd>一个被废弃的方法请求打开一个数据库的连接，仍然在一些浏览器中被实施(<a href="https://developer.mozilla.org/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>).</dd>
+ <dd>一个被废弃的方法请求打开一个数据库的连接，仍然在一些浏览器中被实施 (<a href="https://developer.mozilla.org/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>).</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -74,61 +74,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>23{{property_prefix("webkit")}}<br>
-    24</td>
-   <td>10 {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}}</td>
-   <td>10, partial</td>
-   <td>15</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>22</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="warning">
-<p>Be careful in Chrome as it still implements the old specification along with the new one. Similarly it still has the prefixed <code>webkitIndexedDB</code> property even if the unprefixed <code>indexedDB</code> is present.</p>
-</div>
+{{Compat("api.IDBFactory")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -18,7 +18,9 @@ La méthode statique **`Atomics.load()`** renvoie une valeur située à une posi
 
 ## Syntaxe
 
-    Atomics.load(typedArray, index)
+```js
+Atomics.load(typedArray, index)
+```
 
 ### Paramètres
 
@@ -33,7 +35,7 @@ La valeur à la position indiquée (`typedArray[index]`).
 
 ### Exceptions levées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

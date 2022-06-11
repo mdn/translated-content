@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 
 Efface les cookies du navigateur
 
-Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
 
 - Efface seulement les cookies créés après un temps donné
 - Contrôlez si les cookies doivent être supprimés uniquement à partir des pages Webnormales ou si vous souhaitez supprimer les cookies des applications et des extensions hébergées.

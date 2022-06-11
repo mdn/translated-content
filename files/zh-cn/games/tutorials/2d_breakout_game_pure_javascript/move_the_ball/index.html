@@ -12,26 +12,26 @@ tags:
   - movement
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <div>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}</div>
 
-<div class="summary">
-<p>本篇是 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a> 10节教程中的第二节。如果你完成了本篇教程之后，你可以从 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html">Gamedev-Canvas-workshop/lesson2.html</a> 看到源码。</p>
+<div>
+<p>本篇是 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a> 10 节教程中的第二节。如果你完成了本篇教程之后，你可以从 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html">Gamedev-Canvas-workshop/lesson2.html</a> 看到源码。</p>
 </div>
 
-<p><span class="seoSummary">从上一节中你已经知道如何去绘制一个球。现在让我们使它动起来。从技术上讲，我们将在画布上绘制一个球，之后让它消失，然后在一个稍微不用的位置上再绘制一个一样的球。就想电影里的每一帧动起来的感觉。</span></p>
+<p>从上一节中你已经知道如何去绘制一个球。现在让我们使它动起来。从技术上讲，我们将在画布上绘制一个球，之后让它消失，然后在一个稍微不用的位置上再绘制一个一样的球。就想电影里的每一帧动起来的感觉。</p>
 
-<p>我们需要定义一个绘图函数，每次使用一组不同的变量改变球体的位置；循环调用以保持画布上每一帧不断更新。你可以使用JavaScript时间函数 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或者 {{domxref("window.requestAnimationFrame()")}}。 </p>
+<p>我们需要定义一个绘图函数，每次使用一组不同的变量改变球体的位置；循环调用以保持画布上每一帧不断更新。你可以使用 JavaScript 时间函数 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或者 {{domxref("window.requestAnimationFrame()")}}。 </p>
 
-<p>在你的HTML文件只保留前两行，删除其他所有的JavaScript代码并在 draw() 函数中添加以下内容保证每10毫秒执行一次 draw() 函数：</p>
+<p>在你的 HTML 文件只保留前两行，删除其他所有的 JavaScript 代码并在 draw() 函数中添加以下内容保证每 10 毫秒执行一次 draw() 函数：</p>
 
 <pre class="brush: js">function draw() {
     // drawing code
 }
 setInterval(draw, 10);</pre>
 
-<p>得益于 <code>setInterval</code> 的无限性，使得 <code>draw()</code> 函数将每10毫秒就会被调用，除非我们停止它。现在，我们来绘制小球吧，在 <code>draw()</code> 函数中添加以下内容：</p>
+<p>得益于 <code>setInterval</code> 的无限性，使得 <code>draw()</code> 函数将每 10 毫秒就会被调用，除非我们停止它。现在，我们来绘制小球吧，在 <code>draw()</code> 函数中添加以下内容：</p>
 
 <pre class="brush: js">ctx.beginPath();
 ctx.arc(50, 50, 10, 0, Math.PI*2);
@@ -44,15 +44,15 @@ ctx.closePath();
 
 <h2 id="让球动起来">让球动起来</h2>
 
-<p>你不会注意到球正在不停地被重新刷，因为它没有移动。让我们改变这种情况。首先，我们不再使用固定位置(50,50)，而是用x和y的变量来定义画布底部的起始点，然后使用这些变量来定义圆被绘制的位置。</p>
+<p>你不会注意到球正在不停地被重新刷，因为它没有移动。让我们改变这种情况。首先，我们不再使用固定位置 (50,50)，而是用 x 和 y 的变量来定义画布底部的起始点，然后使用这些变量来定义圆被绘制的位置。</p>
 
-<p><font><font>首先，在</font></font><code>draw()</code><font><font>函数</font><font>上方添加以下两行</font><font>，以定义</font></font><code>x</code><font><font>和</font></font><code>y</code><font><font>：</font></font></p>
+<p>首先，在<code>draw()</code>函数上方添加以下两行，以定义<code>x</code>和<code>y</code>：</p>
 
 <pre class="brush: js">var x = canvas.width/2;
 var y = canvas.height-30;
 </pre>
 
-<p><font><font>接下来更新</font></font> <code>draw()</code> <font><font>函数，在 </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" title="Canvas 2D API的CanvasRenderingContext2D.arc（）方法将以弧度为中心的（x，y）位置的弧线添加一个圆弧，半径r从startAngle开始，并以endAngle的顺时针方向（默认为顺时针方向）终止， 。">arc()</a> </code><font><font>方法中使用 <code>x</code> 和 <code>y</code> 变量，如下面高亮行所示：</font></font></p>
+<p>接下来更新 <code>draw()</code> 函数，在 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" title="Canvas 2D API的CanvasRenderingContext2D.arc（）方法将以弧度为中心的（x，y）位置的弧线添加一个圆弧，半径r从startAngle开始，并以endAngle的顺时针方向（默认为顺时针方向）终止， 。">arc()</a> </code>方法中使用 <code>x</code> 和 <code>y</code> 变量，如下面高亮行所示：</p>
 
 <pre class="brush: js; highlight:[3]">function draw() {
     ctx.beginPath();
@@ -63,13 +63,13 @@ var y = canvas.height-30;
 }
 </pre>
 
-<p>现在到了最重要的部分：我们想要在每一帧都被绘制出来之后，给 <code>x</code> 和 <code>y</code> 添加一个较小的值，让它看起来像是在移动。让我们将这些值定义为 <code>dx</code> 和 <code>dy</code>，并将它们的值分别设为 <code>2</code> 和 <code>-2</code>。在你的 x 和 y 变量声明下方添加以下内容:</p>
+<p>现在到了最重要的部分：我们想要在每一帧都被绘制出来之后，给 <code>x</code> 和 <code>y</code> 添加一个较小的值，让它看起来像是在移动。让我们将这些值定义为 <code>dx</code> 和 <code>dy</code>，并将它们的值分别设为 <code>2</code> 和 <code>-2</code>。在你的 x 和 y 变量声明下方添加以下内容：</p>
 
 <pre class="brush: js">var dx = 2;
 var dy = -2;
 </pre>
 
-<p>最后要做的是在每一帧上更新 <code>x</code> 和 <code>y</code>，在每一次更新中，把球画在新的位置上。将下面的两条新线添加到你的 <code>draw()</code> 函数:</p>
+<p>最后要做的是在每一帧上更新 <code>x</code> 和 <code>y</code>，在每一次更新中，把球画在新的位置上。将下面的两条新线添加到你的 <code>draw()</code> 函数：</p>
 
 <pre class="brush: js; highlight:[7,8]">function draw() {
     ctx.beginPath();
@@ -81,7 +81,7 @@ var dy = -2;
     y += dy;
 }</pre>
 
-<p>再次保存代码，并在浏览器中尝试。很好，尽管看起来球在后面留下了痕迹:</p>
+<p>再次保存代码，并在浏览器中尝试。很好，尽管看起来球在后面留下了痕迹：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10430/ball-trail.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
 
@@ -89,7 +89,7 @@ var dy = -2;
 
 <p>球移动时留下了轨迹，因为我们在每一帧上都画了一个新的圆，而没有去掉之前的一个圆。不要担心，因为有一个方法来清空画布的内容：<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect" title="Canvas 2D API的CanvasRenderingContext2D.clearRect（）方法将由起点（x，y）和大小（宽，高）定义的矩形中的所有像素设置为透明黑色，擦除任何先前绘制的内容。">clearRect()</a></code>。该方法有四个参数：矩形左上角的 <code>x</code> 和 <code>y</code> 坐标，以及矩形的右下角的 <code>x</code> 和 <code>y</code> 坐标。这个矩形覆盖的整个区域里，之前所画的任何内容将被清除。</p>
 
-<p>将下列高亮显示行添加到 <code>draw()</code> 函数:</p>
+<p>将下列高亮显示行添加到 <code>draw()</code> 函数：</p>
 
 <pre class="brush: js; highlight:[2]">function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -103,7 +103,7 @@ var dy = -2;
 }
 </pre>
 
-<p>保存您的代码并再次尝试，这次你将看到球移动后没有留下轨迹。每隔10毫秒，画布就会被清除，蓝色的圆圈(我们的球)将被绘制在一个给定的位置上，而 <code>x</code> 和 <code>y</code> 的值将在下一个帧被更新。</p>
+<p>保存您的代码并再次尝试，这次你将看到球移动后没有留下轨迹。每隔 10 毫秒，画布就会被清除，蓝色的圆圈 (我们的球) 将被绘制在一个给定的位置上，而 <code>x</code> 和 <code>y</code> 的值将在下一个帧被更新。</p>
 
 <h2 id="保持代码整洁">保持代码整洁</h2>
 
@@ -132,12 +132,12 @@ function draw() {
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}</p>
 
-<div class="summary">
+<div>
 <p>练习：尝试改变移动球的速度，或者移动球的方向。</p>
 </div>
 
-<h2 id="下一步"><font><font>下一步</font></font></h2>
+<h2 id="下一步">下一步</h2>
 
-<p><font><font>我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。</font><font>在第三章中，我们将探讨如何使其 </font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls">从墙壁上反弹</a>.</p>
+<p>我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。在第三章中，我们将探讨如何使其 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls">从墙壁上反弹</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}</p>

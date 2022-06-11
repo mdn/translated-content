@@ -8,18 +8,18 @@ translation_of: Web/API/Document/keypress_event
 <h2 id="General_info">General info</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress">DOM L3</a> {{deprecated_inline()}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;"><a href="/en-US/docs/DOM/KeyboardEvent" title="http://en-US/docs/DOM/KeyboardEvent">KeyboardEvent</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">Document, Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
- <dd style="margin: 0 0 0 120px;">Varies: <code>keypress</code> event; launch text composition system; <code>blur</code> and <code>focus</code> events; <code>DOMActivate</code> event; other event</dd>
+ <dt>Specification</dt>
+ <dd><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress">DOM L3</a> {{deprecated_inline()}}</dd>
+ <dt>Interface</dt>
+ <dd><a href="/en-US/docs/DOM/KeyboardEvent" title="http://en-US/docs/DOM/KeyboardEvent">KeyboardEvent</a></dd>
+ <dt>Bubbles</dt>
+ <dd>Yes</dd>
+ <dt>Cancelable</dt>
+ <dd>Yes</dd>
+ <dt>Target</dt>
+ <dd>Document, Element</dd>
+ <dt>Default Action</dt>
+ <dd>Varies: <code>keypress</code> event; launch text composition system; <code>blur</code> and <code>focus</code> events; <code>DOMActivate</code> event; other event</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -78,7 +78,7 @@ translation_of: Web/API/Document/keypress_event
   <tr>
    <td><code>key</code> {{readonlyInline}}</td>
    <td>DOMString (string)</td>
-   <td>The key value of the key represented by the event. If the value has a printed representation, this attribute's value is the same as the <code>char</code> attribute. Otherwise, it's one of the key value strings specified in {{ anch("Key values") }}. If the key can't be identified, this is the string "Unidentified". See <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> for the detail. Read Only.</td>
+   <td>The key value of the key represented by the event. If the value has a printed representation, this attribute's value is the same as the <code>char</code> attribute. Otherwise, it's one of the key value strings specified in <a href="#key_values">Key Values</a>. If the key can't be identified, this is the string "Unidentified". See <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> for the detail. Read Only.</td>
   </tr>
   <tr>
    <td><code>charCode</code> {{readonlyInline}}</td>
@@ -90,7 +90,7 @@ translation_of: Web/API/Document/keypress_event
   <tr>
    <td><code>keyCode</code> {{readonlyInline}}</td>
    <td>Unsigned long (int)</td>
-   <td>A system and implementation dependent numerical code identifying the unmodified value of the pressed key. This is usually the decimal ASCII ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see {{ anch("Virtual key codes") }} for a list of common values. If the key can't be identified, this value is 0.
+   <td>A system and implementation dependent numerical code identifying the unmodified value of the pressed key. This is usually the decimal ASCII ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see <a href="virtual_key_codes">Virtual key codes</a> for a list of common values. If the key can't be identified, this value is 0.
     <div class="warning"><strong>Warning:</strong> This attribute is deprecated; you should use <code>key</code> instead, if available.</div>
    </td>
   </tr>
@@ -137,7 +137,6 @@ translation_of: Web/API/Document/keypress_event
    <td><code>true</code> if the meta key was down when the event was fired. <code>false</code> otherwise.</td>
   </tr>
  </tbody>
-</table>
 
 <h2 id="Related_Events">Related Events</h2>
 

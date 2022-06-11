@@ -7,22 +7,24 @@ translation_of: Web/API/HTMLElement/hidden
 <div>{{ APIRef("HTML DOM") }}</div>
 </div>
 
-<p><span class="seoSummary">{{domxref("HTMLElement")}}元素属性 <strong><code>hidden</code></strong> 是一个 {{jsxref("Boolean")}}类型，如果想要隐藏文档，值设置为 <code>true，否则值设置为</code><code>false</code>.  这是完全不同于使用 CSS 属性 {{cssxref("display")}}  来控制一个元素的可见性 。</span>  <code>hidden 属性应用于所有的展现模式，并且不应该用来隐藏用户直接访问的内容。</code></p>
+<p>{{domxref("HTMLElement", "HTML 元素")}}的 <strong><code>hidden</code></strong> 属性是一个 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，就将值设置为 <code>true</code>，否则就将值设置为<code>false</code>。这完全不同于使用 CSS 属性 {{cssxref("display")}} 来控制一个元素的可见性。</p>
 
-<p>适用于使用 <code>hidden 的情况：</code></p>
+<p><code>hidden</code> 属性应用于所有展现模式，并且不应用于隐藏用户可直接访问的内容。</p>
+
+<p>适用的情况，包括：</p>
 
 <ul>
- <li>目前不相关的内容，但是将来会用到的</li>
- <li>以前需要，但是现在不需要的内容</li>
- <li>以一种模版的方式存在，在一个页面的其他地方重复使用到</li>
- <li>Creating an offscreen canvas as a drawing buffer</li>
+ <li>目前还不相关但将来可能会被用到的内容</li>
+ <li>之前还需要但现在不再被需要用到的内容</li>
+ <li>以类似于模板的方式被页面的其它部分所重复使用的内容</li>
+ <li>创建一个屏幕上不可见的画布来作为绘制的缓冲区</li>
 </ul>
 
-<p>不适合使用的情况：</p>
+<p>不适用的情况，包括</p>
 
 <ul>
- <li>隐藏 标签选项卡对话框面板</li>
- <li>在一个演示文稿中隐藏内容，同时打算在其他演示文稿中显示</li>
+ <li>隐藏选项卡的对话框中的面板</li>
+ <li>隐藏一个演示文稿中的内容，同时又希望这个内容在其它演示文稿中是可见的</li>
 </ul>
 
 <div class="note">
@@ -36,13 +38,13 @@ translation_of: Web/API/HTMLElement/hidden
 
 <em>HTMLElement</em>.hidden = true | false;</pre>
 
-<h3 id="Value">Value</h3>
+<h3 id="Value">值</h3>
 
-<p>A Boolean which is <code>true</code> if the element is hidden from view; otherwise, the value is <code>false</code>.</p>
+<p>{{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，则设置为 <code>true</code>，否则设置为 <code>false</code>。</p>
 
 <h2 id="Example" name="Example">示例</h2>
 
-<p>Here's an example where a hidden block is used to contain a thank you message that is displayed after a user agrees to an unusual request.</p>
+<p>在这个例子中，当用户点击了 welcome 面板中的按钮后，welcome 面板就会被隐藏掉，并在原位置显示出 follow-up 面板，follow-up 面板包含了致谢信息。</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -52,11 +54,11 @@ translation_of: Web/API/HTMLElement/hidden
   document.getElementById("awesome").hidden = false;
 }, false);</pre>
 
-<p>This code sets up a handler for the welcome panel's "OK" button that hides the welcome panel and makes the follow-up panel—with the curious name "awesome"—visible in its place.</p>
+<p>这段代码用来为 welcome 面板中的按钮绑定一个事件监听器，这个事件监听器会隐藏 welcome 面板并在其原位置显示出 follow-up 面板。</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>The HTML for the two boxes are shown here.</p>
+<p>welcome 面板和 follow-up 面板的 HTML 代码。</p>
 
 <h4 id="The_welcome_panel">The welcome panel</h4>
 
@@ -66,11 +68,11 @@ translation_of: Web/API/HTMLElement/hidden
   &lt;button class="button" id="okButton"&gt;OK&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-<p>This HTML creates a panel (in a {{HTMLElement("div")}} block) that welcomes the user to a site and tells them what they're agreeing to by clicking the OK button.</p>
+<p>这段 HTML 代码用于创建一个面板（是一个 {{HTMLElement("div")}} 的块），这个面板会对进入到该站点的用户表示欢迎，并提示他们只要点击了按钮就代表他们同意面板的内容。</p>
 
 <h4 id="The_follow-up_panel">The follow-up panel</h4>
 
-<p>Once the user clicks the "OK" button in the welcome panel, the JavaScript code swaps the two panels by changing their respective values for <code>hidden</code>. The follow-up panel looks like this in HTML:</p>
+<p>一旦用户点击了 welcome 面板中的按钮，JavaScript 代码就会通过修改 <code>hidden</code> 属性来切换 welcome 面板和 follow-up 面板。</p>
 
 <pre class="brush: html">&lt;div id="awesome" class="panel" hidden&gt;
   &lt;h1&gt;Thanks!&lt;/h1&gt;
@@ -81,7 +83,7 @@ translation_of: Web/API/HTMLElement/hidden
 
 <h3 id="CSS">CSS</h3>
 
-<p>The content is styled using the CSS below.</p>
+<p>上述内容使用了下述的 CSS 样式。</p>
 
 <pre class="brush: css">.panel {
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
@@ -134,63 +136,11 @@ h1 {
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.HTMLElement.hidden")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li>{{domxref("Element.hidden")}}</li>
+ <li>{{htmlattrxref("hidden")}} 属性</li>
  <li>{{cssxref("display")}}</li>
 </ul>

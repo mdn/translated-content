@@ -12,19 +12,19 @@ tags:
   - 游戏
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/zh-CN/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}</p>
 
-<div class="summary">
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser教程</a>系列的第一课. 在课程完成之后，你可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html">Gamedev-Phaser-Content-Kit/demos/lesson01.html</a>找到源码.</p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a>系列的第一课。在课程完成之后，你可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html">Gamedev-Phaser-Content-Kit/demos/lesson01.html</a>找到源码。</p>
 </div>
 
-<p><span class="seoSummary">在我们开始写游戏的功能之前，我们需要创建一个用来内部渲染游戏的基础架构.使用HTML就能做到 — Parser框架将生成所需的 {{htmlelement("canvas")}} 元素.</span></p>
+<p>在我们开始写游戏的功能之前，我们需要创建一个用来内部渲染游戏的基础架构。使用 HTML 就能做到 — Parser 框架将生成所需的 {{htmlelement("canvas")}} 元素。</p>
 
-<h2 id="游戏的HTML">游戏的HTML</h2>
+<h2 id="游戏的HTML">游戏的 HTML</h2>
 
-<p>HTML文档结构非常的简单，这个游戏将整个被渲染在框架生成的{{htmlelement("canvas")}} 元素上. 拿起你最爱的编辑器，挑一个好目录，创建一个HTML文档，存成index.html,然后写下下面的代码:</p>
+<p>HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成的{{htmlelement("canvas")}} 元素上。拿起你最爱的编辑器，挑一个好目录，创建一个 HTML 文档，存成 index.html，然后写下下面的代码：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -47,26 +47,26 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 &lt;/html&gt;
 </pre>
 
-<h2 id="下载Phaser">下载Phaser</h2>
+<h2 id="下载Phaser">下载 Phaser</h2>
 
-<p>下面我们将下载Phaser的代码，并应用到我们的HTML文档中.</p>
+<p>下面我们将下载 Phaser 的代码，并应用到我们的 HTML 文档中。</p>
 
 <ol>
  <li>进入 <a href="http://phaser.io/download/stable">Phaser 下载页面</a>.</li>
- <li>选择最适合你的下载项 — 我们建议选择min.js，因为它最小，而且你不太可能想去看它的源码</li>
- <li>将Phaser的源码存到一个和index.html同级的 /js 的目录下</li>
- <li>在上面第一个 {{htmlelement("script")}} 标签里写下phaser的路径.</li>
+ <li>选择最适合你的下载项 — 我们建议选择 min.js，因为它最小，而且你不太可能想去看它的源码</li>
+ <li>将 Phaser 的源码存到一个和 index.html 同级的 /js 的目录下</li>
+ <li>在上面第一个 {{htmlelement("script")}} 标签里写下 phaser 的路径。</li>
 </ol>
 
 <h2 id="捋一捋我们干了些啥">捋一捋我们干了些啥</h2>
 
-<p>这个时候我们在 {{htmlelement("header")}} 里定义了 {{htmlelement("charset")}} ，{{htmlelement("title")}} 和一些基础的css来重置默认的margin和padding. 我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。</p>
+<p>这个时候我们在 {{htmlelement("header")}} 里定义了 {{htmlelement("charset")}} ，{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding. 我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。</p>
 
 <p>{{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 <code>Phaser.Game </code>创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：</p>
 
 <ul>
- <li>width 和 height 设置了 {{htmlelement("canvas")}} 宽高.</li>
- <li>渲染方式。有三个选项分别是 <code>AUTO<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">，</span></font></code><code>CANVAS</code> 和 <code>WEBGL</code>。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。</li>
+ <li>width 和 height 设置了 {{htmlelement("canvas")}} 宽高。</li>
+ <li>渲染方式。有三个选项分别是 <code>AUTO，</code><code>CANVAS</code> 和 <code>WEBGL</code>。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。</li>
  <li>{{htmlelement("canvas")}} 的 id。如果该参数有值，则使用该值作为 canvas 标签的 id，我们传入 null，则 phaser 会决定 canvas 的 id 值。</li>
  <li>第四个参数指定了 phaser 的三个生命周期所对应的函数。我们使用相同的名字来让程序更清晰
   <ul>

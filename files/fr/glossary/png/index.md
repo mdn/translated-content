@@ -16,4 +16,4 @@ original_slug: Glossaire/PNG
 
 ### Culture générale
 
-- [PNG ](https://fr.wikipedia.org/wiki/Portable_Network_Graphics)sur Wikipédia
+- [PNG](https://fr.wikipedia.org/wiki/Portable_Network_Graphics) sur Wikipédia

@@ -3,7 +3,7 @@ title: TouchEvent.targetTouches
 slug: Web/API/TouchEvent/targetTouches
 translation_of: Web/API/TouchEvent/targetTouches
 ---
-<p id="Summary">{{ APIRef("Touch Events") }}</p>
+<p>{{ APIRef("Touch Events") }}</p>
 
 <p><strong><code>targetTouches</code></strong> 是一个只读的 {{ domxref("TouchList") }} 列表，包含仍与触摸面接触的所有触摸点的 {{ domxref("Touch") }} 对象。{{event("touchstart")}}事件触发在哪个{{ domxref("element") }}内，它就是当前目标元素。</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/TouchEvent/targetTouches
 
 <h2 id="Specification" name="Specification">例子</h2>
 
-<p>本例阐述了 {{domxref("TouchEvent")}} 对象的 {{domxref("TouchEvent.targetTouches")}} 属性。{{domxref("TouchEvent.targetTouches")}} 属性也是一个 {{domxref("TouchList")}}，其中包含的触摸点起始于触摸事件当前的目标元素，并且此刻正在触摸屏幕。所以，<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">targetTouches</span></font> 元素是 <code>touches</code> 的真子集。</p>
+<p>本例阐述了 {{domxref("TouchEvent")}} 对象的 {{domxref("TouchEvent.targetTouches")}} 属性。{{domxref("TouchEvent.targetTouches")}} 属性也是一个 {{domxref("TouchList")}}，其中包含的触摸点起始于触摸事件当前的目标元素，并且此刻正在触摸屏幕。所以，targetTouches 元素是 <code>touches</code> 的真子集。</p>
 
 <p>下面代码段中的函数比较了 <code>touches</code> 列表和 <code>targetTouches</code> 列表的长度，返回值表示他们是否相等。</p>
 

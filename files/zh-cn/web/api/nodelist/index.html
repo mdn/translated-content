@@ -13,7 +13,7 @@ translation_of: Web/API/NodeList
 <p><code>NodeList</code> 对象是节点的集合，通常是由属性，如{{domxref("Node.childNodes")}} 和 方法，如{{domxref("document.querySelectorAll")}} 返回的。</p>
 
 <div class="note">
-<p><code>NodeList</code> <strong>不是一个数组</strong>，是一个类似数组的对象(<em>Like Array Object</em>)。虽然 <code>NodeList</code> 不是一个数组，但是可以使用 <code>forEach()</code> 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。</p>
+<p><code>NodeList</code> <strong>不是一个数组</strong>，是一个类似数组的对象 (<em>Like Array Object</em>)。虽然 <code>NodeList</code> 不是一个数组，但是可以使用 <code>forEach()</code> 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。</p>
 
 <p>不过，有些浏览器较为过时，没有实现 <code>NodeList.forEach()</code> 和 <code>Array.from()</code>。你可以用 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 来规避这一问题。请查看<a href="#Example">该例</a>。</p>
 </div>
@@ -44,7 +44,7 @@ console.log(child_nodes.length); // 但此时的输出是“3”</pre>
 </dl>
 
 <dl>
- <dd>返回 <code>NodeList</code> <font face="Courier New">对象</font>中指定索引的节点，如果索引越界，则返回<code>null</code>。等价的写法是 <code>nodeList[i]</code>，不过，在这种情况下，越界访问将返回 <code>undefined</code>。</dd>
+ <dd>返回 <code>NodeList</code> 对象中指定索引的节点，如果索引越界，则返回<code>null</code>。等价的写法是 <code>nodeList[i]</code>，不过，在这种情况下，越界访问将返回 <code>undefined</code>。</dd>
  <dt>{{domxref("NodeList.entries()")}}</dt>
  <dd>Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from 0 and the values are nodes.)</dd>
  <dt>{{domxref("NodeList.forEach()")}}</dt>
@@ -92,7 +92,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 <p><code>NodeList</code> 对象在某些方面和数组非常相似，看上去可以直接使用从 <code>Array.prototype</code> 上继承的方法。然而，除了 <code>forEach</code> 方法，<code>NodeList</code> 没有这些类似数组的方法。</p>
 
-<p>JavaScript 的继承机制是基于原型的。数组元素之所以有一些数组方法（比如 <code>forEach</code> 和 <code>map</code>），是因为它的原型链上有这些方法，如下:</p>
+<p>JavaScript 的继承机制是基于原型的。数组元素之所以有一些数组方法（比如 <code>forEach</code> 和 <code>map</code>），是因为它的原型链上有这些方法，如下：</p>
 
 <p><code>myArray --&gt; Array.prototype --&gt; Object.prototype --&gt; null</code>（想要获取一个对象的原型链，可以连续地调用 <code>Object.getPrototypeOf</code>，直到原型链尽头）。</p>
 
@@ -102,11 +102,11 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 <p><code>myNodeList --&gt; NodeList.prototype --&gt; Object.prototype --&gt; null</code></p>
 
-<p>NodeList的原型上除了类似数组的 <code>forEach</code> 方法之外，还有 <code>item</code>，<code>entries</code>，<code>keys</code> 和 <code>values</code> 方法。</p>
+<p>NodeList 的原型上除了类似数组的 <code>forEach</code> 方法之外，还有 <code>item</code>，<code>entries</code>，<code>keys</code> 和 <code>values</code> 方法。</p>
 
 <h4 id="解决办法">解决办法</h4>
 
-<p>一个解决办法就是把 <code>Array.prototype</code> 上的方法添加到 <code>NodeList.prototype</code> 上。可是，要注意<a class="external" href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">扩展DOM对象的原型是非常危险的</a>，尤其是在旧版本的Internet Explorer（6，7，8）中。</p>
+<p>一个解决办法就是把 <code>Array.prototype</code> 上的方法添加到 <code>NodeList.prototype</code> 上。可是，要注意<a class="external" href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">扩展 DOM 对象的原型是非常危险的</a>，尤其是在旧版本的 Internet Explorer（6，7，8）中。</p>
 
 <pre class="brush: js">var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
 
@@ -138,7 +138,7 @@ forEach.call(firstDiv.childNodes, function( divChild ){
 });</pre>
 
 <div class="note">
-<p>请注意，在上面的代码中，将某个宿主对象 （如 <code>NodeList</code>） 作为 <code>this</code> 传递给原生方法 （如 forEach） 不能保证在所有浏览器中工作，已知在一些浏览器中会失败。</p>
+<p>请注意，在上面的代码中，将某个宿主对象（如 <code>NodeList</code>）作为 <code>this</code> 传递给原生方法（如 forEach）不能保证在所有浏览器中工作，已知在一些浏览器中会失败。</p>
 </div>
 
 <h2 id="规范">规范</h2>

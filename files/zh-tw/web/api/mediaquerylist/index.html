@@ -7,11 +7,11 @@ translation_of: Web/API/MediaQueryList
 
 <p><code>MediaQueryList</code> 物件維護一組針對 {{ domxref("document") }} 的 <a href="/en-US/docs/CSS/Media_queries" style="line-height: 19.0909080505371px;" title="CSS/Media queries">media querie</a> , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。</p>
 
-<p><span style="font-family: consolas,monaco,andale mono,monospace; line-height: 19.0909080505371px;">MediaQueryList</span><span style="line-height: 19.0909080505371px;"> 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。</span></p>
+<p>MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。</p>
 
 <h2 id="Method_overview" name="Method_overview">Method overview</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><code>void <a href="/en-US/docs/DOM/MediaQueryList#addListener()" title="DOM/MediaQueryList#addListener()">addListener</a>(MediaQueryListListener listener);</code></td>
@@ -24,7 +24,7 @@ translation_of: Web/API/MediaQueryList
 
 <h2 id="Properties" name="Properties">Properties</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td class="header">Property</td>
@@ -48,7 +48,7 @@ translation_of: Web/API/MediaQueryList
 
 <h3 id="addListener()" name="addListener()">addListener()</h3>
 
-<p>添加一個新的事件處理器 (listener)，若 <span style="line-height: 19.0909080505371px;">listener </span>已存在則無作用。</p>
+<p>添加一個新的事件處理器 (listener)，若 listener 已存在則無作用。</p>
 
 <pre>void addListener(
   MediaQueryListListener listener
@@ -63,7 +63,7 @@ translation_of: Web/API/MediaQueryList
 
 <h3 id="removeListener()" name="removeListener()">removeListener()</h3>
 
-<p><span style="line-height: 19.0909080505371px;">移除一個事件處理器 (</span><span style="line-height: 19.0909080505371px;">listener)，若 </span><span style="line-height: 19.0909080505371px;">listener 不</span><span style="line-height: 19.0909080505371px;">存在則無作用。</span></p>
+<p>移除一個事件處理器 (listener)，若 listener 不存在則無作用。</p>
 
 <pre>void removeListener(
   MediaQueryListListener listener
@@ -73,58 +73,12 @@ translation_of: Web/API/MediaQueryList
 
 <dl>
  <dt><code>listener</code></dt>
- <dd>欲移除的<span style="line-height: 19.0909080505371px;">事件處理函數</span><span style="line-height: 19.0909080505371px;"> ({{ domxref("MediaQueryListListener") }})。</span></dd>
+ <dd>欲移除的事件處理函數 ({{ domxref("MediaQueryListListener") }})。</dd>
 </dl>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>9</td>
-   <td>{{ CompatGeckoDesktop("6.0") }}</td>
-   <td>10</td>
-   <td>12.1</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaQueryList")}}
 
 <h2 id="Specification" name="Specification"> </h2>
 

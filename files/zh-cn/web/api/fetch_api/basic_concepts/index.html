@@ -3,27 +3,27 @@ title: Fetch 基本概念
 slug: Web/API/Fetch_API/Basic_concepts
 translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-<p>{{DefaultAPISidebar("Fetch API")}}{{draft}}</p>
+<p>{{DefaultAPISidebar("Fetch API")}}</p>
 
-<div class="summary">
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> 是一个现代的概念, 等同于 <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>。它提供了许多与XMLHttpRequest相同的功能，但被设计成更具可扩展性和高效性。本文介绍了 Fetch API的一些基本概念。</p>
+<div>
+<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> 是一个现代的概念，等同于 <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>。它提供了许多与 XMLHttpRequest 相同的功能，但被设计成更具可扩展性和高效性。本文介绍了 Fetch API 的一些基本概念。</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 这篇文章可能还需要修改。如果你觉得有的概念可以解释的更好，<span class="short_text" id="result_box" lang="zh-CN"><span>让人们在<a href="https://discourse.mozilla-community.org/c/mdn">MDN论坛</a>上知道</span></span>，或 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> (#mdn room)。</p>
+<p><strong>Note</strong>: 这篇文章可能还需要修改。如果你觉得有的概念可以解释的更好，让人们在<a href="https://discourse.mozilla-community.org/c/mdn">MDN 论坛</a>上知道，或 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> (#mdn room)。</p>
 </div>
 
 <h2 id="简而言之">简而言之</h2>
 
 <p>Fetch 的核心在于对 HTTP 接口的抽象，包括 {{domxref("Request")}}，{{domxref("Response")}}，{{domxref("Headers")}}，{{domxref("Body")}}，以及用于初始化异步请求的 {{domxref("GlobalFetch.fetch","global fetch")}}。得益于 JavaScript 实现的这些抽象好的 HTTP 模块，其他接口能够很方便的使用这些功能。</p>
 
-<p><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> 是大量使用Fetch的API的一个示例。</p>
+<p><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> 是大量使用 Fetch 的 API 的一个示例。</p>
 
 <p>除此之外，Fetch 还利用到了请求的异步特性——它是基于 {{jsxref("Promise-based","Promise")}} 的。</p>
 
 <h2 id="Guard">Guard</h2>
 
-<p>Guard 是 {{domxref("Headers")}} 对象的特性，基于不同的情况，它可以有以下取值：<code>immutable、</code><code>request<font face="Open Sans, Arial, sans-serif">、</font></code><code>request-no-cors<font face="Open Sans, Arial, sans-serif">、</font></code><code>response 或<font face="Open Sans, Arial, sans-serif"> </font></code><code>none。</code></p>
+<p>Guard 是 {{domxref("Headers")}} 对象的特性，基于不同的情况，它可以有以下取值：<code>immutable、</code><code>request、</code><code>request-no-cors、</code><code>response 或 </code><code>none。</code></p>
 
 <p>当使用 {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}} 创建一个新的 {{domxref("Headers")}} 对象的时候，它的 guard 被设置成 <code>none（默认值）。当创建 </code>{{domxref("Request")}} 或 {{domxref("Response")}} 对象的时候，它将拥有一个按照以下规则实现的与之关联的 {{domxref("Headers")}} 对象：</p>
 

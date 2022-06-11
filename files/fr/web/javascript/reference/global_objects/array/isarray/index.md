@@ -24,7 +24,9 @@ Array.isArray(undefined);   // false
 
 ## Syntaxe
 
-    Array.isArray(value)
+```js
+Array.isArray(value)
+```
 
 ### Paramètres
 
@@ -83,8 +85,8 @@ if(!Array.isArray) {
 | Spécification                                                                        | État                         | Commentaires                                            |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}         | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ESDraft')}} |                                                         |
+| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}         | {{Spec2('ES6')}}         |                                                         |
+| {{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ESDraft')}} |                                                         |
 
 ## Compatibilité des navigateurs
 

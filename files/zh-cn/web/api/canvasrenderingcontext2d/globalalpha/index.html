@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.globalAlpha</code></strong> 是 Canvas 2D API 用来描述在canvas上绘图之前，设置图形和图片透明度的属性。 数值的范围从 0.0 （完全透明）到1.0 （完全不透明）。</p>
+<p><strong><code>CanvasRenderingContext2D.globalAlpha</code></strong> 是 Canvas 2D API 用来描述在 canvas 上绘图之前，设置图形和图片透明度的属性。 数值的范围从 0.0（完全透明）到 1.0（完全不透明）。</p>
 
 <p>在 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
@@ -18,14 +18,14 @@ translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 
 <dl>
  <dt><code>value</code></dt>
- <dd>数字在 0.0  （完全透明）和 1.0 （完全不透明）之间。 默认值是 1.0。 如果数值不在范围内，包括{{jsxref("Infinity")}} 和{{jsxref("NaN")}} ，无法赋值，并且 <code>globalAlpha</code> 会保持原有的数值。</dd>
+ <dd>数字在 0.0  （完全透明）和 1.0（完全不透明）之间。 默认值是 1.0。如果数值不在范围内，包括{{jsxref("Infinity")}} 和{{jsxref("NaN")}} ，无法赋值，并且 <code>globalAlpha</code> 会保持原有的数值。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="Using_the_globalAlpha_property" name="Using_the_globalAlpha_property">使用 <code>globalAlpha</code> 属性</h3>
 
-<p>这是一段使用 <code>globalAlpha</code> 属性的简单代码片段，绘制了2个半透明的矩形。</p>
+<p>这是一段使用 <code>globalAlpha</code> 属性的简单代码片段，绘制了 2 个半透明的矩形。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -46,7 +46,7 @@ ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
 </pre>
 
-<p>修改下面的代码并在线查看 canvas的变化：</p>
+<p>修改下面的代码并在线查看 canvas 的变化：</p>
 
 <div class="hidden">
 <h6 id="Playable_code" name="Playable_code">Playable code</h6>
@@ -96,7 +96,7 @@ window.addEventListener("load", drawCanvas);
 
 <h3 id="A_globalAlpha_example" name="A_globalAlpha_example"><code>globalAlpha</code> 例子</h3>
 
-<p>此例中， 绘制了4个不同背景色的正方形。 在他们上面，绘制半透明的圆形。 将那个点绘制的所有图形的 <code>globalAlpha</code> 属性值都设置为0.2。通过 for 循环绘制半径逐渐增大的圆形。 最终形成的结果是放射性渐变。通过不停地叠加圆形， 使得先前绘制的圆形的透明度越来越暗。通过增加循环数量绘制更多的圆形，图片中心的背景将会变成完全不透明。</p>
+<p>此例中，绘制了 4 个不同背景色的正方形。在他们上面，绘制半透明的圆形。将那个点绘制的所有图形的 <code>globalAlpha</code> 属性值都设置为 0.2。通过 for 循环绘制半径逐渐增大的圆形。 最终形成的结果是放射性渐变。通过不停地叠加圆形， 使得先前绘制的圆形的透明度越来越暗。通过增加循环数量绘制更多的圆形，图片中心的背景将会变成完全不透明。</p>
 
 <pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 
@@ -130,84 +130,11 @@ for (i=0;i&lt;7;i++){
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
-
-<ul>
- <li>从 Gecko 5.0开始， 对 <code>globalAlpha</code> 指定无效的值不再抛出 <code>SYNTAX_ERR</code> 异常； 它们已经被默默地忽略了。</li>
-</ul>
-
-<h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
-
-<ul>
- <li>在基于 WebKit- 和 Blink- 的浏览器中， 除了此属性外，还实现了一个不标准的并且不赞成使用的方法 <code>ctx.setAlpha()</code> 。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.globalAlpha")}}
 
 <h2 id="参见">参见</h2>
 

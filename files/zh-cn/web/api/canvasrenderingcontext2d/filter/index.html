@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/filter
 ---
 <div>{{APIRef}} {{SeeCompatTable}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.filter</code></strong> 是Canvas 2D API 提供模糊、灰度等过滤效果的属性 。它类似于 CSS <a href="/en-US/docs/Web/CSS/filter"><code>filter</code></a> 属性，并且接受相同的函数。</p>
+<p><strong><code>CanvasRenderingContext2D.filter</code></strong> 是 Canvas 2D API 提供模糊、灰度等过滤效果的属性。它类似于 CSS <a href="/en-US/docs/Web/CSS/filter"><code>filter</code></a> 属性，并且接受相同的函数。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,15 +19,15 @@ ctx.filter = "none";</var>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#url()">url</a>(&lt;url&gt;)</code></dt>
- <dd><code>url()</code> 函数接受一个描述SVG过滤器的XML文件的位置， 并且可以包含一个针对特殊过滤元素的锚点。</dd>
+ <dd><code>url()</code> 函数接受一个描述 SVG 过滤器的 XML 文件的位置， 并且可以包含一个针对特殊过滤元素的锚点。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#blur()">blur</a>(&lt;length&gt;)</code></dt>
- <dd>length：CSS 长度。 给绘图提供一个高斯模糊。</dd>
+ <dd>length：CSS 长度。给绘图提供一个高斯模糊。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#brightness()">brightness</a>(&lt;percentage&gt;)</code></dt>
- <dd>Percentage：百分比。 给绘图提供一个线性乘法，调节亮度的高低。</dd>
+ <dd>Percentage：百分比。给绘图提供一个线性乘法，调节亮度的高低。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#contrast()">contrast</a>(&lt;percentage&gt;)</code></dt>
- <dd>Percentage：百分比。 调节图像的对比度。 当数值为 <code>0%</code> 时，图像会完全变黑。当数值为 <code>100%</code> 时，图像没有任何变化。</dd>
+ <dd>Percentage：百分比。 调节图像的对比度。当数值为 <code>0%</code> 时，图像会完全变黑。当数值为 <code>100%</code> 时，图像没有任何变化。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#contrast()">drop-shadow</a>(&lt;offset-x&gt;, &lt;offset-y&gt;, &lt;blur-radius&gt;, &lt;spread-radius&gt;, &lt;color&gt;)</code></dt>
- <dd>给绘图提供阴影。 阴影事实上是在图像下面呈现出模糊的，通过对图像的透明遮罩进行偏移绘制出一种特殊的颜色，组合而成的效果。 这个函数接受5个参数：
+ <dd>给绘图提供阴影。阴影事实上是在图像下面呈现出模糊的，通过对图像的透明遮罩进行偏移绘制出一种特殊的颜色，组合而成的效果。这个函数接受 5 个参数：
  <ul>
   <li><code>&lt;offset-x&gt;</code>: 查看 {{cssxref("&lt;length&gt;")}} 允许的单位。描述阴影的水平距离。</li>
   <li><code>&lt;offset-y&gt;</code>: 查看 {{cssxref("&lt;length&gt;")}} 允许的单位。描述阴影的垂直距离。</li>
@@ -37,19 +37,19 @@ ctx.filter = "none";</var>
  </ul>
  </dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#grayscale()">grayscale</a>(&lt;percentage&gt;)</code></dt>
- <dd>Percentage：百分比。将图像转换成灰色的图片。 当值为100%时，图像会完全变成灰色。 当值为0%时，图像没有任何变化。</dd>
+ <dd>Percentage：百分比。将图像转换成灰色的图片。 当值为 100% 时，图像会完全变成灰色。 当值为 0% 时，图像没有任何变化。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#hue-rotate()">hue-rotate</a>(&lt;degree&gt;)</code></dt>
- <dd>Degree：度数。 对图像进行色彩旋转的处理。当值为0度时，图像没有任何变化。</dd>
+ <dd>Degree：度数。 对图像进行色彩旋转的处理。当值为 0 度时，图像没有任何变化。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#invert()">invert</a>(&lt;percentage&gt;)</code></dt>
- <dd>Percentage：百分比。反色图像（呈现出照片底片的效果）。当值为100%时，图像会完全反色处理。当值为0%时，图像没有任何变化。</dd>
+ <dd>Percentage：百分比。反色图像（呈现出照片底片的效果）。当值为 100% 时，图像会完全反色处理。当值为 0% 时，图像没有任何变化。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#opacity()">opacity</a>(&lt;percentage&gt;)</code></dt>
- <dd>Percentage：百分比。对图像进行透明度的处理。 当值为0%时，图像完全透明。当值为100%时，图像没有任何变化。</dd>
+ <dd>Percentage：百分比。对图像进行透明度的处理。当值为 0% 时，图像完全透明。当值为 100% 时，图像没有任何变化。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#saturate()">saturate</a>(&lt;percentage&gt;)</code></dt>
- <dd>对图像进行饱和度的处理。当值为0%时，图像完全不饱和。当值为100%时，图像没有任何变化。</dd>
+ <dd>对图像进行饱和度的处理。当值为 0% 时，图像完全不饱和。当值为 100% 时，图像没有任何变化。</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/filter#sepia()">sepia</a>(&lt;percentage&gt;)</code></dt>
- <dd>对图像进行深褐色处理（怀旧风格）。 当值为100%时，图像完全变成深褐色。当值为0%时，图像没有任何变化。</dd>
+ <dd>对图像进行深褐色处理（怀旧风格）。当值为 100% 时，图像完全变成深褐色。当值为 0% 时，图像没有任何变化。</dd>
  <dt><code>none</code></dt>
- <dd>没有使用filter。</dd>
+ <dd>没有使用 filter。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -73,7 +73,7 @@ ctx.font = "48px serif";
 ctx.strokeText("Hello world", 50, 100);
 </pre>
 
-<p>修改下面的代码并在线查看canvas的变化 (确保你的浏览器提供这些特性，查看浏览器兼容性列表):</p>
+<p>修改下面的代码并在线查看 canvas 的变化 (确保你的浏览器提供这些特性，查看浏览器兼容性列表):</p>
 
 <div class="hidden">
 <h6 id="Playable_code" name="Playable_code">Playable code</h6>
@@ -123,61 +123,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("35") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("35") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
-
-<ul>
- <li>[1] <code>filter</code> 属性默认是无效的。你可以通过设置 <code>canvas.filters.enabled</code> 的值为true进行启用。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.filter")}}
 
 <h2 id="参见">参见</h2>
 

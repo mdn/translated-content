@@ -21,7 +21,9 @@ Voir également {{jsxref("Array.prototype.reduce()")}} pour une méthode qui ré
 
 ## Syntaxe
 
-    arr.reduceRight(callback[, valeurInitiale])
+```js
+arr.reduceRight(callback[, valeurInitiale])
+```
 
 ### Paramètres
 
@@ -47,13 +49,13 @@ La valeur obtenue grâce à la fonction de réduction.
 
 ## Description
 
-`reduceRight` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau, les éléments vides sont ignorés. La fonction `callback` utilise quatre arguments : la valeur initiale (ou la valeur retournée par le précédent appel de la fonction` callback`), la valeur de l'élément courant, l'index de l'élément courant, et le tableau qui est parcouru.
+`reduceRight` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau, les éléments vides sont ignorés. La fonction `callback` utilise quatre arguments : la valeur initiale (ou la valeur retournée par le précédent appel de la fonction `callback`), la valeur de l'élément courant, l'index de l'élément courant, et le tableau qui est parcouru.
 
 L'usage de `reduceRight` avec définition d'un `callback` devrait ressembler à ceci :
 
 ```js
 array.reduceRight(function(accumulator, valeurCourante, index, array) {
-    // ...
+    // ...
 });
 ```
 

@@ -16,7 +16,7 @@ Cette propriété représente la cible originale de l'évènement. Elle est spé
 
 Si l'évènement a été déporté pour une autre raison qu'une traverséee de frontière anonyme, cette propriété correspondra à la cible avant la déportation de l'évènement. Par exemples, les évènements de la souris sont déportés vers leur nœud parent lorsqu'ils se produisent sur des nœuds texte (cf. {{Bug(185889)}}). Dans ce cas [`currentTarget`](/fr/docs/Web/API/Event/currentTarget) pointera vers le parent et `explicitOriginalTarget` vers le nœud texte.
 
-À la différence de [`originalTarget`](/fr/docs/Web/API/Event/originalTarget), `explicitOriginalTarget` ne contiendra jamais de contenu anonyme.
+À la différence de [`originalTarget`](/fr/docs/Web/API/Event/originalTarget), `explicitOriginalTarget` ne contiendra jamais de contenu anonyme.
 
 Voir aussi une [comparaison des cibles pour les évènements](/fr/docs/DOM/event/Comparison_of_Event_Targets).
 

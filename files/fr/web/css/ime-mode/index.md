@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/ime-mode
 ---
-{{CSSRef}}{{obsolete_header}}
+{{CSSRef}}{{deprecated_header}}
 
 La propriété **`ime-mode`** contrôle l'état de l'éditeur de méthode d'entrée (IME) pour la saisie des champs textuels.
 

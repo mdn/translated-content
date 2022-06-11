@@ -113,7 +113,7 @@ new String(thing)</pre>
   </tr>
   <tr>
    <td><code>\xXX</code></td>
-   <td>Latin-1 字符(x小写)</td>
+   <td>Latin-1 字符 (x 小写)</td>
   </tr>
  </tbody>
 </table>
@@ -152,7 +152,7 @@ otherwise my code is unreadable.";</code></pre>
 <pre class="brush: js">return 'cat'.charAt(1); // returns "a"
 </pre>
 
-<p>另一种 (在ECMAScript 5中有所介绍) 是把字符串当作一个类似数组的对象，其中的每个字符对应一个数值索引：</p>
+<p>另一种 (在 ECMAScript 5 中有所介绍) 是把字符串当作一个类似数组的对象，其中的每个字符对应一个数值索引：</p>
 
 <pre class="brush: js">return 'cat'[1]; // returns "a"
 </pre>
@@ -161,7 +161,7 @@ otherwise my code is unreadable.";</code></pre>
 
 <h3 id="Comparing_strings">字符串比较</h3>
 
-<p>熟练使用 C 语言的开发者经常使用 <code>strcmp</code> 函数来比较字符串，但在 JavaScript 中，你只需要使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作符(&gt;/&lt;/&gt;=/&lt;=)</a>：</p>
+<p>熟练使用 C 语言的开发者经常使用 <code>strcmp</code> 函数来比较字符串，但在 JavaScript 中，你只需要使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作符 (&gt;/&lt;/&gt;=/&lt;=)</a>：</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -179,7 +179,7 @@ else
 
 <p>请注意区分 JavaScript 字符串对象和基本字符串值 . ( 对于 {{jsxref("Global_Objects/Boolean", "Boolean")}} 和{{jsxref("Global_Objects/Number", "Numbers")}} 也同样如此.)</p>
 
-<p>字符串字面量 (通过单引号或双引号定义) 和 直接调用 String 方法(没有通过 new 生成字符串对象实例)的字符串都是基本字符串。JavaScript会自动将基本字符串转换为字符串对象，只有将基本字符串转化为字符串对象之后才可以使用字符串对象的方法。当基本字符串需要调用一个字符串对象才有的方法或者查询值的时候(基本字符串是没有这些方法的)，JavaScript 会自动将基本字符串转化为字符串对象并且调用相应的方法或者执行查询。</p>
+<p>字符串字面量 (通过单引号或双引号定义) 和 直接调用 String 方法 (没有通过 new 生成字符串对象实例) 的字符串都是基本字符串。JavaScript 会自动将基本字符串转换为字符串对象，只有将基本字符串转化为字符串对象之后才可以使用字符串对象的方法。当基本字符串需要调用一个字符串对象才有的方法或者查询值的时候 (基本字符串是没有这些方法的)，JavaScript 会自动将基本字符串转化为字符串对象并且调用相应的方法或者执行查询。</p>
 
 <pre class="brush: js">var s_prim = "foo";
 var s_obj = new String(s_prim);
@@ -188,7 +188,7 @@ console.log(typeof s_prim); // Logs "string"
 console.log(typeof s_obj);  // Logs "object"
 </pre>
 
-<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理, 返回对象。 例如：</p>
+<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理，返回对象。 例如：</p>
 
 <pre class="brush: js">s1 = "2 + 2";               // creates a string primitive
 s2 = new String("2 + 2");   // creates a String object
@@ -196,7 +196,7 @@ console.log(eval(s1));      // returns the number 4
 console.log(eval(s2));      // returns the string "2 + 2"
 </pre>
 
-<p>由于上述原因, 当一段代码在需要使用基本字符串的时候却使用了字符串对象就会导致执行失败(虽然一般情况下程序员们并不需要考虑这样的问题)。</p>
+<p>由于上述原因，当一段代码在需要使用基本字符串的时候却使用了字符串对象就会导致执行失败 (虽然一般情况下程序员们并不需要考虑这样的问题)。</p>
 
 <p>利用 {{jsxref("String.valueOf", "valueOf")}} 方法，我们可以将字符串对象转换为其对应的基本字符串。</p>
 
@@ -236,7 +236,7 @@ console.log(eval(s2));      // returns the string "2 + 2"
 <p><strong>警告：</strong>字符串泛型是<strong>非标准的</strong>，<strong>已弃用</strong>，<strong>并且会在不远的</strong><strong>将来删除</strong>。注意，你不能依靠他们的跨浏览器，而不使用下面提供的垫片。</p>
 </div>
 
-<p>应该避免在 Javascript 1.6 （Firefox 浏览器的 JS 引擎）中使用（虽然也支持）将其他对象转化为字符的方法，因为方法并没有成为 ECMA 标准：</p>
+<p>应该避免在 Javascript 1.6（Firefox 浏览器的 JS 引擎）中使用（虽然也支持）将其他对象转化为字符的方法，因为方法并没有成为 ECMA 标准：</p>
 
 <pre class="brush: js">let num = 15;
 console.log(String.replace(num, /5/, '2'));

@@ -17,7 +17,9 @@ La méthode **`return()`** renvoie la valeur fournie et termine le générateur.
 
 ## Syntaxe
 
-    gen.return(valeur)
+```js
+gen.return(valeur)
+```
 
 ### Paramètres
 
@@ -70,7 +72,7 @@ g.next();         // { value: undefined, done: true }
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -2,18 +2,18 @@
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 tags:
-  - 注入CSS
+  - 注入 CSS
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>向一个页面注入CSS</p>
+<p>向一个页面注入 CSS</p>
 
-<p>使用该API前你必须拥有目标页面的权限, 可以是 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">主机权限</a>, 或者使用 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab 权限</a>.</p>
+<p>使用该 API 前你必须拥有目标页面的权限，可以是 <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">主机权限</a>, 或者使用 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab 权限</a>.</p>
 
-<p>你只能向符合 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern </a>的网页注入CSS: 其形式必定是 "http", "https", "file", "ftp" 之一. 你不能向任何浏览器内置页面注入CSS， 比如 about:debugging, about:addons, 或者你打开的一个新的空白页。</p>
+<p>你只能向符合 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern </a>的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。</p>
 
-<p>当再次调用{{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的CSS可能会被清除。</p>
+<p>当再次调用{{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的 CSS 可能会被清除。</p>
 
 <p>这是一个返回<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 的异步函数。</p>
 
@@ -29,19 +29,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <dl>
  <dt><code>tabId</code> {{optional_inline}}</dt>
- <dd><code>integer，</code> 将要注入css的标签ID。默认为当前窗口的活动标签。</dd>
+ <dd><code>integer，</code> 将要注入 css 的标签 ID。默认为当前窗口的活动标签。</dd>
  <dt><code>details</code></dt>
  <dd>{{WebExtAPIRef('extensionTypes.InjectDetails')}}. 对注入的描述，包含以下属性：</dd>
  <dd>
  <dl class="reference-values">
   <dt><code>allFrames</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. 如果为真，该CSS会被注入到该页面的所有框架，如果为假，Css只会注入到最顶层框架，默认为假。</dd>
+  <dd><code>boolean</code>. 如果为真，该 CSS 会被注入到该页面的所有框架，如果为假，Css 只会注入到最顶层框架，默认为假。</dd>
   <dt><code>code</code>{{optional_inline}}</dt>
   <dd><code>string</code>. 将要注入的代码。</dd>
   <dt><code>file</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. 包含将要注入代码的文件路径，在Firefox中，相对URLs 决定于当前页面的URL，在Chrome中，决定于扩展的基础URL。为了跨浏览器工作，你应该使用一个从扩展根目录开始的绝对路径，比如 : <code>"/path/to/stylesheet.css"</code>.</dd>
+  <dd><code>string</code>. 包含将要注入代码的文件路径，在 Firefox 中，相对 URLs 决定于当前页面的 URL，在 Chrome 中，决定于扩展的基础 URL。为了跨浏览器工作，你应该使用一个从扩展根目录开始的绝对路径，比如 : <code>"/path/to/stylesheet.css"</code>.</dd>
   <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. CSS应该被注入的框架. 默认为 <code>0</code> (顶层框架).</dd>
+  <dd><code>integer</code>. CSS 应该被注入的框架。默认为 <code>0</code> (顶层框架).</dd>
   <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. If <code>true</code>, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your add-on has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to <code>false</code>.</dd>
   <dt><code>runAt</code>{{optional_inline}}</dt>
@@ -52,7 +52,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <h3 id="Return_value">Return value</h3>
 
-<p> <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 将会在CSS成功注入时 被填充，如果有任何错误发生，promise将会被注入一个错误消息。</p>
+<p> <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 将会在 CSS 成功注入时 被填充，如果有任何错误发生，promise 将会被注入一个错误消息。</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -60,7 +60,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <h2 id="例子">例子</h2>
 
-<p>下面例子将通过字符串变量形式向当前活动标签注入一段CSS代码</p>
+<p>下面例子将通过字符串变量形式向当前活动标签注入一段 CSS 代码</p>
 
 <pre class="brush: js">var css = "body { border: 20px dotted pink; }";
 
@@ -74,7 +74,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
   insertingCSS.then(null, onError);
 });</pre>
 
-<p>下面例子将以通过加载文件形式向页面注入CSS。CSS被注入在ID为2的tab中。</p>
+<p>下面例子将以通过加载文件形式向页面注入 CSS。CSS 被注入在 ID 为 2 的 tab 中。</p>
 
 <pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
 
@@ -90,7 +90,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <div class="note"><strong>致谢</strong>
 
-<p>本页 API 以谷歌 Chromium的 <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API为基础. 该篇文档由Chromium 代码 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>衍变而来.</p>
+<p>本页 API 以谷歌 Chromium 的 <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API 为基础。该篇文档由 Chromium 代码 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>衍变而来。</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

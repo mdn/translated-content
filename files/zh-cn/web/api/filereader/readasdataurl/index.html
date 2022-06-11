@@ -8,7 +8,7 @@ translation_of: Web/API/FileReader/readAsDataURL
 ---
 <div>{{APIRef("File API")}}</div>
 
-<p><code>readAsDataURL</code> 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。读取操作完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成已完成<code>DONE</code>，并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含一个<code>data:</code>URL格式的字符串（base64编码）以表示所读取文件的内容。</p>
+<p><code>readAsDataURL</code> 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。读取操作完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成已完成<code>DONE</code>，并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含一个<code>data:</code>URL 格式的字符串（base64 编码）以表示所读取文件的内容。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -46,7 +46,7 @@ translation_of: Web/API/FileReader/readAsDataURL
 
 <h3 id="演示">演示</h3>
 
-<p>{{EmbedLiveSample("Example", "100%", 240)}}</p>
+<p>{{EmbedLiveSample("示例", "100%", 240)}}</p>
 
 <h2 id="读取多个文件的例子">读取多个文件的例子</h2>
 
@@ -88,7 +88,7 @@ translation_of: Web/API/FileReader/readAsDataURL
 }
 </pre>
 
-<div class="note"><strong>注意:</strong> Internet Explorer  10 之前的版本并不支持  <a href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> 。关于图片文件预览的兼容性解决方案，可以查看 <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a> 或者 <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a> 。</div>
+<div class="note"><strong>注意：</strong> Internet Explorer  10 之前的版本并不支持  <a href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> 。关于图片文件预览的兼容性解决方案，可以查看 <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a> 或者 <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a> 。</div>
 
 <h2 id="规范">规范</h2>
 

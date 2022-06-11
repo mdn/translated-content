@@ -8,7 +8,7 @@ translation_of: Web/API/Element/innerHTML
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><strong><code>Element.innerHTML</code></strong> 属性设置或获取HTML语法表示的元素的后代。</p>
+<p><strong><code>Element.innerHTML</code></strong> 属性设置或获取 HTML 语法表示的元素的后代。</p>
 
 <div class="note">
 <p><strong>Note: </strong>如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 <code>(&amp;),</code> <code>(&lt;),</code>  或<code>(&gt;)</code>, <code>innerHTML</code> 将这些字符分别返回为&amp;amp;, &amp;lt; 和 &amp;gt; 。使用{{domxref("Node.textContent")}}  可获取一个这些文本节点内容的正确副本。</p>
@@ -24,23 +24,23 @@ element.innerHTML = htmlString;
 
 <h3 id="值">值</h3>
 
-<p>{{domxref("DOMString")}} 包含元素后代的HTML序列。设置元素的 <code>innerHTML</code> 将会删除所有该元素的后代并以上面给出的 htmlString 替代。</p>
+<p>{{domxref("DOMString")}} 包含元素后代的 HTML 序列。设置元素的 <code>innerHTML</code> 将会删除所有该元素的后代并以上面给出的 htmlString 替代。</p>
 
 <h3 id="例外">例外</h3>
 
 <p><strong><code>SyntaxError</code> </strong></p>
 
-<p>        当 HTML 没有被正确标记时，设置 <code>innerHTML</code> 将会抛出语法错误。</p>
+<p>当 HTML 没有被正确标记时，设置 <code>innerHTML</code> 将会抛出语法错误。</p>
 
 <p><strong><code>NoModificationAllowedError</code> </strong></p>
 
-<p>        当父元素是 {{domxref("Document")}} 时，设置 <code>innerHTML</code> 将会提示不允许修改。</p>
+<p>当父元素是 {{domxref("Document")}} 时，设置 <code>innerHTML</code> 将会提示不允许修改。</p>
 
 <h2 id="使用说明">使用说明</h2>
 
 <p><code>innerHTML</code> 属性可以用来检查当前页面自最初加载到当前的 HTML 源码的变化。</p>
 
-<h3 id="获取元素的HTML">获取元素的HTML</h3>
+<h3 id="获取元素的HTML">获取元素的 HTML</h3>
 
 <p>获取 <code>innerHTML</code> 会导致用户代理序列化 由元素后代组成的 HTML 或者 XML 。返回结果字符串。</p>
 
@@ -74,8 +74,8 @@ element.innerHTML = htmlString;
 <p>当给 <code>innerHTML</code> 设置一个值的时候到底发生了什么？用户代理按照以下步骤：</p>
 
 <ol>
- <li>给定的值被解析为 HTML 或者 XML （取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。</li>
- <li>如果元素内容被替换成 {{HTMLElement("template")}}  元素，<code>&lt;template&gt;</code> 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤1中创建的新的 <code>DocumentFragment</code>。</li>
+ <li>给定的值被解析为 HTML 或者 XML（取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。</li>
+ <li>如果元素内容被替换成 {{HTMLElement("template")}}  元素，<code>&lt;template&gt;</code> 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤 1 中创建的新的 <code>DocumentFragment</code>。</li>
  <li>对于其他所有元素，元素的内容都被替换为新的 <code>DocumentFragment</code>节点。</li>
 </ol>
 
@@ -107,7 +107,7 @@ el.innerHTML = name; // shows the alert</code>
 <p><strong>警告</strong>：如果你的项目将要经过各种形式的安全检查的话，使用 <code>innerHTML</code> 可能导致代码被拒绝。例如，如果你在<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">浏览器扩展</a>中<a href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation">使用</a><a href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation"> <code>innerHTML</code></a> 并将扩展提交到 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> 的话，它将会在自动审核过程中被拒绝。</p>
 </div>
 
-<h2 id="例子">例子</h2>
+<h2 id="示例">示例</h2>
 
 <p>这个例子使用 <code>innerHTML</code> 创建一种机制用于将消息记录到网页上的框中。</p>
 
@@ -124,7 +124,7 @@ el.innerHTML = name; // shows the alert</code>
 log("Logging mouse events inside this container...");</code>
 </pre>
 
-<p>log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有 “log” 类的框上。</p>
+<p>log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有 “log” 类的框上。</p>
 
 <p>现在添加第二个方法：记录基于事件 (比如 {{event("mousedown")}}, {{event("click")}}, 和 {{event("mouseenter")}}) 的 {{domxref("MouseEvent")}} 的信息。</p>
 
@@ -181,7 +181,7 @@ boxElem.addEventListener("mouseleave", logEvent);</code>
 
 <p>结果就像下面展示的那样。你可以通过移动鼠标进出盒子，点击盒子等等来查看记录输出。</p>
 
-<p>{{EmbedLiveSample("Example", 640, 350)}}</p>
+<p>{{EmbedLiveSample("示例", 640, 350)}}</p>
 
 <h2 id="规范">规范</h2>
 

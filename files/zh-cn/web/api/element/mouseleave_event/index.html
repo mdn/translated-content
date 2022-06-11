@@ -5,7 +5,7 @@ translation_of: Web/API/Element/mouseleave_event
 ---
 <div>{{APIRef}}</div>
 
-<p class="summary">指点设备（通常是鼠标）的指针移出某个元素时，会触发<code>mouseleave</code>事件。</p>
+<p>指点设备（通常是鼠标）的指针移出某个元素时，会触发<code>mouseleave</code>事件。</p>
 
 <p><code>mouseleave</code>  和 {{event('mouseout')}} 是相似的，但是两者的不同在于<code>mouseleave</code> 不会冒泡而<code>mouseout</code> 会冒泡。<br>
  这意味着当指针离开元素及其所有后代时，会触发<code>mouseleave</code>，而当指针离开元素或离开元素的后代（即使指针仍在元素内）时，会触发<code>mouseout</code>。</p>
@@ -17,8 +17,8 @@ translation_of: Web/API/Element/mouseleave_event
    <td><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5911/=mouseout.png"></td>
   </tr>
   <tr>
-   <td>当离开它们时，一个<code>mouseleave</code>事件被发送到层次结构的每个元素。当指针从文本移动到这里表示的最外面的div之外的区域时，这里4个事件会发送到层次结构的四个元素。</td>
-   <td>一个单一的鼠标事件<code>mouseout</code>被发送到DOM树最深的元素，然后它冒泡层次，直到它被处理程序取消或到达根。</td>
+   <td>当离开它们时，一个<code>mouseleave</code>事件被发送到层次结构的每个元素。当指针从文本移动到这里表示的最外面的 div 之外的区域时，这里 4 个事件会发送到层次结构的四个元素。</td>
+   <td>一个单一的鼠标事件<code>mouseout</code>被发送到 DOM 树最深的元素，然后它冒泡层次，直到它被处理程序取消或到达根。</td>
   </tr>
  </tbody>
 </table>
@@ -56,7 +56,7 @@ translation_of: Web/API/Element/mouseleave_event
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>事件目标（DOM树中最顶端的目标）。</td>
+   <td>事件目标（DOM 树中最顶端的目标）。</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
@@ -91,64 +91,64 @@ translation_of: Web/API/Element/mouseleave_event
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td><code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件: 互补事件的目标(详情查看<a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>)。</td>
+   <td><code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件：互补事件的目标 (详情查看<a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>)。</td>
   </tr>
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>全局（屏幕）坐标中鼠标指针的X坐标。</td>
+   <td>全局（屏幕）坐标中鼠标指针的 X 坐标。</td>
   </tr>
   <tr>
    <td><code>screenY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>全局（屏幕）坐标中鼠标指针的Y坐标。</td>
+   <td>全局（屏幕）坐标中鼠标指针的 Y 坐标。</td>
   </tr>
   <tr>
    <td><code>clientX</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针在本地（DOM内容）坐标中的X坐标。</td>
+   <td>鼠标指针在本地（DOM 内容）坐标中的 X 坐标。</td>
   </tr>
   <tr>
    <td><code>clientY</code> {{readonlyInline}}</td>
    <td>long</td>
-   <td>鼠标指针在本地（DOM内容）坐标中的Y坐标。</td>
+   <td>鼠标指针在本地（DOM 内容）坐标中的 Y 坐标。</td>
   </tr>
   <tr>
    <td><code>button</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>这总是为0，因为没有按钮按下触发这个事件（鼠标移动触发的事件）。</td>
+   <td>这总是为 0，因为没有按钮按下触发这个事件（鼠标移动触发的事件）。</td>
   </tr>
   <tr>
    <td><code>buttons</code> {{readonlyInline}}</td>
    <td>unsigned short</td>
-   <td>当鼠标事件被触发时按下按键：左按键= 1，右按键= 2，中（轮）按键= 4，第四按键（通常为“浏览器后退”按键）= 8，第五按键（通常为“浏览器前进“按键）= 16。如果按下两个或更多按键，则返回值的逻辑和。例如，如果按下左按键和右按键，返回3（= 1 | 2）。<a href="/en-US/docs/Web/API/MouseEvent">更多信息</a>。</td>
+   <td>当鼠标事件被触发时按下按键：左按键= 1，右按键= 2，中（轮）按键= 4，第四按键（通常为“浏览器后退”按键）= 8，第五按键（通常为“浏览器前进“按键）= 16。如果按下两个或更多按键，则返回值的逻辑和。例如，如果按下左按键和右按键，返回 3（= 1 | 2）。<a href="/en-US/docs/Web/API/MouseEvent">更多信息</a>。</td>
   </tr>
   <tr>
    <td><code>mozPressure</code> {{readonlyInline}}</td>
    <td>float</td>
-   <td>生成事件时施加到触摸或tabdevice的压力量;此值介于0.0（最小压力）和1.0（最大压力）之间。</td>
+   <td>生成事件时施加到触摸或 tabdevice 的压力量;此值介于 0.0（最小压力）和 1.0（最大压力）之间。</td>
   </tr>
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
    <td>
-    <p>当事件触发时，Ctrl键是被按下的，则为<code>true</code> ，否则为<code>false</code></p>
+    <p>当事件触发时，Ctrl 键是被按下的，则为<code>true</code> ，否则为<code>false</code></p>
    </td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件触发时，shift键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
+   <td>当事件触发时，shift 键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件触发时，alt键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
+   <td>当事件触发时，alt 键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td>当事件触发时，meta键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
+   <td>当事件触发时，meta 键是被按下的，则为<code>true</code> ，否则为<code>false</code></td>
   </tr>
  </tbody>
 </table>
@@ -159,7 +159,7 @@ translation_of: Web/API/Element/mouseleave_event
 
 <p>以下示例说明了如何使用<code>mouseout</code>来模拟<code>mouseleave</code>事件的事件委托原则。</p>
 
-<p class="brush: html"> </p>
+<p> </p>
 
 <pre class="brush: html">&lt;ul id="test"&gt;
   &lt;li&gt;
@@ -226,88 +226,7 @@ translation_of: Web/API/Element/mouseleave_event
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>30<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10<sup>[2]</sup></td>
-   <td>5.5</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatNo}} 15.0<br>
-    17.0</td>
-   <td>7<sup>[3]</sup></td>
-  </tr>
-  <tr>
-   <td>On disabled form elements</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("44.0")}}<sup>[4]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>On disabled form elements</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 实现于 <a href="https://crbug.com/236215">bug 236215</a>.</p>
-
-<p>[2] 实现于{{bug("432698")}}.</p>
-
-<p>[3] Safari 7 会在许多不适当的情形下引发该事件,使得这个事件变得无用.详情参阅<a href="https://crbug.com/470258">bug 470258</a>  (老版Chrome也有类似问题). Safari 8 已修正.</p>
-
-<p>[4] 实现于 {{bug("218093")}}.</p>
+{{Compat("api.Element.mouseleave_event")}}
 
 <h2 id="相关链接">相关链接</h2>
 

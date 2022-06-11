@@ -51,7 +51,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 ## Icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec votre menu contextuel, voir  [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Systeme de conception de Photon](https://design.firefox.com/photon/index.html).
+Pour plus de détails sur la création d'icônes à utiliser avec votre menu contextuel, voir  [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Systeme de conception de Photon](https://design.firefox.com/photon/index.html).
 
 ## Exemples
 

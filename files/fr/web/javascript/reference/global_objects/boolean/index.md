@@ -1,138 +1,120 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Constructeur
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean
+browser-compat: javascript.builtins.Boolean
 ---
 {{JSRef}}
 
-L'objet **`Boolean`** est un objet permettant de représenter une valeur booléenne.
-
-## Syntaxe
-
-    new Boolean([valeur])
-
-## Paramètres
-
-- `valeur`{{optional_inline}}
-  - : Paramètre optionnel, la valeur initiale de l'objet `Boolean`.
+L'objet **`Boolean`** est une enveloppe objet pour représenter une valeur booléenne.
 
 ## Description
 
-La valeur passée en premier paramètre est, si nécessaire, convertie en valeur booléenne. Si la valeur est omise ou est `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}} ou une chaine de caractères vide (""), l'objet a un valeur initiale à `false` (faux). Si l'objet DOM {{domxref("document.all")}} est passé en argument, la valeur initiale sera également `false`. Toutes les autres valeurs, y compris n'importe quel objet, un tableau vide (`[]`), ou une chaine de caractères `"false"`, créént un objet avec une valeur initiale à `true` (vrai).
+La valeur passée en premier paramètre est, si nécessaire, convertie en valeur booléenne. Si la valeur est omise ou est `0`, `-0`, [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), `false`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ou une chaîne de caractères vide (`""`), l'objet a une valeur initiale de `false` (faux). Toutes les autres valeurs, y compris n'importe quel objet, un tableau vide (`[]`), ou une chaîne de caractères `"false"`, créent un objet avec une valeur initiale de `true` (vrai).
 
-Ne pas confondre les valeurs primitives booléennes `true` et `false` avec les valeurs _true_ et _false_ d'un objet Booléen.
+Il ne faut pas confondre les valeurs primitives booléennes `true` et `false` avec les valeurs `true` et `false` d'un objet `Boolean`.
 
-Tout objet dont la valeur n'est ni  `undefined` ni `null`, incluant un objet Booléen dont la valeur est fausse, évalue à `true` lorsqu'il est à une instruction conditionnelle. Par exemple, la condition (voir {{jsxref("Instructions/if...else", "if")}}), dans le code suivant, est validée si l'expression est évaluée à `true` :
+Tout objet dont la valeur n'est ni [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ni [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), incluant un objet `Boolean` dont la valeur est fausse, est évalué à `true` lorsqu'il est utilisé dans une instruction conditionnelle. Par exemple, la condition de l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) dans le code suivant est validée, car l'expression `x` est évaluée à `true`&nbsp;:
 
 ```js
-var x = new Boolean("false");
+var x = new Boolean(false);
 if (x) {
-  // . . . le code est exécuté
-}
-
-var y = new Boolean(false);
-if (y) {
-  // ce code est également exécuté
+  // ce code est exécuté
 }
 ```
 
-Ce comportement ne s'applique pas aux valeurs primitives booléennes. Par exemple, la condition, dans le code suivant, est évaluée à `false` :
+Ce comportement ne s'applique pas aux valeurs primitives booléennes. Par exemple, dans le code suivant, la condition est évaluée à `false`&nbsp;:
 
 ```js
 var x = false;
 if (x) {
-  // . . . le code n'est pas exécuté
+  // ce code n'est pas exécuté
 }
 ```
 
-Ne pas utiliser un objet `Boolean` pour convertir une valeur non-booléenne en une valeur booléenne. Utilisez plutot une fonction booléenne pour effectuer cette tâche :
+Il ne faut pas utiliser un objet `Boolean` pour convertir une valeur non-booléenne en une valeur booléenne. On utilisera plutôt `Boolean` comme une fonction (sans l'opérateur `new`) ou alors la [double négation](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT)&nbsp;:
 
 ```js
 var x = Boolean(expression);     // conseillé
-var y = new Boolean(expression); // à ne pas utiliser
+var x = !!(expression);          // une autre méthode
+var x = new Boolean(expression); // à ne pas utiliser
 ```
 
-Si vous spécifiez un objet quelconque, incluant un objet booléen qui a une valeur fausse, le nouvel objet `Boolean` a une valeur vraie.
+Si vous spécifiez un objet quelconque, incluant un objet booléen qui vaut `false`, le nouvel objet `Boolean` vaudra `true`.
 
 ```js
-var myFalse = new Boolean(false);   // valeur initiale à false
-var g = Boolean(myFalse);       // valeur initiale à true
-var myString = new String("Hello"); // un object String
-var s = Boolean(myString);      // valeur initiale à true
+var monFalse = new Boolean(false);   // valeur initiale à false
+var g = Boolean(monFalse);           // valeur initiale à true
+var maChaine = new String("Hello");  // un objet String
+var s = Boolean(maChaine);           // valeur initiale à true
 ```
 
-Ne pas utiliser un objet Booléen à la place d'une valeur primitive booléenne.
+Il ne faut pas utiliser un objet `Boolean` à la place d'une valeur primitive booléenne.
 
-> **Note :** Lorsque la propriété historique, non-standard, [`document.all`](/fr/docs/Web/API/Document#Properties) est utilisée comme argument, le constructeur `Boolean` renvoie un objet booléen faux. Cette propriété étant non-standard, son utilisation est déconseillée.
+> **Note :** Lorsque la propriété historique, non-standard, [`document.all`](/fr/docs/Web/API/Document#propriétés) est utilisée comme argument, le constructeur `Boolean` renvoie un objet booléen faux. Cette propriété étant non-standard, son utilisation est déconseillée.
 
-## Propriétés
+Lorsqu'on utilise l'opérateur `==` afin de comparer faiblement un objet avec une valeur primitive booléenne, il est préférable de comprendre clairement ce qui est comparé. Par exemple&nbsp;:
 
-- `Boolean.length`
-  - : Renvoie 1. Le nombre d'arguments pris en charge par le constructeur.
-- {{jsxref("Boolean.prototype")}}
-  - : Représente le prototype du constructeur `Boolean`.
+```js
+if ([]) {
+  console.log("[] est équivalent à vrai");
+  // affiche "[] est équivalent à vrai" dans la console
+}
 
-## Méthodes
+if ([] == false) {
+  console.log("[] == false");
+  // affiche "[] == false"
+} 
+```
 
-L'objet global `Boolean` ne contient pas ses propres méthodes, cependant, il hérite de certaines méthodes à travers la chaine de prototypes.
+En effet, on a bien `[] == false` bien que `[]` est équivalent à vrai. La comparaison `[] == false` compare la *valeur* de `[]` avec `false`. Or, pour obtenir la *valeur* de `[]`, le moteur JavaScript appelle `[].toString()` dont le résultat vaut `""`, et c'est *cette chaîne de caractères* qui est comparée avec `false`. Autrement dit, `[] == false` est équivalent à `"" == false`. Avec `""` qui est équivalent à faux, on a donc le résultat observé.
 
-## Instances de `Boolean`
+## Constructeur
 
-Toutes les `Boolean` héritent de {{jsxref("Boolean.prototype")}}. Comme avec tous les constructeurs, l'objet prototype dicte les propriétés et les méthodes héritées par les instances.
+- [`Boolean()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean)
+  - : Crée un nouvel objet `Boolean`.
 
-### Propriétés
+## Méthodes des instances
 
-{{page('fr/docs/JavaScript/Reference/Objets_globaux/Boolean/prototype','Propri.C3.A9t.C3.A9s')}}
-
-### Méthodes
-
-{{page('fr/docs/JavaScript/Reference/Objets_globaux/Boolean/prototype','M.C3.A9thodes')}}
+- [`Boolean.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString)
+  - : Renvoie une chaîne de caractères qui est `"true"` ou `"false"` selon la valeur de l'objet. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
+- [`Boolean.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf)
+  - : Renvoie la valeur primitive de l'objet `Boolean`. Il s'agit d'une surcharge de la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
 
 ## Exemples
 
-### Création d'objets `Boolean` avec une valeur initiale à faux
+### Créer des objets `Boolean` dont la valeur initiale est `false`
 
 ```js
-var bNoParam = new Boolean();
+var bSansParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bEmptyString = new Boolean("");
+var bChaineVide = new Boolean('');
 var bfalse = new Boolean(false);
 ```
 
-### Création d'objets `Boolean` avec une valeur initiale à vrai
+### Créer des objets `Boolean` dont la valeur initiale est `true`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean("true");
-var bfalseString = new Boolean("false");
+var bTrue = new Boolean(true);
+var bChaineTrue = new Boolean('true');
+var bChaineFalse = new Boolean('false');
+var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
-var bSuLin = new Boolean("Su Lin");
 ```
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.6', 'Boolean')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-boolean-objects', 'Boolean')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-boolean-objects', 'Boolean')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Boolean.prototype")}}
-- [Les valeurs primitives en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives)
-- {{Glossary("Boolean","booléen")}}
-- [Le type de données booléen (Wikipédia)](https://fr.wikipedia.org/wiki/Bool%C3%A9en)
+- [Booléen](/fr/docs/Glossary/Boolean)
+- [Valeurs primitives booléennes](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)
+- [Le type de données booléen sur Wikipédia](https://fr.wikipedia.org/wiki/Booléen)

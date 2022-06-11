@@ -39,7 +39,7 @@ translation_of: Web/API/Document/dragstart_event
 
 <h2 id="属性">属性</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Property</th>
@@ -191,7 +191,7 @@ translation_of: Web/API/Document/dragstart_event
   }, false);
 
   document.addEventListener("dragstart", function( event ) {
-      // 保存拖动元素的引用(ref.)
+      // 保存拖动元素的引用 (ref.)
       dragged = event.target;
       // 使其半透明
       event.target.style.opacity = .5;
@@ -238,61 +238,13 @@ translation_of: Web/API/Document/dragstart_event
 
 <p>{{ EmbedLiveSample('示例：dropzone') }}</p>
 
-<h2 id="浏览器支持">浏览器支持</h2>
+<h2 id="规范">规范</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Specifications}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10</td>
-   <td>12</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatIE("10")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.dragstart_event")}}
 
 <h2 id="相关事件">相关事件</h2>
 

@@ -1,5 +1,5 @@
 ---
-title: 多媒体的可访问性(Accessible multimedia)
+title: 多媒体的可访问性 (Accessible multimedia)
 slug: Learn/Accessibility/Multimedia
 translation_of: Learn/Accessibility/Multimedia
 original_slug: learn/Accessibility/多媒体
@@ -8,32 +8,32 @@ original_slug: learn/Accessibility/多媒体
 
 <div>{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}</div>
 
-<p class="summary"><font>可能导致可访问性问题（</font>accessibility problems <font>）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。</font></p>
+<p>可能导致可访问性问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">先决条件:</th>
-   <td><font><font>基本的计算机素养，对HTML，CSS和JavaScript的基本理解，</font></font><font><font><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">对可访问性</a> </font></font><font><font>的理解</font><font>。</font></font></td>
+   <th scope="row">先决条件：</th>
+   <td>基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">对可访问性</a> 的理解。</td>
   </tr>
   <tr>
-   <th scope="row">目的:</th>
+   <th scope="row">目的：</th>
    <td>了解多媒体背后的可访问性问题，以及如何克服这些问题。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="多媒体和可访问性"><font><font>多媒体和可访问性</font></font></h2>
+<h2 id="多媒体和可访问性">多媒体和可访问性</h2>
 
-<p><font><font>到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其可访问性，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有</font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics"><font><font>WAI-ARIA</font></font></a><font><font>属性）。</font></font></p>
+<p>到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其可访问性，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a>属性）。</p>
 
-<p><font><font>另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的可访问性。</font><font>图像，视频，</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与画布脚本API或WebGL API绘制图形和动画。"><code>&lt;canvas&gt;</code></a><font><font>元素，Flash电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。</font></font></p>
+<p>另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的可访问性。图像，视频，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与画布脚本API或WebGL API绘制图形和动画。"><code>&lt;canvas&gt;</code></a>元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。</p>
 
-<p><font><font>但不要绝望 - 在这里我们将帮助您浏览可用于使多媒体更容易访问的技术。</font></font></p>
+<p>但不要绝望 - 在这里我们将帮助您浏览可用于使多媒体更容易访问的技术。</p>
 
 <h2 id="简单图像">简单图像</h2>
 
-<p>我们已经介绍了 HTML 图像的简单文本替代<a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> –– 您可以参考其中了解详细信息。简而言之,应确保在可能的情况下,视觉内容具有替代文本,供屏幕阅读器拾取和读取给其用户。</p>
+<p>我们已经介绍了 HTML 图像的简单文本替代<a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。</p>
 
 <p>示例：</p>
 
@@ -47,7 +47,7 @@ original_slug: learn/Accessibility/多媒体
 
 <h3 id="本地_HTML5_控件的问题">本地 HTML5 控件的问题</h3>
 
-<p>HTML5 视频和音频实例甚至附带一组内置控件,允许您直接在盒子控制媒体。例如(请参阅<a href="om/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html">本地控件.html</a> 源代码和<a href="http://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html">实时演示</a>):</p>
+<p>HTML5 视频和音频实例甚至附带一组内置控件，允许您直接在盒子控制媒体。例如 (请参阅<a href="om/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html">本地控件.html</a> 源代码和<a href="http://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html">实时演示</a>):</p>
 
 <pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="viper.mp3" type="audio/mp3"&gt;
@@ -63,34 +63,34 @@ original_slug: learn/Accessibility/多媒体
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
-<p>控件属性提供播放/暂停按钮、搜索栏等 - 您期望从媒体播放器获得的基本控件。它看起来像在Firefox 和 Chrome:</p>
+<p>控件属性提供播放/暂停按钮、搜索栏等 - 您期望从媒体播放器获得的基本控件。它看起来像在 Firefox 和 Chrome:</p>
 
 <p><img alt="Screenshot of Video Controls in Firefox" src="https://mdn.mozillademos.org/files/14440/native-controls-firefox.png" style="display: block; height: 361px; margin: 0px auto; width: 400px;"></p>
 
 <p><img alt="Screenshot of Video Controls in Chrome" src="https://mdn.mozillademos.org/files/14438/native-controls-chrome.png" style="display: block; height: 344px; margin: 0px auto; width: 400px;"></p>
 
-<p>但是,这些控件存在问题:</p>
+<p>但是，这些控件存在问题：</p>
 
 <ul>
- <li>在除Opera 以外任何浏览器中，它们不可通过键盘访问。</li>
+ <li>在除 Opera 以外任何浏览器中，它们不可通过键盘访问。</li>
  <li>Different browsers give the native controls differing styling and functionality, and they aren't stylable, meaning that they can't be easily made to follow a site style guide.不同的浏览器为本地控件提供了不同的样式和功能（非样式化的），这意味着它们不容易按照网站样式指南进行。</li>
 </ul>
 
-<p>为了解决这个问题,我们可以创建自己的自定义控件。让我们来看看如何。</p>
+<p>为了解决这个问题，我们可以创建自己的自定义控件。让我们来看看如何。</p>
 
 <h3 id="创建自定义音频和视频控件">创建自定义音频和视频控件</h3>
 
 <p>HTML5 视频和音频共享 API — HTML Media Element — 允许您将自定义功能映射到按钮和其他控件––这两个控件都是您自己定义的。</p>
 
-<p>让我们从上面获取视频示例,并向其添加自定义控件。</p>
+<p>让我们从上面获取视频示例，并向其添加自定义控件。</p>
 
 <h4 id="基本设置">基本设置</h4>
 
-<p>首先,获取我们的<a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html">custom-controls-start.html</a>、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css">custom-controls.css</a>、 <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4">rabbit320.mp4</a> 和 <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm">rabbit320.webm</a>文件的副本,并将它们保存在硬盘上的新目录中。</p>
+<p>首先，获取我们的<a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html">custom-controls-start.html</a>、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css">custom-controls.css</a>、 <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4">rabbit320.mp4</a> 和 <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm">rabbit320.webm</a>文件的副本，并将它们保存在硬盘上的新目录中。</p>
 
 <p>创建一个名为 main.js 的新文件并将其保存在同一目录中。</p>
 
-<p>首先,让我们在 HTML 中查看视频播放器的 HTML:</p>
+<p>首先，让我们在 HTML 中查看视频播放器的 HTML:</p>
 
 <pre class="brush: html">&lt;section class="player"&gt;
   &lt;video controls&gt;
@@ -108,11 +108,11 @@ original_slug: learn/Accessibility/多媒体
   &lt;/div&gt;
 &lt;/section&gt;</pre>
 
-<h4 id="JavaScript基本设置">JavaScript基本设置</h4>
+<h4 id="JavaScript基本设置">JavaScript 基本设置</h4>
 
-<p>我们在视频下方插入了一些简单的控制按钮。当然,这些控件在默认情况下不会执行任何操作。要添加功能,我们将使用 JavaScript。</p>
+<p>我们在视频下方插入了一些简单的控制按钮。当然，这些控件在默认情况下不会执行任何操作。要添加功能，我们将使用 JavaScript。</p>
 
-<p>我们首先需要存储对每个控件的引用––将以下内容添加到 JavaScript 文件的顶部:</p>
+<p>我们首先需要存储对每个控件的引用––将以下内容添加到 JavaScript 文件的顶部：</p>
 
 <pre class="brush: js">var playPauseBtn = document.querySelector('.playpause');
 var stopBtn = document.querySelector('.stop');
@@ -120,21 +120,21 @@ var rwdBtn = document.querySelector('.rwd');
 var fwdBtn = document.querySelector('.fwd');
 var timeLabel = document.querySelector('.time');</pre>
 
-<p>接下来,我们需要获取对视频/音频播放器本身的引用––在前面的代码行下方添加此行代码:</p>
+<p>接下来，我们需要获取对视频/音频播放器本身的引用––在前面的代码行下方添加此行代码：</p>
 
 <pre class="brush: js">var player = document.querySelector('video');</pre>
 
-<p>这包含对{{domxref("HTMLMediaElement")}}对象的引用,该对象具有几个有用的属性和方法,可用于将功能连接到我们的按钮。</p>
+<p>这包含对{{domxref("HTMLMediaElement")}}对象的引用，该对象具有几个有用的属性和方法，可用于将功能连接到我们的按钮。</p>
 
-<p>在开始创建按钮功能之前,让我们删除本地控件,以免它们妨碍我们的自定义控件。在 JavaScript 的底部再次添加以下内容:</p>
+<p>在开始创建按钮功能之前，让我们删除本地控件，以免它们妨碍我们的自定义控件。在 JavaScript 的底部再次添加以下内容：</p>
 
 <pre class="brush: js">player.removeAttribute('controls');</pre>
 
-<p>这样做,而不是仅仅不包括控件属性摆在首位有一个优势,如果我们的JavaScript失败,用户仍然有一些控件可用。</p>
+<p>这样做，而不是仅仅不包括控件属性摆在首位有一个优势，如果我们的 JavaScript 失败，用户仍然有一些控件可用。</p>
 
 <h4 id="连接按钮">连接按钮</h4>
 
-<p>首先,让我们设置播放/暂停按钮。我们可以使用一个简单的条件函数在播放和暂停之间切换,如下所示。将其添加到代码底部:</p>
+<p>首先，让我们设置播放/暂停按钮。我们可以使用一个简单的条件函数在播放和暂停之间切换，如下所示。将其添加到代码底部：</p>
 
 <pre class="brush: js">playPauseBtn.onclick = function() {
   if(player.paused) {
@@ -146,7 +146,7 @@ var timeLabel = document.querySelector('.time');</pre>
   }
 };</pre>
 
-<p>接下来,将此代码添加到底部,该代码控制停止按钮:</p>
+<p>接下来，将此代码添加到底部，该代码控制停止按钮：</p>
 
 <pre class="brush: js">stopBtn.onclick = function() {
   player.pause();
@@ -154,9 +154,9 @@ var timeLabel = document.querySelector('.time');</pre>
   playPauseBtn.textContent = 'Play';
 };</pre>
 
-<p>在 {{domxref("HTMLMediaElement")}}s上没有可用的 <code>stop() </code>函数,因此我们改为<code>pause()</code>它,同时将当前时间设置为 0。</p>
+<p>在 {{domxref("HTMLMediaElement")}}s 上没有可用的 <code>stop() </code>函数，因此我们改为<code>pause()</code>它，同时将当前时间设置为 0。</p>
 
-<p>接下来,我们的快退和快进按钮–– 将以下块添加到代码的底部:</p>
+<p>接下来，我们的快退和快进按钮–– 将以下块添加到代码的底部：</p>
 
 <pre class="brush: js">rwdBtn.onclick = function() {
   player.currentTime -= 3;
@@ -171,11 +171,11 @@ fwdBtn.onclick = function() {
   }
 };</pre>
 
-<p>这些非常简单,每次单击它们时,只需将 3 秒添加到<code>currentTime</code>。在真正的视频播放器中,您可能想要一个更精细的查找栏或类似功能。</p>
+<p>这些非常简单，每次单击它们时，只需将 3 秒添加到<code>currentTime</code>。在真正的视频播放器中，您可能想要一个更精细的查找栏或类似功能。</p>
 
-<p>请注意,当按下 Fwd 按钮时,我们还会检查<code>currentTime</code>是否超过总媒体的<code>duration</code>,或者媒体是否未播放。如果任一条件为 true,我们只需停止视频,以避免用户界面出错,如果他们试图在视频未播放时快进,或快进通过视频结束。</p>
+<p>请注意，当按下 Fwd 按钮时，我们还会检查<code>currentTime</code>是否超过总媒体的<code>duration</code>,或者媒体是否未播放。如果任一条件为 true，我们只需停止视频，以避免用户界面出错，如果他们试图在视频未播放时快进，或快进通过视频结束。</p>
 
-<p>最后,将以下内容添加到代码末尾,以控制显示的时间:</p>
+<p>最后，将以下内容添加到代码末尾，以控制显示的时间：</p>
 
 <pre class="brush: js">player.ontimeupdate = function() {
   var minutes = Math.floor(player.currentTime / 60);
@@ -199,11 +199,11 @@ fwdBtn.onclick = function() {
   timeLabel.textContent = mediaTime;
 };</pre>
 
-<p>每次更新时间(每秒一次)时,我们都会触发此功能。它算出给定的当前时间值(以秒为单位)的分钟和秒数,如果分钟或秒值小于 10,则添加前导 0,然后创建显示读出并将其添加到时间标签。</p>
+<p>每次更新时间 (每秒一次) 时，我们都会触发此功能。它算出给定的当前时间值 (以秒为单位) 的分钟和秒数，如果分钟或秒值小于 10，则添加前导 0，然后创建显示读出并将其添加到时间标签。</p>
 
 <h4 id="阅读延伸">阅读延伸</h4>
 
-<p>这为您提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能(包括旧版浏览器的 Flash 回退)的详细信息,请参阅:</p>
+<p>这为您提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能(包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a></li>
@@ -211,51 +211,51 @@ fwdBtn.onclick = function() {
  <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a></li>
 </ul>
 
-<p>我们还创建了一个高级示例,以演示如何创建面向对象的系统,该系统可查找页面上的每个视频和音频播放器(无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅<a href="http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/">custom-controls-oojs</a>(<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS">see the source code</a>)。</p>
+<p>我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅<a href="http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/">custom-controls-oojs</a>(<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS">see the source code</a>)。</p>
 
 <h2 id="音频脚本">音频脚本</h2>
 
-<p>要为聋人提供访问音频内容的机会,您确实需要创建文本脚本。这些可以以某种方式与音频一样包含在与音频相同的页面上,也可以包含在单独的页面上并链接到</p>
+<p>要为聋人提供访问音频内容的机会，您确实需要创建文本脚本。这些可以以某种方式与音频一样包含在与音频相同的页面上，也可以包含在单独的页面上并链接到</p>
 
-<p>在实际创建脚本方面,您的选项包括:</p>
+<p>在实际创建脚本方面，您的选项包括：</p>
 
 <ul>
- <li>商业服务––您可以向专业人士支付报酬进行转录,例如 <a href="https://scribie.com/">Scribie</a>、<a href="https://castingwords.com/">Casting Words</a>或<a href="https://www.rev.com/">Rev</a>公司. 询问并征求意见,以确保您找到一家信誉良好的公司,您可以有效地合作。</li>
- <li>社区/草根/自我转录 – 如果您是工作场所中活跃社区或团队的一员,您可以请求他们帮助翻译。你甚至可以自己去做。</li>
- <li>自动服务 – 提供自动服务,例如,当您将视频上传到 YouTube 时,您可以选择生成自动字幕/脚本。根据语音音频的清晰程度,生成的脚本质量将有很大差异。</li>
+ <li>商业服务––您可以向专业人士支付报酬进行转录，例如 <a href="https://scribie.com/">Scribie</a>、<a href="https://castingwords.com/">Casting Words</a>或<a href="https://www.rev.com/">Rev</a>公司。询问并征求意见，以确保您找到一家信誉良好的公司，您可以有效地合作。</li>
+ <li>社区/草根/自我转录 – 如果您是工作场所中活跃社区或团队的一员，您可以请求他们帮助翻译。你甚至可以自己去做。</li>
+ <li>自动服务 – 提供自动服务，例如，当您将视频上传到 YouTube 时，您可以选择生成自动字幕/脚本。根据语音音频的清晰程度，生成的脚本质量将有很大差异。</li>
 </ul>
 
-<p>和生活中的大多数事情一样,你倾向于得到你所付出的;不同的服务在准确性和制作成绩单所花时间方面会有所不同。如果你支付一个有信誉的公司做转录,你可能会得到它迅速和高质量的。如果你不想付钱,你很可能会以较低的质量完成,并且/或缓慢完成。</p>
+<p>和生活中的大多数事情一样，你倾向于得到你所付出的;不同的服务在准确性和制作成绩单所花时间方面会有所不同。如果你支付一个有信誉的公司做转录，你可能会得到它迅速和高质量的。如果你不想付钱，你很可能会以较低的质量完成，并且/或缓慢完成。</p>
 
-<p>发布音频资源是不行的,但承诺稍后会发布脚本 - 此类承诺通常不会兑现,这将削弱您和您的用户之间的信任。如果您演示的音频类似于面对面会议或现场演讲表演,则可以在演出期间做笔记,与音频一起完整发布笔记,然后寻求帮助,以便稍后清理笔记。</p>
+<p>发布音频资源是不行的，但承诺稍后会发布脚本 - 此类承诺通常不会兑现，这将削弱您和您的用户之间的信任。如果您演示的音频类似于面对面会议或现场演讲表演，则可以在演出期间做笔记，与音频一起完整发布笔记，然后寻求帮助，以便稍后清理笔记。</p>
 
 <h3 id="脚本示例">脚本示例</h3>
 
-<p>如果使用自动服务,则可能需要使用该工具提供的用户界面。例如,查看<a href="https://www.youtube.com/watch?v=zFFBsj97Od8">Audio Transcription Sample 1</a>并选择" <em>More &gt; Transcript</em>"。</p>
+<p>如果使用自动服务，则可能需要使用该工具提供的用户界面。例如，查看<a href="https://www.youtube.com/watch?v=zFFBsj97Od8">Audio Transcription Sample 1</a>并选择" <em>More &gt; Transcript</em>"。</p>
 
-<p>如果要创建自己的用户界面来显示音频和相关脚本,您可以随心所欲地执行此操作,但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的<a href="http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/">audio-transcript-ui</a> 示例(另请参阅<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui">source code</a>)。</p>
+<p>如果要创建自己的用户界面来显示音频和相关脚本，您可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的<a href="http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/">audio-transcript-ui</a> 示例 (另请参阅<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui">source code</a>)。</p>
 
 <h3 id="音频描述">音频描述</h3>
 
-<p>在音频附带视频的情况下,您需要提供某种音频说明来描述该额外内容。</p>
+<p>在音频附带视频的情况下，您需要提供某种音频说明来描述该额外内容。</p>
 
-<p>在许多情况下,这只会采取视频的形式,在这种情况下,您可以使用本文下一节中介绍的技术实现字幕。</p>
+<p>在许多情况下，这只会采取视频的形式，在这种情况下，您可以使用本文下一节中介绍的技术实现字幕。</p>
 
-<p>但是,有一些边缘情况。例如,您可能有一个会议的音频录制,该录音引用了附带的资源,如电子表格或图表。在这种情况下,应确保资源与音频和脚本一起提供,并在成绩单中提及它们的位置专门链接到这些资源。这当然会帮助所有用户,而不仅仅是聋人。</p>
+<p>但是，有一些边缘情况。例如，您可能有一个会议的音频录制，该录音引用了附带的资源，如电子表格或图表。在这种情况下，应确保资源与音频和脚本一起提供，并在成绩单中提及它们的位置专门链接到这些资源。这当然会帮助所有用户，而不仅仅是聋人。</p>
 
 <div class="note">
-<p><strong>注意</strong>:音频脚本通常有助于多个用户组。除了让聋人用户访问音频中包含的信息外,还考虑一个带宽连接较低的用户,他们会发现下载音频不方便。还要考虑在嘈杂的环境中(如酒吧或酒吧)中的用户,他们试图访问信息,但无法通过噪音听到信息。</p>
+<p><strong>注意</strong>:音频脚本通常有助于多个用户组。除了让聋人用户访问音频中包含的信息外，还考虑一个带宽连接较低的用户，他们会发现下载音频不方便。还要考虑在嘈杂的环境中 (如酒吧或酒吧) 中的用户，他们试图访问信息，但无法通过噪音听到信息。</p>
 </div>
 
 <h2 id="视频文本轨道">视频文本轨道</h2>
 
-<p>要使聋人、盲人甚至其他用户组(如低带宽用户或不理解视频录制的语言的用户)可以访问视频,您需要在视频内容中包括文本轨道。</p>
+<p>要使聋人、盲人甚至其他用户组 (如低带宽用户或不理解视频录制的语言的用户) 可以访问视频，您需要在视频内容中包括文本轨道。</p>
 
 <div class="note">
-<p><strong>注意</strong>:文本轨道对于潜在的任何用户也很有用,而不仅仅是那些残障用户。例如,有些用户可能无法听到音频,因为他们处于嘈杂的环境中(如显示体育游戏时的拥挤的酒吧),或者如果其他人在安静的地方(如图书馆),则可能不想打扰其他人。</p>
+<p><strong>注意</strong>:文本轨道对于潜在的任何用户也很有用，而不仅仅是那些残障用户。例如，有些用户可能无法听到音频，因为他们处于嘈杂的环境中 (如显示体育游戏时的拥挤的酒吧),或者如果其他人在安静的地方 (如图书馆),则可能不想打扰其他人。</p>
 </div>
 
-<p>这不是一个新概念 ––电视服务已经关闭了字幕相当长的时间了:</p>
+<p>这不是一个新概念 ––电视服务已经关闭了字幕相当长的时间了：</p>
 
 <p><img alt='Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"' src="https://mdn.mozillademos.org/files/14436/closed-captions.png" style="display: block; height: 240px; margin: 0px auto; width: 320px;"></p>
 
@@ -263,20 +263,20 @@ fwdBtn.onclick = function() {
 
 <p><img alt='An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"' src="https://mdn.mozillademos.org/files/14442/Subtitles_German.jpg" style="display: block; margin: 0 auto;"></p>
 
-<p>不同类型的文本轨道具有不同的目的。你遇到的主要情况是:</p>
+<p>不同类型的文本轨道具有不同的目的。你遇到的主要情况是：</p>
 
 <ul>
- <li>标题 ––对于听不到音轨(包括所讲的单词，还有环境信息,如说话、以及用来营造喜怒气氛的音乐等)的聋人用户而言是有利的。</li>
+ <li>标题 ––对于听不到音轨 (包括所讲的单词，还有环境信息，如说话、以及用来营造喜怒气氛的音乐等) 的聋人用户而言是有利的。</li>
  <li>字幕––为不懂所讲语言的用户提供音频对话框的翻译。</li>
- <li>说明–– 这些描述包括无法观看视频的盲人的描述,例如场景的外观。</li>
+ <li>说明–– 这些描述包括无法观看视频的盲人的描述，例如场景的外观。</li>
  <li>章节标题––旨在帮助用户导航媒体资源的章节标记</li>
 </ul>
 
 <h3 id="实现_HTML5_视频文本轨道">实现 HTML5 视频文本轨道</h3>
 
-<p>使用 HTML5 视频显示的文本轨道需要用 WebVTT 编写,WebVTT 是一种文本格式,其中包含多个文本字符串以及元数据,例如您希望在视频中显示每个文本字符串的时间,甚至限制样式/定位信息。这些文本字符串称为提示。</p>
+<p>使用 HTML5 视频显示的文本轨道需要用 WebVTT 编写，WebVTT 是一种文本格式，其中包含多个文本字符串以及元数据，例如您希望在视频中显示每个文本字符串的时间，甚至限制样式/定位信息。这些文本字符串称为提示。</p>
 
-<p>典型的 WebVTT 文件如下所示:</p>
+<p>典型的 WebVTT 文件如下所示：</p>
 
 <pre>WEBVTT
 
@@ -290,14 +290,14 @@ This is the second.
 
   ...</pre>
 
-<p>要将此信息与 HTML 媒体播放一起显示,您需要:</p>
+<p>要将此信息与 HTML 媒体播放一起显示，您需要：</p>
 
 <ul>
- <li>将其保存为 .vtt 文件,放在一个合理的地方。</li>
- <li>Link to the .vtt file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。<code>&lt;track&gt;</code>应放在<code>&lt;audio&gt;</code>或<code>&lt;video&gt;</code>内,但在<code>&lt;source&gt;</code>元素之后。使用 {{htmlattrxref("kind","track")}}属性指定提示是字幕、标题还是说明。此外,使用 {{htmlattrxref("srclang","track")}} 告诉浏览器您用什么语言编写字幕。</li>
+ <li>将其保存为 .vtt 文件，放在一个合理的地方。</li>
+ <li>Link to the .vtt file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。<code>&lt;track&gt;</code>应放在<code>&lt;audio&gt;</code>或<code>&lt;video&gt;</code>内，但在<code>&lt;source&gt;</code>元素之后。使用 {{htmlattrxref("kind","track")}}属性指定提示是字幕、标题还是说明。此外，使用 {{htmlattrxref("srclang","track")}} 告诉浏览器您用什么语言编写字幕。</li>
 </ul>
 
-<p>下面是一个示例:</p>
+<p>下面是一个示例：</p>
 
 <pre class="brush: html">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
@@ -305,11 +305,11 @@ This is the second.
     &lt;track kind="subtitles" src="subtitles_en.vtt" srclang="en"&gt;
 &lt;/video&gt;</pre>
 
-<p>这将产生显示字幕的视频,如下所示:</p>
+<p>这将产生显示字幕的视频，如下所示：</p>
 
 <p><img alt='Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
-<p>有关详细信息,请阅读<a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。您可以找到与本文一起使用本文的<a href="http://iandevlin.github.io/mdn/video-player-with-captions/">the example</a>,本文由 Ian Devlin 编写(请参阅<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a>)。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意,要打开字幕,您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。</p>
+<p>有关详细信息，请阅读<a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。您可以找到与本文一起使用本文的<a href="http://iandevlin.github.io/mdn/video-player-with-captions/">the example</a>,本文由 Ian Devlin 编写 (请参阅<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a>)。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。</p>
 
 <div class="note">
 <p><strong>注意</strong>:文本轨道和转录也可以帮助您使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。</p>
@@ -317,7 +317,7 @@ This is the second.
 
 <h2 id="其他多媒体内容">其他多媒体内容</h2>
 
-<p>以上各节未涵盖您可能要放在网页上的所有类型的多媒体内容。您可能还需要处理使用其他可用技术创建的游戏、动画、幻灯片、嵌入式视频和内容,例如:</p>
+<p>以上各节未涵盖您可能要放在网页上的所有类型的多媒体内容。您可能还需要处理使用其他可用技术创建的游戏、动画、幻灯片、嵌入式视频和内容，例如：</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Canvas_API">HTML5 canvas</a></li>
@@ -325,20 +325,20 @@ This is the second.
  <li>Silverlight</li>
 </ul>
 
-<p>对于此类内容,您需要根据案例处理辅助功能问题。在某些情况下,它不是那么糟糕,例如:</p>
+<p>对于此类内容，您需要根据案例处理辅助功能问题。在某些情况下，它不是那么糟糕，例如：</p>
 
 <ul>
- <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入音频内容,您可能只需以与上面在 {{anch("Transcript examples")}} 部分中所示的相同方式提供音频脚本。</li>
- <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入视频内容,则可以利用这些技术可用的字幕/字幕技术。例如, 参考 <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>, <a href="https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning">Using the Flash-Only Player API for Closed Captioning</a>, or <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a>.</li>
+ <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入音频内容，您可能只需以与上面在<a href="#脚本示例">脚本示例</a>部分中所示的相同方式提供音频脚本。</li>
+ <li>如果您使用 Flash 或 Silverlight 等插件技术嵌入视频内容，则可以利用这些技术可用的字幕/字幕技术。例如，参考 <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>, <a href="https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning">Using the Flash-Only Player API for Closed Captioning</a>, or <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a>.</li>
 </ul>
 
-<p>然而,其他多媒体不是那么容易使访问。例如,如果您正在处理沉浸式 3D 游戏或虚拟现实应用,那么为此类体验提供文本替代方案确实非常困难,您可能会认为盲人用户实际上并不在此类应用的目标受众范围内。</p>
+<p>然而，其他多媒体不是那么容易使访问。例如，如果您正在处理沉浸式 3D 游戏或虚拟现实应用，那么为此类体验提供文本替代方案确实非常困难，您可能会认为盲人用户实际上并不在此类应用的目标受众范围内。</p>
 
-<p>但是,您可以确保此类应用具有足够的颜色对比度和清晰的显示,以便对视力低下/色盲的人来说可以感知,并且还可以使其键盘可访问。请记住,辅助功能就是尽可能多地做,而不是一直追求 100% 的可访问性,这通常是不可能的。</p>
+<p>但是，您可以确保此类应用具有足够的颜色对比度和清晰的显示，以便对视力低下/色盲的人来说可以感知，并且还可以使其键盘可访问。请记住，辅助功能就是尽可能多地做，而不是一直追求 100% 的可访问性，这通常是不可能的。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>本章概述了多媒体内容的可访问性问题,以及一些实用的解决方案。</p>
+<p>本章概述了多媒体内容的可访问性问题，以及一些实用的解决方案。</p>
 
 <p>{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}</p>
 

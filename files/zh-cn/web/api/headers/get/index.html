@@ -7,10 +7,10 @@ translation_of: Web/API/Headers/get
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
 
-<p><strong><code>get()</code></strong> 方法以 {{domxref("ByteString")}} 形式从Headers对象中返回指定header的全部值. 如果Header对象中不存在请求的header,则返回 <code>null</code>.</p>
+<p><strong><code>get()</code></strong> 方法以 {{domxref("ByteString")}} 形式从 Headers 对象中返回指定 header 的全部值。如果 Header 对象中不存在请求的 header，则返回 <code>null</code>。</p>
 
 <div class="note">
-<p><strong>Note:</strong>出于安全原因, 部分头信息只能被用户代理控制. 这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p><strong>备注：</strong>出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -21,26 +21,26 @@ translation_of: Web/API/Headers/get
 
 <dl>
  <dt><em>name</em></dt>
- <dd>从Headers对象中检索的HTTP header 名,如果HTTP header中不存在指定header名则会抛出一个{{jsxref("TypeError")}}.</dd>
+ <dd>从 Headers 对象中检索的 HTTP header 名，如果 HTTP header 中不存在指定 header 名则会抛出一个{{jsxref("TypeError")}}.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
 
-<p>以 {{domxref("ByteString")}} 形式返回检索到的值.</p>
+<p>以 {{domxref("ByteString")}} 形式返回检索到的值。</p>
 
 <h2 id="Example">Example</h2>
 
-<p>创建一个空的Headers对象:</p>
+<p>创建一个空的 Headers 对象：</p>
 
 <pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
-<p>可以通过get()方法来获取header中的值:</p>
+<p>可以通过 get() 方法来获取 header 中的值：</p>
 
 <pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 </pre>
 
-<p>如果存在多个header值,那么只有第一个值会被返回:</p>
+<p>如果存在多个 header 值，那么只有第一个值会被返回：</p>
 
 <pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
@@ -70,63 +70,7 @@ myHeaders.get('Accept-Encoding'); // Returns <code>"deflate,gzip"</code>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref<br>
-     </td>
-   <td>{{ CompatGeckoDesktop(39)}}<br>
-    34 behind pref</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers.get")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -14,16 +14,16 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">在此次测验中, 你需要将上一节中的“弹球”演示程序作为模板，添加一些新的有趣的功能。</p>
+<p>在此次测验中，你需要将上一节中的“弹球”演示程序作为模板，添加一些新的有趣的功能。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
+   <th scope="row">预备知识：</th>
    <td>请确保完整学习本章所有内容后再开始测验。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>测试你对 JavaScript 对象和面向对象结构的理解。</td>
   </tr>
  </tbody>
@@ -34,12 +34,12 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 <p>请先下载 <a class="external external-icon" href="https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html">index.html</a>、<a class="external external-icon" href="https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a> 和 <a class="external external-icon" href="https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js">main.js</a> 三个文件。</p>
 
 <div class="note">
-<p><strong>注：</strong>也可以使用 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> 这样的网站来进行测验。 你可以选择其中一个将HTML，CSS 和JavaScript 粘贴过去。 如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> 元素。</p>
+<p><strong>注：</strong>也可以使用 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://glitch.com/">Glitch</a> 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。 如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> 元素。</p>
 </div>
 
 <h2 id="项目简介">项目简介</h2>
 
-<p>我们的弹球 demo 很有趣, 但是现在我们想让它更具有互动性，我们为它添加一个由玩家控制的“恶魔圈”，如果恶魔圈抓到弹球会把它会吃掉。我们还想测验你面向对象的水平，首先创建一个通用 <code>Shape()</code> 对象，然后由它派生出弹球和恶魔圈。最后，我们为 demo 添加一个计分器来记录剩下的球数。</p>
+<p>我们的弹球 demo 很有趣，但是现在我们想让它更具有互动性，我们为它添加一个由玩家控制的“恶魔圈”，如果恶魔圈抓到弹球会把它会吃掉。我们还想测验你面向对象的水平，首先创建一个通用 <code>Shape()</code> 对象，然后由它派生出弹球和恶魔圈。最后，我们为 demo 添加一个计分器来记录剩下的球数。</p>
 
 <p>程序最终会像这样：</p>
 
@@ -315,11 +315,11 @@ function loop() {
 
 <h3 id="创建我们的新对象">创建我们的新对象</h3>
 
-<p>首先， 改变你现有的构造器 <code>Ball()</code> 使其成为构造器 <code>Shape()</code> 并添加一个新的构造器 <code>Ball()</code> ：</p>
+<p>首先，改变你现有的构造器 <code>Ball()</code> 使其成为构造器 <code>Shape()</code> 并添加一个新的构造器 <code>Ball()</code> ：</p>
 
 <ol>
  <li>构造器 <code>Shape()</code> 应该像构造器 <code>Ball()</code> 那样的方式定义 <code>x</code>, <code>y</code>, <code>velX</code>, 和 <code>velY</code> 属性，但不包括 <code>color</code> 和 <code>size</code> 。</li>
- <li>还应该定义一个叫 <code>exists</code> 的新属性，用来标记球是否存在于程序中 （没有被恶魔圈吃掉）。这应该是一个布尔型（(<code>true</code>/<code>false</code>）。</li>
+ <li>还应该定义一个叫 <code>exists</code> 的新属性，用来标记球是否存在于程序中（没有被恶魔圈吃掉）。这应该是一个布尔型（(<code>true</code>/<code>false</code>）。</li>
  <li>构造器 <code>Ball()</code> 应该从构造器 <code>Shape()</code> 继承 <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>,和 <code>exists</code> 属性。</li>
  <li>构造器 <code>Ball()</code> 还应该像最初的构造器 <code>Ball()</code> 那样定义一个 <code>color</code> 和一个<code>size</code> 属性。</li>
  <li>请记得给构造器 <code>Ball()</code> 的<code>prototype</code> 和 <code>constructor</code> 属性设置适当的值。</li>
@@ -327,9 +327,9 @@ function loop() {
 
 <p><code>draw()</code>, <code>update()</code>, 和<code>collisionDetect()</code> 方法定义应保持不变。</p>
 
-<p>你还需要为 <code>new Ball() { ... }</code> 构造器添加第五个参数—— <code>exists</code>， 且值为 <code>true</code>。</p>
+<p>你还需要为 <code>new Ball() { ... }</code> 构造器添加第五个参数—— <code>exists</code>，且值为 <code>true</code>。</p>
 
-<p>到这里， 尝试重新加载代码（运行程序），程序以及重新设计的对象都应该像之前那样工作。</p>
+<p>到这里，尝试重新加载代码（运行程序），程序以及重新设计的对象都应该像之前那样工作。</p>
 
 <h3 id="定义恶魔圈_EvilCircle">定义恶魔圈 EvilCircle()</h3>
 
@@ -363,11 +363,11 @@ function loop() {
 
 <h4 id="checkBounds"><code>checkBounds()</code></h4>
 
-<p>这个方法和 <code>Ball()</code> 的 <code>update()</code> 函数做相同的事情—— 查看恶魔圈是否将要超出屏幕的边界， 并且禁止它超出。 同样，你可以直接复制 <code>Ball.prototype.update</code> 的定义, 但是你需要做一些修改：</p>
+<p>这个方法和 <code>Ball()</code> 的 <code>update()</code> 函数做相同的事情—— 查看恶魔圈是否将要超出屏幕的边界， 并且禁止它超出。 同样，你可以直接复制 <code>Ball.prototype.update</code> 的定义，但是你需要做一些修改：</p>
 
 <ul>
  <li>删除最后两行 — 我们不想要在每一帧中自动的更新恶魔圈的位置，因为我们会以下面所述的方式移动它。</li>
- <li>在 <code>if()</code> 语句中，如果检测为真（即小恶魔圈超出边界），我们不需要更新 <code>velX</code>/<code>velY</code>；取而代之的是，我们想要修改 <code>x</code>/<code>y</code> 的值，使恶魔圈稍微地弹回屏幕。增加或减去 （根据实际判断）恶魔圈 <code>size</code> 的值即可实现。</li>
+ <li>在 <code>if()</code> 语句中，如果检测为真（即小恶魔圈超出边界），我们不需要更新 <code>velX</code>/<code>velY</code>；取而代之的是，我们想要修改 <code>x</code>/<code>y</code> 的值，使恶魔圈稍微地弹回屏幕。增加或减去（根据实际判断）恶魔圈 <code>size</code> 的值即可实现。</li>
 </ul>
 
 <h4 id="setControls"><code>setControls()</code></h4>
@@ -391,7 +391,7 @@ function loop() {
   }
 };</pre>
 
-<p>所以当一个按键按下时， 事件对象的 <a href="/zh-CN/docs/Web/API/KeyboardEvent/key">key</a> 属性 就可以请求到按下的按键值。如果是代码中那四个指定的键值之一， 那么恶魔圈将会左右上下的移动。</p>
+<p>所以当一个按键按下时，事件对象的 <a href="/zh-CN/docs/Web/API/KeyboardEvent/key">key</a> 属性 就可以请求到按下的按键值。如果是代码中那四个指定的键值之一，那么恶魔圈将会左右上下的移动。</p>
 
 <div class="blockIndicator warning">
 <p><strong>译注：</strong>英文页面中使用了事件对象的 <a href="/zh-CN/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> 属性，不推荐在新代码中使用该属性，应使用标准 <a href="/zh-CN/docs/Web/API/KeyboardEvent/key">key</a> 属性代替。（详见介绍页面）</p>
@@ -404,7 +404,7 @@ function loop() {
 <p>这个方法和 <code>Ball()</code>'s <code>collisionDetect()</code> 方法很相似，所以你可以从它那里复制过来作为新方法的基础。但有一些不同之处：</p>
 
 <ul>
- <li>在外层的 <code>if</code> 语句中，你不需要再检验循环到的小球是否是当前 <code>collisionDetect()</code> 所在的对象 — 因为它不再是一个小球了，它是恶魔圈！ 而是检查小球是否存在 （你可以通过哪个属性实现这个呢？）。如果小球不存在，说明它已经被恶魔圈吃掉了，那么就不需要再检测它是否与恶魔圈碰撞了。</li>
+ <li>在外层的 <code>if</code> 语句中，你不需要再检验循环到的小球是否是当前 <code>collisionDetect()</code> 所在的对象 — 因为它不再是一个小球了，它是恶魔圈！ 而是检查小球是否存在（你可以通过哪个属性实现这个呢？）。如果小球不存在，说明它已经被恶魔圈吃掉了，那么就不需要再检测它是否与恶魔圈碰撞了。</li>
  <li>在里层的 <code>if</code> 语句中，你不再需要在碰撞被检测到时去改变对象的颜色 — 而是需要将与恶魔圈发生碰撞的小球设置为不存在（再次提问，你觉得你该怎么实现呢？）。</li>
 </ul>
 
@@ -413,9 +413,9 @@ function loop() {
 <p>现在我们已经定义了恶魔圈，我们需要让它显示到我们的屏幕中。为了做这件事，你需要修改一下 <code>loop()</code> 函数：</p>
 
 <ul>
- <li>首先，创建一个新的恶魔圈的对象实例 （指定必需的参数），然后调用它的 <code>setControls()</code> 方法。 这两件事你只需要做一次，不需要放在loop的循环中。</li>
- <li>在你每一次遍历小球并调用 <code>draw()</code>, <code>update()</code>, 和 <code>collisionDetect()</code> 函数的地方进行修改， 使这些函数只会在小球存在时被调用。</li>
- <li>在每个loop的循环中调用恶魔圈实例的方法 <code>draw()</code>, <code>checkBounds()</code>, 和<code>collisionDetect()</code> 。</li>
+ <li>首先，创建一个新的恶魔圈的对象实例 （指定必需的参数），然后调用它的 <code>setControls()</code> 方法。 这两件事你只需要做一次，不需要放在 loop 的循环中。</li>
+ <li>在你每一次遍历小球并调用 <code>draw()</code>, <code>update()</code>, 和 <code>collisionDetect()</code> 函数的地方进行修改，使这些函数只会在小球存在时被调用。</li>
+ <li>在每个 loop 的循环中调用恶魔圈实例的方法 <code>draw()</code>, <code>checkBounds()</code>, 和<code>collisionDetect()</code> 。</li>
 </ul>
 
 <h3 id="计算得分">计算得分</h3>
@@ -423,8 +423,8 @@ function loop() {
 <p>为了计算得分，需按照以下步骤：</p>
 
 <ol>
- <li>在你的HTML文件中添加一个{{HTMLElement("p")}} 元素到 {{HTMLElement("h1")}} 元素的下面，其中包含文本 "还剩多少个球"。</li>
- <li>在你的CSS文件中，添加下面的代码到底部：
+ <li>在你的 HTML 文件中添加一个{{HTMLElement("p")}} 元素到 {{HTMLElement("h1")}} 元素的下面，其中包含文本 "还剩多少个球"。</li>
+ <li>在你的 CSS 文件中，添加下面的代码到底部：
   <pre class="brush: css notranslate">p {
   position: absolute;
   margin: 0;
@@ -452,7 +452,7 @@ function loop() {
 
 <h2 id="评定">评定</h2>
 
-<p>如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给您的老师/导师进行评分。 如果你是自学的，通过在 <a href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a>， 或者在 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> 的 <a href="irc://irc.mozilla.org/mdn">#mdn</a> IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。</p>
+<p>如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给您的老师/导师进行评分。如果你是自学的，通过在 <a href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a>， 或者在 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> 的 <a href="irc://irc.mozilla.org/mdn">#mdn</a> IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</p>
 

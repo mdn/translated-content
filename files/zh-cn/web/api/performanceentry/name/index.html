@@ -5,7 +5,7 @@ translation_of: Web/API/PerformanceEntry/name
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p><span class="seoSummary"><strong><code>name 是</code></strong> {{domxref("PerformanceEntry")}} 接口的属性，此属性的返回值是 {{domxref("PerformanceEntry.entryType")}} 的返回值的一个补充，例如entry.entryType="navigation",entry.name="document". 这是一个只读属性.</span></p>
+<p><strong><code>name</code></strong> 是 {{domxref("PerformanceEntry")}} 接口的属性，此属性的返回值是 {{domxref("PerformanceEntry.entryType")}} 的返回值的一个补充，例如 entry.entryType="navigation",entry.name="document". 这是一个只读属性。</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/PerformanceEntry/name
 
 <h3 id="Return_Value" name="Return_Value">返回值</h3>
 
-<p>返回值取决于<code>PerformanceEntry</code> 对象的 subtype和{{domxref("PerformanceEntry.entryType")}}的值, 如下表所示.</p>
+<p>返回值取决于<code>PerformanceEntry</code> 对象的 subtype 和{{domxref("PerformanceEntry.entryType")}}的值，如下表所示。</p>
 
 <table class="standard-table">
  <thead>
@@ -61,7 +61,7 @@ translation_of: Web/API/PerformanceEntry/name
 
 <h2 id="用例">用例</h2>
 
-<p>下面的例子是 <code>name</code> 属性的用法.</p>
+<p>下面的例子是 <code>name</code> 属性的用法。</p>
 
 <pre class="brush: js">function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
@@ -84,7 +84,7 @@ translation_of: Web/API/PerformanceEntry/name
   }
 }
   //
-  //例如上面p中一个entry p[0] = {
+  //例如上面 p 中一个 entry p[0] = {
   //  "name": "document",
   //  "entryType": "navigation",
   //  "startTime": 0,
@@ -118,7 +118,7 @@ translation_of: Web/API/PerformanceEntry/name
   //  "redirectCount": 0
   //}
 
-  //下面的函数check_PerformanceEntry的参数obj就是上面的p[0]
+  //下面的函数 check_PerformanceEntry 的参数 obj 就是上面的 p[0]
   //
 function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];

@@ -6,25 +6,25 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 ---
 <p>{{AddonSidebar}}</p>
 
-<p>如果你已经阅读了 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">你的第一个扩展</a>，那么你现在已经知道如何写一个扩展了。在这篇文章，我们将写一个稍微复杂一点点的扩展来为你展示更多的一些API 。</p>
+<p>如果你已经阅读了 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">你的第一个扩展</a>，那么你现在已经知道如何写一个扩展了。在这篇文章，我们将写一个稍微复杂一点点的扩展来为你展示更多的一些 API。</p>
 
 <p>这个扩展会添加一个新按钮到 Firefox 的工具栏。在用户点击该按钮时，我们会显示一个弹出窗（popup）来让他们选择一种动物。在他们选择之后，我们会将当前网页替换为他所选动物的图片。</p>
 
 <p>要实现这点，我们将：</p>
 
 <ul>
- <li><strong>定义一个浏览器动作(browser action)，这用来附加一个按钮到 Firefox 的工具栏。</strong><br>
+ <li><strong>定义一个浏览器动作 (browser action)，这用来附加一个按钮到 Firefox 的工具栏。</strong><br>
   对于该按钮，我们将提供：
   <ul>
    <li>一个文件名为 "beasts-32.png" 的图标</li>
    <li>按钮被按下时要打开的弹出窗。该弹出窗将包含 HTML、CSS 和 JavaScript。</li>
   </ul>
  </li>
- <li><strong>为扩展定义一个图标</strong>，叫做“beasts-48.png”。这个将会在Add-ons管理器中显示。</li>
+ <li><strong>为扩展定义一个图标</strong>，叫做“beasts-48.png”。这个将会在 Add-ons 管理器中显示。</li>
  <li><strong>写一个内容脚本 "beastify.js"，用于注入到网页中。</strong><br>
   这是用来实际修改页面的代码。</li>
  <li><strong>打包一些动物的图像，用以替换网页中的图像。</strong><br>
-  我们让图像成为 “Web 可访问资源”（ web accessible resources ），以便页面可以引用它们。</li>
+  我们让图像成为“Web 可访问资源”（web accessible resources），以便页面可以引用它们。</li>
 </ul>
 
 <p>你可以想象这样的扩展的整体结构：</p>
@@ -36,14 +36,14 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 <ul>
  <li>添加一个按钮到工具栏</li>
  <li>定义一个将使用 HTML、CSS 和 JavaScript 的弹出窗</li>
- <li>注入content scripts到网页</li>
- <li>content scripts与扩展的其他部分之间的通信</li>
+ <li>注入 content scripts 到网页</li>
+ <li>content scripts 与扩展的其他部分之间的通信</li>
  <li>打包你的扩展的资源，使其可被网页所用</li>
 </ul>
 
 <p>你可以在 GitHub 找到<a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">该扩展的完整的源代码</a>。</p>
 
-<p>写这个扩展，你需要45或更高版本的firefox。</p>
+<p>写这个扩展，你需要 45 或更高版本的 firefox。</p>
 
 <h2 id="编写扩展">编写扩展</h2>
 
@@ -95,36 +95,36 @@ cd beastify</pre>
 </ol>
 
 <ul>
- <li>最开始的三个属性: <strong><code>manifest_version</code></strong>, <strong><code>name</code></strong>, <strong><code>version</code></strong>, 是必须的并且包含了插件最基本的信息。</li>
+ <li>最开始的三个属性：<strong><code>manifest_version</code></strong>, <strong><code>name</code></strong>, <strong><code>version</code></strong>, 是必须的并且包含了插件最基本的信息。</li>
  <li><a href="/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description">description </a>和 <a href="/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url </a>是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。</li>
  <li><a href="/zh-CN/Add-ons/WebExtensions/manifest.json/icons">icons </a>也是可选但推荐的，它决定了插件在附加组件中的图标。</li>
  <li><strong><code>permissions</code></strong> 列出了插件所需要的权限。在这里我们仅需要 <a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>。</li>
- <li><strong><code>browser_action</code></strong> 指定了工具栏按钮。我们在这里提供了三个信息片段:
+ <li><strong><code>browser_action</code></strong> 指定了工具栏按钮。我们在这里提供了三个信息片段：
   <ul>
    <li><strong><code>default_icon</code></strong> 是必须的，指定了按钮的图标。</li>
    <li><strong><code>default_title</code></strong> 是可选的，用于按钮的提示。</li>
-   <li><strong><code>default_popup</code></strong>  在你想要当用户点击按钮时显示出一个弹出窗时使用。而在这里，我们需要，所以我们列入这个键并将其指向扩展中包括的一个HTML文件。</li>
+   <li><strong><code>default_popup</code></strong>  在你想要当用户点击按钮时显示出一个弹出窗时使用。而在这里，我们需要，所以我们列入这个键并将其指向扩展中包括的一个 HTML 文件。</li>
   </ul>
  </li>
  <li><strong><code>web_accessible_resources</code></strong> 列出了页面可访问的资源。例如由于当前插件使用动物图像替换了页面原有的图像，当前的动物图像要可以被页面访问。</li>
 </ul>
 
-<p>需要注意，所有路径是相对于 manifest.json 。</p>
+<p>需要注意，所有路径是相对于 manifest.json。</p>
 
 <h3 id="图标">图标</h3>
 
-<p>插件应该有一个图标。这个图标被用于显示在附加组件管理器中（可以通过"about:addons"来访问）。当前插件中manifest.json指定了我们插件的图标位于"icons/beasts-48.png"。</p>
+<p>插件应该有一个图标。这个图标被用于显示在附加组件管理器中（可以通过"about:addons"来访问）。当前插件中 manifest.json 指定了我们插件的图标位于"icons/beasts-48.png"。</p>
 
 <p>创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的<a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">图标</a>，它是从 <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a> 截取的，使用需要遵循该网站的<a href="http://www.aha-soft.com/free-icons/free-retina-icon-set//zh-CN/docs/">许可证</a>。</p>
 
-<p>如果你使用自己的图标，它的尺寸应该是48<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>48像素的。同时，对于高分辨率的设备，可以提供96<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>96像素的图片。此时，manifest.json应当这样配置：</p>
+<p>如果你使用自己的图标，它的尺寸应该是 48<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>48 像素的。同时，对于高分辨率的设备，可以提供 96<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>96 像素的图片。此时，manifest.json 应当这样配置：</p>
 
 <ol>
  <li>
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-  <span class="key token">"48":</span> <span class="string token">"icons/beasts-48.png"</span><span class="punctuation token">,</span>
-  <span class="key token">"96":</span> <span class="string token">"icons/beasts-96.png"</span>
-<span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json line-numbers  language-json"><code class="language-json">"icons": {
+  "48": "icons/beasts-48.png",
+  "96": "icons/beasts-96.png"
+}</code></pre>
  </li>
 </ol>
 
@@ -136,7 +136,7 @@ cd beastify</pre>
 
 <p>将一个图标命名为为 "beasts-32.png"并保存到"icons"文件夹。你可以使用例子中的<a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">图片</a>，它是取自 <a href="http://www.iconbeast.com/free">IconBeast Lite 图标集</a>并按其<a href="http://www.iconbeast.com/faq/">许可协议</a>授权使用。</p>
 
-<p>如果你没有弹出窗，用户点击的事件会直接分派到你的插件中。<span style="line-height: 1.5;">如果你制作了弹出窗，用户点击会直接打开这个弹出窗，而不会被分派给插件。</span><span style="line-height: 1.5;">本例中我们需要弹出窗，因此我们现在开始写它。</span></p>
+<p>如果你没有弹出窗，用户点击的事件会直接分派到你的插件中。如果你制作了弹出窗，用户点击会直接打开这个弹出窗，而不会被分派给插件。本例中我们需要弹出窗，因此我们现在开始写它。</p>
 
 <h3 id="弹出窗">弹出窗</h3>
 
@@ -150,13 +150,13 @@ cd beastify</pre>
  <li><strong><code>choose_beast.js</code></strong> 通过在当前活跃的标签页中运行内容脚本（content script）处理用户的选择</li>
 </ul>
 
-<pre class="brush: bash line-numbers language-bash"><code class="language-bash"><span class="function token">mkdir</span> popup
-<span class="function token">cd</span> popup
-<span class="function token">touch</span> choose_beast.html choose_beast.css choose_beast.js</code></pre>
+<pre class="brush: bash line-numbers language-bash"><code class="language-bash">mkdir popup
+cd popup
+touch choose_beast.html choose_beast.css choose_beast.js</code></pre>
 
 <h4 id="choose_beast.html">choose_beast.html</h4>
 
-<p>HTML 文件就像这样:</p>
+<p>HTML 文件就像这样：</p>
 
 <ol>
  <li>
@@ -185,13 +185,13 @@ cd beastify</pre>
  </li>
 </ol>
 
-<p>我们有一个ID为 <code>"popup-content"</code> 的<a href="/zh-CN/docs/Web/HTML/Element/div">&lt;div&gt;</a>元素包含了每个动物选择。我们还有另外一个<code>&lt;div&gt;</code> 元素，它的ID为 <code>"error-content"</code> ，class为<code>"hidden"</code>。我们将会使用它以防初始化弹窗的时候出问题。</p>
+<p>我们有一个 ID 为 <code>"popup-content"</code> 的<a href="/zh-CN/docs/Web/HTML/Element/div">&lt;div&gt;</a>元素包含了每个动物选择。我们还有另外一个<code>&lt;div&gt;</code> 元素，它的 ID 为 <code>"error-content"</code> ，class 为<code>"hidden"</code>。我们将会使用它以防初始化弹窗的时候出问题。</p>
 
-<p>注意我们引入了CSS和JS文件，就像网页一样。</p>
+<p>注意我们引入了 CSS 和 JS 文件，就像网页一样。</p>
 
 <h4 id="choose_beast.css">choose_beast.css</h4>
 
-<p>CSS 固定了弹出窗的大小，确保3个选择填充满空间，并给了他们基本点样式。同时隐藏了<code>class="hidden"</code>的元素，这意味着我们的<code>"error-content"</code> <code>&lt;div&gt;</code> 将会被默认隐藏：</p>
+<p>CSS 固定了弹出窗的大小，确保 3 个选择填充满空间，并给了他们基本点样式。同时隐藏了<code>class="hidden"</code>的元素，这意味着我们的<code>"error-content"</code> <code>&lt;div&gt;</code> 将会被默认隐藏：</p>
 
 <ol>
  <li>
@@ -231,7 +231,7 @@ cd beastify</pre>
 
 <h4 id="choose_beast.js">choose_beast.js</h4>
 
-<p>我们在弹出窗的脚本中监听点击事件。 如果用户选择其中一个动物，我们在当前标签页中插入一段内容脚本。一旦内容脚本加载，我们发送一条有关动物选择的信息:</p>
+<p>我们在弹出窗的脚本中监听点击事件。如果用户选择其中一个动物，我们在当前标签页中插入一段内容脚本。一旦内容脚本加载，我们发送一条有关动物选择的信息：</p>
 
 <ol>
  <li>
@@ -336,11 +336,11 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
  </li>
 </ol>
 
-<p>从96行开始。只要弹出窗加载完，popup scrpit 就会使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code> API在活跃标签页执行 content script。如果执行 content scrpit成功，content script会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。</p>
+<p>从 96 行开始。只要弹出窗加载完，popup scrpit 就会使用 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code> API 在活跃标签页执行 content script。如果执行 content scrpit 成功，content script 会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。</p>
 
-<p><code>browser.tabs.executeScript()</code>调用失败的常见原因是你不能在所有页面执行content scripts。例如，你不能在特权浏览器页面执行，像about:debugging，你也不能在<a href="https://addons.mozilla.org/">addons.mozilla.org</a>域执行。如果调用失败，<code>reportExecuteScriptError()</code>会隐藏<code>"popup-content"</code> <code>&lt;div&gt;</code>，并展示<code>"error-content"</code> <code>&lt;div&gt;</code>, 然后打印一个错误到<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Debugging">控制台</a>。</p>
+<p><code>browser.tabs.executeScript()</code>调用失败的常见原因是你不能在所有页面执行 content scripts。例如，你不能在特权浏览器页面执行，像 about:debugging，你也不能在<a href="https://addons.mozilla.org/">addons.mozilla.org</a>域执行。如果调用失败，<code>reportExecuteScriptError()</code>会隐藏<code>"popup-content"</code> <code>&lt;div&gt;</code>，并展示<code>"error-content"</code> <code>&lt;div&gt;</code>, 然后打印一个错误到<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Debugging">控制台</a>。</p>
 
-<p>如果成功执行 content script ，我们会调用 <code>listenForClicks()</code>。这个监听了弹窗上的点击事件。</p>
+<p>如果成功执行 content script，我们会调用 <code>listenForClicks()</code>。这个监听了弹窗上的点击事件。</p>
 
 <ul>
  <li>如果点击有 <code>class="beast"</code>的按钮上，将会调用 <code>beastify()</code>.</li>
@@ -350,15 +350,15 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 <p><code>beastify()</code> 函数做了三件事：</p>
 
 <ul>
- <li>将被点击的按钮映射到一个指向特定动物图片的URL</li>
- <li>通过<code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API 向页面注入一些CSS来隐藏整个页面的内容</li>
- <li>通过<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API 向 content script 发送“beastify”信息，要求其 beastify 页面，同时向其传递一个指向动物图片的URL</li>
+ <li>将被点击的按钮映射到一个指向特定动物图片的 URL</li>
+ <li>通过<code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API 向页面注入一些 CSS 来隐藏整个页面的内容</li>
+ <li>通过<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API 向 content script 发送“beastify”信息，要求其 beastify 页面，同时向其传递一个指向动物图片的 URL</li>
 </ul>
 
 <p><code>reset()</code> 函数实际上就是撤销 beastify :</p>
 
 <ul>
- <li>通过 <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code> API 移除我们添加的CSS</li>
+ <li>通过 <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code> API 移除我们添加的 CSS</li>
  <li>向 content script 发送“reset”信息要求其重置页面</li>
 </ul>
 
@@ -419,12 +419,12 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
  </li>
 </ol>
 
-<p>content script做的第一件事是检查全局变量 <code>window.hasRun</code>：如果它被设置了，脚本直接返回，否则设置<code>window.hasRun</code>并继续。原因是每次用户打开弹出窗，弹出窗就会在活跃页面执行一个content script ，所以我们可能会在单个页面运行多个脚本实例。如果是这样的话，我们需要保证只有一个实例在做所有事情。</p>
+<p>content script 做的第一件事是检查全局变量 <code>window.hasRun</code>：如果它被设置了，脚本直接返回，否则设置<code>window.hasRun</code>并继续。原因是每次用户打开弹出窗，弹出窗就会在活跃页面执行一个 content script，所以我们可能会在单个页面运行多个脚本实例。如果是这样的话，我们需要保证只有一个实例在做所有事情。</p>
 
-<p>然后，从第40行开始，content script 监听来自弹出窗的信息，使用<code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。</p>
+<p>然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用<code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。</p>
 
 <ul>
- <li>如果信息是 "beastify"，我们期待它包含一个指向动物图片的URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src属性被设置动物图片URL 的<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 元素。</li>
+ <li>如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 元素。</li>
  <li>如果信息是 "reset"，我们只需要移除所有被添加的动物片。</li>
 </ul>
 
@@ -432,13 +432,13 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>最后，我们要加入包含动物们的图像。</p>
 
-<p>创建"beasts"文件夹，之后将图片放入并命名。你可以从 <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">the GitHub repository</a>,或这里下载图片:</p>
+<p>创建"beasts"文件夹，之后将图片放入并命名。你可以从 <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">the GitHub repository</a>,或这里下载图片：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11459/frog.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11461/snake.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11463/turtle.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"></p>
 
 <h2 id="测试">测试</h2>
 
-<p>请仔细确认项目目录如下所示:</p>
+<p>请仔细确认项目目录如下所示：</p>
 
 <ol>
  <li>
@@ -465,11 +465,11 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
  </li>
 </ol>
 
-<p>Firefox 45开始，你可以临时从硬盘中安装扩展</p>
+<p>Firefox 45 开始，你可以临时从硬盘中安装扩展</p>
 
-<p>在Firefox地址栏中输入：about:debugging，单击“临时载入附加组件”，然后选择你的manifest.json文件。</p>
+<p>在 Firefox 地址栏中输入：about:debugging，单击“临时载入附加组件”，然后选择你的 manifest.json 文件。</p>
 
-<p>然后你应该已经看到扩展图标出现在了Firefox的工具条上：</p>
+<p>然后你应该已经看到扩展图标出现在了 Firefox 的工具条上：</p>
 
 <p>{{EmbedYouTube("sAM78GU4P34")}}</p>
 

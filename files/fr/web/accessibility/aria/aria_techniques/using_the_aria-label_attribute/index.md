@@ -25,7 +25,7 @@ Les lecteurs d'écran lisent le contenu textuel de cet attribut.
 
 ## Usage
 
-L’attribut `aria-label` ne doit être utilisé que lorsque le texte d’un label _n’est pas_ visible à l’écran. Si le texte du label de l’élément existe et est visible, utilisez plutôt l’attribut [aria-labelledby](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby).
+L’attribut `aria-label` ne doit être utilisé que lorsque le texte d’un label _n’est pas_ visible à l’écran. Si le texte du label de l’élément existe et est visible, utilisez plutôt l’attribut [aria-labelledby](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby).
 
 Cet attribut peut être utilisé avec n’importe quel élément HTML. Néanmoins, il n'est pas nécessaire de l'utiliser si l'élément possède déjà un mécanisme pour légender son contenu. Par exemple l'élément `<label>` pour les éléments de formulaire, ou l'attribut `alt` pour les images.
 
@@ -37,7 +37,7 @@ Une légende sous forme de chaîne de caractère.
 
 ### Un bouton sans contenu textuel explicite
 
-Dans l’exemple ci-dessous, un bouton est stylé pour ressembler à un bouton « *Fermer* » classique, avec un `X` en son centre. Comme il n’existe aucune information indiquant que la fonction du bouton est de fermer la boîte de dialogue, l’attribut `aria-label` est utilisé pour fournir un label aux technologies d’assistance.
+Dans l’exemple ci-dessous, un bouton est stylé pour ressembler à un bouton «&nbsp;*Fermer*&nbsp;» classique, avec un `X` en son centre. Comme il n’existe aucune information indiquant que la fonction du bouton est de fermer la boîte de dialogue, l’attribut `aria-label` est utilisé pour fournir un label aux technologies d’assistance.
 
 ```html
  <button aria-label="Fermer" onclick="myDialog.close()">X</button>

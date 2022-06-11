@@ -19,7 +19,9 @@ La méthode **`getUint8()`** permet de lire un entier non-signé sur 8 bits à l
 
 ## Syntaxe
 
-    dataview.getUint8(positionOctet)
+```js
+dataview.getUint8(positionOctet)
+```
 
 ### Paramètres
 
@@ -55,7 +57,7 @@ dataview.getUint8(1); // 0
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

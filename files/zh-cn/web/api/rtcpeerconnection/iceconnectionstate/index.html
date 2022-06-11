@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection/iceConnectionState
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><code><strong>RTCPeerConnection.iceConnectionState</strong></code> 是一个只读属性，用于描述连接的ICE连接状态，返回值为枚举类型。</p>
+<p><code><strong>RTCPeerConnection.iceConnectionState</strong></code> 是一个只读属性，用于描述连接的 ICE 连接状态，返回值为枚举类型。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -13,16 +13,16 @@ translation_of: Web/API/RTCPeerConnection/iceConnectionState
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>RTCIceConnectionState的返回值为下面列举中的一种</code>:</p>
+<p><code>RTCIceConnectionState</code> 的返回值为下面列举中的一种：</p>
 
 <ul>
  <li><code>"new"</code>: ICE 代理正在搜集地址或者等待远程候选可用。</li>
  <li><code>"checking"</code>: ICE 代理已收到至少一个远程候选，并进行校验，无论此时是否有可用连接。同时可能在继续收集候选。</li>
- <li><code>"connected"</code>: ICE代理至少对每个候选发现了一个可用的连接，此时仍然会继续测试远程候选以便发现更优的连接。同时可能在继续收集候选。</li>
- <li><code>"completed"</code>: ICE代理已经发现了可用的连接，不再测试远程候选。</li>
- <li><code>"failed"</code>: ICE候选测试了所有远程候选没有发现匹配的候选。也可能有些候选中发现了一些可用连接。</li>
+ <li><code>"connected"</code>: ICE 代理至少对每个候选发现了一个可用的连接，此时仍然会继续测试远程候选以便发现更优的连接。同时可能在继续收集候选。</li>
+ <li><code>"completed"</code>: ICE 代理已经发现了可用的连接，不再测试远程候选。</li>
+ <li><code>"failed"</code>: ICE 候选测试了所有远程候选没有发现匹配的候选。也可能有些候选中发现了一些可用连接。</li>
  <li><code>"disconnected"</code>: 测试不再活跃，这可能是一个暂时的状态，可以自我恢复。</li>
- <li><code>"closed"</code>: ICE代理关闭，不再应答任何请求。</li>
+ <li><code>"closed"</code>: ICE 代理关闭，不再应答任何请求。</li>
 </ul>
 
 <h2 id="例子">例子</h2>
@@ -51,57 +51,7 @@ var state = pc.iceConnectionState;</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }} [1]</td>
-   <td>{{ CompatVersionUnknown }} [1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Though this property is not prefixed, the interface it belongs to is.</p>
+{{Compat("api.RTCPeerConnection.iceConnectionState")}}
 
 <h2 id="参考文档">参考文档</h2>
 

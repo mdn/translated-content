@@ -1,5 +1,5 @@
 ---
-title: 基本的CSS理解
+title: 基本的 CSS 理解
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 tags:
   - 初学者
@@ -13,12 +13,12 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 <div>{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}</div>
 
-<p class="summary">你已经在这个模块中了解到了很多内容, 所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。</p>
+<p>你已经在这个模块中了解到了很多内容，所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">学习本章的前提条件:</th>
+   <th scope="row">学习本章的前提条件：</th>
    <td>在尝试这个测验之前，你应该已经完成了这个模块中所有文章的学习。</td>
   </tr>
   <tr>
@@ -30,7 +30,7 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 <h2 id="起点">起点</h2>
 
-<p>在开始测验之前，你应该:</p>
+<p>在开始测验之前，你应该：</p>
 
 <ul>
  <li>将 <a href="https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html">HTML file for the exercise</a>, 和 <a href="https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg">associated image file</a>,拷贝到你的本地环境中。如果你想使用自己的图片文件以及把你的名字写进资料里面的话，也没有问题，不过需要保证你提供的图像是正方形的。</li>
@@ -38,14 +38,14 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 另外, 你可以使用一个网站比如 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> 来做你的测验。你可以复制 HTML 和 CSS 到其中一个在线编辑器中，以及使用这个 <a href="http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg">this URL</a> 来让 <code>&lt;img&gt;</code> 显示图片。如果你使用的在线编辑器无法让你链接 CSS 文件 (没有单独的 CSS 面板)，你也可以将 CSS 直接放入<code>&lt;style&gt;</code> 元素中。</p>
+<p><strong>注意</strong>: 另外，你可以使用一个网站比如 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://glitch.com/">Glitch</a> 来做你的测验。你可以复制 HTML 和 CSS 到其中一个在线编辑器中，以及使用这个 <a href="http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg">this URL</a> 来让 <code>&lt;img&gt;</code> 显示图片。如果你使用的在线编辑器无法让你链接 CSS 文件 (没有单独的 CSS 面板)，你也可以将 CSS 直接放入<code>&lt;style&gt;</code> 元素中。</p>
 </div>
 
 <h2 id="项目概要">项目概要</h2>
 
 <p>我们已经为你提供了一些原始的 HTML 和一张图片，然后需要编写必要的 CSS 来让其成为一个漂亮的网上小名片，可能大小是游戏玩家卡片或社交媒体简介的两倍。下面的段落描述了你需要做的事情。</p>
 
-<p>基本设置:</p>
+<p>基本设置：</p>
 
 <ul>
  <li>首先，在你放 HTML 文件和图像文件的目录下，创建一个新的文件，把它命名为类似<code>style.css</code>。</li>
@@ -57,12 +57,12 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 <p>关注我们为你提供的选择器和规则集：</p>
 
 <ul>
- <li>接下来, 我们希望你观察四个选择器，并计算每一个的专用性。将它们写在稍后可以找到的地方，例如在 CSS 顶部的注释中。</li>
+ <li>接下来，我们希望你观察四个选择器，并计算每一个的专用性。将它们写在稍后可以找到的地方，例如在 CSS 顶部的注释中。</li>
  <li>现在是时候把正确的选择器放在正确的规则集上了！你的 CSS 资源中有四对选择器和规则集需要匹配，现在就开始匹配，并将它们添加到你的 CSS 文件。你需要：
   <ul>
    <li>为整体卡片的容器提供一个固定的宽/高，背景颜色，边框，以及边框圆角等等。</li>
-   <li>为header提供一个渐变的背景颜色，从更暗到更亮，加上圆角，配合在卡片容器上设置的圆角。</li>
-   <li>为footer提供一个渐变的背景颜色，从更亮到更暗，加上圆角，配合在卡片容器上设置的圆角。</li>
+   <li>为 header 提供一个渐变的背景颜色，从更暗到更亮，加上圆角，配合在卡片容器上设置的圆角。</li>
+   <li>为 footer 提供一个渐变的背景颜色，从更亮到更暗，加上圆角，配合在卡片容器上设置的圆角。</li>
    <li>将图像向右浮动，使其粘贴在名片主要内容的右边，然后把它的 max-height 设置为 100% (一个聪明的技巧，来确保它将放大/缩小，与父容器保持同样的高度，不管它变成什么高度。)</li>
   </ul>
  </li>
@@ -72,16 +72,16 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 <p>你需要写的新规则：</p>
 
 <ul>
- <li>编写一个同时面向 card head 和 card footer 的规则集,使它们计算的总高度为 50px（包括 30px 的内容高度和 10px 的 padding ）但用 <code>em</code> 来表示。</li>
- <li>浏览器会为<code>&lt;h2&gt;</code> 和 <code>&lt;p&gt;</code>元素应用默认的 margin，这会影响我们的设计，所以编写一个规则集： margin 设置为 0。</li>
+ <li>编写一个同时面向 card head 和 card footer 的规则集，使它们计算的总高度为 50px（包括 30px 的内容高度和 10px 的 padding）但用 <code>em</code> 来表示。</li>
+ <li>浏览器会为<code>&lt;h2&gt;</code> 和 <code>&lt;p&gt;</code>元素应用默认的 margin，这会影响我们的设计，所以编写一个规则集：margin 设置为 0。</li>
  <li>为了阻止图像溢出名片的主要内容 ( <code>&lt;article&gt;</code> 元素)，我们需要给它设置一个明确的高度。设置 <code>&lt;article&gt;</code>的高度为 120px，但是使用 <code>em</code>来表示。还要给它一个半透明黑色的背景颜色，产生一个稍暗一点的阴影，能让红色的背景稍微透过。</li>
  <li>编写一个规则集，使 <code>&lt;h2&gt;</code> 有效的字体大小为 20px (使用 <code>em</code>表达) 以及一个适当的行高将其放置在标题的内容框的中央。回想起来，内容框高度应该是 30px，你所有需要的数字都已经给你了，所以可以计算出行高。</li>
- <li>为页脚中的 <code>&lt;p&gt;</code> 编写一个规则集，使它的有效字体大小为 15px (使用 <code>em</code>表达) 以及一个适当的行高将其放置在页面的内容框的中央。回想起来，内容框高度应该是30px，你所有需要的数字都已经给你了，所以可以计算出行高。</li>
- <li>最为最后一步, 为 <code>&lt;article&gt;</code> 中的段落设置一个合适的 padding 值，让它和 <code>&lt;h2&gt;</code> 以及页脚的段落左边缘对齐，并将其颜色设置得便于阅读。</li>
+ <li>为页脚中的 <code>&lt;p&gt;</code> 编写一个规则集，使它的有效字体大小为 15px (使用 <code>em</code>表达) 以及一个适当的行高将其放置在页面的内容框的中央。回想起来，内容框高度应该是 30px，你所有需要的数字都已经给你了，所以可以计算出行高。</li>
+ <li>最为最后一步，为 <code>&lt;article&gt;</code> 中的段落设置一个合适的 padding 值，让它和 <code>&lt;h2&gt;</code> 以及页脚的段落左边缘对齐，并将其颜色设置得便于阅读。</li>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 记住第二条规则集会将 <code>font-size: 10px;</code> 设置在 <code>&lt;html&gt;</code> 元素上 — 这意味着 <code>&lt;html&gt;</code> 的任何后代中，一个em将会等于10px而不是默认的 16px 。(这是当然的，如果在层次结构中，有不同的 <code>font-size</code> 设置于其上，问题中的后代没有任何的祖先位于 em元素和 <code>&lt;html&gt;</code> 之间。这可能会影响您所需要的值，尽管在这个简单的示例中，这不是问题。)</p>
+<p><strong>注意</strong>: 记住第二条规则集会将 <code>font-size: 10px;</code> 设置在 <code>&lt;html&gt;</code> 元素上 — 这意味着 <code>&lt;html&gt;</code> 的任何后代中，一个 em 将会等于 10px 而不是默认的 16px。(这是当然的，如果在层次结构中，有不同的 <code>font-size</code> 设置于其上，问题中的后代没有任何的祖先位于 em 元素和 <code>&lt;html&gt;</code> 之间。这可能会影响您所需要的值，尽管在这个简单的示例中，这不是问题。)</p>
 </div>
 
 <p>其他事情要考虑：</p>
@@ -94,7 +94,7 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 <h2 id="注意和提示">注意和提示</h2>
 
 <ul>
- <li>你不需要以任何方式编辑 HTML，除了将 CSS 应用于你的 HTML 。</li>
+ <li>你不需要以任何方式编辑 HTML，除了将 CSS 应用于你的 HTML。</li>
  <li>当使用 <code>em</code> 值代表一些你需要的像素长度的时候，想想 (<code>&lt;html&gt;</code>) 元素的基本字体大小，以及需要乘以什么才能获得所需的值。这将给你 em 的值，至少在这样一个简单的情况下。</li>
 </ul>
 
@@ -106,7 +106,7 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 <h2 id="评估">评估</h2>
 
-<p>如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行打分。 如果您是自学的，那么您可以通过询问  <a href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a>, 或在 <a href="irc://irc.mozilla.org/mdn">#mdn</a>的IRC频道 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> 中轻松获得打分指南. 首先尝试练习 - 作弊学不到什么！</p>
+<p>如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行打分。 如果您是自学的，那么您可以通过询问  <a href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a>, 或在 <a href="irc://irc.mozilla.org/mdn">#mdn</a>的 IRC 频道 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！</p>
 
 <p>{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}</p>
 

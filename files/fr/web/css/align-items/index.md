@@ -240,7 +240,7 @@ display.addEventListener('change', function (evt) {
 
 | Spécification                                                                                    | État                                     | Commentaires         |
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
+| {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
 | {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}         | {{Spec2('CSS3 Flexbox')}}         | Définition initiale. |
 
 {{cssinfo}}

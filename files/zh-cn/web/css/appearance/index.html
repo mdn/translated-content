@@ -24,7 +24,7 @@ translation_of: Web/CSS/appearance
 -webkit-appearance: scrollbarbutton-up;
 </pre>
 
-<p>这个属性经常用在 <a href="/zh-CN/docs/Mozilla/Tech/XUL/Tutorial">XUL</a> 的样式表中，用来设计拥有平台原生UI样式的自定义的组件，也用于 <a href="/zh-CN/docs/XBL">XBL</a> 之中以实现 Mozilla 平台的组件。</p>
+<p>这个属性经常用在 <a href="/zh-CN/docs/Mozilla/Tech/XUL/Tutorial">XUL</a> 的样式表中，用来设计拥有平台原生 UI 样式的自定义的组件，也用于 <a href="/zh-CN/docs/XBL">XBL</a> 之中以实现 Mozilla 平台的组件。</p>
 
 <div class="note">
 <p><strong>兼容性提示</strong>：如果您想在网站上使用此属性，您应非常小心地测试它。尽管在大部分现代浏览器中它是被支持的，它的实现差别很大。在版本较旧的浏览器中，即使是 <code>none</code> 也会在不同浏览器中产生差别，而且一些浏览器完全不支持这个属性。在版本较新的浏览器中这些差距会更小一些。</p>
@@ -34,11 +34,11 @@ translation_of: Web/CSS/appearance
 
 <h2 id="语法">语法</h2>
 
-<p>The <code>-moz-appearance</code> 属性may be specified as a single value chosen from the list below.</p>
+<p>The <code>-moz-appearance</code> 属性 may be specified as a single value chosen from the list below.</p>
 
 <h3 id="取值">取值</h3>
 
-<p><code>&lt;appearance&gt;</code> 是其中的一个关键字:</p>
+<p><code>&lt;appearance&gt;</code> 是其中的一个关键字：</p>
 
 
 <table class="standard-table">
@@ -62,7 +62,7 @@ translation_of: Web/CSS/appearance
 			</div>
 			{{EmbedLiveSample("sampleNone",100,50,"","", "nobutton")}}</td>
 			<td>All</td>
-			<td>不应用任何特殊样式。这是未定义元素的默认值。旧版翻译中的信息：但是，有这两个BUG： {{bug(649849)}} 和 {{bug(605985)}}。</td>
+			<td>不应用任何特殊样式。这是未定义元素的默认值。旧版翻译中的信息：但是，有这两个 BUG： {{bug(649849)}} 和 {{bug(605985)}}。</td>
 		</tr>
 		<tr>
 			<td><code>button</code></td>
@@ -1481,7 +1481,7 @@ translation_of: Web/CSS/appearance
 			<td> </td>
 		</tr>
 		<tr>
-			<td>{{gecko_minversion_inline("2.0")}} <code>-moz-win-borderless-glass</code></td>
+			<td><code>-moz-win-borderless-glass</code></td>
 			<td>
 			<div id="sampleWinBorderlessGlass" class="hidden">
 			<pre class="brush:css">
@@ -1551,7 +1551,7 @@ translation_of: Web/CSS/appearance
 			<td><strong>仅支持 Vista 及更高版本的 Windows 系统。</strong>此工具栏样式是为了用于通讯和生产方面的应用程序，与之对应的前景色为 <code>-moz-win-communicationstext</code>。</td>
 		</tr>
 		<tr>
-			<td>{{gecko_minversion_inline("6.0")}} <code>-moz-win-exclude-glass</code></td>
+			<td><code>-moz-win-exclude-glass</code></td>
 			<td>
 			<div id="sampleWinExcludeGlass" class="hidden">
 			<pre class="brush:css">
@@ -1780,61 +1780,7 @@ translation_of: Web/CSS/appearance
 
 
 <p>{{Compat("css.properties.appearance")}}</p>
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>最低支持</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}{{property_prefix("-moz")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>3.0{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>最低支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>11.0{{property_prefix("-webkit")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 不完全支持。</p>
-
-<p>[2] 只有 <code>none</code>, <code>button</code>,  <code>和 textfield</code> 值被支持，详见 <a href="https://msdn.microsoft.com/en-us/library/ie/dn793580%28v=vs.85%29.aspx">the documentation on MSDN</a>。</p>
-
-<h3 id="正式语法">正式语法</h3>
-
-{{csssyntax}}
+{{Compat("css.properties.appearance")}}
 
 <h2 id="示例">示例</h2>
 

@@ -8,18 +8,18 @@ translation_of: Web/API/MediaDevices/devicechange_event
 <h2 id="一般信息">一般信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;">{{SpecName('Media Capture')}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">Event</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否可取消</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">对象</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref('MediaDevices')}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认动作</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
+ <dt>规范</dt>
+ <dd>{{SpecName('Media Capture')}}</dd>
+ <dt>接口</dt>
+ <dd>Event</dd>
+ <dt>是否冒泡</dt>
+ <dd>No</dd>
+ <dt>是否可取消</dt>
+ <dd>No</dd>
+ <dt>对象</dt>
+ <dd>{{domxref('MediaDevices')}}</dd>
+ <dt>默认动作</dt>
+ <dd>None</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -36,12 +36,12 @@ translation_of: Web/API/MediaDevices/devicechange_event
   <tr>
    <td><code>target</code>{{readonlyinline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>事件对象 (位于DOM树最上面的元素).</td>
+   <td>事件对象 (位于 DOM 树最上面的元素).</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyinline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>事件类型.</td>
+   <td>事件类型。</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyinline}}</td>
@@ -85,66 +85,7 @@ translation_of: Web/API/MediaDevices/devicechange_event
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(52.0)}}</td>
-   <td>{{CompatGeckoDesktop(51)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>39</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>39</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Support for the <code>devicechange</code> event and for {{domxref("MediaDevices.ondevicechange")}} landed in Firefox 51, but <em>only for Mac</em>, and disabled by default. It can be enabled by setting the preference <code>media.ondevicechange.enabled</code> to <code>true</code>. Support for this event was added for Linux and Windows—and it was enabled by default—starting in Firefox 52.</p>
+{{Compat("api.MediaDevices.devicechange_event")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -13,17 +13,17 @@ translation_of: Web/API/File
 
 <p>文件（<strong><code>File</code></strong>）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容。</p>
 
-<p>通常情况下， <code>File</code> 对象是来自用户在一个 {{HTMLElement("input")}} 元素上选择文件后返回的 {{domxref("FileList")}} 对象,也可以是来自由拖放操作生成的 {{domxref("DataTransfer")}} 对象，或者来自 {{domxref("HTMLCanvasElement")}} 上的 <code>mozGetAsFile</code>() API。在Gecko中，特权代码可以创建代表任何本地文件的File对象，而无需用户交互（有关详细信息，请参阅{{anch("注意事项")}}。</p>
+<p>通常情况下， <code>File</code> 对象是来自用户在一个 {{HTMLElement("input")}} 元素上选择文件后返回的 {{domxref("FileList")}} 对象，也可以是来自由拖放操作生成的 {{domxref("DataTransfer")}} 对象，或者来自 {{domxref("HTMLCanvasElement")}} 上的 <code>mozGetAsFile</code>() API。在 Gecko 中，特权代码可以创建代表任何本地文件的 File 对象，而无需用户交互（有关详细信息，请参阅<a href="#注意事项">注意事项</a>。</p>
 
 <p><code>File</code> 对象是特殊类型的 {{domxref("Blob")}}，且可以用在任意的 Blob 类型的 context 中。比如说， {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, 及 {{domxref("XMLHttpRequest", "", "send()")}} 都能处理 <code>Blob</code> 和<code> File</code>。</p>
 
-<p>参考 <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">从Web应用程序使用文件</a> 了解更多信息和例子。</p>
+<p>参考 <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">从 Web 应用程序使用文件</a> 了解更多信息和例子。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("File.File", "File()")}}</dt>
- <dd><span class="short_text" id="result_box" lang="zh-CN"><span>返回一个新构建的文件对象（</span><code>File</code></span><span class="short_text" lang="zh-CN"><span>）。</span></span></dd>
+ <dd>返回一个新构建的文件对象（<code>File</code>）。</dd>
 </dl>
 
 <h2 id="Properties" name="Properties">属性</h2>
@@ -32,8 +32,8 @@ translation_of: Web/API/File
 
 <dl>
  <dt>{{domxref("File.lastModified")}} {{readonlyinline}}</dt>
- <dd>返回当前 <code>File</code> 对象所引用文件最后修改时间，自 UNIX 时间起始值（1970年1月1日 00:00:00 UTC）以来的毫秒数。</dd>
- <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}} {{gecko_minversion_inline("15.0")}}</dt>
+ <dd>返回当前 <code>File</code> 对象所引用文件最后修改时间，自 UNIX 时间起始值（1970 年 1 月 1 日 00:00:00 UTC）以来的毫秒数。</dd>
+ <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}}</dt>
  <dd>返回当前 <code>File</code> 对象所引用文件最后修改时间的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> 对象。</dd>
  <dt>{{domxref("File.name")}} {{readonlyinline}}</dt>
  <dd>返回当前 <code>File</code> 对象所引用文件的名字。</dd>
@@ -83,9 +83,9 @@ translation_of: Web/API/File
 <h3 id="注意事项">注意事项</h3>
 
 <ul>
- <li>在 Gecko 中，你可以从 Chrome 代码中使用这个 API。详细内容参见 <a href="https://developer.mozilla.org/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a>。若要从 chrome 代码, JSM 和引导范围中使用它，你必须使用 <code><a href="https://developer.mozilla.org/en-US/docs/Components.utils.importGlobalProperties">Cu.importGlobalProperties</a>(['File']);</code> 来导入它。</li>
- <li>从Gecko 6.0 {{geckoRelease("6.0")}} 开始，在特权代码（比如扩展中的代码）中，可以将一个 {{interface("nsIFile")}} 对象传入 <code>File</code> 构造函数，从而生成一个 File 对象。</li>
- <li>从Gecko 8.0 {{geckoRelease("8.0")}} 开始，在 XPCOM 组件代码中，你可以直接使用 <code>new File</code> 来创建一个 <code>File</code> 对象，而不需要像以前那样必须实例化一个 {{interface("nsIDOMFile")}} 对象。<code>File</code> 对象和 {{domxref("Blob")}} 相反，使用第二个参数作为文件名。文件名可以是任意的字符串。
+ <li>在 Gecko 中，你可以从 Chrome 代码中使用这个 API。详细内容参见 <a href="https://developer.mozilla.org/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a>。若要从 chrome 代码，JSM 和引导范围中使用它，你必须使用 <code><a href="https://developer.mozilla.org/en-US/docs/Components.utils.importGlobalProperties">Cu.importGlobalProperties</a>(['File']);</code> 来导入它。</li>
+ <li>从 Gecko 6.0 {{geckoRelease("6.0")}} 开始，在特权代码（比如扩展中的代码）中，可以将一个 <code>nsIFile</code> 对象传入 <code>File</code> 构造函数，从而生成一个 File 对象。</li>
+ <li>从 Gecko 8.0 {{geckoRelease("8.0")}} 开始，在 XPCOM 组件代码中，你可以直接使用 <code>new File</code> 来创建一个 <code>File</code> 对象，而不需要像以前那样必须实例化一个 <code>nsIDOMFile</code> 对象。<code>File</code> 对象和 {{domxref("Blob")}} 相反，使用第二个参数作为文件名。文件名可以是任意的字符串。
   <pre class="syntaxbox">new File( Array parts, String filename, BlobPropertyBag properties);
 </pre>
  </li>

@@ -17,7 +17,9 @@ La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les m�
 
 ## Syntaxe
 
-    Object.is(value1, value2);
+```js
+Object.is(value1, value2);
+```
 
 ### Paramètres
 
@@ -43,7 +45,7 @@ Un booléen indiquant si les arguments ont la même valeur.
 
   - sont toutes les deux égales à `+0`
   - sont toutes les deux égales à `-0`
-  - sont toutes les deux égales à {{jsxref("NaN")}}
+  - sont toutes les deux égales à {{jsxref("NaN")}}
   - sont non-nulles, ne sont pas `NaN` et ont toutes les deux la même valeur
 
 Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
@@ -94,7 +96,7 @@ if (!Object.is) {
 | Spécification                                                            | État                         | Commentaires        |
 | ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-object.is', 'Object.is')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-object.is', 'Object.is')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-object.is', 'Object.is')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

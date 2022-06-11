@@ -36,7 +36,7 @@ None.
 
 ## Exemples
 
-Cet exemple utilise `write()` pour remplacer "Example" dans la réponse par  "WebExtension Example".
+Cet exemple utilise `write()` pour remplacer "Example" dans la réponse par  "WebExtension Example".
 
 ```js
 function listener(details) {

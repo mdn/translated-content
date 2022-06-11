@@ -3,9 +3,9 @@ title: 鼠标事件
 slug: Web/API/MouseEvent
 translation_of: Web/API/MouseEvent
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+<p>{{APIRef("DOM Events")}}</p>
 
-<p><strong><code>MouseEvent</code> </strong>接口指用户与指针设备( 如鼠标 )交互时发生的事件。使用此接口的常见事件包括：{{event("click")}}，{{event("dblclick")}}，{{event("mouseup")}}，{{event("mousedown")}}。</p>
+<p><strong><code>MouseEvent</code></strong> 接口指用户与指针设备（如鼠标）交互时发生的事件。使用此接口的常见事件包括：{{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}}、{{event("mousedown")}}。</p>
 
 <p><code>MouseEvent</code> 派生自 {{domxref("UIEvent")}}，{{domxref("UIEvent")}} 派生自 {{domxref("Event")}}。虽然 <code>MouseEvent.initMouseEvent() </code>方法保持向后兼容性，但是应该使用 <code>MouseEvent()</code> 构造函数创建一个 <code>MouseEvent</code> 对象。</p>
 
@@ -17,64 +17,64 @@ translation_of: Web/API/MouseEvent
 
 <dl>
  <dt>{{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}</dt>
- <dd>生成一个新的MouseEvent对象</dd>
+ <dd>生成一个新的 MouseEvent 对象</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
-<p><em>这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型上的方法,</em></p>
+<p><em>这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型上的方法，</em></p>
 
 <dl>
  <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
- <dd>当鼠标事件触发的时，如果<kbd>alt</kbd> 键被按下，返回true;</dd>
+ <dd>当鼠标事件触发的时，如果<kbd>alt</kbd> 键被按下，返回 true;</dd>
  <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
  <dd>当鼠标事件触发的时，如果鼠标按钮被按下（如果有的话），将会返回一个数值。</dd>
- <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
+ <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}}</dt>
  <dd>
  <p>当鼠标事件触发的时，如果多个鼠标按钮被按下（如果有的话），将会返回一个或者多个代表鼠标按钮的数字。</p>
  </dd>
  <dt>{{domxref("MouseEvent.clientX")}} {{readonlyinline}}</dt>
- <dd>鼠标指针在点击元素（DOM）中的X坐标。</dd>
+ <dd>鼠标指针在点击元素（DOM）中的 X 坐标。</dd>
  <dt>{{domxref("MouseEvent.clientY")}} {{readonlyinline}}</dt>
- <dd>鼠标指针在点击元素（DOM）中的Y坐标。</dd>
+ <dd>鼠标指针在点击元素（DOM）中的 Y 坐标。</dd>
  <dt>{{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}</dt>
  <dd>当鼠标事件触发时，如果 <kbd>control</kbd> 键被按下，则返回 true；</dd>
  <dt>{{domxref("MouseEvent.metaKey")}} {{readonlyinline}}</dt>
  <dd>当鼠标事件触发时，如果 <kbd>meta</kbd>键被按下，则返回 true；</dd>
  <dt>{{domxref("MouseEvent.movementX")}} {{readonlyinline}}</dt>
- <dd>鼠标指针相对于最后{{event("mousemove")}}事件位置的X坐标。</dd>
+ <dd>鼠标指针相对于最后{{event("mousemove")}}事件位置的 X 坐标。</dd>
  <dt>{{domxref("MouseEvent.movementY")}} {{readonlyinline}}</dt>
- <dd>鼠标指针相对于最后{{event("mousemove")}}事件位置的Y坐标。</dd>
+ <dd>鼠标指针相对于最后{{event("mousemove")}}事件位置的 Y 坐标。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>鼠标指针相对于目标节点内边位置的X坐标</dd>
+ <dd>鼠标指针相对于目标节点内边位置的 X 坐标</dd>
  <dt>{{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>鼠标指针相对于目标节点内边位置的Y坐标</dd>
+ <dd>鼠标指针相对于目标节点内边位置的 Y 坐标</dd>
  <dt>{{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>鼠标指针相对于整个文档的X坐标；</dd>
+ <dd>鼠标指针相对于整个文档的 X 坐标；</dd>
  <dt>{{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>鼠标指针相对于整个文档的Y坐标；</dd>
+ <dd>鼠标指针相对于整个文档的 Y 坐标；</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MouseEvent.region")}} {{readonlyinline}}</dt>
- <dd>返回被点击事件影响的点击区域的id，如果没有区域被影响则返回null。</dd>
+ <dd>返回被点击事件影响的点击区域的 id，如果没有区域被影响则返回 null。</dd>
  <dt>{{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}</dt>
  <dd>
  <p>鼠标事件的次要目标（如果有的话）</p>
  </dd>
  <dt>{{domxref("MouseEvent.screenX")}} {{readonlyinline}}</dt>
- <dd>鼠标指针相对于全局（屏幕）的X坐标；</dd>
+ <dd>鼠标指针相对于全局（屏幕）的 X 坐标；</dd>
  <dt>{{domxref("MouseEvent.screenY")}} {{readonlyinline}}</dt>
- <dd>鼠标指针相对于全局（屏幕）的Y坐标；</dd>
+ <dd>鼠标指针相对于全局（屏幕）的 Y 坐标；</dd>
  <dt>{{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}</dt>
  <dd>当鼠标事件触发时，如果 <kbd>shift</kbd> 键被按下，则返回 true；</dd>
  <dt>{{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}</dt>
  <dd>当鼠标事件触发时，表示被按下的按钮。</dd>
  <dt>{{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>点击事件发生时施加在触摸屏或者平板设备的压力量。这个数值在0.0（最小压力）和1.0（最大压力）之间。</dd>
+ <dd>点击事件发生时施加在触摸屏或者平板设备的压力量。这个数值在 0.0（最小压力）和 1.0（最大压力）之间。</dd>
  <dt>{{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
  <dd>生成事件的类型（若干 <code>MOZ_SOURCE_* </code>常量如下列出）。可通过该属性获知鼠标事件是否由真实鼠标设备触发，亦或通过触摸事件触发（这可能影响处理坐标事件时的精确程度）。</dd>
  <dt>{{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
@@ -102,12 +102,12 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.getModifierState()")}}</dt>
  <dd>返回指定修饰键的当前状态。请参照{{domxref("KeyboardEvent.getModifierState")}}() 查看详情。</dd>
  <dt>{{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}</dt>
- <dd>初始化创建MouseEvent的值。如果这个事件已经被分派，这个方法将不会做任何事情。</dd>
+ <dd>初始化创建 MouseEvent 的值。如果这个事件已经被分派，这个方法将不会做任何事情。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>这个例子演示了使用DOM方法在复选框上模拟一个点击事件（使用编程的方式生成点击事件）。</p>
+<p>这个例子演示了使用 DOM 方法在复选框上模拟一个点击事件（使用编程的方式生成点击事件）。</p>
 
 <pre class="brush: js">function simulateClick() {
   var evt = new <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a>("click", {

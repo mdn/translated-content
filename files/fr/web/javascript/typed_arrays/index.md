@@ -151,7 +151,7 @@ const tableauType = new Uint8Array([1, 2, 3, 4]);
 const tableauNormal = Array.from(tableauType);
 ```
 
-On peut tout aussi bien utiliser [la syntaxe de décomposition d'un tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)&nbsp;: 
+On peut tout aussi bien utiliser [la syntaxe de décomposition d'un tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)&nbsp;:
 
 ```js
 const tableauType = new Uint8Array([1, 2, 3, 4]);
@@ -164,7 +164,6 @@ Et si `Array.from()` n'est pas pris en charge, on pourra recourir à&nbsp;:
 const tableauType = new Uint8Array([1, 2, 3, 4]);
 const tableauNormal = Array.prototype.slice.call(tableauType);
 ```
-
 
 ## Voir aussi
 

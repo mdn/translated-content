@@ -11,17 +11,17 @@ tags:
   - Tutorial
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第9步</font></font></strong><font><font>。</font><font>在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson09.html</font></a><font>完成本课后，您可以找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 9 步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html">Gamedev-Phaser-Content-Kit / demos / lesson09.html</a>完成本课后，您可以找到源代码。</p>
 </div>
 
-<p><font>建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用Phaser还是比纯JavaScript更容易。</font><font>我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。</font></p>
+<p>建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用 Phaser 还是比纯 JavaScript 更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。</p>
 
-<h2 id="定义新变量"><font><font>定义新变量</font></font></h2>
+<h2 id="定义新变量">定义新变量</h2>
 
 <p>首先，我们定义所需的变量 - 在以前的变量定义中添加以下内容：</p>
 
@@ -30,11 +30,11 @@ var newBrick;
 var brickInfo;
 </pre>
 
-<p><font><font>该</font></font><code>bricks</code><font><font>变量将用于创建一个组，</font></font><code>newBrick</code><font><font>将在循环的每次迭代中添加到组中的新对象，</font></font><code>brickInfo</code><font><font>并将存储我们需要的所有数据。</font></font></p>
+<p>该<code>bricks</code>变量将用于创建一个组，<code>newBrick</code>将在循环的每次迭代中添加到组中的新对象，<code>brickInfo</code>并将存储我们需要的所有数据。</p>
 
-<h2 id="渲染砖图像"><font><font>渲染砖图像</font></font></h2>
+<h2 id="渲染砖图像">渲染砖图像</h2>
 
-<p><font><font>接下来，我们加载砖的图像 - </font></font><code>load.image()</code><font><font>在其他地方</font><font>添加以下</font><font>调用：</font></font></p>
+<p>接下来，我们加载砖的图像 - <code>load.image()</code>在其他地方添加以下调用：</p>
 
 <pre class="brush: js">function preload() {
     // ...
@@ -42,11 +42,11 @@ var brickInfo;
 }
 </pre>
 
-<p><font><font>您还需要</font></font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png"><font><font>从Github抓取砖图像</font></font></a><font><font>并将其保存在您的</font></font><code>/img</code><font><font>目录中。</font></font></p>
+<p>您还需要<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png">从 Github 抓取砖图像</a>并将其保存在您的<code>/img</code>目录中。</p>
 
-<h2 id="画砖"><font><font>画砖</font></font></h2>
+<h2 id="画砖">画砖</h2>
 
-<p><font><font>我们将将所有用于绘制砖块的代码放在一个</font></font><code>initBricks</code><font><font>函数中，以使其与其余代码分离。</font></font><code>initBricks</code><font><font>在</font></font><code>create()</code><font><font>函数</font><font>末尾</font><font>添加一个调用</font><font>：</font></font></p>
+<p>我们将将所有用于绘制砖块的代码放在一个<code>initBricks</code>函数中，以使其与其余代码分离。<code>initBricks</code>在<code>create()</code>函数末尾添加一个调用：</p>
 
 <pre class="brush: js">function create(){
     // ...
@@ -54,7 +54,7 @@ var brickInfo;
 }
 </pre>
 
-<p><font><font>现在到函数本身。</font></font><code>initBricks()</code><font><font>在我们的游戏代码末尾</font><font>添加</font><font>功能，就在关闭&lt;/ script&gt;标签之前，如下所示。</font><font>首先我们已经包括了这个  </font></font><code>brickInfo</code><font><font>对象，因为这很快就会派上用场：</font></font></p>
+<p>现在到函数本身。<code>initBricks()</code>在我们的游戏代码末尾添加功能，就在关闭&lt;/ script&gt;标签之前，如下所示。首先我们已经包括了这个  <code>brickInfo</code>对象，因为这很快就会派上用场：</p>
 
 <pre class="brush: js">function initBricks() {
     brickInfo = {
@@ -73,9 +73,9 @@ var brickInfo;
 }
 </pre>
 
-<p><font><font>这个</font></font><code>brickInfo</code><font><font>对象将包含我们需要的所有信息：单个砖的宽度和高度，我们将在屏幕上看到的砖的行数和列数，顶部和左边的偏移量（画布上我们将开始绘制的位置）砖块）和每一列和砖块之间的填充。</font></font></p>
+<p>这个<code>brickInfo</code>对象将包含我们需要的所有信息：单个砖的宽度和高度，我们将在屏幕上看到的砖的行数和列数，顶部和左边的偏移量（画布上我们将开始绘制的位置）砖块）和每一列和砖块之间的填充。</p>
 
-<p><font><font>现在，让我们开始创建砖块 - 首先添加一个空组来包含砖块，在</font></font><code>initBricks()</code><font><font>函数</font><font>底部添加以下行</font><font>：</font></font></p>
+<p>现在，让我们开始创建砖块 - 首先添加一个空组来包含砖块，在<code>initBricks()</code>函数底部添加以下行：</p>
 
 <pre class="brush: js">bricks = game.add.group();
 </pre>
@@ -89,7 +89,7 @@ var brickInfo;
 }
 </pre>
 
-<p><font><font>这样我们将创建我们需要的确切数量的砖，并将它们全部包含在一个组中。</font><font>现在我们需要在嵌套循环结构中添加一些代码来绘制每个砖块。</font><font>填写内容如下图所示：</font></font></p>
+<p>这样我们将创建我们需要的确切数量的砖，并将它们全部包含在一个组中。现在我们需要在嵌套循环结构中添加一些代码来绘制每个砖块。填写内容如下图所示：</p>
 
 <pre class="brush: js">for(c=0; c&lt;brickInfo.count.col; c++) {
     for(r=0; r&lt;brickInfo.count.row; r++) {
@@ -104,19 +104,19 @@ var brickInfo;
 }
 </pre>
 
-<p><font><font>在这里，我们循环遍历行和列，创建新的砖块并将其放在屏幕上。</font><font>新创建的砖块为Arcade物理引擎启用，它的身体被设置为不可移动（所以当球被击中时它不会移动），我们还将锚点放在中间并添加砖到集团。</font></font></p>
+<p>在这里，我们循环遍历行和列，创建新的砖块并将其放在屏幕上。新创建的砖块为 Arcade 物理引擎启用，它的身体被设置为不可移动（所以当球被击中时它不会移动），我们还将锚点放在中间并添加砖到集团。</p>
 
-<p><font><font>目前的问题是，我们在一个地方绘制所有的砖，坐标（0,0）。</font><font>我们需要做的是将每个砖块绘制在自己的x和y位置。</font><font>更新</font></font><code>brickX</code><font><font>和</font></font><code>brickY</code><font><font>行如下：</font></font></p>
+<p>目前的问题是，我们在一个地方绘制所有的砖，坐标（0,0）。我们需要做的是将每个砖块绘制在自己的 x 和 y 位置。更新<code>brickX</code>和<code>brickY</code>行如下：</p>
 
 <pre class="brush: js">var brickX = (r*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
 var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 </pre>
 
-<p><font><font>每个</font></font><code>brickX</code><font><font>位置都是</font></font><code>brickInfo.width</code><font><font>加</font></font><code>brickInfo.padding</code><font><font>号乘以行号</font></font><code>r</code><font><font>，加上</font></font><code>brickInfo.offset.left</code><font><font>; </font><font>用于所述逻辑</font></font><code>brickY</code><font><font>是不同之处在于它使用的值列号相同</font></font><code>c</code><font><font>，</font></font><code>brickInfo.height</code><font><font>和</font></font><code>brickInfo.offset.top</code><font><font>。</font><font>现在每个砖都可以放置在正确的位置，每个砖块之间填充，并从左侧和顶部画布边缘偏移绘制。</font></font></p>
+<p>每个<code>brickX</code>位置都是<code>brickInfo.width</code>加<code>brickInfo.padding</code>号乘以行号<code>r</code>，加上<code>brickInfo.offset.left</code>; 用于所述逻辑<code>brickY</code>是不同之处在于它使用的值列号相同<code>c</code>，<code>brickInfo.height</code>和<code>brickInfo.offset.top</code>。现在每个砖都可以放置在正确的位置，每个砖块之间填充，并从左侧和顶部画布边缘偏移绘制。</p>
 
-<h2 id="检查initBricks（）代码"><font><font>检查initBricks（）代码</font></font></h2>
+<h2 id="检查initbricks_代码">检查 initBricks() 代码</h2>
 
-<p><font><font>这是功能的完整代码</font></font><code>initBricks()</code><font><font>：</font></font></p>
+<p>这是功能的完整代码<code>initBricks()</code>：</p>
 
 <pre class="brush: js">function initBricks() {
     brickInfo = {
@@ -147,11 +147,11 @@ var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 }
 </pre>
 
-<p><font><font>如果您现在重新加载</font></font><code>index.html</code><font><font>，您应该看到在屏幕上打印的砖块彼此相距甚远。</font></font></p>
+<p>如果您现在重新加载<code>index.html</code>，您应该看到在屏幕上打印的砖块彼此相距甚远。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
-<p><font><font>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</font></font></p>
+<p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
 <p> </p>
 
@@ -159,6 +159,6 @@ var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>有些东西丢失了 </font><font>球不经停，经过砖块 - 我们需要适当的</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection"><font><font>碰撞检测</font></font></a><font><font>。</font></font></p>
+<p>有些东西丢失了 球不经停，经过砖块 - 我们需要适当的<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection">碰撞检测</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}</p>

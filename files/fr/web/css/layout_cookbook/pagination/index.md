@@ -38,11 +38,11 @@ Lorsque la propriété {{cssxref("column-gap")}} sera plus largement implément�
 
 ```css
 .pagination {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  column-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px;
 }
 ```
 
@@ -70,7 +70,7 @@ Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en 
 
 - {{Cssxref("justify-content")}}
 - {{Cssxref("column-gap")}}
-- _[Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)_[ (en anglais)](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
+- _[Know your ARIA: 'Hidden' vs 'None' (en anglais)](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
 - [Utiliser le contenu invisible pour les lecteurs d'écran (en anglais)](https://webaim.org/techniques/css/invisiblecontent/#techniques)
 - [Écrire du CSS sans oublier l'accessibilité (en anglais)](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
 - [Guide stylistique d'accessibilité : la pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

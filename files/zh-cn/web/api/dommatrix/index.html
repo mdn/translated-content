@@ -5,11 +5,11 @@ translation_of: Web/API/DOMMatrix
 ---
 <p>{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}</p>
 
-<p><code><strong>DOMMatrix</strong></code>接口代表4x4矩阵，适合 2D 和3D 操作。</p>
+<p><code><strong>DOMMatrix</strong></code>接口代表 4x4 矩阵，适合 2D 和 3D 操作。</p>
 
-<p>一个4x4矩阵适于描绘任何3D的旋转（rotation ）和过渡（translation）。</p>
+<p>一个 4x4 矩阵适于描绘任何 3D 的旋转（rotation ）和过渡（translation）。</p>
 
-<p>此接口在Web workers里应该是可用的，虽然某些实现现在还不允许。</p>
+<p>此接口在 Web workers 里应该是可用的，虽然某些实现现在还不允许。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -17,10 +17,10 @@ translation_of: Web/API/DOMMatrix
 
 <dl>
  <dt><code>m11</code>, <code>m12</code>, <code>m13</code>, <code>m14</code>, <code>m21</code>, <code>m22</code>, <code>m23</code>, <code>m24</code>, <code>m31</code>, <code>m32</code>, <code>m33</code>, <code>m34</code>, <code>m41</code>, <code>m42</code>, <code>m43</code>, <code>m44</code></dt>
- <dd>代表一个4x4矩阵的每个组成部分的double值。</dd>
+ <dd>代表一个 4x4 矩阵的每个组成部分的 double 值。</dd>
  <dt><code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, <code>f</code> {{ReadOnlyInline}}</dt>
- <dd>代表了2D旋转和过渡所需要的一个4x4矩阵的每个组成部分的double值。它们是这个矩阵的一些组成的别名：
- <table class="standard-table">
+ <dd>代表了 2D 旋转和过渡所需要的一个 4x4 矩阵的每个组成部分的 double 值。它们是这个矩阵的一些组成的别名：
+ <table>
   <thead>
    <tr>
     <th scope="col"><code>2D</code></th>
@@ -69,25 +69,25 @@ translation_of: Web/API/DOMMatrix
  <dt>{{domxref("DOMMatrix.translateSelf()")}}</dt>
  <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵被指定向量转换后的结果。</dd>
  <dt>{{domxref("DOMMatrix.scaleSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x 和y维度被指定因子缩放后的结果，对齐指定原点。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x 和 y 维度被指定因子缩放后的结果，对齐指定原点。</dd>
  <dt>{{domxref("DOMMatrix.scale3dSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y和z维度被指定因子缩放后的结果，对齐指定原点。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y 和 z 维度被指定因子缩放后的结果，对齐指定原点。</dd>
  <dt>{{domxref("DOMMatrix.scaleNonUniformSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y和z维度被各自维度的指定因子缩放后的结果，对齐指定原点。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y 和 z 维度被各自维度的指定因子缩放后的结果，对齐指定原点。</dd>
  <dt>{{domxref("DOMMatrix.rotateSelf()")}}</dt>
  <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，对齐指定原点。</dd>
  <dt>{{domxref("DOMMatrix.rotateFromVectorSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，该角度在指定向量和 (1,0)之间，对齐指定原点。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，该角度在指定向量和 (1,0) 之间，对齐指定原点。</dd>
  <dt>{{domxref("DOMMatrix.rotateAxisAngleSelf()")}}</dt>
  <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度和指定向量旋转后的结果。</dd>
  <dt>{{domxref("DOMMatrix.skewXSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿x轴倾斜后的结果。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿 x 轴倾斜后的结果。</dd>
  <dt>{{domxref("DOMMatrix.skewYSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿y轴倾斜后的结果。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿 y 轴倾斜后的结果。</dd>
  <dt>{{domxref("DOMMatrix.invertSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵求逆后的结果。如果不能求逆，所有的组成部分会被设为NaN，并且<code>is2D()返回</code> <code>false</code>。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵求逆后的结果。如果不能求逆，所有的组成部分会被设为 NaN，并且<code>is2D() 返回</code> <code>false</code>。</dd>
  <dt>{{domxref("DOMMatrix.setMatrixValue()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，描述了一个矩阵，它的变换（transformation）和被参数指定的CSS {{domxref("transform")}}函数一样。</dd>
+ <dd>返回自身，一个{{domxref("DOMMatrix")}}，描述了一个矩阵，它的变换（transformation）和被参数指定的 CSS {{domxref("transform")}}函数一样。</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
@@ -109,69 +109,9 @@ translation_of: Web/API/DOMMatrix
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat("api.DOMMatrix")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatGeckoDesktop(33)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>可用于 Web workers</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatGeckoMobile(33)}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-   <td rowspan="1">{{CompatUnknown}}</td>
-   <td rowspan="1">{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>可用于 Web workers</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.WebKitCSSMatrix")}}
 
 <h2 id="相关链接">相关链接</h2>
 

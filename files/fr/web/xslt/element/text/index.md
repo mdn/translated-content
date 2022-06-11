@@ -12,9 +12,11 @@ L'élément `<xsl:text>` écrit un texte littéral dans l'arbre de sortie. Il pe
 
 ### Syntaxe
 
-    <xsl:text disable-output-escaping="yes" | "no">
-    	TEXTE
-    </xsl:text>
+```xml
+<xsl:text disable-output-escaping="yes" | "no">
+  TEXTE
+</xsl:text>
+```
 
 ### Attributs obligatoires
 
@@ -22,7 +24,7 @@ Aucun.
 
 ### Attribut optionnel
 
-- `disable-output-escaping` (Netscape ne sérialise pas le résultat de la transformation - la « sortie » ci-dessous - aussi cet attribut importe peu dans ce contexte. Pour écrire des entités HTML, utilisez les valeurs numériques correspondantes à leur place, par exemple `&#160` pour `&nbsp`).
+- `disable-output-escaping` (Netscape ne sérialise pas le résultat de la transformation - la «&nbsp;sortie&nbsp;» ci-dessous - aussi cet attribut importe peu dans ce contexte. Pour écrire des entités HTML, utilisez les valeurs numériques correspondantes à leur place, par exemple `&#160` pour `&nbsp`).
   - : Définit si les caractères spéciaux sont échappés lors de l'écriture vers la sortie. Les valeurs autorisées sont `yes` ou `no`. Si il est définit à `yes`, par exemple, le caractère \<tt>>\</tt> est envoyé tel quel ( `>` )et non comme `&gt`.
 
 ### Type

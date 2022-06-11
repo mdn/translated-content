@@ -12,19 +12,19 @@ tags:
   - winning
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第12步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson12.html</font></a><font>完成本课程后找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 12 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html">Gamedev-Phaser-Content-Kit / demos / lesson12.html</a>完成本课程后找到源代码。</p>
 </div>
 
 <p>在我们的游戏中实现获胜是相当容易的：如果你碰巧摧毁所有的砖块，那么你赢了。</p>
 
-<h2 id="如何取胜？"><font><font>如何取胜？</font></font></h2>
+<h2 id="如何取胜？">如何取胜？</h2>
 
-<p><font><font>将以下新代码添加到您的</font></font><code>ballHitBrick()</code><font><font>函数中：</font></font></p>
+<p>将以下新代码添加到您的<code>ballHitBrick()</code>函数中：</p>
 
 <pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
@@ -44,7 +44,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 }
 </pre>
 
-<p><font><font>我们循环使用组中的砖块</font></font><code>bricks.children</code><font><font>，检查每个砖块的</font></font><code>.alive() </code><font><font>方法</font><font>的活力</font><font>。</font><font>如果没有更多的砖块活着，那么我们会显示一个获胜的消息，一旦警报被关闭，重新启动游戏。</font></font></p>
+<p>我们循环使用组中的砖块<code>bricks.children</code>，检查每个砖块的<code>.alive() </code>方法的活力。如果没有更多的砖块活着，那么我们会显示一个获胜的消息，一旦警报被关闭，重新启动游戏。</p>
 
 <h2 id="比较你的代码">比较你的代码</h2>
 
@@ -54,6 +54,6 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>失败和获胜都是实施的，所以我们的游戏的核心游戏就完成了。</font><font>现在让我们添加一些额外的东西-我们会给玩家将3个</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives"><font><font>生活</font></font></a><font><font>的，而不是一个。</font></font></p>
+<p>失败和获胜都是实施的，所以我们的游戏的核心游戏就完成了。现在让我们添加一些额外的东西 - 我们会给玩家将 3 个<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives">生活</a>的，而不是一个。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}</p>

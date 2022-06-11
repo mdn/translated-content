@@ -5,10 +5,10 @@ translation_of: Web/API/Element/localName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>Element.localName</strong></code> 只读属性，返回本地名称的.</p>
+<p><code><strong>Element.localName</strong></code> 只读属性，返回本地名称的。</p>
 
 <div class="note">
-<p>在DOM4之前这个API定义在{{domxref("Node")}}接口。</p>
+<p>在 DOM4 之前这个 API 定义在{{domxref("Node")}}接口。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/localName
 
 <h2 id="示例">示例</h2>
 
-<p>(必须配合XML文档类型, 如 <code>text/xml</code> 或 <code>application/xhtml+xml</code>.)</p>
+<p>(必须配合 XML 文档类型，如 <code>text/xml</code> 或 <code>application/xhtml+xml</code>.)</p>
 
 <pre class="brush:xml">&lt;html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg"&gt;
@@ -51,7 +51,7 @@ translation_of: Web/API/Element/localName
 
 <h2 id="说明">说明</h2>
 
-<p>节点的本地名称是节点限定名的一部分出现在冒号之后. 限定名通常当作特定XML文档命名空间的一部分.例如在限定名 <code>ecomm:partners中 partners是本地名,ecomm是前缀。</code></p>
+<p>节点的本地名称是节点限定名的一部分出现在冒号之后。限定名通常当作特定 XML 文档命名空间的一部分。例如在限定名 <code>ecomm:partners 中 partners 是本地名，ecomm 是前缀。</code></p>
 
 <pre class="brush:xml">&lt;ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm"&gt;
   &lt;ecomm:partners&gt;
@@ -62,7 +62,7 @@ translation_of: Web/API/Element/localName
 </pre>
 
 <div class="note">
-<p><strong>提示:</strong> 在 {{Gecko("1.9.2")}} 之前, 此属性返回HTML DOM的HTML元素本地名称的大写版本 (而不是XML DOM的HTML元素). 在最后一个版本, 符合HTML5规范下, 当HTML DOM的HTML或XML DOMs的XHTML的小写元素时此属性返回内部DOM storage。{{domxref("element.tagName","tagName")}} 属性仍然返回HTML DOM的HTML元素本地名称的大写版本.</p>
+<p><strong>提示：</strong> 在 {{Gecko("1.9.2")}} 之前，此属性返回 HTML DOM 的 HTML 元素本地名称的大写版本 (而不是 XML DOM 的 HTML 元素). 在最后一个版本，符合 HTML5 规范下，当 HTML DOM 的 HTML 或 XML DOMs 的 XHTML 的小写元素时此属性返回内部 DOM storage。{{domxref("element.tagName","tagName")}} 属性仍然返回 HTML DOM 的 HTML 元素本地名称的大写版本。</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -86,55 +86,7 @@ translation_of: Web/API/Element/localName
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>46.0<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 此 API 之前在 {{domxref("Node")}} API.</p>
+{{Compat("api.Element.localName")}}
 
 <h2 id="相关链接">相关链接</h2>
 

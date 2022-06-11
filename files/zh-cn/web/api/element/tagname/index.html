@@ -10,10 +10,10 @@ translation_of: Web/API/Element/tagName
 <pre class="eval"><em>elementName</em> = element.tagName
 </pre>
 <ul>
- <li><code>elementName</code> 是一个字符串,包含了element元素的标签名.</li>
+ <li><code>elementName</code> 是一个字符串，包含了 element 元素的标签名。</li>
 </ul>
 <h2 id="备注">备注</h2>
-<p>在XML (或者其他基于XML的语言,比如XHTML,xul)文档中,<code>tagName的值会</code>保留原始的大小写. 在HTML文档中, <code>tagName</code>会返回其大写形式. 对于元素节点来说,<code>tagName属性</code>的值和<a href="/zh-cn/DOM/Node.nodeName" title="zh-cn/DOM/Node.nodeName">nodeName</a>属性的值是相同的.</p>
+<p>在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，<code>tagName 的值会</code>保留原始的大小写。在 HTML 文档中，<code>tagName</code>会返回其大写形式。对于元素节点来说，<code>tagName 属性</code>的值和<a href="/zh-cn/DOM/Node.nodeName" title="zh-cn/DOM/Node.nodeName">nodeName</a>属性的值是相同的。</p>
 <h2 id="Example" name="Example">例子</h2>
 <p>假设给定下面的源码</p>
 <pre class="eval">&lt;span id="born"&gt;When I was born...&lt;/span&gt;
@@ -22,10 +22,9 @@ translation_of: Web/API/Element/tagName
 <pre class="eval">var span = document.getElementById("born");
 alert(span.tagName);
 </pre>
-<p>在XHTML中 (或者其他的XML格式文件中), 会弹出小写的"span".而在HTML中, 会弹出大写的"SPAN".</p>
+<p>在 XHTML 中 (或者其他的 XML 格式文件中), 会弹出小写的"span".而在 HTML 中，会弹出大写的"SPAN".</p>
 <h2 id="规范">规范</h2>
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815">DOM Level 2 Core: tagName</a></li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
 </ul>
-<p>{{ languages( { "es": "es/DOM/element.tagName", "fr": "fr/DOM/element.tagName", "ja": "ja/DOM/element.tagName", "pl": "pl/DOM/element.tagName","en": "en/DOM/element.tagName" } ) }}</p>

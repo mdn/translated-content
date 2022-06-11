@@ -5,7 +5,7 @@ translation_of: Web/API/Client/postMessage
 ---
 <p>{{SeeCompatTable}}{{APIRef("Client")}}</p>
 
-<p class="summary">{{domxref("Client")}} 接口的 <code><strong>Client.postMessage()</strong></code> 方法允许一个service worker客户端向一个  {{domxref("ServiceWorker")}}发送一个消息，会触发service worker的message事件，通过监听这个事件，可以获取这个消息。</p>
+<p>{{domxref("Client")}} 接口的 <code><strong>Client.postMessage()</strong></code> 方法允许一个 service worker 客户端向一个  {{domxref("ServiceWorker")}}发送一个消息，会触发 service worker 的 message 事件，通过监听这个事件，可以获取这个消息。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Client/postMessage
 
 <dl>
  <dt><code>message</code></dt>
- <dd>发送给service worker的消息内容。</dd>
+ <dd>发送给 service worker 的消息内容。</dd>
  <dt><code>transfer {{optional_inline}}</code></dt>
  <dd>可转移的对象，例如对端口的引用。</dd>
 </dl>
@@ -28,107 +28,37 @@ translation_of: Web/API/Client/postMessage
 
 <p>从 service worker 向 client 发送消息：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'fetch'</span><span class="punctuation token">,</span> <span class="parameter token">event</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  event<span class="punctuation token">.</span><span class="function token">waitUntil</span><span class="punctuation token">(</span><span class="keyword token">async</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// Exit early if we don't have access to the client.</span>
-    <span class="comment token">// Eg, if it's cross-origin.</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>event<span class="punctuation token">.</span>clientId<span class="punctuation token">)</span> <span class="keyword token">return</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">addEventListener('fetch', event =&gt; {
+  event.waitUntil(async function() {
+    // Exit early if we don't have access to the client.
+    // Eg, if it's cross-origin.
+    if (!event.clientId) return;
 
-    <span class="comment token">// Get the client.</span>
-    <span class="keyword token">const</span> client <span class="operator token">=</span> <span class="keyword token">await</span> clients<span class="punctuation token">.</span><span class="function token">get</span><span class="punctuation token">(</span>event<span class="punctuation token">.</span>clientId<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="comment token">// Exit early if we don't get the client.</span>
-    <span class="comment token">// Eg, if it closed.</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>client<span class="punctuation token">)</span> <span class="keyword token">return</span><span class="punctuation token">;</span>
+    // Get the client.
+    const client = await clients.get(event.clientId);
+    // Exit early if we don't get the client.
+    // Eg, if it closed.
+    if (!client) return;
 
-    <span class="comment token">// Send a message to the client.</span>
-    client<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-      msg<span class="punctuation token">:</span> <span class="string token">"Hey I just got a fetch from you!"</span><span class="punctuation token">,</span>
-      url<span class="punctuation token">:</span> event<span class="punctuation token">.</span>request<span class="punctuation token">.</span>url
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    // Send a message to the client.
+    client.postMessage({
+      msg: "Hey I just got a fetch from you!",
+      url: event.request.url
+    });
 
-  <span class="punctuation token">}</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  }());
+});</code></pre>
 
-<p><span class="punctuation token">接收message:</span></p>
+<p>接收 message:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator<span class="punctuation token">.</span>serviceWorker<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'message'</span><span class="punctuation token">,</span> <span class="parameter token">event</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>event<span class="punctuation token">.</span>data<span class="punctuation token">.</span>msg<span class="punctuation token">,</span> event<span class="punctuation token">.</span>data<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code> </pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.serviceWorker.addEventListener('message', event =&gt; {
+  console.log(event.data.msg, event.data.url);
+});</code> </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-postmessage-method', 'postMessage()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(45.0)}}<sup>[1]</sup></td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(45.0)}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>[1] Behind a flag in Chrome 40 through 44.</li>
- <li>[2] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 &amp; 52 Extended Support Releases</a> (ESR.)</li>
-</ul>
+{{Compat("api.Client.postMessage")}}

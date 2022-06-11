@@ -9,7 +9,7 @@ translation_of: Web/CSS/@charset
 ---
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/R%C3%A8gles_@)  **`@charset`** définit l'encodage des caractères utilisés dans la feuille de style. Cette règle doit être le premier élément de la feuille de style (aucun caractère ne doit être écrit avant). Cette règle ne fait pas partie des [instructions imbriquées](/fr/Apprendre/CSS/Les_bases/La_syntaxe#Les_instructions_CSS) et ne peut donc pas être utilisée [à l'intérieur des groupes conditionnels](/fr/docs/Web/CSS/Règles_@#R.C3.A8gles_conditionnelles_de_groupe). Si plusieurs règles `@charset` sont définies, seule la première sera utilisée. Cette règle ne pourra pas être utilisée au sein d'un attribut `style` d'un élément HTML ou avec l'élément {{HTMLElement("style")}} car c'est l'encodage du document HTML qui est alors pris en compte.
+La [règle @](/fr/docs/Web/CSS/R%C3%A8gles_@)  **`@charset`** définit l'encodage des caractères utilisés dans la feuille de style. Cette règle doit être le premier élément de la feuille de style (aucun caractère ne doit être écrit avant). Cette règle ne fait pas partie des [instructions imbriquées](/fr/Apprendre/CSS/Les_bases/La_syntaxe#Les_instructions_CSS) et ne peut donc pas être utilisée [à l'intérieur des groupes conditionnels](/fr/docs/Web/CSS/Règles_@#R.C3.A8gles_conditionnelles_de_groupe). Si plusieurs règles `@charset` sont définies, seule la première sera utilisée. Cette règle ne pourra pas être utilisée au sein d'un attribut `style` d'un élément HTML ou avec l'élément {{HTMLElement("style")}} car c'est l'encodage du document HTML qui est alors pris en compte.
 
 ```css
 @charset "utf-8";
@@ -34,7 +34,7 @@ Le moteur dispose de différentes méthodes pour déterminer l'encodage d'une fe
 où
 
 - `charset`
-  - : Est une chaîne de caractères (une valeur CSS de type  {{cssxref("&lt;string&gt;")}}) indiquant l'encodage qui doit être utilisé. Cette valeur doit correspondre à un nom d'encodage valide pour le Web tel que défini dans [le registre IANA](https://www.iana.org/assignments/character-sets/character-sets.xhtml) et doit être délimitée par des doubles quotes, précédée d'un blanc (U+0020) et suivie d'un point-virgule. Si plusieurs noms sont associés avec l'encodage, seul celui marqué avec *préféré*  (_preferred_) doit être utilisé.
+  - : Est une chaîne de caractères (une valeur CSS de type  {{cssxref("&lt;string&gt;")}}) indiquant l'encodage qui doit être utilisé. Cette valeur doit correspondre à un nom d'encodage valide pour le Web tel que défini dans [le registre IANA](https://www.iana.org/assignments/character-sets/character-sets.xhtml) et doit être délimitée par des doubles quotes, précédée d'un blanc (U+0020) et suivie d'un point-virgule. Si plusieurs noms sont associés avec l'encodage, seul celui marqué avec *préféré*  (_preferred_) doit être utilisé.
 
 ### Syntaxe formelle
 

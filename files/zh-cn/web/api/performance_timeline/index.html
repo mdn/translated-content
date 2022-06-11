@@ -5,7 +5,7 @@ translation_of: Web/API/Performance_Timeline
 ---
 <div>{{DefaultAPISidebar("Performance Timeline API")}}</div>
 
-<p>The <strong>Performance Timeline</strong> API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define <em>{{anch("Performance_Observers","performance observer", '', 'true')}}</em> callbacks that are notified when specific performance events are added to the browser's <em>performance timeline</em>.</p>
+<p>The <strong>Performance Timeline</strong> API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define <a href="#performance_observers"><em>performance observer</em></a> callbacks that are notified when specific performance events are added to the browser's <em>performance timeline</em>.</p>
 
 <p>This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and <a href="/Web/API/Performance_Timeline/Using_Performance_Timeline">Using Performance Timeline</a>.</p>
 
@@ -49,7 +49,7 @@ translation_of: Web/API/Performance_Timeline
 
 <p>Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface's {{domxref("PerformanceObserver.observe","observe()")}} method (which is used to register the {{domxref("PerformanceEntry.entryType","entry types")}} to <em>observe</em>), the {{domxref("PerformanceObserver")}} interface also has a {{domxref("PerformanceObserver.disconnect","disconnect()")}} method that stops an observer from receiving further events.</p>
 
-<p class="note">Performance observers were added to the <code>Level 2</code> version of the standard and were not widely implemented.</p>
+<p>Performance observers were added to the <code>Level 2</code> version of the standard and were not widely implemented.</p>
 
 <h2 id="实现状态">实现状态</h2>
 

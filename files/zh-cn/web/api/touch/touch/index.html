@@ -5,7 +5,7 @@ translation_of: Web/API/Touch/Touch
 ---
 <p>{{APIRef("Touch Events")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>Touch()</code></strong> 构造器创建一个新的 {{domxref("Touch")}} 对象.</p>
+<p><strong><code>Touch()</code></strong> 构造器创建一个新的 {{domxref("Touch")}} 对象。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,17 +22,17 @@ translation_of: Web/API/Touch/Touch
  <dd>
  <ul>
   <li><code>"identifier"</code>, 必须，是一个长整型，表示一个触摸点的数字标记。</li>
-  <li><code>"target"</code>, 必须, 是 {{domxref("EventTarget")}}类型，表示在触摸点开始接触接触面时的节点。</li>
-  <li><code>"clientX"</code>, 可选，默认为0，为双精度浮点数类型,表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
-  <li><code>"clientY"</code>, 可选，默认为0，为双精度浮点数类型,表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
-  <li><code>"screenX"</code>, 可选，默认为0，为双精度浮点数类型,表示以用户屏幕为基准的，触摸点横坐标。</li>
-  <li><code>"screenY"</code>, 可选，默认为0，为双精度浮点数类型,表示以用户屏幕为基准的，触摸点纵坐标。</li>
-  <li><code>"pageX"</code>,可选，默认为0，为双精度浮点数类型,表示触摸在用户屏幕的横轴坐标，包括滚动条的偏移距离。 </li>
-  <li><code>"pageY"</code>, 可选，默认为0，为双精度浮点数类型,表示触摸在用户屏幕的纵轴坐标，包括滚动条的偏移距离。 </li>
-  <li><code>"radiusX"</code>, 可选，默认为0，为浮点数类型。表示接触面（比如手指，触控笔）接触形成的椭圆，在rotationAngle角度下横轴上形成的椭圆半径。和screenX使用的CSS像素保持同一个缩放大小。这个值不能为负。</li>
-  <li><code>"radiusY"</code>, 可选，默认为0，为浮点数类型。表示接触面（比如手指，触控笔）接触形成的椭圆，在rotationAngle角度下纵轴上形成的椭圆半径。和screenY使用的CSS像素保持同一个缩放大小。这个值不能为负。</li>
-  <li><code>"rotationAngle"</code>, 可选，默认为0，为浮点数类型。表示由 radiusX 和 radiusY决定的椭圆在顺时针方向相对其中心偏转的角度。这个值介于0到90度之间。如果由 radiusX 和 radiusY决定的椭圆是一个标准圆形，则rotationAngle没有任何效用。用户设备可能用0表示这种标准圆形的情况，或者用其他符合要求范围的值来表示（比如，用户设备可能用上一次的触摸事件rotationAngle值，来避免突然变动）。</li>
-  <li>​<code>"force"</code>,可选，默认为0，为浮点数类型。表示触摸体对触摸面的压力值。范围为从0到1：0表示压力为零，1表示设备能承受的最大压力敏感值。对压力的敏感值变动范围根据不同环境变动比较大。</li>
+  <li><code>"target"</code>, 必须，是 {{domxref("EventTarget")}}类型，表示在触摸点开始接触接触面时的节点。</li>
+  <li><code>"clientX"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
+  <li><code>"clientY"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
+  <li><code>"screenX"</code>, 可选，默认为 0，为双精度浮点数类型，表示以用户屏幕为基准的，触摸点横坐标。</li>
+  <li><code>"screenY"</code>, 可选，默认为 0，为双精度浮点数类型，表示以用户屏幕为基准的，触摸点纵坐标。</li>
+  <li><code>"pageX"</code>,可选，默认为 0，为双精度浮点数类型，表示触摸在用户屏幕的横轴坐标，包括滚动条的偏移距离。 </li>
+  <li><code>"pageY"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在用户屏幕的纵轴坐标，包括滚动条的偏移距离。 </li>
+  <li><code>"radiusX"</code>, 可选，默认为 0，为浮点数类型。表示接触面（比如手指，触控笔）接触形成的椭圆，在 rotationAngle 角度下横轴上形成的椭圆半径。和 screenX 使用的 CSS 像素保持同一个缩放大小。这个值不能为负。</li>
+  <li><code>"radiusY"</code>, 可选，默认为 0，为浮点数类型。表示接触面（比如手指，触控笔）接触形成的椭圆，在 rotationAngle 角度下纵轴上形成的椭圆半径。和 screenY 使用的 CSS 像素保持同一个缩放大小。这个值不能为负。</li>
+  <li><code>"rotationAngle"</code>, 可选，默认为 0，为浮点数类型。表示由 radiusX 和 radiusY 决定的椭圆在顺时针方向相对其中心偏转的角度。这个值介于 0 到 90 度之间。如果由 radiusX 和 radiusY 决定的椭圆是一个标准圆形，则 rotationAngle 没有任何效用。用户设备可能用 0 表示这种标准圆形的情况，或者用其他符合要求范围的值来表示（比如，用户设备可能用上一次的触摸事件 rotationAngle 值，来避免突然变动）。</li>
+  <li>​<code>"force"</code>,可选，默认为 0，为浮点数类型。表示触摸体对触摸面的压力值。范围为从 0 到 1:0 表示压力为零，1 表示设备能承受的最大压力敏感值。对压力的敏感值变动范围根据不同环境变动比较大。</li>
  </ul>
  </dd>
 </dl>
@@ -58,59 +58,7 @@ translation_of: Web/API/Touch/Touch
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class=" compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("48.0")}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatOpera("35")}}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class=" compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatChrome("48.0")}}</td>
-   <td>{{CompatChrome("48.0")}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatOpera("35")}}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Touch.Touch")}}
 
 <h2 id="See_also"><br>
  See also</h2>

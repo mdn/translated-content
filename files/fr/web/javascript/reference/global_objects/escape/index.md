@@ -20,7 +20,9 @@ La fonction **`escape()`** permet de renvoyer une nouvelle chaîne de caractère
 
 ## Syntaxe
 
-    escape(str)
+```js
+escape(str)
+```
 
 ### Paramètres
 

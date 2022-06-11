@@ -19,7 +19,9 @@ La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un 
 
 ## Syntaxe
 
-    wm.has(clé);
+```js
+wm.has(clé);
+```
 
 ### Paramètre
 
@@ -45,7 +47,7 @@ wm.has("machin");  // renvoie false
 | Spécification                                                                                            | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

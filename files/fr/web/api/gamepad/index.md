@@ -15,9 +15,9 @@ Un objet `Gamepad` peut être retourné de deux manières :
 ## Propriétés
 
 - {{domxref("Gamepad.axes")}} {{readonlyInline}}
-  - : Un tableau représentant les contrôles avec les axes présents sur le dispositif (par exemple : les joysticks analogiques).
+  - : Un tableau représentant les contrôles avec les axes présents sur le dispositif (par exemple : les joysticks analogiques).
 - {{domxref("Gamepad.buttons")}} {{readonlyInline}}
-  - : Un tableau d'objets {{domxref("gamepadButton")}} représentant les boutons présents sur le dispositif.
+  - : Un tableau d'objets {{domxref("gamepadButton")}} représentant les boutons présents sur le dispositif.
 - {{domxref("Gamepad.connected")}} {{readonlyInline}}
   - : Un booléen indiquant si la manette est toujours connectée au système.
 - {{domxref("Gamepad.displayId")}} {{readonlyInline}}

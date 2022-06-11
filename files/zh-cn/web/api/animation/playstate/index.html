@@ -13,7 +13,7 @@ translation_of: Web/API/Animation/playState
 <p>作为一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 的属性，<code><strong>Animation</strong></code><strong><code>.playState </code></strong><code>能够返回并设置一个可枚举值来描述一个动画的回放状态。</code></p>
 
 <div class="note">
-<p>这个属性只对CSS Animations 和 Transitions可读。</p>
+<p>这个属性只对 CSS Animations 和 Transitions 可读。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -40,7 +40,7 @@ translation_of: Web/API/Animation/playState
 
 <h2 id="实例">实例</h2>
 
-<p>在<a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>这个例子中, 玩家们可以凭<a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Alice crying into a pool of tears</a>结束游戏。出于性能原因，游戏里，眼泪只当可见之时才能运动。因此，这些泪滴必须在下面的情况下刚好暂停运动：</p>
+<p>在<a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>这个例子中，玩家们可以凭<a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Alice crying into a pool of tears</a>结束游戏。出于性能原因，游戏里，眼泪只当可见之时才能运动。因此，这些泪滴必须在下面的情况下刚好暂停运动：</p>
 
 <pre class="brush: js">// 创建泪珠动画
 
@@ -74,78 +74,11 @@ tears.forEach(function(el) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">格式</th>
-   <th scope="col">状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#play-state', 'playState')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop(48)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatGeckoMobile(48)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Chrome 50之前, <code>idle</code> 这项属性只用在还没开始的动画上，而在Chrome 50之后, 以 <code>paused显示</code>.</p>
-
-<p>[2] 默认情况下，Web Animations API 只在Firefox Developer Edition 和 Nightly builds可用。您可以在测试版和公开版的设置里通过配置偏好来启用，将<code>dom.animations-api.core.enabled</code> 设为 <code>true</code>, 然后也可在任何版本的Firefox上通过设置为<code>false来</code>禁用它。</p>
+{{Compat("api.Animation.playState")}}
 
 <h2 id="参见">参见</h2>
 

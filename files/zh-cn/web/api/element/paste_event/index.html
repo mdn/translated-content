@@ -1,5 +1,5 @@
 ---
-title: 'Element: paste事件'
+title: 'Element: paste 事件'
 slug: Web/API/Element/paste_event
 tags:
   - Clipboard API
@@ -21,7 +21,7 @@ original_slug: Web/Events/paste
 <strong>事件处理属性</strong>          {{domxref("HTMLElement/onpaste", "onpaste")}}
 </pre>
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">如果光标位于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或者 </span><code style="font-style: normal; font-size: 1rem; letter-spacing: -0.00278rem;"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 属性设置为 </span><code style="font-style: normal; font-size: 1rem; letter-spacing: -0.00278rem;">true的元素</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">），则默认操作是将剪贴板的内容插入光标所在位置的文档中。</span></p>
+<p>如果光标位于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或者 <code style="font-style: normal; font-size: 1rem; letter-spacing: -0.00278rem;"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> 属性设置为 <code style="font-style: normal; font-size: 1rem; letter-spacing: -0.00278rem;">true 的元素</code>），则默认操作是将剪贴板的内容插入光标所在位置的文档中。</p>
 
 <p>事件处理程序可以通过调用事件的 <code>clipboardData</code> 属性上的 {{domxref("DataTransfer/getData", "getData()")}}访问剪贴板内容。</p>
 

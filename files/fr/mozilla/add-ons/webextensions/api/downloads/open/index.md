@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/open
 
 La fonction **`open()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le fichier téléchargé avec son application associée. Un événement {{WebExtAPIRef("downloads.onChanged")}} se déclenche lorsque l'élément est ouvert pour la première fois.
 
-Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "downloads.open", ainsi que la permission "downloads". En outre, vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
+Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "downloads.open", ainsi que la permission "downloads". En outre, vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

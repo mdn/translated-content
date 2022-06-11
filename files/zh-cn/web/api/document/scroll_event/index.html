@@ -39,14 +39,14 @@ translation_of: Web/API/Document/scroll_event
 </table>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>在 iOS UIWebViews中， 滚动进行时不会触发 <code>scroll</code> 事件；只有当滚动结束后事件才会被触发。参见 <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a>。Safari 和 WKWebViews 则没有这个问题。</p>
+<p><strong>注意：</strong>在 iOS UIWebViews 中， 滚动进行时不会触发 <code>scroll</code> 事件；只有当滚动结束后事件才会被触发。参见 <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a>。Safari 和 WKWebViews 则没有这个问题。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="Scroll_事件节流">Scroll 事件节流</h3>
 
-<p>由于 <code>scroll</code> 事件可被高频触发，事件处理程序不应该执行高性能消耗的操作，如DOM操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件节流，如下所述。</p>
+<p>由于 <code>scroll</code> 事件可被高频触发，事件处理程序不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件节流，如下所述。</p>
 
 <p>然而需要注意的是，输入事件和动画帧常常以差不多的频率被触发，因此以下优化常常不必要。这个例子使用 <code>requestAnimationFrame</code> 优化 <code>scroll</code> 事件。</p>
 
@@ -76,18 +76,7 @@ window.addEventListener('scroll', function(e) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-scroll')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

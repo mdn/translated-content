@@ -5,10 +5,10 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textAlign</code></strong> 是 Canvas 2D API 描述绘制文本时，文本的对齐方式的属性。注意，该对齐是基于CanvasRenderingContext2D.fillText方法的x的值。所以如果textAlign="center"，那么该文本将画在 x-50%*width。</p>
+<p><strong><code>CanvasRenderingContext2D.textAlign</code></strong> 是 Canvas 2D API 描述绘制文本时，文本的对齐方式的属性。注意，该对齐是基于 CanvasRenderingContext2D.fillText 方法的 x 的值。所以如果 textAlign="center"，那么该文本将画在 x-50%*width。</p>
 
 <blockquote>
-<p>译者注：这里的textAlign="center"比较特殊。textAlign的值为center时候文本的居中是基于你在fillText的时候所给的x的值，也就是说文本一半在x的左边，一半在x的右边（可以理解为计算x的位置时从默认文字的左端，改为文字的中心，因此你只需要考虑x的位置即可）。所以，如果你想让文本在整个canvas居中，就需要将fillText的x值设置成canvas的宽度的一半。</p>
+<p>译者注：这里的 textAlign="center"比较特殊。textAlign 的值为 center 时候文本的居中是基于你在 fillText 的时候所给的 x 的值，也就是说文本一半在 x 的左边，一半在 x 的右边（可以理解为计算 x 的位置时从默认文字的左端，改为文字的中心，因此你只需要考虑 x 的位置即可）。所以，如果你想让文本在整个 canvas 居中，就需要将 fillText 的 x 值设置成 canvas 的宽度的一半。</p>
 </blockquote>
 
 <h2 id="语法">语法</h2>
@@ -28,7 +28,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
  <dt>center</dt>
  <dd>文本居中对齐。</dd>
  <dt>start</dt>
- <dd>文本对齐界线开始的地方 （左对齐指本地从左向右，右对齐指本地从右向左）。</dd>
+ <dd>文本对齐界线开始的地方（左对齐指本地从左向右，右对齐指本地从右向左）。</dd>
  <dt>end</dt>
  <dd>文本对齐界线结束的地方 （左对齐指本地从左向右，右对齐指本地从右向左）。</dd>
 </dl>
@@ -36,7 +36,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
 <p>默认值是 <code>start。</code></p>
 
 <blockquote>
-<p><code>译者注：direction属性会对此属性产生影响。如果direction属性设置为ltr，则left和start的效果相同，right和end的效果相同；如果direction属性设置为rtl，则left和end的效果相同，right和start的效果相同。</code></p>
+<p><code>译者注：direction 属性会对此属性产生影响。如果 direction 属性设置为 ltr，则 left 和 start 的效果相同，right 和 end 的效果相同；如果 direction 属性设置为 rtl，则 left 和 end 的效果相同，right 和 start 的效果相同。</code></p>
 </blockquote>
 
 <h2 id="示例">示例</h2>
@@ -106,72 +106,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textalign", "CanvasRenderingContext2D.textAlign")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>{{ CompatIE(9) }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.9.1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CanvasRenderingContext2D.textAlign")}}
 
 <h2 id="参见">参见</h2>
 

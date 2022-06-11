@@ -57,7 +57,7 @@ Ce code crée un volet de barre latérale qui affiche le [`tagName`](/fr/docs/We
 function onCreated(sidebarPane) {
 
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
-    const exp = "$0 && $0.tagName";
+    const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });

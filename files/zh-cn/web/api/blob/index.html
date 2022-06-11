@@ -14,15 +14,15 @@ translation_of: Web/API/Blob
 
 <p><code>Blob</code><strong> </strong>对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。 </p>
 
-<p>Blob 表示的不一定是JavaScript原生格式的数据。{{domxref("File")}} 接口基于<code>Blob</code>，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。</p>
+<p>Blob 表示的不一定是 JavaScript 原生格式的数据。{{domxref("File")}} 接口基于<code>Blob</code>，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。</p>
 
-<p>要从其他非blob对象和数据构造一个 <code>Blob</code>，请使用 {{domxref("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{domxref("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 <code>Blob</code> 对象，请参阅 {{domxref("File", "File")}} 文档。</p>
+<p>要从其他非 blob 对象和数据构造一个 <code>Blob</code>，请使用 {{domxref("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{domxref("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 <code>Blob</code> 对象，请参阅 {{domxref("File", "File")}} 文档。</p>
 
-<p>接受 <code>Blob</code> 对象的API也被列在 {{domxref("File", "File")}} 文档中。</p>
+<p>接受 <code>Blob</code> 对象的 API 也被列在 {{domxref("File", "File")}} 文档中。</p>
 
 <div class="note"><strong>注意：</strong><code>slice()</code> 方法原本接受 <code>length</code> 作为第二个参数，以表示复制到新 <code>Blob</code> 对象的字节数。如果设置的参数使 <code>start + length</code> 超出了源 <code>Blob</code> 对象的大小，则返回从开始到结尾的所有数据。</div>
 
-<div class="note"><strong>注意：</strong><code>slice()</code> 方法在某些浏览器和版本上带有浏览器引擎前缀：比如 Firefox 12 及更早版本的<code>blob.mozSlice()</code> 和 Safari 中的<code>blob.webkitSlice()</code>。 没有浏览器引擎前缀的老版本 <code>slice()</code> 方法有不同的语义，并且已过时。Firefox 30 取消了对 <code>blob.mozSlice()</code> 的支持。</div>
+<div class="note"><strong>注意：</strong><code>slice()</code> 方法在某些浏览器和版本上带有浏览器引擎前缀：比如 Firefox 12 及更早版本的<code>blob.mozSlice()</code> 和 Safari 中的<code>blob.webkitSlice()</code>。没有浏览器引擎前缀的老版本 <code>slice()</code> 方法有不同的语义，并且已过时。Firefox 30 取消了对 <code>blob.mozSlice()</code> 的支持。</div>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -46,11 +46,11 @@ translation_of: Web/API/Blob
  <dt>{{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}</dt>
  <dd>返回一个新的 <code>Blob</code> 对象，包含了源 <code>Blob</code> 对象中指定范围内的数据。</dd>
  <dt>{{domxref("Blob.stream()", "Blob.stream()")}}</dt>
- <dd>返回一个能读取blob内容的 {{domxref("ReadableStream")}}。</dd>
+ <dd>返回一个能读取 blob 内容的 {{domxref("ReadableStream")}}。</dd>
  <dt>{{domxref("Blob.text()", "Blob.text()")}}</dt>
- <dd>返回一个promise且包含blob所有内容的UTF-8格式的 {{domxref("USVString")}}。</dd>
+ <dd>返回一个 promise 且包含 blob 所有内容的 UTF-8 格式的 {{domxref("USVString")}}。</dd>
  <dt>{{domxref("Blob.arrayBuffer()", "Blob.arrayBuffer()")}}</dt>
- <dd>返回一个promise且包含blob所有内容的二进制格式的 {{domxref("ArrayBuffer")}} </dd>
+ <dd>返回一个 promise 且包含 blob 所有内容的二进制格式的 {{domxref("ArrayBuffer")}} </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -72,20 +72,20 @@ var myBlob = builder.getBlob('text/xml');
 </pre>
 </div>
 
-<h3 id="示例：使用_Blob_创建一个指向类型化数组的URL">示例：使用 Blob 创建一个指向类型化数组的URL</h3>
+<h3 id="示例：使用_Blob_创建一个指向类型化数组的URL">示例：使用 Blob 创建一个指向类型化数组的 URL</h3>
 
 <p>参考下面的代码：</p>
 
 <pre class="brush: js notranslate">var typedArray = GetTheTypedArraySomehow();
 var blob = new Blob([typedArray.buffer], {type: 'application/octet-stream'}); // 传入一个合适的 MIME 类型
 var url = URL.createObjectURL(blob);
-// 会产生一个类似 blob:d3958f5c-0777-0845-9dcf-2cb28783acaf 这样的URL字符串
+// 会产生一个类似 blob:d3958f5c-0777-0845-9dcf-2cb28783acaf 这样的 URL 字符串
 // 你可以像使用普通 URL 那样使用它，比如用在 img.src 上。
 </pre>
 
 <h3 id="示例：从_Blob_中提取数据">示例：从 Blob 中提取数据</h3>
 
-<p>一种从Blob中读取内容的方法是使用 {{domxref("FileReader")}}。以下代码将 Blob 的内容作为类型数组读取：</p>
+<p>一种从 Blob 中读取内容的方法是使用 {{domxref("FileReader")}}。以下代码将 Blob 的内容作为类型数组读取：</p>
 
 <pre class="brush: js notranslate">var reader = new FileReader();
 reader.addEventListener("loadend", function() {
@@ -93,29 +93,16 @@ reader.addEventListener("loadend", function() {
 });
 reader.readAsArrayBuffer(blob);</pre>
 
-<p>另一种读取Blob中内容的方式是使用Response对象。下述代码将Blob中的内容读取为文本：</p>
+<p>另一种读取 Blob 中内容的方式是使用 Response 对象。下述代码将 Blob 中的内容读取为文本：</p>
 
 <pre class="brush: js notranslate">var text = await (new Response(blob)).text();
 </pre>
 
-<p>通过使用 {{domxref("FileReader")}} 的其它方法可以把 Blob 读取为字符串或者数据URL。</p>
+<p>通过使用 {{domxref("FileReader")}} 的其它方法可以把 Blob 读取为字符串或者数据 URL。</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API','#blob','Blob')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -127,17 +114,17 @@ reader.readAsArrayBuffer(blob);</pre>
 
 <p>[2] <a href="https://hg.mozilla.org/mozilla-central/rev/1b3947ed93c6">Firefox 4</a> 版本实现的 <code>slice()</code> 使用 <code>length</code>来作为第二个参数。但是，因为这语法异于 {{jsxref("Array/slice", "Array.slice()")}} 和 {{jsxref("String/slice", "String.slice()")}}，Gecko 已经将其移除，并添加了 <code>mozSlice()</code> 来支持这个新的语法。</p>
 
-<p>[3] 在Gecko 12.0 {{ geckoRelease("12.0") }} 之前，有个bug会影响 <code>slice()</code> 的行为，就是参数 <code>start</code> 和 <code>end</code> 的值不能超出64位有符号数字范围，现已修复。</p>
+<p>[3] 在 Gecko 12.0 {{ geckoRelease("12.0") }} 之前，有个 bug 会影响 <code>slice()</code> 的行为，就是参数 <code>start</code> 和 <code>end</code> 的值不能超出 64 位有符号数字范围，现已修复。</p>
 
 <p>[4] 请看 {{bug("1048325")}}。</p>
 
 <h2 id="Gecko_备注：特权许可">Gecko 备注：特权许可</h2>
 
-<p>要使用 chrome 代码，JSM 和 Bootstrap 作用域，你必须像这样导入它:</p>
+<p>要使用 chrome 代码，JSM 和 Bootstrap 作用域，你必须像这样导入它：</p>
 
 <pre class="brush: js notranslate">Cu.importGlobalProperties(['Blob']);</pre>
 
-<p><code>Blob</code><font face="Consolas, Liberation Mono, Courier, monospace">可以在</font> Worker 作用域内使用。</p>
+<p><code>Blob</code>可以在 Worker 作用域内使用。</p>
 
 <h2 id="相关链接">相关链接</h2>
 

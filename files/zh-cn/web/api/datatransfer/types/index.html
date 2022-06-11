@@ -6,9 +6,9 @@ translation_of: Web/API/DataTransfer/types
 <div>
 <p>{{APIRef("HTML Drag and Drop API")}}</p>
 
-<p><strong><code>DataTransfer.types</code></strong> 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式(如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。  </p>
+<p><strong><code>DataTransfer.types</code></strong> 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。  </p>
 
-<p>这些格式是指定数据类型或格式的Unicode字符串，通常由MIME类型给出。 一些非MIME类型的值是由于历史遗留原因（例如“text”）而特殊设置的。</p>
+<p>这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。 一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -39,8 +39,8 @@ translation_of: Web/API/DataTransfer/types
 &lt;script&gt;
 function dragstart_handler(ev) {
  console.log("dragStart: target.id = " + ev.target.id);
- // 将这个元素的id添加到drag载荷中，
- // 以便drop事件知道将哪个元素添加到其树中。
+ // 将这个元素的 id 添加到 drag 载荷中，
+ // 以便 drop 事件知道将哪个元素添加到其树中。
  ev.dataTransfer.setData("text/plain", ev.target.id);
  ev.dataTransfer.effectAllowed = "move";
 }
@@ -48,7 +48,7 @@ function dragstart_handler(ev) {
 function drop_handler(ev) {
  console.log("drop: target.id = " + ev.target.id);
  ev.preventDefault();
- // 得到目标的id并且将移动的元素添加到目标DOM中
+ // 得到目标的 id 并且将移动的元素添加到目标 DOM 中
  var data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // 打印每种格式类型
@@ -57,7 +57,7 @@ function drop_handler(ev) {
      console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
- // 打印每个item的“kind”和“type”属性值
+ // 打印每个 item 的“kind”和“type”属性值
  if (ev.dataTransfer.items != null) {
    for (var i=0; i &lt; ev.dataTransfer.items.length; i++) {
      console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
@@ -68,7 +68,7 @@ function drop_handler(ev) {
 function dragover_handler(ev) {
  console.log("dragOver");
  ev.preventDefault();
- // 设置dropEffect属性值为move
+ // 设置 dropEffect 属性值为 move
  ev.dataTransfer.dropEffect = "move"
 }
 &lt;/script&gt;
@@ -107,67 +107,7 @@ function dragover_handler(ev) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.5<br>
-    {{CompatGeckoDesktop(52)}}<sup>[1]</sup></td>
-   <td>10</td>
-   <td>12</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatGeckoMobile(52)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatIE("10")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]从Firefox52版本开始，{{domxref("DataTransfer.types")}}属性根据规范返回一个冻结的(frozen){{domxref("DOMString")}}s数组，而不是{{domxref("DOMStringList")}}</p>
+{{Compat("api.DataTransfer.types")}}
 
 <h2 id="参考链接">参考链接</h2>
 

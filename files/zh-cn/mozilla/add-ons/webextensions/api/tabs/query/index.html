@@ -1,5 +1,5 @@
 ---
-title: 选项卡. 查询 （）
+title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
@@ -8,7 +8,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 
 <p>获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。</p>
 
-<p><font>这是返回 的异步函数。</font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></p>
+<p>这是返回 的异步函数。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,44 +20,44 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 <dl>
  <dt><code><var>queryObj</var></code></dt>
  <dd>
- <p><code>object</code><font>.函数将仅获取其属性与此处包含的属性匹配的选项卡。</font><code>query()</code></p>
+ <p><code>object</code>.函数将仅获取其属性与此处包含的属性匹配的选项卡。<code>query()</code></p>
 
  <p>请参阅 \WebExtAPIRef（"选项卡"）。Tab"）=文档以了解有关这些属性的详细信息。</p>
 
  <dl class="reference-values">
-  <dt><code>active</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否在窗口中处于活动状态。</font></dd>
-  <dt><code>audible</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.标签是否可听见。</font></dd>
-  <dt><code>autoDiscardable</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.当资源不足时，浏览器是否可以自动丢弃选项卡。</font></dd>
-  <dt><code>cookieStoreId</code><font>[optional_inline]</font></dt>
-  <dd><code>string</code><font>.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">才可用</a>。</font><code>cookieStoreId</code><code>"cookies"</code></dd>
-  <dt><code>currentWindow</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否在当前窗口中。</font></dd>
-  <dt><code>discarded</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.是否丢弃选项卡。丢弃的选项卡是其内容已从内存中卸载，但仍在选项卡条中可见的选项卡。下次激活时，其内容将重新加载。</font></dd>
-  <dt><code>hidden</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否隐藏。</font></dd>
-  <dt><code>highlighted</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否突出显示。</font></dd>
-  <dt><code>index</code><font>[optional_inline]</font></dt>
-  <dd><code>integer</code><font>.选项卡在其窗口中的位置。</font></dd>
-  <dt><code>muted</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否为静音。</font></dd>
-  <dt><code>lastFocusedWindow</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否在上一个焦点窗口中。</font></dd>
-  <dt><code>pinned</code><font>[optional_inline]</font></dt>
-  <dd><code>boolean</code><font>.选项卡是否固定。</font></dd>
-  <dt><code>status</code><font>[optional_inline]</font></dt>
+  <dt><code>active</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否在窗口中处于活动状态。</dd>
+  <dt><code>audible</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.标签是否可听见。</dd>
+  <dt><code>autoDiscardable</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.当资源不足时，浏览器是否可以自动丢弃选项卡。</dd>
+  <dt><code>cookieStoreId</code>[optional_inline]</dt>
+  <dd><code>string</code>.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">才可用</a>。<code>cookieStoreId</code><code>"cookies"</code></dd>
+  <dt><code>currentWindow</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否在当前窗口中。</dd>
+  <dt><code>discarded</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.是否丢弃选项卡。丢弃的选项卡是其内容已从内存中卸载，但仍在选项卡条中可见的选项卡。下次激活时，其内容将重新加载。</dd>
+  <dt><code>hidden</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否隐藏。</dd>
+  <dt><code>highlighted</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否突出显示。</dd>
+  <dt><code>index</code>[optional_inline]</dt>
+  <dd><code>integer</code>.选项卡在其窗口中的位置。</dd>
+  <dt><code>muted</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否为静音。</dd>
+  <dt><code>lastFocusedWindow</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否在上一个焦点窗口中。</dd>
+  <dt><code>pinned</code>[optional_inline]</dt>
+  <dd><code>boolean</code>.选项卡是否固定。</dd>
+  <dt><code>status</code>[optional_inline]</dt>
   <dd>{WebExtAPIRef（'选项卡。TabStatus '）=。选项卡是否已完成加载。</dd>
-  <dt><code>title</code><font>[optional_inline]</font></dt>
-  <dd><code>string</code><font>.将页面标题与图案匹配。</font></dd>
-  <dt><code>url</code><font>[optional_inline]</font></dt>
-  <dd><code><code>string</code></code><font>或。将选项卡与一个或多个匹配<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">模式匹配</a>。请注意，片段标识符不匹配。</font><code><code>array</code> of <code><code>string</code></code></code></dd>
-  <dt><code>windowId</code><font>{{optional_inline}}</font></dt>
-  <dd><code>integer</code><font>. The of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.</font><code>id</code></dd>
-  <dt><code>windowType</code><font>{{optional_inline}}</font></dt>
+  <dt><code>title</code>[optional_inline]</dt>
+  <dd><code>string</code>.将页面标题与图案匹配。</dd>
+  <dt><code>url</code>[optional_inline]</dt>
+  <dd><code><code>string</code></code>或。将选项卡与一个或多个匹配<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">模式匹配</a>。请注意，片段标识符不匹配。<code><code>array</code> of <code><code>string</code></code></code></dd>
+  <dt><code>windowId</code>{{optional_inline}}</dt>
+  <dd><code>integer</code>. The of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.<code>id</code></dd>
+  <dt><code>windowType</code>{{optional_inline}}</dt>
   <dd>{{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.</dd>
  </dl>
  </dd>
@@ -65,7 +65,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 
 <h3 id="Return_value">Return value</h3>
 
-<p><font>A that will be fulfilled with an of objects, containing information about each matching tab.</font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code><code>array</code><code>{{WebExtAPIRef('tabs.Tab')}}</code></p>
+<p>A that will be fulfilled with an of objects, containing information about each matching tab.<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code><code>array</code><code>{{WebExtAPIRef('tabs.Tab')}}</code></p>
 
 <p>If any error occurs, the promise will be rejected with an error message.</p>
 
@@ -117,7 +117,7 @@ function onError(error) {
 let querying = browser.tabs.query({currentWindow: true, active: true});
 querying.then(logTabs, onError);</pre>
 
-<p><font>Get tabs for all HTTP and HTTPS URLs under or any of its subdomains:</font><code>"mozilla.org"</code></p>
+<p>Get tabs for all HTTP and HTTPS URLs under or any of its subdomains:<code>"mozilla.org"</code></p>
 
 <pre class="brush: js notranslate">function logTabs(tabs) {
   for (let tab of tabs) {

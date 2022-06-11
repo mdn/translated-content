@@ -12,38 +12,38 @@ tags:
   - physics
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Physics
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第5步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson05.html</font></a><font>完成本课程后找到源代码</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 5 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit / demos / lesson05.html</a>完成本课程后找到源代码</p>
 </div>
 
-<p><font>为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; </font><font>本文将向您介绍Phaser中的可用内容，以及演示典型的简单设置。</font></p>
+<p>为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向您介绍 Phaser 中的可用内容，以及演示典型的简单设置。</p>
 
-<h2 id="添加物理效果"><font><font>添加物理效果</font></font></h2>
+<h2 id="添加物理效果">添加物理效果</h2>
 
-<p><font><font>Phaser与三个不同的物理引擎（Arcade Physics，P2和Ninja Physics）捆绑在一起，第四个选项Box2D可作为商业插件使用。</font><font>对于像我们这样的简单游戏，我们可以使用Arcade Physics引擎。</font><font>我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。</font></font></p>
+<p>Phaser 与三个不同的物理引擎（Arcade Physics，P2 和 Ninja Physics）捆绑在一起，第四个选项 Box2D 可作为商业插件使用。对于像我们这样的简单游戏，我们可以使用 Arcade Physics 引擎。我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。</p>
 
-<p><font><font>首先，让我们在游戏中初始化Arcade Physics引擎。</font></font><code>physics.startSystem()</code><font><font>在</font></font><code>create</code><font><font>函数</font><font>开头</font><font>添加</font><font>方法</font><font>（使其成为函数内的第一行），如下所示：</font></font></p>
+<p>首先，让我们在游戏中初始化 Arcade Physics 引擎。<code>physics.startSystem()</code>在<code>create</code>函数开头添加方法（使其成为函数内的第一行），如下所示：</p>
 
 <pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
 </pre>
 
-<p><font><font>接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser对象物理不启用。</font><font>在</font></font><code>create()</code><font><font>函数</font><font>底部添加以下行</font><font>：</font></font></p>
+<p>接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser 对象物理不启用。在<code>create()</code>函数底部添加以下行：</p>
 
 <pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
 </pre>
 
-<p><font><font>接下来，如果我们要在屏幕上移动我们的球，我们可以设置</font></font><code>velocity</code><font><font>它</font></font><code>body</code><font><font>。</font><font>再次添加以下行</font></font><code>create()</code><font><font>：</font></font></p>
+<p>接下来，如果我们要在屏幕上移动我们的球，我们可以设置<code>velocity</code>它<code>body</code>。再次添加以下行<code>create()</code>：</p>
 
 <pre class="brush: js">ball.body.velocity.set(150, 150);
 </pre>
 
-<h2 id="删除我们以前的更新说明"><font><font>删除我们以前的更新说明</font></font></h2>
+<h2 id="删除我们以前的更新说明">删除我们以前的更新说明</h2>
 
-<p><font><font>记得删除添加值的我们的老方法</font></font><code>x</code><font><font>，并</font></font><code>y</code><font><font>从</font></font><code>update()</code><font><font>功能：</font></font></p>
+<p>记得删除添加值的我们的老方法<code>x</code>，并<code>y</code>从<code>update()</code>功能：</p>
 
 <pre class="brush: js">function update() {
 <s>    ball.x += 1;</s>
@@ -53,7 +53,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Physics
 
 <p>我们正在使用物理引擎正确处理。</p>
 
-<h2 id="最终代码检查"><font><font>最终代码检查</font></font></h2>
+<h2 id="最终代码检查">最终代码检查</h2>
 
 <p>最新的代码应该如下所示：</p>
 
@@ -78,15 +78,15 @@ function update() {
 }
 </pre>
 
-<p><font><font>尝试重新加载</font></font><code>index.html</code><font><font>- 球应该在给定的方向上不断移动。</font><font>目前，物理引擎的重力和摩擦力设定为零。</font><font>增加重力将导致球落下，同时摩擦力最终会停止球。</font></font></p>
+<p>尝试重新加载<code>index.html</code>- 球应该在给定的方向上不断移动。目前，物理引擎的重力和摩擦力设定为零。增加重力将导致球落下，同时摩擦力最终会停止球。</p>
 
-<h2 id="物理效果趣味"><font><font>物理效果趣味</font></font></h2>
+<h2 id="物理效果趣味">物理效果趣味</h2>
 
-<p><font><font>你可以用物理学来做更多的事情，例如添加</font></font><code>ball.body.gravity.y = 100;</code><font><font>你将设置球的垂直重力。</font><font>因此，它将向上发射，但是由于重力的作用而下降。</font></font></p>
+<p>你可以用物理学来做更多的事情，例如添加<code>ball.body.gravity.y = 100;</code>你将设置球的垂直重力。因此，它将向上发射，但是由于重力的作用而下降。</p>
 
-<p><font><font>这种功能只是冰山一角 - 有各种功能和变量可以帮助您操纵物理对象。</font><font>查看官方</font></font><a href="http://phaser.io/docs#physics"><font><font>物理文档，</font></font></a><font><font>并使用</font></font><a href="http://phaser.io/examples/v2/category/arcade-physics"><font><font>Arcade</font></font></a><font><font>和</font></font><a href="http://phaser.io/examples/v2/category/p2-physics"><font><font>P2</font></font></a><font><font>物理系统</font><font>查看大量示例</font><font>。</font></font></p>
+<p>这种功能只是冰山一角 - 有各种功能和变量可以帮助您操纵物理对象。查看官方<a href="http://phaser.io/docs#physics">物理文档，</a>并使用<a href="http://phaser.io/examples/v2/category/arcade-physics">Arcade</a>和<a href="http://phaser.io/examples/v2/category/p2-physics">P2</a>物理系统查看大量示例。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
@@ -94,6 +94,6 @@ function update() {
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>现在我们可以转到下一课，看看如何让球</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls"><font><font>从墙上弹起</font></font></a><font><font>。</font></font></p>
+<p>现在我们可以转到下一课，看看如何让球<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls">从墙上弹起</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>

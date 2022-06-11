@@ -55,9 +55,9 @@ Les événements ont trois fonctions :
 L'objet `downloadDelta` a les propriétés suivantes disponibles :
 
 - `id`
-  - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
+  - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
 - `url`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `filename`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `filename` {{WebExtAPIRef('downloads.DownloadItem')}}
 - `danger`{{optional_inline}}
@@ -67,9 +67,9 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `startTime`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `startTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `endTime`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un  `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un  `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `state`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
 - `canResume`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}} `canResume`.
 - `paused`{{optional_inline}}
@@ -79,7 +79,7 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `totalBytes`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant un changement dans un `totalBytes` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `fileSize`{{optional_inline}}
-  - : Un objet  {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un  `fileSize` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet  {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un  `fileSize` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `exists`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.
 

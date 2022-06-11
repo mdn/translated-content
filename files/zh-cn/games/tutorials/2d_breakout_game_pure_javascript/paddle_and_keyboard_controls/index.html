@@ -3,12 +3,12 @@ title: 球板及键盘控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>
 
-<div class="summary">
-<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第四章。完成本课程后，你可以在<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html">Gamedev-Canvas-workshop/lesson4.html</a>找到源码.</p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>中的第四章。完成本课程后，你可以在<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html">Gamedev-Canvas-workshop/lesson4.html</a>找到源码。</p>
 </div>
 
 <p>你可以看到球自由的、无限次的在墙壁上反弹，但是没有和我们发生任何交互。如果我们没有对它的控制操作，这仍然不是一个游戏。下面，我们新增一些用户操作：一个可以控制球的球板。</p>
@@ -21,7 +21,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyb
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;</pre>
 
-<p>然后定义球拍的长和宽，以及为了之后的处理同时定义x轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的<code>drawBall()方法里去</code>：</p>
+<p>然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的<code>drawBall()方法里去</code>：</p>
 
 <pre class="brush: js">function drawPaddle() {
     ctx.beginPath();
@@ -42,12 +42,12 @@ var paddleX = (canvas.width-paddleWidth)/2;</pre>
  <li>实现左右移动球拍</li>
 </ul>
 
-<p>按键可以使用boolean变量来初始定义。在你的其它变量附近添加下列代码：</p>
+<p>按键可以使用 boolean 变量来初始定义。在你的其它变量附近添加下列代码：</p>
 
 <pre class="brush: js">var rightPressed = false;
 var leftPressed = false;</pre>
 
-<p>这两个变量的默认值都是false，因为在开始时按键没有被按下。为了监听按键的按下动作，我们需要添加两个监听器。把下列代码添加到底部的<code>setInterval()的上一列去：</code></p>
+<p>这两个变量的默认值都是 false，因为在开始时按键没有被按下。为了监听按键的按下动作，我们需要添加两个监听器。把下列代码添加到底部的<code>setInterval()的上一列去：</code></p>
 
 <pre class="brush: js">document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);</pre>
@@ -72,13 +72,13 @@ function keyUpHandler(e) {
     }
 }</pre>
 
-<p>当按下一个按键，这个信息会被储存在一个变量中。每种情况下的相关变量都设置为<code>true</code>。 当松开按键时，对应变量被设置回<code>false</code>。</p>
+<p>当按下一个按键，这个信息会被储存在一个变量中。每种情况下的相关变量都设置为<code>true</code>。当松开按键时，对应变量被设置回<code>false</code>。</p>
 
-<p>两个函数都以一个事件作为参数，由<code>e</code>(event)变量表示。 从这里你可以得到有用的信息：keyCode属性是被按下的键的信息。 例如，keyCode为37是左箭头键，而39是右箭头键。 如果按下左键，那么leftPressed变量设置为true，当松开时，leftPressed变量设置为false。右键同理。</p>
+<p>两个函数都以一个事件作为参数，由<code>e</code>(event) 变量表示。从这里你可以得到有用的信息：keyCode 属性是被按下的键的信息。例如，keyCode 为 37 是左箭头键，而 39 是右箭头键。如果按下左键，那么 leftPressed 变量设置为 true，当松开时，leftPressed 变量设置为 false。右键同理。</p>
 
 <h3 id="球拍移动逻辑">球拍移动逻辑</h3>
 
-<p>我们现在有用于存储按键，事件监听器和相关功能的信息的变量。 现在我们将看到实际的代码来使用这些变量，并在屏幕上移动球拍。 在draw（）函数内部，我们将检查每一帧被渲染的同时是否按下左或右键。 我们的代码如下：</p>
+<p>我们现在有用于存储按键，事件监听器和相关功能的信息的变量。现在我们将看到实际的代码来使用这些变量，并在屏幕上移动球拍。在 draw（）函数内部，我们将检查每一帧被渲染的同时是否按下左或右键。我们的代码如下：</p>
 
 <pre class="brush: js">if(rightPressed) {
     paddleX += 7;
@@ -87,7 +87,7 @@ else if(leftPressed) {
     paddleX -= 7;
 }</pre>
 
-<p>如果按一下左键，球拍将向左移动7个像素，如果按一下右键，球拍将向右移动7个像素。 目前这个功能可以正常工作，但是如果我们按任意一个键的时间太长，球拍就会从画布的边缘消失。 我们可以通过改变代码来改善这种情况，并且只能在画布的边界内移动球拍，如下所示：</p>
+<p>如果按一下左键，球拍将向左移动 7 个像素，如果按一下右键，球拍将向右移动 7 个像素。目前这个功能可以正常工作，但是如果我们按任意一个键的时间太长，球拍就会从画布的边缘消失。我们可以通过改变代码来改善这种情况，并且只能在画布的边界内移动球拍，如下所示：</p>
 
 <pre class="brush: js">if(rightPressed &amp;&amp; paddleX &lt; canvas.width-paddleWidth) {
     paddleX += 7;
@@ -96,11 +96,11 @@ else if(leftPressed &amp;&amp; paddleX &gt; 0) {
     paddleX -= 7;
 }</pre>
 
-<p>我们使用在<code>Canvas</code>左侧的0和右侧的<code>canvas.width-paddleWidth</code>之间的<code>paddleX</code>位置移动，这会让球拍按预期的要求移动。</p>
+<p>我们使用在<code>Canvas</code>左侧的 0 和右侧的<code>canvas.width-paddleWidth</code>之间的<code>paddleX</code>位置移动，这会让球拍按预期的要求移动。</p>
 
 <p>将上面的代码块添加到底部的<code>draw()</code>函数中，在右大括号的上方。</p>
 
-<p>现在唯一要做的就是在<code>draw()</code>函数内调用<code>drawPaddle()</code>函数，将其实际渲染在屏幕上。 在<code>draw()</code>函数内添加下面一行，就在调用<code>drawBall()</code>的那一行的下面：</p>
+<p>现在唯一要做的就是在<code>draw()</code>函数内调用<code>drawPaddle()</code>函数，将其实际渲染在屏幕上。在<code>draw()</code>函数内添加下面一行，就在调用<code>drawBall()</code>的那一行的下面：</p>
 
 <pre class="brush: js">drawPaddle();
 </pre>
@@ -117,6 +117,6 @@ else if(leftPressed &amp;&amp; paddleX &gt; 0) {
 
 <h2 id="下一步">下一步</h2>
 
-<p>现在我们有一些类似于游戏的东西。 唯一的麻烦就是无论如何你都可以继续用球拍击球。 这一切都将在第五章中改变，<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Game_over">游戏结束</a>时，我们会为游戏添加一个最后的状态。</p>
+<p>现在我们有一些类似于游戏的东西。唯一的麻烦就是无论如何你都可以继续用球拍击球。这一切都将在第五章中改变，<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Game_over">游戏结束</a>时，我们会为游戏添加一个最后的状态。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>

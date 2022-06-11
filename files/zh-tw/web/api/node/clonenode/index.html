@@ -35,7 +35,7 @@ var p_prime = p.cloneNode(true);
 
 <h2 id="備註">備註</h2>
 
-<p id="not-event-listeners">Cloning a node copies all of its attributes and their values, including intrinsic (in–line) listeners. It does not copy event listeners added using <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> or those assigned to element properties. (e.g. <code>node.onclick = fn</code>) Moreover, for a &lt;canvas&gt; element, the painted image is not copied.</p>
+<p>Cloning a node copies all of its attributes and their values, including intrinsic (in–line) listeners. It does not copy event listeners added using <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> or those assigned to element properties. (e.g. <code>node.onclick = fn</code>) Moreover, for a &lt;canvas&gt; element, the painted image is not copied.</p>
 
 <p>The duplicate node returned by <code>cloneNode()</code> is not part of the document until it is added to another node that is part of the document using {{domxref("Node.appendChild()")}} or a similar method. It also has no parent until it is appended to another node.</p>
 
@@ -51,110 +51,8 @@ var p_prime = p.cloneNode(true);
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>deep</code> as an optional parameter</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("13.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>deep</code> as an optional parameter</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Default value for the <code>deep</code> parameter is <code>false</code>.</p>
+{{Compat("api.Node.cloneNode")}}

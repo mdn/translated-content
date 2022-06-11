@@ -5,7 +5,7 @@ translation_of: Web/CSS/offset-position
 ---
 {{CSSRef}}{{seecompattable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la [position initiale](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) de {{cssxref("offset-path")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la [position initiale](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) de {{cssxref("offset-path")}}.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ offset-position: unset;
 - `auto`
   - : La position initiale est la position de la boîte spécifiée par la propriété {{cssxref("position")}}.
 - `<position>`
-  - : Une {{cssxref("&lt;position&gt;")}}. Une position définit des coordonnées x/y pour positionner un élément de façon relative aux bords de la boîte de cet élément. Elles peuvent être définies en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots clefs sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si seulement une valeur est définie, la seconde est considérée comme `center`. Si trois ou quatre valeurs sont utilisées, les valeurs en pourcentage sont des écarts du mot clef qui les précéde. Pour plus d'explications sur ces types de valeur, consultez {{cssxref("background-position")}}.
+  - : Une {{cssxref("&lt;position&gt;")}}. Une position définit des coordonnées x/y pour positionner un élément de façon relative aux bords de la boîte de cet élément. Elles peuvent être définies en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots clefs sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si seulement une valeur est définie, la seconde est considérée comme `center`. Si trois ou quatre valeurs sont utilisées, les valeurs en pourcentage sont des écarts du mot clef qui les précéde. Pour plus d'explications sur ces types de valeur, consultez {{cssxref("background-position")}}.
 
 ## Définition formelle
 

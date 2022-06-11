@@ -5,66 +5,20 @@ translation_of: Web/API/Console/groupCollapsed
 ---
 <p>{{ ApiRef() }}</p>
 <h2 id="Summary" name="Summary">概述</h2>
-<p>在 <a class="new " href="../Tools/Web_Console" rel="internal" title="Web Console">Web控制台</a>上创建一个新的分组.随后输出到控制台上的内容都会被添加一个缩进,表示该内容属于当前分组,直到调用<code><a class="new" href="../../Article_not_found?uri=zh-cn/DOM/console.groupEnd" rel="internal">console.groupEnd()</a></code> 之后,当前分组结束.和 {{ domxref("console.group()") }}方法的不同点是,新建的分组默认是折叠的.用户必须点击一个按钮才能将折叠的内容打开.</p>
+<p>在 <a class="new " href="../Tools/Web_Console" rel="internal" title="Web Console">Web 控制台</a>上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用<code><a class="new" href="../../Article_not_found?uri=zh-cn/DOM/console.groupEnd" rel="internal">console.groupEnd()</a></code> 之后，当前分组结束。和 {{ domxref("console.group()") }}方法的不同点是，新建的分组默认是折叠的。用户必须点击一个按钮才能将折叠的内容打开。</p>
 <h2 id="Syntax" name="Syntax">语法</h2>
 <pre class="eval">console.groupCollapsed();
 </pre>
 <h2 id="参数">参数</h2>
 <p>无</p>
 <h2 id="备注">备注</h2>
-<p>在文档{{ domxref("console") }}中查看<a href="/zh-cn/DOM/console#Using_groups_in_the_console" title="zh-cn/DOM/console#Using_groups_in_the_console">在控制台中使用分组</a>,了解更多详细内容.</p>
+<p>在文档{{ domxref("console") }}中查看<a href="/zh-cn/DOM/console#Using_groups_in_the_console" title="zh-cn/DOM/console#Using_groups_in_the_console">在控制台中使用分组</a>,了解更多详细内容。</p>
 <h2 id="Specification" name="Specification">规范</h2>
 <p>不属于任何公开的规范</p>
 <h2 id="浏览器">浏览器</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>6</td>
-    <td>{{ CompatGeckoDesktop("9.0") }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>5.1</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatGeckoMobile("9.0") }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h3 id="Gecko_备注">Gecko 备注</h3>
-<p>从Gecko 9.0 {{ geckoRelease("9.0") }}开始,Firefox自带的web控制台开始支持该方法, 但是该方法新建的分组不是折叠的,也就是说该方法的功能等同于 {{ domxref("console.group()") }}.</p>
+{{Compat("api.console.groupCollapsed")}}
+
 <h2 id="相关链接">相关链接</h2>
 <ul>
  <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
 </ul>
-<p>{{ languages( { "en": "en/DOM/console.groupCollapsed" } ) }}</p>

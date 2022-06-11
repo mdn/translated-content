@@ -3,21 +3,21 @@ title: 撞击处理
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
 
-<div class="summary">
-<p>本篇为<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>10节教程中的<strong>第7节。</strong>在你完成这篇课程之后，你可以在<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>.找到我们的源代码。</p>
+<div>
+<p>本篇为<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>10 节教程中的<strong>第 7 节。</strong>在你完成这篇课程之后，你可以在<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>.找到我们的源代码。</p>
 </div>
 
-<p><span class="seoSummary">我们已经在屏幕上画出了砖块，但游戏仍然没有那么有趣，因为球通过它们。我们需要考虑增加碰撞检测，这样球就可以弹击砖块并打破它们。</span></p>
+<p>我们已经在屏幕上画出了砖块，但游戏仍然没有那么有趣，因为球通过它们。我们需要考虑增加碰撞检测，这样球就可以弹击砖块并打破它们。</p>
 
 <p>当然，这是我们的决定如何实现的，但是计算球是否触及矩形是很困难的，因为在画布中没有辅助函数。为了这个教程，我们将尽可能地做到这一点。我们将检查球的中心是否与任何给定的砖块碰撞。这不会每次都给出一个完美的结果，而且有很多更复杂的方法来进行碰撞检测，但是这对指导你的基本概念很有效。</p>
 
 <h2 id="撞击侦测函数"><strong>撞击侦测函数</strong></h2>
 
-<p>踢掉这一切，我们想创建一个碰撞检测功能，将循环通过所有砖块，并比较每一个砖的位置与球的坐标，因为每个帧绘制。为了更好地理解代码，我们将定义用于在碰撞检测的每个循环中存储砖块对象的B变量：</p>
+<p>踢掉这一切，我们想创建一个碰撞检测功能，将循环通过所有砖块，并比较每一个砖的位置与球的坐标，因为每个帧绘制。为了更好地理解代码，我们将定义用于在碰撞检测的每个循环中存储砖块对象的 B 变量：</p>
 
 <pre class="brush: js">function collisionDetection() {
     for(c=0; c&lt;brickColumnCount; c++) {
@@ -31,10 +31,10 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detec
 <p>如果球的中心在我们的一块砖块的坐标内，我们将改变球的方向。对于球的中心在砖块内，以下四个陈述都必须是正确的：</p>
 
 <ul>
- <li>球的X位置大于砖的X位置。</li>
- <li>球的X位置小于砖的X位置加上它的宽度。</li>
- <li>球的Y位置大于砖的Y位置。</li>
- <li>球的Y位置小于砖块的Y位置加上它的高度。</li>
+ <li>球的 X 位置大于砖的 X 位置。</li>
+ <li>球的 X 位置小于砖的 X 位置加上它的宽度。</li>
+ <li>球的 Y 位置大于砖的 Y 位置。</li>
+ <li>球的 Y 位置小于砖块的 Y 位置加上它的高度。</li>
 </ul>
 
 <p>让我们在代码中写下：</p>
@@ -64,7 +64,7 @@ for(c=0; c&lt;brickColumnCount; c++) {
     }
 }</pre>
 
-<p>接下来，我们将在绘制之前在 <code>drawBricks()</code> 中检查每个砖块的 <code>status</code>属性的值-如果 <code>status</code>是 <code>1</code>，然后画它，但是如果它是 <code>0</code>，那么它被球击中，我们不再希望它在屏幕上。更新您的 <code>drawBricks()</code> 函数如下：</p>
+<p>接下来，我们将在绘制之前在 <code>drawBricks()</code> 中检查每个砖块的 <code>status</code>属性的值 - 如果 <code>status</code>是 <code>1</code>，然后画它，但是如果它是 <code>0</code>，那么它被球击中，我们不再希望它在屏幕上。更新您的 <code>drawBricks()</code> 函数如下：</p>
 
 <pre class="brush: js; highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
     for(c=0; c&lt;brickColumnCount; c++) {

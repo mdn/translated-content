@@ -49,7 +49,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
+Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
 
 ```js
 async function setOnActiveWindow() {

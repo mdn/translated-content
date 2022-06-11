@@ -2,10 +2,10 @@
 title: ':dir()'
 slug: 'Web/CSS/:dir'
 tags:
-  - CSS伪类
+  - CSS 伪类
   - 布局
   - 网络
-  - 选择器4
+  - 选择器 4
 translation_of: 'Web/CSS/:dir'
 ---
 <p>{{ CSSRef() }}</p>
@@ -14,15 +14,15 @@ translation_of: 'Web/CSS/:dir'
 
 <h2 id="总结">总结</h2>
 
-<p><code>:dir()</code>伪类匹配特定文字书写方向的元素。在HTML中, 文字方向由{{ htmlattrxref("dir", "html") }}属性决定。其他的文档类型可能有其他定义文字方向的方法。</p>
+<p><code>:dir()</code>伪类匹配特定文字书写方向的元素。在 HTML 中，文字方向由{{ htmlattrxref("dir", "html") }}属性决定。其他的文档类型可能有其他定义文字方向的方法。</p>
 
-<p>值得注意的是用CSS伪类 <code>:dir()</code> 并不等于使用 <code>[dir=…]</code> 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， <code>[dir=rtl]</code> 或 <code>[dir=ltr]不会匹配到dir属性的值为auto的元素。而</code> <code>:dir()</code>会匹配经过客户端计算后的属性, 不管是继承的dir值还是dir值为auto的。</p>
+<p>值得注意的是用 CSS 伪类 <code>:dir()</code> 并不等于使用 <code>[dir=…]</code> 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， <code>[dir=rtl]</code> 或 <code>[dir=ltr] 不会匹配到 dir 属性的值为 auto 的元素。而</code> <code>:dir()</code>会匹配经过客户端计算后的属性，不管是继承的 dir 值还是 dir 值为 auto 的。</p>
 
-<p><span style="font-family: consolas,monaco,andale mono,monospace;">另外，:dir()伪类仅考虑文档（大多数情况是HTML）中定义的文字方向的语义值(semantic value)，并不会考虑格式值(styling value)，如CSS属性</span> {{ cssxref("direction") }} 的值。</p>
+<p>另外，:dir() 伪类仅考虑文档（大多数情况是 HTML）中定义的文字方向的语义值 (semantic value)，并不会考虑格式值 (styling value)，如 CSS 属性 {{ cssxref("direction") }} 的值。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox">元素:dir(文字书写方向) { <em>style properties</em> } 文字书写方向为ltr或rtl
+<pre class="syntaxbox">元素:dir(文字书写方向) { <em>style properties</em> } 文字书写方向为 ltr 或 rtl
 </pre>
 
 <h2 id="Examples" name="Examples">示例</h2>
@@ -35,7 +35,7 @@ translation_of: 'Web/CSS/:dir'
 &lt;/div&gt;
 </pre>
 
-<p>本例中 <code>:dir(rtl)</code> 会匹配最外层的div，内容为<code>test1的span，</code>和有希伯来字符的div。<code>:dir(ltr)</code> 会匹配到内容为<code>test2的div.</code></p>
+<p>本例中 <code>:dir(rtl)</code> 会匹配最外层的 div，内容为<code>test1 的 span，</code>和有希伯来字符的 div。<code>:dir(ltr)</code> 会匹配到内容为<code>test2 的 div.</code></p>
 
 <h2 id="规范">规范</h2>
 
@@ -51,60 +51,14 @@ translation_of: 'Web/CSS/:dir'
   <tr>
    <td>{{ SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()') }}</td>
    <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>最初定义.</td>
+   <td>最初定义。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("17") }} {{ property_prefix("-moz") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("17") }} {{ property_prefix("-moz") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.dir")}}
 
 <h2 id="Related_Pages" name="Related_Pages"> </h2>
 

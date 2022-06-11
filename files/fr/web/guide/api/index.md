@@ -16,7 +16,7 @@ Le Web peut être utilisé avec de nombreuses API, accessibles en JavaScript, qu
 
 ## Voir aussi
 
-- [Référence des interfaces des API Web ](/fr/docs/Web/API)(un index de l'ensemble des interfaces qui composent ces API)
+- [Référence des interfaces des API Web](/fr/docs/Web/API) (un index de l'ensemble des interfaces qui composent ces API)
 - [Le _Document Object Model_](/fr/docs/Web/API/Document_Object_Model) (DOM ou modèle objet de document)
 - [Référence des évènements associés aux API Web](/fr/docs/Web/Events)
 - [Apprendre le développement web](/fr/docs/Apprendre)

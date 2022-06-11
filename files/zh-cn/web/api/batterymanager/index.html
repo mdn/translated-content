@@ -7,7 +7,7 @@ translation_of: Web/API/BatteryManager
 
 <p>BatteryManager 接口提供方法获取系统电量。 </p>
 
-<p>{{domxref("navigator.getBattery")}} 方法返回一个promise对象，该promise将提供一个BatteryManager接口，你可以从<a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> 查询到相关信息。</p>
+<p>{{domxref("navigator.getBattery")}} 方法返回一个 promise 对象，该 promise 将提供一个 BatteryManager 接口，你可以从<a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> 查询到相关信息。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/BatteryManager
  <dt>{{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}</dt>
  <dd>一个布尔值，说明当前电池是否正在充电。</dd>
  <dt>{{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}</dt>
- <dd>一个数字，代表距离充电完毕还需多少秒，如果为0则充电完毕。</dd>
+ <dd>一个数字，代表距离充电完毕还需多少秒，如果为 0 则充电完毕。</dd>
  <dt>{{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}</dt>
  <dd>一个数字，代表距离电池耗电至空且挂起需要多少秒。</dd>
  <dt>{{domxref("BatteryManager.level")}} {{ReadOnlyInline}}</dt>
@@ -41,88 +41,17 @@ translation_of: Web/API/BatteryManager
 
 <p>{{page("/zh-CN/docs/Web/API/EventTarget","Methods")}}</p>
 
-<h2 id="规格Specifications">规格Specifications</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Battery API")}}</td>
-   <td>{{Spec2("Battery API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoDesktop("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoMobile("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoMobile("16")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}<sup>[2]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Firefox 10.0中默认无效，但可设定preference <code>dom.battery.enabled</code>为<code>true从而使其有效化。</code>自Firefox 11.0起，<code>mozBattery默认有效。</code>Battery API现能被支持与Android，Windows，和安装了UPower的Linux。自Gecko 18.0 {{geckoRelease("18.0")}}也能支持MacOS。Firefox还为被弃用的{{domxref("navigator.battery")}}提供支持。</p>
-
-<p>[2] {{domxref("BatteryManager.chargingTime")}}和{{domxref("BatteryManager.dischargingTime")}}的值总是等于无穷。</p>
+{{Compat("api.BatteryManager")}}
 
 <h2 id="其他">其他</h2>
 
 <ul>
- <li>The <a href="/zh-CN/docs/Web/API/Battery_Status_API">电池状态API</a></li>
+ <li>The <a href="/zh-CN/docs/Web/API/Battery_Status_API">电池状态 API</a></li>
  <li>{{domxref("navigator.getBattery")}}</li>
 </ul>

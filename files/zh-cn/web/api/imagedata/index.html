@@ -11,8 +11,8 @@ translation_of: Web/API/ImageData
 
 <dl>
  <dt>{{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}</dt>
- <dd>三个参数，第一个 是{{jsxref("Uint8ClampedArray")}}的实例，第二个和第三个表示的是width和height，必须保证Uint8ClampedArray的length = 4*width*height才不会报错，如果第一个参数Uint8ClampedArray没有的话，自动按照width和height的大小，以0填充整个像素矩阵。</dd>
- <dd>使用给定的{{jsxref("Uint8ClampedArray")}}创建一个 <code>ImageData</code> 对象，并包含图像的大小。如果不给定数组，会创建一个“完全透明”(因为透明度值为0)的黑色矩形图像。注意，这是最常见的方式去创建这样一个对象，在 {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 不可用时。</dd>
+ <dd>三个参数，第一个 是{{jsxref("Uint8ClampedArray")}}的实例，第二个和第三个表示的是 width 和 height，必须保证 Uint8ClampedArray 的 length = 4*width*height 才不会报错，如果第一个参数 Uint8ClampedArray 没有的话，自动按照 width 和 height 的大小，以 0 填充整个像素矩阵。</dd>
+ <dd>使用给定的{{jsxref("Uint8ClampedArray")}}创建一个 <code>ImageData</code> 对象，并包含图像的大小。如果不给定数组，会创建一个“完全透明”(因为透明度值为 0) 的黑色矩形图像。注意，这是最常见的方式去创建这样一个对象，在 {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 不可用时。</dd>
 </dl>
 
 <h2 id="属性" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">属性</h2>
@@ -47,13 +47,7 @@ translation_of: Web/API/ImageData
 
 <h2 id="浏览器兼容性" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div>
-
-
-<p>{{Compat("api.ImageData")}}</p>
-</div>
+{{Compat("api.ImageData")}}
 
 <h2 id="参见" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">参见</h2>
 

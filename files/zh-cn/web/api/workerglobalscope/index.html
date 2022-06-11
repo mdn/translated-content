@@ -14,9 +14,9 @@ translation_of: Web/API/WorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>  的 <code><strong>WorkerGlobalScope</strong></code> 接口 是一个代表了任何 scope of worker的接口. Workers 没有浏览内容; 这个 scope 包含的信息总是通过 {{domxref("Window")}} objects传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object.每个 <code>WorkerGlobalScope</code> 都有自己的事件循环.</p>
+<p> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>  的 <code><strong>WorkerGlobalScope</strong></code> 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 <code>WorkerGlobalScope</code> 都有自己的事件循环。</p>
 
-<p>每个 worker type都有专门的这个接口: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. <code>self</code> 属性返回每个内容的专门 scope .</p>
+<p>每个 worker type 都有专门的这个接口：{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. <code>self</code> 属性返回每个内容的专门 scope.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -149,133 +149,7 @@ console.log(navigator);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(4)}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10</td>
-   <td>10.6</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>ononline</code>, <code>onoffline</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>console</code> {{Non-standard_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("30")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>performance</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>caches</code></td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>ononline</code>, <code>onoffline</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("29")}}<sup>[1]</sup><br>
-    {{CompatGeckoMobile("30")}}</td>
-   <td>1.4</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>console</code> {{Non-standard_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("29")}}</td>
-   <td>1.4</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>performance</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>2.1</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>caches</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 29 implemented this as <code>WorkerConsole</code>. Since version 30 it uses the regular <code>Console</code>.</p>
+{{Compat("api.WorkerGlobalScope")}}
 
 <h2 id="See_also">See also</h2>
 

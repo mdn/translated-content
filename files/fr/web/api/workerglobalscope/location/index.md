@@ -25,20 +25,20 @@ Si vous appelez l'instruction suivante dans un document délivré par `localhost
 console.log(location);
 ```
 
-à l'intérieur d'un worker (ce qui équivaut à `self.console.log(self.location);`, puisqu'il est appelé dans le contexte du worker qui peut être référencé par {{domxref("WorkerGlobalScope.self")}}), la console vous retournera un objet {{domxref("WorkerLocation")}}  — comme ce qui suit :
+à l'intérieur d'un worker (ce qui équivaut à `self.console.log(self.location);`, puisqu'il est appelé dans le contexte du worker qui peut être référencé par {{domxref("WorkerGlobalScope.self")}}), la console vous retournera un objet {{domxref("WorkerLocation")}}  — comme ce qui suit :
 
 ```js
 WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
-  hash: ""
-  host: "localhost:8000"
-  hostname: "localhost"
-  href: "http://localhost:8000/worker.js"
-  origin: "http://localhost:8000"
-  pathname: "/worker.js"
-  port: "8000"
-  protocol: "http:"
-  search: ""
-  __proto__: WorkerLocation
+  hash: ""
+  host: "localhost:8000"
+  hostname: "localhost"
+  href: "http://localhost:8000/worker.js"
+  origin: "http://localhost:8000"
+  pathname: "/worker.js"
+  port: "8000"
+  protocol: "http:"
+  search: ""
+  __proto__: WorkerLocation
 ```
 
 Vous pouvez utiliser l'objet location pour récupérer des informations supplémentaires sur la localisation du document, comme vous pourriez le faire avec un objet {{domxref("Location")}} normal.

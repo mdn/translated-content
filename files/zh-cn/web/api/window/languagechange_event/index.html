@@ -5,23 +5,23 @@ translation_of: Web/API/Window/languagechange_event
 ---
 <p>{{SeeCompatTable}}</p>
 
-<p>当用户首选语言更改时，将在全局范围对象上触发languagechange事件。</p>
+<p>当用户首选语言更改时，将在全局范围对象上触发 languagechange 事件。</p>
 
 <h2 id="General_info">General info</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><span>{{ SpecName('HTML WHATWG', 'indices.html#event-languagechange') }}</span></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Event")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>.</dd>
- <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
+ <dt>Specification</dt>
+ <dd>{{ SpecName('HTML WHATWG', 'indices.html#event-languagechange') }}</dd>
+ <dt>Interface</dt>
+ <dd>{{domxref("Event")}}</dd>
+ <dt>Bubbles</dt>
+ <dd>No</dd>
+ <dt>Cancelable</dt>
+ <dd>No</dd>
+ <dt>Target</dt>
+ <dd>The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>.</dd>
+ <dt>Default Action</dt>
+ <dd>None</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -63,55 +63,7 @@ translation_of: Web/API/Window/languagechange_event
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>37</td>
-   <td>{{ CompatGeckoDesktop("32") }} [1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>24</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("32") }}[1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]In Firefox, the <code>navigator.languages</code> property's value is taken from the <code>intl.accept_languages</code> preference.</p>
+{{Compat("api.Window.languagechange_event")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

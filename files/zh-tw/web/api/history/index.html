@@ -20,9 +20,9 @@ translation_of: Web/API/History
  <dd>Returns a {{domxref("DOMString")}} representing the URL of the next item in the session history. This property was never available to web content and is not supported by other browsers.</dd>
  <dt>{{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the URL of the previous item in the session history. This property was never available to web content and is not supported by other browsers.</dd>
- <dt>{{domxref("History.scrollRestoration")}} {{experimental_inline}}</dt>
+ <dt>{{domxref("History.scrollRestoration")}} {{experimental_inline}}</dt>
  <dd>Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either <code>auto</code> or <code>manual</code>.</dd>
- <dt>{{domxref("History.state")}} {{readOnlyInline}} {{ gecko_minversion_inline("2.0") }}</dt>
+ <dt>{{domxref("History.state")}} {{readOnlyInline}}</dt>
  <dd>Returns an <code>any</code> value representing the state at the top of the history stack. This is a way to look at the state without having to wait for a {{event("popstate")}} event.</dd>
 </dl>
 
@@ -41,140 +41,19 @@ translation_of: Web/API/History
  </dd>
  <dt>{{domxref("History.go()")}}</dt>
  <dd>自 session history 紀錄中載入一個頁面，利用該頁面相對於目前頁面的所在位置，例如 -1 為前一頁或 1 為下一頁。若指定了一個超出範圍的值（舉例來說，在 session history 沒有先前訪頁面的情況下指定 -1），此方法將會是靜默（不會產生錯誤）且沒有任何效果的。不帶參數或是傳入 0 呼叫 <code>go()</code> 會重新載入目前頁面。Internet Explorer <a href="http://msdn.microsoft.com/en-us/library/ms536443(VS.85).aspx">也可以傳入字串</a>來前往一個於瀏覽歷史列表中指定的頁面。</dd>
- <dt>{{domxref("History.pushState()")}} {{ gecko_minversion_inline("2.0") }}</dt>
+ <dt>{{domxref("History.pushState()")}}</dt>
  <dd>插入給定的資料與指定的標題（title）以及選擇性的 URL 至 session history 堆疊（stack）中。給定的資料將被 DOM 視為不透明的（opaque）；可以指定任何可被序列化的 JavaScript 物件。請注意 Firefox 目前會忽略標題（title）參數；更多資訊請參閱<a href="/zh-TW/docs/Web/API/History_API">操控瀏覽器歷史紀錄</a>。</dd>
- <dt>{{domxref("History.replaceState()")}} {{ gecko_minversion_inline("2.0") }}</dt>
+ <dt>{{domxref("History.replaceState()")}}</dt>
  <dd>以指定的資料、標題（title）及可選的 URL 來更新歷史紀錄堆疊（history stack）中近期的項目。給定的資料將被 DOM 視為不透明的（opaque）；可以指定任何可被序列化的 JavaScript 物件。請注意 Firefox 目前會忽略標題（title）參數；更多資訊請參閱<a href="/zh-TW/docs/Web/API/History_API">操控瀏覽器歷史紀錄</a>。</dd>
 </dl>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#the-history-interface", "History")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Adds the <code>scrollRestoration</code> attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-history-interface", "History")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Custom Scroll Restoration', '#web-idl', "History")}}</td>
-   <td>{{Spec2('Custom Scroll Restoration')}}</td>
-   <td>Adds the <code>scrollRestoration</code> attribute.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>pushState</code> and <code>replaceState</code></td>
-   <td>{{CompatChrome(5.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.0 <sup>[1]</sup></td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td><code>scrollRestoration</code></td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("46.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>33</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>pushState</code> and <code>replaceState</code></td>
-   <td>2.2</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.3</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>scrollRestoration</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] In Firefox 2 through 5, the passed object is serialized using JSON. Starting in Firefox 6, the object is serialized using <a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm">the structured clone algorithm</a>. This allows a wider variety of objects to be safely passed.</p>
-
-<p>[2] WebKit <a href="https://trac.webkit.org/changeset/213590/webkit">bug 147782</a></p>
+{{Compat("api.History")}}
 
 <h2 id="參見">參見</h2>
 

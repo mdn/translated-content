@@ -133,7 +133,7 @@ objectStoreRequest.onsuccess = function(event) {
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

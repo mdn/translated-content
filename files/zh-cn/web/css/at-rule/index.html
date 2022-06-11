@@ -5,18 +5,18 @@ tags:
   - At-rule
 translation_of: Web/CSS/At-rule
 ---
-<p>一个<strong> at-rule</strong> 是一个<a href="https://developer.mozilla.org/en/CSS/Syntax#CSS_statements" title="en/CSS/Syntax#CSS_statements">CSS 语句，</a>以at符号开头, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), 后跟一个标识符，并包括直到下一个分号的所有内容, '<code>;</code>' (<code>U+003B SEMICOLON</code>), 或下一个CSS块，以先到者为准。</p>
+<p>一个<strong> at-rule</strong> 是一个<a href="https://developer.mozilla.org/en/CSS/Syntax#CSS_statements" title="en/CSS/Syntax#CSS_statements">CSS 语句，</a>以 at 符号开头， '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), 后跟一个标识符，并包括直到下一个分号的所有内容， '<code>;</code>' (<code>U+003B SEMICOLON</code>), 或下一个 CSS 块，以先到者为准。</p>
 
-<p>下面是一些 @规则, 由它们的标示符指定, 每种规则都有不同的语法:</p>
+<p>下面是一些 @规则，由它们的标示符指定，每种规则都有不同的语法：</p>
 
 <ul>
- <li>{{ cssxref("@charset") }}, 定义样式表使用的字符集.</li>
- <li>{{ cssxref("@import") }}, 告诉 CSS 引擎引入一个外部样式表.</li>
- <li>{{ cssxref("@namespace") }}, 告诉 CSS 引擎必须考虑XML命名空间。</li>
- <li>嵌套@规则, 是嵌套语句的子集,不仅可以作为样式表里的一个语句，也可以用在条件规则组里：
+ <li>{{ cssxref("@charset") }}, 定义样式表使用的字符集。</li>
+ <li>{{ cssxref("@import") }}, 告诉 CSS 引擎引入一个外部样式表。</li>
+ <li>{{ cssxref("@namespace") }}, 告诉 CSS 引擎必须考虑 XML 命名空间。</li>
+ <li>嵌套 @规则，是嵌套语句的子集，不仅可以作为样式表里的一个语句，也可以用在条件规则组里：
   <ul>
    <li>{{ cssxref("@media") }}, 如果满足媒介查询的条件则条件规则组里的规则生效。</li>
-   <li>{{ cssxref("@page") }}, 描述打印文档时布局的变化.</li>
+   <li>{{ cssxref("@page") }}, 描述打印文档时布局的变化。</li>
    <li>{{ cssxref("@font-face") }}, 描述将下载的外部的字体。 {{ experimental_inline() }}</li>
    <li>{{ cssxref("@keyframes") }}, 描述 CSS 动画的中间步骤 . {{ experimental_inline() }}</li>
    <li>{{ cssxref("@supports") }}, 如果满足给定条件则条件规则组里的规则生效。 {{ experimental_inline() }}</li>
@@ -27,9 +27,9 @@ translation_of: Web/CSS/At-rule
 
 <h2 id="条件规则组">条件规则组</h2>
 
-<p>就像属性值那样,每条@规则都有不同的语法. 不过一些@规则可以归为一类： <strong>条件规则组</strong>. 这些语句使用相同的语法. 它们都嵌套语句，或者是<em>规则</em>或者是<em>@规则</em>。它们都表达： 它们所指的条件 (类型不同) 总等效于 <strong>true</strong> 或者 <strong>false</strong>，如果为 <strong>true</strong> 那么它们里面的语句生效。</p>
+<p>就像属性值那样，每条 @规则都有不同的语法。不过一些 @规则可以归为一类： <strong>条件规则组</strong>. 这些语句使用相同的语法。它们都嵌套语句，或者是<em>规则</em>或者是<em>@规则</em>。它们都表达：它们所指的条件 (类型不同) 总等效于 <strong>true</strong> 或者 <strong>false</strong>，如果为 <strong>true</strong> 那么它们里面的语句生效。</p>
 
-<p>条件规则组由CSS Conditionals Level 3 定义:</p>
+<p>条件规则组由 CSS Conditionals Level 3 定义：</p>
 
 <ul>
  <li>{{ cssxref("@media") }},</li>
@@ -37,7 +37,7 @@ translation_of: Web/CSS/At-rule
  <li>{{ cssxref("@document") }}. <em>(推迟至 CSS Level 4 规范) </em></li>
 </ul>
 
-<p>既然条件规则组可以嵌套语句, 那么嵌套层级不定。</p>
+<p>既然条件规则组可以嵌套语句，那么嵌套层级不定。</p>
 
 <div class="noinclude">
 <h2 id="规范">规范</h2>
@@ -57,5 +57,3 @@ translation_of: Web/CSS/At-rule
  </tbody>
 </table>
 </div>
-
-<p>{{ languages( { "ja": "ja/CSS/At-rule" } ) }}</p>

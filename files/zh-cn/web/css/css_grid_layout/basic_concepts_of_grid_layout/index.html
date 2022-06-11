@@ -8,11 +8,11 @@ tags:
   - 布局
 translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
-<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS网格布局</a>引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了CSS网格布局 与 CSS网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。</p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a>引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。</p>
 
 <h2 id="什么是网格？">什么是网格？</h2>
 
-<p>网格是一组相交的水平线和垂直线，它定义了网格的列和行。我们可以将网格元素放置在与这些行和列相关的位置上。CSS网格布局具有以下特点：</p>
+<p>网格是一组相交的水平线和垂直线，它定义了网格的列和行。我们可以将网格元素放置在与这些行和列相关的位置上。CSS 网格布局具有以下特点：</p>
 
 <h3 id="固定的位置和弹性的轨道的大小">固定的位置和弹性的轨道的大小</h3>
 
@@ -32,9 +32,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="控制重叠内容">控制重叠内容</h3>
 
-<p>多个元素可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以CSS中的<strong>z-index</strong>属性来控制重叠区域显示的优先级。</p>
+<p>多个元素可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以 CSS 中的<strong>z-index</strong>属性来控制重叠区域显示的优先级。</p>
 
-<p>Grid是一个强大的规范，当与CSS的其他部分（如<a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>）结合使用时，可以帮助您创建以前不可能在CSS中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。</p>
+<p>Grid 是一个强大的规范，当与 CSS 的其他部分（如<a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。</p>
 
 <h2 id="网格容器">网格容器</h2>
 
@@ -89,7 +89,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
 
-<p>当你学习并且使用CSS网格布局时，这个工具能让你更好地了解到你的网格在视觉上发生了哪些变化。</p>
+<p>当你学习并且使用 CSS 网格布局时，这个工具能让你更好地了解到你的网格在视觉上发生了哪些变化。</p>
 
 <p>如果我们想让这个例子更加“网格化”，我们需要使用列轨道。</p>
 
@@ -101,7 +101,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>我可以通过添加 <code>grid-template-columns</code> 属性将列轨道添加到之前的例子，然后定义列轨道的大小。</p>
 
-<p>我现在创建了一个网格，包含了三个200像素宽的列轨道。子元素将在网格上每个网格单元中展开。</p>
+<p>我现在创建了一个网格，包含了三个 200 像素宽的列轨道。子元素将在网格上每个网格单元中展开。</p>
 
 <div id="grid_first">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -153,7 +153,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="fr_单位"><code>fr</code> 单位</h3>
 
-<p>轨道可以使用任何长度单位进行定义。 网格还引入了一个另外的长度单位来帮助我们创建灵活的网格轨道。新的<code>fr</code>单位代表网格容器中可用空间的一等份。下一个网格定义将创建三个相等宽度的轨道，这些轨道会随着可用空间增长和收缩。</p>
+<p>轨道可以使用任何长度单位进行定义。网格还引入了一个另外的长度单位来帮助我们创建灵活的网格轨道。新的<code>fr</code>单位代表网格容器中可用空间的一等份。下一个网格定义将创建三个相等宽度的轨道，这些轨道会随着可用空间增长和收缩。</p>
 
 <div id="fr_unit_ls">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -211,7 +211,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<p>在最后这个例子中，我们混合了绝对尺寸的轨道与分数单位轨道。第一个轨道是500像素，这个固定宽度被从可用空间中取走。剩下的空间被分为三份，按比例分配给了两个弹性尺寸轨道。</p>
+<p>在最后这个例子中，我们混合了绝对尺寸的轨道与分数单位轨道。第一个轨道是 500 像素，这个固定宽度被从可用空间中取走。剩下的空间被分为三份，按比例分配给了两个弹性尺寸轨道。</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -237,7 +237,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<p>Repeat 语句可以用于重复轨道列表中的一部分。在下面的例子中我创建了一个网格：它起始轨道为20像素，接着重复了6个<code>1fr</code>的轨道，最后再添加了一个20像素的轨道。</p>
+<p>Repeat 语句可以用于重复轨道列表中的一部分。在下面的例子中我创建了一个网格：它起始轨道为 20 像素，接着重复了 6 个<code>1fr</code>的轨道，最后再添加了一个 20 像素的轨道。</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -245,7 +245,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<p>Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一个多轨道模式的重复轨道列表。在下一个例子中，网格将有共计10个轨道，为1个<code>1fr</code>轨道后面跟着1个<code>2fr</code>轨道，该模式重复5次。</p>
+<p>Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一个多轨道模式的重复轨道列表。在下一个例子中，网格将有共计 10 个轨道，为 1 个<code>1fr</code>轨道后面跟着 1 个<code>2fr</code>轨道，该模式重复 5 次。</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -259,7 +259,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>你也可以在隐式网格中用 <code>grid-auto-rows</code> 和 <code>grid-auto-columns</code> 属性来定义一个设置大小尺寸的轨道。</p>
 
-<p>在下面的例子中我们用 <code>grid-auto-rows</code> 属性来确保在隐式网格中创建的轨道是200像素高。</p>
+<p>在下面的例子中我们用 <code>grid-auto-rows</code> 属性来确保在隐式网格中创建的轨道是 200 像素高。</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -304,9 +304,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="轨道大小和minmax()">轨道大小和<code>minmax()</code></h3>
 
-<p>在设置一个显式的网格或者定义自动创建的行和列的大小的时候，我们也许想给网格一个最小的尺寸，确保他们能扩大到容纳他里面添加的内容。举个例子，我想让我的行的高度永远不会缩小到100像素以下，但是如果我的内容延伸到300像素高了我想让我的行高也延伸到这个高度。</p>
+<p>在设置一个显式的网格或者定义自动创建的行和列的大小的时候，我们也许想给网格一个最小的尺寸，确保他们能扩大到容纳他里面添加的内容。举个例子，我想让我的行的高度永远不会缩小到 100 像素以下，但是如果我的内容延伸到 300 像素高了我想让我的行高也延伸到这个高度。</p>
 
-<p>网格用minmax()函数来解决这个问题。在下一个例子中我用minmax()作为grid-auto-rows的值。自动创建的行高将会是最小100像素，最大为auto。用auto意味着行的尺寸将会根据内容的大小来自动变换：根据本行中最高的单元，把空间扩展到足够容纳该单元。</p>
+<p>网格用 minmax() 函数来解决这个问题。在下一个例子中我用 minmax() 作为 grid-auto-rows 的值。自动创建的行高将会是最小 100 像素，最大为 auto。用 auto 意味着行的尺寸将会根据内容的大小来自动变换：根据本行中最高的单元，把空间扩展到足够容纳该单元。</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -350,11 +350,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('轨道大小和minmax()', '230', '490') }}</p>
+<p>{{ EmbedLiveSample('轨道大小和 minmax()', '230', '490') }}</p>
 
 <h2 id="网格线">网格线</h2>
 
-<p>应该注意的是，当我们定义网格时，我们定义的是网格轨道，而不是网格线。Grid 会为我们创建编号的网格线来让我们来定位每一个网格元素. 例如下面这个三列两行的网格中，就拥有四条纵向的网格线。</p>
+<p>应该注意的是，当我们定义网格时，我们定义的是网格轨道，而不是网格线。Grid 会为我们创建编号的网格线来让我们来定位每一个网格元素。例如下面这个三列两行的网格中，就拥有四条纵向的网格线。</p>
 
 <p><img alt="Diagram showing numbered grid lines." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
 
@@ -364,9 +364,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>我们会在以后的文章中完整的探讨如何根据 网格线 定位元素，接下来的例子展示了一个简单的方法。当放置元素时，我们使用 网格线 定位，而非 网格轨道。</p>
 
-<p>接下来这个例子中，我使用了{{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 属性，把前两个元素放到了我们的三列网格中。从左至右，第一个元素从列线1开始，延伸至列线4，也就是我们这个例子中最右边的列线。并从行线1延伸到行线3，占据了两个行轨道。</p>
+<p>接下来这个例子中，我使用了{{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 属性，把前两个元素放到了我们的三列网格中。从左至右，第一个元素从列线 1 开始，延伸至列线 4，也就是我们这个例子中最右边的列线。并从行线 1 延伸到行线 3，占据了两个行轨道。</p>
 
-<p>第二个元素从列线1开始，延伸了一个轨道。因为这是默认行为，所以我不用指定结束线。并且它从行线3到行线5，跨越了两个行轨道。剩下的元素会自动放到网格剩余的空间中。</p>
+<p>第二个元素从列线 1 开始，延伸了一个轨道。因为这是默认行为，所以我不用指定结束线。并且它从行线 3 到行线 5，跨越了两个行轨道。剩下的元素会自动放到网格剩余的空间中。</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -424,19 +424,19 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h2 id="网格单元">网格单元</h2>
 
-<p>一个网格单元是在一个网格元素中最小的单位， 从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子, 一旦一个网格元素被定义在一个父级元素当中，那么他的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。</p>
+<p>一个网格单元是在一个网格元素中最小的单位， 从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子，一旦一个网格元素被定义在一个父级元素当中，那么他的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。</p>
 
 <p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
 
 <h2 id="网格区域">网格区域</h2>
 
-<p>网格元素可以向行或着列的方向扩展一个或多个单元，并且会创建一个网格区域。网格区域的形状应该是一个矩形 - 也就是说你不可能创建出一个类似于“L”形的网格区域。下图高亮的网格区域扩展了2列以及2行。</p>
+<p>网格元素可以向行或着列的方向扩展一个或多个单元，并且会创建一个网格区域。网格区域的形状应该是一个矩形 - 也就是说你不可能创建出一个类似于“L”形的网格区域。下图高亮的网格区域扩展了 2 列以及 2 行。</p>
 
 <p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
 
 <h2 id="网格间距">网格间距</h2>
 
-<p>在两个网格单元之间的<em> 网格横向间距 </em> 或 <em>网格纵向间距  </em>可使用 {{cssxref("grid-column-gap")}} 和 {{cssxref("grid-row-gap")}} 属性来创建，或者直接使用两个合并的缩写形式 {{cssxref("grid-gap")}}。在下面的例子中，我会创建一个横向间距为10px、纵向间距为1em的网格元素。</p>
+<p>在两个网格单元之间的<em> 网格横向间距 </em> 或 <em>网格纵向间距  </em>可使用 {{cssxref("grid-column-gap")}} 和 {{cssxref("grid-row-gap")}} 属性来创建，或者直接使用两个合并的缩写形式 {{cssxref("grid-gap")}}。在下面的例子中，我会创建一个横向间距为 10px、纵向间距为 1em 的网格元素。</p>
 
 <pre class="brush: css">.wrapper {
    display: grid;
@@ -480,11 +480,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('网格间距') }}</p>
 
-<p>间距使用的空间会在 使用弹性长度fr的轨道的空间计算前就被留出来，间距的尺寸定义行为和普通轨道一致，但不同的是你不能向其中插入任何内容。从以基线定位的角度来说，间距就像一条很宽的基线。</p>
+<p>间距使用的空间会在 使用弹性长度 fr 的轨道的空间计算前就被留出来，间距的尺寸定义行为和普通轨道一致，但不同的是你不能向其中插入任何内容。从以基线定位的角度来说，间距就像一条很宽的基线。</p>
 
 <h2 id="嵌套网格">嵌套网格</h2>
 
-<p>一个网格元素可以也成为一个网格容器。在接下来的例子中我事先有了一个3列的网格元素，并有两个跨轨道的网格。在这个例子中，第一个网格元素含有几个子级元素。当这些元素不是网格容器的直接子级元素时，它们不会参与到网格布局中，并显示为正常的文档流。</p>
+<p>一个网格元素可以也成为一个网格容器。在接下来的例子中我事先有了一个 3 列的网格元素，并有两个跨轨道的网格。在这个例子中，第一个网格元素含有几个子级元素。当这些元素不是网格容器的直接子级元素时，它们不会参与到网格布局中，并显示为正常的文档流。</p>
 
 <div id="nesting">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -544,7 +544,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="子网格">子网格</h3>
 
-<p>在Level 1网格规范中有一个叫做 <em>子网格</em>  的特性。它能让我们在父级网格元素的轨道定义中就能定义一个嵌套网格。</p>
+<p>在 Level 1 网格规范中有一个叫做 <em>子网格</em>  的特性。它能让我们在父级网格元素的轨道定义中就能定义一个嵌套网格。</p>
 
 <div class="note">
 <p>子网格还并未在任何浏览器中实现，并且随时有可能从规范中移除。</p>

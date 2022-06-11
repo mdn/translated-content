@@ -30,7 +30,7 @@ var registering = browser.contentScripts.register(
 
 - `contentScriptOptions`
 
-  - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).  Les différences sont :
+  - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).  Les différences sont :
 
     - les noms de propriété utilisent camelCase plutôt que des traits de soulignement (par exemple, `excludeMatches`, pas `exclude_matches`
     - les propriétés `js` et `css` vous permettent d'enregistrer des chaînes ainsi que des URL, leur syntaxe doit donc distinguer ces types.
@@ -68,7 +68,7 @@ Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'
 
 ## Exemples
 
-Cet exemple enregistre le script de contenu `defaultCode`  pour toutes les URL `.org` :
+Cet exemple enregistre le script de contenu `defaultCode`  pour toutes les URL `.org` :
 
 ```js
 const defaultHosts = "*://*.org/*";

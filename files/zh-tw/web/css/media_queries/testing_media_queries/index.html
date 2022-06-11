@@ -5,20 +5,20 @@ translation_of: Web/CSS/Media_Queries/Testing_media_queries
 ---
 <p>{{SeeCompatTable}}</p>
 
-<p>DOM 提供了一個用程式去測試 media query 的方法：那就是透過 {{domxref("MediaQueryList") }} 物件；透過 <span style="line-height: 19.0909080505371px;">{{domxref("MediaQueryList") }} 物件上的屬性和方法，我們可以得知、觀察目前 media query 的狀態。</span></p>
+<p>DOM 提供了一個用程式去測試 media query 的方法：那就是透過 {{domxref("MediaQueryList") }} 物件；透過 {{domxref("MediaQueryList") }} 物件上的屬性和方法，我們可以得知、觀察目前 media query 的狀態。</p>
 
 <h2 id="Creating_a_media_query_list" name="Creating_a_media_query_list">創建 media query list 物件</h2>
 
-<p>透過傳入目標 medai query 到 {{domxref("window.matchMedia") }} 方法，我們將可以取得相對應的 <span style="line-height: 19.0909080505371px;">MediaQueryList 物件。</span></p>
+<p>透過傳入目標 medai query 到 {{domxref("window.matchMedia") }} 方法，我們將可以取得相對應的 MediaQueryList 物件。</p>
 
-<p>以下範例將取得偵測螢幕方向的 <span style="line-height: 19.0909080505371px;">MediaQueryList 物件：</span></p>
+<p>以下範例將取得偵測螢幕方向的 MediaQueryList 物件：</p>
 
 <pre>var mql = window.matchMedia("(orientation: portrait)");
 </pre>
 
 <h2 id="Checking_the_result_of_a_query" name="Checking_the_result_of_a_query">檢查 media query 結果</h2>
 
-<p>讀取 <span style="line-height: 19.0909080505371px;">MediaQueryList 物件 的 matches 屬性就可以得知測試結果：</span></p>
+<p>讀取 MediaQueryList 物件 的 matches 屬性就可以得知測試結果：</p>
 
 <pre class="brush: js">if (mql.matches) {
   /* The device is currently in portrait orientation */
@@ -29,7 +29,7 @@ translation_of: Web/CSS/Media_Queries/Testing_media_queries
 
 <h2 id="Receiving_query_notifications" name="Receiving_query_notifications">接收測試結果通知</h2>
 
-<p>當我們想要動態依據 media query 測試狀況執行對應處理，除了持續定期偵測外，還有一個更有效率的途徑：那就是註冊 media query 的事件處理器 (listener)。只要呼叫 <span style="line-height: 19.0909080505371px;">MediaQueryList 物件上 addListener 方法，傳入符合</span> {{domxref("MediaQueryListListener") }} 介面的 listener 便完成事件註冊<span style="line-height: 19.0909080505371px;">：</span></p>
+<p>當我們想要動態依據 media query 測試狀況執行對應處理，除了持續定期偵測外，還有一個更有效率的途徑：那就是註冊 media query 的事件處理器 (listener)。只要呼叫 MediaQueryList 物件上 addListener 方法，傳入符合 {{domxref("MediaQueryListListener") }} 介面的 listener 便完成事件註冊：</p>
 
 <pre class="brush: js">var mql = window.matchMedia("(orientation: portrait)");
 mql.addListener(handleOrientationChange);
@@ -38,7 +38,7 @@ handleOrientationChange(mql);
 
 <p>上面我們替螢幕方向 media query 註冊了一個 listener。請注意，在第一次註冊後，listener 會立刻被呼叫一次，這是為了初始化準備，因為我們可能預設 UI 是針對 'portait' 模式，但目前卻是 'landscape' 模式，所以這個第一次呼叫將給予我們作初始化調整的空間。</p>
 
-<p><code>下面handleOrientationChange()</code> 方法便是我們針對螢幕方向變化的 listener<span style="line-height: 19.0909080505371px;">：</span></p>
+<p><code>下面handleOrientationChange()</code> 方法便是我們針對螢幕方向變化的 listener：</p>
 
 <pre class="brush: js">function handleOrientationChange(mql) {
   if (mql.matches) {
@@ -58,53 +58,7 @@ handleOrientationChange(mql);
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>9</td>
-   <td>{{CompatGeckoDesktop("6.0") }}</td>
-   <td>10</td>
-   <td>12.1</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10</td>
-   <td>12.1</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MediaQueryList")}}
 
 <h2 id="See_also" name="See_also"> </h2>
 

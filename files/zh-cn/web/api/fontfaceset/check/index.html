@@ -10,103 +10,51 @@ tags:
   - Reference
 translation_of: Web/API/FontFaceSet/check
 ---
-<p><font><font>{{APIRef()}} {{SeeCompatTable}}</font></font></p>
+<p>{{APIRef()}} {{SeeCompatTable}}</p>
 
-<div class="syntaxbox"><font><font>{{domxref("FontFaceSet")}} 的</font></font><code>check()</code><font><font>方法会返回是否在给定的字体列表中的所有字体已经被加载并可用。</font></font></div>
+<div class="syntaxbox">{{domxref("FontFaceSet")}} 的<code>check()</code>方法会返回是否在给定的字体列表中的所有字体已经被加载并可用。</div>
 
-<h2 id="句法"><font><font>句法</font></font></h2>
+<h2 id="句法">句法</h2>
 
-<pre class="syntaxbox"><var><font><font>bool</font></font></var><font><font> = </font></font><var><font><font>aFontFaceSet</font></font></var><font><font> .check(</font></font><em><font><font>font</font></font></em><font><font>);
-</font></font><var><font><font>bool</font></font></var><font><font> = </font></font><var><font><font>aFontFaceSet</font></font></var><font><font> .check(</font></font><em><font><font>font</font></font></em><font><font>，</font></font><em><font><font>text</font></font></em><font><font>);
-</font></font></pre>
-
-<h3 id="返回"><font><font>返回</font></font></h3>
-
-<p><font><font>如果字体列表可用，则{{jsxref("Boolean")}}为true</font></font></p>
-
-<h3 id="参数"><font><font>参数</font></font></h3>
-
-<ul>
- <li><code>font</code><font><font>：使用</font></font><a href="/en-US/docs/"><font><font>CSS值语法</font></font></a><font><font>的字体规范</font><font>，例如“italic bold 16px Roboto”</font></font></li>
- <li><code>text</code><font><font>：将字体面限制为Unicode范围至少包含文本中的一个字符。</font><font>这</font></font><a href="http://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html"><font><font>不检查单个字形覆盖</font></font></a><font><font>。</font></font></li>
-</ul>
-
-<h2 id="例子"><font><font>例子</font></font></h2>
-
-<pre class="brush: js"><font><font>document.fonts.check("12px courier"); </font><font>//如果字体快递可用在12px，则返回true</font></font>
-<font><font>
-document.fonts.check("12px MyFont"，"ß"); </font><font>如果字体“MyFont”具有ß字符，则返回true。</font></font>
+<pre class="syntaxbox"><var>bool</var> = <var>aFontFaceSet</var> .check(<em>font</em>);
+<var>bool</var> = <var>aFontFaceSet</var> .check(<em>font</em>，<em>text</em>);
 </pre>
 
-<h2 id="产品规格"><font><font>产品规格</font></font></h2>
+<h3 id="返回">返回</h3>
+
+<p>如果字体列表可用，则{{jsxref("Boolean")}}为 true</p>
+
+<h3 id="参数">参数</h3>
+
+<ul>
+ <li><code>font</code>：使用<a href="/en-US/docs/">CSS 值语法</a>的字体规范，例如“italic bold 16px Roboto”</li>
+ <li><code>text</code>：将字体面限制为 Unicode 范围至少包含文本中的一个字符。这<a href="http://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html">不检查单个字形覆盖</a>。</li>
+</ul>
+
+<h2 id="例子">例子</h2>
+
+<pre class="brush: js">document.fonts.check("12px courier"); //如果字体快递可用在 12px，则返回 true
+
+document.fonts.check("12px MyFont"，"ß"); 如果字体“MyFont”具有ß字符，则返回 true。
+</pre>
+
+<h2 id="产品规格">产品规格</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><font><font>规范</font></font></th>
-   <th scope="col"><font><font>状态</font></font></th>
-   <th scope="col"><font><font>评论</font></font></th>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">评论</th>
   </tr>
   <tr>
-   <td><font><font>{{SpecName('CSS3 Font Loading','＃font-face-set-check','check')}}</font></font></td>
-   <td><font><font>{{Spec2('CSS3 Font Loading')}}</font></font></td>
-   <td><font><font>初始定义</font></font></td>
+   <td>{{SpecName('CSS3 Font Loading','＃font-face-set-check','check')}}</td>
+   <td>{{Spec2('CSS3 Font Loading')}}</td>
+   <td>初始定义</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容"><font><font>浏览器兼容</font></font></h2>
+<h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div><font><font>{{CompatibilityTable}}</font></font></div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><font><font>特征</font></font></th>
-   <th><font><font>铬</font></font></th>
-   <th><font><font>Firefox(Gecko)</font></font></th>
-   <th><font><font>IE浏览器</font></font></th>
-   <th><font><font>歌剧</font></font></th>
-   <th><font><font>Safari(WebKit)</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>基本支持</font></font></td>
-   <td><font><font>{{CompatChrome(35.0)}}</font></font></td>
-   <td><font><font>{{CompatGeckoDesktop(41)}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><font><font>特征</font></font></th>
-   <th><font><font>Android的</font></font></th>
-   <th><font><font>Android Webview</font></font></th>
-   <th><font><font>Firefox Mobile(Gecko)</font></font></th>
-   <th><font><font>Firefox操作系统</font></font></th>
-   <th><font><font>IE Mobile</font></font></th>
-   <th><font><font>歌剧手机</font></font></th>
-   <th><font><font>Safari手机</font></font></th>
-   <th><font><font>适用于Android的Chrome</font></font></th>
-  </tr>
-  <tr>
-   <td><font><font>基本支持</font></font></td>
-   <td><font><font>{{CompatNo}}</font></font></td>
-   <td><font><font>{{CompatChrome(35.0)}}</font></font></td>
-   <td><font><font>{{CompatGeckoMobile(41)}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatUnknown}}</font></font></td>
-   <td><font><font>{{CompatChrome(35.0)}}</font></font></td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.FontFaceSet.check")}}

@@ -1,42 +1,41 @@
 ---
-title: 剖析拓展
+title: 扩展剖析
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 tags:
   - WebExtension
-  - 拓展
-  - 拓展开发
+  - 扩展
+  - 扩展开发
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>拓展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。</p>
+<p>扩展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。</p>
 
 <h2 id="manifest.json">manifest.json</h2>
 
-<p>这是唯一一个在每个 WebExtension 里面必须存在的文件。它包含了关于这个扩展插件基本的元数据（metadata），比如它的名字、版本和所需权限。并且，它也对 WebExtension 中其他文件进行了链接。</p>
+<p>这是唯一一个在每个扩展里面必须存在的文件。它包含了关于这个扩展插件基本的元数据（metadata），比如它的名字、版本和所需权限。并且，它也对扩展中其他文件进行了链接。</p>
 
 <p>这个 manifest 文件还可以指向其它一些类型的文件：</p>
 
 <ul>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background pages</a>: 执行一个长时间运行的逻辑</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">content scripts</a>: 与网页进行交互（注意：这与JavaScript在页面中的 {{HTMLElement("script")}} 元素不一样）</li>
- <li><a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action files</a>: 在工具栏中添加按钮</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions">page action files</a>: 在地址栏添加按钮</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">options pages</a>: 为用户定义一个可浏览的UI界面，可以改变插件的设置</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources">web-accessible resources</a>: 使打包好的内容可用于网页与目录脚本</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本">后台脚本</a>: 执行一个长时间运行的逻辑。</li>
+ <li><a>图标</a>: 用于扩展插件和任何它可能定义的按钮儿。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面">侧边栏，弹出窗口，选项页</a>: 为各式各样用户界面组件提供内容的 HTML 文件。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本">内容脚本</a>: 扩展中包含的 JavaScript，你可以注入它们到网页中。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源">网络可访问资源</a>: 使打包好的内容可用于网页与内容脚本中。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12954/webextension-anatomy.svg" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+<p><img alt="" src="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
 
 <p>浏览其他的详细信息请到 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 。</p>
 
-<p>除了这些 manifest 引用的文件之外，扩展也可以携带额外的 <a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages">Extension pages</a> 。</p>
+<p>除了这些 manifest 中已经列举的项之外，扩展也可以携带额外的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a> 和支持的文件。</p>
 
 <h2 id="后台脚本">后台脚本</h2>
 
 <p>扩展常常需要独立于任何浏览器窗口或特定网页来维持一种长期的状态或者执行长期的操作。这就是后台脚本（background scripts）的职责。</p>
 
-<p>后台脚本将在拓展加载完毕后开始运行，直到拓展被禁用或卸载。只要获得了相应的<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
+<p>后台脚本将在扩展加载完毕后开始运行，直到扩展被禁用或卸载。只要获得了相应的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
 
 <h3 id="指定后台脚本">指定后台脚本</h3>
 
@@ -48,31 +47,27 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
   "scripts": ["background-script.js"]
 }</pre>
 
-<p>可以添加多份后台脚本：而且，就像同一个网页中的多个脚本一样，它们将会运行在同一上下文环境中。</p>
+<p>可以添加多份后台脚本。而且，就像同一个网页中的多个脚本一样，它们将会运行在同一上下文环境中。</p>
 
-<p> </p>
 
 <p>与此同时，你也可以先引入一个后台页面，再在后台页面中引入脚本。这样做能为后台脚本添加 ES 6 模块支持，算是一个优势。</p>
 
-<p style="margin-bottom: 0em;"><strong>manifest.json</strong></p>
+<p><strong>manifest.json</strong></p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="comment token">// manifest.json</span>
+<pre class="brush: json">// manifest.json
 
-<span class="key token">"background":</span> <span class="punctuation token">{</span>
-  <span class="key token">"page":</span> <span class="string token">"background-page.html"</span>
-<span class="punctuation token">}</span></code></pre>
+"background": {
+  "page": "background-page.html"
+}</pre>
 
-<p style="margin-bottom: 0em;"><strong>background-page.html</strong></p>
-
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"zh-CN</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>utf-8<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>module<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>background-script.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
-
-<p> </p>
+<p><strong>background-page.html</strong></p>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
 
 <h3 id="后台脚本的运行环境">后台脚本的运行环境</h3>
 
@@ -80,9 +75,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>后台脚本在一个被称为后台页面的特殊页面的上下文环境中运行。此环境为其提供了全局变量 <code><a href="/zh-CN/docs/Web/API/Window">window</a></code> ，也提供了所有的标准 DOM API。</p>
 
+<div class="notecard warning">
+  <p><strong>警告：</strong> 在 Firefox 浏览器中，后台页面不支持使用 <a href="/zh-CN/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/zh-CN/docs/Web/API/Window/alert"><code>confirm()</code></a>和 <a href="/zh-CN/docs/Web/API/Window/alert"><code>prompt()</code></a></p>
+ 
+</div>
+
 <h4 id="WebExtension_API">WebExtension API</h4>
 
-<p>只要扩展获得了必要的<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，后台脚本就可以使用所有的 <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
+<p>只要扩展获得了必要的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，后台脚本就可以使用所有的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
 
 <h4 id="跨域访问">跨域访问</h4>
 
@@ -90,33 +90,34 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <h4 id="网页内容">网页内容</h4>
 
-<p>后台脚本没有直接访问页面的权限。不过，他们可以在页面中加载<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>（content scripts），并且可以<a href="/zh-CN/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">通过 message-passing API 与内容脚本通信</a>。</p>
+<p>后台脚本没有直接访问页面的权限。不过，他们可以在页面中加载<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>（content scripts），并且可以<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#后台脚本通信">通过 message-passing API 与内容脚本通信</a>。</p>
 
 <h4 id="内容安全策略">内容安全策略</h4>
 
-<p>根据一个内容安全策略（Content Security Policy），后台脚本不能执行一些可能有危险的操作，例如使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>。 详情请参考<a href="/zh-CN/Add-ons/WebExtensions/Content_Security_Policy">内容安全策略</a>。</p>
+<p>根据一个内容安全策略（Content Security Policy），后台脚本不能执行一些可能有危险的操作，例如使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>。</p>
+<p>详情请参考<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">内容安全策略</a>。</p>
 
 <h2 id="侧边栏，弹出窗口，选项页面">侧边栏，弹出窗口，选项页面</h2>
 
 <p>您的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">侧边栏</a>是一个窗格，它被显示在浏览器窗口左侧，就在网页旁边</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">弹出窗口</a>是一个对话框，可以在用户单击<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">工具栏按钮</a>或<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">地址栏按钮</a>时显示该对话框</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">选项页面</a>是当用户访问拓展在拓展管理器内置的拓展选项页面时内嵌显示的页面。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">侧边栏</a>是一个面板，它被显示在浏览器窗口左侧，就在网页旁边。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">弹出窗口</a>是一个对话框，可以在用户单击<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">工具栏按钮</a>或<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">地址栏按钮</a>时显示该对话框。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">选项页面</a>是当用户访问扩展管理器内置的扩展选项页面时，内嵌显示的页面。</li>
 </ul>
 
 <p>对于这些组件，你可以创建一个 HTML 文件，并使用 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 中的特定属性指向它。HTML 文件可以引用 CSS 和 JavaScript 文件，就像普通的网页一样。</p>
 
-<p>所有这些都是<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">扩展页面</a>的一种，与普通网页不同的是，你可以在其 JavaScript 中使用所有有权限使用的 WebExtension API。 它们甚至可以通过 {{WebExtAPIRef("runtime.getBackgroundPage()")}} 直接访问后台页面中的变量。</p>
+<p>所有这些都是<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">扩展页面</a>的一种，与普通网页不同的是，你可以在 JavaScript 中像在后台脚本那样，拥有一样的权限去使用 WebExtension API。 </p>
 
 <h2 id="扩展页面">扩展页面</h2>
 
-<p>您也可以在扩展中包含HTML文档，这些文档不附加到某个预定义的用户界面组件。与您可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在manifest.json中没有条目。但是，他们也可以访问所有与您的后台脚本相同的特权WebExtension API。</p>
+<p>您也可以在扩展中包含 HTML 文档，这些文档不附加到某个预定义的用户界面组件。与您可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在 manifest.json 中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用 WebExtension API。</p>
 
-<p>你通常可以使用 {{WebExtAPIRef("windows.create()")}} 或 {{WebExtAPIRef("tabs.create()")}}加载一个页面.</p>
+<p>你通常可以使用 {{WebExtAPIRef("windows.create()")}} 或 {{WebExtAPIRef("tabs.create()")}}加载一个页面。</p>
 
-<p>若想了解更多，请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">扩展页面</a>。</p>
+<p>若想了解更多，请参考 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">扩展页面</a>。</p>
 
 <h2 id="内容脚本">内容脚本</h2>
 
@@ -126,23 +127,23 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>内容脚本可以像普通脚本一样获取、操作页面的 DOM。</p>
 
-<p>与普通的页面内脚本不同，Content scripts可以：</p>
+<p>与普通的页面内脚本不同，Content scripts 可以：</p>
 
 <ul>
  <li>执行跨域访问</li>
- <li>使用 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs </a>的子集</li>
- <li>通过与后台脚本交换信息的方式，间接地使用所有<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs </a></li>
+ <li>使用 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs </a>中的一小部分</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">通过与后台脚本交换信息</a>的方式，间接地使用所有 WebExtension API </li>
 </ul>
 
 <p>内容脚本无法直接访问普通网页中的脚本，但是可以通过 <code><a href="/zh-CN/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API 来与之传递信息。</p>
 
-<p>通常情况下，当我们讨论内容脚本时，是在指（一类）使用 JavaScript 编写的脚本，但是你也可以用同样的机制来注入 CSS 文件。（译者注：不讨论含有编译器的情况。例如，若你事先引入了可编译 TypeScript 的 JavaScript 内容脚本，不论性能问题，你也很可能可以引入使用 TypeScript 编写的内容脚本：类似这样的情况，在此不计。）</p>
+<p>通常情况下，当我们讨论内容脚本时，我们通常指的是 JavaScript，但是你也可以用同样的机制来注入 CSS 样式。</p>
 
 <p>若想了解更多，请参考<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>。</p>
 
-<h2 id="Web_accessible_resources">Web accessible resources</h2>
+<h2 id="网络可访问资源">网络可访问资源</h2>
 
-<p>Web accessible resources 是指像图片、HTML、CSS 和 JavaScript 之类的、被引入插件并且想要获得访问权限的内容脚本和页面脚本。这些 web-accessible 的资源可以在页面脚本和内容脚本中通过使用特定的URL方案来引用。<br>
- 举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在插件中引入它们并且使他们成为web-accseeible。接下来内容脚本就可以创建并追加包含 <code>src</code> 属性的 <a href="/zh-CN/docs/Web/HTML/Element/img">img</a> 标签了。</p>
+<p>网络可访问资源指的是像图片、HTML、CSS 和 JavaScript 一类在扩展中包含的资源文件，并且你可以在内容脚本和页面脚本中访问。这些网络可访问资源可以在页面脚本和内容脚本中通过使用特定的 URI 方案来引用。<br>
+ 举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 <code>src</code> 属性的 <a href="/zh-CN/docs/Web/HTML/Element/img">img</a> 标签了。</p>
 
-<p>若想了解更多，请参考 manifest.json key 的文档：<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a>。</p>
+<p>若想了解更多，请参考 manifest.json 中相关条目的文档：<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a>。</p>

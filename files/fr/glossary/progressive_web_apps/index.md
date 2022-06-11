@@ -13,5 +13,5 @@ Ces fonctionnalités incluent : la possibilité d'installer l'application, de fo
 
 ## Pour approfondir
 
-- Les [Applications ](/fr/Apps)sur MDN
+- Les [Applications](/fr/Apps) sur MDN
 - [Progressive web apps](https://developers.google.com/web/progressive-web-apps) sur Google Developers.

@@ -10,7 +10,7 @@ tags:
   - 文档
 translation_of: Web/API/Document/lastStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}{{obsolete_header}}</div>
+<div>{{APIRef("DOM")}}{{obsolete_header}}</div>
 
 <p><strong><code>Document.lastStyleSheetSet</code></strong> 返回最后一个启用的样式表集合。当 {{domxref("document.selectedStyleSheetSet")}} 属性发生变化时，这个属性的值就会随之发生变化。</p>
 
@@ -19,9 +19,9 @@ translation_of: Web/API/Document/lastStyleSheetSet
 <pre class="syntaxbox notranslate">var <var>lastStyleSheetSet</var> = <var>document</var>.lastStyleSheetSet
 </pre>
 
-<p>返回时, <var>lastStyleSheetSet</var> 指示最近设置的样式表。 如果当前样式表集尚未通过设置更改 {{domxref("document.selectedStyleSheetSet")}}, 则返回值为 <code>null</code>。</p>
+<p>返回时，<var>lastStyleSheetSet</var> 指示最近设置的样式表。 如果当前样式表集尚未通过设置更改 {{domxref("document.selectedStyleSheetSet")}}, 则返回值为 <code>null</code>。</p>
 
-<div class="note"><strong>注意:</strong>  当{{domxref("document.enableStyleSheetsForSet()")}} 被执行时，该值不会该变。</div>
+<div class="note"><strong>注意：</strong>  当{{domxref("document.enableStyleSheetsForSet()")}} 被执行时，该值不会该变。</div>
 
 <h2 id="示例">示例</h2>
 

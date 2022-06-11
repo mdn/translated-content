@@ -17,7 +17,7 @@ translation_of: Web/API/Element/contextmenu_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary"><strong><code>contextmenu</code></strong> 事件会在用户尝试打开上下文菜单时被触发。该事件通常在鼠标点击右键或者按下键盘上的菜单键时被触发，如果使用菜单键，该上下文菜单会被展示 到所聚焦元素的左下角，但是如果该元素是一棵DOM树的话，上下文菜单便会展示在当前这一行的左下角。</span></p>
+<p><strong><code>contextmenu</code></strong> 事件会在用户尝试打开上下文菜单时被触发。该事件通常在鼠标点击右键或者按下键盘上的菜单键时被触发，如果使用菜单键，该上下文菜单会被展示 到所聚焦元素的左下角，但是如果该元素是一棵 DOM 树的话，上下文菜单便会展示在当前这一行的左下角。</p>
 
 <p>任何没有被禁用的鼠标右击事件 (通过调用事件的 {{domxref("Event.preventDefault", "preventDefault()")}} 方法) 将会使得 <code>contextmenu</code> 事件在目标元素上被触发。</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/Element/contextmenu_event
  </tbody>
 </table>
 
-<h2 id="实例">实例</h2>
+<h2 id="示例">示例</h2>
 
 <p>在下面的例子中，第一段内容被触发的 <code>contextmenu</code> 事件的默认行为被 <code>preventDefault()</code> 取消了，因此，在第一段右击鼠标时什么也不会发生，但是右键单击第二段内容时，则会出现标准的菜单内容，与平时右击普通页面出现的菜单内容一致。</p>
 
@@ -60,28 +60,13 @@ noContext.addEventListener('contextmenu', e =&gt; {
 });
 </pre>
 
-<h3 id="Result">Result</h3>
+<h3 id="结果">结果</h3>
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+<p>{{EmbedLiveSample("示例")}}</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'indices.html#event-contextmenu', 'contextmenu')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

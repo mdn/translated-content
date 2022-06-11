@@ -63,7 +63,7 @@ self.addEventListener('notificationclick', function(event) {
 
 | Spécification                                                                                        | État                                     | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} |              |
+| {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} |              |
 
 > **Note :** Cette interface est définie au sein de [l'API Notifications](/fr/docs/Web/API/Notifications_API), mais on y accède via {{domxref("ServiceWorkerGlobalScope")}}.
 

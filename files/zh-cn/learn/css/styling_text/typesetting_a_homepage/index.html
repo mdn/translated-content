@@ -15,24 +15,24 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 
 <div>{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary">在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。</p>
+<p>在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备条件:</th>
+   <th scope="row">预备条件：</th>
    <td>在本次测评前，你应该完成了本模块所有章节。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>测试对CSS文本样式化技术的理解。</td>
+   <th scope="row">目标：</th>
+   <td>测试对 CSS 文本样式化技术的理解。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="开始">开始</h2>
 
-<p>在本测评开始前，你应该:</p>
+<p>在本测评开始前，你应该：</p>
 
 <ul>
  <li>获取本次练习的 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html">HTML</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css">CSS</a> 文件以及提供的 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png">external link icon</a>。</li>
@@ -40,40 +40,40 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 或者，你可以使用像 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> 的网站完成你的测评。你可以把HTML和CSS粘贴到在线编辑器中，并使用<a href="http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png">this URL</a>指定背景图像。如果你使用的在线编辑器没有单独的CSS面板，你可以将其放在HTML文件的&lt;style&gt;元素中。</p>
+<p><strong>注意</strong>: 或者，你可以使用像 <a class="external external-icon" href="http://jsbin.com/">JSBin</a> 或 <a class="external external-icon" href="https://glitch.com/">Glitch</a> 的网站完成你的测评。你可以把 HTML 和 CSS 粘贴到在线编辑器中，并使用<a href="http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png">this URL</a>指定背景图像。如果你使用的在线编辑器没有单独的 CSS 面板，你可以将其放在 HTML 文件的&lt;style&gt;元素中。</p>
 </div>
 
 <h2 id="项目简介">项目简介</h2>
 
-<p>你有一个虚构的社区大学主页的未处理HTML文件和一些CSS文件。这些CSS文件把网页分成两栏布局，提供了一些简单的样式化。你将在CSS文件底部的comment下写你的CSS，这样可以方便地标出你的工作。不要担心选择器一直重复；我们会帮你跳过这个问题。</p>
+<p>你有一个虚构的社区大学主页的未处理 HTML 文件和一些 CSS 文件。这些 CSS 文件把网页分成两栏布局，提供了一些简单的样式化。你将在 CSS 文件底部的 comment 下写你的 CSS，这样可以方便地标出你的工作。不要担心选择器一直重复；我们会帮你跳过这个问题。</p>
 
 <p>字体：</p>
 
 <ul>
- <li>首先，下载一些免费的字体。因为这是一所大学，字体应该严肃，正式，给人信任的感觉 —— 主体使用serif字体，对标题结合使用sans-serif 或者 slab serif会是不错的选择。</li>
+ <li>首先，下载一些免费的字体。因为这是一所大学，字体应该严肃，正式，给人信任的感觉 —— 主体使用 serif 字体，对标题结合使用 sans-serif 或者 slab serif 会是不错的选择。</li>
  <li>使用合适的服务对着两种字体生成无死角的<code>@font-face</code>代码。</li>
- <li>将你的body字体应用到body，heading字体应用到heading。</li>
+ <li>将你的 body 字体应用到 body，heading 字体应用到 heading。</li>
 </ul>
 
 <p>文本样式化基础：</p>
 
 <ul>
  <li>设置全站网页 <code>font-size</code> 为 <code>10px</code>。</li>
- <li>使用相对单位（relative unit）为标题和其他元素的font-sizes设置合适的值。</li>
- <li>为body文本设置合适的<code>line-height</code>。</li>
+ <li>使用相对单位（relative unit）为标题和其他元素的 font-sizes 设置合适的值。</li>
+ <li>为 body 文本设置合适的<code>line-height</code>。</li>
  <li>居中页面顶级标题。</li>
  <li>为标题设置 <code>letter-spacing</code> 避免字间太过拥挤。</li>
- <li>为body文本设置合适的 <code>letter-spacing</code> 和 <code>word-spacing</code>。</li>
- <li>在<code>&lt;section&gt;</code>元素中，每个标题后的第一段文字设置20px的文本缩进。</li>
+ <li>为 body 文本设置合适的 <code>letter-spacing</code> 和 <code>word-spacing</code>。</li>
+ <li>在<code>&lt;section&gt;</code>元素中，每个标题后的第一段文字设置 20px 的文本缩进。</li>
 </ul>
 
 <p>链接：</p>
 
 <ul>
  <li>设置 link, visited, focus, 和 hover 状态设置颜色，与页面顶部和底部的水平线颜色相匹配。</li>
- <li>设置链接默认带下划线，但hover和focus时下划线消失。</li>
- <li>取消页面中所有链接focus时默认的外边线。</li>
- <li>设置active时有显著不同的样式，使其又突出又与整体页面设计和谐。</li>
+ <li>设置链接默认带下划线，但 hover 和 focus 时下划线消失。</li>
+ <li>取消页面中所有链接 focus 时默认的外边线。</li>
+ <li>设置 active 时有显著不同的样式，使其又突出又与整体页面设计和谐。</li>
  <li>在外部链接右侧插入外部链接图标。</li>
 </ul>
 
@@ -81,10 +81,10 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 
 <ul>
  <li>确保列表和列表项与页面整体样式和谐。每个列表项应该有同样的与段落行相同的<code>line-height</code> 。每个列表上下间距应该与段落间距相同。</li>
- <li>使用与页面设计匹配的bullet列表项符号。你可以选择自定义的bullet图像或者其他的喜欢的bullet符号。</li>
+ <li>使用与页面设计匹配的 bullet 列表项符号。你可以选择自定义的 bullet 图像或者其他的喜欢的 bullet 符号。</li>
 </ul>
 
-<p>导航栏菜单:</p>
+<p>导航栏菜单：</p>
 
 <ul>
  <li>样式化你的导航栏菜单，使它拥有与页面整体相匹配的外观。</li>
@@ -93,7 +93,7 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 <h2 id="提示与技巧">提示与技巧</h2>
 
 <ul>
- <li>本练习中你不需要编辑HTML文件。</li>
+ <li>本练习中你不需要编辑 HTML 文件。</li>
  <li>你不需要使导航栏菜单看起来像按钮，但它需要有一定的高度才不至于在页面侧边看起来很别扭；同时记得，你需要的是一个垂直导航栏菜单。</li>
 </ul>
 

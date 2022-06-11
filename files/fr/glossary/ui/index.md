@@ -13,4 +13,4 @@ L'_interface utilisateur_ (ou UI pour _User Interface_ en anglais) est tout ce q
 ### Culture générale
 
 - [Interface utilisateur](https://fr.wikipedia.org/wiki/Interface_utilisateur) sur Wikipédia
-- [Développement front end ](https://en.wikipedia.org/wiki/Front_end_development)sur Wikipédia (en anglais)
+- [Développement front end](https://en.wikipedia.org/wiki/Front_end_development) sur Wikipédia (en anglais)

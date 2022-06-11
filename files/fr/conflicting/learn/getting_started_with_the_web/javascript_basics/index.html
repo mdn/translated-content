@@ -103,7 +103,7 @@ window.onload = onloadHandler; // on remplace la fonction (on ne l'appelle pas) 
 &lt;/script&gt;</pre>
 <h2 id="Example:_Catching_a_keyboard_event" name="Example:_Catching_a_keyboard_event">Exemple : Intercepter un événement clavier</h2>
 <p>De la même façon que pour les événements liés à la souris, il est possible d'utiliser les événements JavaScript pour capturer les interactions liées au clavier. Un événement est déclenché à chaque fois qu'une touche du clavier est utilisée.</p>
-<p>La liste des événéments disponibles pour le clavier est plus restreinte que celle des événements pour la souris :</p>
+<p>La liste des évènements disponibles pour le clavier est plus restreinte que celle des événements pour la souris :</p>
 <ul>
  <li><code>keypress</code> : se produit quand on appuie sur une touche et qu'on la relâche</li>
  <li><code>keydown</code> : se produit quand on appuie sur une touche et que celle-ci n'a toujours pas été relâchée</li>
@@ -178,7 +178,6 @@ window.onload = onloadHandler; // on remplace la fonction (on ne l'appelle pas) 
 <p>Les deux propriétés des différents événements clavier sont <code>keyCode</code> et <code>charCode</code>. Pour faire simple, <code>keyCode</code> fait référence à la touche du clavier qui a été utilisée alors que <code>charCode</code> représente la valeur ASCII du caractère de la touche. Ces deux valeurs peuvent ne pas être les mêmes. Par exemple un 'a' (minuscule) et un 'A' (majuscule) auront le même <code>keyCode</code> car l'utilisateur appuiera sur la même touche du clavier. En revanche, la propriété<code> charCode</code> sera différente car le caractère sera différent.</p>
 <p>La navigateurs interprètent <code>charCode</code> de façons différentes. Ainsi, Internet Explorer et Opera ne supportent pas <code>charCode</code>. Cependant, l'information du caractère est bien fourni avec <code>keyCode</code> , mais uniquement lors de l'événement <code>keypress</code>. Lors de <code>keydown</code> et de <code>keyup</code> <code>keyCode</code> contient les informations liées à la touche utilisée. Firefox utilise un terme différent : <code>which</code> pour distinguer le caractère.</p>
 <p>Pour plus de précisions sur le fonctionnement des événements liés au clavier, voir la page sur l'API <a href="/fr/docs/Web/API/KeyboardEvent" title="https://developer.mozilla.org/en-US/docs/DOM/Event/UIEvent/KeyEvent">KeyboardEvent</a>.</p>
-<p>{{ draft() }}</p>
 <h2 id="Example:_Dragging_images_around" name="Example:_Dragging_images_around">Exemple : Déplacer des images</h2>
 <p>L'exemple qui suit permet de déplacer une image de Firefox sur la page :</p>
 <pre class="brush: js">&lt;!DOCTYPE html&gt;

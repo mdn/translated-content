@@ -1,0 +1,45 @@
+---
+title: blur()
+slug: Web/CSS/filter-function/blur
+translation_of: Web/CSS/filter-function/blur()
+original_slug: Web/CSS/filter-function/blur()
+---
+<div>{{cssref}}</div>
+
+<p>Функция <a href="/ru/docs/Web/CSS">CSS</a> <strong><code>blur()</code></strong> применяет <a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0">размытие по Гауссу</a> к входному изображению. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/function-blur.html")}}</div>
+
+
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">blur(<em>radius</em>)</pre>
+
+<h3 id="Параметры">Параметры</h3>
+
+<dl>
+ <dt><code>radius</code></dt>
+ <dd>Радиус размытия, выраженный в {{cssxref("&lt;length&gt;")}}. Он определяет отклонение от стандартной функции Гаусса, то есть как много пикселей на экране смешиваются друг с другом. Таким образом, большее значение даст большее размытие. Значение <code>0</code> оставит изображение без изменений.</dd>
+</dl>
+
+<h2 id="Пример">Пример</h2>
+
+<pre class="brush: css">blur(0)        /* Без эффекта */
+blur(8px)      /* Размытие с радиусом 8px */
+blur(1.17rem)  /* Размытие с радиусом 1.17rem */</pre>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{cssxref("&lt;filter-function&gt;")}}</li>
+ <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
+ <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
+ <li>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</li>
+ <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
+ <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
+ <li>{{cssxref("filter-function/invert", "invert()")}}</li>
+ <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
+ <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
+ <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
+</ul>

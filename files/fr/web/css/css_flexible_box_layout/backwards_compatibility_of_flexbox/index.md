@@ -139,7 +139,7 @@ La propriété {{cssxref("flex-flow")}} est [une propriété raccourcie](/fr/doc
 
 ### `order`
 
-La propriété {{cssxref("order")}}  contrôle l'ordre dans lequel les éléments apparaissent dans le conteneur flexible en les affectant à des groupes ordinaux.
+La propriété {{cssxref("order")}}  contrôle l'ordre dans lequel les éléments apparaissent dans le conteneur flexible en les affectant à des groupes ordinaux.
 
 - Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (0 est la valeur par défaut)
 - [Spécification](https://drafts.csswg.org/css-flexbox/#order-property)

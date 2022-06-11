@@ -24,14 +24,14 @@ Cette API offre des capacités similaires à {{WebExtAPIRef("contentScripts")}} 
 
 > **Attention :** Cette API requiert la présence de la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, `user_scripts: {}`.
 
-Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()")}}` en passant un objet définissant les scripts à enregistrer. La méthode renvoie une promesse qui est résolue par un objet  `{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}`.
+Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()")}}` en passant un objet définissant les scripts à enregistrer. La méthode renvoie une promesse qui est résolue par un objet  `{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}`.
 
 > **Note :** Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés
 
 ## Types
 
 - {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
-  - : L'`object` renvoyé par la méthode  {{WebExtAPIRef("userScripts.register","register()")}}. Il représente les scripts utilisateur enregistrés et est utilisé pour désenregistrer les scripts utilisateur.
+  - : L'`object` renvoyé par la méthode  {{WebExtAPIRef("userScripts.register","register()")}}. Il représente les scripts utilisateur enregistrés et est utilisé pour désenregistrer les scripts utilisateur.
 
 ## Méthodes
 

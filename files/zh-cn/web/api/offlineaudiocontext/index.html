@@ -45,7 +45,7 @@ translation_of: Web/API/OfflineAudioContext
 
 <h2 id="例子">例子</h2>
 
-<p>这个简单的例子中，我们声明了 {{domxref("AudioContext")}} 和 <code>OfflineAudioContext</code> 对象。我们使用 <code>AudioContext</code> 去加载一个 XHR （{{domxref("AudioContext.decodeAudioData")}}）获取的音轨，然后使用 <code>OfflineAudioContext</code> 去渲染音频并得到一个 into an {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，你需要去使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。</p>
+<p>这个简单的例子中，我们声明了 {{domxref("AudioContext")}} 和 <code>OfflineAudioContext</code> 对象。我们使用 <code>AudioContext</code> 去加载一个 XHR（{{domxref("AudioContext.decodeAudioData")}}）获取的音轨，然后使用 <code>OfflineAudioContext</code> 去渲染音频并得到一个 into an {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，你需要去使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。</p>
 
 <p>当 <code>startRendering()</code> 的 Promise 解决后，渲染也完成了，在 Promise 内可以获得输出的 <code>AudioBuffer。</code></p>
 
@@ -95,7 +95,7 @@ function getData() {
         }
       }).catch(function(err) {
           console.log('渲染失败: ' + err);
-          // 注意: 当 OfflineAudioContext 上 startRendering 被立刻调用，Promise 应该被 reject
+          // 注意：当 OfflineAudioContext 上 startRendering 被立刻调用，Promise 应该被 reject
       });
     });
   }
@@ -126,122 +126,7 @@ getData();</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Promise-based <code>startRendering()</code></td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(37.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>suspend()</code>, <code>resume()</code></td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>length</code></td>
-   <td>{{CompatChrome(51.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>Edge</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(33.0)}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Promise-based <code>startRendering()</code></td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>37.0</td>
-   <td>2.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>suspend()</code>, <code>resume()</code></td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatUnknown}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>length</code></td>
-   <td>{{CompatChrome(51.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatUnknown}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(51.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.OfflineAudioContext")}}
 
 <h2 id="参见">参见</h2>
 

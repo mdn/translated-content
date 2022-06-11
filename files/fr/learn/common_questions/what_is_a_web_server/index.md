@@ -13,7 +13,7 @@ Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctio
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable savoir<a
           href="/fr/docs/Apprendre/Fonctionnement_Internet"
@@ -27,7 +27,7 @@ Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctio
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Vous apprendrez ce qu'est un serveur web et comprendrez son
         fonctionnement général.
@@ -105,9 +105,9 @@ Sur un serveur web, le serveur HTTP est responsable du traitement des requêtes 
 
 En résumé, un serveur peut « servir » du contenu statique ou dynamique. Un contenu « statique » signifie qu'il est servi tel quel. Les sites web statiques sont les plus simples à mettre en œuvre et il sera donc préférable de commencer par un site statique.
 
-Un site « dynamique » signifie que le serveur traite le contenu ou le génère à la volée depuis les informations contenues dans une base de données. Cette solution est plus flexible mais beaucoup plus complexe à mettre en œuvre.
+Un site « dynamique » signifie que le serveur traite le contenu ou le génère à la volée depuis les informations contenues dans une base de données. Cette solution est plus flexible mais beaucoup plus complexe à mettre en œuvre.
 
-Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](/fr/docs/MDN/Kuma) et est construit en [Python](https://www.python.org/) (grâce au *framework* [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
+Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](/fr/docs/MDN/Kuma) et est construit en [Python](https://www.python.org/) (grâce au *framework* [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
 
 Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer un en particulier. Certains serveurs d'applications sont consacrés à certaines catégories de site web comme les blogs, les wikis, les boutiques en ligne, etc. D'autres, appelés {{Glossary("CMS")}} (pour _Content Management Systems_ en anglais ou « Systèmes de gestion des contenus ») sont plus génériques. Si vous construisez un site web dynamique, prenez le temps d'étudier les outils disponibles pour choisir celui qui correspondra à votre projet. Sauf si vous souhaitez apprendre des éléments de programmation serveur (ce qui est très intéressant), vous n'avez pas besoin de créer votre serveur d'applications de toute pièce (cela reviendrait à réinventer la roue).
 
@@ -115,6 +115,6 @@ Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer u
 
 Maintenant que vous connaissez les serveurs web, vous pourriez :
 
-- continuer votre lecture avec[ combien ça coûte de faire quelque chose sur le Web](/fr/docs/Apprendre/Publier_sur_le_Web_combien_ça_coûte)
+- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Apprendre/Publier_sur_le_Web_combien_ça_coûte)
 - en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web)
 - poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Apprendre/Transférer_des_fichiers_vers_un_serveur_web).

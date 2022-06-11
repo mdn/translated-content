@@ -3,29 +3,26 @@ title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
-
 <p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
 
 <div id="simple-color-animation">
-<div class="summary">
-<p><span class="seoSummary">这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例, 通过定时器来逐秒填充不同的颜色来实现.</span></p>
-</div>
+
+<p>这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例，通过定时器来逐秒填充不同的颜色来实现。</p>
 
 <p>{{EmbedLiveSample("simple-color-animation-source",660,425)}}</p>
 
 <div id="simple-color-animation-intro">
 <h3 id="通过填充实现色彩动画">通过填充实现色彩动画</h3>
 
-<p>本案例使用{{Glossary("WebGL")}}来实现简单的色彩动画和用户交互效果, 用户可以通过按按钮来开始/暂停/重新开始动画.</p>
+<p>本案例使用{{Glossary("WebGL")}}来实现简单的色彩动画和用户交互效果，用户可以通过按按钮来开始/暂停/重新开始动画。</p>
 
-<p>我们把 {{Glossary("WebGL")}}函数放在一个定时循环器里(<code>setInterval</code>)  .通过监听点击事件来让用户开始/暂停动画.并通过定时器来循环执行绘制指令(通常是逐帧动画,这次我们设置为逐秒动画) </p>
+<p>我们把 {{Glossary("WebGL")}}函数放在一个定时循环器里 (<code>setInterval</code>)。通过监听点击事件来让用户开始/暂停动画。并通过定时器来循环执行绘制指令 (通常是逐帧动画，这次我们设置为逐秒动画) </p>
 </div>
 
 <div id="simple-color-animation-source">
-<pre class="brush: html">&lt;p&gt;一个色彩动画的简单WebGl程序&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;一个色彩动画的简单 WebGl 程序&lt;/p&gt;
 &lt;p&gt;点击下面的按钮来开/关动画&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;你的浏览器不支持Html5 canvas&lt;/canvas&gt;
+&lt;canvas id="canvas-view"&gt;你的浏览器不支持 Html5 canvas&lt;/canvas&gt;
 &lt;button id="animation-onoff"&gt;
   点我来
 &lt;strong&gt;[verb goes here]&lt;/strong&gt;
@@ -57,7 +54,7 @@ button {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
-  // 定义一个变量来保存定时器,以播放动画
+  // 定义一个变量来保存定时器，以播放动画
   var timer;
 
   // 点击事件处理器
@@ -79,7 +76,7 @@ button {
     // 通过清除定时器来停止动画
     clearInterval(timer);
   }
-  // 调用stopAnimation() 来初始化按钮的事件处理器
+  // 调用 stopAnimation() 来初始化按钮的事件处理器
   stopAnimation({type: "click"});
 
   var gl;
@@ -100,7 +97,7 @@ button {
 
     // 使用辅助函数 得到随机颜色
     var color = getRandomColor();
-    // 将随机颜色设置到WebGL渲染上下文的填充颜色上去
+    // 将随机颜色设置到 WebGL 渲染上下文的填充颜色上去
     gl.clearColor(color[0], color[1], color[2], 1.0);
     // 使用新设置的颜色来清除上下文
     gl.clear(gl.COLOR_BUFFER_BIT);

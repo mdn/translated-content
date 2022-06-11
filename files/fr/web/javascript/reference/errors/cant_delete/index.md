@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_delete
 
 ## Message
 
-    TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-    TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-    TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+```
+TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
+TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
+TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+```
 
 ## Type d'erreur
 
@@ -29,7 +31,7 @@ Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference
 
 ## Exemples
 
-Les propriétés non-configurables ne sont pas très fréquentes mais il est possible d'en créer grâce à {{jsxref("Object.defineProperty()")}} ou à  {{jsxref("Object.freeze()")}}.
+Les propriétés non-configurables ne sont pas très fréquentes mais il est possible d'en créer grâce à {{jsxref("Object.defineProperty()")}} ou à  {{jsxref("Object.freeze()")}}.
 
 ```js example-bad
 "use strict";

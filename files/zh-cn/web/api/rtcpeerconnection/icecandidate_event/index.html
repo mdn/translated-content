@@ -14,7 +14,7 @@ original_slug: Web/Events/icecandidate
 
 <h3 id="分享新的源">分享新的源</h3>
 
-<p><code>触发icecandidate</code>事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的{{domxref("RTCPeerConnection")}}。其他{{domxref("RTCPeerConnection")}}通过{{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}方法将新{{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；</p>
+<p>触发 <code>icecandidate</code> 事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的 {{domxref("RTCPeerConnection")}}。其他 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将新{{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；</p>
 
 <pre>rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {
@@ -28,18 +28,18 @@ original_slug: Web/Events/icecandidate
 <h2 id="概述">概述</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;">{{ SpecName('WebRTC 1.0', '#event-mediastream-icecandidate', 'icecandidate') }}</dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("RTCPeerConnectionIceEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">事件冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">能否取消默认</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">事件目标</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("RTCPeerConnection")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
+ <dt>规范</dt>
+ <dd>{{ SpecName('WebRTC 1.0', '#event-mediastream-icecandidate', 'icecandidate') }}</dd>
+ <dt>接口</dt>
+ <dd>{{domxref("RTCPeerConnectionIceEvent")}}</dd>
+ <dt>事件冒泡</dt>
+ <dd>否</dd>
+ <dt>能否取消默认</dt>
+ <dd>否</dd>
+ <dt>事件目标</dt>
+ <dd>{{domxref("RTCPeerConnection")}}</dd>
+ <dt>默认行为</dt>
+ <dd>无</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -75,59 +75,7 @@ original_slug: Web/Events/icecandidate
 
 <h2 id="兼容性">兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.RTCPeerConnection.icecandidate_event")}}
 
 <h2 id="参阅">参阅</h2>
 

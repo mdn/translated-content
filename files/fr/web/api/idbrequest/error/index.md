@@ -80,7 +80,7 @@ objectStoreTitleRequest.onerror = function() {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-error', 'error')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-error', 'error')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

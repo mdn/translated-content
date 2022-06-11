@@ -10,7 +10,7 @@ tags:
   - get
 translation_of: Web/API/Clients/get
 ---
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`get()`** de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`get()`** de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ self.clients.get(id).then(function(client) {
 
 ### Valeur de retour
 
-Une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résoud avec un objet {{domxref("Client")}}.
+Une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résoud avec un objet {{domxref("Client")}}.
 
 ## Exemples
 

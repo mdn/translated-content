@@ -1,31 +1,29 @@
 ---
-title: 使用MediaStream的录制API
+title: 使用 MediaStream 的录制 API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
 <p>{{DefaultAPISidebar("MediaStream Recording")}}</p>
 
-<div class="summary">
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">媒体流(音/视频)录制API</a>让记录音频流或视频流信息更加容易。当使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices/getUserMedia">navigator.mediaDevices.getUserMedia()"</a>时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在web apps中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个API的MediaRecorder的界面。</p>
-</div>
+<p><a href="/zh-CN/docs/Web/API/MediaStream_Recording_API">媒体流 (音/视频) 录制 API</a>让记录音频流或视频流信息更加容易。当使用<a href="/zh-CN/docs/Web/API/Navigator/mediaDevices/getUserMedia">navigator.mediaDevices.getUserMedia()"</a>时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。</p>
 
-<h2 id="示例应用_Web录音机">示例应用: Web录音机</h2>
+<h2 id="示例应用_Web录音机">示例应用: Web 录音机</h2>
 
 <p><img alt="An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back." src="https://mdn.mozillademos.org/files/7885/web-dictaphone.png" style="display: block; height: 493px; margin: 0px auto; width: 329px;"></p>
 
-<p>为了验证MediaRecorder API的基础用法，我们做了一个基于web的录音机。它允许你录制音频片段并播放它。通过使用这个web音频API，它甚至给你提供了一个设备音频输入信息的可视化波浪图。我们在本文中专注于录制和回放功能的实现。</p>
+<p>为了验证 MediaRecorder API 的基础用法，我们做了一个基于 web 的录音机。它允许你录制音频片段并播放它。通过使用这个 web 音频 API，它甚至给你提供了一个设备音频输入信息的可视化波浪图。我们在本文中专注于录制和回放功能的实现。</p>
 
-<p>你可以看到<a href="https://mdn.github.io/web-dictaphone/">实例演示</a>或是Github上的<a href="https://github.com/mdn/web-dictaphone">源码</a>（也可以点此<a href="https://github.com/mdn/web-dictaphone/archive/master.zip">直接下载</a>）。</p>
+<p>你可以看到<a href="https://mdn.github.io/web-dictaphone/">实例演示</a>或是 Github 上的<a href="https://github.com/mdn/web-dictaphone">源码</a>（也可以点此<a href="https://github.com/mdn/web-dictaphone/archive/master.zip">直接下载</a>）。</p>
 
 <h2 id="CSS_goodies">CSS goodies</h2>
 
-<p>在这个app应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的CSS样式还是有必要提一下，所以接下来我们会讨论一下。如果你对CSS没有半毛钱兴趣并且想对JavaSdcript单刀直入，请跳转到下面的<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#Basic_app_setup">应用基础设置</a>章节。</p>
+<p>在这个 app 应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的 CSS 样式还是有必要提一下，所以接下来我们会讨论一下。如果你对 CSS 没有半毛钱兴趣并且想对 JavaSdcript 单刀直入，请跳转到下面的<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#Basic_app_setup">应用基础设置</a>章节。</p>
 
-<h3 id="保持主界面对显示区域的约束，用calc()来忽略设备的尺寸">保持主界面对显示区域的约束，用calc()来忽略设备的尺寸</h3>
+<h3 id="保持主界面对显示区域的约束，用calc()来忽略设备的尺寸">保持主界面对显示区域的约束，用 calc() 来忽略设备的尺寸</h3>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">calc()函数</a>是CSS3中出现的非常实用的功能之一，虽然现在的用处和这个名称看上去关系不大，但是你很快就会觉得“WC，这个功能为什么我们之前没有？为什么之前CSS2的布局会这么蛋疼？”它允许你计算一个CSS单元的计算值，在这个过程中混合不同的单元。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">calc() 函数</a>是 CSS3 中出现的非常实用的功能之一，虽然现在的用处和这个名称看上去关系不大，但是你很快就会觉得“WC，这个功能为什么我们之前没有？为什么之前 CSS2 的布局会这么蛋疼？”它允许你计算一个 CSS 单元的计算值，在这个过程中混合不同的单元。</p>
 
-<p>例如，在Web录音机中，我们有主要的UI区域，垂直堆叠。我们先给出前两块地方（头部和控制件）的固定高度：</p>
+<p>例如，在 Web 录音机中，我们有主要的 UI 区域，垂直堆叠。我们先给出前两块地方（头部和控制件）的固定高度：</p>
 
 <pre class="brush: css">header {
   height: 70px;
@@ -36,7 +34,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
   height: 170px;
 }</pre>
 
-<p>然而，我们希望使第三块区域（其中包含你可以回放的记录样例）占用任何空间，而不用担心设备的高度。Flexbox流动样式可能是这里的答案，但是对于这样一个简单的布局来说有点过头了。相反，问题是通过使第三个容器的高度等于父高度的100%，再减去另两个的高度和填充来解决的。</p>
+<p>然而，我们希望使第三块区域（其中包含你可以回放的记录样例）占用任何空间，而不用担心设备的高度。Flexbox 流动样式可能是这里的答案，但是对于这样一个简单的布局来说有点过头了。相反，问题是通过使第三个容器的高度等于父高度的 100%，再减去另两个的高度和填充来解决的。</p>
 
 <pre class="brush: css;highlight[4]">.sound-clips {
   box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
@@ -46,12 +44,12 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 }</pre>
 
 <div class="note">
-<p>注意：现在的浏览器对<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">calc()</a>有着良好的支持，即使是像IE9那样的浏览器也可以。</p>
+<p>注意：现在的浏览器对<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">calc()</a>有着良好的支持，即使是像 IE9 那样的浏览器也可以。</p>
 </div>
 
 <h3 id="用于显示隐藏的复选框"><strong>用于显示/隐藏的复选框</strong></h3>
 
-<p>虽然目前已经做的不错了，但是我们认为我们会提到一个复选框hack做法，它滥用了一个事实，你可以点击复选框的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label">label标签</a>来切换选中/未选中。在web录音机中，通过点击屏幕右上角的问号图标来显示/隐藏信息屏幕。首先，在得到<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label">&lt;label&gt;标签</a>之前我们得先设计它的样式，通过设置足够的Z-index堆叠次序来确保它总是坐落于其他元素之上，所以它应该是可点击的：</p>
+<p>虽然目前已经做的不错了，但是我们认为我们会提到一个复选框 hack 做法，它滥用了一个事实，你可以点击复选框的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label">label 标签</a>来切换选中/未选中。在 web 录音机中，通过点击屏幕右上角的问号图标来显示/隐藏信息屏幕。首先，在得到<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label">&lt;label&gt;标签</a>之前我们得先设计它的样式，通过设置足够的 Z-index 堆叠次序来确保它总是坐落于其他元素之上，所以它应该是可点击的：</p>
 
 <pre class="brush: css">label {
     font-family: 'NotoColorEmoji';
@@ -63,14 +61,14 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
     cursor: pointer;
 }</pre>
 
-<p>然后，我们隐藏实际的复选框，因为我们不希望它在我们的UI上乱七八糟：</p>
+<p>然后，我们隐藏实际的复选框，因为我们不希望它在我们的 UI 上乱七八糟：</p>
 
 <pre class="brush: css">input[type=checkbox] {
    position: absolute;
    top: -100px;
 }</pre>
 
-<p>接下来，我们将设计信息显示区域（包括在<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside">&lt;aside&gt;元素</a>中），给它固定的位置，使它不出现在布局流程中去影响主要的UI三个户，将它转换为默认的位置，并使它平滑显示/隐藏：</p>
+<p>接下来，我们将设计信息显示区域（包括在<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside">&lt;aside&gt;元素</a>中），给它固定的位置，使它不出现在布局流程中去影响主要的 UI 三个户，将它转换为默认的位置，并使它平滑显示/隐藏：</p>
 
 <pre class="brush: css">aside {
    position: fixed;
@@ -93,7 +91,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 
 <h2 id="应用基础设置">应用基础设置</h2>
 
-<p>我们使用getUserMedia()来捕获我们想要的媒体流。我们使用MediaRecorder API来记录信息流，并将每个记录的片段输出到生成的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio">&lt;audio&gt;元素</a>的源中，以便可以回放。</p>
+<p>我们使用 getUserMedia() 来捕获我们想要的媒体流。我们使用 MediaRecorder API 来记录信息流，并将每个记录的片段输出到生成的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio">&lt;audio&gt;元素</a>的源中，以便可以回放。</p>
 
 <p>我们将声明记录和停止按钮变量，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article">&lt;article&gt;元素</a>将包含生成的音频播放器：</p>
 
@@ -101,7 +99,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 var stop = document.querySelector('.stop');
 var soundClips = document.querySelector('.sound-clips');</pre>
 
-<p>最后，在本节中，我们建立了基本的getUserMedia结构：</p>
+<p>最后，在本节中，我们建立了基本的 getUserMedia 结构：</p>
 
 <pre class="brush: js">if (navigator.mediaDevices &amp;&amp; navigator.mediaDevices.getUserMedia) {
    console.log('getUserMedia supported.');
@@ -140,11 +138,11 @@ var soundClips = document.querySelector('.sound-clips');</pre>
 
 <h2 id="捕获媒体流">捕获媒体流</h2>
 
-<p>一旦<code>getUserMedia</code>成功创建了媒体流，您可以使用MediaRecorder()构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用MediaRecorder API的入口点。现在，可以使用浏览器的默认编码格式将流捕获到<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob">Blob</a>。</p>
+<p>一旦<code>getUserMedia</code>成功创建了媒体流，您可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob">Blob</a>。</p>
 
 <pre class="brush: js">var mediaRecorder = new MediaRecorder(stream);</pre>
 
-<p>为了能够方便的控制音频的录制，{{domxref("MediaRecorder")}}的实例提供了一系列有用的方法和事件，在Web Dictaphone这个简单的项目中我们只需使用其中的2个方法和一些事件。首先，为了能在点击Record按钮的时候开始录音，需要调用{{domxref("MediaRecorder.start()")}}：</p>
+<p>为了能够方便的控制音频的录制，{{domxref("MediaRecorder")}}的实例提供了一系列有用的方法和事件，在 Web Dictaphone 这个简单的项目中我们只需使用其中的 2 个方法和一些事件。首先，为了能在点击 Record 按钮的时候开始录音，需要调用{{domxref("MediaRecorder.start()")}}：</p>
 
 <pre class="brush: js">record.onclick = function() {
   mediaRecorder.start();
@@ -161,12 +159,12 @@ var soundClips = document.querySelector('.sound-clips');</pre>
 <pre class="brush: js">var chunks = [];
 
 mediaRecorder.ondataavailable = function(e) {
-  <span class="pl-smi">chunks</span>.<span class="pl-c1">push</span>(<span class="pl-smi">e</span>.<span class="pl-c1">data</span>);
+  chunks.push(e.data);
 }</pre>
 
 <p>浏览器会在需要的时候触发这个事件，我们也可以通过为{{domxref("MediaRecorder.start()")}}传递一个时间（毫秒）来周期性的触发这个事件或者调用{{domxref("MediaRecorder.requestData()")}}来直接触发。</p>
 
-<p>最后在点击Stop按钮时我们调用{{domxref("MediaRecorder.stop()")}}方法结束录制，录制所产生的{{domxref("Blob")}}数据会在后面使用。</p>
+<p>最后在点击 Stop 按钮时我们调用{{domxref("MediaRecorder.stop()")}}方法结束录制，录制所产生的{{domxref("Blob")}}数据会在后面使用。</p>
 
 <pre class="brush: js">stop.onclick = function() {
   mediaRecorder.stop();
@@ -178,9 +176,9 @@ mediaRecorder.ondataavailable = function(e) {
 
 <p>注意，当媒体流结束时会导致录音终止。例如歌曲播放结束，或者用户停止共享他们的麦克风。</p>
 
-<h2 id="抓取并使用blob数据">抓取并使用blob数据</h2>
+<h2 id="抓取并使用blob数据">抓取并使用 blob 数据</h2>
 
-<p>在停止录制后，实例的state属性会返回"inactive"，stop事件也被触发。我们需要监听这个事件去处理我们收到的所有录制数据：</p>
+<p>在停止录制后，实例的 state 属性会返回"inactive"，stop 事件也被触发。我们需要监听这个事件去处理我们收到的所有录制数据：</p>
 
 <pre class="brush: js">mediaRecorder.onstop = function(e) {
   console.log("recorder stopped");
@@ -217,7 +215,7 @@ mediaRecorder.ondataavailable = function(e) {
 
 <p>首先，用一个弹窗来让用户可以为录音提供一个名称。</p>
 
-<p>接下来，我们创建一个如下所示的HTML结构，将其插入到我的剪辑容器中，这是一个{{htmlelement("article")}}元素。</p>
+<p>接下来，我们创建一个如下所示的 HTML 结构，将其插入到我的剪辑容器中，这是一个{{htmlelement("article")}}元素。</p>
 
 <pre class="brush: html">&lt;article class="clip"&gt;
   &lt;audio controls&gt;&lt;/audio&gt;
@@ -225,9 +223,9 @@ mediaRecorder.ondataavailable = function(e) {
   &lt;button&gt;Delete&lt;/button&gt;
 &lt;/article&gt;</pre>
 
-<p>之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用window.URL.createObjectURL(blob)创建指向它的对象URL。然后我们将 {{HTMLElement("audio")}}元素的{{htmlattrxref("src", "audio")}}属性的值设置为对象URL，以便在音频播放器上按下播放按钮时，它会播放音频。</p>
+<p>之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的{{htmlattrxref("src", "audio")}}属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。</p>
 
-<p>最后，我们监听删除按钮的onclick事件，以便能够删除整个剪辑HTML结构。</p>
+<p>最后，我们监听删除按钮的 onclick 事件，以便能够删除整个剪辑 HTML 结构。</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -248,61 +246,7 @@ mediaRecorder.ondataavailable = function(e) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(47)}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(47)}}</td>
-   <td>{{CompatGeckoDesktop("25.0")}}</td>
-   <td>1.3<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(47)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The initial Firefox OS implementation only supported audio recording.</p>
+{{Compat("api.MediaRecorder")}}
 
 <h2 id="See_also">See also</h2>
 

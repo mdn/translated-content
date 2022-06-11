@@ -46,7 +46,7 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
   - : Contrôle si le navigateur utilisera les polices spécifiées par une page Web ou n'utilisera que des polices intégrées.
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
-  - : Empêche les sites Web d'afficher des notifications à l'aide de la web API  [`Notification`](/fr/docs/Web/API/notification).
+  - : Empêche les sites Web d'afficher des notifications à l'aide de la web API  [`Notification`](/fr/docs/Web/API/notification).
 - {{WebExtAPIRef("browserSettings.zoomFullPage")}}
   - : Contrôle si le zoom est appliqué à la page entière ou seulement au texte.
 - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}

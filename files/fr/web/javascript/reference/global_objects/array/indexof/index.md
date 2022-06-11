@@ -21,8 +21,10 @@ La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un �
 
 ## Syntaxe
 
-    arr.indexOf(élémentRecherché)
-    arr.indexOf(élémentRecherché, indiceDébut)
+```js
+arr.indexOf(élémentRecherché)
+arr.indexOf(élémentRecherché, indiceDébut)
+```
 
 ### Paramètres
 
@@ -172,8 +174,8 @@ if (!Array.prototype.indexOf) {
 | Spécification                                                                                                | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

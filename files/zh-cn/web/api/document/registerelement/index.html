@@ -13,12 +13,10 @@ translation_of: Web/API/Document/registerElement
 <p>警告：不建议使用<code>document.registerElement（）</code>,请使用{{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}。</p>
 </div>
 
-<p>{{draft}}</p>
-
 <p><code><strong>Document.registerElement()</strong></code> 在浏览器注册一个新的 <a href="/en-US/docs/Web/Web_Components/Custom_Elements">自定义元素</a> ，返回一个该元素的构造函数。</p>
 
 <div class="note">
-<p><strong><span class="s1">注意</span>：</strong>这是一项正在试验的技术。你可以在支持Web Components的浏览器中使用。参考 <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">在火狐浏览器启用Web Components</a> 。</p>
+<p><strong>注意：</strong>这是一项正在试验的技术。你可以在支持 Web Components 的浏览器中使用。参考 <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">在火狐浏览器启用 Web Components</a> 。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -41,11 +39,11 @@ translation_of: Web/API/Document/registerElement
 <pre class="brush: js">var Mytag = document.registerElement('my-tag');
 </pre>
 
-<p>我们把新标签注册到浏览器。 <code>Mytag</code> 变量拥有一个构造函数，你可以像如下所示一样使用它创造一个新的<span style="font-family: courier,andale mono,monospace;">my-tag</span>元素<span style="font-family: courier,andale mono,monospace;">。</span></p>
+<p>我们把新标签注册到浏览器。 <code>Mytag</code> 变量拥有一个构造函数，你可以像如下所示一样使用它创造一个新的 my-tag 元素。</p>
 
 <pre class="brush: js">document.body.appendChild(new Mytag());</pre>
 
-<p>这样我们就插入了一个空的<span style="font-family: courier,andale mono,monospace;">my-tag元素，你可以通过浏览器提供的开发者工具来找到它。</span>如果你使用浏览器来查看源代码它是不可见的<span style="font-family: courier,andale mono,monospace;">。由于现在元素并没有内容，所以我们在页面中是看不到它的。我们可以给它添加一些内容，以便在页面中看到</span>。 下面是一种往新标签里面添加内容的方式。</p>
+<p>这样我们就插入了一个空的 my-tag 元素，你可以通过浏览器提供的开发者工具来找到它。如果你使用浏览器来查看源代码它是不可见的。由于现在元素并没有内容，所以我们在页面中是看不到它的。我们可以给它添加一些内容，以便在页面中看到。 下面是一种往新标签里面添加内容的方式。</p>
 
 <pre class="brush: js">var mytag = document.getElementsByTagName("my-tag")[0];
 mytag.textContent = "I am a my-tag element.";

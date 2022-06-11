@@ -1,5 +1,5 @@
 ---
-title: 使用Phaser开发2D breakout game
+title: 使用 Phaser 开发 2D breakout game
 slug: Games/Tutorials/2D_breakout_game_Phaser
 tags:
   - Phaser
@@ -7,15 +7,15 @@ tags:
   - 游戏
 translation_of: Games/Tutorials/2D_breakout_game_Phaser
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}</p>
 
-<p class="summary">在这个手把手的教程中，我们将使用Phaser框架制作一个使用JavaScript构建简单的MDN消除游戏。</p>
+<p>在这个手把手的教程中，我们将使用 Phaser 框架制作一个使用 JavaScript 构建简单的 MDN 消除游戏。</p>
 
-<p>教程的每一步骤都会有可供修改的样品来玩，所以你可以看到开发的每一步中间步骤。 您将学到如何使用Phaser框架来实现基础游戏机制的基本知识，诸如渲染和移动图像，碰撞检测，控制机制，框架特定的帮助器功能，动画和补间，以及获胜和失败状态等。</p>
+<p>教程的每一步骤都会有可供修改的样品来玩，所以你可以看到开发的每一步中间步骤。您将学到如何使用 Phaser 框架来实现基础游戏机制的基本知识，诸如渲染和移动图像，碰撞检测，控制机制，框架特定的帮助器功能，动画和补间，以及获胜和失败状态等。</p>
 
-<p>为了充分理解这一系列的文章，您应该确保已有基本的中级JavaScript知识。学完本教程，您将有能力用Phaser构建简单的Web游戏。</p>
+<p>为了充分理解这一系列的文章，您应该确保已有基本的中级 JavaScript 知识。学完本教程，您将有能力用 Phaser 构建简单的 Web 游戏。</p>
 
 <p><img alt="Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives." src="https://mdn.mozillademos.org/files/11323/mdn-breakout-phaser.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
 
@@ -42,12 +42,12 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser
  <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay">随机游戏</a></li>
 </ol>
 
-<p>学习路线的小提示 — 最好先熟悉使用原生JavaScript进行网页游戏开发，这样可以打下坚实的基础.如果你还不熟悉原生javascript开发，我们建议你先过一遍这个系列, <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript">使用原生Javascript开发MDN消除游戏</a>.</p>
+<p>学习路线的小提示 — 最好先熟悉使用原生 JavaScript 进行网页游戏开发，这样可以打下坚实的基础。如果你还不熟悉原生 javascript 开发，我们建议你先过一遍这个系列，<a href="/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript">使用原生 Javascript 开发 MDN 消除游戏</a>.</p>
 
-<p>在那之后，你就能随意挑选框架并用在你的项目中;我们选择了Phaser这个稳定优越的框架，它有着好的支持和社区环境以及大量优秀的插件. 框架加速了开发并能帮你管理无趣的部分，让你专注于有意思的事务. 然而, 框架也有不好的地方, 所以当一些意想不到的事情发生了或者想实现一些框架没有提供的功能时，你就将需要原生的JavaScript知识了.</p>
+<p>在那之后，你就能随意挑选框架并用在你的项目中;我们选择了 Phaser 这个稳定优越的框架，它有着好的支持和社区环境以及大量优秀的插件。框架加速了开发并能帮你管理无趣的部分，让你专注于有意思的事务。然而，框架也有不好的地方，所以当一些意想不到的事情发生了或者想实现一些框架没有提供的功能时，你就将需要原生的 JavaScript 知识了。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 本系列文章可用作实际游戏开发的材料。 如果您想要使用Phaser讨论游戏开发，您还可以使用基于本教程的 <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit">Gamedev Phaser内容套件</a>.</p>
+<p><strong>注意</strong>: 本系列文章可用作实际游戏开发的材料。如果您想要使用 Phaser 讨论游戏开发，您还可以使用基于本教程的 <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit">Gamedev Phaser 内容套件</a>.</p>
 </div>
 
 <h2 id="Next_steps">Next steps</h2>

@@ -7,7 +7,7 @@ translation_of: Web/API/RTCPeerConnection/removeStream
 
 <p><code><strong>RTCPeerConnection.removeStream()</strong></code> 方法用来移除本地音频或视频的 {{domxref("媒体流")}} 。 如果已经发生交互，远程主机可能需要使用一个新的媒体流。</p>
 
-<p>当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为<code>"closed"时，将抛出</code><code>InvalidStateError异常。当</code>  {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为<code>"stable"时，</code> 将触发{{domxref("RTCPeerConnection")}}的 {{event("negotiationneeded")}} 事件。</p>
+<p>当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为 <code>"closed"</code> 时，将抛出<code>InvalidStateError</code> 异常。当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为 <code>"stable"</code> 时， 将触发 {{domxref("RTCPeerConnection")}} 的 {{event("negotiationneeded")}} 事件。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -59,57 +59,7 @@ document.getElementById("closeButton").addEventListener("click", function(event)
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }} [1]</td>
-   <td>{{ CompatVersionUnknown }} [1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Though this property is not prefixed, the interface it belongs to is.</p>
+{{Compat("api.RTCPeerConnection.removeStream")}}
 
 <h2 id="扩展阅读">扩展阅读</h2>
 

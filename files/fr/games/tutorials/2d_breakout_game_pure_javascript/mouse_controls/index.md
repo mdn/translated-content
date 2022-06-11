@@ -12,7 +12,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}
 

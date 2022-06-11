@@ -29,10 +29,10 @@ original_slug: API/Pointer_Lock_API
 
 <p>下面是一个如何在你的网页中设置指针锁定的示例。</p>
 
-<pre class="brush: js notranslate">&lt;button onclick="lockPointer();"&gt;锁住它!&lt;/button&gt;
+<pre class="brush: js notranslate">&lt;button onclick="lockPointer();"&gt;锁住它！&lt;/button&gt;
 &lt;div id="pointer-lock-element"&gt;&lt;/div&gt;
 &lt;script&gt;
-// 注意: 截止本文撰写时, 仅有 Mozilla 和 WebKit 支持指针锁定。
+// 注意：截止本文撰写时，仅有 Mozilla 和 WebKit 支持指针锁定。
 
 // 我们将要使之全屏并指针锁定的元素。
 var elem;
@@ -104,9 +104,9 @@ function lockPointer() {
 
 <h2 id="method_overview" name="method_overview">方法/属性 概述</h2>
 
-<p>Pointer lock API, 和 Fullscreen API 类似，通过添加新方法来扩展 DOM 元素, <code>requestPointerLock</code>, 目前还是厂商前缀。按下面这样来写：</p>
+<p>Pointer lock API，和 Fullscreen API 类似，通过添加新方法来扩展 DOM 元素，<code>requestPointerLock</code>, 目前还是厂商前缀。按下面这样来写：</p>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">element.webkitRequestPointerLock(); // Chrome</span></span>
+<pre class="brush: js notranslate">element.webkitRequestPointerLock(); // Chrome
 
 element.mozRequestPointerLock(); // Firefox
 </pre>
@@ -117,11 +117,11 @@ element.mozRequestPointerLock(); // Firefox
 
 <p><code>pointerLockElement</code> 属性适用于确定当前是否有被指针锁定的元素（例如，用来做一个布尔检查），以及当有元素被锁定时获取该元素的一个引用。下面是这两种用法的一个例子：</p>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.pointerLockElement = document.pointerLockElement    ||
+<pre class="brush: js notranslate">document.pointerLockElement = document.pointerLockElement    ||
                               document.mozPointerLockElement ||
-                              document.webkitPointerLockElement;</span></span>
+                              document.webkitPointerLockElement;
 
-// 1) 用于布尔检查--我们被指针锁定了吗？
+// 1) 用于布尔检查 -- 我们被指针锁定了吗？
 if (!!document.pointerLockElement) {
   // 指针被锁定
 } else {
@@ -136,14 +136,14 @@ if (document.pointerLockElement === someElement) {
 
 <p><code>document</code> 的 <code>exitPointerLock</code> 方法被用来退出指针锁定，而且和 requestPointerLock 一样，使用 <code>pointerlockchange</code> 和 <code>pointerlockerror</code>事件以异步方式工作：</p>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.exitPointerLock = document.exitPointerLock    ||
+<pre class="brush: js notranslate">document.exitPointerLock = document.exitPointerLock    ||
                            document.mozExitPointerLock ||
-                           document.webkitExitPointerLock;</span></span>
+                           document.webkitExitPointerLock;
 
 function pointerLockChange() {
-  <span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">document.pointerLockElement = document.pointerLockElement    ||
+  document.pointerLockElement = document.pointerLockElement    ||
                                 document.mozPointerLockElement ||
-                                document.webkitPointerLockElement;</span></span>
+                                document.webkitPointerLockElement;
 
   if (!!document.pointerLockElement) {
     console.log("目前还是被锁定。");
@@ -176,10 +176,10 @@ document.exitPointerLock();
 
 <p>Pointer lock API 使用 movement 属性扩展了标准的 <code>MouseEvent</code>。</p>
 
-<pre class="idl notranslate"><span class="idlInterface" id="idl-def-MouseEvent">partial interface <span class="idlInterfaceID">MouseEvent</span> {
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a></span>;</span>
-<span class="idlAttribute">    readonly attribute <span class="idlAttrType"><a>long</a></span> <span class="idlAttrName"><a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a></span>;</span>
-};</span></pre>
+<pre class="idl notranslate">partial interface MouseEvent {
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementX">movementX</a>;
+    readonly attribute <a>long</a> <a href="http://dvcs.w3.org/hg/webevents/raw-file/default/mouse-lock.html#widl-MouseEvent-movementY">movementY</a>;
+};</pre>
 
 <div class="note">movement 属性目前在 Firefox 中被加上前缀为 <code>.mozMovementX</code> 和 <code>.mozMovementY</code> , 在 Chrome 中为<code>.webkitMovementX</code> 和 <code>.webkitMovementY</code>。</div>
 
@@ -193,7 +193,7 @@ document.exitPointerLock();
 
 <p>无论鼠标锁定状态是怎样的， <code>movementX</code> 和 <code>movementY</code> 参数一直有效，并且为了方便起见，甚至在未锁定状态也是有效的。</p>
 
-<p>当鼠标被解除锁定，系统光标可以退出并重新进入浏览器窗口。如果发生这种情况，<code>movementX</code> 和 <code>movementY</code> 可能会被设置成0。</p>
+<p>当鼠标被解除锁定，系统光标可以退出并重新进入浏览器窗口。如果发生这种情况，<code>movementX</code> 和 <code>movementY</code> 可能会被设置成 0。</p>
 
 <h2 id="iframe_的限制">iframe 的限制</h2>
 
@@ -203,63 +203,7 @@ document.exitPointerLock();
 
 <h2 id="Browser_compatibiltiy" name="Browser_compatibiltiy">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>
-    <p>目标是 23{{ property_prefix("webkit") }}*</p>
-
-    <p>参见<a class="external" href="http://code.google.com/p/chromium/issues/detail?id=72754" title="http://code.google.com/p/chromium/issues/detail?id=72754"> CR/72574</a></p>
-   </td>
-   <td>
-    <p>{{ CompatGeckoDesktop("14.0") }}</p>
-
-    <p>{{bug("633602") }}</p>
-   </td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>* 在 <code>about:flags</code> 中要求这些特性被启用或是使用 <code>--enable-pointer-lock</code> 标记启动 Chrome。</p>
+{{Compat("api.Element.requestPointerLock")}}
 
 <h2 id="See_also" name="See_also">参见</h2>
 

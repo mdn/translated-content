@@ -56,7 +56,7 @@ float: unset;
 - `left`
   - : Un mot-clé indiquant que l'élément doit flotter du côté gauche du bloc qui le contient.
 - `right`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.
+  - : Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.
 - `none`
   - : Un mot-clé indiquant que l'élément ne doit pas flotter
 - `inline-start`
@@ -126,7 +126,7 @@ Aussi, si on ne peut pas dégager un élément, on peut limiter le formatage en 
 p.avecBoitesRouges { overflow: hidden; height: auto; }
 ```
 
-> **Note :** En utilisant `overflow`: `scroll` on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons `auto` pour `height` afin d'indiquer que le conteneur doit s'agrandir si nécessaire.
+> **Note :** En utilisant `overflow`: `scroll` on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons `auto` pour `height` afin d'indiquer que le conteneur doit s'agrandir si nécessaire.
 
 ## Spécifications
 

@@ -5,24 +5,24 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 ---
 <p>作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。</p>
 
-<h2 class="highlight-spanned" id="控制器"><span class="highlight-span">控制器</span></h2>
+<h2 class="highlight-spanned" id="控制器">控制器</h2>
 
 <p>作者列表控制器函数，需要获取所有作者实例的列表，然后将这些实例传递给模板进行渲染。</p>
 
 <p>打开<strong>/controllers/authorController.js</strong>。在文件顶部附近，找到导出的<code>author_list()</code> 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all Authors.</span>
-exports<span class="punctuation token">.</span>author_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all Authors.
+exports.author_list = function(req, res, next) {
 
-  Author<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">sort</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="punctuation token">[</span><span class="string token">'family_name'</span><span class="punctuation token">,</span> <span class="string token">'ascending'</span><span class="punctuation token">]</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_authors<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">//Successful, so render</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'author_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Author List'</span><span class="punctuation token">,</span> author_list<span class="punctuation token">:</span> list_authors <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  Author.find()
+    .sort([['family_name', 'ascending']])
+    .exec(function (err, list_authors) {
+      if (err) { return next(err); }
+      //Successful, so render
+      res.render('author_list', { title: 'Author List', author_list: list_authors });
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};</code></pre>
 
 <p>该方法使用模型的 <code>find()</code>, <code>sort()</code> 和 <code>exec()</code> 函数，以返回所有<code>Author</code>对象，并按<code>family_name</code>的字母顺排列。传递给<code>exec()</code>方法的回调被调用，并将传入任何错误（或<code>null</code>）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现<strong> author_list</strong>（.pug）模板，传递页面标题<code>title，</code>和作者列表（<code>author_list</code>）。</p>
 
@@ -30,30 +30,30 @@ exports<span class="punctuation token">.</span>author_list <span class="operator
 
 <p>打开 <strong>/views/author_list.pug </strong>，用底下文字取代它的内容。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
 
 block content
-  h1<span class="operator token">=</span> title
+  h1= title
 
   ul
-  each author <span class="keyword token">in</span> author_list
+  each author in author_list
     li
-      <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>author<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>author<span class="punctuation token">.</span>name<span class="punctuation token">}</span>
-      <span class="operator token">|</span> <span class="punctuation token">(</span>#<span class="punctuation token">{</span>author<span class="punctuation token">.</span>date_of_birth<span class="punctuation token">}</span> <span class="operator token">-</span> #<span class="punctuation token">{</span>author<span class="punctuation token">.</span>date_of_death<span class="punctuation token">}</span><span class="punctuation token">)</span>
+      a(href=author.url) #{author.name}
+      | (#{author.date_of_birth} - #{author.date_of_death})
 
-  <span class="keyword token">else</span>
-    li There are no authors<span class="punctuation token">.</span></code></pre>
+  else
+    li There are no authors.</code></pre>
 
 <p>如同我们其它的模板，上面视图也依照着同样的模式。</p>
 
-<h2 class="highlight-spanned" id="它看起來像是"><span class="highlight-span">它看起來像是?</span></h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，并打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a> 。然后选择所有作者 All authors 连结。如果每个东西都设定正确了，页面看起来应该像底下的截图。</p>
 
 <p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
 
 <div class="note">
-<p><strong>注意:</strong> 作者生命日期的外观是丑陋的！您可以使用我们用于<code>BookInstance</code> 列表的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">相同方法</a>（将生命周期的虚拟属性，添加到 <code>Author</code> 模型），来改进此方法。</p>
+<p><strong>注意：</strong> 作者生命日期的外观是丑陋的！您可以使用我们用于<code>BookInstance</code> 列表的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">相同方法</a>（将生命周期的虚拟属性，添加到 <code>Author</code> 模型），来改进此方法。</p>
 
 <p>但是，这次缺少日期，除非严格模式生效，否则将忽略对不存在的属性的引用。<code>moment()</code>返回当前时间，并且您不希望将缺少的日期格式化为就像今天一样。</p>
 
@@ -62,7 +62,7 @@ block content
 <p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
 </div>
 
-<h2 id="种类列表页面—自我挑战!Edit">种类列表页面—自我挑战!<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex"><span>Edit</span></a></h2>
+<h2 id="种类列表页面—自我挑战!Edit">种类列表页面—自我挑战！<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex">Edit</a></h2>
 
 <p>在这个部分，你应该实作你自己的种类列表页面。该页面应显示数据库中所有种类的列表，每个种类都链接到其关联的详细信息页面。预期结果的屏幕截图如下所示。</p>
 
@@ -86,4 +86,4 @@ block content
 
 <p>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></p>
 
-<p>继续教程 5 下一個部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">种类细节页面</a></p>
+<p>继续教程 5 下一個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">种类细节页面</a></p>

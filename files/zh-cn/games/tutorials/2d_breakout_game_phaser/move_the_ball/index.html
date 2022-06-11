@@ -12,19 +12,19 @@ tags:
   - moving
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第4步</font></font></strong><font><font>。</font><font>在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson04.html</font></a><font>完成本课后，您可以找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 4 步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html">Gamedev-Phaser-Content-Kit / demos / lesson04.html</a>完成本课后，您可以找到源代码。</p>
 </div>
 
-<p><font>我们在屏幕上打印了我们的蓝色球，但它什么都不做，这样做会很酷。</font><font>本文介绍如何做到这一点。</font></p>
+<p>我们在屏幕上打印了我们的蓝色球，但它什么都不做，这样做会很酷。本文介绍如何做到这一点。</p>
 
-<h2 id="在每个框架上更新球的位置"><font><font>在每个框架上更新球的位置</font></font></h2>
+<h2 id="在每个框架上更新球的位置">在每个框架上更新球的位置</h2>
 
-<p><font><font>记住</font></font><code>update()</code><font><font>功能及其定义？</font><font>其中的代码在每个框架上执行，所以它是一个完美的地方，将代码更新球的位置在屏幕上。</font><font>在里面添加以下新行代码</font></font><code>update()</code><font><font>，如下所示：</font></font></p>
+<p>记住<code>update()</code>功能及其定义？其中的代码在每个框架上执行，所以它是一个完美的地方，将代码更新球的位置在屏幕上。在里面添加以下新行代码<code>update()</code>，如下所示：</p>
 
 <pre class="brush: js">function update() {
     ball.x += 1;
@@ -32,9 +32,9 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 }
 </pre>
 
-<p><font><font>上面的代码</font><font>在每个框架上为表示画布上的球坐标的属性</font></font><code>x</code><font><font>和</font></font><code>y</code><font><font>属性</font><font>添加</font><font>了一个。</font><font>重新加载index.html，你应该看到球在屏幕上滚动。</font></font></p>
+<p>上面的代码在每个框架上为表示画布上的球坐标的属性<code>x</code>和<code>y</code>属性添加了一个。重新加载 index.html，你应该看到球在屏幕上滚动。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
@@ -42,8 +42,8 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>下一步是添加一些基本的碰撞检测，所以我们的球可以从墙壁反弹。</font><font>这将需要几行代码 - 一个比我们迄今为止看到的更复杂的步骤，特别是如果我们也想添加桨和砖碰撞 - 但是幸运的是Phaser使我们比我们想要使用纯粹的方法更容易做到这一点JavaScript的。</font></font></p>
+<p>下一步是添加一些基本的碰撞检测，所以我们的球可以从墙壁反弹。这将需要几行代码 - 一个比我们迄今为止看到的更复杂的步骤，特别是如果我们也想添加桨和砖碰撞 - 但是幸运的是 Phaser 使我们比我们想要使用纯粹的方法更容易做到这一点 JavaScript 的。</p>
 
-<p><font><font>无论如何，在我们做所有的事情之前，我们将首先介绍Phaser的</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Physics"><font><font>物理</font></font></a><font><font>引擎，并做一些设置工作。</font></font></p>
+<p>无论如何，在我们做所有的事情之前，我们将首先介绍 Phaser 的<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Physics">物理</a>引擎，并做一些设置工作。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}</p>

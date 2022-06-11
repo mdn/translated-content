@@ -3,19 +3,19 @@ title: 跟踪得分和获胜
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}</p>
 
-<div class="summary">
-<p>本篇为<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>10节教程中的<strong>第8节。</strong>在你完成这篇课程之后，你可以在<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html">Gamedev-Canvas-workshop/lesson8.html</a>找到我们的源代码。</p>
+<div>
+<p>本篇为<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>10 节教程中的<strong>第 8 节。</strong>在你完成这篇课程之后，你可以在<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html">Gamedev-Canvas-workshop/lesson8.html</a>找到我们的源代码。</p>
 </div>
 
-<p><span class="seoSummary">破坏砖块真的很酷，但更酷的是，游戏可以给每个用户击破的砖块奖励分数，并保持总分。</span></p>
+<p>破坏砖块真的很酷，但更酷的是，游戏可以给每个用户击破的砖块奖励分数，并保持总分。</p>
 
 <h2 id="计算分数">计算分数</h2>
 
-<p>如果你能在整个游戏中看到你的分数，最终你会给你的朋友留下深刻印象。你需要一个变量来记录分数。在变量的其余部分之后，将下面的内容添加到JavaScript中：</p>
+<p>如果你能在整个游戏中看到你的分数，最终你会给你的朋友留下深刻印象。你需要一个变量来记录分数。在变量的其余部分之后，将下面的内容添加到 JavaScript 中：</p>
 
 <pre class="brush: js">var score = 0;</pre>
 
@@ -27,7 +27,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score
     ctx.fillText("Score: "+score, 8, 20);
 }</pre>
 
-<p>在画布上绘制文本类似于绘制形状。字体定义看起来与CSS中的字体定义完全一样——可以在{{domxref("CanvasRenderingContext2D.font","font()")}} 方法中设置大小和字体类型。然后使用{{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} 来设置字体的颜色，{{domxref("CanvasRenderingContext2D.fillText","fillText()")}} 来设置将放置在画布上的实际文本，和其放置位置。第一个参数是文本本身——上面的代码显示当前点的数量——最后两个参数是文本将放置在画布上的坐标。</p>
+<p>在画布上绘制文本类似于绘制形状。字体定义看起来与 CSS 中的字体定义完全一样——可以在{{domxref("CanvasRenderingContext2D.font","font()")}} 方法中设置大小和字体类型。然后使用{{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} 来设置字体的颜色，{{domxref("CanvasRenderingContext2D.fillText","fillText()")}} 来设置将放置在画布上的实际文本，和其放置位置。第一个参数是文本本身——上面的代码显示当前点的数量——最后两个参数是文本将放置在画布上的坐标。</p>
 
 <p>若要在每次击中砖块时评分，则在 <code>collisionDetection()</code>中添加计分规则，以在每次检测到碰撞时增加得分变量的值。将下面突出显示的行添加到代码中：</p>
 
@@ -52,7 +52,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score
 
 <h2 id="当所有砖块被破坏时显示获胜消息">当所有砖块被破坏时显示获胜消息</h2>
 
-<p>收集这些点很有效，但是你不会永远添加它们-当所有的砖头都被破坏的时候呢？毕竟这是游戏的主要目的，所以如果收集到所有可用的点，你应该显示一个获胜的消息。将下面突出显示的部分添加到 <code>collisionDetection()</code> 函数中：</p>
+<p>收集这些点很有效，但是你不会永远添加它们 - 当所有的砖头都被破坏的时候呢？毕竟这是游戏的主要目的，所以如果收集到所有可用的点，你应该显示一个获胜的消息。将下面突出显示的部分添加到 <code>collisionDetection()</code> 函数中：</p>
 
 <pre class="brush: js; highlight:[10,11,12,13]">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {

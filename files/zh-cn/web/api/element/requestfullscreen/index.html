@@ -7,9 +7,9 @@ translation_of: Web/API/Element/requestFullScreen
 
 <p><code><strong>Element.requestFullscreen()</strong></code> 方法用于发出异步请求使元素进入全屏模式。</p>
 
-<p>调用此API并不能保证元素一定能够进入全屏模式。如果元素被允许进入全屏幕模式，返回的{{JSxRef("Promise")}}会resolve，并且该元素会收到一个{{event("fullscreenchange")}}事件，通知它已经进入全屏模式。如果全屏请求被拒绝，返回的promise会变成rejected并且该元素会收到一个{{Event('fullscreenerror')}}事件。如果该元素已经从原来的文档中分离，那么该文档将会收到这些事件。</p>
+<p>调用此 API 并不能保证元素一定能够进入全屏模式。如果元素被允许进入全屏幕模式，返回的{{JSxRef("Promise")}}会 resolve，并且该元素会收到一个{{event("fullscreenchange")}}事件，通知它已经进入全屏模式。如果全屏请求被拒绝，返回的 promise 会变成 rejected 并且该元素会收到一个{{Event('fullscreenerror')}}事件。如果该元素已经从原来的文档中分离，那么该文档将会收到这些事件。</p>
 
-<p>早期的Fullscreen API实现总是会把这些事件发送给document，而不是调用的元素，所以你自己可能需要处理这样的情况。参考 {{SectionOnPage("/zh-CN/docs/Web/Events/fullscreen", "Browser compatibility")}} 来得知哪些浏览器做了这个改动。</p>
+<p>早期的 Fullscreen API 实现总是会把这些事件发送给 document，而不是调用的元素，所以你自己可能需要处理这样的情况。参考 {{SectionOnPage("/zh-CN/docs/Web/Events/fullscreen", "Browser compatibility")}} 来得知哪些浏览器做了这个改动。</p>
 
 <div class="note">
 <p>注意：这个方法只能在用户交互或者设备方向改变的时候调用，否则将会失败。</p>
@@ -24,11 +24,11 @@ translation_of: Web/API/Element/requestFullScreen
 
 <p><code>options</code> {{optional_inline}}</p>
 
-<p>一个{{domxref("FullscreenOptions")}}对象提供切换到全屏模式的控制选项。目前，唯一的选项是{{domxref("FullscreenOptions.navigationUI", "navigationUI")}}，这控制了是否在元素处于全屏模式时显示导航条UI。默认值是<code>"auto"</code>，表明这将由浏览器来决定是否显示导航条。</p>
+<p>一个{{domxref("FullscreenOptions")}}对象提供切换到全屏模式的控制选项。目前，唯一的选项是{{domxref("FullscreenOptions.navigationUI", "navigationUI")}}，这控制了是否在元素处于全屏模式时显示导航条 UI。默认值是<code>"auto"</code>，表明这将由浏览器来决定是否显示导航条。</p>
 
 <h3 id="返回值">返回值</h3>
 
-<p>在完成切换全屏模式后，返回一个已经用值 <code>undefined</code> resolved的{{JSxRef("Promise")}}</p>
+<p>在完成切换全屏模式后，返回一个已经用值 <code>undefined</code> resolved 的{{JSxRef("Promise")}}</p>
 
 <h3 id="异常">异常</h3>
 
@@ -51,9 +51,9 @@ translation_of: Web/API/Element/requestFullScreen
 
 <h2 id="示例">示例</h2>
 
-<p>在调用<code>requestFullScreen()之前，可以对</code>{{event("fullscreenchange")}} 和 {{event("fullscreenerror")}}事件进行监听，这样在请求进入全屏模式成功或者失败时都能收到事件通知。</p>
+<p>在调用<code>requestFullScreen() 之前，可以对</code>{{event("fullscreenchange")}} 和 {{event("fullscreenerror")}}事件进行监听，这样在请求进入全屏模式成功或者失败时都能收到事件通知。</p>
 
-<h2 id="API规格">API规格</h2>
+<h2 id="API规格">API 规格</h2>
 
 <table class="standard-table">
  <thead>
@@ -74,95 +74,7 @@ translation_of: Web/API/Element/requestFullScreen
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}} as <code>mozRequestFullScreen</code><sup>[2]</sup><br>
-    {{CompatGeckoDesktop("47.0")}} (behind full-screen-api.unprefix.enabled</td>
-   <td>11{{property_prefix("ms")}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}} as <code>mozRequestFullScreen</code><sup>[2]</sup><br>
-    {{CompatGeckoMobile("47.0")}} (behind full-screen-api.unprefix.enabled</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 同样以<code>webkitRequestFullScreen方法实现。</code></p>
-
-<p>[2] 使用带有浏览器前缀的<code>mozRequestFullScreen方法实现。在火狐44之前版本，Gecko浏览器内核错误地允许frame里面元素以及object元素进入全屏模式。而在之后的版本，这个漏洞被修复：仅允许位于顶部文档（top-level document）的元素，以及拥有</code>{{htmlattrxref("allowfullscreen", "iframe")}}属性的iframe的内部元素进入全屏显示。. </p>
-
-<p>[3] 使用IE时，最后的screen的s为小写，也即ms<code>RequestFullscreen，否则无效</code></p>
-
-<p>[4] 谷歌浏览器前缀webkitRequestFullScreen()里最后的Screen的S也可以为小写s，建议写成驼峰命名法</p>
-
-<p>[5]将浏览器前缀兼容封装成函数</p>
-
-<pre>function toFullVideo(){
-
-  if(videoDom.requestFullscreen){
-
-    return videoDom.requestFullscreen();
-
-  }else if(videoDom.webkitRequestFullScreen){
-
-    return videoDom.webkitRequestFullScreen();
-
-  }else if(videoDom.mozRequestFullScreen){
-
-    return videoDom.mozRequestFullScreen();
-
-  }else{
-
-    return videoDom.msRequestFullscreen();
-
-  }
-
-}</pre>
-
-<p>[6] 详见 <a href="https://msdn.microsoft.com/en-us/library/dn254939%28v=vs.85%29.aspx">documentation on MSDN</a>.</p>
+{{Compat("api.Element.requestFullscreen")}}
 
 <h2 id="参阅">参阅</h2>
 

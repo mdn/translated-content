@@ -7,19 +7,19 @@ translation_of: Web/API/Navigator/doNotTrack
 
 <h3 id="Summary" name="Summary">概述</h3>
 
-<p>返回用户的do-not-track设置,如果用户不允许网站,内容和广告等进行跟踪,则该值为yes.</p>
+<p>返回用户的 do-not-track 设置，如果用户不允许网站，内容和广告等进行跟踪，则该值为 yes。</p>
 
 <h3 id="Syntax" name="Syntax">语法</h3>
 
 <pre class="eval"><em>dnt</em> = <em>navigator</em>.doNotTrack;
 </pre>
 
-<p><strong><code>navigator.doNotTrack</code></strong>的值并不是 <strong>HTTP请求中do-not-track请求头的值</strong>. 当do-not-track请求头发送的值为"1", <code>navigator.doNotTrack</code> 的值为 "yes".  当do-not-track请求头发送的值为unset, <code>navigator.doNotTrack</code>的值为"unspecified". 当do-not-track请求头发送的值为 "0" (Firefox目前不支持), <code>navigator.doNotTrack</code>的值为"no".</p>
+<p><strong><code>navigator.doNotTrack</code></strong> 的值并不是 <strong>HTTP 请求中 do-not-track 请求头的值</strong>。当 do-not-track 请求头发送的值为 "1", <code>navigator.doNotTrack</code> 的值为 "yes"。当 do-not-track 请求头发送的值为 unset，<code>navigator.doNotTrack</code> 的值为 "unspecified"。当 do-not-track 请求头发送的值为 "0" (Firefox 目前不支持)，<code>navigator.doNotTrack</code> 的值为 "no"。</p>
 
 <h3 id="Example" name="Example">例子</h3>
 
 <pre class="eval">dump(window.navigator.doNotTrack);
-//Firefox中:如果开启了DNT,输出"yes";否则输出"unspecified".
+// Firefox 中：如果开启了 DNT，输出"yes"；否则输出"unspecified"。
 </pre>
 
 <h3 id="Specification" name="Specification">规范</h3>
@@ -34,57 +34,4 @@ translation_of: Web/API/Navigator/doNotTrack
 
 <h3 id="浏览器兼容性">浏览器兼容性</h3>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("9.0") }}</td>
-   <td>9</td>
-   <td>12</td>
-   <td>5.1 on OS X 10.7</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("9.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>IE9 中该属性带有ms前缀:navigator.msDoNotTrack</li>
- <li>IE9, Opera 12和Safari 5.1 实现了早起的旧版本规范:<code>navigator.doNotTrack</code> 的值就是 do-not-track 请求头中的值.</li>
-</ul>
-
-<p>{{ languages( { "en": "en/DOM/navigator.doNotTrack" } ) }}</p>
+{{Compat("api.Navigator.doNotTrack")}}

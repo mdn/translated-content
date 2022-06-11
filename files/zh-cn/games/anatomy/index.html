@@ -10,10 +10,8 @@ translation_of: Games/Anatomy
 ---
 <div>{{GamesSidebar}}</div>
 
-<p>{{IncludeSubnav("/en-US/docs/Games")}}</p>
-
-<div class="summary">
-<p>本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及如何将JavaScript这样的Web标准工具作为自己的工具使用。游戏开发经验丰富但不熟悉Web开发的开发者也能从中受益。</p>
+<div>
+<p>本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及如何将 JavaScript 这样的 Web 标准工具作为自己的工具使用。游戏开发经验丰富但不熟悉 Web 开发的开发者也能从中受益。</p>
 </div>
 
 <h2 id="呈现，接收，解释，计算，重复">呈现，接收，解释，计算，重复</h2>
@@ -28,13 +26,13 @@ translation_of: Games/Anatomy
 
 <p>但它也可能不需要逐帧控制。您的游戏循环可能类似找不同的例子，并以输入事件作为基础。它可能需要输入和模拟时间片。它甚至可以基于其他的东西来循环。</p>
 
-<p>现代JavaScript - 正如下一节中所描述的 - 它可以轻松开发出一个高效的，逐帧执行的主循环，这很值得庆幸。当然，您的游戏只会按照您所做的那样优化。如果某些东西看起来应该被添加到一个更罕见的事件里，那么将它从主循环中剥离出来通常是个好主意（但并非总是如此）。</p>
+<p>现代 JavaScript - 正如下一节中所描述的 - 它可以轻松开发出一个高效的，逐帧执行的主循环，这很值得庆幸。当然，您的游戏只会按照您所做的那样优化。如果某些东西看起来应该被添加到一个更罕见的事件里，那么将它从主循环中剥离出来通常是个好主意（但并非总是如此）。</p>
 
-<h2 id="在JavaScript中构建一个主循环">在JavaScript中构建一个主循环</h2>
+<h2 id="在JavaScript中构建一个主循环">在 JavaScript 中构建一个主循环</h2>
 
-<p>JavaScript能很好的处理事件和回调函数。现代浏览器努力在需要的时候调用方法，并在间隙中闲下来（或做其他任务）。将您的代码附加到适合它们的时刻是一个很好的主意。考虑一下你的函数是需要在严格的时间周期内，还是每一帧，或者仅仅是在发生了其他情况之后执行。当您的函数需要被调用时，要更具体地使用浏览器，这样浏览器就可以在调用时进行优化。而且，这可能会让你的工作更轻松。</p>
+<p>JavaScript 能很好的处理事件和回调函数。现代浏览器努力在需要的时候调用方法，并在间隙中闲下来（或做其他任务）。将您的代码附加到适合它们的时刻是一个很好的主意。考虑一下你的函数是需要在严格的时间周期内，还是每一帧，或者仅仅是在发生了其他情况之后执行。当您的函数需要被调用时，要更具体地使用浏览器，这样浏览器就可以在调用时进行优化。而且，这可能会让你的工作更轻松。</p>
 
-<p>有些代码需要逐帧运行，所以应将其附加到浏览器的重绘周期中，没有比这更好的了！在Web 中，通常 <code>window.requestAnimationFrame()</code>方法是大多数良好的逐帧循环的基础。在调用该方法时必须传入一个回调函数，这个回调函数将在下一次重新绘制之前执行。下面是一个简单的主循环的例子。：</p>
+<p>有些代码需要逐帧运行，所以应将其附加到浏览器的重绘周期中，没有比这更好的了！在 Web 中，通常 <code>window.requestAnimationFrame()</code>方法是大多数良好的逐帧循环的基础。在调用该方法时必须传入一个回调函数，这个回调函数将在下一次重新绘制之前执行。下面是一个简单的主循环的例子。：</p>
 
 <pre class="brush: js notranslate">window.main = function(){
   window.requestAnimationFrame(main);
@@ -54,9 +52,9 @@ main(); //开始循环</pre>
 
 <p>将主循环的时机安排在浏览器每次的绘制显示中，允许您能像浏览器想要绘制的那样频繁的运行您的循环。你能够控制每一帧动画，并且<code>main()</code>是循环中唯一执行的函数，所以这很简单。主视角射击游戏（或类似的游戏）每一帧都会出现一个新的场景。没有比这种方法更平滑并绘制及时的了。</p>
 
-<p>但是不要马上认为动画必需要帧帧控制。通过CSS动画或浏览器中的其他工具，可以很容易实现简单的动画，甚至GPU加速。有很多这样的东西，它们会让你的工作更轻松。</p>
+<p>但是不要马上认为动画必需要帧帧控制。通过 CSS 动画或浏览器中的其他工具，可以很容易实现简单的动画，甚至 GPU 加速。有很多这样的东西，它们会让你的工作更轻松。</p>
 
-<h2 id="在Javascript中构建一个更好的主循环">在Javascript中构建一个更好的主循环</h2>
+<h2 id="在Javascript中构建一个更好的主循环">在 Javascript 中构建一个更好的主循环</h2>
 
 <p>在前面的主循环中有两个明显的问题：<code>main()</code>污染了 <code>window</code><code>对象</code>（所有全局变量存储的对象），并且示例代码没有给我们留下一个停止循环的方法，除非整个浏览器选项卡被关闭或刷新。对于第一个问题，如果您希望主循环只运行，并且不需要被简单（直接）访问它，您可以将它作为一个立即调用的函数表达式（IIFE）创建。</p>
 
@@ -74,16 +72,16 @@ main(); //开始循环</pre>
   main(); //开始循环
 })();</pre>
 
-<p>当浏览器遇到这个IIFE时，它将定义您的主循环，并立即将其加入下一个帧的更新队列中。<code>main</code>（或<code>main()</code>方法）不会被附加到任何对象，在应用程序的其他地方仍是一个有效的未使用的名称，仍可以自由地定义为其他的东西。</p>
+<p>当浏览器遇到这个 IIFE 时，它将定义您的主循环，并立即将其加入下一个帧的更新队列中。<code>main</code>（或<code>main()</code>方法）不会被附加到任何对象，在应用程序的其他地方仍是一个有效的未使用的名称，仍可以自由地定义为其他的东西。</p>
 
 <div class="blockIndicator note">
-<p>注意：在实践中，更常见的终止下一个<code>requestAnimationFrame()</code>方式是使用if语句，而不是调用<code>cancelAnimationFrame()</code>。</p>
+<p>注意：在实践中，更常见的终止下一个<code>requestAnimationFrame()</code>方式是使用 if 语句，而不是调用<code>cancelAnimationFrame()</code>。</p>
 </div>
 
-<p>对于第二个问题，要终止循环，您需要调用<code> </code><code>window.cancelAnimationFrame()</code>来取消<code>main()</code>的调用。该方法需要传入你最后一次调用<code>requestAnimationFrame()</code>时返回的ID。让我们假设您的游戏的函数和变量是建立在您称为MyGame的名称空间上。扩展我们的最后一个例子，主循环现在看起来是这样的：</p>
+<p>对于第二个问题，要终止循环，您需要调用<code> </code><code>window.cancelAnimationFrame()</code>来取消<code>main()</code>的调用。该方法需要传入你最后一次调用<code>requestAnimationFrame()</code>时返回的 ID。让我们假设您的游戏的函数和变量是建立在您称为 MyGame 的名称空间上。扩展我们的最后一个例子，主循环现在看起来是这样的：</p>
 
 <pre class="brush: js notranslate">/*
-* 让我们假设MyGame是之前定义的。
+* 让我们假设 MyGame 是之前定义的。
 */
 
 ;(function(){
@@ -96,45 +94,45 @@ main(); //开始循环</pre>
   main(); //开始循环
 })();</pre>
 
-<p>现在，我们在MyGame名称空间中声明了一个变量<code>stopMain</code>，其值为主循环最后调用<code>requestAnimationFrame()</code>时返回的ID。任何时候，我们可以通过告诉浏览器取消与ID相对应的请求来停止主循环。</p>
+<p>现在，我们在 MyGame 名称空间中声明了一个变量<code>stopMain</code>，其值为主循环最后调用<code>requestAnimationFrame()</code>时返回的 ID。任何时候，我们可以通过告诉浏览器取消与 ID 相对应的请求来停止主循环。</p>
 
 <pre class="notranslate">window.cancelAnimationFrame(MyGame.stopMain);</pre>
 
-<p>在JavaScript的中编写<strong>主循环</strong>的关键在于，考虑到任何会驱动你行为的事件，并注意不同的系统是如何相互作用的。您可能拥有多个由多个不同类型的事件驱动的组件。这看起来像是不必要的复杂性，但它可能就是一个很好的优化（当然，不一定是这样的）。问题是，您并不是在编写一个典型的主循环。在Java脚本中，您使用的是浏览器的主循环，并且您正在尝试这样做。</p>
+<p>在 JavaScript 的中编写<strong>主循环</strong>的关键在于，考虑到任何会驱动你行为的事件，并注意不同的系统是如何相互作用的。您可能拥有多个由多个不同类型的事件驱动的组件。这看起来像是不必要的复杂性，但它可能就是一个很好的优化（当然，不一定是这样的）。问题是，您并不是在编写一个典型的主循环。在 Java 脚本中，您使用的是浏览器的主循环，并且您正在尝试这样做。</p>
 
-<h2 id="用JavaScript构建一个更优化的主循环">用JavaScript构建一个更优化的主循环</h2>
+<h2 id="用JavaScript构建一个更优化的主循环">用 JavaScript 构建一个更优化的主循环</h2>
 
-<p>基本上，在JavaScript的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于<code>window.requestAnimationFrame()</code>方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。<a href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">W3C规范</a>并没有真正定义什么时候浏览器必须执行requestAnimationFrame回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。</p>
+<p>基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于<code>window.requestAnimationFrame()</code>方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。<a href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">W3C 规范</a>并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。</p>
 
-<p>现代版的Firefox和Google Chrome（可能还有其他版本）试图在框架的时间片的开始时将请求AnimationFrame回调与它们的主线程进行连接。因此，浏览器的主线程看起来就像下面这样：</p>
+<p>现代版的 Firefox 和 Google Chrome（可能还有其他版本）试图在框架的时间片的开始时将请求 AnimationFrame 回调与它们的主线程进行连接。因此，浏览器的主线程看起来就像下面这样：</p>
 
 <ol>
  <li>启动一个新帧（而之前的帧由显示处理）。</li>
- <li>遍历requestAnimationFrame回调并调用它们。</li>
+ <li>遍历 requestAnimationFrame 回调并调用它们。</li>
  <li>当上面的回调停止控制主线程时，执行垃圾收集和其他帧任务。</li>
  <li>睡眠（除非事件打断了浏览器的小睡），直到显示器准备好你的图像（VSYNC）并重复。</li>
 </ol>
 
-<p>您可以考虑开发实时应用程序，因为有时间做工作。所有上述步骤都必须在每16毫秒内进行一次，以保持60赫兹的显示效果。浏览器会尽可能早地调用您的代码，从而给它最大的计算时间。您的主线程通常会启动一些甚至不在主线程上的工作负载（如WebGL的中的光栅化或着色器）。在浏览器使用其主线程管理垃圾收集，其他任务或处理异步事件时，可以在Web Worker或GPU上执行长时间的计算。</p>
+<p>您可以考虑开发实时应用程序，因为有时间做工作。所有上述步骤都必须在每 16 毫秒内进行一次，以保持 60 赫兹的显示效果。浏览器会尽可能早地调用您的代码，从而给它最大的计算时间。您的主线程通常会启动一些甚至不在主线程上的工作负载（如 WebGL 的中的光栅化或着色器）。在浏览器使用其主线程管理垃圾收集，其他任务或处理异步事件时，可以在 Web Worker 或 GPU 上执行长时间的计算。</p>
 
-<p>当我们讨论预算时，许多网络浏览器都有一个称为高分辨率时间的工具.{{ domxref("Date") }} 对象不再是计时事件的识别方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高分辨率的时间计算自navigationStart（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为{{ domxref("DOMHighResTimeStamp") }}，但是，无论出于什么目的和目的，都认为它是一个浮点数。</p>
+<p>当我们讨论预算时，许多网络浏览器都有一个称为高分辨率时间的工具.{{ domxref("Date") }} 对象不再是计时事件的识别方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高分辨率的时间计算自 navigationStart（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为{{ domxref("DOMHighResTimeStamp") }}，但是，无论出于什么目的和目的，都认为它是一个浮点数。</p>
 
-<p>注意：系统（硬件或软件）不能达到微秒精度，可以提供毫秒精度的最小值然而，如果他们能够做到这一点，他们就应该提供0.001的准确性。</p>
+<p>注意：系统（硬件或软件）不能达到微秒精度，可以提供毫秒精度的最小值然而，如果他们能够做到这一点，他们就应该提供 0.001 的准确性。</p>
 
-<p>这个值本身并不太有用，因为它与一个相当无趣的事件相关，但它可以从另一个时间戳中减去，以便准确准确地确定这两个点之间的时间间隔。要获得这些时间戳中的一个，您可以调用window.performance.now（）并将结果存储为一个变量。</p>
+<p>这个值本身并不太有用，因为它与一个相当无趣的事件相关，但它可以从另一个时间戳中减去，以便准确准确地确定这两个点之间的时间间隔。要获得这些时间戳中的一个，您可以调用 window.performance.now（）并将结果存储为一个变量。</p>
 
 <pre class="brush: js notranslate">var tNow = window.performance.now();
 </pre>
 
-<p>回到主循环的主题。您将经常想知道何时调用主函数。因为这是常见的，window.requestAnimationFrame（）总是提供一个DOMHighResTimeStamp执行时回调函数作为参数。这将导致我们之前的主循环的另一个增强。</p>
+<p>回到主循环的主题。您将经常想知道何时调用主函数。因为这是常见的，window.requestAnimationFrame（）总是提供一个 DOMHighResTimeStamp 执行时回调函数作为参数。这将导致我们之前的主循环的另一个增强。</p>
 
 <pre class="brush: js notranslate">/*
 * 以分号开始，以上例子中的代码行都是这样的
-* 依靠自动分号插入(ASI)。浏览器可能会意外
+* 依靠自动分号插入 (ASI)。浏览器可能会意外
 * 认为这个整个例子从上一行继续。领先分号
 * 标记我们的新行的开始，如果前一个不是空或终止。
 *
-* 我们还假设MyGame是以前定义的。
+* 我们还假设 MyGame 是以前定义的。
 */
 
 ;(function(){
@@ -142,13 +140,13 @@ main(); //开始循环</pre>
     MyGame.stopMain = window.requestAnimationFrame(main);
 
     //你的主循环内容
-    // tFrame，来自"function main(tFrame)"，现在是由rAF提供的DOMHighResTimeStamp。
+    // tFrame，来自"function main(tFrame)"，现在是由 rAF 提供的 DOMHighResTimeStamp。
   }
 
   main(); //开始循环
 })();</pre>
 
-<p>其他一些优化是可能的，这取决于你的游戏想要完成什么。你的游戏类型显然会有所不同，但它甚至可能比这更微妙。您可以在画布上单独绘制每个像素，也可以将DOM元素（包括具有透明背景的多个WebGL的画布）放入复杂的层次结构中。每条路径都将导致不同的机会和约束。</p>
+<p>其他一些优化是可能的，这取决于你的游戏想要完成什么。你的游戏类型显然会有所不同，但它甚至可能比这更微妙。您可以在画布上单独绘制每个像素，也可以将 DOM 元素（包括具有透明背景的多个 WebGL 的画布）放入复杂的层次结构中。每条路径都将导致不同的机会和约束。</p>
 
 <h2 id="决定......时间">决定......时间</h2>
 
@@ -158,44 +156,44 @@ main(); //开始循环</pre>
 
 <h3 id="大多数浏览器游戏应该是什么样的">大多数浏览器游戏应该是什么样的</h3>
 
-<p>如果你的游戏可以达到你所支持的任何硬件的最大刷新率，那么你的工作就变得相当容易了。 你可以简单地进行更新，渲染，然后在垂直同步之前什么都不用做。</p>
+<p>如果你的游戏可以达到你所支持的任何硬件的最大刷新率，那么你的工作就变得相当容易了。你可以简单地进行更新，渲染，然后在垂直同步之前什么都不用做。</p>
 
 <pre class="notranslate">/*
 * 以分号开始，以上例子中的代码行都是这样的
-* 依靠自动分号插入(ASI)。浏览器可能会意外
+* 依靠自动分号插入 (ASI)。浏览器可能会意外
 * 认为这个整个例子从上一行继续。领先分号
 * 标记我们的新行的开始，如果前一个不是空或终止。
 *
-* 我们还假设MyGame是以前定义的。
+* 我们还假设 MyGame 是以前定义的。
 */
 
 ;(function(){
   function main(tFrame){
     MyGame.stopMain = window.requestAnimationFrame(main);
 
-    update(Frame); //调用update方法。在我们的例子中，我们给它rAF的时间戳。
+    update(Frame); //调用 update 方法。在我们的例子中，我们给它 rAF 的时间戳。
     render();
   }
 
   main(); //开始循环
 })();</pre>
 
-<p>如果无法达到最大刷新率，可以调整画面质量设置以保持你的时间预算。这个概念最有名的例子是ID Software的RAGE游戏 ，这个游戏取消了用户的控制权，以使其计算时间保持在大约16ms（或大约60fps）。如果计算时间过长，则提交的解析度就降低，纹理和其他资源将无法加载或绘制等。这个（非网络）案例研究做了一些假设和折衷：</p>
+<p>如果无法达到最大刷新率，可以调整画面质量设置以保持你的时间预算。这个概念最有名的例子是 ID Software 的 RAGE 游戏 ，这个游戏取消了用户的控制权，以使其计算时间保持在大约 16ms（或大约 60fps）。如果计算时间过长，则提交的解析度就降低，纹理和其他资源将无法加载或绘制等。这个（非网络）案例研究做了一些假设和折衷：</p>
 
 <ul>
  <li>每个动画帧都占用户输入。</li>
  <li>没有帧需要外推（猜测），因为每个绘图都有自己的更新。</li>
- <li>仿真系统基本上可以假定每次完全更新间隔约16ms。</li>
+ <li>仿真系统基本上可以假定每次完全更新间隔约 16ms。</li>
  <li>给用户控制质量设置将是一场噩梦。</li>
- <li>不同的监视器以不同的速率输入：30FPS，75FPS，100FPS，120FPS，144FPS等</li>
- <li>无法跟上60 FPS的系统会失去视觉质量，以保持游戏运行的最佳速度（最终如果质量太低，则会彻底失败）。</li>
+ <li>不同的监视器以不同的速率输入：30FPS，75FPS，100FPS，120FPS，144FPS 等</li>
+ <li>无法跟上 60 FPS 的系统会失去视觉质量，以保持游戏运行的最佳速度（最终如果质量太低，则会彻底失败）。</li>
 </ul>
 
 <h3 id="处理可变刷新率需求的其他方法">处理可变刷新率需求的其他方法</h3>
 
 <p>存在其他解决问题的方法。</p>
 
-<p>一种常见的技术是以恒定的频率更新模拟，然后绘制尽可能多的（或尽可能少的）实际帧。更新方法可以继续循环，而不用考虑用户看到的内容。绘图方法可以查看最后的更新以及发生的时间。由于绘制知道何时表示，以及上次更新的模拟时间，它可以预测为用户绘制一个合理的框架。这是否比官方更新循环更频繁（甚至更不频繁）无关紧要。更新方法设置检查点，并且像系统允许的那样频繁地，渲染方法画出周围的时间。在Web标准中分离更新方法有很多种方法：</p>
+<p>一种常见的技术是以恒定的频率更新模拟，然后绘制尽可能多的（或尽可能少的）实际帧。更新方法可以继续循环，而不用考虑用户看到的内容。绘图方法可以查看最后的更新以及发生的时间。由于绘制知道何时表示，以及上次更新的模拟时间，它可以预测为用户绘制一个合理的框架。这是否比官方更新循环更频繁（甚至更不频繁）无关紧要。更新方法设置检查点，并且像系统允许的那样频繁地，渲染方法画出周围的时间。在 Web 标准中分离更新方法有很多种方法：</p>
 
 <ul>
  <li>绘制<code>requestAnimationFrame</code>并更新 {{ domxref("window.setInterval") }}或{{domxref("window.setTimeout")}}。
@@ -204,14 +202,14 @@ main(); //开始循环</pre>
    <li>即使在未聚焦或最小化的情况下，使用处理器时间，也可能是主线程，并且可能是传统游戏循环的工件（但是很简单）。</li>
   </ul>
  </li>
- <li>绘制<code>requestAnimationFrame</code>和更新一个<code>setInterval</code>或<code>setTimeout</code>一个<a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web工作者</a>。
+ <li>绘制<code>requestAnimationFrame</code>和更新一个<code>setInterval</code>或<code>setTimeout</code>一个<a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web 工作者</a>。
   <ul>
    <li>这与上述相同，除了更新不会使主线程（主线程也没有）。这是一个更复杂的解决方案，并且对于简单更新可能会有太多的开销。</li>
   </ul>
  </li>
- <li>绘制<code>requestAnimationFrame</code>并使用它来戳一个包含更新方法的Web Worker，其中包含要计算的刻度数（如果有的话）。
+ <li>绘制<code>requestAnimationFrame</code>并使用它来戳一个包含更新方法的 Web Worker，其中包含要计算的刻度数（如果有的话）。
   <ul>
-   <li>这个睡眠直到<code>requestAnimationFrame</code>被调用并且不会污染主线程，加上你不依赖于老式的方法。再次，这比以前的两个选项更复杂一些，并且<em>开始</em>每个更新将被阻止，直到浏览器决定启动rAF回调。</li>
+   <li>这个睡眠直到<code>requestAnimationFrame</code>被调用并且不会污染主线程，加上你不依赖于老式的方法。再次，这比以前的两个选项更复杂一些，并且<em>开始</em>每个更新将被阻止，直到浏览器决定启动 rAF 回调。</li>
   </ul>
  </li>
 </ul>
@@ -226,37 +224,37 @@ main(); //开始循环</pre>
  <li>强制性内插具有性能损失。</li>
 </ul>
 
-<p>单独的更新和绘图方法可能如下面的示例。为了演示，该示例基于第三个项目符号，只是不使用Web Workers进行可读性（而且我们诚实地说可写性）。</p>
+<p>单独的更新和绘图方法可能如下面的示例。为了演示，该示例基于第三个项目符号，只是不使用 Web Workers 进行可读性（而且我们诚实地说可写性）。</p>
 
 <p><em>注意：这个例子，具体来说，需要进行技术审查。</em></p>
 
 <pre class="brush: js notranslate">/*
 * 以分号开始，以上例子中的代码行都是这样的
-* 依靠自动分号插入(ASI)。浏览器可能会意外
+* 依靠自动分号插入 (ASI)。浏览器可能会意外
 * 认为这个整个例子从上一行继续。领先分号
 * 标记我们的新行的开始，如果前一个不是空或终止。
 *
-* 我们还假设MyGame是以前定义的。
+* 我们还假设 MyGame 是以前定义的。
 *
-* MyGame.lastRender跟踪最后提供的requestAnimationFrame时间戳。
-* MyGame.lastTick跟踪最后更新时间。始终以tickLength递增。
-* MyGame.tickLength是游戏状态更新的频率。这是20 Hz(50ms)。
+* MyGame.lastRender 跟踪最后提供的 requestAnimationFrame 时间戳。
+* MyGame.lastTick 跟踪最后更新时间。始终以 tickLength 递增。
+* MyGame.tickLength 是游戏状态更新的频率。这是 20 Hz(50ms)。
 *
-* timeSinceTick是requestAnimationFrame回调和最后一次更新之间的时间。
-* numTicks是这两个呈现帧之间应该发生的更新次数。
+* timeSinceTick 是 requestAnimationFrame 回调和最后一次更新之间的时间。
+* numTicks 是这两个呈现帧之间应该发生的更新次数。
 *
-* render() 传入tFrame, 因为render方法可能需要计算
+* render() 传入 tFrame, 因为 render 方法可能需要计算
 * tFrame 距离最近的更新已经过去了多久，通过外推的方式
-* 来获得场景数据。(对于快速设备，render方法是纯表现性的)。
+* 来获得场景数据。(对于快速设备，render 方法是纯表现性的)。
 * 用以绘制场景。
 *
-* update() 根据给定时间点计算游戏状态。通常需要用tickLength
+* update() 根据给定时间点计算游戏状态。通常需要用 tickLength
 * 作为循环参数，递增更新。来保证游戏状态的严谨。传入 DOMHighResTimeStamp
-* 格式的当前时间。（除非需要增加暂停功能， 传入的时间应该总是
-* 最后更新时间 + 游戏的tick间隔。)
+* 格式的当前时间。（除非需要增加暂停功能，传入的时间应该总是
+* 最后更新时间 + 游戏的 tick 间隔。)
 *
-* setInitialState() 执行在运行mainloop之前需要的任何任务。
-* 它只是一个普通的示例函数，表示您在mainloop前做过的事。
+* setInitialState() 执行在运行 mainloop 之前需要的任何任务。
+* 它只是一个普通的示例函数，表示您在 mainloop 前做过的事。
 */
 
 ;(function(){
@@ -265,9 +263,9 @@ main(); //开始循环</pre>
     var nextTick = MyGame.lastTick + MyGame.tickLength;
     var numTicks = 0;
 
-    //如果tFrame &lt;nextTick，则需要更新0个ticks(对于numTicks，默认为0)。
-    //如果tFrame = nextTick，则需要更新1 tick(等等)。
-    //注意：正如我们在总结中提到的那样，您应该跟踪numTicks的大小。
+    //如果 tFrame &lt;nextTick，则需要更新 0 个 ticks(对于 numTicks，默认为 0)。
+    //如果 tFrame = nextTick，则需要更新 1 tick(等等)。
+    //注意：正如我们在总结中提到的那样，您应该跟踪 numTicks 的大小。
     //如果它很大，那么你的游戏是睡着了，或者机器无法跟上。
     if(tFrame&gt; nextTick){
       var timeSinceTick = tFrame - MyGame.lastTick;
@@ -281,14 +279,14 @@ main(); //开始循环</pre>
 
   function queueUpdates(numTicks){
     for(var i = 0; i &lt;numTicks; i ++){
-      MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; //现在lastTick是这个刻度。
+      MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; //现在 lastTick 是这个刻度。
       update(MyGame.lastTick);
     }
   }
 
   MyGame.lastTick = performance.now();
   MyGame.lastRender = MyGame.lastTick; //假装第一次绘制是在第一次更新。
-  MyGame.tickLength = 50; //这将使您的模拟运行在20Hz(50ms)
+  MyGame.tickLength = 50; //这将使您的模拟运行在 20Hz(50ms)
 
   setInitialState();
   main(performance.now()); //开始循环
@@ -300,9 +298,9 @@ main(); //开始循环</pre>
 
 <h2 id="概要">概要</h2>
 
-<p>我知道上述的任何一种，或许没有适合你的游戏。正确的决定完全取决于你愿意（和不愿意）做出的权衡。主要关心的是切换到另一个选项。幸运的是，我没有任何经验，但我听说这是一个令人难以置信的游戏的Whack-a-Mole。</p>
+<p>我知道上述的任何一种，或许没有适合你的游戏。正确的决定完全取决于你愿意（和不愿意）做出的权衡。主要关心的是切换到另一个选项。幸运的是，我没有任何经验，但我听说这是一个令人难以置信的游戏的 Whack-a-Mole。</p>
 
-<p>像Web这样的受管理平台，要记住的一件重要的事情是，您的循环可能会在相当长的一段时间内停止执行。当用户取消选择您的标签并且浏览器休眠（或减慢）其<code>requestAnimationFrame</code>回调间隔时，可能会发生这种情况。你有很多方法来处理这种情况，这可能取决于你的游戏是单人游戏还是多人游戏。一些选择是：</p>
+<p>像 Web 这样的受管理平台，要记住的一件重要的事情是，您的循环可能会在相当长的一段时间内停止执行。当用户取消选择您的标签并且浏览器休眠（或减慢）其<code>requestAnimationFrame</code>回调间隔时，可能会发生这种情况。你有很多方法来处理这种情况，这可能取决于你的游戏是单人游戏还是多人游戏。一些选择是：</p>
 
 <ul>
  <li>考虑差距“暂停”并跳过时间。

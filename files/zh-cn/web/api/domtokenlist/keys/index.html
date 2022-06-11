@@ -21,7 +21,7 @@ translation_of: Web/API/DOMTokenList/keys
 
 <h3 id="参数">参数</h3>
 
-<p>无.</p>
+<p>无。</p>
 
 <h3 id="返回值">返回值</h3>
 
@@ -29,13 +29,13 @@ translation_of: Web/API/DOMTokenList/keys
 
 <h2 id="例子">例子</h2>
 
-<p>在下面的例子中，我们获取了一个使用 {{domxref("Element.classList")}}属性获取了一个 <code>DOMTokenList</code> ，在这里它表示了这个 {{htmlelement("span")}} 元素的所有class属性值的键（索引）。然后我们使用了它的  <code>keys()</code>方法获取了一个iterator， 最后再使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> 循环来对所有键（这里是索引）进行遍历，将遍历的每一个结果都写到这个 <code>&lt;span&gt;</code> 标签内（ 使用{{domxref("Node.textContent")}}属性）显示。</p>
+<p>在下面的例子中，我们获取了一个使用 {{domxref("Element.classList")}}属性获取了一个 <code>DOMTokenList</code> ，在这里它表示了这个 {{htmlelement("span")}} 元素的所有 class 属性值的键（索引）。然后我们使用了它的  <code>keys()</code>方法获取了一个 iterator， 最后再使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> 循环来对所有键（这里是索引）进行遍历，将遍历的每一个结果都写到这个 <code>&lt;span&gt;</code> 标签内（ 使用{{domxref("Node.textContent")}}属性）显示。</p>
 
-<p>首先，例子使用的HTML代码为：</p>
+<p>首先，例子使用的 HTML 代码为：</p>
 
 <pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
-<p>这是JavaScript代码：</p>
+<p>这是 JavaScript 代码：</p>
 
 <pre class="brush: js">var span = document.querySelector("span");
 var classes = span.classList;
@@ -51,20 +51,7 @@ for(var value of iterator) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-domtokenlist','keys() (as iterable&lt;Node&gt;)')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

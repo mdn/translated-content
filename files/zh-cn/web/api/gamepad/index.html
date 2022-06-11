@@ -5,7 +5,7 @@ translation_of: Web/API/Gamepad
 ---
 <p>{{APIRef("Gamepad API")}}</p>
 
-<p><a href="/zh-CN/docs/Web/API/Gamepad_API">Gamepad API</a> 的 <code>Gamepad</code> 接口，定义了一个独立的游戏手柄或其他控制器，允许访问控制器的信息，譬如按钮按下的状态、坐标输入的位置。游戏手柄或其他控制器，允许访问如按钮按下，和ID等信息。</p>
+<p><a href="/zh-CN/docs/Web/API/Gamepad_API">Gamepad API</a> 的 <code>Gamepad</code> 接口，定义了一个独立的游戏手柄或其他控制器，允许访问控制器的信息，譬如按钮按下的状态、坐标输入的位置。游戏手柄或其他控制器，允许访问如按钮按下，和 ID 等信息。</p>
 
 <p>Gamepad 对象有两种方式返回值：通过 {{event("gamepadconnected")}} 和 {{event("gamepaddisconnected")}} 事件的  <code>gamepad</code> 属性，或者在任意位置抓取 {{domxref("Navigator.getGamepads()")}} 方法返回的数组。</p>
 
@@ -31,20 +31,20 @@ translation_of: Web/API/Gamepad
  <dd>
  <h3 id="Gamepad_的实验性扩展">Gamepad 的实验性扩展</h3>
 
- <p>以下接口被定义于 {{SpecName("GamepadExtensions")}} 规范中，且提供了诸如触觉反馈和WebVR控制器姿态方位信息等实验功能的访问。</p>
+ <p>以下接口被定义于 {{SpecName("GamepadExtensions")}} 规范中，且提供了诸如触觉反馈和 WebVR 控制器姿态方位信息等实验功能的访问。</p>
  </dd>
  <dt>{{domxref("Gamepad.hand")}} {{readonlyInline}}</dt>
  <dd>一个枚举项，定义了控制器是用哪只手拿着的，或最可能是哪只手拿着的。</dd>
  <dt>{{domxref("Gamepad.hapticActuators")}} {{readonlyInline}}</dt>
  <dd>一个包含 {{domxref("GamepadHapticActuator")}} 对象的数组，其中表示控制器上可用的触觉反馈硬件。</dd>
  <dt>{{domxref("Gamepad.pose")}} {{readonlyInline}}</dt>
- <dd>一个表示WebVR控制器姿态方位信息的 {{domxref("GamepadPose")}} 对象(比如其在3D 空间中的位置和方向)。 </dd>
+ <dd>一个表示 WebVR 控制器姿态方位信息的 {{domxref("GamepadPose")}} 对象 (比如其在 3D 空间中的位置和方向)。 </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接与 %d 位: %s. %d 个按钮, %d 个坐标方向。",
+  console.log("控制器已连接与 %d 位: %s. %d 个按钮，%d 个坐标方向。",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
 });</pre>
@@ -71,18 +71,18 @@ translation_of: Web/API/Gamepad
   <tr>
    <td>{{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}}</td>
    <td>{{Spec2("GamepadExtensions")}}</td>
-   <td>Defines the {{anch("Experimental extensions to Gamepad")}}</td>
+   <td>Defines the <a href="#Gamepad_的实验性扩展">Experimental extensions to Gamepad</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("api.Gamepad")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/Guide/API/Gamepad">使用Gamepad API</a></li>
+ <li><a href="/zh-CN/docs/Web/Guide/API/Gamepad">使用 Gamepad API</a></li>
  <li><a href="/zh-CN/docs/Web/API/Gamepad_API">Gamepad API</a></li>
 </ul>

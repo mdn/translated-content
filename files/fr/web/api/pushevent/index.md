@@ -39,29 +39,29 @@ L'exemple suivant prends les données du `PushEvent` et les affiche sur tous les
 
 ```js
 self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.notification.permission === 'granted')) {
-    return;
-  }
+  if (!(self.Notification && self.notification.permission === 'granted')) {
+    return;
+  }
 
-  var data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
-  var title = data.title || "Something Has Happened";
-  var message = data.message || "Here's something you might want to check out.";
-  var icon = "images/new-notification.png";
+  var data = {};
+  if (event.data) {
+    data = event.data.json();
+  }
+  var title = data.title || "Something Has Happened";
+  var message = data.message || "Here's something you might want to check out.";
+  var icon = "images/new-notification.png";
 
-  var notification = new Notification(title, {
-    body: message,
-    tag: 'simple-push-demo-notification',
-    icon: icon
-  });
+  var notification = new Notification(title, {
+    body: message,
+    tag: 'simple-push-demo-notification',
+    icon: icon
+  });
 
-  notification.addEventListener('click', function() {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
-  });
+  notification.addEventListener('click', function() {
+    if (clients.openWindow) {
+      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
+    }
+  });
 });
 ```
 

@@ -156,7 +156,7 @@ Cet exemple donne une préférence pour la résolution de la caméra et attribue
 
 ### Utilisation de la nouvelle API dans les navigateurs plus anciens
 
-Voici un exemple d'utilisation de `navigator.mediaDevices.getUserMedia()` , avec un adaptateur pour faire face aux navigateurs plus anciens. Notez que cet adaptater ne corrige pas les différences existantes dans la syntaxe des contraintes, ce qui signifie que les contraintes ne fonctionneront pas bien dans les navigateurs. Il est recommandé d'utiliser l'adaptateur [adapter.js](https://github.com/webrtc/adapter)  a la place, qui gère les contraintes.
+Voici un exemple d'utilisation de `navigator.mediaDevices.getUserMedia()` , avec un adaptateur pour faire face aux navigateurs plus anciens. Notez que cet adaptater ne corrige pas les différences existantes dans la syntaxe des contraintes, ce qui signifie que les contraintes ne fonctionneront pas bien dans les navigateurs. Il est recommandé d'utiliser l'adaptateur [adapter.js](https://github.com/webrtc/adapter)  a la place, qui gère les contraintes.
 
 ```js
 // Older browsers might not implement mediaDevices at all, so we set an empty object first

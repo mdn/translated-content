@@ -15,4 +15,4 @@ Les sources suivantes sont utilisées pour les tableaux de compatibilités des �
 - <http://blogs.msdn.com/b/ie/archive/2010/03/18/svg-in-ie9-roadmap.aspx> pour connaître l'état du support sur IE9
 - [Le graphique de support SVG sur Codedread.com](http://www.codedread.com/svg-support.php) pour les vérifications basiques par rapport à la suite de test W3C
 - [Wikipedia](http://en.wikipedia.org/wiki/SVG) pour des conseils basiques, non normatif
-- [Svground.fr/ ](svground.fr/)tuto assez complet sur le SVG
+- [SVGround.fr](https://svground.fr)&nbsp;: tuto assez complet sur le SVG

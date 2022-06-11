@@ -94,11 +94,11 @@ while(true) {
 
 ### Zéro délai
 
-Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout "The documentation about this has not yet been written; please consider contributing!") avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
+Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout "The documentation about this has not yet been written; please consider contributing!") avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
 
-L'exécution dépend du nombre de taches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps *minimum* requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
+L'exécution dépend du nombre de taches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps *minimum* requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
 
-Fondamentalement, `setTimeout` doit attendre la fin de tout le code pour les messages en file d'attente, même si vous avez spécifié une limite de temps particulière pour votre setTimeout.
+Fondamentalement, `setTimeout` doit attendre la fin de tout le code pour les messages en file d'attente, même si vous avez spécifié une limite de temps particulière pour votre setTimeout.
 
 ```js
 (function() {
@@ -132,7 +132,7 @@ Un web worker ou une `iframe` d'origine multiple (_cross origin_) possède sa pr
 
 ## Non bloquant
 
-Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à  la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/IndexedDB) ou d'une requête [XHR](/fr/docs/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
+Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/IndexedDB) ou d'une requête [XHR](/fr/docs/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
 
 Il existe certaines exceptions historiques comme `alert` ou des appels XHR synchrones. C'est une bonne pratique que de les éviter. Attention, [certaines exceptions existent](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mais relèvent généralement de bugs d'implémentation).
 

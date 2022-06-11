@@ -12,19 +12,19 @@ tags:
   - collision detection
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第10步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson10.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson10.html</font></a><font>完成本课程后找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第 10 步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson10.html">Gamedev-Phaser-Content-Kit / demos / lesson10.html</a>完成本课程后找到源代码。</p>
 </div>
 
-<p><font>现在接下来的挑战 - 球和砖块之间的碰撞检测。</font><font>幸运的是，我们可以使用物理引擎来检查单个对象（如球和桨）之间的碰撞，也可以检测对象和组之间的碰撞。</font></p>
+<p>现在接下来的挑战 - 球和砖块之间的碰撞检测。幸运的是，我们可以使用物理引擎来检查单个对象（如球和桨）之间的碰撞，也可以检测对象和组之间的碰撞。</p>
 
-<h2 id="砖球碰撞检测"><font><font>砖/球碰撞检测</font></font></h2>
+<h2 id="砖球碰撞检测">砖/球碰撞检测</h2>
 
-<p><font><font>物理引擎使一切都变得更容易 - 我们只需要添加两个简单的代码。</font><font>首先，在你的</font></font><code>update()</code><font><font>函数中</font><font>添加一行</font><font>，检查球和砖之间的碰撞检测，如下所示：</font></font></p>
+<p>物理引擎使一切都变得更容易 - 我们只需要添加两个简单的代码。首先，在你的<code>update()</code>函数中添加一行，检查球和砖之间的碰撞检测，如下所示：</p>
 
 <pre class="brush: js">function update() {
     game.physics.arcade.collide(ball, paddle);
@@ -33,20 +33,20 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 }
 </pre>
 
-<p><font><font>球的位置是根据组中所有砖的位置计算的。</font><font>第三个可选参数是发生冲突时执行的功能</font></font><code>ballHitBrick()</code><font><font>。</font><font>创建这个新功能作为代码的底部，就在结束</font></font><code>&lt;/script&gt;</code><font><font>标签</font><font>之前</font><font>，如下所示：</font></font></p>
+<p>球的位置是根据组中所有砖的位置计算的。第三个可选参数是发生冲突时执行的功能<code>ballHitBrick()</code>。创建这个新功能作为代码的底部，就在结束<code>&lt;/script&gt;</code>标签之前，如下所示：</p>
 
 <pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
 }
 </pre>
 
-<p><font><font>就是这样！</font><font>重新加载你的代码，你应该看到新的碰撞检测工作正常。</font></font></p>
+<p>就是这样！重新加载你的代码，你应该看到新的碰撞检测工作正常。</p>
 
-<p><font><font>感谢Phaser，有两个参数传递给函数 - 第一个是球，我们在碰撞方法中明确定义，第二个是球碰撞的砖组中的单个砖。</font><font>在功能内部，我们从屏幕上删除所讨论的砖块，只需运行其</font></font><code>kill()</code><font><font>上</font><font>的</font><font>方法即可。</font></font></p>
+<p>感谢 Phaser，有两个参数传递给函数 - 第一个是球，我们在碰撞方法中明确定义，第二个是球碰撞的砖组中的单个砖。在功能内部，我们从屏幕上删除所讨论的砖块，只需运行其<code>kill()</code>上的方法即可。</p>
 
-<p><font><font>您将期望在使用</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection"><font><font>纯JavaScript</font></font></a><font><font>时编写更多自己的计算机来实现碰撞检测</font><font>。</font><font>这是使用框架的好处 - 您可以为Phaser留下大量无聊的代码，并专注于制作游戏中最有趣和最有趣的部分。</font></font></p>
+<p>您将期望在使用<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection">纯 JavaScript</a>时编写更多自己的计算机来实现碰撞检测。这是使用框架的好处 - 您可以为 Phaser 留下大量无聊的代码，并专注于制作游戏中最有趣和最有趣的部分。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
@@ -54,6 +54,6 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>我们可以打砖块并删除它们，这已经是游戏的一个很好的补充。</font><font>结果，更好地计算被毁砖增加</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score"><font><font>得分</font></font></a><font><font>。</font></font></p>
+<p>我们可以打砖块并删除它们，这已经是游戏的一个很好的补充。结果，更好地计算被毁砖增加<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score">得分</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}</p>

@@ -5,7 +5,7 @@ translation_of: MDN/Tools/KumaScript
 ---
 <div>{{MDNSidebar}}</div><h2 id="概要">概要</h2>
 
-<p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript" title="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/" title="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
+<p>On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript" title="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/" title="https://nodejs.org/en/">Node.js</a>. This article provides basic information on how to use KumaScript.</p>
 
 <p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
 
@@ -127,7 +127,7 @@ Hello #&lt;%= i %&gt;
  <dt><code>env.id</code></dt>
  <dd>A short, unique ID for the current wiki document</dd>
  <dt><code>env.files</code></dt>
- <dd>An array of the files attached to the current wiki document; each object in the array is as described under {{ anch("File objects") }} below</dd>
+ <dd>An array of the files attached to the current wiki document; each object in the array is as described under <a href="#file_objects">File objects</a> below</dd>
  <dt><code>env.review_tags</code></dt>
  <dd>An array of the review tags on the article ("technical", "editorial", etc.)</dd>
  <dt><code>env.locale</code></dt>
@@ -337,7 +337,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png" style="height: 289px; width: 500px;"></p>
 
-<p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at {{TemplateLink("ListSubpages")}}.</p>
+<p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpages.ejs"><code>ListSubpages</code></a>.</p>
 
 <h2 id="Cookbook">Cookbook</h2>
 

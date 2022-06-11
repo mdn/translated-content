@@ -3,7 +3,7 @@ title: MouseEvent
 slug: Web/API/MouseEvent
 translation_of: Web/API/MouseEvent
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+<p>{{APIRef("DOM Events")}}</p>
 
 <p><code><strong>MouseEvent</strong></code> 介面表示了由使用者經指標裝置（如滑鼠）進行互動所發生的事件。常見的 <code>MouseEvent</code> 實作事件包括了 {{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}} 與 {{event("mousedown")}}。</p>
 
@@ -26,8 +26,8 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
  <dd>Returns <code>true</code> if the <kbd>alt</kbd> key was down when the mouse event was fired.</dd>
  <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
- <dd>The button number that was pressed when the mouse event was fired. </dd>
- <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
+ <dd>The button number that was pressed when the mouse event was fired.</dd>
+ <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}}</dt>
  <dd>
  <p>The buttons being pressed when the mouse event was fired</p>
  </dd>
@@ -130,185 +130,11 @@ document.getElementById("button").addEventListener('click', simulateClick);</pre
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefines <code>MouseEvent</code> from long to double. This means that a <code>PointerEvent</code> whose <code>pointerType</code> is mouse will be a double.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-mouseevent-region", "MouseEvent.region")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>From {{SpecName('DOM3 Events')}}, added the <code>region</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock','#extensions-to-the-mouseevent-interface','MouseEvent')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>From {{SpecName('DOM3 Events')}}, added <code>movementX</code> and <code>movementY</code> properties.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface', 'MouseEvent')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>From {{SpecName('DOM3 Events')}}, added <code>offsetX</code> and <code>offsetY</code>, <code>pageX</code> and <code>pageY</code>, <code>x,</code> and <code>y</code> properties. Redefined screen, page, client and coordinate (x and y) properties as <code>double</code> from <code>long</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#events-mouseevents','MouseEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>From {{SpecName('DOM2 Events')}}, added the <code>MouseEvent()</code> constructor, the <code>getModifierState()</code> method and the <code>buttons</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.movementX","movementX")}}<br>
-    {{domxref("MouseEvent.movementY","movementY")}}</td>
-   <td>{{CompatChrome(37)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}} {{property_prefix("moz")}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("MouseEvent.buttons", "buttons") }}</td>
-   <td>{{CompatChrome(43)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("MouseEvent.which", "which") }}</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>1.0</td>
-   <td>9.0</td>
-   <td>5.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.getModifierState()", "getModifierState()")}}</td>
-   <td>{{CompatChrome(47)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatGeckoDesktop(15)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.mozPressure", "mozPressure")}} and {{domxref("MouseEvent.mozInputSource", "mozInputSource")}} {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}</td>
-   <td>{{CompatChrome(45)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(11)}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.region")}}</td>
-   <td>{{CompatChrome(51)}}<sup>[1]</sup></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(32)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.offsetX")}}, and {{domxref("MouseEvent.offsetY")}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>9</td>
-   <td>{{CompatGeckoDesktop(40)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.screenX")}}, {{domxref("MouseEvent.screenY")}}, {{domxref("MouseEvent.clientX")}}, and {{domxref("MouseEvent.Y")}} are double instead of long.</td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Requires enabling the <code>ExperimentalCanvasFeatures</code> flag.</p>
+{{Compat("api.MouseEvent")}}
 
 <h2 id="參見">參見</h2>
 

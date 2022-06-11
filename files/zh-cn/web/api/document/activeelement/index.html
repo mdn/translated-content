@@ -6,14 +6,14 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p><span class="seoSummary">{{domxref("Document")}} 和 {{domxref("ShadowRoot")}} 接口的 <strong><code>activeElement</code></strong> 只读属性，用来返回当前在DOM或者shadow DOM树中处于聚焦状态的{{domxref("Element")}}。</span></p>
+<p>{{domxref("Document")}} 和 {{domxref("ShadowRoot")}} 接口的 <strong><code>activeElement</code></strong> 只读属性，用来返回当前在 DOM 或者 shadow DOM 树中处于聚焦状态的{{domxref("Element")}}。</p>
 
-<p>通常情况下，如果 {{domxref("HTMLInputElement")}} 或者 {{domxref("HTMLTextAreaElement")}}元素中有文字被选中时， <code>activeElement</code>属性就会返回该元素 。这时，你可以调用该元素的{{domxref("Document.selectionStart", "selectionStart")}} 和 {{domxref("Document.selectionEnd", "selectionEnd")}} 属性获取更多选中文字的信息. 其他情况下，焦点元素也可能是{{HTMLElement("select")}}元素 (menu) 或者一个别的 {{HTMLElement("input")}} 元素, 比如 <code>"button"</code>, <code>"checkbox"</code>, 或者 <code>"radio"</code>.</p>
+<p>通常情况下，如果 {{domxref("HTMLInputElement")}} 或者 {{domxref("HTMLTextAreaElement")}}元素中有文字被选中时， <code>activeElement</code>属性就会返回该元素 。这时，你可以调用该元素的{{domxref("Document.selectionStart", "selectionStart")}} 和 {{domxref("Document.selectionEnd", "selectionEnd")}} 属性获取更多选中文字的信息。其他情况下，焦点元素也可能是{{HTMLElement("select")}}元素 (menu) 或者一个别的 {{HTMLElement("input")}} 元素，比如 <code>"button"</code>, <code>"checkbox"</code>, 或者 <code>"radio"</code>.</p>
 
-<p>通常用户可以使用tab键来切换页面中的焦点元素获得焦点, 使用空格键使元素active (比如按下一个按钮或者 切换一个 radio). 具体哪些元素可以获得焦点与系统和浏览器的设置有关。比如, 在 macOS 系统上, 不是text input元素默认情况下是不能获得焦点的。</p>
+<p>通常用户可以使用 tab 键来切换页面中的焦点元素获得焦点，使用空格键使元素 active (比如按下一个按钮或者 切换一个 radio). 具体哪些元素可以获得焦点与系统和浏览器的设置有关。比如，在 macOS 系统上，不是 text input 元素默认情况下是不能获得焦点的。</p>
 
 <div class="note">
-<p><strong>Note:</strong> Focus (可收到input事件的元素) 和 selection (目前页面被高亮的部分)不是一回事. 你可以通过 {{domxref("window.getSelection()")}}获取当前用户选择的文本.</p>
+<p><strong>Note:</strong> Focus (可收到 input 事件的元素) 和 selection (目前页面被高亮的部分) 不是一回事。你可以通过 {{domxref("window.getSelection()")}}获取当前用户选择的文本。</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -61,27 +61,10 @@ textarea2.addEventListener('mouseup', onMouseUp, false);</pre>
 
 <p>{{ EmbedLiveSample('Example', '400', '400') }}</p>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("api.DocumentOrShadowRoot.activeElement")}}</p>
-</div>
+<p>{{Compat}}</p>

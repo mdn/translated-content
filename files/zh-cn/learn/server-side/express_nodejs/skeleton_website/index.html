@@ -18,16 +18,16 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<p class="summary">本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的“骨架”站点。</p>
+<p>本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的“骨架”站点。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
+   <th scope="row">预备知识：</th>
    <td><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">配置 Node 开发环境</a>。复习 Express 教程。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>掌握用 <strong>Express 应用生成器</strong> 创建站点的方法。</td>
   </tr>
  </tbody>
@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <h2 id="概览">概览</h2>
 
-<p>本节演示了如何使用 <a href="http://www.expressjs.com.cn/starter/generator.html">Express 应用生成器</a> 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">本地图书馆网站</a> 创建框架，以便在以后章节添加其它代码。过程非常简单，只需要在命令行运行 “生成器 + 项目名称” 即可，此外还可以指定站点的模板引擎和 CSS 生成器。</p>
+<p>本节演示了如何使用 <a href="http://www.expressjs.com.cn/starter/generator.html">Express 应用生成器</a> 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">本地图书馆网站</a> 创建框架，以便在以后章节添加其它代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。</p>
 
 <p>以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。</p>
 
@@ -46,7 +46,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <h2 id="使用应用生成器">使用应用生成器</h2>
 
 <div class="blockIndicator note">
-<p><strong>译注：</strong>本教程中命令操作基于 Linux/macOS 的 bash 终端，Windows 的命令提示符 cmd/PowerShell 与 bash 的概念和用法略有不同， 为在 Windows 上获得一致的体验，可以：</p>
+<p><strong>译注：</strong>本教程中命令操作基于 Linux/macOS 的 bash 终端，Windows 的命令提示符 cmd/PowerShell 与 bash 的概念和用法略有不同，为在 Windows 上获得一致的体验，可以：</p>
 
 <ul>
  <li>自己弄懂 cmd/PowerShell 与 bash 的区别。</li>
@@ -110,11 +110,11 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <ul>
  <li>进入生产状态的时间——如果你的团队已经有某个模板语言的经验，那么用它可能更快进入生产状态。否则你应该考虑所选模板引擎的学习曲线。</li>
  <li>流行度和活跃度——要评估所选引擎的流行程度，以及它是否拥有活跃的社区。在网站的生命周期中遇到问题时，是否能够获得相关支持非常重要。</li>
- <li>风格——某些模板引擎使用特定标记，来标识插入“普通” HTML 中的内容，而另一些模板引擎使用不同的语法（例如使用缩进和块名称）构造 HTML。</li>
+ <li>风格——某些模板引擎使用特定标记，来标识插入“普通”HTML 中的内容，而另一些模板引擎使用不同的语法（例如使用缩进和块名称）构造 HTML。</li>
  <li>性能/渲染时间。</li>
  <li>功能——你应该考虑所选引擎是否具有以下功能：
   <ul>
-   <li>布局继承：可以定义基本模板，然后 “继承” 它的一部分，使不同页面可以有不同的呈现。这通常比包含大量所需组件，或每次从头开始构建模板更好。</li>
+   <li>布局继承：可以定义基本模板，然后“继承”它的一部分，使不同页面可以有不同的呈现。这通常比包含大量所需组件，或每次从头开始构建模板更好。</li>
    <li>“包含”支持：可以通过包含其他模板来构建新模板。</li>
    <li>简明的变量和循环控制语法。</li>
    <li>能够在模板级别过滤变量值（例如，将变量设置为大写，或格式化日期值）。</li>
@@ -143,7 +143,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <h3 id="我应该用哪个数据库？">我应该用哪个数据库？</h3>
 
-<p>生成器生成的代码不使用、也不包含任何数据库。 Express 应用可以使用 Node 支持的所有 <a href="https://expressjs.com/en/guide/database-integration.html">数据库</a>（Express 本身不提供数据库管理机制）。</p>
+<p>生成器生成的代码不使用、也不包含任何数据库。Express 应用可以使用 Node 支持的所有 <a href="https://expressjs.com/en/guide/database-integration.html">数据库</a>（Express 本身不提供数据库管理机制）。</p>
 
 <p>我们后续讨论数据库集成问题。</p>
 
@@ -210,7 +210,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的“刷新”按钮。</p>
 
 <div class="note">
-<p><strong>注：</strong>这里必须使用“<code>npm <strong>run <em>&lt;scriptname&gt;</em></strong></code>”命令，而不是 <code>npm start</code>，因为 “start” 本质上是映射到脚本的一条 NPM 命令。我们可以在 <code>start</code> 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。</p>
+<p><strong>注：</strong>这里必须使用“<code>npm <strong>run <em>&lt;scriptname&gt;</em></strong></code>”命令，而不是 <code>npm start</code>，因为“start”本质上是映射到脚本的一条 NPM 命令。我们可以在 <code>start</code> 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。</p>
 </div>
 
 <h2 id="生成的项目">生成的项目</h2>
@@ -219,7 +219,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <h3 id="目录结构">目录结构</h3>
 
-<p>安装好依赖项的生成项目具有如下文件结构（<strong>不</strong>带 “/” 前缀的是文件）：</p>
+<p>安装好依赖项的生成项目具有如下文件结构（<strong>不</strong>带“/”前缀的是文件）：</p>
 
 <pre class="notranslate">/express-locallibrary-tutorial
     <strong>app.js</strong>
@@ -292,7 +292,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <h3 id="www_文件">www 文件</h3>
 
-<p>文件 <strong>/bin/www </strong>是应用入口！它做的第一件事是 <code>require()</code> “真实” 的应用入口（即项目根目录中的 <strong>app.js</strong> ），<strong>app.js </strong>会设置并返回 <code><a href="http://expressjs.com/en/api.html">express()</a></code><a href="http://expressjs.com/en/api.html"> </a>应用对象。</p>
+<p>文件 <strong>/bin/www </strong>是应用入口！它做的第一件事是 <code>require()</code> “真实”的应用入口（即项目根目录中的 <strong>app.js</strong> ），<strong>app.js </strong>会设置并返回 <code><a href="http://expressjs.com/en/api.html">express()</a></code><a href="http://expressjs.com/en/api.html"> </a>应用对象。</p>
 
 <pre class="brush: js notranslate">#!/usr/bin/env node
 
@@ -320,7 +320,7 @@ var app = express();
 </code>module.exports = app;
 </pre>
 
-<p>上文的<strong> www</strong> 入口文件中 <code>require()</code> 的 <code>app</code> 就是这里导出的 。</p>
+<p>上文的<strong> www</strong> 入口文件中 <code>require()</code> 的 <code>app</code> 就是这里导出的。</p>
 
 <p>我们来详细了解一下<strong> app.js</strong> 文件。首先，它使用 <code>require()</code> 导入了一些实用 node 库，其中包括之前用 NPM 下载的 <code>express</code>，<code>http-errors</code>，<code>morgan</code> 和 <em><code>cookie-parser</code>，还有一个 </em><em><code>path</code> </em>库，它是用于解析文件和目录的核心 node 库。</p>
 
@@ -338,10 +338,10 @@ var usersRouter = require('./routes/users');
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。</p>
+<p><strong>注意：</strong> 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。</p>
 </div>
 
-<p>下面我们用导入的 <code>express</code> 模块来创建 <code>app</code> 对象，然后使用它来设置视图（模板）引擎。设置引擎分两步：首先设置 '<code>views</code>' 以指定模板的存储文件夹（此处设为子文件夹 <strong>/views</strong>）。然后设置 '<code>view engine</code>' 以指定模板库（本例中设为 “pug” ）。</p>
+<p>下面我们用导入的 <code>express</code> 模块来创建 <code>app</code> 对象，然后使用它来设置视图（模板）引擎。设置引擎分两步：首先设置 '<code>views</code>' 以指定模板的存储文件夹（此处设为子文件夹 <strong>/views</strong>）。然后设置 '<code>view engine</code>' 以指定模板库（本例中设为“pug” ）。</p>
 
 <pre class="brush: js notranslate">var app = express();
 
@@ -367,7 +367,7 @@ app.use('/users', usersRouter);
 </pre>
 
 <div class="note">
-<p><strong>注：</strong>这些路径（<code>'/'</code> 和 '<code>/users'</code>）将作为导入路由的前缀。如果导入的模块 <code>users<font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="background-color: #fff3d4;">在</span></font></code><code>/profile</code> 定义了路由，则可以在 <code>/users/profile</code> 访问该路由。我们将在后面的文章中，详细讨论路由。</p>
+<p><strong>注：</strong>这些路径（<code>'/'</code> 和 '<code>/users'</code>）将作为导入路由的前缀。如果导入的模块 <code>users在</code><code>/profile</code> 定义了路由，则可以在 <code>/users/profile</code> 访问该路由。我们将在后面的文章中，详细讨论路由。</p>
 </div>
 
 <p>最后一个中间件为错误和 HTTP 404 响应添加处理方法。</p>
@@ -441,7 +441,7 @@ block content
 
 <h2 id="挑战自我">挑战自我</h2>
 
-<p>在 <strong>/routes/users.js</strong> 中添加一个新路由，在URL <code>/users/cool/</code> 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 <a href="http://localhost:3000/users/cool/">http://localhost:3000/users/cool/ </a>，测试一下是否成功。</p>
+<p>在 <strong>/routes/users.js</strong> 中添加一个新路由，在 URL <code>/users/cool/</code> 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 <a href="http://localhost:3000/users/cool/">http://localhost:3000/users/cool/ </a>，测试一下是否成功。</p>
 
 <ul>
 </ul>

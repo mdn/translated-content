@@ -48,9 +48,9 @@ Le positionnement permet de modifier le cours classique de la mise en page pour 
 
 Il y a différents types de positionnement que vous pouvez appliquer à des éléments HTML. Pour utiliser un type particulier de positionnement sur un élément, nous utilisons la propriété {{cssxref("position")}}.
 
-### Positionnement « static »
+### Positionnement «&nbsp;static&nbsp;»
 
-Le positionnement `static` est celui reçu par défaut par chaque élément — cela veut tout simplement dire « positionner l'élément selon le cours normal de placement — rien de spécial à voir ici ».
+Le positionnement `static` est celui reçu par défaut par chaque élément — cela veut tout simplement dire «&nbsp;positionner l'élément selon le cours normal de placement — rien de spécial à voir ici&nbsp;».
 
 Pour le démontrer et avoir préparer un premier exemple pour les prochaines sections, ajoutez tout d'abord une classe `positioned` pour le deuxième {{htmlelement("p")}} dans le HTML:
 
@@ -70,19 +70,19 @@ Si maintenant vous sauvegardez et actualisez, vous verrez qu'il n'y a aucune dif
 
 > **Note :** ce lien [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)) pointe sur un exemple de positionnement « static ».
 
-### Positionnement « relative »
+### Positionnement «&nbsp;relative&nbsp;»
 
-Le positionnement relatif est le premier type de positionnement que nous allons étudier. Il est très similaire au positionnement statique. Cependant, une fois que l'élément positionné occupe une place dans le cours normal de la mise en page, vous pourrez modifier sa position finale. Vous pourrez par exemple le faire chevaucher d'autres éléments de la page. Poursuivons : mettez à jour la déclaration de `position` dans le code :
+Le positionnement relatif est le premier type de positionnement que nous allons étudier. Il est très similaire au positionnement statique. Cependant, une fois que l'élément positionné occupe une place dans le cours normal de la mise en page, vous pourrez modifier sa position finale. Vous pourrez par exemple le faire chevaucher d'autres éléments de la page. Poursuivons&nbsp;: mettez à jour la déclaration de `position` dans le code&nbsp;:
 
 ```css
 position: relative;
 ```
 
-Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément ? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.
+Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément&nbsp;? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.
 
 ### Présentation de top, bottom, left et right
 
-{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans la CSS :
+{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans la CSS&nbsp;:
 
     top: 30px;
     left: 30px;
@@ -96,13 +96,13 @@ Si vous enregistrez et actualisez maintenant, vous verrez ce résultat :
 <p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
 <p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
 <p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
 ```
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto; }
+  width: 500px;
+  margin: 0 auto; }
 p {
   background: aqua;
   border: 3px solid blue;
@@ -138,7 +138,7 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ce
 <p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
 <p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
 <p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -241,7 +241,7 @@ A ce stade, vous verrez le premier paragraphe coloré en vert, déplacé hors du
 
 Est‑il possible de changer l'ordre d'empilement ? Oui, vous le pouvez avec la propriété {{cssxref("z-index")}}. « z-index » est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du source où nous avons discuté des pages Web en utilisant des coordonnées horizontales (axe des x) et verticales (axe des y) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. (0,0) est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
 
-Les pages Web ont aussi un axe z : une ligne imaginaire qui va de la surface de votre écran, vers votre visage (ou tout ce que vous aimez avoir devant l'écran). Les valeurs de {{cssxref("z-index")}}} affectent l'emplacement des éléments positionnés sur cet axe ; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, les éléments positionnés ont tous un `z-index`  `auto`, qui est effectivement 0.
+Les pages Web ont aussi un axe z : une ligne imaginaire qui va de la surface de votre écran, vers votre visage (ou tout ce que vous aimez avoir devant l'écran). Les valeurs de {{cssxref("z-index")}}} affectent l'emplacement des éléments positionnés sur cet axe ; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, les éléments positionnés ont tous un `z-index`  `auto`, qui est effectivement 0.
 
 Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle `p:nth-of-type(1)` :
 
@@ -338,7 +338,7 @@ Voici l'exemple terminé :
 <p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
 <p class="positioned">Je ne suis plus positionné...</p>
 <p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -376,7 +376,7 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('Positionnement_fixe', '100%', 400) }}
 
-> **Note :** à ce stade de l'article, vous pouvez voir un exemple en direct ici  [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> **Note :** à ce stade de l'article, vous pouvez voir un exemple en direct ici  [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### « position: sticky »
 

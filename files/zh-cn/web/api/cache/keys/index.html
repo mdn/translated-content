@@ -10,7 +10,7 @@ translation_of: Web/API/Cache/keys
 <p>请求将以它们被插入的顺序返回。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 具有相同URL但不同请求头的请求，如果它们的响应头中有 VARY 头部，则他们可以被返回。</p>
+<p><strong>注意</strong>: 具有相同 URL 但不同请求头的请求，如果它们的响应头中有 VARY 头部，则他们可以被返回。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -32,10 +32,10 @@ translation_of: Web/API/Cache/keys
  <dt>options {{optional_inline}}</dt>
  <dd>一个对象，它的属性决定了 keys 操作中的匹配操作是如何执行的。可选的属性有：
  <ul>
-  <li><code>ignoreSearch</code>: 一个 {{domxref("Boolean")}} 值，指定了匹配操作是否忽略url中的查询部分。如果为 true ，在执行匹配操作时， <code>http://foo.com/?value=bar</code> 的 <code>?value=bar 部分将会被忽。默认为 </code><code>false 。</code></li>
+  <li><code>ignoreSearch</code>: 一个 {{domxref("Boolean")}} 值，指定了匹配操作是否忽略 url 中的查询部分。如果为 true ，在执行匹配操作时， <code>http://foo.com/?value=bar</code> 的 <code>?value=bar 部分将会被忽。默认为 </code><code>false 。</code></li>
   <li><code>ignoreMethod</code>: 一个 {{domxref("Boolean")}} 值，当为 true 时， 将会阻止匹配操作验证 {{domxref("Request")}} 的 HTTP 方法（通常只有 GET 和 HEAD 方法被允许）。默认为 false 。</li>
   <li><code>ignoreVary</code>: 一个 {{domxref("Boolean")}} 值，当为 <code>true 时，告诉匹配操作不要验证 VARY 头部。换句话说，如果 URL 匹配，你会得到一个匹配而不管</code> {{domxref("Response")}} 对象是否有 VARY 头部。默认为 false 。</li>
-  <li><code>cacheName</code>: 一个 {{domxref("DOMString")}} 值，描述了在一个特定的 cache 中进行匹配。注意这个选项会被 Cache.keys()方法忽略。</li>
+  <li><code>cacheName</code>: 一个 {{domxref("DOMString")}} 值，描述了在一个特定的 cache 中进行匹配。注意这个选项会被 Cache.keys() 方法忽略。</li>
  </ul>
  </dd>
 </dl>
@@ -52,80 +52,11 @@ translation_of: Web/API/Cache/keys
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(39)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(39)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 可选参数只支持 <code>ignoreSearch 和</code> <code>cacheName </code>。</p>
-
-<p>[2] Service workers (以及<a href="/en-US/docs/Web/API/Push_API">Push</a>) 在 <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR) 中已经被禁止了。</p>
+{{Compat("api.Cache.keys")}}
 
 <h2 id="参见">参见</h2>
 

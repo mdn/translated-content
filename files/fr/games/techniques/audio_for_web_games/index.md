@@ -11,8 +11,6 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/fr/docs/Jeux")}}
-
 L'audio représente une chose essentielle dans n'importe quel jeu vidéo; il apporte de l'information et contribue à l'atmosphère du jeu. La prise en charge de l'audio a évolué de manière rapide mais il reste encore beaucoup de différences de prise en charge entre les navigateurs. Nous avons souvent besoin de décider quelles parties de notre contenu audio est intéressant et laquelle ne l'est pas, et mettre en place une stratégie en conséquence. Cet article fournit un guide détaillé sur l'implémentation de l'audio dans les jeux HTML5, détaillant quels choix technologiques fonctionneront sur le plus grand nombre de navigateurs.
 
 ## Avertissement sur l'audio sur mobile
@@ -300,7 +298,7 @@ Regardons maintenant le code. Nous créons d'abord un nouveau {{domxref ("AudioC
 
 `start()` (anciennement appelé `noteOn ())` commence à lire un élément audio. `start ()` demande trois paramètres (facultatifs) :
 
-1.  when _(quand)_ : le temps absolu pour commencer la lecture .
+1.  when _(quand)_ : le temps absolu pour commencer la lecture .
 2.  where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
 3.  how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
 
@@ -316,7 +314,7 @@ Vous pouvez trouver que l'introduction d'une nouvelle piste sonne plus naturelle
 
 Pour ce faire, avant de jouer la piste que vous voulez synchroniser, vous devez calculer combien de temps cela va durer jusqu'au début de la prochaine unité musicale.
 
-Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
+Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
 
 ```js
 if (offset == 0) {
@@ -347,7 +345,7 @@ Nous pouvons relier :
 - la direction des objets (mouvement de position et génération de l'effet Doppler)
 - l'environnement (caverneux, sous-marin, etc.)
 
-Ceci est particulièrement utile dans un environnement tridimensionnel rendu en utilisant [WebGL](/fr/docs/Web/API/WebGL_API), avec lequel l'API Web Audio permet d'associer l'audio aux objets et aux points de vue .
+Ceci est particulièrement utile dans un environnement tridimensionnel rendu en utilisant [WebGL](/fr/docs/Web/API/WebGL_API), avec lequel l'API Web Audio permet d'associer l'audio aux objets et aux points de vue .
 
 > **Note :** Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
 

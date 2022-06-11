@@ -45,7 +45,7 @@ Firefox considérera la résolution de l'écran lors du choix d'une icône. Pour
 
 ## Exemple
 
-Les clés dans l'objet icons spécifient la taille de l'icône en pixels et la valeur spécifie le chemin relatif de l'icône. Cet exemple contient une icône d'extension 48px et une version plus grande pour les écrans haute résolution.
+Les clés dans l'objet icons spécifient la taille de l'icône en pixels et la valeur spécifie le chemin relatif de l'icône. Cet exemple contient une icône d'extension 48px et une version plus grande pour les écrans haute résolution.
 
 ```json
 "icons": {

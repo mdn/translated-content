@@ -10,7 +10,7 @@ translation_of: Web/API/FormData/append
 <p>{{domxref("FormData.set")}} 和 <code>append()</code> 的区别在于，如果指定的键已经存在， {{domxref("FormData.set")}} 会使用新值覆盖已有的值，而 <code>append()</code> 会把新值添加到已有值集合的后面。</p>
 
 <div class="note">
-<p><strong>提示</strong>： 这个方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 中可用。</p>
+<p><strong>提示</strong>：这个方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 中可用。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -50,7 +50,7 @@ formData.append(name, value, filename);</pre>
 <pre class="brush: js">formData.append('username', 'Chris');
 formData.append('userpic', myFileInput.files[0], 'chris.jpg');</pre>
 
-<p>跟常规<code>表单数据一样，你可以使用同一个名称添加多个值</code> 。例如 (为了与PHP命名习惯一致在名称中添加了[])：</p>
+<p>跟常规<code>表单数据一样，你可以使用同一个名称添加多个值</code> 。例如 (为了与 PHP 命名习惯一致在名称中添加了 [])：</p>
 
 <pre class="brush: js">formData.append('userpic[]', myFileInput1.files[0], 'chris1.jpg');
 formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');</pre>
@@ -76,99 +76,7 @@ formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>7</td>
-   <td>{{CompatGeckoDesktop("2.0")}}<sup>[1]</sup></td>
-   <td>10</td>
-   <td>12</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>支持filename参数</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>在web workers中可用</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>3.0<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}<sup>[1]</sup></td>
-   <td>1.0.1</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>12</p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>支持filename参数</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>在web workers中可用</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Prior to Gecko 7.0 {{geckoRelease("7.0")}}, if you specified a {{domxref("Blob")}} as the data to append to the object, the filename reported in the "Content-Disposition" HTTP header was an empty string; this resulted in errors being reported by some servers. Starting in Gecko 7.0 the filename "blob" is sent.</p>
-
-<p>[2] XHR in Android 4.0 sends empty content for FormData with blob.</p>
+{{Compat("api.FormData.append")}}
 
 <h2 id="相关链接">相关链接</h2>
 

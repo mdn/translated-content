@@ -14,30 +14,30 @@ tags:
 translation_of: >-
   Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font> 16 </font><font>的</font></font><strong><font><font>第三步</font></font></strong><font><font>。</font><font>您可以在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson03.html</font></a><font>完成本课程后找到源代码</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a> 16 的<strong>第三步</strong>。您可以在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html">Gamedev-Phaser-Content-Kit / demos / lesson03.html</a>完成本课程后找到源代码</p>
 </div>
 
-<p><font>我们的游戏将围绕屏幕滚动，弹出一个桨，摧毁砖块赚取积分 - 熟悉吗？</font><font>在本文中，我们将介绍如何将sprite添加到我们的gameworld中。</font></p>
+<p>我们的游戏将围绕屏幕滚动，弹出一个桨，摧毁砖块赚取积分 - 熟悉吗？在本文中，我们将介绍如何将 sprite 添加到我们的 gameworld 中。</p>
 
-<h2 id="有一个球"><font><font>有一个球</font></font></h2>
+<h2 id="有一个球">有一个球</h2>
 
-<p><font><font>我们开始创建一个JavaScript变量来表示我们的球 - 在游戏初始化代码（我们的</font></font><code>var game...</code><font><font>块）和</font></font><code>preload()</code><font><font>函数</font><font>之间添加以下行</font><font>：</font></font></p>
+<p>我们开始创建一个 JavaScript 变量来表示我们的球 - 在游戏初始化代码（我们的<code>var game...</code>块）和<code>preload()</code>函数之间添加以下行：</p>
 
 <pre class="brush: js">var ball;
 </pre>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：为了本教程，我们将使用全局变量。</font><strong><font>本教程的目的是教导Phaser特定的游戏开发方法，而不是主观的最佳方法。</font></strong></font></p>
+<p><strong>注意</strong>：为了本教程，我们将使用全局变量。<strong>本教程的目的是教导 Phaser 特定的游戏开发方法，而不是主观的最佳方法。</strong></p>
 </div>
 
-<h2 id="加载球精灵"><font><font>加载球精灵</font></font></h2>
+<h2 id="加载球精灵">加载球精灵</h2>
 
-<p><font><font>使用Phaser加载图像并将其打印在我们的画布上比使用纯JavaScript容易得多。</font><font>要加载资产，我们将使用</font></font><code>game</code><font><font>由Phaser创建</font><font>的</font><font>对象，执行其</font></font><code>load.image()</code><font><font>方法。</font><font>在</font></font><code>preload()</code><font><font>函数的底部</font><font>添加以下新行</font><font>：</font></font></p>
+<p>使用 Phaser 加载图像并将其打印在我们的画布上比使用纯 JavaScript 容易得多。要加载资产，我们将使用<code>game</code>由 Phaser 创建的对象，执行其<code>load.image()</code>方法。在<code>preload()</code>函数的底部添加以下新行：</p>
 
 <pre class="brush: js">function preload() {
     // ...
@@ -45,27 +45,27 @@ translation_of: >-
 }
 </pre>
 
-<p><font><font>第一个参数是我们要提供资产的名称 - 这将在我们的游戏代码中使用，例如我们的</font></font><code>ball</code><font><font>变量名称，所以我们需要确保它是一样的。</font><font>第二个参数是图形资源的相对路径。</font><font>在我们的情况下，我们将加载我们的球的图像（请注意，文件名不一定是一致的，但我们建议，因为它使一切更容易遵循。）</font></font></p>
+<p>第一个参数是我们要提供资产的名称 - 这将在我们的游戏代码中使用，例如我们的<code>ball</code>变量名称，所以我们需要确保它是一样的。第二个参数是图形资源的相对路径。在我们的情况下，我们将加载我们的球的图像（请注意，文件名不一定是一致的，但我们建议，因为它使一切更容易遵循。）</p>
 
-<p><font><font>当然，要加载图像，它需要在我们的代码目录中可用。</font></font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png"><font><font>从Github抓住球图像</font></font></a><font><font>，并将其保存</font></font><code>/img</code><font><font>在与</font></font><code>index.html</code><font><font>文件</font><font>相同位置</font><font>的</font><font>目录中</font><font>。</font></font></p>
+<p>当然，要加载图像，它需要在我们的代码目录中可用。<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png">从 Github 抓住球图像</a>，并将其保存<code>/img</code>在与<code>index.html</code>文件相同位置的目录中。</p>
 
-<p><font><font>现在，要在屏幕上显示，我们将使用另一种Phaser方法</font></font><code>add.sprite()</code><font><font>：</font><font>在</font></font><code>create()</code><font><font>函数</font><font>内添加以下新的代码行</font><font>，如图所示：</font></font></p>
+<p>现在，要在屏幕上显示，我们将使用另一种 Phaser 方法<code>add.sprite()</code>：在<code>create()</code>函数内添加以下新的代码行，如图所示：</p>
 
 <pre class="brush: js">function create() {
     ball = game.add.sprite(50, 50, 'ball');
 }
 </pre>
 
-<p><font><font>这将添加球到游戏，并将其呈现在屏幕上。</font><font>前两个参数是要添加的画布的x和y坐标，第三个是我们之前定义的资产的名称。</font><font>就是这样 - 如果你加载你的</font></font><code>index.html</code><font><font>文件，你会看到已经加载并在画布上渲染的图像！</font></font></p>
+<p>这将添加球到游戏，并将其呈现在屏幕上。前两个参数是要添加的画布的 x 和 y 坐标，第三个是我们之前定义的资产的名称。就是这样 - 如果你加载你的<code>index.html</code>文件，你会看到已经加载并在画布上渲染的图像！</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/98xrv9x5/","","400")}}</p>
 
-<h2 id="下一步"><font><font>下一步</font></font></h2>
+<h2 id="下一步">下一步</h2>
 
-<p><font><font>打出球很容易; </font><font>接下来我们将尝试</font><font>在屏幕上</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball"><font><font>移动球</font></font></a><font><font>。</font></font></p>
+<p>打出球很容易; 接下来我们将尝试在屏幕上<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball">移动球</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>

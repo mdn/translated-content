@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Property_access_denied
 
 ## Message
 
-    Error: Permission denied to access property "x"
+```
+Error: Permission denied to access property "x"
+```
 
 ## Type d'erreur
 
@@ -28,16 +30,16 @@ Il y a eu une tentative d'accès non-autorisée à un objet sur lequel vous n'av
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function() {
+  <head>
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
+      onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    </script>
-  </head>
-  <body></body>
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 

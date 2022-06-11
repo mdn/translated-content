@@ -66,7 +66,7 @@ function displayData() {
 
 | Spécification                                                                                                | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-only-IDBKeyRange-any-value', 'only')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-only-IDBKeyRange-any-value', 'only')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

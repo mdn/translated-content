@@ -1,5 +1,5 @@
 ---
-title: Django Web应用安全
+title: Django Web 应用安全
 slug: learn/Server-side/Django/web_application_security
 translation_of: Learn/Server-side/Django/web_application_security
 ---
@@ -7,74 +7,74 @@ translation_of: Learn/Server-side/Django/web_application_security
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">保<font><font>护用户数据是任何网站设计的重要部分。</font><font>我们之前在文章<a href="https://developer.mozilla.org/en-US/docs/Web/Security">web安全</a>中</font></font><font><font>解释了一些更常见的安全威胁--</font><font>本文提供了Django的内置保护如何处理这些威胁的实际演示</font></font>。</p>
+<p>保护用户数据是任何网站设计的重要部分。我们之前在文章<a href="https://developer.mozilla.org/en-US/docs/Web/Security">web 安全</a>中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
-   <td>阅读服务器端网页编程中的 "<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/First_steps/Website_security">Website security</a>" 主题。并请至少完成Django Web框架教程 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: 使用表单</a> 及以前的教程。</td>
+   <th scope="row">前提：</th>
+   <td>阅读服务器端网页编程中的 "<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/First_steps/Website_security">Website security</a>" 主题。并请至少完成 Django Web 框架教程 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: 使用表单</a> 及以前的教程。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>理解保障Django网站安全应该(和不应该)做的事情。</td>
+   <th scope="row">目标：</th>
+   <td>理解保障 Django 网站安全应该 (和不应该) 做的事情。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="概述">概述</h2>
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security">web安全</a><a href="https://developer.mozilla.org/en-US/docs/Web/Security"> </a>主題提供一个概述，说明了网站安全对于服务器端设计的意义，以及以及一些需要应对的常见威胁。本文中包含一个关键的概念：如果网站信任任何来自浏览器的数据，几乎所有的攻击方法都会成功。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security">web 安全</a><a href="https://developer.mozilla.org/en-US/docs/Web/Security"> </a>主題提供一个概述，说明了网站安全对于服务器端设计的意义，以及以及一些需要应对的常见威胁。本文中包含一个关键的概念：如果网站信任任何来自浏览器的数据，几乎所有的攻击方法都会成功。</p>
 
 <div class="warning">
-<p><strong>重要提示:</strong> 切记，对于网站安全来说最重要一点就是<strong>“永远不要相信浏览器端提交的数据”</strong>。 这些数据包括使用<code>GET</code>方式请求时URL中的参数，<code>POST</code> 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等. 请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。</p>
+<p><strong>重要提示：</strong> 切记，对于网站安全来说最重要一点就是<strong>“永远不要相信浏览器端提交的数据”</strong>。 这些数据包括使用<code>GET</code>方式请求时 URL 中的参数，<code>POST</code> 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等。请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。</p>
 </div>
 
-<p>对Django用户来说，好消息是Django框架已经处理了大量的常见威胁。请阅读Django官方文档中的"<a href="https://docs.djangoproject.com/en/2.0/topics/security/">Security in Django</a>"部分来了解Django的安全细节，以及如何确保基于Django的网站的安全。</p>
+<p>对 Django 用户来说，好消息是 Django 框架已经处理了大量的常见威胁。请阅读 Django 官方文档中的"<a href="https://docs.djangoproject.com/en/2.0/topics/security/">Security in Django</a>"部分来了解 Django 的安全细节，以及如何确保基于 Django 的网站的安全。</p>
 
 <h2 id="常见威胁及保护">常见威胁及保护</h2>
 
-<p>在本文中，我们将使用前面章节中的“<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/Tutorial_local_library_website">本地图书馆</a>”项目作为示范来演示一些Django的安全特性。</p>
+<p>在本文中，我们将使用前面章节中的“<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/Tutorial_local_library_website">本地图书馆</a>”项目作为示范来演示一些 Django 的安全特性。</p>
 
 <h3 id="跨站脚本_(XSS)">跨站脚本 (XSS)</h3>
 
-<p>XSS(英语：Cross site scripting，通常简称：XSS)是指一类恶意攻击者将代码通过网站注入到其他用户浏览器中的攻击方式。一般攻击者会把恶意代码作为普通数据放入到网站数据库中，这样其他用户在获取和展示数据的过程中就会受到攻击。此外，攻击者还可以通过引诱用户点击某些链接来执行恶意的JavaScript代码。</p>
+<p>XSS(英语：Cross site scripting，通常简称：XSS) 是指一类恶意攻击者将代码通过网站注入到其他用户浏览器中的攻击方式。一般攻击者会把恶意代码作为普通数据放入到网站数据库中，这样其他用户在获取和展示数据的过程中就会受到攻击。此外，攻击者还可以通过引诱用户点击某些链接来执行恶意的 JavaScript 代码。</p>
 
-<p>Django的模板系统可以帮您抵挡大部分的XSS攻击，实现的方式在于转义对于HTML来说比较<strong>“危险”</strong>的特殊字符(可参考官方文档：<a href="https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping">escaping specific characters</a>)。现在，我们用<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a> 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些JavaScript脚本。</p>
+<p>Django 的模板系统可以帮您抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较<strong>“危险”</strong>的特殊字符 (可参考官方文档：<a href="https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping">escaping specific characters</a>)。现在，我们用<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a> 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。</p>
 
 <ol>
- <li>使用开发服务器启动网站(参考命令：<code>python3 manage.py runserver</code>)。</li>
+ <li>使用开发服务器启动网站 (参考命令：<code>python3 manage.py runserver</code>)。</li>
  <li>在浏览器中打开网站，并用超级用户身份登录。</li>
  <li>进入创建作者页面 (地址可能会是：<code><a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a></code>)。</li>
- <li>输入姓名、生日等信息，随后在Last Name这个字段里面填入以下的内容：<br>
+ <li>输入姓名、生日等信息，随后在 Last Name 这个字段里面填入以下的内容：<br>
   <code>&lt;script&gt;alert('Test alert');&lt;/script&gt;</code><br>
   <img alt="Author Form XSS test" src="https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png" style="border-style: solid; border-width: 1px; height: 245px; width: 594px;">
   <div class="note">
-  <p><strong>注意:</strong> 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被XSS攻击的漏洞。</p>
+  <p><strong>注意：</strong> 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被 XSS 攻击的漏洞。</p>
   </div>
  </li>
  <li>点击 <strong>Submit</strong> 按钮保存信息。</li>
- <li>保存后的作者信息将会显示为下图的样式。因为XSS防护措施的存在，注入代码中的<code>alert()</code>部分并没有执行，而只是用文本的方式直接显示了出来。<img alt="Author detail view XSS test" src="https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png" style="border-style: solid; border-width: 1px; height: 248px; width: 986px;"></li>
+ <li>保存后的作者信息将会显示为下图的样式。因为 XSS 防护措施的存在，注入代码中的<code>alert()</code>部分并没有执行，而只是用文本的方式直接显示了出来。<img alt="Author detail view XSS test" src="https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png" style="border-style: solid; border-width: 1px; height: 248px; width: 986px;"></li>
 </ol>
 
-<p>如果你有兴趣阅读下页面的HTML源码，则会发现危险的字符已被转义成了无害的字符(例如： <code>&gt;</code> 被转义为了 <code>&amp;gt;</code> )</p>
+<p>如果你有兴趣阅读下页面的 HTML 源码，则会发现危险的字符已被转义成了无害的字符 (例如： <code>&gt;</code> 被转义为了 <code>&amp;gt;</code> )</p>
 
 <pre class="brush: html">&lt;h1&gt;Author: Boon&amp;lt;script&amp;gt;alert(&amp;#39;Test alert&amp;#39;);&amp;lt;/script&amp;gt;, David (Boonie) &lt;/h1&gt;
 </pre>
 
-<p>Django的模板系统可以帮助抵御大部分的XSS攻击。当然，XSS保护功能也可以被关闭，而且XSS保护一般对非用户输入的内容不会自动进行防护(例如表单中字段的<code>help_text</code>通常不会是用户提交的，所以这部分数据Django也不会进行转义)</p>
+<p>Django 的模板系统可以帮助抵御大部分的 XSS 攻击。当然，XSS 保护功能也可以被关闭，而且 XSS 保护一般对非用户输入的内容不会自动进行防护 (例如表单中字段的<code>help_text</code>通常不会是用户提交的，所以这部分数据 Django 也不会进行转义)</p>
 
-<p>XSS攻击也可能来自于其他不可信的数据来源，例如cookies，Web服务或上传的文件（实际上只要是未经清洗的数据直接展示出来都会有被攻击的可能）。如果你要显示这些不可信来源的数据，切记一定要自己做好数据清洗的工作。</p>
+<p>XSS 攻击也可能来自于其他不可信的数据来源，例如 cookies，Web 服务或上传的文件（实际上只要是未经清洗的数据直接展示出来都会有被攻击的可能）。如果你要显示这些不可信来源的数据，切记一定要自己做好数据清洗的工作。</p>
 
 <h3 id="防护跨站请求伪造_(CSRF)">防护跨站请求伪造 (CSRF) </h3>
 
-<p>CSRF(英语：Cross-site request forgery，通常简称：CSRF或XSRF)攻击可以让恶意攻击者在用户不知情的情况下，使用用户的身份来进行系统操作。举个例子，现在有一名黑客想要在我们的本地图书馆中添加一些作者信息。</p>
+<p>CSRF(英语：Cross-site request forgery，通常简称：CSRF 或 XSRF) 攻击可以让恶意攻击者在用户不知情的情况下，使用用户的身份来进行系统操作。举个例子，现在有一名黑客想要在我们的本地图书馆中添加一些作者信息。</p>
 
 <div class="note">
 <p><strong>注意：这个示例里面的黑客没有考虑对钱下手。而现实生活中的黑客则极有可能会产生更加危险的操作（例如，把钱转入他们自己的账户中等等）。</strong></p>
 </div>
 
-<p>为了实现这个目的，黑客可以创建一个类似于下面示例的HTML文件，这个文件包含了一个创建作者的表单(类似我们在之前章节中用过的)，并且一旦加载完毕就会立即进行提交。随后黑客可以将这个文件发送至所有的图书管理员，并且引诱他们打开这个文件(文件中真的没有啥有害的信息)。如果任何一个已登录的图书管理员不慎打开了这个文件，那么文件中的表单就会利用图书管理员的身份来提交，随后就会创建出一个新的作者来。</p>
+<p>为了实现这个目的，黑客可以创建一个类似于下面示例的 HTML 文件，这个文件包含了一个创建作者的表单 (类似我们在之前章节中用过的)，并且一旦加载完毕就会立即进行提交。随后黑客可以将这个文件发送至所有的图书管理员，并且引诱他们打开这个文件 (文件中真的没有啥有害的信息)。如果任何一个已登录的图书管理员不慎打开了这个文件，那么文件中的表单就会利用图书管理员的身份来提交，随后就会创建出一个新的作者来。</p>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;body onload='document.EvilForm.submit()'&gt;
@@ -93,61 +93,61 @@ translation_of: Learn/Server-side/Django/web_application_security
 &lt;/html&gt;
 </pre>
 
-<p>运行Django开发服务器，然后使用超级管理员账号进行登录。将上面的代码贴到一个文件中，并在浏览器中打开这个文件，随后你就会看到一个CSRF错误，这是因为Django的安全机制防护了此类的攻击。</p>
+<p>运行 Django 开发服务器，然后使用超级管理员账号进行登录。将上面的代码贴到一个文件中，并在浏览器中打开这个文件，随后你就会看到一个 CSRF 错误，这是因为 Django 的安全机制防护了此类的攻击。</p>
 
-<p>在表单定义的时候加入 <code>{% csrf_token %} </code>这个模板标签， CSRF保护功能即可启用。在模板渲染的时候，这个token在 HTML代码中将会按照下面的格式显示，包含了一个与当前用户和当前浏览器关联的值。</p>
+<p>在表单定义的时候加入 <code>{% csrf_token %} </code>这个模板标签，CSRF 保护功能即可启用。在模板渲染的时候，这个 token 在 HTML 代码中将会按照下面的格式显示，包含了一个与当前用户和当前浏览器关联的值。</p>
 
 <pre class="brush: html">&lt;input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' /&gt;
 </pre>
 
 <p>Django生成这个用户/浏览器关联key的目的在于可以据此来拒绝那些不包含这个key的表单请求，也可以拒绝那些包含了错误了用户/浏览器关联key的表单请求。</p>
 
-<p>有了这种保护机制后，攻击者要发起攻击就需要找到目标用户的CSRF key。通过广撒网给所有的图书管理员发送恶意代码文件的方式也很难奏效，因为CSRF key是和浏览器相关联的。</p>
+<p>有了这种保护机制后，攻击者要发起攻击就需要找到目标用户的 CSRF key。通过广撒网给所有的图书管理员发送恶意代码文件的方式也很难奏效，因为 CSRF key 是和浏览器相关联的。</p>
 
-<p>Django的CSRF防御默认是开启的。一定要在表单的位置使用 <code>{% csrf_token %}</code>这个标签，同时，切记使用<code>POST</code>方式来发起新增和更新数据的请求。</p>
+<p>Django 的 CSRF 防御默认是开启的。一定要在表单的位置使用 <code>{% csrf_token %}</code>这个标签，同时，切记使用<code>POST</code>方式来发起新增和更新数据的请求。</p>
 
 <h3 id="其他防护措施">其他防护措施</h3>
 
-<p>Django还提供了很多其他形式的防护措施 (大部分不是很容易进行演示):</p>
+<p>Django 还提供了很多其他形式的防护措施 (大部分不是很容易进行演示):</p>
 
 <dl>
- <dt>SQL注入防护</dt>
- <dd>SQL注入漏洞可以让攻击者直接对网站数据库执行构造好的SQL语句，在无需用户权限的情况下即可实现对数据的访问、修改甚至是删除。绝大多数的情况下，使用Django的查询集/模型直接进行数据库访问时，实际使用的SQL语句已经被底层的数据库驱动妥善地进行了转义。如果必须要直接执行自定义的SQL语句，那么也请一定要注意防范SQL注入的问题。</dd>
+ <dt>SQL 注入防护</dt>
+ <dd>SQL 注入漏洞可以让攻击者直接对网站数据库执行构造好的 SQL 语句，在无需用户权限的情况下即可实现对数据的访问、修改甚至是删除。绝大多数的情况下，使用 Django 的查询集/模型直接进行数据库访问时，实际使用的 SQL 语句已经被底层的数据库驱动妥善地进行了转义。如果必须要直接执行自定义的 SQL 语句，那么也请一定要注意防范 SQL 注入的问题。</dd>
  <dt>点击劫持防护</dt>
- <dd>点击劫持是指攻击者通过诱导用户，用户本意要访问A网站，最终却访问到了B网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt; </a>标签，以此来窃取用户的登录信息。Django通过 <code><a href="https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware" title="django.middleware.clickjacking.XFrameOptionsMiddleware">X-Frame-Options</a></code>中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在iframe中显示。</dd>
+ <dd>点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt; </a>标签，以此来窃取用户的登录信息。Django 通过 <code><a href="https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware" title="django.middleware.clickjacking.XFrameOptionsMiddleware">X-Frame-Options</a></code>中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。</dd>
  <dt>强制SSL/HTTPS</dt>
  <dd>web服务器可通过启用SSL/HTTPS来加密网站和浏览器之间的所有通信流量，包括了身份认证及其他通过纯文本方式来发送的数据流量(强烈建议启用HTTPS)。如果HTTPS已启用，Django还提供了一起实用的保护措施:</dd>
 </dl>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER"><code>SECURE_PROXY_SSL_HEADER</code></a> 设置可以用于检查内容是否安全，可用于代理和Django之间使用非HTTPS方式通讯的情况下。</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT"><code>SECURE_SSL_REDIRECT</code></a> 可以将所有HTTP的请求重定向到HTTPS。</li>
- <li>使用 <a href="https://docs.djangoproject.com/en/2.0/ref/middleware/#http-strict-transport-security">HTTP Strict Transport Security</a> (HSTS) 头来通知浏览器未来与此网站的连接仅使用HTTPS。与HTTP连接重定向至HTTPS的配置相结合后，HSTS可以确保之后的连接强制使用HTTPS。HSTS还有 <code><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_HSTS_SECONDS">SECURE_HSTS_SECOND</a></code>和 <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS"><code>SECURE_HSTS_INCLUDE_SUBDOMAINS</code></a> 等选项可以进行配置。</li>
- <li>将 <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE"><code>SESSION_COOKIE_SECURE</code></a> 和 <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE"><code>CSRF_COOKIE_SECURE</code></a> 设置为 <code>True</code>。这些配置将确保session和csrf的cookie仅使用HTTPS连接来发送。</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER"><code>SECURE_PROXY_SSL_HEADER</code></a> 设置可以用于检查内容是否安全，可用于代理和 Django 之间使用非 HTTPS 方式通讯的情况下。</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT"><code>SECURE_SSL_REDIRECT</code></a> 可以将所有 HTTP 的请求重定向到 HTTPS。</li>
+ <li>使用 <a href="https://docs.djangoproject.com/en/2.0/ref/middleware/#http-strict-transport-security">HTTP Strict Transport Security</a> (HSTS) 头来通知浏览器未来与此网站的连接仅使用 HTTPS。与 HTTP 连接重定向至 HTTPS 的配置相结合后，HSTS 可以确保之后的连接强制使用 HTTPS。HSTS 还有 <code><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_HSTS_SECONDS">SECURE_HSTS_SECOND</a></code>和 <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS"><code>SECURE_HSTS_INCLUDE_SUBDOMAINS</code></a> 等选项可以进行配置。</li>
+ <li>将 <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE"><code>SESSION_COOKIE_SECURE</code></a> 和 <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE"><code>CSRF_COOKIE_SECURE</code></a> 设置为 <code>True</code>。这些配置将确保 session 和 csrf 的 cookie 仅使用 HTTPS 连接来发送。</li>
 </ul>
 
 <dl>
- <dt>Host头校验</dt>
- <dd>使用 <code><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-ALLOWED_HOSTS">ALLOWED_HOSTS</a></code> 配置仅接受由信任的host发起的请求。</dd>
+ <dt>Host 头校验</dt>
+ <dd>使用 <code><a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-ALLOWED_HOSTS">ALLOWED_HOSTS</a></code> 配置仅接受由信任的 host 发起的请求。</dd>
 </dl>
 
-<p>还有很多其他的安全措施及使用这些安全措施的注意事项我们没有提到。我们这里仅仅提供了Django安全措施的一个概览，更多的信息请参阅Django官方安全文档。</p>
+<p>还有很多其他的安全措施及使用这些安全措施的注意事项我们没有提到。我们这里仅仅提供了 Django 安全措施的一个概览，更多的信息请参阅 Django 官方安全文档。</p>
 
 <ul>
 </ul>
 
 <h2 id="总结">总结</h2>
 
-<p>Django具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示Django如何处理一些特定的攻击。我们也提供了关于其它保护措施的简单概述。</p>
+<p>Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示 Django 如何处理一些特定的攻击。我们也提供了关于其它保护措施的简单概述。</p>
 
-<p>但这仅仅是对网站安全的一个入门。我们强烈建议您阅读 <a href="https://docs.djangoproject.com/en/2.0/topics/security/">Django中的安全</a> 以获得更加深入的理解。</p>
+<p>但这仅仅是对网站安全的一个入门。我们强烈建议您阅读 <a href="https://docs.djangoproject.com/en/2.0/topics/security/">Django 中的安全</a> 以获得更加深入的理解。</p>
 
-<p>本Django教程的下一步，也是最后一步，是完成 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog">评估任务</a>。</p>
+<p>本 Django 教程的下一步，也是最后一步，是完成 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog">评估任务</a>。</p>
 
 <h2 id="参阅">参阅</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/topics/security/">Security in Django</a> (Django官方文档)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/topics/security/">Security in Django</a> (Django 官方文档)</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security">Server side website security</a> (MDN)</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</a> (MDN)</li>
  <li><a href="/en-US/docs/Web/Security/Securing_your_site">Securing your site</a> (MDN)</li>

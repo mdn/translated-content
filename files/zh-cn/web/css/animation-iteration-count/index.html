@@ -7,7 +7,7 @@ translation_of: Web/CSS/animation-iteration-count
 
 <h2 id="Summary_概要">Summary 概要</h2>
 
-<p><strong><code>animation-iteration-count</code></strong> <a href="/en/CSS" title="CSS">CSS</a> 属性   定义动画在结束前运行的次数 可以是1次 无限循环.</p>
+<p><strong><code>animation-iteration-count</code></strong> <a href="/en/CSS" title="CSS">CSS</a> 属性   定义动画在结束前运行的次数 可以是 1 次 无限循环。</p>
 
 <p>如果指定了多个值，每次播放动画时，将使用列表中的下一个值，在使用最后一个值后循环回第一个值。</p>
 
@@ -36,7 +36,7 @@ animation-iteration-count: 2, 0, infinite;
 
 <dl>
  <dt><code>infinite</code></dt>
- <dd>无限循环播放动画.</dd>
+ <dd>无限循环播放动画。</dd>
  <dt><code>&lt;number&gt;</code></dt>
  <dd>动画播放的次数；默认值为<code>1</code>。可以用小数定义循环，来播放动画周期的一部分：例如，<code>0.5</code> 将播放到动画周期的一半。不可为负值。</dd>
 </dl>
@@ -70,62 +70,7 @@ animation-iteration-count: 2, 0, infinite;
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility 兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}<br>
-    {{CompatChrome(43.0)}}</td>
-   <td>{{ CompatGeckoDesktop("5.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10 </td>
-   <td>12 {{ property_prefix("-o") }}<br>
-    12.10</td>
-   <td>4.0{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("5.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoMobile("16.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatChrome(43.0)}}<br>
-     </td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.animation-iteration-count")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -9,9 +9,9 @@ translation_of: Web/API/Element/getElementsByTagName
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><code><strong>Element.getElementsByTagName()</strong></code> 方法返回一个动态的包含所有指定标签名的元素的HTML集合{{domxref("HTMLCollection")}}。指定的元素的子树会被搜索，不包括元素自己。返回的列表是动态的，这意味着它会随着DOM树的变化自动更新自身。所以，使用相同元素和相同参数时，没有必要多次的调用<code>Element.getElementsByTagName()</code> .</p>
+<p><code><strong>Element.getElementsByTagName()</strong></code> 方法返回一个动态的包含所有指定标签名的元素的 HTML 集合{{domxref("HTMLCollection")}}。指定的元素的子树会被搜索，不包括元素自己。返回的列表是动态的，这意味着它会随着 DOM 树的变化自动更新自身。所以，使用相同元素和相同参数时，没有必要多次的调用<code>Element.getElementsByTagName()</code> .</p>
 
-<p>如果是HTML文档中的某个元素调用了<code>getElementsByTagName函数，</code> 运行前会将参数转为小写字母形式。故不建议在驼峰式命名的SVG元素中使用。 {{ domxref("Element.getElementsByTagNameNS()") }} 适用于那种情况.</p>
+<p>如果是 HTML 文档中的某个元素调用了<code>getElementsByTagName 函数，</code> 运行前会将参数转为小写字母形式。故不建议在驼峰式命名的 SVG 元素中使用。 {{ domxref("Element.getElementsByTagNameNS()") }} 适用于那种情况。</p>
 
 <p><code>Element.getElementsByTagName</code> 和 {{domxref("Document.getElementsByTagName()")}}类似，除了它的搜索被限制为指定元素的后代。</p>
 
@@ -20,9 +20,9 @@ translation_of: Web/API/Element/getElementsByTagName
 <pre class="syntaxbox"><code><em>elements</em> = <em>element</em>.getElementsByTagName(<em>tagName</em>)</code></pre>
 
 <ul>
- <li><code>elements 搜索到的元素的动态HTML集合</code>{{domxref("HTMLCollection")}}，它们的顺序是<code>在子树中出现的顺序</code>。 如果没有搜索到元素则这个集合为空。</li>
- <li><code>element</code> 搜索从element开始。请注意只有element的后代元素会被搜索，不包括元素自己。</li>
- <li><code>tagName</code> 要查找的限定名。 字符 <code>"*"</code> 代表所有元素。 考虑到兼容XHTML，应该使用小写。</li>
+ <li><code>elements 搜索到的元素的动态 HTML 集合</code>{{domxref("HTMLCollection")}}，它们的顺序是<code>在子树中出现的顺序</code>。 如果没有搜索到元素则这个集合为空。</li>
+ <li><code>element</code> 搜索从 element 开始。请注意只有 element 的后代元素会被搜索，不包括元素自己。</li>
+ <li><code>tagName</code> 要查找的限定名。 字符 <code>"*"</code> 代表所有元素。 考虑到兼容 XHTML，应该使用小写。</li>
 </ul>
 
 <h2 id="实例">实例</h2>
@@ -72,62 +72,4 @@ for (var i = 0; i &lt; cells.length; i++) {
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0 [2]</td>
-   <td>{{ CompatVersionUnknown() }} [1]</td>
-   <td>5.5</td>
-   <td>{{ CompatVersionUnknown() }} [2]</td>
-   <td>{{ CompatVersionUnknown() }} [2]</td>
-  </tr>
-  <tr>
-   <td>getElementsByTagName("*")</td>
-   <td>1.0</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>6.0</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }} [1]</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox 19之前的版本，该方法会返回一个 {{domxref("NodeList")}}；之后根据规范进行了改变。</p>
-
-<p>[2] 最初，该方法会返回一个{{domxref("NodeList")}}；之后根据规范进行了改变。</p>
+{{Compat("api.Element.getElementsByTagName")}}

@@ -11,7 +11,7 @@ translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 
 <h2 id="异步请求">异步请求</h2>
 
-<p>如果你使用<code>XMLHttpRequest</code>发送异步请求,那么当请求的响应数据完全收到之时，会执行一个指定的回调函数，而在执行异步请求的同时,浏览器会正常地执行其他事务的处理。</p>
+<p>如果你使用<code>XMLHttpRequest</code>发送异步请求，那么当请求的响应数据完全收到之时，会执行一个指定的回调函数，而在执行异步请求的同时，浏览器会正常地执行其他事务的处理。</p>
 
 <h3 id="例子：在控制台输出页面源文件">例子：在控制台输出页面源文件</h3>
 
@@ -33,15 +33,15 @@ xhr.onerror = function (e) {
 };
 xhr.send(null);</pre>
 
-<p>第2行中指定第三个参数为<code>true</code>，<code>表示该请求</code>应该以异步模式执行。</p>
+<p>第 2 行中指定第三个参数为 <code>true</code>，表示该请求应该以异步模式执行。</p>
 
-<p>第3行创建一个事件处理函数对象，并将其分配给请求的<code>onload</code>属性。此处理程序查看请求的<code>readyState</code>，以查看事务是否在第4行完成，如果是，并且HTTP状态为200，则转储接收到的内容。如果发生错误，则显示错误消息。</p>
+<p>第 3 行创建一个事件处理函数对象，并将其分配给请求的 <code>onload</code> 属性。此处理程序查看请求的 <code>readyState</code>，以查看事务是否在第 4 行完成，如果是，并且 HTTP 状态为 200，则转储接收到的内容。如果发生错误，则显示错误消息。</p>
 
-<p>第15行实际上启动了请求。只要请求的状态发生变化，就会调用回调程序。</p>
+<p>第 15 行实际上启动了请求。只要请求的状态发生变化，就会调用回调程序。</p>
 
-<h3 id="例子：创建一个标准的方法来读取外部文件">例子：创建一个标准的方法来读取外部文件</h3>
+<h3 id="例子_创建一个标准的方法来读取外部文件">例子：创建一个标准的方法来读取外部文件</h3>
 
-<p>在一些需求情况下,必须读取多个外部文件. 这是一个标准的函数. 该函数使用<code>XMLHttpRequest</code>对象进行异步请求.而且可以为每个文件读取完成后指定不同的回调函数.</p>
+<p>在一些需求情况下，必须读取多个外部文件。这是一个标准的函数. 该函数使用 <code>XMLHttpRequest</code> 对象进行异步请求。而且可以为每个文件读取完成后指定不同的回调函数。</p>
 
 <pre class="brush: js">function xhrSuccess() {
     this.callback.apply(this, this.arguments);
@@ -70,23 +70,23 @@ function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
 loadFile("message.txt", showMessage, "New message!\n\n");
 </pre>
 
-<p>实用函数loadFile的签名声明（i）要读取的目标URL（通过HTTP GET），（ii）成功完成XHR操作时执行的函数，以及（iii）任意列表的附加参数“通过“XHR对象到成功回调函数。</p>
+<p>实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数 “通过“ XHR 对象到成功回调函数。</p>
 
-<p>第1行声明XHR操作成功完成时调用的函数。它又调用已经分配给XHR对象（第7行）属性的loadFile函数（本例中为函数showMessage）的调用中指定的回调函数。提供给调用函数loadFile的附加参数（如果有的话）被“应用”到回调函数的运行中。</p>
+<p>第 1 行声明 XHR 操作成功完成时调用的函数。它又调用已经分配给 XHR 对象（第 7 行）属性的 loadFile 函数（本例中为函数 showMessage）的调用中指定的回调函数。提供给调用函数 loadFile 的附加参数（如果有的话）被“应用”到回调函数的运行中。</p>
 
-<p>第5行声明XHR操作无法成功完成时调用的函数。</p>
+<p>第 5 行声明 XHR 操作无法成功完成时调用的函数。</p>
 
-<p>第7行存储XHR对象，成功回调函数作为loadFile的第二个参数给出。</p>
+<p>第 7 行存储 XHR 对象，成功回调函数作为 loadFile 的第二个参数给出。</p>
 
-<p>第12行将参数赋给loadFile的调用。从第三个参数开始，收集所有剩余的参数，分配给变量xhr的arguments属性，传递给成功回调函数xhrSuccess，最终提供给函数调用的回调函数（在本例中为showMessage） xhrSuccess。</p>
+<p>第 12 行将参数赋给 loadFile 的调用。从第三个参数开始，收集所有剩余的参数，分配给变量 XHR 的 arguments 属性，传递给成功回调函数 xhrSuccess，最终提供给函数调用的回调函数（在本例中为 showMessage）xhrSuccess。</p>
 
-<p>第15行为其第三个参数指定了true，表示该请求应该被异步处理。</p>
+<p>第 15 行为其第三个参数指定了 true，表示该请求应该被异步处理。</p>
 
-<p>第16行实际启动请求。</p>
+<p>第 16 行实际启动请求。</p>
 
 <h3 id="例子：使用超时">例子：使用超时</h3>
 
-<p>你可以使用一个超时设置,来避免你的代码为了等候读取请求的返回数据长时间执行.超时毫秒数可以通过为<code>XMLHttpRequest</code>对象的<code>timeout</code> 属性赋值来指定：</p>
+<p>你可以使用一个超时设置，来避免你的代码为了等候读取请求的返回数据长时间执行。超时毫秒数可以通过为 <code>XMLHttpRequest</code> 对象的 <code>timeout</code> 属性赋值来指定：</p>
 
 <pre class="brush: js">function loadFile(url, timeout, callback) {
     var args = Array.prototype.slice.call(arguments, 3);
@@ -108,7 +108,7 @@ loadFile("message.txt", showMessage, "New message!\n\n");
     xhr.send(null);
 }</pre>
 
-<p>你还可以为<code>timeout</code>事件的<code>ontimeout</code>事件句柄指定事件处理函数。</p>
+<p>你还可以为 <code>timeout</code> 事件的 <code>ontimeout</code> 事件句柄指定事件处理函数。</p>
 
 <p>用法：</p>
 
@@ -121,22 +121,22 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");</pre>
 <p>如上，我们指定的超时时间为 2000 ms。</p>
 
 <div class="geckoVersionNote" style="">
-<p><code>timeout</code>属性添加于Gecko 12.0  {{Gecko("12.0")}}。</p>
+<p><code>timeout</code>属性添加于 Gecko 12.0  {{Gecko("12.0")}}。</p>
 </div>
 
 <h2 id="同步请求">同步请求</h2>
 
 <div class="note">
-<p><strong>注意：</strong>从Gecko 30.0 {{ geckoRelease("30.0") }}，Blink 39.0和Edge 13开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。</p>
+<p><strong>注意：</strong>从 Gecko 30.0 {{ geckoRelease("30.0") }}，Blink 39.0 和 Edge 13 开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。</p>
 </div>
 
-<p>同步XHR通常会导致网络挂起。但开发人员通常不会注意到这个问题，因为在网络状况不佳或服务器响应速度慢的情况下，挂起只会显示同步XHR现在处于弃用状态。建议开发人员远离这个API。</p>
+<p>同步 XHR 通常会导致网络挂起。但开发人员通常不会注意到这个问题，因为在网络状况不佳或服务器响应速度慢的情况下，挂起只会显示同步 XHR 现在处于弃用状态。建议开发人员远离这个 API。</p>
 
-<p>同步XHR不允许所有新的XHR功能（如<code>timeout</code>或<code>abort</code>）。这样做会调用<code>InvalidAccessError</code>。</p>
+<p>同步 XHR 不允许所有新的 XHR 功能（如 <code>timeout</code> 或 <code>abort</code>）。这样做会调用 <code>InvalidAccessError</code>。</p>
 
 <h3 id="例子：HTTP_同步请求">例子：HTTP 同步请求</h3>
 
-<p>这个例子演示了如何进行一个简单的同步请求.</p>
+<p>这个例子演示了如何进行一个简单的同步请求。</p>
 
 <pre class="brush: js">var request = new XMLHttpRequest();
 request.open('GET', 'http://www.mozilla.org/', false);
@@ -146,15 +146,15 @@ if (request.status === 200) {
 }
 </pre>
 
-<p>第一行实例化一个<code>XMLHttpRequest</code>对象.第二行使用该对象打开一个HTTP请求,并指定使用<code>HTTP GET</code>方法来获取Mozilla.org主页内容,操作模式为同步.</p>
+<p>第一行实例化一个 <code>XMLHttpRequest</code> 对象。第二行使用该对象打开一个 HTTP 请求，并指定使用 <code>HTTP GET</code> 方法来获取 Mozilla.org 主页内容，操作模式为同步。</p>
 
-<p>第三行发送这个请求.参数为<code>null</code>表示<code>GET</code>请求不需要请求实体.</p>
+<p>第三行发送这个请求。参数为 <code>null</code> 表示 <code>GET</code> 请求不需要请求实体。</p>
 
-<p>第四行为请求结束之后,检查请求状态码.如果状态码为200, 表示该请求成功,请求到的页面源文件会输出到控制台上.</p>
+<p>第四行为请求结束之后，检查请求状态码。如果状态码为 200，表示该请求成功，请求到的页面源文件会输出到控制台上。</p>
 
-<h3 id="例子_在_Worker_中使用HTTP_同步请求">例子: 在 <code>Worker</code> 中使用HTTP 同步请求</h3>
+<h3 id="例子_在_Worker_中使用HTTP_同步请求">例子：在 <code>Worker</code> 中使用 HTTP 同步请求</h3>
 
-<p>在<code><a href="/zh-cn/DOM/Worker" title="/zh-cn/DOM/Worker">Worker</a></code>中使用<code>XMLHttpRequest</code>时,同步请求比异步请求更适合.</p>
+<p>在 <code><a href="/zh-cn/DOM/Worker" title="/zh-cn/DOM/Worker">Worker</a></code> 中使用 <code>XMLHttpRequest</code> 时，同步请求比异步请求更适合。</p>
 
 <p><code><strong>example.html</strong></code> (主页):</p>
 
@@ -186,7 +186,7 @@ if (request.status === 200) {
 <pre class="brush: js">self.onmessage = function (oEvent) {
   if (oEvent.data === "Hello") {
     var oReq = new XMLHttpRequest();
-    oReq.open("GET", "myFile.txt", false);  // 同步请求
+    oReq.open("GET", "myFile.txt", false); // 同步请求
     oReq.send(null);
     self.postMessage(oReq.responseText);
   }
@@ -195,13 +195,13 @@ if (request.status === 200) {
 
 <div class="note"><strong>注意：</strong>由于使用了<code>Worker</code>，所以该请求实际上也是异步的。</div>
 
-<p>可以使用类似的方法，让脚本在后台与服务器交互,预加载某些内容。查看<a class="internal" href="/zh-cn/DOM/Using_web_workers" title="zh-cn/Using DOM workers">使用web workers</a>了解更多详情。</p>
+<p>可以使用类似的方法，让脚本在后台与服务器交互，预加载某些内容。查看<a class="internal" href="/zh-cn/DOM/Using_web_workers" title="zh-cn/Using DOM workers">使用 Web workers</a>了解更多详情。</p>
 
-<h3 id="将同步XHR用例调整到Beacon_API">将同步XHR用例调整到Beacon API</h3>
+<h3 id="将同步XHR用例调整到Beacon_API">将同步 XHR 用例调整到 Beacon API</h3>
 
-<p>在某些情况下，XMLHttpRequest的同步使用是不可替代的，就像在<a href="/zh-CN/docs/Web/API/Window/onunload">window.onunload</a>和<a href="/zh-CN/docs/Web/API/Window/onbeforeunload">window.onbeforeunload</a>事件期间一样。 您应该考虑使用带有<code>Keepalive</code>标志的<code>fetch</code>API。 当<code>keepalive</code>的<code>fetch</code>不可用时，可以考虑使用<a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a> API可以支持这些用例，通常在提供良好UX的同时。</p>
+<p>在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 <a href="/zh-CN/docs/Web/API/Window/onunload">window.onunload</a>和<a href="/zh-CN/docs/Web/API/Window/onbeforeunload">window.onbeforeunload</a> 事件期间一样。 您应该考虑使用带有 <code>Keepalive</code> 标志的 <code>fetch</code> API。 当 <code>keepalive</code> 的 <code>fetch</code> 不可用时，可以考虑使用 <a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a> API 可以支持这些用例，通常在提供良好 UX 的同时。</p>
 
-<p>以下示例（来自<a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">sendBeacon</a>文档）显示了一个理论分析代码，该代码尝试通过在卸载处理程序中使用同步XMLHttpRequest将数据提交给服务器。 这导致页面的卸载被延迟。</p>
+<p>以下示例（来自 <a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">sendBeacon</a> 文档）显示了一个理论分析代码，该代码尝试通过在卸载处理程序中使用同步 XMLHttpRequest 将数据提交给服务器。这导致页面的卸载被延迟。</p>
 
 <pre class="brush: js">window.addEventListener('unload', logData, false);
 
@@ -214,9 +214,9 @@ function logData() {
 
 </pre>
 
-<p>使用<strong><code>sendBeacon()</code></strong>方法，当用户代理有机会的时候，数据将被异步传输到Web服务器，<strong>而不会延迟卸载或影响下一个导航的性能。</strong></p>
+<p>使用 <strong><code>sendBeacon()</code></strong> 方法，当用户代理有机会的时候，数据将被异步传输到 Web 服务器，<strong>而不会延迟卸载或影响下一个导航的性能。</strong></p>
 
-<p>以下示例显示了使用<strong><code>sendBeacon()</code></strong>方法将数据提交给服务器的理论分析代码模式。</p>
+<p>以下示例显示了使用 <strong><code>sendBeacon()</code></strong> 方法将数据提交给服务器的理论分析代码模式。</p>
 
 <pre class="brush: js">window.addEventListener('unload', logData, false);
 
@@ -233,5 +233,3 @@ function logData() {
  <li><a href="https://developer.mozilla.org/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a></li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a></code></li>
 </ul>
-
-<p>{{ languages( {"en": "en/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" } ) }}</p>

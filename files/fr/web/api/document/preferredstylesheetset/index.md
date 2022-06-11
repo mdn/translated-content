@@ -10,7 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/preferredStyleSheetSet
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}
+{{APIRef("DOM")}}
 
 Retourne la feuille de style préférée, telle que définie par l'auteur de la page.
 
@@ -34,7 +34,7 @@ if (document.preferredStyleSheetSet) {
 
 ## Spécifications
 
-- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
 ## Voir aussi
 

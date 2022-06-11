@@ -5,7 +5,7 @@ translation_of: Web/API/AudioContext/suspend
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>{{ domxref("AudioContext") }} 接口的<code>suspend()</code> 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限, 减少CPU和电池的使用。 当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。</p>
+<p>{{ domxref("AudioContext") }} 接口的<code>suspend()</code> 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 CPU 和电池的使用。 当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。</p>
 
 <p>若对{{domxref("OfflineAudioContext")}} 调用此方法，将会抛出 <code>INVALID_STATE_ERR</code> 错误。</p>
 
@@ -38,74 +38,11 @@ audioCtx.suspend().then(function() { ... });
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-suspend-Promise-void', 'close()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(41.0)}}</td>
-   <td>{{CompatGeckoDesktop(40.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(41.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.AudioContext.suspend")}}
 
 <h2 id="See_also">See also</h2>
 

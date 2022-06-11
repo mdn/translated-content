@@ -45,9 +45,9 @@ Avant l'apparition des boîtes flexibles (_flexbox_), l'alignement horizontal é
 
 ```css
 .container {
-  width: 20em;
-  margin-left: auto;
-  margin-right: auto;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
 }
 ```
 

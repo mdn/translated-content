@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLElement
 ---
 <div>{{APIRef}}</div>
 
-<p><span style="line-height: 1.5;">HTMLElement 接口表示所有的 </span><a href="/en-US/docs/Web/HTML" style="line-height: 1.5;" title="/en-US/docs/Web/HTML">HTML</a><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">元素。一些HTML元素直接实现了HTMLElement接口，其它的间接实现HTMLElement接口.</span></p>
+<p>HTMLElement 接口表示所有的 <a href="/en-US/docs/Web/HTML" style="line-height: 1.5;" title="/en-US/docs/Web/HTML">HTML</a> 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其它的间接实现 HTMLElement 接口。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/HTMLElement
    <td>{{domxref("HTMLElement.dir")}}</td>
    <td>{{domxref("DOMString")}}</td>
    <td>
-    <p><span style="line-height: 1.5;">获取/设置元素的方向，可选的值有：ltr，rtl，auto</span></p>
+    <p>获取/设置元素的方向，可选的值有：ltr，rtl，auto</p>
    </td>
   </tr>
   <tr>
@@ -112,27 +112,27 @@ translation_of: Web/API/HTMLElement
   <tr>
    <td>{{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}</td>
    <td><code>double</code></td>
-   <td>元素自身可视高度加上上下border的宽度</td>
+   <td>元素自身可视高度加上上下 border 的宽度</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}</td>
    <td><code>double</code></td>
-   <td>元素自己border左边距离父元素border左边或者body元素border左边的距离</td>
+   <td>元素自己 border 左边距离父元素 border 左边或者 body 元素 border 左边的距离</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.offsetParent")}}{{readonlyInline}}</td>
    <td>{{domxref("Element")}}</td>
-   <td>元素的父元素，如果没有就是body元素</td>
+   <td>元素的父元素，如果没有就是 body 元素</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.offsetTop")}}{{readonlyInline}}</td>
    <td><code>double</code></td>
-   <td>元素自己border顶部距离父元素顶部或者body元素border顶部的距离</td>
+   <td>元素自己 border 顶部距离父元素顶部或者 body 元素 border 顶部的距离</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.offsetWidth")}}{{readonlyInline}}</td>
    <td><code>double</code></td>
-   <td>元素自身可视宽度加上左右border的宽度</td>
+   <td>元素自身可视宽度加上左右 border 的宽度</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}</td>
@@ -140,24 +140,24 @@ translation_of: Web/API/HTMLElement
    <td> </td>
   </tr>
   <tr>
-   <td>{{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}</td>
+   <td>{{domxref("HTMLElement.spellcheck")}}</td>
    <td>{{domxref("Boolean")}}</td>
    <td> </td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.style")}}</td>
    <td>{{domxref("CSSStyleDeclaration")}}</td>
-   <td>获取/设置元素的style属性</td>
+   <td>获取/设置元素的 style 属性</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.tabIndex")}}</td>
    <td><code>long</code></td>
-   <td>获取/设置元素的tab键控制次序</td>
+   <td>获取/设置元素的 tab 键控制次序</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.title")}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>获取/设置元素的title属性</td>
+   <td>获取/设置元素的 title 属性</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.translate")}} </td>
@@ -188,7 +188,7 @@ translation_of: Web/API/HTMLElement
 
 <h2 id="方法">方法</h2>
 
-<p><em>从父元素继承的方法, {{domxref("Element")}}.</em></p>
+<p><em>从父元素继承的方法，{{domxref("Element")}}.</em></p>
 
 <table class="standard-table">
  <thead>
@@ -239,16 +239,16 @@ translation_of: Web/API/HTMLElement
    <td>
     <p>添加如下属性：</p>
 
-    <p><code>offsetParent<font face="Open Sans, arial, sans-serif">，</font></code><code>offsetTop<font face="Open Sans, arial, sans-serif">，</font></code><code>offsetLeft<font face="Open Sans, arial, sans-serif">，</font></code><code>offsetWidth<font face="Open Sans, arial, sans-serif">，</font></code><code>offsetHeight</code></p>
+    <p><code>offsetParent，</code><code>offsetTop，</code><code>offsetLeft，</code><code>offsetWidth，</code><code>offsetHeight</code></p>
    </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td>
-    <p>添加如下属性:</p>
+    <p>添加如下属性：</p>
 
-    <p><code>translate<font face="Open Sans, arial, sans-serif">，</font></code><code>itemScope<font face="Open Sans, arial, sans-serif">，</font></code><code>itemType<font face="Open Sans, arial, sans-serif">，</font></code><code>itemId<font face="Open Sans, arial, sans-serif">，</font></code><code>itemRef<font face="Open Sans, arial, sans-serif">，</font></code><code>itemProp<font face="Open Sans, arial, sans-serif">，</font></code><code>properties，</code><code>itemValue。</code></p>
+    <p><code>translate，</code><code>itemScope，</code><code>itemType，</code><code>itemId，</code><code>itemRef，</code><code>itemProp，</code><code>properties，</code><code>itemValue。</code></p>
 
     <p><code>添加如下方法：</code><br>
      <code>forceSpellcheck()，</code></p>
@@ -260,11 +260,11 @@ translation_of: Web/API/HTMLElement
    <td>{{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
    <td>
-    <p>添加了如下属性:</p>
+    <p>添加了如下属性：</p>
 
-    <p><code>dataset</code>, <code>hidden</code>, <code>tabindex</code>, <code>accessKey</code>, <code>accessKeyLabel</code>, <code>draggable</code>, <code>dropzone</code>, <code>contentEditable</code>, <code>isContentEditable</code>, <code>contextMenu</code>, <code>spellcheck</code>, <code>commandType</code>, <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code>, <code>commandChecked</code>, <code>style，和所有的 onXYZ属性</code></p>
+    <p><code>dataset</code>, <code>hidden</code>, <code>tabindex</code>, <code>accessKey</code>, <code>accessKeyLabel</code>, <code>draggable</code>, <code>dropzone</code>, <code>contentEditable</code>, <code>isContentEditable</code>, <code>contextMenu</code>, <code>spellcheck</code>, <code>commandType</code>, <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code>, <code>commandChecked</code>, <code>style，和所有的 onXYZ 属性</code></p>
 
-    <p><code>移动id和classname属性到</code>{{domxref("Element")}}接口上</p>
+    <p><code>移动 id 和 classname 属性到</code>{{domxref("Element")}}接口上</p>
    </td>
   </tr>
   <tr>
@@ -282,216 +282,7 @@ translation_of: Web/API/HTMLElement
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKey", "accessKey")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>17.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}(<a class="external" href="http://trac.webkit.org/changeset/107483">535.10</a>)</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKeyLabel", "accessKeyLabel")}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}{{WebkitBug(72715)}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.blur()", "blur()")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.click()", "click()")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}(<a class="external" href="http://trac.webkit.org/changeset/107483">535.24</a>)</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dataset", "dataset")}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>9.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>11.10</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.focus()", "focus()")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.contentEditable", "contentEditable")}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5.5</td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.spellcheck", "spellcheck")}}</td>
-   <td>{{CompatGeckoDesktop("1.8.1")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.forceSpellCheck", "forceSpellCheck()")}} {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dataset", "dataset")}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>8.0</td>
-   <td>11</td>
-   <td>11.10</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.draggable", "draggable")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dropzone", "dropzone")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.offsetLeft", "offsetLeft")}}, {{domxref("HTMLElement.offsetTop", "offsetTop")}}, {{domxref("HTMLElement.offsetParent", "offsetParent")}}, {{domxref("HTMLElement.offsetHeight", "offsetHeight")}} and {{domxref("HTMLElement.offsetWidth", "offsetWidth")}} {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.translate", "translate")}} {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.itemScope", "itemScope")}}, {{domxref("HTMLElement.itemType", "itemType")}}, {{domxref("HTMLElement.itemRef", "itemRef")}}, {{domxref("HTMLElement.itemId", "itemId")}}, {{domxref("HTMLElement.itemProp", "itemProp")}}, and {{domxref("HTMLElement.itemValue", "itemValue")}} {{experimental_inline}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.60<br>
-    (Removed in Opera 15)</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.properties", "properties")}} {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.ontouchstart")}}, {{domxref("HTMLElement.ontouchend")}}, {{domxref("HTMLElement.ontouchmove")}}, {{domxref("HTMLElement.ontouchenter")}}, {{domxref("HTMLElement.ontouchleave")}}, and {{domxref("HTMLElement.ontouchcancel")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>{{CompatGeckoMobile("1.0")}}</p>
-   </td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKey", "accessKey")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKeyLabel", "accessKeyLabel")}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.blur()", "blur()")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.click()", "click()")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dataset", "dataset")}}</td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.focus()", "focus()")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.HTMLElement")}}
 
 <h2 id="sect1"> </h2>
 

@@ -143,7 +143,7 @@ var nodeIterator = document.createNodeIterator(
     false
 );
 if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
+    (nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
     // nodeIterator affichera les commentaires
 }
 ```

@@ -16,20 +16,20 @@ translation_of: Web/API/ServiceWorkerContainer
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Workers API")}} </p>
 
-<p><code>ServiceWorkerContainer</code>接口为 service worker提供一个容器般的功能，包括对service worker的注册，卸载 ，更新和访问service worker的状态，以及他们的注册者</p>
+<p><code>ServiceWorkerContainer</code>接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载 ，更新和访问 service worker 的状态，以及他们的注册者</p>
 
-<p>主要是{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}}提供一个注册service worker的方法，{{domxref("ServiceWorkerContainer.controller")}}将获取当前控制页面网络的service worker</p>
+<p>主要是{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}}提供一个注册 service worker 的方法，{{domxref("ServiceWorkerContainer.controller")}}将获取当前控制页面网络的 service worker</p>
 
 <h2 id="属性">?属性</h2>
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
- <dd>当?{{domxref("ServiceWorker")}}对象的state是active的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}})返回相同的对象。 如果当前的state都不是active或者强制刷新浏览器则返回null。</dd>
+ <dd>当？{{domxref("ServiceWorker")}}对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。 如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}</dt>
- <dd>定义了一个serviceWorker是否准备好为一个页面服务，将返回一个 {{jsxref("Promise")}}，并且这个 {{jsxref("Promise")}}永远不会 reject,这个 {{jsxref("Promise")}}会在{{domxref("ServiceWorkerRegistration")}} 获取到一个active的{{domxref("ServiceWorker")}}的时候被解决。</dd>
+ <dd>定义了一个 serviceWorker 是否准备好为一个页面服务，将返回一个 {{jsxref("Promise")}}，并且这个 {{jsxref("Promise")}}永远不会 reject，这个 {{jsxref("Promise")}}会在{{domxref("ServiceWorkerRegistration")}} 获取到一个 active 的{{domxref("ServiceWorker")}}的时候被解决。</dd>
  <dd> </dd>
 </dl>
 
@@ -37,11 +37,11 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.oncontrollerchange")}}</dt>
- <dd>在{{domxref("ServiceWorkerRegistration")}}获取到一个新的active的{{domxref("ServiceWorker")}}对象的时候被触发</dd>
+ <dd>在{{domxref("ServiceWorkerRegistration")}}获取到一个新的 active 的{{domxref("ServiceWorker")}}对象的时候被触发</dd>
  <dt>{{domxref("ServiceWorkerContainer.onerror")}}</dt>
- <dd>当service workers中出现错误的时候被触发</dd>
+ <dd>当 service workers 中出现错误的时候被触发</dd>
  <dt>{{domxref("ServiceWorkerContainer.onmessage")}}</dt>
- <dd>当{{domxref("ServiceWorkerContainer")}}  对象接受到一个message消息的时候被触发,message由{{domxref("MessagePort.postMessage()")}}发出</dd>
+ <dd>当{{domxref("ServiceWorkerContainer")}}  对象接受到一个 message 消息的时候被触发，message 由{{domxref("MessagePort.postMessage()")}}发出</dd>
 </dl>
 
 <h2 id="方法">?方法</h2>
@@ -50,14 +50,14 @@ translation_of: Web/API/ServiceWorkerContainer
  <dt>{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} </dt>
  <dd>创建或者更新一个{{domxref("ServiceWorkerRegistration")}} 用给定的<code>scriptURL</code></dd>
  <dt>{{domxref("ServiceWorkerContainer.getRegistration()")}}</dt>
- <dd>根据当前网页的URL与当前service worker的scope Url的匹配，返回一个 {{domxref("ServiceWorkerRegistration")}}对象,如果不能返回一个 {{domxref("ServiceWorkerRegistration")}},则返回一个{{jsxref("Promise")}}。</dd>
+ <dd>根据当前网页的 URL 与当前 service worker 的 scope Url 的匹配，返回一个 {{domxref("ServiceWorkerRegistration")}}对象，如果不能返回一个 {{domxref("ServiceWorkerRegistration")}},则返回一个{{jsxref("Promise")}}。</dd>
  <dt>{{domxref("ServiceWorkerContainer.getRegistrations()")}}</dt>
  <dd>返回所有的{{domxref("ServiceWorkerRegistration")}}对象，如果不能返回一个 {{domxref("ServiceWorkerRegistration")}},则返回一个{{jsxref("Promise")}}。</dd>
 </dl>
 
 <h2 id="举例">?举例</h2>
 
-<p>?代码是<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126">service worker fallback-response sample</a> (see <a href="http://googlechrome.github.io/samples/service-worker/fallback-response/">fallback-response live</a>)的其中一段. ?首先检查浏览器是否支持serviceWorker. 代码创建了一个serviceWorker，并且打印出来当前页面的serviceWorker的?是否接管了页面的网络状态. 如果没有需要刷新页面再次查看.  代码也处理了注册失败的情况</p>
+<p>?代码是<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126">service worker fallback-response sample</a> (see <a href="http://googlechrome.github.io/samples/service-worker/fallback-response/">fallback-response live</a>) 的其中一段. ?首先检查浏览器是否支持 serviceWorker. 代码创建了一个 serviceWorker，并且打印出来当前页面的 serviceWorker 的？是否接管了页面的网络状态。如果没有需要刷新页面再次查看.  代码也处理了注册失败的情况</p>
 
 <pre>if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function() {
@@ -96,55 +96,7 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.ServiceWorkerContainer")}}
 
 <h2 id="See_also">See also</h2>
 

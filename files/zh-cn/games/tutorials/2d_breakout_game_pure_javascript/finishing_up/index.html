@@ -14,15 +14,13 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/收尾工作
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
-
 <p>{{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}</p>
 
-<div class="summary">
-<p>本篇为 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial </a>10节教程中的<strong>第10节也是最后一节。</strong>完成这篇课程后，你可以在 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html">Gamedev-Canvas-workshop/lesson10.html</a> 找到我们的源代码。</p>
+<div>
+<p>本篇为 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial </a>10 节教程中的<strong>第 10 节也是最后一节。</strong>完成这篇课程后，你可以在 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html">Gamedev-Canvas-workshop/lesson10.html</a> 找到我们的源代码。</p>
 </div>
 
-<p><span class="seoSummary">不管我们做什么游戏，它总是存在优化的空间。例如，我们可以为玩家多提供几条命，让他们能在发生一两次失误的情况下顺利完成游戏。或者，我们也可以在渲染代码上下工夫。</span></p>
+<p>不管我们做什么游戏，它总是存在优化的空间。例如，我们可以为玩家多提供几条命，让他们能在发生一两次失误的情况下顺利完成游戏。或者，我们也可以在渲染代码上下工夫。</p>
 
 <h2 id="加入生命机制">加入生命机制</h2>
 
@@ -89,11 +87,11 @@ else {
 <pre class="brush: js">clearInterval(interval); // Needed for Chrome to end game
 </pre>
 
-<p>删除。然后，在 <code>draw()</code> 函数的最下方（右花括号之前）加入下面这行代码。 它的作用是使 <code>draw()</code> 函数递归调用自身：</p>
+<p>删除。然后，在 <code>draw()</code> 函数的最下方（右花括号之前）加入下面这行代码。它的作用是使 <code>draw()</code> 函数递归调用自身：</p>
 
 <pre class="brush: js">requestAnimationFrame(draw);</pre>
 
-<p>现在 <code>draw()</code> 函数在 <code>requestAnimationFrame()</code> 的循环中被反复调用，之先前做法最大的不同是，我们将帧率的控制权交给浏览器，而不是固定的 10 毫秒。浏览器会在适当的时机同步帧率，并且只在必要的时候才刷新渲染的图形。这使得我们的动画比之前的 <code>setInterval()</code> 方法更加流畅且高效.</p>
+<p>现在 <code>draw()</code> 函数在 <code>requestAnimationFrame()</code> 的循环中被反复调用，之先前做法最大的不同是，我们将帧率的控制权交给浏览器，而不是固定的 10 毫秒。浏览器会在适当的时机同步帧率，并且只在必要的时候才刷新渲染的图形。这使得我们的动画比之前的 <code>setInterval()</code> 方法更加流畅且高效。</p>
 
 <h2 id="比较你的代码">比较你的代码</h2>
 

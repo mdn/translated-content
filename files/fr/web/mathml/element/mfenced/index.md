@@ -20,7 +20,7 @@ translation_of: Web/MathML/Element/mfenced
 - class, id, style
   - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
 - close
-  - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est « `) `» et tous les blancs sont tronqués.
+  - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est «&nbsp;`)`&nbsp;» et tous les blancs sont tronqués.
 - href {{Deprecated_Inline()}}
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground {{Deprecated_Inline()}}
@@ -33,7 +33,7 @@ translation_of: Web/MathML/Element/mfenced
 - open
   - : Une chaîne de caractère pour le délimiteur ouvrant. La valeur par défaut est « `(` » et tous les blancs sont tronqués.
 - separators
-  - : Une séquence de plusieurs caractères (zéro ou plus) à utiliser pour les séparateurs, éventuellement séparés par des blancs qui seront ignorés. La valeur par défaut est  « , ». En définissant plus d'un caractère, il est possible d'utiliser différents séparateurs pour chaque argument de l'expression. Si jamais il y a trop de séparateurs, le surplus est ignoré. S'il n'y en a pas assez, le dernier séparateur est répété.
+  - : Une séquence de plusieurs caractères (zéro ou plus) à utiliser pour les séparateurs, éventuellement séparés par des blancs qui seront ignorés. La valeur par défaut est  « , ». En définissant plus d'un caractère, il est possible d'utiliser différents séparateurs pour chaque argument de l'expression. Si jamais il y a trop de séparateurs, le surplus est ignoré. S'il n'y en a pas assez, le dernier séparateur est répété.
 
 ## Exemples
 

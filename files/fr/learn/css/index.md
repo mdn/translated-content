@@ -21,7 +21,7 @@ original_slug: Apprendre/CSS
 
 ## Parcours d'apprentissage
 
-Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML —](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML) vous pourrez ensuite en apprendre davantage au sujet :
+Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML —](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML) vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
 
 - des CSS, en commençant avec le module [Introduction aux CSS](/fr/docs/Learn/CSS/First_steps)
 - des [Modules HTML](/fr/Learn/HTML#Modules) plus avancés
@@ -38,14 +38,14 @@ Il est recommandé de travailler par le biais de Débuter avec le web avant d'es
 Cet article contient les modules suivants, dans l'ordre suggéré pour le parcours. Vous devez vraiment commencer par le premier.
 
 - [Introduction aux CSS](/fr/Apprendre/CSS/Introduction_à_CSS)
-  - : Ce module vous enseigne les bases du fonctionnement des CSS ; il comprend les sélecteurs et les propriétés, l'écriture des règles des CSS, l'application des CSS au HTML, la définition de la longueur, de la couleur et d'autres unités avec les CSS, la cascade et l'héritage, les bases du modèle de boîte et le débogage du CSS.
+  - : Ce module vous enseigne les bases du fonctionnement des CSS&nbsp;; il comprend les sélecteurs et les propriétés, l'écriture des règles des CSS, l'application des CSS au HTML, la définition de la longueur, de la couleur et d'autres unités avec les CSS, la cascade et l'héritage, les bases du modèle de boîte et le débogage du CSS.
 - [Styliser les boîtes](/fr/Apprendre/CSS/styliser_boites)
-  - : Ensuite, nous examinons la stylisation des boîtes : une des étapes fondamentales de la composition d'une page Web. Dans ce module, nous récapitulons les modèles de boîtes, puis nous nous penchons sur le contrôle de leur disposition en définissant le remplissage, les bordures et les marges, la personnalisation des couleurs d'arrière-plan, les images et autres caractéristiques, les caractéristiques de fantaisie telles que filtres et ombrages des boîtes.
+  - : Ensuite, nous examinons la stylisation des boîtes&nbsp;: une des étapes fondamentales de la composition d'une page Web. Dans ce module, nous récapitulons les modèles de boîtes, puis nous nous penchons sur le contrôle de leur disposition en définissant le remplissage, les bordures et les marges, la personnalisation des couleurs d'arrière-plan, les images et autres caractéristiques, les caractéristiques de fantaisie telles que filtres et ombrages des boîtes.
 
 <!---->
 
 - [Composer du texte](/fr/docs/Learn/CSS/Styling_text)
-  - : Ici, nous examinons les principes fondamentaux pour composer du texte : réglage de la police, graisse et italique, espacement des lignes et des lettres, les ombrage et autres caractéristiques. Nous complétons le module en appliquant des polices personnalisées à la page, ainsi que des listes de styles et des liens.
+  - : Ici, nous examinons les principes fondamentaux pour composer du texte&nbsp;: réglage de la police, graisse et italique, espacement des lignes et des lettres, les ombrage et autres caractéristiques. Nous complétons le module en appliquant des polices personnalisées à la page, ainsi que des listes de styles et des liens.
 - [Mise en page avec les CSS](/fr/Apprendre/CSS/CSS_layout)
 
   - : À ce stade, ont déjà été examinés les principes fondamentaux des CSS, la façon de composer du texte, de styliser et de manipuler les boîtes où se trouve le contenu. Maintenant, il est temps de voir comment placer les boîtes au bon endroit dans la fenêtre et l'une par rapport à l'autre. Maintenant que sont couvertes les conditions préalables nécessaires, vous pouvez entrer plus avant dans les mises en page avec les CSS, regarder les divers paramètres d'affichage, les méthodes traditionnelles de mise en page y compris flottement et positionnement ainsi que les nouveaux outils de mises en page tape à l'œil, comme flexbox.
@@ -65,4 +65,4 @@ Le CSS fonctionne un peu différemment de la plupart des langages de programmati
 ## Voir aussi
 
 - [Les CSS sur MDN](/fr/docs/Web/CSS)
-  - : Le portail pour la documentation des CSS sur MDN : vous y trouverez une documentation de référence détaillée pour toutes les fonctionnalités du langage des CSS. Vous voulez connaître toutes les valeurs qu'une propriété peut prendre ? C'est le bon endroit.
+  - : Le portail pour la documentation des CSS sur MDN&nbsp;: vous y trouverez une documentation de référence détaillée pour toutes les fonctionnalités du langage des CSS. Vous voulez connaître toutes les valeurs qu'une propriété peut prendre ? C'est le bon endroit.

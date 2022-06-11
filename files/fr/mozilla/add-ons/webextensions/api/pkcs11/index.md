@@ -42,13 +42,13 @@ Effectuez les étapes suivantes :
 Il y a 2 pré-requis pour pouvoir utiliser cette API:
 
 - un ou plusieurs modules PKCS # 11 doivent être installés sur l'ordinateur de l'utilisateur
-- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/Add-ons/WebExtensions/manifests_native)  qui permet au navigateur de localiser le module.
+- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/Add-ons/WebExtensions/manifests_native)  qui permet au navigateur de localiser le module.
 
 Très probablement, l'utilisateur ou l'administrateur du périphérique installerait le module `PKCS #11`, et son installateur installerait le fichier de manifeste natif en même temps.
 
 Cependant, le module et le manifeste ne peuvent pas être installés dans le cadre du processus d'installation de l'extension.
 
-Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/Add-ons/WebExtensions/Native_manifests).
 
 ## Fonctions
 

@@ -8,8 +8,6 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/By_example
 ---
-{{IncludeSubnav("/fr/docs/Apprendre")}}
-
 {{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}
 
 _WebGL par l'exemple_ est une série d'articles illustrant les concepts et les possibilités offertes par WebGL. Chaque exemple est accompagné d'explications. Ces démonstrations sont triés par sujet et par niveau de difficulté. Les concepts abordés sont, entre autres, le contexte de rendu, la programmation avec les _shaders_, les textures, la géométrie et l'interaction avec les utilisateurs.

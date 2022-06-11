@@ -53,7 +53,7 @@ A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promisee) qui ser
 - `addresses`
   - : `array` of `string`. Les adresses IP associées à cet enregistrement DNS.
 - `canonicalName`
-  - : `string`. Le nom canonique de cet enregistrement. Ceci n'est inclus dans la réponse que si le drapeau `"canonical_name"`a été passé à  `resolve()`.
+  - : `string`. Le nom canonique de cet enregistrement. Ceci n'est inclus dans la réponse que si le drapeau `"canonical_name"`a été passé à  `resolve()`.
 - `isTRR`
   - : `boolean`: `true` si l'enregistrement a été récupéré à l'aide d'un TRR (Trusted Recursive Resolver).
 

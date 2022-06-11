@@ -15,11 +15,11 @@ translation_of: Web/API/XMLHttpRequest
 ---
 <div>{{DefaultAPISidebar("XMLHttpRequest")}}</div>
 
-<p><span class="seoSummary">藉由 <code>XMLHttpRequest</code>（XHR）物件的方式來存取伺服器端的資料，可以讓你直接經由指定的 URL 擷取資料卻不用刷新整個網頁。這樣一來當想要更新網頁中的部分資料時，不再需要藉由刷新整個頁面的方法而中斷使用者的操作。在</span>{{Glossary("AJAX")}}應用中 <code>XMLHttpRequest</code> 被大量的使用。</p>
+<p>藉由 <code>XMLHttpRequest</code>（XHR）物件的方式來存取伺服器端的資料，可以讓你直接經由指定的 URL 擷取資料卻不用刷新整個網頁。這樣一來當想要更新網頁中的部分資料時，不再需要藉由刷新整個頁面的方法而中斷使用者的操作。在{{Glossary("AJAX")}}應用中 <code>XMLHttpRequest</code> 被大量的使用。</p>
 
 <p>{{InheritanceDiagram(650, 150)}}</p>
 
-<p>雖然 <span class="seoSummary"><code>XMLHttpRequest</code></span> 這個物件的命名包含了 XML 與 HTTP 等字眼，但實際上 <code>XMLHttpRequest</code> 可用來接收任何類型的資料，不限於 XML 類型而已。</p>
+<p>雖然 <code>XMLHttpRequest</code> 這個物件的命名包含了 XML 與 HTTP 等字眼，但實際上 <code>XMLHttpRequest</code> 可用來接收任何類型的資料，不限於 XML 類型而已。</p>
 
 <p>如果在資料交換的時候，需要接收從伺服器端傳來的事件或訊息：可以考慮透過{{domxref("EventSource")}}介面使用<a href="/zh-TW/docs/Web/API/Server-sent_events">server-sent 事件</a>。對於和伺服器全雙工的資訊交換，<a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> 可能是較佳的選擇。</p>
 
@@ -35,23 +35,23 @@ translation_of: Web/API/XMLHttpRequest
 <p><em>此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("EventTarget")}} 的屬性。</em></p>
 
 <dl>
- <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
  <dd>一個 {{event("Event_handlers", "event handler")}}（事件處理器）函式，會於 <code>readyState</code> 屬性之狀態改變時被呼叫。</dd>
- <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>回傳一個無符號短整數（<code>unsigned short</code>）代表請求之狀態。</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
  <dd>回傳的內容可能是 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript 物件或 {{domxref("DOMString")}}。完全根據 {{domxref("XMLHttpRequest.responseType")}} 的值決定回傳的內容為何種型態，資料為回應實體中的內容（response entity body）。</dd>
- <dt id="xmlhttprequest-responsetext">{{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}</dt>
  <dd>回傳一個 {{domxref("DOMString")}}，其內容為請求之回應的文字內容。如請求失敗或尚未發送，則為 <code>null</code>。</dd>
- <dt id="xmlhttprequest-responsetype">{{domxref("XMLHttpRequest.responseType")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseType")}}</dt>
  <dd>為一可列舉（enumerated）值，定義回應內容的資料類型（response type）。</dd>
- <dt id="xmlhttprequest-responsexml">{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
  <dd>回傳一個回應（response）的序列化 URL，如 URL 為 null 則回傳空字串。</dd>
- <dt id="xmlhttprequest-responsexml">{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
  <dd>回傳一個 {{domxref("Document")}}，其內容為請求之回應內容所解析成的文件物件。如請求失敗或尚未發送，又或是無法解析成 XML、HTML，則為 <code>null</code>。Not available in workers.</dd>
- <dt id="xmlhttprequest-status">{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
  <dd>回傳一個無符號短整數（<code>unsigned short</code>）表示已發送請求之回應的狀態。</dd>
- <dt id="xmlhttprequest-statustext">{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
  <dd>回傳一個 {{domxref("DOMString")}} 表示 HTTP 伺服器回應之字串。和 {{domxref("XMLHTTPRequest.status")}} 不同的是，<code>XMLHttpRequest.statusText</code> 包含了回應的整個文字訊息（如 "<code>200 OK</code>"）。</dd>
 </dl>
 
@@ -60,13 +60,13 @@ translation_of: Web/API/XMLHttpRequest
 </div>
 
 <dl>
- <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>為一無符號長整數（<code>unsigned long</code>），代表一個請求在逾時而被自動中止前的可等待時間（毫秒）。</dd>
- <dt id="xmlhttprequesteventtarget-ontimeout">{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>為一 {{event("Event_handlers", "event handler")}} 物件，會於請求逾時時被呼叫。{{gecko_minversion_inline("12.0")}}</dd>
- <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
+ <dd>為一 {{event("Event_handlers", "event handler")}} 物件，會於請求逾時時被呼叫。</dd>
+ <dt>{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>為一 {{domxref("XMLHttpRequestUpload")}} 物件，代表上傳的進度。</dd>
- <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.withCredentials")}}</dt>
  <dd>{{domxref("Boolean","布林值")}}。表示是否允許在跨站存取（cross-site <code>Access-Control</code>）之請求當中，發送如 cookies 或 authorization headers 等憑證資訊（credentials）。</dd>
 </dl>
 
@@ -74,14 +74,14 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}</dt>
- <dd>是一個 {{Interface("nsIChannel")}}。當執行要求時，物件使用的頻道（Channel）。</dd>
+ <dd>是一個 <code>nsIChannel</code>。當執行要求時，物件使用的頻道（Channel）。</dd>
  <dt>{{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}</dt>
  <dd>為一個布林值。如果為真，請求就會以沒有cookie及authentication headers的方式送出。</dd>
  <dt>{{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}</dt>
  <dd>這是一個布林值。If true, the same origin policy will not be enforced on the request.</dd>
  <dt>{{domxref("XMLHttpRequest.mozBackgroundRequest")}}</dt>
  <dd>這是一個布林值。指出該物件是否為一個背景型態的服務要求。</dd>
- <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}}{{gecko_minversion_inline("2.0")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
  <dd>Is an <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>. The response to the request, as a JavaScript typed array.</dd>
  <dt>{{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}</dt>
  <dd><strong>This Gecko-only feature, a boolean, was removed in Firefox/Gecko 22.</strong> Please use <a href="/zh-TW/docs/Web/API/Server-sent_events">Server-Sent Events</a>, <a href="/zh-TW/docs/Web/API/WebSockets_API">Web Sockets</a>, or <code>responseText</code> from progress events instead.</dd>
@@ -111,7 +111,7 @@ translation_of: Web/API/XMLHttpRequest
  <dd>初始化一個請求。此方法用於 JavaScript 中；若要在 native code 中初始化請求，請以 <a class="internal" href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#openRequest()"><code>openRequest()</code></a> 作為替代。</dd>
  <dt>{{domxref("XMLHttpRequest.overrideMimeType()")}}</dt>
  <dd>覆寫伺服器回傳的 MIME type。</dd>
- <dt>{{domxref("XMLHttpRequest.send()")}}<span class="hidden"> </span></dt>
+ <dt>{{domxref("XMLHttpRequest.send()")}} </dt>
  <dd>發送請求。如果為非同步請求（預設值），此方法將在發出請求後便立即回傳（return）。</dd>
  <dt>{{domxref("XMLHttpRequest.setRequestHeader()")}}</dt>
  <dd>設定 HTTP 請求標頭（request header）值。<code>setRequestHeader()</code> 可被呼叫的時間點必須於 <a href="#open"><code>open()</code></a> 之後、在 <code>send()</code> 之前。</dd>
@@ -135,20 +135,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Live standard, latest version</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

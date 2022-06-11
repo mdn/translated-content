@@ -38,25 +38,25 @@ Pour une liste d'exemples de jeux, voir notre [page exemples](/fr/docs/Games/Exa
 
 ## Voir aussi
 
-- [Build New Games ](http://buildnewgames.com/)(en)
+- [Build New Games (en anglais)](http://buildnewgames.com/)
   - : Un site collaboratif avec de nombreux tutoriels concernant le développement de jeux vidéo sur le Web. N'a pas été très actif récemment, mais détient toujours de belles ressources.
-- [Creative JS ](http://creativejs.com/)(en)
+- [Creative JS (en anglais)](http://creativejs.com/)
   - : Un ensemble de techniques et d'expérimentations JavaScript, pas nécessairement liées au domaine vidéo-ludique mais qui se révèlent plutôt utiles et impressionnantes. N'a pas été très actif récemment, mais détient toujours de belles ressources.
-- [Game programming patterns ](http://gameprogrammingpatterns.com/)(en)
+- [Game programming patterns (en anglais)](http://gameprogrammingpatterns.com/)
   - : Un livre en ligne, écrit par Bob Nystrom, qui traite des modèles de programmation dans le contexte du développement de jeux, dans le but d'aider les développeurs de jeux à produire un code plus réussi et plus opérationnel.
-- [Gamedev.js Weekly ](http://gamedevjsweekly/games.com/)(en)
+- [Gamedev.js Weekly (en anglais)](http://gamedevjsweekly/games.com/)
   - : Bulletin hebdomadaire sur le développement de jeux HTML5, envoyé tous les vendredis. Contient les derniers articles, didacticiels, outils et ressources.
-- [HTML5 Game Devs Forum ](http://www.html5gamedevs.com/)(en)
+- [HTML5 Game Devs Forum (en anglais)](http://www.html5gamedevs.com/)
   - : Forums pour développeurs, créateurs de "framework" et éditeurs. Posez des questions, obtenez des commentaires, aidez les autres.
-- [HTML5 Game Engine ](http://html5gameengine.com/)(en)
+- [HTML5 Game Engine (en anglais)](http://html5gameengine.com/)
   - : Liste des architectures de jeux HTML5 les plus populaires ainsi que leurs classement, fonctionnalités et exemples.
-- [JSBreakouts](http://www.jsbreakouts.org/) (en)
+- [JSBreakouts (en anglais)](http://www.jsbreakouts.org/)
   - : Comparez les clones JavaScript Breakout dans différents systèmes pour vous aider à choisir le bon pour vous.
-- [Tuts+ Game Development ](http://gamedevelopment.tutsplus.com/)(en)
+- [Tuts+ Game Development (en anglais)](http://gamedevelopment.tutsplus.com/)
   - : Tutoriels et articles sur le developpement de jeux en général.
-- [HTML5 Gamedev Starter ](http://html5devstarter.enclavegames.com/)(en)
+- [HTML5 Gamedev Starter (en anglais)](http://html5devstarter.enclavegames.com/)
   - : De quoi démarrer pour les nouveaux développeurs de jeux, une liste organisée de liens vers diverses ressources utiles sur le web.
-- [js13kGames ](http://js13kgames.com/)(en)
+- [js13kGames (en anglais)](http://js13kgames.com/)
   - : Concours de codage JavaScript pour les développeurs de jeux HTML5 avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux soumis sont disponibles sous forme lisible sur GitHub.
-- [Mozilla Hacks blog ](https://hacks.mozilla.org/category/games/)(en)
+- [Mozilla Hacks blog (en anglais)](https://hacks.mozilla.org/category/games/)
   - : Catégorie Jeux sur le blog "Hacks" de Mozilla contenant des articles connexes intéressants.

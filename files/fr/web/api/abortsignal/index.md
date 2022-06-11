@@ -35,7 +35,7 @@ Dans l'extrait suivant, nous visons à télécharger une vidéo en utilisant l'[
 
 Tout d'abord, nous créons un contrôleur en utilisant le constructeur {{domxref("AbortController.AbortController","AbortController()")}}, puis nous saisissons une référence associée à son objet {{domxref("AbortSignal")}} au moyen de la propriété {{domxref("AbortController.signal")}}.
 
-Lorsque la  [requête fetch](/fr/docs/Web/API/GlobalFetch/fetch) (_extraction_) est lancée, nous transmettons le paramètre `AbortSignal` en tant qu'option dans l'objet d'options de la requête (voir `{signal}` ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.
+Lorsque la  [requête fetch](/fr/docs/Web/API/GlobalFetch/fetch) (_extraction_) est lancée, nous transmettons le paramètre `AbortSignal` en tant qu'option dans l'objet d'options de la requête (voir `{signal}` ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.
 
 ```js
 var controller = new AbortController();
@@ -56,8 +56,8 @@ function fetchVideo() {
   fetch(url, {signal}).then(function(response) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
-  })
+    reports.textContent = 'Download error: ' + e.message;
+  })
 }
 ```
 

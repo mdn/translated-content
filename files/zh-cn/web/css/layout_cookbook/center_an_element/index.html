@@ -5,7 +5,7 @@ translation_of: Web/CSS/Layout_cookbook/Center_an_element
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">在这份指南中你将了解到把一个盒子居中放置在另一个之中的方法。在伸缩盒子模型(flexbox)出现之前，要做到同时垂直与水平居中是很困难的，而现在利用盒子对齐属性(Box Alignment)就很直截了当了。</p>
+<p>在这份指南中你将了解到把一个盒子居中放置在另一个之中的方法。在伸缩盒子模型 (flexbox) 出现之前，要做到同时垂直与水平居中是很困难的，而现在利用盒子对齐属性 (Box Alignment) 就很直截了当了。</p>
 
 <p><img alt="an element centered inside a larger box" src="https://mdn.mozillademos.org/files/16182/cookbook-center.png" style="height: 421px; width: 1219px;"></p>
 
@@ -23,7 +23,7 @@ translation_of: Web/CSS/Layout_cookbook/Center_an_element
 
 <h2 id="做出选择">做出选择</h2>
 
-<p>要将一个盒子居中放置在另一个之中，我们需要让作为容器的盒子变成伸缩容器。再将 {{cssxref("align-items")}} 设置为 center 来实现块方向的轴(block axis)上的居中，并把 {{cssxref("justify-content")}} 设置为 center 来实现文字方向的轴(inline axis)上的居中。</p>
+<p>要将一个盒子居中放置在另一个之中，我们需要让作为容器的盒子变成伸缩容器。再将 {{cssxref("align-items")}} 设置为 center 来实现块方向的轴 (block axis) 上的居中，并把 {{cssxref("justify-content")}} 设置为 center 来实现文字方向的轴 (inline axis) 上的居中。</p>
 
 <p>将来我们可能不需要将父容器设置为伸缩容器就可以居中元素，因为此处使用的“盒子对齐”属性也被指定为适用于块布局。然而，当前在块布局上对盒子对齐属性的支持仍然是有限的，因此目前使用伸缩盒子来实现居中还是最可靠的方法。</p>
 
@@ -43,7 +43,7 @@ translation_of: Web/CSS/Layout_cookbook/Center_an_element
 
 <p>{{Compat("css.properties.justify-content")}}</p>
 
-<h2 id="MDN上相关的资源">MDN上相关的资源</h2>
+<h2 id="MDN上相关的资源">MDN 上相关的资源</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box Alignment in Flexbox</a></li>

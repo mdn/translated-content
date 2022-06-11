@@ -7,11 +7,11 @@ translation_of: Web/API/ServiceWorkerContainer/register
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
 
-<p>{{domxref("ServiceWorkerContainer")}} 接口的 <strong><code>register()<font face="Open Sans, Arial, sans-serif"> </font></code></strong>方法创建或更新一个给定scriptURL的<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration" title="The ServiceWorkerRegistion interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.">ServiceWorkerRegistration</a> </code>。</p>
+<p>{{domxref("ServiceWorkerContainer")}} 接口的 <strong><code>register()</code></strong>方法创建或更新一个给定 scriptURL 的<code><a href="/zh-CN/docs/Web/API/ServiceWorkerRegistration">ServiceWorkerRegistration</a></code>。</p>
 
-<p>如果成功，一个服务工作者注册将提供的脚本URL与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 <code>ServiceWorkerRegistration</code>，则返回一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>。</p>
+<p>如果成功，一个服务工作者注册将提供的脚本 URL 与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 <code>ServiceWorkerRegistration</code>，则返回一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>。</p>
 
-<p>您可以从受控页无条件调用此方法, 即, 您不需要首先检查是否有一个有效的注册。</p>
+<p>您可以从受控页无条件调用此方法， 即，您不需要首先检查是否有一个有效的注册。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -26,11 +26,11 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <dl>
  <dt><code>scriptURL</code></dt>
- <dd>service worker脚本的URL.</dd>
+ <dd>service worker 脚本的 URL.</dd>
  <dt><code>options</code> <code>{{optional_inline}}</code></dt>
  <dd>注册时提供选项的配置对象。 目前可用的选项包括：
  <ul>
-  <li><code>scope</code>: 一个 {{domxref("USVString")}}，表示定义service worker注册范围的URL ；service worker可以控制的URL范围。通常是相对URL。默认值是基于当前的location，并以此来解析传入的路径.</li>
+  <li><code>scope</code>: 一个 {{domxref("USVString")}}，表示定义 service worker 注册范围的 URL ；service worker 可以控制的 URL 范围。通常是相对 URL。默认值是基于当前的 location，并以此来解析传入的路径。</li>
  </ul>
  </dd>
 </dl>
@@ -77,56 +77,4 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
+{{Compat("api.ServiceWorkerContainer.register")}}

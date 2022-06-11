@@ -3,23 +3,20 @@ title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
-
 <p>{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}</p>
 
 <div id="scissor-animation">
-<div class="summary">
-<p>使用剪切和清除操作实现一些动画的简单WebGL的例子。</p>
-</div>
+
+<p>使用剪切和清除操作实现一些动画的简单 WebGL 的例子。</p>
 
 <p>{{EmbedLiveSample("scissor-animation-source",660,425)}}</p>
 
 <div>
 <h3 id="剪切动画">剪切动画</h3>
 
-<p>本例中，我们使用{{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}}。我们再次建立一个动画循环使用计时器。注意,这次是方块的位置(剪切区)更新每一帧(我们设置帧率大约每17毫秒，约60 fps -帧每秒)</p>
+<p>本例中，我们使用{{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}}。我们再次建立一个动画循环使用计时器。注意，这次是方块的位置 (剪切区) 更新每一帧 (我们设置帧率大约每 17 毫秒，约 60 fps -帧每秒)</p>
 
-<p>相比之下，方块的颜色(用{{domxref("WebGLRenderingContext.clearColor()","clearColor")}})仅创建一个新的方块。这是一个很好的演示{{Glossary("WebGL")}}是一个状态机。对于每一个方块，我们设置它的颜色,然后只更新它的位置每一帧。WebGL的清晰的颜色状态维持在设定值,直到我们再次改变它创建一个新的方块。</p>
+<p>相比之下，方块的颜色 (用{{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) 仅创建一个新的方块。这是一个很好的演示{{Glossary("WebGL")}}是一个状态机。对于每一个方块，我们设置它的颜色，然后只更新它的位置每一帧。WebGL 的清晰的颜色状态维持在设定值，直到我们再次改变它创建一个新的方块。</p>
 </div>
 
 <div id="scissor-animation-source">

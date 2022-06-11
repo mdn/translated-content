@@ -9,7 +9,7 @@ translation_of: Web/API/Selection/toString
 </div>
 </div>
 
-<p><strong><code>Selection.toString()</code></strong>返回代表当前selection对象的字符串,例如当前选择的文本文字.</p>
+<p><strong><code>Selection.toString()</code></strong>返回代表当前 selection 对象的字符串，例如当前选择的文本文字。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -19,18 +19,18 @@ translation_of: Web/API/Selection/toString
 <h3 id="返回值">返回值</h3>
 
 <ul>
- <li><em><code>str</code></em> 代表selection的字符串.</li>
+ <li><em><code>str</code></em> 代表 selection 的字符串。</li>
 </ul>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
-<p><em>无.</em></p>
+<p><em>无。</em></p>
 
 <h2 id="Description" name="Description">描述</h2>
 
-<p>此方法返回当前被选中的文本文字.</p>
+<p>此方法返回当前被选中的文本文字。</p>
 
-<p>在<a href="en/JavaScript">JavaScript</a>中, 当selection对象作为字符串类型使用时，此方法会被自动调用:</p>
+<p>在<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>中，当 selection 对象作为字符串类型使用时，此方法会被自动调用：</p>
 
 <pre class="brush: js">alert(window.getSelection()) // 被调用时
 alert(window.getSelection().toString())  // 真实情况
@@ -55,58 +55,10 @@ alert(window.getSelection().toString())  // 真实情况
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基础特性</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础特性</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Selection.toString")}}
 
 <h2 id="See_also" name="See_also">参考</h2>
 
 <ul>
- <li>{{domxref("Selection")}}, Selection接口规范.</li>
+ <li>{{domxref("Selection")}}, Selection 接口规范。</li>
 </ul>

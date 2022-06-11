@@ -7,9 +7,9 @@ translation_of: 'Web/CSS/:target'
 
 <p>The<code> :target </code><a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents the unique element, if any, with an <strong>id</strong> matching the fragment identifier of the URI of the document..</p>
 
-<p>URIs with fragment identifiers link to a certain element within the document, known as the <em>target element</em>. For instance, here is a URI pointing to an <em>anchor</em> named <span style="border: 1px dotted gray;">section2</span>:<br>
+<p>URIs with fragment identifiers link to a certain element within the document, known as the <em>target element</em>. For instance, here is a URI pointing to an <em>anchor</em> named section2:<br>
  <code class="plain">http://example.com/folder/document.html<code style="border: 1px dotted gray;">#section2</code></code><br>
- The <em>anchor</em> can be any element with an<code> id </code>attribute, e.g.<code> &lt;h1 id="<span style="border: 1px dotted gray;">section2</span>"&gt; </code>in our example. The <em>target element</em><code> h1 </code>can be represented by the<code> :target </code>pseudo-class.</p>
+ The <em>anchor</em> can be any element with an<code> id </code>attribute, e.g.<code> &lt;h1 id="section2"&gt; </code>in our example. The <em>target element</em><code> h1 </code>can be represented by the<code> :target </code>pseudo-class.</p>
 
 <div class="note"><strong>Note:</strong> The<code> id </code>attribute was new in HTML 4 (December 1997).  In old-style HTML <code>&lt;a&gt;</code> is a target element.  The<code> :target </code>pseudo-class applies to those targets as well.</div>
 
@@ -198,75 +198,11 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>No changes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器兼容性">瀏覽器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.3")}}</td>
-   <td>9</td>
-   <td>9.5</td>
-   <td>1.3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("1.3")}}</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>2.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.target")}}
 
 <h2 id="參見">參見</h2>
 

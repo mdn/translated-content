@@ -1,0 +1,124 @@
+---
+title: CanvasRenderingContext2D.currentTransform
+slug: conflicting/Web/API/CanvasRenderingContext2D
+translation_of: Web/API/CanvasRenderingContext2D/currentTransform
+original_slug: Web/API/CanvasRenderingContext2D/currentTransform
+---
+<div>{{APIRef()}} {{SeeCompatTable}}</div>
+
+<p><code style="font-style: normal;"><strong>CanvasRenderingContext2D</strong></code><strong><code>.currentTransform</code></strong> 属性，表示当前变换的矩阵。可以通过Canvas2D API 返回或者赋值为{{domxref("SVGMatrix")}}对象。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><var>ctx.currentTransform [= value];</var>
+</pre>
+
+<dl>
+ <dt><code>参考</code></dt>
+ <dd>{{domxref("SVGMatrix")}} 对象表示当前变换的矩阵。</dd>
+</dl>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="使用currentTransform_的方式"><code><font face="Open Sans, sans-serif">使用</font>currentTransform</code> 的方式</h3>
+
+<p>这是一段简单的代码片段，使用<span style="font-family: consolas,monaco,andale mono,monospace;">currentTransform属性设置变换矩阵。</span></p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush: js">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var matrix = ctx.currentTransform;
+matrix.a = 1;
+matrix.b = 1;
+matrix.c = 0;
+matrix.d = 1;
+matrix.e = 0;
+matrix.f = 0;
+ctx.currentTransform = matrix;
+ctx.fillRect(0,0,100,100);
+</pre>
+
+<p>修改下面的代码并在线查看canvas的变化（确定使用支持这段代码特征的浏览器，可以查看兼容性列表）:</p>
+
+<div class="hidden">
+<h6 id="Playable_code">Playable code</h6>
+
+<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
+&lt;/div&gt;
+&lt;textarea id="code" class="playable-code" style="height:150px"&gt;
+var matrix = ctx.currentTransform;
+matrix.a = 1;
+matrix.b = 1;
+matrix.c = 0;
+matrix.d = 1;
+matrix.e = 0;
+matrix.f = 0;
+ctx.currentTransform = matrix;
+ctx.fillRect(0,0,100,100);&lt;/textarea&gt;
+</pre>
+
+<pre class="brush: js">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
+var code = textarea.value;
+
+function drawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawCanvas();
+});
+
+edit.addEventListener("click", function() {
+  textarea.focus();
+})
+
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
+</pre>
+</div>
+
+<p>{{ EmbedLiveSample('Playable_code', 700, 420) }}</p>
+
+<h2 id="规范描述">规范描述</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-currenttransform", "CanvasRenderingContext2D.currentTransform")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.CanvasRenderingContext2D.currentTransform")}}
+
+<h2 id="参见">参见</h2>
+
+<ul>
+ <li>接口定义， {{domxref("CanvasPattern")}}</li>
+ <li>{{domxref("SVGMatrix")}}</li>
+</ul>

@@ -12,7 +12,7 @@ translation_of: Web/CSS/bottom
 <ul>
  <li>当<code>position</code>设置为<code>absolute</code>或<code>fixed</code>时，<code>bottom</code>属性指定了定位元素下外边距边界与其包含块下边界之间的偏移。</li>
  <li>当<code>position</code>设置为<code>relative</code>时，<code>bottom</code>属性指定了元素的下边界离开其正常位置的偏移。</li>
- <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在viewport里面，<code>bottom</code>属性的效果和position为<code>relative</code>等同；如果元素在viewport外面，<code>bottom</code>属性的效果和position为<code>fixed</code>等同。</li>
+ <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在 viewport 里面，<code>bottom</code>属性的效果和 position 为<code>relative</code>等同；如果元素在 viewport 外面，<code>bottom</code>属性的效果和 position 为<code>fixed</code>等同。</li>
  <li>当<code>position</code>设置为<code>static</code>时，<code>bottom</code>属性无效。</li>
 </ul>
 
@@ -46,13 +46,13 @@ bottom: unset;</code></pre>
 
 <dl>
  <dt><code>&lt;length&gt;</code></dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">一个负值、空值或正值，代表了：</font></dd>
+ <dd>一个负值、空值或正值，代表了：</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
  <dd>包含块高度的百分比{{cssxref("&lt;percentage&gt;")}}。</dd>
  <dt><code>auto</code></dt>
  <dd>规定：
  <ul>
-  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("top") }}属性为准，如果此时设置<code>height: auto</code>，将基于内容需要的高度设置宽度；如果<code>top</code>也为<code>auto</code>的话，元素的垂直位置就是它假如作为静态(即static)元素时该在的位置。</li>
+  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("top") }}属性为准，如果此时设置<code>height: auto</code>，将基于内容需要的高度设置宽度；如果<code>top</code>也为<code>auto</code>的话，元素的垂直位置就是它假如作为静态 (即 static) 元素时该在的位置。</li>
   <li>对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("top") }}属性；如果<code>top</code>也为<code>auto</code>的话，元素将不会有偏移。</li>
  </ul>
  </dd>
@@ -66,7 +66,7 @@ bottom: unset;</code></pre>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
-<p>下面的例子分别展示了<code>bottom</code>属性在<code>position</code>为<code>absolute</code>和<code>fixed</code>的不同行为.</p>
+<p>下面的例子分别展示了<code>bottom</code>属性在<code>position</code>为<code>absolute</code>和<code>fixed</code>的不同行为。</p>
 
 <h3 id="HTML">HTML</h3>
 

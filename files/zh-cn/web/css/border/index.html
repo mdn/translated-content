@@ -11,16 +11,16 @@ translation_of: Web/CSS/border
 
 
 
-<p><a href="https://developer.mozilla.org/en-US/docs/CSS" title="CSS">CSS</a>的border属性是一个用于设置各种单独的边界属性的<a href="Shorthand_properties">简写属性</a>。<code>border可以用于设置一个或多个以下属性的值：</code> {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/CSS" title="CSS">CSS</a>的 border 属性是一个用于设置各种单独的边界属性的<a href="Shorthand_properties">简写属性</a>。<code>border可以用于设置一个或多个以下属性的值：</code> {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}。</p>
 
 
 
 <p>{{EmbedInteractiveExample("pages/css/border.html")}}</p>
 
-<p>和所有的简写属性一样，如果有缺省值会被设置成对应属性的初始值。同时需要注意设置border对{{cssxref("border-image")}}属性的影响，虽然border属性不能设置这个属性，但会把该属性重置为初始值none。这使得我们可以用border属性去重置整个样式表中的border设置。因为W3C计划在未来的标准中保留该属性，因此建议使用该属性重置边框设定。</p>
+<p>和所有的简写属性一样，如果有缺省值会被设置成对应属性的初始值。同时需要注意设置 border 对{{cssxref("border-image")}}属性的影响，虽然 border 属性不能设置这个属性，但会把该属性重置为初始值 none。这使得我们可以用 border 属性去重置整个样式表中的 border 设置。因为 W3C 计划在未来的标准中保留该属性，因此建议使用该属性重置边框设定。</p>
 
 <div class="note style-wrap">
-<p><strong>注意：</strong> 虽然{{Cssxref("border-width")}},、{{Cssxref("border-style")}}和 {{Cssxref("border-color")}} 简写属性接受最多4个参数来为不同的边设置宽度、风格和颜色，但boder属性只接受三个参数，分别是宽度、风格和颜色，所以这样会使得四条边的边框相同。</p>
+<p><strong>注意：</strong> 虽然{{Cssxref("border-width")}},、{{Cssxref("border-style")}}和 {{Cssxref("border-color")}} 简写属性接受最多 4 个参数来为不同的边设置宽度、风格和颜色，但 boder 属性只接受三个参数，分别是宽度、风格和颜色，所以这样会使得四条边的边框相同。</p>
 </div>
 
 <h3 id="Borders_vs._outlines">Borders vs. outlines</h3>
@@ -51,10 +51,10 @@ border: inherit;
 border: initial;
 border: unset;</pre>
 
-<p>可以使用下面列出的一个，两个或三个值来指定<code>border</code>属性。 值的顺序无关紧要。</p>
+<p>可以使用下面列出的一个，两个或三个值来指定<code>border</code>属性。值的顺序无关紧要。</p>
 
 <div class="blockIndicator note">
-<p>注意：如果边框的样式未定义，它将不可见。 这是因为样式默认为none。</p>
+<p>注意：如果边框的样式未定义，它将不可见。这是因为样式默认为 none。</p>
 </div>
 
 <h3 id="Values" name="Values">取值</h3>
@@ -65,7 +65,7 @@ border: unset;</pre>
  <dt>border-style </dt>
  <dd>请看 {{ Cssxref("border-style") }}.</dd>
  <dt>border-color </dt>
- <dd>{{cssxref("&lt;color&gt;")}} 可以确定border的颜色。如果这个值没有设置，它的默认值是元素的{{cssxref("color")}}属性值（是文字颜色而非背景色）。 请看{{ Cssxref("border-color") }}.</dd>
+ <dd>{{cssxref("&lt;color&gt;")}} 可以确定 border 的颜色。如果这个值没有设置，它的默认值是元素的{{cssxref("color")}}属性值（是文字颜色而非背景色）。请看{{ Cssxref("border-color") }}.</dd>
  <dt>
  <h3 id="正式语法">正式语法</h3>
 
@@ -111,14 +111,14 @@ border: unset;</pre>
    <td>{{SpecName('CSS3 Backgrounds', '#the-border-shorthands', 'border')}}</td>
    <td>{{Spec2('CSS3 Backgrounds')}}</td>
    <td>在理论上删除了对<code>transparent</code>的支持，因为{{cssxref("&lt;color&gt;")}}已经接受它作为一种有效的颜色值。这不会对实际使用有任何影响。<br>
-    虽然border不能给{{cssxref("border-image")}}赋特定的值，但可以用于重置{{cssxref("border-image")}}为初始值(<code>none</code>).</td>
+    虽然 border 不能给{{cssxref("border-image")}}赋特定的值，但可以用于重置{{cssxref("border-image")}}为初始值 (<code>none</code>).</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'box.html#border-shorthand-properties', 'border')}}</td>
    <td>{{Spec2('CSS2.1')}}</td>
    <td>
     <p>加入<code>inherit</code>关键字。<br>
-     接受transparent作为有效的颜色值。</p>
+     接受 transparent 作为有效的颜色值。</p>
    </td>
   </tr>
   <tr>

@@ -99,7 +99,7 @@ function importScript (sSrc, fOnload) {
   oScript.onerror = loadError;
   if (fOnload) { oScript.onload = fOnload; }
   document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
-  <span style="line-height: normal;">oScript.src = sSrc;</span>
+  oScript.src = sSrc;
 }</pre>
 
 <p>…the same thing, but appending the new scripts as last childs of the {{ HTMLElement("head") }} tag, instead of appending them immediately before the {{domxref("document.currentScript")}} element:</p>
@@ -168,110 +168,7 @@ importScript("myScript2.js", /* onload function: */ function () { alert("You rea
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>async</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>10</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>defer</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>
-    <p>4 (follows a spec of its own)</p>
-
-    <p>10 (by the spec)</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>crossOrigin</code> {{experimental_inline}}</td>
-   <td>{{WebKitBug(81438)}}</td>
-   <td>{{CompatGeckoDesktop("13")}} {{bug(696301)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{WebKitBug(81438)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>async</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>defer</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>crossOrigin</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
-
-<p>　　从Gecko2.0 { { geckoRelease(" 2.0 ")} },插入脚本创建的元素通过调用document.createElement(“脚本”)到DOM不再强制执行插入顺序。这种变化让Gecko正确遵守HTML5规范。让script-inserted外部脚本执行的插入顺序,设置异步属性为false。<br>
- 　　</p>
+{{Compat("api.HTMLScriptElement")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -4,16 +4,16 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 ---
-<p style="height: 15px;">« <a href="/zh-CN/CSS" title="CSS">CSS</a> « <a href="/zh-CN/CSS/Understanding_z-index" title="Understanding CSS z-index"><span class="title">理解 CSS z-index</span></a></p>
+<p>« <a href="/zh-CN/CSS" title="CSS">CSS</a> « <a href="/zh-CN/CSS/Understanding_z-index" title="Understanding CSS z-index">理解 CSS z-index</a></p>
 
-<h3 id="不含z-index的堆叠">不含z-index的堆叠</h3>
+<h3 id="不含z-index的堆叠">不含 z-index 的堆叠</h3>
 
-<p>当没有元素包含z-index属性时，元素按照如下顺序堆叠（从底到顶顺序）：</p>
+<p>当没有元素包含 z-index 属性时，元素按照如下顺序堆叠（从底到顶顺序）：</p>
 
 <ol>
  <li>根元素的背景和边界</li>
- <li>普通流(无定位)里的块元素(没有position或者position:static;)按HTML中的出现顺序堆叠</li>
- <li>定位元素按HTML中的出现顺序堆叠</li>
+ <li>普通流 (无定位) 里的块元素 (没有 position 或者 position:static;) 按 HTML 中的出现顺序堆叠</li>
+ <li>定位元素按 HTML 中的出现顺序堆叠</li>
 </ol>
 
 <p>在接下来的例子中，相对和绝对定位的块元素的大小和位置刚好说明上述堆叠规则。</p>
@@ -22,9 +22,9 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 <p><strong>Notes:</strong></p>
 
 <ul>
- <li>在一组由不含有任何z-index属性的同类元素，如例子中的定位块元素（DIV #1 至 #4），这些元素按照它们在HTML结构中出现的顺序堆叠，而不管它们的定位属性如何。</li>
+ <li>在一组由不含有任何 z-index 属性的同类元素，如例子中的定位块元素（DIV #1 至 #4），这些元素按照它们在 HTML 结构中出现的顺序堆叠，而不管它们的定位属性如何。</li>
  <li>
-  <p>普通流中不含有定位属性的标准块元素（DIV #5）始终先于定位元素渲染并出现在定位元素的下层，即便它们在HTML结构中出现的位置晚于定位元素也是如此。</p>
+  <p>普通流中不含有定位属性的标准块元素（DIV #5）始终先于定位元素渲染并出现在定位元素的下层，即便它们在 HTML 结构中出现的位置晚于定位元素也是如此。</p>
  </li>
 </ul>
 </div>
@@ -140,11 +140,11 @@ span.bold { font-weight: bold; }
 
 <ul>
  <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">堆叠与浮动</a> : 浮动元素的处理方式</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">增加 z-index</a> : 使用z-index来改变堆放顺序</li>
+ <li><a href="/zh-CN/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">增加 z-index</a> : 使用 z-index 来改变堆放顺序</li>
  <li><a href="/zh-CN/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">堆叠上下文</a> : 堆叠上下文的注意事项</li>
  <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1" title="en/CSS/Understanding_z-index/Stacking_context_example_1">堆叠上下文示例 1</a> : 在两层元素的第二层上使用 z-index</li>
  <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2" title="en/CSS/Understanding_z-index/Stacking_context_example_2">堆叠上下文示例 2</a> : 在两层元素的所有层上使用 z-index</li>
- <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">堆叠上下文示例 3</a> : 在三层元素的第二层上使用 z-index<span id="cke_bm_94E" class="hidden"> </span></li>
+ <li><a href="/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">堆叠上下文示例 3</a> : 在三层元素的第二层上使用 z-index </li>
 </ul>
 
 <p> </p>
@@ -158,5 +158,3 @@ span.bold { font-weight: bold; }
  <li>Last Updated Date: July 9th, 2005</li>
 </ul>
 </div>
-
-<p>{{ languages( { "fr": "fr/CSS/Comprendre_z-index/Empilement_sans_z-index" } ) }}</p>

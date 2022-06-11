@@ -12,31 +12,31 @@ tags:
   - bouncing
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{GamesSidebar}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}</p>
 
-<div class="summary">
-<p><font><font>这是</font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser"><font>Gamedev Phaser教程</font></a><font>的</font></font><strong><font><font>第</font></font></strong><font><font> 6 </font><strong><font>步</font></strong><font>。</font><font>在</font><a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html"><font>Gamedev-Phaser-Content-Kit / demos / lesson06.html</font></a><font>完成本课后，您可以找到源代码</font><font>。</font></font></p>
+<div>
+<p>这是<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser 教程</a>的<strong>第</strong> 6 <strong>步</strong>。在<a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html">Gamedev-Phaser-Content-Kit / demos / lesson06.html</a>完成本课后，您可以找到源代码。</p>
 </div>
 
 <p>现在已经介绍了物理引擎，我们可以开始在游戏中实现碰撞检测 - 首先我们来看看墙壁。</p>
 
-<h2 id="反弹边界"><font><font>反弹边界</font></font></h2>
+<h2 id="反弹边界">反弹边界</h2>
 
-<p><font><font>让我们的球从墙壁上弹起的最简单的方法是告诉框架，我们想要将</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="HTML &lt;canvas>元素可用于通过脚本（通常为JavaScript）绘制图形。 例如，它可以用于绘制图形，制作照片，甚至执行动画。 您可以（并且应该）在&lt;canvas>块内提供备用内容。 该内容将在不支持画布的旧浏览器和禁用JavaScript的浏览器中呈现。"><code>&lt;canvas&gt;</code></a><font><font>元素</font><font>的边界</font><font>视为墙壁，而不是让球移过它们。</font><font>在Phaser中，可以使用该</font></font><code>collideWorldsBound</code><font><font>属性</font><font>轻松实现</font><font>。</font><font>在现有</font></font><code>game.physics.enable()</code><font><font>方法调用</font><font>之后添加此行</font><font>：</font></font></p>
+<p>让我们的球从墙壁上弹起的最简单的方法是告诉框架，我们想要将<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="HTML &lt;canvas>元素可用于通过脚本（通常为JavaScript）绘制图形。 例如，它可以用于绘制图形，制作照片，甚至执行动画。 您可以（并且应该）在&lt;canvas>块内提供备用内容。 该内容将在不支持画布的旧浏览器和禁用JavaScript的浏览器中呈现。"><code>&lt;canvas&gt;</code></a>元素的边界视为墙壁，而不是让球移过它们。在 Phaser 中，可以使用该<code>collideWorldsBound</code>属性轻松实现。在现有<code>game.physics.enable()</code>方法调用之后添加此行：</p>
 
 <pre class="brush: js">ball.body.collideWorldBounds = true;
 </pre>
 
-<p><font>现在球将停在屏幕的边缘，而不是消失，但它不会弹起。</font><font>为了使这种情况发生，我们必须设置它的bounciness。</font><font>在上一行下面添加以下行：</font></p>
+<p>现在球将停在屏幕的边缘，而不是消失，但它不会弹起。为了使这种情况发生，我们必须设置它的 bounciness。在上一行下面添加以下行：</p>
 
 <pre class="brush: js">ball.body.bounce.set(1);
 </pre>
 
-<p>再次尝试重新加载index.html - 现在您应该看到球从墙壁上弹起并在画布区域内移动。</p>
+<p>再次尝试重新加载 index.html - 现在您应该看到球从墙壁上弹起并在画布区域内移动。</p>
 
-<h2 id="比较你的代码"><font><font>比较你的代码</font></font></h2>
+<h2 id="比较你的代码">比较你的代码</h2>
 
 <p>您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：</p>
 
@@ -44,6 +44,6 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 
 <h2 id="下一步">下一步</h2>
 
-<p><font><font>现在开始看起来更像是一个游戏，但是我们无法以任何方式控制它 - 现在是介绍</font></font><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls"><font><font>玩家挡板和控制的时候了</font></font></a><font><font>。</font></font></p>
+<p>现在开始看起来更像是一个游戏，但是我们无法以任何方式控制它 - 现在是介绍<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls">玩家挡板和控制的时候了</a>。</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}</p>

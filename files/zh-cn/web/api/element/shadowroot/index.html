@@ -3,13 +3,13 @@ title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
 tags:
   - API
-  - DOM遍历
+  - DOM 遍历
   - ShadowRoot
 translation_of: Web/API/Element/shadowRoot
 ---
-<p>{{APIRef('Shadow DOM')}} {{SeeCompatTable}}{{draft}}</p>
+<p>{{APIRef('Shadow DOM')}}{{SeeCompatTable}}</p>
 
-<p><code>Element.shadowRoot</code> 是只读属性，表示元素挂载的shadow root。可以使用 {{domxref('Element.attachShadow')}} 给一个已存在的元素添加shadow root。</p>
+<p><code>Element.shadowRoot</code> 是只读属性，表示元素挂载的 shadow root。可以使用 {{domxref('Element.attachShadow')}} 给一个已存在的元素添加 shadow root。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -18,13 +18,13 @@ translation_of: Web/API/Element/shadowRoot
 
 <h3 id="值">值</h3>
 
-<p>可以是一个{{domxref('ShadowRoot')}}实例对象，但如果一个shadow root的 {{domxref("ShadowRoot.mode", "mode")}}被设置为 <code>closed</code>那么它的值将会是 <code>null</code>。(详情请见 {{domxref("Element.attachShadow")}} ).</p>
+<p>可以是一个{{domxref('ShadowRoot')}}实例对象，但如果一个 shadow root 的 {{domxref("ShadowRoot.mode", "mode")}}被设置为 <code>closed</code>那么它的值将会是 <code>null</code>。(详情请见 {{domxref("Element.attachShadow")}} ).</p>
 
 <h2 id="示例">示例</h2>
 
 <p>下面代码片段取自 <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks">在线查看</a>), 在这个示例中我们创建了一个在元素属性中指定了大小和颜色的正方形元素。</p>
 
-<p>在<code>&lt;custom-square&gt;</code>标签的class定义中我们在生命周期的回调函数里调用了一些外部方法——<code>updateStyle()</code>，正是这个函数使得我们添加的正方形元素可以改变大小和颜色。你可以看到我们将<code>this</code>（即我们创建的正方形元素本身）作为一个参数传入了这个方法。</p>
+<p>在<code>&lt;custom-square&gt;</code>标签的 class 定义中我们在生命周期的回调函数里调用了一些外部方法——<code>updateStyle()</code>，正是这个函数使得我们添加的正方形元素可以改变大小和颜色。你可以看到我们将<code>this</code>（即我们创建的正方形元素本身）作为一个参数传入了这个方法。</p>
 
 <pre class="brush: js">connectedCallback() {
   console.log('Custom square element added to page.');
@@ -37,7 +37,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 </pre>
 
-<p>在<code>updateStyle()</code>函数中我们通过{{domxref("Element.shadowRoot")}}获取到了Shadow DOM引用。在这里我们利用了标准的DOM遍历技巧来获取在Shadow DOM中{{htmlelement("style")}}元素并更新了其中的CSS样式：</p>
+<p>在<code>updateStyle()</code>函数中我们通过{{domxref("Element.shadowRoot")}}获取到了 Shadow DOM 引用。在这里我们利用了标准的 DOM 遍历技巧来获取在 Shadow DOM 中{{htmlelement("style")}}元素并更新了其中的 CSS 样式：</p>
 
 <pre class="brush: js">function updateStyle(elem) {
   const shadow = elem.shadowRoot;
@@ -77,56 +77,4 @@ attributeChangedCallback(name, oldValue, newValue) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td> 基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(53.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.shadowRoot")}}

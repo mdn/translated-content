@@ -18,7 +18,7 @@ browser-compat: html.elements.dt
 ---
 {{HTMLRef}}
 
-L'élément HTML **`<dt>` **identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) et est généralement suivi d'un élément [`<dd>`](/fr/docs/Web/HTML/Element/dd). Plusieurs éléments `<dt>` qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément [`<dd>`](/fr/docs/Web/HTML/Element/dd).
+L'élément HTML **`<dt>`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) et est généralement suivi d'un élément [`<dd>`](/fr/docs/Web/HTML/Element/dd). Plusieurs éléments `<dt>` qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément [`<dd>`](/fr/docs/Web/HTML/Element/dd).
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 

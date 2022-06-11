@@ -19,7 +19,7 @@ Crée un [event](/en-US/docs/DOM/event) du type spécifié. L'objet retourné do
     var event = document.createEvent(type);
 
 - `event` est l'objet [Event](/en-US/docs/DOM/event) créé.
-- `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section {{Anch("Notes")}} pour plus de détails.
+- `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
 
 ## Exemple
 

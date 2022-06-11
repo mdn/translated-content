@@ -7,11 +7,11 @@ translation_of: Web/API/Window/clearImmediate
 <h2 id="概述">概述</h2>
 <p>此方法用来清除 {{ domxref("window.setImmediate") }}.</p>
 <div class="note">
- <strong>注意:</strong> 注意: 该方法最近刚刚被微软提出, 可能不会被w3c批准成为标准, 目前只有最新版Internet Explorer实现了该方法.</div>
+ <strong>注意：</strong> 注意：该方法最近刚刚被微软提出，可能不会被 w3c 批准成为标准，目前只有最新版 Internet Explorer 实现了该方法。</div>
 <h2 id="语法">语法</h2>
 <pre>window.clearImmediate(immediateID)
 </pre>
-<p>这里的immediateID是由{{ domxref("window.setImmediate") }}返回的.</p>
+<p>这里的 immediateID 是由{{ domxref("window.setImmediate") }}返回的。</p>
 <h2 id="例子">例子</h2>
 <pre>var immediateID = setImmediate(function () {
   // Run some code
@@ -22,51 +22,8 @@ document.getElementById("button").addEventListener(function () {
 }, false);
 </pre>
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatVersionUnknown() }}</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
+{{Compat("api.Window.clearImmediate")}}
+
 <h2 id="相关链接">相关链接</h2>
 <p>{{ domxref("window.setImmediate") }}</p>
 <p>{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}</p>

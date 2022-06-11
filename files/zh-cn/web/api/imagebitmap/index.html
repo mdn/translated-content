@@ -11,15 +11,15 @@ translation_of: Web/API/ImageBitmap
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><code><strong>ImageBitmap</strong></code> 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。 <code>ImageBitmap</code>提供了一种异步且高资源利用率的方式来为WebGL的渲染准备基础结构。</p>
+<p><code><strong>ImageBitmap</strong></code> 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。 <code>ImageBitmap</code>提供了一种异步且高资源利用率的方式来为 WebGL 的渲染准备基础结构。</p>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("ImageBitmap.height")}} {{readonlyInline}}</dt>
- <dd>无符号长整型数值，表示ImageData的CSS像素单位的高度。</dd>
+ <dd>无符号长整型数值，表示 ImageData 的 CSS 像素单位的高度。</dd>
  <dt>{{domxref("ImageBitmap.width")}} {{readonlyInline}}</dt>
- <dd>无符号长整型数值， 表示ImageData的CSS像素单位的宽度。</dd>
+ <dd>无符号长整型数值， 表示 ImageData 的 CSS 像素单位的宽度。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -27,7 +27,7 @@ translation_of: Web/API/ImageBitmap
 <dl>
  <dt>{{domxref("ImageBitmap.close()")}}</dt>
  <dd>
- <p>释放ImageBitmap所相关联的所有图形资源。</p>
+ <p>释放 ImageBitmap 所相关联的所有图形资源。</p>
  </dd>
 </dl>
 
@@ -52,75 +52,7 @@ translation_of: Web/API/ImageBitmap
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>close()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(46)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>close()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(46)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.ImageBitmap")}}
 
 <h2 id="另见">另见</h2>
 

@@ -10,43 +10,43 @@ translation_of: Web/API/Navigator
 ---
 <p>{{apiref("DOM4")}}</p>
 
-<p><code>Navigator</code> 接口表示用户代理的状态和标识。 它允许脚本查询它和注册自己进行一些活动。</p>
+<p><code>Navigator</code> 接口表示用户代理的状态和标识。它允许脚本查询它和注册自己进行一些活动。</p>
 
-<p>可以使用只读的 {{domxref("window.navigator")}} 属性检索navigator对象。</p>
+<p>可以使用只读的 {{domxref("window.navigator")}} 属性检索 navigator 对象。</p>
 
 <h2 id="属性">属性</h2>
 
-<p>不从<em>{{domxref("NavigatorID")}}, {{domxref("NavigatorLanguage")}}, {{domxref("NavigatorOnLine")}}, {{domxref("NavigatorGeolocation")}}, {{domxref("NavigatorPlugins")}}, {{domxref("NavigatorUserMedia")}}, </em>和 <em>{{domxref("NetworkInformation")}} </em>中继承任何属性，但是实现了定义在这些对象中的如下属性。</p>
+<p>不从 <em>{{domxref("NavigatorID")}}、{{domxref("NavigatorLanguage")}}、{{domxref("NavigatorOnLine")}}、{{domxref("NavigatorGeolocation")}}、{{domxref("NavigatorPlugins")}}、{{domxref("NavigatorUserMedia")}}</em> 和 <em>{{domxref("NetworkInformation")}}</em> 中继承任何属性，但是实现了定义在这些对象中的如下属性。</p>
 
 <h3 id="标准属性">标准属性</h3>
 
 <dl>
  <dt>{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>筛选所有的 {{domxref("VRDisplay")}} 对象，把其中所有{{domxref("VRDisplay.ispresenting")}}属性的值为<code>true</code>的对象以数组的形式返回。 </dd>
+ <dd>筛选所有的 {{domxref("VRDisplay")}} 对象，把其中所有 {{domxref("VRDisplay.ispresenting")}} 属性的值为 <code>true</code> 的对象以数组的形式返回。</dd>
  <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>返回当前浏览器的内部“开发代号”名称。 不能保证此属性返回的值是正确的。</dd>
+ <dd>返回当前浏览器的内部 “开发代号” 名称。不能保证此属性返回的值是正确的。</dd>
  <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>以 {{domxref("DOMString")}} 的形式返回浏览器官方名称。 不能保证此属性返回的值是正确的。</dd>
+ <dd>以 {{domxref("DOMString")}} 的形式返回浏览器官方名称。不能保证此属性返回的值是正确的。</dd>
  <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>以 {{domxref("DOMString")}} 的形式返回浏览器版本。不能保证此属性返回的值是正确的。</dd>
  <dt>{{domxref("Navigator.battery")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>返回一个 {{domxref("BatteryManager")}} 对象，你可以用它来获取一些电池充电状态的信息。</dd>
  <dt>{{domxref("Navigator.connection")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>提供一个{{domxref("NetworkInformation")}}对象来获取设备的网络连接信息。</dd>
+ <dd>提供一个 {{domxref("NetworkInformation")}} 对象来获取设备的网络连接信息。</dd>
  <dt>{{domxref("Navigator.cookieEnabled")}} {{readonlyinline}}</dt>
- <dd>当忽略 cookie 时返回 false，否则返回 true</dd>
+ <dd>当忽略 Cookie 时返回 false，否则返回 true</dd>
  <dt>{{domxref("Navigator.geolocation")}} {{readonlyInline}}</dt>
  <dd>返回一个 {{domxref("Geolocation")}} 对象，据之可访问设备的地理位位置信息。</dd>
  <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readOnlyInline}}</dt>
  <dd>返回可用的逻辑处理器核心数。</dd>
  <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回{{domxref("Boolean")}}表明浏览器是否支持Java。</dd>
+ <dd>返回 {{domxref("Boolean")}} 表明浏览器是否支持 Java。</dd>
  <dt>{{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>返回一个{{domxref("Keyboard")}}对象，该对象提供对以下功能的访问：检索键盘布局图和切换从物理键盘捕获按键的功能。</dd>
+ <dd>返回一个 {{domxref("Keyboard")}} 对象，该对象提供对以下功能的访问：检索键盘布局图和切换从物理键盘捕获按键的功能。</dd>
  <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
- <dd>返回{{domxref("DOMString")}}表示用户的首先语言，通常是浏览器用户界面的语言。当未知的时，返回null。</dd>
+ <dd>返回 {{domxref("DOMString")}} 表示用户的首先语言，通常是浏览器用户界面的语言。当未知的时，返回 null。</dd>
  <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}</dt>
- <dd> 返回一个表示用户已知语言的{{domxref("DOMString")}}数组，并按优先顺序排列。</dd>
+ <dd>返回一个表示用户已知语言的 {{domxref("DOMString")}} 数组，并按优先顺序排列。</dd>
  <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}</dt>
  <dt>{{domxref("Navigator.locks")}} {{readonlyinline}}{{experimental_inline}}</dt>
  <dd>Returns a {{domxref("LockManager")}} object which provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object</dd>
@@ -54,21 +54,21 @@ translation_of: Web/API/Navigator
  <dd>Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.</dd>
  <dt>{{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}</dt>
  <dd>Returns the maximum number of simultaneous touch contact points are supported by the current device.</dd>
- <dd>返回{{domxref("MimeTypeArray")}}数组用于列举浏览器所支持的MIME类型。</dd>
+ <dd>返回 {{domxref("MimeTypeArray")}} 数组用于列举浏览器所支持的 MIME 类型。</dd>
  <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
- <dd>返回{{domxref("Boolean")}}来表明浏览器是否联网。</dd>
+ <dd>返回 {{domxref("Boolean")}} 来表明浏览器是否联网。</dd>
  <dt>{{domxref("Navigator.oscpu")}}</dt>
  <dd>返回当前操作系统名。</dd>
  <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>返回一个{{domxref("Permissions")}}对象，该对象可用于查询和更新<a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>涵盖的API的权限状态。</dd>
+ <dd>返回一个 {{domxref("Permissions")}} 对象，该对象可用于查询和更新 <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> 涵盖的 API 的权限状态。</dd>
  <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}}{{experimental_inline}}</dt>
  <dd>返回浏览器平台名，不确定此值是否有效。</dd>
  <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回{{domxref("PluginArray")}}数组用于列举出浏览器安装的插件。</dd>
+ <dd>返回 {{domxref("PluginArray")}} 数组用于列举出浏览器安装的插件。</dd>
  <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>在任意浏览器下都只返回<code>'Gecko'</code>，此属性只用于兼容的目的。</dd>
+ <dd>在任意浏览器下都只返回 <code>'Gecko'</code>，此属性只用于兼容的目的。</dd>
  <dt>{{domxref("Navigator.serviceWorker")}} {{readonlyInline}}</dt>
- <dd>返回{{domxref("ServiceWorkerContainer")}} 对象用于提供注册、删除、更新以及为了<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>的{{domxref("ServiceWorker")}}对象之间的通信。</dd>
+ <dd>返回 {{domxref("ServiceWorkerContainer")}} 对象用于提供注册、删除、更新以及为了 <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a> 的 {{domxref("ServiceWorker")}} 对象之间的通信。</dd>
  <dt>{{domxref("NavigatorStorage.storage")}} {{readonlyinline}}</dt>
  <dd>Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.</dd>
  <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
@@ -80,13 +80,13 @@ translation_of: Web/API/Navigator
 
 <dl>
  <dt>{{domxref("window.navigator.buildID", "navigator.buildID")}} {{non-standard_inline}}</dt>
- <dd>返回浏览器识别码。这一方法返回时间戳，例如，在Firefox 64发行版中返回"<code>20181001000000</code>"。.</dd>
+ <dd>返回浏览器识别码。这一方法返回时间戳，例如：在 Firefox 64 发行版中返回 <code>20181001000000</code>。</dd>
  <dt>{{domxref("Navigator.cookieEnabled")}} {{non-standard_inline}}</dt>
- <dd>返回布尔值以表明cookies是否能再浏览器中启用</dd>
+ <dd>返回布尔值以表明 Cookies 是否能再浏览器中启用</dd>
  <dt>{{domxref("navigator.doNotTrack")}} {{non-standard_inline}}</dt>
- <dd>报告用户的不追踪参数值，当值为yes，你的网址或应用将不追踪用户</dd>
+ <dd>报告用户的不追踪参数值，当值为 yes，你的网址或应用将不追踪用户</dd>
  <dt>{{domxref("navigator.id")}} {{non-standard_inline}}</dt>
- <dd>返回 {{domxref("window.navigator.id", "id")}} 对象， 你能用 <a href="/en-US/docs/BrowserID" title="BrowserID">BrowserID</a> 添加支持 到你的网址</dd>
+ <dd>返回 {{domxref("window.navigator.id", "id")}} 对象，你能用 <a href="/en-US/docs/BrowserID" title="BrowserID">BrowserID</a> 添加支持到你的网址。</dd>
  <dt>{{domxref("window.navigator.mozApps", "navigator.mozApps")}} {{non-standard_inline}}</dt>
  <dd>Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control <a href="/Open_Web_Apps" title="Open Web apps">Open Web apps</a>.</dd>
  <dt>{{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}</dt>
@@ -133,7 +133,7 @@ translation_of: Web/API/Navigator
  <dd>Invokes the native sharing mechanism of the current platform.</dd>
  <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}</dt>
  <dd>Returns <code>false</code>. JavaScript taint/untaint functions removed in JavaScript 1.2.</dd>
- <dt>{{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}</dt>
+ <dt>{{domxref("Navigator.vibrate()")}}</dt>
  <dd>Causes vibration on devices with support for it. Does nothing if vibration support isn't available.</dd>
 </dl>
 

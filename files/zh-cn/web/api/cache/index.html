@@ -11,11 +11,11 @@ translation_of: Web/API/Cache
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>Cache</code></strong> 接口为缓存的 <code><a href="http://fetch.spec.whatwg.org/#request">Request</a></code> / <code><a href="http://fetch.spec.whatwg.org/#response">Response</a> </code> 对象对提供存储机制，例如，作为{{domxref("ServiceWorker")}} 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中,  但是它不必一定要配合 service worker 使用.</p>
+<p><strong><code>Cache</code></strong> 接口为缓存的 <code><a href="http://fetch.spec.whatwg.org/#request">Request</a></code> / <code><a href="http://fetch.spec.whatwg.org/#response">Response</a> </code> 对象对提供存储机制，例如，作为{{domxref("ServiceWorker")}} 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中， 但是它不必一定要配合 service worker 使用。</p>
 
-<p>一个域可以有多个命名 Cache 对象。你需要在你的脚本 (例如，在 {{domxref("ServiceWorker")}} 中)中处理缓存更新的方式。除非明确地更新缓存，否则缓存将不会被更新；除非删除，否则缓存数据不会过期。使用 {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开一个Cache 对象，再使用 Cache 对象的方法去处理缓存.</p>
+<p>一个域可以有多个命名 Cache 对象。你需要在你的脚本 (例如，在 {{domxref("ServiceWorker")}} 中) 中处理缓存更新的方式。除非明确地更新缓存，否则缓存将不会被更新；除非删除，否则缓存数据不会过期。使用 {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开一个 Cache 对象，再使用 Cache 对象的方法去处理缓存。</p>
 
-<p>你需要定期地清理缓存条目，因为每个浏览器都硬性限制了一个域下缓存数据的大小。缓存配额使用估算值，可以使用 {{domxref("StorageEstimate")}} API 获得。浏览器尽其所能去管理磁盘空间，但它有可能删除一个域下的缓存数据。浏览器要么自动删除特定域的全部缓存，要么全部保留。确保按名称安装版本缓存，并仅从可以安全操作的脚本版本中使用缓存。查看 <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Deleting old caches</a> 获取更多信息.</p>
+<p>你需要定期地清理缓存条目，因为每个浏览器都硬性限制了一个域下缓存数据的大小。缓存配额使用估算值，可以使用 {{domxref("StorageEstimate")}} API 获得。浏览器尽其所能去管理磁盘空间，但它有可能删除一个域下的缓存数据。浏览器要么自动删除特定域的全部缓存，要么全部保留。确保按名称安装版本缓存，并仅从可以安全操作的脚本版本中使用缓存。查看 <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Deleting old caches</a> 获取更多信息。</p>
 
 <div class="note">
 <p><strong>Note</strong>: {{domxref("Cache.put")}}, {{domxref("Cache.add")}}和{{domxref("Cache.addAll")}}只能在<code>GET</code>请求下使用。</p>
@@ -26,7 +26,7 @@ translation_of: Web/API/Cache
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> 自Chrome 46版本起，Cache API只保存安全来源的请求，即那些通过HTTPS服务的请求。</p>
+<p><strong>Note:</strong> 自 Chrome 46 版本起，Cache API 只保存安全来源的请求，即那些通过 HTTPS 服务的请求。</p>
 </div>
 
 <div class="note">
@@ -34,39 +34,39 @@ translation_of: Web/API/Cache
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> Cache API不支持HTTP缓存头。</p>
+<p><strong>Note:</strong> Cache API 不支持 HTTP 缓存头。</p>
 </div>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("Cache.match", "Cache.match(request, options)")}}</dt>
- <dd>返回一个 {{jsxref("Promise")}}对象，resolve的结果是跟 {{domxref("Cache")}} 对象匹配的第一个已经缓存的请求。</dd>
+ <dd>返回一个 {{jsxref("Promise")}}对象，resolve 的结果是跟 {{domxref("Cache")}} 对象匹配的第一个已经缓存的请求。</dd>
  <dt>{{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}</dt>
- <dd>返回一个{{jsxref("Promise")}} 对象，resolve的结果是跟{{domxref("Cache")}}对象匹配的所有请求组成的数组。</dd>
+ <dd>返回一个{{jsxref("Promise")}} 对象，resolve 的结果是跟{{domxref("Cache")}}对象匹配的所有请求组成的数组。</dd>
  <dt>{{domxref("Cache.add", "Cache.add(request)")}}</dt>
- <dd>抓取这个URL, 检索并把返回的response对象添加到给定的Cache对象.这在功能上等同于调用 fetch(), 然后使用 Cache.put() 将response添加到cache中.</dd>
+ <dd>抓取这个 URL，检索并把返回的 response 对象添加到给定的 Cache 对象。这在功能上等同于调用 fetch(), 然后使用 Cache.put() 将 response 添加到 cache 中。</dd>
  <dt>{{domxref("Cache.addAll", "Cache.addAll(requests)")}}</dt>
- <dd>抓取一个URL数组，检索并把返回的response对象添加到给定的Cache对象。</dd>
+ <dd>抓取一个 URL 数组，检索并把返回的 response 对象添加到给定的 Cache 对象。</dd>
  <dt>{{domxref("Cache.put", "Cache.put(request, response)")}}</dt>
- <dd>同时抓取一个请求及其响应，并将其添加到给定的cache。</dd>
+ <dd>同时抓取一个请求及其响应，并将其添加到给定的 cache。</dd>
  <dt>{{domxref("Cache.delete", "Cache.delete(request, options)")}}</dt>
- <dd>搜索key值为request的{{domxref("Cache")}} 条目。如果找到，则删除该{{domxref("Cache")}} 条目，并且返回一个resolve为true的{{jsxref("Promise")}}对象；如果未找到，则返回一个resolve为false的{{jsxref("Promise")}}对象。</dd>
+ <dd>搜索 key 值为 request 的{{domxref("Cache")}} 条目。如果找到，则删除该{{domxref("Cache")}} 条目，并且返回一个 resolve 为 true 的{{jsxref("Promise")}}对象；如果未找到，则返回一个 resolve 为 false 的{{jsxref("Promise")}}对象。</dd>
  <dt>{{domxref("Cache.keys", "Cache.keys(request, options)")}}</dt>
- <dd>返回一个{{jsxref("Promise")}}对象，resolve的结果是{{domxref("Cache")}}对象key值组成的数组。</dd>
+ <dd>返回一个{{jsxref("Promise")}}对象，resolve 的结果是{{domxref("Cache")}}对象 key 值组成的数组。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>此代码段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service worker selective caching sample</a>. (请参阅 <a href="https://googlechrome.github.io/samples/service-worker/selective-caching/">selective caching live</a>) 。该代码使用{{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开任何具有以<code>font/开始的</code>Content-Type头的{{domxref("Cache")}}对象。</p>
+<p>此代码段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service worker selective caching sample</a>. (请参阅 <a href="https://googlechrome.github.io/samples/service-worker/selective-caching/">selective caching live</a>) 。该代码使用{{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开任何具有以<code>font/开始的</code>Content-Type 头的{{domxref("Cache")}}对象。</p>
 
-<p>代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的font，如果是，则返回它。 如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。</p>
+<p>代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。 如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。</p>
 
-<p>代码处理从{{domxref("Globalfetch.fetch","fetch()")}} 操作抛出的异常。 请注意，HTTP错误响应（例如404）不会触发异常。 它将返回一个具有相应错误代码集的正常响应对象。</p>
+<p>代码处理从{{domxref("Globalfetch.fetch","fetch()")}} 操作抛出的异常。 请注意，HTTP 错误响应（例如 404）不会触发异常。 它将返回一个具有相应错误代码集的正常响应对象。</p>
 
-<p>该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。 虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。 它将缓存的速记标识符映射到特定的版本化缓存名称。 代码还会删除命名不在CURRENT_CACHES中的所有缓存。</p>
+<p>该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。 虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。 它将缓存的速记标识符映射到特定的版本化缓存名称。 代码还会删除命名不在 CURRENT_CACHES 中的所有缓存。</p>
 
-<div class="note"><strong>注意:</strong> 在Chrome中，请访问chrome://inspect/#service-workers ，然后单击注册的服务工作线程下面的“inspect”链接，查看 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a> 脚本正在执行的各种操作的日志记录。</div>
+<div class="note"><strong>注意：</strong> 在 Chrome 中，请访问 chrome://inspect/#service-workers ，然后单击注册的服务工作线程下面的“inspect”链接，查看 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a> 脚本正在执行的各种操作的日志记录。</div>
 
 <pre class="brush: js">var CACHE_VERSION = 1;
 
@@ -80,7 +80,7 @@ self.addEventListener('activate', function(event) {
     return CURRENT_CACHES[key];
   });
 
-  // 在promise成功完成之前，活跃的worker不会被视作已激活。
+  // 在 promise 成功完成之前，活跃的 worker 不会被视作已激活。
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
@@ -101,7 +101,7 @@ self.addEventListener('fetch', function(event) {
 
   event.respondWith(
 
-    // 打开以'font'开头的Cache对象。
+    // 打开以'font'开头的 Cache 对象。
     caches.open(CURRENT_CACHES['font']).then(function(cache) {
       return cache.match(event.request).then(function(response) {
         if (response) {
@@ -111,7 +111,7 @@ self.addEventListener('fetch', function(event) {
         }
       }).catch(function(error) {
 
-        // 处理match()或fetch()引起的异常。
+        // 处理 match() 或 fetch() 引起的异常。
         console.error('  Error in fetch handler:', error);
 
         throw error;
@@ -122,154 +122,11 @@ self.addEventListener('fetch', function(event) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoDesktop(39)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>24</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>add()</td>
-   <td>{{CompatChrome(44.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>addAll()</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>matchAll()</td>
-   <td>{{CompatChrome(47.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Require HTTPS for <code>add()</code>, <code>addAll()</code>, and <code>put()</code></td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(39)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
-  <tr>
-   <td>add()</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(44.0)}}</td>
-  </tr>
-  <tr>
-   <td>addAll()</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
-  <tr>
-   <td>matchAll()</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
-  <tr>
-   <td>Require HTTPS for <code>add()</code>, <code>addAll()</code>, and <code>put()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
+{{Compat("api.Cache")}}
 
 <h2 id="参见">参见</h2>
 

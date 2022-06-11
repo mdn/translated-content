@@ -56,10 +56,8 @@ translation_of: Web/API/Event/composed
 <p>当我们点击 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code> 元素时候我们会注意到：</p>
 
 <ol>
-  <li>The <code>composed</code> property returns <code>true</code> because the
-    <code>click</code> event is always able to propagate across shadow boundaries.</li>
-  <li>You'll notice a difference in the value of <code>composedPath</code> for the two
-    elements.</li>
+  <li><code>composed</code> 属性返回 <code>true</code> 因为<code>click</code> 事件总是能总是能够跨越<code>Shadow DOM</code>的边界传播。</li>
+  <li>你应该会注意到，两个元素返回<code>composedPath</code>的值不同。</li>
 </ol>
 
 <p><code>&lt;open-shadow&gt;</code> 元素的组合路径是：</p>
@@ -70,7 +68,7 @@ translation_of: Web/API/Event/composed
 
 <pre>Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
 
-<p>第二种情况下，监听器只会捕获到 <code>&lt;closed-shadow&gt;</code> 元素本身，而不会去继续捕捉这个其中的节点。</p>
+<p>第二种情况下，监听器只会捕获到 <code>&lt;closed-shadow&gt;</code> 元素本身，而不会去继续捕捉该元素中的节点。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -91,58 +89,4 @@ translation_of: Web/API/Event/composed
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特点</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(52)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特点</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatGeckoMobile(52)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(53.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Event.composed")}}

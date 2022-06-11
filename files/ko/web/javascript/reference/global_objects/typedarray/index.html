@@ -151,7 +151,7 @@ Int8Array.prototype.foo = "bar";
  </tbody>
 </table>
 
-<h2 id="속성">속성</h2>
+<h2>정적 속성</h2>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT")}}</dt>
@@ -166,7 +166,7 @@ Int8Array.prototype.foo = "bar";
  <dd><em>TypedArray</em> 객체에 대한 프로토타입.</dd>
 </dl>
 
-<h2 id="메서드">메서드</h2>
+<h2>정적 메서드</h2>
 
 <dl>
  <dt>{{jsxref("TypedArray.from()")}}</dt>
@@ -175,17 +175,237 @@ Int8Array.prototype.foo = "bar";
  <dd>가변(variable) 인수로 새로운 형식화 배열을 생성합니다. {{jsxref("Array.of()")}}도 참조.</dd>
 </dl>
 
-<h2 id="TypedArray_프로토타입">TypedArray 프로토타입</h2>
+<h2>인스턴스 속성</h2>
+<dl>
+  <dt>{{jsxref("TypedArray.prototype.buffer")}}</dt>
+  <dd>
+    <p>
+      Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array. Fixed at
+      construction time and thus <strong>read only</strong>.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.byteLength")}}</dt>
+  <dd>
+    <p>
+      Returns the length (in bytes) of the typed array. Fixed at construction time and
+      thus <strong>read only.</strong>
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.byteOffset")}}</dt>
+  <dd>
+    <p>
+      Returns the offset (in bytes) of the typed array from the start of its
+      {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus <strong>read
+only.</strong>
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.length")}}</dt>
+  <dd>
+    <p>
+      Returns the number of elements held in the typed array. Fixed at construction time
+      and thus <strong>read only.</strong>
+    </p>
+  </dd>
+</dl>
 
-<p>모든 <em>TypedArray</em>는 {{jsxref("TypedArray.prototype")}}을 상속합니다.</p>
-
-<h3 id="속성_2">속성</h3>
-
-<p>{{page('ko/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','속성')}}</p>
-
-<h3 id="메서드_2">메서드</h3>
-
-<p>{{page('ko/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','메서드')}}</p>
+<h2>인스턴스 메서드</h2>
+<dl>
+  <dt>{{jsxref("TypedArray.prototype.at()")}}</dt>
+  <dd>
+    <p>Takes an integer value and returns the item at that index. This method allows for negative integers, which count back from the last item.</p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.copyWithin()")}}</dt>
+  <dd>
+    <p>
+      Copies a sequence of array elements within the array. See also
+      {{jsxref("Array.prototype.copyWithin()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.entries()")}}</dt>
+  <dd>
+    <p>
+      Returns a new <em>array iterator</em> object that contains the key/value pairs for each index
+      in the array. See also {{jsxref("Array.prototype.entries()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.every()")}}</dt>
+  <dd>
+    <p>
+      Tests whether all elements in the array pass the test provided by a function. See
+      also {{jsxref("Array.prototype.every()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.fill()")}}</dt>
+  <dd>
+    <p>
+      Fills all the elements of an array from a start index to an end index with a static
+      value. See also {{jsxref("Array.prototype.fill()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.filter()")}}</dt>
+  <dd>
+    <p>
+      Creates a new array with all of the elements of this array for which the provided
+      filtering function returns <code>true</code>. See also
+      {{jsxref("Array.prototype.filter()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.find()")}}</dt>
+  <dd>
+    <p>
+      Returns the found value in the array, if an element in the array satisfies the
+      provided testing function, or <code>undefined</code> if not found. See also
+      {{jsxref("Array.prototype.find()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.findIndex()")}}</dt>
+  <dd>
+    <p>
+      Returns the found index in the array, if an element in the array satisfies the
+      provided testing function or <code>-1</code> if not found. See also
+      {{jsxref("Array.prototype.findIndex()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.forEach()")}}</dt>
+  <dd>
+    <p>
+      Calls a function for each element in the array. See also
+      {{jsxref("Array.prototype.forEach()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.includes()")}}</dt>
+  <dd>
+    <p>
+      Determines whether a typed array includes a certain element, returning
+      <code>true</code> or <code>false</code> as appropriate. See also
+      {{jsxref("Array.prototype.includes()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.indexOf()")}}</dt>
+  <dd>
+    <p>
+      Returns the first (least) index of an element within the array equal to the
+      specified value, or <code>-1</code> if none is found. See also
+      {{jsxref("Array.prototype.indexOf()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.join()")}}</dt>
+  <dd>
+    <p>
+      Joins all elements of an array into a string. See also
+      {{jsxref("Array.prototype.join()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.keys()")}}</dt>
+  <dd>
+    <p>
+      Returns a new array iterator that contains the keys for each index in the array. See
+      also {{jsxref("Array.prototype.keys()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.lastIndexOf()")}}</dt>
+  <dd>
+    <p>
+      Returns the last (greatest) index of an element within the array equal to the
+      specified value, or <code>-1</code> if none is found. See also
+      {{jsxref("Array.prototype.lastIndexOf()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.map()")}}</dt>
+  <dd>
+    <p>
+      Creates a new array with the results of calling a provided function on every element
+      in this array. See also {{jsxref("Array.prototype.map()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.reduce()")}}</dt>
+  <dd>
+    <p>
+      Apply a function against an accumulator and each value of the array (from
+      left-to-right) as to reduce it to a single value. See also
+      {{jsxref("Array.prototype.reduce()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.reduceRight()")}}</dt>
+  <dd>
+    <p>
+      Apply a function against an accumulator and each value of the array (from
+      right-to-left) as to reduce it to a single value. See also
+      {{jsxref("Array.prototype.reduceRight()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.reverse()")}}</dt>
+  <dd>
+    <p>
+      Reverses the order of the elements of an array — the first becomes the last, and the
+      last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.set()")}}</dt>
+  <dd>
+    <p>
+      Stores multiple values in the typed array, reading input values from a specified
+      array.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.slice()")}}</dt>
+  <dd>
+    <p>
+      Extracts a section of an array and returns a new array. See also
+      {{jsxref("Array.prototype.slice()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.some()")}}</dt>
+  <dd>
+    <p>
+      Returns <code>true</code> if at least one element in this array satisfies the
+      provided testing function. See also {{jsxref("Array.prototype.some()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.sort()")}}</dt>
+  <dd>
+    <p>
+      Sorts the elements of an array in place and returns the array. See also
+      {{jsxref("Array.prototype.sort()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.subarray()")}}</dt>
+  <dd>
+    <p>
+      Returns a new <code>TypedArray</code> from the given start and end
+      element index.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.values()")}}</dt>
+  <dd>
+    <p>
+      Returns a new <em>array iterator</em> object that contains the values for each index in the
+      array. See also {{jsxref("Array.prototype.values()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.toLocaleString()")}}</dt>
+  <dd>
+    <p>
+      Returns a localized string representing the array and its elements. See also
+      {{jsxref("Array.prototype.toLocaleString()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.toString()")}}</dt>
+  <dd>
+    <p>
+      Returns a string representing the array and its elements. See also
+      {{jsxref("Array.prototype.toString()")}}.
+    </p>
+  </dd>
+  <dt>{{jsxref("TypedArray.prototype.@@iterator()",
+    "TypedArray.prototype[@@iterator]()")}}</dt>
+  <dd>
+    <p>
+      Returns a new <em>array iterator</em> object that contains the values for each index in the
+      array.
+    </p>
+  </dd>
+</dl>
 
 <h2 id="specifications">명세</h2>
 

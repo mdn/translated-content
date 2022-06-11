@@ -5,62 +5,59 @@ translation_of: Web/API/HTMLImageElement/srcset
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">{{domxref("HTMLImageElement")}} 的 <code><strong>srcset</strong></code> 的值是一个字符串，用来定义一个或多个图像候选地址，以 <code>,</code>分割，每个候选地址将在特定条件下得以使用。候选地址</span>包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}}  的属性。</p>
+<p>{{domxref("HTMLImageElement")}} 的 <code><strong>srcset</strong></code> 的值是一个字符串，用来定义一个或多个图像候选地址，以 <code>,</code>分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}}  的属性。</p>
 
-<p>The <code>srcset</code> property, along with the {{domxref("HTMLImageElement.sizes", "sizes")}} property, are a crucial component in designing responsive web sites, as they can be used together to make pages that use appropriate images for the rendering situation.</p>
+<p><code>srcset</code>属性和{{domxref("HTMLImageElement.sizes", "sizes")}} 属性是响应式网页设计中至关重要的组件，可以搭配使用来创建根据展示场景使用图像的页面。</p>
 
-<h2 id="Syntax">Syntax</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>htmlImageElement</em>.srcset = <em>imageCandidateStrings</em>;
 let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
 </pre>
 
-<h3 id="Value">Value</h3>
+<h3 id="Value">值</h3>
 
-<p>A {{domxref("USVString")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the <code>HTMLImageElement</code><em>.</em></p>
+<p>一个包含单个或多个以逗号分隔的图像候选列表{{domxref("USVString")}} ，表示在{{HTMLElement("img")}}里可以展示哪些图片。</p>
 
-<p>Each image candidate string must begin with a valid URL referencing a non-interactive graphic resource. This is followed by a comma (<code>,</code>) character and then a condition descriptor that indicates the circumstances in which the indicated image should be used. Space characters, other than the whitespace separating the URL and the corresponding condition descriptor, are ignored; this includes both leading and trailing space, as well as space before or after each comma.</p>
+<p> 每个图像候选字符串必须以有效 URL 开头，指向一个非交互的图形资源。 紧接着是一个逗号 (<code>,</code>) 字符。最后是一个条件描述符，该描述符定义了在什么环境下使用该图像。除了分隔 URL 和相应条件描述符的空格之外的空格字符都将被忽略，包括头部和末尾的空格，以及每个逗号前后的空格。</p>
 
-<p>If the condition descriptor is not provided (in other words, the image candidate provides only a URL), the candidate is used as the fallback if none of the other candidates match. Otherwise, the condition descriptor may take one of two forms:</p>
+<p>如果没有提供条件描述符（也就是说，图像候选字符只含一个 URL），并没有命中的其他候选，则使用该候选作为回退方案。否则，条件描述符可以采用以下两种形式之一：</p>
 
 <ul>
- <li>To indicate that the image resource specified by the image candidate string should be used when the image is being rendered with a particular width in pixels, provide a <strong>width descriptor</strong> comprised the number giving that width in pixels followed by the lower case letter "w". For example, to provide an image resource to be used when the renderer needs a 450 pixel wide image, use the width descriptor string <code>450w</code>. The specified width must be a positive, non-zero, integer, and <em>must</em> match the intrinsic width of the referenced image.</li>
- <li>Alternatively, you can use a <strong>pixel density descriptor</strong>, which specifies the condition in which th corresponding image resource should be used as the display's pixel density. This is written by stating the pixel density as a positive, non-zero floating-point value followed by the lower-case letter "x". As an example, to state that the corresponding  image should be used when the pixel density is double the standard density, you can give the pixel density descriptor <code>2x</code> or <code>2.0x</code>.</li>
+
+<li>要指定在某个宽度下使用特定图像候选代表的图像资源， 请提供 <strong>宽度描述符</strong>，包含表示该宽度的数字（以像素为单位）+ 小写字母“w”。例如，渲染一个 450 像素宽的图像对应的描述符字符串： <code>450w</code>。指定的宽度必须是正数、非零整数，并且<em>必须</em>与引用图像的固有宽度相匹配。</li>
+<li>或者，您可以使用<strong>像素密度描述符</strong>，它指定了在什么样的显示器像素密度下应用相应的图像资源。它是通过将像素密度声明为正的非零浮点值，后跟小写字母“x”来编写的。例如，要指定在像素密度是标准密度的两倍时使用相应的图像，您可以提供像素密度描述符 <code>2x</code> 或 <code>2.0x</code>。< /li>
+
 </ul>
 
-<p>You may mix and match the two types of descriptor. You must not, however, provide multiple image candidate strings that specify the same descriptor. All of the following are valid image candidate strings:</p>
-
+<p>您可以混合使用这两种类型的描述符。但是，您不能为同一个描述符指定多个图像候选字符。以下都是有效的图像候选字符串：</p>
 <pre>"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"</pre>
 
-<p>This string provides versions of an image to be used at the standard pixel density (<code>1x</code>) as well as double that pixel density (<code>2x</code>). Also available is a version of the image for use at a width of 2048 pixels (<code>2048w</code>).</p>
-
+<p>此字符串指定了在标准像素密度 (<code>1x</code>) 以及两倍像素密度 (<code>2x</code>) 下使用的图像版本。还可以使用宽度为 2048 像素 (<code>2048w</code>) 的图像版本。</p>
 <pre>"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"</pre>
 
-<p>This string provides versions of a header image to use when the {{Glossary("user agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px. An additional, fallback image candidate is provided without any condition at all, to be used for any other width.</p>
-
+<p>此字符串指定了在 {{Glossary("user agent", "user agent's")}} 需要渲染宽度为 640px、960px 或 1024px 的图像时使用的图像版本。以及一个额外的备用图像候选，没有任何条件，可用于任意宽度。</p>
 <pre>"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x icon-ultra.png 3x icon.svg"</pre>
 
-<p>Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel densities of 2x and 3x. A fallback image is provided as an SVG file that should be used in all other cases. Notice that the candidates may use different image types.</p>
+<p>这里，为宽度为 32 像素和 64 像素以及像素密度为 2 倍和 3 倍的图标提供了选项。备用图像以 SVG 文件的形式提供，它可在所有情况下使用。请注意，图像候选可使用不同的图像类型。</p>
 
-<p>For more information on what image formats are available for use in the {{HTMLElement("img")}} element, see <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a>.</p>
+<p>有关可用于 {{HTMLElement("img")}} 元素的图像格式的详细信息，请参阅 <a href="/en-US/docs/Web/Media/Formats/Image_types">图片文件类型和格式指南</a> 。</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Example">例子</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<p>The HTML below indicates that the default image is the 200 pixel wide version of the clock image we use in several places throughout our documentation. Also specified by the <code>srcset</code> attribute is that the 200-pixel version should be used for 1x displays while the 400-pixel version should be used for 2x displays.</p>
-
+<p>下面的 HTML 表明图像的默认宽度是 200 像素。 <code>srcset</code> 属性还指定了 200 像素版本应用于 1x 显示器，而 400 像素版本应用于 2x 显示器。</p>
 <pre class="brush: html">&lt;div class="box"&gt;
-  &lt;img src="/files/16797/clock-demo-200px.png"
+  &lt;img src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-200px.png"
        alt="Clock"
-       srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x"&gt;
+       srcset="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-200px.png 1x, https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-400px.png 2x"&gt;
 &lt;/div&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
-<p>The CSS simply specifies that the image and its surrounding box should be 200 pixels square and should have a simple border around it. Also provided is the {{cssxref("word-break")}} attribute, using the <code>break-all</code> value to tell the browser to wrap the string within the width available regardless of where in the string the wrap must occur.</p>
-
+<p>CSS 仅指定图像及其父盒子的宽为 200 像素，并有一个简单的边框。还提供了 {{cssxref("word-break")}} 属性，使用 <code>break-all</code> 值告诉浏览器将字符串包在可用宽度内。</p>
 <pre class="brush: css">.box {
   width: 200px;
   border: 2px solid rgba(150, 150, 150, 255);
@@ -75,7 +72,7 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
 <h3 id="JavaScript">JavaScript</h3>
 
 <p>The following code is run within a handler for the {{domxref("Window", "window")}}'s {{domxref("Window.load_event", "load")}} event.  It uses the image's  {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display the URL selected by the browser from the <code>srcset</code>.</p>
-
+<p>以下代码在 {{domxref("Window", "window")}} 的 {{domxref("Window.load_event", "load")}} 事件的处理程序中运行。它使用图像的 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} 属性来获取并显示浏览器从 <code>srcset</code> 中选择的 URL。</p>
 <pre class="brush: js">let box = document.querySelector(".box");
 let image = box.querySelector("img");
 
@@ -84,15 +81,13 @@ newElem.innerHTML = `Image: &lt;code&gt;${image.currentSrc}&lt;/code&gt;`;
 box.appendChild(newElem);
 </pre>
 
-<h3 id="Result">Result</h3>
+<h3 id="Result">结果</h3>
 
-<p>In the displayed output below, the selected URL will correspond with whether your display results in selecting the 1x or the 2x version of the image. If you happen to have both standard and high density displays, try moving this window between them and reloading the page to see the results change.</p>
-
+<p>输出展示在下面，所选 URL 将取决于您显示的图像版本， 1x 版本还是 2x 版本？。如果您碰巧有标准和高密度显示器，请尝试在它们之间移动此窗口并重新加载页面以查看结果变化。</p>
 <p>{{EmbedLiveSample("Example", 640, 320)}}</p>
 
-<p>For additional examples, see our guide to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive images</a>.</p>
-
-<h2 id="Specifications">Specifications</h2>
+<p>有关其他示例，请参阅我们的<a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">响应式图片</a>指南。</p>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -111,7 +106,7 @@ box.appendChild(newElem);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
 
 

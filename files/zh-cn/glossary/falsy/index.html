@@ -7,9 +7,9 @@ tags:
   - truthy
 translation_of: Glossary/Falsy
 ---
-<p id="Summary"><strong>falsy </strong>值 (虚值) 是在 {{Glossary("Boolean")}} 上下文中认定为 false 的值。</p>
+<p><strong>falsy </strong>值 (虚值) 是在 {{Glossary("Boolean")}} 上下文中认定为 false 的值。</p>
 
-<p>{{Glossary("JavaScript")}} 在需要用到布尔类型值的上下文中使用强制类型转换({{Glossary("Type_Conversion", "Type Conversion")}} )将值转换为布尔值，例如<a href="/zh-CN/docs/learn/JavaScript/Building_blocks/conditionals">条件语句</a>和循环语句。</p>
+<p>{{Glossary("JavaScript")}} 在需要用到布尔类型值的上下文中使用强制类型转换 ({{Glossary("Type_Conversion", "Type Conversion")}} ) 将值转换为布尔值，例如<a href="/zh-CN/docs/learn/JavaScript/Building_blocks/conditionals">条件语句</a>和循环语句。</p>
 
 <p>在 JavaScript 中只有 8<strong> 个</strong> <strong>falsy</strong> 值。</p>
 
@@ -21,39 +21,39 @@ translation_of: Glossary/Falsy
  <tbody>
   <tr>
    <td><code>false</code></td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Future_reserved_keywords_in_older_standards">false</a> 关键字</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Future_reserved_keywords_in_older_standards">false</a> 关键字</td>
   </tr>
   <tr>
    <td>0</td>
-   <td>数值 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
+   <td>数值 <a href="/zh-CN/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
    <td></td>
   </tr>
   <tr>
    <td>-0</td>
-   <td>数值 负 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
+   <td>数值 负 <a href="/zh-CN/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
    <td></td>
   </tr>
   <tr>
    <td>0n</td>
-   <td>当 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt">BigInt</a> 作为布尔值使用时, 遵从其作为数值的规则. <code>0n</code> 是 <em>falsy </em>值.</td>
+   <td>当 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt">BigInt</a> 作为布尔值使用时，遵从其作为数值的规则. <code>0n</code> 是 <em>falsy </em>值。</td>
   </tr>
   <tr>
    <td>"", '', ``</td>
    <td>
-    <p>这是一个空字符串 (字符串的长度为零). JavaScript 中的字符串可用双引号 <code><strong>""</strong></code>, 单引号 <code>''</code>, 或 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">模板字面量</a> <strong><code>``</code></strong> 定义。</p>
+    <p>这是一个空字符串 (字符串的长度为零). JavaScript 中的字符串可用双引号 <code><strong>""</strong></code>, 单引号 <code>''</code>, 或 <a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字面量</a> <strong><code>``</code></strong> 定义。</p>
    </td>
   </tr>
   <tr>
    <td>{{Glossary("null")}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> - 缺少值</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> - 缺少值</td>
   </tr>
   <tr>
    <td>{{Glossary("undefined")}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> - 原始值</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> - 原始值</td>
   </tr>
   <tr>
    <td>{{Glossary("NaN")}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN </a>- 非数值</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN </a>- 非数值</td>
   </tr>
  </tbody>
 </table>
@@ -83,7 +83,7 @@ if (document.all)
 // ↪ false</code></pre>
 
 <div class="note">
-<p><code>document.all</code> 在过去被用于浏览器检测，是 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all">HTML 规范在此定义了</a>故意与 ECMAScript 标准相违背的（译者注：<code>document.all</code> 虽然是一个对象，但其转换为 boolean 类型是 false），以保持与历史代码的兼容性  (<code>if (document.all) { // Internet Explorer code here }</code> 或使用 <code>document.all</code> 而不先检查它的存在: <code>document.all.foo</code>).</p>
+<p><code>document.all</code> 在过去被用于浏览器检测，是 <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all">HTML 规范在此定义了</a>故意与 ECMAScript 标准相违背的（译者注：<code>document.all</code> 虽然是一个对象，但其转换为 boolean 类型是 false），以保持与历史代码的兼容性  (<code>if (document.all) { // Internet Explorer code here }</code> 或使用 <code>document.all</code> 而不先检查它的存在：<code>document.all.foo</code>).</p>
 </div>
 
 <p>falsy 有时会写作 <strong>falsey</strong>，虽然在英语中，将一个单词转换成形容词时，通常会去掉末尾的字母 e，加上后缀 y。(noise =&gt; noisy, ice =&gt; icy, shine =&gt; shiny)</p>

@@ -24,14 +24,14 @@ translation_of: Web/API/Node/ownerDocument
 
 <h2 id="Example" name="Example">例子</h2>
 
-<pre>// 得到p元素所在文档的HTML节点
+<pre>// 得到 p 元素所在文档的 HTML 节点
 d = p.ownerDocument;
 html = d.documentElement;
 </pre>
 
 <h2 id="Notes" name="Notes">注意</h2>
 
-<p><code>被此属性返回的 document</code> 对象是在实际的HTML文档中的所有子节点所属的主对象<code>。如果在文档节点自身上使用此属性，则结果是null</code>。</p>
+<p><code>被此属性返回的 document</code> 对象是在实际的 HTML 文档中的所有子节点所属的主对象<code>。如果在文档节点自身上使用此属性，则结果是 null</code>。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -62,54 +62,4 @@ html = d.documentElement;
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}<sup>[1]</sup></td>
-   <td>6.0<sup>[2]</sup></td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}<sup>[1]</sup></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 从 Gecko 9.0 {{ geckoRelease("9.0") }} 开始, <code>一个由脚本生成的</code>DocumentType类型的节点(节点类型{{ domxref("Node.nodeType") }}的值为 <code>Node.DOCUMENT_TYPE_NODE</code> 也就是 10)的<code>ownerDocument</code>属性的值不再是null. 而是调用<a href="/zh-cn/DOM/DOMImplementation.createDocumentType" title="zh-cn/DOM/DOMImplementation.createDocumentType"><code>document.implementation.createDocumentType()</code></a> 方法创建该节点的文档节点.</p>
-
-<p>[2] <a href="http://msdn.microsoft.com/en-us/library/ie/ms534315(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/ie/ms534315(v=vs.85).aspx</a></p>
+{{Compat("api.Node.ownerDocument")}}

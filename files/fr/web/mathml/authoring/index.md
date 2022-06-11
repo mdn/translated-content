@@ -273,28 +273,38 @@ input.html
 
 Alors pour générer à partir de la page input.html la page output.html en remplaçant les expressions TeX par leurs équivalents MathML, entrez simplement :
 
-    cat input.html | itex2MML > output.html
+```bash
+cat input.html | itex2MML > output.html
+```
 
 Il y a des outils encore plus sophistiqués pour convertir des documents arbitraires LaTeX en HTML et MathML. Par exemple [TeX4ht](https://www.tug.org/tex4ht/) est souvent inclus dans les distributions TeX et a une option pour utiliser MathML plutôt que des images PNG. Cette commande générera un document en XHTML et MathML du nom de foo.xml à partir d'un fichier source LaTeX foo.tex :
 
-    mk4ht mzlatex foo.tex # Linux / MacOS
-    mzlatex foo.tex       # Windows
+```bash
+mk4ht mzlatex foo.tex # Linux / MacOS
+mzlatex foo.tex       # Windows
+```
 
 Notez que [tex4ebook](https://github.com/michal-h21/tex4ebook) s'appuie sur TeX4ht pour générer des documents EPUB.
 
 [LaTeXML](https://dlmf.nist.gov/LaTeXML/) est un autre outil qui permet de générer des documents HTML5 et EPUB. Les utilisateurs de Windows peuvent regarder ce [tutoriel vidéo](https://www.youtube.com/watch?v=Dg881w2e-lI). Étant donné un fichier LaTeX foo.tex, vous pouvez utiliser ces simples commandes :
 
-    latexml --dest foo.xml foo.tex
-    latexmlpost --dest foo.html --format=html5 foo.xml
+```bash
+latexml --dest foo.xml foo.tex
+latexmlpost --dest foo.html --format=html5 foo.xml
+```
 
 Pour gérer le cas des navigateurs ne supportant pas MathML, vous pouvez utiliser le paramètre `--javascript` pour indiquer à LaTeXML d'inclure l'un des [scripts de substitution](#fallback_for_browsers_without_mathml_support) :
 
-    latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
-    latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+```bash
+latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
+latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+```
 
 Si votre document LaTeX est volumineux, vous pouvez vouloir le diviser en plusieurs petites pages plutôt que de tout mettre dans une seule grande page. Par exemple, ceci va diviser les pages au niveau de la `\section` :
 
-    latexmlc --dest foo.html --splitat=section foo.tex
+```bash
+latexmlc --dest foo.html --splitat=section foo.tex
+```
 
 ### Conversion côté serveur
 
@@ -312,7 +322,7 @@ Si votre document LaTeX est volumineux, vous pouvez vouloir le diviser en plusie
 
 ### Boîte de saisie
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) possède plusieurs interfaces, notamment une [fiche CKEditor](https://ckeditor.com/addon/texzilla) utilisé sur MDN, une [démo en ligne](https://fred-wang.github.io/TeXZilla/), un [module de Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) ou encore une [application web FirefoxOS](https://marketplace.firefox.com/app/texzilla-1/). Il est également intégré à [SeaMonkey](https://www.seamonkey-project.org/) depuis la version 2.28 et à [Thunderbird](https://www.mozilla.org/thunderbird/) depuis la version 31. [Abiword](http://abisource.org/) contient un petit éditeur d'équations, basé sur itex2MML. Enfin,[ Bluegriffon](http://www.bluegriffon.com/) possède un module complémentaire permettant d'insérer des formules MathML dans votre document, en utilisant une syntaxe de type ASCII/LaTeX.
+[TeXZilla](https://github.com/fred-wang/TeXZilla) possède plusieurs interfaces, notamment une [fiche CKEditor](https://ckeditor.com/addon/texzilla) utilisé sur MDN, une [démo en ligne](https://fred-wang.github.io/TeXZilla/), un [module de Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) ou encore une [application web FirefoxOS](https://marketplace.firefox.com/app/texzilla-1/). Il est également intégré à [SeaMonkey](https://www.seamonkey-project.org/) depuis la version 2.28 et à [Thunderbird](https://www.mozilla.org/thunderbird/) depuis la version 31. [Abiword](http://abisource.org/) contient un petit éditeur d'équations, basé sur itex2MML. Enfin, [Bluegriffon](http://www.bluegriffon.com/) possède un module complémentaire permettant d'insérer des formules MathML dans votre document, en utilisant une syntaxe de type ASCII/LaTeX.
 
 ![BlueGriffon](mathml-shot1.png)
 

@@ -8,36 +8,36 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary">在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本CSS特性。在这篇文章中，我们将更进一步，详细地探索web字体——它们允许您下载自定义字体和您的web页面，以允许更多不同的、自定义的文本样式。</p>
+<p>在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本 CSS 特性。在这篇文章中，我们将更进一步，详细地探索 web 字体——它们允许您下载自定义字体和您的 web 页面，以允许更多不同的、自定义的文本样式。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
-   <td>基本计算机素养，HTML 基础 (学习 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS 基础 (学习<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS文本和字体基础 </a>。</td>
+   <th scope="row">预备知识：</th>
+   <td>基本计算机素养，HTML 基础 (学习 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS 基础 (学习<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS 文本和字体基础 </a>。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>学习如何将web字体应用到web页面，使用第三方服务，或者编写自己的代码。</td>
+   <th scope="row">目标：</th>
+   <td>学习如何将 web 字体应用到 web 页面，使用第三方服务，或者编写自己的代码。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="字体种类回顾">字体种类回顾</h2>
 
-<p>正如我们在<a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">基本文本和字体样式</a>中所看到的那样，应用到您的HTML的字体可以使用 {{cssxref("font-family")}}属性来控制。您需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。</p>
+<p>正如我们在<a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">基本文本和字体样式</a>中所看到的那样，应用到您的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。您需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。</p>
 
 <pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
-<p>这个系统运行良好，但是对于传统的web开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 <a href="/en-US/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts">Web-safe 字体</a>。您可以使用字体堆栈来指定可选择的字体，后面是Web-safe的替代选项，然后是默认的系统字体，但是为了确保您的设计在每种字体中都显示正常，这样增加了测试的开销。</p>
+<p>这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 <a href="/en-US/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts">Web-safe 字体</a>。您可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保您的设计在每种字体中都显示正常，这样增加了测试的开销。</p>
 
 <h2 id="Web_字体">Web 字体</h2>
 
-<p>但是还有一种选择，它非常有效，回到IE版本6。Web字体是一种CSS特性，允许您指定在访问时随您的网站一起下载的字体文件，这意味着任何支持Web字体的浏览器都可以使用您指定的字体。太酷啦！所需的语法如下所示：</p>
+<p>但是还有一种选择，它非常有效，回到 IE 版本 6。Web 字体是一种 CSS 特性，允许您指定在访问时随您的网站一起下载的字体文件，这意味着任何支持 Web 字体的浏览器都可以使用您指定的字体。太酷啦！所需的语法如下所示：</p>
 
-<p>首先，在CSS的开始处有一个{{cssxref("@font-face")}}块，它指定要下载的字体文件：</p>
+<p>首先，在 CSS 的开始处有一个{{cssxref("@font-face")}}块，它指定要下载的字体文件：</p>
 
 <pre class="brush: css">@font-face {
   font-family: "myFont";
@@ -45,7 +45,7 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 }
 </pre>
 
-<p>在这个下面，你可以使用@font-face中指定的字体种类名称来将你的定制字体应用到你喜欢的任何东西上，比如说：</p>
+<p>在这个下面，你可以使用 @font-face 中指定的字体种类名称来将你的定制字体应用到你喜欢的任何东西上，比如说：</p>
 
 <pre class="brush: css">html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
@@ -56,34 +56,34 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 <p>关于网页字体有两件重要的事情要记住：</p>
 
 <ol>
- <li>浏览器支持不同的字体格式，因此您需要多种字体格式以获得良好的跨浏览器支持。例如,大多数现代浏览器都支持WOFF / WOFF2(Web Open Font Format versions 1 and 2，Web开放字体格式版本1和2)，它是最有效的格式，但是旧版本IE只支持EOT (Embedded Open Type，嵌入式开放类型)的字体,你可能需要包括一个SVG版本的字体支持旧版本的iPhone和Android浏览器。我们将向您展示如何生成所需的代码。</li>
- <li>字体一般都不能自由使用。您必须为他们付费，或者遵循其他许可条件，比如在代码中(或者在您的站点上)提供字体创建者。你不应该在没有适当的授权的情况下偷窃字体。</li>
+ <li>浏览器支持不同的字体格式，因此您需要多种字体格式以获得良好的跨浏览器支持。例如，大多数现代浏览器都支持 WOFF / WOFF2(Web Open Font Format versions 1 and 2，Web 开放字体格式版本 1 和 2)，它是最有效的格式，但是旧版本 IE 只支持 EOT (Embedded Open Type，嵌入式开放类型) 的字体，你可能需要包括一个 SVG 版本的字体支持旧版本的 iPhone 和 Android 浏览器。我们将向您展示如何生成所需的代码。</li>
+ <li>字体一般都不能自由使用。您必须为他们付费，或者遵循其他许可条件，比如在代码中 (或者在您的站点上) 提供字体创建者。你不应该在没有适当的授权的情况下偷窃字体。</li>
 </ol>
 
 <div class="note">
-<p><strong>注意：</strong> Web字体作为一种技术从 Internet Explorer 4 开始就得到了的支持！</p>
+<p><strong>注意：</strong> Web 字体作为一种技术从 Internet Explorer 4 开始就得到了的支持！</p>
 </div>
 
-<h2 id="自主学习web字体示例">自主学习:web字体示例</h2>
+<h2 id="自主学习web字体示例">自主学习:web 字体示例</h2>
 
-<p>记住这一点，让我们从最初的原则构建一个基本的web字体示例。使用嵌入的live示例很难演示这一点，因此，我们希望您按照下面几节中详细介绍的步骤来了解这个过程。</p>
+<p>记住这一点，让我们从最初的原则构建一个基本的 web 字体示例。使用嵌入的 live 示例很难演示这一点，因此，我们希望您按照下面几节中详细介绍的步骤来了解这个过程。</p>
 
-<p>你应该使用 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html">web-font-start.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css">web-font-start.css</a> 文件作为开始添加到你的代码中（又见<a href="http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html">预览版</a>。）现在，在你的电脑上的一个新目录中复制这些文件。在 <code>web-font-start.css</code>文件中，您将找到一些最小的CSS来处理这个示例的基本布局和排版。</p>
+<p>你应该使用 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html">web-font-start.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css">web-font-start.css</a> 文件作为开始添加到你的代码中（又见<a href="http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html">预览版</a>。）现在，在你的电脑上的一个新目录中复制这些文件。在 <code>web-font-start.css</code>文件中，您将找到一些最小的 CSS 来处理这个示例的基本布局和排版。</p>
 
 <h3 id="查找字体">查找字体</h3>
 
-<p>对于本例，我们将使用两种web字体，一种用于标题，另一种用于正文文本。首先，我们需要找到包含字体的字体文件。字体是由字体铸造厂创建的，并且存储在不同的文件格式中。<br>
+<p>对于本例，我们将使用两种 web 字体，一种用于标题，另一种用于正文文本。首先，我们需要找到包含字体的字体文件。字体是由字体铸造厂创建的，并且存储在不同的文件格式中。<br>
  通常有三种类型的网站可以获得字体：</p>
 
 <ul>
- <li>免费的字体经销商：这是一个可以下载免费字体的网站(可能还有一些许可条件，比如对字体创建者的信赖)。比如： <a href="https://www.fontsquirrel.com/">Font Squirre</a>，<a href="http://www.dafont.com/">dafont</a> 和 <a href="https://everythingfonts.com/">Everything Fonts</a>。</li>
+ <li>免费的字体经销商：这是一个可以下载免费字体的网站 (可能还有一些许可条件，比如对字体创建者的信赖)。比如： <a href="https://www.fontsquirrel.com/">Font Squirre</a>，<a href="http://www.dafont.com/">dafont</a> 和 <a href="https://everythingfonts.com/">Everything Fonts</a>。</li>
  <li>收费的字体经销商：这是一个收费则字体可用的网站，例如<a href="http://www.fonts.com/">fonts.com</a>或<a href="http://www.myfonts.com/">myfonts.com</a>。您也可以直接从字体铸造厂中购买字体，例如<a href="https://www.linotype.com/">Linotype</a>，<a href="http://www.monotype.com">Monotype</a> 或 <a href="http://www.exljbris.com/">Exljbris</a>。</li>
- <li>在线字体服务：这是一个存储和为你提供字体的网站，它使整个过程更容易。更多细节见{{anch("Using an online font service")}}。</li>
+ <li>在线字体服务：这是一个存储和为你提供字体的网站，它使整个过程更容易。更多细节见<a href="#使用在线字体服务">使用在线字体服务</a>。</li>
 </ul>
 
-<p>让我们找到一些字体！前往<a href="https://www.fontsquirrel.com/">Font Squirrel</a> 并选择两种字体——一种用于标题的有趣的字体(可能是一种不错的显示字体或无衬线字体)，和一种用于段落，稍微不那么华丽，更易于阅读的字体。当您找到每种字体时，按下下载按钮，并将该文件保存在与您先前保存的HTML和CSS文件相同的目录中。无论它们是TTF(True Type Fonts))还是OTF(Open Type字体)都不重要。</p>
+<p>让我们找到一些字体！前往<a href="https://www.fontsquirrel.com/">Font Squirrel</a> 并选择两种字体——一种用于标题的有趣的字体 (可能是一种不错的显示字体或无衬线字体)，和一种用于段落，稍微不那么华丽，更易于阅读的字体。当您找到每种字体时，按下下载按钮，并将该文件保存在与您先前保存的 HTML 和 CSS 文件相同的目录中。无论它们是 TTF(True Type Fonts)) 还是 OTF(Open Type 字体) 都不重要。</p>
 
-<p>在每种情况下，都要解压字体包(Web字体通常分布在包含字体文件和许可信息的ZIP文件中。)您可能会在包中发现多个字体文件，一些字体是作为一个具有不同变体的家庭分布的，例如，瘦、中、粗体、斜体、斜体等等。对于这个例子，我们只是想让您自己考虑一个单一的字体文件。</p>
+<p>在每种情况下，都要解压字体包 (Web 字体通常分布在包含字体文件和许可信息的 ZIP 文件中。) 您可能会在包中发现多个字体文件，一些字体是作为一个具有不同变体的家庭分布的，例如，瘦、中、粗体、斜体、斜体等等。对于这个例子，我们只是想让您自己考虑一个单一的字体文件。</p>
 
 <div class="note">
 <p><strong>注意：</strong> 在右边栏的“查找字体”部分中，您可以单击不同的标记和分类来筛选显示的选项。</p>
@@ -91,25 +91,25 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 
 <h3 id="生成所需代码">生成所需代码</h3>
 
-<p>现在您需要生成所需的代码(以及字体格式)。对于每种字体，遵循以下步骤：</p>
+<p>现在您需要生成所需的代码 (以及字体格式)。对于每种字体，遵循以下步骤：</p>
 
 <ol>
- <li>确保您已经满足了任何许可证的要求，如果您打算在一个商业和/或Web项目中使用它。</li>
+ <li>确保您已经满足了任何许可证的要求，如果您打算在一个商业和/或 Web 项目中使用它。</li>
  <li>前往 Fontsquirrel <a href="https://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a>.</li>
  <li>使用上传字体按钮上传你的两个字体文件。</li>
  <li>勾选复选框，“是的，我上传的字体符合网络嵌入的合法条件。</li>
  <li>点击下载你的套件（kit）。</li>
 </ol>
 
-<p>在生成器完成处理之后，您应该得到一个ZIP文件，将它保存在与HTML和CSS相同的目录中。</p>
+<p>在生成器完成处理之后，您应该得到一个 ZIP 文件，将它保存在与 HTML 和 CSS 相同的目录中。</p>
 
 <h3 id="在演示中实现代码">在演示中实现代码</h3>
 
-<p>在这一点上解压您刚刚生成的webfont套件。在解压的目录中，您将看到三个有用的条目：</p>
+<p>在这一点上解压您刚刚生成的 webfont 套件。在解压的目录中，您将看到三个有用的条目：</p>
 
 <ul>
- <li>每个字体的多个版本：（比如 <code>.ttf</code>, <code>.woff</code>, <code>.woff2</code>…… 随着浏览器支持需求的改变，提供的字体将随着时间的推移而不断更新。） 正如上面提到的，跨浏览器支持需要使用多种字体——这是Fontsquirrel的方法，确保你得到了你需要的一切。</li>
- <li>每个字体的一个演示HTML文件在你的浏览器中加载，看看在不同的使用环境下字体会是什么样子。</li>
+ <li>每个字体的多个版本：（比如 <code>.ttf</code>, <code>.woff</code>, <code>.woff2</code>…… 随着浏览器支持需求的改变，提供的字体将随着时间的推移而不断更新。）正如上面提到的，跨浏览器支持需要使用多种字体——这是 Fontsquirrel 的方法，确保你得到了你需要的一切。</li>
+ <li>每个字体的一个演示 HTML 文件在你的浏览器中加载，看看在不同的使用环境下字体会是什么样子。</li>
  <li>一个 <code>stylesheet.css</code> 文件，它包含了你需要的生成好的 @font-face 代码。</li>
 </ul>
 
@@ -117,9 +117,9 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 
 <ol>
  <li>将解压缩的目录重命名为简易的目录，比如<code>fonts</code></li>
- <li>打开 <code>stylesheet.css</code> 文件，把包含在你的网页中的 <code>@font-face</code>块复制到你的 <code>web-font-start.css</code> 文件—— 你需要把它们放在最上面，在你的CSS之前，因为字体需要导入才能在你的网站上使用。</li>
- <li>每个<code>url()</code>函数指向一个我们想要导入到我们的CSS中的字体文件——我们需要确保文件的路径是正确的，因此，在每个路径的开头添加<code>fonts/</code> （必要时进行调整）。</li>
- <li>现在，您可以在字体栈中使用这些字体，就像任何web安全或默认的系统字体一样。<br>
+ <li>打开 <code>stylesheet.css</code> 文件，把包含在你的网页中的 <code>@font-face</code>块复制到你的 <code>web-font-start.css</code> 文件—— 你需要把它们放在最上面，在你的 CSS 之前，因为字体需要导入才能在你的网站上使用。</li>
+ <li>每个<code>url()</code>函数指向一个我们想要导入到我们的 CSS 中的字体文件——我们需要确保文件的路径是正确的，因此，在每个路径的开头添加<code>fonts/</code> （必要时进行调整）。</li>
+ <li>现在，您可以在字体栈中使用这些字体，就像任何 web 安全或默认的系统字体一样。<br>
   例如：
   <pre class="brush: css">font-family: 'zantrokeregular', serif;</pre>
  </li>
@@ -137,24 +137,24 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 
 <p>在线字体服务通常会为你存储和服务字体，这样你就不用担心写<code>@font-face</code>代码了，通常只需要在你的网站上插入一两行代码就可以让一切都运行。例子包括<a href="https://typekit.com/">Typekit</a> 和<a href="http://www.typography.com/cloud/welcome/">Cloud.typography</a>。大多数这些服务都是基于订阅的，除了<a href="https://www.google.com/fonts">Google Fonts</a>，这是一个有用的免费服务，特别是对于快速的测试工作和编写演示。</p>
 
-<p>大多数这些服务都很容易使用，所以我们不会详细地介绍它们。让我们快速浏览一下Google Fonts，这样你就能明白它的意思了。再次的，使用<code>web-font-start.html</code> 和 <code>web-font-start.css</code> a的副本作为你的开始。</p>
+<p>大多数这些服务都很容易使用，所以我们不会详细地介绍它们。让我们快速浏览一下 Google Fonts，这样你就能明白它的意思了。再次的，使用<code>web-font-start.html</code> 和 <code>web-font-start.css</code> a 的副本作为你的开始。</p>
 
 <ol>
  <li>前往 <a href="https://www.google.com/fonts">Google Fonts</a>.</li>
  <li>使用左边的过滤器来显示你想要选择的字体类型，并选择一些你喜欢的字体。</li>
  <li>要选择字体种类，按下按钮旁边的 ⊕ 按钮。</li>
  <li>当您选择好字体种类时，按下页面底部的<em>[Number] </em>种类选择。</li>
- <li>在生成的屏幕中，首先需要复制所显示的HTML代码行，并将其粘贴到HTML文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的CSS中使用它。</li>
- <li>然后，您需要将CSS声明复制到您的CSS中，以便将自定义字体应用到您的HTML。</li>
+ <li>在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。</li>
+ <li>然后，您需要将 CSS 声明复制到您的 CSS 中，以便将自定义字体应用到您的 HTML。</li>
 </ol>
 
 <div class="note">
 <p><strong>注意：</strong>如果你需要对比我们的，你可以在 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html">google-font.html</a>和<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css">google-font.css</a>找到完整版本的。（<a href="http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html">见预览版</a>）</p>
 </div>
 
-<h2 id="关于font-face的更多细节">关于@font-face的更多细节</h2>
+<h2 id="关于font-face的更多细节">关于 @font-face 的更多细节</h2>
 
-<p>让我们来探索由fontsquirrel为您生成的<code>@font-face</code>语法。这是其中一个块的样子：</p>
+<p>让我们来探索由 fontsquirrel 为您生成的<code>@font-face</code>语法。这是其中一个块的样子：</p>
 
 <pre class="brush: css">@font-face {
   font-family: 'ciclefina';
@@ -168,16 +168,16 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
   font-style: normal;
 }</pre>
 
-<p>这被称为"bulletproof @font-face syntax（刀枪不入的@font-face语法）", 这是 Paul Irish早期的一篇文章提及后@font-face开始流行起来 (<a href="http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face Syntax</a>。让我们来看看它是怎么做的：</p>
+<p>这被称为"bulletproof @font-face syntax（刀枪不入的 @font-face 语法）", 这是 Paul Irish 早期的一篇文章提及后 @font-face 开始流行起来 (<a href="http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face Syntax</a>。让我们来看看它是怎么做的：</p>
 
 <ul>
- <li><code>font-family</code>：这一行指定了您想要引用的字体的名称。你可以把它作为你喜欢的任何东西，只要你在你的CSS中始终如一地使用它。</li>
- <li><code>src</code>：这些行指定要导入到您的CSS(<code>url</code>部分)的字体文件的路径，以及每种字体文件的格式(<code>format</code>部分)。后面的部分不是必要的，但是声明它是很有用的，因为它允许浏览器更快地找到可以使用的字体。可以列出多个声明，用逗号分隔——浏览器会搜索并使用它能找到的第一个——因此，最好是把新的、更好的格式比如WOFF2放在前面，把偏老的，不是那么好的格式像TTF这样的放在后面。唯一的例外是EOT字体——他们首先在旧版本的IE中修复了几个bug，这样它就会尝试使用它找到的第一件东西，即使它不能真正使用字体。</li>
- <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: 这些行指定字体的粗细，以及它是否斜体。如果您正在导入相同字体的多个粗细，您可以指定它们的粗细/样式，然后使用不同的{{cssxref("font-weight")}}/{{cssxref("font-style")}}来选择它们之间的不同值，而不必调用字体种类不同名称的所有不同成员。Roger Johansson写的  <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> 更详细地说明了该做些什么。</li>
+ <li><code>font-family</code>：这一行指定了您想要引用的字体的名称。你可以把它作为你喜欢的任何东西，只要你在你的 CSS 中始终如一地使用它。</li>
+ <li><code>src</code>：这些行指定要导入到您的 CSS(<code>url</code>部分) 的字体文件的路径，以及每种字体文件的格式 (<code>format</code>部分)。后面的部分不是必要的，但是声明它是很有用的，因为它允许浏览器更快地找到可以使用的字体。可以列出多个声明，用逗号分隔——浏览器会搜索并使用它能找到的第一个——因此，最好是把新的、更好的格式比如 WOFF2 放在前面，把偏老的，不是那么好的格式像 TTF 这样的放在后面。唯一的例外是 EOT 字体——他们首先在旧版本的 IE 中修复了几个 bug，这样它就会尝试使用它找到的第一件东西，即使它不能真正使用字体。</li>
+ <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: 这些行指定字体的粗细，以及它是否斜体。如果您正在导入相同字体的多个粗细，您可以指定它们的粗细/样式，然后使用不同的{{cssxref("font-weight")}}/{{cssxref("font-style")}}来选择它们之间的不同值，而不必调用字体种类不同名称的所有不同成员。Roger Johansson 写的  <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> 更详细地说明了该做些什么。</li>
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>您还可以为您的web字体指定特定的{{cssxref("font-variant")}} 和 {{cssxref("font-stretch")}} )值。在较新的浏览器中，您还可以指定一个{{cssxref("unicode-range")}}值，这是一个您需要使用什么web字体的特定范围的字符——在支持浏览器中，只有指定的字符才会被下载，省去了不必要的下载。Drew McLellan写的<a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a>在如何利用这个问题上提供了一些有用的建议。</p>
+<p><strong>注意：</strong>您还可以为您的 web 字体指定特定的{{cssxref("font-variant")}} 和 {{cssxref("font-stretch")}} ) 值。在较新的浏览器中，您还可以指定一个{{cssxref("unicode-range")}}值，这是一个您需要使用什么 web 字体的特定范围的字符——在支持浏览器中，只有指定的字符才会被下载，省去了不必要的下载。Drew McLellan 写的<a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a>在如何利用这个问题上提供了一些有用的建议。</p>
 </div>
 
 <h2 id="总结">总结</h2>

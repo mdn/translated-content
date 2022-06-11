@@ -5,17 +5,15 @@ translation_of: Web/API/IDBIndex
 ---
 <p>{{APIRef()}}</p>
 
-<div class="summary">
-<p><a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> 中的IDBIndex接口提供了异步获取数据库中一个<a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index" title="en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index">index</a>的功能。index是一种用于在另一个object store中查找记录的object store，其被称为被引用的object store。你可以通过使用该接口来取回数据。</p>
-</div>
+<p><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a> 中的 IDBIndex 接口提供了异步获取数据库中一个<a href="/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#index">index</a>的功能。index 是一种用于在另一个 object store 中查找记录的 object store，其被称为被引用的 object store。你可以通过使用该接口来取回数据。</p>
 
-<p>你可以通过记录的键或使用一个index取回一个object store中的这些记录 (cursors 提供了第三种方式：请见 {{ domxref("IDBCursor") }})。一个index可以让你在object store的records中，通过使用records的properties（属性）来寻找records。</p>
+<p>你可以通过记录的键或使用一个 index 取回一个 object store 中的这些记录 (cursors 提供了第三种方式：请见 {{ domxref("IDBCursor") }})。一个 index 可以让你在 object store 的 records 中，通过使用 records 的 properties（属性）来寻找 records。</p>
 
-<p>index是一个持久的键-值存储，其中其记录的值部分是被引用object store中的record的关键部分。在object store中新增、更新或是删除records时，索引中的records将自动填充。索引中的每条记录只能指向其引用的object  store中的唯一一条记录，但是多个索引可以引用同一个object store。当object store变更时，所有引用object store的索引都会自动更新。</p>
+<p>index 是一个持久的键 - 值存储，其中其记录的值部分是被引用 object store 中的 record 的关键部分。在 object store 中新增、更新或是删除 records 时，索引中的 records 将自动填充。索引中的每条记录只能指向其引用的 object  store 中的唯一一条记录，但是多个索引可以引用同一个 object store。当 object store 变更时，所有引用 object store 的索引都会自动更新。</p>
 
-<p>索引中的records总是按照records的key进行排序。然而，不像object stores，一个给定的index可以包含具有相同key的多条记录。这些records将根据被引用object store中的主键进一步排序。</p>
+<p>索引中的 records 总是按照 records 的 key 进行排序。然而，不像 object stores，一个给定的 index 可以包含具有相同 key 的多条记录。这些 records 将根据被引用 object store 中的主键进一步排序。</p>
 
-<p>你可以设置在一个范围内的key，点击这里查看更多： {{domxref("IDBKeyRange")}}.</p>
+<p>你可以设置在一个范围内的 key，点击这里查看更多： {{domxref("IDBKeyRange")}}.</p>
 
 <h2 id="Methods">Methods</h2>
 
@@ -42,15 +40,15 @@ translation_of: Web/API/IDBIndex
 
 <dl>
  <dt>{{domxref("IDBIndex.name")}} {{readonlyInline}}</dt>
- <dd>index的名称。</dd>
+ <dd>index 的名称。</dd>
  <dt>{{domxref("IDBIndex.objectStore")}} {{readonlyInline}}</dt>
- <dd>index所指向的object store的名称。</dd>
+ <dd>index 所指向的 object store 的名称。</dd>
  <dt>{{domxref("IDBIndex.keyPath")}} {{readonlyInline}}</dt>
- <dd>此index的关键路径。它如果为null，则index不是自动填充的。</dd>
+ <dd>此 index 的关键路径。它如果为 null，则 index 不是自动填充的。</dd>
  <dt>{{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}</dt>
- <dd>影响index的key路径的计算结果生成数组时索引的行为方式。如果为true，那么对于key数组中的每一项，索引中都有一条记录。如果为false，那么对于数组中的每个key都有一条记录。</dd>
+ <dd>影响 index 的 key 路径的计算结果生成数组时索引的行为方式。如果为 true，那么对于 key 数组中的每一项，索引中都有一条记录。如果为 false，那么对于数组中的每个 key 都有一条记录。</dd>
  <dt>{{domxref("IDBIndex.unique")}} {{readonlyInline}}</dt>
- <dd>如果为true，这个index不会允许key有重复值。 </dd>
+ <dd>如果为 true，这个 index 不会允许 key 有重复值。 </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -110,97 +108,7 @@ request.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>12{{ property_prefix("-webkit") }}<br>
-    23</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>10</td>
-   <td>17</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>count()</code></td>
-   <td>23</td>
-   <td>{{ CompatGeckoDesktop("10.0") }}</td>
-   <td>10</td>
-   <td>17</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>getAll()</code> and <code>getAllKeys()</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("24.0") }}<br>
-    behind <code>dom.indexedDB.experimental</code>  pref</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>17</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>count()</code></td>
-   <td>4.4</td>
-   <td>{{ CompatGeckoMobile("10.0") }}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>17</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>getAll()</code> and <code>getAllKeys()</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("24.0") }}<br>
-    behind <code>dom.indexedDB.experimental</code>  pref</td>
-   <td>1.1 behind<br>
-    <code>dom.indexedDB.experimental</code>  pref</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="warning">
-<p>Be careful in Chrome as it still implements the old specification along the new one. Similarly it still has the prefixed <code>webkitIndexedDB</code> property even if the unprefixed <code>indexedDB</code> is present.</p>
-</div>
+{{Compat("api.IDBIndex")}}
 
 <h2 id="See_also">See also</h2>
 

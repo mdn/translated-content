@@ -19,7 +19,9 @@ La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `S
 
 ## Syntaxe
 
-    monSet.clear();
+```js
+monSet.clear();
+```
 
 ### Valeur de retour
 
@@ -46,7 +48,7 @@ monSet.has("truc")  // false
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-set.prototype.clear', 'Set.prototype.clear')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

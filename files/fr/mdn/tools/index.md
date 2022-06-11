@@ -7,7 +7,7 @@ tags:
   - TopicStub
 translation_of: MDN/Tools
 ---
-{{MDNSidebar}}{{IncludeSubnav("/en-US/docs/MDN")}}
+{{MDNSidebar}}
 
 MDN offre un certain nombre de fonctionnalités qui facilitent le suivi des progrès, la gestion du contenu et le suivi des dernières modifications apportées au site.
 

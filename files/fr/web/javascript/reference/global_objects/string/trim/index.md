@@ -20,7 +20,9 @@ La méthode **`trim()`** permet de retirer les blancs en début et fin de chaîn
 
 ## Syntaxe
 
-    str.trim()
+```js
+str.trim()
+```
 
 ### Valeur de retour
 
@@ -50,9 +52,9 @@ Si l'environnement utilisé ne possède pas cette méthode, il est possible de l
 
 ```js
 if (!String.prototype.trim) {
-  String.prototype.trim = function () {
+  String.prototype.trim = function () {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-  };
+  };
 }
 ```
 
@@ -61,8 +63,8 @@ if (!String.prototype.trim) {
 | Spécification                                                                                            | État                         | Commentaires                                            |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.1. |
-| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}}     | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ESDraft')}} |                                                         |
+| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}}     | {{Spec2('ES6')}}         |                                                         |
+| {{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ESDraft')}} |                                                         |
 
 ## Compatibilité des navigateurs
 

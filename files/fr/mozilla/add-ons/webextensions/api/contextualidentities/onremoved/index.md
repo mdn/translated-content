@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
 ---
 {{AddonSidebar()}}
 
-Lancé lorsqu'une nouvelle identité contextuelle est supprimée. Les identités contextuelles peuvent être supprimées par des extensions en utilisant l'API `contextualIdentities`,  ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
+Lancé lorsqu'une nouvelle identité contextuelle est supprimée. Les identités contextuelles peuvent être supprimées par des extensions en utilisant l'API `contextualIdentities`,  ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
 
 ## Syntaxe
 

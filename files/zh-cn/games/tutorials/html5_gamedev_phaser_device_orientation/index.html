@@ -5,35 +5,33 @@ translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
-
-<div class="summary">
-<p>在本教程中，我们将介绍构建 HTML5 移动游戏的过程。 本游戏使用 <a href="https://developer.mozilla.org/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">Device Orientation</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Vibration">Vibration </a><strong>APIs</strong> 来增强游戏玩法，并使用 <a class="external external-icon" href="http://phaser.io/">Phaser</a> 框架构建。 为了充分理解本教程建议您先学习基础的JavaScript 知识。</p>
+<div>
+<p>在本教程中，我们将介绍构建 HTML5 移动游戏的过程。本游戏使用 <a href="https://developer.mozilla.org/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">Device Orientation</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Vibration">Vibration </a><strong>APIs</strong> 来增强游戏玩法，并使用 <a class="external external-icon" href="http://phaser.io/">Phaser</a> 框架构建。为了充分理解本教程建议您先学习基础的 JavaScript 知识。</p>
 </div>
 
 <h2 id="Example_game">Example game</h2>
 
-<p>在本教程结束时，您将有一个功能齐全的游戏demo：<a href="http://orb.enclavegames.com/">Cyber Orb </a>。如下所示：</p>
+<p>在本教程结束时，您将有一个功能齐全的游戏 demo：<a href="http://orb.enclavegames.com/">Cyber Orb </a>。如下所示：</p>
 
 <p><img alt="A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping." src="https://mdn.mozillademos.org/files/10297/cyber-orb.png" style="display: block; height: 450px; margin: 0px auto; width: 300px;"></p>
 
 <h2 id="Phaser_framework">Phaser framework</h2>
 
-<p><a href="http://phaser.io/">Phaser</a> 是构建桌面和移动 HTML5 游戏的框架。它非常新，但由于热情的社区参与开发过程它同时也是快速增长的。您能够在<a href="https://github.com/photonstorm/phaser"> GitHub </a>查看它的开放源代码,阅读<a href="http://docs.phaser.io/"> 在线文档</a> 并浏览大量 <a href="http://examples.phaser.io/">示例 </a>。Phaser 框架为您提供了一组工具，这些工具将加快开发速度,并帮助处理完成游戏所需的一般任务，因此您可以专注于游戏创意本身。</p>
+<p><a href="http://phaser.io/">Phaser</a> 是构建桌面和移动 HTML5 游戏的框架。它非常新，但由于热情的社区参与开发过程它同时也是快速增长的。您能够在<a href="https://github.com/photonstorm/phaser"> GitHub </a>查看它的开放源代码，阅读<a href="http://docs.phaser.io/"> 在线文档</a> 并浏览大量 <a href="http://examples.phaser.io/">示例 </a>。Phaser 框架为您提供了一组工具，这些工具将加快开发速度，并帮助处理完成游戏所需的一般任务，因此您可以专注于游戏创意本身。</p>
 
 <h2 id="Starting_with_the_project">Starting with the project</h2>
 
-<p>您能够在GitHub看到它的源代码 <a href="https://github.com/EnclaveGames/Cyber-Orb">Cyber Orb</a>。文件夹结构非常简单：起点是 <code>index.html</code>。 我们在该文件中初始化框架并设置 html 元素 {{htmlelement("canvas")}} 以呈现游戏。</p>
+<p>您能够在 GitHub 看到它的源代码 <a href="https://github.com/EnclaveGames/Cyber-Orb">Cyber Orb</a>。文件夹结构非常简单：起点是 <code>index.html</code>。我们在该文件中初始化框架并设置 html 元素 {{htmlelement("canvas")}} 以呈现游戏。</p>
 
 <p><img alt="Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure." src="https://mdn.mozillademos.org/files/10357/cyber-orb-github.png" style="height: 423px; width: 620px;"></p>
 
 
 
-<p>您可以在您最喜爱的浏览器中打开index文件以启动并尝试游戏。目录中还有三个文件夹:</p>
+<p>您可以在您最喜爱的浏览器中打开 index 文件以启动并尝试游戏。目录中还有三个文件夹：</p>
 
 <ul>
  <li><code>img</code>: 我们将在游戏中使用的所有图片。</li>
- <li><code>src</code>:定义了游戏中所有源代码的 JavaScript文件。</li>
+ <li><code>src</code>:定义了游戏中所有源代码的 JavaScript 文件。</li>
  <li><code>audio:</code> 在游戏中使用的声音文件。</li>
 </ul>
 

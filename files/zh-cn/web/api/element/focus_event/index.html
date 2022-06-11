@@ -4,26 +4,26 @@ slug: Web/API/Element/focus_event
 translation_of: Web/API/Element/focus_event
 original_slug: Web/Events/focus
 ---
-<p>focus事件在元素获取焦点时触发. 这个事件和 <a href="/en-US/docs/Mozilla_event_reference/focusin"><code>focusin</code></a> 最大的区别仅仅在于后者会事件冒泡.</p>
+<p>focus 事件在元素获取焦点时触发。这个事件和 <a href="/en-US/docs/Mozilla_event_reference/focusin"><code>focusin</code></a> 最大的区别仅仅在于后者会事件冒泡。</p>
 
 <h2 id="基本信息">基本信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">{{ domxref("FocusEvent") }}</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">能否取消默认</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">事件目标</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">无.</dd>
+ <dt>规范</dt>
+ <dd><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus">DOM L3</a></dd>
+ <dt>接口</dt>
+ <dd>{{ domxref("FocusEvent") }}</dd>
+ <dt>是否冒泡</dt>
+ <dd>否</dd>
+ <dt>能否取消默认</dt>
+ <dd>否</dd>
+ <dt>事件目标</dt>
+ <dd>Element</dd>
+ <dt>默认行为</dt>
+ <dd>无。</dd>
 </dl>
 
-<div class="note">注释: 这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})</div>
+<div class="note">注释：这里的接口是指 {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})</div>
 
 <h2 id="属性">属性</h2>
 
@@ -66,7 +66,7 @@ original_slug: Web/Events/focus
 
 <h2 id="事件委托">事件委托</h2>
 
-<p>此事件有两个可以实现事件委托的方法 : 通过在支持的浏览器上使用 <code>focusin</code> 事件 (除了Firefox之外的所有浏览器), 或者通过设置 <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a> 的参数"useCapture" 值为true:</p>
+<p>此事件有两个可以实现事件委托的方法 : 通过在支持的浏览器上使用 <code>focusin</code> 事件 (除了 Firefox 之外的所有浏览器), 或者通过设置 <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a> 的参数"useCapture" 值为 true:</p>
 
 <p>{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}</p>
 
@@ -74,59 +74,7 @@ original_slug: Web/Events/focus
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Featrue</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Element.focus_event")}}
 
 <h2 id="相关事件">相关事件</h2>
 

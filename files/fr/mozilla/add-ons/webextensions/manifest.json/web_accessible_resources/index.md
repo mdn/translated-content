@@ -36,7 +36,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 Parfois, vous souhaitez associer certaines ressources - par exemple, images, HTML, CSS ou JavaScript - avec votre extension pour les mettre à la disposition des pages Web.
 
-Par exemple, l'[extensions d'exemple "beastify"](https://github.com/mdn/webextensions-examples/tree/master/beastify) remplace une page web par une image d'une bête sélectionnée par l'utilisateur. Les images de la bête sont emballées avec l'extension. Pour rendre visible l'image sélectionnée, l'extension ajoute  [`<img>`](/fr/docs/Web/HTML/Element/img) des éléments dont l'attribut `src` pointe sur l'image de la bête. Pour que la page Web puisse charger les images, elles doivent être rendues accessibles sur le Web.
+Par exemple, l'[extensions d'exemple "beastify"](https://github.com/mdn/webextensions-examples/tree/master/beastify) remplace une page web par une image d'une bête sélectionnée par l'utilisateur. Les images de la bête sont emballées avec l'extension. Pour rendre visible l'image sélectionnée, l'extension ajoute  [`<img>`](/fr/docs/Web/HTML/Element/img) des éléments dont l'attribut `src` pointe sur l'image de la bête. Pour que la page Web puisse charger les images, elles doivent être rendues accessibles sur le Web.
 
 Avec la clé `web_accessible_resources` liste toutes les ressources packagées que vous souhaitez mettre à la disposition des pages Web. Vous les spécifiez comme chemins relatifs dans le fichier manifest.json.
 
@@ -66,7 +66,7 @@ Le fichier sera alors disponible en utilisant une URL comme :
 
 `<extension-UUID>` n'est **pas** l'identifiant de votre extension. Il est généré de manière aléatoire pour chaque instance de navigateur. Ceci empêche les sites Web de prendre les empreintes digitales d'un navigateur en examinant les extensions qu'il a installées.
 
-> **Note :** Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans  `web_accessible_resources`, elle est accessible comme `chrome-extension://<your-extension-id>/<path/to/resource>`.
+> **Note :** Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans  `web_accessible_resources`, elle est accessible comme `chrome-extension://<your-extension-id>/<path/to/resource>`.
 
 L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL) en passant le chemin relatif à manifest.json, par exemple :
 
@@ -80,7 +80,7 @@ Cette approche vous donne l'URL correcte quel que soit le navigateur sur lequel 
 
 ### Caractères génériques
 
-`web_accessible_resources` peuvent contenir des caractères génériques. Par exemple, l'entrée suivante fonctionnera également pour inclure la ressource à  "images/my-image.png":
+`web_accessible_resources` peuvent contenir des caractères génériques. Par exemple, l'entrée suivante fonctionnera également pour inclure la ressource à  "images/my-image.png":
 
 ```json
   "web_accessible_resources": ["images/*.png"]

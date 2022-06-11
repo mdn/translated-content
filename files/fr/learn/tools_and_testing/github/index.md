@@ -53,7 +53,7 @@ Il est aussi préférable que vous ayiez quelques connaissances fondamentales su
 
 ## Guides
 
-Notez que les liens ci-après vous amènent à des ressources sur des sites externes. Nous envisageons la possibilité d'avoir notre cours  consacré à Git/GitHub, mais pour l'instant, ceux-ci vous aideront à mieux appréhender le sujet.
+Notez que les liens ci-après vous amènent à des ressources sur des sites externes. Nous envisageons la possibilité d'avoir notre cours consacré à Git/GitHub, mais pour l'instant, ceux-ci vous aideront à mieux appréhender le sujet.
 
 - [Hello World (de GitHub)](https://guides.github.com/activities/hello-world/)
   - : C'est un bon point pour commencer — ce guide pratique vous fera entrer dans l'utilisation de GitHub en vous apprenant les fondements de Git tels que la création de dépôts et de branches, la créations de _commits_ ainsi qu'à l'ouverture et à la fusion de _pull requests_.
@@ -66,7 +66,7 @@ Notez que les liens ci-après vous amènent à des ressources sur des sites exte
 - [Mastering issues (de GitHub)](https://guides.github.com/features/issues/)
   - : Les _issues_ (problèmes) sont comme un forum pour votre projet GitHub, où chacun peut venir poser des questions et rapporter des problèmes, et vous pouvez gérer les mises à jour (par exemple assigner certaines personnes à la résolution de problèmes, à la clarification de problèmes ou à l'information de la correction de problèmes). Cet article vous donne ce dont vous avez besoin de savoir à propos des _issues_.
 
-> **Note :** Il existe **beaucoup d'autres** choses que vous pouvez faire avec Git et GitHub, mais nous pensons que ce qui précède représente le minimum dont vous aurez besoin pour commencer à utiliser Git efficacement. Au fur et à mesure de votre progression avec Git, vous comprendrez de plus en plus qu'il est facile de faire des erreurs quand on commence à utiliser des commandes plus complexes. Ne vous inquiétez pas, même les développeurs web aguerris pensent que Git est parfois déroutant, et résolvent souvent des problèmes en cherchant des solutions sur internet ou en consultat des sites comme [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) et[ Dangit, git!](https://dangitgit.com/)
+> **Note :** Il existe **beaucoup d'autres** choses que vous pouvez faire avec Git et GitHub, mais nous pensons que ce qui précède représente le minimum dont vous aurez besoin pour commencer à utiliser Git efficacement. Au fur et à mesure de votre progression avec Git, vous comprendrez de plus en plus qu'il est facile de faire des erreurs quand on commence à utiliser des commandes plus complexes. Ne vous inquiétez pas, même les développeurs web aguerris pensent que Git est parfois déroutant, et résolvent souvent des problèmes en cherchant des solutions sur internet ou en consultat des sites comme [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) et [Dangit, git!](https://dangitgit.com/)
 
 ## Voir aussi
 

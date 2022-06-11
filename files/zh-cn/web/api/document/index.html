@@ -48,7 +48,7 @@ translation_of: Web/API/Document
  <dt>{{DOMxRef("Document.documentURI")}} {{ReadOnlyInline}}</dt>
  <dd>以字符串的类型，返回当前文档的路径。</dd>
  <dt>{{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}</dt>
- <dd>以列表(list)的类型，返回当前文档的嵌入式的元素 {{HTMLElement('embed')}} 。</dd>
+ <dd>以列表 (list) 的类型，返回当前文档的嵌入式的元素 {{HTMLElement('embed')}} 。</dd>
  <dt>{{DOMxRef("Document.fonts")}}</dt>
  <dd>返回当前文档的 {{DOMxRef("FontFaceSet")}} 接口。</dd>
  <dt>{{DOMxRef("Document.forms")}} {{ReadOnlyInline}}</dt>
@@ -101,7 +101,7 @@ translation_of: Web/API/Document
  <dt>{{DOMxRef("Document.cookie")}}</dt>
  <dd>返回一个使用分号分隔的 cookie 列表，或设置（写入）一个 cookie。</dd>
  <dt>{{DOMxRef("Document.defaultView")}} {{ReadOnlyInline}}</dt>
- <dd>返回一个对（当前） <code>window</code> 对象的引用。</dd>
+ <dd>返回一个对（当前）<code>window</code> 对象的引用。</dd>
  <dt>{{DOMxRef("Document.designMode")}}</dt>
  <dd>获取或设置（让用户）编辑整个文档的能力。</dd>
  <dt>{{DOMxRef("Document.dir")}} {{ReadOnlyInline}}</dt>
@@ -264,7 +264,7 @@ translation_of: Web/API/Document
  <dd>Returns a clone of a node from an external document.</dd>
  <dt>{{DOMxRef("Document.normalizeDocument()")}} {{Obsolete_Inline}}</dt>
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
- <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}</dt>
  <dd>Releases the current mouse capture if it's on an element in this document.</dd>
  <dt>{{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>详见 {{DOMxRef("Window.releaseEvents()")}}。</dd>
@@ -551,7 +551,7 @@ translation_of: Web/API/Document
  <dt>{{DOMxRef("document.currentScript")}} {{Non-standard_Inline}}</dt>
  <dd>返回 {{HTMLElement("script")}} element that is currently executing.</dd>
  <dt>{{DOMxRef("document.documentURIObject")}}</dt>
- <dd>(<strong>Mozilla add-ons only!</strong>) 返回 {{Interface("nsIURI")}} object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
+ <dd>(<strong>Mozilla add-ons only!</strong>) 返回 <code>nsIURI</code> object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
  <dt>{{DOMxRef("document.popupNode")}}</dt>
  <dd>返回 node upon which a popup was invoked.</dd>
  <dt>{{DOMxRef("document.tooltipNode")}}</dt>
@@ -589,82 +589,7 @@ translation_of: Web/API/Document
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#interface-document", "Document")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Intend to supersede DOM 3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "dom.html#the-document-object", "Document")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Turn the {{DOMxRef("HTMLDocument")}} interface into a <code>Document</code> extension.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML Editing", "#dom-document-getselection", "Document")}}</td>
-   <td>{{Spec2("HTML Editing")}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Pointer Lock", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("Pointer Lock")}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Page Visibility API", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("Page Visibility API")}}</td>
-   <td>Extend the <code>Document</code> interface with the <code>visibilityState</code> and <code>hidden</code> attributes and the <code>onvisibilitychange</code> event listener.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selection API", "#extensions-to-document-interface", "Document")}}</td>
-   <td>{{Spec2("Selection API")}}</td>
-   <td>Adds <code>getSelection()</code>, <code>onselectstart</code> and <code>onselectionchange</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#interface-document", "Document")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Supersede DOM 3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "#i-Document", "Document")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Supersede DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator", "XPathEvaluator")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Define the {{DOMxRef("XPathEvaluator")}} interface which extend document.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "#i-Document", "Document")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Supersede DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM1", "#i-Document", "Document")}}</td>
-   <td>{{Spec2("DOM1")}}</td>
-   <td>Initial definition for the interface</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

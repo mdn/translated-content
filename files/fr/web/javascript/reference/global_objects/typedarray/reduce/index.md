@@ -19,7 +19,9 @@ La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque v
 
 ## Syntaxe
 
-    typedarray.reduce(callback[, valeurInitiale])
+```js
+typedarray.reduce(callback[, valeurInitiale])
+```
 
 ### Paramètres
 
@@ -65,7 +67,7 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 
