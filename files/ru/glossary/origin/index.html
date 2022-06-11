@@ -1,51 +1,53 @@
 ---
-title: Первичные данные
+title: Правило ограничения домена
 slug: Glossary/Origin
 translation_of: Glossary/Origin
 original_slug: Глоссарий/origin
 ---
-<p>Браузер отправляет серверу <strong>первичные данные</strong> - протокол, <em>хостинг, домен</em>, <em>порт соединения через</em> {{Glossary("URL")}}. Два объекта одинаковые если протокол, хост, домен и порт одинаковые.</p>
 
-<p>Некоторые данные могут не передаваться источником, для их получения необходимо использовать <a href="/en-US/docs/Glossary/CORS">CORS</a>.</p>
+<p><strong>Правило ограничения домена</strong> - концепция безопасности веб-приложений. Политика разрешает сценариям, находящимся на страницах одного сайта, доступ к методам и свойствам друг друга без ограничений, но предотвращает доступ к большинству методов и свойств для страниц на разных сайтах.</p>
 
-<h2 id="Примеры_первичных_данных">Примеры первичных данных</h2>
+<p>Следуя этому правилу, одинаковые источники - это источники, у которых совпадают три признака: <em>домен, порт и протокол.</em></p>
+<p>Система <a href="/en-US/docs/Glossary/CORS">CORS</a> позволяет заявить веб-серверам о возможности доступа к своим ресурсам из разных источников, если такая возможность потребуется</p>
+
+<h2 id="Таблица_соответствия">Таблица соответствия правилу</h2>
+<p>Таблица дает обзор проверок для сравнения заданного URL (<code>http://store.company.com/dir/page.html</code>)</p>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td style="width: 50%;"><code>http://example.com/app1/index.html</code><br>
-    <code>http://example.com/app2/index.html</code></td>
-   <td style="width: 50%;">данные протокола (<code>http</code>) и хостинга (<code>example.com</code>)</td>
+   <td style="width: 50%;"><code><strong>http://store.company.com</strong>/dir2/other.html</code></td>
+   <td style="width: 50%;"><strong>Соответствует.</strong> Тот же протокол (<code>http://</code>) и домен (<code>store.company.com</code>)</td>
   </tr>
   <tr>
-   <td style="width: 50%;"><code>http://Example.com:80</code><br>
-    <code>http://example.com</code></td>
-   <td style="width: 50%;">первичные данные для сервера- соединения HTTP, номер порта 80</td>
+    <td style="width: 50%;"><code><strong>http://store.company.com</strong>/dir/other.html</code></td>
+    <td style="width: 50%;"><strong>Соответствует.</strong> Тот же протокол (<code>http://</code>) и домен (<code>store.company.com</code>)</td>
+   </tr>
+  <tr>
+   <td style="width: 50%;"><code><strong>http://</strong>username:password@<strong>store.company.com</strong>/dir2/other.html</code>
+</td>
+   <td style="width: 50%;"><strong>Соответствует. </strong>Тот же протокол (<code>http://</code>) и домен (<code>store.company.com</code>)</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Пример_других_первичных_данных">Пример других первичных данных</h2>
+<h2 id="Таблица_несоответствия">Таблица несоответствия правилу</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com/app1</code><br>
-    <code>https://example.com/app2</code></td>
-   <td>другие протоколы</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com</code><br>
-    <code>http://www.example.com</code><br>
-    <code>http://myapp.example.com</code></td>
-   <td style="width: 50%;">разные хостинги</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com</code><br>
-    <code>http://example.com:8080</code></td>
-   <td style="width: 50%;">другой порт</td>
-  </tr>
- </tbody>
+    <tbody>
+     <tr>
+      <td style="width: 50%;"><code>http://store.company.com:<strong>81</strong>/dir/other.html</code></td>
+      <td style="width: 50%;"><strong>Не соответствует. </strong> Протокол (<code>http://</code>) и домен (<code>store.company.com</code>) те же, однако другой порт (<code> 81 </code>) По умолчанию используется порт: <strong>80</strong></td>
+     </tr>
+     <tr>
+       <td style="width: 50%;"><code><strong>https://</strong>store.company.com/dir/other.html</code></td>
+       <td style="width: 50%;"><strong>Не соответствует. </strong> Используется другой протокол </td>
+      </tr>
+      <tr>
+        <td style="width: 50%;"><code>http://<strong>www.store.company.com</strong>/dir/other.html</code></td>
+        <td style="width: 50%;"><strong>Не соответствует. </strong> домены различаются (требуется полное соответствие) </td>
+       </tr>  
+    </tbody>
 </table>
 
 <h2 id="Больше_информации">Больше информации</h2>
