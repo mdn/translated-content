@@ -5,7 +5,7 @@ browser-compat: javascript.builtins.Symbol.hasInstance
 ---
 {{JSRef}}
 
-El símbolo conocido **`Symbol.hasInstance`** se utiliza para determinar si un objeto constructor reconoce un objeto como su instancia. El comportamiento del operador {{jsxref("Operators/instanceof", "instanceof")}} puede personalizarse mediante este símbolo.
+El símbolo conocido como **`Symbol.hasInstance`** se utiliza para determinar si un objeto constructor reconoce un objeto como su instancia. El comportamiento del operador {{jsxref("Operators/instanceof", "instanceof")}} puede personalizarse mediante este símbolo.
 
 {{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
 
