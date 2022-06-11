@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG Animation
+translation_of: Web/SVG/Element/discard
 ---
 {{SVGRef}}
 
