@@ -4,11 +4,11 @@
 
 同样地，如果你对本文的指南有任何改进的建议，请提出问题（issue）或发起 PR。我们对此表示欢迎。下面进入简体中文翻译指南的正文部分。
 
-> MDN 中的文档正在逐渐向 Markdown 格式迁移（由 [yari 平台渲染](https://github.com/mdn/yari) 为 HTML），以下的说明仅针对 Markdown 格式，对于现有的 HTML 格式文档，并非完全适用。若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN)。
+> MDN 中的文档正在逐渐向 Markdown 格式迁移（由 [yari 平台](https://developer.mozilla.org/zh-CN/docs/MDN/Yari)渲染为 HTML），以下的说明仅针对 Markdown 格式，对于现有的 HTML 格式文档，并非完全适用。若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN)。
 
 ## 翻译标题和 ID
 
-文档中的目录导航、与代码块相关联的运行实例等会使用到 HTML ID。而对于 Markdown 文档，其渲染得到的 HTML 文件的 ID 则与 Markdown 文档中的标题一一对应（这并不意味着两者相等，yari 平台对于半角空格、标点等有特殊处理）。
+文档中的目录导航、与代码块相关联的运行实例等会使用到 HTML ID。而对于 Markdown 文档，其渲染得到的 HTML 文件的 ID 则与 Markdown 文档中的标题相对应（但这并不意味着两者相等，yari 平台对于半角空格、标点等有特殊处理）。
 
 例如，对于标题：
 
@@ -16,7 +16,7 @@
 ## Examples
 ```
 
-在 `zh-CN` 中的翻译应该是：
+在简体中文文档中的翻译应该是：
 
 ```md
 ## 示例
@@ -26,7 +26,7 @@
 
 对于英文的示例代码块，可以选择翻译其中的注释、字符串、输出结果等等，但不建议对变量、函数、方法等名称进行翻译。
 
-一些示例代码块会有与之对应的“实例”（即对示例代码运行效果的实时展示）。这些实例是通过 `{{EmbedLiveSample}}` 等宏实现的，因为在本地化文档中会翻译英文标题，请**注意一并修改运行实例宏的第一个参数为相对应的中文标题**（参见：[运行实例](https://developer.mozilla.org/zh-CN/docs/MDN/Structures/Live_samples)）。
+一些示例代码块会有与之对应的“实例”（即对示例代码运行效果的实时展示）。这些实例是通过 `{{EmbedLiveSample}}` 等宏来实现的，因为在本地化文档中会翻译英文标题，请**注意一并修改运行实例宏的第一个参数为相对应的中文标题**（参见：[运行实例](https://developer.mozilla.org/zh-CN/docs/MDN/Structures/Live_samples)）。
 
 ## 站内链接翻译
 
@@ -44,7 +44,7 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 如果你刚刚开始了解 HTML、CSS、JavaScript 等相关知识，你可以试着完成我们的 [Web 开发教程](/zh-CN/docs/Learn)。
 ```
 
-还需特别注意路径中带有片段标识（fragment）的，请同步更新片段标识为本地化文档中指定标题的 ID（若不清楚标题和 ID 之间的转换规则，可以在浏览器的开发者工具中查找对应标题的 ID）。
+还需特别注意路径后带有片段标识（fragment）的站内链接，请同步更新片段标识为本地化文档中指定标题的 ID（若不清楚标题和 ID 之间的转换规则，可以在浏览器的开发者工具中查找对应标题的 ID）。
 
 例如，对于以下链接：
 
@@ -58,11 +58,11 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 参考：[运行实例宏](/zh-CN/docs/MDN/Structures/Live_samples#运行实例宏)。
 ```
 
-> 请注意，无论指向的本地化文档是否存在，都请让链接指向本地化文档。yari 平台可以在指向本地化文档的链接不存在的情况下，自动将对应的链接回落到英文版本的链接。
+> 请注意，无论指向的本地化文档是否存在，都请让链接指向本地化文档。yari 平台可以在指向本地化文档的链接不存在的情况下，自动将其回落到对应英文版本的链接。
 
 ## 中文翻译的常见问题
 
-为保证简体中文文档格式的一致性，翻译指南列出了部分规范：
+为保证简体中文文档格式的一致性，翻译指南列出了部分规范。
 
 ### 标点符号
 
@@ -99,7 +99,7 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 ### 中文和拉丁语系文字间加空格
 
-对于简体中文文档，请在中文和拉丁语系文字之间保留**一个空格**，但在拉丁语系文字和全角标点之间，则无需保留空格。
+对于简体中文文档，请在中文和拉丁语系文字之间保留**一个空格**，但在拉丁语系文字和中文标点之间，则无需保留空格。
 
 示例如下：
 
