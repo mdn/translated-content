@@ -34,7 +34,7 @@ border-color簡寫的屬性值內容由以下CSS的屬性值構成。
 - [`border-right-color`](/zh-TW/docs/Web/CSS/border-right-color)
 - [`border-top-color`](/zh-TW/docs/Web/CSS/border-top-color)
 
-## Syntax 語法示範
+## 語法
 
 ```css
 /* <color> values */
@@ -64,7 +64,7 @@ border-color: unset;
 - 三個值：依顏色排列順序分別指定給：**上邊框**、**左右邊**、**下邊框**。
 - 四個值：依顏色排列順序，沿邊框順時鐘方向，分別指定給：**上邊框**、**右邊框**、**下邊框**、**左邊框**。
 
-### Values 屬性值
+### 屬性值
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : 定義框線的顏色。
@@ -77,9 +77,9 @@ border-color: unset;
 
 {{csssyntax}}
 
-## 實際範例
+## 範例
 
-### 完整的border-color簡寫使用範例
+### 完整的border-color簡寫使用
 
 #### HTML
 
@@ -152,11 +152,11 @@ ul {
 }
 ```
 
-#### Result 成果
+#### 成果
 
 {{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
 
-## Specifications 規範文件
+## 規範
 
 {{Specifications}}
 
@@ -164,7 +164,7 @@ ul {
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - 與border-color相關的CSS屬性：{{CSSxRef("border")}}、{{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}。
 - 其他框線屬性：{{CSSxRef("border-width")}}、{{CSSxRef("border-style")}}
