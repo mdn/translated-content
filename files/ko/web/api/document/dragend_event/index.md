@@ -1,6 +1,7 @@
 ---
-title: 'Document: dragend event'
+title: 'Document: dragend 이벤트'
 slug: Web/API/Document/dragend_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -11,32 +12,33 @@ tags:
   - Web
   - drag and drop
   - dragend
+browser-compat: api.Document.dragend_event
 translation_of: Web/API/Document/dragend_event
 ---
 {{APIRef}}
 
-`dragend`는 드래그 작업이 끝났을 때 발생합니다(마우스 버튼을 떼거나 <kbd>ESC</kbd> 키를 누른 경우).
+`dragend` 이벤트는 마우스 버튼을 놓거나 이스케이프 키를 눌러 드래그 작업이 끝나게 되면 발생합니다.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">이벤트 버블링</th>
-      <td>Yes</td>
+      <th scope="row">버블링</th>
+      <td>예</td>
     </tr>
     <tr>
-      <th scope="row">이벤트 취소</th>
-      <td>No</td>
+      <th scope="row">취소 가능</th>
+      <td>아니오</td>
     </tr>
     <tr>
-      <th scope="row">기본 액션</th>
-      <td>Varies</td>
+      <th scope="row">기본 동작</th>
+      <td>다양함</td>
     </tr>
     <tr>
       <th scope="row">인터페이스</th>
       <td>{{domxref("DragEvent")}}</td>
     </tr>
     <tr>
-      <th scope="row">이벤트 핸들러 속성</th>
+      <th scope="row">이벤트 처리기 속성</th>
       <td>
         {{domxref("GlobalEventHandlers/ondragend", "ondragend")}}
       </td>
@@ -46,21 +48,77 @@ translation_of: Web/API/Document/dragend_event
 
 ## 예제
 
-[drag](/en-US/docs/Web/API/Document/drag_event) 이벤트의 예제 코드나 이 [JSFiddle demo](http://jsfiddle.net/zfnj5rv4/)를 참고하세요.
+### 드래그 종료 시 투명도 초기화
 
-{{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}
+이 예제에서는 컨테이너 안에 드래그 가능한 요소를 배치했습니다. 이 요소를 잡아 드래그한 후 놓아보세요.
+
+요소가 드래그 되기 시작하면 반투명하게 설정했다가, `dragend` 이벤트를 수신해서 드래그가 끝나면 다시 불투명하게 만드는 예제입니다.
+
+[`drag`](/ko/docs/Web/API/Document/drag_event) 이벤트 문서에서 드래그 앤 드롭의 더 완전한 예제를 확인할 수 있습니다.
+
+#### HTML
+
+```html
+<div id="container">
+  <div id="draggable" draggable="true">
+    드래그 가능
+  </div>
+</div>
+<div class="dropzone"></div>
+```
+
+#### CSS
+
+```css
+body {
+  /* 사용자가 예제의 텍스트를 선택하지 못하도록 */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+#container {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  padding: 10px;
+}
+
+.dragging {
+  opacity: .5;
+}
+```
+
+#### JavaScript
+
+```js
+document.addEventListener("dragstart", event => {
+  // 반투명하게 만들기
+  event.target.classList.add("dragging");
+});
+
+document.addEventListener("dragend", event => {
+  // 불투명하게 초기화
+  event.target.classList.remove("dragging");
+});
+```
+
+#### 결과
+
+{{EmbedLiveSample('드래그 종료 시 불투명도 초기화')}}
 
 ## 명세
 
-| 명세                                                                                         | 상태                             | 비고 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragend")}} | {{Spec2("HTML WHATWG")}} |      |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("api.Document.dragend_event")}}
+{{Compat}}
 
-## 더보기
+## 같이 보기
 
 - 다른 드래그 앤 드롭 이벤트:
 
@@ -69,11 +127,10 @@ translation_of: Web/API/Document/dragend_event
   - {{domxref("Document/dragover_event", "dragover")}}
   - {{domxref("Document/dragenter_event", "dragenter")}}
   - {{domxref("Document/dragleave_event", "dragleave")}}
-  - {{domxref("Document/dragexit_event", "dragexit")}}
   - {{domxref("Document/drop_event", "drop")}}
 
-- 다른 대상의 `drag` 이벤트:
+- 이 이벤트의 다른 대상:
 
-  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} event
-  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragend_event", "dragend")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} event
+  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} 이벤트
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragend_event", "dragend")}} 이벤트
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} 이벤트
