@@ -1,126 +1,78 @@
 ---
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
-  - HTMLLInkElement
-  - Interface
-  - Reference
-  - 翻訳中
+  - HTMLLinkElement
+  - インターフェイス
+  - リファレンス
+browser-compat: api.HTMLLinkElement
 translation_of: Web/API/HTMLLinkElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLLinkElement</code></strong> インターフェイスは、外部リソースの参照情報、およびそれらのリソースとドキュメントの関係 (またはその逆) を表します。このオブジェクトは、{{domxref("HTMLElement")}} インターフェイスのすべてのプロパティとメソッドを継承します。</p>
+**`HTMLLinkElement`** インターフェイスは、外部リソースの参照情報と、それらのリソースと文書の関係（またはその逆）を表します（[`<link>`](/ja/docs/Web/HTML/Element/link) 要素に対応します。 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) で表される [`<a>`](/ja/docs/Web/HTML/Element/a) 要素と混同しないでください）。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティとメソッドを継承します。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>親、{{domxref("HTMLElement")}}、および {{domxref("LinkStyle")}} からプロパティを継承します。</em></p>
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLLinkElement.as")}}</dt>
- <dd>HTML リンクによって読み込まれるコンテンツのタイプを表す {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}</dt>
- <dd>このリンク要素のCORS設定に対応する {{domxref("DOMString")}}。詳細については、<a href="/ja/docs/HTML/CORS_settings_attributes">CORS設定属性</a>を参照してください。</dd>
- <dt>{{domxref("HTMLLinkElement.disabled")}}</dt>
- <dd>リンクが無効であるかどうかを表す <code>Boolean</code>。現在、スタイルシートリンクでのみ使用されています。</dd>
- <dt>{{domxref("HTMLLinkElement.href")}}</dt>
- <dd>対象リソースの URI を表す {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.hreflang")}}</dt>
- <dd>リンク先リソースの言語コードを表す {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.media")}}</dt>
- <dd>リソースに適用される（ 1 つ以上の）メディアフォーマットのリストを表す {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}</dt>
- <dd>使用するリファラーを示す {{htmlattrxref("referrerpolicy", "link")}} HTML 属性を反映する {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.rel")}}</dt>
- <dd>リンク元文書からリンク先リソースに対する関連性を表す {{domxref("DOMString")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}</dt>
- <dd>{{htmlattrxref("rel", "link")}} HTML属性をトークンのリストとして反映する {{domxref("DOMTokenList")}}。</dd>
- <dt>{{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}</dt>
- <dd>トークンのリストとして {{htmlattrxref("sizes", "link")}} HTML属性を反映する {{domxref("DOMSettableTokenList")}}。</dd>
- <dt>{{domxref("LinkStyle.sheet")}} {{readonlyInline}}</dt>
- <dd>指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は <code>null</code> を返します。</dd>
- <dt>{{domxref("HTMLLinkElement.type")}}</dt>
- <dd>リンク先リソースの MIME タイプを表す {{domxref("DOMString")}}。</dd>
-</dl>
+- {{domxref("HTMLLinkElement.as")}}
+  - : 文字列で、この HTML リンクによって読み込まれるコンテンツの種類を表します。
+- {{domxref("HTMLLinkElement.crossOrigin")}}
+  - : 文字列で、このリンク要素の CORS 設定に対応します。詳細については、 [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+- {{domxref("HTMLLinkElement.disabled")}}
+  - : 論理値で、リンクが無効であるかどうかを表します。現在、スタイルシートリンクでのみ使用されています。
+- {{domxref("HTMLLinkElement.fetchPriority")}}
+  - : オプションの文字列で、ブラウザーが先読みの取得を他の同じ種類のリソースと比較してどのように優先させるべきかというヒントを表します。この値を指定した場合、許可された値のいずれかでなければなりません。高い優先度で取得する場合は `high`、低い優先度で取得する場合は `low`、優先度を指定しない場合は `auto` （既定値）となります。
+- {{domxref("HTMLLinkElement.href")}}
+  - : 文字列で、対象リソースの URI を表します。
+- {{domxref("HTMLLinkElement.hreflang")}}
+  - : 文字列で、リンク先リソースの言語コードを表します。
+- {{domxref("HTMLLinkElement.media")}}
+  - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
+- {{domxref("HTMLLinkElement.referrerPolicy")}}
+  - : 文字列で、使用するリファラーを示す HTML の {{htmlattrxref("referrerpolicy", "link")}} 属性を反映します。
+- {{domxref("HTMLLinkElement.rel")}}
+  - : 文字列で、リンク元文書からリンク先リソースに対する関連性を表します。
+- {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
+  - : {{domxref("DOMTokenList")}} で、 HTML の {{htmlattrxref("rel", "link")}} 属性をトークンのリストとして反映します。
+- {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
+  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の {{htmlattrxref("sizes", "link")}} 属性を反映します。
+- {{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}
+  - : 指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
+- {{domxref("HTMLLinkElement.type")}}
+  - : 文字列で、リンク先リソースの MIME タイプを表します。
 
-<h3 id="Obsolete_properties" name="Obsolete_properties">廃止されたプロパティ</h3>
+### 廃止されたプロパティ
 
-<dl>
- <dt>{{domxref("HTMLLinkElement.charset")}} {{obsolete_inline}}</dt>
- <dd>対象リソースの文字エンコーディングの取得 / 設定</dd>
- <dt>{{domxref("HTMLLinkElement.rev")}} {{obsolete_inline}}</dt>
- <dd>リンク先リソースからリンク元文書に対する <em>逆相の</em> 関係性の取得 / 設定
- <div class="note"><strong>Note</strong>: Currently the W3C HTML 5.2 spec states that <code>rev</code> is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.</div>
- </dd>
- <dt>{{domxref("HTMLLinkElement.target")}} {{obsolete_inline}}</dt>
- <dd>リソースを適用するターゲットフレームの名前の取得 / 設定</dd>
-</dl>
+- {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
+  - : 文字列で、対象リソースの文字エンコーディングを表します。
+- {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+  - : 文字列で、リソースからこの文書に対してリンクされたリソースの逆相の関係を表します。
 
-<p>固有のメソッドは持ちません。 {{domxref("HTMLElement")}} と {{domxref("LinkStyle")}} のメソッドを継承します。</p>
+    > **Note:** 現在、 W3C HTML 5.2 仕様では `rev` は廃止ではないとされていますが、 WHATWG living standard では廃止というラベルが貼られたままになっています。この矛盾が解決されるまでは、廃止であると考えるべきでしょう。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+- {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
+  - : 文字列で、リソースが適用する対象フレームの名前を表します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Preload")}}</td>
-   <td>{{Spec2("Preload")}}</td>
-   <td>Defines <code>&lt;link rel="preload"&gt;</code>, and the <code>as</code> property. Note that currently Firefox only supports preloading of cacheable resources.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "semantics.html#the-link-element", "HTMLLinkElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><code>crossOrigin</code>、<code>referrerPolicy</code>、<code>as</code> プロパティの追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "document-metadata.html#the-link-element", "HTMLLinkElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "document-metadata.html#the-link-element", "HTMLLinkElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>
-    <ul>
-     <li>次の属性の廃止 : <code>charset</code> 、 <code>rev</code> 、 <code>shape</code></li>
-     <li>次のプロパティの追加 : <code>relList</code> 、 <code>sizes</code></li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-35143001', 'HTMLLinkElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Added a second inheritence, the {{domxref("LinkStyle")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-35143001', 'HTMLLinkElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+## メソッド
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<div>
+## 仕様書
 
+{{Specifications}}
 
-<p>{{Compat("api.HTMLLinkElement")}}</p>
-</div>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTMLElement("link")}} - <code>HTMLLinkElement</code> が実装されている HTML 要素</li>
-</ul>
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("link")}}
