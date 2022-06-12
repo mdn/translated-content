@@ -13,7 +13,7 @@ browser-compat: api.MediaDevices.enumerateDevices
 
 {{domxref("MediaDevices")}}方法請求一個可用的媒體輸入與媒體輸出裝置列表，像是麥克風、相機、耳機等等。返回值{{jsxref("Promise")}}可被解析為一個描述裝置的{{domxref("MediaDeviceInfo")}}陣列。
 
-對特定設備的存取由[Permissions API](/en-US/docs/Web/API/Permissions_API)控制。返回的裝置列表會省略任何未授予相應權限的設備，包括麥克風、相機、揚聲器選擇（對於輸出裝置）等等。
+對特定設備的存取由[Permissions API](/zh-TW/docs/Web/API/Permissions_API)控制。返回的裝置列表會省略任何未授予相應權限的設備，包括麥克風、相機、揚聲器選擇（對於輸出裝置）等等。
 
 ## 語法
 
