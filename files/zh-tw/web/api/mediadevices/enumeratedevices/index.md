@@ -33,7 +33,7 @@ enumerateDevices()
 
 ## 範例
 
-以下是一個使用`enumerateDevices()`的範例，它會產生一個帶有標籤的（如果有標籤的話）[device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId)列表。
+以下是一個使用`enumerateDevices()`的範例，它會產生一個帶有標籤的（如果有標籤的話）[device ID](/zh-TW/docs/Web/API/MediaDeviceInfo/deviceId)列表。
 
 ```js
 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
