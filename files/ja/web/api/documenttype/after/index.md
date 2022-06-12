@@ -13,7 +13,7 @@ translation_of: Web/API/DocumentType/after
 ---
 {{APIRef("DOM")}}
 
-**`DocumentType.after()`** は、一連の {{domxref("Node")}} または文字列をこの `DocumentType` の親ノードの子リストの、この `DocumentType` の直後に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
+**`DocumentType.after()`** は、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親ノードの子リストの、この `DocumentType` の直後に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
 
 ## 構文
 

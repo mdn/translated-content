@@ -12,9 +12,9 @@ browser-compat: api.DocumentType.before
 ---
 {{APIRef("DOM")}}
 
-The **`DocumentType.before()`** 一連の {{domxref("Node")}} または文字列をこの `DocumentType` の親ノードの子リストの、この `DocumentType` の直前に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
+The **`DocumentType.before()`** 一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親ノードの子リストの、この `DocumentType` の直前に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
 
-> **Note:** 文書の doctype の前にノードを置くと、一部のブラウザー (Internet Explorer) でレンダリングモードが[互換モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)に設定されます。このようなことをするのは好ましくありません。
+> **Note:** 文書の doctype の前にノードを置くと、一部のブラウザー (Internet Explorer) でレンダリングモードが後方互換 ([quirks](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) モードに設定されます。このようなことをするのは好ましくありません。
 
 ## 構文
 
