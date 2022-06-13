@@ -28,7 +28,7 @@ translation_of: Web/API/WritableStreamDefaultWriter
 - {{domxref("WritableStreamDefaultWriter.desiredSize")}}{{readonlyinline}}
   - : 返回填充满流的内部队列所需要的大小。
 - {{domxref("WritableStreamDefaultWriter.ready")}}{{readonlyinline}}
-  - : 返回一个 {{jsxref("Promise")}}，当流填充内部队列的所需大小从非正数转换为正数时兑现，表明它不再应用背压。
+  - : 返回一个 {{jsxref("Promise")}}，当流填充内部队列的所需大小从非正数变为正数时兑现，表明它不再应用背压。
 
 ## 方法
 
