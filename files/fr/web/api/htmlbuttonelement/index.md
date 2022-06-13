@@ -2,6 +2,7 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 translation_of: Web/API/HTMLButtonElement
+page-type: web-api-interface
 browser-compat: api.HTMLButtonElement
 ---
 {{APIRef("HTML DOM")}}
