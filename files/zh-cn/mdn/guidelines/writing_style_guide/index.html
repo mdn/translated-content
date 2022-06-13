@@ -30,15 +30,15 @@ original_slug: MDN/Guidelines/Style_guide
 
 <h3 id="页面标题">页面标题</h3>
 
-<p>页面标题不仅会在搜索时用到，在页面顶部的面包屑路径中也会被用来表示文档的层级结构。页面标题（就是显示在页面顶部以及搜索结果中标题的部分）可以与页面 URL“<em>&lt;locale&gt;/docs/</em>”之后的“铭牌（slug）”部分不同。</p>
+<p>页面标题不仅会在搜索时用到，在页面顶部的面包屑路径中也会被用来表示文档的层级结构。页面标题（就是显示在页面顶部以及搜索结果中标题的部分）可以与页面 URL“<code>&lt;locale&gt;/docs/</code>”之后的“铭牌（slug）”部分不同。</p>
 
-<h4 id="文章标题和段落标题的大写规则"><strong>文章标题和段落标题的大写规则</strong></h4>
+<h4 id="文章标题和段落标题的大写规则">文章标题和段落标题的大写规则</h4>
 
 <p>页面的标题和章节的标头应当使用语句式大写（只大写第一个单词的首字母以及专有名词的首字母），而不应该使用标题式大写：</p>
 
 <ul>
- <li><strong class="correct">正确</strong>: "A new method for creating JavaScript rollovers"</li>
- <li><strong class="incorrect">错误</strong>: "A New Method for Creating JavaScript Rollovers"</li>
+ <li><strong>正确</strong>: "A new method for creating JavaScript rollovers"</li>
+ <li><strong>错误</strong>: "A New Method for Creating JavaScript Rollovers"</li>
 </ul>
 
 <p>我们还有很多旧的页面是在这条规范确立之前就已经发布了的。所以只要你愿意，你随时可以更新它们的标题。我们也正在逐步完善它们。</p>
@@ -53,20 +53,20 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>当你要给某个新的主题或主体添加文章时，你通常需要创建一个引导页，然后再把要添加的文章作为子页面添加进去。引导页开篇应当用一两段话来描述一下当前主题或技术，然后添加一个子页面的目录列表，并简要描述每个页面的内容。你可以使用一些我们已经编写好的宏把相关的子页面自动插入到目录列表中。</p>
 
-<p>例如，<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>指南，其结构如下：</p>
+<p>例如，<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a> 指南，其结构如下：</p>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript/指南</a> - 主目录页</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/JavaScript_Overview" title="JavaScript/Guide/JavaScript_Overview">JavaScript/指南/JavaScript概述</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Functions" title="JavaScript/Guide/Functions">JavaScript/指南/函数</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model" title="JavaScript/Guide/Details_of_the_Object_Model">JavaScript/指南/对象模型的细节</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript/指南</a> - 主目录页</li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/JavaScript_Overview">JavaScript/指南/JavaScript概述</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">JavaScript/指南/函数</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">JavaScript/指南/对象模型的细节</a></li>
 </ul>
 
 <p>尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。</p>
 
 <h3 id="文章内容的通用原则">文章内容的通用原则</h3>
 
-<p>在写任何文档时，知道该写多少是很重要的。如果你写的长篇大论，文章读起来就会冗长无味，更不会有人愿意使用它。保持文章内容适量很重要，原因有很多。这其中的原因就有：为了确保读者能够找到他们真正想要的信息，以及为搜索引擎提供足够的优质素材来对文章进行分析和排名。我们将在这里讨论前者（提供读者可能需要的信息）。如果想了解如何让文章更好地被搜索引擎分类和排名，查阅文章<a href="/zh-CN/docs/MDN/Contribute/Howto/Write_for_SEO">How to write for SEO on MDN</a>。</p>
+<p>在写任何文档时，知道该写多少是很重要的。如果你写的长篇大论，文章读起来就会冗长无味，更不会有人愿意使用它。保持文章内容适量很重要，原因有很多。这其中的原因就有：为了确保读者能够找到他们真正想要的信息，以及为搜索引擎提供足够的优质素材来对文章进行分析和排名。我们将在这里讨论前者（提供读者可能需要的信息）。如果想了解如何让文章更好地被搜索引擎分类和排名，参阅文章 <a href="/zh-CN/docs/MDN/Contribute/Howto/Write_for_SEO">How to write for SEO on MDN</a>。</p>
 
 <p>我们的目标是在页面中包含读者可能需要的所有信息，但又不至于太过冗长。为了实现这个目标，我们给出了一些建议。</p>
 
@@ -82,19 +82,15 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>下面这个例子中的简介太过于简短，很多信息都没有包含进来，比如“stroke text”是什么意思，文本会在哪里等。</p>
 
-<div class="example-bad">
+<blockquote>
 <p><strong><code>CanvasRenderingContext2D.strokeText()</code></strong> draws a string.</p>
-</div>
+</blockquote>
 
 <h5 id="示例：过于冗长的简介">示例：过于冗长的简介</h5>
 
 <p>下面是上面那个简介的修改版，但是这次它又太过冗长了。其中包含了过多的细节，并且还包含了很多其他方法和属性，但实际上它应该将重点聚焦在 <code>strokeText()</code> 方法上，然后给出详细介绍它的文章的链接即可。</p>
 
-<div class="note">
-<p><strong>备注：</strong>作为例子，内容并不重要，所以就不逐句翻译了。</p>
-</div>
-
-<div class="example-bad">
+<blockquote>
 <p>When called, the Canvas 2D API method <strong><code>CanvasRenderingContext2D.strokeText()</code></strong>strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.</p>
 
 <p>The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.</p>
@@ -106,17 +102,17 @@ original_slug: MDN/Guidelines/Style_guide
 <p>You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels. If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.</p>
 
 <p>You can call the <strong><code>fillText()</code></strong> method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.</p>
-</div>
+</blockquote>
 
 <h5 id="示例：这次好多了">示例：这次好多了</h5>
 
 <p>下面这个简介比前两个要好很多。</p>
 
-<div class="example-good">
+<blockquote>
 <p>The {{domxref("CanvasRenderingContext2D")}} method <code><strong>strokeText()</strong></code>, part of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a>, strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.</p>
 
 <p>For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a>.</p>
-</div>
+</blockquote>
 
 <h4 id="多提供一些示例">多提供一些示例</h4>
 
@@ -154,17 +150,13 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>下面是一个结构良好的无序列表的例子：</p>
 
-<div class="example-good">
-<p><em>在这个例子中需要包括：</em></p>
+<p>在这个例子中需要包括：</p>
 
 <ul>
- <li><em>一种情况，然后跟上一个简短的说明。</em></li>
- <li><em>一种情况，然后跟上一个简短的说明。</em></li>
- <li>
-  <p><em>另一种情况，并跟上一些解释和说明。</em></p>
- </li>
+ <li>一种情况，然后跟上一个简短的说明。</li>
+ <li>一种情况，然后跟上一个简短的说明。</li>
+ <li>另一种情况，并跟上一些解释和说明。></li>
 </ul>
-</div>
 
 <p>可以看到，每个条目的格式都是一致的：首先显示一个“•”符号，然后列出一种情况，然后写上逗号，并在逗号后面添加一些对当前情况的简单说明。</p>
 
@@ -174,7 +166,6 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>下面是一个结构良好的有序列表的例子：</p>
 
-<blockquote>
 <p>为了创建一个好的有序列表，你需要：</p>
 
 <ol>
@@ -184,7 +175,6 @@ original_slug: MDN/Guidelines/Style_guide
 </ol>
 
 <p>这段内容就是一个总结。我们已经创建了一个简短的有序列表，解释了创建良好格式的有序列表应遵循的步骤。</p>
-</blockquote>
 
 <p>有序列表基本都用来表示具有连续性关系的内容，因此应该先深入思考你要用这些内容达到什么目的，然后再去撰写。</p>
 
@@ -200,7 +190,7 @@ original_slug: MDN/Guidelines/Style_guide
 <p><strong>警告：</strong>类似地，“Warning”样式用来创建一个警告框。</p>
 </div>
 
-<p>除非有特殊需要，否则请不要用 HTML 的 <code>style</code> 属性来手动给内容添加样式。如果你没有找到你需要的预定义样式，可以放置一个 <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">Matrix</a> 并寻求帮助。</p>
+<p>除非有特殊需要，否则请不要用 HTML 的 <code>style</code> 属性来手动给内容添加样式。如果你没有找到你需要的预定义样式，可以在 <a href="https://discourse.mozilla.org/c/mdn/236">MDN 论坛</a>寻求帮助。</p>
 
 <h3 id="示例代码的格式和样式">示例代码的格式和样式</h3>
 
@@ -212,7 +202,7 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>每级缩进都使用两个空格来缩进，并在所有的示例中保持一致。对于代码块的起始语句，应将开大括号“{”与当前语句写在一行上，比如：</p>
 
-<pre class="brush: js notranslate">if (condition) {
+<pre class="brush: js">if (condition) {
   /* handle the condition */
 } else {
   /* handle the "else" case */
@@ -221,7 +211,7 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>如果一行的代码很长，应在适当的地方换行以避免出现水平滚动条。下面是一个例子：</p>
 
-<pre class="brush: js notranslate">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
+<pre class="brush: js">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
        || class.YET_ANOTHER_CONDITION ) {
   /* something */
 }
@@ -238,38 +228,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="语法高亮">语法高亮</h4>
 
-<p>对于整行或多行代码，此时别再使用 {{HTMLElement("code")}}  元素来格式化了，而应该对其进行语法高亮。</p>
-
-<p>下面的例子使用了 JavaScript 语法高亮：</p>
-
-<div class="line number2 index1 alt1">
-<pre class="brush: js notranslate">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
-  document.writeln("a[" + i + "][" + j + "]= " + a[i][j]);</pre>
-</div>
-
-<p>如果没有在下拉列表中找到你需要的语言，可以选择第一项“没有高亮”，此时代码显示的是不带高亮效果的普通样式：</p>
-
-<pre class="brush: plain notranslate">x = 42;</pre>
-
-<h4 id="语法定义">语法定义</h4>
-
-<p>如果你想插入一段语法定义，可以使用样式下拉列表中的“Syntax Box”选项。语法定义的样式与普通代码的样式会有所区别。</p>
-
-<h4 id="非代码区块">非代码区块</h4>
-
-<p>有些情况下需要用到 <code>&lt;pre&gt;</code> 区块而不是代码区块，此时不会进行语法高亮，也不会显示行号。比如你需要显示树形结构，就可以使用 <code>&lt;pre&gt;</code>：</p>
-
-<pre class="notranslate">root/
-
-    folder1/
-        file1
-
-    folder2/
-        file2
-        file3
-</pre>
-
-<p>插入方法是要先点击”pre“按钮，然后输入想要的内容即可。</p>
+<p>对于整行或多行代码，此时别再使用 {{HTMLElement("code")}} 元素来格式化了，而应该对其进行<a href="/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#示例代码块">语法高亮</a>。</p>
 
 <h4 id="HTML_元素的样式">HTML 元素的样式</h4>
 
@@ -284,8 +243,6 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dd>对正在定义的术语使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs"><code>htmlattrdef</code></a> 宏（如 \{{htmlattrdef("type")}}），这样其他页面就可以使用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs"><code>htmlattrxref</code></a> 宏来链接到该页面了（例如 \{{htmlattrxref("attr","属性")}}）。</dd>
  <dt>属性值</dt>
  <dd>请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将 <code>&lt;input&gt;</code> 元素的 <strong>type</strong> 属性设置为 <code>email</code> 或 <code>tel</code> 时……</dd>
- <dt>为属性添加说明标签</dt>
- <dd>请不要滥用 {{HTMLVersionInline(5)}} 这样的标签。比如，可以在某个第一次出现的属性名称旁边添加标签，但是不要在每次出现该属性的时候都添加一次。</dd>
 </dl>
 
 <h3 id="拉丁文缩写">拉丁文缩写</h3>
@@ -633,11 +590,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>如果你对提高写作和编辑能力感兴趣，下面的资料会对你有所帮助：</p>
 
 <ul>
- <li><a href="http://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548">更好的写作</a>（Amazon），作者 William Zinsser</li>
- <li><a href="http://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/">清晰与优雅的格式基础</a>（Amazon），作者 Joseph Williams 和 Gregory Colomb</li>
+ <li><a href="https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548">更好的写作</a>（Amazon），作者 William Zinsser</li>
+ <li><a href="https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/">清晰与优雅的格式基础</a>（Amazon），作者 Joseph Williams 和 Gregory Colomb</li>
  <li><a href="https://brians.wsu.edu/common-errors-in-english-usage/">使用英文时的常见错误</a></li>
- <li><a href="http://www-personal.umich.edu/~jlawler/aue.html">英语语法 FAQ</a></li>
- <li><a href="http://www.angryflower.com/bobsqu.gif">Bob 的撇号快速指南，你个笨蛋</a>（这很有趣）</li>
- <li><a href="http://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster 的简明英语用法词典</a>（Amazon），虽是学术著作但很容易理解，基于实际例子并给出解释，对非英语国家的人很有帮助，特别是介词的使用方面。</li>
+ <li><a href="https://www-personal.umich.edu/~jlawler/aue.html">英语语法 FAQ</a></li>
+ <li><a href="https://www.angryflower.com/bobsqu.gif">Bob 的撇号快速指南，你个笨蛋</a>（这很有趣）</li>
+ <li><a href="https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster 的简明英语用法词典</a>（Amazon），虽是学术著作但很容易理解，基于实际例子并给出解释，对非英语国家的人很有帮助，特别是介词的使用方面。</li>
  <li><a href="http://english.stackexchange.com/">StackExchange 网站的英语子站</a>，关于英语使用的问答网站。</li>
 </ul>
