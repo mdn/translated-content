@@ -42,7 +42,7 @@ translation_of: Web/API/Page_Visibility_API
 
 <ul>
  <li>大多数浏览器不会调用被隐藏的标签页或{{ HTMLElement("iframe") }}框架当中{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}定义的回调函数，这会提升性能并且延长电池的使用寿命。</li>
- <li>在被隐藏的标签页或<code>iframe</code>框架中 {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}等计时器会被限速。 参见 <a href="/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
+ <li>在后台标签页或不活跃的标签页中 {{domxref("setTimeout()")}} 等定时器会受到一定的限制以提升性能。参见<a href="/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间">实际延时比设定值更久的原因</a>。</li>
  <li>Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
   <ul>
    <li>In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.</li>
