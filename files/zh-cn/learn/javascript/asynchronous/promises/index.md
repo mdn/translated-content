@@ -1,600 +1,376 @@
 ---
-title: 优雅的异步处理
+title: 如何使用 Promise
 slug: Learn/JavaScript/Asynchronous/Promises
 translation_of: Learn/JavaScript/Asynchronous/Promises
 original_slug: learn/JavaScript/异步/Promises语法
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</div>
+**Promise** 是现代 JavaScript 中异步编程的基础，是一个由异步函数返回的可以向我们指示当前操作所处的状态的对象。在 Promise 返回给调用者的时候，操作往往还没有完成，但 Promise 对象可以让我们操作最终完成时对其进行处理（无论成功还是失败）。
 
-<p><strong>Promise</strong> 是 JavaScript 语言的一个相对较新的功能，允许你推迟进一步的操作，直到上一个操作完成或响应其失败。这对于设置一系列异步操作以正常工作非常有用。本文向你展示了 promises 如何工作，如何在 Web API 中使用它们以及如何编写自己的 API</p>
-
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件：</th>
-   <td>基本的计算机素养，具备基础的 JavaScript 知识</td>
-  </tr>
-  <tr>
-   <th scope="row">目标：</th>
-   <td>理解并使用学习如何使用 Promises</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">预备知识：</th>
+      <td>
+        基本的计算机素养，以及对 JavaScript 基础知识的一定了解，包括函数和事件处理程序。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>理解 Promise 在 JavaScript 中是怎样被使用的</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="什么是promises">什么是 promises?</h2>
+在上一篇文章中，我们谈到使用回调实现异步函数的方法。在这种设计中，我们需要在调用异步函数的同时传入回调函数。这个异步函数会立即返回，并在操作完成后调用传入的回调。
 
-<p>我们在教程的第一篇文章中简要地了解了 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>，接下来我们将在更深层次理解 Promise。</p>
+在基于 Promise 的 API 中，异步函数会启动操作并返回 {{jsxref("Promise")}} 对象。然后，你可以将处理函数附加到 Promise 对象上，当操作完成时（成功或失败），这些处理函数将被执行。
 
-<p>本质上，Promise 是一个对象，代表操作的中间状态 —— 正如它的单词含义 '承诺' ，它保证在未来可能返回某种结果。虽然 Promise 并不保证操作在何时完成并返回结果，但是它保证当结果可用时，你的代码能正确处理结果，当结果不可用时，你的代码同样会被执行，来优雅的处理错误。</p>
+## 使用 fetch() API
 
-<p>通常你不会对一个异步操作从开始执行到返回结果所用的时间感兴趣（除非它耗时过长），你会更想在任何时候都能响应操作结果，当然它不会阻塞其余代码的执行就更好了。</p>
+> **备注：** 在这篇文章中，我们将通过复制页面上的代码示例到浏览器的 JavaScript 控制台中运行的方式来学习 Promise。因此在正式开始学习之前你需要进行以下设置：
+>
+> 1. 在浏览器的新标签页中访问<https://example.org>。
+> 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的 JavaScript 控制台
+> 3. 把我们展示的代码示例复制到控制台中运行。值得注意的是，你必须在每次输入新的示例之前重新加载页面，否则控制台会报错“重新定义了 `fetchPromise`”。
+在这个例子中，我们将从<https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>下载 JSON 文件，并记录一些相关信息。
 
-<p>你与 Promise 常见的交互之一就是 Web API 返回的 promise 对象。让我们设想一个视频聊天应用程序，该程序有一个展示用户的朋友列表的窗口，可以点击朋友旁边的按钮对朋友视频呼叫。</p>
+要做到这一点，我们将向服务器发出一个 **HTTP 请求**。在 HTTP 请求中，我们向远程服务器发送一个请求信息，然后它向我们发送一个响应。这次，我们将发送一个请求，从服务器上获得一个 JSON 文件。还记得在上一篇文章中，我们使用 {{domxref("XMLHttpRequest")}} API 进行 HTTP 请求吗？那么，在这篇文章中，我们将使用 {{domxref("fetch", "fetch()")}} API，一个现代的、基于 Promise 的、用于替代 `XMLHttpRequest` 的方法。
 
-<p>该按钮的处理程序调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来访问用户的摄像头和麦克风。由于 <code>getUserMedia()</code> 必须确保用户具有使用这些设备的权限，并询问用户要使用哪个麦克风和摄像头（或者是否仅进行语音通话，以及其他可能的选项），因此它会产生阻塞，直到用户做出所有的决定，并且摄像头和麦克风都已启用。此外，用户可能不会立即响应权限请求。所以 <code>getUserMedia()</code> 可能需要很长时间。</p>
+把下列代码复制到你的浏览器 JavaScript 控制台中：
 
-<p>由于 <code>getUserMedia()</code> 是在浏览器的主线程进行调用，整个浏览器将会处于阻塞状态直到 <code>getUserMedia()</code> 返回，这是不应该发生的；不使用 Promise，浏览器将处于不可用状态直到用户为摄像头和麦克风做出决定。因此 <code>getUserMedia()</code> 返回一个 Promise 对象，即 {{jsxref("promise")}}，一旦  {{domxref("MediaStream")}} 流可用才去解析，而不是等待用户操作、启动选中的设备并直接返回从所选资源创建的 {{domxref("MediaStream")}} 流。</p>
+```js
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
-<p>上述视频聊天应用程序的代码可能像下面这样：</p>
+console.log(fetchPromise);
 
-<pre class="brush: js notranslate">function handleCallButton(evt) {
-  setStatusMessage("Calling...");
-  navigator.mediaDevices.getUserMedia({video: true, audio: true})
-    .then(chatStream =&gt; {
-      selfViewElem.srcObject = chatStream;
-      chatStream.getTracks().forEach(track =&gt; myPeerConnection.addTrack(track, chatStream));
-      setStatusMessage("Connected");
-    }).catch(err =&gt; {
-      setStatusMessage("Failed to connect");
-    });
+fetchPromise.then( response => {
+  console.log(`已收到响应：${response.status}`);
+});
+
+console.log("已发送请求……");
+```
+
+我们在这里：
+
+1. 调用 `fetch()` API，并将返回值赋给 `fetchPromise` 变量。
+2. 紧接着，输出 `fetchPromise` 变量，输出结果应该像这样：`Promise { <state>: "pending" }`。这告诉我们有一个 `Promise` 对象，它有一个 `state`属性，值是 `"pending"`。`"pending"` 状态意味着操作仍在进行中。
+3. 将一个处理函数传递给 Promise 的 **`then()`** 方法。当（如果）获取操作成功时，Promise 将调用我们的处理函数，传入一个包含服务器的响应的 {{domxref("Response")}} 对象。
+4. 输出一条信息，说明我们已经发送了这个请求。
+
+完整的输出结果应该是这样的：
+
+```
+Promise { <state>: "pending" }
+已发送请求……
+已收到响应：200
+```
+
+请注意，`已发送请求……` 的消息在我们收到响应之前就被输出了。与同步函数不同，`fetch()` 在请求仍在进行时返回，这使我们的程序能够保持响应性。响应显示了 `200`（OK）的[状态码](/zh-CN/docs/Web/HTTP/Status)，意味着我们的请求成功了。
+
+可能这看起来很像上一篇文章中的例子中我们把事件处理程序添加到 {{domxref("XMLHttpRequest")}} 对象中。但不同的是，我们这一次将处理程序传递到返回的 Promise 对象的 `then()` 方法中。
+
+## 链式使用 Promise
+
+在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。这次，我们想获得JSON格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
+
+试试这个：
+
+```js
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise.then( response => {
+  const jsonPromise = response.json();
+  jsonPromise.then( json => {
+    console.log(json[0].name);
+  });
+});
+```
+
+在这个示例中，就像我们之前做的那样，我们给 `fetch()` 返回的 Promise 对象添加了一个 `then()` 处理程序。但这次我们的处理程序调用 `response.json()` 方法，然后将一个新的 `then()` 处理程序传递到 `response.json()` 返回的 Promise 中。
+
+执行代码后应该会输出“baked beans”（“products.json”中第一个产品的名称）。
+
+等等! 还记得上一篇文章吗？我们好像说过，在回调中调用另一个回调会出现多层嵌套的情况？我们是不是还说过，这种“回调地狱”使我们的代码难以理解？这不是也一样吗，只不过变成了用 `then()` 调用而已？
+
+当然如此。但 Promise 的优雅之处在于 *`then()` 本身也会返回一个 Promise，这个 Promise 将指示 `then()` 中调用的异步函数的完成状态*。这意味着我们可以（当然也应该）把上面的代码改写成这样：
+
+```js
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then( response => {
+    return response.json();
+  })
+  .then( json => {
+    console.log(json[0].name);
+  });
+```
+
+不必在第一个 `then()` 的处理程序中调用第二个 `then()`，我们可以直接*返回* `json()` 返回的 Promise，并在该返回值上调用第二个 "then()"。这被称为 **Promise 链**，意味着当我们需要连续进行异步函数调用时，我们就可以避免不断嵌套带来的缩进增加。
+
+在进入下一步之前，还有一件事要补充：我们需要在尝试读取请求之前检查服务器是否接受并处理了该请求。我们将通过检查响应中的状态码来做到这一点，如果状态码不是“OK”，就抛出一个错误：
+
+```js
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then( response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then( json => {
+    console.log(json[0].name);
+  });
+```
+
+## 错误捕获
+
+这给我们带来了最后一个问题：我们如何处理错误？`fetch()` API 可能因为很多原因抛出错误（例如，没有网络连接或 URL 本身存在问题），我们也会在服务器返回错误消息时抛出一个错误。
+
+在上一篇文章中，我们看到在嵌套回调中进行错误处理非常困难，我们需要在每一个嵌套层中单独捕获错误。
+
+`Promise` 对象提供了一个 {{jsxref("Promise/catch", "catch()")}} 方法来支持错误处理。这很像 `then()`：你调用它并传入一个处理函数。然后，当异步操作*成功*时，传递给 `then()` 的处理函数被调用，而当异步操作*失败*时，传递给 `catch()` 的处理函数被调用。
+
+如果将 `catch()` 添加到 Promise 链的末尾，它就可以在任何异步函数失败时被调用。于是，我们就可以将一个操作实现为几个连续的异步函数调用，并在一个地方处理所有错误。
+
+试试这个版本的 `fetch()` 代码。我们使用 `catch()` 添加了一个错误处理函数，并修改了 URL（这样请求就会失败）。
+
+```js
+const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then( response => {
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
+    }
+    return response.json();
+  })
+  .then( json => {
+    console.log(json[0].name);
+  })
+  .catch( error => {
+    console.error(`无法获取产品列表：${error}`);
+  });
+```
+
+尝试运行这个版本：你应该会看到 `catch()` 处理函数输出的错误。
+
+## Promise 术语
+
+Promise 中有一些具体的术语值得我们弄清楚。
+
+首先，Promise 有三种状态：
+
+- **待定（pending）**：初始状态，既没有被兑现，也没有被拒绝。这是调用 `fetch()` 返回 Promise 时的状态，此时请求还在进行中。
+- **已兑现（fulfilled）**：意味着操作成功完成。当 Promise 完成时，它的 `then()` 处理函数被调用。
+- **已拒绝（rejected）**：意味着操作失败。当一个 Promise 失败时，它的 `catch()` 处理函数被调用。
+
+注意，这里的“成功”或“失败”的含义取决于所使用的 API：例如，`fetch()` 认为服务器返回一个错误（如[404 Not Found](/zh-CN/docs/Web/HTTP/Status/404)）时请求成功，但如果网络错误阻止请求被发送，则认为请求失败。
+
+有时我们用 **已敲定（settled）** 这个词来同时表示 **已兑现（fulfilled）** 和 **已拒绝（rejected）** 两种情况。
+
+如果一个 Promise 处于已决议（resolved）状态，或者它被“锁定”以跟随另一个 Promise 的状态，那么它就是 **已兑现（fulfilled）**。
+
+文章 [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) 对这些术语的细节做了很好的解释。
+
+## 合并使用多个 Promise
+
+当你的操作由几个异步函数组成，而且你需要在开始下一个函数之前完成之前每一个函数时，你需要的就是 Promise 链。但是在其他的一些情况下，你可能需要合并多个异步函数的调用，`Promise` API 为解决这一问题提供了帮助。
+
+有时你需要所有的 Promise 都得到实现，但它们并不相互依赖。在这种情况下，将它们一起启动然后在它们全部被兑现后得到通知会更有效率。这里需要 {{jsxref("Promise/all", "Promise.all()")}} 方法。它接收一个 Promise 数组，并返回一个单一的 Promise。
+
+由`Promise.all()`返回的 Promise：
+
+- 当且仅当数组中*所有*的 Promise 都被兑现时，才会通知 `then()` 处理函数并提供一个包含所有响应的数组，数组中响应的顺序与被传入 `all()` 的 Promise 的顺序相同。
+- 会被拒绝——如果数组中有*任何一个* Promise 被拒绝。此时，`catch()` 处理函数被调用，并提供被拒绝的 Promise 所抛出的错误。
+
+譬如：
+
+```js
+const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
+const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then( responses => {
+    for (const response of responses) {
+      console.log(`${response.url}：${response.status}`);
+    }
+  })
+  .catch( error => {
+    console.error(`获取失败：${error}`)
+  });
+```
+
+这里我们向三个不同的 URL 发出三个 `fetch()` 请求。如果它们都被兑现了，我们将输出每个请求的响应状态。如果其中任何一个被拒绝了，我们将输出失败的情况。
+
+根据我们提供的 URL，应该所有的请求都会被兑现，尽管因为第二个请求中请求的文件不存在，服务器将返回 `404`（Not Found）而不是 `200`（OK）。所以输出应该是：
+
+```
+https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json：200
+https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found：404
+https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json：200
+```
+
+如果我们用一个错误编码的 URL 尝试同样的代码，就像这样：
+
+```js
+const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
+const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then( responses => {
+    for (const response of responses) {
+      console.log(`${response.url}：${response.status}`);
+    }
+  })
+  .catch( error => {
+    console.error(`获取失败：${error}`)
+  });
+```
+
+……然后 `catch()` 处理程序将被运行，我们应该看到像这样的输出：
+
+```
+获取失败：TypeError: Failed to fetch
+```
+
+有时，你可能需要等待一组 Promise 中的某一个 Promise 的执行，而不关心是哪一个。在这种情况下，你需要 {{jsxref("Promise/any", "Promise.any()")}}。这就像 `Promise.all()`，不过在 Promise 数组中的任何一个被兑现时它就会被兑现，如果所有的 Promise 都被拒绝，它也会被拒绝。
+
+```js
+const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
+const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then( response => {
+    console.log(`${response.url}：${response.status}`);
+  })
+  .catch( error => {
+    console.error(`获取失败：${error}`)
+  });
+```
+
+值得注意的是，在这种情况下，我们无法预测哪个获取请求会先被兑现。
+
+这两个用于组合多个承诺的函数只是额外的 `Promise` 函数中的两个。要了解其余的内容，参见 {{jsxref("Promise")}} 参考文档。
+
+## async 和 await
+
+{{jsxref("Statements/async_function", "async")}} 关键字为你提供了一种更简单的方法来处理基于异步 Promise 的代码。在一个函数的开头添加  `async`，就可以使其成为一个异步函数。
+
+```js
+async function myFunction() {
+  // 这是一个异步函数
 }
-</pre>
+```
 
-<p>这个函数在开头调用 <code>setStatusMessage()</code> 来更新状态显示信息"Calling..."， 表示正在尝试通话。接下来调用 <code>getUserMedia()</code>，请求具有视频及音频轨的流，一旦获得这个流，就将其显示在"selfViewElem"的 video 元素中。接下来将这个流的每个轨道添加到表示与另一个用户的连接的 <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>，参见{{domxref("RTCPeerConnection")}}。在这之后，状态显示为"Connected"。</p>
+在异步函数中，你可以在调用一个返回 Promise 的函数之前使用 `await` 关键字。这使得代码在该点上等待，直到 Promise 被完成，这时 Promise 的响应被当作返回值，或者被拒绝的响应被作为错误抛出。
 
-<p>如果<code>getUserMedia()</code>失败，则 catch 块运行。这使用<code>setStatusMessage()</code>更新状态框以指示发生错误。</p>
+这使你能够编写像同步代码一样的异步函数。例如，我们可以用它来重写我们的 fetch 示例。
 
-<p>这里重要的是<code>getUserMedia()</code>调用几乎立即返回，即使尚未获得相机流。即使<code>handleCallButton()</code>函数向调用它的代码返回结果，当<code>getUserMedia()</code>完成工作时，它也会调用你提供的处理程序。只要应用程序不假设流式传输已经开始，它就可以继续运行。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意：</strong>  如果你有兴趣，可以在文章<a href="/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>中了解有关此高级主题的更多信息。在该示例中使用与此类似的代码，但更完整。</p>
-</div>
-
-<h2 id="回调函数的麻烦"> 回调函数的麻烦</h2>
-
-<p>要完全理解为什么 promise 是一件好事，应该回想之前的回调函数，理解它们造成的困难。</p>
-
-<p>我们来谈谈订购披萨作为类比。为了使你的订单成功，你必须按顺序执行，不按顺序执行或上一步没完成就执行下一步是不会成功的：</p>
-
-<ol>
- <li>选择配料。如果你是优柔寡断，这可能需要一段时间，如果你无法下定决心或者决定换咖喱，可能会失败。</li>
- <li>下订单。返回比萨饼可能需要一段时间，如果餐厅没有烹饪所需的配料，可能会失败。</li>
- <li>然后你收集你的披萨吃。如果你忘记了自己的钱包，那么这可能会失败，所以无法支付比萨饼的费用！</li>
-</ol>
-
-<p>对于旧式<a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Callbacks">callbacks</a>，上述功能的伪代码表示可能如下所示：</p>
-
-<pre class="brush: js notranslate">chooseToppings(function(toppings) {
-  placeOrder(toppings, function(order) {
-    collectOrder(order, function(pizza) {
-      eatPizza(pizza);
-    }, failureCallback);
-  }, failureCallback);
-}, failureCallback);</pre>
-
-<p>这很麻烦且难以阅读（通常称为“回调地狱”），需要多次调用<code>failureCallback()</code>（每个嵌套函数一次），还有其他问题。</p>
-
-<h3 id="使用promise改良">使用 promise 改良</h3>
-
-<p>Promises 使得上面的情况更容易编写，解析和运行。如果我们使用异步 promises 代表上面的伪代码，我们最终会得到这样的结果：</p>
-
-<pre class="brush: js notranslate">chooseToppings()
-.then(function(toppings) {
-  return placeOrder(toppings);
-})
-.then(function(order) {
-  return collectOrder(order);
-})
-.then(function(pizza) {
-  eatPizza(pizza);
-})
-.catch(failureCallback);</pre>
-
-<p>这要好得多 - 更容易看到发生了什么，我们只需要一个<code>.catch()</code>块来处理所有错误，它不会阻塞主线程（所以我们可以在等待时继续玩视频游戏为了准备好收集披萨），并保证每个操作在运行之前等待先前的操作完成。我们能够以这种方式一个接一个地链接多个异步操作，因为每个<code>.then()</code>块返回一个新的 promise，当<code>.then()</code>块运行完毕时它会解析。聪明，对吗？</p>
-
-<p>使用箭头函数，你可以进一步简化代码：</p>
-
-<pre class="brush: js notranslate">chooseToppings()
-.then(toppings =&gt;
-  placeOrder(toppings)
-)
-.then(order =&gt;
-  collectOrder(order)
-)
-.then(pizza =&gt;
-  eatPizza(pizza)
-)
-.catch(failureCallback);</pre>
-
-<p>甚至这样：</p>
-
-<pre class="brush: js notranslate">chooseToppings()
-.then(toppings =&gt; placeOrder(toppings))
-.then(order =&gt; collectOrder(order))
-.then(pizza =&gt; eatPizza(pizza))
-.catch(failureCallback);</pre>
-
-<p>这是有效的，因为使用箭头函数 <code>() =&gt; x</code> 是 <code>()=&gt; {return x;}</code>  的有效简写; 。</p>
-
-<p>你甚至可以这样做，因为函数只是直接传递它们的参数，所以不需要额外的函数层：</p>
-
-<pre class="brush: js notranslate">chooseToppings().then(placeOrder).then(collectOrder).then(eatPizza).catch(failureCallback);</pre>
-
-<p>但是，这并不容易阅读，如果你的块比我们在此处显示的更复杂，则此语法可能无法使用。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 你可以使用 <code>async/await</code> 语法进行进一步的改进，我们将在下一篇文章中深入讨论。</p>
-</div>
-
-<p>最基本的，promise 与事件监听器类似，但有一些差异：</p>
-
-<ul>
- <li>一个 promise 只能成功或失败一次。它不能成功或失败两次，并且一旦操作完成，它就无法从成功切换到失败，反之亦然。</li>
- <li>如果promise成功或失败并且你稍后添加成功/失败回调，则将调用正确的回调，即使事件发生在较早的时间。</li>
-</ul>
-
-<h2 id="解释promise的基本语法：一个真实的例子"> 解释 promise 的基本语法：一个真实的例子</h2>
-
-<p>Promises 很重要，因为大多数现代 Web API 都将它们用于执行潜在冗长任务的函数。要使用现代 Web 技术，你需要使用 promises。在本章的后面我们将看看如何编写自己的 promises，但是现在我们将看一些你将在 Web API 中遇到的简单示例。</p>
-
-<p>在第一个示例中，我们将使用<code>fetch()</code>方法从 Web 获取图像，<code>blob()</code> 方法来转换获取响应的原始内容到 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a> 对象，然后在 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt; </a>元素内显示该<code>blob</code>。这与我们在 <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Asynchronous_JavaScript">first article of the series</a>中看到的示例非常相似，但是会在构建你自己的基于 promise 的代码时有所不同。 </p>
-
-<div class="blockIndicator note">
-<p><strong>注意：</strong>下列代码无法直接运行 (i.e. via a <code>file://</code> URL)。你需要<a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">本地测试服务器</a>，或是 <a href="https://glitch.com/">Glitch</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> 这样的在线解决方案。</p>
-</div>
-
-<ol>
- <li>
-  <p>首先，下载我们的 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>和<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg">sample image file</a>。</p>
- </li>
- <li>
-  <p>将 {{htmlelement("script")}} 元素添加在 HTML {{htmlelement("body")}} 的底部。</p>
- </li>
- <li>
-  <p>在 {{HTMLElement("script")}} 元素内，添加以下行：</p>
-
-  <pre class="brush: js notranslate">let promise = fetch('coffee.jpg');</pre>
-
-  <p>这会调用 <code>fetch()</code> 方法，将图像的 URL 作为参数从网络中提取。这也可以将 options 对象作为可选的第二个参数，但我们现在只使用最简单的版本。我们将 <code>fetch()</code> 返回的 promise 对象存储在一个名为 promise 的变量中。正如我们之前所说的，这个对象代表了一个最初既不成功也不失败的中间状态 - 这个状态下的 promise 的官方术语叫作<strong>pending</strong>。</p>
- </li>
- <li>为了响应成功完成操作（在这种情况下，当返回{{domxref("Response")}}时），我们调用 promise 对象的。<code>then()</code>方法。 <code>.then()</code>块中的回调（称为执行程序）仅在 promise 调用成功完成时运行并返回{{domxref("Response")}}对象 - 在 promise-speak 中，当它已被满足时。它将返回的{{domxref("Response")}}对象作为参数传递。</li>
-</ol>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>: <code>.then()</code>块的工作方式类似于使用<code>AddEventListener()</code>向对象添加事件侦听器时的方式。它不会在事件发生之前运行（当 promise 履行时）。最显着的区别是<code>.then()</code>每次使用时只运行一次，而事件监听器可以多次调用。</p>
-</div>
-
-<p>我们立即对此响应运行<code>blob()</code>方法以确保响应主体完全下载，并且当它可用时将其转换为我们可以执行某些操作的<code>Blob</code>对象。返回的结果如下：</p>
-
-<pre class="brush: js notranslate">response =&gt; response.blob()</pre>
-
-<p>这是下面的简写</p>
-
-<pre class="brush: js notranslate">function(response) {
-    return response.blob();
+```js
+async function fetchProducts() {
+  try {
+    // 在这一行之后，我们的函数将等待 `fetch()` 调用完成
+    // 调用 `fetch()` 将返回一个“响应”或抛出一个错误
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
+    }
+    // 在这一行之后，我们的函数将等待 `response.json()` 的调用完成
+    // `response.json()` 调用将返回 JSON 对象或抛出一个错误
+    const json = await response.json();
+    console.log(json[0].name);
+  }
+  catch(error) {
+    console.error(`无法获取产品列表：${error}`);
+  }
 }
-</pre>
 
-<p>好的，我们还需要做点额外的工作。Fetch promises 不会产生 404 或 500 错误，只有在产生像网路故障的情况时才会不工作。总的来说，Fetch promises 总是成功运行，即使<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/ok">response.ok</a> 属性是<code> false</code>。为了产生 404 错误，我们需要判断 <code>response.ok</code> ，如果是 <code>false</code>，抛出错误，否则返回 blob。就像下面的代码这样做。</p>
+fetchProducts();
+```
 
-<pre class="brush: js notranslate"><code>let promise2 = promise.then(response =&gt; {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
+这里我们调用 `await fetch()`，我们的调用者得到的并不是 `Promise`，而是一个完整的 `Response` 对象，就好像 `fetch()` 是一个同步函数一样。
+
+我们甚至可以使用 `try...catch` 块来处理错误，就像我们在写同步代码时一样。
+
+但请注意，这个写法只在异步函数中起作用。异步函数总是返回一个 Pomise，所以你不能做这样的事情：
+
+```js example-bad
+async function fetchProducts() {
+  try {
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
+    }
+    const json = await response.json();
+    return json;
   }
-});</code></pre>
-
-<p>5. 每次调用<code>.then()</code>都会创建一个新的 promise。这非常有用;因为<code>blob()</code>方法也返回一个 promise，我们可以通过调用第二个 promise 的<code>.then()</code>方法来处理它在履行时返回的<code>Blob</code>对象。因为我们想要对<code>blob</code>执行一些更复杂的操作，而不仅仅运行单个方法并返回结果，这次我们需要将函数体包装成花括号（否则会抛出错误）。</p>
-
-<p>将以下内容添加到代码的末尾：</p>
-
-<pre class="brush: js notranslate">let promise3 = promise2.then(myBlob =&gt; {})</pre>
-
-<p>6. 现在让我们填写执行程序函数的主体。在花括号内添加以下行：</p>
-
-<pre class="brush: js notranslate"><code>let objectURL = URL.createObjectURL(myBlob);
-let image = document.createElement('img');
-image.src = objectURL;
-document.body.appendChild(image);</code></pre>
-
-<p>这里我们运行{{domxref("URL.createObjectURL()")}}方法，将其作为<code>Blob</code>在第二个 promise 实现时返回的参数传递。这将返回指向该对象的 URL。然后我们创建一个{{htmlelement("img")}}元素，将其<code>src</code>属性设置为等于对象 URL 并将其附加到 DOM，这样图像就会显示在页面上！</p>
-
-<p>如果你保存刚刚创建的 HTML 文件并将其加载到浏览器中，你将看到图像按预期显示在页面中。干得好！</p>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 你可能会注意到这些例子有点做作。你可以取消整个<code>fetch()</code>和<code>blob()</code>链，只需创建一个&lt;img&gt;元素并将其<code>src</code>属性值设置为图像文件的 URL，即<code>coffee.jpg</code>。然而，我们选择了这个例子，因为它以简单的方式展示了 promise，而不是真实世界的适当性。</p>
-</div>
-
-<h3 id="响应失败">响应失败</h3>
-
-<p>缺少一些东西 - 如果其中一个 promise 失败（<strong>rejects</strong>，in promise-speak），目前没有什么可以明确地处理错误。我们可以通过运行前一个 promise 的 <code>.catch()</code> 方法来添加错误处理。立即添加：</p>
-
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">let errorCase = promise3.catch(e =&gt; {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});</code></pre>
-
-<p>要查看此操作，请尝试拼错图像的 URL 并重新加载页面。该错误将在浏览器的开发人员工具的控制台中报告。</p>
-
-<p>如果你根本不操心包括的 <code>.catch()</code> 块，这并没有做太多的事情，但考虑一下（指.catch() 块） ––这会使我们可以完全控制错误处理方式。在真实的应用程序中，你的<code>.catch()</code>块可以重试获取图像，或显示默认图像，或提示用户提供不同的图像 URL 等等。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 你可以参考 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html">our version of the example live</a> (参阅 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html">source code</a> ).</p>
-</div>
-
-<h3 id="将代码块链在一起">将代码块链在一起</h3>
-
-<p>这是写出来的一种非常简便的方式;我们故意这样做是为了帮助你清楚地了解发生了什么。如本文前面所示，你可以将<code>.then()</code>块（以及<code>.catch()</code>块）链接在一起。上面的代码也可以这样写 (参阅 GitHub 上的<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html">simple-fetch-chained.html</a> ):</p>
-
-<pre class="brush: js notranslate"><code>fetch('coffee.jpg')
-.then(response =&gt; {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
+  catch(error) {
+    console.error(`无法获取产品列表：${error}`);
   }
-})
-.then(myBlob =&gt; {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e =&gt; {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});</code></pre>
+}
 
-<p>请记住，履行的 promise 所返回的值将成为传递给下一个 <code>.then()</code> 块的 executor 函数的参数。</p>
+const json = fetchProducts();
+console.log(json[0].name);   // json 是一个 Promise 对象，因此这句代码无法正常工作
+```
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: promise 中的<code>.then()/catch()</code>块基本上是同步代码中<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>块的异步等价物。请记住，同步<code>try ... catch</code>在异步代码中不起作用。</p>
-</div>
+相反，你需要做一些事情，比如：
 
-<h2 id="Promise术语回顾">Promise 术语回顾</h2>
-
-<p>在上面的部分中有很多要介绍的内容，所以让我们快速回过头来给你<a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises#Promise_terminology_recap">一个简短的指南</a>，你可以将它添加到书签中，以便将来更新你的记忆。你还应该再次阅读上述部分，以确保这些概念坚持下去。</p>
-
-<ol>
- <li>创建 promise 时，它既不是成功也不是失败状态。这个状态叫作<strong>pending</strong>（待定）。</li>
- <li>当 promise 返回时，称为 <strong>resolved</strong>（已解决）.
-  <ol>
-   <li>一个成功<strong>resolved</strong>的 promise 称为<strong>fullfilled</strong>（<strong>实现</strong>）。它返回一个值，可以通过将<code>.then()</code>块链接到 promise 链的末尾来访问该值。<code> .then()</code>块中的执行程序函数将包含 promise 的返回值。</li>
-   <li>一个不成功<strong>resolved</strong>的 promise 被称为<strong>rejected</strong>（<strong>拒绝</strong>）了。它返回一个原因（<strong>reason</strong>），一条错误消息，说明为什么拒绝 promise。可以通过将<code>.catch()</code>块链接到 promise 链的末尾来访问此原因。</li>
-  </ol>
- </li>
-</ol>
-
-<h2 id="运行代码以响应多个Promises的实现"> 运行代码以响应多个 Promises 的实现</h2>
-
-<p>上面的例子向我们展示了使用 promises 的一些真正的基础知识。现在让我们看一些更高级的功能。首先，链接进程一个接一个地发生都很好，但是如果你想在一大堆 Promises 全部完成之后运行一些代码呢？</p>
-
-<p> 你可以使用巧妙命名的<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a>静态方法完成此操作。这将一个 promises 数组作为输入参数，并返回一个新的 Promise 对象，只有当数组中的所有 promise 都满足时才会满足。它看起来像这样：</p>
-
-<pre class="brush: js notranslate">Promise.all([a, b, c]).then(values =&gt; {
-  ...
-});</pre>
-
-<p>如果它们都<strong>实现</strong>，那么数组中的结果将作为参数传递给<code>.then()</code>块中的执行器函数。如果传递给<code>Promise.all()</code>的任何一个 promise <strong>拒绝</strong>，整个块将<strong>拒绝</strong>。</p>
-
-<p>这非常有用。想象一下，我们正在获取信息以在内容上动态填充页面上的 UI 功能。在许多情况下，接收所有数据然后才显示完整内容，而不是显示部分信息。</p>
-
-<p>让我们构建另一个示例来展示这一点。</p>
-
-<ol>
- <li>
-  <p>下载我们页面模板（<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">page template</a>）的新副本，并再次在结束&lt;/ body&gt;标记之前放置一个&lt;script&gt;元素。</p>
- </li>
- <li>
-  <p>下载我们的源文件 (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg">coffee.jpg</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/tea.jpg">tea.jpg</a>和 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/description.txt">description.txt</a>),或者随意替换成你自己的文件。</p>
- </li>
- <li>
-  <p>在我们的脚本中，我们将首先定义一个函数，该函数返回我们要发送给<code>Promise.all()</code>的 promise。如果我们只想运行<code>Promise.all()</code>块以响应三个<code>fetch()</code>操作完成，这将很容易。我们可以这样做：</p>
-
-  <pre class="brush: js notranslate">let a = fetch(url1);
-let b = fetch(url2);
-let c = fetch(url3);
-
-Promise.all([a, b, c]).then(values =&gt; {
-  ...
-});</pre>
-
-  <p>当 promise 是<strong>fullfilled</strong>时，传递到履行处理程序的<code>values</code>将包含三个 Response 对象，每个对象用于已完成的每个<code>fetch()</code>操作。</p>
-
-  <p>但是，我们不想这样做。我们的代码不关心<code>fetch()</code>操作何时完成。相反，我们想要的是加载的数据。这意味着当我们返回代表图像的可用<code>blob</code>和可用的文本字符串时，我们想要运行<code>Promise.all()</code>块。我们可以编写一个执行此操作的函数;在<code>&lt;script&gt;</code>元素中添加以下内容：</p>
-
-  <pre class="brush: js notranslate">function fetchAndDecode(url, type) {
-  return fetch(url).then(response =&gt; {
-    if (type === 'blob') {
-      return response.blob();
-    } else if (type === 'text') {
-      return response.text();
+```js
+async function fetchProducts() {
+  try {
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP 请求错误：${response.status}`);
     }
-  })
-  .catch(e =&gt; {
-    console.log('There has been a problem with your fetch operation: ' + e.message);
-  });
-}</pre>
+    const json = await response.json();
+    return json;
+  }
+  catch(error) {
+    console.error(`无法获取产品列表：${error}`);
+  }
+}
 
-  <p>这看起来有点复杂，所以让我们一步一步地完成它：</p>
+const jsonPromise = fetchProducts();
+jsonPromise.then((json) => console.log(json[0].name));
+```
 
-  <ol>
-   <li>首先，我们定义函数，向它传递一个 URL 和字符串，这个字符串表示资源类型。</li>
-   <li>在函数体内部，我们有一个类似于我们在第一个例子中看到的结构 - 我们调用<code>fetch()</code>函数来获取指定 URL 处的资源，然后将其链接到另一个 promise，它解码（或“read”）响应 body。这是前一个示例中的<code>blob()</code>方法。</li>
-   <li>但是，这里有两处不同：
-    <ul>
-     <li>首先，我们返回的第二个 promise 会因类型值的不同而不同。在执行函数内部，我们包含一个简单的<code>if ... else if</code>语句，根据我们需要解码的文件类型返回不同的 promise（在这种情况下，我们可以选择<code>blob</code>或<code>text</code>，而且很容易扩展这个以处理其他类型）。</li>
-     <li>其次，我们在<code>fetch()</code>调用之前添加了<code>return</code>关键字。它的作用是运行整个链，然后运行最终结果（即<code>blob()</code>或<code>text()</code>返回的 promise 作为我们刚刚定义的函数的返回值）。实际上，<code>return</code>语句将结果从链返回到顶部。</li>
-    </ul>
-   </li>
-   <li>
-    <p>在块结束时，我们链接一个<code>.catch()</code>调用，以处理任何可能出现在数组中传递给<code>.all()</code>的任何 promise 的错误情况。如果任何 promise 被拒绝，<code>catch</code>块将告诉你哪个 promise 有问题。 <code>.all()</code>块（见下文）仍然可以实现，但不会显示有问题的资源。如果你想要<code>.all</code>拒绝，你必须将<code>.catch()</code>块链接到那里的末尾。</p>
-   </li>
-  </ol>
+你可能会在需要使用 Promise 链地方使用 `async` 函数，这也使得 Promise 的工作更加直观。
 
-  <p>函数体内部的代码是 async（异步）和基于 promise 的，因此实际上整个函数就像一个 promise ––方便啊！</p>
- </li>
- <li>
-  <p>接下来，我们调用我们的函数三次以开始获取和解码图像和文本的过程，并将每个返回的 promises 存储在变量中。在以前的代码下面添加以下内容：</p>
+请记住，就像一个 Promise 链一样，`await` 强制异步操作以串联的方式完成。如果下一个操作的结果取决于上一个操作的结果，这是必要的，但如果不是这样，像 `Promise.all()` 这样的操作会有更好的性能。
 
-  <pre class="brush: js notranslate">let coffee = fetchAndDecode('coffee.jpg', 'blob');
-let tea = fetchAndDecode('tea.jpg', 'blob');
-let description = fetchAndDecode('description.txt', 'text');</pre>
- </li>
- <li>
-  <p>接下来，我们将定义一个<code>Promise.all()</code>块，仅当上面存储的所有三个 promise 都已成功完成时才运行一些代码。首先，在<code>.then()</code>调用中添加一个带有空执行程序的块，如下所示：</p>
+## 小结
 
-  <pre class="brush: js notranslate">Promise.all([coffee, tea, description]).then(values =&gt; {
+Promise 是现代 JavaScript 异步编程的基础。它避免了深度嵌套回调，使表达和理解异步操作序列变得更加容易，并且它们还支持一种类似于同步编程中 `try...catch` 语句的错误处理方式。
 
-});</pre>
+`async` 和 `await` 关键字使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写异步代码那样编写同步代码。
 
-  <p>你可以看到它需要一个包含 promises 作为参数的数组。执行者只有在所有三个 promises 的状态成为<strong>resolved</strong>时才会运行;当发生这种情况时，它将被传入一个数组，其中包含来自各个 promise（即解码的响应主体）的结果，类似于 [coffee-results, tea-results, description-results].</p>
- </li>
- <li>
-  <p>最后，在执行程序中添加以下内容。这里我们使用一些相当简单的同步代码将结果存储在单独的变量中（从 blob 创建对象 URL），然后在页面上显示图像和文本。</p>
+Promise 在所有现代浏览器的最新版本中都可以使用；唯一会出现支持问题的地方是 Opera Mini 和 IE11 及更早的版本。
 
-  <pre class="brush: js notranslate">console.log(values);
-// Store each value returned from the promises in separate variables; create object URLs from the blobs
-let objectURL1 = URL.createObjectURL(values[0]);
-let objectURL2 = URL.createObjectURL(values[1]);
-let descText = values[2];
+在这篇文章中，我们没有涉及到所有的 Promise 功能，只是介绍了最有趣和最有用的那一部分。随着你开始学习更多关于 Promise 的知识，你会遇到更多有趣的特性。
 
-// Display the images in &lt;img&gt; elements
-let image1 = document.createElement('img');
-let image2 = document.createElement('img');
-image1.src = objectURL1;
-image2.src = objectURL2;
-document.body.appendChild(image1);
-document.body.appendChild(image2);
+许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/en-US/docs/Web/API/Web_Audio_API)、[Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 等等。
 
-// Display the text in a paragraph
-let para = document.createElement('p');
-para.textContent = descText;
-document.body.appendChild(para);</pre>
- </li>
- <li>
-  <p>保存并刷新，你应该看到所有 UI 组件都已加载，尽管不是特别有吸引力！</p>
- </li>
-</ol>
+## 参见
 
-<p>我们在这里提供的用于显示项目的代码相当简陋，但现在作为解释器。</p>
+- [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+- [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
+- [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 如果你遇到困难，可以将你的代码版本与我们的代码进行比较，看看它的外观 -––<a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html">see it live</a>，也可以参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">source code</a>。</p>
-</div>
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 如果你正在改进这段代码，你可能想要遍历一个项目列表来显示，获取和解码每个项目，然后循环遍历<code>Promise.all()</code>内部的结果，运行一个不同的函数来显示每个项目取决于什么代码的类型是。这将使它适用于任何数量的项目，而不仅仅是三个。</p>
+## 本章目录
 
-<p>此外，你可以确定要获取的文件类型，而无需显式类型属性。例如，你可以使用<code><a href="/en-US/docs/Web/API/Headers/get">response.headers.get("content-type")</a></code>检查响应的{{HTTPHeader("Content-Type")}} HTTP 标头，然后做出相应的反应。</p>
-</div>
-
-<h2 id="在promise_fullfillreject后运行一些最终代码"> 在 promise fullfill/reject后运行一些最终代码</h2>
-
-<p>在 promise 完成后，你可能希望运行最后一段代码，无论它是否已实现（fullfilled）或被拒绝（rejected）。此前，你必须在<code>.then()</code>和<code>.catch()</code>回调中包含相同的代码，例如：</p>
-
-<pre class="brush: js notranslate">myPromise
-.then(response =&gt; {
-  doSomething(response);
-  runFinalCode();
-})
-.catch(e =&gt; {
-  returnError(e);
-  runFinalCode();
-});</pre>
-
-<p>在现代浏览器中，<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code> 方法可用，它可以链接到常规 promise 链的末尾，允许你减少代码重复并更优雅地执行操作。上面的代码现在可以写成如下：</p>
-
-<pre class="brush: js notranslate">myPromise
-.then(response =&gt; {
-  doSomething(response);
-})
-.catch(e =&gt; {
-  returnError(e);
-})
-.finally(() =&gt; {
-  runFinalCode();
-});</pre>
-
-<p>有关一个真实示例，请查看我们的<a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-finally.html">promise-finally.html demo</a>（另请参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-finally.html">source code</a>）。这与我们在上面部分中看到的<code>Promise.all()</code>演示完全相同，除了在<code>fetchAndDecode()</code>函数中我们将<code>finally()</code>调用链接到链的末尾：</p>
-
-<pre class="brush: js notranslate"><code>function fetchAndDecode(url, type) {
-  return fetch(url).then(response =&gt; {
-    if(!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      if(type === 'blob') {
-        return response.blob();
-      } else if(type === 'text') {
-        return response.text();
-      }
-    }
-  })
-  .catch(e =&gt; {
-    console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
-  })
-  .finally(() =&gt; {
-    console.log(`fetch attempt for "${url}" finished.`);
-  });
-}</code></pre>
-
-<p>这会将一条简单的消息记录到控制台，告诉我们每次获取尝试的时间。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>:finally() 允许你在异步代码中编写异步等价物 try/ catch / finally。</p>
-</div>
-
-<h2 id="构建自定义promise"> 构建自定义 promise</h2>
-
-<p>好消息是，在某种程度上，你已经建立了自己的 promise。当你使用<code>.then()</code>块链接多个 promise 时，或者将它们组合起来创建自定义函数时，你已经在创建自己的基于异步声明的自定义函数。例如，从前面的示例中获取我们的<code>fetchAndDecode()</code>函数。</p>
-
-<p>将不同的基于 promise 的 API 组合在一起以创建自定义函数是迄今为止你使用 promises 进行自定义事务的最常见方式，并展示了基于相同原则的大多数现代 API 的灵活性和强大功能。然而，还有另一种方式。</p>
-
-<h3 id="使用Promise构造函数">使用 Promise() 构造函数</h3>
-
-<p>可以使用<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code> 构造函数构建自己的 promise。当你需要使用现有的旧项目代码、库或框架以及基于现代 promise 的代码时，这会派上用场。比如，当你遇到没有使用 promise 的旧式异步 API 的代码时，你可以用 promise 来重构这段异步代码。</p>
-
-<p>让我们看一个简单的示例来帮助你入门 —— 这里我们用 promise 包装一了个<code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a>，</code>它会在两秒后运行一个函数，该函数将用字符串“Success!”，解析当前 promise（调用链接的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code>）。</p>
-
-<pre class="brush: js notranslate">let timeoutPromise = new Promise((resolve, reject) =&gt; {
-  setTimeout(function(){
-    resolve('Success!');
-  }, 2000);
-});</pre>
-
-<p><code>resolve()</code>和<code>reject()</code>是用来<strong>实现</strong>和<strong>拒绝</strong>新创建的 promise 的函数。此处，promise 成功运行通过显示字符串“Success!”。</p>
-
-<p>因此，当你调用此 promise 时，可以将<code>.then()</code>块链接到它的末尾，它将传递给<code>.then()</code>块一串“Success!”。在下面的代码中，我们显示出该消息：</p>
-
-<pre class="brush: js notranslate">timeoutPromise
-.then((message) =&gt; {
-   alert(message);
-})</pre>
-
-<p>更简化的版本：</p>
-
-<pre class="brush: js notranslate">timeoutPromise.then(alert);
-</pre>
-
-<p>尝试 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise.html">running this live</a> 以查看结果 (可参考 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html">source code</a>).</p>
-
-<p>上面的例子不是很灵活 - promise 只能<strong>实现</strong>一个字符串，并且它没有指定任何类型的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">reject()</a></code>条件（诚然，<code>setTimeout()</code>实际上没有失败条件，所以对这个简单的例子并不重要）。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 为什么要<code>resolve()</code>，而不是<code>fullfill()</code>？我们现在给你的答案有些复杂。</p>
-</div>
-
-<h3 id="拒绝一个自定义promise">拒绝一个自定义 promise</h3>
-
-<p>我们可以创建一个<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">reject()</a></code> 方法拒绝 promise  - 就像<code>resolve()</code>一样，这需要一个值，但在这种情况下，它是拒绝的原因，即将传递给<code>.catch()</code>的错误块。</p>
-
-<p>让我们扩展前面的例子，使其具有一些<code>reject()</code>条件，并允许在成功时传递不同的消息。</p>
-
-<p>获取<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html">previous example</a>副本，并将现有的<code>timeoutPromise()</code>定义替换为：</p>
-
-<pre class="brush: js notranslate">function timeoutPromise(message, interval) {
-  return new Promise((resolve, reject) =&gt; {
-    if (message === '' || typeof message !== 'string') {
-      reject('Message is empty or not a string');
-    } else if (interval &lt; 0 || typeof interval !== 'number') {
-      reject('Interval is negative or not a number');
-    } else {
-      setTimeout(function(){
-        resolve(message);
-      }, interval);
-    }
-  });
-};</pre>
-
-<p>在这里，我们将两个方法传递给一个自定义函数 - 一个用来做某事的消息，以及在做这件事之前要经过的时间间隔。在函数内部，我们返回一个新的<code>Promise</code>对象 - 调用该函数将返回我们想要使用的 promise。</p>
-
-<p>在<code>Promise</code>构造函数中，我们在 if ... else 结构中进行了一些检查：</p>
-
-<ol>
- <li>首先，我们检查消息是否适合被警告。如果它是一个空字符串或根本不是字符串，我们会使用合适的错误消息拒绝该 promise。</li>
- <li>接下来，我们检查间隔是否是适当的间隔值。如果是负数或不是数字，我们会使用合适的错误消息拒绝 promise。</li>
- <li>最后，如果参数看起来都正常，我们使用<code>setTimeout()</code>在指定的时间间隔过后，使用指定的消息解析 promise。</li>
-</ol>
-
-<p>由于<code>timeoutPromise()</code>函数返回一个<code>Promise</code>，我们可以将<code>.then()</code>，<code>.catch()</code>等链接到它上面以利用它的功能。现在让我们使用它 - 将以前的 timeoutPromise 用法替换为以下值：</p>
-
-<pre class="brush: js notranslate">timeoutPromise('Hello there!', 1000)
-.then(message =&gt; {
-   alert(message);
-})
-.catch(e =&gt; {
-  console.log('Error: ' + e);
-});</pre>
-
-<p>当你按原样保存并运行代码时，一秒钟后你将收到消息提醒。现在尝试将消息设置为空字符串或将间隔设置为负数，例如，你将能够通过相应的错误消息查看被拒绝的 promise！你还可以尝试使用已解决的消息执行其他操作，而不仅仅是提醒它。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 你可以在 GitHub 上找到我们的这个示例版本<a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html">custom-promise2.html</a>（另请参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html">source code</a>）。</p>
-</div>
-
-<h3 id="一个更真实的例子">一个更真实的例子</h3>
-
-<p>上面的例子是故意做得简单，以使概念易于理解，但它并不是实际上完全异步。异步性质基本上是使用<code>setTimeout()</code>伪造的，尽管它仍然表明 promises 对于创建具有合理的操作流程，良好的错误处理等的自定义函数很有用</p>
-
-<p>我们想邀请你学习的一个例子是<a href="https://github.com/jakearchibald/idb/">Jake Archibald's idb library</a>，它真正地显示了<code>Promise()</code>构造函数的有用异步应用程序。这采用了 <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>，它是一种旧式的基于回调的 API，用于在客户端存储和检索数据，并允许你将其与 promises 一起使用。如果你查看<a href="https://github.com/jakearchibald/idb/blob/master/lib/idb.js">main library file</a>，你将看到我们在上面讨论过的相同类型的技术。以下块将许多 IndexedDB 方法使用的基本请求模型转换为使用 promise：</p>
-
-<pre class="brush: js notranslate">function promisifyRequest(request) {
-  return new Promise(function(resolve, reject) {
-    request.onsuccess = function() {
-      resolve(request.result);
-    };
-
-    request.onerror = function() {
-      reject(request.error);
-    };
-  });
-}</pre>
-
-<p>这可以通过添加一些事件处理程序来实现，这些事件处理程序在适当的时候实现（fullfill）和拒绝（reject）promise。</p>
-
-<ul>
- <li>当<code><a href="/en-US/docs/Web/API/IDBRequest">request</a></code>的<a href="/en-US/docs/Web/API/IDBRequest/success_event"><code>success</code> event</a>触发时，<code><a href="/en-US/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code>处理程序将使用请求的<code><a href="/en-US/docs/Web/API/IDBRequest/result">result</a></code>实现（fullfill）promise。</li>
- <li>当<code><a href="/en-US/docs/Web/API/IDBRequest">request</a></code>的<a href="/en-US/docs/Web/API/IDBRequest/error_event"><code>error</code> event</a>触发时，<code><a href="/en-US/docs/Web/API/IDBRequest/onerror">onerror</a></code>处理程序拒绝带有请求<code><a href="/en-US/docs/Web/API/IDBRequest/error">error</a></code>的 promise</li>
-</ul>
-
-<h2 id="总结">总结</h2>
-
-<p>当我们不知道函数的返回值或返回需要多长时间时，Promises 是构建异步应用程序的好方法。它们使得在没有深度嵌套回调的情况下更容易表达和推理异步操作序列，并且它们支持类似于同步<code>try ... catch</code>语句的错误处理方式。</p>
-
-<p>Promise 适用于所有现代浏览器的最新版本;promise 有兼容问题的唯一情况是 Opera Mini 和 IE11 及更早版本。</p>
-
-<p>本文中，我们没有涉及的所有 promise 的功能，只是最有趣和最有用的功能。当你开始了解有关 promise 的更多信息时，你会遇到更多功能和技巧。</p>
-
-<p>大多数现代 Web API 都是基于 promise 的，因此你需要了解 promise 才能充分利用它们。这些 API 包括<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>，<a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，<a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams</a>等等。随着时间的推移，Promises 将变得越来越重要，因此学习使用和理解它们是学习现代 JavaScript 的重要一步。</p>
-
-<p><strong>参见</strong></p>
-
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
- <li><a href="https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html">We have a problem with promises</a> by Nolan Lawson</li>
-</ul>
-
-<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</p>
-
-<h2 id="本章内容"> 本章内容</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts">异步编程的基本概念</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing">JavaScript 异步编程简介</a></li>
- <li><a href="/zh-CNdocs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">合作的异步 JavaScript：超时和间隔</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">使用 Promises 实现优雅的异步编程</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">使用 async 和 await 让异步编程更简单</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">选择正确的方法</a></li>
-</ul>
+- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
+- **如何使用 Promise**
+- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [测验：序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
