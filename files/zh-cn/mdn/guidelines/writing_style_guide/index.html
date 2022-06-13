@@ -26,8 +26,6 @@ original_slug: MDN/Guidelines/Style_guide
 <p>译注：本文的写作规范虽说是针对英文所写，但是其中的不少内容也适用于中文，可花点时间阅读一下。另外，简体中文翻译时的规范请参见《<a href="https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md">针对 MDN 文档的本地化指南</a>》。</p>
 </div>
 
-<p>对于那些为 MDN 以外的站点内容所编写的规范，请参考 <a href="//www.mozilla.org/en-US/styleguide/" title="Mozilla 统一规范">Mozilla 统一规范</a>。</p>
-
 <h2 id="基础部分">基础部分</h2>
 
 <p>为了使文档保持更好的一致性，所有主流的写作规范指南都是从一些比较基本的写作规范开始的。以下几个小节所概述的这些基本规范内容应该会对你有很大帮助。</p>
@@ -124,19 +122,21 @@ original_slug: MDN/Guidelines/Style_guide
 
 <h4 id="多提供一些示例">多提供一些示例</h4>
 
-<p>文章应该尽量多提供一些示例。实际上，大多数文章都应该包含不止一个例子。使用例子来说明每个参数的用途或每个可能的边界条件是很有必要的。同时还应该用例子来演示常见问题的解决方法，以及应该如何解决使用过程中可能碰到的坑。</p>
+<p>文章应该尽量多提供一些示例。实际上，大多数文章都应该包含不止一个例子。使用例子来说明每个参数的用途或每个可能的边界条件是很有必要的。同时还应该用例子来演示常见问题的解决方法，以及应该如何解决使用过程中可能碰到的一些问题。</p>
 
 <p>每个例子都应该先给出解释，说明它做了什么，以及读者在阅读或动手尝试之前需要了解的内容。</p>
 
-<p>另外，每段示例代码都应该就其工作原理给出说明。最好将一段较长的代码分解成多个较小的部分，并提供每个部分的说明，说明时注意细节的层次。如果代码很简单并且不直接涉及到当前 API，可以只给出一个简单的介绍，说明其用途，以及为何要把它放在这里；而如果代码比较复杂、或用到了当前的 API、或在技术上比较有创造性，那么你应该提供更详细的说明。</p>
+<h5 id="关于示例代码">关于示例代码<h5>
+ 
+<p>每段示例代码都应该就其工作原理给出说明。最好将一段较长的代码分解成多个较小的部分，并提供每个部分的说明，说明时注意细节的层次。如果代码很简单并且不直接涉及到当前 API，可以只给出一个简单的介绍，说明其用途，以及为何要把它放在这里；而如果代码比较复杂、或用到了当前的 API、或在技术上比较有创造性，那么你应该提供更详细的说明。</p>
 
-<p>如果使用的是在线演示的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的 {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。</p>
+<p>如果使用的是<a href="zh-CN/docs/MDN/Structures/Live_samples">在线演示</a>的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的 {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。</p>
 
 <h4 id="过短的文章难以被搜索到">过短的文章难以被搜索到</h4>
 
 <p>如果文章过短，那么搜索引擎可能会难以甚至无法对其建立关键字索引。一般来说，文章的主体内容应该至少包含 250-300 个单词。但是也不要对内容确实很少的文章进行刻意的扩充，在可能的情况下尽量遵守该指导原则即可。</p>
 
-<h3 id="小节、段落和换行">小节、段落和换行</h3>
+<h3 id="标题">标题</h3>
 
 <p>对于小节的标题，应使用从大到小的方式来定义级别：{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}} 这样，并且中间不要跳过某一级。因为 H1 已用于文章的标题，因此小节的标题应该从 H2 开始。如果你的文章中小节的层次超过了 3 到 4 级，那么你可能需要考虑将整篇文章拆分成几篇小的文章，然后用一个引导页给出这些文章的链接，并用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs"><code>Next</code></a>、<a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs"><code>Previous</code></a>、<a href="https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs"><code>PreviousNext</code></a> 宏为它们创建导航。</p>
 
@@ -294,7 +294,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="在补充说明的括号中">在补充说明的括号中</h4>
 
-<p>一般的拉丁文缩写（如：”etc.“、”i.e.“、”e.g.“）都可以用在起补充说明的括号里面。这时应在缩写中添加句号，后面加上逗号或其他恰当的标点。</p>
+<p>一般的拉丁文缩写（如：“etc.”、“i.e.”、“e.g.”）都可以用在起补充说明的括号里面。这时应在缩写中添加句号，后面加上逗号或其他恰当的标点。</p>
 
 <ul>
  <li><strong>正确</strong>：Web browsers (e.g., Firefox) can be used ...</li>
@@ -392,7 +392,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
   <li><strong>错误</strong>: CD-ROM's</li>
  </ul>
  </dd>
- <dt>”Versus“、”vs.“和”v.“</dt>
+ <dt>“Versus”、“vs.”和”v.“在”</dt>
  <dd>推荐使用”vs.“。</dd>
  <dd>
  <ul>
@@ -405,9 +405,9 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="大写">大写</h3>
 
-<p>在文章内容中请使用标准英文大写规则，比如对于”World Wide Web“需大写每个单词的首字母。如果”web“和”internet“是单独使用或作为修饰词使用，那么将其全小写也可以——这一指导原则是后来修改过的，所以在 MDN 中你也许会看到很多首字母大写的”Web“和”Internet“。当你编辑文章的时候遇到这种情况，可以随它去，也可以随手修改一下。但是仅仅只是为了修改一下大写的话就没必要专门去编辑一下了。</p>
+<p>在文章内容中请使用标准英文大写规则，比如对于“World Wide Web”需大写每个单词的首字母。如果“web”和“internet”是单独使用或作为修饰词使用，那么将其全小写也可以——这一指导原则是后来修改过的，所以在 MDN 中你也许会看到很多首字母大写的“Web”和“Internet”。当你编辑文章的时候遇到这种情况，可以随它去，也可以随手修改一下。但是仅仅只是为了修改一下大写的话就没必要专门去编辑一下了。</p>
 
-<p>对于键盘按键，应该使用普通的大写规则，而不是全大写。比如，是”Enter“而不是”ENTER“。</p>
+<p>对于键盘按键，应该使用普通的大写规则，而不是全大写。比如，是”Enter“而不是“ENTER”。</p>
 
 <h3 id="简写">简写</h3>
 
@@ -441,43 +441,43 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="使用性别中立的表述">使用性别中立的表述</h3>
 
-<p>在任何性别无关的场合使用性别中立的表述方式是一种比较好的做法，这样可以使你的文章具有普适性。举个例子，如果你正在写的是关于某个男人的行为，那么使用”他“来指代是没问题的；但如果内容并没有特指是男还是女，那么再使用”他“就不太恰当了。</p>
+<p>在任何性别无关的场合使用性别中立的表述方式是一种比较好的做法，这样可以使你的文章具有普适性。举个例子，如果你正在写的是关于某个男人的行为，那么使用“he”来指代是没问题的；但如果内容并没有特指是男还是女，那么再使用“he”就不太恰当了。</p>
 
 <p>让我们再看几个例子：</p>
 
-<p>弹出一个对话框，让用户确认他是否允许网页使用他的网络摄像头。</p>
+<p>
+<em>A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam.</em>
+</p>
 
-<p>弹出一个对话框，让用户确认她是否允许网页使用她的网络摄像头。</p>
+<p>
+<em>A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam.</em>
+</p>
 
 <p>这两句话使用的都是特定性别的表述方式，我们可以将其修改为性别中立的代词：</p>
 
-<p>弹出一个对话框，让用户确认他们是否允许网页使用他们的网络摄像头。</p>
+<p>
+<em>A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.</em>
+</p>
 
 <div class="note">
-<p>译注：这里原文为”they“和”their“，在英文中是性别中立的代词。而中文中如果上下文没有强调性别，则”他们“也具有性别中立性。</p>
+<p>MDN 允许使用这种通用性的语法（尽管在正式用法中这一点还存在争议）来弥补英语在表达中立性别时的不足。将第三人称复数的代词用来表示性别中立代词（即使用“they”、“them”、“their”、“theirs”）是可以接受的，也就是通常所说的“单数形式的‘they’”。</p>
 </div>
 
-<div class="note">
-<p>MDN 允许使用这种通用性的语法（尽管在正式用法中这一点还存在争议）来弥补英语在表达中立性别时的不足。将第三人称复数的代词用来表示性别中立代词（即使用”they“、”them“、”their“、”theirs“）是可以接受的，也就是通常所说的”单数形式的‘they’“。</p>
-</div>
+<p>或者使用复数形式的“users”：</p>
 
-<p>你还可以同时写上两个性别：</p>
-
-<p>弹出一个对话框，让用户确认他或她是否允许网页使用他/她的网络摄像头。</p>
-
-<div class="note">
-<p>译注：中文里一般不这么用，所以如果在翻译中遇到这种情况，请简单翻译为”他“即可。”中文翻译规范“一文的”<a href="https://developer.mozilla.org/zh-CN/docs/Glossary_of_translation#误解：100_翻译_准确">误解：100% 翻译 = 准确</a>“一节中也提到了这个问题。</p>
-</div>
-
-<p>或者使用复数形式的”users“：</p>
-
-<p>弹出一个对话框，让用户（译注：原文为”users“）确认他们是否允许网页使用他们的网络摄像头。</p>
+<p>
+<em>A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.</em>
+</p>
 
 <p>当然，最好的方法还是重写句子，去掉其中的代词：</p>
 
-<p>弹出一个对话框，询问用户是否允许网页对网络摄像头的访问。</p>
+<p>
+<em>A confirmation dialog appears, requesting the user's permission for web cam access.</em>
+</p>
 
-<p>弹出一个询问用户以获取网络摄像头访问权限的对话框。</p>
+<p>
+<em>A confirmation dialog box appears, which asks the user for permission to use the web cam.</em>
+</p>
 
 <p>最后一种方法（译注：意指去除代词的方法）可能更好一些，因为它不但语法上更加正确，而且还能消除不同语言处理性别问题时所带来的复杂性，因为不同语言对性别的处理可能有不同的规则。因此这种方法无论是对读者（译注：意为阅读英语原文的非英语读者）还是翻译者来说都可以让翻译更简单。</p>
 
@@ -485,7 +485,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="日期">日期</h4>
 
-<p>请用”January 1, 1990“这样的形式来表达日期（不包括代码中的日期）。</p>
+<p>请用“January 1, 1990”这样的形式来表达日期（不包括代码中的日期）。</p>
 
 <dl>
  <dd>
@@ -496,7 +496,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  </dd>
 </dl>
 
-<p>或者你也可以使用”YYYY/MM/DD“的形式：</p>
+<p>或者你也可以使用“YYYY/MM/DD”的形式：</p>
 
 <dl>
  <dd>
@@ -509,7 +509,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="年代">年代</h4>
 
-<p>请使用”1990s“这种形式来表示年代，但不要使用撇号：</p>
+<p>请使用“1990s”这种形式来表示年代，但不要使用撇号：</p>
 
 <dl>
  <dd>
@@ -522,7 +522,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="数词的复数">数词的复数</h4>
 
-<p>数词的复数直接在后面加”s“，同样不要使用撇号：</p>
+<p>数词的复数直接在后面加“s”，同样不要使用撇号：</p>
 
 <dl>
  <dd>
@@ -562,7 +562,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </dl>
 
 <div class="note">
-<p>译注：这种情况在翻译时应将逗号翻译为顿号。”中文翻译规范“一文的”<a href="https://developer.mozilla.org/zh-CN/docs/Glossary_of_translation#标点符号">标点符号</a>“一节中也提到了这个问题。</p>
+<p>译注：这种情况在翻译时应将逗号翻译为顿号。“针对 MDN 文档的本地化指南”一文的<a href="https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号">标点符号</a>“一节中也提到了这个问题。</p>
 </div>
 
 <div class="note">
@@ -571,7 +571,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="拼写">拼写</h3>
 
-<p>如果一个单词具有多种拼写，请使用美国英语的拼写。一般来说，<a href="http://www.dictionary.com/">Dictionary.com</a> 上的第一个拼写是符合此要求的，除非单词本身即为其他变体形式或主要用于美国以外的国家中。例如，如果你去查”<a href="http://dictionary.reference.com/browse/honour">honour</a>“，你会看到一个标注”Chiefly British“，并在其后有一个指向美语标准形式的链接。请不要使用其他的拼写变体。</p>
+<p>如果一个单词具有多种拼写，请使用美国英语的拼写。一般来说，<a href="http://www.dictionary.com/">Dictionary.com</a> 上的第一个拼写是符合此要求的，除非单词本身即为其他变体形式或主要用于美国以外的国家中。例如，如果你去查“<a href="http://dictionary.reference.com/browse/honour">honour</a>”，你会看到一个标注”Chiefly British“，并在其后有一个指向美语标准形式的链接。请不要使用其他的拼写变体。</p>
 
 <dl>
  <dd>
@@ -643,7 +643,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <li><a href="http://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/">清晰与优雅的格式基础</a>（Amazon），作者 Joseph Williams 和 Gregory Colomb</li>
  <li><a href="https://brians.wsu.edu/common-errors-in-english-usage/">使用英文时的常见错误</a></li>
  <li><a href="http://www-personal.umich.edu/~jlawler/aue.html">英语语法 FAQ</a></li>
- <li><a href="http://www.angryflower.com/bobsqu.gif">Bob 的撇号快速指南，你个笨蛋</a>（搞笑）</li>
+ <li><a href="http://www.angryflower.com/bobsqu.gif">Bob 的撇号快速指南，你个笨蛋</a>（这很有趣）</li>
  <li><a href="http://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster 的简明英语用法词典</a>（Amazon），虽是学术著作但很容易理解，基于实际例子并给出解释，对非英语国家的人很有帮助，特别是介词的使用方面。</li>
  <li><a href="http://english.stackexchange.com/">StackExchange 网站的英语子站</a>，关于英语使用的问答网站。</li>
 </ul>
