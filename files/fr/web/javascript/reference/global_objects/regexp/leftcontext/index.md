@@ -16,8 +16,10 @@ La propriété non-standard **`leftContext`** est une propriété statique acces
 
 ## Syntaxe
 
-    RegExp.leftContext
-    RegExp['$`']
+```js
+RegExp.leftContext
+RegExp['$`']
+```
 
 ## Description
 

@@ -8,7 +8,7 @@ original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 
 <p><span class="seoSummary">El protocolo <a href="/en/HTTP" title="en/HTTP">HTTP</a> posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar. </span></p>
 
-<p>Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: {{anch("Server-initiated upgrade to TLS", "requerida actualización a TLS")}}), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.</p>
+<p>Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: <a href="#server-initiated_upgrade_to_tls">requerida actualización a TLS</a>), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.</p>
 
 <h2 id="Acuerdo_de_conexión_(handshake)">Acuerdo de conexión (handshake)</h2>
 
@@ -23,7 +23,7 @@ original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
  <dd>La cabecera de actualización (<code>Upgrade</code>) indica los protocolos deseados, en orden de preferencia, separados por comas.</dd>
 </dl>
 
-<p>Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: {{anch("Upgrading to a WebSocket connection")}}.</p>
+<p>Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: <a href="#upgrading_to_a_websocket_connection">Upgrading to a WebSocket connection</a>.</p>
 
 <p>El servidor, puede negarse a la actualización en este caso. Y este simplemente ignora la cabecera de actualización (<code>"Upgrade"</code>) y responde con un estado normal, ( <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso requerido) — O puede  aceptar la actualización del protocolo de comunicación. En este caso, responde con un código <code>"101 Switching Protocols"</code>  y con una cabecera <code>Upgrade</code> que indica el protocolo elegido.</p>
 
@@ -229,7 +229,7 @@ Connection: Upgrade
     and what to do if this text is seen ...
 &lt;/html&gt;</pre>
 
-<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under {{anch("Client-initiated upgrade to TLS")}}.</p>
+<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under <a href="#client-initiated_upgrade_to_tls">Client-initiated upgrade to TLS</a>.</p>
 
 <h2 id="Referencias">Referencias</h2>
 

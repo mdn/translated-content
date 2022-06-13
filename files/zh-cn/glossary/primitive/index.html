@@ -1,5 +1,5 @@
 ---
-title: 原始数据
+title: 基本类型
 slug: Glossary/Primitive
 tags:
   - Glossary
@@ -9,13 +9,13 @@ tags:
   - 词汇
 translation_of: Glossary/Primitive
 ---
-<p><strong>基本类型</strong>（基本数值、基本数据类型）是一种既非{{Glossary("object", "对象")}}也无{{glossary("method","方法")}}的数据。在 {{Glossary("JavaScript")}} 中，共有7种基本类型：{{Glossary("string")}}，{{Glossary("number")}}，{{Glossary("bigint")}}，{{Glossary("boolean")}}，{{Glossary("null")}}，{{Glossary("undefined")}}，{{Glossary("symbol")}} ({{Glossary("ECMAScript")}} 2016新增)。</p>
+<p><strong>基本类型</strong>（基本数值、基本数据类型）是一种既非{{Glossary("object", "对象")}}也无{{glossary("method","方法")}}的数据。在 {{Glossary("JavaScript")}} 中，共有 7 种基本类型：{{Glossary("string")}}，{{Glossary("number")}}，{{Glossary("bigint")}}，{{Glossary("boolean")}}，{{Glossary("null")}}，{{Glossary("undefined")}}，{{Glossary("symbol")}} ({{Glossary("ECMAScript")}} 2016 新增)。</p>
 
 <p>多数情况下，基本类型直接代表了最底层的语言实现。</p>
 
 <p>所有基本类型的值都是<strong>不可改变</strong>的。但需要注意的是，基本类型本身和一个赋值为基本类型的变量的区别。变量会被赋予一个新值，而原值不能像数组、对象以及函数那样被改变。</p>
 
-<h2 id="示例1">示例1</h2>
+<h2 id="示例1">示例 1</h2>
 
 <p>这个示例会帮助你了解基本类型<strong>不可改变</strong>的事实。</p>
 
@@ -38,9 +38,9 @@ bar = bar.toUpperCase();       // BAZ</code></pre>
 
 <p>基本类型值可以被替换，但不能被改变。</p>
 
-<h2 id="示例2">示例2</h2>
+<h2 id="示例2">示例 2</h2>
 
-<p>下面的示例将让你体会到JavaScript是如何处理基本类型的。</p>
+<p>下面的示例将让你体会到 JavaScript 是如何处理基本类型的。</p>
 
 <h3 id="JavaScript_2">JavaScript</h3>
 
@@ -68,13 +68,13 @@ console.log(foo);   // 5</code></pre>
 <p>你是否认为会得到<code>7</code>，而不是<code>5</code>？如果是，请看看代码是如何运行的：</p>
 
 <ul>
- <li><code>addTwo</code>和<code>addTwo_v2</code>函数调用时，JavaScript会检查标识符<code>foo</code>的值，从而准确无误的找到第一行实例化变量的声明语句。</li>
- <li>找到以后，JavaScript将其作为参数传递给函数的形参。</li>
- <li>在执行函数体内语句之前，<strong>JavaScript会将传递进来的参数（基本类型的值）复制一份</strong>，创建一个本地副本。这个副本只存在于该函数的作用域中，我们能够通过指定在函数中的标识符访问到它（<code>addTwo</code>中的<code>num</code>，<code>addTwo_v2</code>中的<code>foo</code>）。</li>
+ <li><code>addTwo</code>和<code>addTwo_v2</code>函数调用时，JavaScript 会检查标识符<code>foo</code>的值，从而准确无误的找到第一行实例化变量的声明语句。</li>
+ <li>找到以后，JavaScript 将其作为参数传递给函数的形参。</li>
+ <li>在执行函数体内语句之前，<strong>JavaScript 会将传递进来的参数（基本类型的值）复制一份</strong>，创建一个本地副本。这个副本只存在于该函数的作用域中，我们能够通过指定在函数中的标识符访问到它（<code>addTwo</code>中的<code>num</code>，<code>addTwo_v2</code>中的<code>foo</code>）。</li>
  <li>接下来，函数体中的语句开始执行：
   <ul>
-   <li>第一个函数中，创建了本地<code>num</code>参数，<code>num</code>的值加2，但这个值并不是原来的<code>foo</code>的值。</li>
-   <li>第二个函数中，创建了本地参数<code>foo</code>，并将它的值加2，这个值不是外部foo的值。在这种情况下，外部的<code>foo</code>变量不能以<strong>任何</strong>方式被访问到。这是因为JavaScript的词法作用域（lexical scoping）所导致的变量覆盖，本地的变量<code>foo</code>覆盖了外部的变量<code>foo</code>。欲知详情，请参阅<a href="/zh-CN/docs/Web/JavaScript/Closures">闭包</a>。</li>
+   <li>第一个函数中，创建了本地<code>num</code>参数，<code>num</code>的值加 2，但这个值并不是原来的<code>foo</code>的值。</li>
+   <li>第二个函数中，创建了本地参数<code>foo</code>，并将它的值加 2，这个值不是外部 foo 的值。在这种情况下，外部的<code>foo</code>变量不能以<strong>任何</strong>方式被访问到。这是因为 JavaScript 的词法作用域（lexical scoping）所导致的变量覆盖，本地的变量<code>foo</code>覆盖了外部的变量<code>foo</code>。欲知详情，请参阅<a href="/zh-CN/docs/Web/JavaScript/Closures">闭包</a>。</li>
   </ul>
  </li>
  <li>综上所述，函数中的任何操作都<strong>不会</strong>影响到最初的<code>foo</code>，我们操作的只不过是它的<strong>副本</strong>。</li>
@@ -119,5 +119,5 @@ console.log(foo);   // 5</code></pre>
    <li>{{Glossary("symbol")}}</li>
   </ol>
  </li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据类型和数据结构</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据类型和数据结构</a></li>
 </ol>

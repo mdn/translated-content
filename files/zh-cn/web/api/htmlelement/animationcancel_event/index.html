@@ -7,9 +7,9 @@ translation_of: Web/API/HTMLElement/animationcancel_event
 
 <div>{{SeeCompatTable}}</div>
 
-<p>一个 <code><strong>animationcancel</strong></code> 事件会在一个 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> 意外终止时触发. 换句话说, 就是任意时刻 CSS Animation 在没有发送 {{event("animationend")}} 事件时停止运行. 这种情况会在  {{cssxref("animation-name")}} 发生改变导致动画被移除时, 或者使用CSS隐藏了动画中的node节点. 因此要么node节点直接被隐藏，要么因为node节点的父节点被隐藏.</p>
+<p>一个 <code><strong>animationcancel</strong></code> 事件会在一个 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> 意外终止时触发。换句话说，就是任意时刻 CSS Animation 在没有发送 {{event("animationend")}} 事件时停止运行。这种情况会在  {{cssxref("animation-name")}} 发生改变导致动画被移除时，或者使用 CSS 隐藏了动画中的 node 节点。因此要么 node 节点直接被隐藏，要么因为 node 节点的父节点被隐藏。</p>
 
-<p>该事件的处理函数可以通过 {{domxref("GlobalEventHandlers.onanimationcancel", "onanimationcancel")}} 属性进行设置, 或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+<p>该事件的处理函数可以通过 {{domxref("GlobalEventHandlers.onanimationcancel", "onanimationcancel")}} 属性进行设置，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 
 <table class="properties">
  <tbody>
@@ -34,24 +34,24 @@ translation_of: Web/API/HTMLElement/animationcancel_event
 
 <h2 id="Examples">Examples</h2>
 
-<p>这段代码获取一个当前在动画中的元素，并为它添加了一个<code>animationcancel</code> 事件监听. 然后设置该元素的 <code><a href="/en-US/docs/Web/CSS/display">display</a></code> 属性为 <code>none</code>, 触发 <code>animationcancel</code> 事件.</p>
+<p>这段代码获取一个当前在动画中的元素，并为它添加了一个<code>animationcancel</code> 事件监听。然后设置该元素的 <code><a href="/en-US/docs/Web/CSS/display">display</a></code> 属性为 <code>none</code>, 触发 <code>animationcancel</code> 事件。</p>
 
-<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">const</span> <span class="cm-def">animated</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'.animated'</span>);
-</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">animated</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'animationcancel'</span>, () <span class="cm-operator">=&gt;</span> {</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">  console</span>.<span class="cm-property">log</span>(<span class="cm-string">'Animation canceled'</span>);</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">});</span></span></span>
+<pre class="brush: js">const animated = document.querySelector('.animated');
 
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">animated</span>.<span class="cm-property">style</span>.<span class="cm-property">display</span> <span class="cm-operator">=</span> <span class="cm-string">'none'</span>;</span></span></span></pre>
+animated.addEventListener('animationcancel', () =&gt; {
+  console.log('Animation canceled');
+});
 
-<p>同样, 使用 <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">onanimationcancel</a></code> 属性替换 <code>addEventListener()</code>:</p>
+animated.style.display = 'none';</pre>
 
-<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">const</span> <span class="cm-def">animated</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'.animated'</span>);</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">animated</span>.<span class="cm-property">onanimationcancel</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">  console</span>.<span class="cm-property">log</span>(<span class="cm-string">'Animation canceled'</span>);</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">};</span></span></span>
+<p>同样，使用 <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">onanimationcancel</a></code> 属性替换 <code>addEventListener()</code>:</p>
 
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">animated</span>.<span class="cm-property">style</span>.<span class="cm-property">display</span> <span class="cm-operator">=</span> <span class="cm-string">'none'</span>;</span></span></span></pre>
+<pre class="brush: js">const animated = document.querySelector('.animated');
+animated.onanimationcancel = () =&gt; {
+  console.log('Animation canceled');
+};
+
+animated.style.display = 'none';</pre>
 
 <h3 id="Live_example">Live example</h3>
 

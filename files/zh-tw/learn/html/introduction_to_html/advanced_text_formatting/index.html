@@ -9,7 +9,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">There are many other elements in HTML for formatting text, which we didn't get to in the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> article. The elements described in this article are less well-known, but still useful to know about (and this is still not a complete list by any means.) In here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.</p>
+<p>There are many other elements in HTML for formatting text, which we didn't get to in the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> article. The elements described in this article are less well-known, but still useful to know about (and this is still not a complete list by any means.) In here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -412,7 +412,7 @@ para.onclick = function() {
 
 <p>HTML also provides the {{htmlelement("time")}} element for marking up times and dates in a machine-readable format. For example:</p>
 
-<pre class="brush: html">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20<span class="pl-pds">"</span></span>&gt;20 January 2016&lt;/<span class="pl-ent">time</span>&gt;</pre>
+<pre class="brush: html">&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</pre>
 
 <p>Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:</p>
 
@@ -423,31 +423,31 @@ para.onclick = function() {
  <li>20/06/16</li>
  <li>06/20/16</li>
  <li>The 20th of next month</li>
- <li><span lang="fr">20e Janvier 2016</span></li>
- <li><span lang="ja">2016年1月20日</span></li>
- <li><span lang="ja">And so on</span></li>
+ <li>20e Janvier 2016</li>
+ <li>2016年1月20日</li>
+ <li>And so on</li>
 </ul>
 
-<p><span lang="ja">But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The </span>{{htmlelement("time")}} element allows you to attach a unambiguous, machine-readable time/date for this purpose.</p>
+<p>But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach a unambiguous, machine-readable time/date for this purpose.</p>
 
 <p>The basic example above just provides a simple machine readable date, but there are many other options that are possible, for example:</p>
 
 <pre class="brush: html">&lt;!-- Standard simple date --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20<span class="pl-pds">"</span></span>&gt;20 January 2016&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
 &lt;!-- Just year and month --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01<span class="pl-pds">"</span></span>&gt;January 2016&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;
 &lt;!-- Just month and day --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>01-20<span class="pl-pds">"</span></span>&gt;20 January&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="01-20"&gt;20 January&lt;/time&gt;
 &lt;!-- Just time, hours and minutes --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>19:30<span class="pl-pds">"</span></span>&gt;19:30&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;
 &lt;!-- You can do seconds and milliseconds too! --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span></span>19:30:01.856<span class="pl-s"><span class="pl-pds">"</span></span>&gt;19:30:01.856&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;
 &lt;!-- Date and time --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20T19:30<span class="pl-pds">"</span></span>&gt;7.30pm, 20 January 2016&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;
 &lt;!-- Date and time with timezone offset--&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20T19:30<span class="pl-pds">+01:00"</span></span>&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;
 &lt;!-- Calling out a specific week number--&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-W04<span class="pl-pds">"</span></span>&gt;The fourth week of 2016&lt;/<span class="pl-ent">time</span>&gt;</pre>
+&lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;</pre>
 
 <h2 id="Summary">Summary</h2>
 

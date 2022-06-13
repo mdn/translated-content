@@ -16,17 +16,17 @@ translation_of: Web/API/WebVR_API/Concepts
 ---
 <p>{{draft("The WebVR API documentation is currently being updated to cover the v1.0 spec, therefore some of this information will be out of date. Contact ~~chrisdavidmills if you have any questions about this work.")}}</p>
 
-<p class="summary">This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.</p>
+<p>This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.</p>
 
-<p class="summary">这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。<strong>【K】</strong></p>
+<p>这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。<strong>【K】</strong></p>
 
 <h2 id="sect1"> </h2>
 
-<h2 id="The_history_of_VR_关于VR的历史【K】">The history of VR 关于VR的历史<strong>【K】</strong></h2>
+<h2 id="The_history_of_VR_关于VR的历史【K】">The history of VR 关于 VR 的历史<strong>【K】</strong></h2>
 
 <p>Virtual reality is nothing new — the concept goes way further back than the Oculus Rift Kickstarter campaign of 2012. People have been experimenting with it for decades.</p>
 
-<p><strong>虚拟现实（VR）并不是一件新生的事物：这个概念甚至能追溯到，比2012年Oculus Rift在Kickstarter campaig上发起众筹，还要更早的时候。人们已经持续研发这种技术长达数十年。</strong></p>
+<p><strong>虚拟现实（VR）并不是一件新生的事物：这个概念甚至能追溯到，比 2012 年 Oculus Rift 在 Kickstarter campaig 上发起众筹，还要更早的时候。人们已经持续研发这种技术长达数十年。</strong></p>
 
 <p> </p>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>In 1939 the <a href="https://en.wikipedia.org/wiki/View-Master">View-Master device</a> was created, allowing people to see 3D pictures. The device displayed images stored on cardboard disks containing stereoscopic 3D pairs of small color photographs. After years of development the military got interested in using such technology, and Project Headsight was born in 1961 — this involved a helmet incorporating a video screen with a head-tracking system.</p>
 
-<p><strong>1939年<a href="https://en.wikipedia.org/wiki/View-Master">View-Master device</a>问世，它允许人们通过它观看3D成像的照片。这款设备播放的是，存储在圆盘硬纸板上的，成对的立体3D的彩色小照片。经过了许多年的研发，军方开始对使用这项技术产生了浓厚的兴趣，终于在1961年，名为HEADSIGHT的项目诞生了：它包含了一个连接头部追踪系统的显示屏的头盔。</strong></p>
+<p><strong>1939 年<a href="https://en.wikipedia.org/wiki/View-Master">View-Master device</a>问世，它允许人们通过它观看 3D 成像的照片。这款设备播放的是，存储在圆盘硬纸板上的，成对的立体 3D 的彩色小照片。经过了许多年的研发，军方开始对使用这项技术产生了浓厚的兴趣，终于在 1961 年，名为 HEADSIGHT 的项目诞生了：它包含了一个连接头部追踪系统的显示屏的头盔。</strong></p>
 
 <p> </p>
 
@@ -42,13 +42,13 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>There were various experiments conducted over the next few decades, but it wasn't resricted to science labs and battlefields anymore. Eventually pop culture took over with movie directors showing their visions of virtual reality. Movies like Tron (1982) and The Matrix (1999) were created, where people could transfer themselves into a whole new cyber world or were trapped in one without even knowing, accepting it as the real world.</p>
 
-<p><strong>在接下来的数十年中，出现了许多具有指导性作用的实验，但是它不再像从前那样只对科学实验室和战场开放。最终大众文化通过电影导演展现他们的视角，从而接过了虚拟现实的大旗。像【创：战纪 TRON: Legacy（1982）】 和【黑客帝国The Matrix (1999)】那样的电影被拍摄出来，在那里人们能够轻易的将自己置身于一个完全由信息构成的世界，又或者，接受让自己进入一个从未认识过的新世界，并且将它当做一个真实的存在。【K】</strong></p>
+<p><strong>在接下来的数十年中，出现了许多具有指导性作用的实验，但是它不再像从前那样只对科学实验室和战场开放。最终大众文化通过电影导演展现他们的视角，从而接过了虚拟现实的大旗。像【创：战纪 TRON: Legacy（1982）】 和【黑客帝国 The Matrix (1999)】那样的电影被拍摄出来，在那里人们能够轻易的将自己置身于一个完全由信息构成的世界，又或者，接受让自己进入一个从未认识过的新世界，并且将它当做一个真实的存在。【K】</strong></p>
 
 <p><img alt="" src="http://end3r.com/tmp/vr/matrix.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>The first VR gaming attempts were big and expensive — in 1991 Virtuality Group created a VR-ready arcade machine with goggles and ported popular titles like Pac-Man to virtual reality. Sega introduced their VR glasses at the Consumer Electronics Show in 1993. Companies were experimenting, but the market and consumers weren't convinced — we had to wait until 2012 to see  real example of a successful VR project.</p>
 
-<p><strong>世界上第一次VR游戏的尝试是既大又昂贵的：1991年Virtuality Group制造了一款名为VR-ready的商业街机，其中装有护目镜，并且美其名曰 Pac-Man to virtual reality。随后，世嘉株式会社(SEGA)在1993的 Consumer Electronics Show上引进了他们的VR眼睛设备。当时的公司都在努力尝试，但是市场和消费者并不关注和买账：之后，我们再见到真正成功的VR项目，就要等到最近的2012年了。【K】</strong></p>
+<p><strong>世界上第一次 VR 游戏的尝试是既大又昂贵的：1991 年 Virtuality Group 制造了一款名为 VR-ready 的商业街机，其中装有护目镜，并且美其名曰 Pac-Man to virtual reality。随后，世嘉株式会社 (SEGA) 在 1993 的 Consumer Electronics Show 上引进了他们的 VR 眼睛设备。当时的公司都在努力尝试，但是市场和消费者并不关注和买账：之后，我们再见到真正成功的 VR 项目，就要等到最近的 2012 年了。【K】</strong></p>
 
 <p> </p>
 
@@ -56,11 +56,11 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p> </p>
 
-<h3 id="VR_in_recent_times_最近的VR发展【K】">VR in recent times 最近的VR发展<strong>【K】</strong></h3>
+<h3 id="VR_in_recent_times_最近的VR发展【K】">VR in recent times 最近的 VR 发展<strong>【K】</strong></h3>
 
 <p>So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an afforable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas the latest <a href="https://www.oculus.com/rift/">Oculus Rift</a> developer kit is available for $350, and cheaper solutions are available, such as mobile device-based solutions like <a href="https://www.google.com/get/cardboard/">Google Cardboard</a>.</p>
 
-<p><strong>那么有什么值得我们期待的呢？VR硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行VR设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的VR原型设备，需要花费数万美元，然而最近出现的<a href="https://www.oculus.com/rift/">Oculus Rift</a> developer kit却仅售350$， 并且还有更加便宜的解决方案，比如基于手机的VR设备像是<a href="https://www.google.com/get/cardboard/">Google Cardboard</a>.【K】</strong></p>
+<p><strong>那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的<a href="https://www.oculus.com/rift/">Oculus Rift</a> developer kit 却仅售 350$， 并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是<a href="https://www.google.com/get/cardboard/">Google Cardboard</a>.【K】</strong></p>
 
 <p> </p>
 
@@ -68,13 +68,13 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>By 2015, such VRDevices gained commercial support for VR technology. Sony are developing a VR hardware kit for the PS4 (codename <a href="http://www.cnet.com/products/sony-project-morpheus/">Project Morpheus</a>), Facebook bought Oculus Rift for $2 billion, Valve has created <a href="http://store.steampowered.com/universe/vr">SteamVR</a> software that works with HTC's <a href="http://www.htcvr.com/">Vive VR headset</a>, and Google has launched a 2.0 version of its Cardboard  that supports up to 6 inch phones (it is also fully compatible with iOS devices because it has a piece of conductive foam that works as a tap over the screen.)</p>
 
-<p><strong>到了2015年，类似的VR设备吸引了大量的商业投资，进入到VR科技的研发中。SONY正在PS4中开发一项针对VR的硬件工具(编程代号 <a href="http://www.cnet.com/products/sony-project-morpheus/">Project Morpheus</a>), FACRBOOK花费20亿美元买下了 <a href="https://www.oculus.com/rift/">Oculus Rift</a>, Valve开发了 <a href="http://store.steampowered.com/universe/vr">SteamVR</a> 软件系统，能够应用于HTC的<a href="http://www.htcvr.com/">Vive VR headset</a>, 随后，谷歌发布了能够最多支持6英寸手机屏幕的CARDBOARD的2.0版本(它同时完全兼容了IOS的设备，因为在它屏幕的背后有一块传感海绵凸起作为触碰点。)</strong></p>
+<p><strong>到了 2015 年，类似的 VR 设备吸引了大量的商业投资，进入到 VR 科技的研发中。SONY 正在 PS4 中开发一项针对 VR 的硬件工具 (编程代号 <a href="http://www.cnet.com/products/sony-project-morpheus/">Project Morpheus</a>), FACRBOOK 花费 20 亿美元买下了 <a href="https://www.oculus.com/rift/">Oculus Rift</a>, Valve 开发了 <a href="http://store.steampowered.com/universe/vr">SteamVR</a> 软件系统，能够应用于 HTC 的<a href="http://www.htcvr.com/">Vive VR headset</a>, 随后，谷歌发布了能够最多支持 6 英寸手机屏幕的 CARDBOARD 的 2.0 版本 (它同时完全兼容了 IOS 的设备，因为在它屏幕的背后有一块传感海绵凸起作为触碰点。)</strong></p>
 
 <p> </p>
 
 <p>Samsung also launched a headset associated with Oculus called <a href="http://www.samsung.com/global/microsite/gearvr/gearvr_features.html">GearVR</a>, which works by connecting its Note 4 and 6S devices. This however only works with native apps, so it is not very interesting for the specific area of WebVR.</p>
 
-<p><strong>三星公司同Oculus 合作，也推出了它的头戴设备<a href="http://www.samsung.com/global/microsite/gearvr/gearvr_features.html">GearVR</a>, 这款设备可以连接旗下的NOTE4以及6S等手机。然而这款设备仅仅能够运行几款纯粹的APP应用，因而相对于WEBVR的特效领域而言，显得不是那么的有意思。【K】</strong></p>
+<p><strong>三星公司同 Oculus 合作，也推出了它的头戴设备<a href="http://www.samsung.com/global/microsite/gearvr/gearvr_features.html">GearVR</a>, 这款设备可以连接旗下的 NOTE4 以及 6S 等手机。然而这款设备仅仅能够运行几款纯粹的 APP 应用，因而相对于 WEBVR 的特效领域而言，显得不是那么的有意思。【K】</strong></p>
 
 <p> </p>
 
@@ -92,27 +92,27 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>Handling input for virtual reality applications is an interesting topic — it's a totally new experience for which dedicated user interfaces have to be designed. There are various approaches right now from classic keyboard and mouse, to new ones like Leap Motion. It's a matter of trial and error to see what works in given situations and what inputs fit best for your type of game.</p>
 
-<p><strong>针对虚拟显示应用的手持传入设备，是一个非常有意思的话题：这是一种全新的体验，从而必须要设计出沉浸式的用户界面来适应它。目前为止，在这方面，从传统的键盘鼠标，一直到LEAP MOTION这样的新兴设备，有多种多样的途径来实现它。只有通过【试错法】最终才能窥见，哪种方式最有利于创造情景以及哪种输入设备最适合于你所玩的游戏的类型。【K】</strong></p>
+<p><strong>针对虚拟显示应用的手持传入设备，是一个非常有意思的话题：这是一种全新的体验，从而必须要设计出沉浸式的用户界面来适应它。目前为止，在这方面，从传统的键盘鼠标，一直到 LEAP MOTION 这样的新兴设备，有多种多样的途径来实现它。只有通过【试错法】最终才能窥见，哪种方式最有利于创造情景以及哪种输入设备最适合于你所玩的游戏的类型。【K】</strong></p>
 
 <p> </p>
 
 <p><img alt="" src="http://end3r.com/tmp/vr/oculus-touch.jpg" style="display: block; margin: 0px auto;"></p>
 
-<h2 id="VR_Hardware_setup_创建VR设备的硬件环境【K】" style="line-height: 30px; font-size: 2.14285714285714rem;">VR Hardware setup 创建VR设备的硬件环境<strong>【K】</strong></h2>
+<h2 id="VR_Hardware_setup_创建VR设备的硬件环境【K】" style="line-height: 30px; font-size: 2.14285714285714rem;">VR Hardware setup 创建 VR 设备的硬件环境<strong>【K】</strong></h2>
 
 <p> </p>
 
 <p>There are two main types of setup, mobile or computer-connected. Their minimum hardware set ups are as follows:</p>
 
-<p><strong>主要有两种创建VR环境的类型，手机或者是PC。以下是实现这两种环境所需要的最少的硬件支持：</strong></p>
+<p><strong>主要有两种创建 VR 环境的类型，手机或者是 PC。以下是实现这两种环境所需要的最少的硬件支持：</strong></p>
 
 <p> </p>
 
 <ul>
  <li>Mobile: A Head-mounted display (HMD) is created using a smartphone — which acts as the VR display — mounted in a VR mount such as Google Cardboard, which contains the required lenses to provide stereoscopic vision of what is projected on the mobile screen.</li>
- <li><strong>手机：通过使用一部智能手机可以营造一部头显设备（HMD）--扮演VR显示器的角色--安装在一个像谷歌CARDBOARD那样的VR框架中，其中包含了必需要有的透镜，用以提供投射在手机屏幕上的立体视觉效果。【K】</strong><img alt="Mobile based VR setup" src="https://mdn.mozillademos.org/files/11085/mobileBasedVRSetup.png" style="width: 100%;"></li>
+ <li><strong>手机：通过使用一部智能手机可以营造一部头显设备（HMD）-- 扮演 VR 显示器的角色 -- 安装在一个像谷歌 CARDBOARD 那样的 VR 框架中，其中包含了必需要有的透镜，用以提供投射在手机屏幕上的立体视觉效果。【K】</strong><img alt="Mobile based VR setup" src="https://mdn.mozillademos.org/files/11085/mobileBasedVRSetup.png" style="width: 100%;"></li>
  <li>Computer-connected: A VR setup is connected to your computer — this consists of a Head Mounted Display (HMD) containing a high resolution landscape-oriented screen onto which the visuals for both the left and right eye are displayed, which also includes a lens for each eye to promote separation of the left and right eye scene (stereoscopic vision.) The setup also includes a separate position sensor that works out the position/orientation/velocity/acceleration of your head and constantly passes that information the computer.</li>
- <li><strong>电脑：将一部VR设备连接到你的电脑上--它是由一部包含了能分别为左眼和右眼显示图像的高分辨率全景镜头所组成的头显设备所组成，同时它还包含了两块分别为双眼配备的，可以提升左右眼图像分离（立体视觉）的透镜。这套设备还包含了一套分离式的感应设备，它能够测算出你的头部的位置/方向/速度/加速度等信息，并实时的把这些信息传输给计算机。【K】</strong><img alt="Computer based VR Setup" src="https://mdn.mozillademos.org/files/11089/computerBasedVRSetup.png" style="width: 100%;"></li>
+ <li><strong>电脑：将一部 VR 设备连接到你的电脑上 -- 它是由一部包含了能分别为左眼和右眼显示图像的高分辨率全景镜头所组成的头显设备所组成，同时它还包含了两块分别为双眼配备的，可以提升左右眼图像分离（立体视觉）的透镜。这套设备还包含了一套分离式的感应设备，它能够测算出你的头部的位置/方向/速度/加速度等信息，并实时的把这些信息传输给计算机。【K】</strong><img alt="Computer based VR Setup" src="https://mdn.mozillademos.org/files/11089/computerBasedVRSetup.png" style="width: 100%;"></li>
 </ul>
 
 <div class="note">
@@ -125,7 +125,7 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>Other hardware that complements the VR experience includes:  </p>
 
-<p><strong>其余的帮助补充完整的VR体验的硬件包括：【K】</strong></p>
+<p><strong>其余的帮助补充完整的 VR 体验的硬件包括：【K】</strong></p>
 
 <p> </p>
 
@@ -133,15 +133,15 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <ul>
  <li>A hand recognition sensor: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the <a href="https://www.leapmotion.com/">Leap Motion</a>, which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)</li>
- <li><strong>手持传感识别器：一个可以追踪你的手部位置和运动的传感器，这使得它变成了一个非常有趣的控制器，以及一件存在于VR游戏世界种的物体。迄今为止，最先进的这类设备首属<a href="https://www.leapmotion.com/">Leap Motion</a>,它可以同电脑配合使用(同Oculus Rift设备连接) 并且同时还可以和手机兼容 (暂时处于实验阶段。)</strong></li>
+ <li><strong>手持传感识别器：一个可以追踪你的手部位置和运动的传感器，这使得它变成了一个非常有趣的控制器，以及一件存在于 VR 游戏世界种的物体。迄今为止，最先进的这类设备首属<a href="https://www.leapmotion.com/">Leap Motion</a>,它可以同电脑配合使用 (同 Oculus Rift 设备连接) 并且同时还可以和手机兼容 (暂时处于实验阶段。)</strong></li>
  <li>A gamepad: We can configurate an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup — like the <a href="http://www.mergevr.com/">MergeVR headset</a> — but these are connected via Bluetooth so don't work with WebVR. </li>
- <li><strong>（手机）游戏手柄：我们可以配置一套XBOX控制器或者类似的设备作为浏览器的键盘--这种方法提供了另一种同VR网页互动的形式。有一些游戏手柄更可以和手机协同使用--就像</strong><a href="http://www.mergevr.com/">MergeVR headset</a>--<strong>但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和WEBVR结合。</strong></li>
+ <li><strong>（手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘 -- 这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用 -- 就像</strong><a href="http://www.mergevr.com/">MergeVR headset</a>--<strong>但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。</strong></li>
  <li>An eye tracking sensor (experimental): The FOVE project is the first headset that reads subtle eye movements.</li>
- <li><strong>眼部追踪传感器（实验产品）：FOVE项目是第一个研究用于追踪和读取人眼运动设备的项目。</strong></li>
+ <li><strong>眼部追踪传感器（实验产品）：FOVE 项目是第一个研究用于追踪和读取人眼运动设备的项目。</strong></li>
  <li>A facial expression tracker (experimental): Researchers at the University of Southern California and Facebook’s Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.</li>
- <li><strong>面部表情追踪设备（实验产品）：位于南加州大学和Facebook’s Oculus部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。</strong></li>
+ <li><strong>面部表情追踪设备（实验产品）：位于南加州大学和 Facebook’s Oculus 部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。</strong></li>
  <li>A more complex positional sensor system: The SteamVR controller, combined with the <a href="http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/">Lighthouse</a> tracking system aims to achieve an experience in which you can move through a space of 10x10 square feet in a VR world.</li>
- <li><strong>更加复杂的位置传感系统：SteamVR控制器，结合了<a href="http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/">Lighthouse</a>追踪系统，旨在实现帮助我们能在一个10x10 square feet的VR空间范围内自由活动的目的。</strong></li>
+ <li><strong>更加复杂的位置传感系统：SteamVR 控制器，结合了<a href="http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/">Lighthouse</a>追踪系统，旨在实现帮助我们能在一个 10x10 square feet 的 VR 空间范围内自由活动的目的。</strong></li>
 </ul>
 
 <h2 id="Position_and_orientation_velocity_and_acceleration">Position and orientation, velocity and acceleration </h2>
@@ -150,7 +150,7 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>As mentioned above, the position sensor detects information concerning the HMD and constantly outputs it, allowing you to continually update a scene according to head movement, rotation, etc. But what exactly is the information?</p>
 
-<p><strong>正如上文所提到的，那个位置传感器通过检测与HMD相关的信息并且实时的输出这些数据，从而允许你持续的通过改变你的头部移动，更新你身处的虚拟场景，包括旋转等动作。但是我们所说的这些信息包括些什么呢？【K】</strong></p>
+<p><strong>正如上文所提到的，那个位置传感器通过检测与 HMD 相关的信息并且实时的输出这些数据，从而允许你持续的通过改变你的头部移动，更新你身处的虚拟场景，包括旋转等动作。但是我们所说的这些信息包括些什么呢？【K】</strong></p>
 
 <p> </p>
 
@@ -158,12 +158,12 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>The output information falls into four categories:</p>
 
-<p><strong>通过HMD输出的信息包含一下四种类别：【K】</strong></p>
+<p><strong>通过 HMD 输出的信息包含一下四种类别：【K】</strong></p>
 
 <ol>
  <li>Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR:<br>
   <br>
-  <strong>位置--HMD设备的位置基于一个3D坐标空间中的三个轴--X代表左右移动，Y代表上下移动，Z代表朝向和远离位置传感设备。在WEBVR中： </strong>
+  <strong>位置--HMD 设备的位置基于一个 3D 坐标空间中的三个轴--X 代表左右移动，Y 代表上下移动，Z 代表朝向和远离位置传感设备。在 WEBVR 中： </strong>
 
   <ul>
    <li>x position is represented by {{domxref("VRPositionState.position")}}.x.</li>
@@ -173,7 +173,7 @@ translation_of: Web/API/WebVR_API/Concepts
  </li>
  <li>Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR:<br>
   <br>
-  <strong>方位--HMD设备的协同是绕着一个3D坐标空间中的三个轴。PITCH负责协同X轴，YAW负责协同Y轴，还有ROLL入则系统Z轴。在WEBVR中： </strong>
+  <strong>方位--HMD 设备的协同是绕着一个 3D 坐标空间中的三个轴。PITCH 负责协同 X 轴，YAW 负责协同 Y 轴，还有 ROLL 入则系统 Z 轴。在 WEBVR 中： </strong>
   <ul>
    <li>Pitch is represented by {{domxref("VRPositionState.orientation")}}.x.</li>
    <li>Yaw is represented by {{domxref("VRPositionState.orientation")}}.y.</li>
@@ -182,26 +182,26 @@ translation_of: Web/API/WebVR_API/Concepts
  </li>
  <li>Velocity — There are two types of velocity to consider in VR:<br>
   <br>
-  <strong>速度--在VR中有两种需要被考虑的速度： </strong>
+  <strong>速度 -- 在 VR 中有两种需要被考虑的速度： </strong>
   <ul>
    <li>Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPositionState.linearVelocity")}} (x, y, and z.）</li>
    <br>
-   <li><strong>线速度--HMD追踪的沿着三种轴向之一的速度。这类的信息可以被接收通过 {{domxref("VRPositionState.linearVelocity")}} (x, y, and z.)</strong></li>
+   <li><strong>线速度--HMD 追踪的沿着三种轴向之一的速度。这类的信息可以被接收通过 {{domxref("VRPositionState.linearVelocity")}} (x, y, and z.)</strong></li>
    <li>Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)</li>
    <br>
-   <li><strong>角速度--就是HMD设备绕着三种轴向之一旋转的速度。这类的信息可以被接收通过{{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)</strong></li>
+   <li><strong>角速度 -- 就是 HMD 设备绕着三种轴向之一旋转的速度。这类的信息可以被接收通过{{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)</strong></li>
   </ul>
  </li>
  <li>Acceleration — There are two types of acceleration to consider in VR:<br>
   <br>
-  <strong>加速度--在VR中有两种需要被考虑的加速度：</strong>
+  <strong>加速度 -- 在 VR 中有两种需要被考虑的加速度：</strong>
   <ul>
    <li>Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPositionState.linearAcceleration")}} (x, y, and z.)</li>
    <br>
-   <li><strong>线性加速度--HMD设备沿着轴向追踪的加速度。这类的信息可以被接收通过{{domxref("VRPositionState.linearAcceleration")}} (x, y, and z.)</strong></li>
+   <li><strong>线性加速度--HMD 设备沿着轴向追踪的加速度。这类的信息可以被接收通过{{domxref("VRPositionState.linearAcceleration")}} (x, y, and z.)</strong></li>
    <li>Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPositionState.angularAcceleration")}} (x, y, and z.)</li>
    <br>
-   <li><strong>角度加速度--HMD设备绕着轴旋转的加速度。这类的信息可以被接收通过 {{domxref("VRPositionState.angularAcceleration")}} (x, y, and z.)</strong></li>
+   <li><strong>角度加速度--HMD 设备绕着轴旋转的加速度。这类的信息可以被接收通过 {{domxref("VRPositionState.angularAcceleration")}} (x, y, and z.)</strong></li>
   </ul>
  </li>
 </ol>
@@ -210,13 +210,13 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid eminating from the user's eye. Each eye has it's own FOV, one slightly overlapping the other.</p>
 
-<p><strong>VR的视野（FOV）就是我们的双眼理论上预期能看到的区域。这个区域大致上呈现一个倒置的金字塔形状，金字塔的中轴线穿过使用者的头部，金字塔剩余的部分从使用者的双眼部位发散出去。每只眼睛都有自己的FOV，同时其中的一个稍微同另一个重叠。</strong></p>
+<p><strong>VR 的视野（FOV）就是我们的双眼理论上预期能看到的区域。这个区域大致上呈现一个倒置的金字塔形状，金字塔的中轴线穿过使用者的头部，金字塔剩余的部分从使用者的双眼部位发散出去。每只眼睛都有自己的 FOV，同时其中的一个稍微同另一个重叠。</strong></p>
 
 <p><img alt="FOV related properties" src="https://mdn.mozillademos.org/files/11091/FOVrelatedProperties.png" style="width: 100%;"></p>
 
 <p>The FOV is defined by the following values:</p>
 
-<p>FOV是通过下列的值来定义的：</p>
+<p>FOV 是通过下列的值来定义的：</p>
 
 <ul>
  <li>{{domxref("VRFieldOfViewReadOnly.upDegrees")}}: The number of degrees upwards that the field of view extends in.</li>
@@ -229,29 +229,29 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>The default values for these properties will differ slightly by VR hardware, although they tend to be around 53° up and down, and 47° left and right, with zNear and zFar coming in at around 0.1m and 10000m respectively.</p>
 
-<p><strong>更具VR硬件的不同，这些特性的值会略有不同，然而他们基本上分别都趋向于上下53<span style="font-size: 12px; line-height: 17.5px;">°，左右47°，</span>zNear和zFar两个值可以在0.1m到10000m之间变换。</strong></p>
+<p><strong>更具 VR 硬件的不同，这些特性的值会略有不同，然而他们基本上分别都趋向于上下 53°，左右 47°，zNear 和 zFar 两个值可以在 0.1m 到 10000m 之间变换。</strong></p>
 
 <p>Different users will also require slightly different values for optimal viewing. It therefore makes sense to be able to calibrate these when a user starts using an app. You can detect the current value of these using the methods of the {{domxref("VREyeParameters")}} interface, and set new values using the {{domxref("HMDVRDevice.setFieldOfView()")}} method.</p>
 
-<p><strong>不同的使用者将会为了达成尽量完美的视觉体验，而要求略有不同的特性数值。因此，我们有理由在使用者开始使用一个APP之前，对这些特性进行测算。你可以使用{{domxref("VREyeParameters")}} interface, and set new values using the {{domxref("HMDVRDevice.setFieldOfView()")}} method.这个方法来侦测现行的特性值。</strong></p>
+<p><strong>不同的使用者将会为了达成尽量完美的视觉体验，而要求略有不同的特性数值。因此，我们有理由在使用者开始使用一个 APP 之前，对这些特性进行测算。你可以使用{{domxref("VREyeParameters")}} interface, and set new values using the {{domxref("HMDVRDevice.setFieldOfView()")}} method.这个方法来侦测现行的特性值。</strong></p>
 
 <div class="note">
 <p><strong>Note</strong>: The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.</p>
 
-<p><strong>注释：使用者潜在的可以看到所有他们身边的事物，这是一个APP和游戏中出现的全新的概念。那就是，试着传达给人们一个发现他们身后事物的理由--引导他们去发现那些在一开始并没有出现在他们视野中的事物。描述他们身后的世界。【K】</strong></p>
+<p><strong>注释：使用者潜在的可以看到所有他们身边的事物，这是一个 APP 和游戏中出现的全新的概念。那就是，试着传达给人们一个发现他们身后事物的理由 -- 引导他们去发现那些在一开始并没有出现在他们视野中的事物。描述他们身后的世界。【K】</strong></p>
 
-<p>【可以说这一点是VR概念中同其他3D技术区别开，非常重要的特性，就是创建和引导使用者去发现他们视野中看不见的部分】</p>
+<p>【可以说这一点是 VR 概念中同其他 3D 技术区别开，非常重要的特性，就是创建和引导使用者去发现他们视野中看不见的部分】</p>
 </div>
 
 <p> </p>
 
 <p> </p>
 
-<h2 id="Concepts_for_VR_apps_VR_APP的概念【K】">Concepts for VR apps VR APP的概念<strong>【K】</strong></h2>
+<h2 id="Concepts_for_VR_apps_VR_APP的概念【K】">Concepts for VR apps VR APP 的概念<strong>【K】</strong></h2>
 
 <p>This section discusses concepts to be aware of when developing VR apps that you've probably not had to consider before when developing regular apps for mobile or desktop.</p>
 
-<p><strong>这个部分讨论的是，从前在我们开发普通的APP和手机或者PC应用时，不必考虑的，但是在我们开发VR APP的时候必须被意识到的概念。</strong></p>
+<p><strong>这个部分讨论的是，从前在我们开发普通的 APP 和手机或者 PC 应用时，不必考虑的，但是在我们开发 VR APP 的时候必须被意识到的概念。</strong></p>
 
 <p> </p>
 
@@ -263,9 +263,9 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p><strong>立体视觉</strong></p>
 
-<p>Stereoscopic vision is the normal vision humans and (most) animals have — <span class="hvr">the</span> <span class="hvr">perception</span> of two <span class="hvr">slightly</span> <span class="hvr">differing</span> <span class="hvr">images</span> (one <span class="hvr">from</span> <span class="hvr">each</span> <span class="hvr">eye) as a single image. This</span> <span class="hvr">results</span> in <span class="hvr">depth</span> <span class="hvr">perception, helping us to see the world in glorious 3D. To recreate this in VR apps, you need to render two very slightly different views side by side, which will be taken in by the left and right eyes when the user is using the HMD.</span></p>
+<p>Stereoscopic vision is the normal vision humans and (most) animals have — the perception of two slightly differing images (one from each eye) as a single image. This results in depth perception, helping us to see the world in glorious 3D. To recreate this in VR apps, you need to render two very slightly different views side by side, which will be taken in by the left and right eyes when the user is using the HMD.</p>
 
-<p><strong>立体视觉是大多数的动物以及人类拥有的正常的视觉效果--也就是将来自每只眼睛的略有差别的图像，通过大脑的处理，感知为一张立体的图片。这种对深度的感知结果，帮助我们通过一种神奇的3D的视角看世界。为了在APP中重现这种视觉效果，你需要渲染两幅略有不同的场景，当使用者在通过使用HMD观看时能分别被左右眼所调用。</strong></p>
+<p><strong>立体视觉是大多数的动物以及人类拥有的正常的视觉效果 -- 也就是将来自每只眼睛的略有差别的图像，通过大脑的处理，感知为一张立体的图片。这种对深度的感知结果，帮助我们通过一种神奇的 3D 的视角看世界。为了在 APP 中重现这种视觉效果，你需要渲染两幅略有不同的场景，当使用者在通过使用 HMD 观看时能分别被左右眼所调用。</strong></p>
 
 <p> </p>
 
@@ -275,16 +275,16 @@ translation_of: Web/API/WebVR_API/Concepts
 
 <p>The primary technology used to make you feel present in a 360º scene, thanks to the gyroscope, accelerometer, and magnetometer (compass) included in the HMD.</p>
 
-<p><strong>首要的使我们能够感到置身于360°场景中的科技，要感谢包括在HMD设备中的陀螺仪、加速剂、磁力计等装置。</strong><br>
+<p><strong>首要的使我们能够感到置身于 360°场景中的科技，要感谢包括在 HMD 设备中的陀螺仪、加速剂、磁力计等装置。</strong><br>
  It has primary relevance because it makes our eyes believe we are in front of a spherical screen, giving users realistic immersion inside the app canvas.</p>
 
-<p><strong>这种技术对于VR有非常重要的关联性，因为它让我们的眼睛相信我们置身于一个球形的屏幕前，它提供给使用者一种在APP画布中沉浸式的体验。</strong></p>
+<p><strong>这种技术对于 VR 有非常重要的关联性，因为它让我们的眼睛相信我们置身于一个球形的屏幕前，它提供给使用者一种在 APP 画布中沉浸式的体验。</strong></p>
 
 <h3 id="Eye_strain【K】眼部拉伤">Eye strain<strong>【K】眼部拉伤</strong></h3>
 
 <p>A term commonly used in VR because it is a major handicap of using an HMD — we are constantly fooling the eye with what we are showing in the app canvas, and this leads to the eyes doing a lot more work than they normally would, so using VR apps for any extended period of time can lead to eye strain.</p>
 
-<p><strong>这是一个通常使用在VR中的术语，因为这也是使用HMD设备的一个副作用--我们的视线历来会追踪我们在APP画布中被展示的内容，然而这将导致我们的眼睛超负荷的工作，因此假如我们使用VR APP时，有任何超时的行为，都有可能导致眼部的拉伤。</strong></p>
+<p><strong>这是一个通常使用在 VR 中的术语，因为这也是使用 HMD 设备的一个副作用 -- 我们的视线历来会追踪我们在 APP 画布中被展示的内容，然而这将导致我们的眼睛超负荷的工作，因此假如我们使用 VR APP 时，有任何超时的行为，都有可能导致眼部的拉伤。</strong></p>
 
 <p> </p>
 
@@ -302,23 +302,23 @@ translation_of: Web/API/WebVR_API/Concepts
  <li>Avoid rapid brightness changes.</li>
  <li><strong>避免迅速的视线的改变。</strong></li>
  <li>Avoid presenting the user with large amounts of text to read. You should also be careful with the distance between the eyes/camera and the text to read. 0.5m is uncomfortable, whereas at more than 2m the stereo effect starts to break down, so somewhere in between is advisable.</li>
- <li><strong>避免给使用者展现大量的文本内容。你应该非常注意眼睛/摄像机同文本之间的距离。0.5m太近了，然而假如超过2m的话，那么立体的效果将会崩溃，所以在0.5--2之间的距离是合适的。</strong></li>
+ <li><strong>避免给使用者展现大量的文本内容。你应该非常注意眼睛/摄像机同文本之间的距离。0.5m 太近了，然而假如超过 2m 的话，那么立体的效果将会崩溃，所以在 0.5--2 之间的距离是合适的。</strong></li>
  <li>Be careful with the distance between objects and the camera in general. Oculus recommends 0.75m as a minimum distance of focus.</li>
- <li><strong>注意设定物体到摄像机之间的一般距离。OCULUS建议的最小距离是0.75m。</strong></li>
+ <li><strong>注意设定物体到摄像机之间的一般距离。OCULUS 建议的最小距离是 0.75m。</strong></li>
  <li>Use a pointer if the user needs to interact with an object in the scene — this will help them point to it correctly with less effort.</li>
 </ul>
 
 <p>In general, the path of least visual effort will give the user a less tiring experience.</p>
 
 <ul>
- <li><strong>如果使用者需要和场景中的物体进行互动，那么尽量使用一个指针--这将帮助他们精准和更加容易的指向那个物体。一般情况下，最少的视觉上的动作能提供给使用者最轻松的体验。</strong></li>
+ <li><strong>如果使用者需要和场景中的物体进行互动，那么尽量使用一个指针 -- 这将帮助他们精准和更加容易的指向那个物体。一般情况下，最少的视觉上的动作能提供给使用者最轻松的体验。</strong></li>
 </ul>
 
 <h3 id="Motion_sickness_晕动病【K】">Motion sickness 晕动病<strong>【K】</strong></h3>
 
 <p>If developers do not take utmost care, VR apps can actually cause their users to feel sick. This effect is produced when the stimuli their eyes are receiving is not what the body expects to receive.</p>
 
-<p><strong>如果开发者没有非常注意的话，VR APP将会很有可能引起它的使用者的反感。这种反应的产生是因为我们的眼睛受到了，我们的身体并不准备接收的刺激。</strong></p>
+<p><strong>如果开发者没有非常注意的话，VR APP 将会很有可能引起它的使用者的反感。这种反应的产生是因为我们的眼睛受到了，我们的身体并不准备接收的刺激。</strong></p>
 
 <p>To avoid bringing on motion sickness in our users (or at least minimize the effects), we need to:</p>
 
@@ -328,9 +328,9 @@ translation_of: Web/API/WebVR_API/Concepts
  <li>Always maintain head tracking (this is the most important of all, especially if it occurs in middle of the experience.)</li>
  <li><strong>总是保证头部的追踪（这是最重要的，特别是在体验过程中头部移动的时候）</strong></li>
  <li>Use constant velocity; avoid acceleration or decceleration camera movements (use linear acceleration, and avoid vs easing if you can.)</li>
- <li><strong>使用稳定的速率；避免摄像机的加速和减速运动（使用线性加速度，同时假如有可能避免VS EASING）</strong></li>
+ <li><strong>使用稳定的速率；避免摄像机的加速和减速运动（使用线性加速度，同时假如有可能避免 VS EASING）</strong></li>
  <li>Keep the framerate up (less than 30fps is uncomfortable.)</li>
- <li><strong>尽量提高帧速率（低于30FPS是不舒适的体验）</strong></li>
+ <li><strong>尽量提高帧速率（低于 30FPS 是不舒适的体验）</strong></li>
  <li>Avoid sharp and/or unexpected camera rotations.</li>
  <li><strong>避免尖锐的或者突然的摄像机的转动。</strong></li>
  <li>Add fixed points of reference for fixed objects (otherwise the user will believe they are on the move.)</li>
@@ -338,69 +338,69 @@ translation_of: Web/API/WebVR_API/Concepts
  <li>Do not use Depth of Field or Motion Blur post processing because you do not know where the eyes will focus.</li>
  <li><strong>不要使用景深视角和动态模糊的后期处理，因为你不知道使用者的视线会聚焦在哪里。</strong></li>
  <li>Avoid brightness changes (use low frecuency textures or fog effects to create smooth lighting transitions).Overall your eyes should not send signals to the brain that cause reflex actions in other parts of the body.</li>
- <li><strong>避免光线突然的改变（使用低频率的质感或者迷雾效果来制造光线的平滑的转变效果）。总之，就是要使你的眼睛尽量不要传输那种会引起你身体其他部位强烈反应的信号。【这是为什么呢？VR不就是为了制造特效，求刺激么，为什么要有这么多的限制。求解释。】</strong></li>
+ <li><strong>避免光线突然的改变（使用低频率的质感或者迷雾效果来制造光线的平滑的转变效果）。总之，就是要使你的眼睛尽量不要传输那种会引起你身体其他部位强烈反应的信号。【这是为什么呢？VR 不就是为了制造特效，求刺激么，为什么要有这么多的限制。求解释。】</strong></li>
 </ul>
 
 <h3 id="Latency_延迟【K】">Latency 延迟<strong>【K】</strong></h3>
 
 <p>Latency is the time between the physical head movement and the visual display reaching the user's eyes from the screen of an HMD being updated. This is one of the most critical factors in providing a realistic experience. Humans can detect very small delays — we need to keep the latency below 20 milliseconds if they are to be imperceptible (for example a 60Hz monitor has a 16 ms response.)</p>
 
-<p><strong>延迟指的是，头部的物理转动动作，显示设备在接收了HMD的信息更新后，这两者之间的时间间隔。这是一个在提供虚拟现实体验的过程中非常关键的因素。人体能感知到非常细微的延迟--如果我们要让人体感知不到这种延迟，我们需要将延迟保持在20微妙以下（例如一个60HZ的显示器拥有16ms的返回速度。）</strong></p>
+<p><strong>延迟指的是，头部的物理转动动作，显示设备在接收了 HMD 的信息更新后，这两者之间的时间间隔。这是一个在提供虚拟现实体验的过程中非常关键的因素。人体能感知到非常细微的延迟 -- 如果我们要让人体感知不到这种延迟，我们需要将延迟保持在 20 微妙以下（例如一个 60HZ 的显示器拥有 16ms 的返回速度。）</strong></p>
 
 <p>The Oculus Rift headset has a letency of 20 ms or less, but woth mobile device-based setups it will depend heavily on the smartphone CPU power and other capabilities. </p>
 
-<p><strong>Oculus Rift headset的延迟在20ms甚至比这更低，但是目前这都非常依赖于智能手机的CPU性能和其他性能。</strong></p>
+<p><strong>Oculus Rift headset 的延迟在 20ms 甚至比这更低，但是目前这都非常依赖于智能手机的 CPU 性能和其他性能。</strong></p>
 
 <h3 id="Framerate_(_Frames_per_second_FPS_)_帧率【K】">Framerate ( Frames per second / FPS ) 帧率<strong>【K】</strong></h3>
 
 <p>Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered juddery, and annoying to the user.、</p>
 
-<p><strong>根据维基百科的定义，帧率指的是一个设备产生单一连贯的图像的速率，叫做框架。60FPS的帧率足够提供给使用者一个平稳的体验，但是更加要取决于APP运行的设备的表现，或者是你想要体验的VR内容，也有可能大大的降低。假如帧率小于了30FPS，通常会发生严重的颤抖，并且使使用者产生厌恶感。</strong></p>
+<p><strong>根据维基百科的定义，帧率指的是一个设备产生单一连贯的图像的速率，叫做框架。60FPS 的帧率足够提供给使用者一个平稳的体验，但是更加要取决于 APP 运行的设备的表现，或者是你想要体验的 VR 内容，也有可能大大的降低。假如帧率小于了 30FPS，通常会发生严重的颤抖，并且使使用者产生厌恶感。</strong></p>
 
 <p>One of the most difficult tasks is to maintain a constant and high framerate value, so we must optimize our code to make it as efficient as possible. It is preferable to have a decent framerate that doesn't constantly or suddenly change; for this you need to as few necessary objects moving into the scene as possible and (in the case of WebGL) try to reduce draw calls. </p>
 
-<p><strong>最困难的任务之一就是保持一个稳定的和高帧率的值，所以我们必须优化代码从而使它发挥最大的功效。假如能够有一个合适的帧率并且不会规律的或者突然的改变，那将会是非常好的体验；因此你需要在一个场景中设置尽量少的物体（例如在WEBGL中）并且减小DRAW CALLS的值。</strong></p>
+<p><strong>最困难的任务之一就是保持一个稳定的和高帧率的值，所以我们必须优化代码从而使它发挥最大的功效。假如能够有一个合适的帧率并且不会规律的或者突然的改变，那将会是非常好的体验；因此你需要在一个场景中设置尽量少的物体（例如在 WEBGL 中）并且减小 DRAW CALLS 的值。</strong></p>
 
 <h3 id="Interpupillary_distance_(_IPD_)_瞳孔间距【K】">Interpupillary distance ( IPD ) 瞳孔间距<strong>【K】</strong></h3>
 
 <p>Based on the Wikipedia definition, IPD is the distance between the centers of the pupils of the two eyes. IPD is critical for the design of binocular viewing systems, where both eye pupils need to be positioned within the exit pupils of the viewing system.</p>
 
-<p><strong>根据维基百科的定义，IPD是指两眼瞳孔之间的距离。IPD对于双目视觉系统是非常重要的，因为双眼的瞳孔都必须对准这套视觉系统的瞳孔出口。</strong></p>
+<p><strong>根据维基百科的定义，IPD 是指两眼瞳孔之间的距离。IPD 对于双目视觉系统是非常重要的，因为双眼的瞳孔都必须对准这套视觉系统的瞳孔出口。</strong></p>
 
 <p>Interpupillary distace ( IPD ) is represented by {{domxref("VREyeParameters.eyeTranslation")}} in WebVR.</p>
 
-<p><strong>瞳孔间距（IPD）可用 {{domxref("VREyeParameters.eyeTranslation")}} 来表示.</strong></p>
+<p><strong>瞳孔间距（IPD）可用 {{domxref("VREyeParameters.eyeTranslation")}} 来表示。</strong></p>
 
 <p>This value is returned by the HMD and its value may be around 60 to 70 mm; in the case of some HMDs like Oculus Rift's, you can set your own IPD. Normally we don't change this value but you can play with it to change the scale of the entire scene. For example, if your IPD is set to 6000 mm, the user would view the scene like a giant looking at a Lilliputian world.</p>
 
-<p><strong>这个值是通过HMD来返回的并且它的值一般在60-70mm之间；在像是Oculus Rift这样的HMD设备中，你可以设置你自己的IPD。一般我们不会去改变这个值，但是你可以通过有意的改变它从而改变你所身处的整个场景。例如，如果你将IPD调整到6000mm，使用者将会看到一个好像巨人身处小人国中一样的世界。</strong></p>
+<p><strong>这个值是通过 HMD 来返回的并且它的值一般在 60-70mm 之间；在像是 Oculus Rift 这样的 HMD 设备中，你可以设置你自己的 IPD。一般我们不会去改变这个值，但是你可以通过有意的改变它从而改变你所身处的整个场景。例如，如果你将 IPD 调整到 6000mm，使用者将会看到一个好像巨人身处小人国中一样的世界。</strong></p>
 
 <h3 id="Degrees_of_Freedom_(_DoF_)_自由度【K】">Degrees of Freedom ( DoF ) 自由度<strong>【K】</strong></h3>
 
 <p>DoF refers to the movement of a rigid body inside space. There is no uniformity in creating acronyms for this term — we can find references to 3DoF in the context of sensors that detect only rotational head tracking, and 6DoF when an input allows us to control position and orientation simultaneously. We even sometimes find 9DoF references when the hardware contains three sensors like gyroscope, accelerometer and magnetometer, but the results of the 3 x 3DoF values will actually return a 6 degrees of freedom tracking.</p>
 
-<p><strong>DOF指向的是空间中固态物体移动的自由度。并没有一个统一的对这个专业术语的缩写--我们可以找到，在关于侦测头部转动的传感器的那篇文章中的3DOF的参考，还有当一个传入设备允许我们同时控制位置和方位信息时的6DOF。我们有时候甚至会看到9DOF的案例，那就是当硬件中包含了三个感应装置时，如陀螺仪、加速计和磁力计，但是3 x 3DoF的值的接过实际上返回的，还是一个6纬的自由度跟踪结果。</strong></p>
+<p><strong>DOF 指向的是空间中固态物体移动的自由度。并没有一个统一的对这个专业术语的缩写 -- 我们可以找到，在关于侦测头部转动的传感器的那篇文章中的 3DOF 的参考，还有当一个传入设备允许我们同时控制位置和方位信息时的 6DOF。我们有时候甚至会看到 9DOF 的案例，那就是当硬件中包含了三个感应装置时，如陀螺仪、加速计和磁力计，但是 3 x 3DoF 的值的接过实际上返回的，还是一个 6 纬的自由度跟踪结果。</strong></p>
 
 <p>DoF is directly related to the tracking of the user's head movement.</p>
 
-<p><strong>DOF直接和使用者的头部运动追踪相关联。</strong></p>
+<p><strong>DOF 直接和使用者的头部运动追踪相关联。</strong></p>
 
 <h3 id="Cone_of_focus_锥形焦点【K】">Cone of focus 锥形焦点<strong>【K】</strong></h3>
 
 <p>Although our field of view is much larger (approximately 180º), we need to be aware that only in a small portion of that field can you perceive symbols (the center 60º) or read text (the center 10º). If you do not have an eye tracking sensor we assume that the center of the screen is where the user is focusing their eyes.</p>
 
-<p><strong>虽然我们的视野非常的旷阔（最大可以达到180°），但是我们必须要意识到只有在一个小范围内，你才可以察觉到一些标识的存在（中心向外60°）或者读取文本（中心向外10°）。如果你没有一个眼部追踪器，那么我们建议你将使用者的视角尽量控制在屏幕中心点附近。</strong></p>
+<p><strong>虽然我们的视野非常的旷阔（最大可以达到 180°），但是我们必须要意识到只有在一个小范围内，你才可以察觉到一些标识的存在（中心向外 60°）或者读取文本（中心向外 10°）。如果你没有一个眼部追踪器，那么我们建议你将使用者的视角尽量控制在屏幕中心点附近。</strong></p>
 
 <p>This limitation is important to consider when deciding where place visuals on the app canvas — too far towards the edge of the cone of focus can lead to eye strain much ore quickly. There is a very interesting post about this (amongst other things) at MozVR.com — see <a href="http://mozvr.com/posts/quick-vr-prototypes/">Quick VR Mockups with Illustrator</a>.</p>
 
-<p>这样的限制对于在考虑如何在APP画布上设置视角的时候，是非常重要的--假如太过于远离锥形焦点的边缘，就可能更快更容易的导致眼部的拉伤。想要阅读MozVR.com 上的关于这个问题的有意思的文章（还包含其他内容）--请点击<a href="http://mozvr.com/posts/quick-vr-prototypes/">Quick VR Mockups with Illustrator</a>.</p>
+<p>这样的限制对于在考虑如何在 APP 画布上设置视角的时候，是非常重要的 -- 假如太过于远离锥形焦点的边缘，就可能更快更容易的导致眼部的拉伤。想要阅读 MozVR.com 上的关于这个问题的有意思的文章（还包含其他内容）-- 请点击<a href="http://mozvr.com/posts/quick-vr-prototypes/">Quick VR Mockups with Illustrator</a>.</p>
 
-<h3 id="3D_Positional_Audio_3D定位音效【K】【如ECHO回声APP】">3D Positional Audio 3D定位音效<strong>【K】【如ECHO回声APP】</strong></h3>
+<h3 id="3D_Positional_Audio_3D定位音效【K】【如ECHO回声APP】">3D Positional Audio 3D 定位音效<strong>【K】【如 ECHO 回声 APP】</strong></h3>
 
 <p>3D positional audio refers to a group of effects that manipulate audio to simulate how it would sound in a three dimensional space.</p>
 
-<p><strong>3D定位音效，指的是一组控制声音去实现怎样模拟它在一个三维空间中播放的效果。</strong>，</p>
+<p><strong>3D 定位音效，指的是一组控制声音去实现怎样模拟它在一个三维空间中播放的效果。</strong>，</p>
 
 <p>This directly related to the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, which allows us to place sounds on objects we have in the canvas or launch audio depending on the part of the scene the user is traveling towards or looking at.</p>
 
-<p><strong>这项技术直接关系到<a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，它可以让我们将一段声音附加到，一个我们在VANVAS中或者launch audio中的物体上，并且基于一个用户在其中可以移动或者观看的场景的一部分。</strong></p>
+<p><strong>这项技术直接关系到<a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，它可以让我们将一段声音附加到，一个我们在 VANVAS 中或者 launch audio 中的物体上，并且基于一个用户在其中可以移动或者观看的场景的一部分。</strong></p>

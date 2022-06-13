@@ -3,23 +3,13 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 tags:
   - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - EXIF
-  - 実験的
-  - 画像補正
-  - 画像の向き
-  - Deprecated
-  - 向き
-  - Reference
+  - リファレンス
   - image-orientation
   - recipe:css-property
 browser-compat: css.properties.image-orientation
 translation_of: Web/CSS/image-orientation
 ---
 **`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
-
-> **Note:** `from-image` と `none` 以外の値は、仕様書では非推奨とされています。
 
 ```css
 /* キーワード値 */
@@ -30,12 +20,8 @@ image-orientation: from-image; /* 画像の EXIF データを使用 */
 image-orientation: inherit;
 image-orientation: initial;
 image-orientation: revert;
+image-orientation: revert-layer;
 image-orientation: unset;
-
-/* 廃止された値 {{obsolete_inline(63)}} */
-image-orientation: 90deg; /* 90度回転 */
-image-orientation: 90deg flip; /* 90度回転して、水平方向に反転 */
-image-orientation: flip; /* 回転せず、水平方向の反転のみ適用 */
 ```
 
 ## 構文
@@ -46,10 +32,6 @@ image-orientation: flip; /* 回転せず、水平方向の反転のみ適用 */
   - : 既定の初期値です。追加の画像の回転を適用しません。画像はエンコードされた方向、または他の CSS プロパティの値で決められた方向になります。
 - `from-image`
   - : 画像に含まれている {{interwiki("wikipedia", "EXIF")}} 情報を使用して、画像の向きを適切にします。
-- {{cssxref("&lt;angle&gt;")}}{{deprecated_inline}}
-  - : 画像を回転させる {{cssxref("&lt;angle&gt;")}}。 もっとも近い `90deg` (`0.25turn`) 単位の値に丸められます。
-- `flip`{{deprecated_inline}}
-  - : {{cssxref("&lt;angle&gt;")}} 値に従って回転した後に、画像を水平方向に反転します (つまり鏡像にします)。{{cssxref("&lt;angle&gt;")}} を指定しない場合は、 `0deg` が使用されます。
 
 ## 解説
 
@@ -67,35 +49,53 @@ image-orientation: flip; /* 回転せず、水平方向の反転のみ適用 */
 
 ## 例
 
-<h3 id="Orienting_image_from_image_data">画像データから画像の向きを変更</h3>
+### 画像データから画像の向きを変更
+
+以下の画像は 180 度回転しており、 `image-orientation` プロパティを使用して、画像内の EXIF データに基づいて向きを修正しています。 `image-orientation` を `none` に変更すると、このプロパティの効果を見ることができます。
 
 #### CSS
 
 ```css
 #image {
-  image-orientation: from-image; /* ライブ例の中で変更することができます */
+  image-orientation: from-image; /* ライブサンプルの中で変更することができます */
+}
+```
+
+```css hidden
+img {
+  margin: .5rem 0;
+}
+
+label {
+  font-family: monospace;
 }
 ```
 
 ```html hidden
-<img id="image" src="mdn.svg"
+<img id="image" src="oriole.jpg"
     alt="Orientation taken from the image">
-<select id="imageOrientation">
-  <option value="from-image">from-image</option>
-  <option value="none">none</option>
-</select>
+
+<div>
+  <input type="radio" id="from-image" name="orientation" value="from-image"
+         checked>
+  <label for="from-image">from-image</label>
+</div>
+
+<div>
+  <input type="radio" id="none" name="orientation" value="none">
+  <label for="none">none</label>
+</div>
 ```
 
 ```js hidden
-var imageOrientation = document.getElementById("imageOrientation");
-imageOrientation.addEventListener("change", function (evt) {
+document.addEventListener('change', evt => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 240)}}
+{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 900)}}
 
 ## 仕様書
 

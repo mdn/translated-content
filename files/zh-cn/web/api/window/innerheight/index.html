@@ -23,7 +23,7 @@ translation_of: Web/API/Window/innerHeight
 
 <h2 id="Notes" name="Notes">备注</h2>
 
-<p>任何窗口对象，如<font face="Courier New, Andale Mono, monospace"> </font>{{domxref("window")}}、frame、frameset 或 secondary window 都支持 <code>innerHeight</code> 属性。</p>
+<p>任何窗口对象，如 {{domxref("window")}}、frame、frameset 或 secondary window 都支持 <code>innerHeight</code> 属性。</p>
 
 <p>有一个<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7" title="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7">算法</a>用来获取不包括水平滚动条的视口高度。</p>
 
@@ -34,13 +34,13 @@ translation_of: Web/API/Window/innerHeight
 <pre class="brush:js">var intFrameHeight = window.innerHeight; // or
 
 var intFrameHeight = self.innerHeight;
-// 返回frameset里面的frame视口的高度
+// 返回 frameset 里面的 frame 视口的高度
 
 var intFramesetHeight = parent.innerHeight;
-// 返回上一级frameset的视口的高度
+// 返回上一级 frameset 的视口的高度
 
 var intOuterFramesetHeight = top.innerHeight;
-// 返回最外部frameset的视口的高度
+// 返回最外部 frameset 的视口的高度
 </pre>
 
 <p>{{todo("link to an interactive demo here")}}</p>

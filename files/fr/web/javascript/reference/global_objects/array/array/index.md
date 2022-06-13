@@ -15,10 +15,12 @@ Le constructeur **`Array()`** permet de créer des objets {{jsxref("Array")}}.
 
 ## Syntaxe
 
-    [element0, element1, ..., elementN]
+```js
+[element0, element1, ..., elementN]
 
-    new Array(element0, element1[, ...[, elementN]])
-    new Array(longueurTableau)
+new Array(element0, element1[, ...[, elementN]])
+new Array(longueurTableau)
+```
 
 ### Paramètres
 

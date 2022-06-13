@@ -61,7 +61,7 @@ translation_of: Web/API/DataTransfer
  <h3 id="不推荐的属性">不推荐的属性</h3>
  </dt>
  <dt>{{domxref("DataTransfer.mozItemCount")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>提供拖动操作中的项目数。在Firefox71中删除。</dd>
+ <dd>提供拖动操作中的项目数。在 Firefox71 中删除。</dd>
 </dl>
 
 <h2 id="Methods" name="Methods">方法</h2>
@@ -72,7 +72,7 @@ translation_of: Web/API/DataTransfer
  <dt>{{domxref("DataTransfer.clearData()")}}</dt>
  <dd>删除与给定类型关联的数据。类型参数是可选的。如果类型为空或未指定，则删除与所有类型关联的数据。如果指定类型的数据不存在，或者 data transfer 中不包含任何数据，则该方法不会产生任何效果。</dd>
  <dt>{{domxref("DataTransfer.getData()")}}</dt>
- <dd>检索给定类型的数据，如果该类型的数据不存在或 data transfer不包含数据，则返回空字符串。</dd>
+ <dd>检索给定类型的数据，如果该类型的数据不存在或 data transfer 不包含数据，则返回空字符串。</dd>
  <dt>{{domxref("DataTransfer.setData()")}}</dt>
  <dd>设置给定类型的数据。如果该类型的数据不存在，则将其添加到末尾，以便类型列表中的最后一项将是新的格式。如果该类型的数据已经存在，则在相同位置替换现有数据。</dd>
  <dt>{{domxref("DataTransfer.setDragImage()")}}</dt>
@@ -111,27 +111,7 @@ translation_of: Web/API/DataTransfer
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#datatransfer','DataTransfer')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><code>mozCursor</code>, <code>mozItemCount</code>, <code>mozSourceNode</code>, <code>mozUserCancelled</code>, <code>addElement()</code>, <code>mozClearDataAt()</code>, <code>mozGetDataAt()</code>, <code>mozSetDataAt()</code> and <code>mozTypesAt</code> are Gecko specific.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#the-datatransfer-interface','DataTransfer')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

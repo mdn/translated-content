@@ -3,28 +3,28 @@ title: ARIA live regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 ---
-<p>使用JavaScript，我们可以动态更改页面的某些部分，而无需重新加载整个页面——例如，可以动态更新搜索结果列表，或者显示不需要用户交互的警告或通知。虽然这些更改对于能够看到页面的用户来说通常是显而易见的，但是对于残疾用户来说，它们可能并不明显。ARIA Live区域填补了这个空白，并提供了一种以编程方式显现动态内容更改的方法，这种方式可以由残疾辅助技术提供提示。</p>
+<p>使用 JavaScript，我们可以动态更改页面的某些部分，而无需重新加载整个页面——例如，可以动态更新搜索结果列表，或者显示不需要用户交互的警告或通知。虽然这些更改对于能够看到页面的用户来说通常是显而易见的，但是对于残疾用户来说，它们可能并不明显。ARIA Live 区域填补了这个空白，并提供了一种以编程方式显现动态内容更改的方法，这种方式可以由残疾辅助技术提供提示。</p>
 
 <div class="note">
 <p><strong>提示</strong>: 辅助技术将播报实时区域内容的动态变化。 必须首先显示活动区域（通常是空的），以便浏览器和辅助技术可以知道它。 然后宣布任何后续更改。</p>
 
-<p>在页面加载时的初始标记中简单地添加一个 <code>aria-live</code> 属性或者一个特殊的活动区域角色( <code>role</code> ) (例如 <code>role="alert"</code>) 将不会起作用。</p>
+<p>在页面加载时的初始标记中简单地添加一个 <code>aria-live</code> 属性或者一个特殊的活动区域角色 ( <code>role</code> ) (例如 <code>role="alert"</code>) 将不会起作用。</p>
 
-<p>向文档中动态添加一个包含 <code>aria-live</code> 属性的元素或者特殊的角色( <code>role</code> ) 也不会导致辅助技术工具的任何播报（在那个时间点，浏览器/辅助技术工具还没有检测到活动区域） 所以你不能监控它的变化)。</p>
+<p>向文档中动态添加一个包含 <code>aria-live</code> 属性的元素或者特殊的角色 ( <code>role</code> ) 也不会导致辅助技术工具的任何播报（在那个时间点，浏览器/辅助技术工具还没有检测到活动区域） 所以你不能监控它的变化)。</p>
 
 <p>总是确保实时区域首先出现在文档中，然后再动态添加/更改任何内容。</p>
 
-<p>只要在更改发生之前添加属性，就可以在要宣布更改的元素上包含 <code>aria-live</code> 属性或专门的活动区域角色（例如<code>role =“ alert”</code>）——在原始标记中或动态地使用JavaScript。</p>
+<p>只要在更改发生之前添加属性，就可以在要宣布更改的元素上包含 <code>aria-live</code> 属性或专门的活动区域角色（例如<code>role =“ alert”</code>）——在原始标记中或动态地使用 JavaScript。</p>
 </div>
 
-<h2 id="简单的活动区域"><span class="mw-headline" id="Live_Region_State">简单的活动区域</span></h2>
+<h2 id="简单的活动区域">简单的活动区域</h2>
 
-<p>在不重新加载页面的情况下更新的动态内容通常是区域或窗口小部件。 非交互式的简单内容更改应标记为实时区域。 以下是每个相关的ARIA活动区域属性的列表，并带有说明。</p>
+<p>在不重新加载页面的情况下更新的动态内容通常是区域或窗口小部件。 非交互式的简单内容更改应标记为实时区域。 以下是每个相关的 ARIA 活动区域属性的列表，并带有说明。</p>
 
 <ol>
- <li><code><strong>aria-live</strong></code>: <code>aria-live=POLITENESS_SETTING</code> 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置: <code>off</code>, <code>polite</code> or <code>assertive</code> 。默认设置是 <code>off</code> 。这个设置是到目前为止最重要的。</li>
+ <li><code><strong>aria-live</strong></code>: <code>aria-live=POLITENESS_SETTING</code> 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：<code>off</code>, <code>polite</code> or <code>assertive</code> 。默认设置是 <code>off</code> 。这个设置是到目前为止最重要的。</li>
  <li>
-  <p class="comment"><code><strong>aria-controls</strong></code>: <code>aria-controls=[IDLIST]</code> 被用来将控制动作与它控制的区域相关联。区域就像<code>div</code> 里面的 <code>id</code> 被鉴别；多区域可以被一个带空格的控制动作关联，例如： <code>aria-controls="myRegionID1 myRegionsID2"</code>  。</p>
+  <p><code><strong>aria-controls</strong></code>: <code>aria-controls=[IDLIST]</code> 被用来将控制动作与它控制的区域相关联。区域就像<code>div</code> 里面的 <code>id</code> 被鉴别；多区域可以被一个带空格的控制动作关联，例如： <code>aria-controls="myRegionID1 myRegionsID2"</code>  。</p>
 
   <div class="warning"><strong>警告：</strong>尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。 需要研究。</div>
  </li>
@@ -112,7 +112,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>当用户选择一个新的行星时，活动区域的信息会被播报。因为这个活动区域有 <code>aria-live="polite"</code> 属性，屏幕阅读器将会等待用户暂停后再播报更新。这样的话，在列表中向下滑动并选择其他星球将不会在实时区域中播报更新。 仅会针对最终选择的星球播报实时区域的更新。</p>
 
-<p>这是Mac上VoiceOver的屏幕截图，播报对实时区域的更新（通过字幕）：<img alt="A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture." src="https://mdn.mozillademos.org/files/15815/Web_Accessibility_ARIA_ARIA_Live_Regions.png" style="height: 573px; width: 800px;"></p>
+<p>这是 Mac 上 VoiceOver 的屏幕截图，播报对实时区域的更新（通过字幕）：<img alt="A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture." src="https://mdn.mozillademos.org/files/15815/Web_Accessibility_ARIA_ARIA_Live_Regions.png" style="height: 573px; width: 800px;"></p>
 
 <h2 id="更好的专业活动区域角色">更好的专业活动区域角色</h2>
 
@@ -139,12 +139,12 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
   </tr>
   <tr>
    <td>警告</td>
-   <td>在屏幕上闪烁的错误或警告信息。警报对于向用户发出客户端验证通知特别重要。 （待定：带有ARIA信息的ARIA表单教程链接）</td>
-   <td>为最大化兼容性，当你使用这个角色时，请加入额外的<code>aria-live="assertive"</code> 参数。但是，同时添加 <code>aria-live</code> 和 <code>role="alert"</code> 会导致在iOS平台上出现VoiceOver的双重播报问题。</td>
+   <td>在屏幕上闪烁的错误或警告信息。警报对于向用户发出客户端验证通知特别重要。（待定：带有 ARIA 信息的 ARIA 表单教程链接）</td>
+   <td>为最大化兼容性，当你使用这个角色时，请加入额外的<code>aria-live="assertive"</code> 参数。但是，同时添加 <code>aria-live</code> 和 <code>role="alert"</code> 会导致在 iOS 平台上出现 VoiceOver 的双重播报问题。</td>
   </tr>
   <tr>
    <td>进度条</td>
-   <td>小部件和活动区域之间的混合体。 将此参数与 <code>aria-valuemin</code> ， <code>aria-valuenow</code> 和<code>aria-valuemax</code> 结合使用。 （<em>待定</em>：请在此处添加更多信息）。</td>
+   <td>小部件和活动区域之间的混合体。 将此参数与 <code>aria-valuemin</code> ， <code>aria-valuenow</code> 和<code>aria-valuemax</code> 结合使用。（<em>待定</em>：请在此处添加更多信息）。</td>
    <td></td>
   </tr>
   <tr>
@@ -164,18 +164,18 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>（<em>待定</em>：有关操作系统 / 浏览器 / 辅助技术工具组合对单个属性的支持的更详细的信息）</p>
 
-<p>JAWS 10.0版中已添加对实时区域的常规支持。 Windows Eyes从8.0版开始支持“在Microsoft Internet Explorer和Mozilla Firefox的浏览模式之外使用”的实时区域。 NVDA早在2008年就为Mozilla Firefox添加了对实时区域的一些基本支持，并在2010年和2014年进行了改进。2015年，还为Internet Explorer（MSHTML）添加了基本支持。</p>
+<p>JAWS 10.0 版中已添加对实时区域的常规支持。 Windows Eyes 从 8.0 版开始支持“在 Microsoft Internet Explorer 和 Mozilla Firefox 的浏览模式之外使用”的实时区域。 NVDA 早在 2008 年就为 Mozilla Firefox 添加了对实时区域的一些基本支持，并在 2010 年和 2014 年进行了改进。2015 年，还为 Internet Explorer（MSHTML）添加了基本支持。</p>
 
 <p>Paciello Group 有一些<a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">与活动区域支持状态有关的信息 </a>(2014) ，Paul J. Adam 特别研究了<a href="http://pauljadam.com/demos/aria-atomic-relevant.html"> 对于 <code>Aria-Atomic </code>与 <code>Aria-Relevant</code> 的支持</a>。 </p>
 
 <ol>
  <li><code><strong>aria-atomic</strong></code><strong> </strong>: <code>aria-atomic=BOOLEAN</code> 被用来设置屏幕阅读器是否应该总是将活动区域整个播报，即使区域中只有一部分内容改变。可能的值为 <code>false</code> 或者 <code>true</code> 。默认值为 <code>false</code> 。</li>
- <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute" title="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code> : <code>aria-relevant=[LIST_OF_CHANGES]</code> 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code> 。 默认值是 <code>additions text</code> 。</li>
- <li><code><strong>aria-labelledby</strong></code> : <code>aria-labelledby=[IDLIST]</code> 被用来将一个区域与其标签关联起来，与 <font face="consolas, Liberation Mono, courier, monospace"><span>aria-control</span></font> 类似，但将标签与区域关联。标签标识符间用空格隔开。</li>
- <li><code><strong>aria-describedby</strong></code> : <code>aria-describedby=[IDLIST]</code> 被用来将一个区域与其描述关联起来，与 <font face="consolas, Liberation Mono, courier, monospace"><span>aria-control</span></font> 类似，但将标签与描述关联。描述标识符间用空格隔开。</li>
+ <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute" title="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code> : <code>aria-relevant=[LIST_OF_CHANGES]</code> 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成：<code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code> 。 默认值是 <code>additions text</code> 。</li>
+ <li><code><strong>aria-labelledby</strong></code> : <code>aria-labelledby=[IDLIST]</code> 被用来将一个区域与其标签关联起来，与 aria-control 类似，但将标签与区域关联。标签标识符间用空格隔开。</li>
+ <li><code><strong>aria-describedby</strong></code> : <code>aria-describedby=[IDLIST]</code> 被用来将一个区域与其描述关联起来，与 aria-control 类似，但将标签与描述关联。描述标识符间用空格隔开。</li>
 </ol>
 
-<h3 id="高级用例_时钟"><span class="mw-headline">高级用例: 时钟</span></h3>
+<h3 id="高级用例_时钟">高级用例: 时钟</h3>
 
 <p>为了举例说明 <code>aria-atomic</code> ，请考虑一个带有简单时钟的站点，其中显示了小时和分钟。 时钟每分钟更新一次，而新的剩余时间仅会覆盖当前内容。</p>
 
@@ -194,7 +194,7 @@ setInterval(function() {
 
 <p>解决此问题的一种方法是，首先清除活动区域的内容，然后注入新内容。 但是，有时这可能不可靠，因为这取决于这两个更新的确切时间。</p>
 
-<p><code>aria-atomic="true"</code> 确保每次更新实时区域时，全部内容都会被完整播报(例如 "时间: 17:34").</p>
+<p><code>aria-atomic="true"</code> 确保每次更新实时区域时，全部内容都会被完整播报 (例如 "时间: 17:34").</p>
 
 <pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
 </pre>
@@ -203,7 +203,7 @@ setInterval(function() {
 <p><strong>注意：</strong> 正如我们观察到的那样，重新设置/更新 innerHTML 会导致整个文本被重新播报，无论你是否设置 <code>aria-atomic="true"</code> ，所以以上的时钟示例并不能像预期那样地工作。</p>
 </div>
 
-<p class="syntaxbox">一个简单的年份控件的工作示例，可以帮助您更好地理解：</p>
+<p>一个简单的年份控件的工作示例，可以帮助您更好地理解：</p>
 
 <pre class="brush: html notranslate">&lt;div id="date-input"&gt;
   &lt;label&gt;Year:
@@ -216,7 +216,7 @@ setInterval(function() {
   &lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<p class="syntaxbox"></p>
+<p></p>
 
 <pre class="brush: js notranslate">function change(event) {
   var yearOut = document.getElementById("year-output");
@@ -229,13 +229,13 @@ setInterval(function() {
   }
 };</pre>
 
-<p class="syntaxbox"></p>
+<p></p>
 
 <p>如果没有 <code>aria-atomic="true"</code> ，屏幕阅读器只会播报"年"的数值的改变。</p>
 
-<p>如果有 <code>aria-atomic-="true"</code> ，屏幕阅读器会播报"设置的年为: <em>改变的值</em>"。</p>
+<p>如果有 <code>aria-atomic-="true"</code> ，屏幕阅读器会播报"设置的年为：<em>改变的值</em>"。</p>
 
-<h3 id="高级用例_名册"><span class="mw-headline">高级用例: 名册</span></h3>
+<h3 id="高级用例_名册">高级用例：名册</h3>
 
 <p>一个聊天站点想要显示当前登录用户的列表。列表将动态反映用户的登录和注销状态的用户（无需重新加载页面）。</p>
 

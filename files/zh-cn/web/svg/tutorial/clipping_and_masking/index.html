@@ -8,7 +8,7 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}</p>
 
-<p>擦除已经创建的元素的部分内容，最初看起来有点矛盾。但是如果你打算在SVG中创建一个半圆形，你将很快发现下面的属性的作用了。</p>
+<p>擦除已经创建的元素的部分内容，最初看起来有点矛盾。但是如果你打算在 SVG 中创建一个半圆形，你将很快发现下面的属性的作用了。</p>
 
 <p><strong>Clipping</strong>用来移除在别处定义的元素的部分内容。在这里，任何半透明效果都是不行的。它只能要么显示要么不显示。</p>
 
@@ -29,9 +29,9 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 &lt;/svg&gt;
 </pre>
 
-<p>在(100,100)创建一个圆形，半径是100。属性<code>clip-path</code>引用了一个带单个rect元素的<code>{{ SVGElement("clipPath") }}</code>元素。它内部的这个矩形将把画布的上半部分涂黑。注意，<code>clipPath</code>元素经常放在一个<code>defs</code>元素内。</p>
+<p>在 (100,100) 创建一个圆形，半径是 100。属性<code>clip-path</code>引用了一个带单个 rect 元素的<code>{{ SVGElement("clipPath") }}</code>元素。它内部的这个矩形将把画布的上半部分涂黑。注意，<code>clipPath</code>元素经常放在一个<code>defs</code>元素内。</p>
 
-<p>然而，该rect不会被绘制。它的象素数据将用来确定：圆形的哪些像素需要最终呈现出来。因为矩形只覆盖了圆形的上半部分，所以下半部分将消失了：</p>
+<p>然而，该 rect 不会被绘制。它的象素数据将用来确定：圆形的哪些像素需要最终呈现出来。因为矩形只覆盖了圆形的上半部分，所以下半部分将消失了：</p>
 
 <div class="hidden">
 <h2 id="Creating_clips">Creating_clips</h2>
@@ -54,7 +54,7 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 <p>{{ EmbedLiveSample('Creating_clips','240','240','/files/3224/clipdemo.png') }}</p>
 
-<p>现在我们已经有了一个半圆形，不用处理弧形路径元素。对于这个剪切，<code>clipPath</code>内部的每个路径都会被检查到、与它的描边属性一起被估值、变形。然后目标的位于clipPath内容的结果的透明度区域的每一块都不会呈现。颜色、不透明度都没有这种效果，因为它们不能让一部分彻底消失。</p>
+<p>现在我们已经有了一个半圆形，不用处理弧形路径元素。对于这个剪切，<code>clipPath</code>内部的每个路径都会被检查到、与它的描边属性一起被估值、变形。然后目标的位于 clipPath 内容的结果的透明度区域的每一块都不会呈现。颜色、不透明度都没有这种效果，因为它们不能让一部分彻底消失。</p>
 
 <h3 id="遮罩">遮罩</h3>
 
@@ -104,7 +104,7 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 <p>{{ EmbedLiveSample('Masking','240','240','/files/3234/maskdemo.png') }}</p>
 
-<h3 id="用opacity定义透明度">用<code>opacity定义透明度</code></h3>
+<h3 id="用opacity定义透明度">用<code>opacity 定义透明度</code></h3>
 
 <p>有一个简单方法可以用来为整个元素设置透明度。它就是<code>opacity</code>属性：</p>
 
@@ -133,10 +133,10 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 <p>{{ EmbedLiveSample('Transparency_with_opacity','240','240','/files/3231/opacitydemo.png') }}</p>
 
-<p>你看到这个示例，红色的圆形在蓝色的背景上，黄色描边设置为50%不透明度，导到双色描边的效果。</p>
+<p>你看到这个示例，红色的圆形在蓝色的背景上，黄色描边设置为 50% 不透明度，导到双色描边的效果。</p>
 
-<h2 id="利用广为人知的CSS技术">利用广为人知的CSS技术</h2>
+<h2 id="利用广为人知的CSS技术">利用广为人知的 CSS 技术</h2>
 
-<p>Web开发工具箱中有一个很有用的工具是<code>display:none</code>。它虽然几无悬念，但是依然可以在SVG上使用该CSS属性，连同CSS2定义的<code>visibility</code>和<code>clip</code>属性。为了恢复以前设置的<code>display:none</code>，知道这一点很重要：所有的SVG元素的初始<code>display</code>值都是<code>inline</code>。</p>
+<p>Web 开发工具箱中有一个很有用的工具是<code>display:none</code>。它虽然几无悬念，但是依然可以在 SVG 上使用该 CSS 属性，连同 CSS2 定义的<code>visibility</code>和<code>clip</code>属性。为了恢复以前设置的<code>display:none</code>，知道这一点很重要：所有的 SVG 元素的初始<code>display</code>值都是<code>inline</code>。</p>
 
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}</p>

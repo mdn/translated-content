@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个新的 {{jsxref("Array")}} 迭代器对象。<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-createarrayiterator">Array Iterator</a>是对象，它的原型（__proto__:Array Iterator）上有一个<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-%arrayiteratorprototype%.next">next</a>方法，可用用于遍历迭代器取得原数组的[key,value]。</p>
+<p>一个新的 {{jsxref("Array")}} 迭代器对象。<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-createarrayiterator">Array Iterator</a>是对象，它的原型（__proto__:Array Iterator）上有一个<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-%arrayiteratorprototype%.next">next</a>方法，可用用于遍历迭代器取得原数组的 [key,value]。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -45,30 +45,30 @@ console.log(iterator.next());
           value:(2) [0, "a"]
            __proto__: Object
 */
-// iterator.next()返回一个对象，对于有元素的数组，
-// 是next{ value: Array(2), done: false }；
-// next.done 用于指示迭代器是否完成：在每次迭代时进行更新而且都是false，
-// 直到迭代器结束done才是true。
-// next.value是一个["key","value"]的数组，是返回的迭代器中的元素值。
+// iterator.next() 返回一个对象，对于有元素的数组，
+// 是 next{ value: Array(2), done: false }；
+// next.done 用于指示迭代器是否完成：在每次迭代时进行更新而且都是 false，
+// 直到迭代器结束 done 才是 true。
+// next.value 是一个 ["key","value"] 的数组，是返回的迭代器中的元素值。
 </pre>
 
-<h3 id="3、iterator.next方法运行">3、iterator.next方法运行</h3>
+<h3 id="3、iterator.next方法运行">3、iterator.next 方法运行</h3>
 
 <pre class="brush: js">var arr = ["a", "b", "c"];
 var iter = arr.entries();
 var a = [];
 
 // for(var i=0; i&lt; arr.length; i++){   // 实际使用的是这个
-for(var i=0; i&lt; arr.length+1; i++){    // 注意，是length+1，比数组的长度大
-    var tem = iter.next();             // 每次迭代时更新next
-    console.log(tem.done);             // 这里可以看到更新后的done都是false
-    if(tem.done !== true){             // 遍历迭代器结束done才是true
+for(var i=0; i&lt; arr.length+1; i++){    // 注意，是 length+1，比数组的长度大
+    var tem = iter.next();             // 每次迭代时更新 next
+    console.log(tem.done);             // 这里可以看到更新后的 done 都是 false
+    if(tem.done !== true){             // 遍历迭代器结束 done 才是 true
         console.log(tem.value);
         a[i]=tem.value;
     }
 }
 
-console.log(a);                         // 遍历完毕，输出next.value的数组</pre>
+console.log(a);                         // 遍历完毕，输出 next.value 的数组</pre>
 
 <h3 id="4、二维数组按行排序">4、二维数组按行排序</h3>
 

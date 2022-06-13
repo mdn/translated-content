@@ -9,13 +9,13 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>{{domxref("RTCDataChannel")}} <span id="result_box" lang="zh-CN"><span>接口是</span></span><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a><span lang="zh-CN"><span>的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。</span> <span>API有意地类似于</span></span><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a><span lang="zh-CN"><span>，因此可以为每个API使用相同的编程模型。</span></span></p>
+<p>{{domxref("RTCDataChannel")}} 接口是<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。 API 有意地类似于<a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>，因此可以为每个 API 使用相同的编程模型。</p>
 
-<p>在本示例中, 我们会在一个页面内建立 一条{{domxref("RTCDataChannel")}}链接 . 这个场景是为了演示如何链接两个Peer，实际场景并不常见。在本示例中解释了协商和建立链接的过程，定位和链接另外一台主机的场景在另外的一个示例中。 </p>
+<p>在本示例中，我们会在一个页面内建立 一条{{domxref("RTCDataChannel")}}链接 . 这个场景是为了演示如何链接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立链接的过程，定位和链接另外一台主机的场景在另外的一个示例中。 </p>
 
 <h2 id="The_HTML">The HTML</h2>
 
-<p>首先让我们看看我们需要的HTML代码<a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">HTML that's needed</a>. 其实很简单，我们先有两个按钮用来链接和断开链接。</p>
+<p>首先让我们看看我们需要的 HTML 代码<a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">HTML that's needed</a>. 其实很简单，我们先有两个按钮用来链接和断开链接。</p>
 
 <pre class="brush: html">&lt;button id="connectButton" name="connectButton" class="buttonleft"&gt;
   Connect
@@ -24,7 +24,7 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
   Disconnect
 &lt;/button&gt;</pre>
 
-<p>然后我们还有一个输入框，用来输入消息。一个按钮，来触发发送事件。这个 {{HTMLElement("div")}} 是给channel中第一个节点使用的。</p>
+<p>然后我们还有一个输入框，用来输入消息。一个按钮，来触发发送事件。这个 {{HTMLElement("div")}} 是给 channel 中第一个节点使用的。</p>
 
 <pre class="brush: html">  &lt;div class="messagebox"&gt;
     &lt;label for="message"&gt;Enter a message:
@@ -36,7 +36,7 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
     &lt;/button&gt;
   &lt;/div&gt;</pre>
 
-<p>最后, 还有一个小DIV用来显示收到的内容. 这个 {{HTMLElement("div")}} 是给channel中第二个peer使用的。</p>
+<p>最后，还有一个小 DIV 用来显示收到的内容。这个 {{HTMLElement("div")}} 是给 channel 中第二个 peer 使用的。</p>
 
 <pre class="brush: html">&lt;div class="messagebox" id="receivebox"&gt;
   &lt;p&gt;Messages received:&lt;/p&gt;
@@ -44,13 +44,13 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
 <h2 id="The_JavaScript_code">The JavaScript code</h2>
 
-<p>你可以直接到<a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js" rel="noopener">look at the code itself on GitHub</a>来看代码, 下面我们也会一步一步的解释。</p>
+<p>你可以直接到<a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js" rel="noopener">look at the code itself on GitHub</a>来看代码，下面我们也会一步一步的解释。</p>
 
-<p>WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过程变得简单;如果你还没有到<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015</a>了解过Promise, 你应该先去看看. 另外本示例还使用了箭头语法<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>。</p>
+<p>WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过程变得简单;如果你还没有到<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015</a>了解过 Promise，你应该先去看看。另外本示例还使用了箭头语法<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>。</p>
 
 <h3 id="启动">启动</h3>
 
-<p>当脚本开始运行时, 我们对load事件挂接 {{event("load")}} 事件侦听, 因此一旦页面完全加载， <code>startup()</code> 函数将被调用。</p>
+<p>当脚本开始运行时，我们对 load 事件挂接 {{event("load")}} 事件侦听，因此一旦页面完全加载， <code>startup()</code> 函数将被调用。</p>
 
 <pre class="brush: js">function startup() {
   connectButton = document.getElementById('connectButton');
@@ -66,11 +66,11 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
   sendButton.addEventListener('click', sendMessage, false);
 }</pre>
 
-<p>上述逻辑一目了然. 我们拿到所有需要操作的页面元素引用, 之后对三个按钮设置事件侦听 {{domxref("EventListener", "event listeners")}} 。</p>
+<p>上述逻辑一目了然。我们拿到所有需要操作的页面元素引用，之后对三个按钮设置事件侦听 {{domxref("EventListener", "event listeners")}} 。</p>
 
 <h3 id="建立连接">建立连接</h3>
 
-<p>当用户点击 "Connect" 按钮,  <code>connectPeers()</code> 方法被调用。下面将逐一分析该方法中的细节。</p>
+<p>当用户点击 "Connect" 按钮， <code>connectPeers()</code> 方法被调用。下面将逐一分析该方法中的细节。</p>
 
 <div class="note">
 <p><strong>注意：</strong> 尽管参与连接的两端都在同一页面，我们将启动连接的一端称为 "local" 端，另一端称为 "remote" 端。</p>
@@ -96,12 +96,12 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>远程端的建立过程类似“local”端， 但它无需自己创建 {{domxref("RTCDataChannel")}} ， 因为我们将通过上面建立的渠道进行连接。 我们创建对 {{event("datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行， 该回调处理将接收到一个 <code>RTCDataChannel</code> 对象，此过程将在文章后面部分描述。</p>
 
-<h4 id="设立ICE_候选人">设立ICE 候选人</h4>
+<h4 id="设立ICE_候选人">设立 ICE 候选人</h4>
 
 <p>下一步为每个连接建立 ICE 候选侦听处理， 当连接的一方出现新的 ICE 候选时该侦听逻辑将被调用以告知连接的另一方此消息。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议  (例如： UDP,、中继UDP 、 TCP之类的) ， 双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。 </p>
+<p><strong>注意：</strong> 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议  (例如： UDP,、中继 UDP 、 TCP 之类的) ， 双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。 </p>
 </div>
 
 <pre class="brush: js">    localConnection.onicecandidate = e =&gt; !e.candidate
@@ -116,7 +116,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <h4 id="启动连接尝试">启动连接尝试</h4>
 
-<p>建立节点连接的最后一项是创建一个连接offer.</p>
+<p>建立节点连接的最后一项是创建一个连接 offer.</p>
 
 <pre class="brush: js">    localConnection.createOffer()
     .then(offer =&gt; localConnection.setLocalDescription(offer))
@@ -130,11 +130,11 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <ol>
  <li>首先调用{{domxref("RTCPeerConnection.createOffer()")}} 方法创建 {{Glossary("SDP")}} (Session Description Protocol) 字节块用于描述我们期待建立的连接。该方法可选地接受一个描述连接限制的对象，例如连接是否必须支持音频、视频或者两者都支持。在我们的简单示例中，没有引入该限制。</li>
- <li>如果该offer成功建立, 我们将上述字节块传递给local连接的 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法。 用于配置local端的连接。</li>
- <li>下一步通过调用<code>remoteConnection.</code>{{domxref("RTCPeerConnection.setRemoteDescription()")}}，告知remote节点上述描述，将local 节点连接到到远程 。  现在 <code>remoteConnection</code> 了解正在建立的连接。</li>
- <li>该是remote 节点回应的时刻了。remote 节点调用 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} 方法予以回应。 该方法生成一个SDP二进制块，用于描述 remote 节点愿意并且有能力建立的连接。 这样的连接配置是两端均可以支持可选项的结合。</li>
- <li>应答建立之后，通过调用{{domxref("RTCPeerConnection.setLocalDescription()")}}传入remoteConnection 。该调用完成了remote端连接的建立 (对于对端的remote 节点而言, 是它的local 端。 这种叙述容易使人困惑，但是看多了您就习惯了。</li>
- <li>最终，通过调用localConnection的{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法，本地连接的远端描述被设置为指向remote节点。</li>
+ <li>如果该 offer 成功建立，我们将上述字节块传递给 local 连接的 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法。 用于配置 local 端的连接。</li>
+ <li>下一步通过调用<code>remoteConnection.</code>{{domxref("RTCPeerConnection.setRemoteDescription()")}}，告知 remote 节点上述描述，将 local 节点连接到到远程 。  现在 <code>remoteConnection</code> 了解正在建立的连接。</li>
+ <li>该是 remote 节点回应的时刻了。remote 节点调用 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} 方法予以回应。 该方法生成一个 SDP 二进制块，用于描述 remote 节点愿意并且有能力建立的连接。 这样的连接配置是两端均可以支持可选项的结合。</li>
+ <li>应答建立之后，通过调用{{domxref("RTCPeerConnection.setLocalDescription()")}}传入 remoteConnection 。该调用完成了 remote 端连接的建立 (对于对端的 remote 节点而言，是它的 local 端。 这种叙述容易使人困惑，但是看多了您就习惯了。</li>
+ <li>最终，通过调用 localConnection 的{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法，本地连接的远端描述被设置为指向 remote 节点。</li>
  <li><code>catch()</code> 调用一个用于处理任何异常的逻辑。</li>
 </ol>
 
@@ -144,7 +144,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <h4 id="对成功的对等连接的处理">对成功的对等连接的处理</h4>
 
-<p>当peer-to-peer连接的任何一方成功连接, 相应的 {{domxref("RTCPeerConnection")}}的{{event("icecandidate")}} 事件将被触发。 在事件的处理中可以执行任何需要的操作， 但在本例中，我们所需要做的只是更新用户界面。</p>
+<p>当 peer-to-peer 连接的任何一方成功连接，相应的 {{domxref("RTCPeerConnection")}}的{{event("icecandidate")}} 事件将被触发。 在事件的处理中可以执行任何需要的操作， 但在本例中，我们所需要做的只是更新用户界面。</p>
 
 <pre class="brush: js">  function handleLocalAddCandidateSuccess() {
     connectButton.disabled = true;
@@ -154,11 +154,11 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
     disconnectButton.disabled = false;
   }</pre>
 
-<p>当local节点连接成功时，禁用 "Connect" 按钮， 当remote节点连接时许用 "Disconnect" 按钮。</p>
+<p>当 local 节点连接成功时，禁用 "Connect" 按钮， 当 remote 节点连接时许用 "Disconnect" 按钮。</p>
 
 <h4 id="数据通道（data_channel）的连接">数据通道（data channel）的连接</h4>
 
-<p>{{domxref("RTCPeerConnection")}} 一旦open, 事件{{event("datachannel")}} 被发送到远端以完成打开数据通道的处理， 该事件触发 <code>receiveChannelCallback()</code> 方法，如下所示：</p>
+<p>{{domxref("RTCPeerConnection")}} 一旦 open，事件{{event("datachannel")}} 被发送到远端以完成打开数据通道的处理， 该事件触发 <code>receiveChannelCallback()</code> 方法，如下所示：</p>
 
 <pre class="brush: js">  function receiveChannelCallback(event) {
     receiveChannel = event.channel;
@@ -167,13 +167,13 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
     receiveChannel.onclose = handleReceiveChannelStatusChange;
   }</pre>
 
-<p>事件{{event("datachannel")}} 在它的channel属性中包括了：  对代表remote节点的 channel的{{domxref("RTCDataChannel")}} 的指向， 它保存了我们用以在该channel上对我们希望处理的事件建立的事件监听。 一旦侦听建立， 每当remote节点接收到数据 <code>handleReceiveMessage()</code> 方法将被调用， 每当通道的连接状态发生改变 <code>handleReceiveChannelStatusChange()</code> 方法将被调用， 因此通道完全打开或者关闭时我们都可以作出相应的相应。</p>
+<p>事件{{event("datachannel")}} 在它的 channel 属性中包括了：  对代表 remote 节点的 channel 的{{domxref("RTCDataChannel")}} 的指向， 它保存了我们用以在该 channel 上对我们希望处理的事件建立的事件监听。 一旦侦听建立， 每当 remote 节点接收到数据 <code>handleReceiveMessage()</code> 方法将被调用， 每当通道的连接状态发生改变 <code>handleReceiveChannelStatusChange()</code> 方法将被调用， 因此通道完全打开或者关闭时我们都可以作出相应的相应。</p>
 
 <h3 id="对通道状态变化的处理">对通道状态变化的处理</h3>
 
-<p>local节点和remote节点采用同样的方法处理表示通道连接状态变更的事件。</p>
+<p>local 节点和 remote 节点采用同样的方法处理表示通道连接状态变更的事件。</p>
 
-<p>当local节点遭遇open 或者 close 事件, <code>handleSendChannelStatusChange()</code> 方法被调用：</p>
+<p>当 local 节点遭遇 open 或者 close 事件，<code>handleSendChannelStatusChange()</code> 方法被调用：</p>
 
 <pre class="brush: js">  function handleSendChannelStatusChange(event) {
     if (sendChannel) {
@@ -194,11 +194,11 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
     }
   }</pre>
 
-<p>如果通道状态已经变更为 "open", 意味着我们已经完成了在两对等节点之间建立连接。 相应地用户界面根据状态更新，许用并将输入光标聚焦在text 输入框，以便用户可以立即输入要发送给对方的文本消息， 同时界面许用 "Send" 和 "Disconnect" 按钮（既然它们已经准备好了），禁用"Connect"按钮，既然在已经建立连接的情况下用不着它。</p>
+<p>如果通道状态已经变更为 "open", 意味着我们已经完成了在两对等节点之间建立连接。 相应地用户界面根据状态更新，许用并将输入光标聚焦在 text 输入框，以便用户可以立即输入要发送给对方的文本消息， 同时界面许用 "Send" 和 "Disconnect" 按钮（既然它们已经准备好了），禁用"Connect"按钮，既然在已经建立连接的情况下用不着它。</p>
 
 <p>当连接状态变更为 "closed"时，界面执行相反的操作： 禁用文本输入框和 "Send" 按钮 , 许用"Connect" 按钮， 以便用户在需要时可以打开新的连接，禁用"Disconnect" 按钮，既然没有连接时用不着它。</p>
 
-<p>另一方面，作为我们例子的remote 节点， 则无视这些状态改变事件, 仅仅是在控制台输出它们：</p>
+<p>另一方面，作为我们例子的 remote 节点， 则无视这些状态改变事件，仅仅是在控制台输出它们：</p>
 
 <pre class="brush: js">  function handleReceiveChannelStatusChange(event) {
     if (receiveChannel) {
@@ -211,7 +211,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <h3 id="发送消息">发送消息</h3>
 
-<p>当用户按下 "Send" 按钮，触发我们已建立的该按钮的 {{event("click")}} 事件处理逻辑，在处理逻辑中调用sendMessage() 方法。 该方法也足够简单：</p>
+<p>当用户按下 "Send" 按钮，触发我们已建立的该按钮的 {{event("click")}} 事件处理逻辑，在处理逻辑中调用 sendMessage() 方法。 该方法也足够简单：</p>
 
 <pre class="brush: js">  function sendMessage() {
     var message = messageInputBox.value;
@@ -221,11 +221,11 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
     messageInputBox.focus();
   }</pre>
 
-<p>首先，待发送的消息文本从文本输入框的 {{htmlattrxref("value", "input")}}属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到remote节点。 都搞定了！ 余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。</p>
+<p>首先，待发送的消息文本从文本输入框的 {{htmlattrxref("value", "input")}}属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。 都搞定了！ 余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。</p>
 
-<h3 id="接收消息"><span id="result_box" lang="zh-CN"><span>接收消息</span></span></h3>
+<h3 id="接收消息">接收消息</h3>
 
-<p><span id="result_box" lang="zh-CN"><span>当远程通道发生“message”事件时，我们的handleReceiveMessage（）方法被调用来处理事件</span></span><span lang="zh-CN"><span>。</span></span></p>
+<p>当远程通道发生“message”事件时，我们的 handleReceiveMessage() 方法被调用来处理事件。</p>
 
 <pre class="brush: js">  function handleReceiveMessage(event) {
     var el = document.createElement("p");
@@ -235,7 +235,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
     receiveBox.appendChild(el);
   }</pre>
 
-<p>该方法只是简单地注入了一些 {{Glossary("DOM")}}， 它创建了 {{HTMLElement("p")}} (paragraph) 元素, 然后创建了 {{domxref("Text")}} 用于显示从事件的<code>data</code> 属性拿到的消息文本。该text node作为子节点附加到<code>receiveBox</code> block，显示在浏览器窗口内容区。</p>
+<p>该方法只是简单地注入了一些 {{Glossary("DOM")}}， 它创建了 {{HTMLElement("p")}} (paragraph) 元素，然后创建了 {{domxref("Text")}} 用于显示从事件的<code>data</code> 属性拿到的消息文本。该 text node 作为子节点附加到<code>receiveBox</code> block，显示在浏览器窗口内容区。</p>
 
 <h3 id="断开节点">断开节点</h3>
 

@@ -22,16 +22,16 @@ translation_of: Web/API/AudioNode/connect
  <dt><code>destination</code></dt>
  <dd>需要连接的 {{domxref("AudioNode")}} 或 {{domxref("AudioParam")}}.</dd>
  <dt><code>outputIndex</code> {{optional_inline}}</dt>
- <dd>一个索引，用于描述当前  <code>AudioNode</code> 的哪个输出会连接到destination。索引数字是由输出频道（详见 <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio channels</a>）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 <code>connect()</code> 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为0。</dd>
+ <dd>一个索引，用于描述当前  <code>AudioNode</code> 的哪个输出会连接到 destination。索引数字是由输出频道（详见 <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio channels</a>）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 <code>connect()</code> 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为 0。</dd>
  <dt><code>inputIndex</code> {{optional_inline}}</dt>
- <dd>一个索引，用于描述当前  <code>AudioNode</code> 会连接到destination的哪个输入，它的默认值是0。索引数字是由输入频道（详见 <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio channels</a>）的数量来确定的。将一个  <code>AudioNode</code> 连接回之前的 <code>AudioNode</code>，以此形成一个圈是可行的。 不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 <code>NotSupportedError</code> 异常。此参数在destination是 {{domxref("AudioParam")}}时不可用。</dd>
+ <dd>一个索引，用于描述当前  <code>AudioNode</code> 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio channels</a>）的数量来确定的。将一个  <code>AudioNode</code> 连接回之前的 <code>AudioNode</code>，以此形成一个圈是可行的。 不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 <code>NotSupportedError</code> 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果destination是一个节点， <code>connect()</code> 返回destination所表示的  {{domxref("AudioNode")}} 对象的引用，允许你链式地调用数个 <code>connect()</code> 。某些浏览器关于该接口的旧实现会返回 {{jsxref("undefined")}}。</p>
+<p>如果 destination 是一个节点， <code>connect()</code> 返回 destination 所表示的  {{domxref("AudioNode")}} 对象的引用，允许你链式地调用数个 <code>connect()</code> 。某些浏览器关于该接口的旧实现会返回 {{jsxref("undefined")}}。</p>
 
-<p>如果destination是一个  <code>AudioParam</code>，<code>connect()</code> 返回 <code>undefined</code>.</p>
+<p>如果 destination 是一个 <code>AudioParam</code>、<code>connect()</code> 返回 <code>undefined</code>。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -110,25 +110,7 @@ lfo.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioNode-connect-AudioNode-AudioNode-destination-unsigned-long-output-unsigned-long-input', 'connect() to an AudioNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioNode-connect-void-AudioParam-destination-unsigned-long-output', 'connect() to an AudioParam')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

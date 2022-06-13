@@ -3,8 +3,8 @@ title: image-rendering
 slug: Web/CSS/image-rendering
 tags:
   - CSS
-  - CSS图像
-  - CSS属性
+  - CSS 图像
+  - CSS 属性
   - 图像
 translation_of: Web/CSS/image-rendering
 ---
@@ -34,7 +34,7 @@ image-rendering: unset;</pre>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd class="syntaxbox">自 Gecko 1.9 （Firefox 3.0）起，Gecko 使用<em>双线性</em>（<em>bilinear</em>）算法进行重新采样（高质量）。</dd>
+ <dd>自 Gecko 1.9（Firefox 3.0）起，Gecko 使用<em>双线性</em>（<em>bilinear</em>）算法进行重新采样（高质量）。</dd>
  <dt><code>smooth</code> {{Experimental_Inline}}</dt>
  <dd>应使用能最大化图像客观观感的算法来缩放图像。特别地，会“平滑”颜色的缩放算法是可以接受的，例如双线性插值。这适用于照片等类型的图像。</dd>
  <dt><code style="white-space: nowrap;">high-quality</code> {{Experimental_Inline}}</dt>
@@ -42,7 +42,7 @@ image-rendering: unset;</pre>
  <dt><code style="white-space: nowrap;">crisp-edges</code></dt>
  <dd>必须使用可有效保留对比度和图像中的边缘的算法来对图像进行缩放，并且，该算法既不会平滑颜色，又不会在处理过程中为图像引入模糊。合适的算法包括<em>最近邻居</em>（<em>nearest-neighbor</em>）算法和其他非平滑缩放算法，比如 <em>2×SaI</em> 和 <em>hqx-*</em> 系列算法。此属性值适用于像素艺术作品，例如一些网页游戏中的图像。</dd>
  <dt><code>pixelated</code></dt>
- <dd>放大图像时, 使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 <code>auto</code> 相同。</dd>
+ <dd>放大图像时，使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 <code>auto</code> 相同。</dd>
 </dl>
 
 <div class="blockIndicator note">
@@ -110,7 +110,7 @@ image-rendering: unset;</pre>
 <p>{{cssinfo}}</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>虽然在最初此属性与 SVG 的 <code>image-rendering</code> 属性定义相近, 但到现在，它们之间已有相当的差别。</p>
+<p><strong>注意：</strong>虽然在最初此属性与 SVG 的 <code>image-rendering</code> 属性定义相近，但到现在，它们之间已有相当的差别。</p>
 </div>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
@@ -136,8 +136,8 @@ image-rendering: unset;</pre>
  <li>IE 9 不支持此非标准属性</li>
 </ul>
 
-<p>WebKit 支持一个非标准属性: <code>-webkit-optimize-contrast</code>.</p>
+<p>WebKit 支持一个非标准属性：<code>-webkit-optimize-contrast</code>.</p>
 
 <p>WebKit Nightly 支持，见 <a href="https://bugs.webkit.org/show_bug.cgi?id=146771">bug</a></p>
 
-<p>Canvas 可以通过人工方式支持 <a class="external" href="http://phrogz.net/tmp/canvas_image_zoom.html">crisp-edge/optimize-contrast</a> 属性.</p>
+<p>Canvas 可以通过人工方式支持 <a class="external" href="http://phrogz.net/tmp/canvas_image_zoom.html">crisp-edge/optimize-contrast</a> 属性。</p>

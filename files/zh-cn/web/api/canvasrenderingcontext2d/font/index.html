@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/font
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.font</code></strong> 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。 使用和 <a href="/en-US/docs/Web/CSS/font" title="en/CSS/font">CSS font</a> 规范相同的字符串值。</p>
+<p><strong><code>CanvasRenderingContext2D.font</code></strong> 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。使用和 <a href="/en-US/docs/Web/CSS/font" title="en/CSS/font">CSS font</a> 规范相同的字符串值。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/CanvasRenderingContext2D/font
 
 <dl>
  <dt><code>value</code></dt>
- <dd>符合CSS {{cssxref("font")}} 语法的{{domxref("DOMString")}} 字符串。默认字体是 10px sans-serif。</dd>
+ <dd>符合 CSS {{cssxref("font")}} 语法的{{domxref("DOMString")}} 字符串。默认字体是 10px sans-serif。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -92,9 +92,9 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="sect1"></h2>
 
-<h3 id="使用CSS字体加载API加载字体">使用CSS字体加载API加载字体</h3>
+<h3 id="使用CSS字体加载API加载字体">使用 CSS 字体加载 API 加载字体</h3>
 
-<p>借助{{domxref("FontFace")}} API的帮助，您可以在画布中使用字体之前显式加载字体。</p>
+<p>借助{{domxref("FontFace")}} API 的帮助，您可以在画布中使用字体之前显式加载字体。</p>
 
 <pre>let f = new FontFace('test', 'url(x)');
 
@@ -104,20 +104,7 @@ f.load().then(function() {
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-font", "CanvasRenderingContext2D.font")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -126,8 +113,8 @@ f.load().then(function() {
 <h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
 
 <ul>
- <li>基于Gecko的浏览器， 例如 Firefox， 实现了一个非标准的并且不赞成使用的属性 <code>ctx.mozTextStyle</code> 。不要使用此属性。</li>
- <li>在Gecko中，当将系统字体设置为canvas 2D上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值 （不返回任何内容）。 这已在Firefox 57（{{bug(1374885)}}）中发布的Firefox的<a href="https://wiki.mozilla.org/Quantum/Stylo">Quantum/Stylo</a>并行CSS引擎中修复。</li>
+ <li>基于 Gecko 的浏览器，例如 Firefox， 实现了一个非标准的并且不赞成使用的属性 <code>ctx.mozTextStyle</code> 。不要使用此属性。</li>
+ <li>在 Gecko 中，当将系统字体设置为 canvas 2D 上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值（不返回任何内容）。这已在 Firefox 57（{{bug(1374885)}}）中发布的 Firefox 的<a href="https://wiki.mozilla.org/Quantum/Stylo">Quantum/Stylo</a>并行 CSS 引擎中修复。</li>
 </ul>
 
 <h2 id="参见">参见</h2>

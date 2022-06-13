@@ -11,18 +11,18 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/Using_FormData_Objects
 ---
-<p class="summary">FormData对象用以将数据编译成键值对，以便用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据(keyed data)，而独立于表单使用。如果表单<code>enctype</code>属性设为<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">multipart/form-data</span></font> ，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。</p>
+<p>FormData 对象用以将数据编译成键值对，以便用<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据 (keyed data)，而独立于表单使用。如果表单<code>enctype</code>属性设为multipart/form-data ，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。</p>
 
-<h2 id="从零开始创建FormData对象">从零开始创建FormData对象</h2>
+<h2 id="从零开始创建FormData对象">从零开始创建 FormData 对象</h2>
 
 <p>你可以自己创建一个<code>FormData</code>对象，然后调用它的{{domxref("FormData.append","append()")}}方法来添加字段，像这样：</p>
 
 <pre class="brush: js notranslate">var formData = new FormData();
 
 formData.append("username", "Groucho");
-formData.append("accountnum", 123456); //数字123456会被立即转换成字符串 "123456"
+formData.append("accountnum", 123456); //数字 123456 会被立即转换成字符串 "123456"
 
-// HTML 文件类型input，由用户选择
+// HTML 文件类型 input，由用户选择
 formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like 对象
@@ -36,16 +36,16 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 </pre>
 
-<div class="note"><strong>注意：</strong>字段 "userfile" 和 "webmasterfile"  都包含一个文件. 字段 "accountnum" 是数字类型，它将被<code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData.append()</a></code>方法转换成字符串类型(<code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData</a></code> 对象的字段类型可以是 {{ domxref("Blob") }}, {{ domxref("File") }}, 或者 string: <strong>如果它的字段类型不是Blob也不是File，则会被转换成字符串类)。</strong></div>
+<div class="note"><strong>注意：</strong>字段 "userfile" 和 "webmasterfile"  都包含一个文件。字段 "accountnum" 是数字类型，它将被<code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData.append()</a></code>方法转换成字符串类型 (<code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData</a></code> 对象的字段类型可以是 {{ domxref("Blob") }}, {{ domxref("File") }}, 或者 string: <strong>如果它的字段类型不是 Blob 也不是 File，则会被转换成字符串类)。</strong></div>
 
-<p>上面的示例创建了一个<code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData</a></code>实例，包含"username", "accountnum", "userfile" 和 "webmasterfile"四个字段，然后使用<code>XMLHttpRequest</code>的<a href="/en/DOM/XMLHttpRequest#send()" title="en/XMLHttpRequest#send()"><code>send()</code></a>方法发送表单数据。字段 "webmasterfile" 是 {{domxref("Blob")}}类型。一个 <strong>Blob</strong>对象表示一个不可变的, 原始数据的类似文件对象。Blob表示的数据不一定是一个JavaScript原生格式。 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/File" title="File 接口提供了文件的信息，以及文件内容的存取方法。"><code>File</code></a> 接口基于Blob，继承 blob功能并将其扩展为支持用户系统上的文件。你可以通过 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob/Blob" title="Blob() 构造函数返回一个新的 Blob 对象。 blob的内容由参数数组中给出的值的串联组成。"><code>Blob()</code></a> 构造函数创建一个Blob对象。</p>
+<p>上面的示例创建了一个<code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData</a></code>实例，包含"username", "accountnum", "userfile" 和 "webmasterfile"四个字段，然后使用<code>XMLHttpRequest</code>的<a href="/en/DOM/XMLHttpRequest#send()" title="en/XMLHttpRequest#send()"><code>send()</code></a>方法发送表单数据。字段 "webmasterfile" 是 {{domxref("Blob")}}类型。一个 <strong>Blob</strong>对象表示一个不可变的，原始数据的类似文件对象。Blob 表示的数据不一定是一个 JavaScript 原生格式。 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/File" title="File 接口提供了文件的信息，以及文件内容的存取方法。"><code>File</code></a> 接口基于 Blob，继承 blob 功能并将其扩展为支持用户系统上的文件。你可以通过 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob/Blob" title="Blob() 构造函数返回一个新的 Blob 对象。 blob的内容由参数数组中给出的值的串联组成。"><code>Blob()</code></a> 构造函数创建一个 Blob 对象。</p>
 
-<h2 id="通过HTML表单创建FormData对象">通过HTML表单创建FormData对象</h2>
+<h2 id="通过HTML表单创建FormData对象">通过 HTML 表单创建 FormData 对象</h2>
 
-<p>想要构造一个包含Form表单数据的FormData对象，需要在创建FormData对象时指定表单的元素。</p>
+<p>想要构造一个包含 Form 表单数据的 FormData 对象，需要在创建 FormData 对象时指定表单的元素。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>FormData将仅使用具有name属性的输入字段。</p>
+<p><strong>注意：</strong>FormData 将仅使用具有 name 属性的输入字段。</p>
 </div>
 
 <pre class="brush: js notranslate">var formData = new FormData(someFormElement);
@@ -59,7 +59,7 @@ request.open("POST", "submitform.php");
 request.send(new FormData(formElement));
 </pre>
 
-<p>你还可以在创建一个包含Form表单数据的FormData对象之后和发送请求之前，附加额外的数据到FormData对象里，像这样：</p>
+<p>你还可以在创建一个包含 Form 表单数据的 FormData 对象之后和发送请求之前，附加额外的数据到 FormData 对象里，像这样：</p>
 
 <pre class="brush: js notranslate">var formElement = document.querySelector("form");
 var formData = new FormData(formElement);
@@ -70,9 +70,9 @@ request.send(formData);</pre>
 
 <p>这样你就可以在发送请求之前自由地附加不一定是用户编辑的字段到表单数据里。</p>
 
-<h2 id="使用FormData对象上传文件">使用FormData对象上传文件</h2>
+<h2 id="使用FormData对象上传文件">使用 FormData 对象上传文件</h2>
 
-<p>你还可以使用FormData上传文件。使用的时候需要在表单中添加一个文件类型的input：</p>
+<p>你还可以使用 FormData 上传文件。使用的时候需要在表单中添加一个文件类型的 input：</p>
 
 <pre class="brush: html notranslate">&lt;form enctype="multipart/form-data" method="post" name="fileinfo"&gt;
   &lt;label&gt;Your email address:&lt;/label&gt;
@@ -112,17 +112,17 @@ form.addEventListener('submit', function(ev) {
 </pre>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意：</strong></span>如果FormData对象是通过表单创建的，则表单中指定的请求方式会被应用到方法open()中 。</p>
+<p><strong>注意：</strong>如果 FormData 对象是通过表单创建的，则表单中指定的请求方式会被应用到方法 open() 中 。</p>
 </div>
 
-<p>你还可以直接向FormData对象附加File或Blob类型的文件，如下所示：</p>
+<p>你还可以直接向 FormData 对象附加 File 或 Blob 类型的文件，如下所示：</p>
 
 <pre class="brush: js notranslate">data.append("myfile", myBlob, "filename.txt");
 </pre>
 
-<p>使用append()方法时，可以通过第三个可选参数设置发送请求的头 <code>Content-Disposition </code>指定文件名。如果不指定文件名（或者不支持该参数时），将使用名字“blob”。</p>
+<p>使用 append() 方法时，可以通过第三个可选参数设置发送请求的头 <code>Content-Disposition </code>指定文件名。如果不指定文件名（或者不支持该参数时），将使用名字“blob”。</p>
 
-<p>如果你设置正确的配置项，你也可以通过jQuery来使用FormData对象：</p>
+<p>如果你设置正确的配置项，你也可以通过 jQuery 来使用 FormData 对象：</p>
 
 <pre class="brush: js notranslate">var fd = new FormData(document.querySelector("form"));
 fd.append("CustomField", "This is some extra data");
@@ -135,9 +135,9 @@ $.ajax({
 });
 </pre>
 
-<h2 id="不使用FormData对象通过AJAX提交表单和上传文件">不使用FormData对象,通过AJAX提交表单和上传文件</h2>
+<h2 id="不使用FormData对象通过AJAX提交表单和上传文件">不使用 FormData 对象，通过 AJAX 提交表单和上传文件</h2>
 
-<p>如果你想知道不使用FormData对象的情况下，通过<a href="/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a>序列化和提交表单 <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">请点击这里</a>。</p>
+<p>如果你想知道不使用 FormData 对象的情况下，通过<a href="/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a>序列化和提交表单 <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">请点击这里</a>。</p>
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>使用 <code>history</code> API与浏览器历史记录进行交互。</p>
+<p>使用 <code>history</code> API 与浏览器历史记录进行交互。</p>
 
 <div class="note">
 <p>注意：下载也被当做一个 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about a page in the browser history."><code>HistoryItem</code></a> 对象。因此，<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited" title="Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded.">history.onVisited</a></code>等事件也会被下载所触发。</p>
@@ -31,14 +31,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteAll">移除所有浏览器历史记录中的页面</a></li>
 </ul>
 
-<p>然而，用户可能多次访问单个页面，因此API中有访问集合“visits”的概念。所以，该API还可以做如下使用：</p>
+<p>然而，用户可能多次访问单个页面，因此 API 中有访问集合“visits”的概念。所以，该 API 还可以做如下使用：</p>
 
 <ul>
  <li><a href="/en-US/Add-ons/WebExtensions/API/history/getVisits">获取用户对单个页面的所有访问记录的集合</a></li>
  <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteRange">移除给定期间内任意页面的访问记录的集合</a></li>
 </ul>
 
-<p>使用该API之前，扩展程序必须在其 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取history的<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
+<p>使用该 API 之前，扩展程序必须在其 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取 history 的<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
 
 <h2 id="类型">类型</h2>
 
@@ -65,7 +65,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <dt>{{WebExtAPIRef("history.addUrl()")}}</dt>
  <dd>为浏览器历史记录添加一个指定页面的访问。</dd>
  <dt>{{WebExtAPIRef("history.deleteUrl()")}}</dt>
- <dd>移除浏览器历史记录中所有对指定URL的访问。</dd>
+ <dd>移除浏览器历史记录中所有对指定 URL 的访问。</dd>
  <dt>{{WebExtAPIRef("history.deleteRange()")}}</dt>
  <dd>移除指定时间段内对用户指定页面的访问。</dd>
  <dt>{{WebExtAPIRef("history.deleteAll()")}}</dt>
@@ -83,7 +83,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <dd>每次用户访问页面时会触发，并提供该页面的 {{WebExtAPIRef("history.HistoryItem")}} 数据。</dd>
  <dt>{{WebExtAPIRef("history.onVisitRemoved")}}</dt>
  <dd>
- <p>当一个URL被彻底从浏览器历史记录中移除时触发。</p>
+ <p>当一个 URL 被彻底从浏览器历史记录中移除时触发。</p>
  </dd>
 </dl>
 
@@ -95,7 +95,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 
 <div class="note"><strong>致谢</strong>
 
-<p>该 API 基于Chromium的<a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a> API。该文档由Chromium代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a>衍生而来。</p>
+<p>该 API 基于 Chromium 的<a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a> API。该文档由 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a>衍生而来。</p>
 
 <p>微软 Edge 兼容性数据由微软公司提供并包含在如下证书中—— Creative Commons Attribution 3.0 United States License.</p>
 </div>

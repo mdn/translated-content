@@ -1,5 +1,5 @@
 ---
-title: 基于Web Audio API实现音频可视化效果
+title: 基于 Web Audio API 实现音频可视化效果
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 tags:
   - 分析器
@@ -8,7 +8,7 @@ tags:
   - 波形
 translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
-<div class="summary">
+<div>
 <p><strong style="background-color: #f4f7f8; font-weight: bold;">网页音频接口最有趣的特性之一它就是可以获取频率、波形和其它来自声源的数据，这些数据可以被用作音频可视化。这篇文章将解释如何做到可视化，并提供了一些基础使用案例。</strong></p>
 </div>
 
@@ -31,20 +31,20 @@ analyser.connect(distortion);
 // etc.</pre>
 
 <div class="note">
-<p><strong>注意：</strong> 分析器节点(Analyser Node) 不一定输出到另一个节点，不输出时也可以正常使用。但前提是它必须与一个声源相连（直接或者通过其他节点间接相连都可以）。</p>
+<p><strong>注意：</strong> 分析器节点 (Analyser Node) 不一定输出到另一个节点，不输出时也可以正常使用。但前提是它必须与一个声源相连（直接或者通过其他节点间接相连都可以）。</p>
 </div>
 
-<p>分析器节点(Analyser Node) 将在一个特定的频率域里使用<a href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">快速傅立叶变换</a>(Fast Fourier Transform (FFT) )来捕获音频数据，这取决于你给 {{ domxref("AnalyserNode.fftSize") }} 属性赋的值（如果没有赋值，默认值为2048）。</p>
+<p>分析器节点 (Analyser Node) 将在一个特定的频率域里使用<a href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">快速傅立叶变换</a>(Fast Fourier Transform (FFT) ) 来捕获音频数据，这取决于你给 {{ domxref("AnalyserNode.fftSize") }} 属性赋的值（如果没有赋值，默认值为 2048）。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 你也可以为FFT数据缩放范围指定一个最小值和最大值，使用{{ domxref("AnalyserNode.minDecibels") }} 和{{ domxref("AnalyserNode.maxDecibels") }}进行设置，要获得不同数据的平均常量，使用 {{ domxref("AnalyserNode.smoothingTimeConstant") }}。阅读这些页面以获得更多如何使用它们的信息。</p>
+<p><strong>注意：</strong> 你也可以为 FFT 数据缩放范围指定一个最小值和最大值，使用{{ domxref("AnalyserNode.minDecibels") }} 和{{ domxref("AnalyserNode.maxDecibels") }}进行设置，要获得不同数据的平均常量，使用 {{ domxref("AnalyserNode.smoothingTimeConstant") }}。阅读这些页面以获得更多如何使用它们的信息。</p>
 </div>
 
 <p>要捕获数据，你需要使用 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 或 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 方法来获取频率数据，用 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 或 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 来获取波形数据。</p>
 
-<p>这些方法把数据复制进了一个特定的数组当中，所以你在调用它们之前要先创建一个新数组。第一个方法会产生一个32位浮点数组，第二个和第三个方法会产生8位无符号整型数组，因此一个标准的JavaScript数组就不能使用 —— 你需要用一个 {{ domxref("Float32Array") }} 或者 {{ domxref("Uint8Array") }} 数组，具体需要哪个视情况而定。</p>
+<p>这些方法把数据复制进了一个特定的数组当中，所以你在调用它们之前要先创建一个新数组。第一个方法会产生一个 32 位浮点数组，第二个和第三个方法会产生 8 位无符号整型数组，因此一个标准的 JavaScript 数组就不能使用 —— 你需要用一个 {{ domxref("Float32Array") }} 或者 {{ domxref("Uint8Array") }} 数组，具体需要哪个视情况而定。</p>
 
-<p>那么让我们来看看例子，比如我们正在处理一个2048尺寸的FFT。我们返回 {{ domxref("AnalyserNode.frequencyBinCount") }} 值，它是FFT的一半，然后调用Uint8Array()，把frequencyBinCount作为它的长度参数 —— 这代表我们将对这个尺寸的FFT收集多少数据点。</p>
+<p>那么让我们来看看例子，比如我们正在处理一个 2048 尺寸的 FFT。我们返回 {{ domxref("AnalyserNode.frequencyBinCount") }} 值，它是 FFT 的一半，然后调用 Uint8Array()，把 frequencyBinCount 作为它的长度参数 —— 这代表我们将对这个尺寸的 FFT 收集多少数据点。</p>
 
 <pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
@@ -54,13 +54,13 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <pre class="brush: js">analyser.getByteTimeDomainData(dataArray);</pre>
 
-<p>现在我们就获取了那时的音频数据，并存到了我们的数组里，而且可以把它做成我们喜欢的可视化效果了，比如把它画在一个HTML5 {{ htmlelement("canvas") }} 画布上。</p>
+<p>现在我们就获取了那时的音频数据，并存到了我们的数组里，而且可以把它做成我们喜欢的可视化效果了，比如把它画在一个 HTML5 {{ htmlelement("canvas") }} 画布上。</p>
 
 <p>下面让我们来看一些具体的例子。</p>
 
 <h2 id="创建一个波形示波器">创建一个波形/示波器</h2>
 
-<p>要创建一个示波器视觉效果（感谢 <a href="http://soledadpenades.com/">Soledad Penadés</a> 在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a> 中提供的源码），我们首先用下面代码框中的代码为标准设置一个buffer：</p>
+<p>要创建一个示波器视觉效果（感谢 <a href="http://soledadpenades.com/">Soledad Penadés</a> 在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a> 中提供的源码），我们首先用下面代码框中的代码为标准设置一个 buffer：</p>
 
 <pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.fftSize;
@@ -82,7 +82,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <pre class="brush: js">      analyser.getByteTimeDomainData(dataArray);</pre>
 
-<p>接下来把canvas用纯色填满作为背景：</p>
+<p>接下来把 canvas 用纯色填满作为背景：</p>
 
 <pre class="brush: js">      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
@@ -94,7 +94,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
       canvasCtx.beginPath();</pre>
 
-<p>用canvas画布的总宽度除以数组的长度（与之前定义的 FrequencyBinCount 相等）来决定要花上的每段线条的宽度，之后设置横坐标 (x) 为0，将画笔移动到起始位置：</p>
+<p>用 canvas 画布的总宽度除以数组的长度（与之前定义的 FrequencyBinCount 相等）来决定要花上的每段线条的宽度，之后设置横坐标 (x) 为 0，将画笔移动到起始位置：</p>
 
 <pre class="brush: js">      var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;</pre>
@@ -133,7 +133,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>另一种小巧的可视化方法是创建频率条形图，在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a> 中已经有一个做好的，现在让我们来看看它是如何实现的。</p>
 
-<p>首先，我们设置好解析器和空数组，之后用 <a href="/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect">clearRect()</a> 清空画布。与之前的唯一区别是我们这次大大减小了FFT的大小，这样做的原因是为了使得每个频率条足够宽，让它们看着像“条”而不是“细杆”。</p>
+<p>首先，我们设置好解析器和空数组，之后用 <a href="/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect">clearRect()</a> 清空画布。与之前的唯一区别是我们这次大大减小了 FFT 的大小，这样做的原因是为了使得每个频率条足够宽，让它们看着像“条”而不是“细杆”。</p>
 
 <pre class="brush: js">    analyser.fftSize = 256;
     var bufferLength = analyser.frequencyBinCount;
@@ -152,7 +152,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
       canvasCtx.fillStyle = 'rgb(0, 0, 0)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
 
-<p>现在我们来设置一个 <code>barWidth</code> 变量，它等于每一个条形的宽度。理论上用花布宽度除以条的个数就可以得到它，但是在这里我们还要乘以2.5。这是因为有很多返回的频率区域中是没有声音的，我们每天听到的大多数声音也只是在一个很小的频率区域当中。在条形图中我们肯定不想看到大片的空白条，所以我们就把一些能正常显示的条形拉宽来填充这些空白区域。</p>
+<p>现在我们来设置一个 <code>barWidth</code> 变量，它等于每一个条形的宽度。理论上用花布宽度除以条的个数就可以得到它，但是在这里我们还要乘以 2.5。这是因为有很多返回的频率区域中是没有声音的，我们每天听到的大多数声音也只是在一个很小的频率区域当中。在条形图中我们肯定不想看到大片的空白条，所以我们就把一些能正常显示的条形拉宽来填充这些空白区域。</p>
 
 <p>我们还要设置一个条高度变量 <code>barHeight</code>，还有一个 <code>x</code> 变量来记录当前条形的位置。</p>
 
@@ -162,7 +162,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <p>像之前一样，我们进入循环来遍历 <code>dataArray</code> 数组中的数据。在每一次循环过程中，我们让条形的高度 <code>barHeight</code> 等于数组的数值，之后根据高度设置条形的填充色（条形越高，填充色越亮），然后在横坐标 <code>x</code> 处按照设置的宽度和高度的一半把条形画出来（我们最后决定只画高度的一半因为这样条形看起来更美观）。</p>
 
-<p>需要多加解释的一点是每个条形竖直方向的位置，我们在 <code>HEIGHT-barHeight/2</code> 的位置画每一条，这是因为我想让每个条形从底部向上伸出，而不是从顶部向下（如果我们把竖直位置设置为0它就会这样画）。所以，我们把竖直位置设置为画布高度减去条形高度的一半，这样每个条形就会从中间向下画，直到画布最底部。</p>
+<p>需要多加解释的一点是每个条形竖直方向的位置，我们在 <code>HEIGHT-barHeight/2</code> 的位置画每一条，这是因为我想让每个条形从底部向上伸出，而不是从顶部向下（如果我们把竖直位置设置为 0 它就会这样画）。所以，我们把竖直位置设置为画布高度减去条形高度的一半，这样每个条形就会从中间向下画，直到画布最底部。</p>
 
 <pre class="brush: js">      for(var i = 0; i &lt; bufferLength; i++) {
         barHeight = dataArray[i]/2;

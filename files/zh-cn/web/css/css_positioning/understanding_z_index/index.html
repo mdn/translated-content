@@ -1,5 +1,5 @@
 ---
-title: 理解CSS的 z-index属性
+title: 理解 CSS 的 z-index 属性
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
 tags:
   - CSS
@@ -9,17 +9,17 @@ original_slug: Web/Guide/CSS/Understanding_z_index
 ---
 <p>{{cssref}}</p>
 
-<p><span style="line-height: inherit;">通常情况下，<a href="/zh-CN/docs/Glossary/HTML">HTML</a>页面可以被认为是二维的，因为文本，图像和其他元素被排列在页面上而不重叠。在这种情况下，只有一个渲染进程，所有元素都知道其他元素所占用的空间。 </span>{{cssxref("z-index")}}<span style="line-height: inherit;">属性可让你在渲染内容时调整对象分层的顺序。</span></p>
+<p>通常情况下，<a href="/zh-CN/docs/Glossary/HTML">HTML</a>页面可以被认为是二维的，因为文本，图像和其他元素被排列在页面上而不重叠。在这种情况下，只有一个渲染进程，所有元素都知道其他元素所占用的空间。 {{cssxref("z-index")}}属性可让你在渲染内容时调整对象分层的顺序。</p>
 
 <blockquote>
-<p><em>在 CSS 2.1 中, 所有的盒模型元素都处于三维坐标系中。 除了我们常用的横坐标和纵坐标， 盒模型元素还可以沿着“z 轴”层叠摆放， 当他们相互覆盖时， z 轴顺序就变得十分重要。</em></p>
+<p><em>在 CSS 2.1 中，所有的盒模型元素都处于三维坐标系中。除了我们常用的横坐标和纵坐标，盒模型元素还可以沿着“z 轴”层叠摆放，当他们相互覆盖时，z 轴顺序就变得十分重要。</em></p>
 </blockquote>
 
 <p>(参见 <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#z-index">CSS 2.1 Section 9.9.1 - Layered presentation</a>)</p>
 
-<p>这意味着其实 CSS 允许你在现有的渲染引擎上层叠的摆放盒模型元素。 所有的层都可以用一个整数( z 轴顺序)来表明当前层在 z 轴的位置。 数字越大， 元素越接近观察者。Z 轴顺序用 CSS 的 <span style="line-height: inherit;">{{ cssxref("z-index") }} 属性来指定。</span></p>
+<p>这意味着其实 CSS 允许你在现有的渲染引擎上层叠的摆放盒模型元素。所有的层都可以用一个整数 ( z 轴顺序) 来表明当前层在 z 轴的位置。数字越大，元素越接近观察者。Z 轴顺序用 CSS 的 {{ cssxref("z-index") }} 属性来指定。</p>
 
-<p>使用 <code>z-index</code> 很简单： 给它指定一个整数值即可。 然而，在层叠比较复杂的 HTML 元素上使用 <code>z-index</code> 时，结果可能让人觉得困惑，甚至不可思议。 这是由复杂的元素排布规则导致的。  更多细节请参见 <span style="line-height: inherit;"> </span><a class="external" href="http://www.w3.org/TR/CSS21/zindex.html" style="line-height: inherit;">CSS-2.1 Appendix E</a> 。</p>
+<p>使用 <code>z-index</code> 很简单：给它指定一个整数值即可。然而，在层叠比较复杂的 HTML 元素上使用 <code>z-index</code> 时，结果可能让人觉得困惑，甚至不可思议。这是由复杂的元素排布规则导致的。  更多细节请参见  <a class="external" href="http://www.w3.org/TR/CSS21/zindex.html" style="line-height: inherit;">CSS-2.1 Appendix E</a> 。</p>
 
 <p>本文将通过一些简单的例子来解释这些规则。</p>
 
@@ -41,8 +41,8 @@ original_slug: Web/Guide/CSS/Understanding_z_index
 <p> </p>
 
 <ul>
- <li>作者: Paolo Lombardi</li>
+ <li>作者：Paolo Lombardi</li>
  <li>This article is the English translation of an article I wrote in Italian for <a class="external" href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under <a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
- <li>上次更新时间: 2005年7月9日</li>
+ <li>上次更新时间：2005 年 7 月 9 日</li>
 </ul>
 </div>

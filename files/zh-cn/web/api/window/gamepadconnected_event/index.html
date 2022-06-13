@@ -11,18 +11,18 @@ translation_of: Web/API/Window/gamepadconnected_event
 <h2 id="基本信息">基本信息</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">文档</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/gamepad/#the-gamepadconnected-event">Gamepad</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">类型</dt>
- <dd style="margin: 0 0 0 120px;">事件</dd>
- <dt style="float: left; text-align: right; width: 120px;">冒泡</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">可取消</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">DefaultView (<code>&lt;window&gt;</code>)</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认操着</dt>
- <dd style="margin: 0 0 0 120px;">无</dd>
+ <dt>文档</dt>
+ <dd><a class="external" href="http://www.w3.org/TR/gamepad/#the-gamepadconnected-event">Gamepad</a></dd>
+ <dt>类型</dt>
+ <dd>事件</dd>
+ <dt>冒泡</dt>
+ <dd>No</dd>
+ <dt>可取消</dt>
+ <dd>No</dd>
+ <dt>Target</dt>
+ <dd>DefaultView (<code>&lt;window&gt;</code>)</dd>
+ <dt>默认操着</dt>
+ <dd>无</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -39,7 +39,7 @@ translation_of: Web/API/Window/gamepadconnected_event
   <tr>
    <td><code>target</code> 只读</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>事件目标（DOM树中的顶层，即document.documentElement）。</td>
+   <td>事件目标（DOM 树中的顶层，即 document.documentElement）。</td>
   </tr>
   <tr>
    <td><code>type</code> 只读</td>
@@ -68,7 +68,7 @@ translation_of: Web/API/Window/gamepadconnected_event
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush:js;">// 请注意，在实现该API的浏览器中，该API仍为供应商前缀
+<pre class="brush:js;">// 请注意，在实现该 API 的浏览器中，该 API 仍为供应商前缀
 window.addEventListener("gamepadconnected", function( event ) {
 
     // 所有按钮和轴值均可通过以下方式访问

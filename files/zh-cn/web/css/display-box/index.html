@@ -5,18 +5,18 @@ translation_of: Web/CSS/display-box
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">这些关键词定义一个元素到底是否产生显示盒（display boxes）。</p>
+<p>这些关键词定义一个元素到底是否产生显示盒（display boxes）。</p>
 
 <h2 id="语法">语法</h2>
 
-<p>有效的 <code>&lt;display-box&gt;</code> 值:</p>
+<p>有效的 <code>&lt;display-box&gt;</code> 值：</p>
 
 <p><code style="font-style: normal; font-weight: 700; font-size: 1rem; letter-spacing: -0.00278rem;">contents</code><strong style="font-size: 1rem; font-weight: 700; letter-spacing: -0.00278rem;"> {{Experimental_Inline}}</strong></p>
 
 <dl>
- <dd>这些元素自己不显示。它们被它们的伪盒（pseudo-box）和子项盒（child boxes）取代。请注意CSS 层次3显示规格定义的 <code>contents</code> 值应该怎样影响"非常见元素" - 即不由CSS渲染的元素（诸如被取代元素）。参考 <a href="https://drafts.csswg.org/css-display/#unbox">Appendix B: Effects of display: contents on Unusual Elements</a> 以获取细节。<br>
+ <dd>这些元素自己不显示。它们被它们的伪盒（pseudo-box）和子项盒（child boxes）取代。请注意 CSS 层次 3 显示规格定义的 <code>contents</code> 值应该怎样影响"非常见元素" - 即不由 CSS 渲染的元素（诸如被取代元素）。参考 <a href="https://drafts.csswg.org/css-display/#unbox">Appendix B: Effects of display: contents on Unusual Elements</a> 以获取细节。<br>
  <br>
- <em>由于浏览器中有个bug，它会从访问树（accessibility tree）删除元素，屏幕阅读者会看不到里面内容。参考下方访问性关注 <a href="#Accessibility_concerns">Accessibility concerns</a>  章节以获取细节。</em></dd>
+ <em>由于浏览器中有个 bug，它会从访问树（accessibility tree）删除元素，屏幕阅读者会看不到里面内容。参考下方访问性关注 <a href="#Accessibility_concerns">Accessibility concerns</a>  章节以获取细节。</em></dd>
  <dt><code>none</code></dt>
  <dd>关闭元素的显示，不影响布局（文件中没有该元素）。所有子项的显示也被关闭。</dd>
  <dd>要一个元素占据空间（文件中存在），但不渲染，请使用 {{CSSxRef("visibility")}} 属性。</dd>
@@ -24,7 +24,7 @@ translation_of: Web/CSS/display-box
 
 <h2 id="举例">举例</h2>
 
-<p>在第一个例子中，带有secret类的段落，会被设置成 <code>display: none</code>; 该盒子和内容不会渲染。</p>
+<p>在第一个例子中，带有 secret 类的段落，会被设置成 <code>display: none</code>; 该盒子和内容不会渲染。</p>
 
 <h3 id="display_none">display: none</h3>
 
@@ -48,7 +48,7 @@ translation_of: Web/CSS/display-box
 <div id="Display_contents">
 <h3 id="display_contents">display: contents</h3>
 
-<p>在本例中，其外部 {{htmlelement("div")}} 有一个 2px 红色边框 和300px的宽度。然而，它有 <code>display: contents</code> 因而指定这个 <code>&lt;div&gt;</code> 不会渲染，边框和宽度都没有，其子元素会显示。</p>
+<p>在本例中，其外部 {{htmlelement("div")}} 有一个 2px 红色边框 和 300px 的宽度。然而，它有 <code>display: contents</code> 因而指定这个 <code>&lt;div&gt;</code> 不会渲染，边框和宽度都没有，其子元素会显示。</p>
 
 <h4 id="HTML_2">HTML</h4>
 

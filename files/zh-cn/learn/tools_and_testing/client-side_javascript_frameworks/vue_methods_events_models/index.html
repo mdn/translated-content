@@ -1,5 +1,5 @@
 ---
-title: 'Adding a new todo form: Vue events, methods, and models'
+title: 使用 Vue event、method 和 model 添加一个新的 todo 表单
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 translation_of: >-
@@ -9,30 +9,29 @@ translation_of: >-
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">We now have sample data in place, and a loop that takes each bit of data and renders it inside a <code>ToDoItem</code> in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text <code>&lt;input&gt;</code>, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.</p>
+<p>我们现在已经有了样本数据，还有一个循环，它获取每一位数据并将其呈现在我们应用程序的 <code>ToDoItem</code> 中。接下来我们真正需要的是允许我们的用户在应用程序中输入他们自己的待办事项的能力，为此我们需要一个“text”类型的 <code>&lt;input&gt;</code>，当数据输入时触发的事件提交，一个在提交时触发以添加数据并重新呈现列表的方法，以及一个控制数据的模型。这就是我们将在本文中介绍的内容。</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
+   <th scope="row">先决条件：</th>
    <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
-   </td>
+    <p>熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解 <a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools /Command_line">终端/命令行</a>。</p>
+    <p>Vue 组件被编写为管理应用程序数据的 JavaScript 对象和映射到底层 DOM 结构的基于 HTML 的模板语法的组合。对于安装，以及使用 Vue 的一些更高级的功能（如单文件组件或渲染功能），你需要一个安装了 node + npm 的终端。</p>
+    </td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn about handling forms in Vue, and by association, events, models, and methods.</td>
+   <th scope="row">目标：</th>
+   <td>了解如何在 Vue 中处理表单，以及通过关联、事件、模型和方法。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Creating_a_New_To-Do_form">Creating a New To-Do form</h2>
+<h2 id="Creating_a_New_To-Do_form">创建一个新的待办事项表单</h2>
 
-<p>我们的app可以展示待办事项列表，但是我们不能更新该列表，除非手动更改代码。让我们新建一个组件来允许我们添加新的待办项。</p>
+<p>我们的 app 可以展示待办事项列表，但是我们不能更新该列表，除非手动更改代码。让我们新建一个组件来允许我们添加新的待办项。</p>
 
-<p>在components目录下, 新建文件 <code>ToDoForm.vue</code>.</p>
+<p>在 components 目录下，新建文件 <code>ToDoForm.vue</code>.</p>
 
 <ol>
  <li>
@@ -45,7 +44,7 @@ translation_of: >-
 &lt;/script&gt;</pre>
  </li>
  <li>
-  <p>新建一个 HTML 表单来允许我们输入新的待办项并把它提交到app。我们需要一个 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> ，它里面包含 <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>,一个 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>, 一个 <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>。更新后的模版如下：</p>
+  <p>新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> ，它里面包含 <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>，一个 <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>。更新后的模版如下：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;
   &lt;form&gt;
@@ -64,23 +63,23 @@ translation_of: >-
   &lt;/form&gt;
 &lt;/template&gt;</pre>
 
-  <p>现在我们有一个可以form组件可以用来输入新的待办项的标题，它最终会渲染成<code>ToDoItem</code>的label。</p>
+  <p>现在我们有一个可以 form 组件可以用来输入新的待办项的标题，它最终会渲染成<code>ToDoItem</code>的 label。</p>
  </li>
  <li>
-  <p>我们把这个组件添加到app中，返回 <code>App.vue</code> 然后在 <code>&lt;script&gt;</code> 添加下面的语句：</p>
+  <p>我们把这个组件添加到 app 中，返回 <code>App.vue</code> 然后在 <code>&lt;script&gt;</code> 添加下面的语句：</p>
 
   <pre class="brush: js notranslate">import ToDoForm from './components/ToDoForm';</pre>
  </li>
  <li>
-  <p>在你的App组件中注册它</p>
+  <p>在你的 App 组件中注册它</p>
 
-  <pre class="brush: js notranslate">components: {
+  <pre class="brush: js">components: {
   ToDoItem,
   ToDoForm
 }</pre>
  </li>
  <li>
-  <p>最后将 <code>ToDoForm</code> 组件添加到App中的<code>&lt;template&gt;</code> 中，像下面这样：</p>
+  <p>最后将 <code>ToDoForm</code> 组件添加到 App 中的<code>&lt;template&gt;</code> 中，像下面这样：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -96,21 +95,19 @@ translation_of: >-
  </li>
 </ol>
 
-<p>Now when you view your running site, you should see the new form displayed.</p>
+<p>现在，当你查看正在运行的站点时，你应该会看到显示的新表单。</p>
 
-<p><img alt="Our todo list app rendered with a text input to enter new todos" src="https://mdn.mozillademos.org/files/17245/rendered-form-with-text-input.png" style="border-style: solid; border-width: 1px; display: block; height: 240px; margin: 0 auto; width: 451px;"></p>
+<p><img alt="Our todo list app rendered with a text input to enter new todos" src="rendered-form-with-text-input.png"></p>
 
-<p>If you fill it out and click the "Add" button, the page will post the form back to the server, but this isn’t really what we want. What we actually want to do is run a method on the <a href="/en-US/docs/Web/API/HTMLFormElement/submit_event"><code>submit</code> event</a> that will add the new todo to the <code>ToDoItem</code> data list defined inside <code>App</code>. To do that, we'll need to add a method to the component instance.</p>
+<p>如果你填写并单击“添加”按钮，页面会将表单发送回服务器，但这并不是我们真正想要的。我们真正想要做的是在 <a href="/zh-CN/docs/Web/API/HTMLFormElement/submit_event"><code>submit</code> 事件</a>上运行一个方法，该方法将添加 <code>App</code> 中定义的 <code>ToDoItem</code> 数据列表的新待办事项。为此，我们需要向组件实例添加一个方法。</p>
 
-<h2 id="Creating_a_method_binding_it_to_an_event_with_v-on">Creating a method &amp; binding it to an event with v-on</h2>
+<h2 id="Creating_a_method_binding_it_to_an_event_with_v-on">创建一个方法并用 v-on 绑定这个方法到一个事件上</h2>
 
-<p>To make a method available to the <code>ToDoForm</code> component, we need to add it to the component object, and this is done inside a <code>methods</code> property to our component, which goes in the same place as <code>data()</code>, <code>props</code>, etc. The <code>methods</code> property holds any methods we might need to call in our component. When referenced, methods are fully run, so it's not a good idea to use them to display information inside the template. For displaying data that comes from calculations, you should use a <code>computed</code> property, which we'll cover later.</p>
+<p>我们需要将方法添加到 <code>ToDoForm</code> 组件对象中，以使方法可用。这是在组件的 <code>methods</code> 属性中完成的，它与 <code>data()</code>、<code>props</code> 等位于同一位置。<code>methods</code> 属性包含我们可能需要在组件中调用的任何方法。引用时，方法已完全运行，因此使用它们在模板内显示信息不是一个好主意。为了显示通过计算获得的数据，你应该使用 <code>computed</code> 属性，我们稍后会介绍。</p>
 
 <ol>
  <li>
-  <p>In this component, we need to add an <code>onSubmit()</code> method to a <code>methods</code> property inside the <code>ToDoForm</code> component object.  We'll use this to handle the submit action.</p>
-
-  <p>Add this like so:</p>
+  <p>在这个组件中，我们需要在 <code>ToDoForm</code> 组件对象内的 <code>methods</code> 属性中添加一个 <code>onSubmit()</code> 方法。我们将使用它来处理提交操作。就像这样：</p>
 
   <pre class="brush: js notranslate">export default {
    methods: {
@@ -121,51 +118,46 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>Next we need to bind the method to our <code>&lt;form&gt;</code> element's <code>submit</code> event handler. Much like how Vue uses the <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> syntax for binding attributes, Vue has a special directive for event handling: <code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>. The <code>v-on</code> directive works via the <code>v-on:event="method"</code> syntax. And much like <code>v-bind</code>, there’s also a shorthand syntax: <code>@event="method"</code>.</p>
-
-  <p>We'll use the shorthand syntax here for consistency. Add the <code>submit</code> handler to your <code>&lt;form&gt;</code> element like so:</p>
-
+  <p>接下来我们需要将该方法绑定到我们的 <code>&lt;form&gt;</code> 元素的 <code>submit</code> 事件处理程序。就像 Vue 如何使用 <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> 语法来绑定属性，Vue 有 用于事件处理的特殊指令：<code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>。 <code>v-on</code> 指令通过 <code>v-on:event="method"</code> 语法工作。和 <code>v-bind</code> 很像，还有一个简写语法：<code>@event="method"</code>。为了保持一致性，我们将在此处使用简写语法。将 <code>submit</code> 处理程序添加到你的 <code>&lt;form&gt;</code> 元素，如下所示：</p>
+   
   <pre class="brush: html notranslate">&lt;form @submit="onSubmit"&gt;
 </pre>
  </li>
  <li>
-  <p>When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event’s default action from bubbling up through the page (<code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>, in vanilla JavaScript). Vue has a special syntax called <strong>event modifiers</strong> that can handle this for us right in our template.</p>
+  <p>当你运行此程序时，应用程序仍会将数据发布到服务器，从而导致刷新。由于我们在客户端上进行所有处理，因此没有服务器来处理回发。我们还会在页面刷新时丢失所有本地状态。为了防止浏览器发布到服务器，我们需要阻止事件的默认操作通过页面冒泡（<code><a href="/zh-CN/docs/Web/API/Event/preventDefault">Event .preventDefault()</a></code>，在原生 JavaScript 中）。Vue 有一个特殊的语法叫做 <strong>event modifiers</strong> 可以在我们的模板中为我们处理这个问题。修饰符被附加到事件的末尾，带有一个点，如下所示：<code>@event.modifier</code>。以下是事件修饰符列表：</p>
+  
+   <ul>
+   <li><code>.stop</code>：停止传播事件。等效于常规 JavaScript 事件中的 <code><a href="/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation()</a></code>。</li>
+   <li><code>.prevent</code>：阻止事件的默认行为。等效于 <code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>。</li>
+   <li><code>.self</code>：仅当事件是从该确切元素分派时触发处理程序。</li>
+   <li><code>{.key}</code>：仅通过指定键触发事件处理程序。 <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">MDN 有一个有效键值列表</a>; 多词键只需转换为 kebab 大小写（例如 <code>page-down</code>）。</li>
+   <li><code>.native</code>：监听组件根（最外层的包装）元素上的原生事件。</li>
+   <li><code>.once</code>：监听事件，直到它被触发一次，然后不再触发。</li>
+   <li><code>.left</code>：仅通过鼠标左键事件触发处理程序。</li>
+   <li><code>.right</code>：仅通过鼠标右键事件触发处理程序。</li>
+   <li><code>.middle</code>：仅通过鼠标中键事件触发处理程序。</li>
+   <li><code>.passive</code>：等效于在 vanilla JavaScript 中使用 <code><a href="/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 创建事件监听器时传入 <code>{ passive: true }</code> 参数。</li>
+   </ul>
 
-  <p>Modifiers are appended to the end of an event with a dot like so: <code>@event.modifier</code>. Here is a list of event modifiers:</p>
-
-  <ul>
-   <li><code>.stop</code>: Stops the event from propagating. Equivalent to <code><a href="/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation()</a></code> in regular JavaScript events.</li>
-   <li><code>.prevent</code>: Prevents the event's default behavior. Equivalent to <code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>.</li>
-   <li><code>.self</code>: Triggers the handler only if the event was dispatched from this exact element.</li>
-   <li><code>{.key}</code>: Triggers the event handler only via the specified key. <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">MDN has a list of valid key values</a>; multi-word keys just need to be converted to kebab case (e.g. <code>page-down</code>).</li>
-   <li><code>.native</code>: Listens for a native event on the root (outer-most wrapping) element on your component.</li>
-   <li><code>.once</code>: Listens for the event until it's been triggered once, and then no more.</li>
-   <li><code>.left</code>: Only triggers the handler via the left mouse button event.</li>
-   <li><code>.right</code>: Only triggers the handler via the right mouse button event.</li>
-   <li><code>.middle</code>: Only triggers the handler via the middle mouse button event.</li>
-   <li><code>.passive</code>: Equivalent to using the <code>{ passive: true }</code> parameter when creating an event listener in vanilla JavaScript using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
-  </ul>
-
-  <p>In this case, we need to use the <code>.prevent</code> handler to stop the browser’s default submit action. Add <code>.prevent</code> to the <code>@submit</code> handler in your template like so:</p>
-
-  <pre class="brush: js notranslate">&lt;form @submit.prevent="onSubmit"&gt;</pre>
+  <p>在这种情况下，我们需要使用 <code>.prevent</code> 处理程序来停止浏览器的默认提交操作。将 <code>.prevent</code> 添加到模板中的 <code>@submit</code> 处理程序中，如下所示：</p>
+   
+  <pre class="brush: js">&lt;form @submit.prevent="onSubmit"&gt;</pre>
  </li>
 </ol>
 
-<p>If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> we added inside our <code>onSubmit()</code> method.</p>
+<p>如果你现在尝试提交表单，你会注意到页面没有重新加载。如果打开控制台，可以看到我们在 <code>onSubmit()</code> 方法中添加的 <code><a href="/zh-CN/docs/Web/API/Console/log">console.log()</a></code> 所输出结果。</p>
 
-<h2 id="Binding_data_to_inputs_with_v-model">Binding data to inputs with v-model</h2>
+<h2 id="Binding_data_to_inputs_with_v-model">用 v-model 来绑定数据到输入</h2>
 
-<p>Next up, we need a way to get the value from the form's <code>&lt;input&gt;</code> so we can add the new to-do item to our <code>ToDoItems</code> data list.</p>
+<p>接下来，我们需要一种从表单的 <code>&lt;input&gt;</code> 中获取值的方法，这样我们就可以将新的待办事项添加到我们的 <code>ToDoItems</code> 数据列表中。</p>
 
-<p>The first thing we need is a <code>data</code> property in our form to track the value of the to-do.</p>
-
+<p>我们首先需要的是表单中的 <code>data</code> 属性来跟踪待办事项的值。</p>
 <ol>
  <li>
-  <p>Add a <code>data()</code> method to our <code>ToDoForm</code> component object that returns a <code>label</code> field. We can set the initial value of the <code>label</code> to an empty string.</p>
-
-  <p>Your component object should now look something like this:</p>
-
+  <p>向我们的 <code>ToDoForm</code> 组件对象添加一个 <code>data()</code> 方法，该方法返回一个 <code>label</code> 字段。我们可以将<code>label</code>的初始值设置为空字符串。</p>
+   
+  <p>你的组件对象现在应该如下所示：</p>
+   
   <pre class="brush: js notranslate">export default {
   methods: {
     onSubmit() {
@@ -180,11 +172,11 @@ translation_of: >-
 };</pre>
  </li>
  <li>
-  <p>We now need some way to attach the value of the <code>new-todo-input</code> <code>&lt;input&gt;</code> field to the <code>label</code> field. Vue has a special directive for this: <code><a href="https://vuejs.org/v2/api/#v-model">v-model</a></code>. <code>v-model</code> binds to the data property you set on it and keeps it in sync with the <code>&lt;input&gt;</code>. <code>v-model</code> works across all the various input types, including check boxes, radios, and select inputs. To use <code>v-model</code>, you add an attribute with the structure <code>v-model="variable"</code> to the <code>&lt;input&gt;</code>.</p>
+  <p>我们现在需要一些方法将 <code>new-todo-input</code> <code>&lt;input&gt;</code> 字段的值附加到 <code>label</code> 字段。Vue 对此有一个特殊的指令：<code><a href="https://vuejs.org/v2/api/#v-model">v-model</a></code>。<code>v-model</code> 绑定到你在其上设置的数据属性，并使其与 <code>&lt;input&gt;</code> 保持同步。<code>v-model</code> 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 <code>v-model</code>，你需要向 <code>&lt;input&gt;</code> 添加一个结构为 <code>v-model="variable"</code> 的属性。<p>
 
-  <p>So in our case, we would add it to our <code>new-todo-input</code> field as seen below. Do this now:</p>
-
-  <pre class="brush: js notranslate">&lt;input
+  <p>所以在我们的例子中，我们会将它添加到我们的 <code>new-todo-input</code> 字段中，如下所示。现在就这样做：</p>
+   
+  <pre class="brush: js">&lt;input
   type="text"
   id="new-todo-input"
   name="new-todo"
@@ -193,14 +185,14 @@ translation_of: >-
 </pre>
 
   <div class="blockIndicator note">
-  <p><strong>Note</strong>: You can also sync data with <code>&lt;input&gt;</code> values through a combination of events and <code>v-bind</code> attributes. In fact, this is what <code>v-model</code> does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the <code>v-model</code> shortcut.</p>
-  </div>
+  <p><strong>注意：</strong>你还可以通过事件和 <code>v-bind</code> 属性的组合将数据与 <code>&lt;input&gt;</code> 值同步。事实上，这就是 <code>v-model</code> 在幕后所做的。但是，确切的事件和属性组合因输入类型而异，并且比仅使用 <code>v-model</code> 快捷方式需要更多代码。</p>
+   </div>
  </li>
  <li>
-  <p>Let's test out our use of <code>v-model</code> by logging the value of the data submitted in our <code>onSubmit()</code> method. In components, data attributes are accessed using the <code>this</code> keyword. So we access our <code>label</code> field using <code>this.label</code>.</p>
-
-  <p>Update your <code>onSubmit()</code> method to look like this:</p>
-
+  <p>让我们通过记录在我们的 <code>onSubmit()</code> 方法中提交的数据的值来测试我们对 <code>v-model</code> 的使用。在组件中，使用 <code>this</code> 关键字访问数据属性。所以我们使用 <code>this.label</code> 访问我们的 <code>label</code> 字段。</p>
+   
+  <p>更新你的 <code>onSubmit()</code> 方法，使其如下所示：</p>
+   
   <pre class="brush: js notranslate">methods: {
   onSubmit() {
     console.log('Label value: ', this.label);
@@ -208,37 +200,35 @@ translation_of: >-
 },</pre>
  </li>
  <li>
-  <p>Now go back to your running app, add some text to the <code>&lt;input&gt;</code> field, and click the "Add" button. You should see the value you entered logged to your console, for example:</p>
-
+  <p>现在回到你正在运行的应用程序，在 <code>&lt;input&gt;</code> 字段中添加一些文本，然后单击“添加”按钮。你应该会看到你输入的值已记录到控制台，例如：</p>
+   
   <pre class="notranslate">Label value: My value</pre>
  </li>
 </ol>
 
-<h2 id="Changing_v-model_behavior_with_modifiers">Changing <code>v-model</code> behavior with modifiers</h2>
+<h2 id="Changing_v-model_behavior_with_modifiers">使用修饰符改变 <code>v-model</code> 的行为</h2>
 
-<p>In a similar fashion to event modifiers, we can also add modifiers to change the behavior of <code>v-model</code>. In our case, there are two worth considering. The first, <code>.trim</code>, will remove whitespace from before or after the input. We can add the modifier to our <code>v-model</code> statement like so: <code>v-model.trim="label"</code>.</p>
+<p>与事件修饰符类似，我们也可以添加修饰符来改变 <code>v-model</code> 的行为。在我们的案例中，有两个值得考虑。第一个，<code>.trim</code>，将删除输入之前或之后的空格。我们可以将修饰符添加到我们的 <code>v-model</code> 语句中，如下所示：<code>v-model.trim="label"</code>。</p>
 
-<p>The second modifier we should consider is called <code>.lazy</code>. This modifier changes when <code>v-model</code> syncs the value for text inputs. As mentioned earlier, <code>v-model</code> syncing works by updating the variable using events. For text inputs, this sync happens using the <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> event</a>. Often, this means that Vue is syncing the data after every keystroke. The <code>.lazy</code> modifier causes <code>v-model</code> to use the <a href="/en-US/docs/Web/API/HTMLElement/change_event"><code>change</code> event</a> instead. This means that Vue will only sync data when the input loses focus or the form is submitted. For our purposes, this is much more reasonable since we only need the final data.</p>
+<p>我们应该考虑的第二个修饰符称为 <code>.lazy</code>。当 <code>v-model</code> 同步文本输入的值时，此修饰符会发生变化。如前所述，<code>v-model</code> 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> 事件</a>进行。通常，这意味着 Vue 在每次击键后都会同步数据。<code>.lazy</code> 修饰符导致 <code>v-model</code> 使用 <a href="/zh-CN/docs/Web/API/HTMLElement/change_event"><code>change</code> 事件</a> 代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。就我们的目的而言，这更合理，因为我们只需要最终数据。</p>
 
-<p>To use both the <code>.lazy</code> modifier and the <code>.trim</code> modifier together, we can chain them, e.g. <code>v-model.lazy.trim="label"</code>.</p>
+<p>要同时使用 <code>.lazy</code> 修饰符和 <code>.trim</code> 修饰符，我们可以将它们链接起来，例如 <code>v-model.lazy.trim="label"</code>。</p>
 
-<p>Update your <code>v-model</code> attribute to chain <code>lazy</code> and <code>trim</code> as shown above, and then test your app again. Try for example, submitting a value with whitespace at each end.</p>
+<p>如上所示更新你的 <code>v-model</code> 属性以链接 <code>lazy</code> 和 <code>trim</code>，然后再次测试你的应用。例如，尝试提交一个两端都有空格的值。</p>
 
-<h2 id="Passing_data_to_parents_with_custom_events">Passing data to parents with custom events</h2>
+<h2 id="Passing_data_to_parents_with_custom_events">使用自定义事件将数据传递给父母</h2>
 
-<p>We now are very close to being able to add new to-do items to our list. The next thing we need to be able to do is pass the newly-created to-do item to our <code>App</code> component. To do that, we can have our <code>ToDoForm</code> emit a custom event that passes the data, and have <code>App</code> listen for it. This works very similarly to native events on HTML elements: a child component can emit an event which can be listened to via <code>v-on</code>.</p>
+<p>我们现在非常接近能够将新的待办事项添加到我们的列表中。接下来我们需要做的是将新创建的待办事项传递给我们的 <code>App</code> 组件。为此，我们可以让我们的 <code>ToDoForm</code> 发出一个传递数据的自定义事件，并让 <code>App</code> 监听它。这与 HTML 元素上的原生事件非常相似：子组件可以发出可以通过 <code>v-on</code> 监听的事件。</p>
 
-<p>In the <code>onSubmit</code> event of our <code>ToDoForm</code>, let's add a <code>todo-added</code> event. Custom events are emitted like this: <code>this.$emit("event-name")</code>. It's important to know that event handlers are case sensitive and cannot include spaces. Vue templates also get converted to lowercase, which means Vue templates cannot listen for events named with capital letters.</p>
-
+<p>在 <code>ToDoForm</code> 的 <code>onSubmit</code> 事件中，我们添加一个 <code>todo-added</code> 事件。自定义事件的发射方式如下：<code>this.$emit("event-name")</code>。重要的是要知道事件处理程序区分大小写并且不能包含空格。Vue 模板也被转换为小写，这意味着 Vue 模板无法监听以大写字母命名的事件。</p>
 <ol>
  <li>
-  <p>Replace the <code>console.log()</code> in the <code>onSubmit()</code> method with the following:</p>
-
+  <p>将 <code>onSubmit()</code> 方法中的 <code>console.log()</code> 替换为以下内容：</p>
+   
   <pre class="brush: js notranslate">this.$emit("todo-added");</pre>
  </li>
  <li>
-  <p>Next, go back to <code>App.vue</code> and add a <code>methods</code> property to your component object containing an <code>addToDo()</code> method, as shown below. For now, this method can just log <code>To-do added</code> to the console.</p>
-
+  <p>接下来，回到 <code>App.vue</code> 并添加一个 <code>methods</code> 属性到包含 <code>addToDo()</code> 方法的组件对象，如图所示 以下。目前，此方法只需将 <code>To-do added</code> 记录到控制台即可。</p>
   <pre class="brush: js notranslate">export default {
   name: 'app',
   components: {
@@ -263,26 +253,26 @@ translation_of: >-
 };</pre>
  </li>
  <li>
-  <p>Next, add an event listener for the <code>todo-added</code> event to the <code>&lt;to-do-form&gt;&lt;/to-do-form&gt;</code>, which calls the <code>addToDo()</code> method when the event fires. Using the <code>@</code> shorthand, the listener would look like this: <code>@todo-added="addToDo"</code>:</p>
-
+  <p>接下来，将 <code>todo-added</code> 事件的事件监听器添加到 <code>&lt;to-do-form&gt;&lt;/to-do-form&gt;</code>，它 事件触发时调用 <code>addToDo()</code> 方法。使用 <code>@</code> 简写，监听器看起来像这样：<code>@todo-added="addToDo"</code>:</p>
+   
   <pre class="brush: html notranslate">&lt;to-do-form @todo-added="addToDo"&gt;&lt;/to-do-form&gt;</pre>
  </li>
  <li>
-  <p>When you submit your <code>ToDoForm</code>, you should see the console log from the <code>addToDo()</code> method. This is good, but we're still not passing any data back into the <code>App.vue</code> component. We can do that by passing additional arguments to the <code>this.$emit()</code> function back in the <code>ToDoForm</code> component.</p>
-
-  <p>In this case, when we fire the event we want to pass the <code>label</code> data along with it. this is done by including the data you want to pass as another parameter in the <code>$emit()</code> method:  <code>this.$emit("todo-added", this.label)</code>. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.</p>
-
-  <p>Update your <code>onSubmit()</code> method like so:</p>
-
+  <p>当你提交 <code>ToDoForm</code> 时，你应该会看到来自 <code>addToDo()</code> 方法的控制台日志。这很好，但我们仍然没有将任何数据传递回 <code>App.vue</code> 组件。我们可以通过将额外的参数传递给 <code>ToDoForm</code> 组件中的 <code>this.$emit()</code> 函数来做到这一点。</p>
+   
+  <p>在这种情况下，当我们触发事件时，我们希望将 <code>label</code> 数据连同它一起传递。这是通过在 <code>$emit()</code> 方法中包含你要作为另一个参数传递的数据来完成的：<code>this.$emit("todo-added", this.label)</code>。这类似于原生 JavaScript 事件如何包含数据，除了自定义 Vue 事件默认不包含事件对象。这意味着发出的事件将直接匹配你提交的任何对象。所以在我们的例子中，我们的事件对象只是一个字符串。</p>
+   
+  <p>像这样更新你的 <code>onSubmit()</code> 方法：</p>
+   
   <pre class="brush: js notranslate">onSubmit() {
   this.$emit('todo-added', this.label)
 }</pre>
  </li>
  <li>
-  <p>To actually pick up this data inside <code>App.vue</code>, we need to add a parameter to our <code>addToDo()</code> method that includes the <code>label</code> of the new to-do item.</p>
-
-  <p>Go back to <code>App.vue</code> and update this now:</p>
-
+  <p>要真正在 <code>App.vue</code> 中获取这些数据，我们需要向我们的 <code>addToDo()</code> 方法添加一个参数，其中包含 <code>label</code > 新的待办事项。</p>
+   
+  <p>返回 <code>App.vue</code> 并立即更新：</p>
+   
   <pre class="brush: js notranslate">methods: {
   addToDo(toDoLabel) {
     console.log('To-do added:', toDoLabel);
@@ -292,28 +282,25 @@ translation_of: >-
  </li>
 </ol>
 
-<p>If you test your form again, you'll see whatever text you enter logged in your console upon submission. Vue automatically passes the arguments after the event name in <code>this.$emit()</code> to your event handler.</p>
+<p>如果你再次测试你的表单，你将在提交时看到你在控制台中输入的任何文本。Vue 自动将 <code>this.$emit()</code> 中事件名称后面的参数传递给你的事件处理程序。</p>
 
-<h2 id="Adding_the_new_todo_into_our_data">Adding the new todo into our data</h2>
+<h2 id="Adding_the_new_todo_into_our_data">将新的待办事项添加到我们的数据中</h2>
 
-<p>Now that we have the data from <code>ToDoForm</code> available in <code>App.vue</code>, we need to add an item representing it to the <code>ToDoItems</code> array. This can be done by pushing a new to-do item object to the array containing our new data.</p>
-
+<p>现在我们在 <code>App.vue</code> 中获得了来自 <code>ToDoForm</code> 的数据，我们需要在 <code>ToDoItems</code> 数组中添加一个表示它的项目 . 这可以通过将新的待办事项对象推送到包含我们新数据的数组来完成。</p>
 <ol>
  <li>
-  <p>Update your <code>addToDo()</code> method like so:</p>
-
+  <p>像这样更新你的 <code>addToDo()</code> 方法：</p>
+   
   <pre class="brush: js notranslate">addToDo(toDoLabel) {
   this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
 }</pre>
  </li>
  <li>
-  <p>Try testing your form again, and you should see new to-do items get appended to the end of the list.</p>
+  <p>再次尝试测试你的表单，你应该会看到新的待办事项被附加到列表的末尾。</p>
  </li>
  <li>
-  <p>Let's make a further improvement before we move on. If you submit the form while the input is empy, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the <code>.trim</code> directive, we only need to test for the empty string.</p>
-
-  <p>Go back to your <code>ToDoForm</code> component, and update the <code>onSubmit()</code> method like so. If the label value is empty, let's not emit the <code>todo-added</code> event.</p>
-
+  <p>在我们继续之前，让我们做进一步的改进。如果你在输入为空时提交表单，则没有文本的待办事项仍会添加到列表中。为了解决这个问题，我们可以防止在 name 为空时触发 todo-added 事件。由于 <code>.trim</code> 指令已经对 name 进行了修剪，因此我们只需要测试空字符串。回到你的 <code>ToDoForm</code> 组件，像这样更新 <code>onSubmit()</code> 方法。如果标签值为空，我们就不发出 <code>todo-added</code> 事件。</p>
+   
   <pre class="brush: js notranslate">onSubmit() {
   if(this.label === "") {
     return;
@@ -322,17 +309,16 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>Try your form again. Now you will not be able to add empty items to the to-do list.</p>
- </li>
+ <p>再次尝试你的表单。现在你将无法将空项目添加到待办事项列表中。</p> </li>
 </ol>
 
-<p><img alt="Our todo list app rendered with a text input to enter new todos" src="https://mdn.mozillademos.org/files/17246/rendered-form-with-new-items.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 442px;"></p>
+<p><img alt="我们的待办事项列表应用程序使用文本输入呈现以输入新待办事项" src="rendered-form-with-new-items.png"></p>
 
-<h2 id="Using_v-model_to_update_an_input_value">Using <code>v-model</code> to update an input value</h2>
+<h2 id="Using_v-model_to_update_an_input_value">使用 <code>v-model</code> 更新输入值</h2>
 
-<p>There's one more thing to fix in our <code>ToDoForm</code> component — after submitting, the <code>&lt;input&gt;</code> still contains the old value. But this is easy to fix — because we're using <code>v-model</code> to bind the data to the <code>&lt;input&gt;</code> in <code>ToDoForm</code>, if we set the name parameter to equal an empty string, the input will update as well.</p>
+<p>在我们的 <code>ToDoForm</code> 组件中还有一件事需要修复——提交后，<code>&lt;input&gt;</code> 仍然包含旧值。但这很容易解决——因为我们使用 <code>v-model</code> 将数据绑定到 <code>ToDoForm</code> 中的 <code>&lt;input&gt;</code>，如果 我们将 name 参数设置为空字符串，输入也会更新。</p>
 
-<p>Update your <code>ToDoForm</code> component’s <code>onSubmit()</code> method to this:</p>
+<p>将你的 <code>ToDoForm</code> 组件的 <code>onSubmit()</code> 方法更新为：</p>
 
 <pre class="brush: js notranslate">onSubmit() {
   if(this.label === "") {
@@ -342,15 +328,15 @@ translation_of: >-
   this.label = "";
 }</pre>
 
-<p>Now when you click the "Add" button, the "new-todo-input" will clear itself.</p>
+<p>现在，当你单击“添加”按钮时，“new-todo-input”将自行清除。</p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">总结</h2>
 
-<p>Excellent. We can now add todo items to our form! Our app is now starting to feel interactive, but one issue is that we've completely ignored its look and feel up to now. In the next article, we'll concentrate on fixing this, looking at the different ways Vue provides to style components.</p>
+<p>非常好。我们现在可以将待办事项添加到我们的表单中！我们的应用程序现在开始感觉具有交互性，但一个问题是到目前为止我们完全忽略了它的外观和感觉。在下一篇文章中，我们将集中精力解决这个问题，看看 Vue 为组件样式提供的不同方式。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">本章目录</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>

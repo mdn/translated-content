@@ -10,9 +10,9 @@ translation_of: Web/API/TouchEvent/touches
 ---
 <p>{{ APIRef("Touch Events") }}</p>
 
-<h2 id="概要"><font><font>概要</font></font></h2>
+<h2 id="概要">概要</h2>
 
-<p>一个 {{ domxref("TouchList") }}，其会<font><font>列出所有当前在与触摸表面接触的  </font></font>{{ domxref("Touch") }} 对象<font><font>，不管触摸点是否已经改变或其目标元素是在处于 </font></font><code>touchstart </code>阶段<font><font>。</font></font></p>
+<p>一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的  {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 <code>touchstart </code>阶段。</p>
 
 <p>此属性是 {{readonlyInline}}。</p>
 
@@ -21,18 +21,18 @@ translation_of: Web/API/TouchEvent/touches
 <pre class="eval">var <em>touches</em> = <em>touchEvent</em>.touches;
 </pre>
 
-<h3 id="Return_Value" name="Return_Value"><font><font>返回值</font></font></h3>
+<h3 id="Return_Value" name="Return_Value">返回值</h3>
 
 <dl>
  <dt><code>touches</code></dt>
- <dd>一个 {{ domxref("TouchList") }}，其会<font><font>列出所有当前在与触摸表面接触的  </font></font>{{ domxref("Touch") }} 对象<font><font>，不管触摸点是否已经改变或其目标元素是在处于 </font></font><code>touchstart </code>阶段<font><font>。</font></font></dd>
+ <dd>一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的  {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 <code>touchstart </code>阶段。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p><font><font>此示例说明 </font></font>{{domxref("TouchEvent")}}<code> </code><font><font>对象的<font face="consolas, Liberation Mono, courier, monospace"> </font></font></font>{{domxref("TouchEvent.touches")}} <font><font>属性。</font><font>该</font></font>{{domxref("TouchEvent.touches")}} <font><font>属性是一个<font face="consolas, Liberation Mono, courier, monospace"> </font></font></font>{{domxref("TouchList")}}<font><font><font face="consolas, Liberation Mono, courier, monospace"> </font>对象，并包含<font face="consolas, Liberation Mono, courier, monospace"> </font></font></font>{{domxref("Touch")}} <font><font>当前接触表面的每个接触点的对象</font><font>列表</font><font>。</font></font></p>
+<p>此示例说明 {{domxref("TouchEvent")}}<code> </code>对象的 {{domxref("TouchEvent.touches")}} 属性。该{{domxref("TouchEvent.touches")}} 属性是一个 {{domxref("TouchList")}} 对象，并包含 {{domxref("Touch")}} 当前接触表面的每个接触点的对象列表。</p>
 
-<p><font><font>在下面的代码片段中，</font></font>{{event("touchstart")}} <font><font>事件处理程序会检查 </font></font>{{domxref("TouchEvent.touches")}}<code> </code><font><font>列表</font><font>的长度，</font><font>以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。</font></font></p>
+<p>在下面的代码片段中，{{event("touchstart")}} 事件处理程序会检查 {{domxref("TouchEvent.touches")}}<code> </code>列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。</p>
 
 <pre class="brush: js">someElement.addEventListener('touchstart', function(e) {
    // Invoke the appropriate handler depending on the
@@ -68,7 +68,7 @@ translation_of: Web/API/TouchEvent/touches
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 

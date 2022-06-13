@@ -13,7 +13,7 @@ original_slug: Web/Events/unhandledrejection
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">当{{jsxref("Promise")}} 被 reject 且没有 reject 处理器的时候，会触发 <strong><code>unhandledrejection</code></strong> 事件；这可能发生在 {{domxref("window")}} 下，但也可能发生在 {{domxref("Worker")}} 中。</span> 这对于调试回退错误处理非常有用。</p>
+<p>当 {{jsxref("Promise")}} 被 reject 且没有 reject 处理器的时候，会触发 <strong><code>unhandledrejection</code></strong> 事件；这可能发生在 {{domxref("window")}} 下，但也可能发生在 {{domxref("Worker")}} 中。 这对于调试和为意外情况提供后备错误处理非常有用。</p>
 
 <table class="properties">
  <tbody>
@@ -36,24 +36,24 @@ original_slug: Web/Events/unhandledrejection
  </tbody>
 </table>
 
-<h2 id="使用备注">使用备注</h2>
+<h2 id="事件属性">事件属性</h2>
 
-<p><code>unhandledrejection</code> 继承自 {{domxref("PromiseRejectionEvent")}}，而 {{domxref("PromiseRejectionEvent")}} 又继承自 {{domxref("Event")}}。因此<code>unhandledrejection</code> 含有 <code>PromiseRejectionEvent</code> 和 <code>Event</code> 的属性和方法。</p>
-
-<h2 id="例子">例子</h2>
-
-<p>Here we have a few examples showing ways you can make use of the <code>unhandledrejection</code> event. The event includes two useful pieces of information:</p>
-
-<p>我们将通过几个例子来展示 <code>unhandledrejection</code> 事件的使用方式。该事件主要包含两部分有用的信息：</p>
+<p><code>unhandledrejection</code> 继承自 {{domxref("PromiseRejectionEvent")}}，而 {{domxref("PromiseRejectionEvent")}} 又继承自 {{domxref("Event")}}。因此<code>unhandledrejection</code> 含有 <code>PromiseRejectionEvent</code> 和 <code>Event</code> 的属性和方法。主要包含两个有用的属性：</p>
 
 <dl>
  <dt><code>promise</code></dt>
- <dd>The actual {{jsxref("Promise")}} which was rejected with no handler available to deal with the rejection.</dd>
- <dd>特定的 {{jsxref("Promise")}} 被 reject 而没有被相应的异常处理方法所处理时</dd>
+ <dd>特定的被 reject 且没有 reject 处理器的 {{jsxref("Promise")}}</dd>
  <dt><code>reason</code></dt>
- <dd>The reason that would have been passed into the rejection handler if one had existed. See {{jsxref("Promise.catch", "catch()")}} for details.</dd>
  <dd>将会传入异常处理方法中的错误原因（如果存在），查看 {{jsxref("Promise.catch", "catch()")}} 相关以获取更多细节。</dd>
 </dl>
+
+<h2 id="使用备注">使用备注</h2>
+
+<p>允许 <code>unhandlejection</code> 事件冒泡将最终导致向控制台输出错误消息。可以通过调用 {{domxref("PromiseRejectionEvent")}} 上的 {{domxref("Event.preventDefault", "preventDefault()")}} 来阻止这种情况；请参阅下面的<a href="#阻止默认处理">阻止默认处理</a>示例。</p>
+
+<h2 id="例子">例子</h2>
+
+<p>我们将通过几个例子来展示 <code>unhandledrejection</code> 事件的使用方式。</p>
 
 <h3 id="基本的异常上报">基本的异常上报</h3>
 
@@ -64,56 +64,38 @@ original_slug: Web/Events/unhandledrejection
 });
 </pre>
 
-<p>您还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器:</p>
+<p>您还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器：</p>
 
 <pre class="brush: js notranslate">window.onunhandledrejection = event =&gt; {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
 </pre>
 
-<h3 id="防止默认处理">防止默认处理</h3>
+<h3 id="阻止默认处理">阻止默认处理</h3>
 
-<p>许多环境(例如 {{Glossary("Node.js")}} ) 默认情况下会向控制台打印未处理的 Promise rejections。您可以通过添加一个处理程序来防止 <code>unhandledrejection</code> 这种情况的发生，该处理程序除了您希望执行的任何其他任务之外，还可以调用 {{domxref("Event.preventDefault()", "preventDefault()")}} 来取消该事件，从而防止该事件冒泡并由运行时的日志代码处理。这种方法之所以有效，是因为 <code>unhandledrejection</code> 是可以取消的。</p>
+<p>许多环境 (例如 {{Glossary("Node.js")}} ) 默认情况下会向控制台打印未处理的 Promise rejections。你可以通过为 <code>unhandledrejection</code> 事件添加一个处理程序来避免这种情况的发生，该处理程序除了执行你希望执行的任何其他任务之外，还可以调用 {{domxref("Event.preventDefault()", "preventDefault()")}} 来取消该事件，从而阻止该事件冒泡并由运行时的日志代码处理。这种方法之所以有效，是因为 <code>unhandledrejection</code> 事件是可以取消的。</p>
 
 <pre class="brush:js; notranslate">window.addEventListener('unhandledrejection', function (event) {
-  // ...您的代码可以处理未处理的拒绝...
+  // ...您的代码可以处理未处理的 rejection...
 
-  // 防止默认处理（例如将错误输出到控制台）
+  // 阻止默认处理（例如将错误输出到控制台）
 
   event.preventDefault();
 });
 </pre>
 
-<h2 id="说明">说明</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'unhandledrejection')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
+{{Compat}}
 
-
-<p>{{Compat("api.Window.unhandledrejection_event")}}</p>
-
-<h2 id="参考">参考</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li>{{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}</li>
- <li>{{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property<sup><a href="#seealso-footnote-1">1</a></sup></li>
- <li>{{Event("rejectionhandled")}}</li>
+ <li>{{domxref("Window/rejectionhandled_event", "rejectionhandled")}} 事件</li>
  <li>{{domxref("Promise")}}</li>
 </ul>
-
-<p><a id="seealso-footnote-1" name="seealso-footnote-1">[1]</a> The corresponding event handler property is defined on the {{domxref("WindowEventHandlers")}} mixin, which is available on both the {{domxref("Window")}} interface and all types of {{domxref("Worker")}} interfaces.</p>

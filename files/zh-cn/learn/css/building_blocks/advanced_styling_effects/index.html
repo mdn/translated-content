@@ -7,30 +7,30 @@ translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</div>
 
-<p class="summary">这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。</p>
+<p>这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>HTML 基础(学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>) ，了解CSS工作原理 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <td>HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>) ，了解 CSS 工作原理 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
-   <td>要了解如何使用高级的盒子效果，并了解一些在CSS语言中出现的新样式工具。</td>
+   <td>要了解如何使用高级的盒子效果，并了解一些在 CSS 语言中出现的新样式工具。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="盒子阴影">盒子阴影</h2>
 
-<p>回到我们的<a href="/zh-CN/docs/Learn/CSS/Styling_text">样式化文本</a>模块，我们查看了{{cssxref("text-shadow")}}属性，它允许您将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许您将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在IE9+（IE9及更新版本）中可用。你的旧IE版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。</p>
+<p>回到我们的<a href="/zh-CN/docs/Learn/CSS/Styling_text">样式化文本</a>模块，我们查看了{{cssxref("text-shadow")}}属性，它允许您将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许您将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。</p>
 
 <p>你可以 <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html">box-shadow.html</a>在这部分找到例子 (见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html">源码</a>)。</p>
 
 <h3 id="一个简单的盒子阴影">一个简单的盒子阴影</h3>
 
-<p>让我们看一个简单的例子来起步。首先,一些HTML：</p>
+<p>让我们看一个简单的例子来起步。首先，一些 HTML：</p>
 
 <pre class="brush: html">&lt;article class="simple"&gt;
   &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: The thermostat on the cosmic transcender has reached a critical level.&lt;/p&gt;
@@ -57,11 +57,11 @@ article {
 
 <p>{{ EmbedLiveSample('一个简单的盒子阴影', '100%', 100) }}</p>
 
-<p>你会看到，我们在<code>box-shadow</code>属性值中有4个项：</p>
+<p>你会看到，我们在<code>box-shadow</code>属性值中有 4 个项：</p>
 
 <ol>
- <li>第一个长度值是水平偏移量（<strong>horizontal offset</strong> ）——即向右的距离，阴影被从原始的框中偏移(如果值为负的话则为左)。</li>
- <li>第二个长度值是垂直偏移量（<strong>vertical offset</strong>）——即阴影从原始盒子中向下偏移的距离(或向上，如果值为负)。</li>
+ <li>第一个长度值是水平偏移量（<strong>horizontal offset</strong> ）——即向右的距离，阴影被从原始的框中偏移 (如果值为负的话则为左)。</li>
+ <li>第二个长度值是垂直偏移量（<strong>vertical offset</strong>）——即阴影从原始盒子中向下偏移的距离 (或向上，如果值为负)。</li>
  <li>第三个长度的值是模糊半径（<strong>blur radius</strong>）——在阴影中应用的模糊度。</li>
  <li>颜色值是阴影的基本颜色（<strong>base color</strong>）。</li>
 </ol>
@@ -112,7 +112,7 @@ article {
 
 <p>与{{cssxref("text-shadow")}}不同，{{cssxref("box-shadow")}}有一个<code>inset</code>关键字可用——把它放在一个影子声明的开始，使它变成一个内部阴影，而不是一个外部阴影。让我们看一看。</p>
 
-<p>首先，我们将为这个例子使用一些不同的HTML：</p>
+<p>首先，我们将为这个例子使用一些不同的 HTML：</p>
 
 <pre class="brush: html">&lt;button&gt;Press me!&lt;/button&gt;</pre>
 
@@ -144,17 +144,17 @@ button:active {
 
 <p>在这里我们将focus/hover/active这些声明一起设置了按钮样式。这个按钮的默认状态下设置了一个简单的黑色盒阴影，并且加上了一对inset阴影，一个明的，一个暗的，位于按钮的两个对角上，以此给按钮一种很棒的阴影效果。</p>
 
-<p>当按钮被按下时，这里的active声明将第一个盒阴影换成一个非常暗的inset阴影。给人一种按钮被按下的样子。</p>
+<p>当按钮被按下时，这里的 active 声明将第一个盒阴影换成一个非常暗的 inset 阴影。给人一种按钮被按下的样子。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 还有一个可以在box-shadow中设置的值 — 另外一个位于颜色值前面可选的长度值，即<strong>spread radius</strong>，如果设置了这个值，将会导致阴影变得比原始的阴影更大，这个值不是很常用，但是值得一提。</p>
+<p><strong>注意</strong>: 还有一个可以在 box-shadow 中设置的值 — 另外一个位于颜色值前面可选的长度值，即<strong>spread radius</strong>，如果设置了这个值，将会导致阴影变得比原始的阴影更大，这个值不是很常用，但是值得一提。</p>
 </div>
 
 <h2 id="Filters（滤镜）">Filters（滤镜）</h2>
 
-<p>CSS滤镜提供了一种过滤元素的方法，就好比你在诸如Photoshop这样的平面设计程序中过滤元素一样。有大量的不同的选项可以使用，你可以在{{cssxref("filter")}} 参考页面阅读所有相关的更多细节。在这篇文章中，我们将会向你介绍它的语法，并且向你展示将会发生多么有趣的结果。</p>
+<p>CSS 滤镜提供了一种过滤元素的方法，就好比你在诸如 Photoshop 这样的平面设计程序中过滤元素一样。有大量的不同的选项可以使用，你可以在{{cssxref("filter")}} 参考页面阅读所有相关的更多细节。在这篇文章中，我们将会向你介绍它的语法，并且向你展示将会发生多么有趣的结果。</p>
 
-<p>基本上，滤镜可以应用在任何元素上，块元素（block）或者行内元素（inline）——你只需要使用<code>filter</code>属性，并且给他一个特定的过滤函数的值。有些可用的滤镜选项和其他CSS特性做的事情十分相似，例如<code>drop-shadow()</code>的工作方式以及产生的效果和 {{cssxref("box-shadow")}} 或{{cssxref("text-shadow")}}十分相似。然而滤镜真正出色的地方在于，它们作用于盒（box）内内容（content）的确切形状，而不仅仅将盒子本身作为一个大的块，这看起来会更棒，即使他们可能不会总是变成你想要的模样。让我们来举一个简单的例子来阐明我们的意思：</p>
+<p>基本上，滤镜可以应用在任何元素上，块元素（block）或者行内元素（inline）——你只需要使用<code>filter</code>属性，并且给他一个特定的过滤函数的值。有些可用的滤镜选项和其他 CSS 特性做的事情十分相似，例如<code>drop-shadow()</code>的工作方式以及产生的效果和 {{cssxref("box-shadow")}} 或{{cssxref("text-shadow")}}十分相似。然而滤镜真正出色的地方在于，它们作用于盒（box）内内容（content）的确切形状，而不仅仅将盒子本身作为一个大的块，这看起来会更棒，即使他们可能不会总是变成你想要的模样。让我们来举一个简单的例子来阐明我们的意思：</p>
 
 <p>首先，一些简单的 HTML:</p>
 
@@ -163,7 +163,7 @@ button:active {
 &lt;p class="box-shadow"&gt;Box shadow&lt;/p&gt;
 </pre>
 
-<p>现在是一些CSS,用来给它们各自一个下降的阴影:</p>
+<p>现在是一些 CSS，用来给它们各自一个下降的阴影：</p>
 
 <pre class="brush: css">p {
   margin: 1rem auto;
@@ -181,17 +181,17 @@ button:active {
   box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
 }</pre>
 
-<p>这给了我们一个如下的结果:</p>
+<p>这给了我们一个如下的结果：</p>
 
 <p>{{ EmbedLiveSample('Filters（滤镜）', '100%', 200) }}</p>
 
-<p>正如你所看到的, drop-shadow滤镜跟随着文本和border dashes的确切形状。而盒阴影（box-shadow）仅仅跟随着盒的四方。</p>
+<p>正如你所看到的，drop-shadow 滤镜跟随着文本和 border dashes 的确切形状。而盒阴影（box-shadow）仅仅跟随着盒的四方。</p>
 
-<p>其他需要注意的事:</p>
+<p>其他需要注意的事：</p>
 
 <ul>
- <li>滤镜很新——它们可以被大多数的现代的浏览器支持，包括Microsoft Edge，但它们一点也不能被IE浏览器支持。因此如果你在你的设计中使用滤镜，你需要确保你的内容即使没有滤镜也是可用的。</li>
- <li>你会看到我们在<code>filter</code>属性中通过<code>-webkit-</code>前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes永远都不被指望着被web开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的<code>-webkit-</code>版本，而Edge 和 Firefox则使用后者，无前缀版本。</li>
+ <li>滤镜很新——它们可以被大多数的现代的浏览器支持，包括 Microsoft Edge，但它们一点也不能被 IE 浏览器支持。因此如果你在你的设计中使用滤镜，你需要确保你的内容即使没有滤镜也是可用的。</li>
+ <li>你会看到我们在<code>filter</code>属性中通过<code>-webkit-</code>前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes 永远都不被指望着被 web 开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的<code>-webkit-</code>版本，而 Edge 和 Firefox 则使用后者，无前缀版本。</li>
 </ul>
 
 <div class="note">
@@ -202,19 +202,19 @@ button:active {
 
 <h2 id="Blend_modes（混合模式）">Blend modes（混合模式）</h2>
 
-<p>CSS混合模式允许我们为元素添加一个混合模式 ，以当两个元素重叠时，指定一个混合的效果——最终每个像素所展示的颜色将会是原来像素中颜色和其下面一层相组合之后的结果，对于像Photoshop这样的图形程序的用户来说，混合模式应该也非常熟悉。</p>
+<p>CSS 混合模式允许我们为元素添加一个混合模式，以当两个元素重叠时，指定一个混合的效果——最终每个像素所展示的颜色将会是原来像素中颜色和其下面一层相组合之后的结果，对于像 Photoshop 这样的图形程序的用户来说，混合模式应该也非常熟悉。</p>
 
-<p>这里有两个在 CSS中用到的属性:</p>
+<p>这里有两个在 CSS 中用到的属性：</p>
 
 <ul>
  <li>{{cssxref("background-blend-mode")}}, 用来将单个元素的多重背景图片和背景颜色设置混合在一起。</li>
- <li>{{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容(content)混合在一起。</li>
+ <li>{{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容 (content) 混合在一起。</li>
 </ul>
 
 <p>你可以找到比这里用到的更多的例子，在我们的<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> 示例页面 (查看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 混合模式（Blend modes ）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没Edge支持， 并且 Safari 也仅仅支持部分混合模式选项。</p>
+<p><strong>注意</strong>: 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
 </div>
 
 <h3 id="background-blend-mode">background-blend-mode</h3>
@@ -268,7 +268,7 @@ button:active {
   &lt;/div&gt;
 &lt;/article&gt;</pre>
 
-<p>这是我们将用来装饰它的CSS:</p>
+<p>这是我们将用来装饰它的 CSS:</p>
 
 <pre class="brush: css">article {
   width: 300px;
@@ -317,14 +317,14 @@ article div:last-child {
 
 <h2 id="-webkit-background-clip_text">-webkit-background-clip: text</h2>
 
-<p>另一个我们认为在继续之前会提到的新特性(目前支持Chrome、Safari和Opera,和在Firefox正在实现)是{{cssxref("background-clip")}}的 <code>text</code> 值。当与专有 <code>-webkit-text-fill-color: transparent;</code> 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个<code>-webkit-</code>供应商前缀，甚至对于非webkit/Chrome-based的浏览器来说也是如此。</p>
+<p>另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和在 Firefox 正在实现) 是{{cssxref("background-clip")}}的 <code>text</code> 值。当与专有 <code>-webkit-text-fill-color: transparent;</code> 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个<code>-webkit-</code>供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。</p>
 
 <pre class="brush: css">.text-clip {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }</pre>
 
-<p>那么为什么其他浏览器会实现一个<code>-webkit-</code>前缀？主要是为了浏览器兼容性——许多web开发人员已经开始使用<code>-webkit-</code>前缀来实现web站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的CSS特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。</p>
+<p>那么为什么其他浏览器会实现一个<code>-webkit-</code>前缀？主要是为了浏览器兼容性——许多 web 开发人员已经开始使用<code>-webkit-</code>前缀来实现 web 站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的 CSS 特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。</p>
 
 <p>如果您确实希望在您的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。</p>
 
@@ -332,7 +332,7 @@ article div:last-child {
 <p><strong>注意：</strong>对于一个完整的<code>-webkit-background-clip: text</code>代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
 </div>
 
-<h2 id="自主学习尝试一些效果">自主学习:尝试一些效果</h2>
+<h2 id="自主学习尝试一些效果">自主学习：尝试一些效果</h2>
 
 <p>现在轮到你了。对于这种自主学习，我们希望您使用下面所提供的代码来试验上面所读到的一些效果。</p>
 
@@ -398,6 +398,6 @@ window.addEventListener("load", drawOutput);
 
 <h2 id="总结">总结</h2>
 
-<p>我们希望这篇文章被证明是很有趣的——玩着闪亮的玩具通常是很有趣的，而且看看什么样的工具在尖端的浏览器中是可以得到的是我们很感兴趣的。您已经到达了样式盒文章的末尾，因此，接下来您将通过我们的评估来测试您的box syling技能。</p>
+<p>我们希望这篇文章被证明是很有趣的——玩着闪亮的玩具通常是很有趣的，而且看看什么样的工具在尖端的浏览器中是可以得到的是我们很感兴趣的。您已经到达了样式盒文章的末尾，因此，接下来您将通过我们的评估来测试您的 box syling 技能。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</p>

@@ -5,13 +5,13 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 ---
 <div>{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}</div>
 
-<p>早年设计Web时，页面是以适配特定的屏幕大小为考量创建的。如果用户正在使用比设计者考虑到的更小或者更大的屏幕，那么结果从多余的滚动条，到过长的行和没有被合理利用的空间，不一而足。随着人们使用的屏幕尺寸的种类越来越多，出现了响应式网页设计的概念（<em>responsive web design，RWD</em>），RWD指的是允许Web页面适应不同屏幕宽度因素等，进行布局和外观的调整的一系列实践。这是改变我们设计多设备网页的方式的思想，在这篇文章里，我们将会帮你理解掌握它时所需知道的主要技能。</p>
+<p>早年设计 Web 时，页面是以适配特定的屏幕大小为考量创建的。如果用户正在使用比设计者考虑到的更小或者更大的屏幕，那么结果从多余的滚动条，到过长的行和没有被合理利用的空间，不一而足。随着人们使用的屏幕尺寸的种类越来越多，出现了响应式网页设计的概念（<em>responsive web design，RWD</em>），RWD 指的是允许 Web 页面适应不同屏幕宽度因素等，进行布局和外观的调整的一系列实践。这是改变我们设计多设备网页的方式的思想，在这篇文章里，我们将会帮你理解掌握它时所需知道的主要技能。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">学习前提：</th>
-   <td>HTML基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>），以及对CSS工作方式的理解（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>和<a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>）</td>
+   <td>HTML 基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>），以及对 CSS 工作方式的理解（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>和<a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>）</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -53,35 +53,35 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 <p><strong>备注：</strong>上面的截屏是在火狐开发者工具的<a href="/en-US/docs/Tools/Responsive_Design_Mode">响应式设计模式</a>中截取的。</p>
 </div>
 
-<p>随着移动Web在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像<em>m.example.com</em>或者<em>example.mobi</em>这类）。这意味着一个网站需要开发两个分开的版本，而且要保持时效性。</p>
+<p>随着移动 Web 在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像<em>m.example.com</em>或者<em>example.mobi</em>这类）。这意味着一个网站需要开发两个分开的版本，而且要保持时效性。</p>
 
 <p>除此以外，这些移动网站的体验经常缩水。由于移动设备变得更加强大，足以显示完整的网站，对于那些被困在移动版网站的移动端用户来说，这是很折磨人的，他们因此也没法获取他们知道在支持所有功能的桌面版网站上能找到的信息。</p>
 
 <h2 id="响应式设计之前的灵活布局">响应式设计之前的灵活布局</h2>
 
-<p>人们开发了许多方式，尽力解决建设网站时使用液态和固定宽度的方式所带来的弊端。2004年，Cameron Adams写了一篇题为《<a href="http://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a>》的帖子，描述了一种可以创造适应多种屏幕分辨率的设计的方式。这种方式需要JavaScript来探测屏幕的分辨率，载入恰当的CSS。</p>
+<p>人们开发了许多方式，尽力解决建设网站时使用液态和固定宽度的方式所带来的弊端。2004 年，Cameron Adams 写了一篇题为《<a href="http://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a>》的帖子，描述了一种可以创造适应多种屏幕分辨率的设计的方式。这种方式需要 JavaScript 来探测屏幕的分辨率，载入恰当的 CSS。</p>
 
-<p>Zoe Mickley Gillenwater深刻影响了<a href="http://zomigi.com/blog/voices-that-matter-slides-available/">她的著作</a>，在里面描述并标准化了可变站点建立的不同方式，试图在充满屏幕和完全保持固定尺寸之间找到最佳平衡。</p>
+<p>Zoe Mickley Gillenwater 深刻影响了<a href="http://zomigi.com/blog/voices-that-matter-slides-available/">她的著作</a>，在里面描述并标准化了可变站点建立的不同方式，试图在充满屏幕和完全保持固定尺寸之间找到最佳平衡。</p>
 
 <h2 id="响应式设计">响应式设计</h2>
 
-<p>“响应式设计”这个词是<a href="https://alistapart.com/article/responsive-web-design/">Ethan Marcotte在2010年首度提出的</a>，他将其描述为三种技术的混合使用。</p>
+<p>“响应式设计”这个词是<a href="https://alistapart.com/article/responsive-web-design/">Ethan Marcotte 在 2010 年首度提出的</a>，他将其描述为三种技术的混合使用。</p>
 
 <ol>
- <li>第一个是液态网格，这早先已由Gillenwater进行探讨，可以在Marcotte的文章《<a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a>》（出版于2009年的《A List Apart》上）中读到。</li>
+ <li>第一个是液态网格，这早先已由 Gillenwater 进行探讨，可以在 Marcotte 的文章《<a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a>》（出版于 2009 年的《A List Apart》上）中读到。</li>
  <li>第二个是<a href="http://unstoppablerobotninja.com/entry/fluid-images">液态图像</a>的理念。通过使用相当简单的将设置<code>max-width</code>属性设置为<code>100%</code>的技术，图像可以在包含它们的列变得比图像原始尺寸窄的时候，缩放得更小，但总不会变得更大。这使得图像可以被缩放，以被放到一个灵活尺寸的列，而不是溢出出去，同时也不会在列宽于图像的时候，使图像变得太大以至于画质变得粗糙。</li>
- <li>第三个关键的组件是<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>。媒体查询使以往Cameron Adams探讨过的、由JavaScript实现的布局类型切换，可以只使用CSS实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。</li>
+ <li>第三个关键的组件是<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>。媒体查询使以往 Cameron Adams 探讨过的、由 JavaScript 实现的布局类型切换，可以只使用 CSS 实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。</li>
 </ol>
 
-<p>需要你理解的很重要的一点是<strong>响应式Web设计不是单独的技术</strong>，它是描述Web设计的一种方式、或者是一组最佳实践的一个词，它是用来建立可以<strong>响应</strong>查看内容的设备的样式的一个词。在Marcotte's原来的探索中，这意味着灵活网格（使用float）和媒体查询，但是在这篇文章写就的几乎十年以后，Web的响应式工作已经成为了默认做法。现代的CSS布局方式基本上就是响应式的，而且我们在Web平台上内置了新的东西，使得设计响应式站点变得容易。</p>
+<p>需要你理解的很重要的一点是<strong>响应式 Web 设计不是单独的技术</strong>，它是描述 Web 设计的一种方式、或者是一组最佳实践的一个词，它是用来建立可以<strong>响应</strong>查看内容的设备的样式的一个词。在 Marcotte's 原来的探索中，这意味着灵活网格（使用 float）和媒体查询，但是在这篇文章写就的几乎十年以后，Web 的响应式工作已经成为了默认做法。现代的 CSS 布局方式基本上就是响应式的，而且我们在 Web 平台上内置了新的东西，使得设计响应式站点变得容易。</p>
 
-<p>这篇文章的余下部分会为你指出，在建立响应式站点的时候，你可能会用到的各式Web平台的特色功能。</p>
+<p>这篇文章的余下部分会为你指出，在建立响应式站点的时候，你可能会用到的各式 Web 平台的特色功能。</p>
 
 <h2 id="媒介查询">媒介查询</h2>
 
-<p>响应式设计仅仅是因为媒介查询才新兴起来的。媒介查询第三级规范已经在2009年成为了候选推荐，这意味着它可视为准备好在浏览器中开始支持了。媒介查询允许我们运行一系列测试，例如用户的屏幕是否大于某个宽度或者某个分辨率，并将CSS选择性地适应用户的需要应用在样式化页面上。</p>
+<p>响应式设计仅仅是因为媒介查询才新兴起来的。媒介查询第三级规范已经在 2009 年成为了候选推荐，这意味着它可视为准备好在浏览器中开始支持了。媒介查询允许我们运行一系列测试，例如用户的屏幕是否大于某个宽度或者某个分辨率，并将 CSS 选择性地适应用户的需要应用在样式化页面上。</p>
 
-<p>例如，下面的媒体查询进行测试，以知晓当前的Web页面是否被展示为屏幕媒体（也就是说不是印刷文档），且视口至少有800像素宽。用于<code>.container</code>选择器的CSS将只会在这两件前提存在的情况下应用。</p>
+<p>例如，下面的媒体查询进行测试，以知晓当前的 Web 页面是否被展示为屏幕媒体（也就是说不是印刷文档），且视口至少有 800 像素宽。用于<code>.container</code>选择器的 CSS 将只会在这两件前提存在的情况下应用。</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 800px) {
   .container {
@@ -92,9 +92,9 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 <p>你可以在一张样式表上加入多条媒体查询，调整整个页面或者部分页面以达到适应各式屏幕尺寸的最佳效果。媒体查询，以及样式改变时的点，被叫做<em>断点</em>（breakpoints）。</p>
 
-<p>使用媒体查询时的一种通用方式是，为窄屏设备（例如移动设备）创建一个简单的单栏布局，然后检查是否是大些的屏幕，在你知道你有足够容纳的屏幕宽度的时候，开始采用一种多栏的布局 。这经常被描述为<strong>移动优先</strong>设计。</p>
+<p>使用媒体查询时的一种通用方式是，为窄屏设备（例如移动设备）创建一个简单的单栏布局，然后检查是否是大些的屏幕，在你知道你有足够容纳的屏幕宽度的时候，开始采用一种多栏的布局。这经常被描述为<strong>移动优先</strong>设计。</p>
 
-<p>在MDN文档中的<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>中了解更多</p>
+<p>在 MDN 文档中的<a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询</a>中了解更多</p>
 
 <h2 id="灵活网格">灵活网格</h2>
 
@@ -102,19 +102,19 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 <p>使用灵活网格，你只需要加进去一个断点，在内容看起来不齐整的时候改变设计。例如如果一行随着屏幕大小增加而增长得不可读的长，或者是一个盒子在变窄时把每行的两个单词挤到一起。</p>
 
-<p>早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用<a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">float</a>。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过100%。在他对于液态网格文章的原文中，Marcotte详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。</p>
+<p>早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用<a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">float</a>。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。</p>
 
 <pre class="notranslate"><code>target / context = result </code>
 </pre>
 
-<p>例如如果我们的预期栏尺寸为60像素，而且它所在的上下文（或者容器）为960像素，我们在将零点二的空间移动到右边以后，用960去除60，得到我们能够使用在我们的CSS上的值。</p>
+<p>例如如果我们的预期栏尺寸为 60 像素，而且它所在的上下文（或者容器）为 960 像素，我们在将零点二的空间移动到右边以后，用 960 去除 60，得到我们能够使用在我们的 CSS 上的值。</p>
 
 <pre class="brush: css notranslate"><code>.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
 } </code>
 </pre>
 
-<p>这种方式将会在今天整个Web上的许多地方上看到，而且它被我们的<a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a>一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。</p>
+<p>这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的<a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a>一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。</p>
 
 <p>下面的例子阐释了一个使用媒体查询和灵活网格的简单响应式设计。在窄屏幕上，布局将盒子堆叠在另一个的上面：</p>
 
@@ -129,7 +129,7 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 </figure>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>你可以在GitHub上找到此示例的<a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">实时示例</a>和<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">源代码</a>。</p>
+<p><strong>备注：</strong>你可以在 GitHub 上找到此示例的<a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">实时示例</a>和<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">源代码</a>。</p>
 </div>
 
 <h2 id="现代布局技术">现代布局技术</h2>
@@ -171,9 +171,9 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 <p><strong>备注：</strong>作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：<a href="https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html">示例</a>、<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html">源代码</a>。</p>
 </div>
 
-<h3 id="CSS网格">CSS网格</h3>
+<h3 id="CSS网格">CSS 网格</h3>
 
-<p>在CSS网格布局中，<code>fr</code>单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着3个大小为<code>1fr</code>的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在<a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit">Flexible grids with the fr unit</a>下的学习布局网格专题了解更多和这一方式相关的信息。</p>
+<p>在 CSS 网格布局中，<code>fr</code>单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为<code>1fr</code>的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在<a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit">Flexible grids with the fr unit</a>下的学习布局网格专题了解更多和这一方式相关的信息。</p>
 
 <pre class="brush: css notranslate"><code>.container {
   display: grid;
@@ -182,12 +182,12 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>网格布局版本的代码要更简单，因为我们可以在.wrapper上定义列<a href="https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html">：示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html">源代码</a>。</p>
+<p><strong>备注：</strong>网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列<a href="https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html">：示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html">源代码</a>。</p>
 </div>
 
 <h2 id="响应式图像">响应式图像</h2>
 
-<p>最简单的处理响应式图像的方式是在Marcotte的早年的关于响应式设计的文章上所描述的那样。基本来说，你可以用一张有着所需最大尺寸的图像。然后缩放它。这仍然是今日所使用的一种方式，而且在大多数样式表里面，你在某些地方可以找到下面的CSS：</p>
+<p>最简单的处理响应式图像的方式是在 Marcotte 的早年的关于响应式设计的文章上所描述的那样。基本来说，你可以用一张有着所需最大尺寸的图像。然后缩放它。这仍然是今日所使用的一种方式，而且在大多数样式表里面，你在某些地方可以找到下面的 CSS：</p>
 
 <pre class="brush: css notranslate"><code>img {
   max-width: 100%:
@@ -200,7 +200,7 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 <p>你也可以给用于不同尺寸的图像做“艺术指导”，为不同的屏幕尺寸提供不同的图像裁切或者完全不同的图像。</p>
 
-<p>你可以在MDN这里的学习HTML一节中找到详细的<a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">响应式图像指南</a>。</p>
+<p>你可以在 MDN 这里的学习 HTML 一节中找到详细的<a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">响应式图像指南</a>。</p>
 
 <h2 id="响应式排版">响应式排版</h2>
 
@@ -251,7 +251,7 @@ h1 {
   font-size: 6vw;
 }</pre>
 
-<p>问题在于，当做上面的事情的时候，因为文本总是随着视口的大小改变大小，用户失去了放缩任何使用<code>vw</code>单位的文本的能力。<strong>所以你永远都不要只用viewport单位设定文本。</strong></p>
+<p>问题在于，当做上面的事情的时候，因为文本总是随着视口的大小改变大小，用户失去了放缩任何使用<code>vw</code>单位的文本的能力。<strong>所以你永远都不要只用 viewport 单位设定文本。</strong></p>
 
 <p>这里有一个解决方法，它使用了<code><a href="/en-US/docs/Web/CSS/calc">calc()</a></code>，如果你将<code>vw</code>单位加到了使用固定大小（例如<code>em</code>或者<code>rem</code>）的值组，那么文本仍然是可放缩的。基本来说，是<code>vw</code>加在了放缩后的值上。</p>
 
@@ -267,25 +267,25 @@ h1 {
 
 <h2 id="视口元标签">视口元标签</h2>
 
-<p>如果你看看一张响应式页面的HTML源代码，你通常将会在文档的<code>&lt;head&gt;</code>看到下面的{{htmlelement("meta")}}标签。</p>
+<p>如果你看看一张响应式页面的 HTML 源代码，你通常将会在文档的<code>&lt;head&gt;</code>看到下面的{{htmlelement("meta")}}标签。</p>
 
 <pre class="brush: html notranslate"><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code>
 </pre>
 
-<p>这个元标签告诉移动端浏览器，它们应该将视口宽度设定为设备的宽度，将文档放大到其预期大小的100%，在移动端以你所希望的为移动优化的大小展示文档。</p>
+<p>这个元标签告诉移动端浏览器，它们应该将视口宽度设定为设备的宽度，将文档放大到其预期大小的 100%，在移动端以你所希望的为移动优化的大小展示文档。</p>
 
 <p>为何需要这个？因为移动端浏览器倾向于在它们的视口宽度上说谎。</p>
 
-<p>这个元标签的存在，是由于原来iPhone发布以后，人们开始在小的手机屏幕上阅览网页，而大多数站点未对移动端做优化的缘故。移动端浏览器因此会把视口宽度设为960像素，并以这个宽度渲染页面，结果展示的是桌面布局的缩放版本。其他的移动端浏览器（例如谷歌安卓上的）也是这么做的。用户可以在站点中放大、移动，查看他们感兴趣的那部分，但是这看起来很不舒服。如果你不幸遇到了一个没有响应式设计的网站，今天你还会看到这种情况。</p>
+<p>这个元标签的存在，是由于原来 iPhone 发布以后，人们开始在小的手机屏幕上阅览网页，而大多数站点未对移动端做优化的缘故。移动端浏览器因此会把视口宽度设为 960 像素，并以这个宽度渲染页面，结果展示的是桌面布局的缩放版本。其他的移动端浏览器（例如谷歌安卓上的）也是这么做的。用户可以在站点中放大、移动，查看他们感兴趣的那部分，但是这看起来很不舒服。如果你不幸遇到了一个没有响应式设计的网站，今天你还会看到这种情况。</p>
 
-<p>麻烦的是，你的带断点和媒介查询的响应式设计不会在移动端浏览器上像预期那样工作。如果你有个窄屏布局，在480像素及以下的视口宽度下生效，但是视口是按960像素设定的，你将不会在移动端看到你的窄屏布局。通过设定<code>width=device-width</code>，你用设备的实际宽度覆写了苹果默认的<code>width=960px</code>，然后你的媒介查询就会像预期那样生效。</p>
+<p>麻烦的是，你的带断点和媒介查询的响应式设计不会在移动端浏览器上像预期那样工作。如果你有个窄屏布局，在 480 像素及以下的视口宽度下生效，但是视口是按 960 像素设定的，你将不会在移动端看到你的窄屏布局。通过设定<code>width=device-width</code>，你用设备的实际宽度覆写了苹果默认的<code>width=960px</code>，然后你的媒介查询就会像预期那样生效。</p>
 
-<p><strong>所以你应该在你的文档头部<em>总是</em>包含上面那行HTML。</strong></p>
+<p><strong>所以你应该在你的文档头部<em>总是</em>包含上面那行 HTML。</strong></p>
 
 <p>和视口元标签一起，你可以使用另外几个设定，但大体说来，上面那行就是你想要使用的。</p>
 
 <ul>
- <li><code>initial-scale</code>：设定了页面的初始缩放，我们设定为1。</li>
+ <li><code>initial-scale</code>：设定了页面的初始缩放，我们设定为 1。</li>
  <li><code>height</code>：特别为视口设定一个高度。</li>
  <li><code>minimum-scale</code>：设定最小缩放级别。</li>
  <li><code>maximum-scale</code>：设定最大缩放级别。</li>
@@ -295,21 +295,21 @@ h1 {
 <p>你应该避免使用<code>minimum-scale</code>、<code>maximum-scale</code>，尤其是将<code>user-scalable</code>设为<code>no</code>。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。</p>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong> 有一个CSS @规则是被设计用来替换掉视口元标签的——<a href="/en-US/docs/Web/CSS/@viewport">@viewport</a>——但是浏览器对它的支持太差了。它是在IE和Edge中引入的，但自从Chromium内核的Edge发布以后，它就不再受到Edge浏览器支持了。</p>
+<p><strong>备注：</strong> 有一个 CSS @规则是被设计用来替换掉视口元标签的——<a href="/en-US/docs/Web/CSS/@viewport">@viewport</a>——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。</p>
 </div>
 
 <h2 id="小结">小结</h2>
 
-<p>响应式设计指的是一个响应浏览环境的网页或者应用设计。它涵盖了很多CSS和HTML的功能和技术，现在基本上就是我们默认建设网站的方式。想一下你在手机上访问的网站，遇到一个缩放的桌面版网站，或者你需要向侧边滚动来寻找东西的网站可能是相当不寻常的。这是因为Web已经迁移到了这种响应式设计的方式上。</p>
+<p>响应式设计指的是一个响应浏览环境的网页或者应用设计。它涵盖了很多 CSS 和 HTML 的功能和技术，现在基本上就是我们默认建设网站的方式。想一下你在手机上访问的网站，遇到一个缩放的桌面版网站，或者你需要向侧边滚动来寻找东西的网站可能是相当不寻常的。这是因为 Web 已经迁移到了这种响应式设计的方式上。</p>
 
-<p>在这些课里学到的布局方式的帮助下，实现响应式设计也变得愈加简单。如果你今天新近了解Web开发，那么你与响应式设计早期相比，手边有多得多的工具。因而，你有必要检查下你所引用的任何材料的年纪。尽管历史上的文章仍然有用，现代的CSS和HTML的使用让创建一个优雅且实用的设计变得远远更加容易，且无论你的访客使用什么设备浏览网站。</p>
+<p>在这些课里学到的布局方式的帮助下，实现响应式设计也变得愈加简单。如果你今天新近了解 Web 开发，那么你与响应式设计早期相比，手边有多得多的工具。因而，你有必要检查下你所引用的任何材料的年纪。尽管历史上的文章仍然有用，现代的 CSS 和 HTML 的使用让创建一个优雅且实用的设计变得远远更加容易，且无论你的访客使用什么设备浏览网站。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}</p>
 
 <h2 id="模块目录">模块目录</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">介绍CSS布局</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">介绍 CSS 布局</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">正常布局流</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">弹性盒</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">网格</a></li>

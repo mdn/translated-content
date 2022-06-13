@@ -6,9 +6,9 @@ original_slug: Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">在之前的 <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">文档</a>中我解释了常规流中块（block）和行（inline）布局，常规流中的所有元素都会以这种布局方式运作。</p>
+<p>在之前的 <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">文档</a>中我解释了常规流中块（block）和行（inline）布局，常规流中的所有元素都会以这种布局方式运作。</p>
 
-<p class="summary">在下面的例子中，我新建了一个标题（h1元素），一个段落（p元素），一个无序列表（ul元素）和一个包含strong元素的段落（p元素），标题和段落都是块级（block level），strong元素为行级（inline）。列表中的项通过弹性盒布局排成一行，但是列表本身仍然处于块和内联布局中 - 他的display属性为block。</p>
+<p>在下面的例子中，我新建了一个标题（h1 元素），一个段落（p 元素），一个无序列表（ul 元素）和一个包含 strong 元素的段落（p 元素），标题和段落都是块级（block level），strong 元素为行级（inline）。列表中的项通过弹性盒布局排成一行，但是列表本身仍然处于块和内联布局中 - 他的 display 属性为 block。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/in-flow/in-flow.html", '100%', 800)}}</p>
 
@@ -16,21 +16,21 @@ original_slug: Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外
 
 <h2 id="脱离常规流的元素">脱离常规流的元素</h2>
 
-<p>下列元素会脱离常规流:</p>
+<p>下列元素会脱离常规流：</p>
 
 <ul>
  <li>floated items。浮动的元素</li>
- <li>items with <code>position: absolute</code> (including <code>position: fixed</code> which acts in the same way)。通过设置position属性为absolute或者fixed的元素</li>
- <li>the root element (<code>html</code>)根元素</li>
+ <li>items with <code>position: absolute</code> (including <code>position: fixed</code> which acts in the same way)。通过设置 position 属性为 absolute 或者 fixed 的元素</li>
+ <li>the root element (<code>html</code>) 根元素</li>
 </ul>
 
 <p>脱离常规流的元素会创建一个新的块级格式化上下文（Block Formatting Context: BFC）环境，其中包含的所有元素构成了一个小的布局环境，与页面中的其他内容分隔开来。而根元素，作为页面中所有内容的容器，自身脱离常规流，为整个文档创建了一个块级格式化上下文环境。</p>
 
 <h3 id="Floated_Items">Floated Items</h3>
 
-<p>在这个例子中，我有一个div，以及两个段落。我已经为段落添加了背景颜色，然后将div向左浮动。 div现在已经不再处于flow中了。</p>
+<p>在这个例子中，我有一个 div，以及两个段落。我已经为段落添加了背景颜色，然后将 div 向左浮动。div 现在已经不再处于 flow 中了。</p>
 
-<p>作为一个浮动的元素，它首先根据正常flow布局，然后从流动中取出并尽可能地向左移动</p>
+<p>作为一个浮动的元素，它首先根据正常 flow 布局，然后从流动中取出并尽可能地向左移动</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/in-flow/float.html", '100%', 800)}}</p>
 
@@ -38,11 +38,11 @@ original_slug: Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外
 
 <h3 id="Absolute_Positioning">Absolute Positioning</h3>
 
-<p>设置元素属性为 <code>position: absolute</code> 或者 <code>position: fixed</code> 会使此元素脱离文档流, 他本来占据的空间也会被移除. 在下面的例子中，我定义了三个p元素，并且将第二个p元素设置为 <code>position</code> <code>absolute</code>,  <code>top: 30px</code> , <code>right: 30px</code>. 使其脱离文档流。</p>
+<p>设置元素属性为 <code>position: absolute</code> 或者 <code>position: fixed</code> 会使此元素脱离文档流，他本来占据的空间也会被移除。在下面的例子中，我定义了三个 p 元素，并且将第二个 p 元素设置为 <code>position</code> <code>absolute</code>,  <code>top: 30px</code> , <code>right: 30px</code>. 使其脱离文档流。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/in-flow/abspos.html", '100%', 700)}}</p>
 
-<p>设置 <code>position: fixed</code> 也能使元素脱离文档流, 但是偏移量会根据视口而不是父元素来定。</p>
+<p>设置 <code>position: fixed</code> 也能使元素脱离文档流，但是偏移量会根据视口而不是父元素来定。</p>
 
 <p>当通过定位方式使元素脱离文档流，元素内容可能重叠，这需要你自己去处理。脱离文档流意味着页面中的其他元素不知道该元素的存在，故不会对该元素做出响应。</p>
 

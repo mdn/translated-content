@@ -4,19 +4,19 @@ slug: Learn/Common_questions/How_does_the_Internet_work
 translation_of: Learn/Common_questions/How_does_the_Internet_work
 original_slug: learn/How_the_Internet_works
 ---
-<div class="summary">
-<p> 这篇文章讨论什么是互联网以及它是如何工作的.</p>
+<div>
+<p> 这篇文章讨论什么是互联网以及它是如何工作的。</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
+   <th scope="row">前提：</th>
    <td>无，但是鼓励先去阅读 <a href="/zh-CN/docs/learn/常见问题/Thinking_before_coding">关于设定项目目标的文章</a></td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>你将会学习到网络的基础技术，以及它与互联网的区别.</td>
+   <th scope="row">目标：</th>
+   <td>你将会学习到网络的基础技术，以及它与互联网的区别。</td>
   </tr>
  </tbody>
 </table>
@@ -25,31 +25,31 @@ original_slug: learn/How_the_Internet_works
 
 <p>互联网是网络的支柱，以这种技术为基础使网络成为可能。作为基础，互联网是把电脑互相连接起来的一个巨大网络。</p>
 
-<p><a href="http://en.wikipedia.org/wiki/Internet#History" rel="external">互联网的历史有些模糊不清</a>。它始于1960年美国军方资助的研究项目。1980年在许多公共大学和公司的支持下，它演变为一种公共基础设施。随着时间的变化，各种各样的技术支持着互联网的发展，但是它的工作方式却没有改变多少：互联网确保所有的电脑之间的连接，无论发生什么他们依旧保持连接。</p>
+<p><a href="http://en.wikipedia.org/wiki/Internet#History" rel="external">互联网的历史有些模糊不清</a>。它始于 1960 年美国军方资助的研究项目。1980 年在许多公共大学和公司的支持下，它演变为一种公共基础设施。随着时间的变化，各种各样的技术支持着互联网的发展，但是它的工作方式却没有改变多少：互联网确保所有的电脑之间的连接，无论发生什么他们依旧保持连接。</p>
 
 <h2 id="自主学习">自主学习</h2>
 
 <ul>
- <li><a href="https://www.youtube.com/watch?v=7_LPdttKXPc" rel="external">五分钟告诉你互联网是如何工作的</a>: Aaron Titus在五分钟的一个视频中告诉你非常基础的互联网知识.</li>
+ <li><a href="https://www.youtube.com/watch?v=7_LPdttKXPc" rel="external">五分钟告诉你互联网是如何工作的</a>: Aaron Titus 在五分钟的一个视频中告诉你非常基础的互联网知识。</li>
 </ul>
 
 <h2 id="深入探索">深入探索</h2>
 
 <h3 id="一个简单的网络">一个简单的网络</h3>
 
-<p>当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式(通常是<a href="http://en.wikipedia.org/wiki/Ethernet_crossover_cable" rel="external">网线</a>) 还是无线方式（比如 <a href="http://en.wikipedia.org/wiki/WiFi" rel="external">WiFi</a> 或 <a href="http://en.wikipedia.org/wiki/Bluetooth" rel="external">蓝牙</a> )。所有现代电脑都支持这些连接。</p>
+<p>当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是<a href="http://en.wikipedia.org/wiki/Ethernet_crossover_cable" rel="external">网线</a>) 还是无线方式（比如 <a href="http://en.wikipedia.org/wiki/WiFi" rel="external">WiFi</a> 或 <a href="http://en.wikipedia.org/wiki/Bluetooth" rel="external">蓝牙</a> )。所有现代电脑都支持这些连接。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 接下来的内容，我们将只谈论有线连接， 而无线连接的原理与此相同。</p>
+<p><strong>提示：</strong> 接下来的内容，我们将只谈论有线连接， 而无线连接的原理与此相同。</p>
 </div>
 
 <p><img alt="Two computers linked together" src="https://mdn.mozillademos.org/files/8441/internet-schema-1.png" style="height: 152px; width: 600px;"></p>
 
-<p>通常一个网络不仅限于两台电脑。你可以尽你所想地连接电脑，但是情况立刻变得复杂了。如果你尝试连接，比如说十台电脑，每台电脑有九个插头，总共需要45条网线。</p>
+<p>通常一个网络不仅限于两台电脑。你可以尽你所想地连接电脑，但是情况立刻变得复杂了。如果你尝试连接，比如说十台电脑，每台电脑有九个插头，总共需要 45 条网线。</p>
 
 <p><img alt="Ten computers all together" src="https://mdn.mozillademos.org/files/8443/internet-schema-2.png" style="height: 576px; width: 600px;"></p>
 
-<p>为了解决这个问题，网络上的每台电脑需要链接到一个叫做路由器（<em>router</em>）的特殊小电脑。路由器只干一件事：就像火车站的信号员，它要确保从一台电脑上发出的一条信息可以到达正确的电脑。为了把信息发送给电脑B，电脑A必须把信息发送给路由器，路由器将收到的信息转发给电脑B，并且确保信息不会发送给电脑C。</p>
+<p>为了解决这个问题，网络上的每台电脑需要链接到一个叫做路由器（<em>router</em>）的特殊小电脑。路由器只干一件事：就像火车站的信号员，它要确保从一台电脑上发出的一条信息可以到达正确的电脑。为了把信息发送给电脑 B，电脑 A 必须把信息发送给路由器，路由器将收到的信息转发给电脑 B，并且确保信息不会发送给电脑 C。</p>
 
 <p>一旦我们把路由器加入到这个系统，我们的网络中便只需要十条网线：每台电脑一个插口，路由器上十个插口。</p>
 
@@ -57,31 +57,31 @@ original_slug: learn/How_the_Internet_works
 
 <h3 id="网络中的网">网络中的网</h3>
 
-<p>到目前为止一切都很好 . 但是我们要连接成百上千，上亿台电脑呢? 当然一台路由器覆盖不了这么远, 但是,如果你阅读得比较认真，我们曾提到路由器像其他电脑一样,所以我们为什么不把两个路由器彼此连接呢?</p>
+<p>到目前为止一切都很好 . 但是我们要连接成百上千，上亿台电脑呢？当然一台路由器覆盖不了这么远，但是，如果你阅读得比较认真，我们曾提到路由器像其他电脑一样，所以我们为什么不把两个路由器彼此连接呢？</p>
 
 <p><img alt="Two routers linked together" src="https://mdn.mozillademos.org/files/8447/internet-schema-4.png"></p>
 
-<p>我们把电脑连接路由器, 接着路由器连接路由器,我们就会有无穷的规模。</p>
+<p>我们把电脑连接路由器，接着路由器连接路由器，我们就会有无穷的规模。</p>
 
 <p><img alt="Routers linked to routers" src="https://mdn.mozillademos.org/files/8449/internet-schema-5.png" style="height: 563px; width: 600px;"></p>
 
-<p>这样网络越来越接近我们所说的互联网 ，但是我们遗漏了一些东西。我们建立网络是为了我们自己的目的。所以不同的人会建立不同的网络：你的朋友，你的邻居，每个人都可以拥有自己的计算机网络。在你的房子和世界其它地方之间架设电缆将这些不同的网络连接起来是不可能的，那么你该如何处理这件事呢？其实已经有电缆连接到你的房子了，比如，电线和电话。电话基础设施已经可以把你家连接到世界的任何角落，所以它就是我们需要的线。为了连接电话这种网络我们需要一种基础设备叫做调制解调器（<em>modem</em>），调制解调器可以把网络信息变成电话设施可以处理的信息，反之亦然。</p>
+<p>这样网络越来越接近我们所说的互联网，但是我们遗漏了一些东西。我们建立网络是为了我们自己的目的。所以不同的人会建立不同的网络：你的朋友，你的邻居，每个人都可以拥有自己的计算机网络。在你的房子和世界其它地方之间架设电缆将这些不同的网络连接起来是不可能的，那么你该如何处理这件事呢？其实已经有电缆连接到你的房子了，比如，电线和电话。电话基础设施已经可以把你家连接到世界的任何角落，所以它就是我们需要的线。为了连接电话这种网络我们需要一种基础设备叫做调制解调器（<em>modem</em>），调制解调器可以把网络信息变成电话设施可以处理的信息，反之亦然。</p>
 
 <p><img alt="A router linked to a modem" src="https://mdn.mozillademos.org/files/8451/internet-schema-6.png" style="height: 340px; width: 600px;"></p>
 
-<p>这样，我们可以通过电话基础设施相互连接。下一步是把信息从我们的网络发送到我们想要到达的地方。为了做这些，我们需要把我们的网络连接到互联网服务提供商（ISP）。ISP是一家可以管理一些特殊的路由器的公司，这些路由器连接其他ISP的路由器. 你的网络消息可以被ISP捕获并发送到相应的网络。互联网就是由这些所有的网络设施所组成。</p>
+<p>这样，我们可以通过电话基础设施相互连接。下一步是把信息从我们的网络发送到我们想要到达的地方。为了做这些，我们需要把我们的网络连接到互联网服务提供商（ISP）。ISP 是一家可以管理一些特殊的路由器的公司，这些路由器连接其他 ISP 的路由器。你的网络消息可以被 ISP 捕获并发送到相应的网络。互联网就是由这些所有的网络设施所组成。</p>
 
 <p><img alt="Full Internet stack" src="https://mdn.mozillademos.org/files/8453/internet-schema-7.png" style="height: 1293px; width: 340px;"></p>
 
 <h3 id="寻找电脑">寻找电脑</h3>
 
-<p>如果你想给一台电脑发送一条信息，你必须指明它是哪台电脑。因此，任何连接到网络中的电脑都需要有一个唯一的地址来标记它，叫做 "IP 地址" （IP代表网络协议）。这个地址由四部分被点分隔的数字序列组成，比如：<code>192.168.2.10。</code></p>
+<p>如果你想给一台电脑发送一条信息，你必须指明它是哪台电脑。因此，任何连接到网络中的电脑都需要有一个唯一的地址来标记它，叫做 "IP 地址" （IP 代表网络协议）。这个地址由四部分被点分隔的数字序列组成，比如：<code>192.168.2.10。</code></p>
 
-<p>对于电脑这样已经很好了,但是人类却很难记忆这一串地址。为了简单处理，我们给IP地址取一个容易阅读的别名：域名。比如，<code>google.com</code> 被用于IP地址 <code>172.217.7.14。</code>这样我们通过这些域名可以很容易的通过网络连接到电脑.</p>
+<p>对于电脑这样已经很好了，但是人类却很难记忆这一串地址。为了简单处理，我们给 IP 地址取一个容易阅读的别名：域名。比如，<code>google.com</code> 被用于 IP 地址 <code>172.217.7.14。</code>这样我们通过这些域名可以很容易的通过网络连接到电脑。</p>
 
 <h3 id="互联网（Internet）和网络（web）">互联网（Internet）和网络（web）</h3>
 
-<p>你可能注意到了, 当我们通过浏览器上网的时候，我们通常是用域名去到达一个网站。这是否意味着互联网（Internet）和网络（Web）是一样的？事实并非这么简单。正如向我们所见，互联网是一种基础的技术，它允许我们把成千上万的电脑连接在一起。在这些电脑中，有 一些电脑（我们称之为网络服务器（<em>Web servers</em>））可以发送一些浏览器可以理解的信息。互联网是基础设施，网络是建立在这种基础设施之上的服务。值得注意的是，一些其他服务运行在互联网之上，比如邮箱和{{Glossary("IRC")}}.</p>
+<p>你可能注意到了，当我们通过浏览器上网的时候，我们通常是用域名去到达一个网站。这是否意味着互联网（Internet）和网络（Web）是一样的？事实并非这么简单。正如向我们所见，互联网是一种基础的技术，它允许我们把成千上万的电脑连接在一起。在这些电脑中，有 一些电脑（我们称之为网络服务器（<em>Web servers</em>））可以发送一些浏览器可以理解的信息。互联网是基础设施，网络是建立在这种基础设施之上的服务。值得注意的是，一些其他服务运行在互联网之上，比如邮箱和{{Glossary("IRC")}}.</p>
 
 <h2 id="下一步">下一步</h2>
 

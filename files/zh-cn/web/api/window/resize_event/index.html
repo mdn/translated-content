@@ -3,23 +3,23 @@ title: resize
 slug: Web/API/Window/resize_event
 translation_of: Web/API/Window/resize_event
 ---
-<p style="font-family: Microsoft Yahei;"><span class="seoSummary">文档视图调整大小时会触发 <strong>resize</strong> 事件。</span></p>
+<p>文档视图调整大小时会触发 <strong>resize</strong> 事件。</p>
 
 <h2 id="基本信息" style="font-family: Microsoft Yahei;">基本信息</h2>
 
 <dl style="font-family: Microsoft Yahei;">
- <dt style="float: left; text-align: right; width: 120px;">规范</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize">DOM L3</a>, <a href="http://www.w3.org/TR/cssom-view/#resizing-viewports">CSSOM View</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">接口</dt>
- <dd style="margin: 0 0 0 120px;">UIEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否冒泡</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">是否可取消默认</dt>
- <dd style="margin: 0 0 0 120px;">否</dd>
- <dt style="float: left; text-align: right; width: 120px;">事件目标</dt>
- <dd style="margin: 0 0 0 120px;">defaultView (window)</dd>
- <dt style="float: left; text-align: right; width: 120px;">默认行为</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
+ <dt>规范</dt>
+ <dd><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize">DOM L3</a>, <a href="http://www.w3.org/TR/cssom-view/#resizing-viewports">CSSOM View</a></dd>
+ <dt>接口</dt>
+ <dd>UIEvent</dd>
+ <dt>是否冒泡</dt>
+ <dd>否</dd>
+ <dt>是否可取消默认</dt>
+ <dd>否</dd>
+ <dt>事件目标</dt>
+ <dd>defaultView (window)</dd>
+ <dt>默认行为</dt>
+ <dd>None</dd>
 </dl>
 
 <h2 id="属性" style="font-family: Microsoft Yahei;">属性</h2>
@@ -68,7 +68,7 @@ translation_of: Web/API/Window/resize_event
 
 <h2 id="案例" style="font-family: Microsoft Yahei;">案例</h2>
 
-<p style="font-family: Microsoft Yahei;">由于resize事件可以以较高的速率触发, 因此事件处理程序不应该执行计算开销很大的操作 (如 DOM 修改)。相反, 建议使用<a href="/en-US/docs/DOM/window.requestAnimationFrame" title="/en-US/docs/DOM/window.requestAnimationFrame">requestAnimationFrame</a>, <a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a> or <a href="/en-US/docs/Web/API/CustomEvent">customEvent</a>, 比如:</p>
+<p>由于 resize 事件可以以较高的速率触发，因此事件处理程序不应该执行计算开销很大的操作 (如 DOM 修改)。相反，建议使用<a href="/en-US/docs/DOM/window.requestAnimationFrame" title="/en-US/docs/DOM/window.requestAnimationFrame">requestAnimationFrame</a>, <a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a> or <a href="/en-US/docs/Web/API/CustomEvent">customEvent</a>, 比如：</p>
 
 <h3 id="requestAnimationFrame_customEvent" style="font-family: Microsoft Yahei;">requestAnimationFrame + customEvent</h3>
 

@@ -24,7 +24,9 @@ La méthode **`format()`** renvoie une chaîne de caractères qui a été format
 
 ## Syntaxe
 
-    listFormat.format([list]);
+```js
+listFormat.format([list]);
+```
 
 ### Paramètres
 

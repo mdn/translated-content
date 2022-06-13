@@ -1,12 +1,12 @@
 ---
-title: Base64的编码与解码
+title: Base64 的编码与解码
 slug: Glossary/Base64
 translation_of: Glossary/Base64
 original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 ---
 <p><strong>Base64 </strong>是一组相似的<a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding">二进制到文本</a>（binary-to-text）的编码规则，使得二进制数据在解释成 radix-64 的表现形式后能够用 ASCII 字符串的格式表示出来。<em>Base64</em> 这个词出自一种 <a href="https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding">MIME 数据传输编码</a>。 </p>
 
-<p>Base64编码普遍应用于需要通过被设计为处理文本数据的媒介上储存和传输二进制数据而需要编码该二进制数据的场景。这样是为了保证数据的完整并且不用在传输过程中修改这些数据。Base64 也被一些应用（包括使用 <a href="https://en.wikipedia.org/wiki/MIME">MIME</a> 的电子邮件）和在 <a href="/zh-CN/docs/XML">XML</a> 中储存复杂数据时使用。 </p>
+<p>Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介上储存和传输二进制数据而需要编码该二进制数据的场景。这样是为了保证数据的完整并且不用在传输过程中修改这些数据。Base64 也被一些应用（包括使用 <a href="https://en.wikipedia.org/wiki/MIME">MIME</a> 的电子邮件）和在 <a href="/zh-CN/docs/Web/XML">XML</a> 中储存复杂数据时使用。 </p>
 
 <p>在 JavaScript 中，有两个函数被分别用来处理解码和编码 <em>base64</em> 字符串：</p>
 
@@ -15,15 +15,15 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
  <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
 </ul>
 
-<p><code>atob()</code> 函数能够解码通过base-64编码的字符串数据。相反地，<code>btoa()</code> 函数能够从二进制数据“字符串”创建一个base-64编码的ASCII字符串。</p>
+<p><code>atob()</code> 函数能够解码通过 base-64 编码的字符串数据。相反地，<code>btoa()</code> 函数能够从二进制数据“字符串”创建一个 base-64 编码的 ASCII 字符串。</p>
 
-<p><code>atob()</code> 和 <code>btoa()</code> 均使用字符串。如果你想使用 <code><a href="/en-US/docs/Web/API/ArrayBuffer">ArrayBuffers</a></code>，请参阅后文。</p>
+<p><code>atob()</code> 和 <code>btoa()</code> 均使用字符串。如果你想使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffers</a></code>，请参阅后文。</p>
 
 <h4 id="编码尺寸增加">编码尺寸增加</h4>
 
-<p>每一个Base64字符实际上代表着6比特位。因此，3字节（一字节是8比特，3字节也就是24比特）的字符串/二进制文件可以转换成4个Base64字符(4x6 = 24比特)。</p>
+<p>每一个 Base64 字符实际上代表着 6 比特位。因此，3 字节（一字节是 8 比特，3 字节也就是 24 比特）的字符串/二进制文件可以转换成 4 个 Base64 字符 (4x6 = 24 比特)。</p>
 
-<p>这意味着Base64格式的字符串或文件的尺寸约是原始尺寸的133%（增加了大约33%）。如果编码的数据很少，增加的比例可能会更高。例如：字符串<code>"a"</code>的<code>length === 1</code>进行Base64编码后是<code>"YQ=="</code>的<code>length === 4</code>，尺寸增加了300%。</p>
+<p>这意味着 Base64 格式的字符串或文件的尺寸约是原始尺寸的 133%（增加了大约 33%）。如果编码的数据很少，增加的比例可能会更高。例如：字符串<code>"a"</code>的<code>length === 1</code>进行 Base64 编码后是<code>"YQ=="</code>的<code>length === 4</code>，尺寸增加了 300%。</p>
 
 
 
@@ -34,24 +34,24 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
     <h2 class="Documentation" id="Documentation" name="Documentation">文档</h2>
 
     <dl>
-     <dt><a href="https://developer.mozilla.org/en-US/docs/data_URIs" title="https://developer.mozilla.org/en-US/docs/data_URIs"><code>data</code> URIs</a></dt>
-     <dd><small><code>data</code> URIs, 定义于 <a class="external" href="http://tools.ietf.org/html/rfc2397" title="http://tools.ietf.org/html/rfc2397">RFC 2397</a>，用于在文档内嵌入小的文件。</small></dd>
-     <dt><a href="https://en.wikipedia.org/wiki/Base64" title="https://en.wikipedia.org/wiki/Base64">Base64</a></dt>
+     <dt><a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><code>data</code> URIs</a></dt>
+     <dd><small><code>data</code> URIs, 定义于 <a href="https://tools.ietf.org/html/rfc2397">RFC 2397</a>，用于在文档内嵌入小的文件。</small></dd>
+     <dt><a href="https://en.wikipedia.org/wiki/Base64">Base64</a></dt>
      <dd><small>维基百科上关于 Base64 的文章。</small></dd>
      <dt>{{domxref("WindowBase64.atob","atob()")}}</dt>
-     <dd><small>解码一个Base64字符串。</small></dd>
+     <dd><small>解码一个 Base64 字符串。</small></dd>
      <dt>{{domxref("WindowBase64.btoa","btoa()")}}</dt>
-     <dd><small>从一个字符串或者二进制数据编码一个Base64字符串。</small></dd>
+     <dd><small>从一个字符串或者二进制数据编码一个 Base64 字符串。</small></dd>
      <dt><a href="#The_.22Unicode_Problem.22">"Unicode 问题"</a></dt>
-     <dd><small>在大多数浏览器里里，在一个Unicode字符串上调用btoa()会造成一个<code>Character Out Of Range异常。这一段写了一些解决方案。</code></small></dd>
-     <dt><a href="/en-US/docs/URIScheme" title="/en-US/docs/URIScheme">URIScheme</a></dt>
-     <dd><small>Mozilla支持的URI schemes列表。</small></dd>
-     <dt><a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a></dt>
+     <dd><small>在大多数浏览器里里，在一个 Unicode 字符串上调用 btoa() 会造成一个<code>Character Out Of Range异常。这一段写了一些解决方案。</code></small></dd>
+     <dt><a href="/zh-CN/docs/URIScheme">URIScheme</a></dt>
+     <dd><small>Mozilla 支持的 URI schemes 列表。</small></dd>
+     <dt><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a></dt>
      <dd>这篇文章发布了一个我们做的库，目的在于：
      <ul>
-      <li>为字符串创建一个类C接口 (i.e. array of characters codes —<a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView" title="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView"> <code>ArrayBufferView</code></a> in JavaScript) ，基于JavaScript <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer" title="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> 接口。</li>
-      <li>为类字符串对象(目前为止为: <code>stringView</code>s) 创建一系列方法，它们<strong>严格按照数字数组</strong>工作，而不是不可变的字符串。</li>
-      <li>可用于其它Unicode编码，和默认的 <code><a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString">DOMStrings</a>不同。</code></li>
+      <li>为字符串创建一个类 C 接口 (i.e. array of characters codes —<a href="/zh-CN/docs/Web/API/ArrayBufferView"> <code>ArrayBufferView</code></a> in JavaScript) ，基于 JavaScript <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> 接口。</li>
+      <li>为类字符串对象 (目前为止为：<code>stringView</code>s) 创建一系列方法，它们<strong>严格按照数字数组</strong>工作，而不是不可变的字符串。</li>
+      <li>可用于其它 Unicode 编码，和默认的 <code><a href="/zh-CN/docs/Web/API/DOMString">DOMStrings</a>不同。</code></li>
      </ul>
      </dd>
     </dl>
@@ -62,21 +62,21 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
     <ul>
      <li><a href="#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8">Rewriting <code>atob()</code> and <code>btoa()</code> using <code>TypedArray</code>s and UTF-8</a></li>
-     <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+     <li><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
     </ul>
 
 
     <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">相关文章</h2>
 
     <ul>
-     <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a></li>
-     <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
-     <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView">ArrayBufferView</a></li>
-     <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array"><code>Uint8Array</code></a></li>
-     <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
-     <li><a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></li>
-     <li><a href="/en-US/docs/URI" title="/en-US/docs/URI"><code>URI</code></a></li>
-     <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI"><code>encodeURI()</code></a></li>
+     <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a></li>
+     <li><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
+     <li><a href="/zh-CN/docs/Web/API/ArrayBufferView">ArrayBufferView</a></li>
+     <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a></li>
+     <li><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+     <li><a href="/zh-CN/docs/Web/API/DOMString"><code>DOMString</code></a></li>
+     <li><a href="/zh-CN/docs/Glossary/URI"><code>URI</code></a></li>
+     <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI"><code>encodeURI()</code></a></li>
     </ul>
    </td>
   </tr>
@@ -85,7 +85,7 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
 <h2 id="Unicode_问题">Unicode 问题</h2>
 
-<p>由于 <a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a> 是16位编码的字符串，所以如果有字符超出了8位ASCII编码的字符范围时，在大多数的浏览器中对Unicode字符串调用 <code>window.btoa</code> 将会造成一个 <code>Character Out Of Range</code> 的异常。有很多种方法可以解决这个问题：</p>
+<p>由于 <a href="/zh-CN/docs/Web/API/DOMString"><code>DOMString</code></a> 是 16 位编码的字符串，所以如果有字符超出了 8 位 ASCII 编码的字符范围时，在大多数的浏览器中对 Unicode 字符串调用 <code>window.btoa</code> 将会造成一个 <code>Character Out Of Range</code> 的异常。有很多种方法可以解决这个问题：</p>
 
 <ul>
  <li><a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">the first method</a> consists in encoding JavaScript's native UTF-16 strings directly into base64 (fast, portable, clean)</li>
@@ -97,7 +97,7 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
 <h3 id="Solution_1_–_JavaScripts_UTF-16_>_base64">Solution #1 – JavaScript's UTF-16 =&gt; base64</h3>
 
-<p>A very fast and widely useable way to solve the unicode problem is by encoding JavaScript native UTF-16 strings directly into base64. Please visit the URL <code>data:text/plain;charset=utf-16;base64,OCY5JjomOyY8Jj4mPyY=</code> for a demonstration (copy the data uri, open a new tab, paste the data URI into the address bar, then press enter to go to the page). This method is particularly efficient because it does not require any type of conversion, except mapping a string into an array. The following code is also useful to get an <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffer</a> from a <em>Base64</em> string and/or viceversa (<a href="#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer" title="Appendix to Solution #1: Decode a Base64 string to Uint8Array or ArrayBuffer">see below</a>).</p>
+<p>A very fast and widely useable way to solve the unicode problem is by encoding JavaScript native UTF-16 strings directly into base64. Please visit the URL <code>data:text/plain;charset=utf-16;base64,OCY5JjomOyY8Jj4mPyY=</code> for a demonstration (copy the data uri, open a new tab, paste the data URI into the address bar, then press enter to go to the page). This method is particularly efficient because it does not require any type of conversion, except mapping a string into an array. The following code is also useful to get an <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> from a <em>Base64</em> string and/or viceversa (<a href="#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">see below</a>).</p>
 
 <pre class="brush: js notranslate">"use strict";
 
@@ -218,9 +218,9 @@ alert(sDecodedString); // "☸☹☺☻☼☾☿"</pre>
 
 <p>The produced string is fully portable, although represented as UTF-16. If you prefer UTF-8, see <a href="#Solution_2_–_JavaScript's_UTF-16_>_UTF-8_>_base64">the next solution</a>.</p>
 
-<h4 id="Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Appendix to <a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">Solution #1</a>: Decode a <em>Base64</em> string to <a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array">Uint8Array</a> or <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffer</a></h4>
+<h4 id="Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Appendix to <a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">Solution #1</a>: Decode a <em>Base64</em> string to <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a> or <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></h4>
 
-<p>The functions above let us also create <a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array">uint8Arrays</a> or <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer">arrayBuffers</a> from <em>base64</em>-encoded strings:</p>
+<p>The functions above let us also create <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">uint8Arrays</a> or <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">arrayBuffers</a> from <em>base64</em>-encoded strings:</p>
 
 <pre class="brush: js notranslate">var myArray = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="); // "Base 64 \u2014 Mozilla Developer Network" (as UTF-8)
 
@@ -228,13 +228,13 @@ var myBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29ya
 
 alert(myBuffer.byteLength);</pre>
 
-<div class="note"><strong>Note:</strong> The function <code>base64DecToArr(sBase64[, <em>nBlockSize</em>])</code> returns an <a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array"><code>uint8Array</code></a> of bytes. If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data, use the <code>nBlockSize</code> argument, which is the number of bytes which the <code>uint8Array.buffer.bytesLength</code> property must result to be a multiple of (<code>1</code> or omitted for ASCII, binary content, <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString/Binary">binary strings</a>, UTF-8-encoded strings; <code>2</code> for UTF-16 strings; <code>4</code> for UTF-32 strings).</div>
+<div class="note"><strong>Note:</strong> The function <code>base64DecToArr(sBase64[, <em>nBlockSize</em>])</code> returns an <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>uint8Array</code></a> of bytes. If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data, use the <code>nBlockSize</code> argument, which is the number of bytes which the <code>uint8Array.buffer.bytesLength</code> property must result to be a multiple of (<code>1</code> or omitted for ASCII, binary content, <a href="/zh-CN/docs/Web/API/DOMString/Binary">binary strings</a>, UTF-8-encoded strings; <code>2</code> for UTF-16 strings; <code>4</code> for UTF-32 strings).</div>
 
-<p>For a more complete library, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a> (source code <a href="https://github.com/madmurphy/stringview.js">available on GitHub</a>).</p>
+<p>For a more complete library, see <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a> (source code <a href="https://github.com/madmurphy/stringview.js">available on GitHub</a>).</p>
 
 <h3 id="Solution_2_–_JavaScripts_UTF-16_>_UTF-8_>_base64">Solution #2 – JavaScript's UTF-16 =&gt; UTF-8 =&gt; base64</h3>
 
-<p>This solution consists in converting a JavaScript's native UTF-16 string into a UTF-8 string and then encoding the latter into base64. This also grants that converting a pure ASCII string to base64 always produces the same output as the native <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa" title="The documentation about this has not yet been written; please consider contributing!"><code>btoa()</code></a>.</p>
+<p>This solution consists in converting a JavaScript's native UTF-16 string into a UTF-8 string and then encoding the latter into base64. This also grants that converting a pure ASCII string to base64 always produces the same output as the native <a href="/zh-CN/docs/Web/API/btoa"><code>btoa()</code></a>.</p>
 
 <pre class="brush: js notranslate">"use strict";
 
@@ -436,7 +436,7 @@ alert(sMyOutput); // "Base 64 — Mozilla Developer Network"</pre>
 
 <h3 id="Solution_3_–_JavaScripts_UTF-16_>_binary_string_>_base64">Solution #3 – JavaScript's UTF-16 =&gt; binary string =&gt; base64</h3>
 
-<p>The following is the fastest and most compact possible approach. The output is exactly the same produced by <a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">Solution #1</a> (UTF-16 encoded strings), but instead of rewriting {{domxref("WindowBase64.atob","atob()")}} and {{domxref("WindowBase64.btoa","btoa()")}} it uses the native ones. This is made possible by the fact that instead of using typed arrays as encoding/decoding inputs this solution uses <a href="/en-US/docs/Web/API/DOMString/Binary">binary strings</a> as an intermediate format. It is a “dirty” workaround in comparison to <a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">Solution #1</a> (<a href="/en-US/docs/Web/API/DOMString/Binary">binary strings</a> are a grey area), however it works pretty well and requires only a few lines of code.</p>
+<p>The following is the fastest and most compact possible approach. The output is exactly the same produced by <a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">Solution #1</a> (UTF-16 encoded strings), but instead of rewriting {{domxref("WindowBase64.atob","atob()")}} and {{domxref("WindowBase64.btoa","btoa()")}} it uses the native ones. This is made possible by the fact that instead of using typed arrays as encoding/decoding inputs this solution uses <a href="/zh-CN/docs/Web/API/DOMString/Binary">binary strings</a> as an intermediate format. It is a “dirty” workaround in comparison to <a href="#Solution_1_–_JavaScript's_UTF-16_>_base64">Solution #1</a> (<a href="/zh-CN/docs/Web/API/DOMString/Binary">binary strings</a> are a grey area), however it works pretty well and requires only a few lines of code.</p>
 
 <pre class="brush: js notranslate">"use strict";
 
@@ -522,7 +522,7 @@ b64DecodeUnicode('Cg=='); // "\n"
 
 <h3 id="Solution_5_–_rewrite_the_DOMs_atob_and_btoa_using_JavaScripts_TypedArrays_and_UTF-8">Solution #5 – rewrite the DOMs <code>atob()</code> and <code>btoa()</code> using JavaScript's <code>TypedArray</code>s and UTF-8</h3>
 
-<p>Use a <a href="/en-US/docs/Web/API/TextEncoder">TextEncoder</a> polyfill such as <a href="https://github.com/inexorabletash/text-encoding">TextEncoding</a> (also includes legacy windows, mac, and ISO encodings), <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a>, combined with a <a href="https://github.com/feross/buffer">Buffer</a> and a Base64 implementation such as <a href="https://github.com/beatgammit/base64-js">base64-js</a> or <a href="https://github.com/waitingsong/base64">TypeScript version of </a>base64-js for both modern browsers and Node.js.</p>
+<p>Use a <a href="/zh-CN/docs/Web/API/TextEncoder">TextEncoder</a> polyfill such as <a href="https://github.com/inexorabletash/text-encoding">TextEncoding</a> (also includes legacy windows, mac, and ISO encodings), <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a>, combined with a <a href="https://github.com/feross/buffer">Buffer</a> and a Base64 implementation such as <a href="https://github.com/beatgammit/base64-js">base64-js</a> or <a href="https://github.com/waitingsong/base64">TypeScript version of </a>base64-js for both modern browsers and Node.js.</p>
 
 <p>When a native <code>TextEncoder</code> implementation is not available, the most light-weight solution would be to use <a href="#Solution_3_–_JavaScript's_UTF-16_>_binary_string_>_base64">Solution #3</a> because in addition to being much faster, <a href="#Solution_3_–_JavaScript's_UTF-16_>_binary_string_>_base64">Solution #3</a> also works in IE9 "out of the box." Alternatively, use <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a> with <a href="https://github.com/beatgammit/base64-js">base64-js</a>. Use the browser implementation when you can.</p>
 
@@ -539,21 +539,21 @@ function Base64Decode(str, encoding = 'utf-8') {
 }
 </pre>
 
-<p><strong>注意</strong>: <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a> 不能正确处理四字节 UTF-8 字符， 比如 '\uD842\uDFB7' 或缩写为  '\u{20BB7}' 。参见 <a href="https://github.com/solderjs/TextEncoderLite/issues/16">issue </a><br>
+<p><strong>注意</strong>: <a href="https://github.com/coolaj86/TextEncoderLite">TextEncoderLite</a> 不能正确处理四字节 UTF-8 字符，比如 '\uD842\uDFB7' 或缩写为  '\u{20BB7}' 。参见 <a href="https://github.com/solderjs/TextEncoderLite/issues/16">issue </a><br>
  可使用 <a href="https://github.com/inexorabletash/text-encoding">text-encoding</a> 作为替代。</p>
 
-<p>某些场景下，以上经由 UTF-8 转换到 Base64 的实现在空间利用上不一定高效。当处理包含大量 U+0800-U+FFFF 区域间字符的文本时， UTF-8 输出结果长于 UTF-16 的，因为这些字符在 UTF-8 下占用三个字节而 UTF-16 是两个。在处理均匀分布 UTF-16 码点的 JavaScript 字符串时应考虑采用 UTF-16 替代 UTF-8 作为 Base64 结果的中间编码格式，这将减少 40% 尺寸。</p>
+<p>某些场景下，以上经由 UTF-8 转换到 Base64 的实现在空间利用上不一定高效。当处理包含大量 U+0800-U+FFFF 区域间字符的文本时，UTF-8 输出结果长于 UTF-16 的，因为这些字符在 UTF-8 下占用三个字节而 UTF-16 是两个。在处理均匀分布 UTF-16 码点的 JavaScript 字符串时应考虑采用 UTF-16 替代 UTF-8 作为 Base64 结果的中间编码格式，这将减少 40% 尺寸。</p>
 
 <div class="standardNoteBlock">
 <p><strong>译者注</strong>：下为陈旧翻译片段</p>
 </div>
 
 <ul>
- <li>第一个是转义(escape)整个字符串然后编码这个它；</li>
- <li>第二个是把UTF-16的 <a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a> 转码为UTF-8的字符数组然后编码它。</li>
+ <li>第一个是转义 (escape) 整个字符串然后编码这个它；</li>
+ <li>第二个是把 UTF-16 的 <a href="/zh-CN/docs/Web/API/DOMString"><code>DOMString</code></a> 转码为 UTF-8 的字符数组然后编码它。</li>
 </ul>
 
-<h3 id="方案_1_–_编码之前转义escape字符串">方案 #1 – 编码之前转义(escape)字符串</h3>
+<h3 id="方案_1_–_编码之前转义escape字符串">方案 #1 – 编码之前转义 (escape) 字符串</h3>
 
 <pre class="brush:js notranslate">function b64EncodeUnicode(str) {
     return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
@@ -564,7 +564,7 @@ function Base64Decode(str, encoding = 'utf-8') {
 b64EncodeUnicode('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
 </pre>
 
-<p>把base64转换回字符串</p>
+<p>把 base64 转换回字符串</p>
 
 <pre class="notranslate"><code>function b64DecodeUnicode(str) {
     return decodeURIComponent(atob(str).split('').map(function(c) {
@@ -577,28 +577,28 @@ b64DecodeUnicode('Cg=='); // "\n"</code></pre>
 
 <p><a href="https://github.com/coolaj86/unibabel-js">Unibabel</a> 是一个包含了一些使用这种策略的通用转换的库。</p>
 
-<h3 id="方案_6_–_用JavaScript的_TypedArray_和_UTF-8重写DOM的_atob_和_btoa">方案 #6 – 用JavaScript的 <code>TypedArray</code> 和 UTF-8重写DOM的 <code>atob()</code> 和 <code>btoa()</code></h3>
+<h3 id="方案_6_–_用JavaScript的_TypedArray_和_UTF-8重写DOM的_atob_和_btoa">方案 #6 – 用 JavaScript 的 <code>TypedArray</code> 和 UTF-8 重写 DOM 的 <code>atob()</code> 和 <code>btoa()</code></h3>
 
-<p>使用像<a href="https://github.com/inexorabletash/text-encoding">TextEncoding</a>(包含了早期(legacy)的windows，mac， 和 ISO 编码)，<a href="https://github.com/coolaj86/TextEncoderLite/blob/master/index.js">TextEncoderLite</a> 或者 <a href="https://github.com/feross/buffer">Buffer</a> 这样的文本编码器增强(polyfill)和Base64增强，比如<a href="https://github.com/beatgammit/base64-js/blob/master/index.js">base64-js</a> 或 <a href="https://github.com/waitingsong/base64">TypeScript 版本的  </a>base64-js （适用于长青浏览器和 Node.js）。</p>
+<p>使用像<a href="https://github.com/inexorabletash/text-encoding">TextEncoding</a>(包含了早期 (legacy) 的 windows，mac， 和 ISO 编码)，<a href="https://github.com/coolaj86/TextEncoderLite/blob/master/index.js">TextEncoderLite</a> 或者 <a href="https://github.com/feross/buffer">Buffer</a> 这样的文本编码器增强 (polyfill) 和 Base64 增强，比如<a href="https://github.com/beatgammit/base64-js/blob/master/index.js">base64-js</a> 或 <a href="https://github.com/waitingsong/base64">TypeScript 版本的  </a>base64-js（适用于长青浏览器和 Node.js）。</p>
 
 <p>最简单，最轻量级的解决方法就是使用 <a href="https://github.com/coolaj86/TextEncoderLite/blob/master/index.js">TextEncoderLite</a> 和 <a href="https://github.com/beatgammit/base64-js/blob/master/index.js">base64-js</a>.</p>
 
-<p>想要更完整的库的话，参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</p>
+<p>想要更完整的库的话，参见 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
  <li>{{domxref("WindowBase64.atob","atob()")}}</li>
  <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
- <li><a href="/en-US/docs/data_URIs" title="/en-US/docs/data_URIs"><code>data</code> URIs</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffer</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">TypedArrays</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView">ArrayBufferView</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array">Uint8Array</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
- <li><a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString">DOMString</a></li>
- <li><a href="/en-US/docs/URI" title="/en-US/docs/URI"><code>URI</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI"><code>encodeURI()</code></a></li>
- <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIURIFixup" title="/en-US/docs/XPCOM_Interface_Reference/nsIURIFixup"><code>nsIURIFixup()</code></a></li>
- <li><a href="https://en.wikipedia.org/wiki/Base64" title="https://en.wikipedia.org/wiki/Base64"><code>Base64 on Wikipedia</code></a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs"><code>data</code> URIs</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays">TypedArrays</a></li>
+ <li><a href="/zh-CN/docs/Web/API/ArrayBufferView">ArrayBufferView</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="/zh-CN/docs/Web/API/DOMString">DOMString</a></li>
+ <li><a href="/zh-CN/docs/Glossary/URI"><code>URI</code></a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI"><code>encodeURI()</code></a></li>
+ <li><a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIURIFixup"><code>nsIURIFixup()</code></a></li>
+ <li><a href="https://en.wikipedia.org/wiki/Base64"><code>Base64 on Wikipedia</code></a></li>
 </ul>

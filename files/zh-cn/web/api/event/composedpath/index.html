@@ -9,24 +9,24 @@ translation_of: Web/API/Event/composedPath
 
 <p> <strong><code>composedPath()</code></strong> 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。</p>
 
-<h2 id="语法"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>语法</strong></span></font></h2>
+<h2 id="语法"><strong>语法</strong></h2>
 
 <pre class="syntaxbox">var <em>composed</em> = <em>Event</em>.composedPath();
 </pre>
 
 <h3 id="参数">参数</h3>
 
-<p>无.</p>
+<p>无。</p>
 
 <h3 id="返回值">返回值</h3>
 
 <p>一个 {{domxref("EventTarget")}}对象数组，表示将在其上调用事件侦听器的对象。</p>
 
-<h2 id="例子"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>例子</strong></span></font></h2>
+<h2 id="例子"><strong>例子</strong></h2>
 
-<p>在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，<code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;，</code>两 个全都调用了它们文本属性的内容然后作为<code>&lt;p&gt;</code>  元素的文本内容将它们插入到元素的影子DOM中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成<code>open</code> 和 <code>closed</code> 的情况下连接的。</p>
+<p>在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，<code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;，</code>两 个全都调用了它们文本属性的内容然后作为<code>&lt;p&gt;</code>  元素的文本内容将它们插入到元素的影子 DOM 中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成<code>open</code> 和 <code>closed</code> 的情况下连接的。</p>
 
-<p>第一个定义就像这样, 比如:</p>
+<p>第一个定义就像这样，比如：</p>
 
 <pre class="brush: js">customElements.define('open-shadow',
   class extends HTMLElement {
@@ -42,29 +42,29 @@ translation_of: Web/API/Event/composedPath
   }
 });</pre>
 
-<p>然后我们在我们的页面中插入其中一个元素:</p>
+<p>然后我们在我们的页面中插入其中一个元素：</p>
 
 <pre class="brush: html">&lt;open-shadow text="I have an open shadow root"&gt;&lt;/open-shadow&gt;
 &lt;closed-shadow text="I have a closed shadow root"&gt;&lt;/closed-shadow&gt;</pre>
 
-<p>然后在 <code>&lt;html&gt;</code> 元素中插入一个鼠标点击事件:</p>
+<p>然后在 <code>&lt;html&gt;</code> 元素中插入一个鼠标点击事件：</p>
 
 <pre class="brush: js">document.querySelector('html').addEventListener('click',function(e) {
   console.log(e.composed);
   console.log(e.composedPath());
 });</pre>
 
-<p>当你先后点击 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code> 这两个元素, 你将会注意到两件事情. 第一， <code>composed</code> 这个属性返回值为 <code>true</code> 因为 <code>click</code> 事件总能够在影子边界中传播。 第二，你将注意到两个元素中<code>composedPath</code> 的值的不同。 <code>&lt;open-shadow&gt;</code> 元素的组成路径是这个:</p>
+<p>当你先后点击 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code> 这两个元素，你将会注意到两件事情。第一， <code>composed</code> 这个属性返回值为 <code>true</code> 因为 <code>click</code> 事件总能够在影子边界中传播。 第二，你将注意到两个元素中<code>composedPath</code> 的值的不同。 <code>&lt;open-shadow&gt;</code> 元素的组成路径是这个：</p>
 
-<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-array"><span class="objectTitle">Array </span><span class="arrayLeftBracket">[ </span><span class="objectBox objectBox-node"><span class="tag-name">p</span></span>, <span class="objectBox objectBox-object"><span class="objectTitle">ShadowRoot</span></span>, <span class="objectBox objectBox-node"><span class="tag-name">open-shadow</span></span>, <span class="objectBox objectBox-node"><span class="tag-name">body</span></span>, <span class="objectBox objectBox-node"><span class="tag-name">html</span></span>, <span class="objectBox objectBox-document"><span class="objectTitle">HTMLDocument</span> <span class="location">https://mdn.github.io/web-components-examples/composed-composed-path/</span></span>, <span class="objectBox objectBox-Window"><span class="objectTitle">Window</span></span><span class="arrayRightBracket"> ]</span></span></span></span></span></pre>
+<pre class="brush: js">Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
 
-<p>尽管 <code>&lt;closed-shadow&gt;</code> 元素的组成路径是像下面这样:</p>
+<p>尽管 <code>&lt;closed-shadow&gt;</code> 元素的组成路径是像下面这样：</p>
 
-<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-array"><span class="objectTitle">Array </span><span class="arrayLeftBracket">[ </span><span class="objectBox objectBox-node"><span class="tag-name">closed-shadow</span></span>, <span class="objectBox objectBox-node"><span class="tag-name">body</span></span>, <span class="objectBox objectBox-node"><span class="tag-name">html</span></span>, <span class="objectBox objectBox-document"><span class="objectTitle">HTMLDocument</span> <span class="location">https://mdn.github.io/web-components-examples/composed-composed-path/</span></span>, <span class="objectBox objectBox-Window"><span class="objectTitle">Window</span></span><span class="arrayRightBracket"> ]</span></span></span></span></span></pre>
+<pre class="brush: js">Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
 
 <p>在第二个例子中，事件监听器仅能够传播到 <code>&lt;closed-shadow&gt;</code> 元素本身，但是不会到影子边界内的节点。</p>
 
-<h2 id="规范"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>规范</strong></span></font></h2>
+<h2 id="规范"><strong>规范</strong></h2>
 
 <table class="standard-table">
  <tbody>
@@ -81,7 +81,7 @@ translation_of: Web/API/Event/composedPath
  </tbody>
 </table>
 
-<h2 id="浏览器兼容"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>浏览器兼容</strong></span></font></h2>
+<h2 id="浏览器兼容"><strong>浏览器兼容</strong></h2>
 
 
 

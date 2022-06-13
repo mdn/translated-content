@@ -6,9 +6,9 @@ original_slug: Web/Guide/CSS/Using_CSS_gradients
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong>CSS 渐变</strong> {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。您可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向(由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。您还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。</p>
+<p><strong>CSS 渐变</strong> {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。您可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向 (由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。您还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。</p>
 
-<p>渐变可以在任何使用 <code>&lt;image&gt;</code> 的地方使用，例如在背景中。 由于渐变是动态生成的，因此它们可以消除对传统用于实现类似效果的栅格图像文件的需求。 此外，由于渐变是由浏览器生成的，因此在放大时它们看起来比栅格图像更好，并且可以动态调整大小。</p>
+<p>渐变可以在任何使用 <code>&lt;image&gt;</code> 的地方使用，例如在背景中。由于渐变是动态生成的，因此它们可以消除对传统用于实现类似效果的栅格图像文件的需求。此外，由于渐变是由浏览器生成的，因此在放大时它们看起来比栅格图像更好，并且可以动态调整大小。</p>
 
 <p>我们将从线性渐变开始介绍，然后以线性渐变为例介绍所有渐变类型支持的功能，然后继续介绍径向渐变，圆锥渐变和重复渐变。</p>
 
@@ -19,7 +19,7 @@ original_slug: Web/Guide/CSS/Using_CSS_gradients
 <div>
 <h3 id="基础线性渐变">基础线性渐变</h3>
 
-<p>要创建最基本的渐变类型，您只需指定两种颜色即可。 这些被称为色标。 至少指定两个色标，也可以指定任意数量。</p>
+<p>要创建最基本的渐变类型，您只需指定两种颜色即可。这些被称为色标。至少指定两个色标，也可以指定任意数量。</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate" dir="rtl">&lt;div class="simple-linear"&gt;&lt;/div&gt;</pre>
@@ -102,14 +102,14 @@ original_slug: Web/Guide/CSS/Using_CSS_gradients
 
 <p>{{ EmbedLiveSample('Using_angles', 120, 120) }}</p>
 
-<p>在使用角度的时候, <code>0deg</code> 代表渐变方向为从下到上, <code>90deg</code> 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。 而负角度意味着逆时针方向。</p>
+<p>在使用角度的时候，<code>0deg</code> 代表渐变方向为从下到上，<code>90deg</code> 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。 而负角度意味着逆时针方向。</p>
 
 <p><img alt="linear_redangles.png" class="default internal" src="/files/3811/linear_red_angles.png"></p>
 </div>
 
 <h2 id="声明颜色和创建效果">声明颜色和创建效果</h2>
 
-<p>所有的CSS渐变类型都是一个位置依赖的颜色范围。CSS渐变产生的颜色可以随位置不断变化，从而产生平滑的颜色过渡。也可以创建纯色带和两种颜色之间的硬过渡。以下内容适用于所有渐变函数：</p>
+<p>所有的 CSS 渐变类型都是一个位置依赖的颜色范围。CSS 渐变产生的颜色可以随位置不断变化，从而产生平滑的颜色过渡。也可以创建纯色带和两种颜色之间的硬过渡。以下内容适用于所有渐变函数：</p>
 
 <div>
 <h3 id="使用多种颜色">使用多种颜色</h3>
@@ -137,7 +137,7 @@ original_slug: Web/Guide/CSS/Using_CSS_gradients
 <div>
 <h3 id="颜色终止位置">颜色终止位置</h3>
 
-<p>你不需要让你设置的颜色在默认位置终止。 你可以通过给每个颜色设置0，1%或者2%或者其他的绝对数值来调整它们的位置。如果你将位置设置为百分数， <code>0%</code> 表示起始点, 而100%表示终点，但是如果需要的话你也可以设置这个范围之外的其他值来达到你想要的效果。如果有些位置你没有明确设置，那么它将会被自动计算，第一种颜色会在0%处停止，而最后一种颜色是100%，至于其他颜色则是在它邻近的两种颜色的中间停止。 </p>
+<p>你不需要让你设置的颜色在默认位置终止。 你可以通过给每个颜色设置 0，1% 或者 2% 或者其他的绝对数值来调整它们的位置。如果你将位置设置为百分数， <code>0%</code> 表示起始点，而 100% 表示终点，但是如果需要的话你也可以设置这个范围之外的其他值来达到你想要的效果。如果有些位置你没有明确设置，那么它将会被自动计算，第一种颜色会在 0% 处停止，而最后一种颜色是 100%，至于其他颜色则是在它邻近的两种颜色的中间停止。 </p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;div class="multicolor-linear"&gt;&lt;/div&gt;
@@ -160,7 +160,7 @@ original_slug: Web/Guide/CSS/Using_CSS_gradients
 <div>
 <h3 id="创建实线">创建实线</h3>
 
-<p>要在两种颜色之间创建一条硬线，即创建一个条纹而不是逐渐过渡，可以将相邻的颜色停止设置为相同的位置。在此示例中，两种颜色在50%标记处共享一个颜色停止点，即渐变的一半：</p>
+<p>要在两种颜色之间创建一条硬线，即创建一个条纹而不是逐渐过渡，可以将相邻的颜色停止设置为相同的位置。在此示例中，两种颜色在 50% 标记处共享一个颜色停止点，即渐变的一半：</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;div class="striped"&gt;&lt;/div&gt;
@@ -182,7 +182,7 @@ original_slug: Web/Guide/CSS/Using_CSS_gradients
 <div>
 <h3 id="渐变提示">渐变提示</h3>
 
-<p>默认情况下，渐变会平滑地从一种颜色过渡到另一种颜色。你可以通过设置一个值来将渐变的中心点移动到指定位置。 在如下示例中, 我们将渐变的中心点由50%设为10%。</p>
+<p>默认情况下，渐变会平滑地从一种颜色过渡到另一种颜色。你可以通过设置一个值来将渐变的中心点移动到指定位置。 在如下示例中，我们将渐变的中心点由 50% 设为 10%。</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate" dir="rtl">&lt;div class="color-hint"&gt;&lt;/div&gt;

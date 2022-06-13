@@ -1,5 +1,5 @@
 ---
-title: 函数-可复用代码块
+title: 函数 - 可复用代码块
 slug: learn/JavaScript/Building_blocks/Functions
 tags:
   - API
@@ -18,26 +18,26 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">在JavaScript中另一个基本概念是<strong>函数</strong>, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如基本语法、如何定义和调用、范围和参数。</p>
+<p>在 JavaScript 中另一个基本概念是<strong>函数</strong>, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如基本语法、如何定义和调用、范围和参数。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的电脑知识，对HTML与CSS有基本的了解,及已阅读： <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>（JS的入门）。</td>
+   <th scope="row">前提条件：</th>
+   <td>基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读： <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>（JS 的入门）。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>了解 Javascript 函数背后的基本概念。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="我能在哪找到函数">我能在哪找到函数?</h2>
+<h2 id="我能在哪找到函数">我能在哪找到函数？</h2>
 
-<p>在 JavaScript中, 你将发现函数无处不在 。事实上, 到目前为止，我们一直在使用函数，只是我们还没很好的讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。</p>
+<p>在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数，只是我们还没很好的讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。</p>
 
-<p>几乎任何时候，只要你使用一个带有一对圆括号（）的JavaScript结构，并且你不是在使用一个常见的比如for for循环，while或do…while循环，或者if语句这样的内置语言结构时，那么您就正在使用函数。</p>
+<p>几乎任何时候，只要你使用一个带有一对圆括号（）的 JavaScript 结构，并且你不是在使用一个常见的比如 for for 循环，while 或 do…while 循环，或者 if 语句这样的内置语言结构时，那么您就正在使用函数。</p>
 
 <div class="hidden"></div>
 
@@ -74,17 +74,17 @@ console.log(madeAString);
 <p>提示：如果需要，你可以随意将这些代码输入浏览器控制台以便于你熟悉其功能。</p>
 </div>
 
-<p>JavaScript有许多内置的函数<span style="">，可以让您做很多有用的事情，而无需自己编写所有的代码。事实上</span>, 许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用JavaScript来编写——大多数调用浏览器后台的函数的代码，是使用像C++这样更低级的系统语言编写的，而不是像JavaScript这样的web编程语言。</p>
+<p>JavaScript 有许多内置的函数，可以让您做很多有用的事情，而无需自己编写所有的代码。事实上，许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。</p>
 
-<p>请记住，这些内置浏览器函数不是核心JavaScript语言的一部分——被定义为浏览器API的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地使用浏览器API。</p>
+<p>请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地使用浏览器 API。</p>
 
 <h2 id="函数与方法">函数与方法</h2>
 
-<p>程序员把函数称为对象<strong>方法（method）</strong>的一部分。你还不必了解JavaScript中已建构的对象在更深层次上是如何运作的<font><font>——你可以等到下一小节，我们会教给你有关对象运作方式的一切。</font></font><font><font>在我们继续前进之前，我们需要澄清一些有关方法和函数概念之间可能存在的误会——当你在网络上浏览相关信息的时候，你很可能会碰上这两个术语。</font></font></p>
+<p>程序员把函数称为对象<strong>方法（method）</strong>的一部分。你还不必了解 JavaScript 中已建构的对象在更深层次上是如何运作的——你可以等到下一小节，我们会教给你有关对象运作方式的一切。在我们继续前进之前，我们需要澄清一些有关方法和函数概念之间可能存在的误会——当你在网络上浏览相关信息的时候，你很可能会碰上这两个术语。</p>
 
 <p>到目前为止我们所使用的内置代码同属于这两种形式：函数和方法。你可以在<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects">这里</a>查看内置函数，内置对象以及其相关方法的完整列表。</p>
 
-<p><font><font>严格说来，内置浏览器函数并不是函数——它们是</font></font><strong style=""><font><font>方法</font></font></strong><font><font>。</font><font>这听起来有点可怕和令人困惑，但不要担心 ——函数和方法在很大程度上是可互换的，</font></font>至少在我们的学习阶段是这样的<font><font>。</font></font></p>
+<p>严格说来，内置浏览器函数并不是函数——它们是<strong style="">方法</strong>。这听起来有点可怕和令人困惑，但不要担心 ——函数和方法在很大程度上是可互换的，至少在我们的学习阶段是这样的。</p>
 
 <p>二者区别在于方法是在对象内定义的函数。浏览器内置函数（方法）和变量（称为属性）存储在结构化对象内，以使代码更加高效，易于处理。</p>
 
@@ -92,7 +92,7 @@ console.log(madeAString);
 
 <h2 id="自定义函数">自定义函数</h2>
 
-<p>您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数. <font><font>在我们</font><font>的</font><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code"><font>循环文章中</font></a><font>的</font></font><a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html"><font><font>random-canvas-circles.html</font></font></a><font><font>示例（另见完整的</font></font><a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html"><font><font>源代码</font></font></a><font><font>）中</font><font>，我们包括一个如下所示的自定义</font><font>函数：</font></font><code>draw()</code></p>
+<p>您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">循环文章中</a>的<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a>示例（另见完整的<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">源代码</a>）中，我们包括一个如下所示的自定义函数：<code>draw()</code></p>
 
 <pre class="brush: js notranslate">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
@@ -104,23 +104,23 @@ console.log(madeAString);
   }
 }</pre>
 
-<p><font><font>该函数在</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a><font><font>元素中</font><font>绘制100个随机圆</font><font>。</font><font>每次我们想要这样做，我们可以使用这个函数来调用这个功能</font></font></p>
+<p>该函数在<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="使用HTML &lt;canvas>元素与canvas脚本API来绘制图形和动画。"><code>&lt;canvas&gt;</code></a>元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能</p>
 
 <pre class="brush: js notranslate">draw();</pre>
 
-<p><font><font>而不是每次我们想重复一遍，都要写出所有的代码。</font><font>函数可以包含任何您喜欢的代码 - 甚至可以从内部函数调用其他函数。</font><font>以上函数例如调用</font></font><code>random()</code><font><font>函数三次，由以下代码定义：</font></font></p>
+<p>而不是每次我们想重复一遍，都要写出所有的代码。函数可以包含任何您喜欢的代码 - 甚至可以从内部函数调用其他函数。以上函数例如调用<code>random()</code>函数三次，由以下代码定义：</p>
 
 <pre class="brush: js notranslate">function random(number) {
   return Math.floor(Math.random()*number);
 }</pre>
 
-<p><font><font>我们需要这个函数，因为浏览器的内置</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random"><font><font>Math.random（）</font></font></a><font><font>函数只生成一个0到1之间的随机十进制数。我们想要一个0到一个指定数字之间的随机整数。</font></font></p>
+<p>我们需要这个函数，因为浏览器的内置<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random（）</a>函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。</p>
 
 <div class="hidden"></div>
 
 <h2 id="调用函数">调用函数</h2>
 
-<p>现在你可能很清楚这一点,<font>但仅仅为了防止……，要在函数定义之后，实际使用它，你必须运行或调用它。</font><font>这是通过将函数名包含在代码的某个地方，后跟圆括号来完成的。</font></p>
+<p>现在你可能很清楚这一点，但仅仅为了防止……，要在函数定义之后，实际使用它，你必须运行或调用它。这是通过将函数名包含在代码的某个地方，后跟圆括号来完成的。</p>
 
 <pre class="brush: js notranslate">function myFunction() {
   alert('hello');
@@ -131,7 +131,7 @@ myFunction()
 
 <h2 id="匿名函数">匿名函数</h2>
 
-<p><font>您可能会以稍微不同的方式看到定义和调用的函数。</font><font>到目前为止，我们刚刚创建了如下函数：</font></p>
+<p>您可能会以稍微不同的方式看到定义和调用的函数。到目前为止，我们刚刚创建了如下函数：</p>
 
 <pre class="brush: js notranslate">function myFunction() {
   alert('hello');
@@ -143,7 +143,7 @@ myFunction()
   alert('hello');
 }</pre>
 
-<p>这个函数叫做<strong>匿名函数</strong> — 它没有函数名! 它也不会自己做任何事情。 你通常将匿名函数与事件处理程序一起使用, 例如，如果单击相关按钮，以下操作将在函数内运行代码：</p>
+<p>这个函数叫做<strong>匿名函数</strong> — 它没有函数名！它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：</p>
 
 <pre class="brush: js notranslate">var myButton = document.querySelector('button');
 
@@ -151,7 +151,7 @@ myButton.onclick = function() {
   alert('hello');
 }</pre>
 
-<p>上述示例将要求{{htmlelement("button")}} <font>在页面上提供可用于选择并单击</font><font>的</font><font>元素。</font><font>您在整个课程中已经看到过这种结构了几次，您将在下一篇文章中了解更多信息并在其中使用。</font></p>
+<p>上述示例将要求{{htmlelement("button")}} 在页面上提供可用于选择并单击的元素。您在整个课程中已经看到过这种结构了几次，您将在下一篇文章中了解更多信息并在其中使用。</p>
 
 <p>你还可以将匿名函数分配为变量的值，例如：</p>
 
@@ -200,11 +200,11 @@ anotherGreeting();</pre>
 <p><strong>Note</strong>: 参数有时称为参数（arguments），属性（properties）或甚至属性（attributes）</p>
 </div>
 
-<p><font><font>例如，浏览器的内置</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random"><font><font>Math.random（）</font></font></a><font><font>函数不需要任何参数。</font><font>当被调用时，它总是返回0到1之间的随机数：</font></font></p>
+<p>例如，浏览器的内置<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random（）</a>函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：</p>
 
 <pre class="brush: js notranslate">var myNumber = Math.random();</pre>
 
-<p><font><font>浏览器的内置字符串</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"><font><font>replace（）</font></font></a><font><font>函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：</font></font></p>
+<p>浏览器的内置字符串<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace（）</a>函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：</p>
 
 <pre class="brush: js notranslate">var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');</pre>
@@ -213,7 +213,7 @@ var newString = myText.replace('string', 'sausage');</pre>
 <p><strong>Note</strong>:当您需要指定多个参数时，它们以逗号分隔。</p>
 </div>
 
-<p><font><font>还应该注意，有时参数不是必须的 </font></font>—— <font><font>您不必指定它们。</font><font>如果没有，该功能一般会采用某种默认行为。</font><font>作为示例，数组 </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"><font><font>join（）</font></font></a><font><font>函数的参数是可选的：</font></font></p>
+<p>还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join（）</a>函数的参数是可选的：</p>
 
 <pre class="brush: js notranslate">var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
@@ -227,15 +227,15 @@ var madeAString = myArray.join();
 
 <h2 id="函数作用域和冲突">函数作用域和冲突</h2>
 
-<p>我们来谈一谈 {{glossary("scope")}}即作用域 — 处理函数时一个非常重要的概念。当你创建一个函数时，函数内定义的变量和其他东西都在它们自己的单独的范围内, 意味着它们被锁在自己独立的隔间中, 不能被函数外的代码访问。</p>
+<p>我们来谈一谈 {{glossary("scope")}}即作用域 — 处理函数时一个非常重要的概念。当你创建一个函数时，函数内定义的变量和其他东西都在它们自己的单独的范围内，意味着它们被锁在自己独立的隔间中，不能被函数外的代码访问。</p>
 
-<p>所有函数的最外层被称为全局作用域。 在全局作用域内定义的值可以在任意地方访问。</p>
+<p>所有函数的最外层被称为全局作用域。在全局作用域内定义的值可以在任意地方访问。</p>
 
-<p><font>JavaScript由于各种原因而建立，但主要是由于安全性和组织性。</font><font>有时您不希望变量可以在代码中的任何地方访问 - 您从其他地方调用的外部脚本可能会开始搞乱您的代码并导致问题，因为它们恰好与代码的其他部分使用了相同的变量名称，造成冲突。</font><font>这可能是恶意的，或者是偶然的。</font></p>
+<p>JavaScript 由于各种原因而建立，但主要是由于安全性和组织性。有时您不希望变量可以在代码中的任何地方访问 - 您从其他地方调用的外部脚本可能会开始搞乱您的代码并导致问题，因为它们恰好与代码的其他部分使用了相同的变量名称，造成冲突。这可能是恶意的，或者是偶然的。</p>
 
 <div class="hidden"></div>
 
-<p>例如，假设您有一个HTML文件，它调用两个外部JavaScript文件，并且它们都有一个使用相同名称定义的变量和函数：</p>
+<p>例如，假设您有一个 HTML 文件，它调用两个外部 JavaScript 文件，并且它们都有一个使用相同名称定义的变量和函数：</p>
 
 <pre class="brush: html notranslate">&lt;!-- Excerpt from my HTML --&gt;
 &lt;script src="first.js"&gt;&lt;/script&gt;
@@ -256,7 +256,7 @@ function greeting() {
   alert('Our company is called ' + name + '.');
 }</pre>
 
-<p><font><font>这两个函数都使用 </font></font><code>greeting()</code><font><font> 形式调用，但是你只能访问到 <font face="consolas, Liberation Mono, courier, monospace"><span style="">first.js</span></font> 文件的</font></font><code>greeting()</code><font><font>函数（第二个文件被忽视了）。另外，第二次尝试使用 <code>let</code> 关键字定义 <code>name</code> 变量导致了一个错误。</font></font></p>
+<p>这两个函数都使用 <code>greeting()</code> 形式调用，但是你只能访问到 first.js 文件的<code>greeting()</code>函数（第二个文件被忽视了）。另外，第二次尝试使用 <code>let</code> 关键字定义 <code>name</code> 变量导致了一个错误。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 您可以参考这个例子 <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">running live on GitHub</a> (查看完整 <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">源代码</a>).</p>
@@ -264,34 +264,34 @@ function greeting() {
 
 <p>将代码锁定在函数中的部分避免了这样的问题，并被认为是最佳实践。</p>
 
-<p><font>这有点像一个动物园。</font><font>狮子，斑马，老虎和企鹅都保留在自己的园子中，只能拿到到它们园子中的东西 —— 与其函数作用域相同。</font><font>如果他们能进入其他园子，就会出现问题。不同的动物会在不熟悉的栖息地内感到真的不舒服 - 一只狮子或老虎会在企鹅的水多的，冰冷的的领域中感到可怕。最糟糕的是，狮子和老虎可能会尝试吃企鹅！</font></p>
+<p>这有点像一个动物园。狮子，斑马，老虎和企鹅都保留在自己的园子中，只能拿到到它们园子中的东西 —— 与其函数作用域相同。如果他们能进入其他园子，就会出现问题。不同的动物会在不熟悉的栖息地内感到真的不舒服 - 一只狮子或老虎会在企鹅的水多的，冰冷的的领域中感到可怕。最糟糕的是，狮子和老虎可能会尝试吃企鹅！</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14079/MDN-mozilla-zoo.png" style="display: block; margin: 0 auto;"></p>
 
 <p>动物园管理员就像全局作用域 - 他或她有钥匙访问每个园子，重新投喂食物，照顾生病的动物等。</p>
 
-<h3 id="主动学习_和_scope_玩耍">主动学习: 和 scope 玩耍</h3>
+<h3 id="主动学习_和_scope_玩耍">主动学习：和 scope 玩耍</h3>
 
 <p>我们来看一个真正的例子来展示范围</p>
 
 <ol>
- <li><font><font>首先，制作我们的</font></font><a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html"><font><font>function-scope.html</font></font></a><font><font>示例</font><font>的本地副本</font><font>。它</font><font>包含两个函数</font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>，和三个变量—— </font></font><code>x</code><font><font>，</font></font><code>y</code><font><font>和</font></font><code>z</code><font><font>——其中两个在函数中被定义，另一个被定义在全局作用域内。</font><font>它还包含一个名为</font></font><code>output()</code>的函数<font><font>，它接收一个参数，并将其输出到页面的一个段落中。</font></font></li>
- <li><font><font>在浏览器和文本编辑器中打开示例。</font></font></li>
- <li><font><font>在浏览器开发工具中打开JavaScript控制台。</font><font>在JavaScript控制台中，输入以下命令：</font></font></li>
+ <li>首先，制作我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html">function-scope.html</a>示例的本地副本。它包含两个函数<code>a()</code>和<code>b()</code>，和三个变量—— <code>x</code>，<code>y</code>和<code>z</code>——其中两个在函数中被定义，另一个被定义在全局作用域内。它还包含一个名为<code>output()</code>的函数，它接收一个参数，并将其输出到页面的一个段落中。</li>
+ <li>在浏览器和文本编辑器中打开示例。</li>
+ <li>在浏览器开发工具中打开 JavaScript 控制台。在 JavaScript 控制台中，输入以下命令：</li>
 </ol>
 
 <pre class="brush: js notranslate">output(x);</pre>
 
-<p><font><font>您应该看到变量</font></font><code>x</code><font><font>输出到屏幕</font><font>的值</font><font>。</font></font></p>
+<p>您应该看到变量<code>x</code>输出到屏幕的值。</p>
 
 <p>       4.现在尝试在您的控制台中输入以下内容</p>
 
 <pre class="brush: js notranslate">output(y);
 output(z);</pre>
 
-<p><font><font>这两个都应该返回错误沿“ </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined"><font><font>ReferenceError：y未定义</font></font></a><font><font> ”。</font><font>这是为什么？</font><font>由于函数作用域 - </font></font><code>y<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="">和</span></font></code><code>z</code>被<font><font>锁定在</font><font>函数</font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>函数中，所以</font></font><code>output()</code><font><font>从全局作用域调用时无法访问它们。</font></font></p>
+<p>这两个都应该返回错误沿“ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError：y 未定义</a> ”。这是为什么？由于函数作用域 - <code>y和</code><code>z</code>被锁定在函数<code>a()</code>和<code>b()</code>函数中，所以<code>output()</code>从全局作用域调用时无法访问它们。</p>
 
-<p><font><font>        5.但是，从另一个函数里面调用什么呢？</font><font>尝试编辑</font></font><code>a()</code><font><font>，</font></font><code>b()</code><font><font>所以他们看起来像这样：</font></font></p>
+<p>        5.但是，从另一个函数里面调用什么呢？尝试编辑<code>a()</code>，<code>b()</code>所以他们看起来像这样：</p>
 
 <pre class="brush: js notranslate">function a() {
   var y = 2;
@@ -303,12 +303,12 @@ function b() {
   output(z);
 }</pre>
 
-<p><font><font>保存代码并重新加载到浏览器中，然后尝试</font><font>从JavaScript控制台</font><font>调用</font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>函数：</font></font></p>
+<p>保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用<code>a()</code>和<code>b()</code>函数：</p>
 
 <pre class="brush: js notranslate">a();
 b();</pre>
 
-<p><font><font>您应该看到</font><font>页面中输出的</font></font><code>y</code><font><font>和</font></font><code>z</code>的<font><font>值。</font><font>这样就没问题，因为</font></font><code>output()</code><font><font>函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。</font></font><code>output()</code><font><font>它可以从任何地方被调用，因为它在全局作用域中被定义。</font></font></p>
+<p>您应该看到页面中输出的<code>y</code>和<code>z</code>的值。这样就没问题，因为<code>output()</code>函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。<code>output()</code>它可以从任何地方被调用，因为它在全局作用域中被定义。</p>
 
 <p>       6.现在尝试更新您的代码，如下所示：</p>
 
@@ -322,12 +322,12 @@ function b() {
   output(x);
 }</pre>
 
-<p>再次保存并重新加载，并在JavaScript控制台中再次尝试：</p>
+<p>再次保存并重新加载，并在 JavaScript 控制台中再次尝试：</p>
 
 <pre class="brush: js notranslate">a();
 b();</pre>
 
-<p><font><font>函数 </font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>都应该输出x---1的值。这些没有问题，因为即使</font></font><code>output()</code>的<font><font>调用与</font></font><code>x</code>的<font><font>定义</font><font>不在同一个作用域内</font><font>，但</font></font><code>x</code><font><font>是一个全局变量，所以在所有代码中都可用。</font></font></p>
+<p>函数 <code>a()</code>和<code>b()</code>都应该输出 x---1 的值。这些没有问题，因为即使<code>output()</code>的调用与<code>x</code>的定义不在同一个作用域内，但<code>x</code>是一个全局变量，所以在所有代码中都可用。</p>
 
 <p>7.最后，尝试更新您的代码，如下所示：</p>
 
@@ -341,12 +341,12 @@ function b() {
   output(y);
 }</pre>
 
-<p>再次保存并重新加载，并在JavaScript控制台中再次尝试：</p>
+<p>再次保存并重新加载，并在 JavaScript 控制台中再次尝试：</p>
 
 <pre class="brush: js notranslate">a();
 b();</pre>
 
-<p><font><font>这次</font></font><code>a()</code><font><font>和</font></font><code>b()</code><font><font>调用都会返回那个令人讨厌的</font></font> "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: z is not defined</a>" error — 这是因为<code>output()</code>函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。</p>
+<p>这次<code>a()</code>和<code>b()</code>调用都会返回那个令人讨厌的 "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: z is not defined</a>" error — 这是因为<code>output()</code>函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。</p>
 
 <div class="note">
 <p><strong>注意</strong>:相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。</p>
@@ -361,7 +361,7 @@ b();</pre>
 
 <h3 id="函数内部的函数">函数内部的函数</h3>
 
-<p><font>请记住，您可以从任何地方调用函数，甚至可以在另一个函数中调用函数。</font><font>这通常被用作保持代码整洁的方式 - 如果您有一个复杂的函数，如果将其分解成几个子函数，它更容易理解：</font></p>
+<p>请记住，您可以从任何地方调用函数，甚至可以在另一个函数中调用函数。这通常被用作保持代码整洁的方式 - 如果您有一个复杂的函数，如果将其分解成几个子函数，它更容易理解：</p>
 
 <pre class="brush: js notranslate">function myBigFunction() {
   var myValue;
@@ -384,7 +384,7 @@ function subFunction3() {
 }
 </pre>
 
-<p>要确保函数调取的数值处在有效的作用域内。上面的例子中会产生一个错误提示，<code>ReferenceError：myValue is not define</code>，因为尽管<code>myValue</code>变量与函数调用指令处在同一个作用域中, 但它却没有在函数内被定义 <font><font>——</font></font> 实际代码在调用函数时就开始运行了。为了使代码正确运作，你必须将值作为参数传递给函数，如下所示：</p>
+<p>要确保函数调取的数值处在有效的作用域内。上面的例子中会产生一个错误提示，<code>ReferenceError：myValue is not define</code>，因为尽管<code>myValue</code>变量与函数调用指令处在同一个作用域中，但它却没有在函数内被定义 —— 实际代码在调用函数时就开始运行了。为了使代码正确运作，你必须将值作为参数传递给函数，如下所示：</p>
 
 <pre class="brush: js notranslate">function myBigFunction() {
   var myValue = 1;
@@ -406,7 +406,7 @@ function subFunction3(value) {
   console.log(value);
 }</pre>
 
-<h2 id="测试你的技能！"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>测试你的技能！</strong></span></font></h2>
+<h2 id="测试你的技能！"><strong>测试你的技能！</strong></h2>
 
 <p>你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">测试你的技能：函数</a>（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。</p>
 

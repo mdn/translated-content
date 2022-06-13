@@ -7,7 +7,7 @@ tags:
   - CSS 属性
   - Reference
   - border-box
-  - border-box不包含margin
+  - border-box 不包含 margin
   - box-sizing
   - margin
 translation_of: Web/CSS/box-sizing
@@ -22,25 +22,25 @@ translation_of: Web/CSS/box-sizing
 
 <p>在 <a href="/en-US/docs/CSS/Box_model" title="CSS/Box_model">CSS 盒子模型</a>的默认定义里，你对一个元素所设置的 {{Cssxref("width")}} 与 {{Cssxref("height")}} 只会应用到这个元素的内容区。如果这个元素有任何的 {{Cssxref("border")}} 或 {{Cssxref("padding")}} ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。</p>
 
-<p>box-sizing 属性可以被用来调整这些表现:</p>
+<p>box-sizing 属性可以被用来调整这些表现：</p>
 
 <ul>
- <li><code>content-box</code>  是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
- <li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px，那么这100px会包含它的border和padding，内容区的实际宽度是width减去(border + padding)的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+ <li><code>content-box</code>  是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+ <li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
 </ul>
 
-<p><strong>译者注:</strong> <code>border-box</code>不包含<code>margin</code></p>
+<p><strong>译者注：</strong> <code>border-box</code>不包含<code>margin</code></p>
 
 <div class="hidden">
-<p>一些专家甚至建议所有的 Web 开发者们<a href="https://css-tricks.com/international-box-sizing-awareness-day/">将所有的元素的box-sizing都设为border-box</a>。</p>
+<p>一些专家甚至建议所有的 Web 开发者们<a href="https://css-tricks.com/international-box-sizing-awareness-day/">将所有的元素的 box-sizing 都设为 border-box</a>。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> 对于新的web站点，你可能希望首先将box-sizing设置为border-box，如下所示：</p>
+<p><strong>Note:</strong> 对于新的 web 站点，你可能希望首先将 box-sizing 设置为 border-box，如下所示：</p>
 
-<p class="syntaxbox">* { box-sizing: border-box; }</p>
+<pre class="brush: css">* { box-sizing: border-box; }</pre>
 
-<p>这使得处理元素大小的工作变得容易得多，并且通常消除了在布局内容时可能遇到的许多陷阱。然而，在某些情况下，你应谨慎使用这个属性。例如： 你正在编写一个将由其他人使用的共享组件库，如果他们网站的其余部分没有设置此值，他们可能会发现很难使用你的组件库。</p>
+<p>这使得处理元素大小的工作变得容易得多，并且通常消除了在布局内容时可能遇到的许多陷阱。然而，在某些情况下，你应谨慎使用这个属性。例如：你正在编写一个将由其他人使用的共享组件库，如果他们网站的其余部分没有设置此值，他们可能会发现很难使用你的组件库。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -51,14 +51,14 @@ translation_of: Web/CSS/box-sizing
 
 <dl>
  <dt><code>content-box</code></dt>
- <dd>默认值，标准盒子模型。 {{Cssxref("width")}} 与 {{Cssxref("height")}} 只包括内容的宽和高， 不包括边框（border），内边距（padding），外边距（margin）。注意: 内边距、边框和外边距都在这个盒子的外部。 比如说，<code>.box {width: 350px; border: 10px solid black;}</code> 在浏览器中的渲染的实际宽度将是 370px。<br>
+ <dd>默认值，标准盒子模型。 {{Cssxref("width")}} 与 {{Cssxref("height")}} 只包括内容的宽和高，不包括边框（border），内边距（padding），外边距（margin）。注意：内边距、边框和外边距都在这个盒子的外部。 比如说，<code>.box {width: 350px; border: 10px solid black;}</code> 在浏览器中的渲染的实际宽度将是 370px。<br>
  <br>
  尺寸计算公式：</dd>
  <dd><code>width</code> = 内容的宽度</dd>
  <dd><code>height</code> = 内容的高度</dd>
  <dd>宽度和高度的计算值都不包含内容的边框（border）和内边距（padding）。</dd>
  <dt><code>border-box</code></dt>
- <dd> {{Cssxref("width")}} 和 {{Cssxref("height")}} 属性包括内容，内边距和边框，但不包括外边距。这是当文档处于 Quirks模式 时Internet Explorer使用的<a href="/en-US/docs/CSS/Box_model" title="CSS/Box_model">盒模型</a>。注意，填充和边框将在盒子内 , 例如, <code>.box {width: 350px; border: 10px solid black;}</code> 导致在浏览器中呈现的宽度为350px的盒子。内容框不能为负，并且被分配到0，使得不可能使用border-box使元素消失。<br>
+ <dd> {{Cssxref("width")}} 和 {{Cssxref("height")}} 属性包括内容，内边距和边框，但不包括外边距。这是当文档处于 Quirks 模式 时 Internet Explorer 使用的<a href="/en-US/docs/CSS/Box_model" title="CSS/Box_model">盒模型</a>。注意，填充和边框将在盒子内 , 例如， <code>.box {width: 350px; border: 10px solid black;}</code> 导致在浏览器中呈现的宽度为 350px 的盒子。内容框不能为负，并且被分配到 0，使得不可能使用 border-box 使元素消失。<br>
  <br>
  尺寸计算公式：</dd>
  <dd><em><code>width</code> = border + padding + 内容的宽度</em></dd>

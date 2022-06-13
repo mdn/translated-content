@@ -1,5 +1,5 @@
 ---
-title: Express 教程 4： 路由和控制器
+title: Express 教程 4：路由和控制器
 slug: learn/Server-side/Express_Nodejs/routes
 tags:
   - Express
@@ -14,13 +14,13 @@ translation_of: Learn/Server-side/Express_Nodejs/routes
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">本节将为 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。</p>
+<p>本节将为 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>回顾 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node 入门</a>。 完成本教程之前小节（<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express 教程 3：使用数据库 (Mongoose)</a> 等）。了解服务器端编程，了解正则表达式。</td>
+   <td>回顾 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node 入门</a>。完成本教程之前小节（<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express 教程 3：使用数据库 (Mongoose)</a> 等）。了解服务器端编程，了解正则表达式。</td>
   </tr>
   <tr>
    <th scope="row">学习目标：</th>
@@ -98,7 +98,7 @@ app.use('/wiki', wiki);</pre>
 
 <h3 id="路由函数">路由函数</h3>
 
-<p>上述模块定义了两个典型的路由函数。<code>Router.get()</code> 方法定义的 “about” 路由（下方重现的）仅响应 HTTP GET 请求。第一个参数是 URL 路径，第二个参数是一个回调，在收到带有路径的HTTP GET 请求将调用之。</p>
+<p>上述模块定义了两个典型的路由函数。<code>Router.get()</code> 方法定义的“about”路由（下方重现的）仅响应 HTTP GET 请求。第一个参数是 URL 路径，第二个参数是一个回调，在收到带有路径的 HTTP GET 请求将调用之。</p>
 
 <pre class="brush: js notranslate">router.get('/about', (req, res) =&gt; {
   res.send('关于此维基');
@@ -358,7 +358,7 @@ app.use('/users', usersRouter);
 <strong>app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链</strong></pre>
 
 <div class="note">
-<p><strong>注：</strong>我们将图书编目模块添加到了 <code>'/catalog'</code> 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问藏书列表 的URL 为：<code>/catalog/books/</code>。</p>
+<p><strong>注：</strong>我们将图书编目模块添加到了 <code>'/catalog'</code> 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问藏书列表 的 URL 为：<code>/catalog/books/</code>。</p>
 </div>
 
 <p>大功告成。LocalLibrary 网站所需的所有 URL 的路由和框架函数都已准备完毕。</p>

@@ -19,7 +19,9 @@ La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informat
 
 ## Syntaxe
 
-    locale.minimize()
+```js
+locale.minimize()
+```
 
 ### Valeur de retour
 

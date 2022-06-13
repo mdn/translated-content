@@ -10,11 +10,11 @@ original_slug: Web/Guide/CSS/Using_the_:target_selector
 ---
 <p>{{CSSRef}}</p>
 
-<p>为了辅助标识那些指向文档特定部分链接的目标, <a class="external" href="http://www.w3.org/TR/css3-selectors/#target-pseudo">CSS3 选择器</a> 引入了<code> {{ Cssxref(":target") }} </code><a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">伪类</a>. Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持, 这一新的举措让页面作者能够辅助用户在较大的页面中定位。 </p>
+<p>为了辅助标识那些指向文档特定部分链接的目标，<a class="external" href="http://www.w3.org/TR/css3-selectors/#target-pseudo">CSS3 选择器</a> 引入了<code> {{ Cssxref(":target") }} </code><a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">伪类</a>. Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。 </p>
 
 <h3 id="Picking_a_Target" name="Picking_a_Target">选择一个目标</h3>
 
-<p><code>{{ Cssxref(":target") }} 伪类用来指定那些包含片段标识符的 URI 的目标元素样式。</code> 例如, <code><span class="nowiki">http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example</span></code> 这个 URI 包含了 <code>#Example 片段标识符。</code> 在HTML中, 标识符是元素的id或者name属性,。由于这两者位于相同的命名空间， 因此， 这个示例 URI 指向的是文档顶层的 "Example" 。</p>
+<p><code>{{ Cssxref(":target") }} 伪类用来指定那些包含片段标识符的 URI 的目标元素样式。</code> 例如，<code>http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example</code> 这个 URI 包含了 <code>#Example 片段标识符。</code> 在 HTML 中，标识符是元素的 id 或者 name 属性，。由于这两者位于相同的命名空间，因此，这个示例 URI 指向的是文档顶层的 "Example" 。</p>
 
 <p>假设你想修改 URI 指向的任何 h2 元素，但是又不想把样式应用到任何其它同类型的元素，那么以下示例足够简单有用：</p>
 
@@ -33,7 +33,7 @@ original_slug: Web/Guide/CSS/Using_the_:target_selector
 
 <h3 id="Example" name="Example">示例</h3>
 
-<p>在以下示例中， 5个链接指向了同一文档中的元素。例如，选择 "First" 链接会导致<code> &lt;h1 id="one"&gt; </code>成为目标元素。 注意，由于目标元素有可能会被放置到浏览器窗口的顶层，因此文档可能会跳到新的滚动位置。</p>
+<p>在以下示例中，5 个链接指向了同一文档中的元素。例如，选择 "First" 链接会导致<code> &lt;h1 id="one"&gt; </code>成为目标元素。注意，由于目标元素有可能会被放置到浏览器窗口的顶层，因此文档可能会跳到新的滚动位置。</p>
 
 <div id="example">
 <pre>&lt;h4 id="one"&gt;...&lt;/h4&gt; &lt;p id="two"&gt;...&lt;/p&gt;
@@ -48,7 +48,7 @@ original_slug: Web/Guide/CSS/Using_the_:target_selector
 
 <h3 id="Conclusion" name="Conclusion">结论</h3>
 
-<p>在片段标识符指向部分文档的情况下，读者可能会对到底应该阅读文档的哪一部分感到疑惑。通过对不同的目标元素的样式进行修饰, 读者的相关疑惑会减少或者消除。</p>
+<p>在片段标识符指向部分文档的情况下，读者可能会对到底应该阅读文档的哪一部分感到疑惑。通过对不同的目标元素的样式进行修饰，读者的相关疑惑会减少或者消除。</p>
 
 <h3 id="Related_Links" name="Related_Links">相关链接</h3>
 

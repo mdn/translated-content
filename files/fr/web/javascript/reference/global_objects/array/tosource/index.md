@@ -17,7 +17,9 @@ La méthode **`toSource()`** renvoie une chaine de caractères représentant le 
 
 ## Syntaxe
 
-    arr.toSource()
+```js
+arr.toSource()
+```
 
 ### Valeur de retour
 

@@ -13,7 +13,7 @@ translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 
 <h2 id="How_much_room_does_it_use_up.3F" name="How_much_room_does_it_use_up.3F">元素占用了多少空间？</h2>
 
-<p>如果你需要知道元素总共占用了多少空间，包括可视内容、滚动条（如果有的话）、内边距和边框的宽度，你会使用  <code style="font-style: normal;"><a href="https://developer.mozilla.org/en/DOM/element.offsetWidth" title="en/DOM/element.offsetWidth">offsetWidth</a></code> 和 <a href="https://developer.mozilla.org/en/DOM/element.offsetHeight" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en/DOM/element.offsetHeight">offsetHeight</a> 属性， 大多数情况下，当元素没有什么形状上的变化时，他们与 <a href="https://developer.mozilla.org/en/DOM/element.getBoundingClientRect" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en/DOM/element.getBoundingClientRect">getBoundingClientRect()</a>的宽高一致。但是如果发生变化，offsetWidth和offsetHeight将返回元素的布局宽高，而getBoundingClientRect()将返回实际渲染的宽高。例如：如果元素的宽width:100px,变化transform:scale(0.5)，此时getBoundingClientRect()将返回宽50，而offsetWidth将返回宽100.</p>
+<p>如果你需要知道元素总共占用了多少空间，包括可视内容、滚动条（如果有的话）、内边距和边框的宽度，你会使用  <code style="font-style: normal;"><a href="https://developer.mozilla.org/en/DOM/element.offsetWidth" title="en/DOM/element.offsetWidth">offsetWidth</a></code> 和 <a href="https://developer.mozilla.org/en/DOM/element.offsetHeight" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en/DOM/element.offsetHeight">offsetHeight</a> 属性， 大多数情况下，当元素没有什么形状上的变化时，他们与 <a href="https://developer.mozilla.org/en/DOM/element.getBoundingClientRect" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en/DOM/element.getBoundingClientRect">getBoundingClientRect()</a>的宽高一致。但是如果发生变化，offsetWidth 和 offsetHeight 将返回元素的布局宽高，而 getBoundingClientRect() 将返回实际渲染的宽高。例如：如果元素的宽 width:100px，变化 transform:scale(0.5)，此时 getBoundingClientRect() 将返回宽 50，而 offsetWidth 将返回宽 100.</p>
 
 <p><img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 
 <p>如果你想要知道内容区域的实际大小，而不局限于可见区域的话，你会使用 <code style="font-style: normal;"><a href="/en/DOM/element.scrollWidth" title="en/DOM/element.scrollWidth">scrollWidth</a></code>和<a href="/en-US/docs/Web/API/Element.scrollHeight" style="font-family: Consolas, Monaco, 'Andale Mono', monospace;" title="en/DOM/element.scrollHeight">scrollHeight</a>属性。即使使用了滚动条仅有部分内容可见，这两个属性仍会返回元素的完整内容宽高</p>
 
-<p>例如，一个300x300像素 的滚动盒子里放置了一个600x400像素的元素，scrollWidth将会返回600，scrooHeight返回400.</p>
+<p>例如，一个 300x300 像素 的滚动盒子里放置了一个 600x400 像素的元素，scrollWidth 将会返回 600，scrooHeight 返回 400.</p>
 
 <h2 id="References" name="References">规范</h2>
 

@@ -12,7 +12,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>insertAdjacentHTML()</code></strong> 方法将指定的文本解析为 {{domxref("Element")}} 元素，并将结果节点插入到DOM树中的指定位置。它不会重新解析它正在使用的元素，因此它不会破坏元素内的现有元素。这避免了额外的序列化步骤，使其比直接使用innerHTML操作更快。</p>
+<p><strong><code>insertAdjacentHTML()</code></strong> 方法将指定的文本解析为 {{domxref("Element")}} 元素，并将结果节点插入到 DOM 树中的指定位置。它不会重新解析它正在使用的元素，因此它不会破坏元素内的现有元素。这避免了额外的序列化步骤，使其比直接使用 innerHTML 操作更快。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -23,14 +23,14 @@ translation_of: Web/API/Element/insertAdjacentHTML
  <dt><code>position</code></dt>
  <dd>一个 {{domxref("DOMString")}}，表示插入内容相对于元素的位置，并且必须是以下字符串之一：
  <ul>
-  <li><code><span class="hidden"> </span><span class="hidden"> </span>'beforebegin'</code>：元素自身的前面。</li>
-  <li><code>'afterbegin'</code>：<font face="Open Sans, Arial, sans-serif">插入元素内部的第一个子节点之前</font>。</li>
+  <li><code>'beforebegin'</code>：元素自身的前面。</li>
+  <li><code>'afterbegin'</code>：插入元素内部的第一个子节点之前。</li>
   <li><code>'beforeend'</code>：插入元素内部的最后一个子节点之后。</li>
-  <li><code>'afterend'</code>：元素自身的后面。<span class="hidden"> </span><span class="hidden"> </span></li>
+  <li><code>'afterend'</code>：元素自身的后面。</li>
  </ul>
  </dd>
  <dt><code>text</code></dt>
- <dd>是要被解析为HTML或XML元素，并插入到DOM树中的 {{domxref("DOMString")}}。</dd>
+ <dd>是要被解析为 HTML 或 XML 元素，并插入到 DOM 树中的 {{domxref("DOMString")}}。</dd>
 </dl>
 
 <h3 id="位置名称的可视化">位置名称的可视化</h3>
@@ -44,11 +44,11 @@ translation_of: Web/API/Element/insertAdjacentHTML
 </code>&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;
 </pre>
 
-<div class="note"><strong>注意：</strong> beforebegin和afterend位置，仅在节点在树中且节点具有一个parent元素时工作。</div>
+<div class="note"><strong>注意：</strong> beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。</div>
 
 <h2 id="Example" name="Example">示例</h2>
 
-<pre class="brush: js notranslate" dir="rtl">// 原为 &lt;div id="one"&gt;one&lt;/div&gt;
+<pre class="brush: js">// 原为 &lt;div id="one"&gt;one&lt;/div&gt;
 var d1 = document.getElementById('one');
 d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
@@ -60,9 +60,9 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <h3 id="安全问题">安全问题</h3>
 
-<p>使用 <code>insertAdjacentHTML</code> 插入用户输入的HTML内容的时候，需要转义之后才能使用。</p>
+<p>使用 <code>insertAdjacentHTML</code> 插入用户输入的 HTML 内容的时候，需要转义之后才能使用。</p>
 
-<p>如果只是为了插入文本内容（而不是HTML节点），不建议使用这个方法，建议使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent" title="The Node.textContent property represents the text content of a node and its descendants."><code>node.textContent</code></a> 或者 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/insertAdjacentText" title="The insertAdjacentText() method inserts a given text node at a given position relative to the element it is invoked upon."><code>node.insertAdjacentText()</code></a>。因为这样不需要经过HTML解释器的转换，性能会好一点。</p>
+<p>如果只是为了插入文本内容（而不是 HTML 节点），不建议使用这个方法，建议使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent" title="The Node.textContent property represents the text content of a node and its descendants."><code>node.textContent</code></a> 或者 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/insertAdjacentText" title="The insertAdjacentText() method inserts a given text node at a given position relative to the element it is invoked upon."><code>node.insertAdjacentText()</code></a>。因为这样不需要经过 HTML 解释器的转换，性能会好一点。</p>
 
 <h2 id="Specification" name="Specification" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
 
@@ -92,7 +92,7 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>包括Henri Sivonen 在内的某些 <a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org 客座文章</a> 显示，<code>insertAdjacentHTML</code> 在某些情况下可以更快。</li>
+ <li>包括 Henri Sivonen 在内的某些 <a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org 客座文章</a> 显示，<code>insertAdjacentHTML</code> 在某些情况下可以更快。</li>
  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
  <li>{{domxref("Element.insertAdjacentText()")}}</li>
 </ul>

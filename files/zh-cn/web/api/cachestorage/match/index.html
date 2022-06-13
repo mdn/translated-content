@@ -5,11 +5,11 @@ translation_of: Web/API/CacheStorage/match
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">{{domxref("CacheStorage")}} 接口(可适用于全局性<code>caches</code>) 的 <strong><code>match()</code></strong> 方法检查给定的{{domxref("Request")}} 对象或url字符串是否是一个已存储的 {{domxref("Response")}} 对象的key. </span><span class="seoSummary">这个方法针对 {{domxref("Response")}} 返回一个 {{jsxref("Promise")}} ，如果没有匹配则返回 <code>undefined</code> 。</span></p>
+<p>{{domxref("CacheStorage")}} 接口 (可适用于全局性<code>caches</code>) 的 <strong><code>match()</code></strong> 方法检查给定的{{domxref("Request")}} 对象或 url 字符串是否是一个已存储的 {{domxref("Response")}} 对象的 key. 这个方法针对 {{domxref("Response")}} 返回一个 {{jsxref("Promise")}} ，如果没有匹配则返回 <code>undefined</code> 。</p>
 
-<p>cache对象按创建顺序查询。</p>
+<p>cache 对象按创建顺序查询。</p>
 
-<div class="note"><strong>提示</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} 是一个便捷方法。其作用等同于在每个缓存上调用 {{domxref("cache.match()")}} 方法 （按照{{domxref("CacheStorage.keys()", "caches.keys()")}}返回的顺序) 直到返回{{domxref("Response")}} 对象。</div>
+<div class="note"><strong>提示</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} 是一个便捷方法。其作用等同于在每个缓存上调用 {{domxref("cache.match()")}} 方法（按照{{domxref("CacheStorage.keys()", "caches.keys()")}}返回的顺序) 直到返回{{domxref("Response")}} 对象。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -24,9 +24,9 @@ translation_of: Web/API/CacheStorage/match
  <dt>request</dt>
  <dd>想要匹配的 {{domxref("Request")}}。这个参数可以是 {{domxref("Request")}} 对象或 URL 字符串。</dd>
  <dt>options {{optional_inline}}</dt>
- <dd>这个对象中的属性控制在匹配操作中如何进行匹配选择。可选择参数如下:
+ <dd>这个对象中的属性控制在匹配操作中如何进行匹配选择。可选择参数如下：
  <ul>
-  <li><code>ignoreSearch</code>: {{domxref("Boolean")}}值， 指定匹配过程是否应该忽略url中查询参数。举个例子，如果该参数设置为<code>true</code>, 那么 <code>?value=bar</code> 作为 <code>http://foo.com/?value=bar</code> 中的查询参数将会在匹配过程中被忽略。该参数默认 <code>false</code>。</li>
+  <li><code>ignoreSearch</code>: {{domxref("Boolean")}}值， 指定匹配过程是否应该忽略 url 中查询参数。举个例子，如果该参数设置为<code>true</code>, 那么 <code>?value=bar</code> 作为 <code>http://foo.com/?value=bar</code> 中的查询参数将会在匹配过程中被忽略。该参数默认 <code>false</code>。</li>
   <li><code>ignoreMethod</code>:  {{domxref("Boolean")}} 值，当被设置为 <code>true</code> 时，将会阻止在匹配操作中对 {{domxref("Request")}}请求的 <code>http</code> 方式的验证 (通常只允许 <code>GET</code> 和 <code>HEAD</code> 两种请求方式)。该参数默认为 <code>false</code>.</li>
   <li><code>ignoreVary</code>:  {{domxref("Boolean")}} 值，当该字段被设置为 <code>true,</code> 告知在匹配操作中忽略对<code>VARY</code>头信息的匹配。换句话说，当请求 URL 匹配上，你将获取匹配的 {{domxref("Response")}} 对象，无论请求的 <code>VARY</code>  头存在或者没有。该参数默认为 <code>false</code>.</li>
   <li><code>cacheName</code>:  {{domxref("DOMString")}} 值， 表示所要搜索的缓存名称。</li>
@@ -36,11 +36,11 @@ translation_of: Web/API/CacheStorage/match
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回resolve为匹配 {{domxref("Response")}} 的 {{jsxref("Promise")}} 对象。如果没有与指定request相匹配response，promise将使用 <code>undefined</code> resolve.</p>
+<p>返回 resolve 为匹配 {{domxref("Response")}} 的 {{jsxref("Promise")}} 对象。如果没有与指定 request 相匹配 response，promise 将使用 <code>undefined</code> resolve.</p>
 
 <h2 id="例子" style="line-height: 30px; font-size: 2.14285714285714rem;">例子</h2>
 
-<p>此示例来自于MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> （请参阅 <a href="https://mdn.github.io/sw-test/">sw-test running live</a>）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：</p>
+<p>此示例来自于 MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> （请参阅 <a href="https://mdn.github.io/sw-test/">sw-test running live</a>）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：</p>
 
 <ol>
  <li>使用 {{domxref("CacheStorage.match","CacheStorage.match()")}} 检查 {{domxref("CacheStorage")}} 中是否存在匹配请求，如果存在，则使用它。</li>
@@ -61,20 +61,7 @@ translation_of: Web/API/CacheStorage/match
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

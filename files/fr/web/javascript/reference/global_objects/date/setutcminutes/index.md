@@ -18,7 +18,9 @@ La méthode **`setUTCMinutes()`** définit les minutes pour la date, selon UTC.
 
 ## Syntaxe
 
-    dateObj.setUTCMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
+```js
+dateObj.setUTCMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
+```
 
 ### Paramètres
 

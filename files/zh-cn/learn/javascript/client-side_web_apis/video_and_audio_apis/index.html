@@ -1,5 +1,5 @@
 ---
-title: 视频和音频API
+title: 视频和音频 API
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
@@ -7,22 +7,22 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">HTML5提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("video")}}和{{htmlelement("audio")}} — 这些元素通过自带的API来控制视频或音频的播放，定位进度等。本文将向你展示如何执行一些常见的任务，如创建自定义播放控件。</p>
+<p>HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("video")}}和{{htmlelement("audio")}} — 这些元素通过自带的 API 来控制视频或音频的播放，定位进度等。本文将向你展示如何执行一些常见的任务，如创建自定义播放控件。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>JavaScript基础（见<a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript第一步</a>，<a href="/zh-CN/docs/learn/JavaScript/Building_blocks">创建JavaScript代码块</a>，<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript对象入门</a>），<a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Web API简介</a></td>
+   <td>JavaScript 基础（见<a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>，<a href="/zh-CN/docs/learn/JavaScript/Building_blocks">创建 JavaScript 代码块</a>，<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象入门</a>），<a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Web API 简介</a></td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
-   <td>学习如何通过浏览器API来控制视频和音频的播放。</td>
+   <td>学习如何通过浏览器 API 来控制视频和音频的播放。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="HTML5视频和音频">HTML5视频和音频</h2>
+<h2 id="HTML5视频和音频">HTML5 视频和音频</h2>
 
 <p>{{htmlelement("video")}}和{{htmlelement("audio")}}元素允许我们把视频和音频嵌入到网页当中。就像我们在<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">音频和视频内容</a>文中展示的一样，一个典型的实现如下所示：</p>
 
@@ -36,17 +36,17 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 
 <p>{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}</p>
 
-<p>你可以点击上面的文章链接来查看相关HTML元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的{{htmlattrxref("controls", "video")}}属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：</p>
+<p>你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的{{htmlattrxref("controls", "video")}}属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：</p>
 
 <p>{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}</p>
 
 <p>至此，你可能会觉得这个属性作用不大，但是它确实很有优势。使用原生浏览器控件的一个很大的问题在于，它们在各个浏览器中都不相同 — 对于跨浏览器的支持并不是很好！另一个问题是，在大多数浏览器中原生控件难以通过键盘来操作。</p>
 
-<p>你可以通过隐藏本地控件（通过删除controls属性），然后使用HTML，CSS和JavaScript编写自己的代码来解决这两个问题。 在下一节中，我们将看到如何通过一些可用的工具来实现。</p>
+<p>你可以通过隐藏本地控件（通过删除 controls 属性），然后使用 HTML，CSS 和 JavaScript 编写自己的代码来解决这两个问题。在下一节中，我们将看到如何通过一些可用的工具来实现。</p>
 
 <h2 id="HTMLMediaElement_API">HTMLMediaElement API</h2>
 
-<p>作为HTML5规范的一部分，{{domxref("HTMLMediaElement")}} API提供允许你以编程方式来控制视频和音频播放的功能—例如 {{domxref("HTMLMediaElement.play()")}}, {{domxref("HTMLMediaElement.pause()")}},等。该接口对{{htmlelement("audio")}}和{{htmlelement("video")}}两个元素都是可用的，因为在这两个元素中要实现的功能几乎是相同的。让我们通过一个例子来一步步演示一些功能。</p>
+<p>作为 HTML5 规范的一部分，{{domxref("HTMLMediaElement")}} API 提供允许你以编程方式来控制视频和音频播放的功能—例如 {{domxref("HTMLMediaElement.play()")}}, {{domxref("HTMLMediaElement.pause()")}},等。该接口对{{htmlelement("audio")}}和{{htmlelement("video")}}两个元素都是可用的，因为在这两个元素中要实现的功能几乎是相同的。让我们通过一个例子来一步步演示一些功能。</p>
 
 <p>我们最终的示例（和功能）将会如下所示：</p>
 
@@ -56,11 +56,11 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 
 <p>想要使用这个示例的代码来入门，请下载<a href="https://github.com/mdn/learning-area/raw/master/javascript/apis/video-audio/start/media-player-start.zip">media-player-start.zip</a> 并解压到您的硬盘上的一个新建目录里。如果想要下载<a href="">examples repo</a>，它位于<code>javascript/apis/video-audio/start/ </code>路径下。</p>
 
-<p>下载并解压之后，如果您加载这个HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的HTML5视频播放器。</p>
+<p>下载并解压之后，如果您加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。</p>
 
 <h4 id="探索_HTML">探索 HTML</h4>
 
-<p>打开HTML index文件。你将看到一些功能；HTML由视频播放器和它的控件所控制：</p>
+<p>打开 HTML index 文件。你将看到一些功能；HTML 由视频播放器和它的控件所控制：</p>
 
 <pre>&lt;div class="player"&gt;
   &lt;video controls&gt;
@@ -84,18 +84,18 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 <ul>
  <li>整个播放器被包装在一个{{htmlelement("div")}}元素之中，所以如果有必要的话，可以把它作为一个单元整体来设置其样式。</li>
  <li>{{htmlelement("video")}}元素层包含两个{{htmlelement("source")}}元素，这样可以根据浏览器来加载其所支持的不同视频格式。</li>
- <li>控件 HTML 大概是最有趣的:
+ <li>控件 HTML 大概是最有趣的：
   <ul>
    <li>我们有四个 {{htmlelement("button")}} — play/pause, stop, rewind, and fast forward.</li>
-   <li>每个<code>&lt;button&gt;</code> 都有一个<code>class名</code> , 一个<code>data-icon</code> 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个<code>aria-label</code> 属性为每一个按钮提供容易理解的描述, 即使我们没有在tags内提供可读的标签。当用户关注这些元素时含有<code>aria-label</code> 属性的内容也会被讲述人读出来。</li>
-   <li>有一个设定的计时器 {{htmlelement("div")}}用来报告已经播放的时长。为了好玩,我们提供了两种报告机制 — 一个 {{htmlelement("span")}} 包含了流逝时间的分钟和秒，和一个额外的<code>&lt;div&gt;</code> 用来创建一个水平的随着时间增加而增长的进度条。要想了解完成版本看上去是咋样的, <a href="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/">点击查看完成版本</a>.</li>
+   <li>每个<code>&lt;button&gt;</code> 都有一个<code>class名</code> , 一个<code>data-icon</code> 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个<code>aria-label</code> 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有<code>aria-label</code> 属性的内容也会被讲述人读出来。</li>
+   <li>有一个设定的计时器 {{htmlelement("div")}}用来报告已经播放的时长。为了好玩，我们提供了两种报告机制 — 一个 {{htmlelement("span")}} 包含了流逝时间的分钟和秒，和一个额外的<code>&lt;div&gt;</code> 用来创建一个水平的随着时间增加而增长的进度条。要想了解完成版本看上去是咋样的，<a href="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/">点击查看完成版本</a>.</li>
   </ul>
  </li>
 </ul>
 
 <h4 id="探索_CSS">探索 CSS</h4>
 
-<p>现在打开CSS文件来查看里面的内容。例子中的CSS样式并不是很复杂, 我们突出了最主要的一部分。首先注意<code>.controls</code> 的样式:</p>
+<p>现在打开 CSS 文件来查看里面的内容。例子中的 CSS 样式并不是很复杂，我们突出了最主要的一部分。首先注意<code>.controls</code> 的样式：</p>
 
 <pre class="brush: css">.controls {
   visibility: hidden;
@@ -118,12 +118,12 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 </pre>
 
 <ul>
- <li>我们从设置为<code>hidden</code>的自定义控件{{cssxref("visibility")}}开始。稍后在我们的JavaScript中， 我们将控件设置为 <code>visible</code>, 并且从<code>&lt;video&gt;</code> 元素中移除<code>controls</code> 属性。这是因为, 如果JavaScript由于某种原因没有加载, 用户依然可以使用原生的控件播放视频。</li>
- <li>默认情况下，我们将控件的<code>opacity</code>设置为0.5 {{cssxref("opacity")}}，这样当您尝试观看视频时，它们就不会分散注意力。 只有当您将鼠标悬停/聚焦在播放器上时，控件才会完全不透明。</li>
- <li>我们使用Flexbox({{cssxref("display")}}: flex)布置控制栏内的按钮，以简化操作。</li>
+ <li>我们从设置为<code>hidden</code>的自定义控件{{cssxref("visibility")}}开始。稍后在我们的 JavaScript 中，我们将控件设置为 <code>visible</code>, 并且从<code>&lt;video&gt;</code> 元素中移除<code>controls</code> 属性。这是因为，如果 JavaScript 由于某种原因没有加载，用户依然可以使用原生的控件播放视频。</li>
+ <li>默认情况下，我们将控件的<code>opacity</code>设置为 0.5 {{cssxref("opacity")}}，这样当您尝试观看视频时，它们就不会分散注意力。只有当您将鼠标悬停/聚焦在播放器上时，控件才会完全不透明。</li>
+ <li>我们使用 Flexbox({{cssxref("display")}}: flex) 布置控制栏内的按钮，以简化操作。</li>
 </ul>
 
-<p>接下来，让我们看看我们的按钮图标:</p>
+<p>接下来，让我们看看我们的按钮图标：</p>
 
 <pre class="brush: css">@font-face {
    font-family: 'HeydingsControlsRegular';
@@ -144,17 +144,17 @@ button:before {
   text-shadow: 1px 1px 0px black;
 }</pre>
 
-<p>首先在CSS的最上方我们使用 {{cssxref("@font-face")}} 块来导入自定义Web字体。这是一种图标字体 —— 字母表中的所有字符都是各种常用图标，你可以尝试在程序中调用。</p>
+<p>首先在 CSS 的最上方我们使用 {{cssxref("@font-face")}} 块来导入自定义 Web 字体。这是一种图标字体 —— 字母表中的所有字符都是各种常用图标，你可以尝试在程序中调用。</p>
 
 <p>接下来，我们使用这些内容来显示每个按钮上的图标：</p>
 
 <ul>
  <li>我们使用 {{cssxref("::before")}} 选择器在每个 {{htmlelement("button")}} 元素之前显示内容。</li>
  <li>我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 <code><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data-icon</a></code> 属性的内容。例如在播放按钮的情况下，<code><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data-icon </a></code>包含大写的“P”。</li>
- <li>我们使用 {{cssxref("font-family")}} 将自定义Web字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。</li>
+ <li>我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。</li>
 </ul>
 
-<p>图标字体非常酷有很多原因 —— 减少HTTP请求，因为您不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及您可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。</p>
+<p>图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为您不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及您可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。</p>
 
 <p>最后让我们来看看进度条的 CSS:</p>
 
@@ -185,22 +185,22 @@ button:before {
 }</pre>
 
 <ul>
- <li>我们将外部 <code>.timer</code>  <code>&lt;div&gt;</code> 设为flex：5，这样它占据了控件栏的大部分宽度。 我们还设置 {{cssxref("position")}}<code>: relative</code>，这样我们就可以根据它的边界方便地定位元素，而不是{{htmlelement("body")}} 元素的边界。</li>
- <li>内部<code> &lt;div&gt; </code> <code>position：absolute</code> 绝对定位于外部 <code>&lt;div&gt;</code> 的顶部。 它的初始宽度为0，因此根本无法看到它。随着视频的播放，JavaScript将动态的增加其宽度。</li>
+ <li>我们将外部 <code>.timer</code>  <code>&lt;div&gt;</code> 设为 flex：5，这样它占据了控件栏的大部分宽度。我们还设置 {{cssxref("position")}}<code>: relative</code>，这样我们就可以根据它的边界方便地定位元素，而不是{{htmlelement("body")}} 元素的边界。</li>
+ <li>内部<code> &lt;div&gt; </code> <code>position：absolute</code> 绝对定位于外部 <code>&lt;div&gt;</code> 的顶部。它的初始宽度为 0，因此根本无法看到它。随着视频的播放，JavaScript 将动态的增加其宽度。</li>
  <li><code>&lt;span&gt;</code> 也绝对位于计时器/进度条 <code>timer</code> 栏的左侧附近。</li>
- <li>我们还对内部 <code>&lt;div&gt;</code> 和 <code>&lt;span&gt;</code> 定义适当数值的 {{cssxref("z-index")}} ，以便进度条显示在最上层，内部<code> &lt;div&gt;</code> 显示在下层。 这样，我们确保我们可以看到所有信息 —— 一个box不会遮挡另一个。</li>
+ <li>我们还对内部 <code>&lt;div&gt;</code> 和 <code>&lt;span&gt;</code> 定义适当数值的 {{cssxref("z-index")}} ，以便进度条显示在最上层，内部<code> &lt;div&gt;</code> 显示在下层。这样，我们确保我们可以看到所有信息 —— 一个 box 不会遮挡另一个。</li>
 </ul>
 
 <h3 id="实现_JavaScript">实现 JavaScript</h3>
 
-<p>我们已经有了一个相当完整的 HTML 和CSS 接口；现在我们只需要调通所有按钮以使控件正常工作。</p>
+<p>我们已经有了一个相当完整的 HTML 和 CSS 接口；现在我们只需要调通所有按钮以使控件正常工作。</p>
 
 <ol>
  <li>
-  <p>在与 index.html 文件相同的目录下创建新的JavaScript文件。命名为 <code>custom-player.js</code>。</p>
+  <p>在与 index.html 文件相同的目录下创建新的 JavaScript 文件。命名为 <code>custom-player.js</code>。</p>
  </li>
  <li>
-  <p>在此文件的顶部，插入以下代码:</p>
+  <p>在此文件的顶部，插入以下代码：</p>
 
   <pre class="brush: js">var media = document.querySelector('video');
 var controls = document.querySelector('.controls');
@@ -257,7 +257,7 @@ controls.style.visibility = 'visible';</pre>
   }
 }</pre>
 
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">我们使用if语句来检查</span></span>视频<span class="tlid-translation translation" lang="zh-CN"><span title="">是否暂停。如果</span></span>视频<span class="tlid-translation translation" lang="zh-CN"><span title="">已暂停，</span></span>{{domxref("HTMLMediaElement.paused")}} 属性将返回 true，任何视频没有播放的时间，包括第一次加载时处于0的时间段都是视频暂停状态。如果已暂停，我们把play按钮的 <code>data-icon</code> 属性值设置成"u", 用以表示 "暂停" 按钮图标，并且调用{{domxref("HTMLMediaElement.play()")}} 函数播放视频。</p>
+  <p>我们使用 if 语句来检查视频是否暂停。如果视频已暂停，{{domxref("HTMLMediaElement.paused")}} 属性将返回 true，任何视频没有播放的时间，包括第一次加载时处于 0 的时间段都是视频暂停状态。如果已暂停，我们把 play 按钮的 <code>data-icon</code> 属性值设置成"u", 用以表示 "暂停" 按钮图标，并且调用{{domxref("HTMLMediaElement.play()")}} 函数播放视频。</p>
 
   <p>点击第二次，按钮将会切换回去——"播放"按钮图标将会再次显示，并且视频将会被{{domxref("HTMLMediaElement.paused()")}} 函数暂停。</p>
  </li>
@@ -285,7 +285,7 @@ media.addEventListener('ended', stopMedia);
 }
 </pre>
 
-  <p>在 HTMLMediaElement API 中没有 <code>stop()</code> 方法——等效的办法是先用 <code>pause()</code> 暂停视频，然后设置{{domxref("HTMLMediaElement.currentTime","currentTime")}} 属性为0。设置 <code>currentTime</code> 的值（单位：秒）将会立刻使视频跳到该位置。</p>
+  <p>在 HTMLMediaElement API 中没有 <code>stop()</code> 方法——等效的办法是先用 <code>pause()</code> 暂停视频，然后设置{{domxref("HTMLMediaElement.currentTime","currentTime")}} 属性为 0。设置 <code>currentTime</code> 的值（单位：秒）将会立刻使视频跳到该位置。</p>
 
   <p>之后要做的事是把显示的图标设置成“播放”图标。无论视频使暂停还是正在播放，您都希望它随后可以播放。</p>
  </li>
@@ -340,19 +340,19 @@ function mediaForward() {
 }
 </pre>
 
-  <p>您会注意到，首先我们初始化两个变量 -  intervalFwd和intervalRwd  - 您将在后面发现它们的用途。</p>
+  <p>您会注意到，首先我们初始化两个变量 -  intervalFwd 和 intervalRwd  - 您将在后面发现它们的用途。</p>
 
   <p>让我们逐步浏览<code>mediaBackward()</code>（<code>mediaForward()</code>的功能性完全相同，但效果相反）：</p>
 
   <ol>
-   <li>我们清除在快进功能上设置的所有classes和intervals ––这样做是因为如果我们在按下<code>fwd</code>（快进）按钮后再按下<code>rwd</code>（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。</li>
+   <li>我们清除在快进功能上设置的所有 classes 和 intervals ––这样做是因为如果我们在按下<code>fwd</code>（快进）按钮后再按下<code>rwd</code>（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。</li>
    <li>使用<code>if</code>语句检查是否已在<code>rwd</code>按钮上设置了用来指示它已被按下的<code>active</code>类。{{domxref("classList")}}是一个非常方便的属性，存在于每个元素上 ––它包含元素上设置的所有类的列表，以及添加/删除类的方法等。使用<code>classList.contains（）</code>方法检查列表是否包含<code>active</code>类。这将返回布尔值<code>true/false</code>结果。</li>
    <li>如果在<code>rwd</code>按钮上设置了<code>active</code>，我们使用<code>classList.remove（）</code>删除它，清除第一次按下按钮时设置的间隔（参见下面的更多解释），并使用{{domxref("HTMLMediaElement.play()")}}取消快退并开始正常播放视频。</li>
-   <li>如果尚未设置，使用<code>classList.add（）</code>将<code>active</code>类添加到<code>rwd</code>按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置<code>intervalRwd</code>变量为{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}的调用。调用时，<code>setInterval（）</code>会创建一个活动间隔，这意味着它每隔x毫秒运行一个作为第一个参数给出的函数，其中x是第二个参数的值。 所以这里我们每200毫秒运行一次<code>windBackward（）</code>函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}运行，你必须调用{{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称intervalRwd（请参阅函数中较早的clearInterval（）调用）。</li>
+   <li>如果尚未设置，使用<code>classList.add（）</code>将<code>active</code>类添加到<code>rwd</code>按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置<code>intervalRwd</code>变量为{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}的调用。调用时，<code>setInterval（）</code>会创建一个活动间隔，这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次<code>windBackward（）</code>函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止{{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}运行，你必须调用{{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称 intervalRwd（请参阅函数中较早的 clearInterval（）调用）。</li>
   </ol>
  </li>
  <li>
-  <p>最后，对于本节，定义在setInterval（）调用中需要调用的windBackward（）和windForward（）函数。在以上两个函数下面添加以下内容：</p>
+  <p>最后，对于本节，定义在 setInterval（）调用中需要调用的 windBackward（）和 windForward（）函数。在以上两个函数下面添加以下内容：</p>
 
   <pre class="brush: js">function windBackward() {
   if(media.currentTime &lt;= 3) {
@@ -374,18 +374,18 @@ function windForward() {
   }
 }</pre>
 
-  <p>同样，我们将完成这些功能中的第一个，因为它们几乎完全相同，但彼此相反。在<code>windBackward（）</code>中，我们执行以下操作 ––请记住，当间隔处于活动状态时，此函数每200毫秒运行一次。</p>
+  <p>同样，我们将完成这些功能中的第一个，因为它们几乎完全相同，但彼此相反。在<code>windBackward（）</code>中，我们执行以下操作 ––请记住，当间隔处于活动状态时，此函数每 200 毫秒运行一次。</p>
 
   <ol>
-   <li>我们从一个<code>if</code>语句开始，该语句检查当前时间是否小于3秒，即，如果再倒退三秒将使其超过视频的开始。这会导致奇怪的行为，所以如果是这种情况，我们通过调用<code>stopMedia（）</code>来停止视频播放，从倒带按钮中删除<code>active</code>类，并清除<code>intervalRwd</code>间隔以停止快退功能。如果我们没有做到最后一步，视频将永远保持快退。</li>
-   <li>如果当前时间不在视频开始的3秒内，我们只需通过执行<code>media.currentTime-=3</code>从当前时间中删除三秒。因此，实际上，我们将视频快退3秒，每200毫秒一次。</li>
+   <li>我们从一个<code>if</code>语句开始，该语句检查当前时间是否小于 3 秒，即，如果再倒退三秒将使其超过视频的开始。这会导致奇怪的行为，所以如果是这种情况，我们通过调用<code>stopMedia（）</code>来停止视频播放，从倒带按钮中删除<code>active</code>类，并清除<code>intervalRwd</code>间隔以停止快退功能。如果我们没有做到最后一步，视频将永远保持快退。</li>
+   <li>如果当前时间不在视频开始的 3 秒内，我们只需通过执行<code>media.currentTime-=3</code>从当前时间中删除三秒。因此，实际上，我们将视频快退 3 秒，每 200 毫秒一次。</li>
   </ol>
  </li>
 </ol>
 
 <h4 id="更新已用时间">更新已用时间</h4>
 
-<p>我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在&lt;video&gt;元素上触发 {{event("timeupdate")}}事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU电源等（<a href="http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video">see this stackoverflow post</a>）。</p>
+<p>我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在&lt;video&gt;元素上触发 {{event("timeupdate")}}事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（<a href="http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video">see this stackoverflow post</a>）。</p>
 
 <p>在代码下方添加<code>addEventListener（）</code>行：</p>
 
@@ -424,9 +424,9 @@ function windForward() {
 <ol>
  <li>首先，我们计算{{domxref("HTMLMediaElement.currentTime")}} 值中的分钟数和秒数。</li>
  <li>然后我们初始化另外两个变量 ––<code>minuteValue</code>和<code>secondValue</code>。</li>
- <li>两个<code>if</code>语句计算出分钟数和秒数是否小于10.如果是这样，它们会在类似数值时钟显示工作的方式上为值添加前置的零。</li>
+ <li>两个<code>if</code>语句计算出分钟数和秒数是否小于 10.如果是这样，它们会在类似数值时钟显示工作的方式上为值添加前置的零。</li>
  <li>要显示的实际时间值设置为<code>minuteValue</code>加上冒号字符加<code>secondValue</code>。</li>
- <li>计时器的{{domxref("Node.textContent")}}值设置为时间值，因此它显示在UI中。</li>
+ <li>计时器的{{domxref("Node.textContent")}}值设置为时间值，因此它显示在 UI 中。</li>
  <li>我们应该设置内部<code>&lt;div&gt;</code>的长度是通过首先计算外部<code>&lt;div&gt;</code>的宽度来计算出来的（任何元素的{{domxref("HTMLElement.clientWidth", "clientWidth")}} 属性将包含它的长度），然后乘以{{domxref("HTMLMediaElement.currentTime")}}除以媒体的总{{domxref("HTMLMediaElement.duration")}}。</li>
  <li>我们将内部<code>&lt;div&gt;</code>的宽度设置为等于计算的条形长度加上“px”，因此它将设置为该像素数</li>
 </ol>
@@ -453,17 +453,17 @@ clearInterval(intervalFwd);
 
 <h2 id="小结">小结</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">我想我们已经在这篇文章中教过你足够多了。使用</span></span>{{domxref("HTMLMediaElement")}} <span class="tlid-translation translation" lang="zh-CN"><span title="">API可以为创建简单的视频和音频播放器提供丰富的可用功能，然而这只是冰山一角。</span> <span title="">有关更复杂和有趣功能的链接，请参阅下面的“另请参阅”部分。</span></span></p>
+<p>我想我们已经在这篇文章中教过你足够多了。使用{{domxref("HTMLMediaElement")}} API 可以为创建简单的视频和音频播放器提供丰富的可用功能，然而这只是冰山一角。有关更复杂和有趣功能的链接，请参阅下面的“另请参阅”部分。</p>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">以下是一些有关如何增强我们构建的现有示例的建议：</span></span></p>
+<p>以下是一些有关如何增强我们构建的现有示例的建议：</p>
 
 <ol>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。</span> <span title="">你能弄清楚如何更改示例以使其显示小时数吗？</span></span></li>
+ <li>如果视频是一小时或更长时间（嗯，它不会显示小时;只有几分钟和几秒），当前显示时间会中断。你能弄清楚如何更改示例以使其显示小时数吗？</li>
  <li>
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">由于 <code>&lt;audio&gt; </code>元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于<code> &lt;audio&gt; </code>元素。</span> <span title="">试着这样做。</span></span></p>
+  <p>由于 <code>&lt;audio&gt; </code>元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于<code> &lt;audio&gt; </code>元素。试着这样做。</p>
  </li>
  <li>
-  <p><span class="tlid-translation translation" lang="zh-CN"><span title="">你能找到一种方法将计时器内部的<code> &lt;div&gt; </code>元素转换为真正的搜索条/ 滑动条- 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？</span></span> <span class="tlid-translation translation" lang="zh-CN"><span title="">作为提示，您可以通过</span></span><code><a href="/ch-ZN/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> <span class="tlid-translation translation" lang="zh-CN"><span title="">方法找出元素左/右和上/下侧的X和Y值</span></span> ， 而且你可以通过 {{domxref("Document")}} 对象调用的click事件的事件对象找到鼠标单击的坐标。举个栗子：</p>
+  <p>你能找到一种方法将计时器内部的<code> &lt;div&gt; </code>元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，您可以通过<code><a href="/ch-ZN/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> 方法找出元素左/右和上/下侧的X和Y值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：</p>
 
   <pre class="brush: js">document.onclick = function(e) {
   console.log(e.x) + ',' + console.log(e.y)
@@ -475,9 +475,9 @@ clearInterval(intervalFwd);
 
 <ul>
  <li>{{domxref("HTMLMediaElement")}}</li>
- <li><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">视频和音频内容</a>— &lt;video&gt;和&lt;audio&gt;的简单指南.</li>
+ <li><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">视频和音频内容</a>— &lt;video&gt;和&lt;audio&gt;的简单指南。</li>
  <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio 与 video 操作</a> — 操作audio 和 video 的详细指南，例如：使用 <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>， 等等。</li>
+ <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio 与 video 操作</a> — 操作 audio 和 video 的详细指南，例如：使用 <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，等等。</li>
  <li>{{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.</li>
  <li>
   <p><a href="/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a>.</p>

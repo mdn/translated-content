@@ -9,10 +9,10 @@ translation_of: 'Web/CSS/:host'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><span class="seoSummary"><strong><code>:host</code></strong> CSS伪类选择包含其内部使用的CSS的shadow DOM的根元素 - 换句话说，这允许你从其shadow DOM中选择一个自定义元素。</span></p>
+<p><strong><code>:host</code></strong> CSS 伪类选择包含其内部使用的 CSS 的 shadow DOM 的根元素 - 换句话说，这允许你从其 shadow DOM 中选择一个自定义元素。</p>
 
 <div class="note">
-<p><strong>注意：</strong>在shadow DOM之外使用时，这没有任何效果。</p>
+<p><strong>注意：</strong>在 shadow DOM 之外使用时，这没有任何效果。</p>
 </div>
 
 <pre class="brush: css no-line-numbers">/* Selects a shadow root host */
@@ -34,7 +34,7 @@ translation_of: 'Web/CSS/:host'
 <pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;
 </pre>
 
-<p>在元素的构造函数中，我们创建<code>style</code>和<code>span</code>元素，用自定义元素的内容填充<code>span</code>，并使用一些CSS规则填充<code>style</code> 元素：</p>
+<p>在元素的构造函数中，我们创建<code>style</code>和<code>span</code>元素，用自定义元素的内容填充<code>span</code>，并使用一些 CSS 规则填充<code>style</code> 元素：</p>
 
 <pre class="brush: js">let style = document.createElement('style');
 let span = document.createElement('span');

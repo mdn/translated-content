@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getImageData()</code></strong> 返回一个{{domxref("ImageData")}}对象，用来描述canvas区域隐含的像素数据，这个区域通过矩形表示，起始点为<em>(sx, sy)、</em>宽为<em>sw、</em>高为<em>sh。</em></p>
+<p><strong><code>CanvasRenderingContext2D.getImageData()</code></strong> 返回一个{{domxref("ImageData")}}对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为<em>(sx, sy)、</em>宽为<em>sw、</em>高为<em>sh。</em></p>
 
 <h2 id="语法">语法</h2>
 
@@ -27,20 +27,20 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个{{domxref("ImageData")}} 对象，包含canvas给定的矩形图像数据。</p>
+<p>一个{{domxref("ImageData")}} 对象，包含 canvas 给定的矩形图像数据。</p>
 
 <h3 id="错误抛出">错误抛出</h3>
 
 <dl>
  <dt><code>IndexSizeError</code></dt>
- <dd>如果高度或者宽度变量为0，则抛出错误。</dd>
+ <dd>如果高度或者宽度变量为 0，则抛出错误。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用_getImageData_方法">使用 <code>getImageData</code> 方法</h3>
 
-<p>这是一段使用 <code>getImageData</code> 方法的简单的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas像素控制 </a>和 {{domxref("ImageData")}} 对象。</p>
+<p>这是一段使用 <code>getImageData</code> 方法的简单的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制 </a>和 {{domxref("ImageData")}} 对象。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -60,20 +60,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -84,7 +71,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 <h3 id="兼容性注解">兼容性注解</h3>
 
 <ul>
- <li>从 {{Gecko("5.0")}}开始， <code>getImageData()</code> 可以正确地接受超出canvas边界的矩形；canvas范围外的像素返回值是透明的，并且如果矩形小于一个像素，会返回至少一像素值的图像数据。</li>
+ <li>从 {{Gecko("5.0")}}开始， <code>getImageData()</code> 可以正确地接受超出 canvas 边界的矩形；canvas 范围外的像素返回值是透明的，并且如果矩形小于一个像素，会返回至少一像素值的图像数据。</li>
 </ul>
 
 <h2 id="参见">参见</h2>

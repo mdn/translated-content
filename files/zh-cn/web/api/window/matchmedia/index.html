@@ -27,13 +27,13 @@ translation_of: Web/API/Window/matchMedia
 
 <p>您可以使用返回的媒体查询来执行即时检查和事件驱动检查，以查看文档是否与媒体查询匹配。</p>
 
-<p>要执行一次瞬时检查以查看文档是否与媒体查询匹配，请查看{{domxref("MediaQueryList.matches", "matches")}}属性的值，当document满足媒体查询条件的时候将会返回<code>true</code>。</p>
+<p>要执行一次瞬时检查以查看文档是否与媒体查询匹配，请查看{{domxref("MediaQueryList.matches", "matches")}}属性的值，当 document 满足媒体查询条件的时候将会返回<code>true</code>。</p>
 
-<p>如果您需要始终了解document是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件 。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。</p>
+<p>如果您需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件 。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。</p>
 
 <h2 id="Example" name="Example">举例</h2>
 
-<p>此示例运行媒体查询<code>(max-width: 600px)</code>并在{{HTMLElement("span")}};中显示<code>MediaQueryList</code>的<code>matches</code>属性值。如果视口的宽度小于或等于600像素，则输出将为true，而如果窗口的宽度大于此宽度，则将输出false。</p>
+<p>此示例运行媒体查询<code>(max-width: 600px)</code>并在{{HTMLElement("span")}};中显示<code>MediaQueryList</code>的<code>matches</code>属性值。如果视口的宽度小于或等于 600 像素，则输出将为 true，而如果窗口的宽度大于此宽度，则将输出 false。</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/Window/matchMedia
 document.querySelector(".mq-value").innerText = mql.matches;
 </pre>
 
-<p>JavaScript代码只需将要匹配的媒体查询字符串传递到{{domxref("Window.matchMedia", "matchMedia()")}}进行编译，然后设置<code>&lt;span&gt;</code>的{{domxref("HTMLElement.innerText", "innerText")}}为{{domxref("MediaQueryList.media", "matches")}}属性结果的值，以便它表明此document在此刻页面加载完成时是否与媒体查询所匹配。</p>
+<p>JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("Window.matchMedia", "matchMedia()")}}进行编译，然后设置<code>&lt;span&gt;</code>的{{domxref("HTMLElement.innerText", "innerText")}}为{{domxref("MediaQueryList.media", "matches")}}属性结果的值，以便它表明此 document 在此刻页面加载完成时是否与媒体查询所匹配。</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -92,7 +92,7 @@ document.querySelector(".mq-value").innerText = mql.matches;
 
 <p>{{Compat("api.Window.matchMedia")}}</p>
 
-<h2 id="See_also" name="See_also"><span class="op_dict_text2">请参阅</span></h2>
+<h2 id="See_also" name="See_also">请参阅</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/CSS/Media_queries" title="CSS/Media queries">媒体查询</a></li>

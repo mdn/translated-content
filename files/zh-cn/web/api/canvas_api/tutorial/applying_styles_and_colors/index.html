@@ -7,11 +7,11 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
 
-<div class="summary">在<a href="/cn/Canvas_tutorial/Drawing_shapes" title="cn/Canvas tutorial/Drawing shapes">绘制图形</a>的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。</div>
+<div>在<a href="/cn/Canvas_tutorial/Drawing_shapes" title="cn/Canvas tutorial/Drawing shapes">绘制图形</a>的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。</div>
 
 <h2 id="Colors" name="Colors">色彩 Colors</h2>
 
-<p>到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：<code>fillStyle</code> <span>和 </span><code>strokeStyle。</code></p>
+<p>到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：<code>fillStyle</code> 和 <code>strokeStyle。</code></p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
@@ -23,7 +23,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 <p><code>color</code> 可以是表示 CSS 颜色值的字符串，渐变对象或者图案对象。我们迟些再回头探讨渐变和图案对象。默认情况下，线条和填充颜色都是黑色（CSS 颜色值 <code>#000000</code>）。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 一旦您设置了 <code>strokeStyle</code> 或者 <code>fillStyle</code> 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 <code>fillStyle</code> 或 <code>strokeStyle</code> 的值。</p>
+<p><strong>注意：</strong> 一旦您设置了 <code>strokeStyle</code> 或者 <code>fillStyle</code> 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 <code>fillStyle</code> 或 <code>strokeStyle</code> 的值。</p>
 </div>
 
 <p>您输入的应该是符合 <a class="external" href="https://www.w3.org/TR/css-color-3/">CSS3 颜色值标准</a> 的有效字符串。下面的例子都表示同一种颜色。</p>
@@ -57,7 +57,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<p>结果如下:</p>
+<p>结果如下：</p>
 
 <p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
 
@@ -85,25 +85,25 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<p>结果如下:</p>
+<p>结果如下：</p>
 
 <p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
 
-<h2 id="Transparency" name="Transparency">透明度 <span>Transparency</span></h2>
+<h2 id="Transparency" name="Transparency">透明度 Transparency</h2>
 
 <p>除了可以绘制实色图形，我们还可以用 canvas 来绘制半透明的图形。通过设置 <code>globalAlpha</code> 属性或者使用一个半透明颜色作为轮廓或填充的样式。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}</dt>
- <dd>这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。</dd>
+ <dd>这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0（完全透明）到 1.0（完全不透明），默认是 1.0。</dd>
 </dl>
 
 <p><code>globalAlpha</code> 属性在需要绘制大量拥有相同透明度的图形时候相当高效。不过，我认为下面的方法可操作性更强一点。</p>
 
 <p>因为 <code>strokeStyle</code> 和 <code>fillStyle</code> 属性接受符合 CSS 3 规范的颜色值，那我们可以用下面的写法来设置具有透明度的颜色。</p>
 
-<pre class="brush: js notranslate">// <span>指定</span><span>透明颜色，用于描边</span><span>和</span><span>填充样式
-</span>ctx.strokeStyle = "rgba(255,0,0,0.5)";
+<pre class="brush: js notranslate">// 指定透明颜色，用于描边和填充样式
+ctx.strokeStyle = "rgba(255,0,0,0.5)";
 ctx.fillStyle = "rgba(255,0,0,0.5)";
 </pre>
 
@@ -148,7 +148,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <h3 id="An_example_using_rgba" name="An_example_using_rgba"><code>rgba()</code> 示例</h3>
 
-<p>第二个例子和上面那个类似，不过不是画圆，而是画矩形。这里还可以看出，rgba() 可以分别设置轮廓和填充样式，因而具有更好的可操作性和使用<span class="hps">灵活性</span>。</p>
+<p>第二个例子和上面那个类似，不过不是画圆，而是画矩形。这里还可以看出，rgba() 可以分别设置轮廓和填充样式，因而具有更好的可操作性和使用灵活性。</p>
 
 <pre class="brush: js notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -191,14 +191,14 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
  <dt>{{domxref("CanvasRenderingContext2D.lineCap", "lineCap = type")}}</dt>
  <dd>设置线条末端样式。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin = type")}}</dt>
- <dd><span>设定线条与线条间接合处的样式</span>。</dd>
+ <dd>设定线条与线条间接合处的样式。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit = value")}}</dt>
- <dd><span>限制当两条线相交时交接处最大长度</span><span>；</span><span>所谓交接处长度</span><span>（</span><span>斜接长度</span><span>）</span><span>是指线条交接处内角顶点到外角顶点的长度</span><span>。</span></dd>
+ <dd>限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}</dt>
- <dd>返回一个包含当前虚线样式，长度为非负<span>偶数的</span>数组。</dd>
+ <dd>返回一个包含当前虚线样式，长度为非负偶数的数组。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}</dt>
  <dd>设置当前虚线样式。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</dt>
@@ -209,11 +209,11 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <h4 id="A_lineWidth_example" name="A_lineWidth_example"><code>lineWidth</code> 属性的例子</h4>
 
-<p>这个属性设置当前绘线的粗细。属性值必须为正数。默认值是1.0。</p>
+<p>这个属性设置当前绘线的粗细。属性值必须为正数。默认值是 1.0。</p>
 
 <p>线宽是指给定路径的中心到两边的粗细。换句话说就是在路径的两边各绘制线宽的一半。因为画布的坐标并不和像素直接对应，当需要获得精确的水平或垂直线的时候要特别注意。</p>
 
-<p>在下面的例子中，用递增的宽度绘制了10条直线。最左边的线宽1.0单位。并且，最左边的以及所有宽度为奇数的线并不能精确呈现，这就是因为路径的定位问题。</p>
+<p>在下面的例子中，用递增的宽度绘制了 10 条直线。最左边的线宽 1.0 单位。并且，最左边的以及所有宽度为奇数的线并不能精确呈现，这就是因为路径的定位问题。</p>
 
 <pre class="brush: js notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -244,14 +244,14 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <p>要解决这个问题，你必须对路径施以更加精确的控制。已知粗 1.0 的线条会在路径两边各延伸半像素，那么像第三幅图那样绘制从 (3.5,1) 到 (3.5,5) 的线条，其边缘正好落在像素边界，填充出来就是准确的宽为 1.0 的线条。</p>
 
 <div class="note">
-<p><strong>注意：</strong>在这个竖线的例子中，其Y坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的lineCap风格，它默认为butt；您可能希望通过将lineCap样式设置为square正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。</p>
+<p><strong>注意：</strong>在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；您可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。</p>
 
-<p>还请注意，只有路径的起点和终点受此影响：如果一个路径是通过closePath()来封闭的，它是没有起点和终点的；相反的情况下，路径上的所有端点都与上一个点相连，下一段路径使用当前的lineJoin设置（默认为miter），如果相连路径是水平和/或垂直的话，会导致相连路径的外轮廓根据相交点自动延伸，因此渲染出的路径轮廓会覆盖整个像素格。接下来的两个小节将展示这些额外的行样式。</p>
+<p>还请注意，只有路径的起点和终点受此影响：如果一个路径是通过 closePath() 来封闭的，它是没有起点和终点的；相反的情况下，路径上的所有端点都与上一个点相连，下一段路径使用当前的 lineJoin 设置（默认为 miter），如果相连路径是水平和/或垂直的话，会导致相连路径的外轮廓根据相交点自动延伸，因此渲染出的路径轮廓会覆盖整个像素格。接下来的两个小节将展示这些额外的行样式。</p>
 </div>
 
 <p>对于那些宽度为偶数的线条，每一边的像素数都是整数，那么你想要其路径是落在像素点之间 (如那从 (3,1) 到 (3,5)) 而不是在像素点的中间。同样，注意到那个例子的垂直线条，其 Y 坐标刚好落在网格线上，如果不是的话，端点上同样会出现半渲染的像素点。</p>
 
-<p style="text-align: justify;">虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其它任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。</p>
+<p>虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其它任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。</p>
 
 <h4 id="A_lineCap_example" name="A_lineCap_example"><code>lineCap</code> 属性的例子</h4>
 
@@ -330,21 +330,21 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p>就如上一个例子所见的应用 <code>miter</code> 的效果，线段的外侧边缘会被延伸交汇于一点上。线段之间夹角比较大时，交点不会太远，但随着夹角变小，交点距离会呈指数级增大。</p>
 
-<p><code>miterLimit</code> 属性就是用来设定外延交点与连接点的最大距离，如果交点距离大于此值，连接效果会变成了 bevel。注意，最大斜接长度（即交点距离）是当前坐标系测量线宽与此<code>miterLimit</code>属性值（HTML {{HTMLElement("canvas")}}默认为10.0）的乘积，所以<code>miterLimit</code>可以单独设置，不受显示比例改变或任何仿射变换的影响：它只影响线条边缘的有效绘制形状。</p>
+<p><code>miterLimit</code> 属性就是用来设定外延交点与连接点的最大距离，如果交点距离大于此值，连接效果会变成了 bevel。注意，最大斜接长度（即交点距离）是当前坐标系测量线宽与此<code>miterLimit</code>属性值（HTML {{HTMLElement("canvas")}}默认为 10.0）的乘积，所以<code>miterLimit</code>可以单独设置，不受显示比例改变或任何仿射变换的影响：它只影响线条边缘的有效绘制形状。</p>
 
-<p>更准确的说，斜接限定值（<code>miterLimit</code>）是延伸长度（在HTML Canvas中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（<code>miterLength</code>）与线宽（<code>lineWidth</code>）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（<em>θ</em> ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：</p>
+<p>更准确的说，斜接限定值（<code>miterLimit</code>）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（<code>miterLength</code>）与线宽（<code>lineWidth</code>）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（<em>θ</em> ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：</p>
 
 <ul>
  <li><code>miterLimit</code> = <strong>max</strong> <code>miterLength</code> / <code>lineWidth</code> = 1 / <strong>sin</strong> ( <strong>min</strong> <em>θ</em> / 2 )</li>
- <li>斜接限定值默认为10.0，这将会去除所有小于大约11度的斜接。</li>
- <li>斜接限定值为√2 ≈ 1.4142136 （四舍五入）时，将去除所有锐角的斜接，仅保留钝角或直角。</li>
- <li>1.0是合法的斜接限定值，但这会去除所有斜接。</li>
- <li>小于1.0的值不是合法的斜接限定值。</li>
+ <li>斜接限定值默认为 10.0，这将会去除所有小于大约 11 度的斜接。</li>
+ <li>斜接限定值为√2 ≈ 1.4142136（四舍五入）时，将去除所有锐角的斜接，仅保留钝角或直角。</li>
+ <li>1.0 是合法的斜接限定值，但这会去除所有斜接。</li>
+ <li>小于 1.0 的值不是合法的斜接限定值。</li>
 </ul>
 
 <p>在下面的小示例中，您可以动态的设置<code>miterLimit</code>的值并查看它对画布中图形的影响。蓝色线条指出了锯齿图案中每个线条的起点与终点（同时也是不同线段之间的连接点）。</p>
 
-<p>在此示例中，当您设定<code>miterLimit</code>的值小于4.2时，图形可见部分的边角不会延伸相交，而是在蓝色线条边呈现斜边连接效果；当<code>miterLimit</code>的值大于10.0时，此例中大部分的边角都会在远离蓝线的位置相交，且从左至右，距离随着夹角的增大而减小；而介于上述值之间的值所呈现的效果，也介于两者之间。</p>
+<p>在此示例中，当您设定<code>miterLimit</code>的值小于 4.2 时，图形可见部分的边角不会延伸相交，而是在蓝色线条边呈现斜边连接效果；当<code>miterLimit</code>的值大于 10.0 时，此例中大部分的边角都会在远离蓝线的位置相交，且从左至右，距离随着夹角的增大而减小；而介于上述值之间的值所呈现的效果，也介于两者之间。</p>
 
 <pre class="brush: js notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -401,7 +401,7 @@ draw();</pre>
 
 <h3 id="Using_line_dashes" name="Using_line_dashes">使用虚线</h3>
 
-<p>用 <code>setLineDash</code> 方法和 <code>lineDashOffset</code> 属性来制定虚线样式. <code>setLineDash</code> 方法接受一个数组，来指定线段与间隙的交替；<code>lineDashOffset </code>属性设置起始偏移量.</p>
+<p>用 <code>setLineDash</code> 方法和 <code>lineDashOffset</code> 属性来制定虚线样式。<code>setLineDash</code> 方法接受一个数组，来指定线段与间隙的交替；<code>lineDashOffset </code>属性设置起始偏移量。</p>
 
 <p>在这个例子中，我们要创建一个蚂蚁线的效果。它往往应用在计算机图形程序选区工具动效中。它可以帮助用户通过动画的边界来区分图像背景选区边框。在本教程的后面部分，你可以学习如何实现这一点和其他<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的动画</a>。</p>
 
@@ -439,9 +439,9 @@ var offset = 0;</code>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}</dt>
- <dd><font face="Source Code Pro Semibold">createLinearGradient</font> 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。</dd>
+ <dd>createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}</dt>
- <dd><font face="Source Code Pro Semibold">createRadialGradient</font> 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。</dd>
+ <dd>createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。</dd>
 </dl>
 
 <pre class="brush: js notranslate">var lineargradient = ctx.createLinearGradient(0,0,150,150);
@@ -452,7 +452,7 @@ var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
 
 <dl>
  <dt>{{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}</dt>
- <dd><font face="Source Code Pro Semibold">addColorStop</font> 方法接受 2 个参数，<code><font face="Source Code Pro Semibold">position</font></code> 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。<code><font face="Source Code Pro Semibold">color</font></code> 参数必须是一个有效的 CSS 颜色值（如 #FFF， rgba(0,0,0,1)，等等）。</dd>
+ <dd>addColorStop 方法接受 2 个参数，<code>position</code> 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。<code>color</code> 参数必须是一个有效的 CSS 颜色值（如 #FFF，rgba(0,0,0,1)，等等）。</dd>
 </dl>
 
 <p>你可以根据需要添加任意多个色标（color stops）。下面是最简单的线性黑白渐变的例子。</p>
@@ -551,7 +551,7 @@ lineargradient.addColorStop(1,'black');
 
 <p>这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。</p>
 
-<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的<span style="font-family: monospace;">，</span><code><font face="Source Code Pro Semibold">#019F62 = rgba(1,159,98,1)。</font></code></p>
+<p>4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，<code>#019F62 = rgba(1,159,98,1)。</code></p>
 
 <p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
 
@@ -561,10 +561,10 @@ lineargradient.addColorStop(1,'black');
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}</dt>
- <dd>该方法接受两个参数。Image 可以是一个 <code><font face="Source Code Pro Semibold">Image</font></code> 对象的引用，或者另一个 canvas 对象。<code>Type</code> 必须是下面的字符串值之一：<code><font face="Source Code Pro Semibold">repeat</font></code>，<code><font face="Source Code Pro Semibold">repeat-x</font></code>，<code><font face="Source Code Pro Semibold">repeat-y</font></code> 和 <code><font face="Source Code Pro Semibold">no-repeat</font></code>。</dd>
+ <dd>该方法接受两个参数。Image 可以是一个 <code>Image</code> 对象的引用，或者另一个 canvas 对象。<code>Type</code> 必须是下面的字符串值之一：<code>repeat</code>，<code>repeat-x</code>，<code>repeat-y</code> 和 <code>no-repeat</code>。</dd>
 </dl>
 
-<div class="note"><strong>注意:</strong> 用 canvas 对象作为 <code>Image</code> 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。</div>
+<div class="note"><strong>注意：</strong> 用 canvas 对象作为 <code>Image</code> 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。</div>
 
 <p>图案的应用跟渐变很类似的，创建出一个 pattern 之后，赋给 <code>fillStyle</code> 或 <code>strokeStyle</code> 属性即可。</p>
 
@@ -613,14 +613,14 @@ var ptrn = ctx.createPattern(img,'repeat');
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX = float")}}</dt>
  <dd>
- <p><code><font face="Source Code Pro Semibold">shadowOffsetX</font></code> <span style="font-family: monospace;">和 </span><code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</p>
+ <p><code>shadowOffsetX</code> 和 <code>shadowOffsetY </code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</p>
  </dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowOffsetX</font> <span style="font-family: monospace;">和 </span><code><font face="Source Code Pro Semibold">shadowOffsetY </font></code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
+ <dd>shadowOffsetX 和 <code>shadowOffsetY </code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowBlur</font> 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code><font face="Source Code Pro Semibold">0</font></code>。</dd>
+ <dd>shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code>0</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
- <dd><font face="Source Code Pro Semibold">shadowColor</font> 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
+ <dd>shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
 </dl>
 
 <h3 id="A_shadowed_text_example" name="A_shadowed_text_example">文字阴影的例子</h3>
@@ -649,7 +649,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
 
-<p>我们可以通过下一章来了解文字属性和fillText方法相关的内容。</p>
+<p>我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。</p>
 
 <h2 id="Canvas_fill_rules" name="Canvas_fill_rules">Canvas 填充规则</h2>
 
@@ -658,7 +658,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 <p>两个可能的值：</p>
 
 <ul>
- <li> <code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>, 默认值.</li>
+ <li> <code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>, 默认值。</li>
  <li><code><strong> "evenodd"</strong></code>:  <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a>.</li>
 </ul>
 

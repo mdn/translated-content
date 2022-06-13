@@ -9,9 +9,9 @@ translation_of: Web/API/HTMLCanvasElement/mozOpaque
 ---
 <div>{{APIRef("Canvas API")}}{{non-standard_header}}</div>
 
-<p>非标准的 <strong><code>HTMLCanvasElement.mozOpaque</code></strong> 是一种 {{jsxref("Boolean")}} 的数据反映了{{HTMLElement("canvas")}}元素的{htmlattrxref("moz-opaque"， "canvas")} HTML属性。它能够让画布（canvas）将半透明作为一个参考因素。如果画布知道没有半透明因素，作画的性能可以优化。</p>
+<p>非标准的 <strong><code>HTMLCanvasElement.mozOpaque</code></strong> 是一种 {{jsxref("Boolean")}} 的数据反映了{{HTMLElement("canvas")}}元素的{htmlattrxref("moz-opaque"， "canvas")} HTML 属性。它能够让画布（canvas）将半透明作为一个参考因素。如果画布知道没有半透明因素，作画的性能可以优化。</p>
 
-<p class="note">当使用{{domxref("HTMLCanvasElement.getContext()")}}创建绘图上下文时，该api将被标准化为将alpha选项设置为false。应该避免使用mozOpaque。Firefox将在未来停止支持它。</p>
+<p>当使用{{domxref("HTMLCanvasElement.getContext()")}}创建绘图上下文时，该 api 将被标准化为将 alpha 选项设置为 false。应该避免使用 mozOpaque。Firefox 将在未来停止支持它。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -21,12 +21,12 @@ translation_of: Web/API/HTMLCanvasElement/mozOpaque
 
 <h2 id="示例">示例</h2>
 
-<p>有如下{{HTMLElement("canvas")}} 元素:</p>
+<p>有如下{{HTMLElement("canvas")}} 元素：</p>
 
 <pre class="brush: html notranslate">&lt;canvas id="canvas" width="300" height="300" moz-opaque&gt;&lt;/canvas&gt;
 </pre>
 
-<p>你可以获取或设置 <code>mozOpaque</code> 属性. 例如，当mimeType == 'image/jpeg'或类似值时，可以将其属性值设置为true，以在不需要半透明度的情况下提高应用程序的性能。</p>
+<p>你可以获取或设置 <code>mozOpaque</code> 属性。例如，当 mimeType == 'image/jpeg'或类似值时，可以将其属性值设置为 true，以在不需要半透明度的情况下提高应用程序的性能。</p>
 
 <pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
 console.log(canvas.mozOpaque); // true
@@ -47,7 +47,7 @@ canvas.mozOpaque = false;
 <h2 id="See_Also" name="See_Also">参考</h2>
 
 <ul>
- <li>定义它的接口, {{domxref("HTMLCanvasElement")}}.</li>
- <li>{{HTMLElement("canvas")}} 元素的{{htmlattrxref("moz-opaque", "canvas")}}HTML属性</li>
- <li><a href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">为Firefox OS优化你的JavaScript游戏</a></li>
+ <li>定义它的接口，{{domxref("HTMLCanvasElement")}}.</li>
+ <li>{{HTMLElement("canvas")}} 元素的{{htmlattrxref("moz-opaque", "canvas")}}HTML 属性</li>
+ <li><a href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">为 Firefox OS 优化你的 JavaScript 游戏</a></li>
 </ul>

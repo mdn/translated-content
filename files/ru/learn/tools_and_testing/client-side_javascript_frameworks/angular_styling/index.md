@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Теперь, когда мы создали базовую структуру приложения и начали отображать что-то полезное, давайте переключимся и рассмотрим статью, посвященную тому, как Angular работает со стилями. 
+Теперь, когда мы создали базовую структуру приложения и начали отображать что-то полезное, давайте переключимся и рассмотрим статью, посвященную тому, как Angular работает со стилями.
 
 <table>
   <tbody>
@@ -171,7 +171,7 @@ ul {
 
 ## Резюме
 
-Наш краткий обзор стилизации Angular-приложения завершён, поэтому давайте вернёмся к разработке функциональности нашего приложения. В следующей статье мы создадим компонент для задач, в котором можно будет проверять, редактировать и удалять задачи. 
+Наш краткий обзор стилизации Angular-приложения завершён, поэтому давайте вернёмся к разработке функциональности нашего приложения. В следующей статье мы создадим компонент для задач, в котором можно будет проверять, редактировать и удалять задачи.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

@@ -1,43 +1,43 @@
 ---
-title: CSS选择器
+title: CSS 选择器
 slug: Learn/CSS/Building_blocks/Selectors
 tags:
   - CSS
-  - CSS选择器
+  - CSS 选择器
   - 初学者
   - 类
 translation_of: Learn/CSS/Building_blocks/Selectors
 ---
 <div> {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}</div>
 
-<p class="summary">{{Glossary("CSS")}}中，选择器用来指定网页上我们想要样式化的{{glossary("HTML")}}元素。有CSS选择器提供了很多种方法，所以在选择要样式化的元素时，我们可以做到很精细的地步。本文和本文的子篇中，我们将会详细地讲授选择器的不同使用方式，并了解它们的工作原理。</p>
+<p>{{Glossary("CSS")}}中，选择器用来指定网页上我们想要样式化的{{glossary("HTML")}}元素。有 CSS 选择器提供了很多种方法，所以在选择要样式化的元素时，我们可以做到很精细的地步。本文和本文的子篇中，我们将会详细地讲授选择器的不同使用方式，并了解它们的工作原理。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">学习前提：</th>
-   <td>计算机的基本知识， <a href="https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software">安装了基础软件</a>，<a href="https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a>的基本知识，HTML基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML介绍</a>）以及对CSS工作方式的了解（学习<a href="/zh-CN/docs/Learn/CSS/First_steps">CSS初步</a>）</td>
+   <td>计算机的基本知识， <a href="https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software">安装了基础软件</a>，<a href="https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a>的基本知识，HTML 基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 介绍</a>）以及对 CSS 工作方式的了解（学习<a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 初步</a>）</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
-   <td>详细学习CSS选择器的工作方式。</td>
+   <td>详细学习 CSS 选择器的工作方式。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="选择器是什么？">选择器是什么？</h2>
 
-<p>你也许已经见过选择器了。CSS选择器是CSS规则的第一部分。它是元素和其他部分组合起来告诉浏览器哪个HTML元素应当是被选为应用规则中的CSS属性值的方式。选择器所选择的元素，叫做“选择器的对象”。</p>
+<p>你也许已经见过选择器了。CSS 选择器是 CSS 规则的第一部分。它是元素和其他部分组合起来告诉浏览器哪个 HTML 元素应当是被选为应用规则中的 CSS 属性值的方式。选择器所选择的元素，叫做“选择器的对象”。</p>
 
 <p><img alt="Some code with the h1 highlighted." src="https://mdn.mozillademos.org/files/16550/selector.png" style="border: 1px solid #cccccc; height: 218px; width: 471px;"></p>
 
-<p>前面的文章中，你也许已经遇到过几种不同的选择器，了解到选择器可以以不同的方式选择元素，比如选择诸如<code>h1</code>的元素，或者是根据class (类) 选择例如<code>.special</code>。</p>
+<p>前面的文章中，你也许已经遇到过几种不同的选择器，了解到选择器可以以不同的方式选择元素，比如选择诸如<code>h1</code>的元素，或者是根据 class (类) 选择例如<code>.special</code>。</p>
 
-<p>CSS中，选择器由CSS选择器规范加以定义。就像是CSS的其他部分那样，它们需要浏览器的支持才能工作。你会遇到的大多数选择器都是在<a href="https://www.w3.org/TR/selectors-3/">CSS 3</a>中定义的，这是一个成熟的规范，因此你会发现浏览器对这些选择器有良好的支持。</p>
+<p>CSS 中，选择器由 CSS 选择器规范加以定义。就像是 CSS 的其他部分那样，它们需要浏览器的支持才能工作。你会遇到的大多数选择器都是在<a href="https://www.w3.org/TR/selectors-3/">CSS 3</a>中定义的，这是一个成熟的规范，因此你会发现浏览器对这些选择器有良好的支持。</p>
 
 <h2 id="选择器列表">选择器列表</h2>
 
-<p>如果你有多个使用相同样式的CSS选择器，那么这些单独的选择器可以被混编为一个“选择器列表”，这样，规则就可以应用到所有的单个选择器上了。例如，如果我的<code>h1</code>和<code>.special</code>类有相同的CSS，那么我可以把它们写成两个分开的规则。</p>
+<p>如果你有多个使用相同样式的 CSS 选择器，那么这些单独的选择器可以被混编为一个“选择器列表”，这样，规则就可以应用到所有的单个选择器上了。例如，如果我的<code>h1</code>和<code>.special</code>类有相同的 CSS，那么我可以把它们写成两个分开的规则。</p>
 
 <pre class="brush: css notranslate"><code>h1 {
   color: blue;
@@ -60,13 +60,13 @@ translation_of: Learn/CSS/Building_blocks/Selectors
   color: blue;
 } </code></pre>
 
-<p>在下面的实时示例中，试着把两个有ID声明的选择器组合起来。外观在组合起来以后应该还是一样的。</p>
+<p>在下面的实时示例中，试着把两个有 ID 声明的选择器组合起来。外观在组合起来以后应该还是一样的。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}} </p>
 
 <p>当你使用选择器列表时，如果任何一个选择器无效 (存在语法错误)，那么整条规则都会被忽略。</p>
 
-<p>在下面的示例中，无效的class选择器会被忽略，而<code>h1</code>选择器仍会被样式化。</p>
+<p>在下面的示例中，无效的 class 选择器会被忽略，而<code>h1</code>选择器仍会被样式化。</p>
 
 <pre class="brush: css notranslate"><code>h1 {
   color: blue;
@@ -76,7 +76,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
   color: blue;
 } </code></pre>
 
-<p>但是在被组合起来以后，整个规则都会失效，无论是<code>h1</code>还是这个class都不会被样式化。</p>
+<p>但是在被组合起来以后，整个规则都会失效，无论是<code>h1</code>还是这个 class 都不会被样式化。</p>
 
 <pre class="brush: css notranslate"><code>h1, ..special {
   color: blue;
@@ -86,17 +86,17 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 <p>有几组不同的选择器，知道了需要哪种选择器，你会更容易正确使用它们。在本文的子篇中，我们将会来更详细地看下不同种类的选择器。</p>
 
-<h3 id="类型、类和ID选择器">类型、类和ID选择器</h3>
+<h3 id="类型、类和ID选择器">类型、类和 ID 选择器</h3>
 
-<p>这个选择器组，第一个是指向了所有HTML元素<code>&lt;h1&gt;。</code></p>
+<p>这个选择器组，第一个是指向了所有 HTML 元素<code>&lt;h1&gt;。</code></p>
 
 <pre class="brush: css notranslate">h1 { }</pre>
 
-<p>它也包含了一个class的选择器：</p>
+<p>它也包含了一个 class 的选择器：</p>
 
 <pre class="brush: css notranslate">.box { }</pre>
 
-<p>亦或，一个id选择器：</p>
+<p>亦或，一个 id 选择器：</p>
 
 <pre class="brush: css notranslate">#unique { }</pre>
 
@@ -128,20 +128,20 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 <h2 id="接下来要做的事情">接下来要做的事情</h2>
 
-<p>你可以看下下面的选择器参考表，可以获得到这个学习章节——或者总体来说是MDN上——的各种选择器的直接链接；你也可以继续下去，开始你的了解<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">类型、类和ID选择器</a>的旅程。</p>
+<p>你可以看下下面的选择器参考表，可以获得到这个学习章节——或者总体来说是 MDN 上——的各种选择器的直接链接；你也可以继续下去，开始你的了解<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">类型、类和 ID 选择器</a>的旅程。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}</p>
 
 <h2 id="选择器参考表">选择器参考表</h2>
 
-<p>下面的表格让你可以浏览你可以用的选择器，还有本指南中教你如何使用每种选择器的页面的链接。我还加上了一个能查看浏览器对每个选择器的支持信息的MDN页面链接。你可以把这个作为回头的参考，在你以后需要查询文献中提到的选择器的时候，或者是在你广义上实验CSS的时候。</p>
+<p>下面的表格让你可以浏览你可以用的选择器，还有本指南中教你如何使用每种选择器的页面的链接。我还加上了一个能查看浏览器对每个选择器的支持信息的 MDN 页面链接。你可以把这个作为回头的参考，在你以后需要查询文献中提到的选择器的时候，或者是在你广义上实验 CSS 的时候。</p>
 
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col">选择器</th>
    <th scope="col">示例</th>
-   <th scope="col">学习CSS的教程</th>
+   <th scope="col">学习 CSS 的教程</th>
   </tr>
  </thead>
  <tbody>
@@ -161,9 +161,9 @@ translation_of: Learn/CSS/Building_blocks/Selectors
    <td><a href="https://developer.mozilla.org/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Class_selectors">类选择器</a></td>
   </tr>
   <tr>
-   <td><a href="/zh-CN/docs/Web/CSS/ID_selectors">ID选择器</a></td>
+   <td><a href="/zh-CN/docs/Web/CSS/ID_selectors">ID 选择器</a></td>
    <td><code>#unique { }</code></td>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#ID_Selectors">ID选择器</a></td>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#ID_Selectors">ID 选择器</a></td>
   </tr>
   <tr>
    <td><a href="/zh-CN/docs/Web/CSS/Attribute_selectors">标签属性选择器</a></td>
@@ -207,9 +207,9 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 <ol>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">层叠与继承</a></li>
- <li><a class="new" rel="nofollow" title="该页面尚未创建。">CSS选择器</a>
+ <li><a class="new" rel="nofollow" title="该页面尚未创建。">CSS 选择器</a>
   <ul>
-   <li><a class="new" rel="nofollow" title="该页面尚未创建。">标签，类，ID选择器</a></li>
+   <li><a class="new" rel="nofollow" title="该页面尚未创建。">标签，类，ID 选择器</a></li>
    <li><a class="new" rel="nofollow" title="该页面尚未创建。">属性选择器</a></li>
    <li><a class="new" rel="nofollow" title="该页面尚未创建。">伪类和伪元素</a></li>
    <li><a class="new" rel="nofollow" title="该页面尚未创建。">关系选择器</a></li>
@@ -220,9 +220,9 @@ translation_of: Learn/CSS/Building_blocks/Selectors
  <li><a class="new" rel="nofollow" title="该页面尚未创建。">处理不同文字方向的文本</a></li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content">溢出的内容</a></li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units">值和单位</a></li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">在CSS中调整大小</a></li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">在 CSS 中调整大小</a></li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements">图像、媒体和表单元素</a></li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables">样式化表格</a></li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS">调试CSS</a></li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Organizing">组织CSS</a></li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS">调试 CSS</a></li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Organizing">组织 CSS</a></li>
 </ol>
