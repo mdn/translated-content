@@ -19,7 +19,7 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 {{APIRef("XMLHttpRequest")}}
 
 En esta guía le echaremos un vistazo a cómo usar
-{{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/en-US/docs/Web/HTTP)
+{{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/es/docs/Web/HTTP)
 con el objetivo de intercambiar datos entre el sitio web y el servidor.
 
 Se incluyen ejemplos, tanto para los casos de uso comunes de `XMLHttpRequest`,
