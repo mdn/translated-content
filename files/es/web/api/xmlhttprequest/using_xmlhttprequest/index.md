@@ -68,7 +68,7 @@ Principalmente hay cuatro formas de analizar este documento XML:
 1. Usando [XPath](/es/docs/Web/XPath) para dirigir (o apuntar a) partes
     del mismo.
 2. Manualmente [Analizar y
-    serializar el XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
+    serializar el XML](/es/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
 3. Usando {{domxref("XMLSerializer")}} para serializar **árboles DOM a cadenas o a
     archivos**.
 4. {{jsxref("RegExp")}} se puede utilizar si siempre se conoce el contenido del documento XML
