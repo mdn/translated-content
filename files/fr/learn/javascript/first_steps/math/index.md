@@ -47,7 +47,7 @@ Nous disposons même de plusieurs systèmes de numération&nbsp;! Le décimal a 
 - Octal
   - : Utilisant une base 8, les chiffres entre 0 et 7 sont utilisés dans chaque rang.
 - Hexadécimal
-  - : Utilisant une base 16, les chiffres entre 0 et 9 puis les lettres de a à f sont utilisés dans chaque rang. Vous avez peut-être déjà rencontré ces nombres en définissant [des couleurs en CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values).
+  - : Utilisant une base 16, les chiffres entre 0 et 9 puis les lettres de a à f sont utilisés dans chaque rang. Vous avez peut-être déjà rencontré ces nombres en définissant [des couleurs en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#valeurs_rgb_hexadécimales).
 
 **Avant d'avoir la cervelle en compote, arrêtez-vous un instant ici&nbsp;!** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours&nbsp;; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
 
@@ -326,7 +326,7 @@ Parfois nous avons besoin d'exécuter des tests vrai/faux, puis d'agir en foncti
 | Opérateur | Nom                 | But                                                                      | Exemple       |
 | --------- | ------------------- | ------------------------------------------------------------------------ | ------------- |
 | `===`     | Égalité stricte     | Teste si les valeurs de droite et de gauche sont identiques              | `5 === 2 + 4` |
-| `!==`     | Non-égalité stricte | Teste si les valeurs de droite et de gauche ne sont pas identiques        | `5 !== 2 + 3` |
+| `!==`     | Non-égalité stricte | Teste si les valeurs de droite et de gauche ne sont pas identiques       | `5 !== 2 + 3` |
 | `<`       | Inférieur à         | Teste si la valeur de gauche est plus petite que celle de droite.        | `10 < 6`      |
 | `>`       | Supérieur à         | Teste si la valeur de gauche est plus grande que celle de droite.        | `10 > 20`     |
 | <=        | Inférieur ou égal à | Teste si la valeur de gauche est plus petite ou égale à celle de droite. | `3 <= 2`      |
@@ -336,7 +336,7 @@ Parfois nous avons besoin d'exécuter des tests vrai/faux, puis d'agir en foncti
 
 Si vous entrez certaines de ces valeurs dans une console, vous constaterez que toutes renvoient une valeur `true`/`false` — les booléens mentionnés dans l'article précédent. Ces opérateurs sont très utiles, car ils nous permettent de prendre des décisions dans le code, et ils sont utilisés chaque fois que nous avons besoin de faire un choix. Par exemple, les booléens s'utilisent pour&nbsp;:
 
-- Afficher l'étiquette textuelle ad-hoc sur un bouton selon qu'une fonctionnalité est active ou pas
+- Afficher l'étiquette textuelle ad hoc sur un bouton selon qu'une fonctionnalité est active ou pas
 - Afficher un message de fin de jeu si un jeu est terminé ou un message de victoire si le jeu a été remporté
 - Afficher des remerciements saisonniers corrects selon la saison de vacances
 - Faire un zoom avant ou arrière sur une carte selon le niveau de zoom choisi
