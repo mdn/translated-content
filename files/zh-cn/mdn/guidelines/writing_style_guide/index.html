@@ -21,7 +21,7 @@ original_slug: MDN/Guidelines/Style_guide
 <p>本规范主要适用于英文文档。其他语言可能也有（也欢迎创建）相应的规范。这些应该作为子页面发布在各个本地化小组的页面中。</p>
 
 <div class="note">
-<p>译注：本文的写作规范是针对英文所写的，当你在为文档的英文原文作贡献时，你应该参考这份规范。简体中文翻译时的规范请参见《<a href="https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md">针对 MDN 文档的本地化指南</a>》，当然“针对 MDN 文档的本地化指南”仅列出了常见的规范，这份文档较为详细一点，在翻译时，参考一些相关内容也是有益的。</p>
+<p><strong>备注：</strong>本文的写作规范是针对英文所写的，当你在为文档的英文原文作贡献时，你应该参考这份规范。简体中文翻译时的规范请参见《<a href="https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md">针对 MDN 文档的本地化指南</a>》，当然“针对 MDN 文档的本地化指南”仅列出了常见的规范，这份文档较为详细一点，在翻译时，参考一些相关内容也是有益的。</p>
 </div>
 
 <h2 id="基础部分">基础部分</h2>
@@ -53,13 +53,13 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>当你要给某个新的主题或主体添加文章时，你通常需要创建一个引导页，然后再把要添加的文章作为子页面添加进去。引导页开篇应当用一两段话来描述一下当前主题或技术，然后添加一个子页面的目录列表，并简要描述每个页面的内容。你可以使用一些我们已经编写好的宏把相关的子页面自动插入到目录列表中。</p>
 
-<p>例如，<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>手册，其结构如下：</p>
+<p>例如，<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>指南，其结构如下：</p>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript/手册</a> - 主目录页</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/JavaScript_Overview" title="JavaScript/Guide/JavaScript_Overview">JavaScript/手册/JavaScript概述</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Functions" title="JavaScript/Guide/Functions">JavaScript/手册/函数</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model" title="JavaScript/Guide/Details_of_the_Object_Model">JavaScript/手册/对象模型的细节</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript/指南</a> - 主目录页</li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/JavaScript_Overview" title="JavaScript/Guide/JavaScript_Overview">JavaScript/指南/JavaScript概述</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Functions" title="JavaScript/Guide/Functions">JavaScript/指南/函数</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model" title="JavaScript/Guide/Details_of_the_Object_Model">JavaScript/指南/对象模型的细节</a></li>
 </ul>
 
 <p>尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。</p>
@@ -91,7 +91,7 @@ original_slug: MDN/Guidelines/Style_guide
 <p>下面是上面那个简介的修改版，但是这次它又太过冗长了。其中包含了过多的细节，并且还包含了很多其他方法和属性，但实际上它应该将重点聚焦在 <code>strokeText()</code> 方法上，然后给出详细介绍它的文章的链接即可。</p>
 
 <div class="note">
-<p>译注：作为例子，内容并不重要，所以就不逐句翻译了。</p>
+<p><strong>备注：</strong>作为例子，内容并不重要，所以就不逐句翻译了。</p>
 </div>
 
 <div class="example-bad">
@@ -128,7 +128,7 @@ original_slug: MDN/Guidelines/Style_guide
  
 <p>每段示例代码都应该就其工作原理给出说明。最好将一段较长的代码分解成多个较小的部分，并提供每个部分的说明，说明时注意细节的层次。如果代码很简单并且不直接涉及到当前 API，可以只给出一个简单的介绍，说明其用途，以及为何要把它放在这里；而如果代码比较复杂、或用到了当前的 API、或在技术上比较有创造性，那么你应该提供更详细的说明。</p>
 
-<p>如果使用的是<a href="zh-CN/docs/MDN/Structures/Live_samples">在线演示</a>的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的 {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。</p>
+<p>如果使用的是<a href="/zh-CN/docs/MDN/Structures/Live_samples">在线演示</a>的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的 {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。</p>
 
 <h4 id="过短的文章难以被搜索到">过短的文章难以被搜索到</h4>
 
@@ -136,7 +136,7 @@ original_slug: MDN/Guidelines/Style_guide
 
 <h3 id="标题">标题</h3>
 
-<p>对于小节的标题，应使用从大到小的方式来定义级别：{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}} 这样，并且中间不要跳过某一级。因为 H1 已用于文章的标题，因此小节的标题应该从 H2 开始。如果你的文章中小节的层次超过了 3 到 4 级，那么你可能需要考虑将整篇文章拆分成几篇小的文章，然后用一个引导页给出这些文章的链接，并用 <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs"><code>Next</code></a>、<a href="https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs"><code>Previous</code></a>、<a href="https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs"><code>PreviousNext</code></a> 宏为它们创建导航。</p>
+<p>对于小节的标题，应使用从大到小的方式来定义级别：{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}} 这样，并且中间不要跳过某一级。因为 H1 已用于文章的标题，因此小节的标题应该从 H2 开始。如果你的文章中小节的层次超过了 3 到 4 级，那么你可能需要考虑将整篇文章拆分成几篇小的文章。</p>
 
 <p>按下回车键（Enter 或 Return）可以开始一个新的段落。如果只是想换行而不是另起一段，可以按住 Shift 并敲下回车。</p>
 
@@ -193,11 +193,11 @@ original_slug: MDN/Guidelines/Style_guide
 <p>可以使用“样式”下拉列表中的预定义样式来格式化你选定的内容。</p>
 
 <div class="note">
-<p>“Note”样式用来强调重要提示，就像这个。</p>
+<p><strong>备注：</strong>“Note”样式用来强调重要提示，就像这个。</p>
 </div>
 
 <div class="warning">
-<p>类似地，“Warning”样式用来创建一个警告框。</p>
+<p><strong>警告：</strong>类似地，“Warning”样式用来创建一个警告框。</p>
 </div>
 
 <p>除非有特殊需要，否则请不要用 HTML 的 <code>style</code> 属性来手动给内容添加样式。如果你没有找到你需要的预定义样式，可以放置一个 <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">Matrix</a> 并寻求帮助。</p>
@@ -205,7 +205,7 @@ original_slug: MDN/Guidelines/Style_guide
 <h3 id="示例代码的格式和样式">示例代码的格式和样式</h3>
 
 <div class="note">
-<p>这一小节只是讨论 MDN 文章中的示例代码的样式和格式问题，如果你想了解如何编写示例代码，请参考<a href="/zh-CN/docs/MDN/Contribute/Guidelines/Code_samples">示例代码指南</a>。</p>
+<p><strong>备注：</strong>这一小节只是讨论 MDN 文章中的示例代码的样式和格式问题，如果你想了解如何编写示例代码，请参考<a href="/zh-CN/docs/MDN/Contribute/Guidelines/Code_samples">示例代码指南</a>。</p>
 </div>
 
 <h4 id="缩进和换行符">缩进和换行符</h4>
@@ -238,7 +238,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="语法高亮">语法高亮</h4>
 
-<p><img alt="Screenshot of the 'Syntax Highlighter' menu." src="https://mdn.mozillademos.org/files/12682/Language%20list.png" style="border-style: solid; border-width: 1px; float: right; margin: 2px 4px;">对于整行或多行代码，此时别再使用 {{HTMLElement("code")}}  元素来格式化了，而应该对其进行语法高亮。点击语法高亮器按钮（图标是两个代码块），从语言下拉列表中选择一种合适的语言即可。见右图。</p>
+<p>对于整行或多行代码，此时别再使用 {{HTMLElement("code")}}  元素来格式化了，而应该对其进行语法高亮。</p>
 
 <p>下面的例子使用了 JavaScript 语法高亮：</p>
 
@@ -360,7 +360,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </table>
 
 <div class="note">
-<p>在使用前请仔细思考使用拉丁文缩写是否真的能带来好处。上面列出的某些缩写很少用到，很多读者可能不知道其意思，还有一些读者可能会分不清其中的某些缩写。另外，如果你决定使用缩写，那么请确保你的用法是正确的。比如，一个很多人经常会犯的错误是将“e.g.”和“i.e.”弄混。</p>
+<p><strong>备注：</strong>在使用前请仔细思考使用拉丁文缩写是否真的能带来好处。上面列出的某些缩写很少用到，很多读者可能不知道其意思，还有一些读者可能会分不清其中的某些缩写。另外，如果你决定使用缩写，那么请确保你的用法是正确的。比如，一个很多人经常会犯的错误是将“e.g.”和“i.e.”弄混。</p>
 </div>
 
 <h4 id="首字母缩写和一般缩写">首字母缩写和一般缩写</h4>
@@ -458,7 +458,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </p>
 
 <div class="note">
-<p>MDN 允许使用这种通用性的语法（尽管在正式用法中这一点还存在争议）来弥补英语在表达中立性别时的不足。将第三人称复数的代词用来表示性别中立代词（即使用“they”、“them”、“their”、“theirs”）是可以接受的，也就是通常所说的“单数形式的‘they’”。</p>
+<p><strong>备注：</strong>MDN 允许使用这种通用性的语法（尽管在正式用法中这一点还存在争议）来弥补英语在表达中立性别时的不足。将第三人称复数的代词用来表示性别中立代词（即使用“they”、“them”、“their”、“theirs”）是可以接受的，也就是通常所说的“单数形式的‘they’”。</p>
 </div>
 
 <p>或者使用复数形式的“users”：</p>
@@ -560,16 +560,12 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </dl>
 
 <div class="note">
-<p>译注：这种情况在翻译时应将逗号翻译为顿号。“针对 MDN 文档的本地化指南”一文的<a href="https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号">标点符号</a>“一节中也提到了这个问题。</p>
-</div>
-
-<div class="note">
-<p>这一点与 <a href="https://www.mozilla.org/en-US/styleguide/">Mozilla 统一规范</a>有冲突，后者要求不要使用连续逗号。MDN 是这一规则的特例。</p>
+<p><strong>备注：</strong>这种情况在翻译时应将逗号翻译为顿号。“针对 MDN 文档的本地化指南”一文的<a href="https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号">标点符号</a>”一节中也提到了这个问题。</p>
 </div>
 
 <h3 id="拼写">拼写</h3>
 
-<p>如果一个单词具有多种拼写，请使用美国英语的拼写。一般来说，<a href="http://www.dictionary.com/">Dictionary.com</a> 上的第一个拼写是符合此要求的，除非单词本身即为其他变体形式或主要用于美国以外的国家中。例如，如果你去查“<a href="http://dictionary.reference.com/browse/honour">honour</a>”，你会看到一个标注”Chiefly British“，并在其后有一个指向美语标准形式的链接。请不要使用其他的拼写变体。</p>
+<p>如果一个单词具有多种拼写，请使用美国英语的拼写。一般来说，<a href="https://www.dictionary.com/">Dictionary.com</a> 上的第一个拼写是符合此要求的，除非单词本身即为其他变体形式或主要用于美国以外的国家中。例如，如果你去查“<a href="https://dictionary.reference.com/browse/honour">honour</a>”，你会看到一个标注“Chiefly British”，并在其后有一个指向美语标准形式的链接。请不要使用其他的拼写变体。</p>
 
 <dl>
  <dd>
