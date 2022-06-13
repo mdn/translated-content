@@ -1,19 +1,6 @@
 ---
 title: Utilizando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-tags:
-  - AJAX
-  - AJAXfile
-  - Advanced
-  - DOM
-  - Guide
-  - HTTP
-  - JXON
-  - MakeBrowserAgnostic
-  - Tutorial
-  - XHR
-  - XML
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
