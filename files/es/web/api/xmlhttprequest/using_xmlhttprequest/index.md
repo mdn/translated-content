@@ -851,7 +851,7 @@ por favor, lee el artículo sobre {{domxref("document.lastModified")}}.
 
 ## Cross-site XMLHttpRequest
 
-Los navegadores modernos admiten las peticiones cross-site implementando el estándar [Recursos compartidos de origen-cruzado](/en-US/docs/Web/HTTP/CORS) (CORS).
+Los navegadores modernos admiten las peticiones cross-site implementando el estándar [Recursos compartidos de origen-cruzado](/es/docs/Web/HTTP/CORS) (CORS).
 Siempre que el servidor esté configurado para permitir las peticiones desde el origen de su aplicación web,
 `XMLHttpRequest` funcionará. En caso contrario, se lanzará una excepción `INVALID_ACCESS_ERR`.
 
