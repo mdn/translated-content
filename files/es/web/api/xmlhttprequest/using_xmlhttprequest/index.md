@@ -643,7 +643,7 @@ AJAXSubmit(myForm);
 > {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con
 > con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el
 > método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la
-> API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+> API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
 > junto con el método {{domxref("FileReader.readAsBinaryString()",
   "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior
