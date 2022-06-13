@@ -663,7 +663,7 @@ datos clave del usuario. Los datos transmitidos tienen el mismo formato que el m
 del formulario para enviar los datos, si el tipo de codificación del formulario se establece como
 "multipart/form-data". Los objetos FormData pueden utilizarse de varias maneras con un método
 `XMLHttpRequest`. Para ver ejemplos y explicaciones de cómo se puede utilizar
-FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/en-US/docs/Web/API/FormData/Using_FormData_Objects).
+FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/es/docs/Web/API/FormData/Using_FormData_Objects).
 Para fines didácticos aquí hay **una _traducción_ del [ejemplo anterior](#un_pequeño_framework_vanilla) transformado para usar la
 API `FormData`**. Nótese la brevedad del código:
 
