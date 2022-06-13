@@ -1,130 +1,96 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
-  - Interface
-  - Reference
+  - インターフェイス
+  - NeedsNewLayout
+  - リファレンス
+browser-compat: api.HTMLBodyElement
 translation_of: Web/API/HTMLBodyElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLBodyElement</code></strong> インターフェイスは、{{HtmlElement("body")}} 要素を操作するための特別なプロパティ（通常の {{ domxref("HTMLElement") }} インターフェイスから継承されたプロパティを超える）を提供します。</span></p>
+**`HTMLBodyElement`** インターフェイスは、（通常のオブジェクトである {{domxref("HTMLElement")}} が継承によって利用できるもの以外に） {{HtmlElement("body")}} 要素を操作するための特別なプロパティとメソッドを提供します。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>親の {{domxref("HTMLElement")}} および {{domxref("WindowEventHandlers")}} からプロパティを継承します。</em></p>
+_親インターフェイスである {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLBodyElement.aLink")}} {{obsolete_inline}}</dt>
- <dd>アクティブなハイパーリンクの色を表す {{ domxref("DOMString") }} です。</dd>
- <dt>{{domxref("HTMLBodyElement.background")}} {{obsolete_inline}}</dt>
- <dd>背景画像リソースの場所の説明を表す {{ domxref("DOMString") }} です。 これは URI ではないことに注意してください。 ただし、一部のブラウザーの一部の古いバージョンはそれを想定しています。</dd>
- <dt>{{domxref("HTMLBodyElement.bgColor")}} {{obsolete_inline}}</dt>
- <dd>ドキュメントの背景色を表す {{ domxref("DOMString") }} です。</dd>
- <dt>{{domxref("HTMLBodyElement.link")}} {{obsolete_inline}}</dt>
- <dd>未訪問のリンクの色を表す {{ domxref("DOMString") }} です。</dd>
- <dt>{{domxref("HTMLBodyElement.text")}} {{obsolete_inline}}</dt>
- <dd>テキストの前景色を表す {{ domxref("DOMString") }} です。</dd>
- <dt>{{domxref("HTMLBodyElement.vLink")}} {{obsolete_inline}}</dt>
- <dd>訪問済みのリンクの色を表す {{ domxref("DOMString") }} です。</dd>
-</dl>
+- {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
+  - : 文字列で、アクティブなハイパーリンクの色を表します。
+- {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
+  - : 文字列で、背景画像リソースの場所の説明を表します。これは URI ではないことに注意してください。ただし、一部のブラウザーの一部の古いバージョンはそれを想定しています。
+- {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
+  - : 文字列で、ドキュメントの背景色を表します。
+- {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
+  - : 文字列で、未訪問のリンクの色を表します。
+- {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
+  - : 文字列で、テキストの前景色を表します。
+- {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
+  - : 文字列で、訪問済みのリンクの色を表します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p><em>固有のメソッドはありません。 親の {{domxref("HTMLElement")}} および {{domxref("WindowEventHandlers")}} からメソッドを継承します。</em></p>
+_固有のメソッドはありません。 インターフェイスである {{domxref("HTMLElement")}} からメソッドを継承します。_
 
-<h2 id="Event_handlers" name="Event_handlers">イベントハンドラ</h2>
+## イベントハンドラー
 
-<p><em>固有のイベントハンドラはありません。 親の {{domxref("HTMLElement")}} および {{domxref("WindowEventHandlers")}} からイベントハンドラを継承します。</em></p>
+{{domxref("HTMLElement")}} のイベントを継承しています。
 
-<dl>
- <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>{{event("afterprint")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>{{event("beforeprint")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>{{event("beforeunload")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>{{event("hashchange")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>{{event("languagechange")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>オブジェクトが {{event("message")}} イベントを受け取るたびに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onmessageerror")}}</dt>
- <dd>オブジェクトが {{event("messageerror")}} イベントを受け取るたびに呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>{{event("offline")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>{{event("online")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>{{event("pagehide")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>{{event("pageshow")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>{{event("popstate")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onrejectionhandled")}}</dt>
- <dd>{{event("rejectionhandled")}} イベントが発生したときに実行されるコードを表す {{event("Event_handlers", "event handler")}} です。 {{jsxref("Promise")}} が拒否され、拒否が処理されたことを示します。</dd>
- <dt>{{domxref("GlobalEventHandlers.onresize")}}</dt>
- <dd>{{event("resize")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>{{event("storage")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
- <dt>{{domxref("WindowEventHandlers.onunhandledrejection")}}</dt>
- <dd>{{event("unhandledrejection")}} イベントが発生したときに実行されるコードを表す {{event("Event_handlers", "event handler")}} です。 {{jsxref("Promise")}} は拒否されたが拒否が処理されなかったことを示します。</dd>
- <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>{{event("unload")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
-</dl>
+以下の {{domxref("Window")}} の `onXYZ` イベントハンドラープロパティも、 `window` オブジェクトをターゲットとした別名として利用可能です。しかし、これらの情報は `HTMLBodyElement` ではなく、 `window` オブジェクトで直接聞くことをお勧めします。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+> **Note:** `addEventListener()` を `HTMLBodyElement` に対して使用しても、以下に示す `onXYZ` イベントハンドラーを動作させることができません。代わりに {{domxref("window")}} オブジェクトのイベントを待ち受けしてください。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlbodyelement", "HTMLBodyElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>技術的には、イベント関連プロパティの <code>onafterprint</code>、<code>onbeforeprint</code>、<code>onbeforeunload</code>、<code>onblur</code>、<code>onerror</code>、<code>onfocus</code>、<code>onhashchange</code>、<code>onlanguagechange</code>、<code>onload</code>、<code>onmessage</code>、<code>onoffline</code>、<code>ononline</code>、<code>onpopstate</code>、<code>onresize</code>、<code>onstorage</code>、<code>onunload</code> は {{domxref("WindowEventHandlers")}} に移動されました。 <code>HTMLBodyElement</code> はこのインターフェイスを実装します。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "sections.html#the-body-element", "HTMLBodyElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "sections.html#the-body-element", "HTMLBodyElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>次のプロパティは廃止されました: <code>aLink</code>、<code>bgColor</code>、<code>background</code>、<code>link</code>、<code>text</code>、<code>vLink</code>。<br>
-    次のプロパティが追加されました: <code>onafterprint</code>、<code>onbeforeprint</code>、<code>onbeforeunload</code>、<code>onblur</code>、<code>onerror</code>、<code>onfocus</code>、<code>onhashchange</code>、<code>onload</code>、<code>onmessage</code>、<code>onoffline</code>、<code>ononline</code>、<code>onpopstate</code>、<code>onresize</code>、<code>onstorage</code>、<code>onunload</code>。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-62018039', 'HTMLBodyElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}} からの変更はありません。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-62018039', 'HTMLBodyElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
+  - : 文書の印刷を開始した後、または印刷プレビューが閉じられた後に発行されます。
+- {{domxref("window.beforeprint_event", "HTMLBodyElement.onbeforeprint")}}
+  - : 文書を印刷しようとしているとき、または印刷のためにプレビュしようとしているときに発行されます。
+- {{domxref("window.beforeunload_event", "HTMLBodyElement.onbeforeunload")}}
+  - : ウィンドウ、文書、およびそのリソースがアンロードされようとしているときに発行されます。
+- {{domxref("window.gamepadconnected_event", "HTMLBodyElement.ongamepadconnected")}}
+  - : ゲームパッドが接続されたことをブラウザーが検出したとき、またはゲームパッドのボタン／軸が初めて使用されたときに発行されます。
+- {{domxref("window.gamepaddisconnected_event", "HTMLBodyElement.ongamepaddisconnected")}}
+  - : ゲームパッドが切断されたことをブラウザーが検出したときに発行されます。
+- {{domxref("window.hashchange_event", "HTMLBodyElement.onhashchange")}}
+  - : URLのフラグメント識別子（URL の `#` で始まる部分とそれに続く部分）が変更されたときに発行されます。
+- {{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}}
+  - : ユーザーの優先言語が変更されたときに発行されます。
+- {{domxref("window.message_event", "HTMLBodyElement.onmessage")}}
+  - : ウィンドウがメッセージを受け取ったときに発行されます。例えば、他の閲覧コンテキストから [`Window.postMessage()`](/ja/docs/Web/API/Window/postMessage) を呼び出した場合などに発行されます。
+- {{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}
+  - : ウィンドウがデシリアライズできないメッセージを受信したときに発行されます。
+- {{domxref("window.offline_event", "HTMLBodyElement.onoffline")}}
+  - : ブラウザーがネットワークにアクセスできなくなり、 {{domxref("Navigator.onLine")}} の値が `false` に切り替わったときに発行されます。
+- {{domxref("window.online_event", "HTMLBodyElement.ononline")}}
+  - : ブラウザーがネットワークにアクセスし、 {{domxref("Navigator.onLine")}} の値が `true` に切り替わったときに発行されます。
+- {{domxref("window.pagehide_event", "HTMLBodyElement.onpagehide")}}
+  - : ブラウザーがセッションの履歴から別のページを表示する過程で、現在のページを非表示にしたときに発行されます。
+- {{domxref("window.pageshow_event", "HTMLBodyElement.onpageshow")}}
+  - : ブラウザーがナビゲーションによってウィンドウの文書を表示したときに発行されます。
+- {{domxref("window.popstate_event", "HTMLBodyElement.onpopstate")}}
+  - : ユーザーがセッション履歴を操作している間に、アクティブな履歴項目が変更されたときに発行されます。
+- {{domxref("window.rejectionhandled_event", "HTMLBodyElement.onrejectionhandled")}}
+  - : JavaScript のプロミス ({{jsxref("Promise")}}) が拒否され、拒否の処理が行われたときに発行されます。
+- {{domxref("window.storage_event", "HTMLBodyElement.onstorage")}}
+  - : 他の文書のコンテキストでストレージ領域 (`localStorage`) が変更されたときに発行されます。
+- {{domxref("window.unhandledrejection_event", "HTMLBodyElement.onunhandledrejection")}}
+  - : プロミス ({{jsxref("Promise")}}) が拒否されたが、拒否の処理が行われなかった場合に発行されます。
+- {{domxref("window.unload_event", "HTMLBodyElement.onunload")}}
+  - : ドキュメントがアンロードされるときに発行されます。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 仕様書
 
+{{Specifications}}
 
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLBodyElement")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>このインターフェイスを実装する HTML 要素: {{ HTMLElement("body") }}</li>
- <li>{{domxref("WindowEventHandlers")}}</li>
-</ul>
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("body") }}
