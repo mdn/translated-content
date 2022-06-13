@@ -128,7 +128,7 @@ div > div {
   height: 200px;
   border-width: 30px;
   border-style: solid;
-  border-image: url(border-diamonds.png);
+  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
   border-image-slice: 30;
   border-image-repeat: round;
 }
