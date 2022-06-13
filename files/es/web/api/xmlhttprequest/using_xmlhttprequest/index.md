@@ -1,6 +1,6 @@
 ---
 title: Utilizando XMLHttpRequest
-slug: Web/API/XMLHttpRequest/Utilizando_XMLHttpRequest
+slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 tags:
   - AJAX
   - AJAXfile
@@ -66,10 +66,10 @@ Workers.
 
 Hay varios tipos de [atributos de
 respuesta](https://xhr.spec.whatwg.org/) definidos por la especificación del estándar para el
-constructor {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}. Esto le dice al
+constructor {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}. Esto le dice
 al cliente que realiza el `XMLHttpRequest` información importante sobre el estado
 de la respuesta. Algunos casos en los que tratar con tipos de respuesta no textuales puede implicar alguna
-manipulación y análisis se describen en las siguientes secciones.
+manipulación y análisis como se describen en las siguientes secciones.
 
 ### Analizar y manipular la propiedad responseXML
 
@@ -78,10 +78,10 @@ Si utiliza `XMLHttpRequest` para obtener el contenido de un documento XML remoto
 que contiene un documento XML analizado. Esto podría resultar difícil de manipular y analizar.
 Principalmente hay cuatro formas de analizar este documento XML:
 
-1. Usando [XPath](/es-US/docs/Web/XPath) para dirigir (o señalar) partes de
+1. Usando [XPath](/en-US/docs/Web/XPath) para dirigir (o apuntar a) partes
     del mismo.
 2. Manualmente [Analizar y
-    serializar el XML](/es-US/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
+    serializar el XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
 3. Usando {{domxref("XMLSerializer")}} para serializar **árboles DOM a cadenas o a
     archivos**.
 4. {{jsxref("RegExp")}} se puede utilizar si siempre se conoce el contenido del documento XML
@@ -92,7 +92,7 @@ Principalmente hay cuatro formas de analizar este documento XML:
 > **Nota:** `XMLHttpRequest` ahora puede interpretar HTML por ti
 > utilizando la propiedad {{domxref("XMLHttpRequest.responseXML", "responseXML")}}. Lea el
 > artículo sobre [HTML
-> en XMLHttpRequest](/es-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) para aprender como hacerlo.
+> en XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) para aprender como hacerlo.
 
 ### Procesamiento de una propiedad responseText que contiene un documento HTML
 
@@ -103,13 +103,9 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 
 1. Utilizar la propiedad `XMLHttpRequest.responseXML` como se explica en el artículo
     [HTML en
-    XMLHttpRequest](/es-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
-2. Inyectar el contenido en el cuerpo de un [fragmento de documento](/es-US/docs/Web/API/DocumentFragment) mediante
+    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+2. Inyectar el contenido en el cuerpo de un [fragmento de documento](/en-US/docs/Web/API/DocumentFragment) mediante
     `fragment.body.innerHTML` y recorrer el DOM del fragmento.
-3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
-    `responseText` beforehand. You might want to remove line breaks, if you use
-    RegExp to scan with regard to linebreaks. However, this method is a "last resort"
-    since if the HTML code changes slightly, the method will likely fail.
 3. {{jsxref("RegExp")}} puede utilizarse si siempre se conoce el contenido del HTML
     `responseText` de antemano. Es posible que desee eliminar los saltos de línea, si utiliza `RegExp` para
     escanear en lo que respecta a los saltos de línea. Sin embargo, este método es un "último recurso"
@@ -219,7 +215,7 @@ bytes transferidos hasta el momento en los campos `total` y `loaded` del evento.
 Sin embargo, si el campo `lengthComputable` es falso, la longitud total
 no se conoce y será cero.
 
-Los eventos de progreso existen tanto para las transferencias de descarga como de subida. Los eventos de descarga se
+Los eventos de progreso existen tanto para las transferencias de descarga como de subida. Los eventos de descarga
 se disparan en el propio objeto `XMLHttpRequest`, como se muestra en el ejemplo anterior.
 Los eventos de subida se disparan en el objeto `XMLHttpRequest.upload`, como se muestra
 a continuación:
@@ -263,16 +259,16 @@ function loadEnd(e) {
 Ten en cuenta que no hay forma de estar seguros, a partir de la información recibida por el evento
 de la información recibida por el evento `loadend`, en cuanto a la condición que causó la terminación de la operación;
 sin embargo, puede utilizar esto para manejar las tareas que deben realizarse en todos los
-en todos los escenarios de fin de transferencia.
+escenarios de fin de transferencia.
 
 ## Envío de formularios y subida de archivos
 
 Las instancias de `XMLHttpRequest` pueden utilizarse para enviar formularios de dos maneras:
 
 - usando sólo AJAX
-- utilizando el API {{domxref("FormData")}}
+- utilizando la API {{domxref("FormData")}}
 
-El uso del API `FormData` es el más sencillo y rápido, pero tiene la
+El uso de la API `FormData` es el más sencillo y rápido, pero tiene la
 desventaja de que los datos recogidos no pueden ser [stringificados](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 Utilizar sólo AJAX es más complejo, pero suele ser más flexible y potente.
 
@@ -650,7 +646,7 @@ La sintaxis para activar este script es:
 AJAXSubmit(myForm);
 ```
 
-> **Nota:** Este framework utiliza el API {{domxref("FileReader")}}
+> **Nota:** Este framework utiliza la API {{domxref("FileReader")}}
 > para transmitir las cargas de archivos. Este es un API reciente y no está implementada en IE9 o
 > inferiores. Por esta razón, la carga sólo en AJAX se considera **una técnica experimental**.
 > Si no necesita subir archivos binarios, este framework funciona
@@ -659,13 +655,13 @@ AJAXSubmit(myForm);
 > **Nota:** La mejor manera de enviar contenido binario es a través de
 > {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con
 > con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el
-> método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} del
+> método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la
 > API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
 > junto con el método {{domxref("FileReader.readAsBinaryString()",
-  "readAsBinaryString()")}} del API `FileReader`. Por lo tanto, el script anterior
+  "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior
 > tiene sentido sólo cuando se trata de archivos pequeños. Si no tiene intención de
-> de cargar contenido binario, considere utilizar el API `FormData`.
+> de cargar contenido binario, considere utilizar la API `FormData`.
 
 > **Nota:** El método no estándar `sendAsBinary`
 > se considera obsoleto a partir de Gecko 31 {{geckoRelease(31)}} y se eliminará pronto.
@@ -681,7 +677,7 @@ del formulario para enviar los datos, si el tipo de codificación del formulario
 "multipart/form-data". Los objetos FormData pueden utilizarse de varias maneras con un método
 `XMLHttpRequest`. Para ver ejemplos y explicaciones de cómo se puede utilizar
 FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/en-US/docs/Web/API/FormData/Using_FormData_Objects).
-Para fines didácticos aquí hay **una _traducción_ del [ejemplo anterior](#un_pequeño_framework_vanilla) transformado para usar el
+Para fines didácticos aquí hay **una _traducción_ del [ejemplo anterior](#un_pequeño_framework_vanilla) transformado para usar la
 API `FormData`**. Nótese la brevedad del código:
 
 ```html
@@ -761,7 +757,7 @@ function AJAXSubmit (oFormElement) {
 
 <h3>Enctype: text/plain</h3>
 
-<p>La codificación text/plain no está permitida en el API de FormData.</p>
+<p>La codificación text/plain no está permitida en la API de FormData.</p>
 
 <h3>Enctype: multipart/form-data</h3>
 
@@ -811,8 +807,8 @@ function AJAXSubmit (oFormElement) {
 > **Nota:** Como hemos dicho, los objetos **{{domxref("FormData")}}
 > no son objetos [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga
 > en cuenta también que, aunque en este ejemplo hay algunos campos `file` {{
-  HTMLElement("input") }}, **cuando se envía un formulario a través del API `FormData`
-> tampoco es necesario utilizar el API {{domxref("FileReader")}}**:
+  HTMLElement("input") }}, **cuando se envía un formulario a través de la API `FormData`
+> tampoco es necesario utilizar la API {{domxref("FileReader")}}**:
 > los archivos se cargan y suben automáticamente.
 
 ## Obtener la fecha de la última modificación
@@ -859,7 +855,7 @@ Y para probar:
 /* Probemos el fichero "yourpage.html"... */
 
 ifHasChanged("yourpage.html", function (nModified, nVisit) {
-  console.log("La página '" + this.filepath + "' ha cambiado el " + (new Date(nModified)).toLocaleString() + "!");
+  console.log("¡La página '" + this.filepath + "' ha cambiado el " + (new Date(nModified)).toLocaleString() + "!");
 });
 ```
 
