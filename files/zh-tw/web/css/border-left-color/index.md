@@ -40,7 +40,7 @@ border-left-color: unset;
 ### 屬性值
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 定義左側邊框色彩.
+  - : 定義左側邊框色彩。
 
 ## Formal definition 語法定義
 
