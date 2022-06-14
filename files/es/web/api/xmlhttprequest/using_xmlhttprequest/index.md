@@ -321,8 +321,7 @@ dependiendo del tipo de codificación que esté utilizando:
   -----------------------------314911788813839--
   ```
 
-Sin embargo, si utiliza el método `GET`, se añadirá una cadena como la siguiente
-será añadida a la URL:
+Sin embargo, si utiliza el método `GET`, se añadirá a la URL una cadena como la siguiente:
 
 ```plain
 ?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
@@ -907,11 +906,11 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 {{Specifications("api.XMLHttpRequest")}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
 {{Compat("api.XMLHttpRequest")}}
 
-## Ver también
+## Véase también
 
 1. [MDN introducción a AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
 1. [HTML en
