@@ -9662,12 +9662,6 @@
       "Marsf"
     ]
   },
-  "Web/API/CSSOMString": {
-    "modified": "2020-02-18T00:42:09.363Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/CSSPageRule": {
     "modified": "2019-03-23T22:25:29.147Z",
     "contributors": [
@@ -10816,22 +10810,6 @@
       "ethertank",
       "PWeilbacher",
       "electrolysis"
-    ]
-  },
-  "Web/API/DOMString": {
-    "modified": "2020-08-15T09:13:55.800Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09",
-      "YuichiNukiyama",
-      "ethertank",
-      "DavidWalsh"
-    ]
-  },
-  "Web/API/DOMString/Binary": {
-    "modified": "2019-12-06T22:37:36.253Z",
-    "contributors": [
-      "daisuke-f"
     ]
   },
   "Web/API/DOMStringList": {
@@ -21507,12 +21485,6 @@
     "modified": "2020-10-15T22:23:51.539Z",
     "contributors": [
       "mfuji09",
-      "Wind1808"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2019-05-14T00:11:21.419Z",
-    "contributors": [
       "Wind1808"
     ]
   },
@@ -47331,6 +47303,12 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/btoa": {
+    "modified": "2019-12-06T22:37:36.253Z",
+    "contributors": [
+      "daisuke-f"
+    ]
+  },
   "conflicting/Web/API/caches": {
     "modified": "2020-10-15T22:29:46.631Z",
     "contributors": [
@@ -47435,6 +47413,28 @@
       "teoli",
       "Marsf",
       "shide55"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2020-08-15T09:13:55.800Z",
+    "contributors": [
+      "eltociear",
+      "mfuji09",
+      "YuichiNukiyama",
+      "ethertank",
+      "DavidWalsh"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2019-05-14T00:11:21.419Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_a19cd0db4fa65ea1971fadbacdc1280d": {
+    "modified": "2020-02-18T00:42:09.363Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/MathML": {

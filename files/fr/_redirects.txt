@@ -856,7 +856,7 @@
 /fr/docs/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/DOM/Autres_ressources	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/DOM/DOMError	/fr/docs/Web/API/DOMError
-/fr/docs/DOM/DOMString	/fr/docs/Web/API/DOMString
+/fr/docs/DOM/DOMString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/DOM/DataTransfer	/fr/docs/Web/API/DataTransfer
 /fr/docs/DOM/Document.evaluate	/fr/docs/Web/API/Document/evaluate
 /fr/docs/DOM/Document.implementation	/fr/docs/Web/API/Document/implementation
@@ -3616,6 +3616,8 @@
 /fr/docs/Web/API/Console.table	/fr/docs/Web/API/Console/table
 /fr/docs/Web/API/Console/erreur	/fr/docs/Web/API/Console/error
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
+/fr/docs/Web/API/DOMString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/fr/docs/Web/API/DOMString/Binary	/fr/docs/conflicting/Web/API/btoa
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate
@@ -3876,6 +3878,7 @@
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/Web/API/WorkerLocation
+/fr/docs/Web/API/USVString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
 /fr/docs/Web/API/WebGLRenderingContext/canevas	/fr/docs/Web/API/WebGLRenderingContext/canvas
 /fr/docs/Web/API/WebGL_API/By_example/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors

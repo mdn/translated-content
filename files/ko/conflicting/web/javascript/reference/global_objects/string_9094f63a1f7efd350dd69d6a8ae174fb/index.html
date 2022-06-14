@@ -1,0 +1,42 @@
+---
+title: USVString
+slug: >-
+  conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
+tags:
+  - API
+  - DOM
+  - Reference
+  - String
+  - WebIDL
+translation_of: Web/API/USVString
+original_slug: Web/API/USVString
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><span class="seoSummary"><strong><code>USVString</code></strong>은 유니코드 스칼라 값의 모든 가능한 시퀀스 집합에 해당합니다. <code>USVString</code>이 JavaScript로 전달될 땐 {{jsxref("String")}}으로 매핑되며, 보통 유니코드 스칼라 값 문자열을 필요로 하는 텍스트 처리 API에서만 사용합니다.</span> <code>USVString</code>은 짝짓지 않은 서로게이트 코드포인트를 허용하지 않는 점을 제외하면 {{domxref("DOMString")}}과 같습니다. <code>USVString</code>의 해당 코드포인트는 브라우저가 유니코드 "대체 문자" <code>U+FFFD</code>(�)로 변환합니다.</p>
+
+<h2 id="명세">명세</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">명세</th>
+   <th scope="col">상태</th>
+   <th scope="col">코멘트</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebIDL', '#idl-USVString', 'USVString')}}</td>
+   <td>{{Spec2('WebIDL')}}</td>
+   <td>초기 정의.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="같이_보기">같이 보기</h2>
+
+<ul>
+ <li>{{jsxref("String")}}</li>
+ <li>{{domxref("DOMString")}}</li>
+ <li>{{domxref("CSSOMString")}}</li>
+ <li><a href="/ko/docs/Web/API/DOMString/Binary">이진 문자열</a></li>
+</ul>
