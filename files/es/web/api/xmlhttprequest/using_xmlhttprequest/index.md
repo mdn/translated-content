@@ -321,8 +321,7 @@ dependiendo del tipo de codificación que esté utilizando:
   -----------------------------314911788813839--
   ```
 
-Sin embargo, si utiliza el método `GET`, se añadirá una cadena como la siguiente
-será añadida a la URL:
+Sin embargo, si utiliza el método `GET`, se añadirá a la URL una cadena como la siguiente:
 
 ```plain
 ?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
