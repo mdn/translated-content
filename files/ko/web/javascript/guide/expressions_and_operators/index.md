@@ -8,35 +8,31 @@ tags:
   - JavaScript
   - Operators
   - l10n:priority
-  - 연산자
 translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions",
-  "Web/JavaScript/Guide/Numbers_and_dates")}}
 
-이 장은 JavaScript의 표현식과 할당, 비교, 산술, 비트 계산, 논리, 문자열, 삼항 등 여러 가지 연산자를 설명합니다.
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
-[참고서](/ko/docs/Web/JavaScript/Reference/Operators)에서 구체적인 모든 연산자와 표현식의 목록도 확인할 수
-있습니다.
+이번 장에서는 JavaScript의 표현식과 함께 할당, 비교, 산술, 비트 계산, 논리, 문자열, 삼항 등 다양한 연산자를 살펴보겠습니다.
+
+[참고서](/ko/docs/Web/JavaScript/Reference/Operators)에서 모든 연산자와 표현식의 자세한 목록도 확인할 수 있습니다.
 
 ## 연산자
 
-JavaScript에는 다음과 같은 유형의 연산자가 있습니다. 이 절에서는 각각의 연산자에 대해 설명하고, 연산자 우선순위에 관한
-정보를 제공합니다.
+JavaScript의 연산자는 다음과 같은 유형으로 나눌 수 있습니다. 이 절은 각각의 연산자에 대해 설명하고, 연산자 우선순위에 관한 정보를 제공합니다.
 
-- [할당 연산자](#assignment_operators)
-- [비교 연산자](#comparison_operators)
-- [산술 연산자](#arithmetic_operators)
-- [비트 연산자](#bitwise_operators)
-- [논리 연산자](#logical_operators)
-- [문자열 연산자](#string_operators)
-- [조건 (삼항) 연산자](#conditional_ternary_operator)
-- [쉼표 연산자](#comma_operator)
-- [단항 연산자](#unary_operators)
-- [관계 연산자](#relational_operators)
+- [할당 연산자](#할당_연산자)
+- [비교 연산자](#비교_연산자)
+- [산술 연산자](#산술_연산자)
+- [비트 연산자](#비트_연산자)
+- [논리 연산자](#논리_연산자)
+- [문자열 연산자](#문자열_연산자)
+- [조건 (삼항) 연산자](#조건_삼항_연산자)
+- [쉼표 연산자](#쉼표_연산자)
+- [단항 연산자](#단항_연산자)
+- [관계 연산자](#관계_연산자)
 
-JavaScript는 이항 연산자와 단항 연산자를 포함하며, 유일한 삼항 연산자로 조건 연산자도 가지고 있습니다. 이항 연산자는
-연산자의 앞과 뒤에 하나씩, 총 두 개의 피연산자가 필요합니다.
+JavaScript는 이항 연산자와 단항 연산자를 모두 포함하며, 유일한 삼항 연산자로 조건 연산자도 가지고 있습니다. 이항 연산자는 연산자의 앞과 뒤에 하나씩 총 두 개의 피연산자가 필요합니다.
 
 ```js
 피연산자1 연산자 피연산자2
@@ -85,66 +81,191 @@ JavaScript는 이항 연산자와 단항 연산자를 포함하며, 유일한 �
 | [논리 OR 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                           | `x \|\|= y` | `x \|\| (x = y)` |
 | [널 병합 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)                      | `x ??= y`   | `x ?? (x = y)`   |
 
-#### 반환 값과 체이닝
+#### 속성 할당
 
-`x = y`와 같은 할당 역시 대부분의 표현식처럼 값을 반환합니다. 할당 연산자의 반환 값은 다른 할당 연산자나
-콘솔 기록 등을 통해 가져올 수 있습니다.
+어떤 표현식이 [객체](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)로 평가된다면, 할당 표현식의 좌항은 객체로 평가되는 표현식의 속성에 할당할 수 있습니다. 예를 들어,
 
 ```js
-const z = (x = y);  // const z = x = y와 같음
+let obj = {};
 
-console.log(z);     // x = y 할당의 반환 값을 기록
-console.log(x = y); // 또는 반환 값을 직접 기록
+obj.x = 3;
+console.log(obj.x); // 3 출력.
+console.log(obj); // { x: 3 } 출력.
+
+const key = 'y';
+obj[key] = 5;
+console.log(obj[key]); // 5 출력.
+console.log(obj); // { x: 3, y: 5 } 출력.
 ```
 
-반환 값은 위쪽 표의 "뜻" 열에서 등호(`=`)의 오른쪽 표현식 값과 동일합니다. 즉 `(x = y)`는
-`y`를 반환하고, `(x += y)`는 `x + y`의 결과를, `(x **= y)`는
-`x ** y`의 결과를 반환합니다.
+객체에 관한 더 많은 정보를 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)에서 찾아보세요.
 
-논리 할당인 `(x &&= y)`, `(x ||= y)`, `(x ??= y)`의 경우에는 할당 부분을
-제외한 논리 연산의 결과를 반환합니다. 따라서 각각 `x && y`, `x || y`,
-`x ?? y`의 결과를 반환합니다.
+어떤 표현식이 객체로 평가되지 않으면, 그 표현식의 속성에 대한 할당 표현식은 실제로는 할당하지 않습니다.
 
-반환 값은 *할당 전*의 값을 사용한 논리 연산의 결과임에 주의하세요.
+```js
+let val = 0;
 
-할당 표현식 여러 개를 체이닝할 경우에는 각각의 할당을 **오른쪽에서 왼쪽으로** 평가합니다. 다음의 예제를
-봐주세요.
+console.log((val.x = 3)); // 3 출력.
+console.log(val.x); // undefined 출력.
+console.log(val); // 0 출력.
+```
 
-- `w = z = x = y`는 `w = (z = (x = y))` 또는 `x = y; z = y; w = y`와 같습니다.
-- `z += x *= y`는 `z += (x *= y)` 또는 `tmp = x * y; x *= y; z += tmp`와 같습니다.
-  (`tmp`라는 변수를 새로 선언하지는 않습니다)
+수정 불가능한 속성이나, 속성이 없는 표현식(`null`이나 `undefined`)으로 할당을 시도하면 오류가 발생합니다.
 
 #### 구조 분해
 
-더 복잡한 할당에 사용할 수 있는
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)은 배열 리터럴과 객체
-리터럴을 생성할 때와 비슷한 구문을 사용해서 배열과 객체에서 데이터를 추출할 수 있는 JavaScript 표현식입니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문은 JavaScript 표현식 중 하나로, 객체나 배열을 생성할 때와 비슷한 구문으로 사용해서 어떤 객체나 배열에서 데이터를 추출할 수 있습니다.
 
 ```js
 var foo = ['one', 'two', 'three'];
 
-// 구조 분해 미활용
+// 구조 분해 없음
 var one   = foo[0];
 var two   = foo[1];
 var three = foo[2];
 
-// 구조 분해 활용
+// 구조 분해 사용
 var [one, two, three] = foo;
 ```
 
+#### 반환 값과 체이닝
+
+일반적으로, 할당 표현식은 변수 선언([`const`][], [`let`][], [`var`][])과 함께 쓰이거나 독립적인 명령문으로 사용됩니다.
+
+```js
+// 변수 x를 선언해서 f()의 결과로 초기화,
+// x = f() 할당 표현식의 결과는 버려짐.
+let x = f();
+
+// 변수 x를 선언해서 g()의 결과로 초기화,
+// x = g() 할당 표현식의 결과는 버려짐.
+x = g(); // 변수 x를 g()의 결과로 재할당.
+```
+
+[`const`]: /ko/docs/Web/JavaScript/Reference/Statements/const
+[`let`]: /ko/docs/Web/JavaScript/Reference/Statements/let
+[`var`]: /ko/docs/Web/JavaScript/Reference/Statements/var
+
+그런데, 다른 표현식들처럼 `x = f()`와 같은 할당 표현식도 결과 값으로 평가됩니다. 보통 이 값을 사용하진 않지만, 그래도 다른 평가식의 값으로 사용할 수 있다는 점은 바뀌지 않습니다.
+
+할당 체이닝이나, 다른 표현식에 중첩된 할당은 예상하기 힘든 동작을 보일 수 있습니다. 그래서 어떤 JavaScript 스타일 가이드에서는 [할당을 체이닝하거나 중첩하는 걸 지양하라 말합니다][중첩 체인 지양]. 어쨌든, 할당 체이닝과 중첩을 가끔 마주치게 되므로 어떻게 동작하는지는 알아두는 게 좋습니다.
+
+[중첩 체인 지양]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
+
+할당 표현식을 체이닝하거나 중첩함으로써 할당의 결과를 다시 다른 변수에 할당할 수 있습니다. 아니면 콘솔에 기록할 수도 있고, 배열 리터럴이나 함수 호출에 사용할 수도 있습니다.
+
+```js
+let x;
+const y = (x = f()); // 또는 const y = x = f(); 와 같음.
+console.log(y); // x = f() 할당의 반환 값을 기록.
+
+console.log((x = f())); // 반환 값을 직접 기록.
+
+// 할당 표현식은 보통 표현식을 기대하는 곳이라면
+// 어디에나 중첩해 사용할 수 있으며
+// 배열 리터럴의 요소나 함수의 매개변수도 그런 곳 중 일부임.
+console.log([0, (x = f()), 0]);
+console.log(f(0, (x = f()), 0));
+```
+
+평가 결과는 위쪽 표의 "뜻" 열에서 `=` 기호의 우항 표현식 결과와 같습니다. 그래서 `x = f()`의 평가 결과는 `f()`의 평가 결과와 같고, `x += f()`의 평가 결과는 `x + f()`와 같으며, `x **= f()`는 `x ** y`와 같습니다.
+
+논리 할당인 `(x &&= y)`, `(x ||= y)`, `(x ??= y)`의 경우에는 할당 부분을 제외한 논리 연산의 결과를 반환합니다. 따라서 각각 `x && y`, `x || y`, `x ?? y`의 결과를 반환합니다.
+
+할당 표현식을 괄호나 배열 리터럴같은 그룹 연산자 없이 체이닝하면, 할당 표현식은 **오른쪽에서 왼쪽으로 묶이지만**([우측 결합][]), **왼쪽에서 오른쪽으로 평가됩니다**.
+
+[우측 결합]: https://en.wikipedia.org/wiki/Operator_associativity
+
+참고로, 순수한 `=`을 제외한 모든 할당 연산자의 평가 결과 값은 항상 계산하기 전의 값에 기반합니다.
+
+예를 들어, 다음과 같은 함수 `f`, `g`와 변수 `x`, `y`가 선언된 상황을 가정해 보겠습니다.
+
+```js
+function f() {
+  console.log('F!');
+  return 2;
+}
+function g() {
+  console.log('G!');
+  return 3;
+}
+let x, y;
+```
+
+다음 세 예제를 확인해 보세요.
+
+```js
+y = x = f()
+y = [ f(), x = g() ]
+x[f()] = g()
+```
+
+##### 평가 예제 1
+
+`=`은 우측 결합을 하기 때문에 `y = x = f()`는 `y = (x = f())`와 같습니다. 하지만 평가는 왼쪽에서 오른쪽으로 나아가므로,
+
+1. 할당 표현식 `y = x = f()`의 평가를 시작합니다.
+   1. 이 할당의 좌항인 `y`가, `y`라는 이름의 변수 참조로 평가됩니다.
+   2. 할당 표현식 `x = f()`의 평가를 시작합니다.
+      1. 이 할당의 좌항인 `x`가, `x`라는 이름의 변수 참조로 평가됩니다.
+      2. 함수 호출 `f()`가 콘솔에 "F!"를 기록한 후 숫자 `2`로 평가됩니다.
+      3. `f()`의 결과인 `2`를 `x`에 할당합니다.
+   3. 할당 표현식 `x = f()`의 평가가 끝났습니다. 표현식의 결과 값은 `x`의 새로운 값, 즉 `2`입니다.
+   4. 위의 결과인 `2`를 `y`에도 할당합니다.
+2. 할당 표현식 `y = x = f()`의 평가가 끝났습니다. 표현식의 결과 값은 `y`의 새로운 값, 즉 `2`입니다. `x`와 `y`에 `2`를 할당했고, 콘솔에는 "F!"를 기록했습니다.
+
+##### 평가 예제 2
+
+`y = [ f(), x = g() ]` 또한 왼쪽에서 오른쪽으로 평가합니다.
+
+1. 할당 표현식 `y = [ f(), x = g() ]`의 평가를 시작합니다.
+   1. 이 할당의 좌항인 `y`가, `y`라는 이름의 변수 참조로 평가됩니다.
+   2. 배열 리터럴 `[ f(), x = g() ]`의 평가를 시작합니다.
+      1. 함수 호출 `f()`가 콘솔에 "F!"를 기록한 후 숫자 `2`로 평가됩니다.
+      2. 할당 표현식 `x = g()`의 평가를 시작합니다.
+         1. 이 할당의 좌항인 `x`가, `x`라는 이름의 변수 참조로 평가됩니다.
+         2. 함수 호출 `g()`가 콘솔에 "G!"를 기록한 후 숫자 `3`으로 평가됩니다.
+         3. `g()`의 결과인 `3`을 `x`에 할당합니다.
+      3. 할당 표현식 `x = g()`의 평가가 끝났습니다. 표현식의 결과 값은 `x`의 새로운 값, 즉 `3`입니다. 이 결과인 `3`이 배열 리터럴의 두 번째 요소가 됩니다. (첫 번째 요소는 `f()`의 결과인 `2`입니다)
+   3. 배열 리터럴 `[ f(), x = g() ]`의 평가가 끝났습니다. 그 결과는 두 개의 요소를 가진 배열, `[ 2, 3 ]`입니다.
+   4. 위의 결과인 `[ 2, 3 ]` 배열을 `y`에 할당합니다.
+2. 할당 표현식 `y = [ f(), x = g() ]`의 평가가 끝났습니다. 표현식의 결과 값은 `y`의 새로운 값, 즉 `[ 2, 3 ]`입니다. `x`에는 `3`, `y`에는 `[ 2, 3 ]`이 할당됐고, 콘솔에는 "F!" 후에 "G!"를 기록했습니다.
+
+##### 평가 예제 3
+
+`x[f()] = g()` 또한 왼쪽에서 오른쪽으로 평가합니다. (이 예제는 어떤 객체가 `x`에 할당됐다는 추가 가정 하에 진행합니다. 객체에 관한 더 많은 정보는 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)를 참고하세요)
+
+1. 할당 표현식 `x[f()] = g()`의 평가를 시작합니다.
+   1. 이 할당의 좌항인 `x[f()]` 속성 접근의 평가를 시작합니다.
+      1. 이 속성 접근의 `x`가, `x`라는 이름의 변수 참조로 평가됩니다.
+      2. 함수 호출 `f()`가 콘솔에 "F!"를 기록한 후 숫자 `2`로 평가됩니다.
+   2. 이 할당의 속성 접근 `x[f()]`의 평가가 끝났습니다. 그 결과 값은 변수 속성 참조 `x[2]`입니다.
+   3. 다음으로, 함수 호출 `g()`가 콘솔에 "G!"를 기록한 후 숫자 `3`으로 평가됩니다.
+   4. `g()`의 결과인 `3`을 `x[2]`에 할당합니다. (이 단계는 `x`에 [객체](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)를 미리 할당한 경우에만 성공합니다)
+2. 할당 표현식 `x[f()] = g()`의 평가가 끝났습니다. 표현식의 결과 값은 `x[2]`의 새로운 값, 즉 `3`입니다. `x[2]`에는 `3`이 할당됐고, 콘솔에는 "F!" 후에 "G!"를 기록했습니다.
+
+#### 할당 체이닝을 피해야 할 이유
+
+할당 체이닝이나, 다른 표현식에 중첩된 할당은 예상하기 힘든 동작을 보일 수 있습니다. 그래서 [하나의 명령문 내에서 할당을 체이닝하는 것은 추천하지 않습니다][중첩 체인 지양].
+
+특히 [`const`][], [`let`][], [`var`][] 명령문에 변수 체인을 사용하면 종종 제대로 동작하지 않고, 가장 바깥 (왼쪽) 변수만 선언되며 나머지는 `const`/`let`/`var`가 선언하지 않을 것입니다. 예를 들어,
+
+```js
+let z = y = x = f();
+```
+
+위 명령문은 얼핏 봤을 땐 `x`, `y`, `z` 세 변수를 선언하는 모습처럼 보입니다. 하지만 사실 위 코드는 변수 `z`만 선언합니다. 나머지 두 `y`와 `x`는 ([엄격 모드][/ko/docs/web/javascript/reference/strict_mode]에선) 존재하지 않는 변수를 향하는 유효하지 않은 참조거나, 심지어 ([느슨한 모드](/ko/docs/Glossary/Sloppy_mode)에선) `x`와 `y`를 암묵적인 [전역 변수][/ko/docs/glossary/global_variable]로 선언할 수도 있습니다
+
 ### 비교 연산자
 
-비교 연산자는 피연산자를 서로 비교하고, 비교 결과가 참인지에 따라 논리 값을 반환합니다. 피연산자로는 숫자, 문자열,
-논리형, 객체 값을 사용할 수 있습니다. 문자열은 Unicode 값을 사용한 표준 사전식 순서를 기반으로 비교합니다. 만약 두
-피연산자가 서로 다른 타입일 경우, JavaScript가 피연산자를 비교하기에 적합한 타입으로 변환하며, 대개 숫자로 변환해
-비교하는 결과를 낳습니다. 비교 연산에서 발생하는 타입 변환의 유일한 예외는
-`===`와 `!==` 연산자를 사용해 엄격 일치와 불일치 비교를 수행하는 경우입니다. 두 연산자는
-비교하기 전에 피연산자를 변환하려는 시도를 하지 않습니다. 다음과 같은 예제 변수 `var1`과
-`var2`를 가정할 때, 아래의 표에서 비교 연산자의 종류와, 각각 `true`를 반환하는 예제 코드를 볼 수
-있습니다.
+비교 연산자는 피연산자를 서로 비교하고, 비교 결과가 참인지에 따라 논리 값을 반환합니다. 피연산자로는 숫자, 문자열, 논리형, [객체](/ko/docs/Web/JavaScript/Guide/Working_with_Objects) 값을 사용할 수 있습니다. 문자열은 Unicode 값을 사용한 표준 사전식 순서에 따라 비교합니다. 만약 두 피연산자가 서로 다른 타입이면, JavaScript는 피연산자들을 서로 비교하기에 적합한 타입으로 변환합니다. 이 동작은 대개 두 값을 모두 숫자로 변환한 후 비교한 결과를 낳습니다. 비교 연산에서 발생하는 타입 변환의 유일한 예외는
+`===`과 `!==` 연산자를 사용해 엄격 일치와 불일치 비교를 수행하는 경우인데, 두 연산자는
+비교 전에 피연산자를 변환하지 않습니다. 아래의 표는 다음 예제 코드를 사용해 각각의 비교 연산자를 설명합니다.
 
-    var var1 = 3;
-    var var2 = 4;
+```js
+const var1 = 3;
+const var2 = 4;
+```
 
 <table class="standard-table">
   <caption>
@@ -165,7 +286,9 @@ var [one, two, three] = foo;
       </td>
       <td>피연산자가 서로 같으면 <code>true</code>를 반환합니다.</td>
       <td>
-        <code>3 == var1<br />"3" == var1<br />3 == '3'</code>
+        <code>3 == var1</code>
+        <p><code>"3" == var1</code></p>
+        <code>3 == '3'</code>
       </td>
     </tr>
     <tr>
@@ -284,25 +407,91 @@ var [one, two, three] = foo;
 {{jsxref("Infinity")}}를 반환하는 것에 주의하세요) 예를 들어,
 
 ```js
-1 / 2;              // 0.5
+1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // 참
 ```
 
 JavaScript는 표준 산술 연산자(`+`, `-`, `*`, `/`) 외에도 아래의 표에
 나열된 산술 연산자를 제공합니다.
 
-| 연산자                                                                        | 설명                                                                                                                                                                                             | 예제                                                                                                            |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| [나머지](/ko/docs/Web/JavaScript/Reference/Operators/Remainder) (`%`)         | 이항 연산자입니다. 두 피연산자를 나눴을 때의 나머지를 반환합니다.                                                                                                                                | 12 % 5 는 2를 반환합니다.                                                                                       |
-| [증가](/ko/docs/Web/JavaScript/Reference/Operators/Increment) (`++`)          | 단항 연산자입니다. 피연산자에 1을 더합니다. 전위 연산자(`++x`)로 사용하면 피연산자에 1을 더한 값을 반환합니다. 반면 후위 연산자(`x++`)로 사용한 경우 피연산자에 1을 더하기 전의 값을 반환합니다. | `x`가 3일 때, `++x`는 `x`에 4를 할당한 후 4를 반환합니다. 반면 `x++`는 3을 먼저 반환한 후 `x`에 4를 할당합니다. |
-| [감소](/ko/docs/Web/JavaScript/Reference/Operators/Decrement) (`--`)          | 단항 연산자입니다. 피연산자에서 1을 뺍니다. 반환 값은 증가 연산자처럼 동작합니다.                                                                                                                | `x`가 3일 때, `--x`는 `x`에 2를 할당한 후 2를 반환합니다. 반면 `x--`는 3을 먼저 반환한 후 `x`에 2를 할당합니다. |
-| [단항 부정](/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation) (`-`) | 단항 연산자입니다. 피연산자의 부호를 반대로 바꾼 값을 반환합니다.                                                                                                                                | `x`가 3일 때, `-x`는 -3을 반환합니다.                                                                           |
-| [단항 플러스](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus) (`+`)   | 단항 연산자입니다. 피연산자가 숫자 타입이 아니면 숫자로 변환을 시도합니다.                                                                                                                       | `+"3"`은 `3`을 반환합니다. `+true`는 `1`을 반환합니다.                                                          |
-| [거듭제곱](/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation) (`**`) | `base^exponent`, 즉 `base`를 `exponent`로 거듭제곱한 결과를 반환합니다.                                                                                                                          | `2 ** 3`은 `8`을 반환합니다. `10 ** -1`은 `0.1`을 반환합니다.                                                   |
+<table class="standard-table">
+  <caption>
+    산술 연산자
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">연산자</th>
+      <th scope="col">설명</th>
+      <th scope="col">예제</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder">나머지</a>
+        (<code>%</code>)
+      </td>
+      <td>이항 연산자입니다. 두 피연산자를 나눴을 때의 나머지를 반환합니다.</td>
+      <td>12 % 5 는 2를 반환합니다.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Increment">증가</a>
+        (<code>++</code>)
+      </td>
+      <td>
+        단항 연산자입니다. 피연산자에 1을 더합니다. 전위 연산자(<code>++x</code>)로 사용하면 피연산자에 1을 더한 값을
+        반환합니다. 후위 연산자(<code>x++</code>)로 사용한 경우 피연산자에 1을 더하기 전의 값을 반환합니다.
+      </td>
+      <td>
+        <code>x</code>가 3일 때, <code>++x</code>는 <code>x</code>에 4를 할당한 후 4를 반환합니다. 반면
+        <code>x++</code>는 3을 먼저 반환한 후 <code>x</code>에 4를 할당합니다.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement">감소</a>
+        (<code>--</code>)
+      </td>
+      <td>단항 연산자입니다. 피연산자에서 1을 뺍니다. 반환 값은 증가 연산자처럼 동작합니다.</td>
+      <td>
+        <code>x</code>가 3일 때, <code>--x</code>는 <code>x</code>에 2를 할당한 후 2를 반환합니다. 반면
+        <code>x--</code>는 3을 먼저 반환한 후 <code>x</code>에 2를 할당합니다.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation">단항 부정</a>
+        (<code>-</code>)
+      </td>
+      <td>단항 연산자입니다. 피연산자의 부호를 반대로 바꾼 값을 반환합니다.</td>
+      <td><code>x</code>가 3일 때, <code>-x</code>는 -3을 반환합니다.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus">단항 플러스</a>
+        (<code>+</code>)
+      </td>
+      <td>단항 연산자입니다. 피연산자가 숫자 타입이 아니면 숫자로 변환을 시도합니다.</td>
+      <td>
+        <code>+"3"</code>은 <code>3</code>을 반환합니다.<br />
+        <code>+true</code>는 <code>1</code>을 반환합니다.
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation">거듭제곱</a> (<code>**</code>)</td>
+      <td><code>base^exponent</code>, 즉 <code>base</code>를 <code>exponent</code>로 거듭제곱한 결과를 반환합니다.</td>
+      <td>
+        <code>2 ** 3</code>은 <code>8</code>을 반환합니다.<br />
+        <code>10 ** -1</code>은 <code>0.1</code>을 반환합니다.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### 비트 연산자
 
-비트 연산자는 피연산자를 10진수, 16진수, 8진수 숫자로 취급하지 않고, 대신 비트 32개의 집합으로 취급합니다. 예를 들어,
+비트 연산자는 피연산자를 10진수, 16진수, 8진수 숫자로 취급하지 않고, 대신 32개 비트의 집합으로 취급합니다. 예를 들어,
 10진수 9는 2진수 1001로 나타냅니다. 비트 연산자는 이러한 이진법 표현에 대해 연산을 수행하지만, 반환할 땐 JavaScript
 표준 숫자로 반환합니다.
 
@@ -325,8 +514,10 @@ JavaScript는 표준 산술 연산자(`+`, `-`, `*`, `/`) 외에도 아래의 �
 - 두 피연산자를 32비트 정수로 변환해서 비트(0 과 1)의 연속으로 표현합니다. 숫자가 32비트를 초과할 경우 가장 큰
   비트부터 버립니다. 다음은 32비트가 넘는 정수의 변환 예제입니다.
 
-      전: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-      후:                1010 0000 0000 0000 0110 0000 0000 0001
+  ```
+  전: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  후:                1010 0000 0000 0000 0110 0000 0000 0001
+  ```
 
 - 왼쪽 피연산자의 각 비트와 오른쪽 피연산자의 각 비트를 순서대로 쌍으로 만듭니다. 즉, 첫 비트는 첫 비트와, 두 번째
   비트는 두 번째 비트와, ... 32번째 비트는 32번째 비트와 짝을 짓습니다.
@@ -356,11 +547,58 @@ JavaScript는 표준 산술 연산자(`+`, `-`, `*`, `/`) 외에도 아래의 �
 
 아래의 표에서 시프트 연산자의 종류를 볼 수 있습니다.
 
-| 연산자                                                                                              | 설명                                                                                                                                 | 예제                                                                                                                                                      |
-| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [왼쪽 시프트 (`<<`)](/ko/docs/Web/JavaScript/Reference/Operators/Left_shift)                        | 왼쪽 피연산자를 오른쪽 피연산자만큼 왼쪽으로 시프트합니다. 왼쪽으로 넘치는 비트는 버리고, 오른쪽을 0으로 채웁니다.                   | `9<<2`는, 1001을 왼쪽으로 2번 시프트하면 100100이므로 36입니다.                                                                                           |
-| [오른쪽 시프트 (`>>`)](/ko/docs/Web/JavaScript/Reference/Operators/Right_shift)                     | 왼쪽 피연산자를 오른쪽 피연산자만큼 오른쪽으로 시프트합니다. 오른쪽으로 넘치는 비트는 버리고, 왼쪽은 제일 큰 비트의 값으로 채웁니다. | `9>>2`는, 1001을 오른쪽으로 2번 시프트하면 10이므로 2입니다. 마찬가지로 `-9>>2`는, 부호를 유지하므로 -3을 반환합니다.                                     |
-| [부호 없는 오른쪽 시프트 (`>>>`)](/ko/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | 왼쪽 피연산자를 오른쪽 피연산자만큼 오른쪽으로 시프트합니다. 오른쪽으로 넘치는 비트는 버리고, 왼쪽은 0으로 채웁니다.                 | `19>>>2`는, 10011을 오른쪽으로 2번 시프트하면 100이므로 4입니다. 양의 수에 대해서는 오른쪽 시프트와 부호 없는 오른쪽 시프트 둘 다 같은 결과를 반환합니다. |
+<table class="standard-table">
+  <caption>
+    비트 시프트 연산자
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">연산자</th>
+      <th scope="col">설명</th>
+      <th scope="col">예제</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Left_shift">왼쪽 시프트 (<code>&lt;&lt;</code>)</a>
+      </td>
+      <td>
+        왼쪽 피연산자를 오른쪽 피연산자만큼 왼쪽으로 시프트합니다. 왼쪽으로 넘치는 비트는 버리고, 오른쪽을 0으로
+        채웁니다.
+      </td>
+      <td><code>9&lt;&lt;2</code>는, 1001을 왼쪽으로 2번 시프트하면 100100이므로 36입니다.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Right_shift">오른쪽 시프트 (<code>&gt;&gt;</code>)</a>
+      </td>
+      <td>
+        왼쪽 피연산자를 오른쪽 피연산자만큼 오른쪽으로 시프트합니다. 오른쪽으로 넘치는 비트는 버리고, 왼쪽은 제일 큰
+        비트의 값으로 채웁니다.
+      </td>
+      <td>
+        <code>9&gt;&gt;2</code>는, 1001을 오른쪽으로 2번 시프트하면 10이므로 2입니다. 마찬가지로
+        <code>-9&gt;&gt;2</code>는, 부호를 유지하므로 -3을 반환합니다.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift"
+          >부호 없는 오른쪽 시프트 (<code>&gt;&gt;&gt;</code>)</a
+        >
+      </td>
+      <td>
+        왼쪽 피연산자를 오른쪽 피연산자만큼 오른쪽으로 시프트합니다. 오른쪽으로 넘치는 비트는 버리고, 왼쪽은 0으로
+        채웁니다.
+      </td>
+      <td>
+        <code>19&gt;&gt;&gt;2</code>는, 10011을 오른쪽으로 2번 시프트하면 100이므로 4입니다. 양의 수에 대해서는 오른쪽
+        시프트와 부호 없는 오른쪽 시프트 둘 다 같은 결과를 반환합니다.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### 논리 연산자
 
@@ -369,11 +607,52 @@ JavaScript는 표준 산술 연산자(`+`, `-`, `*`, `/`) 외에도 아래의 �
 불리언 값이 아니라면 논리 연산자의 반환 값도 불리언 값이 아닐 수 있습니다. 아래의 표에서 논리 연산자의 설명을 볼 수
 있습니다.
 
-| 연산자                                                                     | 사용법             | 설명                                                                                                                                                                                                 |
-| -------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [논리 AND](/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND) (`&&`) | `expr1 && expr2`   | `expr1`을 `false`로 변환할 수 있으면 `expr1`을 반환합니다. 그 외의 경우에는 `expr2`를 반환합니다. 따라서 불리언 값과 함께 사용한 경우, 둘 다 참일 때 `true`를, 그 외에는 `false`를 반환합니다.       |
-| [논리 OR](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR) (`\|\|`) | `expr1 \|\| expr2` | `expr1`을 `true`로 변환할 수 있으면 `expr1`을 반환합니다. 그 외의 경우에는 `expr2`를 반환합니다. 따라서 불리언 값과 함께 사용한 경우, 둘 중 하나가 참일 때 `true`를, 그 외에는 `false`를 반환합니다. |
-| [논리 NOT](/ko/docs/Web/JavaScript/Reference/Operators/Logical_NOT) (`!`)  | `!expr`            | 단일 피연산자를 `true`로 변환할 수 있으면 `false`를 반환합니다. 그 외에는 `true`를 반환합니다.                                                                                                       |
+<table class="standard-table">
+  <caption>
+    논리 연산자
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="col">연산자</th>
+      <th scope="col">사용법</th>
+      <th scope="col">설명</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND">논리 AND</a>
+        (<code>&amp;&amp;</code>)
+      </td>
+      <td>
+        <code>expr1 &amp;&amp; expr2</code>
+      </td>
+      <td>
+        <code>expr1</code>을 <code>false</code>로 변환할 수 있으면 <code>expr1</code>을 반환합니다. 그 외의 경우에는
+        <code>expr2</code>를 반환합니다. 따라서 불리언 값과 함께 사용한 경우, 둘 다 참일 때 <code>true</code>를, 그
+        외에는 <code>false</code>를 반환합니다.
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR">논리 OR</a> (<code>||</code>)</td>
+      <td><code>expr1 || expr2</code></td>
+      <td>
+        <code>expr1</code>을 <code>true</code>로 변환할 수 있으면 <code>expr1</code>을 반환합니다. 그 외의 경우에는
+        <code>expr2</code>를 반환합니다. 따라서 불리언 값과 함께 사용한 경우, 둘 중 하나가 참일 때 <code>true</code>를,
+        그 외에는 <code>false</code>를 반환합니다.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_NOT">논리 NOT</a>
+        (<code>!</code>)
+      </td>
+      <td><code>!expr</code></td>
+      <td>
+        단일 피연산자를 <code>true</code>로 변환할 수 있으면 <code>false</code>를 반환합니다. 그 외에는
+        <code>true</code>를 반환합니다.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 `false`로 변환할 수 있는 표현식은 평가 결과가 {{jsxref("null")}}, `0`, {{jsxref("NaN")}}, 빈
 문자열(`""`), {{jsxref("undefined")}}인 경우입니다.
@@ -381,33 +660,33 @@ JavaScript는 표준 산술 연산자(`+`, `-`, `*`, `/`) 외에도 아래의 �
 다음 코드는 `&&` (논리 AND) 연산자의 예제입니다.
 
 ```js
-var a1 =  true && true;     // t && t returns true
-var a2 =  true && false;    // t && f returns false
-var a3 = false && true;     // f && t returns false
-var a4 = false && (3 == 4); // f && f returns false
-var a5 = "Cat" && "Dog";    // t && t returns Dog
-var a6 = false && "Cat";    // f && t returns false
-var a7 = "Cat" && false;    // t && f returns false
+var a1 = true && true;      // t && t는 true 반환
+var a2 = true && false;     // t && f는 false 반환
+var a3 = false && true;     // f && t는 false 반환
+var a4 = false && (3 == 4); // f && f는 false 반환
+var a5 = 'Cat' && 'Dog';    // t && t는 Dog 반환
+var a6 = false && 'Cat';    // f && t는 false 반환
+var a7 = 'Cat' && false;    // t && f는 false 반환
 ```
 
 다음 코드는 `||` (논리 OR) 연산자의 예제입니다.
 
 ```js
-var o1 =  true || true;     // t || t returns true
-var o2 = false || true;     // f || t returns true
-var o3 =  true || false;    // t || f returns true
-var o4 = false || (3 == 4); // f || f returns false
-var o5 = "Cat" || "Dog";    // t || t returns Cat
-var o6 = false || "Cat";    // f || t returns Cat
-var o7 = "Cat" || false;    // t || f returns Cat
+var o1 = true || true;      // t || t는 true 반환
+var o2 = false || true;     // f || t는 true 반환
+var o3 = true || false;     // t || f는 true 반환
+var o4 = false || (3 == 4); // f || f는 false 반환
+var o5 = 'Cat' || 'Dog';    // t || t는 Cat 반환
+var o6 = false || 'Cat';    // f || t는 Cat 반환
+var o7 = 'Cat' || false;    // t || f는 Cat 반환
 ```
 
 다음 코드는 `!` (논리 NOT) 연산자의 예제입니다.
 
 ```js
-var n1 = !true;  // !t returns false
-var n2 = !false; // !f returns true
-var n3 = !"Cat"; // !t returns false
+var n1 = !true;  // !t는 false 반환
+var n2 = !false; // !f는 true 반환
+var n3 = !'Cat'; // !t는 false 반환
 ```
 
 #### 단락 평가
@@ -448,12 +727,10 @@ mystring += '글'; // "한글"로 평가되며, mystring에 "한글"을 할당�
 
 ### 조건 (삼항) 연산자
 
-[조건 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)는 JavaScript에서 세 개의
-피연산자를 받는 유일한 연산자입니다. 조건 연산자는 주어진 조건에 따라 두 값 중 하나를 반환합니다. 구문은 다음과
-같습니다.
+[조건 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)는 JavaScript에서 세 개의 피연산자를 받는 유일한 연산자입니다. 조건 연산자는 주어진 조건에 따라 두 값 중 하나를 반환하며, 구문은 다음과 같습니다.
 
 ```js
-condition ? val1 : val2
+condition ? val1 : val2;
 ```
 
 만약 `condition`이 참이라면, 조건 연산자는 `val1`을 반환하고, 그 외에는 `val2`를
@@ -462,7 +739,7 @@ condition ? val1 : val2
 에들 들어,
 
 ```js
-var status = (age >= 18) ? "성인" : "미성년자";
+var status = age >= 18 ? '성인' : '미성년자';
 ```
 
 위의 명령문은 `age`가 18 이상이라면 `status` 변수에 "성인"을 할당하고, 그렇지 않으면
@@ -470,22 +747,17 @@ var status = (age >= 18) ? "성인" : "미성년자";
 
 ### 쉼표 연산자
 
-[쉼표 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comma_Operator)(`,`)는 두 피연산자를
-모두 평가하고, 오른쪽 피연산자의 값을 반환합니다. 쉼표 연산자는 주로 `for` 반복문 안에서 사용해서 한 번의
-반복으로 다수의 변수를 변경할 때 사용합니다. 그 외의 상황에 사용하는 것은, 꼭 필요하지 않다면 좋지 않은 코드 스타일로
-여겨집니다. 대개 쉼표 연산자보다는 두 개의 분리된 명령문을 사용하는 편이 낫습니다.
+[쉼표 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comma_Operator)(`,`)는 두 피연산자를 모두 평가한 후 오른쪽 피연산자의 값을 반환합니다. 쉼표 연산자는 주로 `for` 반복문 안에서 사용하여 한 번의 반복으로 여러 변수를 변경할 때 사용합니다. 꼭 필요하지 않다면, 그 외의 상황에 사용하는 것은 좋지 않은 코드 스타일로 여겨집니다. 대개 쉼표 연산자보다는 두 개의 분리된 명령문을 사용하는 편이 낫습니다.
 
-쉼표 연산자의 예제로는, `a`가 2차원 배열로서 10행 10열의 요소를 가지고 있다면, 다음 코드는 쉼표 연산자를
-사용해서 두 개의 변수를 한꺼번에 업데이트하는 모습을 보입니다. 코드의 실행 결과는 `a`의 요소를 대각선((0,
-0\), (1, 1), (2, 2), ...)으로 출력한 것입니다.
+쉼표 연산자의 예제로, 10행 10열의 2차원 배열 `a`를 가정할 때, 아래의 코드는 쉼표 연산자를 사용해서 두 개의 변수를 한번에 업데이트하는 모습을 보입니다. 코드의 실행 결과는 `a`의 요소를 대각선((0, 0\), (1, 1), (2, 2), ...)으로 출력한 것입니다.
 
 ```js
-var x = [0,1,2,3,4,5,6,7,8,9];
+var x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var a = [x, x, x, x, x];
 
 for (var i = 0, j = 9; i <= j; i++, j--);
 //                                   ^
-  console.log('a[' + i + '][' + j + ']= ' + a[i][j])
+  console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
 ```
 
 ### 단항 연산자
@@ -510,10 +782,10 @@ delete objectName[index];
 `false`를 반환합니다.
 
 ```js
-delete Math.PI;     // false 반환 (설정 불가한 속성 삭제 불가)
+delete Math.PI; // false 반환 (설정 불가한 속성 삭제 불가)
 
-var myobj = {h: 4};
-delete myobj.h;     // true 반환 (사용자 정의 속성 삭제 가능)
+const myObj = {h: 4};
+delete myobj.h; // true 반환 (사용자 정의 속성 삭제 가능)
 ```
 
 ##### 배열의 원소 삭제하기
@@ -539,8 +811,8 @@ typeof (operand)
 다음과 같은 변수를 가정하겠습니다.
 
 ```js
-var myFun = new Function("5 + 2");
-var shape = "round";
+var myFun = new Function('5 + 2');
+var shape = 'round';
 var size = 1;
 var foo = ['Apple', 'Mango', 'Orange'];
 var today = new Date();
@@ -630,23 +902,23 @@ propNameOrNumber in objectName
 
 ```js
 // 배열
-var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees;        // true 반환
 3 in trees;        // true 반환
 6 in trees;        // false 반환
-"bay" in trees;    // false 반환 (인덱스에 위치한 값이 아니라
+'bay' in trees;    // false 반환 (인덱스에 위치한 값이 아니라
                    // 인덱스 자체를 지정해야 함)
-"length" in trees; // true 반환 (length는 Array의 속성임)
+'length' in trees; // true 반환 (length는 Array의 속성임)
 
 // 내장 객체
-"PI" in Math;          // true 반환
-var myString = new String("coral");
-"length" in myString;  // true 반환
+'PI' in Math;         // true 반환
+var myString = new String('coral');
+'length' in myString; // true 반환
 
 // 사용자 정의 객체
-var mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar;  // true 반환
-"model" in mycar; // true 반환
+var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
+'make' in mycar;  // true 반환
+'model' in mycar; // true 반환
 ```
 
 #### `instanceof`
@@ -682,35 +954,35 @@ if (theDay instanceof Date) {
 
 아래 표는 우선순위가 높은 순서에서 낮은 순서로 연산자를 나열합니다.
 
-| 연산자 유형          | 개별 연산자                                             |
-| -------------------- | ------------------------------------------------------- |
-| 맴버 접근            | `. []`                                                  |
-| 인스턴스 호출/생성   | `() new`                                                |
-| 증감                 | `! ~ - + ++ -- typeof void delete`                      |
-| 곱하기/나누기 연산자 | `* / %`                                                 |
-| 더하기/빼기 연산자   | `+ -`                                                   |
-| 비트 시프트          | `<< >> >>>`                                             |
-| 관계                 | `< <= > >= in instanceof`                               |
-| 동등/일치            | `== != === !==`                                         |
-| 비트 AND             | `&`                                                     |
-| 비트 XOR             | `^`                                                     |
-| 비트 OR              | `\|`                                                    |
-| 논리 AND             | `&&`                                                    |
-| 논리 OR              | `\|\|`                                                  |
-| 조건                 | `?:`                                                    |
-| 할당                 | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
-| 쉼표                 | `,`                                                     |
+| 연산자 유형          | 개별 연산자                                                                               |
+| -------------------- | ----------------------------------------------------------------------------------------- |
+| 맴버 접근            | `.` `[]`                                                                                  |
+| 인스턴스 호출/생성   | `()` `new`                                                                                |
+| 증감                 | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
+| 거듭제곱             | `**`                                                                                      |
+| 곱하기/나누기        | `*` `/` `%`                                                                               |
+| 더하기/빼기          | `+` `-`                                                                                   |
+| 비트 시프트          | `<<` `>>` `>>>`                                                                           |
+| 관계                 | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
+| 동등/일치            | `==` `!=` `===` `!==`                                                                     |
+| 비트 AND             | `&`                                                                                       |
+| 비트 XOR             | `^`                                                                                       |
+| 비트 OR              | `\|`                                                                                      |
+| 논리 AND             | `&&`                                                                                      |
+| 논리 OR              | `\|\|`                                                                                    |
+| 조건                 | `?:`                                                                                      |
+| 할당                 | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
+| 쉼표                 | `,`                                                                                       |
 
 각각의 연산자로 향하는 링크를 포함한 더 자세한 표는
-[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#ㅅable)에서 찾을 수
+[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table)에서 찾을 수
 있습니다.
 
 ## 표현식
 
-**표현식**이란 값으로 이행하는 임의의 유효한 코드 단위를 말합니다.
+표현식이란 어떤 값으로 이행하는 임의의 유효한 코드 단위를 말합니다.
 
-구문적으로 유효한 표현식은 모두 어떤 값으로 이행하지만, 개념적으로는 두 가지로 나뉩니다. 하나는 부수 효과가 있는(예시:
-변수에 값을 할당) 표현식이고, 다른 하나는 평가하면 어떤 값으로 이행하는 표현식입니다.
+모든 표현식은 구문이 유효하다면 어떤 값으로 이행하지만, 개념적으로는 두 가지 범주로 나뉩니다. 하나는 부수 효과가 있는 (예시: 변수에 값을 할당) 표현식이고, 다른 하나는 평가하면 어떤 값으로 이행하는 표현식입니다.
 
 `x = 7`은 앞의 범주에 포함됩니다. 이 표현식은 `=` 연산자를 사용해서 값 7을 `x` 변수에
 할당합니다. 표현식 자체도 7로 평가됩니다.
@@ -749,16 +1021,15 @@ this.propertyName
 ```js
 function validate(obj, lowval, hival) {
   if ((obj.value < lowval) || (obj.value > hival))
-    console.log("Invalid Value!");
+    console.log('잘못된 값!');
 }
 ```
 
-다음과 같이, 각 양식 요소의 {{domxref("GlobalEventHandlers/onchange", "onchange")}} 이벤트 처리기에서
-`validate`를 호출할 때 `this`를 사용해서 양식 요소의 참조를 제공할 수 있습니다.
+다음과 같이, 각 양식 요소의 `onchange` 이벤트 처리기에서 `validate`를 호출할 때 `this`를 사용해서 양식 요소의 참조를 제공할 수 있습니다.
 
 ```html
 <p>18과 99 사이의 수를 입력:</p>
-<input type="text" name="age" size=3 onchange="validate(this, 18, 99);">
+<input type="text" name="age" size="3" onchange="validate(this, 18, 99);">
 ```
 
 #### 그룹 연산자
@@ -772,13 +1043,13 @@ var b = 2;
 var c = 3;
 
 // 기본 우선순위에서는
-a + b * c;     // 7
+a + b * c;   // 7
 // 이런 순서로 평가함
-a + (b * c);   // 7
+a + (b * c); // 7
 
 // 우선순위 재정의
 // 곱하기보다 더하기를 먼저 수행
-(a + b) * c;   // 9
+(a + b) * c; // 9
 
 // ...하면 아래와 같음
 a * c + b * c; // 9

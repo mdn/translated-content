@@ -183,7 +183,7 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **참고:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence).
+> **참고:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#연산자_우선순위).
 
 ## Increment and decrement operators
 
@@ -298,7 +298,7 @@ var y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **참고:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators), but these are the basic ones you should learn now.
+> **참고:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
