@@ -36,9 +36,13 @@ const writableStream = new WritableStream({
     ...
   }
 }, queuingStrategy);
+
 ...
+
 const writer = writableStream.getWriter();
+
 ..
+
 // check if the stream is closed
 writer.closed.then(() => {
   console.log('writer closed');
