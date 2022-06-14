@@ -47,7 +47,7 @@ var mesPoissons = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = mesPoissons.pop();
 
-console.table(mesPoissons); // angel, clown, madarin
+console.log(mesPoissons); // angel, clown, madarin
 console.log(popped);        // sturgeon
 ```
 
