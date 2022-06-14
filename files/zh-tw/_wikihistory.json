@@ -7837,18 +7837,6 @@
       "Kennyluck"
     ]
   },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:30:45.308Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
-    "modified": "2019-03-18T21:16:54.761Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "conflicting/Web/CSS/@viewport": {
     "modified": "2019-10-22T02:02:49.952Z",
     "contributors": [

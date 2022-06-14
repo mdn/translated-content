@@ -20,13 +20,13 @@ translation_of: WebAssembly/Loading_and_running
 
 <h2 id="使用Fetch">使用 Fetch</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>是一个用来获取网络资源的方便现代的 API。</p>
+<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>是一个用来获取网络资源的方便现代的 API。</p>
 
 <p>假设网络上有一个叫做 simple.wasm 的 WebAssembly 模块：</p>
 
 <ul>
- <li>我们可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a>全局函数来轻松地获取它，该函数返回一个可以解析为<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a>对象的 promise。</li>
- <li>我们可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/arrayBuffer">arrayBuffer()</a>函数把响应（response）转换为带类型数组，该函数返回一个可以解析为带类型数组的 promise。</li>
+ <li>我们可以使用<a href="/en-US/docs/Web/API/fetch">fetch()</a>全局函数来轻松地获取它，该函数返回一个可以解析为<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a>对象的 promise。</li>
+ <li>我们可以使用<a href="/en-US/docs/Web/API/Body/arrayBuffer">arrayBuffer()</a>函数把响应（response）转换为带类型数组，该函数返回一个可以解析为带类型数组的 promise。</li>
  <li>最后，我们使用{{jsxref("WebAssembly.instantiate()")}}函数一步实现编译和实例化带类型数组。</li>
 </ul>
 
