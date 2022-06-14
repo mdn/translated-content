@@ -926,10 +926,10 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 ## Ver también
 
-1. [MDN introducción a AJAX](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+1. [MDN introducción a AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
 1. [HTML en
     XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-1. [Control de acceso HTTP](/en-US/docs/Web/HTTP/CORS)
+1. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
 1. [XMLHttpRequest -
     REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)
 1. [Documentación de Microsoft](https://msdn.microsoft.com/library/ms535874)
