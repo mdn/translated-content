@@ -1,10 +1,6 @@
 ---
 title: '<title>: El elemento Título del documento'
 slug: Web/HTML/Element/title
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
 translation_of: Web/HTML/Element/title
 original_slug: Web/HTML/Elemento/title
 browser-compat: html.elements.title
@@ -15,7 +11,7 @@ browser-compat: html.elements.title
 El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del documento que se muestra en un {{glossary("Browser", "browser")}} la barra de título o la pestaña de una página. Solo contiene texto; las etiquetas dentro del elemento se ignoran.
 
 ```html
-<title>Grandma's Heavy Metal Festival Journal</title>
+<title>Diario del festival de heavy metal de la abuela</title>
 ```
 
 <table class="properties">
@@ -27,7 +23,7 @@ El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del docume
         >
       </th>
       <td>
-        <a href="es/docs/Web/Guide/HTML/Content_categories#contenido_de_metadatos"
+        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_de_metadatos"
           >Contenido de metadatos</a
         >.
       </td>
@@ -35,14 +31,14 @@ El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del docume
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        Texto que no es un {{glossary("whitespace")}} entre elementos.
+        Texto que no es un {{glossary("whitespace","espacio en blanco")}} entre elementos.
       </td>
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
       <td>
         Se requieren etiquetas de apertura y cierre. Tenga en cuenta que 
-        dejar <code>&#x3C;/title></code> debería hacer que el navegador 
+        omitir <code>&#x3C;/title></code> haría que el navegador 
         ignore el resto de la página.
       </td>
     </tr>
@@ -63,7 +59,7 @@ El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del docume
     </tr>
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
-      <td>No se permite ningún <code>role</code>.</td>
+      <td>No se permite <code>role</code>.</td>
     </tr>
     <tr>
       <th scope="row">Interfaz DOM</th>
@@ -88,16 +84,16 @@ Algunas pautas y consejos para componer buenos títulos:
 
 - Evite los títulos de una o dos palabras. Utilice una frase descriptiva o una combinación de términos y definiciones para las páginas de glosario o estilo de referencia.
 - Los motores de búsqueda suelen mostrar los primeros 55 a 60 caracteres del título de una página. El texto más allá de eso puede perderse, así que trate de no tener títulos más largos que eso. Si debe usar un título más largo, asegúrese de que las partes importantes aparezcan antes y que no haya nada crítico en la parte del título que es probable que se elimine.
-- No utilice "Blobs de palabras clave." Si su título es solo una lista de palabras, los algoritmos a menudo reducen la posición de su página en los resultados de búsqueda.
+- No utilice "_blobs_ de palabras clave." Si su título es solo una lista de palabras, los algoritmos a menudo reducen la posición de su página en los resultados de búsqueda.
 - Trate de asegurarse de que sus títulos sean lo más únicos posible dentro de su propio sitio. Los títulos duplicados, o casi duplicados, pueden contribuir a resultados de búsqueda inexactos.
 
 ## Ejemplo
 
 ```html
-<title>Awesome interesting stuff</title>
+<title>Cosas increíbles e interesantes</title>
 ```
 
-Este ejemplo establece una página cuyo título (tal como se muestra en la parte superior de la ventana o en la pestaña de la ventana) es "Awesome interesting stuff".
+Este ejemplo establece una página cuyo título (tal como se muestra en la parte superior de la ventana o en la pestaña de la ventana) es "Cosas increíbles e interesantes".
 
 ## Problemas de accesibilidad
 
@@ -108,7 +104,7 @@ Una técnica de navegación común para los usuarios de tecnología de asistenci
 ### Ejemplo
 
 ```html
-<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+<title>Menú - Comida china Blue House - FoodYum: ¡Comida a domicilio en línea hoy!</title>
 ```
 
 Si el envío de un formulario contiene errores y el envío vuelve a representar la página actual, el título se puede usar para ayudar a que los usuarios se den cuenta de cualquier error en su envío. Por ejemplo, actualice el valor de `title` de la página para reflejar cambios significativos en el estado de la página (como problemas de validación de formularios).
@@ -117,18 +113,18 @@ Si el envío de un formulario contiene errores y el envío vuelve a representar 
 ### Ejemplo
 
 ```html
-<title>2 errores - Tu orden - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+<title>2 errores - Tu orden - Comida china Blue House - FoodYum: ¡Comida a domicilio en línea hoy!</title>
 ```
 
-> **Nota:** Actualmente, los lectores de pantalla no anunciarán automáticamente la actualización dinámica del título de una página. Si va a actualizar el título de la página para reflejar cambios significativos en el estado de una página, entonces también puede ser necesario el uso de [ARIA Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> **Nota:** Actualmente, los lectores de pantalla no anunciarán automáticamente la actualización dinámica del título de una página. Si va a actualizar el título de la página para reflejar cambios significativos en el estado de una página, entonces también puede ser necesario el uso de [regiones en vivo de ARIA](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [MDN Entendiendo las WCAG, Directriz 2.4 explicaciones](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Entendiendo el Criterio de Conformidad 2.4.2 | W3C Entendiendo las WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
