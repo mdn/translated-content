@@ -1,25 +1,12 @@
 ---
 title: Utilizando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-tags:
-  - AJAX
-  - AJAXfile
-  - Advanced
-  - DOM
-  - Guide
-  - HTTP
-  - JXON
-  - MakeBrowserAgnostic
-  - Tutorial
-  - XHR
-  - XML
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 
 En esta guía le echaremos un vistazo a cómo usar
-{{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/en-US/docs/Web/HTTP)
+{{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/es/docs/Web/HTTP)
 con el objetivo de intercambiar datos entre el sitio web y el servidor.
 
 Se incluyen ejemplos, tanto para los casos de uso comunes de `XMLHttpRequest`,
@@ -78,10 +65,10 @@ Si utiliza `XMLHttpRequest` para obtener el contenido de un documento XML remoto
 que contiene un documento XML analizado. Esto podría resultar difícil de manipular y analizar.
 Principalmente hay cuatro formas de analizar este documento XML:
 
-1. Usando [XPath](/en-US/docs/Web/XPath) para dirigir (o apuntar a) partes
+1. Usando [XPath](/es/docs/Web/XPath) para dirigir (o apuntar a) partes
     del mismo.
 2. Manualmente [Analizar y
-    serializar el XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
+    serializar el XML](/es/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
 3. Usando {{domxref("XMLSerializer")}} para serializar **árboles DOM a cadenas o a
     archivos**.
 4. {{jsxref("RegExp")}} se puede utilizar si siempre se conoce el contenido del documento XML
@@ -656,7 +643,7 @@ AJAXSubmit(myForm);
 > {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con
 > con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el
 > método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la
-> API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+> API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
 > junto con el método {{domxref("FileReader.readAsBinaryString()",
   "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior
@@ -676,7 +663,7 @@ datos clave del usuario. Los datos transmitidos tienen el mismo formato que el m
 del formulario para enviar los datos, si el tipo de codificación del formulario se establece como
 "multipart/form-data". Los objetos FormData pueden utilizarse de varias maneras con un método
 `XMLHttpRequest`. Para ver ejemplos y explicaciones de cómo se puede utilizar
-FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/en-US/docs/Web/API/FormData/Using_FormData_Objects).
+FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/es/docs/Web/API/FormData/Using_FormData_Objects).
 Para fines didácticos aquí hay **una _traducción_ del [ejemplo anterior](#un_pequeño_framework_vanilla) transformado para usar la
 API `FormData`**. Nótese la brevedad del código:
 
@@ -805,7 +792,7 @@ function AJAXSubmit (oFormElement) {
 ```
 
 > **Nota:** Como hemos dicho, los objetos **{{domxref("FormData")}}
-> no son objetos [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga
+> no son objetos [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga
 > en cuenta también que, aunque en este ejemplo hay algunos campos `file` {{
   HTMLElement("input") }}, **cuando se envía un formulario a través de la API `FormData`
 > tampoco es necesario utilizar la API {{domxref("FileReader")}}**:
@@ -864,7 +851,7 @@ por favor, lee el artículo sobre {{domxref("document.lastModified")}}.
 
 ## Cross-site XMLHttpRequest
 
-Los navegadores modernos admiten las peticiones cross-site implementando el estándar [Recursos compartidos de origen-cruzado](/en-US/docs/Web/HTTP/CORS) (CORS).
+Los navegadores modernos admiten las peticiones cross-site implementando el estándar [Recursos compartidos de origen-cruzado](/es/docs/Web/HTTP/CORS) (CORS).
 Siempre que el servidor esté configurado para permitir las peticiones desde el origen de su aplicación web,
 `XMLHttpRequest` funcionará. En caso contrario, se lanzará una excepción `INVALID_ACCESS_ERR`.
 
