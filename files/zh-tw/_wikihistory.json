@@ -4466,12 +4466,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-10-15T22:29:08.795Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:21:13.079Z",
     "contributors": [
