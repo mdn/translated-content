@@ -906,7 +906,7 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 {{Specifications("api.XMLHttpRequest")}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
 {{Compat("api.XMLHttpRequest")}}
 
