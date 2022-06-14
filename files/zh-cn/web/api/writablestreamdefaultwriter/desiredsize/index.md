@@ -25,7 +25,7 @@ translation_of: Web/API/WritableStreamDefaultWriter/desiredSize
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : writer 的锁被释放。
+  - : writer 的锁已被释放。
 
 ## 示例
 
@@ -41,9 +41,13 @@ const writableStream = new WritableStream({
     ...
   }
 }, queuingStrategy);
+
 ...
+
 const writer = writableStream.getWriter();
+
 ...
+
 // return stream's desired size
 let size = writer.desiredSize;
 ```
