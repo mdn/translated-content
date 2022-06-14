@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -40,15 +41,15 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 > **Warning:** これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
-  - : {{domxref("DOMString")}} で、 {{htmlattrxref("align", "tr")}} 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。
+  - : 文字列で、 {{htmlattrxref("align", "tr")}} 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。
 - {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
-  - : {{domxref("DOMString")}} で、セルの背景色です。これは、廃止された {{htmlattrxref("bgColor", "tr")}} 属性を反映したものです。
+  - : 文字列で、セルの背景色です。これは、廃止された {{htmlattrxref("bgColor", "tr")}} 属性を反映したものです。
 - {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
-  - : {{domxref("DOMString")}} で、 1 つの文字を含みます。この文字は、列の全てのセルを揃えるための文字です。これは {{htmlattrxref("char", "tr")}} を反映し、既定では言語に関連付けられた小数点の値、例えば英語なら `'.'`、フランス語なら `','` となります。このプロパティはオプションであり、あまり対応されていませんでした。
+  - : 文字列で、 1 つの文字を含みます。この文字は、列の全てのセルを揃えるための文字です。これは {{htmlattrxref("char", "tr")}} を反映し、既定では言語に関連付けられた小数点の値、例えば英語なら `'.'`、フランス語なら `','` となります。このプロパティはオプションであり、あまり対応されていませんでした。
 - {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
-  - : {{domxref("DOMString")}} で、 `HTMLTableRowElement.ch` で定義された文字の右側（左書きの場合。右書きの場合は左側）に何文字残さなければならないかを示す整数です。このプロパティはオプションであり、あまり対応されていませんでした。
+  - : 文字列で、 `HTMLTableRowElement.ch` で定義された文字の右側（左書きの場合。右書きの場合は左側）に何文字残さなければならないかを示す整数です。このプロパティはオプションであり、あまり対応されていませんでした。
 - {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
-  - : {{domxref("DOMString")}} で、セルの内容がどのように垂直方向に配置されるかを示す列挙値です。これは {{htmlattrxref("valign", "tr")}} 属性を反映しており、 `"top"`, `"middle"`, `"bottom"`, `"baseline"` のいずれかになります。
+  - : 文字列で、セルの内容がどのように垂直方向に配置されるかを示す列挙値です。これは {{htmlattrxref("valign", "tr")}} 属性を反映しており、 `"top"`, `"middle"`, `"bottom"`, `"baseline"` のいずれかになります。
 
 ## 仕様書
 

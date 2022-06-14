@@ -373,6 +373,7 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
+/ru/docs/Web/API/DOMString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /ru/docs/Web/API/Document.querySelectorAll	/ru/docs/Web/API/Document/querySelectorAll
 /ru/docs/Web/API/Document/async	/ru/docs/Web/API/XMLDocument/async
 /ru/docs/Web/API/Document/defaultView/popstate_event	/ru/docs/Web/API/Window/popstate_event
@@ -436,6 +437,7 @@
 /ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
 /ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
+/ru/docs/Web/API/USVString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL

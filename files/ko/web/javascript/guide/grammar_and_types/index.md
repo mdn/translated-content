@@ -778,7 +778,7 @@ var poem =
 `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.``
+and so is foo.`
 ```
 
 ## 추가 정보

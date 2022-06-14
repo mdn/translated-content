@@ -4736,12 +4736,6 @@
       "ph4538157"
     ]
   },
-  "Web/API/CanvasImageSource": {
-    "modified": "2019-03-23T22:09:10.185Z",
-    "contributors": [
-      "alinarezrangel"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D": {
     "modified": "2019-03-23T22:54:41.294Z",
     "contributors": [
@@ -5086,18 +5080,6 @@
     "modified": "2019-03-23T22:20:06.466Z",
     "contributors": [
       "rferraris"
-    ]
-  },
-  "Web/API/DOMString": {
-    "modified": "2019-03-18T21:41:05.316Z",
-    "contributors": [
-      "jagomf"
-    ]
-  },
-  "Web/API/DOMString/Binary": {
-    "modified": "2020-08-29T03:33:22.030Z",
-    "contributors": [
-      "Nachec"
     ]
   },
   "Web/API/DeviceMotionEvent": {
@@ -8807,6 +8789,12 @@
     "contributors": [
       "fscholz",
       "sathyasanles"
+    ]
+  },
+  "Web/API/btoa": {
+    "modified": "2020-08-29T03:33:22.030Z",
+    "contributors": [
+      "Nachec"
     ]
   },
   "Web/API/caches": {
@@ -20891,6 +20879,12 @@
       "SoftwareRVG"
     ]
   },
+  "conflicting/Web/API/CanvasRenderingContext2D": {
+    "modified": "2019-03-23T22:09:10.185Z",
+    "contributors": [
+      "alinarezrangel"
+    ]
+  },
   "conflicting/Web/API/Canvas_API/Tutorial": {
     "modified": "2019-03-23T23:19:53.719Z",
     "contributors": [
@@ -21359,12 +21353,9 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2019-03-23T23:53:48.515Z",
+    "modified": "2019-03-18T21:41:05.316Z",
     "contributors": [
-      "DevManny",
-      "teoli",
-      "Mgjbot",
-      "Talisker"
+      "jagomf"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

@@ -32,7 +32,7 @@ translation_of: Web/HTML/Element/Heading_Elements
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任何接受流内容的元素；不要把它作为 {{HTMLElement("hgroup")}} 元素的子元素，这种做法已经被废弃了。</td>
+   <td>任何接受流内容的元素；不要把它作为 {{HTMLElement("hgroup")}} 元素的子元素，这种做法已经被废弃了。</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
@@ -62,7 +62,7 @@ translation_of: Web/HTML/Element/Heading_Elements
  <li>使用 {{HTMLElement("section")}} 元素时，为了方便起见，你应该考虑避免在同一个页面上重复使用 &lt;h1&gt;，&lt;h1&gt; 应被用于表示页面的标题，其他的标题当从 &lt;h2&gt; 开始。在使用 section 时，应当为每个 section 都使用一个 <code>&lt;h2&gt;</code>。详情请参考 {{SectionOnPage("/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <h2 id="示例">示例</h2>
 
@@ -109,7 +109,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 <h3 id="导航">导航</h3>
 
-<p>A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.</p>
+<p>对于使用屏幕阅读软件的用户而言，一种常见的导航方式是从一个标题跳到另一个标题，以快速确定页面的内容。 因此，不要跳过一个或多个标题级别。因为这样做可能会造成混乱，使用户困惑于缺少的标题在哪里。</p>
 
 <h4 id="错误用法">错误用法</h4>
 
@@ -127,7 +127,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 <h4 id="嵌套">嵌套</h4>
 
-<p>Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:</p>
+<p>标题可以嵌套其小节，以反映页面的结构。大多数屏幕阅读器可以生成页面上所有标题的列表，从而帮助用户快速确定内容的层次结构：</p>
 
 <ol>
  <li><code>h1</code> Beetles
@@ -165,7 +165,7 @@ translation_of: Web/HTML/Element/Heading_Elements
  </li>
 </ol>
 
-<p>When headings are nested, heading levels may be "skipped" when closing a subsection.</p>
+<p>当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被“跳过”。</p>
 
 <ul>
  <li><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Headings • Page Structure • WAI Web Accessibility Tutorials</a></li>
@@ -177,11 +177,11 @@ translation_of: Web/HTML/Element/Heading_Elements
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html">Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
-<h3 id="Labeling_section_content">Labeling section content</h3>
+<h3 id="标注章节内容">标注章节内容</h3>
 
-<p>Another common navigation technique for users of screen reading software is to generate a list of <a href="/en-US/docs/Web/HTML/Element#Content_sectioning">sectioning content</a> and use it to determine the page's layout.</p>
+<p>屏幕阅读软件用户的另一种常用导航技术是生成<a href="/zh-CN/docs/Web/HTML/Element#内容分区">内容分区</a>的列表，并使用其确定页面布局</p>
 
-<p>Sectioning content can be labeled using a combination of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.</p>
+<p>Sectioning content can be labeled using a combination of the <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby">aria-labelledby</a></code> and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.</p>
 
 <h4 id="示例_2">示例</h4>
 
@@ -223,17 +223,17 @@ translation_of: Web/HTML/Element/Heading_Elements
   <tr>
    <td>{{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

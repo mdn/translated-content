@@ -1,40 +1,34 @@
 ---
-title: window.fullScreen
+title: Window.fullScreen
 slug: Web/API/Window/fullScreen
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/fullScreen
+browser-compat: api.Window.fullScreen
 ---
-{{ ApiRef() }}
+{{APIRef}}{{Non-standard_Header}}
 
-### Résumé
+La propriété **`fullScreen`**, rattachée à l'interface `Window`, indique si la fenêtre est affichée en mode plein écran ou non.
 
-Cette propriété indique si la fenêtre est affichée en mode plein écran ou non. Elle n'est fiable qu'à partir de Gecko 1.9 (Firefox 3), voir les Notes plus bas.
+Avec des privilèges sur le chrome, cette propriété est accessible en lecture-écriture, sinon elle est uniquement accessible en lecture. Il faut garder à l'esprit que tenter de modifier cette propriété sans disposer des privilèges sur le chrome ne déclenchera pas d'exception mais échouera silencieusement. Ce comportement évite de casser les scripts qui modifient cette propriété pour Internet Explorer.
 
-### Syntaxe
+## Valeur
 
-    var isInFullScreen = windowRef.fullScreen;
+Une valeur booléenne qui indique si la fenêtre est en plein écran.
 
-Avec les privilèges chrome, la propriété est modifiable&nbsp;; autrement elle est en lecture seule. Souvenez-vous que si vous essayez de définir cette propriété sans les privilèges chrome, aucune exception ne sera déclenchée et l'appel échouera juste silencieusement. Cela permet d'empêcher que des scripts conçus pour utiliser cette propriété dans Internet Explorer cessent de fonctionner.
+## Notes
 
-### Valeur de retour
+- Passer entre le mode normal et le mode plein écran déclenchera l'évènement `resize` sur la fenêtre correspondante.
 
-- `isInFullScreen`
-  - : Une valeur booléenne. Signification des valeurs&nbsp;:
+## Exemples
 
-<!---->
+```js
+if (window.fullScreen) {
+  // en plein écran !
+}
+else {
+  // pas en plein écran !
+}
+```
 
-- `true`&nbsp;: La fenêtre est en mode plein écran.
-- `false`&nbsp;: La fenêtre n'est pas en mode plein écran.
+## Compatibilité des navigateurs
 
-### Exemples
-
-### Spécification
-
-{{ DOM0() }}
-
-### Notes
-
-Cette propriété n'est fiable qu'à partir de Mozilla 1.9 (Firefox 3). Mozilla 1.8 et les versions antérieures disposent de cette propriété, mais elle renvoie toujours `false`, même quand la fenêtre est en mode plein écran ({{ Bug(127013) }}).
+{{Compat}}

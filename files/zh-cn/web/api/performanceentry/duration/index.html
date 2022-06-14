@@ -27,7 +27,7 @@ translation_of: Web/API/PerformanceEntry/duration
 
 <p>A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref("PerformanceEntry","performance entry")}}. If the duration concept doesn't apply for a particular performance metric, the browser may choose to return a duration of 0.</p>
 
-<p class="note">Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the difference between the {{domxref("PerformanceEntry.responseEnd")}} and {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp","timestamps")}}.</p>
+<p>Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the difference between the {{domxref("PerformanceEntry.responseEnd")}} and {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp","timestamps")}}.</p>
 
 <h2 id="Example">Example</h2>
 

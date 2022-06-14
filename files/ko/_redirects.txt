@@ -442,7 +442,9 @@
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+/ko/docs/Web/API/CSSOMString	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
+/ko/docs/Web/API/DOMString	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
@@ -503,6 +505,7 @@
 /ko/docs/Web/API/Screen/onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/ServiceWorker/onstatechange	/ko/docs/Web/API/ServiceWorker/statechange_event
 /ko/docs/Web/API/Streams_API/컨셉	/ko/docs/Web/API/Streams_API/Concepts
+/ko/docs/Web/API/USVString	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
 /ko/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ko/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ko/docs/Web/API/WebGL_API/Animating_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL

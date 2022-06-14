@@ -143,7 +143,7 @@ textarea {
 // 在 "generate.js" 中创建一个新的 worker
 const worker = new Worker('./generate.js');
 
-// 当用户点击 "Generate primes" 时, 给 worker 发送一条消息。
+// 当用户点击 "Generate primes" 时，给 worker 发送一条消息。
 // 消息中的 command 属性是 "generate", 还包含另外一个属性 "quota"，即要生成的质数。
 document.querySelector('#generate').addEventListener('click', () => {
   const quota = document.querySelector('#quota').value;
@@ -232,7 +232,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 
 在本文中，我们介绍了 web workers，它使得 web 应用能够离线加载任务到单独的线程中。主线程和 worker 不直接共享任何变量，但是可以通过发送消息来进行通信，这些消息作为 `message` 事件被对方接受。
 
-Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不能访问 DOM， 但是可以作为使主应用程序保持响应的一个有效的方式。
+Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不能访问 DOM，但是可以作为使主应用程序保持响应的一个有效的方式。
 
 ## 参见
 

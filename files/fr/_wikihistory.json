@@ -12201,21 +12201,6 @@
       "loella16"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T23:30:27.295Z",
-    "contributors": [
-      "loella16",
-      "Puxarnal",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/API/DOMString/Binary": {
-    "modified": "2019-03-18T21:41:36.649Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/DOMStringList": {
     "modified": "2019-03-18T21:41:20.124Z",
     "contributors": [
@@ -18598,12 +18583,6 @@
     "modified": "2020-10-15T22:08:32.278Z",
     "contributors": [
       "moshir"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2020-04-28T10:35:09.074Z",
-    "contributors": [
-      "tristantheb"
     ]
   },
   "Web/API/VRDisplayCapabilities": {
@@ -41372,6 +41351,12 @@
       "Fredchat"
     ]
   },
+  "conflicting/Web/API/btoa": {
+    "modified": "2019-03-18T21:41:36.649Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
   "conflicting/Web/Accessibility": {
     "modified": "2019-03-23T23:16:51.023Z",
     "contributors": [
@@ -41551,6 +41536,21 @@
     "contributors": [
       "loella16",
       "xdelatour"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
+    "modified": "2019-03-23T23:30:27.295Z",
+    "contributors": [
+      "loella16",
+      "Puxarnal",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2020-04-28T10:35:09.074Z",
+    "contributors": [
+      "tristantheb"
     ]
   },
   "conflicting/Web/MathML": {

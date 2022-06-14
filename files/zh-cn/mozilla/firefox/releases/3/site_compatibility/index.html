@@ -7,7 +7,7 @@ translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
 <p>参见 <a href="cn/Firefox_3_for_developers">Firefox 3 开发者参考</a></p>
 <h2 id=".E4.BA.8B.E4.BB.B6" name=".E4.BA.8B.E4.BB.B6">事件</h2>
 <h3 id=".E6.8D.95.E8.8E.B7_load_.E4.BA.8B.E4.BB.B6.E7.9B.91.E5.90.AC" name=".E6.8D.95.E8.8E.B7_load_.E4.BA.8B.E4.BB.B6.E7.9B.91.E5.90.AC">捕获 load 事件监听</h3>
-<p>在 Gecko 1.8 中，不能在图片上设置 load 事件监听。 在 Gecko 1.9 中，已在 {{ Bug(234455) }} 中修复。 但是在某些网站中，由于捕获 load 事件的事件监听器不正确而导致问题。参见 {{ Bug(335251) }} 中的讨论。 要修复这个问题，出错的页面不再需要设置事件监听器。</p>
+<p>在 Gecko 1.8 中，不能在图片上设置 load 事件监听。在 Gecko 1.9 中，已在 {{ Bug(234455) }} 中修复。但是在某些网站中，由于捕获 load 事件的事件监听器不正确而导致问题。参见 {{ Bug(335251) }} 中的讨论。要修复这个问题，出错的页面不再需要设置事件监听器。</p>
 <p>例如，如下：</p>
 <pre class="eval">window.addEventListener('load', yourFunction, true);
 </pre>
