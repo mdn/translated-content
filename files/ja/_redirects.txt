@@ -597,7 +597,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/Loop_Statements/while_Statement	/ja/docs/orphaned/Web/JavaScript/Guide/Loop_Statements/while_Statement
 /ja/docs/Core_JavaScript_1.5_Guide/Object_Manipulation_Statements	/ja/docs/orphaned/Web/JavaScript/Guide/Object_Manipulation_Statements
 /ja/docs/Core_JavaScript_1.5_Guide/Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
-/ja/docs/Core_JavaScript_1.5_Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
+/ja/docs/Core_JavaScript_1.5_Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
@@ -642,7 +642,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:Loop_Statements:while_Statement	/ja/docs/orphaned/Web/JavaScript/Guide/Loop_Statements/while_Statement
 /ja/docs/Core_JavaScript_1.5_Guide:Object_Manipulation_Statements	/ja/docs/orphaned/Web/JavaScript/Guide/Object_Manipulation_Statements
 /ja/docs/Core_JavaScript_1.5_Guide:Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
-/ja/docs/Core_JavaScript_1.5_Guide:Operators:Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
+/ja/docs/Core_JavaScript_1.5_Guide:Operators:Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Core_Objects:Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
@@ -2165,9 +2165,9 @@
 /ja/docs/JavaScript/Guide/Object_Manipulation_Statements	/ja/docs/orphaned/Web/JavaScript/Guide/Object_Manipulation_Statements
 /ja/docs/JavaScript/Guide/Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
 /ja/docs/JavaScript/Guide/Objects_and_Properties-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
-/ja/docs/JavaScript/Guide/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators
-/ja/docs/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
-/ja/docs/JavaScript/Guide/Operators/Assignment_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
+/ja/docs/JavaScript/Guide/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#算術演算子
+/ja/docs/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
+/ja/docs/JavaScript/Guide/Operators/Assignment_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
 /ja/docs/JavaScript/Guide/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
 /ja/docs/JavaScript/Guide/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/JavaScript/Guide/Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
@@ -2531,7 +2531,7 @@
 /ja/docs/JavaScript/Reference/Objects/Array/reduceRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 /ja/docs/JavaScript/Reference/Objects/Number	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/JavaScript/Reference/Operators	/ja/docs/Web/JavaScript/Reference/Operators
-/ja/docs/JavaScript/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#Assignment_operators
+/ja/docs/JavaScript/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#代入演算子
 /ja/docs/JavaScript/Reference/Operators/Bitwise_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/JavaScript/Reference/Operators/Comma_Operator-redirect-1	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
@@ -4345,12 +4345,12 @@
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages2/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages2/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
-/ja/docs/Web/JavaScript/Guide/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators
-/ja/docs/Web/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
-/ja/docs/Web/JavaScript/Guide/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators
-/ja/docs/Web/JavaScript/Guide/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators
-/ja/docs/Web/JavaScript/Guide/Operators/Special_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_ternary_operator
-/ja/docs/Web/JavaScript/Guide/Operators/String_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators
+/ja/docs/Web/JavaScript/Guide/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#算術演算子
+/ja/docs/Web/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
+/ja/docs/Web/JavaScript/Guide/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#比較演算子
+/ja/docs/Web/JavaScript/Guide/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#論理演算子
+/ja/docs/Web/JavaScript/Guide/Operators/Special_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#条件_三項_演算子
+/ja/docs/Web/JavaScript/Guide/Operators/String_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#文字列演算子
 /ja/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
@@ -4524,7 +4524,7 @@
 /ja/docs/Web/JavaScript/Reference/Objects/Array/reduceRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 /ja/docs/Web/JavaScript/Reference/Objects/Number	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Reference/Operators
-/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#Assignment_operators
+/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#代入演算子
 /ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
@@ -5114,7 +5114,7 @@
 /ja/docs/dummySlug/Reference/Objects/Array/reduceRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 /ja/docs/dummySlug/Reference/Objects/Number	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/dummySlug/Reference/Operators	/ja/docs/Web/JavaScript/Reference/Operators
-/ja/docs/dummySlug/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#Assignment_operators
+/ja/docs/dummySlug/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#代入演算子
 /ja/docs/dummySlug/Reference/Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/dummySlug/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
