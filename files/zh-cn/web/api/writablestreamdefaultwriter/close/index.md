@@ -43,6 +43,7 @@ close()
 
 ```js
 const list = document.querySelector('ul');
+
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
@@ -73,6 +74,7 @@ function sendMessage(message, writableStream) {
       console.log("Stream error:", err);
     });
 }
+
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
@@ -100,6 +102,7 @@ const writableStream = new WritableStream({
     console.log("Sink error:", err);
   }
 }, queuingStrategy);
+
 sendMessage("Hello, world.", writableStream);
 ```
 
