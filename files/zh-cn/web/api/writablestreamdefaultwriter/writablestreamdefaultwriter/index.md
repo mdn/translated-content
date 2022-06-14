@@ -15,7 +15,7 @@ translation_of: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 
 **`WritableStreamDefaultWriter()`** 构造函数创建一个新的 {{domxref("WritableStreamDefaultWriter")}} 对象实例。
 
-> **备注:** 你通常不需要手动创建，可以使用 {{domxref("WritableStream.getWriter()")}} 方法代替。
+> **备注：** 你通常不需要手动创建，可以使用 {{domxref("WritableStream.getWriter()")}} 方法代替。
 
 ## 语法
 
