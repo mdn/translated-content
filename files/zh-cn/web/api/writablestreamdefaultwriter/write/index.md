@@ -16,7 +16,7 @@ translation_of: Web/API/WritableStreamDefaultWriter/write
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的 **`write()`** 方法将传递的数据块写入 {{domxref("WritableStream")}} 和它的底层 sink，然后返回一个 {{jsxref("Promise")}}，promise 的状态由写入操作是否成功来决定。
 
-请注意，"success" 的含义取决于底层sink；它可能表示该分块已被接收，但是不一定表示它已经安全保存到它最终的目的地。
+请注意，"success" 的含义取决于底层 sink；它可能表示该分块已被接收，但不一定安全地保存到它最终的目的地。
 
 ## 语法
 
@@ -31,7 +31,7 @@ write(chunk)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，如果开始时写入成功，则使用 `undefined` 兑现，如果在写入过程开始之前写入失败或者流出错，则被拒绝。
+一个 {{jsxref("Promise")}}，成功写入后使用 `undefined` 兑现，如果在写入过程开始之前写入失败或者流出错，则拒绝。
 
 ### 异常
 
@@ -44,6 +44,7 @@ write(chunk)
 
 ```js
 const list = document.querySelector('ul');
+
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
@@ -74,6 +75,7 @@ function sendMessage(message, writableStream) {
       console.log("Stream error:", err);
     });
 }
+
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
@@ -101,6 +103,7 @@ const writableStream = new WritableStream({
     console.log("Sink error:", err);
   }
 }, queuingStrategy);
+
 sendMessage("Hello, world.", writableStream);
 ```
 
