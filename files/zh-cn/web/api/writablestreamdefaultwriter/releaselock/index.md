@@ -24,11 +24,11 @@ releaseLock()
 
 ### 参数
 
-无.
+无。
 
 ### 返回值
 
-无 ({{jsxref("undefined")}}).
+无 ({{jsxref("undefined")}})。
 
 ## 示例
 
