@@ -13,7 +13,7 @@ translation_of: Web/API/CountQueuingStrategy
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`CountQueuingStrategy`** 接口提供了一个计数策略，该计数策略内置了对分块队列的计数并且可以在构造流的时候使用。
+[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`CountQueuingStrategy`** 接口提供了一个内置的、用于对分块进行计数的队列策略，可以在构造流的时候使用。
 
 ## 构造函数
 
