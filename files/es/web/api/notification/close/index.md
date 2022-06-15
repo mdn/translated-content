@@ -65,6 +65,6 @@ function spawnNotification(theBody, theIcon, theTitle) {
 
 {{Compat}}
 
-## Vea también
+## Véase también
 
-- [Uso de la API de Notificaciones](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Uso de la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
