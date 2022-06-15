@@ -80,7 +80,7 @@ translation_of: Web/HTML/Element/script
  <dd>这个布尔属性被设置来标明这个脚本在支持 <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES2015 modules</a> 的浏览器中不执行。 — 实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本。</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
  <dd>A cryptographic nonce (number used once) to whitelist inline scripts in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
- <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
+ <dt>{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>Indicates which <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the script, or resources fetched by the script:
  <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
