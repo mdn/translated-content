@@ -12,7 +12,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input
 ---
-<p id="概述">{{HTMLRef}}</p>
+<p>{{HTMLRef}}</p>
 
 <p><strong>HTML <code>&lt;input&gt;</code> 元素</strong>用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent")}}。</p>
 
@@ -550,7 +550,7 @@ translation_of: Web/HTML/Element/input
  </dd>
  <dt>{{ htmlattrdef("autofocus") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。 如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。</dd>
- <dt id="htmlattrdefcapture">{{htmlattrdef("capture")}}</dt>
+ <dt>{{htmlattrdef("capture")}}</dt>
  <dd>
  <p>Introduced in the HTML Media Capture specification and valid for the <code>file</code> input type only, the <code>capture</code> attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with <code>file</code> upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
@@ -564,7 +564,7 @@ translation_of: Web/HTML/Element/input
  <p>For example, if a checkbox whose <code>name</code> is <code>fruit</code> has a <code>value</code> of <code>cherry</code>, and the checkbox is checked, the form data submitted will include <code>fruit=cherry</code>. If the checkbox isn't active, it isn't listed in the form data at all. The default <code>value</code> for checkboxes and radio buttons is <code>on</code>.</p>
  </div>
  </dd>
- <dt id="htmlattrdefdirname">{{htmlattrdef("dirname")}}</dt>
+ <dt>{{htmlattrdef("dirname")}}</dt>
  <dd>
  <p>Valid for <code>text</code> and <code>search</code> input types only, the <code>dirname</code> attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the <a href="#attr-name">name</a> and <a href="#attr-value">value</a>, the second being the value of the <code>dirname</code> as the name with the value of <code>ltr</code> or <code>rtl</code> being set by the browser.</p>
 
@@ -593,38 +593,38 @@ translation_of: Web/HTML/Element/input
 
  <p>Note: An input can only be associated with one form.</p>
  </dd>
- <dt id="htmlattrdefformaction">{{htmlattrdef('formaction')}}</dt>
+ <dt>{{htmlattrdef('formaction')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformenctype">{{htmlattrdef('formenctype')}}</dt>
+ <dt>{{htmlattrdef('formenctype')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformmethod">{{htmlattrdef('formmethod')}}</dt>
+ <dt>{{htmlattrdef('formmethod')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformnovalidate">{{htmlattrdef('formnovalidate')}}</dt>
+ <dt>{{htmlattrdef('formnovalidate')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformtarget">{{htmlattrdef('formtarget')}}</dt>
+ <dt>{{htmlattrdef('formtarget')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("height") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>如果<strong>type</strong>属性的值是 image，这个属性定义了按钮图片的高度。</dd>
- <dt id="htmlattrdefheight">{{htmlattrdef("id")}}</dt>
+ <dt>{{htmlattrdef("id")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See the <a href="#labels">the label element</a> below.</p>
  </dd>
- <dt id="htmlattrdefheight">{{htmlattrdef("inputmode")}}</dt>
+ <dt>{{htmlattrdef("inputmode")}}</dt>
  <dd>
  <p>Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include none<br>
   <code>text</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>numeric</code>, <code>decimal</code>, and <code>search</code>.</p>
  </dd>
- <dt id="htmlattrdeflist">{{htmlattrdef("list")}}</dt>
+ <dt>{{htmlattrdef("list")}}</dt>
 </dl>
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code>  provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options.  The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
@@ -683,7 +683,7 @@ translation_of: Web/HTML/Element/input
  <dd>如果 <strong>type</strong> 的值是  text, email, search, password, tel，或 url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 <strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注:ie10+</dd>
  <dt>{{ htmlattrdef("min") }} {{ HTMLVersionInline(5) }} </dt>
  <dd>此项目的最小（数字或日期时间）值，且不得大于其最大值（最大属性）值。</dd>
- <dt id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</dt>
+ <dt>{{htmlattrdef("minlength")}}</dt>
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
@@ -717,7 +717,7 @@ translation_of: Web/HTML/Element/input
  <dd>使用<strong>min</strong>和<strong>max</strong> 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。</dd>
  <dt>{{ htmlattrdef("tabindex") }} element-specific in {{ HTMLVersionInline(4) }}, global in {{ HTMLVersionInline(5) }}</dt>
  <dd>元素在当前文档的 Tab 导航顺序中的位置。</dd>
- <dt id="htmlattrdefformenctype">{{htmlattrdef('title')}}</dt>
+ <dt>{{htmlattrdef('title')}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See <a href="#labels">Labels</a> below.</p>
  </dd>
@@ -1341,7 +1341,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect1">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 29
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 29
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1371,7 +1371,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect2">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1395,7 +1395,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect3">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1410,7 +1410,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect4">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1442,7 +1442,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect5">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 3.1
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 3.1
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1463,7 +1463,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect6">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1537,7 +1537,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect7">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1552,7 +1552,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect8">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1625,12 +1625,12 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect9">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4.4
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4.4
 
      <div class="bc-icons"></div>
      </dt>
      <dd></dd>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr>2 — 4.4
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr>2 — 4.4
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
      <dd><abbr class="only-icon" title="See implementation notes">Notes</abbr> Pre-Chromium Android WebView recognizes the <code>range</code> type, but doesn't implement a range-specific control.</dd>
@@ -1652,7 +1652,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect10">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1670,7 +1670,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect11">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1706,7 +1706,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect12">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 1
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1724,7 +1724,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect13">
     <dl>
-     <dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4
+     <dt><abbr class="bc-level-yes only-icon" title="Full support">Full support </abbr> 4
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1778,7 +1778,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect14">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1817,7 +1817,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect15">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>
@@ -1832,7 +1832,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
     <section class="bc-history" id="sect16">
     <dl>
-     <dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
+     <dt><abbr class="bc-level-no only-icon" title="No support">No support </abbr> No
 
      <div class="bc-icons"><abbr class="only-icon" title="See implementation notes">Notes</abbr></div>
      </dt>

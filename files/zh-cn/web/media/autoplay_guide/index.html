@@ -21,7 +21,7 @@ original_slug: Web/媒体/Autoplay_guide
 <pre class="brush: js notranslate">audioElement.play();
 </pre>
 
-<p dir="ltr" id="tw-target-text">以下网络功能和 API 可能会受到自动播放阻止的影响：</p>
+<p>以下网络功能和 API 可能会受到自动播放阻止的影响：</p>
 
 <ul>
  <li>The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements</li>
@@ -78,7 +78,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于{{htmlattrxref("autoplay", "audio")}}属性，识别自动播放是否成功开始是很棘手的。自动播放失败时<strong>不会触发</strong>任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。</p>
 
-<p dir="ltr" id="tw-target-text">如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的{{event("play")}}事件来轻松实现此目的。</p>
+<p>如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的{{event("play")}}事件来轻松实现此目的。</p>
 
 <p>The <code>play</code> event is sent both when the media is resumed after being paused <em>and</em> when autoplay occurs. That means that the first time the <code>play</code> event is fired, you know your media is being started for the first time after the page is opened.</p>
 
