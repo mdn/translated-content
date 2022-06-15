@@ -27,7 +27,7 @@ translation_of: Web/API/ByteLengthQueuingStrategy
 ## 方法
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
-  - : 返回给定块的 `byteLength` 属性。
+  - : 返回给定分块的 `byteLength` 属性。
 
 ## 示例
 
