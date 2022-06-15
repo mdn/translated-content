@@ -368,14 +368,14 @@ myImage.onclick = function() {
 let myHeading = document.querySelector('h1');</pre>
  </li>
  <li>然后添加以下函数来设置个性化欢迎信息。（函数需要在调用后生效，下文中提供了两种对该函数的调用方式）
-  <pre class="brush: html notranslate">function setUserName() {
+  <pre class="brush: js">function setUserName() {
   let myName = prompt('请输入你的名字。');
   localStorage.setItem('name', myName);
   myHeading.textContent = 'Mozilla 酷毙了，' + myName;
 }</pre>
   该函数首先调用了 <a href="/zh-CN/docs/Web/API/Window.prompt"><code>prompt()</code></a> 函数，与 <code>alert()</code> 类似会弹出一个对话框。但是这里需要用户输入数据，并在确定后将数据存储在 <code>myName</code> 变量里。接下来将调用 <code><a href="/zh-CN/docs/Web/API/Window/localStorage">localStorage</a></code> API，它可以将数据存储在浏览器中供后续获取。这里用 <code>localStorage</code> 的 <code>setItem()</code> 函数来创建一个<code>'name'</code> 数据项，并把 <code>myName</code> 变量复制给它。最后将 <code>textContent</code> 属性设置为一个欢迎字符串加上这个新设置的名字。</li>
  <li>接下来，添加以下的 <code>if ... else</code> 块。我们可以称之为初始化代码，因为它在页面初次读取时进行构造工作：
-  <pre class="brush: html notranslate">if(!localStorage.getItem('name')) {
+  <pre class="brush: js">if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
@@ -383,7 +383,7 @@ let myHeading = document.querySelector('h1');</pre>
 }</pre>
   这里首次使用了取非运算符（逻辑非，用 <code>!</code> 表示）来检测 <code>'name'</code> 数据是否存在。若不存在，调用 <code>setUserName()</code> 创建。若存在（即用户上次访问时设置过），调用 <code>getItem()</code> 获取保存的名字，像上文的 <code>setUserName()</code> 那样设置 <code>textContent</code>。</li>
  <li>最后，为按钮设置 onclick 事件处理器。按钮按下时运行 setUserName() 函数。这样用户就可以通过按这个按钮来自由设置新名字了：
-  <pre class="brush: html notranslate">myButton.onclick = function() {
+  <pre class="brush: js">myButton.onclick = function() {
    setUserName();
 }</pre>
  </li>
@@ -399,13 +399,13 @@ let myHeading = document.querySelector('h1');</pre>
 
 <p>要避免这些问题，应该更新 <code>setUserName()</code> 来检查用户是否输入了 <code>null</code> 或者空名字：</p>
 
-<pre class="brush: js notranslate">function setUserName() {
+<pre class="brush: js">function setUserName() {
   let myName = prompt('请输入你的名字。');
   if(!myName || myName === null) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Mozilla 酷毙了，' + myName;
+    myHeading.textContent = 'Mozilla 酷毙了，' + myName;
   }
 }</pre>
 
