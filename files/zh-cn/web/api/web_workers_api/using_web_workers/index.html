@@ -291,7 +291,7 @@ onmessage = function (oEvent) {
 
 <h3 id="传递数据的例子">传递数据的例子</h3>
 
-<h4 id="例子_1：_创建一个通用的_「异步_eval」">例子 #1： 创建一个通用的「异步 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a>」</h4>
+<h4 id="例子_1：_创建一个通用的_「异步_eval」">例子 #1：创建一个通用的「异步 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a>」</h4>
 
 <p>下面这个例子介绍了，如何在 worker 内使用  <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval">eval()</a> </code>来按顺序执行<strong>异步的</strong>任何种类的 JavaScript 代码：</p>
 
@@ -573,7 +573,7 @@ onmessage = function (oEvent) {
 
 <h3 id="通过转让所有权可转让对象来传递数据">通过转让所有权 (可转让对象) 来传递数据</h3>
 
-<p>Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 (<a href="http://w3c.github.io/html/infrastructure.html#transferable-objects">可转让对象</a>) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 <a href="/en/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer </a>对象从主应用转让到 Worker 中，原始的 <code>ArrayBuffer</code> 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。</p>
+<p>Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 (<a href="http://w3c.github.io/html/infrastructure.html#transferable-objects">可转让对象</a>) 传递给一个 worker/从 worker 传回。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 <a href="/en/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer </a>对象从主应用转让到 Worker 中，原始的 <code>ArrayBuffer</code> 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。</p>
 
 <pre class="brush: js notranslate">// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
@@ -727,7 +727,7 @@ onmessage = function(event) {
 &lt;/html&gt;
 </pre>
 
-<p>网页创建了一个 <code>div</code> 元素，ID 为 <code>result</code> ， 用它来显示运算结果，然后生成 worker。在生成 worker 后，<code>onmessage</code> 处理函数配置为通过设置 <code>div</code> 元素的内容来显示运算结果，然后 <code>onerror</code> 处理函数被设置为 <a class="external" href="/en/Debugging_JavaScript#dump()">转储</a> 错误信息。</p>
+<p>网页创建了一个 <code>div</code> 元素，ID 为 <code>result</code> ，用它来显示运算结果，然后生成 worker。在生成 worker 后，<code>onmessage</code> 处理函数配置为通过设置 <code>div</code> 元素的内容来显示运算结果，然后 <code>onerror</code> 处理函数被设置为 <a class="external" href="/en/Debugging_JavaScript#dump()">转储</a> 错误信息。</p>
 
 <p>最后，向 worker 发送一条信息来启动它。</p>
 

@@ -37,7 +37,7 @@ translation_of: Web/API/Permissions_API/Using_the_Permissions_API
 
 <p><img alt="Screenshot showing a map of Greenfield, UK." src="https://mdn.mozillademos.org/files/11501/location-finder-with-permissions-api.png" style="display: block; height: 428px; margin: 0px auto; width: 700px;"></p>
 
-<p>You can <a href="https://chrisdavidmills.github.io/location-finder-permissions-api/">在线运行</a>， 或 <a href="https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages">在 Github 查看源码</a>。 大部分代码都很简单且常见──所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。</p>
+<p>You can <a href="https://chrisdavidmills.github.io/location-finder-permissions-api/">在线运行</a>，或 <a href="https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages">在 Github 查看源码</a>。大部分代码都很简单且常见──所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。</p>
 
 <h3 id="访问_Permissions_API">访问 Permissions API</h3>
 
@@ -119,7 +119,7 @@ function revokePermission() {
 
 <ul>
  <li><strong>Firefox</strong>: <em>工具 &gt; 页面信息 &gt; 权限 &gt; 访问你的位置</em>。选择“总是询问”。</li>
- <li><strong>Chrome</strong>: <em>汉堡菜单 &gt; 设置 &gt; 显示高级设置。在隐私部分，点击“内容设置”。在出现的对话框中，找到 “位置” 部分，选择“当网站试图访问时询问”...最后，点击“管理特例”</em>，移除你对特定网站的授权。</li>
+ <li><strong>Chrome</strong>: <em>汉堡菜单 &gt; 设置 &gt; 显示高级设置。在隐私部分，点击“内容设置”。在出现的对话框中，找到“位置”部分，选择“当网站试图访问时询问”...最后，点击“管理特例”</em>，移除你对特定网站的授权。</li>
 </ul>
 
 <p>但是，未来浏览器会提供 <code>request()</code> 方法，他让我们可以在任何时候以编程的方式来请求权限。这非常值得期待尽快被实现。</p>

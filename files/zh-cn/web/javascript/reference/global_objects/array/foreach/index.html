@@ -181,7 +181,7 @@ obj.sum;
 
 <h3 id="对象复制器函数">对象复制器函数</h3>
 
-<p>下面的代码会创建一个给定对象的副本。 创建对象的副本有不同的方法，以下是只是一种方法，并解释了 <code>Array.prototype.forEach()</code> 是如何使用 ECMAScript 5 <code>Object.*</code> 元属性（meta property）函数工作的。</p>
+<p>下面的代码会创建一个给定对象的副本。创建对象的副本有不同的方法，以下是只是一种方法，并解释了 <code>Array.prototype.forEach()</code> 是如何使用 ECMAScript 5 <code>Object.*</code> 元属性（meta property）函数工作的。</p>
 
 <pre class="brush: js">function copy(obj) {
   const copy = Object.create(Object.getPrototypeOf(obj));

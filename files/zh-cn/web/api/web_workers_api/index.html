@@ -24,7 +24,7 @@ translation_of: Web/API/Web_Workers_API
 
 <p>worker 可以另外生成新的 worker，这些 worker 与它们父页面的宿主相同。 此外，worker 可以通过 <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> 来访问网络，只不过 <code>XMLHttpRequest</code> 的 <code>responseXML</code> 和 <code>channel</code> 这两个属性的值将总是 <code>null</code> 。</p>
 
-<p>除了专用 worker 之外，还有一些其他种类的 worker ：</p>
+<p>除了专用 worker 之外，还有一些其他种类的 worker：</p>
 
 <ul>
  <li>Shared Workers 可被不同的窗体的多个脚本运行，例如 IFrames 等，只要这些 workers 处于同一主域。共享 worker 比专用 worker 稍微复杂一点 — 脚本必须通过活动端口进行通讯。详情请见{{domxref("SharedWorker")}}。</li>
@@ -34,7 +34,7 @@ translation_of: Web/API/Web_Workers_API
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 根据网络 worker 规范， worker 错误事件不应该冒泡（参见{{bug(1188141)}}）。该规范已在 Firefox 42 中实现。</p>
+<p><strong>注意</strong>: 根据网络 worker 规范，worker 错误事件不应该冒泡（参见{{bug(1188141)}}）。该规范已在 Firefox 42 中实现。</p>
 </div>
 
 <h2 id="Web_Worker_接口">Web Worker 接口</h2>
@@ -49,9 +49,9 @@ translation_of: Web/API/Web_Workers_API
  <dt>{{domxref("WorkerGlobalScope")}}</dt>
  <dd>表示任意 worker 的通用作用域（对于正常的网页类容来说与{{domxref("Window")}} 有相同的作用）。不同类型的 worker 都有从接口继承作用于对象，并且可以添加更多特定功能。</dd>
  <dt>{{domxref("DedicatedWorkerGlobalScope")}}</dt>
- <dd>表示一个专用 worker 的作用域， 继承自{{domxref("WorkerGlobalScope")}}，且可添加一些特有的功能。</dd>
+ <dd>表示一个专用 worker 的作用域，继承自{{domxref("WorkerGlobalScope")}}，且可添加一些特有的功能。</dd>
  <dt>{{domxref("SharedWorkerGlobalScope")}}</dt>
- <dd>表示一个共享 worker 的作用域， 继承自{{domxref("WorkerGlobalScope")}}， 且可添加一些特有的功能。</dd>
+ <dd>表示一个共享 worker 的作用域，继承自{{domxref("WorkerGlobalScope")}}，且可添加一些特有的功能。</dd>
  <dt>{{domxref("WorkerNavigator")}}</dt>
  <dd>表示用户代理（客户端）的身份和状态。</dd>
 </dl>

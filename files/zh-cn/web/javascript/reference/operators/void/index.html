@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Operators/void
 
 <h2 id="在箭头函数中避免泄漏">在箭头函数中避免泄漏</h2>
 
-<p>箭头函数标准中，允许在函数体不使用括号来直接返回值。 如果右侧调用了一个原本没有返回值的函数，其返回值改变后，则会导致非预期的副作用。 安全起见，当函数返回值是一个不会被使用到的时候，应该使用 <code>void</code> 运算符，来确保返回 {{jsxref("Global_Objects/undefined", "undefined")}}（如下方示例），这样，当 API 改变时，并不会影响箭头函数的行为。</p>
+<p>箭头函数标准中，允许在函数体不使用括号来直接返回值。如果右侧调用了一个原本没有返回值的函数，其返回值改变后，则会导致非预期的副作用。安全起见，当函数返回值是一个不会被使用到的时候，应该使用 <code>void</code> 运算符，来确保返回 {{jsxref("Global_Objects/undefined", "undefined")}}（如下方示例），这样，当 API 改变时，并不会影响箭头函数的行为。</p>
 
 <pre class="brush: js">button.onclick = () =&gt; void doSomething();</pre>
 

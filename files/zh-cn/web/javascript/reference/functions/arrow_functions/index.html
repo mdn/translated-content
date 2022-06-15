@@ -186,7 +186,7 @@ var arr = () =&gt; arguments[0];
 arr(); // 1
 
 function foo(n) {
-  var f = () =&gt; arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象. arguments[0] 是 n，即传给 foo 函数的第一个参数
+  var f = () =&gt; arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象。arguments[0] 是 n，即传给 foo 函数的第一个参数
   return f();
 }
 
@@ -302,7 +302,7 @@ var func = () =&gt; { foo: function() {} };
            =&gt; 1;
 // SyntaxError: expected expression, got '=&gt;'</pre>
 
-<p>但是，可以通过在 ‘=&gt;’ 之后换行，或者用 ‘( )’、'{ }'来实现换行，如下：</p>
+<p>但是，可以通过在‘=&gt;’之后换行，或者用‘( )’、'{ }'来实现换行，如下：</p>
 
 <pre class="brush: js">var func = (a, b, c) =&gt;
   1;
@@ -431,7 +431,7 @@ v();    //1
 v();    //2
 
 
-//箭头函数体的闭包（ i=0 是默认参数）
+//箭头函数体的闭包（i=0 是默认参数）
 var Add = (i=0) =&gt; {return (() =&gt; (++i) )};
 var v = Add();
 v();           //1

@@ -48,7 +48,7 @@ eval("2 + 2");             // returns 4
 eval(expression.toString());
 </pre>
 
-<p>如果你间接的使用 <code>eval()</code>，比如通过一个引用来调用它，而不是直接的调用 <code>eval</code>。 从 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2">ECMAScript 5</a> 起，它工作在全局作用域下，而不是局部作用域中。这就意味着，例如，下面的代码的作用声明创建一个全局函数，并且 <code>eval</code> 中的这些代码在执行期间不能在被调用的作用域中访问局部变量。</p>
+<p>如果你间接的使用 <code>eval()</code>，比如通过一个引用来调用它，而不是直接的调用 <code>eval</code>。从 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2">ECMAScript 5</a> 起，它工作在全局作用域下，而不是局部作用域中。这就意味着，例如，下面的代码的作用声明创建一个全局函数，并且 <code>eval</code> 中的这些代码在执行期间不能在被调用的作用域中访问局部变量。</p>
 
 <pre class="brush: js">function test() {
   var x = 2, y = 4;
@@ -60,7 +60,7 @@ eval(expression.toString());
 
 <h2 id="Don.27t_use_eval.21">永远不要使用 <code>eval</code>！</h2>
 
-<p><code>eval()</code> 是一个危险的函数， 它使用与调用者相同的权限执行代码。如果你用 <code>eval()</code> 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。更重要的是，第三方代码可以看到某一个 <code>eval()</code> 被调用时的作用域，这也有可能导致一些不同方式的攻击。相似的 {{jsxref("Global_Objects/Function", "Function")}} 就不容易被攻击。</p>
+<p><code>eval()</code> 是一个危险的函数，它使用与调用者相同的权限执行代码。如果你用 <code>eval()</code> 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。更重要的是，第三方代码可以看到某一个 <code>eval()</code> 被调用时的作用域，这也有可能导致一些不同方式的攻击。相似的 {{jsxref("Global_Objects/Function", "Function")}} 就不容易被攻击。</p>
 
 <p><code>eval()</code> 通常比其他替代方法更慢，因为它必须调用 JS 解释器，而许多其他结构则可被现代 JS 引擎进行优化。</p>
 
@@ -87,7 +87,7 @@ console.log(looseJsonParse(
 
 </pre>
 
-<p>比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval 的这个代码的速度要慢得多。注意<code>c: new Date()</code>在执行体中。在没有 eval 的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设 <code>Date</code> 是来自 <code>window.Date</code> 的而不是一个名为 <code>Date</code> 的局部变量。 然而，在使用 <code>eval()</code> 的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：</p>
+<p>比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval 的这个代码的速度要慢得多。注意<code>c: new Date()</code>在执行体中。在没有 eval 的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设 <code>Date</code> 是来自 <code>window.Date</code> 的而不是一个名为 <code>Date</code> 的局部变量。然而，在使用 <code>eval()</code> 的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：</p>
 
 <pre class="brush:js example-bad">function Date(n){
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
@@ -102,7 +102,7 @@ console.log(looseJsonParse(
 
 <p>因此，在 <code>eval()</code> 版本的代码中，浏览器被迫进行高代价的查找调用以检查是否存在名为 <code>Date()</code> 的任何局部变量。与 <code>Function()</code> 相比，这是非常低效的。</p>
 
-<p>在类似的情况下，如果您确实希望能够从 <code>Function()</code> 内部的代码调用 <code>Date</code> 函数，该怎么办？ 你应该躲避并退回到 <code>eval()</code> 吗？绝对不是，永远不要这么做。而是尝试下面的方法。</p>
+<p>在类似的情况下，如果您确实希望能够从 <code>Function()</code> 内部的代码调用 <code>Date</code> 函数，该怎么办？你应该躲避并退回到 <code>eval()</code> 吗？绝对不是，永远不要这么做。而是尝试下面的方法。</p>
 
 <pre class="brush:js example-good">function Date(n){
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
@@ -226,7 +226,7 @@ eval(z);           // returns 42
 
 <h3 id="使用_eval_执行一串_JavaScript_语句">使用 <code>eval</code> 执行一串 JavaScript 语句</h3>
 
-<p>下面的例子使用 <code>eval()</code> 来执行 <code>str</code> 字符串。这个字符串包含了如果 <code>x</code> 等于 5，就打开一个 Alert 对话框并对 <code>z</code> 赋值 42，否则就对 <code>z</code> 赋值 0 的 JavaScript 语句。 当第二个声明被执行，<code>eval()</code> 将会令字符串被执行，并最终返回赋值给 <code>z</code> 的 42。</p>
+<p>下面的例子使用 <code>eval()</code> 来执行 <code>str</code> 字符串。这个字符串包含了如果 <code>x</code> 等于 5，就打开一个 Alert 对话框并对 <code>z</code> 赋值 42，否则就对 <code>z</code> 赋值 0 的 JavaScript 语句。当第二个声明被执行，<code>eval()</code> 将会令字符串被执行，并最终返回赋值给 <code>z</code> 的 42。</p>
 
 <pre class="brush:js">var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";

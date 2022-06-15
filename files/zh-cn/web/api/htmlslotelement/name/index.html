@@ -5,13 +5,13 @@ tags:
   - name
   - 名称
   - 属性
-  - 影子DOM
+  - 影子 DOM
   - 插槽
 translation_of: Web/API/HTMLSlotElement/name
 ---
 <p>{{APIRef("Shadow DOM API")}}</p>
 
-<p> 元素{{domxref("HTMLSlotElement")}}的<strong>name</strong>属性， 可以获取和设置属性值. 插槽提供了web组件的摆放位置，辅助用户布局。</p>
+<p> 元素{{domxref("HTMLSlotElement")}}的<strong>name</strong>属性，可以获取和设置属性值。插槽提供了 web 组件的摆放位置，辅助用户布局。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -33,9 +33,9 @@ slots[1].addEventListener('slotchange', function(e) {
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });</pre>
 
-<p>这里我们获取所有插槽的引用, 然后给模板里的第二个插槽增加事件— 跟踪内容变化.</p>
+<p>这里我们获取所有插槽的引用，然后给模板里的第二个插槽增加事件— 跟踪内容变化。</p>
 
-<p>每当附加在插槽中的内容变化, 我们都记录插槽相关的内容.</p>
+<p>每当附加在插槽中的内容变化，我们都记录插槽相关的内容。</p>
 
 <h2 id="规格">规格</h2>
 

@@ -115,7 +115,7 @@ observer.observe(target);
 
 <h4 id="The_intersection_root_and_root_margin">The intersection root and root margin</h4>
 
-<p>在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 <strong>intersection root</strong>，或 <strong>root element</strong>。 这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。</p>
+<p>在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 <strong>intersection root</strong>，或 <strong>root element</strong>。这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。</p>
 
 
 <p><strong><dfn>root intersection rectangle</dfn></strong> 是用来对目标元素进行相交检测的矩形，它的大小有以下几种情况：</p>
@@ -136,7 +136,7 @@ observer.observe(target);
 
 <p>Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.</p>
 
-<p>为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。 每一个 box 都有不同的 thresholds：</p>
+<p>为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。每一个 box 都有不同的 thresholds：</p>
 
 <ul>
  <li>第一个盒子的 thresholds 包含每个可视百分比，也就是说，{{domxref("IntersectionObserver.thresholds")}} 数组是 <code>[0.00, 0.01, 0.02, ..., 0.99, 1.00]</code>。</li>

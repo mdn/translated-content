@@ -16,7 +16,7 @@ translation_of: Web/API/Window/postMessage
 
 <p><strong><strong>window.postMessage()</strong> </strong>方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为 https），端口号（443 为 https 的默认值），以及主机  (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。<strong><strong>window.postMessage()</strong> </strong>方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。</p>
 
-<p>从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 <code>targetWindow = window.opener</code>），然后在窗口上调用 <code>targetWindow.postMessage()</code> 方法分发一个  {{domxref("MessageEvent")}}<strong> </strong>消息。接收消息的窗口可以根据需要自由<a href="/zh-CN/docs/Web/Guide/Events">处理此事件</a>。传递给 window.postMessage() 的参数（比如 message ）将<a href="/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event">通过消息事件对象暴露给接收消息的窗口</a>。</p>
+<p>从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 <code>targetWindow = window.opener</code>），然后在窗口上调用 <code>targetWindow.postMessage()</code> 方法分发一个  {{domxref("MessageEvent")}}<strong> </strong>消息。接收消息的窗口可以根据需要自由<a href="/zh-CN/docs/Web/Guide/Events">处理此事件</a>。传递给 window.postMessage() 的参数（比如 message）将<a href="/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event">通过消息事件对象暴露给接收消息的窗口</a>。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -59,7 +59,7 @@ function receiveMessage(event)
  <dt><code>data</code></dt>
  <dd>从其他 window 中传递过来的对象。</dd>
  <dt><code>origin</code></dt>
- <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
+ <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如“<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
  <dt><code>source</code></dt>
  <dd>对发送消息的<a href="/en-US/docs/DOM/window">窗口</a>对象的引用; 您可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。</dd>
 </dl>
@@ -71,7 +71,7 @@ function receiveMessage(event)
 
 <p><strong>如果您不希望从其他网站接收 message，请不要为 message 事件添加任何事件侦听器。 </strong>这是一个完全万无一失的方式来避免安全问题。</p>
 
-<p>如果您确实希望从其他网站接收 message，请<strong>始终使用 origin 和 source 属性验证发件人的身份</strong>。 任何窗口（包括例如 http://evil.example.com）都可以向任何其他窗口发送消息，并且您不能保证未知发件人不会发送恶意消息。 但是，验证身份后，您仍然应该<strong>始终验证接收到的消息的语法</strong>。 否则，您信任只发送受信任邮件的网站中的安全漏洞可能会在您的网站中打开跨网站脚本漏洞。</p>
+<p>如果您确实希望从其他网站接收 message，请<strong>始终使用 origin 和 source 属性验证发件人的身份</strong>。任何窗口（包括例如 http://evil.example.com）都可以向任何其他窗口发送消息，并且您不能保证未知发件人不会发送恶意消息。但是，验证身份后，您仍然应该<strong>始终验证接收到的消息的语法</strong>。否则，您信任只发送受信任邮件的网站中的安全漏洞可能会在您的网站中打开跨网站脚本漏洞。</p>
 
 <p><strong>当您使用 postMessage 将数据发送到其他窗口时，始终指定精确的目标 origin，而不是*。 </strong>恶意网站可以在您不知情的情况下更改窗口的位置，因此它可以拦截使用 postMessage 发送的数据。</p>
 
@@ -130,19 +130,19 @@ window.addEventListener("message", receiveMessage, false);
 
 <h3 id="Notes" name="Notes"><strong>注意</strong></h3>
 
-<p>任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。 因此，用于接收消息的任何事件监听器<strong>必须</strong>首先使用 origin 和 source 属性来检查消息的发送者的身份。 <strong>这不能低估：无法检查 origin 和 source 属性会导致跨站点脚本攻击。</strong></p>
+<p>任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。因此，用于接收消息的任何事件监听器<strong>必须</strong>首先使用 origin 和 source 属性来检查消息的发送者的身份。 <strong>这不能低估：无法检查 origin 和 source 属性会导致跨站点脚本攻击。</strong></p>
 
 <p>与任何异步调度的脚本（超时，用户生成的事件）一样，postMessage 的调用者不可能检测到侦听由 postMessage 发送的事件的事件处理程序何时抛出异常。</p>
 
 <p>分派事件的 origin 属性的值不受调用窗口中 document.domain 的当前值的影响。</p>
 
-<p>仅对于 IDN 主机名，origin 属性的值不是始终为 Unicode 或 punycode; 在使用此属性时，如果您期望来自 IDN 网站的消息，则最大程度地兼容性检查 IDN 和 punycode 值。 这个值最终将始终是 IDN，但现在你应该同时处理 IDN 和 punycode 表单。</p>
+<p>仅对于 IDN 主机名，origin 属性的值不是始终为 Unicode 或 punycode; 在使用此属性时，如果您期望来自 IDN 网站的消息，则最大程度地兼容性检查 IDN 和 punycode 值。这个值最终将始终是 IDN，但现在你应该同时处理 IDN 和 punycode 表单。</p>
 
 <p>当发送窗口包含 <code>javascript:</code> 或 <code>data:</code> URL 时，origin 属性的值是加载 URL 的脚本的</p>
 
 <h3 id="在扩展Non-standard_inline中使用window.postMessage"><strong>在扩展</strong>{{Non-standard_inline}}<strong>中使用 window.postMessage</strong></h3>
 
-<p><code>window.postMessage</code>可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的<code>targetOrigin</code>参数当前被错误解释，使得将导致发送消息的唯一值为<code>“*”</code>。 由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。 最后，在文件中向页面发布消息：URL 当前要求<code>targetOrigin</code>参数为<code>“*”</code>。<code> file://</code>不能用作安全限制; 这个限制可能会在将来被修改。</p>
+<p><code>window.postMessage</code>可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的<code>targetOrigin</code>参数当前被错误解释，使得将导致发送消息的唯一值为<code>“*”</code>。由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。最后，在文件中向页面发布消息：URL 当前要求<code>targetOrigin</code>参数为<code>“*”</code>。<code> file://</code>不能用作安全限制; 这个限制可能会在将来被修改。</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 

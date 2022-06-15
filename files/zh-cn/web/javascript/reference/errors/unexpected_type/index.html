@@ -25,9 +25,9 @@ TypeError: "x" is not a symbol
 
 <h2 id="什么地方出错了">什么地方出错了？</h2>
 
-<p>出现了与期望不符的类型。 这个错误常常由 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值引起。</p>
+<p>出现了与期望不符的类型。这个错误常常由 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值引起。</p>
 
-<p>此外，某些方法，例如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}}， 要求必须提供特定类型的参数。</p>
+<p>此外，某些方法，例如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}}，要求必须提供特定类型的参数。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -51,7 +51,7 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 
 <h3 id="解决方法">解决方法</h3>
 
-<p>要解决空指针以及 <code>undefined</code> 或 <code>null</code> 值的问题， 你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 操作符， 例如：</p>
+<p>要解决空指针以及 <code>undefined</code> 或 <code>null</code> 值的问题，你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 操作符，例如：</p>
 
 <pre class="brush: js">if (typeof foo !== 'undefined') {
   // Now we know that foo is defined, we are good to go.

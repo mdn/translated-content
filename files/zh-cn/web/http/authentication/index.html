@@ -57,7 +57,7 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 
 <p>通用 HTTP 身份验证框架可以被多个验证方案使用。不同的验证方案会在安全强度以及在客户端或服务器端软件中可获得的难易程度上有所不同。</p>
 
-<p>最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。 IANA 维护了<a class="external external-icon" href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">一系列的验证方案</a>，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS 。常见的验证方案包括：</p>
+<p>最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。IANA 维护了<a class="external external-icon" href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">一系列的验证方案</a>，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS。常见的验证方案包括：</p>
 
 <ul>
  <li><strong>Basic</strong> (查看 {{rfc(7617)}}，base64 编码凭证。详情请参阅下文.),</li>
@@ -80,7 +80,7 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 
 <h3 id="使用Apache限制访问和基本身份验证">使用 Apache 限制访问和基本身份验证</h3>
 
-<p>要对 Apache 服务器上的目录进行密码保护， 你需要一个 <code>.htaccess</code> 和 a <code>.htpasswd</code> 文件。</p>
+<p>要对 Apache 服务器上的目录进行密码保护，你需要一个 <code>.htaccess</code> 和 a <code>.htpasswd</code> 文件。</p>
 
 <p>该 <code>.htaccess</code> 文件格式通常看起来像这样：</p>
 
@@ -89,7 +89,7 @@ AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
 Require valid-user</pre>
 
-<p>该 <code>.htaccess</code> 文件引用一个 <code>.htpasswd</code> 文件，其中每行用冒号（“：”）分隔的用户名和密码。你不能看到真实的密码因为它们是 <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">encrypted</a> (在这个例子中是使用了 MD5). 你可以命名<code>.htpasswd</code> 文件 为你所喜欢的名字，但是应该保证这个文件不被其他人访问. (Apache 通常配置阻止访问 <code>.ht*</code> 类的文件).</p>
+<p>该 <code>.htaccess</code> 文件引用一个 <code>.htpasswd</code> 文件，其中每行用冒号（“：”）分隔的用户名和密码。你不能看到真实的密码因为它们是 <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">encrypted</a> (在这个例子中是使用了 MD5). 你可以命名<code>.htpasswd</code> 文件 为你所喜欢的名字，但是应该保证这个文件不被其他人访问。(Apache 通常配置阻止访问 <code>.ht*</code> 类的文件).</p>
 
 <pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
@@ -112,7 +112,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 <pre class="example-bad">https://username:password@www.example.com/</pre>
 
-<p><strong>这种 URL 是不赞成使用的。</strong>在 Chrome 中， URL 中的 username:password@ 部分甚至会因为安全原因而被移除。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名 “username” 登录  ”www.example.com“  站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。</p>
+<p><strong>这种 URL 是不赞成使用的。</strong>在 Chrome 中，URL 中的 username:password@ 部分甚至会因为安全原因而被移除。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名“username”登录  ”www.example.com“  站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。</p>
 
 <h2 id="相关内容">相关内容</h2>
 

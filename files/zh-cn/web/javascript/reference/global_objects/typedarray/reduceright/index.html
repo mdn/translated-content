@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 });
 </pre>
 
-<p>第一次调用回调函数的时候， <code>previousValue</code> 和 <code>currentValue</code> 可以是两个值之一。如果 <code>initialValue</code> 在<code>reduce</code>的调用中提供， <code>previousValue</code> 会等于<code>initialValue</code> 并且<code>currentValue</code> 会等于类型化数组的最后一个值。 如果 <code>initialValue</code> 没有提供，则<code>previousValue</code>等于类型化数组的最后一个值，<code>currentValue</code>会等于倒数第二个值。</p>
+<p>第一次调用回调函数的时候， <code>previousValue</code> 和 <code>currentValue</code> 可以是两个值之一。如果 <code>initialValue</code> 在<code>reduce</code>的调用中提供， <code>previousValue</code> 会等于<code>initialValue</code> 并且<code>currentValue</code> 会等于类型化数组的最后一个值。如果 <code>initialValue</code> 没有提供，则<code>previousValue</code>等于类型化数组的最后一个值，<code>currentValue</code>会等于倒数第二个值。</p>
 
 <p>如果类型化数组为空并且没有提供 <code>initialValue</code>，会抛出 {{jsxref("Global_Objects/TypeError", "TypeError")}} 。如果类型化数组中只有一个元素（无论位置）并且没有提供<code>initialValue</code> ，或者如果提供了<code>initialValue</code> 但是类型化数组为空，会返回唯一的值，但不会调用 <code>callback</code>。</p>
 

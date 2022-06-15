@@ -139,7 +139,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <p>CSP 允许在一个资源中指定多个策略，包括通过 <code>Content-Security-Policy</code> 头，以及 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头，和 {{HTMLElement("meta")}} 组件。</p>
 
-<p>你可以像以下实例一样多次调用 <code>Content-Security-Policy</code> 头。 特别注意这里的 {{CSP("connect-src")}} 指令。 尽管第二个策略允许连接，第一个策略仍然包括了 <code>connect-src 'none'</code>。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，<code>connect-src 'none'</code> 强制开启。</p>
+<p>你可以像以下实例一样多次调用 <code>Content-Security-Policy</code> 头。特别注意这里的 {{CSP("connect-src")}} 指令。尽管第二个策略允许连接，第一个策略仍然包括了 <code>connect-src 'none'</code>。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，<code>connect-src 'none'</code> 强制开启。</p>
 
 <pre>Content-Security-Policy: default-src 'self' http://example.com;
                          connect-src 'none';

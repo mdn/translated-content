@@ -28,11 +28,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果正则表达式与指定的字符串匹配 ，返回<code>true</code>；否则<code>false</code>。</p>
+<p>如果正则表达式与指定的字符串匹配，返回<code>true</code>；否则<code>false</code>。</p>
 
 <h2 id="Description">描述</h2>
 
-<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
+<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者 -1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
 
 <h2 id="Examples">示例</h2>
 

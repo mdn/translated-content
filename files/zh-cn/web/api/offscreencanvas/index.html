@@ -51,9 +51,9 @@ translation_of: Web/API/OffscreenCanvas
 
 <h3 id="同步显示OffscreenCanvas中的帧">同步显示 <code>OffscreenCanvas</code> 中的帧</h3>
 
-<p>一种方式是使用<code>OffscreenCanvas</code> API，也就是用已经包含<code>OffscreenCanvas</code>对象的{{domxref("RenderingContext")}} 来生成新的帧。 每次一个新的帧在画布中完成渲染，{{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} 方法都会被调用来保存最近渲染的图像。该方法返回一个{{domxref("ImageBitmap")}}对象，该对象可以被用在各种 Web APIs 中，也可以用在下一个 canvas 中，并且不需要转换备份。</p>
+<p>一种方式是使用<code>OffscreenCanvas</code> API，也就是用已经包含<code>OffscreenCanvas</code>对象的{{domxref("RenderingContext")}} 来生成新的帧。每次一个新的帧在画布中完成渲染，{{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} 方法都会被调用来保存最近渲染的图像。该方法返回一个{{domxref("ImageBitmap")}}对象，该对象可以被用在各种 Web APIs 中，也可以用在下一个 canvas 中，并且不需要转换备份。</p>
 
-<p>为了显示<code>ImageBitmap</code>，你可以用{{domxref("ImageBitmapRenderingContext")}}上下文，通过一个 canvas（可见的）元素调用<code>canvas.getContext("bitmaprenderer")</code>方法来创建它。该上下文只提供用<code>ImageBitmap</code>替换 canvas 的内容的功能。调用{{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} 以前的渲染结果并且通过 OffscreenCanvas 保存<code>ImageBitmap</code>，会在 canvas 里显示<code>ImageBitmap</code>并且转换其所有权到 canvas。 一个单独的 OffscreenCanvas 可以将帧转换到任意数量的其他<code>ImageBitmapRenderingContext</code>对象。</p>
+<p>为了显示<code>ImageBitmap</code>，你可以用{{domxref("ImageBitmapRenderingContext")}}上下文，通过一个 canvas（可见的）元素调用<code>canvas.getContext("bitmaprenderer")</code>方法来创建它。该上下文只提供用<code>ImageBitmap</code>替换 canvas 的内容的功能。调用{{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} 以前的渲染结果并且通过 OffscreenCanvas 保存<code>ImageBitmap</code>，会在 canvas 里显示<code>ImageBitmap</code>并且转换其所有权到 canvas。一个单独的 OffscreenCanvas 可以将帧转换到任意数量的其他<code>ImageBitmapRenderingContext</code>对象。</p>
 
 <p>提供两个 {{HTMLElement("canvas")}} 元素</p>
 

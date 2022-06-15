@@ -209,7 +209,7 @@ linkElem.setAttribute('href', 'style.css');
 
 shadow.appendChild(linkElem);</pre>
 
-<p>请注意， 因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。</p>
+<p>请注意，因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。</p>
 
 <p>许多现代浏览器都对从公共节点克隆的或具有相同文本的{{htmlelement("style")}} 标签实现了优化，以允许它们共享单个支持样式表，通过这种优化，外部和内部样式的性能表现比较接近。</p>
 

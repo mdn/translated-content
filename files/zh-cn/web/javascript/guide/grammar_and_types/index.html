@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>虽然不是必需的，但是在一条语句的末尾加上分号是一个很好的习惯。这个习惯可以大大减少代码中产生 bug 的可能性。</p>
 
-<p> Javascript 源码从左往右被扫描并转换成一系列由 token 、控制字符、行终止符、注释和空白字符组成的输入元素。空白字符指的是空格、制表符和换行符等。</p>
+<p> Javascript 源码从左往右被扫描并转换成一系列由 token、控制字符、行终止符、注释和空白字符组成的输入元素。空白字符指的是空格、制表符和换行符等。</p>
 
 <h2 id="注释">注释</h2>
 
@@ -110,12 +110,12 @@ console.log("The value of b is " + b);// b 的值是 undefined
 var b;
 // 在你阅读下面的‘变量声明提升’前你可能会疑惑
 
-console.log("The value of c is " + c); // 未捕获的引用错误： c 未被定义
+console.log("The value of c is " + c); // 未捕获的引用错误：c 未被定义
 
 let x;
 console.log("The value of x is " + x); // x 的值是 undefined
 
-console.log("The value of y is " + y);// 未捕获的引用错误： y 未被定义
+console.log("The value of y is " + y);// 未捕获的引用错误：y 未被定义
 let y;</pre>
 
 <p>你可以使用 <code>undefined</code> 来判断一个变量是否已赋值。在以下的代码中，变量<code>input</code>未被赋值，因此 <code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/if...else" title="zh-CN/docs/JavaScript/Reference/Statements/if...else">if</a></code> 条件语句的求值结果是 <code>true</code> 。</p>
@@ -290,8 +290,8 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
  <li>七种基本数据类型：
   <ul>
    <li>布尔值（Boolean），有 2 个值分别是：<code>true</code> 和 <code>false</code>.</li>
-   <li>null ， 一个表明 null 值的特殊关键字。 JavaScript 是大小写敏感的，因此 <code>null</code> 与 <code>Null</code>、<code>NULL</code>或变体完全不同。</li>
-   <li>undefined ，和 null 一样是一个特殊的关键字，undefined 表示变量未赋值时的属性。</li>
+   <li>null， 一个表明 null 值的特殊关键字。 JavaScript 是大小写敏感的，因此 <code>null</code> 与 <code>Null</code>、<code>NULL</code>或变体完全不同。</li>
+   <li>undefined，和 null 一样是一个特殊的关键字，undefined 表示变量未赋值时的属性。</li>
    <li>数字（Number），整数或浮点数，例如： <code>42</code> 或者 <code>3.14159</code>。</li>
    <li>任意精度的整数 (BigInt) ，可以安全地存储和操作大整数，甚至可以超过数字的安全整数限制。</li>
    <li>字符串（String），字符串是一串表示文本值的字符序列，例如："Howdy" 。</li>
@@ -481,7 +481,7 @@ console.log(a[0]); // 3</pre>
 <p>对象字面值是封闭在花括号对 ({}) 中的一个对象的零个或多个"属性名 - 值"对的（元素）列表。</p>
 
 <div class="warning">
-<p><strong>警告：</strong>你不能在一条语句的开头就使用对象字面值，这将导致错误或产生超出预料的行为， 因为此时左花括号（{）会被认为是一个语句块的起始符号。（译者：这 里需要对语句 statement、块 block 等基本名词的解释）</p>
+<p><strong>警告：</strong>你不能在一条语句的开头就使用对象字面值，这将导致错误或产生超出预料的行为，因为此时左花括号（{）会被认为是一个语句块的起始符号。（译者：这 里需要对语句 statement、块 block 等基本名词的解释）</p>
 </div>
 
 <p>以下是一个对象字面值的例子。对象<code>car</code>的第一个元素（译注：即一个属性/值对）定义了属性<code>myCar</code>；第二个元素，属性<code>getCar</code>，引用了一个函数调用（即 CarTypes("Honda")）；第三个元素，属性<code>special</code>，使用了一个已有的变量（即 Sales）。</p>
@@ -515,9 +515,9 @@ console.log(car[7]); // Mazda
   "": "An empty string",
   "!": "Bang!"
 }
-console.log(unusualPropertyNames."");   // 语法错误: Unexpected string
+console.log(unusualPropertyNames."");   // 语法错误：Unexpected string
 console.log(unusualPropertyNames[""]);  // An empty string
-console.log(unusualPropertyNames.!);    // 语法错误: Unexpected token !
+console.log(unusualPropertyNames.!);    // 语法错误：Unexpected token !
 console.log(unusualPropertyNames["!"]); // Bang!</pre>
 
 <h4 id="增强的对象字面量_Enhanced_Object_literals">增强的对象字面量 (Enhanced Object literals)</h4>

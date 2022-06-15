@@ -26,7 +26,7 @@ HTML DOM 中的 `HTMLCollection` 是即时更新的（live）；当其所包�
 ## 方法
 
 - {{domxref("HTMLCollection.item()")}}
-  - : 根据给定的索引（从0开始），返回具体的节点。如果索引超出了范围，则返回 `null`。
+  - : 根据给定的索引（从 0 开始），返回具体的节点。如果索引超出了范围，则返回 `null`。
 
     访问 `collection[i]`（在索引 `i` 超出范围时会返回 `undefined`）的替代方法。这在非 JavaScript DOM 的实现中非常有用。
 

@@ -18,7 +18,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 <p>{{APIRef("HTML DOM")}}{{non-standard_header}}</p>
 
 <p>
-    <code><strong>HTMLInputElement.webkitdirectory</strong></code>是属于{{HTMLElement("input")}}元素的一个HTML属性{{htmlattrxref("webkitdirectory", "input")}}，它指示<code>&lt;input&gt;</code>元素应该允许用户选择文件目录，而不是文件。当一个文件目录被选中，该目录及其整个内容层次结构将包含在所选项目集里面。可以使用{{domxref("HTMLInputElement.webkitEntries",
+    <code><strong>HTMLInputElement.webkitdirectory</strong></code>是属于{{HTMLElement("input")}}元素的一个 HTML 属性{{htmlattrxref("webkitdirectory", "input")}}，它指示<code>&lt;input&gt;</code>元素应该允许用户选择文件目录，而不是文件。当一个文件目录被选中，该目录及其整个内容层次结构将包含在所选项目集里面。可以使用{{domxref("HTMLInputElement.webkitEntries",
     "webkitEntries")}}属性获取选定的文件系统条目。</p>
 
 <h2 id="Syntax">语法</h2>
@@ -77,19 +77,19 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 
 <div class="note">
   <p><strong>注意：</strong>在<em>Chromium &lt; 72</em>里，<code>webkitRelativePath</code>的行为表现有所不同。有关更多详细信息，请参见<a
-      href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">此bug</a>。</p>
+      href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">此 bug</a>。</p>
 </div>
 
 <h2 id="Example">示例</h2>
 
 <p>在这个例子中，提供了一个目录选择器，它使用户可以选择一个或多个目录。当{{event("change")}}事件被触发的时候，将生成并显示所选目录层次结构中包含的所有文件的列表。</p>
 
-<h3 id="HTML_content">HTML内容</h3>
+<h3 id="HTML_content">HTML 内容</h3>
 
 <pre class="brush: html">&lt;input type="file" id="filepicker" name="fileList" webkitdirectory multiple /&gt;
 &lt;ul id="listing"&gt;&lt;/ul&gt;</pre>
 
-<h3 id="JavaScript_content">JavaScript内容</h3>
+<h3 id="JavaScript_content">JavaScript 内容</h3>
 
 <pre class="brush: js">document.getElementById("filepicker").addEventListener("change", function(event) {
   let output = document.getElementById("listing");
@@ -127,7 +127,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
   </tbody>
 </table>
 
-<p>这个API没有官方的W3C或者WHATWG规范。</p>
+<p>这个 API 没有官方的 W3C 或者 WHATWG 规范。</p>
 
 <h2 id="Browser_compatibility">浏览器兼容性</h2>
 
@@ -136,7 +136,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 <h2 id="See_also">参见</h2>
 
 <ul>
-  <li><a href="/zh-CN/docs/Web/API/File_and_Directory_Entries_API">文件和目录条目API</a></li>
+  <li><a href="/zh-CN/docs/Web/API/File_and_Directory_Entries_API">文件和目录条目 API</a></li>
   <li>{{domxref("HTMLInputElement.webkitEntries")}}</li>
   <li>{{domxref("File.webkitRelativePath")}}</li>
 </ul>

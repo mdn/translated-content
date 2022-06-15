@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <h2 id="描述">描述</h2>
 
-<p>一个 switch 语句首先会计算其 expression 。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">严格运算符</a>，<code>===</code>）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）</p>
+<p>一个 switch 语句首先会计算其 expression。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">严格运算符</a>，<code>===</code>）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）</p>
 
 <p>如果没有 <code>case</code> 子句相匹配，程序则会寻找那个可选的 <code>default</code> 子句，如果找到了，将控制权交给它，执行相关语句。若没有 <code>default</code> 子句，程序将继续执行直到 <code>switch</code> 结束。按照惯例，<code>default</code> 子句是最后一个子句，不过也不需要这样做。</p>
 
@@ -107,7 +107,7 @@ switch (foo) {
 
 <h3 id="我能把_default_放到_case_之间吗？">我能把 default 放到 case 之间吗？</h3>
 
-<p>可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default ：</p>
+<p>可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default：</p>
 
 <pre class="brush: js">var foo = 5;
 switch (foo) {
@@ -132,7 +132,7 @@ switch (foo) {
 
 <h4 id="多_case_-_单一操作">多 case - 单一操作</h4>
 
-<p>这种方法利用这样一个事实：如果 case 语句之下没有 break ，它将继续执行下一个 case 语句，而不管 case 是否符合条件。 请看“如果忘记 break 会怎么样？”部分。</p>
+<p>这种方法利用这样一个事实：如果 case 语句之下没有 break，它将继续执行下一个 case 语句，而不管 case 是否符合条件。请看“如果忘记 break 会怎么样？”部分。</p>
 
 <p>这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。</p>
 

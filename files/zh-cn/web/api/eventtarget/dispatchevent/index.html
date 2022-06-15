@@ -29,7 +29,7 @@ translation_of: Web/API/EventTarget/dispatchEvent
  <li>当该事件是可取消的 (cancelable 为 true) 并且至少一个该事件的 事件处理方法 调用了{{domxref("Event.preventDefault()")}}，则返回值为<code>false</code>；否则返回<code>true</code>。</li>
 </ul>
 
-<p>如果该被派发的事件的事件类型 (event's type) 在方法调用之前没有被经过初始化被指定，就会抛出一个 <code>UNSPECIFIED_EVENT_TYPE_ERR</code> 异常，或者如果事件类型是<code>null</code>或一个空字符串. event handler 就会抛出未捕获的异常； 这些 event handlers 运行在一个嵌套的调用栈中： 他们会阻塞调用直到他们处理完毕，但是异常不会冒泡。</p>
+<p>如果该被派发的事件的事件类型 (event's type) 在方法调用之前没有被经过初始化被指定，就会抛出一个 <code>UNSPECIFIED_EVENT_TYPE_ERR</code> 异常，或者如果事件类型是<code>null</code>或一个空字符串。event handler 就会抛出未捕获的异常；这些 event handlers 运行在一个嵌套的调用栈中：他们会阻塞调用直到他们处理完毕，但是异常不会冒泡。</p>
 
 <h2 id="Notes" name="Notes">注意</h2>
 

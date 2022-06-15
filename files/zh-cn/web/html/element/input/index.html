@@ -416,7 +416,7 @@ translation_of: Web/HTML/Element/input
    <tr>
     <td><a href="#attr-multiple">multiple</a></td>
     <td>email, file</td>
-    <td>布尔值。 是否允许多个值</td>
+    <td>布尔值。是否允许多个值</td>
    </tr>
    <tr>
     <td><a href="#attr-name">name</a></td>
@@ -578,7 +578,7 @@ translation_of: Web/HTML/Element/input
  <p>When the form above is submitted, the input cause both the <code>name</code> / <code>value</code> pair of <code>fruit=cherry</code> and the <code>dirname</code> / direction pair of <code>fruit.dir=ltr</code> to be sent.</p>
  </dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</dd>
+ <dd>这个布尔属性表示此表单控件不可用。特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</dd>
 </dl>
 
 <div class="note"><strong>Note:</strong> Although not required by the specification, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</div>
@@ -697,14 +697,14 @@ translation_of: Web/HTML/Element/input
  <dd>检查控件值的正则表达式.。pattern 必须匹配整个值，而不仅仅是某些子集.。使用 title 属性来描述帮助用户的模式.。当类型属性的值为 text, search, tel, url 或 email 时，此属性适用，否则将被忽略。译者注:ie10+</dd>
  <dt>{{ htmlattrdef("placeholder") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅适用于当<strong>type</strong> 属性为 text, search, tel, url or email 时; 否则会被忽略。
- <div class="note"><strong>Note:</strong> 请不要用<code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同:  {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而<code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见， 所以当没有它时也需要保证 form 能被理解。</div>
+ <div class="note"><strong>Note:</strong> 请不要用<code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同： {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而<code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见， 所以当没有它时也需要保证 form 能被理解。</div>
  </dd>
  <dt>{{ htmlattrdef("readonly") }}</dt>
  <dd>这个布尔属性用于指明用户无法修改控件的值。
  <p>{{ HTMLVersionInline(5) }} 如果控件的 <strong>type</strong> 属性为 hidden, range, color, checkbox, radio, file 或 type 时，此属性会被忽略。</p>
  </dd>
  <dt>{{ htmlattrdef("required") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden,image 或者按钮类型 (submit,reset,button) 时不可使用. {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
+ <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden,image 或者按钮类型 (submit,reset,button) 时不可使用。{{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
  <dt>{{ htmlattrdef("selectionDirection") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.</dd>
  <dt>{{ htmlattrdef("size") }}</dt>

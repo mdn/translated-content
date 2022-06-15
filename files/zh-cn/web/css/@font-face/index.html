@@ -44,7 +44,7 @@ translation_of: Web/CSS/@font-face
  <dt>{{cssxref("@font-face/font-family", "font-family")}}</dt>
  <dd>所指定的字体名字将会被用于 font 或 font-family 属性 ( i.e. font-family: &lt;family-name&gt;; )</dd>
  <dt>{{cssxref("@font-face/src", "src")}}</dt>
- <dd>远程字体文件位置的 URL 或者用户计算机上的字体名称， 可以使用 local 语法通过名称指定用户的本地计算机上的字体 ( i.e. src: local('Arial'); )。 如果找不到该字体，将会尝试其他来源，直到找到它。</dd>
+ <dd>远程字体文件位置的 URL 或者用户计算机上的字体名称， 可以使用 local 语法通过名称指定用户的本地计算机上的字体 ( i.e. src: local('Arial'); )。如果找不到该字体，将会尝试其他来源，直到找到它。</dd>
  <dt>{{cssxref("@font-face/font-variant", "font-variant")}}</dt>
  <dd>A {{cssxref("font-variant")}} value.</dd>
  <dt>{{cssxref("@font-face/font-stretch", "font-stretch")}}</dt>
@@ -120,7 +120,7 @@ translation_of: Web/CSS/@font-face
 <ul>
  <li>这里使用的 Web fonts 仍然受到同域限制  (字体文件必须和调用它的网页同一域), 但可以使用 <a href="https://developer.mozilla.org/en-US/docs/HTTP_access_control">HTTP access controls</a> 解除这一限制。</li>
  <li>因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义 MIME，因此不能为这些字体类型设置特定的 MIME（实际上 WOFF 的 MIME 将会是 application/font-woff，但浏览器对此 MIME 的识别还不统一，其它字体情况也类似，可暂时使用 application/octet-stream）。 </li>
- <li>你不能在一个 CSS 选择器中定义 @font-face 。例如，这样写是无效的：
+ <li>你不能在一个 CSS 选择器中定义 @font-face。例如，这样写是无效的：
   <pre class="brush: css; example-bad notranslate">.className {
   @font-face {
     font-family: MyHelvetica;

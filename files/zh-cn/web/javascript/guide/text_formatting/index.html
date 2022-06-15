@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <h2 id="字符串">字符串</h2>
 
-<p>JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置. 第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数.你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。</p>
+<p>JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置。第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数。你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。</p>
 
 <h3 id="String字面量">String 字面量</h3>
 
@@ -52,7 +52,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 <p>{{jsxref("String")}} 对象是对原始 string 类型的封装 .</p>
 
 <pre class="brush: js">const foo = new String('foo'); // 创建一个 String 对象
-console.log(foo); // 输出: [String: 'foo']
+console.log(foo); // 输出：[String: 'foo']
 typeof foo; // 返回 'object'</pre>
 
 <p>你可以在 String 字面值上使用 String 对象的任何方法—JavaScript 自动把 String 字面值转换为一个临时的 String 对象，然后调用其相应方法，最后丢弃此临时对象。在 String 字面值上也可以使用 String.length 属性。</p>
@@ -149,7 +149,7 @@ hello[0]; // 返回 "H"</pre>
 
 <p>模板字符串是一种允许内嵌表达式的 String 字面值。可以用它实现多行字符串或者字符串内插等特性。</p>
 
-<p>模板字符串使用反勾号 (` `) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent">grave accent</a>) 包裹内容而不是单引号或双引号。模板字符串可以包含占位符. 占位符用美元符号和花括号标识 (<code>${expression}</code>).</p>
+<p>模板字符串使用反勾号 (` `) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent">grave accent</a>) 包裹内容而不是单引号或双引号。模板字符串可以包含占位符。占位符用美元符号和花括号标识 (<code>${expression}</code>).</p>
 
 <h4 id="多行">多行</h4>
 
@@ -187,11 +187,11 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 
 <h2 id="国际化">国际化</h2>
 
-<p>{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能.  {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是<code>Intl</code>对象的属性。</p>
+<p>{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能。 {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是<code>Intl</code>对象的属性。</p>
 
 <h3 id="日期和时间格式化">日期和时间格式化</h3>
 
-<p>{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式. (不同时区结果不同.)</p>
+<p>{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式。(不同时区结果不同.)</p>
 
 <pre class="brush: js">const msPerDay = 24 * 60 * 60 * 1000;
 

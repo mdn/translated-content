@@ -40,7 +40,7 @@ translation_of: Web/API/AbortSignal
 
 <p>我们首先使用{{domxref("AbortController.AbortController", "AbortController()")}}构造函数创建一个控制器，然后使用{{domxref ("AbortController.signal")}}属性。</p>
 
-<p>当获取请求被启动时，我们在请求的选项对象中传递 AbortSignal 作为一个选项（见下面的{signal}）。 这将信号和控制器与获取请求相关联，并允许我们通过调用{{domxref("AbortController.abort()")}}来中止它，如下面的第二个事件监听器所示。</p>
+<p>当获取请求被启动时，我们在请求的选项对象中传递 AbortSignal 作为一个选项（见下面的{signal}）。这将信号和控制器与获取请求相关联，并允许我们通过调用{{domxref("AbortController.abort()")}}来中止它，如下面的第二个事件监听器所示。</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;

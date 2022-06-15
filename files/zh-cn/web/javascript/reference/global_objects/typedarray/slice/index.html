@@ -60,7 +60,7 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
 
 <p>这不是一个完整的 polyfill，因为它返回的是一个 Array 的实例而不是 Uint8Array，所以它没有 TypedArrays 应有的一些属性。</p>
 
-<p>如果你要在不支持 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> </code>的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 <code>Array.prototype</code> 中那些方法的 polyfill ，因为你没法让它们不可枚举。</p>
+<p>如果你要在不支持 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> </code>的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 <code>Array.prototype</code> 中那些方法的 polyfill，因为你没法让它们不可枚举。</p>
 
 <h2 id="规范">规范</h2>
 

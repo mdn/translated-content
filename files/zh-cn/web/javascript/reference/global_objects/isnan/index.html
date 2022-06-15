@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <h3 id="The_necessity_of_an_isNaN_function"><code>isNaN</code> 函数的必要性</h3>
 
-<p>与 JavaScript 中其他的值不同，{{jsxref("Global_Objects/NaN", "NaN")}}不能通过相等操作符（== 和 ===）来判断 ，因为 <code>NaN == NaN</code> 和 <code>NaN === NaN</code> 都会返回 <code>false</code>。 因此，<code>isNaN</code> 就很有必要了。</p>
+<p>与 JavaScript 中其他的值不同，{{jsxref("Global_Objects/NaN", "NaN")}}不能通过相等操作符（== 和 ===）来判断，因为 <code>NaN == NaN</code> 和 <code>NaN === NaN</code> 都会返回 <code>false</code>。因此，<code>isNaN</code> 就很有必要了。</p>
 
 <h3 id="Origin_of_NaN_values"><code>NaN 值</code>的产生</h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>下一个版本的 ECMAScript (ES2015) 包含{{jsxref("Number.isNaN()")}}函数。通过<code>Number.isNaN(x)</code>来检测变量<code>x</code>是否是一个<code>NaN</code>将会是一种可靠的做法。然而，在缺少<code>Number.isNaN</code>函数的情况下，通过表达式<code>(x != x)</code> 来检测<code>变量 x</code>是否是<code>NaN</code>会更加可靠。</p>
 
-<p>一个<code>isNaN</code>的 polyfill 可以理解为（这个 polyfill 利用了<code>NaN</code>自身永不相等于自身这一特征 ）：</p>
+<p>一个<code>isNaN</code>的 polyfill 可以理解为（这个 polyfill 利用了<code>NaN</code>自身永不相等于自身这一特征）：</p>
 
 <pre class="brush: js">var isNaN = function(value) {
     var n = Number(value);
@@ -76,7 +76,7 @@ isNaN(new Date());                // false
 isNaN(new Date().toString());     // true
 
 isNaN("blabla")   // true: "blabla"不能转换成数值
-                  // 转换成数值失败， 返回 NaN
+                  // 转换成数值失败，返回 NaN
 </pre>
 
 <h3 id="有用的特殊行为">有用的特殊行为</h3>

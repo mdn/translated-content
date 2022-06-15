@@ -20,7 +20,7 @@ browser-compat: api.HTMLVideoElement.enterpictureinpicture_event
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称， 或者设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称，或者设置事件处理器属性。
 
 ```js
 addEventListener('enterpictureinpicture', event => { });

@@ -56,7 +56,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 <h2 id="Notes" name="Notes">注意</h2>
 
-<p>在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 <code>{{ domxref("event.keyCode", "keyCode") }}</code> 或 <code>{{ domxref("event.charCode", "charCode") }}</code> 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), <code>charCode</code> 被设置为字符的代码值，并区分大小写。（即 <code>charCode</code> 会考虑 <code>Shift</code> 键是否被按下）。 否则，被按下的键的代码被存储在 <code>keyCode</code> 中。</p>
+<p>在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 <code>{{ domxref("event.keyCode", "keyCode") }}</code> 或 <code>{{ domxref("event.charCode", "charCode") }}</code> 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), <code>charCode</code> 被设置为字符的代码值，并区分大小写。（即 <code>charCode</code> 会考虑 <code>Shift</code> 键是否被按下）。否则，被按下的键的代码被存储在 <code>keyCode</code> 中。</p>
 
 <p>如果有一个或多个修饰键被按下，有一些复杂的规则来产生 <code>charCode</code> 的值，细节可参考  <a href="/en/Gecko_Keypress_Event" title="en/Gecko Keypress Event">Gecko Keypress 事件</a> 。</p>
 

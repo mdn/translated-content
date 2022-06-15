@@ -211,5 +211,5 @@ for (let para of paras) {
 
 ## 参见
 
-- 相关 CSS 属性: {{cssxref("overflow")}}、{{cssxref("white-space")}}
-- 控制换行的 CSS 属性: {{cssxref("overflow-wrap")}}、{{cssxref("word-break")}}
+- 相关 CSS 属性：{{cssxref("overflow")}}、{{cssxref("white-space")}}
+- 控制换行的 CSS 属性：{{cssxref("overflow-wrap")}}、{{cssxref("word-break")}}

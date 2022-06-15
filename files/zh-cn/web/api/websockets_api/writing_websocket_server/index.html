@@ -16,7 +16,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 
 <h2 id="第一步">第一步</h2>
 
-<p>WebSockets 通过 <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (传输控制协议)</a> 连接进行通信.。幸运的是，C# 中有一个 <a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener </a>类。 它位于 <em>System.Net.Sockets</em> 的命名空间。</p>
+<p>WebSockets 通过 <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (传输控制协议)</a> 连接进行通信.。幸运的是，C# 中有一个 <a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener </a>类。它位于 <em>System.Net.Sockets</em> 的命名空间。</p>
 
 <div class="note">
 <p>最好使用 <code>using</code> 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。</p>
@@ -39,7 +39,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 <ul>
  <li><code>Start()</code></li>
  <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
-  等一个 Tcp 连接， 并接受一个返回的 TcpClient 对象。</li>
+  等一个 Tcp 连接，并接受一个返回的 TcpClient 对象。</li>
 </ul>
 
 <p>下面是基于服务端的实现：</p>

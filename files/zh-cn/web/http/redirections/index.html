@@ -20,9 +20,9 @@ translation_of: Web/HTTP/Redirections
 
 <h2 id="原理">原理</h2>
 
-<p>在 HTTP 协议中，重定向操作由服务器通过发送特殊的响应（即 redirects）而触发。HTTP 协议的重定向响应的状态码为 3xx 。</p>
+<p>在 HTTP 协议中，重定向操作由服务器通过发送特殊的响应（即 redirects）而触发。HTTP 协议的重定向响应的状态码为 3xx。</p>
 
-<p>浏览器在接收到重定向响应的时候，会采用该响应提供的新的 URL ，并立即进行加载；大多数情况下，除了会有一小部分性能损失之外，重定向操作对于用户来说是不可见的。<br>
+<p>浏览器在接收到重定向响应的时候，会采用该响应提供的新的 URL，并立即进行加载；大多数情况下，除了会有一小部分性能损失之外，重定向操作对于用户来说是不可见的。<br>
   </p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13785/HTTPRedirect.png"></p>
@@ -37,7 +37,7 @@ translation_of: Web/HTTP/Redirections
 
 <h3 id="永久重定向">永久重定向</h3>
 
-<p>这种重定向操作是永久性的。它表示原 URL 不应再被使用，而应该优先选用新的 URL。搜索引擎机器人会在遇到该状态码时触发更新操作，在其索引库中修改与该资源相关的 URL 。</p>
+<p>这种重定向操作是永久性的。它表示原 URL 不应再被使用，而应该优先选用新的 URL。搜索引擎机器人会在遇到该状态码时触发更新操作，在其索引库中修改与该资源相关的 URL。</p>
 
 <table class="standard-table">
  <thead>
@@ -66,7 +66,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr1" name="attr1"></a>[1] 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。 308 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
+<p><a id="attr1" name="attr1"></a>[1] 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。308 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
 
 <h3 id="临时重定向">临时重定向</h3>
 
@@ -105,7 +105,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr2" name="attr2"></a>[2] 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。 307 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
+<p><a id="attr2" name="attr2"></a>[2] 该规范无意使方法发生改变，但在实际应用中用户代理会这么做。307 状态码被创建用来消除在使用非 GET 方法时的歧义行为。</p>
 
 <h3 id="特殊重定向">特殊重定向</h3>
 
@@ -185,7 +185,7 @@ translation_of: Web/HTTP/Redirections
 
 <h3 id="域名别称">域名别称</h3>
 
-<p>理想情况下，一项资源只有一个访问位置，也就是只有一个 URL 。但是由于种种原因，需要为资源设定不同的名称（即不同的域名，例如带有和不带有 www 前缀的 URL，以及简短易记的 URL 等）。在这种情况下，实用的方法是将其重定向到那个实际的（标准的）URL，而不是复制资源。</p>
+<p>理想情况下，一项资源只有一个访问位置，也就是只有一个 URL。但是由于种种原因，需要为资源设定不同的名称（即不同的域名，例如带有和不带有 www 前缀的 URL，以及简短易记的 URL 等）。在这种情况下，实用的方法是将其重定向到那个实际的（标准的）URL，而不是复制资源。</p>
 
 <p>在以下几种情况下可以使用域名别称：</p>
 
@@ -201,7 +201,7 @@ translation_of: Web/HTTP/Redirections
  </dt>
 </dl>
 
-<p>当你重构 Web 站点的时候，资源的 URL 会发生改变。即便是你可以更新站点内部的链接来适应新的命名体系，但无法控制被外部资源使用的 URL 。</p>
+<p>当你重构 Web 站点的时候，资源的 URL 会发生改变。即便是你可以更新站点内部的链接来适应新的命名体系，但无法控制被外部资源使用的 URL。</p>
 
 <p>你并不想因此而使旧链接失效，因为它们会为你带来宝贵的用户（并且帮助优化你的 SEO），所以需要建立从旧链接到新链接的重定向映射。</p>
 
@@ -237,7 +237,7 @@ translation_of: Web/HTTP/Redirections
 
 <p>URL <code>https://example.com/</code> 会被重定向至 <code>https://www.example.com/</code> ，URL 下的任何文件或目录也将重定向到该 URL（<code>https://example.com/some-page</code> 将重定向至 <code>https://www.example.com/some-page</code>）。</p>
 
-<p><code>Redirect_Match</code> 指令的功能与之类似，不同之处在于它可以通过<a href="/zh-CN/docs/Glossary/Regular_expression">正则表达式</a>来指定一批受影响的 URL ：</p>
+<p><code>Redirect_Match</code> 指令的功能与之类似，不同之处在于它可以通过<a href="/zh-CN/docs/Glossary/Regular_expression">正则表达式</a>来指定一批受影响的 URL：</p>
 
 <pre class="notranslate">RedirectMatch ^/images/(.*)$ http://images.example.com/$1</pre>
 

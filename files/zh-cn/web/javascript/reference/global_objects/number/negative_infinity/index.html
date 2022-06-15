@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
  <li><code>NEGATIVE_INFINITY</code> 除以 <code>NEGATIVE_INFINITY</code> 或 <code>POSITIVE_INFINITY</code> 是 <code>NaN</code>。</li>
  <li>任何数除以 <code>NEGATIVE_INFINITY</code> 为 0。</li>
 </ul>
-<p>为了成功返回一个有限值，你可能会使用 <code>Number.NEGATIVE_INFINITY</code> 属性来判断是否显示一个条件错误 。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。</p>
+<p>为了成功返回一个有限值，你可能会使用 <code>Number.NEGATIVE_INFINITY</code> 属性来判断是否显示一个条件错误。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。</p>
 <h2 id="Example">示例</h2>
 <p>下例中，赋值给变量 <code>smallNumber</code> 一个明显小于 JavaScript 中的最小值的值。当 <code>if</code> 语句执行时，<code>smallNumber</code> 值为 "<code>-Infinity</code>"，因此在继续执行代码前，<code>smallNumber</code> 被设为一个更容易管理的值。</p>
 <pre class="brush:js">var smallNumber = (-Number.MAX_VALUE) * 2

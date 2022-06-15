@@ -16,7 +16,7 @@ translation_of: Web/API/ServiceWorkerContainer
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Workers API")}} </p>
 
-<p><code>ServiceWorkerContainer</code>接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载 ，更新和访问 service worker 的状态，以及他们的注册者</p>
+<p><code>ServiceWorkerContainer</code>接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载，更新和访问 service worker 的状态，以及他们的注册者</p>
 
 <p>主要是{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}}提供一个注册 service worker 的方法，{{domxref("ServiceWorkerContainer.controller")}}将获取当前控制页面网络的 service worker</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
- <dd>当？{{domxref("ServiceWorker")}}对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。 如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。</dd>
+ <dd>当？{{domxref("ServiceWorker")}}对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。</dd>
 </dl>
 
 <dl>
@@ -57,7 +57,7 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <h2 id="举例">?举例</h2>
 
-<p>?代码是<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126">service worker fallback-response sample</a> (see <a href="http://googlechrome.github.io/samples/service-worker/fallback-response/">fallback-response live</a>) 的其中一段. ?首先检查浏览器是否支持 serviceWorker. 代码创建了一个 serviceWorker，并且打印出来当前页面的 serviceWorker 的？是否接管了页面的网络状态。如果没有需要刷新页面再次查看.  代码也处理了注册失败的情况</p>
+<p>?代码是<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126">service worker fallback-response sample</a> (see <a href="http://googlechrome.github.io/samples/service-worker/fallback-response/">fallback-response live</a>) 的其中一段。?首先检查浏览器是否支持 serviceWorker. 代码创建了一个 serviceWorker，并且打印出来当前页面的 serviceWorker 的？是否接管了页面的网络状态。如果没有需要刷新页面再次查看。 代码也处理了注册失败的情况</p>
 
 <pre>if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function() {

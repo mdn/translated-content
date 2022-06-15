@@ -33,9 +33,9 @@ console.log(utf8decoder.decode(u16arr));
 console.log(utf8decoder.decode(i16arr));
 console.log(utf8decoder.decode(i32arr));</code></pre>
 
-<h3 id="处理非UTF8文本">处理非UTF8文本</h3>
+<h3 id="处理非UTF8文本">处理非 UTF8 文本</h3>
 
-<p>在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.")进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定Windows-1251字符编码，适用于西里尔字母。</p>
+<p>在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.") 进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码，适用于西里尔字母。</p>
 
 <pre class="brush: js; line-numbers language-js notranslate"><code class="language-js">let win1251decoder = new TextDecoder('windows-1251');
 let bytes = new Uint8Array([207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33]);
@@ -102,8 +102,8 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!</code></pre>
 
 <ul>
  <li>{{DOMxRef("TextEncoder")}} 接口描述了逆操作。</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a> –基于类型数组的字符串的类似C的表示形式</li>
+ <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a> –基于类型数组的字符串的类似 C 的表示形式</li>
  <li>一个<a href="http://code.google.com/p/stringencoding/">垫片</a>，允许在不支持它的浏览器使用这个接口。</li>
  <li><code><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></code></li>
- <li><a href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js支持从v11.0.0全局导出</a></li>
+ <li><a href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js 支持从 v11.0.0 全局导出</a></li>
 </ul>

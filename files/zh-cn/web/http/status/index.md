@@ -30,7 +30,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(100, "100 Continue")}}
   - : 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
-  - : 该代码是响应客户端的 {{HTTPHeader("Upgrade")}} 请求头发送的， 指明服务器即将切换的协议。
+  - : 该代码是响应客户端的 {{HTTPHeader("Upgrade")}} 请求头发送的，指明服务器即将切换的协议。
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : 此代码表示服务器已收到并正在处理该请求，但当前没有响应可用。
 - {{HTTPStatus(103, "103 Early Hints")}}
@@ -85,7 +85,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
   - : 服务器发送此响应，以指示客户端使用在前一个请求中使用的相同方法在另一个 URI 上获取所请求的资源。这与 `302 Found` HTTP 响应代码具有相同的语义，但用户代理 _不能_ 更改所使用的 HTTP 方法：如果在第一个请求中使用了 `POST`，则在第二个请求中必须使用 `POST`
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
-  - : 这意味着资源现在永久位于由`Location:` HTTP Response 标头指定的另一个 URI。 这与 `301 Moved Permanently` HTTP 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 `POST`，则必须在第二个请求中使用 `POST`。
+  - : 这意味着资源现在永久位于由`Location:` HTTP Response 标头指定的另一个 URI。这与 `301 Moved Permanently` HTTP 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 `POST`，则必须在第二个请求中使用 `POST`。
 
 ## 客户端错误响应
 
@@ -102,7 +102,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : 服务器知道请求方法，但目标资源不支持该方法。例如，API 可能不允许调用`DELETE`来删除资源。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : 当 web 服务器在执行 服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制)后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
+  - : 当 web 服务器在执行 服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制) 后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : 类似于 `401 Unauthorized` 但是认证需要由代理完成。
 - {{HTTPStatus(408, "408 Request Timeout")}}

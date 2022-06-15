@@ -21,7 +21,7 @@ translation_of: Web/API/Document/createNodeIterator
  <dt><code>root</code></dt>
  <dd>{{ domxref("NodeIterator") }}遍历起始处的根节点。</dd>
  <dt><code>whatToShow</code> {{ optional_inline() }}</dt>
- <dd>是一个可选的无符号长整型（<code>unsigned long</code>）， 是由节点过滤器（<code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 <code>0xFFFFFFFF</code> ，代表 <code>SHOW_ALL</code> 常量。
+ <dd>是一个可选的无符号长整型（<code>unsigned long</code>），是由节点过滤器（<code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 <code>0xFFFFFFFF</code> ，代表 <code>SHOW_ALL</code> 常量。
  <table>
   <tbody>
    <tr>
@@ -72,7 +72,7 @@ translation_of: Web/API/Document/createNodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
     <td><code>32</code></td>
-    <td>显示 {{ domxref("Entity") }} 节点。 这仅在创建以{{ domxref("Entity") }}实体节点为根节点的{{ domxref("TreeWalker") }}时有意义；在这种情况下，这意味着该实体节点会出现在迭代或遍历的第一位。因为实体节点不会是其他节点的子代，遍历文档树时，实体节点不会出现。</td>
+    <td>显示 {{ domxref("Entity") }} 节点。这仅在创建以{{ domxref("Entity") }}实体节点为根节点的{{ domxref("TreeWalker") }}时有意义；在这种情况下，这意味着该实体节点会出现在迭代或遍历的第一位。因为实体节点不会是其他节点的子代，遍历文档树时，实体节点不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
@@ -82,7 +82,7 @@ translation_of: Web/API/Document/createNodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
     <td><code>2048</code></td>
-    <td>显示 {{ domxref("Entity") }} 节点。 这仅在创建以{{ domxref("Notation") }}符号节点为根节点的{{ domxref("TreeWalker") }}时有意义；在这种情况下，这意味着该符号节点会出现在迭代或遍历的第一位。因为符号节点不会是其他节点的子代，遍历文档树时，符号节点不会出现。</td>
+    <td>显示 {{ domxref("Entity") }} 节点。这仅在创建以{{ domxref("Notation") }}符号节点为根节点的{{ domxref("TreeWalker") }}时有意义；在这种情况下，这意味着该符号节点会出现在迭代或遍历的第一位。因为符号节点不会是其他节点的子代，遍历文档树时，符号节点不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>

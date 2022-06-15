@@ -108,11 +108,11 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.nodeValue")}}</dt>
  <dd>返回或设置当前节点的值。</dd>
  <dt>{{DOMxRef("Node.ownerDocument")}} {{readonlyInline}}</dt>
- <dd>返回这个元素属于的 {{DOMxRef("Document")}}对象 。 如果没有 Document 对象与之关联，返回 null。</dd>
+ <dd>返回这个元素属于的 {{DOMxRef("Document")}}对象。如果没有 Document 对象与之关联，返回 null。</dd>
  <dt>{{DOMxRef("Node.parentNode")}} {{readonlyInline}}</dt>
- <dd>返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回 null。</dd>
+ <dd>返回一个当前节点 {{DOMxRef("Node")}}的父节点。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中，这个属性返回 null。</dd>
  <dt>{{DOMxRef("Node.parentElement")}} {{readonlyInline}}</dt>
- <dd>返回一个当前节点的父节点 {{DOMxRef("Element")}} 。 如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。</dd>
+ <dd>返回一个当前节点的父节点 {{DOMxRef("Element")}} 。如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。</dd>
  <dt>{{DOMxRef("Node.previousSibling")}} {{readonlyInline}}</dt>
  <dd>返回一个当前节点同辈的前一个节点 ( {{DOMxRef("Node")}}) ，或者返回 null（如果不存在这样的一个节点的话）。</dd>
  <dt>{{DOMxRef("Node.textContent")}}</dt>
@@ -131,7 +131,7 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>该节点命名空间的<code>URL</code>，如果没有命名空间则为<code>null</code>。
  <div class="blockIndicator note">
- <p><strong>Note:</strong> 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树 ，所有元素的命名空间统一为 <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>。</p>
+ <p><strong>Note:</strong> 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>。</p>
  </div>
  </dd>
  <dt>{{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}</dt>
@@ -171,7 +171,7 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.lookupPrefix()")}}</dt>
  <dd>返回包含参数 URI 所对应的命名空间前缀的 {{DOMxRef("DOMString")}}，若不存在则返回 null。如果存在多个可匹配的前缀，则返回结果和浏览器具体实现有关。</dd>
  <dt>{{DOMxRef("Node.lookupNamespaceURI()")}}</dt>
- <dd>接受一个前缀，并返回前缀所对应节点命名空间 URI 。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。</dd>
+ <dd>接受一个前缀，并返回前缀所对应节点命名空间 URI。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。</dd>
  <dt>{{DOMxRef("Node.normalize()")}}</dt>
  <dd>对该元素下的所有文本子节点进行整理，合并相邻的文本节点并清除空文本节点。</dd>
  <dt>{{DOMxRef("Node.removeChild()")}}</dt>

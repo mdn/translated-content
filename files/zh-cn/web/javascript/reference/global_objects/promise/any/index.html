@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 <ul>
  <li>如果传入的参数是一个空的可迭代对象，则返回一个 <strong>已失败（already rejected）</strong> 状态的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>。</li>
  <li>如果传入的参数不包含任何 <code>promise</code><var>，则返回</var>一个 <strong>异步完成</strong> （<strong>asynchronously resolved</strong>）的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>。</li>
- <li>其他情况下都会返回一个<strong>处理中（pending）</strong> 的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>。 只要传入的迭代对象中的任何一个 <code>promise</code> 变成成功（resolve）状态，或者其中的所有的 <code>promises</code> 都失败，那么返回的 <code>promise</code> 就会 <strong>异步地</strong>（当调用栈为空时）<strong> </strong>变成成功/失败（resolved/reject）状态。</li>
+ <li>其他情况下都会返回一个<strong>处理中（pending）</strong> 的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>。只要传入的迭代对象中的任何一个 <code>promise</code> 变成成功（resolve）状态，或者其中的所有的 <code>promises</code> 都失败，那么返回的 <code>promise</code> 就会 <strong>异步地</strong>（当调用栈为空时）<strong> </strong>变成成功/失败（resolved/reject）状态。</li>
 </ul>
 
 <h2 id="说明">说明</h2>
@@ -79,7 +79,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) =&gt; {
   console.log(value);
   // pFast fulfils first
 })
-// 期望输出: "很快完成"
+// 期望输出："很快完成"
 </pre>
 
 <h3 id="Rejections_with_AggregateError">Rejections with AggregateError</h3>
@@ -93,7 +93,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) =&gt; {
 Promise.any([pErr]).catch((err) =&gt; {
   console.log(err);
 })
-// 期望输出: "AggregateError: No Promise in Promise.any was resolved"
+// 期望输出："AggregateError: No Promise in Promise.any was resolved"
 </pre>
 
 <h3 id="显示第一张已加载的图片">显示第一张已加载的图片</h3>

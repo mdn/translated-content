@@ -21,7 +21,7 @@ translation_of: Web/HTTP/CORS
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
-出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。 例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
+出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
 
 ![](cors_principle.png)
 
@@ -33,7 +33,7 @@ translation_of: Web/HTTP/CORS
 
 更具体地来讲，这篇文章适用于 **网站管理员**、**后端和前端开发者**。现代浏览器处理跨源资源共享的客户端部分，包括 HTTP 头和相关策略的执行。但是这一新标准意味着服务器需要处理新的请求头和响应头。
 
-## 什么情况下需要 CORS ？
+## 什么情况下需要 CORS？
 
 这份 [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) 允许在下列场景中使用跨站点 HTTP 请求：
 
@@ -195,7 +195,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1\~10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。 预检请求中同时携带了下面两个首部字段：
+浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1\~10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。预检请求中同时携带了下面两个首部字段：
 
 ```
 Access-Control-Request-Method: POST
@@ -441,7 +441,7 @@ Access-Control-Allow-Headers: <field-name>[, <field-name>]*
 
 ## HTTP 请求首部字段
 
-本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。 当开发者使用 XMLHttpRequest 对象发起跨源请求时，它们已经被设置就绪。
+本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。当开发者使用 XMLHttpRequest 对象发起跨源请求时，它们已经被设置就绪。
 
 ### Origin
 

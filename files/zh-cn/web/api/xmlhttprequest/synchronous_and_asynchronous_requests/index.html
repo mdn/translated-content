@@ -41,7 +41,7 @@ xhr.send(null);</pre>
 
 <h3 id="例子_创建一个标准的方法来读取外部文件">例子：创建一个标准的方法来读取外部文件</h3>
 
-<p>在一些需求情况下，必须读取多个外部文件。这是一个标准的函数. 该函数使用 <code>XMLHttpRequest</code> 对象进行异步请求。而且可以为每个文件读取完成后指定不同的回调函数。</p>
+<p>在一些需求情况下，必须读取多个外部文件。这是一个标准的函数。该函数使用 <code>XMLHttpRequest</code> 对象进行异步请求。而且可以为每个文件读取完成后指定不同的回调函数。</p>
 
 <pre class="brush: js">function xhrSuccess() {
     this.callback.apply(this, this.arguments);
@@ -70,7 +70,7 @@ function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
 loadFile("message.txt", showMessage, "New message!\n\n");
 </pre>
 
-<p>实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数 “通过“ XHR 对象到成功回调函数。</p>
+<p>实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数“通过“XHR 对象到成功回调函数。</p>
 
 <p>第 1 行声明 XHR 操作成功完成时调用的函数。它又调用已经分配给 XHR 对象（第 7 行）属性的 loadFile 函数（本例中为函数 showMessage）的调用中指定的回调函数。提供给调用函数 loadFile 的附加参数（如果有的话）被“应用”到回调函数的运行中。</p>
 
@@ -199,7 +199,7 @@ if (request.status === 200) {
 
 <h3 id="将同步XHR用例调整到Beacon_API">将同步 XHR 用例调整到 Beacon API</h3>
 
-<p>在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 <a href="/zh-CN/docs/Web/API/Window/onunload">window.onunload</a>和<a href="/zh-CN/docs/Web/API/Window/onbeforeunload">window.onbeforeunload</a> 事件期间一样。 您应该考虑使用带有 <code>Keepalive</code> 标志的 <code>fetch</code> API。 当 <code>keepalive</code> 的 <code>fetch</code> 不可用时，可以考虑使用 <a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a> API 可以支持这些用例，通常在提供良好 UX 的同时。</p>
+<p>在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 <a href="/zh-CN/docs/Web/API/Window/onunload">window.onunload</a>和<a href="/zh-CN/docs/Web/API/Window/onbeforeunload">window.onbeforeunload</a> 事件期间一样。您应该考虑使用带有 <code>Keepalive</code> 标志的 <code>fetch</code> API。当 <code>keepalive</code> 的 <code>fetch</code> 不可用时，可以考虑使用 <a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a> API 可以支持这些用例，通常在提供良好 UX 的同时。</p>
 
 <p>以下示例（来自 <a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">sendBeacon</a> 文档）显示了一个理论分析代码，该代码尝试通过在卸载处理程序中使用同步 XMLHttpRequest 将数据提交给服务器。这导致页面的卸载被延迟。</p>
 

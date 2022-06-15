@@ -118,14 +118,14 @@ console.log(fooInstance.constructor.name); // logs "Foo"</pre>
 }
 </pre>
 
-<p>使用<code>static name()</code>方法<code>Foo.name</code>不再保存实际的类名称，而是引用<code>name()</code>函数对象。 ES2015 语法中的上述类定义将在 Chrome 或 Firefox 中运行，类似于 ES5 语法中的以下代码段：</p>
+<p>使用<code>static name()</code>方法<code>Foo.name</code>不再保存实际的类名称，而是引用<code>name()</code>函数对象。ES2015 语法中的上述类定义将在 Chrome 或 Firefox 中运行，类似于 ES5 语法中的以下代码段：</p>
 
 <pre class="brush: js">function Foo() {}
 Object.defineProperty(Foo, 'name', { writable: true });
 Foo.name = function() {};
 </pre>
 
-<p>通过<code>fooInstance.constructor.name</code>获取<code>fooInstance</code>类不会给我们所有的类名，而是静态类方法的引用。 例如：</p>
+<p>通过<code>fooInstance.constructor.name</code>获取<code>fooInstance</code>类不会给我们所有的类名，而是静态类方法的引用。例如：</p>
 
 <pre class="brush: js">var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs function name()</pre>
@@ -182,7 +182,7 @@ if (b.constructor.name === 'Foo') {
 }
 </pre>
 
-<p>在未压缩版本中，程序运行到真实分支并打印<code>'foo' is an instance of 'Foo'</code>。 而在压缩版本中，它的行为不同，并且进入 else 分支。如果您依赖于<code>Function.name</code>，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。</p>
+<p>在未压缩版本中，程序运行到真实分支并打印<code>'foo' is an instance of 'Foo'</code>。而在压缩版本中，它的行为不同，并且进入 else 分支。如果您依赖于<code>Function.name</code>，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。</p>
 
 <h2 id="规范">规范</h2>
 

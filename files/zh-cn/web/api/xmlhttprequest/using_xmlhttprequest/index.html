@@ -63,7 +63,7 @@ oReq.send();</pre>
 <ol>
  <li>使用 <code>XMLHttpRequest.responseXML</code> 属性。</li>
  <li>将内容通过 <code>fragment.body.innerHTML</code> 注入到一个 <a href="/zh-CN/docs/Web/API/DocumentFragment">文档片段</a> 中，并遍历 DOM 中的片段。</li>
- <li>如果你预先知道 HTML 文档的内容，你可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp </a>。如果你用 RegExp 扫描时受到换行符的影响，你也许想要删除所有的换行符。 然而，这种方法是"最后手段"，因为如果 HTML 代码发生轻微变化，该方法将可能失败。</li>
+ <li>如果你预先知道 HTML 文档的内容，你可以使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp </a>。如果你用 RegExp 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 HTML 代码发生轻微变化，该方法将可能失败。</li>
 </ol>
 
 <h2 id="处理二进制数据">处理二进制数据</h2>
@@ -84,7 +84,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 <pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
 
 oReq.onload = function(e) {
-  var arraybuffer = oReq.response; // 不是 responseText ！
+  var arraybuffer = oReq.response; // 不是 responseText！
   /* ... */
 }
 oReq.open("GET", url);
@@ -95,7 +95,7 @@ oReq.send();</pre>
 
 <h2 id="监测进度">监测进度</h2>
 
-<p><code>XMLHttpRequest</code> 提供了各种在请求被处理期间发生的事件以供监听。这包括定期进度通知、 错误通知，等等。</p>
+<p><code>XMLHttpRequest</code> 提供了各种在请求被处理期间发生的事件以供监听。这包括定期进度通知、错误通知，等等。</p>
 
 <p>支持 DOM 的 progress 事件监测之于 <code>XMLHttpRequest</code> 传输，遵循 Web API <a class="external" href="http://dev.w3.org/2006/webapi/progress/Progress.html">进度事件规范</a>：这些事件实现了 {{domxref("ProgressEvent")}} 接口。</p>
 
@@ -721,7 +721,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 <h2 id="跨站的_XMLHttpRequest">跨站的 XMLHttpRequest</h2>
 
-<p>现代浏览器可以通过执行 WebApps 工作小组通过的 <a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">Access Control for Cross-Site Requests</a> 标注来支持跨站请求。只要服务器端的配置允许您从您的 Web 应用发送请求，就可以使用 <code>XMLHttpRequest</code> 。 否则，会抛出一个 <code>INVALID_ACCESS_ERR</code> 异常</p>
+<p>现代浏览器可以通过执行 WebApps 工作小组通过的 <a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">Access Control for Cross-Site Requests</a> 标注来支持跨站请求。只要服务器端的配置允许您从您的 Web 应用发送请求，就可以使用 <code>XMLHttpRequest</code> 。否则，会抛出一个 <code>INVALID_ACCESS_ERR</code> 异常</p>
 
 <h2 id="绕过缓存">绕过缓存</h2>
 
@@ -759,7 +759,7 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_被停止">XMLHttpRequests 被停止</h3>
 
-<p>如果你的 XMLHttpRequest 收到 <code>status=0</code> 和 <code>statusText=null</code> 的返回，这意味着请求无法执行。 就是<a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">无法发送</a>. 一个可能导致的原因是当 <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin"><code>XMLHttpRequest</code> origin</a> (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 <code>open()</code>.。这种情况是可能发生的，举个例子，我们在一个窗口的<code>onunload</code>事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是<code>open()</code>）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。</p>
+<p>如果你的 XMLHttpRequest 收到 <code>status=0</code> 和 <code>statusText=null</code> 的返回，这意味着请求无法执行。就是<a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">无法发送</a>. 一个可能导致的原因是当 <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin"><code>XMLHttpRequest</code> origin</a> (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 <code>open()</code>.。这种情况是可能发生的，举个例子，我们在一个窗口的<code>onunload</code>事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是<code>open()</code>）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。</p>
 
 <h2 id="Worker">Worker</h2>
 

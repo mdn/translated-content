@@ -215,7 +215,7 @@ window.addEventListener("message", (event) => {
   - : 返回一个状态为已拒绝的 `Promise` 对象，并将给定的失败信息传递给对应的处理函数。
 
 - {{jsxref("Promise.resolve", "Promise.resolve(value)")}}
-  - : 返回一个状态由给定 value 决定的 `Promise` 对象。如果该值是 thenable（即，带有 `then` 方法的对象），返回的Promise 对象的最终状态由 then 方法执行结果决定；否则，返回的 Promise 对象状态为已兑现，并且将该 value 传递给对应的 then 方法。
+  - : 返回一个状态由给定 value 决定的 `Promise` 对象。如果该值是 thenable（即，带有 `then` 方法的对象），返回的 Promise 对象的最终状态由 then 方法执行结果决定；否则，返回的 Promise 对象状态为已兑现，并且将该 value 传递给对应的 then 方法。
 
     通常而言，如果你不知道一个值是否是 promise 对象，使用 {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} 来返回一个 Promise 对象，这样就能将该 value 以 promise 对象形式使用。
 

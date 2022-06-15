@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Statements/continue
 
 <h2 id="Description">描述</h2>
 
-<p>与 {{jsxref("Statements/break", "break")}} 语句的区别在于， continue 并不会终止循环的迭代，而是：</p>
+<p>与 {{jsxref("Statements/break", "break")}} 语句的区别在于，continue 并不会终止循环的迭代，而是：</p>
 
 <ul>
  <li>在 {{jsxref("Statements/while", "while")}} 循环中，控制流跳转回条件判断；</li>
@@ -52,7 +52,7 @@ while (i &lt; 5) {
 
 <h3 id="使用带_label_的_continue">使用带 label 的 continue</h3>
 
-<p>在下面的例子中，被标记为 <code>checkiandj</code> 的语句包含一个被标记为 <code>checkj</code> 的语句。当遇到<code>continue</code> 语句时，程序回到 <code>checkj</code> 语句的开始继续执行。每次遇到 <code>continue</code> 时，再次执行 <code>checkj</code> ，直到条件判断返回 false 。之后完成 <code>checkiandj</code> 语句剩下的部分。</p>
+<p>在下面的例子中，被标记为 <code>checkiandj</code> 的语句包含一个被标记为 <code>checkj</code> 的语句。当遇到<code>continue</code> 语句时，程序回到 <code>checkj</code> 语句的开始继续执行。每次遇到 <code>continue</code> 时，再次执行 <code>checkj</code> ，直到条件判断返回 false。之后完成 <code>checkiandj</code> 语句剩下的部分。</p>
 
 <p>但如果 <code>continue</code> 的标号被改为 <code>checkiandj</code> ，那程序将会从 <code>checkiandj</code> 语句的开始继续运行。</p>
 

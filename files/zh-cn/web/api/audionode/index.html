@@ -11,7 +11,7 @@ translation_of: Web/API/AudioNode
 
 <p>处理多个 <code>AudioNode</code> 时，一般来说，一个模块读取它的输入，做一些处理。后输出新生成的结果。</p>
 
-<p>不同的模块可以连接在一起构建一个处理图。 这样一个处理图包含 {{domxref("AudioContext")}}。 每个 <code>AudioNode</code> 只有一个这样的上下文。</p>
+<p>不同的模块可以连接在一起构建一个处理图。这样一个处理图包含 {{domxref("AudioContext")}}。 每个 <code>AudioNode</code> 只有一个这样的上下文。</p>
 
 <p>一个 <code>AudioNode</code> 可以作为事件的目标，所以它实现了 {{domxref("EventTarget")}} 接口。</p>
 
@@ -24,12 +24,12 @@ translation_of: Web/API/AudioNode
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>返回这个 node 需要的输入数量. Source nodes are defined as nodes having a <code>numberOfInputs</code> attributes with a value of <code>0</code>.</dd>
+ <dd>返回这个 node 需要的输入数量。Source nodes are defined as nodes having a <code>numberOfInputs</code> attributes with a value of <code>0</code>.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
- <dd>返回这个 node 的输出数量. Destination nodes, like <code>AudioDestinationNode</code>, have a value of <code>0</code> for this attribute.</dd>
+ <dd>返回这个 node 的输出数量。Destination nodes, like <code>AudioDestinationNode</code>, have a value of <code>0</code> for this attribute.</dd>
 </dl>
 
 <dl>

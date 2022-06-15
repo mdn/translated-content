@@ -95,7 +95,7 @@ function lockPointer() {
   // -- 这在以后可能会发生改变。
   elem.requestFullscreen = elem.requestFullscreen    ||
                            elem.mozRequestFullscreen ||
-                           elem.mozRequestFullScreen || // 较旧的 API 把 ‘S’ 大写
+                           elem.mozRequestFullScreen || // 较旧的 API 把‘S’大写
                            elem.webkitRequestFullscreen;
   elem.requestFullscreen();
 }
@@ -162,7 +162,7 @@ document.exitPointerLock();
 
 <h2 id="mouselocklostevent" name="mouselocklostevent">pointerlockchange 事件</h2>
 
-<p>当指针锁定状态改变时 - 例如，当调用 <code>requestPointerLock</code>, <code>exitPointerLock</code>，用户按下 ESC 键，等等。— <code>pointerlockchange</code> 事件被分发到 <code>document</code>。 这是一个简单事件所以不包含任何的额外数据。</p>
+<p>当指针锁定状态改变时 - 例如，当调用 <code>requestPointerLock</code>, <code>exitPointerLock</code>，用户按下 ESC 键，等等。— <code>pointerlockchange</code> 事件被分发到 <code>document</code>。这是一个简单事件所以不包含任何的额外数据。</p>
 
 <div class="note">该事件目前在 Firefox 中使用前缀的格式是 <code>mozpointerlockchange</code> ，在 Chrome 中是 <code>webkitpointerlockchange</code>。 </div>
 

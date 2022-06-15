@@ -14,7 +14,7 @@ translation_of: Web/API/Headers
 
 <p>出于安全考虑，某些头只能由用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
-<p>一个 Headers 对象也有一个关联的 guard，它具有不可变的值，<code>request</code>，<code>request-no-cors</code>，<code>response</code>或<code>none</code>。 这会影响 {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, 和{{domxref("Headers.append","append()")}} 方法 改变 header. 参考更多信息，请看 {{Glossary("Guard")}}.</p>
+<p>一个 Headers 对象也有一个关联的 guard，它具有不可变的值，<code>request</code>，<code>request-no-cors</code>，<code>response</code>或<code>none</code>。这会影响 {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, 和{{domxref("Headers.append","append()")}} 方法 改变 header. 参考更多信息，请看 {{Glossary("Guard")}}.</p>
 
 <p>你可以通过 {{domxref("Request.headers")}} 和{{domxref("Response.headers")}} 属性检索一个<code>Headers</code>对象，并使用 {{domxref("Headers.Headers()")}} 构造函数创建一个新的<code>Headers</code> 对象。</p>
 
@@ -57,7 +57,7 @@ translation_of: Web/API/Headers
 </div>
 
 <div class="note">
-<p><strong>Note</strong>:如果您尝试传入名称不是<a href="https://fetch.spec.whatwg.org/#concept-header-name">有效的 HTTP 头名称</a>的引用，则所有 Headers 方法都将引发 <code>TypeError</code> 。 如果头部有一个不变的{{Glossary("Guard")}}，则变异操作将会抛出一个 <code>TypeError</code> 。 在其他任何失败的情况下，他们默默地失败。</p>
+<p><strong>Note</strong>:如果您尝试传入名称不是<a href="https://fetch.spec.whatwg.org/#concept-header-name">有效的 HTTP 头名称</a>的引用，则所有 Headers 方法都将引发 <code>TypeError</code> 。如果头部有一个不变的{{Glossary("Guard")}}，则变异操作将会抛出一个 <code>TypeError</code> 。在其他任何失败的情况下，他们默默地失败。</p>
 </div>
 
 <h3 id="Obsolete_methods">Obsolete methods</h3>

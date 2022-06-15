@@ -5,14 +5,14 @@ tags:
   - API
   - HTML DOM
   - HTMLSelectElement
-  - HTML表单
+  - HTML 表单
   - 参考
   - 属性
 translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><code><strong>HTMLSelectElement.selectedIndex</strong></code> 是一个长整型数，它反映了被选中的第一个 {{HTMLElement("option")}} 元素的索引值。值为-1时表明没有元素被选中。</p>
+<p><code><strong>HTMLSelectElement.selectedIndex</strong></code> 是一个长整型数，它反映了被选中的第一个 {{HTMLElement("option")}} 元素的索引值。值为 -1 时表明没有元素被选中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -43,7 +43,7 @@ var pElem = document.getElementById('p')
 // 当有新的&lt;option&gt;元素被选中时
 selectElem.addEventListener('change', function() {
   var index = selectElem.selectedIndex;
-  // 把index数据添加到p元素中
+  // 把 index 数据添加到 p 元素中
   pElem.innerHTML = 'selectedIndex: ' + index;
 })</pre>
 

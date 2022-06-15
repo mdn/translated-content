@@ -149,7 +149,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 <h3 id="在旧的浏览器中使用新的API">在旧的浏览器中使用新的 API</h3>
 
-<p>这是一个使用 <code>navigator.mediaDevices.getUserMedia()</code>的例子，带一个 polyfill 以适应旧的浏览器。 要注意的是这个 polyfill 并不能修正一些约束语法上的遗留差异，这表示约束在某些浏览器上可能不会很好地运行。推荐使用处理了约束的 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill 来替代。</p>
+<p>这是一个使用 <code>navigator.mediaDevices.getUserMedia()</code>的例子，带一个 polyfill 以适应旧的浏览器。要注意的是这个 polyfill 并不能修正一些约束语法上的遗留差异，这表示约束在某些浏览器上可能不会很好地运行。推荐使用处理了约束的 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill 来替代。</p>
 
 <pre class="brush: js notranslate">// 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
 if (navigator.mediaDevices === undefined) {

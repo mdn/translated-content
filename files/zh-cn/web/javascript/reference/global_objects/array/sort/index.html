@@ -49,15 +49,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 <p>如果指明了 <code>compareFunction</code> ，那么数组会按照调用该函数的返回值排序。即 a 和 b 是两个将要被比较的元素：</p>
 
 <ul>
- <li>如果 <code>compareFunction(a, b)</code> 小于 0 ，那么 a 会被排列到 b 之前；</li>
+ <li>如果 <code>compareFunction(a, b)</code> 小于 0，那么 a 会被排列到 b 之前；</li>
 </ul>
 
 <ul>
- <li>如果 <code>compareFunction(a, b)</code> 等于 0 ， a 和 b 的相对位置不变。备注： ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；</li>
+ <li>如果 <code>compareFunction(a, b)</code> 等于 0，a 和 b 的相对位置不变。备注：ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；</li>
 </ul>
 
 <ul>
- <li>如果 <code>compareFunction(a, b)</code> 大于 0 ， b 会被排列到 a 之前。</li>
+ <li>如果 <code>compareFunction(a, b)</code> 大于 0，b 会被排列到 a 之前。</li>
  <li><code>compareFunction(a, b)</code> 必须总是对相同的输入返回相同的比较结果，否则排序的结果将是不确定的。</li>
 </ul>
 

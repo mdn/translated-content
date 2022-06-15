@@ -39,7 +39,7 @@ translation_of: Web/API/SubtleCrypto
 
 <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey">generateKey()</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a></code> 函数都可以创建一个新的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code> 对象。</p>
 
-<p>不同之处在于 <code>generateKey()</code> 每次都会生成一个新的键值对， 而 <code>deriveKey()</code> 通过从基础密钥资源中生成一个新的密钥。如果为两个独立的<code>deriveKey()</code>提供相同的基础密钥资源，那么你会获得两个具有相同基础值的 <code>CryptoKey</code> 对象。如果你想通过密码派生加密密钥，然后从相同的密码派生相同的密钥以解密数据，那么这将会非常有用。</p>
+<p>不同之处在于 <code>generateKey()</code> 每次都会生成一个新的键值对，而 <code>deriveKey()</code> 通过从基础密钥资源中生成一个新的密钥。如果为两个独立的<code>deriveKey()</code>提供相同的基础密钥资源，那么你会获得两个具有相同基础值的 <code>CryptoKey</code> 对象。如果你想通过密码派生加密密钥，然后从相同的密码派生相同的密钥以解密数据，那么这将会非常有用。</p>
 
 <h4 id="导入和导出密钥">导入和导出密钥</h4>
 

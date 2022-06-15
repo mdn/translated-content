@@ -11,7 +11,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 
 <div class="overheadIndicator nonStandard nonStandardHeader">
 <p>警告：<br>
- 本文档中包含一个<strong>moz</strong>前缀的所有方法和属性 (如<strong>mozSetDataAt()</strong>) 是 Gecko 的具体接口。 这些接口仅适用于基于 Gecko 的浏览器。</p>
+ 本文档中包含一个<strong>moz</strong>前缀的所有方法和属性 (如<strong>mozSetDataAt()</strong>) 是 Gecko 的具体接口。这些接口仅适用于基于 Gecko 的浏览器。</p>
 </div>
 
 <h2 id="text" name="text">拖动文字</h2>
@@ -21,11 +21,11 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 <pre>event.dataTransfer.setData("text/plain", "This is text to drag")
 </pre>
 
-<p>拖动文本框中的文字和页面选中部分的文字是自动完成的， 所以你不需要手动处理这些拖动。</p>
+<p>拖动文本框中的文字和页面选中部分的文字是自动完成的，所以你不需要手动处理这些拖动。</p>
 
 <p>如果应用和拖动目标不支持其它类型，推荐你使用 <code>text/plain</code> 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。</p>
 
-<p>注：在旧代码中，可能会使用 <code>text/unicode</code> 或者 <code>Text</code> 类型， 这两个与 <code>text/plain</code> 是一样的，并且应该被替换用于存储和提取数据。</p>
+<p>注：在旧代码中，可能会使用 <code>text/unicode</code> 或者 <code>Text</code> 类型，这两个与 <code>text/plain</code> 是一样的，并且应该被替换用于存储和提取数据。</p>
 
 <h2 id="link" name="link">拖动链接</h2>
 

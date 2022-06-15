@@ -74,8 +74,8 @@ translation_of: Web/HTML/Element/table
  <dd> 这个枚举属性指定了包含在文档中的表格必须如何对齐。有如下值：
  <ul>
   <li>left，表格将在文档左侧显示；</li>
-  <li>center， 表格将在文档中央显示；</li>
-  <li>right， 表格将在文档右侧显示；</li>
+  <li>center，表格将在文档中央显示；</li>
+  <li>right，表格将在文档右侧显示；</li>
  </ul>
 
  <div class="note"><strong>小贴士：</strong>
@@ -150,7 +150,7 @@ translation_of: Web/HTML/Element/table
 
 <dl>
  <dt>{{htmlattrdef("border")}} {{Deprecated_inline}}</dt>
- <dd>这个整型元素使用像素，定义了表格边框的大小。 如果设置为 0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为 1，表示表格具有 1px 大小的边框。
+ <dd>这个整型元素使用像素，定义了表格边框的大小。如果设置为 0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为 1，表示表格具有 1px 大小的边框。
  <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性 {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} 和 {{cssxref("border-style")}} 可实现相同效果。</div>
  </dd>
 </dl>
@@ -158,7 +158,7 @@ translation_of: Web/HTML/Element/table
 <dl>
  <dt>{{htmlattrdef("cellpadding")}} {{Deprecated_inline}}</dt>
  <dd>这个属性定义了表格单元的内容和边框之间的空间。如果它是一个像素长度单位，这个像素将被应用到所有的四个侧边；如果它是一个百分比的长度单位，内容将被作为中心，总的垂直（上和下）长度将代表这个百分比。这同样适用于总的水平（左和右）空间。
- <div class="note"><strong>小贴士：不要使用这个属性</strong>，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS"> CSS</a> 定制样式。 在{{HTMLElement("table")}} 元素上使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。</div>
+ <div class="note"><strong>小贴士：不要使用这个属性</strong>，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS"> CSS</a> 定制样式。在{{HTMLElement("table")}} 元素上使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。</div>
  </dd>
 </dl>
 
@@ -214,7 +214,7 @@ translation_of: Web/HTML/Element/table
  <dd>这个枚举属性定义了在一个表格中规则的显示位置。它可以有以下值：:
  <ul>
   <li>none，这表明没有规格将被显示；这是默认的值；</li>
-  <li>groups，这将使规则只显示在行组（row groups，通过 {{HTMLElement("thead")}} ， {{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 元素定义）和列组（ column groups，通过{{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}} 元素定义）之间</li>
+  <li>groups，这将使规则只显示在行组（row groups，通过 {{HTMLElement("thead")}} ， {{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 元素定义）和列组（column groups，通过{{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}} 元素定义）之间</li>
   <li>rows，这将使规则在行之间显示；</li>
   <li>columns，这将使规则在列之间显示；</li>
   <li>
@@ -238,8 +238,8 @@ translation_of: Web/HTML/Element/table
   <li>Use prose around the table (this method is less semantic).</li>
   <li>在表格的 {{HTMLElement("caption")}} 元素中添加描述。</li>
   <li>在表格的 {{HTMLElement("caption")}} 元素中，添加一个带有描述的 {{HTMLElement("details")}} 元素。</li>
-  <li>将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在旁边添加散文（prose ）描述。</li>
-  <li>将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在 {{HTMLElement("thead")}} 元素中添加散文（prose ）描述。</li>
+  <li>将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在旁边添加散文（prose）描述。</li>
+  <li>将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在 {{HTMLElement("thead")}} 元素中添加散文（prose）描述。</li>
   <li>调整表格，以便不需要这样的描述 (比如，使用 {{HTMLElement("th")}} 和 {{HTMLElement("thead")}} 元素)。</li>
  </ul>
  </div>
@@ -474,7 +474,7 @@ border: 1px solid black;
 <h2 id="相关">相关</h2>
 
 <ul>
- <li>其它表格相关的 HTML 元素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
+ <li>其它表格相关的 HTML 元素：{{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
  <li>可能特别有用的关于设定表格元素样式的 CSS 属性：
   <ul>
    <li>{{cssxref("width")}} 控制表格的宽度；</li>

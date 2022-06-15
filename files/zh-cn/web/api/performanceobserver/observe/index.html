@@ -42,7 +42,7 @@ translation_of: Web/API/PerformanceObserver/observe
 var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
   for (var i=0; i &lt; entries.length; i++) {
-    //处理 “mark” 和 “frame” 事件
+    //处理“mark”和“frame”事件
   }
 });
 //调用 observer 对象的 observe() 方法
@@ -52,7 +52,7 @@ observer.observe({entryTypes: ["mark", "frame"]});
 
 //预先声明回调函数 perf_observer
 function perf_observer(list, observer) {
-  //处理 “measure” 事件
+  //处理“measure”事件
 }
 //再将其传入 PerformanceObserver()，成功 new 了一个 PerformanceObserver 类的，名为 observer2 的对象
 var observer2 = new PerformanceObserver(perf_observer);

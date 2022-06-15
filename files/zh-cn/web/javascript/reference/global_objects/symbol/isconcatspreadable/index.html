@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric); // 结果: ['a', 'b', 'c', 1, 2, 3]
+console.log(alphaNumeric); // 结果：['a', 'b', 'c', 1, 2, 3]
 </pre>
 
 <p>设置<code>Symbol.isConcatSpreadable</code>为<code>false</code>：</p>
@@ -45,7 +45,7 @@ console.log(alphaNumeric); // 结果: ['a', 'b', 'c', 1, 2, 3]
 numeric[Symbol.isConcatSpreadable] = false;
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric); // 结果: ['a', 'b', 'c', [1, 2, 3] ]
+console.log(alphaNumeric); // 结果：['a', 'b', 'c', [1, 2, 3] ]
 </pre>
 
 <h3 id="Array-like_对象">Array-like 对象</h3>

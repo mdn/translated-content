@@ -718,7 +718,7 @@ if (shExpMatch(url, "http:*")) {
 <div class="note">
 <p>自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。</p>
 
-<p><code>isInNet()</code>， <code>isResolvable()</code> 和 <code>dnsResolve()</code> 应该谨慎使用，这些函数会进行  DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。</p>
+<p><code>isInNet()</code>， <code>isResolvable()</code> 和 <code>dnsResolve()</code> 应该谨慎使用，这些函数会进行  DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。</p>
 </div>
 
 <h2 id="历史与实现">历史与实现</h2>

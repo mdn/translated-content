@@ -31,7 +31,7 @@ analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data retu
 
 <h2 id="例子">例子</h2>
 
-<p>以下的例子展示了 {{domxref("AudioContext")}} 生成一个 <code>AnalyserNode</code> 基础用法， 然后通过 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 重复的收集和绘制一个当前音频输入的“示波器样式”输出。 有关更完整的应用实例/信息，请查看我们的 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (有关代码请参阅 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a>)。</p>
+<p>以下的例子展示了 {{domxref("AudioContext")}} 生成一个 <code>AnalyserNode</code> 基础用法， 然后通过 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 重复的收集和绘制一个当前音频输入的“示波器样式”输出。有关更完整的应用实例/信息，请查看我们的 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (有关代码请参阅 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a>)。</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();

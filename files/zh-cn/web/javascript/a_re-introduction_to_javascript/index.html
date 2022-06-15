@@ -11,14 +11,14 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 <div>{{jsSidebar}}</div>
 
-<p>为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称<a href="http://javascript.crockford.com/javascript.html">世界上被人误解最深的编程语言</a>。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。 JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。</p>
+<p>为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称<a href="http://javascript.crockford.com/javascript.html">世界上被人误解最深的编程语言</a>。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。</p>
 
 <p>我们有必要先从这门语言的历史谈起。在 1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用 Sun Microsystem 的 Java 语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。</p>
 
 <p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织）， {{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
 
 <div class="note">
-<p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
+<p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript。</p>
 </div>
 
 <p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a> （注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
@@ -129,7 +129,7 @@ parseInt("0x10"); // 16</pre>
 -1 / 0; // -Infinity
 </pre>
 
-<p>可以使用内置函数 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a> 来判断一个变量是否是一个有穷数， 如果类型为<code>Infinity</code>, <code>-Infinity</code> 或 <code>NaN 则返回 false</code>：</p>
+<p>可以使用内置函数 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a> 来判断一个变量是否是一个有穷数，如果类型为<code>Infinity</code>, <code>-Infinity</code> 或 <code>NaN 则返回 false</code>：</p>
 
 <pre class="brush: js">isFinite(1/0); // false
 isFinite(Infinity); // false
@@ -144,7 +144,7 @@ isFinite("0"); // true
 Number.isFinite("0"); // false</pre>
 
 <div class="note">
-<p><strong>备注：</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 <code>NaN</code>。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。</p>
+<p><strong>备注：</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同，只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 <code>NaN</code>。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。</p>
 </div>
 
 <h2 id="字符串">字符串</h2>
@@ -504,7 +504,7 @@ a.length; // 101
 }
 </pre>
 
-<p>遍历数组的另一种方法是使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 循环， 然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 <code>Array.prototype</code> 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：</p>
+<p>遍历数组的另一种方法是使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 循环，然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 <code>Array.prototype</code> 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：</p>
 
 <pre class="brush: js">for (var i in a) {
   // 操作 a[i]

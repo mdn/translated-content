@@ -243,9 +243,9 @@ translation_of: Web/API/Element/wheel_event
  <dt>WM_MOUSEWHEEL (竖直方向的滚动事件)</dt>
  <dd><code>deltaMode</code> 值可以是 <code>DOM_DELTA_LINE</code> 或 <code>DOM_DELTA_PAGE。</code>它取决于 Windows 的用户设置 (默认设置为 <code>DOM_DELTA_LINE</code>)。</dd>
  <dt>WM_MOUSEHWHEEL (水平方向的滚动事件)</dt>
- <dd><code>deltaMode</code> 值可以是 <code>DOM_DELTA_LINE</code> 或 <code>DOM_DELTA_PAGE。然而 </code>Windows 的滚轮速度设置界面和鼠标驱动工具都没有提供改为 page scroll 的选项。 所以这个值通常为 <code>DOM_DELTA_LINE</code>.</dd>
+ <dd><code>deltaMode</code> 值可以是 <code>DOM_DELTA_LINE</code> 或 <code>DOM_DELTA_PAGE。然而 </code>Windows 的滚轮速度设置界面和鼠标驱动工具都没有提供改为 page scroll 的选项。所以这个值通常为 <code>DOM_DELTA_LINE</code>.</dd>
  <dt>WM_GESTURE (Only when caused by panning)</dt>
- <dd><code>deltaMode </code>值总是 <code>DOM_DELTA_PIXEL。</code>但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件， WM_GESTURE 事件通常被平板电脑使用。</dd>
+ <dd><code>deltaMode </code>值总是 <code>DOM_DELTA_PIXEL。</code>但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件，WM_GESTURE 事件通常被平板电脑使用。</dd>
 </dl>
 
 <p>在 Mac 下 deltaMode 值由设备决定。如果设备支持高分辨率像素级滚动，<code>deltaMode </code>值就是典型的 <code>DOM_DELTA_PIXEL</code>. 然而用户可以通过加前缀<code>"mousewheel.enable_pixel_scrolling"</code>将其改变为 <code>DOM_DELTA_LINE</code> 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 <code>DOM_DELTA_LINE</code>.</p>

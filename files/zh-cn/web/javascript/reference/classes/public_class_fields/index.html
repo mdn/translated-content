@@ -29,7 +29,7 @@ original_slug: Web/JavaScript/Reference/Classes/Class_elements
 }
 
 console.log(ClassWithStaticField.staticField);
-// 预期输出值: "static field"​
+// 预期输出值："static field"​
 </pre>
 
 <p>没有设定初始化程序的字段将默认被初始化为<code>undefined</code>。</p>
@@ -40,7 +40,7 @@ console.log(ClassWithStaticField.staticField);
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'));
 console.log(ClassWithStaticField.staticField);
-// 预期输出值: "undefined"</pre>
+// 预期输出值："undefined"</pre>
 
 <p>静态公有字段不会在子类里重复初始化，但我们可以通过原型链访问它们。</p>
 
@@ -53,10 +53,10 @@ class SubClassWithStaticField extends ClassWithStaticField {
 }
 
 console.log(SubClassWithStaticField.subStaticField);
-// 预期输出值: "sub class field"
+// 预期输出值："sub class field"
 
 console.log(SubClassWithStaticField.baseStaticField);
-// 预期输出值: "base field"</pre>
+// 预期输出值："base field"</pre>
 
 <p>当初始化字段时，<code>this</code>指向的是类的构造函数。你可以通过名字引用构造函数，并使用<code>super</code>获取到存在的超类构造函数。</p>
 
@@ -72,10 +72,10 @@ class SubClassWithStaticField extends ClassWithStaticField {
 }
 
 console.log(ClassWithStaticField.anotherBaseStaticField);
-// 预期输出值: "base static field"
+// 预期输出值："base static field"
 
 console.log(SubClassWithStaticField.subStaticField);
-// 预期输出值: "base static method output"
+// 预期输出值："base static method output"
 </pre>
 
 <h3 id="公有实例字段">公有实例字段</h3>
@@ -90,7 +90,7 @@ console.log(SubClassWithStaticField.subStaticField);
 
 const instance = new ClassWithInstanceField();
 console.log(instance.instanceField);
-// 预期输出值: "instance field"</pre>
+// 预期输出值："instance field"</pre>
 
 <p>没有设定初始化程序的字段将默认被初始化为<code>undefined</code>。</p>
 
@@ -101,7 +101,7 @@ console.log(instance.instanceField);
 const instance = new ClassWithInstanceField();
 console.assert(instance.hasOwnProperty('instanceField'));
 console.log(instance.instanceField);
-// 预期输出值: "undefined"</pre>
+// 预期输出值："undefined"</pre>
 
 <p>和属性（properties）一样，字段名可以由计算得出。</p>
 
@@ -113,7 +113,7 @@ class ClassWithComputedFieldName {
 
 const instance = new ClassWithComputedFieldName();
 console.log(instance.prefixField);
-// 预期输出值: "prefixed field"</pre>
+// 预期输出值："prefixed field"</pre>
 
 <p>当初始化字段时，<code>this</code>指向的是类正在构造中的实例。和公共实例方法相同的是：你可以在子类中使用<code>super</code>来访问超类的原型。</p>
 
@@ -131,10 +131,10 @@ const base = new ClassWithInstanceField();
 const sub = new SubClassWithInstanceField();
 
 console.log(base.anotherBaseInstanceField);
-// 预期输出值: "base field"
+// 预期输出值："base field"
 
 console.log(sub.subInstanceField);
-// 预期输出值: "base method output"</pre>
+// 预期输出值："base method output"</pre>
 
 <h2 id="公共方法">公共方法</h2>
 
@@ -158,7 +158,7 @@ console.log(sub.subInstanceField);
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
-// 预期输出值: "hello worl​d"</pre>
+// 预期输出值："hello worl​d"</pre>
 
 <p>公共实例方法是在类的赋值阶段用<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>方法添加到类中的。静态方法是可编辑的、不可遍历的和可配置的。</p>
 
@@ -187,7 +187,7 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass();
 console.log(instance.subPublicMethod());
-// 预期输出值: "hello worl​d"
+// 预期输出值："hello worl​d"
 </pre>
 
 <p><code>getter</code>和<code>setter</code>是和类的属性绑定的特殊方法，分别会在其绑定的属性被取值、赋值时调用。使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a>句法定义实例的公共<code>getter</code>和<code>setter</code>。</p>
@@ -208,7 +208,7 @@ console.log(instance.msg);
 
 instance.msg = 'cake';
 console.log(instance.msg);
-// 预期输出值: "hello cake"
+// 预期输出值："hello cake"
 </pre>
 
 <h2 id="私有字段">私有字段</h2>
@@ -306,7 +306,7 @@ assert(ClassWithPrivateStaticMethod.publicStaticMethod() === 42);
 
 const instance = new ClassWithPrivateMethod();
 console.log(instance.getPrivateMessage());
-// 预期输出值: "hello worl​d"</pre>
+// 预期输出值："hello worl​d"</pre>
 
 <p>私有实例方法可以是生成器、异步或者异步生成器函数。私有<code>getter</code>和<code>setter</code>也是可能的：</p>
 
@@ -327,7 +327,7 @@ console.log(instance.getPrivateMessage());
 }
 
 new ClassWithPrivateAccessor();
-// 预期输出值: "✨hello worl​d✨"
+// 预期输出值："✨hello worl​d✨"
 </pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>

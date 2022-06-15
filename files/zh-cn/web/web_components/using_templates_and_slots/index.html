@@ -15,7 +15,7 @@ translation_of: Web/Web_Components/Using_templates_and_slots
 
 <h2 id="关于模板_Templates">关于模板 (Templates)</h2>
 
-<p>当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。 此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。</p>
+<p>当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。</p>
 
 <p>让我们看一个简单的示例：</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/Web_Components/Using_templates_and_slots
   &lt;p&gt;My paragraph&lt;/p&gt;
 &lt;/template&gt;</pre>
 
-<p>上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中， 如下面的代码：</p>
+<p>上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中，如下面的代码：</p>
 
 <pre class="brush: js notranslate">let template = document.getElementById('my-paragraph');
 let templateContent = template.content;
@@ -86,7 +86,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持 slot 属性，则<code>&lt;my-paragraph&gt;</code>仅包含后备内容"My default text"。(译者注：此处的意思是使用&lt;my-paragraph&gt;时内部不包裹任何内容时会显示 slot 定义好的默认值。具体使用可参考下面)</p>
 
-<p>要定义插槽内容，我们在<code>&lt;my-paragraph&gt;</code>元素内包括一个 HTML 结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。 和以前一样，它可以是您喜欢的任何东西，例如：</p>
+<p>要定义插槽内容，我们在<code>&lt;my-paragraph&gt;</code>元素内包括一个 HTML 结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是您喜欢的任何东西，例如：</p>
 
 <pre class="brush: html notranslate">&lt;my-paragraph&gt;
   &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;

@@ -207,7 +207,7 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 
 <p>它可以是任何简单类型（<code>NUMBER_TYPE</code>，<code>STRING_TYPE</code>，<code>BOOLEAN_TYPE</code> ），<strong>但</strong>如果返回的结果类型是节点集，那么它将<strong>只</strong>是一个 <code>UNORDERED_NODE_ITERATOR_TYPE</code>。</p>
 
-<p>要在评估后确定类型，我们使用 <code>XPathResult</code> 对象的 <code>resultType</code> 属性。此属性的<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants">常量</a>值在附录中定义。 None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</p>
+<p>要在评估后确定类型，我们使用 <code>XPathResult</code> 对象的 <code>resultType</code> 属性。此属性的<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants">常量</a>值在附录中定义。None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</p>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
@@ -215,7 +215,7 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 
 <p>以下代码旨在放置在要针对其评估 XPath 表达式的 HTML 文档中内嵌或外链的任何 JavaScript 片段中。</p>
 
-<p>要使用 XPath 提取 HTML 文档中的所有 <code>&lt;h2&gt;</code> 标题元素，<code>xpathExpression</code> 只是 <code>//h2</code>。其中，<code>//</code> 是递归下降运算符，在文档树中的任何位置将元素与 nodeName <code>h2</code> 相匹配。这个的完整代码是： link to introductory xpath doc</p>
+<p>要使用 XPath 提取 HTML 文档中的所有 <code>&lt;h2&gt;</code> 标题元素，<code>xpathExpression</code> 只是 <code>//h2</code>。其中，<code>//</code> 是递归下降运算符，在文档树中的任何位置将元素与 nodeName <code>h2</code> 相匹配。这个的完整代码是：link to introductory xpath doc</p>
 
 <pre class="brush: js">var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
 </pre>
@@ -308,7 +308,7 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 
 <h4 id="为_XML_文档实现默认命名空间">为 XML 文档实现默认命名空间</h4>
 
-<p>如前面<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_Default_Namespace_Resolver">实现默认命名空间解析器</a>中所述，默认解析器不处理 XML 文档的默认命名空间。 例如使用本文档：</p>
+<p>如前面<a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_Default_Namespace_Resolver">实现默认命名空间解析器</a>中所述，默认解析器不处理 XML 文档的默认命名空间。例如使用本文档：</p>
 
 <pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;feed xmlns="http://www.w3.org/2005/Atom"&gt;

@@ -14,7 +14,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <h2 id="同源的定义"><strong>同源</strong>的<strong>定义</strong></h2>
 
-<p>如果两个 URL 的 {{Glossary("protocol")}}、{{Glossary("port")}} (如果有指定的话) 和 {{Glossary("host")}} 都相同的话，则这两个 URL 是<em>同源</em>。这个方案也被称为“协议/主机/端口元组”，或者直接是 “元组”。（“元组” 是指一组项目构成的整体，双重/三重/四重/五重/等的通用形式）。</p>
+<p>如果两个 URL 的 {{Glossary("protocol")}}、{{Glossary("port")}} (如果有指定的话) 和 {{Glossary("host")}} 都相同的话，则这两个 URL 是<em>同源</em>。这个方案也被称为“协议/主机/端口元组”，或者直接是 “元组”。（“元组”是指一组项目构成的整体，双重/三重/四重/五重/等的通用形式）。</p>
 
 <p>下表给出了与 URL <code>http://store.company.com/dir/page.html</code> 的源进行对比的示例：</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/Security/Same-origin_policy
 <p>在页面中通过 <code>about:blank</code> 或 <code>javascript:</code> URL 执行的脚本会继承打开该 URL 的文档的源，因为这些类型的 URLs 没有包含源服务器的相关信息。</p>
 
 <div class="blockIndicator note">
-<p>例如，<code>about:blank</code> 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open()</a>  ）。 如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。</p>
+<p>例如，<code>about:blank</code> 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open()</a>  ）。如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。</p>
 </div>
 
 <div class="note">
@@ -128,7 +128,7 @@ translation_of: Web/Security/Same-origin_policy
 <ul>
  <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨站读操作。</li>
  <li>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</li>
- <li>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在 HTML 文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。 当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。</li>
+ <li>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在 HTML 文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。</li>
 </ul>
 
 <h2 id="跨源脚本API访问">跨源脚本 API 访问</h2>

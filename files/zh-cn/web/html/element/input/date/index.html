@@ -101,7 +101,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <p>{{ EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40) }}</p>
 
-<p>在结果中我们可以看到，只有 2017 年 4 月份的日期可选 — 输入框中可以编辑的部分只有 “日” 这部分，并且超出 4 月份以外的日期不能通过日期控件的选择小部件选择。</p>
+<p>在结果中我们可以看到，只有 2017 年 4 月份的日期可选 — 输入框中可以编辑的部分只有“日” 这部分，并且超出 4 月份以外的日期不能通过日期控件的选择小部件选择。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 您应该可以使用 step 属性来改变每次最佳日期时步进（增加值）的天数（例如：或许你只希望使周六可以选）。但是，在编写本文的任何实现中，这似乎并不奏效。</p>
@@ -113,7 +113,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <h2 id="验证">验证</h2>
 
-<p>默认情况下，<code>&lt;input type="date"&gt;</code> 对输入的值不会做任何校验。 UI 实现通常不会让你输入任何不适日期的东西 — 这一点很有帮助 — 但是你任然可以留空或者  (在被优雅降级为 <code>text</code> 类型的输入框) 输入一个不合法的值 (例如： 4 月 32 号)。</p>
+<p>默认情况下，<code>&lt;input type="date"&gt;</code> 对输入的值不会做任何校验。 UI 实现通常不会让你输入任何不适日期的东西 — 这一点很有帮助 — 但是你任然可以留空或者  (在被优雅降级为 <code>text</code> 类型的输入框) 输入一个不合法的值 (例如：4 月 32 号)。</p>
 
 <p>如果你使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("min", "input")}} 属性去限制可用日期  (参见 <a href="#设置日期最大和最小值">设置日期最大和最小值</a>),对于支持的浏览器来说如果你尝试提交一个超出给定范围的日期，那么它将抛出一个错误。然而， 你必须检查这些结果以确保他们在这些日期范围内， 因为只有在用户设备上完全支持日期选择器的情况下，才能执行这些操作。</p>
 
@@ -229,7 +229,7 @@ input:valid + span:after {
 }</pre>
 </div>
 
-<p>目前以跨浏览器方式处理表单中日期的最佳方式是让用户在单独的控件中输入 日 ， 月 和 年 ({{htmlelement("select")}} 元素正越来越受欢迎; 请看下面的实现), 或者使用 JavaScript 库， 例如  <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>.</p>
+<p>目前以跨浏览器方式处理表单中日期的最佳方式是让用户在单独的控件中输入 日， 月 和 年 ({{htmlelement("select")}} 元素正越来越受欢迎; 请看下面的实现), 或者使用 JavaScript 库，例如  <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>.</p>
 
 <h2 id="例子">例子</h2>
 

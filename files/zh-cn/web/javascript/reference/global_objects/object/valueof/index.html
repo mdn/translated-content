@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <p>JavaScript 调用 <code>valueOf</code> 方法将对象转换为原始值。你很少需要自己调用 <code>valueOf</code> 方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。</p>
 
-<p>默认情况下，<code>valueOf</code> 方法由 {{jsxref("Object")}} 后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 <code>valueOf</code> 将返回对象本身。</p>
+<p>默认情况下，<code>valueOf</code> 方法由 {{jsxref("Object")}} 后面的每个对象继承。每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 <code>valueOf</code> 将返回对象本身。</p>
 
 <p>JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。</p>
 
@@ -88,7 +88,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 <pre class="brush: js">myNumberType.valueOf()</pre>
 
 <div class="note">
-<p><strong>备注：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “<code>[object <em>类型</em>]</code>” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
+<p><strong>备注：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个“<code>[object <em>类型</em>]</code>”这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
 </div>
 
 <h2 id="示例">示例</h2>

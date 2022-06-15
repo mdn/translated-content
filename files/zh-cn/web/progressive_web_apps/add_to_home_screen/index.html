@@ -72,8 +72,8 @@ original_slug: Web/Progressive_web_apps/添加到主屏幕
 
 <ul>
  <li><code>background_color</code>：指定在某些应用程序上下文中使用的背景色。与 A2HS 最相关的一个是在点击主屏幕上的应用程序图标并首次开始加载时显示的初始屏幕（目前仅在通过 Chrome 将应用添加到主屏幕时显示）。</li>
- <li><code>display</code>：指定应如何显示应用。 为了使它看起来像一个应用程序而非网页，这里应该填写像是 <code>fullscreen</code> （根本不显示任何 UI）或 <code>standalone</code>（与前者非常相似，但是状态栏这样的系统级 UI 元素可能是可见的）的值。</li>
- <li><code>icons</code>：指定在不同位置（例如，在任务切换器上或更重要的是在主屏幕上）表示应用程序时浏览器使用的图标。 我们的演示中仅包含一个。</li>
+ <li><code>display</code>：指定应如何显示应用。为了使它看起来像一个应用程序而非网页，这里应该填写像是 <code>fullscreen</code> （根本不显示任何 UI）或 <code>standalone</code>（与前者非常相似，但是状态栏这样的系统级 UI 元素可能是可见的）的值。</li>
+ <li><code>icons</code>：指定在不同位置（例如，在任务切换器上或更重要的是在主屏幕上）表示应用程序时浏览器使用的图标。我们的演示中仅包含一个。</li>
  <li><code>name</code>/<code>short_name</code>：这些字段提供了在不同位置表示应用程序时要显示的应用程序名称。<code>name</code> 提供完整的应用名称。<code>short_name</code> 则是当没有足够的空间显示全名时，提供的缩写名称。如果您的应用程序名称特别长，建议您同时提供两者。</li>
  <li><code>start_url</code>：提供启动添加到主屏幕应用程序时应加载的资源的路径。请注意，这必须是一个相对 manifest 指向网站主页的相对路径。另请注意，Chrome 需要这条字段才能显示安装标语，而 Firefox 即使没有这条字段也会显示用于添加到主屏的含加号的主页图标。</li>
 </ul>

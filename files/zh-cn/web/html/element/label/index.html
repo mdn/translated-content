@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/label
 <p>将一个 <code>&lt;label&gt;</code> 和一个 {{htmlelement("input")}} 元素相关联主要有这些优点：</p>
 
 <ul>
- <li>标签文本不仅与其相应的文本输入元素在视觉上相关联，程序中也是如此。 这意味着，当用户聚焦到这个表单输入元素时，屏幕阅读器可以读出标签，让使用辅助技术的用户更容易理解应输入什么数据。</li>
+ <li>标签文本不仅与其相应的文本输入元素在视觉上相关联，程序中也是如此。这意味着，当用户聚焦到这个表单输入元素时，屏幕阅读器可以读出标签，让使用辅助技术的用户更容易理解应输入什么数据。</li>
  <li>你可以点击关联的标签来聚焦或者激活这个输入元素，就像直接点击输入元素一样。这扩大了元素的可点击区域，让包括使用触屏设备在内的用户更容易激活这个元素。</li>
 </ul>
 
@@ -51,7 +51,7 @@ translation_of: Web/HTML/Element/label
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>即和 <code>&lt;label&gt;</code> 元素在同一文档中的 <a href="zh-CN/docs/Web/Guide/HTML/Content_categories#Form_labelable">可关联标签的元素</a> 的 {{htmlattrxref("id")}}。 文档中第一个 <code>id</code> 值与 <code>&lt;label&gt;</code> 元素 <code>for</code> 属性值相同的元素，如果可关联标签（labelable），则为<em>已关联标签的控件</em>，其标签就是这个 <code>&lt;label&gt;</code> 元素。如果这个元素不可关联标签，则 <code>for</code> 属性没有效果。如果文档中还有其他元素的 <code>id</code> 值也和 <code>for</code> 属性相同，<code>for</code> 属性对这些元素也没有影响。
+ <dd>即和 <code>&lt;label&gt;</code> 元素在同一文档中的 <a href="zh-CN/docs/Web/Guide/HTML/Content_categories#Form_labelable">可关联标签的元素</a> 的 {{htmlattrxref("id")}}。文档中第一个 <code>id</code> 值与 <code>&lt;label&gt;</code> 元素 <code>for</code> 属性值相同的元素，如果可关联标签（labelable），则为<em>已关联标签的控件</em>，其标签就是这个 <code>&lt;label&gt;</code> 元素。如果这个元素不可关联标签，则 <code>for</code> 属性没有效果。如果文档中还有其他元素的 <code>id</code> 值也和 <code>for</code> 属性相同，<code>for</code> 属性对这些元素也没有影响。
  <div class="note"><strong>注意：</strong><code>&lt;label&gt;</code> 元素可同时有一个 <code>for</code> 属性和一个子代控件元素，只是 <code>for</code> 属性需要指向这个控件元素。</div>
  </dd>
  <dt>{{htmlattrdef("form")}}</dt>

@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Guide/Indexed_collections
 var arr = Array(element0, element1, ..., elementN);
 var arr = [element0, element1, ..., elementN];
 
-// 译者注: var arr=[4] 和 var arr=new Array(4) 是不等效的，
+// 译者注：var arr=[4] 和 var arr=new Array(4) 是不等效的，
 // 后者 4 指数组长度，所以使用字面值 (literal) 的方式应该不仅仅是便捷，同时也不易踩坑</pre>
 
 <p><code>element0, element1, ..., elementN</code> 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。</p>
@@ -39,7 +39,7 @@ arr.length = arrayLength;
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 <code>arr.length</code> 会返回数组长度，但是数组实际上包含了空的（<code>undefined</code>）元素。 因此在数组上使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环，将不会返回任何的值 。</p>
+<p><strong>备注：</strong>以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。调用 <code>arr.length</code> 会返回数组长度，但是数组实际上包含了空的（<code>undefined</code>）元素。 因此在数组上使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环，将不会返回任何的值。</p>
 </div>
 
 <p>除了如上所示创建新定义的变量，数组 (array) 也可以作为一个属性 (property) 分配给一个新的或者已存在的对象 (object)：</p>
@@ -117,7 +117,7 @@ arr["length"];  // 3
 
 <h3 id="理解_length">理解 length</h3>
 
-<p>在实施层面， JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。长度属性是特殊的，它总是返回最后一个元素的索引值加 1(下例中， Dusty 的索引是 30，所以 cats.length 返回 30 + 1)。记住， JavaScript 数组索引是基于 0 的：他们从 0 开始，而不是 1。这意味着数组长度属性将比最大的索引值大 1:</p>
+<p>在实施层面，JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。长度属性是特殊的，它总是返回最后一个元素的索引值加 1(下例中，Dusty 的索引是 30，所以 cats.length 返回 30 + 1)。记住， JavaScript 数组索引是基于 0 的：他们从 0 开始，而不是 1。这意味着数组长度属性将比最大的索引值大 1:</p>
 
 <pre class="brush: js">var cats = [];
 cats[30] = ['Dusty'];
@@ -276,7 +276,7 @@ myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]</pre>
 
 <ul>
- <li>如果 a 小于 b ，返回 -1(或任何负数)</li>
+ <li>如果 a 小于 b，返回 -1(或任何负数)</li>
  <li>如果 <code>a</code> 大于 <code>b</code> ，返回 1 (或任何正数)</li>
  <li>如果 <code>a</code> 和 <code>b</code> 相等，返回 0。</li>
 </ul>
@@ -455,7 +455,7 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 <h2 id="类型化数组Typed_Arrays">类型化数组 (Typed Arrays )</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> 是类数组对象（array-like object），其提供访问原始二进制数据的机制。 就像你知道的那样，{{jsxref("Array")}} 对象动态增长和收缩，可以有任何 JavaScript 值。但对于类型化数组，JavaScript 引擎执行优化使得这些数组访问速度快速。 随着 Web 应用程序变得越来越强大，添加音频和视频处理等功能、可以使用 <a href="/en-US/docs/WebSockets">WebSockets</a> 、使用原始数据， 这都需要访问原始的二进制数据，所以专门的优化将有助于 JavaScript 代码能够快速和容易地操纵原始二进制数据类型的数组。</p>
+<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> 是类数组对象（array-like object），其提供访问原始二进制数据的机制。 就像你知道的那样，{{jsxref("Array")}} 对象动态增长和收缩，可以有任何 JavaScript 值。但对于类型化数组，JavaScript 引擎执行优化使得这些数组访问速度快速。随着 Web 应用程序变得越来越强大，添加音频和视频处理等功能、可以使用 <a href="/en-US/docs/WebSockets">WebSockets</a> 、使用原始数据，这都需要访问原始的二进制数据，所以专门的优化将有助于 JavaScript 代码能够快速和容易地操纵原始二进制数据类型的数组。</p>
 
 <h3 id="缓冲区和视图：类型化的数组结构">缓冲区和视图：类型化的数组结构</h3>
 

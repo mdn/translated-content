@@ -24,9 +24,9 @@ TypeError: "x" is not a function</pre>
 
 <p>问题出在你试图去调用一个像函数一样的值，但是该值实际上不是函数，有时候你的代码需要调用一些函数，但是那种值并不能当作函数来被调用。</p>
 
-<p>也许函数名称上有错别字？ 也许你正在调用 Object 对象没有这个方法？ 例如，在 JavaScript 中单纯的对象 (Object) 没有<strong>map</strong>函数，但是 JavaScript 数组 (Array) 对象却有这个函数。</p>
+<p>也许函数名称上有错别字？也许你正在调用 Object 对象没有这个方法？例如，在 JavaScript 中单纯的对象 (Object) 没有<strong>map</strong>函数，但是 JavaScript 数组 (Array) 对象却有这个函数。</p>
 
-<p>再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。 所以你必须提供一个函数，以使这些方法正常工作：</p>
+<p>再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。所以你必须提供一个函数，以使这些方法正常工作：</p>
 
 <ul>
  <li>当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：

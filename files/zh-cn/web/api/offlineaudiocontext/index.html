@@ -94,7 +94,7 @@ function getData() {
           song.start();
         }
       }).catch(function(err) {
-          console.log('渲染失败: ' + err);
+          console.log('渲染失败：' + err);
           // 注意：当 OfflineAudioContext 上 startRendering 被立刻调用，Promise 应该被 reject
       });
     });

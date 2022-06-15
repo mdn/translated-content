@@ -82,13 +82,13 @@ gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRA
 
 <p>然后我们在 drawScene() 中添加代码，将法线数组和着色器的 attribute 绑定起来以便着色器能够获取到法线数组的信息。</p>
 
-<p>（此处变量 vertexNormalAttribute 应该在 initShader() 函数中声明， 并赋值： vertexNormalAttribute = gl.getAttribLocation(shaderProgram, "aVertexNormal"）; gl.enableVertexAttribArray(vertexNormalAttribute);)</p>
+<p>（此处变量 vertexNormalAttribute 应该在 initShader() 函数中声明，并赋值：vertexNormalAttribute = gl.getAttribLocation(shaderProgram, "aVertexNormal"）; gl.enableVertexAttribArray(vertexNormalAttribute);)</p>
 
 <pre class="brush: js">gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 </pre>
 
-<p>最后，我们（为了读者便于理解， 此处代码应该在 setMatrixUniforms() 函数中添加）需要更新下代码，在着色器中建立和传递法线向量矩阵，用这个矩阵来处理当前立方体相对于光源位置法线向量的转换 (注：译者调试后发现此处 new WebGLFloatArray(...) 应该使用 new Float32Array())：</p>
+<p>最后，我们（为了读者便于理解，此处代码应该在 setMatrixUniforms() 函数中添加）需要更新下代码，在着色器中建立和传递法线向量矩阵，用这个矩阵来处理当前立方体相对于光源位置法线向量的转换 (注：译者调试后发现此处 new WebGLFloatArray(...) 应该使用 new Float32Array())：</p>
 
 <pre class="brush: js">var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();

@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/input/file
 
 <h2 id="值">值</h2>
 
-<p>文件 input 的 {{htmlattrxref("value", "input")}} 属性包括了一个 {{domxref("DOMString")}}，表示已选择文件的路径。如果用户选择了多个文件，则 <code>value</code> 表示他们选择的文件列表中的第一个文件。 可以使用 input 的 <code>HTMLInputElement.files</code> 属性标识其他文件。</p>
+<p>文件 input 的 {{htmlattrxref("value", "input")}} 属性包括了一个 {{domxref("DOMString")}}，表示已选择文件的路径。如果用户选择了多个文件，则 <code>value</code> 表示他们选择的文件列表中的第一个文件。可以使用 input 的 <code>HTMLInputElement.files</code> 属性标识其他文件。</p>
 
 <div class="note"><strong>Note:</strong>
 
@@ -166,9 +166,9 @@ translation_of: Web/HTML/Element/input/file
 <ul>
  <li>一个以英文句号（"."）开头的合法的不区分大小写的文件名扩展名。例如： <code>.jpg</code>，<code>.pdf</code> 或 <code>.doc</code>。</li>
  <li>一个不带扩展名的 MIME 类型字符串。</li>
- <li>字符串 <code>audio/*</code>， 表示 “任何音频文件”。</li>
- <li>字符串 <code>video/*</code>，表示 “任何视频文件”。</li>
- <li>字符串 <code>image/*</code>，表示 “任何图片文件”。</li>
+ <li>字符串 <code>audio/*</code>，表示“任何音频文件”。</li>
+ <li>字符串 <code>video/*</code>，表示“任何视频文件”。</li>
+ <li>字符串 <code>image/*</code>，表示“任何图片文件”。</li>
 </ul>
 
 <p><code>accept</code> 属性的值是一个包含一个或多个（用逗号分隔）这种唯一文件类型说明符的字符串。 例如，一个文件选择器需要能被表示成一张图片的内容，包括标准的图片格式和 PDF 文件，大概是这样的：</p>

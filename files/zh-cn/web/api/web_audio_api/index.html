@@ -12,7 +12,7 @@ translation_of: Web/API/Web_Audio_API
 
 <h2 id="Web_audio_概念与使用">Web audio 概念与使用</h2>
 
-<p>Web Audio API 使用户可以在<strong>音频上下文</strong>(AudioContext) 中进行音频操作，具有<strong>模块化路由</strong>的特点。在<strong>音频节点</strong>上操作进行基础的音频， 它们连接在一起构成<strong>音频路由图</strong>。即使在单个上下文中也支持多源，尽管这些音频源具有多种不同类型通道布局。这种模块化设计提供了灵活创建动态效果的复合音频的方法。</p>
+<p>Web Audio API 使用户可以在<strong>音频上下文</strong>(AudioContext) 中进行音频操作，具有<strong>模块化路由</strong>的特点。在<strong>音频节点</strong>上操作进行基础的音频，它们连接在一起构成<strong>音频路由图</strong>。即使在单个上下文中也支持多源，尽管这些音频源具有多种不同类型通道布局。这种模块化设计提供了灵活创建动态效果的复合音频的方法。</p>
 
 <p>音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到 （比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("AudioContext")}}</dt>
  <dd><strong><code>AudioContext</code></strong>接口代表由音频模块构成的音频处理图。音频上下文控制其所包含节点的创建和音频处理、解码。使用其它接口前你必需创建一个<code>音频上下文</code>，一切操作都在这个环境里进行。</dd>
  <dt>{{domxref("AudioNode")}}</dt>
- <dd><strong><code>音频节点</code></strong><strong> </strong>接口是一个音频处理模块， 例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。</dd>
+ <dd><strong><code>音频节点</code></strong><strong> </strong>接口是一个音频处理模块，例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。</dd>
  <dt>{{domxref("AudioParam")}}</dt>
  <dd><strong><code>AudioParam</code></strong><strong> </strong>接口代表音频相关的参数，比如一个 {{domxref("AudioNode")}}的参数。它可以设置为特定值或值的变化，并且可以在指定的时间之后以指定模式变更。</dd>
  <dt>{{event("ended")}}结束事件</dt>

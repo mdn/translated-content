@@ -32,7 +32,7 @@ original_slug: Web/API/Streams_API/概念
 
 <p>另一个您将用到的对象叫做 <strong>controller</strong> —— 每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流 close）。</p>
 
-<p>一个流一次只能被一个 reader 读；当一个 reader 被创建并开始读一个流（an <strong>active reader</strong>），我们说，它被 <strong>locked</strong> 在该流上。如果您想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作。（您可以 <strong>tee</strong> 流，参阅下面的 Teeing 部分）</p>
+<p>一个流一次只能被一个 reader 读；当一个 reader 被创建并开始读一个流（an <strong>active reader</strong>），我们说，它被 <strong>locked</strong> 在该流上。如果您想让另一个 reader 读这个流，则通常需要先取消第一个 reader，再执行其他操作。（您可以 <strong>tee</strong> 流，参阅下面的 Teeing 部分）</p>
 
 <p>注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流 —— 这是传统流的扩展版本，用于读取底层字节源。相比可读流，字节流除了 <strong><dfn>default reader</dfn></strong> ，还可以使用 <strong><dfn>BYOB reader </dfn></strong><dfn>(BYOB, or "bring your own buffer", "带上你自己的缓冲") 。</dfn>这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。您的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅{{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。</p>
 
@@ -56,7 +56,7 @@ original_slug: Web/API/Streams_API/概念
 
 <p>一个 <strong>Writable stream (可写流) </strong>是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 <strong>underlying sink (底层汇) </strong>的抽象 —— 底层汇是某个可以写入原始数据的更低层次的 I/O 数据汇。</p>
 
-<p>数据由一个 <strong>writer </strong>写入流中，每次一个 chunk 。chunk 和可读流的 reader 一样可以有多种类型。您可以用任何方式生成要被写入的块；writer 加上相关的代码称为 <strong>producer</strong>。</p>
+<p>数据由一个 <strong>writer </strong>写入流中，每次一个 chunk。chunk 和可读流的 reader 一样可以有多种类型。您可以用任何方式生成要被写入的块；writer 加上相关的代码称为 <strong>producer</strong>。</p>
 
 <p>When a writer is created and starts writing to a stream (an <strong>active writer</strong>), it is said to be <strong>locked</strong> to it. Only one writer can write to a writable stream at one time. If you want another writer to start writing to your stream, you typically need to abort it before you then attach another writer to it.</p>
 

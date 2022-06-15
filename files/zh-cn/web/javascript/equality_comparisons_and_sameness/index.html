@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <p>选择使用哪个操作取决于你需要什么样的比较。</p>
 
-<p>简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false );  而 Object.is 的行为方式与三等号相同，但是对于 NaN 和-0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 <code>true</code>。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构， 以上三个运算符都会计算得到 false 。</p>
+<p>简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false );  而 Object.is 的行为方式与三等号相同，但是对于 NaN 和 -0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 <code>true</code>。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构，以上三个运算符都会计算得到 false。</p>
 
 <h2 id="严格相等">严格相等 <code>===</code></h2>
 
@@ -180,7 +180,7 @@ function attemptMutation(v)
 }
 </pre>
 
-<p><code>Object.defineProperty</code> 在试图修改不可变属性时，如果这个属性确实被修改了则会抛出异常，反之什么都不会发生。例如如果 v 是 -0 ，那么没有发生任何变化，所以也不会抛出任何异常。但如果 v 是 +0 ，则会抛出异常。不可变属性和新设定的值使用 same-value 相等比较。</p>
+<p><code>Object.defineProperty</code> 在试图修改不可变属性时，如果这个属性确实被修改了则会抛出异常，反之什么都不会发生。例如如果 v 是 -0，那么没有发生任何变化，所以也不会抛出任何异常。但如果 v 是 +0，则会抛出异常。不可变属性和新设定的值使用 same-value 相等比较。</p>
 
 <p>同值相等由 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 方法提供。</p>
 
@@ -380,12 +380,12 @@ function attemptMutation(v)
 
 <p>总的来说，除了对待<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>的方式，<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>唯一让人感兴趣的，是当你需要一些元编程方案时，它对待 0 的特殊方式，特别是关于属性描述器，即你的工作需要去镜像<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty</code></a>的一些特性时。如果你的工作不需要这些，那你应该避免使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>，使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a>来代替。即使你需要比较两个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>使其结果为<code>true</code>，总的来说编写使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 检查的特例函数 (用旧版本 ECMAScript 的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN"><code>isNaN 方法</code></a>) 也会比想出一些计算方法让<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>不影响不同符号的 0 的比较更容易些。</p>
 
-<p>这里是一个会区别对待-0 和 +0 的内置方法和操作符不完全列表：</p>
+<p>这里是一个会区别对待 -0 和 +0 的内置方法和操作符不完全列表：</p>
 
 <dl>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators"><code>- (一元负)</code></a></dt>
  <dd>
- <p>显而易见，对<code>0 一元负操作得到</code><code>-0</code>。但表达式的抽象化可能在你没有意识到得情况下导致-0 延续传播。例如当考虑下例时：</p>
+ <p>显而易见，对<code>0 一元负操作得到</code><code>-0</code>。但表达式的抽象化可能在你没有意识到得情况下导致 -0 延续传播。例如当考虑下例时：</p>
 
  <pre class="brush:js">let stoppingForce = obj.mass * -obj.velocity</pre>
 
@@ -397,7 +397,7 @@ function attemptMutation(v)
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>, 
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a>
  </dt>
- <dd>即使传入的参数中没有-0，这些方法的返回值都有可能是-0。例如当用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>计算<code>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>的任何负奇指数的幂都会得到<code>-0</code>。详情请参见这些方法各自的文档。</dd>
+ <dd>即使传入的参数中没有 -0，这些方法的返回值都有可能是 -0。例如当用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>计算<code>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>的任何负奇指数的幂都会得到<code>-0</code>。详情请参见这些方法各自的文档。</dd>
  <dt>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a>, 
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a>, 
@@ -406,7 +406,7 @@ function attemptMutation(v)
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a>, 
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a>
  </dt>
- <dd>当传入参数中有-0 时，这些方法也可能返回-0。例如， <code>Math.min(-0, +0)</code> 得出 <code>-0</code>。详情请参见这些方法各自的文档。</dd>
+ <dd>当传入参数中有 -0 时，这些方法也可能返回 -0。例如， <code>Math.min(-0, +0)</code> 得出 <code>-0</code>。详情请参见这些方法各自的文档。</dd>
  <dt>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>~</code></a>, 
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&lt;&lt;</code></a>, 

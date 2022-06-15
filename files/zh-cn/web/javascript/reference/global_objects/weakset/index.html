@@ -40,7 +40,7 @@ ws.delete(foo); // 从 set 中删除 foo 对象
 ws.has(foo);    // false, foo 对象已经被删除了
 ws.has(bar);    // true, bar 依然存在</pre>
 
-<p>注意， <code>foo  !==  bar</code>。 尽管它们是相似的对象，但是它们不是<em><strong>同一个对象。</strong></em>因此，它们都可以被加入到 set 中。</p>
+<p>注意， <code>foo  !==  bar</code>。尽管它们是相似的对象，但是它们不是<em><strong>同一个对象。</strong></em>因此，它们都可以被加入到 set 中。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -50,7 +50,7 @@ ws.has(bar);    // true, bar 依然存在</pre>
 
 <ul>
  <li>与<code>Set</code>相比，<code>WeakSet</code> 只能是<strong>对象的集合</strong>，而不能是任何类型的任意值。</li>
- <li><code>WeakSet</code>持弱引用：集合中对象的引用为弱引用。 如果没有其他的对<code>WeakSet</code>中对象的引用，那么这些对象会被当成垃圾回收掉。 这也意味着 WeakSet 中没有存储当前对象的列表。 正因为这样，<code>WeakSet</code> 是不可枚举的。</li>
+ <li><code>WeakSet</code>持弱引用：集合中对象的引用为弱引用。如果没有其他的对<code>WeakSet</code>中对象的引用，那么这些对象会被当成垃圾回收掉。这也意味着 WeakSet 中没有存储当前对象的列表。正因为这样，<code>WeakSet</code> 是不可枚举的。</li>
 </ul>
 
 <h3 id="检测循环引用">检测循环引用</h3>
@@ -86,7 +86,7 @@ const foo = {
 foo.bar.baz = foo; // 循环引用！
 execRecursively(obj =&gt; console.log(obj), foo);</pre>
 
-<p>在此，在第一次运行时创建<code>WeakSet</code>，并将其与每个后续函数调用一起传递（使用内部参数_refs）。 对象的数量或它们的遍历顺序无关紧要，因此，WeakSet 比{{jsxref("Set")}}更适合（和执行）跟踪对象引用，尤其是在涉及大量对象时。</p>
+<p>在此，在第一次运行时创建<code>WeakSet</code>，并将其与每个后续函数调用一起传递（使用内部参数_refs）。对象的数量或它们的遍历顺序无关紧要，因此，WeakSet 比{{jsxref("Set")}}更适合（和执行）跟踪对象引用，尤其是在涉及大量对象时。</p>
 
 <h2 id="Properties">属性</h2>
 
@@ -94,7 +94,7 @@ execRecursively(obj =&gt; console.log(obj), foo);</pre>
  <dt><code>WeakSet.length</code></dt>
  <dd><code>length</code> 属性的值为 0.</dd>
  <dt>{{jsxref("WeakSet.prototype")}}</dt>
- <dd>表示<code>WeakSet</code>构造函数的原型。 允许向所有<code>WeakSet</code>对象添加属性。</dd>
+ <dd>表示<code>WeakSet</code>构造函数的原型。允许向所有<code>WeakSet</code>对象添加属性。</dd>
 </dl>
 
 <h2 id="Boolean_instances"><code>WeakSet</code> 实例</h2>

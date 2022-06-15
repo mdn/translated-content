@@ -94,12 +94,12 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("rel")}}</dt>
  <dd>该属性指定了目标对象到链接对象的关系。该值是空格分隔的<a href="/zh-CN/docs/Web/HTML/Link_types">列表类型值</a>。</dd>
  <dt>{{htmlattrdef("target")}}</dt>
- <dd>该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。以下关键字具有特殊的意义：
+ <dd>该属性指定在何处显示链接的资源。取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。以下关键字具有特殊的意义：
  <ul>
   <li><code>_self</code>: 当前页面加载，即当前的响应到同一 HTML 4 frame（或 HTML5 浏览上下文）。此值是默认的，如果没有指定属性的话。</li>
   <li><code>_blank</code>: 新窗口打开，即到一个新的未命名的 HTML4 窗口或 HTML5 浏览器上下文</li>
   <li><code>_parent</code>: 加载响应到当前框架的 HTML4 父框架或当前的 HTML5 浏览上下文的父浏览上下文。如果没有 parent 框架或者浏览上下文，此选项的行为方式与 <code>_self</code> 相同。</li>
-  <li><code>_top</code>: IHTML4 中：加载的响应成完整的，原来的窗口，取消所有其它 frame。 HTML5 中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有 parent）。如果没有 parent 框架或者浏览上下文，此选项的行为方式相同_self</li>
+  <li><code>_top</code>: IHTML4 中：加载的响应成完整的，原来的窗口，取消所有其它 frame。HTML5 中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有 parent）。如果没有 parent 框架或者浏览上下文，此选项的行为方式相同_self</li>
  </ul>
  </dd>
  <dd>
@@ -118,9 +118,9 @@ translation_of: Web/HTML/Element/a
  <h3 id="过时的">过时的</h3>
  </dt>
  <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
+ <dd>此属性定义链接资源的字符编码。该值是一个空格 - 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
  <div class="note">
- <p><strong>使用说明：</strong>在 HTML5 中该属性已作废，不应使用。 为了实现其效果，使用 HTTP content - type header 的链接资源。</p>
+ <p><strong>使用说明：</strong>在 HTML5 中该属性已作废，不应使用。为了实现其效果，使用 HTTP content - type header 的链接资源。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("coords")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
@@ -137,7 +137,7 @@ translation_of: Web/HTML/Element/a
 
 <dl>
  <dt>{{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>此属性用于定义一个可选的超链接相关的一个数字来创建图像映射区域，该属性的值是圆，默认情况下，多边形，矩形。 所述的<strong>coords</strong> 属性的格式取决于形状的值。对于圆，该值的 x，y，r 其中 x 和 y 为圆心像素坐标，r 是像素值半径。对于矩形，该<strong>coords</strong> 属性应该是 x，y，w，h。x，y 值定义的矩形的左上角的位置，而 w 和 h 分别定义宽度和高度。多边形形状的值需要 x1，y1，x2，y2，......值来定义 coords。每对 x，y 定义多边形的一个点，连续点由直线接合和，最后一个点连接到第一个点。默认为形状的值需要将整个封闭区域，典型的图像，可以使用。
+ <dd>此属性用于定义一个可选的超链接相关的一个数字来创建图像映射区域，该属性的值是圆，默认情况下，多边形，矩形。所述的<strong>coords</strong> 属性的格式取决于形状的值。对于圆，该值的 x，y，r 其中 x 和 y 为圆心像素坐标，r 是像素值半径。对于矩形，该<strong>coords</strong> 属性应该是 x，y，w，h。x，y 值定义的矩形的左上角的位置，而 w 和 h 分别定义宽度和高度。多边形形状的值需要 x1，y1，x2，y2，......值来定义 coords。每对 x，y 定义多边形的一个点，连续点由直线接合和，最后一个点连接到第一个点。默认为形状的值需要将整个封闭区域，典型的图像，可以使用。
  <div class="note"><strong>说明：</strong>建议使用 <a href="/zh-CN/docs/Web/HTML/Element/img#attr-usemap">使用 map 属性</a>在 {{HTMLElement("img")}} 元素和相关的{{HTMLElement("map")}}元素中来定义热点而不是用形状属性。</div>
  </dd>
 </dl>
@@ -225,7 +225,7 @@ document.body.appendChild(link);</pre>
 
 <h3 id="无障碍建议">无障碍建议</h3>
 
-<p>锚点标签常常通过将 <strong>href </strong>属性设置为 <code>"#"</code> 或 <code>"javascript:void(0)" 来创造一个能阻止页面刷新的伪按钮的方式</code>被滥用。 这些属性值会在拖动 / 复制链接时导致意外行为，在新窗口 / 新标签打开链接，加入书签以及 JavaScript 仍在下载时会出现错误或被禁用。这也会向辅助技术（如屏幕阅读器）传达不正确的语义。在这些情况下，推荐使用 {{HTMLElement("button")}} 来代替。通常情况下，您应该只将锚点用于正常的 URL 导航。</p>
+<p>锚点标签常常通过将 <strong>href </strong>属性设置为 <code>"#"</code> 或 <code>"javascript:void(0)" 来创造一个能阻止页面刷新的伪按钮的方式</code>被滥用。这些属性值会在拖动 / 复制链接时导致意外行为，在新窗口 / 新标签打开链接，加入书签以及 JavaScript 仍在下载时会出现错误或被禁用。这也会向辅助技术（如屏幕阅读器）传达不正确的语义。在这些情况下，推荐使用 {{HTMLElement("button")}} 来代替。通常情况下，您应该只将锚点用于正常的 URL 导航。</p>
 
 <h3 id="Clicking_及_focus">Clicking 及 focus</h3>
 

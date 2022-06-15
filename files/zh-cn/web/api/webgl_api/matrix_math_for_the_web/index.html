@@ -12,11 +12,11 @@ translation_of: Web/API/WebGL_API/Matrix_math_for_the_web
 
 <p>矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合<a href="/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms">CSS3 变换</a>和 matrix3d 变换类型使用矩阵。</p>
 
-<p>虽然本文为了便于解释而使用了 CSS3， 矩阵却是许多技术中的核心概念， 包括 WebGL 和着色器。本文也是<a href="https://github.com/TatumCreative/mdn-matrix-math">MDN content kit</a>的一部分。示例使用了一组全局对象 MDN 下的<a href="https://github.com/TatumCreative/mdn-webgl">工具函数</a>。</p>
+<p>虽然本文为了便于解释而使用了 CSS3，矩阵却是许多技术中的核心概念，包括 WebGL 和着色器。本文也是<a href="https://github.com/TatumCreative/mdn-matrix-math">MDN content kit</a>的一部分。示例使用了一组全局对象 MDN 下的<a href="https://github.com/TatumCreative/mdn-webgl">工具函数</a>。</p>
 
 <h2 id="什么是变换矩阵？">什么是变换矩阵？</h2>
 
-<p>虽然存在许多类型的矩阵，但我们感兴趣的是三维变换矩阵。这种矩阵由一个 4x4 方阵，共 16 个值组成。在 JavaScript 中，可以很方便的用数组表示矩阵。比如典型的单位矩阵。单位阵乘上一个点或者矩阵， 其结果保持不变。</p>
+<p>虽然存在许多类型的矩阵，但我们感兴趣的是三维变换矩阵。这种矩阵由一个 4x4 方阵，共 16 个值组成。在 JavaScript 中，可以很方便的用数组表示矩阵。比如典型的单位矩阵。单位阵乘上一个点或者矩阵，其结果保持不变。</p>
 
 <pre class="brush: js">var identityMatrix = [
   1, 0, 0, 0,
@@ -78,7 +78,7 @@ translation_of: Web/API/WebGL_API/Matrix_math_for_the_web
 var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]);
 </pre>
 
-<p>返回同一个点并没有什么用处， 但还有一些其它的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。</p>
+<p>返回同一个点并没有什么用处，但还有一些其它的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。</p>
 
 <h3 id="两个矩阵相乘">两个矩阵相乘</h3>
 
@@ -131,7 +131,7 @@ var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 </pre>
 
 <div class="warning">
-<p><strong>重要：</strong> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组， 可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如<a href="http://glmatrix.net/">glMatrix</a>就是一个注重速度和性能的库。</p>
+<p><strong>重要：</strong> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如<a href="http://glmatrix.net/">glMatrix</a>就是一个注重速度和性能的库。</p>
 </div>
 
 <h2 id="平移矩阵">平移矩阵</h2>
@@ -185,7 +185,7 @@ moveMe.style.transform = matrix3dRule;
 
 <h2 id="缩放矩阵">缩放矩阵</h2>
 
-<p>缩放矩阵使对象的高度、宽度和深度三个维度的其中之一变大或变小。在典型（笛卡尔）坐标系中， 这将使得 x，y，z 坐标拉伸或收缩。</p>
+<p>缩放矩阵使对象的高度、宽度和深度三个维度的其中之一变大或变小。在典型（笛卡尔）坐标系中，这将使得 x，y，z 坐标拉伸或收缩。</p>
 
 <pre class="brush: js">var w = 1.5; // width  (x)
 var h = 0.7; // height (y)

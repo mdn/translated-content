@@ -117,7 +117,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 <p>每个 ICE 消息都建议提供一个通信协议（TCP 或 UDP）、IP 地址、端口号、连接类型（例如，指定的 IP 是对等机本身还是中继服务器），以及将两台计算机连接在一起所需的其他信息。这包括 NAT 或其他网络问题。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 最需要注意的是：你的代码在 ICE 协商期间唯一需要负责的是从 ICE 层接受外向候选并通过与另一端的信号连接发送他们，当你的  {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 控制器已经执行后，同时从信令服务器接收 ICE 候选消息 (当接收到 <code>"new-ice-candidate"</code> 消息时) 然后通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}发送他们到你的 ICE 层。 嗯，就是这样。</p>
+<p><strong>注意：</strong> 最需要注意的是：你的代码在 ICE 协商期间唯一需要负责的是从 ICE 层接受外向候选并通过与另一端的信号连接发送他们，当你的  {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 控制器已经执行后，同时从信令服务器接收 ICE 候选消息 (当接收到 <code>"new-ice-candidate"</code> 消息时) 然后通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}发送他们到你的 ICE 层。嗯，就是这样。</p>
 
 <p>SDP 的内容基本上在所有情况下都是与你不相关的。在你真正知道自己在做什么之前，不要试图让事情变得更复杂。否则情况会非常混乱。</p>
 </div>
@@ -153,7 +153,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 
 <p>如果条件发生变化，例如网络连接恶化，一个或两个对等方可能建议切换到较低带宽的媒体分辨率，或其他编解码器。这将触发新的候选交换，之后可能会发生另一种媒体格式和/或编解码器更改。</p>
 
-<p>作为可选项， 查看 {{RFC(5245, "Interactive Connectivity Establishment")}}, <a href="https://tools.ietf.org/html/rfc5245#section-2.6">section 2.6 ("Concluding ICE")</a>如果你想更深入地了解这一过程，就要在 ICE 层内部完成。你应该注意到，候选交换后，一旦 ICE 层满足要求，媒体数据就开始流动。所有这些都是在幕后处理端。我们的任务就是简单地通过信令服务器来回发送候选。</p>
+<p>作为可选项，查看 {{RFC(5245, "Interactive Connectivity Establishment")}}, <a href="https://tools.ietf.org/html/rfc5245#section-2.6">section 2.6 ("Concluding ICE")</a>如果你想更深入地了解这一过程，就要在 ICE 层内部完成。你应该注意到，候选交换后，一旦 ICE 层满足要求，媒体数据就开始流动。所有这些都是在幕后处理端。我们的任务就是简单地通过信令服务器来回发送候选。</p>
 
 <h2 id="客户端应用">客户端应用</h2>
 

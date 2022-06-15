@@ -50,7 +50,7 @@ alert(x); // 输出的结果为 2
 
 <p>这段代码的输出是<strong>2</strong>，这是因为块级作用域中的 var x 变量声明与之前的声明在同一个作用域内。在 C 语言或是 Java 语言中，同样的代码输出的结果是 1。</p>
 
-<p>从 ECMAScript 2015 开始，使用 <code>let</code> 和<code>const</code>变量是块作用域的。 更多信息请参考 {{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}}。</p>
+<p>从 ECMAScript 2015 开始，使用 <code>let</code> 和<code>const</code>变量是块作用域的。更多信息请参考 {{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}}。</p>
 
 <h2 id="条件判断语句">条件判断语句</h2>
 
@@ -127,7 +127,7 @@ alert(x); // 输出的结果为 2
  <li>空字符串（<code>""</code>）</li>
 </ul>
 
-<p>当传递给条件语句所有其他的值，包括所有对象会被计算为真 。</p>
+<p>当传递给条件语句所有其他的值，包括所有对象会被计算为真。</p>
 
 <p>请不要混淆原始的布尔值<code>true</code>和<code>false</code> 与 {{jsxref("Boolean")}}对象的真和假。例如：</p>
 
@@ -255,7 +255,7 @@ throw new UserException("Value too high");</pre>
 
 <p><code>try...catch</code> 语句标记一块待尝试的语句，并规定一个以上的响应应该有一个异常被抛出。如果我们抛出一个异常，<code>try...catch</code>语句就捕获它。</p>
 
-<p><code>try...catch</code> 语句有一个包含一条或者多条语句的 try 代码块，0 个或 1 个的<code>catch</code>代码块，catch 代码块中的语句会在 try 代码块中抛出异常时执行。 换句话说，如果你在 try 代码块中的代码如果没有执行成功，那么你希望将执行流程转入 catch 代码块。如果 try 代码块中的语句（或者<code>try</code> 代码块中调用的方法）一旦抛出了异常，那么执行流程会立即进入<code>catch</code> 代码块。如果 try 代码块没有抛出异常，catch 代码块就会被跳过。<code>finally</code> 代码块总会紧跟在 try 和 catch 代码块之后执行，但会在 try 和 catch 代码块之后的其他代码之前执行。</p>
+<p><code>try...catch</code> 语句有一个包含一条或者多条语句的 try 代码块，0 个或 1 个的<code>catch</code>代码块，catch 代码块中的语句会在 try 代码块中抛出异常时执行。换句话说，如果你在 try 代码块中的代码如果没有执行成功，那么你希望将执行流程转入 catch 代码块。如果 try 代码块中的语句（或者<code>try</code> 代码块中调用的方法）一旦抛出了异常，那么执行流程会立即进入<code>catch</code> 代码块。如果 try 代码块没有抛出异常，catch 代码块就会被跳过。<code>finally</code> 代码块总会紧跟在 try 和 catch 代码块之后执行，但会在 try 和 catch 代码块之后的其他代码之前执行。</p>
 
 <p>下面的例子使用了<code>try...catch</code>语句。示例调用了一个函数用于从一个数组中根据传递值来获取一个月份名称。如果该值与月份数值不相符，会抛出一个带有<code>"InvalidMonthNo"</code>值的异常，然后在捕捉块语句中设<code>monthName</code>变量为<code>unknown</code>。</p>
 

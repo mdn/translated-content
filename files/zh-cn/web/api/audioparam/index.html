@@ -6,7 +6,7 @@ translation_of: Web/API/AudioParam
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p><code>AudioParam</code> 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 <code>AudioParam</code> 可以被设置为一个具体的值或者数值的改变 ，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。</p>
+<p><code>AudioParam</code> 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 <code>AudioParam</code> 可以被设置为一个具体的值或者数值的改变，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。</p>
 </div>
 
 <p>下面有两种类型的 <code>AudioParam</code>, <em>a-rate</em> 和 <em>k-rate</em> 参数：</p>
@@ -18,7 +18,7 @@ translation_of: Web/API/AudioParam
 
 <p>每个 {{domxref("AudioNode")}} 定义了其规格中哪一个参数是 <em>a-rate</em> 或 <em>k-rate</em> 。</p>
 
-<p>每个 <code>AudioParam</code> 有一个事件的列表，初始化时列表为空。该列表定义了什么时候数值怎么改变。当这个列表不是空的时候，使用 <code>AudioParam.value</code> 属性的改变会被忽略 。事件的列表允许我们去有计划地进行必须在非常精确的时间发生的更改，使用任意的基于时间轴的自动化曲线。被使用的时间在{{domxref("AudioContext.currentTime")}} 中被定义。</p>
+<p>每个 <code>AudioParam</code> 有一个事件的列表，初始化时列表为空。该列表定义了什么时候数值怎么改变。当这个列表不是空的时候，使用 <code>AudioParam.value</code> 属性的改变会被忽略。事件的列表允许我们去有计划地进行必须在非常精确的时间发生的更改，使用任意的基于时间轴的自动化曲线。被使用的时间在{{domxref("AudioContext.currentTime")}} 中被定义。</p>
 
 <h2 id="属性">属性</h2>
 

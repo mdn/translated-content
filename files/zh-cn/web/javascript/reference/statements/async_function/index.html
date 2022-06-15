@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>async 函数是使用<code>async</code>关键字声明的函数。 async 函数是{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}构造函数的实例， 并且其中允许使用<code>await</code>关键字。<code>async</code>和<code>await</code>关键字让我们可以用一种更简洁的方式写出基于{{jsxref("Promise")}}的异步行为，而无需刻意地链式调用<code>promise</code>。</p>
+<p>async 函数是使用<code>async</code>关键字声明的函数。async 函数是{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}构造函数的实例，并且其中允许使用<code>await</code>关键字。<code>async</code>和<code>await</code>关键字让我们可以用一种更简洁的方式写出基于{{jsxref("Promise")}}的异步行为，而无需刻意地链式调用<code>promise</code>。</p>
 
 <div class="noinclude">
 <p>async 函数还可以被{{jsxref("Operators/async_function", "作为表达式", "", 1)}}来定义。</p>
@@ -223,8 +223,8 @@ setTimeout(parallelPromise, 13000); // same as parallel
 <p>在 Promise 例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的<code>Promise</code>。在<code>concurrentPromise</code>函数中，这意味着它从<code>Promise.all([]).then()</code>返回一个 Promise。事实上，在此示例的先前版本忘记了这样做！</p>
 
 <p>但是，async 函数仍有可能然可能错误地忽略错误。<br>
- 以<code>parallel</code> async 函数为例。 如果它没有等待<code>await</code>（或返回）<code>Promise.all([])</code>调用的结果，则不会传播任何错误。<br>
- 虽然<code>parallelPromise</code>函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于<code>return </code><code>Promise.all([])</code>处理方式。</p>
+ 以<code>parallel</code> async 函数为例。如果它没有等待<code>await</code>（或返回）<code>Promise.all([])</code>调用的结果，则不会传播任何错误。<br>
+ 虽然<code>parallelPromise</code>函数示例看起来很简单，但它根本不会处理错误！这样做需要一个类似于<code>return </code><code>Promise.all([])</code>处理方式。</p>
 </div>
 
 <h3 id="使用async函数重写_promise_链">使用 async 函数重写 promise 链</h3>

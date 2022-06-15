@@ -14,7 +14,7 @@ translation_of: Web/API/EventTarget/addEventListener
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><strong>EventTarget.addEventListener() </strong>方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 {{domxref("Element")}},{{domxref("Document")}}和{{domxref("Window")}}或者任何其他支持事件的对象 (比如 <code><a href="/zh-cn/DOM/XMLHttpRequest" title="zh-cn/XMLHttpRequest">XMLHttpRequest</a></code>)<code>。</code></p>
+<p><strong>EventTarget.addEventListener() </strong>方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。事件目标可以是一个文档上的元素 {{domxref("Element")}},{{domxref("Document")}}和{{domxref("Window")}}或者任何其他支持事件的对象 (比如 <code><a href="/zh-cn/DOM/XMLHttpRequest" title="zh-cn/XMLHttpRequest">XMLHttpRequest</a></code>)<code>。</code></p>
 
 <p><code>addEventListener()</code>的工作原理是将实现{{domxref("EventListener")}}的函数或对象添加到调用它的{{domxref("EventTarget")}}上的指定事件类型的事件侦听器列表中。</p>
 
@@ -45,7 +45,7 @@ Non-standard_inline}});  // Gecko/Mozilla only
  </ul>
  </dd>
  <dt><code>useCapture</code>  {{optional_inline}}</dt>
- <dd>{{jsxref("Boolean")}}，在 DOM 树中，注册了 listener 的元素， 是否要先于它下面的 EventTarget，调用该 listener。 当 useCapture(设为 true) 时，沿着 DOM 树向上冒泡的事件，不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">事件流</a> 及 <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> 文档。 如果没有指定， <code>useCapture</code> 默认为 false 。 </dd>
+ <dd>{{jsxref("Boolean")}}，在 DOM 树中，注册了 listener 的元素，是否要先于它下面的 EventTarget，调用该 listener。 当 useCapture(设为 true) 时，沿着 DOM 树向上冒泡的事件，不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">事件流</a> 及 <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> 文档。如果没有指定， <code>useCapture</code> 默认为 false。 </dd>
 </dl>
 
 <div class="note"><strong>注意：</strong> 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。在目标阶段的事件会触发该元素（即事件目标）上的所有监听器，而不在乎这个监听器到底在注册时<code>useCapture</code> 参数值是 true 还是 false。</div>
@@ -328,7 +328,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 <p><code>addEventListener()</code> 是 W3C DOM 规范中提供的注册事件监听器的方法。它的优点包括：</p>
 
 <ul>
- <li>它允许给一个事件注册多个监听器。 特别是在使用{{Glossary("AJAX")}}库，JavaScript 模块，或其他需要第三方库/插件的代码。</li>
+ <li>它允许给一个事件注册多个监听器。特别是在使用{{Glossary("AJAX")}}库，JavaScript 模块，或其他需要第三方库/插件的代码。</li>
  <li>它提供了一种更精细的手段控制 <code>listener</code> 的触发阶段。（即可以选择捕获或者冒泡）。</li>
  <li>它对任何 DOM 元素都是有效的，而不仅仅只对 HTML 元素有效。</li>
 </ul>
@@ -349,7 +349,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>当使用 <code>addEventListener()</code> 为一个元素注册事件的时候，句柄里的 this 值是该元素的引用。其与传递给句柄的 event 参数的 <code>currentTarget 属性的值一样。</code></p>
 
-<p>如果一个事件的属性 ( 例如. onClick) 是指定在一个 HTML 的元素上的，则这个属性中的 JavaScript 语句实际上会被包裹在一个处理函数中，在这个处理函数中使用 this 的效果和使用 addEventListener 来绑定事件的效果是一样的； this 的出现代表了元素的引用。注意到在一个函数里 this 调用的的效果和标准规则里面是一样的。</p>
+<p>如果一个事件的属性 ( 例如。onClick) 是指定在一个 HTML 的元素上的，则这个属性中的 JavaScript 语句实际上会被包裹在一个处理函数中，在这个处理函数中使用 this 的效果和使用 addEventListener 来绑定事件的效果是一样的；this 的出现代表了元素的引用。注意到在一个函数里 this 调用的的效果和标准规则里面是一样的。</p>
 
 <p>比如下面的例子：</p>
 
@@ -359,7 +359,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>这时<code>modifyText()</code>中的<code>this</code> 的值会变成全局 (window) 对象的引用（在<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中为 <code>undefined）</code>。</p>
 
-<div class="note"><strong>注意：</strong> JavaScript 1.8.5 引入了<code><a href="/zh-cn/JavaScript/Reference/Global_Objects/Function/bind" title="zh-cn/JavaScript/Reference/Global Objects/Function/bind">Function.prototype.bind()</a></code> 方法，允许制定函数调用时的 <code>this</code> 的值。这使得想要绕开由于调用情况不同，this 取值不同的问题变得十分容易 。然而请注意，你应该保留一个 <code>listener 的</code>引用，以便在未来需要的时候能够比较好地移除。</div>
+<div class="note"><strong>注意：</strong> JavaScript 1.8.5 引入了<code><a href="/zh-cn/JavaScript/Reference/Global_Objects/Function/bind" title="zh-cn/JavaScript/Reference/Global Objects/Function/bind">Function.prototype.bind()</a></code> 方法，允许制定函数调用时的 <code>this</code> 的值。这使得想要绕开由于调用情况不同，this 取值不同的问题变得十分容易。然而请注意，你应该保留一个 <code>listener 的</code>引用，以便在未来需要的时候能够比较好地移除。</div>
 
 <p>下面是 <code>bind</code> 相关的例子：</p>
 
@@ -452,9 +452,9 @@ myObject.register();
 
 <h3 id="兼容性">兼容性</h3>
 
-<p>在你的 script 的开头添加以下方法，你就可以使用以下如 <code>addEventListener</code>, <code>removeEventListener</code>, <code>Event.preventDefault</code> 和<code>Event.stopPropagation</code> 等不被 IE8 支持的方法。 这些代码支持 <code>handleEvent</code> 的使用 ，包含 <code>DOMContentLoaded</code> 事件。</p>
+<p>在你的 script 的开头添加以下方法，你就可以使用以下如 <code>addEventListener</code>, <code>removeEventListener</code>, <code>Event.preventDefault</code> 和<code>Event.stopPropagation</code> 等不被 IE8 支持的方法。 这些代码支持 <code>handleEvent</code> 的使用，包含 <code>DOMContentLoaded</code> 事件。</p>
 
-<div class="note"><strong>Note: </strong>IE8 不具有任何替代 useCapture 的方法，useCapture 是 IE8 不支持的。 请注意下面的代码只能添加 IE8。另外请注意，下面这个 IE8 polyfill 只适用于标准模式：需要 DOCTYPE 声明。</div>
+<div class="note"><strong>Note: </strong>IE8 不具有任何替代 useCapture 的方法，useCapture 是 IE8 不支持的。请注意下面的代码只能添加 IE8。另外请注意，下面这个 IE8 polyfill 只适用于标准模式：需要 DOCTYPE 声明。</div>
 
 <pre class="brush: js notranslate">(function() {
   if (!Event.prototype.preventDefault) {

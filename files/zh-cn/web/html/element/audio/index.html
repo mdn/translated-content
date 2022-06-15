@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/audio
 ---
 <p>{{HTMLRef}}</p>
 
-<p><strong>HTML <code>&lt;audio&gt;</code> </strong>元素用于在文档中嵌入音频内容。 <code>&lt;audio&gt;</code> 元素可以包含一个或多个音频资源， 这些音频资源可以使用 <code>src</code> 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。</p>
+<p><strong>HTML <code>&lt;audio&gt;</code> </strong>元素用于在文档中嵌入音频内容。 <code>&lt;audio&gt;</code> 元素可以包含一个或多个音频资源，这些音频资源可以使用 <code>src</code> 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/HTML/Element/audio
  <dd>枚举属性  展示音频资源是否可以通过 CORS 加载。<a href="/zh-CN/docs/CORS_Enabled_Image">支持 CORS 的资源 </a> 可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：
  <dl>
   <dt><code>anonymous</code></dt>
-  <dd>在发送跨域请求时不携带验证信息。换句话说，浏览器在发送<code>Origin:</code> HTTP 请求首部时将不携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> 响应首部），那么图片就被认为是污染的，它就会被限制使用。</dd>
+  <dd>在发送跨域请求时不携带验证信息。换句话说，浏览器在发送<code>Origin:</code> HTTP 请求首部时将不携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> 响应首部），那么图片就被认为是污染的，它就会被限制使用。</dd>
   <dt><code>use-credentials</code></dt>
   <dd>在发送跨域请求时携带验证信息。换句话说，在发送<code>Origin:</code> HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置<code>Access-Control-Allow-Credentials:</code> 响应首部）那么图片就被认为是污染的，它就会被限制使用。</dd>
  </dl>
@@ -80,7 +80,7 @@ translation_of: Web/HTML/Element/audio
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>嵌入的音频的 URL。 该 URL 应遵从 <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a>. 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。</dd>
+ <dd>嵌入的音频的 URL。该 URL 应遵从 <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a>. 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。</dd>
 </dl>
 
 <h2 id="事件">事件</h2>

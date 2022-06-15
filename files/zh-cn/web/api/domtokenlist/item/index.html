@@ -24,13 +24,13 @@ translation_of: Web/API/DOMTokenList/item
 
 <h2 id="例子">例子</h2>
 
-<p>在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取<code>DOMTokenList</code>对象。 然后使用<code>item(<var>tokenList</var>.length - 1)</code>检索列表中的最后的一个项，并将其写入&lt;span&gt;元素的 {{domxref("Node.textContent")}}。</p>
+<p>在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取<code>DOMTokenList</code>对象。然后使用<code>item(<var>tokenList</var>.length - 1)</code>检索列表中的最后的一个项，并将其写入&lt;span&gt;元素的 {{domxref("Node.textContent")}}。</p>
 
-<p>首先， HTML：</p>
+<p>首先，HTML：</p>
 
 <pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
-<p>然后， JavaScript：</p>
+<p>然后，JavaScript：</p>
 
 <pre class="brush: js notranslate">let span = document.querySelector("span");
 let classes = span.classList;

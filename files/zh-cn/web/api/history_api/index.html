@@ -108,8 +108,8 @@ history.pushState(stateObj, "page 2", "bar.html");
 <p>        在某种意义上，调用 <code>pushState()</code> 与 设置 <code>window.location = "#foo"</code> 类似，二者都会在当前页面创建并激活新的历史记录。但 <code>pushState()</code> 具有如下几条优点：</p>
 
 <ul>
- <li>新的 URL 可以是与当前 URL 同源的任意 URL 。相反，只有在修改哈希时，设置 <code>window.location</code> 才能是同一个 {{ domxref("document") }}。</li>
- <li>如果你不想改 URL，就不用改。相反，设置 <code>window.location = "#foo";</code>在当前哈希不是 <code>#foo</code> 时， 才能创建新的历史记录项。</li>
+ <li>新的 URL 可以是与当前 URL 同源的任意 URL。相反，只有在修改哈希时，设置 <code>window.location</code> 才能是同一个 {{ domxref("document") }}。</li>
+ <li>如果你不想改 URL，就不用改。相反，设置 <code>window.location = "#foo";</code>在当前哈希不是 <code>#foo</code> 时，才能创建新的历史记录项。</li>
  <li>你可以将任意数据和新的历史记录项相关联。而基于哈希的方式，要把所有相关数据编码为短字符串。 </li>
  <li>如果 <code>标题</code> 随后还会被浏览器所用到，那么这个数据是可以被使用的（哈希则不是）。</li>
 </ul>
@@ -122,7 +122,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h3 id="replaceState_方法">replaceState() 方法</h3>
 
-<p><code>history.replaceState()</code> 的使用与 <code>history.pushState()</code> 非常相似，区别在于  <code>replaceState()</code>  是修改了当前的历史记录项而不是新建一个。 注意这并不会阻止其在全局浏览器历史记录中创建一个新的历史记录项。</p>
+<p><code>history.replaceState()</code> 的使用与 <code>history.pushState()</code> 非常相似，区别在于  <code>replaceState()</code>  是修改了当前的历史记录项而不是新建一个。注意这并不会阻止其在全局浏览器历史记录中创建一个新的历史记录项。</p>
 
 <p><code>replaceState()</code> 的使用场景在于为了响应用户操作，你想要更新状态对象 state 或者当前历史记录的 URL。</p>
 
@@ -160,7 +160,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>        页面加载时，或许会有个非 null 的状态对象。这是有可能发生的，举个例子，假如页面（通过<code>pushState()</code> 或 <code>replaceState()</code> 方法）设置了状态对象而后用户重启了浏览器。那么当页面重新加载时，页面会接收一个 onload 事件，但没有 popstate 事件。然而，假如你读取了 history.state 属性，你将会得到如同 popstate 被触发时能得到的状态对象。</p>
 
-<p>你可以读取当前历史记录项的状态对象 state，而不必等待<code>popstate</code> 事件， 只需要这样使用<code>history.state</code> 属性： </p>
+<p>你可以读取当前历史记录项的状态对象 state，而不必等待<code>popstate</code> 事件，只需要这样使用<code>history.state</code> 属性： </p>
 
 <pre class="brush: js notranslate">  // 尝试通过 pushState 创建历史条目，然后再刷新页面查看 state 状态对象变化;
   window.addEventListener('load',() =&gt; {

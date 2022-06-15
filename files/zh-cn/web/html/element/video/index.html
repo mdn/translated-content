@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/video
  <dd>
   <p>布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。</p>
   <div class="note">
-   <p><strong>注意: </strong>自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的 <a href="/zh-CN/docs/Web/Media/Autoplay_guide">自动播放指南</a>。</p>
+   <p><strong>注意：</strong>自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的 <a href="/zh-CN/docs/Web/Media/Autoplay_guide">自动播放指南</a>。</p>
   </div>
   <p>如果使用 <code>autoplay="false"</code> 来关闭视频的自动播放功能，会不起作用；只要 <code>&lt;video&gt;</code> 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性</p>
   <p>在某些浏览器（例如 Chrome 70.0）中，如果没有设置 <code>muted</code> 属性，autoplay 将不会生效。</p>
@@ -64,11 +64,11 @@ translation_of: Web/HTML/Element/video
  <dd>该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。<a href="/zh-CN/docs/Web/HTML/CORS_enabled_image" title="CORS_Enabled_Image">允许 CORS 的资源</a> 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被<em>污染</em>。允许的值如下：
   <dl>
    <dt>anonymous</dt>
-   <dd>在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 <code>Origin:</code> HTTP 请求首部时将不会携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> HTTP 响应首部），图像会被 <em>污染</em>，并且它的使用会受到限制。</dd>
+   <dd>在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 <code>Origin:</code> HTTP 请求首部时将不会携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> HTTP 响应首部），图像会被 <em>污染</em>，并且它的使用会受到限制。</dd>
    <dt>use-credentials</dt>
    <dd>在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 <code>Origin:</code> HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 <code>Access-Control-Allow-Credentials:</code> HTTP 响应首部），图像会被 <em>污染</em>，并且它的使用会受到限制。</dd>
   </dl>
-  <p>不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 <code>Origin:</code> HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 <strong>anonymous</strong> 一样使用。 查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS 设置属性</a> 获取更多信息。</p>
+  <p>不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 <code>Origin:</code> HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 <strong>anonymous</strong> 一样使用。查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS 设置属性</a> 获取更多信息。</p>
  </dd>
 
  <dt>{{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}</dt>
@@ -107,7 +107,7 @@ translation_of: Web/HTML/Element/video
   </ul>
   <p>每个浏览器的默认值都不相同，即使规范建议设置为 <code>metadata</code>。</p>
   <div class="note">
-   <strong>注意:</strong>
+   <strong>注意：</strong>
    <ul>
     <li><code>autoplay</code> 属性的优先级比 <code>preload</code> 高。如果制定了 <code>autopaly</code>属性，浏览器显然需要开始下载视频以便回放。</li>
     <li>规范没有强制浏览器去遵循该属性的值，这仅仅只是个提示。</li>
@@ -116,7 +116,7 @@ translation_of: Web/HTML/Element/video
  </dd>
 
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>要嵌到页面的视频的URL。可选；你也可以使用 video 块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。</dd>
+ <dd>要嵌到页面的视频的 URL。可选；你也可以使用 video 块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。</dd>
 
  <dt>{{htmlattrdef("width")}}</dt>
  <dd>视频显示区域的宽度，单位是 <a href="https://drafts.csswg.org/css-values/#px" class="external" rel=" noopener">CSS 像素</a>（仅限绝对值；<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes" class="external" rel=" noopener">不支持百分比</a>）。</dd>
@@ -202,7 +202,7 @@ translation_of: Web/HTML/Element/video
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.stalled_event", 'stalled')}}</td>
-   <td>用户代理（user agent）正在尝试获取媒体数据, 但数据意外未出现。</td>
+   <td>用户代理（user agent）正在尝试获取媒体数据，但数据意外未出现。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.suspend_event", 'suspend')}}</td>
@@ -240,7 +240,7 @@ translation_of: Web/HTML/Element/video
 <ul>
  <li>如果你没有指定 <code>controls</code> 属性，那么视频不会展示浏览器自带的控件，你也可以用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详情请见<a href="/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>。</li>
  <li><code>HTMLMediaElement</code> 会激活许多不同的<a href="/zh-CN/docs/Web/Guide/Events/Media_events">事件</a>，以便于让你可以控制视频（和音频）内容。</li>
- <li>你可以用CSS 属性 {{cssxref("object-position")}} 来调整视频在元素内部的位置，它可以控制视频尺寸适应于元素外框的方式。</li>
+ <li>你可以用 CSS 属性 {{cssxref("object-position")}} 来调整视频在元素内部的位置，它可以控制视频尺寸适应于元素外框的方式。</li>
  <li>如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 <a href="/zh-CN/docs/Web/API/WebVTT_API">WebVTT</a> 格式的基础上使用 JavaScript 来实现。详情请见 <a href="/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。</li>
 </ul>
 
@@ -262,7 +262,7 @@ translation_of: Web/HTML/Element/video
 &lt;/video&gt;
 </pre>
 
-<p>第一个例子播放一个视频，视频一收到，允许播放的时候就会立马开始播放，而不会停下来直到下载更多内容。 图片 "posterimage.jpg" 会一直展示在视频区域，直到开始播放。</p>
+<p>第一个例子播放一个视频，视频一收到，允许播放的时候就会立马开始播放，而不会停下来直到下载更多内容。图片 "posterimage.jpg" 会一直展示在视频区域，直到开始播放。</p>
 
 <p>第二个例子允许用户选择不同的字幕。</p>
 
@@ -270,14 +270,14 @@ translation_of: Web/HTML/Element/video
 
 <p>如果视频的 MIME 类型设置不正确，视频可能不会显示，或者显示包含一个 X 的灰色盒子（如果启用了 JavaScript 的话）。</p>
 
-<p>如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上， 你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"， 来解决这个问题。</p>
+<p>如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的“AddType 的”配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"，来解决这个问题。</p>
 
 <pre class="notranslate">AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
 </pre>
 
-<p>如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"， 来解决这个问题。</p>
+<p>如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的“AddType 的”配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"，来解决这个问题。</p>
 
 <pre class="notranslate">AddType video/webm .webm
 </pre>

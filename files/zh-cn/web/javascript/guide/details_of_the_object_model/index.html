@@ -227,7 +227,7 @@ public class Engineer extends WorkerBee {
 <p>使用这些定义，您可以创建这些对象的实例，以获取其属性的默认值。下图说明了如何使用这些 JavaScript 定义创建新对象并显示新对象的属性值。</p>
 
 <div class="note">
-<p><strong>备注：</strong>实例在基于类的语言中具有特定的技术含义。在这些语言中，一个实例是一个类的单独实例化，与一个类本质上是不同的。在 JavaScript 中，“实例”没有这个技术含义，因为 JavaScript 在类和实例之间不存在这样的区别。然而，在讨论 JavaScript 时，可以非正式地使用“实例”来表示使用特定构造函数创建的对象。 所以，在这个例子中，你可以非正式地说<code>jane</code> 是 <code>Engineer</code>的一个实例。同样，虽然术语 parent，child，ancestor 和 descendant 在 JavaScript 中没有正式含义；你可以非正式地使用它们来引用原型链中较高或更低的对象。</p>
+<p><strong>备注：</strong>实例在基于类的语言中具有特定的技术含义。在这些语言中，一个实例是一个类的单独实例化，与一个类本质上是不同的。在 JavaScript 中，“实例”没有这个技术含义，因为 JavaScript 在类和实例之间不存在这样的区别。然而，在讨论 JavaScript 时，可以非正式地使用“实例”来表示使用特定构造函数创建的对象。所以，在这个例子中，你可以非正式地说<code>jane</code> 是 <code>Engineer</code>的一个实例。同样，虽然术语 parent，child，ancestor 和 descendant 在 JavaScript 中没有正式含义；你可以非正式地使用它们来引用原型链中较高或更低的对象。</p>
 </div>
 
 <h3 id="用简单的定义创建对象">用简单的定义创建对象</h3>
@@ -286,7 +286,7 @@ mark.dept = "general";
 mark.projects = [];
 </pre>
 
-<p><code>mark</code> 对象从 <code>mark.__proto__</code> 中保存的原型对象里继承了 <code>name</code> 和 <code>dept</code> 属性。并由 <code>WorkerBee</code> 构造函数为 <code>projects</code> 属性设置了本地值。 这就是 JavaScript 中的属性和属性值的继承。这个过程的一些微妙之处将在 <a href="#Property_inheritance_revisited">Property inheritance revisited</a> 中进一步讨论。</p>
+<p><code>mark</code> 对象从 <code>mark.__proto__</code> 中保存的原型对象里继承了 <code>name</code> 和 <code>dept</code> 属性。并由 <code>WorkerBee</code> 构造函数为 <code>projects</code> 属性设置了本地值。这就是 JavaScript 中的属性和属性值的继承。这个过程的一些微妙之处将在 <a href="#Property_inheritance_revisited">Property inheritance revisited</a> 中进一步讨论。</p>
 
 <p>由于这些构造器不支持为实例设置特定的值，所以这些属性值仅仅是创建自 <code>WorkerBee</code> 的所有对象所共享的默认值。当然这些属性的值是可以修改的，所以您可以为 <code>mark</code>指定特定的信息，如下所示：</p>
 

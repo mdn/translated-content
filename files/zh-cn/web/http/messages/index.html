@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Messages
 
 <p>HTTP 消息由采用 ASCII 编码的多行文本构成。在 HTTP/1.1 及早期版本中，这些消息通过连接公开地发送。在 HTTP/2 中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个 HTTP 帧中。</p>
 
-<p>Web 开发人员或网站管理员，很少自己手工创建这些原始的 HTTP 消息︰ 由软件、浏览器、 代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API（用于浏览器）或其他接口提供 HTTP 消息。</p>
+<p>Web 开发人员或网站管理员，很少自己手工创建这些原始的 HTTP 消息︰ 由软件、浏览器、代理或服务器完成。他们通过配置文件（用于代理服务器或服务器），API（用于浏览器）或其他接口提供 HTTP 消息。</p>
 
 <p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" style="height: 538px; width: 1174px;"></p>
 
@@ -25,7 +25,7 @@ translation_of: Web/HTTP/Messages
  <li>一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。</li>
  <li>一个可选的 HTTP 头集合指明请求或描述消息正文。</li>
  <li>一个空行指示所有关于请求的元数据已经发送完毕。</li>
- <li>一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。 正文的大小有起始行的 HTTP 头来指定。</li>
+ <li>一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。正文的大小有起始行的 HTTP 头来指定。</li>
 </ol>
 
 <p>起始行和  HTTP 消息中的 HTTP 头统称为请求头，而其有效负载被称为消息正文。</p>
@@ -49,7 +49,7 @@ translation_of: Web/HTTP/Messages
     OPTIONS /anypage.html HTTP/1.0</code></li>
    <li>一个完整的 URL，被称为 <em>绝对形式 (absolute form)</em>，主要在使用 <code>GET</code> 方法连接到代理时使用。<br>
     <code>GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1</code></li>
-   <li>由域名和可选端口（以<code>':'</code>为前缀）组成的 URL 的 authority component，称为 <em>authority form</em>。 仅在使用 <code>CONNECT</code> 建立 HTTP 隧道时才使用。<br>
+   <li>由域名和可选端口（以<code>':'</code>为前缀）组成的 URL 的 authority component，称为 <em>authority form</em>。仅在使用 <code>CONNECT</code> 建立 HTTP 隧道时才使用。<br>
     <code>CONNECT developer.mozilla.org:80 HTTP/1.1</code></li>
    <li><em>星号形式 (asterisk form)</em>，一个简单的星号 (<code>'*'</code>)，配合 <code>OPTIONS</code> 方法使用，代表整个服务器。<br>
     <code>OPTIONS * HTTP/1.1</code></li>
@@ -60,7 +60,7 @@ translation_of: Web/HTTP/Messages
 
 <h3 id="Headers">Headers</h3>
 
-<p>来自请求的 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> 遵循和 HTTP header 相同的基本结构：不区分大小写的字符串，紧跟着的冒号 <code>(':')</code> 和一个结构取决于 header 的值。 整个 header（包括值）由一行组成，这一行可以相当长。</p>
+<p>来自请求的 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> 遵循和 HTTP header 相同的基本结构：不区分大小写的字符串，紧跟着的冒号 <code>(':')</code> 和一个结构取决于 header 的值。整个 header（包括值）由一行组成，这一行可以相当长。</p>
 
 <p>有许多请求头可用，它们可以分为几组：</p>
 
@@ -74,7 +74,7 @@ translation_of: Web/HTTP/Messages
 
 <h3 id="Body">Body</h3>
 
-<p>请求的最后一部分是它的 body。不是所有的请求都有一个 body：例如获取资源的请求，GET，HEAD，DELETE 和 OPTIONS，通常它们不需要 body。 有些请求将数据发送到服务器以便更新数据：常见的的情况是 POST 请求（包含 HTML 表单数据）。</p>
+<p>请求的最后一部分是它的 body。不是所有的请求都有一个 body：例如获取资源的请求，GET，HEAD，DELETE 和 OPTIONS，通常它们不需要 body。有些请求将数据发送到服务器以便更新数据：常见的的情况是 POST 请求（包含 HTML 表单数据）。</p>
 
 <p>Body 大致可分为两类：</p>
 
@@ -99,7 +99,7 @@ translation_of: Web/HTTP/Messages
 
 <h3 id="Headers_2">Headers</h3>
 
-<p>响应的  <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> 遵循和任何其它 header 相同的结构：不区分大小写的字符串，紧跟着的冒号 (<code>':'</code>) 和一个结构取决于 header 类型的值。 整个 header（包括其值）表现为单行形式。</p>
+<p>响应的  <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> 遵循和任何其它 header 相同的结构：不区分大小写的字符串，紧跟着的冒号 (<code>':'</code>) 和一个结构取决于 header 类型的值。整个 header（包括其值）表现为单行形式。</p>
 
 <p>有许多响应头可用，这些响应头可以分为几组：</p>
 

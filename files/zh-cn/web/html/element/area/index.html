@@ -32,7 +32,7 @@ translation_of: Web/HTML/Element/area
 
 <dl>
  <dt>{{htmlattrdef("alt")}}</dt>
- <dd>在未显示图像的浏览器上显示代替的文本字符串。这个文本应该能传达给用户与显示图像而没有文本的情况下同等的选择（译者注：就是字和图片表达一个意思）。在 HTML4 中， 这个属性时必需的，但是可以是一个空的串 ("")。在 HTML5 中，这个属性只有在<strong>href</strong> 属性被使用的时候才是必需的。</dd>
+ <dd>在未显示图像的浏览器上显示代替的文本字符串。这个文本应该能传达给用户与显示图像而没有文本的情况下同等的选择（译者注：就是字和图片表达一个意思）。在 HTML4 中，这个属性时必需的，但是可以是一个空的串 ("")。在 HTML5 中，这个属性只有在<strong>href</strong> 属性被使用的时候才是必需的。</dd>
 </dl>
 
 <dl>
@@ -44,7 +44,7 @@ translation_of: Web/HTML/Element/area
 
 <dl>
  <dt>{{htmlattrdef("href")}}</dt>
- <dd>area 的超链接，值为一个 URL. HTML4 里，这个值不管是不是有值都要明确指定出来. HTML5 里则不需要。</dd>
+ <dd>area 的超链接，值为一个 URL. HTML4 里，这个值不管是不是有值都要明确指定出来。HTML5 里则不需要。</dd>
 </dl>
 
 <dl>
@@ -91,11 +91,11 @@ translation_of: Web/HTML/Element/area
 
 <dl>
  <dt>{{htmlattrdef("target")}}</dt>
- <dd>本属性指明了在什么地方显示链接的资源. HTML4 里，这个值是一个 frame 的链接或者关键字. HTML5 里，它是一个浏览器上下文 (比如：标签，窗口或者内嵌的 frame) 的链接或者关键字。值的含义：
+ <dd>本属性指明了在什么地方显示链接的资源。HTML4 里，这个值是一个 frame 的链接或者关键字。HTML5 里，它是一个浏览器上下文 (比如：标签，窗口或者内嵌的 frame) 的链接或者关键字。值的含义：
  <ul>
   <li><code>_self</code>: 在当前区域加载链接指向的资源。这个是默认值。</li>
   <li><code>_blank</code>: 在新的未命名的窗口或者 tab 里加载超链接资源。</li>
-  <li><code>_parent</code>: 在父级加载超链接资源. HTML4 里，是当前 frame 的父级，HTML5 里是当前的浏览器上下文，如果当前环境没有父级，行为和<code>_self</code>一样。</li>
+  <li><code>_parent</code>: 在父级加载超链接资源。HTML4 里，是当前 frame 的父级，HTML5 里是当前的浏览器上下文，如果当前环境没有父级，行为和<code>_self</code>一样。</li>
   <li><code>_top</code>: HTML4 里：将响应加载到完整的原始窗口中，取消所有其他帧。在 HTML5 中：将响应加载到顶级浏览上下文 (也就是说，浏览上下文是当前版本的祖先，并且没有父类)。如果没有父类，这个选项的行为方式与 self 相同</li>
  </ul>
  本属性只能在指明 href 属性之后使用。</dd>

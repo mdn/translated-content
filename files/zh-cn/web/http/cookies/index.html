@@ -135,7 +135,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <ul>
  <li><code><strong>None</strong></code><strong>。</strong>浏览器会在同站请求、跨站请求下继续发送 cookies，不区分大小写。</li>
- <li><strong><code>Strict</code>。</strong>浏览器将只在访问相同站点时发送 cookie。（在原有 Cookies 的限制条件上的加强，如上文 “Cookie 的作用域” 所述）</li>
+ <li><strong><code>Strict</code>。</strong>浏览器将只在访问相同站点时发送 cookie。（在原有 Cookies 的限制条件上的加强，如上文“Cookie 的作用域”所述）</li>
  <li><strong><code>Lax</code>。</strong>与 <strong><code>Strict</code> </strong>类似，但用户从外部站点导航至 URL 时（例如通过链接）除外。 在新版本浏览器中，为默认选项，Same-site cookies 将会为一些跨站子请求保留，如图片加载或者 frames 的调用，但只有当用户从外部站点导航到 URL 时才会发送。如 link 链接</li>
 </ul>
 
@@ -160,7 +160,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
  <dd>如果 cookie 名称具有此前缀，则仅当它也用 <code>Secure</code> 属性标记，是从安全来源发送的，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。该前缀限制要弱于 <code>__Host-</code> 前缀。</dd>
 </dl>
 
-<p>带有这些前缀点 Cookie， 如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。</p>
+<p>带有这些前缀点 Cookie，如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。</p>
 
 <div class="blockIndicator note">
 <p>在应用程序服务器上，Web 应用程序<strong>必须</strong>检查完整的 cookie 名称，包括前缀 —— 用户代理程序在从请求的 {{HTTPHeader("Cookie")}} 标头中发送前缀之前，<strong>不会</strong>从 cookie 中剥离前缀。</p>

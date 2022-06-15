@@ -22,7 +22,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="跨站脚本攻击">跨站脚本攻击</h3>
 
-<p>CSP 的主要目标是减少和报告 XSS 攻击 ，XSS 攻击利用了浏览器对于从服务器所获取的内容的信任。恶意脚本在受害者的浏览器中得以运行，因为浏览器信任其内容来源，即使有的时候这些脚本并非来自于它本该来的地方。</p>
+<p>CSP 的主要目标是减少和报告 XSS 攻击，XSS 攻击利用了浏览器对于从服务器所获取的内容的信任。恶意脚本在受害者的浏览器中得以运行，因为浏览器信任其内容来源，即使有的时候这些脚本并非来自于它本该来的地方。</p>
 
 <p>CSP 通过指定有效域——即浏览器认可的可执行脚本的有效来源——使服务器管理者有能力减少或消除 XSS 攻击所依赖的载体。一个 CSP 兼容的浏览器将会仅执行从白名单域获取到的脚本文件，忽略所有的其他脚本 (包括内联脚本和 HTML 的事件处理属性)。</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="描述策略">描述策略</h3>
 
-<p>一个策略由一系列策略指令所组成，每个策略指令都描述了一个针对某个特定类型资源以及生效范围的策略。你的策略应当包含一个{{CSP("default-src")}}策略指令，在其他资源类型没有符合自己的策略时应用该策略 (有关完整列表查看{{CSP("default-src")}} )。一个策略可以包含 {{CSP("default-src")}}  或者 {{CSP("script-src")}} 指令来防止内联脚本运行，并杜绝<code>eval()</code>的使用。 一个策略也可包含一个 {{CSP("default-src")}} 或  {{CSP("style-src")}} 指令去限制来自一个 {{HTMLElement("style")}} 元素或者 style 属性的內联样式。</p>
+<p>一个策略由一系列策略指令所组成，每个策略指令都描述了一个针对某个特定类型资源以及生效范围的策略。你的策略应当包含一个{{CSP("default-src")}}策略指令，在其他资源类型没有符合自己的策略时应用该策略 (有关完整列表查看{{CSP("default-src")}} )。一个策略可以包含 {{CSP("default-src")}}  或者 {{CSP("script-src")}} 指令来防止内联脚本运行，并杜绝<code>eval()</code>的使用。一个策略也可包含一个 {{CSP("default-src")}} 或  {{CSP("style-src")}} 指令去限制来自一个 {{HTMLElement("style")}} 元素或者 style 属性的內联样式。</p>
 
 <h2 id="示例：常见用例">示例：常见用例</h2>
 
@@ -102,7 +102,7 @@ translation_of: Web/HTTP/CSP
 
 <pre>Content-Security-Policy-Report-Only: <em>policy</em></pre>
 
-<p> 如果{{HTTPHeader("Content-Security-Policy-Report-Only")}} 头部和 {{HTTPHeader("Content-Security-Policy")}} 同时出现在一个响应中，两个策略均有效。在<code>Content-Security-Policy</code> 头部中指定的策略有强制性 ，而<code>Content-Security-Policy-Report-Only</code>中的策略仅产生报告而不具有强制性。</p>
+<p> 如果{{HTTPHeader("Content-Security-Policy-Report-Only")}} 头部和 {{HTTPHeader("Content-Security-Policy")}} 同时出现在一个响应中，两个策略均有效。在<code>Content-Security-Policy</code> 头部中指定的策略有强制性，而<code>Content-Security-Policy-Report-Only</code>中的策略仅产生报告而不具有强制性。</p>
 
 <p>支持 CSP 的浏览器将始终对于每个企图违反你所建立的策略都发送违规报告，如果策略里包含一个有效的{{CSP("report-uri")}} 指令。</p>
 

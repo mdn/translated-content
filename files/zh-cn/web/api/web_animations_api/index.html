@@ -22,17 +22,17 @@ translation_of: Web/API/Web_Animations_API
 
 <dl>
  <dt>{{domxref("Animation")}}</dt>
- <dd>提供播放控制、动画节点或源的时间轴。 可以接受使用{{domxref("KeyframeEffect.KeyframeEffect")}}构造函数创建的对象作为参数。</dd>
+ <dd>提供播放控制、动画节点或源的时间轴。可以接受使用{{domxref("KeyframeEffect.KeyframeEffect")}}构造函数创建的对象作为参数。</dd>
  <dt>{{domxref("KeyframeEffect")}}</dt>
- <dd>描述动画属性的集合，调用<strong>keyframes</strong>及{{domxref("Animation Effect Timing Properties")}}。 然后可以使用 {{domxref("Animation")}} 构造函数进行播放。</dd>
+ <dd>描述动画属性的集合，调用<strong>keyframes</strong>及{{domxref("Animation Effect Timing Properties")}}。然后可以使用 {{domxref("Animation")}} 构造函数进行播放。</dd>
  <dt>{{domxref("AnimationTimeline")}}</dt>
- <dd>表示动画的时间轴。 此接口用以定义时间轴功能（继承自{{domxref("DocumentTimeline")}}和{{domxref("future timeline")}}），并且本身不被开发人员访问。</dd>
+ <dd>表示动画的时间轴。此接口用以定义时间轴功能（继承自{{domxref("DocumentTimeline")}}和{{domxref("future timeline")}}），并且本身不被开发人员访问。</dd>
  <dt>{{domxref("DocumentTimeline")}}</dt>
  <dd>表示动画时间轴，包括默认的{{domxref("DocumentTimeline")}}（通过{{domxref("Document.timeline")}}访问）。</dd>
  <dt>{{domxref("AnimationEffectTiming")}}</dt>
- <dd>包含{{domxref("KeyframeEffect")}}的{{domxref("KeyframeEffect.timing", "timing")}}返回的定时属性对象。 它从{{domxref("AnimationEffectTimingReadOnly")}}继承其属性，但是以非只读形式。</dd>
+ <dd>包含{{domxref("KeyframeEffect")}}的{{domxref("KeyframeEffect.timing", "timing")}}返回的定时属性对象。它从{{domxref("AnimationEffectTimingReadOnly")}}继承其属性，但是以非只读形式。</dd>
  <dt>{{domxref("SharedKeyframeList")}}</dt>
- <dd>表示可在{{domxref("KeyframeEffect")}}对象之间共享的关键帧序列。 通过使用该对象，多个{{domxref("KeyframeEffect")}}对象可以重用相同的关键帧，而无需支付多次解析它们的成本。</dd>
+ <dd>表示可在{{domxref("KeyframeEffect")}}对象之间共享的关键帧序列。通过使用该对象，多个{{domxref("KeyframeEffect")}}对象可以重用相同的关键帧，而无需支付多次解析它们的成本。</dd>
  <dt>{{domxref("AnimationEffectTimingProperties")}}</dt>
  <dd>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}}和 {{domxref("KeyframeEffect.KeyframeEffect()")}}的定时属性对象。</dd>
 </dl>
@@ -52,7 +52,7 @@ translation_of: Web/API/Web_Animations_API
  <h3 id="扩展到_Element_的接口">扩展到 <code>Element</code> 的接口</h3>
  </dt>
  <dt>{{domxref("Element.animate()")}}</dt>
- <dd>用于在元素上创建和播放动画的快捷方式。 它返回创建的{{domxref("Animation")}}对象实例。</dd>
+ <dd>用于在元素上创建和播放动画的快捷方式。它返回创建的{{domxref("Animation")}}对象实例。</dd>
 </dl>
 
 <dl>
@@ -60,7 +60,7 @@ translation_of: Web/API/Web_Animations_API
 
 <h2 id="Web动画只读接口">Web 动画只读接口</h2>
 
-<p>规格中包括以下接口，用于定义在多个其他位置使用的功能。 你不会在 Web 开发工作中直接使用这些接口，但他们能帮助库或框架作者了解这些接口如何工作，使他们的库的实现可以更有效，或者浏览器工程师寻找一个比规范提供的内容更容易的参考。</p>
+<p>规格中包括以下接口，用于定义在多个其他位置使用的功能。你不会在 Web 开发工作中直接使用这些接口，但他们能帮助库或框架作者了解这些接口如何工作，使他们的库的实现可以更有效，或者浏览器工程师寻找一个比规范提供的内容更容易的参考。</p>
 
 <dl>
  <dt>{{domxref("AnimationEffectTimingReadOnly")}}</dt>

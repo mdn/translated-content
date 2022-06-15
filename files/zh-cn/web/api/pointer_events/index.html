@@ -107,7 +107,7 @@ translation_of: Web/API/Pointer_events
   <tr>
    <td>{{event('pointerout')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}</td>
-   <td>可能由若干原因触发该事件，包括：定位设备移出了某<a href="term_hit_test">命中检测</a>的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）； 作为 pointercancel event 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。</td>
+   <td>可能由若干原因触发该事件，包括：定位设备移出了某<a href="term_hit_test">命中检测</a>的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）；作为 pointercancel event 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。</td>
   </tr>
   <tr>
    <td>{{event('pointerleave')}}</td>
@@ -380,7 +380,7 @@ translation_of: Web/API/Pointer_events
 
 <p>CSS 属性{{cssxref("touch-action")}}被用来指明浏览器是否应当对某一区域的触摸事件应用其默认行为（例如放大或旋转等）。这一属性可以被用在所有元素上，除了：不可替换的行内元素（inline elements）、表格行（table rows）、行组（row groups）、表格列（table columns）、列组（column groups）。</p>
 
-<p>属性值<code>auto</code>意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值<code>none</code>则会禁止某一区域的浏览器默认触摸行为。 属性值<code>pan-x</code>和<code>pan-y</code>表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值<code>manipulation</code>表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。</p>
+<p>属性值<code>auto</code>意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值<code>none</code>则会禁止某一区域的浏览器默认触摸行为。属性值<code>pan-x</code>和<code>pan-y</code>表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值<code>manipulation</code>表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。</p>
 
 <p>在下面的示例中，浏览器对于<code>div</code>元素的默认触摸响应行为将被禁止。</p>
 

@@ -39,7 +39,7 @@ translation_of: Web/API/Document/querySelectorAll
 </dl>
 
 <div class="note">
-<p><strong>注意：</strong> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。 由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅<a href="/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符">转义特殊字符</a></p>
+<p><strong>注意：</strong> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅<a href="/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符">转义特殊字符</a></p>
 </div>
 
 <h3 id="返回值">返回值</h3>
@@ -86,9 +86,9 @@ var matches = container.querySelectorAll("li[data-active='1']");</pre>
 
 <h3 id="访问匹配项">访问匹配项</h3>
 
-<p>一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。 如果数组为空（即，其<code>length</code>属性为 0），则找不到匹配项。</p>
+<p>一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。如果数组为空（即，其<code>length</code>属性为 0），则找不到匹配项。</p>
 
-<p>否则，您只需使用标准数组方法来访问列表的内容。 您可以使用任何常见的循环语句，例如：</p>
+<p>否则，您只需使用标准数组方法来访问列表的内容。您可以使用任何常见的循环语句，例如：</p>
 
 <pre class="brush: js">var highlightedItems = userList.querySelectorAll(".highlighted");
 
@@ -118,7 +118,7 @@ var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
 </pre>
 
-<p>在这个例子中，当在<code>&lt;div&gt;</code>上下文中选择带有<code>"select"</code>类的<code>".outer .inner"</code>时，仍然会找到类<code>".inner"</code>的元素，即使<code>.outer</code>不是基类的后代 执行搜索的元素（<code>".select"</code>）。 默认情况下，<code>querySelectorAll()</code>仅验证选择器中的最后一个元素是否在搜索范围内。</p>
+<p>在这个例子中，当在<code>&lt;div&gt;</code>上下文中选择带有<code>"select"</code>类的<code>".outer .inner"</code>时，仍然会找到类<code>".inner"</code>的元素，即使<code>.outer</code>不是基类的后代 执行搜索的元素（<code>".select"</code>）。默认情况下，<code>querySelectorAll()</code>仅验证选择器中的最后一个元素是否在搜索范围内。</p>
 
 <p>{{cssxref(":scope")}} 伪类符合预期的行为，只匹配基本元素后代的选择器：</p>
 

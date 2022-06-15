@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>测试类型化数组每个元素的函数，以参数 <code>(element, index, typedarray)</code>调用。 如果返回 <code>true</code>则保留该元素，如果返回<code>false</code>则相反。</dd>
+ <dd>测试类型化数组每个元素的函数，以参数 <code>(element, index, typedarray)</code>调用。如果返回 <code>true</code>则保留该元素，如果返回<code>false</code>则相反。</dd>
  <dt><code>thisArg {{optional_inline}}</code></dt>
  <dd>可选，执行<code>callback</code>时作为<code>this</code>的值。</dd>
 </dl>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 
 <p><code>filter()</code>不改变在其上调用的类型化数组。</p>
 
-<p>由 <code>filter</code>处理的元素范围在<code>callback</code>调用之前就确定了。 在 <code>filter</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。 如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>filter</code> 访问它们时候的值。已删除的元素不会被访问。</p>
+<p>由 <code>filter</code>处理的元素范围在<code>callback</code>调用之前就确定了。在 <code>filter</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>filter</code> 访问它们时候的值。已删除的元素不会被访问。</p>
 
 <h2 id="示例">示例</h2>
 

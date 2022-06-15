@@ -32,7 +32,7 @@ function handleTextureLoaded(image, texture) {
 }
 </pre>
 
-<p>函数 <code>initTextures()</code> 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 cubeTexture 。为了把图片文件加载到纹理，代码首先创建了一个 <code>Image</code> 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 <code>handleTextureLoaded()</code> 就会执行。</p>
+<p>函数 <code>initTextures()</code> 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 cubeTexture。为了把图片文件加载到纹理，代码首先创建了一个 <code>Image</code> 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 <code>handleTextureLoaded()</code> 就会执行。</p>
 
 <p>接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 <code>gl.TEXTURE_2D 来让它成为当前操作纹理。然后通过调用</code> {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。</p>
 

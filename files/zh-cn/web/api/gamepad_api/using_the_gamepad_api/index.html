@@ -28,7 +28,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 <p>你可以这样使用 {{ event("gamepadconnected") }} ：</p>
 
 <pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接于 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
     e.gamepad.index, e.gamepad.id,
     e.gamepad.buttons.length, e.gamepad.axes.length);
 });
@@ -41,7 +41,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 <p>当控制器断开连接时，如果页面以前接收过该手柄的数据 (例如 {{ event("gamepadconnected") }})，那么第二个事件 {{ event("gamepaddisconnected") }} 将会分配至焦点页面：</p>
 
 <pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("控制器已从 %d 位断开: %s",
+  console.log("控制器已从 %d 位断开：%s",
     e.gamepad.index, e.gamepad.id);
 });</pre>
 
@@ -79,7 +79,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 
 <pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("控制器已连接于 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
     gp.index, gp.id,
     gp.buttons.length, gp.axes.length);
 });</pre>
@@ -194,7 +194,7 @@ function gameLoop() {
 
 <h3 id="使用坐标方向(axes)信息">使用坐标方向 (axes) 信息</h3>
 
-<p><strong>待讨论 (除了一个用 axes[i] 一个用 button[i].value ，其他基本一样，Firefox 与 Chrome 均是。)</strong></p>
+<p><strong>待讨论 (除了一个用 axes[i] 一个用 button[i].value，其他基本一样，Firefox 与 Chrome 均是。)</strong></p>
 
 <h2 id="完整的例子：显示控制器状态">完整的例子：显示控制器状态</h2>
 

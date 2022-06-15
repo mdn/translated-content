@@ -12,7 +12,7 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
 <p>Speech recognition(语音识别) 涉及三个过程：首先，需要设备的麦克风接收这段语音；其次，speech recognition service(语音识别服务器) 会根据一系列语法 (基本上，语法是你希望在具体的应用中能够识别出来的词汇) 来检查这段语音；最后，当一个单词或者短语被成功识别后，结果会以文本字符串的形式返回 (结果可以有多个)，以及更多的行为可以设置被触发。</p>
 
-<p>Web Speech API 有一个主要的控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"><code>SpeechRecognition</code></a>， 外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。</p>
+<p>Web Speech API 有一个主要的控制接口——<a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"><code>SpeechRecognition</code></a>，外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。</p>
 
 <p>Demo</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
   <p>Firefox 桌面端和移动端在 Gecko 44+ 中都支持，并且是没有前缀的，它可以在<code>about:config</code> 中把 <code>media.webspeech.recognition.enable</code> 设置为 <code>true</code> 打开。权限设置/UI 还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧~</p>
  </li>
  <li>
-  <p>Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Build/Manifest">manifest.webapp</a> (也可以通过 WebIDE 下载， 或者使应用得到验证后在 <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> 可使用) 如下设置：</p>
+  <p>Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Build/Manifest">manifest.webapp</a> (也可以通过 WebIDE 下载，或者使应用得到验证后在 <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> 可使用) 如下设置：</p>
 
   <pre class="brush: json line-numbers  language-json"><code class="language-json">"permissions": {
   "audio-capture" : {

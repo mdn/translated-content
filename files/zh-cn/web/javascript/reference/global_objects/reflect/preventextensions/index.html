@@ -50,7 +50,7 @@ Reflect.isExtensible(empty); // === false
 
 <h3 id="与_Object.preventExtensions_的不同点">与 <code>Object.preventExtensions()</code> 的不同点</h3>
 
-<p>如果该方法的 <em><code>target</code></em> 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。 对于{{jsxref("Object.preventExtensions()")}} 方法， 非对象的 <em><code>target</code></em> 参数将被强制转换为对象。</p>
+<p>如果该方法的 <em><code>target</code></em> 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于{{jsxref("Object.preventExtensions()")}} 方法，非对象的 <em><code>target</code></em> 参数将被强制转换为对象。</p>
 
 <pre class="brush: js">Reflect.preventExtensions(1);
 // TypeError: 1 is not an object

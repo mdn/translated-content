@@ -12,7 +12,7 @@ translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 
 <p>可以通过设置一个 XMLHttpRequest 对象的 <code>responseType</code>属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。<code>response</code> 属性的值会根据 <code>responseType</code> 属性包含实体主体（entity body），它可能会是一个 <code>ArrayBuffer</code>、<code>Blob</code>、<code>Document</code>、<code>JSON</code>, string，或者为<code>NULL(如果请求未完成或失败)</code></p>
 
-<p>下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。 你需要一个 png 解码库（<a href="https://github.com/devongovett/png.js/">png decoding library</a>）。</p>
+<p>下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。你需要一个 png 解码库（<a href="https://github.com/devongovett/png.js/">png decoding library</a>）。</p>
 
 <pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
@@ -81,7 +81,7 @@ oReq.onload = function (oEvent) {
   // 上传完成后。
 };
 
-var bb = new BlobBuilder(); // 需要合适的前缀: window.MozBlobBuilder 或者 window.WebKitBlobBuilder
+var bb = new BlobBuilder(); // 需要合适的前缀：window.MozBlobBuilder 或者 window.WebKitBlobBuilder
 bb.append('abc123');
 
 oReq.send(bb.getBlob('text/plain'));

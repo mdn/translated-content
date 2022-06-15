@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLInputElement
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><strong><code>HTMLInputElement</code></strong> 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML元素")}}接口）用于管理输入元素的布局和外观。</p>
+<p><strong><code>HTMLInputElement</code></strong> 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML 元素")}}接口）用于管理输入元素的布局和外观。</p>
 
 <p>{{InheritanceDiagram(600,120)}}</p>
 
@@ -30,23 +30,23 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>formAction</code></td>
-   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formaction", "input") }} 属性, 包含处理元素提交信息程序的URI. 这会重写父表单的 {{ htmlattrxref("action", "form") }} 属性.</td>
+   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formaction", "input") }} 属性，包含处理元素提交信息程序的 URI. 这会重写父表单的 {{ htmlattrxref("action", "form") }} 属性。</td>
   </tr>
   <tr>
    <td><code>formEncType</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formenctype", "input") }} 属性, 包含将表单提交到服务器的内容类型. 这会重写父表单的 {{ htmlattrxref("enctype", "form") }} 属性.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formenctype", "input") }} 属性，包含将表单提交到服务器的内容类型。这会重写父表单的 {{ htmlattrxref("enctype", "form") }} 属性。</td>
   </tr>
   <tr>
    <td><code>formMethod</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formmethod", "input") }} 属性, 包含浏览器用于提交表单的HTTP方法. 这会重写父表单的 {{ htmlattrxref("method", "form") }} 属性.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formmethod", "input") }} 属性，包含浏览器用于提交表单的 HTTP 方法。这会重写父表单的 {{ htmlattrxref("method", "form") }} 属性。</td>
   </tr>
   <tr>
    <td><code>formNoValidate</code></td>
-   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formnovalidate", "input") }} 属性, 表示在表单提交时不对其进行验证. 这会重写父表单的 {{ htmlattrxref("novalidate", "form") }} 属性.</td>
+   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formnovalidate", "input") }} 属性，表示在表单提交时不对其进行验证。这会重写父表单的 {{ htmlattrxref("novalidate", "form") }} 属性。</td>
   </tr>
   <tr>
    <td><code>formTarget</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formtarget", "input") }} 属性, 包含一个名称或关键字, 表示在提交表单后接收响应的显示位置. 这会重写父表单的 {{ htmlattrxref("target", "form") }} 属性.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formtarget", "input") }} 属性，包含一个名称或关键字，表示在提交表单后接收响应的显示位置。这会重写父表单的 {{ htmlattrxref("target", "form") }} 属性。</td>
   </tr>
  </tbody>
 </table>
@@ -56,28 +56,28 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>name</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("name", "input") }} 属性, 包含其名称.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("name", "input") }} 属性，包含其名称。</td>
   </tr>
   <tr>
    <td><code>type</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("type", "input") }} 属性, 包含其显示类型. 查看 {{ HTMLElement("input") }} 的 {{ htmlattrxref("type", "input") }} 属性可用值.</td>
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("type", "input") }} 属性，包含其显示类型。查看 {{ HTMLElement("input") }} 的 {{ htmlattrxref("type", "input") }} 属性可用值。</td>
   </tr>
   <tr>
    <td><code>disabled</code></td>
-   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("disabled", "input") }} 属性, 表示是否禁用 {{ HTMLElement("input") }}. 该元素的值将不会被提交. 也可以查看 {{ htmlattrxref("readOnly", "input") }} </td>
+   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("disabled", "input") }} 属性，表示是否禁用 {{ HTMLElement("input") }}. 该元素的值将不会被提交。也可以查看 {{ htmlattrxref("readOnly", "input") }} </td>
   </tr>
   <tr>
    <td><code>autofocus</code></td>
-   <td><code><em>boolean:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("autofocus", "input") }} 属性, 指定的 {{ HTMLElement("input") }} 在页面加载时应当具有输入焦点, 例如通过键入不同的控件. 在文档中只有一个表单元素可以拥有 {{htmlattrxref("autofocus","input")}} 属性. 如果 {{htmlattrxref("type","input")}} 属性被设置为 <code>hidden</code> 则无效(即不可为隐藏控件设置自动焦点).</td>
+   <td><code><em>boolean:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("autofocus", "input") }} 属性，指定的 {{ HTMLElement("input") }} 在页面加载时应当具有输入焦点，例如通过键入不同的控件。在文档中只有一个表单元素可以拥有 {{htmlattrxref("autofocus","input")}} 属性。如果 {{htmlattrxref("type","input")}} 属性被设置为 <code>hidden</code> 则无效 (即不可为隐藏控件设置自动焦点).</td>
   </tr>
   <tr>
    <td><code>required</code></td>
-   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("required", "input") }} 属性, 表示用户必填项.</td>
+   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("required", "input") }} 属性，表示用户必填项。</td>
   </tr>
   <tr>
    <td><code>value</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 当前控件的值.
-    <p><strong>提示:</strong> 如果用户输入与预期不同，可能会返回空.</p>
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 当前控件的值。
+    <p><strong>提示：</strong> 如果用户输入与预期不同，可能会返回空。</p>
    </td>
   </tr>
   <tr>
@@ -108,7 +108,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code><a id="indeterminate" name="indeterminate"></a>indeterminate</code></td>
-   <td><code><em>boolean:</em></code> <strong>indicates</strong> that the checkbox is neither on nor off. Changes the appearance to resemble a third state. Does not affect the value of the <strong>checked</strong> 属性, and clicking the checkbox will set the value to false.</td>
+   <td><code><em>boolean:</em></code> <strong>indicates</strong> that the checkbox is neither on nor off. Changes the appearance to resemble a third state. Does not affect the value of the <strong>checked</strong> 属性，and clicking the checkbox will set the value to false.</td>
   </tr>
  </tbody>
 </table>
@@ -118,19 +118,19 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>alt</code></td>
-   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("alt", "input") }} 属性, 包含 alternative text to use when {{htmlattrxref("type","input")}} is <code>image.</code></td>
+   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("alt", "input") }} 属性，包含 alternative text to use when {{htmlattrxref("type","input")}} is <code>image.</code></td>
   </tr>
   <tr>
    <td><code>height</code></td>
-   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("height", "input") }} 属性, which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>.</td>
+   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("height", "input") }} 属性，which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>.</td>
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("src", "input") }} 属性, which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>; otherwise it is ignored.</td>
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("src", "input") }} 属性，which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>width</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> the document's {{ htmlattrxref("width", "input") }} 属性, which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>.</td>
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> the document's {{ htmlattrxref("width", "input") }} 属性，which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -140,7 +140,7 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>accept</code></td>
-   <td><em><code>string</code>: </em><strong>Returns / Sets</strong> 元素的 {{ htmlattrxref("accept", "input") }} 属性, 包含 comma-separated list of file types accepted by the server when {{htmlattrxref("type","input")}} is <code>file</code>.</td>
+   <td><em><code>string</code>: </em><strong>Returns / Sets</strong> 元素的 {{ htmlattrxref("accept", "input") }} 属性，包含 comma-separated list of file types accepted by the server when {{htmlattrxref("type","input")}} is <code>file</code>.</td>
   </tr>
   <tr>
    <td><code>allowdirs</code> {{non-standard_inline}}</td>
@@ -166,38 +166,38 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>autocomplete</code></td>
-   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{htmlattrxref("autocomplete", "input")}} 属性, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} 属性is <code>hidden</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type (<code>button</code>, <code>submit</code>, <code>reset</code>, <code>image</code>). Possible values are:<br>
+   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{htmlattrxref("autocomplete", "input")}} 属性，indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} 属性 is <code>hidden</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type (<code>button</code>, <code>submit</code>, <code>reset</code>, <code>image</code>). Possible values are:<br>
     "on": the browser can autocomplete the value using previously stored value<br>
     "off": the user must explicity enter a value</td>
   </tr>
   <tr>
    <td><code>maxLength</code></td>
-   <td><em><code>long</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("maxlength", "input") }} 属性, 包含 the <u><strong>maximum <strong>l</strong>ength of characters</strong></u> (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
+   <td><em><code>long</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("maxlength", "input") }} 属性，包含 the <u><strong>maximum <strong>l</strong>ength of characters</strong></u> (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
   </tr>
   <tr>
    <td><code>size</code></td>
-   <td><em><code>unsigned long</code>:</em> <strong>返回/ 设置 </strong>元素的 {{ htmlattrxref("size", "input") }} 属性, 包含 <u><strong>size of the control</strong></u>. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is <code>text</code> or <code>password</code>, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>; otherwise it is ignored.</td>
+   <td><em><code>unsigned long</code>:</em> <strong>返回/ 设置 </strong>元素的 {{ htmlattrxref("size", "input") }} 属性，包含 <u><strong>size of the control</strong></u>. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is <code>text</code> or <code>password</code>, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>pattern</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("pattern", "input") }} 属性, 包含 a <u><strong>regular expression</strong></u> that the control's value is checked against.  Use the {{htmlattrxref("title","input")}} 属性to describe the pattern to help the user. This 属性applies when the value of the {{htmlattrxref("type","input")}} 属性is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("pattern", "input") }} 属性，包含 a <u><strong>regular expression</strong></u> that the control's value is checked against.  Use the {{htmlattrxref("title","input")}} 属性 to describe the pattern to help the user. This 属性 applies when the value of the {{htmlattrxref("type","input")}} 属性 is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>placeholder</code></td>
-   <td><em><code>string</code>: </em><strong>返回/ 设置 </strong>元素的 {{ htmlattrxref("placeholder", "input") }} 属性, 包含 a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This 属性applies when the value of the {{htmlattrxref("type","input")}} 属性is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
+   <td><em><code>string</code>: </em><strong>返回/ 设置 </strong>元素的 {{ htmlattrxref("placeholder", "input") }} 属性，包含 a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This 属性 applies when the value of the {{htmlattrxref("type","input")}} 属性 is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>readOnly</code></td>
-   <td><em><code>boolean</code>:</em><strong> 返回/ 设置</strong> 元素的 {{ htmlattrxref("readonly", "input") }} 属性, indicating that the user cannot modify the value of the control.<br>
-    {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} 属性is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
+   <td><em><code>boolean</code>:</em><strong> 返回/ 设置</strong> 元素的 {{ htmlattrxref("readonly", "input") }} 属性，indicating that the user cannot modify the value of the control.<br>
+    {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} 属性 is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
   </tr>
   <tr>
    <td><code>min</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("min", "input") }} 属性, 包含 the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} 属性) value.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("min", "input") }} 属性，包含 the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} 属性) value.</td>
   </tr>
   <tr>
    <td><code>max</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("max", "input") }} 属性, 包含 the maximum (numeric or date-time) value for this item, which must not be less than its minimum (<strong>min</strong> 属性) value.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("max", "input") }} 属性，包含 the maximum (numeric or date-time) value for this item, which must not be less than its minimum (<strong>min</strong> 属性) value.</td>
   </tr>
   <tr>
    <td><code>selectionStart</code></td>
@@ -234,11 +234,11 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>list</code> {{readonlyInline}}</td>
-   <td><em><code>{{domxref("HTMLElement")}} object:</code></em> <strong>返回</strong> the element pointed by the {{ htmlattrxref("list", "input") }} 属性. The property may be <code>null</code> if no HTML element found in the same tree.</td>
+   <td><em><code>{{domxref("HTMLElement")}} object:</code></em> <strong>返回</strong> the element pointed by the {{ htmlattrxref("list", "input") }} 属性。The property may be <code>null</code> if no HTML element found in the same tree.</td>
   </tr>
   <tr>
    <td><code>multiple</code></td>
-   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("multiple", "input") }} 属性, indicating whether more than one value is possible (e.g., multiple files).</td>
+   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("multiple", "input") }} 属性，indicating whether more than one value is possible (e.g., multiple files).</td>
   </tr>
   <tr>
    <td><code>files</code></td>
@@ -250,7 +250,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>step</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("step", "input") }} 属性, which works with<strong> </strong>{{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string <code>any</code> or a positive floating point number. If this is not set to <code>any</code>, the control accepts only values at multiples of the step value greater than the minimum.</td>
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("step", "input") }} 属性，which works with<strong> </strong>{{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string <code>any</code> or a positive floating point number. If this is not set to <code>any</code>, the control accepts only values at multiples of the step value greater than the minimum.</td>
   </tr>
   <tr>
    <td><code>valueAsDate</code></td>

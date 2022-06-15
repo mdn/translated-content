@@ -142,7 +142,7 @@ var arr2 = [3, 4, 5];
 // 将 arr2 中的元素插入到 arr1 的开头
 Array.prototype.unshift.apply(arr1, arr2) // arr1 现在是 [3, 4, 5, 0, 1, 2]</pre>
 
-<p>如果使用展开语法，代码如下:  [请注意，这里使用展开语法创建了一个新的 <code>arr1</code> 数组，  {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 <code>arr1</code> 数组]:</p>
+<p>如果使用展开语法，代码如下： [请注意，这里使用展开语法创建了一个新的 <code>arr1</code> 数组，  {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 <code>arr1</code> 数组]:</p>
 
 <pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
@@ -159,10 +159,10 @@ arr1 = [...arr2, ...arr1]; // arr1 现在为 [3, 4, 5, 0, 1, 2]
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
-// 克隆后的对象: { foo: "bar", x: 42 }
+// 克隆后的对象：{ foo: "bar", x: 42 }
 
 var mergedObj = { ...obj1, ...obj2 };
-// 合并后的对象: { foo: "baz", x: 42, y: 13 }
+// 合并后的对象：{ foo: "baz", x: 42, y: 13 }
 </pre>
 
 <p><strong>提示</strong>: {{jsxref("Object.assign()")}} 函数会触发 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/set">setters</a>，而展开语法则不会。</p>
@@ -199,7 +199,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 <h2 id="剩余语法（剩余参数）">剩余语法（剩余参数）</h2>
 
-<p>剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。 请参考: <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>。</p>
+<p>剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。请参考: <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>。</p>
 
 <h2 id="规范">规范</h2>
 

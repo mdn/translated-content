@@ -12,7 +12,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 <h2 id="原因">原因</h2>
 
-<pre class="syntaxbox">原因: CORS 请求不是 HTTP</pre>
+<pre class="syntaxbox">原因：CORS 请求不是 HTTP</pre>
 
 <h2 id="哪里出错了？">哪里出错了？</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 <p>当用户在 Firefox 67 或更早版本中使用 <code>file:///</code> URI 打开页面时，页面来源被定义为打开页面的目录。同一目录及其子目录中的资源均被视为具有相同的来源，符合 CORS 同源规则。</p>
 
-<p>为响应 <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730">CVE-2019-11730</a>，Firefox 68 及更高版本中定义，使用 <code>file:///</code> URL 打开页面的来源唯一。 因此，同一目录或其子目录中的其他资源不再满足 CORS 同源规则。这个新的表现通过 <code>privacy.file_unique_origin</code> 这一首选项控制，默认启用。</p>
+<p>为响应 <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730">CVE-2019-11730</a>，Firefox 68 及更高版本中定义，使用 <code>file:///</code> URL 打开页面的来源唯一。因此，同一目录或其子目录中的其他资源不再满足 CORS 同源规则。这个新的表现通过 <code>privacy.file_unique_origin</code> 这一首选项控制，默认启用。</p>
 
 <h2 id="参考">参考</h2>
 

@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 
     <p>例如，<code>[abcd-]</code> 和<code>[-abcd]</code> 将会在 "brisket" 匹配 "b" , 在 "chop" 匹配 "c" , 并且匹配 "non-profit" 中的 "-" (连字符)</p>
 
-    <p>例如，<code>[\w-]</code> 是字符集 \w 和 “-”（连字符）的并集，与这种写法一样： <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配 “b”,  在 "chop"中匹配 “c”, 在 "non-profit" 中匹配 "n"。</p>
+    <p>例如，<code>[\w-]</code> 是字符集 \w 和“-”（连字符）的并集，与这种写法一样： <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配“b”,  在 "chop"中匹配“c”, 在 "non-profit" 中匹配 "n"。</p>
    </td>
   </tr>
   <tr>
@@ -68,7 +68,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   <tr>
    <td><code>\<em>n</em></code></td>
    <td>
-    <p>其中 n 是一个正整数。对正则表达式中与 n 括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code>/apple(,)\sorange\1/</code> 匹配 “apple，orange，cherry，peach” 中的 "apple，orange，"， 其中 <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的 <code>，</code></p>
+    <p>其中 n 是一个正整数。对正则表达式中与 n 括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code>/apple(,)\sorange\1/</code> 匹配“apple，orange，cherry，peach”中的 "apple，orange，"，其中 <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的 <code>，</code></p>
    </td>
   </tr>
   <tr>
@@ -76,14 +76,14 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
    <td>
     <p><strong>具名捕获组: </strong>匹配"x"并将其存储在返回的匹配项的 groups 属性中，该属性位于<code>&lt;Name&gt;</code>指定的名称下。尖括号 (<code>&lt;</code> 和 <code>&gt;</code>) 用于组名。</p>
 
-    <p>例如，使用正则 <code>/-(?&lt;customName&gt;\w)/</code> 匹配 “web-doc” 中的 “d”</p>
+    <p>例如，使用正则 <code>/-(?&lt;customName&gt;\w)/</code> 匹配“web-doc”中的“d”</p>
 
     <p><code>'web-doc'.match(/-(?&lt;customName&gt;\w)/).groups   //{customName: "d"} </code>   </p>
    </td>
   </tr>
   <tr>
    <td><code>(?:<em>x</em>)</code></td>
-   <td><strong>非捕获组: </strong>匹配 “x”，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code>[1], ..., [n]</code>) or from the predefined <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).</td>
+   <td><strong>非捕获组: </strong>匹配“x”，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code>[1], ..., [n]</code>) or from the predefined <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).</td>
   </tr>
  </tbody>
 </table>
@@ -115,7 +115,7 @@ do {
 <pre class="brush: js">let users= `姓氏：李，名字：雷
 姓氏：韩，名字：梅梅`;
 
-let regexpNames =  /姓氏: (?&lt;first&gt;.+), 名字: (?&lt;last&gt;.+)/mg;
+let regexpNames =  /姓氏：(?&lt;first&gt;.+), 名字：(?&lt;last&gt;.+)/mg;
 let match = regexpNames.exec(users);
 
 do {

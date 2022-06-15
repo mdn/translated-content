@@ -38,7 +38,7 @@ for (step = 0; step &lt; 5; step++) {
 
 <h2 id="for_语句"><code>for</code> 语句</h2>
 
-<p>一个 {{jsxref("statements/for","for")}} 循环会一直重复执行，直到指定的循环条件为 false。 JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：</p>
+<p>一个 {{jsxref("statements/for","for")}} 循环会一直重复执行，直到指定的循环条件为 false。JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：</p>
 
 <pre class="syntaxbox">for ([initialExpression]; [condition]; [incrementExpression])
   statement
@@ -86,7 +86,7 @@ function howMany(selectObject) {
 
 var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
-  alert('选择选项的数量是: ' + howMany(document.selectForm.musicTypes))
+  alert('选择选项的数量是：' + howMany(document.selectForm.musicTypes))
 });
 &lt;/script&gt;
 
@@ -94,18 +94,18 @@ btn.addEventListener("click", function(){
 
 <h2 id="do...while_语句"><code>do...while</code> 语句</h2>
 
-<p>{{jsxref("statements/do...while", "do...while")}} 语句一直重复直到指定的条件求值得到假值（false）。 一个 do...while 语句看起来像这样：</p>
+<p>{{jsxref("statements/do...while", "do...while")}} 语句一直重复直到指定的条件求值得到假值（false）。一个 do...while 语句看起来像这样：</p>
 
 <pre class="syntaxbox">do
   statement
 while (condition);
 </pre>
 
-<p><code>statement</code> 在检查条件之前会执行一次。要执行多条语句（语句块），要使用块语句（<code>{ ... }</code>）包括起来。 如果 <code>condition</code> 为真（true），<code>statement</code> 将再次执行。 在每个执行的结尾会进行条件的检查。当 <code>condition</code> 为假（false），执行会停止并且把控制权交回给 <code>do...while</code> 后面的语句。</p>
+<p><code>statement</code> 在检查条件之前会执行一次。要执行多条语句（语句块），要使用块语句（<code>{ ... }</code>）包括起来。如果 <code>condition</code> 为真（true），<code>statement</code> 将再次执行。在每个执行的结尾会进行条件的检查。当 <code>condition</code> 为假（false），执行会停止并且把控制权交回给 <code>do...while</code> 后面的语句。</p>
 
 <h3 id="例子_2"><strong>例子</strong></h3>
 
-<p>在下面的例子中， 这个 <code>do</code> 循环将至少重复一次，并且一直重复直到 <code>i</code> 不再小于 5。</p>
+<p>在下面的例子中，这个 <code>do</code> 循环将至少重复一次，并且一直重复直到 <code>i</code> 不再小于 5。</p>
 
 <pre class="brush: js">var i = 0;
 do {
@@ -139,7 +139,7 @@ while (n &lt; 3) {
 }
 </pre>
 
-<p>在每次循环里， <code>n</code> 会增加 1，并被加到 <code>x</code> 上。所以， x 和 n 的变化是：</p>
+<p>在每次循环里， <code>n</code> 会增加 1，并被加到 <code>x</code> 上。所以，x 和 n 的变化是：</p>
 
 <ul>
  <li>第一次完成后：<code>n</code> = 1，<code>x</code> = 1</li>
@@ -147,7 +147,7 @@ while (n &lt; 3) {
  <li>第三次完成后：<code>n</code> = 3，<code>x</code> = 6</li>
 </ul>
 
-<p>在三次完成后， 条件 <code>n &lt; 3</code> 的结果不再为真，所以循环终止了。</p>
+<p>在三次完成后，条件 <code>n &lt; 3</code> 的结果不再为真，所以循环终止了。</p>
 
 <h3 id="例子_2_2"><strong>例子 2</strong></h3>
 
@@ -159,7 +159,7 @@ while (n &lt; 3) {
 
 <h2 id="label_语句"><code>label</code> 语句</h2>
 
-<p>一个 {{jsxref("statements/label","label")}} 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环， 然后使用 <code>break</code> 或者 <code>continue</code> 来指出程序是否该停止循环还是继续循环。</p>
+<p>一个 {{jsxref("statements/label","label")}} 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环，然后使用 <code>break</code> 或者 <code>continue</code> 来指出程序是否该停止循环还是继续循环。</p>
 
 <p>label 语句的语法看起来像这样：</p>
 
@@ -228,10 +228,10 @@ alert(num);  // 95</pre>
 
 <h2 id="break_语句"><code>break</code> 语句</h2>
 
-<p>使用 {{jsxref("statements/break","break")}} 语句来终止循环，<code>switch</code>， 或者是链接到 label 语句。</p>
+<p>使用 {{jsxref("statements/break","break")}} 语句来终止循环，<code>switch</code>，或者是链接到 label 语句。</p>
 
 <ul>
- <li>当你使用不带 label 的 <code>break</code> 时， 它会立即终止当前所在的 <code>while</code>，<code>do-while</code>，<code>for</code>，或者 <code>switch</code> 并把控制权交回这些结构后面的语句。</li>
+ <li>当你使用不带 label 的 <code>break</code> 时，它会立即终止当前所在的 <code>while</code>，<code>do-while</code>，<code>for</code>，或者 <code>switch</code> 并把控制权交回这些结构后面的语句。</li>
  <li>当你使用带 label 的 <code>break</code> 时，它会终止指定的带标记（label）的语句。</li>
 </ul>
 
@@ -256,11 +256,11 @@ alert(num);  // 95</pre>
 <pre class="brush: js">var x = 0;
 var z = 0
 labelCancelLoops: while (true) {
-  console.log("外部循环: " + x);
+  console.log("外部循环：" + x);
   x += 1;
   z = 1;
   while (true) {
-    console.log("内部循环: " + z);
+    console.log("内部循环：" + z);
     z += 1;
     if (z === 10 &amp;&amp; x === 10) {
       break labelCancelLoops;
@@ -276,8 +276,8 @@ labelCancelLoops: while (true) {
 <p>{{jsxref("statements/continue","continue")}} 语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 <code>while</code>、<code>do-while</code>、<code>for</code>，或者 <code>label</code> 语句。</p>
 
 <ul>
- <li>当你使用不带 label 的 <code>continue</code> 时， 它终止当前 <code>while</code>，<code>do-while</code>，或者 for 语句到结尾的这次的循环并且继续执行下一次循环。</li>
- <li>当你使用带 label 的 <code>continue</code> 时， 它会应用被 label 标识的循环语句。</li>
+ <li>当你使用不带 label 的 <code>continue</code> 时，它终止当前 <code>while</code>，<code>do-while</code>，或者 for 语句到结尾的这次的循环并且继续执行下一次循环。</li>
+ <li>当你使用带 label 的 <code>continue</code> 时，它会应用被 label 标识的循环语句。</li>
 </ul>
 
 <p><code>continue</code> 语句的语法看起来像这样：</p>
@@ -326,7 +326,7 @@ while (i &lt; 5) {
 
 <p>当 <code>checkiandj</code> 的返回值为 <code>false</code> 时，将会执行 <code>checkiandj</code> 的下面的语句。</p>
 
-<p>如果 <code>continue</code> 有一个标记 <code>checkiandj</code>， 程序将会从 <code>checkiandj</code> 语句块的顶部继续执行。</p>
+<p>如果 <code>continue</code> 有一个标记 <code>checkiandj</code>，程序将会从 <code>checkiandj</code> 语句块的顶部继续执行。</p>
 
 <pre class="brush: js">var i = 0;
 var j = 10;

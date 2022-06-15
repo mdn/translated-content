@@ -18,7 +18,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 <h2 id="准备_3D_渲染">准备 3D 渲染</h2>
 
-<p>为了使用 WebGL 进行 3D 渲染，你首先需要一个 canvas 元素。下面的 HTML 片段用来建立一个 canvas 元素并设置一个 onload 事件处理程序来初始化我们的 WebGL 上下文 。</p>
+<p>为了使用 WebGL 进行 3D 渲染，你首先需要一个 canvas 元素。下面的 HTML 片段用来建立一个 canvas 元素并设置一个 onload 事件处理程序来初始化我们的 WebGL 上下文。</p>
 
 <pre class="brush: html notranslate">&lt;body onload="main()"&gt;
   &lt;canvas id="glcanvas" width="640" height="480"&gt;
@@ -49,11 +49,11 @@ function main() {
   gl.clear(gl.COLOR_BUFFER_BIT);
 }</code></pre>
 
-<p>我们所要做的第一件事就是是获取 canvas 的引用，把它保存在 ‘canvas’ 变量里。</p>
+<p>我们所要做的第一件事就是是获取 canvas 的引用，把它保存在‘canvas’变量里。</p>
 
 <p>当我们获取到 canvas 之后，我们会调用<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext</a> 函数并向它传递<code>"webgl"</code>参数，来尝试获取<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>。如果浏览器不支持 webgl,<code>getContext</code>将会返回<code>null</code>，我们就可以显示一条消息给用户然后退出。</p>
 
-<p>如果 WebGL 上下文成功初始化，变量 ‘gl’ 会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。</p>
+<p>如果 WebGL 上下文成功初始化，变量‘gl’会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}</p>
 
@@ -62,7 +62,7 @@ function main() {
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://dev.opera.com/articles/introduction-to-webgl-part-1/">WebGL 介绍</a>: 由 Luz Caballero 所著， 发布在 dev.opera.com。 这篇文章说明 WebGL 是什么， 解释了 WebGL 是如何工作的 (介绍了渲染管线的概念)，并且介绍了一些 WebGL 库。</li>
+ <li><a href="https://dev.opera.com/articles/introduction-to-webgl-part-1/">WebGL 介绍</a>: 由 Luz Caballero 所著，发布在 dev.opera.com。这篇文章说明 WebGL 是什么，解释了 WebGL 是如何工作的 (介绍了渲染管线的概念)，并且介绍了一些 WebGL 库。</li>
  <li><a href="http://webglfundamentals.org/">WebGL 基础</a></li>
  <li><a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html">现代 OpenGL 介绍：</a> 由 Joe Groff 写的一系列关于 OpenGL 的不错的文章，提供了一个清晰的介绍，从 OpenGL 的历史到图形管线概念，也包括一些说明 OpenGL 如何工作的例子，如果你对 OpenGL 没有任何概念的话，这是不错的出发点。</li>
 </ul>

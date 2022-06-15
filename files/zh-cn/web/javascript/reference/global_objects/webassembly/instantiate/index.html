@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 </ul>
 
 <div class="warning">
-<p><strong>警告：</strong>此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。 如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。</p>
+<p><strong>警告：</strong>此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 <ul>
  <li>如果参数的类型或结构不正确，将会抛出异常 {{jsxref("TypeError")}} .</li>
- <li>如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
+ <li>如果操作失败，promise 将会被 reject 掉，根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
 </ul>
 
 <h3 id="第二种重载_—_使用模块对象">第二种重载 — 使用模块对象</h3>
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 <ul>
  <li>如果参数的类型或结构不正确，将抛出异常 {{jsxref("TypeError")}} 。</li>
- <li>如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
+ <li>如果操作失败，promise 将会被 reject 掉，根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。</li>
 </ul>
 
 <h2 id="例子">例子</h2>

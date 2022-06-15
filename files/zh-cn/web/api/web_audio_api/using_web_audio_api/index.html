@@ -60,7 +60,7 @@ const audioContext = new AudioContext();</code>
 
 <h2 id="加载声音">加载声音</h2>
 
-<p>现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。 此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。</p>
+<p>现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。</p>
 
 <pre class="brush: js"><code>&lt;audio src="myCoolTrack.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;</code>
 </pre>
@@ -200,7 +200,7 @@ volumeControl.addEventListener('input', function() {
 <p>如果用户拥有立体声功能，可用 {{domxref("StereoPannerNode")}} 节点改变左右扬声器的平衡。</p>
 
 <div class="note">
-<p><strong>注意</strong>： <code>StereoPannerNode</code> 用于你只想从左到右进行立体声平移的简单情况。还有一个  {{domxref("PannerNode")}}， 它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。</p>
+<p><strong>注意</strong>： <code>StereoPannerNode</code> 用于你只想从左到右进行立体声平移的简单情况。还有一个  {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。</p>
 </div>
 
 <p>为了使其可视化，我们将使我们的音频图如下：</p>
@@ -217,7 +217,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);</code>
 <p><strong>注意</strong>：目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。</p>
 </div>
 
-<p>这里我们的范围从-1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：</p>
+<p>这里我们的范围从 -1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：</p>
 
 <pre class="brush: js"><code>&lt;input type="range" id="panner" min="-1" max="1" value="0" step="0.01"&gt;</code>
 </pre>
@@ -306,7 +306,7 @@ pannerControl.addEventListener('input', function() {
 
 <ul>
  <li>通过 JavaScript 直接生成一个音频节点比如 oscillator. 一个 {{ domxref("OscillatorNode") }}是利用{{ domxref("AudioContext.createOscillator") }} 方法来构建。</li>
- <li>从原 PCM 数据构建: AudioContext 有解密被支持的音频格式的多种方法。 看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.</li>
+ <li>从原 PCM 数据构建：AudioContext 有解密被支持的音频格式的多种方法。 看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.</li>
  <li>来自于 HTML 音频元素例如 {{HTMLElement("video")}} 或者{{HTMLElement("audio")}}: 可以看 {{ domxref("AudioContext.createMediaElementSource()") }}.</li>
  <li>直接来自于 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风。可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.</li>
 </ul>
