@@ -20200,13 +20200,6 @@
       "fscholz"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-08-30T06:30:00.848Z",
-    "contributors": [
-      "Voulto",
-      "Bzbarsky"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:25:14.944Z",
     "contributors": [
