@@ -1,84 +1,79 @@
 ---
-title: ResizeObserver.ResizeObserver()
+title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
+page-type: web-api-constructor
 tags:
   - API
-  - Experimental
+  - コンストラクター
+  - リファレンス
+  - リサイズオブザーバー API
   - ResizeObserver
   - オブザーバー
-  - コンストラクター
-  - リサイズオブザーバー API
-  - リファレンス
+browser-compat: api.ResizeObserver.ResizeObserver
 translation_of: Web/API/ResizeObserver/ResizeObserver
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p class="summary"><strong><code>ResizeObserver</code></strong> コンストラクターは、 {{domxref('Element')}} のコンテンツまたは境界の矩形、または {{domxref('SVGElement')}} のバウンディングボックスに対する変更を監視する新しい {{domxref("ResizeObserver")}} オブジェクトを作成します。</p>
+**`ResizeObserver`** コンストラクターは新しい {{domxref("ResizeObserver")}} オブジェクトを作成し、これを {{domxref('Element')}} のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスに対する変更を報告するために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>ResizeObserver</var> = new ResizeObserver(<var>callback</var>)</pre>
+```js
+new ResizeObserver(callback)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>監視中のものに寸法の変更が発生するたびに呼び出される関数です。関数は2つの引数で呼び出されます。
- <dl>
-  <dt><code><var>entries</var></code></dt>
-  <dd>{{domxref('ResizeObserverEntry')}} オブジェクトの配列で、それぞれの変更の後で要素の新しい寸法にアクセスするために使用することができます。</dd>
-  <dt><code><var>observer</var></code></dt>
-  <dd><code>ResizeObserver</code> 自身への参照で、必要に応じてコールバック内から確実にアクセスできます。これは、たとえば特定の条件に達したときにオブザーバーを自動的に監視解除するために使用できますが、必要ない場合は省略することができます。</dd>
- </dl>
+- `callback`
+  - : 監視中のものに寸法の変更が発生するたびに呼び出される関数です。この関数は 2 つの引数で呼び出されます。
 
- <p>コールバックは一般に、次のパターンに従います。</p>
+    - `entries`
+      - : {{domxref('ResizeObserverEntry')}} オブジェクトの配列で、それぞれの変更の後で要素の新しい寸法にアクセスするために使用することができます。
+    - `observer`
+      - : `ResizeObserver` 自身への参照で、必要に応じてコールバック内から確実にアクセスできます。これは、たとえば特定の条件に達したときにオブザーバーを自動的に監視解除するために使用できますが、必要ない場合は省略することができます。
 
- <pre class="brush: js">function(entries, observer) {
-  for (let entry of entries) {
-    // Do something to each entry
-    // and possibly something to the observer itself
-  }
-}</pre>
- </dd>
-</dl>
+    コールバックは一般に、次のパターンに従います。
 
-<h2 id="Examples" name="Examples">例</h2>
+    ```js
+    function(entries, observer) {
+      for (let entry of entries) {
+        // 各項目に何かをする
+        // 場合によってはオブザーバー自体に何かをする
+      }
+    }
+    ```
 
-<p>次のスニペットは <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">ソースを表示</a>) の例から取ったものです。</p>
+## 例
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+次のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを表示](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) の例から取ったものです。
+
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+      if (entry.contentBoxSize[0]) {
+        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
+        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
+      } else {
+        // legacy path
+        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
+        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+      }
     } else {
       h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
       pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
     }
   }
+  console.log('Size changed');
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Resize Observer','#dom-resizeobserver-resizeobserver-callback-callback','ResizeObserver')}}</td>
-   <td>{{Spec2('Resize Observer')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ResizeObserver.ResizeObserver")}}</p>
+{{Compat}}

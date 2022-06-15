@@ -1,87 +1,105 @@
 ---
 title: ResizeObserver
 slug: Web/API/ResizeObserver
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
-  - ResizeObserver
-  - インターフェイス
-  - オブザーバー
-  - コンテンツボックス
   - バウンディングボックス
-  - リサイズオブザーバー API
+  - Experimental
+  - インターフェイス
   - リファレンス
+  - リサイズオブザーバー API
+  - ResizeObserver
+  - コンテンツボックス
+  - observers
+browser-compat: api.ResizeObserver
 translation_of: Web/API/ResizeObserver
 ---
-<div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p class="summary"><strong><code>ResizeObserver</code></strong> インターフェイスは、{{domxref('Element')}} のコンテンツ矩形または {{domxref('SVGElement')}} のバウンディングボックスへの変更を監視します。コンテンツ矩形は、コンテンツを配置できるボックスです。つまり、ボーダーボックスからパディングを引いたものです。(ボーダーとパディングの説明は<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model">ボックスモデル</a>を見てください。)</p>
+**`ResizeObserver`** インターフェイスは、要素 ({{domxref('Element')}}) のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスの大きさが変化したことを報告します。
 
-<p>ResizeObserver は、無限のコールバックループとそれ自身のコールバック関数でサイズ変更することによって生じるであろう循環的な依存関係を避けます。これは、後続のフレームで DOM のより深い要素のみを処理することによって行われます。実装が仕様に従っている場合は、描画の前およびレイアウトの後にリサイズイベントを呼び出す必要があります。</p>
+> **Note:** コンテンツボックスは、コンテンツを配置できるボックスです。つまり、境界ボックスからパディングを引いたものです。境界とパディングの説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
 
-<h2 id="コンストラクター">コンストラクター</h2>
+`ResizeObserver` は、無限のコールバックループとそれ自身のコールバック関数でサイズ変更することによって生じるであろう循環的な依存関係を避けます。これは、後続のフレームで DOM のより深い要素のみを処理することによって行われます。仕様に従っている場合、実装は描画の前およびレイアウトの後にリサイズイベントを呼び出します。
 
-<dl>
- <dt>{{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}</dt>
- <dd>新しい <code>ResizeObserver</code> オブジェクトを作成して返します。</dd>
-</dl>
+## コンストラクター
 
-<h2 id="プロパティ">プロパティ</h2>
+- {{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}
+  - : 新しい `ResizeObserver` オブジェクトを作成して返します。
 
-<p>なし</p>
+## プロパティ
 
-<h3 id="イベントハンドラー">イベントハンドラー</h3>
+なし。
 
-<p>なし</p>
+## メソッド
 
-<h2 id="メソッド">メソッド</h2>
+- {{domxref('ResizeObserver.disconnect()')}}
+  - : 特定のオブザーバーの監視対象の {{domxref('Element')}} をすべて監視解除します。
+- {{domxref('ResizeObserver.observe()')}}
+  - : 指定された {{domxref('Element')}} の監視を開始します。
+- {{domxref('ResizeObserver.unobserve()')}}
+  - : 指定された {{domxref('Element')}} の監視を終了します。
 
-<dl>
- <dt>{{domxref('ResizeObserver.disconnect()')}}</dt>
- <dd>監視対象のすべての {{domxref('Element')}} ターゲットの監視を終了します。</dd>
- <dt>{{domxref('ResizeObserver.observe()')}}</dt>
- <dd>指定された {{domxref('Element')}} の監視を開始します。</dd>
- <dt>{{domxref('ResizeObserver.unobserve()')}}</dt>
- <dd>指定された {{domxref('Element')}} の監視を終了します。</dd>
-</dl>
+## 例
 
-<h2 id="例">例</h2>
+[resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) （[ソースを参照](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)）の例では、スライダーの値が変更され、それを含む `<div>` の幅が変更されると、リサイズオブザーバーを使用してヘッダーと段落の {{cssxref("font-size")}} を変更します。これは、ビューポートに影響がない要素のサイズの変化にも応答することができることを示しています。
 
-<p>次の例では、幅の変更に応じてボックスの境界線の半径を変更します。</p>
+また、オブザーバーをオフやオンにするためのチェックボックスも用意しています。オフにすると、 `<div>` の幅が変化してもテキストは変化しません。
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+JavaScript は次のようになります。
+
+```js
+const h1Elem = document.querySelector('h1');
+const pElem = document.querySelector('p');
+const divElem = document.querySelector('body > div');
+const slider = document.querySelector('input[type="range"]');
+const checkbox = document.querySelector('input[type="checkbox"]');
+
+divElem.style.width = '600px';
+
+slider.addEventListener('input', () => {
+  divElem.style.width = slider.value + 'px';
+})
+
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
-    entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
+    if(entry.contentBoxSize) {
+      // Firefox は `contentBoxSize` を配列ではなく、単一のコンテンツ矩形として実装しています。
+      const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
+
+      h1Elem.style.fontSize = Math.max(1.5, contentBoxSize.inlineSize / 200) + 'rem';
+      pElem.style.fontSize = Math.max(1, contentBoxSize.inlineSize / 600) + 'rem';
+    } else {
+      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width / 200) + 'rem';
+      pElem.style.fontSize = Math.max(1, entry.contentRect.width / 600) + 'rem';
+    }
+  }
+
+  console.log('Size changed');
+});
+
+resizeObserver.observe(divElem);
+
+checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    resizeObserver.observe(divElem);
+  } else {
+    resizeObserver.unobserve(divElem);
   }
 });
-resizeObserver.observe(document.querySelector('.box:nth-child(2)'));</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resize Observer','#resize-observer-interface','ResizeObserver')}}</td>
-   <td>{{Spec2('Resize Observer')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ResizeObserver")}}</p>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model">ボックスモデル</a></li>
- <li>{{domxref('PerformanceObserver')}}</li>
- <li>{{domxref('MutationObserver')}}</li>
- <li>{{domxref('IntersectionObserver')}} (<a href="/ja/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> の一部)</li>
-</ul>
+- [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+- {{domxref('PerformanceObserver')}}
+- {{domxref('IntersectionObserver')}} （[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) の一部）
