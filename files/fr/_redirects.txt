@@ -4642,10 +4642,6 @@
 /fr/docs/Web/HTML/Element/h4	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h5	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h6	/fr/docs/Web/HTML/Element/Heading_Elements
-/fr/docs/Web/HTML/Element/isindex	/fr/docs/orphaned/Web/HTML/Element/isindex
-/fr/docs/Web/HTML/Element/listing	/fr/docs/orphaned/Web/HTML/Element/listing
-/fr/docs/Web/HTML/Element/multicol	/fr/docs/orphaned/Web/HTML/Element/multicol
-/fr/docs/Web/HTML/Element/nextid	/fr/docs/orphaned/Web/HTML/Element/nextid
 /fr/docs/Web/HTML/Element/video/canplaythrough_event	/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /fr/docs/Web/HTML/Element/video/durationchange_event	/fr/docs/Web/API/HTMLMediaElement/durationchange_event
 /fr/docs/Web/HTML/Formats_date_heure_HTML	/fr/docs/Web/HTML/Date_and_time_formats
@@ -4669,8 +4665,8 @@
 /fr/docs/Web/HTML/La_vérification_orthographique_dans_les_formulaires	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/Microdonnées	/fr/docs/Web/HTML/Microdata
 /fr/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/fr/docs/Glossary/speculative_parsing
-/fr/docs/Web/HTML/Preloading_content	/fr/docs/orphaned/Web/HTML/Preloading_content
-/fr/docs/Web/HTML/Précharger_du_contenu	/fr/docs/orphaned/Web/HTML/Preloading_content
+/fr/docs/Web/HTML/Preloading_content	/fr/docs/Web/HTML/Link_types/preload
+/fr/docs/Web/HTML/Précharger_du_contenu	/fr/docs/Web/HTML/Link_types/preload
 /fr/docs/Web/HTML/Reglages_des_attributs_CORS	/fr/docs/Web/HTML/Attributes/crossorigin
 /fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Types_de_lien	/fr/docs/Web/HTML/Link_types
@@ -6231,6 +6227,7 @@
 /fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
+/fr/docs/orphaned/Web/HTML/Preloading_content	/fr/docs/Web/HTML/Link_types/preload
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
