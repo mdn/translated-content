@@ -1,6 +1,7 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
+page-type: web-api-instance-method
 tags:
   - 非推奨
   - メソッド
@@ -10,7 +11,7 @@ translation_of: Web/API/Event/initEvent
 ---
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
-**`Event.initEvent()`** メソッドは、 {{domxref("Document.createEvent()")}} を使用して作成された {{ domxref("event") }} の値を初期化するために使用します。
+**`Event.initEvent()`** メソッドは、 {{domxref("Document.createEvent()")}} を使用して作成されたイベント ({{ domxref("event") }}) の値を初期化するために使用します。
 
 この方法で初期化されたイベントは、 {{domxref("Document.createEvent()") }} メソッドで作成されている必要があります。
 このメソッドは {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
