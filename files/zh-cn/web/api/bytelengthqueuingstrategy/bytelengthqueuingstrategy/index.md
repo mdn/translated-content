@@ -24,7 +24,7 @@ new ByteLengthQueuingStrategy(highWaterMark)
 ### 参数
 
 - `highWaterMark`
-  - : 一个包含 `highWaterMark` 属性的对象。这是一个非负整数，定义了在应用背压之前内部队列包含的块的总数。
+  - : 一个包含 `highWaterMark` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列包含的分块的总数。
 
 ### 返回值
 
@@ -38,6 +38,7 @@ new ByteLengthQueuingStrategy(highWaterMark)
 
 ```js
 const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+
 const readableStream = new ReadableStream({
   start(controller) {
     ...
@@ -49,6 +50,7 @@ const readableStream = new ReadableStream({
     console.log("stream error:", err);
   }
 }, queuingStrategy);
+
 var size = queuingStrategy.size(chunk);
 ```
 
