@@ -40,10 +40,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 <ul>
  <li>
-  <p><strong>必须</strong>包含一个名为<strong><code>matches</code></strong>的键，指定要加载脚本的URL的格式</p>
+  <p><strong>必须</strong>包含一个名为<strong><code>matches</code></strong>的键，指定要加载脚本的 URL 的格式</p>
  </li>
  <li>
-  <p><strong>可以</strong>包含一个名为<strong><code>js</code></strong>或<strong><code>css</code></strong>的键，<span>列出要加载到匹配页面的脚本</span></p>
+  <p><strong>可以</strong>包含一个名为<strong><code>js</code></strong>或<strong><code>css</code></strong>的键，列出要加载到匹配页面的脚本</p>
  </li>
  <li>
   <p><strong>可以</strong>包含控制如何加载、何时加载等方面更精细的属性</p>
@@ -69,62 +69,62 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
     <p><code>false</code>: 仅注入到顶层</p>
 
-    <p>默认为false</p>
+    <p>默认为 false</p>
    </td>
   </tr>
   <tr>
    <td><a id="css" name="css"><code>css</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>一个数组，包含将会被注入到匹配页面的CSS文件的路径（路径相对于manifest.json）。</p>
+    <p>一个数组，包含将会被注入到匹配页面的 CSS 文件的路径（路径相对于 manifest.json）。</p>
 
-    <p>在加载DOM之前，文件将会按指定的顺序注入。</p>
+    <p>在加载 DOM 之前，文件将会按指定的顺序注入。</p>
    </td>
   </tr>
   <tr>
    <td><a id="exclude_globs" name="exclude_globs"><code>exclude_globs</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <div class="geckoVersionNote">Firefox 自48版本开始支持globs</div>
+    <div class="geckoVersionNote">Firefox 自 48 版本开始支持 globs</div>
 
-    <p><span class="short_text" id="result_box" lang="zh-CN"><span>包含通配符的字符串数组。</span> <span>请参阅下面的<a href="#Matching_URL_patterns">匹配URL格式</a>。</span></span></p>
+    <p>包含通配符的字符串数组。请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a>。</p>
    </td>
   </tr>
   <tr>
    <td><a id="exclude_matches" name="exclude_matches"><code>exclude_matches</code></a></td>
    <td><code>Array</code></td>
-   <td>一个<a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>的数组，<span class="short_text" id="result_box" lang="zh-CN"><span>请参阅下面的<a href="#Matching_URL_patterns">匹配URL格式</a>。</span></span></td>
+   <td>一个<a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>的数组，请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a>。</td>
   </tr>
   <tr>
    <td><a id="include_globs" name="include_globs"><code>include_globs</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <div class="geckoVersionNote">Firefox 自48版本开始支持globs</div>
-    <span class="short_text" id="result_box" lang="zh-CN"><span>包含通配符的字符串数组。</span> <span>请参阅下面的<a href="#Matching_URL_patterns">匹配URL格式</a>。</span></span></td>
+    <div class="geckoVersionNote">Firefox 自 48 版本开始支持 globs</div>
+    包含通配符的字符串数组。请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a>。</td>
   </tr>
   <tr>
    <td><a id="js" name="js"><code>js</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>一个数组，包含将会被注入到匹配页面的JS文件的路径（路径相对于manifest.json）。</p>
+    <p>一个数组，包含将会被注入到匹配页面的 JS 文件的路径（路径相对于 manifest.json）。</p>
 
-    <p>文件将会按指定的顺序注入。这意味着如果你想在另一个脚本中包含jQuery，可以这样做：</p>
+    <p>文件将会按指定的顺序注入。这意味着如果你想在另一个脚本中包含 jQuery，可以这样做：</p>
 
     <pre class="brush: json">
 <code>"js": ["jquery.js", "my-content-script.js"]</code></pre>
 
-    <p>接下来，<code>"my-content-script.js"</code>可以使用jQuery.</p>
+    <p>接下来，<code>"my-content-script.js"</code>可以使用 jQuery.</p>
 
-    <p><span class="short_text" id="result_box" lang="zh-CN"><span>文件将在<a href="#run_at">run_at</a>指定的时间注入。</span></span></p>
+    <p>文件将在<a href="#run_at">run_at</a>指定的时间注入。</p>
    </td>
   </tr>
   <tr>
    <td><a id="matches" name="matches"><code>matches</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>一个<a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>的数组，<span class="short_text" id="result_box" lang="zh-CN"><span>请参阅下面的<a href="#Matching_URL_patterns">匹配URL格式</a>。</span></span></p>
+    <p>一个<a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>的数组，请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a>。</p>
 
-    <p><span class="short_text" id="result_box" lang="zh-CN"><span>这是唯一的必须键。</span></span></p>
+    <p>这是唯一的必须键。</p>
    </td>
   </tr>
   <tr>
@@ -134,22 +134,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
     <p>此选项指定在<a href="#js">“js”键</a>中的脚本何时被注入。您可以使用下列的三个字符串之一，每个字符串都代表加载文档过程中的不同状态。状态直接对应于{{domxref("Document/readyState", "Document.readyState")}}：</p>
 
     <ul>
-     <li>“<code>document_start</code>”：对应于正在加载。 <span>DOM仍在加载中。</span></li>
-     <li>“<code>document_end</code>”：对应于可交互。 <span>DOM已完成加载，但脚本和图像等资源可能仍在加载。</span></li>
-     <li>“<code>document_idle</code>”：对应完成。 <span>文档及其所有资源已完成加载。</span></li>
+     <li>“<code>document_start</code>”：对应于正在加载。DOM 仍在加载中。</li>
+     <li>“<code>document_end</code>”：对应于可交互。DOM 已完成加载，但脚本和图像等资源可能仍在加载。</li>
+     <li>“<code>document_idle</code>”：对应完成。文档及其所有资源已完成加载。</li>
     </ul>
 
     <p>默认值为“document_idle”。</p>
 
-    <p>在所有情况下，<a href="#js">js键</a>中的文件都会在<a href="#css">css键</a>中的文件之后注入。</p>
+    <p>在所有情况下，<a href="#js">js 键</a>中的文件都会在<a href="#css">css 键</a>中的文件之后注入。</p>
    </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="匹配URL格式">匹配URL格式</h2>
+<h2 id="匹配URL格式">匹配 URL 格式</h2>
 
-<p>“content_scripts”键基于URL匹配将content scripts注入到网页上：如果网页的URL与键中的规则匹配，则将注入脚本。“content_scripts”中有四个属性，可以用于此规则：</p>
+<p>“content_scripts”键基于 URL 匹配将 content scripts 注入到网页上：如果网页的 URL 与键中的规则匹配，则将注入脚本。“content_scripts”中有四个属性，可以用于此规则：</p>
 
 <ul>
  <li><code>matches</code>: 一个关于<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>的数组</li>
@@ -164,20 +164,20 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 <p>"http://example.org/"和"http://example.com/"都将会匹配</p>
 
-<p>由于matches是唯一的强制性键，其他三个键用于进一步限制匹配的URL。要匹配作为一个整体的键，网址必须：</p>
+<p>由于 matches 是唯一的强制性键，其他三个键用于进一步限制匹配的 URL。要匹配作为一个整体的键，网址必须：</p>
 
 <ol>
- <li>匹配matches属性</li>
- <li>并且，匹配include_globs属性（如果有）</li>
+ <li>匹配 matches 属性</li>
+ <li>并且，匹配 include_globs 属性（如果有）</li>
  <li>并且，不匹配<code>exclude_matches</code>属性（如果有）</li>
  <li>并且，不匹配<code>exclude_globs</code>属性（如果有）</li>
 </ol>
 
 <h3 id="globs">globs</h3>
 
-<div class="geckoVersionNote">Firefox 自48版本开始支持globs</div>
+<div class="geckoVersionNote">Firefox 自 48 版本开始支持 globs</div>
 
-<p>glob只是一个可以包含通配符的字符串。 有两种类型的通配符，您可以在一个glob中组合使用它们：</p>
+<p>glob 只是一个可以包含通配符的字符串。有两种类型的通配符，您可以在一个 glob 中组合使用它们：</p>
 
 <ul>
  <li>"*" 匹配零个或多个字符</li>
@@ -195,7 +195,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   }
 ]</pre>
 
-<p>这会将content脚本“borderify.js”插入到“mozilla.org”或其任何子域下的所有页面，无论是HTTP还是HTTPS。</p>
+<p>这会将 content 脚本“borderify.js”插入到“mozilla.org”或其任何子域下的所有页面，无论是 HTTP 还是 HTTPS。</p>
 
 <pre class="brush: json">  "content_scripts": [
     {
@@ -205,9 +205,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
     }
   ]</pre>
 
-<p>这会将两个content脚本插入到“mozilla.org”及其任何子域（除“developer.mozilla.org”外）的所有页面中，无论是通过HTTP还是HTTPS。</p>
+<p>这会将两个 content 脚本插入到“mozilla.org”及其任何子域（除“developer.mozilla.org”外）的所有页面中，无论是通过 HTTP 还是 HTTPS。</p>
 
-<p>content脚本有相同的DOM视图，并按照它们在数组中出现的顺序注入，因此“borderify.js”可以访问由“jquery.js”添加的全局变量。</p>
+<p>content 脚本有相同的 DOM 视图，并按照它们在数组中出现的顺序注入，因此“borderify.js”可以访问由“jquery.js”添加的全局变量。</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

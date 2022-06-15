@@ -208,6 +208,6 @@ div {
   - {{HTMLElement("ul")}}
   - {{HTMLElement("li")}}
   - {{HTMLElement("hr")}}
-  - {{HTMLElement("dir")}} {{obsolete_inline}}
+  - {{HTMLElement("dir")}} {{deprecated_inline}}
 
 - L'attribut universel [`contextmenu`](/fr/docs/Web/HTML/Attributs_universels#attr-contextmenu) qui peut être utilisé sur un élément et qui fait référence à l'attribut `id` d'un élément `menu` avec `context` qui vaut {{htmlattrxref("type","menu",'type="context"')}}.

@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>针对数组中的每个元素, 都会执行该回调函数, 执行时会自动传入下面三个参数:
+ <dd>针对数组中的每个元素，都会执行该回调函数，执行时会自动传入下面三个参数：
  <dl>
   <dt><code>element</code></dt>
   <dd>当前元素。</dd>
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
  </dl>
  </dd>
  <dt><code>thisArg</code></dt>
- <dd>可选。执行<code>callback</code>时作为<code>this</code>对象的值.</dd>
+ <dd>可选。执行<code>callback</code>时作为<code>this</code>对象的值。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <h2 id="Description">描述</h2>
 
-<p><code>findIndex</code>方法对数组中的每个数组索引<code>0..length-1</code>（包括）执行一次<code>callback</code>函数，直到找到一个<code>callback</code>函数返回真实值（强制为<code>true</code>）的值。如果找到这样的元素，<code>findIndex</code>会立即返回该元素的索引。如果回调从不返回真值，或者数组的<code>length</code>为0，则<code>findIndex</code>返回-1。 与某些其他数组方法（如Array#some）不同，在稀疏数组中，即使对于数组中不存在的条目的索引也会调用回调函数。</p>
+<p><code>findIndex</code>方法对数组中的每个数组索引<code>0..length-1</code>（包括）执行一次<code>callback</code>函数，直到找到一个<code>callback</code>函数返回真实值（强制为<code>true</code>）的值。如果找到这样的元素，<code>findIndex</code>会立即返回该元素的索引。如果回调从不返回真值，或者数组的<code>length</code>为 0，则<code>findIndex</code>返回-1。 与某些其他数组方法（如 Array#some）不同，在稀疏数组中，即使对于数组中不存在的条目的索引也会调用回调函数。</p>
 
 <p>回调函数调用时有三个参数：元素的值，元素的索引，以及被遍历的数组。</p>
 
@@ -123,9 +123,9 @@ if (!Array.prototype.findIndex) {
 }
 </pre>
 
-<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的JavaScript引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
+<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
 
-<p>使用此方法需要注意你是否在uc浏览器环境,如果你的页面在支付宝上使用尤其注意,因为支付宝使用的就是uc浏览器环境.</p>
+<p>使用此方法需要注意你是否在 uc 浏览器环境，如果你的页面在支付宝上使用尤其注意，因为支付宝使用的就是 uc 浏览器环境。</p>
 
 <h2 id="规范">规范</h2>
 

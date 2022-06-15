@@ -7,14 +7,14 @@ tags:
   - Document.open()
 translation_of: Web/API/Document/open
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+<p>{{APIRef("DOM")}}</p>
 
 <p><strong><code>Document.open()</code></strong> 方法打开一个要<a href="/zh-US/docs/Web/API/Document/write" title="en/DOM/document.write">写入</a>的文档。</p>
 
 <p>这将会有一些连带的影响。例如：</p>
 
 <ul>
- <li>此时已注册到文档、文档中的节点或文档的window的所有事件监听器会被清除。</li>
+ <li>此时已注册到文档、文档中的节点或文档的 window 的所有事件监听器会被清除。</li>
  <li>文档中的所有节点会被清除。</li>
 </ul>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Document/open
 
 <h2 id="Example" name="Example">示例</h2>
 
-<p>以下简单的代码，会打开一个文档，并将原有内容替换为一些不同的HTML片段，然后关闭文档。</p>
+<p>以下简单的代码，会打开一个文档，并将原有内容替换为一些不同的 HTML 片段，然后关闭文档。</p>
 
 <pre><code>document.open();
 document.write("&lt;p&gt;Hello world!&lt;/p&gt;");
@@ -45,40 +45,40 @@ document.close();</code></pre>
 
 <p>当 <a href="/en/DOM/document.write" title="en/DOM/document.write">document.write()</a> 在页面加载后调用，会发生自动的 <code>document.open()</code>调用。</p>
 
-<p>很多年以来，Firefox和IE浏览器会在清除所有节点的同时，将所有Javascript变量等一并清除，但现在已经不采用这一做法。<br>
- <span class="comment">document non-spec'ed parameters to document.open</span></p>
+<p>很多年以来，Firefox 和 IE 浏览器会在清除所有节点的同时，将所有 Javascript 变量等一并清除，但现在已经不采用这一做法。<br>
+ document non-spec'ed parameters to document.open</p>
 
-<p>不要和 <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容, 而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
+<p>不要和 <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容，而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
 
 <p>See <a href="/en/Security_check_basics" title="en/Security check basics">Security check basics</a> for more about principals.</p>
 
 <p>如果不想在当前文本追加内容， 使用 <code>open("text/html", "replace") 替换</code> <code>open()</code> .</p>
 
-<h3 id="针对Gecko的注意事项">针对Gecko的注意事项</h3>
+<h3 id="针对Gecko的注意事项">针对 Gecko 的注意事项</h3>
 
-<p>从Gecko 1.9开始，这个方法与其他属性一样受到同源策略的控制，若调用会使文档的源产生变化则不可用。</p>
+<p>从 Gecko 1.9 开始，这个方法与其他属性一样受到同源策略的控制，若调用会使文档的源产生变化则不可用。</p>
 
-<p>从Gecko 1.9.2开始，<code>document.open()</code> 使用文档的使用的URI的<a href="/docs/Security_check_basics">principal</a>大，而不是从stack中取来principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用<a href="https://developer.mozilla.org/en/wrappedJSObject"><code>wrappedJSObject</code></a>。关于principal的更多信息详见<a href="https://developer.mozilla.org/en/Security_check_basics" title="en/Security check basics">Security check basics</a>。</p>
+<p>从 Gecko 1.9.2 开始，<code>document.open()</code> 使用文档的使用的 URI 的<a href="/docs/Security_check_basics">principal</a>大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用<a href="https://developer.mozilla.org/en/wrappedJSObject"><code>wrappedJSObject</code></a>。关于 principal 的更多信息详见<a href="https://developer.mozilla.org/en/Security_check_basics" title="en/Security check basics">Security check basics</a>。</p>
 
 
 
-<h2 id="三个参数的document.open()">三个参数的document.open()</h2>
+<h2 id="三个参数的document.open()">三个参数的 document.open()</h2>
 
 <p>有一个更少人知道且更少被使用的 <code>document.open()</code> 的版本，这是{{domxref("Window.open()")}} 的一个别名（前往该页面查看更多）。</p>
 
-<p>这种调用，例如在新窗口打开github.com，把opener设为<code>null</code>：</p>
+<p>这种调用，例如在新窗口打开 github.com，把 opener 设为<code>null</code>：</p>
 
 <pre><code>document.open('https://www.github.com','', 'noopener=true')</code>
 </pre>
 
-<h2 id="两个参数的document.open()">两个参数的document.open()</h2>
+<h2 id="两个参数的document.open()">两个参数的 document.open()</h2>
 
 <p>浏览器过往支持一个两个参数版本的<code>document.open()</code>，方法参数签名如下：</p>
 
 <pre><code>document.open(type, replace)</code>
 </pre>
 
-<p><code>type</code>指定了所需写入的数据的MIME类型，<code>replace</code>（如有设置，值为一个字符串“replace”）指定了新文档的历史写入会代替现有的例如写入。</p>
+<p><code>type</code>指定了所需写入的数据的 MIME 类型，<code>replace</code>（如有设置，值为一个字符串“replace”）指定了新文档的历史写入会代替现有的例如写入。</p>
 
 <p>这种形式现在已经弃用；它不会抛出错误，但会直接调用<code>document.open()</code>（相当于无参数形式的调用）。这种历史写入替换行为现在一定会发生。</p>
 

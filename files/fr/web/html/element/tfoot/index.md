@@ -21,7 +21,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés ou obsolètes
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}
+- {{htmlattrdef("align")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{deprecated_inline}} en {{HTMLVersionInline("5")}}
 
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
 
@@ -81,19 +81,19 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("tfoot")}} doit être mis en forme grâce au [CSS](/fr/docs/CSS). Pour fournir un effet semblable à celui achevé par l'attribut **`bgcolor`**, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} sur les éléments  {{HTMLElement("td")}} ou {{HTMLElement("th")}} souhaités.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}
+- {{htmlattrdef("char")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{deprecated_inline}} en {{HTMLVersionInline("5")}}
 
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "tfoot")}} ne vaut pas `char`, l'attribut est ignoré.
 
     > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "tfoot")}}, on peut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{deprecated_inline}} en {{HTMLVersionInline("5")}}
 
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut **char** à appliquer au contenu des cellules.
 
     > **Note :** Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}
+- {{htmlattrdef("valign")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{deprecated_inline}} en {{HTMLVersionInline("5")}}
 
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
 

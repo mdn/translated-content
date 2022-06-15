@@ -32,13 +32,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs obsolètes
 
-- {{htmlattrdef("abbr")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("abbr")}} {{deprecated_inline}}
 
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 
     > **Note :** Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément {{HTMLElement("abbr")}} indépendant ou utiliser l'attribut **`title`** de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
 
-- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
 
@@ -55,7 +55,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS {{cssxref("text-align")}} sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut {{htmlattrxref("char", "td")}} comme valeur de la propriété {{cssxref("text-align")}}. {{unimplemented_inline}}.
 
-- {{htmlattrdef("axis")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("axis")}} {{deprecated_inline}}
 
   - : Cet attribut contient une liste de chaîne de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.
 
@@ -122,19 +122,19 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("td")}} doit être mis en forme grâce au [CSS](/fr/docs/CSS). Pour fournir un effet semblable à celui achevé par l'attribut **`bgcolor`**, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}}.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("char")}} {{deprecated_inline}}
 
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "td")}} ne vaut pas `char`, l'attribut est ignoré.
 
     > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "td")}}, il faut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("charoff")}} {{deprecated_inline}}
 
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut **char** à appliquer au contenu des cellules.
 
     > **Note :** Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("valign")}} {{deprecated_inline}}
 
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
 
@@ -145,7 +145,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Cet attribut est obsolète dans le dernier standard, la propriété CSS {{cssxref("vertical-align")}} doit être utilisée à la place.
 
-- {{htmlattrdef("width")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("width")}} {{deprecated_inline}}
 
   - : Cet attribut est utilisé afin de définir la largeur recommandée pour une cellule. Les propriétés [`cellspacing`](/fr/docs/Web/API/HTMLTableElement/cellSpacing) et [`cellpadding`](/fr/docs/Web/API/HTMLTableElement/cellPadding) peuvent être utilisées pour ajouter un espace supplémentaire et la largeur de l'élément {{HTMLElement("col")}} peut avoir un effet. En général, si la largeur d'une colonne est trop étroite pour afficher une cellule correctement, elle sera élargie lors de l'affichage.
 

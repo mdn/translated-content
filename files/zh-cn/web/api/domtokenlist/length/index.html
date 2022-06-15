@@ -15,19 +15,19 @@ translation_of: Web/API/DOMTokenList/length
 
 <h3 id="数值">数值</h3>
 
-<p>一个 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">整数</span></font>.</p>
+<p>一个整数。</p>
 
 <h2 id="示范例子">示范例子</h2>
 
 <p> </p>
 
-<p>在示范例子里我们编写了一个span元素，使用{{domxref("Element.classList")}}去检索元素{{htmlelement("span")}}拥有的类，放回一个实时的<code>DOMTokenList</code>集合，然后把该集合中的数值个数写进 <code>&lt;span&gt;</code>的 {{domxref("Node.textContent")}} 属性中。</p>
+<p>在示范例子里我们编写了一个 span 元素，使用{{domxref("Element.classList")}}去检索元素{{htmlelement("span")}}拥有的类，放回一个实时的<code>DOMTokenList</code>集合，然后把该集合中的数值个数写进 <code>&lt;span&gt;</code>的 {{domxref("Node.textContent")}} 属性中。</p>
 
-<p>HTML代码：</p>
+<p>HTML 代码：</p>
 
 <pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
-<p>JavaScript代码：</p>
+<p>JavaScript 代码：</p>
 
 <pre class="brush: js">var span = document.querySelector("span");
 var classes = span.classList;
@@ -42,20 +42,7 @@ span.textContent = 'classList length = ' + length;
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

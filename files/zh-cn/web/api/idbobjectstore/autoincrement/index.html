@@ -6,11 +6,11 @@ translation_of: Web/API/IDBObjectStore/autoIncrement
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>{{domxref("IDBObjectStore")}}的只读属性<strong><code>autoIncrement</code></strong>接口返回当前objectStore的自增标记值（true或false）。</p>
+<p>{{domxref("IDBObjectStore")}}的只读属性<strong><code>autoIncrement</code></strong>接口返回当前 objectStore 的自增标记值（true 或 false）。</p>
 
-<p>什么是自增呢？熟悉SQL的朋友应该知道，SQL数据里面的字段可以设置自增，当一条记录被插入时，不必传入该字段，新记录的该字段值会在前面一条记录该字段值的基础上加1.而indexedDB里面的autoIncrement的同样的意义。（译者注）</p>
+<p>什么是自增呢？熟悉 SQL 的朋友应该知道，SQL 数据里面的字段可以设置自增，当一条记录被插入时，不必传入该字段，新记录的该字段值会在前面一条记录该字段值的基础上加 1.而 indexedDB 里面的 autoIncrement 的同样的意义。（译者注）</p>
 
-<p>注意：每个objectStore的auto increment计数器是分开独立的。</p>
+<p>注意：每个 objectStore 的 auto increment 计数器是分开独立的。</p>
 
 <p>{{AvailableInWorkers}}</p>
 </div>
@@ -21,7 +21,7 @@ translation_of: Web/API/IDBObjectStore/autoIncrement
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">{{domxref("Boolean")}}:</span></p>
+<p>{{domxref("Boolean")}}:</p>
 
 <table class="standard-table">
  <thead>
@@ -33,11 +33,11 @@ translation_of: Web/API/IDBObjectStore/autoIncrement
  <tbody>
   <tr>
    <td><code>true</code></td>
-   <td>当前objectStore会自增</td>
+   <td>当前 objectStore 会自增</td>
   </tr>
   <tr>
    <td><code>false</code></td>
-   <td>当前objectStore不会自增<br>
+   <td>当前 objectStore 不会自增<br>
      </td>
   </tr>
  </tbody>
@@ -45,12 +45,12 @@ translation_of: Web/API/IDBObjectStore/autoIncrement
 
 <h2 id="例子">例子</h2>
 
-<p>在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用<code>add()</code>向一个objectStore中添加了一些数据。在objectStore被创建之后，我们在console中打印了<span style="background-color: #fafbfc; font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">objectStore.autoIncrement</span>的值。想查看完整的例子，请查看我们的<a href="https://github.com/mdn/to-do-notifications/" rel="noopener">To-do Notifications</a>应用（<a href="http://mdn.github.io/to-do-notifications/" rel="noopener">查看在线例子</a>）。</p>
+<p>在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用<code>add()</code>向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.autoIncrement 的值。想查看完整的例子，请查看我们的<a href="https://github.com/mdn/to-do-notifications/" rel="noopener">To-do Notifications</a>应用（<a href="http://mdn.github.io/to-do-notifications/" rel="noopener">查看在线例子</a>）。</p>
 
 <pre class="brush: js" style="font-size: 14px;">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -124,8 +124,8 @@ function addData() {
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a></li>
  <li>开始学习事务 transactions: {{domxref("IDBDatabase")}}</li>
  <li>使用事务 transactions: {{domxref("IDBTransaction")}}</li>
- <li>key值域range的使用: {{domxref("IDBKeyRange")}}</li>
+ <li>key 值域 range 的使用: {{domxref("IDBKeyRange")}}</li>
  <li>检索、修改: {{domxref("IDBObjectStore")}}</li>
  <li>使用游标: {{domxref("IDBCursor")}}</li>
- <li>相关例子: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>相关例子：<a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

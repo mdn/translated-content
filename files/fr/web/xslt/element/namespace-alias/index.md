@@ -12,7 +12,9 @@ L'élément `<xsl:namespace-alias>` est un dispositif rarement utilisé qui éta
 
 ### Syntaxe
 
-    <xsl:namespace-alias stylesheet-prefix=NOM result-prefix=NOM />
+```xml
+<xsl:namespace-alias stylesheet-prefix=NOM result-prefix=NOM />
+```
 
 ### Attributs obligatoires
 

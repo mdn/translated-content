@@ -8,13 +8,13 @@ original_slug: Games/Techniques/Control_mechanisms/移动端触摸控制
 
 <p>{{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}</p>
 
-<p class="summary">未来手游一定是Web的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端H5游戏中实现触摸控制 ，只要移动端支持触摸，你就可以尽情的玩。</p>
+<p>未来手游一定是 Web 的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端 H5 游戏中实现触摸控制 ，只要移动端支持触摸，你就可以尽情的玩。</p>
 
-<p class="note"><strong>说明</strong>：游戏 <a class="external external-icon" href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> 是基于<a href="http://phaser.io/">Phaser</a> 和Phaser-based管理控制，但它也可以用纯JavaScript实现。使用Phaser的好处它提供了辅助变量和方法可以直接调用，有助于快速的开发游戏，这需要根据项目实际情况选择。</p>
+<p><strong>说明</strong>：游戏 <a class="external external-icon" href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> 是基于<a href="http://phaser.io/">Phaser</a> 和 Phaser-based 管理控制，但它也可以用纯 JavaScript 实现。使用 Phaser 的好处它提供了辅助变量和方法可以直接调用，有助于快速的开发游戏，这需要根据项目实际情况选择。</p>
 
 <h2 id="纯_JavaScript_方式实现">纯 JavaScript 方式实现</h2>
 
-<p>我们可以实现自己的触摸事件 — 给document添加事件监听，并传入自定义功能的方法，非常简单:</p>
+<p>我们可以实现自己的触摸事件 — 给 document 添加事件监听，并传入自定义功能的方法，非常简单：</p>
 
 <pre class="brush: js">var el = document.getElementsByTagName("canvas")[0];
 el.addEventListener("touchstart", handleStart);
@@ -22,7 +22,7 @@ el.addEventListener("touchmove", handleMove);
 el.addEventListener("touchend", handleEnd);
 el.addEventListener("touchcancel", handleCancel);</pre>
 
-<p>这样, 在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。 事件如下所示：</p>
+<p>这样，在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。 事件如下所示：</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart">touchstart</a> 当用户手指放在屏幕上触发。</li>
@@ -35,16 +35,16 @@ el.addEventListener("touchcancel", handleCancel);</pre>
 <p><strong>说明</strong>: 这篇 <a href="/en-US/docs/Web/API/Touch_events">touch events</a> 参考文章提供了更多的实例和介绍。</p>
 </div>
 
-<h3 id="纯JavaScript示例">纯JavaScript示例</h3>
+<h3 id="纯JavaScript示例">纯 JavaScript 示例</h3>
 
-<p>这个实现了移动端触摸的<a href="https://github.com/end3r/JavaScript-Game-Controls/">little demo</a>代码已经放到了GibHub上，我们下载这个示例就可以实现在移动端屏幕上移动飞船。</p>
+<p>这个实现了移动端触摸的<a href="https://github.com/end3r/JavaScript-Game-Controls/">little demo</a>代码已经放到了 GibHub 上，我们下载这个示例就可以实现在移动端屏幕上移动飞船。</p>
 
-<p>我们将两种事件：<code>touchstart </code>和<code>touchmove</code> 放到一个方法里处理. 为什么呢? <code>touchHandler</code> 方法定义的飞船位置变量适合下面两种情况下: 当玩家触摸时，但不移动它（<code>touchstart</code>）和当手指在屏幕上开始移动 （<code>touchmove</code>）：</p>
+<p>我们将两种事件：<code>touchstart </code>和<code>touchmove</code> 放到一个方法里处理。为什么呢？ <code>touchHandler</code> 方法定义的飞船位置变量适合下面两种情况下：当玩家触摸时，但不移动它（<code>touchstart</code>）和当手指在屏幕上开始移动（<code>touchmove</code>）：</p>
 
 <pre class="brush: js">document.addEventListener("touchstart", touchHandler);
 document.addEventListener("touchmove", touchHandler);</pre>
 
-<p><code>touchHandler</code> 方法的代码如下:</p>
+<p><code>touchHandler</code> 方法的代码如下：</p>
 
 <pre class="brush: js">function touchHandler(e) {
     if(e.touches) {

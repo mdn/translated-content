@@ -10,7 +10,7 @@ translation_of: Web/API/RTCPeerConnection/remoteDescription
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p>只读属性 <code><strong>RTCPeerConnection.remoteDescription</strong></code> 返回一个 {{domxref("RTCSessionDescription")}} ，它描述了和远程对端之间的会话(包括配置和媒体信息) ，如果还没有被设置过的话，它会是 <code>null</code>.</p>
+<p>只读属性 <code><strong>RTCPeerConnection.remoteDescription</strong></code> 返回一个 {{domxref("RTCSessionDescription")}} ，它描述了和远程对端之间的会话 (包括配置和媒体信息) ，如果还没有被设置过的话，它会是 <code>null</code>.</p>
 
 <p>这个值通常是通过信令服务器接收的对端的会话描述（作为提议或应答），调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后生效。</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/RTCPeerConnection/remoteDescription
 
 <h2 id="示例">示例</h2>
 
-<p>此示例查看<code>remoteDescription</code>并显示包含{{domxref("RTCSessionDescription")}}对象的<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">type</span></font>和<code>sdp</code>字段的警告。</p>
+<p>此示例查看<code>remoteDescription</code>并显示包含{{domxref("RTCSessionDescription")}}对象的 type 和<code>sdp</code>字段的警告。</p>
 
 <pre class="brush:js">var pc = new RTCPeerConnection();
 …

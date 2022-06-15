@@ -22,7 +22,7 @@ translation_of: Web/CSS/font-family
 
 <p>应当至少在使用的 <code>font-family</code> 列表中添加一个通用的字体族名，因为无法保证用户的计算机内已经安装了指定的字体，也不能保证使用 {{cssxref("@font-face")}} 提供的字体移动能够正确地下载。提供通用的字体族使得浏览器可以在无法得到最佳字体的情况下使用一个相对接近的备选字体。</p>
 
-<p><code>font-family</code> 属性指定的是一个优先级从高到低的可选字体列表。 字体的选定<strong>不是</strong>在发现用户计算机上安装的列表中的第一个字体时停止。相反，对字体的选择是<strong>逐字</strong>进行的。也就是说即使某个字符周围都在某个字体中可以显示，但该字符在当前的字体文件中没有适合的图形，那么会继续尝试列表中靠后的字体。（不过这在 Internet Explorer 6 以及之前的版本的 IE 浏览器中不适用。）当一个字体只在某些特定的 <a href="/zh-CN/docs/CSS/font-style">font-style</a>、 <a href="/zh-CN/docs/CSS/font-variant" title="CSS/font-variant">font-variant</a>、或 <a href="/zh-CN/docs/CSS/font-size" title="CSS/font-size">font-size</a> 属性值下有效时，这些属性的值也可能对字体族 font family 的选择造成影响。</p>
+<p><code>font-family</code> 属性指定的是一个优先级从高到低的可选字体列表。字体的选定<strong>不是</strong>在发现用户计算机上安装的列表中的第一个字体时停止。相反，对字体的选择是<strong>逐字</strong>进行的。也就是说即使某个字符周围都在某个字体中可以显示，但该字符在当前的字体文件中没有适合的图形，那么会继续尝试列表中靠后的字体。（不过这在 Internet Explorer 6 以及之前的版本的 IE 浏览器中不适用。）当一个字体只在某些特定的 <a href="/zh-CN/docs/CSS/font-style">font-style</a>、 <a href="/zh-CN/docs/CSS/font-variant" title="CSS/font-variant">font-variant</a>、或 <a href="/zh-CN/docs/CSS/font-size" title="CSS/font-size">font-size</a> 属性值下有效时，这些属性的值也可能对字体族 font family 的选择造成影响。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -60,28 +60,28 @@ font-family: unset;
  <dd>一个字体族的名字。例如"Times" 和 "Helvetica" 都是字体族名。字体族名可以包含空格，但包含空格时应该用引号。</dd>
  <dt><code>&lt;generic-name&gt;</code></dt>
  <dd>
- <p>通用字体族名是一种备选机制，用于在指定的字体不可用时给出较好的字体。通用字体族名都是关键字，所以不可以加引号。 在列表的末尾应该至少有一个通用字体族名。 以下是该属性可能的取值以及他们的定义。</p>
+ <p>通用字体族名是一种备选机制，用于在指定的字体不可用时给出较好的字体。通用字体族名都是关键字，所以不可以加引号。在列表的末尾应该至少有一个通用字体族名。以下是该属性可能的取值以及他们的定义。</p>
 
  <dl>
   <dt><code>serif</code></dt>
-  <dd style="font-family: serif;">带衬线字体，笔画结尾有特殊的装饰线或衬线。<br>
-  例如： <span style="font-family: lucida bright,serif;">Lucida Bright</span>, <span style="font-family: lucida fax,serif;">Lucida Fax</span>, <span style="font-family: palatino,serif;">Palatino</span>, <span style="font-family: palatino linotype,serif;">"Palatino Linotype"</span>, <span style="font-family: palladio,serif;">Palladio</span>, <span style="font-family: urw palladio,serif;">"URW Palladio"</span>, <span style="font-family: serif;">serif</span>.</dd>
+  <dd>带衬线字体，笔画结尾有特殊的装饰线或衬线。<br>
+  例如：Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.</dd>
   <dt><code>sans-serif</code></dt>
-  <dd style="font-family: sans-serif;">无衬线字体，即笔画结尾是平滑的字体。<br>
-  例如， <span style="font-family: open sans,sans-serif;">"Open Sans"</span>, <span style="font-family: fira sans,sans-serif;">"Fira Sans"</span>, <span style="font-family: lucida sans,sans-serif;">"Lucida Sans"</span>, <span style="font-family: lucida sans unicode sans-serif;">"Lucida Sans Unicode"</span>, <span style="font-family: trebuchet ms,sans-serif;">"Trebuchet MS"</span>, <span style="font-family: liberation sans,sans-serif;">"Liberation Sans"</span>, <span style="font-family: nimbus sans l,sans-serif;">"Nimbus Sans L"</span>, <span style="font-family: sans-serif;">sans-serif</span>.</dd>
+  <dd>无衬线字体，即笔画结尾是平滑的字体。<br>
+  例如， "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.</dd>
   <dt><code>monospace</code></dt>
-  <dd style="font-family: monospace;">等宽字体，即字体中每个字宽度相同。<br>
-  例如， <span style="font-family: fira mono,monospace;">"Fira Mono"</span>, <span style="font-family: dejavu sans mono,monospace;">"DejaVu Sans Mono"</span>, <span style="font-family: menlo,monospace;">Menlo</span>, <span style="font-family: consolas,monospace;">Consolas</span>, <span style="font-family: liberation mono,monospace;">"Liberation Mono"</span>, <span style="font-family: monaco,monospace;">Monaco</span>, <span style="font-family: lucida console,monospace;">"Lucida Console"</span>, <span style="font-family: monospace;">monospace</span>.</dd>
+  <dd>等宽字体，即字体中每个字宽度相同。<br>
+  例如， "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace.</dd>
   <dt><code>cursive</code></dt>
-  <dd style="font-family: cursive;">草书字体。这种字体有的有连笔，有的还有特殊的斜体效果。因为一般这种字体都有一点连笔效果，所以会给人一种手写的感觉。<br>
-  例如，<span style="font-family: brush script mt,cursive;">"Brush Script MT</span>", <span style="font-family: brush script std,cursive;">"Brush Script Std</span>", <span>"Lucida Calligraphy"</span>, <span>"Lucida Handwriting"</span>, <span style="font-family: apple chancery,cursive;">"Apple Chancery"</span>, <span style="font-family: cursive;">cursive</span>.</dd>
+  <dd>草书字体。这种字体有的有连笔，有的还有特殊的斜体效果。因为一般这种字体都有一点连笔效果，所以会给人一种手写的感觉。<br>
+  例如，"Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.</dd>
   <dt><code>fantasy</code></dt>
-  <dd style="font-family: fantasy;">Fantasy 字体主要是那些具有特殊艺术效果的字体。<br>
-  例如，<span style="font-family: papyrus,fantasy;">Papyrus</span>, <span style="font-family: herculanum,fantasy;">Herculanum</span>, <span style="font-family: party let,fantasy;">Party LET</span>, <span style="font-family: curlz mt,fantasy;">Curlz MT</span>, <span style="font-family: harrington,fantasy;">Harrington</span>, <span style="font-family: fantasy;">fantasy</span>.</dd>
+  <dd>Fantasy 字体主要是那些具有特殊艺术效果的字体。<br>
+  例如，Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.</dd>
   <dt><code>system-ui</code></dt>
   <dd>从浏览器所处平台处获取的默认用户界面字体。由于世界各地的排版习惯之间有很大的差异，这个通用选项 is provided for typefaces that don't map cleanly into the other generics.</dd>
   <dt><code>math</code></dt>
-  <dd>针对显示数学相关字符的特殊样式问题而设计的字体：支持上标和下标、跨行括号、嵌套表达式和具有不同含义的double struck glyphs。</dd>
+  <dd>针对显示数学相关字符的特殊样式问题而设计的字体：支持上标和下标、跨行括号、嵌套表达式和具有不同含义的 double struck glyphs。</dd>
   <dt><code>emoji</code></dt>
   <dd>专门用于呈现 Emoji 表情符号的字体。</dd>
   <dt><code>fangsong</code></dt>

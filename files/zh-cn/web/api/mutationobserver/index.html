@@ -13,24 +13,24 @@ translation_of: Web/API/MutationObserver
 ---
 <p>{{APIRef("DOM WHATWG")}}</p>
 
-<p>{{domxref("MutationObserver")}}接口提供了监视对DOM树所做更改的能力。它被设计为旧的Mutation Events功能的替代品，该功能是DOM3 Events规范的一部分。</p>
+<p>{{domxref("MutationObserver")}} 接口提供了监视对 DOM 树所做更改的能力。它被设计为旧的 Mutation Events 功能的替代品，该功能是 DOM3 Events 规范的一部分。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
- <dd>创建并返回一个新的 <code>MutationObserver</code> 它会在指定的DOM发生变化时被调用。</dd>
+ <dd>创建并返回一个新的 <code>MutationObserver</code> 它会在指定的 DOM 发生变化时被调用。</dd>
 </dl>
 
 <h2 id="Instance_methods" name="Instance_methods">方法</h2>
 
 <dl>
  <dt>{{domxref("MutationObserver.disconnect", "disconnect()")}}</dt>
- <dd><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">阻止 </span></font>MutationObserver</code> 实例继续接收的通知，直到再次调用其{{domxref("MutationObserver.observe", "observe()")}}方法，该观察者对象包含的回调函数都不会再被调用。</dd>
+ <dd>阻止 <code>MutationObserver</code> 实例继续接收的通知，直到再次调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法，该观察者对象包含的回调函数都不会再被调用。</dd>
  <dt>{{domxref("MutationObserver.observe", "observe()")}}</dt>
- <dd>配置<code>MutationObserver</code>在DOM更改匹配给定选项时，通过其回调函数开始接收通知。</dd>
+ <dd>配置 <code>MutationObserver</code> 在 DOM 更改匹配给定选项时，通过其回调函数开始接收通知。</dd>
  <dt>{{domxref("MutationObserver.takeRecords", "takeRecords()")}}</dt>
- <dd>从MutationObserver的通知队列中删除所有待处理的通知，并将它们返回到{{domxref("MutationRecord")}}对象的新{{jsxref("Array")}}中。</dd>
+ <dd>从 MutationObserver 的通知队列中删除所有待处理的通知，并将它们返回到 {{domxref("MutationRecord")}} 对象的新 {{jsxref("Array")}} 中。</dd>
 </dl>
 
 <h2 id="Mutation_Observer_customize_resize_event_listener_demo">Mutation Observer &amp; customize resize event listener &amp; demo</h2>
@@ -41,7 +41,7 @@ translation_of: Web/API/MutationObserver
 
 <p>以下示例改编自<a href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">这篇博客</a>。</p>
 
-<pre class="brush: js notranslate">// 选择需要观察变动的节点
+<pre class="brush: js notranslate"> // 选择需要观察变动的节点
 const targetNode = document.getElementById('some-id');
 
 // 观察器的配置（需要观察什么变动）
@@ -93,8 +93,6 @@ observer.disconnect();
 </table>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
-
-
 
 <p>{{Compat("api.MutationObserver")}}</p>
 

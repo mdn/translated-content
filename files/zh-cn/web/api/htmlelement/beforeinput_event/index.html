@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLElement/beforeinput_event
 
 <p>DOM 事件 <strong><code>beforeinput</code></strong> 在{{HTMLElement("input")}}, {{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 的值即将被修改前触发。这个事件也可以在 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 被设置为 <code>true</code> 的元素和打开 {{domxref("Document.designMode", "designMode")}} 后的任何元素上被触发。</p>
 
-<p>In the case of <code>contenteditable</code> and <code>designMode</code>,  the event target is the <strong>editing host</strong>. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.</p>
+<p>In the case of <code>contenteditable</code> and <code>designMode</code>,  the event target is the <strong>editing host</strong>. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.</p>
 
 <table class="properties">
  <tbody>
@@ -71,7 +71,7 @@ function updateValue(e) {
 
 <h3 id="结果">结果</h3>
 
-<p>{{EmbedLiveSample("Simple_logger")}}</p>
+<p>{{EmbedLiveSample("示例")}}</p>
 
 <h2 id="规范">规范</h2>
 
@@ -89,8 +89,6 @@ function updateValue(e) {
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-
 
 <p>{{Compat("api.HTMLElement.beforeinput_event")}}</p>
 

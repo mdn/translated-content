@@ -15,7 +15,7 @@ translation_of: Web/API/Document
 
 
 
-<p><span class="seoSummary"><strong><code>Document</code></strong> 介面代表所有在瀏覽器中載入的網頁，也是作為網頁內容 <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM 樹</a></span>（包含如 {{HTMLElement("body")}}、{{HTMLElement("table")}} 與其它的{{domxref("Element", "元素")}}）的進入點。<code>Document</code> 提供了網頁文件所需的通用函式，例如取得頁面 URL 或是建立網頁文件中新的元素節點等。</p>
+<p><strong><code>Document</code></strong> 介面代表所有在瀏覽器中載入的網頁，也是作為網頁內容 <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM 樹</a>（包含如 {{HTMLElement("body")}}、{{HTMLElement("table")}} 與其它的{{domxref("Element", "元素")}}）的進入點。<code>Document</code> 提供了網頁文件所需的通用函式，例如取得頁面 URL 或是建立網頁文件中新的元素節點等。</p>
 
 <p>{{inheritanceDiagram}}</p>
 
@@ -154,7 +154,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("Document.title")}}</dt>
  <dd>Sets or gets title of the current document.</dd>
  <dt>{{domxref("Document.URL")}} {{readonlyInline}}</dt>
- <dd>Returns<span style="line-height: 19.0909080505371px;"> the document location as a string.</span></dd>
+ <dd>Returns the document location as a string.</dd>
  <dt>{{domxref("Document.vlinkColor")}} {{Deprecated_inline}}</dt>
  <dd>Gets/sets the color of visited hyperlinks.</dd>
  <dt>{{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
@@ -330,75 +330,7 @@ translation_of: Web/API/Document
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '', 'Extend Document and GlobalEventHandlers')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Adds <code>onselectstart</code> and <code>onselectionchange</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','#i-Document','Document')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition for the interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','#i-Document','Document')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Supersede DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','#i-Document','Document')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Supersede DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-document','Document')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Intend to supersede DOM 3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Turn the {{domxref("HTMLDocument")}} interface into a <code>Document</code> extension.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}</td>
-   <td>{{Spec2('DOM3 XPath')}}</td>
-   <td>Define the {{domxref("XPathEvaluator")}} interface which extend document.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Page Visibility API', '#sec-document-interface', 'Document')}}</td>
-   <td>{{Spec2('Page Visibility API')}}</td>
-   <td>Extend the <code>Document</code> interface with the <code>visibilityState</code> and <code>hidden</code> attributes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Editing','#dom-document-getselection','Document')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性備註">瀏覽器相容性備註</h2>
 
@@ -410,7 +342,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("document.currentScript")}} {{non-standard_inline}}</dt>
  <dd>Returns the {{HTMLElement("script")}} element that is currently executing.</dd>
  <dt>{{domxref("document.documentURIObject")}}</dt>
- <dd>(<strong>Mozilla add-ons only!</strong>) Returns the {{Interface("nsIURI")}} object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
+ <dd>(<strong>Mozilla add-ons only!</strong>) Returns the <code>nsIURI</code> object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
  <dt>{{domxref("document.popupNode")}}</dt>
  <dd>Returns the node upon which a popup was invoked.</dd>
  <dt>{{domxref("document.tooltipNode")}}</dt>
@@ -437,7 +369,7 @@ translation_of: Web/API/Document
 <dl>
  <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
- <dt><span style="font-weight: normal; line-height: 1.5;">Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</span></dt>
+ <dt>Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</dt>
 </dl>
 
 <dl>

@@ -5,13 +5,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 <div>{{AddonSideBar}}</div>
 
-<div>通常来说的page action，是添加到浏览器地址栏中的按钮。用户通过点击这个按钮与你的扩展进行交互。</div>
+<div>通常来说的 page action，是添加到浏览器地址栏中的按钮。用户通过点击这个按钮与你的扩展进行交互。</div>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15745/address_bar_button.png" style="display: block; height: 174px; margin-left: auto; margin-right: auto; width: 350px;"></p>
 
-<h2 id="地址栏按钮（Page_actions）和工具栏按钮（_browser_actions）">地址栏按钮（Page actions）和工具栏按钮（ browser actions）</h2>
+<h2 id="地址栏按钮（Page_actions）和工具栏按钮（_browser_actions）">地址栏按钮（Page actions）和工具栏按钮（browser actions）</h2>
 
-<p>地址栏按钮(或 page action) 与工具栏按钮(或 browser action)非常相似。</p>
+<p>地址栏按钮 (或 page action) 与工具栏按钮 (或 browser action) 非常相似。</p>
 
 <p>其不同之处为：</p>
 
@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
  </li>
  <li>可见性：
   <ul>
-   <li>地址栏按钮默认是隐藏的（尽管可以通过manifest中“show_matches和hide_matches来改变），而你可以在特定tabs中调用pageAction.show()和pageAction.hide()来显示或隐藏它。</li>
+   <li>地址栏按钮默认是隐藏的（尽管可以通过 manifest 中“show_matches 和 hide_matches 来改变），而你可以在特定 tabs 中调用 pageAction.show() 和 pageAction.hide() 来显示或隐藏它。</li>
    <li>工具栏按钮总是可见的。</li>
   </ul>
  </li>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
   <tr>
    <th scope="row">browser action</th>
    <td>显示所有书签</td>
-   <td>使能ad-blocking</td>
+   <td>使能 ad-blocking</td>
    <td>同步所有打开的标签</td>
   </tr>
  </tbody>
@@ -61,24 +61,24 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 <h2 id="定义地址栏按钮">定义地址栏按钮</h2>
 
-<p>你可以在manifest.json中使用page_action键定义地址栏按钮的属性：</p>
+<p>你可以在 manifest.json 中使用 page_action 键定义地址栏按钮的属性：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"page_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"browser_style":</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"page_action": {
+  "browser_style": true,
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "Whereami?"
+}</code></pre>
 
-<p>仅default_icon是强制（必需）的。</p>
+<p>仅 default_icon 是强制（必需）的。</p>
 
-<p>有两种方式定义地址栏按钮：带popup窗口和无popup窗口。如果你没有指定一个popup，则当用户点击此按钮时，事件被派送到使用<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked">pageAction.onClicked</a>侦听器的扩展：</p>
+<p>有两种方式定义地址栏按钮：带 popup 窗口和无 popup 窗口。如果你没有指定一个 popup，则当用户点击此按钮时，事件被派送到使用<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked">pageAction.onClicked</a>侦听器的扩展：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.pageAction.onClicked.addListener(handleClick);</code></pre>
 
-<p>如果你指定了一个popup，则点击事件不被派送，在用户点击按钮时显示popup。用户可以与popup进行交互，并且当用户点击popup以外区域时，popup自动关闭。参见<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup</a>可获得创建和管理popups更详细内容。</p>
+<p>如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup</a>可获得创建和管理 popups 更详细内容。</p>
 
 <p>注意你的扩展只能有一个地址栏按钮。</p>
 
@@ -86,8 +86,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 <h2 id="Icons">Icons</h2>
 
-<p>如何创建用于地址栏按钮的ICONS的详细内容，请参见<a href="https://design.firefox.com/photon/index.html">Photon Design System</a>文档中的<a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a>节。</p>
+<p>如何创建用于地址栏按钮的 ICONS 的详细内容，请参见<a href="https://design.firefox.com/photon/index.html">Photon Design System</a>文档中的<a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a>节。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>GitHub上的 <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> 库中包括了实现无popup地址栏按钮的例子 <a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a> 。</p>
+<p>GitHub 上的 <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> 库中包括了实现无 popup 地址栏按钮的例子 <a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a> 。</p>

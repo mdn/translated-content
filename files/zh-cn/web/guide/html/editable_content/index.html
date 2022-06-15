@@ -4,13 +4,13 @@ slug: Web/Guide/HTML/Editable_content
 translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Content_Editable
 ---
-<p><span class="seoSummary">在HTML中，任何元素都可以被编辑。通过使用一些JavaScript事件处理程序，您可以将您的网页转换为完整且快速的富文本编辑器。本文提供了有关此功能的一些信息。 </span></p>
+<p>在 HTML 中，任何元素都可以被编辑。通过使用一些 JavaScript 事件处理程序，您可以将您的网页转换为完整且快速的富文本编辑器。本文提供了有关此功能的一些信息。 </p>
 
 <h2 id="它是如何工作的？">它是如何工作的？</h2>
 
-<p>为了使元素可编辑，你所要做的就是在html标签上设置<em>"contenteditable"</em>属性，它几乎支持所有的HTML元素。</p>
+<p>为了使元素可编辑，你所要做的就是在 html 标签上设置<em>"contenteditable"</em>属性，它几乎支持所有的 HTML 元素。</p>
 
-<p>下面是一个简单的示例，创建一个<em>"contenteditable"</em>属性为<em>"true"</em>的div元素，用户就可以编辑其内容了。</p>
+<p>下面是一个简单的示例，创建一个<em>"contenteditable"</em>属性为<em>"true"</em>的 div 元素，用户就可以编辑其内容了。</p>
 
 <pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;
   This text can be edited by the user.
@@ -22,29 +22,29 @@ original_slug: Web/Guide/HTML/Content_Editable
 
 <h2 id="执行命令设置可编辑区域">执行命令设置可编辑区域</h2>
 
-<p>当一个HTML元素的<code>contenteditable</code>属性被设置为<code>true</code>时，{{ domxref("document.execCommand()") }} 方法便可使用。通过该方法，你可以运行相关<a href="/en-US/docs/Web/API/document.execCommand#Commands">commands</a> 来操作可编辑区域的内容。其中大多数命令都会影响文档的选择，例如，给文本提供一个样式(加粗，倾斜等)、插入新元素(如增加一个链接)、影响一整行文本(如缩进排版)。当使用<code>contentEditable</code>后，调用<code>execCommand()</code>方法将影响当前处于活动状态的可编辑元素</p>
+<p>当一个 HTML 元素的<code>contenteditable</code>属性被设置为<code>true</code>时，{{ domxref("document.execCommand()") }} 方法便可使用。通过该方法，你可以运行相关<a href="/en-US/docs/Web/API/document.execCommand#Commands">commands</a> 来操作可编辑区域的内容。其中大多数命令都会影响文档的选择，例如，给文本提供一个样式 (加粗，倾斜等)、插入新元素 (如增加一个链接)、影响一整行文本 (如缩进排版)。当使用<code>contentEditable</code>后，调用<code>execCommand()</code>方法将影响当前处于活动状态的可编辑元素</p>
 
 <h2 id="在标记生成上的不同点">在标记生成上的不同点</h2>
 
-<p>因为各个浏览器在标记生成上的不同，因此跨浏览器使用 <code>contenteditable</code> 一直以来都是痛点，例如一些看起来十分简单的事情，如： 当你按下Enter/Return键在可编辑区域中创建一个新的文本行时，不同主流浏览器对此有不同处理(Firefox 插入{{htmlelement("br")}}、IE/Opera将使用{{htmlelement("p")}}、 Chrome/Safari 将使用 {{htmlelement("div")}}）</p>
+<p>因为各个浏览器在标记生成上的不同，因此跨浏览器使用 <code>contenteditable</code> 一直以来都是痛点，例如一些看起来十分简单的事情，如： 当你按下 Enter/Return 键在可编辑区域中创建一个新的文本行时，不同主流浏览器对此有不同处理 (Firefox 插入{{htmlelement("br")}}、IE/Opera 将使用{{htmlelement("p")}}、 Chrome/Safari 将使用 {{htmlelement("div")}}）</p>
 
-<p>幸运的是在现代浏览器中，这些不同都趋于一致了。截止到<a href="/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>，火狐开始使用{{htmlelement("div")}}元素来包裹新生成的文本行，以与Chrome, modern Opera, Edge, and Safari.的行为趋于一致</p>
+<p>幸运的是在现代浏览器中，这些不同都趋于一致了。截止到<a href="/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>，火狐开始使用{{htmlelement("div")}}元素来包裹新生成的文本行，以与 Chrome, modern Opera, Edge, and Safari.的行为趋于一致</p>
 
 <div class="note">
-<p><strong>注意</strong>: Internet Explorer使用 {{htmlelement("p")}} 元素而不是 <code>&lt;div&gt;</code>.</p>
+<p><strong>注意</strong>: Internet Explorer 使用 {{htmlelement("p")}} 元素而不是 <code>&lt;div&gt;</code>.</p>
 </div>
 
-<p>如果你想使用不同的方式创建新的段落,上面所有浏览器都支持{{domxref("document.execCommand")}}方法，该方法提供的 <code>defaultParagraphSeparator</code> 命令能够让你以不同的方式创建新的段落例如, 使用 {{htmlelement("p")}} 元素:</p>
+<p>如果你想使用不同的方式创建新的段落，上面所有浏览器都支持{{domxref("document.execCommand")}}方法，该方法提供的 <code>defaultParagraphSeparator</code> 命令能够让你以不同的方式创建新的段落例如，使用 {{htmlelement("p")}} 元素：</p>
 
-<pre class="notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="notranslate"><code class="language-js">document.execCommand("defaultParagraphSeparator", false, "p");</code></pre>
 
-<p>另外，从FireFox 55开始，火狐还为<code>defaultParagraphSeparator</code>支持非标准化参数<code>br</code>。如果你的Web应用程序通过检查浏览器是否为火狐来支持旧的FireFox行为，这将非常有用。但不幸的是，你并没有多少时间来为新的Firefox修复你的Web应用，你可以在初始化<code>designMode</code>和<code>contenteditable</code>时插入下面的代码来恢复较早的Firefox行为：</p>
+<p>另外，从 FireFox 55 开始，火狐还为<code>defaultParagraphSeparator</code>支持非标准化参数<code>br</code>。如果你的 Web 应用程序通过检查浏览器是否为火狐来支持旧的 FireFox 行为，这将非常有用。但不幸的是，你并没有多少时间来为新的 Firefox 修复你的 Web 应用，你可以在初始化<code>designMode</code>和<code>contenteditable</code>时插入下面的代码来恢复较早的 Firefox 行为：</p>
 
-<pre class="notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"br"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="notranslate"><code class="language-js">document.execCommand("defaultParagraphSeparator", false, "br");</code></pre>
 
 <h2 id="安全性">安全性</h2>
 
-<p>出于安全原因，火狐浏览器默认不允许JavaScript代码使用剪贴板相关特性（如复制、粘贴等）。你可以在<code>about:config</code>中设置如下选项来启用它们:</p>
+<p>出于安全原因，火狐浏览器默认不允许 JavaScript 代码使用剪贴板相关特性（如复制、粘贴等）。你可以在<code>about:config</code>中设置如下选项来启用它们：</p>
 
 <pre class="code notranslate">user_pref("capability.policy.policynames", "allowclipboard");
 user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
@@ -208,7 +208,7 @@ img.intLink { border: 0; }
 </pre>
 </div>
 
-<div class="note"><strong>注意:</strong> 如果你想知道如何标准的在你的页面中创建和插入编辑器，请查阅 <a class="internal" href="/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">更多完整的富文本编辑器例子</a>.</div>
+<div class="note"><strong>注意：</strong> 如果你想知道如何标准的在你的页面中创建和插入编辑器，请查阅 <a class="internal" href="/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">更多完整的富文本编辑器例子</a>.</div>
 
 <h2 id="相关链接">相关链接</h2>
 

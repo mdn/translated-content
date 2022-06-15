@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/If-Range
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>If-Range</code></strong> HTTP 请求头字段用来使得 <strong><code>Range</code></strong> 头字段在一定条件下起作用：当字段值中的条件得到满足时，<strong><code>Range</code></strong> 头字段才会起作用，同时服务器回复{{HTTPStatus("206")}} <font face="Consolas, Liberation Mono, Courier, monospace">部分内容状态码，</font>以及<strong><code>Range</code></strong> 头字段请求的相应部分；如果字段值中的条件没有得到满足，服务器将会返回 {{HTTPStatus("200")}} <code>OK</code> 状态码，并返回完整的请求资源。</p>
+<p><strong><code>If-Range</code></strong> HTTP 请求头字段用来使得 <strong><code>Range</code></strong> 头字段在一定条件下起作用：当字段值中的条件得到满足时，<strong><code>Range</code></strong> 头字段才会起作用，同时服务器回复{{HTTPStatus("206")}} 部分内容状态码，以及<strong><code>Range</code></strong> 头字段请求的相应部分；如果字段值中的条件没有得到满足，服务器将会返回 {{HTTPStatus("200")}} <code>OK</code> 状态码，并返回完整的请求资源。</p>
 
 <p>字段值中既可以用 {{HTTPHeader("Last-Modified")}} 时间值用作验证，也可以用{{HTTPHeader("ETag")}}标记作为验证，但不能将两者同时使用。</p>
 
@@ -35,7 +35,7 @@ If-Range: &lt;etag&gt;</pre>
 
 <dl>
  <dt>&lt;etag&gt;</dt>
- <dd>一个资源标签（entity tag）代表着所请求的资源。它是由被双引号包围的ACSII 编码的字符串组成的（例如<code>"675af34563dc-tr34"</code>）。当应用弱匹配算法时，E-Tag会有一个 <code>W/</code> 前缀。</dd>
+ <dd>一个资源标签（entity tag）代表着所请求的资源。它是由被双引号包围的 ACSII 编码的字符串组成的（例如<code>"675af34563dc-tr34"</code>）。当应用弱匹配算法时，E-Tag 会有一个 <code>W/</code> 前缀。</dd>
 </dl>
 
 <dl>
@@ -55,7 +55,7 @@ If-Range: &lt;etag&gt;</pre>
  <dd>两位数字，例如<code>"04"或者"59"</code>。</dd>
  <dt><code>GMT</code></dt>
  <dd>
- <p>格林威治标准时间。HTTP 协议的日期总是要使用GMT，而不是当地时间。</p>
+ <p>格林威治标准时间。HTTP 协议的日期总是要使用 GMT，而不是当地时间。</p>
  </dd>
 </dl>
 

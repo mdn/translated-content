@@ -9,7 +9,7 @@ translation_of: Web/API/Navigator/share
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}</div>
 
-<p><strong><code>Navigator.share()</code></strong><font><font>方法通过调用本机的共享机制作为Web Share API的一部分。</font><font>如果不支持Web Share API，则此方法为</font></font><code>undefined</code><font><font>。</font></font></p>
+<p><strong><code>Navigator.share()</code></strong> 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 <code>undefined</code>。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -20,11 +20,11 @@ translation_of: Web/API/Navigator/share
 
 <dl>
  <dt><var>data</var></dt>
- <dd><font>包含要共享的数据的对象。</font><font>必须至少指定以下字段之一。</font><font>可用选项包括：</font></dd>
+ <dd>包含要共享的数据的对象。必须至少指定以下字段之一。可用选项包括：</dd>
 </dl>
 
 <ul>
- <li><code>url</code>: 要共享的URL（ {{domxref("USVString")}} ）</li>
+ <li><code>url</code>: 要共享的 URL（ {{domxref("USVString")}} ）</li>
  <li><code>text</code>: 要共享的文本（ {{domxref("USVString")}} ）</li>
  <li><code>title</code>: 要共享的标题（ {{domxref("USVString")}}）</li>
  <li><code>files</code>: 要共享的文件（“FrozenArray”）</li>
@@ -35,9 +35,9 @@ translation_of: Web/API/Navigator/share
 
 <h3 id="返回值">返回值</h3>
 
-<p>该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个promise将会接受 。如果指定的共享数据格式不正确，promise将会立即拒绝；如果用户取消了分享，promise也会拒绝。</p>
+<p>该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个 promise 将会接受 。如果指定的共享数据格式不正确，promise 将会立即拒绝；如果用户取消了分享，promise 也会拒绝。</p>
 
-<p>例如, 在Android的Chrome上, 将在用户选择要共享的应用程序后将会解析共享的内容。.</p>
+<p>例如，在 Android 的 Chrome 上，将在用户选择要共享的应用程序后将会解析共享的内容。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -45,11 +45,11 @@ translation_of: Web/API/Navigator/share
   title: document.title,
   text: 'Hello World',
   url: 'https://developer.mozilla.org',
-}); // 分享MDN的URL</pre>
+}); // 分享 MDN 的 URL</pre>
 
 <h4 id="分享文件"><strong>分享文件</strong></h4>
 
-<p>分享文件之前，先使用<code>navigator.canShare()</code>.判断这个文件能否被分享，Then include an array of files in the call to <code>navigator.share():</code></p>
+<p>分享文件之前，先使用 <code>navigator.canShare()</code> 判断这个文件能否被分享，Then include an array of files in the call to <code>navigator.share():</code></p>
 
 <p>Notice: That the sample handles feature detection by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>. The data object passed to <code>canShare()</code> only supports the <code>files</code> property. Image, video, audio, and text files can be shared.</p>
 

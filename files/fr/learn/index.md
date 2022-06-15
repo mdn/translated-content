@@ -49,8 +49,6 @@ Si vous avez des questions concernant des sujets que vous aimeriez voir couverts
 
 > **Note :** Notre [Glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée.
 
-{{LearnBox({"title":"Entrée aléatoire dans le glossaire"})}}
-
 ## Rubriques couvertes
 
 Voici une liste de toutes les rubriques couvertes dans la zone d'apprentissage de MDN.

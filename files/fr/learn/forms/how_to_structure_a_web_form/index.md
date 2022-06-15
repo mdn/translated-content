@@ -13,7 +13,7 @@ tags:
 translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML", "Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
@@ -80,7 +80,7 @@ Voici un petit exemple :
 </form>
 ```
 
-> **Note :** Vous trouverez cet exemple dans [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> **Note :** Vous trouverez cet exemple dans [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 En lisant le formulaire ci-dessus, un lecteur d'écran dira «&nbsp;Taille du jus de fruit&nbsp;: petit&nbsp;» pour le premier widget, «&nbsp;Taille du jus de fruit&nbsp;: moyenne&nbsp;» pour le second, et «&nbsp;Taille du jus de fruit&nbsp;: grande&nbsp;» pour le troisième.
 
@@ -129,7 +129,7 @@ Par exemple&nbsp;:
 </form>
 ```
 
-> **Note :** Vous trouverez cet exemple dans [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> **Note :** Vous trouverez cet exemple dans [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Étiquettes multiples
 
@@ -171,7 +171,7 @@ Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce do
 
 > **Note :** Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
 
-> **Note :** Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID&nbsp;!
+> **Note :** Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID&nbsp;!
 
 ## Structures HTML courantes dans les formulaires
 
@@ -189,7 +189,7 @@ Chaque groupe de fonctionnalités séparées doit être contenu dans un élémen
 
 Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/HTML/Forms/The_native_form_widgets)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
 
-1.  Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
+1.  Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
 2.  Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
 
     ```html
@@ -296,7 +296,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     <p> <button type="submit">Valider le paiement</button> </p>
     ```
 
-Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouverez aussi sur GitHub — voir la [source](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) payment-form.html et une exécution [directe](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
+Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouverez aussi sur GitHub — voir la [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) payment-form.html et une exécution [directe](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
 {{EmbedLiveSample("Un_formulaire_de_paiement","100%","620", "", "Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple")}}
 
@@ -308,18 +308,18 @@ Nous savons maintenant ce qu'il faut faire pour structurer de manière appropri�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML", "Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs", "Web/Guide/HTML/Formulaires")}}
+{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 ## Dans ce module
 
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
 - Comment structurer un formulaire HTML
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

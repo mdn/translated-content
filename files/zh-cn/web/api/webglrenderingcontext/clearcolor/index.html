@@ -7,7 +7,7 @@ translation_of: Web/API/WebGLRenderingContext/clearColor
 
 <p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.clearColor()</code></strong> 方法用于设置清空颜色缓冲时的颜色值。</p>
 
-<p>这指定调用 {{domxref("WebGLRenderingContext.clear", "clear()")}} 方法时使用的颜色值。这些值在0到1的范围间。</p>
+<p>这指定调用 {{domxref("WebGLRenderingContext.clear", "clear()")}} 方法时使用的颜色值。这些值在 0 到 1 的范围间。</p>
 
 <h2 id="句法">句法</h2>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/WebGLRenderingContext/clearColor
 <pre class="brush: js">gl.clearColor(1, 0.5, 0.5, 3);
 </pre>
 
-<p>要获取当前的清除颜色，传入<code>COLOR_CLEAR_VALUE常量，返回 </code>{{jsxref("Float32Array")}}。</p>
+<p>要获取当前的清除颜色，传入 <code>COLOR_CLEAR_VALUE</code> 常量，返回 {{jsxref("Float32Array")}}。</p>
 
 <pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
 // Float32Array[1, 0.5, 0.5, 1]

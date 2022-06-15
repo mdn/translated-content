@@ -3,7 +3,7 @@ title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 La lecture seule {{domxref("XMLHttpRequest")}} propriété **`responseText`** renvoie le texte reçu d'un serveur suite à l'envoi d'une requête.
 

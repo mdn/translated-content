@@ -49,8 +49,8 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li>{{HTMLElement("a")}} 没有 <code>href</code> 属性，并且不再被分类为交互内容. 点击 {{HTMLElement("label")}} 将会激活标签内容({{bug(1167816)}}).</li>
- <li>SVG 图标现在支持站点图标(偏爱图标和快捷方式图标)({{bug(366324)}}).</li>
+ <li>{{HTMLElement("a")}} 没有 <code>href</code> 属性，并且不再被分类为交互内容。点击 {{HTMLElement("label")}} 将会激活标签内容 ({{bug(1167816)}}).</li>
+ <li>SVG 图标现在支持站点图标 (偏爱图标和快捷方式图标)({{bug(366324)}}).</li>
  <li>The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link rel='preconnect'&gt;</a> ({{bug(1174152)}}).</li>
  <li> The picture element does not react to resize/viewport changes ({{bug(1135812)}}).</li>
 </ul>
@@ -58,13 +58,13 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>{{jsxref("Date.prototype")}}现在是一个普通对象, 不再是一个 {{jsxref("Date")}} 实例 ({{bug(861219)}}).</li>
- <li>{{jsxref("Date.prototype.toString")}} 现在是一般方法({{bug(861219)}}).</li>
- <li>{{jsxref("Symbol.species")}}被增加到({{bug(1131043)}}).</li>
+ <li>{{jsxref("Date.prototype")}}现在是一个普通对象，不再是一个 {{jsxref("Date")}} 实例 ({{bug(861219)}}).</li>
+ <li>{{jsxref("Date.prototype.toString")}} 现在是一般方法 ({{bug(861219)}}).</li>
+ <li>{{jsxref("Symbol.species")}}被增加到 ({{bug(1131043)}}).</li>
  <li>{{jsxref("Map.@@species", "Map[@@species]")}} 和{{jsxref("Set.@@species", "Set[@@species]")}} 获取已经被增加 ({{bug(1131043)}}).</li>
- <li>非标准 {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} 支持已经被废弃({{bug(1023609)}}).</li>
+ <li>非标准 {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} 支持已经被废弃 ({{bug(1023609)}}).</li>
  <li>{{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment","#Destructured_parameter_with_default_value_assignment", 1)}} 现在已经被支持 ({{bug(1018628)}}).</li>
- <li>Per ES2015,  <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a> 需要尖括号. 从现在开始语法没有尖括号将会失败({{bug(1150855)}}).</li>
+ <li>Per ES2015,  <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a> 需要尖括号. 从现在开始语法没有尖括号将会失败 ({{bug(1150855)}}).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a> (除了生成方法) 已经不再可构造 ({{bug(1059908)}} 和{{bug(1166950)}}).</li>
  <li>As part of ES2015 specification compliance, parenthesized <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> patterns, like <code>([a, b]) = [1, 2]</code> or <code>({a, b}) = { a: 1, b: 2 }</code>, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See <a href="http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/">Jeff Walden's blog post</a> for more details.</li>
  <li>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code> syntax has been added ({{bug(1141865)}}).</li>
@@ -73,11 +73,11 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
 
 <ul>
- <li>剪切、复制和粘贴命令处理已经被重新编码，并且现在允许JS编程实现网页内容复制和剪切。
+ <li>剪切、复制和粘贴命令处理已经被重新编码，并且现在允许 JS 编程实现网页内容复制和剪切。
   <ul>
-   <li>使用 <code>'paste'</code>名利作为参数, {{domxref("Document.queryCommandSupported()")}}现在会返回<span style="font-family: courier,andale mono,monospace;">false如果不充分的权限被执行</span>({{bug(1161721)}}).</li>
-   <li>使用<code>'cut'</code> 或 <code>'copy'</code> 命令作为参数, {{domxref("Document.queryCommandSupported()")}} 现在返回<code style="font-style: normal;">true</code> 如果调用的上下文中包括用户发起的或特权代码({{bug(1162952)}}).</li>
-   <li>使用 <code>'cut'</code> 或<code>'copy' 命令作为参数</code>, {{domxref("Document.execCommand()")}} 将会执行, 但是仅仅在用户发起的或特权代码的上下文下({{bug(1012662)}}).</li>
+   <li>使用 <code>'paste'</code>名利作为参数，{{domxref("Document.queryCommandSupported()")}}现在会返回 false 如果不充分的权限被执行 ({{bug(1161721)}}).</li>
+   <li>使用<code>'cut'</code> 或 <code>'copy'</code> 命令作为参数，{{domxref("Document.queryCommandSupported()")}} 现在返回<code style="font-style: normal;">true</code> 如果调用的上下文中包括用户发起的或特权代码 ({{bug(1162952)}}).</li>
+   <li>使用 <code>'cut'</code> 或<code>'copy' 命令作为参数</code>, {{domxref("Document.execCommand()")}} 将会执行，但是仅仅在用户发起的或特权代码的上下文下 ({{bug(1012662)}}).</li>
   </ul>
  </li>
 </ul>
@@ -85,7 +85,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h4 id="Events">Events</h4>
 
 <ul>
- <li>非标准的{{domxref("CloseEvent.initCloseEvent()")}} 方法和创建 {{domxref("CloseEvent")}} 使用 {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} 方法已经被移除. 相反可以使用标准的构造器{{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} . ({{bug(1161950)}}).</li>
+ <li>非标准的{{domxref("CloseEvent.initCloseEvent()")}} 方法和创建 {{domxref("CloseEvent")}} 使用 {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} 方法已经被移除。相反可以使用标准的构造器{{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} . ({{bug(1161950)}}).</li>
  <li>On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).</li>
  <li>The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}}}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).</li>
 </ul>
@@ -150,12 +150,12 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 
 <h4 id="新的默认、支持字体处理">新的默认、支持字体处理</h4>
 
-<p>数学公式需要特殊的字体. 到目前为止, 这些字体被硬编码在用户默认样式 <code>mathml.css</code> (使用{{MathMLElement("math")}} 标志设置字体组) 和偏好选项<code>font.mathfont-family</code> (为拉伸和大操作数设置支持字体). Firefox 41 引入一个能够自动设置<span style="font-family: courier,andale mono,monospace;">&lt;math&gt;标志和相应偏好选项的</span>内置<code>x-math</code> 语言 (例如<code>font.name.serif.x-math</code>). 用户默认样式现在将<span style="font-family: courier,andale mono,monospace;">&lt;math&gt;标志字体</span>设置为serif 并且<code>font.mathfont-family</code> 被替换为 <code>font.name.serif.x-math</code>.  所有平台现在基本使用相同列表的支持字体, "Latin Modern Math" 是首选.在标准的 per-language字体偏好菜单中，默认支持字体能够被设置. 更多细节，请参照{{bug(947654)}} 和 {{bug(1160456)}}.</p>
+<p>数学公式需要特殊的字体。到目前为止，这些字体被硬编码在用户默认样式 <code>mathml.css</code> (使用{{MathMLElement("math")}} 标志设置字体组) 和偏好选项<code>font.mathfont-family</code> (为拉伸和大操作数设置支持字体). Firefox 41 引入一个能够自动设置&lt;math&gt;标志和相应偏好选项的内置<code>x-math</code> 语言 (例如<code>font.name.serif.x-math</code>). 用户默认样式现在将&lt;math&gt;标志字体设置为 serif 并且<code>font.mathfont-family</code> 被替换为 <code>font.name.serif.x-math</code>.  所有平台现在基本使用相同列表的支持字体， "Latin Modern Math" 是首选。在标准的 per-language 字体偏好菜单中，默认支持字体能够被设置。更多细节，请参照{{bug(947654)}} 和 {{bug(1160456)}}.</p>
 
 <h3 id="SVG">SVG</h3>
 
 <ul>
- <li>站点图片(偏爱图标，快捷方式图标) 现在支持SVG({{bug(366324)}})</li>
+ <li>站点图片 (偏爱图标，快捷方式图标) 现在支持 SVG({{bug(366324)}})</li>
 </ul>
 
 <h3 id="音频视频">音频/视频</h3>

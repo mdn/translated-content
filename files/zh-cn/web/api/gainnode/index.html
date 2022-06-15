@@ -13,7 +13,7 @@ translation_of: Web/API/GainNode
 <div>
 <p><strong><code>GainNode</code></strong><strong> </strong>接口表示音量的变化。它是一个{{domxref("AudioNode")}}音频处理模块，在输出前使用给定<em>增益</em>应用到输入。一个 <code>GainNode</code><strong> </strong>总是只有一个输入和一个输出，两者拥有同样数量的声道。</p>
 
-<p>增益是一个无单位的值，会对所有输入声道的音频进行相应的增加。如果进行了修改，则会立即应用新增益，从而在结果音频中产生奇怪的“咔嗒”声。<font><font>为了防止这种情况发生，请不要直接更改值，而应在</font></font>{{domxref("AudioParam")}}接口<font><font>上使用指数插值方法</font><font>。</font></font></p>
+<p>增益是一个无单位的值，会对所有输入声道的音频进行相应的增加。如果进行了修改，则会立即应用新增益，从而在结果音频中产生奇怪的“咔嗒”声。为了防止这种情况发生，请不要直接更改值，而应在{{domxref("AudioParam")}}接口上使用指数插值方法。</p>
 </div>
 
 <p><img alt="The GainNode is increasing the gain of the output." src="https://mdn.mozillademos.org/files/5085/WebAudioGainNode.png" style="height: 116px; width: 774px;"></p>
@@ -49,18 +49,18 @@ translation_of: Web/API/GainNode
 
 <dl>
  <dt>{{domxref("GainNode.GainNode", "GainNode()")}}</dt>
- <dd><font><font>创建</font></font><code>GainNode</code><font><font>对象</font><font>的新实例</font><font>。</font><font>不应手动创建增益节点；而应该</font><font>使用</font></font>{{domxref("AudioContext.createGain()")}}方法。</dd>
+ <dd>创建<code>GainNode</code>对象的新实例。不应手动创建增益节点；而应该使用{{domxref("AudioContext.createGain()")}}方法。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
-<p><em><font><font>从其父类继承属性</font></font>{{domxref("AudioNode")}}。</em></p>
+<p><em>从其父类继承属性{{domxref("AudioNode")}}。</em></p>
 
 <dl>
  <dt>{{domxref("GainNode.gain")}} {{readonlyinline}}</dt>
 </dl>
 
-<p><font><font>是一个</font></font><font><font><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/AudioParam#a-rate">a-rate</a></font></font>{{domxref("AudioParam")}}表示应用的增益量。<font><font>必须设置</font></font>{{domxref("AudioParam.value")}}或者使用<code>AudioParam</code>的方法<font><font>改变增益效果。</font></font></p>
+<p>是一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/AudioParam#a-rate">a-rate</a>{{domxref("AudioParam")}}表示应用的增益量。必须设置{{domxref("AudioParam.value")}}或者使用<code>AudioParam</code>的方法改变增益效果。</p>
 
 <h2 id="方法">方法</h2>
 
@@ -94,5 +94,5 @@ translation_of: Web/API/GainNode
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">使用Web音频API</a></li>
+ <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">使用 Web 音频 API</a></li>
 </ul>

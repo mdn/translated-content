@@ -19,11 +19,13 @@ La méthode **`catch()`** renvoie un objet {{jsxref("Promise")}} et ne traite qu
 
 ## Syntaxe
 
-    p.catch(siRejetée);
+```js
+p.catch(siRejetée);
 
-    p.catch(function(raison) {
-       // rejet
-    });
+p.catch(function(raison) {
+  // rejet
+});
+```
 
 ### Paramètres
 

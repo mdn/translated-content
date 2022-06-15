@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>BigInt</code></strong> 是一种内置对象，它提供了一种方法来表示大于 <code>2^53 - 1</code> 的整数。这原本是 Javascript中可以用 {{JSxRef("Number")}} 表示的最大数字。<strong><code>BigInt</code></strong> 可以表示任意大的整数。</p>
+<p><strong><code>BigInt</code></strong> 是一种内置对象，它提供了一种方法来表示大于 <code>2^53 - 1</code> 的整数。这原本是 Javascript 中可以用 {{JSxRef("Number")}} 表示的最大数字。<strong><code>BigInt</code></strong> 可以表示任意大的整数。</p>
 
 <dl>
 </dl>
@@ -180,7 +180,7 @@ Boolean(12n)
  <dt>{{JSxRef("BigInt.prototype.toLocaleString()")}}</dt>
  <dd>返回此数字的 language-sensitive 形式的字符串。覆盖 {{JSxRef("Object.prototype.toLocaleString()")}}  方法。</dd>
  <dt>{{JSxRef("BigInt.prototype.toString()")}}</dt>
- <dd>返回以指定基数(base)表示指定数字的字符串。覆盖 {{JSxRef("Object.prototype.toString()")}} 方法。</dd>
+ <dd>返回以指定基数 (base) 表示指定数字的字符串。覆盖 {{JSxRef("Object.prototype.toString()")}} 方法。</dd>
  <dt>{{JSxRef("BigInt.prototype.valueOf()")}}</dt>
  <dd>返回指定对象的基元值。 覆盖 {{JSxRef("Object.prototype.valueOf()")}} 方法。</dd>
 </dl>
@@ -189,7 +189,7 @@ Boolean(12n)
 
 <h3 id="转化">转化</h3>
 
-<p>由于在 {{JSxRef("Number")}} 与 <code>BigInt</code> 之间进行转换会损失精度，因而建议仅在值可能大于2^53 时使用 <code>BigInt</code> 类型，并且不在两种类型之间进行相互转换。</p>
+<p>由于在 {{JSxRef("Number")}} 与 <code>BigInt</code> 之间进行转换会损失精度，因而建议仅在值可能大于 2^53 时使用 <code>BigInt</code> 类型，并且不在两种类型之间进行相互转换。</p>
 
 <h3 id="密码学">密码学</h3>
 
@@ -201,7 +201,7 @@ Boolean(12n)
 
 <pre class="brush: js"><code>BigInt.prototype.toJSON = function() { return this.toString(); }</code></pre>
 
-<p><code>JSON.stringify</code> 现在生成如下字符串，而不是抛出异常:</p>
+<p><code>JSON.stringify</code> 现在生成如下字符串，而不是抛出异常：</p>
 
 <pre class="brush: js"><code>JSON.stringify(BigInt(1));
 // '"1"'</code></pre>
@@ -246,7 +246,7 @@ nthPrime(20n)
   </tr>
   <tr>
    <td><a href="https://tc39.es/proposal-bigint/#sec-bigint-objects">BigInt</a></td>
-   <td>第4阶段</td>
+   <td>第 4 阶段</td>
   </tr>
  </tbody>
 </table>

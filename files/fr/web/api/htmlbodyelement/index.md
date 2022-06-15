@@ -16,17 +16,17 @@ L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de c
 
 _Propriétés hérite de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("HTMLBodyElement.aLink")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens hypertextes actifs.
-- {{domxref("HTMLBodyElement.background")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la description de l'emplacement de la ressource d'image d'arrière-plan. Notez que ce n'est pas un URI, même si certaines anciennes versions de certains navigateurs s'y attendent.
-- {{domxref("HTMLBodyElement.bgColor")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur de fond du document.
-- {{domxref("HTMLBodyElement.link")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens non visités.
-- {{domxref("HTMLBodyElement.text")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur de premier plan du texte.
-- {{domxref("HTMLBodyElement.vLink")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens visités.
 
 ## méthodes

@@ -3,34 +3,34 @@ title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
 translation_of: Mozilla/Firefox/Releases/18
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 18已于2013年1月8日发布.</p>
-<h2 id="WEB开发者需要注意的变化">WEB开发者需要注意的变化</h2>
+<div>{{FirefoxSidebar}}</div><p>Firefox 18 已于 2013 年 1 月 8 日发布。</p>
+<h2 id="WEB开发者需要注意的变化">WEB 开发者需要注意的变化</h2>
 <h3 id="HTML">HTML</h3>
 <ul>
-  <li>实现了{{HTMLElement("ol")}}元素上的{{htmlattrxref("reversed","ol")}}属性({{bug("601912")}}).</li>
-  <li>实现了{{HTMLElement("link")}}元素上的{{htmlattrxref("crossorigin","link")}}属性({{bug("786564")}}).</li>
+  <li>实现了{{HTMLElement("ol")}}元素上的{{htmlattrxref("reversed","ol")}}属性 ({{bug("601912")}}).</li>
+  <li>实现了{{HTMLElement("link")}}元素上的{{htmlattrxref("crossorigin","link")}}属性 ({{bug("786564")}}).</li>
 </ul>
 <h3 id="CSS">CSS</h3>
 <ul>
   <li>{{cssxref("min-width")}}和{{cssxref("min-height")}}属性使用<code>auto关键字作为初始值</code>(This has an effect only on flex items as it resolves to <code>0</code>, the previous initial value, for other items). ({{bug("763689")}})</li>
   <li>The cascade has been updated: now author <code>!important</code> rules override <a href="/zh-CN/docs/CSS/Using_CSS_animations" title="/zh-CN/docs/CSS/Using_CSS_animations">CSS animations</a>. ({{bug("783714")}})</li>
-  <li>{{cssxref("background")}}简写属性可以包含CSS3中的{{cssxref("background-size")}}属性了. ({{bug("570326")}})</li>
-  <li>初步实现了Flexbox.默认禁用状态,可以通过设置<code>layout.css.flexbox.enabled</code>选项激活该特性.({{bug('666041')}})</li>
+  <li>{{cssxref("background")}}简写属性可以包含 CSS3 中的{{cssxref("background-size")}}属性了。({{bug("570326")}})</li>
+  <li>初步实现了 Flexbox.默认禁用状态，可以通过设置<code>layout.css.flexbox.enabled</code>选项激活该特性.({{bug('666041')}})</li>
 </ul>
 <h3 id="DOM">DOM</h3>
 <ul>
   <li><code>实现了navigator.mozPay属性</code>({{bug("767818")}})</li>
   <li><code>实现了window.devicePixelRatio属性</code>. ({{bug("564815")}})</li>
-  <li>在MacOS上实现了<code>window.navigator.battery属性</code>. ({{bug("696045")}})</li>
+  <li>在 MacOS 上实现了<code>window.navigator.battery属性</code>. ({{bug("696045")}})</li>
   <li>删除了{{domxref("BlobBuilder", "MozBlobBuilder")}}.开发者们应该使用{{domxref("Blob")}}构造函数来创建<code>Blob对象</code>. ({{bug("744907")}})</li>
-  <li>{{event("visibilitychange")}}事件和<a href="/zh-CN/docs/DOM/Using_the_Page_Visibility_API" title="/zh-CN/docs/DOM/Using_the_Page_Visibility_API">页面可见性API</a>取消前缀{{bug("812086")}}).</li>
+  <li>{{event("visibilitychange")}}事件和<a href="/zh-CN/docs/DOM/Using_the_Page_Visibility_API" title="/zh-CN/docs/DOM/Using_the_Page_Visibility_API">页面可见性 API</a>取消前缀{{bug("812086")}}).</li>
   <li><code>实现了TextDecoder</code>和<code>TextEncoder</code> .({{bug("764234")}})</li>
-  <li><code>HTMLMediaElement</code><code>.src</code>被分成了两个属性:一个是标准的<code>src属性</code>,返回普通的字符串{{domxref("DOMString")}},另一个是带前缀的<code>mozSrcObject</code>属性,返回<a href="/zh-CN/docs/WebRTC/MediaStream_API" title="/zh-CN/docs/WebRTC/MediaStream_API">media streams</a> ({{bug("792665")}}).</li>
+  <li><code>HTMLMediaElement</code><code>.src</code>被分成了两个属性：一个是标准的<code>src属性</code>,返回普通的字符串{{domxref("DOMString")}},另一个是带前缀的<code>mozSrcObject</code>属性，返回<a href="/zh-CN/docs/WebRTC/MediaStream_API" title="/zh-CN/docs/WebRTC/MediaStream_API">media streams</a> ({{bug("792665")}}).</li>
 </ul>
 <h3 id="JavaScript">JavaScript</h3>
 <ul>
-  <li>实现了EcmaScript 6中的<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Proxy">直接代理</a>({{bug("703537")}}).警告:该实现包含了一些已知的bug,以及未根据最新规范草案实现某些特性.不要在生产环境中使用它.</li>
-  <li>实现了ECMAScript 6中的字符串方法<code>contains()</code>.</li>
+  <li>实现了 EcmaScript 6 中的<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Proxy">直接代理</a>({{bug("703537")}}).警告：该实现包含了一些已知的 bug，以及未根据最新规范草案实现某些特性。不要在生产环境中使用它。</li>
+  <li>实现了 ECMAScript 6 中的字符串方法<code>contains()</code>.</li>
 </ul>
 <h3 id="WebGL">WebGL</h3>
 <h3 id="SVG">SVG</h3>
@@ -38,45 +38,45 @@ translation_of: Mozilla/Firefox/Releases/18
 <h3 id="XUL">XUL</h3>
 <h3 id="网络">网络</h3>
 <ul>
-  <li>HTTP请求头<code>Accept-Language可以使用两位数字的质量因子</code>("q-values")({{bug("672448")}}).</li>
-  <li>HTTP响应头支持了<a href="/zh-CN/docs/The_X-FRAME-OPTIONS_response_header" title="/zh-CN/docs/The_X-FRAME-OPTIONS_response_header"><code>X-FRAME-OPTIONS</code></a>中的<code>ALLOW-FROM</code>语法({{bug("690168")}}).</li>
+  <li>HTTP 请求头<code>Accept-Language可以使用两位数字的质量因子</code>("q-values")({{bug("672448")}}).</li>
+  <li>HTTP 响应头支持了<a href="/zh-CN/docs/The_X-FRAME-OPTIONS_response_header" title="/zh-CN/docs/The_X-FRAME-OPTIONS_response_header"><code>X-FRAME-OPTIONS</code></a>中的<code>ALLOW-FROM</code>语法 ({{bug("690168")}}).</li>
 </ul>
 <h3 id="开发者工具">开发者工具</h3>
-<h2 id="附加组件和Mozilla开发者需要注意的变化">附加组件和Mozilla开发者需要注意的变化</h2>
+<h2 id="附加组件和Mozilla开发者需要注意的变化">附加组件和 Mozilla 开发者需要注意的变化</h2>
 <h3 id="接口变更">接口变更</h3>
 <dl>
   <dt>
-    {{ interface("nsIStreamListener") }}</dt>
+    <code>nsIStreamListener</code></dt>
   <dd>
-    <code>onDataAvailable()</code>方法的第四个参数(aOffset)类型改为无符号长整型. ({{bug("784912")}})</dd>
+    <code>onDataAvailable()</code>方法的第四个参数 (aOffset) 类型改为无符号长整型。({{bug("784912")}})</dd>
   <dt>
-    {{ interface("nsIUploadChannel") }}</dt>
+    <code>nsIUploadChannel</code></dt>
   <dd>
-    <code>setUploadStream()支持了超过</code>2GB大小的content-length ({{bug("790617")}})</dd>
+    <code>setUploadStream()</code> 支持了超过 2GB 大小的 content-length ({{bug("790617")}})</dd>
   <dt>
-    {{ interface("nsIEditor") }}</dt>
+    <code>nsIEditor</code></dt>
   <dd>
-    <code>删除了addEditorObserver()</code>,使用<code>setEditorObserver()</code>来替代, <code>removeEditorObserver()</code>不再需要一个{{ interface("nsIEditorObserver") }}参数({{bug("785091")}})</dd>
+    <code>删除了addEditorObserver()</code>,使用<code>setEditorObserver()</code>来替代，<code>removeEditorObserver()</code>不再需要一个<code>nsIEditorObserver</code>参数 ({{bug("785091")}})</dd>
 </dl>
 <dl>
   <dt>
-    {{ interface("nsIHttpProtocolHandler") }}</dt>
+    <code>nsIHttpProtocolHandler</code></dt>
   <dd>
     <code>http-on-modify-request</code> observers are no longer guaranteed to be called synchronously during<br>
     <code>nsIChannel.asyncOpen(). </code>For observers that need to be called during <code>asyncOpen</code>(), the new <code>http-on-opening-request</code> observer topic has been added. ({{bug("800799")}})</dd>
 </dl>
 <h4 id="新增接口">新增接口</h4>
 <h4 id="移除接口">移除接口</h4>
-<p>下面的接口已经被移除.</p>
+<p>下面的接口已经被移除。</p>
 <ul>
-  <li>{{ interface("nsIEditorObserver") }}</li>
+  <li><code>nsIEditorObserver</code></li>
 </ul>
 <h2 id="相关链接">相关链接</h2>
 <ul>
-  <li><a href="http://www.mozilla.org/zh-CN/firefox/18.0/releasenotes/">Firefox 18发行说明</a></li>
+  <li><a href="http://www.mozilla.org/zh-CN/firefox/18.0/releasenotes/">Firefox 18 发行说明</a></li>
   <li><a href="https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/">Aurora 18: HiDPI &amp; Touch Events</a> (Mozilla Hacks)</li>
-  <li><a href="/zh-CN/docs/Site_Compatibility_for_Firefox_18">Firefox 18网站兼容性</a></li>
-  <li><a href="https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/">Firefox 18附加组件兼容性</a></li>
+  <li><a href="/zh-CN/docs/Site_Compatibility_for_Firefox_18">Firefox 18 网站兼容性</a></li>
+  <li><a href="https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/">Firefox 18 附加组件兼容性</a></li>
 </ul>
 <h3 id="更早版本">更早版本</h3>
 <p>{{Firefox_for_developers('17')}}</p>

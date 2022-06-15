@@ -10,19 +10,19 @@ translation_of: Web/API/EXT_float_blend
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><span class="seoSummary"><a href="/zh-CN/docs/Web/API/WebGL_API">WebGL API</a> 的 <code>EXT_float_blend</code> 扩展允许使用 32 位浮点数组件来混合和绘制缓冲区。</span></p>
+<p><a href="/zh-CN/docs/Web/API/WebGL_API">WebGL API</a> 的 <code>EXT_float_blend</code> 扩展允许使用 32 位浮点数组件来混合和绘制缓冲区。</p>
 
 <p>若要查询该扩展是否存在，可以用方法：{{domxref("WebGLRenderingContext.getExtension()")}}。更多信息可以参考 <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a> 中的 <a href="/zh-CN/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a>。</p>
 
 <div class="note">
-<p><strong>可用性：</strong>该扩展在 {{domxref("WebGLRenderingContext", "WebGL1")}} 和{{domxref("WebGL2RenderingContext", "WebGL2")}} 上下文中均存在。但是，要使用它，你需要启用对32位浮点绘制缓冲区的使用{{domxref("WEBGL_color_buffer_float")}}（for WebGL1）或 {{domxref("EXT_color_buffer_float")}}（WebGL2）。通过启用32位浮点缓冲区扩展，将自动启用<code>EXT_float_blend</code>。</p>
+<p><strong>可用性：</strong>该扩展在 {{domxref("WebGLRenderingContext", "WebGL1")}} 和{{domxref("WebGL2RenderingContext", "WebGL2")}} 上下文中均存在。但是，要使用它，你需要启用对 32 位浮点绘制缓冲区的使用{{domxref("WEBGL_color_buffer_float")}}（for WebGL1）或 {{domxref("EXT_color_buffer_float")}}（WebGL2）。通过启用 32 位浮点缓冲区扩展，将自动启用<code>EXT_float_blend</code>。</p>
 </div>
 
 <p>该组件启用后， 使用 32 位浮点数混合方式绘制，调用 {{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}} 或 {{domxref("WebGLRenderingContext.drawElements", "drawElements()")}} 时，将不再产生 <code>INVALID_OPERATION</code> 异常。</p>
 
 <h2 id="使用说明">使用说明</h2>
 
-<p>在支持 <code>EXT_float_blend</code> 扩展的设备上, 当以下几种有一种或几种扩展启用时{{domxref("EXT_color_buffer_float")}}, {{domxref("OES_texture_float")}}, 或 {{domxref("WEBGL_color_buffer_float")}}，该扩展将会自动、隐式的启用。 这确保了在该扩展定义之前的内容也都能够按照预期正确执行。</p>
+<p>在支持 <code>EXT_float_blend</code> 扩展的设备上，当以下几种有一种或几种扩展启用时{{domxref("EXT_color_buffer_float")}}, {{domxref("OES_texture_float")}}, 或 {{domxref("WEBGL_color_buffer_float")}}，该扩展将会自动、隐式的启用。 这确保了在该扩展定义之前的内容也都能够按照预期正确执行。</p>
 
 <h2 id="例子">例子</h2>
 

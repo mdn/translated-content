@@ -27,11 +27,11 @@ translation_of: Web/CSS/Syntax
 
 <p><img alt="css syntax - declaration.png" class="default internal" src="/@api/deki/files/6164/=css_syntax_-_declaration.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>Hay más de <a href="/en/CSS/CSS_Reference" title="en/CSS/CSS_Reference">100 propiedades diferentes</a> en CSS y cerca de un número infinito de diferentes valores. No todos los pares de propiedades y valores son permitidos cada propiedad define que valores son válidos. Cuando un valor no es válido para una propiedad específica, la declaración es considerada <em>inválida</em> y es completamente ingorada por el motor del CSS.</p>
+<p>Hay más de <a href="/es/docs/Web/CSS/Reference" title="/es/docs/Web/CSS/Reference">100 propiedades diferentes</a> en CSS y cerca de un número infinito de diferentes valores. No todos los pares de propiedades y valores son permitidos cada propiedad define que valores son válidos. Cuando un valor no es válido para una propiedad específica, la declaración es considerada <em>inválida</em> y es completamente ignorada por el motor del CSS.</p>
 
 <h2 id="Bloques_de_declaraciones_en_CSS">Bloques de declaraciones en CSS</h2>
 
-<p>Las declaraciones son agrupada en <strong>bloques</strong>, que es una estructura delimitada por una llave de apertura, '<code>{</code>' (<code>U+007B LEFT CURLY BRACKET</code>), y una de cierre, '<code>}</code>' (<code>U+007D RIGHT CURLY BRACKET</code>). Los bloques en ocasiones puedes anidarse, por lo que las llaves de apertura y cierre deben de coindidir.</p>
+<p>Las declaraciones son agrupadas en <strong>bloques</strong>, que es una estructura delimitada por una llave de apertura, '<code>{</code>' (<code>U+007B LEFT CURLY BRACKET</code>), y una de cierre, '<code>}</code>' (<code>U+007D RIGHT CURLY BRACKET</code>). Los bloques en ocasiones pueden anidarse, por lo que las llaves de apertura y cierre deben de coindidir.</p>
 
 <p><img alt="css syntax - block.png" class="default internal" src="/@api/deki/files/6165/=css_syntax_-_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
@@ -39,17 +39,17 @@ translation_of: Web/CSS/Syntax
 
 <p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<div class="note">El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo  <code><a href="/en/HTML/Global_attributes#attr-style" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-style">style</a> de HTML</code>.</div>
+<div class="note">El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo  <code><a href="/es/docs/Web/HTML/Global_attributes#attr-style" title="/es/HTML/Global_attributes#attr-style">style</a> de HTML</code>.</div>
 
 <h2 id="Sets_de_reglas_CSS">Sets de reglas CSS</h2>
 
-<p>Si cada hoja de estilos pudiera aplicar una sól declaración a cada elemento de una página web, sería algo inútil. El verdadero objetivo es aplicar varias declaraciones a distintas partes del documento.</p>
+<p>Si cada hoja de estilos pudiera aplicar una sola declaración a cada elemento de una página web, sería algo inútil. El verdadero objetivo es aplicar varias declaraciones a distintas partes del documento.</p>
 
 <p>CSS permite esto asociando condiciones con bloques de declaraciones. Cada declaración (válida) es precedida por un <em>selector</em>, es decir, una condición que selecciona algunos elementos de la página. El bloque que forma el par selector-declaraciones recibe el nombre de <strong>set de reglas</strong>, o simplemente una <strong>regla</strong>.</p>
 
 <p><img alt="css syntax - ruleset.png" class="default internal" src="/@api/deki/files/6167/=css_syntax_-_ruleset.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo <a href="/en/CSS/Getting_Started/Cascading_and_inheritance" title="Cascading and inheritance">cascada</a>.</p>
+<p>Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo <a href="/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" title="Cascading and inheritance">cascada</a>.</p>
 
 <div class="note">Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.<br>
 <br>
@@ -57,7 +57,7 @@ Esto tiene una consecuencia importante: si algún selector básico es inválido,
 
 <h2 id="Declaraciones_CSS">Declaraciones CSS</h2>
 
-<p>Los sets de reglas son los bloques principales de una hoja de estilos, que generalmente consiste en una larga lista de ellos. Pero existe otro tipo de innformación que el autor web puede transmitir en la hoja de estilos, como el set de caracteres, otra hoja de estilos a importar, font face o listar descripciones de contador, entre otros. Se usarán tipos de declaracionnes específicas para esto mismo.</p>
+<p>Los sets de reglas son los bloques principales de una hoja de estilos, que generalmente consiste en una larga lista de ellos. Pero existe otro tipo de información que el autor web puede transmitir en la hoja de estilos, como el set de caracteres, otra hoja de estilos a importar, font face o listar descripciones de contador, entre otros. Se usarán tipos de declaracionnes específicas para esto mismo.</p>
 
 <p>Una <strong>declaración </strong>es un bloque que empieza con un caracter (no espacio) y termina con la primer llave de cierre o punto y coma (fuera de una cadena, sin escape y no incluñido dentro de otro par de {}. () o []).</p>
 
@@ -67,12 +67,12 @@ Esto tiene una consecuencia importante: si algún selector básico es inválido,
 
 <ul>
  <li><strong>Sets de reglas </strong>(o <em>reglas</em>) que, como lo visto, asocian una colección de declaraciones CSS a una condición descrita como selector.</li>
- <li><strong>Reglas At</strong> que inician con un símbolo '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), seguido de un identificados y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de <a href="/en/CSS/At-rule" title="At-rule">reglas at</a>, definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).</li>
+ <li><strong>Reglas At</strong> que inician con un símbolo '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), seguido de un identificador y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de <a href="/es/docs/Web/CSS/At-rule" title="At-rule">reglas at</a>, definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).</li>
 </ul>
 
 <p>Toda declaración que no es un set de reglas ni una regla at es considerada inválida e ignorada.</p>
 
-<p><a name="nested_statements">Existe otro grupo de declaraciones: las <strong>declaraciones anidadas</strong>. Estass son declaraciones que pueden ser usadas en un subset específico de reglas at (las <em>reglas de grupo condicionales</em>). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at <code>@media</code> se aplica sóllo si el dispositivo en el que el navegaddor se encuentra corriendo cumple dadas condiciones; el contenido de la regla at <code>@document</code> se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en </a><a href="/en/CSS/CSS3#Conditionals" title="en/CSS/CSS3#Conditionals"><em>CSS Conditionals Level 3</em></a>. Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.</p>
+<p><a name="nested_statements">Existe otro grupo de declaraciones: las <strong>declaraciones anidadas</strong>. Estas son declaraciones que pueden ser usadas en un subset específico de reglas at (las <em>reglas de grupo condicionales</em>). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at <code>@media</code> se aplica sólo si el dispositivo en el que el navegador se encuentra corriendo cumple dadas condiciones; el contenido de la regla at <code>@document</code> se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en </a><a href="/es/docs/Web/CSS/CSS_Conditional_Rules" title="/es/docs/Web/CSS/CSS_Conditional_Rules"><em>CSS Conditionals Level 3</em></a>. Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.</p>
 
 <h2 id="Ver_también">Ver también</h2>
 

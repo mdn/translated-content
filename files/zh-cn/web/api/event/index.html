@@ -12,13 +12,13 @@ translation_of: Web/API/Event
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>Event</code></strong> 接口表示在 DOM 中出现的事件。</span></p>
+<p><strong><code>Event</code></strong> 接口表示在 DOM 中出现的事件。</p>
 
 <p>一些事件是由用户触发的，例如鼠标或键盘事件；而其他事件常由 API 生成，例如指示动画已经完成运行的事件，视频已被暂停等等。事件也可以通过脚本代码触发，例如对元素调用 <code><a href="/en-US/docs/Web/API/HTMLElement/click">HTMLElement.click()</a></code> 方法，或者定义一些自定义事件，再使用 <code><a href="/en-US/docs/Web/API/EventTarget/dispatchEvent">EventTarget.dispatchEvent()</a></code> 方法将自定义事件派发往指定的目标（target）。</p>
 
 <p>有许多不同类型的事件，其中一些使用基于 <code>Event</code> 主接口的二次接口。<code>Event</code> 本身包含适用于所有事件的属性和方法。</p>
 
-<p>很多DOM元素可以被设计接收(或者监听) 这些事件, 并且执行代码去响应（或者处理）它们。通过<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.">EventTarget.addEventListener()</a></code>方法可以将事件处理函数绑定到不同的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements</a>上 (比如<code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用HTML <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">event handler attributes</a>来绑定事件处理函数的方式。除此之外，通过正确使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a>方法，这些事件处理函数也能被移除。</p>
+<p>很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.">EventTarget.addEventListener()</a></code>方法可以将事件处理函数绑定到不同的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements</a>上 (比如<code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用 HTML <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">event handler attributes</a>来绑定事件处理函数的方式。除此之外，通过正确使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a>方法，这些事件处理函数也能被移除。</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> 一个元素可以绑定多个事件处理函数，甚至是同一种类型的事件。尤其是这种分离的，并且相互独立的代码模块对同一个元素绑定事件处理函数，每一个模块代码都有着独立的目的。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放元素）</p>
@@ -28,7 +28,7 @@ translation_of: Web/API/Event
 
 <h2 id="基于_Event_的接口">基于 <code>Event</code> 的接口</h2>
 
-<p>下面是主要基于<code>Event</code>接口的接口列表，每一个接口都设置了指向各自的MDN API说明的文档链接。</p>
+<p>下面是主要基于<code>Event</code>接口的接口列表，每一个接口都设置了指向各自的 MDN API 说明的文档链接。</p>
 
 <p>需要注意的是，所有的事件接口名称都是以“Event”结尾的。</p>
 
@@ -119,7 +119,7 @@ translation_of: Web/API/Event
  <dt>{{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{readonlyinline}}</dt>
  <dd>事件的明确（explicit）原始目标（Mozilla 专有属性）。</dd>
  <dt>{{domxref("Event.originalTarget")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>重设目标前的事件原始目标 （Mozilla 专有属性）。</dd>
+ <dd>重设目标前的事件原始目标（Mozilla 专有属性）。</dd>
  <dt>{{domxref("Event.returnValue")}}</dt>
  <dd>旧版 Internet Explorer 引入的一个非标准历史属性，为保证依赖此属性的网页正常运作，此属性最终被收入规范。可用 {{domxref("Event.preventDefault()")}} 与 {{domxref("Event.defaultPrevented")}} 代替，但由于已进入规范，也可以使用此属性。</dd>
  <dt>{{domxref("Event.srcElement")}} {{non-standard_inline}}</dt>

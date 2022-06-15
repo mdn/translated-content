@@ -38,11 +38,11 @@ translation_of: Web/API/Storage
 
 <h2 id="範例">範例</h2>
 
-<p>在這裡，我們藉由呼叫 <code>localStorage</code> 來存取 <code>Storage</code> 物件，首先使用 <code>!localStorage.getItem('bgcolor')</code> 來<span style="font-size: 1rem; letter-spacing: -0.00278rem;">確認 </span><span style="font-size: 1rem; letter-spacing: -0.00278rem;">storage 裡是否有項目存在。</span></p>
+<p>在這裡，我們藉由呼叫 <code>localStorage</code> 來存取 <code>Storage</code> 物件，首先使用 <code>!localStorage.getItem('bgcolor')</code> 來確認 storage 裡是否有項目存在。</p>
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">如果有，則</span><span style="font-size: 1rem; letter-spacing: -0.00278rem;">執行函示</span><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">setStyles()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> ，這個函示使用 </span><span style="font-size: 1rem; letter-spacing: -0.00278rem;">{{domxref("Storage.getItem()")}} 取得 storage 的值，並且用這些值更新頁面樣式 。</span></p>
+<p>如果有，則執行函示 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">setStyles()</code> ，這個函示使用 {{domxref("Storage.getItem()")}} 取得 storage 的值，並且用這些值更新頁面樣式 。</p>
 
-<p>如果沒有，便執行另一個函示 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">populateStorage()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">，他使用 {{domxref("Storage.setItem()")}} 先設定 storage 項目的值，然後才執行</span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">setStyles()</code>。</p>
+<p>如果沒有，便執行另一個函示 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">populateStorage()</code>，他使用 {{domxref("Storage.setItem()")}} 先設定 storage 項目的值，然後才執行<code style="font-size: 1rem; letter-spacing: -0.00278rem;">setStyles()</code>。</p>
 
 <pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
@@ -75,20 +75,7 @@ function setStyles() {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

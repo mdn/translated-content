@@ -65,16 +65,16 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 ### Propriétés non-standard
 
 - {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
-  - : Un objet {{Interface("nsIChannel")}}. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
+  - : Un objet `nsIChannel`. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
 - {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
   - : Un booléen. S'il est vrai, la requête sera envoyée sans cookie ou en-tête d'autorisation.
 - {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
   - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : Un booléen qui indique si l'objet représente une requête de service en arrière-plan.
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : Un objet {{jsxref("ArrayBuffer")}} qui est la réponse à la requête sous la forme d'un tableau typé JavaScript.
-- {{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}
+- {{domxref("XMLHttpRequest.multipart")}} {{deprecated_inline}}
   - : **Cette fonctionnalité spécifique à Gecko a été retirée avec Firefox/Gecko 22.** Veuillez utiliser [les évènements serveurs](/fr/docs/Web/API/Server-sent_events) ou [les web sockets](/fr/docs/Web/API/WebSockets_API) ou encore la propriété `responseText` des évènements de progression.
 
 ### Gestionnaires d'évènement

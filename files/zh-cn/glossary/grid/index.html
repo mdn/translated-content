@@ -8,15 +8,15 @@ tags:
   - grid
 translation_of: Glossary/Grid
 ---
-<p class="brush: css">通过设置CSS属性 <code>display: grid;</code>  可以定义一个 CSS 网格。接着可以使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格的列属性(columns)和行属性(rows)。</p>
+<p>通过设置 CSS 属性 <code>display: grid;</code>  可以定义一个 CSS 网格。接着可以使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格的列属性 (columns) 和行属性 (rows)。</p>
 
 <p>使用这些属性定义的网格被称为 <em>显式网格 (explicit grid)。</em></p>
 
-<p>如果开发者将内容放置在显式网格之外 ，或者依赖自动布局的话，网格法(grid algorithm)将需要创建额外的row或者column、  {{glossary("grid tracks", "tracks")}} 来包含显示网格之外的内容 {{glossary("grid item", "grid items")}}，为此将在隐式网格(implicit grid)中创建额外的轨道(tracks)。<em>当内容添加到了已定义的tracks之外的时候，隐式网格(implicit grid)会被自动创建。</em></p>
+<p>如果开发者将内容放置在显式网格之外 ，或者依赖自动布局的话，网格法 (grid algorithm) 将需要创建额外的 row 或者 column、  {{glossary("grid tracks", "tracks")}} 来包含显示网格之外的内容 {{glossary("grid item", "grid items")}}，为此将在隐式网格 (implicit grid) 中创建额外的轨道 (tracks)。<em>当内容添加到了已定义的 tracks 之外的时候，隐式网格 (implicit grid) 会被自动创建。</em></p>
 
-<p>下面的例子创建了一个有两行三列的显式网格<em>。</em>由于超过显式网格可容纳的六个条目，<em>此网格中的第三行将是一个隐式网格行轨道(implicit grid </em>row track)</p>
+<p>下面的例子创建了一个有两行三列的显式网格<em>。</em>由于超过显式网格可容纳的六个条目，<em>此网格中的第三行将是一个隐式网格行轨道 (implicit grid </em>row track)</p>
 
-<p><em>（注：在容器div上用 row和column定义的网格总数，等于 行数乘以列数 个。比如一个容器div定义了2行*3列=6个网格，这6个就是显式网格，但是假如里面有8个 子div，多出来那2个就叫做隐式网格。）</em></p>
+<p><em>（注：在容器 div 上用 row 和 column 定义的网格总数，等于 行数乘以列数 个。比如一个容器 div 定义了 2 行*3 列=6 个网格，这 6 个就是显式网格，但是假如里面有 8 个 子 div，多出来那 2 个就叫做隐式网格。）</em></p>
 
 <div id="example">
 <div class="hidden">

@@ -50,7 +50,7 @@ Les types de champs disponibles sont :
 
 Certains types sont désormais obsolètes :
 
-- `{{HTMLElement("input/datetime", "datetime")}}` : {{HTMLVersionInline("5")}} {{deprecated_inline}} {{obsolete_inline}} un contrôle pour saisir une date et une heure selon un fuseau horaire UTC. **Cette fonctionnalité a été [retirée du standard WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+- `{{HTMLElement("input/datetime", "datetime")}}` : {{HTMLVersionInline("5")}} {{deprecated_inline}} {{deprecated_inline}} un contrôle pour saisir une date et une heure selon un fuseau horaire UTC. **Cette fonctionnalité a été [retirée du standard WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
 
 ## Attributs
 

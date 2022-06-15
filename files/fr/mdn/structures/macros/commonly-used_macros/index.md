@@ -1,168 +1,285 @@
 ---
-title: Commonly-used macros
+title: Macros usuelles
 slug: MDN/Structures/Macros/Commonly-used_macros
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 ---
 {{MDNSidebar}}
 
-Cette page présente un grand nombre de macros à usage général créées pour une utilisation avec MDN. Pour avoir des informations sur l'utilisation de ces macros, voir [Utilisation des macros](https://developer.mozilla.org/fr/docs/MDN/Contribute/Structures/Macros "/fr/docs/MDN/Contribute/Content/Macros") et [Utiliser les liens macros](/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros "/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros"). Voir [les autres macros](/fr/docs/MDN/Contribute/Structures/Macros/Other "/fr/docs/MDN/Contribute/Structures/Macros/Other") pour avoir des informations sur les macros qui sont rarement utilisées, ou utilisées dans des contextes spécifiques, ou obsolètes. Il y a aussi une liste complète de [toutes les macros MDN](/fr/docs/templates "/fr/docs/templates").
+Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Structures/Macros).
 
-Voir aussi le [Guide style CSS](/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide "/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide") pour l'utilisation des styles disponibles.
+Voir la page [Autres macros](/fr/docs/MDN/Structures/Macros/Other) pour plus d'informations quant aux macros moins usitées ou uniquement utilisées dans certains contextes ou qui sont dépréciées.
 
-## Linking
+## Liens
 
-### Création d'un lien hypertexte unique
+MDN fournit plusieurs macros pour former des liens entre les pages de référence, le glossaire, etc.
 
-En général, vous ne devez pas utiliser des macros pour créer des liens arbitraires. Utilisez le **Lien** dans l'interface de l'éditeur pour créer des liens.
+> **Attention :** Toutes les macros de lien devraient être remplacées dans le contenu en français par des liens écrit en Markdown. En effet, on souhaite réduire l'utilisation des macros «&nbsp;simples&nbsp;» qui peuvent être facilement remplacées par du HTML/Markdown.
 
-- La macro {{TemplateLink("Glossary")}} crée un lien vers une entrée du [glossaire](https://developer.mozilla.org/fr/docs/Glossaire) MDN. Cette macro accepte un paramètre obligatoire et deux optionnels:
+### Liens vers le glossaire
 
-  1.  Le nom d'un terme (comme "HTML").
-  2.  Le texte à afficher dans l'article au lieu du nom du terme (ce qui devrait être rarement utilisé). {{optional_inline}}
-  3.  Si ce paramètre est spécifié et est non nul, le style personnalisé normalement appliqué aux liens glossaire n'est pas appliquée. {{optional_inline}}
+La macro [`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs) crée un lien vers la page d'un terme du [glossaire](/fr/docs/Glossary). Elle prend un argument obligatoire et un autre optionnel&nbsp;:
 
-  Examples:
+1. Le nom du terme (par exemple `"HTML"`)&nbsp;: `\{{Glossary("HTML")}}`
+2. Un paramètre optionnel indiquant le texte à afficher à la place du terme&nbsp;: `\{{Glossary("CSS", "Cascading Style Sheets")}}`
 
-  - \\{{Glossary("HTML")}} yields {{Glossary("HTML")}}
-  - \\{{Glossary("CSS", "Cascading Style Sheets")}} yields {{Glossary("CSS", "Cascading Style Sheets")}}
-  - \\{{Glossary("HTML", "", 1)}} yields {{Glossary("HTML", "", 1)}}
+> **Attention :** Pour remplacer cette macro, on écrira plutôt&nbsp;: `[le texte à afficher](/fr/docs/Glossary/MonTerme)`.
 
-### Liens vers des pages avec références
+### Liens vers des pages de référence
 
-Il existe différentes macros pour des liens vers des pages dans les zones de référence spécifiques MDN.
+D'autres macros permettent de créer des liens vers des pages des différentes références de MDN&nbsp;: JavaScript, CSS, éléments HTML, SVG, etc.
 
-- {{TemplateLink("cssxref")}} links to a page in the [CSS Reference](/en-US/docs/CSS_Reference "en-US/docs/CSS_Reference"). Example: `\{{cssxref("cursor")}}`, results in: {{ cssxref("cursor") }}.
-- {{TemplateLink("domxref")}} links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, \\{{domxref("document.getElementsByName()")}} results in {{ domxref("document.getElementsByName()") }} while `\{\{domxref("Node")\}\}` results in {{ domxref("Node") }}.
-- {{TemplateLink("event")}} links to pages in the DOM Event reference, for example: \\{{event("change")}} results in {{event("change")}}.
-- {{TemplateLink("HTMLElement")}} links to an HTML element in the HTML Reference.
-- {{TemplateLink("htmlattrxref")}} links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, `\{\{htmlattrxref("lang")\}\}` will create this link: {{htmlattrxref("lang")}}. `\{\{htmlattrxref("type","input")\}\}` will create this link: {{htmlattrxref("type","input")}}.
-- {{TemplateLink("jsxref")}} links to a page in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference "en-US/docs/Web/JavaScript/Reference").
-- {{TemplateLink("SVGAttr")}} links to a specific SVG attribute. For example, `\{\{SVGAttr("d")\}\}` creates this link: {{SVGAttr("d")}}.
-- {{TemplateLink("SVGElement")}} links to an SVG element in the SVG Reference.
+Elles utilisent généralement un premier paramètre indiquant le nom de l'élément vers lequel lier. La plupart utilisent un deuxième argument qui permet de modifier le texte affiché.
 
-### Liens vers des bugs et des [IRC](https://fr.wikipedia.org/wiki/Internet_Relay_Chat)
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th>Macro</th>
+      <th>Pointe vers une page située sous</th>
+      <th>À remplacer par</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/CSS/Reference">La référence CSS</a> (/Web/CSS/Reference)
+      </td>
+      <td>
+        <code>\{{CSSxRef("cursor")}}</code> devra être remplacé par <code>[`cursor`](/fr/docs/Web/CSS/cursor)</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+      </td>
+      <td><a href="/fr/docs/Web/API">La référence du DOM</a> (/Web/API)</td>
+      <td>
+        <code>\{{DOMxRef("Document")}}</code> devra être remplacé par <code>[`Document`](/fr/docs/Web/API/Document)</code>.
+        S'il y a un deuxième paramètre&nbsp;: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> devra être remplacé par <code>[`getElementsByName()`](/fr/docs/Web/API/Document/getElementsByName)</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element">Référence des éléments HTML</a> (/Web/HTML/Element)
+      </td>
+      <td>
+        <code>\{{HTMLElement("select")}}</code> devra être remplacé par <code>[`&lt;select&gt;`](/fr/docs/Web/HTML/Element/select)</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
+          >HTMLAttrxRef</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut HTML universel si aucun nom d'élément n'est indiqué</a> ou attribut d'un élément si le nom de ce dernier est fourni.
+      </td>
+      <td>
+        <code>\{{HTMLAttrxRef("lang")}}</code> devra être remplacé par <code>[`lang`](/fr/docs/Web/HTML/Global_attributes/lang)</code>.
+        <code>\{{HTMLAttrxRef("type","input")}}</code> devra être remplacé par <code>[`type`](/fr/docs/Web/HTML/Element/input#attr-type)</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/JavaScript/Reference">Référence JavaScript</a> (/Web/JavaScript/Reference).
+      </td>
+      <td>
+        <code>\{{JSxRef("Promise")}}</code> devra être remplacé par <code>[`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/SVG/Attribute">Référence des attributs SVG</a> (/Web/SVG/Attribute).
+      </td>
+      <td>
+        <code>\{{SVGAttr("d")}}</code> devra être remplacé par <code>[`d`](/fr/docs/Web/SVG/Attribute/d)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/SVG/Attribute">Référence des éléments SVG</a> (/Web/SVG/Element).
+      </td>
+      <td>
+        <code>\{{SVGElement("view")}}</code> devra être remplacé par <code>[`&lt;view&gt;`](/fr/docs/Web/SVG/Element/view)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTTP/Headers">Référence des en-têtes HTTP</a> (/Web/HTTP/Headers).
+      </td>
+      <td>
+        <code>\{{HTTPHeader("ACCEPT")}}</code> devra être remplacé par <code>[`ACCEPT`](/fr/docs/Web/HTTP/Headers/ACCEPT)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTTP/Methods">Référence des méthodes de requête HTTP</a> (/Web/HTTP/Methods).
+      </td>
+      <td>
+        <code>\{{HTTPMethod("HEAD")}}</code> devra être remplacé par <code>[`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTTP/Status">Référence des codes de statut HTTP</a> (/Web/HTTP/Status)
+      </td>
+      <td>
+        <code>\{{HTTPStatus("404")}}</code> devra être remplacé par <code>[`404`](/fr/docs/Web/HTTP/Status/404)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.
+      </td>
+      <td>
+        <a href="/fr/docs/Web/Events">Référence des évènements</a> (/Web/Events)
+      </td>
+      <td>
+        <div class="note">
+          <p>
+            <strong>Note :</strong> Cette macro n'est plus particulièrement utile, car les évènements sont désormais placés sous leur élément DOM associé. <code>\{{DOMxRef("Document.wheel_event")}}</code> devrait être remplacé par 
+            <code>[`Document.wheel_event`](/fr/docs/Web/API/Document/wheel_event)</code>
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-- Bugs
+### Liens vers des rapports de bogue
 
-  - {{TemplateLink("bug")}} allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\{\{Bug(123456)\}\}`. This gives you: {{ Bug(123456) }}.
-  - {{TemplateLink("WebkitBug")}} inserts a link to a bug in the WebKit bug database. For example, `\{\{WebkitBug(31277)\}\}` inserts {{ WebkitBug(31277) }}.
+La macro [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) permet de créer un lien vers un bogue de bugzilla.mozilla.org avec la syntaxe `\{{Bug(123456)}}`. Un tel appel devrait être remplacé par `[bogue Mozilla 123456](https://bugzilla.mozilla.org/show_bug.cgi?id=123456)`.
 
-- {{TemplateLink("IRCLink")}} inserts a link to the specified IRC channel, complete with a tooltip that says that's what it does and that an IRC client is needed.
+La macro [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) fournit un lien vers la base de bogues de WebKit. Un tel lien devrait être remplacé par `[bogue WebKit 7890](https://bugs.webkit.org/show_bug.cgi?id=7890)`.
 
-### Aides à la navigation pour les guides multi-pages
+### Navigation entre les pages de chapitre d'un guide
 
-{{TemplateLink("Previous")}}, {{TemplateLink("Next")}}, and {{TemplateLink("PreviousNext")}} provide navigation controls for articles which are part of sequences. For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence. For {{TemplateLink("PreviousNext")}}, the two parameters needed are the wiki locations of the appropriate articles. The first parameter is for the previous article and the second is for the next article.
+[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), et [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) permettent d'afficher des contrôles de navigation pour des articles qui forment une série.
+
+Pour les deux premières macros, le seul paramètre nécessaire est l'emplacement de l'article cible.
+
+Pour la macro [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs), le premier paramètre correspond à la cible de l'article précédent dans la série et le deuxième paramètre correspond à la cible du prochain article.
 
 ## Exemples de code
 
-### Live samples
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) permet d'embarquer le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Structures/Live_samples)).
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) crée un lien vers une page contenant le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Structures/Live_samples)).
+- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) permet d'embarquer des exemples interactifs depuis des pages GitHub (voir [exemples interactifs depuis GitHub](/fr/docs/MDN/Structures/Code_examples#github_live_samples)).
 
-- {{TemplateLink("EmbedLiveSample")}} lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Contribute/Structures/Live_samples).
-- {{TemplateLink("LiveSampleLink")}} creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Contribute/Structures/Live_samples).
+## Barres latérales de navigation
 
-### Fichiers exemples attachés
+Pour chaque grand ensemble de pages, on a des macros qui aident à la navigation sous la forme d'une barre à gauche. Elles permettent généralement de remonter à la page racine de la référence/du guide/du tutoriel et placent l'article dans la catégorie correspondante au sein de cette barre.
 
-- {{TemplateLink("Embed_text")}} template lets you embed an attached text file into the body of your article. This is helpful if you want to have code snippets that are both downloadable but also displayed within the article's content. You may optionally specify a language for syntax highlighting; if you don't specify one, the text is embedded unformatted. The first parameter is the filename of the attachment to embed; the second, if provided, is the language for the syntax highlighter to apply, such as "javascript", "svg", or "cpp".
-- {{TemplateLink("EmbedSVG")}} embeds an attached XML file as an SVG image, in place on the page. Specify the filename of the attached SVG file. You can use this in tandem with {{TemplateLink("Embed_text")}} to show the source and then the rendered output of the same file.
+- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) génère la barre latérale pour les pages de la référence CSS.
+- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) génère la barre latérale pour les pages de la référence HTML.
+- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) génère la barre latérale pour les pages des références des API web.
 
-## Génération de sidebar (barre latérale)
+## Mise en forme
 
-Modèles pour presque toutes les grandes collection de pages. Ils permettent généralement de revenir à la page principale de référence/Guide/tutoriel et de mettre l'article dans la catégorie appropriée.
+### Indicateurs en ligne pour les documentations d'API
 
-- {{TemplateLink("CSSRef")}} generates the sidebar for CSS reference pages.
-- {{TemplateLink("HTMLRef")}} generates the sidebar for HTML reference pages.
-- {{TemplateLink("APIRef")}} generates the sidebar for Web API reference pages.
+[`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) et [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) sont utilisées dans les documentations d'API pour décrire la liste des propriétés d'un objet ou les paramètres d'une fonction.
 
-## La mise en forme à usage général
+#### Syntaxe
 
-### Inline indicators for API documentation
+`\{{Optional_Inline}}`
 
-{{TemplateLink("optional_inline")}} and {{TemplateLink("ReadOnlyInline")}} are used in API documentation, usually when describing the list of properties of an object or parameters of a function.
+ou
 
-Usage: `\{{optional_inline()}}` or `\{{ReadOnlyInline()}}`. Example:
+`\{{ReadOnlyInline}}`.
 
-- `isCustomObject` {{ReadOnlyInline()}}
-  - : Indicates, if `true`, that the object is a custom one.
-- parameterX {{ optional_inline() }}
-  - : Blah blah blah...
+#### Exemples
 
-## Status and compatibility indicators
+- `isCustomObject` {{ReadOnlyInline}}
+  - : Un booléen qui indique, s'il vaut `true`, que l'objet est spécifique.
+- `parameterX` {{Optional_Inline}}
+  - : Bla bla bla…
 
-### Inline indicators with no additional parameters
+## Indicateurs de statut et de compatibilité
+
+### Indicateurs en ligne sans paramètre
 
 #### Non-standard
 
-{{TemplateLink("non-standard_inline")}} inserts an in-line mark indicating the API has not been standardized and is not on a standards track.
+[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) insère une marque sur la ligne, indiquant que l'API n'a pas été standardisée et n'est pas en voie de standardisation.
 
-##### **Syntax**
+##### Syntaxe
 
-`\{{non-standard_inline}}`
+`\{{Non-standard_Inline}}`
 
-##### Examples
+##### Exemples
 
-- Icon: {{non-standard_inline}}
+- Icône&nbsp;: {{Non-standard_Inline}}
 
-#### Experimental
+#### Expérimental
 
-{{TemplateLink("experimental_inline")}} inserts an in-line mark indicating the API is not widely implemented and may change in the future.
+[`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) insère une marque sur la ligne, indiquant que l'API n'est pas largement implémentée et peut évoluer.
 
-##### Syntax
+##### Syntaxe
 
-`\{{experimental_inline}}`
+`\{{Experimental_Inline}}`
 
-##### `Examples`
+##### Exemples
 
-- Icon: {{experimental_inline}}
+- Icône&nbsp;: {{Experimental_Inline}}
 
-### Inline indicators that support specifying the technology
+#### Dépréciation
 
-In these macros the parameter (when specified) should be one of the strings "html", "js", "css", or "gecko", followed by the version number.
+[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) insère une marque sur la ligne, indiquant que l'API ne devrait pas être utilisée, car elle a officiellement été dépréciée ou supprimée.
 
-#### Deprecated
+##### Syntaxe
 
-{{TemplateLink("deprecated_inline")}} inserts an in-line deprecated mark to discourage the use of an API that is officially deprecated. **Note:** "Deprecated" means that the item should no longer be used, but still functions. If you mean that it no longer works at all, use the term "obsolete."
+`\{{Deprecated_Inline}}`
 
-Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
+##### Exemples
 
-##### Syntax
+- Icône&nbsp;: {{Deprecated_Inline}}
 
-`\{{deprecated_inline}}` or `\{{deprecated_inline("gecko5")}}`
+### Indicateurs pour les pages ou les sections
 
-##### Examples
+Les macros qui suivent possèdent la même sémantique que les équivalents en ligne abordés avant. Ces macros doivent être placées directement après le préambule de la page. On peut aussi les utiliser pour marquer une section donnée d'une page.
 
-- Icon: {{deprecated_inline}}
-- Badge: {{deprecated_inline("gecko5")}}
+- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs). Exemple&nbsp;: `\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) devrait être utilisée sur les pages documentant [des fonctionnalités expérimentales](/fr/docs/MDN/Guidelines/Conventions_definitions#experimental). Exemple&nbsp;: `\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs). Exemple&nbsp;: `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs) devrait être utilisée sur les pages principales des interfaces ou d'aperçu des API, mais pas sur les sous-pages décrivant les méthodes ou les propriétés. Exemple&nbsp;: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-#### Obsolete
+### Indiquer qu'une fonctionnalité est disponible pour les <i lang="en">web workers</i>
 
-{{TemplateLink("obsolete_inline")}} inserts an in-line obsolete mark to prevent the use of, for example, a function, method or property which is officially obsolete.
+La macro [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) insère une note localisée qui indique qu'une fonctionnalité est disponible dans le contexte d'un [<i lang="en">web worker</i>](/fr/docs/Web/API/Web_Workers_API). L'argument `notservice` peut être utilisé afin d'indiquer qu'une fonctionnalité est disponible pour les <i lang="en">web workers</i> mais pas pour les <i lang="en">service workers</i>.
 
-Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
+##### Syntaxe
 
-##### Syntax
+```plain
+\{{AvailableInWorkers}}
+\{{AvailableInWorkers("notservice")}}
+```
 
-`\{{obsolete_inline}}` or `\{{obsolete_inline("js1.8.5")}}`
+##### Exemples
 
-##### Examples
-
-- Icon: {{obsolete_inline}}
-- Badge: {{obsolete_inline("js1.8.5")}}
-
-### Template badges
-
-These macros are mostly used on the [WebAPI](/en-US/docs/WebAPI) page. See [Creating new badges](#creating_new_badges) for information on creating a new badge.
-
-### Page or section header indicators
-
-These templates have the same semantics as their inline counterparts described above. The templates should be placed directly underneath the main page title (or breadcrumb navigation if available) in the reference page. They can also be used to mark up a section on a page.
-
-- {{TemplateLink("non-standard_header")}}: `\{{Non-standard_header()}}` {{ Non-standard_header() }}
-- {{TemplateLink("SeeCompatTable")}} should be used on pages that provide a "Browser compatibility" section. Example: `\{{SeeCompatTable()}}` {{ SeeCompatTable() }}
-- {{TemplateLink("deprecated_header")}}: `\{{deprecated_header()}}` {{ Deprecated_header() }}
-- {{TemplateLink("deprecated_header")}} with parameter: `\{{deprecated_header("gecko5")}}` {{ Deprecated_header("gecko5") }} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
-- {{TemplateLink("obsolete_header")}}: `\{{obsolete_header()}}` {{ Obsolete_header() }}
-- {{TemplateLink("obsolete_header")}} with parameter: `\{{obsolete_header("gecko30")}}` {{ Obsolete_header("gecko30") }} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
-
-### Indicating that a feature is available in web workers
-
-The {{TemplateLink("AvailableInWorkers")}} macro inserts a localised note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}

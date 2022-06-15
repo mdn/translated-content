@@ -89,19 +89,6 @@
       "Jeremie"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-03-23T22:23:29.116Z",
-    "contributors": [
-      "iigmir",
-      "marktwtn"
-    ]
-  },
-  "Glossary/502": {
-    "modified": "2019-03-18T21:44:50.733Z",
-    "contributors": [
-      "Rocker"
-    ]
-  },
   "Glossary/AJAX": {
     "modified": "2019-03-23T22:28:09.468Z",
     "contributors": [
@@ -2946,12 +2933,6 @@
       "kenttsai"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:48:01.923Z",
-    "contributors": [
-      "Shiyou"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2019-03-23T22:30:39.565Z",
     "contributors": [
@@ -3373,14 +3354,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-10-15T21:47:11.807Z",
-    "contributors": [
-      "t7yang",
-      "tigercosmos",
-      "jackblackevo"
-    ]
-  },
   "Web/API/EventTarget": {
     "modified": "2019-03-23T22:55:39.329Z",
     "contributors": [
@@ -3388,6 +3361,14 @@
       "Shiyou",
       "alk03073135",
       "teoli"
+    ]
+  },
+  "Web/API/EventTarget/addEventListener": {
+    "modified": "2020-10-15T21:47:11.807Z",
+    "contributors": [
+      "t7yang",
+      "tigercosmos",
+      "jackblackevo"
     ]
   },
   "Web/API/EventTarget/dispatchEvent": {
@@ -3438,19 +3419,6 @@
       "lynn456"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-24T00:11:30.210Z",
-    "contributors": [
-      "chrisdavidmills",
-      "PtCt",
-      "y7t2ffff",
-      "Shiyou",
-      "alk03073135",
-      "irvinfly",
-      "Vdragon",
-      "orinx"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2019-03-23T22:06:22.686Z",
     "contributors": [
@@ -3488,7 +3456,20 @@
       "abc225666"
     ]
   },
-  "Web/API/File_Handle_API": {
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-24T00:11:30.210Z",
+    "contributors": [
+      "chrisdavidmills",
+      "PtCt",
+      "y7t2ffff",
+      "Shiyou",
+      "alk03073135",
+      "irvinfly",
+      "Vdragon",
+      "orinx"
+    ]
+  },
+  "Web/API/File_and_Directory_Entries_API": {
     "modified": "2019-03-23T23:28:50.291Z",
     "contributors": [
       "jackblackevo",
@@ -4382,6 +4363,12 @@
       "CarterTsai"
     ]
   },
+  "Web/API/Window/beforeunload_event": {
+    "modified": "2019-03-23T22:27:46.116Z",
+    "contributors": [
+      "hstarorg"
+    ]
+  },
   "Web/API/Window/getComputedStyle": {
     "modified": "2019-03-23T22:10:08.484Z",
     "contributors": [
@@ -4439,6 +4426,14 @@
       "BwayCer"
     ]
   },
+  "Web/API/Window/popstate_event": {
+    "modified": "2019-03-23T23:27:28.070Z",
+    "contributors": [
+      "irvinfly",
+      "khalid32",
+      "ChiLiJung"
+    ]
+  },
   "Web/API/Window/print": {
     "modified": "2019-03-18T21:45:25.421Z",
     "contributors": [
@@ -4469,20 +4464,6 @@
     "modified": "2019-03-23T22:30:52.273Z",
     "contributors": [
       "jackblackevo"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeunload": {
-    "modified": "2019-03-23T22:27:46.116Z",
-    "contributors": [
-      "hstarorg"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2019-03-23T23:27:28.070Z",
-    "contributors": [
-      "irvinfly",
-      "khalid32",
-      "ChiLiJung"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {
@@ -4762,11 +4743,17 @@
       "MOSapeizer"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:44:44.114Z",
     "contributors": [
       "Sebastianz",
       "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2019-03-18T21:29:53.605Z",
+    "contributors": [
+      "WuBingHsuan"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -5287,12 +5274,6 @@
       "sailplaneTW"
     ]
   },
-  "Web/HTML/Applying_color": {
-    "modified": "2019-03-18T21:29:53.605Z",
-    "contributors": [
-      "WuBingHsuan"
-    ]
-  },
   "Web/HTML/Attributes": {
     "modified": "2019-03-23T22:49:22.885Z",
     "contributors": [
@@ -5572,7 +5553,7 @@
       "mfuji09"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
     "modified": "2020-06-09T11:41:01.440Z",
     "contributors": [
       "jhihruei",
@@ -7900,6 +7881,19 @@
       "jackblackevo"
     ]
   },
+  "conflicting/Web/HTTP/Status/404": {
+    "modified": "2019-03-23T22:23:29.116Z",
+    "contributors": [
+      "iigmir",
+      "marktwtn"
+    ]
+  },
+  "conflicting/Web/HTTP/Status/502": {
+    "modified": "2019-03-18T21:44:50.733Z",
+    "contributors": [
+      "Rocker"
+    ]
+  },
   "conflicting/Web/JavaScript/Guide": {
     "modified": "2019-03-24T00:01:19.124Z",
     "contributors": [
@@ -8209,6 +8203,12 @@
       "bine139488"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2019-03-23T22:48:01.923Z",
+    "contributors": [
+      "Shiyou"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Operators": {
     "modified": "2020-10-15T22:18:48.252Z",
     "contributors": [
@@ -8279,12 +8279,6 @@
       "BobChao"
     ]
   },
-  "orphaned/Firefox_中的離線資源": {
-    "modified": "2019-03-24T00:13:31.494Z",
-    "contributors": [
-      "sailplaneTW"
-    ]
-  },
   "orphaned/HTML5_Cross_Browser_Polyfills": {
     "modified": "2019-01-16T13:58:45.342Z",
     "contributors": [
@@ -8353,33 +8347,6 @@
       "wbamberg",
       "Astrid-GitHub",
       "RSyehann"
-    ]
-  },
-  "orphaned/MDN/Editor": {
-    "modified": "2020-09-30T15:44:37.576Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "EatPizza311",
-      "tpst1114",
-      "jswisher"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics": {
-    "modified": "2020-09-30T15:44:37.917Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "tpst1114"
-    ]
-  },
-  "orphaned/MDN/Editor/Keyboard_shortcuts": {
-    "modified": "2020-09-30T15:44:37.748Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jackblackevo",
-      "JoanneWu"
     ]
   },
   "orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽": {

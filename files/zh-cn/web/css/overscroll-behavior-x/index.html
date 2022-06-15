@@ -12,7 +12,7 @@ translation_of: Web/CSS/overscroll-behavior-x
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>overscroll-behavior-x</code></strong> 这个CSS属性用来控制当滚动到区域的水平边界时的浏览器行为。</span></p>
+<p><strong><code>overscroll-behavior-x</code></strong> 这个 CSS 属性用来控制当滚动到区域的水平边界时的浏览器行为。</p>
 
 <div class="note">
 <p><strong>备注</strong>: 详细的解释请访问 {{cssxref("overscroll-behavior")}} </p>
@@ -41,7 +41,7 @@ overflow: unset;
  <dt><code>auto</code></dt>
  <dd>默认的滚动溢出行为表现的和正常一样。</dd>
  <dt><code>contain</code></dt>
- <dd>默认的滚动溢出行为将被内部的元素观察到，(例如: “bounce”效果或者刷新)，但是相邻的区域不会产生连续滚动效果，例如: 在下面的元素不会被滚动。</dd>
+ <dd>默认的滚动溢出行为将被内部的元素观察到，(例如：“bounce”效果或者刷新)，但是相邻的区域不会产生连续滚动效果，例如：在下面的元素不会被滚动。</dd>
  <dt><code>none</code></dt>
  <dd>相邻的滚动区域不会有连续滚动效果，并且默认的滚动溢出行为会被阻止。</dd>
 </dl>
@@ -52,9 +52,9 @@ overflow: unset;
 
 <h2 id="示例">示例</h2>
 
-<p>在这个简单的<a href="https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x">例子</a>中(<a href="https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html">源代码</a>), 有两个块级别的盒子, 一个在另一个的里面. 外部的盒子设置有一个大的 {{cssxref("width")}} 所以整个页面会水平滚动. 内部的盒子设置有一个小的宽度(和 {{cssxref("height")}}) 所以他位于观察点内合适的地方，但是他的内容被设置了一个大的 <code>width</code>, 所以它会水平的滚动.</p>
+<p>在这个简单的<a href="https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x">例子</a>中 (<a href="https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html">源代码</a>), 有两个块级别的盒子，一个在另一个的里面。外部的盒子设置有一个大的 {{cssxref("width")}} 所以整个页面会水平滚动。内部的盒子设置有一个小的宽度 (和 {{cssxref("height")}}) 所以他位于观察点内合适的地方，但是他的内容被设置了一个大的 <code>width</code>, 所以它会水平的滚动。</p>
 
-<p>默认情况下, 当内部的盒子被滚动达到边界的时候，整个页面将开始滚动，这个行为有可能不是我们期望的. 为了避便这个行为，你可以设置 <code>overscroll-behavior-x: contain</code> 在里面的盒子上:</p>
+<p>默认情况下，当内部的盒子被滚动达到边界的时候，整个页面将开始滚动，这个行为有可能不是我们期望的。为了避便这个行为，你可以设置 <code>overscroll-behavior-x: contain</code> 在里面的盒子上：</p>
 
 <pre class="brush: css">main &gt; div {
   height: 300px;

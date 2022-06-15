@@ -3,59 +3,59 @@ title: 书本实例列表页面
 slug: learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
-<p>接下来，我们将实作图书馆中所有书本实例 (<code>BookInstance</code>) 的列表页面。这个页面需要包含与每个 <code>BookInstance</code> (链接到其详细信息页面) 关联的书本 <code>Book</code> 标题，以及<code>BookInstance</code>模型中的其他信息，包含每个副本的状态，印记和唯一ID。唯一ID的文字，应该链接到 <code>BookInstance</code> 详细信息页面。</p>
+<p>接下来，我们将实作图书馆中所有书本实例 (<code>BookInstance</code>) 的列表页面。这个页面需要包含与每个 <code>BookInstance</code> (链接到其详细信息页面) 关联的书本 <code>Book</code> 标题，以及<code>BookInstance</code>模型中的其他信息，包含每个副本的状态，印记和唯一 ID。唯一 ID 的文字，应该链接到 <code>BookInstance</code> 详细信息页面。</p>
 
-<h2 class="highlight-spanned" id="控制器"><span class="highlight-span">控制器</span></h2>
+<h2 class="highlight-spanned" id="控制器">控制器</h2>
 
 <p><code>BookInstance</code>列表控制器函数，需要获取所有书本实例的列表，填充关联的书本信息，然后将列表传递给模板以进行呈现。</p>
 
 <p>打开 <strong>/controllers/bookinstanceController.js</strong>。找到导出的 <code>bookinstance_list()</code> 控制器方法，并用以下代码替换它（更改后的代码以粗体显示）。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all BookInstances.</span>
-exports<span class="punctuation token">.</span>bookinstance_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all BookInstances.
+exports.bookinstance_list = function(req, res, next) {
 
-  BookInstance<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'book'</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_bookinstances<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">// Successful, so render</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'bookinstance_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Book Instance List'</span><span class="punctuation token">,</span> bookinstance_list<span class="punctuation token">:</span> list_bookinstances <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  BookInstance.find()
+    .populate('book')
+    .exec(function (err, list_bookinstances) {
+      if (err) { return next(err); }
+      // Successful, so render
+      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};</code></pre>
 
-<p>此方法使用模型的<code>find()</code>函数，返回所有<code>BookInstance</code>对象。然后它将一个调用，以菊花链方式连接到<code>populate()</code>，附加书本<code>book</code>字段，这将使用完整的<code>Book</code>文档，替换每个<code>BookInstance</code>存储的书本ID。</p>
+<p>此方法使用模型的<code>find()</code>函数，返回所有<code>BookInstance</code>对象。然后它将一个调用，以菊花链方式连接到<code>populate()</code>，附加书本<code>book</code>字段，这将使用完整的<code>Book</code>文档，替换每个<code>BookInstance</code>存储的书本 ID。</p>
 
-<p>成功时，传递给查询的回调，会呈现 <strong>bookinstance_list</strong> (.pug)模板，并将标题<code>title</code>和书籍实例列表<code>bookinstance_list</code>作为变量传递。</p>
+<p>成功时，传递给查询的回调，会呈现 <strong>bookinstance_list</strong> (.pug) 模板，并将标题<code>title</code>和书籍实例列表<code>bookinstance_list</code>作为变量传递。</p>
 
-<h2 class="highlight-spanned" id="视图"><span class="highlight-span">视图</span></h2>
+<h2 class="highlight-spanned" id="视图">视图</h2>
 
 <p>创建 <strong>/views/bookinstance_list.pug</strong> ，並複制貼上底下的文字。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
 
 block content
-  h1<span class="operator token">=</span> title
+  h1= title
 
   ul
-  each val <span class="keyword token">in</span> bookinstance_list
+  each val in bookinstance_list
     li
-      <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>val<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>book<span class="punctuation token">.</span>title<span class="punctuation token">}</span> <span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>imprint<span class="punctuation token">}</span> <span class="operator token">-</span>
-      <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">==</span><span class="string token">'Available'</span>
-        span<span class="punctuation token">.</span>text<span class="operator token">-</span>success #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
-      <span class="keyword token">else</span> <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">==</span><span class="string token">'Maintenance'</span>
-        span<span class="punctuation token">.</span>text<span class="operator token">-</span>danger #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
-      <span class="keyword token">else</span>
-        span<span class="punctuation token">.</span>text<span class="operator token">-</span>warning #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
-      <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">!=</span><span class="string token">'Available'</span>
-        span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back<span class="punctuation token">}</span> <span class="punctuation token">)</span>
+      a(href=val.url) #{val.book.title} : #{val.imprint} -
+      if val.status=='Available'
+        span.text-success #{val.status}
+      else if val.status=='Maintenance'
+        span.text-danger #{val.status}
+      else
+        span.text-warning #{val.status}
+      if val.status!='Available'
+        span  (Due: #{val.due_back} )
 
-  <span class="keyword token">else</span>
-    li There are no book copies <span class="keyword token">in</span> <span class="keyword token">this</span> library<span class="punctuation token">.</span></code></pre>
+  else
+    li There are no book copies in this library.</code></pre>
 
 <p>这个視图与其他視图非常相似。它扩展了布局，替换内容區块，显示从控制器传入的标题<code>title</code>，并遍历<code>bookinstance_list</code> 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本不可用，则显示其预期返回日期。這裡引入了一个新功能 — 我们可以在标签之后使用点符号表示法，來指定一個类別。因此，<code>span.text-success</code> 将被编译为 <code>&lt;span class="text-success"&gt;</code> (也可以用 Pug 编写为 <code>span(class="text-success")</code>.</p>
 
-<h2 class="highlight-spanned" id="它看起來像是"><span class="highlight-span">它看起來像是?</span></h2>
+<h2 class="highlight-spanned" id="它看起來像是">它看起來像是？</h2>
 
 <p>运行本应用，打开浏览器访问 <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>，然后选择 All book-instances 连结。假如每个东西都设定正确了，你的网站看起来应该像是底下的截图。</p>
 
@@ -65,5 +65,5 @@ block content
 
 <ul>
  <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下个部分: <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">日期格式化与使用 moment</a></li>
+ <li>继续教程 5 下个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">日期格式化与使用 moment</a></li>
 </ul>

@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 
 <h2 id="Summary">概述</h2>
 
-<p><code><strong>ReferenceError（引用错误）</strong></code> 对象代表当一个不存在的变量被引用时发生的错误。</p>
+<p><code><strong>ReferenceError</strong></code>（引用错误）对象代表当一个不存在（或尚未初始化）的变量被引用时发生的错误。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 
 <h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Catch_an_ReferenceError">例: 捕获一个 <code>ReferenceError</code></h3>
+<h3 id="Example:_Catch_an_ReferenceError">例：捕获一个 <code>ReferenceError</code></h3>
 
 <pre class="brush: js">try {
   var a = undefinedVariable;
@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 }
 </pre>
 
-<h3 id="Example:_Create_an_ReferenceError">例: 创建一个 <code>ReferenceError</code></h3>
+<h3 id="Example:_Create_an_ReferenceError">例：创建一个 <code>ReferenceError</code></h3>
 
 <pre class="brush: js">try {
   throw new ReferenceError('Hello', 'someFile.js', 10);

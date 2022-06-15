@@ -16,7 +16,9 @@ L'instruction **`continue`** arrête l'exécution des instructions pour l'itéra
 
 ## Syntaxe
 
-    continue [ label ];
+```js
+continue [label];
+```
 
 - `label`
   - : Paramètre optionnel. Un identifiant associé à l'étiquette (_label_) de l'instruction pour laquelle on souhaite finir l'itération en cours.

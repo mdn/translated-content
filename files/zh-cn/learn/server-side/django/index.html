@@ -1,5 +1,5 @@
 ---
-title: Django Web 框架(python)
+title: Django Web 框架 (python)
 slug: learn/Server-side/Django
 translation_of: Learn/Server-side/Django
 ---
@@ -9,50 +9,50 @@ translation_of: Learn/Server-side/Django
 
 <h2 id="先决条件">先决条件</h2>
 
-<p>开始学习本模块并不需要任何 Django 知识. 但您要理解什么是服务器端网络编程、什么是网络框架，最好能够阅读我们的<a href="/zh-CN/docs/Learn/Server-side/First_steps">服务端网站编程的第一步</a>模块。</p>
+<p>开始学习本模块并不需要任何 Django 知识。但您要理解什么是服务器端网络编程、什么是网络框架，最好能够阅读我们的<a href="/zh-CN/docs/Learn/Server-side/First_steps">服务端网站编程的第一步</a>模块。</p>
 
 <p>最好能有基本的编程概念并了解 <a href="/zh-CN/docs/Glossary/Python">Python</a> 语言，但其并不是理解本教程的核心概念的必然条件。</p>
 
 <div class="note">
-<p><span style="font-size: 14px;"><strong>注意：</strong></span>对于初学者来说，Python 是最容易阅读和理解的编程语言之一。也就是说，如果您想更好的理解本教程，网上有很多免费书籍及免费教程可供参考学习（建议初学者查看 Python 官网的 <a href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">Python for Non Programmers</a>  教程）。</p>
+<p><strong>注意：</strong>对于初学者来说，Python 是最容易阅读和理解的编程语言之一。也就是说，如果您想更好的理解本教程，网上有很多免费书籍及免费教程可供参考学习（建议初学者查看 Python 官网的 <a href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">Python for Non Programmers</a>  教程）。</p>
 </div>
 
 <h2 id="指南">指南</h2>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/Introduction">Django简介</a></dt>
- <dd>在第一篇关于Django的文章里,我们会回答"什么是Django?",并概述这个网络框架的特殊之处.我们会列出主要的功能,包括一些高级的功能特性,这些高级特性我们在这部分教程里没有时间详细说明.在你设置好Django应用并开始把玩它之前,我们会展示Django应用的一些主要模块,让你明白Django应用能做什么.</dd>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Django/development_environment">创建Django开发环境</a></dt>
- <dd>现在你知道Django是做什么的,我们会展示怎样在Windows, Linux(Ubuntu)和Mac OS X上创建和测试Django的开发环境—不管你是用什么操作系统,这篇文章会教给你能够开发Django应用所需要的开发环境.</dd>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django教程1:本地图书馆网站</a></dt>
- <dd>我们实用教程系列的第一篇文章会解释你将学习到什么,并提供"本地图书馆"网站这个例子的概述.我们会在接下来的文章里完成并不断的进化这个网站.</dd>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website">Django教程2:创建网站的框架</a></dt>
- <dd>这篇文章会教你怎样创建一个网站的"框架".以这个网站为基础,你可以填充网站特定的settings,urls, models,views和templates</dd>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Models">Django教程3:使用模型</a></dt>
- <dd>这篇文章会为 <em>本地图书馆 </em>网站定义数据模板—数据模板是我们为应用存储的数据结构.并且允许Django在数据库中存储数据(以后可以修改).文章解释了什么是数据模板,怎样声明它和一些主要的数据种类.文章还简要的介绍了一些你可以获得数据模板的方法.</dd>
+ <dt><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/Introduction">Django 简介</a></dt>
+ <dd>在第一篇关于 Django 的文章里，我们会回答"什么是 Django?",并概述这个网络框架的特殊之处。我们会列出主要的功能，包括一些高级的功能特性，这些高级特性我们在这部分教程里没有时间详细说明。在你设置好 Django 应用并开始把玩它之前，我们会展示 Django 应用的一些主要模块，让你明白 Django 应用能做什么。</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Django/development_environment">创建 Django 开发环境</a></dt>
+ <dd>现在你知道 Django 是做什么的，我们会展示怎样在 Windows, Linux(Ubuntu) 和 Mac OS X 上创建和测试 Django 的开发环境—不管你是用什么操作系统，这篇文章会教给你能够开发 Django 应用所需要的开发环境。</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django 教程 1:本地图书馆网站</a></dt>
+ <dd>我们实用教程系列的第一篇文章会解释你将学习到什么，并提供"本地图书馆"网站这个例子的概述。我们会在接下来的文章里完成并不断的进化这个网站。</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website">Django 教程 2:创建网站的框架</a></dt>
+ <dd>这篇文章会教你怎样创建一个网站的"框架".以这个网站为基础，你可以填充网站特定的 settings,urls, models,views 和 templates</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Models">Django 教程 3:使用模型</a></dt>
+ <dd>这篇文章会为 <em>本地图书馆 </em>网站定义数据模板—数据模板是我们为应用存储的数据结构。并且允许 Django 在数据库中存储数据 (以后可以修改).文章解释了什么是数据模板，怎样声明它和一些主要的数据种类。文章还简要的介绍了一些你可以获得数据模板的方法。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django 管理站点</a></dt>
- <dd>现在我们已经为本地图书馆网站创建了模型，我们将使用 Django 管理站点 添加一些 ‘真实的’ 的图书数据。首先，我们将向你介绍如何使用管理站点注册模型，然后我们介绍如何登录和创建一些数据。最后我们展示一些进一步改进管理站点的演示方法。</dd>
+ <dd>现在我们已经为本地图书馆网站创建了模型，我们将使用 Django 管理站点 添加一些‘真实的’的图书数据。首先，我们将向你介绍如何使用管理站点注册模型，然后我们介绍如何登录和创建一些数据。最后我们展示一些进一步改进管理站点的演示方法。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: 创建我们的主页</a></dt>
- <dd>我们现在可以添加代码来展示我们的第一次完整页面—本地图书馆主页，来显示我们对每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本URL地图和视图，从数据库获取记录以及使用模版的实践经验。</dd>
+ <dd>我们现在可以添加代码来展示我们的第一次完整页面—本地图书馆主页，来显示我们对每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模版的实践经验。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: 通用列表和详细视图</a></dt>
- <dd>本教程扩展了我们的本地图书馆网站，添加书籍和作者和详细页面。在这里，我们将了解基于类的通用视图，并展示如何减少常用代码用例的代码量。我们还将更详细地深入理解URL处理，显示如何执行基本模式匹配。</dd>
+ <dd>本教程扩展了我们的本地图书馆网站，添加书籍和作者和详细页面。在这里，我们将了解基于类的通用视图，并展示如何减少常用代码用例的代码量。我们还将更详细地深入理解 URL 处理，显示如何执行基本模式匹配。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: 会话框架</a></dt>
  <dd>本教程扩展本地图书馆网站，向主页添加了一个基于会话的访问计数器。这是个比较简单的例子，但它显示如何使用会话框架为你自己的站点中的匿名用户提供一致的行为。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: 用户身份验证和权限</a></dt>
  <dd>本教程，我们将向你展示如何允许用户使用自己的账户登录到你的网站，以及如何根据他们是否登录及其权限来控制他们可以做什么和看到什么。作为此次演示的一部分，我们将扩展本地图书馆网站，添加登录和注销页面以及用户和工作人员特定页面，以查看已借用的书籍。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: 使用表单</a></dt>
- <dd>本教程，我们将向你展示如何使用Django 中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Forms">HTML表单</a>，特别是编写创建表单，更新和删除模型实例的最简单方法。作为此次演示的一部分，我们将扩展本地图书馆网站，以便图书馆员可以使用我们自己的表单(而不是使用管理应用程序) 来更新书籍，创建，更新和删除作者。</dd>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10:测试Django Web 应用程序</a></dt>
+ <dd>本教程，我们将向你展示如何使用 Django 中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Forms">HTML 表单</a>，特别是编写创建表单，更新和删除模型实例的最简单方法。作为此次演示的一部分，我们将扩展本地图书馆网站，以便图书馆员可以使用我们自己的表单 (而不是使用管理应用程序) 来更新书籍，创建，更新和删除作者。</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10:测试 Django Web 应用程序</a></dt>
  <dd>随着网站的的发展，手工测试越来越难测试—不仅要测试更多，而且随着组件之间的相互作用变得越来越复杂，一个领域的一个小的变化可能需要许多额外的测试来验证其对其他领域的影响。减轻这些问题的一种方法是编写自动化测试，每次更改时都可以轻松可靠地运行。本教程将介绍如何使用 Django 的测试框架对你的网站进行 <em><strong>单元测试</strong></em>自动化。</dd>
- <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: 将Django部署到生产</a></dt>
- <dd>现在，你已创建（并测试）一个酷的 本地图书馆网站，你将要把它安装在公共Web服务器上，以便图书馆员工和成员可以通过Internet访问。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能使你的网站准备好进行生产。</dd>
+ <dt><a href="/zh-CN/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: 将 Django 部署到生产</a></dt>
+ <dd>现在，你已创建（并测试）一个酷的 本地图书馆网站，你将要把它安装在公共 Web 服务器上，以便图书馆员工和成员可以通过 Internet 访问。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能使你的网站准备好进行生产。</dd>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/web_application_security">Django web 应用程序安全</a></dt>
- <dd>保护用户数据是任何网站设计的重要组成部分，我们以前解释了Web安全文章中一些更常见的安全威胁—本文提供了Django内置如何保护处理这种危险的实际演示。</dd>
+ <dd>保护用户数据是任何网站设计的重要组成部分，我们以前解释了 Web 安全文章中一些更常见的安全威胁—本文提供了 Django 内置如何保护处理这种危险的实际演示。</dd>
 </dl>
 
 <h2 id="评估">评估</h2>
 
-<p>以下评估将测试你对如何使用Django创建网站的理解，如上述指南中所述。</p>
+<p>以下评估将测试你对如何使用 Django 创建网站的理解，如上述指南中所述。</p>
 
 <dl>
  <dt><a href="/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></dt>

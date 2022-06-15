@@ -1,5 +1,5 @@
 ---
-title: GLSL着色器
+title: GLSL 着色器
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 tags:
   - GLSL
@@ -8,59 +8,59 @@ tags:
   - 顶点着色器
 translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
-<div>{{GamesSidebar}}</div><p class="summary"><span class="seosummary">使用GLSL的着色器(shader), GLSL是一门特殊的有着类似于C语言的语法, 在图形管道(graphic pipeline)中直接可执行的OpenGL着色语言. 着色器有两种类型 -- 顶点着色器(Vertex Shader)和片段着色器(Fragment Shader). 前者是将形状转换到真实的3D绘制坐标中, 后者是计算最终渲染的颜色和其他属性用的.</span></p>
+<div>{{GamesSidebar}}</div><p>使用 GLSL 的着色器 (shader), GLSL 是一门特殊的有着类似于 C 语言的语法，在图形管道 (graphic pipeline) 中直接可执行的 OpenGL 着色语言。着色器有两种类型 -- 顶点着色器 (Vertex Shader) 和片段着色器 (Fragment Shader). 前者是将形状转换到真实的 3D 绘制坐标中，后者是计算最终渲染的颜色和其他属性用的。</p>
 
-<p>GLSL不同于JavaScript, 它是强类型语言, 并且内置很多数学公式用于计算向量和矩阵. 快速编写着色器非常复杂, 但创建一个简单的着色器并不难. 在这篇文章我们将介绍使用着色器的基础知识, 并且构建一个使用Three.js的例子来加速代码编写.</p>
+<p>GLSL 不同于 JavaScript, 它是强类型语言，并且内置很多数学公式用于计算向量和矩阵。快速编写着色器非常复杂，但创建一个简单的着色器并不难。在这篇文章我们将介绍使用着色器的基础知识，并且构建一个使用 Three.js 的例子来加速代码编写。</p>
 
-<p>你可能记得<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">基本原理</a>那篇文章, 一个顶点(vertex)是在空间中有自己3D坐标的点, 并且通常包含些被定义的其他信息. 空间本身会被坐标系统定义. 在那个3D空间中一切都是关于形状的呈现.</p>
+<p>你可能记得<a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">基本原理</a>那篇文章，一个顶点 (vertex) 是在空间中有自己 3D 坐标的点，并且通常包含些被定义的其他信息。空间本身会被坐标系统定义。在那个 3D 空间中一切都是关于形状的呈现。</p>
 
 <h2 id="着色器类型">着色器类型</h2>
 
-<p>一个着色器实际上就是一个绘制东西到屏幕上的函数. 着色器运行在GPU中, 它对这些操作进行了很多的优化, 这样你就可以卸载很多不必要的CPU, 然后集中处理能力去执行你自己的代码.</p>
+<p>一个着色器实际上就是一个绘制东西到屏幕上的函数。着色器运行在 GPU 中，它对这些操作进行了很多的优化，这样你就可以卸载很多不必要的 CPU, 然后集中处理能力去执行你自己的代码。</p>
 
 <h3 id="顶点着色器">顶点着色器</h3>
 
-<p>顶点着色器操作3D空间的坐标并且每个顶点都会调用一次这个函数. 其目的是设置 <code>gl_Position</code> 变量 -- 这是一个特殊的全局内置变量, 它是用来存储当前顶点的位置:</p>
+<p>顶点着色器操作 3D 空间的坐标并且每个顶点都会调用一次这个函数。其目的是设置 <code>gl_Position</code> 变量 -- 这是一个特殊的全局内置变量，它是用来存储当前顶点的位置：</p>
 
 <pre class="brush: glsl">void main() {
 	gl_Position = makeCalculationsToHaveCoordinates;
 }
 </pre>
 
-<p>这个 <code>void main()</code> 函数是定义全局<code>gl_Position</code> 变量的标准方式. 所有在这个函数里面的代码都会被着色器执行.  如果将3D空间中的位置投射到2D屏幕上这些信息都会保存在计算结果的变量中.</p>
+<p>这个 <code>void main()</code> 函数是定义全局<code>gl_Position</code> 变量的标准方式。所有在这个函数里面的代码都会被着色器执行。 如果将 3D 空间中的位置投射到 2D 屏幕上这些信息都会保存在计算结果的变量中。</p>
 
 <h3 id="片段着色器">片段着色器</h3>
 
-<p>片段 (或者纹理) 着色器 在计算时定义了每像素的 RGBA 颜色 — 每个像素只调用一次片段着色器. 这个着色器的作用是设置 <code>gl_FragColor</code> 变量, 也是一个GLSL内置变量:</p>
+<p>片段 (或者纹理) 着色器 在计算时定义了每像素的 RGBA 颜色 — 每个像素只调用一次片段着色器。这个着色器的作用是设置 <code>gl_FragColor</code> 变量，也是一个 GLSL 内置变量：</p>
 
 <pre class="brush: glsl">void main() {
 	gl_FragColor = makeCalculationsToHaveColor;
 }
 </pre>
 
-<p>计算结果包含RGBA颜色信息.</p>
+<p>计算结果包含 RGBA 颜色信息。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>让我们构建一个简单的例子来解释这些着色器的动作. 假设你已经看过<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js 教程</a>并掌握了场景, 物体和材质的基本概念.</p>
+<p>让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js 教程</a>并掌握了场景，物体和材质的基本概念。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 记住你没必要使用Three.js或者其他库来编写着色器 -- 纯<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> 完全够了. 我们这里使用Three.js来制作背景代码更简单和易理解. 所以你只需关注着色器代码. Three.js和其他3D库给你抽象了很多东西出来 -- 如果你想要用纯WebGL创建这个例子, 你得写很多其他的代码才能运行.</p>
+<p><strong>注意</strong>: 记住你没必要使用 Three.js 或者其他库来编写着色器 -- 纯<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来 -- 如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。</p>
 </div>
 
 <h3 id="环境设置">环境设置</h3>
 
-<p>要开始编写WebGL着色器你不需要做太多, 只需:</p>
+<p>要开始编写 WebGL 着色器你不需要做太多，只需：</p>
 
 <ul>
- <li>确保你在使用对 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> 有良好支持的现代浏览器, 比如最新版的Firefox或Chrome.</li>
- <li>创建一个目录保存你的实验.</li>
- <li>拷贝一份的 <a href="http://threejs.org/build/three.min.js">压缩版的Three.js 库</a> 到你的目录.</li>
+ <li>确保你在使用对 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.</li>
+ <li>创建一个目录保存你的实验。</li>
+ <li>拷贝一份的 <a href="http://threejs.org/build/three.min.js">压缩版的 Three.js 库</a> 到你的目录。</li>
 </ul>
 
 <h3 id="HTML_结构">HTML 结构</h3>
 
-<p>这是将用到的HTML结构.</p>
+<p>这是将用到的 HTML 结构。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -87,53 +87,53 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 &lt;/html&gt;
 </pre>
 
-<p>他包含了一些基本信息比如 文档的 {{htmlelement("title")}}, 并且设置了{{htmlelement("canvas")}}元素css样式的宽高, Three.js会插入到页面中占满整个可视区域.  {{htmlelement("script")}}元素在包含Three.js库的{{htmlelement("head")}}中. 我们的代码将卸载{{htmlelement("body")}}标签中的script标签中:</p>
+<p>他包含了一些基本信息比如 文档的 {{htmlelement("title")}}, 并且设置了{{htmlelement("canvas")}}元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。 {{htmlelement("script")}}元素在包含 Three.js 库的{{htmlelement("head")}}中。我们的代码将卸载{{htmlelement("body")}}标签中的 script 标签中：</p>
 
 <ol>
- <li>首先将包含顶点着色器.</li>
- <li>然后包含片段着色器.</li>
- <li>最后会包含一些生成实际场景的JavaScript代码.</li>
+ <li>首先将包含顶点着色器。</li>
+ <li>然后包含片段着色器。</li>
+ <li>最后会包含一些生成实际场景的 JavaScript 代码。</li>
 </ol>
 
-<p>阅读之前, 复制这些代码到一个新的文本文件中, 保存到你的工作目录作为 <code>index.html</code>. 我们将在这个文件中创建一个简单的立方体来解释着色器是如何工作的.</p>
+<p>阅读之前，复制这些代码到一个新的文本文件中，保存到你的工作目录作为 <code>index.html</code>. 我们将在这个文件中创建一个简单的立方体来解释着色器是如何工作的。</p>
 
 <h3 id="立方体源代码">立方体源代码</h3>
 
-<p>我们可以复用<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> 中立方体的源代码, 大多数元素例如渲染器, 摄像机和灯光都没有发生改变, 但是基本的材质会用到自己写的着色器.</p>
+<p>我们可以复用<a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。</p>
 
-<p>去<a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">cube.html file on GitHub</a>中, 复制第二个{{htmlelement("script")}}元素中所有的JavaScript代码, 粘贴到当前例子中的第三个<code>&lt;script&gt;</code>  标签中. 保存并运行 <code>index.html</code> — 然后你会看到一个蓝色立方体</p>
+<p>去<a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">cube.html file on GitHub</a>中，复制第二个{{htmlelement("script")}}元素中所有的 JavaScript 代码，粘贴到当前例子中的第三个<code>&lt;script&gt;</code>  标签中。保存并运行 <code>index.html</code> — 然后你会看到一个蓝色立方体</p>
 
 <h3 id="顶点着色器代码">顶点着色器代码</h3>
 
-<p>让我们继续编写顶点着色器 — 添加下面这段代码到你body的第一个 <code>&lt;script&gt;</code> 标签:</p>
+<p>让我们继续编写顶点着色器 — 添加下面这段代码到你 body 的第一个 <code>&lt;script&gt;</code> 标签：</p>
 
 <pre class="brush: glsl">void main() {
 	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
 </pre>
 
-<p>每次的<code>gl_Position</code> 的结果是计算model-view矩阵和投射矩阵和投射矩阵相乘并得到最后的顶点位置.</p>
+<p>每次的<code>gl_Position</code> 的结果是计算 model-view 矩阵和投射矩阵和投射矩阵相乘并得到最后的顶点位置。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以在 <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing">顶点处理</a>中学到更多关于模型, 视图和投射变换, 并且你可以在文末看到更多学习链接.</p>
+<p><strong>注意</strong>: 你可以在 <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing">顶点处理</a>中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。</p>
 </div>
 
-<p><code>projectionMatrix</code> 和 <code>modelViewMatrix</code> 两个函数都是Three.js提供的, 并且传入了一个新的3D位置向量, 转成着色器之后直接导致立方体向 <code>x</code> 轴移动10个单位, 向<code>z</code> 轴移动了5个单位. 我们可以忽略第四个参数并且保持为默认的<code>1.0</code> ; 这是用来控制3D空间中订单位置裁剪的, 这个例子中不需要.</p>
+<p><code>projectionMatrix</code> 和 <code>modelViewMatrix</code> 两个函数都是 Three.js 提供的，并且传入了一个新的 3D 位置向量，转成着色器之后直接导致立方体向 <code>x</code> 轴移动 10 个单位，向<code>z</code> 轴移动了 5 个单位。我们可以忽略第四个参数并且保持为默认的<code>1.0</code> ; 这是用来控制 3D 空间中订单位置裁剪的，这个例子中不需要。</p>
 
 <h3 id="纹理着色器代码">纹理着色器代码</h3>
 
-<p>现在我们将添加纹理着色器代码 — 将以下代码复制到第二个 <code>&lt;script&gt;</code> 标签中:</p>
+<p>现在我们将添加纹理着色器代码 — 将以下代码复制到第二个 <code>&lt;script&gt;</code> 标签中：</p>
 
 <pre class="brush: glsl">void main() {
 	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
 </pre>
 
-<p>这将设置一个RGBA颜色来重建当前的蓝色灯光 — 前三个浮点数(范围是0.0到1.0) 代表红, 绿, 蓝, 第四个值代表alpha通道, 控制透明度(0.0完全透明, 1.0是完全不透明).</p>
+<p>这将设置一个 RGBA 颜色来重建当前的蓝色灯光 — 前三个浮点数 (范围是 0.0 到 1.0) 代表红，绿，蓝，第四个值代表 alpha 通道，控制透明度 (0.0 完全透明，1.0 是完全不透明).</p>
 
 <h3 id="设置着色器">设置着色器</h3>
 
-<p>实际上是创建了一个新的着色器给立方体, 先用 <code>basicMaterial</code> 来定义:</p>
+<p>实际上是创建了一个新的着色器给立方体，先用 <code>basicMaterial</code> 来定义：</p>
 
 <pre class="brush: js">// var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 </pre>
@@ -148,7 +148,7 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 
 <p>这个着色器材质使用脚本中的代码并将它们赋予给材质所赋予的物体</p>
 
-<p>然后, 在定义立方体材质那一行我们需要替换<code>basicMaterial</code> :</p>
+<p>然后，在定义立方体材质那一行我们需要替换<code>basicMaterial</code> :</p>
 
 <pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
 </pre>
@@ -158,23 +158,23 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 <pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
 </pre>
 
-<p>Three.js编译和运行这两个这两个着色器到材质所在的网格(mesh)上. 在这个例子中, 为立方体添加了有顶点和纹理着色器. 好了, 你已经创建了最简单的着色器, 祝贺!</p>
+<p>Three.js 编译和运行这两个这两个着色器到材质所在的网格 (mesh) 上。在这个例子中，为立方体添加了有顶点和纹理着色器。好了，你已经创建了最简单的着色器，祝贺！</p>
 
-<p>下图是立方体最终效果:</p>
+<p>下图是立方体最终效果：</p>
 
 <p><img alt="Three.js blue cube demo" src="http://end3r.github.io/MDN-Games-3D/Shaders/img/cube.png" style="display: block; margin: 0px auto;"></p>
 
-<p>它看起来好像和Three.js的立方体demo一样, 但不同的是, 位置有点轻微变化, 而且同样的蓝色使用的是着色器实现. 你可以看看实际操作, 这里有最终代码:{{JSFiddleEmbed("https://jsfiddle.net/end3r/LL55bhrz/","","350")}}</p>
+<p>它看起来好像和 Three.js 的立方体 demo 一样，但不同的是，位置有点轻微变化，而且同样的蓝色使用的是着色器实现。你可以看看实际操作，这里有最终代码:{{JSFiddleEmbed("https://jsfiddle.net/end3r/LL55bhrz/","","350")}}</p>
 
-<p>你也可以在 <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Shaders/shaders.html">GitHub</a> 看这个例子.</p>
+<p>你也可以在 <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Shaders/shaders.html">GitHub</a> 看这个例子。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>本文教了你最基本的着色器实现. 我们虽然只能做这么多, 但你可以用着色器做很更多炫酷的事情 — 在 <a href="http://shadertoy.com/">ShaderToy</a> 上去看真正炫酷的例子找找灵感吧</p>
+<p>本文教了你最基本的着色器实现。我们虽然只能做这么多，但你可以用着色器做很更多炫酷的事情 — 在 <a href="http://shadertoy.com/">ShaderToy</a> 上去看真正炫酷的例子找找灵感吧</p>
 
 <h2 id="其他链接">其他链接</h2>
 
 <ul>
- <li><a href="http://learningwebgl.com/blog/?page_id=1217">学习WebGL</a> — 基本WebGL知识</li>
- <li><a href="http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html">WebGL着色器和WebGL中的GLSL基础</a> — GLSL特定信息</li>
+ <li><a href="http://learningwebgl.com/blog/?page_id=1217">学习 WebGL</a> — 基本 WebGL 知识</li>
+ <li><a href="http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html">WebGL 着色器和 WebGL 中的 GLSL 基础</a> — GLSL 特定信息</li>
 </ul>

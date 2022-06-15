@@ -12,18 +12,18 @@ translation_of: 'Web/CSS/:active'
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><a href="/zh-CN/docs/Web/CSS">CSS</a> <strong><code>:active</code></strong> <a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a>匹配被用户激活的元素。</span>它让页面能在浏览器监测到激活时给出反馈。当用鼠标交互时，它代表的是用户按下按键和松开按键之间的时间。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <strong><code>:active</code></strong> <a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a>匹配被用户激活的元素。它让页面能在浏览器监测到激活时给出反馈。当用鼠标交互时，它代表的是用户按下按键和松开按键之间的时间。</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;a&gt; that is being activated */
 a:active {
   color: red;
 }</pre>
 
-<p><code>:active</code> 伪类一般被用在 {{HTMLElement("a")}} 和 {{HTMLElement("button")}} 元素中. 这个伪类的一些其他适用对象包括包含激活元素的元素，以及可以通过他们关联的{{HTMLElement("label")}}标签被激活的表格元素。</p>
+<p><code>:active</code> 伪类一般被用在 {{HTMLElement("a")}} 和 {{HTMLElement("button")}} 元素中。这个伪类的一些其他适用对象包括包含激活元素的元素，以及可以通过他们关联的{{HTMLElement("label")}}标签被激活的表格元素。</p>
 
 <p>这个样式可能会被后声明的其他链接相关的伪类覆盖，这些伪类包括 {{cssxref(":link")}}，{{cssxref(":hover")}} 和 {{cssxref(":visited")}}。为保证样式生效，需要把 <code>:active</code> 的样式放在所有链接相关的样式之后。这种链接伪类先后顺序被称为 <em>LVHA 顺序</em>：<code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>。</p>
 
-<div class="note"><strong>注意:</strong> 在有多键鼠标的系统中，CSS 3 规定 <code>:active</code> 伪类必须只匹配主按键；对于右手操作鼠标来说，就是左键。</div>
+<div class="note"><strong>注意：</strong> 在有多键鼠标的系统中，CSS 3 规定 <code>:active</code> 伪类必须只匹配主按键；对于右手操作鼠标来说，就是左键。</div>
 
 <h2 id="语法">语法</h2>
 

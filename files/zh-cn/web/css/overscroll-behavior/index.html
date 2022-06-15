@@ -5,14 +5,14 @@ translation_of: Web/CSS/overscroll-behavior
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>overscroll-behavior</code></strong> CSS 属性是 {{cssxref("overscroll-behavior-x")}} 和 {{cssxref("overscroll-behavior-y")}} 属性的合并写法, 让你可以控制浏览器过度滚动时的表现——也就是滚动到边界。</span></p>
+<p><strong><code>overscroll-behavior</code></strong> CSS 属性是 {{cssxref("overscroll-behavior-x")}} 和 {{cssxref("overscroll-behavior-y")}} 属性的合并写法，让你可以控制浏览器过度滚动时的表现——也就是滚动到边界。</p>
 
 <pre class="brush:css no-line-numbers">/* 关键字的值 */
 overscroll-behavior: auto; /* 默认 */
 overscroll-behavior: contain;
 overscroll-behavior: none;
 
-/* 使用2个值 */
+/* 使用 2 个值 */
 overscroll-behavior: auto contain;
 
 /* Global values */
@@ -50,7 +50,7 @@ overflow: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<p>在我们 <a href="https://mdn.github.io/css-examples/overscroll-behavior/">滚动行为示例</a> (也可以看该 <a href="https://github.com/mdn/css-examples/tree/master/overscroll-behavior">源代码</a>)我们展现一个虚构的联系人全页列表，和一个包含聊天窗口的对话框。</p>
+<p>在我们 <a href="https://mdn.github.io/css-examples/overscroll-behavior/">滚动行为示例</a> (也可以看该 <a href="https://github.com/mdn/css-examples/tree/master/overscroll-behavior">源代码</a>) 我们展现一个虚构的联系人全页列表，和一个包含聊天窗口的对话框。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15778/example.png" style="border-style: solid; border-width: 1px; display: block; height: 622px; margin: 0px auto; width: 350px;"></p>
 
@@ -62,7 +62,7 @@ overflow: unset;
   overscroll-behavior-y: contain;
 } </pre>
 
-<p>我们也希望移除标准的滚动至顶部或底部的滚动特效（例如Android上的Chrome当滚动超过顶部边界时会刷新页面），可以通过在 {{htmlelement("body")}} 元素设置 <code>overscroll-behavior: none</code> 来阻止这个行为：</p>
+<p>我们也希望移除标准的滚动至顶部或底部的滚动特效（例如 Android 上的 Chrome 当滚动超过顶部边界时会刷新页面），可以通过在 {{htmlelement("body")}} 元素设置 <code>overscroll-behavior: none</code> 来阻止这个行为：</p>
 
 <pre class="brush: css">body {
   margin: 0;

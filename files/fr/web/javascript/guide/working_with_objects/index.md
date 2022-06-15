@@ -313,7 +313,7 @@ Voiture.prototype.couleur = null;
 voiture1.couleur = "noir";
 ```
 
-Pour plus d'informations, voir l'article sur [la propriété `prototype`](/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function) de l'objet `Function` de la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Pour plus d'informations, voir l'article sur [la propriété `prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) de l'objet `Function` de la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 ## Définir des méthodes
 

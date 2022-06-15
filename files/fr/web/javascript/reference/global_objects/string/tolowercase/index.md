@@ -18,7 +18,9 @@ La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en m
 
 ## Syntaxe
 
-    str.toLowerCase()
+```js
+str.toLowerCase()
+```
 
 ### Valeur de retour
 

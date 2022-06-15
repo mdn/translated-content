@@ -21,7 +21,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 
 <ul>
  <li>Chrome API 仅适用于应用，不适用于扩展程序。</li>
- <li>此API需要 <code>"clipboardWrite"</code> 权限，Chrome 版本需要 <code>"clipboard"</code> 权限。</li>
+ <li>此 API 需要 <code>"clipboardWrite"</code> 权限，Chrome 版本需要 <code>"clipboard"</code> 权限。</li>
  <li>Chrome 的 API 使用回调，此 API 使用 Promise。</li>
  <li>此 API 不支持 <code>additionalItems</code> 参数。</li>
 </ul>
@@ -54,17 +54,17 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 
 <p>Copy a remote image:</p>
 
-<pre class="brush: js" id="ct-71"><span class="quote">// requires:
+<pre class="brush: js" id="ct-71">// requires:
 // * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
 // * the API permission "clipboardWrite"
 
 fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofollow">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
 .then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</span></pre>
+.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
 
-<p><span class="quote">Copy an image that was bundled with the extension:</span></p>
+<p>Copy an image that was bundled with the extension:</p>
 
-<pre class="brush: js" id="ct-70">// requires <span class="quote">the API permission </span>"clipboardWrite"
+<pre class="brush: js" id="ct-70">// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())

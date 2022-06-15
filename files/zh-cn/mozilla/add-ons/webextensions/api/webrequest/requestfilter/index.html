@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>webRequest事件参数</p>
+<p>webRequest 事件参数</p>
 
 <h2 id="Type">Type</h2>
 
@@ -15,13 +15,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 
 <dl class="reference-values">
  <dt><code>urls</code></dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">字符串数组类型，数组内的每个字符串为<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Match_patterns">模式匹配</a>格式。当请求地址符合给定模式时，事件监听器才会响应。需注意的是，仅支持http和HTTPS协议的参数地址，其他协议即使与该给定模式匹配也不会响应。</font></dd>
+ <dd>字符串数组类型，数组内的每个字符串为<a href="https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Match_patterns">模式匹配</a>格式。当请求地址符合给定模式时，事件监听器才会响应。需注意的是，仅支持 http 和 HTTPS 协议的参数地址，其他协议即使与该给定模式匹配也不会响应。</dd>
  <dt><code>types</code>{{optional_inline}}</dt>
- <dd>webRequest.ResourceType类型的数组，表示资源类型列表。例如：stylesheets、images、scripts。事件监听器仅响应出现在该指定列表的资源类型。</dd>
+ <dd>webRequest.ResourceType 类型的数组，表示资源类型列表。例如：stylesheets、images、scripts。事件监听器仅响应出现在该指定列表的资源类型。</dd>
  <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">数值类型，与</font>{{WebExtAPIRef("tabs.Tab", "tab")}}关联，事件监听器仅响应指定了该tabId的请求。</dd>
+ <dd>数值类型，与{{WebExtAPIRef("tabs.Tab", "tab")}}关联，事件监听器仅响应指定了该 tabId 的请求。</dd>
  <dt><code>windowId</code>{{optional_inline}}</dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">数值类型，与</font>{{WebExtAPIRef("windows.Window", "window")}}关联，事件监听器仅响应指定了该<code>windowId</code>的请求。</dd>
+ <dd>数值类型，与{{WebExtAPIRef("windows.Window", "window")}}关联，事件监听器仅响应指定了该<code>windowId</code>的请求。</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -32,9 +32,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 
 <div class="note"><strong>告知信息</strong>
 
-<p>该API基于Chromium的 <a href="https://developer.chrome.com/extensions/webRequest#type-RequestFilter"><code>chrome.webRequest</code></a> API. 该文档来源于Chromium代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> 。</p>
+<p>该 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/webRequest#type-RequestFilter"><code>chrome.webRequest</code></a> API. 该文档来源于 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> 。</p>
 
-<p>Microsoft Edge兼容性数据由Microsoft Corporation提供，并包含在Creative Commons Attribution 3.0 United States License下。</p>
+<p>Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License 下。</p>
 </div>
 
 <div class="hidden">

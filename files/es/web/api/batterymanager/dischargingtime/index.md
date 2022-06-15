@@ -67,4 +67,3 @@ navigator.getBattery().then(function(battery) {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
-

@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Cookies
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary"><dfn>HTTP cookie</dfn>（web cookie、browser cookie）為伺服器傳送予使用者瀏覽器的一個小片段資料。瀏覽器可能儲存並於下一次請求回傳 cookie 至相同的伺服器。</span>Cookie 通常被用來保持使用者的登入狀態——如果兩次請求都來自相同的瀏覽器。舉例來說，它記住了<a href="/zh-TW/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless">無狀態（stateless）</a>HTTP 協議的有狀態資訊。</p>
+<p><dfn>HTTP cookie</dfn>（web cookie、browser cookie）為伺服器傳送予使用者瀏覽器的一個小片段資料。瀏覽器可能儲存並於下一次請求回傳 cookie 至相同的伺服器。Cookie 通常被用來保持使用者的登入狀態——如果兩次請求都來自相同的瀏覽器。舉例來說，它記住了<a href="/zh-TW/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless">無狀態（stateless）</a>HTTP 協議的有狀態資訊。</p>
 
 <p>Cookies 主要用於三個目的：</p>
 
@@ -57,7 +57,7 @@ Set-Cookie: tasty_cookie=strawberry
 
 [page content]</pre>
 
-<p id="The_client_sends_back_to_the_server_its_cookies_previously_stored">現在隨著每個請求，瀏覽器會使用 {{HTTPHeader("Cookie")}} 標頭將所有先前儲存的 cookies 傳給伺服器。</p>
+<p>現在隨著每個請求，瀏覽器會使用 {{HTTPHeader("Cookie")}} 標頭將所有先前儲存的 cookies 傳給伺服器。</p>
 
 <pre>GET /sample_page.html HTTP/1.1
 Host: www.example.org
@@ -121,7 +121,7 @@ console.log(document.cookie);
 <h2 id="安全性">安全性</h2>
 
 <div class="note">
-<p><span>機密或敏感的資訊永遠不應該以 HTTP Cookies 的方式儲存或傳送，因為整個機制的本質是不安全的。</span></p>
+<p>機密或敏感的資訊永遠不應該以 HTTP Cookies 的方式儲存或傳送，因為整個機制的本質是不安全的。</p>
 </div>
 
 <h3 id="Session_hijacking_以及_XSS">Session hijacking 以及 XSS</h3>
@@ -160,7 +160,7 @@ console.log(document.cookie);
 
 <h3 id="Do-Not-Track">Do-Not-Track</h3>
 
-<p><span>對於 cookie 的使用並沒有法律上或技術上的規定，但可利用 {{HTTPHeader("DNT")}} 標頭，指示網頁應用程式關閉頁面的追蹤、或跨站的使用者追蹤。參見{{HTTPHeader("DNT")}} 標頭以獲得更多資訊。</span></p>
+<p>對於 cookie 的使用並沒有法律上或技術上的規定，但可利用 {{HTTPHeader("DNT")}} 標頭，指示網頁應用程式關閉頁面的追蹤、或跨站的使用者追蹤。參見{{HTTPHeader("DNT")}} 標頭以獲得更多資訊。</p>
 
 <h3 id="EU_cookie_directive">EU cookie directive</h3>
 

@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Server-Timing
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p><strong><code>Server-Timing</code></strong> 标头传达在一个给定请求-响应周期中的一个或多个参数和描述。它用于在用户浏览器的开发工具或 {{domxref("PerformanceServerTiming")}} 接口中显示任何后端服务器定时参数（例如，数据库读/写、CPU 时间、文件系统访问等）。</p>
+<p><strong><code>Server-Timing</code></strong> 标头传达在一个给定请求 - 响应周期中的一个或多个参数和描述。它用于在用户浏览器的开发工具或 {{domxref("PerformanceServerTiming")}} 接口中显示任何后端服务器定时参数（例如，数据库读/写、CPU 时间、文件系统访问等）。</p>
 
 <table class="properties">
  <tbody>
@@ -55,7 +55,7 @@ Server-Timing: total;dur=123.4
 
 <h2 id="PerformanceServerTiming_接口">PerformanceServerTiming 接口</h2>
 
-<p>除了在浏览器的开发工具中显示 <code>Server-Timing</code> 外,{{domxref("PerformanceServerTiming")}} 接口允许工具自动收集和处理 JavaScript 中的参数。此接口仅限于相同的源下使用，但您可以使用 {{HTTPHeader("Timing-Allow-Origin")}} 头指定允许访问服务器参数的域。该接口仅在某些浏览器中的安全上下文（HTTPS）中可用。</p>
+<p>除了在浏览器的开发工具中显示 <code>Server-Timing</code> 外，{{domxref("PerformanceServerTiming")}} 接口允许工具自动收集和处理 JavaScript 中的参数。此接口仅限于相同的源下使用，但您可以使用 {{HTTPHeader("Timing-Allow-Origin")}} 头指定允许访问服务器参数的域。该接口仅在某些浏览器中的安全上下文（HTTPS）中可用。</p>
 
 <h2 id="规范">规范</h2>
 

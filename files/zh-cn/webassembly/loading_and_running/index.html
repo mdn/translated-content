@@ -1,5 +1,5 @@
 ---
-title: 加载和运行WebAssembly代码
+title: 加载和运行 WebAssembly 代码
 slug: WebAssembly/Loading_and_running
 tags:
   - Fetch
@@ -10,23 +10,23 @@ translation_of: WebAssembly/Loading_and_running
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">为了在JavaScript中使用WebAssembly，在编译/实例化之前，你首先需要把模块放入内存。比如，通过<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>或<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>，模块将会被初始化为带类型数组；不过，将来会开发更多的方式。本文提供了一篇关于获取WebAssembly字节码的不同机制以及如何编译/实例化并运行它的参考。</p>
+<p>为了在 JavaScript 中使用 WebAssembly，在编译/实例化之前，你首先需要把模块放入内存。比如，通过<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>或<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>，模块将会被初始化为带类型数组；不过，将来会开发更多的方式。本文提供了一篇关于获取 WebAssembly 字节码的不同机制以及如何编译/实例化并运行它的参考。</p>
 
 <h2 id="这里的主题是什么？">这里的主题是什么？</h2>
 
-<p>WebAssembly还没有和&lt;script type='module'&gt;或ES6的import语句集成，也就是说，当前还没有内置的方式让浏览器为你获取模块。当前唯一的方式就是创建一个包含你的WebAssembly模块二进制代码的 {{domxref("ArrayBuffer")}} 并且使用{{jsxref("WebAssembly.instantiate()")}}编译它。这与new Function(string)类似，除了使用一个包含了WebAssembly源代码的数组缓存替换掉包含了JavaScript源代码的字符串。</p>
+<p>WebAssembly 还没有和&lt;script type='module'&gt;或 ES6 的 import 语句集成，也就是说，当前还没有内置的方式让浏览器为你获取模块。当前唯一的方式就是创建一个包含你的 WebAssembly 模块二进制代码的 {{domxref("ArrayBuffer")}} 并且使用{{jsxref("WebAssembly.instantiate()")}}编译它。这与 new Function(string) 类似，除了使用一个包含了 WebAssembly 源代码的数组缓存替换掉包含了 JavaScript 源代码的字符串。</p>
 
 <p>那么，我们该如何获取这些字节并存入到一个数组缓存并编译它呢？下面进行解释。</p>
 
-<h2 id="使用Fetch">使用Fetch</h2>
+<h2 id="使用Fetch">使用 Fetch</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>是一个用来获取网络资源的方便现代的API。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>是一个用来获取网络资源的方便现代的 API。</p>
 
-<p>假设网络上有一个叫做simple.wasm的WebAssembly模块：</p>
+<p>假设网络上有一个叫做 simple.wasm 的 WebAssembly 模块：</p>
 
 <ul>
- <li>我们可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a>全局函数来轻松地获取它，该函数返回一个可以解析为<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a>对象的promise。</li>
- <li>我们可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/arrayBuffer">arrayBuffer()</a>函数把响应（response）转换为带类型数组，该函数返回一个可以解析为带类型数组的promise。</li>
+ <li>我们可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a>全局函数来轻松地获取它，该函数返回一个可以解析为<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a>对象的 promise。</li>
+ <li>我们可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/arrayBuffer">arrayBuffer()</a>函数把响应（response）转换为带类型数组，该函数返回一个可以解析为带类型数组的 promise。</li>
  <li>最后，我们使用{{jsxref("WebAssembly.instantiate()")}}函数一步实现编译和实例化带类型数组。</li>
 </ul>
 
@@ -40,26 +40,26 @@ translation_of: WebAssembly/Loading_and_running
   // Do something with the compiled results!
 });</pre>
 
-<h3 id="顺便说一下instantiate()重载">顺便说一下instantiate()重载</h3>
+<h3 id="顺便说一下instantiate()重载">顺便说一下 instantiate() 重载</h3>
 
-<p>{{jsxref("WebAssembly.instantiate()")}}函数有两种重载形式——一种是前面展示的那样，接受待编译的字节码作为参数并且返回一个promise并且该promise可以解析为一个包含已编译的模块对象及其实例的对象。</p>
+<p>{{jsxref("WebAssembly.instantiate()")}}函数有两种重载形式——一种是前面展示的那样，接受待编译的字节码作为参数并且返回一个 promise 并且该 promise 可以解析为一个包含已编译的模块对象及其实例的对象。</p>
 
 <pre class="brush: js">{
-  module : Module // 新编译的WebAssembly.Module对象，
+  module : Module // 新编译的 WebAssembly.Module 对象，
   instance : Instance // 新的模块对象实例
 }</pre>
 
 <div class="note">
-<p><strong>注</strong>： 通常，我们只关心实例，但是，当我们想缓存模块，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a>与另外一个worker或window共享模块或者只是创建更多的实例的时候，拥有模块对象是很有用的。</p>
+<p><strong>注</strong>：通常，我们只关心实例，但是，当我们想缓存模块，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a>与另外一个 worker 或 window 共享模块或者只是创建更多的实例的时候，拥有模块对象是很有用的。</p>
 </div>
 
 <div class="note">
-<p><strong>注</strong>： 这二种重载形式接受一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a>对象作为参数，并且返回一个包含了一个实例对象的promise。参考<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">第二种重载示例</a>。</p>
+<p><strong>注</strong>：这二种重载形式接受一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a>对象作为参数，并且返回一个包含了一个实例对象的 promise。参考<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">第二种重载示例</a>。</p>
 </div>
 
 <h3 id="获取及实例化的实用函数">获取及实例化的实用函数</h3>
 
-<p>上面的代码样式可以工作，但是，每次都重新编写它们就显得啰嗦了，特别是当你想要加载多个模块的时候。为了简单起见，我们创建了一个叫做fetchAndInstantiate()的实用函数，它在后台工作并返回一个promise。你可以在<a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">wasm-utils.js</a>中找到这个函数。它看起来像这样：</p>
+<p>上面的代码样式可以工作，但是，每次都重新编写它们就显得啰嗦了，特别是当你想要加载多个模块的时候。为了简单起见，我们创建了一个叫做 fetchAndInstantiate() 的实用函数，它在后台工作并返回一个 promise。你可以在<a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">wasm-utils.js</a>中找到这个函数。它看起来像这样：</p>
 
 <pre class="brush: js">function fetchAndInstantiate(url, importObject) {
   return fetch(url).then(response =&gt;
@@ -71,19 +71,19 @@ translation_of: WebAssembly/Loading_and_running
   );
 }</pre>
 
-<p>把这个函数加入到HTML中，你就可以使用一行简单代码做到获取和实例化WebAssembly模块并且得到一个实例。</p>
+<p>把这个函数加入到 HTML 中，你就可以使用一行简单代码做到获取和实例化 WebAssembly 模块并且得到一个实例。</p>
 
 <pre class="brush: js">fetchAndInstantiate('module.wasm', importObject).then(function(instance) {
   ...
 })</pre>
 
 <div class="note">
-<p><strong>注</strong>： 在我们的文档中，你可以看到许多这么用的例子（例如，参考<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">index.html</a>）——这是我们推荐的加载模块的标准方式。</p>
+<p><strong>注</strong>：在我们的文档中，你可以看到许多这么用的例子（例如，参考<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">index.html</a>）——这是我们推荐的加载模块的标准方式。</p>
 </div>
 
-<h3 id="运行你的WebAssembly代码">运行你的WebAssembly代码</h3>
+<h3 id="运行你的WebAssembly代码">运行你的 WebAssembly 代码</h3>
 
-<p>一旦在JavaScript中得到了可用的WebAssembly实例，你就可以开始使用那些通过 {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} 属性导出的特性了。你的代码可能看起来像这样：</p>
+<p>一旦在 JavaScript 中得到了可用的 WebAssembly 实例，你就可以开始使用那些通过 {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} 属性导出的特性了。你的代码可能看起来像这样：</p>
 
 <pre class="brush: js">fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
   // 调用导出函数：
@@ -98,18 +98,18 @@ translation_of: WebAssembly/Loading_and_running
 })</pre>
 
 <div class="note">
-<p><strong>注</strong>：关于从WebAssembly模块导出是如何工作的更多信息，请阅读使<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Using_the_JavaScript_API">用WebAssembly的JavaScript API</a>和<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">理解WebAssembly文本格式</a>。</p>
+<p><strong>注</strong>：关于从 WebAssembly 模块导出是如何工作的更多信息，请阅读使<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Using_the_JavaScript_API">用 WebAssembly 的 JavaScript API</a>和<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">理解 WebAssembly 文本格式</a>。</p>
 </div>
 
-<h2 id="使用XMLHttpRequest">使用XMLHttpRequest</h2>
+<h2 id="使用XMLHttpRequest">使用 XMLHttpRequest</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>在一定程度上而言要比Fetch老旧一些，但是，仍然可以很好地被用来获取带类型数组。仍然假设我们的模块叫做simple.wasm：</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>在一定程度上而言要比 Fetch 老旧一些，但是，仍然可以很好地被用来获取带类型数组。仍然假设我们的模块叫做 simple.wasm：</p>
 
 <ol>
- <li>创建一个 {{domxref("XMLHttpRequest()")}} 实例，然后使用它的{{domxref("XMLHttpRequest.open","open()")}} 方法来开启一个请求——设置请求方法为GET并且声明我们想要获取的文件路径。</li>
+ <li>创建一个 {{domxref("XMLHttpRequest()")}} 实例，然后使用它的{{domxref("XMLHttpRequest.open","open()")}} 方法来开启一个请求——设置请求方法为 GET 并且声明我们想要获取的文件路径。</li>
  <li>关键之处在于使用{{domxref("XMLHttpRequest.responseType","responseType")}}属性设置响应类型为'arraybuffer'。</li>
  <li>接下来使用{{domxref("XMLHttpRequest.send()")}}发送请求。</li>
- <li>当响应已经完成下载之后，我们使用{{domxref("XMLHttpRequest.onload", "onload")}}事件处理器来调用一个函数——在这个函数中，我们从{{domxref("XMLHttpRequest.response", "response")}}属性中得到数组缓存然后就像使用Fetch那样把它传递给{{jsxref("WebAssembly.instantiate()")}} 。</li>
+ <li>当响应已经完成下载之后，我们使用{{domxref("XMLHttpRequest.onload", "onload")}}事件处理器来调用一个函数——在这个函数中，我们从{{domxref("XMLHttpRequest.response", "response")}}属性中得到数组缓存然后就像使用 Fetch 那样把它传递给{{jsxref("WebAssembly.instantiate()")}} 。</li>
 </ol>
 
 <p>最终代码看起来像这样：</p>

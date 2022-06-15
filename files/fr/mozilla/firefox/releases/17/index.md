@@ -57,15 +57,15 @@ La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de c
 
 ### Changements dans les interfaces
 
-- {{interface("nsIInputStream")}}
+- `nsIInputStream`
   - : La méthode `available()` retourne une longueur de 64-bit au lieu de 32-bit. ({{bug(215450)}})
-- {{interface("nsIDOMWindowUtils")}}
+- `nsIDOMWindowUtils`
   - : La méthode `sendMouseScrollEvent()` a été remplacée par `sendWheelEvent()`. ({{bug(719320)}})
-- {{interface("nsIFilePicker")}}
+- `nsIFilePicker`
   - : La méthode `open()`, pour ouvrir la boîte de dialogue d'un fichier de façon asynchrone, a été ajoutée et la méthode `show()` a été dépréciée. ({{bug("731307")}})
-- {{interface("nsIScriptSecurityManager")}}
+- `nsIScriptSecurityManager`
   - : Les méthodes `checkLoadURIStr()` et `checkLoadURI()` ont été retirées. ({{bug(327244)}})
-- {{interface("nsIRefreshURI")}}
+- `nsIRefreshURI`
   - : La méthode `setupRefreshURIFromHeader()` a un paramètre `principal` en plus.
 
 ## Voir également

@@ -7,43 +7,43 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}</div>
 
-<p>在这节课里，我们来看一下，在CSS中，某些特殊元素是怎样处理的。图像、其他媒体和表格元素的表现和普通的盒子有些不同，这取决于你使用CSS格式化它们的能力。理解什么可能做到，什么不可能做到能够省些力气，本节课将会聚焦于一些你需要知道的主要的事情上。</p>
+<p>在这节课里，我们来看一下，在 CSS 中，某些特殊元素是怎样处理的。图像、其他媒体和表格元素的表现和普通的盒子有些不同，这取决于你使用 CSS 格式化它们的能力。理解什么可能做到，什么不可能做到能够省些力气，本节课将会聚焦于一些你需要知道的主要的事情上。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">学习前提：</th>
-   <td>基础的电脑技能、<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装了必要的软件</a>、<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a>的基本知识、HTML基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>）和对CSS工作原理的大致理解（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>）</td>
+   <td>基础的电脑技能、<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装了必要的软件</a>、<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a>的基本知识、HTML 基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>）和对 CSS 工作原理的大致理解（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>）</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
-   <td>.理解元素在经由CSS样式化时，是如何不一样地展现的。</td>
+   <td>.理解元素在经由 CSS 样式化时，是如何不一样地展现的。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="替换元素">替换元素</h2>
 
-<p>图像和视频被描述为<strong><a href="/zh-CN/docs/Web/CSS/Replaced_element">替换元素</a></strong>。 这意味着CSS不能影响这些元素的内部布局-仅影响它们在页面上于其他元素中的位置。 但是，正如我们将看到的，CSS可以对图像执行多种操作。</p>
+<p>图像和视频被描述为<strong><a href="/zh-CN/docs/Web/CSS/Replaced_element">替换元素</a></strong>。这意味着 CSS 不能影响这些元素的内部布局 - 仅影响它们在页面上于其他元素中的位置。但是，正如我们将看到的，CSS 可以对图像执行多种操作。</p>
 
-<p>某些替换元素（例如图像和视频）也被描述为具有宽高比。 这意味着它在水平（x）和垂直（y）尺寸上均具有大小，并且默认情况下将使用文件的固有尺寸进行显示。</p>
+<p>某些替换元素（例如图像和视频）也被描述为具有宽高比。这意味着它在水平（x）和垂直（y）尺寸上均具有大小，并且默认情况下将使用文件的固有尺寸进行显示。</p>
 
 <h2 id="调整图像大小">调整图像大小</h2>
 
-<p>正如你从之前的几节课中所学到的那样，CSS中万物皆盒。如果你把一张图片放在一个盒子里，它的原始长和宽都比盒子的小或大，它要么比盒子显得小，要么从盒子里面溢出出去。你需要决定怎么处理溢出。</p>
+<p>正如你从之前的几节课中所学到的那样，CSS 中万物皆盒。如果你把一张图片放在一个盒子里，它的原始长和宽都比盒子的小或大，它要么比盒子显得小，要么从盒子里面溢出出去。你需要决定怎么处理溢出。</p>
 
-<p>在下面的示例中，我们有两个盒子，大小均为200像素：</p>
+<p>在下面的示例中，我们有两个盒子，大小均为 200 像素：</p>
 
 <ul>
- <li>一个包含了一张小于200像素的图像，它比盒子小，所以不会拉伸以充满盒子。</li>
- <li>另一张图像大于200像素，从盒子里面溢出。</li>
+ <li>一个包含了一张小于 200 像素的图像，它比盒子小，所以不会拉伸以充满盒子。</li>
+ <li>另一张图像大于 200 像素，从盒子里面溢出。</li>
 </ul>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/images/size.html", '100%', 1000)}}</p>
 
 <p>所以我们能怎么处理溢出问题呢？</p>
 
-<p>正如我们在<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">我们之前的课程</a>里面所学的那样，一个常用的技术是将一张图片的{{cssxref("max-width")}}设为100%。这将会允许图片尺寸上小于但不大于盒子。这个技术也会对其他替换元素（例如<code><a href="/zh-CN/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>，或者<code><a href="/zh-CN/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>）起作用。</p>
+<p>正如我们在<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">我们之前的课程</a>里面所学的那样，一个常用的技术是将一张图片的{{cssxref("max-width")}}设为 100%。这将会允许图片尺寸上小于但不大于盒子。这个技术也会对其他替换元素（例如<code><a href="/zh-CN/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>，或者<code><a href="/zh-CN/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>）起作用。</p>
 
 <p><strong>尝试向上面的示例中的<code>&lt;img&gt;</code>元素加入<code>max-width: 100%</code>，你会看到，小的图像不变，而大的变小了，能够放在盒子里。</strong></p>
 
@@ -61,7 +61,7 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 
 <h2 id="布局中的替换元素">布局中的替换元素</h2>
 
-<p>在替换元素使用各式CSS布局技巧时，你可能深切地体会到他们的展现略微与其他元素不同，例如，在一个flex或者grid布局中，元素默认会把拉伸到充满整块区域。图像不会拉伸，而是会被对齐到网格区域或者弹性容器的起始处。</p>
+<p>在替换元素使用各式 CSS 布局技巧时，你可能深切地体会到他们的展现略微与其他元素不同，例如，在一个 flex 或者 grid 布局中，元素默认会把拉伸到充满整块区域。图像不会拉伸，而是会被对齐到网格区域或者弹性容器的起始处。</p>
 
 <p>你可以看到这在下面的示例中发生了，下面的示例有个两列两行的网格容器，里面有四个物件。所有的<code>&lt;div&gt;</code>元素有自己的背景色，拉伸到了充满行和列的地步。但是，图像并没有被拉伸。</p>
 
@@ -78,19 +78,19 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 
 <p>这将会无条件地拉伸图像，所以很可能不会是你想要的。</p>
 
-<h2 id="form元素">form元素</h2>
+<h2 id="form元素">form 元素</h2>
 
-<p>用CSS格式化表单元素是一个需要技巧的工作，<a href="/zh-CN/docs/Learn/HTML/Forms">HTML Forms module</a> 包含了详细的格式化表单元素的指导，所以我在这里不会全部复述。在本文的这一节有一些关键的值得关注的基础。</p>
+<p>用 CSS 格式化表单元素是一个需要技巧的工作，<a href="/zh-CN/docs/Learn/HTML/Forms">HTML Forms module</a> 包含了详细的格式化表单元素的指导，所以我在这里不会全部复述。在本文的这一节有一些关键的值得关注的基础。</p>
 
-<p>许多表格的控制是通过<code><a href="/zh-CN/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>元素的方式实现的，这定义了简单的表格区域，例如文字输入，更进一步还有HTML5新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的<code><a href="/zh-CN/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code>，以及那些用来包含和标记表格的一些部分的元素，例如<code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code>和<code><a href="/en-US/docs/Web/HTML/Element/legend">&lt;legend&gt;</a></code>。</p>
+<p>许多表格的控制是通过<code><a href="/zh-CN/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>元素的方式实现的，这定义了简单的表格区域，例如文字输入，更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的<code><a href="/zh-CN/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code>，以及那些用来包含和标记表格的一些部分的元素，例如<code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code>和<code><a href="/en-US/docs/Web/HTML/Element/legend">&lt;legend&gt;</a></code>。</p>
 
-<p>HTML5还涵盖了一些特性，它们允许Web开发者表示哪些区域是必填的，甚至还能标识待填入的内容类型。如果用户输入了一些未预料的内容，或者让必填区域空白，浏览器会显示一个错误信息。不同的浏览器在它们给这样的物件的样式化和自定义余地的问题上，并没有达成一致。</p>
+<p>HTML5 还涵盖了一些特性，它们允许 Web 开发者表示哪些区域是必填的，甚至还能标识待填入的内容类型。如果用户输入了一些未预料的内容，或者让必填区域空白，浏览器会显示一个错误信息。不同的浏览器在它们给这样的物件的样式化和自定义余地的问题上，并没有达成一致。</p>
 
 <h3 id="样式化文本输入元素">样式化文本输入元素</h3>
 
 <p>允许文本输入的元素，例如<code>&lt;input type="text"&gt;</code>，特定的类型例如<code>&lt;input type="email"&gt;</code>以及<code>&lt;textarea&gt;</code>元素，是相当容易样式化的，它们会试图表现得和在你的页面上其他盒子一样。不过这些元素默认的样式化方式会改变，取决于你的用户访问站点时所使用的操作系统和浏览器。</p>
 
-<p>在下面的示例中，我们已经将一些文本输入用CSS样式化了，你可以看到例如边框、内外边距之类的东西都像你想要的那样生效了。我们正在使用特性选择器来指向不同的输入类型。尝试通过改变边框、向输入区域增加背景色、改变字体和内边距的方式来改变表单的外观。</p>
+<p>在下面的示例中，我们已经将一些文本输入用 CSS 样式化了，你可以看到例如边框、内外边距之类的东西都像你想要的那样生效了。我们正在使用特性选择器来指向不同的输入类型。尝试通过改变边框、向输入区域增加背景色、改变字体和内边距的方式来改变表单的外观。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}</p>
 
@@ -98,11 +98,11 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 <p><strong>重点</strong>：你应该在改变表单样式的时候小心，确保对于用户而言，它们仍然很容易被认出来是表单元素。你也许可以建立一个无边框的表单输入，其背景也与周围的内容难以区分开来，但是这会让表单很难识别和填入。</p>
 </div>
 
-<p>正如在本教程的HTML部分的<a href="/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms">form styling</a>课里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是假设表单在不同的访客看来十分不同，并在许多浏览器上测试复杂的表单。</p>
+<p>正如在本教程的 HTML 部分的<a href="/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms">form styling</a>课里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是假设表单在不同的访客看来十分不同，并在许多浏览器上测试复杂的表单。</p>
 
 <h3 id="继承和表单元素">继承和表单元素</h3>
 
-<p>在一些浏览器中，表单元素默认不会继承字体样式，因此如果你想要确保你的表单填入区域使用body中或者一个父元素中定义的字体，你需要向你的CSS中加入这条规则。</p>
+<p>在一些浏览器中，表单元素默认不会继承字体样式，因此如果你想要确保你的表单填入区域使用 body 中或者一个父元素中定义的字体，你需要向你的 CSS 中加入这条规则。</p>
 
 <pre class="brush: css notranslate"><code>button,
 input,
@@ -112,9 +112,9 @@ textarea {
   font-size : 100%;
 } </code></pre>
 
-<h3 id="form元素与box-sizing">form元素与box-sizing</h3>
+<h3 id="form元素与box-sizing">form 元素与 box-sizing</h3>
 
-<p>跨浏览器的form元素对于不同的挂件使用不同的盒子约束规则。你已经在<a href="/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">我们的盒模型课</a>中学习了<code>box-sizing</code>属性，在样式化表单时候，你可以使用这一知识，确保在给form元素设定宽度和高度时可以有统一的体验。</p>
+<p>跨浏览器的 form 元素对于不同的挂件使用不同的盒子约束规则。你已经在<a href="/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">我们的盒模型课</a>中学习了<code>box-sizing</code>属性，在样式化表单时候，你可以使用这一知识，确保在给 form 元素设定宽度和高度时可以有统一的体验。</p>
 
 <p>为了保证统一，将所有元素的内外边距均设为<code>0</code>是个好主意，然后在单独进行样式化控制的时候将这些加回来。</p>
 
@@ -129,7 +129,7 @@ textarea {
 
 <h3 id="其他有用的设置">其他有用的设置</h3>
 
-<p>除了上面提到的规则以外，你也应该在<code>&lt;textarea&gt;</code>上设置<code>overflow: auto</code> 以避免IE在不需要滚动条的时候显示滚动条：</p>
+<p>除了上面提到的规则以外，你也应该在<code>&lt;textarea&gt;</code>上设置<code>overflow: auto</code> 以避免 IE 在不需要滚动条的时候显示滚动条：</p>
 
 <pre class="brush: css notranslate">textarea {
   overflow: auto;
@@ -154,10 +154,10 @@ textarea {
 } </code></pre>
 
 <div class="blockIndicator note">
-<p><strong>备注</strong>：通用样式表被许多开发者用作所有项目的一系列基础样式，典型就是那些做了和以上提到相似的事情的那些，在你开始自己的CSS作业前，它确保了跨浏览器的任何事情都被默认设定为统一样式。它们不像以往那么重要了，因为浏览器显著地要比以往更加统一。但是，如果你想要看一个例子，可以看看这个<a href="http://necolas.github.io/normalize.css/">Normalize.css</a>，它被许多项目用作基础，是非常流行的样式表。</p>
+<p><strong>备注</strong>：通用样式表被许多开发者用作所有项目的一系列基础样式，典型就是那些做了和以上提到相似的事情的那些，在你开始自己的 CSS 作业前，它确保了跨浏览器的任何事情都被默认设定为统一样式。它们不像以往那么重要了，因为浏览器显著地要比以往更加统一。但是，如果你想要看一个例子，可以看看这个<a href="http://necolas.github.io/normalize.css/">Normalize.css</a>，它被许多项目用作基础，是非常流行的样式表。</p>
 </div>
 
-<p>至于样式化表单的更加深入的信息，可以看下这些教程的HTML一节的这两篇文章：</p>
+<p>至于样式化表单的更加深入的信息，可以看下这些教程的 HTML 一节的这两篇文章：</p>
 
 <ul>
  <li><a href="/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML Forms</a></li>
@@ -166,11 +166,11 @@ textarea {
 
 <h2 id="测试你的技能">测试你的技能</h2>
 
-<p>我们在本文中介绍了很多内容，但是您记住最重要的内容了么？ 在继续之前，您可以通过一些其他测试来验证您是否真正学习到了这些知识，参见<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks">技能测试</a></p>
+<p>我们在本文中介绍了很多内容，但是您记住最重要的内容了么？在继续之前，您可以通过一些其他测试来验证您是否真正学习到了这些知识，参见<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks">技能测试</a></p>
 
 <h2 id="小结">小结</h2>
 
-<p>这节课致力于说明在你用CSS处理图像、媒体和其他不普通的元素时，你会遇到的不同之处。在下篇文章中，我们将会了解一些在你样式化HTMl表格时有用的技巧。</p>
+<p>这节课致力于说明在你用 CSS 处理图像、媒体和其他不普通的元素时，你会遇到的不同之处。在下篇文章中，我们将会了解一些在你样式化 HTMl 表格时有用的技巧。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}</p>
 
@@ -178,9 +178,9 @@ textarea {
 
 <ol>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">层叠与继承</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors">CSS选择器</a>
+ <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors">CSS 选择器</a>
   <ul>
-   <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">标签，类，ID选择器</a></li>
+   <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">标签，类，ID 选择器</a></li>
    <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">属性选择器</a></li>
    <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">伪类和伪元素</a></li>
    <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators">关系选择器</a></li>
@@ -191,9 +191,9 @@ textarea {
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">处理不同文字方向的文本</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content">溢出的内容</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units">值和单位</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">在CSS中调整大小</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">在 CSS 中调整大小</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements">图像、媒体和表单元素</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables">样式化表格</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS">调试CSS</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Organizing">组织CSS</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS">调试 CSS</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Organizing">组织 CSS</a></li>
 </ol>

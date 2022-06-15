@@ -25,7 +25,7 @@ CSS 標準に含まれているものは、定義済みの効果を実現する�
 /* SVG フィルターへの URL */
 filter: url("filters.svg#filter-id");
 
-/* &lt;filter-function&gt; 値 */
+/* <filter-function> 値 */
 filter: blur(5px);
 filter: brightness(0.4);
 filter: contrast(200%);
@@ -376,10 +376,10 @@ table.standard-table td {
 
 - `<offset-x>` `<offset-y>` (必須)
   - : 二つの {{cssxref("&lt;length&gt;")}} 値で、影をずらす大きさを設定します。 `<offset-x>` は水平の距離を指定します。負の数の場合、影を要素の左側に配置します。 `<offset-y>` は垂直の距離を指定します。負の数の場合、影を要素の上に配置します。利用可能な単位は {{cssxref("&lt;length&gt;")}} を参照してください。
- 両方の値が `0` である場合は、影は要素の背後に配置されます (そして、 `&lt;blur-radius&gt;` や `&lt;spread-radius&gt;` を設定することで、ぼかしの効果を生成することができます)。</dd>
-- `&lt;blur-radius&gt;` (オプション)
+ 両方の値が `0` である場合は、影は要素の背後に配置されます (そして、 `<blur-radius>` や `<spread-radius>` を設定することで、ぼかしの効果を生成することができます)。</dd>
+- `<blur-radius>` (オプション)
   - : これは三番目の {{cssxref("&lt;length&gt;")}} 値です。この値が大きくなるほど、ぼかしが大きくなり、影がより大きく薄くなります。負の数を指定することはできません。指定されなかった場合は、 `0` (影の縁がはっきりしている) になります。</dd>
-- `&lt;color&gt;` (オプション)
+- `<color>` (オプション)
   - : 指定可能なキーワードや記述方法は {{cssxref("&lt;color&gt;")}} 値を参照してください。指定されなかった場合は、使用される色はブラウザーに依存します。 - 普通は {{cssxref("&lt;color&gt;")}} プロパティの値ですが、 Safari では現在のところ、この場合には透明な影を描くことに注意してください。</dd>
 </dl>
 

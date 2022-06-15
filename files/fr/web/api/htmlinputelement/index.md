@@ -618,9 +618,9 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </tbody>
 </table>
 
-- {{domxref("HTMLInputElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLInputElement.align")}} {{deprecated_inline}}
   - : `string`_:_ **Represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{ obsolete_inline }}
+- {{domxref("HTMLInputElement.useMap")}} {{deprecated_inline}}
   - : `string`_:_ **Represents** a client-side image map.
 
 ## Methods

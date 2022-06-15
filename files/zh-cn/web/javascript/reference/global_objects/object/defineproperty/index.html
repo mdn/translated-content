@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 <p>被传递给函数的对象。</p>
 
 <div class="note">
-<p><strong>备注：</strong>在ES6中，由于 Symbol类型的特殊性，用Symbol类型的值来做对象的key与常规的定义或修改不同，而<code>Object.defineProperty</code> 是定义key为Symbol的属性的方法之一。</p>
+<p><strong>备注：</strong>在 ES6 中，由于 Symbol 类型的特殊性，用 Symbol 类型的值来做对象的 key 与常规的定义或修改不同，而<code>Object.defineProperty</code> 是定义 key 为 Symbol 的属性的方法之一。</p>
 </div>
 
 <h2 id="描述">描述</h2>
@@ -162,7 +162,7 @@ function withValue(value) {
 // ... 并且 ...
 Object.defineProperty(obj, "key", withValue("static"));
 
-// 如果 freeze 可用, 防止后续代码添加或删除对象原型的属性
+// 如果 freeze 可用，防止后续代码添加或删除对象原型的属性
 // （value, get, set, enumerable, writable, configurable）
 (Object.freeze||Object)(Object.prototype);</pre>
 
@@ -504,11 +504,11 @@ console.log(myclass.prototype.y); // 1
 
 <p>在 Firefox 4 至 22 版本中，尝试重定义数组的 length 属性都会抛出 {{jsxref("TypeError")}} 异常。</p>
 
-<p>一些版本的 Chrome 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的length值。有些情况下改变可写性并不起作用（也不抛出异常）。同时，比如{{jsxref("Array.prototype.push")}}的一些数组操作方法也不会考虑不可读的length属性。</p>
+<p>一些版本的 Chrome 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的 length 值。有些情况下改变可写性并不起作用（也不抛出异常）。同时，比如{{jsxref("Array.prototype.push")}}的一些数组操作方法也不会考虑不可读的 length 属性。</p>
 
-<p>一些版本的 Safari 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的length值。尝试改变可写性的操作会正常执行而不抛出错误，但事实上并未改变属性的可写性。</p>
+<p>一些版本的 Safari 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的 length 值。尝试改变可写性的操作会正常执行而不抛出错误，但事实上并未改变属性的可写性。</p>
 
-<p>只在Internet Explorer 9及以后版本和Firefox 23及以后版本中，才完整地正确地支持数组 {{jsxref("Array.length", "length")}} 属性的重新定义。目前不要依赖于重定义数组 {{jsxref("Array.length", "length")}} 属性能够起作用，或在特定情形下起作用。与此同时，即使你能够依赖于它，你也<a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">没有合适的理由这样做</a>。</p>
+<p>只在 Internet Explorer 9 及以后版本和 Firefox 23 及以后版本中，才完整地正确地支持数组 {{jsxref("Array.length", "length")}} 属性的重新定义。目前不要依赖于重定义数组 {{jsxref("Array.length", "length")}} 属性能够起作用，或在特定情形下起作用。与此同时，即使你能够依赖于它，你也<a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">没有合适的理由这样做</a>。</p>
 
 <h3 id="Internet_Explorer_8_特别备注">Internet Explorer 8 特别备注</h3>
 
@@ -516,7 +516,7 @@ console.log(myclass.prototype.y); // 1
 
 <ul>
  <li>尝试在原生对象上使用 <code>Object.defineProperty()</code> 会报错。</li>
- <li>属性特性必须设置一些特定的值。对于数据属性描述符，<code>configurable</code>, <code>enumerable</code> 和 <code>writable</code> 属性必须全部设置为 <code>true</code>；对于访问器属性描述符，<code>configurable</code> 必须设置为 <code>true</code>，<code>enumerable</code> 必须设置为 <code>false</code>。(?) 任何试图提供其他值(?)将导致一个错误抛出。</li>
+ <li>属性特性必须设置一些特定的值。对于数据属性描述符，<code>configurable</code>, <code>enumerable</code> 和 <code>writable</code> 属性必须全部设置为 <code>true</code>；对于访问器属性描述符，<code>configurable</code> 必须设置为 <code>true</code>，<code>enumerable</code> 必须设置为 <code>false</code>。(?) 任何试图提供其他值 (?) 将导致一个错误抛出。</li>
  <li>重新配置一个属性首先需要删除该属性。如果属性没有删除，就如同重新配置前的尝试。</li>
 </ul>
 

@@ -13,30 +13,30 @@ translation_of: Learn/JavaScript/First_steps/Variables
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">在读完之前的一些文章之后，你现在应该大概知道了JavaScript是什么，你能用它干什么，它是怎么跟其他web技术（HTML，CSS）协同工作的，以及它有哪些主要特性。在本章节，我们将开始学习JavaScript的基础，了解如何使用 -- 变量。</p>
+<p>在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术（HTML，CSS）协同工作的，以及它有哪些主要特性。在本章节，我们将开始学习 JavaScript 的基础，了解如何使用 -- 变量。</p>
 
 <table class="learn-box">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
-   <td>电脑基础知识，了解基本的 HTML 和 CSS，了解JavaScript是什么。</td>
+   <th scope="row">预备知识：</th>
+   <td>电脑基础知识，了解基本的 HTML 和 CSS，了解 JavaScript 是什么。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>熟悉JavaScript的变量使用</td>
+   <th scope="row">目标：</th>
+   <td>熟悉 JavaScript 的变量使用</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="需要的工具">需要的工具</h2>
 
-<p>在本章中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的JavaScript终端，(参考 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">什么是浏览器开发工具</a> 查看如何使用这些工具)。</p>
+<p>在本章中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 终端，(参考 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">什么是浏览器开发工具</a> 查看如何使用这些工具)。</p>
 
-<p>当然，我们也提供了一个简单的JavaScript终端，嵌入在下文的页面中，以便你更容易的输入和测试这些代码。</p>
+<p>当然，我们也提供了一个简单的 JavaScript 终端，嵌入在下文的页面中，以便你更容易的输入和测试这些代码。</p>
 
-<h2 id="变量是什么">变量是什么?</h2>
+<h2 id="变量是什么">变量是什么？</h2>
 
-<p>一个变量，就是一个用于存放数值的容器。这个数值可能是一个用于累加计算的数字，或者是一个句子中的字符串。变量的独特之处在于它存放的数值是可以改变的。让我们看一个简单的例子:</p>
+<p>一个变量，就是一个用于存放数值的容器。这个数值可能是一个用于累加计算的数字，或者是一个句子中的字符串。变量的独特之处在于它存放的数值是可以改变的。让我们看一个简单的例子：</p>
 
 <pre class="brush: html notranslate">&lt;button&gt;Press me&lt;/button&gt;</pre>
 
@@ -84,7 +84,7 @@ if (name === 'Adam') {
 <pre class="brush: js notranslate">let myName;
 let myAge;</pre>
 
-<p>在这里我们声明了两个变量 <code>myName</code> 和 <code>myAge</code>. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的JavaScript终端 (你也可以在另一个独立的标签页或窗口 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this consol</a> ). 此外，你也可以多声明几个变量.</p>
+<p>在这里我们声明了两个变量 <code>myName</code> 和 <code>myAge</code>. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端 (你也可以在另一个独立的标签页或窗口 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this consol</a> ). 此外，你也可以多声明几个变量。</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -195,7 +195,7 @@ let myAge;</pre>
 <p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>提示</strong>: 在JavaScript中，所有代码指令都会以分号结尾 (<code>;</code>) — 如果忘记加分号，你的单行代码可能执行正常，但是在多行代码在一起的时候就可能出错。所以，最好是养成主动以分号作为代码结尾的习惯。</p>
+<p><strong>提示</strong>: 在 JavaScript 中，所有代码指令都会以分号结尾 (<code>;</code>) — 如果忘记加分号，你的单行代码可能执行正常，但是在多行代码在一起的时候就可能出错。所以，最好是养成主动以分号作为代码结尾的习惯。</p>
 </div>
 
 <p>你可以通过使用变量的方式来验证这个变量的数值是否在执行环境中已经存在。例如，</p>
@@ -203,7 +203,7 @@ let myAge;</pre>
 <pre class="brush: js notranslate">myName;
 myAge;</pre>
 
-<p>以上这两个变量并没有数值，他们是空的容器。当你输入变量名并回车后，你会得到一个<code>undefined</code>的返回值。如果他们并不存在的话，那你就会得到一个报错信息。不信的话，可以尝试输入:</p>
+<p>以上这两个变量并没有数值，他们是空的容器。当你输入变量名并回车后，你会得到一个<code>undefined</code>的返回值。如果他们并不存在的话，那你就会得到一个报错信息。不信的话，可以尝试输入：</p>
 
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
@@ -213,45 +213,45 @@ myAge;</pre>
 
 <h2 id="初始化变量">初始化变量</h2>
 
-<p>一旦你定义了一个变量，你就能够初始化它. 方法如下，在变量名之后跟上一个“=”，然后是数值:</p>
+<p>一旦你定义了一个变量，你就能够初始化它。方法如下，在变量名之后跟上一个“=”，然后是数值：</p>
 
 <pre class="brush: js notranslate">myName = 'Chris';
 myAge = 37;</pre>
 
-<p>现在回到控制台并且尝试输入这几行。每输入一条你都应该确认一下控制台输出的变量是不是你刚赋的值。 同样，你可以通过在控制台中输入变量的名称来返回该变量的值 — 再次尝试下这些:</p>
+<p>现在回到控制台并且尝试输入这几行。每输入一条你都应该确认一下控制台输出的变量是不是你刚赋的值。 同样，你可以通过在控制台中输入变量的名称来返回该变量的值 — 再次尝试下这些：</p>
 
 <pre class="brush: js notranslate">myName;
 myAge;</pre>
 
-<p>你可以像这样在声明变量的时候给变量初始化:</p>
+<p>你可以像这样在声明变量的时候给变量初始化：</p>
 
 <pre class="brush: js notranslate">let myName = 'Chris';</pre>
 
 <p>这可能是大多数时间你都会使用的方式， 因为它要比在单独的两行上做两次操作要快。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 如果你写一个声明和初始化变量的多行JavaScript代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做<strong>顶置</strong>—阅读<a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a>来了解更多细节。</p>
+<p><strong>Note</strong>: 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做<strong>顶置</strong>—阅读<a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a>来了解更多细节。</p>
 </div>
 
 <h2 id="var_与_let_的区别">var 与 let 的区别</h2>
 
-<p>此时，您可能会想：“为什么我们需要两个关键字来定义变量?”，“为什么有 <code>var</code> 和 <code>let</code> 呢？"。</p>
+<p>此时，您可能会想：“为什么我们需要两个关键字来定义变量？”，“为什么有 <code>var</code> 和 <code>let</code> 呢？"。</p>
 
-<p>原因是有些历史性的。 回到最初创建 JavaScript 时，是只有 <code>var</code> 的。 在大多数情况下，这种方法可以接受， 但有时在工作方式上会有一些问题——它的设计会令人困惑或令人讨厌 。 因此，<code>let</code> 是在现代版本中的 JavaScript 创建的一个新的关键字，用于创建与 <code>var</code> 工作方式有些不同的变量，解决了过程中的问题。</p>
+<p>原因是有些历史性的。回到最初创建 JavaScript 时，是只有 <code>var</code> 的。在大多数情况下，这种方法可以接受，但有时在工作方式上会有一些问题——它的设计会令人困惑或令人讨厌。因此，<code>let</code> 是在现代版本中的 JavaScript 创建的一个新的关键字，用于创建与 <code>var</code> 工作方式有些不同的变量，解决了过程中的问题。</p>
 
-<p>下面解释几个简单的差异。 我们现在不会讨论所有的差异，但是当您了解有关 JavaScript 的更多信息时，您将开始发现它们（如果您现在真的想要阅读它们，请随时查看我们的<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">参考页面</a>）。</p>
+<p>下面解释几个简单的差异。我们现在不会讨论所有的差异，但是当您了解有关 JavaScript 的更多信息时，您将开始发现它们（如果您现在真的想要阅读它们，请随时查看我们的<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">参考页面</a>）。</p>
 
-<p>首先，如果你编写一个声明并初始化变量的多行 JavaScript 程序，你可以在初始化一个变量之后用 <code>var</code> 声明它，它仍然可以工作。 例如：</p>
+<p>首先，如果你编写一个声明并初始化变量的多行 JavaScript 程序，你可以在初始化一个变量之后用 <code>var</code> 声明它，它仍然可以工作。例如：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">myName = 'Chris';
 
-<span class="keyword token">function</span> <span class="function token">logName</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>myName<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function logName() {
+  console.log(myName);
+}
 
-<span class="function token">logName</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+logName();
 
-var myName<span class="punctuation token">;</span></code></pre>
+var myName;</code></pre>
 
 <div class="blockIndicator note">
 <p>Note: 只有在 web 文档中运行多行 JavaScript 时才会有这种效果，当在 JavaScript 控制台中键入单独的行，这将不起作用。</p>
@@ -259,57 +259,57 @@ var myName<span class="punctuation token">;</span></code></pre>
 
 <p>这是由于变量的<strong>提升</strong>，更多细节请阅读<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var#变量提升">变量提升</a>。</p>
 
-<p>但提升操作不再适用于 <code>let</code> 。如果将上面例子中的 <code>var</code> 替换成 <code>let</code> 将不起作用并引起一个错误。 这是一件好事——因为初始化后再声明一个变量会使代码变得混乱和难以理解。</p>
+<p>但提升操作不再适用于 <code>let</code> 。如果将上面例子中的 <code>var</code> 替换成 <code>let</code> 将不起作用并引起一个错误。这是一件好事——因为初始化后再声明一个变量会使代码变得混乱和难以理解。</p>
 
-<p>其次，当你使用 <code>var</code> 时，可以根据需要多次声明相同名称的变量，但是 <code>let</code> 不能。 以下将有效：</p>
+<p>其次，当你使用 <code>var</code> 时，可以根据需要多次声明相同名称的变量，但是 <code>let</code> 不能。以下将有效：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">var</span> myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> myName <span class="operator token">=</span> <span class="string token">'Bob'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">var myName = 'Chris';
+var myName = 'Bob';</code></pre>
 
 <p>但是以下内容会在第二行引发错误：</p>
 
-<pre class="brush: js example-bad notranslate"><code class="language-js"><span class="keyword token">let</span> myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> myName <span class="operator token">=</span> <span class="string token">'Bob'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js example-bad notranslate"><code class="language-js">let myName = 'Chris';
+let myName = 'Bob';</code></pre>
 
 <p>你必须这样做：</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> myName <span class="operator token">=</span> <span class="string token">'Chris'</span><span class="punctuation token">;</span>
-myName <span class="operator token">=</span> <span class="string token">'Bob'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">let myName = 'Chris';
+myName = 'Bob';</code></pre>
 
 <p>同样，这是一个明智的语言决定。没有理由重新声明变量——这只会让事情变得更加混乱。</p>
 
 <p>出于这些以及其他原因，我们建议您在代码中尽可能多地使用 <code>let</code>，而不是 <code>var</code>。因为没有理由使用 <code>var</code>，除非您需要用代码支持旧版本的 Internet Explorer (它直到第 11 版才支持 <code>let</code> ，现代的 Windows Edge 浏览器支持的很好)。</p>
 
 <div class="blockIndicator note">
-<p>  <strong>Note: </strong>我们目前正在更新课程以使用let而不是var。 忍耐一下！</p>
+<p>  <strong>Note: </strong>我们目前正在更新课程以使用 let 而不是 var。忍耐一下！</p>
 </div>
 
 <h2 id="更新变量">更新变量</h2>
 
-<p>一旦变量赋值，您可以通过简单地给它一个不同的值来更新它。试试在你的控制台中输入下面几行:</p>
+<p>一旦变量赋值，您可以通过简单地给它一个不同的值来更新它。试试在你的控制台中输入下面几行：</p>
 
 <pre class="brush: js notranslate">myName = 'Bob';
 myAge = 40;</pre>
 
 <h3 id="关于变量命名的规则">关于变量命名的规则</h3>
 
-<p>你可以给你的变量赋任何你喜欢的名字，但有一些限制。 一般你应当坚持使用拉丁字符(0-9,a-z,A-Z)和下划线字符。</p>
+<p>你可以给你的变量赋任何你喜欢的名字，但有一些限制。一般你应当坚持使用拉丁字符 (0-9,a-z,A-Z) 和下划线字符。</p>
 
 <ul>
  <li>你不应当使用规则之外的其他字符，因为它们可能引发错误，或对国际用户来说难以理解。</li>
- <li>变量名不要以下划线开头—— 以下划线开头的被某些JavaScript设计为特殊的含义，因此可能让人迷惑。</li>
+ <li>变量名不要以下划线开头—— 以下划线开头的被某些 JavaScript 设计为特殊的含义，因此可能让人迷惑。</li>
  <li>变量名不要以数字开头。这种行为是不被允许的，并且将引发一个错误。</li>
  <li>一个可靠的命名约定叫做 <a href="https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms">"小写驼峰命名法"</a>，用来将多个单词组在一起，小写整个命名的第一个字母然后大写剩下单词的首字符。我们已经在文章中使用了这种命名方法。</li>
  <li>让变量名直观，它们描述了所包含的数据。不要只使用单一的字母/数字，或者长句。</li>
- <li>变量名大小写敏感——因此<code>myage</code>与<code>myAge</code>是2个不同的变量。</li>
- <li>最后也是最重要的一点—— 你应当避免使用JavaScript的保留字给变量命名。保留字，即是组成JavaScript的实际语法的单词！因此诸如 <code>var</code>, <code>function</code>, <code>let和</code> <code>for</code>等，都不能被作为变量名使用。浏览器将把它们识别为不同的代码项，因此你将得到错误。</li>
+ <li>变量名大小写敏感——因此<code>myage</code>与<code>myAge</code>是 2 个不同的变量。</li>
+ <li>最后也是最重要的一点—— 你应当避免使用 JavaScript 的保留字给变量命名。保留字，即是组成 JavaScript 的实际语法的单词！因此诸如 <code>var</code>, <code>function</code>, <code>let和</code> <code>for</code>等，都不能被作为变量名使用。浏览器将把它们识别为不同的代码项，因此你将得到错误。</li>
 </ul>
 
 <div class="note">
 <p><strong>Note</strong>: 你能从<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">词汇语法—关键字</a>找到一个相当完整的保留关键字列表来避免使用关键字当作变量。</p>
 </div>
 
-<p>好的命名示例:</p>
+<p>好的命名示例：</p>
 
 <pre class="example-good notranslate">age
 myAge
@@ -319,7 +319,7 @@ finalOutputValue
 audio1
 audio2</pre>
 
-<p>错误与差的命名示例:</p>
+<p>错误与差的命名示例：</p>
 
 <pre class="example-bad notranslate">1
 a
@@ -337,23 +337,23 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>可以为变量设置不同的数据类型。本节我们将对其进行简短的介绍，在以后的文章中，你会更详细地了解它们。</p>
 
-<p>到目前为止我们已经认识了前2个，但是还有其他的。</p>
+<p>到目前为止我们已经认识了前 2 个，但是还有其他的。</p>
 
 <h3 id="Number">Number</h3>
 
-<p>你可以在变量中存储数字，不论这些数字是像30（也叫整数）这样，或者像2.456这样的小数（也叫做浮点数）。与其他编程语言不同，在 JavaScript 中你不需要声明一个变量的类型。当你给一个变量数字赋值时，不需要用引号括起来。 </p>
+<p>你可以在变量中存储数字，不论这些数字是像 30（也叫整数）这样，或者像 2.456 这样的小数（也叫做浮点数）。与其他编程语言不同，在 JavaScript 中你不需要声明一个变量的类型。当你给一个变量数字赋值时，不需要用引号括起来。 </p>
 
 <pre class="brush: js notranslate">let myAge = 17;</pre>
 
 <h3 id="String">String</h3>
 
-<p>字符串是文本的一部分。当你给一个变量赋值为字符串时，你需要用单引号或者双引号把值给包起来，否则JavaScript将会把这个字符串值理解成别的变量名。</p>
+<p>字符串是文本的一部分。当你给一个变量赋值为字符串时，你需要用单引号或者双引号把值给包起来，否则 JavaScript 将会把这个字符串值理解成别的变量名。</p>
 
 <pre class="brush: js notranslate">let dolphinGoodbye = 'So long and thanks for all the fish';</pre>
 
 <h3 id="Boolean">Boolean</h3>
 
-<p>Boolean 的值有2种：true或false。它们通常被用于在适当的代码之后，测试条件是否成立。举个例子，一个简单的示例如下： </p>
+<p>Boolean 的值有 2 种：true 或 false。它们通常被用于在适当的代码之后，测试条件是否成立。举个例子，一个简单的示例如下： </p>
 
 <pre class="brush: js notranslate">let iAmAlive = true;</pre>
 
@@ -361,21 +361,21 @@ thisisareallylongstupidvariablenameman</pre>
 
 <pre class="brush: js notranslate">let test = 6 &lt; 3;</pre>
 
-<p>这是使用“小于”操作符（&lt;）来测试6小于3。正如你所料的，将会返回<code>false</code>，因为6并不小于3！在这个课程中，以后你将会学到许多有关操作符的知识。</p>
+<p>这是使用“小于”操作符（&lt;）来测试 6 小于 3。正如你所料的，将会返回<code>false</code>，因为 6 并不小于 3！在这个课程中，以后你将会学到许多有关操作符的知识。</p>
 
 <h3 id="Array">Array</h3>
 
-<p>数组是一个单个对象，其中包含很多值，方括号括起来，并用逗号分隔。尝试在您的控制台输入以下行:</p>
+<p>数组是一个单个对象，其中包含很多值，方括号括起来，并用逗号分隔。尝试在您的控制台输入以下行：</p>
 
 <pre class="brush: js notranslate">let myNameArray = ['Chris', 'Bob', 'Jim'];
 let myNumberArray = [10,15,40];</pre>
 
-<p>当数组被定义后，您可以使用如下所示的语法来访问各自的值，例如下行:</p>
+<p>当数组被定义后，您可以使用如下所示的语法来访问各自的值，例如下行：</p>
 
 <pre class="brush: js notranslate">myNameArray[0]; // should return 'Chris'
 myNumberArray[2]; // should return 40</pre>
 
-<p>此处的方括号包含一个索引值，该值指定要返回的值的位置。 您可能已经注意到，计算机从0开始计数，而不是像我们人类那样的1。</p>
+<p>此处的方括号包含一个索引值，该值指定要返回的值的位置。您可能已经注意到，计算机从 0 开始计数，而不是像我们人类那样的 1。</p>
 
 <p>在以后的文章，你将更多地了解数组。</p>
 
@@ -383,19 +383,19 @@ myNumberArray[2]; // should return 40</pre>
 
 <p>在编程中，对象是现实生活中的模型的一种代码结构。您可以有一个简单的对象，代表一个停车场，并包含有关其宽度和长度的信息，或者您可以有一个代表一个人的对象，并包含有关他们的名字，身高，体重，他们说什么语言，如何说 你好，他们，等等。</p>
 
-<p>尝试在您的控制台输入以下行:</p>
+<p>尝试在您的控制台输入以下行：</p>
 
 <pre class="brush: js notranslate">let dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
 
-<p>要检索存储在对象中的信息，可以使用以下语法:</p>
+<p>要检索存储在对象中的信息，可以使用以下语法：</p>
 
 <pre class="brush: js notranslate">dog.name</pre>
 
-<p>我们现在不会看对象了 - 您可以在将来的模块中了解更多关于这些对象的信息.</p>
+<p>我们现在不会看对象了 - 您可以在将来的模块中了解更多关于这些对象的信息。</p>
 
 <h2 id="动态类型">动态类型</h2>
 
-<p>JavaScript是一种“动态类型语言”，这意味着不同于其他一些语言(译者注：如C、JAVA)，您不需要指定变量将包含什么数据类型（例如number或string）</p>
+<p>JavaScript 是一种“动态类型语言”，这意味着不同于其他一些语言 (译者注：如 C、JAVA)，您不需要指定变量将包含什么数据类型（例如 number 或 string）</p>
 
 <p>例如，如果你声明一个变量并给它一个带引号的值，浏览器就会知道它是一个字符串：</p>
 
@@ -408,11 +408,11 @@ typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber</pre>
 
-<p>尝试依次将上述代码输入您的控制台，看看结果是什么（无须输入//之后的注释）。 我们使用了一个名为<code>typeof</code>的特殊的操作符 ——它会返回所传递给它的变量的数据类型。 第一次在上面的代码中调用它，它应该返回string，因为此时myNumber变量包含一个字符串'500'。 看看它第二次将返回什么。</p>
+<p>尝试依次将上述代码输入您的控制台，看看结果是什么（无须输入//之后的注释）。我们使用了一个名为<code>typeof</code>的特殊的操作符 ——它会返回所传递给它的变量的数据类型。第一次在上面的代码中调用它，它应该返回 string，因为此时 myNumber 变量包含一个字符串'500'。看看它第二次将返回什么。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>到目前为止，您应该了解了一些JavaScript变量以及如何创建它们。 在下一篇文章中，我们将更详细地关注数字，了解如何在JavaScript中使用基础数学。</p>
+<p>到目前为止，您应该了解了一些 JavaScript 变量以及如何创建它们。在下一篇文章中，我们将更详细地关注数字，了解如何在 JavaScript 中使用基础数学。</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}</p>
 

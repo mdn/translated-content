@@ -22,7 +22,7 @@ translation_of: Web/API/AudioScheduledSourceNode/stop
 
 <dl>
  <dt><code>when</code> {{optional_inline}}</dt>
- <dd>声音停止播放的时间，单位为秒。 这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。 省略这个参数，设置为0或者负值都会立即停止播放。</dd>
+ <dd>声音停止播放的时间，单位为秒。 这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。 省略这个参数，设置为 0 或者负值都会立即停止播放。</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,7 +33,7 @@ translation_of: Web/API/AudioScheduledSourceNode/stop
 
 <dl>
  <dt><code>InvalidStateNode</code></dt>
- <dd>节点还没有通过调用{{domxref("AudioScheduledSourceNode.start", "start()")}}方法被播放.</dd>
+ <dd>节点还没有通过调用{{domxref("AudioScheduledSourceNode.start", "start()")}}方法被播放。</dd>
  <dt><code>RangeError</code></dt>
  <dd>当 <code>when</code> 指定为负值时。</dd>
 </dl>
@@ -53,20 +53,7 @@ osc.stop(context.currentTime + 1);</pre>
 
 <h2 id="Parameters" name="Parameters">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioScheduledSourceNode-stop-void-double-when', 'stop()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

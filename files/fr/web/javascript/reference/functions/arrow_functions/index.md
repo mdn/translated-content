@@ -17,36 +17,38 @@ Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d�
 
 ## Syntaxe
 
-    ([param] [, param]) => {
-       instructions
-    }
+```js
+([param] [, param]) => {
+   instructions
+}
 
-    (param1, param2, …, param2) => expression
-    // équivalent à
-    (param1, param2, …, param2) => {
-      return expression;
-    }
+(param1, param2, …, param2) => expression
+// équivalent à
+(param1, param2, …, param2) => {
+  return expression;
+}
 
-    // Parenthèses non nécessaires quand il n'y a qu'un seul argument
-    param => expression
+// Parenthèses non nécessaires quand il n'y a qu'un seul argument
+param => expression
 
-    // Une fonction sans paramètre peut s'écrire avec un couple
-    // de parenthèses
-    () => {
-      instructions
-    }
+// Une fonction sans paramètre peut s'écrire avec un couple
+// de parenthèses
+() => {
+  instructions
+}
 
-    // Gestion des paramètres du reste et paramètres par défaut
-    (param1, param2, ...reste) => {
-      instructions
-    }
-    (param1 = valeurDefaut1, param2, …, paramN = valeurDefautN) => {
-      instructions
-    }
+// Gestion des paramètres du reste et paramètres par défaut
+(param1, param2, ...reste) => {
+  instructions
+}
+(param1 = valeurDefaut1, param2, …, paramN = valeurDefautN) => {
+  instructions
+}
 
-    // Gestion de la décomposition pour la liste des paramètres
-    let f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
-    f();
+// Gestion de la décomposition pour la liste des paramètres
+let f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+f();
+```
 
 - `param`
   - : Le nom d’un argument. S’il n'y a aucun argument, cela doit être indiqué par une paire de parenthèses `()`. S’il n'y a qu’un argument, les parenthèses ne sont pas nécessaires (ex. : `toto => 1`).

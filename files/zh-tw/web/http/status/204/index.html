@@ -15,18 +15,7 @@ translation_of: Web/HTTP/Status/204
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "204 No Content" , "6.3.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
@@ -35,9 +24,9 @@ translation_of: Web/HTTP/Status/204
 <h2 id="相容性事項">相容性事項</h2>
 
 <ul>
- <li>雖然此狀態碼意圖表示不具主體的回應，伺服器仍可能錯誤地在標頭後加入資料。通訊協定允許使用者代理更動此回應的處理方式 (<a href="https://github.com/httpwg/http11bis/issues/26">關於規範的討論請參見此處</a>)。這在<span class="st">持久連接中可以被觀察到，</span>無效的主體可能會包含<span class="tlid-translation translation" lang="zh-TW"><span title="">後續請求的不同回應</span></span> 。<br>
+ <li>雖然此狀態碼意圖表示不具主體的回應，伺服器仍可能錯誤地在標頭後加入資料。通訊協定允許使用者代理更動此回應的處理方式 (<a href="https://github.com/httpwg/http11bis/issues/26">關於規範的討論請參見此處</a>)。這在持久連接中可以被觀察到，無效的主體可能會包含後續請求的不同回應 。<br>
   <br>
-  Apple Safari 拒收這些資料。Google Chrome 及 Microsoft Edge <span class="tlid-translation translation" lang="zh-TW"><span title="">在有效回應之前丟棄最多四個無效的位元組。</span></span>Firefox 容許<span class="tlid-translation translation" lang="zh-TW"><span title="">在有效回應之前</span></span>超過1KB 的無效資料。</li>
+  Apple Safari 拒收這些資料。Google Chrome 及 Microsoft Edge 在有效回應之前丟棄最多四個無效的位元組。Firefox 容許在有效回應之前超過1KB 的無效資料。</li>
 </ul>
 
 <h2 id="參見">參見</h2>

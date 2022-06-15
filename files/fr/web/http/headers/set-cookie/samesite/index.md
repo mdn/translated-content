@@ -22,7 +22,7 @@ Les cookies sont transférables depuis le site actuel vers des sites de niveaux 
 
 ### `Strict`
 
-Les cookies ne seront envoyés qu'avec les requêtes effectuées sur le domaine de même niveau, et ne seront pas envoyées sur les requêtes vers des sites tiers.
+Les cookies ne seront envoyés qu'avec les requêtes effectuées sur le domaine de même niveau, et ne seront pas envoyées sur les requêtes provenant de sites tiers.
 
 ### `None`
 

@@ -7,9 +7,9 @@ tags:
   - HTML5
 translation_of: Web/API/Document/getElementsByClassName
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+<p>{{APIRef("DOM")}}</p>
 
-<p>返回一个包含了所有指定类名的子元素的类数组对象。当在document对象上调用时，会搜索整个DOM文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。</p>
+<p>返回一个包含了所有指定类名的子元素的类数组对象。当在 document 对象上调用时，会搜索整个 DOM 文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -19,24 +19,24 @@ translation_of: Web/API/Document/getElementsByClassName
 <ul>
  <li><var>elements</var> 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。</li>
  <li><var>names</var> 是一个字符串，表示要匹配的类名列表；类名通过空格分隔</li>
- <li>getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素.</li>
+ <li>getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。</li>
 </ul>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
-<p>获取所有 class 为 'test' 的元素:</p>
+<p>获取所有 class 为 'test' 的元素：</p>
 
 <pre class="brush: js">document.getElementsByClassName('test');</pre>
 
-<p>获取所有 class 同时包括 'red' 和 'test' 的元素.</p>
+<p>获取所有 class 同时包括 'red' 和 'test' 的元素。</p>
 
 <pre class="brush: js">document.getElementsByClassName('red test');</pre>
 
-<p>在id 为'main'的元素的子节点中，获取所有class为'test'的元素</p>
+<p>在 id 为'main'的元素的子节点中，获取所有 class 为'test'的元素</p>
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>我们还可以对任意的  {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递  <var>HTMLCollection</var> 作为方法的参数。这里我们将查找到所有class为 'test' 的 div 元素:</p>
+<p>我们还可以对任意的  {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递  <var>HTMLCollection</var> 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
@@ -103,7 +103,7 @@ document.getElementById("resultArea").value = result;</code></pre>
 
 <h3 id="结果">结果</h3>
 
-<p>{{EmbedLiveSample('Multiple_Classes_Example')}}</p>
+<p>{{EmbedLiveSample('多个_Class_示例')}}</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 

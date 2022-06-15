@@ -3,11 +3,11 @@ title: 使用 W3C DOM Level 1 核心
 slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 ---
-<p>W3C 的 Dom Level 1 核心是一个用于修改文档内容树的强大的对象模型。它被所有主流浏览器支持着，包括火狐浏览器和微软IE浏览器。它是网页脚本编程的强大基础。</p>
+<p>W3C 的 Dom Level 1 核心是一个用于修改文档内容树的强大的对象模型。它被所有主流浏览器支持着，包括火狐浏览器和微软 IE 浏览器。它是网页脚本编程的强大基础。</p>
 
 <h2 id="What_is_a_content_tree.3F" name="What_is_a_content_tree.3F">什么是内容树？</h2>
 
-<p>很多HTML作者认为HTML是平面的东西 -- 一堆文字被标签包围在中间。当然还有比这个更多的内容。任何HTML文档 （或者说任何SGML文档或者 XML 文档) 是一个树状结构。 比如，以下的文档和树状结构是相似的 (虽然不是完全一致 -- 更多信息请参考 <a href="/en-US/docs/Whitespace_in_the_DOM" title="Whitespace_in_the_DOM">whitespace in the DOM</a>):</p>
+<p>很多 HTML 作者认为 HTML 是平面的东西 -- 一堆文字被标签包围在中间。当然还有比这个更多的内容。任何 HTML 文档（或者说任何 SGML 文档或者 XML 文档) 是一个树状结构。 比如，以下的文档和树状结构是相似的 (虽然不是完全一致 -- 更多信息请参考 <a href="/en-US/docs/Whitespace_in_the_DOM" title="Whitespace_in_the_DOM">whitespace in the DOM</a>):</p>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
@@ -22,13 +22,13 @@ translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 
 <p><img alt="image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg" class="internal" src="/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg"></p>
 
-<p>当Mozilla解析文档的时候，它首先构建一个内容树然后用它来显示这个文档。</p>
+<p>当 Mozilla 解析文档的时候，它首先构建一个内容树然后用它来显示这个文档。</p>
 
-<p>用于描述树状结构的术语通常出现在DOM Level 1的核心中。 我上面画的每一个方块都是这个树的一个节点。 节点上面的线条表示父子关系: 上面的父节点, 而位于下方的是子节点. 位于一个父节点下面的两个子节点是相邻的。 类似地，我们可以指代祖先和后代。（不过，表亲们太乱了。）</p>
+<p>用于描述树状结构的术语通常出现在 DOM Level 1 的核心中。 我上面画的每一个方块都是这个树的一个节点。 节点上面的线条表示父子关系：上面的父节点，而位于下方的是子节点。位于一个父节点下面的两个子节点是相邻的。 类似地，我们可以指代祖先和后代。（不过，表亲们太乱了。）</p>
 
-<h2 id="What_does_the_DOM_Level_1_Core_let_me_do.3F" name="What_does_the_DOM_Level_1_Core_let_me_do.3F">DOM Level 1 核心能让我们做什么?</h2>
+<h2 id="What_does_the_DOM_Level_1_Core_let_me_do.3F" name="What_does_the_DOM_Level_1_Core_let_me_do.3F">DOM Level 1 核心能让我们做什么？</h2>
 
-<p>W3C的DOM Level 1允许你随意改变内容树。其功能之强大足以从零构建出任何HTML文档。它允许作者在任何时候，都可以通过脚本来修改文档里的任何内容。这是网页制作者通过JavaScript动态改变DOM的最简单途径。在版本较旧的浏览器里，使用JavaScript都是通过访问全局对象 <code>document</code> 属性来得到文档。文档对象实现了W3C的DOM Level 1规定的<a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document">文档接口</a>。</p>
+<p>W3C 的 DOM Level 1 允许你随意改变内容树。其功能之强大足以从零构建出任何 HTML 文档。它允许作者在任何时候，都可以通过脚本来修改文档里的任何内容。这是网页制作者通过 JavaScript 动态改变 DOM 的最简单途径。在版本较旧的浏览器里，使用 JavaScript 都是通过访问全局对象 <code>document</code> 属性来得到文档。文档对象实现了 W3C 的 DOM Level 1 规定的<a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document">文档接口</a>。</p>
 
 <h2 id="A_simple_example" name="A_simple_example">一个简单例子</h2>
 
@@ -40,12 +40,12 @@ translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 &lt;input type="button" value="Change this document." onclick="change()"&gt;
 &lt;h2&gt;Header&lt;/h2&gt;
 &lt;p&gt;Paragraph&lt;/p&gt;
-&lt;/body&gt;<span>
-</span></pre>
+&lt;/body&gt;
+</pre>
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js"><span>  function change() {
+<pre class="brush: js">  function change() {
     // document.getElementsByTagName("H2") returns a NodeList of the &lt;h2&gt;
     // elements in the document, and the first is number 0:
 
@@ -66,7 +66,7 @@ translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
     // and put the paragraph on the end of the document by appending it to
     // the BODY (which is the parent of para)
     para.parentNode.appendChild(newElement);
-  }</span></pre>
+  }</pre>
 
 <p>{{ EmbedLiveSample('A_simple_example', 800, 300) }}</p>
 
@@ -74,9 +74,9 @@ translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 
 <h2 id="How_can_I_learn_more.3F" name="How_can_I_learn_more.3F">想学习更多？</h2>
 
-<p>现在您已经熟悉了DOM的基本概念，有一个文档解释了<a href="https://developer.mozilla.org/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces"> DOM Level 1的基本方法</a>的基本方法。这是本文的补充。</p>
+<p>现在您已经熟悉了 DOM 的基本概念，有一个文档解释了<a href="https://developer.mozilla.org/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces"> DOM Level 1 的基本方法</a>的基本方法。这是本文的补充。</p>
 
-<p>也可以查看W3C的 <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html">DOM Level 1 核心规范文档</a>。尽管是正式的规范文档，但十分清晰易于理解。其对于网页制作者主要有用的内容是描述不同的DOM对象及其所有属性和方法。可以继续阅读我们其它关于<a href="https://developer.mozilla.org/en-US/docs/DOM">DOM的文档</a>。</p>
+<p>也可以查看 W3C 的 <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html">DOM Level 1 核心规范文档</a>。尽管是正式的规范文档，但十分清晰易于理解。其对于网页制作者主要有用的内容是描述不同的 DOM 对象及其所有属性和方法。可以继续阅读我们其它关于<a href="https://developer.mozilla.org/en-US/docs/DOM">DOM 的文档</a>。</p>
 
 <div class="originaldocinfo">
 <p><strong>Original Document Information</strong></p>

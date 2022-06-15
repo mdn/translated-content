@@ -5,7 +5,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 ---
 <div>{{cssref}}</div>
 
-<p><span class="seoSummary">CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或者应用程序 。 然而, 有些您想实现的东西表现的并不浅显易懂，或者没法使您立马想到一种聪明的解决办法。这篇文章集合一个一些温馨贴士和技巧，从而帮助您更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。</span></p>
+<p>CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或者应用程序。然而，有些您想实现的东西表现的并不浅显易懂，或者没法使您立马想到一种聪明的解决办法。这篇文章集合一个一些温馨贴士和技巧，从而帮助您更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。</p>
 
 <h2 id="Run_an_animation_again" name="Run_an_animation_again">重新播放动画</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <h3 id="CSS_内容">CSS 内容</h3>
 
-<p>现在我们将使用CSS定义动画本身。为了简洁，有些并不重要的CSS（如“播放”按钮的样式）并没有显示在这里。</p>
+<p>现在我们将使用 CSS 定义动画本身。为了简洁，有些并不重要的 CSS（如“播放”按钮的样式）并没有显示在这里。</p>
 
 <div class="hidden">
 <pre class="brush: css">.runButton {
@@ -57,13 +57,13 @@ translation_of: Web/CSS/CSS_Animations/Tips
   animation: colorchange 2s;
 }</pre>
 
-<p>这里有两个类。 <code>"box"</code> 类基本表述了box的外观，它不包含任何动画信息。动画的细节包含在<code>"changing"</code> 类, 它描述了名为 <code>"colorchange"</code> 的{{cssxref("@keyframes")}} 应该这持续两秒的时间段播放动画。</p>
+<p>这里有两个类。<code>"box"</code> 类基本表述了 box 的外观，它不包含任何动画信息。动画的细节包含在<code>"changing"</code> 类，它描述了名为 <code>"colorchange"</code> 的 {{cssxref("@keyframes")}} 应该这持续两秒的时间段播放动画。</p>
 
-<p>注意，正因为如此，这个box在这里不触发任何动画效果, 因此他不会动起来。</p>
+<p>注意，正因为如此，这个 box 在这里不触发任何动画效果，因此他不会动起来。</p>
 
 <h3 id="JavaScript_内容">JavaScript 内容</h3>
 
-<p>接下来我们将看看 JavaScript的部分如何工作。这里关键的部分在 <code>play()</code> 方法中, 他在用户点击“播放”按钮时被触发。</p>
+<p>接下来我们将看看 JavaScript 的部分如何工作。这里关键的部分在 <code>play()</code> 方法中，他在用户点击“播放”按钮时被触发。</p>
 
 <pre class="brush: js">function play() {
   document.querySelector(".box").className = "box";
@@ -76,12 +76,12 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <p>这看起来有点奇怪，不是么？这是因为重新播放动画的唯一方法是删除动画效果，让文档重新计算样式以使得它知道您已经设置了它，然后再将动画效果加回该元素。要实现这个，我们必须更具创造性。 </p>
 
-<p>这里是<code>play()</code> 方法被调用时发生的事情:</p>
+<p>这里是<code>play()</code> 方法被调用时发生的事情：</p>
 
 <ol>
- <li>box的CSS类列表被重置为<code>"box"</code> 。这么做的效果是移除了在这个box上的其他类属性， 包括处理动画的 <code>"changing"</code>类。换句话说，我们从box元素上删除了动画效果。然而，改变类属性列表在样式被重新计算完成或者发生刷新事件之前并不会生效。</li>
+ <li>box 的 CSS 类列表被重置为 <code>"box"</code>。这么做的效果是移除了在这个 box 上的其他类属性，包括处理动画的 <code>"changing"</code> 类。换句话说，我们从 box 元素上删除了动画效果。然而，改变类属性列表在样式被重新计算完成或者发生刷新事件之前并不会生效。</li>
  <li>为了确保样式被重新计算我们使用 {{domxref("window.requestAnimationFrame()")}}，同时设置了一个回调。我们的回调在下一次重绘页面之前被调用。问题是由于它在重绘之前被调用，而此时样式还没有被真正重新计算。</li>
- <li>我们的回调聪明地调用了<code>requestAnimationFrame()</code> 方法！这一次，回调在下一次重绘之前被调用，这发成在样式被重新计算之后。回调在box元素上添加<code>"changing"</code> 类，使得重绘后重新触发动画。</li>
+ <li>我们的回调聪明地调用了 <code>requestAnimationFrame()</code> 方法！这一次，回调在下一次重绘之前被调用，这发成在样式被重新计算之后。回调在 box 元素上添加 <code>"changing"</code> 类，使得重绘后重新触发动画。</li>
 </ol>
 
 <p>当然，我们同样需要在“播放”按钮上添加事件处理方法使其生效：</p>

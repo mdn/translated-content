@@ -14,7 +14,7 @@ translation_of: Web/API/Window/postMessage
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><strong><strong>window.postMessage()</strong> </strong>方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为https），端口号（443为https的默认值），以及主机  (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。<strong><strong>window.postMessage()</strong> </strong>方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。</p>
+<p><strong><strong>window.postMessage()</strong> </strong>方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为 https），端口号（443 为 https 的默认值），以及主机  (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。<strong><strong>window.postMessage()</strong> </strong>方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。</p>
 
 <p>从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 <code>targetWindow = window.opener</code>），然后在窗口上调用 <code>targetWindow.postMessage()</code> 方法分发一个  {{domxref("MessageEvent")}}<strong> </strong>消息。接收消息的窗口可以根据需要自由<a href="/zh-CN/docs/Web/Guide/Events">处理此事件</a>。传递给 window.postMessage() 的参数（比如 message ）将<a href="/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event">通过消息事件对象暴露给接收消息的窗口</a>。</p>
 
@@ -24,18 +24,18 @@ translation_of: Web/API/Window/postMessage
 
 <dl>
  <dt><code>otherWindow</code></dt>
- <dd>其他窗口的一个引用，比如iframe的contentWindow属性、执行<a href="/en-US/docs/DOM/window.open" title="DOM/window.open">window.open</a>返回的窗口对象、或者是命名过或数值索引的<a href="/en-US/docs/DOM/window.frames" title="DOM/window.frames">window.frames</a>。</dd>
+ <dd>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行<a href="/en-US/docs/DOM/window.open" title="DOM/window.open">window.open</a>返回的窗口对象、或者是命名过或数值索引的<a href="/en-US/docs/DOM/window.frames" title="DOM/window.frames">window.frames</a>。</dd>
  <dt><code>message</code></dt>
- <dd>将要发送到其他 window的数据。它将会被<a href="https://developer.mozilla.org/en-US/docs/DOM/The_structured_clone_algorithm">结构化克隆算法</a>序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。[<a href="https://developer.mozilla.org/en-US/docs/">1</a>]</dd>
+ <dd>将要发送到其他 window 的数据。它将会被<a href="https://developer.mozilla.org/en-US/docs/DOM/The_structured_clone_algorithm">结构化克隆算法</a>序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。[<a href="https://developer.mozilla.org/en-US/docs/">1</a>]</dd>
  <dt><code>targetOrigin</code></dt>
- <dd>通过窗口的origin属性来指定哪些窗口能接收到消息事件，其值可以是字符串"*"（表示无限制）或者一个URI。在发送消息的时候，如果目标窗口的协议、主机地址或端口这三者的任意一项不匹配targetOrigin提供的值，那么消息就不会被发送；只有三者完全匹配，消息才会被发送。这个机制用来控制消息可以发送到哪些窗口；例如，当用postMessage传送密码时，这个参数就显得尤为重要，必须保证它的值与这条包含密码的信息的预期接受者的origin属性完全一致，来防止密码被恶意的第三方截获。<strong>如果你明确的知道消息应该发送到哪个窗口，那么请始终提供一个有确切值的targetOrigin，而不是*。不提供确切的目标将导致数据泄露到任何对数据感兴趣的恶意站点。</strong></dd>
+ <dd>通过窗口的 origin 属性来指定哪些窗口能接收到消息事件，其值可以是字符串"*"（表示无限制）或者一个 URI。在发送消息的时候，如果目标窗口的协议、主机地址或端口这三者的任意一项不匹配 targetOrigin 提供的值，那么消息就不会被发送；只有三者完全匹配，消息才会被发送。这个机制用来控制消息可以发送到哪些窗口；例如，当用 postMessage 传送密码时，这个参数就显得尤为重要，必须保证它的值与这条包含密码的信息的预期接受者的 origin 属性完全一致，来防止密码被恶意的第三方截获。<strong>如果你明确的知道消息应该发送到哪个窗口，那么请始终提供一个有确切值的 targetOrigin，而不是*。不提供确切的目标将导致数据泄露到任何对数据感兴趣的恶意站点。</strong></dd>
  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
- <dd>是一串和message 同时传递的 {{domxref("Transferable")}} 对象. 这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</dd>
+ <dd>是一串和 message 同时传递的 {{domxref("Transferable")}} 对象。这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</dd>
 </dl>
 
 <h2 id="The_dispatched_event" name="The_dispatched_event">The dispatched event</h2>
 
-<p>执行如下代码, 其他window可以监听分发的message:</p>
+<p>执行如下代码，其他 window 可以监听分发的 message:</p>
 
 <pre class="brush: js notranslate">window.addEventListener("message", receiveMessage, false);
 
@@ -43,7 +43,7 @@ function receiveMessage(event)
 {
 <code>  // For Chrome, the origin property is in the event.originalEvent
   // object.
-  // 这里不准确，chrome没有这个属性
+  // 这里不准确，chrome 没有这个属性
   // var origin = event.origin || event.originalEvent.origin;
   var origin = event.origin</code>
   if (origin !== "http://example.org:8080")
@@ -53,15 +53,15 @@ function receiveMessage(event)
 }
 </pre>
 
-<p> message 的属性有:</p>
+<p> message 的属性有：</p>
 
 <dl>
  <dt><code>data</code></dt>
  <dd>从其他 window 中传递过来的对象。</dd>
  <dt><code>origin</code></dt>
- <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code><span class="nowiki">https://example.org</span></code> (隐含端口 <code>443</code>)”、“<code><span class="nowiki">http://example.net</span></code> (隐含端口 <code>80</code>)”、“<code><span class="nowiki">http://example.com:8080</span></code>”。请注意，这个origin不能保证是该窗口的当前或未来origin，因为postMessage被调用后可能被导航到不同的位置。</dd>
+ <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
  <dt><code>source</code></dt>
- <dd>对发送消息的<a href="/en-US/docs/DOM/window">窗口</a>对象的引用; 您可以使用此来在具有不同origin的两个窗口之间建立双向通信。</dd>
+ <dd>对发送消息的<a href="/en-US/docs/DOM/window">窗口</a>对象的引用; 您可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。</dd>
 </dl>
 
 <dl>
@@ -69,46 +69,46 @@ function receiveMessage(event)
 
 <h2 id="Security_concerns" name="Security_concerns">安全问题</h2>
 
-<p><strong>如果您不希望从其他网站接收message，请不要为message事件添加任何事件侦听器。 </strong>这是一个完全万无一失的方式来避免安全问题。</p>
+<p><strong>如果您不希望从其他网站接收 message，请不要为 message 事件添加任何事件侦听器。 </strong>这是一个完全万无一失的方式来避免安全问题。</p>
 
-<p>如果您确实希望从其他网站接收message，请<strong>始终使用origin和source属性验证发件人的身份</strong>。 任何窗口（包括例如http://evil.example.com）都可以向任何其他窗口发送消息，并且您不能保证未知发件人不会发送恶意消息。 但是，验证身份后，您仍然应该<strong>始终验证接收到的消息的语法</strong>。 否则，您信任只发送受信任邮件的网站中的安全漏洞可能会在您的网站中打开跨网站脚本漏洞。</p>
+<p>如果您确实希望从其他网站接收 message，请<strong>始终使用 origin 和 source 属性验证发件人的身份</strong>。 任何窗口（包括例如 http://evil.example.com）都可以向任何其他窗口发送消息，并且您不能保证未知发件人不会发送恶意消息。 但是，验证身份后，您仍然应该<strong>始终验证接收到的消息的语法</strong>。 否则，您信任只发送受信任邮件的网站中的安全漏洞可能会在您的网站中打开跨网站脚本漏洞。</p>
 
-<p><strong>当您使用postMessage将数据发送到其他窗口时，始终指定精确的目标origin，而不是*。 </strong>恶意网站可以在您不知情的情况下更改窗口的位置，因此它可以拦截使用postMessage发送的数据。</p>
+<p><strong>当您使用 postMessage 将数据发送到其他窗口时，始终指定精确的目标 origin，而不是*。 </strong>恶意网站可以在您不知情的情况下更改窗口的位置，因此它可以拦截使用 postMessage 发送的数据。</p>
 
 <h2 id="Example" name="Example">示例</h2>
 
 <pre class="brush: js notranslate">/*
- * A窗口的域名是&lt;http://example.com:8080&gt;，以下是A窗口的script标签下的代码：
+ * A 窗口的域名是&lt;http://example.com:8080&gt;，以下是 A 窗口的 script 标签下的代码：
  */
 
 var popup = window.open(...popup details...);
 
 // 如果弹出框没有被阻止且加载完成
 
-// 这行语句没有发送信息出去，即使假设当前页面没有改变location（因为targetOrigin设置不对）
+// 这行语句没有发送信息出去，即使假设当前页面没有改变 location（因为 targetOrigin 设置不对）
 popup.postMessage("The user is 'bob' and the password is 'secret'",
                   "https://secure.example.net");
 
-// 假设当前页面没有改变location，这条语句会成功添加message到发送队列中去（targetOrigin设置对了）
+// 假设当前页面没有改变 location，这条语句会成功添加 message 到发送队列中去（targetOrigin 设置对了）
 popup.postMessage("hello there!", "http://example.org");
 
 function receiveMessage(event)
 {
-  // 我们能相信信息的发送者吗?  (也许这个发送者和我们最初打开的不是同一个页面).
+  // 我们能相信信息的发送者吗？(也许这个发送者和我们最初打开的不是同一个页面).
   if (event.origin !== "http://example.org")
     return;
 
-  // event.source 是我们通过window.open打开的弹出页面 popup
-  // event.data 是 popup发送给当前页面的消息 "hi there yourself!  the secret response is: rheeeeet!"
+  // event.source 是我们通过 window.open 打开的弹出页面 popup
+  // event.data 是 popup 发送给当前页面的消息 "hi there yourself!  the secret response is: rheeeeet!"
 }
 window.addEventListener("message", receiveMessage, false);
 </pre>
 
 <pre class="brush: js notranslate">/*
- * 弹出页 popup 域名是&lt;http://example.org&gt;，以下是script标签中的代码:
+ * 弹出页 popup 域名是&lt;http://example.org&gt;，以下是 script 标签中的代码：
  */
 
-//当A页面postMessage被调用后，这个function被addEventListener调用
+//当 A 页面 postMessage 被调用后，这个 function 被 addEventListener 调用
 function receiveMessage(event)
 {
   // 我们能信任信息来源吗？
@@ -118,8 +118,8 @@ function receiveMessage(event)
   // event.source 就当前弹出页的来源页面
   // event.data 是 "hello there!"
 
-  // 假设你已经验证了所受到信息的origin (任何时候你都应该这样做), 一个很方便的方式就是把event.source
-  // 作为回信的对象，并且把event.origin作为targetOrigin
+  // 假设你已经验证了所受到信息的 origin (任何时候你都应该这样做), 一个很方便的方式就是把 event.source
+  // 作为回信的对象，并且把 event.origin 作为 targetOrigin
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
@@ -130,19 +130,19 @@ window.addEventListener("message", receiveMessage, false);
 
 <h3 id="Notes" name="Notes"><strong>注意</strong></h3>
 
-<p>任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。 因此，用于接收消息的任何事件监听器<strong>必须</strong>首先使用origin和source属性来检查消息的发送者的身份。 <strong>这不能低估：无法检查origin和source属性会导致跨站点脚本攻击。</strong></p>
+<p>任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。 因此，用于接收消息的任何事件监听器<strong>必须</strong>首先使用 origin 和 source 属性来检查消息的发送者的身份。 <strong>这不能低估：无法检查 origin 和 source 属性会导致跨站点脚本攻击。</strong></p>
 
-<p>与任何异步调度的脚本（超时，用户生成的事件）一样，postMessage的调用者不可能检测到侦听由postMessage发送的事件的事件处理程序何时抛出异常。</p>
+<p>与任何异步调度的脚本（超时，用户生成的事件）一样，postMessage 的调用者不可能检测到侦听由 postMessage 发送的事件的事件处理程序何时抛出异常。</p>
 
-<p>分派事件的origin属性的值不受调用窗口中document.domain的当前值的影响。</p>
+<p>分派事件的 origin 属性的值不受调用窗口中 document.domain 的当前值的影响。</p>
 
-<p>仅对于IDN主机名，origin属性的值不是始终为Unicode或punycode; 在使用此属性时，如果您期望来自IDN网站的消息，则最大程度地兼容性检查IDN和punycode值。 这个值最终将始终是IDN，但现在你应该同时处理IDN和punycode表单。</p>
+<p>仅对于 IDN 主机名，origin 属性的值不是始终为 Unicode 或 punycode; 在使用此属性时，如果您期望来自 IDN 网站的消息，则最大程度地兼容性检查 IDN 和 punycode 值。 这个值最终将始终是 IDN，但现在你应该同时处理 IDN 和 punycode 表单。</p>
 
-<p>当发送窗口包含 <code>javascript:</code> 或 <code>data:</code> URL时，origin属性的值是加载URL的脚本的</p>
+<p>当发送窗口包含 <code>javascript:</code> 或 <code>data:</code> URL 时，origin 属性的值是加载 URL 的脚本的</p>
 
-<h3 id="在扩展Non-standard_inline中使用window.postMessage"><strong>在扩展</strong>{{Non-standard_inline}}<strong>中使用window.postMessage</strong></h3>
+<h3 id="在扩展Non-standard_inline中使用window.postMessage"><strong>在扩展</strong>{{Non-standard_inline}}<strong>中使用 window.postMessage</strong></h3>
 
-<p><code>window.postMessage</code>可用于以chrome代码运行的JavaScript（例如，在扩展和特权代码中），但是分派事件的source属性总是为空作为安全限制。 （其他属性具有其期望值。）发送到位于chrome：URL的窗口的消息的<code>targetOrigin</code>参数当前被错误解释，使得将导致发送消息的唯一值为<code>“*”</code>。 由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议postMessage不用于与chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与chrome窗口进行通信。 最后，在文件中向页面发布消息：URL当前要求<code>targetOrigin</code>参数为<code>“*”</code>。<code> file://</code>不能用作安全限制; 这个限制可能会在将来被修改。</p>
+<p><code>window.postMessage</code>可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的<code>targetOrigin</code>参数当前被错误解释，使得将导致发送消息的唯一值为<code>“*”</code>。 由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。 最后，在文件中向页面发布消息：URL 当前要求<code>targetOrigin</code>参数为<code>“*”</code>。<code> file://</code>不能用作安全限制; 这个限制可能会在将来被修改。</p>
 
 <h2 id="Specification" name="Specification">规范</h2>
 
@@ -163,7 +163,7 @@ window.addEventListener("message", receiveMessage, false);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p><span style="">{{Compat("api.Window.postMessage")}}</span></p>
+<p>{{Compat("api.Window.postMessage")}}</p>
 
 <h2 id="See_also" name="See_also">参见</h2>
 

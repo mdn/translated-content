@@ -10,7 +10,7 @@ translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
 <div>{{DefaultAPISidebar("CSSOM")}}</div>
 
-<p class="summary">CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，允许操作很多与 CSS 相关的信息。最初定义在 <em>DOM Level 2 Style</em> 提议中，现在，这些接口形成了一个规范，<em>CSS对象模型（CSSOM）</em>，旨在取代它。</p>
+<p>CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，允许操作很多与 CSS 相关的信息。最初定义在 <em>DOM Level 2 Style</em> 提议中，现在，这些接口形成了一个规范，<em>CSS 对象模型（CSSOM）</em>，旨在取代它。</p>
 
 <p>在很多情况下，如果可能的话，通过 {{ domxref("element.className", "className") }} 属性来动态操作元素类名确实是最好的方式，因为所有的样式钩子的最终外观都可以在一个样式表中控制。这样写出的 JavaScript 代码也会变得更清晰，因为它不专注与样式相关的细节，而是专注于所创作或者操作的每一部分的整体语义，将精细的样式细节留给样式表。然而实际上也有以一些获取或者操作样式规则有用的情况（无论是对于正样式包还是的那个元素），将在下面进一步详细描述。同样应该注意，同操作单独元素的样式一样，当说到操作样式表的时候，并不是真的操作实际的物理文档，而仅仅是文档的内部表示。</p>
 
@@ -48,7 +48,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p> 元素的 {{domxref("HTMLElement.style", "style")}} 属性（见下面的 DOM 样式对象部分）也可以用于获取和设置元素的样式。然而，该属性只能返回通过内敛方式设置的样式属性（例如 <code>&lt;td style="background-color: lightblue"&gt;</code> 返回 "<code>background-color:lightblue</code>"，或者直接针对哪个元素使用  <code>element.style.propertyName</code>, 即使样式表中还有该元素上的其他样式）。</p>
 
-<p>此外，当你在元素上设置某个属性的时候，你会覆盖并擦除掉别处为该元素的这个属性设置的值。以设置 border 属性为例，将覆盖掉在 &lt;head&gt; 部分或者外部样式表设置的该元素的 border 属性。然而这并不会影响元素的其他属性，例如 padding、margin 或 font等。</p>
+<p>此外，当你在元素上设置某个属性的时候，你会覆盖并擦除掉别处为该元素的这个属性设置的值。以设置 border 属性为例，将覆盖掉在 &lt;head&gt; 部分或者外部样式表设置的该元素的 border 属性。然而这并不会影响元素的其他属性，例如 padding、margin 或 font 等。</p>
 
 <p>要修改特定元素的样式，可以将以下示例修改为你想要的样式。</p>
 
@@ -91,11 +91,11 @@ function resetStyle(elemId) {
 
 <p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
 
-<p><code>document.defaultView</code> 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式. 查看<a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> 示例章节了解更多使用该方法的信息。.</p>
+<p><code>document.defaultView</code> 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。查看<a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> 示例章节了解更多使用该方法的信息。.</p>
 
-<h2 id="DOM_Style_Object" name="DOM_Style_Object">DOM样式对象</h2>
+<h2 id="DOM_Style_Object" name="DOM_Style_Object">DOM 样式对象</h2>
 
-<p><code>style</code> 对象表示了一个单独的样式声明。不像<code><a href="/en/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> 集合中每个单独的样式规则，样式规则是通过 <code>document</code> 对象或者应用改样式的元素来访问的. 它表示特定元素的内联样式。</p>
+<p><code>style</code> 对象表示了一个单独的样式声明。不像<code><a href="/en/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> 集合中每个单独的样式规则，样式规则是通过 <code>document</code> 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。</p>
 
 <p>比这两个属性更重要的是使用 <code>style</code> 对象来给某个元素设置单独的样式属性。</p>
 
@@ -126,11 +126,11 @@ function resetStyle(elemId) {
 
 <p>{{ EmbedLiveSample('DOM_Style_Object_code_sample') }}</p>
 
-<p>style的 media 和type 给不给出都可以。</p>
+<p>style 的 media 和 type 给不给出都可以。</p>
 
 <h3 id="DOM_Style_Object_SetAttribue" name="DOM_Style_Object_SetAttribue">使用 <code>setAttribute</code> 方法</h3>
 
-<p>注意，你也可以通过获得元素的引用，然后使用它的 <code><a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> 方法，指定CSS属性和值，来改变该元素的样式。</p>
+<p>注意，你也可以通过获得元素的引用，然后使用它的 <code><a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> 方法，指定 CSS 属性和值，来改变该元素的样式。</p>
 
 <pre class="brush: js">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');

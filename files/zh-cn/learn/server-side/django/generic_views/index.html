@@ -7,17 +7,17 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">本教程扩充了 <a href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入URL处理细节，演示如何实施基本模式匹配。</p>
+<p>本教程扩充了 <a href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入 URL 处理细节，演示如何实施基本模式匹配。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">先决条件:</th>
+   <th scope="row">先决条件：</th>
    <td>完成所有先前的教程主题，包含<a href="/zh-CN/docs/Learn/Server-side/Django/Home_page">Django 教程 5: 创建主页。</a></td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
-   <td>了解如何使用、在何处使用通用类别视图，以及如何从URLs取出模式，如何传送资料到视图。</td>
+   <th scope="row">目标：</th>
+   <td>了解如何使用、在何处使用通用类别视图，以及如何从 URLs 取出模式，如何传送资料到视图。</td>
   </tr>
  </tbody>
 </table>
@@ -26,17 +26,17 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <p>本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的<a href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 网站（或者更准确地说，我们将向您展示如何实现书页，并让您自己创建作者页面！）</p>
 
-<p>该过程类似于创建索引页面，我们在上一个教程中展示了该页面。我们仍然需要创建URL地图，视图和模板。主要区别在于，对于详细信息页面，我们还有一个额外的挑战，即从URL中的模式中提取信息，并将其传递给视图。对于这些页面，我们将演示一种完全不同的视图类型：基于类别的通用列表和详细视图。这些可以显着减少所需的视图代码量，使其更易于编写和维护。</p>
+<p>该过程类似于创建索引页面，我们在上一个教程中展示了该页面。我们仍然需要创建 URL 地图，视图和模板。主要区别在于，对于详细信息页面，我们还有一个额外的挑战，即从 URL 中的模式中提取信息，并将其传递给视图。对于这些页面，我们将演示一种完全不同的视图类型：基于类别的通用列表和详细视图。这些可以显着减少所需的视图代码量，使其更易于编写和维护。</p>
 
 <p>本教程的最后一部分，将演示在使用基于类别的通用列表视图时，如何对数据进行分页。</p>
 
 <h2 id="书本清单页面">书本清单页面</h2>
 
-<p>书本清单页面，将显示页面中所有可用图书记录的列表，使用url: <code>catalog/books/</code>进行访问。该页面将显示每条记录的标题和作者，标题是指向相关图书详细信息页面的超链接。该页面将具有与站点中，所有其他页面相同的结构和导航，因此，我们可以扩展在上一个教程中创建的基本模板（<strong>base_generic.html</strong>）。</p>
+<p>书本清单页面，将显示页面中所有可用图书记录的列表，使用 url: <code>catalog/books/</code>进行访问。该页面将显示每条记录的标题和作者，标题是指向相关图书详细信息页面的超链接。该页面将具有与站点中，所有其他页面相同的结构和导航，因此，我们可以扩展在上一个教程中创建的基本模板（<strong>base_generic.html</strong>）。</p>
 
 <h3 id="URL_映射">URL 映射</h3>
 
-<p>打开<strong>/catalog/urls.py</strong> ，并复制到下面粗体显示的行中。就像索引页面的方式，这个<code>path()</code>函数，定义了一个与 URL 匹配的模式（'<strong>books/</strong>'），如果URL匹配，将调用视图函数（<code>views.BookListView.as_view()</code>）和一个对应这个特定映射的名称。</p>
+<p>打开<strong>/catalog/urls.py</strong> ，并复制到下面粗体显示的行中。就像索引页面的方式，这个<code>path()</code>函数，定义了一个与 URL 匹配的模式（'<strong>books/</strong>'），如果 URL 匹配，将调用视图函数（<code>views.BookListView.as_view()</code>）和一个对应这个特定映射的名称。</p>
 
 <pre class="brush: python">urlpatterns = [
     path('', views.index, name='index'),
@@ -45,7 +45,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <p>正如前一个教程中所讨论的，URL 必须已经先匹配了<code>/catalog</code>，因此实际上将为 URL 调用的视图是：<code>/catalog/books/</code>。</p>
 
-<p>视图函数具有与以前不同的格式 - 这是因为该视图，实际上将以类别来实现。我们将继承现有的泛型视图函数，该函数已经完成了我们希望此视图函数执行的大部分工作，而不是从头开始编写自己的函数。对于基于Django类的视图，我们通过调用类方法<code>as_view()</code>，来访问适当的视图函数。这样做可以创建类的实例，并确保为传入的 HTTP 请求调用正确的处理程序方法。</p>
+<p>视图函数具有与以前不同的格式 - 这是因为该视图，实际上将以类别来实现。我们将继承现有的泛型视图函数，该函数已经完成了我们希望此视图函数执行的大部分工作，而不是从头开始编写自己的函数。对于基于 Django 类的视图，我们通过调用类方法<code>as_view()</code>，来访问适当的视图函数。这样做可以创建类的实例，并确保为传入的 HTTP 请求调用正确的处理程序方法。</p>
 
 <h3 id="视图_(基于类别)">视图 (基于类别)</h3>
 
@@ -64,7 +64,7 @@ class BookListView(generic.ListView):
 <p><strong>注意</strong>: 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的<code>/<em>application_name</em>/templates/</code>目录中<code>（/catalog/templates/</code>），查找模板<code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code>（在本例中为<code>catalog/book_list.html</code>）。</p>
 </div>
 
-<p>您可以添加属性，以更改上面的默认行为。例如，如果需要使用同一模型的多个视图，则可以指定另一个模板文件，或者如果<code>book_list</code>对于特定模板用例不直观，则可能需要使用不同的模板变量名称。可能最有用的变更，是更改/过滤返回的结果子集 - 因此，您可能会列出其他用户阅读的前5本书，而不是列出所有书本。</p>
+<p>您可以添加属性，以更改上面的默认行为。例如，如果需要使用同一模型的多个视图，则可以指定另一个模板文件，或者如果<code>book_list</code>对于特定模板用例不直观，则可能需要使用不同的模板变量名称。可能最有用的变更，是更改/过滤返回的结果子集 - 因此，您可能会列出其他用户阅读的前 5 本书，而不是列出所有书本。</p>
 
 <pre class="brush: python">class BookListView(generic.ListView):
     model = Book
@@ -106,7 +106,7 @@ class BookListView(generic.ListView):
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 查看<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/">内置的基于类的通用视图</a>（Django文档），了解更多可以执行的操作示例。</p>
+<p><strong>注意</strong>: 查看<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/">内置的基于类的通用视图</a>（Django 文档），了解更多可以执行的操作示例。</p>
 </div>
 
 <h3 id="创建列表视图模板">创建列表视图模板</h3>
@@ -170,15 +170,15 @@ class BookListView(generic.ListView):
 
 <p>我们使用“点符号”（例如 <code>book.title</code> 和 <code>book.author</code>）访问相关书本记录的字段，其中书本项目<code>book</code>后面的文本是字段名称（如同在模型中定义的）。</p>
 
-<p>我们还可以在模板中，调用模型中的函数 - 在这里，我们调用<code>Book.get_absolute_url()</code>，来获取可用于显示关联详细记录的URL。这项工作提供的函数没有任何参数（没有办法传递参数！）</p>
+<p>我们还可以在模板中，调用模型中的函数 - 在这里，我们调用<code>Book.get_absolute_url()</code>，来获取可用于显示关联详细记录的 URL。这项工作提供的函数没有任何参数（没有办法传递参数！）</p>
 
 <div class="note">
-<p><strong>注意</strong>: 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！</p>
+<p><strong>注意</strong>: 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！</p>
 </div>
 
 <h4 id="更新基本模板">更新基本模板</h4>
 
-<p>打开基本模板（<strong>/locallibrary/catalog/templates/base_generic.html</strong>）并将 <strong>{% url 'books' %} </strong>插入所有书本 <strong>All books </strong>的 URL 链接，如下所示。这将启用所有页面中的链接（由于我们已经创建了 “books” 的 url 映射器，我们可以成功地将其设置到位）。</p>
+<p>打开基本模板（<strong>/locallibrary/catalog/templates/base_generic.html</strong>）并将 <strong>{% url 'books' %} </strong>插入所有书本 <strong>All books </strong>的 URL 链接，如下所示。这将启用所有页面中的链接（由于我们已经创建了“books”的 url 映射器，我们可以成功地将其设置到位）。</p>
 
 <pre class="brush: python">&lt;li&gt;&lt;a href="{% url 'index' %}"&gt;Home&lt;/a&gt;&lt;/li&gt;
 <strong>&lt;li&gt;&lt;a href="{% url 'books' %}"&gt;All books&lt;/a&gt;&lt;/li&gt;</strong>
@@ -186,7 +186,7 @@ class BookListView(generic.ListView):
 
 <h3 id="它看起来是什么样子？">它看起来是什么样子？</h3>
 
-<p>您将无法构建书本清单，因为我们仍然缺少依赖项 - 书本详细信息页面的URL地图，这是创建单个书本的超链接所必需的。我们将在下一节之后，说明列表和详细视图的部分。</p>
+<p>您将无法构建书本清单，因为我们仍然缺少依赖项 - 书本详细信息页面的 URL 地图，这是创建单个书本的超链接所必需的。我们将在下一节之后，说明列表和详细视图的部分。</p>
 
 <h2 id="书本详细信息页面">书本详细信息页面</h2>
 
@@ -202,12 +202,12 @@ class BookListView(generic.ListView):
 <strong>    path('book/&lt;int:pk&gt;', views.BookDetailView.as_view(), name='book-detail'),</strong>
 ]</pre>
 
-<p>对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的URL部分，包含视图可用于访问捕获数据的变量的名称。例如，&lt;<strong>something</strong>&gt; 将捕获标记的模式，并将值作为变量 “something” ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的<a href="https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters">转换器规范</a>（int，str，slug，uuid，path）。</p>
+<p>对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，&lt;<strong>something</strong>&gt; 将捕获标记的模式，并将值作为变量“something” ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的<a href="https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters">转换器规范</a>（int，str，slug，uuid，path）。</p>
 
 <p>在这里，我们使用 <code>'&lt;int:pk&gt;' </code>来捕获 book id，它必须是一个整数，并将其作为名为 <code>pk </code>的参数（主键的缩写）传递给视图。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如前所述，我们匹配的URL实际上是 <code>catalog/book/&lt;digits&gt;</code>（因为我们在应用程序 <strong>catalog </strong>中，假定使用<code>/catalog/</code>）。</p>
+<p><strong>注意</strong>: 如前所述，我们匹配的 URL 实际上是 <code>catalog/book/&lt;digits&gt;</code>（因为我们在应用程序 <strong>catalog </strong>中，假定使用<code>/catalog/</code>）。</p>
 </div>
 
 <div class="warning">
@@ -235,7 +235,7 @@ class BookListView(generic.ListView):
 
 <p>声明模式匹配需要知道的语法，主要部分是：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">符号</th>
@@ -263,7 +263,7 @@ class BookListView(generic.ListView):
   </tr>
   <tr>
    <td>+</td>
-   <td>匹配前面一个或多个字符。例如，要匹配一个或多个位数的数字，您将使用<code>\d+</code>。要匹配一个或多个“ a” 字符，您可以使用 <code>a+</code></td>
+   <td>匹配前面一个或多个字符。例如，要匹配一个或多个位数的数字，您将使用<code>\d+</code>。要匹配一个或多个“a”字符，您可以使用 <code>a+</code></td>
   </tr>
   <tr>
    <td>*</td>
@@ -288,7 +288,7 @@ class BookListView(generic.ListView):
 
 <p>让我们考虑一些模式的真实例子：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">模式</th>
@@ -308,14 +308,14 @@ class BookListView(generic.ListView):
   </tr>
   <tr>
    <td><strong>r'^book/(\d+)$'</strong></td>
-   <td>这与前面的例子匹配相同的URL。捕获的信息，将作为未命名的参数，发送到视图。</td>
+   <td>这与前面的例子匹配相同的 URL。捕获的信息，将作为未命名的参数，发送到视图。</td>
   </tr>
   <tr>
    <td><strong>r'^book/(?P&lt;stub&gt;[-\w]+)$'</strong></td>
    <td>
-    <p>这匹配一个字符串，该字符串在行（<strong>^book/</strong>）的开头具有<code>book/</code>，然后有一个或多个字符，可以是 ' - ' 或单词字符（(<strong>[-\w]+</strong>），然后结束。它还捕获这组字符，并将它们传递给名为 “stub” 的参数中的视图。</p>
+    <p>这匹配一个字符串，该字符串在行（<strong>^book/</strong>）的开头具有<code>book/</code>，然后有一个或多个字符，可以是 ' - ' 或单词字符（(<strong>[-\w]+</strong>），然后结束。它还捕获这组字符，并将它们传递给名为“stub”的参数中的视图。</p>
 
-    <p>这是 “stub” 的一种相当典型的模式。存根stub 是用于数据的、 URL 友好的、基于单词的主键。如果您希望本书网址提供更多信息，则可以使用 stub。例如 <code>/catalog/book/the-secret-garden</code> ，而不是<code>/catalog/book/33</code>。</p>
+    <p>这是“stub”的一种相当典型的模式。存根 stub 是用于数据的、URL 友好的、基于单词的主键。如果您希望本书网址提供更多信息，则可以使用 stub。例如 <code>/catalog/book/the-secret-garden</code> ，而不是<code>/catalog/book/33</code>。</p>
    </td>
   </tr>
  </tbody>
@@ -338,7 +338,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 额外选项和命名捕获的模式，二者都作为命名参数传递给视图。如果对捕获的模式和额外选项使用<strong>相同的名称</strong>，则仅将捕获的模式值发送到视图（将删除附加选项中指定的值）。</p>
+<p><strong>注意：</strong> 额外选项和命名捕获的模式，二者都作为命名参数传递给视图。如果对捕获的模式和额外选项使用<strong>相同的名称</strong>，则仅将捕获的模式值发送到视图（将删除附加选项中指定的值）。</p>
 </div>
 
 <h3 id="视图_(基于类别)_2">视图 (基于类别)</h3>
@@ -348,13 +348,13 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <pre class="brush: python">class BookDetailView(generic.DetailView):
     model = Book</pre>
 
-<p>就是这样！您现在需要做的就是创建一个名为 <strong>/locallibrary/catalog/templates/catalog/book_detail.html </strong>的模板，该视图将向此模板，传递 URL 映射器提取的特定 <code>Book</code> 记录的数据库信息。在模板中，您可以使用名为  <code>object</code> 或 <code>book</code>的模板变量（即通常为 “<code><em>the_model_name</em></code>”），以访问书本列表。</p>
+<p>就是这样！您现在需要做的就是创建一个名为 <strong>/locallibrary/catalog/templates/catalog/book_detail.html </strong>的模板，该视图将向此模板，传递 URL 映射器提取的特定 <code>Book</code> 记录的数据库信息。在模板中，您可以使用名为  <code>object</code> 或 <code>book</code>的模板变量（即通常为“<code><em>the_model_name</em></code>”），以访问书本列表。</p>
 
 <p>如果需要，可以更改使用的模板，以及用于在模板中，引用该书本的上下文对象的名称。您还可以覆盖方法，例如，向上下文添加其他信息。</p>
 
 <h4 id="如果记录不存在会怎样？">如果记录不存在会怎样？</h4>
 
-<p>如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 <code>Http404 </code>异常 - 在生产环境中，这将自动显示适当的 “未找到资源” 页面，您可以根据需要自定义该页面。</p>
+<p>如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 <code>Http404 </code>异常 - 在生产环境中，这将自动显示适当的“未找到资源”页面，您可以根据需要自定义该页面。</p>
 
 <p>为了让您了解其工作原理，下面的代码片段，演示了如何在<strong>不使用</strong>基于类的详细信息视图的情况下，将基于类的视图实现为函数。</p>
 
@@ -373,7 +373,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
     )
 </pre>
 
-<p>视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 <code>Http404</code>异常，以指示该书本 “未找到”。然后，最后一步是使用模板名称，和上下文参数<code>context</code>中的书本数据（作为字典）调用<code>render()</code>。</p>
+<p>视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 <code>Http404</code>异常，以指示该书本“未找到”。然后，最后一步是使用模板名称，和上下文参数<code>context</code>中的书本数据（作为字典）调用<code>render()</code>。</p>
 
 <div class="note">
 <p><strong>注意</strong>: <code>get_object_or_404()</code>（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 <code>Http404 </code>异常。</p>
@@ -411,7 +411,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 </ul>
 
 <div class="note">
-<p><strong>注意: </strong>上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，您应该像这样更新URL：</p>
+<p><strong>注意：</strong>上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，您应该像这样更新 URL：</p>
 
 <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
 </pre>
@@ -420,19 +420,19 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>虽然有点大，但此模板中的几乎所有内容，都已在前面描述过：</p>
 
 <ul>
- <li>我们扩展基本模板，并覆盖 “内容”区块 content。</li>
+ <li>我们扩展基本模板，并覆盖“内容”区块 content。</li>
  <li>我们使用条件处理，来确定是否显示特定内容。</li>
  <li>我们使用 <code>for </code>循环遍历对象列表。</li>
- <li>我们使用 "点表示法" 访问上下文字段（因为我们使用了详细的通用视图，上下文被命名为<code>book</code>；我们也可以使用 “<code>object</code>”）。</li>
+ <li>我们使用 "点表示法" 访问上下文字段（因为我们使用了详细的通用视图，上下文被命名为<code>book</code>；我们也可以使用“<code>object</code>”）。</li>
 </ul>
 
-<p>我们以前没见过的一件有趣的事情是函数<code>book.bookinstance_set.all()</code>。此方法由 Django “自动” 构造，以便返回与特定<code> Book</code> 相关联的 <code>BookInstance</code>记录集合。</p>
+<p>我们以前没见过的一件有趣的事情是函数<code>book.bookinstance_set.all()</code>。此方法由 Django“自动”构造，以便返回与特定<code> Book</code> 相关联的 <code>BookInstance</code>记录集合。</p>
 
 <pre class="brush: python">{% for copy in book.bookinstance_set.all %}
 &lt;!-- code to iterate across each copy/instance of a book --&gt;
 {% endfor %}</pre>
 
-<p>需要此方法，是因为您仅在关系的 “一” 侧声明 <code>ForeignKey</code>（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django构造了一个适当命名的 “反向查找” 函数，您可以使用它。函数的名称，是通过对声明<code> ForeignKey</code> 的模型名称，转化为小写来构造的，然后是<code>_set</code>（即，在 <code>Book </code>中创建的函数是 <code>bookinstance_set()</code>）。</p>
+<p>需要此方法，是因为您仅在关系的“一”侧声明 <code>ForeignKey</code>（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，您可以使用它。函数的名称，是通过对声明<code> ForeignKey</code> 的模型名称，转化为小写来构造的，然后是<code>_set</code>（即，在 <code>Book </code>中创建的函数是 <code>bookinstance_set()</code>）。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 这里我们使用<code>all()</code>来获取所有记录（默认值）。虽然您可以使用<code>filter()</code>方法获取代码中的记录子集，但您无法直接在模板中执行此操作，因为您无法指定函数的参数。</p>
@@ -450,8 +450,8 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <ol>
  <li>在模型的<code>class Meta</code>声明中，添加排序<code>ordering</code>。</li>
- <li>Add a <code>queryset</code> attribute in your custom class-based view, specifying a <code>order_by()</code>.在自定义基于类的视图中添加queryset属性，指定order_by（）。</li>
- <li>Adding a <code>get_queryset</code> method to your custom class-based view and also specify the <code>order_by()</code>.将get_queryset方法添加到基于类的自定义视图中，并指定order_by（）。</li>
+ <li>Add a <code>queryset</code> attribute in your custom class-based view, specifying a <code>order_by()</code>.在自定义基于类的视图中添加 queryset 属性，指定 order_by（）。</li>
+ <li>Adding a <code>get_queryset</code> method to your custom class-based view and also specify the <code>order_by()</code>.将 get_queryset 方法添加到基于类的自定义视图中，并指定 order_by（）。</li>
 </ol>
 
 <p>如果您决定使用<code>class Meta </code>作为作者模型<code>Author</code>（可能不像定制基于类的视图那样灵活，但很容易），您最终会得到这样的结果：</p>
@@ -481,7 +481,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>此时，我们应该创建了显示书本列表，和书本详细信息页面所需的所有内容。运行服务器（<code>python3 manage.py runserver</code>），并打开浏览器到 <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>。</p>
 
 <div class="warning">
-<p><strong>警告:</strong> <span id="result_box" lang="zh-CN"><span>请还不要点击任何作者、或作者详细信息链接 - 您将在挑战练习中，创建这些链接！</span></span></p>
+<p><strong>警告：</strong> 请还不要点击任何作者、或作者详细信息链接 - 您将在挑战练习中，创建这些链接！</p>
 </div>
 
 <p>单击所有书籍链接<strong> All books</strong> ，以显示书籍列表。</p>
@@ -506,7 +506,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
     model = Book
     <strong>paginate_by = 10</strong></pre>
 
-<p>通过添加这行，只要您有超过10条记录，视图就会开始对它发送到模板的数据，进行分页。使用 GET 参数访问不同的页面 - 要访问第2页，您将使用URL：<code>/catalog/books/<strong>?page=2</strong></code>。</p>
+<p>通过添加这行，只要您有超过 10 条记录，视图就会开始对它发送到模板的数据，进行分页。使用 GET 参数访问不同的页面 - 要访问第 2 页，您将使用 URL：<code>/catalog/books/<strong>?page=2</strong></code>。</p>
 
 <h3 id="模板">模板</h3>
 
@@ -534,15 +534,15 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
   {% endif %}
 {% endblock %} </strong></pre>
 
-<p><code>page_obj </code>是一个 <a href="https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects">Paginator</a> 对象，如果在当前页面上使用分页，它将存在。 它允许您获取有关当前页面，之前页面，有多少页面等的所有信息。</p>
+<p><code>page_obj </code>是一个 <a href="https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects">Paginator</a> 对象，如果在当前页面上使用分页，它将存在。它允许您获取有关当前页面，之前页面，有多少页面等的所有信息。</p>
 
-<p>我们使用 <code>\{{ request.path }}</code>，来获取用于创建分页链接的当前页面URL。 这很有用，因为它独立于我们正在分页的对象。</p>
+<p>我们使用 <code>\{{ request.path }}</code>，来获取用于创建分页链接的当前页面 URL。这很有用，因为它独立于我们正在分页的对象。</p>
 
 <p>就是这样！</p>
 
 <h3 id="它看起来是什么样子的？">它看起来是什么样子的？</h3>
 
-<p>下面的屏幕截图,显示了分页的样子 - 如果您没有在数据库中输入超过10个标题，那么您可以通过降低 <strong>catalog/views.py </strong>文件中 <code>paginate_by </code>行指定的数量，来更轻松地测试它。 为了得到以下结果，我们将其更改为 <code>paginate_by = 2</code>。</p>
+<p>下面的屏幕截图，显示了分页的样子 - 如果您没有在数据库中输入超过 10 个标题，那么您可以通过降低 <strong>catalog/views.py </strong>文件中 <code>paginate_by </code>行指定的数量，来更轻松地测试它。为了得到以下结果，我们将其更改为 <code>paginate_by = 2</code>。</p>
 
 <p>分页链接显示在底部，根据您所在的页面，显示下一个/上一个链接。</p>
 
@@ -550,7 +550,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <h2 id="挑战自己">挑战自己</h2>
 
-<p>本文中的挑战，是创建完成项目所需的作者详细信息视图，和列表视图。这些应在以下URL中提供：</p>
+<p>本文中的挑战，是创建完成项目所需的作者详细信息视图，和列表视图。这些应在以下 URL 中提供：</p>
 
 <ul>
  <li><code>catalog/authors/</code> — 所有作者的名单。</li>
@@ -565,8 +565,8 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p><strong>注意</strong>:</p>
 
 <ul>
- <li>为作者列表页面，创建URL映射器之后，还需要更新基本模板中的所有作者 <strong>All authors </strong>链接。按照我们更新“所有图书”<strong>All books</strong> 链接时，所做的相同过程。</li>
- <li>为作者详细信息页面，创建URL映射器之后，还应更新书本详细信息视图模板（<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>），以便作者链接，指向新的作者详细信息页面（而不是一个空的URL）。该行将更改为添加下面以粗体显示的模板标记。
+ <li>为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 <strong>All authors </strong>链接。按照我们更新“所有图书”<strong>All books</strong> 链接时，所做的相同过程。</li>
+ <li>为作者详细信息页面，创建 URL 映射器之后，还应更新书本详细信息视图模板（<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>），以便作者链接，指向新的作者详细信息页面（而不是一个空的 URL）。该行将更改为添加下面以粗体显示的模板标记。
   <pre class="brush: html">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt;
 </pre>
  </li>
@@ -589,9 +589,9 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>恭喜，我们的图书馆的基本功能现在完成了！</p>
 
-<p>本文中，我们学到如何使用基于类别的通用列表视图与详细视图，并使用它们创建页面，以查看我们的书本和作者。在此过程中，我们了解了与正则表达式匹配的模式，以及如何将数据从URL传递到视图。我们还学习了一些使用模板的技巧。最后，我们已经展示了如何对列表视图进行分页，这样即使我们有很多记录，我们也可以管理列表。</p>
+<p>本文中，我们学到如何使用基于类别的通用列表视图与详细视图，并使用它们创建页面，以查看我们的书本和作者。在此过程中，我们了解了与正则表达式匹配的模式，以及如何将数据从 URL 传递到视图。我们还学习了一些使用模板的技巧。最后，我们已经展示了如何对列表视图进行分页，这样即使我们有很多记录，我们也可以管理列表。</p>
 
-<p>在我们的下一篇文章，我们将扩充此图书馆，以支持使用者帐户，并从而演示使用者授权、许可、授权、会话, 以及表单。</p>
+<p>在我们的下一篇文章，我们将扩充此图书馆，以支持使用者帐户，并从而演示使用者授权、许可、授权、会话，以及表单。</p>
 
 <h2 id="参见">参见</h2>
 
@@ -612,7 +612,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <ul>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django 介绍</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">架设 Django 开发环境</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django 教程: 本地图书馆网站</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django 教程：本地图书馆网站</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django 教程 2: 创建骨架站点</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django 教程 3: 使用模型</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django 教程 4: Django 管理站点</a></li>

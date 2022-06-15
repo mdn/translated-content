@@ -6,8 +6,8 @@ tags:
   - Intl
   - JavaScript
   - メソッド
-  - Prototype
-  - Reference
+  - プロトタイプ
+  - リファレンス
 browser-compat: javascript.builtins.Intl.Locale.minimize
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 ---

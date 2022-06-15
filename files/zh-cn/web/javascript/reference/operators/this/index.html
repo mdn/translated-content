@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Operators/this
 
 <p>无论是否在严格模式下，在全局执行环境中（在任何函数体外部）<code>this</code> 都指向全局对象。</p>
 
-<pre class="brush:js">// 在浏览器中, window 对象同时也是全局对象：
+<pre class="brush:js">// 在浏览器中，window 对象同时也是全局对象：
 console.log(this === window); // true
 
 a = 37;
@@ -56,9 +56,9 @@ console.log(b)         // "MDN"</pre>
   return this;
 }
 //在浏览器中：
-f1() === window;   //在浏览器中，全局对象是window
+f1() === window;   //在浏览器中，全局对象是 window
 
-//在Node中：
+//在 Node 中：
 f1() === globalThis;
 </pre>
 
@@ -102,7 +102,7 @@ new Example(); // ['constructor', 'first', 'second']</pre>
 
 <h3 id="派生类">派生类</h3>
 
-<p>不像基类的构造函数，派生类的构造函数没有初始的 <code>this</code> 绑定。在构造函数中调用 {{jsxref("Operators/super", "super()")}} 会生成一个 <code>this</code> 绑定，并相当于执行如下代码，Base为基类：</p>
+<p>不像基类的构造函数，派生类的构造函数没有初始的 <code>this</code> 绑定。在构造函数中调用 {{jsxref("Operators/super", "super()")}} 会生成一个 <code>this</code> 绑定，并相当于执行如下代码，Base 为基类：</p>
 
 <pre>this = new Base();</pre>
 
@@ -143,8 +143,8 @@ function whatsThis() {
 }
 
 whatsThis();          // 'Global' 因为在这个函数中 this 没有被设定，所以它默认为 全局/ window 对象
-whatsThis.call(obj);  // 'Custom' 因为函数中的 this 被设置为obj
-whatsThis.apply(obj); // 'Custom' 因为函数中的 this 被设置为obj
+whatsThis.call(obj);  // 'Custom' 因为函数中的 this 被设置为 obj
+whatsThis.apply(obj); // 'Custom' 因为函数中的 this 被设置为 obj
 </pre>
 
 <h3 id="this_和对象转换">this 和对象转换</h3>
@@ -185,7 +185,7 @@ bar.call(undefined); // [object global]</pre>
 var g = f.bind({a:"azerty"});
 console.log(g()); // azerty
 
-var h = g.bind({a:'yoo'}); // bind只生效一次！
+var h = g.bind({a:'yoo'}); // bind 只生效一次！
 console.log(h()); // azerty
 
 var o = {a:37, f:f, g:g, h:h};
@@ -209,21 +209,21 @@ console.log(foo() === globalObject); // true</pre>
 var obj = {foo: foo};
 console.log(obj.foo() === globalObject); // true
 
-// 尝试使用call来设定this
+// 尝试使用 call 来设定 this
 console.log(foo.call(obj) === globalObject); // true
 
-// 尝试使用bind来设定this
+// 尝试使用 bind 来设定 this
 foo = foo.bind(obj);
 console.log(foo() === globalObject); // true</pre>
 
 <p>无论如何，<code>foo</code> 的 <code>this</code> 被设置为他被创建时的环境（在上面的例子中，就是全局对象）。这同样适用于在其他函数内创建的箭头函数：这些箭头函数的<code>this</code>被设置为封闭的词法环境的。</p>
 
-<pre class="brush: js">// 创建一个含有bar方法的obj对象，
-// bar返回一个函数，
-// 这个函数返回this，
+<pre class="brush: js">// 创建一个含有 bar 方法的 obj 对象，
+// bar 返回一个函数，
+// 这个函数返回 this，
 // 这个返回的函数是以箭头函数创建的，
-// 所以它的this被永久绑定到了它外层函数的this。
-// bar的值可以在调用中设置，这反过来又设置了返回函数的值。
+// 所以它的 this 被永久绑定到了它外层函数的 this。
+// bar 的值可以在调用中设置，这反过来又设置了返回函数的值。
 var obj = {
   bar: function() {
     var x = (() =&gt; this);
@@ -231,22 +231,22 @@ var obj = {
   }
 };
 
-// 作为obj对象的一个方法来调用bar，把它的this绑定到obj。
-// 将返回的函数的引用赋值给fn。
+// 作为 obj 对象的一个方法来调用 bar，把它的 this 绑定到 obj。
+// 将返回的函数的引用赋值给 fn。
 var fn = obj.bar();
 
-// 直接调用fn而不设置this，
-// 通常(即不使用箭头函数的情况)默认为全局对象
-// 若在严格模式则为undefined
+// 直接调用 fn 而不设置 this，
+// 通常 (即不使用箭头函数的情况) 默认为全局对象
+// 若在严格模式则为 undefined
 console.log(fn() === obj); // true
 
-// 但是注意，如果你只是引用obj的方法，
+// 但是注意，如果你只是引用 obj 的方法，
 // 而没有调用它
 var fn2 = obj.bar;
-// 那么调用箭头函数后，this指向window，因为它从 bar 继承了this。
+// 那么调用箭头函数后，this 指向 window，因为它从 bar 继承了 this。
 console.log(fn2()() == window); // true</pre>
 
-<p>在上面的例子中，一个赋值给了 <code>obj.bar</code>的函数（称为匿名函数 A），返回了另一个箭头函数（称为匿名函数 B）。因此，在 <code>A</code> 调用时，函数B的<code>this</code>被永久设置为obj.bar（函数A）的<code>this</code>。当返回的函数（函数B）被调用时，它<code>this</code>始终是最初设置的。在上面的代码示例中，函数B的<code>this</code>被设置为函数A的<code>this</code>，即obj，所以即使被调用的方式通常将其设置为 <code>undefined</code> 或全局对象（或者如前面示例中的其他全局执行环境中的方法），它的 <code>this</code> 也仍然是 <code>obj</code> 。</p>
+<p>在上面的例子中，一个赋值给了 <code>obj.bar</code>的函数（称为匿名函数 A），返回了另一个箭头函数（称为匿名函数 B）。因此，在 <code>A</code> 调用时，函数 B 的<code>this</code>被永久设置为 obj.bar（函数 A）的<code>this</code>。当返回的函数（函数 B）被调用时，它<code>this</code>始终是最初设置的。在上面的代码示例中，函数 B 的<code>this</code>被设置为函数 A 的<code>this</code>，即 obj，所以即使被调用的方式通常将其设置为 <code>undefined</code> 或全局对象（或者如前面示例中的其他全局执行环境中的方法），它的 <code>this</code> 也仍然是 <code>obj</code> 。</p>
 
 <h3 id="作为对象的方法">作为对象的方法</h3>
 
@@ -334,15 +334,15 @@ console.log(o.average, o.sum); // logs 2, 6
 </div>
 
 <pre class="brush: js">/*
- * 构造函数这样工作:
+ * 构造函数这样工作：
  *
  * function MyConstructor(){
  *   // 函数实体写在这里
- *   // 根据需要在this上创建属性，然后赋值给它们，比如：
+ *   // 根据需要在 this 上创建属性，然后赋值给它们，比如：
  *   this.fum = "nom";
  *   // 等等...
  *
- *   // 如果函数具有返回对象的return语句，
+ *   // 如果函数具有返回对象的 return 语句，
  *   // 则该对象将是 new 表达式的结果。
  *   // 否则，表达式的结果是当前绑定到 this 的对象。
  *   //（即通常看到的常见情况）。
@@ -368,7 +368,7 @@ console.log(o.a); // logs 38
 
 <p>在刚刚的例子中（<code>C2</code>），因为在调用构造函数的过程中，手动的设置了返回对象，与<code>this</code>绑定的默认对象被丢弃了。（这基本上使得语句 “<code>this.a = 37;</code>”成了“僵尸”代码，实际上并不是真正的“僵尸”，这条语句执行了，但是对于外部没有任何影响，因此完全可以忽略它）。</p>
 
-<h3 id="作为一个DOM事件处理函数">作为一个DOM事件处理函数</h3>
+<h3 id="作为一个DOM事件处理函数">作为一个 DOM 事件处理函数</h3>
 
 <p>当函数被用作事件处理函数时，它的 <code>this</code> 指向触发事件的元素（一些浏览器在使用非 <code>addEventListener</code> 的函数动态地添加监听函数时不遵守这个约定）。</p>
 
@@ -384,14 +384,14 @@ function bluify(e){
 // 获取文档中的所有元素的列表
 var elements = document.getElementsByTagName('*');
 
-// 将bluify作为元素的点击监听函数，当元素被点击时，就会变成蓝色
+// 将 bluify 作为元素的点击监听函数，当元素被点击时，就会变成蓝色
 for(var i=0 ; i&lt;elements.length ; i++){
   elements[i].addEventListener('click', bluify, false);
 }</pre>
 
 <h3 id="作为一个内联事件处理函数">作为一个内联事件处理函数</h3>
 
-<p>当代码被内联 <a href="/zh-CN/docs/Web/Guide/Events/Event_handlers">on-event 处理函数</a> 调用时，它的<code>this</code>指向监听器所在的DOM元素：</p>
+<p>当代码被内联 <a href="/zh-CN/docs/Web/Guide/Events/Event_handlers">on-event 处理函数</a> 调用时，它的<code>this</code>指向监听器所在的 DOM 元素：</p>
 
 <pre class="brush: html">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
   Show this
@@ -407,7 +407,7 @@ for(var i=0 ; i&lt;elements.length ; i++){
 
 <p>在这种情况下，没有设置内部函数的 <code>this</code>，所以它指向 global/window 对象（即非严格模式下调用的函数未设置 <code>this</code> 时指向的默认对象）。</p>
 
-<h3 id="类中的this">类中的this</h3>
+<h3 id="类中的_this">类中的 this</h3>
 
 <p>和其他普通函数一样，方法中的 <code>this</code> 值取决于它们如何被调用。有时，改写这个行为，让类中的 <code>this</code> 值总是指向这个类实例会很有用。为了做到这一点，可在构造函数中绑定类方法：</p>
 

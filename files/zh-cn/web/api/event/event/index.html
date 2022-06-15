@@ -10,7 +10,7 @@ translation_of: Web/API/Event/Event
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><code><strong>Event()</strong></code> 构造函数, 创建一个新的事件对象 {{domxref("Event")}}。</p>
+<p><code><strong>Event()</strong></code> 构造函数，创建一个新的事件对象 {{domxref("Event")}}。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,24 +25,24 @@ translation_of: Web/API/Event/Event
 </dl>
 
 <dl>
- <dd>是 <code>EventInit</code> 类型的字典，接受以下字段:
+ <dd>是 <code>EventInit</code> 类型的字典，接受以下字段：
 
  <ul>
   <li><code>"bubbles"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>，表示该事件是否冒泡。</li>
   <li><code>"cancelable"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>， 表示该事件能否被取消。</li>
-  <li><code>"composed"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>，指示事件是否会在影子DOM根节点之外触发侦听器。</li>
+  <li><code>"composed"</code>，可选，{{jsxref("Boolean")}}类型，默认值为 <code style="font-style: normal;">false</code>，指示事件是否会在影子 DOM 根节点之外触发侦听器。</li>
  </ul>
  </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js">// 创建一个支持冒泡且不能被取消的look事件
+<pre class="brush: js">// 创建一个支持冒泡且不能被取消的 look 事件
 
 var ev = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(ev);
 
-<code>// 事件可以在任何元素触发，不仅仅是document
+<code>// 事件可以在任何元素触发，不仅仅是 document
 myDiv.dispatchEvent(ev);</code>
 </pre>
 

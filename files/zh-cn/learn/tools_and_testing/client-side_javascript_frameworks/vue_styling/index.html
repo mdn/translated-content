@@ -3,50 +3,50 @@ title: Styling Vue components with CSS
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
-<div><font><font>{{LearnSidebar}}</font></font></div>
+<div>{{LearnSidebar}}</div>
 
-<div><font><font>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</font></font></div>
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary"><font><font>现在终于到了使我们的应用程序看起来更好的时候了。</font><font>在本文中，我们将探讨使用CSS样式Vue组件的不同方法。</font></font></p>
+<p>现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式 Vue 组件的不同方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row"><font><font>先决条件：</font></font></th>
+   <th scope="row">先决条件：</th>
    <td>
-    <p><font><font>熟悉核心</font></font><a href="/en-US/docs/Learn/HTML"><font><font>HTML</font></font></a><font><font>，</font></font><a href="/en-US/docs/Learn/CSS"><font><font>CSS</font></font></a><font><font>和</font></font><a href="/en-US/docs/Learn/JavaScript"><font><font>JavaScript</font></font></a><font><font>语言，了解</font></font><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"><font><font>终端/命令行</font></font></a><font><font>。</font></font></p>
+    <p>熟悉核心<a href="/en-US/docs/Learn/HTML">HTML</a>，<a href="/en-US/docs/Learn/CSS">CSS</a>和<a href="/en-US/docs/Learn/JavaScript">JavaScript</a>语言，了解<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端/命令行</a>。</p>
 
-    <p><font><font>Vue组件是由管理应用程序数据的JavaScript对象和映射到基础DOM结构的基于HTML的模板语法组成的。</font><font>为了进行安装并使用Vue的一些更高级的功能（例如“单个文件组件”或渲染功能），您将需要一个装有node + npm的终端。</font></font></p>
+    <p>Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM 结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue 的一些更高级的功能（例如“单个文件组件”或渲染功能），您将需要一个装有 node + npm 的终端。</p>
    </td>
   </tr>
   <tr>
-   <th scope="row"><font><font>目的：</font></font></th>
-   <td><font><font>了解有关设置Vue组件样式的信息。</font></font></td>
+   <th scope="row">目的：</th>
+   <td>了解有关设置 Vue 组件样式的信息。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="使用CSS样式化Vue组件"><font><font>使用CSS样式化Vue组件</font></font></h2>
+<h2 id="使用CSS样式化Vue组件">使用 CSS 样式化 Vue 组件</h2>
 
-<p><font><font>在继续向我们的应用程序添加更多高级功能之前，我们应该添加一些基本的CSS使其看起来更好。</font><font>Vue具有三种样式化应用程序的方法：</font></font></p>
+<p>在继续向我们的应用程序添加更多高级功能之前，我们应该添加一些基本的 CSS 使其看起来更好。Vue 具有三种样式化应用程序的方法：</p>
 
 <ul>
- <li><font><font>外部CSS文件。</font></font></li>
- <li><font><font>单个文件组件（</font></font><code>.vue</code><font><font>文件）中的</font><font>全局样式</font><font>。</font></font></li>
- <li><font><font>单个文件组件中组件范围的样式。</font></font></li>
+ <li>外部 CSS 文件。</li>
+ <li>单个文件组件（<code>.vue</code>文件）中的全局样式。</li>
+ <li>单个文件组件中组件范围的样式。</li>
 </ul>
 
-<p><font><font>为帮助您熟悉每个应用程序，我们将所有三个功能结合使用，以使我们的应用程序具有更好的外观。</font></font></p>
+<p>为帮助您熟悉每个应用程序，我们将所有三个功能结合使用，以使我们的应用程序具有更好的外观。</p>
 
-<h2 id="外部CSS文件的样式"><font><font>外部CSS文件的样式</font></font></h2>
+<h2 id="外部CSS文件的样式">外部 CSS 文件的样式</h2>
 
-<p><font><font>您可以包括外部CSS文件，并将其全局应用于您的应用程序。</font><font>让我们看看这是如何完成的。</font></font></p>
+<p>您可以包括外部 CSS 文件，并将其全局应用于您的应用程序。让我们看看这是如何完成的。</p>
 
-<p><font><font>首先，</font></font><code>reset.css</code><font><font>在</font></font><code>src/assets</code><font><font>目录中</font><font>创建一个名为</font><font>的</font><font>文件。</font><font>Webpack将处理此文件夹中的文件。</font><font>这意味着我们可以使用CSS预处理器（如SCSS）或后处理器（如PostCSS）。</font></font></p>
+<p>首先，<code>reset.css</code>在<code>src/assets</code>目录中创建一个名为的文件。Webpack 将处理此文件夹中的文件。这意味着我们可以使用 CSS 预处理器（如 SCSS）或后处理器（如 PostCSS）。</p>
 
-<p><font><font>尽管本教程不会使用此类工具，但很高兴知道在资产文件夹中包含此类代码后，它将自动进行处理。</font></font></p>
+<p>尽管本教程不会使用此类工具，但很高兴知道在资产文件夹中包含此类代码后，它将自动进行处理。</p>
 
-<p><font><font>将以下内容添加到</font></font><code>reset.css</code><font><font>文件中：</font></font></p>
+<p>将以下内容添加到<code>reset.css</code>文件中：</p>
 
 <pre class="brush: css notranslate">/*reset.css*/
 /* RESETS */
@@ -122,29 +122,29 @@ body {
 }
 /*END RESETS*/</pre>
 
-<p><font><font>接下来，在您的</font></font><code>src/main.js</code><font><font>文件中，如下导入</font></font><code>reset.css</code><font><font>文件：</font></font></p>
+<p>接下来，在您的<code>src/main.js</code>文件中，如下导入<code>reset.css</code>文件：</p>
 
 <pre class="brush: js notranslate">import './assets/reset.css';</pre>
 
-<p><font><font>这将导致在构建步骤中拾取文件并自动将其添加到我们的网站。</font></font></p>
+<p>这将导致在构建步骤中拾取文件并自动将其添加到我们的网站。</p>
 
-<p><font><font>重置样式应立即应用于该应用。</font><font>下图显示了应用重置前后应用程序的外观。</font></font></p>
+<p>重置样式应立即应用于该应用。下图显示了应用重置前后应用程序的外观。</p>
 
-<p><font><font>之前：</font></font></p>
+<p>之前：</p>
 
 <p><img alt="已添加部分样式的todo应用程序； 该应用现在位于卡片中，但某些内部功能仍需要样式" src="https://mdn.mozillademos.org/files/17247/todo-app-unstyled.png" style="border-style: solid; border-width: 1px; height: 763px; width: 1600px;"></p>
 
-<p><font><font>后：</font></font><img alt="已添加部分样式的todo应用程序； 该应用现在位于卡片中，但某些内部功能仍需要样式" src="https://mdn.mozillademos.org/files/17248/todo-app-reset-styles.png" style="border-style: solid; border-width: 1px; height: 929px; width: 1811px;"></p>
+<p>后：<img alt="已添加部分样式的todo应用程序； 该应用现在位于卡片中，但某些内部功能仍需要样式" src="https://mdn.mozillademos.org/files/17248/todo-app-reset-styles.png" style="border-style: solid; border-width: 1px; height: 929px; width: 1811px;"></p>
 
-<p><font><font>显着的更改包括删除列表项目符号，更改背景颜色以及更改基本按钮和输入样式。</font></font></p>
+<p>显着的更改包括删除列表项目符号，更改背景颜色以及更改基本按钮和输入样式。</p>
 
-<h2 id="向单个文件组件添加全局样式"><font><font>向单个文件组件添加全局样式</font></font></h2>
+<h2 id="向单个文件组件添加全局样式">向单个文件组件添加全局样式</h2>
 
-<p><font><font>现在，我们已将CSS重置为在浏览器之间统一，我们需要对样式进行更多自定义。</font><font>我们希望将某些样式应用于应用程序中的各个组件。</font><font>虽然可以直接将这些文件添加到</font></font><code>reset.css</code><font><font>样式表中，但是我们将它们添加到的</font></font><code>&lt;style&gt;</code><font><font>标签中，</font></font><code>App.vue</code><font><font>以演示如何使用它们。</font></font></p>
+<p>现在，我们已将 CSS 重置为在浏览器之间统一，我们需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到<code>reset.css</code>样式表中，但是我们将它们添加到的<code>&lt;style&gt;</code>标签中，<code>App.vue</code>以演示如何使用它们。</p>
 
-<p><font><font>文件中已经存在一些样式。</font><font>让我们删除它们，并用下面的样式替换它们。</font><font>这些样式可以做一些事情-为按钮和输入添加一些样式，并自定义</font></font><code>#app</code><font><font>元素及其子元素。</font></font></p>
+<p>文件中已经存在一些样式。让我们删除它们，并用下面的样式替换它们。这些样式可以做一些事情 - 为按钮和输入添加一些样式，并自定义<code>#app</code>元素及其子元素。</p>
 
-<p><font><font>更新</font></font><code>App.vue</code><font><font>文件的</font></font><code>&lt;style&gt;</code><font><font>元素，如下所示：</font></font></p>
+<p>更新<code>App.vue</code>文件的<code>&lt;style&gt;</code>元素，如下所示：</p>
 
 <pre class="brush: css notranslate">&lt;style&gt;
 /* Global styles */
@@ -461,36 +461,36 @@ body {
  <li>Ember
   <ul>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization"><font><font>Ember应用程序的结构和组件化</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state"><font><font>灰烬互动：事件，类和状态</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer"><font><font>灰烬交互性：页脚功能，条件渲染</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing"><font><font>在Ember中路由</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources"><font><font>灰烬资源和故障排除</font></font></a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember 应用程序的结构和组件化</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">灰烬互动：事件，类和状态</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">灰烬交互性：页脚功能，条件渲染</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">在 Ember 中路由</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">灰烬资源和故障排除</a></li>
   </ul>
  </li>
- <li><font><font>Vue</font></font>
+ <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started"><font><font>Vue入门</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component"><font><font>创建我们的第一个Vue组件</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists"><font><font>渲染Vue组件列表</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models"><font><font>添加新的待办事项表单：Vue事件，方法和模型</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling"><font><font>使用CSS样式化Vue组件</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties"><font><font>使用Vue计算的属性</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering"><font><font>Vue条件渲染：编辑现有待办事项</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management"><font><font>使用Vue裁判进行焦点管理</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources"><font><font>Vue资源</font></font></a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue 入门</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">创建我们的第一个 Vue 组件</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染 Vue 组件列表</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">添加新的待办事项表单：Vue 事件，方法和模型</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">使用 CSS 样式化 Vue 组件</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用 Vue 计算的属性</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue 条件渲染：编辑现有待办事项</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">使用 Vue 裁判进行焦点管理</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue 资源</a></li>
   </ul>
  </li>
- <li><font><font>斯维尔特</font></font>
+ <li>斯维尔特
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started"><font><font>Svelte入门</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning"><font><font>启动我们的Svelte Todo列表应用</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props"><font><font>Svelte中的动态行为：使用变量和道具</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components"><font><font>组成我们的Svelte应用程序</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility"><font><font>先进的Svelte：反应性，生命周期，可访问性</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores"><font><font>与Svelte商店合作</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript"><font><font>Svelte中的TypeScript支持</font></font></a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next"><font><font>部署和后续步骤</font></font></a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Svelte 入门</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">启动我们的 Svelte Todo 列表应用</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Svelte 中的动态行为：使用变量和道具</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">组成我们的 Svelte 应用程序</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">先进的 Svelte：反应性，生命周期，可访问性</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">与 Svelte 商店合作</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Svelte 中的 TypeScript 支持</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">部署和后续步骤</a></li>
   </ul>
  </li>
 </ul>

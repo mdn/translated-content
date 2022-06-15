@@ -221,8 +221,6 @@ Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, `dx` définit
 
 S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
 
-
-
 <table class="standard-table">
   <tbody>
     <tr>
@@ -247,13 +245,9 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
 
 ## tspan
 
-
-
 Pour {{SVGElement('tspan')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
 
 S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
-
-
 
 <table class="standard-table">
   <tbody>

@@ -18,7 +18,9 @@ The **`toString()`** method returns a string representing the specified {{jsxref
 
 ## Syntaxe
 
-    bigIntObj.toString([base])
+```js
+bigIntObj.toString([base])
+```
 
 ### Paramètres
 

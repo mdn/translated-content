@@ -74,7 +74,7 @@ translation_of: Web/API/Response
 
 <h2 id="範例">範例</h2>
 
-<p>在<a href="https://github.com/mdn/fetch-examples/tree/master/basic-fetch">基本 fetch 範例</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">run example live</a>) 中，我們使用<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">fetch()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 呼叫來得到圖片，並使用 {{htmlelement("img")}} tag 顯示。 這裡的</span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">fetch()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 呼叫返回了一個 promise，它使用與資源 fetch 操作有關的 </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">Response</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 進行解析。你可能有發現，由於我們要求的是一張圖片，所以需要用 {{domxref("Body.blob")}} ({{domxref("Response")}} 時做了 body) 讓 response 有正確的 MIME 類型。</span></p>
+<p>在<a href="https://github.com/mdn/fetch-examples/tree/master/basic-fetch">基本 fetch 範例</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">run example live</a>) 中，我們使用 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">fetch()</code> 呼叫來得到圖片，並使用 {{htmlelement("img")}} tag 顯示。 這裡的<code style="font-size: 1rem; letter-spacing: -0.00278rem;">fetch()</code> 呼叫返回了一個 promise，它使用與資源 fetch 操作有關的 <code style="font-size: 1rem; letter-spacing: -0.00278rem;">Response</code> 進行解析。你可能有發現，由於我們要求的是一張圖片，所以需要用 {{domxref("Body.blob")}} ({{domxref("Response")}} 時做了 body) 讓 response 有正確的 MIME 類型。</p>
 
 <pre class="brush: js">const image = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
@@ -90,20 +90,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#response-class','Response')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

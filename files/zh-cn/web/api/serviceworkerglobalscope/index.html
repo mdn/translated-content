@@ -5,15 +5,15 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> 的<code>ServiceWorkerGlobalScope</code> 接口，代表一个service worker的全局执行上下文。</p>
+<p><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> 的<code>ServiceWorkerGlobalScope</code> 接口，代表一个 service worker 的全局执行上下文。</p>
 
 <p>开发者应该知道， ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。</p>
 
-<p>一旦成功地注册了service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的service worker为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
+<p>一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
 
-<p>此外, 在service worker中, 同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许.</p>
+<p>此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。</p>
 
-<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口, 以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, 和 {{domxref("WindowEventHandlers")}}.</p>
+<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, 和 {{domxref("WindowEventHandlers")}}.</p>
 
 <p>{{InheritanceDiagram(700, 85, 20)}}</p>
 

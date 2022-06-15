@@ -37,27 +37,27 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ### Attributs obsolètes
 
-- {{htmlattrdef("archive")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("archive")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : Une liste d'URIs séparés par des espaces, pointant vers des archives de resources pour l'objet.
-- {{htmlattrdef("border")}} {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("border")}} {{deprecated_inline}}
   - : La largeur de la bordure autour de l'objet, exprimée en pixels.
-- {{htmlattrdef("classid")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("classid")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : L'URI de l'implémentation de l'objet. Cet attribut peut être utilisé avec (ou en remplacement de) l'attribut **`data`**.
-- {{htmlattrdef("codebase")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("codebase")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : Le chemin absolu de base servant à résoudre les URIs relatifs spécifiés par **`classid`**, **`data`**, ou **`archive`**. S'il n'est pas renseigné, l'URI de base considéré sera celui du document.
-- {{htmlattrdef("codetype")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("codetype")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : Le type de contenu des données spécifiés par **`classid`**.
 
 <!---->
 
-- {{htmlattrdef("declare")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("declare")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément  `<object>` dans la suite du document. En HTML5, il faut répéter l'élément \<object> complètement chaque fois que la ressource est ré-utilisée.
 
 <!---->
 
-- {{htmlattrdef("standby")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("standby")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : Un message que le navigateur peut afficher pendant le chargement de l'implémentation et des données liées à l'objet.
-- {{htmlattrdef("tabindex")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
+- {{htmlattrdef("tabindex")}} {{HTMLVersionInline(4)}} seulement ; {{deprecated_inline}}
   - : La position de l'élément dans la navigation par onglets au sein de l'élément courant.
 
 ## Exemples
@@ -168,5 +168,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ## Voir aussi
 
 - {{HTMLElement("param")}}
-- {{HTMLElement("applet")}} {{Obsolete_Inline}}
+- {{HTMLElement("applet")}} {{deprecated_inline}}
 - {{HTMLElement("embed")}}

@@ -5,13 +5,13 @@ translation_of: Web/SVG/Attribute/in
 ---
 <p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
 
-<p>in属性标识输入的原语.</p>
+<p>in 属性标识输入的原语。</p>
 
-<p>其值可以是下面六种关键词中的一种,或者是一个字符串匹配在同一个{{SVGElement("filter")}}元素中前面的原语的{{SVGAttr("result")}} 属性值. 如果没有提供值并且这是filter中第一个原语,那么原语将相当于使用SourceGraphic作为输入值. 如果没有提供值并且这不是第一个原语,那么原语将使用前面原语的result属性值作为输入.<br>
+<p>其值可以是下面六种关键词中的一种，或者是一个字符串匹配在同一个{{SVGElement("filter")}}元素中前面的原语的{{SVGAttr("result")}} 属性值。如果没有提供值并且这是 filter 中第一个原语，那么原语将相当于使用 SourceGraphic 作为输入值。如果没有提供值并且这不是第一个原语，那么原语将使用前面原语的 result 属性值作为输入。<br>
  <br>
- 如果{{SVGAttr("result")}}的值在同一个{{SVGElement("filter")}}中出现多次,那么将使用前面的距离使用该{{SVGAttr("result")}}值的原语最近的该result值的原语作为输入.</p>
+ 如果{{SVGAttr("result")}}的值在同一个{{SVGElement("filter")}}中出现多次，那么将使用前面的距离使用该{{SVGAttr("result")}}值的原语最近的该 result 值的原语作为输入。</p>
 
-<p>除了SourceGraphic和<strong>&lt;filter-primitive-reference&gt; (引用原语) </strong>, 关键词都没有在现代浏览器中实现.(译者注:SourceAlpha也被现代浏览器支持)</p>
+<p>除了 SourceGraphic 和<strong>&lt;filter-primitive-reference&gt; (引用原语) </strong>, 关键词都没有在现代浏览器中实现.(译者注:SourceAlpha 也被现代浏览器支持)</p>
 
 <h2 id="Usage_context">Usage context</h2>
 
@@ -38,20 +38,20 @@ translation_of: Web/SVG/Attribute/in
 
 <dl>
  <dt>SourceGraphic</dt>
- <dd>该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入.</dd>
+ <dd>该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入。</dd>
  <dt>SourceAlpha</dt>
- <dd>该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入. SourceAlpha与SourceGraphic具有相同的规则除了SourceAlpha只使用元素的透明度.</dd>
+ <dd>该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入. SourceAlpha 与 SourceGraphic 具有相同的规则除了 SourceAlpha 只使用元素的透明度。</dd>
  <dt>BackgroundImage</dt>
- <dd>该关键词表示filter元素当前底下的区域的图形快照将被调用.</dd>
+ <dd>该关键词表示 filter 元素当前底下的区域的图形快照将被调用。</dd>
  <dt>BackgroundAlpha</dt>
- <dd>跟BackgroundImage相同除了只使用透明度.</dd>
+ <dd>跟 BackgroundImage 相同除了只使用透明度。</dd>
  <dt>FillPaint</dt>
  <dd>This keyword represents the value of the {{SVGAttr("fill")}} property on the target element for the filter effect. In many cases, the <code>FillPaint</code> is opaque everywhere, but it might not be the case if a shape is paint with a gradient or pattern which itself includes transparent or semi-transparent parts.</dd>
  <dt>StrokePaint</dt>
  <dd>This keyword represents the value of the {{SVGAttr("stroke")}} property on the target element for the filter effect. In many cases, the <code>StrokePaint</code> is opaque everywhere, but it might not be the case if a shape is paint with a gradient or pattern which itself includes transparent or semi-transparent parts.</dd>
 </dl>
 
-<h2 id="Workaround_for_backgroundImage" name="Workaround_for_backgroundImage">BackgroundImage的解决方案</h2>
+<h2 id="Workaround_for_backgroundImage" name="Workaround_for_backgroundImage">BackgroundImage 的解决方案</h2>
 
 <p>我们需要使用 &lt; feimage &gt;原语引入一个图像混合到过滤器本身内来替代使用"BackgroundImage".</p>
 

@@ -14,7 +14,7 @@ translation_of: Web/API/EventTarget
 
 <p>{{domxref("Element")}}，{{domxref("document")}} 和 {{domxref("window")}} 是最常见的 event targets ，但是其他对象也可以作为 event targets，比如 {{domxref("XMLHttpRequest")}}，{{domxref("AudioNode")}}，{{domxref("AudioContext")}}  等等。</p>
 
-<p>许多 event targets （包括 elements， documents 和 windows）支持通过 <code>onevent</code> 特性和属性设置<a href="/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers">事件处理程序</a> (<a href="/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers">event handlers</a>)。</p>
+<p>许多 event targets（包括 elements， documents 和 windows）支持通过 <code>onevent</code> 特性和属性设置<a href="/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers">事件处理程序</a> (<a href="/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers">event handlers</a>)。</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -29,16 +29,16 @@ translation_of: Web/API/EventTarget
 
 <dl>
  <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>在EventTarget上注册特定事件类型的事件处理程序。</dd>
+ <dd>在 EventTarget 上注册特定事件类型的事件处理程序。</dd>
  <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
- <dd>EventTarget中删除事件侦听器。</dd>
+ <dd>EventTarget 中删除事件侦听器。</dd>
  <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
- <dd>将事件分派到此EventTarget。</dd>
+ <dd>将事件分派到此 EventTarget。</dd>
 </dl>
 
 <h3 id="Mozilla_chrome_代码的其他方法">Mozilla chrome 代码的其他方法</h3>
 
-<p>Mozilla扩展，供JS实现的事件目标使用以 实现 on* 属性。另见 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a> 绑定。</p>
+<p>Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on* 属性。另见 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a> 绑定。</p>
 
 <ul>
  <li>void <strong>setEventHandler</strong>(DOMString type, EventHandler handler) {{non-standard_inline}}</li>

@@ -10,7 +10,7 @@ translation_of: Web/API/Window/name
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">获取/设置窗口的名称。</span></p>
+<p>获取/设置窗口的名称。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,13 +29,13 @@ window.name = <var>string</var>;</pre>
 
 <p><code>window.name</code> 会调用 <code>toString</code> 将赋给它的值转换成对应的字符串表示。</p>
 
-<p>（译注：此处似有不妥，私以为调用的应是 <code>ToString</code> 抽象方法。事实上，如果将一个Symbol类型的值赋给 <code>window.name</code>，会报 <code>TypeError</code>，而非调用 <code>Symbol.toString()</code> 转换成字符串后进行赋值。例如：</p>
+<p>（译注：此处似有不妥，私以为调用的应是 <code>ToString</code> 抽象方法。事实上，如果将一个 Symbol 类型的值赋给 <code>window.name</code>，会报 <code>TypeError</code>，而非调用 <code>Symbol.toString()</code> 转换成字符串后进行赋值。例如：</p>
 
 <pre class="brush: js">window.name = Symbol.for('foo'); // TypeError
 window.name = Symbol.for('foo').toString(); // "Symbol(foo)"
 </pre>
 
-<p>具体可参见EMCA语言规范中Type Conversion一节。）</p>
+<p>具体可参见 EMCA 语言规范中 Type Conversion 一节。）</p>
 
 <h2 id="规范">规范</h2>
 

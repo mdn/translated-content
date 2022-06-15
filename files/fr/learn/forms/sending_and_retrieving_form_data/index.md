@@ -134,7 +134,7 @@ La requête HTTP ressemble à quelque chose comme&nbsp;:
     GET /?say=Hi&to=Mom HTTP/1.1
     Host: foo.com
 
-> **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 #### La méthode POST
 
@@ -208,7 +208,7 @@ Le [PHP](https://php.net/) met à disposition des objets globaux pour accéder a
   echo  $say, ' ', $to;
 ```
 
-Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci opérer avec notre fichier exemple [php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html) — il contient le même formulaire exemple que celui vu précédemment avec la méthode `post` avec `php-example.php` en action. À la soumission du formulaire, il envoie les données de ce dernier à [php-example.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php), contenant le code ci‑dessus. Quand le code est exécuté, la sortie dans le navigateur est `Hi Mom` « Bonjour maman ».
+Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci opérer avec notre fichier exemple [php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html) — il contient le même formulaire exemple que celui vu précédemment avec la méthode `post` avec `php-example.php` en action. À la soumission du formulaire, il envoie les données de ce dernier à [php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php), contenant le code ci‑dessus. Quand le code est exécuté, la sortie dans le navigateur est `Hi Mom` « Bonjour maman ».
 
 ![L'exécution du code PHP déclenche l'affichage de Hi Mom](php-result.png)
 
@@ -218,7 +218,7 @@ Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci 
 
 ### Exemple: Python
 
-Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py)).
+Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
 
 ```python
 from flask import Flask, render_template, request
@@ -238,8 +238,8 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
 
-- [`form.html`](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
-- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
+- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
+- [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
 

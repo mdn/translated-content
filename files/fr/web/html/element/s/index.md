@@ -125,6 +125,6 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Voir aussi
 
-- {{obsolete_inline}} {{HTMLElement("strike")}} qui était un ancien synonyme de `<s>`, désormais obsolète et qui ne doit plus être utilisé sur le Web
+- {{deprecated_inline}} {{HTMLElement("strike")}} qui était un ancien synonyme de `<s>`, désormais obsolète et qui ne doit plus être utilisé sur le Web
 - {{HTMLElement("del")}} qui est utilisé afin d'indiquer des données ou des portions de texte qui ont été supprimées
 - La propriété CSS {{cssxref("text-decoration-line")}} qui permet de contrôler l'aspect de la ligne utilisée sur le contenu de l'élément {{HTMLElement("s")}}

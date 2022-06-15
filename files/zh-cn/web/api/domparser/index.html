@@ -15,12 +15,12 @@ translation_of: Web/API/DOMParser
 <p><strong><code>DOMParser</code></strong> 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。</p>
 
 <div class="note">
-<p><strong>注意：</strong>{{domxref("XMLHttpRequest")}} 支持从URL可寻址资源解析XML和HTML，在其{{domxref("XMLHttpRequest.response", "response")}} 属性中返回<code>Document</code>。</p>
+<p><strong>注意：</strong>{{domxref("XMLHttpRequest")}} 支持从 URL 可寻址资源解析 XML 和 HTML，在其{{domxref("XMLHttpRequest.response", "response")}} 属性中返回<code>Document</code>。</p>
 </div>
 
-<p>你可以使用{{domxref("XMLSerializer")}} 接口执行相反的操作 - 将DOM树转换为XML或HTML源。</p>
+<p>你可以使用{{domxref("XMLSerializer")}} 接口执行相反的操作 - 将 DOM 树转换为 XML 或 HTML 源。</p>
 
-<p>对于HTML文档，您还可以通过设置 {{domxref("Element.innerHTML")}} 和{{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为从HTML构建的新 DOM 树。还可以读取这些属性以获取对应于相应 DOM 子树的 HTML 片段。</p>
+<p>对于 HTML 文档，您还可以通过设置 {{domxref("Element.innerHTML")}} 和{{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为从 HTML 构建的新 DOM 树。还可以读取这些属性以获取对应于相应 DOM 子树的 HTML 片段。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -94,7 +94,7 @@ translation_of: Web/API/DOMParser
 
 <h4 id="错误处理">错误处理</h4>
 
-<p>如果解析失败, <code>DOMParser</code> 不会抛出任何异常，而是会返回一个给定的错误文档：</p>
+<p>如果解析失败，<code>DOMParser</code> 不会抛出任何异常，而是会返回一个给定的错误文档：</p>
 
 <pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
 (error description)
@@ -106,7 +106,7 @@ translation_of: Web/API/DOMParser
 
 <h2 id="解析_SVG_或者_HTML_文档">解析 SVG 或者 HTML 文档</h2>
 
-<p><code>DOMParser</code> 也可以用来解析 SVG 文档 {{geckoRelease("10.0")}} 或者 HTML 文档 {{geckoRelease("12.0")}}。根据给定的 MIME 类型不同，<code>parseFromString</code> 方法可能返回三种不同类型的文档。如果MIME类型是 <code>text/xml</code>，则返回一个 <code>XMLDocument</code>，如果 MIME 类型是 <code>text/svg+xml</code>，则返回一个 <code>SVGDocument</code>，如果MIME类型是 <code>text/html</code>，则返回一个 <code>HTMLDocument</code>。</p>
+<p><code>DOMParser</code> 也可以用来解析 SVG 文档 {{geckoRelease("10.0")}} 或者 HTML 文档 {{geckoRelease("12.0")}}。根据给定的 MIME 类型不同，<code>parseFromString</code> 方法可能返回三种不同类型的文档。如果 MIME 类型是 <code>text/xml</code>，则返回一个 <code>XMLDocument</code>，如果 MIME 类型是 <code>text/svg+xml</code>，则返回一个 <code>SVGDocument</code>，如果 MIME 类型是 <code>text/html</code>，则返回一个 <code>HTMLDocument</code>。</p>
 
 <pre class="brush: js">let parser = new DOMParser();
 let doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
@@ -170,22 +170,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

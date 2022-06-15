@@ -4,7 +4,7 @@ slug: Learn/Forms/Form_validation
 translation_of: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.
 
@@ -67,7 +67,7 @@ Dans le monde réel, les développeurs ont tendance à utiliser une combinaison 
 
 ## Utiliser la validation intégrée au formulaire
 
-Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie&nbsp;? y a-t-il une longueur minimale et/ou maximale des données&nbsp;? doit‑elle être un nombre, une adresse e-mail ou autre chose&nbsp;? doit‑elle correspondre à un modèle&nbsp;? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
+Une des caractéristiques de HTML5 est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des attributs de validation sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie&nbsp;? y a-t-il une longueur minimale et/ou maximale des données&nbsp;? doit‑elle être un nombre, une adresse e-mail ou autre chose&nbsp;? doit‑elle correspondre à un modèle&nbsp;? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
 Quand un élément est valide&nbsp;:
 
 - l'élément correspond à la pseudo‑classe CSS {{cssxref(":valid")}} &nbsp;; cela vous permet d'appliquer une composition de style distinctive.
@@ -82,7 +82,7 @@ Quand un élément est invalide&nbsp;:
 
 Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.
 
-Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
+Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
 
 ```html hidden
 <form>
@@ -201,7 +201,7 @@ Tous les champs de texte créés avec ({{HTMLElement("input")}} ou {{HTMLElement
 
 Pour les champs numériques (c'est à dire, \<type d'entrée="nombre">), les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max", "input")}} permettent également des contraintes de validité. Si la valeur du champ est inférieure à l'attribut {{htmlattrxref("min", "input")}} ou supérieure à l'attribut {{htmlattrxref("max", "input")}}, le champ ne sera pas valide.
 
-Prenons un autre exemple. Créez une nouvelle copie du fichier [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
+Prenons un autre exemple. Créez une nouvelle copie du fichier [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html).
 
 Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le suivant :
 
@@ -762,7 +762,7 @@ La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais 
 - Être tolérant sur le format des données à envoyer.
 - Indiquer exactement où est l'erreur (en particulier pour les formulaires longs).
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires")}}
+{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 ## Dans ce module
 

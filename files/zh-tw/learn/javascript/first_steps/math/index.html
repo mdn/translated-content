@@ -7,9 +7,9 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">在本課程的這一點上，我們將討論JavaScript中的數學 - 我們如何使用{{Glossary("Operator","operators")}} 和其他功能來成功操縱數字來進行我們的出價。</p>
+<p>在本課程的這一點上，我們將討論JavaScript中的數學 - 我們如何使用{{Glossary("Operator","operators")}} 和其他功能來成功操縱數字來進行我們的出價。</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">先備知識:</th>
@@ -30,7 +30,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 <h3 id="數字的種類">數字的種類</h3>
 
-<p><font>在程式裡，即使眾所周知的十進位數字系統也比您想像的要複雜。</font><font>我們使用不同的術語來描述不同類型的十進位數字，例如：</font></p>
+<p>在程式裡，即使眾所周知的十進位數字系統也比您想像的要複雜。我們使用不同的術語來描述不同類型的十進位數字，例如：</p>
 
 <ul>
  <li><strong>Integers </strong>是整數，如：10，400，或 -5。</li>
@@ -38,15 +38,15 @@ translation_of: Learn/JavaScript/First_steps/Math
  <li><strong>Doubles</strong> 是一種特定型態的浮點數 that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li>
 </ul>
 
-<p><font>我們甚至有不同類型的號碼系統！</font><font>十進位以10為單位（表示每列使用0–9），但是也有像這些：</font></p>
+<p>我們甚至有不同類型的號碼系統！十進位以10為單位（表示每列使用0–9），但是也有像這些：</p>
 
 <ul>
- <li><strong><font><font>二進位</font></font></strong><font><font> —計算機的最底層語言；</font><font>0和1。</font></font></li>
- <li><strong><font><font>八進位</font></font></strong><font><font> —以8為</font>單位<font>，每列使用0–7。</font></font></li>
- <li><strong><font><font>十六進位</font></font></strong><font><font> —以16為</font>單位<font>，在每列中使用0–9，然後使用a–f。</font></font><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values"><font><font>在CSS中</font></font></a><font><font>設置</font><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values"><font>顏色</font></a><font>之前，您可能已經遇到過這些數字</font><font>。</font></font></li>
+ <li><strong>二進位</strong> —計算機的最底層語言；0和1。</li>
+ <li><strong>八進位</strong> —以8為單位，每列使用0–7。</li>
+ <li><strong>十六進位</strong> —以16為單位，在每列中使用0–9，然後使用a–f。<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values">在CSS中</a>設置<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values">顏色</a>之前，您可能已經遇到過這些數字。</li>
 </ul>
 
-<p><strong><font><font>在開始擔心大腦融化之前，先等等！</font></font></strong><font><font>首先，我們將在整個課程中完全使用十進位數；您很少會想到其他類型的需求，如果有的話。</font></font> </p>
+<p><strong>在開始擔心大腦融化之前，先等等！</strong>首先，我們將在整個課程中完全使用十進位數；您很少會想到其他類型的需求，如果有的話。 </p>
 
 <p>第二個好消息是JavaScript只有一種數字資料類型 ，猜對了！就是{{jsxref("Number")}}。這代表無論你在JavaScript需要處理哪種數字，處理方法都是一樣的。</p>
 
@@ -76,7 +76,7 @@ typeof myFloat;</pre>
 
 <p>Arithmetic operators are the basic operators that we use to do sums:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Operator</th>
@@ -221,7 +221,7 @@ x = y; // x now contains the same value y contains, 4</pre>
 
 <p>But there are some more complex types, which provide useful shortcuts to keep your code neater and more efficient. The most common are listed below:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Operator</th>
