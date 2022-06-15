@@ -3850,12 +3850,6 @@
       "jeronimojr"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:03:59.387Z",
-    "contributors": [
-      "oirodolfo"
-    ]
-  },
   "Web/API/DOMStringList": {
     "modified": "2019-03-23T22:03:44.815Z",
     "contributors": [
@@ -16248,12 +16242,9 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T21:58:05.452Z",
+    "modified": "2019-03-23T22:03:59.387Z",
     "contributors": [
-      "akinncar",
-      "coloringa",
-      "Perrottacooking",
-      "brunopulis"
+      "oirodolfo"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {

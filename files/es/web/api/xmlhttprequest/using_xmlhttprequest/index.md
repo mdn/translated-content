@@ -257,6 +257,7 @@ Las instancias de `XMLHttpRequest` pueden utilizarse para enviar formularios de 
 
 El uso de la API `FormData` es el más sencillo y rápido, pero tiene la
 desventaja de que los datos recogidos no pueden ser [stringificados](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+
 Utilizar sólo AJAX es más complejo, pero suele ser más flexible y potente.
 
 ### Usando nada más que `XMLHttpRequest`

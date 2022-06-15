@@ -2537,13 +2537,6 @@
       "pinguin0815"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-06-02T12:14:00.624Z",
-    "contributors": [
-      "RAnders00",
-      "rkeller1"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2019-03-18T20:54:26.903Z",
     "contributors": [
@@ -3732,12 +3725,6 @@
     "contributors": [
       "Stefie",
       "bendlas"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2019-03-18T21:30:46.256Z",
-    "contributors": [
-      "Keviddle"
     ]
   },
   "Web/API/WebGLActiveInfo": {
@@ -13775,9 +13762,16 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T22:24:44.810Z",
+    "modified": "2019-06-02T12:14:00.624Z",
     "contributors": [
-      "Symtex99"
+      "RAnders00",
+      "rkeller1"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2019-03-18T21:30:46.256Z",
+    "contributors": [
+      "Keviddle"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {

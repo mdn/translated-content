@@ -554,6 +554,7 @@
 /zh-TW/docs/Web/API/Coordinates/latitude	/zh-TW/docs/Web/API/GeolocationCoordinates/latitude
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
+/zh-TW/docs/Web/API/DOMString	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /zh-TW/docs/Web/API/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement

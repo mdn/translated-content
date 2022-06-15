@@ -6070,14 +6070,6 @@
       "Ihewaz"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:53:48.183Z",
-    "contributors": [
-      "WispProxy",
-      "mxxn",
-      "AlexAlex"
-    ]
-  },
   "Web/API/DOMStringList": {
     "modified": "2019-03-23T22:43:35.765Z",
     "contributors": [
@@ -9990,12 +9982,6 @@
     "modified": "2020-10-15T22:31:48.159Z",
     "contributors": [
       "sh7dm"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2020-10-02T07:35:43.794Z",
-    "contributors": [
-      "beltimor"
     ]
   },
   "Web/API/VRDisplay": {
@@ -24037,6 +24023,20 @@
     "contributors": [
       "ekirpichyov",
       "opereverzeva"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2019-03-23T22:53:48.183Z",
+    "contributors": [
+      "WispProxy",
+      "mxxn",
+      "AlexAlex"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2020-10-02T07:35:43.794Z",
+    "contributors": [
+      "beltimor"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {

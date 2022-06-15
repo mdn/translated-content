@@ -1568,12 +1568,15 @@
 /es/docs/Web/API/BatteryManager/onlevelchange	/es/docs/Web/API/BatteryManager/levelchange_event
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
+/es/docs/Web/API/CanvasImageSource	/es/docs/conflicting/Web/API/CanvasRenderingContext2D
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/Console/table
 /es/docs/Web/API/Constraint_validation/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
 /es/docs/Web/API/Coordinates/latitude	/es/docs/Web/API/GeolocationCoordinates/latitude
-/es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/DOMString/Binary
+/es/docs/Web/API/DOMString	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
+/es/docs/Web/API/DOMString/Binary	/es/docs/Web/API/btoa
+/es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/btoa
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute

@@ -7982,12 +7982,6 @@
       "cuixiping"
     ]
   },
-  "Web/API/CanvasImageSource": {
-    "modified": "2019-03-23T22:53:01.774Z",
-    "contributors": [
-      "ice-i-snow"
-    ]
-  },
   "Web/API/CanvasPattern": {
     "modified": "2019-03-23T23:07:28.227Z",
     "contributors": [
@@ -9498,23 +9492,6 @@
     "modified": "2020-10-15T22:26:56.023Z",
     "contributors": [
       "mokunshao"
-    ]
-  },
-  "Web/API/DOMString": {
-    "modified": "2019-09-21T03:39:30.024Z",
-    "contributors": [
-      "zhenghuahou",
-      "xgqfrms-GitHub",
-      "AlexChao",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/DOMString/Binary": {
-    "modified": "2019-07-07T10:35:50.508Z",
-    "contributors": [
-      "zhangchen",
-      "imgss",
-      "ArtemisZ"
     ]
   },
   "Web/API/DOMStringList": {
@@ -20163,14 +20140,6 @@
     "contributors": [
       "Himself65",
       "yuyang"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2019-06-12T04:54:37.434Z",
-    "contributors": [
-      "zjffun",
-      "wizardforcel",
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/User_Timing_API": {
@@ -45866,6 +45835,12 @@
       "ice-i-snow"
     ]
   },
+  "conflicting/Web/API/CanvasRenderingContext2D_f76bd21a8099cf242d18fbd061cd3ea6": {
+    "modified": "2019-03-23T22:53:01.774Z",
+    "contributors": [
+      "ice-i-snow"
+    ]
+  },
   "conflicting/Web/API/Canvas_API/Tutorial": {
     "modified": "2019-03-23T23:20:14.159Z",
     "contributors": [
@@ -46578,6 +46553,14 @@
       "holynewbie"
     ]
   },
+  "conflicting/Web/API/btoa": {
+    "modified": "2019-07-07T10:35:50.508Z",
+    "contributors": [
+      "zhangchen",
+      "imgss",
+      "ArtemisZ"
+    ]
+  },
   "conflicting/Web/API/caches": {
     "modified": "2020-10-28T03:25:10.149Z",
     "contributors": [
@@ -47115,6 +47098,23 @@
     "contributors": [
       "RainSlide",
       "zhouxu"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2019-09-21T03:39:30.024Z",
+    "contributors": [
+      "zhenghuahou",
+      "xgqfrms-GitHub",
+      "AlexChao",
+      "ziyunfei"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
+    "modified": "2019-06-12T04:54:37.434Z",
+    "contributors": [
+      "zjffun",
+      "wizardforcel",
+      "xgqfrms-GitHub"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
