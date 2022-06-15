@@ -23,7 +23,7 @@ translation_of: Web/API/WritableStreamDefaultWriter/ready
 
 ## 示例
 
-以下示例使用了 `ready` 属性的两种用法。第一种使用 `ready` 来确保 `WritableStream` 已完成写入，因此能够在发送二进制之前接收数据。第二种也检查 `WritableStream` 是否完成写入，但是这一次是因为写入操作必须在 writer 关闭之前完成。
+以下示例使用了 `ready` 属性的两种用法。第一种使用 `ready` 来确保 `WritableStream` 已完成写入，因此能够保证其已经准备好接收新的数据。第二种也检查 `WritableStream` 是否完成写入，但是这一次是因为写入操作必须在 writer 关闭之前完成。
 
 ```js
 function sendMessage(message, writableStream) {
