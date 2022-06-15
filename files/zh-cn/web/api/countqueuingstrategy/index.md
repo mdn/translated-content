@@ -33,6 +33,7 @@ translation_of: Web/API/CountQueuingStrategy
 
 ```js
 const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
@@ -45,6 +46,7 @@ const writableStream = new WritableStream({
     console.log("Sink error:", err);
   }
 }, queueingStrategy);
+
 var size = queueingStrategy.size();
 ```
 
