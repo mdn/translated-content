@@ -25,7 +25,7 @@ size(chunk)
 ### 参数
 
 - `chunk`
-  - : 一个通过流传递的数据块。
+  - : 一个通过流传递的数据分块。
 
 ### 返回值
 
@@ -35,6 +35,7 @@ size(chunk)
 
 ```js
 const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+
 const readableStream = new ReadableStream({
   start(controller) {
     ...
@@ -46,6 +47,7 @@ const readableStream = new ReadableStream({
     console.log("stream error:", err);
   }
 }, queuingStrategy);
+
 var size = queueingStrategy.size(chunk);
 ```
 
