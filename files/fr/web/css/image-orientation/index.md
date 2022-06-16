@@ -8,7 +8,6 @@ browser-compat: css.properties.image-orientation
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-orientation`** décrit la façon d'obtenir l'orientation correcte d'une image quelle que soit la disposition du document.
 
-
 ```css
 /* Valeurs avec un mot-clé */
 image-orientation: none;

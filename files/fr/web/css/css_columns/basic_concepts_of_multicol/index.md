@@ -70,21 +70,27 @@ La [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) `columns`
 
 Ce fragment de code CSS donnera donc le même résultat que pour le premier exemple où `column-count` vaut 3.
 
-    .container {
-      columns: 3;
-    }
+```css
+.container {
+  columns: 3;
+}
+```
 
 Ce fragment de code CSS donnera le même résultat que pour le deuxième exemple où `column-width` vaut `200px`.
 
-    .container {
-      columns: 200px;
-    }
+```css
+.container {
+  columns: 200px;
+}
+```
 
 Enfin, ce fragment de code CSS donnera le même résultat que le troisième exemple où les deux propriétés `column-count` et `column-width` sont définies.
 
-    .container {
-      columns: 2 200px;
-    }
+```css
+.container {
+  columns: 2 200px;
+}
+```
 
 ## Prochaines étapes
 

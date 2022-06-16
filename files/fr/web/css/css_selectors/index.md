@@ -52,7 +52,7 @@ original_slug: Web/CSS/Sélecteurs_CSS
     **Syntaxe :** `A > B`
     **Exemple :** `ul > li` permettra de cibler tous les éléments {{HTMLElement('li')}} qui sont directement situés sous un élément {{HTMLElement('ul')}}.
 - [Les sélecteurs d'éléments descendants](/fr/docs/Web/CSS/Descendant_combinator)
-  - : Le combinateur ` ` (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des enfants directs) d'un élément donné.
+  - : Le combinateur " " (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des enfants directs) d'un élément donné.
     **Syntaxe :** `A B`
     **Exemple :** `div span` permettra de cibler n'importe quel élément {{HTMLElement('span')}} situé à l'intérieur d'un élément {{HTMLElement('div')}}.
 - [Le combinateur de colonne](/fr/docs/Web/CSS/Column_combinator){{experimental_inline}}
