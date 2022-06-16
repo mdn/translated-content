@@ -12,16 +12,16 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">通过原型这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言的继承机制不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 <code>prototype</code> 属性向已有的构造器添加方法</p>
+<p>通过原型这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言的继承机制不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 <code>prototype</code> 属性向已有的构造器添加方法</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">预备知识:</th>
-   <td>基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见 <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> 和 <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">Building blocks</a>）以及面向对象的JavaScript (OOJS) 基础（参见 <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>）。</td>
+   <th scope="row">预备知识：</th>
+   <td>基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见 <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> 和 <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">Building blocks</a>）以及面向对象的 JavaScript (OOJS) 基础（参见 <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>）。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>理解 JavaScript 对象原型、原型链如何工作、如何向 <code>prototype</code> 属性添加新的方法。</td>
   </tr>
  </tbody>
@@ -31,19 +31,19 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>JavaScript 常被描述为一种<strong>基于原型的语言 (prototype-based language)</strong>——每个对象拥有一个<strong>原型对象</strong>，对象以其原型为模板、从原型继承方法和属性。原型对象也可能拥有原型，并从中继承方法和属性，一层一层、以此类推。这种关系常被称为<strong>原型链 (prototype chain)</strong>，它解释了为何一个对象会拥有定义在其他对象中的属性和方法。</p>
 
-<p>准确地说，这些属性和方法定义在Object的构造器函数(constructor functions)之上的<code>prototype</code>属性上，而非对象实例本身。</p>
+<p>准确地说，这些属性和方法定义在 Object 的构造器函数 (constructor functions) 之上的<code>prototype</code>属性上，而非对象实例本身。</p>
 
 <p>在传统的 OOP 中，首先定义“类”，此后创建对象实例时，类中定义的所有属性和方法都被复制到实例中。在 JavaScript 中并不如此复制——而是在对象实例和它的构造器之间建立一个链接（它是__proto__属性，是从构造函数的<code>prototype</code>属性派生的），之后通过上溯原型链，在构造器中找到这些属性和方法。</p>
 
 <div class="note">
-<p><strong>注意: </strong>理解对象的原型（可以通过<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>或者已被弃用的<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>属性获得）与构造函数的<code>prototype</code>属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，<code>Object.getPrototypeOf(new Foobar())</code>和<code>Foobar.prototype</code>指向着同一个对象。</p>
+<p><strong>注意：</strong>理解对象的原型（可以通过<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>或者已被弃用的<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>属性获得）与构造函数的<code>prototype</code>属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，<code>Object.getPrototypeOf(new Foobar())</code>和<code>Foobar.prototype</code>指向着同一个对象。</p>
 </div>
 
 <p>以上描述很抽象；我们先看一个例子。</p>
 
-<h2 id="使用Javascript中的原型">使用Javascript中的原型</h2>
+<h2 id="使用Javascript中的原型">使用 Javascript 中的原型</h2>
 
-<p>在javascript中，函数可以有属性。 每个函数都有一个特殊的属性叫作<code>原型（prototype）</code> ，正如下面所展示的。请注意，下面的代码是独立的一段(在网页中没有其他代码的情况下，这段代码是安全的)。为了最好的学习体验，你最好打开一个控制台 (在Chrome和Firefox中，可以按Ctrl+Shift+I来打开)切换到"控制台" 选项卡, 复制粘贴下面的JavaScript代码，然后按回车来运行.</p>
+<p>在 javascript 中，函数可以有属性。每个函数都有一个特殊的属性叫作<code>原型（prototype）</code> ，正如下面所展示的。请注意，下面的代码是独立的一段 (在网页中没有其他代码的情况下，这段代码是安全的)。为了最好的学习体验，你最好打开一个控制台 (在 Chrome 和 Firefox 中，可以按 Ctrl+Shift+I 来打开) 切换到"控制台" 选项卡，复制粘贴下面的 JavaScript 代码，然后按回车来运行。</p>
 
 <pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
@@ -54,7 +54,7 @@ var doSomething = function(){};
 console.log( doSomething.prototype );
 </pre>
 
-<p>正如上面所看到的, <code>doSomething</code> 函数有一个默认的原型属性，它在控制台上面呈现了出来. 运行这段代码之后，控制台上面应该出现了像这样的一个对象.</p>
+<p>正如上面所看到的，<code>doSomething</code> 函数有一个默认的原型属性，它在控制台上面呈现了出来。运行这段代码之后，控制台上面应该出现了像这样的一个对象。</p>
 
 <pre class="brush: js">{
     constructor: ƒ doSomething(),
@@ -69,14 +69,14 @@ console.log( doSomething.prototype );
     }
 }</pre>
 
-<p>现在，我们可以添加一些属性到 doSomething 的原型上面，如下所示.</p>
+<p>现在，我们可以添加一些属性到 doSomething 的原型上面，如下所示。</p>
 
 <pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 console.log( doSomething.prototype );
 </pre>
 
-<p>结果:</p>
+<p>结果：</p>
 
 <pre class="brush: js">{
     foo: "bar",
@@ -95,7 +95,7 @@ console.log( doSomething.prototype );
 
 <p> </p>
 
-<p>然后，我们可以使用 new 运算符来在现在的这个原型基础之上，创建一个 <code>doSomething</code> 的实例。正确使用 new 运算符的方法就是在正常调用函数时，在函数名的前面加上一个 <code>new</code> 前缀. 通过这种方法，在调用函数前加一个 <code>new</code> ，它就会返回一个这个函数的实例化对象. 然后，就可以在这个对象上面添加一些属性. 看.</p>
+<p>然后，我们可以使用 new 运算符来在现在的这个原型基础之上，创建一个 <code>doSomething</code> 的实例。正确使用 new 运算符的方法就是在正常调用函数时，在函数名的前面加上一个 <code>new</code> 前缀。通过这种方法，在调用函数前加一个 <code>new</code> ，它就会返回一个这个函数的实例化对象。然后，就可以在这个对象上面添加一些属性。看。</p>
 
 <pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar"; // add a property onto the prototype
@@ -105,7 +105,7 @@ console.log( doSomeInstancing );</pre>
 
 <p> </p>
 
-<p>结果:</p>
+<p>结果：</p>
 
 <p> </p>
 
@@ -126,7 +126,7 @@ console.log( doSomeInstancing );</pre>
     }
 }</pre>
 
-<p>就像上面看到的, <code>doSomeInstancing</code> 的 <code>__proto__</code> 属性就是<code>doSomething.prototype</code>. 但是这又有什么用呢? 好吧,当你访问 <code>doSomeInstancing</code> 的一个属性, 浏览器首先查找 <code>doSomeInstancing</code> 是否有这个属性. 如果 <code>doSomeInstancing</code> 没有这个属性, 然后浏览器就会在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中查找这个属性(也就是 doSomething.prototype). 如果 doSomeInstancing 的 <code>__proto__</code> 有这个属性, 那么 doSomeInstancing 的 <code>__proto__</code> 上的这个属性就会被使用. 否则, 如果 doSomeInstancing 的 <code>__proto__</code> 没有这个属性, 浏览器就会去查找 doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> ，看它是否有这个属性. 默认情况下, 所有函数的原型属性的 <code>__proto__</code> 就是 <code>window.Object.prototype</code>. 所以 doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> (也就是 doSomething.prototype 的 <code>__proto__</code> (也就是 <code>Object.prototype</code>)) 会被查找是否有这个属性. 如果没有在它里面找到这个属性, 然后就会在 doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> 的 <code>__proto__</code> 里面查找. 然而这有一个问题: doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> 的 <code>__proto__</code> 不存在. 最后, 原型链上面的所有的 <code>__proto__</code> 都被找完了, 浏览器所有已经声明了的 <code>__proto__</code> 上都不存在这个属性，然后就得出结论，这个属性是 <code>undefined</code>.</p>
+<p>就像上面看到的，<code>doSomeInstancing</code> 的 <code>__proto__</code> 属性就是<code>doSomething.prototype</code>. 但是这又有什么用呢？好吧，当你访问 <code>doSomeInstancing</code> 的一个属性，浏览器首先查找 <code>doSomeInstancing</code> 是否有这个属性。如果 <code>doSomeInstancing</code> 没有这个属性，然后浏览器就会在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中查找这个属性 (也就是 doSomething.prototype). 如果 doSomeInstancing 的 <code>__proto__</code> 有这个属性，那么 doSomeInstancing 的 <code>__proto__</code> 上的这个属性就会被使用。否则，如果 doSomeInstancing 的 <code>__proto__</code> 没有这个属性，浏览器就会去查找 doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> ，看它是否有这个属性。默认情况下，所有函数的原型属性的 <code>__proto__</code> 就是 <code>window.Object.prototype</code>. 所以 doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> (也就是 doSomething.prototype 的 <code>__proto__</code> (也就是 <code>Object.prototype</code>)) 会被查找是否有这个属性。如果没有在它里面找到这个属性，然后就会在 doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> 的 <code>__proto__</code> 里面查找。然而这有一个问题：doSomeInstancing 的 <code>__proto__</code> 的 <code>__proto__</code> 的 <code>__proto__</code> 不存在。最后，原型链上面的所有的 <code>__proto__</code> 都被找完了，浏览器所有已经声明了的 <code>__proto__</code> 上都不存在这个属性，然后就得出结论，这个属性是 <code>undefined</code>.</p>
 
 <pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
@@ -139,7 +139,7 @@ console.log("doSomething.foo:            " + doSomething.foo);
 console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);
 console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);</pre>
 
-<p>结果:</p>
+<p>结果：</p>
 
 <pre class="brush: js">doSomeInstancing.prop:      some value
 doSomeInstancing.foo:       bar
@@ -180,8 +180,8 @@ doSomething.prototype.foo:  bar</pre>
 
 <ul>
  <li>浏览器首先检查，<code>person1</code> 对象是否具有可用的 <code>valueOf()</code> 方法。</li>
- <li>如果没有，则浏览器检查 <code>person1</code> 对象的原型对象（即 <code>Person</code>构造函数的prototype属性所指向的对象）是否具有可用的 <code>valueof()</code> 方法。</li>
- <li>如果也没有，则浏览器检查 <code>Person()</code> 构造函数的prototype属性所指向的对象的原型对象（即 <code>Object</code>构造函数的prototype属性所指向的对象）是否具有可用的 <code>valueOf()</code> 方法。这里有这个方法，于是该方法被调用。</li>
+ <li>如果没有，则浏览器检查 <code>person1</code> 对象的原型对象（即 <code>Person</code>构造函数的 prototype 属性所指向的对象）是否具有可用的 <code>valueof()</code> 方法。</li>
+ <li>如果也没有，则浏览器检查 <code>Person()</code> 构造函数的 prototype 属性所指向的对象的原型对象（即 <code>Object</code>构造函数的 prototype 属性所指向的对象）是否具有可用的 <code>valueOf()</code> 方法。这里有这个方法，于是该方法被调用。</li>
 </ul>
 
 <div class="note">
@@ -189,7 +189,7 @@ doSomething.prototype.foo:  bar</pre>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>：没有官方的方法用于直接访问一个对象的原型对象——原型链中的“连接”被定义在一个内部属性中，在 JavaScript 语言标准中用 <code>[[prototype]]</code> 表示（参见 {{glossary("ECMAScript")}}）。然而，大多数现代浏览器还是提供了一个名为 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> （前后各有2个下划线）的属性，其包含了对象的原型。你可以尝试输入 <code>person1.__proto__</code> 和 <code>person1.__proto__.__proto__</code>，看看代码中的原型链是什么样的！</p>
+<p><strong>注意</strong>：没有官方的方法用于直接访问一个对象的原型对象——原型链中的“连接”被定义在一个内部属性中，在 JavaScript 语言标准中用 <code>[[prototype]]</code> 表示（参见 {{glossary("ECMAScript")}}）。然而，大多数现代浏览器还是提供了一个名为 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> （前后各有 2 个下划线）的属性，其包含了对象的原型。你可以尝试输入 <code>person1.__proto__</code> 和 <code>person1.__proto__.__proto__</code>，看看代码中的原型链是什么样的！</p>
 </div>
 
 <h2 id="prototype_属性：继承成员被定义的地方">prototype 属性：继承成员被定义的地方</h2>
@@ -245,7 +245,7 @@ doSomething.prototype.foo:  bar</pre>
 
 <h2 id="constructor_属性">constructor 属性</h2>
 
-<p>每个实例对象都从原型中继承了一个constructor属性，该属性指向了用于构造此实例对象的构造函数。</p>
+<p>每个实例对象都从原型中继承了一个 constructor 属性，该属性指向了用于构造此实例对象的构造函数。</p>
 
 <ol>
  <li>例如，在控制台中尝试下面的指令：

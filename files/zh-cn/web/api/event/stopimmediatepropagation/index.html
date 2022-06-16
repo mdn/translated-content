@@ -40,23 +40,23 @@ translation_of: Web/API/Event/stopImmediatePropagation
         &lt;script&gt;
             const p = document.querySelector('p')
             p.addEventListener("click", (event) =&gt; {
-              alert("我是p元素上被绑定的第一个监听函数");
+              alert("我是 p 元素上被绑定的第一个监听函数");
             }, false);
 
             p.addEventListener("click", (event) =&gt; {
-              alert("我是p元素上被绑定的第二个监听函数");
+              alert("我是 p 元素上被绑定的第二个监听函数");
               event.stopImmediatePropagation();
-              // 执行stopImmediatePropagation方法,阻止click事件冒泡,并且阻止p元素上绑定的其他click事件的事件监听函数的执行.
+              // 执行 stopImmediatePropagation 方法，阻止 click 事件冒泡，并且阻止 p 元素上绑定的其他 click 事件的事件监听函数的执行。
             }, false);
 
             p.addEventListener("click",(event) =&gt; {
-              alert("我是p元素上被绑定的第三个监听函数");
+              alert("我是 p 元素上被绑定的第三个监听函数");
               // 该监听函数排在上个函数后面，该函数不会被执行
             }, false);
 
             document.querySelector("div").addEventListener("click", (event) =&gt; {
-              alert("我是div元素,我是p元素的上层元素");
-              // p元素的click事件没有向上冒泡，该函数不会被执行
+              alert("我是 div 元素，我是 p 元素的上层元素");
+              // p 元素的 click 事件没有向上冒泡，该函数不会被执行
             }, false);
         &lt;/script&gt;
     &lt;/body&gt;

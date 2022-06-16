@@ -9,11 +9,11 @@ translation_of: Web/CSS/@media/aspect-ratio
 
 <h2 id="语法">语法</h2>
 
-<p>宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表viewport的宽高比。其为一个范围，这意味着你可以使用<strong><code>min-aspect-ratio</code></strong>和<code><strong>max-aspect-ratio</strong></code>分别查询最小和最大的值。</p>
+<p>宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用<strong><code>min-aspect-ratio</code></strong>和<code><strong>max-aspect-ratio</strong></code>分别查询最小和最大的值。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子包含一个 {{htmlElement("iframe")}} ，拥有它自身的viewport。调整的<code>&lt;iframe&gt;</code>宽高来观察<code>aspect-ratio</code>的变化。</p>
+<p>下面的例子包含一个 {{htmlElement("iframe")}}，拥有它自身的 viewport。调整的 <code>&lt;iframe&gt;</code> 宽高来观察 <code>aspect-ratio</code> 的变化。</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -38,7 +38,7 @@ translation_of: Web/CSS/@media/aspect-ratio
   }
 }
 
-/* 明确的宽高比, 放在最下部防止同时满足条件时的覆盖*/
+/* 明确的宽高比，放在最下部防止同时满足条件时的覆盖*/
 @media (aspect-ratio: 1/1) {
   div {
     background: #f9a; /* red */

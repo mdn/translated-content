@@ -9,17 +9,17 @@ translation_of: 'Web/CSS/:left'
 ---
 <div>{{ CSSRef() }}</div>
 
-<p><strong><code>:left</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>, 需要和<a href="/zh-CN/docs/Web/CSS/At-rule">@规则</a>  {{cssxref("@page")}} 配套使用, 对打印文档的左侧页设置CSS样式.</p>
+<p><strong><code>:left</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>, 需要和<a href="/zh-CN/docs/Web/CSS/At-rule">@规则</a>  {{cssxref("@page")}} 配套使用，对打印文档的左侧页设置 CSS 样式。</p>
 
 <pre class="brush: css no-line-numbers">/* 设置打印时的左侧文档样式 */
 @page :left {
   margin: 2in 3in;
 }</pre>
 
-<p>打印文档的"左"或"右"是由书写方向相关的. 举个栗子, "从左到右"的书写方向中第一页应当使用 {{Cssxref(":right")}} 配置; "从右至左"的书写方向中第一页应当使用 <code>:left</code> 配置.</p>
+<p>打印文档的"左"或"右"是由书写方向相关的。举个栗子，"从左到右"的书写方向中第一页应当使用 {{Cssxref(":right")}} 配置; "从右至左"的书写方向中第一页应当使用 <code>:left</code> 配置。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 并不是所有样式属性都能应用在此选择器内. 仅仅 {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, 和 {{ Cssxref("background") }} 等打印时需要的属性可以使用. 其他属性将直接忽略, 并且可以使用的属性也只会在打印时生效, 显示时不会生效.</p>
+<p><strong>Note:</strong> 并不是所有样式属性都能应用在此选择器内。仅仅 {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, 和 {{ Cssxref("background") }} 等打印时需要的属性可以使用。其他属性将直接忽略，并且可以使用的属性也只会在打印时生效，显示时不会生效。</p>
 </div>
 
 <h2 id="参数">参数</h2>

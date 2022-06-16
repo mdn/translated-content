@@ -21,7 +21,9 @@ La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, pas
 
 ## Syntaxe
 
-    Number.isSafeInteger(valeurÀTester)
+```js
+Number.isSafeInteger(valeurÀTester)
+```
 
 ### Paramètres
 

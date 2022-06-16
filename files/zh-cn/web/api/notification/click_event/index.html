@@ -8,7 +8,7 @@ original_slug: Web/API/notification/onclick
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p>{{domxref("Notification")}} 接口的 onclick属性指定一个事件侦听器来接收 {{event("click")}} 事件。</p>
+<p>{{domxref("Notification")}} 接口的 onclick 属性指定一个事件侦听器来接收 {{event("click")}} 事件。</p>
 
 <p>当用户点击一个显示的{{domxref("Notification")}}时，会发生这些事件。</p>
 
@@ -17,11 +17,11 @@ original_slug: Web/API/notification/onclick
 <pre class="eval">Notification.onclick = function(event) { ... };
 </pre>
 
-<p>该方法的默认行为是将焦点移到与该通知相关联的 <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context</a> 的窗口. 如果你不希望这样, 可以在 event 对象上调用 <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>.</p>
+<p>该方法的默认行为是将焦点移到与该通知相关联的 <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context</a> 的窗口。如果你不希望这样，可以在 event 对象上调用 <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>在下面这个例子中，我们使用 onclick 处理程序来监听点击通知的事件, 并在新窗口(通过包含一个参数<code>'_blank'</code>)打开一个页面:</p>
+<p>在下面这个例子中，我们使用 onclick 处理程序来监听点击通知的事件，并在新窗口 (通过包含一个参数<code>'_blank'</code>) 打开一个页面：</p>
 
 <pre class="brush: js">notification.onclick = function(event) {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab

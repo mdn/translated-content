@@ -17,7 +17,9 @@ La méthode **`__lookupSetter__`** renvoie la fonction définie comme mutateur p
 
 ## Syntaxe
 
-    obj.__lookupSetter__(sprop)
+```js
+obj.__lookupSetter__(sprop)
+```
 
 ### Paramètres
 

@@ -3,18 +3,18 @@ title: 什么是网络服务器？
 slug: Learn/Common_questions/What_is_a_web_server
 translation_of: Learn/Common_questions/What_is_a_web_server
 ---
-<div class="summary">
+<div>
 <p>在这篇文章中我们会重温什么是网络服务器，它们如何工作，以及为什么它们很重要。</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
+   <th scope="row">前提：</th>
    <td>您应该已经知道 <a href="/en-US/docs/learn/How_the_Internet_works">互联网是怎么工作的</a>，并且<a href="/zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？">了解网页，网站，网络服务器和搜索引擎的区别是什么</a></td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>了解网络服务器，明白它大概的工作原理</td>
   </tr>
  </tbody>
@@ -25,19 +25,19 @@ translation_of: Learn/Common_questions/What_is_a_web_server
 <p>“网络服务器（Web server）”可以代指硬件或软件，或者是它们协同工作的整体。</p>
 
 <ol>
- <li>硬件部分，一个网络服务器是一台存储了网络服务软件以及网站的组成文件（比如，HTML文档、图片、CSS样式表和JavaScript文件）的计算机。它接入到互联网并且支持与其他连接到互联网的设备进行物理数据的交互。</li>
- <li>软件部分，网络服务器包括控制网络用户如何访问托管文件的几个部分，至少他要是一台HTTP服务器。一台HTTP服务器是一种能够理解URL（网络地址）和HTTP（浏览器用来查看网页的协议）的软件。通过服务器上存储的网站的域名（比如mozilla.org）可以访问这个服务器，并且他还可以将他的内容分发给最终用户的设备。</li>
+ <li>硬件部分，一个网络服务器是一台存储了网络服务软件以及网站的组成文件（比如，HTML 文档、图片、CSS 样式表和 JavaScript 文件）的计算机。它接入到互联网并且支持与其他连接到互联网的设备进行物理数据的交互。</li>
+ <li>软件部分，网络服务器包括控制网络用户如何访问托管文件的几个部分，至少他要是一台 HTTP 服务器。一台 HTTP 服务器是一种能够理解 URL（网络地址）和 HTTP（浏览器用来查看网页的协议）的软件。通过服务器上存储的网站的域名（比如 mozilla.org）可以访问这个服务器，并且他还可以将他的内容分发给最终用户的设备。</li>
 </ol>
 
-<p>基本上，当浏览器需要一个托管在网络服务器上的文件的时候，浏览器通过HTTP请求这个文件。当这个请求到达正确的网络服务器（硬件）时，HTTP服务器（软件）收到这个请求，找到这个被请求的文档（如果这个文档不存在，那么将返回一个404响应）， 并把这个文档通过HTTP发送给浏览器。</p>
+<p>基本上，当浏览器需要一个托管在网络服务器上的文件的时候，浏览器通过 HTTP 请求这个文件。当这个请求到达正确的网络服务器（硬件）时，HTTP 服务器（软件）收到这个请求，找到这个被请求的文档（如果这个文档不存在，那么将返回一个 404 响应），并把这个文档通过 HTTP 发送给浏览器。</p>
 
 <p><img alt="Basic representation of a client/server connection through HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></p>
 
 <p>要发布一个网站，你需要一个静态或动态的服务器。</p>
 
-<p>静态网络服务器（<strong>static web server</strong>），或者堆栈，由一个计算机（硬件）和一个 HTTP 服务器（软件）组成。我们称它为 “静态” 是因为这个服务器把它托管文件的 “保持原样” 地传送到你的浏览器。</p>
+<p>静态网络服务器（<strong>static web server</strong>），或者堆栈，由一个计算机（硬件）和一个 HTTP 服务器（软件）组成。我们称它为“静态”是因为这个服务器把它托管文件的“保持原样”地传送到你的浏览器。</p>
 
-<p>动态网络服务器（<strong>dynamic web server</strong>）<strong> </strong>由一个静态的网络服务器加上额外的软件组成，最普遍的是一个应用服务器 [<em>application server</em>] 和一个数据库 [<em>database</em>]。我们称它为 “动态” 是因为这个应用服务器会在通过 HTTP 服务器把托管文件传送到你的浏览器之前会对这些托管文件进行更新。</p>
+<p>动态网络服务器（<strong>dynamic web server</strong>）<strong> </strong>由一个静态的网络服务器加上额外的软件组成，最普遍的是一个应用服务器 [<em>application server</em>] 和一个数据库 [<em>database</em>]。我们称它为“动态”是因为这个应用服务器会在通过 HTTP 服务器把托管文件传送到你的浏览器之前会对这些托管文件进行更新。</p>
 
 <p>举个例子，要生成你在浏览器中看到的最终网页，应用服务器或许会用一个数据库中的内容填充一个 HTML 模板。网站像 MDN 或者维基百科 [Wikipedia] 有成千上万的网页，但是它们不是真正的 HTML 文档，它们只是少数的 HTML 模板以及一个巨大的数据库。这样的设置让它更快更简单地维护以及分发内容。</p>
 
@@ -51,7 +51,7 @@ translation_of: Learn/Common_questions/What_is_a_web_server
 
 <h3 id="托管文件">托管文件</h3>
 
-<p>一个网络服务器首先需要存储这个网站的文件，也就是说所有的 HTML 文档和它们的相关资源 （related assets），包括图片，CSS 样式表，JavaScript 文件，字形 （fonts） 以及影像。</p>
+<p>一个网络服务器首先需要存储这个网站的文件，也就是说所有的 HTML 文档和它们的相关资源（related assets），包括图片，CSS 样式表，JavaScript 文件，字形（fonts） 以及影像。</p>
 
 <p>严格来说，你可以在你自己的计算机上托管所有的这些文件，但是在一个专用的网络服务器上存储它们会方便得多，因为它</p>
 
@@ -62,19 +62,19 @@ translation_of: Learn/Common_questions/What_is_a_web_server
  <li>由一个第三方提供者维护</li>
 </ul>
 
-<p>因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在这篇文章 （<a href="https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting">article</a>）中找到更多的细节。</p>
+<p>因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在这篇文章（<a href="https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting">article</a>）中找到更多的细节。</p>
 
 <p>一旦你设置好一个网络托管解决方案，你只需要去上传你的文件到你的网络服务器 [<a href="/en-US/docs/Learn/Upload_files_to_a_web_server">upload your files to your web server</a>]。</p>
 
-<h3 id="通过HTTP交流">通过HTTP交流</h3>
+<h3 id="通过HTTP交流">通过 HTTP 交流</h3>
 
-<p>第二点，一个网络服务器提供了 {{Glossary("HTTP")}}（超文本传输协议）支持。正如它的名字暗示，HTTP 明确提出了如何在两台计算机间传输超文本（比如说链接的网络文档 （linked web documents））。</p>
+<p>第二点，一个网络服务器提供了 {{Glossary("HTTP")}}（超文本传输协议）支持。正如它的名字暗示，HTTP 明确提出了如何在两台计算机间传输超文本（比如说链接的网络文档（linked web documents））。</p>
 
-<p>一个<em>协议（</em>{{Glossary("Protocol")}}<em>）</em>是一套为了在两台计算机间交流而制定的规则。 HTTP 是一个文本化的 （textual），无状态的 （stateless）协议。</p>
+<p>一个<em>协议（</em>{{Glossary("Protocol")}}<em>）</em>是一套为了在两台计算机间交流而制定的规则。 HTTP 是一个文本化的（textual），无状态的（stateless）协议。</p>
 
 <dl>
  <dt>文本化</dt>
- <dd>所有的命令都是纯文本的 （plain-text） 和人类可读的 （human-readable）。</dd>
+ <dd>所有的命令都是纯文本的（plain-text） 和人类可读的（human-readable）。</dd>
  <dt>无状态</dt>
  <dd>无论是服务器还是客户都不会记住之前的交流。举个例子，仅依靠 HTTP，一个服务器不能记住你输入的密码或者你正处于业务中的哪一步。你需要一个应用服务器来进行这样的工作。（我们会在日后的文章中涵盖这类的技术。）</dd>
 </dl>
@@ -82,24 +82,24 @@ translation_of: Learn/Common_questions/What_is_a_web_server
 <p>HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在日后的一篇<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">技术文章 </a>中覆盖 HTTP 本身。就目前而言，只需要知道这几点：</p>
 
 <ul>
- <li>只有<em>用户</em>可以制定 HTTP 请求，然后只会发送到<em>服务器</em>。服务器只能响应客户端的HTTP请求。</li>
+ <li>只有<em>用户</em>可以制定 HTTP 请求，然后只会发送到<em>服务器</em>。服务器只能响应客户端的 HTTP 请求。</li>
  <li>当通过 HTTP 请求一个文件时，客户必须提供这个文件的{{Glossary("URL")}}。</li>
  <li>网络服务器<em>必须应答</em>每一个 HTTP 请求，至少也要回复一个错误信息。</li>
 </ul>
 
-<p><a href="https://developer.mozilla.org/en-US/404"><img alt="The MDN 404 page as an example of such error page" src="https://mdn.mozillademos.org/files/8661/mdn-404.jpg" style="float: right; height: 300px; width: 300px;"></a>在一个网络服务器上，HTTP服务器负责处理和应答传入的请求。</p>
+<p><a href="https://developer.mozilla.org/en-US/404"><img alt="The MDN 404 page as an example of such error page" src="https://mdn.mozillademos.org/files/8661/mdn-404.jpg" style="float: right; height: 300px; width: 300px;"></a>在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。</p>
 
 <ol>
- <li>当收到一个请求时， HTTP 服务器首先要检查所请求的 URL 是否与一个存在的文件相匹配。</li>
+ <li>当收到一个请求时，HTTP 服务器首先要检查所请求的 URL 是否与一个存在的文件相匹配。</li>
  <li>如果是，网络服务器会传送文件内容回到浏览器。如果不是，一个应用服务器会建立必要的文件。</li>
- <li>如果两种处理都不可能，网络服务器会返回一个错误信息到浏览器，最常见的是 “404 未找到” ["404 Not Found"]。（这错误太常见以至于很多网页设计者花费许多时间去设计 404 错误页面 [<a href="http://www.404notfound.fr/" rel="external">404 error pages</a>]。）</li>
+ <li>如果两种处理都不可能，网络服务器会返回一个错误信息到浏览器，最常见的是“404 未找到” ["404 Not Found"]。（这错误太常见以至于很多网页设计者花费许多时间去设计 404 错误页面 [<a href="http://www.404notfound.fr/" rel="external">404 error pages</a>]。）</li>
 </ol>
 
 <h3 id="静态和动态内容">静态和动态内容</h3>
 
-<p>粗略地说，一个服务器可以提供静态或者动态的内容。“静态” 意味着 “保持原样地提供”。静态的网站是最容易建立的，所以我们建议你制作一个静态的网站作为你的第一个网站。</p>
+<p>粗略地说，一个服务器可以提供静态或者动态的内容。“静态”意味着“保持原样地提供”。静态的网站是最容易建立的，所以我们建议你制作一个静态的网站作为你的第一个网站。</p>
 
-<p>“动态” 意味着服务器会处理内容甚至实时地从一个数据库中产生它。这个解决方案提供了更多的灵活性，但是技术堆栈变得更难去处理，让建立网站更惊人地复杂。</p>
+<p>“动态”意味着服务器会处理内容甚至实时地从一个数据库中产生它。这个解决方案提供了更多的灵活性，但是技术堆栈变得更难去处理，让建立网站更惊人地复杂。</p>
 
 <p>以你正在阅读的页面为例子。在正在托管它的网络服务器里，有一个应用服务器会从数据库提取文章内容，安排它的布局，把它放置在一些 HTML 模板中，然后为你传输结果。在这里，这个应用服务器叫做 <a href="/en-US/docs/MDN/Kuma">Kuma</a> 并且是由 <a href="https://www.python.org/">Python</a> （使用 <a href="https://www.djangoproject.com/">Django</a> 构架) 构建的。Mozilla 团队为了 MDN 的特殊要求开发 Kuma，但是这里有很多相似的建立在很多其他技术之上的应用。</p>
 

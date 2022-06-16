@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 <div> </div>
 
-<p>　但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导您尽可能正确地进行此操作。</p>
+<p> 但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导您尽可能正确地进行此操作。</p>
 
 <div class="note">
 <p>值得重申的是：使用用户代理嗅探很少会成为一个好主意。你几乎总能发现一个更好的、更广泛兼容的方式来解决你的问题。</p>
@@ -23,20 +23,20 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 <h2 id="在使用浏览器检测之前需要考虑的一些事情">在使用浏览器检测之前需要考虑的一些事情</h2>
 
-<p>　当你考虑使用用户代理字段来检测用户正在使用哪种浏览器的时候，第一步是试着回避它。从想明白你<strong>为什么</strong>要这样做开始。</p>
+<p> 当你考虑使用用户代理字段来检测用户正在使用哪种浏览器的时候，第一步是试着回避它。从想明白你<strong>为什么</strong>要这样做开始。</p>
 
 <dl>
  <dt>你正尝试解决某个浏览器的某个版本中的一个特定错误吗？</dt>
- <dd>在专业论坛中查找、询问：你不太可能是第一个遇到这个问题的人。 你也可以询问专家，或者仅仅是那些和你持有不同观点的人们，他们能提供给你不同的思路。如果这个问题看上去是不常见的，你需要检查一下是否这个错误已经通过错误跟踪系统(<a class="link-https" href="https://bugzilla.mozilla.org">Mozilla</a>; <a class="external" href="http://bugs.webkit.org">WebKit</a>; <a class="link-https" href="https://bugs.opera.com/">Opera</a>)报告给浏览器厂商。浏览器开发商非常关注错误报告，相关的分析也可能会有其他解决方案的提示。</dd>
+ <dd>在专业论坛中查找、询问：你不太可能是第一个遇到这个问题的人。 你也可以询问专家，或者仅仅是那些和你持有不同观点的人们，他们能提供给你不同的思路。如果这个问题看上去是不常见的，你需要检查一下是否这个错误已经通过错误跟踪系统 (<a class="link-https" href="https://bugzilla.mozilla.org">Mozilla</a>; <a class="external" href="http://bugs.webkit.org">WebKit</a>; <a class="link-https" href="https://bugs.opera.com/">Opera</a>) 报告给浏览器厂商。浏览器开发商非常关注错误报告，相关的分析也可能会有其他解决方案的提示。</dd>
  <dt>你正尝试检查某个特性是否可用吗？</dt>
  <dd>你的站点需要使用一个特定的网页特性，然而有一些浏览器还不支持该特性，你想发给那些使用不支持该特性的浏览器的用户一个更老的网页，该网页有更少的特性，但是你知道他们将正常显示。这是最糟糕的使用用户代理检测的理由，因为有很大的概率最终其余的所有浏览器都将使用这个特性。你应该尽你最大努力在这种可能情况下阻止使用用户代理嗅探器，作为替代，使用功能检测器。</dd>
- <dt>你想依据正在使用的是哪个浏览器来提供不同的HTML页面吗？</dt>
- <dd>这通常是一个坏的做法，不过有些情况下这又是必要的。在这些情形下，你首先应该分析你所处的情形并确定这确实是必要的。你是否可以通过添加一些无语义的 {{ HTMLElement("div") }} 或者 {{ HTMLElement("span") }} 元素来避免呢？想成功使用用户代理检测是困难的，值得牺牲一些HTML的整洁性来换取。另外，也请重新思考一下你的设计：能否通过使用渐进增强或者流体布局来去除使用用户代理检测的需要呢？</dd>
+ <dt>你想依据正在使用的是哪个浏览器来提供不同的 HTML 页面吗？</dt>
+ <dd>这通常是一个坏的做法，不过有些情况下这又是必要的。在这些情形下，你首先应该分析你所处的情形并确定这确实是必要的。你是否可以通过添加一些无语义的 {{ HTMLElement("div") }} 或者 {{ HTMLElement("span") }} 元素来避免呢？想成功使用用户代理检测是困难的，值得牺牲一些 HTML 的整洁性来换取。另外，也请重新思考一下你的设计：能否通过使用渐进增强或者流体布局来去除使用用户代理检测的需要呢？</dd>
 </dl>
 
 <h2 id="避免进行用户代理检测">避免进行用户代理检测</h2>
 
-<p>　如果你想要尝试避免使用用户代理检测，在某些情形下有些可供选择的方法。</p>
+<p> 如果你想要尝试避免使用用户代理检测，在某些情形下有些可供选择的方法。</p>
 
 <dl>
  <dt>功能检测</dt>
@@ -49,15 +49,15 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 <h2 id="用户代理中的哪个部分包含你正在寻找的信息">用户代理中的哪个部分包含你正在寻找的信息</h2>
 
-<p>　由于用户代理字串的不同部分缺乏统一性，这是一个较难对付的问题。</p>
+<p> 由于用户代理字串的不同部分缺乏统一性，这是一个较难对付的问题。</p>
 
 <h3 id="浏览器名">浏览器名</h3>
 
-<p>　当人们说他们想要进行“浏览器检测”的时候，他们实际上经常想要进行的是“渲染引擎检测”。你实际上想要检测使用的是火狐（Firefox）还是与之对应的海猴（SeaMonkey），或者使用的是Chrome还是与之对应的Chromium？或者你实际上只不过想看浏览器是否正在使用Gecko还是WebKit渲染引擎？如果这正是你需要的，请参阅后面的部分。</p>
+<p> 当人们说他们想要进行“浏览器检测”的时候，他们实际上经常想要进行的是“渲染引擎检测”。你实际上想要检测使用的是火狐（Firefox）还是与之对应的海猴（SeaMonkey），或者使用的是 Chrome 还是与之对应的 Chromium？或者你实际上只不过想看浏览器是否正在使用 Gecko 还是 WebKit 渲染引擎？如果这正是你需要的，请参阅后面的部分。</p>
 
-<p>　除了IE浏览器这个显著的例外，大部分的浏览器以浏览器名/版本号的格式设置浏览器名和版本。但是由于浏览器名不是用户代理字符串中唯一一个以这种格式命名的信息，你不能发现浏览器名，你只能检测是否这是你正在寻找的名字。但是要注意到，一些浏览器在说谎：例如Chrome的用户代理字符串中既会包含Chrome又会包含Safari。所以为了检测Safari浏览器，你不得不检测其中是否有Safari字符串同时没有Chrome字符串，Chromium也经常汇报它自己是Chrome浏览器，海猴有时也汇报它自己是火狐浏览器。</p>
+<p> 除了 IE 浏览器这个显著的例外，大部分的浏览器以浏览器名/版本号的格式设置浏览器名和版本。但是由于浏览器名不是用户代理字符串中唯一一个以这种格式命名的信息，你不能发现浏览器名，你只能检测是否这是你正在寻找的名字。但是要注意到，一些浏览器在说谎：例如 Chrome 的用户代理字符串中既会包含 Chrome 又会包含 Safari。所以为了检测 Safari 浏览器，你不得不检测其中是否有 Safari 字符串同时没有 Chrome 字符串，Chromium 也经常汇报它自己是 Chrome 浏览器，海猴有时也汇报它自己是火狐浏览器。</p>
 
-<p>　也要注意不要对浏览器名使用简单的正则表达式，用户代理字符串中也包含不属于键值对形式的字符串。例如在Safari和Chrome中包含有“like Gecko”一样的字符串。</p>
+<p> 也要注意不要对浏览器名使用简单的正则表达式，用户代理字符串中也包含不属于键值对形式的字符串。例如在 Safari 和 Chrome 中包含有“like Gecko”一样的字符串。</p>
 
 <table class="standard-table">
  <thead>
@@ -97,7 +97,7 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
    <td>Safari</td>
    <td>Safari/xyz</td>
    <td>Chrome/xyz or Chromium/xyz</td>
-   <td>Safari 有两个版本号，一个技术性较强，格式是Safari/xyz，一个对用户友好一点，格式是Version/xyz</td>
+   <td>Safari 有两个版本号，一个技术性较强，格式是 Safari/xyz，一个对用户友好一点，格式是 Version/xyz</td>
   </tr>
   <tr>
    <td>Opera</td>
@@ -108,33 +108,33 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
    </td>
    <td> </td>
    <td>
-    <p><sup>[1]</sup> Opera 15+ (基于Blink的引擎) </p>
+    <p><sup>[1]</sup> Opera 15+ (基于 Blink 的引擎) </p>
 
-    <p><sup>[2]</sup> Opera 12- (基于Presto的引擎)</p>
+    <p><sup>[2]</sup> Opera 12- (基于 Presto 的引擎)</p>
    </td>
   </tr>
   <tr>
    <td>Internet Explorer</td>
    <td>; MSIE xyz;</td>
    <td> </td>
-   <td>IE浏览器的名字并没有使用<em>BrowserName/VersionNumber</em>的格式</td>
+   <td>IE 浏览器的名字并没有使用<em>BrowserName/VersionNumber</em>的格式</td>
   </tr>
  </tbody>
 </table>
 
-<p>　当然，这里并没有保证其它浏览器不劫持上述字符串（像在过去，Chrome劫持了Safari的字符串）。这就是为什么使用用户代理字段进行浏览器检测是不可信的，并且做这个检测也仅仅应该是为了检测版本号（劫持过去的版本号这种事情很少发生）。</p>
+<p> 当然，这里并没有保证其它浏览器不劫持上述字符串（像在过去，Chrome 劫持了 Safari 的字符串）。这就是为什么使用用户代理字段进行浏览器检测是不可信的，并且做这个检测也仅仅应该是为了检测版本号（劫持过去的版本号这种事情很少发生）。</p>
 
 <h3 id="浏览器版本">浏览器版本</h3>
 
-<p>　浏览器版本号通常但并不总是出现在用户代理字符串的<em>浏览器名/版本号</em>记号的值的位置。IE浏览器（该浏览器放置版本号刚好在MSIE记号之后）以及在版本10之后的Opera（新增了版本/版本号标记）就是例子。</p>
+<p> 浏览器版本号通常但并不总是出现在用户代理字符串的<em>浏览器名/版本号</em>记号的值的位置。IE 浏览器（该浏览器放置版本号刚好在 MSIE 记号之后）以及在版本 10 之后的 Opera（新增了版本/版本号标记）就是例子。</p>
 
-<p>　此处再一次强调，由于并没有保证其它标记会包含有效的数字，请确保选取你正在寻找的浏览器的正确的标记。</p>
+<p> 此处再一次强调，由于并没有保证其它标记会包含有效的数字，请确保选取你正在寻找的浏览器的正确的标记。</p>
 
 <h3 id="渲染引擎">渲染引擎</h3>
 
-<p>　正如早先提及到的，在大多数情况下，寻找渲染引擎是一个更好的方式。这将有助于保留鲜为人知的浏览器。使用共同的渲染引擎的浏览器将以相同的方式显示页面：这经常是一个公平的假设：一处有效，处处有效。</p>
+<p> 正如早先提及到的，在大多数情况下，寻找渲染引擎是一个更好的方式。这将有助于保留鲜为人知的浏览器。使用共同的渲染引擎的浏览器将以相同的方式显示页面：这经常是一个公平的假设：一处有效，处处有效。</p>
 
-<p>　现在市面上有5个主流的渲染引擎：Trident，Gecko，Presto，Blink和WebKit。由于嗅探渲染引擎名是很普遍的，大量的用户代理在其字段中增加其它的渲染引擎名来触发检测。因此当检测渲染引擎的时候，一件很重要的事情，就是要避免“假阳性”（注：false-positives，指一个特性可通过检测，但实际在该浏览器下并不可靠或不可用）情况的发生。</p>
+<p> 现在市面上有 5 个主流的渲染引擎：Trident，Gecko，Presto，Blink 和 WebKit。由于嗅探渲染引擎名是很普遍的，大量的用户代理在其字段中增加其它的渲染引擎名来触发检测。因此当检测渲染引擎的时候，一件很重要的事情，就是要避免“假阳性”（注：false-positives，指一个特性可通过检测，但实际在该浏览器下并不可靠或不可用）情况的发生。</p>
 
 <table class="standard-table">
  <thead>
@@ -153,17 +153,17 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
   <tr>
    <td>WebKit</td>
    <td>AppleWebKit/xyz</td>
-   <td>请注意，WebKit浏览器包含了'like Gecko'字符串，如果不加以注意，可能会触发检测Gecko的false positive。</td>
+   <td>请注意，WebKit 浏览器包含了'like Gecko'字符串，如果不加以注意，可能会触发检测 Gecko 的 false positive。</td>
   </tr>
   <tr>
    <td>Presto</td>
    <td>Opera/xyz</td>
-   <td><strong>注:</strong> 在Opera浏览器在15及以上的版本中，已经不再使用Presto（参见'Blink'）。</td>
+   <td><strong>注：</strong> 在 Opera 浏览器在 15 及以上的版本中，已经不再使用 Presto（参见'Blink'）。</td>
   </tr>
   <tr>
    <td>Trident</td>
    <td>Trident/xyz</td>
-   <td>IE浏览器将此字符串放在User Agent字符串的<em>注释</em>部分。</td>
+   <td>IE 浏览器将此字符串放在 User Agent 字符串的<em>注释</em>部分。</td>
   </tr>
   <tr>
    <td>Blink</td>
@@ -175,21 +175,21 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 <h2 id="渲染引擎版本">渲染引擎版本</h2>
 
-<p>　除了Gecko这个显著的例外，大部分的渲染引擎将版本号放置在渲染引擎/版本号标记中。 该引擎将Gecko版本号放置在用户代理的注释部分，在rv字符串之后。在手机版Gecko14以及桌面版Gecko17之后，该引擎也在Gecko/version标记处放置版本号的值（先前的版本中此处放置的是构建日期，然后固定的日期调用GeckoTrail）。</p>
+<p> 除了 Gecko 这个显著的例外，大部分的渲染引擎将版本号放置在渲染引擎/版本号标记中。 该引擎将 Gecko 版本号放置在用户代理的注释部分，在 rv 字符串之后。在手机版 Gecko14 以及桌面版 Gecko17 之后，该引擎也在 Gecko/version 标记处放置版本号的值（先前的版本中此处放置的是构建日期，然后固定的日期调用 GeckoTrail）。</p>
 
 <h2 id="操作系统">操作系统</h2>
 
-<p>　大多数的用户代理字符串也给出了用户使用的操作系统（尽管像Firefox OS这样的网络为中心的操作系统没有给出），但是给出的形式却多种多样。在用户代理的注释部分以夹在两个分号之间的固定字符串形式给出。对于每一个浏览器，这些字符串是特定的。这些字符串在显示操作系统的同时，也经常显示它的版本和其依赖的硬件信息（32位还是64位，或者是Mac平台的intel/PPC）.</p>
+<p> 大多数的用户代理字符串也给出了用户使用的操作系统（尽管像 Firefox OS 这样的网络为中心的操作系统没有给出），但是给出的形式却多种多样。在用户代理的注释部分以夹在两个分号之间的固定字符串形式给出。对于每一个浏览器，这些字符串是特定的。这些字符串在显示操作系统的同时，也经常显示它的版本和其依赖的硬件信息（32 位还是 64 位，或者是 Mac 平台的 intel/PPC）.</p>
 
-<p>　正如所有情形一样，这些字符串在将来也可能会改变，我们应该仅仅与已经发布的浏览器一起使用它们。当新的浏览器版本发布的时候，一份修改脚本以适应新版本的技术调查必须出现。</p>
+<p> 正如所有情形一样，这些字符串在将来也可能会改变，我们应该仅仅与已经发布的浏览器一起使用它们。当新的浏览器版本发布的时候，一份修改脚本以适应新版本的技术调查必须出现。</p>
 
 <h3 id="手机，平板或者台式电脑">手机，平板或者台式电脑</h3>
 
-<p>　执行用户代理嗅探的一个最普遍的原因是查明浏览器是在何种硬件设备上运行的。而这么做的目的是对不同类型的设备提供不同的HTML页面。</p>
+<p> 执行用户代理嗅探的一个最普遍的原因是查明浏览器是在何种硬件设备上运行的。而这么做的目的是对不同类型的设备提供不同的 HTML 页面。</p>
 
 <ul>
  <li>从不要假设一款浏览器或者一种渲染引擎仅仅运行在一种类型的设备上。特别是不要对不同种类的浏览器或者渲染引擎采用不同的默认值。</li>
- <li>从不要使用OS标记来定义是否该浏览器运行在手机、平板或者桌面机上。同一种操作系统也许也运行在不止一种类型的设备上（例如，Android既能在平板上运行也能在手机上运行）。</li>
+ <li>从不要使用 OS 标记来定义是否该浏览器运行在手机、平板或者桌面机上。同一种操作系统也许也运行在不止一种类型的设备上（例如，Android 既能在平板上运行也能在手机上运行）。</li>
 </ul>
 
 <p>下面这张表格总结了主要浏览器开发商声明他们的浏览器运行在手机设备上的方式：</p>
@@ -206,23 +206,23 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
  <tbody>
   <tr>
    <td>Mozilla (Gecko, Firefox)</td>
-   <td>注释中的 <a href="/en-US/docs/Gecko_user_agent_string_reference"><strong>Mobile或</strong><strong>Tablet标记</strong></a></td>
+   <td>注释中的 <a href="/en-US/docs/Gecko_user_agent_string_reference"><strong>Mobile 或</strong><strong>Tablet 标记</strong></a></td>
    <td>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0</td>
   </tr>
   <tr>
    <td>WebKit-based (Android, Safari)</td>
-   <td>注释外的<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3"><strong>Mobile Safari标记</strong></a></td>
+   <td>注释外的<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3"><strong>Mobile Safari 标记</strong></a></td>
    <td>Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30</td>
   </tr>
   <tr>
    <td>Blink-based (Chromium, Google Chrome, Opera 15+)</td>
-   <td>注释外的<a href="https://developers.google.com/chrome/mobile/docs/user-agent"><strong>Mobile Safari标记</strong></a></td>
+   <td>注释外的<a href="https://developers.google.com/chrome/mobile/docs/user-agent"><strong>Mobile Safari 标记</strong></a></td>
    <td>Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047</td>
   </tr>
   <tr>
    <td>Presto-based (Opera 12-)</td>
    <td>
-    <p>注释中的<a href="http://my.opera.com/community/openweb/idopera/"><strong>Opera Mobi/xyz标记</strong></a>(Opera 12-)</p>
+    <p>注释中的<a href="http://my.opera.com/community/openweb/idopera/"><strong>Opera Mobi/xyz 标记</strong></a>(Opera 12-)</p>
    </td>
    <td>
     <p>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</p>
@@ -230,7 +230,7 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
   </tr>
   <tr>
    <td>Internet Explorer</td>
-   <td>注释中的<strong>IEMobile/xyz标记</strong></td>
+   <td>注释中的<strong>IEMobile/xyz 标记</strong></td>
    <td>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</td>
   </tr>
  </tbody>

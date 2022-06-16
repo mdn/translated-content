@@ -27,7 +27,7 @@ translation_of: Web/API/HTMLMediaElement/load
 
 <p>The process of aborting any ongoing activities will cause any outstanding {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being resolved or rejected as appropriate based on their status before the loading of new media can begin. Pending play promises are aborted with an <code>"AbortError"</code> {{domxref("DOMException")}}.</p>
 
-<p>在load过程中 合适的事件会发生并通知给媒体本身，包括：</p>
+<p>在 load 过程中 合适的事件会发生并通知给媒体本身，包括：</p>
 
 <ul>
  <li>如果已经是 <code>load</code> 过了，则 <code>abort</code> 事件发送给媒体。</li>

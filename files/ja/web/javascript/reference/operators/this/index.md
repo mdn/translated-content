@@ -148,7 +148,7 @@ function whatsThis() {
   return this.a;  // this の値は関数の呼び出し方によって変わります
 }
 
-whatsThis();          // 'Global' はこの関数では関 this として設定されていないので、既定でグローバルの window オブジェクトになります
+whatsThis();          // 'Global' はこの関数では this として設定されていないので、既定でグローバルの window オブジェクトになります
 whatsThis.call(obj);  // 'Custom' が関数内の this として obj に設定されています
 whatsThis.apply(obj); // 'Custom' が関数内の this として obj に設定されています
 ```

@@ -29,7 +29,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
               <li><a href="/zh-CN/docs/Mozilla/">Mozilla 项目</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Gecko">Gecko</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Firefox/Headless_mode">Headless mode</a></li>
-              <li><a href="/zh-CN/docs/Mozilla/JavaScript_code_modules">JavaScript代码模块</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/JavaScript_code_modules">JavaScript 代码模块</a></li>
               <li><a href="/zh-CN/docs/Mozilla/js-ctypes">JS-ctypes</a></li>
               <li><a href="/zh-CN/docs/Mozilla/MathML_Project">MathML 项目</a></li>
               <li><a href="/zh-CN/docs/Mozilla/MFBT">MFBT</a></li>
@@ -48,11 +48,11 @@ translation_of: Mozilla/Firefox/Releases/3.6
               <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Build_Instructions">构建说明</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">配置构建选项</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">构建系统如何工作</a></li>
-              <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mozilla源代码</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mozilla 源代码</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Localization">本地化</a></li>
               <li><a href="/zh-CN/docs/Mozilla/Mercurial">Mercurial</a></li>
               <li><a href="/zh-CN/docs/Mozilla/QA">质量保证</a></li>
-              <li><a href="/zh-CN/docs/Mozilla/Using_Mozilla_code_in_other_projects">在其他项目中使用来自Mozilla的代码</a></li>
+              <li><a href="/zh-CN/docs/Mozilla/Using_Mozilla_code_in_other_projects">在其他项目中使用来自 Mozilla 的代码</a></li>
             </ol>
         </details>
     </li>
@@ -107,12 +107,12 @@ translation_of: Mozilla/Firefox/Releases/3.6
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>Gecko 1.9.2引入了JavaScript 1.8.2, 该版本的JavaScript添加了许多来自<a href="/zh-cn/JavaScript/ECMAScript_5_support_in_Mozilla" title="https://developer.mozilla.org/zh-cn/JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5</a>的新的语言特性:</p>
+<p>Gecko 1.9.2 引入了 JavaScript 1.8.2, 该版本的 JavaScript 添加了许多来自<a href="/zh-cn/JavaScript/ECMAScript_5_support_in_Mozilla" title="https://developer.mozilla.org/zh-cn/JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5</a>的新的语言特性：</p>
 
 <ul>
- <li><a href="/zh-cn/JavaScript/Reference/Global_Objects/Date/parse" title="zh-cn/JavaScript/Reference/Global Objects/Date/parse"><code>Date.parse()</code></a>方法现在可以解析符合ISO 8601标准的日期格式字符串,像这样YYYY-MM-DD.</li>
+ <li><a href="/zh-cn/JavaScript/Reference/Global_Objects/Date/parse" title="zh-cn/JavaScript/Reference/Global Objects/Date/parse"><code>Date.parse()</code></a>方法现在可以解析符合 ISO 8601 标准的日期格式字符串，像这样 YYYY-MM-DD.</li>
  <li>
-  <p>函数从原型链<a href="/zh-cn/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-cn/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code></a>上继承的属性不会再被遍历到.</p>
+  <p>函数从原型链<a href="/zh-cn/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-cn/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code></a>上继承的属性不会再被遍历到。</p>
  </li>
 </ul>
 
@@ -122,10 +122,10 @@ translation_of: Mozilla/Firefox/Releases/3.6
 <h3 id="DOM">DOM</h3>
 
 <dl>
- <dt>Web workers可以自行终止</dt>
- <dd><a href="/zh-cn/DOM/Using_web_workers" title="zh-cn/Using web workers">Workers</a> 开始支持<code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()">nsIWorkerScope.close()</a></code>方法, 该方法允许它们终止自身的运行.</dd>
+ <dt>Web workers 可以自行终止</dt>
+ <dd><a href="/zh-cn/DOM/Using_web_workers" title="zh-cn/Using web workers">Workers</a> 开始支持<code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()">nsIWorkerScope.close()</a></code>方法，该方法允许它们终止自身的运行。</dd>
  <dt>支持文件的拖放</dt>
- <dd><a href="/zh-cn/DragDrop/DataTransfer" title="zh-cn/DragDrop/DataTransfer"><code>DataTransfer</code></a>对象提供的拖拽监听器现在可以包含一个被拖拽的文件列表.</dd>
+ <dd><a href="/zh-cn/DragDrop/DataTransfer" title="zh-cn/DragDrop/DataTransfer"><code>DataTransfer</code></a>对象提供的拖拽监听器现在可以包含一个被拖拽的文件列表。</dd>
  <dt>Checking to see if an element matches a specified CSS selector</dt>
  <dd>The new <a href="/zh-CN/docs/Web/API/Node/mozMatchesSelector" title="此页面仍未被本地化, 期待您的翻译!"><code>element.mozMatchesSelector</code></a> method lets you determine whether or not an element matches a specified CSS selector. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=518003" title="FIXED: implement function to check whether element matches a CSS selector">bug 518003</a>.</dd>
  <dt><a href="/zh-cn/Detecting_device_orientation" title="zh-cn/Detecting device orientation">Detecting device orientation</a></dt>
@@ -152,7 +152,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
 <h3 id="XPath">XPath</h3>
 
 <dl>
- <dt>支持choose()方法</dt>
+ <dt>支持 choose() 方法</dt>
  <dd><a href="/zh-cn/XPath" title="zh-cn/XPath">XPath</a>开始支持<a href="/zh-cn/XPath/Functions/choose" title="zh-cn/XPath/Functions/choose"><code>choose()</code></a><code>方法</code>.</dd>
 </dl>
 

@@ -55,7 +55,7 @@ var o2 = new C();
 
 o2 instanceof C; // true
 
-o instanceof C; // false，C.prototype 指向了一个空对象,这个空对象不在 o 的原型链上.
+o instanceof C; // false，C.prototype 指向了一个空对象，这个空对象不在 o 的原型链上。
 
 D.prototype = new C(); // 继承
 var o3 = new D();
@@ -63,9 +63,9 @@ o3 instanceof D; // true
 o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 </pre>
 
-<p>需要注意的是，如果表达式 <code>obj instanceof Foo</code> 返回 <code>true</code>，则并不意味着该表达式会永远返回 <code>true</code>，因为 <code>Foo.prototype</code> 属性的值有可能会改变，改变之后的值很有可能不存在于 <code>obj</code> 的原型链上，这时原表达式的值就会成为 <code>false</code>。另外一种情况下，原表达式的值也会改变，就是改变对象 <code>obj</code> 的原型链的情况，虽然在目前的ES规范中，我们只能读取对象的原型而不能改变它，但借助于非标准的 <code>__proto__</code> 伪属性，是可以实现的。比如执行 <code>obj.__proto__ = {}</code> 之后，<code>obj instanceof Foo</code> 就会返回 <code>false</code> 了。</p>
+<p>需要注意的是，如果表达式 <code>obj instanceof Foo</code> 返回 <code>true</code>，则并不意味着该表达式会永远返回 <code>true</code>，因为 <code>Foo.prototype</code> 属性的值有可能会改变，改变之后的值很有可能不存在于 <code>obj</code> 的原型链上，这时原表达式的值就会成为 <code>false</code>。另外一种情况下，原表达式的值也会改变，就是改变对象 <code>obj</code> 的原型链的情况，虽然在目前的 ES 规范中，我们只能读取对象的原型而不能改变它，但借助于非标准的 <code>__proto__</code> 伪属性，是可以实现的。比如执行 <code>obj.__proto__ = {}</code> 之后，<code>obj instanceof Foo</code> 就会返回 <code>false</code> 了。</p>
 
-<h3 id="instanceof_和多全局对象例如：多个_frame_或多个_window_之间的交互"><code>instanceof</code> 和多全局对象(例如：多个 frame 或多个 window 之间的交互)</h3>
+<h3 id="instanceof_和多全局对象例如：多个_frame_或多个_window_之间的交互"><code>instanceof</code> 和多全局对象 (例如：多个 frame 或多个 window 之间的交互)</h3>
 
 <p>在浏览器中，我们的脚本可能需要在多个窗口之间进行交互。多个窗口意味着多个全局环境，不同的全局环境拥有不同的全局对象，从而拥有不同的内置类型构造函数。这可能会引发一些问题。比如，表达式 <code>[] instanceof window.frames[0].Array</code> 会返回 <code>false</code>，因为 <code>Array.prototype !== window.frames[0].Array.prototype</code>，并且数组从前者继承。</p>
 
@@ -76,7 +76,7 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 <div class="note">
 <p>
   <strong>备注：</strong>
-  在代码中使用 XPCOM <code>instanceof </code>有特殊影响: 如果查询接口成功执行后，<code>obj instanceof </code><em><code>xpcomInterface</code></em> (e.g. <code>Components.interfaces.nsIFile</code>) 调用<code>obj.QueryInterface(<em>xpcomInterface</em>)</code> 并且返回 <code>true</code> 。这种调用的副作用是在一次成功的 <code>instanceof</code> 测试后，你可以在 <code>obj</code> 上使用<code>xpcomInterface</code> 的属性。这与标准的 <code>JavaScript</code> 全局变量不同，即使 <code>obj</code> 来自不同的作用域，<code>obj instanceof xpcomInterface</code> 也可以按预期产生作用。
+  在代码中使用 XPCOM <code>instanceof </code>有特殊影响：如果查询接口成功执行后，<code>obj instanceof </code><em><code>xpcomInterface</code></em> (e.g. <code>Components.interfaces.nsIFile</code>) 调用<code>obj.QueryInterface(<em>xpcomInterface</em>)</code> 并且返回 <code>true</code> 。这种调用的副作用是在一次成功的 <code>instanceof</code> 测试后，你可以在 <code>obj</code> 上使用<code>xpcomInterface</code> 的属性。这与标准的 <code>JavaScript</code> 全局变量不同，即使 <code>obj</code> 来自不同的作用域，<code>obj instanceof xpcomInterface</code> 也可以按预期产生作用。
 </p>
 </div>
 
@@ -95,14 +95,14 @@ var myDate    = new Date();
 var myObj     = {};
 var myNonObj  = Object.create(null);
 
-simpleStr instanceof String; // 返回 false, 非对象实例，因此返回 false
+simpleStr instanceof String; // 返回 false，非对象实例，因此返回 false
 myString  instanceof String; // 返回 true
 newStr    instanceof String; // 返回 true
 myString  instanceof Object; // 返回 true
 
-myObj instanceof Object;    // 返回 true, 尽管原型没有定义
-({})  instanceof Object;    // 返回 true, 同上
-myNonObj instanceof Object; // 返回 false, 一种创建非 Object 实例的对象的方法
+myObj instanceof Object;    // 返回 true，尽管原型没有定义
+({})  instanceof Object;    // 返回 true，同上
+myNonObj instanceof Object; // 返回 false，一种创建非 Object 实例的对象的方法
 
 myString instanceof Date; //返回 false
 

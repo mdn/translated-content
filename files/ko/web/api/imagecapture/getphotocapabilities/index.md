@@ -28,6 +28,7 @@ const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
 ### 반환 값
 
 다음 속성을 포함하는 객체로 이행하는 {{jsxref("Promise")}}.
+
 - `redEyeReduction`
   - : 장치의 적목 현상 감소 기능 적용 여부를 나타내는 `"never"`, `"always"`, `"controllable"` 중 하나를 반환합니다.
 - `imageHeight`

@@ -2,14 +2,14 @@
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 tags:
-  - vue入门
+  - vue 入门
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">现在我们已经有了一个可以工作的组件。我们接下来添加更多的 <code>ToDoItem</code> 组件到 我们的App。 本文我们会添加一系列待办事项到App.vue组件并使用<code>v-for</code>指令遍历这些它们，将它们的每一项展示在<code>ToDoItem</code>组件中。</p>
+<p>现在我们已经有了一个可以工作的组件。我们接下来添加更多的 <code>ToDoItem</code> 组件到 我们的 App。 本文我们会添加一系列待办事项到 App.vue 组件并使用<code>v-for</code>指令遍历这些它们，将它们的每一项展示在<code>ToDoItem</code>组件中。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -30,11 +30,11 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_re
 
 <h2 id="利用_v-for_指令渲染列表">利用 v-for 指令渲染列表</h2>
 
-<p>一个有效的待办事项列表需要有多个被渲染的to-do项，Vue中的<code><a href="https://vuejs.org/v2/api/#v-for">v-fo</a>r</code> 可以用来实现这种效果。它是Vue自带的指令，用于在template中实现循环，我们可以利用它将数组中的各项重复渲染成指定的特征。我们将利用它迭代待办事项列表，将其中的每一项展示为单独的ToDoItem组件。</p>
+<p>一个有效的待办事项列表需要有多个被渲染的 to-do 项，Vue 中的<code><a href="https://vuejs.org/v2/api/#v-for">v-fo</a>r</code> 可以用来实现这种效果。它是 Vue 自带的指令，用于在 template 中实现循环，我们可以利用它将数组中的各项重复渲染成指定的特征。我们将利用它迭代待办事项列表，将其中的每一项展示为单独的 ToDoItem 组件。</p>
 
 <h3 id="添加一些需要被渲染的数据">添加一些需要被渲染的数据</h3>
 
-<p>首先我们需要准备一个待办事项数组。添加 <code>data</code> 属性到 <code>App.vue</code> 组件对象中， 它包含一个 <code>ToDoItems</code> 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先mock一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 <code>name</code> 和 <code>done</code> 属性。</p>
+<p>首先我们需要准备一个待办事项数组。添加 <code>data</code> 属性到 <code>App.vue</code> 组件对象中， 它包含一个 <code>ToDoItems</code> 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 <code>name</code> 和 <code>done</code> 属性。</p>
 
 <p>像下面这样添加一些待办项目让我们可以利用<code>v-for</code> 来对它们进行渲染。</p>
 
@@ -55,15 +55,15 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_re
   }
 };</pre>
 
-<p>现在我们有了一个列表，可以用<code>v-for</code>去展示它们了。指令的作用方式和元素的属性类似，就v-for而言，它类似js中的<code>for...in</code>循环，<code>v-for="item in items"</code> — <code>iterms</code>是你要迭代的列表， <code>item</code> 是数组中当前元素的引用。</p>
+<p>现在我们有了一个列表，可以用<code>v-for</code>去展示它们了。指令的作用方式和元素的属性类似，就 v-for 而言，它类似 js 中的<code>for...in</code>循环，<code>v-for="item in items"</code> — <code>iterms</code>是你要迭代的列表， <code>item</code> 是数组中当前元素的引用。</p>
 
 <p><code>v-for</code>获取每个迭代的元素，并渲染它和它的子元素。在我们的例子中，我们用<code>&lt;li&gt;</code>的形式展示每一个待办事项，接下来我们会通过每个待办事项传递数据到其对应的<code>ToDoItem</code>组件。</p>
 
 <h3 id="Key_属性">Key 属性</h3>
 
-<p>在进行数据传递之前，我们要了解下<code>key</code>属性，它和<code>v-for</code>使用，用来帮助Vue标识列表中的元素，这样Vue就不需要在列表变化时重新创建它们。但是Vue需要一个唯一的标识，即<code>key</code>来识别哪些元素是被复用的。</p>
+<p>在进行数据传递之前，我们要了解下<code>key</code>属性，它和<code>v-for</code>使用，用来帮助 Vue 标识列表中的元素，这样 Vue 就不需要在列表变化时重新创建它们。但是 Vue 需要一个唯一的标识，即<code>key</code>来识别哪些元素是被复用的。</p>
 
-<p>为了让Vue能正确的比较<code>key</code> ，key属性需要是numeric或者string类型。用name字段不是个好主意，因为这个字段会被用户输入控制，无法保证唯一性。</p>
+<p>为了让 Vue 能正确的比较<code>key</code> ，key 属性需要是 numeric 或者 string 类型。用 name 字段不是个好主意，因为这个字段会被用户输入控制，无法保证唯一性。</p>
 
 <p>我们可以使用<code>lodash.uniqueid()</code> ，像我们前一章节那样。</p>
 
@@ -74,7 +74,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_re
   <pre class="brush: js notranslate"> import uniqueId from 'lodash.uniqueid';</pre>
  </li>
  <li>
-  <p>添加 <code>id</code> 字段到 <code>ToDoItems</code> 数组的每一个元素中, 并且将他们赋值为 <code>uniqueId('todo-')。</code></p>
+  <p>添加 <code>id</code> 字段到 <code>ToDoItems</code> 数组的每一个元素中，并且将他们赋值为 <code>uniqueId('todo-')。</code></p>
 
   <p><code>App.vue</code> <code>&lt;script&gt;</code> 元素内容如下：</p>
 
@@ -107,7 +107,7 @@ export default {
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-  <p>这样改后，<code>&lt;cli&gt;</code>标签中的js脚本就可以访问<code>item</code>了，这意味着我们可以使用<code>v-bind</code>来传递<code>item</code>对象的字段给<code>ToDoItem</code>组件了。这非常有用，我们想让列表中的待办事项的<code>label</code>值展示到它的label中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的checked状态反应它们的<code>done</code>字段，而不是默认的<code>done="false"</code>。</p>
+  <p>这样改后，<code>&lt;cli&gt;</code>标签中的 js 脚本就可以访问<code>item</code>了，这意味着我们可以使用<code>v-bind</code>来传递<code>item</code>对象的字段给<code>ToDoItem</code>组件了。这非常有用，我们想让列表中的待办事项的<code>label</code>值展示到它的 label 中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的 checked 状态反应它们的<code>done</code>字段，而不是默认的<code>done="false"</code>。</p>
  </li>
  <li>
   <p>把 <code>label="My ToDo Item"</code> 改成 <code>:label="item.label"</code>, <code>:done="false"</code> 改成 <code>:done="item.done"</code> ：</p>
@@ -121,16 +121,16 @@ export default {
  </li>
 </ol>
 
-<p>现在当你去看运行着的app时，你会发现待办事项显示了它们自己正确的名字，如果你查看源码的话，你会发现输入都有了唯一的id。<img alt="The app with a list of todo items rendered." src="https://mdn.mozillademos.org/files/17244/rendered-todo-items.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p>现在当你去看运行着的 app 时，你会发现待办事项显示了它们自己正确的名字，如果你查看源码的话，你会发现输入都有了唯一的 id。<img alt="The app with a list of todo items rendered." src="https://mdn.mozillademos.org/files/17244/rendered-todo-items.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <h2 id="让我们来一点小重构">让我们来一点小重构</h2>
 
-<p>我们可以做一点代码重构。 因为我们已经要为每一个待办事项创建一个唯一id，所以不妨把id作为ToDoItem的一个prop，而不是在每个checkbox里生成它。</p>
+<p>我们可以做一点代码重构。 因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。</p>
 
-<p>添加一个新的prop <code>id</code> 到 <code>ToDoItem</code> 组件。</p>
+<p>添加一个新的 prop <code>id</code> 到 <code>ToDoItem</code> 组件。</p>
 
 <ol>
- <li>标记它为required，类型是 <code>String</code> 。</li>
+ <li>标记它为 required，类型是 <code>String</code> 。</li>
  <li>为防止命名冲突，删除掉<code>data</code>属性中的<code>id</code>字段。</li>
  <li>删除掉 <code>import uniqueId from 'lodash.uniqueid';</code> 这行。</li>
 </ol>
@@ -150,7 +150,7 @@ export default {
     },
 }</pre>
 
-<p>现在，在 <code>App.vue</code> 组件中将 <code>item.id</code> 作为一个prop传递给 <code>ToDoItem</code> 组件。你的 <code>App.vue</code> template如下所示：</p>
+<p>现在，在 <code>App.vue</code> 组件中将 <code>item.id</code> 作为一个 prop 传递给 <code>ToDoItem</code> 组件。你的 <code>App.vue</code> template 如下所示：</p>
 
 <pre class="brush: html notranslate">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -163,7 +163,7 @@ export default {
   &lt;/div&gt;
 &lt;/template&gt;</pre>
 
-<p>你渲染后的站点看起来是没有变化的，但是这次重构使得<code>item.id</code>像其他参数一样，作为prop从<code>App.vue</code>传递给<code>ToDoItem</code>。现在代码变得更有逻辑性和一致。</p>
+<p>你渲染后的站点看起来是没有变化的，但是这次重构使得<code>item.id</code>像其他参数一样，作为 prop 从<code>App.vue</code>传递给<code>ToDoItem</code>。现在代码变得更有逻辑性和一致。</p>
 
 <h2 id="总结">总结</h2>
 

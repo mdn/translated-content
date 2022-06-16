@@ -34,7 +34,7 @@ if (tOLeft &gt; 5) {
 }
 </pre>
 
-<p>这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的span标签的边界。</p>
+<p>这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的 span 标签的边界。</p>
 
 <p><img alt="Image:offsetLeft.jpg" class="internal" src="/@api/deki/files/790/=OffsetLeft.jpg"></p>
 
@@ -52,9 +52,9 @@ if (tOLeft &gt; 5) {
   var box = document.getElementById("box");
   var long = document.getElementById("long");
   //
-  // long.offsetLeft这个值就是span的offsetLeft.
-  // long.offsetParent 返回的是body（在chrome浏览器中测试）
-  // 如果id为long的span元素的父元素div，设置了position属性值，只要不为static,那么long.offsetParent就是div
+  // long.offsetLeft 这个值就是 span 的 offsetLeft.
+  // long.offsetParent 返回的是 body（在 chrome 浏览器中测试）
+  // 如果 id 为 long 的 span 元素的父元素 div，设置了 position 属性值，只要不为 static，那么 long.offsetParent 就是 div
 
   box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
   box.style.top = long.offsetTop + document.body.scrollTop + "px";

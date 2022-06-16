@@ -68,10 +68,10 @@ else
 }
 </pre>
 
-<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code>、<code>null</code>、 <code>0</code>、<code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的Boolean对象，在条件语句中都为真。例如：</p>
+<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code>、<code>null</code>、 <code>0</code>、<code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：</p>
 
 <pre class="brush: js">var b = new Boolean(false);
-if (b) //表达式的值为true
+if (b) //表达式的值为 true
 </pre>
 
 <h2 id="Examples">示例</h2>
@@ -88,7 +88,7 @@ if (b) //表达式的值为true
 
 <h3 id="使用_else_if">使用 <code>else if</code></h3>
 
-<p>注意，Javascript中没有<code>elseif</code>语句。但可以使用<code>else</code>和<code>if</code>中间有空格的语句：</p>
+<p>注意，Javascript 中没有<code>elseif</code>语句。但可以使用<code>else</code>和<code>if</code>中间有空格的语句：</p>
 
 <pre class="brush: js">if (x &gt; 5) {
  /* do the right thing */

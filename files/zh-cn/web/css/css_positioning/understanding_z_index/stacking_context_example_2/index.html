@@ -3,24 +3,24 @@ title: Stacking context example 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 tags:
   - CSS
-  - 理解css的index属性
+  - 理解 css 的 index 属性
   - 高级
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
 ---
-<p>« <a href="/en/CSS" title="CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index" title="Understanding CSS z-index"> 理解CSS z-index</a></p>
+<p>« <a href="/en/CSS" title="CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index" title="Understanding CSS z-index"> 理解 CSS z-index</a></p>
 
 <h3 id="层叠上下文示例_2">层叠上下文示例 2</h3>
 
-<p>这是一个非常简单的例子, 但它是理解层叠上下文这个概念的关键。还是和之前的例子中一样的四个DIV，不过现在z-index属性被分配在两个水平的层次结构中。</p>
+<p>这是一个非常简单的例子，但它是理解层叠上下文这个概念的关键。还是和之前的例子中一样的四个 DIV，不过现在 z-index 属性被分配在两个水平的层次结构中。</p>
 
 <p>{{ EmbedLiveSample('Example_source_code', '352', '270', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2') }}</p>
 
-<p>可以看到现在DIV #2 (z-index: 2)在DIV #3 (z-index: 1)的上面，因为他们都属于同一个层叠上下文（根元素创建的层叠上下文），所以z-index的值决定了元素如何叠放。</p>
+<p>可以看到现在 DIV #2 (z-index: 2) 在 DIV #3 (z-index: 1) 的上面，因为他们都属于同一个层叠上下文（根元素创建的层叠上下文），所以 z-index 的值决定了元素如何叠放。</p>
 
-<p>奇怪的是DIV #2 (z-index: 2)在DIV #4 (z-index: 10)的上面，尽管DIV #2的z-index值小于DIV #4。原因在于它们不属于同一个层叠上下文。DIV #4处于DIV #3所创建的层叠上下文中，而整个DIV #3（包含其后代元素）是在DIV #2下面的。</p>
+<p>奇怪的是 DIV #2 (z-index: 2) 在 DIV #4 (z-index: 10) 的上面，尽管 DIV #2 的 z-index 值小于 DIV #4。原因在于它们不属于同一个层叠上下文。DIV #4 处于 DIV #3 所创建的层叠上下文中，而整个 DIV #3（包含其后代元素）是在 DIV #2 下面的。</p>
 
-<p>为了更好的理解这种情况, 这里列出了层叠上下文的层次结构:</p>
+<p>为了更好的理解这种情况，这里列出了层叠上下文的层次结构：</p>
 
 <ul>
  <li>根上下文（root stacking context）
@@ -35,7 +35,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
  </li>
 </ul>
 
-<div class="note"><strong>Note:</strong> 值得记住的是，通常HTML的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。</div>
+<div class="note"><strong>Note:</strong> 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。</div>
 
 <h3 id="示例源码"><strong>示例源码</strong></h3>
 

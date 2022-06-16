@@ -17,7 +17,9 @@ La fonction **`WebAssembly.instantiateStreaming()`** permet de compiler et d'ins
 
 ## Syntaxe
 
-    Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```js
+Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```
 
 ### Paramètres
 

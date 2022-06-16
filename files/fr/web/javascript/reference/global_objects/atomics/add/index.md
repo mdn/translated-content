@@ -18,7 +18,9 @@ La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un éléme
 
 ## Syntaxe
 
-    Atomics.add(typedArray, index, valeur)
+```js
+Atomics.add(typedArray, index, valeur)
+```
 
 ### Paramètres
 

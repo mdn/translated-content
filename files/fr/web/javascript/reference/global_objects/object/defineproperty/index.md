@@ -21,7 +21,9 @@ La méthode statique **`Object.defineProperty()`** permet de définir une nouvel
 
 ## Syntaxe
 
-    Object.defineProperty(obj, prop, descripteur)
+```js
+Object.defineProperty(obj, prop, descripteur)
+```
 
 ### Paramètres
 

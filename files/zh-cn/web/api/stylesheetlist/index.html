@@ -5,19 +5,19 @@ translation_of: Web/API/StyleSheetList
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>StyleSheetLists 接口表示一个StyleSheet的列表。</p>
+<p>StyleSheetLists 接口表示一个 StyleSheet 的列表。</p>
 
-<p>这是一个像数组一样的对象，但是不能使用数组方法进行遍历。但是它可以通过for循环遍历其下标，或者把它转换成数组。</p>
+<p>这是一个像数组一样的对象，但是不能使用数组方法进行遍历。但是它可以通过 for 循环遍历其下标，或者把它转换成数组。</p>
 
 <h2 id="Example" name="Example">范例</h2>
 
-<h3 id="使用for循环获取文档_styleSheet_对象">使用for循环获取文档 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">styleSheet</a> 对象</h3>
+<h3 id="使用for循环获取文档_styleSheet_对象">使用 for 循环获取文档 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">styleSheet</a> 对象</h3>
 
 <pre><code>for (var i=0; i &lt; document.styleSheets.length; i++){
   var styleSheet = document.styleSheets[i];
 }</code></pre>
 
-<h3 id="使用Array方法获取文档的所有CSS规则">使用Array方法获取文档的所有CSS规则</h3>
+<h3 id="使用Array方法获取文档的所有CSS规则">使用 Array 方法获取文档的所有 CSS 规则</h3>
 
 <pre><code>var allCSS =
     [].slice.call(document.styleSheets)

@@ -28,7 +28,7 @@ original_slug: Web/JavaScript/Reference/Operators/相等
  <li>如果两个操作数是不同类型的，就会尝试在比较之前将它们转换为相同类型：
   <ul>
    <li>当数字与字符串进行比较时，会尝试将字符串转换为数字值。</li>
-   <li>如果操作数之一是<code>Boolean</code>，则将布尔操作数转换为1或0。
+   <li>如果操作数之一是<code>Boolean</code>，则将布尔操作数转换为 1 或 0。
     <ul>
      <li>如果是<code>true</code>，则转换为<code>1</code>。</li>
      <li>如果是 <code>false</code>，则转换为<code>0</code>。</li>
@@ -77,7 +77,7 @@ const object2 = {"key": "value"};
 object1 == object2 // false
 object2 == object2 // true</pre>
 
-<h3 id="比较字符串和String对象">比较字符串和String对象</h3>
+<h3 id="比较字符串和String对象">比较字符串和 String 对象</h3>
 
 <p>请注意，使用构造的字符串<code>new String()</code>是对象。如果将其中之一与字符串文字进行比较，则该<code>String</code>对象将被转换为字符串文字并对其内容进行比较。但是，如果两个操作数都是<code>String</code>对象，则将它们作为对象进行比较，并且必须引用相同的对象才能进行比较：</p>
 

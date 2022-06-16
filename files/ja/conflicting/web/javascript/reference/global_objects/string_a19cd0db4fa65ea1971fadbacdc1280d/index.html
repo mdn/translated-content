@@ -1,0 +1,75 @@
+---
+title: CSSOMString
+slug: >-
+  conflicting/Web/JavaScript/Reference/Global_Objects/String_a19cd0db4fa65ea1971fadbacdc1280d
+tags:
+  - API
+  - CSSOM
+  - CSSOMString
+  - Reference
+translation_of: Web/API/CSSOMString
+original_slug: Web/API/CSSOMString
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><strong><code>CSSOMString</code></strong> は <a href="/ja/docs/Web/API/CSS_Object_Model">CSSOM</a> 仕様書で文字列データを表すために使用され、 {{domxref("DOMString")}} または {{domxref("USVString")}} のどちらかで参照することができます。仕様書では <code>CSSOMString</code> を、ブラウザーのベンダーによって <code>DOMString</code> または <code>USVString</code> から選べるとしています。メモリ内の文字列の表現に、内部的に UTF-8 を使用するブラウザーの実装では、仕様書が <code>CSSOMString</code> と言ったときは <code>USVString</code> を使用し、すでに文字列を16ビットの並びで表現する実装では、代わりに <code>DOMString</code> を選択するかもしれません。</p>
+
+<h4 id="Implementation_differences" name="Implementation_differences">実装の違い</h4>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">ブラウザー</td>
+   <td class="header">CSSOMString が DOMString と USVString のどちらか</td>
+  </tr>
+  <tr>
+   <td>Firefox (Gecko)</td>
+   <td>USVString</td>
+  </tr>
+  <tr>
+   <td>Chrome (Blink)</td>
+   <td>USVString</td>
+  </tr>
+  <tr>
+   <td>Safari (WebKit)</td>
+   <td>USVString</td>
+  </tr>
+  <tr>
+   <td>Edge (EdgeHTML)</td>
+   <td>-</td>
+  </tr>
+  <tr>
+   <td>Opera (Blink)</td>
+   <td>USVString</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Specification" name="Specification">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM', '#cssomstring-type', 'CSSOMString')}}</td>
+   <td>{{Spec2("CSSOM")}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/String", "String")}}</li>
+ <li>{{domxref("CSSOM")}}</li>
+ <li>{{domxref("DOMString")}}</li>
+ <li>{{domxref("USVString")}}</li>
+ <li><a href="/ja/docs/Web/API/DOMString/Binary">バイナリ文字列</a></li>
+</ul>

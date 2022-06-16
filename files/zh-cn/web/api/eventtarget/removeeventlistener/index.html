@@ -30,7 +30,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 </dl>
 
 <ul>
- <li><code>capture</code>: 一个 {{jsxref("Boolean")}} 表示这个类型的事件将会被派遣到已经注册的侦听器，然后再派遣到DOM树中它下面的任何 <code>EventTarget</code>。</li>
+ <li><code>capture</code>: 一个 {{jsxref("Boolean")}} 表示这个类型的事件将会被派遣到已经注册的侦听器，然后再派遣到 DOM 树中它下面的任何 <code>EventTarget</code>。</li>
  <li>{{non-standard_inline}} <code>mozSystemGroup</code>: 仅可运行于 XBL 或者 Firefox Chrome，它是一个 {{jsxref("Boolean")}}，用于定义是否将侦听器添加到系统组。</li>
 </ul>
 
@@ -46,11 +46,11 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <h3 id="匹配要删除的事件监听">匹配要删除的事件监听</h3>
 
-<p>需要提供以前调用{{domxref("EventTarget.addEventListener", "addEventListener()")}}所提供的监听事件, 这样你或许可以达到移除此监听事件的目的. 很明显, 你需要提供相同的 <code>type</code> 和 <code>listener</code> 参数给 <code>removeEventListener()</code>, 但是 <code>options</code> 或者 <code>useCapture</code> 参数呢?</p>
+<p>需要提供以前调用{{domxref("EventTarget.addEventListener", "addEventListener()")}}所提供的监听事件，这样你或许可以达到移除此监听事件的目的。很明显，你需要提供相同的 <code>type</code> 和 <code>listener</code> 参数给 <code>removeEventListener()</code>, 但是 <code>options</code> 或者 <code>useCapture</code> 参数呢？</p>
 
-<p>当使用 <code>addEventListener()</code> 时, 如果 <code>options</code>参数不同, 那么你可以在相同的<code>type</code> 上多次添加相同的监听, 唯一需要 <code>removeEventListener()</code> 检测的是 <code>capture</code>/<code>useCapture</code> 标志. 这个标志必须与 <code>removeEventListener()</code> 的对应标志匹配, 但是其他的值不需要.</p>
+<p>当使用 <code>addEventListener()</code> 时，如果 <code>options</code>参数不同，那么你可以在相同的<code>type</code> 上多次添加相同的监听，唯一需要 <code>removeEventListener()</code> 检测的是 <code>capture</code>/<code>useCapture</code> 标志。这个标志必须与 <code>removeEventListener()</code> 的对应标志匹配，但是其他的值不需要。</p>
 
-<p>举个例子, 思考一下下面的 <code>addEventListener()</code>:</p>
+<p>举个例子，思考一下下面的 <code>addEventListener()</code>:</p>
 
 <pre class="brush: js">element.addEventListener("mousedown", handleMouseDown, true);</pre>
 
@@ -60,15 +60,15 @@ translation_of: Web/API/EventTarget/removeEventListener
 element.removeEventListener("mousedown", handleMouseDown, true);      // 成功
 </pre>
 
-<p>第一个调用失败是因为 <code>useCapture</code> 没有匹配. 第二个调用成功,是因为<code>useCapture</code> 匹配相同.</p>
+<p>第一个调用失败是因为 <code>useCapture</code> 没有匹配。第二个调用成功，是因为<code>useCapture</code> 匹配相同。</p>
 
-<p>现在再思考下这个:</p>
+<p>现在再思考下这个：</p>
 
 <pre class="brush: js">element.addEventListener("mousedown", handleMouseDown, { passive: true });</pre>
 
-<p>这里, 我们在<code>options</code> 对象里将 <code>passive</code> 设成 <code>true</code>, 其他<code>options</code>配置都是默认值 <code>false</code>.</p>
+<p>这里，我们在<code>options</code> 对象里将 <code>passive</code> 设成 <code>true</code>, 其他<code>options</code>配置都是默认值 <code>false</code>.</p>
 
-<p>现在我们看下下面的 <code>removeEventListener()</code> . 当配置 <code>capture</code> 或 <code>useCapture</code> 为 <code>true</code> 时, 移除事件失败; 其他所有都是成功的. 只有 <code>capture</code> 配置影响 <code>removeEventListener()</code>.</p>
+<p>现在我们看下下面的 <code>removeEventListener()</code> . 当配置 <code>capture</code> 或 <code>useCapture</code> 为 <code>true</code> 时，移除事件失败; 其他所有都是成功的。只有 <code>capture</code> 配置影响 <code>removeEventListener()</code>.</p>
 
 <pre class="brush: js">element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Succeeds
 element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Succeeds
@@ -77,7 +77,7 @@ element.removeEventListener("mousedown", handleMouseDown, { passive: false });  
 element.removeEventListener("mousedown", handleMouseDown, false);                 // Succeeds
 element.removeEventListener("mousedown", handleMouseDown, true);                  // Fails</pre>
 
-<p>值得注意的是,一些浏览器版本在这方面会有些不一致, 除非你有特别的理由, 使用与调用 <code>addEventListener()</code> 时配置的参数去调用<code>removeEventListener()是明智的</code>.</p>
+<p>值得注意的是，一些浏览器版本在这方面会有些不一致，除非你有特别的理由， 使用与调用 <code>addEventListener()</code> 时配置的参数去调用<code>removeEventListener() 是明智的</code>.</p>
 
 <h2 id="Compatibility" name="Compatibility">备注</h2>
 
@@ -222,6 +222,6 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 <p>document.removeEventListener() 方法用于移除由 document.addEventListener() 方法添加的事件句柄。</p>
 
-<p><strong>注意:</strong> 如果要移除事件句柄，addEventListener() 的执行函数必须使用外部函数，如（myFunction)匿名函数，类似 "document.removeEventListener("<em>event</em>", function(){ <em>myScript</em> });" 该事件是无法移除的。</p>
+<p><strong>注意：</strong> 如果要移除事件句柄，addEventListener() 的执行函数必须使用外部函数，如（myFunction) 匿名函数，类似 "document.removeEventListener("<em>event</em>", function(){ <em>myScript</em> });" 该事件是无法移除的。</p>
 
 <p><strong>提示：</strong> 使用 <em>element</em>.addEventListener() 和 <em>element</em>.removeEventListener() 方法来添加或移除指定元素的事件句柄。</p>

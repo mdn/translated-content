@@ -19,7 +19,9 @@ La méthode **`has()`** renvoie un booléen qui indique s'il existe un élément
 
 ## Syntaxe
 
-    monSet.has(valeur);
+```js
+monSet.has(valeur);
+```
 
 ### Paramètres
 

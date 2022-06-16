@@ -21,7 +21,7 @@ original_slug: Web/CSS/calc()
 <pre class="brush: css no-line-numbers notranslate">/* property: calc(expression) */
 width: calc(100% - 80px);</pre>
 
-<p>此 calc()函数用一个表达式作为它的参数，用这个表达式的结果作为值。这个表达式可以是任何如下操作符的组合，采用标准操作符处理法则的简单表达式。</p>
+<p>此 calc() 函数用一个表达式作为它的参数，用这个表达式的结果作为值。这个表达式可以是任何如下操作符的组合，采用标准操作符处理法则的简单表达式。</p>
 
 <dl>
  <dt><code>+</code></dt>
@@ -77,7 +77,7 @@ width: calc(100% - 80px);</pre>
 
 <p><code>calc()</code> 的另外一个用例是用来确保一个表单域的大小适合当前的可用空间，而不会在保持合适的外边距的同时，因挤压超出其容器的边缘。</p>
 
-<p>看一下下面的CSS：</p>
+<p>看一下下面的 CSS：</p>
 
 <pre class="brush: css notranslate">input {
   padding: 2px;
@@ -115,7 +115,7 @@ width: calc(100% - 80px);</pre>
   width: var(--widthC);
 }</pre>
 
-<p>在所有的变量都被展开后，<code>widthC</code> 的值就会变成 <code>calc( calc( 100px / 2) / 2)</code>，然后，当它被赋值给 <code>.foo</code> 的 width 属性时，所有内部的这些 <code>calc()</code>（无论嵌套的有多深）都将会直接被扁平化为一个括号（原文：be flattened to just parentheses），所以这个 <code>width</code> 属性的值就直接相当于 <code>calc( ( 100px / 2) / 2)</code> 了，或者说就变成 <code>25px</code> 了。 简而言之：一个 <code>calc()</code> 里面的 <code>calc()</code> 就仅仅相当于是一个括号。</p>
+<p>在所有的变量都被展开后，<code>widthC</code> 的值就会变成 <code>calc( calc( 100px / 2) / 2)</code>，然后，当它被赋值给 <code>.foo</code> 的 width 属性时，所有内部的这些 <code>calc()</code>（无论嵌套的有多深）都将会直接被扁平化为一个括号（原文：be flattened to just parentheses），所以这个 <code>width</code> 属性的值就直接相当于 <code>calc( ( 100px / 2) / 2)</code> 了，或者说就变成 <code>25px</code> 了。简而言之：一个 <code>calc()</code> 里面的 <code>calc()</code> 就仅仅相当于是一个括号。</p>
 
 <h2 id="无障碍相关考量">无障碍相关考量</h2>
 

@@ -7,8 +7,8 @@ tags:
   - JavaScript
   - Locale
   - メソッド
-  - Prototype
-  - Reference
+  - プロトタイプ
+  - リファレンス
 browser-compat: javascript.builtins.Intl.Locale.maximize
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ---
@@ -49,7 +49,7 @@ console.log(myLocMaximized.baseName);
 
 // "ja-Jpan-JP-u-ca-gregory-hc-h24" と表示します。
 // なお、拡張タグ ("-u" 以降) はそのまま残ります。
-console.log(myLocMaximized.toString()); 
+console.log(myLocMaximized.toString());
 ```
 
 ## 仕様書

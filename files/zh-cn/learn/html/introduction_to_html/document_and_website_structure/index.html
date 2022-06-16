@@ -17,7 +17,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">{{glossary("HTML")}} 不仅能够定义网页的单独部分（例如“段落”或“图片”），还可以使用块级元素（例如“标题栏”、“导航菜单”、“主内容列”）来定义网站中的复合区域。本文将探讨如何规划基本的网站结构，并根据规划的结构来编写 HTML。</p>
+<p>{{glossary("HTML")}} 不仅能够定义网页的单独部分（例如“段落”或“图片”），还可以使用块级元素（例如“标题栏”、“导航菜单”、“主内容列”）来定义网站中的复合区域。本文将探讨如何规划基本的网站结构，并根据规划的结构来编写 HTML。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -38,7 +38,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 
 <dl>
  <dt>页眉</dt>
- <dd>通常横跨于整个页面顶部有一个大标题 和/或 一个标志。 这是网站的主要一般信息，通常存在于所有网页。</dd>
+ <dd>通常横跨于整个页面顶部有一个大标题 和/或 一个标志。这是网站的主要一般信息，通常存在于所有网页。</dd>
  <dt>导航栏</dt>
  <dd>指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 <a href="/zh-CN/docs/learn/Accessibility">无障碍访问特性</a>，因为屏幕阅读器可以更清晰地分辨二者。</dd>
  <dt>主内容</dt>
@@ -46,7 +46,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
  <dt>侧边栏</dt>
  <dd>一些外围信息、链接、引用、广告等。通常与主内容相关（例如一个新闻页面上，侧边栏可能包含作者信息或相关文章链接），还可能存在其他的重复元素，如辅助导航系统。</dd>
  <dt>页脚</dt>
- <dd>横跨页面底部的狭长区域。和标题一样，页脚是放置公共信息（比如版权声明或联系方式）的，一般使用较小字体，且通常为次要内容。 还可以通过提供快速访问链接来进行 {{Glossary("SEO")}}。</dd>
+ <dd>横跨页面底部的狭长区域。和标题一样，页脚是放置公共信息（比如版权声明或联系方式）的，一般使用较小字体，且通常为次要内容。还可以通过提供快速访问链接来进行 {{Glossary("SEO")}}。</dd>
 </dl>
 
 <p>一个“典型的网站”可能会这样布局：</p>
@@ -55,15 +55,15 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 
 <h2 id="用于构建内容的_HTML">用于构建内容的 HTML</h2>
 
-<p>以上简单示例不是很精美，但是足够说明网站的典型布局方式了。 一些站点拥有更多列，其中一些远比这复杂，但一切在你掌握之中。通过合适的CSS， 你可以使用相当多种的任意页面元素来环绕在不同的页面区域来做成你想要的样子，但如前所述，我们要敬畏语义，做到<strong>正确选用元素</strong>。</p>
+<p>以上简单示例不是很精美，但是足够说明网站的典型布局方式了。一些站点拥有更多列，其中一些远比这复杂，但一切在你掌握之中。通过合适的 CSS，你可以使用相当多种的任意页面元素来环绕在不同的页面区域来做成你想要的样子，但如前所述，我们要敬畏语义，做到<strong>正确选用元素</strong>。</p>
 
-<p>这是因为视觉效果并不是一切。 我们可以修改最重要内容（例如导航菜单和相关链接）的颜色、字体大小来吸引用户的注意，但是这对视障人士是无效的，“粉红色”和“大字体”对他们并不奏效。</p>
+<p>这是因为视觉效果并不是一切。我们可以修改最重要内容（例如导航菜单和相关链接）的颜色、字体大小来吸引用户的注意，但是这对视障人士是无效的，“粉红色”和“大字体”对他们并不奏效。</p>
 
 <div class="note">
-<p><strong>注：</strong><a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">全球色盲患者比例为 4%</a>，换句话说，每 12 名男性就有一位色盲，每 200 名女性就有一位色盲。全盲和视障人士约占世界人口（<a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">约 70 亿</a>）的 13％（2015年 <a href="https://en.wikipedia.org/wiki/Visual_impairment">全球约有 9.4 亿人口存在视力问题</a>）。</p>
+<p><strong>注：</strong><a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">全球色盲患者比例为 4%</a>，换句话说，每 12 名男性就有一位色盲，每 200 名女性就有一位色盲。全盲和视障人士约占世界人口（<a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">约 70 亿</a>）的 13％（2015 年 <a href="https://en.wikipedia.org/wiki/Visual_impairment">全球约有 9.4 亿人口存在视力问题</a>）。</p>
 </div>
 
-<p>HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧义地表示上文所讲的内容区段，屏幕阅读器等辅助技术可以识别这些元素，并帮助执行“找到主导航 “或”找到主内容“等任务。参见前文所讲的 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化">页面中元素结构和语义不佳所带来的后果</a>。</p>
+<p>HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧义地表示上文所讲的内容区段，屏幕阅读器等辅助技术可以识别这些元素，并帮助执行“找到主导航“或”找到主内容“等任务。参见前文所讲的 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化">页面中元素结构和语义不佳所带来的后果</a>。</p>
 
 <p>为了实现语义化标记，HTML 提供了明确这些区段的专用标签，例如：</p>
 
@@ -97,7 +97,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
     &lt;nav&gt; &lt;!-- 本站统一的导航栏 --&gt;
       &lt;ul&gt;
         &lt;li&gt;&lt;a href="#"&gt;主页&lt;/a&gt;&lt;/li&gt;
-        &lt;!-- 共n个导航栏项目，省略…… --&gt;
+        &lt;!-- 共 n 个导航栏项目，省略…… --&gt;
       &lt;/ul&gt;
 
       &lt;form&gt; &lt;!-- 搜索栏是站点内导航的一个非线性的方式。 --&gt;
@@ -115,7 +115,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
         &lt;h2&gt;相关链接&lt;/h2&gt;
         &lt;ul&gt;
           &lt;li&gt;&lt;a href="#"&gt;这是一个超链接&lt;/a&gt;&lt;/li&gt;
-          &lt;!-- 侧边栏有n个超链接，略略略…… --&gt;
+          &lt;!-- 侧边栏有 n 个超链接，略略略…… --&gt;
         &lt;/ul&gt;
       &lt;/aside&gt;
     &lt;/main&gt;
@@ -144,7 +144,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 
 <h3 id="无语义元素">无语义元素</h3>
 
-<p>有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 {{glossary("CSS")}} 或 {{glossary("JavaScript")}}。为了应对这种情况，HTML提供了 {{HTMLElement("div")}} 和 {{HTMLElement("span")}} 元素。应配合使用 {{htmlattrxref('class')}} 属性提供一些标签，使这些元素能易于查询。</p>
+<p>有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 {{glossary("CSS")}} 或 {{glossary("JavaScript")}}。为了应对这种情况，HTML 提供了 {{HTMLElement("div")}} 和 {{HTMLElement("span")}} 元素。应配合使用 {{htmlattrxref('class')}} 属性提供一些标签，使这些元素能易于查询。</p>
 
 <p>{{HTMLElement("span")}} 是一个内联的（inline）无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。例如：</p>
 
@@ -171,7 +171,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 <p>这里不应使用 <code>&lt;aside&gt;</code>，因为它和主内容并没有必要的联系（你想在任何地方都能看到它）。甚至不能用 <code>&lt;section&gt;</code> ，因为它也不是页面上主内容的一部分。所以在这种情况下就应使用 <code>&lt;div&gt;</code>，为满足无障碍使用特征，还应为购物车的标题设置一个可读标签。</p>
 
 <div class="warning">
-<p><strong>警告：</strong><code>&lt;div&gt;</code> 非常便利但容易被滥用。由于它们没有语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用， 否则文档的升级和维护工作会非常困难。</p>
+<p><strong>警告：</strong><code>&lt;div&gt;</code> 非常便利但容易被滥用。由于它们没有语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用，否则文档的升级和维护工作会非常困难。</p>
 </div>
 
 <h3 id="换行与水平分割线">换行与水平分割线</h3>
@@ -186,7 +186,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 他写的标签谁也懂不了。&lt;/p&gt;
 </pre>
 
-<p>没有 <code>&lt;br&gt;</code> 元素，这段会直接显示在长长的一行中（如前文所讲，<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#HTML中的空白">HTML会忽略大部分空格</a>）；使用 <code>&lt;br&gt;</code> 元素，才使得诗看上去像诗：</p>
+<p>没有 <code>&lt;br&gt;</code> 元素，这段会直接显示在长长的一行中（如前文所讲，<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#HTML中的空白">HTML 会忽略大部分空格</a>）；使用 <code>&lt;br&gt;</code> 元素，才使得诗看上去像诗：</p>
 
 <p>从前有个人叫小高<br>
  他说写 HTML 感觉最好<br>

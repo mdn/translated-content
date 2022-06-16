@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Malformed_formal_parameter
 
 ## Message
 
-    SyntaxError: Expected {x} (Edge)
-    SyntaxError: malformed formal parameter (Firefox)
+```
+SyntaxError: Expected {x} (Edge)
+SyntaxError: malformed formal parameter (Firefox)
+```
 
 ## Type d'erreur
 

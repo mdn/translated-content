@@ -1,5 +1,5 @@
 ---
-title: CSS盒子对齐
+title: CSS 盒子对齐
 slug: Web/CSS/CSS_Box_Alignment
 tags:
   - CSS
@@ -15,7 +15,7 @@ translation_of: Web/CSS/CSS_Box_Alignment
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">CSS盒子对齐(Box Alignment)模块指定了在各种CSS盒子布局模型，如块布局，表布局，弹性布局和网格布局中，与盒子对齐有关的CSS功能。该模块旨在建立一种能一致地在CSS中指定对齐的方法。这份文档详述了出现在该规范中的一般概念。</p>
+<p>CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型，如块布局，表布局，弹性布局和网格布局中，与盒子对齐有关的 CSS 功能。该模块旨在建立一种能一致地在 CSS 中指定对齐的方法。这份文档详述了出现在该规范中的一般概念。</p>
 
 <div class="note">
 <p><strong>注意</strong>：每种布局方法的文档都将详细说明在其中是如何应用“盒子对齐”的</p>
@@ -23,9 +23,9 @@ translation_of: Web/CSS/CSS_Box_Alignment
 
 <h2 id="较老的对齐方法">较老的对齐方法</h2>
 
-<p>传统上，CSS的对齐功能非常有限。我们可以利用 {{cssxref("text-align")}} 对齐文本，利用auto {{cssxref("margin")}} 对齐块，并且利用 {{cssxref("vertical-align")}} 属性在表格(table)或者行内块(inline-block)布局中对齐块。现在 <a href="https://www.w3.org/TR/css-inline-3/">Inline Layout</a> 与 <a href="https://www.w3.org/TR/css-text-3/">CSS Text</a> 模块中涵盖了文本对齐的内容，而盒子对齐模块让我们第一次拥有了完整的水平与垂直对齐的能力。</p>
+<p>传统上，CSS 的对齐功能非常有限。我们可以利用 {{cssxref("text-align")}} 对齐文本，利用 auto {{cssxref("margin")}} 对齐块，并且利用 {{cssxref("vertical-align")}} 属性在表格 (table) 或者行内块 (inline-block) 布局中对齐块。现在 <a href="https://www.w3.org/TR/css-inline-3/">Inline Layout</a> 与 <a href="https://www.w3.org/TR/css-text-3/">CSS Text</a> 模块中涵盖了文本对齐的内容，而盒子对齐模块让我们第一次拥有了完整的水平与垂直对齐的能力。</p>
 
-<p>如果你最初学习过<a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">弹性盒子(Flexbox)</a>，你可能会觉得这些属性是弹性盒子规范的一部分。确实，某些属性是列在弹性盒子的 Level 1 标准中，不过规范指出我们应该提到盒子对齐规范，因为它可能会弹性盒子的基础上增加额外的功能。</p>
+<p>如果你最初学习过<a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">弹性盒子 (Flexbox)</a>，你可能会觉得这些属性是弹性盒子规范的一部分。确实，某些属性是列在弹性盒子的 Level 1 标准中，不过规范指出我们应该提到盒子对齐规范，因为它可能会弹性盒子的基础上增加额外的功能。</p>
 
 <h2 id="基本示例">基本示例</h2>
 
@@ -33,7 +33,7 @@ translation_of: Web/CSS/CSS_Box_Alignment
 
 <h3 id="CSS_网格布局对齐示例">CSS 网格布局对齐示例</h3>
 
-<p>下面使用网格布局的示例中，在行内轴(inline axis)（主轴(main axis)）上布局了固定宽度的轨道后，网格容器中有一些多余的空间。这些空间是使用 {{cssxref("justify-content")}} 来分配的。在块轴(block axis)（交叉轴(cross axis)）上，项目在他们的网格区域内的对齐是用 {{cssxref("align-items")}} 来控制的。第一个项目通过将 {{cssxref("align-self")}} 设置为 <code>center</code>，重载了组内设置的 <code>align-items</code> 属性。</p>
+<p>下面使用网格布局的示例中，在行内轴 (inline axis)（主轴 (main axis)）上布局了固定宽度的轨道后，网格容器中有一些多余的空间。这些空间是使用 {{cssxref("justify-content")}} 来分配的。在块轴 (block axis)（交叉轴 (cross axis)）上，项目在他们的网格区域内的对齐是用 {{cssxref("align-items")}} 来控制的。第一个项目通过将 {{cssxref("align-self")}} 设置为 <code>center</code>，重载了组内设置的 <code>align-items</code> 属性。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/CSS/CSS_Box_Alignment
 
 <h3 id="对齐的两个维度">对齐的两个维度</h3>
 
-<p>使用盒子对齐属性时，我们会在两个轴的其中之一上对齐内容——行内轴(inline axis)（或称主轴(main axis)）和块轴(block axis)（或称交叉轴(cross axis)）。内联轴是在使用特定写作模式中，沿句子单词的流动方向的轴。比如对于英语或者中文来说，内联轴是水平的。块轴是沿块(block)（比如段落元素）的布局方向延伸的轴，它会垂直穿过行内轴。</p>
+<p>使用盒子对齐属性时，我们会在两个轴的其中之一上对齐内容——行内轴 (inline axis)（或称主轴 (main axis)）和块轴 (block axis)（或称交叉轴 (cross axis)）。内联轴是在使用特定写作模式中，沿句子单词的流动方向的轴。比如对于英语或者中文来说，内联轴是水平的。块轴是沿块 (block)（比如段落元素）的布局方向延伸的轴，它会垂直穿过行内轴。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15952/two-axes.png"></p>
 
@@ -77,7 +77,7 @@ translation_of: Web/CSS/CSS_Box_Alignment
 
 <h3 id="对齐主体">对齐主体</h3>
 
-<p><strong>对齐主体 </strong>指的是被对齐的物体。对于 <code>justify-self</code> 或 <code>align-self</code> ，或者将以上两值用 <code>justify-items</code> 或 <code>align-items</code> 成组设置时，对齐主体将是使用此属性的元素的外边距盒子(margin box)。 <code>justify-content</code> 和 <code>align-content</code> 属性因布局方法而异。</p>
+<p><strong>对齐主体 </strong>指的是被对齐的物体。对于 <code>justify-self</code> 或 <code>align-self</code> ，或者将以上两值用 <code>justify-items</code> 或 <code>align-items</code> 成组设置时，对齐主体将是使用此属性的元素的外边距盒子 (margin box)。 <code>justify-content</code> 和 <code>align-content</code> 属性因布局方法而异。</p>
 
 <h3 id="对齐容器">对齐容器</h3>
 
@@ -96,9 +96,9 @@ translation_of: Web/CSS/CSS_Box_Alignment
 <p>规范中详述了三种不同的对齐方式；这些对齐使用关键字值。</p>
 
 <ul>
- <li><strong>位置对齐(Positional alignment)</strong>：通过对齐主体与它的对齐容器间的关系来指定对齐主体的位置。</li>
- <li><strong>基线对齐(Baseline alignment)</strong>：这些关键字把对齐看作在一个对齐上下文中多个对齐主体的基线(baseline)之间的关系。</li>
- <li><strong>分布对齐(Distributed alignment)</strong>：这些关键字把对齐看作多个对齐主体间空间的分布</li>
+ <li><strong>位置对齐 (Positional alignment)</strong>：通过对齐主体与它的对齐容器间的关系来指定对齐主体的位置。</li>
+ <li><strong>基线对齐 (Baseline alignment)</strong>：这些关键字把对齐看作在一个对齐上下文中多个对齐主体的基线 (baseline) 之间的关系。</li>
+ <li><strong>分布对齐 (Distributed alignment)</strong>：这些关键字把对齐看作多个对齐主体间空间的分布</li>
 </ul>
 
 <h3 id="位置对齐关键字的值">位置对齐关键字的值</h3>
@@ -196,7 +196,7 @@ translation_of: Web/CSS/CSS_Box_Alignment
 
 <h2 id="详细说明各个对齐属性的页面">详细说明各个对齐属性的页面</h2>
 
-<p>由于CSS盒子对齐属性的实现方式取决于与它们相交互的规范，因此请参见以下每种布局类型的页面，以获取关于如何将对齐属性与其一起使用的详细信息：</p>
+<p>由于 CSS 盒子对齐属性的实现方式取决于与它们相交互的规范，因此请参见以下每种布局类型的页面，以获取关于如何将对齐属性与其一起使用的详细信息：</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box alignment in Flexbox</a></li>
@@ -241,9 +241,9 @@ translation_of: Web/CSS/CSS_Box_Alignment
 <h2 id="指南">指南</h2>
 
 <ul>
- <li>CSS 弹性盒子指南: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of Flexbox</a></em></li>
- <li>CSS 弹性盒子指南: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS 网格指南: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
+ <li>CSS 弹性盒子指南：<em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of Flexbox</a></em></li>
+ <li>CSS 弹性盒子指南：<em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
+ <li>CSS 网格指南：<em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
 </ul>
 
 <h2 id="外部资源">外部资源</h2>

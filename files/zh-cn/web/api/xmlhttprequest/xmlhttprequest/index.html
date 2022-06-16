@@ -43,9 +43,9 @@ translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
  <dd>有两个属性可以设置：
  <dl>
   <dt><code>mozAnon</code></dt>
-  <dd>布尔值：将此属性设置为 <code>true</code> 将使浏览器在获取资源时不暴露自身来源和<a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials">用户凭据</a>。最重要的是，这意味着只有明确添加使用setRequestHeader才会发送cookies。</dd>
+  <dd>布尔值：将此属性设置为 <code>true</code> 将使浏览器在获取资源时不暴露自身来源和<a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials">用户凭据</a>。最重要的是，这意味着只有明确添加使用 setRequestHeader 才会发送 Cookies。</dd>
   <dt><code>mozSystem</code></dt>
-  <dd>布尔值：将此属性设置为 <code>true</code> 允许建立跨站点的连接，而无需服务器选择使用CORS<em>（译者注：Cross-Origin Resource Sharing 跨域资源共享）</em>。<em>必须同时将参数 </em><code>mozAnon</code><em> 设置为</em> <code>true</code>，<em>即不能与cookie或其他用户凭据同时发送。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68">仅限于在privileged (reviewed) apps起效</a>（译者注：此句原文This <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68">only works in privileged (reviewed) apps</a>;）；在 Firefox 上任何网页加载后不起作用（译者注：此句原文 it does not work on arbitrary webpages loaded in Firefox.）。</em></dd>
+  <dd>布尔值：将此属性设置为 <code>true</code> 允许建立跨站点的连接，而无需服务器选择使用 CORS<em>（译者注：Cross-Origin Resource Sharing 跨域资源共享）</em>。<em>必须同时将参数 </em><code>mozAnon</code><em> 设置为</em> <code>true</code>，<em>即不能与 Cookie 或其他用户凭据同时发送。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68">仅限于在 privileged (reviewed) apps 起效</a>（译者注：此句原文 This <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68">only works in privileged (reviewed) apps</a>;）；在 Firefox 上任何网页加载后不起作用（译者注：此句原文 it does not work on arbitrary webpages loaded in Firefox.）。</em></dd>
  </dl>
  </dd>
 </dl>

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef}}
 
-JavaScript的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
+JavaScript 的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
 
 ## 描述
 
@@ -128,7 +128,7 @@ let shallowCopy = fruits.slice() // this is how to make a copy
 
 ### 访问数组元素
 
-JavaScript 数组的索引是从0开始的，第一个元素的索引为0，最后一个元素的索引等于该数组的 {{jsxref("Array.length", "长度")}} 减1。
+JavaScript 数组的索引是从 0 开始的，第一个元素的索引为 0，最后一个元素的索引等于该数组的 {{jsxref("Array.length", "长度")}} 减 1。
 
 如果指定的索引是一个无效值，JavaScript 数组并不会报错，而是会返回 `undefined`。
 
@@ -304,7 +304,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 - {{jsxref("Array.prototype.fill()")}}
   - : 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
 - {{jsxref("Array.prototype.filter()")}}
-  - : 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素
+  - : 创建一个新数组，其包含通过所提供函数实现的测试的所有元素
 - {{jsxref("Array.prototype.find()")}}
   - : 返回数组中满足提供的测试函数的第一个元素的值。否则返回 `undefined`
 - {{jsxref("Array.prototype.findIndex()")}}
@@ -332,7 +332,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 - {{jsxref("Array.prototype.push()")}}
   - : 将一个或多个元素添加到数组的末尾，并返回该数组的新长度
 - {{jsxref("Array.prototype.reduce()")}}
-  - : 对数组中的每个元素执行一个由您提供的reducer函数（升序执行），将其结果汇总为单个返回值
+  - : 对数组中的每个元素执行一个由您提供的 reducer 函数（升序执行），将其结果汇总为单个返回值
 - {{jsxref("Array.prototype.reduceRight()")}}
   - : 接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值
 - {{jsxref("Array.prototype.reverse()")}}
@@ -346,7 +346,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 - {{jsxref("Array.prototype.sort()")}}
   - : 对数组元素进行原地排序并返回此数组
 - {{jsxref("Array.prototype.splice()")}}
-  - : 通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容
+  - : 通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容
 - {{jsxref("Array.prototype.toLocaleString()")}}
   - : 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 {{jsxref("Object.prototype.toLocaleString()")}} 方法转成字符串
 - {{jsxref("Array.prototype.toString()")}}
@@ -458,10 +458,10 @@ console.table(values)
 
 ## 相关链接
 
-- JavaScript 指南:
+- JavaScript 指南：
 
   - [对象属性索引](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象属性索引)
-  - [索引集合类: 数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组对象array_object)
+  - [索引集合类：数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组对象array_object)
 
 - [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

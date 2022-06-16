@@ -15,7 +15,9 @@ La fonction **`uneval()`** renvoie une chaîne de caractères représentant le c
 
 ## Syntaxe
 
-    uneval(objet)
+```js
+uneval(objet)
+```
 
 ### Paramètres
 

@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 
 <pre class="brush: js">"/bar/".startsWith(/bar/);
 
-// Throws TypeError, 因为 /bar/ 是一个正则表达式
+// Throws TypeError，因为 /bar/ 是一个正则表达式
 // 且 Symbol.match 没有修改。</pre>
 
 <p>但是，如果你将 <code>Symbol.match</code> 置为 <code>false</code>，使用 <code>match</code> 属性的表达式检查会认为该象不是正则表达式对象。<code>startsWith</code> 和 <code>endsWith</code> 方法将不会抛出 <code>TypeError</code>。</p>

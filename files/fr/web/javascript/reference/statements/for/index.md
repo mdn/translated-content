@@ -16,8 +16,10 @@ L'instruction **`for`** crée une boucle composée de trois expressions optionne
 
 ## Syntaxe
 
-    for ([initialisation]; [condition]; [expression_finale])
-       instruction
+```js
+for ([initialisation]; [condition]; [expression-finale])
+  instruction
+```
 
 ### Paramètres
 

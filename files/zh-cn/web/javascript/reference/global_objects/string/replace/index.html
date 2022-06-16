@@ -75,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
   <tr>
    <td><code>$<em>n</em></code></td>
    <td>
-    <p>假如第一个参数是 {{jsxref("RegExp")}}对象，并且 n 是个小于100的非负整数，那么插入第 n 个括号匹配的字符串。提示：索引是从1开始。如果不存在第 n个分组，那么将会把匹配到到内容替换为字面量。比如不存在第3个分组，就会用“$3”替换匹配到的内容。</p>
+    <p>假如第一个参数是 {{jsxref("RegExp")}}对象，并且 n 是个小于 100 的非负整数，那么插入第 n 个括号匹配的字符串。提示：索引是从 1 开始。如果不存在第 n 个分组，那么将会把匹配到到内容替换为字面量。比如不存在第 3 个分组，就会用“$3”替换匹配到的内容。</p>
    </td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
   <tr>
    <td><code>p1,p2, ...</code></td>
    <td>
-    <p>假如replace()方法的第一个参数是一个{{jsxref("RegExp")}} 对象，则代表第n个括号匹配的字符串。（对应于上述的$1，$2等。）例如，如果是用 <code>/(\a+)(\b+)/</code> 这个来匹配，<code>p1</code> 就是匹配的 <code>\a+</code>，<code>p2</code> 就是匹配的 <code>\b+</code>。</p>
+    <p>假如 replace() 方法的第一个参数是一个{{jsxref("RegExp")}} 对象，则代表第 n 个括号匹配的字符串。（对应于上述的$1，$2等。）例如，如果是用 <code>/(\a+)(\b+)/</code> 这个来匹配，<code>p1</code> 就是匹配的 <code>\a+</code>，<code>p2</code> 就是匹配的 <code>\b+</code>。</p>
    </td>
   </tr>
   <tr>
@@ -149,7 +149,7 @@ console.log(newstr);  // Twas the night before Christmas...
 
 <h3 id="在_replace_中使用_global_和_ignore_选项">在 <code>replace()</code> 中使用 <code>global</code> 和 <code>ignore</code> 选项</h3>
 
-<p>下面的例子中,正则表达式包含有全局替换(g)和忽略大小写(i)的选项,这使得replace方法用'oranges'替换掉了所有出现的"apples".</p>
+<p>下面的例子中，正则表达式包含有全局替换 (g) 和忽略大小写 (i) 的选项，这使得 replace 方法用'oranges'替换掉了所有出现的"apples".</p>
 
 <pre class="brush: js">var re = /apples/gi;
 var str = "Apples are round, and apples are juicy.";
@@ -191,13 +191,13 @@ console.log(newstr);
 <pre class="brush: js">var newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
 </pre>
 
-<p>这是因为 <code>'$&amp;'.toLowerCase()</code> 会先被解析成字符串字面量（这会导致相同的'$&amp;')而不是当作一个模式。</p>
+<p>这是因为 <code>'$&amp;'.toLowerCase()</code> 会先被解析成字符串字面量（这会导致相同的'$&amp;') 而不是当作一个模式。</p>
 
 <h3 id="将华氏温度转换为对等的摄氏温度">将华氏温度转换为对等的摄氏温度</h3>
 
 <p>下面的例子演示如何将华氏温度转换为对等的摄氏温度。华氏温度用一个数字加一个"F"来表示，这个函数将返回一个数字加"C"来表示的摄氏温度。例如，如果输入是 212F，这个函数将返回 100C。如果输入的数字是 0F，这个方法将返回 "-17.77777777777778C"。</p>
 
-<p>正则表达式test检查任何数字是否以 F 结尾。华氏温度通过第二个参数p1进入函数。这个函数基于华氏温度作为字符串传递给f2c函数设置成摄氏温度。然后f2c()返回摄氏温度。这个函数与Perl的 s///e 标志相似。</p>
+<p>正则表达式 test 检查任何数字是否以 F 结尾。华氏温度通过第二个参数 p1 进入函数。这个函数基于华氏温度作为字符串传递给 f2c 函数设置成摄氏温度。然后 f2c() 返回摄氏温度。这个函数与 Perl 的 s///e 标志相似。</p>
 
 <pre class="brush: js">function f2c(x)
 {
@@ -229,7 +229,7 @@ _x_x___x___x___
 
 <p><strong>输出：</strong></p>
 
-<p>一个数组对象。'x' 产生一个 'on' 状态，'-'（连接符）产生一个 'off' 状态，而 '_' （下划线）表示 'on' 状态的长度。</p>
+<p>一个数组对象。'x' 产生一个 'on' 状态，'-'（连接符）产生一个 'off' 状态，而 '_'（下划线）表示 'on' 状态的长度。</p>
 
 <pre class="brush: js">[
   { on: true, length: 1 },
@@ -291,7 +291,7 @@ console.log(retArr);</pre>
 
 <ul>
  <li><code>flags</code> 是一个仅在 Gecko 中可用的非标准的第三方参数：<code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function, flags</var>)</code></li>
- <li>从 Gecko 27 {{geckoRelease(27)}} 开始，这个方法就被整合到了ECMAScript规范中。当 replace() 被使用全局 g 标志的正则表达式调用时，{{jsxref("RegExp.lastIndex")}} 属性将被重置为 0（{{bug(501739)}}）。</li>
+ <li>从 Gecko 27 {{geckoRelease(27)}} 开始，这个方法就被整合到了 ECMAScript 规范中。当 replace() 被使用全局 g 标志的正则表达式调用时，{{jsxref("RegExp.lastIndex")}} 属性将被重置为 0（{{bug(501739)}}）。</li>
  <li>从 Gecko 39 {{geckoRelease(39)}} 开始，<code>flags</code> 参数便被弃用，且在调用时会抛出一个控制台警告（{{bug(1142351)}}）。</li>
  <li>从 Gecko 47 {{geckoRelease(47)}} 开始，在非发行版本中已不再支持非标准的 <code>flags</code> 参数，并且不久后会完全移除该参数（{{bug(1245801)}}）。</li>
  <li>从 Gecko 49 {{geckoRelease(49)}} 开始，不再支持非标准的 <code>flags</code> 参数（{{bug(1108382)}}）。</li>

@@ -5,7 +5,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><code>setAttributeNodeNS</code> 可以给一个元素添加一个新的命名空间的属性节点.</p>
+<p><code>setAttributeNodeNS</code> 可以给一个元素添加一个新的命名空间的属性节点。</p>
 
 <p>                                                                                                                               （如果对中文有疑惑，请直接阅读原文）</p>
 
@@ -15,8 +15,8 @@ translation_of: Web/API/Element/setAttributeNodeNS
 </pre>
 
 <ul>
- <li><code>replacedAttr</code> 是被替换的节点, 如果存在, 由此函数返回.</li>
- <li><code>attributeNode</code> 是一个属性节点.</li>
+ <li><code>replacedAttr</code> 是被替换的节点， 如果存在， 由此函数返回。</li>
+ <li><code>attributeNode</code> 是一个属性节点。</li>
 </ul>
 
 <h2 id="Example" name="Example">Example</h2>
@@ -36,9 +36,9 @@ alert(d2.attributes[1].value) // returns: `utterleft'
 
 <h2 id="Notes" name="Notes">Notes</h2>
 
-<p>如果指定的属性在元素上存在, 接着此属性被新的属性替换的话被替换的属性会被返回.</p>
+<p>如果指定的属性在元素上存在， 接着此属性被新的属性替换的话被替换的属性会被返回。</p>
 
-<p>注意：如果你尝试设置的时候没有克隆那个节点，Mozia会抛出一个NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR ："Attribute already in use" 错误, 因为DOM需要克隆属性之后才能重复使用( 不像其他节点一样可以被删除 ) 。</p>
+<p>注意：如果你尝试设置的时候没有克隆那个节点，Mozia 会抛出一个 NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR ："Attribute already in use" 错误， 因为 DOM 需要克隆属性之后才能重复使用 ( 不像其他节点一样可以被删除 ) 。</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 

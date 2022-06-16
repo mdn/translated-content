@@ -13,7 +13,7 @@ browser-compat: api.Response.bodyUsed
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable }}</p>
 
-<p><strong><code>bodyUsed</code></strong> 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该body是否被使用过。</p>
+<p><strong><code>bodyUsed</code></strong> 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ browser-compat: api.Response.bodyUsed
 
 <h2 id="示例">示例</h2>
 
-<p>在以下<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch 请求示例</a>（运行 <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>）。通过{{domxref("Request.Request")}}构造器创建了一个fetch请求，来获得一张JPG图片。当fetch成功后，通过{{domxref("Blob")}} 来使用了fetch返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的URL，并作为 {{htmlelement("img")}}元素的src源来显示图片。</p>
+<p>在以下<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch 请求示例</a>（运行 <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>）。通过{{domxref("Request.Request")}}构造器创建了一个 fetch 请求，来获得一张 JPG 图片。当 fetch 成功后，通过{{domxref("Blob")}} 来使用了 fetch 返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的 URL，并作为 {{htmlelement("img")}}元素的 src 源来显示图片。</p>
 
 <p>注意：在 <code>response.blob()</code> 被调用前后，输出 <code>response.bodyUsed</code> 的差异。</p>
 

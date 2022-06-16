@@ -16,7 +16,10 @@ L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une
 
 ## Syntaxe
 
-    while (condition) instruction
+```js
+while (condition)
+  instruction
+```
 
 - `condition`
   - : Une expression qui est évaluée avant chaque passage dans la boucle. Si cette expression est évaluée à vrai, `instruction` est exécutée. Lorsque la condition n'est pas vérifiée, l'exécution se poursuit avec l'instruction qui suit la boucle `while`.

@@ -68,7 +68,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 <div class="moreinfo">你可以使用<a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。</div>
 </div>
 
-<p>每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。 在 WebExtensions 中，这些字符串放在一个名为 <code>_locales</code> 的目录中，<code>_locales</code> 目录则位于扩展的根目录。每个语言区域都有一个名叫 <code>messages.json</code> 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 <code>_locales</code> 的子目录下，子目录以对应语言区域的语言子标签来命名。</p>
+<p>每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。在 WebExtensions 中，这些字符串放在一个名为 <code>_locales</code> 的目录中，<code>_locales</code> 目录则位于扩展的根目录。每个语言区域都有一个名叫 <code>messages.json</code> 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 <code>_locales</code> 的子目录下，子目录以对应语言区域的语言子标签来命名。</p>
 
 <p>注意，如果子标签包含一个基本语言和一个区域变种，那么语言与变种之间通常会以连字号隔开，例如 "en-US"。但作为 <code>_locales</code> 的子目录，<strong>它必须采用下划线来分隔</strong>，如 "en_US"。</p>
 
@@ -186,7 +186,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p><code>"placeholders"</code> 这个成员定义了所有的占位符，以及它们所检索的来源。<code>"url"</code> 这个占位符指定了其内容取自 $1，它就是<code> getMessage() 第二个参数里的第一个值。由于占位符就叫做</code> <code>"url"，我们就在实际的消息字符串中用</code> <code>$URL$</code> 调用它（<code>"name"</code> 用<code> $NAME$</code> 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} — <code>[a, b, c]</code> 可替换为 <code>$1</code>, <code>$2</code>, and <code>$3，以此类推，并置于</code> <code>messages.json</code> 内。</p>
 
-<p>接下来我们看一个例子：在 <code>en/messages.json 文件中</code>原始的 <code>notificationContent</code> 消息字符串如下： in the <code>en/messages.json</code> file is</p>
+<p>接下来我们看一个例子：在 <code>en/messages.json 文件中</code>原始的 <code>notificationContent</code> 消息字符串如下：in the <code>en/messages.json</code> file is</p>
 
 <pre>您点击了 $URL$。</pre>
 

@@ -19,18 +19,18 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>JavaScript 借鉴了 Java 的大部分语法，但同时也受到 <em>Awk，Perl </em>和 <em>Python</em>的影响。 </p>
 
-<p>JavaScript 是<strong>区分大小写</strong>的，并使用 <strong>Unicode </strong>字符集。举个例子，可以将单词 Früh （在德语中意思是“早”）用作变量名。</p>
+<p>JavaScript 是<strong>区分大小写</strong>的，并使用 <strong>Unicode </strong>字符集。举个例子，可以将单词 Früh（在德语中意思是“早”）用作变量名。</p>
 
 <pre><code>var Früh = "foobar";</code></pre>
 
 <p>但是，由于 JavaScript 是大小写敏感的，因此变量 <code>früh</code> 和 <code>Früh</code> 则是两个不同的变量。</p>
 
-<p>在 JavaScript 中，指令被称为语句 （{{Glossary("Statement")}}），并用分号（;）进行分隔。</p>
+<p>在 JavaScript 中，指令被称为语句（{{Glossary("Statement")}}），并用分号（;）进行分隔。</p>
 
 <p>如果一条语句独占一行的话，那么分号是可以省略的。（译者注：并不建议这么做。）但如果一行中有多条语句，那么这些语句必须以分号分开。</p> 
 
 <div class="note">
-<P><strong>备注：</strong>ECMAScript规定了在语句的末尾自动插入分号（<a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全">ASI</a>）。（如果想要了解更多信息，请参阅 JavaScript <a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar">词法语法</a> 。）</P>
+<P><strong>备注：</strong>ECMAScript 规定了在语句的末尾自动插入分号（<a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全">ASI</a>）。（如果想要了解更多信息，请参阅 JavaScript <a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar">词法语法</a> 。）</P>
 </div>
 
 <p>虽然不是必需的，但是在一条语句的末尾加上分号是一个很好的习惯。这个习惯可以大大减少代码中产生 bug 的可能性。</p>
@@ -43,22 +43,22 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <pre class="brush: js">// 单行注释
 
-/* 这是一个更长的,
+/* 这是一个更长的，
    多行注释
 */
 
-/* 然而, 你不能, /* 嵌套注释 */ <strong>语法错误</strong> */</pre>
+/* 然而，你不能，/* 嵌套注释 */ <strong>语法错误</strong> */</pre>
 
 <p>在代码执行过程中，注释将被自动跳过（不执行）。</p>
 
 <div class="note">
-  <p><strong>备注：</strong>你可能会在一些JavaScript脚本中见到像这样<code>#!/usr/bin/env node</code>的第三种注释</p>
-  <p>这种注释我们称为<strong>hashbang 注释(hashbang comment)</strong>，这种注释被用来指定执行JaveScript脚本的引擎的路径，查看这篇文章来了解更详细的信息：<a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_注释">Hashbang注释</a></p>
+  <p><strong>备注：</strong>你可能会在一些 JavaScript 脚本中见到像这样<code>#!/usr/bin/env node</code>的第三种注释</p>
+  <p>这种注释我们称为<strong>hashbang 注释 (hashbang comment)</strong>，这种注释被用来指定执行 JaveScript 脚本的引擎的路径，查看这篇文章来了解更详细的信息：<a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_注释">Hashbang 注释</a></p>
 </div>
 
 <h2 id="声明">声明</h2>
 
-<p>JavaScript有三种声明方式。</p>
+<p>JavaScript 有三种声明方式。</p>
 
 <dl>
  <dt>{{jsxref("Statements/var", "var")}}</dt>
@@ -86,7 +86,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 <ul>
  <li>使用关键词 <code>var</code> 。例如 <code>var x = 42</code>。这个语法可以用来声明局部变量和全局变量。</li>
  <li>直接赋值。例如<code>x = 42</code>。在函数外使用这种形式赋值，会产生一个全局变量。在严格模式下会产生错误。因此你不应该使用这种方式来声明变量。</li>
- <li>使用关键词 <code>let</code> 。例如 <code>let y = 13</code>。这个语法可以用来声明块作用域的局部变量。參考下方<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域">变量的作用域(Variable scope)</a> 。</li>
+ <li>使用关键词 <code>let</code> 。例如 <code>let y = 13</code>。这个语法可以用来声明块作用域的局部变量。參考下方<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域">变量的作用域 (Variable scope)</a> 。</li>
 </ul>
 
 <p>
@@ -94,7 +94,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 </p>
 
 <p>
-  你也可以直接给属性赋值。像这样<code>x = 42</code>。这种声明方式将会创建一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var#%E6%8F%8F%E8%BF%B0">未声明全局变量</a>。这样做还会产生JavaScript警告。因为未声明的全局变量常常导致预期之外的行为，所以不建议使用。
+  你也可以直接给属性赋值。像这样<code>x = 42</code>。这种声明方式将会创建一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var#%E6%8F%8F%E8%BF%B0">未声明全局变量</a>。这样做还会产生 JavaScript 警告。因为未声明的全局变量常常导致预期之外的行为，所以不建议使用。
 </p>
 
 <h3 id="变量求值">变量求值</h3>
@@ -140,7 +140,7 @@ if (!myArray[0])   myFunction();
 a + 2;    // 计算为 NaN
 </pre>
 
-<p>当你对一个 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> 变量求值时，空值 <code>null</code> 在数值类型环境中会被当作0来对待，而布尔类型环境中会被当作 <code>false</code>。例如：</p>
+<p>当你对一个 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> 变量求值时，空值 <code>null</code> 在数值类型环境中会被当作 0 来对待，而布尔类型环境中会被当作 <code>false</code>。例如：</p>
 
 <pre class="brush: js">var n = null;
 console.log(n * 32); // 在控制台中会显示 0
@@ -170,14 +170,14 @@ console.log(y); // ReferenceError: y 没有被声明</pre>
 <p>JavaScript 变量的另一个不同寻常的地方是，你可以先使用变量稍后再声明变量而不会引发异常。这一概念称为变量提升；JavaScript 变量感觉上是被“提升”或移到了函数或语句的最前面。但是，提升后的变量将返回 undefined 值。因此在使用或引用某个变量之后进行声明和初始化操作，这个被提升的变量仍将返回 undefined 值。</p>
 
 <pre class="brush: js">/**
- * 例子1
+ * 例子 1
  */
 console.log(x === undefined); // true
 var x = 3;
 
 
 /**
- * 例子2
+ * 例子 2
  */
 // will return a value of undefined
 var myvar = "my value";
@@ -191,14 +191,14 @@ var myvar = "my value";
 <p>上面的例子，也可写作：</p>
 
 <pre class="brush: js">/**
- * 例子1
+ * 例子 1
  */
 var x;
 console.log(x === undefined); // true
 x = 3;
 
 /**
- * 例子2
+ * 例子 2
  */
 var myvar = "my value";
 
@@ -242,7 +242,7 @@ var baz = function() {
 
 <p>因此，你可以通过指定 window 或 frame 的名字，在当前 window 或 frame 访问另一个 window 或 frame 中声明的变量。例如，在文档里声明一个叫 <code>phoneNumber</code> 的变量，那么你就可以在子框架里使用 <code>parent.phoneNumber</code> 的方式来引用它。</p>
 
-<h3 id="常量Constants">常量(Constants)</h3>
+<h3 id="常量Constants">常量 (Constants)</h3>
 
 <p>你可以用关键字 <code>const</code> 创建一个只读的常量。常量标识符的命名规则和变量相同：必须以字母、下划线（_）或美元符号（$）开头并可以包含有字母、数字或下划线。</p>
 
@@ -284,18 +284,18 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 <h3 id="数据类型">数据类型</h3>
 
-<p>最新的 ECMAScript 标准定义了8种数据类型：</p>
+<p>最新的 ECMAScript 标准定义了 8 种数据类型：</p>
 
 <ul>
- <li>七种基本数据类型:
+ <li>七种基本数据类型：
   <ul>
-   <li>布尔值（Boolean），有2个值分别是：<code>true</code> 和 <code>false</code>.</li>
+   <li>布尔值（Boolean），有 2 个值分别是：<code>true</code> 和 <code>false</code>.</li>
    <li>null ， 一个表明 null 值的特殊关键字。 JavaScript 是大小写敏感的，因此 <code>null</code> 与 <code>Null</code>、<code>NULL</code>或变体完全不同。</li>
    <li>undefined ，和 null 一样是一个特殊的关键字，undefined 表示变量未赋值时的属性。</li>
    <li>数字（Number），整数或浮点数，例如： <code>42</code> 或者 <code>3.14159</code>。</li>
    <li>任意精度的整数 (BigInt) ，可以安全地存储和操作大整数，甚至可以超过数字的安全整数限制。</li>
    <li>字符串（String），字符串是一串表示文本值的字符序列，例如："Howdy" 。</li>
-   <li>代表（Symbol） ( 在 ECMAScript 6 中新添加的类型).。一种实例是唯一且不可改变的数据类型。</li>
+   <li>代表（Symbol）( 在 ECMAScript 6 中新添加的类型).。一种实例是唯一且不可改变的数据类型。</li>
   </ul>
  </li>
  <li>以及对象（Object）。</li>
@@ -305,7 +305,7 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 <h3 id="数据类型的转换">数据类型的转换</h3>
 
-<p>JavaScript是一种动态类型语言(dynamically typed language)。这意味着你在声明变量时可以不必指定数据类型，而数据类型会在代码执行时会根据需要自动转换。因此，你可以按照如下方式来定义变量：</p>
+<p>JavaScript 是一种动态类型语言 (dynamically typed language)。这意味着你在声明变量时可以不必指定数据类型，而数据类型会在代码执行时会根据需要自动转换。因此，你可以按照如下方式来定义变量：</p>
 
 <pre class="brush: js">var answer = 42;
 </pre>
@@ -324,7 +324,7 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 y = 42 + " is the answer" // "42 is the answer"
 </pre>
 
-<p>在涉及其它运算符（译注：如下面的减号'-'）时，JavaScript语言不会把数字变为字符串。例如（译注：第一例是数学运算，第二例是字符串运算）：</p>
+<p>在涉及其它运算符（译注：如下面的减号'-'）时，JavaScript 语言不会把数字变为字符串。例如（译注：第一例是数学运算，第二例是字符串运算）：</p>
 
 <pre class="brush: js">"37" - 7 // 30
 "37" + 7 // "377"
@@ -339,7 +339,7 @@ y = 42 + " is the answer" // "42 is the answer"
   <li><code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat" title="zh-CN/docs/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code></li>
 </ul>
 
-<p><code> parseInt </code>方法只能返回整数，所以使用它会丢失小数部分。另外，调用 parseInt 时最好总是带上进制(radix) 参数，这个参数用于指定使用哪一种进制。</p>
+<p><code> parseInt </code>方法只能返回整数，所以使用它会丢失小数部分。另外，调用 parseInt 时最好总是带上进制 (radix) 参数，这个参数用于指定使用哪一种进制。</p>
 
 <p>将字符串转换为数字的另一种方法是使用一元<strong>加法运算符</strong>。</p>
 
@@ -352,22 +352,22 @@ y = 42 + " is the answer" // "42 is the answer"
 
 <p>（译注：字面量是由语法表达式定义的常量；或，通过由一定字词组成的语词表达式定义的常量）</p>
 
-<p>在JavaScript中，你可以使用各种字面量。这些字面量是脚本中按字面意思给出的固定的值，而不是变量。（译注：字面量是常量，其值是固定的，而且在程序脚本运行中不可更改，比如<em>false</em>，3.1415，thisIsStringOfHelloworld<em> </em>，invokedFunction: myFunction("myArgument")。本节将介绍以下类型的字面量：</p>
+<p>在 JavaScript 中，你可以使用各种字面量。这些字面量是脚本中按字面意思给出的固定的值，而不是变量。（译注：字面量是常量，其值是固定的，而且在程序脚本运行中不可更改，比如<em>false</em>，3.1415，thisIsStringOfHelloworld<em> </em>，invokedFunction: myFunction("myArgument")。本节将介绍以下类型的字面量：</p>
 
 <ul>
- <li><a href="#数组字面量_array_literals">数组字面量(Array literals)</a></li>
- <li><a href="#布尔字面量_boolean_literals">布尔字面量(Boolean literals)</a></li>
- <li><a href="#数字字面量_Numeric_literals">数字字面量(Numeric_literals)</a></li>
- <li><a href="#对象字面量_object_literals">对象字面量(Object literals)</a></li>
+ <li><a href="#数组字面量_array_literals">数组字面量 (Array literals)</a></li>
+ <li><a href="#布尔字面量_boolean_literals">布尔字面量 (Boolean literals)</a></li>
+ <li><a href="#数字字面量_Numeric_literals">数字字面量 (Numeric_literals)</a></li>
+ <li><a href="#对象字面量_object_literals">对象字面量 (Object literals)</a></li>
  <li><a href="#regexp_字面值">RegExp 字面值</a></li>
- <li><a href="#字符串字面量_string_literals">字符串字面量(String literals)</a></li>
+ <li><a href="#字符串字面量_string_literals">字符串字面量 (String literals)</a></li>
 </ul>
 
 <h3 id="数组字面量_Array_literals">数组字面量 (Array literals)</h3>
 
-<p>数组字面值是一个封闭在方括号对([])中的包含有零个或多个表达式的列表，其中每个表达式代表数组的一个元素。当你使用数组字面值创建一个数组时，该数组将会以指定的值作为其元素进行初始化，而其长度被设定为元素的个数。</p>
+<p>数组字面值是一个封闭在方括号对 ([]) 中的包含有零个或多个表达式的列表，其中每个表达式代表数组的一个元素。当你使用数组字面值创建一个数组时，该数组将会以指定的值作为其元素进行初始化，而其长度被设定为元素的个数。</p>
 
-<p>下面的示例用3个元素生成数组<code>coffees</code>，它的长度是3。</p>
+<p>下面的示例用 3 个元素生成数组<code>coffees</code>，它的长度是 3。</p>
 
 <pre class="brush: js">var coffees = ["French Roast", "Colombian", "Kona"];
 
@@ -381,7 +381,7 @@ console.log(a[0]); // 3</pre>
 <p><strong>备注：</strong><strong> </strong>这里的数组字面值也是一种对象初始化器。参考<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers" title="zh-CN/docs/JavaScript/Guide/Working with Objects#Using Object Initializers">对象初始化器的使用</a>。</p>
 </div>
 
-<p>若在顶层（全局）脚本里用字面值创建数组，JavaScript语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。</p>
+<p>若在顶层（全局）脚本里用字面值创建数组，JavaScript 语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。</p>
 
 <p>数组字面值同时也是数组对象。有关数组对象的详情请参见<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#Array_Object">数组对象</a>一文。</p>
 
@@ -392,9 +392,9 @@ console.log(a[0]); // 3</pre>
 <pre class="brush: js">var fish = ["Lion", , "Angel"];
 </pre>
 
-<p>在这个数组中，有两个已被赋值的元素，和一个空元素（fish[0]是"Lion"，fish[1]是undefined，而fish[2]是"Angel"；译注：此时数组的长度属性fish.length是3)。</p>
+<p>在这个数组中，有两个已被赋值的元素，和一个空元素（fish[0] 是"Lion"，fish[1] 是 undefined，而 fish[2] 是"Angel"；译注：此时数组的长度属性 fish.length 是 3)。</p>
 
-<p>如果你在元素列表的尾部添加了一个逗号，它将会被忽略。在下面的例子中，数组的长度是3，并不存在myList[3]这个元素（译注：这是指数组的第4个元素噢，作者是在帮大家复习数组元素的排序命名方法）。元素列表中其它所有的逗号都表示一个新元素（的开始）。</p>
+<p>如果你在元素列表的尾部添加了一个逗号，它将会被忽略。在下面的例子中，数组的长度是 3，并不存在 myList[3] 这个元素（译注：这是指数组的第 4 个元素噢，作者是在帮大家复习数组元素的排序命名方法）。元素列表中其它所有的逗号都表示一个新元素（的开始）。</p>
 
 <div class="note">
 <p><strong>备注：</strong>尾部的逗号在早期版本的浏览器中会产生错误，因而编程时的最佳实践方式就是移除它们。</p>
@@ -405,17 +405,17 @@ console.log(a[0]); // 3</pre>
 <pre class="brush: js">var myList = ['home', , 'school', ];
 </pre>
 
-<p>在下面的例子中，数组的长度是4，元素<code>myList[0]</code>和<code>myList[2]</code>缺失（译注：没被赋值，因而是undefined）。</p>
+<p>在下面的例子中，数组的长度是 4，元素<code>myList[0]</code>和<code>myList[2]</code>缺失（译注：没被赋值，因而是 undefined）。</p>
 
 <pre class="brush: js">var myList = [ , 'home', , 'school'];
 </pre>
 
-<p>再看一个例子。在这里，该数组的长度是4，元素<code>myList[1]</code>和<code>myList[3]</code>被漏掉了。（但是）只有最后的那个逗号被忽略。</p>
+<p>再看一个例子。在这里，该数组的长度是 4，元素<code>myList[1]</code>和<code>myList[3]</code>被漏掉了。（但是）只有最后的那个逗号被忽略。</p>
 
 <pre class="brush: js">var myList = ['home', , 'school', , ];
 </pre>
 
-<p>理解多余的逗号（在脚本运行时会被如何处理）的含义，对于从语言层面理解JavaScript是十分重要的。但是，在你自己写代码时：<strong>显式地将缺失的元素声明为<code>undefined</code>，将大大提高你的代码的清晰度和可维护性</strong>。</p>
+<p>理解多余的逗号（在脚本运行时会被如何处理）的含义，对于从语言层面理解 JavaScript 是十分重要的。但是，在你自己写代码时：<strong>显式地将缺失的元素声明为<code>undefined</code>，将大大提高你的代码的清晰度和可维护性</strong>。</p>
 
 <h3 id="布尔字面量_Boolean_literals">布尔字面量 (Boolean literals)</h3>
 
@@ -423,33 +423,33 @@ console.log(a[0]); // 3</pre>
 
 <p>布尔类型有两种字面量：<code>true</code>和<code>false</code>。</p>
 
-<p>不要混淆作为布尔对象的真和假与布尔类型的原始值true和false。布尔对象是原始布尔数据类型的一个包装器。参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#Boolean Object"> 布尔对象</a>。</p>
+<p>不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#Boolean Object"> 布尔对象</a>。</p>
 
 <h3 id="数字字面量_Numeric_literals">数字字面量</h3>
 
-<p>JavaScript数字字面量包括多种基数的整数字面量和以10为基数的浮点数字面量</p>
+<p>JavaScript 数字字面量包括多种基数的整数字面量和以 10 为基数的浮点数字面量</p>
 
 <p>值得一提的是，语言标准要求数字字面量必须是无符号的。但是像<code>-123.4</code>这样的代码片段还是没有问题的，会被解释为一元操作符<code>-</code>应用于数字字面量<code>123.4</code></p>
 
 <h4 id="整数字面量_Integers_literals">整数字面量</h3>
 
-<p>整数可以用十进制（基数为10）、十六进制（基数为16）、八进制（基数为8）以及二进制（基数为2）表示。</p>
+<p>整数可以用十进制（基数为 10）、十六进制（基数为 16）、八进制（基数为 8）以及二进制（基数为 2）表示。</p>
 
 <ul>
- <li>十进制整数字面量由一串数字序列组成，且没有前缀0。</li>
- <li>八进制的整数以 0（或0O、0o）开头，只能包括数字0-7。</li>
- <li>十六进制整数以0x（或0X）开头，可以包含数字（0-9）和字母 a~f 或 A~F。</li>
- <li>二进制整数以0b（或0B）开头，只能包含数字0和1。</li>
+ <li>十进制整数字面量由一串数字序列组成，且没有前缀 0。</li>
+ <li>八进制的整数以 0（或 0O、0o）开头，只能包括数字 0-7。</li>
+ <li>十六进制整数以 0x（或 0X）开头，可以包含数字（0-9）和字母 a~f 或 A~F。</li>
+ <li>二进制整数以 0b（或 0B）开头，只能包含数字 0 和 1。</li>
 </ul>
 
-<p>严格模式下，八进制整数字面量必须以0o或0O开头，而不能以0开头。</p>
+<p>严格模式下，八进制整数字面量必须以 0o 或 0O 开头，而不能以 0 开头。</p>
 
 <p>整数字面量举例：</p>
 
-<pre><code>0, 117 and -345 (十进制, 基数为10)
-015, 0001 and -0o77 (八进制, 基数为8)
-0x1123, 0x00111 and -0xF1A7 (十六进制, 基数为16或"hex")
-0b11, 0b0011 and -0b11 (二进制, 基数为2)</code></pre>
+<pre><code>0, 117 and -345 (十进制，基数为 10)
+015, 0001 and -0o77 (八进制，基数为 8)
+0x1123, 0x00111 and -0xF1A7 (十六进制，基数为 16 或"hex")
+0b11, 0b0011 and -0b11 (二进制，基数为 2)</code></pre>
 
 <h4 id="浮点数字面量_Floating-point_literals">浮点数字面量</h3>
 
@@ -478,13 +478,13 @@ console.log(a[0]); // 3</pre>
 
 <h3 id="对象字面量_Object_literals">对象字面量 (Object literals)</h3>
 
-<p>对象字面值是封闭在花括号对({})中的一个对象的零个或多个"属性名-值"对的（元素）列表。</p>
+<p>对象字面值是封闭在花括号对 ({}) 中的一个对象的零个或多个"属性名 - 值"对的（元素）列表。</p>
 
 <div class="warning">
-<p><strong>警告：</strong>你不能在一条语句的开头就使用对象字面值，这将导致错误或产生超出预料的行为， 因为此时左花括号（{）会被认为是一个语句块的起始符号。（译者：这 里需要对语句statement、块block等基本名词的解释）</p>
+<p><strong>警告：</strong>你不能在一条语句的开头就使用对象字面值，这将导致错误或产生超出预料的行为， 因为此时左花括号（{）会被认为是一个语句块的起始符号。（译者：这 里需要对语句 statement、块 block 等基本名词的解释）</p>
 </div>
 
-<p>以下是一个对象字面值的例子。对象<code>car</code>的第一个元素（译注：即一个属性/值对）定义了属性<code>myCar</code>；第二个元素，属性<code>getCar</code>，引用了一个函数调用（即CarTypes("Honda")）；第三个元素，属性<code>special</code>，使用了一个已有的变量（即Sales）。</p>
+<p>以下是一个对象字面值的例子。对象<code>car</code>的第一个元素（译注：即一个属性/值对）定义了属性<code>myCar</code>；第二个元素，属性<code>getCar</code>，引用了一个函数调用（即 CarTypes("Honda")）；第三个元素，属性<code>special</code>，使用了一个已有的变量（即 Sales）。</p>
 
 <pre class="brush: js">var Sales = "Toyota";
 
@@ -509,7 +509,7 @@ console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
 </pre>
 
-<p>对象属性名字可以是任意字符串，包括空串。如果对象属性名字不是合法的javascript标识符，它必须用""包裹。属性的名字不合法，那么便不能用.访问属性值，而是通过类数组标记("[]")访问和赋值。</p>
+<p>对象属性名字可以是任意字符串，包括空串。如果对象属性名字不是合法的 javascript 标识符，它必须用""包裹。属性的名字不合法，那么便不能用。访问属性值，而是通过类数组标记 ("[]") 访问和赋值。</p>
 
 <pre class="brush: js">var unusualPropertyNames = {
   "": "An empty string",
@@ -522,7 +522,7 @@ console.log(unusualPropertyNames["!"]); // Bang!</pre>
 
 <h4 id="增强的对象字面量_Enhanced_Object_literals">增强的对象字面量 (Enhanced Object literals)</h4>
 
-<p>在ES2015，对象字面值扩展支持在创建时设置原型，简写了 foo: foo 形式的属性赋值，方法定义，支持父方法调用，以及使用表达式动态计算属性名。总之，这些也使对象字面值和类声明更加紧密地联系起来，让基于对象的设计从这些便利中更加受益。</p>
+<p>在 ES2015，对象字面值扩展支持在创建时设置原型，简写了 foo: foo 形式的属性赋值，方法定义，支持父方法调用，以及使用表达式动态计算属性名。总之，这些也使对象字面值和类声明更加紧密地联系起来，让基于对象的设计从这些便利中更加受益。</p>
 
 <pre class="brush: js">var obj = {
     // __proto__
@@ -564,13 +564,13 @@ console.log(foo["2"]); // two</pre>
 "one line \n another line"
 "John's cat"</pre>
 
-<p>你可以在字符串字面值上使用字符串对象的所有方法——JavaScript会自动将字符串字面值转换为一个临时字符串对象，调用该方法，然后废弃掉那个临时的字符串对象。你也能用对字符串字面值使用类似String.length的属性：</p>
+<p>你可以在字符串字面值上使用字符串对象的所有方法——JavaScript 会自动将字符串字面值转换为一个临时字符串对象，调用该方法，然后废弃掉那个临时的字符串对象。你也能用对字符串字面值使用类似 String.length 的属性：</p>
 
 <pre class="brush: js"><code>console.log("John's cat".length)
 // 将打印字符串中的字符个数（包括空格）
 // 结果为：10</code></pre>
 
-<p>在ES2015中，还提供了一种<a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字面量</a>，模板字符串提供了一些语法糖来帮你构造字符串。这与Perl、Python还有其他语言中的字符串插值（string interpolation）的特性非常相似。除此之外，你可以在通过模板字符串前添加一个tag来自定义模板字符串的解析过程，这可以用来防止注入攻击，或者用来建立基于字符串的高级数据抽象。</p>
+<p>在 ES2015 中，还提供了一种<a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字面量</a>，模板字符串提供了一些语法糖来帮你构造字符串。这与 Perl、Python 还有其他语言中的字符串插值（string interpolation）的特性非常相似。除此之外，你可以在通过模板字符串前添加一个 tag 来自定义模板字符串的解析过程，这可以用来防止注入攻击，或者用来建立基于字符串的高级数据抽象。</p>
 
 <pre class="brush: js">// Basic literal string creation
 `In JavaScript '\n' is a line-feed.`
@@ -591,7 +591,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
        "bar": ${bar}}`(myOnReadyStateChangeHandler);
 </pre>
 
-<p>除非有特别需要使用字符串对象，否则,你应当始终使用字符串字面值。要查看字符串对象的有关细节，请参见<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#String_Object" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#String Object">字符串对象</a>。</p>
+<p>除非有特别需要使用字符串对象，否则，你应当始终使用字符串字面值。要查看字符串对象的有关细节，请参见<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#String_Object" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#String Object">字符串对象</a>。</p>
 
 <h4 id="在字符串中使用的特殊字符">在字符串中使用的特殊字符</h4>
 
@@ -600,7 +600,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 <pre class="brush: js">"one line \n another line"
 </pre>
 
-<p>以下表格列举了你能在JavaScript的字符串中使用的特殊字符。</p>
+<p>以下表格列举了你能在 JavaScript 的字符串中使用的特殊字符。</p>
 
 <table class="standard-table">
  <caption>表 2.1 JavaScript 特殊字符</caption>
@@ -613,7 +613,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
  <tbody>
   <tr>
    <td>\0</td>
-   <td>Null字节</td>
+   <td>Null 字节</td>
   </tr>
   <tr>
    <td>\b</td>
@@ -653,19 +653,19 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
   </tr>
   <tr>
    <td>\<em>XXX</em></td>
-   <td>由从0到377最多三位八进制数<em>XXX</em>表示的 Latin-1 字符。例如，\251是版权符号的八进制序列。</td>
+   <td>由从 0 到 377 最多三位八进制数<em>XXX</em>表示的 Latin-1 字符。例如，\251 是版权符号的八进制序列。</td>
   </tr>
   <tr>
    <td>\x<em>XX</em></td>
-   <td>由从00和FF的两位十六进制数字XX表示的Latin-1字符。例如，\ xA9是版权符号的十六进制序列。</td>
+   <td>由从 00 和 FF 的两位十六进制数字 XX 表示的 Latin-1 字符。例如，\ xA9 是版权符号的十六进制序列。</td>
   </tr>
   <tr>
    <td><em>\uXXXX</em></td>
-   <td>由四位十六进制数字XXXX表示的Unicode字符。例如，\ u00A9是版权符号的Unicode序列。见<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> (Unicode 转义字符).</td>
+   <td>由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> (Unicode 转义字符).</td>
   </tr>
   <tr>
    <td>\u<em>{XXXXX}</em></td>
-   <td>Unicode代码点 (code point) 转义字符。例如，\u{2F804} 相当于Unicode转义字符 \uD87E\uDC04的简写。</td>
+   <td>Unicode 代码点 (code point) 转义字符。例如，\u{2F804} 相当于 Unicode 转义字符 \uD87E\uDC04 的简写。</td>
   </tr>
  </tbody>
 </table>
@@ -674,20 +674,20 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 
 <h4 id="转义字符">转义字符</h4>
 
-<p>对于那些未出现在表2.1中的字符，其所带的前导反斜线'\'将被忽略。但是，这一用法已被废弃，应当避免使用。</p>
+<p>对于那些未出现在表 2.1 中的字符，其所带的前导反斜线'\'将被忽略。但是，这一用法已被废弃，应当避免使用。</p>
 
-<p>通过在引号前加上反斜线'\'，可以在字符串中插入引号，这就是<em>引号转义</em>。例如:</p>
+<p>通过在引号前加上反斜线'\'，可以在字符串中插入引号，这就是<em>引号转义</em>。例如：</p>
 
 <pre class="brush: js">var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 </pre>
 
-<p>代码的运行结果为:</p>
+<p>代码的运行结果为：</p>
 
 <pre class="brush: js">He read "The Cremation of Sam McGee" by R.W. Service.
 </pre>
 
-<p>要在字符串中插入'\'字面值，必须转义反斜线。例如，要把文件路径 c:\temp 赋值给一个字符串，可以采用如下方式:</p>
+<p>要在字符串中插入'\'字面值，必须转义反斜线。例如，要把文件路径 c:\temp 赋值给一个字符串，可以采用如下方式：</p>
 
 <pre class="brush: js">var home = "c:\\temp";
 </pre>
@@ -701,7 +701,7 @@ lines."
 console.log(str);   // this string is broken across multiplelines.
 </pre>
 
-<p>Javascript没有“heredoc”语法，但可以用行末的换行符转义和转义的换行来近似实现 </p>
+<p>Javascript 没有“heredoc”语法，但可以用行末的换行符转义和转义的换行来近似实现 </p>
 
 <pre class="brush: js">var poem =
 "Roses are red,\n\
@@ -720,7 +720,7 @@ and so is foo.`</pre>
 
 <h2 id="更多信息">更多信息</h2>
 
-<p>本章重点包括声明和类型的基本语法。学习更多关于的JavaScript语言，可参见本站以下章节：</p>
+<p>本章重点包括声明和类型的基本语法。学习更多关于的 JavaScript 语言，可参见本站以下章节：</p>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">流程控制与错误处理</a></li>

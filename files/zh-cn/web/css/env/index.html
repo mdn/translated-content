@@ -29,9 +29,9 @@ original_slug: Web/CSS/env()
     env(safe-area-inset-left, 20px);
 }</pre>
 
-<p>另外，与自定义属性不同，自定义属性不能在声明之外使用，而<code>env()</code>函数可以代替属性值或描述符的任何部分（例如，在 <a href="/en-US/docs/Web/CSS/@media">媒体查询的规则</a> 中）。 随着规范的发展，它也可能在像是 选择器 等其他地方使用。</p>
+<p>另外，与自定义属性不同，自定义属性不能在声明之外使用，而<code>env()</code>函数可以代替属性值或描述符的任何部分（例如，在 <a href="/en-US/docs/Web/CSS/@media">媒体查询的规则</a> 中）。随着规范的发展，它也可能在像是 选择器 等其他地方使用。</p>
 
-<p>最初由iOS浏览器提供，用于允许开发人员将其内容放置在视口的安全区域中，该规范中定义的<code>safe-area-inset-* </code>值可用于确保内容即使在非矩形的视区中也可以完全显示。</p>
+<p>最初由 iOS 浏览器提供，用于允许开发人员将其内容放置在视口的安全区域中，该规范中定义的<code>safe-area-inset-* </code>值可用于确保内容即使在非矩形的视区中也可以完全显示。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -52,7 +52,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <dl>
  <dt><code id="safe-area-inset-top" style="white-space: nowrap;">safe-area-inset-top</code>, <code id="safe-area-inset-right" style="white-space: nowrap;">safe-area-inset-right</code>, <code id="safe-area-inset-bottom" style="white-space: nowrap;">safe-area-inset-bottom</code>, <code id="safe-area-inset-left" style="white-space: nowrap;">safe-area-inset-left</code></dt>
- <dd><code style="white-space: nowrap;">safe-area-inset-*</code>由四个定义了视口边缘内矩形的 top, right, bottom 和 left 的环境变量组成，这样可以安全地放入内容，而不会有被非矩形的显示切断的风险。对于矩形视口，例如普通的笔记本电脑显示器，其值等于零。 对于非矩形显示器（如圆形表盘，iPhoneX屏幕），在用户代理设置的四个值形成的矩形内，所有内容均可见。</dd>
+ <dd><code style="white-space: nowrap;">safe-area-inset-*</code>由四个定义了视口边缘内矩形的 top, right, bottom 和 left 的环境变量组成，这样可以安全地放入内容，而不会有被非矩形的显示切断的风险。对于矩形视口，例如普通的笔记本电脑显示器，其值等于零。对于非矩形显示器（如圆形表盘，iPhoneX 屏幕），在用户代理设置的四个值形成的矩形内，所有内容均可见。</dd>
 </dl>
 
 <p><strong>注意</strong>: 不同于其他的 CSS 属性，用户代理定义的属性名字对大小写敏感。</p>

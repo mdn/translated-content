@@ -72,7 +72,7 @@ input:invalid {
 ```html
 <form>
   <div>
-    <label for="uname">选择一个用户名: </label>
+    <label for="uname">选择一个用户名：</label>
     <input type="text" id="uname" name="name" required size="45"
            pattern="[a-z]{4,8}" title="4 到 8 个小写字母">
     <span class="validity"></span>

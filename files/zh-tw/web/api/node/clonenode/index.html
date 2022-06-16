@@ -35,7 +35,7 @@ var p_prime = p.cloneNode(true);
 
 <h2 id="備註">備註</h2>
 
-<p id="not-event-listeners">Cloning a node copies all of its attributes and their values, including intrinsic (in–line) listeners. It does not copy event listeners added using <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> or those assigned to element properties. (e.g. <code>node.onclick = fn</code>) Moreover, for a &lt;canvas&gt; element, the painted image is not copied.</p>
+<p>Cloning a node copies all of its attributes and their values, including intrinsic (in–line) listeners. It does not copy event listeners added using <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> or those assigned to element properties. (e.g. <code>node.onclick = fn</code>) Moreover, for a &lt;canvas&gt; element, the painted image is not copied.</p>
 
 <p>The duplicate node returned by <code>cloneNode()</code> is not part of the document until it is added to another node that is part of the document using {{domxref("Node.appendChild()")}} or a similar method. It also has no parent until it is appended to another node.</p>
 

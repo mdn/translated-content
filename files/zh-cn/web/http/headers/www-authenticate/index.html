@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/WWW-Authenticate
 
 <p> HTTP <strong><code>WWW-Authenticate</code></strong> 响应头定义了使用何种验证方式去获取对资源的连接。</p>
 
-<p><code>WWW-Authenticate</code> header通常会和一个 {{HTTPStatus("401")}} <code>Unauthorized</code> 的响应一同被发送。</p>
+<p><code>WWW-Authenticate</code> header 通常会和一个 {{HTTPStatus("401")}} <code>Unauthorized</code> 的响应一同被发送。</p>
 
 <table class="properties">
  <tbody>
@@ -39,21 +39,21 @@ translation_of: Web/HTTP/Headers/WWW-Authenticate
  <dt>&lt;type&gt;</dt>
  <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Authentication type</a>，一个通用类型 <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>。 IANA 维护了一个 <a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of Authentication schemes</a>。</dd>
  <dt>realm=&lt;realm&gt;</dt>
- <dd>一个保护区域的描述。如果未指定realm, 客户端通常显示一个格式化的主机名来替代。</dd>
+ <dd>一个保护区域的描述。如果未指定 realm，客户端通常显示一个格式化的主机名来替代。</dd>
  <dt>charset=&lt;charset&gt;</dt>
- <dd>当提交用户名和密码时，告知客户端服务器首选的编码方案。唯一的允许值是不区分大小写的字符串"UTF-8"。这与realm字符串的编码无关。</dd>
+ <dd>当提交用户名和密码时，告知客户端服务器首选的编码方案。唯一的允许值是不区分大小写的字符串"UTF-8"。这与 realm 字符串的编码无关。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>通常的, 一个服务器响应包含一个像如下<code>WWW-Authenticate</code>的头信息：</p>
+<p>通常的，一个服务器响应包含一个像如下<code>WWW-Authenticate</code>的头信息：</p>
 
 <pre class="notranslate">WWW-Authenticate: Basic
 
 WWW-Authenticate: Basic realm="Access to the staging site"
 </pre>
 
-<p>作为一个例子，可以查看<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> 页面，了解如何配置Apache和nginx服务器来使用HTTP basic authentication密码保护你的站点。</p>
+<p>作为一个例子，可以查看<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> 页面，了解如何配置 Apache 和 nginx 服务器来使用 HTTP basic authentication 密码保护你的站点。</p>
 
 <h2 id="规范">规范</h2>
 

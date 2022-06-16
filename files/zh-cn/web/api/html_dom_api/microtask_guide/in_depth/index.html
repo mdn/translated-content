@@ -1,5 +1,5 @@
 ---
-title: 深入：微任务与Javascript运行时环境
+title: 深入：微任务与 Javascript 运行时环境
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 tags:
   - 异步
@@ -28,10 +28,10 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 <p><strong>注意：</strong>对于大多数 JavaScript 开发人员来说，这些细节并不重要。这里提供的信息只用于了解为什么微任务非常有用以及它们是如何工作的。如果你并不关心这些内容，你可以跳过这部分或者在你觉得需要的时候再倒回来查看。</p>
 </div>
 
-<p>当一段 JavaScript 代码在运行的时候，它实际上是运行在<strong>执行上下文</strong>中。下面3种类型的代码会创建一个新的执行上下文：</p>
+<p>当一段 JavaScript 代码在运行的时候，它实际上是运行在<strong>执行上下文</strong>中。下面 3 种类型的代码会创建一个新的执行上下文：</p>
 
 <ul>
- <li>全局上下文是为运行代码主体而创建的执行上下文，也就是说它是为那些存在于JavaScript 函数之外的任何代码而创建的。</li>
+ <li>全局上下文是为运行代码主体而创建的执行上下文，也就是说它是为那些存在于 JavaScript 函数之外的任何代码而创建的。</li>
  <li>每个函数会在执行的时候创建自己的执行上下文。这个上下文就是通常说的 “本地上下文”。</li>
  <li>使用 {{jsxref("Global_Objects/eval", "eval()")}} 函数也会创建一个新的执行上下文。</li>
 </ul>
@@ -76,7 +76,7 @@ greetUser("Veronica");</pre>
    <li>当执行到 <code>greetUser("Mike")</code> 的时候会为 <code>greetUser()</code> 函数创建一个它的上下文。这个执行上下文会被推入执行上下文栈中。
 
     <ul>
-     <li>当 <code>greetUser()</code> 调用 <code>localGreeting()</code>的时候会为该方法创建一个新的上下文。并且在 <code>localGreeting()</code> 退出的时候它的上下文也会从执行栈中弹出并销毁。 程序会从栈中获取下一个上下文并恢复执行, 也就是从 <code>greetUser()</code> 剩下的部分开始执行。</li>
+     <li>当 <code>greetUser()</code> 调用 <code>localGreeting()</code>的时候会为该方法创建一个新的上下文。并且在 <code>localGreeting()</code> 退出的时候它的上下文也会从执行栈中弹出并销毁。 程序会从栈中获取下一个上下文并恢复执行， 也就是从 <code>greetUser()</code> 剩下的部分开始执行。</li>
      <li><code>greetUser()</code> 执行完毕并退出，其上下文也从栈中弹出并销毁。</li>
     </ul>
    </li>
@@ -101,7 +101,7 @@ greetUser("Veronica");</pre>
 
 <p>关于递归函数——即多次调用自身的函数，需要特别注意：每次递归调用自身都会创建一个新的上下文。这使得 JavaScript 运行时能够追踪递归的层级以及从递归中得到的返回值，但这也意味着每次递归都会消耗内存来创建新的上下文。</p>
 
-<h2 id="JavaScript运行时">JavaScript运行时</h2>
+<h2 id="JavaScript运行时">JavaScript 运行时</h2>
 
 <p>在执行 JavaScript 代码的时候，JavaScript 运行时实际上维护了一组用于执行 JavaScript 代码的<strong>代理</strong>。每个代理由一组执行上下文的集合、执行上下文栈、主线程、一组可能创建用于执行 worker 的额外的线程集合、一个任务队列以及一个微任务队列构成。除了主线程（某些浏览器在多个代理之间共享的主线程）之外，其它组成部分对该代理都是唯一的。</p>
 
@@ -118,7 +118,7 @@ greetUser("Veronica");</pre>
 
 <p>然后，事件循环会驱动发生在浏览器中与用户交互有关的一切，但在这里，对我们来说更重要的是需要了解它是如何负责调度和执行在其线程中执行的每段代码的。</p>
 
-<p>有如下三种事件循环:</p>
+<p>有如下三种事件循环：</p>
 
 <dl>
  <dt>Window 事件循环</dt>
@@ -162,7 +162,7 @@ greetUser("Veronica");</pre>
 
 <p>使用 <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a> 可以让主线程另起新的线程来运行脚本，这能够缓解上面的情况。一个设计良好的网站或应用会把一些复杂的或者耗时的操作交给 worker 去做，这样可以让主线程除了更新、布局和渲染网页之外，尽可能少的去做其他事情。</p>
 
-<p>通过使用像 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> 这样的 <a href="/en-US/docs/Learn/JavaScript/Asynchronous">异步JavaScript</a> 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。</p>
+<p>通过使用像 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> 这样的 <a href="/en-US/docs/Learn/JavaScript/Asynchronous">异步 JavaScript</a> 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。</p>
 
 <p>微任务是另一种解决该问题的方案，通过将代码安排在下一次事件循环开始之前运行而不是必须要等到下一次开始之后才执行，这样可以提供一个更好的访问级别。</p>
 

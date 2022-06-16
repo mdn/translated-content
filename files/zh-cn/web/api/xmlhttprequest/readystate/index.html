@@ -8,7 +8,7 @@ translation_of: Web/API/XMLHttpRequest/readyState
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.readyState</strong> 属性返回一个 XMLHttpRequest  代理当前所处的状态。一个 <abbr title="XMLHttpRequest">XHR</abbr> 代理总是处于下列状态中的一个：</p>
+<p><strong>XMLHttpRequest.readyState</strong> 属性返回一个 XMLHttpRequest 代理当前所处的状态。一个 <abbr title="XMLHttpRequest">XHR</abbr> 代理总是处于下列状态中的一个：</p>
 
 <table class="standard-table">
  <tbody>
@@ -35,7 +35,7 @@ translation_of: Web/API/XMLHttpRequest/readyState
   <tr>
    <td><code>3</code></td>
    <td><code>LOADING</code></td>
-   <td>下载中； <code>responseText</code> 属性已经包含部分数据。</td>
+   <td>下载中；<code>responseText</code> 属性已经包含部分数据。</td>
   </tr>
   <tr>
    <td><code>4</code></td>
@@ -53,13 +53,13 @@ translation_of: Web/API/XMLHttpRequest/readyState
  <dt>HEADERS_RECEIVED</dt>
  <dd>send() 方法已经被调用，响应头也已经被接收。</dd>
  <dt>LOADING</dt>
- <dd>响应体部分正在被接收。如果 <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> 属性是“text”或空字符串， <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> 将会在载入的过程中拥有部分响应数据。</dd>
+ <dd>响应体部分正在被接收。如果 <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> 属性是“text”或空字符串，<code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> 将会在载入的过程中拥有部分响应数据。</dd>
  <dt>DONE</dt>
  <dd>请求操作已经完成。这意味着数据传输已经彻底完成或失败。</dd>
 </dl>
 
 <div class="note">
-<p>在IE中，状态有着不同的名称，并不是 <code>UNSENT</code>，<code>OPENED</code> ， <code>HEADERS_RECEIVED</code> ， <code>LOADING</code> <code>和 DONE, 而是 READYSTATE_UNINITIALIZED</code> (0)，<code>READYSTATE_LOADING</code> (1) ， <code>READYSTATE_LOADED</code> (2) ， <code>READYSTATE_INTERACTIVE</code> (3) <code>和 READYSTATE_COMPLETE</code> (4) 。</p>
+<p>在 IE 中，状态有着不同的名称，并不是 <code>UNSENT</code>，<code>OPENED</code> ，<code>HEADERS_RECEIVED</code> ，<code>LOADING</code> <code>和 DONE，而是 READYSTATE_UNINITIALIZED</code> (0)，<code>READYSTATE_LOADING</code> (1) ，<code>READYSTATE_LOADED</code> (2) ，<code>READYSTATE_INTERACTIVE</code> (3) <code>和 READYSTATE_COMPLETE</code> (4) 。</p>
 </div>
 
 <h2 id="示例">示例</h2>

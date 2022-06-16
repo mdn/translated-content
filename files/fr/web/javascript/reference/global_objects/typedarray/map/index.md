@@ -20,7 +20,9 @@ La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont 
 
 ## Syntaxe
 
-    typedarray.map(callback[, thisArg])
+```js
+typedarray.map(callback[, thisArg])
+```
 
 ### Paramètres
 

@@ -18,11 +18,15 @@ La méthode **`setSeconds()`** définit les secondes pour la date, selon l'heure
 
 ## Syntaxe
 
-    dateObj.setSeconds(valeurSecondes[, valeurMs])
+```js
+dateObj.setSeconds(valeurSecondes[, valeurMs])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setSeconds(valeurSecondes)
+```js
+dateObj.setSeconds(valeurSecondes)
+```
 
 ### Paramètres
 

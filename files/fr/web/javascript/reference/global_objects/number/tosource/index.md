@@ -16,8 +16,10 @@ La méthode **`toSource()`** permet de renvoyer une chaîne de caractère repré
 
 ## Syntaxe
 
-    objetNumber.toSource();
-    Number.toSource();
+```js
+objetNumber.toSource();
+Number.toSource();
+```
 
 ### Valeur de retour
 

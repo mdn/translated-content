@@ -16,8 +16,10 @@ Les **accesseurs de propriété** permettent de fournir un accès aux propriét�
 
 ## Syntaxe
 
-    objet.propriété
-    objet["propriété"]
+```js
+objet.propriété
+objet["propriété"]
+```
 
 ## Description
 
