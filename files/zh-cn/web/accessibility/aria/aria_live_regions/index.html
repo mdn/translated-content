@@ -8,9 +8,9 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <div class="note">
 <p><strong>提示</strong>: 辅助技术将播报实时区域内容的动态变化。必须首先显示活动区域（通常是空的），以便浏览器和辅助技术可以知道它。然后宣布任何后续更改。</p>
 
-<p>在页面加载时的初始标记中简单地添加一个 <code>aria-live</code> 属性或者一个特殊的活动区域角色 ( <code>role</code> ) (例如 <code>role="alert"</code>) 将不会起作用。</p>
+<p>在页面加载时的初始标记中简单地添加一个 <code>aria-live</code> 属性或者一个特殊的活动区域角色 (<code>role</code>) (例如 <code>role="alert"</code>) 将不会起作用。</p>
 
-<p>向文档中动态添加一个包含 <code>aria-live</code> 属性的元素或者特殊的角色 ( <code>role</code> ) 也不会导致辅助技术工具的任何播报（在那个时间点，浏览器/辅助技术工具还没有检测到活动区域） 所以你不能监控它的变化)。</p>
+<p>向文档中动态添加一个包含 <code>aria-live</code> 属性的元素或者特殊的角色 (<code>role</code>) 也不会导致辅助技术工具的任何播报（在那个时间点，浏览器/辅助技术工具还没有检测到活动区域） 所以你不能监控它的变化)。</p>
 
 <p>总是确保实时区域首先出现在文档中，然后再动态添加/更改任何内容。</p>
 
@@ -22,9 +22,9 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <p>在不重新加载页面的情况下更新的动态内容通常是区域或窗口小部件。非交互式的简单内容更改应标记为实时区域。以下是每个相关的 ARIA 活动区域属性的列表，并带有说明。</p>
 
 <ol>
- <li><code><strong>aria-live</strong></code>: <code>aria-live=POLITENESS_SETTING</code> 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：<code>off</code>, <code>polite</code> or <code>assertive</code> 。默认设置是 <code>off</code> 。这个设置是到目前为止最重要的。</li>
+ <li><code><strong>aria-live</strong></code>: <code>aria-live=POLITENESS_SETTING</code> 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：<code>off</code>, <code>polite</code> or <code>assertive</code>。默认设置是 <code>off</code>。这个设置是到目前为止最重要的。</li>
  <li>
-  <p><code><strong>aria-controls</strong></code>: <code>aria-controls=[IDLIST]</code> 被用来将控制动作与它控制的区域相关联。区域就像<code>div</code> 里面的 <code>id</code> 被鉴别；多区域可以被一个带空格的控制动作关联，例如： <code>aria-controls="myRegionID1 myRegionsID2"</code>  。</p>
+  <p><code><strong>aria-controls</strong></code>: <code>aria-controls=[IDLIST]</code> 被用来将控制动作与它控制的区域相关联。区域就像 <code>div</code> 里面的 <code>id</code> 被鉴别；多区域可以被一个带空格的控制动作关联，例如： <code>aria-controls="myRegionID1 myRegionsID2"</code>。</p>
 
   <div class="warning"><strong>警告：</strong>尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。需要研究。</div>
  </li>
