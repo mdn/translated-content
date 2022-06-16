@@ -100,27 +100,31 @@ Voici une liste de fonctionnalités courantes, qui peuvent être contrôlées gr
 
 Lorsqu'un client veut communiquer avec un serveur, que ce soit avec un serveur final ou un proxy intermédiaire, il réalise les étapes suivantes :
 
-1.  Il ouvre une connexion TCP : la connexion TCP va être utilisée pour envoyer une ou plusieurs requêtes et pour recevoir une réponse. Le client peut ouvrir une nouvelle connexion, réutiliser une connexion existante ou ouvrir plusieurs connexions TCP vers le serveur.
-2.  Il envoie un message HTTP : les messages HTTP (avant HTTP/2) sont lisibles par les humains. Avec HTTP/2, ces simples messages sont en-capsulés dans des trames, rendant la lecture directe impossible, mais le principe reste le même.
+1. Il ouvre une connexion TCP : la connexion TCP va être utilisée pour envoyer une ou plusieurs requêtes et pour recevoir une réponse. Le client peut ouvrir une nouvelle connexion, réutiliser une connexion existante ou ouvrir plusieurs connexions TCP vers le serveur.
+2. Il envoie un message HTTP : les messages HTTP (avant HTTP/2) sont lisibles par les humains. Avec HTTP/2, ces simples messages sont en-capsulés dans des trames, rendant la lecture directe impossible, mais le principe reste le même.
 
-        GET / HTTP/1.1
-        Host: developer.mozilla.org
-        Accept-Language: fr
+    ```
+    GET / HTTP/1.1
+    Host: developer.mozilla.org
+    Accept-Language: fr
+    ```
 
-3.  Il lit la réponse envoyée par le serveur :
+3. Il lit la réponse envoyée par le serveur :
 
-        HTTP/1.1 200 OK
-        Date: Sat, 09 Oct 2010 14:28:02 GMT
-        Server: Apache
-        Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-        ETag: "51142bc1-7449-479b075b2891b"
-        Accept-Ranges: bytes
-        Content-Length: 29769
-        Content-Type: text/html
+    ```
+    HTTP/1.1 200 OK
+    Date: Sat, 09 Oct 2010 14:28:02 GMT
+    Server: Apache
+    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+    ETag: "51142bc1-7449-479b075b2891b"
+    Accept-Ranges: bytes
+    Content-Length: 29769
+    Content-Type: text/html
 
-        <!DOCTYPE html... (suivi des 29769 octets de la page web demandée)
+    <!DOCTYPE html... (suivi des 29769 octets de la page web demandée)
+    ```
 
-4.  Il ferme ou réutilise la connexion pour les requêtes suivantes.
+4. Il ferme ou réutilise la connexion pour les requêtes suivantes.
 
 Si le _pipeline_ HTTP est activé, plusieurs demandes peuvent être envoyées sans attendre que la première réponse soit entièrement reçue. Le _pipeline_ HTTP s'est révélé difficile à implémenter dans les réseaux existants où de vieux logiciels coexistent avec des versions modernes. Le pipeline _HTTP_ a été remplacé dans HTTP/2 par des requêtes de multiplexage plus robustes dans les trames.
 
