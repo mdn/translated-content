@@ -315,11 +315,11 @@ myHTML.onclick = function() {};</pre>
 
 <p>只是前者更简洁。</p>
 
-<p>刚刚我们传递给<code>onclick</code>的函数被称为匿名函数，因为它没有名字。匿名函数还有另一种我们称之为箭头函数的写法，箭头函数使用<code>() => {}</code>代替<code>function ()</code></p>
+<p>刚刚我们传递给 <code>onclick</code> 的函数被称为匿名函数，因为它没有名字。匿名函数还有另一种我们称之为箭头函数的写法，箭头函数使用 <code>() =></code> 代替 <code>function ()</code>：</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = () => {
+<pre class="brush: js">document.querySelector('html').addEventListener('click', () => {
   alert('别戳我，我怕疼。');
-};</pre>
+});</pre>
 
 <h2 id="完善示例网页">完善示例网页</h2>
 
