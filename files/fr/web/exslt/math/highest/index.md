@@ -15,7 +15,9 @@ Un nœud a sa valeur maximale si sa valeur de chaîne convertie en nombre est é
 
 ### Syntaxe
 
-    math:highest(ensembleNœud)
+```
+math:highest(ensembleNœud)
+```
 
 ### Arguments
 

@@ -253,8 +253,10 @@ Lorsqu'on utilise des champs de formulaire, il est recommandé d'ajouter des lib
 
 Dans l'exemple suivant, on illustre comment associer un élément `<label>` avec un élément `<input>`. Pour ce faire, on ajoutera un identifiant (un attribut `id`) à l'élément `<input>` et on référencera cet identifiant via l'attribut `for` de l'élément `<label>`.
 
-    <label for="ptipois">Aimez-vous les petits-pois ?</label>
-    <input type="checkbox" name="petitspois" id="ptipois">
+```html
+<label for="ptipois">Aimez-vous les petits-pois ?</label>
+<input type="checkbox" name="petitspois" id="ptipois">
+```
 
 ### Dimensionnement - taille
 

@@ -22,10 +22,10 @@ La possibilité de lire les valeurs de pixels de chaque image d'une vidéo peut 
 
 La technique générale est comme suit:
 
-1.  Dessiner une image de l'élément {{htmlelement("video")}} sur un élément {{htmlelement("canvas")}} intermédiaire.
-2.  Lire les données de l'élément `<canvas>` et les manipuler.
-3.  Écrire les données manipulées dans le `<canvas>` que l'on veut afficher.
-4.  Marquer une pause et répéter.
+1. Dessiner une image de l'élément {{htmlelement("video")}} sur un élément {{htmlelement("canvas")}} intermédiaire.
+2. Lire les données de l'élément `<canvas>` et les manipuler.
+3. Écrire les données manipulées dans le `<canvas>` que l'on veut afficher.
+4. Marquer une pause et répéter.
 
 On peut configurer notre lecteur vidéo et l'élément `<canvas>` comme ceci:
 
