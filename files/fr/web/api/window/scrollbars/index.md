@@ -15,7 +15,9 @@ La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la vis
 
 ## Syntaxe
 
-    objRef = window.scrollbars
+```js
+objRef = window.scrollbars
+```
 
 ## Exemple
 

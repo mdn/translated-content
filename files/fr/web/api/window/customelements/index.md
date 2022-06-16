@@ -17,7 +17,9 @@ La propriété en lecture seule `customElements` de l'interface {{domxref("Windo
 
 ## Syntaxe
 
-    let registreElementsPersonnalises = window.customElements;
+```js
+let registreElementsPersonnalises = window.customElements;
+```
 
 ### Valeur retournée
 
@@ -27,22 +29,26 @@ Une instance d'objet {{domxref("CustomElementRegistry")}} représentant le regis
 
 L'exemple le plus courant d'utilisation de cette propriété que vous verrez sera d'obtenir l'accès à la méthode {{domxref ("CustomElementRegistry.define()")}} pour définir et enregistrer un nouvel élément personnalisé, par exemple :
 
-    let registreElementsPersonnalises = window.customElements;
-    registreElementsPersonnalises.define('mon-element-personnalise', MonElementPersonnalise);
+```js
+let registreElementsPersonnalises = window.customElements;
+registreElementsPersonnalises.define('mon-element-personnalise', MonElementPersonnalise);
+```
 
 Cependant, il est généralement raccourci en quelque chose comme :
 
-    customElements.define('details-element',
-      class extends HTMLElement {
-        constructor() {
-          super();
-          const modele = document
-            .getElementById('modele-details-element')
-            .content;
-          const racineOmbre = this.attachShadow({mode: 'open'})
-            .appendChild(template.cloneNode(true));
-      }
-    });
+```js
+customElements.define('details-element',
+  class extends HTMLElement {
+    constructor() {
+      super();
+      const modele = document
+        .getElementById('modele-details-element')
+        .content;
+      const racineOmbre = this.attachShadow({mode: 'open'})
+        .appendChild(template.cloneNode(true));
+  }
+});
+```
 
 Voir notre repo [web-components-examples](https://github.com/mdn/web-components-examples/) pour davantage d'exemples d'utilisation.
 
