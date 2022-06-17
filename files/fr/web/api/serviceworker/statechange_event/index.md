@@ -14,8 +14,10 @@ Une propriété {{domxref("EventListener")}} appelée quand un évenement de typ
 
 ## Syntaxe
 
-    ServiceWorker.onstatechange = function(statechangeevent) { ... }
-    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```js
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
 ## Examples
 

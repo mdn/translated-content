@@ -32,8 +32,10 @@ var dupNode = node.cloneNode([deep]);
 
 ## Exemple
 
-    p = document.getElementById("para1");
-    p_prime = p.cloneNode(true);
+```js
+p = document.getElementById("para1");
+p_prime = p.cloneNode(true);
+```
 
 ## Notes
 

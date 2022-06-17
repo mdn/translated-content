@@ -29,8 +29,10 @@ Cette méthode renvoie le texte sélectionné.
 
 En [JavaScript](fr/JavaScript), cette méthode est appelée automatiquement pour des objets `selection` aux fonctions nécessitant un paramètre `string`&nbsp;:
 
-    alert(window.getSelection()) // Appel automatique
-    alert(window.getSelection().toString())  // Appel explicite
+```js
+alert(window.getSelection()) // Appel automatique
+alert(window.getSelection().toString())  // Appel explicite
+```
 
 ### Voir aussi
 

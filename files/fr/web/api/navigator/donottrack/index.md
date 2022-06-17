@@ -22,8 +22,10 @@ La valeur reflète celle de l'en-tête "do-not-track" _(ne pas suivre)_, c'est-�
 
 ## Exemple
 
-    dump(window.navigator.doNotTrack);
-    //  écrit "1" si DNT est activé; "0" si l'utilisateur a opté pour le suivi; sinon c'est "unspecified" (non spécifié)
+```js
+dump(window.navigator.doNotTrack);
+//  écrit "1" si DNT est activé; "0" si l'utilisateur a opté pour le suivi; sinon c'est "unspecified" (non spécifié)
+```
 
 ## Spécifications
 

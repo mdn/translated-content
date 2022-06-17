@@ -23,9 +23,9 @@ La propriété **`delay`** est un dictionnaire pour {{domxref("AnimationEffectTi
 var timingProperties = {
   delay: delayInMilliseconds
 };
-```
 
-    timingProperties.delay = delayInMilliseconds;
+timingProperties.delay = delayInMilliseconds;
+```
 
 ### Valeur
 

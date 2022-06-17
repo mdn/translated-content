@@ -17,7 +17,9 @@ La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{domxr
 
 ## Syntaxe
 
-    json = url.toJSON();
+```js
+json = url.toJSON();
+```
 
 ### Paramètres
 
@@ -29,8 +31,10 @@ A {{domxref("USVString")}}.
 
 ## Exemples
 
-    const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-    url.toJSON()
+```js
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+url.toJSON()
+```
 
 ## Spécifications
 
