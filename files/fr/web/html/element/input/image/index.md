@@ -178,7 +178,7 @@ Lors de l'envoi d'un formulaire avec un bouton graphique `<input type="image">`,
 
 Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, comme `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name), sa valeur sera utilisée comme préfixe pour chaque attribut, par exemple si `name` vaut `position`, les coordonnées envoyées dans l'URL seraient transmises sous la forme `?position.x=52&position.y=55`. Cela vaut également pour les autres attributs.
 
-Ces coordonnées correspondent à l'abscisse et à l'ordonnée du point où le clic a eu lieu, relatifs à une origine (0, 0) située dans le coin supérieur gauche de l'image. On peut utiliser ces valeurs si l'emplacement du clic a une quelconque importance, par exemple s'il s'agit d'une carte sur laquelle on clique. Le code côté serveur pourra alors déterminer l'emplacement du clic et renvoyer des informations correspondantes au lieu visé.
+Ces coordonnées correspondent à l'abscisse et à l'ordonnée du point où le clic a eu lieu, relatifs à une origine `(0, 0)` située dans le coin supérieur gauche de l'image. On peut utiliser ces valeurs si l'emplacement du clic a une quelconque importance, par exemple s'il s'agit d'une carte sur laquelle on clique. Le code côté serveur pourra alors déterminer l'emplacement du clic et renvoyer des informations correspondantes au lieu visé.
 
 Dans l'exemple qui précède, on pourrait implémenter, coté serveur, une logique qui détermine la couleur sur laquelle le clic a eu lieu pour créer un classement des couleurs en fonction du nombre de votes pour chacune.
 

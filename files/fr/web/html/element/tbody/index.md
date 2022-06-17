@@ -51,7 +51,6 @@ L'élément `<tbody>`, ainsi que les éléments [`<thead>`](/fr/docs/Web/HTML/El
   </tbody>
 </table>
 
-
 ## Attributs
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
@@ -194,7 +193,7 @@ Voici le résultat obtenu&nbsp;:
 
 ### Plusieurs corps de tableau
 
-On peut créer plusieurs sections au sein d'un tableau en utilisant plusieurs éléments `<tbody>`. Chacun peut avoir son propre en-tête et ses propres lignes. Toutefois, _il ne peut y avoir qu'un seul élément [`<thead>`](/fr/docs/Web/HTML/Element/thead) par tableau !_ Pour cette raison, il faudra utiliser un élément [`<tr>`](/fr/docs/Web/HTML/Element/tr) rempli d'éléments [`<th>`](/fr/docs/Web/HTML/Element/th) afin de créer des en-têtes au sein de chaque `<tbody>`. Voyons cela.
+On peut créer plusieurs sections au sein d'un tableau en utilisant plusieurs éléments `<tbody>`. Chacun peut avoir son propre en-tête et ses propres lignes. Toutefois, _il ne peut y avoir qu'un seul élément [`<thead>`](/fr/docs/Web/HTML/Element/thead) par tableau&nbsp;!_ Pour cette raison, il faudra utiliser un élément [`<tr>`](/fr/docs/Web/HTML/Element/tr) rempli d'éléments [`<th>`](/fr/docs/Web/HTML/Element/th) afin de créer des en-têtes au sein de chaque `<tbody>`. Voyons cela.
 
 Prenons l'exemple précédent et ajoutons plus d'étudiants à la liste. Cette fois, on met à jour le tableau afin de regrouper les étudiants par spécialité, avec des lignes d'en-tête pour chaque spécialité.
 
@@ -304,7 +303,16 @@ tbody > tr > th {
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux tableaux&nbsp;: [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<col>`](/fr/docs/Web/HTML/Element/col), [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), [`<table>`](/fr/docs/Web/HTML/Element/table), [`<td>`](/fr/docs/Web/HTML/Element/td), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), [`<th>`](/fr/docs/Web/HTML/Element/th), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tr>`](/fr/docs/Web/HTML/Element/tr)
+- Les autres éléments HTML relatifs aux tableaux&nbsp;:
+  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Element/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Element/table)
+  - [`<td>`](/fr/docs/Web/HTML/Element/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
+  - [`<th>`](/fr/docs/Web/HTML/Element/th)
+  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
+  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
 - Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tbody>`&nbsp;:
 
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de paramétrer l'alignement des cellules d'une colonne

@@ -6,7 +6,7 @@ browser-compat: html.elements.th
 ---
 {{HTMLRef}}
 
-L'élément HTML **`<th>`** définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellule. La nature de ce groupe est définie grâce aux attributs {{htmlattrxref("scope", "th")}} et {{htmlattrxref("headers", "th")}}.
+L'élément HTML **`<th>`** définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellule. La nature de ce groupe est définie grâce aux attributs [`scope`](#scope) et [`headers`](#headers).
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
@@ -68,7 +68,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Cet attribut contient un entier positif indiquant sur combien de lignes s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin de la section ([`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)) du tableau à laquelle appartient la cellule même si cette section est définie implicitement. Les valeurs supérieures à 65534 seront ramenées à 65534.
 
 - `scope`
-  - : Cet attribut référence les cellules auxquelles l'élément \<th> est lié. Cet attribut peut prendre l'une des valeurs suivantes&nbsp;:
+  - : Cet attribut référence les cellules auxquelles l'élément `<th>` est lié. Cet attribut peut prendre l'une des valeurs suivantes&nbsp;:
 
     - `row`
       - : Indique que l'en-tête s'applique à toutes les cellules de la ligne à laquelle appartient cet élément.
@@ -83,7 +83,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ### Attributs dépréciés
 
-- `align` {{deprecated_inline}} 
+- `align` {{deprecated_inline}}
   - : Cet attribut définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
 
     - `left`
@@ -119,7 +119,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
-- `charoff` {{deprecated_inline}} 
+- `charoff` {{deprecated_inline}}
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère défini par l'attribut `char` à appliquer au contenu des cellules.
 
     > **Note :** Cet attribut ne doit plus être utilisé, car il est maintenant obsolète.
@@ -162,4 +162,13 @@ Voir la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'ut
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux tableaux&nbsp;: [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<col>`](/fr/docs/Web/HTML/Element/col), [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), [`<table>`](/fr/docs/Web/HTML/Element/table), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<td>`](/fr/docs/Web/HTML/Element/td), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tr>`](/fr/docs/Web/HTML/Element/tr).
+- Les autres éléments HTML relatifs aux tableaux&nbsp;:
+  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Element/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Element/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Element/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
+  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
+  - [`<tr>`](/fr/docs/Web/HTML/Element/tr).

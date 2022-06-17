@@ -15,7 +15,7 @@ L'élément HTML **`<object>`** représente une ressource externe qui peut être
     <tr>
       <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>,<a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#contenu_tangible">contenu tangible</a>. Si l'élément a un attribut <strong>usemap</strong> il fait aussi partie de la catégorie de <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_interactif">contenu interactif</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_associé_aux_formulaires">contenu listé pour les formulaires (<em>listed</em>), contenu pouvant être envoyé par un formulaire (<em>submittable</em>)</a>.
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>,<a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#contenu_tangible">contenu tangible</a>. Si l'élément a un attribut <code>usemap</code> il fait aussi partie de la catégorie de <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_interactif">contenu interactif</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_associé_aux_formulaires">contenu listé pour les formulaires (<i lang="en">listed</i>), contenu pouvant être envoyé par un formulaire (<i lang="en">submittable</i>)</a>.
       </td>
     </tr>
     <tr>
@@ -44,7 +44,6 @@ L'élément HTML **`<object>`** représente une ressource externe qui peut être
     </tr>
   </tbody>
 </table>
-
 
 ## Attributs
 
@@ -78,7 +77,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - `codetype` {{deprecated_inline}}
   - : Le type de contenu des données spécifiés par `classid`.
 - `declare` {{deprecated_inline}}
-  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément  `<object>` dans la suite du document. En HTML5, il faut répéter l'élément \<object> complètement chaque fois que la ressource est ré-utilisée.
+  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément  `<object>` dans la suite du document. En HTML5, il faut répéter l'élément `<object>` complètement chaque fois que la ressource est réutilisée.
 - `standby` {{deprecated_inline}}
   - : Un message que le navigateur peut afficher pendant le chargement de l'implémentation et des données liées à l'objet.
 

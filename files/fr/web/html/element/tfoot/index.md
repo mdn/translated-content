@@ -59,7 +59,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utiliserait.
 
-
 - `align` {{Deprecated_inline}}
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
 
@@ -77,6 +76,7 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
     > **Note :** Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
+    >
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).
 
 - `bgcolor` {{Deprecated_inline}}
@@ -120,7 +120,16 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux tableaux&nbsp;: [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<col>`](/fr/docs/Web/HTML/Element/col), [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), [`<table>`](/fr/docs/Web/HTML/Element/table), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<td>`](/fr/docs/Web/HTML/Element/td), [`<th>`](/fr/docs/Web/HTML/Element/th), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tr>`](/fr/docs/Web/HTML/Element/tr)
+- Les autres éléments HTML relatifs aux tableaux&nbsp;:
+  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Element/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Element/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Element/td)
+  - [`<th>`](/fr/docs/Web/HTML/Element/th)
+  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
+  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
 - Les propriétés et pseudo-classes CSS qui peuvent s'avérer utiles pour mettre en forme l'élément `<tfoot>`&nbsp;:
 
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules de la colonne

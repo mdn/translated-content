@@ -32,4 +32,4 @@ _Cette interface n'a pas de méthode spécifique, elle hérite des méthodes de 
 
 ## Voir aussi
 
-- Les éléments HTML qui implémente cette interface&nbsp;: [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).
+- Les éléments HTML qui portent cette interface&nbsp;: [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).

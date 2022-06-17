@@ -121,7 +121,16 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples
 
 ## Voir aussi
 
-- Les autres éléments HTML liés aux tableaux&nbsp;: [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<col>`](/fr/docs/Web/HTML/Element/col), [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), [`<table>`](/fr/docs/Web/HTML/Element/table), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<td>`](/fr/docs/Web/HTML/Element/td), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), [`<th>`](/fr/docs/Web/HTML/Element/th), [`<tr>`](/fr/docs/Web/HTML/Element/tr).
+- Les autres éléments HTML liés aux tableaux&nbsp;:
+  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Element/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Element/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Element/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
+  - [`<th>`](/fr/docs/Web/HTML/Element/th)
+  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
 - Les propriétés et pseudo-classes CSS particulièrement utiles pour mettre en forme l'élément `<thead>`&nbsp;:
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules de la colonne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (par exemple le point ou la virgule).
+  - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (par exemple le point ou la virgule)

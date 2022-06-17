@@ -110,7 +110,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
       </td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/Input/image"><code>image</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/input/image"><code>image</code></a></td>
       <td>Un bouton graphique d'envoi du formulaire. L'attribut <a href="#src"><code>src</code></a> doit être défini avec la source de l'image et l'attribut <a href="#alt"><code>alt</code></a> doit être défini avec le texte alternatif si l'image est absente.</td>
       <td id="exampleimage">
         <pre class="brush: html hidden">
@@ -307,9 +307,9 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `accept`
   - : Uniquement valide pour le type `file`, cet attribut définit les types de fichiers qui peuvent être sélectionnés. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file).
 - `alt`
-  - : Uniquement valide pour le type `image`, cet attribut fournit un texte alternatif à l'image qui est affiché lorsque l'attribut [`src`](#src) de l'image est absent ou que le chargement de l'image a échoué. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/Input/image).
+  - : Uniquement valide pour le type `image`, cet attribut fournit un texte alternatif à l'image qui est affiché lorsque l'attribut [`src`](#src) de l'image est absent ou que le chargement de l'image a échoué. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
 - [`autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete)
-  - : **Cet attribut n'est pas booléen !** Il prend comme valeur une chaîne de caractères dont les valeurs sont séparées par des espaces qui décrivent, le cas échéant, le type de fonctionnalité à fournir pour l'autocomplétion du champ. Généralement, l'implémentation de l'autocomplétion repose sur les valeurs précédemment saisies dans le même champ, mais le navigateur peut implémenter une forme d'autocomplétion plus avancée (par exemple intégrer la liste des contacts connue de l'appareil pour autocompléter les champs `email`). Voir [la page sur cet attribut](/fr/docs/Web/HTML/Attributes/autocomplete#valeurs) pour les valeurs autorisées. Cet attribut est valide pour les types de champ `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, et `password`. Il n'a pas d'effet pour les types de champs qui ne renvoient pas de données numériques ou text et est donc valide pour tous les types de champs à l'exception de `checkbox`, `radio`, `file`, ou des types de bouton. Voir [la page de l'attribut HTML `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour plus d'informations, y compris sur la sécurité des mots de passe et sur la façon dont `autocomplete` s'applique légèrement différemment pour les champs de type `hidden`.
+  - : **Cet attribut n'est pas booléen&nbsp;!** Il prend comme valeur une chaîne de caractères dont les valeurs sont séparées par des espaces qui décrivent, le cas échéant, le type de fonctionnalité à fournir pour l'autocomplétion du champ. Généralement, l'implémentation de l'autocomplétion repose sur les valeurs précédemment saisies dans le même champ, mais le navigateur peut implémenter une forme d'autocomplétion plus avancée (par exemple intégrer la liste des contacts connue de l'appareil pour autocompléter les champs `email`). Voir [la page sur cet attribut](/fr/docs/Web/HTML/Attributes/autocomplete#valeurs) pour les valeurs autorisées. Cet attribut est valide pour les types de champ `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, et `password`. Il n'a pas d'effet pour les types de champs qui ne renvoient pas de données numériques ou text et est donc valide pour tous les types de champs à l'exception de `checkbox`, `radio`, `file`, ou des types de bouton. Voir [la page de l'attribut HTML `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour plus d'informations, y compris sur la sécurité des mots de passe et sur la façon dont `autocomplete` s'applique légèrement différemment pour les champs de type `hidden`.
 - `autofocus`
   - : Un attribut booléen qui, s'il est présent, indique que le contrôle devrait automatiquement recevoir le focus lorsque le chargement de la page est terminé (ou lorsque l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) qui contient ce contrôle a été affiché).
     > **Note :** Un élément avec l'attribut `autofocus` pourra recevoir le focus avant le déclenchement de l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Window/DOMContentLoaded_event).
@@ -364,7 +364,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `formtarget`
   - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit).
 - `height`
-  - : Uniquement valide pour le type `image`, cet attribut indique la hauteur de l'image à afficher sur un bouton d'envoi graphique. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/Input/image).
+  - : Uniquement valide pour le type `image`, cet attribut indique la hauteur de l'image à afficher sur un bouton d'envoi graphique. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
 - `id`
   - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) pour relier le libellé au champ correspondant. Voir [`<label>`](/fr/docs/Web/HTML/Element/Label).
 - `inputmode`
@@ -420,10 +420,10 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     Lorsqu'un élément `<input>` possède un attribut `name`, ce nom devient une propriété de l'objet [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements) associé au formulaire propriétaire. Ainsi, si on a un champ dont le nom est `invite` et un autre dont le nom est `taille-chat`, on pourra manipuler les données du formulaire en JavaScript comme suit&nbsp;:
 
     ```js
-    let form = document.querySelector("form");
+    let form = document.querySelector('form');
 
     let nomInvite = form.elements.invite;
-    let tailleChat = form.elements["taille-chat"];
+    let tailleChat = form.elements['taille-chat'];
     ```
 
     À l'exécution de ce code, `nomInvite` correspondra à l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) associé au champ `invite`, et de même l'objet `tailleChat` correspondra à l'objet du DOM associé au champ avec le nom `taille-chat`.
@@ -436,7 +436,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     > **Note :** En utilisant l'attribut `pattern`, il faut également informer l'utilisatrice ou l'utilisateur quant au format attendu, en ajoutant un texte explicatif à proximité. On peut aussi inclure un attribut [`title`](#title) pour expliquer les contraintes à respecter&nbsp;: la plupart des navigateurs afficheront le titre sous la forme d'une bulle d'information. Attention, une explication visible est nécessaire pour une accessibilité correcte, la bulle d'information fournie par `title` n'est qu'une amélioration secondaire.
 
-    Voir [la validation côté client](#validation_c%C3%B4t%C3%A9_client) pour plus d'information.
+    Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 - `placeholder`
   - : Cet attribut est une chaîne de caractères qui fournit une brève indication quant au type d'information attendu dans le champ. Sa valeur devrait être un mot ou une courte phrase qui indique le type de données attendu plutôt qu'une explication ou une consigne. Le texte de cet attribut _ne doit pas_ inclure de retour chariot ou de saut de ligne. Ainsi, si un champ est destiné à la saisie d'un prénom et que le libellé est «&nbsp;Prénom&nbsp;», une valeur appropriée pour cet attribut pourra être `"ex. Mustafa"`.
 
@@ -448,11 +448,11 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `required`
   - : Un attribut booléen qui, lorsqu'il est présent, indique qu'une valeur doit être saisie avant que le formulaire puisse être envoyé. Cet attribut est pris en charge pour les types de contrôle `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, et `file`.
 
-    Voir [la validation côté-client](#validation_c%C3%B4t%C3%A9_client) et [l'attribut HTML `required`](/fr/docs/Web/HTML/Attributes/required) pour plus d'informations.
+    Voir [la validation côté client](#validation_côté_client) et [l'attribut HTML `required`](/fr/docs/Web/HTML/Attributes/required) pour plus d'informations.
 - `size`
   - : Cet attribut est uniquement valide pour les types de contrôle `email`, `password`, `tel`, `url` et `text`. Il indique la largeur visible pour le contrôle. D'une certaine façon, il crée un résultat analogue à l'application de la propriété CSS `width`. L'unité de cette valeur dépend du type de contrôle. Pour les champs de type `password` et `text`, il s'agit du nombre de caractères (équivalent à l'unité `em`) et la valeur par défaut vaut `20`. Pour les autres types de champs, la valeur est exprimée en pixels. La largeur définie avec la feuille de style CSS aura la priorité sur cet attribut.
 - `src`
-  - : Cet attribut est uniquement valide pour le type `image` et indique l'URL du fichier de l'image à afficher sur le bouton. Voir [`<input type="image">`](/fr/docs/Web/HTML/Element/Input/image) pour plus d'informations.
+  - : Cet attribut est uniquement valide pour le type `image` et indique l'URL du fichier de l'image à afficher sur le bouton. Voir [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) pour plus d'informations.
 - `step`
   - : Cet attribut est valide pour les contrôles de type numérique (`number`, dates/heures, `range`). L'attribut [`step`](/fr/docs/Web/HTML/Attributes/step) est un nombre qui définit la granularité de la valeur.
 
@@ -477,11 +477,11 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `type`
   - : Une chaîne de caractères qui indique le type de contrôle à afficher. On utilisera par exemple la valeur `checkbox` pour afficher une case à cocher. Si cet attribut est absent (ou qu'une valeur inconnue est utilisée), ce sera un champ de type `text` qui sera utilisé, permettant de saisir un texte dans le contrôle de formulaire.
 
-    Les valeurs autorisées pour cet attribut sont listées dans [la section sur les types de champ](#les_diff%C3%A9rents_types_de_champs_input) ci-avant.
+    Les valeurs autorisées pour cet attribut sont listées dans [la section sur les types de champ](#les_différents_types_de_champs_input) ci-avant.
 - `value`
   - : La valeur du contrôle. Lorsque cette valeur est fournie dans le document HTML, il s'agit de la valeur initiale, qui peut ensuite être récupérée et éventuellement modifiée avec JavaScript via la propriété du DOM correspondante&nbsp;: [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement). Cet attribut est toujours optionnel en théorie, mais peut être considéré comme obligatoire en pratique pour les types de champ `checkbox`, `radio`, et `hidden`.
 - `width`
-  - : Cet attribut est uniquement valide pour le type de contrôle `image`, où il exprime la largeur du fichier d'image à afficher sur le bouton graphique. Voir [`<input type="image">`](/fr/docs/Web/HTML/Element/Input/image) pour plus d'informations.
+  - : Cet attribut est uniquement valide pour le type de contrôle `image`, où il exprime la largeur du fichier d'image à afficher sur le bouton graphique. Voir [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) pour plus d'informations.
 
 ### Attributs non-standards
 
@@ -876,7 +876,7 @@ S'il y a une erreur, les navigateurs qui prennent en charge la validation averti
 ```js
 function validate(input) {
   let validityState_object = input.validity;
-  if(validityState_object.valueMissing) {
+  if (validityState_object.valueMissing) {
      input.setCustomValidity('Une valeur est nécessaire.');
   } else if (validityState_object.rangeUnderflow) {
     input.setCustomValidity('La valeur est trop basse.');
