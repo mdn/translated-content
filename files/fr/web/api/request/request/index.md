@@ -114,7 +114,9 @@ var maRequete = new Request('fleurs.jpg', monInit);
 
 Vous pouvez aussi passer un objet {{domxref("Request")}} au constructeur `Request()` pour créer une copie de la Request (c'est similaire au fait d'appeler la méthode {{domxref("Request.clone","clone()")}}).
 
-    var copie = new Request(maRequete);
+```js
+var copie = new Request(maRequete);
+```
 
 > **Note :** Cette dernière utilisation n'est probablement utile que dans [ServiceWorkers](/en-US/docs/Web/API/ServiceWorker_API).
 

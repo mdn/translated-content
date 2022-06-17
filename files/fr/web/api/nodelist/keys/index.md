@@ -45,9 +45,11 @@ for(var key of list.keys()) {
 
 Le résultat est :
 
-    0
-    1
-    2
+```
+0
+1
+2
+```
 
 ## Spécifications
 

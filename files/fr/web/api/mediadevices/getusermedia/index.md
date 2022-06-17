@@ -143,18 +143,20 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
 Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/MediaStream&usg=ALkJrhipdR5n2jQ-BGrPTomESH_A7nof4g) résultant à un élément vidéo.
 
-    // Prefer camera resolution nearest to 1280x720.
-    var constraints = { audio: true, video: { width: 1280, height: 720 } };
+```js
+// Prefer camera resolution nearest to 1280x720.
+var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-    navigator.mediaDevices.getUserMedia(constraints)
-    .then(function(mediaStream) {
-      var video = document.querySelector('video');
-      video.srcObject = mediaStream;
-      video.onloadedmetadata = function(e) {
-        video.play();
-      };
-    })
-    .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+```
 
 ### Utilisation de la nouvelle API dans les navigateurs plus anciens
 

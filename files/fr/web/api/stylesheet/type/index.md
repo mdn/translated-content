@@ -15,7 +15,9 @@ String = stylesheet.type
 
 ## Exemple
 
-     Ss.type = "text / css";
+```
+Ss.type = "text / css";
+```
 
 ## Spécification
 

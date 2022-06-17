@@ -22,12 +22,14 @@ window.navigator.isLocallyAvailable(uri,ifOffline);
 
 ### Exemple
 
-    var disponible = navigator.isLocallyAvailable("my-image-file.png", true);
-    if (disponible) {
-      /* la ressource hors ligne est présente */
-    } else {
-      alert("Certaines ressources nécessaires ne sont pas disponibles tant que vous ne serez pas connecté au réseau.");
-    }
+```js
+var disponible = navigator.isLocallyAvailable("my-image-file.png", true);
+if (disponible) {
+  /* la ressource hors ligne est présente */
+} else {
+  alert("Certaines ressources nécessaires ne sont pas disponibles tant que vous ne serez pas connecté au réseau.");
+}
+```
 
 ### Notes
 

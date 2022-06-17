@@ -7,7 +7,9 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 Il est relativement courant de voir des pages web lier des ressources utilisant des protocoles non-`http`. Prenons par exemple le protocole `mailto:`&nbsp;:
 
-    <a href="mailto:webmaster@example.com">Webmestre</a>
+```html
+<a href="mailto:webmaster@example.com">Webmestre</a>
+```
 
 Les auteurs web peuvent utiliser un lien `mailto:` lorsqu'ils veulent fournir aux utilisateurs une manière pratique d'envoyer un courrier électronique, directement depuis la page web. Lorsque le lien est activé, le navigateur est supposé lancer l'application par défaut du bureau pour le courrier électronique. On pourrait appeler cela un gestionnaire de protocole*du bureau*.
 
@@ -17,9 +19,11 @@ Les gestionnaires de protocoles web permettent à des applications web de partic
 
 La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise [`registerProtocolHandler()`](/fr/DOM/window.navigator.registerProtocolHandler) pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple&nbsp;:
 
-    navigator.registerProtocolHandler("mailto",
-                                      "https://www.example.com/?uri=%s",
-                                      "Example Mail");
+```js
+navigator.registerProtocolHandler("mailto",
+                                  "https://www.example.com/?uri=%s",
+                                  "Example Mail");
+```
 
 Où les paramètres sont&nbsp;:
 
@@ -73,7 +77,9 @@ Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la p
 
 La phase suivante est le traitement de l'action. Le navigateur extrait le `href` du lien activé, le combine avec le modèle d'URL fourni lors de l'enregistrement et effectue une requête HTTP GET sur l'URL. Ainsi, avec les exemples précédents, le navigateur effectuerait une requête GET sur cette URL&nbsp;:
 
-    http://starkravingfinkle.org/projects/wph/handler.php?value=fake:ceci%20est%20un%20faux%20protocole
+```
+http://starkravingfinkle.org/projects/wph/handler.php?value=fake:ceci%20est%20un%20faux%20protocole
+```
 
 Un code côté serveur peut extraire les paramètres de la chaîne de requête et effectuer l'action désirée.
 

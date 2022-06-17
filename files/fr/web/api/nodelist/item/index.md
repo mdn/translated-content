@@ -27,7 +27,9 @@ nodeItem = nodeList.item(index)
 
 JavaScript propose également une syntaxe semblable à un tableau pour obtenir un élément d'une liste de nœuds par index :
 
-    nodeItem = nodeList[index]
+```js
+nodeItem = nodeList[index]
+```
 
 ## Exemple
 
