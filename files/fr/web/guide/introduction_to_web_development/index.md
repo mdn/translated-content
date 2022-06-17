@@ -8,7 +8,7 @@ Que vous débutiez dans le domaine du développement web ou que vous désiriez �
 
 > **Note :** cette page n'est qu'une ébauche, nous aurions besoin de plus de contenu.
 
-## Sujets de documentation</h2>
+## Sujets de documentation
 
 Aucun article n'est encore disponible.
 
