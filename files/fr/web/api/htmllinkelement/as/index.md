@@ -11,7 +11,7 @@ La propriété **`as`** de l'interface [`HTMLLinkElement`](/fr/docs/Web/API/HTML
 
 ## Valeur
 
-Une chaine de texte.
+Une chaîne de caractères.
 
 ## Spécifications
 
