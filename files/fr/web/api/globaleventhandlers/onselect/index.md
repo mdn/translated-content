@@ -11,7 +11,9 @@ L'événement `select` n'est déclenché qu'après que du texte à l'intérieur 
 
 ## Syntaxe
 
-    target.onselect = functionRef;
+```js
+target.onselect = functionRef;
+```
 
 ### Valeur
 

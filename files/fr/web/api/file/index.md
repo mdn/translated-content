@@ -76,11 +76,13 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
 - À partir de Gecko 6.0 {{geckoRelease("6.0")}}, le code privilégié (par exemple au sein d’une extension) peut passer un objet `nsIFile` au constructeur DOM `File` pour spécifier le fichier à référencer.
 - À partir de Gecko 8.0 {{geckoRelease("8.0")}}, vous pouvez utiliser `new File` pour créer des objets `File` depuis des composants XPCOM au lieu de devoir instancier les objets `nsIDOMFile` directement. Contrairement à {{domxref("Blob")}}, le constructeur prend le nom de fichier comme second argument. Le nom de fichier peut être une chaîne quelconque.
 
-      new File(
-        Array parts,
-        String filename,
-        BlobPropertyBag properties
-      );
+```
+new File(
+  Array parts,
+  String filename,
+  BlobPropertyBag properties
+);
+```
 
 - Les propriétés et méthodes non standard suivantes ont été retirées de Gecko 7 {{geckoRelease("7.0")}}&nbsp;: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Les propriétés standard {{domxref("File.name")}}, {{domxref("Blob.size")}}, et les méthodes de {{domxref("FileReader")}} devraient être utilisées à la place.
 
