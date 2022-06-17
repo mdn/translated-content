@@ -15,7 +15,9 @@ Un nœud a sa valeur minimale si sa valeur de chaîne convertie en nombre est é
 
 ### Syntaxe
 
-    math:lowest(ensembleNœud)
+```
+math:lowest(ensembleNœud)
+```
 
 ### Arguments
 

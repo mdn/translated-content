@@ -31,19 +31,16 @@ Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire 
       <th scope="row">
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          title="HTML/Content categories#Flow content"
           >Contenu de flux</a
         >,
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          title="HTML/Content categories#phrasing_content"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"

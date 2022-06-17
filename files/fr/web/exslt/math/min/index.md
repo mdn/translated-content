@@ -16,7 +16,9 @@ Pour calculer la valeur minimale d'un ensemble de nœuds, l'ensemble est trié d
 
 ### Syntaxe
 
-    math:min(nodeSet)
+```
+math:min(nodeSet)
+```
 
 ### Arguments
 
