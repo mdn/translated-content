@@ -9,7 +9,9 @@ Renvoie la feuille de style qui inclut celle-ci, le cas échéant.
 
 ## Syntaxe
 
-    ObjRef = stylesheet.parentStyleSheet
+```js
+ObjRef = stylesheet.parentStyleSheet
+```
 
 ## Exemple
 

@@ -16,7 +16,9 @@ translation_of: Web/API/URL/searchParams
 
 ## Syntaxe
 
-    var urlSearchParams = URL.searchParams;
+```js
+var urlSearchParams = URL.searchParams;
+```
 
 ### Value
 

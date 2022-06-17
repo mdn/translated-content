@@ -9,7 +9,9 @@ La **`StyleSheet.disabled`**propriété indique si la feuille de style est empê
 
 ## Syntaxe
 
-    bool = stylesheet.disabled
+```js
+bool = stylesheet.disabled
+```
 
 ## Exemple
 

@@ -9,7 +9,9 @@ Renvoie l'emplacement de la feuille de style.
 
 ## Syntaxe
 
-    Uri = stylesheet.href
+```js
+Uri = stylesheet.href
+```
 
 ### Paramètres
 
