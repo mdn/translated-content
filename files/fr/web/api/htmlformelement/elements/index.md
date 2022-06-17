@@ -27,7 +27,7 @@ Seuls les éléments suivants sont renvoyés&nbsp;:
 
 - [`<button>`](/fr/docs/Web/HTML/Element/Button)
 - [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset)
-- [`<input>`](/fr/docs/Web/HTML/Element/Input) (exception faite des éléments dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `"image"`, pour des raisons historiques)
+- [`<input>`](/fr/docs/Web/HTML/Element/input) (exception faite des éléments dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `"image"`, pour des raisons historiques)
 - [`<object>`](/fr/docs/Web/HTML/Element/object)
 - [`<output>`](/fr/docs/Web/HTML/Element/output)
 - [`<select>`](/fr/docs/Web/HTML/Element/select)
@@ -48,21 +48,21 @@ Dans cet exemple, on voit comment obtenir la liste des contrôles d'un formulair
 ```
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const inputs = document.getElementById('mon-formulaire').elements;
 const inputByIndex = inputs[0];
-const inputByName = inputs["username"];
+const inputByName = inputs['username'];
 ```
 
 ### Accéder aux contrôles du formulaire
 
-Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) de type [`"text"`](/fr/docs/Web/HTML/Element/Input/text) afin de pouvoir modifier leur valeur.
+Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`"text"`](/fr/docs/Web/HTML/Element/Input/text) afin de pouvoir modifier leur valeur.
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const inputs = document.getElementById('mon-formulaire').elements;
 
 // On parcourt les contrôles du formulaire
 for (let i = 0; i < inputs.length; i++) {
-  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
+  if (inputs[i].nodeName === 'INPUT' && inputs[i].type === 'text') {
     // On met à jour le champ texte
     inputs[i].value.toLocaleUpperCase();
   }
@@ -72,12 +72,12 @@ for (let i = 0; i < inputs.length; i++) {
 ### Désactiver des contrôles de formulaire
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const inputs = document.getElementById('mon-formulaire').elements;
 
 // On parcourt les contrôles du formulaire
 for (let i = 0; i < inputs.length; i++) {
   // On les désactive tous
-  inputs[i].setAttribute("disabled", "");
+  inputs[i].setAttribute('disabled', '');
 }
 ```
 

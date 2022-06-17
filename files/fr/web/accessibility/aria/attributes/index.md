@@ -101,7 +101,7 @@ La plupart des attributs listés avant sont universels, ce qui signifie qu'on pe
 - [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-Tous les attributs de cette liste sont universels et seules les propriétés `aria-label` et `aria-labelledby` ne sont pas autorisées sur les éléments dont le rôle vaut [`presentation`](/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role) ou le rôle synonyme [`none`](/fr/docs/Web/Accessibility/ARIA/Roles/none_role) role.
+Tous les attributs de cette liste sont universels et seules les propriétés `aria-label` et `aria-labelledby` ne sont pas autorisées sur les éléments dont le rôle vaut [`presentation`](/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role) ou le rôle synonyme [`none`](/fr/docs/Web/Accessibility/ARIA/Roles/none_role).
 
 ## États et propriétés définis sur MDN
 

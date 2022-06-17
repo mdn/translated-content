@@ -24,9 +24,9 @@ _Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEl
 - [`HTMLButtonElement.form`](/fr/docs/Web/API/HTMLButtonElement/form) {{readonlyInline}}
   - : Un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) qui reflète l'élément de formulaire auquel ce bouton est associé. Si le bouton est un descendant de l'élément du formulaire, cet attribut sera une référence à l'objet `HTMLFormElement` associé à ce formulaire. Si le bouton n'est pas un descendant de l'élément du formulaire, l'attribut peut être une référence à n'importe quel élément `HTMLFormElement` associé du même document, ou la valeur `null` si aucun ne correspond.
 - [`HTMLButtonElement.formAction`](/fr/docs/Web/API/HTMLButtonElement/formAction)
-  - : Une chaîne de caractères qui reflète l'URI d'une ressource qui traite les informations envoyées par ce bouton. S'il est présent, cet attribut surcharge l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel est associé cet élément.
+  - : Une chaîne de caractères qui reflète l'URI d'une ressource qui traite les informations envoyées par ce bouton. S'il est présent, cet attribut surcharge l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#action) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel est associé cet élément.
 - [`HTMLButtonElement.formEnctype`](/fr/docs/Web/API/HTMLButtonElement/formEnctype)
-  - : Une chaîne de caractères qui reflète le type de contenu utilisé pour envoyer le formulaire au serveur. S'il est présent, cet attribut surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Element/Form#attr-enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel est associé cet élément.
+  - : Une chaîne de caractères qui reflète le type de contenu utilisé pour envoyer le formulaire au serveur. S'il est présent, cet attribut surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Element/Form#enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel est associé cet élément.
 - [`HTMLButtonElement.formMethod`](/fr/docs/Web/API/HTMLButtonElement/formMethod)
   - : Une chaîne de caractères qui reflète la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. S'il est présent, cet attribut surcharge l'attribut [`method`](/fr/docs/Web/HTML/Element/Form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel est associé cet élément.
 - [`HTMLButtonElement.formNoValidate`](/fr/docs/Web/API/HTMLButtonElement/formNoValidate)
@@ -51,7 +51,7 @@ _Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEl
       - : Le bouton réinitialise le formulaire.
     - `button`
       - : Le bouton ne fait rien.
-    - `menu`:
+    - `menu`
       - : Le bouton affiche un menu. {{experimental_inline}}
 
 - [`HTMLButtonElement.willValidate`](/fr/docs/Web/API/HTMLButtonElement/willValidate) {{readonlyInline}}
@@ -85,4 +85,4 @@ Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-subm
 
 ## Voir aussi
 
-- L'élément HTML qui implémente cette interface&nbsp;: [`<button>`](/fr/docs/Web/HTML/Element/Button)
+- L'élément HTML qui porte cette interface&nbsp;: [`<button>`](/fr/docs/Web/HTML/Element/Button)
