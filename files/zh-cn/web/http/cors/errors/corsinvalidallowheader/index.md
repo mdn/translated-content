@@ -1,0 +1,28 @@
+---
+title: "Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'"
+slug: Web/HTTP/CORS/Errors/CORSInvalidAllowHeader
+translation_of: Web/HTTP/CORS/Errors/CORSInvalidAllowHeader
+---
+{{HTTPSidebar}}
+
+## 原因
+
+```
+原因: CORS 头 'Access-Control-Allow-Headers' 的值无效
+```
+
+## 哪里错了？
+
+服务器发送的对 {{Glossary("CORS")}} 请求的响应包含 {{HTTPHeader("Access-Control-Allow-Headers")}} 头信息，并且含有至少一个无效的头名称。
+
+服务器发送 `Access-Control-Allow-Headers` 头为了响应 [预检请求](/zh-CN/docs/Glossary/Preflight_request)；它让客户端知道 CORS 请求中允许哪些 [HTTP 头](/zh-CN/docs/Web/HTTP/Headers)。
+如果客户端 [用户代理](/zh-CN/docs/Glossary/User_agent) 在 `Access-Control-Allow-Headers` 对应值中找不到头名称或者找到无效的头名称，都会发生此错误。
+
+这很有可能只能在服务端解决，方法是修改服务器的配置以不再发送带有 `Access-Control-Allow-Headers` 头的无效或未知头名称。检查你的用户代理或者你使用的浏览器中的 HTTP 库是最新的。
+
+## 参见
+
+- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- 术语：: {{Glossary("CORS")}}
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 头](/zh-CN/docs/Web/HTTP/Headers)
