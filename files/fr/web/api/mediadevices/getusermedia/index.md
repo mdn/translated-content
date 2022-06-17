@@ -23,7 +23,9 @@ navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 
 ## Syntaxe
 
-    var promise = navigator.mediaDevices.getUserMedia(constraints);
+```js
+var promise = navigator.mediaDevices.getUserMedia(constraints);
+```
 
 ### Paramètres
 

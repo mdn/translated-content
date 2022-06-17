@@ -11,7 +11,9 @@ Place le nœud spécifié et tout son sous-arbre dans une forme «&nbsp;normale&
 
 ## Syntaxe
 
-    élément.normalize();
+```js
+élément.normalize();
+```
 
 ## Exemple
 

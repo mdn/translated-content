@@ -18,6 +18,6 @@ La **`StyleSheet.disabled`**propriété indique si la feuille de style est empê
        // appliquer le style en ligne
     }
 
-## spécification
+## Spécification
 
 [désactivée](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)

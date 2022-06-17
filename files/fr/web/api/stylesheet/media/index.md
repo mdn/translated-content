@@ -24,6 +24,6 @@ translation_of: Web/API/StyleSheet/media
 
 La valeur par défaut pour les médias est "écran".
 
-## spécification
+## Spécification
 
 DOM Styles de niveau 2 - FEUILLE DE STYLES
