@@ -20,7 +20,9 @@ La propriété **`ParentNode.childElementCount`** en lecture seule renvoie un `u
 
 ## Syntaxe
 
-    var count = node.childElementCount;
+```js
+var count = node.childElementCount;
+```
 
 - count
   - : détient la valeur de retour, un type `unsigned long` (_long non signé_) (simplement un nombre entier)

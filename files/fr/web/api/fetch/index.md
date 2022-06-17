@@ -28,7 +28,9 @@ La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entêt
 
 ## Syntaxe
 
-    const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
+```js
+const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
+```
 
 ### Paramètres
 

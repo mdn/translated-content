@@ -15,7 +15,9 @@ La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Do
 
 ## Syntaxe
 
-    var policy = iframeElement.featurePolicy
+```js
+var policy = iframeElement.featurePolicy
+```
 
 ### Valeur
 

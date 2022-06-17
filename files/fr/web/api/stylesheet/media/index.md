@@ -20,7 +20,9 @@ Stylesheet.media = medium
 
 ## Exemple
 
-    <Link rel = "StyleSheet" href = "document.css" type = "text / css" media = "screen" />
+```html
+<Link rel = "StyleSheet" href="document.css" type="text/css" media="screen" />
+```
 
 ## Remarques
 

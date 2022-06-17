@@ -29,9 +29,11 @@ L'objet {{domxref("ServiceWorkerContainer")}}.
 
 Le code ci-dessous vérifie si le navigateur supporte les service workers.
 
-    if ('serviceWorker' in navigator) {
-      // Supported!
-    }
+```js
+if ('serviceWorker' in navigator) {
+  // Supported!
+}
+```
 
 ## Spécifications
 

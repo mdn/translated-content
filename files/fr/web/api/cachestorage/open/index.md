@@ -22,9 +22,11 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("Win
 
 ## Syntaxe
 
-    caches.open(cacheName).then(function(cache) {
-      // faire quelque-chose avec le cache
-    });
+```js
+caches.open(cacheName).then(function(cache) {
+  // faire quelque-chose avec le cache
+});
+```
 
 ### Paramètres
 

@@ -17,7 +17,9 @@ Cette fonctionnalité peut être utilisée pour glisser des fichiers du bureau u
 
 ## Syntaxe
 
-    dataTransfer.files;
+```js
+dataTransfer.files;
+```
 
 ### Valeur de retour
 

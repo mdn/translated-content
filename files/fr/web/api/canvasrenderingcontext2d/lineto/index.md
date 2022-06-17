@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte 
 
 ## Syntaxe
 
-    void ctx.lineTo(x, y);
+```js
+void ctx.lineTo(x, y);
+```
 
 ### Paramètres
 

@@ -15,7 +15,9 @@ Renvoie le nom de l'étiquette de l'élément sur lequel elle est appelée. Si l
 
 ## Syntaxe
 
-    elementName = element.tagName;
+```js
+elementName = element.tagName;
+```
 
 ### Valeur
 
@@ -29,7 +31,9 @@ Une chaîne indiquant le nom de l'étiquette de l'élément. Cette chaîne compo
 
 ### Contenu HTML
 
-    <span id="naissance">Lorsque je suis né…</span>
+```html
+<span id="naissance">Lorsque je suis né…</span>
+```
 
 ### Contenu JavaScript
 

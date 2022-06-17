@@ -15,10 +15,12 @@ bool = stylesheet.disabled
 
 ## Exemple
 
-    // si la feuille de style est désactivé ...
-    si (stylesheet.disabled) {
-       // appliquer le style en ligne
-    }
+```js
+// si la feuille de style est désactivé ...
+if (stylesheet.disabled) {
+  // appliquer le style en ligne
+}
+```
 
 ## Spécification
 

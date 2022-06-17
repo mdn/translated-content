@@ -15,7 +15,9 @@ La propriété en lecture simple **`type`** de l'interface {{domxref("Selection"
 
 ## Syntaxe
 
-    value = sel.type
+```js
+value = sel.type
+```
 
 ### Value
 

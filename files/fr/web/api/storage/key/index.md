@@ -16,7 +16,9 @@ La méthode `key()` de l'interface {{domxref("Storage")}} prend un nombre n en a
 
 ## Syntaxe
 
-    var unNomDeCle = storage.key(cle);
+```js
+var unNomDeCle = storage.key(cle);
+```
 
 ### Paramètres
 

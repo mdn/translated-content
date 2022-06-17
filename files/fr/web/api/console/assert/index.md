@@ -20,8 +20,10 @@ Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'asse
 
 ## Syntaxe
 
-    console.assert(assertion, obj1 [, obj2, ..., objN]);
-    console.assert(assertion, msg [, subst1, ..., substN]);
+```js
+console.assert(assertion, obj1 [, obj2, ..., objN]);
+console.assert(assertion, msg [, subst1, ..., substN]);
+```
 
 ### Paramètres
 
@@ -41,8 +43,6 @@ Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputti
 | Specification                                                                | Status                           | Comment             |
 | ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
 | {{SpecName("Console API", "#assert", "console.assert()")}} | {{Spec2("Console API")}} | Définition initiale |
-
-
 
 ## Compatibilité entre les navigateurs
 
