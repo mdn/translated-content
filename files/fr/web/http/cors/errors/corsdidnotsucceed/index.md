@@ -20,7 +20,9 @@ original_slug: Web/HTTP/CORS/Errors/CORSNAPasRéussi
 
 ## Raison
 
-    Raison: la requête CORS a échoué
+```
+Raison: la requête CORS a échoué
+```
 
 ## Qu'est ce qui ne s'est pas bien passé ?
 
