@@ -20914,13 +20914,6 @@
       "clokanku"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-03-23T23:14:22.660Z",
-    "contributors": [
-      "clokanku",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute": {
     "modified": "2019-03-23T23:14:27.575Z",
     "contributors": [
@@ -20946,13 +20939,6 @@
     "modified": "2019-03-18T20:46:06.951Z",
     "contributors": [
       "JeffD",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role": {
-    "modified": "2019-03-23T23:16:28.140Z",
-    "contributors": [
-      "hmore",
       "Fredchat"
     ]
   },
