@@ -10,6 +10,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSInvalidAllowMethod
 ```
 原因：CORS 头 'Access-Control-Allow-Methods' 的值无效
 ```
+
 ## 哪里错了？
 
 服务器发送的对 {{Glossary("CORS")}} 请求的响应包含 {{HTTPHeader("Access-Control-Allow-Methods")}} 头信息，并且含有至少一个无效的方法名称。
@@ -20,7 +21,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSInvalidAllowMethod
 
 ## 参见
 
-- [HTTP 访问控制（CORS）错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
+- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- 术语：{{Glossary("CORS")}}
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
