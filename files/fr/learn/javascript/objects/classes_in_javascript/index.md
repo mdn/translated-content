@@ -55,36 +55,42 @@ Voyons comment cela se passe avec un exemple concret.
 
 Tout d'abord, faites une copie du fichier [`oojs-class-inheritance-start.html`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/advanced/oojs-class-inheritance-start.html) (voir la [démo](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)). Vous y trouverez le constructeur `Personne()` que nous avons utilisé jusque-là dans l'ensemble des modules, néanmoins il y a un léger changement&nbsp;: nous n'avons défini que les attributs au sein du constructeur.
 
-    function Personne(prenom, nom, age, genre, interets) {
-      this.nom = {
-        prenom,
-        nom
-      };
-      this.age = age;
-      this.genre = genre;
-      this.interets = interets;
-    };
+```js
+function Personne(prenom, nom, age, genre, interets) {
+  this.nom = {
+    prenom,
+    nom
+  };
+  this.age = age;
+  this.genre = genre;
+  this.interets = interets;
+};
+```
 
 L'ensemble des méthodes est défini dans le prototype :
 
-    Personne.prototype.saluer = function() {
-      alert('Salut! Je suis ' + this.nom.prenom + '.');
-    };
+```js
+Personne.prototype.saluer = function() {
+  alert('Salut! Je suis ' + this.nom.prenom + '.');
+};
+```
 
 Essayons de créer une classe `Professeur` similaire à celle que nous avons utilisée jusqu'ici dans les autres modules d'initiations à l'approche objet. Ainsi, cette classe hérite de `Personne` mais possède aussi&nbsp;:
 
-1.  Un nouvel attribut `matière` — qui contiendra la matière que le professeur enseigne.
-2.  Une méthode `saluer` un peu plus élaborée, qui sera un peu plus formelle que la méthode de base, cela sera plus approprié, lorsque le professeur s'adressera, par exemple, à des étudiants.
+1. Un nouvel attribut `matière` — qui contiendra la matière que le professeur enseigne.
+2. Une méthode `saluer` un peu plus élaborée, qui sera un peu plus formelle que la méthode de base, cela sera plus approprié, lorsque le professeur s'adressera, par exemple, à des étudiants.
 
 ## Définissons le constructeur Professeur()
 
 La première chose à faire est de créer le constructeur `Professeur()` via l'ajout du code suivant :
 
-    function Professeur(prenom, nom, age, genre, interets, matiere) {
-      Personne.call(this, prenom, nom, age, genre, interets);
+```js
+function Professeur(prenom, nom, age, genre, interets, matiere) {
+  Personne.call(this, prenom, nom, age, genre, interets);
 
-      this.matiere = matiere;
-    }
+  this.matiere = matiere;
+}
+```
 
 Cela ressemble beaucoup au constructeur `Personne`, mais il y a quelque chose que nous n'avons pas encore vu&nbsp;: la fonction [`call()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/call). Cette fonction permet d'appeler une fonction définie ailleurs dans le contexte actuel. Le premier paramètre spécifie la valeur de `this` que l'on souhaite utiliser lorsque l'on utilisera la fonction, les paramètres suivants seront les paramètres qui pourront être passés en arguments lorsqu'elle sera appelée.
 
@@ -94,20 +100,20 @@ La dernière ligne au sein du constructeur sert simplement à définir l'attribu
 
 Notez que nous aurions très bien pu écrire tout simplement ceci :
 
-    function Professeur(prenom, nom, age, genre, interets, matiere) {
-      this.nom_complet = {
-        prenom,
-        nom
-      };
-      this.age = age;
-      this.genre = genre;
-      this.interets = interets;
-      this.matiere = matiere;
-    }
+```js
+function Professeur(prenom, nom, age, genre, interets, matiere) {
+  this.nom_complet = {
+    prenom,
+    nom
+  };
+  this.age = age;
+  this.genre = genre;
+  this.interets = interets;
+  this.matiere = matiere;
+}
+```
 
 Cependant, cela aurait eu pour effet de redéfinir les attributs à nouveau, sans les hériter de `Personne()`, ce qui n'est pas vraiment le but que nous voulons atteindre lorsque l'on parle de l'héritage. Cela ajoute aussi des lignes de code inutiles.
-
-
 
 ### Hériter d'un constructeur sans paramètre
 
@@ -141,15 +147,19 @@ Notre classe `Professeur()` doit hériter des méthodes définies dans le protot
 
 Ajoutez la ligne suivante à la suite du bloc de code que nous venons d'ajouter&nbsp;:
 
-    Professeur.prototype = Object.create(Personne.prototype);
+```js
+Professeur.prototype = Object.create(Personne.prototype);
+```
 
-1.  Ici, notre ami [`create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vient nous aider à nouveau. Dans ce cas, on l'utilise pour créer un nouvel objet que nous assignons à `Professeur.prototype`. Le nouvel objet possède `Personne.prototype` désormais comme son prototype et héritera ainsi, si et quand le besoin se fera sentir, de toutes les méthodes disponible sur `Personne.prototype`.
-2.  Nous avons également besoin de faire encore une chose avant de continuer. Après avoir ajouté la ligne précédente, le constructeur du prototype de `Professeur()` est désormais équivalent à celui de `Personne()`, parce que nous avons défini `Professeur.prototype` pour référencer un objet qui hérite ses propriétés de `Personne.prototype`&nbsp;! Essayez, après avoir sauvegardé votre code et rechargé la page, d'entrer `Professeur.prototype.constructor` dans la console pour vérifier.
-3.  Cela peut devenir problématique, autant le corriger dès maintenant. C'est possible via l'ajout de la ligne de code suivante à la fin&nbsp;:
+1. Ici, notre ami [`create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vient nous aider à nouveau. Dans ce cas, on l'utilise pour créer un nouvel objet que nous assignons à `Professeur.prototype`. Le nouvel objet possède `Personne.prototype` désormais comme son prototype et héritera ainsi, si et quand le besoin se fera sentir, de toutes les méthodes disponible sur `Personne.prototype`.
+2. Nous avons également besoin de faire encore une chose avant de continuer. Après avoir ajouté la ligne précédente, le constructeur du prototype de `Professeur()` est désormais équivalent à celui de `Personne()`, parce que nous avons défini `Professeur.prototype` pour référencer un objet qui hérite ses propriétés de `Personne.prototype`&nbsp;! Essayez, après avoir sauvegardé votre code et rechargé la page, d'entrer `Professeur.prototype.constructor` dans la console pour vérifier.
+3. Cela peut devenir problématique, autant le corriger dès maintenant. C'est possible via l'ajout de la ligne de code suivante à la fin&nbsp;:
 
-        Professeur.prototype.constructor = Professeur;
+    ```js
+    Professeur.prototype.constructor = Professeur;
+    ```
 
-4.  À présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
+4. À présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
 
 ## Donner au prototype de Professeur() une nouvelle fonction saluer()
 
@@ -157,37 +167,41 @@ Pour terminer notre code, nous devons définir une nouvelle fonction `saluer()` 
 
 La façon la plus facile d'accomplir cela est de la définir sur le prototype de Professeur() — ajoutez ceci à la suite de votre code :
 
-    Professeur.prototype.saluer = function() {
-      var prefix;
+```js
+Professeur.prototype.saluer = function() {
+  var prefix;
 
-      if (this.genre === 'mâle' || this.genre === 'Mâle' || this.genre === 'm' || this.genre === 'M') {
-        prefix = 'M.';
-      } else if (this.genre === 'femelle' || this.genre === 'Femelle' || this.genre === 'f' || this.genre === 'F') {
-        prefix = 'Mme';
-      } else {
-        prefix = '';
-      }
+  if (this.genre === 'mâle' || this.genre === 'Mâle' || this.genre === 'm' || this.genre === 'M') {
+    prefix = 'M.';
+  } else if (this.genre === 'femelle' || this.genre === 'Femelle' || this.genre === 'f' || this.genre === 'F') {
+    prefix = 'Mme';
+  } else {
+    prefix = '';
+  }
 
-      alert('Bonjour. Mon nom est ' + prefix + ' ' + this.nom_complet.nom + ', et j\'enseigne ' + this.matiere + '.');
-    };
+  alert('Bonjour. Mon nom est ' + prefix + ' ' + this.nom_complet.nom + ', et j\'enseigne ' + this.matiere + '.');
+};
+```
 
 Ceci affiche la salutation du professeur, qui utilise le titre de civilité approprié à son genre, au moyen d'une instruction conditionnelle.
-
-
 
 ## Exécuter l'exemple
 
 Une fois tout le code saisi, essayez de créer une instance d'objet `Professeur()` en ajoutant à la fin de votre JavaScript (ou à l'endroit de votre choix) :
 
-    var professeur1 = new Professeur('Cédric', 'Villani', 44, 'm', ['football', 'cuisine'], 'les mathématiques');
+```js
+var professeur1 = new Professeur('Cédric', 'Villani', 44, 'm', ['football', 'cuisine'], 'les mathématiques');
+```
 
 Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes de votre nouvel objet `professeur1`, par exemple :
 
-    professeur1.nom_complet.nom;
-    professeur1.interets[0];
-    professeur1.bio();
-    professeur1.matiere;
-    professeur1.saluer();Ffa
+```js
+professeur1.nom_complet.nom;
+professeur1.interets[0];
+professeur1.bio();
+professeur1.matiere;
+professeur1.saluer();
+```
 
 Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1, 2, 3 et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
 
@@ -211,9 +225,9 @@ Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScr
 
 Pour résumer, vous avez de façon basique trois types de propriétés/méthodes à prendre en compte&nbsp;:
 
-1.  Celles définies au sein d'un constructeur et passées en paramètres aux instances de l'objet. Celles-là ne sont pas difficiles à repérer — dans votre propre code personnalisé, elles sont les membres définis en utilisant les lignes comme `this.x = x`&nbsp;; dans les codes préconstruits propres aux navigateurs, ils sont les membres seulement accessibles aux instances d'objet (usuellement créés en appelant un constructeur via l'utilisation du mot-clé `new`, exemple&nbsp;: `var myInstance = new myConstructor()`).
-2.  Celles définies directement sur les constructeurs eux-mêmes et accessibles uniquement sur les constructeurs. Celles-là sont communément présentes uniquement dans les objets préconstruits des navigateurs et sont reconnus par le fait d'être directement chaînées sur un constructeur et non sur une instance. Par exemple, [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
-3.  Celles définies sur un prototype de constructeur qui sont héritées par toutes les instances des classes d'objet. Celles-là incluent n'importe quel membre défini sur un prototype de constructeur, exemple&nbsp;: `myConstructor.prototype.x()`.
+1. Celles définies au sein d'un constructeur et passées en paramètres aux instances de l'objet. Celles-là ne sont pas difficiles à repérer — dans votre propre code personnalisé, elles sont les membres définis en utilisant les lignes comme `this.x = x`&nbsp;; dans les codes préconstruits propres aux navigateurs, ils sont les membres seulement accessibles aux instances d'objet (usuellement créés en appelant un constructeur via l'utilisation du mot-clé `new`, exemple&nbsp;: `var myInstance = new myConstructor()`).
+2. Celles définies directement sur les constructeurs eux-mêmes et accessibles uniquement sur les constructeurs. Celles-là sont communément présentes uniquement dans les objets préconstruits des navigateurs et sont reconnus par le fait d'être directement chaînées sur un constructeur et non sur une instance. Par exemple, [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+3. Celles définies sur un prototype de constructeur qui sont héritées par toutes les instances des classes d'objet. Celles-là incluent n'importe quel membre défini sur un prototype de constructeur, exemple&nbsp;: `myConstructor.prototype.x()`.
 
 Si vous êtes encore dans la confusion par rapport aux différents types, ne vous inquiétez pas, c'est normal — vous êtes encore en train d'apprendre et la familiarité apparaîtra avec la pratique.
 
@@ -244,8 +258,6 @@ Dans le prochain article, nous jetterons un regard sur comment travailler avec l
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — une partie de l'excellente série de manuels sur le JavaScript de Kyle Simpson. Le chapitre 5 en particulier jette un regard beaucoup plus approfondi sur les prototypes que nous ne l'avons fait ici. Nous avons présenté ici une vue simplifiée dans cette série d'articles dédiée aux débutants, tandis que Kyle est allé dans les détails les plus profonds et fournit une image beaucoup plus complexe et plus précise.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-
 
 ## Dans ce module
 
