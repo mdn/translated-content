@@ -13,7 +13,9 @@ Tous les messages de la console seront supprimés et remplacés par un message d
 
 ## Syntaxe
 
-    console.clear();
+```js
+console.clear();
+```
 
 ## Paramètres
 

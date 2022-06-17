@@ -11,7 +11,9 @@ La méthode **`writeText()`** de l’interface {{domxref("Clipboard")}} écrit l
 
 ## Syntaxe
 
-    var promesse = navigator.clipboard.writeText(nouveauTexte)
+```js
+var promesse = navigator.clipboard.writeText(nouveauTexte)
+```
 
 ### Paramètres
 
