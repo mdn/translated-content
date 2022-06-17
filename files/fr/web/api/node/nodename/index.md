@@ -32,7 +32,9 @@ Les valeurs retournées pour les différents types de noeuds sont :
 
 ## Syntaxe
 
-    var str = node.nodeName;
+```js
+var str = node.nodeName;
+```
 
 ## Exemple
 

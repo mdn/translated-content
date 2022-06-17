@@ -18,7 +18,9 @@ Initialement, elle détachait {{domxref("NodeIterator")}} de l'ensemble sur lequ
 
 ## Syntaxe
 
-    nodeIterator.detach();
+```js
+nodeIterator.detach();
+```
 
 ## Exemple
 

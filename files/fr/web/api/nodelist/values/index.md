@@ -16,7 +16,9 @@ La méthode **`NodeList.values()`** renvoie un {{jsxref("Les_protocoles_iteratio
 
 ## Syntaxe
 
-    nodeList.values();
+```js
+nodeList.values();
+```
 
 ### Valeur retournée
 

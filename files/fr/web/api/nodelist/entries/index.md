@@ -18,7 +18,9 @@ La méthode **`NodeList.entries()`** renvoie un {{jsxref("Les_protocoles_iterati
 
 ## Syntaxe
 
-    list.entries();
+```js
+list.entries();
+```
 
 ### Valeur retournée
 

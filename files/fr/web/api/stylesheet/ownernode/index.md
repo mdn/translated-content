@@ -36,6 +36,6 @@ ObjRef = stylesheet.ownerNode
 
 Pour HTML, **ownerNode** peut être l' élément [LINK](en/LINK) ou [STYLE](en/STYLE) correspondant . Pour XML, il peut s'agir des instructions de traitement de liaison. Pour les feuilles de style qui sont incluses dans d'autres feuilles de style, la valeur de cet attribut est NULL.
 
-## spécification
+## Spécification
 
 DOM Styles de niveau 2 - FEUILLE DE STYLES
