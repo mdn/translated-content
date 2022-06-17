@@ -18,7 +18,9 @@ Retourne/définit la partie domaine de l'origine du document courant, telle qu'u
 
 ## Syntaxe
 
-    var chaineDomaine = document.domain; document.domain = chaine;
+```js
+var chaineDomaine = document.domain; document.domain = chaine;
+```
 
 ## Exemple
 

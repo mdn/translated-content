@@ -17,7 +17,9 @@ Renvoie l'élément qui dispose actuellement du focus.
 
 ### Syntaxe
 
-    var elemCourant = document.activeElement;
+```js
+var elemCourant = document.activeElement;
+```
 
 ### Exemple
 

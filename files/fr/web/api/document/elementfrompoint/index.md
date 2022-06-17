@@ -15,7 +15,9 @@ Renvoie l'élément visible au point donné, spécifié relativement au point su
 
 ### Syntaxe
 
-    element = document.elementFromPoint(x,y);
+```js
+element = document.elementFromPoint(x,y);
+```
 
 where
 
