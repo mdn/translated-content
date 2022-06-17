@@ -39,7 +39,7 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
 
 <p>返回值<code>timeoutID</code>是一个正整数，表示定时器的编号。这个值可以传递给{{domxref("clearTimeout()")}}来取消该定时器。</p>
 
-<p>需要注意的是<code>setTimeout()</code>和{{domxref("setInterval()")}}共用一个编号池，技术上，<code>clearTimeout()</code>和 {{domxref("clearInterval()")}} 可以互换。但是，为了避免混淆，不要混用取消定时函数。</p>
+<p>需要注意的是 <code>setTimeout()</code> 和 {{domxref("setInterval()")}} 共用一个编号池，技术上，<code>clearTimeout()</code> 和 {{domxref("clearInterval()")}} 可以互换。但是，为了避免混淆，不要混用取消定时函数。</p>
 
 <p>在同一个对象上（一个 window 或者 worker），<code>setTimeout()</code>或者<code>setInterval()</code>在后续的调用不会重用同一个定时器编号。但是不同的对象使用独立的编号池。</p>
 
@@ -354,9 +354,9 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <h4 id="最小延时_>4ms">最小延时 &gt;=4ms</h4>
 
-<p>在浏览器中，<code>setTimeout()/</code>{{domxref("setInterval()")}} 的每调用一次定时器的最小间隔是 4ms，这通常是由于函数嵌套导致（嵌套层级达到一定深度），或者是由于已经执行的 setInterval 的回调函数阻塞导致的。例如：</p>
+<p>在浏览器中，<code>setTimeout()</code>/{{domxref("setInterval()")}} 的每调用一次定时器的最小间隔是 4ms，这通常是由于函数嵌套导致（嵌套层级达到一定深度），或者是由于已经执行的 setInterval 的回调函数阻塞导致的。例如：</p>
 
-<pre class="brush: js notranslate" id="ct-0"><code>function cb() { f(); setTimeout(cb, 0); }
+<pre class="brush: js notranslate"><code>function cb() { f(); setTimeout(cb, 0); }
 setTimeout(cb, 0);</code></pre>
 
 <pre class="brush: js notranslate"><code>setInterval(f, 0);</code></pre>
