@@ -35,11 +35,13 @@ Il y a 2 cas d'utilisation communs:
   </tbody>
 </table>
 
-## Syntax
+## Syntaxe
 
-    If-None-Match: "<valeur_etag>"
-    If-None-Match: "<valeur_etag>", "<valeur_etag>", …
-    If-None-Match: *
+```
+If-None-Match: "<valeur_etag>"
+If-None-Match: "<valeur_etag>", "<valeur_etag>", …
+If-None-Match: *
+```
 
 ## Directives
 
@@ -50,11 +52,13 @@ Il y a 2 cas d'utilisation communs:
 
 ## Exemples
 
-    If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
+```
+If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
-    If-None-Match: W/"67ab43", "54ed21", "7892dd"
+If-None-Match: W/"67ab43", "54ed21", "7892dd"
 
-    If-None-Match: *
+If-None-Match: *
+```
 
 ## Spécifications
 

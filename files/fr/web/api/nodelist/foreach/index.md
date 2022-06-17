@@ -10,7 +10,9 @@ La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le ra
 
 ## Syntaxe
 
-    nodeList.forEach(callback[, thisArg]);
+```js
+nodeList.forEach(callback[, thisArg]);
+```
 
 ### Paramètres
 

@@ -34,11 +34,15 @@ L'attribut {{htmlattrxref("class")}} est une liste de termes séparés par des e
 
 ## Syntaxe
 
-    .nomdeclasse { déclarations CSS }
+```
+.nomdeclasse { déclarations CSS }
+```
 
 Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) de la façon suivante :
 
-    [class~=nomdeclasse] { déclarations CSS }
+```
+[class~=nomdeclasse] { déclarations CSS }
+```
 
 ## Exemples
 

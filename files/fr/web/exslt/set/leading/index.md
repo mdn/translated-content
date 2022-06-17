@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/set/leading
 
 ### Syntaxe
 
-    set:leading(ensembleNœuds1,ensembleNœuds2)
+```
+set:leading(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

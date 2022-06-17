@@ -15,7 +15,9 @@ La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration"
 
 ## Syntaxe
 
-    nodeList.keys();
+```js
+nodeList.keys();
+```
 
 ### Valeur retournée
 

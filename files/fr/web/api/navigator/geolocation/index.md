@@ -17,7 +17,9 @@ translation_of: Web/API/Navigator/geolocation
 
 ## Syntaxe
 
-    geo = navigator.geolocation
+```js
+geo = navigator.geolocation
+```
 
 ## Spécifications
 

@@ -9,7 +9,9 @@ Le constructeur **`TextEncoder()`** retourne un nouvel objet {{DOMxRef("TextEnco
 
 ## Syntaxe
 
-    encoder = new TextEncoder();
+```js
+encoder = new TextEncoder();
+```
 
 ### Paramètre
 

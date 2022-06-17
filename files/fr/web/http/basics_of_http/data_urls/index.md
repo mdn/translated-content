@@ -20,7 +20,9 @@ original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 
 Les URLs de données sont composées de quatre parties : un préfixe (`data:`), un type MIME indiquant le type de donnée, un jeton facultatif encodé en `base64` dans le cas où il n'est pas textuel ainsi que les données elles-mêmes :
 
-    data:[<mediatype>][;base64],<data>
+```
+data:[<mediatype>][;base64],<data>
+```
 
 Le `mediatype` est une chaîne de type MIME, telle que `'image/jpeg'` pour un fichier image JPEG. Si le format MIME n'est pas spécifié, la valeur par défaut sera `text/plain;charset=US-ASCII`.
 
@@ -41,15 +43,19 @@ Quelques exemples :
 
 Il est possible de le faire très simplement via la ligne de commande `uuencode` pour les systèmes Linux et Mac OS X :
 
-    uuencode -m infile remotename
+```bash
+uuencode -m infile remotename
+```
 
 Le paramètre `infile` est le nom du fichier que vous souhaitez encoder au format base64, `remotename` est le nom du fichier distant qui n'est pas réellement utilisé dans l'URL de type `data`.
 
 Le résultat devrait ressembler à :
 
-    begin-base64 664 test
-    YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
-    ====
+```
+begin-base64 664 test
+YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
+====
+```
 
 L'URL de donnée pourra ainsi utiliser la donnée encodée après l'en-tête.
 
@@ -61,11 +67,15 @@ Les APIs web contiennent des méthodes pour encoder et décoder en base64 : [Dé
 
 Cette section décrit les problèmes qui apparaissent fréquemment lors de la création et de l'utilisation des URLs de type `data`
 
-    data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+```
+data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+```
 
 Cela représente une ressource HTML dont le contenu est le suivant :
 
-    beaucoup de texte...<p><a name="bottom">bottom</a>?arg=val
+```
+beaucoup de texte...<p><a name="bottom">bottom</a>?arg=val
+```
 
 - Syntaxe
   - : Le format pour les URLs de type `data` est très simple, mais il est aussi simple d'oublier la virgule qui précède le segment de données ou de mal encoder la donnée en base64.

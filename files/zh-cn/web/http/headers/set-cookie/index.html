@@ -63,7 +63,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>指定一个 URL 路径，这个路径必须出现在要请求的资源的路径中才可以发送 Cookie 首部。字符  %x2F ("/") 可以解释为文件目录分隔符，此目录的下级目录也满足匹配的条件（例如，如果 path=/docs，那么 "/docs", "/docs/Web/" 或者 "/docs/Web/HTTP" 都满足匹配的条件）。</dd>
  <dt>Secure {{optional_inline}}</dt>
  <dd>一个带有安全属性的 cookie 只有在请求使用 SSL 和 HTTPS 协议的时候才会被发送到服务器。然而，保密或敏感信息永远不要在 HTTP cookie 中存储或传输，因为整个机制从本质上来说都是不安全的，比如前述协议并不意味着所有的信息都是经过加密的。
- <p class="note"><strong>注意：</strong>非安全站点（http:）已经不能再在 cookie 中设置 secure 指令了（在 Chrome 52+ and Firefox 52+ 中新引入的限制）。</p>
+ <p><strong>注意：</strong>非安全站点（http:）已经不能再在 cookie 中设置 secure 指令了（在 Chrome 52+ and Firefox 52+ 中新引入的限制）。</p>
  </dd>
  <dt>HttpOnly {{optional_inline}}</dt>
  <dd>设置了 HttpOnly 属性的 cookie 不能使用 JavaScript 经由  {{domxref("Document.cookie")}} 属性、{{domxref("XMLHttpRequest")}} 和  {{domxref("Request")}} APIs 进行访问，以防范跨站脚本攻击（{{Glossary("XSS")}}）。</dd>

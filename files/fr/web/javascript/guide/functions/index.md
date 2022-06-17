@@ -231,9 +231,9 @@ getScore(); // Renvoie "Licorne a marqué 5"
 
 Une fonction peut faire référence à elle-même et s'appeler elle-même. Il existe trois moyens pour qu'une fonction fasse référence à elle-même :
 
-1.  Le nom de la fonction
-2.  [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
-3.  Une variable de la portée qui fait référence à la fonction
+1. Le nom de la fonction
+2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
+3. Une variable de la portée qui fait référence à la fonction
 
 Par exemple, avec la définition de fonction suivante :
 
@@ -245,9 +245,9 @@ var toto = function truc() {
 
 Dans le corps de la fonction, ces trois éléments seront équivalents :
 
-1.  `truc()`
-2.  `arguments.callee()`
-3.  `toto()`
+1. `truc()`
+2. `arguments.callee()`
+3. `toto()`
 
 Une fonction qui s'appelle elle-même est appelée une fonction _récursive_. Sous certains aspects, une récursion est semblable à une boucle : toutes les deux exécutent le même code plusieurs fois et toutes les deux requièrent une condition d'arrêt (pour éviter une boucle ou une récursion infinie). Par exemple, ce fragment de code utilisant une boucle :
 
@@ -386,9 +386,9 @@ A(1); // affichera 6 (1 + 2 + 3)
 
 Dans cet exemple `C` accède au `y` de `B` et au `x` de `A`. Ceci est rendu possible car :
 
-1.  `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`.
-2.  `C` est une fermeture qui contient `B`.
-3.  La fermeture de `B` contient `A` donc la fermeture de `C` contient `A`, `C` peut ainsi accéder aux arguments et aux variables de `B` _et_ `A`. On dit que `C` _chaîne_ les portées de `B` et de `A` (dans cet ordre).
+1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`.
+2. `C` est une fermeture qui contient `B`.
+3. La fermeture de `B` contient `A` donc la fermeture de `C` contient `A`, `C` peut ainsi accéder aux arguments et aux variables de `B` _et_ `A`. On dit que `C` _chaîne_ les portées de `B` et de `A` (dans cet ordre).
 
 La réciproque n'est pas vraie. `A` ne peut pas accéder à `C`, car `A` ne peut pas accéder aux arguments ou aux variables de `B`, or `C` est une variable de `B`. De cette façon, `C` reste privée en dehors de `B`.
 
@@ -583,10 +583,6 @@ console.log(arr); // [2, 4, 6]
 [Une expression de fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques. Une telle fonction ne possède alors pas de valeur propre pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Les fonctions fléchées sont nécessairement anonymes.
 
 Les fonctions fléchées ont été introduites pour deux raisons principales : une syntaxe plus courte et l'absence de `this` rattaché à la fonction. Voir aussi [ce billet sur tech.mozfr.org sur les fonctions fléchées](https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees).
-
-
-
-
 
 ### Concision de la syntaxe
 

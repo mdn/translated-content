@@ -13,7 +13,7 @@ translation_of: Web/API/Selection/type
 
 La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.
 
-## Syntax
+## Syntaxe
 
     value = sel.type
 

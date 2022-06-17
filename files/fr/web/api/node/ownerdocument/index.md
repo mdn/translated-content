@@ -15,7 +15,9 @@ La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet documen
 
 ## Syntaxe
 
-    document = element.ownerDocument;
+```js
+document = element.ownerDocument;
+```
 
 - `document` est l'objet [`document`](/fr/docs/Web/API/document) parent de l'élément courant.
 

@@ -2933,12 +2933,6 @@
       "kenttsai"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:48:01.923Z",
-    "contributors": [
-      "Shiyou"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2019-03-23T22:30:39.565Z",
     "contributors": [
@@ -8207,6 +8201,12 @@
     "contributors": [
       "SphinxKnight",
       "bine139488"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2019-03-23T22:48:01.923Z",
+    "contributors": [
+      "Shiyou"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Operators": {

@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/set/trailing
 
 ### Syntaxe
 
-    set:trailing(ensembleNœuds1,ensembleNœuds2)
+```
+set:trailing(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

@@ -13,7 +13,9 @@ Renvoie une chaîne de caractères représentant l'actuel objet `selection`, i.e
 
 ### Syntaxe
 
-    string =sel.toString()
+```js
+string =sel.toString()
+```
 
 - `string` est la représentation sous la forme d'une chaîne de caractères de la sélection.
 

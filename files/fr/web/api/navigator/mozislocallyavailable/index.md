@@ -13,7 +13,9 @@ Permet de déterminer si une ressource donnée est disponible.
 
 ### Syntaxe
 
-    window.navigator.isLocallyAvailable(uri,ifOffline);
+```js
+window.navigator.isLocallyAvailable(uri,ifOffline);
+```
 
 - `uri` est l'URI de la ressource dont la disponibilité doit être vérifiée, sous la forme d'une chaîne.
 - `ifOffline` permet de spécifier si le cache de ressources hors ligne doit être vérifié&nbsp;; indiquez `true` pour prendre en compte le cache de ressources hors ligne.

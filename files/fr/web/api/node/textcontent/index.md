@@ -14,8 +14,10 @@ La propriété **`Node.textContent`**  représente le contenu textuel d'un nœud
 
 ## Syntaxe
 
-    var text = element.textContent;
-    element.textContent = "ceci est un simple exemple de texte";
+```js
+var text = element.textContent;
+element.textContent = "ceci est un simple exemple de texte";
+```
 
 ## Description
 

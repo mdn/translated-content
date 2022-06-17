@@ -19,7 +19,9 @@ Crée et affiche un dialogue modal contenant un document HTML spécifié.
 
 ### Syntaxe
 
-    retour = window.showModalDialog(uri[,arguments][,options]);
+```js
+retour = window.showModalDialog(uri[,arguments][,options]);
+```
 
 où
 

@@ -9,8 +9,10 @@ translation_of: Web/API/StyleSheet/media
 
 ## Syntaxe
 
-    Medium = stylesheet.media
-    Stylesheet.media = medium
+```js
+Medium = stylesheet.media
+Stylesheet.media = medium
+```
 
 ## Paramètres
 
@@ -24,6 +26,6 @@ translation_of: Web/API/StyleSheet/media
 
 La valeur par défaut pour les médias est "écran".
 
-## spécification
+## Spécification
 
 DOM Styles de niveau 2 - FEUILLE DE STYLES
