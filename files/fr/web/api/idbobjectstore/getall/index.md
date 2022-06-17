@@ -11,7 +11,9 @@ La méthode **`getAll()`** de l'interface {{domxref("IDBObjectStore")}} fait une
 
 ## Syntaxe
 
-    var request = objectStore.getAll(query, count);
+```js
+var request = objectStore.getAll(query, count);
+```
 
 ## Paramètres
 

@@ -11,7 +11,9 @@ Vous pouvez accéder à un élément particulier en utilisant soit un index soit
 
 ## Syntaxe
 
-    nodeList = HTMLFormElement.elements
+```js
+nodeList = HTMLFormElement.elements
+```
 
 ## Exemple
 
