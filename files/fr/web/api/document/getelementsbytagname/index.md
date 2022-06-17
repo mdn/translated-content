@@ -14,7 +14,9 @@ Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise 
 
 ## Syntaxe
 
-    var elements = document.getElementsByTagName(name);
+```js
+var elements = document.getElementsByTagName(name);
+```
 
 - `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
 - `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».

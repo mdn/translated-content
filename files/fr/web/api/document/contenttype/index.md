@@ -16,7 +16,9 @@ Renvoie le type MIME dans lequel le document est rendu. Il peut provenir d'en-t�
 
 ## Syntaxe
 
-    contentType = document.contentType;
+```js
+contentType = document.contentType;
+```
 
 `contentType` est une propriété en lecture seule.
 
