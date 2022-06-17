@@ -9,7 +9,9 @@ Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats 
 
 ## Syntaxe
 
-    mql = window.matchMedia(mediaQueryString)
+```js
+mql = window.matchMedia(mediaQueryString)
+```
 
 Ici, `mediaQueryString` est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.
 

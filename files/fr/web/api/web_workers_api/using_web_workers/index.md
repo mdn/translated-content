@@ -216,7 +216,9 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
-    Content-Security-Policy: script-src 'self'
+```
+Content-Security-Policy: script-src 'self'
+```
 
 Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 

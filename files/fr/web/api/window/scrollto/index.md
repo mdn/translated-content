@@ -44,6 +44,7 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ```js
 window.scrollTo(0, 1000);
 ```
+
 ### En utilisant `options`
 
 ```js

@@ -15,9 +15,11 @@ Pour des raisons de sécurité, certain header ne peuvent être manipulés que p
 
 > **Note :** Dans certain cas, vous pourrez rencontrer l'erreur / exception "**not allowed by Access-Control-Allow-Headers in preflight response**" quand vous enverez une requête cross domains. Dans ce cas, vous devrez configurer {{HTTPHeader("Access-Control-Allow-Headers")}} dans votre réponse HTTP coté serveur.
 
-## Syntax
+## Syntaxe
 
-    XMLHttpRequest.setRequestHeader(header, value)
+```js
+XMLHttpRequest.setRequestHeader(header, value)
+```
 
 ### Paramètre
 

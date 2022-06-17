@@ -14,7 +14,9 @@ Fait défiler le document du nombre de pages spécifié.
 
 ### Syntaxe
 
-    window.scrollByPages(pages)
+```js
+window.scrollByPages(pages)
+```
 
 ### Paramètres
 
@@ -23,11 +25,13 @@ Fait défiler le document du nombre de pages spécifié.
 
 ### Exemples
 
-    // fait défiler le document d'une page vers le bas
-    window.scrollByPages(1);
+```js
+// fait défiler le document d'une page vers le bas
+window.scrollByPages(1);
 
-    // fait défiler le document d'une page vers le haut
-    window.scrollByPages(-1);
+// fait défiler le document d'une page vers le haut
+window.scrollByPages(-1);
+```
 
 ### Notes
 

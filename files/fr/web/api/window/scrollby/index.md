@@ -14,7 +14,9 @@ Fait défiler le document dans la fenêtre du nombre de pixels passé en paramè
 
 ## Syntaxe
 
-    window.scrollBy(X, Y);
+```js
+window.scrollBy(X, Y);
+```
 
 ### Paramètres
 
@@ -25,8 +27,10 @@ Des coordonnées positives feront défiler à droite et vers le bas de la page. 
 
 ## Exemples
 
-    // fait défiler d'une page
-    window.scrollBy(0, window.innerHeight);
+```js
+// fait défiler d'une page
+window.scrollBy(0, window.innerHeight);
+```
 
 ## Notes
 
