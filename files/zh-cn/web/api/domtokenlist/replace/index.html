@@ -5,7 +5,7 @@ translation_of: Web/API/DOMTokenList/replace
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>{{domxref("DOMTokenList")}}接口的 <code><strong>replace()</strong></code> 方法可以将列表中一个已存在的token替换为一个新token。如果第一个参数token在列表中不存在， <code>replace()</code> 立刻返回<code>false</code> ，而不会将新token字符串添加到列表中。</p>
+<p>{{domxref("DOMTokenList")}}接口的 <code><strong>replace()</strong></code> 方法可以将列表中一个已存在的 token 替换为一个新 token。如果第一个参数 token 在列表中不存在， <code>replace()</code> 立刻返回<code>false</code> ，而不会将新 token 字符串添加到列表中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/DOMTokenList/replace
 
 <h3 id="返回值">返回值</h3>
 
-<p>boolean类型, 如果<code><var>oldToken</var></code>被成功替换，返回 <code>true</code> ，否则返回<code>false</code></p>
+<p>boolean 类型，如果<code><var>oldToken</var></code>被成功替换，返回 <code>true</code> ，否则返回<code>false</code></p>
 
 <div class="note">
 <p><strong>Note</strong>: In older browsers, <code>replace()</code> returns void.</p>
@@ -30,13 +30,13 @@ translation_of: Web/API/DOMTokenList/replace
 
 <h2 id="Examples">Examples</h2>
 
-<p>在下面的例子中，我们使用{{domxref("Element.classList")}}方法，将设置在{{htmlelement("span")}} 元素上的class列表检索为<code>DOMTokenList</code> 类型。接着我们替换一个字符串, 并且将新列表写入到 <code>&lt;span&gt;</code> 的内容{{domxref("Node.textContent")}}中。</p>
+<p>在下面的例子中，我们使用{{domxref("Element.classList")}}方法，将设置在{{htmlelement("span")}} 元素上的 class 列表检索为<code>DOMTokenList</code> 类型。接着我们替换一个字符串，并且将新列表写入到 <code>&lt;span&gt;</code> 的内容{{domxref("Node.textContent")}}中。</p>
 
-<p>首先，HTML代码如下:</p>
+<p>首先，HTML 代码如下：</p>
 
 <pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
-<p>然后是JavaScript:</p>
+<p>然后是 JavaScript:</p>
 
 <pre class="brush: js notranslate">let span = document.querySelector("span");
 let classes = span.classList;
@@ -50,28 +50,13 @@ if (result) {
   span.textContent = 'token not replaced successfully';
 }</pre>
 
-<p>输出如下:</p>
+<p>输出如下：</p>
 
 <p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-replace','replace()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

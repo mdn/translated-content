@@ -3,11 +3,11 @@ title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
 translation_of: Games/Techniques/Controls_Gamepad_API
 ---
-<div>{{GamesSidebar}}</div><p class="summary">这篇文章着眼于使用 Gamepad API 为网页游戏实现一个有效的跨浏览器控制系统，可以让你使用端游控制器来控制你的网页游戏。Hungry Fridge，就是 <a href="http://enclavegames.com/">Enclave Games</a> 以此制作的游戏。</p>
+<div>{{GamesSidebar}}</div><p>这篇文章着眼于使用 Gamepad API 为网页游戏实现一个有效的跨浏览器控制系统，可以让你使用端游控制器来控制你的网页游戏。Hungry Fridge，就是 <a href="http://enclavegames.com/">Enclave Games</a> 以此制作的游戏。</p>
 
 <h2 id="网页游戏的控制">网页游戏的控制</h2>
 
-<p>在历史上，在连接主机(console)的电视上玩游戏和在电脑(PC)上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。 到现在的 HTML5 时代，我们终于有了 <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。</p>
+<p>在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。 到现在的 HTML5 时代，我们终于有了 <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。</p>
 
 <p><img alt="gamepad-controls" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img01.png" style="display: block; height: 400px; margin: 0px auto; width: 600px;"></p>
 
@@ -25,7 +25,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 <h2 id="实例分析：Hungry_Fridge">实例分析：Hungry Fridge</h2>
 
-<p><a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a> 比赛举行于2013年11月，<a href="http://enclavegames.com/">Enclave Games</a> 决定参加比赛。比赛的主题为“改变”(change)，所以他们提交了这样一个游戏——你需要通过点击来喂食饥饿的冰箱健康的食物 (苹果、萝卜、莴苣) 并避开“坏”的食物 (啤酒、汉堡、披萨) 。其中会有倒计时会改变接下来几秒内冰箱想吃的东西，所以你又要小心动作又要块。你可以<a href="http://enclavegames.com/games/hungry-fridge/">在这里尝试 Hungry Fridge</a>。</p>
+<p><a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a> 比赛举行于 2013 年 11 月，<a href="http://enclavegames.com/">Enclave Games</a> 决定参加比赛。比赛的主题为“改变”(change)，所以他们提交了这样一个游戏——你需要通过点击来喂食饥饿的冰箱健康的食物 (苹果、萝卜、莴苣) 并避开“坏”的食物 (啤酒、汉堡、披萨) 。其中会有倒计时会改变接下来几秒内冰箱想吃的东西，所以你又要小心动作又要块。你可以<a href="http://enclavegames.com/games/hungry-fridge/">在这里尝试 Hungry Fridge</a>。</p>
 
 <p><img alt="hungryfridge-mainmenu" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img02.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
 
@@ -39,7 +39,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 <h2 id="示例">示例</h2>
 
-<p>Game API 的动作展示与JavaScript的源代码公布是在完整版的 Hungry Fridge 构建之后才开始的，然后据此创建了一个 <a href="https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html">简单的示例</a>。部分 <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">Gamepad API Content Kit</a> 在Github 上供你分析代码并研究其如何工作。</p>
+<p>Game API 的动作展示与 JavaScript 的源代码公布是在完整版的 Hungry Fridge 构建之后才开始的，然后据此创建了一个 <a href="https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html">简单的示例</a>。部分 <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">Gamepad API Content Kit</a> 在 Github 上供你分析代码并研究其如何工作。</p>
 
 <p><img alt="Hungry Fridge demo using Gamepad API" src="http://end3r.com/tmp/gamepad/super-turbo.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
 
@@ -51,7 +51,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 <h2 id="实现方法">实现方法</h2>
 
-<p>使用Gamepad API时有两个重要的事件—— <code>gamepadconnected</code>  和 <code>gamepaddisconnected</code>。 前者将于浏览器侦测到新控制器连接时触发；而后者则是断开连接 (不管是物理断开还是无响应了) 的时候触发。在示例中 <code>gamepadAPI</code> 对象通常存储着所有关于 API 的东西：</p>
+<p>使用 Gamepad API 时有两个重要的事件—— <code>gamepadconnected</code>  和 <code>gamepaddisconnected</code>。前者将于浏览器侦测到新控制器连接时触发；而后者则是断开连接 (不管是物理断开还是无响应了) 的时候触发。在示例中 <code>gamepadAPI</code> 对象通常存储着所有关于 API 的东西：</p>
 
 <pre class="brush: js"><code>var gamepadAPI = {
   controller: {},
@@ -66,7 +66,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
   axesStatus: []
 };</code></pre>
 
-<p>数组 <code>buttons</code> 存储着 XBox 360 控制器的按键布局button layout:</p>
+<p>数组 <code>buttons</code> 存储着 XBox 360 控制器的按键布局 button layout:</p>
 
 <pre class="brush: js"><code>buttons: [
   'DPad-Up','DPad-Down','DPad-Left','DPad-Right',
@@ -193,7 +193,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
   }
 }</code></pre>
 
-<p>如果 <code>gamepadAPI.turbo</code> 为 <code>true</code> 并有按钮被按下(或被按住)，我们就会为其分配恰当的操作。在本例中，按下或按住 <code>A</code> 开火，按下 <code>B</code> 暂停游戏。</p>
+<p>如果 <code>gamepadAPI.turbo</code> 为 <code>true</code> 并有按钮被按下 (或被按住)，我们就会为其分配恰当的操作。在本例中，按下或按住 <code>A</code> 开火，按下 <code>B</code> 暂停游戏。</p>
 
 <h3 id="坐标阈值">坐标阈值</h3>
 
@@ -212,7 +212,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
 
 <h2 id="规范更新">规范更新</h2>
 
-<p>经过长达一年多的规范化，W3C Gamepaf API 于2015年4月更新了规范 (<a href="https://w3c.github.io/gamepad/">查看最新信息</a>)。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么—— 以下为更新。</p>
+<p>经过长达一年多的规范化，W3C Gamepaf API 于 2015 年 4 月更新了规范 (<a href="https://w3c.github.io/gamepad/">查看最新信息</a>)。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么—— 以下为更新。</p>
 
 <h3 id="获取控制器">获取控制器</h3>
 

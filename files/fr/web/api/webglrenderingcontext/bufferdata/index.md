@@ -15,13 +15,15 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    // WebGL1:
-    void gl.bufferData(cible, taille, utilisation);
-    void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
-    void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
+```js
+// WebGL1:
+void gl.bufferData(cible, taille, utilisation);
+void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
+void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
 
-    // WebGL2:
-    void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
+// WebGL2:
+void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
+```
 
 ### Paramètres
 

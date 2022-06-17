@@ -51,7 +51,7 @@ IDBReq.onsuccess = function(){
 <p>{{domxref("IDBDatabase.mozCreateFileHandle","mozCreateFileHandle()")}} は、ファイル名と任意の形式の 2 個の引数を取ります。これらは説明のためのものであり、データベースには使用されません。しかし、これらの値から {{domxref("File")}} オブジェクトの {{domxref("File.name","name")}} と {{domxref("File.type","type")}} に継承して生成するため、{{domxref("FileHandle")}} オブジェクトにとって重要です。つまり、例えば空文字にすると実際に存在するファイルと一致しないため、ユニークな名前にしなくてもよいです。</p>
 
 <div class="note">
-<p><strong>補足:</strong> 上記のコードは、{{domxref("FileHandle")}} インスタンスを保持している間のみ存在する「一時ファイル」を作成するだけです。ページ更新やアプリ再起動に遭遇するファイルを扱いたい場合は、データベース自身など、ファイルハンドルを永続的な場所に格納する必要があります。詳しくは、後述の {{Anch("File storage")}} を参照してください。</p>
+<p><strong>補足:</strong> 上記のコードは、{{domxref("FileHandle")}} インスタンスを保持している間のみ存在する「一時ファイル」を作成するだけです。ページ更新やアプリ再起動に遭遇するファイルを扱いたい場合は、データベース自身など、ファイルハンドルを永続的な場所に格納する必要があります。詳しくは、後述の <a href="#file_storage">File storage</a> を参照してください。</p>
 </div>
 
 <h3 id="ファイルの読み書き操作">ファイルの読み書き操作</h3>

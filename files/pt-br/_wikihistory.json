@@ -3850,12 +3850,6 @@
       "jeronimojr"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:03:59.387Z",
-    "contributors": [
-      "oirodolfo"
-    ]
-  },
   "Web/API/DOMStringList": {
     "modified": "2019-03-23T22:03:44.815Z",
     "contributors": [
@@ -4753,13 +4747,6 @@
       "Beterraba"
     ]
   },
-  "Web/API/File/Using_files_from_web_applications": {
-    "modified": "2019-03-23T23:36:41.452Z",
-    "contributors": [
-      "chrisdavidmills",
-      "FelipeFonseca"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2019-03-23T22:14:37.211Z",
     "contributors": [
@@ -4816,6 +4803,13 @@
     "modified": "2019-03-23T22:15:55.068Z",
     "contributors": [
       "fellypsantos"
+    ]
+  },
+  "Web/API/File_API/Using_files_from_web_applications": {
+    "modified": "2019-03-23T23:36:41.452Z",
+    "contributors": [
+      "chrisdavidmills",
+      "FelipeFonseca"
     ]
   },
   "Web/API/FormData": {
@@ -4968,12 +4962,6 @@
     "modified": "2019-03-23T22:31:33.398Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onabort": {
-    "modified": "2019-03-23T22:28:55.671Z",
-    "contributors": [
-      "cezaraugusto"
     ]
   },
   "Web/API/GlobalEventHandlers/onblur": {
@@ -16044,6 +16032,12 @@
       "Leeehandro"
     ]
   },
+  "conflicting/Web/API/HTMLMediaElement/abort_event": {
+    "modified": "2019-03-23T22:28:55.671Z",
+    "contributors": [
+      "cezaraugusto"
+    ]
+  },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {
     "modified": "2019-03-23T23:34:35.791Z",
     "contributors": [
@@ -16248,12 +16242,9 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T21:58:05.452Z",
+    "modified": "2019-03-23T22:03:59.387Z",
     "contributors": [
-      "akinncar",
-      "coloringa",
-      "Perrottacooking",
-      "brunopulis"
+      "oirodolfo"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {

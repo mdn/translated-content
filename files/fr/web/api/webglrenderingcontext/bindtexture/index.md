@@ -16,7 +16,9 @@ La méthode **`WebGLRenderingContext.bindTexture()`** de l'API WebGL lie la {{do
 
 ## Syntaxe
 
-    void gl.bindTexture(cible, texture);
+```js
+void gl.bindTexture(cible, texture);
+```
 
 ### Paramètres
 

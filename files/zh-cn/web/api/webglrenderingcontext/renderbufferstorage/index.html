@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.renderbufferStorage()</code></strong> 方法用来创建和初始化一个渲染缓冲区对象的数据存储.</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.renderbufferStorage()</code></strong> 方法用来创建和初始化一个渲染缓冲区对象的数据存储。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,14 +16,14 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
 
 <dl>
  <dt>target</dt>
- <dd> {{domxref("Glenum")}} 指定一个渲染缓冲区对象. 可能的值:
+ <dd> {{domxref("Glenum")}} 指定一个渲染缓冲区对象。可能的值：
  <ul>
   <li><code>gl.RENDERBUFFER</code>:单一图像的缓冲数据存储在一个可渲染的内部格式。<br>
    .</li>
  </ul>
  </dd>
  <dt>internalFormat</dt>
- <dd> {{domxref("Glenum")}} 指定渲染缓冲区的内部格式. 可能的值:
+ <dd> {{domxref("Glenum")}} 指定渲染缓冲区的内部格式。可能的值：
  <ul>
   <li><code>gl.RGBA4</code>: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.</li>
   <li><code>gl.RGB565</code>: 5 red bits, 6 green bits, 5 blue bits.</li>
@@ -31,7 +31,7 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
   <li><code>gl.DEPTH_COMPONENT16</code>: 16 depth bits.</li>
   <li><code>gl.STENCIL_INDEX8</code>: 8 stencil bits.</li>
   <li><code>gl.DEPTH_STENCIL</code></li>
-  <li>当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时, 下面的值也是可用的:
+  <li>当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，下面的值也是可用的：
    <ul>
     <li><code>gl.R8</code></li>
     <li><code>gl.R8UI</code></li>
@@ -49,7 +49,7 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
     <li><code>gl.RG32I</code></li>
     <li><code>gl.RGB8</code></li>
     <li><code>gl.RGBA8</code></li>
-    <li><code>gl.SRGB8_ALPHA8</code> (也可以作为WebGL 1的扩展，参见下面)</li>
+    <li><code>gl.SRGB8_ALPHA8</code> (也可以作为 WebGL 1 的扩展，参见下面)</li>
     <li><code>gl.RGB10_A2</code></li>
     <li><code>gl.RGBA8UI</code></li>
     <li><code>gl.RGBA8I</code></li>
@@ -64,18 +64,18 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
     <li><code>gl.DEPTH32F_STENCIL8</code></li>
    </ul>
   </li>
-  <li>当使用{domxref("WEBGL_color_buffer_float")}} 扩展:
+  <li>当使用{domxref("WEBGL_color_buffer_float")}} 扩展：
    <ul>
-    <li><code>ext.RGBA32F_EXT</code>: RGBA 32-bit 浮点类型.</li>
-    <li><code>ext.RGB32F_EXT</code>: RGB 32-bit 浮点类型.</li>
+    <li><code>ext.RGBA32F_EXT</code>: RGBA 32-bit 浮点类型。</li>
+    <li><code>ext.RGB32F_EXT</code>: RGB 32-bit 浮点类型。</li>
    </ul>
   </li>
-  <li>当使用{domxref("EXT_sRGB")}} 扩展:
+  <li>当使用{domxref("EXT_sRGB")}} 扩展：
    <ul>
     <li><code>ext.SRGB8_ALPHA8_EXT</code>: 8-bit sRGB 和 alpha.</li>
    </ul>
   </li>
-  <li>当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 和 {{domxref("EXT_color_buffer_float")}} 扩展:
+  <li>当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 和 {{domxref("EXT_color_buffer_float")}} 扩展：
    <ul>
     <li><code>gl.R16F</code></li>
     <li><code>gl.RG16F</code></li>
@@ -89,9 +89,9 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
  </ul>
  </dd>
  <dt>width</dt>
- <dd> {{domxref("GLsizei")}} 指定渲染缓冲区的宽度(以像素为单位).</dd>
+ <dd> {{domxref("GLsizei")}} 指定渲染缓冲区的宽度 (以像素为单位).</dd>
  <dt>height</dt>
- <dd> {{domxref("GLsizei")}} 指定渲染缓冲区的高度(以像素为单位).</dd>
+ <dd> {{domxref("GLsizei")}} 指定渲染缓冲区的高度 (以像素为单位).</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -115,23 +115,23 @@ translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
   <tr>
    <td>{{SpecName('WebGL', "#5.14.7", "renderbufferStorage")}}</td>
    <td>{{Spec2('WebGL')}}</td>
-   <td>WebGL初始定义.</td>
+   <td>WebGL 初始定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 2.0', "glRenderbufferStorage.xml", "glRenderbufferStorage")}}</td>
    <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL ES 2 API手册.</td>
+   <td>OpenGL ES 2 API 手册。</td>
   </tr>
   <tr>
    <td>{{SpecName('WebGL2', "#3.7.5", "getRenderbufferParameter")}}</td>
    <td>{{Spec2('WebGL2')}}</td>
-   <td>WebGL 2更新定义.</td>
+   <td>WebGL 2 更新定义。</td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 3.0', "glRenderbufferStorage.xhtml", "glRenderbufferStorage")}}</td>
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td> OpenGL ES 3 API手册(类似).<br>
-    添加许多新的内部格式.</td>
+   <td> OpenGL ES 3 API 手册 (类似).<br>
+    添加许多新的内部格式。</td>
   </tr>
  </tbody>
 </table>

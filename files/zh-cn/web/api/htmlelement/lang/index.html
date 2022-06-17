@@ -5,16 +5,16 @@ translation_of: Web/API/HTMLElement/lang
 ---
 <p>{{ APIRef() }}</p>
 <p><code><strong>HTMLElement.lang</strong></code> 属性用来获取或设置元素属性值或文本内容的基语言（base language）。</p>
-<p>该属性返回的语言代码（language code） 被定义在 <a class="external" href="http://tools.ietf.org/html/rfc1766" title="http://tools.ietf.org/html/rfc1766">RFC 1766</a>。通常，"en" 表示英语（English）、"ja" 表示（Japanese）、"zh-cn" 表示简体中文等等。该属性的默认值未知（<code>unknown</code>）。尽管该属性可以应用在单独的元素上，但是通常在文档的根元素（html）上指定。</p>
+<p>该属性返回的语言代码（language code）被定义在 <a class="external" href="http://tools.ietf.org/html/rfc1766" title="http://tools.ietf.org/html/rfc1766">RFC 1766</a>。通常，"en" 表示英语（English）、"ja" 表示（Japanese）、"zh-cn" 表示简体中文等等。该属性的默认值未知（<code>unknown</code>）。尽管该属性可以应用在单独的元素上，但是通常在文档的根元素（html）上指定。</p>
 <p>该属性只对 <code>lang</code> 属性（attribute）有效，不适用于 <code>xml:lang</code>。</p>
 <h2 id="Syntax" name="Syntax">语法</h2>
-<pre class="syntaxbox">var <var>languageUsed</var> = elementNodeReference.lang; // 获取lang值
-elementNodeReference.lang = <var>NewLanguage</var>; // 为lang设置新值
+<pre class="syntaxbox">var <var>languageUsed</var> = elementNodeReference.lang; // 获取 lang 值
+elementNodeReference.lang = <var>NewLanguage</var>; // 为 lang 设置新值
 </pre>
 <p><code><var>languageUsed</var></code> 是一个字符串变量，可以获取当前元素的文本是用什么语言写的。<code><var>NewLanguage</var></code> 是一个字符串变量，其值用来作为当前元素的文本的语言。</p>
 <h2 id="Example" name="Example">示例</h2>
 <pre class="brush: js">// 该代码比较了基语言（base language），然后
-// 重定向到了基于该语言的url
+// 重定向到了基于该语言的 url
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {

@@ -17,8 +17,6 @@ La propriété **`outline-color`** permet de définir la couleur avec laquelle o
 
 ## Syntaxe
 
-
-
 ```css
 /* Valeurs avec un mot-clé */
 outline-color: invert;
@@ -34,8 +32,6 @@ outline-color: inherit;
 outline-color: initial;
 outline-color: unset;
 ```
-
-
 
 La propriété `outline-color` est définie avec une des valeurs listées ci-après.
 

@@ -5,11 +5,11 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 ---
 <p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
 
-<p>HTML拖放接口使得web应用能够在网页中拖放文件。这篇文档介绍了web应用如何接受从底层平台的文件管理器拖动一个或多个文件到网页的操作。</p>
+<p>HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档介绍了 web 应用如何接受从底层平台的文件管理器拖动一个或多个文件到网页的操作。</p>
 
-<p>拖放的主要步骤是为 {{event("drop")}} 事件定义一个<em>释放区</em>(释放文件的目标元素)和为{{event("dragover")}}事件定义一个事件处理程序。下面描述了这些步骤，包括示例程序片段。完整的源码在<a href="https://github.com/mdn/dom-examples/tree/master/drag-and-drop">MDN's drag-and-drop repository</a> (欢迎提交pull requests和/或issues).</p>
+<p>拖放的主要步骤是为 {{event("drop")}} 事件定义一个<em>释放区</em>(释放文件的目标元素) 和为{{event("dragover")}}事件定义一个事件处理程序。下面描述了这些步骤，包括示例程序片段。完整的源码在<a href="https://github.com/mdn/dom-examples/tree/master/drag-and-drop">MDN's drag-and-drop repository</a> (欢迎提交 pull requests 和/或 issues).</p>
 
-<p class="note">注意: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}定义了两套不同的API来支持拖放文件。一个{{domxref("DataTransfer")}}接口和另一个{{domxref("DataTransferItem")}}与{{domxref("DataTransferItemList")}}接口。这个示例介绍了这两种API的用法(没有使用任何Gecko专用的接口)。</p>
+<p>注意: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}定义了两套不同的 API 来支持拖放文件。一个{{domxref("DataTransfer")}}接口和另一个{{domxref("DataTransferItem")}}与{{domxref("DataTransferItemList")}}接口。这个示例介绍了这两种 API 的用法 (没有使用任何 Gecko 专用的接口)。</p>
 
 <h2 id="定义拖放区域">定义拖放区域</h2>
 

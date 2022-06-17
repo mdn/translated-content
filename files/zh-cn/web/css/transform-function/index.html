@@ -15,9 +15,9 @@ translation_of: Web/CSS/transform-function
 ---
 <p>{{CSSRef}}</p>
 
-<p> <strong><code>&lt;transform-function&gt;</code> </strong>CSS数据类型用于对元素的显示做变换。通常，这种变换可以由矩阵表示，并且可以使用每个点上的矩阵乘法来确定所得到的图像。</p>
+<p> <strong><code>&lt;transform-function&gt;</code> </strong>CSS 数据类型用于对元素的显示做变换。通常，这种变换可以由矩阵表示，并且可以使用每个点上的矩阵乘法来确定所得到的图像。</p>
 
-<h2 id="2D图形_的坐标系统">2D图形 的坐标系统</h2>
+<h2 id="2D图形_的坐标系统">2D 图形 的坐标系统</h2>
 
 <p>目前有多种用来描述转换坐标模型，最常用的是 <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">笛卡尔坐标系统</a> 和 <a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">齐次坐标</a>。</p>
 
@@ -25,9 +25,9 @@ translation_of: Web/CSS/transform-function
 
 <p><a href="/@api/deki/files/5796/=coord_in_R2.png"><img src="/files/3438/coord_in_R2.png" style="float: right; width: 171px;"></a></p>
 
-<p>在笛卡尔坐标系中，每个 <a href="https://en.wikipedia.org/wiki/Euclidean_geometry">欧氏空间</a> 里的点都由横坐标和纵坐标这两个值来确定。 在CSS（和大部分的计算机图形学）中，原点 <code>(0, 0)</code> 在元素的左上角。每个点都使用数学上的向量符号(x,y)来描述。</p>
+<p>在笛卡尔坐标系中，每个 <a href="https://en.wikipedia.org/wiki/Euclidean_geometry">欧氏空间</a> 里的点都由横坐标和纵坐标这两个值来确定。在 CSS（和大部分的计算机图形学）中，原点 <code>(0, 0)</code> 在元素的左上角。每个点都使用数学上的向量符号 (x,y) 来描述。</p>
 
-<p>每个线性函数使用 2 × 2 矩阵描述，如:</p>
+<p>每个线性函数使用 2 × 2 矩阵描述，如：</p>
 
 <p>                                                                                          a   c<br>
                                                                                            b   d</p>
@@ -58,7 +58,7 @@ translation_of: Web/CSS/transform-function
 
 <p><code>matrix(a, b, c, d, tx, ty)</code> 是 <code>matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code> 的简写</p>
 
-<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本, Gecko 内核才为 <strong>tx</strong> 和 <strong>ty</strong> 兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
+<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本，Gecko 内核才为 <strong>tx</strong> 和 <strong>ty</strong> 兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
 
 <h4 id="语法">语法</h4>
 
@@ -110,9 +110,9 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="matrix3d"><code>matrix3d()</code></h3>
 
-<p>CSS 函数 <code>matrix3d()</code> 用一个 4 × 4 的齐次矩阵来描述一个三维（3D）变换。16个参数都在主要列的顺序中描述。</p>
+<p>CSS 函数 <code>matrix3d()</code> 用一个 4 × 4 的齐次矩阵来描述一个三维（3D）变换。16 个参数都在主要列的顺序中描述。</p>
 
-<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本, Gecko 内核才为 <strong>a4，</strong> <strong>b4</strong> 和 <strong>c4</strong>兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
+<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本，Gecko 内核才为 <strong>a4，</strong> <strong>b4</strong> 和 <strong>c4</strong>兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
 
 <h4 id="语法_2">语法</h4>
 
@@ -155,7 +155,7 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="perspective"><code>perspective()</code></h3>
 
-<p> <code>perspective()</code> 这个CSS函数定义了 z=0平面与用户之间的距离，以便给三维定位元素一定透视度。当每个3D元素的z&gt;0时会显得比较大，而在z&lt;0时会显得比较小。其影响的程度由这个属性的值来决定。</p>
+<p> <code>perspective()</code> 这个 CSS 函数定义了 z=0 平面与用户之间的距离，以便给三维定位元素一定透视度。当每个 3D 元素的 z&gt;0 时会显得比较大，而在 z&lt;0 时会显得比较小。其影响的程度由这个属性的值来决定。</p>
 
 <h4 id="语法_3">语法</h4>
 
@@ -166,7 +166,7 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>l</em></dt>
- <dd>该参数是一个 {{cssxref("&lt;length&gt;")}} 给定从用户（显示屏）到z = 0平面的距离。 它用于将透视图转换应用于元素。 如果它是0或负值，则不应用透视变换。</dd>
+ <dd>该参数是一个 {{cssxref("&lt;length&gt;")}} 给定从用户（显示屏）到 z = 0 平面的距离。它用于将透视图转换应用于元素。如果它是 0 或负值，则不应用透视变换。</dd>
 </dl>
 
 <table class="standard-table">
@@ -191,7 +191,7 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotate"><code>rotate()</code></h3>
 
-<p><img src="/@api/deki/files/5976/=transform-functions-rotate_19.5.png" style="float: left;">The <code>rotate()</code> CSS 函数 定义一个旋转属性，将元素在不变形的情况下旋转到不动点周围(如 {{ Cssxref("transform-origin") }} 属性所指定) 。 移动量由指定角度定义;如果为正值，则运动将为顺时针，如果为负值，则为逆时针 。 180°的旋转称为点反射 (<em>point reflection</em>)。</p>
+<p><img src="/@api/deki/files/5976/=transform-functions-rotate_19.5.png" style="float: left;">The <code>rotate()</code> CSS 函数 定义一个旋转属性，将元素在不变形的情况下旋转到不动点周围 (如 {{ Cssxref("transform-origin") }} 属性所指定) 。移动量由指定角度定义;如果为正值，则运动将为顺时针，如果为负值，则为逆时针。180°的旋转称为点反射 (<em>point reflection</em>)。</p>
 
 
 
@@ -226,16 +226,16 @@ translation_of: Web/CSS/transform-function
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
   </tr>
   <tr>
-   <td><code>[cos(a) </code><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: consolas,monaco,andale mono,monospace;">sin(</span><em>a</em><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: consolas,monaco,andale mono,monospace;">)</span><code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
+   <td><code>[cos(a) </code>sin(<em>a</em>)<code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="rotate3d"><code>rotate3d()</code></h3>
 
-<p> <code>rotate3d()</code> 这个CSS 函数定义一个3D旋转功能，该旋转使元素能够绕固定轴移动而不变形。 其中移动量由指定角度定义；如果为正值，则运动将为顺时针，如果为负值，则为逆时针。</p>
+<p> <code>rotate3d()</code> 这个 CSS 函数定义一个 3D 旋转功能，该旋转使元素能够绕固定轴移动而不变形。其中移动量由指定角度定义；如果为正值，则运动将为顺时针，如果为负值，则为逆时针。</p>
 
-<p>在三维空间中，旋转有三个自由度，各表示某条旋转轴。 旋转轴由[x，y，z]向量定义，且过原点（由 {{ cssxref("transform-origin") }} CSS属性定义）。 如果向量没有标准化，即它的三个坐标的平方之和不是1，它将在内部被标准化。 不可标准化的向量，如空向量[0,0,0]，将导致旋转不被应用，但不会影响整个CSS属性。</p>
+<p>在三维空间中，旋转有三个自由度，各表示某条旋转轴。旋转轴由 [x，y，z] 向量定义，且过原点（由 {{ cssxref("transform-origin") }} CSS 属性定义）。如果向量没有标准化，即它的三个坐标的平方之和不是 1，它将在内部被标准化。不可标准化的向量，如空向量 [0,0,0]，将导致旋转不被应用，但不会影响整个 CSS 属性。</p>
 
 <div class="note">注意：相对于平面上的旋转，三维旋转的组成通常不是可交换位置顺序的，这意味着旋转的应用顺序是至关重要的。</div>
 
@@ -248,13 +248,13 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>x</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值， 描述旋转轴向量的x坐标 。</dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，描述旋转轴向量的 x 坐标。</dd>
  <dt><em>y</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，描述旋转轴向量的y坐标。</dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，描述旋转轴向量的 y 坐标。</dd>
  <dt><em>z</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，描述旋转轴向量的z坐标。</dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，描述旋转轴向量的 z 坐标。</dd>
  <dt><em>a</em></dt>
- <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度 。 正角度表示顺时针旋转，负角度表示逆时针旋转 。</dd>
+ <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度。正角度表示顺时针旋转，负角度表示逆时针旋转。</dd>
 </dl>
 
 <table class="standard-table">
@@ -277,13 +277,13 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotateX"><code>rotateX()</code></h3>
 
-<p> <code>rotateX()</code> 这个CSS 函数定义了将元素在横坐标上旋转而不使其变形的方法。 其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
+<p> <code>rotateX()</code> 这个 CSS 函数定义了将元素在横坐标上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
 
-<p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS属性定义。.</p>
+<p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。.</p>
 
 <p><code>rotateX(a)</code>是 <code>rotate3D(1, 0, 0, a)</code>的简写形式。</p>
 
-<div class="note">注意： 与平面上的旋转相反，3D旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。</div>
+<div class="note">注意：与平面上的旋转相反，3D 旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。</div>
 
 <h4 id="语法_6">语法</h4>
 
@@ -294,7 +294,7 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>a</em></dt>
- <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度， 正角表示顺时针旋转，负角表示逆时针旋转。</dd>
+ <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度，正角表示顺时针旋转，负角表示逆时针旋转。</dd>
 </dl>
 
 <table class="standard-table">
@@ -317,13 +317,13 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotateY"><code>rotateY()</code></h3>
 
-<p> <code>rotateY()</code> 这个CSS 函数定义了将元素在纵坐标上旋转而不使其变形的方法。 其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
+<p> <code>rotateY()</code> 这个 CSS 函数定义了将元素在纵坐标上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
 
-<p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS属性定义。</p>
+<p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。</p>
 
 <p><code>rotateY(a)</code> 是 <code>rotate3D(0, 1, 0, a)</code> 的简写形式。</p>
 
-<div class="note">注意： 与平面上的旋转相反，3D旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。</div>
+<div class="note">注意：与平面上的旋转相反，3D 旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。</div>
 
 <h4 id="语法_7">语法</h4>
 
@@ -334,7 +334,7 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>a</em></dt>
- <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度， 正角表示顺时针旋转，负角表示逆时针旋转。</dd>
+ <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度，正角表示顺时针旋转，负角表示逆时针旋转。</dd>
 </dl>
 
 <table class="standard-table">
@@ -357,15 +357,15 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotateZ"><code>rotateZ()</code></h3>
 
-<p> <code>rotateZ()</code>这个CSS 函数定义了将元素在z轴上旋转而不使其变形的方法。 其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
+<p> <code>rotateZ()</code>这个 CSS 函数定义了将元素在 z 轴上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
 
-<p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS属性定义。</p>
+<p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。</p>
 
 
 
 <p><code>rotateZ(a) </code>是 <code>rotate3D(0, 0, 1, a)</code> 的简写形式。</p>
 
-<div class="note">注意： 与平面上的旋转相反，3D旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。</div>
+<div class="note">注意：与平面上的旋转相反，3D 旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。</div>
 
 <h4 id="语法_8">语法</h4>
 
@@ -376,7 +376,7 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>a</em></dt>
- <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度， 正角表示顺时针旋转，负角表示逆时针旋转。</dd>
+ <dd>该参数为 {{ cssxref("&lt;angle&gt;") }} 代表旋转的角度，正角表示顺时针旋转，负角表示逆时针旋转。</dd>
 </dl>
 
 <table class="standard-table">
@@ -401,13 +401,13 @@ translation_of: Web/CSS/transform-function
 
 <p><img src="/@api/deki/files/5804/=transform-functions-scale_2_2.png?size=webview" style="float: left; height: 290px; width: 350px;"></p>
 
-<p>The <code>scale()</code> CSS 函数可改变元素的大小。 它可以增大或减小元素的大小，并且缩放量由矢量定义，并且它可以使在一个方向上比另一个方向更多。</p>
+<p>The <code>scale()</code> CSS 函数可改变元素的大小。它可以增大或减小元素的大小，并且缩放量由矢量定义，并且它可以使在一个方向上比另一个方向更多。</p>
 
 <p>这种变换的特点是矢量的坐标可定义在每个不同方向上各子完成一定比例缩放。如果矢量的两个坐标相等，则缩放是均匀的或各向同性的，并且元素的形状被保留。在这种情况下，缩放函数定义了一个同调变换。</p>
 
-<p>当超出 <code>[-1, 1]</code>范围外时，缩放将在坐标方向上放大元素；当在该范围内时，它在该方向收缩元素。当等于1时，它什么也不做，当它为负时，它执行点反射和大小修改。</p>
+<p>当超出 <code>[-1, 1]</code>范围外时，缩放将在坐标方向上放大元素；当在该范围内时，它在该方向收缩元素。当等于 1 时，它什么也不做，当它为负时，它执行点反射和大小修改。</p>
 
-<div class="note">注意： <code>scale</code><code>()</code> 函数仅在欧几里德平面(2D)中应用转换。要在空间中进行缩放，必须使用 <code>scale3D()</code> 函数。</div>
+<div class="note">注意： <code>scale</code><code>()</code> 函数仅在欧几里德平面 (2D) 中应用转换。要在空间中进行缩放，必须使用 <code>scale3D()</code> 函数。</div>
 
 <h4 id="语法_9">语法</h4>
 
@@ -419,9 +419,9 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <dl>
  <dt><em>sx</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值， 代表缩放矢量的横坐标。</dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，代表缩放矢量的横坐标。</dd>
  <dt><em>sy</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，代表缩放矢量的纵坐标 。 如果不存在，则其默认值为 <em><strong>sx</strong></em>，从而导致保持元素形状进行均匀缩放。</dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，代表缩放矢量的纵坐标。如果不存在，则其默认值为 <em><strong>sx</strong></em>，从而导致保持元素形状进行均匀缩放。</dd>
 </dl>
 
 <table class="standard-table">
@@ -450,9 +450,9 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p> <code>scale3d()</code> CSS 函数可改变元素的大小。由于缩放的量由矢量定义，因此可以改变不同方向的尺寸。</p>
 
-<p><span class="outputBox-2liU7_0">这种变换的特点是矢量的坐标定义在每个方向上完成多少缩放。如果矢量的三个坐标都相等，则缩放是均匀的或各向同性的，并且保持元素形状。在这种情况下，这个缩放函数就是定义了一个同调变换。</span></p>
+<p>这种变换的特点是矢量的坐标定义在每个方向上完成多少缩放。如果矢量的三个坐标都相等，则缩放是均匀的或各向同性的，并且保持元素形状。在这种情况下，这个缩放函数就是定义了一个同调变换。</p>
 
-<p><span class="outputBox-2liU7_0">当超出[-1，1]的范围之外时，缩放比例将在坐标方向上放大元素；当在[-1，1]范围内时，它在当前方向收缩元素。当等于1时，它什么也不做，当它为负时，它执行点反射和大小修改。</span></p>
+<p>当超出 [-1，1] 的范围之外时，缩放比例将在坐标方向上放大元素；当在 [-1，1] 范围内时，它在当前方向收缩元素。当等于 1 时，它什么也不做，当它为负时，它执行点反射和大小修改。</p>
 
 <h4 id="语法_10">语法</h4>
 
@@ -463,11 +463,11 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <dl>
  <dt><em>sx</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值， <span class="outputBox-2liU7_0">代表缩放矢量的横坐标。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，代表缩放矢量的横坐标。</dd>
  <dt><em>sy</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值， <span class="outputBox-2liU7_0">代表缩放矢量的纵坐标。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，代表缩放矢量的纵坐标。</dd>
  <dt><em>sz</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值， <span class="outputBox-2liU7_0">代表缩放矢量的z轴坐标。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，代表缩放矢量的 z 轴坐标。</dd>
 </dl>
 
 <table class="standard-table">
@@ -490,11 +490,11 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <h3 id="scaleX"><code>scaleX()</code></h3>
 
-<p><img src="/@api/deki/files/5807/=transform-functions-scaleX_2.png?size=webview" style="float: left; height: 296px; width: 350px;"> <code>scaleX()</code> 这个CSS函数是<span class="outputBox-2liU7_0">用一个常数因子来修改每个单元点的横坐标，在比例因子是1的情况下该函数是恒等变换</span>。 <span class="outputBox-2liU7_0">缩放不是各向同性的，元素的角度也不守恒。</span></p>
+<p><img src="/@api/deki/files/5807/=transform-functions-scaleX_2.png?size=webview" style="float: left; height: 296px; width: 350px;"> <code>scaleX()</code> 这个 CSS 函数是用一个常数因子来修改每个单元点的横坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度也不守恒。</p>
 
 <p><code>scaleX(sx)</code> 是 <code>scale(sx, 1)</code> 和 <code>scale3d(sx, 1, 1)</code> 的简写形式。</p>
 
-<p><code>scaleX(-1)</code> <span class="outputBox-2liU7_0">表示通过原点的垂直轴定义轴对称（由 </span><code><a href="transform-origin" rel="custom">transform-origin</a></code><span class="outputBox-2liU7_0"> 属性指定）。</span></p>
+<p><code>scaleX(-1)</code> 表示通过原点的垂直轴定义轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
 
 
 
@@ -509,7 +509,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <dl>
  <dt><em>s</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值， <span class="outputBox-2liU7_0">表示在元素的每个点的横坐标上应用的缩放因子。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，表示在元素的每个点的横坐标上应用的缩放因子。</dd>
 </dl>
 
 <table class="standard-table">
@@ -538,11 +538,11 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><img src="/@api/deki/files/5967/=transform-functions-scaleY_2.png" style="float: left;"></p>
 
-<p> <code>scaleY()</code> 这个 <span class="outputBox-2liU7_0">CSS函数用一个常数因子修改每个元素点的纵坐标，在比例因子是1的情况下该函数是恒等变换</span>。 <span class="outputBox-2liU7_0">缩放不是各向同性的，元素的角度不守恒。</span></p>
+<p> <code>scaleY()</code> 这个 CSS 函数用一个常数因子修改每个元素点的纵坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度不守恒。</p>
 
 <p><code>scaleY(sy)</code> 是 <code>scale(1, sy)</code> 和 <code>scale3d(1, sy, 1)</code> 的简写形式。</p>
 
-<p><code>scaleY(-1)</code> <span class="outputBox-2liU7_0">定义了通过原点的水平轴的轴对称（由 </span><code><a href="transform-origin" rel="custom">transform-origin</a></code><span class="outputBox-2liU7_0"> 属性指定）。</span></p>
+<p><code>scaleY(-1)</code> 定义了通过原点的水平轴的轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
 
 <h4 id="语法_12">语法</h4>
 
@@ -553,7 +553,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <dl>
  <dt><em>s</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，<span class="outputBox-2liU7_0">表示在元素的每个点的纵坐标上应用的缩放因子。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，表示在元素的每个点的纵坐标上应用的缩放因子。</dd>
 </dl>
 
 <table class="standard-table">
@@ -580,11 +580,11 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <h3 id="scaleZ"><code>scaleZ()</code></h3>
 
-<p> <code>scaleZ()</code> 这个CSS函数是<span class="outputBox-2liU7_0">用一个常数因子来修改每个单元点的z轴坐标，在比例因子是1的情况下该函数是恒等变换</span>。 <span class="outputBox-2liU7_0">缩放不是各向同性的，元素的角度也不守恒。</span></p>
+<p> <code>scaleZ()</code> 这个 CSS 函数是用一个常数因子来修改每个单元点的 z 轴坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度也不守恒。</p>
 
 <p><code>scaleZ(sz)</code> 是 <code>scale3d(1, 1, sz)</code> 的简写形式。</p>
 
-<p><code>scaleZ(-1)</code> <span class="outputBox-2liU7_0">定义了通过原点的z轴的轴对称（由 </span><code><a href="transform-origin" rel="custom">transform-origin</a></code><span class="outputBox-2liU7_0"> 属性指定）。</span></p>
+<p><code>scaleZ(-1)</code> 定义了通过原点的 z 轴的轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
 
 <h4 id="语法_13">语法</h4>
 
@@ -595,7 +595,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <dl>
  <dt><em>s</em></dt>
- <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，<span class="outputBox-2liU7_0">表示在元素的每个点的z轴坐标上应用的缩放因子。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;number&gt;")}} 类型值，表示在元素的每个点的 z 轴坐标上应用的缩放因子。</dd>
 </dl>
 
 <table class="standard-table">
@@ -618,7 +618,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <h3 id="skew"><code>skew()</code></h3>
 
-<p> <code>skew()</code> 这个<span class="outputBox-2liU7_0">CSS函数是一种用于拉伸，或者说是平移，该函数会使得在每个方向上扭曲元素上的每个点以一定角度。这是通过将每个坐标增加一个与指定角度成比例的值和到原点的距离来完成的。离原点越远，拉伸的值就越大</span>。</p>
+<p> <code>skew()</code> 这个 CSS 函数是一种用于拉伸，或者说是平移，该函数会使得在每个方向上扭曲元素上的每个点以一定角度。这是通过将每个坐标增加一个与指定角度成比例的值和到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
 
 <h4 id="语法_14">语法</h4>
 
@@ -630,9 +630,9 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <dl>
  <dt><em>ax</em></dt>
- <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ， <span class="outputBox-2liU7_0">表示用于沿着横坐标扭曲元素的角度</span> 。</dd>
+ <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ，表示用于沿着横坐标扭曲元素的角度。</dd>
  <dt><em>ay</em></dt>
- <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ， <span class="outputBox-2liU7_0">表示用于沿纵坐标扭曲元素的角度</span> 。</dd>
+ <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ，表示用于沿纵坐标扭曲元素的角度。</dd>
 </dl>
 
 <table class="standard-table">
@@ -659,9 +659,9 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <h3 id="skewX"><code>skewX()</code></h3>
 
-<p> <code>skewX()</code> <span class="outputBox-2liU7_0">这个CSS函数是用于水平拉伸，它将元素的每个点在水平方向上扭曲一定角度。这是通过将横坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</span></p>
+<p> <code>skewX()</code> 这个 CSS 函数是用于水平拉伸，它将元素的每个点在水平方向上扭曲一定角度。这是通过将横坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
 
-<h4 class="editable" id="语法_15"><span>语法</span></h4>
+<h4 class="editable" id="语法_15">语法</h4>
 
 <pre class="syntaxbox">skewX(a)
 </pre>
@@ -670,7 +670,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <dl>
  <dt><em>a</em></dt>
- <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ， <span class="outputBox-2liU7_0">表示用于沿着横坐标扭曲元素的角度。</span></dd>
+ <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ，表示用于沿着横坐标扭曲元素的角度。</dd>
 </dl>
 
 <table class="standard-table">
@@ -697,9 +697,9 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <h3 id="skewY"><code>skewY()</code></h3>
 
-<p> <code>skewY()</code> <span class="outputBox-2liU7_0">这个CSS函数是用于垂直拉伸，它将元素的每个点在垂直方向上扭曲一定角度。这是通过将纵坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</span></p>
+<p> <code>skewY()</code> 这个 CSS 函数是用于垂直拉伸，它将元素的每个点在垂直方向上扭曲一定角度。这是通过将纵坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
 
-<h4 class="editable" id="语法_16"><span>语法</span></h4>
+<h4 class="editable" id="语法_16">语法</h4>
 
 <pre class="syntaxbox">skewY(a)
 </pre>
@@ -708,7 +708,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <dl>
  <dt><em>a</em></dt>
- <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ，<span class="outputBox-2liU7_0">表示用于沿着纵坐标扭曲元素的角度。</span></dd>
+ <dd>该参数为一个角度 {{ cssxref("&lt;angle&gt;") }} ，表示用于沿着纵坐标扭曲元素的角度。</dd>
 </dl>
 
 <table class="standard-table">
@@ -735,7 +735,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <h3 id="translate"><code>translate()</code></h3>
 
-<p><img src="/@api/deki/files/5970/=transform-functions-translate_2.png" style="float: left;"> <code>translate()</code> 这个CSS 函数用于<span class="outputBox-2liU7_0">移动元素在平面上的位置。这种变换的特点是矢量的坐标定义了它在每个方向上的移动量。</span></p>
+<p><img src="/@api/deki/files/5970/=transform-functions-translate_2.png" style="float: left;"> <code>translate()</code> 这个 CSS 函数用于移动元素在平面上的位置。这种变换的特点是矢量的坐标定义了它在每个方向上的移动量。</p>
 
 
 
@@ -753,9 +753,9 @@ translate(tx, ty)
 
 <dl>
  <dt><em>tx</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动<span class="outputBox-2liU7_0">矢量的横坐标</span>。</dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动矢量的横坐标。</dd>
  <dt><em>ty</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动矢量的纵坐标。 如果不写则默认为零，例如  <code>translate(2)</code> 表示 <code>translate(2, 0)</code>。</dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动矢量的纵坐标。如果不写则默认为零，例如  <code>translate(2)</code> 表示 <code>translate(2, 0)</code>。</dd>
 </dl>
 
 <table class="standard-table">
@@ -770,7 +770,7 @@ translate(tx, ty)
  <tbody>
   <tr>
    <td colspan="1" rowspan="2">
-    <p><span class="outputBox-2liU7_0">平移不是</span> ℝ<sup>2</sup> <span class="outputBox-2liU7_0">中的线性变换，不能用笛卡尔坐标系中的矩阵表示。</span></p>
+    <p>平移不是 ℝ<sup>2</sup> 中的线性变换，不能用笛卡尔坐标系中的矩阵表示。</p>
    </td>
    <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
@@ -784,7 +784,7 @@ translate(tx, ty)
 
 <h3 id="translate3d"><code>translate3d()</code></h3>
 
-<p> <code>translate3d()</code> 这个CSS 函数用于<span class="outputBox-2liU7_0">移动元素在3D空间中的位置。</span> <span class="outputBox-2liU7_0">这种变换的特点是三维矢量的坐标定义了它在每个方向上的移动量。</span></p>
+<p> <code>translate3d()</code> 这个 CSS 函数用于移动元素在 3D 空间中的位置。这种变换的特点是三维矢量的坐标定义了它在每个方向上的移动量。</p>
 
 <h4 id="语法_18">语法</h4>
 
@@ -795,11 +795,11 @@ translate(tx, ty)
 
 <dl>
  <dt><em>tx</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} <span class="outputBox-2liU7_0">，代表移动矢量的横坐标。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，代表移动矢量的横坐标。</dd>
  <dt><em>ty</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，<span class="outputBox-2liU7_0">代表移动矢量的纵坐标。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，代表移动矢量的纵坐标。</dd>
  <dt><em>tz</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} <span class="outputBox-2liU7_0">代表移动矢量的z轴坐标。</span> 该值不能使用百分比 {{cssxref("&lt;percentage&gt;")}} ；如果使用会被认为是无效属性。</dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} 代表移动矢量的 z 轴坐标。该值不能使用百分比 {{cssxref("&lt;percentage&gt;")}} ；如果使用会被认为是无效属性。</dd>
 </dl>
 
 <table class="standard-table">
@@ -816,7 +816,7 @@ translate(tx, ty)
    <td colspan="2" rowspan="2">
     <p>这个变换是属于 3D 空间的，并不适用于这两种情况。</p>
    </td>
-   <td colspan="1" rowspan="2"><span class="outputBox-2liU7_0">平移不是</span>ℝ<sup>3</sup><span class="outputBox-2liU7_0">中的线性变换，不能用笛卡尔坐标系中的矩阵表示。</span></td>
+   <td colspan="1" rowspan="2">平移不是ℝ<sup>3</sup>中的线性变换，不能用笛卡尔坐标系中的矩阵表示。</td>
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>tz</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
   </tr>
  </tbody>
@@ -824,7 +824,7 @@ translate(tx, ty)
 
 <h3 id="translateX"><code>translateX()</code></h3>
 
-<p><img src="/@api/deki/files/5972/=transform-functions-translateX_2.png" style="float: left;"> <code>translateX()</code> 这个CSS 函数用于<span class="outputBox-2liU7_0">在平面上水平移动元素</span>。 <span class="outputBox-2liU7_0">这个转换的特点是 </span>{{cssxref("&lt;length&gt;")}} <span class="outputBox-2liU7_0">定义了它的水平移动量。</span></p>
+<p><img src="/@api/deki/files/5972/=transform-functions-translateX_2.png" style="float: left;"> <code>translateX()</code> 这个 CSS 函数用于在平面上水平移动元素。这个转换的特点是 {{cssxref("&lt;length&gt;")}} 定义了它的水平移动量。</p>
 
 <p><code>translateX(tx)</code> 是 <code>translate(tx, 0) </code>的简写形式。</p>
 
@@ -837,7 +837,7 @@ translate(tx, ty)
 
 <dl>
  <dt><em>t</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，<span class="outputBox-2liU7_0">代表移动矢量的横坐标。</span></dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，代表移动矢量的横坐标。</dd>
 </dl>
 
 <table class="standard-table">
@@ -866,7 +866,7 @@ translate(tx, ty)
 
 <h3 id="translateY"><code>translateY()</code></h3>
 
-<p><img src="/@api/deki/files/5971/=transform-functions-translateY_2.png" style="float: left;"> <code>translateY()</code> 这个CSS 函数用于<span class="outputBox-2liU7_0">在平面上垂直移动元素</span>。 <span class="outputBox-2liU7_0">这个转换的特点是通过 </span>{{cssxref("&lt;length&gt;")}} <span class="outputBox-2liU7_0">定义了它的垂直移动量。</span></p>
+<p><img src="/@api/deki/files/5971/=transform-functions-translateY_2.png" style="float: left;"> <code>translateY()</code> 这个 CSS 函数用于在平面上垂直移动元素。这个转换的特点是通过 {{cssxref("&lt;length&gt;")}} 定义了它的垂直移动量。</p>
 
 <p><code>translateY(ty)</code> 是 <code>translate(0, ty)</code>的简写形式。</p>
 
@@ -881,7 +881,7 @@ translate(tx, ty)
 
 <dl>
  <dt><em>t</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} <span class="outputBox-2liU7_0">代表移动矢量的横坐标。该参数不能使用百分比</span> {{cssxref("&lt;percentage&gt;")}} ；如果使用百分比形式，会被认为是无效参数。</dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} 代表移动矢量的横坐标。该参数不能使用百分比 {{cssxref("&lt;percentage&gt;")}} ；如果使用百分比形式，会被认为是无效参数。</dd>
 </dl>
 
 <table class="standard-table">
@@ -910,7 +910,7 @@ translate(tx, ty)
 
 <h3 id="translateZ"><code>translateZ()</code></h3>
 
-<p> <code>translateZ()</code> 这个CSS 函数用于3D空间的z轴方向移动元素， <span class="outputBox-2liU7_0">这个转换的特点是通过 </span>{{cssxref("&lt;length&gt;")}} <span class="outputBox-2liU7_0">定义了它的z轴方向移动量。</span></p>
+<p> <code>translateZ()</code> 这个 CSS 函数用于 3D 空间的 z 轴方向移动元素，这个转换的特点是通过 {{cssxref("&lt;length&gt;")}} 定义了它的 z 轴方向移动量。</p>
 
 <p><code>translateZ(tz)</code> 是 <code>translate3d(0, 0, tz) </code>的简写形式。</p>
 
@@ -923,7 +923,7 @@ translate(tx, ty)
 
 <dl>
  <dt><em>t</em></dt>
- <dd>该参数是 {{cssxref("&lt;length&gt;")}} ，代表<span class="outputBox-2liU7_0">移动矢量的z轴坐标。</span></dd>
+ <dd>该参数是 {{cssxref("&lt;length&gt;")}} ，代表移动矢量的 z 轴坐标。</dd>
 </dl>
 
 <table class="standard-table">

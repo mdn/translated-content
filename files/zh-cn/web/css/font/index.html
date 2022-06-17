@@ -17,13 +17,13 @@ translation_of: Web/CSS/font
 
 
 
-<p>与任何简写属性一样，任何未指定的值都将设置为其对应的初始值（可能覆盖先前使用非简写属性设置的值）。 虽然不能通过 font 直接设置，但是{{ cssxref("font-stretch") }}，{{ cssxref("font-size-adjust") }} 和 {{ cssxref("font-kerning") }} 也会重置为初始值。</p>
+<p>与任何简写属性一样，任何未指定的值都将设置为其对应的初始值（可能覆盖先前使用非简写属性设置的值）。虽然不能通过 font 直接设置，但是{{ cssxref("font-stretch") }}，{{ cssxref("font-size-adjust") }} 和 {{ cssxref("font-kerning") }} 也会重置为初始值。</p>
 
 <h2 id="语法">语法</h2>
 
 <p>可以将<code>font</code>属性指定为单个关键字，它将选择系统字体，或者作为字体相关的属性的简写。</p>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">如果将</span></span> <code>font</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">指定为系统关键字，则它必须是以下之一：</span></span><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#caption">caption</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#icon">icon</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#menu">menu</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#message-box">message-box</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#small-caption">small-caption</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#status-bar">status-bar</a></code><span class="tlid-translation translation" lang="zh-CN"><span title="">。</span></span></p>
+<p>如果将 <code>font</code> 指定为系统关键字，则它必须是以下之一：<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#caption">caption</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#icon">icon</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#menu">menu</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#message-box">message-box</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#small-caption">small-caption</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font$edit#status-bar">status-bar</a></code>。</p>
 
 <p>如果 <code>font</code> 字体相关的属性的简写：</p>
 
@@ -66,17 +66,17 @@ translation_of: Web/CSS/font
  <dt>
  <h4 id="系统字体">系统字体</h4>
  </dt>
- <dt id="caption"><code>caption</code></dt>
+ <dt><code>caption</code></dt>
  <dd>用于标题控件（如按钮，下拉列表等）的系统字体。</dd>
- <dt id="icon"><code>icon</code></dt>
+ <dt><code>icon</code></dt>
  <dd>用于标签图标的系统字体。</dd>
- <dt id="menu"><code>menu</code></dt>
+ <dt><code>menu</code></dt>
  <dd>菜单中（如下拉菜单和菜单列表）使用的系统字体。</dd>
- <dt id="message-box"><code>message-box</code></dt>
+ <dt><code>message-box</code></dt>
  <dd>用于对话框的系统字体。</dd>
- <dt id="small-caption"><code>small-caption</code></dt>
+ <dt><code>small-caption</code></dt>
  <dd>用于小标题控件的系统字体。</dd>
- <dt id="status-bar"><code>status-bar</code></dt>
+ <dt><code>status-bar</code></dt>
  <dd>用于窗口状态栏的系统字体。</dd>
  <dt>系统关键字前缀</dt>
  <dd>浏览器经常会多实现几个带前缀的关键字；Gecko 实现了 <code>-moz-window</code>, <code>-moz-document</code>, <code>-moz-desktop</code>, <code>-moz-info</code>, <code>-moz-dialog</code>, <code>-moz-button</code>, <code>-moz-pull-down-menu</code>, <code>-moz-list</code>, 和 <code>-moz-field</code>.</dd>
@@ -89,27 +89,27 @@ translation_of: Web/CSS/font
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="comment token">/* Set the font size to 12px and the line height to 14px.
-   Set the font family to sans-serif */</span>
-<span class="selector token">p</span> <span class="punctuation token">{</span> <span class="property token">font</span><span class="punctuation token">:</span> <span class="number token">12</span><span class="token unit">px</span>/<span class="number token">14</span><span class="token unit">px</span> sans-serif <span class="punctuation token">}</span>
+<pre class="brush: css line-numbers language-css"><code class="language-css">/* Set the font size to 12px and the line height to 14px.
+   Set the font family to sans-serif */
+p { font: 12px/14px sans-serif }
 
-<span class="comment token">/* Set the font size to 80% of the parent element
+/* Set the font size to 80% of the parent element
    or default value (if no parent element present).
-   Set the font family to sans-serif */</span>
-<span class="selector token">p</span> <span class="punctuation token">{</span> <span class="property token">font</span><span class="punctuation token">:</span> <span class="number token">80</span><span class="token unit">%</span> sans-serif <span class="punctuation token">}</span>
+   Set the font family to sans-serif */
+p { font: 80% sans-serif }
 
-<span class="comment token">/* Set the font weight to bold,
+/* Set the font weight to bold,
    the font-style to italic,
    the font size to large,
-   and the font family to serif. */</span>
-<span class="selector token">p</span> <span class="punctuation token">{</span> <span class="property token">font</span><span class="punctuation token">:</span> bold italic large serif <span class="punctuation token">}</span>
+   and the font family to serif. */
+p { font: bold italic large serif }
 
-<span class="comment token">/* Use the same font as the status bar of the window */</span>
-<span class="selector token">p</span> <span class="punctuation token">{</span> <span class="property token">font</span><span class="punctuation token">:</span> status-bar <span class="punctuation token">}</span></code></pre>
+/* Use the same font as the status bar of the window */
+p { font: status-bar }</code></pre>
 
 <h3 id="live_sample" name="live_sample">实样</h3>
 
-<p id="HTML_Content" class="hidden">HTML Content</p>
+<p>HTML Content</p>
 
     Change the radio buttons below to see the generated shorthand and it's effect.
 &lt;/p&gt;
@@ -202,7 +202,7 @@ translation_of: Web/CSS/font
 &lt;/div&gt;
 </pre>
 
-<p id="CSS_Content" class="hidden">CSS Content</p>
+<p>CSS Content</p>
 
 <pre class="brush: css" class="hidden">body, input {
   font: 14px arial;
@@ -251,7 +251,7 @@ translation_of: Web/CSS/font
   text-align: right;
 }</pre>
 
-<p id="JavaScript_Content" class="hidden">JavaScript Content</p>
+<p>JavaScript Content</p>
 
 <pre class="brush: js" class="hidden">var textAreas = document.getElementsByClassName("curCss"),
     shortText = "",
@@ -334,7 +334,7 @@ setCss();</pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性"><span class="tlid-translation translation" lang="zh-CN"><span title="">浏览器兼容性</span></span></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 

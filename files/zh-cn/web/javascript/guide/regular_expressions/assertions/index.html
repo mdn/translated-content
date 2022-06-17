@@ -46,14 +46,14 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
   <tr>
    <td><code>\b</code></td>
    <td>
-    <p>匹配一个单词的边界，这是一个字的字符前后没有另一个字的字符位置, 例如在字母和空格之间。需要注意的是匹配的单词边界不包括在匹配中。换句话说，匹配字边界的长度为零。</p>
+    <p>匹配一个单词的边界，这是一个字的字符前后没有另一个字的字符位置，例如在字母和空格之间。需要注意的是匹配的单词边界不包括在匹配中。换句话说，匹配字边界的长度为零。</p>
 
-    <p>一些例子:</p>
+    <p>一些例子：</p>
 
     <ul>
      <li><code>/\bm/</code>  在 "moon" 中匹配到 "m" </li>
-     <li><code>/oo\b/</code>  在 "moon" 中不会匹配到 "oo", 因为 "oo" 后面跟着 "n" 这个单词字符.</li>
-     <li><code>/oon\b/</code> 在 "moon" 中匹配 "oon"， 因为 "oon" 是这个字符串的结尾, 因此后面没有单词字符</li>
+     <li><code>/oo\b/</code>  在 "moon" 中不会匹配到 "oo", 因为 "oo" 后面跟着 "n" 这个单词字符。</li>
+     <li><code>/oon\b/</code> 在 "moon" 中匹配 "oon"， 因为 "oon" 是这个字符串的结尾，因此后面没有单词字符</li>
      <li><code>/\w\b\w/</code> 将永远不会匹配任何东西，因为一个单词字符后面永远不会有非单词字符和单词字符。</li>
     </ul>
 
@@ -91,7 +91,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
     <table>
      <tbody>
       <tr>
-       <td><strong>向前断言:</strong> x 被 y 跟随时匹配 x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code>/Jack(?=Sprat|Frost)/</code> “Jack”后跟有“Sprat”或“Frost”的情况下才会得到匹配。不过， 匹配结果不包括“Sprat”或“Frost”。</td>
+       <td><strong>向前断言：</strong> x 被 y 跟随时匹配 x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code>/Jack(?=Sprat|Frost)/</code> “Jack”后跟有“Sprat”或“Frost”的情况下才会得到匹配。不过， 匹配结果不包括“Sprat”或“Frost”。</td>
       </tr>
      </tbody>
     </table>
@@ -103,7 +103,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
     <table>
      <tbody>
       <tr>
-       <td><strong>向前否定断言:</strong> x 没有被 y 紧随时匹配 x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。</td>
+       <td><strong>向前否定断言：</strong> x 没有被 y 紧随时匹配 x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。</td>
       </tr>
      </tbody>
     </table>
@@ -115,7 +115,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
     <table>
      <tbody>
       <tr>
-       <td><strong>向后断言:</strong> x 跟随 y 的情况下匹配 x。例如，对于<code>/(?&lt;=Jack)Sprat/</code>，“Sprat”紧随“Jack”时才会得到匹配。对于<code>/(?&lt;=Jack|Tom)Sprat</code>，“Sprat”在紧随“Jack”或“Tom”的情况下才会得到匹配。不过，匹配结果中不包括“Jack”或“Tom”。</td>
+       <td><strong>向后断言：</strong> x 跟随 y 的情况下匹配 x。例如，对于<code>/(?&lt;=Jack)Sprat/</code>，“Sprat”紧随“Jack”时才会得到匹配。对于<code>/(?&lt;=Jack|Tom)Sprat</code>，“Sprat”在紧随“Jack”或“Tom”的情况下才会得到匹配。不过，匹配结果中不包括“Jack”或“Tom”。</td>
       </tr>
      </tbody>
     </table>
@@ -127,7 +127,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
     <table>
      <tbody>
       <tr>
-       <td><strong>向后否定断言:</strong> x 不跟随 y 时匹配 x。例如，对于<code>/(?&lt;!-)\d+/</code>，数字不紧随-符号的情况下才会得到匹配。对于<code>/(?&lt;!-)\d+/.exec(3)</code> ，“3”得到匹配。 而<code>/(?&lt;!-)\d+/.exec(-3)</code>的结果无匹配，这是由于数字之前有-符号。</td>
+       <td><strong>向后否定断言：</strong> x 不跟随 y 时匹配 x。例如，对于<code>/(?&lt;!-)\d+/</code>，数字不紧随 - 符号的情况下才会得到匹配。对于<code>/(?&lt;!-)\d+/.exec(3)</code> ，“3”得到匹配。 而<code>/(?&lt;!-)\d+/.exec(-3)</code>的结果无匹配，这是由于数字之前有 - 符号。</td>
       </tr>
      </tbody>
     </table>
@@ -144,30 +144,30 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
-// 1) 使用 ^ 修正字符串开始处和换行后的匹配.
+// 1) 使用 ^ 修正字符串开始处和换行后的匹配。
 buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
 console.log(1, buggyMultiline); // 修复 'tey'=&gt;'hey'(字符串开始) , 'tangs'=&gt;'hangs'(换行后)
 
-// 2) 使用 $ 修正字符串结尾处的匹配.
+// 2) 使用 $ 修正字符串结尾处的匹配。
 buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
 console.log(2, buggyMultiline); // 修复 'traa' =&gt; 'tree'.
 
-// 3) 使用 \b 修正单词和空格边界上的字符.
+// 3) 使用 \b 修正单词和空格边界上的字符。
 buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
 console.log(3, buggyMultiline); // 修复 'ihe' =&gt; 'the'  不影响 'light'.
 
-// 4) 使用 \B 匹配实体边界内的字符.
+// 4) 使用 \B 匹配实体边界内的字符。
 fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
 console.log(4, fixedMultiline); // 修复  'greon'  不影响'on'.</pre>
 
 <h3 id="使用_（控制字符）匹配输入的开头">使用 ^（控制字符）匹配输入的开头</h3>
 
-<p>使用 <code>^</code>匹配输入的开头。在这个例子中，我们可以通过 /^A/ 正则表达式得到以A开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法.</p>
+<p>使用 <code>^</code>匹配输入的开头。在这个例子中，我们可以通过 /^A/ 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法。</p>
 
 <pre>let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// 使用正则 /^A/ 选择以'A'开头的水果.
-// 这里的 '^' 只有一种含义: 匹配输入的开头.
+// 使用正则 /^A/ 选择以'A'开头的水果。
+// 这里的 '^' 只有一种含义：匹配输入的开头。
 
 let fruitsStartsWithA = fruits.filter(fruit =&gt; /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
@@ -177,7 +177,7 @@ console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
 <pre>let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // 使用正则 /^[^A]/ 选择 不是以 ‘A’ 开头的水果
-// 在这个例子中，“^” 控件符号表示两种含义:
+// 在这个例子中，“^” 控件符号表示两种含义：
 // 1) 匹配输入的开头
 // 2) 一个否定的字符集: [^A] ，意思是匹配不是 ‘A’ 的字符
 
@@ -189,7 +189,7 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]</
 
 <pre>let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
-// 选择包含以 “en” 或 “ed” 结尾的单词的描述:
+// 选择包含以 “en” 或 “ed” 结尾的单词的描述：
 let enEdSelection = fruitsWithDescription.filter(descr =&gt; /(en|ed)\b/.test(descr));
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]</pre>
@@ -207,7 +207,7 @@ console.log('This is a First peach in a month.'.match(regex)); // null</pre>
 
 <h3 id="向前否定断言">向前否定断言</h3>
 
-<p>例如, <code>/\d+(?!\.)/</code> 匹配没有被小数点跟随且至少有一位的数字。 <code>/\d+(?!\.)/.exec('3.141')</code> 匹配 "141" 而不是 "3" </p>
+<p>例如， <code>/\d+(?!\.)/</code> 匹配没有被小数点跟随且至少有一位的数字。 <code>/\d+(?!\.)/.exec('3.141')</code> 匹配 "141" 而不是 "3" </p>
 
 <pre>console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]</pre>
 

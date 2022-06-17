@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p><code>map</code> 方法会给原数组中的每个元素都按顺序调用一次 <code>callback</code> 函数。<code>callback</code> 每次执行后的返回值（包括 {{jsxref("undefined")}}）组合起来形成一个新数组。 <code>callback</code> 函数只会在有值的索引上被调用；那些从来没被赋过值或者使用 <code>delete</code> 删除的索引则不会被调用。</p>
 
-<p>因为<code>map</code>生成一个新数组，当你不打算使用返回的新数组却使用<code>map</code>是违背设计初衷的，请用<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code>或者<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for-of</a></code>替代。你不该使用<code>map</code>: A)你不打算使用返回的新数组，或/且 B) 你没有从回调函数中返回值。</p>
+<p>因为<code>map</code>生成一个新数组，当你不打算使用返回的新数组却使用<code>map</code>是违背设计初衷的，请用<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code>或者<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for-of</a></code>替代。你不该使用<code>map</code>: A) 你不打算使用返回的新数组，或/且 B) 你没有从回调函数中返回值。</p>
 
 <p><code>callback</code> 函数会被自动传入三个参数：数组元素，元素索引，原数组本身。</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p><code>map</code> 方法处理数组元素的范围是在 <code>callback</code> 方法第一次调用之前就已经确定了。调用<code>map</code>方法之后追加的数组元素不会被<code>callback</code>访问。如果存在的数组元素改变了，那么传给<code>callback</code>的值是<code>map</code>访问该元素时的值。在<code>map</code>函数调用后但在访问该元素前，该元素被删除的话，则无法被访问到。</p>
 
-<p>根据规范中定义的算法，如果被map调用的数组是离散的，新数组将也是离散的保持相同的索引为空。</p>
+<p>根据规范中定义的算法，如果被 map 调用的数组是离散的，新数组将也是离散的保持相同的索引为空。</p>
 
 <h2 id="Examples">示例</h2>
 
@@ -68,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <pre class="brush: js">var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
-// roots的值为[1, 2, 3], numbers的值仍为[1, 4, 9]</pre>
+// roots 的值为 [1, 2, 3], numbers 的值仍为 [1, 4, 9]</pre>
 
 <h3 id="使用_map_重新格式化数组中的对象">使用 map 重新格式化数组中的对象</h3>
 
@@ -86,23 +86,23 @@ var reformattedArray = kvArray.map(function(obj) {
 
 // reformattedArray 数组为： [{1: 10}, {2: 20}, {3: 30}],
 
-// kvArray 数组未被修改:
+// kvArray 数组未被修改：
 // [{key: 1, value: 10},
 //  {key: 2, value: 20},
 //  {key: 3, value: 30}]
 </pre>
 
-<h3 id="Example_Pluralizing_the_words_.28strings.29_in_an_array">使用一个包含一个参数的函数来mapping(构建)一个数字数组</h3>
+<h3 id="Example_Pluralizing_the_words_.28strings.29_in_an_array">使用一个包含一个参数的函数来 mapping(构建) 一个数字数组</h3>
 
-<p>下面的代码表示了当函数需要一个参数时map的工作方式。当map循环遍历原始数组时，这个参数会自动被分配成数组中对应的每个元素。</p>
+<p>下面的代码表示了当函数需要一个参数时 map 的工作方式。当 map 循环遍历原始数组时，这个参数会自动被分配成数组中对应的每个元素。</p>
 
 <pre class="brush: js">var numbers = [1, 4, 9];
 var doubles = numbers.map(function(num) {
   return num * 2;
 });
 
-// doubles数组的值为： [2, 8, 18]
-// numbers数组未被修改： [1, 4, 9]</pre>
+// doubles 数组的值为： [2, 8, 18]
+// numbers 数组未被修改： [1, 4, 9]</pre>
 
 <h3 id="Example_using_map_generically">一般的<code>map</code> 方法</h3>
 
@@ -112,7 +112,7 @@ var doubles = numbers.map(function(num) {
 var a = map.call("Hello World", function(x) {
   return x.charCodeAt(0);
 })
-// a的值为[72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+// a 的值为 [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 </pre>
 
 <h3 id="querySelectorAll_应用"><code>querySelectorAll 应用</code></h3>
@@ -137,7 +137,7 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 <p>我们期望输出 <code>[1, 2, 3]</code>, 而实际结果是 <code>[1, NaN, NaN]</code>.</p>
 
-<p>parseInt 经常被带着一个参数使用, 但是这里接受两个。第一个参数是一个表达式而第二个是callback function的基，<code>Array.prototype.map</code> 传递3个参数:</p>
+<p>parseInt 经常被带着一个参数使用，但是这里接受两个。第一个参数是一个表达式而第二个是 callback function 的基，<code>Array.prototype.map</code> 传递 3 个参数：</p>
 
 <ul>
  <li>the element</li>
@@ -172,7 +172,7 @@ var values = Array.prototype.map.call(elems, function(obj) {
 // For comparison, if we use parseInt() on the array above:
 ['1.1', '2.2e2', '3e300'].map( str =&gt; parseInt(str) ); // [1, 2, 3]</pre>
 
-<p>一个 map 方法调用 parseInt 作为一个参数的等效输出运行如下:</p>
+<p>一个 map 方法调用 parseInt 作为一个参数的等效输出运行如下：</p>
 
 <pre class="brush: js">var xs = ['10', '10', '10'];
 
@@ -183,7 +183,7 @@ console.log(xs);  // 输出结果为：[10, NaN, 2]
 
 <h3 id="Mapping_含_undefined_的数组">Mapping 含 undefined 的数组</h3>
 
-<p>当返回 undefined 或没有返回任何内容时:</p>
+<p>当返回 undefined 或没有返回任何内容时：</p>
 
 <pre class="brush: js">var numbers = [1, 2, 3, 4];
 var filteredNumbers = numbers.map(function(num, index) {

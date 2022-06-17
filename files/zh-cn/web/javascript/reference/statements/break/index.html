@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <p><code>break</code>语句包含一个可选的标签，可允许程序摆脱一个被标记的语句。<code>break</code>语句需要内嵌在引用的标签中。被标记的语句可以是任何 {{jsxref("Statements/block", "块")}}语句；不一定是循环语句。</p>
 
-<p>break语句不能在function函数体中直接使用，break语句应嵌套在要中断的当前循环、switch或label语句中。</p>
+<p>break 语句不能在 function 函数体中直接使用，break 语句应嵌套在要中断的当前循环、switch 或 label 语句中。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <h3 id="break_in_switch_statements">break in switch statements</h3>
 
-<p>在下面的代码中， <code>break</code> 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到case后，就会执行相应的代码并中断循环体。</p>
+<p>在下面的代码中， <code>break</code> 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到 case 后，就会执行相应的代码并中断循环体。</p>
 
 <pre>const food = "sushi";
 
@@ -96,7 +96,7 @@ block_2:{
 
 <h3 id="break_within_functions">break within functions</h3>
 
-<p>在下面的代码同样会产生SyntaxError，因为它并没被正确的使用在循环、switch或label语句中。</p>
+<p>在下面的代码同样会产生 SyntaxError，因为它并没被正确的使用在循环、switch 或 label 语句中。</p>
 
 <pre>function testBreak(x) {
   var i = 0;

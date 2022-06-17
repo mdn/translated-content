@@ -7,10 +7,10 @@ translation_of: Web/JavaScript/Reference/Errors/Read-only
 
 <h2 id="报错消息">报错消息</h2>
 
-<pre class="syntaxbox">TypeError: "x" is read-only (Firefox) //格式错误:"x"只读。(x可以代表任意值)
+<pre class="syntaxbox">TypeError: "x" is read-only (Firefox) //格式错误:"x"只读。(x 可以代表任意值)
 TypeError: 0 is read-only (Firefox)
 TypeError: Cannot assign to read only property 'x' of #&lt;Object&gt; (Chrome)
-//格式错误:对象的x属性是只读的不能设置 （chrome）
+//格式错误：对象的 x 属性是只读的不能设置（chrome）
 TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 </pre>
 
@@ -18,7 +18,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 <p>{{jsxref("TypeError")}}</p>
 
-<h2 id="哪里出错了">哪里出错了?</h2>
+<h2 id="哪里出错了">哪里出错了？</h2>
 
 <p>全局变量或对象属性被设置为只读 (专业点讲，就是这条数据属性禁止写入.)</p>
 
@@ -28,7 +28,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 <h3 id="无效例子（也就是下面这么做会导致报这种错）">无效例子（也就是下面这么做会导致报这种错）</h3>
 
-<p>只读属性不能直接创建, 但我们可以通过{{jsxref("Object.defineProperty()")}} 或 {{jsxref("Object.freeze()")}}设置.</p>
+<p>只读属性不能直接创建，但我们可以通过{{jsxref("Object.defineProperty()")}} 或 {{jsxref("Object.freeze()")}}设置。</p>
 
 <pre class="brush: js example-bad">"use strict";
 var obj = Object.freeze({name: "Elsa", score: 157});
@@ -42,14 +42,14 @@ LUNG_COUNT = 3;  // TypeError
 var frozenArray = Object.freeze([0, 1, 2]);
 frozenArray[0]++;  // TypeError
 
-还有几个JavaScript内置属性. 如果你尝试修改一个常量.
+还有几个 JavaScript 内置属性。如果你尝试修改一个常量。
 
 "use strict";
 Math.PI = 4;  // TypeError</pre>
 
 <p>傻了吧，报错了</p>
 
-<p><code>全局变量undefined也是只读的</code>, 所以你不能忽视臭名昭著的"undefined is not a function"错误:</p>
+<p><code>全局变量 undefined 也是只读的</code>, 所以你不能忽视臭名昭著的"undefined is not a function"错误：</p>
 
 <pre class="brush: js example-bad">"use strict";
 undefined = function () {};  // TypeError: "undefined" is read-only
@@ -59,7 +59,7 @@ undefined = function () {};  // TypeError: "undefined" is read-only
 
 <pre class="brush: js example-good">"use strict";
 var obj = Object.freeze({name: "Score", points: 157});
-obj = {name: obj.name, points: 0};   // 用一个新对象替换原来的对象(其实就是更改了对象的指针)
+obj = {name: obj.name, points: 0};   // 用一个新对象替换原来的对象 (其实就是更改了对象的指针)
 
 "use strict";
 var LUNG_COUNT = 2;  //

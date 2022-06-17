@@ -13,8 +13,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_assign_to_property
 
 ## Message
 
-    TypeError: can't assign to property "x" on {y}: not an object (Firefox)
-    TypeError: Cannot create property 'x' on {y} (Chrome)
+```
+TypeError: can't assign to property "x" on {y}: not an object (Firefox)
+TypeError: Cannot create property 'x' on {y} (Chrome)
+```
 
 ## Type d'erreur
 

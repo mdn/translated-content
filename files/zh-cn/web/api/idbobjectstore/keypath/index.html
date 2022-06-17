@@ -6,13 +6,13 @@ translation_of: Web/API/IDBObjectStore/keyPath
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>{{domxref("IDBObjectStore")}}的只读属性keyPath接口返回当前objectStore的<a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a>。</p>
+<p>{{domxref("IDBObjectStore")}}的只读属性 keyPath 接口返回当前 objectStore 的<a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a>。</p>
 
-<p>什么是keyPath呢？在indexedDB中，一条记录就是一个object，object里面有一个属性作为这条记录的主要依据用来进行查询，而这个属性的属性名就是keyPath，属性值就是key。在用indexedDB的get方法时，提供key，而不需要指定keyPath，因为get方法把参数作为这个最主要的属性的值，在数据库中进行查询。（译者注）</p>
+<p>什么是 keyPath 呢？在 indexedDB 中，一条记录就是一个 object，object 里面有一个属性作为这条记录的主要依据用来进行查询，而这个属性的属性名就是 keyPath，属性值就是 key。在用 indexedDB 的 get 方法时，提供 key，而不需要指定 keyPath，因为 get 方法把参数作为这个最主要的属性的值，在数据库中进行查询。（译者注）</p>
 
-<p>如果该属性值为null，应用中必须在每一次进行修改性质的操作时提供一个key。</p>
+<p>如果该属性值为 null，应用中必须在每一次进行修改性质的操作时提供一个 key。</p>
 
-<p>add、put方法都可以传第二个参数，当你当前的objectStore的autoIncrement为true时，你一般不会设置keyPath，如果这个时候你在put的时候不提供第二个参数，indexedDB就不知道要更新哪一条记录了。（译者注）</p>
+<p>add、put 方法都可以传第二个参数，当你当前的 objectStore 的 autoIncrement 为 true 时，你一般不会设置 keyPath，如果这个时候你在 put 的时候不提供第二个参数，indexedDB 就不知道要更新哪一条记录了。（译者注）</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
@@ -23,16 +23,16 @@ translation_of: Web/API/IDBObjectStore/keyPath
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">任何类型。</span></p>
+<p>任何类型。</p>
 
 <h2 id="例子">例子</h2>
 
-<p>在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用<code>add()</code>向一个objectStore中添加了一些数据。在objectStore被创建之后，我们在console中打印了objectStore.keyPath的值。想查看完整的例子，请查看我们的<a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a>应用（<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">查看在线例子</a>）。</p>
+<p>在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用<code>add()</code>向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.keyPath 的值。想查看完整的例子，请查看我们的<a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a>应用（<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">查看在线例子</a>）。</p>
 
 <pre class="brush: js">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -106,8 +106,8 @@ function addData() {
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a></li>
  <li>开始学习事务 transactions: {{domxref("IDBDatabase")}}</li>
  <li>使用事务 transactions: {{domxref("IDBTransaction")}}</li>
- <li>值域range的使用: {{domxref("IDBKeyRange")}}</li>
+ <li>值域 range 的使用: {{domxref("IDBKeyRange")}}</li>
  <li>检索、修改: {{domxref("IDBObjectStore")}}</li>
  <li>使用游标: {{domxref("IDBCursor")}}</li>
- <li>相关例子: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>相关例子：<a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

@@ -190,8 +190,8 @@ JavaScript는 의도적으로 값이 없음을 나타내는 값인 `null`과 초
 
 JavaScript는 `true` 와 `false` 값(둘은 모두 키워드로 예약되어있는 값)을 가질 수 있는 부울 타입을 가지고 있습니다. 다음과 같은 규칙에 따라 어떤 임의의 값을 부울 값으로 변환할 수 있습니다.
 
-1.  `false`, `0`, 빈 문자열 (`""`), 수가 아님을 뜻하는 `NaN`, `null`, 와 `undefined`은 모두 `false`가 됩니다.
-2.  다른 모든 값은 `true`가 됩니다.
+1. `false`, `0`, 빈 문자열 (`""`), 수가 아님을 뜻하는 `NaN`, `null`, 와 `undefined`은 모두 `false`가 됩니다.
+2. 다른 모든 값은 `true`가 됩니다.
 
 이 변환은 `Boolean()` 함수를 써서 명시적으로 이 작업을 수행하실 수 있습니다.
 
@@ -401,6 +401,7 @@ switch(a) {
 ```
 
 default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은  `===` 연산자로 비교합니다.
+
 ```js
 switch(1 + 3){
     case 2 + 2:
@@ -431,7 +432,7 @@ JavaScript 객체는 간단히 이름-값 쌍(name-value pairs)의 모임입니�
 var obj = new Object();
 ```
 
-그리고, 
+그리고,
 
 ```js
 var obj = {};
@@ -859,7 +860,7 @@ Person.prototype.fullNameReversed = function() {
 ```
 
 `Person.prototype`은 모든 `Person` 인스턴스들 간에 공유되는 객체입니다. 이는 검색(lookup) 체인 (또는 프로토타입 체인)의 한 부분을 이룹니다. 다시 말해, `Person` 객체의 설정되지 않은 속성에 접근을 시도할 때마다, JavaScript는 `Person.prototype`에 그 속성이 존재하는지 살펴봅니다. 결과적으로 `Person.prototype`에 할당된 모든 것은 생성자를 통해 만들어진 인스턴스들이 `this` 객체를 통해 사용할 수 있게 됩니다.
- 
+
 이것은 정말 강력한 도구로, JavaScript에서는 프로토타입을 프로그램에서 언제든 변경할 수 있습니다. 기존 객체에 부가적인 메서드를 실시간으로 추가할 수 있다는 것입니다.
 
 ```js

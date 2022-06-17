@@ -5,7 +5,7 @@ translation_of: Web/API/Clients/matchAll
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>{{domxref("Clients")}} 接口的  <strong><code>matchAll()</code></strong> 方法返回 service worker {{domxref("Client")}} 对象列表的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:">Promise</a></code> . 包含 <code style="font-style: normal;">options</code> 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由service worker控制的 service worker clients.</p>
+<p>{{domxref("Clients")}} 接口的  <strong><code>matchAll()</code></strong> 方法返回 service worker {{domxref("Client")}} 对象列表的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:">Promise</a></code> . 包含 <code style="font-style: normal;">options</code> 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由 service worker 控制的 service worker clients.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,10 +17,10 @@ translation_of: Web/API/Clients/matchAll
 
 <dl>
  <dt><code>options {{optional_inline}}</code></dt>
- <dd>一个options对象，允许您为匹配操作设置选项。 可用选项包括:
+ <dd>一个 options 对象，允许您为匹配操作设置选项。可用选项包括：
  <ul>
-  <li><code>includeUncontrolled</code>: {{domxref("Boolean")}} — 如果设置为<code>true</code>, 匹配操作将返回与当前服务工作者共享相同源的所有服务工作者客户端。 否则，它仅返回由当前服务工作者控制的服务工作者客户端。 默认值为<code>false</code>.</li>
-  <li><code>type</code>: 设置想要匹配的 clients 类型. 可用值包括 <code>window</code>, <code>worker</code>, <code>sharedworker</code>, 和 <code>all</code>. 默认是 <code>all</code>.</li>
+  <li><code>includeUncontrolled</code>: {{domxref("Boolean")}} — 如果设置为<code>true</code>, 匹配操作将返回与当前服务工作者共享相同源的所有服务工作者客户端。否则，它仅返回由当前服务工作者控制的服务工作者客户端。默认值为<code>false</code>.</li>
+  <li><code>type</code>: 设置想要匹配的 clients 类型。可用值包括 <code>window</code>, <code>worker</code>, <code>sharedworker</code>, 和 <code>all</code>. 默认是 <code>all</code>.</li>
  </ul>
  </dd>
 </dl>
@@ -28,7 +28,7 @@ translation_of: Web/API/Clients/matchAll
 <h3 id="返回值">返回值</h3>
 
 <dl>
- <dd>resolve为一个 {{domxref("Client")}} 对象数组的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:">Promise</a></code> . 在 Chrome 46/Firefox 54 以及更高版本中, 该方法以最近关注的顺序返回 clients , 根据规范更正.</dd>
+ <dd>resolve 为一个 {{domxref("Client")}} 对象数组的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:">Promise</a></code> . 在 Chrome 46/Firefox 54 以及更高版本中，该方法以最近关注的顺序返回 clients , 根据规范更正。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -44,20 +44,7 @@ translation_of: Web/API/Clients/matchAll
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

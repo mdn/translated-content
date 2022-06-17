@@ -3,36 +3,36 @@ title: 编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 tags:
   - Ping & Pong
-  - Pings和Pongs：WebSockets的心跳
+  - Pings 和 Pongs：WebSockets 的心跳
   - WebSocket
   - WebSockets 心跳
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
-<p><strong>WebSocket服务器是一个</strong>TCP应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在您选择的平台上实现一个简单的WebSocket服务器是很容易的。</p>
+<p><strong>WebSocket 服务器是一个</strong>TCP 应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在您选择的平台上实现一个简单的 WebSocket 服务器是很容易的。</p>
 
-<p>WebSocket服务器可以用任何实现了<a href="https://en.wikipedia.org/wiki/Berkeley_sockets">Berkeley sockets</a>的服务器端编程语言编写,如C(++)或Python甚至<a href="/en-US/docs/PHP">PHP</a>和<a href="/en-US/docs/Web/JavaScript/Server-Side_JavaScript">服务器端JavaScript</a>。 这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。</p>
+<p>WebSocket 服务器可以用任何实现了<a href="https://en.wikipedia.org/wiki/Berkeley_sockets">Berkeley sockets</a>的服务器端编程语言编写，如 C(++) 或 Python 甚至<a href="/en-US/docs/PHP">PHP</a>和<a href="/en-US/docs/Web/JavaScript/Server-Side_JavaScript">服务器端 JavaScript</a>。 这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。</p>
 
-<p>您需要知道HTTP的工作原理，并具有中级编程经验。 根据语言帮助（Depending on language support），可能需要TCP套接字的知识。 本指南的范围是介绍编写WebSocket服务器所需的最低知识。</p>
+<p>您需要知道 HTTP 的工作原理，并具有中级编程经验。 根据语言帮助（Depending on language support），可能需要 TCP 套接字的知识。 本指南的范围是介绍编写 WebSocket 服务器所需的最低知识。</p>
 
 <div class="note">
-<p>阅读最新的官方WebSockets规范， <a href="http://datatracker.ietf.org/doc/rfc6455/?include_text=1">RFC 6455</a>. 第1节和第4-7节对服务器实现者特别有意思。第10节讨论安全性，你应该在暴露你的服务器之前仔细阅读它。</p>
+<p>阅读最新的官方 WebSockets 规范， <a href="http://datatracker.ietf.org/doc/rfc6455/?include_text=1">RFC 6455</a>. 第 1 节和第 4-7 节对服务器实现者特别有意思。第 10 节讨论安全性，你应该在暴露你的服务器之前仔细阅读它。</p>
 </div>
 
-<p>WebSocket服务器在这里被解释得非常底层。 WebSocket服务器通常是独立的专用服务器（出于负载平衡或其他实际原因），因此您通常会使用<a href="https://en.wikipedia.org/wiki/Reverse_proxy">反向代理</a>（例如常规HTTP服务器）来检测WebSocket握手，预处理这些握手，并将这些客户端发送给 一个真正的WebSocket服务器。（例如）这意味着您不必使用cookie和身份验证处理程序来扩充服务器代码。</p>
+<p>WebSocket 服务器在这里被解释得非常底层。 WebSocket 服务器通常是独立的专用服务器（出于负载平衡或其他实际原因），因此您通常会使用<a href="https://en.wikipedia.org/wiki/Reverse_proxy">反向代理</a>（例如常规 HTTP 服务器）来检测 WebSocket 握手，预处理这些握手，并将这些客户端发送给 一个真正的 WebSocket 服务器。（例如）这意味着您不必使用 cookie 和身份验证处理程序来扩充服务器代码。</p>
 
 <h2 id="WebSocket_握手"><a name="Handshake">WebSocket 握手</a></h2>
 
-<p>首先，服务器必须使用标准的TCP套接字来监听传入的套接字连接。 根据您的平台，这可能已经为您处理。 例如，假设您的服务器正在监听example.com，端口8000，并且您的套接字服务器响应<code>/chat</code>上的GET请求。 .</p>
+<p>首先，服务器必须使用标准的 TCP 套接字来监听传入的套接字连接。 根据您的平台，这可能已经为您处理。 例如，假设您的服务器正在监听 example.com，端口 8000，并且您的套接字服务器响应<code>/chat</code>上的 GET 请求。 .</p>
 
 <div class="warning">
-<p><strong>警告:</strong>服务器可以监听它选择的任何端口，但是如果它选择了80或443以外的端口，防火墙和/或代理服务器可能会有问题。 端口443上的连接往往会更容易成功，但是当然，这需要一个安全的连接（TLS / SSL）。 另外请注意，大多数浏览器（特别是Firefox 8+）不允许从安全页面连接到不安全的WebSocket服务器。</p>
+<p><strong>警告：</strong>服务器可以监听它选择的任何端口，但是如果它选择了 80 或 443 以外的端口，防火墙和/或代理服务器可能会有问题。 端口 443 上的连接往往会更容易成功，但是当然，这需要一个安全的连接（TLS / SSL）。 另外请注意，大多数浏览器（特别是 Firefox 8+）不允许从安全页面连接到不安全的 WebSocket 服务器。</p>
 </div>
 
-<p>握手是WebSockets中的“Web”。 这是从HTTP到WS的桥梁。 在握手过程中，有关连接的详细信息正在初始化中，如果条件不利，任何一方可以在完成之前退出。 服务器必须小心了解客户要求的一切，否则会产生安全问题。</p>
+<p>握手是 WebSockets 中的“Web”。 这是从 HTTP 到 WS 的桥梁。 在握手过程中，有关连接的详细信息正在初始化中，如果条件不利，任何一方可以在完成之前退出。 服务器必须小心了解客户要求的一切，否则会产生安全问题。</p>
 
 <h3 id="客户端握手请求">客户端握手请求</h3>
 
-<p>即使您正在构建服务器，客户端仍然必须启动WebSocket握手过程。 所以你必须知道如何解释客户的请求。 客户端将发送一个相当标准的HTTP请求，看起来像这样（HTTP版本必须是1.1或更高，方法必须是<code>GET</code>）：</p>
+<p>即使您正在构建服务器，客户端仍然必须启动 WebSocket 握手过程。 所以你必须知道如何解释客户的请求。 客户端将发送一个相当标准的 HTTP 请求，看起来像这样（HTTP 版本必须是 1.1 或更高，方法必须是<code>GET</code>）：</p>
 
 <pre><code>GET /chat HTTP/1.1
 Host: example.com:8000
@@ -41,25 +41,25 @@ Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13</code></pre>
 
-<p>客户可以在这里请求扩展和/或子协议；详情请见<a href="#Miscellaneous">杂项</a>。当然，你也可以在这里加上你所需要的一般请求头如<code>User-Agent</code>， <code>Referer</code>， <code>Cookie</code>或者认证头。WebSocket没有作要求，忽略它们也是安全的。在大多数情况下，反向代理已经做了这些处理。</p>
+<p>客户可以在这里请求扩展和/或子协议；详情请见<a href="#Miscellaneous">杂项</a>。当然，你也可以在这里加上你所需要的一般请求头如<code>User-Agent</code>， <code>Referer</code>， <code>Cookie</code>或者认证头。WebSocket 没有作要求，忽略它们也是安全的。在大多数情况下，反向代理已经做了这些处理。</p>
 
-<p>如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#400">400 Bad Request</a>”并立即关闭套接字。 像往常一样，它也可能会给出HTTP响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。 如果服务器不理解该版本的WebSocket，则应该发送一个<code>Sec-WebSocket-Version</code>头，其中包含它理解的版本。 （本指南解释了最新的v13）。 下面我们来看看奇妙的请求头<code>Sec-WebSocket-Key</code>。</p>
+<p>如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#400">400 Bad Request</a>”并立即关闭套接字。 像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。 如果服务器不理解该版本的 WebSocket，则应该发送一个<code>Sec-WebSocket-Version</code>头，其中包含它理解的版本。（本指南解释了最新的 v13）。 下面我们来看看奇妙的请求头<code>Sec-WebSocket-Key</code>。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 所有浏览器将会发送一个 <code><a href="https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS#Origin">Origin</a></code>请求头。 你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#403">403 Forbidden</a>。需要注意的是非浏览器只能发送一个模拟的 <code>Origin</code>。大多数应用会拒绝不含这个请求头的请求.。</p>
+<p><strong>提示：</strong> 所有浏览器将会发送一个 <code><a href="https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS#Origin">Origin</a></code>请求头。 你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#403">403 Forbidden</a>。需要注意的是非浏览器只能发送一个模拟的 <code>Origin</code>。大多数应用会拒绝不含这个请求头的请求.。</p>
 </div>
 
 <div class="note">
-<p><strong>提示:</strong> 请求URI（这里的是<code>/chat</code>）在规范里没有定义。很多开发者聪明地把这点用于控制多功能WebSocket应用。例如<code>example.com/chat</code>会请求一个多方会话应用，而在相同服务器上<code>example.com/game</code>则会请求一个多玩家游戏应用。</p>
+<p><strong>提示：</strong> 请求 URI（这里的是<code>/chat</code>）在规范里没有定义。很多开发者聪明地把这点用于控制多功能 WebSocket 应用。例如<code>example.com/chat</code>会请求一个多方会话应用，而在相同服务器上<code>example.com/game</code>则会请求一个多玩家游戏应用。</p>
 </div>
 
 <div class="note">
-<p><strong>注意:</strong> <a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">常规HTTP状态码</a>只能在握手之前使用。 握手成功后，你必须使用一组不同的代码（在规范的第7.4节中定义）。</p>
+<p><strong>注意：</strong> <a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">常规 HTTP 状态码</a>只能在握手之前使用。 握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。</p>
 </div>
 
 <h3 id="服务器握手响应">服务器握手响应</h3>
 
-<p>当<strong>服务器</strong>收到握手请求时，它应该发回一个特殊的响应，表明协议将从HTTP变为WebSocket。看起来像这样（记住每个请求头以 <code>\r\n</code>结尾，并在最后一个之后放置一个额外的 <code>\r\n</code>）：</p>
+<p>当<strong>服务器</strong>收到握手请求时，它应该发回一个特殊的响应，表明协议将从 HTTP 变为 WebSocket。看起来像这样（记住每个请求头以 <code>\r\n</code>结尾，并在最后一个之后放置一个额外的 <code>\r\n</code>）：</p>
 
 <pre><strong>HTTP/1.1 101 Switching Protocols</strong>
 Upgrade: websocket
@@ -68,25 +68,25 @@ Connection: Upgrade
 
 </strong></pre>
 
-<p>另外，服务器可以在这时候决定插件或子协议，详情参见<a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous">杂项</a>。  <code>Sec-WebSocket-Accept</code> 参数很有趣，它需要服务器通过客户端发送的<code>Sec-WebSocket-Key</code> 计算出来。 怎样计算呢， 把客户发送的<span style="line-height: 1.5em;"> </span><code style="font-size: 14px;">Sec-WebSocket-Key</code><span style="line-height: 1.5em;"> 和 "</span><code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code><span style="line-height: 1.5em;">" (这个叫做 "</span><a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">魔法值</a><span style="line-height: 1.5em;">")连接起来，把结果用<a href="https://zh.wikipedia.org/wiki/SHA-1">SHA-1</a>编码，再用<a href="https://zh.wikipedia.org/wiki/Base64">base64</a>编码一次，就可以了。 </span></p>
+<p>另外，服务器可以在这时候决定插件或子协议，详情参见<a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous">杂项</a>。  <code>Sec-WebSocket-Accept</code> 参数很有趣，它需要服务器通过客户端发送的<code>Sec-WebSocket-Key</code> 计算出来。 怎样计算呢， 把客户发送的 <code style="font-size: 14px;">Sec-WebSocket-Key</code> 和 "<code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code>" (这个叫做 "<a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">魔法值</a>") 连接起来，把结果用<a href="https://zh.wikipedia.org/wiki/SHA-1">SHA-1</a>编码，再用<a href="https://zh.wikipedia.org/wiki/Base64">base64</a>编码一次，就可以了。 </p>
 
 <div class="note">
-<p><strong>参考：</strong>这看起来繁复的处理使得客户端明确服务端是否支持WebSocket。这是十分重要的，如果服务端接收到一个WebSocket连接但是把数据作为HTTP请求理解可能会导致安全问题。</p>
+<p><strong>参考：</strong>这看起来繁复的处理使得客户端明确服务端是否支持 WebSocket。这是十分重要的，如果服务端接收到一个 WebSocket 连接但是把数据作为 HTTP 请求理解可能会导致安全问题。</p>
 </div>
 
-<p>所以如果Sec-WebSocket-Key是“<code>dGhlIHNhbXBsZSBub25jZQ==</code>”，Sec-WebSocket-Accept将是“<code>s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</code>”。 一旦服务器发送这个请求头，握手就完成了，你可以开始交换数据！</p>
+<p>所以如果 Sec-WebSocket-Key 是“<code>dGhlIHNhbXBsZSBub25jZQ==</code>”，Sec-WebSocket-Accept 将是“<code>s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</code>”。 一旦服务器发送这个请求头，握手就完成了，你可以开始交换数据！</p>
 
 <div class="note">
-<p>服务端可以在发送握手回复前发送其他请求头，诸如Set-Cookie，请求认证或通过状态码重定向。</p>
+<p>服务端可以在发送握手回复前发送其他请求头，诸如 Set-Cookie，请求认证或通过状态码重定向。</p>
 </div>
 
 <h3 id="跟踪客户端">跟踪客户端</h3>
 
-<p>这并不直接与WebSocket协议相关，但是在这里值得一提的是：你的服务器将不得不跟踪客户的套接字，所以你不会再和已经完成握手的客户握手。 同一个客户端IP地址可以尝试连接多次（但是如果客户端尝试过多的连接，服务器可以拒绝它们以免遭<a href="https://en.wikipedia.org/wiki/Denial_of_service">拒绝服务攻击</a>）。</p>
+<p>这并不直接与 WebSocket 协议相关，但是在这里值得一提的是：你的服务器将不得不跟踪客户的套接字，所以你不会再和已经完成握手的客户握手。 同一个客户端 IP 地址可以尝试连接多次（但是如果客户端尝试过多的连接，服务器可以拒绝它们以免遭<a href="https://en.wikipedia.org/wiki/Denial_of_service">拒绝服务攻击</a>）。</p>
 
 <h2 id="交换数据帧">交换数据帧</h2>
 
-<p>客户端或服务端都可以在任何时间点发送数据——这就是WebSocket的魅力。然而，从这些被称为“帧”的数据中提取信息就不是十分愉快的体验了。尽管所有的帧都遵从相同的格式规范，从客户端发送到服务端的数据都被 <a href="https://en.wikipedia.org/wiki/XOR_cipher">异或加密</a>（用一个32位的key）格式化。详情请参见规范的第5节。</p>
+<p>客户端或服务端都可以在任何时间点发送数据——这就是 WebSocket 的魅力。然而，从这些被称为“帧”的数据中提取信息就不是十分愉快的体验了。尽管所有的帧都遵从相同的格式规范，从客户端发送到服务端的数据都被 <a href="https://en.wikipedia.org/wiki/XOR_cipher">异或加密</a>（用一个 32 位的 key）格式化。详情请参见规范的第 5 节。</p>
 
 <h3 id="格式">格式</h3>
 
@@ -113,40 +113,40 @@ Connection: Upgrade
      |                     Payload Data continued ...                |
      +---------------------------------------------------------------+</pre>
 
-<p>掩码明确告知我们消息是否经过格式化。从客户端来的消息必须经过格式化，所以你的服务器必须要求这个掩码是1（事实上，<a href="http://tools.ietf.org/html/rfc6455#section-5.1">规范5.1节</a>规定了如果客户端发送了没有格式化的消息，你的服务器应该断开连接）</p>
+<p>掩码明确告知我们消息是否经过格式化。从客户端来的消息必须经过格式化，所以你的服务器必须要求这个掩码是 1（事实上，<a href="http://tools.ietf.org/html/rfc6455#section-5.1">规范 5.1 节</a>规定了如果客户端发送了没有格式化的消息，你的服务器应该断开连接）</p>
 
-<p>当向客户端发送帧时，不要对其进行掩码，也不要设置掩码位。稍后我们将解释屏蔽。注意:即使使用安全套接字，也必须屏蔽消息。RSV1-3可以忽略，它们是用于扩展的。</p>
+<p>当向客户端发送帧时，不要对其进行掩码，也不要设置掩码位。稍后我们将解释屏蔽。注意：即使使用安全套接字，也必须屏蔽消息。RSV1-3 可以忽略，它们是用于扩展的。</p>
 
-<p>操作码字段定义了如何解释有效负载数据:0x0表示延续，0x1表示文本(总是用UTF-8编码)，0x2表示二进制，以及其他所谓的“控制代码”，稍后将对此进行讨论。在这个版本的WebSockets中，0x3到0x7和0xB到0xF没有任何意义。</p>
+<p>操作码字段定义了如何解释有效负载数据:0x0 表示延续，0x1 表示文本 (总是用 UTF-8 编码)，0x2 表示二进制，以及其他所谓的“控制代码”，稍后将对此进行讨论。在这个版本的 WebSockets 中，0x3 到 0x7 和 0xB 到 0xF 没有任何意义。</p>
 
-<p>FIN位告诉我们这是不是系列的最后一条消息。如果是0，那么服务器将继续侦听消息的更多部分;否则，服务器应该考虑传递的消息。不仅仅是这样。</p>
+<p>FIN 位告诉我们这是不是系列的最后一条消息。如果是 0，那么服务器将继续侦听消息的更多部分;否则，服务器应该考虑传递的消息。不仅仅是这样。</p>
 
 <h3 id="解码有效载荷长度">解码有效载荷长度</h3>
 
-<p>要读取有效负载数据，您必须知道何时停止读取。这就是为什么有效载荷长度很重要。不幸的是，这有点复杂。要阅读它，请遵循以下步骤:</p>
+<p>要读取有效负载数据，您必须知道何时停止读取。这就是为什么有效载荷长度很重要。不幸的是，这有点复杂。要阅读它，请遵循以下步骤：</p>
 
 <ol>
- <li>读取9-15(包括)位并将其解析为无符号整型。如果长度小于等于125，那么就是长度;你就完成了。如果是126，到第二步。如果是127，到步骤3。</li>
- <li>读取下面的16位，并将其解释为无符号整型。你就完成了。</li>
- <li>读取接下来的64位，并将其解释为无符号整型(最重要的位必须为0)。</li>
+ <li>读取 9-15(包括) 位并将其解析为无符号整型。如果长度小于等于 125，那么就是长度;你就完成了。如果是 126，到第二步。如果是 127，到步骤 3。</li>
+ <li>读取下面的 16 位，并将其解释为无符号整型。你就完成了。</li>
+ <li>读取接下来的 64 位，并将其解释为无符号整型 (最重要的位必须为 0)。</li>
 </ol>
 
 <h3 id="读取和解密数据">读取和解密数据</h3>
 
-<p>如果设置了掩码位(对于客户机到服务器的消息应该是这样)，则读取接下来的4个字节(32位);这是掩蔽键。一旦有效负载长度和掩蔽键被解码，您就可以继续从套接字读取字节数。让我们调用已编码的数据和密钥掩码。要获得解码，可以通过编码的八位元(字节，即文本数据的字符)和XOR八位元(i模4)掩码的第四个八位元进行循环。在伪代码中(恰好是有效的JavaScript):</p>
+<p>如果设置了掩码位 (对于客户机到服务器的消息应该是这样)，则读取接下来的 4 个字节 (32 位);这是掩蔽键。一旦有效负载长度和掩蔽键被解码，您就可以继续从套接字读取字节数。让我们调用已编码的数据和密钥掩码。要获得解码，可以通过编码的八位元 (字节，即文本数据的字符) 和 XOR 八位元 (i 模 4) 掩码的第四个八位元进行循环。在伪代码中 (恰好是有效的 JavaScript):</p>
 
 <pre>var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
-<span style="line-height: 1.5;">}</span></pre>
+}</pre>
 
 <p>现在，您可以根据应用程序了解解码意味着什么。</p>
 
 <h3 id="消息帧">消息帧</h3>
 
-<p>FIN和操作码字段一起工作，以发送分裂为独立帧的消息。这称为消息碎片。片段只能在操作码0x0到0x2上可用。</p>
+<p>FIN 和操作码字段一起工作，以发送分裂为独立帧的消息。这称为消息碎片。片段只能在操作码 0x0 到 0x2 上可用。</p>
 
-<p>回想一下，操作码告诉了帧应该做什么。如果是0x1，有效载荷就是文本。如果是0x2，有效载荷就是二进制数据。但是，如果是0x0，则该帧是一个延续帧。这意味着服务器应该将帧的有效负载连接到从该客户机接收到的最后一个帧。下面是一个粗略的示意图，其中服务器对发送文本消息的客户机做出反应。第一个消息在单个帧中发送，而第二个消息跨三个帧发送。FIN和操作码的详细信息只显示给客户：</p>
+<p>回想一下，操作码告诉了帧应该做什么。如果是 0x1，有效载荷就是文本。如果是 0x2，有效载荷就是二进制数据。但是，如果是 0x0，则该帧是一个延续帧。这意味着服务器应该将帧的有效负载连接到从该客户机接收到的最后一个帧。下面是一个粗略的示意图，其中服务器对发送文本消息的客户机做出反应。第一个消息在单个帧中发送，而第二个消息跨三个帧发送。FIN 和操作码的详细信息只显示给客户：</p>
 
 <pre style="font-size: 14px;"><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
 <strong>Server:</strong> <em>(process complete message immediately) </em>Hi.
@@ -157,29 +157,29 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 <strong>Client:</strong> FIN=1, opcode=0x0, msg="year!"
 <strong>Server:</strong> <em>(process complete message) </em>Happy new year to you too!</pre>
 
-<p>注意，第一个框架包含一个完整的消息(具有FIN=1和opcode!=0x0)，因此服务器可以根据需要进行处理或响应。客户机发送的第二帧具有文本有效负载(opcode=0x1)，但是整个消息还没有到达(FIN=0)。该消息的所有剩余部分都用延续帧(opcode=0x0)发送，消息的最终帧用FIN=1标记。<a href="http://tools.ietf.org/html/rfc6455#section-5.4">Section 5.4 of the spec</a>描述了消息帧。</p>
+<p>注意，第一个框架包含一个完整的消息 (具有 FIN=1 和 opcode!=0x0)，因此服务器可以根据需要进行处理或响应。客户机发送的第二帧具有文本有效负载 (opcode=0x1)，但是整个消息还没有到达 (FIN=0)。该消息的所有剩余部分都用延续帧 (opcode=0x0) 发送，消息的最终帧用 FIN=1 标记。<a href="http://tools.ietf.org/html/rfc6455#section-5.4">Section 5.4 of the spec</a>描述了消息帧。</p>
 
-<h2 id="Pings和Pongs：WebSockets的心跳">Pings和Pongs：WebSockets的心跳</h2>
+<h2 id="Pings和Pongs：WebSockets的心跳">Pings 和 Pongs：WebSockets 的心跳</h2>
 
-<p>在经过握手之后的任意时刻里，无论客户端还是服务端都可以选择发送一个ping给另一方。 当ping消息收到的时候，接受的一方必须尽快回复一个pong消息。 例如，可以使用这种方式来确保客户端还是连接状态。</p>
+<p>在经过握手之后的任意时刻里，无论客户端还是服务端都可以选择发送一个 ping 给另一方。 当 ping 消息收到的时候，接受的一方必须尽快回复一个 pong 消息。 例如，可以使用这种方式来确保客户端还是连接状态。</p>
 
-<p>一个ping 或者 pong 都只是一个常规的帧， 只是这个帧是一个<strong>控制帧</strong>。Ping消息的opcode字段值为 <code>0x9</code>，pong消息的opcode值为  <code>0xA</code> 。当你获取到一个ping消息的时候，回复一个跟ping消息有相同载荷数据的pong消息 (对于ping和pong，最大载荷长度位125)。 你也有可能在没有发送ping消息的情况下，获取一个pong消息，当这种情况发生的时候忽略它。</p>
+<p>一个 ping 或者 pong 都只是一个常规的帧， 只是这个帧是一个<strong>控制帧</strong>。Ping 消息的 opcode 字段值为 <code>0x9</code>，pong 消息的 opcode 值为  <code>0xA</code> 。当你获取到一个 ping 消息的时候，回复一个跟 ping 消息有相同载荷数据的 pong 消息 (对于 ping 和 pong，最大载荷长度位 125)。 你也有可能在没有发送 ping 消息的情况下，获取一个 pong 消息，当这种情况发生的时候忽略它。</p>
 
 <div class="note">
-<p>如果在你有机会发送一个pong消息之前，你已经获取了超过一个的ping消息，那么你只发送一个pong消息。</p>
+<p>如果在你有机会发送一个 pong 消息之前，你已经获取了超过一个的 ping 消息，那么你只发送一个 pong 消息。</p>
 </div>
 
 <h2 id="关闭连接">关闭连接</h2>
 
-<p>客户端或服务器端都可以通过发送一个带有指定控制序列的控制帧以开始关闭连接握手（参见<a href="http://tools.ietf.org/html/rfc6455#section-5.5.1">章节5.5.1</a>）。对端收到这个控制帧会回复一个关闭帧，关闭发起端关闭连接。任何在关闭连接后接收到的数据都会被丢弃。</p>
+<p>客户端或服务器端都可以通过发送一个带有指定控制序列的控制帧以开始关闭连接握手（参见<a href="http://tools.ietf.org/html/rfc6455#section-5.5.1">章节 5.5.1</a>）。对端收到这个控制帧会回复一个关闭帧，关闭发起端关闭连接。任何在关闭连接后接收到的数据都会被丢弃。</p>
 
 <h2 id="杂项"><a name="Miscellaneous">杂项</a></h2>
 
 <div class="note">
-<p>WebSocket代码、扩展、子协议等在 <a href="http://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.注册。</p>
+<p>WebSocket 代码、扩展、子协议等在 <a href="http://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.注册。</p>
 </div>
 
-<p>WebSocket扩展和子协议是在握手过程中通过头信息进行协商的。有时候，扩展和子协议看起来太相似而不可能是不同的东西，但是有一个明显的区别。扩展控制WebSocket框架并修改有效负载，而子协议构造WebSocket有效负载，从不修改任何东西。扩展是可选的和通用的(比如压缩);子协议是强制性的和本地化的(就像聊天和MMORPG游戏一样)。</p>
+<p>WebSocket 扩展和子协议是在握手过程中通过头信息进行协商的。有时候，扩展和子协议看起来太相似而不可能是不同的东西，但是有一个明显的区别。扩展控制 WebSocket 框架并修改有效负载，而子协议构造 WebSocket 有效负载，从不修改任何东西。扩展是可选的和通用的 (比如压缩);子协议是强制性的和本地化的 (就像聊天和 MMORPG 游戏一样)。</p>
 
 <h3 id="扩展">扩展</h3>
 
@@ -197,12 +197,12 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <h3 id="子协议">子协议</h3>
 
-<p>可以把子协议理解成一个自定义<a href="https://en.wikipedia.org/wiki/XML_schema">XML schema</a>或<a href="https://en.wikipedia.org/wiki/Document_Type_Definition">文件类型声明</a>。你仍然使用XML和它的语法，但是还要额外受限于你声明的格式。</p>
+<p>可以把子协议理解成一个自定义<a href="https://en.wikipedia.org/wiki/XML_schema">XML schema</a>或<a href="https://en.wikipedia.org/wiki/Document_Type_Definition">文件类型声明</a>。你仍然使用 XML 和它的语法，但是还要额外受限于你声明的格式。</p>
 
-<p>WebSocket子协议就是像这样的东西。它们不作任何假设实现，只是确立框架。就像一个文件类型或概要。与文件类型或概要类似，通信双方都需要同意子协议；于文件类型或概要不同的是，子协议在服务端实现，而不能由客户端参考第三方。</p>
+<p>WebSocket 子协议就是像这样的东西。它们不作任何假设实现，只是确立框架。就像一个文件类型或概要。与文件类型或概要类似，通信双方都需要同意子协议；于文件类型或概要不同的是，子协议在服务端实现，而不能由客户端参考第三方。</p>
 
 <div class="note">
-<p>子协议在规范的章节1.9，4.2，11.3.4和11.5有做解释。</p>
+<p>子协议在规范的章节 1.9，4.2，11.3.4 和 11.5 有做解释。</p>
 </div>
 
 <p>如果客户端需要指定子协议，需要发送如下消息头<strong>作为握手信息的一部分</strong>：</p>
@@ -225,13 +225,13 @@ Sec-WebSocket-Protocol: wamp
 </pre>
 
 <div class="warning">
-<p>服务器不能发送多个<code>Sec-Websocket-Protocol</code>。如果服务器不想使用任何子协议，它就不应该发送任何<code>Sec-WebSocket-Protocol header</code>。发送空白header是不正确的。如果客户端没有得到它想要的子协议，它可以关闭连接。</p>
+<p>服务器不能发送多个<code>Sec-Websocket-Protocol</code>。如果服务器不想使用任何子协议，它就不应该发送任何<code>Sec-WebSocket-Protocol header</code>。发送空白 header 是不正确的。如果客户端没有得到它想要的子协议，它可以关闭连接。</p>
 </div>
 
-<p>如果您希望您的服务器遵守某些子协议，那么很自然地，您需要服务器上的额外代码。假设我们使用的是子协议JSON。在这个子协议中，所有数据都以JSON的形式传递。如果客户端请求这个协议，而服务器想要使用它，服务器将需要一个JSON解析器。实际上，这是库的一部分，但是服务器需要传递数据。</p>
+<p>如果您希望您的服务器遵守某些子协议，那么很自然地，您需要服务器上的额外代码。假设我们使用的是子协议 JSON。在这个子协议中，所有数据都以 JSON 的形式传递。如果客户端请求这个协议，而服务器想要使用它，服务器将需要一个 JSON 解析器。实际上，这是库的一部分，但是服务器需要传递数据。</p>
 
 <div class="note">
-<p><strong>提示：</strong>为了避免命名冲突，建议将你的子协议名称加上域名字符串。如果您正在构建一个自定义聊天应用程序，该应用程序使用的是Example Inc.独有的专有格式，那么您可以使用这个:<code>Sec-WebSocket-Protocol: chat.example.com</code>.注意，这不是必需的，它只是一个可选的约定，您可以使用任何字符串。</p>
+<p><strong>提示：</strong>为了避免命名冲突，建议将你的子协议名称加上域名字符串。如果您正在构建一个自定义聊天应用程序，该应用程序使用的是 Example Inc.独有的专有格式，那么您可以使用这个：<code>Sec-WebSocket-Protocol: chat.example.com</code>.注意，这不是必需的，它只是一个可选的约定，您可以使用任何字符串。</p>
 </div>
 
 <h2 id="关联">关联</h2>

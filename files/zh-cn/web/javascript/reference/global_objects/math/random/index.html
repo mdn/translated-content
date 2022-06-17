@@ -11,12 +11,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 <div>{{JSRef}}</div>
 
-<div><code><strong>Math.random()</strong></code> 函数返回一个浮点数,  伪随机数在范围从<strong>0到</strong>小于<strong>1</strong>，也就是说，从0（包括0）往上，但是不包括1（排除1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。</div>
+<div><code><strong>Math.random()</strong></code> 函数返回一个浮点数， 伪随机数在范围从<strong>0 到</strong>小于<strong>1</strong>，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。</div>
 
 <p>{{EmbedInteractiveExample("pages/js/math-random.html")}}</p>
 
 <div class="note">
-<p><strong>备注：</strong><code>Math.random()</code> <em>不能</em>提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用Web Crypto API 来代替, 和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法.</p>
+<p><strong>备注：</strong><code>Math.random()</code> <em>不能</em>提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用 Web Crypto API 来代替，和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法。</p>
 </div>
 
 <h2 id="Syntax">语法</h2>
@@ -25,13 +25,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <h3 id="Parameters">返回值</h3>
 
-<p>一个浮点型伪随机数字，在<code>0</code>（包括0）和<code>1</code>（不包括）之间。</p>
+<p>一个浮点型伪随机数字，在<code>0</code>（包括 0）和<code>1</code>（不包括）之间。</p>
 
 <h2 id="Examples">示例</h2>
 
-<p>请注意, 由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（ round-to-nearest-even）的行为, 因此以下函数的范围 (不包括<code>Math.random()</code> 本身) 并不准确。如果选择了非常大的边界 (2^53 或更高), 在极罕见的情况下会计算通常-排除（usually-excluded）的上界。（注：round-to-nearest-even采用最近舍入的去偶数舍入的方式，对.5的舍入上，采用取偶数的方式）</p>
+<p>请注意，由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（ round-to-nearest-even）的行为，因此以下函数的范围 (不包括<code>Math.random()</code> 本身) 并不准确。如果选择了非常大的边界 (2^53 或更高), 在极罕见的情况下会计算通常 - 排除（usually-excluded）的上界。（注：round-to-nearest-even 采用最近舍入的去偶数舍入的方式，对.5 的舍入上，采用取偶数的方式）</p>
 
-<h3 id="得到一个大于等于0，小于1之间的随机数">得到一个大于等于0，小于1之间的随机数</h3>
+<h3 id="得到一个大于等于_0，小于_1_之间的随机数">得到一个大于等于 0，小于 1 之间的随机数</h3>
 
 <pre class="brush: js">function getRandom() {
   return Math.random();
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <h3 id="得到一个两数之间的随机整数，包括两个数在内">得到一个两数之间的随机整数，包括两个数在内</h3>
 
-<p>上一个例子提到的函数 <code>getRandomInt()</code> 结果范围包含了最小值，但不含最大值。如果你的随机结果需要同时包含最小值和最大值，怎么办呢?  <code>getRandomIntInclusive()</code> 函数可以实现。</p>
+<p>上一个例子提到的函数 <code>getRandomInt()</code> 结果范围包含了最小值，但不含最大值。如果你的随机结果需要同时包含最小值和最大值，怎么办呢？<code>getRandomIntInclusive()</code> 函数可以实现。</p>
 
 <pre class="brush: js">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);

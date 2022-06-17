@@ -1,66 +1,64 @@
 ---
-title: element.onresize
+title: GlobalEventHandlers.onresize
 slug: Web/API/GlobalEventHandlers/onresize
-tags:
-  - DOM
-  - DOM_0
 translation_of: Web/API/window.onresize
 translation_of_original: Web/API/Element.onresize
+browser-compat: api.GlobalEventHandlers.onresize
 ---
-{{ ApiRef() }}
+{{ApiRef}}
 
-### Résumé
+La propriété **`onresize`**,rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`resize`](/fr/docs/Web/API/Window/resize_event).
 
-La propriété **onresize** renvoie le code de gestion `onresize` de l'élément. Il sert également à définir le code devant s'exécuter lorsqu'un évènement de redimensionnement survient.
+Un évènement `resize` est déclenché après que la fenêtre a été redimensionnée.
 
-Seul l'objet _window_ possède un évènement `onresize`.
+## Syntaxe
 
-### Syntaxe
-
-    // attribue une fonction anonyme à onresize
-    window.onresize = function(){alert('Redimensionnement de la fenêtre')}
-
-    // Attribue la référence d'une fonction à onresize
-    function sayHi(){alert('Hi')}
-
-    window.onresize = sayHi;
-
-    // Montre la valeur de window.onresize
-    alert(window.onresize);
-
-Un évènement onresize employé avec des cadres sera lancé à chaque fois que le cadre sera redimensionné soit directement, soit comme résultant du redimensionnement de la fenêtre.
-
-### Exemple
-
-```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
- "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<title>exemple avec onresize</title>
-<script type="text/javascript">
-
-function sayHi(){
-  alert('Hi');
-}
-
-window.onresize = sayHi;
-
-</script>
-</head>
-<body>
-<input type="button"
- value="Cliquez ici pour voir window.onresize"
- onclick="alert(window.onresize);"
->
-</body>
-</html>
+```js
+window.onresize = refFonction;
 ```
 
-### Notes
+### Value
 
-Un attribut onresize peut être placé sur n'importe quel élément, mais seul l'objet `window` possède un évènement sur le redimensionnement. Le rédimensionnement d'autres éléments (par exemple, la modification de la largeur ou de la hauteur d'un élément img par un script) ne lancera aucun évènement de redimensionnement.
+`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`FocusEvent`](/fr/docs/Web/API/FocusEvent) comme unique argument.
 
-### Spécification
+## Exemple
 
-{{ DOM0() }}
+### Journaliser l'évolution de la taille de la fenêtre
+
+#### HTML
+
+```html
+<p>Redimensionnez la fenêtre pour déclencher l'évènement <code>resize</code>.</p>
+<p>Hauteur de la fenêtre : <span id="height"></span></p>
+<p>Largeur de la fenêtre : <span id="width"></span></p>
+```
+
+#### JavaScript
+
+```js
+const heightOutput = document.querySelector('#height');
+const widthOutput = document.querySelector('#width');
+
+function resize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+window.onresize = resize;
+```
+
+#### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'évènement [`resize`](/fr/docs/Web/API/Window/resize_event)

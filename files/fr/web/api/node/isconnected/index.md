@@ -14,7 +14,9 @@ La propriété en lecture seule **`isConnected`** de l'interface {{domxref("Node
 
 ## Syntaxe
 
-    var isItConnected = nodeObjectInstance.isConnected
+```js
+var isItConnected = nodeObjectInstance.isConnected
+```
 
 ### Renvoie la valeur
 
@@ -66,8 +68,6 @@ style.textContent = '.wrapper {' +
 shadow.appendChild(style);
 console.log(style.isConnected); // renvoie true (vrai)
 ```
-
-
 
 ## Spécifications
 

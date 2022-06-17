@@ -33,7 +33,9 @@ Les testeurs de sécurité du site s'attendent généralement à ce que cet en-t
 
 ## Syntaxe
 
-    X-Content-Type-Options: nosniff
+```
+X-Content-Type-Options: nosniff
+```
 
 ## Directives
 

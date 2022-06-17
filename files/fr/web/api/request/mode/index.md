@@ -14,7 +14,9 @@ La propriété **`mode`** (en lecture seule) de l’interface {{domxref("Request
 
 ## Syntaxe
 
-    var myMode = request.mode;
+```js
+var myMode = request.mode;
+```
 
 ### Valeur
 

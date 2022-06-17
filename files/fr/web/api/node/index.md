@@ -163,7 +163,9 @@ function DOMComb (oParent, oCallback) {
 
 #### Syntaxe
 
-    DOMComb(parentNode, callbackFunction);
+```js
+DOMComb(parentNode, callbackFunction);
+```
 
 #### Description
 

@@ -12,7 +12,7 @@ translation_of: Web/API/Window/dump
 <div>{{ ApiRef() }}</div>
 
 <div>
-<p id="comment_text_2">{{Non-standard_header}}</p>
+<p>{{Non-standard_header}}</p>
 </div>
 
 <h2 id="Summary" name="Summary">概要</h2>
@@ -32,23 +32,23 @@ dump(<em>message</em>);
 
 <h2 id="Notes" name="Notes">注解</h2>
 
-<p><code>dump()</code><font><font>的</font><font>常见用途</font><font>是调试JavaScript。</font></font><code>dump</code><font><font>如果使用</font></font><code>console</code><font><font>选项</font><font>启动了Firefox进程，则将</font><font>消息</font><font>发送到系统控制台（本地控制台）</font><font>。</font><font>如果</font></font><code>console</code><font><font>未指定</font><font>该</font><font>选项，则输出到对应终端。</font><font>dump()的输出不会发送到</font></font><a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console"><font><font>浏览器控制台</font></font></a><font><font>。</font><font>输出可以</font><font>使用</font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.log"><font>console.log（）</font></a><font>发送到</font></font><a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console"><font><font>浏览器控制台</font></font></a><font><font>。</font><font>特殊的代码还能将</font><font>消息记录到</font><a href="https://developer.mozilla.org/en-US/docs/Error_Console" title="Error_Console"><font>错误控制台</font></a><font> / </font><a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console"><font>浏览器控制台</font></a><font>。</font></font><code><a href="https://developer.mozilla.org/en-US/docs/Components.utils.reportError" title="Components.utils.reportError">Components.utils.reportError</a></code><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService" title="nsIConsoleService">nsIConsoleService</a></code></p>
+<p><code>dump()</code>的常见用途是调试 JavaScript。<code>dump</code>如果使用<code>console</code>选项启动了 Firefox 进程，则将消息发送到系统控制台（本地控制台）。如果<code>console</code>未指定该选项，则输出到对应终端。dump() 的输出不会发送到<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>。输出可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.log">console.log（）</a>发送到<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>。特殊的代码还能将消息记录到<a href="https://developer.mozilla.org/en-US/docs/Error_Console" title="Error_Console">错误控制台</a> / <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>。<code><a href="https://developer.mozilla.org/en-US/docs/Components.utils.reportError" title="Components.utils.reportError">Components.utils.reportError</a></code><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService" title="nsIConsoleService">nsIConsoleService</a></code></p>
 
-<p><code>dump()</code><font><font>也可用于使用JavaScript实现的XPCOM组件，尽管 </font></font>{{domxref("window")}} <font><font>不是组件中的全局对象。</font><font>它也明确地在</font></font><a href="https://developer.mozilla.org/en/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object" title="沙盒对象上可用的方法"><font><font>沙箱中提供</font></font></a><font><font>。</font><font>但是，这种使用</font></font><code>dump</code><font><font>不受下面提到的偏好的影响---它将始终显示出来。</font><font>因此，建议您自己检查此偏好或使用自己的调试偏好，以确保在根本不感兴趣的情况下，不会向用户的控制台发送大量调试内容。</font><font>请注意，</font></font><code>dump</code><font><font>XPCOM组件的输出将转到</font></font><code>stderr</code><font><font>，而</font></font><code>dump </code><font><font>其他地方将输出</font></font><code>stdout</code><font><font>。</font></font></p>
+<p><code>dump()</code>也可用于使用 JavaScript 实现的 XPCOM 组件，尽管 {{domxref("window")}} 不是组件中的全局对象。它也明确地在<a href="https://developer.mozilla.org/en/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object" title="沙盒对象上可用的方法">沙箱中提供</a>。但是，这种使用<code>dump</code>不受下面提到的偏好的影响 --- 它将始终显示出来。因此，建议您自己检查此偏好或使用自己的调试偏好，以确保在根本不感兴趣的情况下，不会向用户的控制台发送大量调试内容。请注意，<code>dump</code>XPCOM 组件的输出将转到<code>stderr</code>，而<code>dump </code>其他地方将输出<code>stdout</code>。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Gecko" title="壁虎"><font><font>Gecko</font></font></a> <font><font>在</font><strong><font>默认情况dump()下</font></strong></font><strong><font><font>被禁用</font></font></strong><font><font> - 它不会做任何事情，但也不会引起错误。</font><font>要查看</font></font><code>dump</code><font><font>输出，您必须通过设置首选项</font></font><code>browser.dom.window.dump.enabled</code><font><font>来</font><font>启用它</font></font><font><font>。</font><font>您可以在</font></font><a href="http://kb.mozillazine.org/About:config"><font><font>about：config</font></font></a><font><font>或</font></font><a href="http://kb.mozillazine.org/User.js_file"><font><font>user.js文件中</font></font></a><font><font>设置首选项</font><font>。</font><font>注意：</font></font><code>about:config</code><font><font>默认情况下</font><font>不会列出此首选项</font><font>，您可能需要创建它（右键单击内容区域 - &gt;新建 - &gt;布尔值）。</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Gecko" title="壁虎">Gecko</a> 在<strong>默认情况 dump() 下</strong><strong>被禁用</strong> - 它不会做任何事情，但也不会引起错误。要查看<code>dump</code>输出，您必须通过设置首选项<code>browser.dom.window.dump.enabled</code>来启用它。您可以在<a href="http://kb.mozillazine.org/About:config">about：config</a>或<a href="http://kb.mozillazine.org/User.js_file">user.js 文件中</a>设置首选项。注意：<code>about:config</code>默认情况下不会列出此首选项，您可能需要创建它（右键单击内容区域 - &gt;新建 - &gt;布尔值）。</p>
 
-<p><font><font>在Windows上，您需要一个控制台才能看到任何东西。</font><font>如果您还没有，请关闭应用程序并使用命令行参数重新打开</font></font><code>console</code><font><font>应该创建控制台或使用</font></font><code>-attach-console</code><font><font>现有的控制台。</font><font>在其他操作系统上，从终端启动应用程序就足够了。</font></font></p>
+<p>在 Windows 上，您需要一个控制台才能看到任何东西。如果您还没有，请关闭应用程序并使用命令行参数重新打开<code>console</code>应该创建控制台或使用<code>-attach-console</code>现有的控制台。在其他操作系统上，从终端启动应用程序就足够了。</p>
 
-<p><font><font>要将控制台输出重定向到文件，请运行firefox </font></font><em><font><font>而不</font></font></em><font><font>使用-console选项，并使用语法将stderr和stdout重定向到一个文件，即：</font></font></p>
+<p>要将控制台输出重定向到文件，请运行 firefox <em>而不</em>使用-console 选项，并使用语法将 stderr 和 stdout 重定向到一个文件，即：</p>
 
 <pre>firefox &gt; console.txt 2&gt;&amp;1
 </pre>
 
 <div class="note">
-<p><font><font>如果您希望控制台消息出现在用于启动应用程序的控制台中，则可以使用</font></font><a href="https://github.com/matthewkastor/Redirector"><font><font>Gecko控制台重定向器</font></font></a><font><font>。</font><font>预编译的二进制文件可以在压缩的归档文件  </font></font><a href="https://github.com/matthewkastor/Redirector/archive/master.zip"><font><font>https://github.com/matthewkastor/Redirector/archive/master.zip中找到</font></font></a><font><font>，</font></font><code>Redirector-master\Gecko\Console Redirector\bin\Release</code><font><font>将所有dll和exe复制到任何你想要的地方。</font><font>然后跑</font></font><code>Console Redirector.exe /?</code></p>
+<p>如果您希望控制台消息出现在用于启动应用程序的控制台中，则可以使用<a href="https://github.com/matthewkastor/Redirector">Gecko 控制台重定向器</a>。预编译的二进制文件可以在压缩的归档文件  <a href="https://github.com/matthewkastor/Redirector/archive/master.zip">https://github.com/matthewkastor/Redirector/archive/master.zip 中找到</a>，<code>Redirector-master\Gecko\Console Redirector\bin\Release</code>将所有 dll 和 exe 复制到任何你想要的地方。然后跑<code>Console Redirector.exe /?</code></p>
 </div>
 
 <h2 id="Specification" name="Specification">Specification</h2>
 
-<p id="comment_text_2">这不是标准的一部分</p>
+<p>这不是标准的一部分</p>

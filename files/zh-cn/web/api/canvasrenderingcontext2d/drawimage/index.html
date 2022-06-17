@@ -10,7 +10,7 @@ translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 <div>{{APIRef}}</div>
 
-<p>Canvas 2D API 中的 <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawImage()</code></strong> 方法提供了多种方式在Canvas上绘制图像。</p>
+<p>Canvas 2D API 中的 <strong><code>CanvasRenderingContext2D.drawImage()</code></strong> 方法提供了多种方式在 Canvas 上绘制图像。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ void <var><em>ctx</em>.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth,
 
 <dl>
  <dt><code>image</code></dt>
- <dd>绘制到上下文的元素。允许任何的 canvas 图像源({{domxref("CanvasImageSource")}})，例如：{{domxref("CSSImageValue")}}，{{domxref("HTMLImageElement")}}，{{domxref("SVGImageElement")}}，{{domxref("HTMLVideoElement")}}，{{domxref("HTMLCanvasElement")}}，{{domxref("ImageBitmap")}} 或者{{domxref("OffscreenCanvas")}}。</dd>
+ <dd>绘制到上下文的元素。允许任何的 canvas 图像源 ({{domxref("CanvasImageSource")}})，例如：{{domxref("CSSImageValue")}}，{{domxref("HTMLImageElement")}}，{{domxref("SVGImageElement")}}，{{domxref("HTMLVideoElement")}}，{{domxref("HTMLCanvasElement")}}，{{domxref("ImageBitmap")}} 或者{{domxref("OffscreenCanvas")}}。</dd>
  <dt><code>sx</code>{{optional_inline}}</dt>
  <dd>需要绘制到目标上下文中的，<code>image</code>的矩形（裁剪）选择框的左上角 X 轴坐标。</dd>
  <dt><code>sy</code>{{optional_inline}}</dt>
@@ -35,20 +35,20 @@ void <var><em>ctx</em>.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth,
  <dt><code>sHeight</code>{{optional_inline}}</dt>
  <dd>需要绘制到目标上下文中的，<code>image</code>的矩形（裁剪）选择框的高度。</dd>
  <dt><code>dx</code></dt>
- <dd><code>image</code>的左上角在目标canvas上 X 轴坐标。</dd>
+ <dd><code>image</code>的左上角在目标 canvas 上 X 轴坐标。</dd>
  <dt><code>dy</code></dt>
- <dd><code>image</code>的左上角在目标canvas上 Y 轴坐标。</dd>
+ <dd><code>image</code>的左上角在目标 canvas 上 Y 轴坐标。</dd>
  <dt><code>dWidth</code>{{optional_inline}}</dt>
- <dd><code>image</code>在目标canvas上绘制的宽度。 允许对绘制的<code>image</code>进行缩放。 如果不说明， 在绘制时<code>image</code>宽度不会缩放。</dd>
+ <dd><code>image</code>在目标 canvas 上绘制的宽度。允许对绘制的<code>image</code>进行缩放。如果不说明，在绘制时<code>image</code>宽度不会缩放。</dd>
  <dt><code>dHeight</code>{{optional_inline}}</dt>
- <dd><code>image</code>在目标canvas上绘制的高度。 允许对绘制的<code>image</code>进行缩放。 如果不说明， 在绘制时<code>image</code>高度不会缩放。</dd>
+ <dd><code>image</code>在目标 canvas 上绘制的高度。 允许对绘制的<code>image</code>进行缩放。如果不说明，在绘制时<code>image</code>高度不会缩放。</dd>
 </dl>
 
 <h3 id="抛出异常">抛出异常</h3>
 
 <dl>
  <dt><code>INDEX_SIZE_ERR</code></dt>
- <dd>如果 canvas 或者图像矩形区域的宽度或高度为0 。</dd>
+ <dd>如果 canvas 或者图像矩形区域的宽度或高度为 0 。</dd>
  <dt><code>INVALID_STATE_ERR</code></dt>
  <dd>图像没有数据。</dd>
  <dt><code>TYPE_MISMATCH_ERR</code></dt>
@@ -152,7 +152,7 @@ window.addEventListener("load", drawCanvas);
 
 <h3 id="理解源元素大小">理解源元素大小</h3>
 
-<p><code>drawImage()</code>方法在绘制时使用源元素的CSS大小。</p>
+<p><code>drawImage()</code>方法在绘制时使用源元素的 CSS 大小。</p>
 
 <p>例如，如果加载图像并在其构造函数中指定可选的大小参数，则必须使用所创建实例的<code>naturalWidth</code>和<code>naturalHeight</code>属性来正确计算裁剪和缩放区域等内容，而不是<code>element.width</code>和<code>element.height</code>。如果元素是{{htmlelement("video")}} 元素，则<code>videoWidth</code>和<code>videoHeight</code>也是如此，依此类推。</p>
 
@@ -229,20 +229,7 @@ function drawImageActualSize() {
 
 <h2 id="规范说明">规范说明</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -253,18 +240,18 @@ function drawImageActualSize() {
 <ul>
  <li>在 Gecko 5.0 {{geckoRelease("5.0")}}中，支持通过给 sw 和 sh 赋负值，对图像进行翻转。</li>
  <li>从 {{geckoRelease("5.0")}} 开始，<code>drawImage()</code> 按照规范处理负参数，沿着合适的轴翻转矩形。</li>
- <li>从{{geckoRelease("5.0")}}开始，当<span style="font-family: consolas,monaco,andale mono,monospace;">drawImage()</span>调用 <code>null</code> 或者 <code>undefined</code> 图像时，会抛出 <code>TYPE_MISMATCH_ERR</code> 异常。</li>
- <li>在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是0，Firefox 会抛出一个异常。 按照规范描述，这种情况不会再发生。</li>
+ <li>从{{geckoRelease("5.0")}}开始，当 drawImage() 调用 <code>null</code> 或者 <code>undefined</code> 图像时，会抛出 <code>TYPE_MISMATCH_ERR</code> 异常。</li>
+ <li>在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是 0，Firefox 会抛出一个异常。按照规范描述，这种情况不会再发生。</li>
  <li>Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要<a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas ，不需要 <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
+ <li>Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas，不需要 <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">污染的 canvas</a>.</li>
 </ul>
 
 <h2 id="Notes">Notes</h2>
 
 <ul>
- <li>当<code>drawImage()</code>需要在{{domxref("HTMLVideoElement")}}工作时，仅当{{domxref("HTMLMediaElement.readyState")}}大于1时<code>drawImage()</code>才能正常工作。</li>
- <li>在绘制，裁剪和/或缩放时，<code>drawImage()</code> 将始终使用CSS像素中源元素的固有尺寸。</li>
- <li><code>drawImage()</code>将忽略图像中的所有EXIF元数据，包括方向。 此行为在iOS设备上尤其麻烦。 您应该自己检测方向并使用<code>rotate()</code>使其正确。</li>
+ <li>当<code>drawImage()</code>需要在{{domxref("HTMLVideoElement")}}工作时，仅当{{domxref("HTMLMediaElement.readyState")}}大于 1 时<code>drawImage()</code>才能正常工作。</li>
+ <li>在绘制，裁剪和/或缩放时，<code>drawImage()</code> 将始终使用 CSS 像素中源元素的固有尺寸。</li>
+ <li><code>drawImage()</code>将忽略图像中的所有 EXIF 元数据，包括方向。此行为在 iOS 设备上尤其麻烦。您应该自己检测方向并使用<code>rotate()</code>使其正确。</li>
 </ul>
 
 <h2 id="参见">参见</h2>

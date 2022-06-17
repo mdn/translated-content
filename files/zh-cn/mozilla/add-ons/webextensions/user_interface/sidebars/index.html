@@ -13,7 +13,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/user_interface/侧边栏
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15755/bookmarks-sidebar.png" style="display: block; height: 423px; margin-left: auto; margin-right: auto; width: 350px;">Using the <code>sidebar_action</code> manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.</p>
 
-<p>就像浏览器的弹出页面，侧边栏也是一个HTML文档。当用户打开侧边栏时，HTML文档载入打开的浏览器窗口。每个窗口有一个该文档的实例。打开一个新窗口时，该窗口获得自己的文档实例</p>
+<p>就像浏览器的弹出页面，侧边栏也是一个 HTML 文档。当用户打开侧边栏时，HTML 文档载入打开的浏览器窗口。每个窗口有一个该文档的实例。打开一个新窗口时，该窗口获得自己的文档实例</p>
 
 <p>可以使用函数{{WebExtAPIRef("sidebarAction.setPanel()")}}指定侧边栏仅用于指定的某个标签，使用{{WebExtAPIRef("windows.getCurrent()")}} 侧边栏知道自己属于哪一个标签。</p>
 
@@ -22,17 +22,17 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
   myWindowId = windowInfo.id;
 });</pre>
 
-<p>不同的窗口使用不同的侧边栏是非常有用的，这是一个实例 ，见<a href="https://github.com/mdn/webextensions-examples/tree/master/annotate-page">"annotate-page" example</a>.</p>
+<p>不同的窗口使用不同的侧边栏是非常有用的，这是一个实例，见<a href="https://github.com/mdn/webextensions-examples/tree/master/annotate-page">"annotate-page" example</a>.</p>
 
-<p>侧边栏俱有和后台程序以及弹出窗口相同的API权限，在非隐藏模式下，侧边栏使用API {{WebExtAPIRef("runtime.getBackgroundPage()")}} 可以直接访问后台页面，使用 API 如{{WebExtAPIRef("tabs.sendMessage()")}} 与content scripts交互，使用API 如 {{WebExtAPIRef("runtime.sendNativeMessage()")}} 与原生应用交互。</p>
+<p>侧边栏俱有和后台程序以及弹出窗口相同的 API 权限，在非隐藏模式下，侧边栏使用 API {{WebExtAPIRef("runtime.getBackgroundPage()")}} 可以直接访问后台页面，使用 API 如{{WebExtAPIRef("tabs.sendMessage()")}} 与 content scripts 交互，使用 API 如 {{WebExtAPIRef("runtime.sendNativeMessage()")}} 与原生应用交互。</p>
 
-<p>关闭窗口或关闭侧边栏时，侧边栏文档退出。这意味着和后台页面不同，侧边栏文档不是一直住留，也不像弹出窗口，只要用户与页面交互 ，它就一直存在。</p>
+<p>关闭窗口或关闭侧边栏时，侧边栏文档退出。这意味着和后台页面不同，侧边栏文档不是一直住留，也不像弹出窗口，只要用户与页面交互，它就一直存在。</p>
 
 <p>使用侧边栏的扩展载入时，侧边栏自动打开。这是为了帮助用户知道扩展俱有侧边栏。注意不能通过编程的方式打开侧边栏：侧边栏只能由用户打开。</p>
 
 <h2 id="声明侧边栏">声明侧边栏</h2>
 
-<p>声明侧边栏，只需在manifest.json中指 定关键字  <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>    并同时指定title 和 icon:</p>
+<p>声明侧边栏，只需在 manifest.json 中指 定关键字  <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>    并同时指定 title 和 icon:</p>
 
 <pre class="brush: json">"sidebar_action": {
   "default_title": "My sidebar",
@@ -40,9 +40,9 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
   "default_icon": "sidebar_icon.png"
 }</pre>
 
-<p>使用API {{WebExtAPIRef("sidebarAction")}} ，你可以用编程的方式修改title panel icon。</p>
+<p>使用 API {{WebExtAPIRef("sidebarAction")}} ，你可以用编程的方式修改 title panel icon。</p>
 
-<p>浏览器提供的显示侧边栏的UI中，title和icon显示给用户，如Firefox菜单栏的"View &gt; Sidebar"</p>
+<p>浏览器提供的显示侧边栏的 UI 中，title 和 icon 显示给用户，如 Firefox 菜单栏的"View &gt; Sidebar"</p>
 
 <h2 id="Sidebar_design">Sidebar design</h2>
 

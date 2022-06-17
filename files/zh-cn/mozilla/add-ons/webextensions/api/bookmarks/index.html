@@ -5,9 +5,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>此<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} API允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。</p>
+<p>此<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。</p>
 
-<p>欲使用此API，一个附件组件必须请求"bookmarks" <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>在它的<code><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>文件当中。</p>
+<p>欲使用此 API，一个附件组件必须请求"bookmarks" <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>在它的<code><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>文件当中。</p>
 
 <h2 id="类型">类型</h2>
 
@@ -53,9 +53,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
  <dt>{{WebExtAPIRef("bookmarks.removeTree()")}}</dt>
  <dd>删除整个书签文件夹。</dd>
  <dt>{{WebExtAPIRef("bookmarks.import()")}}</dt>
- <dd>从一个html书签文件导入书签</dd>
+ <dd>从一个 html 书签文件导入书签</dd>
  <dt>{{WebExtAPIRef("bookmarks.export()")}}</dt>
- <dd>导出书签为一个html书签文件</dd>
+ <dd>导出书签为一个 html 书签文件</dd>
 </dl>
 
 <h2 id="事件">事件</h2>
@@ -66,7 +66,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
  <dt>{{WebExtAPIRef("bookmarks.onRemoved")}}</dt>
  <dd>当删除书签或文件夹时产生。当删除整个文件夹（包括其中所有内容）时，仅为该文件夹发送通知，不为其中任何内容发送通知。</dd>
  <dt>{{WebExtAPIRef("bookmarks.onChanged")}}</dt>
- <dd>一个书签或文件夹更改时发生。注意：目前只有标题和URL更改时会触发这一事件。</dd>
+ <dd>一个书签或文件夹更改时发生。注意：目前只有标题和 URL 更改时会触发这一事件。</dd>
  <dt>{{WebExtAPIRef("bookmarks.onMoved")}}</dt>
  <dd>当书签或文件夹移动到另一个父文件夹中时产生。</dd>
  <dt>{{WebExtAPIRef("bookmarks.onChildrenReordered")}}</dt>

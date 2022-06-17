@@ -19,7 +19,9 @@ La méthode **`setInt16()`** permet d'enregister un entier signé sur 16 bits (t
 
 ## Syntaxe
 
-    dataview.setInt16(positionOctet, value [, littleEndian])
+```js
+dataview.setInt16(positionOctet, value [, littleEndian])
+```
 
 ### Paramètres
 

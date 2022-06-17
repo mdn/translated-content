@@ -73,7 +73,7 @@ S 式であるために違って見えますが、これは、他の言語の関
 - `(result)` がない場合、その関数は何も返さないということです。
 - 現在は、最大で 1 つの返値の型を指定することができますが、任意の数に[緩和される予定](https://github.com/WebAssembly/spec/blob/master/proposals/multi-value/Overview.md)です。
 
-それぞれの引数には、明示的に型を宣言します。 wasm は現在 4 つの数値型を利用できます（さらに参照型もあります。以下の{{anch("参照型") }}の項を参照してください）。
+それぞれの引数には、明示的に型を宣言します。 wasm は現在 4 つの数値型を利用できます（さらに参照型もあります。以下の[参照型](#参照型)の項を参照してください）。
 
 - `i32`: 32 ビット整数
 - `i64`: 64 ビット整数
@@ -295,7 +295,7 @@ const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
 
 ### WebAssembly メモリー
 
-上の例はとてもひどいロギング関数です。たった 1 つの整数値を表示するだけです。文字列を表示するためにはどうしたらよいでしょうか? 文字列やさらに複雑なデータ型を扱うために WebAssembly は **メモリー** を提供します（WebAssembly のより新しい実装では、{{anch("参照型")}}もあります）。 WebAssembly では、メモリーは徐々に拡張することのできるただの大きなバイト列です。 WebAssembly は `i32.load` や `i32.store` のような命令を持っており、それで[線形メモリー](http://webassembly.org/docs/semantics/#linear-memory)を読み書きします。
+上の例はとてもひどいロギング関数です。たった 1 つの整数値を表示するだけです。文字列を表示するためにはどうしたらよいでしょうか? 文字列やさらに複雑なデータ型を扱うために WebAssembly は **メモリー** を提供します（WebAssembly のより新しい実装では、[参照型](#参照型)もあります）。 WebAssembly では、メモリーは徐々に拡張することのできるただの大きなバイト列です。 WebAssembly は `i32.load` や `i32.store` のような命令を持っており、それで[線形メモリー](http://webassembly.org/docs/semantics/#linear-memory)を読み書きします。
 
 JavaScript から見ると、メモリーはすべて 1 つの大きな (リサイズ可能な) {{jsxref("ArrayBuffer")}} の内部にあるように見えます。それはまさに、asm.js とともに動かさなければならないものすべてです (ただしリサイズは出来ません。asm.js の [プログラミングモデル](http://asmjs.org/spec/latest/#programming-model) を参照してください) 。
 
@@ -367,7 +367,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 WebAssembly テキスト形式のツアーを終了するために、 WebAssembly で最も複雑でしばしば混乱する部分 (**テーブル**) を見てみましょう。テーブルは基本的に WebAssembly コードからインデックスでアクセスできるリサイズ可能な参照の配列です。
 
-なぜテーブルが必要なのかを見るために、最初に観察する必要があります。さきほど見た `call` 命令 ({{anch("同じモジュールの他の関数から関数を呼び出す")}} を参照) は静的な関数インデックスをとり、結果として 1 つの関数しか呼び出せません。しかし、呼び出し先がランタイム値の場合はどうなるでしょうか。
+なぜテーブルが必要なのかを見るために、最初に観察する必要があります。さきほど見た `call` 命令 ([同じモジュールの他の関数から関数を呼び出す](#同じモジュールの他の関数から関数を呼び出す) を参照) は静的な関数インデックスをとり、結果として 1 つの関数しか呼び出せません。しかし、呼び出し先がランタイム値の場合はどうなるでしょうか。
 
 - JavaScript ではこれは常に見えます。関数は第一級の値です。
 - C/C++ では関数ポインターで見ることができます。
@@ -486,7 +486,7 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 
 ### テーブルの変更と動的リンク
 
-JavaScript は関数参照にフルアクセスできるため、 Table オブジェクトは JavaScript から [`grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get), [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) メソッドを使用して変更することができます。また、 WebAssembly のコード自体も、{{anch("参照型")}}の一部として追加された `table.get` や `table.set` などの命令を使ってテーブルを操作することが可能です。
+JavaScript は関数参照にフルアクセスできるため、 Table オブジェクトは JavaScript から [`grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get), [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) メソッドを使用して変更することができます。また、 WebAssembly のコード自体も、[参照型](#参照型)の一部として追加された `table.get` や `table.set` などの命令を使ってテーブルを操作することが可能です。
 
 テーブルは変更可能であるため、高度な読み込み時および実行時の[動的リンクスキーム](https://webassembly.org/docs/dynamic-linking)の実装に使用することができます。プログラムが動的にリンクされたとき、複数のインスタンスで同じメモリーとテーブルを共有することができます。これは複数のコンパイル済み `.dll` が単一のプロセスのアドレス空間を共有するネイティブアプリケーションと対称的です。
 
@@ -581,7 +581,7 @@ Promise.all([
 [参照型の提案](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) ([Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79) で対応) では、主に 2 つのことを提供しています。
 
 - 新しい型である `externref` は、文字列、DOM 参照、オブジェクトなど、あらゆる JavaScript の値を保持することができます。 WebAssembly の観点からは `externref` は不透明です。wasm モジュールはこれらの値にアクセスして操作することができず、代わりに値を受け取って送り返すことだけができます。しかし、これは wasm モジュールが JavaScript の関数や DOM API などを呼び出したり、ホスト環境との相互運用を容易にするために非常に有用です。`externref` は値型とテーブル要素に使用することができます。
-- JavaScript API 経由ではなく、wasm モジュールが直接 {{anch("WebAssembly テーブル")}}を操作できるようにするための新しい命令がいくつか追加されました。
+- JavaScript API 経由ではなく、wasm モジュールが直接 [WebAssembly テーブル](#webassembly_テーブル)を操作できるようにするための新しい命令がいくつか追加されました。
 
 > **Note:** [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) のドキュメントには、 `externref` を Rust で利用する方法について、いくつかの有用な情報が含まれています。
 

@@ -16,7 +16,9 @@ Le constructeur **`Request()`** crée un nouvel objet {{domxref("Request")}}.
 
 ## Syntaxe
 
-    var maRequete = new Request(entree[, init]);
+```js
+var maRequete = new Request(entree[, init]);
+```
 
 ### Paramètres
 

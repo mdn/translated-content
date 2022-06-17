@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML&nbsp;: notions de base'
+title: 'Tableaux HTML : notions de base'
 slug: Learn/HTML/Tables/Basics
 tags:
   - Apprentissage

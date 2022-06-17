@@ -21,20 +21,20 @@ translation_of: Web/API/Node/getRootNode
 
 <dl>
  <dt><code>options</code> {{optional_inline}}</dt>
- <dd>获取根节点时的可选参数对象. 下列值可供选择:
+ <dd>获取根节点时的可选参数对象. 下列值可供选择：
  <ul>
-  <li><code>composed</code>:  {{jsxref('Boolean')}} 如果检索到 shadow Root 需要返回，则设置为（<code>false</code>，默认值），如果跳过shadow Root 检索普通Root则设置为（<code>true</code>）。</li>
+  <li><code>composed</code>:  {{jsxref('Boolean')}} 如果检索到 shadow Root 需要返回，则设置为（<code>false</code>，默认值），如果跳过 shadow Root 检索普通 Root 则设置为（<code>true</code>）。</li>
  </ul>
  </dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个继承自 {{domxref('Node')}} 的对象。返回值会因为 <code>getRootNode()</code> 调用的地方不同而不同; 比如说:</p>
+<p>返回一个继承自 {{domxref('Node')}} 的对象。返回值会因为 <code>getRootNode()</code> 调用的地方不同而不同; 比如说：</p>
 
 <ul>
  <li>在标准的网页中调用将会返回一个 {{domxref("HTMLDocument")}} 对象表示整个网页。</li>
- <li>在Shadow DOM里调用将会返回一个与之相关联的 {{domxref("ShadowRoot")}} 。</li>
+ <li>在 Shadow DOM 里调用将会返回一个与之相关联的 {{domxref("ShadowRoot")}} 。</li>
 </ul>
 
 <h2 id="示例">示例</h2>

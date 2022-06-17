@@ -5,7 +5,7 @@ translation_of: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><code><strong>PromiseRejectionEvent()</strong></code> 构造器返回一个新创建的 {{domxref("PromiseRejectionEvent")}}，代表一个JavaScript {{jsxref("Promise")}}被rejected时触发的事件。</p>
+<p><code><strong>PromiseRejectionEvent()</strong></code> 构造器返回一个新创建的 {{domxref("PromiseRejectionEvent")}}，代表一个 JavaScript {{jsxref("Promise")}}被 rejected 时触发的事件。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,15 +17,15 @@ translation_of: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 
 <h3 id="参数">参数</h3>
 
-<p><em><code>PromiseRejectionEvent()构造函数继承了</code>{{domxref("Event.Event", "Event()")}}的参数。</em></p>
+<p><em><code>PromiseRejectionEvent()</code> 构造函数继承了 {{domxref("Event.Event", "Event()")}}的参数。</em></p>
 
 <dl>
  <dt><code>type</code></dt>
- <dd>一个代表PromiseRejectionEvent的类型名称的字符串。这是区分大小写的同时必须是{{event("rejectionhandled", '"rejectionhandled"')}} 或者 {{event("unhandledrejection", '"unhandledrejection"')}} 其中之一。</dd>
+ <dd>一个代表 PromiseRejectionEvent 的类型名称的字符串。这是区分大小写的同时必须是{{event("rejectionhandled", '"rejectionhandled"')}} 或者 {{event("unhandledrejection", '"unhandledrejection"')}} 其中之一。</dd>
  <dt><code>promise</code></dt>
  <dd>代表被 rejected 的{{jsxref("Promise")}}。</dd>
  <dt><code>reason</code></dt>
- <dd>代表 promise 被 rejected的原因的值或者对象{{jsxref("Object")}} 。</dd>
+ <dd>代表 promise 被 rejected 的原因的值或者对象{{jsxref("Object")}} 。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>

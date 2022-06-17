@@ -13,6 +13,6 @@ tags:
   - オリジン
 translation_of: Web/API/XMLHttpRequest/mozSystem
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 **`mozSystem`** は論理値です。 true の場合、同じ発信元ポリシーはリクエストに適用されません。

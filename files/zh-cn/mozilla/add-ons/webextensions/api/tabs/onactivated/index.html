@@ -14,7 +14,7 @@ browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)
 </pre>
 
-<p>此事件有三个方法:</p>
+<p>此事件有三个方法：</p>
 
 <dl>
  <dt><code>addListener(callback)</code></dt>
@@ -36,7 +36,7 @@ browser.tabs.onActivated.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>activeInfo</code></dt>
-  <dd><a href="#activeInfo"><code>object</code></a>. 被激活标签的ID , 以及它的窗体的 ID 。</dd>
+  <dd><a href="#activeInfo"><code>object</code></a>. 被激活标签的 ID , 以及它的窗体的 ID。</dd>
  </dl>
  </dd>
 </dl>
@@ -47,9 +47,9 @@ browser.tabs.onActivated.hasListener(listener)
 
 <dl class="reference-values">
  <dt><code>tabId</code></dt>
- <dd><code>integer</code>. 被激活的标签的ID。</dd>
+ <dd><code>integer</code>. 被激活的标签的 ID。</dd>
  <dt><code>windowId</code></dt>
- <dd><code>integer</code>. 此标签的窗体的ID。</dd>
+ <dd><code>integer</code>. 此标签的窗体的 ID。</dd>
 </dl>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
@@ -58,7 +58,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 <h2 id="示例">示例</h2>
 
-<p>监听并记录标签激活事件:</p>
+<p>监听并记录标签激活事件：</p>
 
 <pre class="brush: js">function handleActivated(activeInfo) {
   console.log("Tab " + activeInfo.tabId +

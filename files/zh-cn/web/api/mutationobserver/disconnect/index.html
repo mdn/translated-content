@@ -5,7 +5,7 @@ translation_of: Web/API/MutationObserver/disconnect
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">{{domxref("MutationObserver")}} 的 <code><strong>disconnect()</strong></code> 方法告诉观察者停止观察变动。</span> 可以通过调用其{{domxref("MutationObserver.observe", "observe()")}}方法来重用观察者。</p>
+<p>{{domxref("MutationObserver")}} 的 <code><strong>disconnect()</strong></code> 方法告诉观察者停止观察变动。 可以通过调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法来重用观察者。</p>
 
 <ul>
 </ul>
@@ -24,12 +24,12 @@ translation_of: Web/API/MutationObserver/disconnect
 <p><code>undefined</code>.</p>
 
 <div class="note">
-<p><strong>注意:</strong> 所有已经检测到但是尚未向观察者报告的变动都会被丢弃。</p>
+<p><strong>注意：</strong>所有已经检测到但是尚未向观察者报告的变动都会被丢弃。</p>
 </div>
 
 <h2 id="使用说明">使用说明</h2>
 
-<p>如果被观察的元素被从DOM中移除，然后被浏览器的垃圾回收机制释放，此<code>MutationObserver</code>将同样被删除。</p>
+<p>如果被观察的元素被从 DOM 中移除，然后被浏览器的垃圾回收机制释放，此 <code>MutationObserver</code> 将同样被删除。</p>
 
 <h2 id="示例">示例</h2>
 

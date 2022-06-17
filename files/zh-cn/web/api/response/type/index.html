@@ -5,17 +5,17 @@ translation_of: Web/API/Response/type
 ---
 <div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
 
-<p><strong><code>type</code></strong> 是{{domxref("Response")}} 接口包含的一种响应类型，是只读属性.它可以是以下某一种值:</p>
+<p><strong><code>type</code></strong> 是{{domxref("Response")}} 接口包含的一种响应类型，是只读属性。它可以是以下某一种值：</p>
 
 <ul>
- <li><code>basic</code>: 标准值, 同源响应, 带有所有的头部信息除了“Set-Cookie” 和 “Set-Cookie2″.</li>
- <li><code>cors</code>: Response 接收到一个有效的跨域请求. <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">部分headers和body</a>可以被访问.</li>
- <li><code>error</code>: 网络错误. 没有有用的描述错误的信息。响应的状态为0，header为空且不可变。从 <code>Response.error()</code>中获得的响应的类型.</li>
- <li><code>opaque</code>: 响应 “no-cors” 的跨域请求. <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-opaque">严重受限</a>.</li>
+ <li><code>basic</code>: 标准值，同源响应，带有所有的头部信息除了“Set-Cookie” 和 “Set-Cookie2″.</li>
+ <li><code>cors</code>: Response 接收到一个有效的跨域请求。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">部分 headers 和 body</a>可以被访问。</li>
+ <li><code>error</code>: 网络错误。没有有用的描述错误的信息。响应的状态为 0，header 为空且不可变。从 <code>Response.error()</code>中获得的响应的类型。</li>
+ <li><code>opaque</code>: 响应 “no-cors” 的跨域请求。<a href="https://fetch.spec.whatwg.org/#concept-filtered-response-opaque">严重受限</a>.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: “错误”响应从来没有真正暴露于脚本: 这种响应 {{domxref("GlobalFetch.fetch","fetch()")}} 将被promise拒绝.</p>
+<p><strong>Note</strong>: “错误”响应从来没有真正暴露于脚本：这种响应 {{domxref("GlobalFetch.fetch","fetch()")}} 将被 promise 拒绝。</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -24,7 +24,7 @@ translation_of: Web/API/Response/type
 
 <h3 id="Value">Value</h3>
 
-<p><code>ResponseType</code>说明响应类型.</p>
+<p><code>ResponseType</code>说明响应类型。</p>
 
 <h2 id="Example">Example</h2>
 

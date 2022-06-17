@@ -19,7 +19,9 @@ La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle
 
 ## Syntaxe
 
-    Math.asin(x)
+```js
+Math.asin(x)
+```
 
 ### Paramètres
 

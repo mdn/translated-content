@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP <strong><code>Cross-Origin-Embedder-Policy</code></strong> (COEP) 响应标头可防止文档加载未明确授予文档权限(通过 <a href="/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">CORP</a>或者 <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>)的任何跨域资源 。</p>
+<p>HTTP <strong><code>Cross-Origin-Embedder-Policy</code></strong> (COEP) 响应标头可防止文档加载未明确授予文档权限 (通过 <a href="/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">CORP</a>或者 <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) 的任何跨域资源 。</p>
 
 <table class="properties">
  <tbody>
@@ -29,17 +29,17 @@ translation_of: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 
 <dl>
  <dt><code>unsafe-none</code></dt>
- <dd>这是默认值. 允许文档获取跨源资源，而无需通过CORS协议或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头。</dd>
+ <dd>这是默认值。允许文档获取跨源资源，而无需通过 CORS 协议或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头。</dd>
  <dt><code>require-corp</code></dt>
  <dd>文档只能从相同的源加载资源，或显式标记为可从另一个源加载的资源。<br>
- 如果跨源资源支持CORS，则 <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> 属性或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头必须使用它来加载资源，而不会被COEP阻止。</dd>
+ 如果跨源资源支持 CORS，则 <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> 属性或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头必须使用它来加载资源，而不会被 COEP 阻止。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="某些功能取决于跨域隔离">某些功能取决于跨域隔离</h3>
 
-<p>为了节省时间你可以只接受类似于{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("Performance.now()")}} 对象, 只要你的文档有一个值被设置为<code>require-corp</code> 的 COEP 头部.</p>
+<p>为了节省时间你可以只接受类似于{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("Performance.now()")}} 对象，只要你的文档有一个值被设置为<code>require-corp</code> 的 COEP 头部。</p>
 
 <pre class="notranslate">Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -55,7 +55,7 @@ Cross-Origin-Opener-Policy: same-origin
   // Do something else
 }</pre>
 
-<h3 id="避免CORS阻塞COEP">避免CORS阻塞COEP</h3>
+<h3 id="避免CORS阻塞COEP">避免 CORS 阻塞 COEP</h3>
 
 <p>If you enable COEP using <code>require-corp</code> and have a cross origin resource that needs to be loaded, it needs to support <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> attribute for this image from a third-party site:</p>
 

@@ -19,7 +19,9 @@ La méthode **`__defineGetter__`** permet de lier une propriété d'un objet à 
 
 ## Syntaxe
 
-    obj.__defineGetter__(prop, func)
+```js
+obj.__defineGetter__(prop, func)
+```
 
 ### Paramètres
 

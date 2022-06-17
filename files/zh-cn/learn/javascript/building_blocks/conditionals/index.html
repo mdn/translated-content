@@ -7,17 +7,17 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <div>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">在任何的编程语言中，代码需要依靠不同的输入作出决定并且采取行动。例如，在游戏中，如果玩家的生命值变成了0，那么游戏就结束了。在天气应用中，如果在早晨运行，就显示一张日出的图片；如果在晚上，就显示星星和月亮的图片。在这篇文章中，我们将探索在JavaScript中所谓的条件语句是怎样工作的。</p>
+<p>在任何的编程语言中，代码需要依靠不同的输入作出决定并且采取行动。例如，在游戏中，如果玩家的生命值变成了 0，那么游戏就结束了。在天气应用中，如果在早晨运行，就显示一张日出的图片；如果在晚上，就显示星星和月亮的图片。在这篇文章中，我们将探索在 JavaScript 中所谓的条件语句是怎样工作的。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>基本的计算机知识，对HTML和CSS有基本的了解，<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript的第一步</a>。</td>
+   <td>基本的计算机知识，对 HTML 和 CSS 有基本的了解，<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript 的第一步</a>。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
-   <td>了解怎样在JavaScript中使用条件语句的结构。</td>
+   <td>了解怎样在 JavaScript 中使用条件语句的结构。</td>
   </tr>
  </tbody>
 </table>
@@ -26,17 +26,17 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>人类（以及其他的动物）无时无刻不在做决定，这些决定都影响着他们的生活，从小事（“我应该吃一片还是两片饼干”）到重要的大事（“我应该留在我的祖国，在我父亲的农场工作；还是应该去美国学习天体物理学”）。</p>
 
-<p>条件语句结构允许我们来描述在JavaScript中这样的选择，从不得不作出的选择（例如：“一片还是两片”）到产生的结果或这些选择（也许是“吃一片饼干”可能会“仍然感觉饿”，或者是“吃两片饼干”可能会“感觉饱了，但妈妈会因为我吃掉了所有的饼干而骂我”。）</p>
+<p>条件语句结构允许我们来描述在 JavaScript 中这样的选择，从不得不作出的选择（例如：“一片还是两片”）到产生的结果或这些选择（也许是“吃一片饼干”可能会“仍然感觉饿”，或者是“吃两片饼干”可能会“感觉饱了，但妈妈会因为我吃掉了所有的饼干而骂我”。）</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="if_..._else_语句">if ... else 语句</h2>
 
-<p><code><font face="Open Sans, arial, sans-serif">让我们看看到目前为止你将会在JavaScript中用到的最常见的条件语句类型 — </font><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else语句</a>。</code></p>
+<p><code>让我们看看到目前为止你将会在JavaScript中用到的最常见的条件语句类型 — <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else语句</a>。</code></p>
 
 <h3 id="基本的的_if…else_语法">基本的的 if…else 语法</h3>
 
-<p>基本的if…else语法看起来像下面的 {{glossary("伪代码")}}:</p>
+<p>基本的 if…else 语法看起来像下面的 {{glossary("伪代码")}}:</p>
 
 <pre class="notranslate">if (condition) {
   code to run if condition is true
@@ -48,15 +48,15 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <ol>
  <li>关键字 if，并且后面跟随括号。</li>
- <li>要测试的条件，放到括号里（通常是“这个值大于另一个值吗”或者“这个值存在吗”）。这个条件会利用<a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">比较运算符</a>（我们会在最后的模块中讨论）进行比较，并且返回true或者false。</li>
- <li>一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且只会在条件语句返回true的时候运行。</li>
- <li>关键字else。</li>
- <li>另一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且当条件语句返回值不是true的话，它才会运行。</li>
+ <li>要测试的条件，放到括号里（通常是“这个值大于另一个值吗”或者“这个值存在吗”）。这个条件会利用<a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">比较运算符</a>（我们会在最后的模块中讨论）进行比较，并且返回 true 或者 false。</li>
+ <li>一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且只会在条件语句返回 true 的时候运行。</li>
+ <li>关键字 else。</li>
+ <li>另一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且当条件语句返回值不是 true 的话，它才会运行。</li>
 </ol>
 
-<p>这段代码真的非常易懂——它说“<strong>如果（if）条件（condition）</strong>返回true，运行代码A，<strong>否则（else）</strong>运行代码B”</p>
+<p>这段代码真的非常易懂——它说“<strong>如果（if）条件（condition）</strong>返回 true，运行代码 A，<strong>否则（else）</strong>运行代码 B”</p>
 
-<p>注意：你不一定需要else和第二个花括号——下面的代码也是符合语法规则的：</p>
+<p>注意：你不一定需要 else 和第二个花括号——下面的代码也是符合语法规则的：</p>
 
 <pre class="notranslate">if (condition) {
   code to run if condition is true
@@ -64,7 +64,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 run some other code</pre>
 
-<p>不过，这里你需要注意——在这种情况下，第二段代码不被条件语句控制，所以它总会运行，不管条件返回的是true还是false。这不一定是一件坏事，但这可能不是你想要的——你经常只想要运行一段代码或者另一段，而不是两个都运行。</p>
+<p>不过，这里你需要注意——在这种情况下，第二段代码不被条件语句控制，所以它总会运行，不管条件返回的是 true 还是 false。这不一定是一件坏事，但这可能不是你想要的——你经常只想要运行一段代码或者另一段，而不是两个都运行。</p>
 
 <p>最后，有时候你可能会看到 if…else 语句没有写花括号，像下面的速记风格：</p>
 
@@ -75,7 +75,7 @@ else run some other code instead</pre>
 
 <h3 id="一个真实的例子">一个真实的例子</h3>
 
-<p>为了更好的理解这种语法，让我们考虑一个真实的例子。想像一个孩子被他的父母要求帮助他们做家务。父母可能会说“嗨，宝贝儿，如果你帮我去购物，我会给你额外的零花钱，这样你就能买得起你想要的玩具了。”在JavaScript中，我们可以这样表示：</p>
+<p>为了更好的理解这种语法，让我们考虑一个真实的例子。想像一个孩子被他的父母要求帮助他们做家务。父母可能会说“嗨，宝贝儿，如果你帮我去购物，我会给你额外的零花钱，这样你就能买得起你想要的玩具了。”在 JavaScript 中，我们可以这样表示：</p>
 
 <pre class="brush: js notranslate">var shoppingDone = false;
 
@@ -88,7 +88,7 @@ if (shoppingDone === true) {
 <p>这段代码显示的结果是变量 <code>shoppingDone </code>总是返回 <code>false</code>， 意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 <code>shoppingDone</code> 变成 <code>true</code>。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以看到在<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">Github上这个例子的完整版本</a>（也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">在线运行</a>）</p>
+<p><strong>Note</strong>: 你可以看到在<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">Github 上这个例子的完整版本</a>（也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">在线运行</a>）</p>
 </div>
 
 <h3 id="else_if">else if</h3>
@@ -135,9 +135,9 @@ function setWeather() {
 
 <ol>
  <li>这里我们有 HTML {{htmlelement("select")}} 元素让我们选择不同的天气，以及一个简单的段落。</li>
- <li>在 JavaScript 中, 我们同时存储了对 {{htmlelement("select")}} 和 {{htmlelement("p")}} 的引用, 并对 <code>&lt;select&gt;</code> 添加了一个事件监听器，因此，当它的值改变时，<code>setWeather()</code>函数被执行。</li>
+ <li>在 JavaScript 中，我们同时存储了对 {{htmlelement("select")}} 和 {{htmlelement("p")}} 的引用，并对 <code>&lt;select&gt;</code> 添加了一个事件监听器，因此，当它的值改变时，<code>setWeather()</code>函数被执行。</li>
  <li>当函数运行时，我们首先新建了一个 <code>choice</code> 变量去存储当前被选的 <code>&lt;select&gt;</code> 中的值。接着我们用条件判断语句根据 <code>choice</code> 的值选择性的展示段落中的文本。注意 <code>else if() {...}</code>段中的条件是怎么被判断的，除了第一个，它是在 <code>if() {...}中被判断的。</code></li>
- <li>最后一个 <code>else {...}</code> 中的选择通常被叫做 “最后招数”  — 在所有的条件都不为 true 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的"--Make a choice--"选项时，就会有这样的效果。</li>
+ <li>最后一个 <code>else {...}</code> 中的选择通常被叫做“最后招数”  — 在所有的条件都不为 true 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的"--Make a choice--"选项时，就会有这样的效果。</li>
 </ol>
 
 <div class="note">
@@ -158,7 +158,7 @@ function setWeather() {
 <p><strong>Note</strong>: 如果你想复习这些内容，可以回顾之前链接上的材料。</p>
 </div>
 
-<p>我们想特别提到测试布尔值（true / false），和一个通用模式，你会频繁遇到它，任何不是 <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code> 的值，或一个空字符串（''）在作为条件语句进行测试时实际返回true，因此您可以简单地使用变量名称来测试它是否为真，甚至是否存在（即它不是未定义的）。例如: </p>
+<p>我们想特别提到测试布尔值（true / false），和一个通用模式，你会频繁遇到它，任何不是 <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code> 的值，或一个空字符串（''）在作为条件语句进行测试时实际返回 true，因此您可以简单地使用变量名称来测试它是否为真，甚至是否存在（即它不是未定义的）。例如: </p>
 
 <pre class="brush: js notranslate">var cheese = 'Cheddar';
 
@@ -178,9 +178,9 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   var childsAllowance = 5;
 }</pre>
 
-<h3 id="嵌套if_..._else">嵌套if ... else</h3>
+<h3 id="嵌套if_..._else">嵌套 if ... else</h3>
 
-<p>将另一个if ... else 语句放在另一个中 - 嵌套它是完全可行的。例如，我们可以更新我们的天气预报应用程序，以显示更多的选择，具体取决于温度:</p>
+<p>将另一个 if ... else 语句放在另一个中 - 嵌套它是完全可行的。例如，我们可以更新我们的天气预报应用程序，以显示更多的选择，具体取决于温度：</p>
 
 <pre class="brush: js notranslate">if (choice === 'sunny') {
   if (temperature &lt; 86) {
@@ -190,19 +190,19 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   }
 }</pre>
 
-<p>即使代码全部一起工作，每个if ... else语句完全独立于另一个。</p>
+<p>即使代码全部一起工作，每个 if ... else 语句完全独立于另一个。</p>
 
 <h3 id="逻辑运算符：_和_!">逻辑运算符：&amp;&amp;  , || 和 !</h3>
 
-<p>如果要测试多个条件，而不需要编写嵌套if ... else语句，逻辑运算符可以帮助您。当在条件下使用时，前两个执行以下操作：</p>
+<p>如果要测试多个条件，而不需要编写嵌套 if ... else 语句，逻辑运算符可以帮助您。当在条件下使用时，前两个执行以下操作：</p>
 
 <ul>
  <li><code>&amp;&amp;</code> — 逻辑与; 使得并列两个或者更多的表达式成为可能，只有当这些表达式每一个都返回<code>true</code>时，整个表达式才会返回<code>true.</code></li>
  <li><code>||</code> — 逻辑或; 当两个或者更多表达式当中的任何一个返回 <code>true</code> 则整个表达式将会返回 <code>true</code>.</li>
- <li>!  — 逻辑非; 对一个布尔值取反, 非true返回false,非false返回true.</li>
+ <li>!  — 逻辑非; 对一个布尔值取反，非 true 返回 false，非 false 返回 true.</li>
 </ul>
 
-<p>举一个逻辑 &amp;&amp; 的例子, 刚才的那段代码片段可以写成下面这样:</p>
+<p>举一个逻辑 &amp;&amp; 的例子，刚才的那段代码片段可以写成下面这样：</p>
 
 <pre class="brush: js notranslate">if (choice === 'sunny' &amp;&amp; temperature &lt; 86) {
   para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
@@ -220,7 +220,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   console.log('Probably should just stay in then.');
 }</pre>
 
-<p>最后一种类型的逻辑运算符,  <strong>逻辑非<strong><code>!</code></strong>  </strong>运算符表示, 可以用于对一个表达式取否. 让我们把 <strong> 非运算符 </strong>结合上一个例子里的<strong>  或表达式 </strong>看看:</p>
+<p>最后一种类型的逻辑运算符，  <strong>逻辑非<strong><code>!</code></strong>  </strong>运算符表示，可以用于对一个表达式取否。让我们把 <strong> 非运算符 </strong>结合上一个例子里的<strong>  或表达式 </strong>看看：</p>
 
 <pre class="brush: js notranslate">if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
   console.log('Probably should just stay in then.');
@@ -230,29 +230,29 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 
 <p>在这一段代码中，如果<strong>逻辑或</strong>所在的语句返回 <code>true</code>，则<strong>非运算符</strong>会将其取否，于是整个表达式的返回值将会是<code>false</code>。</p>
 
-<p>您可以在任何结构中随意合并很多个逻辑表达式。接下来的例子将会只在<strong>或运算符</strong>两边的语句同时返回true时才会执行代码，这也就意味着整个<strong>与运算符</strong>语句将会返回true：</p>
+<p>您可以在任何结构中随意合并很多个逻辑表达式。接下来的例子将会只在<strong>或运算符</strong>两边的语句同时返回 true 时才会执行代码，这也就意味着整个<strong>与运算符</strong>语句将会返回 true：</p>
 
 <pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (loggedIn || userName === 'Steve')) {
   // run the code
 }</pre>
 
-<p>在条件语句中运用<strong>或逻辑运算符</strong>最常见的错误是尝试声明变量后，仅检查该变量一次的情况下赋予很多个都会返回true的值，不同的值之间用 <code>||</code> (或)运算符分隔。比如：</p>
+<p>在条件语句中运用<strong>或逻辑运算符</strong>最常见的错误是尝试声明变量后，仅检查该变量一次的情况下赋予很多个都会返回 true 的值，不同的值之间用 <code>||</code> (或) 运算符分隔。比如：</p>
 
 <pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
   // run my code
 }</pre>
 
-<p>在这个例子里 <code>if(...)</code> 里的条件总为真，因为 7 (或者其它非零的数) 的值总是为真. 这个条件实际意思是 "如果x等于5, 或者7为真 — 它总是成立的". 这不是我们想要的逻辑，为了 让它正常工作你必须指定每个或<strong>表达式</strong>两边都是完整的检查:</p>
+<p>在这个例子里 <code>if(...)</code> 里的条件总为真，因为 7 (或者其它非零的数) 的值总是为真。这个条件实际意思是 "如果 x 等于 5, 或者 7 为真 — 它总是成立的". 这不是我们想要的逻辑，为了 让它正常工作你必须指定每个或<strong>表达式</strong>两边都是完整的检查：</p>
 
 <pre class="brush: js notranslate">if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // run my code
 }</pre>
 
-<h2 id="switch语句">switch语句</h2>
+<h2 id="switch语句">switch 语句</h2>
 
-<p><code>if...else</code> 语句能够很好地实现条件代码，但是它们不是没有缺点。 它们主要适用于您只有几个选择的情况，每个都需要相当数量的代码来运行，和/或 的条件很复杂的情况（例如多个逻辑运算符）。 对于只想将变量设置一系列为特定值的选项或根据条件打印特定语句的情况，语法可能会很麻烦，特别是如果您有大量选择。</p>
+<p><code>if...else</code> 语句能够很好地实现条件代码，但是它们不是没有缺点。它们主要适用于您只有几个选择的情况，每个都需要相当数量的代码来运行，和/或 的条件很复杂的情况（例如多个逻辑运算符）。对于只想将变量设置一系列为特定值的选项或根据条件打印特定语句的情况，语法可能会很麻烦，特别是如果您有大量选择。</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code> </a>语句在这里是您的朋友 - 他们以单个表达式/值作为输入，然后查看多个选项，直到找到与该值相匹配的选项，执行与之相关的代码。 这里有一些伪代码，可以给你一点灵感：</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code> </a>语句在这里是您的朋友 - 他们以单个表达式/值作为输入，然后查看多个选项，直到找到与该值相匹配的选项，执行与之相关的代码。这里有一些伪代码，可以给你一点灵感：</p>
 
 <pre class="notranslate">switch (expression) {
   case choice1:
@@ -269,25 +269,25 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
     actually, just run this code
 }</pre>
 
-<p>这里我们得到:</p>
+<p>这里我们得到：</p>
 
 <ol>
- <li>关键字 <code>switch</code>, 后跟一组括号.</li>
- <li>括号内的表达式或值.</li>
+ <li>关键字 <code>switch</code>, 后跟一组括号。</li>
+ <li>括号内的表达式或值。</li>
  <li>关键字 <code>case</code>, 后跟一个选项的表达式/值，后面跟一个冒号.</li>
- <li>如果选择与表达式匹配，则运行一些代码.</li>
- <li>一个 <code>break</code> 语句, 分号结尾. 如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行switch语句之后的代码.</li>
- <li>你可以添加任意的 case 选项（选项3-5）.</li>
- <li>关键字 <code>default</code>, 后面跟随和 <code>case</code> 完全相同的代码模式 (选项 3–5), except that <code>default</code> 之后不需要再有选项, 并且您不需要 <code>break</code> 语句, 因为之后没有任何运行代码. 如果之前没有选项匹配，则运行<code>default</code>选项.</li>
+ <li>如果选择与表达式匹配，则运行一些代码。</li>
+ <li>一个 <code>break</code> 语句，分号结尾。如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行switch语句之后的代码.</li>
+ <li>你可以添加任意的 case 选项（选项 3-5）.</li>
+ <li>关键字 <code>default</code>, 后面跟随和 <code>case</code> 完全相同的代码模式 (选项 3–5), except that <code>default</code> 之后不需要再有选项， 并且您不需要 <code>break</code> 语句， 因为之后没有任何运行代码. 如果之前没有选项匹配，则运行<code>default</code>选项。</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: <code>default</code> 部分不是必须的 - 如果表达式不可能存在未知值，则可以安全地省略它。 如果有机会，您需要包括它来处理未知的情况。</p>
+<p><strong>Note</strong>: <code>default</code> 部分不是必须的 - 如果表达式不可能存在未知值，则可以安全地省略它。如果有机会，您需要包括它来处理未知的情况。</p>
 </div>
 
-<h3 id="switch语句示例">switch语句示例</h3>
+<h3 id="switch语句示例">switch 语句示例</h3>
 
-<p>我们来看一个真实的例子 - 我们将重写天气预报应用程序，以改用switch语句：</p>
+<p>我们来看一个真实的例子 - 我们将重写天气预报应用程序，以改用 switch 语句：</p>
 
 <pre class="brush: html notranslate">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
 &lt;select id="weather"&gt;
@@ -335,7 +335,7 @@ function setWeather() {
 
 <h2 id="三元运算符">三元运算符</h2>
 
-<p><font><font>在我们举一些例子之前，我们要介绍一下最后一句语法。</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"><font><font>三元或条件运算符</font></font></a><font><font>是一个语法的小点，用于测试一个条件，并返回一个值/表达，如果它是</font></font><code>true</code><font><font>，另一个是</font></font><code>false</code><font><font>-这种情况下是有用的，并且可以占用比</font></font><code>if...else</code><font><font>块较少的代码块。如果你只有两个通过</font></font><code>true</code><font><font>/ </font></font><code>false</code><font><font>条件</font><font>选择</font><font>。</font><font>伪代码看起来像这样：</font></font></p>
+<p>在我们举一些例子之前，我们要介绍一下最后一句语法。<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">三元或条件运算符</a>是一个语法的小点，用于测试一个条件，并返回一个值/表达，如果它是<code>true</code>，另一个是<code>false</code>-这种情况下是有用的，并且可以占用比<code>if...else</code>块较少的代码块。如果你只有两个通过<code>true</code>/ <code>false</code>条件选择。伪代码看起来像这样：</p>
 
 <pre class="notranslate">( condition ) ? run this code : run this code instead</pre>
 
@@ -343,7 +343,7 @@ function setWeather() {
 
 <pre class="brush: js notranslate">var greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
 
-<p><font><font>在这里我们有一个变量叫做</font></font><code>isBirthday</code><font><font>- 如果它是</font></font><code>true</code><font><font>，我们给客人一个生日快乐的消息; </font><font>如果不是，我们给她标准的每日问候。</font></font></p>
+<p>在这里我们有一个变量叫做<code>isBirthday</code>- 如果它是<code>true</code>，我们给客人一个生日快乐的消息; 如果不是，我们给她标准的每日问候。</p>
 
 <h3 id="三元运算符示例">三元运算符示例</h3>
 
@@ -373,9 +373,9 @@ select.onchange = function() {
 
 <p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300) }}</p>
 
-<p><font><font>在这里，我们有一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a><font><font>选择主题（黑色或白色）</font><font>的</font><font>元素，加上一个简单</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a><font><font>的显示网站标题。</font><font>我们也有一个函数叫做</font></font><code>update()</code><font><font>，它将两种颜色作为参数（输入）。</font><font>网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。</font></font></p>
+<p>在这里，我们有一个<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a>选择主题（黑色或白色）的元素，加上一个简单<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a>的显示网站标题。我们也有一个函数叫做<code>update()</code>，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。</p>
 
-<p><font><font>最后，我们还有一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><font><font>onchange</font></font></a><font><font>事件监听器，用于运行一个包含三元运算符的函数。</font><font>它以测试条件开始</font></font><code>select.value === 'black'</code><font><font>。</font><font>如果这返回</font></font><code>true</code><font><font>，我们运行</font></font><code>update()</code><font><font>带有黑色和白色参数</font><font>的</font><font>函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。</font><font>如果返回</font></font><code>false</code><font><font>，我们运行</font></font><code>update()</code><font><font>带有白色和黑色参数</font><font>的</font><font>函数，这意味着站点颜色被反转。</font></font></p>
+<p>最后，我们还有一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a>事件监听器，用于运行一个包含三元运算符的函数。它以测试条件开始<code>select.value === 'black'</code>。如果这返回<code>true</code>，我们运行<code>update()</code>带有黑色和白色参数的函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。如果返回<code>false</code>，我们运行<code>update()</code>带有白色和黑色参数的函数，这意味着站点颜色被反转。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">在线运行</a>。）</p>
@@ -383,29 +383,29 @@ select.onchange = function() {
 
 <h2 id="主动学习：一个简单的日历">主动学习：一个简单的日历</h2>
 
-<p><font><font>在这个例子中，您将帮助我们完成一个简单的日历应用程序。</font><font>在你的代码中：</font></font></p>
+<p>在这个例子中，您将帮助我们完成一个简单的日历应用程序。在你的代码中：</p>
 
 <ul>
- <li><font><font>一个</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a><font><font>元素，允许用户在不同月份之间进行选择。</font></font></li>
- <li><code>onchange</code><font><font>检测</font></font><code>&lt;select&gt;</code><font><font>菜单中</font><font>选择的值何时</font><font>更改</font><font>的</font><font>事件处理程序</font><font>。</font></font></li>
- <li><font><font>一个函数叫做</font></font><code>createCalendar()</code><font><font>绘制日历并在</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a><font><font>元素中</font><font>显示正确的月份</font><font>。</font></font></li>
+ <li>一个<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a>元素，允许用户在不同月份之间进行选择。</li>
+ <li><code>onchange</code>检测<code>&lt;select&gt;</code>菜单中选择的值何时更改的事件处理程序。</li>
+ <li>一个函数叫做<code>createCalendar()</code>绘制日历并在<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1" title="标题元素实现六个级别的文档标题，&lt;h1>是最重要的，&lt;h6>是最少的。 标题元素简要介绍了它介绍的部分的主题。 标题信息可以由用户代理使用，例如，自动构建文档的目录。"><code>&lt;h1&gt;</code></a>元素中显示正确的月份。</li>
 </ul>
 
-<p><font><font>我们需要你在</font></font><code>onchange</code><font><font>处理函数中</font><font>写一个条件语句</font><font>，就在</font></font><code>// ADD CONDITIONAL HERE</code><font><font>任务的</font><font>下面  </font><font>。</font><font>这应该：</font></font></p>
+<p>我们需要你在<code>onchange</code>处理函数中写一个条件语句，就在<code>// ADD CONDITIONAL HERE</code>任务的下面  。这应该：</p>
 
 <ol>
- <li><font><font>查看所选月份（存储在</font></font><code>choice</code><font><font>变量中，这将是</font></font><code>&lt;select&gt;</code><font><font>值更改后的元素值，例如“1月”）。</font></font></li>
- <li><font><font>设置一个被调用</font></font><code>days</code><font><font>为等于所选月份天数的</font><font>变量</font><font>。</font><font>为此，您必须查看一年中每个月的天数。</font><font>为了这个例子的目的，你可以忽略闰年。</font></font></li>
+ <li>查看所选月份（存储在<code>choice</code>变量中，这将是<code>&lt;select&gt;</code>值更改后的元素值，例如“1 月”）。</li>
+ <li>设置一个被调用<code>days</code>为等于所选月份天数的变量。为此，您必须查看一年中每个月的天数。为了这个例子的目的，你可以忽略闰年。</li>
 </ol>
 
 <p>提示：</p>
 
 <ul>
- <li><font><font>建议您使用逻辑或将多个月组合成一个单一条件; </font><font>他们中的许多人共享相同的天数。</font></font></li>
- <li><font><font>考虑最常用的天数，并将其用作默认值。</font></font></li>
+ <li>建议您使用逻辑或将多个月组合成一个单一条件; 他们中的许多人共享相同的天数。</li>
+ <li>考虑最常用的天数，并将其用作默认值。</li>
 </ul>
 
-<p><font>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。</font><font>如果真的卡住了，请按“Show solution”查看解决方案。</font></p>
+<p>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。如果真的卡住了，请按“Show solution”查看解决方案。</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -516,15 +516,15 @@ window.addEventListener('load', updateCode);
 
 <h2 id="主动学习：更多颜色选择！">主动学习：更多颜色选择！</h2>
 
-<p><font><font>在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个switch语句，这将允许我们对简单的网站应用更多的选择。</font><font>看看</font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a><font><font>- 这次你会看到它不是两个主题选项，而是五个。</font><font>您需要在</font></font><code>// ADD SWITCH STATEMENT</code><font><font>注释</font><font>下面添加一个switch语句</font><font>：</font></font></p>
+<p>在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个 switch 语句，这将允许我们对简单的网站应用更多的选择。看看<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" title="HTML &lt;select>元素表示一个控件，提供一个选项菜单："><code>&lt;select&gt;</code></a>- 这次你会看到它不是两个主题选项，而是五个。您需要在<code>// ADD SWITCH STATEMENT</code>注释下面添加一个 switch 语句：</p>
 
 <ul>
- <li><font><font>它应该接受</font></font><code>choice</code><font><font>变量作为其输入表达式。</font></font></li>
- <li><font><font>对于每种情况，选择应该等于可以选择的可能值之一，即白色，黑色，紫色，黄色或迷幻色。</font></font></li>
- <li><font><font>对于每种情况，应运行</font></font><code>update()</code><font><font>函数，并传递两个颜色值，第一个颜色值为背景颜色，第二个颜色值为文本颜色。</font><font>请记住，颜色值是字符串，因此需要用引号括起来。</font></font></li>
+ <li>它应该接受<code>choice</code>变量作为其输入表达式。</li>
+ <li>对于每种情况，选择应该等于可以选择的可能值之一，即白色，黑色，紫色，黄色或迷幻色。</li>
+ <li>对于每种情况，应运行<code>update()</code>函数，并传递两个颜色值，第一个颜色值为背景颜色，第二个颜色值为文本颜色。请记住，颜色值是字符串，因此需要用引号括起来。</li>
 </ul>
 
-<p><font>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。</font><font>如果真的卡住了，请按“Show solution”查看解决方案。</font></p>
+<p>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。如果真的卡住了，请按“Show solution”查看解决方案。</p>
 
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
@@ -595,15 +595,15 @@ window.addEventListener('load', updateCode);
 
 <h2 id="结论">结论</h2>
 
-<p><font><font>这就是现在您真正需要了解的JavaScript中的条件结构！</font><font>我相信你会理解这些概念，并轻松地通过这些例子; </font><font>如果有什么不明白的，请随时阅读文章，或者</font></font><a href="https://developer.mozilla.org/en-US/Learn#Contact_us"><font><font>联系我们</font></font></a><font><font>寻求帮助。</font></font></p>
+<p>这就是现在您真正需要了解的 JavaScript 中的条件结构！我相信你会理解这些概念，并轻松地通过这些例子; 如果有什么不明白的，请随时阅读文章，或者<a href="https://developer.mozilla.org/en-US/Learn#Contact_us">联系我们</a>寻求帮助。</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators"><font><font>比较运算符</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements"><font><font>条件声明详细</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><font><font>如果...其他参考</font></font></a></li>
- <li><font><font><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三元）运算符引用</a></font></font></li>
+ <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">比较运算符</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">条件声明详细</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">如果...其他参考</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三元）运算符引用</a></li>
 </ul>
 
 <p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>

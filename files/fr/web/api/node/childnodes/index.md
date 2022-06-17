@@ -15,7 +15,9 @@ La propriété en lecture seule  **`Node.childNodes`** renvoie une {{domxref("No
 
 ## Syntaxe
 
-    var collNoeuds = elementDeReference.childNodes;
+```js
+var collNoeuds = elementDeReference.childNodes;
+```
 
 ## Exemples
 
@@ -51,8 +53,6 @@ Les éléments de la collection de noeuds sont des objets et non des chaînes de
 L'objet [`document`](/fr/DOM/document) lui-même a deux enfants&nbsp;: la déclaration [Doctype](/fr/DOM/document.doctype) et l'élément racine, généralement appelés  `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments  [`HTML`](/fr/HTML/Element/html)).
 
 `childNodes`  inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
-
-
 
 ## Spécification
 

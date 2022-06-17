@@ -39,7 +39,9 @@ scroll-snap-type-x: unset;
 
 ### Syntaxe formelle
 
-    none | mandatory | proximity
+```
+none | mandatory | proximity
+```
 
 ## Spécifications
 

@@ -114,15 +114,19 @@ console.log("Data fetched");
 
 데이터가 아직 캐시에 없을 땐,
 
-    Fetching data...
-    Data fetched
-    Loaded data
+```
+Fetching data...
+Data fetched
+Loaded data
+```
 
 데이터가 캐시에 저장된 후에는,
 
-    Fetching data...
-    Loaded data
-    Data fetched
+```
+Fetching data...
+Loaded data
+Data fetched
+```
 
 더 나쁜 점은, 이 코드의 실행이 끝난 후 어떤 때에는 요소의 `data` 속성이 설정된 상태고, 다른 때에는 아닐 것이라는 점입니다.
 

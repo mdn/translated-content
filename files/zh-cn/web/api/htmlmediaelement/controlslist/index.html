@@ -5,15 +5,15 @@ translation_of: Web/API/HTMLMediaElement/controlsList
 ---
 <p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement" title="HTMLMediaElement接口为HTMLElement添加了支持音频和视频通用的基本媒体相关功能所需的属性和方法。"><code>HTMLMediaElement</code></a><font><font>接口</font><font>的</font></font><strong><code>controlsList</code></strong><font><font> 属性返回DOMTokenList，帮助用户在显示其自己的控件集时选择要在媒体元素上显示的控件。DOMTokenList可以设置以下三个可能值中的一个或多个：nodownload，nofullscreen和noremoteplayback（值是一组</font></font><a href="https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens" id="user-interface:unordered-set-of-unique-space-separated-tokens"><font><font>无序的空格分隔标记</font></font></a><font><font>，这些</font><a href="https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens" id="user-interface:unordered-set-of-unique-space-separated-tokens"><font>标记</font></a><font>是</font></font><a href="https://infra.spec.whatwg.org/#ascii-case-insensitive" id="user-interface:ascii-case-insensitive"><font><font>ASCII不区分大小写的</font></font></a><font><font>）。</font></font></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement" title="HTMLMediaElement接口为HTMLElement添加了支持音频和视频通用的基本媒体相关功能所需的属性和方法。"><code>HTMLMediaElement</code></a>接口的<strong><code>controlsList</code></strong> 属性返回 DOMTokenList，帮助用户在显示其自己的控件集时选择要在媒体元素上显示的控件。DOMTokenList 可以设置以下三个可能值中的一个或多个：nodownload，nofullscreen 和 noremoteplayback（值是一组<a href="https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens" id="user-interface:unordered-set-of-unique-space-separated-tokens">无序的空格分隔标记</a>，这些<a href="https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens" id="user-interface:unordered-set-of-unique-space-separated-tokens">标记</a>是<a href="https://infra.spec.whatwg.org/#ascii-case-insensitive" id="user-interface:ascii-case-insensitive">ASCII 不区分大小写的</a>）。</p>
 
 <ol>
- <li><code id="user-interface:attr-media-controlslist-nodownload"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nodownload">nodownload</a></code><font><font>关键字暗示的下载控制应使用用户代理自己的一套媒体元素控件时被隐藏。</font></font></li>
- <li><code id="user-interface:attr-media-controlslist-nofullscreen"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nofullscreen">nofullscreen</a></code><font><font>关键字暗示在使用用户代理自己的媒体元素控件集时，应隐藏全屏模式控件。</font></font></li>
- <li><code id="user-interface:attr-media-controlslist-noremoteplayback"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-noremoteplayback">noremoteplayback</a></code><font><font>关键字暗示当使用用户代理自己的媒体元素控件集时，应隐藏远程播放控件。</font></font></li>
+ <li><code id="user-interface:attr-media-controlslist-nodownload"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nodownload">nodownload</a></code>关键字暗示的下载控制应使用用户代理自己的一套媒体元素控件时被隐藏。</li>
+ <li><code id="user-interface:attr-media-controlslist-nofullscreen"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nofullscreen">nofullscreen</a></code>关键字暗示在使用用户代理自己的媒体元素控件集时，应隐藏全屏模式控件。</li>
+ <li><code id="user-interface:attr-media-controlslist-noremoteplayback"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-noremoteplayback">noremoteplayback</a></code>关键字暗示当使用用户代理自己的媒体元素控件集时，应隐藏远程播放控件。</li>
 </ol>
 
-<h2 id="语法"><font><font>语法</font></font></h2>
+<h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">var domTokenList = HTMLMediaElement.controlsList;</pre>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/HTMLMediaElement/controlsList
 
 <p>A {{domxref("DOMTokenList")}}.</p>
 
-<h2 id="示例"><font><font>示例</font></font></h2>
+<h2 id="示例">示例</h2>
 
 <pre class="syntaxbox">&lt;video controls controlslist="nodownload" id="video" src=""&gt;&lt;/video&gt;
 </pre>
@@ -29,11 +29,11 @@ translation_of: Web/API/HTMLMediaElement/controlsList
 <pre class="syntaxbox">&lt;video controls controlslist="nodownload nofullscreen noremoteplayback" id="video" src=""&gt;&lt;/video&gt;
 </pre>
 
-<h2 id="规格"><font><font>规格</font></font></h2>
+<h2 id="规格">规格</h2>
 
 <p><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist">https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist</a>.</p>
 
-<h2 id="浏览器兼容性"><font><font>浏览器兼容性</font></font></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
 

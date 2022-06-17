@@ -19,7 +19,9 @@ La méthode **`has()`** renvoie un booléen indiquant si un objet donné est con
 
 ## Syntaxe
 
-    ws.has(valeur);
+```js
+ws.has(valeur);
+```
 
 ### Paramètres
 

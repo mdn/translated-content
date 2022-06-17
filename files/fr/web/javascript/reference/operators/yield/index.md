@@ -18,7 +18,9 @@ Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction géné
 
 ## Syntaxe
 
-    [[rv =]] yield [[expression]];
+```js
+[rv] = yield [expression]
+```
 
 - `expression`
   - : Définit la valeur à retourner depuis la fonction génératrice via [le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_»). Si omise, `undefined` sera retournée à la place.
@@ -48,20 +50,24 @@ Entre le chemin de code du générateur, ses opérateurs `yield`, et la possibil
 
 Le code suivant est la déclaration d'un exemple de fonction génératrice :
 
-    function* compteVentesPommes () {
-      var listeVentes = [3, 7, 5];
-      for (var i = 0; i < listeVentes.length; i++) {
-        yield listeVentes[i];
-      }
-    }
+```js
+function* compteVentesPommes () {
+  var listeVentes = [3, 7, 5];
+  for (var i = 0; i < listeVentes.length; i++) {
+    yield listeVentes[i];
+  }
+}
+```
 
 Une fois qu'une fonction génératrice est définie, elle peut être utilisée en construisant un itérateur comme indiqué.
 
-    var magasinPommes = compteVentesPommes(); // Générateur { }
-    console.log(magasinPommes.next()); // { value: 3, done: false }
-    console.log(magasinPommes.next()); // { value: 7, done: false }
-    console.log(magasinPommes.next()); // { value: 5, done: false }
-    console.log(magasinPommes.next()); // { value: undefined, done: true }
+```js
+var magasinPommes = compteVentesPommes(); // Générateur { }
+console.log(magasinPommes.next()); // { value: 3, done: false }
+console.log(magasinPommes.next()); // { value: 7, done: false }
+console.log(magasinPommes.next()); // { value: 5, done: false }
+console.log(magasinPommes.next()); // { value: undefined, done: true }
+```
 
 ## Spécifications
 

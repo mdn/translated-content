@@ -5,19 +5,19 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
 
-<div class="summary">
-<p>在前一个章节中看过 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">应用样式和颜色</a> 之后, 我们现在来看一下如何在canvas中绘制文本</p>
+<div>
+<p>在前一个章节中看过 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">应用样式和颜色</a> 之后，我们现在来看一下如何在 canvas 中绘制文本</p>
 </div>
 
 <h2 id="绘制文本">绘制文本</h2>
 
-<p>canvas 提供了两种方法来渲染文本:</p>
+<p>canvas 提供了两种方法来渲染文本：</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}</dt>
- <dd>在指定的(x,y)位置填充指定的文本，绘制的最大宽度是可选的.</dd>
+ <dd>在指定的 (x,y) 位置填充指定的文本，绘制的最大宽度是可选的。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}</dt>
- <dd>在指定的(x,y)位置绘制文本边框，绘制的最大宽度是可选的.</dd>
+ <dd>在指定的 (x,y) 位置绘制文本边框，绘制的最大宽度是可选的。</dd>
 </dl>
 
 <h3 id="A_fillText_example" name="A_fillText_example">一个填充文本的示例</h3>
@@ -58,22 +58,22 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 
 <h2 id="有样式的文本">有样式的文本</h2>
 
-<p>在上面的例子用我们已经使用了 <code>font</code> 来使文本比默认尺寸大一些. 还有更多的属性可以让你改变canvas显示文本的方式：</p>
+<p>在上面的例子用我们已经使用了 <code>font</code> 来使文本比默认尺寸大一些。还有更多的属性可以让你改变 canvas 显示文本的方式：</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.font", "font = value")}}</dt>
- <dd>当前我们用来绘制文本的样式. 这个字符串使用和 <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font")}} 属性相同的语法. 默认的字体是 <code>10px sans-serif</code>。</dd>
+ <dd>当前我们用来绘制文本的样式。这个字符串使用和 <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font")}} 属性相同的语法。默认的字体是 <code>10px sans-serif</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}</dt>
- <dd>文本对齐选项. 可选的值包括：<code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> or <code>center</code>. 默认值是 <code>start</code>。</dd>
+ <dd>文本对齐选项。可选的值包括：<code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> or <code>center</code>. 默认值是 <code>start</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}</dt>
- <dd>基线对齐选项. 可选的值包括：<code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code>, <code>ideographic</code>, <code>bottom</code>。默认值是 <code>alphabetic。</code></dd>
+ <dd>基线对齐选项。可选的值包括：<code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code>, <code>ideographic</code>, <code>bottom</code>。默认值是 <code>alphabetic。</code></dd>
  <dt>{{domxref("CanvasRenderingContext2D.direction", "direction = value")}}</dt>
- <dd>文本方向。可能的值包括：<code>ltr</code>, <code>rtl</code>, <code>inherit</code>。默认值是 <code>inherit<font face="Thread-00001740-Id-000000e0">。</font></code></dd>
+ <dd>文本方向。可能的值包括：<code>ltr</code>, <code>rtl</code>, <code>inherit</code>。默认值是 <code>inherit。</code></dd>
 </dl>
 
-<p>如果你之前使用过CSS，那么这些选项你会很熟悉。</p>
+<p>如果你之前使用过 CSS，那么这些选项你会很熟悉。</p>
 
-<p>下面的图片（from the <a class="external" href="http://www.whatwg.org/" title="http://www.whatwg.org/">WHATWG</a>）展示了textBaseline属性支持的不同的基线情况：</p>
+<p>下面的图片（from the <a class="external" href="http://www.whatwg.org/" title="http://www.whatwg.org/">WHATWG</a>）展示了 textBaseline 属性支持的不同的基线情况：</p>
 
 <p><img alt="The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
@@ -86,9 +86,9 @@ of the em square is roughly at the bottom of the glyphs in a
 font. The top and bottom of the bounding box can be far from these
 baselines, due to glyphs extending far outside the em square." src="http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png"></p>
 
-<h3 id="textBaseline例子">textBaseline例子</h3>
+<h3 id="textBaseline例子">textBaseline 例子</h3>
 
-<p>编辑下面的代码，看看它们在canvas中的变化：</p>
+<p>编辑下面的代码，看看它们在 canvas 中的变化：</p>
 
 <pre class="brush: js;highlight[2] notranslate">ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
@@ -155,8 +155,8 @@ window.addEventListener("load", drawCanvas);
 }
 </pre>
 
-<h2 id="Geoko特性说明">Geoko特性说明</h2>
+<h2 id="Geoko特性说明">Geoko 特性说明</h2>
 
-<p>在Geoko（Firefox，Firefox OS及基于Mozilla的应用的渲染引擎）中，曾有一些版本较早的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs">API</a> 实现了在canvas上对文本作画的功能，但它们现在已不再使用。</p>
+<p>在 Geoko（Firefox，Firefox OS 及基于 Mozilla 的应用的渲染引擎）中，曾有一些版本较早的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs">API</a> 实现了在 canvas 上对文本作画的功能，但它们现在已不再使用。</p>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</p>

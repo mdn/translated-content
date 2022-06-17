@@ -15,7 +15,9 @@ La méthode **`Node.cloneNode()`** renvoie une copie du nœud sur lequel elle a 
 
 ## Syntaxe
 
-    var dupNode = node.cloneNode([deep]);
+```js
+var dupNode = node.cloneNode([deep]);
+```
 
 - node
   - : Le noeud à dupliquer.

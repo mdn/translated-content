@@ -9,7 +9,7 @@ translation_of: Web/API/EventTarget/dispatchEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>向一个指定的事件目标派发一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Event">事件</a>,  并以合适的顺序<strong>同步调用</strong>目标元素相关的事件处理函数。<span style="line-height: 1.5;">标准事件处理规则(包括事件捕获和可选的冒泡过程)同样适用于通过手动的使用</span><code style="font-style: normal; line-height: 1.5;">dispatchEvent()</code><span style="line-height: 1.5;">方法</span><span style="line-height: 1.5;">派发的事件。</span></p>
+<p>向一个指定的事件目标派发一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Event">事件</a>,  并以合适的顺序<strong>同步调用</strong>目标元素相关的事件处理函数。标准事件处理规则 (包括事件捕获和可选的冒泡过程) 同样适用于通过手动的使用<code style="font-style: normal; line-height: 1.5;">dispatchEvent()</code>方法派发的事件。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -20,22 +20,22 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 <ul>
  <li><code>event</code> 是要被派发的事件对象。</li>
- <li><code>target</code> 被用来初始化 事件 和 决定将会触发 目标.</li>
+ <li><code>target</code> 被用来初始化 事件 和 决定将会触发 目标。</li>
 </ul>
 
 <h3 id="返回值">返回值</h3>
 
 <ul>
- <li>当该事件是可取消的(cancelable为true)并且至少一个该事件的 事件处理方法 调用了{{domxref("Event.preventDefault()")}}，则返回值为<code>false</code>；否则返回<code>true</code>。</li>
+ <li>当该事件是可取消的 (cancelable 为 true) 并且至少一个该事件的 事件处理方法 调用了{{domxref("Event.preventDefault()")}}，则返回值为<code>false</code>；否则返回<code>true</code>。</li>
 </ul>
 
-<p>如果该被派发的事件的事件类型(event's type)在方法调用之前没有被经过初始化被指定，就会抛出一个 <code>UNSPECIFIED_EVENT_TYPE_ERR</code> 异常，或者如果事件类型是<code>null</code><span style="line-height: 1.5;">或一个空字符串</span><span style="line-height: 1.5;">. event handler 就会抛出未捕获的异常； 这些 event handlers 运行在一个嵌套的调用栈中： 他们会阻塞调用直到他们处理完毕，但是异常不会冒泡。</span></p>
+<p>如果该被派发的事件的事件类型 (event's type) 在方法调用之前没有被经过初始化被指定，就会抛出一个 <code>UNSPECIFIED_EVENT_TYPE_ERR</code> 异常，或者如果事件类型是<code>null</code>或一个空字符串. event handler 就会抛出未捕获的异常； 这些 event handlers 运行在一个嵌套的调用栈中： 他们会阻塞调用直到他们处理完毕，但是异常不会冒泡。</p>
 
 <h2 id="Notes" name="Notes">注意</h2>
 
-<p>与浏览器原生事件不同，原生事件是由DOM派发的，并通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop">event loop</a>异步调用事件处理程序，而<code>dispatchEvent()</code>则是同步调用事件处理程序。在调用<code>dispatchEvent()</code>后，所有监听该事件的事件处理程序将在代码继续前执行并返回。</p>
+<p>与浏览器原生事件不同，原生事件是由 DOM 派发的，并通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop">event loop</a>异步调用事件处理程序，而<code>dispatchEvent()</code>则是同步调用事件处理程序。在调用<code>dispatchEvent()</code>后，所有监听该事件的事件处理程序将在代码继续前执行并返回。</p>
 
-<p><code>dispatchEvent()</code>是create-init-dispatch过程的最后一步，用于将事件调度到实现的事件模型中。可以使用<a href="/zh-CN/docs/Web/API/Event/Event">Event</a>构造函数来创建事件。</p>
+<p><code>dispatchEvent()</code>是 create-init-dispatch 过程的最后一步，用于将事件调度到实现的事件模型中。可以使用<a href="/zh-CN/docs/Web/API/Event/Event">Event</a>构造函数来创建事件。</p>
 
 <p>另请参阅 <a href="/en-US/docs/DOM/event" title="DOM/event">Event object reference</a>.</p>
 

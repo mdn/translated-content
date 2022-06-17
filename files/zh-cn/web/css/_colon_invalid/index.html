@@ -71,13 +71,13 @@ input:required:invalid {
 
 <h3 id="单选钮（Radio_buttons）">单选钮（Radio buttons）</h3>
 
-<p>若一组单选钮被设定为必须选定一个，在该组中没有按钮被选中的情况，:invalid伪类被应用到该组中的所有按钮。（单选钮组按照name属性共享相同值。）</p>
+<p>若一组单选钮被设定为必须选定一个，在该组中没有按钮被选中的情况，:invalid 伪类被应用到该组中的所有按钮。（单选钮组按照 name 属性共享相同值。）</p>
 
 <h3 id="Gecko_默认">Gecko 默认</h3>
 
-<p>默认情况下，Gecko不应用:invalid伪类设置的样式。但是，Gecko可以使用{{cssxref(":-moz-ui-invalid")}}伪类的样式（使用{{Cssxref("box-shadow")}} 属性设置红色发光边框）来达到类似的效果，它可以被应用在:invalid伪类的子集中。</p>
+<p>默认情况下，Gecko 不应用 :invalid 伪类设置的样式。但是，Gecko 可以使用 {{cssxref(":-moz-ui-invalid")}} 伪类的样式（使用 {{Cssxref("box-shadow")}} 属性设置红色发光边框）来达到类似的效果，它可以被应用在:invalid 伪类的子集中。</p>
 
-<p>你可以使用以下CSS禁用红色发光边框,或完全重写它以改变无效输入域的外观：</p>
+<p>你可以使用以下 CSS 禁用红色发光边框，或完全重写它以改变无效输入域的外观：</p>
 
 <pre><code>:invalid {
   box-shadow: none;

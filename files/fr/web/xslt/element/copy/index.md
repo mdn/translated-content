@@ -12,9 +12,11 @@ L'élément `<xsl:copy>` transfert une copie limitée (le nœud et tous les nœu
 
 ### Syntaxe
 
-    <xsl:copy use-attribute-sets=LISTE-DE-NOMS>
-    	MODÈLE
-    </xsl:copy>
+```xml
+<xsl:copy use-attribute-sets=LISTE-DE-NOMS>
+  MODÈLE
+</xsl:copy>
+```
 
 ### Attributs obligatoires
 

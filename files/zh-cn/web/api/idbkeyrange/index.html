@@ -16,7 +16,7 @@ translation_of: Web/API/IDBKeyRange
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p><a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> 的<strong><code>IDBKeyRange</code></strong>接口表示一些数据类型上的键的连续间隔。可以使用一个键或某个范围的键从{{domxref("IDBObjectStore")}} 和{{domxref("IDBIndex")}} 对象中检索记录。您也可以指定键的上界和下界来限制范围。例如，您可以遍历值范围a - z中的键的所有值。</p>
+<p><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a> 的<strong><code>IDBKeyRange</code></strong>接口表示一些数据类型上的键的连续间隔。可以使用一个键或某个范围的键从{{domxref("IDBObjectStore")}} 和{{domxref("IDBIndex")}} 对象中检索记录。您也可以指定键的上界和下界来限制范围。例如，您可以遍历值范围 a - z 中的键的所有值。</p>
 </div>
 
 <p>键范围可以是单个值，也可以是具有上界、下界或端点的范围。如果键范围同时有上界或下界，那么它是有界的，否则是无界的。有界键范围可以是开放的（不包含端点）或闭合的（包含了端点）。要检索一定范围内的所有键值，可以使用以下的代码结构：</p>
@@ -66,21 +66,21 @@ translation_of: Web/API/IDBKeyRange
  </thead>
 </table>
 
-<p>如果以下条件为true，则键包含在键范围中:</p>
+<p>如果以下条件为 true，则键包含在键范围中：</p>
 
 <ul>
- <li>键范围的下界值为以下值或符合以下条件之一时:
+ <li>键范围的下界值为以下值或符合以下条件之一时：
   <ul>
    <li><code>undefined</code></li>
    <li>低于正在被鉴定的键值</li>
-   <li>等于正在被鉴定的键值，且键范围的<code>lowerOpen属性</code>为<code>false</code>.</li>
+   <li>等于正在被鉴定的键值，且键范围的<code>lowerOpen 属性</code>为<code>false</code>.</li>
   </ul>
  </li>
- <li>键范围的上界值为以下值或符合以下条件之一时:
+ <li>键范围的上界值为以下值或符合以下条件之一时：
   <ul>
    <li><code>undefined</code></li>
    <li>高于正在被鉴定的键值</li>
-   <li>等于正在被鉴定的键值，且键范围的<code>upperOpen<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">属性为</span></font></code><code>false</code>.</li>
+   <li>等于正在被鉴定的键值，且键范围的<code>upperOpen 属性为</code><code>false</code>.</li>
   </ul>
  </li>
 </ul>
@@ -95,9 +95,9 @@ translation_of: Web/API/IDBKeyRange
  <dt>{{domxref("IDBKeyRange.upper")}} {{readonlyInline}}</dt>
  <dd>键范围的上界</dd>
  <dt>{{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}</dt>
- <dd>如果下界值包含在键范围内，则返回false。</dd>
+ <dd>如果下界值包含在键范围内，则返回 false。</dd>
  <dt>{{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}</dt>
- <dd>如果上界值包含在键范围内，则返回false。</dd>
+ <dd>如果上界值包含在键范围内，则返回 false。</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -124,7 +124,7 @@ translation_of: Web/API/IDBKeyRange
 
 <h2 id="Examples">Examples</h2>
 
-<p>以下示例用以说明该如果使用键范围。在此我们将 <code>keyRangeValue</code> 声明为A～F之间的范围。我们打开一个事务 (使用 {{domxref("IDBTransaction")}}) 和一个对象存储, 并用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，其中<code>keyRangeValue</code>是一个可选的键范围值，指定之后游标将只检索键在该范围内的记录。这里的键范围包括了“A”和“F”，因为我们还没声明键范围为开放边界。如果我们使用 <span style="background-color: #fafbfc; font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;"><code>IDBKeyRange.bound("A", "F", true, true);</code>，那么这个键范围将不包括</span>“A”和“F”，只包含它们之间的值。</p>
+<p>以下示例用以说明该如果使用键范围。在此我们将 <code>keyRangeValue</code> 声明为 A～F 之间的范围。我们打开一个事务 (使用 {{domxref("IDBTransaction")}}) 和一个对象存储，并用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，其中<code>keyRangeValue</code>是一个可选的键范围值，指定之后游标将只检索键在该范围内的记录。这里的键范围包括了“A”和“F”，因为我们还没声明键范围为开放边界。如果我们使用 <code>IDBKeyRange.bound("A", "F", true, true);</code>，那么这个键范围将不包括“A”和“F”，只包含它们之间的值。</p>
 
 <div class="note">
 <p><strong>Note</strong>: For a more complete example allowing you to experiment with key range, have a look at our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a> repo (<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live too</a>.)</p>

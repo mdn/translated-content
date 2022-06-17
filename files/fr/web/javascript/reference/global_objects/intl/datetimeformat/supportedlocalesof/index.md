@@ -20,7 +20,9 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/suppo
 
 ## Syntaxe
 
-    Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
+```js
+Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
+```
 
 ### Paramètres
 

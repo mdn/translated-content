@@ -12,14 +12,14 @@ original_slug: XMLSerializer
 ---
 <div dir="ltr" style="text-align: left;">{{APIRef("XMLSerializer")}}</div>
 
-<div dir="ltr" id="result_box" style="text-align: left;"><code>XMLSerializer</code>接口提供{{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法来构建一个代表 {{Glossary("DOM")}} 树的XML字符串。</div>
+<div dir="ltr" id="result_box" style="text-align: left;"><code>XMLSerializer</code>接口提供{{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法来构建一个代表 {{Glossary("DOM")}} 树的 XML 字符串。</div>
 
 <h2 id="Methods" name="Methods">方法</h2>
 
 <dl>
- <dt id="serializeToString">{{domxref("XMLSerializer.serializeToString", "serializeToString()")}}</dt>
- <dd>返回DOM子树序列化后的字符串。</dd>
- <dt id="serializeToStream">{{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}</dt>
+ <dt>{{domxref("XMLSerializer.serializeToString", "serializeToString()")}}</dt>
+ <dd>返回 DOM 子树序列化后的字符串。</dd>
+ <dt>{{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}</dt>
  <dd>将指定元素的每个子树按照特定的字符集序列化成字节流。</dd>
 </dl>
 
@@ -34,23 +34,23 @@ original_slug: XMLSerializer
  var str = s.serializeToString(d);
  saveXML(str);</pre>
 
-<p>这里新建了一个 <code>XMLSerializer</code> 对象实例, 然后将待序列化的 {{domxref("Document")}} 对象实例传入返回等价 XML 的 {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法。</p>
+<p>这里新建了一个 <code>XMLSerializer</code> 对象实例，然后将待序列化的 {{domxref("Document")}} 对象实例传入返回等价 XML 的 {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法。</p>
 
 <h3 id="向一个基于_XML_的_DOM_对象中">向一个基于 XML 的 DOM 对象中</h3>
 
 <p>本例使用 {domxref("Element.insertAdjacentHTML()")}} 方法将一个新的 DOM {{domxref("Node")}} 插入 基于序列化 {{domxref("Document")}} 对象创建的 XML 中。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 在真实场景下，你通常应该通过调用 {{domxref("Document.importNode", "importNode()")}} 方法将新节点加入 DOM 中, 然后通过调用以下方法将目标节点添加到 DOM 树:</p>
+<p><strong>注意：</strong> 在真实场景下，你通常应该通过调用 {{domxref("Document.importNode", "importNode()")}} 方法将新节点加入 DOM 中，然后通过调用以下方法将目标节点添加到 DOM 树：</p>
 
 <ul>
  <li>{{domxref("Document")}} 和 {{domxref("Element")}} 方法 {{domxref("ParentNode.append", "append()")}} 和 {{domxref("ParentNode.prepend", "prepend()")}}</li>
- <li>{{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} 方法(替换现有节点)</li>
- <li>{{domxref("Document.insertAdjacentElement()")}} 和 {{domxref("Element.insertAdjacentElement()")}} 方法.</li>
+ <li>{{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} 方法 (替换现有节点)</li>
+ <li>{{domxref("Document.insertAdjacentElement()")}} 和 {{domxref("Element.insertAdjacentElement()")}} 方法。</li>
 </ul>
 </div>
 
-<p>因为<code>insertAdjacentHTML()</code> 的第二个参数是一个字符串而不是 <code>Node</code> 节点对象, 所以这里先要使用 <code>XMLSerializer</code> 将节点转换为字符串.</p>
+<p>因为<code>insertAdjacentHTML()</code> 的第二个参数是一个字符串而不是 <code>Node</code> 节点对象，所以这里先要使用 <code>XMLSerializer</code> 将节点转换为字符串。</p>
 
 <pre class="brush: js">var inp = document.createElement('input');
 var XMLS = new XMLSerializer();
@@ -61,7 +61,7 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);</pre>
 
 <p>以上代码通过调用 {{domxref("Document.createElement()")}} 方法新建一个 {HTMLElement("input")}} 对象 , 然后通过 {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法将该对象序列化为 XML.</p>
 
-<p>做完以上工作之后, 使用 <code>insertAdjacentHTML()</code> 方法将 <code>&lt;input&gt;</code> 元素加入 DOM.</p>
+<p>做完以上工作之后，使用 <code>insertAdjacentHTML()</code> 方法将 <code>&lt;input&gt;</code> 元素加入 DOM.</p>
 
 <h2 id="规范">规范</h2>
 

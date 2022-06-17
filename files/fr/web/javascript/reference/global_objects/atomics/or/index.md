@@ -18,7 +18,9 @@ La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire ent
 
 ## Syntaxe
 
-    Atomics.or(typedArray, index, value)
+```js
+Atomics.or(typedArray, index, value)
+```
 
 ### Paramètres
 
@@ -52,10 +54,12 @@ L'opération binaire OU renvoie 1 si `a` ou `b` valent 1. La table de vérité d
 
 Par exemple, un OU binaire appliqué entre 5 et 1 (`5 | 1`) renvoie `0101`, ce qui correspond à 5 en notation décimale.
 
-    5  0101
-    1  0001
-       ----
-    5  0101
+```
+5  0101
+1  0001
+   ----
+5  0101
+```
 
 ## Exemples
 

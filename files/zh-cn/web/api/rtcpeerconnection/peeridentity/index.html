@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection/peerIdentity
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">只读属性 {{domxref("RTCPeerConnection")}}  <code><strong>peerIdentity</strong></code> ，返回{{jsxref("Promise")}} 对象，成功时返回 {{domxref("RTCIdentityAssertion")}} ，该结构 {{domxref("DOMString")}} 标识了远端的ID。这个身份标识在连接过程中将不会改变（直到连接结束）</span>.</p>
+<p>只读属性 {{domxref("RTCPeerConnection")}}  <code><strong>peerIdentity</strong></code> ，返回{{jsxref("Promise")}} 对象，成功时返回 {{domxref("RTCIdentityAssertion")}} ，该结构 {{domxref("DOMString")}} 标识了远端的 ID。这个身份标识在连接过程中将不会改变（直到连接结束）.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,10 +15,10 @@ translation_of: Web/API/RTCPeerConnection/peerIdentity
 
 <p>A JavaScript {{jsxref("Promise")}} which resolves to an {{domxref("RTCIdentityAssertion")}} that describes the remote peer's identity.</p>
 
-<p>当验证远程的身份ID出错时,  promise 将返回拒绝. 如果目标节点身份不存在, <code>peerIdentity</code> 将被设为 一个promise对象，并重启验证过程（一个断言）, 直到成功或者不再想继续。</p>
+<p>当验证远程的身份 ID 出错时， promise 将返回拒绝。如果目标节点身份不存在，<code>peerIdentity</code> 将被设为 一个 promise 对象，并重启验证过程（一个断言）, 直到成功或者不再想继续。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意:</strong> {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 返回的promise 将不会成功返回，除非目标节点身份信息可用。 如不可用，则<code>setRemoteDescription()</code> 将被拒绝. 若无目标节点ID, 就不不需要等<code>setRemoteDescription() </code>这个返回验证成功了.</p>
+<p><strong>注意：</strong> {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 返回的 promise 将不会成功返回，除非目标节点身份信息可用。 如不可用，则<code>setRemoteDescription()</code> 将被拒绝。若无目标节点 ID，就不不需要等<code>setRemoteDescription() </code>这个返回验证成功了。</p>
 </div>
 
 <h2 id="举个栗子">举个栗子</h2>

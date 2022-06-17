@@ -92,45 +92,45 @@ elements.map(({ "length": lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
 
 <h3 id="没有单独的this">没有单独的<code>this</code></h3>
 
-<p>在箭头函数出现之前，每一个新函数根据它是被如何调用的来定义这个函数的this值：</p>
+<p>在箭头函数出现之前，每一个新函数根据它是被如何调用的来定义这个函数的 this 值：</p>
 
 <ul>
- <li>如果该函数是一个构造函数，this指针指向一个新的对象</li>
- <li>在严格模式下的函数调用下，this指向<code>undefined</code></li>
- <li>如果该函数是一个对象的方法，则它的this指针指向这个对象</li>
+ <li>如果该函数是一个构造函数，this 指针指向一个新的对象</li>
+ <li>在严格模式下的函数调用下，this 指向<code>undefined</code></li>
+ <li>如果该函数是一个对象的方法，则它的 this 指针指向这个对象</li>
  <li>等等</li>
 </ul>
 
 <p><code>This</code>被证明是令人厌烦的面向对象风格的编程。</p>
 
 <pre class="brush: js">function Person() {
-  // Person() 构造函数定义 `this`作为它自己的实例.
+  // Person() 构造函数定义 `this`作为它自己的实例。
   this.age = 0;
 
   setInterval(function growUp() {
-    // 在非严格模式, growUp()函数定义 `this`作为全局对象,
-    // 与在 Person()构造函数中定义的 `this`并不相同.
+    // 在非严格模式，growUp() 函数定义 `this`作为全局对象，
+    // 与在 Person() 构造函数中定义的 `this`并不相同。
     this.age++;
   }, 1000);
 }
 
 var p = new Person();</pre>
 
-<p>在ECMAScript 3/5中，通过将<code>this</code>值分配给封闭的变量，可以解决<code>this</code>问题。</p>
+<p>在 ECMAScript 3/5 中，通过将<code>this</code>值分配给封闭的变量，可以解决<code>this</code>问题。</p>
 
 <pre class="brush: js">function Person() {
   var that = this;
   that.age = 0;
 
   setInterval(function growUp() {
-    // 回调引用的是`that`变量, 其值是预期的对象.
+    // 回调引用的是`that`变量，其值是预期的对象。
     that.age++;
   }, 1000);
 }</pre>
 
 <p>或者，可以创建<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">绑定函数</a>，以便将预先分配的<code>this</code>值传递到绑定的目标函数（上述示例中的<code>growUp()</code>函数）。</p>
 
-<p>箭头函数不会创建自己的<code>this,它只会从自己的作用域链的上一层继承this</code>。因此，在下面的代码中，传递给<code>setInterval</code>的函数内的<code>this</code>与封闭函数中的<code>this</code>值相同：</p>
+<p>箭头函数不会创建自己的<code>this，它只会从自己的作用域链的上一层继承 this</code>。因此，在下面的代码中，传递给<code>setInterval</code>的函数内的<code>this</code>与封闭函数中的<code>this</code>值相同：</p>
 
 <pre class="brush: js">function Person(){
   this.age = 0;
@@ -149,11 +149,11 @@ var p = new Person();</pre>
 <pre><code>var f = () =&gt; { 'use strict'; return this; };
 f() === window; // 或者 global</code></pre>
 
-<p>严格模式的其他规则依然不变.</p>
+<p>严格模式的其他规则依然不变。</p>
 
 <h4 id="通过_call_或_apply_调用">通过 call 或 apply 调用</h4>
 
-<p>由于 箭头函数没有自己的this指针，通过 <code>call()</code><em> 或</em> <code>apply()</code> 方法调用一个函数时，只能传递参数（不能绑定this---译者注），他们的第一个参数会被忽略。（这种现象对于bind方法同样成立---译者注）</p>
+<p>由于 箭头函数没有自己的 this 指针，通过 <code>call()</code><em> 或</em> <code>apply()</code> 方法调用一个函数时，只能传递参数（不能绑定 this---译者注），他们的第一个参数会被忽略。（这种现象对于 bind 方法同样成立 --- 译者注）</p>
 
 <pre class="brush: js">var adder = {
   base : 1,
@@ -178,7 +178,7 @@ console.log(adder.addThruCall(1)); // 仍然输出 2</pre>
 
 <h3 id="不绑定arguments">不绑定<code>arguments</code></h3>
 
-<p>箭头函数不绑定<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">Arguments 对象</a>。因此，在本示例中，<code>arguments</code>只是引用了封闭作用域内的arguments：</p>
+<p>箭头函数不绑定<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">Arguments 对象</a>。因此，在本示例中，<code>arguments</code>只是引用了封闭作用域内的 arguments：</p>
 
 <pre class="brush: js">var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];
@@ -186,7 +186,7 @@ var arr = () =&gt; arguments[0];
 arr(); // 1
 
 function foo(n) {
-  var f = () =&gt; arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象. arguments[0] 是 n,即传给foo函数的第一个参数
+  var f = () =&gt; arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象. arguments[0] 是 n，即传给 foo 函数的第一个参数
   return f();
 }
 
@@ -230,7 +230,7 @@ obj.c();
 // 10, Object {...}
 </pre>
 
-<p>箭头函数没有定义this绑定。另一个涉及{{jsxref("Object.defineProperty()")}}的示例：</p>
+<p>箭头函数没有定义 this 绑定。另一个涉及{{jsxref("Object.defineProperty()")}}的示例：</p>
 
 <pre class="brush: js">'use strict';
 var obj = {
@@ -273,7 +273,7 @@ console.log(Foo.prototype); // undefined</pre>
 <p>在一个简写体中，只需要一个表达式，并附加一个隐式的返回值。在块体中，必须使用明确的<code>return</code>语句。</p>
 
 <pre class="brush: js">var func = x =&gt; x * x;
-// 简写函数 省略return
+// 简写函数 省略 return
 
 var func = (x, y) =&gt; { return x + y; };
 //常规编写 明确的返回值</pre>
@@ -343,7 +343,7 @@ let empty = () =&gt; {};
 
 (() =&gt; 'foobar')();
 // Returns "foobar"
-// (这是一个立即执行函数表达式,可参阅 'IIFE'术语表)
+// (这是一个立即执行函数表达式，可参阅 'IIFE'术语表)
 
 
 var simple = a =&gt; a &gt; 15 ? 15 : a;
@@ -365,7 +365,7 @@ var even = arr.filter(v =&gt; v % 2 == 0);
 var double = arr.map(v =&gt; v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
-// 更简明的promise链
+// 更简明的 promise 链
 promise.then(a =&gt; {
   // ...
 }).then(b =&gt; {
@@ -396,19 +396,19 @@ let max = (a, b) =&gt; a &gt; b ? a : b;</pre>
 <pre class="brush: js">// 常规写法
 var greeting = () =&gt; {let now = new Date(); return ("Good" + ((now.getHours() &gt; 17) ? " evening." : " day."));}
 greeting();          //"Good day."
-console.log(now);    // ReferenceError: now is not defined 标准的let作用域
+console.log(now);    // ReferenceError: now is not defined 标准的 let 作用域
 
 // 参数括号内定义的变量是局部变量（默认参数）
 var greeting = (now=new Date()) =&gt; "Good" + (now.getHours() &gt; 17 ? " evening." : " day.");
 greeting();          //"Good day."
 console.log(now);    // ReferenceError: now is not defined
 
-// 对比：函数体内{}不使用var定义的变量是全局变量
+// 对比：函数体内{}不使用 var 定义的变量是全局变量
 var greeting = () =&gt; {now = new Date(); return ("Good" + ((now.getHours() &gt; 17) ? " evening." : " day."));}
 greeting();           //"Good day."
 console.log(now);     // Fri Dec 22 2017 10:01:00 GMT+0800 (中国标准时间)
 
-// 对比：函数体内{} 用var定义的变量是局部变量
+// 对比：函数体内{} 用 var 定义的变量是局部变量
 var greeting = () =&gt; {var now = new Date(); return ("Good" + ((now.getHours() &gt; 17) ? " evening." : " day."));}
 greeting(); //"Good day."
 console.log(now);    // ReferenceError: now is not defined

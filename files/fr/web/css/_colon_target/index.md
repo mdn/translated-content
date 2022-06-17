@@ -21,7 +21,9 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibl
 
 Les URI comportant des fragments d'identifiant peuvent être utilisées pour créer des liens vers un élément donné d'un document qu'on appellera l'élément cible (_target element_). Voici un exemple d'URI qui pointe vers une _ancre_ intitulée `section2` :
 
-    http://exemple.com/chemin/document.html#section2
+```
+http://exemple.com/chemin/document.html#section2
+```
 
 L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente :
 

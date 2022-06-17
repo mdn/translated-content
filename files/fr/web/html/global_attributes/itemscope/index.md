@@ -23,7 +23,9 @@ Un élément qui possède un attribut `itemscope` permet de définir un nouvel �
 
 ### Syntaxe formelle
 
-    itemscope
+```
+itemscope
+```
 
 ## Exemple
 

@@ -7,7 +7,7 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 <h2 id="Overview" name="Overview">概述</h2>
 
-<p>本文及其相关示例展示了如何使用内联的 <a href="/zh-CN/docs/SVG" title="SVG">SVG</a> 给一个表单提供背景图片，它展示了如何按照编写常规XHTML代码相同的方式来通过<a href="/zh-CN/docs/JavaScript" title="JavaScript">JavaScript</a> 和 <a href="/zh-CN/docs/CSS" title="CSS">CSS</a> 操作图片。注意，该示例仅在支持XHTML（非HTML）并集成了SVG的浏览器中正常工作。</p>
+<p>本文及其相关示例展示了如何使用内联的 <a href="/zh-CN/docs/SVG" title="SVG">SVG</a> 给一个表单提供背景图片，它展示了如何按照编写常规 XHTML 代码相同的方式来通过<a href="/zh-CN/docs/JavaScript" title="JavaScript">JavaScript</a> 和 <a href="/zh-CN/docs/CSS" title="CSS">CSS</a> 操作图片。注意，该示例仅在支持 XHTML（非 HTML）并集成了 SVG 的浏览器中正常工作。</p>
 
 <h2 id="Source" name="Source">源码</h2>
 
@@ -57,39 +57,39 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
 <h2 id="Discussion" name="Discussion">讨论</h2>
 
-<p>该页面主要是常规的XHTML、CSS和Javascript，唯一有趣的部分就是包含了&lt;svg&gt;元素。该元素及其子元素都被声明在SVG的命名空间内。它包含一个渐变和两个渐变填充的形状。该渐变颜色的终值颜色由CSS设置，当用户在表单中输入了错误信息，脚本会给&lt;body&gt;设置一个<code>invalid</code>属性，样式规则将渐变颜色的<code>end-stop</code>颜色设置为红色（另一个样式规则用于展示错误提示信息）</p>
+<p>该页面主要是常规的 XHTML、CSS 和 JavaScript，唯一有趣的部分就是包含了 &lt;svg&gt; 元素。该元素及其子元素都被声明在 SVG 的命名空间内。它包含一个渐变和两个渐变填充的形状。该渐变颜色的终值颜色由 CSS 设置，当用户在表单中输入了错误信息，脚本会给 &lt;body&gt; 设置一个 <code>invalid</code> 属性，样式规则将渐变颜色的<code>end-stop</code>颜色设置为红色（另一个样式规则用于展示错误提示信息）</p>
 
 <p>该方法有如下几点需要注意：</p>
 
 <ul>
  <li>我们单独举出了一个可能存在的网站构成部分——表单，并为其添加了吸引人的、交互性的背景</li>
- <li>该方法通过不展示背景图片的方式，向后兼容了不支持SVG的浏览器</li>
+ <li>该方法通过不展示背景图片的方式，向后兼容了不支持 SVG 的浏览器</li>
  <li>它非常简单且运行良好</li>
  <li>这个图片能够智能的自动适应其需要的大小</li>
- <li>我们可以给HTML和SVG都显式声明样式规则</li>
- <li>相同的脚本同时操作了HTML和SVG</li>
+ <li>我们可以给 HTML 和 SVG 都显式声明样式规则</li>
+ <li>相同的脚本同时操作了 HTML 和 SVG</li>
  <li>该文档完全符合标准</li>
 </ul>
 
 <div class="note">
-<p>如果需要给一个内嵌的SVG元素通过DOM方法添加一个有外链的图片，我们需要使用 <code>setAttributeNS</code> 来设置外链地址 <code>href</code>. 示例如下:</p>
+<p>如果需要给一个内嵌的 SVG 元素通过 DOM 方法添加一个有外链的图片，我们需要使用 <code>setAttributeNS</code> 来设置外链地址 <code>href</code>. 示例如下：</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> img <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElementNS</span><span class="punctuation token">(</span><span class="string token">"http://www.w3.org/2000/svg"</span><span class="punctuation token">,</span> <span class="string token">"image"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-img<span class="punctuation token">.</span><span class="function token">setAttributeNS</span><span class="punctuation token">(</span><span class="string token">"http://www.w3.org/1999/xlink"</span><span class="punctuation token">,</span> <span class="string token">"xlink:href"</span><span class="punctuation token">,</span> <span class="string token">"move.png"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+<pre class="brush: js line-numbers language-js"><code class="language-js">var img = document.createElementNS("http://www.w3.org/2000/svg", "image");
+img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");</code>
 </pre>
 </div>
 
 <h2 id="Details" name="Details">细节</h2>
 
-<p>viewBox属性创建了一个与SVG图片坐标系相关联的逻辑坐标系，通过这种方式我们的图片被放置到了一个100x100的视觉系中。</p>
+<p>viewBox 属性创建了一个与 SVG 图片坐标系相关联的逻辑坐标系，通过这种方式我们的图片被放置到了一个 100x100 的视觉系中。</p>
 
-<p><code>preserveAspectRatio属性指定了需要预设的数据，即指定了再有效大小内图片的居中、适配图片最大宽高，并裁切掉了多余部分。</code></p>
+<p><code>preserveAspectRatio 属性指定了需要预设的数据，即指定了再有效大小内图片的居中、适配图片最大宽高，并裁切掉了多余部分。</code></p>
 
-<p>样式属性指定了SVG在form背景中的位置。</p>
+<p>样式属性指定了 SVG 在 form 背景中的位置。</p>
 
 <h2 id="Related_Links" name="Related_Links">相关链接</h2>
 
 <ul>
  <li>Another SVG in XHTML example: <a href="/en-US/docs/SVG/Namespaces_Crash_Course/Example" title="SVG/Namespaces_Crash_Course/Example">A swarm of motes</a></li>
- <li><a href="http://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml">Working example</a> 可以同时工作在安装有Adobe SVG Viwer的Mozilla和IE浏览器中。 （对于同时工作在Firefox和IE浏览器中得内联SVG，需要为每个浏览器的服务文档设置不同的Cotent-type。因为当你基于一个代理服务器获取页面的时候，如果在第二个浏览器中加载该案例将会失败，因其会获取错误的Content-Type）</li>
+ <li><a href="http://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml">Working example</a> 可以同时工作在安装有 Adobe SVG Viwer 的 Mozilla 和 IE 浏览器中。 （对于同时工作在 Firefox 和 IE 浏览器中得内联 SVG，需要为每个浏览器的服务文档设置不同的 Cotent-type。因为当你基于一个代理服务器获取页面的时候，如果在第二个浏览器中加载该案例将会失败，因其会获取错误的 Content-Type）</li>
 </ul>

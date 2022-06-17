@@ -6,18 +6,18 @@ tags:
   - 服务器
 translation_of: Learn/Common_questions/set_up_a_local_testing_server
 ---
-<div class="summary">
+<div>
 <p>本文将会介绍如何在你的计算机上安装一个简单的本地测试服务器，以及它的基本用法。</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">前提:</th>
+   <th scope="row">前提：</th>
    <td>你需要知道<a href="https://developer.mozilla.org/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a>，以及<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/What_is_a_web_server">什么是网络服务器</a>。</td>
   </tr>
   <tr>
-   <th scope="row">目标:</th>
+   <th scope="row">目标：</th>
    <td>你将学习如何配置本地测试服务器。</td>
   </tr>
  </tbody>
@@ -31,39 +31,39 @@ translation_of: Learn/Common_questions/set_up_a_local_testing_server
 
 <h2 id="测试本地文件存在的问题">测试本地文件存在的问题</h2>
 
-<p>某些示例如果你将其作为本地文件打开的话，它将不会运行。 这可能是由于各种原因，最有可能是：</p>
+<p>某些示例如果你将其作为本地文件打开的话，它将不会运行。这可能是由于各种原因，最有可能是：</p>
 
 <ul>
- <li><strong>它们具有异步请求。</strong> 如果你只是从本地文件运行示例，一些浏览器（包括 Chrome）将不会运行异步请求（请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">从服务器获取数据</a>）。 这是因为安全限制（更多关于 Web 安全的信息，请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/First_steps/Website_security">站点安全</a>）。</li>
+ <li><strong>它们具有异步请求。</strong> 如果你只是从本地文件运行示例，一些浏览器（包括 Chrome）将不会运行异步请求（请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">从服务器获取数据</a>）。这是因为安全限制（更多关于 Web 安全的信息，请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/First_steps/Website_security">站点安全</a>）。</li>
  <li><strong>它们具有服务端代码。</strong> 服务器端语言（如 PHP 或 Python）需要一个特殊的服务器来解释代码并提供结果。</li>
 </ul>
 
 <h2 id="运行一个简单的本地_HTTP_服务器">运行一个简单的本地 HTTP 服务器</h2>
 
-<p><font><font>为了解决异步请求的问题，我们需要通过在本地Web服务器上运行这些示例来测试这些示例。</font><font>为我们的目的，最简单的方法之一就是使用Python的</font></font><code>SimpleHTTPServer</code><font><font>模块。</font></font></p>
+<p>为了解决异步请求的问题，我们需要通过在本地 Web 服务器上运行这些示例来测试这些示例。为我们的目的，最简单的方法之一就是使用 Python 的<code>SimpleHTTPServer</code>模块。</p>
 
 <p>我们需要：</p>
 
 <ol>
  <li>
-  <p><font>安装Python。</font><font>如果您正在使用Linux或Mac OS X，则应该已经在您的系统上可用。</font><font>如果您是Windows用户，则可以从Python主页获取安装程序，并按照说明进行安装：</font></p>
+  <p>安装 Python。如果您正在使用 Linux 或 Mac OS X，则应该已经在您的系统上可用。如果您是 Windows 用户，则可以从 Python 主页获取安装程序，并按照说明进行安装：</p>
 
   <ul>
-   <li><font><font>转到</font></font><a href="https://www.python.org/"><font><font>python.org</font></font></a></li>
-   <li><font><font>在“下载”部分下，单击Python“3.xxx”的链接。</font></font></li>
-   <li><font><font>在页面的底部，选择</font></font><em><font><font>Windows x86可执行文件安装程序</font></font></em><font><font>并下载它。</font></font></li>
-   <li><font><font>当它已经下载，运行它。</font></font></li>
-   <li><font><font>在第一个安装程序页面上，确保选中了“将Python 3.xxx添加到PATH”复选框。</font></font></li>
-   <li><font><font>单击</font></font><em><font><font>安装</font></font></em><font><font>，然后</font><font>在安装完成</font><font>后单击</font></font><em><font><font>关闭</font></font></em><font><font>。</font></font></li>
+   <li>转到<a href="https://www.python.org/">python.org</a></li>
+   <li>在“下载”部分下，单击 Python“3.xxx”的链接。</li>
+   <li>在页面的底部，选择<em>Windows x86 可执行文件安装程序</em>并下载它。</li>
+   <li>当它已经下载，运行它。</li>
+   <li>在第一个安装程序页面上，确保选中了“将 Python 3.xxx 添加到 PATH”复选框。</li>
+   <li>单击<em>安装</em>，然后在安装完成后单击<em>关闭</em>。</li>
   </ul>
  </li>
  <li>
-  <p><font>打开你的命令提示符（Windows）/终端（OS X / Linux）。</font><font>要检查Python是否安装，请输入以下命令：</font></p>
+  <p>打开你的命令提示符（Windows）/终端（OS X / Linux）。要检查 Python 是否安装，请输入以下命令：</p>
 
   <pre class="brush: bash">python -V</pre>
  </li>
  <li>
-  <p><font><font>下面应该给出你安装的版本号</font><font>，使用</font></font><code>cd</code><font><font>命令</font><font>导航到您的示例所在的目录</font><font>。</font></font></p>
+  <p>下面应该给出你安装的版本号，使用<code>cd</code>命令导航到您的示例所在的目录。</p>
 
   <pre class="brush: bash"># 输入你想要进入的目录，举例
 cd Desktop
@@ -73,26 +73,26 @@ cd ..</pre>
  <li>
   <p>输入命令在该目录中启动服务器：</p>
 
-  <pre><font><font>＃如果上面返回的Python版本是3.X </font></font><font><font>
-python -m http.server </font></font><font><font>
-＃如果上面返回的Python版本是2.X </font></font><font><font>
-python -m </font></font><code>SimpleHTTPServer</code></pre>
+  <pre>＃如果上面返回的 Python 版本是 3.X 
+python -m http.server 
+＃如果上面返回的 Python 版本是 2.X 
+python -m <code>SimpleHTTPServer</code></pre>
  </li>
  <li>
-  <p><font><font>默认情况下，这将在本地Web服务器上的端口8000上运行目录的内容。您可以通过转到</font></font><code>localhost:8000</code><font><font>Web浏览器中</font><font>的URL来访问此服务器</font><font>。</font><font>在这里你会看到列出的目录的内容 - 点击你想运行的HTML文件。</font></font></p>
+  <p>默认情况下，这将在本地 Web 服务器上的端口 8000 上运行目录的内容。您可以通过转到<code>localhost:8000</code>Web 浏览器中的 URL 来访问此服务器。在这里你会看到列出的目录的内容 - 点击你想运行的 HTML 文件。</p>
  </li>
 </ol>
 
 <div class="note">
-<p><strong><font><font>注意</font></font></strong><font><font>：如果您已经在端口8000上运行了某些东西，则可以通过运行server命令，然后选择另一个端口号（例如</font></font><code>python -m http.server 7800</code><font><font> （Python 3.x）或</font></font><code>python -m SimpleHTTPServer 7800</code><font><font> （Python 2.x））</font><font>来选择另一个端口</font><font>。</font><font>然后您可以访问您的内容</font></font><code>localhost:7800</code><font><font>。</font></font></p>
+<p><strong>注意</strong>：如果您已经在端口 8000 上运行了某些东西，则可以通过运行 server 命令，然后选择另一个端口号（例如<code>python -m http.server 7800</code> （Python 3.x）或<code>python -m SimpleHTTPServer 7800</code> （Python 2.x））来选择另一个端口。然后您可以访问您的内容<code>localhost:7800</code>。</p>
 </div>
 
-<h2 id="在本地运行服务器端语言"><font><font>在本地运行服务器端语言</font></font></h2>
+<h2 id="在本地运行服务器端语言">在本地运行服务器端语言</h2>
 
-<p><font><font>Python的</font></font><code>SimpleHTTPServer</code><font><font>模块是有用的，但它不知道如何运行用PHP或Python等语言编写的代码。</font><font>为了处理这个问题，你需要更多的东西 - 正是你需要的东西取决于你正在运行的服务器端语言。</font><font>这里有几个例子：</font></font></p>
+<p>Python 的<code>SimpleHTTPServer</code>模块是有用的，但它不知道如何运行用 PHP 或 Python 等语言编写的代码。为了处理这个问题，你需要更多的东西 - 正是你需要的东西取决于你正在运行的服务器端语言。这里有几个例子：</p>
 
 <ul>
- <li><font><font>要运行Python服务器端代码，您需要使用 Python 网络框架。</font><font>您可以通过阅读</font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django"><font><font>Django Web Framework（Python）</font></font></a><font><font>来了解如何使用Django框架</font><font>。</font></font><a href="http://flask.pocoo.org/">Flask</a><font><font>也是一个不错的选择（稍微轻量一点）。</font><font>要运行Flask，你需要先</font></font><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3"><font><font>安装Python / PIP</font></font></a><font><font>，然后使用</font></font><code>pip3 install flask </code>来安装Flask<font><font>。</font><font>此时，您应该能够运行Python Flask示例</font></font><code>python3 python-example.py</code><font><font>，然后在</font></font><font><font>您的浏览器中打开 <code>localhost:5000</code> 查看。</font></font></li>
- <li><font><font>要运行Node.js（JavaScript）服务器端代码，您可以直接使用Node或选择构建于其上的框架。</font><font>Express是一个不错的选择 - 请参阅</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs"><font><font>Express Web Framework（Node.js / JavaScript）</font></font></a><font><font>。</font></font></li>
- <li><font><font>要运行PHP服务器端代码，您需要一个可以解释PHP的服务器设置。</font><font>本地PHP测试的好选择是</font></font><a href="https://www.mamp.info/en/downloads/"><font><font>MAMP</font></font></a><font><font>（Mac和Windows），  </font></font><a href="http://ampps.com/download"><font><font>AMPPS</font></font></a><font><font>（Mac，Windows，Linux）和</font></font><a href="https://www.linux.com/learn/easy-lamp-server-installation"><font><font>LAMP</font></font></a><font><font>（Linux，Apache，MySQL和PHP / Python / Perl）。</font><font>这些是完整的包，创建本地设置，允许您运行Apache服务器，PHP和MySQL数据库。</font></font></li>
+ <li>要运行 Python 服务器端代码，您需要使用 Python 网络框架。您可以通过阅读<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django Web Framework（Python）</a>来了解如何使用 Django 框架。<a href="http://flask.pocoo.org/">Flask</a>也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">安装 Python / PIP</a>，然后使用<code>pip3 install flask </code>来安装 Flask。此时，您应该能够运行 Python Flask 示例<code>python3 python-example.py</code>，然后在您的浏览器中打开 <code>localhost:5000</code> 查看。</li>
+ <li>要运行 Node.js（JavaScript）服务器端代码，您可以直接使用 Node 或选择构建于其上的框架。Express 是一个不错的选择 - 请参阅<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs">Express Web Framework（Node.js / JavaScript）</a>。</li>
+ <li>要运行 PHP 服务器端代码，您需要一个可以解释 PHP 的服务器设置。本地 PHP 测试的好选择是<a href="https://www.mamp.info/en/downloads/">MAMP</a>（Mac 和 Windows），  <a href="http://ampps.com/download">AMPPS</a>（Mac，Windows，Linux）和<a href="https://www.linux.com/learn/easy-lamp-server-installation">LAMP</a>（Linux，Apache，MySQL 和 PHP / Python / Perl）。这些是完整的包，创建本地设置，允许您运行 Apache 服务器，PHP 和 MySQL 数据库。</li>
 </ul>

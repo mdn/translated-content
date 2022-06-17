@@ -200,7 +200,7 @@ button.restart {
 
 <p>{{EmbedLiveSample("animation", "100%", 260, "", "", "example-outcome-frame")}}</p>
 
-<p><a href="/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable">哪些属性是可动画的？</a>值得注意的是，此描述也适用于<a href="/en-US/docs/CSS/CSS_transitions">CSS变换</a>。</p>
+<p><a href="/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable">哪些属性是可动画的？</a>值得注意的是，此描述也适用于<a href="/en-US/docs/CSS/CSS_transitions">CSS 变换</a>。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -211,7 +211,7 @@ button.restart {
 <p>每组动画规定的属性如下：</p>
 
 <ul>
- <li>以下属性出现0次或1次：
+ <li>以下属性出现 0 次或 1 次：
   <ul>
    <li>{{cssxref("&lt;single-transition-timing-function&gt;")}}</li>
    <li>{{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}</li>
@@ -221,10 +221,10 @@ button.restart {
   </ul>
  </li>
  <li>animation 的 name 值可能是：none，{{cssxref("&lt;custom-ident&gt;")}}， {{cssxref("&lt;string&gt;")}}</li>
- <li>{{cssxref("&lt;time&gt;")}} 可能会出现0、1 或 2 次</li>
+ <li>{{cssxref("&lt;time&gt;")}} 可能会出现 0、1 或 2 次</li>
 </ul>
 
-<p>每个动画定义中的属性值的顺序很重要：可以被解析为 {{cssxref("&lt;time&gt;")}} 的第一个值被分配给{{cssxref("animation-duration")}}， 第二个分配给 {{cssxref("animation-delay")}}。</p>
+<p>每个动画定义中的属性值的顺序很重要：可以被解析为 {{cssxref("&lt;time&gt;")}} 的第一个值被分配给{{cssxref("animation-duration")}}，第二个分配给 {{cssxref("animation-delay")}}。</p>
 
 <p>每个动画定义中的值的顺序，对于区分 {{cssxref("animation-name")}} 值与其他关键字也很重要。解析时，对于除 {{cssxref("animation-name")}} 之外的有效的关键字，必须被前面的简写中没有找到值的属性所接受。此外，在序列化时，{{cssxref("animation-name")}} 与以及其他属性值做区分等情况下，必须输出其他属性的默认值。</p>
 
@@ -247,52 +247,52 @@ button.restart {
 
 <h2 id="范例">范例</h2>
 
-<h3 id="Cylon_Eye" name="Cylon_Eye"><strong>赛隆人之眼(赛隆人</strong>是一个虚构的生化人种族,出自科幻电视系列剧星际大争霸系列<strong>)</strong></h3>
+<h3 id="Cylon_Eye" name="Cylon_Eye"><strong>赛隆人之眼 (赛隆人</strong>是一个虚构的生化人种族，出自科幻电视系列剧星际大争霸系列<strong>)</strong></h3>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>view_port<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>polling_message<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers language-html"><code class="language-html">&lt;div class="view_port"&gt;
+  &lt;div class="polling_message"&gt;
     Listening for dispatches
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>cylon_eye<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+  &lt;/div&gt;
+  &lt;div class="cylon_eye"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.polling_message</span></span> <span class="punctuation token">{</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> white<span class="punctuation token">;</span>
-  <span class="property token">float</span><span class="punctuation token">:</span> left<span class="punctuation token">;</span>
-  <span class="property token">margin-right</span><span class="punctuation token">:</span> <span class="number token">2</span><span class="token unit">%</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css line-numbers language-css"><code class="language-css">.polling_message {
+  color: white;
+  float: left;
+  margin-right: 2%;
+}
 
-<span class="selector token"><span class="class token">.view_port</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> black<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">25</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span>
-  <span class="property token">overflow</span><span class="punctuation token">:</span> hidden<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.view_port {
+  background-color: black;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+}
 
-<span class="selector token"><span class="class token">.cylon_eye</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> red<span class="punctuation token">;</span>
-  <span class="property token">background-image</span><span class="punctuation token">:</span> <span class="function token">linear-gradient</span><span class="punctuation token">(</span>to right<span class="punctuation token">,</span>
-      <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">.9</span><span class="punctuation token">)</span> <span class="number token">25</span><span class="token unit">%</span><span class="punctuation token">,</span>
-      <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">.1</span><span class="punctuation token">)</span> <span class="number token">50</span><span class="token unit">%</span><span class="punctuation token">,</span>
-      <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">.9</span><span class="punctuation token">)</span> <span class="number token">75</span><span class="token unit">%</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> white<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">20</span><span class="token unit">%</span><span class="punctuation token">;</span>
+.cylon_eye {
+  background-color: red;
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, .9) 25%,
+      rgba(0, 0, 0, .1) 50%,
+      rgba(0, 0, 0, .9) 75%);
+  color: white;
+  height: 100%;
+  width: 20%;
 
-  <span class="property token">-webkit-animation</span><span class="punctuation token">:</span> <span class="number token">4</span><span class="token unit">s</span> linear <span class="number token">0</span><span class="token unit">s</span> infinite alternate move_eye<span class="punctuation token">;</span>
-          <span class="property token">animation</span><span class="punctuation token">:</span> <span class="number token">4</span><span class="token unit">s</span> linear <span class="number token">0</span><span class="token unit">s</span> infinite alternate move_eye<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
+}
 
-<span class="atrule token"><span class="rule token">@-webkit-keyframes</span> move_eye</span> <span class="punctuation token">{</span> <span class="selector token">from</span> <span class="punctuation token">{</span> <span class="property token">margin-left</span><span class="punctuation token">:</span> <span class="number token">-20</span><span class="token unit">%</span><span class="punctuation token">;</span> <span class="punctuation token">}</span> <span class="selector token">to</span> <span class="punctuation token">{</span> <span class="property token">margin-left</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>  <span class="punctuation token">}</span>
-        <span class="atrule token"><span class="rule token">@keyframes</span> move_eye</span> <span class="punctuation token">{</span> <span class="selector token">from</span> <span class="punctuation token">{</span> <span class="property token">margin-left</span><span class="punctuation token">:</span> <span class="number token">-20</span><span class="token unit">%</span><span class="punctuation token">;</span> <span class="punctuation token">}</span> <span class="selector token">to</span> <span class="punctuation token">{</span> <span class="property token">margin-left</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">%</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>  <span class="punctuation token">}</span></code></pre>
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }</code></pre>
 
 <p>{{EmbedLiveSample('Cylon_Eye')}}</p>
 
-<p>更多示例请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples">使用CSS动画</a>。</p>
+<p>更多示例请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples">使用 CSS 动画</a>。</p>
 
 <h2 id="潜在的问题">潜在的问题</h2>
 
-<p>眨眼和闪烁的动画对于有认知问题的人来说是有问题的，比如注意力缺陷多动障碍(ADHD)。此外，某些动画效果可以触发前庭神经紊乱、癫痫、偏头痛和暗点敏感性。</p>
+<p>眨眼和闪烁的动画对于有认知问题的人来说是有问题的，比如注意力缺陷多动障碍 (ADHD)。此外，某些动画效果可以触发前庭神经紊乱、癫痫、偏头痛和暗点敏感性。</p>
 
 <p>考虑提供一种暂停或禁用动画的机制，以及使用 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">Reduced Motion Media Query</a>（简约运动媒体查询），为那些表示不喜欢动画的用户创建一个良好的体验。</p>
 
@@ -323,16 +323,16 @@ button.restart {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility"><span style="white-space: nowrap;">浏览器兼容性</span></h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("css.properties.animation")}}</p>
 
 <h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
 
 <ul>
- <li>Gecko有一个bug，当你在屏幕上对屏幕外的元素使用带有指定延时的动画时，Gecko不会在某些平台上重绘，例如Windows {{bug(1383239)}}。这个问题已经在Firefox新的并行CSS引擎(也称为<a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> 或者 <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>，计划在Firefox 57中发布)中得到了解决。</li>
- <li>另外一个Gecko bug，当我们激活&lt;details&gt;元素的动画效果时，即使通过 open 属性也不能将其展示({{bug(1382124)}})。Quantum CSS会将其修复了。</li>
- <li>另一个bug是，由于动画使用的是em单位，所以即使我们改变父元素的font-size属性也不会影响该动画元素({{bug(1254424)}})，而它们原本应该受到影响。Quantum CSS会将其修复了。</li>
+ <li>Gecko 有一个 bug，当你在屏幕上对屏幕外的元素使用带有指定延时的动画时，Gecko 不会在某些平台上重绘，例如 Windows {{bug(1383239)}}。这个问题已经在 Firefox 新的并行 CSS 引擎 (也称为<a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> 或者 <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>，计划在 Firefox 57 中发布) 中得到了解决。</li>
+ <li>另外一个 Gecko bug，当我们激活&lt;details&gt;元素的动画效果时，即使通过 open 属性也不能将其展示 ({{bug(1382124)}})。Quantum CSS 会将其修复了。</li>
+ <li>另一个 bug 是，由于动画使用的是 em 单位，所以即使我们改变父元素的 font-size 属性也不会影响该动画元素 ({{bug(1254424)}})，而它们原本应该受到影响。Quantum CSS 会将其修复了。</li>
 </ul>
 
 <h2 id="更多">更多</h2>

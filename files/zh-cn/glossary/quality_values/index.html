@@ -3,7 +3,7 @@ title: Quality values
 slug: Glossary/Quality_values
 translation_of: Glossary/Quality_values
 ---
-<p><ruby>质量价值<rt>Quality values</rt></ruby>亦称作q值，其与q因子以逗号分隔的方式来描述值的优先级顺序，是HTTP消息头以及HTML中的特殊语法。值的重要性以一种后缀表示：<code>';q='</code>。该后缀紧接<code>0</code>到<code>1</code>间的值(值可达小数点后三位)，最高值表明最高优先级。无此后缀时，默认值为<code>1</code>。</p>
+<p><ruby>质量价值<rt>Quality values</rt></ruby>亦称作 q 值，其与 q 因子以逗号分隔的方式来描述值的优先级顺序，是 HTTP 消息头以及 HTML 中的特殊语法。值的重要性以一种后缀表示：<code>';q='</code>。该后缀紧接<code>0</code>到<code>1</code>间的值 (值可达小数点后三位)，最高值表明最高优先级。无此后缀时，默认值为<code>1</code>。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -13,7 +13,7 @@ translation_of: Glossary/Quality_values
 
 <p>表明优先级先后顺序：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Value 值</th>
@@ -36,12 +36,12 @@ translation_of: Glossary/Quality_values
  </tbody>
 </table>
 
-<p>如果前面这两个值未定义优先级，值的顺序并不重要。然而，q值相同时，值越具体，其优先级越高。</p>
+<p>如果前面这两个值未定义优先级，值的顺序并不重要。然而，q 值相同时，值越具体，其优先级越高。</p>
 
 <pre class="notranslate"><code>text/html;q=0.8,text/*;q=0.8,*/*;q=0.8</code>
 </pre>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Value 值</th>
@@ -62,16 +62,16 @@ translation_of: Glossary/Quality_values
  </thead>
 </table>
 
-<p>像Accept消息头的语法可以有额外的标记，比如<code>text/html;level=1</code>。这使值更具体，不过该用法不常见。</p>
+<p>像 Accept 消息头的语法可以有额外的标记，比如<code>text/html;level=1</code>。这使值更具体，不过该用法不常见。</p>
 
 <h2 id="浏览器信息">浏览器信息</h2>
 
 <h3 id="火狐">火狐</h3>
 
-<p>从Firefox 18开始，质量因子的值可达小数点后二位（之前的版本只能达小数点后一位）。({{bug(672448)}})</p>
+<p>从 Firefox 18 开始，质量因子的值可达小数点后二位（之前的版本只能达小数点后一位）。({{bug(672448)}})</p>
 
 <h2 id="更多">更多</h2>
 
 <ul>
- <li>使用q值的HTTP消息头：{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept-Encoding")}}和{{HTTPHeader("TE")}}。</li>
+ <li>使用 q 值的 HTTP 消息头：{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept-Encoding")}}和{{HTTPHeader("TE")}}。</li>
 </ul>

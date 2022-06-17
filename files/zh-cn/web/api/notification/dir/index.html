@@ -5,7 +5,7 @@ translation_of: Web/API/Notification/dir
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p>{{domxref("Notification")}} 的`dir`是一个只读属性，它表示Notification中显示的文本方向 会{{domxref("Notification.Notification","Notification()")}} 构造函数里制定的`dir` 属性的值来设定。</p>
+<p>{{domxref("Notification")}} 的`dir`是一个只读属性，它表示 Notification 中显示的文本方向 会{{domxref("Notification.Notification","Notification()")}} 构造函数里制定的`dir` 属性的值来设定。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/Notification/dir
 
 <h3 id="Return_Value" name="Return_Value">值</h3>
 
-<p>一个表示文本方向的{{domxref("DOMString")}}变量。 可能的取值为:</p>
+<p>一个表示文本方向的{{domxref("DOMString")}}变量。 可能的取值为：</p>
 
 <ul>
  <li><code>auto</code>: 继承浏览器的语言设置里制定的方向 (默认)</li>
@@ -25,7 +25,7 @@ translation_of: Web/API/Notification/dir
 </ul>
 
 <div class="note">
-<p><strong>提示</strong>:似乎大多数浏览器都忽略了明确的LTR 和RTL 设置，要按照与浏览器的通用设置来操作。</p>
+<p><strong>提示</strong>:似乎大多数浏览器都忽略了明确的 LTR 和 RTL 设置，要按照与浏览器的通用设置来操作。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -33,7 +33,7 @@ translation_of: Web/API/Notification/dir
 <p>The following snippet fires a notification; a simple <code>options</code> object is created, then the notification is fired using the <code>Notification()</code> constructor.</p>
 
 <pre class="brush: js">var options = {
-  body: '你去过新疆吗?',
+  body: '你去过新疆吗？',
   dir: 'rtl'
 }
 

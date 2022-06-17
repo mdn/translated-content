@@ -149,7 +149,7 @@ original_slug: MDN/Guidelines/Style_guide
 
 <p>Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
 
-<p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page, and linking them together using the following macros: {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, and {{TemplateLink("PreviousNext")}}.</p>
+<p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page, and linking them together using the following macros: <code>\{{Next}}</code>, <code>\{{Previous}}</code>, and <code>\{{PreviousNext}}</code>.</p>
 
 <h4 id="Heading_dos_and_donts">Heading dos and donts</h4>
 
@@ -297,11 +297,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <dl>
  <dt>Element names</dt>
- <dd>Use the {{TemplateLink("HTMLElement")}} macro, which creates a link to the page for that element. For example, writing \{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, <strong>enclose the name in angle brackets</strong> and use the "Inline Code" style (e.g., <code>&lt;title&gt;</code>).</dd>
+ <dd>Use the <code>\{{HTMLElement}}</code> macro, which creates a link to the page for that element. For example, writing \{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, <strong>enclose the name in angle brackets</strong> and use the "Inline Code" style (e.g., <code>&lt;title&gt;</code>).</dd>
  <dt>Attribute names</dt>
  <dd>Use "Inline Code" style to put attribute names in <code>code font</code>. Additionally, put them in <strong><code>bold face</code></strong> when the attribute is mentioned in association with an explanation of what it does, or the first time it's used in the article.</dd>
  <dt>Attribute definitions</dt>
- <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages easily by simply using the {{TemplateLink("htmlattrxref")}} macro (e.g., \{{htmlattrxref("attr","element")}}) to reference attribute definitions.</dd>
+ <dd>Use the <code>\{{htmlattrdef}}</code> macro (e.g., \{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages easily by simply using the <code>\{{htmlattrxref}}</code> macro (e.g., \{{htmlattrxref("attr","element")}}) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
  <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.</dd>
  <dd>For example: "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
@@ -614,7 +614,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <p>Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "&lt;&gt;", and should be in the {{HTMLElement("code")}} style.</p>
 
-<p>When you reference a given element for the first time in a section, you should use the {{TemplateLink("HTMLElement")}} macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).</p>
+<p>When you reference a given element for the first time in a section, you should use the <code>\{{HTMLElement}}</code> macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).</p>
 
 <ul>
  <li><strong>Correct</strong>: the {{HTMLElement("span")}} element</li>
@@ -722,7 +722,6 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dd>
  <p>Use for content that is technically superseded, but still valid in context. For example, this might be an HTML element that is obsolete in HTML5, but still valid in HTML 4.01.</p>
 
- <p>You can also use the {{TemplateLink("obsolete_header")}} macro to put a prominent banner on the topic.</p>
  </dd>
  <dt>Archive</dt>
  <dd>
