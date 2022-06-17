@@ -15,7 +15,7 @@ La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{domxr
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
     json = url.toJSON();
 

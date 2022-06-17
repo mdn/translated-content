@@ -9,8 +9,10 @@ translation_of: Web/API/StyleSheet/media
 
 ## Syntaxe
 
-    Medium = stylesheet.media
-    Stylesheet.media = medium
+```js
+Medium = stylesheet.media
+Stylesheet.media = medium
+```
 
 ## Paramètres
 

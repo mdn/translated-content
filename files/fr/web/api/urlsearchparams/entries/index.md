@@ -9,7 +9,7 @@ La méthode **`URLSearchParams.entries()`** retourne un itérateur( {{jsxref("It
 
 > **Note :** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-## Syntax
+## Syntaxe
 
     searchParams.entries();
 

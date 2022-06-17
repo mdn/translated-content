@@ -9,7 +9,9 @@ Type spécifie la langue de la feuille de style pour cette feuille de style.
 
 ## Syntaxe
 
-    String = stylesheet.type
+```js
+String = stylesheet.type
+```
 
 ## Exemple
 

@@ -9,7 +9,9 @@ translation_of: Web/API/StyleSheet/ownerNode
 
 ## Syntaxe
 
-    ObjRef = stylesheet.ownerNode
+```js
+ObjRef = stylesheet.ownerNode
+```
 
 ## Exemple
 
