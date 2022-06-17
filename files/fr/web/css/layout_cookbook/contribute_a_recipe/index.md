@@ -23,17 +23,17 @@ Si vous souhaitez contribuer en ajoutant une recette à celles présentées dans
 
 Une recette se décompose comme suit :
 
-1.  Un exemple interactif, stocké [sur le dépôt GitHub des exemples CSS](https://github.com/mdn/css-examples)
-2.  Une version téléchargeable de cet exemple, également stockée sur le dépôt des exemples CSS.
-3.  Une page MDN, rattachée à la section [Livre de recettes CSS](/fr/docs/Web/CSS/Layout_cookbook) qui contient :
+1. Un exemple interactif, stocké [sur le dépôt GitHub des exemples CSS](https://github.com/mdn/css-examples)
+2. Une version téléchargeable de cet exemple, également stockée sur le dépôt des exemples CSS.
+3. Une page MDN, rattachée à la section [Livre de recettes CSS](/fr/docs/Web/CSS/Layout_cookbook) qui contient :
 
-    1.  Les spécifications sommaires
-    2.  La recette
-    3.  Les choix effectués
-    4.  Les éventuelles méthodes alternatives (utiles pour l'amélioration progressive)
-    5.  Les points relatifs à l'accessibilité
-    6.  La compatibilité des navigateurs
-    7.  D'éventuelles ressources additionnelles
+    1. Les spécifications sommaires
+    2. La recette
+    3. Les choix effectués
+    4. Les éventuelles méthodes alternatives (utiles pour l'amélioration progressive)
+    5. Les points relatifs à l'accessibilité
+    6. La compatibilité des navigateurs
+    7. D'éventuelles ressources additionnelles
 
 ### 1. Construire le motif
 
@@ -63,9 +63,9 @@ Si vous avez créé un _fork_ du dépôt et que vous avez les fichiers CSS et Ja
 
 #### Quelques conseils
 
-1.  N'indentez pas le code CSS et HTML à l'intérieur des `textarea` par rapport à l'ensemble du document HTML mais reprenez l'indentation depuis la première colonne (voir [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) par exemple).
-2.  Si vous avez besoins d'images, placez les dans le dossier avec les exemples. Vous pouvez également utiliser une des images déjà présente.
-3.  Vous pouvez ajuster la hauteur des `textarea` en modifiant la hauteur dans les styles _inline_/en incise.
+1. N'indentez pas le code CSS et HTML à l'intérieur des `textarea` par rapport à l'ensemble du document HTML mais reprenez l'indentation depuis la première colonne (voir [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) par exemple).
+2. Si vous avez besoins d'images, placez les dans le dossier avec les exemples. Vous pouvez également utiliser une des images déjà présente.
+3. Vous pouvez ajuster la hauteur des `textarea` en modifiant la hauteur dans les styles _inline_/en incise.
 
 ### 3. Créer une version téléchargeable
 

@@ -21,7 +21,6 @@ Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, l
 
 La fonction `scale()` s'utilise avec une ou deux valeurs qui indiquent l'échelle à utiliser selon chaque direction.
 
-
 ```css
 scale(sx)
 
