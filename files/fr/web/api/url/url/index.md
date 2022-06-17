@@ -19,7 +19,9 @@ Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {
 
 ## Syntaxe
 
-    url = new URL(url, [base])
+```
+url = new URL(url, [base])
+```
 
 ### Paramètres
 

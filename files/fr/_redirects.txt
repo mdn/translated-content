@@ -3830,7 +3830,7 @@
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
 /fr/docs/Web/API/Node/localName	/fr/docs/Web/API/Element/localName
 /fr/docs/Web/API/Node/namespaceURI	/fr/docs/Web/API/Element/namespaceURI
-/fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/fr/docs/Web/API/Node/nodePrincipal	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Node/prefix	/fr/docs/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
@@ -6104,6 +6104,7 @@
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3	/fr/docs/Web/API/Document_Object_Model
+/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556	/fr/docs/Web/API/Node
 /fr/docs/conflicting/Web/API/WebRTC_API_d8621144cbc61520339c3b10c61731f0	/fr/docs/Web/API/WebRTC_API
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor

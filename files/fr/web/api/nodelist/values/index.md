@@ -46,9 +46,11 @@ for(var value of list.values()) {
 
 Le résultat est :
 
-    <p>
-    #text "hey"
-    <span>
+```
+<p>
+#text "hey"
+<span>
+```
 
 ## Spécifications
 

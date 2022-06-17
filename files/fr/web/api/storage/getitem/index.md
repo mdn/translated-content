@@ -13,7 +13,9 @@ La méthode `getItem()` de l'interface {{domxref("Storage")}} renvoie la valeur 
 
 ## Syntaxe
 
-    var aValue = storage.getItem(keyName);
+```js
+var aValue = storage.getItem(keyName);
+```
 
 ### Paramètre
 

@@ -18,7 +18,9 @@ La propriété **`HTMLMediaElement.volume`** définit le volume auquel le média
 
 ## Syntaxe
 
-    var volume = video.volume; //1
+```js
+var volume = video.volume; //1
+```
 
 ### Valeur
 
@@ -26,9 +28,11 @@ Une valeur de type double (nombre à virgule) inclut entre 0 et 1, si elle vaut 
 
 ## Exemple
 
-    var obj = document.createElement('audio');
-    console.log(obj.volume); // 1
-    obj.volume = 0.75;
+```js
+var obj = document.createElement('audio');
+console.log(obj.volume); // 1
+obj.volume = 0.75;
+```
 
 ## Specifications
 

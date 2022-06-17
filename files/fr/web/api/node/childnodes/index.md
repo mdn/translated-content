@@ -39,12 +39,14 @@ if (parg.hasChildNodes()) {
 
 ### Supprimer tous les enfants d'un nom
 
-    // Voici une manière de supprimer tous les enfants d'un nœud
-    // (boite est une référence à un élément ayant des enfants)
-    while( boite.firstChild) {
-        // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-        boite.removeChild( boite.firstChild);
-    }
+```js
+// Voici une manière de supprimer tous les enfants d'un nœud
+// (boite est une référence à un élément ayant des enfants)
+while( boite.firstChild) {
+  // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
+  boite.removeChild( boite.firstChild);
+}
+```
 
 ## Notes
 
