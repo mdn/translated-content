@@ -143,7 +143,7 @@ function* name([param[, param[, ... param]]]) {
   - : 関数に渡される引数の名前です。
 - `statements`
   - : 関数の本体を構成する文。
- 
+
 ### ジェネレーター関数式 (`function*` 式)
 
 ジェネレーター関数式は、ジェネレーター関数宣言と似ており、同じ構文を持っています （詳細は {{jsxref('Operators/function*', 'function* 式')}} を参照してください）。

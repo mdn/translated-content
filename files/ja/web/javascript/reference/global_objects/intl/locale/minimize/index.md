@@ -17,7 +17,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
 
-
 ## 構文
 
 ```js

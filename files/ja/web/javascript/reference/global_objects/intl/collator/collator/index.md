@@ -35,7 +35,7 @@ new Intl.Collator(locales, options)
 
   - : 任意。 BCP47 言語タグの文字列またはその配列。 `locales` 引数の一般的な形式や解釈については {{jsxref("Global_Objects/Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 
-  次の Unicode 拡張キーが使用可能です。
+    次の Unicode 拡張キーが使用可能です。
 
     > **Note:** これらのキーは通常、 `options` でも設定することができます（下記でリストアップします）。両方が設定されている場合は、 `options` のプロパティが優先されます。
 
