@@ -55,7 +55,7 @@ const y = -x;
 
 - [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
 - [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division) 
+- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
 - [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
 - [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
 - [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
