@@ -8,7 +8,7 @@ tags:
   - 禁止
 translation_of: Glossary/Forbidden_response_header_name
 ---
-*禁止修改的响应消息头*是一个无法通过编程方式修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)（`Set-Cookie`）。
+*禁止修改的响应标头*是一个无法通过编程方式修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)（`Set-Cookie`）。
 
 ## 参见
 
