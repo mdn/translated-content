@@ -128,9 +128,9 @@ Voyons maintenant comment les valeurs universelles fonctionnent sur un exemple :
 
 Par exemple :
 
-1.  Le deuxième item de la liste est dans la classe `my-class-1`. Cela définit la couleur de l'élément `<a>` qu'il contient à `inherit`. Si vous supprimez cette règle, quelle est la couleur du lien ?
-2.  Comprenez vous pourquoi les troisième et quatrième liens sont de la couleur qu'ils sont ? Dans la négative, relisez la description des valeurs spéciales ci-dessus.
-3.  Quels liens changeront de couleur si on redéfinit la couleur de l'élément `<a>` — par exemple `a { color: red; }`&nbsp;?
+1. Le deuxième item de la liste est dans la classe `my-class-1`. Cela définit la couleur de l'élément `<a>` qu'il contient à `inherit`. Si vous supprimez cette règle, quelle est la couleur du lien ?
+2. Comprenez vous pourquoi les troisième et quatrième liens sont de la couleur qu'ils sont ? Dans la négative, relisez la description des valeurs spéciales ci-dessus.
+3. Quels liens changeront de couleur si on redéfinit la couleur de l'élément `<a>` — par exemple `a { color: red; }`&nbsp;?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
 
@@ -150,9 +150,9 @@ Nous comprenons maintenant pourquoi un paragraphe imbriqué profondément dans l
 
 Il y a trois facteurs à prendre en compte, listés ci-dessous par ordre décroissant d'importance. Les premiers critères prennent le dessus sur ceux qui viennent après :
 
-1.  **Importance**
-2.  **Spécificité**
-3.  **Ordre d'apparition dans le source**
+1. **Importance**
+2. **Spécificité**
+3. **Ordre d'apparition dans le source**
 
 Passons les en revue en partant de la fin, pour voir comment les navigateurs déterminent quel CSS doit être appliqué.
 
@@ -176,10 +176,10 @@ Voyons maintenant comment le navigateur calcule la spécificité. Nous savons d�
 
 Le score de spécificité d'un sélecteur est codé par quatre valeurs (ou composants) différentes, qui peuvent être considérées comme des milliers, des centaines, des dizaines et des unités — quatre chiffres simples dans quatre colonnes :
 
-1.  **Milliers**&nbsp;: ajouter 1 dans cette colonne si la déclaration apparaît dans un {{htmlattrxref("style")}} , (style inline). De telles déclarations n'ont pas de sélecteurs, leur spécificité est toujours simplement 1000.
-2.  **Centaines**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur d'ID contenu à l'intérieur du sélecteur global.
-3.  **Dizaines**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur de classe, d'attribut ou de pseudo-classe contenu à l'intérieur du sélecteur global.
-4.  **Unités**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur d'élément ou pseudo-élément contenu à l'intérieur du sélecteur global.
+1. **Milliers**&nbsp;: ajouter 1 dans cette colonne si la déclaration apparaît dans un {{htmlattrxref("style")}} , (style inline). De telles déclarations n'ont pas de sélecteurs, leur spécificité est toujours simplement 1000.
+2. **Centaines**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur d'ID contenu à l'intérieur du sélecteur global.
+3. **Dizaines**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur de classe, d'attribut ou de pseudo-classe contenu à l'intérieur du sélecteur global.
+4. **Unités**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur d'élément ou pseudo-élément contenu à l'intérieur du sélecteur global.
 
 > **Note :** Le sélecteur universel (`*`), les combinateurs (`+`, `>`, `~`, ' '), et la pseudo-class de négation (`:not`) n'affectent en rien la spécificité.
 
@@ -217,10 +217,10 @@ Jetez un œil à cet exemple : nous avons deux paragraphes, dont l'un a un ID.
 
 Regardons ça d'un peu plus près pour mieux comprendre — si vous avez du mal à suivre, supprimez telle ou telle déclaration pour voir ce qui se passe.
 
-1.  Vous verrez que les valeurs de couleur et de remplissage de la troisième règle ont été appliquées, mais pas la couleur d'arrière-plan. Pourquoi ? On pourrait penser que les trois déclarations s'appliquent, puisque la règle en question, venant plus tard dans le code source, prend le dessus sur les règles antérieures.
-2.  Mais rappelez vous, les sélecteurs de classe sont plus spécifiques !
-3.  Les deux éléments sont dans la classe `better`, mais le deuxième a aussi l'{{htmlattrxref("id")}}  `winning`. Étant donné que les ID ont une spécificité encore plus élevée que les classes (sur une page, pour une ID donnée, il y a un seul élément,  alors qu'on peut trouver de nombreux éléments dans la même classe — les sélecteurs d'ID sont donc très spécifiques dans ce qu'ils ciblent), le deuxième élément aura une couleur d'arrière-plan rouge et une bordure noire de 1 px ; pour le premier élément, la couleur d'arrière-plan sera grise, sans bordure, comme spécifié par la classe.
-4.  Le deuxième élément a un arrière-plan rouge, mais pas de bordure. Pourquoi ? En raison de la déclaration `!important` dans la deuxième règle — écrit après  `border: none`,  ce mot-clé signifie que cette déclaration l'emporte sur le `border` définie dans la règle précédente, même si l'ID a une spécificité plus élevée.
+1. Vous verrez que les valeurs de couleur et de remplissage de la troisième règle ont été appliquées, mais pas la couleur d'arrière-plan. Pourquoi ? On pourrait penser que les trois déclarations s'appliquent, puisque la règle en question, venant plus tard dans le code source, prend le dessus sur les règles antérieures.
+2. Mais rappelez vous, les sélecteurs de classe sont plus spécifiques !
+3. Les deux éléments sont dans la classe `better`, mais le deuxième a aussi l'{{htmlattrxref("id")}}  `winning`. Étant donné que les ID ont une spécificité encore plus élevée que les classes (sur une page, pour une ID donnée, il y a un seul élément,  alors qu'on peut trouver de nombreux éléments dans la même classe — les sélecteurs d'ID sont donc très spécifiques dans ce qu'ils ciblent), le deuxième élément aura une couleur d'arrière-plan rouge et une bordure noire de 1 px ; pour le premier élément, la couleur d'arrière-plan sera grise, sans bordure, comme spécifié par la classe.
+4. Le deuxième élément a un arrière-plan rouge, mais pas de bordure. Pourquoi ? En raison de la déclaration `!important` dans la deuxième règle — écrit après  `border: none`,  ce mot-clé signifie que cette déclaration l'emporte sur le `border` définie dans la règle précédente, même si l'ID a une spécificité plus élevée.
 
 > **Note :** La seule façon de dépasser cette déclaration `!important` serait d'ajouter un `!important` dans une déclaration de même *spécificité* apparaissant plus bas dans l'ordre du source, ou avec une spécificité plus grande.
 
@@ -236,11 +236,11 @@ Enfin, il est également utile de noter que l'importance d'une déclaration CSS 
 
 Les déclarations en conflit seront appliquées dans l'ordre suivant, les déclarations ultérieures remplaçant les déclarations antérieures :
 
-1.  Déclarations dans les feuilles de style de l'agent utilisateur (par exemple, les styles par défaut du navigateur, utilisés lorsqu'aucun autre style n'est défini).
-2.  Déclarations normales dans les feuilles de style utilisateur (styles personnalisés définis par un utilisateur).
-3.  Déclarations normales dans les feuilles de style d'auteur (ce sont les styles définis par nous, les développeurs web).
-4.  Déclarations `!important` dans les feuilles de style d'auteur.
-5.  Déclarations `!important` dans les feuilles de style utilisateur.
+1. Déclarations dans les feuilles de style de l'agent utilisateur (par exemple, les styles par défaut du navigateur, utilisés lorsqu'aucun autre style n'est défini).
+2. Déclarations normales dans les feuilles de style utilisateur (styles personnalisés définis par un utilisateur).
+3. Déclarations normales dans les feuilles de style d'auteur (ce sont les styles définis par nous, les développeurs web).
+4. Déclarations `!important` dans les feuilles de style d'auteur.
+5. Déclarations `!important` dans les feuilles de style utilisateur.
 
 Il est logique que les feuilles de style des développeurs web remplacent les feuilles de style utilisateur, de sorte que la conception peut être conservée comme prévu, mais parfois, les utilisateurs ont de bonnes raisons de remplacer les styles des développeur web, comme mentionné ci-dessus — cela peut être réalisé en utilisant `!important` dans leurs règles.
 
@@ -264,21 +264,21 @@ En particulier quand vous rencontrez des comportements étranges où vos règles
 
 ## Dans ce cours
 
-1.  [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

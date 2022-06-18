@@ -47,13 +47,13 @@ Vous pouvez aussi [regarder l'exemple ici](https://mdn.github.io/learning-area/h
 
 Les étapes suivantes décrivent ce que vous devez faire pour complèter l'exemple de tableau. Toutes les données dont vous avez besoin sont contenues dans le fichier `planets-data.txt`. Si vous avez du mal à visualiser les données, regardez l'exemple donné dans le lien ci-dessus, ou essayez de dessiner un diagramme.
 
-1.  Ouvrez votre copie de `blank-template.html`, et commencez le tableau en lui donnant un conteneur extérieur, un en-tête et un corps de tableau. Vous n'avez pas besoin d'un pied de tableau dans cet exemple.
-2.  Ajoutez la légende fournie à votre tableau.
-3.  Ajoutez une ligne à l'en-tête contenant tous les en-têtes de colonnes.
-4.  Créez toutes les lignes de contenu du corps du tableau, en vous rappelant de faire systématiquement tous les en-têtes de lignes.
-5.  Assurez-vous que tout le contenu est inséré dans les cellules de droite - dans les données brutes, chaque ligne de données d'une planète est affiché à côté de la planète associée.
-6.  Ajoutez les attributs pour créer des en-têtes de lignes et colonnes ne pouvant être confondus avec les lignes, colonnes et groupes de lignes dont ils sont les en-têtes.
-7.  Ajoutez une bordure noire pour entourer la colonne contenant les noms des planètes (en-têtes de lignes).
+1. Ouvrez votre copie de `blank-template.html`, et commencez le tableau en lui donnant un conteneur extérieur, un en-tête et un corps de tableau. Vous n'avez pas besoin d'un pied de tableau dans cet exemple.
+2. Ajoutez la légende fournie à votre tableau.
+3. Ajoutez une ligne à l'en-tête contenant tous les en-têtes de colonnes.
+4. Créez toutes les lignes de contenu du corps du tableau, en vous rappelant de faire systématiquement tous les en-têtes de lignes.
+5. Assurez-vous que tout le contenu est inséré dans les cellules de droite - dans les données brutes, chaque ligne de données d'une planète est affiché à côté de la planète associée.
+6. Ajoutez les attributs pour créer des en-têtes de lignes et colonnes ne pouvant être confondus avec les lignes, colonnes et groupes de lignes dont ils sont les en-têtes.
+7. Ajoutez une bordure noire pour entourer la colonne contenant les noms des planètes (en-têtes de lignes).
 
 ## Conseils et astuces
 
