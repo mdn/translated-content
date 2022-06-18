@@ -36,7 +36,7 @@ delete objeto['propiedad']
 
 ## Descripción
 
-Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de programación como 
+Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de programación como
 [delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), el operador `delete` no tiene **nada** que ver con liberar memoria.
 La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Memory_Management) para más detalles.
 
@@ -46,180 +46,264 @@ se retornará `false`.
 
 Sin embargo, es importante considerar los siguientes escenarios:
 
-- Si la propiedad que está intentando eliminar no existe, `delete`
-  no tendrá ningún efecto y retornará `true`.
+  - Si la propiedad que está intentando eliminar no existe, `delete`
+    no tendrá ningún efecto y retornará `true`.
+  - Si una propiedad con el mismo nombre existe en la cadena de prototipos del objeto,
+    entonces, luego de la eliminación, el objeto usará la propiedad de la cadena de prototipos
+    (en otras palabras, `delete` sólo tiene efecto en los propiedades propias).
+  - Cualquier propiedad declarada con {{jsxref("Statements/var","var")}} no puede ser eliminada
+    desde el ámbito global o desde el ámbito de una función.
 
-- If the property which you are trying to delete does not exist, `delete`
-  will not have any effect and will return `true`.
-- If a property with the same name exists on the object's prototype chain, then,
-  after deletion, the object will use the property from the prototype chain (in
-  other words, `delete` only has an effect on own properties).
-- Any property declared with {{jsxref("Statements/var","var")}} cannot be deleted
-  from the global scope or from a function's scope.
+    - Del mismo modo, `delete` no puede eliminar ninguna función en el ámbito global
+    (ya sea parte de una definición de una función o una expresión de función).
+    - Funciones que son partes de un objeto (y no sean del ámbito global) sí pueden
+    ser eliminadas con `delete`.
 
-  - As such, `delete` cannot delete any functions in the global
-    scope (whether this is part from a function definition or a function
-    expression).
-  - Functions which are part of an object (apart from the global scope) can be
-    deleted with `delete`.
+  - Las propiedades declaradas con {{jsxref("Statements/let","let")}} o
+    {{jsxref("Statements/const","const")}} no pueden ser eliminadas dentro del
+    ámbito en el cual fueron definidas.
+  - Las propiedades no configurables no pueden ser removidas. Esto incluye las
+    propiedades de objetos incorporados a JavaScript como {{jsxref("Math")}},
+    {{jsxref("Array")}}, {{jsxref("Object")}} y propiedades que son creadas como
+    no configurables con métodos como {{jsxref("Object.defineProperty()")}}.
 
-- Any property declared with {{jsxref("Statements/let","let")}} or
-  {{jsxref("Statements/const","const")}} cannot be deleted from the scope within
-  which they were defined.
-- Non-configurable properties cannot be removed. This includes properties of
-  built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}},
-  {{jsxref("Object")}} and properties that are created as non-configurable with
-  methods like {{jsxref("Object.defineProperty()")}}.
-
-The following snippet gives a simple example:
+El siguiente bloque de código muestra un ejemplo simple:
 
 ```js
-var Employee = {
-  age: 28,
-  name: 'abc',
-  designation: 'developer'
+var Empleado = {
+  edad: 28,
+  nombre: 'abc',
+  puesto: 'desarrollador'
 }
 
-console.log(delete Employee.name);   // returns true
-console.log(delete Employee.age);    // returns true
+console.log(delete Empleado.name);   // retorna true
+console.log(delete Empleado.age);    // retorna true
 
-// When trying to delete a property that does
-// not exist, true is returned
-console.log(delete Employee.salary); // returns true
+// Cuando se trata de eliminar una propiedad
+// que no existe, retorna true
+console.log(delete Empleado.salario); // retorna true
 ```
 
-<h2 id="Description" name="Description">Descripción</h2>
+### Propiedades no configurables
 
-<p>Al contrario de lo que se podría pensar, el operador <code>delete</code> no tiene nada que ver con liberar memoria (sólo lo hace de manera indirecta eliminando referencias. Más detalles en la página de<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Gestion_de_Memoria"> gestión de memoria</a>).</p>
+Cuando una propiedad es marcada como no configurable, `delete` no tendrá
+ningún efecto, y retornará `false`. En modo estricto esta situación
+arrojará un `TypeError`.
 
-<p>Si la operación <code>delete</code> funciona correctamente, eliminará la propiedad del objeto por completo. Sin embargo, si existe otra propiedad con el mismo nombre en la cadena del <code>prototype </code>del objeto, éste heredará la propiedad del <code>prototype</code>.</p>
+```js
+var Empleado = {};
+Object.defineProperty(Empleado, 'nombre', {configurable: false});
 
-<p><code>delete</code> sólo es efectivo en propiedades de objetos. No tiene ningún efecto en variables o en nombres de funciones.<br>
- Aunque a veces son mal identificados como variables globales, las asignaciones que no especifican al objeto (ejemplo: x = 5), son en realidad propiedades que se asignan al objeto global.</p>
+console.log(delete Empleado.nombre);  // retorna false
+```
 
-<p><code>delete</code> no puede eliminar ciertas propiedades de los objetos predefinidos (como Object, Array, Math etc). Estos están descritos en ECMAScript 5 y más tarde como no configurables.</p>
+{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, y
+{{jsxref("Statements/const","const")}} crean propiedades no configurables
+que no pueden ser eliminadas con el operador `delete`:
 
-<h3 id="Temporal_dead_zone">Temporal dead zone</h3>
+```js
+var otroNombre = 'XYZ';
 
-<p>The "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone"</a> (TDZ), specified in ECMAScript 6 for <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> declarations, also applies to the <code>delete</code> operator. Thus, code like the following will throw a {{jsxref("ReferenceError")}}.</p>
+// Podemos acceder a esta propiedad global usando:
+Object.getOwnPropertyDescriptor(window, 'otroNombre');
 
-<pre class="brush: js">function foo() {
-  delete x;
-  let x;
+// output: Object {value: "XYZ",
+//                  writable: true,
+//                  enumerable: true,
+//                  configurable: false}
+
+// Debido a que "otroNombre" es añadido usando la palabra
+// reservada var, es marcada como "no configurable"
+
+delete otroNombre;   // retorna false
+```
+
+En modo estricto, esto hubiese arrojado una excepción.
+
+
+### Modo estricto vs. no estricto
+
+En modo estricto, si `delete` es usado en referencia directa a una variable,
+un argumento de función o un nombre de función, arrojará un
+{{jsxref("SyntaxError")}}. Por lo tanto, para evitar errores de sintaxis
+en modo estricto, debe usar el operador `delete` en la forma de
+`delete object.property` o `delete object['property']`.
+
+```js
+Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
+Object.defineProperty(globalThis, 'variable2', { value: 10, configurable: false, });
+
+// SyntaxError en modo estricto.
+console.log(delete variable1); // true
+
+// SyntaxError en modo estricto.
+console.log(delete variable2); // false
+```
+
+```js
+function func(param) {
+  // SyntaxError en modo estricto.
+  console.log(delete param); // false
 }
 
-function bar() {
-  delete y;
-  const y;
-}</pre>
+// SyntaxError en modo estricto.
+console.log(delete func); // false
+```
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### Notas de compatibilidad entre navegadores
 
-<pre class="brush: js">x = 42;         // crea la propiedad x en el objeto global
-var y = 43;     // crea la propiedad y en el objeto global, y la marca como no configurable
-myobj = {
-  h: 4,
-  k: 5
+Según la especificación moderna de ECMAScript, el orden de recorrido de las
+propiedades de un objeto está bien definido y es estable a través de las
+implementaciones. No obstante, en el caso de Internet Explorer, cuando uno
+usa `delete` en una propiedad, resulta en un comportamiento confuso,
+impidiendo que otros navegadores utilicen objetos simples como
+literales de objeto como si fuesen arreglos asociativos ordenados.
+En Internet Explorer, mientras que la propiedad _value_ es de hecho establecida
+como `undefined`, si uno luego añade una propiedad con el mismo nombre, la
+propiedad será iterada en su posición _old_ y no al final de la secuencia como
+uno esperaría luego de haber eliminado la propiedad y agregarla nuevamente.
+
+Si usted desea usar un arreglo asociativo ordenado con soporte para
+implementaciones antiguas, use un objeto {{jsxref("Map")}} si está disponible
+(a través de un polyfill, por ejemplo), o simule esta estructura con dos
+arreglos separados (uno para las claves y otro para los valores), o construya
+un arreglo de objetos con una única propiedad, etc.
+
+## Ejemplos
+
+```js
+// Crea la propiedad adminName en el ámbito global.
+adminName = 'xyz';
+
+// Crea la propiedad empCount en el ábmti global.
+// Como se usa var, es marcada como no configurable.
+// Lo mismo es cierto para let y const.
+var empCount = 43;
+
+EmployeeDetails = {
+  name: 'xyz',
+  age: 5,
+  designation: 'Developer'
 };
 
-// x es una propiedad del objeto global y puede ser eliminada
-delete x;       // retorna true
+// adminName es una propiedad del ámbito global.
+// Puede ser eliminada debido a que es declarada sin usar var,
+// y por lo tanto es configurable.
+delete adminName;       // retorna true
 
-// y no es configurable, por lo tanto no puede ser eliminada
-delete y;       // retorna false
+// Por el contrario, empCount no es configurable
+// debido a que fue usado var al declararla.
+delete empCount;       // retorna false
 
-// delete no afecta a ciertas propiedades predefinidas
+// delete puede ser usado para eliminar propiedades de objetos.
+delete EmployeeDetails.name; // retona true
+
+// Incluso cuando la propiedad no existe, delete retorna "true".
+delete EmployeeDetails.salary; // retorna true
+
+// delete no afecta propiedades estáticas propias del lenguaje.
 delete Math.PI; // retorna false
 
-// las propiedades definidas por el usuario pueden eliminarse
-delete myobj.h; // retorna true
-
-// myobj es una propiedad del objeto global, no una variable,
-// por lo tanto puede eliminarse
-delete myobj;   // retorna true
+// EmployeeDetails es una propiedad del ámbito global.
+// Debido a que fue definida sin "var", se marca como configurable.
+delete EmployeeDetails;   // retorna true
 
 function f() {
   var z = 44;
 
-  // delete no afecta a nombres de variables locales
+  // delete no afecta nombres de variables locales
   delete z;     // retorna false
 }
-</pre>
+```
 
-<p>Si el objeto hereda una propiedad de un prototype, y no tiene la propiedad en sí, la propiedad no puede ser eliminada por referencia al objeto. Aun así, puedes eliminarla directamente en el prototype.</p>
+### `delete` y la cadena de prototipos
 
-<p>If the object inherits a property from a prototype, and doesn't have the property itself, the property can't be deleted by referencing the object. You can, however, delete it directly on the prototype.</p>
+En el siguiente ejemplo, se elimina una propiedad directa de un objeto mientras
+que una propiedad con el mismo nombre está disponible en la cadena de
+prototipos:
 
-<pre class="brush: js">function Foo(){}
+```js
+function Foo() {
+  this.bar = 10;
+}
+
 Foo.prototype.bar = 42;
+
 var foo = new Foo();
 
-// retorna true, pero sin ningún efecto,
-// ya que bar es una propiedad heredada
-delete foo.bar;
+// foo.bar está asociado con la
+// propiedad directa.
+console.log(foo.bar); // 10
 
-// logs 42, propiedad aún heredada
-console.log(foo.bar);
+// Eliminar la propiedad directa
+// del objeto foo.
+delete foo.bar; // retorna true
 
-// elimina la propiedad en el prototype
-delete Foo.prototype.bar;
+// foo.bar aún está disponible en
+// la cadena de prototipos.
+console.log(foo.bar); // 42
 
-// logs "undefined", propiedad no heredada
-console.log(foo.bar);           </pre>
+// Eliminar la propiedad en el prototipo.
+delete Foo.prototype.bar; // reotnra true
 
-<h3 id="Deleting_array_elements" name="Deleting_array_elements">Eliminando elementos de un array</h3>
+// La propiedad "bar" ya no puede ser heredada
+// de foo ya que ha sido eliminada.
 
-<p>Cuando eliminas un elemento de un array, la longitud del array no se ve afectada. Esta se mantiene incluso si eliminas el último elemento del array.</p>
+console.log(foo.bar); // undefined
+```
 
-<p>Cuando el operador <code>delete</code> elimina un elemento de un array, este elemento ya no está en el array. En el siguiente ejemplo, <code>trees[3]</code> es eliminado mediante <code>delete</code>.</p>
+### Eliminando elmenetos de arreglos
 
-<pre class="brush: js">var trees = ["redwood","bay","cedar","oak","maple"];
+Cuando se elimina un elemento de un arreglo, la propiedad `length` no se ve
+afectada. Se mantiene incluso si se elimina el último elemento del arreglo.
+
+Cuando el operador `delete` elimina un elemento de un array, ese elemento
+no se encuentra más en el mismo. En el siguiente ejemplo, `trees[3]` es
+eliminado con el uso de `delete`.
+
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 delete trees[3];
 if (3 in trees) {
     // esto no se ejecuta
-}</pre>
+}
+```
 
-<p>Si quieres que exista un elemento de un array pero que tengo un valor no definido, utiliza el valor <code>undefined</code> en vez del operador <code>delete</code>. En el siguiente ejemplo, <code>trees[3]</code> es asignado con el valor <code>undefined</code>, pero el elemento del array aún existe:</p>
+Si desea que un elemento de un arreglo exista pero que no tenga un valor
+definido, use el valor `undefined` en lugar del operador `delete`. En el
+siguiente ejmeplo, `trees[3]` recibe el valor `undefined`, pero el elemento
+del arreglo aún existe:
 
-<pre class="brush: js">var trees = ["redwood","bay","cedar","oak","maple"];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees[3] = undefined;
 if (3 in trees) {
-    // esto se ejecuta
-}</pre>
+    // esto sí se ejecuta
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+Si en lugar de eso, usted desea eliminar un elemento de un arreglo cambiando
+los contenidos del mismo, use el método
+{{jsxref("Array.splice()", "splice()")}}. En el siguiente ejemplo,
+se elimina completamente `trees[3]` del arreglo usando
+{{jsxref("Array.splice()", "splice()")}}:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definición inicial. Implementado en JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+trees.splice(3,1);
+console.log(trees); // ["redwood", "bay", "cedar", "maple"]
+```
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Especificaciones
 
-{{Compat("javascript.operators.delete")}}
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Compatibilidad con navegadores
 
-<ul>
- <li><a href="http://perfectionkills.com/understanding-delete/">Análisis en profundidad sobre delete</a></li>
-</ul>
+{{Compat}}
+
+## Véase también
+
+- [Análisis en profundidad del operador delete](http://perfectionkills.com/understanding-delete/)
+- {{jsxref("Reflect.deleteProperty()")}}
+- {{jsxref("Map.prototype.delete()")}}
