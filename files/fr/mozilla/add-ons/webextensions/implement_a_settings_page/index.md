@@ -153,7 +153,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 Cela fait deux choses :
 
-- Quand le document a été chargé, le script attribue une valeur à "color" depuis le stockage grâce à[` storage.sync.get()`](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get). Si la valeur n'est pas renseignée, il utilise par défaut "blue". Ceci récupère les valeurs de la zone de stockage de `synchronisation`.
+- Quand le document a été chargé, le script attribue une valeur à "color" depuis le stockage grâce à [`storage.sync.get()`](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get). Si la valeur n'est pas renseignée, il utilise par défaut "blue". Ceci récupère les valeurs de la zone de stockage de `synchronisation`.
 - Quand l'utilisateur valide le formulaire en cliquant sur "Save", le script stocke la valeur de textbox en utilisant [`storage.sync.set()`](/fr/Add-ons/WebExtensions/API/storage/StorageArea/set). Ceci permet d'enregistrer la valeur dans la zone de stockage de `synchronisation`.
 
 Vous pouvez stocker les valeurs des paramètres dans le stockage local à la place si vous pensez que le stockage local est préférable pour votre extension.
@@ -183,11 +183,13 @@ getting.then(onGot, onError);
 
 A ce moment, l'extension complète devrait ressembler à ceci :
 
-    settings/
-        borderify.js
-        manifest.json
-        options.html
-        options.js
+```
+settings/
+    borderify.js
+    manifest.json
+    options.html
+    options.js
+```
 
 Maintenant :
 

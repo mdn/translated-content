@@ -332,8 +332,8 @@ Dans le cas présent nous avons juste décidé d'afficher toutes les information
 
 Beaucoup de sujets ont été abordés dans ce chapitre, c'est l'occasion de les mettre en application :
 
-1.  Améliorer l'affichage des objets `BookInstance`, ajoutez les éléments nécessaire pour disposer du livre, du statut de la date de fin de prêt et de l'identifiant au lieu du code unique et du titre donné par la méthode `__str__()` de l'objet.
-2.  Ajouter une information associée pour disposer du détail des informations sur l'auteur. Appuyez vous sur l'exemple avec les objets `Book`/`BookInstance` pour y parvenir.
+1. Améliorer l'affichage des objets `BookInstance`, ajoutez les éléments nécessaire pour disposer du livre, du statut de la date de fin de prêt et de l'identifiant au lieu du code unique et du titre donné par la méthode `__str__()` de l'objet.
+2. Ajouter une information associée pour disposer du détail des informations sur l'auteur. Appuyez vous sur l'exemple avec les objets `Book`/`BookInstance` pour y parvenir.
 
 ## Résumé
 

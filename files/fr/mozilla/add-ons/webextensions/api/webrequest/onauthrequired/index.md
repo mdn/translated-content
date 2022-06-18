@@ -97,7 +97,7 @@ Les événements ont trois fonctions :
 
 ## Objets supplémentaires
 
-### détails
+### Détails
 
 - `challenger`
 

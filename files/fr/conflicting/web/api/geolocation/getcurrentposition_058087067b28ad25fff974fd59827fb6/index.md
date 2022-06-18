@@ -11,7 +11,9 @@ La propriété **`PositionOptions.timeout`** est de type `long` positif rep
 
 ## Syntaxe
 
-    positionOptions.timeout = timeLength
+```js
+positionOptions.timeout = timeLength
+```
 
 ## Spécifications
 

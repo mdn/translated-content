@@ -56,15 +56,17 @@ Une boucle a normalement un ou plusieurs des composants suivants :
 
 En {{glossary("pseudocode")}}, cela ressemblerait à ce qui suit :
 
-    loop(nourriture = 0; besoinNourriture = 10) {
-      if (nourriture = besoinNourriture) {
-        exit loop;
-        // Nous avons assez de nourriture, on rentre
-      } else {
-        nourriture += 2; // On doit rester 1 heure de plus
-        // La boucle se répète ensuite
-      }
-    }
+```js
+loop(nourriture = 0; besoinNourriture = 10) {
+  if (nourriture = besoinNourriture) {
+    exit loop;
+    // Nous avons assez de nourriture, on rentre
+  } else {
+    nourriture += 2; // On doit rester 1 heure de plus
+    // La boucle se répète ensuite
+  }
+}
+```
 
 La quantité de nourriture dont le fermier a besoin est donc initialisée à 10, et la quantité dont il dispose est initialisée à 0. A chaque itération de la boucle, on vérifie si la quantité de nourriture dont le fermier dispose est égale à la quantité requise. Si c'est le cas, on peut sortir de la boucle. Sinon, le fermier passe une heure de plus à récolter de la nourriture, et la boucle itère à nouveau.
 
@@ -74,7 +76,7 @@ Arrivé à ce stade, vous avez sans doute compris le concept global des boucles,
 
 Souvent, le code sera légèrement différent à chaque itération successive, ce qui signifie que vous pouvez effectuer une certaine quantité de tâches similaires, mais néanmoins quelque peu différentes - si vous avez beaucoup de calculs différents à effectuer, vous n'allez pas effectuer le même calcul encore et encore !
 
-Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles sont si intéressantes. Disons que nous voulons dessiner 100 cercles aléatoirement sur un [`<canvas>`](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html "L'élément <canvas> permet de modifier une zone graphique via un script (habituellement en JavaScript ou grâce à WebGL). Il peut par exemple être utilisé afin de dessiner des graphiques, manipuler des images ou jouer des animations.") (appuyez sur le bouton _Update_ pour lancer le programme à nouveau et voir différentes dispositions aléatoires).
+Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles sont si intéressantes. Disons que nous voulons dessiner 100 cercles aléatoirement sur un [`<canvas>`](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (appuyez sur le bouton _Update_ pour lancer le programme à nouveau et voir différentes dispositions aléatoires).
 
 #### Exemple
 
@@ -177,20 +179,22 @@ Mais cela prend du temps inutilement, et rend le code difficilement maintenable.
 
 Commençons maintenant à voir quelques formes de boucles spécifiques. La première, celle que vous utiliserez le plus souvent, est la boucle [for](/fr/docs/Web/JavaScript/Reference/Instructions/for). Elle a la syntaxe suivante :
 
-    for (initialisation; condition de sortie; expression finale) {
-      // code à exécuter
-    }
+```js
+for (initialisation; condition de sortie; expression finale) {
+  // code à exécuter
+}
+```
 
 Nous avons ici :
 
-1.  Le mot-clé `for`, suivi par des parenthèses.
-2.  A l'intérieur des parenthèses, on a trois objets :
+1. Le mot-clé `for`, suivi par des parenthèses.
+2. A l'intérieur des parenthèses, on a trois objets :
 
-    1.  Une **initialisation** — il s'agit souvent d'une variable initialisée à une certaine valeur, qui est incrémentée afin de compter le nombre de fois où la boucle s'est exécutée. On peut également la nommer **compteur**.
-    2.  Une **condition de sortie** — comme mentionné précédemment, cela définit le moment où la boucle doit arrêter de s'exécuter. C'est généralement une expression contenant un opérateur de comparaison, un test pour voir si la condition de sortie est atteinte.
-    3.  Une **expression finale** — Elle est toujours évaluée (ou exécutée) chaque fois que la boucle a effectué une itération complète. Cela sert souvent à incrémenter (ou dans certains cas décrémenter) le compteur, pour le rapprocher de la valeur de la condition de sortie.
+    1. Une **initialisation** — il s'agit souvent d'une variable initialisée à une certaine valeur, qui est incrémentée afin de compter le nombre de fois où la boucle s'est exécutée. On peut également la nommer **compteur**.
+    2. Une **condition de sortie** — comme mentionné précédemment, cela définit le moment où la boucle doit arrêter de s'exécuter. C'est généralement une expression contenant un opérateur de comparaison, un test pour voir si la condition de sortie est atteinte.
+    3. Une **expression finale** — Elle est toujours évaluée (ou exécutée) chaque fois que la boucle a effectué une itération complète. Cela sert souvent à incrémenter (ou dans certains cas décrémenter) le compteur, pour le rapprocher de la valeur de la condition de sortie.
 
-3.  Des accolades contenant un bloc de code — ce code sera exécuté chaque fois que la boucle itère.
+3. Des accolades contenant un bloc de code — ce code sera exécuté chaque fois que la boucle itère.
 
 Regardons maintenant un vrai exemple, afin de visualiser leurs actions plus clairement.
 
@@ -244,15 +248,15 @@ Cela nous donne la sortie suivante :
 
 Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici :
 
-1.  L'itérateur, `i`, commence à `0` (`let i = 0`).
-2.  On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
-3.  Au sein de la boucle, on concatène les élèments présents dans cette boucle (`cats[i]` est `cats[quelque soit la valeur de i lors de l'iteration]`) avec une virgule et un espace, à la fin de la variable `info`. Donc :
+1. L'itérateur, `i`, commence à `0` (`let i = 0`).
+2. On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
+3. Au sein de la boucle, on concatène les élèments présents dans cette boucle (`cats[i]` est `cats[quelque soit la valeur de i lors de l'iteration]`) avec une virgule et un espace, à la fin de la variable `info`. Donc :
 
-    1.  Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
-    2.  Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
-    3.  Et ainsi de suite. Aprés chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
+    1. Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
+    2. Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
+    3. Et ainsi de suite. Aprés chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
 
-4.  Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code aprés la boucle.
+4. Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code aprés la boucle.
 
 > **Note :** Nous avons fait sortir la condition `i < cats.length`, et pas `i <= cats.length`, parce que les ordinateurs comptent à partir de 0, pas 1 — nous avons démarré `i` à `0`, et allons allers jusqu'à `i = 4` (l'index du dernier item de la table/tableau). `cats.length` retourne 5, comme il y a 5 items dans la table, nous n'allont pas aller à `i = 5`, cela retournerai `undefined` pour le dernier item (il n'y a pas de item de table avec un index de 5). Par conséquent, nous voulons aller de 1 à moins que `cats.length` (`i <`), ce n'est pas la même chose que `cats.length` (`i <=`).
 
@@ -363,16 +367,16 @@ bouton.addEventListener('click', function() {
 
 {{EmbedLiveSample('', '100%', 100)}}
 
-1.  Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.
-2.  Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
-3.  Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, , avant de vider l'input et le recentrer, prêt pour la recherche suivante.
-4.  Maintenant sur la partie intéressante, la boucle for :
+1. Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.
+2. Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
+3. Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, , avant de vider l'input et le recentrer, prêt pour la recherche suivante.
+4. Maintenant sur la partie intéressante, la boucle for :
 
-    1.  Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
-    2.  À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
-    3.  Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
+    1. Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
+    2. À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
+    3. Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
 
-5.  Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
+5. Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
 
 > **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
@@ -439,10 +443,10 @@ Ici la sortie :
 
 {{EmbedLiveSample('', '100%', 100)}}
 
-1.  Dans ce cas, l'entrée doit être un nombre (`num`). La boucle `for` est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée `num`, et un itérateur ajoutera 1 au compteur à chaque fois.
-2.  À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt0, puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) fait au nombre auquel il est passé).
-3.  Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (`! ==`), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction `continue` pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.
-4.  Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i` actuelle plus un espace sur la fin du contenu du paragraphe.
+1. Dans ce cas, l'entrée doit être un nombre (`num`). La boucle `for` est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée `num`, et un itérateur ajoutera 1 au compteur à chaque fois.
+2. À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt0, puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) fait au nombre auquel il est passé).
+3. Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (`! ==`), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction `continue` pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.
+4. Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i` actuelle plus un espace sur la fin du contenu du paragraphe.
 
 > **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
@@ -452,12 +456,14 @@ Ici la sortie :
 
 D'abord, regardons la boucle [while](/fr/docs/Web/JavaScript/Reference/Instructions/while). La syntaxe de cette boucle ressemble à ceci:
 
-    initializer
-    while (exit-condition) {
-      // code to run
+```
+initializer
+while (exit-condition) {
+  // code to run
 
-      final-expression
-    }
+  final-expression
+}
+```
 
 Cela fonctionne de manière très similaire à la boucle for, sauf que la variable de départ est définie avant la boucle, et l'expression finale est incluse dans la boucle après le code à exécuter — plutôt que ces deux éléments soient inclus dans les parenthèses. La condition de sortie est incluse dans les parenthèses, précédées du mot-clé `while` au lieu de `for`.
 
@@ -483,12 +489,14 @@ while (i < cats.length) {
 
 La boucle [do...while](/fr/docs/Web/JavaScript/Reference/Instructions/do...while) est très similaire, mais dénote une variation par rapport à la structure de la boucle while :
 
-    initializer
-    do {
-      // code to run
+```
+initializer
+do {
+  // code to run
 
-      final-expression
-    } while (exit-condition)
+  final-expression
+} while (exit-condition)
+```
 
 Dans ce cas, l'initialiseur vient en premier, avant que la boucle ne commence. Le mot-clé `do` précède directement les accolades contenant le code à exécuter et l'expression finale.
 
@@ -800,27 +808,33 @@ Pour des usages basiques les boucles `for`, `while`, et `do...while` sont largem
 
 Premièrement `for`:
 
-    for (initialisation; condition de sortie; expression finale) {
-      // code à exécuter
-    }
+```
+for (initialisation; condition de sortie; expression finale) {
+  // code à exécuter
+}
+```
 
 `while`:
 
-    initialisation
-    while (condition de sortie) {
-      // code à exécuter
+```
+initialisation
+while (condition de sortie) {
+  // code à exécuter
 
-      expression finale
-    }
+  expression finale
+}
+```
 
 et enfin `do...while`:
 
-    initialisation
-    do {
-      // code à exécuter
+```
+initialisation
+do {
+  // code à exécuter
 
-      expression finale
-    } while (condition de sortie)
+  expression finale
+} while (condition de sortie)
+```
 
 Nous recommandons `for`, au moins pour commencer, car elle est probablement la plus facile pour tout se remémorer — l'initialisation, la condition de sortie, l'expression finale, le tout soigneusement placé entre des parenthèses. De cette façon, il est facile de voir où elles se trouvent et de vérifier qu'on ne les a pas oubliées.
 

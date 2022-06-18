@@ -58,7 +58,7 @@ Pour contourner le problème des requêtes asynchrones, nous devons tester de te
 
 Voilà la marche à suivre :
 
-1.  Installer Python. Si vous utilisez GNU/Linux ou macOS, un environnement python est sans doute déjà disponible sur votre machine. Les utilisateurs de Windows pourront trouver un installeur depuis la page d'accueil de Python (on y trouve toutes les instructions)&nbsp;:
+1. Installer Python. Si vous utilisez GNU/Linux ou macOS, un environnement python est sans doute déjà disponible sur votre machine. Les utilisateurs de Windows pourront trouver un installeur depuis la page d'accueil de Python (on y trouve toutes les instructions)&nbsp;:
 
     - Allez à [python.org](https://www.python.org/)
     - Sous Télécharger, cliquez le lien pour Python "3.xxx".
@@ -67,13 +67,13 @@ Voilà la marche à suivre :
     - Sur la première page de l'installeur, assurez-vous d'avoir coché la case  "Ajouter Python 3.xxx to PATH".
     - Cliquer _Install_, puis _Fermer_ quand l'installation est complète.
 
-2.  Ouvrez votre invite de commandes (Windows)/terminal (OS X et GNULinux). Pour vérifier que l'installation précédente s'est déroulée correctement, entrez la commande suivante :
+2. Ouvrez votre invite de commandes (Windows)/terminal (OS X et GNULinux). Pour vérifier que l'installation précédente s'est déroulée correctement, entrez la commande suivante :
 
     ```bash
     python -V
     ```
 
-3.  Elle devrait retourner un numéro de version. Si c'est le cas, en utilisant la commande `cd`, placer votre répertoire de travail dans le dossier contenant l'exemple.
+3. Elle devrait retourner un numéro de version. Si c'est le cas, en utilisant la commande `cd`, placer votre répertoire de travail dans le dossier contenant l'exemple.
 
     ```bash
     #inclure le nom du dossier pour y s'y rendre,
@@ -84,7 +84,7 @@ Voilà la marche à suivre :
     cd ..
     ```
 
-4.  Entrer la commande pour démarrer le serveur dans ce dossier.
+4. Entrer la commande pour démarrer le serveur dans ce dossier.
 
     ```bash
     # Si la version de Python retournée est ultérieur à 3.X
@@ -93,7 +93,7 @@ Voilà la marche à suivre :
     python -m SimpleHTTPServer
     ```
 
-5.  Par défaut, il affiche la liste des fichiers du dossier sur un serveur de développement, sur le port 8000. Vous pouvez aller à ce serveur en saisissant l'URL `localhost:8000` dans votre navigateur web. Vous verrez le listing du dossier dans lequel le serveur tourne — cliquer le fichier HTML que vous voulez exécuter.
+5. Par défaut, il affiche la liste des fichiers du dossier sur un serveur de développement, sur le port 8000. Vous pouvez aller à ce serveur en saisissant l'URL `localhost:8000` dans votre navigateur web. Vous verrez le listing du dossier dans lequel le serveur tourne — cliquer le fichier HTML que vous voulez exécuter.
 
 > **Note :** Si le port 8000 est occupé, vous pouvez choisir un autre port en spécifiant une autre valeur après la commande par exemple `python -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Vous pouvez maintenant accéder à votre contenu à l'adresse `localhost:7800`.
 
