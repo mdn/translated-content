@@ -19,17 +19,15 @@ La propriété WindowEventHandlers.onafterprint définit et renvoie {{event("aft
 
 ## Syntaxe
 
-    window.onafterprint = code de traitement de l'événement
+```
+window.onafterprint = code de traitement de l'événement
+```
 
 ## Notes
 
 Les événements `beforeprint` et `afterprint` permettent aux pages de modifier leur contenu avant le début de l'impression (pour supprimer une bannière, par exemple), puis d'annuler ces modifications une fois l'impression terminée. En général, les auteurs de contenu devraient préférer l'utilisation d'une règle CSS [@media print](/en-US/docs/Web/CSS/@media), mais il peut être nécessaire d'utiliser ces événements dans certains cas.
 
 L'événement `afterprint` est appelé après l'impression par l'utilisateur, ou s'il interrompt la boîte de dialogue d'impression.
-
-
-
-
 
 Safari ne reconnaît pas ces événements.
 
