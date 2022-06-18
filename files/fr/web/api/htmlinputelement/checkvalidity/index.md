@@ -19,9 +19,9 @@ checkValidity()
 
 Aucun.
 
-### Valeur retournée
+### Valeur de retour
 
-Renvoie `true` si la valeur de l'élément n'a pas de problèmes de validité ; sinon renvoie `false`.
+Renvoie `true` si la valeur de l'élément n'a pas de problèmes de validité&nbsp;; sinon renvoie `false`.
 
 ## Spécifications
 
@@ -33,6 +33,6 @@ Renvoie `true` si la valeur de l'élément n'a pas de problèmes de validité ; 
 
 ## Voir aussi
 
-- [En apprendre plus : Validation des données de formulaires côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Guide: Validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation)
+- [En apprendre plus&nbsp;: Validation des données de formulaires côté client](/fr/docs/Learn/Forms/Form_validation)
+- [Guide&nbsp;: Validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation)
 - [API de validation de contraintes](/fr/docs/Web/API/Constraint_validation)
