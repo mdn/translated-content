@@ -36,7 +36,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifie si un `listener` donné est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-## syntaxe addListener
+## Syntaxe addListener
 
 ### Paramètres
 
