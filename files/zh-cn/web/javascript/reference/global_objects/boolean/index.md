@@ -7,112 +7,110 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>Boolean</code></strong>对象是一个布尔值的对象包装器。</p>
+**`Boolean`** 对象是一个布尔值的对象包装器。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果需要，作为第一个参数传递的值将转换为布尔值。如果省略或值<code>0</code>，<code>-0</code>，{{jsxref("null")}}，<code>false</code>，{{jsxref("NaN")}}，{{jsxref("undefined")}}，或空字符串（<code>""</code>），该对象具有的初始值<code>false</code>。所有其他值，包括任何对象，空数组（<code>[]</code>）或字符串<code>"false"</code>，都会创建一个初始值为<code>true</code>的对象。</p>
+如果需要，作为第一个参数传递的值将转换为布尔值。如果省略该参数或参数值为 `0`、`-0`、{{jsxref("null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}，或空字符串（`""`），则该对象具有的初始值为 `false`。所有其它值，包括任何对象，空数组（`[]`）或字符串 `"false"`，都会创建一个初始值为 `true` 的对象。
 
-<p>注意不要将基本类型中的布尔值 <code>true</code> 和 <code>false</code> 与值为 <code>true</code> 和 <code>false</code> 的 <code>Boolean</code> 对象弄混了。</p>
+注意不要将基本类型中的布尔值 `true` 和 `false` 与值为 `true` 和 `false` 的 `Boolean` 对象弄混了。
 
-<p>其值不是{{jsxref("undefined")}}或{{jsxref("null")}}的任何对象（包括其值为<code>false</code>的布尔对象）在传递给条件语句时都将计算为<code>true</code>。 例如，以下{{jsxref("Statements/if...else", "if")}}语句中的条件评估为<code>true</code>：</p>
+其值不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} 的任何对象（包括其值为 `false` 的布尔对象）在传递给条件语句时都将计算为 `true`。例如，以下 {{jsxref("Statements/if...else", "if")}} 语句中的条件评估为 `true`：
 
-<pre class="brush: js">var x = new Boolean(false);
+
+```js
+const x = new Boolean(false);
 if (x) {
   // 这里的代码会被执行
 }
-</pre>
+```
 
-<p>基本类型的布尔值不受此规则影响。例如下面的 {{jsxref("Statements/if...else", "if")}} 语句的条件为假：</p>
+基本类型的布尔值不受此规则影响。例如下面的 {{jsxref("Statements/if...else", "if")}} 语句的条件为假：
 
-<pre class="brush: js">var x = false;
+```js
+const x = false;
 if (x) {
   // 这里的代码不会执行
 }
-</pre>
+```
 
-<p>不要用创建 <code>Boolean</code> 对象的方式将一个非布尔值转化成布尔值，直接将 <code>Boolean</code> 当做转换函数来使用即可，或者使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#%E9%80%BB%E8%BE%91%E9%9D%9E%EF%BC%88!%EF%BC%89">双重非（!!）运算符</a>：</p>
+不要用创建 `Boolean` 对象的方式将一个非布尔值转化成布尔值，直接将 `Boolean` 当做转换函数来使用即可，或者使用[双重非（!!）运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!)：
 
-<pre class="brush: js">var x = Boolean(expression);     // 推荐
-var x = !!(expression);          // 推荐
-var x = new Boolean(expression); // 不太好
-</pre>
+```js
+const x = Boolean(expression);     // use this...
+const x = !!(expression);          // ...or this
+const x = new Boolean(expression); // don't use this!
+```
 
-<p>对于任何对象，即使是值为 <code>false</code> 的 <code>Boolean</code> 对象，当将其传给 <code>Boolean</code> 函数时，生成的 <code>Boolean</code> 对象的值都是 <code>true</code>。</p>
+对于任何对象，即使是值为 `false` 的 `Boolean` 对象，当将其传给 `Boolean` 函数时，生成的 `Boolean` 对象的值都是 `true`。
 
-<pre class="brush: js">var myFalse = new Boolean(false);   // true
-var g = new Boolean(myFalse);       // true
-var myString = new String("Hello");
-var s = new Boolean(myString);      // true
-</pre>
+```js
+const myFalse = new Boolean(false);   // initial value of false
+const g = Boolean(myFalse);       // initial value of true
+const myString = new String('Hello'); // string object
+const s = Boolean(myString);      // initial value of true
+```
 
-<p>最后，不要在应该使用基本类型布尔值的地方使用 <code>Boolean</code> 对象。</p>
+最后，不要在应该使用基本类型布尔值的地方使用 `Boolean` 对象。
 
-<div class="note">
-<p><strong>备注：</strong>当将非标准属性<a href="/zh-CN/docs/Web/API/Document#Properties">document.all</a>用作此构造函数的参数时，结果是值为<code>false</code>的布尔对象。 此属性是旧属性，是非标准属性，不应使用。</p>
-</div>
+> **备注：** 当将非标准属性 [`document.all`](/zh-CN/docs/Web/API/Document#属性) 用作此构造函数的参数时，结果是值为 `false` 的布尔对象。此属性是旧的、非标准的属性，不应使用。
 
-<h2 id="构造器">构造器</h2>
+当使用非严格相等（`==`）来比较一个对象和布尔原始值时，最重要的是需要弄明白最终比较的是什么。请看一下的示例：
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean"><code>Boolean()</code></a></dt>
- <dd>创建一个新的<code>Boolean</code> 对象。</dd>
-</dl>
+```js
+if ([]) { console.log("[] is truthy")}         // logs "[] is truthy"
+if ([] == false) { console.log("[] == false")} // logs "[] == false"
+```
 
-<h2 id="实例方法">实例方法</h2>
+`[]` 是真值而 `[] == false` 也同时成立的原因是：非严格比较 `[] == false` 会将 `[]` 的原始值和 `false` 进行比较。而获取 `[]` 的原始值时，JavaScript 引擎会首先调用 `[].toString()`。其结果为 `""`，也是最终和 `false` 一起比较的值。换句话说，`[] == false` 等价于 `"" == false`，而 `""` 是假值——这也解释了为什么会得到这一结果。
 
-<dl>
- <dt>{{jsxref("Boolean.prototype.toString()")}}</dt>
- <dd>根据对象的值返回字符串<code>"true"</code>或<code>"false"</code>。 重写{{jsxref("Object.prototype.toString()")}}方法。</dd>
- <dt>{{jsxref("Boolean.prototype.valueOf()")}}</dt>
- <dd>返回{{jsxref("Boolean")}}对象的原始值。 重写{{jsxref("Object.prototype.valueOf()")}}方法。</dd>
-</dl>
+## 构造函数
 
-<h2 id="示例">示例</h2>
+- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+  - : 创建一个新的 `Boolean` 对象。
 
-<h3 id="创建值为_false_的_Boolean_对象">创建值为 <code>false</code> 的 <code>Boolean</code> 对象</h3>
+## 实例方法
 
-<pre class="brush: js">var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
-var bfalse = new Boolean(false);
-</pre>
+- {{jsxref("Boolean.prototype.toString()")}}
+  - : 根据对象的值返回字符串 `true` 或 `false`。覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。
+- {{jsxref("Boolean.prototype.valueOf()")}}
+  - : 返回 {{jsxref("Boolean")}} 对象的原始值。覆盖了 {{jsxref("Object.prototype.valueOf()")}} 方法。
 
-<h3 id="创建值为_true_的_Boolean_对象">创建值为 <code>true</code> 的  <code>Boolean</code> 对象</h3>
+## 示例
 
-<pre class="brush: js">var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
-</pre>
+### 以初始值 `false` 创建 `Boolean` 对象
 
-<h2 id="规范">规范</h2>
+```js
+const bNoParam = new Boolean();
+const bZero = new Boolean(0);
+const bNull = new Boolean(null);
+const bEmptyString = new Boolean('');
+const bfalse = new Boolean(false);
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>规范</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean-objects', 'Boolean')}}</td>
-  </tr>
- </tbody>
-</table>
+### 以初始值 `true` 创建 `Boolean` 对象
 
-<h2 id="浏览器兼容性"><br>
- 浏览器兼容性</h2>
+```js
+const btrue = new Boolean(true);
+const btrueString = new Boolean('true');
+const bfalseString = new Boolean('false');
+const bSuLin = new Boolean('Su Lin');
+const bArrayProto = new Boolean([]);
+const bObjProto = new Boolean({});
+```
 
-<p>{{Compat("javascript.builtins.Boolean")}}</p>
+## 规范
 
-<h2 id="相关链接">相关链接</h2>
+{{Specifications}}
 
-<ul>
- <li>{{jsxref("Boolean.prototype")}}</li>
- <li>{{Glossary("Boolean")}}</li>
- <li><a href="http://en.wikipedia.org/wiki/Boolean_data_type">Boolean data type (Wikipedia)</a></li>
-</ul>
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [Boolean](/zh-CN/docs/Glossary/Boolean)
+- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Data_structures#布尔类型)
+- [布尔类型（维基百科）](https://zh.wikipedia.org/wiki/布林_(資料類型))
